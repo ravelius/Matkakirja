@@ -432,3 +432,53 @@ omalla karttapaikallaan) sekä Białowieża (Puolan eläintäky).
 Kinderdijk pudotettiin, koska sen nimiö osui Van Meegeren -skandaalin
 nimiön päälle (`tools/tarkista-nimiolimitys.mjs`); tilalle tuli
 Woudagemaal.
+
+## Erä M1 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Erä M1
+on maailman ensimmäinen Euroopan ulkopuolinen erä: Etelä-Amerikan viisi
+maata, joilla ei ollut yhtäkään karttamerkkiä. Jokainen sai täyden
+kiintiön — **8 kohdetta, 3 maastokohdetta, 1 eläintäky ja 2 skandaalia**
+— eli 13 uutta pääkartan merkkiä maata kohti, yhteensä 65, sekä kaksi
+uutta eläintäkyä (ARG, BRA ja CHL olivat jo eläintäkytaulussa). Kaikki viisi
+ovat laskurin mukaan nyt "täysi" (`node tools/laske-karttanostot.mjs`);
+taulukot ajaa Fable erikseen.
+
+Erä on **kuvaton**, kuten K2-erät 1–4: kortti kantaa tekstin ja lähteen.
+Se koskee myös Bolivian ja Kolumbian eläintäkyjä, jotka odottavat
+kuvaputken toimitusta — `tests/elaintakyt.test.mjs` sallii nyt nollan
+kuvan, koska kuvattomuus on kortissa tuettu tila (`elaintakynKuvat`).
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Argentiina (ARG) | Cueva de las Manos, Quebrada de Humahuaca, Córdoban jesuiittakortteli, La Polvorillan viadukti, Península Valdés, Ushuaia, Ischigualasto, Perito Moreno -jäätikkö | Aconcagua, Río de la Plata, Argentiinanmeri | (oli jo: magellaninpingviini) | Rosario 1978, Bariloche 1994 |
+| Bolivia (BOL) | Tiwanaku, Cerro Rico, Sucre, Chiquitosin lähetysasemat, Yungas-tie, Salar de Uyuni, Oruron karnevaali, El Fuerte de Samaipata | Nevado Sajama, Illimani, Desaguadero | boliviandelfiini | Vesisota 2000, Kokaiinikaappaus 1980 |
+| Brasilia (BRA) | Brasília, Itaipun pato, Serra da Capivara, São Miguel das Missões, Olinda, Congonhasin profeetat, Pantanal, Lençóis Maranhenses | Pico da Neblina, Fernando de Noronha, Atlantti | (oli jo: kultatamariini) | Lava Jato, Brumadinho 2019 |
+| Chile (CHL) | Atacama, Chuquicamata, Humberstone, Chinchorron muumiot, Sewell, Paranalin observatorio, Isla Negra, Valdivian maanjäristys | Ojos del Salado, Chiloé, Tyynimeri | (oli jo: guanako) | Colonia Dignidad, Santiago 1962 |
+| Kolumbia (COL) | Ciudad Perdida, San Agustín, Tierradentro, Cartagena de Indias, Mompox, Guatavitan laguuni, Barranquillan karnevaali, Kahvimaisema | Pico Cristóbal Colón, Caño Cristales, Karibianmeri | kultamyrkkysammakko | San Josén aarre 1708, Ciénaga 1928 |
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin, ja jokaisen kohteen lähin
+on kirjattu sen koordinaattirivin viereen. Erän lähin on Itaipun pato
+11,2 lautayksikön päässä Iguazústa; seuraavat ovat Guatavita 13,3
+(Bogotá), Atlantti 27,5 (Salvador) ja Olinda 29,4 (João Pessoa). Raja
+`KAUPUNGIN_KOHDALLA_SADE` on 7, joten kaikki 65 ovat pääkartan merkkejä
+— mikä oli tässä erässä pakko, sillä Etelä-Amerikan kaupungeista vain
+Buenos Airesilla ja Rio de Janeirolla on kohdekartta.
+
+**Mitä pudotettiin ja miksi.** Pääsiäissaari (CHL) jäi pois, koska se on
+maan fokuslehden rajauksen ulkopuolella (`savuke-maastokohteet.mjs`
+vartio 7a): merkki olisi olemassa mutta pelaajan ulottumattomissa.
+Zipaquirán suolakatedraali (COL) putosi, koska sen nimiö olisi tullut
+Guatavitan laguunin päälle — pisteiden väli on 7,6 lautayksikköä.
+Argentiinan corralito ja Kolumbian Proceso 8000 jäivät pois, koska
+tapahtumapaikat ovat Buenos Airesin ja Bogotán ytimessä. Sääntö N3
+(sama nimi kartalla vain kerran) pudotti Titicacan ja Mamorén (BOL),
+Iguazún ja Paranán (ARG) sekä Amazonin, Rio Negron, São Franciscon,
+Madeiran, Xingun, Tapajósin, Tocantinsin, Araguaian ja Purusin (BRA) —
+siksi Brasilian kolmesta maastokohteesta yksikään ei ole joki.
+
+**Herkät aiheet.** Kolme skandaalia koskee diktatuuria ja yksi
+huumekauppaa. Ne on kirjoitettu asiallisesti ja tiukasti lähteen
+katteessa: mitä tapahtui, kuka teki ja mitä siitä seurasi.
+`node tools/tarkista-nimiolimitys.mjs` antaa "NIMIÖ NIMIÖN PÄÄLLÄ: 0".

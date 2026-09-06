@@ -65,12 +65,17 @@
 import { MAASTOKOHTEET_AFG } from './maastokohteet-afg.js';
 import { MAASTOKOHTEET_AGO } from './maastokohteet-ago.js';
 import { MAASTOKOHTEET_ARE } from './maastokohteet-are.js';
+import { MAASTOKOHTEET_ARG } from './maastokohteet-arg.js';
 import { MAASTOKOHTEET_AUT } from './maastokohteet-aut.js';
 import { MAASTOKOHTEET_BIH } from './maastokohteet-bih.js';
+import { MAASTOKOHTEET_BOL } from './maastokohteet-bol.js';
+import { MAASTOKOHTEET_BRA } from './maastokohteet-bra.js';
 import { MAASTOKOHTEET_CHE } from './maastokohteet-che.js';
+import { MAASTOKOHTEET_CHL } from './maastokohteet-chl.js';
 import { MAASTOKOHTEET_CHN } from './maastokohteet-chn.js';
 import { MAASTOKOHTEET_CMR } from './maastokohteet-cmr.js';
 import { MAASTOKOHTEET_COD } from './maastokohteet-cod.js';
+import { MAASTOKOHTEET_COL } from './maastokohteet-col.js';
 import { MAASTOKOHTEET_CYP } from './maastokohteet-cyp.js';
 import { MAASTOKOHTEET_CZE } from './maastokohteet-cze.js';
 import { MAASTOKOHTEET_DNK } from './maastokohteet-dnk.js';
@@ -135,17 +140,22 @@ import { MAASTOKOHTEET_YEM } from './maastokohteet-yem.js';
 import { MAASTOKOHTEET_ZAF } from './maastokohteet-zaf.js';
 import { MAASTOKOHTEET_ZWE } from './maastokohteet-zwe.js';
 
-/** Maan ISO-tunnus → maan maastokohteet. 72 maata. */
+/** Maan ISO-tunnus → maan maastokohteet. 77 maata. */
 export const MAASTOKOHTEET = {
   AFG: MAASTOKOHTEET_AFG,
   AGO: MAASTOKOHTEET_AGO,
   ARE: MAASTOKOHTEET_ARE,
+  ARG: MAASTOKOHTEET_ARG,
   AUT: MAASTOKOHTEET_AUT,
   BIH: MAASTOKOHTEET_BIH,
+  BOL: MAASTOKOHTEET_BOL,
+  BRA: MAASTOKOHTEET_BRA,
   CHE: MAASTOKOHTEET_CHE,
+  CHL: MAASTOKOHTEET_CHL,
   CHN: MAASTOKOHTEET_CHN,
   CMR: MAASTOKOHTEET_CMR,
   COD: MAASTOKOHTEET_COD,
+  COL: MAASTOKOHTEET_COL,
   CYP: MAASTOKOHTEET_CYP,
   CZE: MAASTOKOHTEET_CZE,
   DNK: MAASTOKOHTEET_DNK,

@@ -1143,6 +1143,73 @@ export const ELAINTAKYT = {
     lon: 25.45,
     lat: -33.8,
   },
+  /*
+   * ── MAAILMAN ERÄ M1 6.9.2026 (ETELÄ-AMERIKKA) ────────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erän M1 viidestä maasta ARG, BRA ja CHL olivat jo tässä taulussa
+   * (5.9.2026 kuvaputken erä), joten uusia tulee kaksi: BOL ja COL.
+   *
+   * NÄMÄ KAKSI OVAT KUVATTOMIA, ja se on tietoinen tila eikä unohdus.
+   * Erä M1 on kuvaton kauttaaltaan (ks. js/packs/maastokohteet-arg.js),
+   * eikä integroija generoi kuvia itse: kuvaputki tekee ne Fablen
+   * tilauksesta. Kortti kestää kuvattomuuden — js/elaintaky.js latoo
+   * tekstin ja lähteen ilman kuvakehystä, ja js/packs/elaintakyt.js
+   * elaintakynKuvat palauttaa tyhjän listan (tests/elaintakyt.test.mjs:
+   * "kuvaton tietue ei keksi tiedostoa"). Kun kuvat valmistuvat, ne
+   * lisätään `kuvat`-listana muiden tapaan.
+   *
+   * PAIKAT on tarkistettu samoilla ehdoilla kuin muutkin: piste on
+   * maalla, oman maansa monikulmion sisällä, vähintään 35 yksikön
+   * päässä lähimmästä kaupunkimerkistä ja 30 yksikön päässä toisesta
+   * eläintäystä (tests/elaintakyt.test.mjs).
+   */
+  BOL: {
+    elain: 'boliviandelfiini',
+    otsikko: 'Delfiini maassa, jolla ei ole merta',
+    teksti: 'Boliviandelfiini on makean veden delfiini, joka elää Ylä-Madeiran '
+      + 'vesistön joissa Bolivian Amazoniassa — meri on tuhansien kilometrien '
+      + 'päässä. Paikallisesti se tunnetaan nimellä bufeo, ja se on maailman suurin '
+      + 'makean veden delfiini: pituutta jopa 2,8 metriä ja painoa 180 kiloa. '
+      + 'Amazonin sukulaisistaan se erottuu suuremmalla hammasmäärällä, pienemmällä '
+      + 'kallolla ja pidemmällä vartalolla, ja koskien ja putousten sarja pitää '
+      + 'kannat erillään. Ranskalainen Alcide d\'Orbigny kuvasi lajin 1832 '
+      + 'Bolivian-matkoillaan; sen jälkeen tutkijat ovat pitäneet sitä milloin '
+      + 'omana lajinaan, milloin Amazonin jokidelfiinin alalajina. Syyskuussa 2012 '
+      + 'presidentti Evo Morales sääti sille suojelulain ja julisti sen '
+      + 'kansallisaarteeksi.',
+    lahde: 'en-Wikipedia "Bolivian river dolphin", johdanto-osa sekä osiot '
+      + '"Taxonomy" ja "Description". Tarkistettu 6.9.2026.',
+    /*
+     * Piste on Beninin savannin ja Mamorén jokitasangon puolivälissä:
+     * lajin elinalue on Ylä-Madeiran vesistö, ja merkin on oltava maalla
+     * eikä kartan uomassa, joka on maailmankartan mittakaavassa vettä.
+     */
+    lon: -64.9,
+    lat: -14.0,
+  },
+  COL: {
+    elain: 'kultamyrkkysammakko',
+    otsikko: 'Yksi milligramma, kymmenen ihmistä',
+    teksti: 'Kultamyrkkysammakko elää vain Kolumbian Tyynenmeren puoleisissa '
+      + 'sademetsissä Caucan ja Valle del Caucan departementeissa, ja se on '
+      + 'pienuudestaan huolimatta maailman myrkyllisin eläinlaji. Kuusisenttinen ja '
+      + 'noin kolmenkymmenen gramman painoinen sammakko erittää ihorauhasistaan '
+      + 'batrakotoksiinia: yhden villin yksilön keskimääräinen annos on noin '
+      + 'milligramma, mikä riittää tappamaan arviolta 10–20 ihmistä. Myrkky ei ole '
+      + 'sammakon omaa tekoa vaan tulee ravinnosta — vankeudessa hyönteisruoalla '
+      + 'kasvatetut yksilöt menettävät myrkyllisyytensä kokonaan. Emberá- ja '
+      + 'cofán-kansat ovat käyttäneet eritettä puhallusputken nuolissa, ja kärki '
+      + 'pysyy tappavana kaksi vuotta tai kauemmin. Laji on uhanalainen, koska sen '
+      + 'elinalue on alle 5 000 neliökilometriä ja metsä katoaa.',
+    lahde: 'en-Wikipedia "Golden poison frog", johdanto-osa sekä osiot '
+      + '"Distribution and habitat", "Toxicity" ja "Use by humans". '
+      + 'Tarkistettu 6.9.2026.',
+    // Piste on Chocón sademetsässä lajin elinalueella, irti rannikosta:
+    // rannikkokaistale on maailmankartan muodossa jo merta.
+    lon: -76.8,
+    lat: 3.8,
+  },
 };
 
 /** Maatunnukset siinä järjestyksessä kuin ne on kirjoitettu. */

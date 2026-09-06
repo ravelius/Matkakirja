@@ -5064,4 +5064,534 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /*
+   * ── MAAILMAN ERÄ M1 6.9.2026 (ETELÄ-AMERIKKA) ────────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Skandaalitaulussa ei ollut ennen tätä erää yhtäkään Euroopan
+   * ulkopuolista maata; erä M1 tuo viisi maata ja kymmenen skandaalia
+   * (kiintiö 2 per maa). Kaikki ovat kuvattomia kuten erän muutkin
+   * nostot, ja jokainen väite on `lahde`-rivin en-Wikipedia-artikkelin
+   * katteessa (tarkistettu 6.9.2026).
+   *
+   * PAIKAT OVAT KAUKANA PELIKAUPUNGEISTA. Etelä-Amerikan kaupungeista
+   * vain Buenos Airesilla ja Rio de Janeirolla on kaupunkikartta
+   * (js/packs/maakartat.js), joten kohdekaupungin kohdalle osuva
+   * skandaali jäisi muualla kokonaan ilman karttapaikkaa
+   * (tools/tarkista-nostopaikat.mjs). Siksi jokainen kymmenestä on
+   * mitattu jokaista CITIES-kaupunkia vasten: lähin on Santiagon taistelu
+   * 26,1 lautayksikön päässä Valparaísosta, ja raja
+   * KAUPUNGIN_KOHDALLA_SADE on 7. Juuri tästä syystä Argentiinan
+   * corralito ja Kolumbian Proceso 8000 jäivät pois — edellinen on
+   * Buenos Airesin ytimessä, jälkimmäinen Bogotán.
+   *
+   * HERKÄT AIHEET. Kolme kymmenestä koskee diktatuuria ja yksi
+   * huumekauppaa. Ne on kirjoitettu asiallisesti ja tiukasti lähteen
+   * katteessa: mitä tapahtui, kuka teki, mitä siitä seurasi — ei
+   * kuvailua eikä väitteitä, joita artikkeli ei sano.
+   */
+  ARG: [
+    /*
+     * Estadio Gigante de Arroyito, Rosario (B-lohkon ratkaisuottelu).
+     * Lähde: en.wikipedia.org: Argentina v Peru (1978 FIFA World Cup)
+     */
+    {
+      id: 'rosario-1978',
+      otsikko: 'Argentiina–Peru 6–0 — ottelu, jota yhä epäillään',
+      nimio: 'Rosario 1978',
+      vuosi: '1978',
+      paikka: 'Estadio Gigante de Arroyito, Rosario',
+      lat: -32.8833, lon: -60.6667,
+      kortti: 'Isäntämaa tarvitsi finaalipaikkaan neljän maalin voiton ja sai '
+        + 'kuusi. Ottelu pelattiin sotilasjuntan Argentiinassa, ja epäilyt '
+        + 'sopimuksesta ovat eläneet siitä asti. Yksikään versio ei ole saanut '
+        + 'laajaa hyväksyntää, mutta kertomuksia riittää — pukukoppivierailusta '
+        + 'vehnälastiin.',
+      teksti: 'Vuoden 1978 MM-kisojen toisen lohkovaiheen ratkaisuottelu pelattiin '
+        + 'Rosariossa 21. kesäkuuta. Argentiinan oli voitettava Peru vähintään '
+        + 'neljällä maalilla ohittaakseen Brasilian maalierolla. Brasilia oli '
+        + 'pyytänyt, että sen ottelu Puolaa vastaan pelattaisiin samaan aikaan, '
+        + 'mutta Fifa hylkäsi pyynnön televisioinnin vuoksi — niinpä Brasilia '
+        + 'pelasi ensin ja voitti 3–1, ja Argentiina tiesi ottelun alkaessa '
+        + 'tarkalleen, mitä siltä vaadittiin.'
+        + '\n\nMinuutteja ennen alkua presidentti Jorge Rafael Videla kävi Perun '
+        + 'pukukopissa entisen Yhdysvaltain ulkoministerin Henry Kissingerin '
+        + 'kanssa ja luki pelaajille Perun diktaattorin Francisco Morales '
+        + 'Bermúdezin viestin maiden veljeydestä. Argentiina voitti 6–0: kaksi '
+        + 'maalia Mario Kempes, kaksi Leopoldo Luque, yksi Alberto Tarantini ja '
+        + 'yksi René Houseman.'
+        + '\n\nEpäilykset heräsivät myöhemmin. Kymmenen päivää kisojen jälkeen '
+        + 'Argentiina myönsi Perulle poikkeuksellisen takaisinmaksuttoman luoton. '
+        + 'Historioitsija David Yallopin mukaan amiraali Carlos Alberto Lacoste '
+        + 'tarjosi perulaisille lahjuksen ja 35 000 tonnia viljaa. '
+        + 'Valtiovarainministeri Juan Alemann kertoi, että hänen kotiinsa '
+        + 'sijoitettu pommi räjähti juuri sillä hetkellä, kun Argentiina teki '
+        + 'neljännen maalinsa.'
+        + '\n\nMonet ottelun pelaajista kiistävät kaiken. Héctor Chumpitaz, Jaime '
+        + 'Duarte, César Cueto ja Teófilo Cubillas ovat sanoneet, ettei todisteita '
+        + 'ole ja että Peru oli väsynyt kolmen päivän välein pelatuista otteluista. '
+        + 'Yksi asia muuttui pysyvästi: seuraavista kisoista alkaen lohkojen '
+        + 'ratkaisuottelut on pelattu samanaikaisesti.',
+      lahde: 'en-Wikipedia "Argentina v Peru (1978 FIFA World Cup)". Tarkistettu '
+        + '6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Argentiina tiesi ottelun alkaessa tarvitsevansa neljä maalia?',
+        vaihtoehdot: [
+          'Brasilian ottelu oli pelattu jo aiemmin samana päivänä',
+          'Fifa oli ilmoittanut maalirajan ennen kisoja',
+          'Perun liitto oli luvannut päästää neljä maalia',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * San Carlos de Bariloche (Priebken asuinkaupunki 1948–1996).
+     * Lähde: en.wikipedia.org: Erich Priebke
+     */
+    {
+      id: 'priebke-bariloche',
+      otsikko: 'Barilochen koulunjohtaja — 46 vuotta vapaana',
+      nimio: 'Bariloche 1994',
+      vuosi: '1948–1996',
+      paikka: 'San Carlos de Bariloche, Río Negro',
+      lat: -41.1333, lon: -71.3,
+      kortti: 'Andien lomakaupungissa asui saksalainen herkkukauppias, joka johti '
+        + 'kulttuuriyhdistystä ja työskenteli koululla. Hän oli asunut siellä lähes '
+        + 'viisikymmentä vuotta. Vuonna 1994 amerikkalainen tv-ryhmä odotti häntä '
+        + 'koulun ulkopuolella ja kysyi Rooman joukkomurhasta — ja hän vastasi '
+        + 'auton ikkunasta, avoimesti.',
+      teksti: 'Erich Priebke oli SS:n turvallisuuspoliisin upseeri, joka johti '
+        + 'yksikköä Ardeatinan luolien joukkomurhassa Roomassa 24. maaliskuuta 1944. '
+        + 'Siinä surmattiin 335 italialaista siviiliä kostoksi partisaani-iskusta, '
+        + 'jossa oli kuollut 33 saksalaista poliisia. Priebke laati teloituslistat. '
+        + 'Sodan jälkeen hän pakeni 1946 brittien vankileiriltä Riministä ja päätyi '
+        + 'lopulta Argentiinaan.'
+        + '\n\nBarilochessa hän eli vapaana miehenä 46 vuotta. Aluksi hän oli '
+        + 'tiskaaja ja tarjoilija, sitten oman herkkukaupan pitäjä, ja hänestä tuli '
+        + 'saksalais-argentiinalaisen kulttuuriyhdistyksen johtaja; matkat Eurooppaan '
+        + 'sujuivat esteettä. Esteban Buchin kirja El pintor de la Suiza Argentina '
+        + 'nimesi hänet 1991 osaksi kaupungissa 1950-luvulta asti asunutta '
+        + 'natsipiiriä.'
+        + '\n\nMaaliskuussa 1994 ABC Newsin tutkiva ryhmä jäljitti hänet kirjan '
+        + 'perusteella ja kaivoi arkistoista Lontoosta hänen oman sodanjälkeisen '
+        + 'tunnustuksensa. Toimittaja Sam Donaldson odotti häntä koulun ulkopuolella '
+        + 'ja haastatteli hänet auton ikkunasta. Priebke myönsi, kuka oli, ja '
+        + 'perusteli tekonsa käskyillä. Argentiinan viranomaiset pidättivät hänet '
+        + '10. toukokuuta 1994.'
+        + '\n\nLuovutus kesti. Puolustus vaati kaikkien italialaisten asiakirjojen '
+        + 'kääntämistä espanjaksi ja vetosi murhan viidentoista vuoden '
+        + 'vanhentumisaikaan; Italian sotilassyyttäjä muistutti, etteivät rikokset '
+        + 'ihmisyyttä vastaan vanhene. Argentiinan korkein oikeus määräsi luovutuksen '
+        + '1996. Italiassa Priebke tuomittiin lopulta elinkautiseen 1998, ja korkean '
+        + 'ikänsä vuoksi hän istui tuomionsa kotiarestissa kuolemaansa 2013 asti.',
+      lahde: 'en-Wikipedia "Erich Priebke". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä paljasti Priebken menneisyyden maailmalle 1994?',
+        vaihtoehdot: [
+          'Italian poliisin salainen operaatio',
+          'Amerikkalaisen tv-ryhmän tutkimustyö ja katuhaastattelu',
+          'Hänen oma kirjeensä Vatikaanille',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  BOL: [
+    /*
+     * Cochabamban keskusaukio (mielenosoitusten paikka).
+     * Lähde: en.wikipedia.org: Cochabamba Water War
+     */
+    {
+      id: 'cochabamban-vesisota',
+      otsikko: 'Cochabamban vesisota — kaupunki, joka osti vetensä takaisin',
+      nimio: 'Vesisota 2000',
+      vuosi: '1999–2000',
+      paikka: 'Cochabamban keskusaukio, Bolivia',
+      lat: -17.3935, lon: -66.157,
+      kortti: 'Kaupungin vesilaitos myytiin yhdelle tarjoajalle, ja laskut nousivat '
+        + 'kolmanneksella. Uusi laki näytti antavan yhtiölle oikeuden kaikkiin '
+        + 'vesivaroihin, myös yhteisöjen omiin kaivoihin. Neljässä kuukaudessa '
+        + 'Cochabamba sulki katunsa, ja sopimus purettiin.',
+      teksti: 'Maailmanpankin ehdoilla Bolivia laittoi Cochabamban vesilaitoksen '
+        + 'SEMAPAn myyntiin. Tarjouksen teki vain yksi taho: Aguas del Tunari, jossa '
+        + 'olivat mukana brittiläinen International Waters, Bechtelin tytäryhtiö, '
+        + 'United Utilities ja espanjalainen Abengoa sekä neljä bolivialaisyhtiötä. '
+        + 'Presidentti Hugo Banzerin hallitus hyväksyi 2,5 miljardin dollarin ja '
+        + 'neljänkymmenen vuoden sopimuksen, jossa yhtiölle taattiin vähintään '
+        + 'viidentoista prosentin vuosituotto.'
+        + '\n\nSopimuksen ehtona oli rahoittaa Misicunin pato, jota Maailmanpankki '
+        + 'oli pitänyt kannattamattomana mutta jota pormestari Manfred Reyes Villa '
+        + 'ajoi. Vettä ottaessaan yhtiö korotti maksuja keskimäärin 35 prosenttia, '
+        + 'noin kahteenkymmeneen dollariin kuukaudessa. Moni asiakas ansaitsi sata '
+        + 'dollaria kuussa, joten vesilasku ylitti ruokamenot.'
+        + '\n\nLaki 2029 näytti antavan yhtiölle monopolin kaikkiin vesivaroihin — '
+        + 'myös yhteisöjen itse rakentamiin järjestelmiin, joita ei ollut koskaan '
+        + 'liitetty SEMAPAan. Vastarinnan kokosi La Coordinadora, kastelijoiden '
+        + 'liiton, ammattiyhdistysten ja ympäristöväen yhteenliittymä, jonka '
+        + 'näkyvimmät hahmot olivat Omar Fernández ja Óscar Olivera.'
+        + '\n\nBanzer julisti 8. huhtikuuta 2000 piiritystilan. Kun kapteeni Robinson '
+        + 'Iriarte ampui väkijoukkoon ja lukiolainen Víctor Hugo Daza kuoli, viha '
+        + 'leimahti; yhtiön johto pakeni Santa Cruziin. Hallitus julisti sopimuksen '
+        + 'rauenneeksi, laki muutettiin 11. huhtikuuta, ja yhtiön 40 miljoonan '
+        + 'dollarin korvausvaatimus raukesi sovintoon 2006.',
+      lahde: 'en-Wikipedia "Cochabamba Water War". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä sytytti Cochabamban vesisodan?',
+        vaihtoehdot: [
+          'Pitkä kuivuus tyhjensi kaupungin altaat',
+          'Kaivosyhtiö saastutti kaupungin juomaveden',
+          'Vesilaitoksen yksityistäminen ja maksujen jyrkkä nousu',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Plaza Murillo, La Paz (hallituksen ydin).
+     * Lähde: en.wikipedia.org: Luis García Meza
+     */
+    {
+      id: 'kokaiinivallankaappaus-1980',
+      otsikko: 'Kokaiinivallankaappaus — kolmetoista kuukautta',
+      nimio: 'Kokaiinikaappaus',
+      vuosi: '1980–1981',
+      paikka: 'Plaza Murillo, La Paz',
+      lat: -16.4957, lon: -68.1336,
+      kortti: 'Heinäkuussa 1980 kenraali otti Bolivian väkivaltaisella '
+        + 'vallankaappauksella, jonka rahoitusta on epäilty huumekaupan lahjuksiksi. '
+        + 'Valta kesti kolmetoista kuukautta ja maksoi arviolta tuhat ihmishenkeä. '
+        + 'Lopulta jopa Washington piti etäisyyttä — ja se riitti kaatamaan '
+        + 'hallinnon.',
+      teksti: 'Luis García Meza Tejada oli uraupseeri, joka nousi kenraaliksi Hugo '
+        + 'Banzerin diktatuurin aikana. Hän johti armeijan oikeistosiipeä, joka ei '
+        + 'hyväksynyt paluuta siviilihallintoon: moni upseeri oli ollut mukana '
+        + 'Banzerin ajassa eikä pitänyt siitä, että uusi kongressi tutki talous- ja '
+        + 'ihmisoikeusrikkomuksia.'
+        + '\n\nMonella heistä oli väitteiden mukaan yhteydet kokaiinikauppiaisiin: '
+        + 'osa armeijasta toimi näiden suojelijoina lahjuksia vastaan, ja lahjuksilla '
+        + 'rahoitettiin tulevaa kaappausta. Käytännössä salakuljettajat ostivat '
+        + 'itselleen Bolivian seuraavan hallituksen. Ryhmä painosti presidentti Lidia '
+        + 'Gueileriä nimittämään García Mezan armeijan komentajaksi.'
+        + '\n\nKaappaus tehtiin 17. heinäkuuta 1980. Sen yhteydessä surmattiin '
+        + 'kansanedustaja ja presidenttiehdokas Marcelo Quiroga Santa Cruz, joka oli '
+        + 'vaatinut Banzeria oikeuteen. Puolueet lakkautettiin, oppositiojohtajat '
+        + 'karkotettiin, ammattiyhdistykset tukahdutettiin ja lehdistö vaiennettiin. '
+        + 'Amerikkalainen tutkimuslaitos Council on Hemispheric Affairs nimesi '
+        + 'hallinnon tammikuussa 1981 Latinalaisen Amerikan pahimmaksi '
+        + 'ihmisoikeusrikkojaksi Guatemalan ja El Salvadorin jälkeen.'
+        + '\n\nHuumekytkennät eristivät hallinnon kansainvälisesti, ja jopa Ronald '
+        + 'Reaganin hallinto pysytteli etäällä. Paine pakotti García Mezan eroamaan '
+        + '3. elokuuta 1981. Hänet tuomittiin poissaolevana, luovutettiin Brasiliasta '
+        + '1995 ja istui kolmenkymmenen vuoden tuomiotaan La Pazin San Pedron '
+        + 'vankilassa — samassa, johon hän oli aikanaan sulkenut vastustajansa. Hän '
+        + 'kuoli 2018.',
+      lahde: 'en-Wikipedia "Luis García Meza". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi vuoden 1980 kaappausta kutsutaan kokaiinivallankaappaukseksi?',
+        vaihtoehdot: [
+          'Sen rahoitusta on epäilty huumekaupan lahjuksiksi',
+          'Kaappaajat takavarikoivat maan kokaiinivarastot',
+          'Kaappaus tehtiin kokaiiniviljelmien lakon aikana',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  BRA: [
+    /*
+     * Curitiban liittovaltion oikeustalo (tutkinnan päänäyttämö).
+     * Lähde: en.wikipedia.org: Operation Car Wash
+     */
+    {
+      id: 'lava-jato',
+      otsikko: 'Lava Jato — autopesulasta kolmeen presidenttiin',
+      nimio: 'Lava Jato',
+      vuosi: '2014–2021',
+      paikka: 'Liittovaltion oikeustalo, Curitiba',
+      lat: -25.4284, lon: -49.2733,
+      kortti: 'Tutkinta alkoi pienen autopesulan rahanpesusta ja päätyi '
+        + 'valtionyhtiöiden korruptiovyyhtiin, jossa olivat mukana ministerit, '
+        + 'kuvernöörit ja kolme entistä presidenttiä. Petrobrasin johtajat olivat '
+        + 'ottaneet yhdestä viiteen prosenttia jokaisesta maksusta. Lopulta tutkinta '
+        + 'kaatui omiin viesteihinsä.',
+      teksti: 'Operação Lava Jato käynnistyi maaliskuussa 2014 Brasíliassa, kun '
+        + 'pienen autopesulan rahaliikennettä alettiin tutkia. Syyttäjäryhmää johti '
+        + 'Deltan Dallagnol ja tuomarina toimi Curitibassa Sergio Moro; myöhemmin '
+        + 'muut syyttäjät ja tuomarit hoitivat oman alueensa jutut.'
+        + '\n\nTutkijoiden mukaan valtionyhtiöiden poliittiset nimitykset kiristivät '
+        + 'järjestelmällisesti lahjuksia yksityisiltä toimittajilta. Osa rahasta '
+        + 'ohjattiin puolueille laittomaksi vaalirahoitukseksi, osa jäi omaan '
+        + 'taskuun. Suurimmat summat löytyivät öljy-yhtiö Petrobrasista — siitä '
+        + 'lempinimi Petrolão. Urakoitsijat, muun muassa Odebrecht ja OAS, '
+        + 'muodostivat kartellin, joka jakoi valtion urakat keskenään; kartellin '
+        + 'epäillään toimineen myös MM-kisojen stadionien, Angra 3 -ydinvoimalan ja '
+        + 'Belo Monten padon hankkeissa.'
+        + '\n\nSyytettyjä olivat liikemiehet, kansanedustajat, senaattorit, '
+        + 'kuvernöörit ja ministerit. Yhtiöt ja yksityishenkilöt sitoutuivat '
+        + 'maksamaan 25 miljardia realia sakkoja ja palautuksia. Entinen presidentti '
+        + 'Luiz Inácio Lula da Silva vangittiin Curitibassa huhtikuussa 2018.'
+        + '\n\nVuonna 2019 hakkeri Walter Delgatti Neto murtautui tutkijoiden '
+        + 'Telegram-ryhmiin, ja The Intercept Brasil julkaisi viestit. Ne näyttivät '
+        + 'osoittavan, että Moro oli antanut syyttäjille neuvoja ja tietoja ennen '
+        + 'oikeudenkäyntiä. Moro ja Dallagnol kiistivät kaiken, mutta mielipide '
+        + 'kääntyi: Lula vapautettiin marraskuussa 2019 korkeimman oikeuden '
+        + 'päätöksellä, ja tutkintaryhmä lakkautettiin 1. helmikuuta 2021.',
+      lahde: 'en-Wikipedia "Operation Car Wash". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä käänsi mielipiteen Lava Jato -tutkintaa vastaan?',
+        vaihtoehdot: [
+          'Petrobrasin ajautuminen konkurssiin',
+          'Vuodetut viestit tuomarin ja syyttäjien välillä',
+          'Todistajien katoaminen kesken oikeudenkäynnin',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Córrego do Feijãon kaivos, Brumadinho, Minas Gerais.
+     * Lähde: en.wikipedia.org: Brumadinho dam disaster
+     */
+    {
+      id: 'brumadinhon-pato',
+      otsikko: 'Brumadinho 2019 — mutavirta lounasaikaan',
+      nimio: 'Brumadinho 2019',
+      vuosi: '2019',
+      paikka: 'Córrego do Feijãon kaivos, Brumadinho',
+      lat: -20.1194, lon: -44.1197,
+      kortti: 'Rikastushiekkapato murtui puoli yhden aikaan päivällä, ja mutavirta '
+        + 'nieli kaivoksen oman ruokalan kesken lounaan. Kaksisataaseitsemänkymmentä '
+        + 'ihmistä kuoli. Sama yhtiö oli menettänyt padon jo kolme vuotta aiemmin, '
+        + 'eikä siitä määrätyistä sakoista ollut maksettu kuin murto-osa.',
+      teksti: 'Córrego do Feijãon rautamalmikaivoksen pato Minas Geraisissa hajosi '
+        + '25. tammikuuta 2019 kello 12.28. Pato oli rakennettu 1976, ja Vale S.A. '
+        + 'oli ostanut sen 2001. Kansallisen kaivosviraston rekisterissä se oli '
+        + 'luokiteltu pieneksi rakenteeksi, jonka riski oli matala.'
+        + '\n\nRomahdus vapautti mutavirran, joka pyyhkäisi kaivoksen '
+        + 'hallintorakennusten, ruokalan, asuintalojen, maatilojen, majatalojen ja '
+        + 'teiden yli. Kuolleita oli 270: tammikuussa 2019 vahvistettiin 259 '
+        + 'kuollutta ja yksitoista ilmoitettiin kadonneeksi, ja tammikuussa 2022 '
+        + 'kuusi ihmistä oli yhä kateissa.'
+        + '\n\nPato ei ollut ottanut vastaan rikastushiekkaa vuoden 2014 jälkeen, ja '
+        + 'yhtiön mukaan sitä tarkastettiin maastossa kahden viikon välein. '
+        + 'Joulukuussa 2018 Vale sai luvan käyttää padon jätettä uudelleen ja '
+        + 'lopettaa toiminnan. Julkisuuteen tuli tieto, että yhtiö tiesi rakennetta '
+        + 'valvovien antureiden ongelmista — mikä nosti kysymyksen siitä, oliko '
+        + 'varoituksia sivuutettu.'
+        + '\n\nOnnettomuudesta oli kolme vuotta ja kaksi kuukautta Marianan '
+        + 'patoturmaan, jossa kuoli 19 ihmistä ja Bento Rodriguesin kylä tuhoutui ja '
+        + 'jota pidetään Brasilian pahimpana ympäristökatastrofina. Sen mahdollisti '
+        + 'lähteen mukaan maan heikko ja aukkoinen valvonta; kolme vuotta '
+        + 'jälkeenpäin yhtiöt olivat maksaneet Marianasta määrätyistä 785 miljoonan '
+        + 'realin sakoista vain 3,4 prosenttia.',
+      lahde: 'en-Wikipedia "Brumadinho dam disaster". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä teki Brumadinhon padon murtumisesta erityisen tapauksen?',
+        vaihtoehdot: [
+          'Pato oli maailman suurin rikastushiekkapato',
+          'Pato oli rakennettu vasta edellisenä vuonna',
+          'Sama yhtiö oli menettänyt padon Marianassa kolme vuotta aiemmin',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  CHL: [
+    /*
+     * Villa Baviera (entinen Colonia Dignidad), Parral, Maulen alue.
+     * Lähde: en.wikipedia.org: Colonia Dignidad
+     */
+    {
+      id: 'colonia-dignidad',
+      otsikko: 'Colonia Dignidad — valtio valtiossa',
+      nimio: 'Colonia Dignidad',
+      vuosi: '1961–2005',
+      paikka: 'Villa Baviera, Parral, Maulen alue',
+      lat: -36.1, lon: -71.4,
+      kortti: 'Saksalainen siirtokunta Chilen maaseudulla eli piikkilanka-aidan, '
+        + 'vartiotornin ja valonheittimien takana. Sen perustaja oli paennut '
+        + 'Saksasta lapsiin kohdistuvia syytteitä. Pinochetin salainen poliisi '
+        + 'käytti aluetta vankien säilyttämiseen, ja osa yhteisön johdosta '
+        + 'osallistui tekoihin itse.',
+      teksti: 'Colonia Dignidad oli syrjäinen yhdyskunta Chilen Maulen alueella '
+        + 'Parralin kunnassa, Perquilauquén-joen pohjoisrannalla noin 35 kilometriä '
+        + 'kunnan keskustasta kaakkoon. Sen perusti 1961 saksalainen saarnaaja Paul '
+        + 'Schäfer, jota vastaan oli Länsi-Saksassa nostettu syytteitä lasten '
+        + 'hyväksikäytöstä. Yhteisö osti 3 062 hehtaarin tilan, ja alue kasvoi '
+        + 'lopulta noin 13 700 hehtaariin; asukkaita oli enimmillään kolmisensataa.'
+        + '\n\nUlospäin toiminta oli maataloutta, ja alueella oli eri aikoina koulu, '
+        + 'sairaala, kaksi kiitorataa, ravintola ja voimalaitos. Sisäänpäin yhteisö '
+        + 'oli suljettu: piikkilanka-aita, vartiotorni ja valonheittimet, ja '
+        + 'myöhemmissä raporteissa kerrottiin salaisista asevarastoista. Osa '
+        + 'ulkopuolisista kutsui yhteisöä kultiksi, osa harmittomiksi erakoiksi.'
+        + '\n\nChilen totuus- ja sovintokomission raporttien mukaan osa Pinochetin '
+        + 'salaisen poliisin DINA:n sieppaamista ihmisistä pidettiin vankeina '
+        + 'siirtokunnassa. Useimpia kidutettiin, ja monet myös teloitettiin '
+        + 'laittomasti. Chilen viranomaisten ja muiden tutkimukset paljastivat '
+        + 'lisäksi vuosikymmenten mittaisen lasten seksuaalisen hyväksikäytön.'
+        + '\n\nNimi muutettiin 1991 Villa Bavieraksi. Schäfer pakeni 1996 '
+        + 'Argentiinaan välttääkseen Chilessä nostetut hyväksikäyttösyytteet, ja '
+        + 'hänen lähdettyään ote asukkaista löystyi. Nykyään asukkaat saavat lähteä '
+        + 'vapaasti ja alue on avoinna matkailijoille.',
+      lahde: 'en-Wikipedia "Colonia Dignidad". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Colonia Dignidad kuuluu Chilen diktatuurin historiaan?',
+        vaihtoehdot: [
+          'Salainen poliisi piti siellä sieppaamiaan vankeja',
+          'Siirtokunta rahoitti oppositiota',
+          'Se ylläpiti maan ainoaa vapaata radioasemaa',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Estadio Nacional, Santiago (Chile–Italia, MM-kisojen B-lohko).
+     * Lähde: en.wikipedia.org: Battle of Santiago (1962 FIFA World Cup)
+     */
+    {
+      id: 'santiagon-taistelu-1962',
+      otsikko: 'Santiagon taistelu — ottelu, jonka poliisi keskeytti neljästi',
+      nimio: 'Santiago 1962',
+      vuosi: '1962',
+      paikka: 'Estadio Nacional, Santiago',
+      lat: -33.4644, lon: -70.6106,
+      kortti: 'Ottelua edelsi lehtisota: italialaiset toimittajat kuvasivat '
+        + 'isäntäkaupungin kurjaksi, ja chileläiset lehdet vastasivat samalla '
+        + 'mitalla. Kentällä ensimmäinen rike tuli 35 sekunnissa. Poliisin oli '
+        + 'tultava väliin neljä kertaa, ja tuomari keksi myöhemmin varoituskortit.',
+      teksti: 'Chile ja Italia kohtasivat MM-kisojen B-lohkossa Santiagossa 2. '
+        + 'kesäkuuta 1962. Ottelusta tuli tunnettu Santiagon taisteluna: kaksi '
+        + 'pelaajaa sai ulosajon, nyrkkejä heilui ja poliisin oli puututtava peliin '
+        + 'neljästi. Erotuomarina oli englantilainen Ken Aston, joka myöhemmin keksi '
+        + 'keltaisen ja punaisen kortin.'
+        + '\n\nTunnelmaa oli nostatettu etukäteen. Italialaiset toimittajat Antonio '
+        + 'Ghirelli ja Corrado Pizzinelli olivat kirjoittaneet, ettei Santiagon '
+        + 'puhelimista ole mihinkään, että sähke Eurooppaan maksaa kohtuuttomasti ja '
+        + 'että kaupunki on köyhä ja takapajuinen. Chileläiset lehdet vastasivat '
+        + 'kutsumalla italialaisia fasisteiksi ja dopingin käyttäjiksi. Toimittajat '
+        + 'joutuivat pakenemaan maasta, ja italialaiseksi luultu argentiinalainen '
+        + 'kirjoittaja hakattiin santiagolaisessa baarissa sairaalakuntoon.'
+        + '\n\nEnsimmäinen rike tuli 35 sekunnin kohdalla. Giorgio Ferrini ajettiin '
+        + 'ulos kahdeksannella minuutilla eikä suostunut poistumaan, joten poliisit '
+        + 'raahasivat hänet pois. Sekaannuksessa Leonel Sánchez mursi vasemmalla '
+        + 'koukullaan Humberto Maschion nenän, mutta Aston ei nähnyt sitä. Kun Mario '
+        + 'David myöhemmin yritti potkaista Sánchezia päähän, hänkin sai lähteä.'
+        + '\n\nChile voitti 2–0 viimeisen vartin aikana: Jaime Ramírez puskumaalilla '
+        + 'ja Jorge Toro matalalla kaukolaukauksella. Taustalla oli myös se, että '
+        + 'kisajärjestelyt olivat kärsineet vuoden 1960 Valdivian maanjäristyksestä, '
+        + 'ja italialaislehdet olivat kirjoittaneet kisojen antamisen Chilelle olleen '
+        + 'puhdasta hulluutta.',
+      lahde: 'en-Wikipedia "Battle of Santiago (1962 FIFA World Cup)". Tarkistettu '
+        + '6.9.2026.',
+      visa: {
+        kysymys: 'Kuka tuomitsi Santiagon taistelun ja mitä hän myöhemmin keksi?',
+        vaihtoehdot: [
+          'Chileläinen tuomari, joka keksi lisäajan',
+          'Englantilainen Ken Aston, joka keksi keltaisen ja punaisen kortin',
+          'Italialainen tuomari, joka keksi videotarkistuksen',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  COL: [
+    /*
+     * Barún saaren edusta, Cartagena (San Josén uppoamispaikka).
+     * Lähde: en.wikipedia.org: Spanish galleon San José
+     */
+    {
+      id: 'san-josen-galleoni',
+      otsikko: 'San José — aarrelaiva, josta riitelee neljä osapuolta',
+      nimio: 'San Josén aarre',
+      vuosi: '1708',
+      paikka: 'Barún saaren edusta, Cartagena',
+      lat: 10.1, lon: -75.9,
+      kortti: 'Kuudenkymmenenneljän tykin galleoni upposi taistelussa Cartagenan '
+        + 'edustalla, ja mukana painui pohjaan lähes kuusisataa miestä. Ruumassa oli '
+        + 'kultaa, hopeaa ja smaragdeja. Hylky löytyi 2015 kuudensadan metrin '
+        + 'syvyydestä — ja siitä lähtien siitä on riidelty.',
+      teksti: 'San José oli Espanjan laivaston 64-tykkinen galleoni, joka '
+        + 'laskettiin vesille 1698 Baskimaassa. Se toimi hopealaivueen lippulaivana '
+        + 'Espanjan perimyssodassa ja upposi taistelussa Barún saaren edustalla '
+        + 'lähellä Cartagenaa 8. kesäkuuta 1708.'
+        + '\n\nViimeisellä matkallaan laiva purjehti Panaman Portobelosta '
+        + 'Cartagenaan kolmen sotalaivan ja neljäntoista kauppalaivan saattueessa. '
+        + 'Ruumassa oli Perun varakuninkaanmaista kerättyä kultaa, hopeaa ja '
+        + 'smaragdeja, muun muassa Potosín kaivoksista nykyisen Bolivian alueelta. '
+        + 'Kun saattue kohtasi brittilaivueen, San Josén ruutivarastot räjähtivät, ja '
+        + 'lähes kaikki noin kuusisataa miestä kuoli. Hylky on siksi yhtä aikaa '
+        + 'vedenalainen kulttuuriperintökohde ja sotahauta.'
+        + '\n\nHylky paikannettiin marraskuussa 2015 kuudensadan metrin syvyydestä. '
+        + 'Lastin arvoksi on arvioitu noin 17 miljardia dollaria vuoden 2023 hinnoin. '
+        + 'Löytö laukaisi kansainvälisen omistuskiistan: Espanja vetoaa siihen, että '
+        + 'kyseessä on sen laivaston sotalaiva, Kolumbia siihen, että hylky on maan '
+        + 'vedenalaista kansallisomaisuutta. Vaatimuksia ovat esittäneet myös '
+        + 'pelastusyhtiö Sea Search Armada ja bolivialaiset alkuperäiskansojen '
+        + 'ryhmät.'
+        + '\n\nKolumbia ei ole ratifioinut YK:n merioikeusyleissopimusta eikä '
+        + 'Unescon vedenalaisen kulttuuriperinnön sopimusta, jotka molemmat tukevat '
+        + 'sotalaivan lippuvaltiolle kuuluvaa koskemattomuutta. Heinäkuusta 2017 '
+        + 'alkaen Kolumbian kulttuuriministeriö, antropologian ja historian '
+        + 'instituutti, laivasto ja merenkulkuviranomainen ovat tutkineet hylkyä ja '
+        + 'nostaneet siitä esineitä Cartagenaan suunniteltua museota varten.',
+      lahde: 'en-Wikipedia "Spanish galleon San José". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi San Josén hylystä kiistellään?',
+        vaihtoehdot: [
+          'Hylyn sijaintia ei tiedetä tarkasti',
+          'Hylky on kansainvälisillä vesillä eikä kenenkään',
+          'Espanja pitää sitä sotalaivanaan ja Kolumbia kansallisomaisuutenaan',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Ciénagan tori, Magdalena (lakkolaisten kokoontumispaikka).
+     * Lähde: en.wikipedia.org: Banana Massacre
+     */
+    {
+      id: 'banaanilakko-1928',
+      otsikko: 'Ciénaga 1928 — yhdeksän vaatimusta ja konekiväärit',
+      nimio: 'Ciénaga 1928',
+      vuosi: '1928',
+      paikka: 'Ciénagan tori, Magdalenan departementti',
+      lat: 11.0064, lon: -74.2464,
+      kortti: 'Banaanityöläiset olivat lakossa yhdeksän vaatimuksen puolesta: '
+        + 'sairaala, siistit asuntolat, palkka rahana eikä kupongeilla. Yhtiö '
+        + 'kieltäytyi neuvottelemasta, ja hallitus lähetti seitsemänsataa sotilasta. '
+        + 'Joulukuun viidentenä konekiväärit oli nostettu torin kulmien katoille.',
+      teksti: 'United Fruit Companyn banaaniviljelmien työläiset aloittivat lakon '
+        + '12. marraskuuta 1928. Vaatimuksia oli yhdeksän: alihankkijoiden kautta '
+        + 'palkkaamisen lopettaminen, pakollinen ryhmävakuutus, korvaukset '
+        + 'työtapaturmista, hygieeniset asuntolat ja kuusipäiväinen työviikko, '
+        + 'palkankorotus pienituloisimmille, viikoittainen palkanmaksu, '
+        + 'konttorikauppojen lakkauttaminen, kupongeilla maksamisen lopettaminen ja '
+        + 'sairaalapalvelujen parantaminen.'
+        + '\n\nLakosta kasvoi siihenastisen Kolumbian suurin työtaistelu: mukana oli '
+        + 'vähintään 25 000 työläistä. Yhtiö kieltäytyi neuvottelemasta viikkoja. '
+        + 'Yhdysvaltain edustajat ja yhtiön väki kuvasivat lakkoa sähkeissään '
+        + 'ulkoministeri Frank B. Kelloggille kommunistiseksi ja kumoukselliseksi, ja '
+        + 'Kolumbian hallitusta painosti sekin, että yhtiö saattoi katkaista '
+        + 'banaanien viennin Yhdysvaltoihin ja Eurooppaan.'
+        + '\n\nPresidentti Miguel Abadía Méndezin hallitus nimitti kenraali Carlos '
+        + 'Cortés Vargasin Magdalenan sotilaskomentajaksi ja lähetti alueelle 700 '
+        + 'miestä. Viidentenä joulukuuta noin 1 500 työläistä perheineen odotti '
+        + 'Ciénagan torilla sunnuntain messun jälkeen kuvernöörin puhetta. Sotilaat '
+        + 'nostivat konekiväärit torin kulmien matalille katoille, sulkivat kadut, '
+        + 'antoivat viiden minuutin varoituksen ja avasivat tulen väkijoukkoon.'
+        + '\n\nCortés Vargas otti vastuun 47 kuolleesta. Todellista määrää ei ole '
+        + 'koskaan vahvistettu: tutkija Herrera Soton kokoamat arviot vaihtelevat '
+        + '47:stä kahteen tuhanteen. Gabriel García Márquez kuvasi tapahtuman '
+        + 'romaanissaan Sadan vuoden yksinäisyys ja mainitsi kolmetuhatta kuollutta, '
+        + 'mutta sekin luku on kaunokirjallinen eikä laskettu.',
+      lahde: 'en-Wikipedia "Banana Massacre". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Ciénagan uhrien määrää ei tiedetä?',
+        vaihtoehdot: [
+          'Yhtiö esti lehdistön pääsyn alueelle vuosikausiksi',
+          'Kaikki asiakirjat tuhoutuivat myöhemmin tulipalossa',
+          'Tarkkoja kirjauksia ei ole, ja arviot vaihtelevat 47:stä kahteen tuhanteen',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
 };
