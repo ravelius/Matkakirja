@@ -3364,4 +3364,32 @@ export const ASIA_ARTIKKELIT = {
       + 'Lounaassa leveän puistokadun päässä kohoavat 1920-luvun '
       + 'Darulamanin palatsit.',
   },
+  /*
+   * MYANMAR — maa-avain (countryShapes.MMR.wiki = 'Myanmar'), ei
+   * kaupunki. Vain intro-kenttä: maalehden maaosasto nojaa tähän
+   * introon yksin, sama malli kuin Kenialla ja Egyptillä. Faktat
+   * en-Wikipedian artikkelista "Myanmar" (johdanto sekä osiot
+   * "History" ja "Geography"), tarkistettu 6.9.2026.
+   */
+  Myanmar: {
+    intro: 'Myanmar on Kaakkois-Aasian mantereen suurin maa, ja sen '
+      + 'halki virtaa pohjoisesta etelään Iravadi, lähes 2 170 '
+      + 'kilometriä pitkä joki, jonka laaksossa asuu suurin osa maan '
+      + 'väestöstä. Pohjoisessa kohoaa Hkakabo Razi 5 881 metriin, '
+      + 'etelässä on 1 930 kilometriä rantaviivaa Bengalinlahden ja '
+      + 'Andamaninmeren äärellä. Ensimmäiset kaupunkivaltiot perusti '
+      + 'pyu-kansa, ja 1050-luvulla Paganin kuningaskunta yhdisti '
+      + 'Iravadin laakson ensimmäistä kertaa — sen mukana burman kieli '
+      + 'ja theravada-buddhalaisuus levisivät vähitellen koko maahan. '
+      + '1500-luvulla Taungoon hallitsijat kokosivat hetkeksi '
+      + 'Kaakkois-Aasian historian suurimman valtakunnan, ja 1800-luvulla '
+      + 'Konbaung-dynastia menetti maansa kolmessa sodassa briteille: '
+      + 'Mandalayn kukistuttua koko Burma liitettiin siirtomaaksi 1. '
+      + 'tammikuuta 1886, ja itsenäisyys tuli 4. tammikuuta 1948. Maa on '
+      + 'yksi maailman järistysherkimmistä, sillä Sagaingin siirros '
+      + 'kulkee etelästä pohjoiseen sen keskeltä. Teetä ei täällä juoda '
+      + 'vain kupista vaan syödään hapatettuna lehtenä, ja '
+      + 'kansallissoitin on harppu, jollaista ei muualla Aasiassa enää '
+      + 'soiteta.',
+  },
 };

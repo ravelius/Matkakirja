@@ -89,6 +89,10 @@ const SALLITUT = [
   // loppukauttaviiva on pakollinen — ilman sitä palvelin vastaa
   // uudelleenohjauksella, jota worker ei seuraa.
   'https://hongkongfp.com/',
+  // Myanmarin uutislähde (maalehti MMR, 6.9.2026): burmankielinen
+  // syöte ja artikkelisivut samalla isäntänimellä. Syöteosoitteen
+  // loppukauttaviiva on pakollinen — ilman sitä vastaus on 301.
+  'https://myanmar-now.org/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

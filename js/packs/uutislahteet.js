@@ -557,4 +557,26 @@ export const UUTISLAHTEET = {
     kieli: 'en',
     syote: 'https://hongkongfp.com/feed/',
   },
+  /*
+   * Myanmar Now on burmankielinen uutissivusto, ja sen burmankielinen
+   * osasto on osoitteessa myanmar-now.org/mm/. Testattu 6.9.2026:
+   * syötteessä kymmenen juttua, ja artikkelisivun ainoasta
+   * <article>-lohkosta jäsentyy 18–24 yli 60 merkin kappaletta sekä
+   * og:image. Syötteen osoitteen LOPPUKAUTTAVIIVA ON PAKOLLINEN:
+   * ilman sitä palvelin vastaa 301:llä eikä worker seuraa
+   * uudelleenohjauksia.
+   *
+   * Testattu ja hylätty: Eleven Media (news-eleven.com/rss.xml vastaa
+   * 200:lla mutta syötteessä ei ole yhtään <item>-alkiota, ja
+   * /feed on 404), The Irrawaddy ja Mizzima (Cloudflaren botti-esto,
+   * 403 tai captcha sekä englannin- että burmankielisissä
+   * osastoissa), DVB (www.dvb.no/feed ja burmese.dvb.no/feed ohjaavat
+   * 301:llä etusivulle eivätkä syötteeseen), Khit Thit ja Yangon Khit
+   * Thit (yhteys katkeaa TLS-kättelyssä).
+   */
+  MMR: {
+    nimi: 'Myanmar Now',
+    kieli: 'my',
+    syote: 'https://myanmar-now.org/mm/feed/',
+  },
 };

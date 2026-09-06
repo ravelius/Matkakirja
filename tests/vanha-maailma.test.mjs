@@ -367,7 +367,25 @@ test('Aasian artikkelit noudattavat talon mittaa', async () => {
    * kolme kappaletta ja alle tuhat merkkiä, jotta kortti pysyy
    * luettavana ja kaupungit keskenään samanmittaisina.
    */
+  /*
+   * MAA-AVAIMET EIVÄT OLE KAUPUNKIARTIKKELEITA (Myanmar 6.9.2026).
+   * Taulussa on myös maan nimellä avattuja tietueita, joissa on VAIN
+   * intro-kenttä: js/lehti.js ja js/ui.js lukevat maalehden maaosaston
+   * esittelyn niistä (ARTIKKELIT[maa.wiki].intro), eikä maalla ole
+   * kaupunkikortin kolmen kappaleen teksti-kenttää lainkaan. Sama
+   * malli on Afrikan taulussa (africa-artikkelit.js: Kenia, Tansania,
+   * Uganda). Talon mitta koskee kaupunkikortteja, joten maa-avaimet
+   * luetellaan tässä nimeltä — lista saa kasvaa vain maan nimillä.
+   */
+  const MAA_AVAIMET = new Set(['Myanmar']);
   for (const [nimi, a] of Object.entries(ASIA_ARTIKKELIT)) {
+    if (MAA_AVAIMET.has(nimi)) {
+      assert.equal(a.teksti, undefined, `${nimi}: maa-avaimessa on vain intro`);
+      assert.ok(a.intro.length > 600 && a.intro.length < 1200,
+        `${nimi}: maaintro ${a.intro.length} merkkiä (600–1200)`);
+      assert.ok(!/[!]/.test(a.intro), `${nimi}: huutomerkki ei kuulu artikkeliin`);
+      continue;
+    }
     assert.equal(a.teksti.split('\n\n').length, 3, `${nimi}: ei kolmea kappaletta`);
     assert.ok(a.teksti.length > 600 && a.teksti.length < 1100,
       `${nimi}: teksti ${a.teksti.length} merkkiä (600–1100)`);

@@ -41131,4 +41131,414 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MYANMAR (MMR) — Aasian laudan maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-myanmar.md; kaikki
+   * faktat en-Wikipedian raakatekstistä 6.9.2026, artikkeli ja osio
+   * kirjattu faktapohjaan.
+   *
+   * EI HISTORIA-AIHETTA TARKOITUKSELLA. Myanmarin molemmilla
+   * pelikaupungeilla (yangon, mandalay) on KULTTUURI_KATEGORIAT-lohkossa
+   * oma historia-sivunsa, ja js/ui.js rakennaSivut antaa samalla aihe-
+   * id:llä voiton kaupungille — maan historia-sivu ei siis näkyisi
+   * pelissä koskaan. Viisi aihetta on siksi valittu vakioaiheiden
+   * lopusta: luonto, ruoka, kuvataide, musiikki ja kirjallisuus.
+   *
+   * HERKKÄ MAA (spec-asia.md, M3:n Myanmar-linja): historia kerrotaan
+   * asiallisesti, nykyhetkestä vain kulttuuri, luonto ja ruoka. Siksi
+   * lehdessä ei ole nykypolitiikkaa, käynnissä olevaa selkkausta eikä
+   * niitä lähteiden kohtia, jotka kertovat niistä (esim. Art of
+   * Myanmar -artikkelin sensuuriosio ja Yoke thé -artikkelin
+   * 1990-luvun elvytys jätettiin pois).
+   *
+   * PÄÄLLEKKÄISYYS RAJATTU: karttanostot (maastokohteet-mmr.js: Bagan,
+   * Mrauk U, Beikthano, Kyaiktiyo, Pindaya, Pyin Oo Lwin, Mawlamyine,
+   * Shwebo, Hkakabo Razi, Inlejärvi, Chindwin; skandaalit.js:
+   * Dhammazedin kello ja kultainen kirje; elaintakyt.js:
+   * surkkunenäapina) ja kaupunkilehdet (Shwedagon, Sule, Botataung,
+   * ruutukaava, mohinga, palatsi, Kuthodaw, kultalehti ja silkki) on
+   * luettu läpi, eikä yksikään näistä ole maalehden aiheena.
+   */
+  MMR: [
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Iravadi virtaa Myanmarin halki pohjoisesta etelään, ja sen ympärillä on '
+          + 'sammunut tulivuori, järvi joka putosi maan alle ja delfiinejä, jotka '
+          + 'tekevät kalastajien kanssa töitä.',
+      nostot: [
+        {
+          otsikko: 'Delfiini, joka ajaa kalat verkkoon',
+          tiedosto: 'Irrawaddy Dolphin (Orcaella brevirostris) interested by fisherman catch (15658212230).jpg',
+          teksti: 'Iravadinjokidelfiini on tylppäpäinen valas, jolla ei ole lainkaan '
+              + 'kuononokkaa, ja joen 370 kilometrin pituisella makean veden osuudella '
+              + 'niitä arvioidaan olevan 58–72. Kalastajan ja delfiinin yhteistyö on '
+              + 'vanha tapa: mies rummuttaa kanootin laitaa kartionmuotoisella '
+              + 'puukapulalla, läiskii melalla veden pintaa, helistää verkkoaan tai '
+              + 'päästää kalkkunamaisen huudon. Suostunut parvi ajaa kalat puolikaareen '
+              + 'ja työntää ne venettä kohti, ja palkaksi se saa osan sivusaaliista. '
+              + 'Vuoden 1879 raportin mukaan kalastajat haastoivat toisiaan paikallisiin '
+              + 'oikeuksiin saadakseen osuuden naapurin verkosta — perusteena se, että '
+              + 'saaliin oli ajanut heidän oma delfiininsä.',
+          selite: 'Iravadinjokidelfiini nousee pintaan kalastajan veneen vierellä Borneon '
+            + 'rannikolla; sama laji elää myös Iravadin makeassa vedessä.',
+          lahde: 'Bernard DUPONT, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Irrawaddy dolphin',
+        },
+        {
+          otsikko: 'Tulivuori, jolla on kolmekymmentäseitsemän asukasta',
+          tiedosto: 'Mount Popa (52099965498).jpg',
+          teksti: 'Popa on sammunut tulivuori keskisessä Myanmarissa noin viidenkymmenen '
+              + 'kilometrin päässä Baganista, ja sitä on kutsuttu Burman Olympokseksi. '
+              + 'Vuoren lounaispuolella kohoaa Taung Kalat, jyrkkäseinäinen laavatulppa, '
+              + 'jonka laella on luostari; erakko U Khandi piti aikanaan kunnossa sinne '
+              + 'johtavat 777 porrasta. Popa on maan tärkein natinpalvonnan keskus: '
+              + 'pyhätössä ovat esillä kaikki 37 virallista nattia, mutta vain neljä '
+              + 'niistä asuu vuorella. Kansanusko kieltää pukeutumasta punaiseen, mustaan '
+              + 'tai vihreään ja tuomasta mukana lihaa, etenkään sianlihaa. Vuoren yli '
+              + 'kahdensadan lähdettä tekevät siitä keitaan kuivalla keskitasangolla.',
+          selite: 'Taung Kalat on Popan lounaispuolella kohoava laavatulppa, ja sen '
+            + 'laella olevaan luostariin nousee 777 porrasta.',
+          lahde: 'Radek Kucharski, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Mount Popa',
+        },
+        {
+          otsikko: 'Järvi, joka putosi maan alle',
+          tiedosto: 'Indawgyi.JPG',
+          teksti: 'Indawgyi Kachinin osavaltiossa on suurin kokonaan Myanmarissa sijaitseva '
+              + 'järvi: 13 kilometriä idästä länteen ja 24 pohjoisesta etelään. Se ei ole '
+              + 'kraatteri eikä jäätikön jälki vaan vajoama-allas, joka syntyi Sagaingin '
+              + 'siirroksen sivuaskelmaan — sama repeämä kuin Kalifornian Salton '
+              + 'Troughissa. Suullinen perimätieto kertoo hedelmällisestä laaksosta, joka '
+              + 'täyttyi äkkiä vedellä maanjäristyksen jälkeen ja hukutti kylän '
+              + 'asukkaineen. Järvi on Ramsar-kohde vuodesta 2016 ja Unescon biosfäärialue '
+              + 'vuodesta 2017. Sen rannoilla pesii ympäri vuoden kaksi äärimmäisen '
+              + 'uhanalaista korppikotkalajia.',
+          selite: 'Indawgyi on suurin kokonaan Myanmarissa sijaitseva järvi, ja sen '
+            + 'kosteikot ovat kuuluneet Unescon biosfäärialueisiin vuodesta 2017.',
+          lahde: 'Ericwinny, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Indawgyi Lake',
+        },
+        {
+          otsikko: 'Puu, joka tylsyttää veitset',
+          teksti: 'Myanmarin tiikkimetsissä kasvaa lähes puolet maailman luonnonvaraisesta '
+              + 'tiikistä, ja geneettisesti lajilla on kaksi alkukotia: toinen Intiassa, '
+              + 'toinen Myanmarissa ja Laosissa. Tiikki on jopa neljäkymmentä metriä korkea '
+              + 'lehtipuu, jonka sydänpuu on kellanruskeaa ja tummenee vuosien myötä. Puun '
+              + 'oma öljy tekee siitä termiittien ja hyönteisten kestävän, ja se säilyy '
+              + 'ulkona ilman öljyämistä tai lakkaamista — siksi siitä on tehty '
+              + 'laivankansia ja ovenkarmeja. Puuaineksessa on piidioksidia, joka tylsyttää '
+              + 'terät nopeasti, joten helposti työstettävä puu on nikkarille samalla '
+              + 'kiusa. Sukua on vain kaksi muuta lajia, joista toinen kasvaa vain '
+              + 'Myanmarissa.',
+          wiki: 'Teak',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Myanmarissa teetä ei ainoastaan juoda vaan syödään: hapatettu teelehti on '
+          + 'sekä välipala, juhlan merkki että vanha tapa vahvistaa sovinto.',
+      nostot: [
+        {
+          otsikko: 'Tee, joka syödään lautaselta',
+          tiedosto: 'Laphet thoke.JPG',
+          teksti: 'Lahpet on hapatettu teelehti, ja sanonta asettaa sen omaan luokkaansa: '
+              + 'hedelmistä paras on mango, lihoista sianliha ja lehdistä lahpet. Nuorimmat '
+              + 'lehdet höyrytetään noin viisi minuuttia, pakataan bambusaaviin tai '
+              + 'saviruukkuihin, lasketaan kuoppaan ja puristetaan painoilla niin että '
+              + 'vesi lähtee. Hapatuksen tekevät maitohappobakteerit ilman happea, ja se '
+              + 'kestää kolmesta neljään kuukautta; lehdet vaihtavat vihreästä '
+              + 'kullanvihreään ja pehmenevät. Valmis massa maustetaan valkosipulilla, '
+              + 'chilillä, suolalla, sitruunamehulla ja maapähkinäöljyllä.',
+          selite: 'Lahpet thohk on teelehtisalaatti: hapatetun teen seassa on tomaattia, '
+            + 'valkosipulia, papuja, maapähkinöitä ja kuivattua katkarapua.',
+          lahde: 'Wagaung, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Lahpet',
+        },
+        {
+          otsikko: 'Sovinto tarjoillaan lokerolautasesta',
+          tiedosto: 'Laphet oke.JPG',
+          teksti: 'Juhlava lahpet tarjoillaan matalasta kannellisesta lakka-astiasta, jossa '
+              + 'on lokerot: keskellä hapatettu tee, ympärillä paahdettua valkosipulia, '
+              + 'kikherneitä, seesaminsiemeniä, maapähkinöitä, kuivattua katkarapua, '
+              + 'inkivääriä ja paistettua kookosta. Ilman sitä ei ole poikien '
+              + 'munkkivihkiäisiä eikä häitä, ja kutsut vietiin ennen ovelta ovelle astia '
+              + 'mukana: kutsun hyväksyi syömällä siitä. Sotivien kuningaskuntien välillä '
+              + 'lahpet oli sovinnon merkki, joka syötiin kiistan ratkettua, ja '
+              + 'siviilioikeuden tuomion jälkeen sen syöminen tarkoitti, että päätös '
+              + 'hyväksyttiin.',
+          selite: 'Lahpet ohk on lokeroitu lakka-astia: hapatettu tee on keskilokerossa '
+            + 'ja lisukkeet omissaan sen ympärillä.',
+          lahde: 'Wagaung, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Lahpet',
+        },
+        {
+          otsikko: 'Kalatahna, joka on vanhempi kuin kuningaskunnat',
+          tiedosto: 'Raw ngapi.JPG',
+          teksti: 'Ngapi tarkoittaa kirjaimellisesti puristettua kalaa: suolattu kala tai '
+              + 'katkarapu hapatetaan, jauhetaan ja kuivataan auringossa, ja siitä tulee '
+              + 'alamaan keittiön perusmauste. Vanhin tunnettu maininta on ensimmäiseltä '
+              + 'vuosisadalta peräisin olevassa monin kivipiirtokirjoituksessa, ja ngapin '
+              + 'tekijät luetellaan 1100–1400-lukujen kivi- ja marmoritauluissa. '
+              + '1400-luvulla monit vaihtoivat ngapia, suolaa ja riisiä ylämaan '
+              + 'burmalaisten rubiineihin, bentsoehartsiin ja myskiin. Siirtomaa-ajan '
+              + 'eurooppalaiset vieraat kuvasivat sen hajua loukkaavaksi; rakhinelainen '
+              + 'ngapi tehdään merikalasta ja lähes ilman suolaa.',
+          selite: 'Raakaa ngapia ei muutamaa lajia lukuun ottamatta syödä sellaisenaan '
+            + 'vaan se paistetaan, keitetään liemeksi tai survotaan chilin kanssa.',
+          lahde: 'Uthantofburma, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ngapi',
+        },
+        {
+          otsikko: 'Nuudelit, jotka tulivat vuorilta',
+          tiedosto: 'IMG Shanhkaukswè.JPG',
+          teksti: 'Shan khauk swè on riisinuudeliannos, jossa on kanaa tai jauhettua '
+              + 'sianlihaa, sipulia, valkosipulia, tomaattia, chiliä ja murskattuja '
+              + 'paahdettuja maapähkinöitä, ja sen kanssa tarjotaan tofupihvejä ja '
+              + 'säilöttyä sinappikaalia. Shanien tofu ei ole soijaa vaan keltaisista '
+              + 'herneistä tehtyä, ja lämpimänä kermaisena keitoksena se on oma ruokansa. '
+              + 'Ylämaan keittiö eroaa alamaan keittiöstä myös umamin lähteessä: kalan '
+              + 'sijaan käytetään hapatettuja papuja eli pè ngapia, ja kuivatut '
+              + 'papulastut ovat oma mausteensa. Pohjois-Thaimaan shanravintoloissa sama '
+              + 'ruoka tunnetaan thainkielisellä nimellä.',
+          selite: 'Shan khauk swè tarjoillaan liemessä, ja vieressä on säilöttyä '
+            + 'sinappikaalia — ylämaan keittiön vakiolisuke.',
+          lahde: 'Wagaung, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Burmese cuisine',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Myanmarin kuvataide syntyi temppelin seinälle ja hovin työpajaan: maalaus '
+          + 'tehtiin kuivalle pinnalle, ja hienoin lakkatyö saapui maahan sotasaaliin '
+          + 'mukana.',
+      nostot: [
+        {
+          otsikko: 'Maalaus, joka tehtiin kuivalle seinälle',
+          tiedosto: 'Ancient wall painting (awakening of Buddha Taṇhaṅkara), Upali Thein Temple, Bagan, Myanmar - 20141210.jpg',
+          teksti: 'Baganin temppeleiden seinämaalaukset eivät ole freskoja: ne maalattiin '
+              + 'kuivalle pinnalle eikä märkään laastiin, ja siksi niissä on oma '
+              + 'tekniikkansa. Aiheet ovat useimmiten jataka-kertomuksia Buddhan aiemmista '
+              + 'elämistä, ja kuvien viereen kirjoitettiin selitteet paliksi, '
+              + 'muinaismoniksi tai muinaisburmaksi. Kattoihin maalattiin kuvioita, joissa '
+              + 'toistuu lootus puhtauden merkkinä. Avan kaudella maalarit toivat mukaan '
+              + 'oman aikansa: hahmoilla on ajan kampaukset ja taustalla tehdään arkisia '
+              + 'töitä kuten kalastetaan. Samalla käyttöön tulivat siniset ja turkoosit '
+              + 'väriaineet.',
+          selite: 'Baganin Upali Theinin temppelin seinämaalaus kertoo Buddha '
+            + 'Tanhankaran heräämisestä.',
+          lahde: 'Jacklee, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Art of Myanmar',
+        },
+        {
+          otsikko: 'Lakkatyö, joka tuli sotasaaliina',
+          tiedosto: 'Burmese lacquerware.JPG',
+          teksti: 'Lakkaesineiden teko on Baganin myöhäiskaudelta periytyvä oma taiteenlaji, '
+              + 'ja vanhimmat punontarungot on ajoitettu Baganissa 1200-luvulle. Hienoin '
+              + 'laji, yun, uskotaan tulleen maahan vasta 1500-luvulla: kun Bayinnaung '
+              + 'valloitti vuosina 1555–1562 muun muassa Chiang Main seudun, hän toi '
+              + 'mukanaan suuren joukon käsityöläisiä, ja lajin nimi tulee heidän '
+              + 'kansastaan. Sama toistui myöhemmin, kun Konbaung-hovi valloitti Ayutthayan '
+              + 'ja otti siamilaisen lasimosaiikin omaan käyttöönsä ylivallan merkiksi — '
+              + 'tyyliä pidetään nykyään burmalaisena, eikä Siam saanut sitä koskaan '
+              + 'takaisin.',
+          selite: 'Burmalainen lakkatyö on omaa taiteenlajiaan Baganin myöhäiskaudelta '
+            + 'alkaen; vanhimmat punontarungot on ajoitettu 1200-luvulle.',
+          lahde: 'Wagaung, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Art of Myanmar',
+        },
+        {
+          otsikko: 'Kuninkaan kuvat ommeltiin sametille',
+          tiedosto: 'Mandalay-Sein Myint Tapestry-12-Wandteppich-gje.jpg',
+          teksti: 'Kalaga on paksusti kirjailtu applikaatiotyö: silkistä, flanellista, '
+              + 'huovasta, villasta ja pitsistä leikatut hahmot topataan ja ommellaan '
+              + 'puuvillaiselle tai samettiselle pohjalle, joka on yleensä punainen tai '
+              + 'musta. Ompeleet tehdään metalli- ja tavallisella langalla, ja pinta '
+              + 'koristellaan paljeteilla, helmillä ja lasikivillä. Aiheet ovat burmalaisen '
+              + 'näyttämön klassikoita, Ramayanaa ja jataka-tarinoita. Laji syntyi '
+              + 'Konbaung-kaudella 1800-luvun puolivälissä ja oli huipussaan kuningas '
+              + 'Mindonin aikana, jolloin sametti tuli hovissa muotiin. Sana kalaga '
+              + 'tarkoittaa verhoa.',
+          selite: 'Kalagan hahmot on topattu ja ommeltu pohjakankaalle, ja pinta on '
+            + 'peitetty paljeteilla, helmillä ja lasikivillä.',
+          lahde: 'Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kalaga',
+        },
+        {
+          otsikko: 'Maalari, joka pelasti kuninkaan sukulaisen',
+          aika: '1897–1945',
+          teksti: 'Konbaung-kaudella eurooppalainen tekniikka tuli hoviin: burmalaiseen '
+              + 'maalaukseen ilmestyivät viivaperspektiivi, valon ja varjon vastakohta ja '
+              + 'sumea etäisyys. Modernin maalauksen isänä pidetään Ba Nyania, joka syntyi '
+              + '1897 Pantanawissa kuusilapsiseen perheeseen ja opiskeli neljä vuotta '
+              + 'perinteisiä kuvioita paikallisen mestarin johdolla. Burma Art Club auttoi '
+              + 'hänet 1921 Lontooseen Royal College of Artiin. Toisella Lontoon '
+              + 'matkallaan hän pelasti hukkumasta kuningas Yrjö V:n sukulaisen ja tapasi '
+              + 'kuninkaan henkilökohtaisesti. Kotiin palattuaan 1930 hän piti maan '
+              + 'ensimmäisiä yksityisnäyttelyitä.',
+          wiki: 'Ba Nyan',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Aasian ainoa yhtäjaksoisena säilynyt harppuperinne soi Myanmarissa, ja sen '
+          + 'rinnalla soittaa orkesteri, jonka rumpali istuu kahdenkymmenen rummun '
+          + 'keskellä.',
+      nostot: [
+        {
+          otsikko: 'Harppu, joka ei koskaan lakannut soimasta',
+          tiedosto: 'Saung-Gauk.jpg',
+          teksti: 'Saung gauk on kaarreharppu ja maan kansallissoitin, ja sitä pidetään '
+              + 'Aasian ainoana yhtäjaksoisena harppuperinteenä. Kaikupohjan päälle on '
+              + 'pingotettu peurannahka, joka lakataan paksusti punaiseksi ja johon '
+              + 'jätetään neljä pientä pyöreää äänireikää; runko on noin 80 senttiä pitkä '
+              + 'ja kaari nousee siitä 60 senttiä. Koristeena on kiillepaloja, joita '
+              + 'kutsutaan Mandalayn helmiksi. Vanhin todiste soittimesta on 600-luvun '
+              + 'puolivälin reliefi Sri Ksetran Bawbawgyi-pagodissa: siinä soitetaan '
+              + 'viisikielistä kaarreharppua. Pyu-lähetystön orkesterissa Kiinassa '
+              + '801–802 oli sama soitin.',
+          selite: '1800-luvun saung gauk: kaari päättyy koristeltuun bodhipuun lehteen, '
+            + 'ja kielet on kiinnitetty kaareen punaisin nauhoin.',
+          lahde: 'Met Museum, Wikimedia Commons (CC0)',
+          wiki: 'Saung',
+        },
+        {
+          otsikko: 'Sotavangit toivat uuden sävellajin',
+          aika: '1766–1853',
+          teksti: 'Kun kuningas Hsinbyushin ryösti Ayutthayan, hoviin päätyi siamilaisia '
+              + 'hoviherroja, näyttelijöitä ja soittajia, ja heidän vaikutuksestaan '
+              + 'harppumusiikkiin syntyi uusia muotoja. Merkittävin uudistaja oli hovimies '
+              + 'Myawaddy Mingyi U Sa: hän sovitti siamilaista ohjelmistoa burmaksi ja loi '
+              + 'kokonaan uuden lajin nimeltä yodaya, joka on burman kielen sana '
+              + 'Ayutthayalle. Hän myös nosti harpun kielten määrän seitsemästä '
+              + 'kolmeentoista, jolloin soittimen ala venyi kahteen ja puoleen oktaaviin, '
+              + 'ja määräsi rungon tehtäväksi sha-puun kaarevasta juuresta. Viimeinen '
+              + 'hovisoittaja lisäsi neljännentoista kielen.',
+          wiki: 'Saung',
+        },
+        {
+          otsikko: 'Rumpali istuu rumpujen sisällä',
+          teksti: 'Hsaing waing on burmalainen perinneorkesteri, ja sen pääsoitin pat waing '
+              + 'on rumpukehä: kahdeksastatoista kahteenkymmeneenyhteen viritettyä rumpua '
+              + 'ympyrässä, joiden ala ylittää kolme oktaavia, ja soittaja istuu kehän '
+              + 'keskellä. Rummut viritetään yhä intialaisella menetelmällä, ja sitä '
+              + 'pidetään Kaakkois-Aasian viimeisenä jäänteenä intialaisesta '
+              + 'soitinperinteestä. Vanhin kuvallinen todiste orkesterista on 1600-luvulta. '
+              + 'Kokoonpanoja on viisi: juhlien, näytelmien, nukketeatterin, nat-menojen '
+              + 'ja anyeint-esitysten omat. Soittaja Sein Beda toi telineisiin '
+              + 'lasimosaiikin, näyttämölle valonheittimet ja soittajille univormut.',
+          wiki: 'Hsaing waing',
+        },
+        {
+          otsikko: 'Nukke sai sanoa sen, mistä ihmistä olisi rangaistu',
+          tiedosto: 'Myanmar Marionette.jpg',
+          teksti: 'Yoke thé eli burmalainen marionettiteatteri syntyi noin 1780 kuningas '
+              + 'Singu Minin aikana, ja sen keksijänä pidetään hovin huvimestaria U Thawta. '
+              + 'Yksi nukke on yhden nukettajan hallussa, ja naruja on miespuolisilla '
+              + 'hahmoilla kahdeksantoista ja naispuolisilla yhdeksäntoista. Seurueeseen '
+              + 'kuuluu 27 hahmoa: kaksi norsua, valkoinen ja musta, tiikeri, apina, '
+              + 'alkemisti, neljä ministeriä ja kaksi ilveilijää. Hovissa nukeilla oli oma '
+              + 'tehtävänsä: kuningas saattoi ojentaa lastaan tai puolisoaan tilaamalla '
+              + 'nukeilta vertauksen, ja väki pyysi nukettajia sanomaan kuninkaalle '
+              + 'asioita, joista ihminen olisi voinut menettää päänsä.',
+          selite: 'Burmalaista marionettia liikuttaa kahdeksantoista tai yhdeksäntoista '
+            + 'narua, ja yhtä nukkea hoitaa yksi nukettaja.',
+          lahde: 'Mydaydream89, Wikimedia Commons (CC0)',
+          wiki: 'Yoke thé',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä eläimen nahka on pingotettu saung-harpun kaikupohjan päälle?',
+        vaihtoehdot: [
+          'Puhvelin',
+          'Vuohen',
+          'Käärmeen',
+          'Peuran',
+        ],
+        oikea: 3,
+        fakta: 'Nahka lakataan paksusti punaiseksi, ja siihen jätetään neljä pientä '
+            + 'pyöreää äänireikää.',
+      },
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Burman kirjaimet ovat pyöreitä, koska niitä piirrettiin palmunlehdelle — ja '
+          + 'yksi nelikielinen kivi Baganissa avasi tutkijoille kokonaan kadonneen kielen.',
+      nostot: [
+        {
+          otsikko: 'Kivi, joka avasi kadonneen kielen',
+          aika: '1113',
+          tiedosto: 'Myazedi-Inscription-Burmese.JPG',
+          teksti: 'Myazedin piirtokirjoitus vuodelta 1113 kertoo saman julistuksen neljällä '
+              + 'kielellä: muinaisburmaksi, paliksi, muinaismoniksi ja pyuksi. '
+              + 'Sveitsiläinen palintutkija Emanuel Forchhammer löysi kaksi lähes '
+              + 'samanlaista pilaria 1886–1887 Myinkabasta Baganin liepeiltä; toinen '
+              + 'niistä on 142 senttiä korkea, ja siinä on 39 riviä muinaisburmaa, 41 '
+              + 'riviä palia, 33 riviä muinaismonia ja 26 riviä pyuta. Juuri tämä kivi '
+              + 'avasi pyun kielen ja kirjoituksen tutkijoille. Teksti on lahjoitus, '
+              + 'toivomus ja kirous: joka kohtelee kaltoin lahjoitettuja palvelijoita, ei '
+              + 'saa nähdä tulevaa Buddhaa.',
+          selite: 'Pilarin muinaisburmalainen sivu on varhaisin tunnettu todiste '
+            + 'kirjoitetusta burman kielestä.',
+          lahde: 'Hybernator, Wikimedia Commons (public domain)',
+          wiki: 'Myazedi inscription',
+        },
+        {
+          otsikko: 'Kirja, jonka voi pyyhkiä puhtaaksi',
+          tiedosto: 'Accordion fold paper manuscript (Burmese parabaik) MET DP-14374-040.jpg',
+          teksti: 'Parabaik on burmalainen taittokirja: paksu paperi liimataan yhdeksi '
+              + 'pitkäksi arkiksi ja taitetaan haitariksi, ja päällyksiksi lakataan '
+              + 'kannet. Paperi on shanien mulperipaperia, ja koot vaihtelevat 43 kertaa '
+              + '18 sentistä 122 kertaa 46 senttiin. Mustaksi parabaikiksi kutsuttu laji '
+              + 'sivellään jauhetulla hiilellä ja riisitärkkelyksellä, siihen '
+              + 'kirjoitetaan valkoisilla vuolukivipuikoilla, ja teksti voidaan pyyhkiä ja '
+              + 'pinta mustata uudelleen. Valkoinen parabaik oli virallisten asiakirjojen '
+              + 'ja maalausten alusta. Suurin osa burmalaisista aikakirjoista kirjoitettiin '
+              + 'alun perin juuri parabaikiin.',
+          selite: 'Valkoinen parabaik oli virallisten asiakirjojen ja maalausten alusta; '
+            + 'tämä käsikirjoitus on Konbaung-hovin työpajasta.',
+          lahde: 'Konbaung-hovin työpaja / Met Museum, Wikimedia Commons (CC0)',
+          wiki: 'Parabaik',
+        },
+        {
+          otsikko: 'Runo viidestäkymmenestäviidestä kampauksesta',
+          tiedosto: 'Kamawa-sa from Bagan Myanmar, mid-19th century, East-West Center.JPG',
+          teksti: 'Burmalaisen runouden neljä päälajia olivat 1400-luvulle tultaessa pyo eli '
+              + 'jataka-runo, linka eli hengellinen mietelmä, mawgun eli historiallinen '
+              + 'runoelma ja eigyin eli kuningashuoneen kehtolaulu. Vanhin säilynyt teos on '
+              + 'vuodelta 1455, Arakanin prinsessan kehtolaulu. Munkki Shin Ottama Gyaw '
+              + 'kirjoitti tawla-säkeitä, jotka riemuitsivat metsistä, vuodenajoista ja '
+              + 'matkanteosta, ja hovinainen Yawei Shin Htwe sepitti oman runonsa '
+              + 'aiheesta, jota kukaan muu ei ollut ajatellut: viisikymmentäviisi tapaa '
+              + 'laittaa hiukset. Hovimiehet hioivat myittazan, pitkän proosakirjeen.',
+          selite: 'Klassinen burmalainen teksti kirjoitettiin palmunlehdelle; tämä '
+            + 'kammawa-sa Baganista on 1800-luvun puolivälistä ja tehty kullatulle '
+            + 'lehdelle lakalla.',
+          lahde: 'Hiart, Wikimedia Commons (CC0)',
+          wiki: 'Burmese literature',
+        },
+        {
+          otsikko: 'Ensimmäinen romaani oli Monte-Criston sukua',
+          aika: '1724–1904',
+          teksti: 'Burmalainen runo oli vuosisatoja sidottu lay-lone tha-paikin muottiin: '
+              + 'nelitavuisia säkeitä, jotka on ketjutettu kiipeävällä riimillä '
+              + 'kolmenkymmenen rivin säkeistöiksi. Muotti alkoi löystyä, kun brittiläinen '
+              + 'lähetysseura toi maahan ensimmäisen kirjapainon 1816. Historiaa oli '
+              + 'kirjoitettu jo ennen sitä: U Kala kokosi 1724 Suuret aikakirjat vuoteen '
+              + '1711 asti, ja kuningas Bagyidaw asetti 1829 oppineet laatimaan '
+              + 'Lasipalatsin aikakirjan. Ensimmäinen burmalainen romaani ilmestyi 1904, '
+              + 'ja sen kirjoitti James Hla Kyaw — esikuvana oli Monte-Criston kreivi.',
+          wiki: 'Burmese literature',
+        },
+      ],
+    },
+  ],
 };

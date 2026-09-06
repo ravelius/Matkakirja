@@ -13,6 +13,17 @@
 > RSS-osoitetta; perustelut ovat js/packs/uutislahteet.js:n
 > HKG-kommentissa. Julkaisu Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Myanmar):** sallittuihin lisättiin
+> myanmar-now.org (maalehti MMR, testattu 6.9.2026: burmankielisessä
+> syötteessä kymmenen juttua, artikkelisivun ainoasta
+> `<article>`-lohkosta jäsentyy 18–24 yli 60 merkin kappaletta ja
+> `og:image` löytyy). Syöteosoitteen `…/mm/feed/` loppukauttaviiva on
+> pakollinen: ilman sitä palvelin vastaa 301:llä eikä worker seuraa
+> uudelleenohjauksia. Eleven Median RSS vastaa 200:lla mutta on tyhjä,
+> ja The Irrawaddy sekä Mizzima ovat Cloudflaren botti-eston takana;
+> perustelut hylkäyksille ovat js/packs/uutislahteet.js:n
+> MMR-kommentissa. Julkaisu Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,
