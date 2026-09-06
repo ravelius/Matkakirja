@@ -97,11 +97,19 @@
  * ── KERROS ON KOKO ETUSIVUN KOKOINEN ────────────────────────────────
  *
  * Kerros asuu KOKO avauspaneelin (.intro) taustalla eikä enää pelkässä
- * ylälohkossa, ja video rajataan `object-fit: cover` -tavalla (SVG
- * `preserveAspectRatio="xMidYMid slice"`). Sama muunnos molemmille
- * tulee yhdestä funktiosta (kerroksenSovitus + videostaRuudulle),
- * joten koneen ruutupiste osuu videon pallolle myös silloin, kun
- * kerros on paljon leveämpi tai korkeampi kuin neliömäinen video.
+ * ylälohkossa. Sama muunnos videolle, julisteelle ja SVG:lle tulee
+ * yhdestä funktiosta (pallonSovitus + videostaRuudulle), joten koneen
+ * ruutupiste osuu videon pallolle myös silloin, kun kerros on paljon
+ * leveämpi tai korkeampi kuin neliömäinen video.
+ *
+ * PALLO JATKUU RUUDUN REUNOJEN YLI (omistaja 6.9.2026 ilta: *"Taustan
+ * maapallo saisi täyttää kokoruudun niin että pallon rajat eivät
+ * näy"*, tarkennus *"Ruutu ei käy edes näytön ulkopuolella"*). Pelkkä
+ * cover ei riitä, koska pallon kiekko täyttää videosta vain
+ * halkaisijansa verran ja nurkkaan on matkaa puoli lävistäjää: skaala
+ * mitataan siksi NURKKAA vasten (KIEKON_YLITYS), ei ruudun sivua, ja
+ * matalalla vaakaruudulla kiekko laskee sen verran, että kone pysyy
+ * kuvassa. Ks. osio PALLO YLI RUUDUN REUNOJEN.
  *
  * ── JULISTE NÄKYY HETI, VIDEO VAIHTUU SEN TILALLE ──────────────────
  *
@@ -475,6 +483,142 @@ export function kerroksenSovitus(mitat, kotelo, tapa = SOVITUS_TAPA) {
     skaala,
     siirtoX: (kw - lev * skaala) / 2,
     siirtoY: (kh - kork * skaala) / 2,
+  };
+}
+
+/* ==================== PALLO YLI RUUDUN REUNOJEN =================== */
+
+/*
+ * OMISTAJA 6.9.2026 ilta, sanatarkasti: *"Taustan maapallo saisi
+ * täyttää kokoruudun niin että pallon rajat eivät näy"* ja tarkennus
+ * *"Ruutu ei käy edes näytön ulkopuolella"*.
+ *
+ * MIKSI COVER EI RIITÄ. Video on neliö, mutta PALLON KIEKKO ei täytä
+ * sitä: kamera on korkeudella 1,55 sädettä ja pystykulma 50°, joten
+ * näkyvän kalotin reuna projisoituu 411 pikselin säteelle, kun kuva on
+ * 800 × 800. Kiekon halkaisija on siis 823 px eli 1,03 × videon sivu.
+ * `cover` venyttää videon sivun ruudun PITEMMÄN sivun mittaiseksi,
+ * jolloin kiekon halkaisija on 1,03 × pitempi sivu — mutta nurkkaan on
+ * matkaa puoli LÄVISTÄJÄÄ. Pystyruudulla (1024 × 1366) lävistäjä on
+ * 1707 px ja kiekko 1406 px, joten pallon reuna ja horisontti jäivät
+ * näkyviin sivuille ja alalaitaan. Juuri sen omistaja näki iPadillaan.
+ *
+ * SÄÄNTÖ: KIEKKO MITATAAN NURKKAA VASTEN, EI SIVUA. Skaala valitaan
+ * niin, että kiekon säde on vähintään KIEKON_YLITYS × matka kiekon
+ * keskeltä kauimpaan nurkkaan — keskitetyllä kiekolla se on sama asia
+ * kuin KIEKON_YLITYS × lävistäjä. Silloin pallo peittää kaikki neljä
+ * nurkkaa ja jatkuu vielä reunojen yli, eikä reunaa voi nähdä millään
+ * kuvasuhteella. Cover jää alarajaksi: jos ruutu on hyvin pieni tai
+ * neliömäinen, videon on silti täytettävä ala. Matalalla vaakaruudulla
+ * kiekko lisäksi LASKEE, jotta zoomattu pohjoinen reitti (kone ja
+ * punainen viiva) pysyy kuvassa — ks. pallonSovitus.
+ */
+
+/**
+ * Pallon näkyvän kiekon SÄDE VIDEON PIKSELEINÄ. Reunapiste on se, jossa
+ * katsesuora sivuaa palloa (cos θ = 1/D), ja sen projektio on
+ * f · sin θ / (D − cos θ). Sama luku kuin savukkeen E10b laskee.
+ */
+export function kiekonSade(kamera = ETUSIVUN_KAMERA, mitat = {}) {
+  const lava = mitat.lava ?? Math.max(mitat.leveys ?? 0, mitat.korkeus ?? 0);
+  const fov = mitat.fov ?? kamera.fov ?? ETUSIVUN_KAMERA.fov;
+  const D = 1 + (kamera.korkeus ?? ETUSIVUN_KAMERA.korkeus);
+  if (!(lava > 0) || !(D > 1) || !(fov > 0) || fov >= 180) return 0;
+  const f = (lava / 2) / Math.tan((fov * RAD) / 2);
+  return (f * Math.sqrt(1 - 1 / D ** 2)) / (D - 1 / D);
+}
+
+/**
+ * Kuinka monta kertaa kiekon halkaisijan on peitettävä matka kiekon
+ * keskeltä KAUIMPAAN NÄKYMÄN NURKKAAN (kaksinkertaisena). Keskitetyllä
+ * kiekolla se on täsmälleen sama asia kuin näkymän lävistäjä. 1,0 olisi
+ * täpärä osuma nurkkaan; 1,15 vie reunan selvästi ruudun ulkopuolelle
+ * (omistaja: *"Ruutu ei käy edes näytön ulkopuolella"*), eikä silti
+ * zoomaa videota enempää kuin on pakko.
+ */
+export const KIEKON_YLITYS = 1.15;
+
+/**
+ * Kuinka lähelle näkymän ylälaitaa kone saa nousta (kerroksen
+ * pikseleitä). Koneen piirros on noin 60 × 47 px, joten tämä jättää
+ * koko koneen näkyviin.
+ */
+export const KONEEN_MARGINAALI = 34;
+
+/**
+ * Koneen ylin kohta VIDEON pikseleinä videon keskipisteestä mitattuna.
+ * Reitti on pohjoinen (Lontoo 51,5° N), mutta kamera katsoo aina
+ * lähempää päiväntasaajaa (latKerroin 0,62, latMax 38°), joten kone
+ * kulkee kuvan yläosassa. Luku ei riipu ruudun koosta, joten se
+ * lasketaan kerran kerrosta avattaessa.
+ */
+export function koneenYlin(reitti, kamera = ETUSIVUN_KAMERA, mitat = {}, askel = 0.25) {
+  const kesto = reitti?.kesto ?? 0;
+  if (!(kesto > 0)) return 0;
+  const keski = (mitat.korkeus ?? 0) / 2;
+  let ylin = 0;
+  for (let t = 0; t <= kesto; t += askel) {
+    const p = pallonPiste(koneenTila(reitti, t), kameranNakyma(reitti, t, kamera), mitat);
+    ylin = Math.max(ylin, keski - p.y);
+  }
+  return ylin;
+}
+
+/**
+ * Kerroksen sovitus, joka VIE PALLON REUNAN RUUDUN ULKOPUOLELLE:
+ * cover-skaala alarajana, ja sen päälle vaatimus kiekolle
+ * (KIEKON_YLITYS × etäisyys kauimpaan nurkkaan).
+ *
+ * KIEKKO SAA LASKEA, JOTTA KONE PYSYY KUVASSA. Zoomattu pallo työntää
+ * pohjoisen reitin ylös: matalalla vaakaruudulla (1440 × 900, paneeli
+ * 1419 × 826) kone lensi Atlantin ylityksellä yli sadan pikselin verran
+ * ruudun yläpuolella — punainen viiva ja kone ovat kuitenkin koko
+ * kerroksen pointti. Kiekon keskipistettä siis lasketaan juuri sen
+ * verran, että koneen ylin kohta mahtuu näkyviin, ja skaala kasvatetaan
+ * niin, että ylitysvaatimus pätee yhä UUTEEN nurkkaetäisyyteen.
+ * Molemmat riippuvat toisistaan, joten piste haetaan muutamalla
+ * kiinnityskierroksella (suppenee, koska ylin < säde / ylitys).
+ *
+ * Palauttaa saman muodon kuin kerroksenSovitus (skaala +
+ * keskityssiirtymä, videostaRuudulle käyttää niitä sellaisenaan) ja
+ * lisäksi:
+ *
+ *   lisays  kuinka paljon skaala kasvoi pelkästä coverista. Viiva ja
+ *           kone jaetaan tällä, jotta ne pysyvät ruudulla entisen
+ *           kokoisina, vaikka pallo on zoomattu isommaksi.
+ *   lasku   kiekon keskipisteen siirtymä alaspäin näkymän keskeltä.
+ *   ylitys  toteutunut kiekon halkaisija / (2 × nurkkaetäisyys)
+ *           (raportointi ja testit).
+ */
+export function pallonSovitus(mitat, kotelo, kamera = ETUSIVUN_KAMERA, asetukset = {}) {
+  const {
+    ylitys = KIEKON_YLITYS, ylin = 0, marginaali = KONEEN_MARGINAALI,
+  } = asetukset;
+  const cover = kerroksenSovitus(mitat, kotelo);
+  const sade = kiekonSade(kamera, mitat);
+  const lev = mitat?.leveys > 0 ? mitat.leveys : 1;
+  const kork = mitat?.korkeus > 0 ? mitat.korkeus : 1;
+  const kw = Math.max(0, kotelo?.leveys ?? 0);
+  const kh = Math.max(0, kotelo?.korkeus ?? 0);
+  let skaala = cover.skaala;
+  let lasku = 0;
+  if (sade > 0 && kw > 0 && kh > 0) {
+    for (let i = 0; i < 10; i++) {
+      // Katto pitää kiinnityksen suppenevana myös rappeutuneilla luvuilla.
+      lasku = Math.min(kh / 2, Math.max(0, marginaali - kh / 2 + ylin * skaala));
+      // Skaala viimeisenä, jotta ylitysehto pätee juuri tähän laskuun.
+      const nurkka = Math.hypot(kw / 2, kh / 2 + lasku);
+      skaala = Math.max(cover.skaala, (ylitys * nurkka) / sade);
+    }
+  }
+  return {
+    tapa: SOVITUS_TAPA,
+    skaala,
+    lasku,
+    siirtoX: (kw - lev * skaala) / 2,
+    siirtoY: (kh - kork * skaala) / 2 + lasku,
+    lisays: cover.skaala > 0 ? skaala / cover.skaala : 1,
+    ylitys: kw > 0 || kh > 0 ? (sade * skaala) / Math.hypot(kw / 2, kh / 2 + lasku) : 0,
   };
 }
 
@@ -967,10 +1111,67 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
   let kehys = 0;
   let suuntaAste = 0;
 
-  /** Kerroksen mitat nyt — sovitus lasketaan näistä (cover). */
-  const sovitusNyt = () => kerroksenSovitus(mitat, {
+  /**
+   * Kerroksen mitat nyt. EI pelkkä cover vaan pallonSovitus: kiekko on
+   * aina isompi kuin näkymän lävistäjä, joten pallon reuna jää ruudun
+   * ulkopuolelle joka kuvasuhteella (omistaja 6.9.2026 ilta).
+   * `ylin` on videon pikseleitä eikä riipu ruudusta, joten se lasketaan
+   * kerran tässä eikä joka kehyksellä.
+   */
+  const ylin = koneenYlin(reitti, kamera, mitat);
+  const sovitusNyt = () => pallonSovitus(mitat, {
     leveys: juuri.clientWidth, korkeus: juuri.clientHeight,
-  });
+  }, kamera, { ylin });
+
+  /*
+   * KEHYKSET TULEVAT JS:STÄ, KOSKA RAJAUS EI OLE ENÄÄ PELKKÄ COVER.
+   * `object-fit: cover` ja `preserveAspectRatio="xMidYMid slice"`
+   * osaavat vain täyttää kotelon; nyt video on kotelon ULKOPUOLELLE
+   * jatkuva neliö. Video, juliste ja SVG saavat siksi täsmälleen sen
+   * laatikon, jonka pallonSovitus laskee — sama muunnos, jolla
+   * videostaRuudulle sijoittaa koneen, viivan ja reittikuvat. Kotelon
+   * `overflow: hidden` rajaa ylimenevän osan.
+   *
+   * VIIVA JA KONE PYSYVÄT ENTISEN KOKOISINA: ne on mitoitettu videon
+   * pikseleissä, joten zoomattu pallo kasvattaisi ne samassa suhteessa.
+   * Jako `lisays`-kertoimella pitää punaisen viivan ja koneen ruudulla
+   * juuri sen kokoisina kuin ennen tätä muutosta.
+   */
+  const VIIVAN_LEVEYS = 11;
+  let kehyksenAvain = '';
+  let lisaysNyt = 1;
+  const asetaKehykset = (sov) => {
+    lisaysNyt = sov.lisays > 0 ? sov.lisays : 1;
+    const lev = mitat.leveys * sov.skaala;
+    const kork = mitat.korkeus * sov.skaala;
+    const avain = `${lev.toFixed(1)},${kork.toFixed(1)},`
+      + `${sov.siirtoX.toFixed(1)},${sov.siirtoY.toFixed(1)}`;
+    if (avain === kehyksenAvain) return;
+    kehyksenAvain = avain;
+    for (const el of [juliste, video, svg]) {
+      el.style.left = `${sov.siirtoX.toFixed(1)}px`;
+      el.style.top = `${sov.siirtoY.toFixed(1)}px`;
+      el.style.right = 'auto';
+      el.style.bottom = 'auto';
+      el.style.width = `${lev.toFixed(1)}px`;
+      el.style.height = `${kork.toFixed(1)}px`;
+    }
+    viiva.style.strokeWidth = (VIIVAN_LEVEYS / lisaysNyt).toFixed(2);
+  };
+
+  /*
+   * KEHYKSET HETI, EI VASTA ENSIMMÄISELLÄ PIIRROLLA. Juliste on
+   * ruudulla jo ennen videon latausta, ja ilman tätä se seisoisi
+   * cover-kokoisena kunnes rAF-silmukka alkaa — pysäytyskuva
+   * napsahtaisi paikalleen (Raamattu: KAIKKI LIIKE ANIMOIDAAN
+   * PEHMEASTI). Sama kutsu ruudun koon tai asennon muuttuessa: liike
+   * vähennettynä silmukkaa ei ole, joten kuuntelija on ainoa tapa
+   * pitää kiekko ruudun reunojen yli myös käännön jälkeen.
+   */
+  asetaKehykset(sovitusNyt());
+  const ruudunMuutos = () => { if (!purettu) asetaKehykset(sovitusNyt()); };
+  win.addEventListener('resize', ruudunMuutos);
+  win.addEventListener('orientationchange', ruudunMuutos);
 
   /** Koneen paikka KERROKSEN pikseleinä hetkellä t (savuke ja testit). */
   const koneRuudulla = (t) => videostaRuudulle(
@@ -1019,10 +1220,9 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
    * häivyttää kuvan liikkumatta. Julisteotsikon kohdalla kuvasta ei
    * piirry mitään (kerroksen maski, paivitaKuvamaski).
    */
-  const piirraReittikuvat = (t, nakyma) => {
+  const piirraReittikuvat = (t, nakyma, sov) => {
     if (!reittikuvat.length) return;
     paivitaKuvamaski();
-    const sov = sovitusNyt();
     const koko = reittikuvanKoko(juuri.clientWidth, juuri.clientHeight);
     for (const r of reittikuvat) {
       const peitto = reittikuvanPeitto(
@@ -1043,6 +1243,8 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
   };
 
   const piirraHetki = (t) => {
+    const sov = sovitusNyt();
+    asetaKehykset(sov);
     const nakyma = kameranNakyma(reitti, t, kamera);
     let d = '';
     let irti = true;
@@ -1066,7 +1268,7 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     if (liike > 0.01) suuntaAste = Math.atan2(b.y - a.y, b.x - a.x) * (180 / Math.PI);
     kone.setAttribute('transform',
       `translate(${a.x.toFixed(1)} ${a.y.toFixed(1)}) `
-      + `rotate(${suuntaAste.toFixed(1)}) scale(${KONEEN_SKAALA})`);
+      + `rotate(${suuntaAste.toFixed(1)}) scale(${(KONEEN_SKAALA / lisaysNyt).toFixed(3)})`);
     kone.style.opacity = a.nakyy ? '1' : '0';
 
     /*
@@ -1084,7 +1286,7 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
      * seuraa kaupunkiaan, ja piirto tapahtuu SVG:n alla, jotta kone
      * jää aina kuvan päälle.
      */
-    piirraReittikuvat(t, nakyma);
+    piirraReittikuvat(t, nakyma, sov);
   };
 
   const askel = () => {
@@ -1161,6 +1363,8 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
       if (purettu) return;
       purettu = true;
       if (kehys) win.cancelAnimationFrame(kehys);
+      win.removeEventListener('resize', ruudunMuutos);
+      win.removeEventListener('orientationchange', ruudunMuutos);
       try { video.pause(); } catch { /* ei väliä */ }
       video.removeAttribute('src');
       avaus?.classList.remove('intro-pallolla');
