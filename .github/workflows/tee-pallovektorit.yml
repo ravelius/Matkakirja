@@ -1,0 +1,116 @@
+# Pallon vektoriviivat: rantaviivat ja maiden rajat tasoittain
+# yksinkertaistettuina ja 10°:n soluihin leikattuina
+# (tools/tee-pallovektorit.mjs) ja vienti ämpäriin polkuun
+# julisteet/pallo/vektorit/<versio>/. Selainmoduuli js/pallovektorit.js
+# (erä V1) hakee soluja sieltä ja piirtää ne laattojen päälle
+# ruutupikselin levyisinä viivoina (Raamattu: "PALLO LEVOSSA YHTA TERAVA
+# KUIN TASOKARTTA" › VEKTORIT SAMALLA; docs/moduulit/pallon-vektoriviivat.md).
+#
+# Ajo on minuutin luokkaa: Natural Earthin nouto (10 Mt) ja
+# yksinkertaistus ovat sekunteja, vienti muutama tuhat pientä tiedostoa.
+# Ajetaan käsin (workflow_dispatch) aina, kun aineisto tai tasot
+# muuttuvat — UUDELLA VERSIOLLA, koska tiedostot ovat selaimessa vuoden
+# välimuistissa eikä samaan polkuun saa koskaan kirjoittaa eri sisältöä.
+name: Tee pallon vektoriviivat
+
+on:
+  workflow_dispatch:
+    inputs:
+      versio:
+        description: 'Ämpärin kansio julisteet/pallo/vektorit/<versio>/ (tyhjä = tämän päivän päivä + a, esim. 2026-09-07a)'
+        required: false
+        default: ''
+      kuiva:
+        description: 'Kuiva ajo: vain mittaustaulukko, ei tiedostoja eikä vientiä'
+        required: false
+        default: 'ei'
+        type: choice
+        options: ['ei', 'kylla']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tee-pallovektorit-${{ inputs.versio || 'oletus' }}
+  cancel-in-progress: false
+
+jobs:
+  tee:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Tarkista että salaisuudet ovat tallessa
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "${R2_ACCOUNT_ID:-}" ]         || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]             || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            exit 1
+          fi
+
+      # SAMA OSOITE KUIN LAATTAPYRAMIDILLA (generoi-pyramidi.yml jobi
+      # "aineisto"). Vektorin on kuljettava laattoihin poltetun viivan
+      # päällä pikselilleen, joten lähde ei saa olla toinen tiedosto
+      # eikä toinen tarkkuus. Rajat tulevat repon rajasetistä
+      # (tools/fokuskartta/rajat-nykyiset.json.gz) kuten viivatasolla.
+      - name: Hae Natural Earth
+        run: |
+          set -euo pipefail
+          mkdir -p ne-data
+          curl -sSL --retry 3 --max-time 300 -o ne-data/ne_10m_ocean.geojson \
+            "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_ocean.geojson"
+          head -c 40 ne-data/ne_10m_ocean.geojson | grep -q '"FeatureCollection"' \
+            || { echo "::error::ladattu tiedosto ei ole GeoJSON-kokoelma"; exit 1; }
+          ls -la ne-data
+
+      - name: Kuiva ajo (mittaustaulukko)
+        if: inputs.kuiva == 'kylla'
+        run: node tools/tee-pallovektorit.mjs --ne=ne-data --kuiva ${{ inputs.versio != '' && format('--versio={0}', inputs.versio) || '' }}
+
+      - name: Laske vektorit
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          node tools/tee-pallovektorit.mjs --ne=ne-data --ulos=pallovektorit-ulos ${{ inputs.versio != '' && format('--versio={0}', inputs.versio) || '' }}
+          echo "Tiedostoja: $(find pallovektorit-ulos -name '*.bin' | wc -l), koko: $(du -sh pallovektorit-ulos | cut -f1)"
+
+      - name: Vie vektorit ämpäriin
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          kansio="$(cat pallovektorit-ulos/kansio.txt)"
+          # Solutiedostot: pitkä välimuisti, versio on polussa.
+          aws s3 sync pallovektorit-ulos "s3://${R2_BUCKET}/${kansio}" \
+            --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --exclude '*' --include '*.bin' --no-progress \
+            --content-type application/octet-stream \
+            --cache-control 'public, max-age=31536000, immutable'
+          # Luettelo viimeisenä: moduuli koettaa sen olemassaoloa ennen
+          # solujen hakua, joten se ei saa olla ämpärissä ennen tavuja.
+          aws s3 cp pallovektorit-ulos/luettelo.json "s3://${R2_BUCKET}/${kansio}luettelo.json" \
+            --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --no-progress --content-type application/json --cache-control 'public, max-age=3600'
+          aws s3 cp pallovektorit-ulos/mitat.json "s3://${R2_BUCKET}/${kansio}mitat.json" \
+            --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --no-progress --content-type application/json --cache-control 'public, max-age=3600'
+          echo "Viety: ${kansio}"

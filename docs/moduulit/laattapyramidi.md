@@ -2313,6 +2313,219 @@ Työnkulku ajaa tämän shardin viimeisenä askeleena, ja luettelojobi on
 `needs: laatat` -riippuvuuden takana — **epäonnistunut paikkaus ei
 koskaan päädy `pyramidi.json`:iin eikä siis kenenkään selaimeen.**
 
+## 10d. Paikallinen poltto Mac Studiolla (`tools/polta-paikallisesti.sh`)
+
+Työnkulku on yhä *se nappi* (luku 10b), mutta sillä on kaksi kattoa,
+joita ei voi nostaa: **GitHubin ajokoneessa on neljä vCPU:ta ja jobissa
+kuuden tunnin katto** (matriisin timeout 330 min). Syvin taso z8 on
+69 628 laattaa eli mitattuna noin 13 ydintuntia — se ei mahdu yhteen
+jobiin neljällä ytimellä, ja pilkkominen kymmeniin jobeihin maksaisi
+saman aineistonoudon kymmeniä kertoja. Omistajan kone tekee saman työn
+omilla ytimillään ilman kumpaakaan kattoa, joten poltto on skriptattu:
+
+```
+tools/polta-paikallisesti.sh [--sarjat z8|kaikki|z0-z7] [--koe] […]
+```
+
+Skripti tekee täsmälleen sen mitä työnkulku ja samoilla argumenteilla —
+sama shardijako, sama `generoi-laattapyramidi.mjs`, samat
+`aws s3 sync` -komennot, samat polut ja samat välimuistiotsakkeet.
+Erot ovat vain siinä, mikä on koneen ja mikä pilven asia:
+
+| asia | työnkulku | paikallinen |
+| --- | --- | --- |
+| rinnakkaisuus | matriisi, 4 vCPU / job | `xargs -P <ytimet>` |
+| Natural Earth | oma job → artefakti | `<ulos>/ne-data` (nouto kerran) |
+| 1′-korkeuspalat | shardi kopioi omansa `aws s3 cp`:llä | kaikki 612 palaa kerran julkisesta osoitteesta, `--korkeuspalat` kaikille |
+| uusinta | job uudelleen | `--vain <shardi>`, valmiit ohitetaan |
+
+### Vaatimukset
+
+```
+brew install node awscli          # node ≥ 22
+npx playwright install chromium   # skripti tekee tämän itse jos puuttuu
+```
+
+Kuvakirjastoa ei tarvita: `package.json` ei riipu `canvas`:sta eikä
+`sharp`:sta, vaan piirto- ja patinapassi ajetaan Playwrightin
+Chromiumissa (`PW_CHROMIUM`). Cairo/pango eivät siis kuulu asennukseen.
+`sharp` asennetaan vain, jos ajetaan `--pallo` (pallon Mercator-sarja).
+
+### z8 EI ole uusi versio vaan lisä olemassa olevaan
+
+Tämä on koko erän tärkein linjaus. Laatan polussa on versio ja polku on
+muuttumaton — mutta **z8:n polkua ei ole vielä kirjoitettu
+kenellekään**, joten sen kirjoittaminen nykyisen version alle ei
+ylikirjoita mitään:
+
+```
+julisteet/pyramidi/<versio>/z8/<sarake>/<rivi>.webp        uusi, tyhjä polku
+julisteet/pyramidi/<viivaversio>/viivat/z8/…              uusi, tyhjä polku
+julisteet/pyramidi/<nostoversio>/nostot/z8/…              uusi, tyhjä polku
+julisteet/pyramidi/pyramidi.json                          tasot z0…z8
+```
+
+Koska yksikään versio ei vaihdu, **pallon lepokerroksen versiovahti
+pysyy tyytyväisenä** (`js/pallo.js lepokerroksenKerrokset`: pallon
+`laatat.json` versio/viivat/nostot = `pyramidi.json`
+versio/viivataso/nostotaso), pallon Mercator-sarjaa ei tarvitse polttaa
+uudestaan eikä yhtään koodiriviä muuteta. Peli ottaa z8:n käyttöön
+luettelosta (`js/laattapyramidi.js valitseTaso` valitsee tason
+luettelon tasoista) heti kun uusi `pyramidi.json` on ämpärissä.
+
+Jos taas poltetaan **uusi pohjaversio** (`--sarjat kaikki`), versiovahti
+sammuttaa lepokerroksen siihen asti, kunnes pallon sarja on poltettu
+samasta versiosta ja `js/pallo.js`:n `PALLO_LAATTAVERSIO` osoittaa
+siihen. Silloin `--pallo` on pakollinen ja se yksi rivi muuttuu
+julkaisussa.
+
+Skripti lukee oletusversiot ja -asetukset (laatu, patina, piirit)
+**ämpärin nykyisestä luettelosta**, ei arvaa niitä: jos z8 poltettaisiin
+eri laadulla tai patinalla kuin z7, uudet laatat erottuisivat silmällä
+naapureistaan — sama perustelu kuin paikkausajolla (luku 10c).
+
+### Nostokerros on se, joka ratkaisee tarvitaanko koodimuutos
+
+`pyramidi.json`:in `nostotaso.nostot` (tunnus → tiiviste) lasketaan aina
+**nykyisestä reposta**, ja peli vaientaa elävästä kerroksesta jokaisen
+merkin, jonka se löytää sieltä (`js/laattapyramidi.js nostoOnPoltettu`)
+— **riippumatta zoomtasosta**. Jos repoon on tullut nostoja sen jälkeen
+kun nykyiset nostolaatat poltettiin, uusi luettelo lupaisi ne
+poltetuiksi myös tasoilla z5–z7, joiden laatoissa niitä ei ole, ja ne
+katoaisivat kartalta kokonaan. Skripti **vertaa** siksi uuden luettelon
+ämpärin luetteloon ennen vientiä ja kaatuu, jos ero on muualla kuin
+z8:ssa (mitattu 6.9.2026: ero oli `nostot: +1084 ~22`). Ohitus on
+`--pakota-luettelo`, eikä sitä pidä käyttää ennen kuin ero on
+ymmärretty. Kaksi tietä eteenpäin:
+
+1. **Aja poltto siitä commitista, joka poltti nykyiset nostolaatat.**
+   Silloin luettelo täsmää, mitään koodiriviä ei muuteta ja pallon
+   lepokerros pysyy päällä koko ajan.
+2. **Polta nostokerros uudestaan uudella versiolla:**
+   `--sarjat z8 --nostoversio <uusi>`. Skripti lisää silloin
+   shardilistaan `nosto-z5-z7`:n — koko kerros, ei vain z8, koska
+   luettelo kuvaa kaikki tasot yhdellä nostojoukolla. Uusi nostoversio
+   kuitenkin **sammuttaa pallon lepokerroksen versiovahtiin**, kunnes
+   pallon Mercator-sarja on poltettu uudestaan
+   (`tools/tee-pallolaatat.mjs --nostot --tunniste <uusi kirjain>`,
+   skriptin `--pallo`) ja `js/pallo.js`:n **`PALLO_LAATTATUNNISTE`**
+   osoittaa siihen kansioon. Se on **se yksi koodirivi**, joka tässä
+   tiessä muuttuu. Sama koskee viivatasoa (`--viivaversio`), jos
+   rajat tai reitit ovat muuttuneet.
+
+### Shardijako
+
+| shardi | erä | laattoja |
+| --- | --- | --- |
+| `z8-001`…`z8-085` | z8, neljä saraketta (yksi lohko) kukin | 824 / shardi, 69 628 |
+| `viiva-z8-01`…`-11` | viivataso z8, 32 saraketta kukin | 8 680 |
+| `nosto-z8` | nostotaso z8 | 2 075 |
+| (`--sarjat kaikki` lisää) `z0-z6`, `z7a`…`z7d`, `viiva-z0-z7`, `nosto-z5-z7` | työnkulun oma jako | 23 340 + 5 830 + 2 856 |
+
+85 kaistaa on **yli kaksi kertaa ytimet** vielä 42-ytimisellä koneella,
+ja kuorma tasaantuu itsestään: `xargs` antaa vapautuvalle ytimelle aina
+seuraavan kaistan, joten merikaistan nopeus ei jää käyttämättä.
+
+**z8-shardi ajetaan `--tasoja 9`:llä.** Kaista tulkitaan aina *syvimmän
+tason* sarakkeina; ilman lippua jako olisi puolikas ja **kaistan
+viimeinen z8-sarake jäisi jokaisesta shardista piirtämättä**.
+`--tasoja` on komentoriviargumentti, jonka oletus on 8, ja se koskee
+vain kolmea asiaa: oletustasoja, luettelon tasoluetteloa ja kaistan
+tulkintaa. Tason 0 leveys (675 px) ja tarkan korkeusruudukon alaraja
+(z7) ovat naulatut, joten `--tasoja 9` **lisää z8:n eikä siirrä
+yhtäkään olemassa olevaa tasoa** — z0…z7 ovat tavulleen entiset.
+
+### Mitattu (6.9.2026, kehityskontti, 4 vCPU, patina `kevyt`, q0,9)
+
+| mittaus | luku |
+| --- | --- |
+| kokonainen z8-kaista `z8-001` (`--sarakkeet 0-3`, Tyynimeri) | 824 laattaa, 648 s, **1,27 laattaa/s**, 0,35 Mpx/s, hukka 6,0 % |
+| z8-otos Kreikka–Balkan (64 laattaa, mannerta) | 1,12 laattaa/s, 0,39 Mpx/s |
+| laatan keskikoko, merikaista | 21,6 kt (0,085 tavua/px) |
+| laatan keskikoko, mannerotos | 33,1 kt (0,129 tavua/px) |
+| **z8 kokonaan (69 628 laattaa, ~19 400 Mpx piirrettyä)** | **12–15 ydintuntia** |
+
+Kesto ytimien mukaan. Kaistoja on 85 eli reilusti enemmän kuin ytimiä,
+joten jako on käytännössä lineaarinen; Mac Studion ydin on kontin
+ydintä nopeampi, joten luvut ovat **yläraja**:
+
+| ytimiä | z8:n kesto |
+| --- | --- |
+| 4 | 3,1–3,9 h |
+| 12 | 1,0–1,3 h |
+| 24 | 0,5–0,7 h |
+
+Vertailun vuoksi: sama työ työnkulussa olisi 4 vCPU:lla yli kolme
+tuntia **shardia kohti** ja kymmeniä jobeja — juuri se, mihin kuuden
+tunnin katto ja neljä vCPU:ta eivät riitä.
+
+**Levytila.** z8 on noin **1,5–2,4 Gt** (69 628 laattaa à 22–33 kt);
+viiva- ja nostotason läpinäkyvät z8-laatat (8 680 ja 2 075 laattaa)
+ovat murto-osa siitä. Huomaa että luvun 6b taulukon 1,32…1,48 Gt on
+mitattu patinalla `taysi`, kun tuotanto on nyt `kevyt` — z8:n
+tavua/px (0,085…0,129) on selvästi z7:n mitattua (0,186…0,211)
+pienempi juuri siksi. R2:n ilmaisraja on 10 Gt, ja **vanhat versiot
+ämpärissä lasketaan siihen mukaan**, joten se on syytä tarkistaa ennen
+ajoa. Työkoneella tarvitaan sama tila, ellei `--siivoa` poista shardin
+laattoja onnistuneen viennin jälkeen (silloin levyllä on kerrallaan
+enintään ytimien verran shardeja, noin 18 Mt kukin).
+
+**1′-korkeuspalat** ovat 612 kappaletta à ~350 kt eli noin 215 Mt, ja
+ne noudetaan **kerran** julkisesta osoitteesta
+`https://media.matkakirja.app/julisteet/korkeus/1min/` (ei avaimia).
+Sen jälkeen poltossa ei ole yhtään verkkopyyntöä — kolmen tunnin ajo ei
+saa kaatua yhteen aikakatkaisuun.
+
+### Komennot vaihe vaiheelta
+
+```bash
+# 1. Avaimet ympäristöön — EI tiedostoon repossa, ei argumenteiksi.
+#    (Skripti kieltäytyy, jos avain annetaan argumenttina.)
+export AMPARI='<r2-ämpärin nimi>'
+export PAATE='https://<tili-id>.r2.cloudflarestorage.com'
+export AWS_ACCESS_KEY_ID='…'
+export AWS_SECRET_ACCESS_KEY='…'
+export AWS_DEFAULT_REGION=auto
+export AWS_REQUEST_CHECKSUM_CALCULATION=when_required
+export AWS_RESPONSE_CHECKSUM_VALIDATION=when_supported
+
+# 2. Koeajo: yksi z8-kaista, ei vientiä, ja arvio koko ajon kestosta.
+tools/polta-paikallisesti.sh --koe
+
+# 3. Koko z8 kaikilla ytimillä ja vienti ämpäriin.
+tools/polta-paikallisesti.sh --sarjat z8
+
+# 3b. Sama, jos levy on tiukalla (laatat poistetaan viennin jälkeen):
+tools/polta-paikallisesti.sh --sarjat z8 --siivoa
+
+# 4. Kaatunut shardi uudestaan (valmiit ohitetaan automaattisesti):
+tools/polta-paikallisesti.sh --vain z8-047
+tools/polta-paikallisesti.sh --sarjat z8      # jatkaa loput
+```
+
+Lokit ovat `<ulos>/lokit/<shardi>.log` (oletus
+`<repo>/pyramidi-poltto/lokit/`), ja valmis shardi jättää jälkeensä
+`<shardi>.valmis`-tiedoston, jonka perusteella se ohitetaan
+seuraavalla ajolla. `pyramidi-poltto/` on `.gitignore`ssa — sinne
+kertyy gigatavuja eikä yhtään sitä committoida.
+
+Vain poltto ilman vientiä on `--ei-vie` ja pelkkä shardilista `--lista`.
+Jos jokin kolmesta versiosta vaihtuu, pallon sarja poltetaan perään:
+
+```bash
+# Nostokerros uusiksi ja pallon sarja sen mukana:
+tools/polta-paikallisesti.sh --sarjat z8 --nostoversio 2026-09-07a \
+  --pallo --pallotunniste d
+# → js/pallo.js: PALLO_LAATTATUNNISTE = 'd'
+```
+
+Työnkulkuun z8:aa **ei lisätty**. Matriisiin mahtuisi kyllä 85 kaistaa,
+mutta jokainen job maksaisi oman `npm install`- ja
+Chromium-asennuksensa ja oman aineistonoutonsa, ja shardin
+argumenttirakenne pitäisi opettaa `--tasoja 9`:ään — enemmän muutosta
+ja enemmän minuutteja kuin koko ajo tällä koneella. Työnkulku jää
+z0–z7:n napiksi, ja z8 on paikallinen ajo.
+
 ## 11. Siirtymä
 
 **Vaihe 1 — pilotti (tämä erä).** Työkalu, moottorin laattatuki, pysyvä

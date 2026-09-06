@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kokeilu: rantaviivat vektoreina pallolla</title>
+<!--
+  KOKEILUSIVU (Fablemax 6.9.2026, Raamattu "VEKTORIT SAMALLA"). Rakentaa
+  pelin OMAN pallon (js/pallo.js rakennaPallo: laattamoottori, laatunosto,
+  lepokerros, napakannet) ilman peliä, lisää kaupunkipisteet ja yhden
+  CSS2D-nimen kuten pallolauta, ja piirtää päälle rantaviivat ja rajat
+  vektoreina valitulla tavalla (vektorit.js):
+
+    ?vektorit=line2|nauha|polut|svg|ei   toteutustapa
+    ?leveys=1.5        viivan leveys LAITEpikseleinä
+    ?vari=debug        magenta (mittari erottaa viivan pikselit)
+    ?rajat=0           vain rantaviiva
+    ?lod=<k>           pakota yksinkertaistustaso
+    ?syvyys=0          ilman syvyystestiä (horisonttileikkauksen vertailu)
+    ?offset=-12        polygonOffsetUnits
+    ?aineisto=/_aineisto/   tee-aineisto.mjs:n solut (mittari tarjoilee)
+    ?laatu=aina        pelin oma vipu (js/ui-apurit.js) kulkee läpi
+
+  Mittari: tools/savukkeet/mittaa-pallon-vektorit.mjs (window.koe-rajapinta
+  kuten tools/kokeilut/pallon-liike). Ei kuulu peliin.
+-->
+<style>
+  html, body { margin: 0; height: 100%; background: #2a1d12; overflow: hidden; }
+  #kotelo { position: absolute; inset: 0; }
+  .koe-nimi { color: #1a1008; background: rgba(250,243,226,.9); font: 600 13px/1 system-ui, sans-serif; padding: 2px 5px; border-radius: 3px; transform: translate(10px, -50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="kotelo"></div>
+<script type="module">
+import {
+  lataaPallokirjasto, laatatSaatavilla, rakennaPallo, pallonKaupungit, pallonLepokerros, kolmiulotteinen, PALLO_LAUTA,
+} from '../../../js/pallo.js';
+import { packById } from '../../../js/pack.js';
+import { luoVektorit } from './vektorit.js';
+
+const q = new URLSearchParams(location.search);
+const TAPA = q.get('vektorit') ?? 'line2';
+const LEVEYS = Number(q.get('leveys') ?? 1.5);
+const DEBUG = q.get('vari') === 'debug';
+const kotelo = document.getElementById('kotelo');
+
+const Globe = await lataaPallokirjasto();
+const laatat = await laatatSaatavilla();
+const pallo = rakennaPallo(Globe, kotelo, laatat);
+pallo.controls().autoRotate = false;
+
+/* Kaupunkipisteet kuten pallolauta (lauta.js: säde 0,03, korkeus 0,003, kulta). */
+const pack = packById(PALLO_LAUTA);
+const kaupungit = pallonKaupungit(pack);
+/* Koepiste rannikon kärjessä (Sounion, Attika) syvyysjärjestyksen mittaukseen. */
+const KOEPISTE = { id: 'koe', n: 'Koepiste', lat: 37.65, lon: 24.025 };
+pallo
+  .pointsData([...kaupungit, KOEPISTE])
+  .pointLat('lat').pointLng('lon')
+  .pointColor((d) => (d.id === 'koe' ? '#ffd700' : '#c9a227'))
+  .pointAltitude(0.003).pointRadius(0.03).pointResolution(16).pointsMerge(false)
+  .pointsTransitionDuration(0);
+/* Yksi CSS2D-nimi (Ateena) — DOM-kerros WebGL:n päällä kuten nimet.js. */
+const ateena = kaupungit.find((c) => c.id === 'ateena');
+pallo
+  .htmlElementsData([{ lat: ateena.lat, lng: ateena.lon, teksti: 'Ateena' }])
+  .htmlLat('lat').htmlLng('lng').htmlAltitude(0.004)
+  .htmlElement((d) => { const el = document.createElement('div'); el.className = 'koe-nimi'; el.textContent = d.teksti; return el; })
+  .htmlTransitionDuration(0);
+
+const vektorit = TAPA === 'ei' ? null : luoVektorit({
+  pallo, kotelo, tapa: TAPA, juuri: q.get('aineisto') ?? '/_aineisto/',
+  leveysLaitePx: LEVEYS, korkeus: Number(q.get('korkeus') ?? 0),
+  renderOrder: Number(q.get('renderorder') ?? -0.5), lapinakyva: q.get('opaakki') !== '1',
+  lajit: q.get('rajat') === '0' ? ['rannikko'] : ['rannikko', 'rajat'],
+  vari: DEBUG ? '#ff00ff' : (q.get('rantavari') ?? '#3a2819'),
+  rajaVari: DEBUG ? '#ff00ff' : (q.get('rajavari') ?? '#60492e'),
+  peitto: Number(q.get('peitto') ?? 1),
+  syvyys: q.get('syvyys') !== '0', syvyyssiirto: Number(q.get('offset') ?? -12),
+  lodPakotus: q.has('lod') ? Number(q.get('lod')) : null,
+  rajaKatko: q.get('rajakatko') === '1',
+});
+
+const odota = (ms) => new Promise((ok) => setTimeout(ok, ms));
+const valmis = (async () => {
+  await odota(500);
+  if (vektorit) await vektorit.valmis;
+  return true;
+})();
+
+window.koe = {
+  nimi: `pallo-vektorit-${TAPA}`,
+  valmis,
+  pallo,
+  kotelo,
+  vektorit,
+  ateena: { lat: ateena.lat, lng: ateena.lon },
+  koepiste: KOEPISTE,
+  asetaNakyma({ lat, lng, korkeus }) { pallo.pointOfView({ lat, lng, altitude: korkeus }, 0); },
+  ajaNakyma({ lat, lng, korkeus }, kesto) {
+    pallo.pointOfView({ lat, lng, altitude: korkeus }, kesto);
+    return odota(kesto + 60).then(() => true);
+  },
+  /** Ruudun piste (kotelon css-px) pinnan koordinaatille, tai null takana. */
+  ruudulla(lat, lng, korkeus = 0) {
+    const p = pallo.getCoords(lat, lng, 0);
+    const k = pallo.camera().position;
+    if ((k.x - p.x) * p.x + (k.y - p.y) * p.y + (k.z - p.z) * p.z <= 0) return null;
+    return pallo.getScreenCoords(lat, lng, korkeus);
+  },
+  tila() {
+    const renderer = pallo.renderer();
+    const pov = pallo.pointOfView();
+    let laattoja = 0;
+    const kolmi = kolmiulotteinen(pallo);
+    kolmi?.moottori?.children.forEach((o) => { if (o.geometry?.parameters?.phiLength !== undefined) laattoja += 1; });
+    const materiaalit = {};
+    pallo.scene().traverse((o) => { const m = o.material; if (m) materiaalit[m.type] = (materiaalit[m.type] ?? 0) + 1; });
+    return {
+      materiaalit,
+      korkeus: +pov.altitude.toFixed(3), lat: +pov.lat.toFixed(2), lng: +pov.lng.toFixed(2),
+      taso: kolmi?.moottori?.level ?? null, laattoja,
+      drawCalls: renderer.info.render.calls, kolmiot: renderer.info.render.triangles,
+      tekstuurit: renderer.info.memory.textures, geometriat: renderer.info.memory.geometries,
+      pikselisuhde: renderer.getPixelRatio(), antialias: Boolean(renderer.getContext().getContextAttributes()?.antialias),
+      keko: Math.round((performance.memory?.usedJSHeapSize ?? 0) / 1048576),
+      lepokerros: pallonLepokerros(pallo)?.mittarit?.()?.tila ?? null,
+      vektorit: vektorit?.mittarit() ?? null,
+    };
+  },
+};
+</script>
+</body>
+</html>

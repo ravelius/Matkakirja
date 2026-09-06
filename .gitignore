@@ -60,3 +60,9 @@ worker/sahke/wrangler.toml
 # (assets/data/maapolygonit.json) on repossa. Sama linja kuin
 # rajasettien hakijalla (tools/hae-maiden-rajat.mjs).
 .nevalimuisti/
+
+# Paikallisen laattapolton työkansio (tools/polta-paikallisesti.sh):
+# Natural Earthin nouto, 1'-korkeuspalat, shardien laatat ja lokit.
+# Gigatavuja — varasto on R2-ampari, ei repo. Ks.
+# docs/moduulit/laattapyramidi.md luku 10d.
+pyramidi-poltto/

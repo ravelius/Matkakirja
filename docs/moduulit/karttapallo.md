@@ -2546,3 +2546,21 @@ kirjastovertailu, algoritmi ja Opus-parven erät E0–E5 tehtävänantoineen:
 docs/moduulit/pallon-liike-taydella-tarkkuudella.md. Pelikoodia ei
 muutettu tässä vaiheessa.
 
+**E0 tehty: laattakerroksen apurit omaan moduuliin (6.9.2026 ilta).**
+Suunnitelman ensimmäinen erä on mekaaninen siirto ilman käytösmuutosta:
+lepokerroksen puhtaat laskimet (näkyvä alue, laattakatto, tason valinta,
+laattaruudukko, Millerin UV, verkon puskurit, levon ajoitus) ja niiden
+vakiot siirtyivät sanatarkasti tiedostosta `js/pallo.js` uuteen
+moduuliin `js/pallolaatat.js` — 337 riviä pois, 337 riviä sisään, ei
+yhtään muutettua merkkiä. Mukana muuttivat `LAATU_LEPOVIIVE_MS` ja
+`LAATU_KAUKORAJA`, koska `LEPOKERROS_KORKEUSRAJA` alustuu jälkimmäisestä
+ja uusi moduuli pidetään tuonneitta: toisin päin tuonti tekisi kehän,
+jossa vakio jäisi alustamatta. `js/pallo.js` tuo nimet takaisin ja vie
+ne edelleen (`export … from './pallolaatat.js'`), joten testit, savukkeet
+ja `js/pallolauta/` näkevät saman rajapinnan kuin ennen; `luoLepokerros`
+ja `kytkeLaatunosto` jäivät paikoilleen. Rivimäärät: js/pallo.js
+2067 → 1757, js/pallolaatat.js 364. Moduuli on sw.js:n SHELLissä heti
+`js/pallo.js`:n jälkeen (ei niputuksessa, kuten pallo.js). Vartio:
+`tests/pallolepokerros.test.mjs` vaatii, ettei pallo.js enää määrittele
+siirrettyjä nimiä ja että uusi moduuli ei tuo mitään. Seuraava erä E1
+rakentaa näiden apurien päälle itse laattakerroksen.
