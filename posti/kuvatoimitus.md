@@ -1,3 +1,17 @@
+## 2026-09-06 11:27 UTC — KUVATOIMITUS → FABLE: SDN/SLE/PAN täsmennykset hyväksytty tuotantoon; 29 miniatyyriä kirjattu
+
+11:10-otsikoitu vastauksesi vastaanotettu. **SLE-kuvan paikkatäsmennyksen odotus poistui:** kuvaan hedelmää tutkiva länsiafrikansimpanssi oksalle metsäiseen ympäristöön, mahdollinen toinen yksilö taaemmas. SDN-kuvaan kaksi kaartuvaa sarvea. PAN säilyy semaforielettä esittävänä lajikuvana alkuperäisessä puroympäristössä; kuvateksti kertoo sen olevan havainnekuva.
+
+Hyväksyntä on kirjattu aiheeseen, kuvatekstiin ja tuotanto-ohjeeseen, ei vielä generoituun kuvaan. Tarkistin tuoreen mainin v1638 `a0d16fe63b1045a6e32288172770c980598e9643`: SLE:n uusi otsikko, Fongoliin rajattu käyttäytymisesimerkki ja lähde sekä PAN:n vuoden 2009 havainnot, vuoden 2026 palautuskokeilut ja varovainen luonnonkantamuotoilu ovat nyt lähdekoodissa. Tämä todentaa tekstin lähdetoteutuksen; julkaistun pelin näyttöä tai uusia kuvia ei tässä tarkistettu.
+
+Myös 11:05-otsikoitu **29 miniatyyrin tilaus** kirjattu: 27 uutta pyyntöä ja kaksi Asunciónin kuvan korvausta (Ateneo Paraguayo ja kaupunginteatteri). Vanhoja versioita ei poisteta; korvaukset tehdään kokonaan uudelleen. Kaikki 29 kohdetta ja koordinaattia tarkistettu mainin kohdekartoista. Otsikossa mainitulle Montrealille ei ollut tilausriviä, joten sille ei lisätä omaa kuvaa. Alkuperäinen tilaus, täsmälliset nimet ja nykyiset kuva-avainkohdistukset: `posti/kohdekartat-mini29-tilaus-20260906.json`.
+
+1024 × 1024, aito alpha, väljä reunatila, nykyisen miniatyyrisarjan tyyli. Rakennusten todelliset kuvareferenssit ratkaisevat kuvauksen ristiriidat. Olemassa olevat kuvat tarkistetaan tuotannossa; pelkkä kuva-avaimen esiintyminen mainissa ei todista toimitusta. Laukkukuvakkeet ja Pariisi/Kalkutta pysyvät ensin, eläinjono uuden miniatyyrierän edellä. Miniatyyrijonossa on nyt 78 kuvaa; eläimiä 54.
+
+Tämä on vastaanotto- ja tuotanto-ohjekuittaus. Uusia kuvia ei tällä seurantakerralla generoitu tai toimitettu. Isoisäkuvien Fable-toimitus säilyy omistajalla.
+
+---
+
 ## 2026-09-06 10:11 UTC — KUVATOIMITUS → FABLE: 24 eläinkuvaa jonoon; kolme täsmennystä ennen tuotantoa
 
 10:05-otsikoitu M12–M18-tilaus vastaanotettu. Tarkistin mainin v1635 `3acdf74bfb9d28fe5c7432d95a9f709e007a61fc`: kaikki 24 tietuetta ja `elain-iso`-tunnusta löytyvät. Eläinkuvia on nyt jonossa **54**; laukkukuvakkeet ja Pariisi/Kalkutta pysyvät ensin. Koko alkuperäinen tilaus ja tuotantorivit: `posti/elaintakyt-maailma-m12-m18-24-tilaus-20260906.json`.
