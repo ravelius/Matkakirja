@@ -62,9 +62,12 @@ import {
 } from './pallolaatat.js';
 
 export {
-  LAATTAKERROS_HAIVE_MS, LAATTAKERROS_HYSTEREESI_ALAS, LAATTAKERROS_LAATTAKATTO_MUISTI,
-  LAATTAKERROS_LAATTAKATTO_NAKYVA, LAATTAKERROS_LAATTAKATTO_TAVUT, LAATTAKERROS_NAYTTEITA,
-  LAATTAKERROS_OLETUS, LAATTAKERROS_PAIVITYSVALI_LIIKE_MS, LAATTAKERROS_RENDER_ORDER_POHJA,
+  LAATTAKERROS_HAIVE_MS, LAATTAKERROS_HYSTEREESI_ALAS, LAATTAKERROS_LAATTAKATTO_ENNAKKO,
+  LAATTAKERROS_LAATTAKATTO_MUISTI,
+  LAATTAKERROS_LAATTAKATTO_NAKYVA, LAATTAKERROS_LAATTAKATTO_TAVUT,
+  LAATTAKERROS_LIIKEVARA_KERROIN, LAATTAKERROS_LIIKEVARA_PYYHKAISY, LAATTAKERROS_NAYTTEITA,
+  LAATTAKERROS_OLETUS, LAATTAKERROS_PAIVITYSVALI_LIIKE_MS, LAATTAKERROS_PITO_MS,
+  LAATTAKERROS_RENDER_ORDER_POHJA,
   LAATTAKERROS_RINNAKKAIN, LAATTAKERROS_SILMAT_MAX, LAATTAKERROS_SILMAT_MIN,
   LAATTAKERROS_SYVYYSSIIRTO, LAATTAKERROS_TERAVYYS, LAATTAKERROS_TEKSTUUREJA_PER_KEHYS,
   LAATTAKERROS_VARA_AST, LAATTAKERROS_VARA_OSUUS, laatanKartta, laattakerroksenLRU,
@@ -482,6 +485,18 @@ export function lataaPallokirjasto(doc = document) {
  * katto on luettelon oma syvin taso kuten ennen.
  */
 export const POHJAN_TASO_MAX = 5;
+/**
+ * Syyt, joiden takia pohja vapautetaan takaisin omaan syvimpään
+ * tasoonsa (kytkeLaatunosto vapautaPohja): kerros ei näillä koskaan ala
+ * piirtää, joten naulattu z5 jäisi ainoaksi kuvaksi. Muut syyt
+ * ('pyramidin luettelo haussa', 'kirjaston luokat puuttuvat', 'kotelo
+ * piilossa', 'ei kameraa') ovat OHIMENEVIÄ — kirjaston luokat löytyvät
+ * vasta ensimmäisen kehyksen jälkeen — eivätkä kelpaa vapautukseen.
+ */
+export const POHJAN_VAPAUTUS_SYYT = new Set([
+  'pallon sarja ja pyramidi eri versiota',
+  'pyramidin luetteloa ei saatu',
+]);
 
 /**
  * Pallon runko: Globe.gl-instanssi koteloon, pinta laattamoottorilla
@@ -842,6 +857,28 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
   }) : null;
   if (kerros) lepokerrokset.set(pallo, kerros);
   /*
+   * POHJA VAPAUTETAAN, JOS KERROS EI PIIRRÄ (omistajan kuvakaappaus
+   * v1650, iPad, Ateenan lähikuva: *"pohjalaatta on tällä zoomilla
+   * selvästi sumea"*, laattojen väliset sävyerot ruutuina, ei yhtään
+   * poltettua nimeä).
+   *
+   * Laattakerros sammuu KOKONAAN, jos pyramidin ja pallon oman sarjan
+   * versiot eroavat (lepokerroksenKerrokset) tai jos pyramidin
+   * luetteloa ei saada. Sarjat poltetaan eri ajoissa, joten tämä on
+   * ihan tavallinen välitila — mutta pohja jäi silloin naulattuna
+   * tasoon POHJAN_TASO_MAX (5), eli koko kartta oli z5:tä venytettynä.
+   * Syvempi zoom (v1649, PALLOLAUDAN_LAHIN_LEVEYS 60) tekisi siitä vielä
+   * kaksin verroin sumeamman.
+   *
+   * Kun tila todetaan, kerros puretaan ja pohja saa takaisin OMAN
+   * syvimmän tasonsa (laatat.json tasot.max) ja v1645:n laatutilat:
+   * kuva on silloin pahimmillaan sitä, mitä pallo näytti ennen
+   * laattakerrosta — ei z5:tä. Kirjaston asetin on triggerUpdate:false
+   * (globeTileEngineMaxLevel → tileEngine.maxLevel), joten moottoria ei
+   * rakenneta uudestaan eikä tämä kääre irtoa.
+   */
+  let kerrosKaytossa = Boolean(kerros);
+  /*
    * KERROS PÄIVITTYY PIIRTOKOUKUSSA, EI TAPAHTUMAKÄSITTELIJÄSSÄ (vika
    * v1649, ks. YKSI KEHYS, YKSI MITTA yllä). Ennen tätä päivitys ajettiin
    * updatePovista eli pointermoven sisältä; nyt se saa saman kameran ja
@@ -850,7 +887,11 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
    * ennallaan kerroksen sisällä.
    */
   const kehyspurku = kerros
-    ? kytkePallonKehys(pallo, kotelo, (kehys) => { kerros.paivita(kehys, true); }, ikkuna)
+    ? kytkePallonKehys(pallo, kotelo, (kehys) => {
+      if (!kerrosKaytossa) return;
+      kerros.paivita(kehys, true);
+      vapautaPohja();
+    }, ikkuna)
     : () => {};
   const lepokerros = kerros ? null : luoLepokerros({
     pallo, kotelo, ikkuna, renderer, laattataso: () => moottori.level,
@@ -874,7 +915,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
   const asetaTila = (lepoon) => {
     lepo = lepoon;
     // Kerros päällä: kynnykset ja pikselisuhde jäävät asennuksen arvoihin.
-    if (kerros) return;
+    if (kerrosKaytossa) return;
     if (aina()) lepoon = true;
     const nakyma = kameranNakyma();
     kynnysLat = Number.isFinite(nakyma?.lat) ? nakyma.lat : 0;
@@ -911,6 +952,32 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
    * hyppy korkeuteen 2,5 piti lähikuvan kertoimen ja haki tason 5 (1 024
    * laattaa) tason 4 (128) sijaan. Uudelleenlaskenta on 30 luvun taulukko.
    */
+  /**
+   * Toteaa, ettei laattakerros piirrä pysyvästä syystä, ja palauttaa
+   * pohjan omaan syvimpään tasoonsa (ks. POHJA VAPAUTETAAN yllä).
+   * Kertakäyttöinen: kun kerros on kerran purettu, sitä ei herätetä
+   * uudestaan tässä istunnossa.
+   */
+  const vapautaPohja = () => {
+    if (!kerrosKaytossa) return;
+    const m = kerros.mittarit();
+    if (m.tila === 'nakyy' || !POHJAN_VAPAUTUS_SYYT.has(m.syy)) return;
+    kerrosKaytossa = false;
+    kerros.pura();
+    // KAHVA JÄÄ PAIKALLEEN (lepokerrokset): savukkeet ja mittarit lukevat
+    // siitä yhä kerroksen omat pyramidipyynnöt ja syyn — puretun
+    // kerroksen mittarit kertovat tilan 'purettu'. Kartta poistetaan
+    // vasta purkajassa, kun koko laatunosto irrotetaan.
+    const syvin = laattatasoMax(laattaluettelo);
+    if (Number.isFinite(syvin)) {
+      if (typeof pallo.globeTileEngineMaxLevel === 'function') pallo.globeTileEngineMaxLevel(syvin);
+      else moottori.maxLevel = syvin;
+    }
+    // v1645:n laatutilat takaisin ja tarkempi taso heti, ei vasta liikkeestä.
+    asetaTila(lepo);
+    if (kamera) alkuperainen.call(moottori, kamera);
+  };
+
   const lepoon = () => {
     lepoAjastin = 0;
     if (!kamera) return;
@@ -921,8 +988,10 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     // (LEPOKERROS_LEPOVIIVE_MS ja sormivahti, ks. luoLepokerroksenAjoitus).
     // Laattakerros ei odota lepoa: se päivittyy myös liikkeessä, ja tämä
     // on vain harventamaton päivitys pysähdyksen jälkeen.
-    if (kerros) kerros.paivita(pallonKehysmitat(pallo, kotelo, kamera, ikkuna), false);
-    else lepokerros.levossa();
+    if (kerrosKaytossa) {
+      kerros.paivita(pallonKehysmitat(pallo, kotelo, kamera, ikkuna), false);
+      vapautaPohja();
+    } else lepokerros?.levossa();
     for (const viive of [0, 800, 2500]) {
       const t = ikkuna.setTimeout(() => { ajastimet.delete(t); if (lepo) teroita(); }, viive);
       ajastimet.add(t);
@@ -966,6 +1035,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     // Laattakerros EI päivity täältä: se ilmoittautuu piirtokoukkuun
     // (kytkePallonKehys), jotta se ja vektorikerros lukevat saman
     // kameran samasta kehyksestä — updatePov tulee pointermoven sisältä.
+    // Sieltä ajetaan myös vapautaPohja (ks. POHJA VAPAUTETAAN yllä).
     return alkuperainen.call(this, kam);
   };
   asetaTila(false);

@@ -2,12 +2,15 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
-  LAATTAKERROS_HAIVE_MS, LAATTAKERROS_HYSTEREESI_ALAS, LAATTAKERROS_LAATTAKATTO_MUISTI,
-  LAATTAKERROS_LAATTAKATTO_NAKYVA, LAATTAKERROS_LAATTAKATTO_TAVUT, LAATTAKERROS_NAYTTEITA,
-  LAATTAKERROS_OLETUS, LAATTAKERROS_PAIVITYSVALI_LIIKE_MS, LAATTAKERROS_RENDER_ORDER_POHJA,
+  LAATTAKERROS_HAIVE_MS, LAATTAKERROS_HYSTEREESI_ALAS, LAATTAKERROS_LAATTAKATTO_ENNAKKO,
+  LAATTAKERROS_LAATTAKATTO_MUISTI,
+  LAATTAKERROS_LAATTAKATTO_NAKYVA, LAATTAKERROS_LAATTAKATTO_TAVUT,
+  LAATTAKERROS_LIIKEVARA_KERROIN, LAATTAKERROS_NAYTTEITA,
+  LAATTAKERROS_OLETUS, LAATTAKERROS_PAIVITYSVALI_LIIKE_MS, LAATTAKERROS_PITO_MS,
+  LAATTAKERROS_RENDER_ORDER_POHJA,
   LAATTAKERROS_RINNAKKAIN, LAATTAKERROS_SILMAT_MAX, LAATTAKERROS_SILMAT_MIN,
   LAATTAKERROS_SYVYYSSIIRTO, LAATTAKERROS_TEKSTUUREJA_PER_KEHYS, LAATTAKERROS_TERAVYYS,
-  LAATTAKERROS_VARA_AST, LAATTAKERROS_VARA_OSUUS, POHJAN_TASO_MAX,
+  LAATTAKERROS_VARA_AST, LAATTAKERROS_VARA_OSUUS, POHJAN_TASO_MAX, POHJAN_VAPAUTUS_SYYT,
   laatanKartta, laattakerroksenLRU, laattakerroksenNakyvissa, laattakerroksenOsuma,
   laattakerroksenPeitto, laattakerroksenSilmat, laattakerroksenTaso, lepokerroksenAlue,
   lepokerroksenLaatat, lepokerroksenUV,
@@ -224,6 +227,98 @@ test('LRU: näkyviä ei pureta koskaan, vanhin ensin, tavukatto purkaa lisää',
   assert.deepEqual(laattakerroksenLRU([], 24), []);
 });
 
+/*
+ * PITO JA ENNAKKO (omistajan palaute v1649, iPad, sanatarkasti:
+ * *"jos todella nopeasti panoroi edestakaisin päästämättä sormea irti
+ * niin kartta putoaa joiltain osin hetkeksi matalaan laatuun vaikka ko.
+ * osa on jo ladattu"*). Juurisyy mitattiin savukkeella
+ * tools/savukkeet/mittaa-pallon-liike.mjs --vaihe=heiluri: heilurin
+ * ääripään laatta oli näkyvissä yhden päivityksen ajan, ei ehtinyt
+ * latauspaikkaan ja putosi jonosta kokonaan.
+ */
+test('pito: juuri nähtyä ei pura MÄÄRÄkatto, mutta tavukatto purkaa yhä', () => {
+  assert.equal(LAATTAKERROS_PITO_MS, 2000, 'pito kattaa heilurin käännöksen');
+  assert.equal(LAATTAKERROS_LIIKEVARA_KERROIN, 2);
+  assert.equal(LAATTAKERROS_LAATTAKATTO_ENNAKKO, 96);
+  const tietue = (avain, nakyva, kaytetty, pito = false, tavut = 1048576) => (
+    { avain, nakyva, kaytetty, pito, tavut });
+  // 30 näkymätöntä, joista 20 pidettyä: määräkatto 24 laskee vain vapaita.
+  const pidetyt = [
+    ...Array.from({ length: 20 }, (_, i) => tietue(`pito/${i}`, false, i, true)),
+    ...Array.from({ length: 30 }, (_, i) => tietue(`vapaa/${i}`, false, 100 + i)),
+  ];
+  const ulos = laattakerroksenLRU(pidetyt, 24, LAATTAKERROS_LAATTAKATTO_TAVUT);
+  assert.deepEqual(ulos, ['vapaa/0', 'vapaa/1', 'vapaa/2', 'vapaa/3', 'vapaa/4', 'vapaa/5'],
+    'vapaita 30 − 24 = 6 vanhinta, pidetyt eivät ole ehdokkaita');
+  assert.ok(!ulos.some((a) => a.startsWith('pito/')), 'pidettyä ei pura määräkatto');
+  // TAVUKATTO PURKAA MYÖS PIDETTYJÄ: muisti on kova raja (suunnitelman luku 4.4).
+  const isot = [
+    ...Array.from({ length: 4 }, (_, i) => tietue(`nak/${i}`, true, i, false, 8 * 1048576)),
+    ...Array.from({ length: 8 }, (_, i) => tietue(`pito/${i}`, false, 100 + i, true, 8 * 1048576)),
+  ];
+  const tavuille = laattakerroksenLRU(isot, 24, 64 * 1048576);
+  assert.deepEqual(tavuille, ['pito/0', 'pito/1', 'pito/2', 'pito/3'],
+    '96 Mt → 64 Mt neljällä purulla, vanhin pidetty ensin');
+});
+
+/*
+ * POHJA VAPAUTETAAN, JOS KERROS EI PIIRRÄ (omistajan kuvakaappaus v1650,
+ * iPad, Ateenan lähikuva: pohjalaatta selvästi sumea, laattojen väliset
+ * sävyerot ruutuina, ei yhtään poltettua nimeä). Pyramidi ja pallon oma
+ * sarja poltetaan eri ajoissa; versiovahti sammuttaa kerroksen siksi
+ * aikaa, ja pohja jäi ennen naulattuna tasoon 5.
+ */
+test('pohja vapautetaan omaan syvimpään tasoonsa, jos kerros ei piirrä', () => {
+  assert.equal(POHJAN_TASO_MAX, 5, 'kerroksen alla pohja on karkea');
+  assert.ok(POHJAN_VAPAUTUS_SYYT.has('pallon sarja ja pyramidi eri versiota'));
+  assert.ok(POHJAN_VAPAUTUS_SYYT.has('pyramidin luetteloa ei saatu'));
+  // OHIMENEVÄT syyt eivät vapauta: luokat löytyvät vasta ensimmäisen kehyksen jälkeen.
+  for (const syy of ['pyramidin luettelo haussa', 'kirjaston luokat puuttuvat', 'kotelo piilossa', 'ei kameraa']) {
+    assert.ok(!POHJAN_VAPAUTUS_SYYT.has(syy), syy);
+  }
+  const pallo = lue('../js/pallo.js');
+  // Vapautus on kertakäyttöinen ja purkaa kerroksen kokonaan.
+  assert.match(pallo, /if \(m\.tila === 'nakyy' \|\| !POHJAN_VAPAUTUS_SYYT\.has\(m\.syy\)\) return;/);
+  assert.match(pallo, /kerrosKaytossa = false;\n\s*kerros\.pura\(\);/);
+  // Kahva jää lepokerrokset-karttaan: savukkeet lukevat siitä yhä
+  // kerroksen omat pyramidipyynnöt (savuke-pallolauta vartio 2).
+  const vapautus = pallo.match(/const vapautaPohja = \(\) => \{[\s\S]*?\n {2}\};/)[0];
+  assert.ok(!/lepokerrokset\.delete/.test(vapautus), 'kahvaa ei poisteta vapautuksessa');
+  assert.match(pallo, /const syvin = laattatasoMax\(laattaluettelo\);/);
+  assert.match(pallo, /pallo\.globeTileEngineMaxLevel\(syvin\);/);
+  // v1645:n laatutilat palaavat: asetaTila kulkee läpi vasta kun kerros on pois.
+  assert.match(pallo, /if \(kerrosKaytossa\) return;/);
+  assert.match(pallo, /if \(!kerrosKaytossa\) return;\n\s*kerros\.paivita\(kehys, true\);\n\s*vapautaPohja\(\);/,
+    'vapautus ajetaan piirtokoukusta, samasta kehyksestä kuin päivitys');
+});
+
+test('kerros pitää juuri nähdyt laatat jonossa ja lataa liikesuuntaan ennakolta', () => {
+  const laatat = lue('../js/pallolaatat.js');
+  // 1. Jono kootaan näkyvistä JA pidetyistä (ennen: vain `t.nakyva`).
+  assert.match(laatat,
+    /if \(\(t\.nakyva \|\| t\.pito\) && t\.tila === 'ladataan' && !t\.aloitettu\) jono\.push\(t\);/);
+  // 2. Näkyvät ladataan silti ensin.
+  assert.match(laatat, /jono\.sort\(\(a, b\) => \(a\.nakyva \? 0 : 1\) - \(b\.nakyva \? 0 : 1\) \|\| a\.etaisyys - b\.etaisyys\);/);
+  // 3. Valmis laatta menee sceneen, jos se on yhä alueella (ei vain näkyvissä).
+  assert.match(laatat, /if \(t\.nakyva \|\| t\.pito\) lisaaSceneen\(t\);/);
+  // 4. Pito lasketaan viimeisestä näöstä.
+  assert.match(laatat,
+    /for \(const t of laatat\.values\(\)\) t\.pito = nyt - \(t\.kaytetty \?\? 0\) <= LAATTAKERROS_PITO_MS;/);
+  // 5. Aloittamaton, pitämätön tietue ei jää roikkumaan tilaan "ladataan".
+  assert.match(laatat,
+    /if \(!t\.nakyva && !t\.pito && t\.tila === 'ladataan' && !t\.aloitettu\) poista\(t\);/);
+  // 6. ENNAKKO EI SAA PUDOTTAA TASOA: taso valitaan yhä pelkistä näkyvistä
+  //    laatoista (LAATTAKATTO_NAKYVA), ennakko lasketaan vasta sen jälkeen.
+  const tasonValinta = laatat.indexOf('if (!valittu || !kartta) return luovuta');
+  const ennakonLaskenta = laatat.indexOf('const ennakko = new Set();');
+  assert.ok(tasonValinta > 0 && ennakonLaskenta > tasonValinta,
+    'ennakkoalue lasketaan vasta tason valinnan jälkeen');
+  assert.match(laatat, /varaLat = Math\.min\(alue\.lat1 - alue\.lat0, varaLat\);/);
+  assert.match(laatat, /varaLon = Math\.min\(alue\.lon1 - alue\.lon0, varaLon\);/);
+  // 7. Ennakon laattamäärä on katossa.
+  assert.match(laatat, /if \(ennakko\.size >= LAATTAKERROS_LAATTAKATTO_ENNAKKO\) break;/);
+});
+
 test('laatanKartta: yksi laatta on oma karttansa, UV juoksee 0…1 sen sisällä', () => {
   const taso = TASOT[7];
   const asetukset = { laatta: LAATTA, arkki: ARKKI, projektio: PROJEKTIO, laudanY };
@@ -294,7 +389,7 @@ test('kytkentä: pohja naulataan tasoon 5 vain kerroksen ollessa päällä', () 
   // ilman kerrosta katto on luettelon oma syvin taso kuten v1645:ssä.
   assert.match(pallo, /globeTileEngineMaxLevel\(\n\s*laattakerrosPaalla\(globalThis, LAATTAKERROS_OLETUS\) \? Math\.min\(syvin, POHJAN_TASO_MAX\) : syvin,\n\s*\)/);
   // asetaTila ei kosketa kynnyksiin eikä pikselisuhteeseen kerroksen kanssa.
-  assert.match(pallo, /const asetaTila = \(lepoon\) => \{\n\s*lepo = lepoon;\n(?:\s*\/\/[^\n]*\n)*\s*if \(kerros\) return;/);
+  assert.match(pallo, /const asetaTila = \(lepoon\) => \{\n\s*lepo = lepoon;\n(?:\s*\/\/[^\n]*\n)*\s*if \(kerrosKaytossa\) return;/);
   assert.match(pallo, /const suhde = Math\.min\(dpr, LAATU_PIKSELISUHDE_LEPO\);\n\s*if \(renderer\.getPixelRatio\?\.\(\) !== suhde\) renderer\.setPixelRatio\(suhde\);/,
     'pikselisuhde kerran asennuksessa');
   // Lepokerrosta ei luoda kerroksen kanssa (vanha polku vain ?laattakerros=0).
@@ -305,11 +400,12 @@ test('kytkentä: pohja naulataan tasoon 5 vain kerroksen ollessa päällä', () 
    * päivity updatePov-koukusta, joka ajetaan pointermoven sisältä, vaan
    * piirtokoukusta — samalla kameralla ja samasta kehyksestä kuin
    * vektorikerros. Levon ajastin päivittää sen harventamattomasti samoilla
-   * kehysmitoilla.
+   * kehysmitoilla. Sieltä ajetaan myös pohjan vapautus, kun kerros ei
+   * piirrä (ks. testi "pohja vapautetaan…").
    */
   assert.ok(!/kerros\.paivita\(kam, true\)/.test(pallo), 'kerros ei saa päivittyä updatePovista');
-  assert.match(pallo, /const kehyspurku = kerros\n\s*\? kytkePallonKehys\(pallo, kotelo, \(kehys\) => \{ kerros\.paivita\(kehys, true\); \}, ikkuna\)\n\s*: \(\) => \{\};/);
-  assert.match(pallo, /if \(kerros\) kerros\.paivita\(pallonKehysmitat\(pallo, kotelo, kamera, ikkuna\), false\);\n\s*else lepokerros\.levossa\(\);/);
+  assert.match(pallo, /const kehyspurku = kerros\n\s*\? kytkePallonKehys\(pallo, kotelo, \(kehys\) => \{\n\s*if \(!kerrosKaytossa\) return;\n\s*kerros\.paivita\(kehys, true\);\n\s*vapautaPohja\(\);\n\s*\}, ikkuna\)\n\s*: \(\) => \{\};/);
+  assert.match(pallo, /if \(kerrosKaytossa\) \{\n\s*kerros\.paivita\(pallonKehysmitat\(pallo, kotelo, kamera, ikkuna\), false\);\n\s*vapautaPohja\(\);\n\s*\} else lepokerros\?\.levossa\(\);/);
   assert.match(pallo, /laatuKuuntelijat\.delete\(pakotus\);\n\s*kehyspurku\(\);/, 'koukku puretaan');
   // Kahva on sama accessorille ja savukkeille; purku purkaa kerroksen.
   assert.match(pallo, /if \(kerros\) lepokerrokset\.set\(pallo, kerros\);/);

@@ -3,9 +3,9 @@
  *
  *   NODE_USE_ENV_PROXY=1 node tools/savukkeet/mittaa-pallon-liike.mjs
  *       [--nakyma=puhelin|tyopoyta] [--throttle=4] [--lauta=pallo|kartta]
- *       [--laatu=aina] [--proto=A|A7|B1|C] [--vaihe=liike|zoom|kaikki]
+ *       [--laatu=aina] [--proto=A|A7|B1|C] [--vaihe=liike|zoom|heiluri|kaikki]
  *       [--ulos=<kansio>] [--tunniste=<nimi>] [--korkeus=0.35] [--dpr=1]
- *       [--vartio]
+ *       [--vartio] [--sarjapaikkaus]
  *
  * Omistaja 6.9.2026 ilta (Raamattu, PALAUTE v1642:STA, LIIKKEEN AIKAINEN
  * TARKKUUS): *"Saisiko tuota siirron aikaista matalampaa resoluutiota
@@ -27,6 +27,10 @@
  *      jokaisesta tyhjän (mustan pohjapallon) osuus keskialueella,
  *      perättäisten kuvien ero ja moottorin tason vaihdot aikaleimoin.
  *   4. `--lauta=kartta`: sama panorointi tasokartalla (vertailu).
+ *   5. HEILURI (`--vaihe=heiluri`): nopea edestakainen panorointi sormea
+ *      irrottamatta (3 Hz, ± 20 % kotelon leveydestä) JO LADATULLA
+ *      alueella — näkyvän alueen laattojen peitto joka kehyksellä ja
+ *      musteviivan paksuus kesken heilurin (omistajan palaute v1649).
  *
  * PROTOTYYPIT (--proto) ovat sivun sisään ajettuja paikkauksia, eivät
  * pelin koodia — mittausta varten:
@@ -68,6 +72,7 @@ const LAATU = arg('laatu', null);
  */
 const PROTO = arg('proto', null);
 const VARTIO = process.argv.includes('--vartio');
+const SARJAPAIKKAUS = process.argv.includes('--sarjapaikkaus');
 const VAIHE = arg('vaihe', 'kaikki');
 const KORKEUS = Number(arg('korkeus', 0.35));
 const ZOOM_LOPPU = Number(arg('zoomloppu', 0.05));
@@ -136,9 +141,32 @@ const pyynnot = []; // { t, url }
 sivu.on('request', (r) => { const url = r.url(); if (url.includes('julisteet/')) pyynnot.push({ t: Date.now(), url }); });
 await sivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
 await sivu.route(/wikimedia\.org/, (route) => route.abort());
+/*
+ * `--sarjapaikkaus`: SERVATUN laatat.json:in versiot korvataan pyramidin
+ * versioilla. Ämpärin kaksi sarjaa poltetaan eri ajoissa, ja välissä
+ * versiovahti (lepokerroksenKerrokset) sammuttaa laattakerroksen
+ * kokonaan — silloin mittari ei näe kerrosta lainkaan eikä luvun 5
+ * mittoja voi ajaa. Lippu asettaa sen tilan, jossa peli on, kun sarjat
+ * on poltettu yhdessä. TÄMÄ ON MITTAUSTELINE, EI TODISTE
+ * JULKAISTUSTA TILASTA: ilman lippua mittari ajaa sen, mitä ämpärissä
+ * oikeasti on (ja vartio kertoo, jos kerros ei piirrä).
+ */
+const pyramidiSarja = SARJAPAIKKAUS
+  ? await fetch('https://media.matkakirja.app/julisteet/pyramidi/pyramidi.json').then((v) => v.json()).catch(() => null)
+  : null;
 await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
-  const vastaus = await ampariHaku(route.request().url());
+  const url = route.request().url();
+  const vastaus = await ampariHaku(url);
   if (!vastaus || vastaus.status !== 200) { route.abort(); return; }
+  if (pyramidiSarja && url.endsWith('laatat.json')) {
+    const j = JSON.parse(vastaus.body.toString());
+    j.versio = pyramidiSarja.versio;
+    j.viivat = pyramidiSarja.viivataso?.versio ?? null;
+    j.nostot = pyramidiSarja.nostotaso?.versio ?? null;
+    j.ranta = pyramidiSarja.rantataso?.versio ?? null;
+    route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(j), headers: { 'access-control-allow-origin': '*' } });
+    return;
+  }
   route.fulfill({ status: 200, contentType: vastaus.tyyppi ?? 'application/octet-stream', body: vastaus.body, headers: { 'access-control-allow-origin': '*' } });
 });
 const cdp = await ctx.newCDPSession(sivu);
@@ -159,7 +187,10 @@ if (LAUTA === 'pallo') {
 }
 await sivu.waitForTimeout(3000);
 
-const tulos = { nakyma: NAKYMA, dpr, throttle: THROTTLE, lauta: LAUTA, laatu: LAATU, proto: PROTO, korkeus: KORKEUS };
+const tulos = {
+  nakyma: NAKYMA, dpr, throttle: THROTTLE, lauta: LAUTA, laatu: LAATU, proto: PROTO,
+  korkeus: KORKEUS, sarjapaikkaus: SARJAPAIKKAUS,
+};
 const kuvat = [];
 const kaappaa = async (nimi) => {
   const polku = join(ULOS, `${NAKYMA}-${TUNNISTE}-${nimi}.png`);
@@ -296,7 +327,7 @@ const tila = () => sivu.evaluate(() => {
     lepokerros: ui.pallolauta?.lepokerros()?.mittarit?.()?.tila ?? null, lepokerrosSyy: ui.pallolauta?.lepokerros()?.mittarit?.()?.syy ?? null,
   };
 });
-const mittausAlkaa = async () => { await hidasta(true); await sivu.evaluate(() => { const M = window.__mittarit; M.kehykset = []; M.updatePov = { n: 0, ms: 0, max: 0 }; M.tasot = []; M.mittaa = true; }); };
+const mittausAlkaa = async (throttle = true) => { await hidasta(throttle); await sivu.evaluate(() => { const M = window.__mittarit; M.kehykset = []; M.updatePov = { n: 0, ms: 0, max: 0 }; M.tasot = []; M.mittaa = true; }); };
 const mittausLoppuu = async () => { const m = await sivu.evaluate(() => { const M = window.__mittarit; M.mittaa = false; return { kehykset: M.kehykset, updatePov: M.updatePov, tasot: M.tasot, proto: M.proto ?? null }; }); await hidasta(false); return m; };
 const ajaKamera = (kohde, kesto) => sivu.evaluate(({ kohde, kesto }) => {
   const { ui } = window.matkakirja;
@@ -420,6 +451,208 @@ if ((VAIHE === 'kaikki' || VAIHE === 'zoom') && LAUTA === 'pallo') {
   tulos.zoom.lepo.viiva = pinta(loppuKuva, keski);
 }
 
+/* ================= 4: HEILURI (nopea edestakainen panorointi) ================= */
+/*
+ * OMISTAJAN PALAUTE v1649:STA (iPad, sanatarkasti): *"Ainoastaan jos
+ * todella nopeasti panoroi edestakaisin päästämättä sormea irti niin
+ * kartta putoaa joiltain osin hetkeksi matalaan laatuun vaikka ko. osa
+ * on jo ladattu ja ruudunpäivitys on hyvä."*
+ *
+ * MITTAUS. Sormi lasketaan ruudun keskelle KERRAN eikä nosteta koko
+ * vaiheen aikana (pointerdown, sarja pointermoveja, ei pointerupia
+ * ennen kuin kaikki on mitattu) — juuri se ele, josta palaute tulee.
+ * Heiluri on sini: poikkeama ± HEILURI_AMPLITUDI × kotelon leveys,
+ * taajuus HEILURI_HZ (3 Hz = 6 edestakaista 2 sekunnissa) — mutta askel
+ * on rajattu HEILURI_JAKSO_OSUUTEEN kehystä kohti ja kesto mitataan
+ * JAKSOINA, ks. vakioiden perustelu alempana.
+ *
+ * Kolme jaksoa samalla sormella:
+ *   1. LÄMMITYS: sama heiluri HEILURI_JAKSOJA jaksoa, jotta koko
+ *      heilurin alue on kertaalleen ollut ruudulla.
+ *   2. LATAUSTAUKO: sormi paikallaan, kunnes NÄKYVÄ alue on kokonaan
+ *      scenessä (katto HEILURI_TAUKO_MS). Tauko on tauko eikä
+ *      lisälämmitys: heilurilla lämmittäminen kunnes jono on tyhjä
+ *      antaisi vanhalle koneelle niin monta yritystä, että sekin ehtii
+ *      ladata ääripäät, eikä mittaus enää näkisi vikaa.
+ *   3. MITTAUS: sama heiluri uudestaan, ja joka kehyksellä kerroksen
+ *      mittareista näkyvän alueen laattojen peitto
+ *      (nakyviaScenessa / nakyvia). Pohjan Z5 näkyy täsmälleen silloin,
+ *      kun peitto on alle 100 %.
+ * Lopuksi vielä yksi heiluri ilman hidastusta, ja sen keskeltä
+ * kuvakaappaus: rantaviivan musteen paksuus ruudun keskialueella
+ * (sama mitta kuin luvun 2.1 muste — karkea laatta paksuntaa viivan).
+ */
+if (VAIHE === 'kaikki' || VAIHE === 'heiluri') {
+  const HEILURI_HZ = Number(arg('heilurihz', 3));
+  const HEILURI_AMPLITUDI = Number(arg('heiluriamp', 0.2));
+  const HEILURI_JAKSOJA = Number(arg('heilurijaksoja', 6));
+  const HEILURI_KATTO_MS = Number(arg('heilurikatto', 60000));
+  const HEILURI_TAUKO_MS = Number(arg('heiluritauko', 40000));
+  /*
+   * HEILURI MITATAAN JAKSOINA, EI SEKUNTEINA, JA SEN ASKEL ON RAJATTU
+   * KERROKSEN PÄIVITYSVÄLIIN.
+   *
+   * Omistajan ele on 3 Hz:n heiluri laitteella, joka piirtää 60 kehystä
+   * sekunnissa ja päivittää kerroksen 10 kertaa sekunnissa
+   * (LAATTAKERROS_PAIVITYSVALI_LIIKE_MS 100): kerros näkee siis
+   * 0,3 jaksoa päivitystä kohti, eli ruutu on siirtynyt enimmillään
+   * noin 32 % leveydestään sitten viime päivityksen. SE on se luku,
+   * jonka algoritmi kokee — ei sekuntikello.
+   *
+   * Kontin ohjelmistorasteroija piirtää dpr 3:lla 1–2 kehystä
+   * SEKUNNISSA, joten 3 Hz:n heiluri laskostuisi satunnaiseen
+   * vaiheeseen ja mittaus kertoisi kehysajasta eikä koodista. Vaihe
+   * viedään siksi eteenpäin `min(HZ · dt, JAKSO_OSUUS)`:lla: nopealla
+   * laitteella se on tasan 3 Hz, hitaalla enintään 0,3 jaksoa
+   * kehystä kohti — sama liike päivitystä kohti kuin laitteella.
+   * Vaihe ratkaisee myös keston: ajetaan HEILURI_JAKSOJA jaksoa
+   * (kello vain kattona).
+   */
+  const HEILURI_JAKSO_OSUUS = Number(arg('heilurijaksoosuus', 0.3));
+  /**
+   * Heiluri sivun sisällä: synteettiset PointerEventit koteloon (sama
+   * kuuntelija kuin sormella, js/pallo.js asennaPallonEleet). `laske`
+   * kerää kerroksen mittarit joka kehyksellä.
+   */
+  const heiluri = ({ jaksoja, laske = false, alas = false, ylos = false }) => sivu.evaluate(
+    ({ jaksoja, laske, alas, ylos, hz, amp, osuus, katto }) => new Promise((ok) => {
+      const { ui } = window.matkakirja;
+      const kotelo = ui.pallolauta.kotelo;
+      const r = kotelo.getBoundingClientRect();
+      const cx = r.left + r.width / 2;
+      const cy = r.top + r.height / 2;
+      const A = r.width * amp;
+      const tapahtuma = (laji, x) => kotelo.dispatchEvent(new PointerEvent(laji, {
+        clientX: x, clientY: cy, bubbles: true, cancelable: true,
+        pointerId: 1, pointerType: 'touch', isPrimary: true, button: 0, buttons: 1,
+      }));
+      const kerros = ui.pallolauta.lepokerros?.();
+      const otokset = [];
+      ui.pallolauta.heraa?.();
+      if (alas) tapahtuma('pointerdown', cx);
+      const t0 = performance.now();
+      let edellinen = t0;
+      let vaihe = 0; // jaksoina
+      const askel = () => {
+        const nyt = performance.now();
+        const dt = (nyt - edellinen) / 1000;
+        edellinen = nyt;
+        vaihe += Math.min(hz * dt, osuus);
+        tapahtuma('pointermove', cx + A * Math.sin(2 * Math.PI * vaihe));
+        if (laske) {
+          const m = kerros?.mittarit?.() ?? null;
+          if (m) {
+            otokset.push({
+              t: Math.round(nyt - t0), vaihe: +vaihe.toFixed(2),
+              nakyvia: m.nakyvia, scenessa: m.nakyviaScenessa,
+              taysin: m.nakyviaTaysin, taso: m.taso, purettuja: m.purettuja, pyyntoja: m.pyyntoja,
+              jonossa: m.jonossa, ladattavia: m.ladattavia, laattoja: m.laattoja, valmiita: m.valmiita,
+              jumissa: m.jumissa,
+            });
+          }
+        }
+        if (vaihe < jaksoja && nyt - t0 < katto) { requestAnimationFrame(askel); return; }
+        if (ylos) tapahtuma('pointerup', cx + A * Math.sin(2 * Math.PI * vaihe));
+        ok({ otokset, jaksoja: +vaihe.toFixed(2), kestoMs: Math.round(nyt - t0) });
+      };
+      requestAnimationFrame(askel);
+    }),
+    {
+      jaksoja, laske, alas, ylos, hz: HEILURI_HZ, amp: HEILURI_AMPLITUDI,
+      osuus: HEILURI_JAKSO_OSUUS, katto: HEILURI_KATTO_MS,
+    },
+  );
+
+  await asetaKamera(ateena.lat, ateena.lon, KORKEUS);
+  await odotaLepo(3500);
+  const ennen = await tila();
+  /** Kerroksen mittarit juuri nyt. */
+  const kerroksenTila = () => sivu.evaluate(() => window.matkakirja.ui.pallolauta.lepokerros?.()?.mittarit?.() ?? null);
+  /*
+   * HEILURI MITATAAN ILMAN CPU-HIDASTUSTA. Heiluri on 3 Hz:n signaali, ja
+   * sen näytteistys vaatii kehyksiä selvästi tiheämmin: kontin
+   * ohjelmistorasteroija piirtää dpr 3:lla noin sekunnin kehyksen, ja 4×
+   * hidastus vie sen yhteen kehykseen sekunnissa. Silloin mittaus ei
+   * kuvaa laitetta, joka ajaa saman heilurin 60 kehyksellä sekunnissa,
+   * vaan laskostuu satunnaiseen vaiheeseen. Muut vaiheet (panorointi,
+   * zoom) mitataan hidastettuina kuten ennen — niiden signaali on hidas.
+   */
+  await mittausAlkaa(false);
+  /*
+   * 1. LÄMMITYS: sama heiluri kerran läpi (sormi alas eikä enää ylös),
+   *    jotta koko heilurin alue on kertaalleen ollut ruudulla — juuri
+   *    se, mistä omistaja sanoo *"ko. osa on jo ladattu"*.
+   * 2. LATAUSTAUKO: sormi pohjassa paikallaan, kunnes NÄKYVÄ alue on
+   *    kokonaan scenessä (`kokoa()` laskee mittarit uudestaan, koska
+   *    kerros ei päivity, kun kamera ei liiku). Tauko on aidosti tauko
+   *    eikä lisälämmitys: heilurilla lämmittäminen kunnes jono on tyhjä
+   *    antaisi vanhalle koneelle niin monta yritystä, että sekin ehtii
+   *    ladata ääripäät, eikä mittaus enää näkisi vikaa.
+   */
+  const lammitys = await heiluri({ jaksoja: HEILURI_JAKSOJA, alas: true });
+  await sivu.waitForFunction(() => {
+    const kerros = window.matkakirja.ui.pallolauta.lepokerros?.();
+    if (!kerros) return true;
+    kerros.kokoa?.();
+    const m = kerros.mittarit?.();
+    return Boolean(m) && m.nakyvia > 0 && m.nakyviaScenessa >= m.nakyvia;
+  }, null, { timeout: HEILURI_TAUKO_MS }).catch(() => {});
+  const ladattu = await kerroksenTila();
+  // 3. Mitattu heiluri: joka kehyksestä näkyvän alueen peitto.
+  const mitattu = await heiluri({ jaksoja: HEILURI_JAKSOJA, laske: true });
+  const m = await mittausLoppuu();
+  const kelpo = mitattu.otokset.filter((o) => o.nakyvia > 0);
+  const osuudet = kelpo.map((o) => o.scenessa / o.nakyvia);
+  const vaje = kelpo.filter((o) => o.scenessa < o.nakyvia);
+  tulos.heiluri = {
+    hz: HEILURI_HZ, amplitudiOsuus: HEILURI_AMPLITUDI, jaksoOsuus: HEILURI_JAKSO_OSUUS,
+    jaksoja: mitattu.jaksoja, kestoMs: mitattu.kestoMs,
+    lammitysJaksoja: lammitys.jaksoja, lammitysMs: lammitys.kestoMs, taukoKattoMs: HEILURI_TAUKO_MS,
+    otoksia: kelpo.length,
+    peittoMin: kelpo.length ? +(Math.min(...osuudet) * 100).toFixed(1) : null,
+    peittoKeski: kelpo.length ? +((osuudet.reduce((a, b) => a + b, 0) / kelpo.length) * 100).toFixed(1) : null,
+    vajeitaOtoksia: vaje.length,
+    // Unohdetut laatat: tilassa "ladataan", ei aloitettu eikä jonossa.
+    jumissa: Math.max(ladattu?.jumissa ?? 0, ...kelpo.map((o) => o.jumissa ?? 0), 0),
+    vajeenPahin: vaje.length ? Math.max(...vaje.map((o) => o.nakyvia - o.scenessa)) : 0,
+    purettujaAikana: kelpo.length ? kelpo[kelpo.length - 1].purettuja - kelpo[0].purettuja : 0,
+    pyyntojaAikana: kelpo.length ? kelpo[kelpo.length - 1].pyyntoja - kelpo[0].pyyntoja : 0,
+    tasot: [...new Set(kelpo.map((o) => o.taso))],
+    kehyksia: m.kehykset.length, p50: p(m.kehykset, 0.5), p95: p(m.kehykset, 0.95), max: p(m.kehykset, 1),
+    updatePov: { n: m.updatePov.n, msPerKutsu: +(m.updatePov.ms / Math.max(1, m.updatePov.n)).toFixed(2), max: +m.updatePov.max.toFixed(1) },
+    ennen,
+    /*
+     * Kerros voi olla kokonaan poissa: ämpärin kaksi sarjaa (pyramidi ja
+     * pallon oma laatat.json) poltetaan eri ajoissa, ja versiovahti
+     * sammuttaa kerroksen siksi aikaa (js/pallo.js vapautaPohja
+     * palauttaa silloin pohjan omaan syvimpään tasoonsa). Silloin
+     * heiluria ei voi mitata — vartio kertoo syyn eikä väitä vikaa.
+     */
+    kerrosPoissa: !ladattu || ladattu.tila !== 'nakyy',
+    ladattu: ladattu ? {
+      nakyvia: ladattu.nakyvia, scenessa: ladattu.nakyviaScenessa, taso: ladattu.taso,
+      laattoja: ladattu.laattoja, valmiita: ladattu.valmiita, pyyntoja: ladattu.pyyntoja,
+      jonossa: ladattu.jonossa, ladattavia: ladattu.ladattavia, purettuja: ladattu.purettuja,
+      jumissa: ladattu.jumissa,
+    } : null,
+    otokset: kelpo,
+  };
+  // 4. Muste heilurin keskeltä: kaappaus kesken liikkeen (ilman hidastusta).
+  const vektorienTila = () => sivu.evaluate(() => {
+    const v = window.matkakirja.ui.pallolauta.vektorit?.()?.mittarit?.() ?? null;
+    return v ? { tila: v.tila, lod: v.lod, tarvePxAste: v.tarvePxAste, soluja: v.soluja, ladattu: v.ladattu } : null;
+  });
+  const kuvaAjo = heiluri({ jaksoja: HEILURI_JAKSOJA, ylos: true });
+  await sivu.waitForTimeout(Math.round(Math.max(600, mitattu.kestoMs / 3)));
+  const heiluriKuva = await kaappaa('6-heiluri');
+  tulos.heiluri.vektorit = await vektorienTila();
+  await kuvaAjo;
+  tulos.heiluri.viiva = pinta(heiluriKuva, keski);
+  await odotaLepo(3000);
+  const heiluriLepo = await kaappaa('7-heiluri-lepo');
+  tulos.heiluri.lepo = { tila: await tila(), viiva: pinta(heiluriLepo, keski), vektorit: await vektorienTila() };
+}
+
 /* ================= VARTIO (--vartio) ================= */
 /*
  * Suunnitelman luvun 5 hyväksymisrajat YHDESSÄ paikassa. Nämä ovat
@@ -437,16 +670,47 @@ const RAJAT = {
   drawCalls: 120,
   tekstuuritLevossa: 20, // uudestaan luodut tekstuurit panoroinnin jälkeen
   eroPiikki: 1.5, // zoomsarjan ero vs naapurien keskiarvo
+  // Heiluri (omistajan palaute v1649): jo ladattu alue ei saa pudota
+  // pohjan Z5:lle kesken nopean edestakaisen panoroinnin.
+  heiluriPeitto: 100, // näkyvän alueen laattoja scenessä (%) vähintään
+  heiluriMuste: 2, // musteviivan paksuus heilurin aikana (px)
+  heiluriJumit: 0, // unohdettuja laattoja (tilassa "ladataan", ei jonossa)
+  /*
+   * PEITON MITTAAMINEN VAATII, ETTÄ KEHYS ON LYHYEMPI KUIN LAATAN MATKA
+   * NÄYTÖNOHJAIMELLE. Kerros päivittyy kerran kehyksessä, ja vasta
+   * näkyviin tullut laatta ehtii peittoon vain, jos haku, dekoodaus ja
+   * tekstuurin vienti (≤ 2 / kehys) mahtuvat päivitysten väliin —
+   * laitteella kehys on 16 ms ja päivitysväli 100 ms, joten aikaa on
+   * useita päivityksiä. Kontin ohjelmistorasteroija piirtää dpr 3:lla
+   * 1–2 kehystä sekunnissa, ja silloin koko putken pitäisi mahtua
+   * yhteen kehykseen: mitta kertoo kehysajasta eikä koodista. Yli tämän
+   * rajan menevä kehysaika antaa peittoriville OHI:n; `heilurin jumit`
+   * on kehysajasta riippumaton eikä sitä ohiteta koskaan.
+   */
+  heiluriKehysMs: 400,
 };
 
 /**
  * Vertaa raportin luvut rajoihin. Palauttaa rivit { tila, nimi, teksti },
  * joissa tila on OK, FAIL tai OHI (mittausta ei ajettu tällä valinnalla).
  */
+const VARTIORIVIT = [
+  'reuna liikkeessä', 'muste liikkeessä', 'updatePov', 'laattaverkot', 'piirtokutsut',
+  'tekstuurit levossa', 'zoomin tyhjä', 'zoomin ero-piikki', 'heilurin peitto',
+  'heilurin jumit', 'heilurin muste', 'zoomin tason vaihdot',
+];
+
 function vartioRivit(t) {
   const rivit = [];
   const lisaa = (tila, nimi, teksti) => { rivit.push({ tila, nimi, teksti }); };
   const arvio = (ehto, nimi, teksti) => lisaa(ehto ? 'OK' : 'FAIL', nimi, teksti);
+  if (t.kerrosPoissa) {
+    const syy = 'laattakerros ei piirrä (pallon sarja ja pyramidi ämpärissä eri versiota tai '
+      + 'pyramidin luetteloa ei saatu) — pohja on vapautettu omaan syvimpään tasoonsa '
+      + '(js/pallo.js vapautaPohja) ja peli piirtää kuten v1645; luvun 5 rajat koskevat kerrosta';
+    for (const nimi of VARTIORIVIT) lisaa('OHI', nimi, syy);
+    return rivit;
+  }
   const liikeAjettu = VAIHE === 'kaikki' || VAIHE === 'liike';
   const zoomAjettu = (VAIHE === 'kaikki' || VAIHE === 'zoom') && LAUTA === 'pallo';
   // Moottorin luvut (updatePov, laattaverkot, dc, tekstuurit) ovat pallon
@@ -552,6 +816,42 @@ function vartioRivit(t) {
       + `(erot ${sarja.map((r) => r.ero).filter((x) => x != null).join(' ')}) `
       + `— raja ≤ ${RAJAT.eroPiikki} × naapurien keskiarvo`);
   }
+  /* 10–11. Heiluri: näkyvän alueen peitto ja muste (omistajan palaute v1649). */
+  const heiluriAjettu = (VAIHE === 'kaikki' || VAIHE === 'heiluri') && LAUTA === 'pallo';
+  const h = t.heiluri;
+  if (!heiluriAjettu) {
+    const syy = LAUTA === 'pallo' ? `--vaihe=${VAIHE}: heiluria ei ajettu` : `--lauta=${LAUTA}: heiluria ei ajeta`;
+    lisaa('OHI', 'heilurin peitto', syy);
+    lisaa('OHI', 'heilurin jumit', syy);
+    lisaa('OHI', 'heilurin muste', syy);
+  } else if (h?.kerrosPoissa) {
+    const syy = 'laattakerros ei piirrä (pallon sarja ja pyramidi eri versiota tai luetteloa ei saatu) '
+      + '— pohja on vapautettu omaan syvimpään tasoonsa, heiluria ei voi mitata';
+    lisaa('OHI', 'heilurin peitto', syy);
+    lisaa('OHI', 'heilurin jumit', syy);
+    lisaa('OHI', 'heilurin muste', syy);
+  } else if (!h || !h.otoksia) {
+    lisaa('FAIL', 'heilurin peitto', 'mittausta ei saatu');
+    lisaa('FAIL', 'heilurin jumit', 'mittausta ei saatu');
+    lisaa('FAIL', 'heilurin muste', 'mittausta ei saatu');
+  } else {
+    const peittoTeksti = `${h.peittoMin} % pienimmillään (${h.jaksoja} jaksoa ${h.kestoMs} ms, `
+      + `kehys p50 ${h.p50} ms, keski ${h.peittoKeski} %, vajeita ${h.vajeitaOtoksia}/${h.otoksia} otoksessa, `
+      + `pahin ${h.vajeenPahin} laattaa, purettuja ${h.purettujaAikana}, pyyntoja ${h.pyyntojaAikana})`;
+    if (h.p50 > RAJAT.heiluriKehysMs) {
+      lisaa('OHI', 'heilurin peitto', `${peittoTeksti} — kehys p50 ${h.p50} ms > ${RAJAT.heiluriKehysMs} ms, `
+        + 'mittausympäristö on liian hidas peittoon (ks. RAJAT.heiluriKehysMs)');
+    } else {
+      arvio(h.peittoMin >= RAJAT.heiluriPeitto, 'heilurin peitto',
+      `${peittoTeksti} — raja ≥ ${RAJAT.heiluriPeitto} %`);
+    }
+    arvio((h.jumissa ?? 0) <= RAJAT.heiluriJumit, 'heilurin jumit',
+      `${h.jumissa} unohdettua laattaa (tilassa "ladataan", ei aloitettu eikä jonossa; `
+      + `lataustauolla ${h.ladattu?.jumissa ?? '?'}) — raja ${RAJAT.heiluriJumit}`);
+    arvio((h.viiva?.muste?.paksuus ?? Infinity) <= RAJAT.heiluriMuste, 'heilurin muste',
+      `${h.viiva?.muste?.paksuus ?? '?'} px (lepo ${h.lepo?.viiva?.muste?.paksuus ?? '?'} px) — raja ≤ ${RAJAT.heiluriMuste} px`);
+  }
+
   if (zoomAjettu && sarja.length) {
     const tasot = (t.zoom?.tasot ?? []).map((x) => x.taso);
     const taakse = tasot.filter((v, i) => i > 0 && v < tasot[i - 1]).length;
@@ -564,12 +864,26 @@ function vartioRivit(t) {
 
 tulos.virheet = virheet.slice(0, 5);
 tulos.kuvat = kuvat;
+/*
+ * ONKO LAATTAKERROS YLIPÄÄTÄÄN PÄÄLLÄ? Ämpärin kaksi sarjaa (pyramidi ja
+ * pallon oma laatat.json) poltetaan eri ajoissa, ja versiovahti sammuttaa
+ * kerroksen siksi aikaa; js/pallo.js vapautaPohja palauttaa silloin pohjan
+ * omaan syvimpään tasoonsa ja v1645:n laatutiloihin. Luvun 5 rajat on
+ * mitattu KERROKSELLE, joten ne eivät koske sellaista ajoa — vartio kertoo
+ * syyn eikä väitä vikaa.
+ */
+if (LAUTA === 'pallo') {
+  tulos.kerrosPoissa = await sivu.evaluate(
+    () => window.matkakirja?.ui?.pallolauta?.lepokerros?.()?.mittarit?.()?.tila !== 'nakyy',
+  ).catch(() => false);
+}
 if (VARTIO) tulos.vartio = vartioRivit(tulos);
 const raportti = join(ULOS, `${NAKYMA}-${TUNNISTE}${VAIHE === 'kaikki' ? '' : `-${VAIHE}`}.json`);
 writeFileSync(raportti, JSON.stringify(tulos, null, 1));
 if (VARTIO) {
   console.log('VARTIO — docs/moduulit/pallon-liike-taydella-tarkkuudella.md luku 5 '
-    + `(${NAKYMA}, dpr ${dpr}, throttle ${THROTTLE}×, lauta ${LAUTA})`);
+    + `(${NAKYMA}, dpr ${dpr}, throttle ${THROTTLE}×, lauta ${LAUTA}`
+    + `${SARJAPAIKKAUS ? ', SARJAPAIKKAUS: laatat.json:in versiot pyramidista' : ''})`);
   const levein = Math.max(...tulos.vartio.map((r) => r.nimi.length));
   for (const r of tulos.vartio) console.log(`${r.tila.padEnd(4)} ${r.nimi.padEnd(levein)}  ${r.teksti}`);
   const laske = (tila) => tulos.vartio.filter((r) => r.tila === tila).length;
