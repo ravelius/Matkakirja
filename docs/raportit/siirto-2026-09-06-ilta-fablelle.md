@@ -18,7 +18,7 @@ ja luo uusi tähän sessioon (tunneittain; sisältö sama kuin ennen).
 
 ## 1. Tila
 
-- **main = v1642** (PR #2110). Työhaara `claude/matkakirja-v1637-release-so5jxs`
+- **main = v1642** (PR #2110). **PR #2111 = v1643 (pisteet) on CI-vihreä mutta MERGAAMATTA** — mergeä ensin (squash, expectedHeadSha f7df291b), sitten nollaa haara mainiin ja cherry-pickaa haaran kaksi ylintä committia (hionta, nimet) v1644:ksi. Työhaara `claude/matkakirja-v1637-release-so5jxs`
   on nollattu mainiin (tämä tiedosto sen päällä). Päivän julkaisut:
   v1637 (aikajanan ajo, 6 maalehteä, Ihmisen matka -suunnitelma), v1638
   (etusivun harso ilman rajaa, SLE/PAN-tekstit), v1639 (pallon
@@ -65,7 +65,7 @@ Kolme agenttia oli työssä session päättyessä. Niiden worktreet ja
 commitit olivat vain kontissa; jos tätä tiedostoa ei ole päivitetty
 "POIMITTU"-merkinnällä, työ on aloitettava uudestaan:
 
-1. **Ihmisen matka -hionta (fablemax)** — prototyyppi (commit
+1. **POIMITTU haaraan (commit "Ihmisen matka: varivirrat pallolle, hiottu"), EI JULKAISTU — omistaja ei ehtinyt katsoa kuvia; kysy kortilla ja julkaise v1644:na.** Ihmisen matka -hionta (fablemax) — prototyyppi (commit
    1df6fce3 edellisen kontin worktreessä; SISÄLTÖ kuvattu
    docs/moduulit/ihmisen-matka-virrat.md luvussa 12, jos se ehti
    mainiin — muuten luku 11 päätökset) + hionta: puhelimen loppusanojen
@@ -82,7 +82,7 @@ commitit olivat vain kontissa; jos tätä tiedostoa ei ole päivitetty
    "aarteen piste syttyy liian lähelle ateenaa, ei pysty painamaan …
    sama ongelma myös sofiassa" (aarrepiste jää nappulan alle pallolla;
    tasokartalla toimii). Molemmat mitattava Playwrightilla, yksi commit.
-3. **Nimet korttien päällä (Opus)** — omistaja: "kaupunkien nimet
+3. **POIMITTU haaraan (commit "Pallon merkit pallon sisaan"), EI JULKAISTU — julkaise v1644:n mukana.** Nimet korttien päällä (Opus) — omistaja: "kaupunkien nimet
    näkyvät popup sivujen päällä" (pallon CSS2D-nimet piirtyvät
    kohdekortin päälle). Yksi sääntö CSS2D-kerrokselle, ei korttikohtaisia
    paikkauksia.
