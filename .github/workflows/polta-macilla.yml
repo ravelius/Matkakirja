@@ -86,6 +86,20 @@ jobs:
           [ -n "${{ inputs.versio }}" ] && VERSIO="--versio ${{ inputs.versio }}"
           tools/polta-paikallisesti.sh --sarjat "${{ inputs.sarjat }}" $VERSIO ${{ inputs.lisaargumentit }}
 
+      - name: Kaatuneiden shardien lokit nakyviin
+        if: always()
+        run: |
+          set +e
+          cd pyramidi-poltto/lokit 2>/dev/null || exit 0
+          for l in *.log; do
+            n="${l%.log}"
+            [ -f "$n.valmis" ] && continue
+            echo "::group::KESKEN/KAATUNUT: $n (viimeiset 60 rivia)"
+            tail -n 60 "$l"
+            echo "::endgroup::"
+          done
+          exit 0
+
       - name: Lokit talteen
         if: always()
         uses: actions/upload-artifact@v4
