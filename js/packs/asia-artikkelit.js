@@ -3520,4 +3520,56 @@ export const ASIA_ARTIKKELIT = {
       + 'bruttokansantuotteesta, pääosin öljystä ja kaasusta, ja se on '
       + 'maailman suurimpia raudan ja hopean tuottajia.',
   },
+  /*
+   * MAA-AVAIN KAUPUNKIEN JOUKOSSA (Opus 6.9.2026). Tämä tiedosto on
+   * muuten kaupunkikohtainen, mutta maalehden maaosasto lukee introa
+   * taulusta ARTIKKELIT maan wiki-nimellä (js/lehti.js, ui.js) — ja
+   * MAA_KATEGORIAT.AFG:n maaosasto nojaa tähän introon yksin, sama
+   * malli kuin Egyptillä ja Kenialla. Myös teksti-kenttä on kirjoitettu,
+   * koska "Lue lisää" lukee sen ja koska tests/vanha-maailma.test.mjs
+   * vaatii Aasian taulun jokaiselta riviltä kolme kappaletta.
+   * Faktat en-Wikipedian artikkelista "Afghanistan" (osiot Geography,
+   * History, Ethnicity and languages, Agriculture, Culture) sekä
+   * maalehden omasta faktapohjasta, tarkistettu 6.9.2026.
+   */
+  Afganistan: {
+    intro: 'Afganistan on sisämaavaltio Keski- ja Etelä-Aasian '
+      + 'saumakohdassa, ja sen halki kulkee Hindukušin vuoristo: '
+      + 'korkein huippu Noshaq kohoaa 7 492 metriin, kun taas lounaan '
+      + 'Sistanin allas on yksi maailman kuivimmista seuduista. Maata '
+      + 'on sanottu Aasian sydämeksi, koska sen solien läpi ovat '
+      + 'kulkeneet idän ja lännen väliset reitit. Badakhshanin '
+      + 'vuorista on louhittu lapis lazulia yli kuudentuhannen vuoden '
+      + 'ajan, ja sitä sinistä kiveä on sekä Urin kuningashaudoissa '
+      + 'että Tutankhamonin naamiossa. Aluetta ovat vuorollaan '
+      + 'hallinneet akhaimenidit, Aleksanterin seuraajat, kušanit, '
+      + 'ghaznavidit ja timuridit, ja jokainen on jättänyt jälkeensä '
+      + 'kaupungin, luostarin tai kirjaston. Nykyinen valtio johdetaan '
+      + 'vuodesta 1747, jolloin Ahmad Shah Durrani kruunattiin '
+      + 'Kandaharissa. Virallisia kieliä on kaksi, dari ja pashtu, ja '
+      + 'suuri osa väestöstä puhuu molempia. Ruoka rakentuu riisin, '
+      + 'leivän ja teen ympärille, ja runous kuuluu arkeen niin '
+      + 'itsestään selvästi, että Heratissa torstai-ilta on '
+      + 'runoilta.',
+    teksti: 'Afganistan on vuorten maa Keski- ja Etelä-Aasian '
+      + 'välissä. Hindukuš halkoo sen koillisesta lounaaseen, '
+      + 'pohjoisessa aukeaa Turkestanin tasanko ja lounaassa '
+      + 'Sistanin umpinainen allas. Merenrantaa ei ole, ja joet '
+      + 'päättyvät järviin, autiomaahan tai naapurimaiden puolelle.'
+      + '\n\n'
+      + 'Solat ovat tehneet maasta reitin. Kušanien valtakunta '
+      + 'hallitsi täältä käsin kauppaa Rooman ja Kiinan välillä, '
+      + 'buddhalaisuus kulki Bamiyanin laakson kautta itään, ja '
+      + 'islamin tulon jälkeen Ghaznista ja Heratista kasvoi '
+      + 'oppineiden kaupunkeja. Timuridien Herat oli 1400-luvulla '
+      + 'persialaisen kulttuurin keskus, jossa työskentelivät sekä '
+      + 'runoilija Jami että maalari Behzad.'
+      + '\n\n'
+      + 'Maassa puhutaan darin ja pashtun lisäksi uzbekkia, '
+      + 'turkmeenia, balochia ja monta pienempää kieltä. Torit '
+      + 'myyvät granaattiomenaa, melonia ja kuivattuja hedelmiä, ja '
+      + 'Heratin ympäriltä tulee maailman kalleinta maustetta, '
+      + 'sahramia. Ateria katetaan lattialle levitetylle liinalle ja '
+      + 'päättyy teehen.',
+  },
 };

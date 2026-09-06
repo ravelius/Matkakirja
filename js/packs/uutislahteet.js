@@ -807,4 +807,28 @@ export const UUTISLAHTEET = {
     kieli: 'kk',
     syote: 'https://kaz.nur.kz/rss/all.rss',
   },
+  /*
+   * TOLOnews on Afganistanin katsotuin uutiskanava, ja sillä on omat
+   * syötteet darin, pashtun ja englannin kielillä. Taulussa on
+   * DARINKIELINEN syöte (kieli 'fa'), koska paikalliskielinen lähde on
+   * ensisijainen ja dari on maan lingua franca; oikealta vasemmalle
+   * kirjoitettava teksti toimii ilman lisätöitä (dir="auto" on
+   * koodissa v297:stä alkaen).
+   *
+   * Testattu 6.9.2026: syötteessä kolmekymmentä juttua, ja
+   * artikkelisivun <article>-lohkosta jäsentyy 15–23 yli 60 merkin
+   * kappaletta sekä og:image. Osoitteessa ei ole www-etuliitettä eikä
+   * uudelleenohjausta, joten workerin SALLITUT-rivi on
+   * https://tolonews.com/.
+   *
+   * Testattu ja hylätty: Pajhwok Afghan News (feed vastaa 410 Gone),
+   * Khaama Press (captcha-uudelleenohjaus heti syötteessä), Ariana
+   * News (Sucuri-palomuuri, 403) ja Hasht-e Subh eli 8am.media (syöte
+   * aukeaa mutta on tyhjä, ei yhtään <item>-alkiota).
+   */
+  AFG: {
+    nimi: 'TOLOnews',
+    kieli: 'fa',
+    syote: 'https://tolonews.com/fa/rss.xml',
+  },
 };

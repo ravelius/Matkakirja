@@ -45223,4 +45223,431 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * AFGANISTAN (AFG) — Aasian laudan maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-afganistan.md;
+   * kaikki luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KAUPUNKILEHDEN JA KARTTANOSTOJEN KANSSA on tässä
+   * poikkeuksellisen tiukka, koska Afganistan on jo runsaasti katettu.
+   * Kabulin kaupunkilehti (KULTTUURI_KATEGORIAT.kabul) kertoo Char
+   * Chattan basaarin, Bala Hissarin, Pul-e Khishtin moskeijan,
+   * kansallismuseon, Baburin puutarhat ja kaupungin nimet;
+   * maastokohteet-afg.js kattaa Noshaqin, Amudarjan, Helmandin,
+   * Band-e Amirin, Jamin minareetin, Heratin linnoituksen, Balkhin,
+   * Mes Aynakin, Ai-Khanoumin ja Ghaznin; fokuskohteet-afg.js
+   * Bamiyanin buddhat; skandaalit.js vuoden 1842 vetäytymisen ja
+   * Baktrian kullan; elaintakyt.js lumileopardin. Maalehti EI toista
+   * mitään näistä — siksi historiasta puuttuvat sekä anglo-afgaaniset
+   * sodat että Balkhin ja Ghaznin kaupunkihistoriat, eikä luonto ole
+   * lainkaan aiheena: vuoret, joet, järvet ja lumileopardi ovat jo
+   * kartalla. Tilalle tulivat kirjallisuus ja kuvataide, joita
+   * kartalla ei ole ollenkaan.
+   *
+   * HERKÄT AIHEET (Aasian laudan linjaus, M3:n Myanmar-linja):
+   * kaikki lehden tapahtumat ovat vuotta 1978 vanhempia. Pois on
+   * jätetty vuoden 1978 jälkeinen politiikka ja sota kokonaan, myös
+   * silloin kun lähdeartikkeli kertoo siitä (Rabatakin kiven ja
+   * Begramin norsunluiden artikkelit kertovat ryöstöistä; niistä
+   * kerrotaan vain se, mitä esineille tapahtui ennen 1978).
+   * Attanista on kirjoitettu juhla- ja häätanssina, ei sotatanssina.
+   *
+   * KUVAT: 16 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin.
+   * NELJÄ NOSTOA JÄI KUVATTOMAKSI: Australian kamelinajajat, landay,
+   * attan ja Radio Kabul. Syy on sama kaikissa: Afganistania
+   * koskevat Commonsin uudet valokuvat ovat suureksi osaksi
+   * sotilaskuvaajien ottamia, eikä sellaista kuvaa oteta tähän
+   * lehteen. HYLÄTYT: "Farman by Ahmad Shah Durrani" (arkiston
+   * vesileima kuvan alalaidassa), "Afghan Palaw" (katettu
+   * ruokapöytä länsimaisessa kodissa, ei kerro ruoasta),
+   * "Afghan attan dance" ja muut attan-kuvat (kaikki kuvattu
+   * varuskunnissa), "Men make naan ... Jalalabad" (sama syy),
+   * "Painting of Ahmad Shah Abdali" ja "Ahmad Shah Durani"
+   * (extmetadatan Artist on "Unknown author"), "Tea shop,
+   * Afghanistan, 1976" (tumma sisäkuva, jossa kasvoja),
+   * "Group Portrait of Calvert Expedition" (kuvassa on retkikunnan
+   * eurooppalaiset, ei kamelinajajia).
+   *
+   * TUNNISTETTAVAT KASVOT: yhdessäkään kuvassa ei ole tunnistuvia
+   * kasvoja. Rubab-kuvassa näkyvät vain soittajan kädet ja soitin.
+   */
+  AFG: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Afganistanin historia on kulkureittien historiaa: Hindukušin solat ovat '
+          + 'päästäneet läpi karavaanit, kirjoitusjärjestelmät ja valtakunnat, ja jokainen '
+          + 'niistä on jättänyt jälkensä laaksoihin.',
+      nostot: [
+        {
+          otsikko: 'Kivi, joka luetteli neljä kuningasta',
+          aika: '1993–2000',
+          tiedosto: 'Greek Script Carved in Limestone. The Surkh Kotal Inscription (discovered in 1957).jpg',
+          teksti: 'Rabatakin kummulta Baghlanin ja Samanganin rajalta kaivettiin 1993 esiin '
+              + 'kivilaatta, jonka pintaan oli hakattu baktrian kieltä kreikkalaisin '
+              + 'kirjaimin. Samasta kuopasta nousi jättimäisen kivileijonan tassuja, jotka '
+              + 'katosivat pian. Miinanraivaaja valokuvasi laatan, ja kuva päätyi British '
+              + 'Museumiin, jossa Joe Cribb tunnisti sen sukulaiseksi Surkh Kotalin '
+              + 'kirjoitukselle. Nicholas Sims-Williams, yksi harvoista baktrian '
+              + 'lukutaitoisista, julkaisi käännöksen 1996: kušanien hallitsija Kanishka '
+              + 'luettelee siinä isoisoisänsä, isoisänsä ja isänsä nimet ja kertoo '
+              + 'korvanneensa kreikan hallinnon kielenä.',
+          selite: 'Surkh Kotalin kirjoitus löytyi 1950-luvulla samasta laaksosta, ja juuri '
+            + 'sen kaltaisuus paljasti Lontoossa, mitä valokuvan kivi oli.',
+          lahde: 'Afghanistan in the Early 1960s, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Kuningatar, joka siirsi pääkaupungin',
+          aika: '1405–1457',
+          tiedosto: 'Musalla Complex and Minarets - Herat, Afghanistan (4112215444).jpg',
+          teksti: 'Gawhar Shad oli timuridihallitsija Shah Rukhin puoliso, ja hänen nimensä '
+              + 'tarkoittaa loistavaa jalokiveä. Vuonna 1405 hän siirsi valtakunnan '
+              + 'pääkaupungin Samarkandista Heratiin, ja hänen rakennuttamansa Musallan '
+              + 'kokonaisuus teki kaupungista persialaisen kulttuurin keskuksen: hoviin '
+              + 'kutsuttiin taiteilijoita, rakennusmestareita ja runoilijoita, heidän '
+              + 'joukossaan Jami. Miehensä kuoltua 1447 Gawhar Shad nosti valtaistuimelle '
+              + 'suosikkipojanpoikansa ja hallitsi kymmenen vuotta tosiasiallisesti '
+              + 'valtakuntaa, joka ulottui Tigrisiltä Kiinan rajoille. Hänet teloitettiin '
+              + '19. heinäkuuta 1457 yli 80-vuotiaana.',
+          selite: 'Musallan kokonaisuudesta on jäljellä muutama minareetti ja Gawhar Shadin '
+            + 'mausoleumi; muu on maan tasalla.',
+          lahde: 'Marius Arnesen, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Vehnäntähkä turbaanissa',
+          aika: '1747',
+          tiedosto: '1000 Afghanis (2022 - back).jpg',
+          teksti: 'Kun Persian hallitsija Nader Shah murhattiin kesäkuussa 1747, hänen '
+              + 'afgaanikaartinsa päällikkö Ahmad Khan Abdali otti vainajan sormuksen ja '
+              + 'Koh-i-Noor-timantin ja marssi joukkoineen Kandahariin. Tarun mukaan '
+              + 'heimopäälliköiden jirga valitsi hänet yksimielisesti kuninkaaksi ja hänen '
+              + 'turbaaniinsa asetettiin vehnäntähkä. Historioitsijat ovat toista mieltä: '
+              + 'vallan antoi yhdeksän miehen sotilasneuvosto, ja neuvonantaja Sabir Shah '
+              + 'kiinnitti lakkiin vain vihreän oksan. Ahmad Shah otti liikanimen Durr-i '
+              + 'Durran, helmien helmi, ja vaihtoi heimonsa nimen abdaleista durraneiksi. '
+              + 'Afganistanissa häntä sanotaan yhä nimellä Ahmad Shah Baba, isä.',
+          selite: 'Ahmad Shah Durranin mausoleumi Kandaharissa on kuvattu tuhannen '
+            + 'afgaanin setelin kääntöpuolelle.',
+          lahde: 'Sayfullah Al Maslul, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Junan nimi, joka ei tarkoita mitä luulee',
+          aika: '1860–1930-luvut',
+          teksti: 'Australian sisämaassa hevonen ei kestänyt kuumuutta, joten sinne tuotiin '
+              + 'kamelit ja kamelinajajat. Kesäkuussa 1860 Melbourneen saapui Karachista '
+              + 'laiva Chinsurah, mukanaan 24 kamelia ja kourallinen ajajia Burken ja '
+              + 'Willsin retkikuntaa varten; 1860-luvulla ajajia tuli noin kolmetuhatta. '
+              + 'Kaikkia kutsuttiin afgaaneiksi, vaikka useimmat tulivat Brittiläisen '
+              + 'Intian luoteisosista — osa oli aidosti Afganistanista. He rakensivat '
+              + 'lennätinlinjaa ja rautateitä ja pystyttivät maanosan ensimmäisen '
+              + 'moskeijan Marreehen 1861. Kuuluisan Ghan-junan nimen keksi 1923 '
+              + 'rautatieläinen, joka näki matkustajan juoksevan rukoilemaan pysähdyksen '
+              + 'aikana.',
+          selite: 'Ajajien mukana kulkeneet taatelipalmut kasvavat yhä niillä paikoilla, '
+            + 'joissa karavaanit pysähtyivät yöksi.',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Afganistanin maasta on kaivettu sekä sinistä kiveä että norsunluuta, ja '
+          + 'sen työhuoneissa on maalattu käsikirjoituksia, joita jäljiteltiin '
+          + 'vuosisatoja.',
+      nostot: [
+        {
+          otsikko: 'Sininen, joka maksoi enemmän kuin kulta',
+          tiedosto: 'Lazurite, pyrite, calcite 3.jpg',
+          teksti: 'Sar-e Sangin kaivoksia Kokchan laaksossa Badakhshanissa on louhittu yli '
+              + 'kuudentuhannen vuoden ajan, ja pitkään ne olivat koko tunnetun maailman '
+              + 'ainoa lapis lazulin lähde. Kivi on lazuriittia, valkoista kalsiittia ja '
+              + 'kullankeltaista pyriittiä; Plinius vanhempi kuvasi sen läpinäkymättömäksi '
+              + 'ja kullanhippusin ripotelluksi. Sitä on Urin kuningashaudoissa ja '
+              + 'Tutankhamonin naamiossa, ja Kleopatra jauhoi siitä silmämeikkinsä. '
+              + 'Keskiajan lopulla Eurooppa alkoi tuoda kiveä jauhettavaksi '
+              + 'ultramariiniksi, ja Masaccio, Tizian ja Vermeer säästivät sen yleensä '
+              + 'kuvan tärkeimmän hahmon vaatteisiin.',
+          selite: 'Lapis lazulin sininen tulee lazuriitista, valkoiset juonteet '
+            + 'kalsiitista ja kultaiset pilkut rikkikiisusta.',
+          lahde: 'Parent Géry, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kaksi muurattua huonetta',
+          aika: '1936–1940',
+          tiedosto: 'Furniture part Begram Hoard Guimet MA230.jpg',
+          teksti: 'Ranskalainen arkeologiretkikunta kaivoi Begramissa Kabulista pohjoiseen '
+              + 'kaksi huonetta, jotka oli aikoinaan muurattu umpeen ja unohdettu. Sisällä '
+              + 'oli yli tuhat norsunluu- ja luuveistosta, roomalaista lasia sadan '
+              + 'kahdeksankymmenen esineen verran, pronssia, alabasteria ja kiinalaisia '
+              + 'lakkakulhoja. Norsunluut olivat olleet tuoleissa ja jakkaroissa, jotka '
+              + 'lahosivat pois; kiinnitysniitit ja asentajien merkinnät kharoshthiksi ja '
+              + 'brahmiksi jäivät. Kapisa oli kušanien kesäpääkaupunki ja hallitsi kahta '
+              + 'Hindukušin solaa, joten samaan varastoon päätyi tavaraa Roomasta, '
+              + 'Intiasta ja Kiinasta.',
+          selite: 'Begramin norsunluut olivat huonekalujen koristelaattoja, ja niiden '
+            + 'pinnalla on yhä jälkiä punaisesta ja sinisestä väristä.',
+          lahde: 'Marie-Lan Nguyen, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Mestari, joka piilotettiin luolaan',
+          aika: '1455–1535',
+          tiedosto: 'Kamal-ud-din Bihzad - Construction of the fort of Kharnaq.jpg',
+          teksti: 'Kamal ud-Din Behzad syntyi Heratissa noin 1455, jäi varhain orvoksi ja '
+              + 'kasvoi hovin kirjastonhoitajan ja maalarin Mirak Naqqashin huomassa. '
+              + 'Vuonna 1486 sulttaani Husayn Bayqara nimitti hänet Heratin hovipajojen '
+              + 'johtajaksi. Behzad jätti kuviinsa tyhjää tilaa, antoi jokaiselle hahmolle '
+              + 'omat kasvot ja piilotti kuviin pieniä kertomuksia. Tarun mukaan shaahi '
+              + 'Ismail kätki hänet Chaldiranin taistelun aikana 1514 luolaan kuin aarteen. '
+              + 'Vuonna 1522 hän siirtyi Tabrizin hovipajan johtoon. Töitä jäljiteltiin '
+              + 'niin paljon, että tutkijat kiistelevät yhä siitä, mitkä kuvat ovat '
+              + 'hänen.',
+          selite: 'Khawarnaqin linnan rakentaminen on Behzadin tunnetuimpia kuvia: '
+            + 'jokainen muurari ja kantaja tekee siinä eri työvaihetta.',
+          lahde: 'Kamāl ud-Dīn Behzād, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Turkoosi, joka tulee aavikkokasvista',
+          tiedosto: 'Istalif-shop-pottery.jpg',
+          teksti: 'Istalif on kylä Kabulista pohjoiseen Shomalin tasangon yllä, ja sen nimi '
+              + 'saattaa juontua kreikan sanasta staphile, rypäleterttu. Kylän savenvalajat '
+              + 'ovat tunnettuja turkoosista ja tummanvihreästä lasitteestaan, jonka väri '
+              + 'saadaan ishkar-kasvista Balkhin aavikolta. Suullinen perinne johtaa '
+              + 'mestarien eli ustadien sukupolvet Bukharasta tulleeseen sufipyhimykseen '
+              + 'Sayyid Mir Kulaliin, joka olisi asettunut seudulle yli neljäsataa vuotta '
+              + 'sitten. Työ periytyy yhä isältä pojalle saman perheen sisällä. Charles '
+              + 'Masson kirjasi 1830-luvulla seudun sanonnan: joka ei ole nähnyt Istalifia, '
+              + 'ei ole nähnyt mitään.',
+          selite: 'Istalifin astioiden turkoosi lasite on kylän tuntomerkki, ja sen resepti '
+            + 'on kulkenut samoissa suvuissa vuosisatoja.',
+          lahde: 'Tigerlily143, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä väriainetta Badakhshanin lapis lazulista jauhettiin Euroopassa?',
+        vaihtoehdot: [
+          'Okraa',
+          'Indigoa',
+          'Ultramariinia',
+          'Karmiinia',
+        ],
+        oikea: 2,
+        fakta: 'Ultramariini oli niin kallista, että se säästettiin yleensä kuvan '
+            + 'tärkeimmän hahmon vaatteisiin.',
+      },
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Runous ei ole Afganistanissa kirjahyllyn asia vaan puhuttua: Heratissa '
+          + 'torstai-ilta on perinteisesti runoilta, ja talvipäivänseisauksen Yalda-yönä '
+          + 'perheet lukevat runoja ja syövät hedelmiä aamuun asti.',
+      nostot: [
+        {
+          otsikko: 'Runoilija, jota neljä maata sanoo omakseen',
+          aika: '1207–1273',
+          tiedosto: 'Mevlana Museum, Konya 03.jpg',
+          teksti: 'Jalal ad-Din Muhammad tunnetaan lisänimillä Balkhi ja Rumi, ja molemmat '
+              + 'kertovat saman asian eri päästä. Suku oli Balkhista, mutta hän syntyi 1207 '
+              + 'Wakhshin kylässä nykyisen Tadžikistanin puolella, muutti viisivuotiaana '
+              + 'Samarkandiin ja päätyi mongolien edetessä lopulta Konyaan Anatoliaan — '
+              + 'sieltä nimi Rumi, roomalainen. Elämän käänsi kiertelevä dervissi Shams '
+              + 'Tabrizi, jonka kadottua syntyi valtava runokokoelma. Masnavia sanotaan '
+              + 'persiankieliseksi Koraaniksi. Afganistanissa hänet luetaan kolmen suuren '
+              + 'mystikon joukkoon Heratin Ansarin ja Ghaznin Sanain rinnalle.',
+          selite: 'Rumi kuoli Konyassa, ja hänen hautansa ympärille syntyi mevlevi-veljestö '
+            + 'eli pyörivät dervissit.',
+          lahde: 'Murat Özsoy 1958, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Ensimmäinen nainen, joka kirjoitti persiaksi',
+          aika: '900-luku',
+          tiedosto: 'Green Mosque in Balkh.jpg',
+          teksti: 'Rabia Balkhi eli samaan aikaan kuin persiankielisen runouden isänä '
+              + 'pidetty Rudaki, ja hän on ensimmäinen nainen, jonka tiedetään kirjoittaneen '
+              + 'runoja persiaksi. Häntä kutsuttiin usein vain Kaabin tyttäreksi. '
+              + '1200-luvun runoilijakokoelmassa hänestä sanotaan, että vaikka hän oli '
+              + 'nainen, hän oli taidoiltaan miehiä etevämpi. Attar kirjoitti hänestä '
+              + 'kaksisataa vuotta myöhemmin tarinan, jossa hän rakastuu veljensä orjaan '
+              + 'Bektashiin ja kirjoittaa viimeiset säkeensä omalla verellään vankiselliin. '
+              + 'Tutkijat pitävät kertomusta myöhempänä lisäyksenä, mutta se on elänyt '
+              + 'kouluissa ja elokuvissa asti.',
+          selite: 'Rabia Balkhin hauta on Balkhissa Khwaja Abu Nasr Parsan mausoleumissa, '
+            + 'jonka kupoli on kaupungin tunnetuin näky.',
+          lahde: 'Julian-G. Albert, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kaksi riviä ja kaksikymmentäkaksi tavua',
+          teksti: 'Landay on pashtunkielinen kansanruno, jossa on täsmälleen kaksi riviä: '
+              + 'ensimmäisessä yhdeksän tavua, toisessa kolmetoista. Rivit eivät riimity, '
+              + 'ja pashtuksi runo päättyy ma- tai na-tavuun. Sana landay tarkoittaa lyhyttä '
+              + 'myrkkykäärmettä, mikä viittaa sekä mittaan että siihen, kuinka pisteliäitä '
+              + 'runot ovat. Ne ovat lähes aina nimettömiä ja ne lauletaan ääneen, usein '
+              + 'naisten kesken. Aiheet toistuvat: rakkaus, ero, koti-ikävä, suru ja sota. '
+              + 'Moni landay arvostelee suoraan tapoja ja sitä, mitä naiselta odotetaan — '
+              + 'nimettömyys tekee siitä mahdollista.',
+          selite: 'Landayn muoto on niin vanha, että sen arvellaan tulleen alueelle '
+            + 'paimentolaisten mukana tuhansia vuosia sitten.',
+        },
+        {
+          otsikko: 'Runoilija, jonka kastelusuunnitelmia yhä käytetään',
+          aika: '1414–1492',
+          tiedosto: 'Nur ad-Din Abd al-Rahman Jami - Manuscript - Google Art Project.jpg',
+          teksti: 'Jami muutti perheineen Heratiin pikkulapsena ja jäi sinne loppuiäkseen. '
+              + 'Häntä pidetään klassisen persialaisen runouden viimeisenä suurena nimenä, '
+              + 'ja hän kirjoitti noin 87 kirjaa ja kirjettä. Pääteos Haft Awrang, seitsemän '
+              + 'valtaistuinta, on seitsemän pitkän kertomarunon sarja. Jami oli myös '
+              + 'insinööri: hänen Heratissa laatimansa kasteluopas piirroksineen ja '
+              + 'laskelmineen on yhä kastelusta vastaavan viraston käsikirja. Oppilaalle, '
+              + 'joka kehui ettei ollut koskaan rakastanut ketään, hän vastasi: mene ensin '
+              + 'rakastamaan, ja tule sitten takaisin, niin näytän sinulle tien.',
+          selite: 'Jamin runoja kopioitiin ja kuvitettiin vielä sata vuotta hänen '
+            + 'kuolemansa jälkeen Heratista Istanbuliin ja Intiaan asti.',
+          lahde: 'Nur ad-Din Abd al-Rahman Jami, Wikimedia Commons (public domain)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Afganistanin soittimet tehdään siitä mitä kasvaa — silkkiäispuusta, '
+          + 'vuohennahasta ja suolesta — ja niiden ääni on sekoitus persialaista sävelmää '
+          + 'ja intialaista sävellystapaa.',
+      nostot: [
+        {
+          otsikko: 'Soittimien leijona',
+          tiedosto: 'Centries old heritage, Rubab.JPG',
+          teksti: 'Rubab on Afganistanin kansallissoitin, ja sitä sanotaan soittimien '
+              + 'leijonaksi. Runko koverretaan yhdestä silkkiäispuun rungosta, kaikukoppa '
+              + 'päällystetään vuohennahalla ja talla lepää nahan päällä pelkän kielten '
+              + 'kireyden varassa. Kieliä on kolmenlaisia: kolme melodiakieltä kvarttien '
+              + 'päässä toisistaan, kaksi tai kolme burdonikieltä ja jopa viisitoista '
+              + 'myötävärähtelevää kieltä, jotka soivat itsestään. Rubabista polveutuu '
+              + 'Pohjois-Intian sarod. Unesco otti rubabin valmistustaidon aineettoman '
+              + 'kulttuuriperinnön luetteloon 2024 yhdessä Iranin, Tadžikistanin ja '
+              + 'Uzbekistanin kanssa.',
+          selite: 'Rubabin kielet tehtiin ennen nuoren vuohen suolesta ja nykyään nailonista; '
+            + 'plektra on luuta tai puuta.',
+          lahde: 'Naveed.yzi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Piiri, joka kiihtyy tuntikausia',
+          teksti: 'Attan on Afganistanin kansallistanssi. Tanssijat asettuvat piiriin '
+              + 'rummuttajan ympärille, ja askel alkaa hitaana ja kiihtyy vähitellen niin, '
+              + 'että piiri voi pyöriä kaksi tai kolme tuntia ilman muuta taukoa kuin '
+              + 'tempon lasku. Tahdin lyö dohol, kaksipäinen tynnyrirumpu. Tyylejä on '
+              + 'kymmeniä, ja jokainen tunnistaa omansa: kabuli, wardaki, logari, paktia, '
+              + 'khosti, kandahari ja herati. Naisten juhlapuvuissa on pieniä peilejä, '
+              + 'joiden sanotaan tarkoittavan valoa, ja miesten turbaanin sitomistapa '
+              + 'kertoo heimon. Tanssin juuret johdetaan zarathustralaisiin menoihin '
+              + 'lähes kolmentuhannen vuoden takaa.',
+          selite: 'Attan tanssitaan häissä, kihlajaisissa ja kevätjuhla Nowruzissa, ja '
+            + 'kaikki osaavat sen omalla seudullaan omalla tavallaan.',
+        },
+        {
+          otsikko: 'Kaksi kieltä ja koko rytmisektio',
+          tiedosto: 'Dambura,Badakhshan.jpg',
+          teksti: 'Dambura on hazarojen, uzbekkien, turkmeenien ja tadžikkien kansansoitin '
+              + 'pohjoisessa ja keskiylängöllä. Kieliä on vain kaksi, ennen suolesta, nyt '
+              + 'nailonista, ja ne kulkevat lyhyen tallan yli tappiin rungon toisessa '
+              + 'päässä. Ääniaukko on soittimen selkäpuolella, kansi on paksua puuta, eikä '
+              + 'soitinta lakata, viilata tai hiota lainkaan. Soittotapa on osa ideaa: '
+              + 'kieliä näpätään ja runkoa lyödään ja raaputetaan samaan aikaan, joten yksi '
+              + 'soittaja hoitaa sekä sävelen että rummun. Bamiyanin maakunnassa '
+              + 'järjestetään soittimen oma juhla, Damboora-festivaali.',
+          selite: 'Damburan runkoa lyödään soiton aikana, ja siksi vanhassa soittimessa on '
+            + 'usein kulumia juuri kannen alareunassa.',
+          lahde: 'Bertramz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Radioasema, joka teki laulajista tähtiä',
+          aika: '1925–1977',
+          teksti: 'Afganistanin ensimmäiset radiolähetykset alkoivat 1925, mutta asema '
+              + 'tuhoutui 1929 eikä lähetystoiminta jatkunut ennen kuin Radio Kabul avattiin '
+              + '1940. Vasta 1950-luvulla radiovastaanotin yleistyi koteihin, ja samalla '
+              + 'syntyi uusi populaarimusiikki: studio-orkestereissa soivat rinnakkain '
+              + 'afganistanilaiset ja intialaiset soittimet sekä eurooppalaiset klarinetit, '
+              + 'kitarat ja viulut. Vuonna 1951 Mermon Parwin lauloi ensimmäisenä '
+              + 'afganistanilaisena naisena suorassa lähetyksessä. Farida Mahwash sai '
+              + 'mestarin arvonimen ustad, ja hänen kappaleensa O bacheh oli vuoden 1977 '
+              + 'suurin hitti.',
+          selite: 'Radio Kabulin studioissa muotoutui tyyli, jossa vanhat dari- ja '
+            + 'pashtunkieliset runot laulettiin uusilla sovituksilla.',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Afganistanilainen ateria katetaan lattialle levitetylle liinalle, '
+          + 'dastarkhanille, ja syödään oikealla kädellä — ja se alkaa ja päättyy teehen.',
+      nostot: [
+        {
+          otsikko: 'Kansallisruoka, joka ei ole kotoisin pääkaupungista',
+          tiedosto: 'Qabuli palao (rice with carrots & raisins) with lamb - Afghanistan - 04272008.jpg',
+          teksti: 'Qabeli palaw on Afganistanin kansallisruoka: höyrytettyä riisiä, '
+              + 'karamellisoituja porkkanasuikaleita, rusinoita ja marinoitua lampaan- tai '
+              + 'naudanlihaa, päälle manteleita ja pistaasipähkinöitä ja joskus sahramia. '
+              + 'Englanniksi ruoka tunnetaan nimellä kabuli, mutta Kabulista se ei ole '
+              + 'kotoisin — todennäköisemmin maan pohjoisrajalta Uzbekistanin puolelta, ja '
+              + 'Saudi-Arabiassa sitä myydään bukharalaisena riisinä. Nimi on luultavasti '
+              + 'väännös sanasta qabili, ja ensimmäiset kirjoitetut qabili-reseptit ovat '
+              + 'vuoden 1521 käsikirjoituksessa Kar-nama, vanhimmassa persiankielisessä '
+              + 'keittokirjassa.',
+          selite: 'Qabeli palaw on juhlaruoka, ja sen arvo mitataan aineksista: pitkä '
+            + 'riisi, tuore porkkana ja hyvä liha.',
+          lahde: 'Chen Zhao, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Nyytit, joita ei tarjota häissä',
+          tiedosto: 'FOOD Mantu.jpg',
+          teksti: 'Afganistanilaisia nyyttejä sanotaan yhteisnimellä khameerbob, ja niitä '
+              + 'harvoin nähdään suurissa juhlissa: ne ovat kotiruokaa, jonka tekeminen vie '
+              + 'aikaa. Mantu höyrytetään sipulin ja jauhelihan täytteellä ja peitetään '
+              + 'tomaattikastikkeella ja jogurtilla, jonka sekaan on hienonnettu valkosipuli '
+              + 'ja halkaistut kikherneet; päälle ripotellaan kuivattua minttua. Aushakin '
+              + 'täyte on purjoa, ja se on Kabulin oma ruoka. Kastikkeessa käytetään usein '
+              + 'qoroot-palloja, jotka tehdään voinkirnuamisen jälkeen jäävästä piimästä '
+              + 'suolaamalla, keittämällä ja puristamalla kovaksi ja hyvin happamaksi '
+              + 'juustoksi.',
+          selite: 'Mantun päälle tuleva jogurttikastike on tarkoituksella hapan, ja se '
+            + 'tasapainottaa täytteen rasvaisuuden.',
+          lahde: 'Grueslayer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maailman kallein mauste kasvaa Heratissa',
+          aika: '2012–2019',
+          tiedosto: 'Afghan Saffron.jpg',
+          teksti: 'Sahrami on painonsa mukaan maailman kallein mauste, ja Afganistanissa se '
+              + 'kasvaa ennen kaikkea Heratin maakunnassa. Maa on sahramin ja kashmirvillan '
+              + 'kolmanneksi suurin tuottaja maailmassa. Kansainvälinen maku- ja '
+              + 'laatuinstituutti valitsi afganistanilaisen sahramin maailman parhaaksi '
+              + 'kahdeksana vuotena peräkkäin 2012–2019, ja vuonna 2019 sato oli ennätykset '
+              + 'rikkovat 19 469 kiloa. Kilo maksaa maan sisällä 634–1 147 dollaria. '
+              + 'Keittiössä sahrami menee palawin riisiin, kastikkeeseen tai koristeisiin, '
+              + 'ja narenj palawissa se saa parikseen appelsiininkuoren.',
+          selite: 'Sahrami on krookuksen luotti, ja yhteen kiloon niitä tarvitaan '
+            + 'satojatuhansia — siksi hinta on se mikä on.',
+          lahde: 'USAID Afghanistan, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Vieras ei istu ilman lasia',
+          tiedosto: 'Afghani Chai.JPG',
+          teksti: 'Teetä juodaan Afganistanissa kaiken aikaa ja erityisesti aterian jälkeen '
+              + 'ja vieraiden kanssa; se on vieraanvaraisuuden ydin. Useimmat juovat '
+              + 'vihreää teetä ilman sokeria, jotkut lisäävät kardemummaa, sahramia tai '
+              + 'sokeripalan. Aamuisin ja juhlapäivinä keitetään sheer chai eli maitotee, '
+              + 'ja Jalalabadin ja Kandaharin kaltaisissa kaupungeissa juodaan myös masala '
+              + 'chaita. Juhlissa teen kanssa tarjotaan nuqlia, sokerikuorrutettuja valkoisia '
+              + 'manteleita. Kesäisin lounaan kaveriksi tulee doogh, kylmä suolainen '
+              + 'hapanmaitojuoma, jossa on minttua ja usein kurkkua — teen jälkeen maan '
+              + 'juoduin juoma.',
+          selite: 'Vihreä tee on Afganistanissa arkijuoma ja maitotee juhlan merkki; '
+            + 'kummankin kanssa tarjotaan jotain makeaa.',
+          lahde: 'Miansari66, Wikimedia Commons (CC0)',
+        },
+      ],
+    },
+  ],
 };

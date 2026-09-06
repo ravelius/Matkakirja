@@ -128,6 +128,10 @@ const SALLITUT = [
   // isäntänimellä. Osoitteessa on kaz-alkuinen alitunnus, koska
   // venäjänkielinen www.nur.kz on eri isäntänimi.
   'https://kaz.nur.kz/',
+  // Afganistanin uutislähde (maalehti 6.9.2026): TOLOnewsin
+  // darinkielinen syöte ja artikkelisivut ovat samalla isäntänimellä,
+  // ilman www-etuliitettä.
+  'https://tolonews.com/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

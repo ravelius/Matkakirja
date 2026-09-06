@@ -126,6 +126,17 @@
 > hylkäyksille ovat js/packs/uutislahteet.js:n KAZ-kommentissa.
 > Julkaisu Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Afganistan):** sallittuihin lisättiin
+> `https://tolonews.com/` (maalehti AFG, testattu 6.9.2026:
+> darinkielisessä syötteessä `https://tolonews.com/fa/rss.xml` on
+> kolmekymmentä juttua, ja artikkelisivun `<article>`-lohkosta jäsentyy
+> 15–23 yli 60 merkin kappaletta sekä `og:image`). Osoitteessa EI ole
+> www-etuliitettä, ja sekä syöte että artikkelilinkit ovat samalla
+> isäntänimellä. Pajhwok (410), Khaama Press (captcha), Ariana News
+> (Sucuri 403) ja 8am.media (tyhjä syöte) hylättiin; perustelut ovat
+> js/packs/uutislahteet.js:n AFG-kommentissa. Julkaisu
+> Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,
