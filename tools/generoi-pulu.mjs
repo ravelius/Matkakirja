@@ -209,15 +209,15 @@ export const TAGIT = {
   'avaus-1': { alku: '[excited]', kohdat: [['Sinähän', '[amused]']] },
   'avaus-2': {
     alku: '[proud]',
-    kohdat: [['Ja tiedän', '[curious]'], ['pöllö luki', '[quickly]']],
+    kohdat: [['Pöllö luki', '[quickly]']],
   },
   'avaus-3': {
     alku: '[warmly]',
-    kohdat: [['vaikka se maanosa', '[excited]'], ['Pallon ympäri', '[amused]']],
+    kohdat: [['vaikka se maanosa', '[excited]']],
   },
   'avaus-4': {
     alku: '[sheepish]',
-    kohdat: [['Ateenasta', '[brightly]'], ['Loput aukeavat', '[reassuring]']],
+    kohdat: [['Ateenasta', '[brightly]']],
   },
   'avaus-5': { alku: '[reassuring]', kohdat: [['Minä olen vain', '[modestly]']] },
   'paljastus-1': {
@@ -225,8 +225,7 @@ export const TAGIT = {
     kohdat: [
       ['Sähke pöllöltä', '[breathless]'],
       ['Ja sitten', '[quickly]'],
-      ['no.', '[sighs]'],
-      ['Minä tuuraan', '[flatly]'],
+      ['Minä tuuraan', '[sighs]'],
     ],
   },
   'paljastus-2': {
@@ -235,7 +234,7 @@ export const TAGIT = {
   },
   'mannerivihje-1': {
     alku: '[casually]',
-    kohdat: [['kerää rahaa', '[helpfully]'], ['Maailma ei lopu', '[amused]']],
+    kohdat: [['kerää rahaa', '[helpfully]']],
   },
 };
 

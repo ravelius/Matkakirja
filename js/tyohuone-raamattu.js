@@ -3376,6 +3376,28 @@ export const RAAMATTU = {
           + 'pelaa linssin lapi selaimessa, kirjaa havainnot ja korjaa '
           + 'ennen kuin omistaja nakee sen. Rakennetaan agenttiparvella '
           + '(aineisto, moottori, kuvat, musiikki), Fable tarkistaa tekstit.',
+        'PULU PUHUU: OMA AANI, LYHYET REPLIIKIT, TEHOSTEET (omistaja 6.9.2026 '
+          + 'aamupaiva, sanatarkasti: "Pululle taytyy etsia eleveniltä oma aani '
+          + 'joka vahan kahea ja nopea puhumaan. Generoidaan kaikki valmiiksi '
+          + 'kirjoitetut repliikit puheeksi. Pidetaan vain huoli etta ne ovat '
+          + 'mahdollisimman lyhyita." — "Voidaan kayttaa myos pulun aaneen '
+          + 'efekteja (kaiku alussa kun tulee ja aloittaa jo huutelemaan viestia '
+          + 'ennenkuin on edes ehtinyt kokonaan perille). Kaiku voidaan sitten '
+          + 'feidata pois kun pulu perilla ja nostaa aanitasoa hieman." — '
+          + '"Tehdaan pulusta hyvin vokaalinen ja elava vastakohta kertojan '
+          + 'monotoonisuuteen. Paljon elavoitystageja elevenin generointiin." — '
+          + '"Pululle ja muuallekin tarvitaan aaniefekteja: linnun siivet '
+          + 'lentaessa, tomahdyksia, hassuja tayteaania, oven lamahdys, '
+          + 'viuhahdusefekteja. Naita ei generoida."): Livian repliikit luetaan '
+          + 'omalla ElevenLabs-aanella (kahea, nopea; valinta kuuntelemalla '
+          + 'generoi-pulu.yml aanet-listasta), eleven_v3 ja runsaat tagit, '
+          + 'saapumisrepliikeissa kaiku joka haipyy perilla; repliikit lyhennetty '
+          + 'noin 85 merkkiin ja kupla odottaa puheen loppuun. Tama KUMOAA '
+          + 'pulun osalta 25.8.2026 rivin "POLLON repliikkeja EI lueta" '
+          + '(pollo pysyy lukemattomana). Tehosteet haetaan Freesoundista '
+          + '(CC0, CC BY attribuutiolla), ei generoida: aanihaku.yml '
+          + 'pulu-tehosteet, manifesti aanet/tehosteet/pulu/. Ohje '
+          + 'docs/moduulit/livia-aani.md ja aanet.md.',
         'ISOISAN VAALEAT KUVAT REITILLA JA ATEENAN LENNOLLA (omistaja 6.9.2026 '
           + 'aamupaiva, sanatarkasti: "Kayta Ateena lennossa mahdollisimman vaalea '
           + 'isoisan kuvaa. Etusivulla kuvat voisivat tulla pienella kartalle '
@@ -4930,6 +4952,8 @@ export const RAAMATTU = {
         'docs/moduulit/karttanostot-kattavuus.md — karttanostojen kattavuus '
           + 'maittain (kohteet, maastokohteet, eläintäyt, skandaalit, hetket) '
           + 'ja tavoite per maa; täytetään koneellisesti erissä.',
+        'docs/moduulit/livia-aani.md — pulun ääni: ElevenLabs-resepti, tagit, '
+          + 'kaiku, manifesti ja repliikkien pituusraja.',
         'docs/moduulit/aanet.md — siirtymämusiikki ja äänet: raitojen '
           + 'tuotanto-ohje (kesto, looppisauma, -33 LUFS, vienti).',
         'docs/moduulit/viitekuvat.md — viitekuvallinen herogenerointi: '

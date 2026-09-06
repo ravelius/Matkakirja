@@ -123,20 +123,19 @@ export function soitaLivianTehoste(laji) {
  */
 export const LIVIAN_AVAUS = [
   'Hei, odotas kaveri. Sinähän olet ihan hiessä.',
-  'Minä olen Livia. Ja tiedän sinusta enemmän kuin arvaat — pöllö luki '
-    + 'isoisäsi kirjan, ja minä kannoin ne sähkeet.',
-  'Valitse rauhassa mistä aloitat — vaikka se maanosa, joka kutkuttaa '
-    + 'eniten. Pallon ympäri sinä kierrät joka tapauksessa.',
-  'Ai niin, ja anteeksi valikoima: pöllö on ehtinyt tarkistaa vasta yhden '
-    + 'reitin. Ateenasta se alkaa. Loput aukeavat kyllä.',
+  // LYHENNETTY 6.9.2026 (omistaja: repliikit "mahdollisimman lyhyita",
+  // puhe ~14 merkkiä/s, katto ~85 merkkiä): sama sisältö, vähemmän sanoja.
+  'Minä olen Livia. Pöllö luki isoisäsi kirjan, ja minä kannoin ne sähkeet.',
+  'Valitse rauhassa mistä aloitat — vaikka se maanosa, joka kutkuttaa eniten.',
+  'Ai niin, ja anteeksi valikoima: pöllö on tarkistanut vasta yhden reitin. '
+    + 'Ateenasta se alkaa.',
   /*
    * OPASLUPAUS (omistaja 29.8.2026): avaus lupaa pöllön oppaaksi ja
    * Livian pelkäksi viestinviejäksi. Lupaus on dramaturgian toinen
    * puoli — perillä selviää, että Livia joutuukin tuuraamaan
    * (livianPaljastus). Älä muuta kumpaakaan erikseen.
    */
-  'Perillä sinua odottaa Viisas Pöllö — se näistä hommista tietää. Minä '
-    + 'olen vain viestinviejä.',
+  'Perillä sinua odottaa Viisas Pöllö. Minä olen vain viestinviejä.',
 ];
 
 /**
@@ -167,9 +166,12 @@ export const LIVIAN_AVAUKSEN_VIIVE_MS = 1500;
 const KUPLIEN_VALI = 280;
 
 /** Lukuaika merkkiä kohden ja sen rajat. */
-const LUKUAIKA_PER_MERKKI = 58;
-const LUKUAIKA_VAHINTAAN = 2800;
-const LUKUAIKA_ENINTAAN = 8200;
+// 6.9.2026: kupla ei saa sulkeutua ennen kuin pulun puhe on ohi. Puhe
+// kulkee noin 14 merkkiä sekunnissa (tools/generoi-pulu.mjs), joten
+// kuplan aika on 78 ms/merkki (≈ 13 merkkiä/s) + hengähdys; ennen 58.
+const LUKUAIKA_PER_MERKKI = 78;
+const LUKUAIKA_VAHINTAAN = 3200;
+const LUKUAIKA_ENINTAAN = 9500;
 
 /** Sarjan tila: yksi kerrallaan, ja ajastin peruttavissa. */
 let avausKesken = false;
@@ -366,12 +368,12 @@ export function livianPaljastus({ maahan = '', paikassa = '' } = {}) {
   const tervetuloa = maahan ? ` Siinä lukee: "Tervetuloa ${maahan}."` : '';
   const tehtava = paikassa ? `ratkaise tehtävä ${paikassa}` : 'ratkaise kaupungin tehtävä';
   return [
+    // LYHENNETTY 6.9.2026 (omistaja: "mahdollisimman lyhyita").
     `Kaak. Sähke pöllöltä.${tervetuloa} Ja sitten: pöllö on juuttunut `
-      + 'matkoilleen. Hetkenä minä hyvänsä se ehtii, mutta juuri nyt — no. '
-      + 'Minä tuuraan.',
-    'Ei hätää. Olen kantanut sen sähkeet vuosia ja lukenut joka ikisen. '
-      + `Melkein joka ikisen. Tämän loppu kuuluu: ${tehtava} ennen kuin `
-      + 'lähdet aarteelle — napauta kaupungin kultaista merkkiä kartalla.',
+      + 'matkoilleen. Minä tuuraan.',
+    'Ei hätää. Olen lukenut sen sähkeet vuosia. Melkein joka ikisen. '
+      + `Tämän loppu kuuluu: ${tehtava} — napauta kaupungin kultaista `
+      + 'merkkiä kartalla.',
   ];
 }
 
@@ -537,8 +539,7 @@ function paljastusRepliikki(ui, cityId, i, jalkeen, repliikit = LIVIAN_PALJASTUS
 
 /** Mannerivihjeen repliikki — KAANONIA (päätoimittaja 29.8.2026). */
 export const MANNERIVIHJE = 'Kuule — jos tämä maa alkaa tuntua pitkältä, '
-  + 'kerää rahaa lentoon. Isosta kaupungista pääsee vaikka toiselle '
-  + 'mantereelle. Maailma ei lopu kesken.';
+  + 'kerää rahaa lentoon. Isosta kaupungista pääsee toiselle mantereelle.';
 
 /**
  * Rahaportti (omistaja 29.8.2026: "rahaa vähintään mannerylityksen
