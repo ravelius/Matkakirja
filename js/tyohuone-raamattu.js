@@ -5041,6 +5041,12 @@ export const RAAMATTU = {
           + 'linssiä seitsemässä ryhmässä, tila per linssi, monistettava '
           + 'malli ja järjestys; elävä työlista, jonka Fable päivittää '
           + 'omistajan valintojen mukaan).',
+        'docs/moduulit/ihmisen-matka-virrat.md — Ihmisen matka '
+          + 'varivirtoina: nelja virtaa, ylitykset ja portit, 0,5 asteen '
+          + 'maamaski ja saapumisajan laskenta, canvas-kalvo pallolla, '
+          + 'virtaa seuraava kamera, mitattu suorituskyky, vaiheistus ja '
+          + 'avoimet kysymykset omistajalle (Fablemax 6.9.2026; SUUNNITELMA, '
+          + 'odottaa omistajan vastauksia ennen toteutusta).',
         'docs/moduulit/karttanostot-kattavuus.md — karttanostojen kattavuus '
           + 'maittain (kohteet, maastokohteet, eläintäyt, skandaalit, hetket) '
           + 'ja tavoite per maa; täytetään koneellisesti erissä.',
