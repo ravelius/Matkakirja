@@ -882,4 +882,28 @@ export const UUTISLAHTEET = {
     kieli: 'en',
     syote: 'https://www.liberianobserver.com/search/?f=rss&t=article&l=50',
   },
+  /*
+   * Malijet on bamakolainen ranskankielinen uutissivusto ja yksi maan
+   * luetuimmista. Testattu 6.9.2026: syötteessä viisikymmentä juttua,
+   * ja artikkelisivun ENSIMMÄISESTÄ <article>-lohkosta (niitä on kuusi)
+   * jäsentyy kahdesta kolmeen yli 60 merkin kappaletta sekä og:image.
+   *
+   * SYÖTTEEN OSOITE ON /rss EIKÄ /feed: malijet.com/feed vastaa
+   * 301:llä, eikä worker seuraa uudelleenohjauksia. Isäntänimessä ei
+   * ole www:tä, ja artikkelilinkit tulevat samasta isäntänimestä.
+   *
+   * Testattu ja hylätty: maliweb.net (maan luetuin, mutta /feed vastaa
+   * 403:lla botti-estosta), L'Essor ja ORTM (ei toimivaa
+   * RSS-osoitetta). Studio Tamani (studiotamani.org/feed, kymmenen
+   * juttua) ja Journal du Mali (journaldumali.com/feed/, kymmenen
+   * juttua) läpäisivät molemmat testit ja kelpaavat varalähteiksi;
+   * Malijet valittiin, koska sen syöte on selvästi laajin. Mali Actu
+   * (maliactu.net/feed/) aukeaa myös, mutta syötteessä on paljon
+   * urheilu- ja viihdeaineistoa muualta maailmasta.
+   */
+  MLI: {
+    nimi: 'Malijet',
+    kieli: 'fr',
+    syote: 'https://malijet.com/rss',
+  },
 };

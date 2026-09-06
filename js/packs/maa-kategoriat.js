@@ -46511,4 +46511,450 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MALI (MLI) — Länsi-Afrikan maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-mali.md; kaikki
+   * luvut, nimet ja päiväykset tarkistettu en-Wikipedian raakatekstistä
+   * 6.9.2026.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA: maastokohteet-mli.js kattaa jo
+   * Hombori Tondon, Nigerin, Senegaljoen, Djennén moskeijan, Dogonmaan
+   * (Bandiagara), Askian haudan, Ségoun, Baoulén mutkan, Médinen
+   * linnakkeen, Sikasson tatan ja Bamakon; skandaalit.js Timbuktun
+   * käsikirjoitukset ja Office du Nigerin; elaintakyt.js Gourman
+   * aavikkonorsut. Maalehti EI toista niitä: historiaosiossa ei ole
+   * 1800-luvun linnoituksia eikä Mungo Parkia, luonto-osiota ei ole
+   * lainkaan (kartta kantaa maan luonnon), eikä Timbuktun
+   * käsikirjoituksista puhuta — Mansa Musan nosto päättyy siihen, että
+   * kaupungista tuli oppikaupunki, ja jatko on skandaalikortilla.
+   * Timbuktussa ja Gaossa ei ole omaa kaupunkilehteä
+   * (KULTTUURI_KATEGORIAT), joten kaupunkitason päällekkäisyyttä ei ole.
+   *
+   * HERKÄT AIHEET: nykypolitiikka ja käynnissä olevat selkkaukset on
+   * jätetty kokonaan pois (M3:n Myanmar-linja). Mansa Musan saattueen
+   * orjat mainitaan yhdellä lauseella osana lähdekritiikkiä, ei
+   * väritettynä yksityiskohtana; Taoudennin vankila (1969–1988) on
+   * jätetty pois suolanostosta, koska se on maan sisäpolitiikkaa.
+   * Salif Keïtan albinismi kerrotaan hänen omasta työstään käsin.
+   *
+   * KUVAT: 17 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin. KOLME NOSTOA JÄI
+   * KUVATTOMAKSI (Kurukan Fuga, Seydou Keïta ja alle 17-vuotiaiden
+   * jalkapallo): Commonsista ei löytynyt kelvollista kuvaa ilman
+   * tunnistettavia kasvoja, vesileimaa tai mainoslogoa. Ne on kirjattu
+   * kuvaputkelle raportissa.
+   */
+  MLI: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Nigerin suuri mutka kaartaa Saharan reunaan ja kääntyy takaisin '
+          + 'etelään. Sen varrella nousi kolme suurvaltakuntaa peräkkäin, ja ne '
+          + 'kaikki elivät samasta vaihdosta: etelän kullasta ja pohjoisen suolasta.',
+      nostot: [
+        {
+          otsikko: 'Poika, joka ei kävellyt, ja valtakunta',
+          aika: 'n. 1235',
+          tiedosto: 'Balafoon.jpg',
+          teksti: 'Malin valtakunnan perustajasta Sundiata Keitasta kerrotaan yhä '
+              + 'samaa tarinaa, jota jelit eli griotit ovat toistaneet sukupolvesta '
+              + 'toiseen. Sundiata ei lapsena kävellyt, ja hänen äitiään pilkattiin '
+              + 'siitä; poika harjoitteli itsensä jaloilleen ja joutui silti '
+              + 'pakenemaan maanpakoon velipuolensa uhkausten takia. Kun Sosson '
+              + 'kuningas Soumaoro '
+              + 'Kanté valloitti mandinkojen maat, Sundiata haettiin takaisin, ja '
+              + 'noin vuonna 1235 hän voitti Soumaoron Kirinan taistelussa. '
+              + 'Soumaoron kerrotaan keksineen balafonin, ja Sundiata otti soittimen '
+              + 'itselleen ja antoi sen griotilleen Bala Faséké Kouyatélle — suku '
+              + 'vartioi sitä yhä Niagassolan kylässä nykyisen Guinean puolella.',
+          selite: 'Balafonin puukoskettimien alla riippuu kalebasseja, jotka '
+            + 'vahvistavat äänen. Alkuperäisenä pidetty Sosso-Bala otettiin '
+            + 'Unescon suojelemien mestariteosten listalle 2001.',
+          lahde: 'Redmedea, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Perustuslaki, joka opeteltiin ulkoa',
+          aika: 'n. 1236',
+          teksti: 'Kirinan jälkeen klaanien johtajat kokoontuivat Kurukan Fugan '
+              + 'tasangolle sopimaan, miten uutta valtakuntaa hallitaan. Sopimusta '
+              + 'ei kirjoitettu vaan opeteltiin ulkoa: jelit kantoivat sitä '
+              + 'suullisena vuosisatoja. Suureen Gbara-neuvostoon istutettiin '
+              + 'kuusitoista sotilasklaania, neljä uskonoppineiden sukua, neljä '
+              + 'käsityöläiskastia ja neljä laulajasukua. Yksi pykälä vaatii naisten '
+              + 'edustusta hallinnon kaikilla tasoilla, toinen tekee leikkisästä '
+              + 'sukulaisuudesta kansalaisvelvollisuuden: tietyt sukunimet saavat '
+              + 'aina piikitellä toisiaan eikä siitä loukkaannuta. Nykyinen 44 '
+              + 'pykälän teksti koottiin vasta 1998 kymmenen jelin muistista.',
+          selite: 'Manden peruskirja on Unescon aineettoman kulttuuriperinnön '
+            + 'luettelossa vuodesta 2009. Kokouspaikaksi esitetään Kangabaa tai '
+            + 'sen naapurissa olevaa Dakajalania.',
+        },
+        {
+          otsikko: 'Pyhiinvaellus, joka painoi kullan hinnan alas',
+          aika: '1324',
+          tiedosto: 'Catalan Atlas BNF Sheet 6 Mansa Musa (cropped).jpg',
+          teksti: 'Mansa Musa lähti 1324 pyhiinvaellukselle Mekkaan ja pysähtyi '
+              + 'matkalla Kairoon kolmeksi kuukaudeksi. Arabiankieliset kronikat '
+              + 'kertovat saattueesta, jossa kulki tuhansia ihmisiä — suuri osa '
+              + 'heistä orjia — ja kymmeniä kultaa kantavia kameleita; nykyhistorian '
+              + 'tutkijat pitävät lukuja pikemmin kertomataiteena kuin laskelmana. '
+              + 'Yhdestä asiasta lähteet ovat yhtä mieltä: Musa jakoi kultaa niin '
+              + 'auliisti, että sen arvo laski Egyptissä vuosiksi. Paluumatkalla '
+              + 'rahat loppuivat ja mansan oli lainattava kairolaisilta kauppiailta. '
+              + 'Mukaan Maliin lähti oppineita, ja Timbuktu merkittiin '
+              + 'eurooppalaisiin karttoihin.',
+          selite: 'Katalonialainen atlas vuodelta 1375 kuvaa Mansa Musan '
+            + 'valtaistuimella kultamöhkäle kädessä — näin Malin hallitsija '
+            + 'piirrettiin Euroopassa viisikymmentä vuotta pyhiinvaelluksen jälkeen.',
+          lahde: 'Abraham Cresques, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kaksi tuntia, ja Songhai oli mennyttä',
+          aika: '1591',
+          tiedosto: 'La plus grande Mosquée de la ville de Tombouctou.jpg',
+          teksti: 'Songhain valtakunta hallitsi 1500-luvulla Nigerin mutkaa Gaosta '
+              + 'käsin. Marokon sulttaani Ahmad al-Mansur uskoi sen rikkauden '
+              + 'tulevan kultakaivoksista ja lähetti 1590 armeijan aavikon yli: '
+              + '1 500 ratsumiestä, 2 500 jalkamiestä, kahdeksan tykkiä ja 8 000 '
+              + 'kamelia. Johtajana oli Judar Pasha, lapsena vangiksi jäänyt '
+              + 'espanjalainen. Tondibissa Gaon pohjoispuolella 13. maaliskuuta 1591 '
+              + 'songhailaisia oli moninkertaisesti enemmän, ja he ajoivat tuhat '
+              + 'nautaa marokkolaisten linjoja päin. Tykkien pauke käänsi lauman '
+              + 'takaisin omiin riveihin, ja taistelu oli ohi kahdessa tunnissa.',
+          selite: 'Timbuktun Djingareyberin savimoskeija on vuodelta 1327. '
+            + 'Marokkolaiset ryöstivät kaupungin 1591, mutta moskeija seisoo yhä '
+            + 'ja on ollut Unescon maailmanperintökohde vuodesta 1988.',
+          lahde: 'Ousmane Garba Kounta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Malissa ateria on vilja ja kastike, ja kastike ratkaisee kaiken. '
+          + 'Perusaineet kasvavat lähellä — hirssi, riisi, maapähkinä — mutta suola '
+          + 'on aina jouduttu hakemaan aavikon takaa.',
+      nostot: [
+        {
+          otsikko: 'Kylä, jonka talot muurattiin suolasta',
+          aika: '1352–',
+          tiedosto: 'ASC Leiden - van Achterberg Collection - 04 - 26 - Plaques de sel allongées et debout au marché du sel - Mopti, Mali - Novembre-décembre 1993.jpg',
+          teksti: 'Sahara on Malin suolakaivos. Taghazassa suolaa oli niin paljon, '
+              + 'että kylän talot ja moskeija muurattiin suolalaatoista ja katot '
+              + 'tehtiin kamelinnahasta; Ibn Battuta yöpyi siellä 1352, valitti '
+              + 'kärpäsiä ja suolaista vettä ja kirjasi silti, että kurjassa '
+              + 'kylässä liikkui kultapölyä sentnereittäin. Kun Taghaza tyhjeni, '
+              + 'työ siirtyi Taoudenniin lähemmäs Timbuktua. Siellä miehet kaivavat '
+              + 'kirveillä viiden metrin kuoppia ja irrottavat kolmesta '
+              + 'suolakerroksesta laattoja: 110 senttiä pitkiä, 45 leveitä, viisi '
+              + 'paksuja, noin kolmekymmentä kiloa. Kameli kantaa neljä.',
+          selite: 'Taoudennin laattoja Moptin suolatorilla 1993. Timbuktuun '
+            + 'saapunut suola jatkaa veneellä Nigeriä pitkin muualle Saheliin.',
+          lahde: 'Angeline A. van Achterberg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kansallisruoan nimi on koko resepti',
+          tiedosto: 'Mafé au bœuf dans un restaurant africain à Lyon (2019).jpg',
+          teksti: 'Malin kansallisruoka on tigadegena, ja nimi kertoo reseptin: '
+              + 'bambaraksi tiga on maapähkinä, dege tahna ja na kastike. '
+              + 'Maapähkinätahna sulatetaan liemeen lihan, tomaatin ja sipulin '
+              + 'kanssa, ja kastike hautuu paksuksi. Pataan menee sitä mitä on: '
+              + 'kaalia, porkkanaa, bataattia, okraa. Vieressä on riisiä tai '
+              + 'hirssitaikinaa, jota sanotaan nimellä to, pohjoisessa '
+              + 'fonio-suurimoita. Naapurimaassa Senegalissa lähes sama kastike '
+              + 'tunnetaan nimellä mafé, ja siitä kummalle se kuuluu käydään '
+              + 'jatkuvaa keskustelua — mandinkojen ja bambarojen keittiö on ollut '
+              + 'yhtä kauan molemmin puolin rajaa.',
+          selite: 'Maapähkinäkastiketta naudanlihalla länsiafrikkalaisessa '
+            + 'ravintolassa Lyonissa. Kastike hautuu, kunnes maapähkinä on '
+            + 'sulanut kokonaan liemeen.',
+          lahde: 'Sebleouf, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Pienin jyvä kypsyy kuudessa viikossa',
+          tiedosto: 'Threshing fonio.jpg',
+          teksti: 'Fonio on hirssien pikkuveli: sen jyvä on kaikista hirssilajeista '
+              + 'pienin, ja kasvi ehtii siemenestä sadoksi kuudessa tai '
+              + 'kahdeksassa viikossa. Juuri ulottuu yli metrin syvyyteen, joten '
+              + 'fonio kestää kuivuutta ja karua maata siellä, missä muu vilja '
+              + 'epäonnistuu. Eurooppalaiset antoivat sille nimen hungry rice, '
+              + 'nälkäriisi, ja pitkään sitä pidettiin köyhän viljana. Nyt fonio on '
+              + 'Länsi-Afrikan kaupungeissa muotia: se on gluteeniton ja '
+              + 'kuitupitoinen, ja siitä tehdään puuroa, couscousia, leipää ja '
+              + 'olutta. Maailman fonio-sadosta yli kolme neljäsosaa tulee '
+              + 'naapurimaasta Guineasta.',
+          selite: 'Fonion puintia: varsikimput lyödään puuta vasten, jotta '
+            + 'pienet jyvät irtoavat tähkistä.',
+          lahde: 'James Courtright, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Puu, joka maustaa koko Sahelin',
+          tiedosto: 'Fleur de néeré.jpg',
+          teksti: 'Nérépuun eli afrikkalaisen johanneksenleipäpuun palossa on '
+              + 'kahdenlaista ruokaa. Keltainen hedelmäliha on makeaa ja siitä '
+              + 'tehdään juomia; siemenistä syntyy Sahelin tärkein mauste. Siemenet '
+              + 'keitetään, kuoritaan ja jätetään hapantumaan, kunnes ne muuttuvat '
+              + 'mustiksi ja voimakkaan hajuisiksi, ja massa puristetaan palloiksi '
+              + 'tai kakuiksi. Nigerin sisämaasuistossa mauste on nimeltään '
+              + 'sunbala, muualla soumbala, dawadawa tai iru. Siemenissä on '
+              + 'kolmasosa valkuaista ja lähes kolmasosa rasvaa, ja hapatetun '
+              + 'mausteen kauppa on lähes kokonaan naisten käsissä. Käyttö on '
+              + 'kirjattu Länsi-Afrikassa jo 1300-luvulla.',
+          selite: 'Nérépuun kukinto on punainen pallo pitkän varren päässä. '
+            + 'Siitä kehittyy palko, jonka siemenistä mauste hapatetaan.',
+          lahde: 'Masséni Héma, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Taghazan aavikkokylän talot muurattiin?',
+        vaihtoehdot: [
+          'Savitiilistä',
+          'Kamelinnahasta',
+          'Suolalaatoista',
+          'Vuolukivestä',
+        ],
+        oikea: 2,
+        fakta: 'Ibn Battuta kirjasi 1352, ettei kylässä ollut muuta rakennusainetta '
+            + 'kuin suola — katot tehtiin kamelinnahasta.',
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Malissa kuvataide on käyttötaidetta: kangas, jota pidetään yllä, '
+          + 'veistos, jota tanssitaan, ja valokuva, joka otetaan lähetettäväksi '
+          + 'sukulaisille.',
+      nostot: [
+        {
+          otsikko: 'Antilooppi, jota tanssitaan',
+          tiedosto: 'Danse Ciwara.JPG',
+          teksti: 'Bamanoiden kylissä kylvön ja sadonkorjuun juhlissa tanssitaan '
+              + 'kaksin: puinen antilooppipää sidotaan korilla tanssijan päälaelle, '
+              + 'ja loput ruumiista katoaa raffiakuitujen alle. Hahmot esiintyvät '
+              + 'aina pareittain, uros ja naaras, ja naaraan selässä on '
+              + 'antiloopinvasa. Kertomuksen mukaan puoliksi antilooppi, puoliksi '
+              + 'ihminen ollut Chi Wara opetti ihmiset viljelemään. Veistoksen '
+              + 'korkeat sarvet jäljittelevät hirssin korsia, siksak-kuvio auringon '
+              + 'kulkua ja lyhyet jalat maasikaa, joka kaivaa maata kuin '
+              + 'viljelijä. Chiwara-yhdistys on ainoa '
+              + 'suuri bamanaseura, jossa on sekä miehiä että naisia — pellolla '
+              + 'tarvitaan molempia.',
+          selite: 'Chiwara-tanssijoita esityksessä Bamakossa 2010. Kasvot jäävät '
+            + 'raffian alle: katsojan kuuluu nähdä antilooppi, ei tanssijaa.',
+          lahde: 'Alexandre Magot, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kangas, joka värjätään mudalla',
+          tiedosto: 'BogolanMali2.JPG',
+          teksti: 'Bogolanfinin nimi on työohje: bambaraksi bogo on savi, lan '
+              + 'välinettä ja fini kangasta. Miehet kutovat viidentoista sentin '
+              + 'kaistaleita ja ompelevat niistä kankaan, naiset värjäävät sen. '
+              + 'Kangas kastetaan ensin n\'gallama-puun lehtiliemeen, jolloin siitä '
+              + 'tulee keltainen, ja kuvio maalataan päälle savella, joka on '
+              + 'hapantunut saviruukussa jopa vuoden. Saven rauta reagoi lehtiväriin '
+              + 'ja jää mustaksi; lopuksi keltainen pestään pois. Metsästäjä käyttää '
+              + 'bogolania suojaväritykseen ja arvomerkkinä, ja kuviot kertovat '
+              + 'sananlaskuja, krokotiileja ja vanhoja taisteluita.',
+          selite: 'Bogolan-kangas bambarakylässä Moptin lähellä. Jokainen kolmio '
+            + 'ja ympyrä on maalattu käsin, ja valkoiseksi jäänyt osa on se, '
+            + 'josta väri on pesty pois.',
+          lahde: 'BluesyPete, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Studioon tultiin parhaissa vaatteissa',
+          aika: '1948–1963',
+          teksti: 'Seydou Keïta sai 1935 sedältään Kodak Brownien, jossa oli filmi '
+              + 'kahdeksalle kuvalle. Vuonna 1948 hän avasi Bamako-Kouraan '
+              + 'vankilan taakse studion, josta tuli kaupungin muotokuvien tehdas. '
+              + 'Asiakkaalle näytettiin aiempia kuvia, hän valitsi asennon, ja '
+              + 'Keïta korjasi sen paremmaksi — omien sanojensa mukaan hän ei '
+              + 'erehtynyt kertaakaan. Taustakankaat olivat voimakkaasti kuvioituja, '
+              + 'ja koska rekvisiitta vaihdettiin muutaman vuoden välein, kuvien '
+              + 'järjestys on voitu päätellä jälkeenpäin. Negatiiveja säilyi '
+              + 'tuhansia, mutta asiakkaiden nimiä hän ei kirjannut. Vasta 1991 '
+              + 'kuvat päätyivät New Yorkiin — aluksi ilman tekijän nimeä.',
+          selite: 'Keïta lopetti valokuvauksen 1977, kun värikuvasta tuli '
+            + 'yleistä. Hän kuoli Pariisissa 2001, kymmenen vuotta sen jälkeen kun '
+            + 'hänen työnsä oli löydetty maailmalla.',
+        },
+        {
+          otsikko: 'Bamakon silmä',
+          aika: '1957–1976',
+          tiedosto: 'Malick Sidibe\'s studio.jpg',
+          teksti: 'Malick Sidibé oli fulanikarjankasvattajan poika Soloban kylästä, '
+              + 'ja hän päätyi 1955 koristelemaan bamakolaisen valokuvaajan '
+              + 'studiota — ja jäi oppipojaksi. Vuodesta 1957 hän kiersi öisin '
+              + 'kaupungin juhlia kamera kaulassa: tanssiaisia, rantabileitä, '
+              + 'klubi-iltoja ja nuoria, jotka olivat juuri saaneet itsenäisen maan. '
+              + 'Sidibén mukaan musiikki vapautti heidät: ensimmäistä kertaa nuori '
+              + 'mies sai pitää tyttöä kädestä, ja kaikki halusivat kuvan tanssista. '
+              + 'Vuonna 2007 hän sai Venetsian biennaalin Kultaisen leijonan '
+              + 'elämäntyöstä ensimmäisenä valokuvaajana ja ensimmäisenä '
+              + 'afrikkalaisena.',
+          selite: 'Sidibén studio Bamakossa 2004: hyllyt täynnä numeroituja '
+            + 'negatiivikoteloita ja korjattavaksi tuotuja kameroita.',
+          lahde: 'Robin Taylor, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Malin musiikilla on kaksi juurta: jelien eli griottien perimätieto, '
+          + 'jota on laulettu 1200-luvulta asti, ja Nigerin varren kylät, joissa '
+          + 'kitara alkoi soida kuin vanha yksikielinen soitin.',
+      nostot: [
+        {
+          otsikko: 'Kaksikymmentäyksi kieltä, seitsemänkymmentä sukupolvea',
+          tiedosto: 'Toumani Diabate and His Kora (16694631450).jpg',
+          teksti: 'Kora rakennetaan puolikkaasta kurpitsasta: kalebassin päälle '
+              + 'pingotetaan lehmännahka ja siihen työnnetään pitkä kova puuvarsi. '
+              + 'Kaksikymmentäyksi kieltä — ennen nahkasuikaleita, nykyään siimaa — '
+              + 'kulkevat kahdessa rivissä pystyssä olevan tallan yli. Soittaja '
+              + 'pitää yllä toistuvaa kumbengo-kuviota ja improvisoi samaan aikaan '
+              + 'birimintingo-juoksutuksia, ja soitin viritetään siirtämällä '
+              + 'nahkarenkaita varren päällä. Koraa soittavat jeli-suvut, joiden '
+              + 'tehtävä on muistaa historia: Toumani Diabatén suvussa laskettiin '
+              + 'seitsemänkymmentä muusikkopolvea peräkkäin, ja hänen isänsä Sidiki '
+              + 'levytti 1970 maailman ensimmäisen kora-albumin.',
+          selite: 'Toumani Diabaté (1965–2024) soittamassa koraa. Kalebassikaiku '
+            + 'lepää soittajan sylissä, ja molemmat kädet yltävät omaan '
+            + 'kielirivistöönsä.',
+          lahde: 'Michael Coghlan, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Ääni, jota ei olisi saanut kuulua',
+          aika: '1967–',
+          tiedosto: 'Salif Keita at Womad 2010 - Charton Park.jpg',
+          teksti: 'Salif Keïta syntyi 1949 Djolibassa Keitan hallitsijasukuun, joka '
+              + 'johtaa juurensa Sundiata Keitaan. Albinismin takia häntä pidettiin '
+              + 'huonona enteenä ja hänet suljettiin yhteisön ulkopuolelle; '
+              + 'aatelisen ei myöskään sopinut soittaa, sillä musiikki oli jelien '
+              + 'työtä. Hän rikkoi molempia sääntöjä: muutti 1967 Bamakoon ja pääsi '
+              + 'laulajaksi Rail Bandiin, valtion perustamaan orkesteriin, joka '
+              + 'soitti rautatieaseman hotellin ravintolassa. Äänestä tuli niin '
+              + 'kuuluisa, että Keïtaa alettiin kutsua Afrikan kultaiseksi ääneksi. '
+              + 'Levy La Différence (2009) on omistettu albiinojen oikeuksille: sen '
+              + 'sanoissa erilaisuus ei ole vika vaan kauneutta.',
+          selite: 'Salif Keïta esiintymässä Womad-festivaalilla Englannissa 2010. '
+            + 'Hänen jälkeensä Rail Bandin laulajaksi tuli Mory Kanté.',
+          lahde: 'Barnay, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kitaristi, joka kielsi soittavansa bluesia',
+          aika: '1939–2006',
+          tiedosto: 'Ali Farka Toure.jpg',
+          teksti: 'Ali Farka Tourélle annettiin lisänimi Farka, aasi: hän oli '
+              + 'äitinsä kymmenes poika ja ainoa, joka eli vauvaikää pidemmälle, ja '
+              + 'nimen piti tuoda sitkeyttä. "Minä olen se aasi, jonka selkään '
+              + 'kukaan ei nouse", hän '
+              + 'sanoi. Muusikoksi ei ollut lupaa — soittaminen kuului jeleille — '
+              + 'joten poika rakensi peltipurkista yksikielisen soittimen ja soitti '
+              + 'salaa. Ensimmäisen kitaransa hän osti Bulgarian-matkalla, ja '
+              + 'siellä hän kuuli ensi kerran John Lee Hookerin: mistä he ovat '
+              + 'tämän kulttuurin saaneet, tämähän kuuluu meille. Länsimaissa häntä '
+              + 'kutsuttiin Afrikan bluesmieheksi, mitä hän ei hyväksynyt: "Blues '
+              + 'on pesujauhemerkki, minun musiikkini on bluesia vanhempaa."',
+          selite: 'Ali Farka Touré esiintymässä 2005. Kotikylässään Niafunkéssa, '
+            + 'jonka pormestariksi hänet valittiin 2004, hän kunnosti tiet ja '
+            + 'maksoi generaattorin polttoaineen omista rahoistaan.',
+          lahde: 'Tagles, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Viisivuotias stadionin lavalla',
+          aika: '1989–',
+          tiedosto: 'Oumou Sangaré (3785248191).jpg',
+          teksti: 'Oumou Sangaré lauloi ensimmäisen kerran suurelle yleisölle '
+              + 'viisivuotiaana: hän voitti bamakolaisten lastentarhojen '
+              + 'laulukilpailun ja esiintyi Omnisportin stadionilla tuhansille. Isä '
+              + 'oli lähtenyt toisen vaimon kanssa Norsunluurannikolle, ja tyttö '
+              + 'lauloi kaduilla auttaakseen äitiään; koulu jäi kesken. '
+              + 'Kuusitoistavuotiaana hän kiersi Euroopan lyömäsoitinryhmän mukana '
+              + 'ja palasi perustamaan oman yhtyeensä. Ensilevy Moussoulou, naiset, '
+              + 'myi 1989 yli kaksisataatuhatta kappaletta. Sen laulut kertovat '
+              + 'naisen asemasta ja oikeudesta valita puolisonsa itse, ja ne tulevat '
+              + 'Wassouloun seudulta, jossa säestäjänä on kalebassi.',
+          selite: 'Oumou Sangaré esiintymässä Cambridgen kansanmusiikkifestivaalilla '
+            + '2009. Wassouloun laulua kutsutaan Malissa myös metsästäjien '
+            + 'musiikin perilliseksi.',
+          lahde: 'Bryan Ledgard, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'urheilu',
+      nimi: 'Urheilu',
+      johdanto: 'Jalkapallo on Malin kansallisurheilu, mutta suurimmat mitalit ovat '
+          + 'tulleet nuorilta ja naisilta.',
+      nostot: [
+        {
+          otsikko: 'Musta pantteri Saint-Étiennessä',
+          aika: '1967–1972',
+          tiedosto: 'Het elftal van St. Étienne, Bestanddeelnr 921-5880.jpg',
+          teksti: 'Salif Keïta Traoré lähti 1967 kaksikymmentävuotiaana Bamakosta '
+              + 'Saint-Étienneen ja voitti siellä kolme Ranskan mestaruutta '
+              + 'peräkkäin. Kaudella 1970–71 hän teki liigassa 42 maalia, ja 1970 '
+              + 'hänet valittiin ensimmäisenä pelaajana koskaan Afrikan vuoden '
+              + 'jalkapalloilijaksi; lempinimi oli Musta pantteri. Marseille yritti '
+              + 'saada hänet ottamaan Ranskan kansalaisuuden, mutta Keïta kieltäytyi '
+              + 'ja siirtyi Valenciaan, jossa hänestä tuli yleisön suosikki. '
+              + 'Palattuaan Maliin hän perusti 1994 maan ensimmäisen '
+              + 'jalkapalloakatemian. Vuonna 2007 saman palkinnon voitti toinen '
+              + 'malilainen, Frédéric Kanouté.',
+          selite: 'Saint-Étiennen joukkue elokuussa 1968 Rotterdamissa. Keïta '
+            + 'pelasi seurassa 1967–1972 ja voitti kolme mestaruutta.',
+          lahde: 'Anefo, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Neljä maalia yhdessätoista minuutissa',
+          aika: '2010',
+          tiedosto: '20150331 Mali vs Ghana 067.jpg',
+          teksti: 'Malin miesten maajoukkue Les Aigles, kotkat, on pelannut '
+              + 'neljätoista Afrikan mestaruusturnausta muttei koskaan MM-kisoja. '
+              + 'Lähimmäs mestaruutta päästiin 1972, kun finaali hävittiin Kongolle '
+              + '3–2. Kuuluisin ottelu on silti tasapeli: Afrikan cupissa 2010 '
+              + 'Angola johti Malia 4–0, kun peliä oli '
+              + 'jäljellä yksitoista minuuttia. Sitten Mali teki neljä maalia '
+              + 'peräkkäin, ja ottelu päättyi 4–4. Välieriin Mali on yltänyt viisi '
+              + 'kertaa: 1994, 2002, 2004, 2012 ja 2013.',
+          selite: 'Malin maajoukkue ystävyysottelussa Ghanaa vastaan Pariisissa '
+            + 'maaliskuussa 2015.',
+          lahde: 'Pierre-Yves Beaudouin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maailmanmestaruus oli lähempänä juniorina',
+          aika: '2015–2017',
+          teksti: 'Malin nuorten jalkapallo on maailman kärkeä. Alle 17-vuotiaiden '
+              + 'joukkue on pelannut neljä MM-turnausta, ja Chilessä 2015 se ylsi '
+              + 'finaaliin asti. Samana vuonna Mali voitti ikäluokkansa Afrikan '
+              + 'mestaruuden Nigerissä ja toisti sen 2017 Gabonissa. A-maajoukkue ei '
+              + 'sen sijaan ole päässyt kertaakaan miesten MM-kisoihin — Mali on '
+              + 'siis ollut lähempänä maailmanmestaruutta junioreissa kuin '
+              + 'aikuisissa. Vuonna 2002 maa isännöi Afrikan mestaruusturnausta '
+              + 'ensimmäistä kertaa; järjestäjäksi se valittiin 1998 äänestyksessä, '
+              + 'jossa vastassa olivat Algeria, Botswana, Egypti ja Etiopia.',
+          selite: 'Alle 17-vuotiaiden MM-turnauksissa menestyvät harvoin samat '
+            + 'maat kuin aikuisten kisoissa. Mali on pelannut niitä neljä ja '
+            + 'yltänyt kerran finaaliin.',
+        },
+        {
+          otsikko: 'Kultaa Dakarissa, matka Pekingiin',
+          aika: '2007–2008',
+          tiedosto: 'Mali FIBA WBWC 20260904 (4).JPG',
+          teksti: 'Malin naisten koripallomaajoukkue on ollut Afrikan '
+              + 'mestaruuskisojen mitalisijoilla lähes joka turnauksessa 2000-luvulla, '
+              + 'mutta kultaa on tullut kerran. Vuonna 2007 Senegalissa Mali hävisi '
+              + 'alkulohkossa vain isännille ja kaatoi sitten Kamerunin, Angolan ja '
+              + 'finaalissa Senegalin 63–56. Voitto vei suoraan Pekingin '
+              + 'olympialaisiin 2008, jotka olivat joukkueen ensimmäiset. Turnauksen '
+              + 'arvokkaimmaksi pelaajaksi valittiin kapteeni Hamchétou Maïga, joka '
+              + 'pelasi samaan aikaan Yhdysvaltain WNBA-liigassa. Vuonna 2010 Mali '
+              + 'sijoittui naisten MM-kisoissa viidenneksitoista.',
+          selite: 'Malin naisten maajoukkue koripallon MM-kisoissa syyskuussa 2026.',
+          lahde: 'Zafer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+  ],
 };

@@ -139,6 +139,10 @@ const SALLITUT = [
   // hakuosoite (/search/?f=rss...) ja artikkelisivut ovat samalla
   // isäntänimellä, joten yksi etuliite riittää.
   'https://www.liberianobserver.com/',
+  // Malin uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut ovat
+  // samalla isäntänimellä, ilman www:tä. Syöteosoite on /rss, koska
+  // /feed vastaa 301:llä eikä worker seuraa uudelleenohjauksia.
+  'https://malijet.com/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

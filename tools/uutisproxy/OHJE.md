@@ -164,6 +164,16 @@
 > js/packs/uutislahteet.js:n LBR-kommentissa. Julkaisu
 > Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Mali):** sallittuihin lisättiin malijet.com
+> (maalehti MLI, testattu 6.9.2026: syötteessä viisikymmentä juttua,
+> artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy leipäteksti
+> ja `og:image` löytyy). Syöteosoite on `https://malijet.com/rss`, ei
+> `/feed`, joka vastaa 301:llä — worker ei seuraa uudelleenohjauksia.
+> Maan luetuin sivusto maliweb.net on Cloudflaren botti-eston takana
+> (403); Studio Tamani ja Journal du Mali läpäisivät testit ja jäivät
+> varalähteiksi, perustelut js/packs/uutislahteet.js:n MLI-kommentissa.
+> Julkaisu Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

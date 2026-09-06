@@ -562,9 +562,25 @@ export const OMAT_ARTIKKELIT = {
       + 'mbalaxin tahti.',
   },
   Mali: {
+    // Pidennetty maalehden (MAA_KATEGORIAT.MLI) yhteydessä 6.9.2026:
+    // maalehden maaosasto nojaa tähän introon yksin, sama malli kuin
+    // Kenialla ja Nigerialla.
     intro: 'Mali on aavikon ja Nigerjoen maa, jonka keskiaikaiset '
       + 'valtakunnat olivat aikansa rikkaimpia. Kulta, suola ja '
-      + 'kirjat kulkivat sen kaupunkien kautta.',
+      + 'kirjat kulkivat sen kaupunkien kautta. Nigerin suuri mutka '
+      + 'kaartaa Saharan reunaan ja kääntyy takaisin etelään; sen '
+      + 'varrella nousivat peräkkäin Ghanan, Malin ja Songhain '
+      + 'suurvallat, jotka elivät etelän kullan ja pohjoisen suolan '
+      + 'vaihdosta. Mansa Musan pyhiinvaellus Mekkaan 1324 teki Malin '
+      + 'tunnetuksi Kairoa myöten, ja Timbuktu merkittiin '
+      + 'eurooppalaisiin karttoihin oppineiden kaupunkina. Kirinan '
+      + 'taistelun jälkeen noin 1235 klaanit sopivat Kurukan Fugan '
+      + 'tasangolla säännöistä, joita jelit eli griotit ovat siitä '
+      + 'asti kantaneet ulkomuistissa. Songhain valta päättyi 1591 '
+      + 'Tondibin taisteluun, kun Marokon armeija toi aavikon yli '
+      + 'tuliaseet; Ranskan siirtomaakauden jälkeen Mali itsenäistyi '
+      + '1960. Nykyään maan tunnetuin vientituote on musiikki: kora, '
+      + 'balafon ja aavikkoblues soivat kaikkialla maailmassa.',
     artikkeli: 'Mali on suuri sisämaavaltio Länsi-Afrikassa. Pohjoinen '
       + 'puoli on Saharaa, etelä savannia — ja niiden välistä virtaa '
       + 'Nigerjoki, jonka suuri mutka on aina ollut maan elämänlanka. '
