@@ -63,8 +63,8 @@ const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
-const AMPARI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/';
-const AMPARIN_ISANTA = 'pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev';
+const AMPARI = 'https://media.matkakirja.app/';
+const AMPARIN_ISANTA = 'media.matkakirja.app';
 const KORI = 'matkakirja-pallolaatat-v1';
 /** sw.js:n oma katto — luetaan lähteestä, jotta luku ei karkaa erilleen. */
 const LAATTAKATTO = Number(readFileSync(join(JUURI, 'sw.js'), 'utf8').match(/const LAATTAKATTO = (\d+)/)?.[1] ?? 3000);

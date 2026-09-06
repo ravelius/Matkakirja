@@ -1939,7 +1939,7 @@ export function sahkeKirjoitusAikataulu(rivit, {
  * ämpäriin milloin tahansa ilman koodimuutosta.
  */
 export const SAHKE_LOMAKE_OSOITE =
-  'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvitus/sahke-lomake-1873-v1.jpg';
+  'https://media.matkakirja.app/kohtaamiset/kuvitus/sahke-lomake-1873-v1.jpg';
 
 /** null = kysymättä, true/false = tiedetään; kysytään kerran istunnossa. */
 let sahkeLomakekuva = null;

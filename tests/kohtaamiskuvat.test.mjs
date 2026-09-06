@@ -8,7 +8,7 @@ import {
 import { TARINAKAARI } from '../js/packs/tarinakaari.js';
 
 test('kohtaamiskuvagalleria käyttää vain R2-mediaa', async () => {
-  assert.match(KOHTAAMIS_R2_JUURI, /^https:\/\/[^/]+\.r2\.dev\/kohtaamiset$/);
+  assert.match(KOHTAAMIS_R2_JUURI, /^https:\/\/(?:media\.matkakirja\.app|[^/]+\.r2\.dev)\/kohtaamiset$/);
   for (const kohtaaminen of kohtaamiskuvat) {
     /*
      * Pelkkä tiedostonimi, ei polkua eikä isoja kirjaimia — osoite

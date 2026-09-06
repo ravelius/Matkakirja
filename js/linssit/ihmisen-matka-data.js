@@ -109,7 +109,7 @@
  * muotokuvat (js/linssit/keksinnot.js KEKSINTO_KUVAJUURI).
  * Havainnekuvat toimitettiin 5.9.2026; löytökuvat tulevat myöhemmin.
  */
-export const IHMISEN_MATKA_KUVAJUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/aikajana/ihmisen-matka';
+export const IHMISEN_MATKA_KUVAJUURI = 'https://media.matkakirja.app/aikajana/ihmisen-matka';
 
 /** Matkalaukun selite: mitä linssi on. */
 export const IHMISEN_MATKA_ESITTELY = 'Ihmisen matka Afrikasta koko maapallolle: '

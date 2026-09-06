@@ -146,7 +146,7 @@
  * Osoite kirjoitetaan tässä eikä tuoda kohtaamiskuvista, koska
  * niputusjärjestyksessä tämä pakka on ennen sitä moduulia.
  */
-export const HETKI_KUVAJUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket';
+export const HETKI_KUVAJUURI = 'https://media.matkakirja.app/kohtaamiset/historian-hetket';
 
 /** Kuvan täysi osoite ämpärissä. */
 export const hetkenKuvaOsoite = (tiedosto) => `${HETKI_KUVAJUURI}/${tiedosto}`;

@@ -1576,7 +1576,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Plymouth 1768 — hiililaiva lähtee Tyynellemerelle',
           aika: '26.8.1768',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-cook-endeavour-plymouth-1768-lahi-photo-v3.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-cook-endeavour-plymouth-1768-lahi-photo-v3.jpg',
           teksti: 'Laiturilla seisoo ruukku, jossa kasvaa elävä taimi. Sen '
             + 'vieressä on kasvipuristimia, lasipurkkeja ja verkkohäkkejä — '
             + 'laatikoita, joita sotalaivaan ei yleensä kanneta. Ne kuuluvat '
@@ -1607,7 +1607,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Plymouth 1768 — hiililaiva lähtee Tyynellemerelle',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-cook-endeavour-plymouth-1768-kauko-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-cook-endeavour-plymouth-1768-kauko-photo-v3.jpg',
               selite: 'Hiililaivaksi rakennettuun Endeavouriin pakkautuu '
                 + 'merimiesten lisäksi tähtitieteilijöitä, luonnontutkijoita, '
                 + 'taiteilijoita ja heidän toiveitaan. Heidän kolmivuotinen '
@@ -1658,7 +1658,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Southampton 1912 — metri törmäyksestä',
           aika: '10.4.1912',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-titanic-southampton-1912-lahi-photo-v3.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-titanic-southampton-1912-lahi-photo-v3.jpg',
           teksti: 'Seitsemänvuotias Eva Hart nousee laivaan vanhempiensa kanssa, '
             + 'mutta hänen äitinsä Esther pelkää alusta niin paljon, ettei aio '
             + 'nukkua öisin koko matkan aikana. Matkustajat alkoivat saapua puoli '
@@ -1683,7 +1683,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Southampton 1912 — metri törmäyksestä',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-titanic-southampton-1912-kauko-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-titanic-southampton-1912-kauko-photo-v3.jpg',
               selite: 'Kolmivuotias Michel ja kaksivuotias Edmond matkustavat '
                 + 'isänsä kanssa väärällä sukunimellä, äidiltä salaa vietyinä. '
                 + 'Haaksirikon jälkeen isä kuolee ja pojat tunnetaan viikkoja '
@@ -1696,7 +1696,7 @@ export const MAA_KATEGORIAT = {
             },
             {
               otsikko: 'Southampton 1912 — metri törmäyksestä',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-titanic-daily-graphic-1912-lehti-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-titanic-daily-graphic-1912-lehti-photo-v3.jpg',
               selite: 'Jack Phillips jatkaa hätäkutsujen lähettämistä, vaikka '
                 + 'vesi nousee Titanicin radiohyttiin; Harold Bride vetää '
                 + 'pelastusliivin hänen ylleen. Bride selviää kaatuneen '
@@ -1747,7 +1747,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Woolsthorpe 1666 — valo, joka kantaa värit mukanaan',
           aika: '1666',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-newton-prisma-1666-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-newton-prisma-1666-lahi-photo-v4.jpg',
           teksti: 'Mistä värit tulevat — lasista vai valosta? Kysymys on tuttu '
             + 'jokaiselle, joka on nähnyt auringon prisman läpi, ja vastaus on '
             + 'ollut vuosisatoja sama: lasi värjää valon. '
@@ -1773,7 +1773,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Woolsthorpe 1666 — valo, joka kantaa värit mukanaan',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-newton-prisma-1666-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-newton-prisma-1666-kauko-photo-v4.jpg',
               selite: 'Rutto on sulkenut Cambridgen, ja 23-vuotias Newton on '
                 + 'palannut lapsuudenkotiinsa vailla professoreita tai '
                 + 'laboratoriota. Pimennetty huone, ikkunaluukun reikä ja prisma '
@@ -1821,7 +1821,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Berkeley 1796 — lypsäjän rakkula ja puutarhurin poika',
           aika: '14.5.1796',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-jenner-rokotus-1796-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-jenner-rokotus-1796-lahi-photo-v4.jpg',
           teksti: 'Kahdeksanvuotiaan pojan silmät kiertävät huonetta, kun '
             + 'lansetti lähestyy. James Phipps on Edward Jennerin puutarhurin '
             + 'poika, ja hänelle ei ole selitetty enempää kuin että lääkäri tekee '
@@ -1848,7 +1848,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Berkeley 1796 — lypsäjän rakkula ja puutarhurin poika',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-jenner-rokotus-1796-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-jenner-rokotus-1796-kauko-photo-v4.jpg',
               selite: 'Puutarhuri Christopher Phipps seisoo poikansa takana, ja '
                 + 'Sarah Nelmesin kädestä saatu lehmänrokkoaine odottaa pöydällä. '
                 + 'Toukokuun 1796 hiljainen huone on samalla lääketieteellinen '
@@ -2824,7 +2824,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
           aika: 'heinäkuu 1799',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lahi-photo-v4.jpg',
           teksti: 'Ranskalaiset sotilaat purkavat vanhaa muuria Fort Julienin '
             + 'linnoituksessa Niilin suistossa, kun lapio kolahtaa kiveen, joka '
             + 'ei ole tavallinen. Se on musta, sileäksi hiottu paasi, ja sen '
@@ -2852,7 +2852,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-kauko-photo-v4.jpg',
               selite: 'Fort Julienin korjaajat pysäyttävät työn ja kampeavat '
                 + 'raskaan kiven päivänvaloon köysillä ja puulla. Löytö syntyy '
                 + 'linnoituksen arkisesta purkutyöstä — ei suunnitellusta '
@@ -2862,7 +2862,7 @@ export const MAA_KATEGORIAT = {
             },
             {
               otsikko: 'Rosetta 1799 — musta kivi muurin sisästä',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lehti-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rosettan-kivi-1799-lehti-photo-v4.jpg',
               selite: 'Courier de l’Égypte raportoi löydöstä syyskuussa 1799 '
                 + 'ilman sensaatio-otsikkoa: kolme kirjoitusjärjestelmää, sama '
                 + 'kivipinta ja varovainen toivo avaimesta. Lukijalle ratkaiseva '
@@ -2911,7 +2911,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
           aika: '17.11.1869',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-lahi-photo-v4.jpg',
           teksti: 'Keulan edessä ei ole enää mitään paitsi kaivettua vettä. '
             + 'Keisarillinen huvijahti L\'Aigle kääntyy Port Saidista kanavaan 17. '
             + 'marraskuuta 1869 ensimmäisenä, ja sen perässä jonoon asettuu '
@@ -2940,7 +2940,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-kauko-photo-v4.jpg',
               selite: 'L’Aigle kääntyy kanavaan ensimmäisenä, ja sen takana '
                 + 'odottaa 77 alusta. Hiekkarannalla lapsi laskee lippuja ja '
                 + 'savupiippuja sormillaan; hänelle maailman merireittien muutos '
@@ -2951,7 +2951,7 @@ export const MAA_KATEGORIAT = {
             },
             {
               otsikko: 'Port Said 1869 — keulan edessä vain kaivettua vettä',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-lehti-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-suezin-kanava-avajaiset-1869-lehti-photo-v4.jpg',
               selite: 'Kuvittaja William Simpson lähetti Port Saidista '
                 + 'kenttämuistiinpanot “kaikkien kansojen väkijoukosta”, ja '
                 + 'Lontoossa ne muutettiin viikkoja myöhemmin puukaiverrukseksi. '
@@ -3614,7 +3614,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Pompeji 79 — ropina katolla',
           aika: '79 jaa.',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-vesuvius-pompeji-79-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vesuvius-pompeji-79-lahi-photo-v4.jpg',
           teksti: 'Ropina katolla kuulostaa ensin rakeilta. Sitten kadulle putoaa '
             + 'kevyitä, vaaleita kiviä, joita voi pitää kädessä — hohkakiveä — ja '
             + 'niitä sataa tunti tunnilta tiheämmin. Pompejin torilla on '
@@ -3642,7 +3642,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Pompeji 79 — ropina katolla',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-vesuvius-pompeji-79-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vesuvius-pompeji-79-kauko-photo-v4.jpg',
               selite: 'Plinius vertasi Vesuviuksen päälle kohoavaa pilveä '
                 + 'pinjapuuhun: kapea runko levisi korkealla oksistoksi. '
                 + 'Forumilla vertaus ei vielä auta ketään. Yksi perhe kokoaa '
@@ -4377,7 +4377,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
           aika: '21.10.1805',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805-lahi-photo-v3.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805-lahi-photo-v3.jpg',
           teksti: 'Kuinka kaukana vihollislinja vielä on? Nelson kysyy sitä '
             + 'kapteeni Hardylta vielä kerran, ja kumpikin tietää, mitä vastaus '
             + 'tarkoittaa: Victory ajetaan suoraan lähitulitukseen. Kello on '
@@ -4407,7 +4407,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805-kauko-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-trafalgar-victory-1805-kauko-photo-v3.jpg',
               selite: 'Ensimmäistä taisteluaan odottava nuori ruutipoika yrittää '
                 + 'lukea vanhempien merimiesten kasvoista, kuinka lähellä '
                 + 'ensimmäinen laukaus jo on. Nelsonin 27 alusta käyvät suuremman '
@@ -4419,7 +4419,7 @@ export const MAA_KATEGORIAT = {
             },
             {
               otsikko: 'Victoryn peräkansi 1805 — hetki ennen laukausta',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-trafalgar-the-times-1805-lehti-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-trafalgar-the-times-1805-lehti-photo-v3.jpg',
               selite: 'Lontoolaiset lukevat samasta uutisesta voiton ja '
                 + 'menetyksen: Napoleonin laivasto on lyöty, mutta Nelson on '
                 + 'kuollut Victoryllä. Merimiesten perheille Collingwoodin '
@@ -6034,7 +6034,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Würzburg 1895 — käsi, joka ei saa liikkua',
           aika: '22.12.1895',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-lahi-photo-v4.jpg',
           teksti: 'Käsi ei saa liikkua. Anna Bertha Röntgen pitää sitä paikallaan '
             + 'minuutti toisensa jälkeen tietämättä, näkyykö levylle mitään. Kun '
             + 'kuva kehittyy, siinä ovat hänen sormiensa luut ja vihkisormuksen '
@@ -6062,7 +6062,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Würzburg 1895 — käsi, joka ei saa liikkua',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-rontgen-kasi-1895-kauko-photo-v4.jpg',
               selite: 'Röntgen on pitänyt löytönsä lähes kokonaan omana tietonaan '
                 + 'ennen kuin pyytää vaimonsa pimeään laboratorioon. Anna Bertha '
                 + 'ei voi tietää näkymättömän säteilyn riskejä; hänen osakseen '
@@ -6110,7 +6110,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Mainz 1454 — sivu syntyy metallista',
           aika: '1454',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-gutenberg-paino-1454-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-gutenberg-paino-1454-lahi-photo-v4.jpg',
           teksti: 'Sormenpäät ovat mustat ja pysyvät sellaisina. Latoja poimii '
             + 'kirjasimen kerrallaan lokerikosta ja asettaa sen riville nurinpäin '
             + 'ja peilikuvana; sivu on valmis vasta, kun rivejä on '
@@ -6138,7 +6138,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Mainz 1454 — sivu syntyy metallista',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-gutenberg-paino-1454-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-gutenberg-paino-1454-kauko-photo-v4.jpg',
               selite: 'Gutenbergin Raamattu ei synny yhdestä nerokkaasta '
                 + 'painalluksesta: kostea paperi, mustepallot, ruuviprässi ja '
                 + 'kuivuvat arkit kulkevat monen työntekijän käsien kautta '
@@ -6187,7 +6187,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Wittenberg 1517 — kuka tämän oikein lukee?',
           aika: '31.10.1517',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-luther-wittenberg-1517-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-luther-wittenberg-1517-lahi-photo-v4.jpg',
           teksti: 'Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin '
             + 'yliopiston teologian professori, taittaa 31. lokakuuta 1517 '
             + 'kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 '
@@ -6216,7 +6216,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Wittenberg 1517 — kuka tämän oikein lukee?',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-luther-wittenberg-1517-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-luther-wittenberg-1517-kauko-photo-v4.jpg',
               selite: 'Linnankirkon ovi toimi yliopiston ilmoitustauluna, joten '
                 + 'avustajan kiinnittämä väittelykutsu ei välttämättä pysäytä '
                 + 'montaa ohikulkijaa. Emme tiedä varmasti, kiinnitettiinkö juuri '
@@ -9397,7 +9397,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Bern 1905 — patenttipino ja valonsäde',
           aika: '1905',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-lahi-photo-v4.jpg',
           teksti: 'Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen '
             + 'uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. '
             + 'Bernin patenttiviraston kolmannen luokan tekninen asiantuntija '
@@ -9425,7 +9425,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Bern 1905 — patenttipino ja valonsäde',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-einstein-patenttitoimisto-1905-kauko-photo-v4.jpg',
               selite: 'Viraston hakemukset on käsiteltävä ennen kuin oma fysiikka '
                 + 'saa tilaa, ja kotona odottavat Mileva sekä vuoden ikäinen Hans '
                 + 'Albert. Einstein ei näytä toimiston nerolta vaan yhdeltä '
@@ -9787,7 +9787,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
           aika: '14.12.1911',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-lahi-photo-v3.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-lahi-photo-v3.jpg',
           teksti: 'Telttaan jää kirje. Se on osoitettu Norjan kuninkaalle, ja sen '
             + 'viejäksi pyydetään Robert Scottia — siltä varalta, että Scott '
             + 'saapuu perille mutta viisi norjalaista ei pääse kotiin. Kello on '
@@ -9814,7 +9814,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-kauko-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-amundsen-etelanapa-1911-kauko-photo-v3.jpg',
               selite: 'Lipunnosto kestää hetken; selviytyminen on vaatinut '
                 + 'viikkojen kylmyyden ja suunnitelman, jossa osa koirista '
                 + 'uhrataan muiden ravinnoksi. Kaikki viisi norjalaista palaavat, '
@@ -9826,7 +9826,7 @@ export const MAA_KATEGORIAT = {
             },
             {
               otsikko: 'Etelänapa 1911 — viisi miestä ja lipputanko',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-amundsen-tidens-tegn-1912-lehti-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-amundsen-tidens-tegn-1912-lehti-photo-v3.jpg',
               selite: 'Lyhyt sähke tekee Roald Amundsenista kansallissankarin, '
                 + 'mutta retkikunnan miehille tärkein sana on paluu: kaikki viisi '
                 + 'ovat hengissä. Samaan aikaan Robert Scott vetäytyy navalta '
@@ -14162,7 +14162,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Hisarlık 1873 — kulta kaivannon seinämässä',
           aika: 'toukokuu 1873',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-lahi-photo-v4.jpg',
           teksti: 'Kaivannon seinämän juuresta, muurin alta, on tullut esiin '
             + 'kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, '
             + 'korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja '
@@ -14191,7 +14191,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Hisarlık 1873 — kulta kaivannon seinämässä',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-schliemann-troija-1873-kauko-photo-v4.jpg',
               selite: 'Hisarlıkin kaivajat jatkavat lapiointia, kun Schliemann '
                 + 'kokoaa esineitä peitteen alle. Työmiehet, joiden käsistä '
                 + 'löydöt kulkivat, jäävät pian sivuun kertomuksesta, jonka '
@@ -25865,7 +25865,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Kill Devil Hills 1903 — kaksitoista sekuntia ilmassa',
           aika: '17.12.1903',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-wright-kitty-hawk-1903-lahi-photo-v3.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-wright-kitty-hawk-1903-lahi-photo-v3.jpg',
           teksti: 'Orville makaa vatsallaan Flyerin ohjaimissa, lantiollaan '
             + 'kehto, joka kiertää siipien kärkiä. Wilbur juoksee siiven rinnalla '
             + 'niin pitkään kuin pystyy. Kahdentoista sekunnin kuluttua kone osuu '
@@ -25892,7 +25892,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Kill Devil Hills 1903 — kaksitoista sekuntia ilmassa',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-wright-kitty-hawk-1903-kauko-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-wright-kitty-hawk-1903-kauko-photo-v3.jpg',
               selite: 'Pelastusasemalla työskentelevä John T. Daniels ei ole '
                 + 'koskaan ennen ottanut valokuvaa, kun hän puristaa kameran '
                 + 'laukaisupalloa juuri oikealla hetkellä. Hänen levylleen jää '
@@ -25941,7 +25941,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Philadelphia 1752 — kipinä avaimesta rystyseen',
           aika: 'kesäkuu 1752',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-franklin-leija-1752-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-franklin-leija-1752-lahi-photo-v4.jpg',
           teksti: 'Pilvi tulee Philadelphian yli kesäkuussa 1752, ja kaksi miestä '
             + 'odottaa sitä pellolla vajan suojassa. Benjamin Franklin on 46, ja '
             + 'hänen poikansa William hieman yli kaksikymmentä. Silkkileija '
@@ -26003,7 +26003,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Menlo Park 1879 — kolmetoista ja puoli tuntia valoa',
           aika: '22.10.1879',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-edison-lamppu-1879-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-edison-lamppu-1879-lahi-photo-v4.jpg',
           teksti: 'Kello on jo pitkällä yössä, ja lasikuvun sisällä hehkuu '
             + 'ompelulangan pätkä. Menlo Parkin laboratoriossa New Jerseyssä on '
             + '22. lokakuuta 1879. Thomas Edison, 32, on kokeillut hehkulangaksi '
@@ -26031,7 +26031,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Menlo Park 1879 — kolmetoista ja puoli tuntia valoa',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-edison-lamppu-1879-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-edison-lamppu-1879-kauko-photo-v4.jpg',
               selite: 'Menlo Parkin valo syntyy monen käsissä: Ludwig Boehm '
                 + 'puhaltaa lasin, John Kruesi tekee läpiviennit ja Batchelor '
                 + 'käsittelee hiuksenohutta hiililankaa. Edison johtaa koetta, '
@@ -28379,7 +28379,7 @@ export const MAA_KATEGORIAT = {
           otsikko: 'Chathamin saari 1835 — kilpikonna ja 26-vuotias mies',
           aika: 'syyskuu 1835',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835-lahi-photo-v3.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835-lahi-photo-v3.jpg',
           teksti: 'Kilpikonna kurottaa kaulaansa, ja 26-vuotias mies kyykistyy '
             + 'sitä vastaan katsomaan silmiin. Charles Darwin ei ole tässä '
             + 'hetkessä teorian isä vaan utelias keräilijä: hän istuu Cerro '
@@ -28406,7 +28406,7 @@ export const MAA_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Chathamin saari 1835 — kilpikonna ja 26-vuotias mies',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835-kauko-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-darwin-galapagos-1835-kauko-photo-v3.jpg',
               selite: 'Beaglen miehistölle Galápagos on lyhyt pysähdys veden, '
                 + 'ruoan ja näytteiden vuoksi; Darwinille sen viidestä viikosta '
                 + 'tulee vuosikymmenten ajatuskumppani. Evoluutioteoria ei synny '

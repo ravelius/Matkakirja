@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1624';
+const CACHE = 'matkakirja-2026-08-09.1625';
 const SHELL = [
   './',
   './index.html',
@@ -1401,6 +1401,16 @@ const MEDIAA = (osoite) => /\/assets\/(liput|audio|linssit)\//.test(osoite);
 const YDIN = SHELL.filter((o) => !MEDIAA(o));
 const MEDIA = SHELL.filter(MEDIAA);
 
+/*
+ * PELIN MEDIAN ISÄNNÄT (6.9.2026). Media tulee R2-ämpäristä, jolla on
+ * nyt oma verkkotunnus media.matkakirja.app (omistaja osti
+ * matkakirja.app:n 6.9.2026 aamulla; Cloudflaren r2.dev-osoite
+ * rajoitti pyyntötahtia ja vastasi 429:llä). Vanha pub-*.r2.dev-osoite
+ * tunnistetaan yhä, jotta välimuistiin jääneet ja vanhojen tietueiden
+ * osoitteet käyttäytyvät samoin.
+ */
+const medianIsanta = (isanta) => isanta === 'media.matkakirja.app' || isanta.endsWith('.r2.dev');
+
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE)
@@ -1822,7 +1832,7 @@ self.addEventListener('fetch', (event) => {
       && (osoite.hostname === 'upload.wikimedia.org'
         || (osoite.hostname === 'commons.wikimedia.org'
           && osoite.pathname.startsWith('/wiki/Special:FilePath/'))
-        || (osoite.hostname.endsWith('.r2.dev')
+        || (medianIsanta(osoite.hostname)
           && /^\/(kuvat|liput|kohtaamiset)\//.test(osoite.pathname)));
     if (kuvalahde) {
       /*
@@ -1913,7 +1923,7 @@ self.addEventListener('fetch', (event) => {
      * äänimaisema. Ne käyttäytyvät soitossa samoin, joten myös
      * välimuistin on kohdeltava niitä samoin.
      */
-    if (osoite.hostname.endsWith('.r2.dev') && /^\/(?:audio|aanet)\//.test(osoite.pathname)) {
+    if (medianIsanta(osoite.hostname) && /^\/(?:audio|aanet)\//.test(osoite.pathname)) {
       event.respondWith(aaniPeilista(event.request));
       return;
     }

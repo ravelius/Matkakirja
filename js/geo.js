@@ -97,7 +97,7 @@ const RAD = Math.PI / 180;
  */
 export const MAAPALLON_SADE_KM = 6371.0088;
 
-const R2 = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/';
+const R2 = 'https://media.matkakirja.app/';
 
 /**
  * Kirjastot ämpärin vendor/-polussa (workflow vie-vendor vie ne sinne

@@ -36,7 +36,10 @@
  * yhden tiedoston versio levyltä — peli toimii silti: nuo kaksi kohtaa
  * putoavat alkuperäiseen lähteeseen.
  */
-const R2_JUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/';
+// Oma verkkotunnus 6.9.2026 (omistaja osti matkakirja.app:n; R2:n
+// pub-*.r2.dev-osoite rajoitti pyyntötahtia ja vastasi 429:llä).
+// Liitetty ämpäriin .github/workflows/r2-verkkotunnus.yml:llä.
+const R2_JUURI = 'https://media.matkakirja.app/';
 export const PEILI_JUURI = R2_JUURI;
 export const AANI_JUURI = R2_JUURI;
 

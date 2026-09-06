@@ -101,7 +101,7 @@ test('liput: yksityinen selaus (localStorage heittää) = kaikki päällä', () 
 
 test('osoitteet: kolme kirjastoa ämpärin vendor/-polusta, versiot kiinni, ei CDN:ää koodissa', () => {
   assert.equal(ILME_JUURI, PEILI_JUURI, 'sama peili kuin kuvilla ja äänillä (js/media.js)');
-  assert.match(ILME_JUURI, /^https:\/\/pub-[a-z0-9]+\.r2\.dev\/$/);
+  assert.match(ILME_JUURI, /^https:\/\/(?:media\.matkakirja\.app|pub-[a-z0-9]+\.r2\.dev)\/$/);
   assert.equal(ILME_KIRJASTOT.vivus.osoite, `${ILME_JUURI}vendor/vivus-0.4.6.min.js`);
   assert.equal(ILME_KIRJASTOT.rough.osoite, `${ILME_JUURI}vendor/rough-4.6.6.js`);
   assert.equal(ILME_KIRJASTOT.notation.osoite, `${ILME_JUURI}vendor/rough-notation-0.5.1.iife.js`);

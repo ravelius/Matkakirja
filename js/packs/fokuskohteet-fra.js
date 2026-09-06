@@ -133,7 +133,7 @@ export const FOKUSKOHTEET_FRA = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg',
       kadonnut: true,
       selite: 'Palatsin ompelija kiirehtii iltavastaanoton pukua sisään, mutta '
         + 'hänen tyttärensä pysähtyy katsomaan palvelijoiden kantamaa '
@@ -218,7 +218,7 @@ export const FOKUSKOHTEET_FRA = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-bastilji-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-bastilji-loistoaika-v2.jpg',
       kadonnut: true,
       selite: 'Faubourg Saint-Antoinen käsityöläinen pysäyttää kärrynsä '
         + 'vallihaudan reunalle ja nostaa katseensa vankilan kahdeksaan '

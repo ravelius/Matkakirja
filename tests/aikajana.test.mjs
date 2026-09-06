@@ -630,7 +630,7 @@ test('kuvat ovat Commons-nimiä ilman polkua tai ämpäriosoitteita, ja jokaisel
       if (k.osoite) {
         // Generoitu kuva: valmis osoite kuvaputken kansiossa, ei tiedostoa.
         // Ulkoinen (isoisän valokuva) saa asua kohtaamiset/isoisa-kansiossa.
-        const juuri = k.ulkoinen ? 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/isoisa/' : `${KEKSINTO_KUVAJUURI}/`;
+        const juuri = k.ulkoinen ? 'https://media.matkakirja.app/kohtaamiset/isoisa/' : `${KEKSINTO_KUVAJUURI}/`;
         assert.ok(k.osoite.startsWith(juuri) && /\.jpg$/.test(k.osoite),
           `${t.otsikko}: ämpäriosoite ${k.osoite}`);
         assert.equal(k.tiedosto, undefined, `${t.otsikko}: osoite ja tiedosto yhtä aikaa`);

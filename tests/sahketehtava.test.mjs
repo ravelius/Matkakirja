@@ -96,7 +96,7 @@ test('lomakepohjan osoite on yhdessä vakiossa ja osoittaa ämpäriin', () => {
   // Osoite on JS:n vakio, ja CSS saa sen muuttujana (ks.
   // varmistaSahkeLomakekuva): kaksi kirjoitusasua ajautuisi erilleen
   // ensimmäisellä versionvaihdolla.
-  assert.match(SAHKE_LOMAKE_OSOITE, /^https:\/\/pub-[a-z0-9]+\.r2\.dev\//);
+  assert.match(SAHKE_LOMAKE_OSOITE, /^https:\/\/(?:media\.matkakirja\.app|pub-[a-z0-9]+\.r2\.dev)\//);
   assert.match(SAHKE_LOMAKE_OSOITE, /sahke-lomake-1873-v1\.jpg$/);
 });
 

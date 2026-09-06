@@ -221,7 +221,7 @@ export const FOKUSKOHTEET_TUR = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-artemiin-temppeli-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-artemiin-temppeli-loistoaika-v2.jpg',
       kadonnut: false,
       selite: 'Pyhiinvaeltaja on ehkä säästänyt matkarahoja vuosia tuodakseen '
         + 'Artemiille pienen uhrilahjan. Temppelin portailla hänen '
@@ -1209,7 +1209,7 @@ export const FOKUSKOHTEET_TUR = [
        Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
        omana aikanaan, ei nykyajan elementtejä. */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-halikarnassoksen-mausoleumi-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-halikarnassoksen-mausoleumi-loistoaika-v2.jpg',
       kadonnut: true,
       selite: 'Nuori kivenveistäjä on työstänyt hautamuistomerkin reliefejä '
         + 'ehkä vuosia, mutta huipulle nostettua nelivaljakkoa hän katsoo '
@@ -1292,7 +1292,7 @@ export const FOKUSKOHTEET_TUR = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-hippodromi-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-hippodromi-loistoaika-v2.jpg',
       kadonnut: true,
       selite: 'Vedenmyyjäksi palkattu poika ehtii tuskin nostaa tarjotintaan, '
         + 'kun valjakko ajautuu pölyssä kohti matalaa suojamuuria. Hän '
@@ -1399,7 +1399,7 @@ export const FOKUSKOHTEET_TUR = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-theodosiuksen-muurit-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-theodosiuksen-muurit-loistoaika-v2.jpg',
       kadonnut: false,
       selite: 'Sinisten ja vihreiden kilpa-ajokannattajat rakentavat nyt samaa '
         + 'puolustuslinjaa — mutta eivät suostu lopettamaan kilpailuaan. '
@@ -1493,7 +1493,7 @@ export const FOKUSKOHTEET_TUR = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-pergamonin-alttari-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-pergamonin-alttari-loistoaika-v2.jpg',
       kadonnut: true,
       selite: 'Nuori kuvanveistäjä tuntee jättiläisen kasvoissa jokaisen '
         + 'taltaniskun, mutta hänen sisarensa näkee hahmon nyt ensi kertaa '

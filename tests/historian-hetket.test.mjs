@@ -180,7 +180,7 @@ test('lehtikuva on vain niillä yhdellätoista hetkellä, joille sellainen tehti
 });
 
 test('kuvien osoitteet osoittavat pelin omaan ämpäriin oikealla nimikaavalla', () => {
-  assert.match(HETKI_KUVAJUURI, /^https:\/\/pub-[a-z0-9]+\.r2\.dev\/kohtaamiset\/historian-hetket$/,
+  assert.match(HETKI_KUVAJUURI, /^https:\/\/(?:media\.matkakirja\.app|pub-[a-z0-9]+\.r2\.dev)\/kohtaamiset\/historian-hetket$/,
     'kuvajuuri ei ole pelin julkinen R2-polku');
   for (const hetki of HISTORIAN_HETKET) {
     for (const kuva of hetkenKuvat(hetki)) {

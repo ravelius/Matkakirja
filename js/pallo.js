@@ -42,7 +42,7 @@
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 import { laatuAinaPaalla } from './ui-apurit.js';
 
-const R2 = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/';
+const R2 = 'https://media.matkakirja.app/';
 /**
  * Globe.gl:n UMD-paketti pelin ämpärissä (workflow tee-pallotekstuuri tai
  * tee-pallolaatat vie sen). 2.46 tuo laattamoottorin (globeTileEngineUrl).

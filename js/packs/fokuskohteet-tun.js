@@ -111,7 +111,7 @@ export const FOKUSKOHTEET_TUN = [
      * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/ihmeet/ihme-karthagon-satama-loistoaika-v2.jpg',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-karthagon-satama-loistoaika-v2.jpg',
       kadonnut: true,
       selite: 'Laivanrakentaja antaa oppipojalleen mittanuoran ja pyytää '
         + 'tarkistamaan uuden kaaren ennen kuin puu kiinnitetään. Pojan '

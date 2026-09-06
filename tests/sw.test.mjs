@@ -271,7 +271,10 @@ test('vendor-kirjastoilla on pysyvä kori, jota versionvaihto ei tyhjennä', () 
  * jonka poisto rikkoisi kuvat uudelleen.
  */
 test('peilikuvalla on cors-noudon jälkeen varareitti ilman corsia', () => {
-  const kohta = sw.indexOf('r2.dev');
+  // Ankkuri on kuvalähteen ehto (medianIsanta + kuvat/liput/kohtaamiset),
+  // ei ensimmäinen 'r2.dev'-sana: 6.9.2026 tiedoston alkuun tuli
+  // medianIsanta-apuri kommentteineen (oma verkkotunnus media.matkakirja.app).
+  const kohta = sw.indexOf('medianIsanta(osoite.hostname)');
   assert.ok(kohta > 0, 'sw.js ei enää tunne peiliä — onko ehto poistettu?');
   // Ikkuna on reilu: haaran yläpuolella on pitkä selityslohko, ja
   // varareitti (fetch(event.request)) on vasta ok-ehdon jälkeen.

@@ -3376,6 +3376,17 @@ export const RAAMATTU = {
           + 'pelaa linssin lapi selaimessa, kirjaa havainnot ja korjaa '
           + 'ennen kuin omistaja nakee sen. Rakennetaan agenttiparvella '
           + '(aineisto, moottori, kuvat, musiikki), Fable tarkistaa tekstit.',
+        'MEDIALLA OMA VERKKOTUNNUS media.matkakirja.app (omistaja 6.9.2026 '
+          + 'aamu, sanatarkasti: "Minusta se api on jo siella. Kokeile" ja '
+          + 'osti matkakirja.app-verkkotunnuksen Cloudflare Registrarista): '
+          + 'pelin media (kuvat, aanet, pallolaatat, kirjastot) tulee '
+          + 'osoitteesta https://media.matkakirja.app/, joka on R2-amparin oma '
+          + 'verkkotunnus Cloudflaren valimuistin takana. Vanha '
+          + 'pub-*.r2.dev-osoite oli Cloudflaren rajoittama (429) eika sita '
+          + 'enaa kirjoiteta koodiin; se toimii yha varaosoitteena. Liitos '
+          + 'tehdaan tyonkululla r2-verkkotunnus.yml (CLOUDFLARE_API_TOKEN). '
+          + 'Peli itse pysyy toistaiseksi Pages-osoitteessa; juuri '
+          + 'matkakirja.app on varattu pelille myohemmin.',
         'KARTTANOSTOT KOKO MAAILMAAN, LEHDET JATKUVAT (omistaja 6.9.2026 '
           + 'aamu, sanatarkasti: "Jatka kartta nostojen tekoa koko maailmaan. '
           + 'Putki voi tehda kuvia ilman minun hyvaksyntaa. Laita parvet '

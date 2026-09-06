@@ -45,7 +45,7 @@
 // thumb-putkea eikä varareittiä (js/ui.js varustaNostonKuva). Näiden
 // nostojen lähderivi alkaa "Matkakirjan havainnekuva:", jolloin peli
 // näyttää kuvalajin selitelinkin (js/havainnekuva.js).
-const KULTTUURI_HAVAINNEKUVAJUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/kuvajono/';
+const KULTTUURI_HAVAINNEKUVAJUURI = 'https://media.matkakirja.app/kohtaamiset/kuvajono/';
 
 export const KULTTUURI_KATEGORIAT = {
   /*
@@ -812,7 +812,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Royal Institution 1831 — muutos synnyttää sähköä',
           aika: '29.8.1831',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-faraday-luento-1831-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-faraday-luento-1831-lahi-photo-v4.jpg',
           teksti: 'Mitään ei kuulu, ja juuri se hämää. Michael Faraday on '
             + 'kytkenyt pariston toiseen käämiin ja odottaa, että toisessa '
             + 'käämissä, rautarenkaan vastakkaisella puolella, syntyisi pysyvä '
@@ -840,7 +840,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Royal Institution 1831 — muutos synnyttää sähköä',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-faraday-luento-1831-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-faraday-luento-1831-kauko-photo-v4.jpg',
               selite: 'Avustajan on ehdittävä merkitä neulan lyhyt liike, ennen '
                 + 'kuin se palaa nollaan. Faradayn rautarengas on vain 17 '
                 + 'senttimetriä leveä, mutta sen kahden käämin välinen '
@@ -888,7 +888,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'St Mary\'s 1928 — malja, jota ei heitetty pois',
           aika: '3.9.1928',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-fleming-malja-1928-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-fleming-malja-1928-lahi-photo-v4.jpg',
           teksti: '”Sepä hassua”, Alexander Fleming sanoo, ja se on koko juhla. '
             + 'St Mary\'sin sairaalan bakteriologian laboratoriossa Paddingtonissa '
             + 'on 3. syyskuuta 1928, ja Fleming on juuri palannut perheensä '
@@ -915,7 +915,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'St Mary\'s 1928 — malja, jota ei heitetty pois',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-fleming-malja-1928-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-fleming-malja-1928-kauko-photo-v4.jpg',
               selite: 'St Mary\'sin epäjärjestys auttaa sattumaa, mutta havainnon '
                 + 'ymmärtäminen vaatii Flemingin pysähtymään sen ääreen. Hän osaa '
                 + 'osoittaa homeen tuhoavan bakteereita, muttei tehdä siitä '
@@ -964,7 +964,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Rotherhithe 1827 — 36 lokeroa joen alla',
           aika: 'toukokuu 1827',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-brunel-thames-tunnel-1827-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brunel-thames-tunnel-1827-lahi-photo-v4.jpg',
           teksti: 'Tihkuvan veden ääni ei lakkaa koskaan. Se tulee yläpuolelta, '
             + 'missä Thames virtaa ohuen savikerroksen takana, ja jokainen '
             + 'kaivaja kuuntelee, muuttuuko tihku suihkuksi. Rotherhithen '
@@ -993,7 +993,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Rotherhithe 1827 — 36 lokeroa joen alla',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-brunel-thames-tunnel-1827-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brunel-thames-tunnel-1827-kauko-photo-v4.jpg',
               selite: '21-vuotias Isambard Kingdom Brunel kuuntelee puun, '
                 + 'ruuvitunkkien ja veden ääniä, kun kaksitoista kolmikerroksista '
                 + 'kehystä siirtyy tuuma tuumalta eteenpäin. Kilven 36 kaivajaa '
@@ -1042,7 +1042,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Lontoo 1666 — soitin veneessä, kaupunki tulessa',
           aika: '2.–5.9.1666',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-lahi-photo-v4.jpg',
           teksti: 'Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, '
             + 'mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, '
             + 'ja Samuel Pepys, laivaston virkamies, kirjoittaa iltapäivällä '
@@ -1069,7 +1069,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Lontoo 1666 — soitin veneessä, kaupunki tulessa',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-kauko-photo-v4.jpg',
               selite: 'Thames täyttyi veneistä, vuoteista, arkuista ja vedessä '
                 + 'kelluvista tavaroista. Pepys kirjoitti kipinöiden polttaneen '
                 + 'kasvoja joen toiselle puolelle asti; veneessä jokainen joutui '
@@ -1080,7 +1080,7 @@ export const KULTTUURI_KATEGORIAT = {
             },
             {
               otsikko: 'Lontoo 1666 — soitin veneessä, kaupunki tulessa',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-lehti-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lontoon-palo-1666-lehti-photo-v4.jpg',
               selite: 'Palo tuhosi myös The London Gazetten painopaikan, ja '
                 + 'numero 85 ilmestyi viikon keskeytyksen jälkeen Savoyssa. '
                 + 'Virallinen selostus lupasi lukijoille “lyhyen mutta '
@@ -1130,7 +1130,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Globe 1599 — pihalla ei ole koskaan hiljaista',
           aika: '21.9.1599',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-shakespeare-globe-1599-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-shakespeare-globe-1599-lahi-photo-v4.jpg',
           teksti: 'Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon '
             + 'keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa '
             + 'näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää '
@@ -1157,7 +1157,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Globe 1599 — pihalla ei ole koskaan hiljaista',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-shakespeare-globe-1599-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-shakespeare-globe-1599-kauko-photo-v4.jpg',
               selite: 'Sveitsiläinen Thomas Platter kertoi ylittäneensä Thamesin '
                 + 'noin kahdelta ja nähneensä Julius Caesarin viidentoista '
                 + 'näyttelijän voimin. Pihalla tarina ei ollut hiljainen pyhä '
@@ -2926,7 +2926,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Kärntnertor 1824 — suosionosoitukset, joita ei kuule',
           aika: '7.5.1824',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-beethoven-yhdeksas-1824-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-beethoven-yhdeksas-1824-lahi-photo-v4.jpg',
           teksti: '”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta '
             + 'Caroline Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. '
             + 'toukokuuta 1824, ja yhdeksännen sinfonian viimeinen sointu on '
@@ -2953,7 +2953,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Kärntnertor 1824 — suosionosoitukset, joita ei kuule',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-beethoven-yhdeksas-1824-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-beethoven-yhdeksas-1824-kauko-photo-v4.jpg',
               selite: 'Orkesterin alttoviulisti pitää katseensa Umlaufin '
                 + 'tahtipuikossa, vaikka Beethoven merkitsee vieressä tempoja '
                 + 'koko kehollaan. Muusikot ovat sopineet seuraavansa varsinaista '
@@ -3001,7 +3001,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Burgtheater 1786 — palvelijat nolaavat isäntänsä',
           aika: '1.5.1786',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-mozart-wien-1786-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mozart-wien-1786-lahi-photo-v4.jpg',
           teksti: 'Partituurin muste on tuskin kuivunut, kun cembalo aloittaa. '
             + 'Wienin Burgtheaterissa on 1. toukokuuta 1786, ja Wolfgang Amadeus '
             + 'Mozart, 30, johtaa Figaron häitä soittimensa äärestä, kuten tapa '
@@ -3029,7 +3029,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Burgtheater 1786 — palvelijat nolaavat isäntänsä',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-mozart-wien-1786-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mozart-wien-1786-kauko-photo-v4.jpg',
               selite: 'Mozart johtaa Figaron kahta ensimmäistä esitystä '
                 + 'cembalosta, keskellä laulajia, soittajia ja pienen '
                 + 'hoviteatterin tiivistä yleisöä. Parterren nuori nuotinkääntäjä '
@@ -4350,7 +4350,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Bernauer Straße 1961 — piikkilanka kadun poikki',
           aika: '13.8.1961',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-lahi-photo-v4.jpg',
           teksti: 'Ilmavasaroiden ääni herättää Bernauer Straßen ennen '
             + 'aamunkoittoa. On sunnuntai 13. elokuuta 1961, ja keskiyöllä '
             + 'Itä-Saksan poliisi, armeija ja tehtaiden taisteluryhmät ovat '
@@ -4378,7 +4378,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Bernauer Straße 1961 — piikkilanka kadun poikki',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-kauko-photo-v4.jpg',
               selite: 'Opiskelijan pyörä on samalla kadulla kuin eilen, mutta tie '
                 + 'isän luo katkeaa betonipylväisiin ja piikkilankaan. Yli 10 000 '
                 + 'poliisia, sotilasta ja taisteluryhmäläistä sulkee kaupungin '
@@ -4389,7 +4389,7 @@ export const KULTTUURI_KATEGORIAT = {
             },
             {
               otsikko: 'Bernauer Straße 1961 — piikkilanka kadun poikki',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-lehti-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-berliinin-muuri-1961-lehti-photo-v4.jpg',
               selite: 'BILD tiivisti 14.8.1961 yön tapahtumat otsikkoon “Berlin — '
                 + 'Panzer im Ostsektor”. Panssarit olivat totta, mutta Bernauer '
                 + 'Straßella uutisen mitta oli pienempi: tuttu ikkuna, naapurin '
@@ -4953,7 +4953,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Padova 1610 — neljä valopistettä Jupiterin vieressä',
           aika: 'tammikuu 1610',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-galilei-kaukoputki-1610-lahi-photo-v5.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-galilei-kaukoputki-1610-lahi-photo-v5.jpg',
           teksti: 'Tammikuun 7. päivän iltana 1610 Galileo Galilei suuntaa itse '
             + 'rakentamansa, noin kaksikymmentä kertaa suurentavan kaukoputken '
             + 'Jupiteriin ja näkee planeetan vieressä kolme pientä valopistettä '
@@ -4987,7 +4987,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Padova 1610 — neljä valopistettä Jupiterin vieressä',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-galilei-kaukoputki-1610-kauko-photo-v5.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-galilei-kaukoputki-1610-kauko-photo-v5.jpg',
               selite: 'Apulainen yrittää saada Galileon sanelemat pisteet '
                 + 'paperille ennen kuin kynttilä tai sormet hyytyvät kylmään. Kun '
                 + 'sama työ toistuu yö toisensa jälkeen, valojen liike alkaa '
@@ -6493,7 +6493,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia',
           aika: '1898',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-marie-curie-hangaari-1898-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-marie-curie-hangaari-1898-lahi-photo-v4.jpg',
           teksti: 'Olkapäät ovat puutuneet jo aamupäivällä, mutta tankoa ei voi '
             + 'laskea. Marie Curie sekoittaa kiehuvaa pikivälkeliuosta '
             + 'rautakattilassa, ja vaja, joka oli ennen lääketieteellisen koulun '
@@ -6520,7 +6520,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Pariisi 1898 — tonni malmia, kymmenesosagramma radiumia',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-marie-curie-hangaari-1898-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-marie-curie-hangaari-1898-kauko-photo-v4.jpg',
               selite: 'Marie ja Pierre Curien laboratorio ei ole loistokas '
                 + 'tiedepalatsi vaan kylmä pihavaja, jossa säkit, padat ja '
                 + 'mittaukset täyttävät päivän. Kumpikaan ei vielä tiedä, kuinka '
@@ -6568,7 +6568,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Arsenaali 1780 — mitään ei katoa, kaikki punnitaan',
           aika: 'noin 1780',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-lahi-photo-v4.jpg',
           teksti: 'Vaaka on huoneen kallein esine, ja se on tarkempi kuin mikään, '
             + 'mitä Pariisin kello- tai kultasepät myyvät. Antoine Lavoisier on '
             + 'tilannut sen varta vasten, sillä koko hänen kemiansa lepää yhden '
@@ -6594,7 +6594,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Arsenaali 1780 — mitään ei katoa, kaikki punnitaan',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lavoisier-laboratorio-1780-kauko-photo-v4.jpg',
               selite: 'Marie-Anne ei ole vain tarkkailija: hän pitää '
                 + 'koepäiväkirjoja, kuvaa laitteet mittakaavaan ja tekee työn '
                 + 'ymmärrettäväksi muille. Antoine mittaa kaasuja, mutta heidän '
@@ -6643,7 +6643,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Rue d\'Ulm 1862 — liemi, joka pysyy kirkkaana',
           aika: '1862',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-lahi-photo-v4.jpg',
           teksti: 'Kalenterissa on kulunut jo viikkoja, ja pullo on yhä kirkas. '
             + 'Louis Pasteur nostaa sen valoa vasten École normale supérieuren '
             + 'laboratoriossa rue d\'Ulmilla: keitetty lihaliemi, jonka '
@@ -6670,7 +6670,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Rue d\'Ulm 1862 — liemi, joka pysyy kirkkaana',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pasteur-pullot-1862-kauko-photo-v4.jpg',
               selite: 'Nuori avustaja on kirjoittanut samoihin pulloihin '
                 + 'päivämääriä viikkojen ajan ja odottanut muutosta, jota ei '
                 + 'tule. Juuri odottaminen tekee kokeesta vakuuttavan: keitetty '
@@ -6718,7 +6718,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Champ de Mars 1888 — niitti kerrallaan taivaalle',
           aika: 'elokuu 1888',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-lahi-photo-v4.jpg',
           teksti: 'Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin '
             + 'maassa, ja niittaajan on osattava seistä siinä koko päivä. '
             + 'Elokuussa 1888 Eiffel-tornin toinen kerros on saatu koottua, ja '
@@ -6746,7 +6746,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Champ de Mars 1888 — niitti kerrallaan taivaalle',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-eiffel-torni-1888-kauko-photo-v4.jpg',
               selite: 'Elokuussa 1888 toinen taso on viimein koossa, mutta torni '
                 + 'jatkuu vielä avonaisena rautaristikkona taivaalle. Alhaalla '
                 + 'hevoskuormat tuovat Levallois’ssa millintarkasti '
@@ -6795,7 +6795,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Bastilji 1789 — musketti ilman ruutia',
           aika: '14.7.1789',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-lahi-photo-v4.jpg',
           teksti: 'Musketti painaa olkapäällä, mutta siihen ei ole ruutia. '
             + 'Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on '
             + 'tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 '
@@ -6825,7 +6825,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Bastilji 1789 — musketti ilman ruutia',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-ranskan-vallankumous-bastilji-1789-kauko-photo-v4.jpg',
               selite: 'Vankilan sveitsiläinen sotilas laskee aseensa ja yrittää '
                 + 'kadota sisäpihan reunaan ennen kuin virta saavuttaa hänet. '
                 + 'Portista tuleville pariisilaisille Bastilji on sortovallan '
@@ -6875,7 +6875,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Grand Café 1895 — miten seinä voi liikkua?',
           aika: '28.12.1895',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-lahi-photo-v4.jpg',
           teksti: 'Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard '
             + 'des Capucines\'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama '
             + 'kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota '
@@ -6904,7 +6904,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Grand Café 1895 — miten seinä voi liikkua?',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-elokuva-1895-kauko-photo-v4.jpg',
               selite: 'Koneen takana nuori avustaja pitää kammen tasaisena, '
                 + 'vaikka 33 katsojan jokainen naurahdus ja henkäys kuuluu '
                 + 'pimeässä kellarissa. Jos käsi nykäisee, kuva värisee; jos se '
@@ -6915,7 +6915,7 @@ export const KULTTUURI_KATEGORIAT = {
             },
             {
               otsikko: 'Grand Café 1895 — miten seinä voi liikkua?',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-lumiere-le-radical-1895-lehti-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-lumiere-le-radical-1895-lehti-photo-v4.jpg',
               selite: 'Lehden nimetön toimittaja yrittää selittää liikkuvaa kuvaa '
                 + 'lukijoille, jotka eivät ole koskaan nähneet sellaista. Hän '
                 + 'kutsuu laitetta valokuvauksen ihmeeksi ja takertuu yhteen '
@@ -7565,7 +7565,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä',
           aika: '10.4.1896',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-olympia-ateena-1896-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-olympia-ateena-1896-lahi-photo-v4.jpg',
           teksti: 'Jalat ovat pölyn peitossa, ja ne jatkavat, vaikka pää ei enää '
             + 'tiedä, missä on. Spyridon Louis, 23-vuotias vedenkantaja Marousin '
             + 'kylästä Ateenan pohjoispuolelta, on juossut noin 40 kilometriä '
@@ -7593,7 +7593,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Panathinaiko 1896 — jalat jatkavat, kun pää ei tiedä',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-olympia-ateena-1896-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-olympia-ateena-1896-kauko-photo-v4.jpg',
               selite: 'Louisin isä murtautuu radan reunalle ja etsii poikansa '
                 + 'pölyisiä kasvoja kahden prinssin välistä. '
                 + 'Kuusikymmentätuhantinen stadion juhlii Kreikan voittoa, mutta '
@@ -8692,7 +8692,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Konstantinopoli 1453 — aamu tulee rumpujen mukana',
           aika: '29.5.1453',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-konstantinopoli-1453-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-konstantinopoli-1453-lahi-photo-v4.jpg',
           teksti: 'Yö on lyhyt, ja aamu tulee rumpujen ja huutojen mukana. '
             + 'Mesoteichionilla, Lykosjoen laakson muurinpätkällä, on 29. '
             + 'toukokuuta 1453. Sulttaani Mehmed II, 21-vuotias, on piirittänyt '
@@ -8722,7 +8722,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Konstantinopoli 1453 — aamu tulee rumpujen mukana',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-konstantinopoli-1453-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-konstantinopoli-1453-kauko-photo-v4.jpg',
               selite: 'Viimeinen hyökkäys tulee kolmessa aallossa. Ensimmäiset '
                 + 'väsyttävät puolustajia, toiset kasvattavat painetta ja '
                 + 'janitsaarit etenevät viimeisinä. Muurin harjalla kuuden viikon '
@@ -10574,7 +10574,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Restelon ranta 1497 — yö rukouksessa, aamu Intian tiellä',
           aika: '8.7.1497',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-vasco-da-gama-restelo-1497-lahi-photo-v3.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vasco-da-gama-restelo-1497-lahi-photo-v3.jpg',
           teksti: 'Polvet painuvat rantahiekkaan, ja yön viimeinen tunti kuluu '
             + 'näin. Restelon kappelissa, jonka Henrik Purjehtija rakennutti '
             + 'merimiehiä varten ja joka on jo pahasti rapistunut, Vasco da Gama '
@@ -10600,7 +10600,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Restelon ranta 1497 — yö rukouksessa, aamu Intian tiellä',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-vasco-da-gama-restelo-1497-kauko-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-vasco-da-gama-restelo-1497-kauko-photo-v3.jpg',
               selite: 'Rannalle jääville lähtö on lupaus vauraudesta ja '
                 + 'mahdollinen viimeinen hyvästijättö samassa hetkessä. Kun da '
                 + 'Gama palaa, Portugalilla on meritietä Intiaan koskeva vastaus '
@@ -10648,7 +10648,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Lissabon 1484 — kartta, jota kukaan ei osta',
           aika: '1484',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-kolumbus-portugali-1484-lahi-photo-v3.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-portugali-1484-lahi-photo-v3.jpg',
           teksti: 'Pöydällä on kartta, jota Kolumbus on kantanut ovelta ovelle jo '
             + 'vuosia. Siihen on merkitty lyhyt meri ja sen takana Aasia. Hän '
             + 'katsoo, kuinka kuninkaan asiantuntijat kumartuvat kartan ylle ja '
@@ -10673,7 +10673,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Lissabon 1484 — kartta, jota kukaan ei osta',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-kolumbus-portugali-1484-kauko-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-portugali-1484-kauko-photo-v3.jpg',
               selite: 'Kuningas Juhana II:n pöydällä Kolumbuksen suuri unelma '
                 + 'näyttää tarpeettomalta riskiltä, sillä Portugali etenee jo '
                 + 'Afrikan rannikkoa etelään. Hylätty suunnittelija lähtee '
@@ -11554,7 +11554,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Santa Fé 1492 — sanansaattaja tavoittaa tiellä',
           aika: '17.4.1492',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-kolumbus-santa-fe-1492-lahi-photo-v3.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-santa-fe-1492-lahi-photo-v3.jpg',
           teksti: 'Kavioiden kapse tavoittaa hänet vasta tiellä. Kolumbus on '
             + 'lähtenyt Santa Fésta jälleen kerran torjuttuna, kun kuninkaallinen '
             + 'sanansaattaja saa hänet kiinni ja käskee kääntyä takaisin: hovi on '
@@ -11584,7 +11584,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Santa Fé 1492 — sanansaattaja tavoittaa tiellä',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-kolumbus-santa-fe-1492-kauko-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-santa-fe-1492-kauko-photo-v3.jpg',
               selite: 'Isabella ei tarinan vastaisesti panttaa jalokiviään; '
                 + 'rahoitus syntyy hovin neuvotteluista ja kruunun varoista. '
                 + 'Huhtikuun 1492 sopimuksen äärellä Kolumbukselle ratkaisevaa ei '
@@ -12724,7 +12724,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Sikstuksen kappeli 1510 — giornata kerrallaan',
           aika: '1510',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-michelangelo-sikstus-1510-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-michelangelo-sikstus-1510-lahi-photo-v4.jpg',
           teksti: 'Niska ei enää suoristu illalla, ja maali tippuu silmille. '
             + 'Michelangelo Buonarroti seisoo — ei makaa, vaikka niin kerrotaan — '
             + 'telineellä pää taaksepäin taivutettuna ja maalaa Sikstuksen '
@@ -12751,7 +12751,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Sikstuksen kappeli 1510 — giornata kerrallaan',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-michelangelo-sikstus-1510-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-michelangelo-sikstus-1510-kauko-photo-v4.jpg',
               selite: 'Vuonna 1510 vasta katon ensimmäinen puolisko on '
                 + 'valmistumassa. Telineellä yksi mies levittää tuoretta '
                 + 'pintalaastia, toinen nostaa vettä ja Michelangelo työskentelee '
@@ -14012,7 +14012,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen',
           aika: '4.11.1899',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-sibelius-finlandia-1899-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-sibelius-finlandia-1899-lahi-photo-v4.jpg',
           teksti: 'Kello lähestyy iltaa Ruotsalaisessa teatterissa Helsingissä 4. '
             + 'marraskuuta 1899, ja salissa istuvat ne, joiden lehtiä '
             + 'keisarillinen sensuuri on juuri lakkauttanut. Lehdistön päivien '
@@ -14040,7 +14040,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Ruotsalainen teatteri 1899 — protesti, jota ei sanota ääneen',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-sibelius-finlandia-1899-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-sibelius-finlandia-1899-kauko-photo-v4.jpg',
               selite: 'Orkesterin nuotinkääntäjä tietää, ettei illan protestia '
                 + 'lausuta suoraan. Se piilotetaan kuuteen historialliseen '
                 + 'kuvaelmaan, näyttämön eleisiin ja Sibeliuksen musiikkiin — '
@@ -15807,7 +15807,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa',
           aika: '6.3.1869',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-mendelejev-kortit-1869-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mendelejev-kortit-1869-lahi-photo-v4.jpg',
           teksti: 'Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama '
             + 'ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. '
             + 'Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian '
@@ -15834,7 +15834,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-mendelejev-kortit-1869-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-mendelejev-kortit-1869-kauko-photo-v4.jpg',
               selite: 'Tunnettu kertomus alkuainepasianssista on todennäköisesti '
                 + 'myöhempi legenda; arkistoon jäivät yliviivatut ryhmittelyt ja '
                 + 'jatkuvasti korjatut luonnokset. Kuvan nuori painoapulainen '
@@ -15882,7 +15882,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Jänissaari 1703 — kuusi bastionia suohon',
           aika: '27.5.1703',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-pietari-perustus-1703-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pietari-perustus-1703-lahi-photo-v4.jpg',
           teksti: 'Mittakeppi ja kartta ovat ainoat kuivat esineet Jänissaarella. '
             + 'Vartiosotilas pitää kartan kulmasta kiinni, kun tsaari Pietari, '
             + 'yli kaksimetrinen mies, kävelee saaren märkää rantaa ja näyttää, '
@@ -15910,7 +15910,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Jänissaari 1703 — kuusi bastionia suohon',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-pietari-perustus-1703-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-pietari-perustus-1703-kauko-photo-v4.jpg',
               selite: 'Pietarin suunnitelma lupaa kuusi bastionia, mutta '
                 + 'toukokuussa 1703 paikalla on vasta soinen saari, mittanaruja '
                 + 'ja märkiä maavalleja. Työryhmän on saatava puu- ja maalinnake '
@@ -26090,7 +26090,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
           aika: '24.6.1893',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-nansen-fram-1893-lahi-photo-v3.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-nansen-fram-1893-lahi-photo-v3.jpg',
           teksti: 'Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa '
             + 'kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja '
             + 'muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. '
@@ -26116,7 +26116,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-nansen-fram-1893-kauko-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-nansen-fram-1893-kauko-photo-v3.jpg',
               selite: 'Rannalla vilkuttavat omaiset joutuvat odottamaan uutisia '
                 + 'lähes kolme vuotta. Framin runko kestää jään puristuksen ja '
                 + 'koko miehistö palaa, mutta lähdön hetkellä kukaan ei vielä '
@@ -26126,7 +26126,7 @@ export const KULTTUURI_KATEGORIAT = {
             },
             {
               otsikko: 'Kristiania 1893 — laiva, jonka jää nostaa',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-nansen-verdens-gang-1893-lehti-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-nansen-verdens-gang-1893-lehti-photo-v3.jpg',
               selite: 'Eva Nansen jää puolen vuoden ikäisen Livin kanssa '
                 + 'odottamaan miestä, joka aikoo kadota tarkoituksella Jäämeren '
                 + 'ahtojäihin. Lehden lukijalle suunnitelma näyttää lähes '
@@ -27331,7 +27331,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Roskildenvuono noin 1040 — kuusikymmentä airoa',
           aika: 'n. 1040',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-viikinkilaiva-roskilde-1040-lahi-photo-v3.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-viikinkilaiva-roskilde-1040-lahi-photo-v3.jpg',
           teksti: 'Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu '
             + 'kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee '
             + 'ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö '
@@ -27361,7 +27361,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Roskildenvuono noin 1040 — kuusikymmentä airoa',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-viikinkilaiva-roskilde-1040-kauko-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-viikinkilaiva-roskilde-1040-kauko-photo-v3.jpg',
               selite: 'Vuonon rannalle jäävät eivät näe pelkkää sotalaivaa vaan '
                 + 'kokonaisen liikkuvan yhteisön: sukulaisia, velallisia, vapaita '
                 + 'miehiä ja ehkä pakotettuja soutajia. Noin 60 airoa antaa '
@@ -31755,7 +31755,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Kuninkaiden laakso 1922 — "Näen ihmeellisiä asioita"',
           aika: '26.11.1922',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lahi-photo-v4.jpg',
           teksti: 'Kynttilän liekki lepattaa, kun sitä työnnetään reiästä, jonka '
             + 'Howard Carter on juuri kaivertanut muurattuun oveen. Kuuma ilma '
             + 'virtaa vastaan kammiosta, joka on ollut suljettuna yli kolme '
@@ -31784,7 +31784,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Kuninkaiden laakso 1922 — "Näen ihmeellisiä asioita"',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-kauko-photo-v4.jpg',
               selite: 'Lady Evelyn Herbert puristaa kättään rintaansa vasten ja '
                 + 'yrittää nähdä isänsä olkapään yli. Carterin kynttilä on ainoa '
                 + 'merkki siitä, että yli kolmentuhannen vuoden hiljaisuus on '
@@ -31794,7 +31794,7 @@ export const KULTTUURI_KATEGORIAT = {
             },
             {
               otsikko: 'Kuninkaiden laakso 1922 — "Näen ihmeellisiä asioita"',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-tutankhamon-carter-1922-lehti-photo-v4.jpg',
               selite: 'Brittiyleisö näki Carterin kurkistuksen ensin taiteilijan '
                 + 'silmin: The Illustrated London News rakensi kuvan Carnarvonin '
                 + 'kertomuksesta ja ilmoitti rehellisesti, että kyse oli '
@@ -56983,7 +56983,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'East River 1883 — kuka tämän sillan rakensi?',
           aika: '24.5.1883',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-lahi-photo-v4.jpg',
           teksti: 'Kuka tämän sillan oikeastaan rakensi? Kysymys leijuu 24. '
             + 'toukokuuta 1883 avajaisten yllä, vaikka kukaan ei sano sitä '
             + 'ääneen. Suunnittelija John A. Roebling kuoli jalkavammaan jo 1869 '
@@ -57013,7 +57013,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'East River 1883 — kuka tämän sillan rakensi?',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-kauko-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-kauko-photo-v4.jpg',
               selite: 'Washington Roebling ei seiso arvovieraiden joukossa vaan '
                 + 'seuraa juhlaa kodistaan Columbia Heightsilta. Presidentti, '
                 + 'tykkisalva ja väkijoukko ottavat sillan haltuunsa; '
@@ -57025,7 +57025,7 @@ export const KULTTUURI_KATEGORIAT = {
             },
             {
               otsikko: 'East River 1883 — kuka tämän sillan rakensi?',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-lehti-photo-v4.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-brooklyn-bridge-1883-lehti-photo-v4.jpg',
               selite: 'Brooklyn Daily Eagle rikkoi avajaispäivänä '
                 + 'levikkiennätyksensä erikoisnumerolla, joka julisti Brooklynin '
                 + 'ja New Yorkin yhdistyneiksi. Lehden suurin uutinen oli silta; '
@@ -60909,7 +60909,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Palos de la Frontera 1492 — kolme laivaa laskuveden mukana',
           aika: '3.8.1492',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492-lahi-photo-v3.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492-lahi-photo-v3.jpg',
           teksti: 'Santa Marían nuori laivapoika kuuntelee Palosin kirkonkelloja '
             + 'ja yrittää olla näyttämättä, ettei ole koskaan ollut avomerellä. '
             + 'Hänen ympärillään kaikki tuntevat toisensa: karavelleja Pintaa ja '
@@ -60938,7 +60938,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Palos de la Frontera 1492 — kolme laivaa laskuveden mukana',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492-kauko-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-kolumbus-palos-1492-kauko-photo-v3.jpg',
               selite: 'Rannalle jäävä perhe näkee kolmen pienen laivan katoavan '
                 + 'Río Tinton suulle tietämättä, maksetaanko luvattu palkka tai '
                 + 'palaako oma mies koskaan. Kolumbuksen retkikunta etsii Aasiaa '
@@ -60985,7 +60985,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Sanlúcar de Barrameda 1519 — viisi laivaa, joista yksi palaa',
           aika: '20.9.1519',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519-lahi-photo-v3.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519-lahi-photo-v3.jpg',
           teksti: 'Kuka teistä palaa? Sitä ei jokisuussa kysy kukaan ääneen. '
             + 'Köyttä kiristävä merimies on yksi noin 270 lähtijästä, ja kolmen '
             + 'vuoden kuluttua kotiin pääsee heistä kahdeksantoista. Laivasto '
@@ -61012,7 +61012,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Sanlúcar de Barrameda 1519 — viisi laivaa, joista yksi palaa',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519-kauko-photo-v3.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-magalhaes-sanlucar-1519-kauko-photo-v3.jpg',
               selite: 'Viisi laivaa lähtee, mutta Sanlúcar näkee kahden vuoden ja '
                 + 'yhdentoista kuukauden kuluttua palaavan vain Victorian. Sen '
                 + 'uupuneet miehet ovat ensimmäiset, jotka ovat kiertäneet '
@@ -67600,7 +67600,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Machu Picchu 1911 — poika, joka näytti tien',
           aika: '24.7.1911',
           leveys: 'taysi',
-          osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-machu-picchu-1911-lahi-photo-v4.jpg',
+          osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-machu-picchu-1911-lahi-photo-v4.jpg',
           teksti: 'Polku on märkä ja jyrkkä, ja edellä kulkee yksitoistavuotias '
             + 'Pablito Richarte, joka on kulkenut sen sata kertaa. Hänen '
             + 'perässään hengästyy Yalen yliopiston historianlehtori Hiram '
@@ -67628,7 +67628,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Machu Picchu 1911 — poika, joka näytti tien',
-              osoite: 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/kohtaamiset/historian-hetket/hetki-machu-picchu-1911-kauko-photo-v5.jpg',
+              osoite: 'https://media.matkakirja.app/kohtaamiset/historian-hetket/hetki-machu-picchu-1911-kauko-photo-v5.jpg',
               selite: 'Pablito vilkaisee mutaiselta polulta, pysyykö hengästynyt '
                 + 'Bingham perässä, samalla kun Richarten ja Álvarezin perheiden '
                 + 'päivä jatkuu maissipellolla. Heille kiviseinät eivät ole löytö '
