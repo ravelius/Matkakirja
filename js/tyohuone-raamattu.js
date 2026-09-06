@@ -3503,7 +3503,16 @@ export const RAAMATTU = {
           + 'itsenaiset erat ajetaan rinnakkain Opus-parvena (kukin era oma '
           + 'agentti ja commit, selvarajaiset tiedostot, ei paallekkaisia '
           + 'muutoksia), Fable poimii ja julkaisee; lehtityon 5 agentin '
-          + 'katto ei koske tata, mutta viiden tunnin raja pidetaan silmalla.',
+          + 'katto ei koske tata, mutta viiden tunnin raja pidetaan silmalla. '
+          + 'VEKTORIT SAMALLA (omistaja 6.9.2026 ilta, Fablen ehdotukseen '
+          + '"rantaviivat ja nimet vektoreina laattojen paalle, jolloin ne '
+          + 'ovat aina tasan pikselin levyisia", sanatarkasti: "Tehdaan se '
+          + 'vektori juttu nyt samalla"): laattakerroksen rinnalle '
+          + 'suunnitellaan ja toteutetaan vektorikerros - rantaviivat (ja '
+          + 'rajat, jos mitattu hyoty) piirretaan pallolle ruutupikselin '
+          + 'levyisina viivoina laattojen paalle Google Earthin tapaan, '
+          + 'lahde Natural Earth (PD); fablemax mittaa ja suunnittelee erat, '
+          + 'Opus-parvi toteuttaa.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
@@ -5212,8 +5221,17 @@ export const RAAMATTU = {
           + 'varivirtoina: nelja virtaa, ylitykset ja portit, 0,5 asteen '
           + 'maamaski ja saapumisajan laskenta, canvas-kalvo pallolla, '
           + 'virtaa seuraava kamera, mitattu suorituskyky, vaiheistus ja '
-          + 'avoimet kysymykset omistajalle (Fablemax 6.9.2026; SUUNNITELMA, '
-          + 'odottaa omistajan vastauksia ennen toteutusta).',
+          + 'avoimet kysymykset omistajalle; luku 11 omistajan paatokset, '
+          + 'luku 13 hiontakierros (Fablemax 6.9.2026; TOTEUTETTU '
+          + 'js/aikajana-virrat*.js, odottaa omistajan katselmusta ennen '
+          + 'julkaisua).',
+        'docs/moduulit/pallon-liike-taydella-tarkkuudella.md — pallon liike '
+          + 'ja zoom taydella tarkkuudella: mittaukset (rantaviivan paksuus, '
+          + 'laattamoottorin hinta), kirjastovertailu (MapLibre, '
+          + '3d-tiles-renderer, Cesium, OpenGlobus), valittu ratkaisu (oma '
+          + 'laattakerros pyramidin laatoista Globe.gl:n sisalla) ja '
+          + 'Opus-parven erat E0-E5 tehtavanantoineen (Fablemax 6.9.2026; '
+          + 'SUUNNITELMA, toteutus Opus-parvella).',
         'docs/moduulit/karttanostot-kattavuus.md — karttanostojen kattavuus '
           + 'maittain (kohteet, maastokohteet, eläintäyt, skandaalit, hetket) '
           + 'ja tavoite per maa; täytetään koneellisesti erissä.',

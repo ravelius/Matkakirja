@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1644';
+const CACHE = 'matkakirja-2026-08-09.1645';
 const SHELL = [
   './',
   './index.html',
@@ -175,6 +175,14 @@ const SHELL = [
   './js/linssit/keksinnot.js',
   './js/linssit/ihmisen-matka.js',
   './js/linssit/ihmisen-matka-data.js',
+  // Ihmisen matka värivirtoina (6.9.2026): virtojen aineisto ja maamaski
+  // tulevat linssin mukana; piirto ja laskenta seuraavat js/aikajana.js:ää.
+  './js/linssit/ihmisen-matka-virrat.js',
+  './js/linssit/ihmisen-matka-maamaski.js',
+  './js/aikajana-virrat.js',
+  './js/aikajana-virrat-laskenta.js',
+  // Laskenta Workerissa (hionta 6.9.2026): pääsäie ei jäädy avauksessa.
+  './js/aikajana-virrat-tyo.js',
   './js/linssit/rekisteri.js',
   './js/linssit/omistus.js',
   './js/linssit/pallo.js',

@@ -103,11 +103,21 @@ const ctx = await selain.newContext({ viewport: { width: 1280, height: 800 }, se
 const sivu = await ctx.newPage();
 await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
 if (PALLOLLA) {
-  // Jälkimmäinen reitti voittaa: Globe.gl, laattaluettelo ja laatat ämpäristä.
-  await sivu.route(/r2\.dev\//, async (route) => {
+  /*
+   * Jälkimmäinen reitti voittaa: Globe.gl, laattaluettelo ja laatat
+   * ämpäristä. ÄMPÄRIN OSOITE ON media.matkakirja.app, EI pub-*.r2.dev
+   * (sama korjaus kuin savuke-avauslento.mjs:ssä 6.9.2026): pelkkä
+   * r2.dev-reitti päästi kaiken ämpäriliikenteen selaimen omaan
+   * verkkoon, joka kaatui, eikä palloa koskaan rakennettu. CORS-otsake
+   * on pakollinen, koska laatat ladataan THREE:n tekstuurina.
+   */
+  await sivu.route(/media\.matkakirja\.app|r2\.dev/, async (route) => {
     const vastaus = await ampariHaku(route.request().url());
     if (!vastaus) { route.abort(); return; }
-    route.fulfill({ status: 200, contentType: vastaus.tyyppi ?? 'application/octet-stream', body: vastaus.body });
+    route.fulfill({
+      status: 200, contentType: vastaus.tyyppi ?? 'application/octet-stream', body: vastaus.body,
+      headers: { 'access-control-allow-origin': '*' },
+    });
   });
 }
 const virheet = [];
@@ -229,8 +239,9 @@ const eka = await sivu.evaluate(async () => {
     kuvia: document.querySelectorAll('.aikajana-kortti.nykyinen img').length,
   };
 });
+// Kortissa on vain nimi (v1637: vuosi on kellossa ja paneelin kuvatekstissä).
 vaadi('ensimmäinen tapahtuma: Watt syttyy, kortti ja paneeli täsmäävät',
-  eka.i === 0 && eka.palaa === 1 && /Watt/.test(eka.kortti) && /1769/.test(eka.kortti)
+  eka.i === 0 && eka.palaa === 1 && /Watt/.test(eka.kortti)
     && /Montgolfier/.test(eka.seuraava) && /lauhdut/i.test(eka.paneeli) && eka.kello === 'Vuosi 1769',
   JSON.stringify(eka).slice(0, 300));
 await sivu.screenshot({ path: join(ULOS, 'savuke-aikajana-watt.png') });
@@ -240,7 +251,20 @@ const karuselli = await sivu.evaluate(async () => {
   const { ui } = window.matkakirja;
   ui.aikajana.napautaKorttia(5);
   ui.aikajana.pysayta();
-  await new Promise((r) => setTimeout(r, 900));
+  /*
+   * Korttien liuku odotetaan LOPPUUN, ei kiinteää aikaa: kontin
+   * ohjelmisto-WebGL piirtää pallon 1–2 kehystä sekunnissa, ja 900 ms
+   * jälkeen nykyinen kortti oli pallolla vielä 410 px sivussa (mitattu
+   * 6.9.2026). Kaksi samaa lukemaa peräkkäin = liuku on ohi.
+   */
+  let edellinenX = null;
+  for (let k = 0; k < 40; k += 1) {
+    await new Promise((r) => setTimeout(r, 250));
+    const r = document.querySelector('.aikajana-kortti.nykyinen')?.getBoundingClientRect();
+    const x = r ? r.left + r.width / 2 : null;
+    if (x !== null && edellinenX !== null && Math.abs(x - edellinenX) < 0.5 && k >= 2) break;
+    edellinenX = x;
+  }
   const nauha = document.querySelector('.aikajana-nauha').getBoundingClientRect();
   const keski = nauha.left + nauha.width / 2;
   const tiedot = (valitsin) => [...document.querySelectorAll(valitsin)].map((k) => {
@@ -261,15 +285,16 @@ const karuselli = await sivu.evaluate(async () => {
     menneetVasemmalla: menneet.every((k) => k.x < nyk.x),
     tulevatOikealla: tulevat.every((k) => k.x > nyk.x),
     sivutPienempia: [...menneet, ...tulevat].every((k) => k.w < nyk.w * 0.7),
-    menneetSumeita: menneet.every((k) => Number(k.sumea) >= 1.5),
-    tulevatTarkkoja: tulevat.every((k) => Number(k.sumea) === 0),
+    // v1637: korttien blur poistettiin (css/aikajana.css: blur laskettiin
+    // joka kehykselle). Menneet ovat tarkkoja siinä kuin tulevatkin.
+    kaikkiTarkkoja: [...menneet, ...tulevat].every((k) => Number(k.sumea) === 0),
   };
 });
-vaadi('karuselli: nykyinen keskellä, menneet vasemmalla sumeina, tulevat oikealla tarkkoina',
+vaadi('karuselli: nykyinen keskellä, menneet vasemmalla, tulevat oikealla, sivut pieninä ja tarkkoina',
   karuselli.i === 5 && karuselli.keskella < 2 && karuselli.leikkaus >= 0
     && karuselli.menneita >= 3 && karuselli.tulevia >= 3
     && karuselli.menneetVasemmalla && karuselli.tulevatOikealla && karuselli.sivutPienempia
-    && karuselli.menneetSumeita && karuselli.tulevatTarkkoja
+    && karuselli.kaikkiTarkkoja
     && karuselli.nauhanLeveys === karuselli.ruutu,
   JSON.stringify(karuselli));
 await sivu.screenshot({ path: join(ULOS, 'savuke-aikajana-karuselli.png') });
@@ -402,13 +427,15 @@ const juttu = await sivu.evaluate(async () => {
   kortti?.querySelector('.tiedeliite-navinappi.edellinen')?.click();
   await new Promise((r) => setTimeout(r, 600));
   tila.edellinen = document.querySelector('.tiedeliite-kortti .looppi-otsikko')?.textContent ?? '';
-  tila.paneeli = document.querySelector('.aikajana-ilmio-sivu.esilla .aikajana-ilmio-nimi')?.textContent ?? '';
+  // Paneeli on v1637:ssä havainnekuva kuvatekstillä (vuosi ◈ otsikko),
+  // ei enää henkilörivi: seuraaminen näkyy kuvatekstin otsikosta.
+  tila.paneeli = document.querySelector('.aikajana-ilmio-sivu.esilla .aikajana-ilmiokuvateksti-nimi, .aikajana-ilmio-sivu.esilla .aikajana-ilmio-nimi')?.textContent ?? '';
   return tila;
 });
 vaadi('nykyisen kortin napautus avaa Tiedeliitteen, alanappi selaa edelliseen ja paneeli seuraa',
   juttu.auki && juttu.nimio === 'Tiedeliite' && /Penisilliini/.test(juttu.otsikko) && juttu.kasvoja >= 2
     && juttu.seuraavaPois === true && !juttu.dialogi && /Televisio/.test(juttu.edellinen)
-    && /Baird/.test(juttu.paneeli),
+    && /Televisio|Baird/.test(juttu.paneeli),
   JSON.stringify(juttu));
 await sivu.screenshot({ path: join(ULOS, 'savuke-aikajana-juttu.png') });
 
