@@ -1,3 +1,13 @@
+## 2026-09-06 05:04 UTC — KUVATOIMITUS → FABLE: Dunedin/Suva 12 miniatyyriä vastaanotettu ja kohdenimet varmennettu
+
+Vastaanotettu 04:35 UTC tilaus (fable-kohdekartat-dunedin-suva-20260906-0435): Dunedin 8 ja Suva 4 miniatyyriä. Alkuperäinen tilaus ja kaikki 12 kohdenimeä ovat sanatarkasti liitteessä [kohdekartat-dunedin-suva-12-miniatyyria-tilaus-20260906.json](kohdekartat-dunedin-suva-12-miniatyyria-tilaus-20260906.json).
+
+Main v1623 saapui tarkistuksen aikana: kaikki 12 nimeä ja koordinaattia täsmäävät nyt `KAUPUNKIKARTAT.dunedin`- ja `.suva`-tietueisiin commitissa `05cc51c516ed43e17dd5b4e7ec4582ef1afa72f8`. Miniatyyrikohdistukset puuttuvat vielä kummaltakin kaupungilta. Tilaus on tuotantojonossa; ennen generointia tarkistetaan vanha miniatyyriluettelo/R2, jotta valmiita kuvia ei tehdä uudestaan.
+
+Formaatti ja hyväksyntäreitti kirjattu: 1024×1024, aito alpha, seepiaviiva ja kevyt akvarelli, PNG/WebP, kuvateksti = pelin kohdenimi, yksi otto per kohde; tuotannon kuvatarkistus ja sen jälkeen Fablen hyväksyntä. Tämä on tilauksen vastaanottokuitti, ei valmis kuvatoimitus. Aiemmat 21 kohdekarttaminiatyyriä ja 20 Ihmisen matka -löytökuvaa säilyvät omissa jonoissaan. Maailman karttanostot sekä Porto Alegre/Asunción/Montreal ovat viestisi mukaan tulevia erillisiä tilauksia, joten en lisää niitä tähän 12 kuvan erään.
+
+---
+
 ## 2026-09-05 22:45 UTC — KUVATOIMITUS → FABLE: Sarajevo yksin; 20 + 21 kuvan jatkotilaukset jonossa
 
 **Sarajevo, uusi palaute:** omistaja kirjoitti 5.9. klo 21:09 UTC: "muuta asetelmaa ja poista toinen henkilö". Ehdotan Adnanin säilyttämistä yksin verstaassa; Lejlan väärintulkinta siirtyy matkaajalle. Hahmovalinta on ehdotus, sillä käyttäjä ei nimennyt poistettavaa henkilöä. Džezva-kysymys ja sen neljä vaihtoehtoa säilyvät. Vuoden 1873 fokusmerkintä säilyy, uusi marginaaliluonnoksen tulkinta on erikseen hyväksyttävää fiktiota. Paikka/kätkö 21:10-päätöksesi mukaan Kazandžilukin kuja. Konkreettiset tekstit, löydetty/tyhjä/väärin-haarat, tarkistetut lähteet ja muuttumaton palaute: [ehdotus](kuvapalaute-sarajevo-yksi-henkilo-2026-09-06.md), [tarkka tietue](kuvapalaute-sarajevo-yksi-henkilo-2026-09-06.json). Kuvaa ei ole vielä generoitu tai hyväksytty. Aiempi hyväksytty Emir v5 säilyy; pelin henkilö vaihtuu vasta omistajan kuvavalinnalla.
