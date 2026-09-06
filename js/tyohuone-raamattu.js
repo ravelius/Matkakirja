@@ -3527,7 +3527,14 @@ export const RAAMATTU = {
           + '-skriptilla, ei GitHub Actionsissa (mitattu 6.9.2026: z8 69 628 '
           + 'laattaa 0,5 h, 3,4 x runnerin ydinnopeus, ei aikakattoa); Fable '
           + 'valmistelee komennot ja omistaja ajaa ne; Actions-workflow jaa '
-          + 'varalle. Avaimet vain Macin ymparistossa, ei koskaan repoon.',
+          + 'varalle. Avaimet vain Macin ymparistossa, ei koskaan repoon. '
+          + 'TARKENNUS (omistaja 6.9.2026 ilta, sanatarkasti: "ei siita tule '
+          + 'mitaan laskua, joten pidetaan ios kaannos entisellaan. mutta nuo '
+          + 'vaiheet joissa menee kauan kannattaa siirtaa macille"): iOS-kaannos '
+          + 'ja TestFlight jaavat GitHub Actionsiin; Macille siirretaan '
+          + 'pitkakestoiset ajot - laattapoltot, pallon Mercator-sarja, '
+          + 'etusivupallon kuvasarja ja muut Chromium-renderoinnit seka '
+          + 'suorituskykymittaukset aidolla naytonohjaimella.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
