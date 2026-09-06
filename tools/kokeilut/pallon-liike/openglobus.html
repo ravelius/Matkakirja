@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kokeilu: OpenGlobus, XYZ-laatat</title>
+<!-- KIRJASTOKOKEILU (Fablemax 6.9.2026): pelin laatat OpenGlobus-pallolla. Rajapinta window.koe (ks. maplibre.html). -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@openglobus/og@0.28.7/lib/og.css">
+<style>
+  html, body { margin: 0; height: 100%; background: #2a1d12; overflow: hidden; }
+  #globus { position: absolute; inset: 0; }
+</style>
+</head>
+<body>
+<div id="globus"></div>
+<script type="module">
+import { Globe, XYZ, EmptyTerrain, LonLat } from 'https://cdn.jsdelivr.net/npm/@openglobus/og@0.28.7/lib/og.es.js';
+
+const haku = new URLSearchParams(location.search);
+const LAATAT = haku.get('laatat')
+  ?? 'https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-03a-nostot-c/{z}/{x}/{y}.jpg';
+const R = 6378137;
+
+const pallo = new XYZ('pallo', { url: LAATAT, isBaseLayer: true, maxNativeZoom: 8, maxZoom: 8, visibility: true });
+const globe = new Globe({ target: 'globus', name: 'kokeilu', terrain: new EmptyTerrain(), layers: [pallo], atmosphereEnabled: false, sun: { active: false } });
+window.globe = globe;
+const camera = globe.planet.camera;
+try { camera.setViewAngle?.(50); } catch { /* vanha versio */ }
+
+let nakyma = { lat: 37.98, lng: 23.73, korkeus: 2.5 };
+const asemoi = ({ lat, lng, korkeus }) => {
+  nakyma = { lat, lng, korkeus };
+  globe.planet.viewLonLat(new LonLat(lng, lat, korkeus * R));
+};
+let valmisOk;
+const valmis = new Promise((ok) => { valmisOk = ok; });
+setTimeout(() => { asemoi(nakyma); }, 500);
+setTimeout(() => valmisOk(), 3000);
+
+let ajo = null;
+const askel = () => {
+  requestAnimationFrame(askel);
+  if (!ajo) return;
+  const t = Math.min(1, (performance.now() - ajo.alku) / ajo.kesto);
+  const a = ajo.alusta; const b = ajo.kohde;
+  asemoi({
+    lat: a.lat + (b.lat - a.lat) * t, lng: a.lng + (b.lng - a.lng) * t,
+    korkeus: Math.exp(Math.log(a.korkeus) + (Math.log(b.korkeus) - Math.log(a.korkeus)) * t),
+  });
+  if (t >= 1) { const ok = ajo.ok; ajo = null; ok(true); }
+};
+requestAnimationFrame(askel);
+
+window.koe = {
+  nimi: '@openglobus/og', versio: '0.28.7', lisenssi: 'MIT',
+  valmis,
+  asetaNakyma: asemoi,
+  ajaNakyma(kohde, kesto) {
+    return new Promise((ok) => { ajo = { alusta: { ...nakyma }, kohde, kesto, alku: performance.now(), ok }; });
+  },
+  tila() {
+    const p = globe.planet;
+    return {
+      laattoja: p._renderedNodes?.length ?? null, ladattu: p._tileLoader?._loadedCount ?? null,
+      korkeus: +nakyma.korkeus.toFixed(3), lat: +nakyma.lat.toFixed(2), lng: +nakyma.lng.toFixed(2),
+      taso: p.maxCurrZoom ?? null,
+    };
+  },
+};
+</script>
+</body>
+</html>

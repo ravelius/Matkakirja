@@ -2526,3 +2526,23 @@ piste on 22 css-px kaupungista koilliseen, nappulan oikean olkapään
 vieressä, ja napautus avaa Ateenassa laattakysymyksen ja Sofiassa
 pöllön sähkekortin. Vartiot: `tests/pallopiste.test.mjs` ja
 savuke-pallolauta 15–16.
+**Liike ja zoom täydellä tarkkuudella — suunnitelma (6.9.2026 ilta,
+fablemax).** Omistaja v1642:sta: *"rannan ääriviiva … kasvaa niin
+paljon paksummaksi"*, *"Google Earthissä myös sisäänpäin zoomaus
+näyttää portaattomalta"*, *"löytyisikö netistä tähän jo valmista
+koodiratkaisua?"*. Mitattu (tools/savukkeet/mittaa-pallon-liike.mjs,
+puhelin 390 × 844 dpr 3, 4×): reunan leveys levossa 2 px (Z8),
+liikkeessä 5 px (Z5, jonka rantaviiva on piirretty paksulla musteella);
+?laatu=aina pitää 2 px:n reunan mutta laattamoottorin updatePov maksaa
+Z8:lla 33 ms/kutsu (zoomissa max 558 ms), laatat kertyvät purkamatta
+(227 → 500 → 975) ja jopa 55 % niistä on pallon takapuolella. Valmiit
+kirjastot (MapLibre, 3d-tiles-renderer, Cesium, OpenGlobus) kokeiltiin
+omilla laatoilla eikä mikään täytä vaatimuksia kohtuullisella
+siirrolla. Valittu ratkaisu: oma laattakerros Globe.gl:n sisään —
+pyramidin laatat laatta kerrallaan pysyvinä, ruutupohjainen taso
+hystereesillä, ristihäive, LRU-kiintiö, pohjamoottori naulattuna
+tasoon ≤ 5; lepokerros ja liike/lepo-laatutilat poistuvat. Mittaukset,
+kirjastovertailu, algoritmi ja Opus-parven erät E0–E5 tehtävänantoineen:
+docs/moduulit/pallon-liike-taydella-tarkkuudella.md. Pelikoodia ei
+muutettu tässä vaiheessa.
+

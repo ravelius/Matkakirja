@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kokeilu: MapLibre GL JS, pallo rasterilaatoilla</title>
+<!--
+  KIRJASTOKOKEILU (Fablemax 6.9.2026, omistajan kysymys "löytyisikö
+  netistä tähän jo valmista koodiratkaisua?"). Sivu ajaa pelin omat
+  Web Mercator -laatat (tools/tee-pallolaatat.mjs) MapLibre GL JS:n
+  globe-projektiolla ja tarjoaa mittarille (tools/savukkeet/
+  mittaa-kirjastokokeilu.mjs) saman rajapinnan kuin muut kokeilusivut:
+
+    window.koe = { nimi, versio, lisenssi, valmis, asetaNakyma,
+                   ajaNakyma, tila }
+
+  Kirjasto haetaan CDN:stä (mittari reitittää pyynnöt Noden fetchillä
+  kontissa). Ei kuulu peliin: tools/kokeilut on kokeiluja varten.
+-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@6.7.0/dist/maplibre-gl.css">
+<style>
+  html, body { margin: 0; height: 100%; background: #2a1d12; }
+  #kartta { position: absolute; inset: 0; }
+</style>
+</head>
+<body>
+<div id="kartta"></div>
+<script type="module">
+import * as maplibregl from 'https://cdn.jsdelivr.net/npm/maplibre-gl@6.7.0/dist/maplibre-gl.mjs';
+
+const LAATAT = new URLSearchParams(location.search).get('laatat')
+  ?? 'https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-03a-nostot-c/{z}/{x}/{y}.jpg';
+/*
+ * tileSize 64: 256 px:n laatta piirretään 64 css-pikseliin, jolloin
+ * MapLibre pyytää zoomia z + 2 vastaavan tason — Z8 on käytössä jo
+ * zoomilla 6 ja laatan pikseli on dpr 3:lla laitepikselin kokoinen
+ * (sama kuin pelin lepolaatu). Vaihda ?tilesize=256 nähdäksesi kirjaston
+ * oletuksen.
+ */
+const TILESIZE = Number(new URLSearchParams(location.search).get('tilesize') ?? 64);
+const FADE = Number(new URLSearchParams(location.search).get('fade') ?? 300);
+
+const map = new maplibregl.Map({
+  container: 'kartta',
+  style: {
+    version: 8,
+    sources: { pallo: { type: 'raster', tiles: [LAATAT], tileSize: TILESIZE, minzoom: 0, maxzoom: 8 } },
+    layers: [{ id: 'pallo', type: 'raster', source: 'pallo', paint: { 'raster-fade-duration': FADE } }],
+    projection: { type: 'globe' },
+  },
+  center: [23.73, 37.98],
+  zoom: 2,
+  attributionControl: false,
+  fadeDuration: FADE,
+});
+
+/*
+ * Globe.gl:n korkeus → zoom: pallon fov 50° näyttää 53,4 · korkeus astetta
+ * ruudun korkeudella; MapLibre näyttää zoomilla z 360/(512·2^z) astetta
+ * css-pikseliä kohti päiväntasaajalla.
+ */
+const zoomKorkeudesta = (korkeus) => Math.log2((innerHeight * 360) / (512 * 53.4 * Math.max(0.005, korkeus)));
+const korkeusZoomista = (z) => (innerHeight * 360) / (512 * 53.4 * 2 ** z);
+
+let valmisOk;
+const valmis = new Promise((ok) => { valmisOk = ok; });
+map.once('idle', () => valmisOk());
+
+window.koe = {
+  nimi: 'maplibre-gl', versio: '6.7.0', lisenssi: 'BSD-3-Clause',
+  valmis,
+  asetaNakyma({ lat, lng, korkeus }) {
+    map.jumpTo({ center: [lng, lat], zoom: zoomKorkeudesta(korkeus) });
+  },
+  ajaNakyma({ lat, lng, korkeus }, kesto) {
+    return new Promise((ok) => {
+      map.once('moveend', () => ok(true));
+      map.easeTo({ center: [lng, lat], zoom: zoomKorkeudesta(korkeus), duration: kesto, easing: (t) => t, essential: true });
+    });
+  },
+  tila() {
+    const cache = map.style?.sourceCaches?.pallo;
+    const laatat = cache ? Object.values(cache._tiles) : [];
+    const c = map.getCenter();
+    return {
+      laattoja: laatat.length, ladattu: laatat.filter((t) => t.state === 'loaded').length,
+      taso: Math.round(map.getZoom() + Math.log2(512 / TILESIZE)), zoom: +map.getZoom().toFixed(2),
+      korkeus: +korkeusZoomista(map.getZoom()).toFixed(3), lat: +c.lat.toFixed(2), lng: +c.lng.toFixed(2),
+    };
+  },
+};
+</script>
+</body>
+</html>
