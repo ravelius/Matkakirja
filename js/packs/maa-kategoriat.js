@@ -35209,4 +35209,1467 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MAROKKO (MAR) — Afrikan toinen maalehti Egyptin jälkeen (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-marokko.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KAUPUNKIEN JA KARTTANOSTOJEN KANSSA: Tangerin ja Marrakechin
+   * litteät kulttuurinostot (africa-kulttuuri.js) kattavat jo Matissen,
+   * minttuteen, gnawan, Jemaa el-Fnan, halqan ja tajinen; maastokohteet-mar.js
+   * Toubkalin, Volubiliksen, Aït Benhaddoun, Essaouiran, Chefchaouenin,
+   * Hassan-tornin, Erg Chebbin, El Jadidan ja Lixuksen; skandaalit.js
+   * Agadirin 1911 ja Annualin 1921; elaintakyt.js berberiapinan. Maalehti
+   * EI toista niitä: se kertoo Fèsin synnystä, al-Qarawiyyinista, kolmen
+   * kuninkaan taistelusta, Songhai-retkestä, ruoasta, käsityöstä,
+   * musiikista ja luonnosta.
+   *
+   * SISÄLTÖLINJAUS: nykypolitiikkaa ei käsitellä, eikä Länsi-Saharan
+   * kysymystä mainita.
+   *
+   * KUVAT: 18 nostokuvaa Commonsista, lisenssi ja tekijä tarkistettuina,
+   * leveys >= 1200 px, jokainen katsottu silmin. KAKSI NOSTOA JÄI
+   * KUVATTOMAKSI (andalusialainen nuba ja malhun) — kuvatilaukset on
+   * kirjattu raporttiin. HYLÄTYT: "Argan Oil Cooperative 01" (kaksi
+   * tunnistettavaa kasvoa lähikuvassa), "Fez Chouara Tannery
+   * (54238811661)" (yksittäinen työntekijä tunnistettavissa),
+   * "South Tazekka Peak Atlas Cedar" (kaukokuva, jossa setrit eivät
+   * erotu ja huipulla on mastoja).
+   */
+  MAR: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Marokko ei koskaan kuulunut Osmanien valtakuntaan, ja '
+          + 'siksi sen tarina kulkee omaa uraansa: pakolaisprinssistä '
+          + 'kaupunkiin, kaupungista yliopistoon ja yliopistosta '
+          + 'aavikon yli Nigerin mutkaan.',
+      nostot: [
+        {
+          otsikko: 'Prinssi, joka pakeni ja perusti valtion',
+          aika: '789–808',
+          tiedosto: 'Moulay Idriss Zerhoun, Morocco - panoramio.jpg',
+          teksti: 'Idris ibn Abdallah saapui vuonna 789 Tangeriin ja '
+              + 'siitä Walīlīhin, roomalaisen Volubiliksen viereen. '
+              + 'Kaupunkia asutti awraba-berberiheimo, jonka päällikön '
+              + 'tyttären Kenzan hän nai — ja siitä avioliitosta lasketaan '
+              + 'idrisidien dynastian synty. Hän hallitsi kolme vuotta ja '
+              + 'kuoli 791 ilmeisesti Bagdadin kalifin lähettien '
+              + 'myrkyttämänä. Poika Idris II syntyi vasta muutamaa '
+              + 'kuukautta myöhemmin, kasvoi heimon huomassa ja siirsi '
+              + 'hallintonsa vuonna 808 Fèsiin, josta hän teki '
+              + 'kukoistavan pääkaupungin. Isän hauta on yhä pyhiinvaellus'
+              + 'kohde vuorenrinteen kaupungissa, joka kantaa hänen nimeään.',
+          selite: 'Moulay Idriss Zerhoun nousee kahdelle kukkulalle '
+            + 'Volubiliksen vieressä, ja sen keskellä on vihreäkattoinen '
+            + 'pyhäkkö, jossa Idris I on haudattuna.',
+          lahde: 'Ben Bender, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Yliopisto, jonka perusti kauppiaan tytär',
+          aika: '857–859',
+          tiedosto: 'Qarawiyyin courtyard and pavilion.jpg',
+          teksti: 'Fatima al-Fihrin suku oli muuttanut Tunisian '
+              + 'Kairouanista Fèsiin 800-luvun alussa, ja kokonainen '
+              + 'kaupunginosa oli täynnä samaa tulijajoukkoa. Kun isä '
+              + 'kuoli, Fatima ja hänen sisarensa Mariam perivät suuren '
+              + 'omaisuuden, ja Fatima lupasi käyttää perintönsä '
+              + 'kokonaan moskeijaan. Siitä kasvoi al-Qarawiyyin, '
+              + '"kairouanilaisten moskeija", ja sen ympärille '
+              + 'opetuslaitos, jota Unesco ja Guinness World Records '
+              + 'pitävät maailman vanhimpana yhä toimivana '
+              + 'korkeakouluna. Osa historioitsijoista epäilee tarinaa: '
+              + 'seinästä löytyi 1900-luvulla laastikerrosten alta '
+              + 'perustamiskirjoitus, jonka mukaan moskeijan rakennutti '
+              + 'Dawud ibn Idris vuonna 877.',
+          selite: 'Al-Qarawiyyinin pihalla on kaksi puista lehtimajaa, '
+            + 'joiden mallina ovat Alhambran leijonapihan paviljongit; '
+            + 'lattia on ladottu zellij-mosaiikista.',
+          lahde: 'Ahmed.magdy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Taistelu, jossa kuoli kolme kuningasta',
+          aika: '4.8.1578',
+          tiedosto: 'Battle of alcacer quibir.jpg',
+          teksti: 'Syrjäytetty sulttaani Abu Abdallah Mohammed II pyysi '
+              + 'apua Portugalin kuninkaalta Sebastian I:ltä saadakseen '
+              + 'valtaistuimensa takaisin sedältään Abd al-Malikilta. '
+              + 'Armeijat kohtasivat Ksar el-Kebirin lähellä 4. elokuuta '
+              + '1578. Päivä päättyi niin, että kaikki kolme johtajaa '
+              + 'olivat kuolleet: Abd al-Malik kuoli kesken taistelun, '
+              + 'Abu Abdallah hukkui jokeen paetessaan ja 24-vuotias '
+              + 'Sebastian kaatui kentälle jättämättä perillistä. '
+              + 'Marokossa taistelua sanotaan kolmen kuninkaan '
+              + 'taisteluksi. Vangituista portugalilaisaatelisista '
+              + 'maksetut lunnaat veivät Portugalin lähes vararikkoon, '
+              + 'ja kaksi vuotta myöhemmin Espanjan Filip II otti maan '
+              + 'haltuunsa.',
+          selite: 'Aikalaispiirros kuvaa taistelujärjestyksen: '
+            + 'portugalilaiset ovat asettuneet neliöön keskelle tasankoa '
+            + 'ja marokkolainen ratsuväki kaartaa sen ympäri.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kultainen sulttaani ja retki Nigerille',
+          aika: '1590–1591',
+          tiedosto: 'El Badi Palace, Marrakesh, Morocco, 20250125 0952 7109.jpg',
+          teksti: 'Taistelun voittajaksi jäi Ahmad al-Mansur, jota '
+              + 'kutsuttiin nimellä al-Dhahabī, kultainen. Lunnasrahoilla '
+              + 'hän rakensi Marrakechiin El Badin palatsin, jonka työ '
+              + 'alkoi jo joulukuussa 1578 ja kesti viisitoista vuotta. '
+              + 'Kultaa hän halusi lisää, ja se oli Saharan takana: '
+              + '16. lokakuuta 1590 lähti aavikon yli neljäntuhannen '
+              + 'miehen armeija, jota johti espanjalaissyntyinen Judar '
+              + 'Pasha. Tondibin taistelussa songhailaisia oli '
+              + 'nelinkymmentätuhatta, mutta heillä ei ollut ruutiaseita. '
+              + 'Marokkolaiset ryöstivät Timbuktun, Djennén ja pääkaupunki '
+              + 'Gaon — ja huomasivat, ettei Saharan takaista valtakuntaa '
+              + 'voi hallita. Kaupungit menetettiin pian vuoden 1620 jälkeen.',
+          selite: 'El Badin palatsista ovat jäljellä vain paksut '
+            + 'savimuurit ja pihan altaat; muurien harjalla pesii '
+            + 'kattohaikaroita.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Marokkolaisessa keittiössä makea ja suolainen ovat '
+          + 'samalla lautasella, ja arvokkaimmat raaka-aineet syntyvät '
+          + 'hitaasti: puusta, joka kasvaa vain täällä, ja padasta, joka '
+          + 'kiehuu koko aamun.',
+      tehtava: {
+        kysymys: 'Kuinka paljon kuivattua arganin hedelmää tarvitaan yhteen litraan öljyä?',
+        vaihtoehdot: [
+          'Noin neljä kiloa hedelmää',
+          'Noin neljäkymmentä kiloa',
+          'Noin kaksisataa kiloa',
+          'Puolisen kiloa hedelmää',
+        ],
+        oikea: 1,
+        fakta: 'Argania kasvaa luonnonvaraisena vain Marokossa ja '
+            + 'Lounais-Algeriassa, ja öljyn hinta selittyy sillä, miten '
+            + 'vähän yhdestä sadosta tulee.',
+      },
+      nostot: [
+        {
+          otsikko: 'Puu, joka antaa litran kerrallaan',
+          tiedosto: 'Argan Tree near Tafraoute.jpg',
+          teksti: 'Argania kasvaa luonnonvaraisena vain Marokossa ja '
+              + 'Lounais-Algeriassa, ja sen ytimistä puristetaan öljyä. '
+              + 'Yhden litran saamiseksi tarvitaan noin neljäkymmentä '
+              + 'kiloa kuivattua hedelmää: pähkinän sisällä on vain yhdestä '
+              + 'kolmeen ydintä, ja niistäkin öljyä irtoaa kolmannes tai '
+              + 'puolet. Ruokaöljyä varten ytimet paahdetaan kevyesti, '
+              + 'jauhetaan ja puristetaan, ja puristejäte menee karjan '
+              + 'rehuksi. Työ on perinteisesti berberinaisten, ja se '
+              + 'tehdään osuuskunnissa: Essaouiran takamaastossa toimi '
+              + 'vuonna 2020 noin kolmesataa pienyritystä. Koneellisesti '
+              + 'puristettu öljy maksaa alle puolet osuuskuntien öljystä.',
+          selite: 'Arganin oksat kasvavat matalalle ja tiheään, ja puu '
+            + 'kestää kuivuutta, joka tappaisi useimmat muut puut.',
+          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Piiras, joka on sekä suolainen että makea',
+          tiedosto: 'Pastilla from Souk Jmiaa in Casablanca 17.jpg',
+          teksti: 'Pastilla tarjoillaan juhlaruoan alkuruokana. Sen '
+              + 'kuori on warqa, taikinalevy, joka syntyy läiskimällä '
+              + 'tahmeaa taikinaa kuumalle levylle limittäisiksi '
+              + 'ympyröiksi. Täytteenä oli ennen kyyhkynpoikanen, nykyään '
+              + 'useimmiten liemessä haudutettu ja revitty kana, ja sen '
+              + 'päälle tulee kerros paahdettua mantelia, kanelia ja '
+              + 'sokeria. Historioitsija Anny Gaul on löytänyt 1200-luvun '
+              + 'andalusialaisesta keittokirjasta ohjeen, jossa kyyhky '
+              + 'kypsennetään kanelin, mantelin, sahramin ja kananmunan '
+              + 'kanssa ja ruoka kypsennetään kahteen kertaan — sama '
+              + 'kaava kuin nyt. Toisen tulkinnan mukaan piiras saapui '
+              + 'Tetouaniin osmanien Algeriasta vasta 1830 jälkeen.',
+          selite: 'Warqa-levyt tehdään käsin: taikinamöykkyä läiskitään '
+            + 'kuumalle pyörylle limittäin, kunnes syntyy paperinohut '
+            + 'lehti.',
+          lahde: 'Mounir Neddi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Mauste, jossa on kaksikymmentäseitsemän ainesta',
+          tiedosto: 'Moroccan spices.jpg',
+          teksti: 'Ras el hanout tarkoittaa kaupan parasta, ja siihen '
+              + 'voidaan yhdistää jopa kaksikymmentäseitsemän maustetta. '
+              + 'Osa niistä tuli idästä arabien mukana, mutta moni on '
+              + 'maan omaa satoa: sahrami Taliouinesta, minttu ja oliivit '
+              + 'Meknèsistä, appelsiinit ja sitruunat Fèsistä. '
+              + 'Marokkolaisen ruoan tunnistaa säilötystä sitruunasta, '
+              + 'arganöljystä, kuivatuista hedelmistä ja smenistä, '
+              + 'suolatusta ja kypsytetystä voista, jonka tuoksu on '
+              + 'väkevä. Perusvilja on nykyään vehnä ja riisi, mutta '
+              + '1900-luvun puoliväliin asti etelässä syötiin ennen '
+              + 'kaikkea ohraa.',
+          selite: 'Marokkolaisen maustekaupan mausteet ladotaan '
+            + 'kartioiksi peltiastioiden päälle, jotta ostaja näkee värin '
+            + 'ja pääsee haistamaan.',
+          lahde: 'Kyle Simourd, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Keitto, joka katkaisee paaston',
+          tiedosto: 'Harira..JPG',
+          teksti: 'Harira on koko Pohjois-Afrikan keitto, mutta jokainen '
+              + 'maa tekee sen omalla tavallaan. Marokkolainen versio '
+              + 'nojaa tomaattiin, linsseihin ja kikherneisiin, ja se '
+              + 'maustetaan inkiväärillä, kanelilla ja korianterilla. '
+              + 'Suuruste on tadouira, jauhon ja veden seos, joka '
+              + 'kaadetaan pataan vasta lopuksi ja tekee keitosta '
+              + 'samettisen. Talvella harira syödään illallisena, mutta '
+              + 'ramadanin aikana se on se lautanen, joka odottaa '
+              + 'auringonlaskua: keitto, leipää ja taateleita. Samaan '
+              + 'vuodenaikaan kuuluu myös bissara, härkäpavuista keitetty '
+              + 'sakea sose.',
+          selite: 'Marokkolaisessa hariran kulhossa näkyvät kikherneet, '
+            + 'linssit ja ohuet nuudelit sekä tomaatista tuleva punainen '
+            + 'liemi.',
+          lahde: 'Miansari66, Wikimedia Commons (CC0)',
+        },
+      ],
+    },
+    {
+      id: 'kasityo',
+      nimi: 'Käsityö',
+      johdanto: 'Fèsin medinassa työ jaetaan kortteleittain, ja moni '
+          + 'ammatti tekee yhä samat liikkeet kuin tuhat vuotta sitten — '
+          + 'myös silloin, kun kukaan ei enää muista, miten kone toimi.',
+      nostot: [
+        {
+          otsikko: 'Altaat, joissa väri on kasvia',
+          tiedosto: 'Chouara Tannery - 154 - Marokko Handybilder 2018 - Fes (27347707917).jpg',
+          teksti: 'Chouara on Fèsin vanhimman kaupunginosan suurin '
+              + 'parkitsemo. Vuodat liotetaan ensin valkoisissa '
+              + 'liuoksissa, joissa on lehmänvirtsaa, kyyhkynulosteita, '
+              + 'poltettua kalkkia, suolaa ja vettä; se kestää kahdesta '
+              + 'kolmeen vuorokautta ja tekee nahasta pehmeän ja '
+              + 'väriä imevän. Sitten tulevat värialtaat: unikko antaa '
+              + 'punaisen, indigo sinisen ja henna oranssin. Lopuksi '
+              + 'nahat kuivataan auringossa. Koneita ei käytetä lainkaan. '
+              + 'Kronikoitsija al-Jazna\'in mukaan kaupungissa oli '
+              + 'almohadien aikana 86 parkitsemoa, ja nahkaa vietiin '
+              + 'Bagdadiin asti.',
+          selite: 'Chouaran altaat täyttävät kokonaisen korttelin: '
+            + 'valkoiset liotusaltaat ovat vasemmalla ja pyöreät '
+            + 'väriastiat oikealla.',
+          lahde: 'Uwe Brodrecht, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Palapeli, joka ladotaan nurin päin',
+          tiedosto: 'Zellige upside-down assembly.jpg',
+          teksti: 'Zellij tehdään lasitetuista laatoista, jotka poltetaan '
+              + 'ensin noin kymmenen sentin neliöiksi. Sen jälkeen '
+              + 'käsityöläinen hakkaa niistä pienellä kirvesmäisellä '
+              + 'vasaralla muotoja, jotka hän on opetellut ulkoa, ja '
+              + 'palat sovitetaan yhteen kuvioksi — kuvapuoli alaspäin, '
+              + 'niin että työn aikana näkyy vain nurja puoli. Varhaisin '
+              + 'ajoitettu marokkolainen zellij on Kutubiyya-moskeijan '
+              + 'minareetissa 1100-luvun puolivälistä. Tetouanissa '
+              + 'tehdään toisin: siellä palat leikataan ennen polttoa, '
+              + 'jolloin emali kestää paremmin mutta värit jäävät '
+              + 'himmeämmiksi ja saumat väljemmiksi.',
+          selite: 'Zellij-paneeli kootaan kuvapuoli alaspäin, ja vasta '
+            + 'kun laasti on kuivunut, se käännetään ympäri.',
+          lahde: 'Jadcooper, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kello, jota kukaan ei enää osaa korjata',
+          aika: '1357',
+          tiedosto: 'Fez Dar al-Magana (54252219356).jpg',
+          teksti: 'Vastapäätä Bou Inanian medresaa Fèsissä on talo, jonka '
+              + 'julkisivussa on kaksitoista ikkunaa ja niiden alla '
+              + 'messinkimaljat. Kronikoitsija al-Jazna\'in mukaan '
+              + 'vesikello valmistui 6. toukokuuta 1357, ja sen '
+              + 'suunnitteli ajanlaskuun erikoistunut Abu al-Hassan ibn '
+              + 'Ali Ahmed el-Tlemsani. Oletetaan, että ovien takana '
+              + 'kulki pieniä vaunuja köyden varassa: toisessa päässä '
+              + 'riippui paino, toisessa kellui paino tasaisesti '
+              + 'tyhjenevän vesialtaan pinnalla, ja kerran tunnissa yksi '
+              + 'ovi aukesi ja metallipallo putosi maljaan. Kello on '
+              + 'ollut rikki sukupolvien ajan, maljat irrotettiin 2004, '
+              + 'eikä korjaus ole onnistunut — kukaan ei tiedä varmasti, '
+              + 'miten se toimi.',
+          selite: 'Dar al-Maganan julkisivussa on kaksitoista kaari-ikkunaa '
+            + 'ja niiden alla ulos työntyvät puupalkit, jotka kannattivat '
+            + 'maljojen suojakattoa.',
+          lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kaupunki, joka teki savesta ammatin',
+          tiedosto: 'SafiTöpferei.jpg',
+          teksti: 'Safi on Atlantin rannikon kaupunki, jossa asuu noin '
+              + '346 000 ihmistä ja joka oli portugalilaisten hallussa '
+              + 'vuosina 1488–1541. Savenvalanta oli kaupungissa vanhaa '
+              + 'työtä, mutta 1900-luvun alussa marokkolainen mestari '
+              + 'Boujemâa Lamali perusti sinne keramiikkakoulun '
+              + 'siirtomaahallinnon tuella, ja siitä lähtien keramiikka '
+              + 'on ollut Safin elinkeino: ennen koronapandemiaa '
+              + 'kaupungissa oli 212 työpajaa ja kaksituhatta '
+              + 'rekisteröityä käsityöläistä sekä tuhansia '
+              + 'rekisteröimättömiä. Samasta satamasta lähtee myös suurin '
+              + 'osa maan sardiinisaaliista.',
+          selite: 'Safin savenvalajien kukkulalla astiat poltetaan '
+            + 'valkoisiksi kalkituissa uuneissa, joiden polttopuut '
+            + 'pinotaan katolle.',
+          lahde: 'Ziegler175, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Marokossa on kolme musiikkia kolmelle eri paikalle: '
+          + 'palatsin andalusialainen sarja, käsityöläiskorttelin '
+          + 'runolaulu ja kylänraitin rumpupiiri.',
+      nostot: [
+        {
+          otsikko: 'Sarja jokaiselle vuorokauden tunnille',
+          // Kuvaton (Opus 6.9.2026): Commonsin haut andalusialaisesta
+          // orkesterista palauttivat vain vanhoja kirjaskannauksia, eikä
+          // vapaata kuvaa marokkolaisesta al-Ala-yhtyeestä löytynyt.
+          // Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Andalusialainen taidemusiikki tuli Marokkoon '
+              + 'al-Andalusista, ja täällä sitä kutsutaan nimellä al-Ala. '
+              + 'Sen perusmuoto on nuba, sarja, joka rakentuu yhden '
+              + 'sävelmoodin varaan ja kestää noin tunnin. Perimätiedon '
+              + 'mukaan nubia oli alun perin kaksikymmentäneljä, yksi '
+              + 'vuorokauden jokaista tuntia kohti. Nimi tulee sanasta '
+              + 'nawbah, vuoro: muusikko odotti verhon takana, kunnes '
+              + 'verhonvartija tuli kertomaan, että vuoro on hänen. '
+              + 'Sanat ovat muwashshah- ja zajal-runoutta, ja lajin '
+              + 'kaupungit ovat Tetouan, Fès, Meknès, Rabat ja Oujda.',
+          selite: 'Nuba on tunnin mittainen sarja, joka pysyy koko ajan '
+            + 'samassa sävelmoodissa ja kiihtyy loppua kohti.',
+        },
+        {
+          otsikko: 'Runoutta, jota lauloivat käsityöläiset',
+          aika: '1400-luvulta',
+          // Kuvaton (Opus 6.9.2026): Commonsissa on malhunista vain
+          // videotiedostoja, ei valokuvia. Kuvatilaus on kirjattu
+          // raporttiin.
+          teksti: 'Malhun tarkoittaa melodista runoa. Se syntyi '
+              + 'Tafilaltin keitailla 1400-luvulla puhtaana runoutena ja '
+              + 'levisi sieltä kaupunkeihin, joissa siitä tuli '
+              + 'käsityöläiskiltojen miesten oma laji: suutarit, '
+              + 'satulasepät ja kutojat lauloivat sitä työn ääressä ja '
+              + 'juhlissa. Runo eli qasida rakentuu soolona lauletuista '
+              + 'säkeistä, joita katkoo harba-kertosäe; lopussa tulee '
+              + 'drīdka, joka kiihdyttää tahdin ja ilmoittaa, että runo '
+              + 'päättyy. Vanhoista tekijöistä tunnetuin on Abderrahman '
+              + 'El Majdoub, joka kuoli 1568. Unesco otti malhunin '
+              + 'aineettoman kulttuuriperinnön luetteloon joulukuussa 2023.',
+          selite: 'Malhun on laulettua runoutta, jonka kotipaikka ovat '
+            + 'Fèsin, Meknèsin ja Salén käsityöläiskorttelit.',
+        },
+        {
+          otsikko: 'Banjo, joka muutti maan musiikin',
+          aika: '1969',
+          tiedosto: 'Mawazine célèbre la confluence des cultures (5793143185).jpg',
+          teksti: 'Nass El Ghiwane perustettiin Casablancassa vuonna 1969, '
+              + 'ja se syntyi poliittisen avantgardeteatterin piiristä. '
+              + 'Yhtye toi ensimmäisenä marokkolaiseen musiikkiin '
+              + 'banjon, ja sen soundissa on transsimainen ote ja gnawan '
+              + 'vaikutus. Sanat nojaavat vanhaan pohjoisafrikkalaiseen '
+              + 'sufirunouteen, ennen kaikkea 1500-luvulla eläneeseen '
+              + 'Abderrahman El Majdoubiin — sama runoilija, jota '
+              + 'malhun-laulajat ovat laulaneet vuosisatoja. Martin '
+              + 'Scorsese kutsui yhtyettä Afrikan Rolling Stonesiksi ja '
+              + 'valitsi siitä kertovan dokumentin Trances vuodelta 1981 '
+              + 'World Cinema Foundationin ensimmäiseksi restauroitavaksi '
+              + 'elokuvaksi.',
+          selite: 'Nass El Ghiwane esiintyi Rabatin Mawazine-festivaalilla; '
+            + 'lavalla soivat banjo, basso ja käsirummut.',
+          lahde: 'Naoufel Cherkaoui, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Tanssi, jota ei voi viedä pois kylästä',
+          tiedosto: 'Ahwach Aoulouz.png',
+          teksti: 'Ahwash on eteläisen Marokon amazigh-kylien yhteinen '
+              + 'esitys, jossa tanssi, laulu, runo ja kehärummut '
+              + 'kuuluvat samaan kokonaisuuteen. Esiintyjiä on kaksi '
+              + 'suurta ryhmää, tavallisesti miehet ja naiset '
+              + 'vastakkain, ja ne vuorottelevat: toinen laulaa säkeen, '
+              + 'toinen vastaa. Osallistujia on usein yli kaksikymmentä '
+              + 'ja toisinaan puolitoistasataa, ja juuri siksi ahwash '
+              + 'esitetään harvoin oman kylän ulkopuolella — koko '
+              + 'joukkoa ei saa liikkeelle. Siitä seuraa, että jokaisella '
+              + 'kylällä on oma versionsa. Laji elää Ouarzazaten seudulla, '
+              + 'Drâan laaksossa, Sousissa ja Korkeassa Atlaksessa.',
+          selite: 'Ahwash-esityksessä rumpalit istuvat keskellä ja '
+            + 'laulajat seisovat kaaressa heidän ympärillään.',
+          lahde: 'Dounia Benjelloun-Mezian, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Marokko on kolme maata päällekkäin: setrimetsä '
+          + 'vuorten yläpuolella, laguuni rannikolla ja kylmä '
+          + 'merivirta niiden edessä.',
+      nostot: [
+        {
+          otsikko: 'Metsä, joka kasvaa kahden kilometrin korkeudessa',
+          tiedosto: 'Cedar forest, Morocco.jpg',
+          teksti: 'Atlaksensetri on kotoperäinen Marokon Rifissä ja '
+              + 'Atlasvuorissa sekä Algerian Tell-Atlaksessa. Se kasvaa '
+              + '1 170–2 200 metrin korkeudessa, usein puhtaina metsinä. '
+              + 'Marokossa on maailman suurin setripinta-ala, noin '
+              + '163 000 hehtaaria, ja siitä 115 000 hehtaaria eli neljä '
+              + 'viidesosaa on Keski-Atlaksessa. Metsä on kutistunut: '
+              + 'vuoden 1927 tiedoissa pelkästään Keski-Atlaksessa oli yli '
+              + '150 000 hehtaaria, ja Rifin metsistä on jäljellä enää '
+              + 'kuudestoistaosa maan setrialasta. Algeriassa laji on '
+              + 'taantunut 23 000 hehtaarista alle 15 000:een tulipalojen '
+              + 'ja hakkuiden takia.',
+          selite: 'Keski-Atlaksen setrimetsässä sataa talvella lunta: '
+            + 'puiden oksat levittyvät litteiksi katoksiksi ja maa on '
+            + 'valkoisena.',
+          lahde: 'Der-Herr-Simo-95, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Leijona, jonka harja ulottui kyynärpäihin',
+          aika: '1960-luku',
+          tiedosto: 'Barbary lion.jpg',
+          teksti: 'Atlasleijona eli Pohjois-Afrikassa Marokosta '
+              + 'Egyptiin. Metsästys- ja havaintotietojen läpikäynti '
+              + 'osoitti, että pieniä ryhmiä saattoi säilyä Algeriassa '
+              + '1960-luvun alkuun ja Marokossa 1960-luvun puoliväliin; '
+              + 'sen jälkeen laji on luonnosta hävinnyt. Museoiden '
+              + 'täytetyt urokset ovat kuonosta hännänpäähän '
+              + '2,35–2,8-metrisiä, ja harjan karvat ovat 8–22 '
+              + 'senttimetriä pitkiä; osalla harja jatkui hartioiden yli '
+              + 'ja vatsan alta kyynärpäihin asti. Selitykseksi on '
+              + 'tarjottu Atlaksen muuta Afrikkaa kylmempää talvea. '
+              + 'Rabatin eläintarhan leijonat olivat aatelisten ja '
+              + 'berberien lahjoja kuningasperheelle: kun perhe joutui '
+              + '1953 maanpakoon, niitä oli 21.',
+          selite: 'Vuonna 1893 Algeriassa otettu valokuva on harvoja '
+            + 'kuvia luonnossa eläneestä atlasleijonasta.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Laguuni, jossa lasketaan satatuhatta lintua',
+          tiedosto: 'Lagune Bleu Moulay Bousselham.jpg',
+          teksti: 'Merja Zerga on 4 500 hehtaarin rannikkolaguuni, jonka '
+              + 'keskisyvyys on vain puolitoista metriä. Se on '
+              + 'Ramsar-kohde ja yksi Itä-Atlantin muuttoreitin '
+              + 'avainpaikoista: lajeja on sata, talvella laguunilla on '
+              + '15 000–30 000 sorsalintua ja säännöllisesti '
+              + '50 000–100 000 kahlaajaa. Talvivieraita ovat muun muassa '
+              + 'ruostesorsa, marmorisorsa, isoflamingo, avosetti ja '
+              + 'tundrakurmitsa, ja vakituisiin kuuluu suopöllö. '
+              + 'Talvivieraiden luettelossa on myös siperiankuovi — laji, '
+              + 'jota ei ole enää löydetty mistään ja jonka viimeiset '
+              + 'säännölliset talvehtimispaikat olivat juuri täällä.',
+          selite: 'Merja Zergan laguuni avautuu merelle kapean suun '
+            + 'kautta, ja sen keskellä on laajoja hiekkasärkkiä, jotka '
+            + 'paljastuvat laskuvedellä.',
+          lahde: 'Younes MAHRACH, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Putous, jonka nimi tarkoittaa jauhamista',
+          tiedosto: 'Cascades d\'Ouzoud.jpg',
+          teksti: 'Ouzoud on yhteisnimi useille putouksille Azilalin '
+              + 'maakunnassa Keski-Atlaksessa. Vesi putoaa kaikkiaan '
+              + '110 metriä kolmessa portaassa El-Abid-joen rotkoon; '
+              + 'joen nimi tarkoittaa orjien jokea. Azilalin kaupunkiin '
+              + 'on matkaa 36 kilometriä ja Marrakechiin 150. Nimi '
+              + 'ouzoud tarkoittaa berberiksi viljan jauhamista, ja se '
+              + 'kertoo, mihin vettä käytettiin ennen kuin sitä tultiin '
+              + 'katsomaan: putouksen yläpuolella on yhä pieniä '
+              + 'vesimyllyjä, joissa jauhettiin kylän vilja. Alempana '
+              + 'rotkossa kasvaa oliivipuita, joita kastellaan samasta '
+              + 'joesta.',
+          selite: 'Ouzoudin putoukset syöksyvät punaruskeaa kalliota '
+            + 'pitkin kolmessa portaassa, ja alin allas jää sumun '
+            + 'peittoon.',
+          lahde: 'Tomkeene, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+  ],
+  /*
+   * ALGERIA (DZA) — Afrikan kolmas maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-algeria.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KOHTEIDEN JA KARTTANOSTOJEN KANSSA: Saharan ja Ahaggarin
+   * litteät kulttuurinostot (africa-kulttuuri.js) kattavat jo tuaregit,
+   * tifinaghin, suolakaravaanit, Assekremin, imzad-viulun ja Tin Hinanin;
+   * maastokohteet-dza.js Timgadin, Djémilan, Tipasan, Tassilin
+   * kalliotaiteen, Tlemcenin, M’zabin laakson ja Constantinen
+   * (Cirta, Numidia, Jugurtha); skandaalit.js kärpäsviuhkatapauksen 1827
+   * ja Gerboise Bleuen 1960; elaintakyt.js fennekin. Maalehti EI toista
+   * niitä: historia alkaa rustamideista, luonto välttää fennekin, ja
+   * antiikin rauniot on jätetty karttanostoille.
+   *
+   * SISÄLTÖLINJAUS: vuosien 1954–1962 sodan väkivaltaa ja 1990-luvun
+   * sisällissotaa ei kuvata; itsenäistyminen kerrotaan äänestyksinä ja
+   * päivämäärinä. Nykypolitiikkaa ei käsitellä.
+   *
+   * KUVAT: Commons, lisenssi ja tekijä extmetadatasta, leveys >= 1200 px,
+   * jokainen katsottu silmin. Kuvattomat nostot on merkitty
+   * rivikommentein ja kirjattu raporttiin kuvaputkelle.
+   */
+  DZA: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Algerian tarina on kolmen pääkaupungin tarina: aavikon '
+          + 'reunan imaamivaltion, Välimeren merivallan ja lopulta '
+          + 'tasavallan, joka valitsi itsenäisyyspäiväkseen saman '
+          + 'päivämäärän kuin miehityksen alku.',
+      nostot: [
+        {
+          otsikko: 'Imaamivaltio, joka otti vastaan toisinajattelijat',
+          aika: '777–909',
+          tiedosto: 'Ghardaia01.jpg',
+          teksti: 'Rustamidien valtio syntyi vuonna 777, kun persialaista '
+              + 'sukua ollut Abd al-Rahman ibn Rustam valittiin ibadi'
+              + 'laisten imaamiksi. Pääkaupunki Tahert nousi ylängölle '
+              + 'nykyisen Tiaretin kohdalle, ja sen valta ulottui '
+              + 'lopulta Keski- ja Länsi-Algeriaan, Etelä-Tunisiaan ja '
+              + 'Libyan Jebel Nafusaan asti. Kaupungissa puhuttiin '
+              + 'arabiaa, berberiä ja persiaa, ja se veti puoleensa '
+              + 'oppineita, jotka eivät mahtuneet kalifaatin '
+              + 'valtavirtaan. Vuonna 909 ismaililainen fatimidikalifaatti '
+              + 'valtasi Tahertin, ja pakenevat ibadilaiset siirtyivät '
+              + 'etelään Saharan reunalle — sieltä alkaa M’zabin '
+              + 'kaupunkien tarina.',
+          selite: 'Ghardaïan tori M’zabin laaksossa: talot nousevat '
+            + 'kukkulalle kerroksittain, ja huipulla kohoaa ibadilaisen '
+            + 'moskeijan kartiomainen minareetti.',
+          lahde: 'Paebi, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Merikaupunki, joka valitsi itselleen hallitsijan',
+          aika: '1516',
+          tiedosto: 'Hayreddin Barbarossa 1530-60.jpg',
+          teksti: 'Algerin regenssi syntyi vuonna 1516, kun Aruj '
+              + 'Barbarossa otti kaupungin haltuunsa. Valtio oli '
+              + 'muodollisesti Osmanien valtakunnan maakunta, mutta '
+              + '1600-luvun puolivälistä lähtien käytännössä itsenäinen. '
+              + 'Hallintomuoto vaihtui matkan varrella kolmesti: '
+              + 'sulttaanikunnasta pashalikiksi 1519 ja siitä '
+              + 'sotilastasavallaksi, jossa upseerien kokous valitsi '
+              + 'johtajakseen deyn. Kaupunki eli merenkulusta ja '
+              + 'kaappauksista, ja Välimeren valtioilla oli sen kanssa '
+              + 'sopimuksia ja riitoja kolmen vuosisadan ajan. Viimeinen '
+              + 'hallitsija oli Hussein Dey, joka lähti maanpakoon '
+              + '10. heinäkuuta 1830.',
+          selite: 'Aruj Barbarossan veli Hayreddin kuvattiin 1500-luvun '
+            + 'italialaisessa puupiirroksessa panssariin puettuna ja '
+            + 'kruunattuna; kuvateksti nimittää hänet Algerin kuninkaaksi.',
+          lahde: 'Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Emiiri, joka rakensi valtion sodan keskelle',
+          aika: '1832–1847',
+          tiedosto: 'Abdelkader Ibn Muhieddine (1808-1883).jpg',
+          teksti: 'Abd al-Qadir ibn Muhyi al-Din syntyi vuosien 1806 ja '
+              + '1808 välillä. Nuorena hän teki kaksi pyhiinvaellusta '
+              + 'Mekkaan ja kävi Damaskoksessa ja Bagdadissa; '
+              + 'paluumatkalla häneen teki vaikutuksen se, miten Egyptin '
+              + 'Muhammad Ali uudisti maataan. Vuonna 1832 hänet '
+              + 'nimitettiin emiiriksi, ja hän johti vastarintaa Ranskan '
+              + 'valloitusta vastaan viisitoista vuotta rakentaen samalla '
+              + 'omaa hallintoa. Antautumisen jälkeen 1847 hän oli '
+              + 'vankina Ranskassa lähes viisi vuotta. Napoleon III '
+              + 'vapautti hänet, ja 1855 hän asettui Damaskokseen, jossa '
+              + 'hän kirjoitti pääteoksensa Kitab al-Mawaqif ja esti 1860 '
+              + 'kaupungin kristityn yhteisön joukkomurhan.',
+          selite: 'Emiiri Abdelkader kuvattiin vanhoilla päivillään '
+            + 'Damaskoksessa valkoisessa viitassa ja rinnassaan monen '
+            + 'maan kunniamerkit.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kaksi kansanäänestystä ja sama päivämäärä',
+          aika: '1962',
+          // Kuvaton (Opus 6.9.2026): Commonsista ei löytynyt vapaata,
+          // riittävän suurta kuvaa vuoden 1962 kansanäänestyksistä tai
+          // itsenäisyyspäivästä. Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Neuvottelut päättyivät maaliskuussa 1962 Évianin '
+              + 'sopimuksiin. Ranskan äänestäjät hyväksyivät ne '
+              + '8. huhtikuuta 1962: puolesta äänesti 91 prosenttia. '
+              + 'Algeriassa äänestettiin 1. heinäkuuta, ja itsenäisyyden '
+              + 'puolesta annettiin 99,72 prosenttia äänistä. '
+              + 'Itsenäisyyspäiväksi valittiin 5. heinäkuuta 1962 — '
+              + 'täsmälleen sama päivä, jona Ranska oli vallannut Algerin '
+              + 'vuonna 1830. Väliin mahtui 132 vuotta, joista maa oli '
+              + 'ollut virallisesti osa Ranskaa vuodesta 1848. '
+              + 'Päivämäärän valinta oli tietoinen: kalenteri palautti '
+              + 'sen, minkä kalenteri oli vienyt.',
+          selite: 'Algerian itsenäisyyspäivä on 5. heinäkuuta, sama '
+            + 'päivämäärä kuin Algerin valtauksella vuonna 1830.',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Algerian ruoka tulee kolmelta suunnalta: berberien '
+          + 'suurimoista, Saharan taatelitarhoista ja rannikon '
+          + 'kaupungeista, joissa juhlaruoka on nuudeli.',
+      nostot: [
+        {
+          otsikko: 'Jyvä, joka pyöritetään käsin',
+          tiedosto: 'Femme semoule couscous.jpg',
+          teksti: 'Kuskus on höyrytettyä, käsin pyöriteltyä durum'
+              + 'suurimoa; tavallinen raekoko on noin kaksi milli'
+              + 'metriä, mutta hienompaa ja karkeampaa laatua on myös. '
+              + 'Se on perusruoka Algeriassa, Tunisiassa, Mauritaniassa, '
+              + 'Marokossa ja Libyassa. Nimi on lähes varmasti '
+              + 'berberiperäinen: kabyylin ja riifin kielissä ruoka on '
+              + 'seksu ja Saharan berberikielissä keskesu, ja juuri '
+              + 'tarkoittaa hyvin muotoiltua ja pyöreäksi pyöriteltyä. '
+              + 'Neljä maata — Algeria, Mauritania, Marokko ja Tunisia — '
+              + 'jättivät yhteisen hakemuksen, ja kuskus otettiin '
+              + 'Unescon aineettoman kulttuuriperinnön luetteloon '
+              + 'vuonna 2020.',
+          selite: 'Suurimot kosteutetaan ja hierotaan kämmenellä '
+            + 'laakeassa vadissa, kunnes jyvät ovat tasakokoisia; vasta '
+            + 'sitten ne höyrytetään.',
+          lahde: 'D@LY3D, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Taateli, jonka läpi näkee valon',
+          tiedosto: 'Dattes de Deglet nour à Tolga (Wilaya de Biskra).jpg',
+          teksti: 'Deglet Nour tarkoittaa valon taatelia, ja nimi on '
+              + 'kuvaus: hedelmä on pehmeä, läpikuultavan vaalea ja '
+              + 'maultaan hunajainen. Lajike on kotoisin Tolgan keitaalta '
+              + 'Algeriasta, ja Pierre Munierin mukaan se levisi '
+              + '1200-luvun lopulla ja 1300-luvun alussa Tolgasta '
+              + 'naapurikeitaille Biskraan ja Oued Righiin. Tunisiaan sen '
+              + 'vei 1600-luvun lopulla tozeurilainen viljelijä Sidi '
+              + 'Touati, ja sieltä lajike on kulkenut Libyaan ja '
+              + 'Yhdysvaltoihin asti. FAO:n mukaan se on vientiarvoltaan '
+              + 'maailman johtava taatelilajike, ja Algerian '
+              + 'maatalousministeriö on varannut nimen omille '
+              + 'taateleilleen.',
+          selite: 'Deglet Nour -taatelit ovat vaaleampia ja ohut'
+            + 'kuorisempia kuin useimmat muut lajikkeet, ja ne myydään '
+            + 'usein yhä oksassaan.',
+          lahde: 'Yelles, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Nuudeli, joka kuuluu juhlaan',
+          tiedosto: '20161201 211328rechta.jpg',
+          teksti: 'Rechta tehdään durumjauhosta ja vedestä: taikina '
+              + 'kaulitaan ohueksi levyksi ja leikataan käsin kapeiksi '
+              + 'suikaleiksi. Se on Algerin kaupungin tunnusruoka ja '
+              + 'yhtä rakastettu Blidassa ja Constantinessa. Algerissa ja '
+              + 'Blidassa nuudelit tarjoillaan kanan, kikherneiden ja '
+              + 'nauriiden kanssa liemessä, joka maustetaan '
+              + 'valkopippurilla ja kanelilla; Constantinessa kastike on '
+              + 'tomaattipohjainen ja siinä on sipulia, porkkanaa ja '
+              + 'vihreää paprikaa. Rechta on juhlaruoka: se tehdään '
+              + 'häihin ja uskonnollisiin juhlapäiviin, ja sen '
+              + 'valmistaminen alusta asti on tapa osoittaa, että vieras '
+              + 'on tärkeä.',
+          selite: 'Rechta-lautasella nuudelit ovat pohjalla ja kana, '
+            + 'kikherneet ja nauriit niiden päällä; liemi kaadetaan '
+            + 'vasta pöydässä.',
+          lahde: 'ABBASHouda, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Viinimaa, joka lakkasi olemasta',
+          aika: '1930–1970-luku',
+          // Kuvaton (Opus 6.9.2026): Commonsin algerialaiset
+          // viininkorjuukuvat ovat alle 1 100 pikseliä leveitä ja ainoa
+          // muu osuma on pienikokoinen viinialuekartta. Kuvatilaus on
+          // kirjattu raporttiin.
+          teksti: 'Viininviljely alkoi Algeriassa foinikialaisten ja '
+              + 'roomalaisten aikana ja hiipui islamin tultua. Ranskan '
+              + 'vallan alettua 1830 tarhat istutettiin uudelleen, ja kun '
+              + 'viinikirva tuhosi Ranskan omat viinitarhat 1800-luvun '
+              + 'puolivälissä, algerialainen viini täytti aukon: tuotanto '
+              + 'kasvoi 25 000 hehtolitrasta vuonna 1854 kymmeneen '
+              + 'miljoonaan vuonna 1915. Huipulla 1930-luvun lopulla '
+              + 'tarhoja oli yli neljätuhatta neliökilometriä. Ennen '
+              + 'itsenäisyyttä Algeria oli maailman suurin viininviejä, '
+              + 'ja sen tumma, väkevä punaviini päätyi sekoitukseksi '
+              + 'Etelä-Ranskan viineihin. Itsenäistymisen jälkeen '
+              + 'markkina katosi, ja tarhat vaihdettiin viljaan ja '
+              + 'syötäviin rypäleisiin.',
+          selite: 'Algerian viinitarhat olivat ylätasangoilla rannikon '
+            + 'takana, ja niiden sato meni lähes kokonaan vientiin.',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Algeriassa kirjoitettiin yhteiskuntatieteen ensimmäinen '
+          + 'suuri teos vuorikylän hiljaisuudessa — ja 1900-luvulla maa '
+          + 'antoi maailmalle Nobel-kirjailijan, tähden ja akateemikon.',
+      nostot: [
+        {
+          otsikko: 'Kirja, joka syntyi kolmen vuoden eristyksessä',
+          aika: '1375–1378',
+          tiedosto: 'Bust of Ibn Khaldun (Casbah of Bejaia, Algeria).jpg',
+          teksti: 'Tlemcenin sulttaani lähetti Ibn Khaldunin vuonna 1375 '
+              + 'Biskran arabiheimojen luo. Paluumatkalla hän haki turvaa '
+              + 'berberiheimolta Länsi-Algerian Qalat Ibn Salaman '
+              + 'kylässä ja jäi sinne yli kolmeksi vuodeksi. Eristys oli '
+              + 'hänelle työrauhaa: omaelämäkertansa mukaan hän kirjoitti '
+              + 'kuudessa kuukaudessa Muqaddimahin, maailmanhistoriansa '
+              + 'johdannon, josta tuli kuuluisampi kuin itse historiasta. '
+              + 'Sen ydinajatus on asabiyya, ryhmäkiinteys, joka nostaa '
+              + 'suvun valtaan ja kantaa samalla sen tuhon siementä. '
+              + 'Kylässä ei ollut kirjastoa, joten viimeistelyä varten '
+              + 'hänen oli palattava 1378 kotikaupunkiinsa Tunisiin.',
+          selite: 'Ibn Khaldunin rintakuva seisoo Béjaïan kasbahissa '
+            + 'Algeriassa, samassa maassa, jossa Muqaddimah syntyi.',
+          lahde: 'Reda Kerbouche, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maalivahti, josta tuli Nobel-kirjailija',
+          aika: '1913–1960',
+          tiedosto: '20041113-002 Lourmarin Tombstone Albert Camus.jpg',
+          teksti: 'Albert Camus syntyi 7. marraskuuta 1913 Mondovissa. '
+              + 'Nuorena hän pelasi maalivahtina Racing Universitaire '
+              + 'd’Algerin junioreissa vuosina 1928–1930, ja '
+              + 'joukkuehenki merkitsi hänelle paljon; myöhemmin hän '
+              + 'sanoi, että jalkapallon yksinkertainen moraali oli '
+              + 'toista maata kuin se moraali, jota valtio ja kirkko '
+              + 'vaativat. Peliura loppui vuonna 1930, kun hänellä '
+              + 'todettiin seitsemäntoistavuotiaana tuberkuloosi, ja hän '
+              + 'kääntyi filosofian puoleen. Vuonna 1957 hän sai '
+              + 'kirjallisuuden Nobelin 44-vuotiaana — historian toiseksi '
+              + 'nuorimpana ja ensimmäisenä Afrikassa syntyneenä '
+              + 'palkinnon saajana. Hän kuoli auto-onnettomuudessa '
+              + '4. tammikuuta 1960, ja hänet haudattiin Lourmarinin '
+              + 'kylään Etelä-Ranskaan.',
+          selite: 'Camus haudattiin Lourmariniin Etelä-Ranskaan, ja '
+            + 'hautakiveen on hakattu vain nimi ja kaksi vuosilukua.',
+          lahde: 'Walter Popp, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Tähti, joka oli myös serkku',
+          aika: '1956',
+          tiedosto: 'KatebYacinePassport.jpg',
+          teksti: 'Kateb Yacine syntyi Constantinessa 2. elokuuta 1929. '
+              + 'Koululaisena hän osallistui 8. toukokuuta 1945 '
+              + 'mielenosoituksiin ja joutui kolme päivää myöhemmin '
+              + 'pidätetyksi kahdeksi kuukaudeksi; koulusta hänet '
+              + 'erotettiin, ja isä lähetti hänet Bônen lukioon. Siellä '
+              + 'hän tapasi naimisissa olevan serkkunsa, jota hän kutsui '
+              + 'nimellä Nedjma, tähti, ja jonka kanssa hän eli omien '
+              + 'sanojensa mukaan ehkä kahdeksan kuukautta. Samalla '
+              + 'nimellä ilmestyi 1956 romaani, josta tuli Algerian '
+              + 'tunnetuin kirja. Myöhemmin hän siirtyi teatteriin ja '
+              + 'kirjoitti algerianarabiaksi ja puolusti berberikielten '
+              + 'asemaa.',
+          selite: 'Kateb Yacinen passi on esillä museossa: '
+            + 'henkilötietosivulla on hänen valokuvansa ja leima '
+            + 'Pekingistä, jossa hän kävi kirjailijana.',
+          lahde: 'Chris93, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Luokkansa ainoa ja akatemian ensimmäinen',
+          aika: '1936–2015',
+          // Kuvaton (Opus 6.9.2026): Assia Djebarista ei ole Commonsissa
+          // riittävän suurta vapaata valokuvaa; suurimmat ovat alle
+          // 800 pikseliä leveitä. Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Fatima-Zohra Imalayen syntyi Cherchellissä 30. '
+              + 'kesäkuuta 1936 ja kirjoitti nimellä Assia Djebar. '
+              + 'Blidan koraanikoulussa hän oli toinen kahdesta '
+              + 'tytöstä, Algerin lukiossa luokkansa ainoa muslimi ja '
+              + '1955 ensimmäinen algerialainen musliminainen, joka '
+              + 'pääsi Ranskan huippukouluun École normale '
+              + 'supérieureen. Hän kirjoitti '
+              + 'romaaneja, käänsi ja ohjasi elokuvia, ja hänen työnsä '
+              + 'ydin oli algerialaisten naisten sukupolvien ketju. '
+              + 'Vuonna 1996 hän sai Neustadt-palkinnon, ja 16. kesäkuuta '
+              + '2005 hänet valittiin Ranskan akatemiaan ensimmäisenä '
+              + 'maghrebilaisena kirjailijana.',
+          selite: 'Assia Djebar oli ensimmäinen Maghrebin maista '
+            + 'kotoisin oleva kirjailija Ranskan akatemiassa.',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Algeriassa jokaisella kaupungilla on oma lajinsa: '
+          + 'Oranissa raï, Algerin kasbahissa chaabi ja Kabyliassa '
+          + 'laulu, joka kulki ympäri maailmaa.',
+      nostot: [
+        {
+          otsikko: 'Sana, joka tarkoittaa mielipidettä',
+          aika: '1920-luvulta',
+          tiedosto: 'Cheb Khaled performed in Oran on July 5th 2011.jpg',
+          teksti: 'Raï syntyi Oranin satamakaupungissa 1920-luvulla '
+              + 'köyhien musiikkina, ja sen varhaiset sanoitukset '
+              + 'kertoivat sairauksista ja arjen ahtaudesta. Vanhempia '
+              + 'esittäjiä kutsutaan nimillä cheikh ja cheikha, nuorempia '
+              + 'nimillä cheb ja cheba — sana tarkoittaa nuorta, ja se '
+              + 'erotti 1980-luvun sukupolven edeltäjistään. Laji oli '
+              + 'pitkään miesten, mutta vuosisadan loppuun mennessä '
+              + 'naislaulajat olivat tavallisia. Levynkansista tulivat '
+              + 'tutuiksi Cheikha Remitti, Cheb Khaled, Cheb Mami ja '
+              + 'Cheba Zahouania, ja raïsta tuli 1980-luvulla Algerian '
+              + 'tunnetuin vientituote.',
+          selite: 'Cheb Khaled esiintyi Oranissa heinäkuussa 2011 — '
+            + 'samassa kaupungissa, jossa raï syntyi lähes sata vuotta '
+            + 'aiemmin.',
+          lahde: 'Magharebia, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kansan musiikki, joka alkoi paheksuttuna',
+          aika: '1930-luku',
+          tiedosto: 'Orchester El Gusto 03.jpg',
+          teksti: 'Chaabi tarkoittaa kansan omaa. Sen muotoili Algerin '
+              + 'kasbahissa 1930-luvulla El Hadj M’Hamed El Anka, ja '
+              + 'se nojaa andalusialaisen musiikin moodeihin ja '
+              + 'rytmeihin, vaikka sanat ovat arkista puhekieltä. '
+              + 'Orkesterissa soittaa toistakymmentä muusikkoa, ja sen '
+              + 'tunnussoitin on algerialainen mandole, banjon ja '
+              + 'mandoliinin sukulainen; mukana ovat myös kemandja, '
+              + 'piano, qanun ja tar-kehärumpu. Aluksi laji oli '
+              + 'paheksuttu ja soi suljettujen ovien takana, mutta '
+              + '1950-luvun lopulla se oli jo häiden ja juhlien '
+              + 'musiikkia.',
+          selite: 'Algerialainen mandole on chaabin tunnussoitin: '
+            + 'nelinkertaisin kielikuoroin varustettu pitkäkaulainen '
+            + 'luuttu, jota soitetaan plektralla.',
+          lahde: 'Schorle, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Laulu, joka lähti ja tuli takaisin',
+          aika: '1973',
+          tiedosto: 'Orchester El Gusto 24.jpg',
+          teksti: 'Dahmane El Harrachi — oikealta nimeltään Amrani '
+              + 'Abderrahmane — kirjoitti ja levytti vuonna 1973 '
+              + 'chaabi-laulun "Ya Rayah". Sen sanat puhuttelevat '
+              + 'lähtijää: sinä joka lähdet, minne matka, tiedätkö mitä '
+              + 'olet jättämässä. Laulu on maastamuuttajan balladi, ja '
+              + 'juuri siksi se on kulkenut maasta toiseen. Vuonna 1997 '
+              + 'Rachid Taha levytti siitä uuden version, joka ilmestyi '
+              + 'singlenä 26. elokuuta ja josta tuli hitti Ranskassa ja '
+              + 'kauempanakin. Sama laulu on siis matkustanut kahdesti: '
+              + 'ensin siirtolaisten mukana pois ja sitten levyn mukana '
+              + 'takaisin.',
+          selite: 'Chaabi-yhtyeen lyömäsoittimet ovat tar-kehärumpu ja '
+            + 'darbuka, ja niiden varassa laulun tahti kulkee.',
+          lahde: 'Schorle, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kehtolaulu kabyylin kielellä',
+          aika: '1976',
+          tiedosto: 'Idir Bondy France 21-06-2008.jpg',
+          teksti: 'Idir ja runoilija Ben Mohamed sävelsivät laulun, jonka '
+              + 'piti mennä Radio Algerin laulajalle Nouaralle. Kun tämä '
+              + 'kieltäytyi, Idir esitti sen itse yhdessä laulaja Milan '
+              + 'kanssa, ja siitä tuli välitön menestys. Alkuperäinen '
+              + 'nimi oli "A Baba-inu Ba", ja tunnetuksi se tuli muodossa '
+              + '"A Vava Inouva" — laulu isälle, jonka ovea lapsi pyytää '
+              + 'avaamaan. Vuonna 1976 julkaistusta kappaleesta tuli '
+              + 'kansainvälisesti tunnetuin kabyylinkielinen laulu, ja se '
+              + 'on käännetty muun muassa arabiaksi, espanjaksi, '
+              + 'ranskaksi ja kreikaksi. Samanniminen albumi ilmestyi '
+              + '1991.',
+          selite: 'Idir esiintyi akustisen kitaran kanssa; hänen '
+            + 'sovituksensa toi kabyylilaulun eurooppalaisille lavoille.',
+          lahde: 'Suaudeau, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Algerian luonnossa kaikki on äärimmäistä: puu, joka '
+          + 'kasvaa satojen kilometrien päässä lähimmästä metsästä, ja '
+          + 'kissa, joka ei tarvitse vettä lainkaan.',
+      tehtava: {
+        kysymys: 'Mikä tekee saharansypressin lisääntymisestä ainutlaatuisen?',
+        vaihtoehdot: [
+          'Se kukkii vain kerran sadassa vuodessa',
+          'Sen juuret ulottuvat sadan metrin syvyyteen',
+          'Siemen syntyy pelkästään siitepölystä',
+          'Se kasvaa vain suolaisessa pohjavedessä',
+        ],
+        oikea: 2,
+        fakta: 'Tapaa kutsutaan isälinjaiseksi apomiksikseksi, ja se '
+            + 'tunnetaan puiden joukossa vain muutamalta lajilta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Puu, jolla ei ole äitiä',
+          tiedosto: 'Cupressus dupreziana1.jpg',
+          teksti: 'Saharansypressi kasvaa vain Tassili n’Ajjerin '
+              + 'vuorilla Kaakkois-Algeriassa, satojen kilometrien '
+              + 'päässä lähimmistä muista puista. Sadetta alueella tulee '
+              + 'noin kolmekymmentä millimetriä vuodessa, ja enemmistön '
+              + 'puista arvioidaan olevan yli kahdentuhannen vuoden '
+              + 'ikäisiä; uutta taimettumista ei ole kirjattu yli '
+              + 'kolmeenkymmeneen vuoteen. Vuosien 1997–2001 '
+              + 'kartoituksissa yksilöitä löytyi 233, mutta maaliskuussa '
+              + '2026 niitä oli enää 212 — kuivuus tappoi 21 suurta puuta. '
+              + 'Lajilla on poikkeuksellinen lisääntymistapa: siemen '
+              + 'syntyy pelkästään siitepölystä, ja emopuu antaa vain '
+              + 'ravinnon eikä yhtään omaa geeniä.',
+          selite: 'Saharansypressin runko on kiertynyt ja osin kuollut, '
+            + 'mutta latvus vihertää yhä; puu kasvaa paljaalla kalliolla '
+            + 'Tassilin ylängöllä.',
+          lahde: 'Gruban, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Afrikan ainoa oma hirvi',
+          tiedosto: 'Cervus elaphus barbarus, Tierpark Berlin, 523-629.jpg',
+          teksti: 'Berberihirvi on saksanhirven alalaji ja ainoa '
+              + 'Afrikassa alkuperäinen hirvieläin — toinen, '
+              + 'jättiläismäinen Megaceroides algericus, kuoli sukupuuttoon '
+              + 'noin kuusituhatta vuotta sitten. Laji viihtyy tiheissä ja '
+              + 'kosteissa metsissä Algeriassa, Tunisiassa ja Marokossa, '
+              + 'ja tunnettuja laumoja on Akfadoun, Bouzeguènen ja '
+              + 'Zéraldan seuduilla. Marokosta hirvi metsästettiin '
+              + 'sukupuuttoon, ja se palautettiin sinne 1990-luvulla '
+              + 'Tunisian kannasta. Perimää tutkittaessa selvisi jotain '
+              + 'yllättävää: Pohjois-Afrikan hirvet ovat lähes '
+              + 'erottamattomia Sardinian ja Korsikan hirvistä, joten '
+              + 'ihmiset ovat aikoinaan vieneet ne Afrikasta saarille.',
+          selite: 'Berberihirven sarvet ovat pienemmät ja turkki '
+            + 'täplikkäämpi kuin muilla saksanhirven muodoilla.',
+          lahde: 'Lotse, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Gepardi, joka ei juo',
+          aika: '2008–2020',
+          // Kuvaton (Opus 6.9.2026): ainoa Commonsin kuva Algerian
+          // saharangepardista on riistakameran otos, jonka leveys on
+          // 895 pikseliä. Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Saharangepardi on luokiteltu äärimmäisen '
+              + 'uhanalaiseksi: vuonna 2008 aikuisia arvioitiin olevan '
+              + 'alle kaksisataaviisikymmentä. Vuosien 2007–2012 '
+              + 'aineistossa Länsi-, Keski- ja Pohjois-Afrikan gepardeja '
+              + 'laskettiin 457, joista 191 Algerian ja Malin alueella. '
+              + 'Elokuun 2008 ja marraskuun 2010 välillä Ahaggarin '
+              + 'kansallispuiston riistakamerat tallensivat neljä '
+              + 'yksilöä, ja vuonna 2020 algerialaiset luonnontutkijat '
+              + 'kuvasivat yhden uudelleen. Aavikossa gepardi on '
+              + 'muuttanut tapojaan: se liikkuu enimmäkseen yöllä, kulkee '
+              + 'pidempiä matkoja ja elää harvemmassa kuin savannilla. '
+              + 'Vettä se ei tarvitse juotavaksi, vaan saa nesteen '
+              + 'saaliinsa verestä.',
+          selite: 'Saharangepardi on aavikon oloihin sopeutunut gepardin '
+            + 'alalaji, joka liikkuu enimmäkseen pimeän aikaan.',
+        },
+        {
+          otsikko: 'Lammas, joka hyppää kaksi metriä',
+          tiedosto: 'Arui02.jpg',
+          teksti: 'Harjalammas eli aoudad on Pohjois-Afrikan vuorten oma '
+              + 'sorkkaeläin, jota tavataan Algeriasta Egyptiin ja etelään '
+              + 'Malin ja Nigerin puolelle. Säkäkorkeus on 75–110 '
+              + 'senttimetriä ja paino 30–145 kiloa; sarvet kaartuvat '
+              + 'ulos, taakse ja sisään ja voivat kasvaa yli '
+              + 'seitsemänkymmenen sentin mittaisiksi. Nimensä se on '
+              + 'saanut kurkusta ja rinnasta riippuvasta pitkästä '
+              + 'karvatupsusta. Eläin saa tarvitsemansa veden ravinnosta, '
+              + 'lepää päivän kuumuudessa ja liikkuu aamuin illoin, ja '
+              + 'vaaran uhatessa se pakenee ylämäkeen — paikaltaan se '
+              + 'hyppää yli kahden metrin korkeuteen.',
+          selite: 'Harjalampaan kurkusta ja rinnasta riippuu pitkä '
+            + 'karvatupsu, ja sarvet kaartuvat ulos, taakse ja sisään.',
+          lahde: 'Krzysztof Kozłowski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+  ],
+  /*
+   * TUNISIA (TUN) — Afrikan neljäs maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-tunisia.md; luvut
+   * tarkistettu en-Wikipedian raakatekstistä 6.9.2026, kaksi
+   * Unesco-merkintää (harissa 2022, charfia 2020) suoraan
+   * ich.unesco.orgista.
+   *
+   * TYÖNJAKO KARTHAGON JA KARTTANOSTOJEN KANSSA: Karthagon litteät
+   * kulttuurinostot (africa-kulttuuri.js) kattavat jo Bardon mosaiikit,
+   * purppuravärin ja sotanorsut; maastokohteet-tun.js Douggan, El Jemin,
+   * Kairouanin altaat, Kerkouanen, Soussen ribatin, Matmatan ja Sbeitlan;
+   * skandaalit.js Bardon sopimuksen 1881 ja Chott el Djeridin
+   * "Saharan meren"; elaintakyt.js kaljuiibiksen. Maalehti EI toista
+   * niitä: se kertoo Didon tarusta, Rooman viljahuollosta, aghlabideista,
+   * 1800-luvun uudistuksista, ruoasta, kuvataiteesta, musiikista ja
+   * merestä. Luonto-osaston tilalla on Meri, koska maan luontokohteet
+   * ovat karttanostoissa.
+   *
+   * SISÄLTÖLINJAUS: nykypolitiikkaa, arabikevättä eikä väkivaltaisia
+   * nykytapahtumia käsitellä.
+   *
+   * KUVAT: Commons, lisenssi ja tekijä tarkistettuina, leveys >= 1200 px,
+   * jokainen katsottu silmin. KOLME NOSTOA JÄI KUVATTOMAKSI (Tunisin
+   * koulukunta, Safia Farhat, mezoued) — kuvatilaukset raportissa.
+   * HYLÄTYT: "Home made Harissa Sauce N75" (kolmiosainen kollaasi),
+   * "Harissa 3" (esittää Libanonin Harissaa eikä chilitahnaa),
+   * "Horniman instruments 28 (Oud arbi)" (museon numerolappu näkyvissä),
+   * "Mezoued beja 01" ja "Mezoued jerbi 01" (tunnistettavia kasvoja
+   * lähikuvassa / liian pimeä).
+   */
+  TUN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Tunisian rannikko on ollut kolmesti keskus eikä reuna: '
+          + 'puunilaisen meriverkoston pääkaupunkina, Rooman '
+          + 'ruokakomerona ja arabidynastian tukikohtana, josta '
+          + 'purjehdittiin Sisiliaan.',
+      tehtava: {
+        kysymys: 'Kuinka suuren osan vuodesta Rooman Afrikka-provinssi ruokki pääkaupunkinsa?',
+        vaihtoehdot: [
+          'Koko vuoden yhtäjaksoisesti',
+          'Kolme kuukautta vuodesta',
+          'Vain sadonkorjuun ajan',
+          'Kahdeksan kuukautta',
+        ],
+        oikea: 3,
+        fakta: 'Loput neljä kuukautta tulivat Egyptistä — kaksi '
+            + 'provinssia piti siis miljoonakaupungin pystyssä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaupunki, joka mahtui härännahan sisään',
+          aika: '814 eaa.',
+          tiedosto: 'Turner Dido Building Carthage.jpg',
+          teksti: 'Kreikkalais-roomalaisen taruston mukaan Karthagon '
+              + 'perusti Tyroksen kuningatar, jota kutsutaan nimillä Dido '
+              + 'ja Elissa. Hän pakeni veljeään Pygmalionia ja purjehti '
+              + 'Luoteis-Afrikkaan, jossa hänelle luvattiin maata sen '
+              + 'verran kuin härännahalla saa peitettyä; hän leikkasi '
+              + 'nahan hiuksenohuiksi suikaleiksi ja piiritti niillä '
+              + 'kokonaisen kukkulan. Vanhin tunnettu maininta on '
+              + 'sisilialaisen Timaioksen kadonneissa teksteissä, joiden '
+              + 'mukaan kaupunki syntyi 814 eaa., suunnilleen samaan '
+              + 'aikaan kuin Rooma. Kertomukset on kirjoitettu satoja '
+              + 'vuosia tapahtumien jälkeen, eikä paikalta ole löytynyt '
+              + 'asutusta 700-luvun eaa. viimeistä neljännestä kauempaa.',
+          selite: 'J. M. W. Turnerin maalaus vuodelta 1815 kuvaa Didon '
+            + 'rakentamassa Karthagoa: satama on kesken, ja aurinko '
+            + 'nousee juuri rakennustelineiden takaa.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Provinssi, joka ruokki miljoonakaupungin',
+          aika: '146 eaa.–200-luku',
+          tiedosto: 'Dominus Julius mosaic in the Bardo National Museum(12240864473).jpg',
+          teksti: 'Rooman Afrikka-provinssi perustettiin 146 eaa. '
+              + 'kolmannen puunilaissodan jälkeen, ja se kattoi suunnilleen '
+              + 'nykyisen Tunisian, Koillis-Algerian ja Länsi-Libyan '
+              + 'rannikon. Hallintopääkaupungiksi tuli Utica, joka oli '
+              + 'sodassa asettunut Rooman puolelle. Provinssia sanottiin '
+              + 'valtakunnan viljakomeroksi: se ruokki Rooman väestön '
+              + 'kahdeksan kuukautta vuodesta, ja loput neljä tulivat '
+              + 'Egyptistä. Yhden arvion mukaan Luoteis-Afrikka tuotti '
+              + 'miljoona tonnia viljaa vuodessa, ja siitä neljännes '
+              + 'lähti vientiin. Toisella vuosisadalla eaa. oliiviöljy '
+              + 'nousi viljan rinnalle, ja rikkaus näkyi kaupunkien '
+              + 'määrässä.',
+          selite: 'Dominus Juliuksen mosaiikki näyttää maatilan vuoden: '
+            + 'keskellä on herran linnamainen talo ja sen ympärillä '
+            + 'kylvö, sadonkorjuu, metsästys ja oliivinpoiminta.',
+          lahde: 'Boyd Dwyer, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Kapinallinen amiraali avasi tien Sisiliaan',
+          aika: '827–902',
+          tiedosto: 'Aghlabids Tunisia 880 CE.jpg',
+          teksti: 'Aghlabidit hallitsivat Ifriqiyaa vuosina 800–909 '
+              + 'abbasidien nimellisenä vasallina, ja heidän '
+              + 'pääkaupunkinsa oli Kairouan. Kesäkuussa 827 avautui '
+              + 'tilaisuus: Sisilian bysanttilaisen laivaston komentaja '
+              + 'Eufemios kapinoi keisari Mikael II:ta vastaan, hävisi ja '
+              + 'pyysi aghlabideilta apua. Retkikunnan johtoon asetettiin '
+              + 'oppinut tuomari Asad ibn al-Furat. Ensimmäinen hyökkäys '
+              + 'Syrakusaan epäonnistui, mutta vuonna 831 valloitettiin '
+              + 'Palermo, josta tuli uuden maakunnan pääkaupunki. '
+              + 'Viimeinen suuri bysanttilaislinnake Taormina kaatui '
+              + 'vasta 902 — valloitus kesti siis 75 vuotta.',
+          selite: 'Aghlabidien kultadinaari on ohut ja kevyt, ja sen '
+            + 'molemmat puolet on täytetty kufilaisella kirjoituksella '
+            + 'ilman kuvia.',
+          lahde: 'PHGCOM, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Arabimaailman ensimmäinen perustuslaki',
+          aika: '1846–1861',
+          tiedosto: 'Kheireddine Pacha high.JPG',
+          teksti: 'Husainidisuvun kymmenes bey Ahmad I hallitsi vuodesta '
+              + '1837 kuolemaansa 1855 ja lakkautti orjuuden tammikuussa '
+              + '1846. Uudistukset jatkuivat kahdessa askeleessa. '
+              + 'Vuoden 1857 perustavanlaatuinen sopimus vahvisti '
+              + 'orjuuden lakkauttamisen ja takasi hengen ja omaisuuden '
+              + 'turvan, verotuksen yhdenvertaisuuden, uskonnonvapauden '
+              + 'ja yhdenvertaisuuden lain edessä. Sen pohjalta '
+              + 'kirjoitettu perustuslaki astui voimaan 26. huhtikuuta '
+              + '1861 — ensimmäisenä kirjoitettuna perustuslakina '
+              + 'arabimaissa ja ensimmäisenä valtiossa, jonka uskonto oli '
+              + 'islam. Uudistusten takana vaikutti ministeri Khayr '
+              + 'al-Din, ja teksti käännettiin ranskaksi ja '
+              + 'osmaniturkiksi jo samana vuonna.',
+          selite: 'Khayr al-Din Pasha kuvattiin ratsain sotilaspuvussa ja '
+            + 'punaisessa fetsissä; hän oli Tunisian uudistusten '
+            + 'keskeisin ministeri.',
+          lahde: 'Louis Simil, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Tunisialainen ruoka nojaa kahteen asiaan, joita maasta '
+          + 'riittää vientiin asti: oliiviöljyyn ja tuliseen '
+          + 'chilitahnaan.',
+      nostot: [
+        {
+          otsikko: 'Tahna, joka tuli Amerikasta ja jäi',
+          tiedosto: 'Harissa Sauce.JPG',
+          teksti: 'Harissan kotiseutu on Kap Bonin niemi ja sen '
+              + 'päätuotantopaikka Nabeul. Tahnaan tulee paahdettuja '
+              + 'punaisia paprikoita, baklouti-paprikaa, valkosipulia, '
+              + 'kuminan- ja korianterinsiemeniä, juustokuminaa ja '
+              + 'oliiviöljyä, joka kantaa rasvaliukoiset maut. '
+              + 'Chilipaprika ei ole Välimeren oma kasvi: se tuli '
+              + 'tunisialaiseen keittiöön Kolumbuksen vaihdon myötä, '
+              + 'oletettavasti Espanjan miehityksen aikana 1535–1574. '
+              + 'Tunisia on nykyään maailman suurin valmiin harissan '
+              + 'viejä, ja Unesco otti harissan tiedot, taidot ja tavat '
+              + 'aineettoman kulttuuriperinnön luetteloon vuonna 2022.',
+          selite: 'Harissa hierretään kuivatuista chileistä tahnaksi, ja '
+            + 'pinnalle kaadetaan oliiviöljyä, joka säilöö sen.',
+          lahde: 'Miansari66, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Öljy, joka matkustaa toisen nimellä',
+          tiedosto: 'Photo View of an expanse of olive trees near Sousse 1959 - Touring Club Italiano BBW 277.jpg',
+          teksti: 'Maailman oliiviöljytuotanto oli vuonna 2022 yhteensä '
+              + '2,7 miljoonaa tonnia, ja suurimpiin tuottajiin kuuluivat '
+              + 'Espanja, Italia, Kreikka, Turkki ja Tunisia. '
+              + 'Alkuperämaa merkitään pulloon lyhenteellä, ja Tunisian '
+              + 'koodi on TU. Yhdysvaltain tullimääräysten mukaan '
+              + 'todellinen alkuperä on ilmoitettava samalla puolella '
+              + 'etikettiä yhtä suurin kirjaimin, mutta moni merkki '
+              + 'painaa eteen isolla "imported from Italy" ja muut maat '
+              + 'pienellä taakse. Niinpä italialaiseksi luultu öljy on '
+              + 'usein peräisin Turkista, Tunisiasta, Marokosta, '
+              + 'Espanjasta tai Kreikasta.',
+          selite: 'Oliivitarhat Soussen takamaastossa vuonna 1959: puut '
+            + 'on istutettu tasavälein niin kauas kuin silmä kantaa, '
+            + 'koska kuivalla maalla jokainen puu tarvitsee oman alansa.',
+          lahde: 'Archivio Storico del Touring Club Italiano, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Taskussa on kokonainen kananmuna',
+          tiedosto: 'Brik tunisien, mai 2020.jpg',
+          teksti: 'Brik on uppopaistettu taikinatasku, ja sen kuori on '
+              + 'malsouka eli warka. Levyt tehdään läiskimällä tahmeaa '
+              + 'taikinaa kuumalle tarttumattomalle pinnalle limittäisinä '
+              + 'ympyröinä ja kypsentämällä ne hetken. Tunnetuimmassa '
+              + 'versiossa kolmiotaskun sisään laitetaan kokonainen raaka '
+              + 'kananmuna, hienonnettua sipulia, tonnikalaa, harissaa ja '
+              + 'persiljaa — ja koko syömisen taito on siinä, ettei '
+              + 'keltuainen valu käsille. Muita täytteitä ovat jauheliha, '
+              + 'kana, kapris, juusto ja anjovis. Algeriassa ja Libyassa '
+              + 'sama ruoka tunnetaan nimellä bourek.',
+          selite: 'Brik tarjoillaan kuumana suoraan paistosta, ja '
+            + 'kolmion nurkasta näkyy, että sisällä on kokonainen '
+            + 'kananmuna.',
+          lahde: 'Habib M’henni, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Leivos, joka on nimetty muotonsa mukaan',
+          tiedosto: 'Makrouds Kairouan.jpg',
+          teksti: 'Makroudh on maghrebilainen leivonnainen, jonka pohja '
+              + 'tehdään mannasuurimoista ja täyte taatelimassasta, '
+              + 'pähkinöistä tai mantelista. Nimi tulee suoraan sen '
+              + 'muodosta: taikinatanko leikataan viistoon, jolloin '
+              + 'jokaisesta palasta tulee vinoneliö. Leivokset '
+              + 'uppopaistetaan tai paistetaan uunissa ja kastetaan '
+              + 'lopuksi hunajaan, joka jää kiiltämään pintaan. Tunisiassa '
+              + 'makroudh yhdistetään erityisesti Kairouaniin, jonka '
+              + 'markkinoilla niitä myydään pinoina; taateleita saadaan '
+              + 'etelän keitailta, joten leivos yhdistää kaksi maata '
+              + 'samaan suupalaan.',
+          selite: 'Makroudhin vinoneliön muoto syntyy siitä, että '
+            + 'täytetty taikinatanko leikataan viistosti paloiksi.',
+          lahde: 'Cimoi, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Tunisia on maalattu kahdesti: kerran eurooppalaisten '
+          + 'silmin, jotka löysivät täältä värin, ja kerran omin voimin, '
+          + 'kun maalle rakennettiin oma taidekoulunsa.',
+      nostot: [
+        {
+          otsikko: 'Kaksi viikkoa, jotka muuttivat maalaustaidetta',
+          aika: '1914',
+          tiedosto: 'Kairouan III d\'August Macke (Musée de l\'Orangerie, Paris) (46882305455).jpg',
+          teksti: 'Sveitsiläis-saksalainen Paul Klee matkusti huhtikuussa '
+              + '1914 Tunisiaan ystäviensä August Macken ja Louis '
+              + 'Moillietin kanssa. Valo teki häneen niin suuren '
+              + 'vaikutuksen, että hän kirjoitti päiväkirjaansa: väri on '
+              + 'ottanut minut haltuunsa, enää minun ei tarvitse juosta '
+              + 'sen perässä — väri ja minä olemme yhtä, olen maalari. '
+              + 'Kotiin palattuaan hän maalasi ensimmäisen täysin '
+              + 'abstraktin teoksensa "Kairouanin tapaan", joka koostuu '
+              + 'värillisistä suorakaiteista ja muutamasta ympyrästä. '
+              + 'Värillisestä suorakaiteesta tuli hänen '
+              + 'perusrakennuspalikkansa, jota tutkijat ovat verranneet '
+              + 'nuottiin. Egyptissä hän kävi 1928, mutta se ei tehnyt '
+              + 'samaa.',
+          selite: 'August Macken akvarelli "Kairouan III" on samalta '
+            + 'matkalta: kaupunki on hajotettu läpikuultaviksi '
+            + 'väripinnoiksi, joista erottuvat muuri, palmu ja kulkija.',
+          lahde: 'Jean-Pierre Dalbéra, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Koulukunta, joka perustettiin omaa maalaustaidetta varten',
+          aika: '1940-luvun loppu',
+          // Kuvaton (Opus 6.9.2026): Yahia Turkin teokset ovat yhä
+          // tekijänoikeuden alaisia, eikä Commonsissa ole vapaata kuvaa
+          // hänestä tai École de Tunisin ryhmästä. Kuvatilaus on
+          // kirjattu raporttiin.
+          teksti: 'Pierre Boucherle kokosi 1940-luvun lopulla joukon '
+              + 'taiteilijoita École de Tunisiksi. Ajatus oli, että '
+              + 'ryhmään otetaan ihmisiä uskonnosta, taustasta ja '
+              + 'tyylistä riippumatta ja että maalle luodaan oma '
+              + 'maalaustaide. Yahia Turki, jota kutsutaan tunisialaisen '
+              + 'maalaustaiteen isäksi, syntyi 1903 Istanbulissa '
+              + 'turkkilaiselle äidille ja djerbalaiselle isälle. '
+              + 'Kiinnostus muotoon ja väriin heräsi koraanikoulun '
+              + 'kirjoitustauluista, ensimmäisen menestyksen hän sai '
+              + 'Tunisian salongissa 1923, ja Pariisissa hän vieraili '
+              + 'Matissen ja Derainin ateljeissa. Itsenäistymisen jälkeen '
+              + '1956 hänestä tuli koulukunnan puheenjohtaja, ja hän '
+              + 'hoiti tehtävää kuolemaansa 1969 asti.',
+          selite: 'École de Tunis oli ensimmäinen ryhmä, joka asetti '
+            + 'tavoitteekseen nimenomaan tunisialaisen maalaustaiteen.',
+        },
+        {
+          otsikko: 'Ryhmän ainoa nainen, koulun ensimmäinen johtaja',
+          aika: '1949–1966',
+          // Kuvaton (Opus 6.9.2026): Safia Farhatista tai hänen
+          // kuvakudoksistaan ei ole Commonsissa yhtään kuvaa.
+          // Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Safia Farhat syntyi Radèsissa 1924 ja kuoli samassa '
+              + 'kaupungissa 2004. Hän liittyi École de Tunisin ryhmään '
+              + 'vuonna 1949 sen ainoana naisena, ja hänet muistetaan '
+              + 'ennen kaikkea siitä, että hän toi maahan modernin '
+              + 'kuvakudoksen; hän työskenteli myös muotoilun, '
+              + 'keramiikan ja lasimaalauksen parissa ja rakensi '
+              + 'yhteistyötä taiteilijoiden ja käsityöläisten välille. '
+              + 'Vuonna 1959 hän perusti Faïza-lehden, ensimmäisen '
+              + 'arabialais-afrikkalaisen naistenlehden. Hän oli '
+              + 'ensimmäinen nainen ja ensimmäinen tunisialainen Tunisin '
+              + 'taideakatemian johtajana, ja se avasi koulun ovet '
+              + 'kokonaiselle naistaiteilijoiden sukupolvelle; vuodesta '
+              + '1966 hän johti taideinstituuttia ja sen uutta '
+              + 'arkkitehtuurikoulua.',
+          selite: 'Safia Farhat toi Tunisiaan modernin kuvakudoksen ja '
+            + 'johti maan taidekoulua ensimmäisenä naisena.',
+        },
+        {
+          otsikko: 'Kylä, joka maalattiin kahdella värillä',
+          aika: '1920-luku',
+          tiedosto: 'Streets of Sidi Bou Said. Northern Tunisia, Mediterranean Sea, Northern Africa.Streets of Sidi Bou Said. Northern Tunisia, Mediterranean Sea, Northern Africa.jpg',
+          teksti: 'Sidi Bou Saïd sai nimensä uskonnollisesta hahmosta Abu '
+              + 'Said al-Bajista; sitä ennen kylää kutsuttiin nimellä '
+              + 'Jbel el-Menar. Kylän kuuluisan sinivalkoisen väriparin '
+              + 'teki suosituksi 1920-luvulla ranskalainen paroni '
+              + 'Rodolphe d’Erlanger, joka asui siellä. Valkoiset '
+              + 'seinät, siniset ikkunaluukut ja ovet sekä '
+              + 'bougainvillean punainen ovat siitä lähtien olleet kylän '
+              + 'tunnusmerkit, ja mäeltä avautuu näkymä Tunisin lahdelle. '
+              + 'Kylään pääsee TGM-junalla, joka kulkee Tunisista La '
+              + 'Marsaan — sama rata, jota pitkin taidemaalarit ovat '
+              + 'tulleet sinne sata vuotta.',
+          selite: 'Sidi Bou Saïdin kujilla seinät ovat valkoiset ja '
+            + 'ovet, ikkunaluukut ja ristikot siniset; muurien yli '
+            + 'roikkuu bougainvilleaa.',
+          lahde: 'Mstyslav Chernov, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Tunisian klassinen musiikki oli katoamassa, kunnes '
+          + 'ranskalainen paroni kirjoitti sen muistiin — ja samaan '
+          + 'aikaan maaseudulla soi säkkipilli, jota kukaan ei '
+          + 'kirjoittanut muistiin.',
+      nostot: [
+        {
+          otsikko: 'Kolmetoista sarjaa, jotka jäivät jäljelle',
+          tiedosto: 'Luth - Collection des instruments de musique du Baron d\'Erlanger.jpg',
+          teksti: 'Malouf tarkoittaa tuttua ja tavanomaista. Laji tuli '
+              + 'Andalusiasta ja on läheistä sukua Libyan maloufille, '
+              + 'Algerian gharnatille ja Marokon al-Alalle; osmanien aika '
+              + 'toi siihen turkkilaisia vaikutteita, mutta soittimet '
+              + 'pysyivät omina — tunisialainen luuttu ʻūd tūnsī on tästä '
+              + 'tunnusmerkillinen esimerkki. Rakenteen ydin on nuba, '
+              + 'kaksiosainen sarja, joka pysyy yhdessä sävelmoodissa ja '
+              + 'kestää noin tunnin. Perimätiedon mukaan jokaisella '
+              + 'päivällä ja juhlalla oli oma nubansa, mutta jäljellä on '
+              + 'kolmetoista. Nykyään maloufia kuullaan etenkin häissä, '
+              + 'ja äänitteitä on vähän.',
+          selite: 'Tunisialainen luuttu paroni d’Erlangerin '
+            + 'soitinkokoelmassa; seinällä on hänen oma muotokuvansa.',
+          lahde: 'IssamBarhoumi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Paroni, joka kirjoitti musiikin kuuteen niteeseen',
+          aika: '1932–1934',
+          tiedosto: 'Palais Ennejma Ezzahra, Baron D\'Erlanger, sidi Bou Said, 2024 20240609 102524.jpg',
+          teksti: 'Rodolphe d’Erlanger kokosi maloufin säännöt ja '
+              + 'historian kuuteen niteeseen ja perusti Rachidian, '
+              + 'konservatorion, joka toimii yhä. Hänen ehdotuksestaan '
+              + 'kuningas Fuad I kutsui koolle arabialaisen musiikin '
+              + 'kongressin Kairoon 14. maaliskuuta – 3. huhtikuuta 1932, '
+              + 'ja d’Erlanger toimi sen varapuheenjohtajana. Paikalla '
+              + 'olivat muun muassa Béla Bartók ja Paul Hindemith, ja '
+              + 'delegaatioita tuli Algeriasta, Egyptistä, Irakista, '
+              + 'Marokosta, Syyriasta, Tunisiasta ja Turkista. '
+              + 'Kongressissa äänitettiin 360 esitystä, joista 162 '
+              + 'julkaistiin levyinä; äänitteitä säilytetään Pariisissa, '
+              + 'Lontoossa ja Berliinissä.',
+          selite: 'Ennejma Ezzahra oli d’Erlangerin koti Sidi Bou '
+            + 'Saïdissa, ja siitä tuli soitinmuseo ja konserttitalo.',
+          lahde: 'Habib M’henni, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Säkkipilli, jossa on kaksi lehmänsarvea',
+          // Kuvaton (Opus 6.9.2026): Commonsin mezoued-kuvissa on
+          // lähikuvassa tunnistettavia kasvoja tai ne ovat liian pimeitä.
+          // Kuvatilaus on kirjattu raporttiin.
+          teksti: 'Mezoued tarkoittaa säkkiä tai eväspussia, ja niin se '
+              + 'on tehty: pussi on uuhen nahkaa, siitä lähtee '
+              + 'kaksoisputki, jossa on yksöislehdykkä, ja putki päättyy '
+              + 'kahteen lehmänsarveen. Samannimistä musiikkia soitetaan '
+              + 'darbouka-rummun kanssa. Se oli alun perin maaseudun ja '
+              + 'työväen musiikkia, sitä soitettiin häissä ja juhlissa, ja '
+              + 'siihen kuuluu tansseja, joiden sanotaan vievän '
+              + 'transsiin. Vaikka laji ei kuulunut hienoihin saleihin, '
+              + 'siitä on tullut yksi Tunisian suosituimmista, ja se on '
+              + 'kaupunkien laitamien oma ääni.',
+          selite: 'Mezouedin pussi tehdään uuhen nahasta ja soittimen '
+            + 'kaksoisputki päättyy kahteen lehmänsarveen.',
+        },
+        {
+          otsikko: 'Luuttu, joka löysi tiensä jazzlavoille',
+          tiedosto: 'Anouar Brahem Quartet Lantaren Venster Rotterdam 27 maart 2014 - Anouar Brahem (51266239479).jpg',
+          teksti: 'Tunisialainen ʻūd tūnsī on lähisukulainen '
+              + 'algerialaiselle ja marokkolaiselle udille, mutta oma '
+              + 'soittimensa: viritys ja soittotapa poikkeavat, ja se '
+              + 'kuuluu maloufin kokoonpanoon. 1900-luvun tunisialaisia '
+              + 'muusikoita ovat oud-soittaja Anouar Brahem, viulisti ja '
+              + 'säveltäjä Jasser Haj Youssef, laulaja Dhafer Youssef '
+              + 'sekä harvinaisuus, kokonaan naisista koostuva orkesteri '
+              + 'El Azifet. Vanhemman polven nimiä ovat Saliha, Raoul '
+              + 'Journo, Hedi Jouini, Fethia Khairi ja Naâma. Brahemin '
+              + 'levyt ilmestyvät eurooppalaisella jazzlevymerkillä, ja '
+              + 'niissä ud soittaa pianon ja kontrabasson rinnalla.',
+          selite: 'Anouar Brahem soittaa udia jazzkokoonpanossa; soitin '
+            + 'on sama kuin maloufin orkesterissa, mutta musiikki eri.',
+          lahde: 'Dirk Neven, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'meri',
+      nimi: 'Meri',
+      johdanto: 'Tunisian meri ei ole vain rantaviiva: se on '
+          + 'lintujen talvipaikka, palmunlehdistä rakennettu pyydys ja '
+          + 'Välimeren voimakkain vuorovesi.',
+      nostot: [
+        {
+          otsikko: 'Järvi, jonka padot melkein tappoivat',
+          aika: '1980–2006',
+          tiedosto: 'Ichkeul National Park-130277.jpg',
+          teksti: 'Ichkeulin järvi on Pohjois-Tunisiassa, parikymmentä '
+              + 'kilometriä Bizertestä, Afrikan pohjoisimmasta '
+              + 'kaupungista. Kansallispuisto on 126 neliökilometriä ja '
+              + 'pääsi maailmanperintöluetteloon 1980. Järvi ja sen '
+              + 'kosteikot ovat satojentuhansien muuttolintujen '
+              + 'levähdyspaikka: sorsia, hanhia, kattohaikaroita ja '
+              + 'flamingoja. Sitten järveen laskevat joet padottiin, '
+              + 'makean veden tulo väheni, ja ruovikot ja sarat '
+              + 'vaihtuivat suolaa sietäviin kasveihin — lintumäärät '
+              + 'romahtivat. Kohde siirrettiin uhanalaisten '
+              + 'maailmanperintökohteiden listalle 1996 ja poistettiin '
+              + 'siltä 2006, kun suolaisuutta oli saatu laskemaan.',
+          selite: 'Ichkeulin matala järvi ja sen yllä kohoava vuori: '
+            + 'rantavedessä näkyy vesikasvillisuutta, joka on '
+            + 'lintujen ravintoa.',
+          lahde: 'Christian Manhart, Wikimedia Commons (CC BY-SA 3.0 IGO)',
+        },
+        {
+          otsikko: 'Aita, joka rakennetaan mereen joka vuosi',
+          aika: '2020',
+          tiedosto: 'Un pecheur lance sont filet en nasse à Kerkennah - tunisie.jpg',
+          teksti: 'Kerkennahin saarilla kalastetaan charfialla. Se on '
+              + 'kiinteä pyydys: palmunlehtiä lyödään merenpohjaan '
+              + 'kolmioksi, joka katkaisee laskuveden mukana liikkuvien '
+              + 'kalojen tien ja ohjaa ne kammioihin ja lopulta verkkoon. '
+              + 'Toisin kuin pohjatroolaus, pyydys ei raavi pohjaa, ja '
+              + 'kalat pysyvät elossa nostoon asti. Charfia pidetään '
+              + 'toiminnassa vain syyspäiväntasauksen ja kesäkuun '
+              + 'välillä, jotta meri saa lepoajan, ja aidat rakennetaan '
+              + 'joka vuosi uudelleen yhteisellä aterialla ja rukouksilla. '
+              + 'Pyyntipaikka periytyy usein isältä vanhimmalle pojalle. '
+              + 'Unesco merkitsi tavan luetteloonsa 2020.',
+          selite: 'Kerkennahin kalastaja seisoo veneessään matalikolla; '
+            + 'saarten ympärillä meri on niin matalaa, että pohja näkyy '
+            + 'kauas.',
+          lahde: 'Skander zarrad, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Välimeren voimakkain vuorovesi',
+          tiedosto: 'Port de sfax in sunset.jpg',
+          teksti: 'Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa '
+              + 'se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. '
+              + 'Välimerellä vuorovesi jää useimmiten muutamaan '
+              + 'kymmeneen senttiin, mutta lahden pohjukassa Gabèsin '
+              + 'kohdalla se nousee ja laskee suurvuoroveden aikaan jopa '
+              + '2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja '
+              + 'ne elävät sienestä ja tonnikalasta. Syrtti mainitaan '
+              + 'myös Uudessa testamentissa: kun Paavalia kuljetettiin '
+              + 'vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan '
+              + 'aluksen Syrttiin ja teki kaikkensa välttääkseen sen.',
+          selite: 'Sfaxin satama Gabèsin lahden pohjoispäässä: viljasiilot '
+            + 'ja nosturit erottuvat auringonlaskua vasten.',
+          lahde: 'Alwaleed369, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Saari, jolta Odysseus ei tahtonut lähteä',
+          aika: '2023',
+          tiedosto: 'Houmt el souk.jpg',
+          teksti: 'Djerba on 514 neliökilometriä ja Pohjois-Afrikan '
+              + 'suurin saari; vuoden 2014 laskennassa siellä asui '
+              + '163 726 ihmistä. Saarta on pidetty lootuksensyöjien '
+              + 'saarena, jonne Odysseus ajautui ja jossa miehistö '
+              + 'unohti kotimatkan; kreikkalaisille se tunnettiin '
+              + 'nimillä Lytos ja Meninx. Saaren juutalaisyhteisön El '
+              + 'Ghriban synagoga on ollut yhtäjaksoisessa käytössä yli '
+              + 'kaksituhatta vuotta, ja perimätiedon mukaan Jerusalemin '
+              + 'temppelin tuhoutuessa paenneet papit toivat mukanaan '
+              + 'oven ja kiviä, jotka muurattiin rakennukseen. Unesco '
+              + 'otti koko saaren maailmanperintöluetteloon vuonna 2023.',
+          selite: 'Houmt Souk on Djerban pääkaupunki: matalaa valkoista '
+            + 'asutusta levittäytyy rannalta sisämaahan niin kauas kuin '
+            + 'saari riittää.',
+          lahde: 'Synek125, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+    },
+  ],
 };

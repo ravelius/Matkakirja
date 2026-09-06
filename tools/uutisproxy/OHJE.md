@@ -13,6 +13,17 @@
 > js/packs/uutislahteet.js:n maakohtaisissa kommenteissa. Julkaisu Git-
 > integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Marokko, Algeria, Tunisia):** sallittuihin
+> lisättiin www.hespress.com, www.tsa-algerie.com ja africanmanager.com
+> (maalehdet MAR/DZA/TUN, testattu 6.9.2026: syöte aukeaa,
+> artikkelisivulta jäsentyy leipäteksti ja `og:image` löytyy).
+> Hespress on arabiankielinen, ja oikealta vasemmalle kirjoitettava
+> teksti toimii ilman lisätöitä. TSA:n artikkelisivulla on myös
+> `[itemprop="articleBody"]`. Tunisiassa kolme suosittua lähdettä
+> hylättiin artikkelisivutestissä (Mosaique FM, Kapitalis, Leaders);
+> perustelut ovat js/packs/uutislahteet.js:n TUN-kommentissa.
+> Julkaisu Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Papua-Uusi-Guinea, Salomonsaaret):**
 > sallittuihin lisättiin www.postcourier.com.pg ja
 > theislandsun.com.sb (maalehdet PNG/SLB, testattu 6.9.2026: syötteessä

@@ -62,6 +62,11 @@ const SALLITUT = [
   'https://capitalfm.africa/',
   'https://globalpublishers.co.tz/',
   'https://nilepost.co.ug/',
+  // Marokon, Algerian ja Tunisian uutislähteet (maalehdet 6.9.2026):
+  // syöte ja artikkelisivut samalla isäntänimellä.
+  'https://www.hespress.com/',
+  'https://www.tsa-algerie.com/',
+  'https://africanmanager.com/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

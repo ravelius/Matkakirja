@@ -353,4 +353,48 @@ export const UUTISLAHTEET = {
     kieli: 'en',
     syote: 'https://nilepost.co.ug/feed',
   },
+  /*
+   * Hespress on Marokon luetuimpia uutissivustoja ja arabiankielinen.
+   * Testattu 6.9.2026: syötteessä kaksitoista juttua, ja artikkelisivun
+   * ensimmäisessä <article>-lohkossa on seitsemän yli 60 merkin
+   * kappaletta sekä og:image. Oikealta vasemmalle kirjoitettava kieli
+   * toimii ilman lisätöitä (dir="auto", v297).
+   */
+  MAR: {
+    nimi: 'Hespress',
+    kieli: 'ar',
+    syote: 'https://www.hespress.com/feed',
+  },
+  /*
+   * TSA (Tout sur l'Algérie) on ranskankielinen algerialainen
+   * uutissivusto. Testattu 6.9.2026: syötteessä kymmenen juttua, ja
+   * artikkelisivulla on sekä [itemprop="articleBody"] -lohko että
+   * <article>, jossa on kolmetoista yli 60 merkin kappaletta, sekä
+   * og:image.
+   */
+  DZA: {
+    nimi: 'TSA',
+    kieli: 'fr',
+    syote: 'https://www.tsa-algerie.com/feed/',
+  },
+  /*
+   * African Manager on tunisialainen ranskankielinen uutissivusto.
+   * Testattu 6.9.2026: syötteessä sata juttua, ja artikkelisivun
+   * ensimmäisessä <article>-lohkossa on leipäteksti ja og:image.
+   *
+   * Testattu ja hylätty: Mosaique FM (syöte aukeaa ja siinä on 40
+   * juttua, mutta artikkelisivun <article>-lohko on tyhjä eikä
+   * leipätekstiä saa poimittua), Kapitalis (syöte ja artikkelisivu
+   * aukeavat, mutta sivun ENSIMMÄINEN <article> on 317 merkin
+   * otsikkolohko — js/uutiset.js poimii juuri sen), Leaders
+   * (syötteen linkit ovat http:// ja palauttavat 301, eikä worker
+   * seuraa uudelleenohjauksia), Tunisie Numérique, Webmanagercenter,
+   * Espace Manager ja Assabah (301/404 syötteestä), Business News ja
+   * TAP (varmenneketju ei aukea tästä ympäristöstä).
+   */
+  TUN: {
+    nimi: 'African Manager',
+    kieli: 'fr',
+    syote: 'https://africanmanager.com/feed/',
+  },
 };

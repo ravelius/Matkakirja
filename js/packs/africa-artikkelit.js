@@ -9,10 +9,22 @@
 // wiki tai nimi — sama avain, jolla cachedSummary hakee.
 export const OMAT_ARTIKKELIT = {
   Marokko: {
+    // Muita pidempi tarkoituksella: Marokon maalehden osasto nojaa
+    // tähän yksin (sama malli kuin Egyptillä ja Italialla).
     intro: 'Marokon kuningaskunta on Afrikan luoteiskulman maa, jossa '
       + 'Atlasvuoret erottavat meren rannikot Saharasta. Eurooppaan on '
       + 'matkaa vain salmen verran, ja se näkyy kaikessa — Marokko on '
-      + 'aina ollut kahden maailman naapuri.',
+      + 'aina ollut kahden maailman naapuri. Maa ei koskaan kuulunut '
+      + 'Osmanien valtakuntaan, vaan sitä hallitsivat omat sulttaanit, '
+      + 'ja siksi sen kaupungit, käsityö ja musiikki kehittyivät omaa '
+      + 'uraansa. Vanhin väestö ovat amazighit eli berberit, joiden '
+      + 'kieli on nykyään arabian rinnalla virallinen. Fèsissä toimii '
+      + 'al-Qarawiyyin, jota pidetään maailman vanhimpana yhä '
+      + 'toimivana korkeakouluna, ja Marrakechin El Badin palatsi '
+      + 'muistuttaa ajasta, jolloin marokkolainen armeija marssi '
+      + 'Saharan yli Nigerjoelle. Rannikolla puhaltaa Atlantin kylmä '
+      + 'virta, joka tekee vesistä yhdet Afrikan kalaisimmista, ja '
+      + 'vuorilla kasvaa setrimetsiä, joihin sataa talvella lunta.',
     artikkeli: 'Marokko on kuningaskunta Afrikan luoteisosassa. Sillä on '
       + 'rantaa kahdelle merelle, Atlantille ja Välimerelle, ja maan '
       + 'halki kulkee Atlasvuoristo, jonka huiput nousevat yli neljään '
@@ -1276,9 +1288,21 @@ export const OMAT_ARTIKKELIT = {
 
   // --- Loput maat -------------------------------------------------------
   Tunisia: {
+    // Muita pidempi tarkoituksella: Tunisian maalehden osasto nojaa
+    // tähän yksin (sama malli kuin Egyptillä).
     intro: 'Tunisia on Pohjois-Afrikan pienin ja pohjoisin maa — '
       + 'Karthagon perillinen, jonka rannikot ovat aina katsoneet '
-      + 'Välimerelle.',
+      + 'Välimerelle. Rooman aikana provinssi oli valtakunnan '
+      + 'viljakomero: sen sanottiin ruokkineen pääkaupungin kahdeksan '
+      + 'kuukautta vuodesta. Kairouanista käsin arabidynastia '
+      + 'aghlabidit purjehtivat 800-luvulla Sisiliaan, ja 1800-luvulla '
+      + 'maassa lakkautettiin orjuus ja säädettiin arabimaiden '
+      + 'ensimmäinen kirjoitettu perustuslaki. Pohjoinen on vehreää '
+      + 'vuorimaata, keskiosa oliivilakeutta ja etelä Saharan reunaa '
+      + 'suola-aavikkoineen. Ruoka on Pohjois-Afrikan tulisinta: '
+      + 'harissa on maan oma chilitahna ja päätyi Unescon '
+      + 'kulttuuriperintöluetteloon. Gabèsin lahdella vuorovesi nousee '
+      + 'yli kahden metrin, mikä on Välimerellä poikkeuksellista.',
     artikkeli: 'Tunisia työntyy niemenä kohti Sisiliaa: Eurooppaan on '
       + 'merta vain sadanviidenkymmenen kilometrin verran. Pohjoinen '
       + 'on vehreää vuorimaata, keskiosa viljelylakeutta ja etelä '
@@ -1297,9 +1321,22 @@ export const OMAT_ARTIKKELIT = {
       + 'oliiviöljyn tuottajia.',
   },
   Algeria: {
+    // Muita pidempi tarkoituksella: Algerian maalehden osasto nojaa
+    // tähän yksin (sama malli kuin Egyptillä).
     intro: 'Algeria on Afrikan suurin valtio: kapea vehreä rannikko '
       + 'ja sen takana Saharan valtameri, jossa Ahaggarin vuoret '
-      + 'kohoavat tuaregien maana.',
+      + 'kohoavat tuaregien maana. Lähes kaikki algerialaiset asuvat '
+      + 'pohjoisessa, jossa Atlasvuorten rinteet vihertävät ja '
+      + 'Välimeri tuo sateet. Keskiajalla maassa oli oma '
+      + 'imaamivaltionsa, jonka pääkaupunki Tahert veti puoleensa '
+      + 'oppineita, ja 1500-luvulta 1830-luvulle Algerin regenssi oli '
+      + 'Välimeren merivaltoja. Ibn Khaldun kirjoitti '
+      + 'yhteiskuntatieteen klassikon Muqaddimahin algerialaisessa '
+      + 'vuorikylässä, ja 1900-luvulla maasta tuli Albert Camus\'n, '
+      + 'Kateb Yacinen ja Assia Djebarin kirjallinen koti. Oranissa '
+      + 'syntyi raï ja Algerin kasbahissa chaabi, ja kabyylinkielinen '
+      + 'laulu on kulkenut maailman ympäri. Saharan puolella kasvaa '
+      + 'sypressejä, jotka ovat yli kaksituhatta vuotta vanhoja.',
     artikkeli: 'Algeria on pinta-alaltaan Afrikan suurin maa, mutta '
       + 'yhdeksän kymmenesosaa siitä on Saharaa. Lähes kaikki '
       + 'algerialaiset asuvat pohjoisen rannikkokaistalla, jossa '
