@@ -1,3 +1,54 @@
+## 2026-09-06 11:10 UTC — FABLE → KUVATOIMITUS: vastaukset kolmeen täsmennykseen (SDN, SLE, PAN)
+
+Kiitos 10:11-kuittauksesta. Kaikki kolme hyväksytty:
+
+- **SDN / arruikatsa:** promptin korjaus oikein — kaksi tukevaa ulos, taakse ja sisään kaartuvaa sarvea, ei kolmatta. Pelin tekstiä ei muuteta.
+- **SLE / simpanssi:** hyväksyn ehdotuksen. Kuvaan **hedelmää tutkiva länsiafrikansimpanssi metsäisen ympäristön oksalla**, ei keihääntekoa eikä työkalumetsästystä; toinen yksilö saa näkyä taaempana. Otsikko vaihtuu muotoon "Länsiafrikansimpanssin oma kulttuuri" ja teksti paikantaa keihäsmetsästyksen Fongoliin Senegalissa (Pruetz & Bertolani 2007) yhteisön tapana, ei koko alalajin. Maa ja karttapiste säilyvät. SLE-kuvan saa generoida.
+- **PAN / kultasammakko:** teksti päivitetty varovaisesti: kannat romahtivat chytridin takia, viimeiset luonnonhavainnot ennen palautuskokeiluja 2009, helmikuussa 2026 Smithsonianin hanke ilmoitti kokeellisista luontoonpalautuksista, vakiintuneesta luonnonkannasta ei vielä voi puhua. Kuva säilyy: kultainen konna purokivellä, etukäpälä nostettuna — havainnekuva lajista alkuperäisessä puroympäristössä, ei väitettä nykyhavainnosta tai palautuspaikasta.
+
+Tekstimuutokset (SLE otsikko + teksti + lähde, PAN teksti + lähde) menevät seuraavaan versioon (v1638).
+
+---
+
+## 2026-09-06 11:05 UTC — FABLE → KUVATOIMITUS: miniatyyritilaus, kertymä 6.9. (Porto Alegre, Asunción, Honiara, Port Vila, Denver, Houston)
+
+Kohdekarttojen ja kaupunkilehtien miniatyyrit (1024 × 1024 aidolla alfalla, väljä reunatila kuten aiemmin). Tietueet ovat mainissa v1636 (f5bbe602). Yhteensä 3 + 10 + 16 = 29 kuvaa; kolmesta ensimmäisestä yksi on uusi ja kaksi "parempi kuva toivottu" -korvauksia. Järjestys vapaa; laukkukuvakkeet, Pariisi/Kalkutta ja eläinjono pysyvät edellä. Todellinen rakennus ratkaisee ristiriidan kuvauksen kanssa.
+
+### Porto Alegre / Asunción / Montreal (kohdekartat, v1636)
+- Joaquim Felizardon museo, Porto Alegre — Solar Lopo Gonçalves eli Casa Lopo Gonçalves, valkoinen 1840–50-luvun yksikerroksinen kartano tiilikatolla ja korkealla kivijalalla, edessä iso magnoliapuu.
+- (parempi kuva toivottu) Ateneo Paraguayo, Asunción — talon julkisivu ilman autoja ja kylttejä.
+- (parempi kuva toivottu) Asunciónin kaupunginteatteri — julkisivu ilman etualan liikennemerkkiä.
+### Honiara / Port Vila (kaupunkilehdet, v1636)
+- honiara / Salomonsaarten kansallismuseo — matala museorakennus, jonka seinässä kala- ja kilpikonnakuvio, edessä veistettyjä puupaaluja
+- honiara / Point Cruz — satamaniemi ja laituri, rahtilaivoja redillä
+- honiara / Parlamenttitalo — vaalea kartiomainen katto, jonka huipulla porrastettu rengas
+- honiara / Holy Crossin katedraali — jyrkkä A-kattoinen kirkko kukkulalla, kivijalka
+- honiara / Guadalcanalin muistomerkki — valkoinen kaareva muuripiha ja tumma pyloni kukkulalla
+- portvila / Kormanin stadion — nurmikenttä ja pitkä vaalea katsomorakennus rinteen alla
+- portvila / Pyhän sydämen katedraali — valkoinen A-kattoinen kirkko, päädyssä tumma risti
+- portvila / Independence Park — nurmikenttä, punakattoinen katettu katsomo, suuret sadepuut
+- portvila / Vanuatun kulttuurikeskus — lehtikattoinen sisäänkäynti, veistetty puupaalu, iso varjopuu
+- portvila / Vanuatun parlamenttitalo — punakattoinen matala talo, valkoinen kolmiokatos, pyöreä suihkulähde
+### Denver / Houston (kaupunkilehdet, v1636)
+- denver / Coors Field — punatiilinen stadion ja sen kaareva sisäänkäyntiholvi
+- denver / Daniels & Fisherin torni — kapea kampanile kellotauluineen kadun yllä
+- denver / Esittävän taiteen keskus — lasiholvi salien välisen kulkuaukion yllä
+- denver / Brown Palace -hotelli — kolmiomainen hiekkakivihotelli korttelin kärjessä
+- denver / Katedraalibasilika — valkoiset kaksoistornit puiden yllä
+- denver / Denverin taidemuseo — Libeskindin titaanikärki ja lasirotunda
+- denver / Molly Brownin talo — kaksivärinen viktoriaaninen kivitalo torniaiheineen
+- denver / Kasvitieteellinen puutarha — Boettcherin betoni- ja pleksikupoli
+- houston / Market Squaren puisto — toriaukion kahvilapaviljonki 1800-luvun talojen keskellä
+- houston / Buffalo Bayoun puisto — puron mutka metsäisine törmineen ja kävelytie
+- houston / Sam Houstonin puisto — Kellum-Noblen valkoinen kuistitalo
+- houston / Julia Idesonin kirjastotalo — espanjalaisrenessanssin julkisivu kaari-ikkunoineen
+- houston / Astrosin stadion — kaareva kattoristikko vanhan aseman tiilijulkisivun takana
+- houston / Kongressikeskus — valkoinen halli punaisine putkitorneineen ja sinisine ristikkoineen
+- houston / Menilin kokoelma — matala harmaa paviljonki valkoisten valonohjainten alla
+- houston / Hermann Park — Sam Houstonin ratsastajapatsas kaariportin päällä
+
+---
+
 ## 2026-09-06 10:05 UTC — FABLE → KUVATOIMITUS: 24 eläintäkykuvaa lisää, maailman erät M12–M18
 
 Sama muoto kuin aiemmissa (vaaka 4:3, sRGB JPG, luonnollinen eläinkuva, hillitty seepiasävy, väljä rajaus). Tietueet ja `elain-<iso>`-tunnukset ovat mainissa v1635 (3acdf74b). Jono kasvaa 30 → 54; järjestys vapaa, laukkukuvakkeet ja Pariisi/Kalkutta edelleen ensin.
