@@ -594,6 +594,16 @@ export function avaaTiedeliite(ui, tapahtumat, i, {
     hampurilainen.setAttribute('aria-expanded', 'false');
   };
 
+  /*
+   * MIKÄ NÄHTIIN ESITYKSESSÄ (omistaja 6.9.2026 ilta: *"pelaaja voisi
+   * itse katsella ne ohitettu kuvat läpi"*). Kun kaari merkitsee
+   * pysäkkinsä hiljaisiksi (js/aikajana.js, Ihmisen matka), sisällys
+   * kertoo merkillä, mitkä kuudesta tulivat jo vastaan matkalla — muut
+   * ovat niitä ohitettuja, joita pelaaja tuli katsomaan. Kaarella ilman
+   * lippua (keksinnöt) sisällys on kirjaimelleen entinen.
+   */
+  const merkitaanEsitys = tapahtumat.some((t) => t?.hiljainen !== undefined);
+
   const taytaSisallys = () => {
     sisallys.textContent = '';
     tapahtumat.forEach((t, j) => {
@@ -604,6 +614,11 @@ export function avaaTiedeliite(ui, tapahtumat, i, {
         html('span', 'tiedeliite-sisallysvuosi', String(ajoitus(t))),
         html('span', 'tiedeliite-sisallysnimi', t.henkilo ?? t.otsikko),
       );
+      if (merkitaanEsitys && !t.hiljainen) {
+        const merkki = html('span', 'tiedeliite-sisallysmerkki', '◈');
+        merkki.title = 'näytettiin esityksessä';
+        rivi.appendChild(merkki);
+      }
       if (j === nykyinen) rivi.setAttribute('aria-current', 'page');
       rivi.addEventListener('click', () => { suljeSisallys(); vaihda(j); });
       sisallys.appendChild(rivi);

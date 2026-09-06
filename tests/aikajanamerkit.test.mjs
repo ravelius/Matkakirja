@@ -779,7 +779,8 @@ test('moottori naksahtaa elävästä vaihdoksesta ja kohahtaa vain keksinnön ko
   assert.match(MOOTTORI, /if \(elava && this\.kaynnissa\) this\.naksahda\(\);/);
   // Kohahdus kuuluu keksinnölle (omistajan päätös 3.9.2026): valon
   // syttyessä, ei merkkipaalulla; naksahdus vain jos se ei soinut.
-  assert.match(MOOTTORI, /sytyta\(i\) \{[\s\S]{0,700}this\.keksinnonAani\(t\);/);
+  // (Väli kasvoi hiljaisen pysäkin haaralla: kohahdus on sen jälkeen.)
+  assert.match(MOOTTORI, /sytyta\(i\) \{[\s\S]{0,2200}this\.keksinnonAani\(t\);/);
   // Omistaja 3.9.2026: keksinnön ääni on yksi yksinkertainen kilahdus,
   // ei tähteä eikä kohahdusta.
   assert.match(MOOTTORI, /keksinnonAani\(t\) \{\n\s*if \(t\?\.paalu\) return;\n\s*sfx\.play\('keksinto'\);/);

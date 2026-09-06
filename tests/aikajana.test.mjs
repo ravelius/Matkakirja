@@ -13,7 +13,7 @@ import { jaaVirkkeiksi } from '../js/aikajana.js';
 import { readFileSync } from 'node:fs';
 
 import {
-  aikajanaAskel, asetaMatkamittari, rajaaPaneelinSiirto, PANEELIN_RAAHAUSKYNNYS,
+  aikajanaAskel, nakyvaJarjestys, asetaMatkamittari, rajaaPaneelinSiirto, PANEELIN_RAAHAUSKYNNYS,
   rullanSumu, tasoitaSumu, sumennaRullat, RULLAN_VALOTUS_S, RULLAN_SUMU_MAX, RULLAN_SUMUN_KYNNYS,
   rajaaPaneelinKoko, PANEELIN_KOKO_MIN, PANEELIN_KOKO_MAX,
   AIKAJANA_TAUON_OSUUS, VUOSI_RULLAUS_MS, AIKAJANA_NAKSU_VALI_MS,
@@ -135,6 +135,115 @@ test('hiipimä on alle kokonaisen vuoden ja saman vuoden ketju ei peruuta mittar
   // Vanha tila ilman viiveTaysi-kenttää toimii (viive = koko tauko).
   const vanha = aikajanaAskel({ vuosi: 1770, i: 0, viive: 500 }, 250, TAPAHTUMAT, TAHTI);
   assert.ok(Math.abs(vanha.tila.vuosi - (1770 + AIKAJANA_TAUON_OSUUS * 0.5)) < 1e-9);
+});
+
+/* ==================== HILJAISET PYSÄKIT ====================
+ *
+ * Omistaja 6.9.2026 ilta: esityksessä näytetään kuusi kuvaa
+ * kahdestakymmenestä, loput katsotaan jälkikäteen galleriasta
+ * (docs/moduulit/ihmisen-matka-vanat.md luku 4). Hiljainen pysäkki on
+ * yhä pysäkki — kellon asteikko ja välien pituudet eivät muutu — mutta
+ * se ei pysäytä kelloa eikä saa korttia karuselliin. Rikkoutuu hiljaa:
+ * väärä viive venyttäisi esityksen ja väärä korttinumero siirtäisi
+ * nauhan yhden kortin sivuun, eikä kumpikaan kaataisi mitään.
+ */
+const HILJAISET = [
+  { vuosi: 1770 }, { vuosi: 1773, hiljainen: true }, { vuosi: 1776, hiljainen: true },
+  { vuosi: 1780 },
+];
+
+test('hiljainen pysäkki syttyy mutta ei pysäytä kelloa', () => {
+  const ajo = ajaKunnesSyttyy({ vuosi: 1770, i: 0, viive: 0 }, HILJAISET);
+  assert.equal(ajo.syttyi, 1, 'hiljainen pysäkki syttyy kuten muutkin (kartta saa pisteensä)');
+  assert.equal(ajo.tila.viive, 0, 'hiljainen pysäkki ei pysäytä kelloa');
+  assert.equal(ajo.tila.viiveTaysi, 0);
+  // Seuraava askel jatkaa heti eikä jää odottamaan taukoa.
+  const jatko = aikajanaAskel(ajo.tila, 16, HILJAISET, TAHTI);
+  assert.ok(jatko.tila.vuosi > 1773, 'kello jatkoi samasta kehyksestä');
+  // Näkyvä pysäkki saa yhä täyden tauon, merkkipaalu omansa.
+  const nakyva = ajaKunnesSyttyy({ vuosi: 1776, i: 2, viive: 0 }, HILJAISET);
+  assert.equal(nakyva.syttyi, 3);
+  assert.equal(nakyva.tila.viive, TAHTI.viiveMs);
+  assert.equal(aikajanaAskel({ vuosi: 1770, i: 0, viive: 0 }, 0, [
+    { vuosi: 1770 }, { vuosi: 1773, paalu: true, hiljainen: true },
+  ], TAHTI).tila.viive, 0, 'ilman askelta ei synny sivuvaikutuksia');
+});
+
+test('ennakko ohittaa hiljaiset pysäkit ja tähtää seuraavaan näkyvään', () => {
+  // Aika ensimmäisestä pysäkistä: hiljaiset 1 ja 2 eivät kelpaa
+  // määränpääksi, joten luku on aika pysäkkiin 3 asti.
+  const alku = { vuosi: 1770, i: 0, viive: 0 };
+  const eta = aikaSeuraavaan(alku, HILJAISET, TAHTI);
+  const asti = ajaKunnesSyttyy(alku, HILJAISET).kesto
+    + ajaKunnesSyttyy(ajaKunnesSyttyy(alku, HILJAISET).tila, HILJAISET).kesto;
+  assert.ok(eta > asti, `ennakko pysähtyi hiljaiseen pysäkkiin (${eta} ms)`);
+  assert.ok(Number.isFinite(eta), 'näkyvä pysäkki löytyy');
+  // Ilman hiljaisia lippuja käytös on entinen: aika seuraavaan pysäkkiin.
+  const entinen = aikaSeuraavaan({ vuosi: 1770, i: 0, viive: 500 }, TAPAHTUMAT, TAHTI);
+  const mitattu = ajaKunnesSyttyy({ vuosi: 1770, i: 0, viive: 500 }, TAPAHTUMAT).kesto;
+  assert.ok(Math.abs(entinen - mitattu) <= 32, `${entinen} ms vs. ${mitattu} ms`);
+});
+
+test('karusellin korttinumerot: hiljainen pysäkki jää edellisen kortin kohdalle', () => {
+  const kartta = nakyvaJarjestys(HILJAISET);
+  assert.equal(kartta.get(-1), -1, 'ennen ensimmäistä pysäkkiä nauha on tyhjä');
+  assert.equal(kartta.get(0), 0);
+  assert.equal(kartta.get(1), 0, 'hiljainen ei liikuta nauhaa');
+  assert.equal(kartta.get(2), 0);
+  assert.equal(kartta.get(3), 1, 'toinen näkyvä pysäkki on nauhan toinen kortti');
+  // Kortteja on täsmälleen näkyvien pysäkkien verran.
+  assert.equal(new Set([...kartta.values()].filter((v) => v >= 0)).size,
+    HILJAISET.filter((t) => !t.hiljainen).length);
+  // Kaari alkaa hiljaisella: numero pysyy −1 ensimmäiseen näkyvään asti.
+  const alkuHiljainen = nakyvaJarjestys([{ hiljainen: true }, { hiljainen: true }, {}]);
+  assert.equal(alkuHiljainen.get(0), -1);
+  assert.equal(alkuHiljainen.get(2), 0);
+  // Kaari ilman lippuja: numero on indeksi (keksinnöt ennallaan).
+  const keksinnot = nakyvaJarjestys(TAPAHTUMAT);
+  TAPAHTUMAT.forEach((_, i) => assert.equal(keksinnot.get(i), i));
+  assert.equal(nakyvaJarjestys().get(-1), -1, 'tyhjä kaari ei kaadu');
+});
+
+test('hiljainen pysäkki ei vaihda paneelia, paikkariviä eikä kameraa', () => {
+  const sytyta = metodi('sytyta');
+  // Haara päättyy ennen paneelia, paikkariviä, luentaa ja kameraa.
+  const katkos = sytyta.indexOf('if (hiljainen) {');
+  assert.ok(katkos > 0, 'sytytä ei tunne hiljaista pysäkkiä');
+  for (const kielletty of ['this.vaihdaPaneeli', 'this.paikkarivi', 'this.ajaPysakille',
+    'soitaLinssiluenta', 'this.avaaValinaytos', 'this.keksinnonAani', 'this.asettele']) {
+    assert.ok(sytyta.indexOf(kielletty) > katkos, `hiljainen pysäkki ei saa tehdä: ${kielletty}`);
+  }
+  // Lamppu, virrat ja esilataus tapahtuvat ENNEN katkosta.
+  for (const sallittu of ['asetaValonTila', 'this.virrat?.sytyta', 'paivitaReitti']) {
+    assert.ok(sytyta.indexOf(sallittu) < katkos, `hiljaisen pysäkin pitää tehdä: ${sallittu}`);
+  }
+  // Ennakkoa EI päätetä hiljaisella pysäkillä: se on jo matkalla ohi.
+  assert.ok(sytyta.indexOf('this.paattaEnnakko()') > katkos);
+  // Ennakot tähtäävät seuraavaan näkyvään pysäkkiin.
+  assert.match(MOOTTORI, /tarkistaEnnakko\(tahti\) \{[\s\S]{0,200}const kohde = this\.seuraavaNakyva\(this\.tila\.i\);/);
+  assert.match(MOOTTORI, /tarkistaKameraEnnakko\(tahti\) \{[\s\S]{0,300}const kohde = this\.seuraavaNakyva\(this\.tila\.i\);/);
+  // Kortteja rakennetaan vain näkyville pysäkeille.
+  assert.match(metodi('rakenna'), /if \(t\.hiljainen\) return;/);
+});
+
+test('loppusanoissa on galleriaan vievä nappirivi vain hiljaisten pysäkkien kaarella', () => {
+  const napit = metodi('lisaaLoppunapit');
+  assert.match(napit, /if \(!this\.tapahtumat\.some\(\(t\) => t\.hiljainen\)\) return;/);
+  assert.match(napit, /'aikajana-loppunappi primary', 'Katso löydöt'/);
+  assert.match(napit, /'aikajana-loppunappi', 'Sulje'/);
+  assert.match(napit, /this\.ui\.pysaytaAikajana\?\.\(\)/);
+  assert.match(metodi('avaaLoydot'), /avaaTiedeliite\(this\.ui, this\.tapahtumat, 0, \{/);
+  assert.ok(metodi('lopeta').includes('this.lisaaLoppunapit();'), 'loppusanat eivät saa nappirivia');
+  // Lopun laskuri tulee kaarelta: keksinnöillä yhä "valoa".
+  assert.match(MOOTTORI, /\$\{this\.valot\.filter\(Boolean\)\.length\} \$\{this\.kaari\.laskuri \?\? 'valoa'\}/);
+  // Arkkikirjaston kaksi roolia: kullattu päänappi ja paperinappi.
+  assert.match(AIKAJANA_CSS, /\.aikajana-loppu-napit \{[\s\S]{0,300}display: flex;/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-loppunappi\.primary \{[\s\S]{0,300}linear-gradient/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-loppunappi \{[\s\S]{0,400}min-height: 44px;/);
+  // Tiedeliitteen sisällys merkitsee esityksessä nähdyt.
+  assert.match(TIEDELIITE, /const merkitaanEsitys = tapahtumat\.some\(\(t\) => t\?\.hiljainen !== undefined\);/);
+  assert.match(TIEDELIITE, /if \(merkitaanEsitys && !t\.hiljainen\) \{[\s\S]{0,300}'◈'/);
+  assert.match(TIEDELIITE, /näytettiin esityksessä/);
 });
 
 test('viimeisen tapahtuman jälkeen askel ilmoittaa lopun', () => {
@@ -495,7 +604,7 @@ test('lähempi kortti peittää kauemman', () => {
 });
 
 test('moottori asettelee karusellin mitatusta leveydestä eikä kehyskohtaisesti', () => {
-  assert.match(MOOTTORI, /asettele\(\) \{[\s\S]{0,900}karusellinPaikat\(i, nyt, leveys\)/);
+  assert.match(MOOTTORI, /asettele\(\) \{[\s\S]{0,900}karusellinPaikat\(k, nyt, leveys\)/);
   assert.match(MOOTTORI, /nauhanLeveysKortteina\(\) \{[\s\S]{0,400}nauha \/ kortti/);
   // Koon muutos laskee asettelun uudelleen — kuuntelijalla, ei ajastimella.
   assert.match(MOOTTORI, /addEventListener\?\.\('resize', this\.koonMuutos\)/);
@@ -512,7 +621,8 @@ test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa se
   // Kytkentä: avaus ja alustus ovat `heti`, pysäytetty kello hiljainen.
   assert.match(MOOTTORI, /naytaVuosi\(vuosi, heti = false\) \{[\s\S]{0,2600}if \(elava && this\.kaynnissa\) this\.naksahda\(\);/);
   // Kohahdus kuuluu keksinnölle, ei vuodenvaihteelle (omistaja 3.9.2026).
-  assert.match(MOOTTORI, /sytyta\(i\) \{[\s\S]{0,700}this\.keksinnonAani\(t\);/);
+  // (Väli kasvoi hiljaisen pysäkin haaralla: kohahdus on sen jälkeen.)
+  assert.match(MOOTTORI, /sytyta\(i\) \{[\s\S]{0,2200}this\.keksinnonAani\(t\);/);
   assert.match(MOOTTORI, /keksinnonAani\(t\) \{\n    if \(t\?\.paalu\) return;\n    sfx\.play\('keksinto'\);/);
   assert.ok(!/vuosiAani/.test(MOOTTORI), 'vuosiAani on korvattu');
   assert.match(MOOTTORI, /naksahda\(\) \{[\s\S]{0,300}AIKAJANA_NAKSU_VALI_MS[\s\S]{0,200}sfx\.play\('vuosi'\);/);
@@ -1032,7 +1142,7 @@ test('ennakko liikuttaa vain kortteja; lamput, kello ja paneeli vaihtuvat syttym
   assert.match(MOOTTORI, /pysayta\(\) \{[\s\S]{0,300}this\.peruEnnakko\(\);/);
   assert.ok(metodi('alusta').includes('this.paattaEnnakko();'), 'Alusta ei päätä ennakkoa');
   // Karuselli saa olla kelloa edellä: asettelu lukee ennakon kohteen.
-  assert.match(MOOTTORI, /const nyt = this\.ennakkoKohde \?\? this\.tila\.i;/);
+  assert.match(MOOTTORI, /const nyt = this\.korttinumero\(this\.ennakkoKohde \?\? this\.tila\.i\);/);
 });
 
 test('sumea muotokuva vaihtuu terävään vasta kortin ollessa täysikokoinen', () => {

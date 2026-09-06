@@ -37,7 +37,7 @@ import {
   AJON_REIAN_KERROIN, REITIN_VARI,
 } from '../js/aikajana.js';
 import {
-  LINSSI, PYSAKIT, IHMISEN_MATKAN_LAHIKUVA, ihmisenMatkanPysakit,
+  LINSSI, PYSAKIT, IHMISEN_MATKAN_LAHIKUVA, ihmisenMatkanPysakit, ESITYKSEN_KUVAT,
 } from '../js/linssit/ihmisen-matka.js';
 import { IHMISEN_MATKA_KUVAJUURI } from '../js/linssit/ihmisen-matka-data.js';
 import { LINSSI as KEKSINTOLINSSI } from '../js/linssit/keksinnot.js';
@@ -136,6 +136,53 @@ test('pysäkit käännetään moottorin kentiksi: esine korttiin, kuva paneeliin
   // Puuttuva esine on sallittu tila: kortti näyttää tyhjän kehyksen.
   const [tyhja] = ihmisenMatkanPysakit([{ vuosiaSitten: 1, lat: 0, lon: 0 }]);
   assert.equal(tyhja.kuva, null);
+});
+
+/*
+ * KUUSI KUVAA ESITYKSESSÄ, NELJÄTOISTA GALLERIASSA (omistaja 6.9.2026
+ * ilta; docs/moduulit/ihmisen-matka-vanat.md luku 4). Rikkoutuu
+ * hiljaa: kirjoitusvirhe tunnuksessa tekisi käänteestä hiljaisen
+ * pisteen — esitys ei kaatuisi, siitä vain katoaisi kuva ja kellon
+ * pysähdys, eikä lokissa lukisi mitään.
+ */
+test('esityksen kuvia on kuusi ja jokainen on aineiston pysäkki', () => {
+  assert.equal(ESITYKSEN_KUVAT.length, 6, 'esityksessä on kuusi kuvaa');
+  assert.equal(new Set(ESITYKSEN_KUVAT).size, 6, 'sama tunnus kahdesti');
+  const tunnukset = new Set(PYSAKIT.map((t) => t.tunnus));
+  for (const tunnus of ESITYKSEN_KUVAT) {
+    assert.ok(tunnukset.has(tunnus), `${tunnus} ei ole aineiston pysäkki`);
+  }
+  // Käänteet, jotka omistaja valitsi: alku, lähtö Afrikasta, Altain
+  // haarautuminen, ylitys uuteen maanosaan, selkärangan pää ja finaali.
+  assert.deepEqual(ESITYKSEN_KUVAT,
+    ['jebel-irhoud', 'al-wusta', 'denisova', 'beringia', 'monte-verde', 'aotearoa']);
+  // Ensimmäinen ja viimeinen pysäkki ovat aina esityksessä: kamera
+  // lähtee ensimmäisestä ja loppusanat tulevat viimeisen jälkeen.
+  assert.equal(PYSAKIT[0].hiljainen, false, 'kaari alkaa hiljaisella pysäkillä');
+  assert.equal(PYSAKIT.at(-1).hiljainen, false, 'kaari päättyy hiljaiseen pysäkkiin');
+});
+
+test('pysäkit merkitään hiljaisiksi esityksen listan mukaan', () => {
+  const hiljaiset = PYSAKIT.filter((t) => t.hiljainen);
+  assert.equal(PYSAKIT.length - hiljaiset.length, ESITYKSEN_KUVAT.length,
+    'näkyviä pysäkkejä ei ole yhtä montaa kuin esityksen kuvia');
+  assert.equal(hiljaiset.length, 14, '14 löytöpaikkaa katsotaan galleriasta');
+  for (const t of PYSAKIT) {
+    assert.equal(t.hiljainen, !ESITYKSEN_KUVAT.includes(t.tunnus), `${t.tunnus}: väärä lippu`);
+    // Hiljainenkin pysäkki on täysi pysäkki: se on galleriassa oma sivunsa.
+    assert.ok(t.juttu, `${t.tunnus}: juttu puuttuu — galleria jättäisi sivun pois`);
+  }
+  // Muunnos on puhdas: tuntematon tunnus on hiljainen.
+  const [outo] = ihmisenMatkanPysakit([{ vuosiaSitten: 1, lat: 0, lon: 0, tunnus: 'ei-listalla' }]);
+  assert.equal(outo.hiljainen, true);
+  const [tuttu] = ihmisenMatkanPysakit([{ vuosiaSitten: 1, lat: 0, lon: 0, tunnus: 'denisova' }]);
+  assert.equal(tuttu.hiljainen, false);
+});
+
+test('lopun laskuri kertoo löytöpaikoista eikä valoista', () => {
+  assert.equal(LINSSI.aikajana.laskuri, 'löytöpaikkaa');
+  // Keksintökaari ei saa laskuria: sen loppurivi pysyy entisenä.
+  assert.equal(KEKSINTOLINSSI.aikajana.laskuri, undefined);
 });
 
 test('aineiston pysäkeillä on ajoitus, paikka ja asteet', () => {
