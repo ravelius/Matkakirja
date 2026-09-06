@@ -3386,6 +3386,18 @@ export const RAAMATTU = {
           + 'ilman erillista lupaa; matkakirjatekstit, kohtaamiset ja aarrekaari '
           + 'tehdaan uusiin maihin vasta kun Euroopan kaari on hiottu valmiiksi '
           + 'ja monistetaan siita.',
+        'AIKAJANAN AJO: KAMERA LAHEMPANA, LIIKKUU PIDEMPAAN VIIVAA PIIRTAEN, '
+          + 'KELLO VILISTAA (omistaja 6.9.2026 keskipaiva Ihmisen matka -ajon '
+          + 'kuvakaappauksesta, sanatarkasti: "Kartta on liian kaukana ja se '
+          + 'saisi liikkua jo aiemmin ja pidemman aikaa piirtaen viivaa '
+          + 'seuraavaan paikkaan. Lisaa dynamiikka talla. Vuosinumerot saisivat '
+          + 'vilistaa yksittaisista numeroista alkaen vuosituhansien lapi."): '
+          + 'pysakin lahikuva on tiukka ja pitka hyppy naytetaan liikkeella '
+          + '(kamera nousee matkalla kohtuullisesti, ei koko hyppya ruutuun); '
+          + 'kamera lahtee heti pysakin lukuajan jalkeen ja liike tayttaa '
+          + 'suurimman osan pysakkivalista, reittiviiva piirtyy kameran mukana; '
+          + 'kello nayttaa tayden lukeman ja kaikki numerot pyorivat '
+          + 'matkamittarin tavoin (ykkoset nopeasti, tuhannet harvoin).',
         'AIKAJANAN AVAUSLAATIKKO: MUSTA TAUSTA, EI PULUA, NAKYVA NAPPI, ELAVA '
           + 'LOIMU JA PAPERI (omistaja 6.9.2026 keskipaiva Ihmisen matka '
           + '-avauslaatikon kuvakaappauksesta, sanatarkasti: "Pulu voi olla pois '
