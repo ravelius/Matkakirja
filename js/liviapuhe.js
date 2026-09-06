@@ -165,7 +165,7 @@ export function livianKaupunkiIndeksi(kaupunkiId, kentta) {
  * ole. Kytkin käännetään trueksi samassa julkaisussa, jossa
  * generoi-pulu.yml on vienyt ateena-/sofia-tiedostot ämpäriin.
  */
-export const LIVIAN_KAUPUNKIAANET_KAYTOSSA = false;
+export const LIVIAN_KAUPUNKIAANET_KAYTOSSA = true; // generoitu 6.9.2026 ilta (omistaja: "saat generoida kaikki muut paitsi uuden linssin äänet")
 
 /** Onko tälle kaupungin repliikille olemassa äänite? */
 export function livianKaupunkiAanitetty(kaupunkiId, kentta) {

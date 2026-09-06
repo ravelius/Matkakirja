@@ -3543,7 +3543,11 @@ export const RAAMATTU = {
           + 'Livian puhe generoidaan ensin vain avauksen, Ateenan ja Sofian '
           + 'repliikeille (ei muille kaupungeille), ja nekin lyhennetaan ennen '
           + 'generointia; linssien kommenttien luenta odottaa yhteista '
-          + 'paatosta.',
+          + 'paatosta. TARKENNUS (omistaja 6.9.2026 ilta, sanatarkasti: "mutta '
+          + 'ala generoi aania viela tassa vaiheessa" ja sitten "saat generoida '
+          + 'kaikki muuta paitsi uuden linssin aanet"): avaus, Ateena ja Sofia '
+          + 'on generoitu Dr. Von -aanella (v1642); Ihmisen matka -linssin '
+          + 'luennat ja pulun kommentit siihen odottavat erillista lupaa.',
         'PULU PUHUU: OMA AANI, LYHYET REPLIIKIT, TEHOSTEET (omistaja 6.9.2026 '
           + 'aamupaiva, sanatarkasti: "Pululle taytyy etsia eleveniltä oma aani '
           + 'joka vahan kahea ja nopea puhumaan. Generoidaan kaikki valmiiksi '

@@ -247,9 +247,11 @@ const SAHKE_SOFIA = {
   vastauslinkki: { tyyppi: 'kohde', maa: 'BGR', kohde: 'varna' },
 
   vastaussahke: 'PÖLLÖLLE STOP\nTUNNUSSANA TÄSMÄÄ STOP\nLIVIA TULEE STOP',
-  oikein: 'Se on se. Yli kolmetuhatta kultaesinettä yhdestä '
-    + 'hautausmaasta, maassa ennen kuin kukaan osasi kirjoittaa. Minä vien '
-    + 'tämän pöllölle nyt heti. Älä jää tähän seisomaan, minä palaan kyllä.',
+  // Lyhennetty toistamiseen 6.9.2026 ilta: puhe (n. 13 s) katkesi
+  // sähkelennon paluukuplaan; noin 140 merkkiä mahtuu lentoon.
+  oikein: 'Se on se. Yli kolmetuhatta kultaesinettä yhdestä hautausmaasta, '
+    + 'ennen kuin kukaan osasi kirjoittaa. Minä vien tämän pöllölle. Palaan '
+    + 'kyllä.',
   fakta: 'Varnan nekropoli löytyi 1974, ja siitä on kaivettu esiin yli '
     + '3 000 kultaesinettä. Löytö on ajoitettu vuosille 4600–4200 eaa., '
     + 'eli se on maailman vanhin tunnettu kulta-aarre.',
