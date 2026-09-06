@@ -13,10 +13,14 @@
  *
  *   1. ruudun napautus EI kutsu valitseLinssiä eikä sulje laukkua,
  *   2. napautus kirjoittaa juuri sen linssin selitteen ja panee sen
- *      perään "aktivoi"-napin (myös "Ei linssiä" -ruudulle),
- *   3. "aktivoi" kutsuu valitseLinssiä oikealla tunnuksella JA sulkee
- *      laukun — ja päällä olevan linssin kohdalla sana on "sammuta",
+ *      ALLE Aktivoi-napin (myös "Ei linssiä" -ruudulle),
+ *   3. Aktivoi kutsuu valitseLinssiä oikealla tunnuksella JA sulkee
+ *      laukun — ja päällä olevan linssin kohdalla nappi on "Ota pois",
  *      joka kytkee linssin pois (valitseLinssi(null)).
+ *
+ * Napin muoto vaihtui 6.9.2026 (omistaja: *"Tee aktivoi tekstistä
+ * nappi."*): ennen se oli tekstilinkin näköinen sana selitteen
+ * perässä, nyt oma messinkireunainen nappi selitteen alla.
  *
  * DOM ajetaan pienellä omalla puumallilla samaan tapaan kuin
  * tests/pollo.test.mjs ja tests/lukija.test.mjs: Nodessa ei ole
@@ -216,20 +220,33 @@ test('napautus vaihtaa selitteen ja merkitsee ruudun esikatselluksi', () => {
   assert.deepEqual(ruudut(ui).filter((n) => n.luokat.has('paalla')).map((n) => n.dataset.linssi), ['']);
 });
 
-test('selitteen LOPPUUN tulee "aktivoi" — samaan kappaleeseen', () => {
+test('selitteen ALLE tulee Aktivoi-nappi (omistaja 6.9.2026)', () => {
   const ui = laukku();
   ruudut(ui)[1].napauta();
   const nappi = aktivointi(ui);
-  assert.ok(nappi, 'aktivoi-nappi puuttuu');
-  assert.equal(nappi.textContent, 'aktivoi');
+  assert.ok(nappi, 'Aktivoi-nappi puuttuu');
+  assert.equal(nappi.textContent, 'Aktivoi');
   assert.equal(nappi.getAttribute('aria-label'), 'Aktivoi linssi Topografia');
-  // Nappi on selitekappaleen sisällä eikä omana lohkonaan: tilaus
-  // sanoo "tekstin loppuun".
-  assert.ok(selite(ui).childNodes.includes(nappi));
-  assert.match(teksti(selite(ui)), /Maaston korkeus väreinä\. aktivoi$/);
+  /*
+   * NAPPI ON OMA LOHKONSA, EI SANA KAPPALEEN PERÄSSÄ (omistaja
+   * 6.9.2026: "Tee aktivoi tekstistä nappi"). Selite jää pelkäksi
+   * virkkeeksi, ja nappi seuraa sitä tietolohkon lapsena — juuri
+   * tämä ero rikkoutuisi hiljaa, jos joku latoisi sen taas kappaleen
+   * sisään.
+   */
+  assert.equal(selite(ui).childNodes.includes(nappi), false,
+    'nappi ei kuulu selitekappaleen sisään');
+  assert.match(teksti(selite(ui)), /Maaston korkeus väreinä\.$/);
+  const lapset = ui.linssiTiedot.childNodes;
+  assert.equal(lapset.indexOf(nappi), lapset.indexOf(selite(ui)) + 1,
+    'nappi on heti selitteen jälkeen');
+  // Sormelle riittävä kosketuskohde ja messinkireunus tulevat CSS:stä.
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  const lohko = css.slice(css.indexOf('.linssi-aktivoi,\n.dialog .linssi-aktivoi {'));
+  assert.match(lohko.slice(0, 900), /min-height: 44px;/);
 });
 
-test('"aktivoi" kytkee linssin ja sulkee matkalaukun', () => {
+test('Aktivoi-nappi kytkee linssin ja sulkee matkalaukun', () => {
   const ui = laukku();
   ruudut(ui)[1].napauta();
   aktivointi(ui).napauta();
@@ -238,10 +255,11 @@ test('"aktivoi" kytkee linssin ja sulkee matkalaukun', () => {
   assert.equal(ui.linssiEsikatselu, undefined, 'esikatselu nollautuu kytkennästä');
 });
 
-test('"Ei linssiä" toimii kuten linssit: selite ja "aktivoi"', () => {
+test('"Ei linssiä" toimii kuten linssit: selite ja Aktivoi-nappi', () => {
   const ui = laukku({ paalla: 'topografia' });
   ruudut(ui)[0].napauta();
-  assert.match(teksti(selite(ui)), /Kartta sellaisena kuin isoisä sen piirsi\. aktivoi$/);
+  assert.match(teksti(selite(ui)), /Kartta sellaisena kuin isoisä sen piirsi\.$/);
+  assert.equal(aktivointi(ui)?.textContent, 'Aktivoi');
   const otsikko = ui.linssiTiedot.childNodes.find((n) => n.luokat?.has('linssi-nimi'));
   assert.equal(otsikko?.textContent, 'Paljain silmin');
   aktivointi(ui).napauta();
@@ -249,18 +267,24 @@ test('"Ei linssiä" toimii kuten linssit: selite ja "aktivoi"', () => {
   assert.equal(ui.passportDialog.open, false);
 });
 
-test('päällä olevan linssin kohdalla sana on "sammuta" ja se kytkee pois', () => {
+/*
+ * POISKYTKENTÄ SÄILYY SAMASSA NAPISSA (omistaja 6.9.2026 antoi luvan
+ * disabloituun "Käytössä"-nappiin vain siltä varalta, ettei nykyinen
+ * koodi tue poiskytkentää — se tukee, joten käyttäytyminen säilyy).
+ */
+test('päällä olevan linssin kohdalla nappi on "Ota pois" ja se kytkee pois', () => {
   const ui = laukku({ paalla: 'vesistot' });
   ruudut(ui)[2].napauta();
   const nappi = aktivointi(ui);
-  assert.equal(nappi.textContent, 'sammuta');
-  assert.equal(nappi.getAttribute('aria-label'), 'Sammuta linssi Vesistöt');
+  assert.equal(nappi.textContent, 'Ota pois');
+  assert.equal(nappi.luokat.has('pois'), true, 'himmeämpi asu erottaa suunnan');
+  assert.equal(nappi.getAttribute('aria-label'), 'Ota linssi Vesistöt pois käytöstä');
   nappi.napauta();
-  assert.deepEqual(ui.valitsut, [null], 'sammuta kytkee linssin pois');
+  assert.deepEqual(ui.valitsut, [null], '"Ota pois" kytkee linssin pois');
   assert.equal(ui.passportDialog.open, false);
 });
 
-test('ilman napautusta selite kertoo päällä olevasta linssistä eikä tarjoa "aktivoi"', () => {
+test('ilman napautusta selite kertoo päällä olevasta linssistä eikä tarjoa Aktivoi-nappia', () => {
   const ui = laukku({ paalla: 'topografia' });
   assert.match(teksti(selite(ui)), /Maaston korkeus väreinä\.$/);
   assert.equal(aktivointi(ui), null, 'avattaessa ei ole mitään uutta aktivoitavaa');
@@ -284,7 +308,7 @@ test('selitteen vaihto häivytetään: lohko saa animaatioluokan joka piirrolla'
  * TOIMINTO eikä tila (valitseLinssi('pallo')), joten senkin ruutu
  * odottaa "aktivoi"-napautusta.
  */
-test('pallolinssin ruutu odottaa "aktivoi"-napautusta kuten muutkin', () => {
+test('pallolinssin ruutu odottaa Aktivoi-napautusta kuten muutkin', () => {
   const ui = Object.create(UI.prototype);
   ui.linssiValikko = new Elementti('div');
   ui.linssiValittu = null;

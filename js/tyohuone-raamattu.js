@@ -3376,6 +3376,18 @@ export const RAAMATTU = {
           + 'pelaa linssin lapi selaimessa, kirjaa havainnot ja korjaa '
           + 'ennen kuin omistaja nakee sen. Rakennetaan agenttiparvella '
           + '(aineisto, moottori, kuvat, musiikki), Fable tarkistaa tekstit.',
+        'LAUKKU VIERII, TILASTOT VAKASEN ALLA, AKTIVOI ON NAPPI (omistaja '
+          + '6.9.2026 aamu, sanatarkasti: "Laukku pitaa olla skrollattava myos. '
+          + 'Ja tee paremmat ikonit uusille linsseille. Voivat olla muun kuin '
+          + 'linssin nakoisia. Piilota nuo kakkosen kuvan tiedot vakasen alle. '
+          + 'Tee aktivoi tekstista nappi."): laukun sisus vierii sormella ja '
+          + 'rullalla (kehys pysyy); Avatut aarteet, Kaydyt kaupungit ja maat, '
+          + 'Aarnin luettelo, Tavarat ja Julisteet ovat "Matkan tilastot" '
+          + '-vakasen alla oletuksena kiinni (tila muistetaan); linssin '
+          + 'selitteen alla on Aktivoi-nappi (paalla olevalle Ota pois). '
+          + 'Uusien linssien (Keksinnot, Ihmisen matka) varustekuvat tulevat '
+          + 'kuvaputkesta samaan sarjaan kuin vanhat, aihe saa olla muu kuin '
+          + 'suurennuslasi.',
         'MEDIALLA OMA VERKKOTUNNUS media.matkakirja.app (omistaja 6.9.2026 '
           + 'aamu, sanatarkasti: "Minusta se api on jo siella. Kokeile" ja '
           + 'osti matkakirja.app-verkkotunnuksen Cloudflare Registrarista): '

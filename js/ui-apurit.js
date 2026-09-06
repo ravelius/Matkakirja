@@ -319,6 +319,35 @@ export function tallennaLinssi(tunnus) {
 }
 
 /*
+ * MATKAN TILASTOT -LOHKON ASENTO (omistaja 6.9.2026: "Piilota nuo
+ * tiedot väkäsen alle").
+ *
+ * Sama perhe kuin valitulla linssillä: tämä on laitteen katseluasetus
+ * eikä pelin tapahtuma, joten se ei kuulu pelitallennukseen vaan omaan
+ * avaimeensa. OLETUS ON KIINNI, ja siksi levylle kirjoitetaan vain
+ * poikkeus ("1" = auki) — tavallinen pelaaja ei koskaan avaa lohkoa,
+ * eikä hänen selaimeensa jää siitä riviä.
+ */
+const LAUKKU_TILASTOT_AVAIN = 'matkakirja-laukku-tilastot';
+
+export function laukunTilastotAuki() {
+  try {
+    return localStorage.getItem(LAUKKU_TILASTOT_AVAIN) === '1';
+  } catch {
+    return false; // yksityinen selaus
+  }
+}
+
+export function tallennaLaukunTilastot(auki) {
+  try {
+    if (auki) localStorage.setItem(LAUKKU_TILASTOT_AVAIN, '1');
+    else localStorage.removeItem(LAUKKU_TILASTOT_AVAIN);
+  } catch {
+    /* yksityinen selaus: asento jää vain tälle istunnolle */
+  }
+}
+
+/*
  * ==================================================================
  * PAIKANNIMIEN SIJAMUODOT (omistajan tilaus 26.8.2026,
  * saapumissekvenssin puhekuplat)

@@ -1101,45 +1101,84 @@ button, .brand, .turn-pill, .fact-card h2 {
 .linssi-lahde-avaa:hover { color: var(--ink-light); }
 
 /*
- * "aktivoi" SELITTEEN PERÄSSÄ (omistaja 5.9.2026: *"kun linssi
- * klikataan matkalaukussa niin silloin päivittyy vasta selite teksti ja
- * tekstin loppuun tulee "aktivoi", mitä klikkaamalla linssi menee
- * päälle ja matkalaukku sulkeutuu"*).
+ * AKTIVOI ON NAPPI, EI SANA (omistaja 6.9.2026: *"Tee aktivoi tekstistä
+ * nappi."*).
  *
- * Sana on virkkeen jatke, ei nappi: `display: inline` pitää sen samalla
- * rivillä kappaleen kanssa ja kirjasin peritään selitteestä, jotta rivi
- * lukeutuu yhtenä lauseena. Pisteviivan alleviivaus on sama kuin muilla
- * tämän pelin tekstilinkeillä (.wiki-btn, .linssi-lahde-avaa).
- */
-/*
+ * Ruudun napautus vaihtaa selitteen (omistaja 5.9.2026), ja kytkentä
+ * tapahtuu selitteen ALLA olevasta napista. Sana kappaleen perässä oli
+ * oikea `<button>` jo ennen tätä, mutta se näytti tekstilinkiltä ja oli
+ * yhden tekstirivin korkuinen — sormelle liian pieni juuri siinä
+ * kohdassa, jossa laukun ainoa varsinainen toiminto on.
+ *
+ * Ilme on laukun omaa messinkiä: ohut kultareunus, pergamenttitäyte ja
+ * sama kapiteeliotsikkolatomus kuin osastojen otsikoissa. Korkeus on
+ * 44 px, joka on kosketuskohteen alaraja.
+ *
  * Valitsinta on KAKSI, ja se on tarkoituksellista: laukku on dialogi,
- * ja `.dialog button` (0,1,1) maalaisi tähänkin pergamenttinapin
- * reunuksineen. `.dialog .linssi-aktivoi` (0,2,0) voittaa sen, ja
- * yksinäinen luokka pitää tyylin voimassa myös kartan puolella.
+ * ja `.dialog button` (0,1,1) maalaisi tähänkin yleisen
+ * pergamenttinapin aaltoreunoineen. `.dialog .linssi-aktivoi` (0,2,0)
+ * voittaa sen, ja yksinäinen luokka pitää tyylin voimassa myös kartan
+ * puolella.
  */
 .linssi-aktivoi,
 .dialog .linssi-aktivoi {
-  display: inline;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: auto;
-  min-height: 0;
-  padding: 0;
-  background: none;
-  border: 0;
-  box-shadow: none;
+  min-width: 8.5rem;
+  min-height: 44px;
+  margin: 0.7rem auto 0.1rem;
+  padding: 0.3rem 1.2rem;
+  background: linear-gradient(180deg, rgba(255, 249, 232, 0.72), rgba(233, 209, 160, 0.55));
+  border: 1px solid rgba(122, 85, 20, 0.65);
+  border-radius: 8px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 1px 3px rgba(46, 30, 14, 0.22);
   color: var(--accent);
-  font: inherit;
-  letter-spacing: 0.03em;
-  text-decoration: underline dotted;
-  text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+  font-family: var(--font-type);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
+  transition: background 160ms ease, box-shadow 160ms ease, transform 120ms ease;
 }
 
 .linssi-aktivoi:hover:not(:disabled),
+.dialog .linssi-aktivoi:hover:not(:disabled) {
+  background: linear-gradient(180deg, rgba(255, 252, 242, 0.9), rgba(240, 219, 176, 0.7));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 2px 6px rgba(46, 30, 14, 0.26);
+}
+
+.linssi-aktivoi:active:not(:disabled),
+.dialog .linssi-aktivoi:active:not(:disabled) { transform: translateY(1px); }
+
 .linssi-aktivoi:focus-visible,
-.dialog .linssi-aktivoi:hover:not(:disabled),
-.dialog .linssi-aktivoi:focus-visible { background: none; color: var(--ink-light); }
+.dialog .linssi-aktivoi:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/*
+ * Päällä oleva linssi: nappi sanoo "Ota pois" ja kytkee sen pois — sama
+ * nappi, käänteinen suunta (js/ui.js lisaaLinssinAktivointi). Himmeämpi
+ * täyte kertoo, ettei tämä ole se nappi, jolla matka jatkuu.
+ */
+.linssi-aktivoi.pois,
+.dialog .linssi-aktivoi.pois {
+  background: linear-gradient(180deg, rgba(246, 238, 220, 0.5), rgba(219, 200, 166, 0.4));
+  color: rgba(70, 51, 31, 0.85);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .linssi-aktivoi,
+  .dialog .linssi-aktivoi { transition: none; }
+}
 
 /*
  * Selitteen vaihto häivytetään sisään: napautuksesta napautukseen
@@ -3609,6 +3648,14 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   max-width: 520px;
   position: relative;
   /*
+   * Kortti on pystyflex, jotta sen ainoa lapsi (.laukku-sisus) kutistuu
+   * kortin mittaan ja vierii sen sisällä (omistaja 6.9.2026: "Laukku
+   * pitää olla skrollattava myös"). Ilman tätä sisus kasvaa sisällön
+   * mittaiseksi ja leikkautuu kortin `overflow: hidden` -kehykseen.
+   */
+  display: flex;
+  flex-direction: column;
+  /*
    * NAHKA ON YLÄPALKIN VÄRINEN JA YLÄREUNA PUUTTUU (omistaja 5.8.2026:
    * "laukun reunat voisi olla samalla värillä kuin yläpalkki ja laukun
    * yläreunan voisi ottaa kokonaan pois, niin että näyttäisi että laukku
@@ -3628,8 +3675,12 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
    * kiinni reunassa"). Nahkareunus on materiaalia eikä marginaalia:
    * silmä lukee sisällön alkavan vasta sen sisäpuolelta, joten
    * pehmusteen on oltava reunuksen LISÄKSI eikä sen sijasta.
+   *
+   * PYSTYPEHMUSTE ON SISUKSELLA (.laukku-sisus), ei kortilla: vierivä
+   * teksti saa kulkea nahkareunaan asti sen sijaan että katkeaisi
+   * pehmusteen kohdalla ja jättäisi tyhjän kaistan reunukseen.
    */
-  padding: 1.4rem 1.7rem 1.6rem;
+  padding: 0 1.7rem;
   box-shadow:
     /* Ommel: vaalea katkoviiva nahkan sisäreunassa. */
     inset 0 0 0 2px rgba(226, 196, 150, 0.28),
@@ -4032,6 +4083,107 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   font-size: 0.68rem;
   font-style: italic;
   color: rgba(70, 51, 31, 0.6);
+}
+
+/*
+ * ── MATKAN TILASTOT VÄKÄSEN ALLA ─────────────────────────────────────
+ *
+ * Omistaja 6.9.2026: *"Piilota nuo tiedot väkäsen alle."* Laskurit,
+ * Aarnin luettelo, tavarat ja julisteet kokoontuvat yhden avattavan
+ * lohkon alle; Sijainti, Kukkaro ja tietäjätaso jäävät näkyviin sen
+ * yläpuolelle ja Varusteet nousee heti niiden alle.
+ *
+ * Otsikkorivi on NAPPI, ja `.dialog button` maalaisi siitä
+ * pergamenttilaatikon aaltoreunoineen — siksi valitsimessa on kaksi
+ * luokkaa (0,2,0), joka voittaa yleissäännön (0,1,1).
+ */
+.laukku-lohko { margin: 0.2rem 0 0; }
+
+.passport-card .laukku-lohko-otsikko,
+.dialog .laukku-lohko-otsikko {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  /* Sormelle riittävä rivi ilman että otsikko kasvaa muita isommaksi. */
+  min-height: 44px;
+  padding: 0.1rem 0;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid rgba(122, 85, 20, 0.28);
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--accent);
+  text-align: left;
+  cursor: pointer;
+}
+
+.passport-card .laukku-lohko-otsikko:hover,
+.dialog .laukku-lohko-otsikko:hover {
+  background: none;
+  border-bottom-color: rgba(122, 85, 20, 0.5);
+}
+
+.passport-card .laukku-lohko-otsikko:focus-visible,
+.dialog .laukku-lohko-otsikko:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Otsikkoteksti on sama pieni kapiteeli kuin muillakin osastoilla;
+   napin sisällä marginaalit tulevat napilta. */
+.laukku-lohko-otsikko .passport-count { margin: 0; }
+
+/*
+ * Väkänen on SVG-viiva eikä emoji: emoji vaihtaisi ilmettä laitteesta
+ * toiseen eikä ottaisi laukun messingin väriä. Kiinni ollessaan se
+ * osoittaa oikealle (›), auki alas (⌄) — kierto, ei kuvanvaihto,
+ * jotta liike on jatkuva.
+ */
+.laukku-vakanen {
+  flex: 0 0 auto;
+  width: 1.05rem;
+  height: 1.05rem;
+  color: rgba(122, 85, 20, 0.85);
+  transition: transform 260ms cubic-bezier(0.3, 0.9, 0.4, 1);
+}
+
+.laukku-lohko-otsikko[aria-expanded='true'] .laukku-vakanen { transform: rotate(90deg); }
+
+/*
+ * Avautuminen animoidaan pehmeästi (omistajan pysyvä linjaus: kaikki
+ * liike animoidaan). `max-height` saa oikean lukunsa JS:stä
+ * (js/ui.js paivitaTilastolohko) ja palautuu `none`:ksi siirtymän
+ * jälkeen, jotta myöhemmin latautuva julistevedos ei jää katkolle.
+ *
+ * `visibility` pitää kiinni olevan lohkon poissa myös näppäimistöltä
+ * ja ruudunlukijalta — pelkkä nollakorkeus jättäisi napit fokusjonoon.
+ */
+.laukku-lohko-sisus {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    max-height 280ms cubic-bezier(0.3, 0.9, 0.4, 1),
+    opacity 200ms ease,
+    visibility 0s linear 280ms;
+}
+
+.laukku-lohko-sisus.auki {
+  opacity: 1;
+  visibility: visible;
+  transition:
+    max-height 280ms cubic-bezier(0.3, 0.9, 0.4, 1),
+    opacity 220ms ease 60ms,
+    visibility 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .laukku-vakanen,
+  .laukku-lohko-sisus,
+  .laukku-lohko-sisus.auki { transition: none; }
 }
 
 /*
@@ -7489,6 +7641,55 @@ body.flight-active .fact-card {
 .dialog.pillerin-alla {
   margin: 0;
   max-height: calc(100dvh - 5.5rem);
+}
+
+/*
+ * KORKEUSKATTO EI PITÄNYT 6.9.2026 ASTI (omistaja: "Laukku
+ * pitää olla skrollattava myös" — linssin selite jäi ruudun alareunan
+ * alle).
+ *
+ * Ylläoleva `max-height` koski VAIN dialogia, ja dialogilla on
+ * `overflow: visible`. Kortti sen sisällä sai korkeutensa omasta
+ * `.dialog-card { max-height: 92dvh }` -säännöstään, joka on tässä
+ * asetelmassa aina isompi kuin dialogin katto — joten kortti kasvoi
+ * dialogin ohi ja valui ruudun ali. Mitattu 390×844: kortti 776 px,
+ * dialogin katto 72dvh = 608 px.
+ *
+ * Flexbox korjaa juuri tämän: kun dialogi on pystysuuntainen
+ * flex-säiliö, sen `max-height` kutistaa lapsen (`flex-shrink: 1`)
+ * kattoon asti, ja kortin sisus saa vieritettävän jäännöksen.
+ * `[open]`-ehto on pakollinen — ilman sitä tekijän `display: flex`
+ * voittaisi selaimen `dialog:not([open]) { display: none }` -säännön
+ * ja suljettu laukku jäisi ruudulle näkyviin.
+ */
+.dialog.pillerin-alla[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog.pillerin-alla > .dialog-card.passport-card {
+  /* 92dvh pois: katon antaa dialogi, ei kortti (kortti on jo pystyflex,
+     ks. .dialog-card.passport-card ylempänä). */
+  max-height: none;
+  min-height: 0;
+  flex: 0 1 auto;
+}
+
+/*
+ * VIERIVÄ SISUS. Kortti on kehys (overflow: hidden messinkikulmien
+ * takia), joten vieritys kuuluu tälle lapselle. `touch-action: pan-y`
+ * ja `overscroll-behavior: contain` ovat samat kuin muissa vierivissä
+ * korteissa: sormi vierittää pystyyn eikä ele karkaa kartalle.
+ */
+.laukku-sisus {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  padding: 1.4rem 0 1.6rem;
 }
 
 /*

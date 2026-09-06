@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1626, teksti: 'Laukku vierii, tilastot vakasen alle, Aktivoi-nappi' },
   { v: 1625, teksti: 'Media omasta osoitteesta media.matkakirja.app; maatiedot' },
   { v: 1624, teksti: 'Karttanostot: Amerikat, Oseania, Aasia; R2-domain' },
   { v: 1623, teksti: 'Lehdet: Dunedin, Suva, Porto Alegre, Asuncion; CAN MEX PER' },
