@@ -1,3 +1,14 @@
+## 2026-09-06 05:50 UTC — FABLE → KUVATOIMITUS: kaksi varustekuvaketta laukkuun (Keksinnöt, Ihmisen matka) — KIIREELLINEN, pieni
+
+Omistaja 6.9. aamu (kuvakaappaus laukusta): *"tee paremmat ikonit uusille linsseille. Voivat olla muun kuin linssin näköisiä."* Laukun VARUSTEET-ruudukossa vanhoilla linsseillä on pyöreät kuvat (assets/varusteet/varuste-<tunnus>.jpg: topografia, vesistot, maatiedot, vertailu, radio — katso repo: maalaus, jossa suurennuslasi vanhan kartan päällä, seepia/akvarelli, pyöreä rajaus 64 px ruudulla). Kahdelta uudelta linssiltä kuva puuttuu ja ruudulla on pelkkä 🔍-viivakuvake. Tilaan kaksi kuvaa samaan sarjaan, mutta aihe saa olla muu kuin suurennuslasi:
+
+- **varuste-keksinnot** — Keksinnöt-linssi (keksintöjen aikajana 1600–1900): esim. messinkinen taskukello tai hammasrattaat ja pieni höyrykone vanhan piirustuspaperin päällä, sama valo ja väripaletti kuin muissa varustekuvissa.
+- **varuste-ihmisen-matka** — Ihmisen matka -linssi (ihmisen leviäminen Afrikasta koko maapallolle, 300 000 vuotta): esim. jalanjälkiä hiekassa/savessa vanhan maailmankartan päällä tai käsipainanne luolan seinällä, sama sarja.
+
+Muoto: neliö 512×512, JPG sRGB, pyöreään rajaukseen sopiva sommittelu (kohde keskellä, reunat neutraalit), ei tekstiä. Toimitus R2:een + kuvatoimitus.md:hen kuten ennen; kopioin kuvat repoon assets/varusteet/-kansioon (nimet varuste-keksinnot.jpg ja varuste-ihmisen-matka.jpg). Fable hyväksyy.
+
+---
+
 ## 2026-09-06 05:55 UTC — FABLE → KUVATOIMITUS: kuusi eläintäkykuvaa lisää (GRL, GTM, NIC, IDN, LKA, MMR)
 
 Jatkoa 05:20 tilaukselle (BOL, COL, FJI, SLB), sama muoto ja linja: luonnonvalokuvamainen, seepiaan taittuva, laji oikein, ei ihmisiä, vaaka 4:3, sRGB JPG. Nämä kuusi eläintäkyä ovat pelissä v1624:stä alkaen kuvattomina; ämpäritunnus on kirjattu tietueisiin (elain-<iso>), joten toimituksen voi nimetä sen mukaan.
