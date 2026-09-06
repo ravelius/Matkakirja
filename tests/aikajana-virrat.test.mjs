@@ -14,6 +14,7 @@
  *    Siperian jälkeen, meri estää ilman porttia.
  * 7. Kaari ja moottorin koukut tekstitasolla, sw.js SHELL.
  * 8. Vanat: edeltäjäketju, johdaVanat oikealla datalla, haaran katkaisu.
+ * 9. Kamera: kärjen seuranta, kuvapysäkin kehystys, lopun peräytyminen.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -26,6 +27,11 @@ import {
   laatikonSyvyys, laatikkoPehmea, portinLuisu, PORTIN_LUISU_ASTE, PORTIN_LUISU_OSUUS,
   pakkaaPeitto, puraPeitto, tarkennaKentat, johdaVanat, vanaKm, vananPituusKm,
 } from '../js/aikajana-virrat-laskenta.js';
+import {
+  kameranKohde, kulmaEtaisyys, KAMERAN_LEVEYS_MIN_AST, KAMERAN_LEVEYS_MAX_AST,
+  KUVAPYSAKIN_VARA_AST, LOPUN_KESKIPISTE, KAMERAN_SUURIN_SIIRTO_AST,
+} from '../js/aikajana-virrat.js';
+import { karkiHetkella } from '../js/aikajana-vanat.js';
 import { MAAMASKI } from '../js/linssit/ihmisen-matka-maamaski.js';
 import {
   IHMISEN_MATKA_VIRRAT, IHMISEN_MATKA_RETKI, IHMISEN_MATKA_VANHA, IHMISEN_MATKA_VANAT, VIRRAN_PEITTO,
@@ -464,13 +470,14 @@ test('moottorin koukut: virrat pallohaarassa, kamera virtojen käsissä, kehys s
   assert.ok(!/pointOfView\(\{/.test(VIRRAT), 'virrat kirjoittaa Globe.gl:n kameraa suoraan');
   // Reduced motion: kamera ei seuraa.
   assert.match(VIRRAT, /const ohjaaKameraa = \(\) => !reduced && /);
-  // Css: kehys ja nuoli.
+  // Css: kehys ja hiljaisen pysäkin piste (nuoli poistui V3:ssa).
   const CSS = lue('../css/aikajana.css');
   assert.match(CSS, /\.aikajana-virta-kuva\.esilla\.pieni \{ transform: [^}]*scale\(0\.5\)/);
-  assert.match(CSS, /\.aikajana-virta-nuoli \{/);
+  assert.match(CSS, /\.aikajana-virta-piste \{/);
+  assert.ok(!/\.aikajana-virta-nuoli/.test(CSS), 'nuoli poistui css:stä');
   // sw.js SHELL kantaa uudet moduulit (offline) — myös työsäikeen.
   const SW = lue('../sw.js');
-  for (const p of ['./js/aikajana-virrat.js', './js/aikajana-virrat-laskenta.js', './js/aikajana-virrat-tyo.js', './js/linssit/ihmisen-matka-virrat.js', './js/linssit/ihmisen-matka-maamaski.js']) {
+  for (const p of ['./js/aikajana-virrat.js', './js/aikajana-vanat.js', './js/aikajana-virrat-laskenta.js', './js/aikajana-virrat-tyo.js', './js/linssit/ihmisen-matka-virrat.js', './js/linssit/ihmisen-matka-maamaski.js']) {
     assert.ok(SW.includes(`'${p}'`), `${p} puuttuu sw.js SHELListä`);
   }
 });
@@ -480,7 +487,7 @@ test('hionta 6.9.2026: laskenta työsäikeessä varapolulla, Käynnistä odottaa
   const TYO = lue('../js/aikajana-virrat-tyo.js');
   // Työsäie tuo saman puhtaan moduulin kuin testit; vastaus siirretään puskureina.
   assert.match(TYO, /from '\.\/aikajana-virrat-laskenta\.js'/);
-  assert.match(TYO, /self\.postMessage\(\{ kentat: \{ aika: kentat\.aika, virta: kentat\.virta \}, vanat, kotipesat, tarkka \}, siirto\);/);
+  assert.match(TYO, /kentat: \{ aika: kentat\.aika, virta: kentat\.virta \}, vanat, kotipesat, vanha, retki, tarkka,/);
   assert.match(VIRRAT, /new Worker\(new URL\(TYOSAIKEEN_POLKU, document\.baseURI\), \{ type: 'module' \}\)/);
   assert.ok(!/import\.meta/.test(VIRRAT), 'import.meta ei kelpaa yhden tiedoston versioon');
   assert.match(VIRRAT, /tyosaie\.addEventListener\('error', \(e\) => varapolku\(/);
@@ -489,8 +496,14 @@ test('hionta 6.9.2026: laskenta työsäikeessä varapolulla, Käynnistä odottaa
   assert.match(VIRRAT, /export const PIIRTOKERROIN = 2;/);
   assert.match(VIRRAT, /kangas\.width = W \* kerroin;/);
   assert.match(VIRRAT, /tarkennaKentat\(value\.kentat, \{ maa, peitto: peittoMaski, leveys: W, korkeus: H, kerroin \}\)/);
-  // Nuoli pallon koteloon, ei linssin juureen (pinonta).
-  assert.match(VIRRAT, /\(kotelo \?\? ajo\.juuri\)\?\.appendChild\(nuoli\);/);
+  /*
+   * VANAT OVAT OLETUS (V3): kehyksittäinen kankaan maalaus on
+   * perääntymistiellä `?virrat=kalvo`, ja silmukka kasvattaa vanoja.
+   */
+  assert.match(VIRRAT, /const kalvotila = new URLSearchParams\(globalThis\.location\?\.search \?\? ''\)\.get\('virrat'\) === 'kalvo';/);
+  assert.match(VIRRAT, /tila\.vanat\?\.paivita\(vuosia\);/);
+  assert.match(VIRRAT, /} else \{\n\s*const alku = performance\.now\(\);\n\s*maalaa\(vuosia\);/);
+  assert.ok(!/nuoli/i.test(VIRRAT.replace(/\/\*[\s\S]*?\*\//g, '')), 'nuolen koodi poistui');
   // Moottori: Käynnistä odottaa laskennan; kuori on pinontayhteys linssin ajan.
   const MOOTTORI = lue('../js/aikajana.js');
   assert.match(MOOTTORI, /aloitaAjo\(\) \{\n\s*if \(!this\.avausKesken\) return;\n\s*if \(this\.odotaVirtoja\(\)\) return;/);
@@ -692,5 +705,130 @@ test('vanat: kaari antaa aineiston ja työsäie johtaa vanat kenttien perään',
   const TYO = lue('../js/aikajana-virrat-tyo.js');
   assert.match(TYO, /johdaVanat\(kentat, aineisto\.vanat, \{ maa, leveys, korkeus, pysakit: aineisto\.pysakit \?\? null \}\)/);
   assert.match(TYO, /const tarkka = kalvo \? tarkennaKentat\(/);
-  assert.match(TYO, /self\.postMessage\(\{ kentat: \{ aika: kentat\.aika, virta: kentat\.virta \}, vanat, kotipesat, tarkka \}, siirto\);/);
+  assert.match(TYO, /kentat: \{ aika: kentat\.aika, virta: kentat\.virta \}, vanat, kotipesat, vanha, retki, tarkka,/);
+});
+
+
+/* ------------------------------------------------- 9. kamera ja kytkentä */
+
+/*
+ * KAMERA SEURAA SELKÄRANGAN KÄRKEÄ (docs/moduulit/ihmisen-matka-vanat.md
+ * luku 3.2). Kärki karkaa pyrähdyksissä (Arabia → Altai 2 000 vuodessa,
+ * Alaska → Chile 2 600 vuodessa) ja seisoo porttien edessä kymmeniä
+ * sekunteja, joten kameraa ei voi sitoa siihen suoraan: näkyvä leveys
+ * kasvaa etäisyyden mukaan ja supistuu odotuksessa.
+ */
+test('kameranKohde: kamera nousee kärjen karatessa, laskeutuu odotuksessa, kehystää kuvapysäkin', () => {
+  const kuvasuhde = 1;
+  const asteina = (leveys) => (leveys / (12000 / 360));
+  const karki = { lat: 20, lng: 50 };
+  // Odotus: kamera on kärjen päällä → kapein näkymä.
+  const paikallaan = kameranKohde({ karki, pov: karki, kuvasuhde });
+  assert.ok(Math.abs(asteina(paikallaan.leveys) - KAMERAN_LEVEYS_MIN_AST) < 0.01, `leveys ${asteina(paikallaan.leveys)}`);
+  assert.equal(paikallaan.lat, 20);
+  assert.equal(paikallaan.lng, 50);
+  // Pyrähdys: kärki on karannut 20° → kamera nousee.
+  const karannut = kameranKohde({ karki, pov: { lat: 20, lng: 30 }, kuvasuhde });
+  assert.ok(asteina(karannut.leveys) > asteina(paikallaan.leveys) + 20, `nousu ${asteina(karannut.leveys)}`);
+  // Katto pitää: puolen pallon hyppy ei vie kameraa avaruuteen.
+  const kaukana = kameranKohde({ karki, pov: { lat: -40, lng: -140 }, kuvasuhde });
+  assert.ok(Math.abs(asteina(kaukana.leveys) - KAMERAN_LEVEYS_MAX_AST) < 0.01, `katto ${asteina(kaukana.leveys)}`);
+  // Laskeutuminen: mitä lähempänä kohdetta, sitä kapeampi näkymä.
+  const askelia = [30, 20, 10, 0].map((d) => asteina(kameranKohde({ karki, pov: { lat: 20, lng: 50 - d }, kuvasuhde }).leveys));
+  for (let k = 1; k < askelia.length; k += 1) assert.ok(askelia[k] <= askelia[k - 1], 'leveys ei laske odotuksessa');
+
+  /*
+   * KUVAPYSÄKIN KEHYSTYS: kärki ja pysäkki samaan kuvaan. Al Wusta on
+   * kärjestä n. 16° — kehyksen pitää mahtua kuvaan, ja kohde on
+   * pysäkin ja kärjen puolivälissä.
+   */
+  const kuvapysakki = { lat: 28.3, lng: 41.0 };
+  const kehystys = kameranKohde({ karki, pov: karki, kuvapysakki, kuvasuhde });
+  const etaisyys = kulmaEtaisyys(karki, kuvapysakki);
+  assert.ok(asteina(kehystys.leveys) >= 2.2 * etaisyys + KUVAPYSAKIN_VARA_AST - 0.01, 'kuvapysäkki ei mahdu kuvaan');
+  assert.ok(kehystys.lat > Math.min(karki.lat, kuvapysakki.lat) && kehystys.lat < Math.max(karki.lat, kuvapysakki.lat),
+    'kohde ei ole kärjen ja pysäkin välissä');
+
+  // Pystyruudulla (puhelin) leveys kavennetaan kuvasuhteella.
+  const puhelin = kameranKohde({ karki, pov: karki, kuvasuhde: 390 / 844 });
+  assert.ok(puhelin.leveys < paikallaan.leveys, 'pystyruudulla sama näkymä ei mahdu');
+
+  /*
+   * LOPPU: kamera perääntyy koko pallon näkymään lopun keskipisteeseen
+   * (omistajan avoin kysymys 8.1; ehdotus Aasia ja Australia keskellä).
+   */
+  const alkuLoppu = kameranKohde({ karki, pov: karki, lopunOsuus: 0.001 });
+  const loppu = kameranKohde({ karki, pov: karki, lopunOsuus: 1 });
+  assert.ok(loppu.leveys > alkuLoppu.leveys, 'peräytyminen ei laajenna näkymää');
+  assert.ok(Math.abs(loppu.lat - LOPUN_KESKIPISTE.lat) < 0.01 && Math.abs(loppu.lng - LOPUN_KESKIPISTE.lng) < 0.01,
+    'loppu ei päädy keskipisteeseen');
+  // Peräytyminen on pehmeä: puolivälissä ollaan puolimatkassa, ei perillä.
+  const puoli = kameranKohde({ karki, pov: karki, lopunOsuus: 0.5 });
+  assert.ok(puoli.leveys > alkuLoppu.leveys && puoli.leveys < loppu.leveys, 'peräytyminen hyppää');
+  assert.ok(loppu.leveys <= 12000, 'näkymä ei ylitä laudan leveyttä');
+  assert.equal(kameranKohde({ karki: null, pov: null }), null);
+});
+
+test('kamera ei hypi: peräkkäisten sekuntien leveys ja sijainti muuttuvat maltillisesti', () => {
+  /*
+   * Kellon mallinnus riittää tähän: kärki interpoloidaan vanasta ja
+   * kamera liu'utetaan samalla eksponentiaalisella liu'ulla kuin
+   * pelissä (KAMERAN_TAU_*). Vaatimus: leveyden suhde ≤ 1,35 ja
+   * sijainnin muutos ≤ 12° sekunnissa (suunnitelman V3 todennus).
+   */
+  const { vanat } = johdaVanat(KENTAT, IHMISEN_MATKA_VANAT, { maa: MAA });
+  const selka = vanat[0].pisteet;
+  const kuvasuhde = 390 / 844;
+  let pov = null;
+  let edellinen = null;
+  let suurinSuhde = 1;
+  let suurinSiirto = 0;
+  // 300 000 → 1 000 vuotta sitten, sekunti kerrallaan (178 s esitys).
+  const askelia = 178;
+  for (let s = 0; s <= askelia; s += 1) {
+    const nyt = Math.exp(Math.log(300000) + (Math.log(1000) - Math.log(300000)) * (s / askelia));
+    const karki = karkiHetkella(selka, nyt, { ennakko: 0.04 });
+    const kohde = kameranKohde({ karki, pov, kuvasuhde });
+    if (!pov) pov = { lat: kohde.lat, lng: kohde.lng, leveys: kohde.leveys };
+    let sijainti = 1 - Math.exp(-1 / 2.5);
+    const korkeus = 1 - Math.exp(-1 / 3.5);
+    let dLng = kohde.lng - pov.lng;
+    while (dLng > 180) dLng -= 360;
+    while (dLng < -180) dLng += 360;
+    // Panorointikatto kuten pelissä (KAMERAN_SUURIN_SIIRTO_AST per sekunti).
+    const askel = (osuus) => ({ lat: pov.lat + (kohde.lat - pov.lat) * osuus, lng: pov.lng + dLng * osuus });
+    const kuljettu = kulmaEtaisyys(pov, askel(sijainti));
+    if (kuljettu > KAMERAN_SUURIN_SIIRTO_AST && kuljettu > 0) sijainti *= KAMERAN_SUURIN_SIIRTO_AST / kuljettu;
+    pov.lat += (kohde.lat - pov.lat) * sijainti;
+    pov.lng += dLng * sijainti;
+    pov.leveys = Math.exp(Math.log(pov.leveys) + (Math.log(kohde.leveys) - Math.log(pov.leveys)) * korkeus);
+    if (edellinen) {
+      const suhde = Math.max(pov.leveys / edellinen.leveys, edellinen.leveys / pov.leveys);
+      suurinSuhde = Math.max(suurinSuhde, suhde);
+      suurinSiirto = Math.max(suurinSiirto, kulmaEtaisyys(edellinen, pov));
+    }
+    edellinen = { lat: pov.lat, lng: pov.lng, leveys: pov.leveys };
+  }
+  assert.ok(suurinSuhde <= 1.35, `leveys hyppäsi kertoimella ${suurinSuhde.toFixed(2)}`);
+  // Katto on yhden kierroksen skaalaus, joten sallitaan promillen ylitys.
+  assert.ok(suurinSiirto <= KAMERAN_SUURIN_SIIRTO_AST * 1.01, `kamera siirtyi ${suurinSiirto.toFixed(2)}° sekunnissa`);
+  // Kärki pysyy kuvassa myös silloin, kun kamera jää pyrähdyksessä jälkeen.
+  assert.ok(suurinSiirto > 1, 'kamera ei liikkunut lainkaan — testi ei mittaa mitään');
+});
+
+test('kytkentä: vanat kalvon tilalle, kaksi kerran maalattua kalvoa, hiljaiselle pysäkille piste', () => {
+  const VIRRAT = lue('../js/aikajana-virrat.js');
+  // Vanat luodaan vanamoduulilla ja kärki annetaan kameralle.
+  assert.match(VIRRAT, /import \{ luoVanat, VANAN_ENNAKKO \} from '\.\/aikajana-vanat\.js';/);
+  assert.match(VIRRAT, /tila\.vanat\?\.karki\(nyt, \{ ennakko: VANAN_ENNAKKO \}\)/);
+  // Kalvo maalataan KERRAN: vanha väestö ja retki, ei virtoja.
+  assert.match(VIRRAT, /const maalaaKerran = \(vanhaMaski, retkiKentta\) => \{/);
+  assert.match(VIRRAT, /const paivitaKalvojenPeitto = \(nyt\) => \{/);
+  assert.ok(!/maalaaKerran[\s\S]{0,4000}?tila\.kentat\.aika/.test(VIRRAT), 'virrat maalataan yhä kankaalle');
+  // Hiljainen pysäkki: piste, ei kehystä eikä kuvapysäkin kehystystä.
+  assert.match(VIRRAT, /if \(t\?\.hiljainen\) \{ teePiste\(i, g\); return; \}/);
+  // Työsäie pyytää tarkennuksen vain perääntymistiellä.
+  assert.match(VIRRAT, /kalvo: !vanatKaytossa,/);
+  // Moottori: kaaren sovitus ei aja vanojen loppunäkymän päälle.
+  assert.match(lue('../js/aikajana.js'), /if \(this\.pallolla && !this\.virrat\?\.ohjaaKameraa\(\)\) \{/);
 });

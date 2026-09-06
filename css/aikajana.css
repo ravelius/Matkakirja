@@ -1989,20 +1989,31 @@
 .aikajana-virta-kuva.esilla.pieni { transform: translate(-50%, calc(-100% - 14px)) scale(0.5); opacity: 0.92; }
 
 /* Nuoli ruudun reunaan, kun nykyinen pysäkki on kuvan ulkopuolella. */
-.aikajana-virta-nuoli {
+/*
+ * HILJAISEN PYSÄKIN PISTE (VIRRAT VANOINA, omistaja 6.9.2026):
+ * esityksessä poksahtaa kuusi kuvaa, ja loput neljätoista löytöpaikkaa
+ * merkitään pienenä pisteenä — todisteita, ei reittiä. Piste jää
+ * palamaan lopun koko pallon näkymään. Reunan nuoli (aikajana-virta-
+ * nuoli) POISTUI: kamera kehystää kuvapysäkin ja kärjen samaan kuvaan,
+ * joten poksahdus näkyy aina ruudulla.
+ */
+.aikajana-virta-piste {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-  margin: -9px 0 0 -9px;
-  border-top: 9px solid transparent;
-  border-bottom: 9px solid transparent;
-  border-left: 18px solid #ffd066;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+  left: 50%;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  border-radius: 50%;
+  background: #ffe6b0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 240ms ease-out;
   pointer-events: none;
-  z-index: 3;
+  z-index: 2;
 }
+
+.aikajana-virta-piste.esilla { opacity: 0.85; }
 
 /*
  * PELIN OMAT MERKIT VÄISTYVÄT LINSSIN AJAKSI. Tasokartalla kartan

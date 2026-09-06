@@ -24,7 +24,7 @@ import {
   matkaHetkella, karjenPaino, kaistanLeveysPx, karkiHetkella, kotipesanRengas,
   KAISTAN_KM, KAISTAN_MIN_PX, KAISTAN_MAX_PX, KAISTAN_PEITTO, VANAN_PEITTO,
   VANAN_SYVYYSSIIRTO, KAISTAN_SYVYYSSIIRTO, VANAN_RENDER_ORDER, KAISTAN_RENDER_ORDER,
-  VANAN_ENNAKKO, VANAN_KORKEUS,
+  VANAN_ENNAKKO, VANAN_ENNAKKO_MAX_AST, VANAN_KORKEUS,
 } from '../js/aikajana-vanat.js';
 import {
   puraMaamaski, laskeKentat, johdaVanat, rintamanLeveys, ruudunTila, vanaKm,
@@ -117,7 +117,20 @@ test('karkiHetkella: selkärangan kärki kulkee Omosta Monte Verdeen eikä koska
   const ilman = karkiHetkella(SELKA, nyt, { ennakko: 0 });
   const ennakolla = karkiHetkella(SELKA, nyt, { ennakko: VANAN_ENNAKKO });
   const matkaIlman = karkiHetkella(SELKA, nyt * (1 - VANAN_ENNAKKO), { ennakko: 0 });
-  assert.deepEqual(ennakolla, matkaIlman, 'ennakko on sama kuin 4 % nuorempi kello');
+  assert.deepEqual(karkiHetkella(SELKA, nyt, { ennakko: VANAN_ENNAKKO, maxAst: 0 }), matkaIlman,
+    'ennakko on sama kuin 4 % nuorempi kello');
+  /*
+   * ENNAKON KATTO: mallissa Arabia → Altai kuluu 2 000 vuodessa, joten
+   * neljän prosentin ennakko veisi kohteen tuhansia kilometrejä
+   * piirretyn kärjen edelle ja kuva olisi tyhjä. Kohde pysyy katon
+   * sisällä joka hetkellä.
+   */
+  for (const hetki of [200000, 90000, 75000, 60000, 45000, 20000, 16000, 14000]) {
+    const karki = karkiHetkella(SELKA, hetki, { ennakko: 0 });
+    const kohde = karkiHetkella(SELKA, hetki, { ennakko: VANAN_ENNAKKO });
+    const ero = vanaKm({ lat: karki.lat, lon: karki.lng }, { lat: kohde.lat, lon: kohde.lng }) / 111.32;
+    assert.ok(ero <= VANAN_ENNAKKO_MAX_AST + 0.5, `${hetki}: ennakko ${ero.toFixed(1)}° kärjestä`);
+  }
   assert.ok(vanaKm({ lat: ilman.lat, lon: ilman.lng }, { lat: ennakolla.lat, lon: ennakolla.lng }) >= 0);
   assert.equal(karkiHetkella([], 1000), null);
 });

@@ -22,7 +22,7 @@
  * pyytää sen `kalvo`-lipulla — perääntymistie `?virrat=kalvo`.
  *
  * Viesti sisään:  { aineisto: { virrat, retki, vanha, maamaski, vanat, pysakit }, kerroin, kalvo }
- * Viesti ulos:    { kentat: { aika, virta }, vanat, kotipesat, tarkka }
+ * Viesti ulos:    { kentat: { aika, virta }, vanat, kotipesat, vanha, retki, tarkka }
  *                 siirrettyinä puskureina tai { virhe } jos laskenta kaatui.
  */
 import {
@@ -49,7 +49,18 @@ self.onmessage = (viesti) => {
     for (const arvo of Object.values(tarkka ?? {})) {
       if (ArrayBuffer.isView(arvo)) siirto.push(arvo.buffer);
     }
-    self.postMessage({ kentat: { aika: kentat.aika, virta: kentat.virta }, vanat, kotipesat, tarkka }, siirto);
+    /*
+     * Vanhan väestön maski ja varhaisten retkien kenttä menevät
+     * piirtäjälle sellaisinaan: ne maalataan kalvolle KERRAN, ja
+     * kellon mukana muuttuu vain materiaalin peitto.
+     */
+    const vanha = kentat.vanha ?? null;
+    const retki = kentat.retki ?? null;
+    if (vanha) siirto.push(vanha.buffer);
+    if (retki) siirto.push(retki.buffer);
+    self.postMessage({
+      kentat: { aika: kentat.aika, virta: kentat.virta }, vanat, kotipesat, vanha, retki, tarkka,
+    }, siirto);
   } catch (virhe) {
     self.postMessage({ virhe: String(virhe?.message ?? virhe) });
   }

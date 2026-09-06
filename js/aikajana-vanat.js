@@ -74,6 +74,14 @@ export const KAISTAN_MIN_PX = 10;
 export const KAISTAN_MAX_PX = 40;
 /** Kärki kulkee kameran edellä: osuus kellon lukemasta (luku 3.2). */
 export const VANAN_ENNAKKO = 0.04;
+/*
+ * ENNAKON KATTO ASTEINA. Neljä prosenttia kellosta on 75 ka:n kohdalla
+ * 3 000 vuotta, ja mallissa Arabia → Altai kuluu 2 000 vuodessa: ilman
+ * kattoa kamera katsoisi Kazakstania samalla kun piirretty kärki on
+ * vielä Omanissa (mitattu selaimessa 6.9.2026, kuva oli tyhjä).
+ * Ennakko saa siis viedä kohdetta enintään tämän verran kärjestä.
+ */
+export const VANAN_ENNAKKO_MAX_AST = 10;
 /** Reduced motion: värit ja katko päivittyvät puolen sekunnin askelin. */
 export const VANAN_ASKEL_MS = 500;
 /** Kotipesän renkaan kärkien määrä. */
@@ -139,8 +147,28 @@ export function kaistanLeveysPx(kmPerPx, {
  * kohteen sinne, missä vana on 4 %:n kellonlukeman päästä — kamera
  * seuraa kärkeä hieman edellä (luku 3.2).
  */
-export function karkiHetkella(pisteet, nyt, { ennakko = 0 } = {}) {
+export function karkiHetkella(pisteet, nyt, { ennakko = 0, maxAst = VANAN_ENNAKKO_MAX_AST } = {}) {
   if (!pisteet?.length) return null;
+  if (ennakko > 0 && maxAst > 0) {
+    // Ennakko rajattuna: kohde enintään `maxAst` päässä oikeasta kärjestä.
+    const karki = karkiHetkella(pisteet, nyt, { ennakko: 0 });
+    const edella = karkiHetkella(pisteet, nyt, { ennakko, maxAst: 0 });
+    if (!karki || !edella) return karki ?? edella;
+    const RAD = Math.PI / 180;
+    const f1 = karki.lat * RAD;
+    const f2 = edella.lat * RAD;
+    let dl = edella.lng - karki.lng;
+    while (dl > 180) dl -= 360;
+    while (dl < -180) dl += 360;
+    const d = Math.acos(Math.max(-1, Math.min(1,
+      Math.sin(f1) * Math.sin(f2) + Math.cos(f1) * Math.cos(f2) * Math.cos(dl * RAD)))) / RAD;
+    if (!(d > maxAst)) return edella;
+    const osuus = maxAst / d;
+    let lng = karki.lng + dl * osuus;
+    while (lng > 180) lng -= 360;
+    while (lng < -180) lng += 360;
+    return { lat: karki.lat + (edella.lat - karki.lat) * osuus, lng };
+  }
   const hetki = ennakko > 0 ? nyt * (1 - ennakko) : nyt;
   const eka = pisteet[0];
   const vika = pisteet[pisteet.length - 1];
@@ -296,14 +324,21 @@ export function luoVanat({
        */
       const kaistaGeom = new luokat.LineGeometry();
       kaistaGeom.setPositions(paikat);
+      /*
+       * Kaista saa kärkivärit kuten vanakin: selkärangan kaista oli
+       * muuten koko matkan päätevirran vihreä, vaikka vana oli
+       * Arabiassa oranssi (nähty selaimessa 6.9.2026). Kaistassa
+       * käytetään vain vanhaa sävyä — kirkas kärki on vanan asia.
+       */
+      kaistaGeom.setColors(new Float32Array(n * 3));
       const kaistaMat = materiaali({
         depthWrite: true,
         depthFunc: LESS_DEPTH,
         opacity: KAISTAN_PEITTO,
         linewidth: kaistaPx,
         polygonOffsetUnits: KAISTAN_SYVYYSSIIRTO,
+        vertexColors: true,
       });
-      asetaVari(kaistaMat, virranVari(vari, 0).vanha);
       const kaista = new luokat.Line2(kaistaGeom, kaistaMat);
       kaista.computeLineDistances();
       kaista.renderOrder = KAISTAN_RENDER_ORDER;
@@ -336,6 +371,8 @@ export function luoVanat({
       kolmi.juuri.add(olio);
       const variAttr = geom.getAttribute?.('instanceColorStart') ?? null;
       const variPuskuri = variAttr?.data?.array ?? null;
+      const kaistaAttr = kaistaGeom.getAttribute?.('instanceColorStart') ?? null;
+      const kaistaPuskuri = kaistaAttr?.data?.array ?? null;
 
       oliot.push({
         tunnus: vana.tunnus,
@@ -353,6 +390,8 @@ export function luoVanat({
         kaistaMat,
         varit: variPuskuri,
         puskuri: variAttr?.data ?? null,
+        kaistaVarit: kaistaPuskuri,
+        kaistaPuskuri: kaistaAttr?.data ?? null,
       });
       mittarit.karkia += n;
     }
@@ -488,7 +527,9 @@ export function luoVanat({
           v0[2] + (v1[2] - v0[2]) * w,
         ];
       };
+      const kaistanVari = (k) => savy(o.virrat?.[k] ?? o.virta).v0;
       let edellinen = karjenVari(0);
+      let kaistaEdellinen = kaistanVari(0);
       for (let j = 0; j + 1 < o.n; j += 1) {
         const seuraava = karjenVari(j + 1);
         const kohta = j * 6;
@@ -500,10 +541,20 @@ export function luoVanat({
         o.varit[kohta + 4] = seuraava[1];
         o.varit[kohta + 5] = seuraava[2];
         edellinen = seuraava;
+        if (!o.kaistaVarit || kohta + 5 >= o.kaistaVarit.length) continue;
+        const kaistaSeuraava = kaistanVari(j + 1);
+        o.kaistaVarit[kohta] = kaistaEdellinen[0];
+        o.kaistaVarit[kohta + 1] = kaistaEdellinen[1];
+        o.kaistaVarit[kohta + 2] = kaistaEdellinen[2];
+        o.kaistaVarit[kohta + 3] = kaistaSeuraava[0];
+        o.kaistaVarit[kohta + 4] = kaistaSeuraava[1];
+        o.kaistaVarit[kohta + 5] = kaistaSeuraava[2];
+        kaistaEdellinen = kaistaSeuraava;
       }
       // Yksi lippu riittää: molemmat väriattribuutit ovat saman
       // lomitetun puskurin näkymiä.
       if (o.puskuri) o.puskuri.needsUpdate = true;
+      if (o.kaistaPuskuri) o.kaistaPuskuri.needsUpdate = true;
     }
     return true;
   }

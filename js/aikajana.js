@@ -3622,7 +3622,13 @@ class Aikajana {
      * niistä näkyisi yksi. Sama pehmeä ajo kuin muutkin, ja vain
      * pallolla: tasokartta on jo koko kaaren näkymässä.
      */
-    if (this.pallolla) {
+    /*
+     * VANOILLA KAMERA PERÄÄNTYY ITSE (VIRRAT VANOINA, 6.9.2026):
+     * virtamoduuli ajaa lopussa koko pallon näkymään omalla
+     * säännöllään, eikä kaaren sovitus saa ajaa sen päälle. Muilla
+     * kaarilla (keksinnöt) tämä on ennallaan.
+     */
+    if (this.pallolla && !this.virrat?.ohjaaKameraa()) {
       this.kameraKohde = null;
       this.sovitaKaareen();
     }

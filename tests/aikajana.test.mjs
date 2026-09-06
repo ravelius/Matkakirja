@@ -1150,7 +1150,12 @@ test('kamera seuraa pysäkkejä vain pallolla ja ajo alkaa lähikuvasta', () => 
   assert.match(metodi('tarkistaKameraEnnakko'), /if \(this\.reducedMotion\) return;\n\s*if \(!this\.pallolla && !this\.reittiOsat\) return;/);
   // Kaaren lopussa kamera peräytyy koko kaareen: loppusanat lupaavat
   // kaikki valot, eikä lähikuvassa näkyisi kuin yksi.
-  assert.match(metodi('lopeta'), /if \(this\.pallolla\) \{\n\s*this\.kameraKohde = null;\n\s*this\.sovitaKaareen\(\);/);
+  /*
+   * Kaaren lopussa kamera perääntyy — paitsi jos linssi ajaa kameraa
+   * itse (Ihmisen matkan vanat perääntyvät koko pallon näkymään omalla
+   * säännöllään, js/aikajana-virrat.js).
+   */
+  assert.match(metodi('lopeta'), /if \(this\.pallolla && !this\.virrat\?\.ohjaaKameraa\(\)\) \{\n\s*this\.kameraKohde = null;\n\s*this\.sovitaKaareen\(\);/);
   // Terävä tila pyydetään käynnistyksessä ja vapautetaan purussa.
   assert.ok(metodi('kaynnista').includes('this.pakotaLaatu(true);'), 'käynnistys ei pakota terävää tilaa');
   assert.ok(PURA.includes('this.pakotaLaatu(false);'), 'purku ei vapauta terävää tilaa');
