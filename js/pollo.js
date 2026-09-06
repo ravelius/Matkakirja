@@ -78,6 +78,69 @@ import {
 /** Kontekstipaketin katto merkkeinä. Sama luku myös workerin puolella. */
 export const KONTEKSTIN_ENIMMAISPITUUS = 5000;
 
+/*
+ * ── PULU NÄYTTÄÄ PAIKAN KARTALLA (omistajan tilaus 6.9.2026 ilta) ───
+ *
+ * *"Olisiko pulun mahdollista näyttää joku kohta kartalla kysyttäessä,
+ * niin että kamera lentäisi sinne? Sitten jonnekin tulisi palaa nappi
+ * jolla pääsisi lähtöpaikkaan takaisin."*
+ *
+ * Toteutus asuu js/pulu-paikka.js:ssä, ja se REKISTERÖITYY TÄNNE
+ * (js/main.js kytkePulunPaikannus) — ei toisin päin. Syy on
+ * riippuvuussuunta: paikannus tarvitsee kartan, kohdekerroksen ja
+ * laudan projektion, eikä pöllö saa vetää niitä perässään joka
+ * kerta kun keskustelu avataan (sama sääntö kuin kohdekerroksen
+ * lisälähteillä, js/fokuskohteet.js rekisteroiLisakohteet).
+ *
+ * Ilman kytkentää — työhuoneen esikatselu, yksikkötestit — vipu on
+ * null eikä mitään tapahdu.
+ */
+let paikkanaytto = null;
+
+/**
+ * Kytkee paikkanäytön. Kutsuja on js/pulu-paikka.js.
+ *
+ * @param {?function({ui: object, kysymys: string, vastaus: string,
+ *   paikka: ?object}): ?{nimi: string}} fn
+ */
+export function asetaPaikkanaytto(fn) {
+  paikkanaytto = typeof fn === 'function' ? fn : null;
+}
+
+/**
+ * VALINNAINEN PAIKKAKENTTÄ PALVELIMEN VASTAUKSESSA.
+ *
+ * Muoto on palvelimen oma ja tarkoituksella suppea
+ * (tools/pollo/worker.js PAIKKAKEHOTE):
+ *
+ *   paikka: { nimi: 'Sparta', lat: 37.07, lon: 22.43, tarkkuus: 'kaupunki' }
+ *
+ * Kenttä tulee VAIN kun kysymys koskee sijaintia, eikä sitä ole
+ * lainkaan vanhalla workerilla — workerin muutos julkaistaan erikseen
+ * (pollo-julkaisu.yml). Peli ei siis saa riippua siitä: puuttuva tai
+ * rikkinäinen kenttä on täsmälleen sama tilanne kuin ennen tätä
+ * ominaisuutta, ja paikka ratkaistaan pelin omista aineistoista
+ * (js/pulu-paikka.js ratkaisePaikka).
+ *
+ * Tässä tarkistetaan vain kentän MUOTO. Koordinaattien järkevyys
+ * (asteikko, Null Island) katsotaan siellä, missä niitä käytetään.
+ *
+ * @returns {?{nimi: string, lat: number, lon: number, tarkkuus: string}}
+ */
+export function paikkaKentta(raaka) {
+  if (!raaka || typeof raaka !== 'object') return null;
+  const nimi = typeof raaka.nimi === 'string' ? raaka.nimi.trim().slice(0, 80) : '';
+  const lat = Number(raaka.lat);
+  const lon = Number(raaka.lon);
+  if (!nimi && !(Number.isFinite(lat) && Number.isFinite(lon))) return null;
+  return {
+    nimi,
+    lat,
+    lon,
+    tarkkuus: typeof raaka.tarkkuus === 'string' ? raaka.tarkkuus.trim().toLowerCase() : '',
+  };
+}
+
 /** Yksittäisten osien katot, jottei mikään niistä syö koko pakettia. */
 const MATKAKIRJAN_KATTO = 900;
 /*
@@ -4404,6 +4467,9 @@ class Pollo {
       return {
         vastaus: String(data?.vastaus ?? ''),
         jatkot: Array.isArray(data?.jatkot) ? data.jatkot : [],
+        // Valinnainen paikkakenttä (ks. paikkaKentta): vanha worker ei
+        // lähetä sitä, ja silloin tämä on null kuten ennenkin.
+        paikka: paikkaKentta(data?.paikka),
         katkesi: false,
         syy: data?.syy ?? null,
       };
@@ -4452,6 +4518,7 @@ class Pollo {
       return {
         vastaus: String(tulos.vastaus),
         jatkot: Array.isArray(tulos.jatkot) ? tulos.jatkot : [],
+        paikka: paikkaKentta(tulos.paikka),
         katkesi: false,
         lopullinen: true,
         /*
@@ -4466,7 +4533,7 @@ class Pollo {
     // Virta loppui kesken: näytetään se, mitä ehti tulla — mutta ilman
     // linkkejä, koska merkinnöistä ei ole takeita.
     return {
-      vastaus: kertynyt, jatkot: [], katkesi: true, lopullinen: false, syy: 'katkesi',
+      vastaus: kertynyt, jatkot: [], paikka: null, katkesi: true, lopullinen: false, syy: 'katkesi',
     };
   }
 
@@ -4686,6 +4753,36 @@ class Pollo {
     }
   }
 
+  /* --- paikan näyttö kartalla (omistajan tilaus 6.9.2026) ---------- */
+
+  /**
+   * Pyytää paikkanäyttöä (js/pulu-paikka.js). Palauttaa näytetyn paikan
+   * tai nullin, jos kohdetta ei ratkennut tai kytkentää ei ole.
+   *
+   * Virhe ei koskaan kaada vastausta: kartta on lisä, ei ehto.
+   */
+  naytaPaikkaKartalla({ kysymys = '', vastaus = '', paikka = null } = {}) {
+    if (!paikkanaytto) return null;
+    try {
+      return paikkanaytto({
+        ui: this.haeUi?.() ?? null, kysymys, vastaus, paikka,
+      });
+    } catch {
+      return null;
+    }
+  }
+
+  /**
+   * Rivi keskusteluun siitä, mitä kartalla juuri näytetään.
+   *
+   * Tämä ei ole pulun puhetta vaan tilatieto — kuten katkenneen virran
+   * rivi — joten se ei mene luentaan eikä historiaan.
+   */
+  paikkarivi(nimi) {
+    if (!nimi) return null;
+    return this.lisaaViesti('paikkarivi', `Näytän kartalla: ${nimi}`);
+  }
+
   /**
    * Yksi kysymys pöllölle.
    *
@@ -4729,6 +4826,15 @@ class Pollo {
     // kelaavat vielä pohjaan — uusi varaus viritetään heti perään.
     this.nollaaTyhjaTila();
     const kysymysViesti = this.lisaaViesti('kayttaja', kysymys);
+    /*
+     * PAIKKA NÄYTETÄÄN HETI, JOS PELI TIETÄÄ SEN ITSE (omistajan tilaus
+     * 6.9.2026). "Missä Ateena on?" ei tarvitse palvelinta lainkaan:
+     * kaupunki on laudalla, ja kamera lähtee samalla hetkellä kun
+     * kysymys ilmestyy keskusteluun. Rivi tulee ennen mietintäriviä,
+     * jotta järjestys on kysymys → mitä kartalla tapahtuu → vastaus.
+     */
+    let naytettyPaikka = this.naytaPaikkaKartalla({ kysymys });
+    if (naytettyPaikka) this.paikkarivi(naytettyPaikka.nimi);
     /*
      * ODOTUSRIVI ON LIVIAN PUHETTA (omistajan hyväksyntä 29.8.2026).
      * Aiemmin tässä oli nimilappu ja sen yliviivausvitsi ("Pöllö Pulu
@@ -4807,6 +4913,7 @@ class Pollo {
         tulos = {
           vastaus: String(data?.vastaus ?? ''),
           jatkot: Array.isArray(data?.jatkot) ? data.jatkot : [],
+          paikka: paikkaKentta(data?.paikka),
           katkesi: false,
           lopullinen: true,
           syy: data?.syy ?? null,
@@ -4861,6 +4968,18 @@ class Pollo {
           this.korostaLinkit(viesti, this.poimiLinkit(this.viimeisetKatkelmat));
         } else {
           viesti.textContent = poistaKasiteMerkinnat(teksti);
+        }
+        /*
+         * PALVELIMEN PAIKKAKENTTÄ on vara sille, mitä peli ei tiedä
+         * itse (Sparta, Troija, Babylon). Se katsotaan vasta nyt, ja
+         * vain jos kysymys ei jo laukaissut näyttöä — kamera ei lennä
+         * kahdesti samasta kysymyksestä.
+         */
+        if (!naytettyPaikka) {
+          naytettyPaikka = this.naytaPaikkaKartalla({
+            kysymys, vastaus: teksti, paikka: tulos?.paikka ?? null,
+          });
+          if (naytettyPaikka) this.paikkarivi(naytettyPaikka.nimi);
         }
         if (tulos?.katkesi) {
           this.lisaaViesti('virherivi', 'Ajatus katkesi kesken lauseen.');

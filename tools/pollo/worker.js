@@ -611,6 +611,86 @@ käsitettä kahdesti, älä pelaajan omaa kysymystä, äläkä mainitse \
 merkintöjä vastauksessasi.`;
 
 /*
+ * PAIKKAKENTTÄ — "MISSÄ SPARTA ON?" (omistajan tilaus 6.9.2026 ilta:
+ * *"Olisiko pulun mahdollista näyttää joku kohta kartalla kysyttäessä,
+ * niin että kamera lentäisi sinne?"*).
+ *
+ * Peli osaa lentää kameran itse, mutta se tuntee vain oman aineistonsa:
+ * laudan kaupungit, karttanimet, maasto- ja fokuskohteet sekä
+ * kohdekarttojen pisteet (js/pulu-paikka.js kokoaHakemisto). Sparta,
+ * Troija ja Babylon eivät ole siellä. Tämä kenttä on VARA juuri niitä
+ * varten — ei ensisijainen lähde: peli ratkaisee paikan ensin omista
+ * aineistoistaan ja katsoo tänne vasta sitten.
+ *
+ * MUOTO ON YKSI RIVI, JATKOJEN JÄLKEEN. Rivi kirjoitetaan viimeiseksi,
+ * JATKOT-lohkon alle, ja se on siksi kahdesti pelaajan ulottumattomissa:
+ *
+ *   1. Suoratoiston jatkosuodatin (rajat.js luoJatkoSuodatin) lopettaa
+ *      lähettämisen "JATKOT:"-riviin, joten paikkarivi ei vilahda
+ *      ruudulla kertaakaan.
+ *   2. poimiJatkot leikkaa saman rivin pois vastaustekstistä, ja
+ *      poimiEhdotukset hylkää sen jatkokysymyksistä (ei kysymysmerkkiä).
+ *
+ * Rivipohjainen muoto eikä JSON samasta syystä kuin JATKOT-lohkossa:
+ * pieni malli kirjoittaa vastauksen luonnollisena tekstinä, ja
+ * JSON-kuoren vaatiminen sotkisi sen herkästi.
+ *
+ * KENTTÄ ON VALINNAINEN MOLEMPIIN SUUNTIIN. Vanha peli jättää
+ * tuntemattoman kentän huomiotta; uusi peli ohittaa sen, jos se puuttuu
+ * tai koordinaatit ovat mahdottomat (js/pollo.js paikkaKentta,
+ * js/pulu-paikka.js kelpaakoAsteet).
+ */
+const PAIKKAKEHOTE = `PAIKKA KARTALLA
+Jos kysymys koskee SIJAINTIA — missä jokin paikka on, mihin se \
+sijoittuu, mistä se löytyy — kirjoita KAIKKEIN VIIMEISEKSI, JATKOT-rivien \
+ALLE, vielä yksi rivi täsmälleen tässä muodossa:
+PAIKKA: nimi | leveysaste | pituusaste | tarkkuus
+Nimi on paikan tavallinen suomenkielinen nimi, asteet desimaalilukuina \
+(pohjoinen ja itä positiivisia, piste desimaalierottimena) ja tarkkuus \
+yksi sanoista kaupunki, alue tai maa. Esimerkki:
+PAIKKA: Sparta | 37.07 | 22.43 | kaupunki
+Kirjoita rivi VAIN sijaintia koskevaan kysymykseen, vain yhdestä \
+paikasta, ja vain jos tiedät koordinaatit — arvattu koordinaatti on \
+pahempi kuin puuttuva rivi. Älä mainitse riviä vastauksessasi äläkä \
+selitä sitä.`;
+
+/** Rivin tunnistin: "PAIKKA:" rivin alussa. */
+const PAIKKA_MERKKI = /^\s*paikka\s*:/i;
+
+/**
+ * Poimii valinnaisen paikkarivin mallin raakavastauksesta.
+ *
+ * Palauttaa nullin aina, kun rivi puuttuu, on vajaa tai koordinaatit
+ * ovat mahdottomat: asiakas saa silloin täsmälleen sen, mitä ennenkin.
+ * Null Island (0, 0) hylätään erikseen — se on tyhjän kentän tavallisin
+ * oletusarvo, ei paikka josta kukaan kysyy.
+ *
+ * @param {string} teksti mallin koko vastaus JATKOT-lohkoineen
+ * @returns {?{nimi: string, lat: number, lon: number, tarkkuus: string}}
+ */
+export function poimiPaikka(teksti) {
+  for (const rivi of String(teksti ?? '').split('\n')) {
+    if (!PAIKKA_MERKKI.test(rivi)) continue;
+    const osat = rivi.replace(PAIKKA_MERKKI, '').split('|').map((o) => o.trim());
+    if (osat.length < 3) continue;
+    const nimi = osat[0].slice(0, 80);
+    const lat = Number(osat[1].replace(',', '.'));
+    const lon = Number(osat[2].replace(',', '.'));
+    if (!nimi || !Number.isFinite(lat) || !Number.isFinite(lon)) continue;
+    if (lat < -90 || lat > 90 || lon < -180 || lon > 180) continue;
+    if (lat === 0 && lon === 0) continue;
+    const tarkkuus = (osat[3] ?? '').toLowerCase();
+    return {
+      nimi,
+      lat,
+      lon,
+      tarkkuus: ['kaupunki', 'alue', 'maa'].includes(tarkkuus) ? tarkkuus : 'kaupunki',
+    };
+  }
+  return null;
+}
+
+/*
  * KEHYSLAJI — kertoo kehotteelle, kumpi ääni tähän vastaukseen kuuluu.
  *
  * Peli lähettää pyynnössä kentän `kehys` (js/pollo.js kehysLaji):
@@ -1196,8 +1276,11 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
       const { hanta } = suodatin.loppu();
       if (hanta) await laheta('pala', { teksti: hanta });
       const { vastaus, jatkot } = poimiJatkot(raaka);
+      // Paikkarivi luetaan RAAKATEKSTISTÄ: se on JATKOT-lohkon alla,
+      // eikä sitä ole koskaan lähetetty pelaajalle palana.
+      const paikka = poimiPaikka(raaka);
       if (vastaus) {
-        await laheta('loppu', { vastaus, jatkot, syy: null });
+        await laheta('loppu', { vastaus, jatkot, syy: null, ...(paikka ? { paikka } : {}) });
       } else {
         /*
          * Tyhjä vastaus striimin jälkeen: syy voi olla virran virhe,
@@ -1890,6 +1973,7 @@ export default {
        * palvelimen omistamana (sama periaate kuin muullakin kehotteella).
        */
       const kehote = `${JARJESTELMAKEHOTE}\n\n${KASITEKEHOTE}\n\n${JATKOKEHOTE}`
+        + `\n\n${PAIKKAKEHOTE}`
         + `\n\n${kehysOhje(kehysLaji(runko?.kehys))}`;
       /*
        * Suoratoisto vain pyydettäessä. Vanha kertavastaus jää polulle
@@ -1914,7 +1998,10 @@ export default {
       if (!vastaus) {
         return vastaa(await paikkaaTyhja(env, kutsu, { stop: kerralla.stop }), kors);
       }
-      return vastaa({ vastaus, jatkot, syy: null }, kors);
+      // Valinnainen paikkakenttä mukaan vain, jos malli sen kirjoitti
+      // (ks. PAIKKAKEHOTE). Puuttuva kenttä = vastaus kuten ennenkin.
+      const paikka = poimiPaikka(kerralla.teksti);
+      return vastaa({ vastaus, jatkot, syy: null, ...(paikka ? { paikka } : {}) }, kors);
     } catch (virhe) {
       // Vain tilakoodi lokiin — ei avainta, ei pelaajan tekstiä.
       console.log(`pollo: kutsu epäonnistui (${virhe?.status ?? 'verkko'})`);

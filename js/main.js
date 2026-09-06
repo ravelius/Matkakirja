@@ -61,11 +61,18 @@ import { kytkeFokusnosto } from './fokusnosto.js';
 import { kytkeSyvennys } from './syvennys.js';
 import { kytkeSkandaalit } from './skandaalit.js';
 import { kytkeHistorianHetket } from './historian-hetket.js';
+/*
+ * Pulun paikkanäyttö (js/pulu-paikka.js, omistajan tilaus 6.9.2026):
+ * kytkentä on tässä samasta syystä kuin yllä — paikannus tarvitsee
+ * kartan ja kohdekerroksen, eikä pöllö saa tuoda niitä perässään.
+ */
+import { kytkePulunPaikannus } from './pulu-paikka.js';
 
 kytkeFokusnosto();
 kytkeSyvennys();
 kytkeSkandaalit();
 kytkeHistorianHetket();
+kytkePulunPaikannus();
 
 const PLAYER_COLOR = '#d94f3d';
 /*
@@ -126,7 +133,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1653';
+const APP_VERSION = '2026-08-09.1654';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');

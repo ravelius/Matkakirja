@@ -20911,6 +20911,148 @@ a.pollo-kasitelinkki:active { color: var(--pollo-muste); }
 }
 
 /* ---------------------------------------------------------------------
+   PULU NÄYTTÄÄ PAIKAN KARTALLA (js/pulu-paikka.js, omistajan tilaus
+   6.9.2026 ilta: *"Olisiko pulun mahdollista näyttää joku kohta
+   kartalla kysyttäessä, niin että kamera lentäisi sinne? Sitten
+   jonnekin tulisi palaa nappi jolla pääsisi lähtöpaikkaan takaisin."*)
+
+   Kolme pintaa: rivi keskustelussa, merkki kartalla ja Palaa-nappi
+   kartan ylälaidassa. Kaikki liike on animoitua ja pehmeää.
+   --------------------------------------------------------------------- */
+
+/* Sama sävy kuin katkenneen virran rivillä: tämä on tilatieto, ei
+   pulun puhetta. Nuoli kertoo, että jotain tapahtui ruudulla. */
+.pollo-paikkarivi {
+  color: var(--pollo-muste-himmea);
+  font-size: 0.82rem;
+  font-style: italic;
+}
+
+.pollo-paikkarivi::before {
+  content: '\2192\00a0';
+  font-style: normal;
+}
+
+/*
+ * MERKKI ON KARTTARUUDUN OMA KERROS (js/pulu-paikka.js paivitaMerkki
+ * kirjoittaa transformin joka kehyksellä). Siirto ja häivytys ovat
+ * ERI OMINAISUUKSIA: transformia ei saa siirtää CSS-siirtymällä, koska
+ * skripti päivittää sen kehyskohtaisesti — siirtymä jäisi aina
+ * jälkeen. Näkyvyys sen sijaan liukuu.
+ */
+/*
+ * ANKKURI ON NOLLAN KOKOINEN ja istuu täsmälleen kohdassa; skripti
+ * kirjoittaa sen transformin. Piste keskittyy ankkuriin, ja laatta
+ * kasvaa siitä YLÖS VASEMMALLE (right/bottom), jottei nimilappu jää
+ * ruudun oikean alanurkan pulupaneelin alle.
+ */
+.pulu-paikkamerkki {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 4;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 420ms ease;
+}
+
+.pulu-paikkamerkki.esilla { opacity: 1; }
+.pulu-paikkamerkki.haipyva { opacity: 0; }
+
+.pulu-paikkapiste {
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--map-ink);
+  box-shadow: 0 0 0 2px rgba(250, 243, 226, 0.85);
+}
+
+.pulu-paikkalaatta {
+  position: absolute;
+  right: 0.55rem;
+  bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.18rem 0.55rem 0.18rem 0.35rem;
+  border: 1px solid rgba(122, 85, 20, 0.42);
+  border-radius: 999px;
+  background: rgba(250, 243, 226, 0.92);
+  color: var(--map-ink);
+  box-shadow: 0 2px 8px rgba(46, 30, 14, 0.22);
+}
+
+.pulu-paikkalaatta .pulu-sulka svg {
+  display: block;
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.pulu-paikkalappu {
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/*
+ * PALAA-NAPPI ON KARTTASELITTEEN VIERESSÄ oikeassa ylälaidassa
+ * (.karttaselite: top 0.4rem, right 0.4rem, leveys vähintään 40 px).
+ *
+ * Vasen ylälaita mitattiin ensin, mutta siellä on MATKAPÄIVÄKIRJAN
+ * KORTTI: nappi jäi kokonaan sen alle (kuvakaappaus 6.9.2026,
+ * savuke-pulu-paikka). Alaoikea kuuluu pulun paneelille ja alavasen
+ * maakartuutsille, joten karttaselitteen vasen puoli on ainoa laita,
+ * joka on vapaa molemmilla laudoilla. Pinontataso karttaselitteen
+ * tasolle, jotta kortti ei peitä nappia.
+ */
+.pulu-palaa {
+  position: absolute;
+  right: 3.3rem;
+  top: 0.4rem;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 40px;
+  padding: 0 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(239, 220, 180, 0.9);
+  color: var(--map-ink);
+  font-size: 0.86rem;
+  cursor: pointer;
+  /* Nappi liukuu esiin ylhäältä eikä vain ilmesty. */
+  opacity: 0;
+  transform: translateY(-0.4rem);
+  pointer-events: none;
+  transition: opacity 320ms ease, transform 320ms ease;
+}
+
+.pulu-palaa.esilla {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.pulu-palaa:hover { background: rgba(245, 231, 200, 0.95); }
+
+.pulu-palaa-ikoni svg {
+  display: block;
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulu-paikkamerkki,
+  .pulu-palaa { transition: none; }
+}
+
+/* ---------------------------------------------------------------------
    KEVYT KUVAPOPUP nähtävyyslinkin päällä (js/pollo.js avaaKuvapopup).
 
    Linkki nähtävyysjuttuun avaa ensin pelkän kuvan ja sen valmiin
