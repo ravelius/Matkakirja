@@ -934,4 +934,27 @@ export const UUTISLAHTEET = {
     kieli: 'mn',
     syote: 'https://www.caak.mn/rss',
   },
+  /*
+   * EL DEBER on Santa Cruz de la Sierran päivälehti ja Bolivian
+   * luetuimpia. Testattu 6.9.2026: syötteessä 25 juttua, ja
+   * artikkelisivun ensimmäisestä <article>-lohkosta jäsentyy 9–13 yli
+   * 60 merkin kappaletta sekä og:image (kaksi eri artikkelia
+   * testattu). Syöte ja artikkelit ovat samalla isäntänimellä.
+   *
+   * HUOM: oikea osoite on /feed/, ei /rss/ — jälkimmäinen vastaa
+   * 200:lla mutta palauttaa HTML-etusivun, jolloin poiminta jäisi
+   * tyhjäksi.
+   *
+   * Testattu ja hylätty: Los Tiempos (lostiempos.com/rss.xml, 404),
+   * Opinión (opinion.com.bo/rss, 301 eikä worker seuraa
+   * uudelleenohjauksia), La Razón (la-razon.com/feed/, 301
+   * Cloudflaresta), El Diario (eldiario.net/portal/feed/, 403 Sucurin
+   * palomuurista) ja Página Siete (paginasiete.bo/feed/, 522 — lehti
+   * lopetti 2023).
+   */
+  BOL: {
+    nimi: 'EL DEBER',
+    kieli: 'es',
+    syote: 'https://eldeber.com.bo/feed/',
+  },
 };

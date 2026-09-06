@@ -147,6 +147,9 @@ const SALLITUT = [
   // samalla isäntänimellä. www on pakollinen — caak.mn ilman sitä
   // vastaa 301:llä eikä worker seuraa uudelleenohjauksia.
   'https://www.caak.mn/',
+  // Bolivian uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä, ilman www-etuliitettä.
+  'https://eldeber.com.bo/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

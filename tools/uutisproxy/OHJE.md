@@ -187,6 +187,16 @@
 > yhteyden). Perustelut ovat js/packs/uutislahteet.js:n
 > MNG-kommentissa. Julkaisu Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Bolivia):** sallittuihin lisättiin
+> `https://eldeber.com.bo/` (maalehti BOL, testattu 6.9.2026: syötteessä
+> 25 juttua, ja artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy
+> 9–13 yli 60 merkin kappaletta sekä `og:image`). Osoite on ilman
+> www-etuliitettä, ja syötteen polku on `/feed/` — `/rss/` vastaa 200:lla
+> mutta palauttaa HTML-etusivun. Muut kokeillut bolivialaislehdet
+> hylättiin 404:n, uudelleenohjauksen tai botti-eston takia; perustelut
+> ovat js/packs/uutislahteet.js:n BOL-kommentissa. Julkaisu
+> Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

@@ -47409,4 +47409,435 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * BOLIVIA (BOL) — Etelä-Amerikan laudan maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-bolivia.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA on tässä tiukka, koska
+   * maastokohteet-bol.js kattaa jo Nevado Sajaman, Illimanin,
+   * Desaguaderon, Tiwanakun, Cerro Ricon, Sucren, Chiquitosin
+   * lähetysasemat, Yungas-tien, Salar de Uyunin, Oruron karnevaalin ja
+   * Samaipatan, skandaalit.js Cochabamban vesisodan ja vuoden 1980
+   * kokaiinivallankaappauksen ja elaintakyt.js boliviandelfiinin.
+   * Maalehti EI toista niitä: historiassa ei ole Potosín hopeaa eikä
+   * Sucren kaupunkia, luonnossa ei Uyunia, Sajamaa eikä Illimania,
+   * musiikissa ei Oruron karnevaalia, diabladaa eikä Chiquitosin
+   * barokkia. Alcide d'Orbigny esiintyy sekä eläintäyssä (delfiini
+   * 1832) että täällä (Puya raimondii 1830) — eri laji, eri tarina.
+   *
+   * TYÖNJAKO PERUN KANSSA: PER/musiikki kertoo jo charangon ja sikun
+   * (samoilla Commons-kuvilla), joten Bolivian musiikkisivu ei koske
+   * kumpaankaan soittimeen sinänsä vaan siihen, mitä niillä tehtiin —
+   * Los Jairas 1965 ja afrobolivialainen saya. Ensimmäinen luonnos
+   * toisti Perun jutut, ja tools/tarkista-maa.mjs paljasti sen
+   * kuvaduplikaateista.
+   *
+   * HERKÄT AIHEET: nykypolitiikka on rajattu kokonaan pois (M3:n
+   * Myanmar-linja). Merenmenetys kerrotaan tapahtumina eikä nykyisenä
+   * vaatimuksena, Túpac Katarin teloitustapaa ei kuvata, koka mainitaan
+   * vain hänen ammattinaan, ja vuoden 1952 yleinen äänioikeus on
+   * maaintrossa (southamerica-artikkelit.js) eikä aihesivulla.
+   *
+   * KUVAT: 18 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin. KAKSI
+   * NOSTOA JÄI KUVATTOMAKSI: Túpac Katari (Peñasin muistomerkin
+   * reliefissä on teloituskohtaus, El Alton Plaza Andina on täynnä
+   * mainoskylttejä) ja Marina Núñez del Prado (Commonsissa on vain
+   * hänen liman-talomuseonsa julkisivu, ei yhtään veistosta).
+   * HYLÄTYT: "Ejercito chileno en Antofagasta (1879)" (extmetadatan
+   * Artist tyhjä), "Cerro de Comanche" (puyat jäävät harjanteella
+   * pisteiksi), "Puya raimondii hábito" (kuvattu Perussa ja kuvassa on
+   * tunnistettavat kasvot), "Saya Afroboliviana 08 2025" ja "Saya
+   * Afroboliviana en movimiento" (ryhmäkuvia tunnistettavista
+   * ihmisistä), "BO. Ernesto Cavour. Museo de instrumentes musicales
+   * de Bolivia" (museon pääsylippu, ei kuva museosta),
+   * "Monumento de Bartolina Sisa y Tupac Katari" (aukio täynnä
+   * mainoskylttejä).
+   *
+   * TUNNISTETTAVAT KASVOT: mukana on vain kuvia, joissa tunnistuva
+   * henkilö ON jutun aihe (Los Kjarkas lavalla, Luzmila Carpio) —
+   * sama linja kuin Kenian Kipchoge- ja Makeba-kuvissa.
+   */
+  BOL: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Bolivian historia on kirjoitettu ylängöllä ja rannikolla, jonka maa '
+          + 'menetti: Andien laaksoissa noustiin kapinaan, ja meren puolella riita '
+          + 'kymmenen sentin verosta vei koko rantakaistaleen.',
+      nostot: [
+        {
+          otsikko: 'Piiritys, jota johdettiin ylätasangolta',
+          aika: '1781',
+          teksti: 'Julián Apasa Nina oli aymarakauppias, joka myi kokaa ja verkakangasta. '
+              + 'Hän otti nimen Túpac Katari kahden aiemman kapinajohtajan mukaan: '
+              + 'katari tarkoittaa aymaraksi käärmettä, amaru samaa ketšuaksi ja tupac '
+              + 'molemmissa loistavaa. Maaliskuun 13. päivänä 1781 hän kokosi noin '
+              + '40 000 miehen joukon ja saartoi La Pazin. Päämaja oli El Altossa '
+              + 'ylätasangolla, ja mukana johtamassa oli hänen vaimonsa Bartolina Sisa. '
+              + 'Piiritys kesti 109 päivää. Vuonna 2005 Bolivia nimesi molemmat '
+              + 'kansallissankareiksi, ja maan ensimmäinen tietoliikennesatelliitti sai '
+              + 'nimen Túpac Katari 1.',
+          selite: 'El Alto on La Pazin yläpuolinen tasanko, jolta laaksokaupunkiin '
+            + 'katsotaan suoraan alaspäin — siksi piirittäjän leiri oli juuri siellä.',
+        },
+        {
+          otsikko: 'Nimi, joka keksittiin kokouksessa',
+          aika: '1809–1825',
+          tiedosto: 'Antonio José de Sucre. Michelena, Arturo. 1895, Legislative Palace, La Paz.png',
+          teksti: 'Vapaustaistelu alkoi Sucressa 25. toukokuuta 1809, ja sitä sanotaan '
+              + 'Latinalaisen Amerikan ensimmäiseksi vapaudenhuudoksi. Kuudentoista '
+              + 'vuoden jälkeen tasavalta julistettiin 6. elokuuta 1825. Antonio José de '
+              + 'Sucre sai Simón Bolívarilta kolme vaihtoehtoa: liittää Charcas Peruun, '
+              + 'liittää se Río de la Platan provinsseihin tai julistaa se omaksi '
+              + 'valtiokseen. Hän valitsi kolmannen. Maa sai nimekseen ensin Bolívarin '
+              + 'tasavalta, kunnes kansanedustaja Manuel Martín Cruz ehdotti lyhyempää: '
+              + 'jos Romuluksesta tuli Rooma, niin Bolívarista tulkoon Bolivia. Nimi '
+              + 'hyväksyttiin 3. lokakuuta 1825.',
+          selite: 'Arturo Michelenan muotokuva Antonio José de Sucresta vuodelta 1895 '
+            + 'on La Pazin lainsäädäntöpalatsissa. Sucre oli maan toinen presidentti.',
+          lahde: 'Arturo Michelena, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kymmenen sentin vero, joka vei meren',
+          aika: '1878–1904',
+          tiedosto: 'Muelle Salitrero de la ex Compañía Melbourne Clark.JPG',
+          teksti: 'Helmikuussa 1878 Bolivian kongressi vahvisti chileläisen '
+              + 'salpietariyhtiön toimiluvan sillä ehdolla, että yhtiö maksaisi '
+              + 'kymmenen sentin veron jokaiselta viedyltä sentneriltä. Yhtiö kieltäytyi '
+              + 'vedoten vuoden 1874 rajasopimukseen. Kun Bolivia mitätöi luvan ja pani '
+              + 'omaisuuden huutokauppaan, chileläinen osasto valtasi Antofagastan '
+              + 'huutokauppapäivänä 14. helmikuuta 1879 ilman vastarintaa. Sota '
+              + 'julistettiin 1. maaliskuuta. La Pazissa ei ollut lennätintä: uutiset '
+              + 'rannikolta tuotiin jalan tai hevosella, sillä maan ainoa lennätin oli '
+              + 'Tupizassa 606 kilometrin päässä. Vuoden 1904 rauhansopimus vahvisti '
+              + 'rajan lopullisesti.',
+          selite: 'Melbourne Clarkin salpietarilaituri seisoo yhä Antofagastassa. Sama '
+            + 'yhtiö oli myöhemmin nimeltään CSFA, ja juuri sen vero sytytti riidan.',
+          lahde: 'Vessna, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Merivoimat maassa, jolla ei ole merta',
+          aika: '1963–',
+          tiedosto: 'Armada boliviana.jpg',
+          teksti: 'Bolivia on ollut sisämaavaltio vuoden 1904 sopimuksesta lähtien, '
+              + 'mutta laivasto sillä on. Joki- ja järviosasto perustettiin tammikuussa '
+              + '1963 neljällä Yhdysvalloista saadulla veneellä ja 1 800 maavoimista '
+              + 'siirretyllä miehellä, ja 1966 siitä tuli Bolivian merivoimat. Nykyään '
+              + 'palveluksessa on noin viisituhatta ihmistä kymmenessä laivastopiirissä, '
+              + 'ja tukikohdat ovat Amazonin sivujokien varsilla ja Titicacajärvellä. '
+              + 'Joka vuosi 23. maaliskuuta vietetään meren päivää: se on Eduardo '
+              + 'Abaroan kuolinpäivä Topáterin sillalta 1879, sodan ensimmäisestä '
+              + 'yhteenotosta.',
+          selite: 'Merivoimien neljännen laivastopiirin rakennus Titicacajärven '
+            + 'rannalla. Seinään on maalattu Cuarto Distrito Naval Titicaca.',
+          lahde: 'FrenchAvatar, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Bolivia ulottuu kuudesta ja puolesta kilometristä lähes merenpinnan '
+          + 'tasolle, ja samaan maahan mahtuu suolajärviä, tulvasavannia ja sademetsää.',
+      nostot: [
+        {
+          otsikko: 'Puisto, jossa lasketaan joka seitsemäs maailman lintulaji',
+          aika: '1995–',
+          tiedosto: 'Madidi national park in Bolivia.jpg',
+          teksti: 'Madidin kansallispuisto perustettiin 1995 Amazonin yläjuoksulle, ja '
+              + 'se laskeutuu 5 760 metristä 180 metriin. Wildlife Conservation Society '
+              + 'nimesi sen 2018 maailman lajirikkaimmaksi kansallispuistoksi: '
+              + 'putkilokasveja on yli 8 000 lajia, lintuja 1 254 eli noin neljätoista '
+              + 'prosenttia maailman lintulajeista, nisäkkäitä 272 ja kaloja 496. Kun '
+              + 'puistosta löytyi uusi hyppyapinalaji, sen nimeämisoikeus '
+              + 'huutokaupattiin. Voittaja maksoi 650 000 dollaria rahastoon, jonka '
+              + 'tuotolla palkataan neljätoista puistovartijaa vuodessa, ja laji sai '
+              + 'nimen Plecturocebus aureipalatii.',
+          selite: 'Madidissa Andien rinteet vaihtuvat sademetsäksi muutamassa '
+            + 'kymmenessä kilometrissä; pilvien yläpuolella näkyvät jo lumihuiput.',
+          lahde: 'Michael Kessler, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Flamingo, jonka luultiin kadonneen',
+          tiedosto: 'James’s flamingos at Laguna Colorada in the Eduardo Avaroa Andean Fauna National Reserve in southwest Bolivia.jpg',
+          teksti: 'Laguna Colorada on matala suolajärvi 4 278 metrissä, ja sen vesi on '
+              + 'tiilenpunaista sedimentistä ja Dunaliella salina -levästä; pinnalla '
+              + 'kelluu valkoisia booraksisaaria. Järvi on jamesinflamingon tärkein '
+              + 'pesimäpaikka. Laji kuvattiin tieteelle 1886, mutta se katosi niin '
+              + 'tarkkaan, että sitä pidettiin sukupuuttoon kuolleena, kunnes syrjäiseltä '
+              + 'ylängöltä löytyi kanta 1956. Nokassa on noin 21 siivilälevyä '
+              + 'senttimetrillä, yli kaksi kertaa enemmän kuin muilla flamingoilla, ja '
+              + 'ravinnoksi kelpaavat vain hyvin pienet piilevät.',
+          selite: 'Jamesinflamingoja Laguna Coloradan rannalla. Vaalea höyhenpuku ja '
+            + 'kirkkaan keltainen nokka erottavat lajin sen andilaisista sukulaisista.',
+          lahde: 'Bob Ramsak, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kasvi, joka kukkii kerran ja kuolee',
+          tiedosto: 'Puyas raimondii muertas en pie en Comanche (1).jpg',
+          teksti: 'Titanka eli Puya raimondii on maailman suurin bromelia: rosetin '
+              + 'lehdet ovat toistametrisiä ja kukinto kohoaa parhaimmillaan '
+              + 'viiteentoista metriin. Ranskalainen Alcide d\'Orbigny törmäsi kasviin '
+              + '1830 Vacasissa Cochabamban departementissa 3 960 metrissä, mutta '
+              + 'yksilöt eivät kukkineet eikä hän saanut niitä luokitelluksi. Nimen '
+              + 'antoi vasta saksalainen Hermann Harms 1928. Yhdessä kukinnossa on '
+              + 'arvioitu olevan kahdeksasta tuhannesta kahteenkymmeneen tuhanteen '
+              + 'kukkaa ja siemeniä noin kaksitoista miljoonaa. Kasvi elää '
+              + 'neljästäkymmenestä sataan vuoteen, kukkii kerran ja kuolee.',
+          selite: 'Comanchen kukkulalla La Pazin departementissa kukkineet titankat '
+            + 'jäävät seisomaan pystyyn vuosiksi kuolemansa jälkeen.',
+          lahde: 'Carlillasa, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Savanni, jonka ihminen muotoili',
+          tiedosto: 'Un paisaje de los Llanos de Moxos.jpg',
+          teksti: 'Llanos de Moxos on 126 000 neliökilometrin savanni Benin '
+              + 'departementissa, ja sadekaudella jopa puolet siitä on veden alla. '
+              + 'Tasangolla on korotettuja peltoja, kanavia, penkereitä ja noin 4 700 '
+              + 'metsäsaarta, joita rakennettiin arviolta vuodesta 8850 eaa. aina '
+              + '1450-luvulle asti. Maniokkia viljeltiin täällä jo 8350 eaa. ja maissia '
+              + '4850 eaa. Maniokki, kurpitsa, maapähkinä ja osa pavuista ovat '
+              + 'geneettisesti hyvin lähellä alueen villilajeja, joten ne on '
+              + 'todennäköisesti kesytetty juuri tällä tasangolla.',
+          selite: 'Moxosin tasanko Estancia Espíritussa: tulvivaa ruohikkoa, jonka '
+            + 'keskellä metsäsaaret kohoavat kuivina kumpuina.',
+          lahde: 'Borochirebelde, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Bolivialainen keittiö on korkeuden keittiö: perunaa kuivataan '
+          + 'yöpakkasessa, viiniköynnös kasvaa kahdessa kilometrissä ja aamupäivän '
+          + 'välipala syödään seisaaltaan kadulla.',
+      nostot: [
+        {
+          otsikko: 'Piiras, joka on syötävä pystyssä',
+          tiedosto: 'Salteñas de Bolivia.jpg',
+          teksti: 'Salteña on uunissa paistettu piiras, jonka täyte on hyytelöity liemi: '
+              + 'kylmänä se on kiinteä, mutta uunissa se sulaa, ja siksi piirasta '
+              + 'syödään pystyasennossa ja pienin puraisuin. Taikina on kova ja makea '
+              + 'toisin kuin muissa empanadoissa. La Pazissa ja Santa Cruzissa salteña '
+              + 'kuuluu aamupäivään, etenkin sunnuntaisin: myyjät aloittavat '
+              + 'aamuseitsemältä ja useimmilta ne loppuvat ennen puoltapäivää. Alueen '
+              + 'ainoa siirtomaa-ajan reseptikirja on Josepha de Escurrechean vuodelta '
+              + '1776, ja siinä empanadoihin on jo lisätty peruna ja ají.',
+          selite: 'Kaksi salteñaa lautasella. Yläreunan punottu sauma pitää liemen '
+            + 'sisällä siihen asti, kun piiras avataan.',
+          lahde: 'EEJCC, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Peruna, joka pakastekuivataan jalkojen alla',
+          tiedosto: 'Chuño - Papa deshidratada.jpg',
+          teksti: 'Chuño tehdään kesä- ja heinäkuussa yli 3 800 metrissä, kun yöt '
+              + 'laskevat noin viiteen pakkasasteeseen. Kitkerät, pakkasenkestävät '
+              + 'perunat levitetään maahan kolmeksi yöksi: yö jäädyttää ne ja päivän '
+              + 'aurinko kuivaa. Sitten ne viedään chuñochinapampalle, aymaraksi '
+              + 'paikalle jossa chuño tehdään, ja koko perhe polkee jaloillaan niistä '
+              + 'lopun veden ja kuoret. Pesty valkoinen chuño on nimeltään tunta, '
+              + 'pesemätön musta. Oikein säilytettynä tuote kestää vuosikymmeniä, eikä '
+              + 'chairo-keitto ole bolivialaisen mielestä chairo ilman jauhettua chuñoa.',
+          selite: 'Keitettyä chuñoa savikulhossa. Kuivattu peruna imee itseensä liemen '
+            + 'maun mutta säilyttää oman sitkeän rakenteensa.',
+          lahde: 'Jhulis, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kansallisjuoma, jonka nimi tulee rautatieslangista',
+          tiedosto: 'Viñedos de Bolivia - Hacienda Don Julio, Tarija - Bolivia.jpg',
+          teksti: 'Singani tislataan valkoisesta Muscat of Alexandria -rypäleestä, ja '
+              + 'sitä tehdään vain Boliviassa. Laki vaatii, että viinitarhat ovat '
+              + 'vähintään 1 600 metrissä; korkeimmat yltävät lähes kolmeen '
+              + 'kilometriin. Viljelyalaa on noin 8 000 hehtaaria, kun konjakilla sitä '
+              + 'on 89 000. 1800-luvulla Andeille tulleet brittiläiset ja '
+              + 'yhdysvaltalaiset ratainsinöörit kaipasivat kotoista giniä '
+              + 'inkiväärikaljan kanssa; kun kumpaakaan ei ollut, he sekoittivat '
+              + 'singania ja mitä tahansa kuplivaa. Rautatiesanastossa shoofly '
+              + 'tarkoittaa väliaikaista kiertoraidetta — ja juomasta tuli chuflay.',
+          selite: 'Viinitarhoja Santa Anan laaksossa Tarijassa. Suurin osa Bolivian '
+            + 'rypäleistä kasvaa nykyään juuri tällä seudulla.',
+          lahde: 'Ruditaly, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Siemen, jonka linnut jättävät rauhaan',
+          tiedosto: 'Quinoa diversity, Uyuni, Bolivia.JPG',
+          teksti: 'Kinua kesytettiin Titicacajärven ympäristössä, ja se kasvaa yli '
+              + 'neljän kilometrin korkeudessa. Siementen pinnalla on kitkerää '
+              + 'saponiinia, joka karkottaa linnut, joten peltoa ei juuri tarvitse '
+              + 'vartioida; kauppaan tuleva kinua on huuhdeltu kerroksesta puhtaaksi. '
+              + 'YK:n yleiskokous julisti vuoden 2013 kansainväliseksi kinuavuodeksi '
+              + 'andilaisten viljelijöiden perinteen kunniaksi. Vuonna 2023 maailmassa '
+              + 'tuotettiin 112 251 tonnia kinuaa, ja siitä Perun osuus oli 62 ja '
+              + 'Bolivian 37 prosenttia. Hintanousu 2004–2011 toi ylängölle rahaa mutta '
+              + 'myös yksipuolisti viljelyä.',
+          selite: 'Kinuapelto Uyunin lähellä 3 800 metrissä. Lajikkeet erottuvat '
+            + 'väristä: punainen, keltainen ja valkoinen kasvavat vierekkäin.',
+          lahde: 'Michael Hermann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä aine tekee kinuan siemenistä kitkeriä?',
+        vaihtoehdot: [
+          'Tanniini',
+          'Kapsaisiini',
+          'Saponiini',
+          'Kofeiini',
+        ],
+        oikea: 2,
+        fakta: 'Kitkeryys on kasville hyödyksi: se pitää linnut loitolla, joten peltoa '
+            + 'ei tarvitse suojata erikseen.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Bolivian musiikki tulee kahdesta suunnasta: ylängön kylistä, joiden '
+          + 'soittimet nousivat 1960-luvulla konserttilavalle, ja Yungasin laaksoista, '
+          + 'joihin jäi elämään Afrikasta tuotu rytmi.',
+      nostot: [
+        {
+          otsikko: 'Neljä soitinta, joita ei ollut soitettu yhdessä',
+          aika: '1965–',
+          tiedosto: 'Estatua de Ernesto Cavour en el Parque de las Culturas, La Paz 01.jpg',
+          teksti: 'Vuonna 1965 laulaja Edgar Jofré kokosi La Pazin peña Naira '
+              + '-kahvilaan kvartetin nimeltä Los Jairas. Mukaan tulivat Ernesto '
+              + 'Cavour, kitaristi Julio Godoy ja sveitsiläinen Gilbert Favre, entinen '
+              + 'dixieland-klarinetisti, joka oli kuullut quena-huilun vasta Euroopassa. '
+              + 'Kokoonpano oli uusi: soittimet olivat kukin oman kylänsä perinnettä '
+              + 'eikä niitä ollut ennen yhdistetty. Neljän hengen yhtye mahtui '
+              + 'kiertueelle, ja ulkomainen huomio sai bolivialaiset arvostamaan '
+              + 'soittimia, joita oli siihen asti pidetty vain maalaisten tavarana. '
+              + 'Mallia seurasivat muun muassa Savia Andina ja Grupo Aymara.',
+          selite: 'Ernesto Cavourin muistomerkki La Pazin Parque de las Culturasissa. '
+            + 'Hän perusti 1962 soitinmuseon, jossa on nykyään 2 000 soitinta.',
+          lahde: 'Wawitasny7, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Työlaulu, joka jäi Yungasin laaksoihin',
+          tiedosto: 'Ropa de saya afroboliviana.jpg',
+          teksti: 'Saya on afrobolivialaisten musiikkia ja tanssia Yungasin laaksoista, '
+              + 'ja sitä pidetään yhtenä Bolivian musiikin peruskivistä. Nimen '
+              + 'alkuperästä ei ole varmuutta: yhden selityksen mukaan se tulee '
+              + 'kikongon sanasta, joka tarkoittaa laulamista yhteistä työtä tehdessä. '
+              + 'Sayasta on johdettu muita tansseja, tunnetuimpana caporales, jonka '
+              + 'Estradan veljekset esittivät ensi kerran 1969. Ne menevät usein '
+              + 'sekaisin, vaikka caporales kuvaa hacienda-tilan työnjohtajaa eikä ole '
+              + 'afrobolivialainen. Nykyään saya on afrobolivialaisille tapa pitää '
+              + 'esillä omaa identiteettiään.',
+          selite: 'Saya-asun koristeompelusta. Puku on kevyempää kangasta ja '
+            + 'väljemmin leikattu kuin caporales-tanssijan asu.',
+          lahde: 'Afroyungueña, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Laulu, joka vietiin Pariisiin ilman lupaa',
+          aika: '1981–1991',
+          tiedosto: 'Los Kjarkas en Festival El Tamarugo de la Tirana.jpg',
+          teksti: 'Los Kjarkas perustettiin 1965 Capinotassa Cochabamban '
+              + 'departementissa, ja Hermosan veljekset levyttivät 1981 saya-rytmissä '
+              + 'laulun Llorando se fue. Perussa siitä tehtiin cumbia-versio 1984 ja '
+              + 'Brasiliassa luvallinen portugalinkielinen käännös 1986. Vuonna 1989 '
+              + 'ranskalainen Kaoma julkaisi siitä version nimellä Lambada ilman lupaa '
+              + 'ja merkitsi tekijäksi keksityn Chico de Oliveiran, joka paljastui '
+              + 'yhtyeen tuottajan salanimeksi. Oikeudenkäynti päättyi bolivialaisten '
+              + 'voittoon, ja 1991 ranskalainen tuomioistuin määräsi oikeat tekijät '
+              + 'merkittäviksi kaikkiin tuleviin julkaisuihin.',
+          selite: 'Los Kjarkas lavalla. Yhtyeen soittimiin kuuluvat charango, quena, '
+            + 'zampoña ja ronroco, jonka Gonzalo Hermosa nimesi 1980-luvulla.',
+          lahde: 'Core Tarapacá, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Tule takaisin, kun osaat laulaa espanjaksi',
+          aika: '1949–',
+          tiedosto: 'Luzmila Carpio at the Mercado de Industrias Culturales del Sur (MICSUR) 02.jpg',
+          teksti: 'Luzmila Carpio syntyi 1949 Qala Qalan kylässä Pohjois-Potosíssa ja '
+              + 'oppi lapsena ketšuan ja aymaran arkilaulut. Yksitoistavuotiaana hän '
+              + 'matkusti Oruroon laulamaan radion lastenohjelmaan. Kun hän aloitti, '
+              + 'pianisti huusi, että tuollaista laulavat intiaanit ja että tyttö '
+              + 'palatkoon vasta kun osaa espanjaa. Hän juoksi ulos itkien — ja päätti '
+              + 'tulla takaisin seuraavana sunnuntaina. Carpio on sittemmin levyttänyt '
+              + 'yli kaksikymmentäviisi albumia pääosin ketšuaksi ja säveltänyt yli '
+              + 'sata kaksikymmentä laulua; vuosina 2006–2010 hän oli Bolivian '
+              + 'suurlähettiläs Ranskassa.',
+          selite: 'Luzmila Carpio esiintymässä Mar del Platassa Argentiinassa vuonna '
+            + '2014. Hän on laulanut ketšuaksi koko uransa ajan.',
+          lahde: 'Secretaría de Cultura de la Nación, Argentina, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Bolivian maalaustaide syntyi hopeakaupungin kirkoissa, ja sen '
+          + 'kuuluisimmat hahmot ovat enkeleitä, jotka on puettu hovipukuun ja '
+          + 'aseistettu tuliaseella.',
+      nostot: [
+        {
+          otsikko: 'Kultasuti, joka mahdutti koko kaupungin yhteen kuvaan',
+          aika: 'n. 1660–1732',
+          tiedosto: 'Entrada Virrey Arzobispo Morcillo.jpg',
+          teksti: 'Melchor Pérez de Holguín syntyi Cochabambassa noin 1660 ja muutti '
+              + 'Potosíhin viimeistään 1678. Hän maalasi luostariveljestöille ja '
+              + 'Charcasin varakkaille maanomistajille, ensin tummin sävyin ja '
+              + 'myöhemmin värikkäämmin, ja kuolemansa jälkeen häntä alettiin kutsua '
+              + 'kultasudiksi. Tunnetuin työ on vuoden 1718 maalaus, jossa arkkipiispa '
+              + 'ja varakuningas Morcillo saapuu kaupunkiin: kankaalle mahtuvat kulkue, '
+              + 'katsojat, torit ja kaksi pienoiskuvaa juhlan muista vaiheista. '
+              + 'Holguínin kasvot ovat nykyään 50 bolivianon setelissä.',
+          selite: 'Entrada del Virrey arzobispo Morcillo en Potosí vuodelta 1718. '
+            + 'Maalaus on nykyään Madridin Museo de América -museossa.',
+          lahde: 'Melchor Pérez de Holguín, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Enkelit, joilla on musketti ja pitsikaulus',
+          aika: '1700-luku',
+          tiedosto: 'Angel letiel.jpg',
+          teksti: 'Calamarcan kirkossa La Pazin departementissa on kaksi enkelisarjaa '
+              + '1700-luvun alkupuolelta. Tekijä tunnetaan Calamarcan mestarina, ja '
+              + 'hänen nimensä oli José López de los Ríos. Ensimmäisen sarjan enkelit '
+              + 'ovat ángeles arcabuceros, hovipukuisia sotilaita tuliase kädessä, ja '
+              + 'jokaisen nimi on kirjoitettu maalauksen alareunaan; ne ovat koko '
+              + 'tyylilajin tunnetuimmat esimerkit. Toisen sarjan enkelit ovat '
+              + 'androgyynejä: viitta liehuu, jalassa ovat roomalaiset sotilassaappaat '
+              + 'ja kädessä esine, joka kertoo, kuka Palermon seitsemästä arkkienkelistä '
+              + 'on kyseessä.',
+          selite: 'Letiel Dei, yksi Calamarcan aseistetuista enkeleistä. Nimi on '
+            + 'maalattu vasempaan alakulmaan, kuten koko sarjassa.',
+          lahde: 'Master of Calamarca, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Maalari, joka toi ylängön ihmiset kankaalle',
+          aika: '1899–1950',
+          tiedosto: 'Museo Nacional de Arte de Bolivia 25.jpg',
+          teksti: 'Cecilio Guzmán de Rojas syntyi Potosíssa 1899 ja opiskeli Madridin '
+              + 'San Fernandon kuninkaallisessa akatemiassa Julio Romero de Torresin '
+              + 'oppilaana; Pariisissa hän tutustui impressionismiin ja kubismiin. '
+              + 'Vuonna 1929 hän palasi La Paziin ja otti johtaakseen taideakatemian. '
+              + 'Hänestä tuli indigenismin eli alkuperäiskansojen kuvaamiseen '
+              + 'keskittyvän suuntauksen johtohahmo, ja hän yhdisti jugendin ja art '
+              + 'decon muotokieltä andilaisiin aiheisiin. Vuoden 1928 teos Luonnon '
+              + 'voitto on yhä maan kansallisen taidemuseon tunnetuimpia maalauksia.',
+          selite: 'El Triunfo de la Naturaleza vuodelta 1928 Bolivian kansallisessa '
+            + 'taidemuseossa La Pazissa.',
+          lahde: 'Yastay, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kuvanveistäjä, joka vei kaivosmiehet New Yorkiin',
+          aika: '1910–1995',
+          teksti: 'Marina Núñez del Prado syntyi La Pazissa 1910 ja valmistui kaupungin '
+              + 'taideakatemiasta 1930. Hän jäi samaan oppilaitokseen opettamaan '
+              + 'anatomiaa ja kuvanveistoa ja nousi ensimmäisenä naisena akatemian '
+              + 'oppituolin haltijaksi. Vuonna 1938 hän lähti matkalle, joka vei Perun, '
+              + 'Uruguayn, Argentiinan, Euroopan ja Egyptin kautta New Yorkiin; siellä '
+              + 'hänen veistoksensa kapinoivista kaivosmiehistä voitti kultamitalin '
+              + '1946. Myöhemmin hän veisti graniittia, onyksia ja Amazonin puuta, ja '
+              + 'kotimuseoon kertyi 1 014 teosta.',
+          selite: 'Veistossarjan aihe tuli Potosín kaivosmiehistä; Núñez del Prado '
+            + 'työskenteli tuolloin New Yorkissa yliopistonaisten apurahalla.',
+        },
+      ],
+    },
+  ],
 };
