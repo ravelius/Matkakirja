@@ -3489,7 +3489,14 @@ export const RAAMATTU = {
           + 'lopputulokseltaan."): vaihtoehtoa ei valita siirron pienuuden '
           + 'tai tyoajan vaan lopputuloksen mukaan, ja selvasti paras '
           + 'toteutetaan suoraan ilman erillista lupakierrosta; kysytaan '
-          + 'vain, jos kaksi jaa mittauksissa tasoihin.',
+          + 'vain, jos kaksi jaa mittauksissa tasoihin. TYONJAKO (omistaja '
+          + '6.9.2026 ilta, sanatarkasti: "Sitten kun toteutussuunnitelma on '
+          + 'valmis, niin se kannattaa siirtaa opukselle tyon alle, tai ei '
+          + 'ainakaan Fablemaksen kannata itse toteuttaa. Riittaa, etta se '
+          + 'arvioi ja suunnittelee."): fablemax mittaa, vertailee ja '
+          + 'kirjoittaa toteutussuunnitelman erineen; toteutus Opus-agenteilla '
+          + 'era kerrallaan. Tama kumoaa ylla olevan poikkeusluvan fablemaxin '
+          + 'toteutukselle.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
