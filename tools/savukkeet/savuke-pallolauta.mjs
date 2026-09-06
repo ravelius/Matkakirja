@@ -171,12 +171,21 @@ async function avaaSivu({ lauta, ampari = true, reducedMotion = 'no-preference' 
   });
   await sivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
   await sivu.route(/wikimedia\.org/, (route) => route.abort());
-  await sivu.route(/r2\.dev\//, async (route) => {
+  /*
+   * ÄMPÄRIN ISÄNTÄ ON media.matkakirja.app (sama korjaus kuin savuke-
+   * avauslennossa 6.9.2026; vanha r2.dev kelpaa yhä). CORS-otsake on
+   * pakollinen: laatat ja lepokerroksen kuvat ladataan crossOrigin-
+   * pyyntöinä, ja ilman otsaketta selain hylkää täytetyn vastauksen.
+   */
+  await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
     const url = route.request().url();
     if (!ampari && url.includes('vendor/globe.gl')) { route.abort(); return; }
     const vastaus = await ampariHaku(url);
     if (!vastaus || vastaus.status !== 200) { route.abort(); return; }
-    route.fulfill({ status: 200, contentType: vastaus.tyyppi ?? 'application/octet-stream', body: vastaus.body });
+    route.fulfill({
+      status: 200, contentType: vastaus.tyyppi ?? 'application/octet-stream', body: vastaus.body,
+      headers: { 'access-control-allow-origin': '*' },
+    });
   });
   await sivu.goto(`${osoite}?lauta=${lauta}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: 60000 });
@@ -230,7 +239,26 @@ if (AMPARI_TOIMII) {
     });
     vaadi('1. svg#board on tyhjä pallolaudalla', tila.svgLapsia === 0, `${tila.svgLapsia} elementtiä`);
     vaadi('   kartta on lepotilassa', tila.lepotila === true);
-    vaadi('2. laattapyramidiin ei lähde pyyntöjä', pyynnot.pyramidi === 0, `${pyynnot.pyramidi} pyyntöä`);
+    /*
+     * LEPOKERROS PYYTÄÄ PYRAMIDIA, TASOKARTTA EI (Raamattu 6.9.2026, PALLO
+     * LEVOSSA YHTA TERAVA KUIN TASOKARTTA): pallo kokoaa levossa näkyvän
+     * alueen kerroksen pyramidin laatoista (js/pallo.js luoLepokerros), ja
+     * ne pyynnöt kulkevat samoihin osoitteisiin kuin tasokartan. Vartio
+     * laskee siksi tasokartan pyynnöt erotuksena: kaikki pyramidipyynnöt
+     * miinus lepokerroksen omat (laatat + luettelo, mittarit).
+     */
+    const lepokerroksenPyynnot = () => sivu.evaluate(() => {
+      const m = window.matkakirja.ui.pallolauta?.lepokerros?.()?.mittarit?.() ?? null;
+      return m ? m.pyyntoja + (m.luettelo ? 1 : 0) : 0;
+    });
+    const tasokartanPyynnot = async () => pyynnot.pyramidi - await lepokerroksenPyynnot();
+    const alussa = await tasokartanPyynnot();
+    vaadi('2. laattapyramidiin ei lähde tasokartan pyyntöjä (lepokerroksen omat vähennetty)',
+      alussa <= 0, `${alussa} pyyntöä`);
+    tieto('lepokerros', JSON.stringify(await sivu.evaluate(() => {
+      const m = window.matkakirja.ui.pallolauta?.lepokerros?.()?.mittarit?.() ?? null;
+      return m ? { tila: m.tila, taso: m.taso, laattoja: m.laattoja, kangas: m.kangas, syy: m.syy } : null;
+    })));
     vaadi('3. kuori on karttaruudussa laudan tasolla, ilman Sulje-nappia',
       tila.kuoriRuudussa && tila.kuoriNakyy && tila.pos === 'absolute' && !tila.sulje,
       JSON.stringify({ ruudussa: tila.kuoriRuudussa, nakyy: tila.kuoriNakyy, pos: tila.pos, sulje: tila.sulje }));
@@ -505,7 +533,7 @@ if (AMPARI_TOIMII) {
      * pyyntöjä. Vanha kuorivartio (linssikartta) oli aaltoa 1C
      * edeltävä; se on korvattu tällä.
      */
-    const pyramidiEnnen = pyynnot.pyramidi;
+    const pyramidiEnnen = await tasokartanPyynnot();
     const linssiPallolla = await sivu.evaluate(async () => {
       const { ui } = window.matkakirja;
       const ennen = ui.pallolauta.kamera.kameranTila();
@@ -550,7 +578,7 @@ if (AMPARI_TOIMII) {
         && Math.abs(k.nyt.leveys - k.ennen.leveys) <= 0.05 * k.ennen.leveys,
       `ennen ${JSON.stringify(k.ennen)} → nyt ${JSON.stringify(k.nyt)}`);
     tieto('maapolygoneja pallolla', k.polygoneja);
-    tieto('pyramidipyyntöjä linssin avauksesta', pyynnot.pyramidi - pyramidiEnnen);
+    tieto('tasokartan pyramidipyyntöjä linssin avauksesta', await tasokartanPyynnot() - pyramidiEnnen);
     tieto('DOM-solmuja linssi päällä', k.dom);
     if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, 'pallolauta-linssi-pallolla.png') });
 
@@ -597,9 +625,10 @@ if (AMPARI_TOIMII) {
     // Pyramidi on hiljaa linssin jälkeen: kesken olleet pyynnöt ehtivät
     // perille 300 ms:ssa, sen jälkeen 1,5 s:ssa ei yhtään uutta.
     await sivu.waitForTimeout(300);
-    const pyramidiSulun = pyynnot.pyramidi;
+    const pyramidiSulun = await tasokartanPyynnot();
     await sivu.waitForTimeout(1500);
-    vaadi('   linssin jälkeen pyramidipyyntöjä 0', pyynnot.pyramidi === pyramidiSulun, `${pyynnot.pyramidi - pyramidiSulun} uutta`);
+    const pyramidiJalkeen = await tasokartanPyynnot();
+    vaadi('   linssin jälkeen tasokartan pyramidipyyntöjä 0', pyramidiJalkeen <= pyramidiSulun, `${pyramidiJalkeen - pyramidiSulun} uutta`);
 
     /* ================= VAIHE 2: SIIRROT PALLOLLA ================= */
 
@@ -673,7 +702,7 @@ if (AMPARI_TOIMII) {
     if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, 'pallolauta-heitto.png') });
 
     /* 10. Siirto pallolla: kohteen napautus → nappula hyppii perille. */
-    const pyramidiEnnenSiirtoa = pyynnot.pyramidi;
+    const pyramidiEnnenSiirtoa = await tasokartanPyynnot();
     const siirto = await sivu.evaluate(async () => {
       const { ui, game } = window.matkakirja;
       const pallo = ui.pallonInstanssi;
@@ -743,9 +772,10 @@ if (AMPARI_TOIMII) {
         && Math.abs(siirto.nappulaDatum.lng - siirto.odotettu.lon) < 1e-6
         && siirto.dx !== null && Math.abs(siirto.dx) <= raja10 && Math.abs(siirto.dy) <= raja10,
       `dx ${siirto.dx?.toFixed?.(1)} dy ${siirto.dy?.toFixed?.(1)} raja ${raja10.toFixed(1)} datum ${JSON.stringify(siirto.nappulaDatum)} odotettu ${JSON.stringify(siirto.odotettu)}`);
-    vaadi('    svg#board pysyy tyhjänä koko siirron ajan, pyramidipyyntöjä 0, kohteet poissa perillä',
-      siirto.svgEnintaan === 0 && pyynnot.pyramidi - pyramidiEnnenSiirtoa === 0 && siirto.kohteitaJaljella === 0,
-      JSON.stringify({ svg: siirto.svgEnintaan, pyramidi: pyynnot.pyramidi - pyramidiEnnenSiirtoa, kohteita: siirto.kohteitaJaljella }));
+    const pyramidiSiirrosta = await tasokartanPyynnot() - pyramidiEnnenSiirtoa;
+    vaadi('    svg#board pysyy tyhjänä koko siirron ajan, tasokartan pyramidipyyntöjä 0, kohteet poissa perillä',
+      siirto.svgEnintaan === 0 && pyramidiSiirrosta <= 0 && siirto.kohteitaJaljella === 0,
+      JSON.stringify({ svg: siirto.svgEnintaan, pyramidi: pyramidiSiirrosta, kohteita: siirto.kohteitaJaljella }));
     tieto('siirron kesto (ms), vaihe perillä, noppa näkyy', `${siirto.kesto}, ${siirto.vaihe}, ${siirto.noppaNakyy}`);
     if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, 'pallolauta-siirto.png') });
 

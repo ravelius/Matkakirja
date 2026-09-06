@@ -540,3 +540,38 @@ talon tyylillä, työkalu tarvitsee vain kirjoituskohteen ja otsikon.
 14. **Loppusanat ja avausteksti** on kirjoitettu valoille ("kaikki
     kaksikymmentä valoa palavat"). Fable kirjoittaa ne uusiksi
     virroille vaiheessa 3 — hyväksytäänkö, että tekstit muuttuvat?
+
+## 11. Päätökset (omistaja 6.9.2026 iltapäivä, kysymyskortit)
+
+Kaikki luvun 10 kysymykset käytiin läpi kortteina. Päätökset ovat
+sitovia (Raamattu: IHMISEN MATKA ON VARIVIRTOJA, EI PISTEITA →
+PAATOKSET); ristiriidassa Raamattu voittaa.
+
+| # | Kysymys | Päätös |
+|---|---------|--------|
+| 1 | Värit | Päävirta meripihka, Eurooppa sininen, Amerikat meripihkasta turkoosin kautta vihreään, Tyynimeri ruusu. |
+| 2 | Vanha alue | Selvästi värillinen: n. 75 % peitto, hieman tummempi sävy; rintama kirkkaampi reuna. |
+| 3 | Rintaman leveys | Kymmenesosa kellon lukemasta, vähintään 600 v. |
+| 4 | Pysäkkikuvat | Kaikki 20 poksahtavat kuvina ja kutistuvat pieniksi kehyksiksi seuraavan syttyessä. |
+| 5 | Kello | Ennallaan (vilisevä matkamittari). |
+| 6 | Reittiviiva | Pois tästä linssistä (`reitti: false`); Keksinnöissä säilyy. |
+| 7 | Neandertalilaiset ja denisovalaiset | Haalea harmaa alue Euroopassa ja Keski-Aasiassa 300–40 ka, joka väistyy värin tieltä (viides kenttä, negatiivinen väri). |
+| 8 | White Sands | Kuva 22 ka, väri saapuu vasta n. 15 ka; kiista näkyviin, teksti selittää. |
+| 9 | Tasokartta | Ensin vain pallolle. |
+| 10 | Reduced motion | Kamera ei seuraa, värit päivittyvät askelittain. |
+| 11 | Nelijaon rajat | **Siperia omaksi viidenneksi virraksi** (omistajan valinta vastoin ehdotusta): oma sävy, haarautuu päävirrasta n. 45 ka, Amerikat jatkavat siitä. Virtoja on siis viisi + vanhan väestön kenttä. |
+| 12 | Varhaiset retket | Skhul ja Al Wusta omana haaleana sammuvana läikkänä, joka katoaa 70 ka mennessä (ruudun väri voi sammua). |
+| 13 | Portit | Laatikot + satunnaistettu reuna prototyypissä; polygonit vain jos reuna häiritsee. |
+| 14 | Tekstit | Fable kirjoittaa avaustekstin ja loppusanat uusiksi virroille vaiheessa 3. |
+
+Seurauksia lukuihin 3–6: viides virta (Siperia) tarvitsee oman sävyn,
+joka erottuu sekä päävirran meripihkasta että Amerikkojen turkoosista
+(ehdotus: vaalea sinivihreä, joka on Amerikkojen liu'un lähtökohta —
+niin Amerikkojen eriytyminen jatkaa Siperian sävystä, ei suoraan
+meripihkasta); Amerikkojen lähtöportti Beringiassa lukee Siperian
+kentän saapumisajan, ei päävirran. Sammuva läikkä (12) lisää
+laskentaan yhden mekanismin: ruudulla on saapumisajan lisäksi
+mahdollinen sammumisaika.
+
+Seuraava askel: fablemax toteuttaa prototyypin näiden päätösten
+mukaan; omistaja arvioi kuvakaappaukset ennen hiontaa.

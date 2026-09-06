@@ -2404,3 +2404,48 @@ aiemminkin (`{tulos: true, auki: false}`, ks. luvun aiempi merkintä
 (`tools/savukkeet/kaappaukset/avauslento-pallo*.png`) jätettiin
 päivittämättä: ne ovat megatavun kokoisia eikä binäärihistoriaa
 kannata paisuttaa yhdestä ajosta.
+
+**Lepokerros — levossa pallo on yhtä terävä kuin tasokartta (6.9.2026
+iltapäivä, fablemax).** Omistaja: *"kartta oli ennen palloa paljon
+terävämpi, eli ongelma on pallon renderöinnissä. ainakin kun liike on
+pysäytetty, kuva pitäisi renderöityä samalla tarkkuudella kuin 2d
+kartassa"* (Raamattu, PALLO LEVOSSA YHTA TERAVA KUIN TASOKARTTA).
+Mitattu syy: pallon Z8-sarja on poltettu pyramidin z7:stä (240 →
+182 px/aste päiväntasaajalla) jpeg-laatuun 80, ja jokainen pikseli
+käy kaksi uudelleennäytteistystä (Miller → Mercator, Mercator → pallon
+pinta). Toteutus `js/pallo.js` (`luoLepokerros`, kytketty samaan
+lepo/liike-koneeseen kuin laatutaso, `kytkeLaatunosto`): kun kamera on
+ollut paikallaan `LAATU_LEPOVIIVE_MS`, ruudun 7 × 7 pistettä
+säteenjäljitetään pallolle, niistä lasketaan leveys-pituus-laatikko
+(sauma aukikierrettynä), valitaan pyramidin taso, jonka px/aste ≥
+ruudun laitepikselit/aste, kootaan pohja + viiva + nosto -laatat yhdelle
+kankaalle täsmälleen tasokartan osoitteilla ja ruudukolla
+(`js/laattapyramidi.js` uudet ovet `haePyramidinLuettelo`,
+`pyramidinKerrostasot`, `pyramidinLaattaUrl`, `pyramidinLaattaOlemassa`)
+ja piirretään pallon pinnalle 0,25°:n verkkona, jonka UV on Millerin
+kankaalla. Kerros häipyy päälle 260 ms ja pois 150 ms heti liikkeen
+alkaessa (reduced motion: heti). Säde 1,001 × pinta: laattojen päällä,
+kaikkien merkkien alla; syvyys kirjoitetaan ja kerros piirretään
+läpinäkyvien ensimmäisenä (renderOrder −1), jotta linssin polygonit ja
+napakannen häive jäävät sen päälle. Rajat: ei yleiskuvassa (korkeus >
+0,6), laattakatto ruudun laitepikseleistä (4 × pikselit / 512², 16…64),
+kangas ≤ 8192 ja näytönohjaimen katto, tiheysvahti (karkeampaa kuin
+pallon omat Mercator-laatat katsotulla leveysasteella ei koota — mitattu
+puhelimella Euroopan yllä z5 olisi ollut askel taaksepäin), versiovahti
+(pallon laatat.json versio/viivat/nostot = pyramidi.json versio/
+viivataso/nostotaso, muuten ei kerrosta). Mittaus (Chromium, Kreikan
+lähikuva korkeus 0,12, Laplace-varianssi ruudun keskeltä): työpöytä
+2758 × 1642 363 → 388, puhelin 1170 × 2532 188 → 229; Euroopan
+yleiskuvassa kerrosta ei koota (tiheysvahti). Kustannus: Kreikan
+lähikuva työpöydällä 48 laattaa × 3 kerrosta (kangas 4096 × 3072,
+~50 Mt + mipmapit), puhelimella ~20 laattaa (2048 × 2560). Vartiot:
+`tests/pallolepokerros.test.mjs`; savukkeissa pyramidipyynnöt lasketaan
+nyt erotuksena lepokerroksen omista (`lauta.lepokerros().mittarit()`).
+Hylätty varakeino: pallon Z9 litteästä z8:sta — pyramidissa ei ole
+z8:aa, joten Z9 olisi venytetty z7 nelinkertaisella laattamäärällä.
+AVOIN: laattamoottori hakee levossa työpöydällä yli tuhat Z8-laattaa
+(lepokerroin), ja lepokerroksen kuvat jonottavat niiden perässä samalle
+palvelimelle (fetchPriority high auttaa vain Chromiumissa); mobiilin
+muisti on riski, jos kangas 45 laattaa (~47 Mt) osuu laattamoottorin
+oman huipun päälle.
+

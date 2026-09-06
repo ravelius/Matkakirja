@@ -65,7 +65,7 @@
 import {
   LAATU_LEPOVIIVE_MS, PALLO_LAATTATASO_MAX, PALLO_LAUTA, asennaPallonEleet, esilataaPallolaatat,
   laatatSaatavilla, laattatasoMax, lataaPallokirjasto, pakotaPallonLaatu,
-  pallonKaupungit, pallonNostoOnPoltettu, rakennaPallo, webglTuettu,
+  pallonKaupungit, pallonLepokerros, pallonNostoOnPoltettu, rakennaPallo, webglTuettu,
 } from '../pallo.js';
 import { asemoiFokuskohde } from '../fokuskohteet.js';
 import { laudaltaAsteiksi } from '../fokusmitat.js';
@@ -1213,6 +1213,12 @@ export async function avaaPallolauta(ui) {
     merkitseNappulanPaikka,
     /** Ladonta heti ilman lepoviivettä (savukkeet ja vartijat). */
     ladoHeti: () => { clearTimeout(lepoAjastin); return ladoLevossa(); },
+    /**
+     * Lepokerroksen kahva (js/pallo.js luoLepokerros: mittarit, kokoa,
+     * piilota) tai null ennen kuin laatunosto on asentunut. Funktio eikä
+     * kenttä, koska asennus odottaa kirjaston laattamoottoria.
+     */
+    lepokerros: () => pallonLepokerros(pallo),
     /** Siirron kuljettaja (ui.nappulanKuljettaja → js/pallolauta/siirto.js). */
     nappulanKuljettaja: (player, valinnat) => luoNappulanKuljettaja({
       ui, lauta, player, ...valinnat,
