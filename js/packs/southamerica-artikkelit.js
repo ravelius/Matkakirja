@@ -209,6 +209,51 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'vain ilmasta. Pizarro saapui Cajamarcaan 1532, ja itsenäisyys '
       + 'julistettiin vasta kolmesataa vuotta myöhemmin.',
   },
+  /* Chilen ja Kolumbian maaintrot kirjoitettiin 6.9.2026 maalehtien
+   * (MAA_KATEGORIAT.CHL ja .COL) yhteydessä samasta en-Wikipedian
+   * aineistosta kuin lehdet — docs/mantereet-tyoaineisto/
+   * faktapohja-chile.md ja faktapohja-kolumbia.md. Vain intro-kenttä,
+   * kuten Perulla, Brasilialla ja Argentiinalla. Valparaíson ja Bogotán
+   * kaupunkilehtien aiheet (ascensorit, Neruda, muiscat, smaragdit)
+   * jätettiin pois, koska ne ovat kaupunkilehtien nostoja. */
+  Chile: {
+    intro: 'Chile on vuonna 1873 viisikymmentäviisivuotias tasavalta ja '
+      + 'kapea kaistale Andien ja Tyynenmeren välissä. Pohjoisessa on '
+      + 'Atacama, maailman kuivin ei-polaarinen aavikko, jonka '
+      + 'sääasemilla ei ole aina mitattu sadetta lainkaan. Etelässä '
+      + 'alkavat sademetsät, vuonot ja jääkentät, joista eteläinen on '
+      + 'napa-alueiden ulkopuolella maailman toiseksi suurin. Välissä '
+      + 'ovat hedelmälaaksot, joihin tuotiin 1850-luvulla '
+      + 'viinipistokkaita Bordeaux’sta.'
+      + '\n\n'
+      + '**Biobío-joen eteläpuoli ei ollut isoisän matkavuonna vielä '
+      + 'Chileä: mapuchejen maa säilyi itsenäisenä lähes kolmesataa '
+      + 'vuotta.** Espanjalaiset pysäytettiin 1598, ja sen jälkeen '
+      + 'lonkot ja kuvernöörit neuvottelivat rajasta parlamenteissa. '
+      + 'Itsenäisyys julistettiin 1818, saksalaiset siirtolaiset '
+      + 'raivasivat eteläisiä metsiä 1850-luvulta alkaen, ja aavikolle '
+      + 'nousi salpietarikaupunkeja. Maahan kuuluu myös Pääsiäissaari, '
+      + 'jonka moait olivat 1800-luvun lopulla kaikki kaatuneet.',
+  },
+  Kolumbia: {
+    intro: 'Kolumbialla on rantaa sekä Karibianmerellä pohjoisessa että '
+      + 'Tyynellämerellä lännessä, ja Andit haarautuvat maan sisällä '
+      + 'kolmeksi vuorijonoksi. Siitä seuraa jotain '
+      + 'poikkeuksellista: maassa on maailman suurin lajitiheys '
+      + 'pinta-alaa kohti ja yli 1 900 lintulajia — enemmän kuin '
+      + 'Euroopassa ja Pohjois-Amerikassa yhteensä. Metsärajan '
+      + 'yläpuolella leviää páramo, trooppinen vuoristotundra, jonka '
+      + 'sulavesi juottaa pääkaupungin.'
+      + '\n\n'
+      + '**Ihmisen jäljet ovat yhtä vanhoja: Zenút kaivoivat kaksituhatta '
+      + 'vuotta sitten puolen miljoonan hehtaarin kanavaverkoston, ja San '
+      + 'Agustínin laaksoon jäi kuusisataa kivipatsasta, joiden tekijöitä '
+      + 'ei tunneta.** Cartagenaa linnoitettiin merirosvoja vastaan '
+      + 'kaksisataa vuotta, ja Boyacán sillalla ratkesi 1819 koko '
+      + 'Espanjan valta pohjoisessa Etelä-Amerikassa. Isoisän '
+      + 'matkavuonna maan nimi on Kolumbian yhdysvallat ja sen '
+      + 'valtaväylä Magdalena-joki.',
+  },
   /*
    * SÃO PAULO (23.8.2026). Väitteet ovat samasta erästä kuin lehden
    * tekstit (js/packs/kulttuuri-kategoriat.js, avain saopaulo), ja ne
