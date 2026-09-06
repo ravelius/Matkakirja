@@ -572,10 +572,15 @@ test('harsojen liuku sammuu ennen laatan reunaa eikä jätä suoraa rajaa', () =
   const palsta = osa('.intro-palsta');
   const juliste = osa('.intro-juliste');
 
-  /* Reunalta ei saa erottua mitään: alle 5 % peittävyyttä. */
+  /*
+   * Reunalta ei saa erottua mitään: peittävyys TASAN NOLLA (omistaja
+   * 6.9.2026 iltapäivä: *"näkyy vielä vähän suoraa rajaa tekstin
+   * vaaleassa taustassa"* — vanha raja 0,05 päästi läpi 0,036:n
+   * hunnun, joka erottui meren sinen päällä).
+   */
   for (const [nimi, h] of [['palsta', palsta], ['juliste', juliste]]) {
     const reuna = reunapeitto(h.haivytys, h.peitto);
-    assert.ok(reuna < 0.05,
+    assert.ok(reuna === 0,
       `${nimi}n harso on laatan reunalla vielä ${reuna.toFixed(3)} — suora raja näkyisi`);
     // Häivytys kulkee pitkän matkan: yli puolet säteestä.
     assert.ok(100 - h.haivytys > 50,

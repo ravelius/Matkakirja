@@ -6467,6 +6467,15 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  *                      pienempi säde taas kutistaisi harson alaa —
  *                      laatan ala kasvatetaan insetillä, ei säteellä.
  *
+ * LIUKU ON TÄSMÄLLEEN NOLLA ENNEN REUNAA (omistaja 6.9.2026 iltapäivä,
+ * työpöytä, sanatarkasti: *"näkyy vielä vähän suoraa rajaa tekstin
+ * vaaleassa taustassa"*). "Käytännössä nolla" ei riittänyt: meren
+ * sinen päällä 0,03:n pergamenttihuntu erottuu vaakasuorana viivana
+ * laatan reunassa. Liuku päättyy nyt pysäkkiin 0 kohdassa häivytys
+ * + 45 % (palstalla 85 %, julisteella 79 % säteestä), ja laatan
+ * reuna on 89 %:n kohdalla — reunalla peittävyys on tasan nolla.
+ * Menetetty ala korvataan hieman isommalla laatalla (inset).
+ *
  * Ala on em-mittainen ja siis tekstin kokoinen: kun fitIntro kutistaa
  * kirjasinta, harso kutistuu mukana eikä irtoa tekstistään.
  */
@@ -6484,8 +6493,10 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
     rgba(243, 228, 196, 0.86) calc(var(--harson-haivytys) + 10%),
     rgba(243, 228, 196, 0.66) calc(var(--harson-haivytys) + 19%),
     rgba(243, 228, 196, 0.42) calc(var(--harson-haivytys) + 28%),
-    rgba(243, 228, 196, 0.2) calc(var(--harson-haivytys) + 37%),
-    rgba(243, 228, 196, 0.06) calc(var(--harson-haivytys) + 47%),
+    rgba(243, 228, 196, 0.2) calc(var(--harson-haivytys) + 35%),
+    rgba(243, 228, 196, 0.09) calc(var(--harson-haivytys) + 40%),
+    rgba(243, 228, 196, 0.02) calc(var(--harson-haivytys) + 43%),
+    rgba(243, 228, 196, 0) calc(var(--harson-haivytys) + 45%),
     rgba(243, 228, 196, 0) 100%);
 }
 
@@ -6496,9 +6507,9 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * mutta pallo näkyy sen läpi eikä harsosta erotu reunaa.
  */
 .intro.intro-pallolla .intro-palsta::before {
-  inset: -2.6em -5em;
+  inset: -2.9em -5.5em;
   --harson-peitto: 0.62;
-  --harson-haivytys: 42%;
+  --harson-haivytys: 40%;
 }
 
 /*
@@ -6509,9 +6520,9 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * joten liuku kestää lähes kaksi kolmasosaa säteestä.
  */
 .intro.intro-pallolla .intro-juliste::before {
-  inset: -1.8em -3.6em;
+  inset: -2em -4em;
   --harson-peitto: 0.8;
-  --harson-haivytys: 36%;
+  --harson-haivytys: 34%;
 }
 
 /*

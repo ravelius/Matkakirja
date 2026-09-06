@@ -750,10 +750,20 @@ export function julisteenMaski(
   // Säde piirretään vyön kanssa; aukko loppuu siihen, mistä liuku alkaa.
   const rx = (leveys / 2) * aukko * (1 + vyo);
   const ry = (korkeus / 2) * aukko * (1 + vyo);
-  const raja = (100 / (1 + vyo)).toFixed(1);
+  const raja = 100 / (1 + vyo);
+  /*
+   * VYÖ ON S-KÄYRÄ, EI SUORA (omistaja 6.9.2026 iltapäivä: *"näkyy
+   * vielä vähän suoraa rajaa tekstin vaaleassa taustassa"*). Suora
+   * liuku alkaa ja päättyy kulmaan, jonka silmä lukee reunana; pysäkit
+   * seuraavat pehmeää askelta (3t² − 2t³), joten kuva syttyy aukon
+   * laidasta huomaamatta.
+   */
+  const pysakit = [0, 0.25, 0.5, 0.75, 1].map((t) => {
+    const a = t * t * (3 - 2 * t);
+    return `rgba(0, 0, 0, ${Number(a.toFixed(3))}) ${(raja + (100 - raja) * t).toFixed(1)}%`;
+  });
   return `radial-gradient(ellipse ${rx.toFixed(0)}px ${ry.toFixed(0)}px`
-    + ` at ${kx.toFixed(0)}px ${ky.toFixed(0)}px,`
-    + ` rgba(0, 0, 0, 0) ${raja}%, rgba(0, 0, 0, 1) 100%)`;
+    + ` at ${kx.toFixed(0)}px ${ky.toFixed(0)}px, ${pysakit.join(', ')})`;
 }
 
 /* ==================== KERROS ETUSIVULLE =========================== */

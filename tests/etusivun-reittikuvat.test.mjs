@@ -319,7 +319,7 @@ test('julisteotsikon kohdalla kuvakerroksessa on pehmeäreunainen aukko', () => 
   for (const laatikko of LAATIKOT) {
     const maski = julisteenMaski(laatikko);
     const luvut = maski.match(
-      /^radial-gradient\(ellipse (\d+)px (\d+)px at (\d+)px (\d+)px, rgba\(0, 0, 0, 0\) ([\d.]+)%, rgba\(0, 0, 0, 1\) 100%\)$/,
+      /^radial-gradient\(ellipse (\d+)px (\d+)px at (\d+)px (\d+)px, rgba\(0, 0, 0, 0\) ([\d.]+)%(?:, rgba\(0, 0, 0, 0\.\d+\) [\d.]+%)+, rgba\(0, 0, 0, 1\) 100(?:\.0)?%\)$/,
     );
     assert.ok(luvut, `maski ei ole odotettua muotoa: ${maski}`);
     const [, rx, ry, kx, ky, raja] = luvut.map(Number);
