@@ -12,7 +12,8 @@ import { arkinPikseli, pinnoitteenAvain, pinnoitteenMitat, PINNOITE } from '../t
 // Vaihe 5c: laatat offline, varapolku ja turvatila.
 import {
   ESILATAUKSEN_KAUPUNKITASO, ESILATAUKSEN_MAAILMATASO, esilataaPallolaatat, esilatauksenLaatat,
-  laatanKoordinaatit,
+  esilataaLentoreitti, laatanKoordinaatit, reitinLaatat,
+  REITIN_ESILATAUSTASOT, REITIN_LASKEUTUMISTASO,
 } from '../js/pallo.js';
 import {
   PALLON_SALLITTU_VENYTYS, PALLOLAUDAN_SAAPUMISLEVEYS, PALLOLAUDAN_SIIRTOLEVEYS, PALLO_KORKEUS_MIN,
@@ -421,6 +422,54 @@ test('esilataus lähtee palvelutyöntekijälle kerran ja vain jos se on olemassa
   assert.ok(viestit[0].osoitteet.length >= 85);
   await esilataaPallolaatat({}, nav);
   assert.equal(viestit.length, 1, 'esilataus lähti kahdesti samassa istunnossa');
+});
+
+/*
+ * LENTOREITIN KÄYTÄVÄ (omistaja 6.9.2026: *"Lentokonekohtauksessa paljon
+ * lähempi zoom aste ja kamera seuraa konetta"*). Lähempi kamera pyytää
+ * lennon aikana Z7:ää pitkin koko kaarta ja lopussa Z8:aa
+ * kohdekaupungin yllä; laattamoottori hakee vasta kun kamera on jo
+ * siellä, joten avauslento pyytää käytävän etukäteen koriin.
+ */
+test('esilataus: lentoreitin käytävä kaaren ympärillä ja Z8 laskeutumiseen', () => {
+  // Kolme näytettä Lontoosta Ateenaan (isoympyrän karkea otanta).
+  const pisteet = [{ lat: 51.5, lon: -0.12 }, { lat: 45.5, lon: 12 }, { lat: 37.98, lon: 23.73 }];
+  const kaytava = reitinLaatat({ pisteet });
+  assert.deepEqual(REITIN_ESILATAUSTASOT, [6, 7]);
+  assert.equal(REITIN_LASKEUTUMISTASO, 8);
+  // Kolme näytettä × 3 × 3 laattaa × kaksi tasoa, päällekkäiset karsittuina.
+  assert.equal(new Set(kaytava).size, kaytava.length, 'sama laatta kahdesti');
+  assert.ok(kaytava.length > 30 && kaytava.length <= 54, `käytävässä ${kaytava.length} laattaa`);
+  assert.ok(kaytava.every((u) => u.startsWith(PALLO_LAATAT) && u.endsWith('.jpg')));
+  for (const taso of REITIN_ESILATAUSTASOT) {
+    const keski = laatanKoordinaatit(51.5, -0.12, taso);
+    assert.ok(kaytava.includes(pallonLaatta(keski.x, keski.y, taso)), `lähtö puuttuu tasolta ${taso}`);
+  }
+  // Luettelon katto rajaa myös käytävän (Z8 on syvin, jos luettelo sanoo 7).
+  const matala = reitinLaatat({ pisteet, tasot: [8], maxTaso: 7 });
+  assert.ok(matala.every((u) => u.includes(`${PALLO_LAATAT}7/`)), 'maxTaso ei rajannut');
+});
+
+test('lentoreitin esilataus lähtee erikseen eikä kuluta kerran-per-istunto-lupaa', async () => {
+  const pisteet = [{ lat: 51.5, lon: -0.12 }, { lat: 37.98, lon: 23.73 }];
+  assert.equal(await esilataaLentoreitti(pisteet, undefined), null, 'ei työntekijää');
+  assert.equal(await esilataaLentoreitti([], { serviceWorker: {} }), null, 'tyhjä reitti');
+  const viestit = [];
+  const nav = {
+    serviceWorker: {
+      ready: Promise.resolve({ active: null }),
+      controller: { postMessage: (v) => viestit.push(v) },
+    },
+  };
+  await esilataaLentoreitti(pisteet, nav);
+  await esilataaLentoreitti(pisteet, nav);
+  assert.equal(viestit.length, 2, 'reittiesilataus saa lähteä joka lennolla');
+  assert.equal(viestit[0].tyyppi, 'esilataa-pallolaatat');
+  assert.equal(viestit[0].kansio, PALLO_LAATTAKANSIO);
+  // Laskeutumisen taso on mukana kohdekaupungin (viimeinen näyte) ympärillä.
+  const maali = laatanKoordinaatit(37.98, 23.73, REITIN_LASKEUTUMISTASO);
+  assert.ok(viestit[0].osoitteet.includes(pallonLaatta(maali.x, maali.y, REITIN_LASKEUTUMISTASO)),
+    'kohdekaupungin Z8-laatta puuttuu');
 });
 
 test('lähin korkeus tulee laattatarkkuudesta ja laitteen dpr:stä (Z8 = 182 px/aste)', () => {

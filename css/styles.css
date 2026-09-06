@@ -6374,10 +6374,17 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * (rgba(239, 220, 180, 0.38)), joka pesi pallon kalpeaksi heti napin
  * painalluksesta.
  *
- * Sama kaava ja sama väri kuin aloitusportilla (.start-gate), yhtä
- * astetta vaaleampana — portti 0,28 keskellä ja 0,6 reunoilla, avaus
- * 0,18 ja 0,44. Luvut ovat nimettyinä muuttujina, jotta portin ja
+ * Sama kaava ja sama väri kuin aloitusportilla (.start-gate), MUTTA
+ * selvästi vaaleampana — portti 0,28 keskellä ja 0,6 reunoilla, avaus
+ * 0,12 ja 0,34. Luvut ovat nimettyinä muuttujina, jotta portin ja
  * avauksen suhde on luettavissa yhdestä paikasta.
+ *
+ * VAALEAMPI SITTENKIN (omistaja 6.9.2026 aamupäivä testikuvasta:
+ * *"Maapallo saa olla vähän vaaleampi sittenkin kun näin testikuvasi"*).
+ * Ensimmäinen mitta oli 0,18 / 0,44; nyt keskeltä 0,12 ja reunoilta
+ * 0,34, eli tummennus kevenee kolmanneksen kummassakin päässä.
+ * PORTTI JÄÄ ENNALLEEN (0,28 / 0,6): tilaus koski avausta, ja portin
+ * tummempi soikio on se, mitä vasten "Aloita seikkailu" luetaan.
  *
  * Tekstin luettavuus EI ole tämän varassa: palstalla ja otsikolla on
  * omat pergamenttiharsonsa (::before, alla).
@@ -6387,8 +6394,8 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   z-index: 1;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  --avauksen-tummennus: 0.18;
-  --avauksen-tummennus-reuna: 0.44;
+  --avauksen-tummennus: 0.12;
+  --avauksen-tummennus-reuna: 0.34;
   background: radial-gradient(ellipse at 50% 50%,
     rgba(36, 26, 18, var(--avauksen-tummennus)) 40%,
     rgba(36, 26, 18, var(--avauksen-tummennus-reuna)) 100%);

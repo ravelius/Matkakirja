@@ -225,7 +225,86 @@ export function esilatauksenLaatat({
   return osoitteet;
 }
 
+/*
+ * ── LENTOREITIN KÄYTÄVÄ (avauslento, 6.9.2026) ────────────────────
+ *
+ * Omistaja 6.9.2026: *"Lentokonekohtauksessa paljon lähempi zoom aste
+ * ja kamera seuraa konetta."* Lähempi kamera pyytää lennon aikana Z7:ää
+ * ja lopussa Z8:aa PITKIN KOKO REITTIÄ, eikä laattamoottori hae mitään
+ * ennen kuin kamera on jo siellä — sumea kuva ehtisi näkyä juuri siinä
+ * kohdassa, jota katsotaan. Siksi avauslento pyytää reitin käytävän
+ * koriin etukäteen (js/pallolauta/avaus.js valmistele), kun
+ * pergamenttiarkki on vielä ruudulla.
+ *
+ * KÄYTÄVÄ ON KAPEA. Kamera pysyy koneen päällä, joten reitin ympäriltä
+ * riittää yksi laatta joka suuntaan; koko maailman tasot 0–3 ovat jo
+ * korissa (esilatauksenLaatat yllä). Lontoo → Ateena (kaari 21,5°,
+ * 24 näytettä) antaa laskettuna 33 laattaa tasolla 6 ja 53 tasolla 7,
+ * päällekkäiset karsittuina, plus 9 laskeutumislaattaa tasolla 8 — noin
+ * 1,4 Mt, kun koko maailman taso 7 (21 845 laattaa) olisi satoja
+ * megatavuja.
+ */
+/** Lentoreitin käytävän laattatasot (Z6 lennon alkuun, Z7 keskelle). */
+export const REITIN_ESILATAUSTASOT = [6, 7];
+/** Laskeutumisen taso: kohdekaupungin ympäristö saapumisnäkymän tarkkuudella. */
+export const REITIN_LASKEUTUMISTASO = 8;
+/** Käytävän leveys: (2 · säde + 1)² laattaa jokaisen näytteen ympäriltä. */
+export const REITIN_ESILATAUKSEN_SADE = 1;
+
+/**
+ * Reitin käytävän laattaosoitteet. `pisteet` on kaaren näytteitä
+ * ({ lat, lon }), `tasot` laattatasot ja `sade` käytävän puolileveys
+ * laattoina. Päällekkäiset karsitaan, joten sama laatta on listassa
+ * kerran.
+ */
+export function reitinLaatat({
+  pisteet = [], tasot = REITIN_ESILATAUSTASOT, sade = REITIN_ESILATAUKSEN_SADE,
+  maxTaso = PALLO_LAATTATASO_MAX,
+} = {}) {
+  const osoitteet = [];
+  const nahty = new Set();
+  for (const taso of tasot) {
+    const z = Math.min(taso, maxTaso);
+    if (!(z >= 0)) continue;
+    const n = 2 ** z;
+    for (const p of pisteet) {
+      if (!Number.isFinite(p?.lat) || !Number.isFinite(p?.lon)) continue;
+      const keski = laatanKoordinaatit(p.lat, p.lon, z);
+      for (let dy = -sade; dy <= sade; dy += 1) {
+        for (let dx = -sade; dx <= sade; dx += 1) {
+          const y = keski.y + dy;
+          if (y < 0 || y >= n) continue;
+          const x = ((keski.x + dx) % n + n) % n;
+          const avain = `${z}/${x}/${y}`;
+          if (nahty.has(avain)) continue;
+          nahty.add(avain);
+          osoitteet.push(pallonLaatta(x, y, z));
+        }
+      }
+    }
+  }
+  return osoitteet;
+}
+
 let esilatausLahetetty = false;
+/** Lista palvelutyöntekijälle; null, jos työntekijää ei ole. */
+async function lahetaEsilataus(osoitteet, nav, raportoi) {
+  const tyontekijat = nav?.serviceWorker;
+  if (!tyontekijat || !osoitteet.length) return null;
+  const rekisteri = await Promise.resolve(tyontekijat.ready).catch(() => null);
+  const kohde = tyontekijat.controller ?? rekisteri?.active ?? null;
+  if (!kohde) return null;
+  const viesti = { tyyppi: 'esilataa-pallolaatat', kansio: PALLO_LAATTAKANSIO, osoitteet };
+  if (raportoi && globalThis.MessageChannel) {
+    const kanava = new MessageChannel();
+    kanava.port1.onmessage = (e) => raportoi(e.data ?? null);
+    kohde.postMessage(viesti, [kanava.port2]);
+  } else {
+    kohde.postMessage(viesti);
+  }
+  return osoitteet.length;
+}
+
 /**
  * Lähettää esilatauslistan palvelutyöntekijälle. Palauttaa lähetettyjen
  * osoitteiden määrän, tai null jos työntekijää ei ole (yhden tiedoston
@@ -236,22 +315,31 @@ let esilatausLahetetty = false;
  * kesto }), kun se saapuu; savukkeet mittaavat sillä esilatauksen.
  */
 export async function esilataaPallolaatat(kohta = {}, nav = globalThis.navigator, raportoi = null) {
-  const tyontekijat = nav?.serviceWorker;
-  if (esilatausLahetetty || !tyontekijat) return null;
+  if (esilatausLahetetty || !nav?.serviceWorker) return null;
   esilatausLahetetty = true;
-  const rekisteri = await Promise.resolve(tyontekijat.ready).catch(() => null);
-  const kohde = tyontekijat.controller ?? rekisteri?.active ?? null;
-  if (!kohde) { esilatausLahetetty = false; return null; }
   const osoitteet = esilatauksenLaatat({ ...kohta, maxTaso: laattatasoMax(laattaluettelo) });
-  const viesti = { tyyppi: 'esilataa-pallolaatat', kansio: PALLO_LAATTAKANSIO, osoitteet };
-  if (raportoi && globalThis.MessageChannel) {
-    const kanava = new MessageChannel();
-    kanava.port1.onmessage = (e) => raportoi(e.data ?? null);
-    kohde.postMessage(viesti, [kanava.port2]);
-  } else {
-    kohde.postMessage(viesti);
-  }
-  return osoitteet.length;
+  const n = await lahetaEsilataus(osoitteet, nav, raportoi);
+  if (n === null) esilatausLahetetty = false;
+  return n;
+}
+
+/**
+ * Avauslennon reitti koriin: käytävä kaaren ympärillä (REITIN_
+ * ESILATAUSTASOT) ja kohdekaupungin ympäristö laskeutumisen tasolla.
+ * Tämä EI ole kerran per istunto -lähetys kuten esilataaPallolaatat:
+ * reitti tiedetään vasta lennon alkaessa, ja työntekijä ohittaa jo
+ * korissa olevat osoitteet muutenkin.
+ */
+export async function esilataaLentoreitti(pisteet = [], nav = globalThis.navigator, raportoi = null) {
+  if (!nav?.serviceWorker || !pisteet.length) return null;
+  const maxTaso = laattatasoMax(laattaluettelo);
+  const osoitteet = [
+    ...reitinLaatat({ pisteet, maxTaso }),
+    ...reitinLaatat({
+      pisteet: pisteet.slice(-1), tasot: [REITIN_LASKEUTUMISTASO], maxTaso,
+    }),
+  ];
+  return lahetaEsilataus(osoitteet, nav, raportoi);
 }
 
 /**

@@ -173,8 +173,16 @@ test('aloituksen rajaus on mitattu: Eurooppa täyttää ruudun', () => {
  * hitaast täydessä terävyydessä"*.
  */
 test('valinnassa pallo pyörii hitaasti itään seinäkellosta', () => {
-  assert.ok(ALOITUKSEN_PYORINTA_AST_S >= 0.3 && ALOITUKSEN_PYORINTA_AST_S <= 0.5,
-    'omistajan mitta: hidas pyörintä on 0,3–0,5 astetta sekunnissa');
+  /*
+   * HITAAMPI SITTENKIN (omistaja 6.9.2026 aamupäivä: *"Kohdemaan
+   * valinnassa hitaampi pallon liike"*). 0,4 → 0,16 °/s: valinnan
+   * rajauksessa (3 400–4 600 km ruudun leveydellä) se on 1,8 px/s
+   * puhelimella ja 4,8 px/s työpöydällä, eli pallo on elossa muttei
+   * liikkeessä. Haarukka on omistajan mitta — jos luku menee sen yli,
+   * liike on mitattava uudelleen selaimessa.
+   */
+  assert.ok(ALOITUKSEN_PYORINTA_AST_S >= 0.12 && ALOITUKSEN_PYORINTA_AST_S <= 0.22,
+    'omistajan mitta: hidas pyörintä on 0,12–0,22 astetta sekunnissa');
   assert.ok(ALOITUKSEN_PYSAYTYS_MS >= 400 && ALOITUKSEN_PYSAYTYS_MS <= 1500);
   const silmukka = lauta.match(/ {2}const aloitaAloituksenPyorinta = \(\) => \{[\s\S]*?\n {2}\};/)[0];
   // Reduced motion ja väärä vaihe eivät pyöritä.
@@ -187,8 +195,8 @@ test('valinnassa pallo pyörii hitaasti itään seinäkellosta', () => {
   // Kolme pysäytintä: ele (pehmeä), toinen kamera-ajo (heti), vaihe.
   assert.match(silmukka, /if \(kamera\.kameraAjossa\(\)\) \{ seisAloituksenPyorinta\(\); return; \}/);
   assert.match(silmukka, /\{ paataAloitusvalinta\(\); return; \}/);
-  assert.match(lauta, /kerroin = 1 - pyorinnanPehmennys\(t\);/,
-    'pysähdys on ease-out samalla pehmennyksellä kuin avauslennon pyörintä');
+  assert.match(lauta, /kerroin = 1 - liukuPehmennys\(t\);/,
+    'pysähdys on ease-out samalla pehmennyksellä kuin avauslennon zoomi');
   assert.match(lauta, /kotelo\.addEventListener\('pointerdown', hidastaAloituksenPyorinta\);/);
   assert.match(lauta, /kotelo\.addEventListener\('wheel', hidastaAloituksenPyorinta, \{ passive: true, capture: true \}\);/);
   // Ajo käynnistää pyörinnän vasta perillä (ei kesken kamera-ajon).
