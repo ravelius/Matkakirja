@@ -237,7 +237,11 @@ etsi_chromium () {
   local p f
   for p in "$HOME/Library/Caches/ms-playwright" "$HOME/.cache/ms-playwright" /opt/pw-browsers; do
     [ -d "$p" ] || continue
-    f="$(find "$p" -maxdepth 6 -type f \( -name 'Chromium' -o -name 'chrome' \) 2>/dev/null | head -1)"
+    # Playwright 1.5x asentaa macOS:lle "Chrome for Testing" -sovelluksen
+    # (chromium-NNNN/chrome-mac-arm64/Google Chrome for Testing.app/…) ja
+    # erikseen kevyen chrome-headless-shellin; vanhemmat Chromium.app.
+    f="$(find "$p" -maxdepth 6 -type f \( -name 'Chromium' -o -name 'Google Chrome for Testing' -o -name 'chrome-headless-shell' -o -name 'chrome' \) 2>/dev/null | grep -v -i 'headless' | head -1)"
+    [ -n "$f" ] || f="$(find "$p" -maxdepth 6 -type f -name 'chrome-headless-shell' 2>/dev/null | head -1)"
     if [ -n "$f" ]; then echo "$f"; return 0; fi
   done
   if [ -x /opt/pw-browsers/chromium ]; then echo /opt/pw-browsers/chromium; fi
