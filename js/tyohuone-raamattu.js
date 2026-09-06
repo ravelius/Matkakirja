@@ -3437,7 +3437,13 @@ export const RAAMATTU = {
           + 'karttaa panoroi. nyt kartta ei tokkinyt enaa"; kuvakaappaus: '
           + 'Ateenan kultainen kaupunkipiste venyy kapseliksi liikkeen '
           + 'suuntaan): kaupunkipisteen on pysyttava pyoreana myos '
-          + 'panoroitaessa - korjataan.',
+          + 'panoroitaessa - korjataan. LISAKSI (omistaja 6.9.2026 ilta, '
+          + 'sanatarkasti: "aarteen piste syttyy liian lahelle ateenaa, ei '
+          + 'pysty painamaan" ja "kaupunkien nimet nakyvat popup sivujen '
+          + 'paalla"): pallolla aarrepiste ei saa jaada nappulan alle vaan sen '
+          + 'on oltava napautettavissa kuten tasokartalla, ja pallon '
+          + 'kaupunkinimet (CSS2D-kerros) jaavat aina korttien, popupien ja '
+          + 'kuplien alle.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
