@@ -40,6 +40,20 @@
  * koreografia — repliikki, kertoja, kabiiniääni, ohitus, saapumiskortti
  * — pysyy yhdessä paikassa kummallekin laudalle. Ohitus tarvitsee
  * kuljettajalta yhden lisän: `paata()` alla.
+ *
+ * AVAUSLENNOLLA KAMERA ON KOHTAUKSEN (omistaja 6.9.2026 ilta: *"kartta
+ * saisi lentää yhden tasaisen reitin ja zoom muutoksen alusta
+ * loppuun"*). Kaksi valinnaista lisää, jotka koskevat VAIN avauslentoa
+ * ja jättävät tavallisen lennon (FLIGHT_MS, MANNER_LENTO_MS)
+ * ennalleen:
+ *
+ *   omaKamera   kuljettaja EI aja kameraa kaupunkiparin laatikkoon;
+ *               kohtaus ajaa oman kaarensa (avaus.js
+ *               ajaKamerasuunnitelma)
+ *   hyppaa(…, { vaihe })  koneen vaihekäyrä tulee kohtaukselta, jotta
+ *               kone on täsmälleen kameran katsomassa pisteessä
+ *               (avaus.js lennonVaihe); ilman sitä käyrä on siirron oma
+ *               hypynVaihe kuten ennen
  */
 
 import { pixelOf, pointAlong } from '../rules.js';
@@ -146,14 +160,14 @@ function yhteinenReitti(board, a, b) {
  * Kuljettaja pallolle. `lauta` antaa pallon, kotelon, kameran, asteet ja
  * merkkien päivityksen (js/pallolauta/lauta.js).
  */
-export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
+export function luoNappulanKuljettaja({ ui, lauta, player, lento = false, omaKamera = false }) {
   const { pallo, kotelo, kamera } = lauta;
   const { board } = ui.game;
   let el = null;
   let hahmo = null;
   let varjo = null;
   let ankkuri = null; // pos, jossa nappula lepää (ei hypyssä)
-  let hyppy = null; // { a, b, reitti, ta, tb, alku, kesto, huippu, valmis }
+  let hyppy = null; // { a, b, reitti, ta, tb, vaihe, alku, kesto, huippu, valmis }
   let kehys = 0;
   let koneenKaari = null; // lennon kaari: koneen asento myös paikallaan
   let koneenOsuus = 0; // koneen osuus kaarella (0 = lähtö, 1 = perillä)
@@ -253,7 +267,15 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
     let piste = null;
     if (hyppy) {
       const t = Math.min(1, (hetki - hyppy.alku) / hyppy.kesto);
-      const { e } = hypynVaihe(t);
+      /*
+       * VAIHE VOI TULLA KOHTAUKSELTA (avauslento, js/pallolauta/avaus.js
+       * lennonVaihe). Avauksessa kamera ajaa oman suunnitelmansa, ja
+       * koneen on oltava täsmälleen siinä pisteessä, jota kamera
+       * katsoo — muuten kuvassa on suhteellista liikettä, jota kamera
+       * näyttää jahtaavan (omistaja 6.9.2026 ilta). Ilman vaihetta
+       * lento kulkee siirron omalla käyrällä kuten ennenkin.
+       */
+      const e = hyppy.vaihe ? hyppy.vaihe(t) : hypynVaihe(t).e;
       // Kone kaaren korkeudella: sama paraabeli kuin kaaren muodolla —
       // ja sama kaava kuin avauslennon paksulla viivalla, joka piirtyy
       // koneen perään (reitit.js lentokaarenKohta).
@@ -333,7 +355,7 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
       if (lento && kaari) { koneenKaari = kaari; koneenOsuus = 0; }
       if (lento) piirraKone(performance.now()); else piirraNappula(performance.now());
     },
-    hyppaa: (a, b, kesto) => new Promise((valmis) => {
+    hyppaa: (a, b, kesto, { vaihe = null } = {}) => new Promise((valmis) => {
       if (!el || ui.reducedMotion) {
         ankkuri = b;
         valmis();
@@ -346,16 +368,24 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
         const kohde = b.type === 'city' ? board.cityById.get(b.city) : null;
         const kaari = lahto && kohde ? lauta.reitit.lentokaari(lahto, kohde) : null;
         if (!kaari) { ankkuri = b; valmis(); return; }
-        // Kamera rajaukseen, johon lähtö ja kohde mahtuvat; ajoa ei
-        // odoteta — kone lähtee kartan jo liikkuessa, ja paikka lasketaan
-        // joka kehys, joten kone pysyy kaarellaan kameran liikkuessa.
-        void kamera.ajaKamera(
-          { bbox: lennonRajaus(board, a, b), marginaali: LENNON_RAJAUKSEN_MARGINAALI },
-          { kesto: LENNON_KAMERA_MS },
-        );
+        /*
+         * Kamera rajaukseen, johon lähtö ja kohde mahtuvat; ajoa ei
+         * odoteta — kone lähtee kartan jo liikkuessa, ja paikka lasketaan
+         * joka kehys, joten kone pysyy kaarellaan kameran liikkuessa.
+         *
+         * `omaKamera`: avauslennon kohtaus ajaa kameran itse yhtenä
+         * kaarena (js/pallolauta/avaus.js ajaKamerasuunnitelma), ja tämä
+         * ajo vain nykäisisi kuvaa ennen kuin se pysäytetään.
+         */
+        if (!omaKamera) {
+          void kamera.ajaKamera(
+            { bbox: lennonRajaus(board, a, b), marginaali: LENNON_RAJAUKSEN_MARGINAALI },
+            { kesto: LENNON_KAMERA_MS },
+          );
+        }
         koneenKaari = kaari;
         koneenOsuus = 0;
-        hyppy = { a, b, kaari, alku: performance.now(), kesto, valmis };
+        hyppy = { a, b, kaari, vaihe, alku: performance.now(), kesto, valmis };
         return;
       }
       const reitti = yhteinenReitti(board, a, b);
@@ -401,6 +431,12 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false }) {
       if (perilla) lauta.merkitseNappulanPaikka(perilla);
       // …paitsi lennolla: laskeutumisen jälkeen kamera sukeltaa
       // kohteeseen saapumisnäkymään, kuten kartalla maanvaihdon ajo.
+      /*
+       * Avauslennossa (`omaKamera`) suunnitelma on jo päättynyt
+       * täsmälleen saapumisnäkymään, joten tämä ajo on nolla-ajo:
+       * kamera.js tunnistaa liikkumattoman ajon ja kirjoittaa näkymän
+       * kerralla (ks. js/pallolauta/avaus.js, LOPPUKORKEUS).
+       */
       if (lento) void kamera.kotiin({ kesto: PALLOKAMERAN_AJO_MS });
     },
   };

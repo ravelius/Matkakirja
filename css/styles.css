@@ -6182,7 +6182,8 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 
 /*
  * Isoisän valokuva oli työpöydällä v1509–v1510; omistaja jätti sen pois
- * etusivulta 3.9.2026. Kortti elää lentokohtauksessa (.lento-valokuva).
+ * etusivulta 3.9.2026, ja avauslennon kortti poistui 6.9.2026 illalla.
+ * Rajaus elää yhä aikajanan kuvissa (js/aikajana.js).
  *
  * Kortti irti valkoisesta taustasta (omistaja 3.9.2026): clip-path
  * leikkaa JPG:n valkoiset reunat pois ja skaala täyttää elementin
@@ -6196,7 +6197,6 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
     calc(var(--rx0, 0) * 100%)
   );
 }
-.lento-valokuva .isoisa-rajattu { transform: scale(var(--rskaala, 1)); }
 
 /*
  * ETUSIVUN ESIRENDERÖITY PALLO (js/etusivupallo.js, pallolauta vaihe 5a).
@@ -10919,110 +10919,18 @@ body.katselu #newgame-btn { display: none; }
 }
 
 /*
- * ISOISÄN VALOKUVA LENNOLLA (omistaja 3.9.2026: *"pelaaja löytäisi siis
- * matkakirjan välistä yhden kuvan lentokoneessa istuessaan isoisästään"*).
- * Kulunut cabinet card nousee kartan päälle vasemmasta alakulmasta
- * repliikin alettua, pehmeästi jarruttaen (Raamatun animaatiosääntö), ja
- * napautus suurentaa sen. EI suodatinta (ks. tests/lento-ajoitus).
+ * ISOISÄN VALOKUVA LENNOLLA — POISTETTU (omistaja 6.9.2026 ilta,
+ * sanatarkasti: *"ens. lentokohtauksesta, ota isoisän kuva pois"*).
  *
- * ── KORTTI HÄIPYY JOKA REUNASTAAN, JA ON ISOMPI (omistaja 5.9.2026
- * klo 00.35, sanatarkasti: *"isoisän kuva pitää häivyttää joka
- * reunastaan läpinäkyväksi ja tehdä vähän isommaksi"*) ─────────────
+ * Tässä olivat kortin (.lento-valokuva) tyylit: koko, kallistus,
+ * pehmeä nousu näkyviin, neljän reunan maskihäivytys ja kuvateksti.
+ * Kortti nousi kartan päälle repliikin alettua, ja sen takia kamera
+ * piti konetta keskilinjan yläpuolella. Kytkentä on poistettu myös
+ * js/ui.js:stä (aloituslentoSisalla), joten säännöille ei ole enää
+ * yhtään elementtiä.
  *
- * KOKO on yksi muuttuja (--lento-valokuvan-leveys) ja se kasvoi noin
- * neljänneksen: työpöydällä min(30vw, 280px) → min(37.5vw, 350px),
- * puhelimessa min(44vw, 200px) → min(55vw, 250px).
- *
- * HÄIVYTYS ON MASKI EIKÄ SUODATIN (iOS-sääntö, ks.
- * tests/lento-ajoitus): kaksi lineaarista liukua — vaaka ja pysty —
- * yhdistetään leikkaukseksi, jolloin jokainen neljästä reunasta päätyy
- * läpinäkyvään eikä yhtäkään kovaa reunaa jää. Sama kaava kuin
- * aarrekuvan reunanpehmennyksellä (.reveal-overlay.paikallis
- * .reveal-aarrekuva), joka on todettu toimivaksi myös WebKitissä
- * (-webkit-mask-composite: source-in).
- *
- * VARJO ON POISSA. box-shadow piirtyy elementin LAATIKON mukaan eikä
- * maskin, joten se olisi jättänyt juuri sen terävän suorakaiteen, jonka
- * häivytyksen on määrä poistaa.
- *
- * KUVATEKSTI JÄÄ HÄIVYTYKSEN ULKOPUOLELLE: se on kortin oma <span>
- * kuvan alla, ei kuvan sisällä, joten "Isoisä, Bombay, 1873" pysyy
- * täysin luettavana. Sen negatiivinen ylämarginaali nostaa lapun
- * kiinni kuvan viimeiseen näkyvään riviin — muuten häivytetty alalaita
- * jättäisi lapun leijumaan irralleen.
+ * .isoisa-rajattu (yllä) jää: sitä käyttää aikajana (js/aikajana.js).
  */
-.lento-valokuva {
-  --lento-valokuvan-leveys: min(37.5vw, 350px);
-  --lento-valokuvan-haivytys-x: 15%;
-  --lento-valokuvan-haivytys-y: 18%;
-  position: absolute;
-  left: clamp(0.8rem, 4vw, 3rem);
-  /* Repliikin yläpuolella: teksti asuu alalaidassa (.flight-alaosa). */
-  bottom: clamp(10rem, 30vh, 16rem);
-  width: var(--lento-valokuvan-leveys);
-  padding: 0;
-  border: 0;
-  background: none;
-  cursor: zoom-in;
-  opacity: 0;
-  transform: translateY(28px) rotate(-7deg);
-  transition: opacity 900ms var(--liike-pehmea), transform 900ms var(--liike-pehmea);
-  z-index: 6;
-}
-.lento-valokuva.nakyy { opacity: 1; transform: translateY(0) rotate(-7deg); }
-.lento-valokuva img {
-  display: block;
-  width: 100%;
-  height: auto;
-  -webkit-mask-image:
-    linear-gradient(to right, transparent 0, #000 var(--lento-valokuvan-haivytys-x),
-      #000 calc(100% - var(--lento-valokuvan-haivytys-x)), transparent 100%),
-    linear-gradient(to bottom, transparent 0, #000 var(--lento-valokuvan-haivytys-y),
-      #000 calc(100% - var(--lento-valokuvan-haivytys-y)), transparent 100%);
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to right, transparent 0, #000 var(--lento-valokuvan-haivytys-x),
-      #000 calc(100% - var(--lento-valokuvan-haivytys-x)), transparent 100%),
-    linear-gradient(to bottom, transparent 0, #000 var(--lento-valokuvan-haivytys-y),
-      #000 calc(100% - var(--lento-valokuvan-haivytys-y)), transparent 100%);
-  mask-composite: intersect;
-}
-/*
- * Kuvateksti kortin alla, samassa kallistuksessa kuin kuva (omistaja
- * 3.9.2026: *"lisää lentokohtaukseen pienellä kuvateksti kuvan kanssa
- * vinosti: 'Isoisä, paikkakunta, 1873'"*). Kirjoituskoneen kirjasin,
- * kuin albumin kulmaan lyöty lappu.
- */
-.lento-valokuva .lento-valokuvateksti {
-  display: block;
-  /* Lappu kiinni kuvan viimeiseen näkyvään riviin (ks. häivytys yllä). */
-  margin-top: -0.6rem;
-  font-family: var(--font-type);
-  font-size: clamp(0.62rem, 1.4vw, 0.8rem);
-  letter-spacing: 0.08em;
-  color: #3a2a16;
-  /* Kolme halokerrosta: lappu lukeutuu myös häivytetyn kuvan alalaidan
-     ja terävän laattakartan päällä (harso ei enää auta, 5.9.2026). */
-  text-shadow: 0 0 6px rgba(255, 246, 224, 0.95), 0 0 3px rgba(255, 246, 224, 0.95),
-    0 0 1px rgba(255, 246, 224, 0.95);
-  text-align: center;
-}
-.lento-valokuva:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-@media (max-width: 599px) {
-  /*
-   * Puhelimessa kortti on kapeammalla ruudulla suhteessa isompi, joten
-   * se nostetaan hitusen ylemmäs pois repliikin päältä — ja koska sen
-   * reunat ovat nyt läpinäkyviä, se ei enää katkaise lentoreittiä
-   * yläkulmallaan (v1601: kortti sivusi viivaa).
-   */
-  .lento-valokuva {
-    --lento-valokuvan-leveys: min(55vw, 250px);
-    bottom: clamp(12rem, 34vh, 18rem);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .lento-valokuva { transition: none; }
-}
 
 /* Reitin lähtömerkki Lontoon kohdalla: sama punainen kuin viivalla.
    Britannia on käymättömänä maana sumun alla, joten ilman merkkiä
@@ -12234,6 +12142,81 @@ button.lukija-nappi:focus-visible,
    kaiutin tasataan sisällön oikeaan reunaan kuten hampurilainen
    vasempaan (--arkki-reunus). */
 .dialog #arrival-city > button.lukija-nappi { right: var(--arkki-reunus, 0.95rem); }
+
+/*
+ * ── KORTTIEN KAIUTIN (js/lukija.js lisaaLukijanappi, 6.9.2026) ────
+ *
+ * Omistaja 6.9.2026 illalla: *"Kaikissa missä on tekstiä, saisi olla
+ * striimi lukijan symboli"*. Kaiutin asuu kortin OTSIKKORIVISSÄ
+ * (aihesymbolin rivi) samalla tavalla kuin lehdessä otsikkorivin
+ * oikeassa reunassa — ei erillisenä nappina kortin kulmassa, jossa se
+ * osuisi sulkuruksin päälle.
+ *
+ * Rivi on kortin ainoa asemointiankkuri, joten myös luentasoittimen
+ * paneeli laskeutuu sen ALLE eikä kortin yläkulmaan.
+ */
+.lukija-otsikkorivi { position: relative; padding-right: 2.4rem; }
+
+.lukija-otsikkorivi > button.lukija-nappi,
+.dialog .lukija-otsikkorivi > button.lukija-nappi {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 2.1rem;
+  height: 2.1rem;
+  min-width: 2.1rem;
+  min-height: 2.1rem;
+  place-items: center end;
+  background: none;
+  box-shadow: none;
+  color: #46331f;
+}
+
+.lukija-otsikkorivi > button.lukija-nappi:hover:not(:disabled),
+.lukija-otsikkorivi > button.lukija-nappi:focus-visible {
+  background: none;
+  color: rgba(70, 51, 31, 1);
+}
+
+.lukija-otsikkorivi > button.lukija-nappi.lukee {
+  background: none;
+  box-shadow: none;
+  color: #a8741a;
+}
+
+.lukija-otsikkorivi > button.lukija-nappi .viiva-ikoni svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.lukija-otsikkorivi > .lukija-paneeli {
+  top: calc(100% + 0.3rem);
+  right: 0;
+}
+
+/*
+ * MYKISTETTYNÄ VINOVIIVA (Raamattu, LUENTA): sama merkki kuin
+ * matkakirjakortin kaiuttimella (.fact-kuuntele.mykistetty), jotta
+ * "ei ääntä" näyttää kaikkialla samalta. Nappi jää näkyviin — piilossa
+ * se väittäisi, ettei kortilla ole luentaa lainkaan.
+ */
+button.lukija-nappi.mykistetty {
+  color: rgba(70, 51, 31, 0.5);
+  overflow: visible;
+}
+
+button.lukija-nappi.mykistetty::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1.4rem;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  pointer-events: none;
+}
 
 /* Luenta käynnissä: kaiutin tummuu ja saa hennon kehän. Ääni ei näy
  * ruudulla, joten napin on kerrottava tilansa itse. */

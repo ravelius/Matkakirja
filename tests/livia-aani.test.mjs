@@ -2,9 +2,10 @@
  * PULUN ÄÄNI — repliikit, tiedostonimet, kaiku ja manifesti.
  *
  * Omistajan tilaus 6.9.2026: Livian valmiiksi kirjoitetut repliikit
- * generoidaan puheeksi (tools/generoi-pulu.mjs), peli soittaa ne
- * kuplan ilmestyessä (js/liviapuhe.js) ja saapumisrepliikit saavat
- * kaikuversion.
+ * generoidaan puheeksi (tools/generoi-pulu.mjs) ja peli soittaa ne
+ * kuplan ilmestyessä (js/liviapuhe.js). Saapumisrepliikeille on
+ * generoitu kaikuversio, mutta PELI EI SOITA SITÄ: omistaja 6.9.2026
+ * ilta *"ota kaiku pois pulun tekstin alusta"*.
  *
  * Nämä testit vartioivat sitä KYTKENTÄÄ, joka ei näy mistään
  * virheilmoituksesta: jos pelin ja työkalun tiedostonimet eriytyvät,
@@ -18,7 +19,7 @@ import { readFileSync } from 'node:fs';
 import { LIVIAN_AVAUS, MANNERIVIHJE, livianPaljastus } from '../js/livia.js';
 import {
   LIVIAN_AANIJUURI, LIVIAN_AANILAHTEET, LIVIAN_AANITETTY_PALJASTUS,
-  LIVIAN_KAUPUNKILAHTEET, LIVIAN_SAAPUMISREPLIIKIT, livianAaniNimi,
+  LIVIAN_KAIKU, LIVIAN_KAUPUNKILAHTEET, LIVIAN_SAAPUMISREPLIIKIT, livianAaniNimi,
   livianAaniOsoite, livianAanitykset, livianKaupunkiAanitetty, LIVIAN_KAUPUNKIAANET_KAYTOSSA,
   livianKaupunkiIndeksi, livianSaapumisrepliikki, livianSoitettava,
 } from '../js/liviapuhe.js';
@@ -57,6 +58,8 @@ test('jokaisella repliikillä on oma tiedostonimi', () => {
 test('nimi johdetaan lähteestä ja indeksistä samalla funktiolla', () => {
   assert.equal(livianAaniNimi('avaus', 0), 'livia-avaus-1.mp3');
   assert.equal(livianAaniNimi('paljastus', 1), 'livia-paljastus-2.mp3');
+  // Kaikunimi on yhä olemassa työkalua ja ämpärin tiedostoja varten,
+  // vaikka peli ei sitä enää valitse (LIVIAN_KAIKU).
   assert.equal(livianAaniNimi('avaus', 0, { kaiku: true }), 'livia-avaus-1-kaiku.mp3');
   // Tuntematon lähde tai kelvoton indeksi ei saa keksiä nimeä.
   assert.equal(livianAaniNimi('kupla', 0), null);
@@ -123,28 +126,39 @@ test('äänen osoite osoittaa ämpärin pulukansioon', () => {
   assert.equal(livianAaniOsoite('kupla', 0), null);
 });
 
-/* ---------- kaiku ---------- */
+/* ---------- kaiku (poistettu pelistä 6.9.2026 ilta) ---------- */
 
-test('kaikuversio on vain saapumisrepliikeillä', () => {
+test('työkalu tuntee saapumisrepliikit, mutta peli soittaa aina kuivan', () => {
   const rivit = repliikit();
   const kaiulliset = rivit.filter((rivi) => rivi.kaikuNimi).map((rivi) => rivi.avain);
   // Livia saapuu kahdesti: avauksessa hän lennähtää mukaan ja
   // paljastuksessa hän tulee sähkeen kanssa.
   // Kaupunkirepliikeistä vain Sofian paluu: se on ainoa, jossa Livia
   // oikeasti palaa lennolta ja aloittaa puheensa jo ilmasta.
+  // Työkalu generoi näille kaikuversion; peli ei sitä hae.
   assert.deepEqual(kaiulliset, ['avaus-1', 'paljastus-1', 'sofia-7']);
+  /*
+   * KAIKU POIS PULUN ALUSTA (omistaja 6.9.2026 ilta: "ota kaiku pois
+   * pulun tekstin alusta"). Tämä on se väite, joka pitää päätöksen
+   * voimassa: yksikään repliikki ei soi kaikuversiona, ei edes
+   * saapumisrepliikki.
+   */
+  assert.equal(LIVIAN_KAIKU, false);
   for (const rivi of rivit) {
     assert.equal(rivi.saapuu, Boolean(rivi.kaikuNimi),
       `${rivi.avain}: saapuu-lippu ja kaikuversio ovat eri mieltä`);
-    // Peli soittaa saapumisrepliikistä kaikuversion, muista kuivan.
-    assert.equal(livianSoitettava(rivi.lahde, rivi.indeksi),
-      rivi.kaikuNimi ?? rivi.nimi);
+    assert.equal(livianSoitettava(rivi.lahde, rivi.indeksi), rivi.nimi,
+      `${rivi.avain}: peli soittaa muuta kuin kuivan version`);
+    assert.doesNotMatch(livianSoitettava(rivi.lahde, rivi.indeksi), /-kaiku\.mp3$/);
   }
   assert.equal(livianSaapumisrepliikki('avaus', 1), false);
   assert.equal(livianSaapumisrepliikki('mannerivihje', 0), false);
   assert.equal(livianSaapumisrepliikki('sofia', 0), false);
   assert.equal(livianSaapumisrepliikki('ateena', 0), false);
   assert.deepEqual(LIVIAN_SAAPUMISREPLIIKIT, { avaus: [0], paljastus: [0], sofia: [6] });
+  // Osoite seuraa samaa valintaa: kuiva tiedosto ämpärissä.
+  assert.equal(livianAaniOsoite('avaus', 0), `${LIVIAN_AANIJUURI}livia-avaus-1.mp3`);
+  assert.equal(livianAaniOsoite('sofia', 6), `${LIVIAN_AANIJUURI}livia-sofia-7.mp3`);
 });
 
 /* ---------- tagit ---------- */

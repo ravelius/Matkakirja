@@ -65,6 +65,7 @@ import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import { sfx } from './sound.js';
+import { lisaaLukijanappi } from './lukija.js';
 
 /*
  * KAKSI TYYLITIEDOSTOA, MOLEMMAT LAINASSA — sama järjestely ja sama
@@ -191,6 +192,8 @@ export function avaaHetki(ui, iso, hetki) {
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
   document.body.appendChild(kerros);
+  // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
+  lisaaLukijanappi(kortti, { otsikko: 'Kuuntele hetki' });
 
   const kiinni = () => {
     sfx.play('paper');

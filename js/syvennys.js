@@ -59,6 +59,7 @@ import { piirraNostonKuva } from './fokusnosto.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { sfx } from './sound.js';
+import { lisaaLukijanappi } from './lukija.js';
 
 /*
  * KAKSI TYYLITIEDOSTOA, MOLEMMAT LAINASSA: kortin kuori ja sisus ovat
@@ -194,6 +195,8 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
   document.body.appendChild(kerros);
+  // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
+  lisaaLukijanappi(kortti, { otsikko: 'Kuuntele tarina' });
 
   const kiinni = () => {
     sfx.play('paper');

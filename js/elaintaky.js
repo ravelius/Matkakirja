@@ -95,6 +95,7 @@ import { elaintakyKarttarivit, elaintakyNimioKylki } from './elaintaky-rivit.js'
 import { ELAINTAKYT, elaintakynKuvat } from './packs/elaintakyt.js';
 import { assetOsoite } from './media.js';
 import { sfx } from './sound.js';
+import { lisaaLukijanappi } from './lukija.js';
 
 /*
  * LÖYTÖPALKKIO 20 PUNTAA (omistaja: *"pienen puntapalkkion"*).
@@ -637,6 +638,8 @@ export function avaaElaintaky(ui, iso) {
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
   document.body.appendChild(kerros);
+  // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
+  lisaaLukijanappi(kortti, { otsikko: 'Kuuntele eläinkortti' });
 
   const kiinni = () => {
     sfx.play('paper');

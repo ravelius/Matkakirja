@@ -19,11 +19,14 @@
  * isoisän uusia kuvia, niin käytä niitä ennemmin"*). Vaihto tapahtuu
  * yhden taulun rivin sisällä, ks. `lento` alempana.
  *
- * Kytkentä: ensimmäisessä lentokohtauksessa (js/ui.js
- * aloituslentoSisalla) `lento`-kuva "löytyy matkakirjan välistä" kartan
- * päälle kuvatekstinsä kanssa; napautus suurentaa. Aloitussivun
- * Kanton-kuva oli mukana v1509–v1510, omistaja jätti sen pois 3.9.2026
- * ("jätetään isoisän kuva pois etusivulta"); tiedot säilyvät tässä.
+ * TAULU ON VARASTO, EI KYTKENTÄ (6.9.2026 ilta). Avauslento näytti
+ * `lento`-kuvan kartan päällä (js/ui.js aloituslentoSisalla), kunnes
+ * omistaja poisti sen: *"ens. lentokohtauksesta, ota isoisän kuva
+ * pois"*. Rivit jäävät tähän mittauksineen — sama tapa kuin
+ * aloitussivun Kanton-kuvalla, joka oli mukana v1509–v1510 ja jonka
+ * omistaja jätti pois 3.9.2026 (*"jätetään isoisän kuva pois
+ * etusivulta"*). Etusivun pallon reittikuvat ovat oma taulunsa
+ * (js/packs/etusivun-isoisakuvat.js) eivätkä liity tähän.
  */
 import { AANI_JUURI } from './media.js';
 
@@ -68,12 +71,13 @@ export const ISOISAN_VALOKUVAT = {
    * Sama ilta klo 23.15: *"kohta pitäisi tulla isoisän uusia kuvia,
    * niin käytä niitä ennemmin."*
    *
-   * Lento lukee VAIN tätä avainta (js/ui.js aloituslentoSisalla), joten
-   * kuvaputken seuraava kuva vaihdetaan tähän yhdellä rivillä —
-   * `osoite`, `kuvateksti`, `selite` ja `lahde`, ei muita
-   * koodimuutoksia. `rajaus` on VALINNAINEN eikä tässä kuvassa ole
-   * sitä: vaalea vinjetti ja paperin reunat ovat jo kuvassa, eikä
-   * pahvireunusta ole leikattavaksi.
+   * KUVAA EI ENÄÄ NÄYTETÄ LENNOLLA (omistaja 6.9.2026 ilta: *"ens.
+   * lentokohtauksesta, ota isoisän kuva pois"*). Rivi jää tänne
+   * valintoineen ja mittauksineen: jos kortti joskus palaa, se palaa
+   * tähän avaimeen eikä valintaa tarvitse tehdä uudestaan. `rajaus` on
+   * VALINNAINEN eikä tässä kuvassa ole sitä: vaalea vinjetti ja
+   * paperin reunat ovat jo kuvassa, eikä pahvireunusta ole
+   * leikattavaksi.
    *
    * ── MAHDOLLISIMMAN VAALEA KUVA (omistaja 6.9.2026 aamu) ──────────
    *
@@ -126,9 +130,6 @@ export const ISOISAN_VALOKUVAT = {
 export function valokuvanKuvateksti(kuva) {
   return String(kuva?.kuvateksti ?? '').trim();
 }
-
-/** Lennolla valokuva nousee esiin vasta, kun repliikki on ehtinyt alkaa. */
-export const LENNON_VALOKUVAN_VIIVE_MS = 2600;
 
 /**
  * Rajaus CSS-muuttujina (css .isoisa-rajattu): clip-path leikkaa kortin

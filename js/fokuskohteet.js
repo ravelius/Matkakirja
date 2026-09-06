@@ -113,6 +113,7 @@ import {
   html, jaaKappaleiksi, linssiEstaa, nielaiseSulkevaNapautus, polloNimilappu,
 } from './ui-apurit.js';
 import { piirraReaktiot } from './reaktiot.js';
+import { lisaaLukijanappi } from './lukija.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { FOKUSKOHTEET_AFG } from './packs/fokuskohteet-afg.js';
 import { FOKUSKOHTEET_BGR } from './packs/fokuskohteet-bgr.js';
@@ -5619,6 +5620,11 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
   piirraKohteenSisus(ui, sisalto, kohde);
   popup.appendChild(sisalto);
   koti.appendChild(popup);
+  // Kaiutin kortin otsikkoriville (omistaja 6.9.2026: "Kaikissa missä
+  // on tekstiä, saisi olla striimi lukijan symboli") — js/lukija.js
+  // lisaaLukijanappi. Kutsu on sisällön JÄLKEEN: teksitön kortti (pelkkä
+  // kuva tai kierrosnappi) piilottaa kaiuttimen itse.
+  lisaaLukijanappi(popup, { otsikko: `Kuuntele: ${kohde.nimi}` });
 
   merkki?.classList.add('auki');
   /*

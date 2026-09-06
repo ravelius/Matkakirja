@@ -58,6 +58,7 @@ import { asetaNostonKuva, piirraNostonKuva } from './fokusnosto.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import { avaaKohdeSuurennos, suljeKohdeSuurennos } from './fokuskohteet.js';
 import { sfx } from './sound.js';
+import { lisaaLukijanappi } from './lukija.js';
 
 /** Ilmiökuvan leveys sivulla (sama kuin skandaalin kortilla). */
 const TIEDELIITE_KUVA_PX = 800;
@@ -621,6 +622,9 @@ export function avaaTiedeliite(ui, tapahtumat, i, {
     kortti.setAttribute('aria-label', `Tiedeliite: ${t.otsikko}`);
     const uusi = html('div', 'tiedeliite-sivu');
     piirraTiedeliitteenSivu(ui, uusi, t, lahdeVara);
+    // Kaiutin sivun nimiöriville (js/lukija.js lisaaLukijanappi):
+    // jokainen keksijäsivu on oma juttunsa ja saa oman luentansa.
+    lisaaLukijanappi(uusi, { otsikko: 'Kuuntele tiedeliite' });
     const vanha = sivu;
     sivu = uusi;
     const { edellinen, seuraava } = tiedeliitteenNaapurit(tapahtumat, j);

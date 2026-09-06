@@ -127,6 +127,7 @@ import {
 } from './pollo.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 import { sfx } from './sound.js';
+import { lisaaLukijanappi } from './lukija.js';
 import { taytaLahderivi } from './tekijakortti.js';
 
 /*
@@ -1006,6 +1007,18 @@ function piirraKehys(ui, city, data, tila) {
   koti.appendChild(kortti);
   ui.fokusvirtaKortti = kortti;
   piirraSisalto(ui, city, data, tila, sisalto);
+  /*
+   * KAIUTIN VAIN KOHTAAMISKORTILLE (omistaja 6.9.2026: "Kaikissa missä
+   * on tekstiä, saisi olla striimi lukijan symboli"). Kohtaaminen on
+   * kortin ainoa oma leipäteksti — oppitunti ja sähketehtävä ovat PULUN
+   * repliikkejä, eikä pulun puhetta lueta (Raamattu, PULUN AANI). Kortin
+   * lukija lukee siis vain hahmon nimen ja kohtaamisen kuvauksen;
+   * varmistuslause, varoitus ja napit jäävät ulos (js/lukija.js
+   * LUKIJAN_OHITETTAVAT).
+   */
+  if (!data.sahketehtava && (tila.vaihe === 'kohtaaminen' || tila.vaihe === 'valmis')) {
+    lisaaLukijanappi(kortti, { otsikko: 'Kuuntele kohtaaminen' });
+  }
 }
 
 /**
@@ -2993,8 +3006,10 @@ function aloitaSahkelento(ui, city, data) {
     if (!ui.game.tokens?.has(city.id)) return;
     const tehtava = data.sahketehtava ?? {};
     const nakyi = naytaPolloKupla(ui, tehtava.paluu ?? 'Perillä oltiin. Pöllö kertoi paikan.');
-    // Ainoa kaupunkirepliikki, joka saa kaikuversion: Livia palaa
-    // lennolta ja aloittaa jo ilmasta (js/liviapuhe.js).
+    // Ainoa kaupunkirepliikki, jossa Livia palaa lennolta ja aloittaa
+    // jo ilmasta. Ääni on silti kuiva: kaiku otettiin pois pulun
+    // alusta omistajan päätöksellä 6.9.2026 ilta (js/liviapuhe.js
+    // LIVIAN_KAIKU).
     if (nakyi) soitaLivianKaupunkiAani(ui, city.id, 'paluu');
     clearTimeout(ui.sahkeAarreAjastin);
     ui.sahkeAarreAjastin = setTimeout(() => paljastaSahkeAarre(ui, city, data), SAHKE_PALUU_MS);
