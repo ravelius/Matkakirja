@@ -1712,9 +1712,25 @@ export const OMAT_ARTIKKELIT = {
       + 'monsuunin ja musiikin tahtia.',
   },
   Namibia: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // NAM) nojaa tähän introon yksin, sama malli kuin Egyptillä.
     intro: 'Namibia on avaruuden ja hiljaisuuden maa: maailman '
-      + 'vanhin aavikko, tähtitaivas ja vain kolme miljoonaa '
-      + 'asukasta Suomen puolentoista kokoisella alueella.',
+      + 'vanhin aavikko, tähtitaivas ja kolme miljoonaa asukasta '
+      + 'alueella, joka on runsaat kaksi kertaa Suomen kokoinen. '
+      + 'Väljemmin asuttu maa on vain Mongolia. Nimi tulee Namibin '
+      + 'aavikosta, ja khoikielinen sana tarkoittaa avaraa paikkaa: '
+      + 'aavikko seuraa koko rannikkoa, ja sisämaan ylängöt jatkuvat '
+      + 'idässä Kalahariin. Sadetta tulee vähemmän kuin missään muualla '
+      + 'Saharan eteläpuolisessa Afrikassa, joten rannikon elämä juo '
+      + 'kylmän Benguelanvirran nostattamaa sumua ja sisämaa '
+      + 'pohjavettä. Sanit, damarat, namat, hererot ja ovambot '
+      + 'asuttivat maata kauan ennen siirtomaakautta; Saksan ja '
+      + 'Etelä-Afrikan hallinnon jälkeen maa itsenäistyi 21. '
+      + 'maaliskuuta 1990 yhtenä Afrikan viimeisistä. Elanto tulee '
+      + 'karjasta, kaivoksista ja matkailusta — uraanissa Namibia on '
+      + 'ollut maailman neljänneksi suurin tuottaja — ja '
+      + 'luonnonsuojelu kirjattiin perustuslakiin, mikä on maailmassa '
+      + 'harvinaista.',
     artikkeli: 'Namibia on yksi maailman harvimmin asutuista maista: '
       + 'Namibin aavikko seuraa koko rannikkoa, ja sisämaan ylängöt '
       + 'jatkuvat Kalahariin. Nimi tulee aavikosta — namaksi '

@@ -601,4 +601,32 @@ export const UUTISLAHTEET = {
     kieli: 'si',
     syote: 'https://sinhala.adaderana.lk/rss.xml',
   },
+  /*
+   * NAMIBIA (NAM). New Era on windhoekilainen englanninkielinen
+   * päivälehti. Testattu 6.9.2026: syötteessä kymmenen juttua, ja
+   * artikkelisivun ensimmäisestä <article>-lohkosta jäsentyy
+   * seitsemästä kahdeksaantoista yli 60 merkin kappaletta sekä
+   * og:image (kokeiltu kahdella eri jutulla).
+   *
+   * MIKSI ENGLANTI: englanti on Namibian ainoa virallinen kieli,
+   * vaikka vain 2,3 prosenttia puhuu sitä kotikielenään (oshiwambo
+   * 49,7 %). Yhtään päivälehteä ei ilmesty oshiwamboksi.
+   *
+   * Testattu ja hylätty: The Namibian (maan luetuin lehti,
+   * namibian.com.na/feed/ — syöte aukeaa ja og:image löytyy, mutta
+   * sivun ENSIMMÄINEN <article> on sivupalkin juttukortti, josta ei
+   * jäsenny yhtään yli 60 merkin kappaletta, ja juuri sen js/uutiset.js
+   * poimii); Namibian Sun ja Republikein (sama julkaisujärjestelmä:
+   * /rss palauttaa HTML-sivun); Allgemeine Zeitung (saksankielinen,
+   * sama järjestelmä — /rss on hakemistosivu, jonka takana on vain
+   * aihekohtaisia /rssFeed/-nnn-osoitteita); Windhoek Observer
+   * (observer24.com.na/feed/ — syöte ja leipäteksti jäsentyvät, mutta
+   * testatulla artikkelisivulla ei ollut og:imagea); Informanté
+   * (yhteys katkeaa); The Brief (403); NBC (ei RSS-osoitetta).
+   */
+  NAM: {
+    nimi: 'New Era',
+    kieli: 'en',
+    syote: 'https://neweralive.na/feed/',
+  },
 };

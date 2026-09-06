@@ -38,6 +38,17 @@
 > ovat js/packs/uutislahteet.js:n LKA-kommentissa. Julkaisu
 > Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Namibia):** sallittuihin lisättiin
+> neweralive.na (maalehti NAM, testattu 6.9.2026: syötteessä kymmenen
+> juttua, ja artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy
+> 7–18 yli 60 merkin kappaletta sekä `og:image`). Osoitteessa EI ole
+> www-etuliitettä, eikä worker seuraa uudelleenohjauksia. Maan luetuin
+> lehti The Namibian hylättiin: sen artikkelisivun ensimmäinen
+> `<article>` on sivupalkin juttukortti ilman leipätekstiä — sama vika
+> kuin Nigerian Premium Timesissä. Muut hylätyt on lueteltu
+> js/packs/uutislahteet.js:n NAM-kommentissa. Julkaisu Git-
+> integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

@@ -98,6 +98,9 @@ const SALLITUT = [
   // rss.xml, koska adaderana.lk ja rss.php vastaavat 301:llä eikä
   // worker seuraa uudelleenohjauksia.
   'https://sinhala.adaderana.lk/',
+  // Namibian uutislähde (maalehti NAM, 6.9.2026): syöte ja
+  // artikkelisivut samalla isäntänimellä, ilman www-etuliitettä.
+  'https://neweralive.na/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

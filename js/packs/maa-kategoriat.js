@@ -41919,4 +41919,445 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * NAMIBIA (NAM) — Afrikan laudan maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-namibia.md; kaikki
+   * luvut tarkistettu en-Wikipediasta 6.9.2026.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA: Namibiassa ei ole kaupunkilehteä
+   * (laudan ainoa kaupunki namib on ilman KULTTUURI_KATEGORIAT-lohkoa),
+   * mutta kartta on täynnä. maastokohteet-nam.js kattaa Brandbergin,
+   * Atlantin, Oranjejoen, Spitzkoppen kalliomaalauksineen, Kolmanskopin
+   * timanttilöytöineen, Fish Riverin kanjonin, Etoshan, Sossusvlein,
+   * Swakopmundin saksalaisine rakennuksineen, Hoban meteoriitin ja Cape
+   * Crossin; skandaalit.js Waterbergin 1904 ja Caprivin kaistaleen 1890;
+   * elaintakyt.js erämaanorsun. Maalehti EI toista niitä — siksi
+   * historiassa ei ole timantteja, saksalaista siirtomaakautta eikä
+   * Caprivia, luonnossa ei norsuja eikä dyynejä, ja kalliotaide on
+   * Twyfelfonteinissa ja Apollo 11 -luolassa, ei Brandbergissä.
+   *
+   * HERKÄT AIHEET: vuosien 1904–08 kansanmurha on skandaalikortin aihe,
+   * eikä sitä kerrota täällä uudelleen; hererojen puvusta on jätetty
+   * pois sotasaaliiksi saatujen univormujen tarina samasta syystä.
+   * Itsenäisyysnosto kertoo nimen valinnan ja YK:n päätökset, ei
+   * vapaussodan sotatoimia, ja nykypolitiikka on kokonaan pois.
+   *
+   * KUVAT: 14 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin. KUUSI
+   * NOSTOA JÄI KUVATTOMAKSI: Martti Rautanen (Commonsin kaksi kuvaa
+   * ovat 420x300 ja 626x1040 eli liian pieniä, ja toisen tekijä on
+   * "Unknown author"), kapana (ainoa iso kuva on lisenssiltään
+   * "Copyrighted free use", pienin kelvollinen 960 px), NamibRandin
+   * tähtitaivas, Apollo 11 -luolan laatat, John Muafangejo ja
+   * hererojen puku. HYLÄTYT: "Namib, Welwitschia mirabilis.jpg"
+   * (etualalla tunnistettava henkilö), "Welwitschia mirabilis
+   * 19990731 160000(2).jpg" (kuvakortin kehys ja tekstipalkki),
+   * "Herero ladies.jpg" (kaksi tunnistettavaa kasvoa, eivätkä he ole
+   * jutun aihe), "Pounding Millet Grains.jpg" (tunnistettava lapsi),
+   * "Nara bush.jpg" (taustalla turistiryhmä ja maastoautot).
+   *
+   * TUNNISTETTAVAT KASVOT: mukana on vain yksi ihmiskuva, Jonker
+   * Afrikanerin muotokuva vuoden 1861 kirjasta — hän ON jutun aihe,
+   * sama linja kuin Kenian Wangari Maathai -kuvassa.
+   */
+  NAM: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Namibian historia on kirjoitettu monella kielellä: pääkaupungin '
+          + 'perusti oorlamien kapteeni, luterilaisuuden toi Ambomaalle suomalainen '
+          + 'lähetti, maan nimi valittiin YK:n yleiskokouksessa ja ainoa syväsatama '
+          + 'saatiin takaisin vasta neljä vuotta itsenäistymisen jälkeen.',
+      nostot: [
+        {
+          otsikko: 'Tuulinen kulma, jonka kapteeni valitsi',
+          aika: '1840–1885',
+          tiedosto: 'Lake Ngami-p232.png',
+          teksti: 'Oorlamien kapteeni Jonker Afrikaner lähti 1823 isänsä asuinsijoilta '
+              + 'kolmen veljensä ja noin kolmensadan seuraajan kanssa pohjoiseen, ja '
+              + 'pian hänen neuvostonsa hallitsi maan keskiosaa. '
+              + 'Noin 1840 hän pysähtyi kuuman lähteen äärelle ja '
+              + 'rakensi kivikirkon, johon mahtui viisisataa ihmistä. Nimen Windhoek '
+              + 'hän antoi itse: se on joko afrikaansin tuulinen kulma tai muisto '
+              + 'Winterhoekin vuorista, joiden juurella suku oli asunut. Vanhin '
+              + 'tunnettu maininta nimestä on hänen kirjeessään 12. elokuuta 1844. '
+              + 'Sotien jälkeen paikka autioitui: 1885 sinne saapunut '
+              + 'kasvitieteilijä löysi enää sakaaleja ja nälkiintyneitä helmikanoja '
+              + 'hoitamattomien hedelmäpuiden seasta.',
+          selite: 'Jonker Afrikaner Charles John Anderssonin kirjan Lake Ngami '
+            + 'kuvituksessa vuodelta 1861 — kapteenin kuolinvuodelta.',
+          lahde: 'Charles John Andersson, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Kori päälaella',
+          aika: '1868–1926',
+          teksti: 'Viisi Suomen Lähetysseuran lähettiä lähti Suomesta 24. '
+              + 'kesäkuuta 1868. Joukossa oli inkeriläisen köyhän perheen poika Martti '
+              + 'Rautanen, joka saapui Walvis Bayn kautta Hereromaahan huhtikuussa '
+              + '1869 ja Ambomaalle heinäkuussa 1870. Ensimmäinen asema nousi '
+              + 'Omandongoon ja seuraavana vuonna Olukondaan, jossa Rautanen '
+              + 'työskenteli yli viisikymmentä vuotta: hän julkaisi 1892 virsikirjan '
+              + 'ndongaksi ja alkoi kääntää Raamattua oshindongaksi. Päässään hän piti '
+              + 'kalottia, joka näytti paikallisten silmään pieneltä korilta, '
+              + 'okambale — lempinimi Nakambale päätyi hänen hautakiveensä. Ensimmäiset '
+              + 'paikalliset pastorit aloittivat työnsä 1925.',
+          selite: 'Rautasen etnografinen kokoelma on Suomen kansallismuseossa ja '
+            + 'päiväkirjat Turun yliopistossa; sveitsiläinen kasvitieteilijä Hans '
+            + 'Schinz nimesi hänen mukaansa kasvisuvun Neorautanenia.',
+        },
+        {
+          otsikko: 'Satama, joka jäi naapurille',
+          aika: '1878–1994',
+          tiedosto: 'NA WalvisBay Aeroview.JPG',
+          teksti: 'Walvis Bay on rannikon ainoa luonnon syväsatama, ja siksi siitä '
+              + 'kiisteltiin sata vuotta. Bartolomeu Dias ankkuroi lahteen 8. '
+              + 'joulukuuta 1487, mutta Portugali ei vaatinut sitä itselleen; '
+              + 'Britannia otti sataman ja Pingviinisaaret Kapkolonialle 1878 ja 1884, '
+              + 'kun ympäröivä maa jäi Saksalle. Vuonna 1910 satamasta tuli '
+              + 'Etelä-Afrikan unionin eksklaavi, jonka pinta-alaksi sovittiin 1 124 '
+              + 'neliökilometriä. Namibia itsenäistyi 1990, mutta Walvis Bay pysyi yhä '
+              + 'Etelä-Afrikan hallussa. Maat perustivat 1992 yhteisen '
+              + 'väliaikaishallinnon, ja 1. maaliskuuta 1994 satama luovutettiin '
+              + 'Namibialle.',
+          selite: 'Walvis Bayn satama ja sen takana aavikko. Lahtea suojaa Pelican '
+            + 'Pointin hiekkasärkkä, ja siksi juuri tähän mahtuvat isot laivat.',
+          lahde: 'Digr, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Nimi, joka annettiin YK:ssa',
+          aika: '1968–1990',
+          tiedosto: 'Windhuk Independence Memorial Museum Blick auf den Tintenpalast 1.jpg',
+          teksti: 'Maalla ei ollut omaa nimeä ennen kuin sille annettiin sellainen '
+              + 'kokoushuoneessa. YK:n yleiskokous päätti 12. kesäkuuta 1968, että '
+              + 'Lounais-Afrikka on tästedes Namibia; nimen oli ehdottanut Mburumba '
+              + 'Kerina, joka esitti alun perin muotoa Namibin tasavalta. Sana namib '
+              + 'on khoikieltä ja tarkoittaa avaraa paikkaa. Turvallisuusneuvosto '
+              + 'julisti elokuussa 1969 Etelä-Afrikan hallinnan laittomaksi. '
+              + 'Perustuslaki hyväksyttiin helmikuussa 1990, ja 21. maaliskuuta 1990 '
+              + 'Sam Nujoma vannoi presidentin valan tilaisuudessa, jossa olivat läsnä '
+              + 'kuukautta aiemmin vankilasta vapautunut Nelson Mandela ja 147 maan '
+              + 'edustajat.',
+          selite: 'Näkymä Itsenäisyysmuseon suunnasta Windhoekin ylle. Puiden keskellä '
+            + 'erottuu Tintenpalast eli mustepalatsi, maan parlamenttitalo.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Namibin aavikolla sataa vähemmän kuin viisi senttiä vuodessa, joten '
+          + 'elämä on opetellut juomaan sumua — ja jotkin sen ilmiöistä ovat yhä '
+          + 'selittämättä.',
+      nostot: [
+        {
+          otsikko: 'Kasvi, joka ei voi kuolla',
+          tiedosto: 'Welwitschia mirabilis - plante mâle.jpg',
+          teksti: 'Welwitschia kasvattaa koko elämänsä aikana vain kaksi pysyvää '
+              + 'lehteä, ja ne kasvavat lakkaamatta: pituutta voi kertyä neljä metriä, '
+              + 'ja tuuli repii ne vähitellen nauhoiksi, joten kasvi näyttää '
+              + 'kymmenlehtiseltä. Puinen kanta levenee metriin, suurin mitattu yksilö '
+              + 'on 2,77 metriä leveä, ja vanhimmat ovat ehkä kahdentuhannen vuoden '
+              + 'ikäisiä. Friedrich Welwitsch löysi kasvin Angolasta 1859 ja kirjoitti '
+              + 'voineensa vain polvistua sen ääreen peläten, että kosketus '
+              + 'paljastaisi sen mielikuvituksen tuotteeksi. Afrikaansiksi kasvi on '
+              + 'tweeblaarkanniedood, hereroksi onyanga eli aavikon sipuli.',
+          selite: 'Kaksi lehteä repeytyneinä nauhoiksi puisen kannan ympärille. Kasvi '
+            + 'on Namibian vaakunassa, jossa se kasvaa dyynin päällä.',
+          lahde: 'Lidine Mia, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Ympyrät, joita ei ole saatu selitettyä',
+          tiedosto: 'Aerial view of Fairy circles, Namibia (2017).jpg',
+          teksti: 'Aavikon reunan heinikossa on paljaita ympyröitä, joiden reunalla '
+              + 'heinä kasvaa muuta rehevämpänä. Halkaisija on kahdesta '
+              + 'kahteentoista metriin, ja yksi kehä elää kolmestakymmenestä '
+              + 'kuuteenkymmeneen vuotta ennen kuin heinä valtaa sen. Vyöhyke kulkee '
+              + 'noin 160 kilometrin päässä rannikosta ja jatkuu Angolasta 2 400 '
+              + 'kilometriä etelään. Selityksiä on kaksi: hiekkatermiitti, joka syö '
+              + 'kasvit ja saa '
+              + 'veden imeytymään, tai kasvillisuuden itseorganisoituminen. Vuoden '
+              + '2022 kaivauksissa kehien heinät olivat kuolleet janoon eivätkä '
+              + 'termiittien syömisen takia, ja 2025 katsaus asettui '
+              + 'itseorganisoitumisen taakse.',
+          selite: 'Keijukehiä ilmasta kuvattuna. Himbojen perinteessä ne ovat esi-isä '
+            + 'Mukurun työtä tai jumalien jalanjälkiä; karjanhoitaja rakentaa niiden '
+            + 'ympärille toisinaan puuaidan vasikoiden yösuojaksi.',
+          lahde: 'Olga Ernst & Hp.Baumeler, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kuoriainen, joka seisoo päällään',
+          aika: '1976–',
+          tiedosto: 'Onymacris unguicularis in Namib Desert.jpg',
+          teksti: 'Namibin läntisimpään osaan sataa vuodessa nollasta kahteentoista '
+              + 'millimetriä, joten vesi tulee mereltä sumuna. Onymacris '
+              + 'unguicularis kaivautuu sumuöinä esiin hiekasta, kiipeää dyynin '
+              + 'suojanpuoleiselle rinteelle ja asettuu noin 23 asteen kulmaan pää '
+              + 'alaspäin tuulta vasten. Vesi tiivistyy sen sileisiin peitinsiipiin ja '
+              + 'valuu pisaroina suuhun; hyvänä yönä kuoriainen juo 34 prosenttia '
+              + 'omasta painostaan. Tapa havaittiin 1976, ja se tunnetaan vain '
+              + 'kahdelta lajilta. Ruumiinlämpö voi laskea yhteen asteeseen, mutta '
+              + 'veren glyseroli ja trehaloosi estävät jäätymisen.',
+          selite: 'Onymacris unguicularis Namibin hiekalla. Päivällä laji kaivautuu '
+            + 'piiloon ja tulee esiin vasta, kun sumu peittää dyynit.',
+          lahde: 'Schnobby, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Gepardi asuu farmarin mailla',
+          aika: '1990–',
+          tiedosto: 'Namibia Otjiwarongo Cheetah Conservation Fund Cheetah Walking.jpg',
+          teksti: 'Namibian gepardikanta on maailman suurin ja terveimpiä, ja '
+              + 'suurin osa eläimistä asuu kansallispuistojen ulkopuolella '
+              + 'karjafarmien mailla. Siksi suojelu tarkoittaa työtä farmarien kanssa. '
+              + 'Biologi Laurie Marker perusti 1990 Cheetah Conservation Fundin, jonka '
+              + 'tutkimus- ja opetuskeskus on 44 kilometriä Otjiwarongosta itään. '
+              + 'Ohjelman ydin on laumanvartijakoira: karjan mukana kasvanut koira '
+              + 'ajaa gepardin pois, jolloin farmarin ei tarvitse tappaa sitä. '
+              + 'Pensoittuneesta maasta raivatusta puusta puristetaan polttobriketti '
+              + 'nimeltä Bushblok. Marker sai 2010 Tyler-palkinnon.',
+          selite: 'Gepardi Cheetah Conservation Fundin alueella Otjiwarongon '
+            + 'lähellä. Keskus tutkii 15 000 neliökilometrin maatalousaluetta.',
+          lahde: 'Alexander Klink, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Montako pysyvää lehteä welwitschialle kasvaa koko sen elämän aikana?',
+        vaihtoehdot: [
+          'Yksi',
+          'Kaksi',
+          'Kuusi',
+          'Uusi joka vuosi',
+        ],
+        oikea: 1,
+        fakta: 'Lehdet eivät vaihdu vaan kasvavat lakkaamatta, repeytyvät nauhoiksi ja '
+            + 'saavat kasvin näyttämään paljon monilehtisemmältä.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Namibian ruoka jakautuu kahtia: pohjoisessa syödään sitä, mitä '
+          + 'tulvavesi kasvattaa, aavikolla sitä, mitä pohjavesi ja sumu antavat.',
+      nostot: [
+        {
+          otsikko: 'Liha, jonka hinnasta neuvotellaan',
+          teksti: 'Kapana on avotulella grillattua naudanlihaa, ja se myydään torilla '
+              + 'kypsyessään. Grilli on hitsattu metallilevy, jonka alla palaa puu; '
+              + 'kapana-miehet — mukana on naisiakin — paloittelevat raa\'an lihan '
+              + 'viidakkoveitsellä ja kääntelevät sitä viidestä kymmeneen minuuttia. '
+              + 'Palan päälle tulee salsa, jossa on sipulia, tomaattia, '
+              + 'valkoviinietikkaa, öljyä ja oma maustesekoitus, ja kylkeen vetkoek, '
+              + 'paistettu taikinapallo. Myyjiä on samassa paikassa monta, joten '
+              + 'hinnasta sovitaan paikan päällä ja jokainen huutaa oman lihansa '
+              + 'olevan paras. Windhoekin Katutura on kapanan tunnetuin kortteli.',
+          selite: 'Grillin ympärys on ennen kaikkea kohtaamispaikka: moni tulee '
+            + 'syömään ja juttelemaan sinne, vaikka osaisi paistaa lihansa kotonakin.',
+        },
+        {
+          otsikko: 'Hirssi, joka myös juodaan',
+          tiedosto: 'Mahangu field in the Northern part of Namibia.jpg',
+          teksti: 'Pohjoisen pellot elävät efundjasta, Angolan sateiden tuomasta '
+              + 'vuotuisesta tulvasta, joka täyttää oshanat eli matalat tulvatasangot. '
+              + 'Niissä kasvaa mahangu, helmihirssi, joka kestää kuivuutta, kuumuutta, '
+              + 'laihaa maata ja suolaa ja tulee toimeen siellä, missä maissi ja vehnä '
+              + 'eivät kasvaisi. Jyvät ovat hirssien suurimmat, kolmesta neljään '
+              + 'millimetriin. Jauhosta, leseistä ja '
+              + 'mallastetusta durrajauhosta sekoitetaan haaleaan veteen seos, joka saa '
+              + 'käydä muutaman tunnin: näin syntyy oshikundu, ruskea ja sakea '
+              + 'kotijuoma. Se on juotava kuuden tunnin kuluessa, se tarjotaan usein '
+              + 'puuron kanssa, ja resepti on kulkenut suullisesti sukupolvelta '
+              + 'toiselle.',
+          selite: 'Mahangu-pelto ja sateenkaari Pohjois-Namibiassa. Peltoja '
+            + 'reunustavat oksa-aidat, ja sadon koko riippuu sateen ajoituksesta.',
+          lahde: 'Shikoha Tautiko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Sieni, joka kasvaa termiittien katolla',
+          tiedosto: 'Omayova - Termitenpilz.jpg',
+          teksti: 'Kevään ensimmäisten yli kahdentoista millimetrin sateiden jälkeen '
+              + 'termiittikekojen juurelle nousee sieniä, joita hererot kutsuvat '
+              + 'nimellä ejova, monikossa omajowa. Ne kasvavat vain Macrotermes '
+              + 'michaelseni -termiitin keoilla, jotka ovat kolmesta neljään metriä '
+              + 'korkeita ja joiden huippu kallistuu pohjoiseen. Esiin tullessaan '
+              + 'sieni on nyrkin kokoinen ja laajenee sitten 15–28 senttiin, joskus '
+              + 'neljäänkymmeneen — lähteen sanoin ison paistinpannun kokoiseksi. '
+              + 'Maanalainen valejuuri voi olla 90 senttiä pitkä. Yhden keon ympärillä '
+              + 'on tavallisesti 5–10 sientä, parhaimmillaan viisikymmentä.',
+          selite: 'Omajowa-sieniä. Pääsato kerätään tammi–maaliskuussa, ja Namibiassa '
+            + 'sientä pidetään kasvun ja vaurauden vertauskuvana.',
+          lahde: 'Chtrede, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Meloni, jonka juuri yltää pohjaveteen',
+          tiedosto: 'Naras auf Düne Sossusvlei.JPG',
+          teksti: '!Nara on Namibin oma meloni, eikä siinä ole yhtään lehteä: '
+              + 'yhteyttäminen tapahtuu vihreissä varsissa ja parisenttisissä '
+              + 'piikeissä. Paalujuuri painuu jopa viidenkymmenen metrin syvyyteen '
+              + 'pohjaveteen, ja kasvin ympärille kertyy hiekkakumpu, joka voi olla '
+              + 'neljä metriä korkea. Hedelmä painaa kilon ja kätkee makean '
+              + 'oranssinkeltaisen massan; isoja siemeniä kutsutaan voipähkinöiksi. '
+              + 'Kuisebjoen varren topnaareille !nara on pääasiallinen perusruoka. '
+              + 'Siemenet leviävät mustaselkäsakaalin mukana jopa kuudentoista '
+              + 'kilometrin päähän, ja ulosteesta itävät paremmin kuin hedelmästä '
+              + 'poimitut.',
+          selite: '!Nara-pensas hiekkadyynin harjalla. Kumpu on kasvin oma työtä: '
+            + 'varret pysäyttävät lentävän hiekan ja kasvavat sen mukana ylöspäin.',
+          lahde: 'Harald Süpfle, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Kuiva ilma, pimeä taivas ja vanha kallioperä tekevät Namibiasta '
+          + 'havaintopaikan: täällä mitataan gammasäteitä, kalastetaan sumua ja '
+          + 'luetaan maailman vanhimpia kuoria.',
+      nostot: [
+        {
+          otsikko: 'Viisi peiliä ylängöllä',
+          aika: '2002–',
+          tiedosto: 'HESS II gamma ray experiment five telescope array.jpg',
+          teksti: 'Khomasin ylängöllä Gamsbergin kupeessa seisoo viisi peiliä, jotka '
+              + 'eivät katso tähtiä vaan hetken välähdystä. Kun gammasäde törmää '
+              + 'ilmakehään, syntyy hiukkasryöppy, jonka heikko valo kuvataan maasta; '
+              + 'kun useampi teleskooppi näkee saman ryöpyn eri kulmasta, säteen '
+              + 'suunta voidaan laskea. Laitteisto sai nimekseen H.E.S.S. Victor '
+              + 'Hessin mukaan, joka osoitti kosmisen säteilyn tulevan avaruudesta. '
+              + 'Neljä lähes 12-metristä peiliä muodostaa 120 metrin neliön, ja '
+              + 'keskelle nousi 2012 lisäksi 28-metrinen. Havainnot alkoivat 2002, ja '
+              + '2016 ryhmä raportoi Linnunradan keskustan mustan aukon kiihdyttävän '
+              + 'protoneja.',
+          selite: 'Kaikki viisi teleskooppia yhdessä kuvassa. Keskimmäinen, '
+            + '28-metrinen peili lisättiin neljän vanhemman joukkoon vuonna 2012.',
+          lahde: 'Klepser / DESY, H.E.S.S.-yhteistyö, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Verkko, joka kalastaa sumua',
+          aika: '1962–',
+          tiedosto: 'Gobabeb aerial view.jpg',
+          teksti: 'Itävaltalainen hyönteistieteilijä Charles Koch perusti 1962 '
+              + 'tutkimusaseman keskelle aavikkoa, 120 kilometriä Walvis Baysta '
+              + 'kaakkoon. Gobabeb seisoo kolmen ympäristön saumassa: pohjoisessa ovat '
+              + 'soratasangot, etelässä dyynimeri ja välissä kausiluonteinen '
+              + 'Kuisebjoki. Sadetta tulee keskimäärin 23,8 millimetriä vuodessa, '
+              + 'mutta sumupäiviä on 94, ja asemalla on opeteltu ottamaan vesi '
+              + 'sumusta: yksi verkko kerää sumuisena yönä jopa 3,3 litraa neliöltä. '
+              + 'Aseman 370 aurinkopaneelia kattavat yli 90 prosenttia sähköstä, '
+              + 'tiilet poltetaan joen lietteestä ja eloperäinen jäte menee '
+              + 'topnaarien vuohille.',
+          selite: 'Gobabebin asema ilmasta: takana dyynimeri, edessä soratasanko ja '
+            + 'välissä kausiluonteisen Kuisebjoen puurivi.',
+          lahde: 'Philipp Gerth, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Suojelualue, jonka aarre on pimeys',
+          aika: '1984–2012',
+          teksti: 'Namibiassa on yli kolmesataa aurinkoista päivää vuodessa, ja sama '
+              + 'kuiva ja pilvetön ilma tekee öistä poikkeuksellisen pimeitä, kun '
+              + 'lähin kaupunki on kaukana. J. A. Brückner perusti 1984 aavikon '
+              + 'laidalle yksityisen '
+              + 'suojelualueen, joka on kasvanut yli 2 150 neliökilometriin ja jolla '
+              + 'on sadan kilometrin yhteinen raja Namib-Naukluftin kansallispuiston '
+              + 'kanssa; alue elää vähän kuormittavan matkailun maksuilla. Vuonna 2012 '
+              + 'International Dark-Sky Association julisti NamibRandin '
+              + 'kansainväliseksi pimeän taivaan suojelualueeksi — suojelukohde ei ole '
+              + 'eläin eikä kasvi vaan yötaivas.',
+          selite: 'Suojelualue on yksityinen ja rahoittaa itsensä matkailun maksuilla '
+            + '— pimeys on sen tuote siinä missä maisemakin.',
+        },
+        {
+          otsikko: 'Vanhin kuori — ja reikä siinä',
+          tiedosto: 'Cloudina fossils (Neoproterozoic; Corumba, Brazil) (45453979394).jpg',
+          teksti: 'Keski- ja Etelä-Namibian Naman ryhmän kivistä löydettiin 1972 pieniä '
+              + 'kalkkikartioita, jotka ovat sisäkkäin kuin suppilot. Ne saivat nimen '
+              + 'Cloudina geologi Preston Cloudin mukaan, ja ne elivät noin 550 '
+              + 'miljoonaa vuotta sitten, ediacaran kauden lopulla. Itse eläintä ei '
+              + 'tunneta, vain sen putki: läpimitta 0,3–6,5 millimetriä, pituus '
+              + 'korkeintaan 15 senttiä. Cloudina on varhaisimpia eläimiä, joilla oli '
+              + 'kovettunut tukiranka, ja yleisin selitys kuorelle on suoja '
+              + 'saalistajilta: Kiinan löydöissä osassa kuoria on porausreikiä, joiden '
+              + 'koko seuraa kuoren kokoa. Kilpavarustelu alkoi ennen kambrikautta.',
+          selite: 'Cloudina-fossiileja kalkkikivessä. Nämä yksilöt ovat Brasiliasta, '
+            + 'mutta suku löydettiin ensimmäisenä Namibian Naman ryhmästä.',
+          lahde: 'James St. John, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Namibian kuvataide alkaa kolmenkymmenentuhannen vuoden takaa ja '
+          + 'jatkuu kalliokaiverruksiin, linoleikkauksiin ja pukuihin, joissa jokainen '
+          + 'yksityiskohta kertoo jostakin.',
+      nostot: [
+        {
+          otsikko: 'Seitsemän laattaa, jotka nimettiin kuulennon mukaan',
+          aika: '1969',
+          teksti: 'Saksalainen arkeologi Wolfgang Erich Wendt tutki kalliosuojaa '
+              + 'Etelä-Namibiassa, noin 250 kilometriä Keetmanshoopista lounaaseen. '
+              + 'Nimen hän antoi paikalle juuri Kuusta palanneen Apollo 11:n mukaan; '
+              + 'nama-nimi alueelle oli ollut Goachanas. Suojasta löytyi '
+              + 'seitsemän kvartsiittilaattaa, joiden maalaukset ajoitettiin '
+              + 'radiohiilellä noin 30 000 vuoden ikäisiksi — ne ovat Afrikan '
+              + 'vanhimpia esittäviä kuvia. Tunnetuimmassa yhdistyvät ihmisen '
+              + 'takajalat, antiloopin vartalo ja sarvet sekä kissapedon pää. Laatat '
+              + 'ovat nyt Windhoekissa Namibian kansallismuseossa.',
+          selite: 'Kalliosuojan kerrostumat kertyivät noin 71 000–29 000 vuotta '
+            + 'sitten. Vuonna 2007 palanneet tutkijat totesivat paikan pahoin '
+            + 'vandalisoiduksi ja pyysivät sille suojelua.',
+        },
+        {
+          otsikko: 'Leijonamies ja kuusi varvasta',
+          tiedosto: 'Rock Engravings (37713171646).jpg',
+          teksti: 'Twyfelfonteinin laaksossa on asuttu kuusituhatta vuotta, ja sen '
+              + 'hiekkakivilaatoissa on yli viisituhatta kuvaa. Kaiverrukset tehtiin '
+              + 'hakkaamalla tumman aavikkolakan läpi vaaleampaan kiveen. Kuuluisin on '
+              + 'Leijonamies, jonka pitkä taittunut häntä päättyy kuusivarpaiseen '
+              + 'tassunjälkeen — ihmisen ja eläimen sekoitus, jollaisia shamanistiset '
+              + 'kuvat usein ovat. Joukossa on merileijona, pingviinejä ja ehkä '
+              + 'flamingoja, vaikka rannikolle on yli sata kilometriä. Paimentolaiset '
+              + 'lisäsivät myöhemmin geometriset kuviot, jauhinkuopat, lautapelien '
+              + 'ruudukot ja gongikivet, jotka soivat lyötäessä.',
+          selite: 'Kaiverruksia Twyfelfonteinissa. Alueesta tuli 2007 Namibian '
+            + 'ensimmäinen maailmanperintökohde; sitä ennen se oli ollut '
+            + 'vartioimatta vuoteen 1986 asti.',
+          lahde: 'Sonse, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Linoleikkaaja, joka kirjoitti kuviinsa',
+          aika: '1943–1987',
+          teksti: 'John Muafangejo syntyi 1943 Angolan puolella kwanjamaperheeseen ja '
+              + 'paimensi lapsena karjaa avojaloin. Isän kuoltua äiti muutti 1956 '
+              + 'rajan eteläpuolelle lähetysasemalle, ja poika seurasi vuotta '
+              + 'myöhemmin. Amerikkalainen lähetti auttoi häntä pääsemään Rorke\'s '
+              + 'Driftin taidekeskukseen Etelä-Afrikkaan, ja siellä hän löysi '
+              + 'linoleikkauksen. Vedoksia syntyi vain noin 260, mutta niissä on oma '
+              + 'kielensä: kuvan sisään on leikattu tekstiä, ja aiheet tulevat '
+              + 'ovakwanjamojen historiasta ja kulttuurista. Muafangejo '
+              + 'kuoli 44-vuotiaana Katuturassa eikä ehtinyt nähdä maansa '
+              + 'itsenäistymistä.',
+          selite: 'Näyttelyitä oli São Paulon biennaalissa 1972 ja Helsingissä '
+            + 'Bullankulman galleriassa 1980 — Suomen ja Ambomaan lähetyssiteet '
+            + 'näkyivät myös taiteessa.',
+        },
+        {
+          otsikko: 'Puku, joka kertoo lehmistä',
+          teksti: 'Lähetystyöntekijät pitivät hererojen sarvimaista ekori-päähinettä '
+              + 'paholaisen merkkinä. Naiset ottivat käyttöön lähettien lattiaan asti '
+              + 'ulottuvat puvut, mutta tekevät ne nyt kirkkaista kuoseista: '
+              + 'ohorokovassa on korkea kaulus, olkapäistä pullistuvat hihat ja '
+              + 'valtava laskostettu hame, johon menee jopa kymmenen metriä kangasta. '
+              + 'Arkipuku kootaan tilkuista, usein vanhoista vaatteista; yhdestä '
+              + 'kankaasta ommeltu on juhlaa varten. Päälaella on vaakasuora '
+              + 'sarvipäähine otjikaiva, kunnianosoitus karjalle — sen runko voi olla '
+              + 'kankaaseen käärittyä sanomalehteä. Windhoekilainen McBright Kavari on '
+              + 'voittanut parhaan hererupuvun kilpailun kolmesti.',
+          selite: 'Puku ei ole museotavaraa: naimisissa olevat ja vanhemmat naiset '
+            + 'käyttävät sitä arkena, nuoremmat juhlissa, ja suunnittelijat '
+            + 'muokkaavat sitä yhä.',
+        },
+      ],
+    },
+  ],
 };
