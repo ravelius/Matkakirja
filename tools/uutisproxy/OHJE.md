@@ -69,6 +69,17 @@
 > Perustelut ovat js/packs/uutislahteet.js:n SHN-kommentissa. Julkaisu
 > Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Kongon demokraattinen tasavalta):** sallittuihin
+> lisättiin www.radiookapi.net (maalehti COD, testattu 6.9.2026:
+> syötteessä viisikymmentä juttua, artikkelisivun `<article>`-lohkosta
+> jäsentyy kahdeksan yli 60 merkin kappaletta ja `og:image` löytyy).
+> Actualite.cd hylättiin, koska sen artikkelisivun `<article>`-lohkossa
+> on vain otsikko ja leipäteksti jää sen ulkopuolelle; 7sur7.cd ja
+> Mediacongo eivät tarjoa toimivaa RSS-osoitetta ja Politico.cd:n syöte
+> vastaa 301:llä. Perustelut ovat js/packs/uutislahteet.js:n
+> COD-kommentissa. Julkaisu tapahtuu automaattisesti mainista, kuten
+> alempien merkintöjen kohdalla.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

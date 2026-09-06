@@ -43179,4 +43179,439 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KONGON DEMOKRAATTINEN TASAVALTA (COD) — Afrikan laudan maalehti
+   * (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-kongo.md; kaikki
+   * luvut, nimet ja päiväykset tarkistettu en-Wikipedian raakatekstistä
+   * 6.9.2026.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA: maastokohteet-cod.js kattaa jo Mount
+   * Stanleyn, Tanganjikajärven, Kongojoen, Ingan padot, Boyoman
+   * putoukset sekä Virungan, Kahuzi-Biégan, Salongan, Garamban ja
+   * Upemban puistot ja Lubumbashin kaivokset; elaintakyt.js bonobon ja
+   * skandaalit.js Casementin raportin (1904) ja Shinkolobwen kaivoksen.
+   * Maalehti EI toista niitä: luonto-osiossa ei ole yhtään kansallis-
+   * puistoa eikä Kongojokea omana aiheenaan, historiassa ei siirtomaa-
+   * kauden kumiveroa eikä kaivoksia, ja bonobon tilalla metsän eläimiä
+   * edustavat okapi ja kongonriikinkukko.
+   *
+   * HERKÄT AIHEET: nykypolitiikka ja käynnissä olevat selkkaukset on
+   * jätetty kokonaan pois (M3:n Myanmar-linja). Orjakauppa mainitaan
+   * vain siltä osin kuin Afonso I:n omat kirjeet sitä käsittelevät, ja
+   * maniokin myrkyllisyydestä kerrotaan valmistustapana eikä
+   * terveysvaroituksena.
+   *
+   * KUVAT: 16 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin. NELJÄ NOSTOA JÄI
+   * KUVATTOMAKSI: lingala (vapaita kuvia joen kauppakielestä ei ole),
+   * Chéri Samba ja Bodys Isek Kingelez (teokset ovat tekijänoikeuden
+   * alaisia) sekä Indépendance Cha Cha (vuoden 1960 pyöreän pöydän
+   * kuvat eivät ole vapaita). HYLÄTYT: "Man's status cloth, Shoowa
+   * people ... HMA" (kollaasi, kolme ruutua), "Os d'Hishango ©dada2009"
+   * (vesileima tiedostonimessä), "Franco Luambo ... se produisant au
+   * Zaïre" (elokuvan still-kuva, jonka PD-merkintä nojaa pelkkään
+   * lataajan ilmoitukseen) ja "Kwanga-chikwangue" (myyjän kuva
+   * kadulla — tilalle valittiin sama aihe ilman ihmisiä).
+   */
+  COD: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kongon historia on kirjoitettu kolmella tavalla: joen suulla '
+          + 'kuningaskunta lähetti kirjeitä Euroopan hoveihin, savannilla hovihistorioitsijat '
+          + 'lukivat helmilaudoista, ja hautavajoaman rannalla joku veisti luuhun lovia '
+          + 'kaksikymmentätuhatta vuotta sitten.',
+      nostot: [
+        {
+          otsikko: 'Luu, jossa on 168 lovea',
+          aika: 'n. 20 000 vuotta sitten',
+          tiedosto: 'Os d\'Ishango IRSNB.JPG',
+          teksti: 'Belgialainen Jean de Heinzelin kaivoi 1950 Ishangossa '
+              + 'Semliki-joen varrella kivityökalujen seasta kynän kokoisen '
+              + 'esineen: kymmenensenttisen kaarevan luun, jonka toiseen päähän oli '
+              + 'kiinnitetty terävä kvartsinpala. Luussa on 168 lovea kolmessa rivissä, ja '
+              + 'niitä on tulkittu milloin tukkimiehen kirjanpidoksi, milloin '
+              + 'kaksitoistajärjestelmän laskutikuksi, milloin kuukalenteriksi — sitä on '
+              + 'sanottu ihmiskunnan vanhimmaksi matemaattiseksi välineeksi. Ikä on kiistelty, '
+              + 'koska lähistön tulivuoret sotkivat hiili-isotoopit; nykyarvio on noin '
+              + '20 000 vuotta. Varovaisuutta neuvoo samasta kerroksesta löytynyt toinen luu, '
+              + 'jonka lovissa ei ole mitään säännönmukaista.',
+          selite: 'Ishangon luu on noin kymmenen senttiä pitkä ja säilytetään Brysselissä '
+            + 'Belgian kuninkaallisessa luonnontieteiden instituutissa.',
+          lahde: 'Ben2, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ishango bone',
+        },
+        {
+          otsikko: 'Kuningas, joka kirjoitti Lissaboniin',
+          aika: '1483–1526',
+          tiedosto: 'The Bansa, or residence of the King of Kongo, called St. Salvador (M\'Banza Kongo), Astley 1745.jpg',
+          teksti: 'Portugalilainen Diogo Cão saapui Kongon kuningaskunnan rannikolle 1483 ja '
+              + 'vei hovimiehiä Portugaliin opiskelemaan lukemista ja kirjoittamista. '
+              + 'Kuningas Nzinga a Nkuwu kastettiin 1491 nimellä João I, ja hänen poikansa '
+              + 'Afonso I rakensi kuningaskuntaan koululaitoksen, jonka opettajat olivat '
+              + 'aatelisia. Kristinusko käännettiin kikongoksi omin sanoin: '
+              + 'Raamatusta tuli nkanda ukisi, pyhä kirja, ja kirkosta nzo a ukisi, pyhä talo. '
+              + 'Afonson poika Henrique vihittiin piispaksi 1518. Vuonna 1526 Afonso kirjoitti '
+              + 'Portugalin kuninkaalle ja valitti, että kauppiaat rikkoivat kaupan sääntöjä ja '
+              + 'että vapaita kongolaisia siepattiin orjiksi vastoin maan lakia.',
+          selite: 'Thomas Astleyn matkakokoelman kaiverrus vuodelta 1745 esittää '
+            + 'kuningaskunnan pääkaupunkia Mbanza Kongoa, jota portugalilaiset kutsuivat '
+            + 'São Salvadoriksi.',
+          lahde: 'Thomas Astley, Wikimedia Commons (public domain)',
+          wiki: 'Kingdom of Kongo',
+        },
+        {
+          otsikko: 'Helmilauta, joka on arkisto',
+          aika: '1700-luvulta alkaen',
+          tiedosto: 'Planche de mémoire lukasa (Luba)-Brooklyn Museum.jpg',
+          teksti: 'Luban valtakunta hallitsi eteläisen Kongon savannia, ja sen historian '
+              + 'säilytti Mbudye-seura, jonka jäseneksi jokaisen viranhaltijan oli päästävä. '
+              + 'Seuran väline on lukasa: parikymmentä senttiä pitkä tiimalasin muotoinen '
+              + 'lauta, joka on peitetty helmillä, simpukoilla ja kaiverruksilla. '
+              + 'Hovihistorioitsijat, joita kutsuttiin muistin miehiksi, kuljettivat sormiaan '
+              + 'laudan pinnalla ja lukivat siitä kuningasluettelot, muuttoreitit ja Luban '
+              + 'eepoksen. Punainen helmi tarkoitti aina Nkongolo Mwambaa, sininen sankari '
+              + 'Mbidi Kiluwea. Vain seuran ylimmät jäsenet osasivat tulkita laudan, ja sama '
+              + 'kuvio saattoi kertoa eri asian eri lukijalle.',
+          selite: 'Lukasa-lautoja oli kolmea lajia, ja kolmas — hallitsijan oma, pyhää '
+            + 'kuninkuutta käsittelevä lauta — on kadonnut kokonaan.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lukasa (Luba)',
+        },
+        {
+          otsikko: 'Joen kieli, jolla ei ollut äidinkielisiä',
+          aika: '1880-luvulta alkaen',
+          teksti: 'Ennen vuotta 1880 joen kauppakieli oli bobangi, jota puhuttiin Stanley '
+              + 'Poolin ja Ubangi-joen suun välillä. Kun eurooppalaiset ja heidän '
+              + 'afrikkalaiset sotilaansa perustivat asemia jokivarteen, he oppivat kielen '
+              + 'puolittain, ja siitä syntyi uusi muoto, jota kutsuttiin yksinkertaisesti joen '
+              + 'kieleksi. Vuonna 1884 se otettiin käyttöön Bangalan asemalla ja sai nimen '
+              + 'bangala; lähetyssaarnaaja Égide De Boeck ryhtyi 1901 laajentamaan sitä ja '
+              + 'ehdotti sille nimeä lingala. Nyt kieltä puhuu äidinkielenään noin kaksikymmentä '
+              + 'miljoonaa ihmistä ja toisena kielenä yhtä moni. Ranskasta jäi muistoja: '
+              + 'momí, tyttöystävä, on väännös sanoista ma mie.',
+          wiki: 'Lingala',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kongon altaassa kasvaa maailman toiseksi suurin sademetsä, ja se on tuottanut '
+          + 'kaksi eläintä, joita tiede ei tuntenut, sekä turvekerroksen, jota '
+          + 'ei osattu edes etsiä.',
+      nostot: [
+        {
+          otsikko: 'Eläin, jonka löysi jalanjälki',
+          tiedosto: 'Okapi (Okapia johnstoni).jpg',
+          teksti: 'Euroopassa puhuttiin vuosia afrikkalaisesta yksisarvisesta, ja Henry Morton '
+              + 'Stanley mainitsi 1887 matkakirjassaan aasin, jota paikalliset kutsuivat '
+              + 'nimellä atti. Britti Harry Johnston lähti jäljille odottaen metsähevosta, '
+              + 'mutta jäljet olivat sorkkaeläimen. Hän ei nähnyt elävää eläintä; hän sai '
+              + 'käsiinsä paloja raidallista nahkaa ja lopulta kallon, ja siitä laji '
+              + 'tunnistettiin 1901 kirahvin sukulaiseksi. Okapi ja kirahvi ovat '
+              + 'kirahvieläinten heimon ainoat elossa olevat lajit, ja niiden yhteinen '
+              + 'esi-isä eli noin 11,5 miljoonaa vuotta sitten. Okapia elää vain Kongon '
+              + 'demokraattisen tasavallan koillisosan metsissä.',
+          selite: 'Okapin säkäkorkeus on noin 1,5 metriä ja paino 200–350 kiloa, ja '
+            + 'raidat toimivat suojavärinä tiheässä kasvillisuudessa.',
+          lahde: 'k7hpn, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Okapi',
+        },
+        {
+          otsikko: 'Höyhen, jota kukaan ei tunnistanut',
+          tiedosto: 'Afropavo congensis -Artis Zoo -Netherlands -male-8a.jpg',
+          teksti: 'Yhdysvaltalainen lintutieteilijä James Chapin etsi Kongossa okapia ja '
+              + 'huomasi paikallisissa päähineissä pitkiä punaruskeita höyheniä, joita hän ei '
+              + 'osannut yhdistää mihinkään tuntemaansa lintuun. Vuonna 1934 hän kävi '
+              + 'Tervurenin museossa Belgiassa ja näki kaksi täytettyä lintua, joiden '
+              + 'kyltissä luki intialainen riikinkukko — ne olivat samaa tuntematonta lajia. '
+              + 'Vuoteen 1955 mennessä hän oli saanut käsiinsä seitsemän yksilöä. '
+              + 'Kongonriikinkukko '
+              + 'on Afropavo-suvun ainoa laji ja maan kansallislintu; koiras on '
+              + '64–70 senttiä pitkä, sinivihreä ja punakaulainen, ja sen päälaella törröttää '
+              + 'valkoisia karvamaisia höyheniä.',
+          selite: 'Kongonriikinkukko levittää pyrstösulkansa, kun muut riikinkukot levittävät '
+            + 'pyrstön peitinsulkia; villejä yksilöitä arvioitiin 2013 olevan 2 500–9 000.',
+          lahde: 'Arjan Haverkamp, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Congo peafowl',
+        },
+        {
+          otsikko: 'Järvi, jonka pohjalla on kaasukenttä',
+          tiedosto: 'Lake Kivu (20439784294).jpg',
+          teksti: 'Kivujärvi laskee nykyään etelään Ruzizi-jokea pitkin, mutta ennen se laski '
+              + 'pohjoiseen Niilin suuntaan: 13 000–9 000 vuotta sitten tulivuoret nousivat '
+              + 'sen ja Edwardjärven väliin ja tukkivat reitin. Järvi on 475 metriä syvä, ja '
+              + 'sen pohjaveteen on liuennut noin 65 kuutiokilometriä metaania ja 256 '
+              + 'kuutiokilometriä hiilidioksidia. Metaanin tekevät mikrobit tulivuorten '
+              + 'hiilidioksidista. Kivu on Nyosin ja Monounin ohella yksi kolmesta '
+              + 'järvestä maailmassa, joissa syvän veden kaasu voi purkautua kerralla '
+              + 'pintaan. Kaasua nostettiin aluksi pienessä mitassa panimon kattiloihin, ja '
+              + '2016 järvellä kävi jo 26 megawatin voimala.',
+          selite: 'Kivujärvi on Afrikan kahdeksanneksi suurin järvi, ja siinä on Idjwi, '
+            + 'maailman kymmenenneksi suurin järvisaari.',
+          lahde: 'MONUSCO Photos, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Lake Kivu',
+        },
+        {
+          otsikko: 'Neljä prosenttia, joka painaa yhtä paljon kuin loput',
+          aika: '2017–2022',
+          tiedosto: 'The Congo River and Tributaries (MODIS 2024-10-13).jpg',
+          teksti: 'Kongon altaan keskellä on tasainen suo- ja metsäalue, jonka pohjalla '
+              + 'huomattiin 2017 paksu turvekerros. Sitä on 40 prosentin alalla kosteikoista, '
+              + 'ja siihen on varastoitunut noin 30 miljardia tonnia hiiltä — 28 prosenttia '
+              + 'koko maailman trooppisesta turvehiilestä. Turvealue kattaa neljä prosenttia '
+              + 'Kongon altaasta, mutta siinä on yhtä paljon hiiltä kuin lopun 96 prosentin '
+              + 'kaikissa puissa yhteensä. Vuonna 2022 sama tutkimusryhmä tarkensi alan 167 600 '
+              + 'neliökilometriin ja keskipaksuuden 1,7 metriin. Kongo, Kongon tasavalta ja '
+              + 'Indonesia allekirjoittivat 2018 Brazzavillen julistuksen alueen '
+              + 'suojelemisesta.',
+          selite: 'Turvekerros on syntynyt hitaasti virtaavien sivujokien — Lopori, Maringa, '
+            + 'Tshuapa ja Lomela — soistamaan altaaseen, jossa sataa noin 2 000 millimetriä '
+            + 'vuodessa.',
+          lahde: 'MODIS Land Rapid Response Team / NASA GSFC, Wikimedia Commons (public domain)',
+          wiki: 'Cuvette Centrale',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä eläimen lähin elossa oleva sukulainen okapi on?',
+        vaihtoehdot: [
+          'Seepran',
+          'Kirahvin',
+          'Antiloopin',
+          'Villihevosen',
+        ],
+        oikea: 1,
+        fakta: 'Raidat ovat suojaväri, eivät sukulaisuuden merkki — okapi ja kirahvi ovat '
+            + 'kirahvieläinten heimon kaksi viimeistä lajia.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kongolainen ateria on kaksiosainen: tärkkelys, joka syödään sormin, ja sen '
+          + 'seuraksi kastike tai lehtimuhennos. Melkein kaikki alkaa maniokista, joka '
+          + 'tuotiin Brasiliasta 1500-luvulla.',
+      nostot: [
+        {
+          otsikko: 'Juuri, joka on ensin liotettava',
+          tiedosto: 'Image de manioc.jpg',
+          teksti: 'Maniokki on kotoisin Etelä-Amerikasta, ja portugalilaiset kauppiaat toivat '
+              + 'sen Brasiliasta Afrikkaan 1500-luvulla. Kasvi kestää kuivuutta ja huonoa '
+              + 'maata, ja se on tropiikin kolmanneksi tärkein hiilihydraatin '
+              + 'lähde riisin ja maissin jälkeen. Juuressa on kuitenkin syanogeenisiä '
+              + 'yhdisteitä, joten karvaat lajikkeet on käsiteltävä: juuret kuoritaan, '
+              + 'raastetaan ja liotetaan kahdesta kolmeen vuorokauteen, jolloin käyminen '
+              + 'poistaa niistä 85–99 prosenttia. Kongossa massa kääritään banaaninlehteen ja '
+              + 'keitetään kwangaksi eli chikwangueksi, jota myydään joka torilla. Jauhoista '
+              + 'tehdään fufua: pallo, johon painetaan peukalolla kuoppa kastiketta varten.',
+          selite: 'Kwanga on hapatetusta maniokista tehty leipä, joka säilyy banaaninlehden '
+            + 'sisällä useita päiviä ilman jäähdytystä.',
+          lahde: 'Steve Dieu-veil, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cassava',
+        },
+        {
+          otsikko: 'Lehdet, jotka survotaan muhennokseksi',
+          tiedosto: 'PONDU 1.jpg',
+          teksti: 'Maniokista syödään myös lehdet. Pondu eli sombe tehdään keittämällä, '
+              + 'survomalla ja hauduttamalla maniokin lehdet muhennokseksi, jota maustetaan '
+              + 'palmuöljyllä ja kuivatulla kalalla. Vihanneksina käytetään myös okraa ja '
+              + 'karvaslehteä, ja sienet ovat luba-alueella arvostettuja: niitä syödään lihan '
+              + 'sijasta, kun lihaa ei ole. Suurin osa aterioista syödään ilman lihaa, koska '
+              + 'liha on kallista; vuohi on yleisimmin syöty liha, ja kalaa saadaan joesta ja '
+              + 'järvistä. Pilipili, hyvin tulinen paprika, on pöydässä lähes aina.',
+          selite: 'Maniokin lehdet poimitaan samasta kasvista, jonka juuresta tehdään '
+            + 'kwangaa ja fufua.',
+          lahde: 'Emmanuelmbelani18, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Congolese cuisine',
+        },
+        {
+          otsikko: 'Kansallisruoka, joka on palmun voita',
+          tiedosto: 'Poulet à la moambe.JPG',
+          teksti: 'Moambe on öljypalmun hedelmien hedelmälihasta puristettua palmuvoita, ja '
+              + 'poulet à la moambe tarkoittaa kanaa, joka on haudutettu siinä. Ruokaan tulee '
+              + 'pinaattia ja tulista pilipiliä, ja seuraksi riisiä, bataattia, kovaksi '
+              + 'keitettyjä kananmunia tai maniokkitahnaa; kana voidaan vaihtaa ankkaan tai '
+              + 'kalaan. Sama ruoka on kansallisruoka neljässä maassa: Kongon demokraattisessa '
+              + 'tasavallassa, Kongon tasavallassa, Gabonissa nimellä poulet nyembwe ja '
+              + 'Angolassa nimellä moamba de galinha. Kikongoksi kana on nsusu, ja joen toisella '
+              + 'puolella maapähkinäversio kulkee nimellä muamba nsusu.',
+          selite: 'Palmuvoi puristetaan öljypalmun hedelmien hedelmälihasta, ei '
+            + 'siemenistä.',
+          lahde: 'Brigade Piron, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Moambe chicken',
+        },
+        {
+          otsikko: 'Kala, joka kypsyy lehden sisällä',
+          tiedosto: 'Liboké ya djombo na ngolo congolaise.jpg',
+          teksti: 'Liboke tarkoittaa lingalaksi käärettä: kala, sianliha tai kurpitsansiemenet '
+              + 'maustetaan, kääritään banaaninlehteen ja höyrytetään lehden sisällä, jolloin '
+              + 'mausteet jäävät kokonaan ruokaan. Torilla myydään valmiita libokeja syötäväksi '
+              + 'siltä seisomalta. Kinshasan omat ruokapaikat ovat ngandoja, jotka ovat jotain '
+              + 'baarin ja ravintolan väliltä ja usein naimattomien naisten omistamia. Kukin '
+              + 'nganda tarjoaa yhden seudun ruokaa: jokivarren nganda paistettua kalaa ja '
+              + 'keitettyä banaania ylävirran tapaan, kongolainen nganda kalaa ja kwangaa '
+              + 'alavirran tapaan, kasailainen nganda vuohta ja riisiä.',
+          selite: 'Liboke ya mbisi tehdään useimmiten monnista, liboke ya ngulu '
+            + 'sianlihasta ja liboke ya mbika kurpitsansiemenistä.',
+          lahde: 'BOKOBA veroly, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Congolese cuisine',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Kongon kuvataiteessa on kaksi kerrosta: Kuban hovin veistäjät ja ompelijat '
+          + 'tekivät geometriaa, joka hämmästyttää matemaatikkoja, ja Kinshasan maalarit '
+          + 'aloittivat mainoskylteistä ja päätyivät New Yorkin museoihin.',
+      nostot: [
+        {
+          otsikko: 'Kuninkaan kaksoisolento',
+          aika: '1700-luvulta alkaen',
+          tiedosto: 'Ndop statue.jpg',
+          teksti: 'Kuban kuningaskunnassa alettiin 1700-luvulla veistää ndop-patsaita, joissa '
+              + 'jokainen hallitsija istuu jalat ristissä, rauhanveitsi ikul vasemmassa '
+              + 'kädessä. Patsas ei ole muotokuva vaan hallitsijan ihannekuva; ainoa '
+              + 'yksilöivä merkki on jalustan ibol, kuninkaan oma tunnus. Puu on kovaa ja se '
+              + 'voidellaan palmuöljyllä hyönteisiä vastaan, mikä on syy siihen, että patsaat '
+              + 'ovat säilyneet. Uskottiin, että patsaassa asuu kuninkaan kaksoisolento: jos '
+              + 'kuningas haavoittui, sama haava ilmestyisi puuhun. Patsasta säilytettiin '
+              + 'naisten puolella ja se tuotiin synnyttäjän viereen. Kullekin kuninkaalle '
+              + 'veistettiin vain yksi.',
+          selite: 'Ndop-patsas on 48–55 senttiä korkea, ja Britannian museon kolmesta '
+            + 'kappaleesta vanhin on 1700-luvulta.',
+          lahde: 'Jononmac46, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ndop (Kuba)',
+        },
+        {
+          otsikko: 'Kaksitoista tapaa seitsemästätoista',
+          tiedosto: 'Man\'s status cloth, Democratic Republic of the Congo, Shoowa people.JPG',
+          teksti: 'Kuban raffiakangas on kahden käden työtä: miehet kasvattavat raffiapalmun '
+              + 'ja kutovat siitä noin 70 senttiä leveitä ruutuja kaltevalla kangaspuulla, '
+              + 'naiset ompelevat niihin kuviot. Leikkonukkatekniikassa lyhyet kuidut '
+              + 'pujotetaan kankaan läpi ja leikataan poikki, jolloin pinnasta tulee samettia. '
+              + 'Juhlahame kootaan monen ompelijan ruuduista, ja yksi ruutu voi viedä '
+              + 'kuukausia; valmis hame on tavallisesti noin seitsemän metriä pitkä. '
+              + 'Matemaatikko Donald Crowe laski, että niistä seitsemästätoista tavasta, '
+              + 'joilla kuvio voi toistua '
+              + 'pinnalla, Kuban ompelijat ovat käyttäneet kahtatoista — ja katkaisevat rivin '
+              + 'juuri kun silmä odottaa jatkoa.',
+          selite: 'Arvokkaimmat kankaat värjätään twool-jauheella, jota saadaan '
+            + 'punapuun sydänpuusta ja jota sekoitetaan myös palmuöljyyn ihovoiteeksi.',
+          lahde: 'Hiart, Wikimedia Commons (CC0)',
+          wiki: 'Kuba textiles',
+        },
+        {
+          otsikko: 'Maalari, joka kirjoittaa kuviinsa',
+          aika: '1956–',
+          teksti: 'Chéri Samba syntyi 1956 Kinto M\'Vuilan kylässä sepän ja maanviljelijän '
+              + 'kymmenlapsiseen perheeseen ja lähti 16-vuotiaana Kinshasaan kylttimaalariksi. '
+              + 'Siellä hän tapasi Moképin ja Bodon, ja heistä tuli maan tunnetuin '
+              + 'populaarimaalauksen koulukunta. Oman ateljeen Samba avasi 1975 ja piirsi '
+              + 'samaan aikaan sarjakuvaa viihdelehteen. Sarjakuvasta hän otti puhekuplat: '
+              + 'hänen maalauksissaan on lähes aina tekstiä ranskaksi ja lingalaksi, ja usein '
+              + 'hän maalaa itsensä keskelle kuvaa. Läpimurto tuli 1989 Pariisin '
+              + 'Pompidou-keskuksen näyttelyssä Les Magiciens de la Terre, ja 2007 hän oli '
+              + 'Venetsian biennaalissa.',
+          wiki: 'Chéri Samba',
+        },
+        {
+          otsikko: 'Kaupungit, jotka rakennettiin pahvista',
+          aika: '1948–2015',
+          teksti: 'Bodys Isek Kingelez työskenteli Kinshasan kansallismuseossa naamioiden '
+              + 'entisöijänä, kunnes ryhtyi 1985 päätoimisesti tekemään sitä, mitä kutsui '
+              + 'nimellä extrêmes maquettes, äärimmäiset pienoismallit. Materiaalina olivat '
+              + 'pahvi, paperi, teippi ja muovinpalat; malleja syntyi yli kolmesataa. Vuodesta '
+              + '1992 hän rakensi kokonaisia kaupunkeja katuineen, puistoineen ja '
+              + 'stadioneineen — ensimmäinen sai nimen hänen kotikylästään Kimbembele-Ihungasta. '
+              + 'Tunnetuimmat ovat Ville Fantôme (1996) ja Kin 3ème millénaire (1997). '
+              + 'Hänellä ei ollut koskaan taidekauppiasta, mutta New Yorkin MoMA teki hänestä '
+              + 'laajan näyttelyn 2018.',
+          wiki: 'Bodys Isek Kingelez',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Kinshasan ja Brazzavillen rumba syntyi kahden mantereen välissä: kuubalaiset '
+          + 'levyt tulivat jokisatamiin, ja kongolaiset kitaristit lähettivät musiikin '
+          + 'takaisin maailmalle omanaan.',
+      nostot: [
+        {
+          otsikko: 'Levy, joka kävi Karibialla ja palasi',
+          aika: '1920–2021',
+          tiedosto: 'Likembe.JPG',
+          teksti: 'Rumban juuri on maringa, Loangon kuningaskunnan alueen paritanssi. '
+              + 'Soittimina olivat aluksi likembe, metallitangolla lyöty pullo ja patenge-kehärumpu, '
+              + 'mutta 1920-luvulla maringa-yhtyeet vaihtoivat likemben haitariin ja '
+              + 'kitaraan. Kun kuubalaisia '
+              + 'son-levyjä alkoi tulla maahan 1940- ja 1950-luvulla, ne oli merkitty '
+              + 'väärin rumbaksi — ja nimi jäi kongolaiseen musiikkiin. Kitaroita on kolme: '
+              + 'sooloa, rytmiä ja niiden välissä mi-solo. Kappaleen loppupuolella tempo '
+              + 'kiihtyy sebeneksi, jossa kitarat vastaavat toisilleen ja laulajat huutavat '
+              + 'yleisön joukosta tuttujen nimiä. Unesco otti kongolaisen rumban aineettoman kulttuuriperinnön '
+              + 'luetteloon joulukuussa 2021.',
+          selite: 'Likembe on peukalopiano, jonka metallikieliä näpätään peukaloilla; se oli '
+            + 'maringa-yhtyeiden soitin ennen kuin haitari ja kitara syrjäyttivät sen.',
+          lahde: 'Schorle, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Congolese rumba',
+        },
+        {
+          otsikko: 'Levypakkaaja, josta tuli kitaran velho',
+          aika: '1938–1989',
+          tiedosto: 'Luambo makiadi franco.jpg',
+          teksti: 'Franco Luambo Makiadi jäi 11-vuotiaana ilman isää, ja koulu loppui siihen. '
+              + 'Äiti myi munkkeja Ngiri-Ngirin torilla, ja poika sai paikan levyjen '
+              + 'pakkaajana Ngoma-levy-yhtiöllä. Siellä hän opetteli kitaraa salaa aina, kun '
+              + 'muusikot olivat lopettaneet äänityksensä. Vuonna 1953 hän soitti koekuuntelun '
+              + 'ja sai sopimuksen sekä kitaran, jota kutsuttiin nimellä Libaku ya nguma, '
+              + 'boakäärmeen pää — se oli yhtä iso kuin viisitoistavuotias soittaja. OK Jazz '
+              + 'perustettiin 1956, ja Franco siirsi sebenen kappaleen loppuun ja soitti sen '
+              + 'peukalolla ja etusormella. Rolling Stone sijoitti hänet 2023 kaikkien aikojen '
+              + 'kitaristien listalla sijalle 71.',
+          selite: 'Yhtyeen tunnuslause oli On entre O.K., on sort K.O. — sisään mennään '
+            + 'kunnossa, ulos tullaan tyrmättynä.',
+          lahde: 'Lingabo, Wikimedia Commons (CC0)',
+          wiki: 'Franco Luambo',
+        },
+        {
+          otsikko: 'Laulu, joka kirjoitettiin hotellihuoneessa',
+          aika: '1960',
+          teksti: 'Tammikuussa 1960 Brysselissä istui pyöreä pöytä, jossa neuvoteltiin Belgian '
+              + 'Kongon tulevaisuudesta. Valtuuskunnan mukana matkusti orkesteri: Joseph '
+              + 'Kabasele eli Le Grand Kallé ja hänen African Jazzinsa, täydennettynä kahdella '
+              + 'kilpailevan OK Jazzin miehellä. Kabasele kirjoitti 20. tammikuuta laulun '
+              + 'Indépendance Cha Cha, joka esitettiin ensimmäisen kerran Hotel Plazassa '
+              + '1. helmikuuta. Sanoissa luetellaan kaikki puolueet ja niiden johtajat '
+              + 'nimeltä, ja kertosäe antaa itsenäisyyden kongolaisille itselleen. '
+              + 'Levy-yhtiö ei ollut kiinnostunut nauhoista, mutta laulusta tuli ensimmäinen '
+              + 'koko mantereen hitti — Kigalissa marssittiin sitä laulaen 1962.',
+          wiki: 'Indépendance Cha Cha',
+        },
+        {
+          otsikko: 'Pukeutuminen, joka on oma taiteenlajinsa',
+          aika: '1930-luvulta alkaen',
+          tiedosto: 'Papa Wemba.jpg',
+          teksti: 'La Sape on lyhenne sanoista Société des Ambianceurs et des Personnes '
+              + 'Élégantes, ja sen jäsen on sapeur tai sapeuse. Liikkeellä on kymmenen '
+              + 'käskyä, oma sanastonsa — sapologie, griffologie, vestimentologie — ja omat '
+              + 'liikkeensä: danse des griffes, merkkien tanssi, jossa vaatteiden yksityiskohdat '
+              + 'näytetään yleisölle, ja diattance, tietty tapa kävellä. Alkuperästä kerrotaan '
+              + 'kolme tarinaa: Kongon kuningaskunnan hovi, joka omaksui portugalilaista '
+              + 'pukeutumista 1500-luvulla, Camille Diata 1930-luvun Brazzavillessä ja '
+              + 'siirtolaiset Pariisissa. Kinshasassa liikkeen nosti uudelleen jaloilleen '
+              + 'laulaja Papa Wemba 1970-luvulla.',
+          selite: 'Papa Wemba (1949–2016) oli Zaïko Langa Langan perustajajäsen ja '
+            + 'Viva La Musican johtaja, ja hänet tunnettiin yhtä hyvin laulustaan kuin '
+            + 'pukeutumisestaan.',
+          lahde: 'Radio Okapi, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'La Sape',
+        },
+      ],
+    },
+  ],
 };

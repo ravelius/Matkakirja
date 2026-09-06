@@ -766,9 +766,28 @@ export const OMAT_ARTIKKELIT = {
       + 'sukupolvi toisensa perään.',
   },
   'Kongon demokraattinen tasavalta': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // COD) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Kongon demokraattinen tasavalta on Saharan eteläpuolisen '
       + 'Afrikan suurin maa: sademetsien, suuren joen ja valtavien '
-      + 'luonnonrikkauksien jättiläinen.',
+      + 'luonnonrikkauksien jättiläinen. Pinta-alaltaan se on Afrikan '
+      + 'toiseksi ja koko maailman yhdenneksitoista suurin, ja sen noin '
+      + '124 miljoonaa asukasta tekevät siitä maailman väkirikkaimman '
+      + 'ranskankielisen maan — virallinen kieli on ranska, mutta '
+      + 'kotikieliä on yli kaksisataa, ja niistä laajimmalle levinnyt on '
+      + 'lingala, joka syntyi joen kauppakielenä. Maan sydän on Kongojoki '
+      + 'sademetsineen; idässä kohoavat tulivuoret ja suuret järvet '
+      + 'hautavajoaman reunalla, kaakossa levittäytyy kuparivyöhyke. '
+      + 'Joen suulla kukoisti 1300-luvulta alkaen Kongon kuningaskunta, '
+      + 'jonka kuningas Afonso I kirjoitti kirjeitä Lissaboniin, ja '
+      + 'sisämaassa Luban ja Lundan valtakunnat; Luban historia '
+      + 'säilytettiin helmillä peitetyillä muistilaudoilla. Maa on '
+      + 'nimetty joen mukaan, ja joen vanha nimi Zaire tulee kikongon '
+      + 'ilmauksesta nzadi o nzere, joki joka nielee jokia. '
+      + 'Itsenäisyys tuli 1960, ja sen juhlalauluksi jäi Indépendance '
+      + 'Cha Cha — kongolainen rumba, joka pääsi 2021 Unescon '
+      + 'aineettoman kulttuuriperinnön luetteloon.',
     artikkeli: 'Kongon demokraattinen tasavalta on pinta-alaltaan '
       + 'Saharan eteläpuolisen Afrikan suurin valtio — yli '
       + 'kaksikymmentä kertaa Suomen kokoinen. Maan sydän on '

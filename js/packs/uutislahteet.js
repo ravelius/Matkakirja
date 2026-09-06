@@ -683,4 +683,26 @@ export const UUTISLAHTEET = {
     kieli: 'en',
     syote: 'https://www.sainthelena.gov.sh/feed/',
   },
+  /*
+   * Radio Okapi on maan laajimmalle kuuluva radioasema ja yksi sen
+   * luetuimmista uutissivustoista; se toimii YK:n Kongon-operaation ja
+   * sveitsiläisen Fondation Hirondellen yhteistyönä ja julkaisee
+   * ranskaksi. Testattu 6.9.2026: syötteessä viisikymmentä juttua, ja
+   * artikkelisivun ainoasta <article>-lohkosta jäsentyy kahdeksan yli 60
+   * merkin kappaletta sekä og:image.
+   *
+   * Testattu ja hylätty: Actualite.cd (syöte aukeaa, kymmenen juttua,
+   * mutta artikkelisivun <article>-lohko sisältää vain otsikon —
+   * leipäteksti on sen ulkopuolisessa div-lohkossa, joten popupiin ei
+   * jäisi yhtään kappaletta), 7sur7.cd ja Mediacongo (ei toimivaa
+   * RSS-osoitetta: 404), Politico.cd (syöteosoite vastaa 301:llä eikä
+   * worker seuraa uudelleenohjauksia). Zoom Eco ja La Prunelle RDC
+   * tarjoavat toimivan syötteen, mutta ne ovat selvästi pienempiä
+   * julkaisuja kuin valittu lähde.
+   */
+  COD: {
+    nimi: 'Radio Okapi',
+    kieli: 'fr',
+    syote: 'https://www.radiookapi.net/feed',
+  },
 };

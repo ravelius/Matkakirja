@@ -109,6 +109,9 @@ const SALLITUT = [
   // js/packs/uutislahteet.js). Syöte ja artikkelisivut ovat samalla
   // isäntänimellä, ja www-alkuinen muoto on pakollinen.
   'https://www.sainthelena.gov.sh/',
+  // Kongon demokraattisen tasavallan uutislähde (maalehti COD,
+  // 6.9.2026): syöte ja artikkelisivut samalla isäntänimellä.
+  'https://www.radiookapi.net/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei
