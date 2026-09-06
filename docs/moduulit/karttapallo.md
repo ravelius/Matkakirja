@@ -997,7 +997,9 @@ hieman lähemmäs. pallo voisi pyöriä hitaasti lennon aikana."*
   laudan oma `ajaKamera`, joten ele keskeyttää sen; reduced motionissa
   ei pyöritä eikä siirretä laatikkoa. Kuljettajan oma
   `LENNON_KAMERA_MS`-ajo korvautuu tällä samassa kehyksessä.
-- **Kuva, jossa isoisää ei tunnista.** Lento lukee vain
+- **Kuva, jossa isoisää ei tunnista.** *(KUMOTTU 6.9.2026 iltana:
+  omistaja poisti kortin ensimmäiseltä lennolta kokonaan — ks. luvun
+  loppu. Taulun rivi jää js/isoisan-valokuvat.js:ään.)* Lento luki vain
   `ISOISAN_VALOKUVAT.lento`-avainta (js/isoisan-valokuvat.js), joka on
   YKSI VAIHDETTAVA PAIKKA: kuvaputken uusi kuva vaihdetaan siihen
   yhdellä rivillä (omistaja klo 23.15: *"kohta pitäisi tulla isoisän
@@ -1462,7 +1464,8 @@ häivyttää joka reunastaan läpinäkyväksi ja tehdä vähän isommaksi"*
   häivyttyy näkyviin jo oikeassa asennossa. Paksu punainen viiva
   kirjoitetaan nyt heti lähdössä (`piirraJalki(hypynVaihe(0).e)`) eikä
   vasta ensimmäisessä rAF-kehyksessä.
-- **Isoisän kuva häivytettynä ja isompana.** Kortti (`.lento-valokuva`)
+- **Isoisän kuva häivytettynä ja isompana.** *(KUMOTTU 6.9.2026 iltana:
+  kortti ja sen tyylit poistettiin lennolta.)* Kortti (`.lento-valokuva`)
   kasvoi noin neljänneksen ja koko on yksi muuttuja
   `--lento-valokuvan-leveys`: työpöydällä min(30vw, 280px) →
   min(37,5vw, 350px), puhelimessa min(44vw, 200px) → min(55vw, 250px).
@@ -2308,7 +2311,9 @@ pyysi sanatarkasti:
      `laske` → `kamera.kotiin`) on nolla-ajo eikä siirtymä hypi.
      Molemmat päät lasketaan `kamera.kameranKohde`lla, joten laattojen
      tarkkuusraja (`lahinKorkeus`) pitää myös lennolla.
-   - **Kone ratsastaa hitusen keskilinjan yläpuolella**
+   - **Kone ratsastaa hitusen keskilinjan yläpuolella.**
+     *(KUMOTTU 6.9.2026 iltana: isoisän kortti poistui lennolta ja
+     nosto sen mukana — ks. seuraava merkintä.)*
      (`AVAUSLENNON_KONEEN_NOSTO` 0,15 näkyvän alueen korkeudesta).
      Syy on mitattu: isoisän valokuva (.lento-valokuva) on kapealla
      ruudulla 37,5 vw leveä ja kiinni vasemmassa laidassa — mitattuna
@@ -2404,6 +2409,130 @@ aiemminkin (`{tulos: true, auki: false}`, ks. luvun aiempi merkintä
 (`tools/savukkeet/kaappaukset/avauslento-pallo*.png`) jätettiin
 päivittämättä: ne ovat megatavun kokoisia eikä binäärihistoriaa
 kannata paisuttaa yhdestä ajosta.
+
+**Avauslento 6.9.2026 iltana: isoisän kuva pois ja kamera yhtenä
+kaarena (fablemax).** Omistaja iPadilta, sanatarkasti: *"ens.
+lentokohtauksesta, ota isoisän kuva pois. kartta liikuu siinä liian
+pikkutarkasti seuraten koneen alku ja loppu nykäisyjä. kartta saisi
+lentää yhden tasaisen reitin ja zoom muutoksen alusta loppuun."* Tämä
+KUMOAA edellisen kohdan 2 ("avauslento on kameran seurantaa") liikkeen
+osalta ja Raamatun rivin ISOISAN VAALEAT KUVAT lennon osalta; alkuleveys
+600 ja lähikuva jäävät voimaan.
+
+1. **ISOISÄN KORTTI POIS LENNOLTA.** `js/ui.js aloituslentoSisalla` ei
+   enää luo `.lento-valokuva`-nappia; kortin tyylit poistettiin
+   css:stä, `LENNON_VALOKUVAN_VIIVE_MS` js/isoisan-valokuvat.js:stä ja
+   moduulin tuonti ui.js:stä. Taulun rivi `lento` (Giza, luminanssi
+   184,4) jää moduuliin mittauksineen — jos kortti palaa, se palaa
+   siihen avaimeen. Koska ui.js oli moduulin ainoa niputettu tuoja,
+   `js/isoisan-valokuvat.js` poistui myös
+   `tools/build-standalone.mjs`:n MODULES-listalta (muut tuojat,
+   aikajana ja etusivun kuvapakka, eivät ole niputuksessa).
+   Isoisän kuvat säilyvät etusivun pallolla ja aikajanassa.
+2. **NYKÄISYJEN JUURISYY OLI NELJÄ ERI LIIKETTÄ SAMASSA KUVASSA.**
+   (a) Kone kulki `hypynVaihe`lla (easeInOutQuad), jonka kiihtyvyys
+   hyppää nollasta täyteen lennon alussa, kääntyy kerralla
+   puolivälissä ja putoaa nollaan lopussa — juuri ne "alku ja loppu
+   nykäisyt", ja kamera toisti ne suurennettuina, koska koko kuva
+   liikkui koneen mukana. (b) Seuranta oli ensimmäisen kertaluvun viive
+   (`AVAUSLENNON_SEURANNAN_VIIVE_MS` 260 ms), joka jäi lähdössä jälkeen,
+   kiri kiinni keskellä ja napsautti viimeisellä kehyksellä kameran
+   koneen kohdalle. (c) Koneen nosto ajettiin sisään ja ulos
+   trapetsilla lennon ensimmäisellä ja viimeisellä 15 %:lla — oma
+   liikkeensä juuri lennon päissä. (d) Kuljettaja käynnisti yhä oman
+   kamera-ajonsa kaupunkiparin laatikkoon (`siirto.js hyppaa`,
+   `LENNON_KAMERA_MS`), ja seuranta pysäytti sen vasta seuraavassa
+   kehyksessä.
+3. **KAMERA SAA YHDEN SUUNNITELMAN.** `js/pallolauta/avaus.js`:
+   `lennonSuunnitelma(kaari, { alku, huippu, loppu })` on puhdas
+   funktio `t → { lat, lng, altitude }`, ja `ajaKamerasuunnitelma`
+   kirjoittaa sen arvon sellaisenaan joka kehyksellä — ei seurantaa,
+   ei silotusta, ei kehyskohtaista kohdetta.
+   - **Paikka** isoympyrää pitkin (`lentokaarenKohta`) vaiheella
+     `lennonVaihe` = `liukuPehmennys` (smoothstep): kiihtyvyys on nolla
+     molemmissa päissä ja vaihtaa merkkiä vain kerran, puolivälissä.
+   - **Korkeus** `lennonKorkeus`: nousu `AVAUSLENNON_ALKULEVEYS` 600 →
+     `AVAUSLENNON_HUIPPULEVEYS` 760 osuudella 0…`AVAUSLENNON_HUIPUN_
+     KOHTA` 0,35 ja lasku 760 → `PALLOLAUDAN_SAAPUMISLEVEYS` 240
+     lopputiellä, kumpikin logaritmisena liukuna omalla
+     ease-in-out-käyrällään. Käyrällä on siis täsmälleen yksi maksimi,
+     se on monotoninen molemmin puolin, ja koska pehmennyksen
+     derivaatta on nolla kummankin osuuden päissä, kuva on tasainen
+     sekä huipulla (noin 35–65 %) että lennon päissä. Sama profiili
+     kuin koneella: nousu, matkalento, lasku.
+   - **Kone piirtyy suunnitelman päälle.** Kuljettaja sai kaksi
+     valinnaista lisää (`js/pallolauta/siirto.js`): `omaKamera` (ei
+     omaa kamera-ajoa) ja `hyppaa(…, { vaihe })` (vaihekäyrä
+     kohtaukselta). Kone ja paksu punainen jälki lukevat siis samaa
+     `lennonVaihe`ttä kuin kamera, joten kone on joka kehyksellä
+     täsmälleen siinä pisteessä, jota kamera katsoo; kaaren oma
+     korkeusparaabeli nostaa sen hitusen keskilinjan yläpuolelle.
+     Tavallinen lento (FLIGHT_MS, MANNER_LENTO_MS) EI anna kumpaakaan
+     lisää, joten sen rajaus ja käyrä ovat ennallaan.
+   - **Koneen nosto poistui** (`AVAUSLENNON_KONEEN_NOSTO`,
+     `AVAUSLENNON_NOSTON_RAMPPI`, `nostonOsuus`): se oli isoisän kortin
+     väistöä, ja kortti on poissa.
+   - **Loppu on yhä täsmälleen saapumisnäkymä**, joten laskeutumisen
+     oma ajo (`laske` → `kamera.kotiin`) on nolla-ajo. Kaikki kolme
+     korkeutta lasketaan `kamera.kameranKohde`lla, joten laattojen
+     tarkkuusraja pitää; `Math.max` varmistaa, ettei huippu jää päiden
+     alle, jolloin kaari menettäisi maksiminsa.
+
+*Mitattu kahdella tavalla 6.9.2026. (1) KAAVOISTA 30 kertaa sekunnissa
+12 sekunnin lennolta (Lontoo → Ateena, puhelimen 390 × 844 korkeudet
+0,729 / 0,923 / 0,292 eli 600 / 760 / 240 lautayksikköä): vanha rata
+ajettiin samalla silotuksella, nostolla ja vakioilla kuin
+origin/mainissa. (2) SELAIMESSA (Playwright, Chromium, swiftshader,
+laatat Noden fetchillä) käärimällä `pallo.pointOfView` ja kirjaamalla
+jokainen kameran kirjoitus; kontti piirtää 1–2 kehystä sekunnissa,
+joten selainajo kertoo radan MUODON eikä tiheyttä.*
+
+| 30 Hz, 12 s | ennen | jälkeen |
+|---|---|---|
+| lat-nopeuden suunnanvaihtoja | **2** | **0** |
+| lat-kiihtyvyyden merkinvaihtoja | 4 | 1 (lennon puoliväli) |
+| lng-kiihtyvyyden merkinvaihtoja | 2 | 1 |
+| suurin abs(lat-kiihtyvyys) | **27,98 °/s²** | **0,65 °/s²** |
+| suurin abs(lng-kiihtyvyys) | 29,27 °/s² | 1,25 °/s² |
+| suurin abs(d²ln(alt)/dt²) | 0,038 1/s² | 0,113 1/s² |
+| altitude alku → huippu → loppu | 0,729 → 0,729 (0 %) → 0,292 | 0,729 → 0,923 (35 %) → 0,292 |
+
+Lat-nopeus (°/s) kymmenyksittäin kertoo nykäisyt suoraan:
+
+    ennen   -0,16  -3,76  -0,33  -0,70  -1,20  -1,80  -1,71  -1,36  -0,97  +0,96  -0,88
+    jälkeen -0,01  -0,49  -0,92  -1,28  -1,56  -1,72  -1,73  -1,57  -1,23  -0,71  -0,01
+
+Vanhassa radassa kamera SYÖKSÄHTI etelään heti lähdössä (−3,76 °/s
+10 %:n kohdalla: noston ramppi ajautui sisään 15 %:ssa lentoa) ja
+KÄÄNTYI TAKAISIN POHJOISEEN lopussa (+0,96 °/s 90 %:n kohdalla, kun
+sama ramppi purkautui) — kaksi suunnanvaihtoa juuri lennon päissä,
+täsmälleen se, minkä omistaja näki. Uudessa radassa lat-nopeus nousee
+nollasta yhteen huippuun ja palaa nollaan, eikä vaihda suuntaa
+kertaakaan; suurin kiihtyvyys putosi 43-kertaisesti. Zoomin oma
+kiihtyvyys kolminkertaistui (0,038 → 0,113 1/s²), koska käyrä NYT
+kääntyy kerran (nousu → lasku) siinä missä vanha oli suora liuku; luku
+on yhä murto-osa koko lennon zoomimatkasta (|ln(240/600)| = 0,92), eikä
+se ole silmälle nykäisy vaan se yksi zoomin muutos, jota omistaja pyysi.
+
+Näkyvä leveys (lautayksikköä) kymmenyksittäin:
+600 · 629 · 692 · 750 · 745 · 650 · 520 · 400 · 311 · 258 · 240.
+
+Selainajo (390 × 844): ennen lat-nopeus −0,67 → −2,71 → **+2,17** °/s
+(sama loppukäännös näkyy myös 1,4 kehyksen sekuntivauhdilla, kamera
+palasi 1,5° pohjoiseen viimeisen 1,5 s aikana); jälkeen lat-nopeus
+−1,44 → −2,46 → −0,04 °/s eli aina samaan suuntaan, ja altitude
+0,759 → 0,876 (huippu) → 0,280 eli yksi kaari. Kaappaukset kuudesta
+kohdasta lentoa: `scratchpad/lento/{ennen,jalkeen}-kuva*.png` (ei
+repoon).
+
+Vartijat: tests/pallolauta.test.mjs (suunnitelman muoto 30 näytettä
+sekunnissa: yksi maksimi, monotoninen molemmin puolin, kiihtyvyys
+pieni; kone kameran vaiheella; seuranta ja nosto poistettu),
+tests/lento-ajoitus.test.mjs (ei kuvakorttia lennolla, kaaren yksi
+maksimi), tests/isoisan-valokuvat.test.mjs (kytkentä poissa, taulun
+rivi tallella). `savuke-avauslento --lauta pallo` ennen ja jälkeen
+**6/7** — sama tunnettu punainen P6 (kaupunkilehti aukeaa perillä
+napautuksesta) kuin aiemmissa ajoissa.
 
 **Lepokerros — levossa pallo on yhtä terävä kuin tasokartta (6.9.2026
 iltapäivä, fablemax).** Omistaja: *"kartta oli ennen palloa paljon

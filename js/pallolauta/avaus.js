@@ -7,7 +7,7 @@
  *
  * Avauslennon KOREOGRAFIA — pergamenttiarkki, kamera-ajo rajaukseen,
  * kertojan luenta, matkustamon äänimaisema, repliikin kirjoitus,
- * isoisän valokuva, ohitusnuoli, saapumiskortti ja pöllön kuplat — on
+ * ohitusnuoli, saapumiskortti ja pöllön kuplat — on
  * yhdessä paikassa js/ui.js:ssä (aloituslentoSisalla) kummallekin
  * laudalle. Tämä moduuli on sen LAUDAN OMA OSA, täsmälleen samalla
  * jaolla kuin siirrossa (js/ui.js nappulanKuljettaja,
@@ -50,72 +50,87 @@
  *      kehyksestä, ja käännöksen kesto on nolla (js/pallolauta/siirto.js
  *      KONEEN_KAANNOKSEN_MS). Kone on lentosuunnassa jo ilmestyessään,
  *      ja paksu viiva alkaa kasvaa samalla kehyksellä kuin lento.
- *   3. ISOISÄN KUVA — kortin koko ja reunojen häivytys ovat css
- *      (.lento-valokuva), ei tämän moduulin asia.
+ *   3. ISOISÄN KUVA — kortti oli css:ää (.lento-valokuva), ei tämän
+ *      moduulin asia; omistaja poisti sen avauslennolta kokonaan
+ *      6.9.2026 illalla (ks. alempana).
  *
  * ══════════════════════════════════════════════════════════════════
- * KAMERA SEURAA KONETTA JA ZOOMAA KOKO LENNON AJAN (omistaja 6.9.2026
- * aamupäivä)
+ * KAMERA LENTÄÄ YHDEN KAAREN, EI SEURAA KONEEN NYKÄISYJÄ (omistaja
+ * 6.9.2026 ilta)
  * ══════════════════════════════════════════════════════════════════
  *
- * Sanatarkasti: *"Lentokonekohtauksessa paljon lähempi zoom aste ja
- * kamera seuraa konetta. Kartta myös zoomaa koko ajan pikkuhiljaa
- * lähemmäs konetta. Pallon ei tarvitse siis liikkua lentokohtauksessa."*
+ * Sanatarkasti: *"kartta liikuu siinä liian pikkutarkasti seuraten
+ * koneen alku ja loppu nykäisyjä. kartta saisi lentää yhden tasaisen
+ * reitin ja zoom muutoksen alusta loppuun."*
  *
- * MIKÄ MUUTTUI. Ennen tätä avauslento oli YKSI RAJAUS: kaupunkiparin
- * laatikko (siirto.js lennonRajaus) omalla marginaalillaan
- * (AVAUSLENNON_RAJAUKSEN_MARGINAALI 0,2), ja sen päälle hidas pyörintä
- * (AVAUSLENNON_PYORINTA_AST 5°), jonka kamera teki tavallisena
- * kamera-ajona. Kuva oli siis koko lennon ajan niin kaukana, että
- * molemmat päät mahtuivat siihen — Lontoo → Ateena 1 306 lautayksikköä
- * (39,2°) työpöydällä ja 1 113 (33,4°) puhelimella. Kone oli sen
- * kokoinen kuin kone kartalla on: pieni merkki isolla kartalla.
+ * MISTÄ NYKÄISYT TULIVAT — NELJÄ ERI LIIKETTÄ SAMASSA KUVASSA. Kamera
+ * oli SEURAAJA: se laski joka kehyksellä koneen paikan ja hakeutui
+ * sinne. Summaan tuli siis
  *
- * NYT KUVA ON KONEEN KUVA. Kamera lähtee LÄHTÖKAUPUNGIN yltä
- * (AVAUSLENNON_ALKULEVEYS, 600 lautayksikköä ≈ 18°) ja pitää koneen
- * ruudun keskellä joka kehyksellä: pallon oma pyörintä ei tee mitään,
- * vaan LIIKE SYNTYY KAMERAN SEURANNASTA. Reitin toinen pää ei ole
- * kuvassa, eikä sen tarvitse olla — jälki on jälki, ja se kertoo mistä
- * kone tuli.
+ *   1. KONEEN OMA KÄYRÄ. Kone kulki `hypynVaihe`lla (easeInOutQuad,
+ *      js/siirtokoreografia.js), jonka KIIHTYVYYS hyppää lennon alussa
+ *      nollasta täyteen, kääntyy kerralla puolivälissä ja putoaa
+ *      nollaan lopussa. Ne ovat täsmälleen omistajan näkemät "alku ja
+ *      loppu nykäisyt" — ja kamera toisti ne suurennettuna, koska koko
+ *      kuva liikkui koneen mukana.
+ *   2. SILOTUKSEN JÄLKIJÄTTÖ. Seuranta oli ensimmäisen kertaluvun
+ *      viive (aikavakio 260 ms): se jäi lähdössä jälkeen, kiri kiinni
+ *      keskellä ja viimeisellä kehyksellä kamera napsautettiin koneen
+ *      kohdalle kerralla.
+ *   3. KONEEN NOSTO. Kone nostettiin keskilinjan yläpuolelle
+ *      trapetsilla, joka ajettiin sisään lennon ensimmäisellä ja ulos
+ *      viimeisellä 15 %:lla — oma pikku liikkeensä juuri lennon
+ *      päissä.
+ *   4. KULJETTAJAN OMA KAMERA-AJO. `hyppaa` käynnisti yhä ajon
+ *      kaupunkiparin laatikkoon (siirto.js), ja seuranta pysäytti sen
+ *      seuraavassa kehyksessä.
  *
- * KOLME LUKUA JA KAKSI KÄYRÄÄ:
+ * NYT KAMERA SAA YHDEN SUUNNITELMAN. Lennon alkaessa lasketaan KERRAN
+ * lähtö (paikka, korkeus) ja perillä (paikka, korkeus), ja koko lento
+ * luetaan pelkästä ajasta yhtenä kaarena:
  *
- *   AVAUSLENNON_ALKULEVEYS          näkymän leveys lennon alussa
- *   PALLOLAUDAN_SAAPUMISLEVEYS      näkymän leveys perillä (kamera.js)
- *   AVAUSLENNON_SEURANNAN_VIIVE_MS  seurannan silotus
+ *   PAIKKA   isoympyrää pitkin (`lentokaarenKohta`), vaihe
+ *            `lennonVaihe` = liukuPehmennys eli ease-in-out, jonka
+ *            kiihtyvyys on rajallinen ja vaihtaa merkkiä vain kerran,
+ *            lennon puolivälissä.
+ *   KORKEUS  `lennonKorkeus`: nousu lähtökorkeudesta huippuun
+ *            (AVAUSLENNON_HUIPPULEVEYS) osuudella 0…35 % ja sen
+ *            jälkeen lasku saapumisnäkymään. Molemmat osuudet ovat
+ *            logaritmisia ja samalla ease-in-out-käyrällä, joten
+ *            käyrällä on TÄSMÄLLEEN YKSI MAKSIMI, se on molemmin
+ *            puolin monotoninen ja tasaantuu huipun ja päiden
+ *            ympärillä: yksi zoomin muutos alusta loppuun.
  *
- * Korkeus liukuu alusta loppuun LOGARITMISESTI (silmä lukee zoomista
- * suhteen, ei erotusta) `liukuPehmennys`-käyrällä: pehmeä lähtö, pehmeä
- * pysähdys, välissä lähes tasainen. Paikka silotetaan eksponentiaalisesti
- * kohti koneen omaa lat/lng:tä, jottei kuva nykäise, jos pelaaja on
- * ehtinyt vetää palloa ennen lähtöä — ja viimeisellä kehyksellä kamera
- * asetetaan TÄSMÄLLEEN koneen kohdalle, ettei silotuksen jälkijättö jää
- * näkyviin laskeutumiseen.
+ * KONE PIIRTYY SUUNNITELMAN PÄÄLLE, EI TOISIN PÄIN. Kone
+ * (js/pallolauta/siirto.js) ja paksu punainen jälki lukevat SAMAN
+ * vaiheen `lennonVaihe`, joten kone on joka kehyksellä täsmälleen
+ * siinä pisteessä, jota kamera katsoo — kaaren oma korkeus nostaa sen
+ * hitusen keskilinjan yläpuolelle, ja muuta suhteellista liikettä
+ * kuvassa ei ole. Kuljettaja ei myöskään aja omaa kameraansa:
+ * `omaKamera` kertoo, että kohtaus vastaa kamerasta.
  *
- * KONE EI KUITENKAAN OLE TASAN KESKELLÄ. Isoisän valokuva kelluu
- * kuvan vasemmassa laidassa ja on kapealla ruudulla 37,5 vw leveä, eli
- * se ylittää keskiviivan: keskellä lentävä kone jäisi kortin taakse
- * koko lennoksi (mitattu 390 × 844). Kamera tähtää siksi
- * AVAUSLENNON_KONEEN_NOSTOn verran koneen eteläpuolelle — kone ratsastaa
- * hitusen keskilinjan yläpuolella, ja kuvaan jää enemmän sitä maata,
- * jota kohti se lentää. Nosto ajetaan sisään ja ulos trapetsilla
- * (AVAUSLENNON_NOSTON_RAMPPI), joten kamera ei loikkaa arkin väistyessä
- * eikä laskeutuessa.
+ * KONEEN NOSTO ON POISSA. Se oli olemassa isoisän valokuvakorttia
+ * varten (kone ei saanut jäädä kortin taakse). Omistaja poisti kortin
+ * ensimmäiseltä lennolta samana iltana (*"ens. lentokohtauksesta, ota
+ * isoisän kuva pois"*, js/ui.js aloituslentoSisalla), joten kamera
+ * katsoo taas suoraan reittiä.
  *
  * LOPPUKORKEUS ON SAAPUMISNÄKYMÄ, EIKÄ SIIRTYMÄ HYPI. Laskeutumisessa
  * kuljettaja ajaa kameran kohdekaupunkiin saapumisnäkymään
  * (js/pallolauta/siirto.js laske → kamera.kotiin,
- * PALLOLAUDAN_SAAPUMISLEVEYS). Lennon zoomi päättyy TÄSMÄLLEEN samaan
- * korkeuteen samassa paikassa, joten tuo ajo on nolla-ajo: kamera.js
- * tunnistaa liikkumattoman ajon ja kirjoittaa näkymän kerralla.
+ * PALLOLAUDAN_SAAPUMISLEVEYS). Suunnitelman viimeinen kehys on
+ * TÄSMÄLLEEN sama paikka ja sama korkeus, joten tuo ajo on nolla-ajo:
+ * kamera.js tunnistaa liikkumattoman ajon ja kirjoittaa näkymän
+ * kerralla.
  *
- * LÄHIN KORKEUS ON LAATTOJEN, EI TÄMÄN MODUULIN. Molemmat päät
- * lasketaan `kamera.kameranKohde`lla, joka sitoo korkeuden laitteen ja
- * laattaluettelon syvimmän tason rajaan (kamera.js lahinKorkeus). Jos
- * raja purisi, lento zoomaa siihen asti eikä sen läpi.
+ * LÄHIN KORKEUS ON LAATTOJEN, EI TÄMÄN MODUULIN. Kaikki kolme
+ * korkeutta lasketaan `kamera.kameranKohde`lla, joka sitoo korkeuden
+ * laitteen ja laattaluettelon syvimmän tason rajaan (kamera.js
+ * lahinKorkeus). Jos raja purisi, lento zoomaa siihen asti eikä sen
+ * läpi.
  *
  * REDUCED MOTION: KAMERA HYPPÄÄ KOHTEESEEN. Kone ei lennä lainkaan
- * (siirto.js hyppaa), joten seurannallakaan ei ole mitään seurattavaa:
+ * (siirto.js hyppaa), joten suunnitelmallakaan ei ole mitään ajettavaa:
  * `rajaus` on silloin suoraan kohdekaupungin saapumisnäkymä, ja ui.js
  * asettaa sen kerralla arkin takana.
  *
@@ -128,8 +143,7 @@
 
 import { esilataaLentoreitti, pakotaPallonLaatu } from '../pallo.js';
 import { pixelOf } from '../rules.js';
-import { hypynVaihe } from '../siirtokoreografia.js';
-import { PALLOLAUDAN_SAAPUMISLEVEYS, asteetLeveydesta, leveysKorkeudesta } from './kamera.js';
+import { PALLOLAUDAN_SAAPUMISLEVEYS } from './kamera.js';
 import { REITIN_KORKEUS, lentokaarenKohta } from './reitit.js';
 
 /**
@@ -140,45 +154,40 @@ import { REITIN_KORKEUS, lentokaarenKohta } from './reitit.js';
  * Lontoo → Ateena -lennolle 1 306 lautayksikköä työpöydällä (39,2°) ja
  * 1 113 puhelimella (33,4°) — molemmat päät kuvassa, kone pieni.
  * Puolittaminen on juuri se "paljon lähempi": 600 yksikköä näyttää
- * lähtökaupungin ympäristön (Etelä-Englanti ja Kanaali kokonaan), ja
- * koska kamera seuraa konetta, kuvaan ei tarvitse mahtua muuta.
- * Loppuleveys on saapumisnäkymä 240, joten lento zoomaa 2,5-kertaisesti
- * — tasainen, hidas lähentyminen koko lennon mitalla (4,8–20 s).
+ * lähtökaupungin ympäristön (Etelä-Englanti ja Kanaali kokonaan), eikä
+ * kuvaan tarvitse mahtua muuta — reitin toinen pää tulee vastaan
+ * matkalla. Loppuleveys on saapumisnäkymä 240, joten lento zoomaa
+ * kaikkiaan 2,5-kertaisesti (huipulta 3,2-kertaisesti) — yksi zoomin
+ * muutos koko lennon mitalla (4,8–20 s).
  */
 export const AVAUSLENNON_ALKULEVEYS = 600;
 /**
- * SEURANNAN SILOTUS (ms): kamera hakeutuu koneen kohdalle
- * eksponentiaalisesti tällä aikavakiolla. Kone itse kulkee jo pehmeällä
- * käyrällä (hypynVaihe), joten silotus ei ole liikkeen vaan LÄHDÖN
- * takia: jos pelaaja on vetänyt palloa ennen koneen lähtöä, kamera
- * liukuu koneen päälle eikä loikkaa. Lyhyt aikavakio pitää koneen
- * käytännössä ruudun keskellä (jälkijättö alle koneen levyisen).
- */
-export const AVAUSLENNON_SEURANNAN_VIIVE_MS = 260;
-/**
- * KONE EI RIDE RUUDUN KESKELLÄ VAAN HITUSEN SEN YLÄPUOLELLA — osuus
- * näkyvän alueen KORKEUDESTA.
+ * NÄKYMÄN LEVEYS LENNON HUIPULLA (lautayksikköä ruudun leveydellä;
+ * 760 ≈ 22,8°).
  *
- * SYY ON ISOISÄN VALOKUVA. Kortti (css .lento-valokuva) on kiinni
- * ruudun vasemmassa laidassa ja kelluu repliikin yläpuolella; kapealla
- * ruudulla se on 37,5 vw leveä, eli sen oikea reuna ylittää ruudun
- * keskiviivan. Mitattu Chromiumilla 6.9.2026 (390 × 844, dpr 3): kortti
- * peitti x 30…215, y 395…525, ja seuraava kamera piti konetta
- * täsmälleen kohdassa (195, 447) — kone oli kortin TAKANA koko lennon.
- * 0,15 nostaa sen 127 px ylemmäs puhelimella ja 120 px työpöydällä
- * (1280 × 800), eli kortin yläpuolelle kummallakin — ja samalla kuvaan
- * jää enemmän sitä maata, jota kohti kone lentää.
+ * KAMERA NOUSEE KONEEN MUKANA JA LASKEUTUU SEN MUKANA (omistaja
+ * 6.9.2026 ilta: *"kartta saisi lentää yhden tasaisen reitin ja zoom
+ * muutoksen alusta loppuun"*). Lennolla on siis sama profiili kuin
+ * koneella: nousu lähtökaupungin yltä (600) hitusen ylemmäs, tasainen
+ * matkalento ja lasku saapumisnäkymään (240).
+ *
+ * MIKSI 760 EIKÄ ENEMPÄÄ. Nousu on 1,27-kertainen eli neljännes
+ * ulospäin: sen verran, että kuvaan tulee matkan tuntu ja reitin
+ * edestä näkyy enemmän maata, muttei niin paljon, että omistajan
+ * samana aamuna tilaama *"paljon lähempi zoom aste"* katoaisi — 760 on
+ * yhä selvästi alle vanhan kaupunkiparin rajauksen (1 113–1 306).
+ * Huipun jälkeen jäljellä on 3,2-kertainen lähentyminen, joka on koko
+ * lennon näkyvin liike.
  */
-export const AVAUSLENNON_KONEEN_NOSTO = 0.15;
+export const AVAUSLENNON_HUIPPULEVEYS = 760;
 /**
- * Noston sisään- ja ulosajo lennon osuutena. Nosto EI saa olla päällä
- * lennon päissä: alussa kamera on jo rajauksessa (lähtökaupunki keskellä)
- * ja loikkaisi noston verran arkin väistyessä, ja lopussa kameran on
- * päädyttävä TÄSMÄLLEEN saapumisnäkymään, jottei laskeutumisen ajo
- * (siirto.js laske → kamera.kotiin) siirrä kuvaa. Trapetsi nousee ja
- * laskee samalla pehmennyksellä kuin zoomi.
+ * MILLOIN KAAREN HUIPPU SAAVUTETAAN (osuus lennosta). Nousu on lennon
+ * ensimmäinen kolmannes ja lasku loput; kummankin osuuden oma
+ * ease-in-out (liukuPehmennys) tasaa liikkeen huipun molemmin puolin,
+ * joten noin 35–65 %:n kohdalla kuva on käytännössä tasainen — juuri se
+ * "tasainen reitti", jota omistaja pyysi.
  */
-export const AVAUSLENNON_NOSTON_RAMPPI = 0.15;
+export const AVAUSLENNON_HUIPUN_KOHTA = 0.35;
 /**
  * PAKSU PUNAINEN VIIVA KUTEN ETUSIVULLA (omistaja 5.9.2026: *"lentokone
  * saisi tehdä saman paksun viivan kuin etusivulla"*). Etusivun viiva on
@@ -221,21 +230,67 @@ export function liukuPehmennys(t) {
 }
 
 /**
- * Koneen noston trapetsi: nolla lennon päissä, täysi keskellä. Sama
- * pehmennys molemmissa päissä, joten nosto ei nytkähdä kumpaankaan
- * suuntaan (ks. AVAUSLENNON_NOSTON_RAMPPI).
+ * LENNON YKSI VAIHE. Kamera, kone ja paksu punainen jälki lukevat
+ * TÄSMÄLLEEN tämän käyrän samasta kellosta, joten kone on aina siinä
+ * pisteessä, jota kamera katsoo, ja jäljen kärki koneen alla.
+ *
+ * Käyrä on `liukuPehmennys` (smoothstep) eikä siirron `hypynVaihe`
+ * (easeInOutQuad): jälkimmäisen KIIHTYVYYS hyppää nollasta täyteen
+ * lennon alussa ja putoaa nollaan lopussa, ja juuri ne nykäisyt kamera
+ * ennen toisti (omistaja 6.9.2026 ilta). Smoothstepin kiihtyvyys on
+ * nolla molemmissa päissä ja vaihtaa merkkiä vain kerran, lennon
+ * puolivälissä.
  */
-export function nostonOsuus(t, ramppi = AVAUSLENNON_NOSTON_RAMPPI) {
-  if (!(t > 0) || t >= 1) return 0;
-  return Math.min(liukuPehmennys(t / ramppi), liukuPehmennys((1 - t) / ramppi));
+export function lennonVaihe(t) {
+  return liukuPehmennys(t);
 }
 
-/** Lyhin kierto pituuspiirin suunnassa (−180…180) — kuten kamera.js. */
-function lyhinLng(alusta, kohteeseen) {
-  let d = kohteeseen - alusta;
-  while (d > 180) d -= 360;
-  while (d < -180) d += 360;
-  return d;
+/** Logaritminen liuku a → b osuudella e: silmä lukee zoomista suhteen. */
+function korkeusLiuku(a, b, e) {
+  return Math.exp(Math.log(a) + (Math.log(b) - Math.log(a)) * e);
+}
+
+/**
+ * KAMERAN KORKEUS LENNON OSUUDELLA t — YKSI KAARI, YKSI HUIPPU.
+ *
+ * Nousu `alku` → `huippu` osuudella 0…`huipunKohta` ja lasku `huippu` →
+ * `loppu` siitä maaliin, kumpikin logaritmisena liukuna omalla
+ * ease-in-out-käyrällään. Käyrällä on siis täsmälleen yksi maksimi
+ * (huipunKohta), se on monotoninen molemmin puolin, ja koska
+ * pehmennyksen derivaatta on nolla kummankin osuuden päissä, kuva on
+ * tasainen sekä huipulla että lennon päissä — ei nykäisyä siirryttäessä
+ * noususta laskuun eikä laskeuduttaessa saapumisnäkymään.
+ */
+export function lennonKorkeus(t, {
+  alku, huippu, loppu, huipunKohta = AVAUSLENNON_HUIPUN_KOHTA,
+}) {
+  const x = Math.max(0, Math.min(1, t));
+  const k = Math.max(0.01, Math.min(0.99, huipunKohta));
+  if (x <= k) return korkeusLiuku(alku, huippu, liukuPehmennys(x / k));
+  return korkeusLiuku(huippu, loppu, liukuPehmennys((x - k) / (1 - k)));
+}
+
+/**
+ * KOKO LENNON KAMERASUUNNITELMA YHTENÄ FUNKTIONA: t (0…1) →
+ * { lat, lng, altitude, e }. Paikka on isoympyrän piste vaiheella
+ * `lennonVaihe` ja korkeus `lennonKorkeus` — ei seurantaa, ei
+ * silotusta, ei kehyskohtaista kohdetta, joten kamera ei voi nykäistä
+ * koneen perässä (omistaja 6.9.2026 ilta).
+ *
+ * `korkeudet` on { alku, huippu, loppu } kameran omina korkeuksina
+ * (kamera.kameranKohde on jo sitonut ne laattojen tarkkuusrajaan).
+ */
+export function lennonSuunnitelma(kaari, korkeudet) {
+  return (t) => {
+    const e = lennonVaihe(t);
+    const kohta = lentokaarenKohta(kaari, e);
+    return {
+      lat: Math.max(-89.5, Math.min(89.5, kohta.lat)),
+      lng: kohta.lng,
+      altitude: lennonKorkeus(t, korkeudet),
+      e,
+    };
+  };
 }
 
 /**
@@ -251,7 +306,7 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
   let purettu = false;
   let jalkiKehys = 0;
   let laatuPyydetty = false;
-  let seuranta = null; // { kehys, maali } kesken olevalle seurannalle
+  let kameraAjo = null; // { kehys, maali } kesken olevalle kamerasuunnitelmalle
 
   /**
    * Kameran näkymä kaupungin yllä annetulla leveydellä:
@@ -261,20 +316,12 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
    */
   const nakyma = (pos, leveys) => lauta.kamera.kameranKohde({ ...pixelOf(board, pos), leveys });
 
-  /** Kotelon kuvasuhde (leveys / korkeus) — luetaan kutsuttaessa. */
-  const kuvasuhde = () => Math.max(
-    0.01, (lauta.kotelo?.clientWidth || 1) / (lauta.kotelo?.clientHeight || 1),
-  );
-  /** Näkyvän alueen KORKEUS asteina annetulla kameran korkeudella. */
-  const nakyvaKorkeusAst = (altitude) => {
-    const suhde = kuvasuhde();
-    return asteetLeveydesta(leveysKorkeudesta(altitude, { kuvasuhde: suhde })) / suhde;
-  };
-
   /*
    * LENTO ALKAA LÄHTÖKAUPUNGIN YLTÄ, EI KAUPUNKIPARIN LAATIKOSTA
-   * (omistaja 6.9.2026). Kamera seuraa konetta, joten rajaus on koneen
-   * lähtöpaikka ja lennon alkuleveys — laatikkoa ei enää tarvita.
+   * (omistaja 6.9.2026). Kamerasuunnitelma lähtee koneen lähtöpaikasta
+   * lennon alkuleveydellä — laatikkoa ei enää tarvita, ja koska tämä on
+   * suunnitelman ensimmäinen kehys, arkin väistyessä ei ole mitään
+   * loikkaa.
    *
    * Reduced motionissa kone ei lennä lainkaan, joten kamera hyppää
    * suoraan kohteeseen: rajaus on silloin kohdekaupungin
@@ -313,93 +360,68 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
     return pisteet;
   };
 
-  /** Seuranta seis; ohituksessa kamera viedään samalla maaliin. */
-  const paataSeuranta = (maaliin = false) => {
-    if (!seuranta) return;
-    const oma = seuranta;
-    seuranta = null;
+  /** Kamerasuunnitelma seis; ohituksessa kamera viedään samalla maaliin. */
+  const paataKameraAjo = (maaliin = false) => {
+    if (!kameraAjo) return;
+    const oma = kameraAjo;
+    kameraAjo = null;
     cancelAnimationFrame(oma.kehys);
     if (maaliin && oma.maali) lauta.pallo.pointOfView(oma.maali, 0);
   };
 
   /*
    * ══════════════════════════════════════════════════════════════════
-   * KAMERA SEURAA KONETTA JA ZOOMAA (omistaja 6.9.2026)
+   * YKSI KAARI ALUSTA LOPPUUN (omistaja 6.9.2026 ilta)
    * ══════════════════════════════════════════════════════════════════
    *
-   * Oma rAF-silmukkansa eikä kamera-ajo: ajo on matka pisteestä toiseen
-   * (kohde tiedetään etukäteen), tämä on SEURANTA, jonka kohde lasketaan
-   * joka kehyksellä koneen omasta kellosta ja omasta kaaresta
-   * (hypynVaihe + lentokaarenKohta — samat kaksi kaavaa kuin koneella ja
-   * jäljellä). Kolme yhtä aikaa piirtyvää asiaa, yksi totuus.
+   * Oma rAF-silmukkansa eikä kamera.ajaKamera, koska tavallinen ajo on
+   * suora liuku pisteestä toiseen: tässä paikka kulkee ISOYMPYRÄÄ ja
+   * korkeus käy huipun kautta. Silmukka ei kuitenkaan enää SEURAA
+   * mitään — se lukee kellosta osuuden ja kirjoittaa suunnitelman
+   * (`lennonSuunnitelma`) arvon sellaisenaan, joten kameran rata on
+   * päätetty kokonaan ennen ensimmäistä kehystä eikä kehysvälillä ole
+   * liikkeeseen mitään vaikutusta.
    *
-   * Kuljettajan oma kamera-ajo (siirto.js hyppaa, LENNON_KAMERA_MS)
-   * pysäytetään samassa kehyksessä: se ajaisi kaupunkiparin laatikkoon,
-   * jota avauksessa ei enää käytetä.
+   * KOLME KORKEUTTA LASKETAAN KERRAN: lähtö (AVAUSLENNON_ALKULEVEYS),
+   * huippu (AVAUSLENNON_HUIPPULEVEYS) ja saapumisnäkymä
+   * (PALLOLAUDAN_SAAPUMISLEVEYS) — kaikki kameran omalla kaavalla, joka
+   * sitoo ne laattojen tarkkuusrajaan.
    *
    * ELE EI KILPAILE TÄMÄN KANSSA. Tavallinen kamera-ajo pysähtyy
    * sormeen (kamera.js kuuntelee koteloa), mutta lennon ajan kotelon
    * päällä on koko ruudun lentokalvo (js/ui.js `.flight-overlay`), joka
    * ottaa napautuksen ja OHITTAA lennon. Pallo ei siis ole vedettävissä
-   * lennon aikana, eikä seuranta voi jäädä tappelemaan pelaajan kanssa;
-   * ohitus vie kameran maaliin (`paataSeuranta(true)`).
+   * lennon aikana; ohitus vie kameran maaliin (`paataKameraAjo(true)`).
    */
-  const seuraaKonetta = (kaari, kesto, alkuhetki) => {
+  const ajaKamerasuunnitelma = (kaari, kesto, alkuhetki) => {
     const kamera = lauta.kamera;
     kamera.pysaytaKameraAjo();
     const alkuKorkeus = nakyma(lahtoPos, AVAUSLENNON_ALKULEVEYS)?.altitude;
+    const huippuKorkeus = nakyma(lahtoPos, AVAUSLENNON_HUIPPULEVEYS)?.altitude;
     const maali = nakyma(kohdePos, PALLOLAUDAN_SAAPUMISLEVEYS);
-    if (!(alkuKorkeus > 0) || !(maali?.altitude > 0)) return;
-    const nyt = kamera.kameranTila();
-    let lat = Number.isFinite(nyt?.lat) ? nyt.lat : kaari.alku.lat;
-    let lng = Number.isFinite(nyt?.lng) ? nyt.lng : kaari.alku.lng;
-    let edellinen = alkuhetki;
+    if (!(alkuKorkeus > 0) || !(huippuKorkeus > 0) || !(maali?.altitude > 0)) return;
+    /*
+     * HUIPPU ON AINA YLIN. Jos laite rajaisi korkeudet niin, ettei
+     * huippu jäisi päiden yläpuolelle, kaari menettäisi maksiminsa ja
+     * zoomi kääntyisi kesken lennon; Math.max pitää käyrän muodon.
+     */
+    const suunnitelma = lennonSuunnitelma(kaari, {
+      alku: alkuKorkeus,
+      huippu: Math.max(huippuKorkeus, alkuKorkeus, maali.altitude),
+      loppu: maali.altitude,
+    });
     const oma = { kehys: 0, maali };
-    seuranta = oma;
+    kameraAjo = oma;
     const askel = (hetki) => {
-      if (seuranta !== oma) return;
-      if (purettu || ui.dead) { paataSeuranta(); return; }
+      if (kameraAjo !== oma) return;
+      if (purettu || ui.dead) { paataKameraAjo(); return; }
       const t = Math.min(1, (hetki - alkuhetki) / Math.max(1, kesto));
-      const kohta = lentokaarenKohta(kaari, hypynVaihe(t).e);
-      /*
-       * KEHYSVÄLIÄ EI KATKAISTA (toisin kuin aloitusvalinnan
-       * pyörinnässä, lauta.js): siellä dt KERTOO liikkeen, joten pitkä
-       * väli hypäyttäisi palloa; tässä dt vain kertoo, kuinka pitkälle
-       * kamera ehtii koneen perään, ja eksponentti kyllästyy itsestään
-       * (pitkä väli → osuus ≈ 1 → kamera napsahtaa koneen kohdalle).
-       * Katkaisu tekisi päinvastoin: hitaalla kehysvälillä jälkijättö
-       * kasvaisi joka kehyksellä. Mitattu kontin ohjelmistorasteroijalla
-       * 6.9.2026 (kehysväli ~250 ms): katkaisun kanssa kone oli
-       * lennon vauhdikkaimmassa kohdassa 186 px sivussa kotelon
-       * keskeltä; ilman katkaisua sama silmukka pitää koneen
-       * enimmillään 37 px:n päässä keskipisteestä. Oikealla laitteella
-       * (60 kehystä sekunnissa) ero on olematon — jälkijättö on siellä
-       * aikavakion mittainen kummallakin tavalla.
-       */
-      const dt = Math.max(0, hetki - edellinen);
-      edellinen = hetki;
-      if (t >= 1) {
-        lat = kohta.lat;
-        lng = kohta.lng;
-      } else {
-        const osuus = 1 - Math.exp(-dt / AVAUSLENNON_SEURANNAN_VIIVE_MS);
-        lat += (kohta.lat - lat) * osuus;
-        lng += lyhinLng(lng, kohta.lng) * osuus;
-      }
-      const e = liukuPehmennys(t);
-      const altitude = Math.exp(
-        Math.log(alkuKorkeus) + (Math.log(maali.altitude) - Math.log(alkuKorkeus)) * e,
+      const kohta = suunnitelma(t);
+      lauta.pallo.pointOfView(
+        { lat: kohta.lat, lng: kohta.lng, altitude: kohta.altitude }, 0,
       );
-      /*
-       * NOSTO KIRJOITETAAN VASTA TÄSSÄ, EI SILOTUKSEN TILAAN. Silotus
-       * seuraa konetta; nosto on kuvan rajaus, ja koska se lisätään
-       * vasta kirjoitettaessa, viimeinen kehys (t = 1, nosto 0) osuu
-       * täsmälleen saapumisnäkymään.
-       */
-      const nosto = nostonOsuus(t) * AVAUSLENNON_KONEEN_NOSTO * nakyvaKorkeusAst(altitude);
-      lauta.pallo.pointOfView({ lat: Math.max(-89.5, Math.min(89.5, lat - nosto)), lng, altitude }, 0);
       if (t < 1) { oma.kehys = requestAnimationFrame(askel); return; }
-      seuranta = null;
+      kameraAjo = null;
     };
     lauta.heraa();
     oma.kehys = requestAnimationFrame(askel);
@@ -492,7 +514,14 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
       // Kamera on nyt rajauksessa: nimet ladotaan tähän kuvaan heti
       // eikä vasta lepoviiveen päästä, koska arkki väistyy pian.
       lauta.ladoHeti();
-      kuljettaja = ui.nappulanKuljettaja(ui.game.player, { lento: true });
+      /*
+       * KOHTAUS VASTAA KAMERASTA (`omaKamera`). Ilman lippua kuljettaja
+       * käynnistäisi lähdössä oman ajonsa kaupunkiparin laatikkoon
+       * (siirto.js hyppaa, LENNON_KAMERA_MS) — ajo, joka ennen
+       * pysäytettiin heti seuraavassa kehyksessä ja joka ehti sitä
+       * ennen nykäistä kuvaa.
+       */
+      kuljettaja = ui.nappulanKuljettaja(ui.game.player, { lento: true, omaKamera: true });
       kuljettaja.nosta();
       /*
        * KONE KIITORADALLE JO LENTOSUUNNASSA (omistaja 5.9.2026 klo
@@ -510,10 +539,16 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
       const kaari = lentokaari();
       const paksuus = AVAUSLENNON_VIIVAN_PX;
       const alkuhetki = performance.now();
-      const perilla = kuljettaja.hyppaa(lahtoPos, kohdePos, kesto);
+      /*
+       * KONE KULKEE KAMERAN VAIHEELLA (`lennonVaihe`) eikä siirron
+       * omalla hypynVaiheella: kone ja kamera ovat silloin samassa
+       * pisteessä joka kehyksellä eikä kuvassa ole suhteellista
+       * liikettä (omistaja 6.9.2026 ilta).
+       */
+      const perilla = kuljettaja.hyppaa(lahtoPos, kohdePos, kesto, { vaihe: lennonVaihe });
 
-      // Kamera koneen perään samasta kellosta ja samasta kaaresta.
-      if (!ui.reducedMotion && kaari) seuraaKonetta(kaari, kesto, alkuhetki);
+      // Kamera samasta kellosta ja samasta kaaresta yhtenä suunnitelmana.
+      if (!ui.reducedMotion && kaari) ajaKamerasuunnitelma(kaari, kesto, alkuhetki);
 
       /*
        * ══════════════════════════════════════════════════════════════
@@ -521,8 +556,8 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
        * ══════════════════════════════════════════════════════════════
        *
        * Sanatarkasti: *"lentokone saisi tehdä saman paksun viivan kuin
-       * etusivulla."* Jälki kasvaa samasta kellosta kuin kone
-       * (hypynVaihe) ja samalla kaarella (reitit.js lentokaarenKohta),
+       * etusivulla."* Jälki kasvaa samasta kellosta kuin kone ja kamera
+       * (lennonVaihe) ja samalla kaarella (reitit.js lentokaarenKohta),
        * joten viivan kärki on koneen alla koko lennon. Reduced motion:
        * kone ei lennä lainkaan, joten jälki piirretään kerralla
        * valmiiksi.
@@ -546,11 +581,11 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
         // kerros on olemassa samalla hetkellä kuin kone lähtee
         // (omistaja 5.9.2026: *"lehtää heti … ja jättää paksun punaisen
         // viivan"*).
-        piirraJalki(hypynVaihe(0).e);
+        piirraJalki(lennonVaihe(0));
         const askel = (hetki) => {
           if (purettu || ui.dead) return;
           const t = Math.min(1, (hetki - alkuhetki) / Math.max(1, kesto));
-          piirraJalki(hypynVaihe(t).e);
+          piirraJalki(lennonVaihe(t));
           jalkiKehys = t < 1 ? requestAnimationFrame(askel) : 0;
         };
         jalkiKehys = requestAnimationFrame(askel);
@@ -561,15 +596,16 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
        * `ohitaLento` vie lennon animaatiot loppuun kutsulla `finish()`;
        * pallolla lento on rAF-silmukka, ja sen loppuun vienti on
        * kuljettajan `paata()` — jäljen sama loppuun vienti, ettei viiva
-       * jäisi kasvamaan jo perillä olevan koneen perään, ja kameran
-       * seurannan vienti maaliin, ettei kuva jää puoliväliin reittiä.
+       * jäisi kasvamaan jo perillä olevan koneen perään, ja
+       * kamerasuunnitelman vienti maaliin, ettei kuva jää puoliväliin
+       * reittiä.
        */
       return {
         animaatiot: [{
           finish: () => {
             paataJalki();
             kuljettaja?.paata?.();
-            paataSeuranta(true);
+            paataKameraAjo(true);
           },
         }],
         perilla,
@@ -591,10 +627,10 @@ export function luoAloituslennonKohtaus({ ui, lauta, lahto, kohde }) {
       cancelAnimationFrame(jalkiKehys);
       jalkiKehys = 0;
       lauta.reitit.jalki(null);
-      // Seuranta seis ennen laskeutumista: kamera on jo saapumisnäkymässä
-      // (sama korkeus ja sama paikka), joten kuljettajan `laske()`:n ajo
-      // on nolla-ajo eikä siirtymä hypi.
-      paataSeuranta(true);
+      // Kamerasuunnitelma seis ennen laskeutumista: kamera on jo
+      // saapumisnäkymässä (sama korkeus ja sama paikka), joten
+      // kuljettajan `laske()`:n ajo on nolla-ajo eikä siirtymä hypi.
+      paataKameraAjo(true);
       // Kone pois ja kamera sukeltaa kohdekaupunkiin (siirto.js laske).
       kuljettaja?.laske();
       kuljettaja = null;

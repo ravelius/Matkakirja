@@ -328,8 +328,12 @@ test('lentokohtaus ei sumenna karttaa', () => {
   assert.match(kalvo, /background: none;/);
   // Pallolaudan harso on poistettu kokonaan (js/pallolauta/lauta.js).
   assert.doesNotMatch(CSS, /^\.pallolauta-harso[\s.,{]/m, 'pallon lentoharso on palannut');
-  // Kortti, vinjetti ja nuoli ovat peittävyyttä ja maskia, eivät suodatinta.
-  for (const valitsin of ['.lento-valokuva \{', '.lento-valokuva img \{', '.flight-eteen \{']) {
+  /*
+   * Vinjetti ja nuoli ovat peittävyyttä, eivät suodatinta. Isoisän
+   * valokuvakortti oli tässä listassa kolmantena; omistaja poisti sen
+   * lennolta 6.9.2026 illalla (oma vartionsa alempana).
+   */
+  for (const valitsin of ['.lento-vinjetti \{', '.flight-eteen \{']) {
     const saanto = CSS.match(new RegExp(`${valitsin}[^}]*\\}`))[0];
     assert.doesNotMatch(saanto, /filter:/, `${valitsin} käyttää suodatinta`);
   }
@@ -645,4 +649,60 @@ test('avausanimaatio ei toistu joka piirrossa', () => {
   // Peruutus palauttaa myös julisteen kokonaan näkyviin (pelin reset).
   assert.match(UI, / {2}peruAvausjuliste\(\) \{[\s\S]*?classList\.remove\('avaus-kesken', 'avaus-harso'\)/,
     'peruutus jättäisi julisteen piiloon');
+});
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * AVAUSLENTO 6.9.2026 ILTANA: EI ISOISÄN KUVAA, YKSI KAARI
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistaja iPadilta, sanatarkasti: *"ens. lentokohtauksesta, ota
+ * isoisän kuva pois. kartta liikuu siinä liian pikkutarkasti seuraten
+ * koneen alku ja loppu nykäisyjä. kartta saisi lentää yhden tasaisen
+ * reitin ja zoom muutoksen alusta loppuun."*
+ *
+ * Kumpikaan ei näkyisi virheenä jos se katoaisi: kortti vain palaisi
+ * ruudulle ja kamera alkaisi taas jahdata konetta. Siksi molemmat
+ * vartioidaan lähdekoodista, kuten muutkin lennon ajoitukset.
+ */
+test('avauslennolla ei ole isoisän valokuvaa (omistaja 6.9.2026 ilta)', () => {
+  const kohtaus = UI.slice(UI.indexOf('async aloituslentoSisalla'));
+  const runko = kohtaus.slice(0, kohtaus.indexOf('naytaSaapumiskortti'));
+  assert.doesNotMatch(runko, /html\('button', 'lento-valokuva'\)/, 'kortti on palannut lennolle');
+  assert.doesNotMatch(runko, /'lento-valokuvateksti'/, 'kortin kuvateksti on palannut');
+  assert.doesNotMatch(runko, /ISOISAN_VALOKUVAT/, 'lentokohtaus lukee yhä isoisän taulua');
+  assert.doesNotMatch(CSS, /^\.lento-valokuva[\s.,:{]/m, 'kortin tyylit ovat palanneet');
+  // Vinjetti ja nuoli jäivät, eivätkä nekään saa tuoda suodatinta.
+  for (const valitsin of ['.lento-vinjetti', '.flight-eteen']) {
+    const saanto = CSS.match(new RegExp(`\\${valitsin} \\{[^}]*\\}`))[0];
+    assert.doesNotMatch(saanto, /filter:/, `${valitsin} käyttää suodatinta`);
+  }
+});
+
+test('avauslennon kamera ajaa yhden kaaren: yksi maksimi, monotoninen molemmin puolin', async () => {
+  const { lennonKorkeus, lennonSuunnitelma, AVAUSLENNON_HUIPUN_KOHTA } = await import('../js/pallolauta/avaus.js');
+  // Kolme korkeutta kuten pelissä (lähtö 600, huippu 760, saapuminen
+  // 240 lautayksikköä puhelimen kuvasuhteella).
+  const korkeudet = { alku: 0.34, huippu: 0.43, loppu: 0.135 };
+  const naytteita = 361; // 12 s × 30 näytettä sekunnissa
+  const y = [];
+  for (let i = 0; i < naytteita; i += 1) y.push(lennonKorkeus(i / (naytteita - 1), korkeudet));
+  let huipulla = 0;
+  let vaihtoja = 0;
+  for (let i = 1; i < y.length; i += 1) {
+    if (y[i] > y[huipulla]) huipulla = i;
+    const d = y[i] - y[i - 1];
+    const edellinen = i > 1 ? y[i - 1] - y[i - 2] : d;
+    if (d * edellinen < 0) vaihtoja += 1;
+  }
+  assert.equal(vaihtoja, 1, 'zoom kääntyy useammin kuin kerran');
+  assert.ok(Math.abs(huipulla / (naytteita - 1) - AVAUSLENNON_HUIPUN_KOHTA) < 0.02);
+  for (let i = 1; i <= huipulla; i += 1) assert.ok(y[i] >= y[i - 1], 'nousu ei ole monotoninen');
+  for (let i = huipulla + 1; i < y.length; i += 1) assert.ok(y[i] <= y[i - 1], 'lasku ei ole monotoninen');
+  // Suunnitelma alkaa lähdöstä ja päättyy kohteeseen — ei jälkijättöä.
+  const kaari = { alku: { lat: 51.5, lng: -0.13 }, loppu: { lat: 37.98, lng: 23.73 }, korkeus: 0.067 };
+  const suunnitelma = lennonSuunnitelma(kaari, korkeudet);
+  assert.ok(Math.abs(suunnitelma(0).lat - kaari.alku.lat) < 1e-9);
+  assert.ok(Math.abs(suunnitelma(1).lat - kaari.loppu.lat) < 1e-9);
+  assert.ok(Math.abs(suunnitelma(1).altitude - korkeudet.loppu) < 1e-12);
 });

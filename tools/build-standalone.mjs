@@ -470,7 +470,14 @@ const MODULES = [
    */
   'js/puhe.js',
   'js/kehittajan-voimat.js',
-  'js/isoisan-valokuvat.js',
+  /*
+   * js/isoisan-valokuvat.js OLI TÄSSÄ. Ainoa niputettu tuoja oli
+   * js/ui.js, joka näytti taulun `lento`-kuvan avauslennolla; omistaja
+   * poisti kortin 6.9.2026 illalla (*"ens. lentokohtauksesta, ota
+   * isoisän kuva pois"*). Jäljellä olevat tuojat — js/aikajana.js ja
+   * etusivun pallon kuvapakka — eivät kumpikaan ole niputuksessa, joten
+   * listaus jäi irralleen (tools/tarkista-niputus.mjs).
+   */
   'js/kaupunkimusiikki.js',
   /*
    * Pohjaraidan valitsin ennen ambience-streamia: soitin tuo sen

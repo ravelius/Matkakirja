@@ -6,7 +6,6 @@ import {
   NAPPULAN_LAHDON_VIIVE_MS, SAATON_PEHMENNYS, SAATON_VAHIN_OSUUS, SAATON_VAHIN_PX,
   SIIRTOZOOMIN_LAHENNYS, STEP_MS, hypynHuippu, hypynVaihe, jalkamatkanAskel, siirtoajonKesto,
 } from './siirtokoreografia.js';
-import { ISOISAN_VALOKUVAT, LENNON_VALOKUVAN_VIIVE_MS, rajausTyyli, valokuvanKuvateksti } from './isoisan-valokuvat.js';
 import {
   chooseDuelAnswer,
   chooseMove,
@@ -20311,36 +20310,26 @@ export class UI {
     this.flightLineValmis = null;
     if (line) this.showFlightLine(line, alaosa);
     /*
-     * ISOISÄN VALOKUVA MATKAKIRJAN VÄLISTÄ (omistaja 3.9.2026; js/
-     * isoisan-valokuvat.js). Kuva nousee kartan päälle repliikin alettua
-     * ja pysyy lennon loppuun; napautus suurentaa eikä ohita lentoa.
+     * ISOISÄN VALOKUVA POIS ENSIMMÄISELTÄ LENNOLTA (omistaja 6.9.2026
+     * ilta, sanatarkasti: *"ens. lentokohtauksesta, ota isoisän kuva
+     * pois"*).
      *
-     * KUVA ON TAULUN AVAIN `lento`, EI PAIKKAKUNTA (omistaja 5.9.2026
-     * klo 23.10: *"tähän pitää vaihtaa uusi kuva jossa isoisää ei
-     * tunnista"*). Kuvaputken uusi kuva vaihdetaan yhdellä rivillä
-     * js/isoisan-valokuvat.js:ssä, eikä tähän kohtaan tarvitse koskea.
+     * Tässä kohdassa oli kortti (`.lento-valokuva`), joka nousi kartan
+     * päälle 2,6 sekuntia repliikin alkamisen jälkeen ja jonka napautus
+     * avasi kuvan suurena. Kuva luettiin taulun avaimesta
+     * `lento` (js/isoisan-valokuvat.js), ja avain on yhä tallessa siellä
+     * kommentteineen — kytkentä on poissa, ei mittaustyö.
+     *
+     * Poisto tarkoitti myös, ettei kameran tarvitse enää väistää korttia:
+     * kone lensi ennen kortin ohi nostettuna keskilinjan yläpuolelle
+     * (js/pallolauta/avaus.js AVAUSLENNON_KONEEN_NOSTO), ja se nosto oli
+     * yksi samana iltana moititun kameran nykimisen lähteistä. Kortin
+     * mukana lähti nosto.
+     *
+     * Isoisän kuvat eivät katoa pelistä: etusivun pallon reittikuvat
+     * (js/packs/etusivun-isoisakuvat.js) ja aikajanan kuvat pysyvät
+     * ennallaan.
      */
-    const valokuvaNappi = html('button', 'lento-valokuva');
-    valokuvaNappi.type = 'button';
-    valokuvaNappi.setAttribute('aria-label', `${ISOISAN_VALOKUVAT.lento.selite} — avaa suurena`);
-    const valokuva = document.createElement('img');
-    valokuva.src = ISOISAN_VALOKUVAT.lento.osoite;
-    valokuva.alt = ISOISAN_VALOKUVAT.lento.selite;
-    valokuva.decoding = 'async';
-    valokuva.draggable = false;
-    valokuva.className = 'isoisa-rajattu';
-    valokuva.style.cssText = rajausTyyli(ISOISAN_VALOKUVAT.lento);
-    valokuvaNappi.appendChild(valokuva);
-    // Pieni lappu kortin alla, samassa kallistuksessa (omistaja 3.9.2026).
-    const lappu = valokuvanKuvateksti(ISOISAN_VALOKUVAT.lento);
-    if (lappu) valokuvaNappi.appendChild(html('span', 'lento-valokuvateksti', lappu));
-    valokuvaNappi.addEventListener('pointerdown', (e) => e.stopPropagation());
-    valokuvaNappi.addEventListener('click', (e) => {
-      e.stopPropagation();
-      avaaKohdeSuurennos(this, ISOISAN_VALOKUVAT.lento, () => valokuvaNappi, 'lentoValokuva');
-    });
-    overlay.appendChild(valokuvaNappi);
-    const valokuvanAjastin = setTimeout(() => valokuvaNappi.classList.add('nakyy'), LENNON_VALOKUVAN_VIIVE_MS);
     // Harsopilvet kartan päälle koko lennon ajaksi.
     const pilvet = this.lennonPilvet(this.mapPane);
     const sanoja = line ? String(line).trim().split(/\s+/).length : 0;
@@ -20517,7 +20506,6 @@ export class UI {
     clearTimeout(nuolenAjastin);
     nuoli.remove();
     if (!ohitettu) await Promise.race([this.wait(LENNON_JATKO_MS), ohitusLupaus]);
-    clearTimeout(valokuvanAjastin);
 
     // --- 5) Saapumissekvenssi: paperi, välikortti, kartta, kuplat ----
     sfx.stopFlight();
@@ -20818,8 +20806,16 @@ export class UI {
    * laskeutuessa; `laske()` poistaa liikkuvan nappulan. Paikat ovat
    * pelin `pos`-olioita, ei pikseleitä — pikselit ovat laudan asia.
    */
-  nappulanKuljettaja(player, { lento = false } = {}) {
-    if (this.pallolautaPaalla()) return this.pallolauta.nappulanKuljettaja(player, { lento });
+  nappulanKuljettaja(player, { lento = false, omaKamera = false } = {}) {
+    /*
+     * `omaKamera` on LAUDAN lisä (js/pallolauta/siirto.js): avauslennon
+     * kohtaus ajaa kameran itse yhtenä kaarena (omistaja 6.9.2026 ilta),
+     * eikä kuljettaja saa käynnistää omaa lennon kamera-ajoaan. Tasokartan
+     * kuljettaja ei aja kameraa lainkaan, joten sille lippu on tyhjä sana.
+     */
+    if (this.pallolautaPaalla()) {
+      return this.pallolauta.nappulanKuljettaja(player, { lento, omaKamera });
+    }
     return this.tasokartanKuljettaja(player);
   }
 
