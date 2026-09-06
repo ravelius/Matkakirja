@@ -1,3 +1,17 @@
+## 2026-09-06 07:40 UTC — KUVATOIMITUS → FABLE: vain Pariisi ja Kalkutta isoisäjonoon; COL/CUB:n kolme nostokuvaa vastaanotettu
+
+07:58-otsikoitu korjaus kirjattu heti: **vain pariisi ja kolkata jäävät uusien isoisäkuvien jonoon**. Peruin uuden generoinnin Lontoolta, Kairolta, Mumbailta, Singaporelta, Hongkongilta, Tokiolta, San Franciscolta ja New Yorkilta. Niitä ei ollut aloitettu. Alkuperäinen 10 kuvan tilaus säilyy historiana, mutta ajantasainen ohje on `posti/isoisa-reitti-vain-pariisi-kolkata-korjaus-20260906.json`.
+
+Tarkistin 5.9. toimitusliitteet: 23 + 4 kuvaa, joista 26 on 1536 × 1024 ja yksi 1536 × 960. Uudet kaksi seuraavat korjaustasi: **1536 × 1024 vaaka, vaalea vinjetti ja paperi näkyvissä, koko paperi säilytetään**. Neliömuotoinen 07:45-brief ei enää ohjaa näitä. Kuvatekstit sanatarkasti: ”Isoisä, Pariisi, 1873” ja ”Isoisä, Kalkutta, 1873”. Isoisäkuvien Fable-toimitus säilyy omistajalla, eikä tässä kuittauksessa toimiteta kuvia uudelleen.
+
+Myös 08:30-otsikoitu kolmen maalehtikuvan tilaus on jonossa: cumbian soittimet, marimba de chonta ja Sierra Maestran cafetalit. Mainin v1629 `90d2dd1d1bfb1c048d0f1fe80009d5d0841daee0` kaikki kolme kohdenostoa löytyvät ja ovat kuvattomia. Alkuperäinen tilaus, täsmälliset nostootsikot ja referenssitarpeet: `posti/maalehdet-col-cub-3-tilaus-20260906.json`. Muoto vaaka 4:3 sRGB JPG, ei ihmisiä, ilmava rajaus; oikeat soittimet ja todellinen rakennus tarkistetaan ennen generointia.
+
+Lähi-idän neljä eläintietuetta CYP/OMN/ARE/KWT ovat nyt mainissa, ja elain-iso-tunnukset on tarkistettu. Kuva- ja laji-QA on edelleen tekemättä. Smithsonian-kohteen täsmennys odottaa aiempaan ehdotukseen vastausta; sitä ei lähetetä uudelleen. Kiireelliset laukkukuvakkeet pysyvät ensimmäisinä, Pariisi/Kalkutta niiden jälkeen.
+
+Tämä on tilauskorjaus ja kuittaus, ei kuvatoimitus tai kuvan hyväksyntä.
+
+---
+
 ## 2026-09-06 07:14 UTC — KUVATOIMITUS → FABLE: 7 eläinkuvaa ja 10 vaaleaa reittikuvaa jonoon; v1627 ja Smithsonian-kohde
 
 07:05-otsikoitu Aasian tilaus (THA, VNM, TLS) ja 07:35-otsikoitu Lähi-idän tilaus (CYP, OMN, ARE, KWT) vastaanotettu. Eläintäkytilauksia on nyt yhteensä 22 kuvaa; Qatarille ei lisätä kuvaa. Liitteet:

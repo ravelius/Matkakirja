@@ -1,0 +1,86 @@
+{
+  "orderId": "fable-isoisa-reitti-10-20260906-0745",
+  "receivedAt": "2026-09-06T07:16:29.309284+00:00",
+  "priority": "urgent-after-two-equipment-icons",
+  "status": "queued-for-existing-images-and-historical-reference-check",
+  "productionStarted": false,
+  "productionOwner": "root-coordinates-sol-nonencounter-production",
+  "handoffOwner": "user",
+  "deliveryInstruction": "Current heartbeat instructions retain grandfather image delivery to Fable with the user. Do not upload or hand off grandfather images from this monitor. This is intake only.",
+  "style": "Match the prior pale grandfather photographs: old photographic grain and soft detail, readable tonal structure, pale vignette with aged paper still visible beneath it, complete paper edges and roomy composition.",
+  "historicalReferencesRequired": true,
+  "existingImageCatalogCheckRequired": true,
+  "sourceLabelRequirement": "Explicit AI-production source label",
+  "canonicalCityIdsVerified": false,
+  "sourceCheckedMainSha": "75f0ae20c86334e93a1fd8cbb64a052aaa8aac6c",
+  "requestedR2Prefix": "kohtaamiset/isoisa-reitti/",
+  "publicationAndDeliveryPerformed": false,
+  "count": 2,
+  "originalRequestedCount": 10,
+  "originalOrderPath": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/story-feedback-routing-20260905/runs/2026-09-06T07-10-15.810Z/isoisa-reitti-10-vaaleaa-tilaus-20260906.json",
+  "correctionReceivedAt": "2026-09-06T07:38:58.325186+00:00",
+  "correctionMailboxSha": "66fd72008559c76f25161e35e525bd22c263c6ab",
+  "correctionHeading": "## 2026-09-06 07:58 UTC — FABLE → KUVATOIMITUS: KORJAUS 07:45-tilaukseen — vain Pariisi ja Kolkata",
+  "originalCorrectionText": "## 2026-09-06 07:58 UTC — FABLE → KUVATOIMITUS: KORJAUS 07:45-tilaukseen — vain Pariisi ja Kolkata\n\nOmistaja muistutti: vaaleat isoisäkuvat on jo tehty (5.9. toimitus, 27 kuvaa, savy vaalea) ja niillä on reittikohdistukset. Käytän niitä etusivun reittikuvina sellaisenaan. 07:45-tilauksesta jäävät voimaan VAIN kaksi kuvaa, joille ei ole vastinetta: **Pariisi** (Seine ja Notre-Dame tai bulevardi 1873, ei Eiffeliä) ja **Kolkata** (Hooghly ja ghaatit / Writers' Building 1873). Sama vaalea vinjettilinja ja muoto kuin 5.9. toimituksessa, kuvateksti \"Isoisä, Pariisi, 1873\" ja \"Isoisä, Kalkutta, 1873\", tunnukset pariisi ja kolkata. Muut kahdeksan peruutan — älä generoi niitä.\n",
+  "cancelledCityIds": [
+    "lontoo",
+    "kairo",
+    "mumbai",
+    "singapore",
+    "hongkong",
+    "tokio",
+    "sanfrancisco",
+    "newyork"
+  ],
+  "cancelledImageCount": 8,
+  "activeCityIds": [
+    "pariisi",
+    "kolkata"
+  ],
+  "format": {
+    "width": 1536,
+    "height": 1024,
+    "aspectRatio": "3:2",
+    "orientation": "landscape",
+    "mime": "image/jpeg",
+    "colorSpace": "sRGB",
+    "keepFullImage": true,
+    "crop": null,
+    "paleVignette": true,
+    "paperVisibleUnderVignette": true,
+    "safeMarginFraction": 0.2
+  },
+  "formatEvidence": "Fable correction requests the format of the 5 Sep pale set: 26 of 27 images are 1536x1024 landscape; one London image is 1536x960. Use the established 3:2 format for these two new images, superseding the cancelled square-route brief.",
+  "referenceManifests": [
+    "posti/isoisa-vaaleat-23-pelitoimitus-2026-09-05.json",
+    "posti/isoisa-vaaleat-lisa4-pelitoimitus-2026-09-05.json"
+  ],
+  "rows": [
+    {
+      "requestedCityId": "pariisi",
+      "cityName": "Pariisi",
+      "requestedSubject": "Seine ja Notre-Dame tai bulevardi; ei Eiffel-tornia",
+      "requestedCaption": "Isoisä, Pariisi, 1873",
+      "existingAssetChecked": false,
+      "historicalReferencesInspected": false,
+      "generationStarted": false,
+      "rootQaPassed": false,
+      "userApproved": false,
+      "fableApproved": false,
+      "r2Delivered": false
+    },
+    {
+      "requestedCityId": "kolkata",
+      "cityName": "Kalkutta",
+      "requestedSubject": "Hooghly-joki ja ghaatit / Writers’ Building",
+      "requestedCaption": "Isoisä, Kalkutta, 1873",
+      "existingAssetChecked": false,
+      "historicalReferencesInspected": false,
+      "generationStarted": false,
+      "rootQaPassed": false,
+      "userApproved": false,
+      "fableApproved": false,
+      "r2Delivered": false
+    }
+  ]
+}
