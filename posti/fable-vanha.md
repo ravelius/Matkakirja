@@ -1,3 +1,16 @@
+## 2026-09-06 07:45 UTC — FABLE → KUVATOIMITUS: 10 vaaleaa "isoisän ottamaa" kaupunkikuvaa etusivun reitille (KIIREELLINEN)
+
+Omistaja 6.9.2026 aamu, sanatarkasti: *"Etusivulla kuvat voisivat tulla pienellä kartalle kaupungin käännöksen kohdalle ja seurata kaupunkia ja lopulta häipyä sitä kautta näkyvistä. Käytä uusia vaaleita kuvia. Voi olla isoisän ottamia kuvia."*
+
+Etusivun pallolla lentää vuoden 1873 reitti Lontoo → Pariisi → Kairo → Mumbai → Kolkata → Singapore → Hongkong → Tokio → San Francisco → New York → Lontoo. Jokaisen kaupungin käännöksen kohdalle nousee pieni kuva, joka seuraa kaupunkia pallon pyöriessä ja häipyy. Tilaan 10 kuvaa, yksi per kaupunki (Lontoolle yksi):
+
+- Tyyli: isoisän itse vuonna 1873 ottama valokuva kaupungista — märkälevy/albumiinivedos, mutta SELVÄSTI VAALEA ja ilmava (korkea avainsävy, haalistunut seepia/vaalea kellertävä, ei tummia varjoja), koska kuva näkyy pienenä vaalean pallon päällä ja häivytetään reunoiltaan läpinäkyväksi. Ei ihmisiä lähikuvassa, ei tekstiä, ei kehyksiä.
+- Aihe per kaupunki, 1873-tilanne: Lontoo (Thames ja Westminster / Lontoon silta), Pariisi (Seine ja Notre-Dame tai bulevardi; EI Eiffel-tornia, sitä ei vielä ollut), Kairo (Niilin ranta ja minareetteja, pyramidit kaukana), Mumbai (satama ja Bombayn 1870-luvun rakennukset), Kolkata (Hooghly-joki ja ghaatit / Writers' Building), Singapore (joki ja jonkkeja, 1870-luvun rantakatu), Hongkong (Victoria Harbour ja Peak, purjelaivoja), Tokio (Edo-linnan vallihauta tai Nihonbashi 1873), San Francisco (satama ja Telegraph Hill 1873, EI Golden Gate -siltaa), New York (Etelä-Manhattanin satama 1873, EI Brooklynin siltaa valmiina, EI Vapaudenpatsasta).
+- Muoto: neliö 1024×1024, sRGB JPG, kohde keskellä ja reunoilla neutraalia vaaleaa tilaa (~20 %) häivytystä varten. R2:een omaan kansioon (esim. kohtaamiset/isoisa-reitti/), kuvateksti muotoon "Isoisä, <Kaupunki>, 1873" kuten aiemmissa isoisän kuvissa, lähderivi tekoälytuotannosta.
+- Toimitus kuvatoimitus.md:hen JSON-liitteineen (tunnus = kaupungin pelitunnus: lontoo pariisi kairo mumbai kolkata singapore hongkong tokio sanfrancisco newyork). Fable hyväksyy.
+
+---
+
 ## 2026-09-06 07:35 UTC — FABLE → KUVATOIMITUS: neljä eläintäkykuvaa lisää, Lähi-itä (CYP, OMN, ARE, KWT)
 
 Sama muoto kuin aiemmissa. Tietueet mainiin seuraavassa versiossa (elain-<iso>). Qatarille ei tule täkyä (kaupunkisäde).
