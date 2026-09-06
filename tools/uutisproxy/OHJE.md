@@ -1,5 +1,16 @@
 # Uutisvälityksen käyttöönotto (omistajalle, n. 5 min)
 
+> **Päivitys 6.9.2026 (Papua-Uusi-Guinea, Salomonsaaret):**
+> sallittuihin lisättiin www.postcourier.com.pg ja
+> theislandsun.com.sb (maalehdet PNG/SLB, testattu 6.9.2026: syötteessä
+> kymmenen juttua, artikkelisivun ensimmäisestä `<article>`-lohkosta
+> jäsentyy leipäteksti ja `og:image` löytyy). **Fidži jäi ilman
+> uutislähdettä:** Fiji Timesin ja FBC Newsin syötteet aukeavat, mutta
+> kummankaan artikkelisivulla ei ole `<article>`-elementtiä eikä
+> `[itemprop="articleBody"]`-merkintää, ja perustelut ovat
+> js/packs/uutislahteet.js:n FJI-kommentissa. Julkaisu Git-
+> integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Chile, Kolumbia):** sallittuihin lisättiin
 > www.lanacion.cl ja www.lasillavacia.com (maalehdet CHL/COL, testattu
 > 6.9.2026: syöte aukeaa, artikkelisivun ensimmäisestä `<article>`-

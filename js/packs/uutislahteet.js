@@ -195,4 +195,50 @@ export const UUTISLAHTEET = {
    * syötteen kuvauksineen, vai lisätäänkö js/uutiset.js:n poimintaan
    * kolmas valitsin? Kumpikin on linjauspäätös, ei mekaaninen korjaus.
    */
+  /*
+   * Post-Courier on Papua-Uuden-Guinean vanhin päivälehti. Testattu
+   * 6.9.2026: syötteessä kymmenen juttua, ja artikkelisivun
+   * ensimmäisessä <article>-lohkossa on yli 60 merkin kappaleita sekä
+   * og:image.
+   *
+   * The National (thenational.com.pg) kokeiltiin ensin, koska se on
+   * maan toinen suuri päivälehti: sen /feed/ palauttaa 403:n
+   * (botti-esto). EMTV:n syöte ohjaa toiseen osoitteeseen eikä worker
+   * seuraa uudelleenohjauksia, ja looppng.com ei vastannut lainkaan
+   * tästä ympäristöstä.
+   */
+  PNG: {
+    nimi: 'Post-Courier',
+    kieli: 'en',
+    syote: 'https://www.postcourier.com.pg/feed/',
+  },
+  /*
+   * The Island Sun on honiaralainen päivälehti. Testattu 6.9.2026:
+   * syötteessä kymmenen juttua, ja artikkelisivun ainoassa
+   * <article>-lohkossa on 24 yli 60 merkin kappaletta sekä og:image.
+   *
+   * Solomon Star (solomonstarnews.com) palautti syötteestä 403:n ja
+   * SIBC (sibconline.com.sb) 503:n.
+   */
+  SLB: {
+    nimi: 'The Island Sun',
+    kieli: 'en',
+    syote: 'https://theislandsun.com.sb/feed/',
+  },
+  /*
+   * FIDŽI (FJI) JÄI ILMAN LÄHDETTÄ (Opus 6.9.2026) — Suvan lehti näkyy
+   * siis ilman uutisosiota, eikä mikään mene rikki. Sama tilanne kuin
+   * Kuuballa.
+   *
+   * Testattu ja hylätty: The Fiji Times (osoite
+   * www.fijitimes.com.fj/feed/?post_type=post avautuu ja siinä on 20
+   * juttua — pelkkä /feed/ ohjautuu etusivulle, koska Yoast on
+   * kytkenyt syötteet pois — mutta artikkelisivulla ei ole
+   * <article>-elementtiä eikä [itemprop="articleBody"]-merkintää),
+   * FBC News (syöte aukeaa, kymmenen juttua ja og:image löytyy, mutta
+   * artikkelisivulla ei ole <article>-elementtiä), Islands Business
+   * (artikkelisivun ensimmäisessä <article>-lohkossa ei ole yhtään yli
+   * 60 merkin kappaletta). Fiji Sun, Fijivillage ja Fijilive eivät
+   * tarjonneet toimivaa RSS-osoitetta (404, HTML-sivu tai 403).
+   */
 };

@@ -28,7 +28,12 @@ import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
  * 6.9.2026 lista tyhjeni: viimeiset kuusi (BHR, IND, THA, VNM, IDN,
  * MYS) saivat rivinsä js/packs/asia-maatiedot.js:ään.
  */
-const VIELA_ILMAN_TUNNUSLUKUJA = new Set([]);
+/*
+ * Oseanian uudet maalehdet (FJI, PNG, SLB) saivat aihesivunsa 6.9.2026,
+ * mutta tunnusluvut kirjoitetaan omana eränään js/packs/
+ * oceania-maatiedot.js:ään. Lista saa vain lyhentyä.
+ */
+const VIELA_ILMAN_TUNNUSLUKUJA = new Set(['FJI', 'PNG', 'SLB']);
 
 const SIJA = /^\d+\.\/\d+$/;
 
