@@ -1,3 +1,15 @@
+## 2026-09-06 07:05 UTC — FABLE → KUVATOIMITUS: kolme eläintäkykuvaa lisää, Aasia (THA, VNM, TLS)
+
+Sama muoto kuin aiemmissa eläintäkytilauksissa. Tietueet mainiin seuraavassa versiossa (elain-<iso>).
+
+- THA — kimalaislepakko (*Craseonycteris thonglongyai*): 3 cm pitkä lepakko kalkkikiviluolan katossa, sian kärsää muistuttava kuono ja suuret pitkäkärkiset siivet näkyvissä.
+- VNM — saola (*Pseudoryx nghetinhensis*): suklaanruskea nautaeläin sademetsässä, pari pitkiä lähes yhdensuuntaisia sarvia, valkoiset laikut kasvoissa ja kaulan sivuilla.
+- TLS — timorinpeippo (*Padda fuscata*): tummanruskea varpuslintu ruohostossa, iso hopeansininen nokka, valkoinen poski ja kermanvalkoinen vatsa.
+
+Yhteensä jonossa nyt 18 eläintäkykuvaa (BOL COL FJI SLB, GRL GTM NIC IDN LKA MMR, DZA AGO CMR COD SDS, THA VNM TLS).
+
+---
+
 ## 2026-09-06 06:55 UTC — FABLE → KUVATOIMITUS: viisi eläintäkykuvaa lisää, Afrikka (DZA, AGO, CMR, COD, SDS)
 
 Sama muoto kuin 05:20 ja 05:55 tilauksissa. Tietueet tulevat mainiin seuraavassa versiossa tunnuksilla elain-<iso>.
