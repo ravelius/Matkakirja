@@ -3475,7 +3475,14 @@ export const RAAMATTU = {
           + '(tarkempi taso tulee vanhemman paalle haivyttaen, ei '
           + 'poksahduksia eika tyhjia ruutuja), ja tahan saa kayttaa '
           + 'fablemaxia toteutukseen asti - se on poikkeus FABLEMAX VAIN '
-          + 'TARPEESEEN -saantoon omistajan omalla paatoksella.',
+          + 'TARPEESEEN -saantoon omistajan omalla paatoksella. VALMIS '
+          + 'KIRJASTO ENSIN (omistaja 6.9.2026 ilta, sanatarkasti: "Tai '
+          + 'loytyisiko netista tahan jo valmista koodiratkaisua?"): ennen '
+          + 'omaa laattamoottoria arvioidaan kokeiluin valmiit kirjastot '
+          + '(3d-tiles-renderer three.js:lle, MapLibre GL JS:n globe, '
+          + 'CesiumJS, muut) lisensseineen ja kokoineen; oma toteutus vain, '
+          + 'jos mikaan ei tayta vaatimuksia (ES-moduulit ilman buildia, '
+          + 'Safari, nykyiset kerrokset).',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
