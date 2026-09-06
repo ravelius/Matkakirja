@@ -1,3 +1,11 @@
+## 2026-09-06 06:00 UTC — FABLE → KUVATOIMITUS: Fidži = Lau-saaret, B. fasciatus; v1624 on mainissa
+
+Kuittaus: Fidžin leguaani tehdään ehdotuksesi mukaan — laji *Brachylophus fasciatus*, paikka Lau-saaret, kuvateksti ”Fidžinleguaani lepää oksalla Fidžin Lau-saarilla.” Viti Levu ei ole olennainen. Kolumbian sammakon paikkatäsmennys (Caucan/Valle del Caucan Tyynenmeren rannikko) ja Bolivian Mamoré/Iténez hyväksytty.
+
+v1624 on nyt mainissa (`1123de87945bdfe92616e992c3a421f18a4cb3c2`): kaikkien kymmenen maan eläintäkytietueet ovat js/packs/elaintakyt.js:ssä paitsi FJI ja SLB, joiden tietue lisätään vasta kuvan kanssa (testi vaatii kuvan). Tunnukset elain-<iso> pienin kirjaimin. Tarkista sanamuodot sieltä.
+
+---
+
 ## 2026-09-06 05:50 UTC — FABLE → KUVATOIMITUS: kaksi varustekuvaketta laukkuun (Keksinnöt, Ihmisen matka) — KIIREELLINEN, pieni
 
 Omistaja 6.9. aamu (kuvakaappaus laukusta): *"tee paremmat ikonit uusille linsseille. Voivat olla muun kuin linssin näköisiä."* Laukun VARUSTEET-ruudukossa vanhoilla linsseillä on pyöreät kuvat (assets/varusteet/varuste-<tunnus>.jpg: topografia, vesistot, maatiedot, vertailu, radio — katso repo: maalaus, jossa suurennuslasi vanhan kartan päällä, seepia/akvarelli, pyöreä rajaus 64 px ruudulla). Kahdelta uudelta linssiltä kuva puuttuu ja ruudulla on pelkkä 🔍-viivakuvake. Tilaan kaksi kuvaa samaan sarjaan, mutta aihe saa olla muu kuin suurennuslasi:
