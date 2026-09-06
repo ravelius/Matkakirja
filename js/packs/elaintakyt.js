@@ -1844,6 +1844,97 @@ export const ELAINTAKYT = {
     lon: -11.5,
     lat: 8.6,
   },
+  /*
+   * ── ERÄ M15, AFRIKKA 5 6.9.2026 ────────────────────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M15 (SDN, TCD, LBY, NGA, SOM) toi viisi uutta eläintäkyä.
+   * Yhdelläkään viidestä maasta ei ollut täkyä ennestään.
+   *
+   * LAJIT EIVÄT TOISTA MITÄÄN AIEMPAA. Fennekki on jo Algerian täky
+   * ja nubiantorvikauris Jordanian, joten Libyan lajiksi valittiin
+   * saharangaselli; kirahvi on jo Kenian ja norsu Tansanian ja
+   * Namibian, joten Tšadin lajiksi tuli sapelisarvioryksi, jonka
+   * tarina on samalla erän paras: laji julistettiin luonnosta
+   * hävinneeksi vuonna 2000 ja palautettiin Tšadiin 2016 alkaen.
+   * Gorilla on jo Ugandan täky, joten Nigerian lajiksi valittiin
+   * drilli.
+   *
+   * PAIKAT ON MITATTU. Jokainen piste on oman maansa rajojen sisällä,
+   * maalla ja vähintään 35 lautayksikön päässä jokaisesta
+   * kaupunkimerkistä (tests/elaintakyt.test.mjs
+   * VAHIN_ETAISYYS_KAUPUNKIIN) sekä 30 yksikön päässä muista
+   * eläintäyistä. Lähin on Libyan saharangaselli 62,5 lautayksikön
+   * päässä Murzukista.
+   *
+   * KUVA TULEE KUVAPUTKELTA. Erä on kuvaton, joten `kuva`-kentässä on
+   * ämpäritunnus ilman kansiota (elain-sdn, elain-tcd, elain-lby,
+   * elain-nga, elain-som). Kun kuvaputki toimittaa kuvan, se ilmestyy
+   * kortille ilman koodimuutosta.
+   * ───────────────────────────────────────────────────────────────
+   */
+  SDN: {
+    elain: 'arruikatsa',
+    otsikko: 'Vuohilammas, joka juo vain kasveista',
+    teksti: 'Arruikatsa eli Ammotragus lervia on Pohjois-Afrikan kallioisten vuorten ainoa laji suvussaan. Se on säkäkorkeudeltaan noin metrin, hiekanruskea ja iän myötä tummuva, ja koirailla riippuu kurkusta ja rinnasta pitkä takkuinen karva. Sarvet ovat poikkileikkaukseltaan kolmiomaiset ja kaartuvat ulos, taakse ja sisään; ne voivat ylittää kahdeksankymmentä senttimetriä. Laji elää kuivilla vuorialueilla Saharan karun keskustan ympärillä, ja Sudanissa se tavataan Niilin länsipuolella sekä joen itäpuolella Punaisenmeren kukkuloilla. Arruikatsa saa kaiken tarvitsemansa nesteen ravinnostaan, mutta juo ja kylpee mielellään, jos vettä on. Se on hämärän eläin, joka on liikkeellä varhain aamulla ja myöhään iltapäivällä ja lepää päivän kuumuudessa; vaaran uhatessa se pakenee ylämäkeen ja hyppää paikaltaan yli kahden metrin korkeuteen.',
+    lahde: 'en-Wikipedia "Barbary sheep", johdanto sekä osiot "Description", '
+      + '"Range" ("Natural range") ja "Habitats". Tarkistettu 6.9.2026.',
+    kuva: 'elain-sdn',
+    // Piste on Punaisenmeren kukkuloilla Koillis-Sudanissa, 86,9
+    // lautayksikköä Suakinista (vähimmäisetäisyys 35).
+    lon: 35.0,
+    lat: 20.3,
+  },
+  TCD: {
+    elain: 'sapelisarvioryksi',
+    otsikko: 'Antilooppi, joka palasi luonnosta hävinneiden listalta',
+    teksti: 'Sapelisarvioryksi eli Oryx dammah oli aikoinaan levinnyt laajalti Pohjois-Afrikkaan sekä osiin Länsi- ja Keski-Afrikkaa. Se kestää aavikon oloja poikkeuksellisen hyvin: se tulee toimeen kuukausia juomatta ja saa suurimman osan päivittäisestä nesteestään kasveista. Kanta alkoi hiipua jo neoliittisen kauden ilmastonmuutoksessa, kun "vihreä Sahara" kuivui, ja myöhemmin lajia metsästettiin ankarasti sarvien takia; 1900-luvulla hevoset ja tuliaseet tekivät metsästyksestä tuhoisaa. Vuonna 2000 IUCN julisti sapelisarvioryksin luonnosta hävinneeksi. Tšad johtaa lajin palautushanketta Ouadi Rimé-Ouadi Achimin riistasuojelualueella, joka on 78 000 neliökilometrillään yksi maailman suurimmista suojelualueista: ensimmäinen 21 eläimen ryhmä päästettiin totutusaitaukseen alkuvuodesta 2016 ja vapaaksi sadekaudella, ja jo alkuvuonna 2017 syntyi vasa — ensimmäinen luonnossa yli kahteenkymmeneen vuoteen. Vuonna 2021 syntyi 60 vasaa, ja luonnossa eläviä oli noin 400. Vuonna 2023 laji siirrettiin punaisella listalla luokkaan erittäin uhanalainen.',
+    lahde: 'en-Wikipedia "Scimitar oryx", johdanto sekä osio "Status and '
+      + 'conservation". Tarkistettu 6.9.2026.',
+    kuva: 'elain-tcd',
+    // Piste on Ouadi Rimé-Ouadi Achimin suojelualueella Keski-Tšadissa,
+    // 119,8 lautayksikköä Darfurista (vähimmäisetäisyys 35).
+    lon: 19.6666,
+    lat: 15.5166,
+  },
+  LBY: {
+    elain: 'saharangaselli',
+    otsikko: 'Vaalein gaselli, joka juo kastetta',
+    teksti: 'Saharangaselli eli Gazella leptoceros on vaaleaturkkinen gaselli, jolla on pitkät ja hoikat sarvet ja joka on sopeutunut aavikkoon perusteellisesti. Se on gaselleista vaalein: yläpuoli on kellanvaalea tai kermanvärinen ja jalat ja alapuoli valkoiset. Koiraan sarvet ovat hoikat ja hieman S-kirjaimen muotoiset, naaraan vielä ohuemmat ja lähes suorat. Lajia tavataan Algeriassa, Tunisiassa, Libyassa ja Egyptissä hajanaisina taskuina keskisen Saharan alueella; havaintoja on tehty myös Nigeristä ja Tšadista, mutta niitä pidetään epävarmoina. Aavikon helle rajaa ruokailun aamuun ja iltaan, ja gaselli saa lähes kaiken vetensä kasteesta ja kasvien kosteudesta — avovettä se tarvitsee tuskin lainkaan. Se vaeltaa kasvillisuuden perässä ilman kiinteää muuttoreittiä, ja tyypillistä elinympäristöä ovat hiekkadyynit ja niiden väliset painanteet sekä kalliomaat. Lajia pidetään uhanalaisena, sillä luonnossa on alle 2 500 yksilöä.',
+    lahde: 'en-Wikipedia "Rhim gazelle", johdanto sekä osiot "Name", '
+      + '"Description" ja "Distribution and habitat". Tarkistettu 6.9.2026.',
+    kuva: 'elain-lby',
+    // Piste on Fezzanin ja Sirtin väliaavikolla Keski-Libyassa, 62,5
+    // lautayksikköä Murzukista (vähimmäisetäisyys 35).
+    lon: 15.0,
+    lat: 26.0,
+  },
+  NGA: {
+    elain: 'drilli',
+    otsikko: 'Serkku, jota on jäljellä neljätuhatta',
+    teksti: 'Drilli eli Mandrillus leucophaeus on kapeanenäapina, joka on sukua paviaaneille ja vielä läheisempää sukua mandrillille — lajit elävät eri puolilla Sanaga-jokea Kamerunissa eivätkä kohtaa. Villinä drilli elää keskimäärin kaksikymmentä vuotta. Sitä tavataan vain kolmessa maassa, Nigeriassa, Kamerunissa ja Päiväntasaajan Guineassa, ja levinneisyysalue on pienempi kuin Yhdysvaltain Länsi-Virginian osavaltio: läntisin raja on Nigerian Cross-joki ja eteläisin Kamerunin Sanaga. Kanta on pirstoutunut erillisiksi taskuiksi, ja luonnossa eläviä arvioidaan olevan noin neljätuhatta. Elinympäristöt vaihtelevat: osa elää metsissä, osa savannilla, vuorenhuipuilla ja sisämaan jyrkänteillä, ja Bioko-saaren drillit alankorannikon metsissä — niitä on nähty jopa rannoilla. Laji on luokiteltu erittäin uhanalaiseksi.',
+    lahde: 'en-Wikipedia "Drill (animal)", johdanto sekä osiot "Distribution" '
+      + 'ja "Taxonomy". Tarkistettu 6.9.2026.',
+    kuva: 'elain-nga',
+    // Piste on Cross-joen metsissä Kaakkois-Nigeriassa, 72,6
+    // lautayksikköä Lagosista (vähimmäisetäisyys 35).
+    lon: 9.0,
+    lat: 6.3,
+  },
+  SOM: {
+    elain: 'beira',
+    otsikko: 'Korvat kuin lautaset, vettä ei tarvita',
+    teksti: 'Beira eli Dorcatragus megalotis on pieni antilooppi, joka elää Afrikan sarven kuivilla alueilla ja on sukunsa ainoa nykyinen laji. Sen turkki on selästä punaharmaa, ja tumma juova erottaa sen valkoisesta alapuolesta kyynärpäästä takajalkaan. Korvat ovat suhteettoman suuret, ja niiden sisäpuoli on valkoisen karvan peitossa; sarvet ovat vain koirailla, ja ne kasvavat suorina piikkeinä pystyyn korvien vierestä. Laji on kotoperäinen Koillis-Afrikassa: sitä tavataan Djiboutin eteläkolkasta etelään Somalimaan ja Pohjois-Somalian halki ja Etiopian äärimmäiseen koilliseen, ja levinneisyyden pääosa on Somalimaasta itään Puntmaahan ja Nugaalin laaksoon. Beira viihtyy kivikkoisilla rinteillä kuivan heinän ja akasiapensaikon keskellä. Se ei tarvitse juomavettä lainkaan, vaan saa kaiken tarvitsemansa kasveista. Beira on äärimmäisen varovainen: pieninkin häiriö saa sen liikkeelle, ja se kiitää vuorenrinteen soraa pitkin ja loikkii kiveltä kivelle jyrkemmillä paikoilla.',
+    lahde: 'en-Wikipedia "Beira (antelope)", johdanto sekä osiot "Description", '
+      + '"Distribution", "Habitat" ja "Habits". Tarkistettu 6.9.2026.',
+    kuva: 'elain-som',
+    // Piste on Nugaalin laakson kivikkorinteillä Puntmaassa, 96,2
+    // lautayksikköä Ras Hafunista (vähimmäisetäisyys 35). Laudan
+    // SOM-muoto ei kata Somalimaan luoteisosaa, joten piste on haettu
+    // levinneisyyden itäpäästä, jonka artikkeli nimeää erikseen.
+    lon: 48.5,
+    lat: 8.5,
+  },
 };
 
 

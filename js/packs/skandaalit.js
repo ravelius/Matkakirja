@@ -11843,4 +11843,535 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /* ══════════════════════════════════════════════════════════════════
+   * ══ ERÄ M15, AFRIKKA 5 6.9.2026 ══════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M15 (SDN, TCD, LBY, NGA, SOM) tuo kaksi skandaalia kuhunkin
+   * viiteen maahan — kymmenen uutta. Kaikki ovat kuvattomia kuten erän
+   * muutkin nostot, ja jokaisen lähderivi nimeää en-Wikipedian
+   * artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+   *
+   * KAIKKI KYMMENEN OVAT HISTORIAA, EIVÄT NYKYPÄIVÄÄ. Fablen linjaus
+   * tälle erälle: Sudanin, Libyan ja Somalian nykytila on selkkaus,
+   * joten skandaalit kirjoitetaan vain 1800- ja 1900-luvun
+   * historiasta (M3:n Myanmar-linja). Vanhin kortti on vuodelta 1884
+   * ja nuorin vuodelta 1964; kaksi tiedeskandaalia (Toumaïn reisiluu
+   * ja Rabihin kallo) ulottuvat lähdeaineistossaan 2000-luvulle, mutta
+   * kummankin aihe on museoesineen kohtalo eikä käynnissä oleva
+   * konflikti.
+   *
+   * KAKSI MERKKIÄ ON SIIRRETTY NAAPURIRUUTUUN, koska tapahtumapaikan
+   * päällä on jo toinen nimiö. Khartumin piirityksen merkki on
+   * Sinisen Niilin varrella kaakkoon kaupungista, koska Niili-nimiö
+   * (js/packs/maastokohteet-sdn.js) istuu täsmälleen Khartumin
+   * kohdalla, ja Berberan sopimusten merkki on Adeninlahdella
+   * kaupungin edustalla, koska sama erä täytti rannikon Laas Geelin ja
+   * Dhambalinin nimiöillä. Kummankin `paikka`-rivi kertoo tapahtuman
+   * oikean paikan. Rabihin merkki on Kousserin taistelupaikalta
+   * koilliseen samasta syystä: Chari-joen nimiö on Kousserin päällä.
+   * ══════════════════════════════════════════════════════════════════ */
+  SDN: [
+    /*
+     * Khartumin piiritys 1884–1885. Merkki on Sinisen Niilin varrella
+     * noin kahdeksankymmentä kilometriä kaupungista kaakkoon (33,1 /
+     * 14,4), koska maan Niili-merkki on Khartumin kohdalla.
+     * Lähde: en.wikipedia.org: Siege of Khartoum
+     */
+    {
+      id: 'khartumin-piiritys',
+      otsikko: 'Kenraali, jonka piti evakuoida ja joka linnoittautui',
+      nimio: 'Khartum 1885',
+      vuosi: '1884–1885',
+      paikka: 'Khartum, Sinisen ja Valkoisen Niilin yhtymäkohta',
+      lat: 14.4, lon: 33.1,
+      kortti: 'Britannian hallitus lähetti Charles Gordonin Sudaniin yhdellä käskyllä: '
+        + 'tyhjentäkää varuskunnat ja tulkaa pois. Gordon päätti toisin, linnoitti '
+        + 'kaupungin ja jäi. Piiritys kesti kymmenen kuukautta, ja apujoukot saapuivat '
+        + 'kaksi päivää liian myöhään.',
+      teksti: 'Egypti oli valloittanut Sudanin 1820, mutta joutunut itse Britannian '
+        + 'sotilaalliseen otteeseen 1882. Vuonna 1881 Sudanissa alkoi kapina, jota johti '
+        + 'Muhammad Ahmad, mahdiksi julistautunut uskonnollinen johtaja. Egyptin armeija '
+        + 'kärsi tappion toisensa jälkeen, eikä Lontoo halunnut lähettää omia joukkoja: '
+        + 'pääministeri Gladstone painosti Egyptiä vetämään varuskuntansa pois ja nimitti '
+        + 'Sudanin entisen kenraalikuvernöörin Charles George Gordonin hoitamaan '
+        + 'evakuoinnin.'
+        + '\n\nGordon oli eri mieltä tehtävästään. Hän saapui Khartumiin helmikuussa 1884, '
+        + 'jossa oli 7 000 egyptiläistä sotilasta ja 27 000 siviiliä, ja ilmoitti '
+        + 'pelastavansa myös muut piiritetyt varuskunnat. Matkalla Berberissä hän kertoi '
+        + 'heimopäälliköille, että Egypti aikoo vetäytyä — tieto sai päälliköiden '
+        + 'uskollisuuden horjumaan. Huhtikuuhun mennessä kaupunki oli saarrettu, ja Gordon '
+        + 'maksoi joukoilleen itse painamillaan velkakirjoilla.'
+        + '\n\nRuoan piti riittää kuusi kuukautta, mutta piiritys kesti kymmenen. Vasta '
+        + 'julkisen painostuksen jälkeen Gladstone suostui heinäkuussa 1884 lähettämään '
+        + 'avustusretkikunnan, joka pääsi Sudaniin vasta tammikuussa 1885. Mahdi hyökkäsi '
+        + 'ennen sen saapumista: yön 25.–26. tammikuuta hyökkäyksessä varuskunta tuhoutui '
+        + 'ja Gordon sai surmansa. Retkikunnan kärki näki kaupungin kaksi päivää liian '
+        + 'myöhään ja kääntyi takaisin.'
+        + '\n\nBritanniassa lehdistö syytti Gladstonea hitaudesta, ja kuningatar Victoria '
+        + 'moitti häntä sähkeellä, joka vuoti julkisuuteen. Gladstonen hallitus kaatui '
+        + 'kesäkuussa 1885. Mahdi perusti Sudaniin uskonnollisen valtion, joka kesti '
+        + 'neljätoista vuotta.',
+      lahde: 'en-Wikipedia "Siege of Khartoum", johdanto-osa sekä osiot "Background", '
+        + '"Battle" ja "Aftermath". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä oli Gordonin virallinen tehtävä Khartumissa?',
+        vaihtoehdot: [
+          'Evakuoida varuskunnat pois Sudanista',
+          'Rakentaa rautatie Punaisellemerelle',
+          'Neuvotella rauha Egyptin kanssa',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Wadi Halfan vanhan kaupungin hukuttaminen Assuanin padon
+     * altaaseen 1964. Lähde: en.wikipedia.org: Wadi Halfa
+     */
+    {
+      id: 'wadi-halfa',
+      otsikko: 'Kaupunki, joka jäi padon altaan alle',
+      nimio: 'Wadi Halfa',
+      vuosi: '1959–1964',
+      paikka: 'Wadi Halfa, Pohjois-Sudan',
+      lat: 21.8, lon: 31.35,
+      kortti: 'Sopimus kahden maan välillä kertoi, että vesi nousee. Wadi Halfan '
+        + 'asukkaat saivat tietää, että heidän kaupunkinsa jää Assuanin padon altaan '
+        + 'alle ja että heidät siirretään satojen kilometrien päähän. Mielenosoitukset '
+        + 'vaiennettiin poikkeustilalla.',
+      teksti: 'Wadi Halfa oli 1800-luvulla perustettu Niilin satamakaupunki Egyptin rajalla, '
+        + 'Assuanista tulleiden höyrylaivojen päätepiste ja Sudanin rautatien pohjoinen '
+        + 'pää. Sähkelinja Egyptiin valmistui 1866, ja kaupungin ympärillä oli nubialaisia '
+        + 'muinaisjäännöksiä, muun muassa Buhenin egyptiläinen siirtokunta joen toisella '
+        + 'rannalla. Vuoteen 1956 mennessä kaupungissa asui 11 000 ihmistä.'
+        + '\n\n8. marraskuuta 1959 allekirjoitettiin Sudanin ja Yhdistyneen arabitasavallan '
+        + 'sopimus Niilin vesistä. Se merkitsi, että Assuanin suurpadon allas peittäisi '
+        + 'seudun ja että noin 52 000 ihmistä olisi siirrettävä muualle neljän vuoden '
+        + 'aikana vuodesta 1960 alkaen. Eniten menettivät nubialaiset.'
+        + '\n\nVastarinta oli avointa. Wadi Halfassa osoitettiin mieltä siirtoa vastaan '
+        + '23.–24. lokakuuta 1960, ja 26. lokakuuta mielenosoitukset levisivät Khartumiin, '
+        + 'jossa poliisi hajotti ne kyynelkaasulla. Hallitus julisti Wadi Halfaan '
+        + 'sotatilan ja katkaisi yhteydet muuhun maahan; Khartumissa Kairon yliopiston '
+        + 'kampus suljettiin väliaikaisesti ja noin viisikymmentä ihmistä pidätettiin.'
+        + '\n\nVanha kaupunki tuhoutui kokonaan tulvan alle vuonna 1964. Suurin osa '
+        + 'väestöstä siirrettiin, ja vuonna 1965 uudessa Halfassa asui vain 3 200 ihmistä. '
+        + '1970-luvulla alue oli arkeologien tiiviin tutkimuksen kohteena, kun nubialaisia '
+        + 'muistomerkkejä yritettiin pelastaa.',
+      lahde: 'en-Wikipedia "Wadi Halfa", johdanto-osa sekä osio "History" ("Ancient '
+        + 'Period", "Contemporary Period"). Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Wadi Halfan vanha kaupunki katosi?',
+        vaihtoehdot: [
+          'Se paloi tulipalossa',
+          'Se jäi Assuanin padon altaan alle',
+          'Hiekkamyrsky peitti sen',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  TCD: [
+    /*
+     * Rabih az-Zubayrin valtakunnan loppu ja kallon matka Pariisiin.
+     * Merkki on Kousserin taistelupaikalta koilliseen (15,9 / 12,7),
+     * koska Chari-joen nimiö istuu Kousserin kohdalla.
+     * Lähde: en.wikipedia.org: Rabih az-Zubayr
+     */
+    {
+      id: 'rabihin-kallo',
+      otsikko: 'Sotapäällikkö, jonka kallo lähetettiin Pariisiin',
+      nimio: 'Rabih',
+      vuosi: '1900',
+      paikka: 'Kousserin taistelu, Logonen ja Charin yhtymäkohta',
+      lat: 12.7, lon: 15.9,
+      kortti: 'Rabih az-Zubayr rakensi kymmenessä vuodessa neljänsadan miehen joukosta '
+        + 'viidentuhannen armeijan ja valtasi Kanem-Bornun. Ranska julisti hänet '
+        + 'laittomaksi hallitsijaksi. Taistelun jälkeen hänen päänsä nostettiin seipääseen '
+        + 'ja kallo lähetettiin Pariisiin.',
+      teksti: 'Rabih az-Zubayr syntyi noin 1840 Halfaya al-Mulukissa, myöhemmin Khartumin '
+        + 'esikaupungissa, ja aloitti sotilaana Egyptin armeijassa. Kun hänen '
+        + 'komentajansa joukot lyötiin Bahr el Ghazalissa, Rabih vei pienen osastonsa '
+        + 'länteen. Noin kymmenessä vuodessa neljänsadan miehen joukko kasvoi '
+        + 'viidentuhannen armeijaksi, ja vuosina 1892–1894 hän valloitti Kanem-Bornun '
+        + 'valtakunnan ja muutti sen sotilasdiktatuuriksi. Verotus oli tehokasta mutta '
+        + 'ankaraa, ja Bornun perinteisesti vauras maatalous kärsi niin pahoin, että '
+        + 'ruoantuotanto putosi vaarallisen alas.'
+        + '\n\nBritannia tunnusti Rabihin Bornun sulttaaniksi. Ranska teki päinvastoin: se '
+        + 'julisti hänen valtansa laittomaksi, jotta valloitukset voitiin perustella, ja '
+        + 'nosti ranskalaisessa julkisuudessa esiin hänen valtakuntansa orjatalouden. '
+        + 'Vuosina 1899–1900 Ranska lähetti alueelle useita retkikuntia.'
+        + '\n\n22. huhtikuuta 1900 Amédée-François Lamyn johtama ranskalais-bornulainen '
+        + 'joukko hyökkäsi Rabihin varustukseen Lakhtassa, kolmen mailin päässä '
+        + 'Kousserista. Lamy haavoittui kuolettavasti, mutta Rabihin joukot lyötiin '
+        + 'muutamassa tunnissa, ja pakoon yrittänyt Rabih ammuttiin.'
+        + '\n\nSurmaaja katkaisi Rabihin pään todisteeksi. Pää vietiin seipäässä Kousseriin '
+        + 'ja asetettiin muurille näytteille; kallo säilytettiin sotasaaliina laatikossa '
+        + 'ja lähetettiin loppuvuodesta 1900 Pariisiin antropologiseksi näytteeksi. Se '
+        + 'päätyi Musée de l\'Hommen kokoelmiin, joissa sen uskotaan yhä olevan. Rabihin '
+        + 'poika Fadlallah pyysi isänsä jäännöksiä takaisin samana vuonna — turhaan.',
+      lahde: 'en-Wikipedia "Rabih az-Zubayr", johdanto-osa sekä osiot "War with France" ja '
+        + '"Legacy" ("Remains"). Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Minne Rabihin kallo vietiin taistelun jälkeen?',
+        vaihtoehdot: [
+          'Se haudattiin Kousseriin',
+          'Se lähetettiin Pariisiin näytteeksi',
+          'Se palautettiin hänen pojalleen',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Toumaïn reisiluu: löytö 2001, unohdus laatikkoon, riita
+     * julkaisemisesta ja vasta 2020 ja 2022 ilmestyneet artikkelit.
+     * Merkki on Djurabin aavikon koordinaatilla (17 / 18), koska
+     * artikkeli ei anna Toros-Menallan kaivauspaikalle omaa
+     * koordinaattia — vain sen, että paikka on Pohjois-Tšadin
+     * Djurabissa.
+     * Lähde: en.wikipedia.org: Sahelanthropus; Djurab Desert
+     */
+    {
+      id: 'toumain-reisiluu',
+      otsikko: 'Reisiluu, joka nukkui laatikossa eläinluiden seassa',
+      nimio: 'Toumaï',
+      vuosi: '2001–2022',
+      paikka: 'Toros-Menalla, Djurabin aavikko',
+      lat: 18.0, lon: 17.0,
+      kortti: 'Kallo julistettiin ihmiskunnan varhaisimmaksi esi-isäksi, joka käveli '
+        + 'kahdella jalalla. Samasta kaivauksesta oli tullut reisiluu, mutta se pakattiin '
+        + 'eläinluiden joukkoon ja unohtui laatikkoon Ranskaan. Kun jatko-opiskelija löysi '
+        + 'sen, alkoi riita.',
+      teksti: 'Neljä Tšadin kansallisen tutkimuskeskuksen työntekijää — kolme tšadilaista '
+        + 'ja yksi ranskalainen — keräsi 19. heinäkuuta 2001 Djurabin aavikon '
+        + 'Toros-Menallan kaivauspaikalta luita, joista tuli maailmankuulut. Michel '
+        + 'Brunet työtovereineen kuvasi löydön 2002 uutena sukuna ja lajina, '
+        + 'Sahelanthropus tchadensis. Tšadin presidentti antoi kallolle lempinimen '
+        + 'Toumaï, joka merkitsee paikallisella dazan kielellä "elämän toivoa".'
+        + '\n\nBrunet ilmoitti löydöstä N\'Djamenassa ulkoministeriön ja televisioyleisön '
+        + 'edessä: "Ihmiskunnan esi-isä on tšadilainen." Tutkimusryhmä sanoi nimenomaan, '
+        + 'ettei kallon yhteydestä ollut löytynyt yhtään raajanluuta — juuri sellainen '
+        + 'luu olisi voinut todistaa tai kumota heidän päätelmänsä kaksijalkaisuudesta.'
+        + '\n\nToumaïn kanssa oli kuitenkin löytynyt reisiluu. Se pakattiin eläinluiden '
+        + 'joukkoon ja lähetettiin 2003 Poitiersin yliopistoon, jossa jatko-opiskelija '
+        + 'Aude Bergeret löysi sen sattumalta seuraavana vuonna. Geotieteiden laitoksen '
+        + 'johtaja Roberto Macchiarelli piti luuta ristiriitaisena kaksijalkaisuuden '
+        + 'kanssa. Kun Brunet kieltäytyi kommentoimasta, Bergeret ja Macchiarelli '
+        + 'pyysivät saada esitellä alustavat tuloksensa Pariisin antropologisen seuran '
+        + 'kokouksessa — pyyntö hylättiin, koska tuloksia ei ollut vielä julkaistu.'
+        + '\n\nKaksikko sai täyden kuvauksen julki vasta 2020 ja päätyi siihen, ettei '
+        + 'Sahelanthropus ollut kaksijalkainen. Vuonna 2022 Franck Guy työtovereineen '
+        + 'julkaisi oman tutkimuksensa samasta reisiluusta ja kahdesta kyynärluusta ja '
+        + 'päätyi päinvastaiseen tulokseen. Kiista jatkuu.',
+      lahde: 'en-Wikipedia "Sahelanthropus", osio "Taxonomy" ("Discovery"), ja '
+        + '"Djurab Desert", tietolaatikon koordinaatti. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Missä Toumaïn reisiluu oli vuosikausia?',
+        vaihtoehdot: [
+          'Museon näyttelyssä Tšadissa',
+          'Laatikossa eläinluiden joukossa',
+          'Kadoksissa aavikolla',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  LBY: [
+    /*
+     * Italian hyökkäys Libyaan 1911; merkki Tobrukissa, joka
+     * vallattiin lokakuussa 1911.
+     * Lähde: en.wikipedia.org: Italo-Turkish War
+     */
+    {
+      id: 'tobruk-1911',
+      otsikko: 'Sota, jossa pudotettiin maailman ensimmäinen lentopommi',
+      nimio: 'Tobruk 1911',
+      vuosi: '1911–1912',
+      paikka: 'Tobruk, Kyrenaika',
+      lat: 32.0833, lon: 23.9667,
+      kortti: 'Italia hyökkäsi osmanien Tripolitaniaan syyskuussa 1911 ja valloitti '
+        + 'rannikkokaupungit kolmessa viikossa. Sodassa nähtiin ensimmäistä kertaa '
+        + 'lentokone tiedustelussa ja pommituksessa — ja ensimmäistä kertaa myös '
+        + 'lentokone alas ammuttuna.',
+      teksti: 'Italian ja osmanien sota käytiin 29. syyskuuta 1911 – 18. lokakuuta 1912. '
+        + 'Italia valtasi osmanien Tripolitanian rannikkoalueet, joiden pääosat olivat '
+        + 'Fezzan, Kyrenaika ja Tripoli itse, ja niistä tuli Italian siirtomaat, jotka '
+        + 'myöhemmin yhdistyivät Italian Libyaksi. Italialaiset arvioivat, että 20 000 '
+        + 'miehen joukko riittäisi maan valtaamiseen, ja se valtasikin Tripolin, '
+        + 'Tobrukin, Dernan, Bengasin ja Homsin 3.–21. lokakuuta 1911.'
+        + '\n\nHelppo alku ei jatkunut. Shar al-Shattissa italialaiset kärsivät tappion, '
+        + 'jossa kaatui ainakin 21 upseeria ja 482 sotilasta, ja kostoksi he teloittivat '
+        + 'ampumalla ja hirttämällä 400 naista ja 4 000 miestä. Joukot kasvatettiin '
+        + 'sadaksituhanneksi mieheksi, ja sota jähmettyi asemasodaksi.'
+        + '\n\nSota jäi historiaan tekniikastaan. 23. lokakuuta 1911 kapteeni Carlo Piazza '
+        + 'lensi maailman ensimmäisen ilmatiedustelulennon vihollislinjojen yli, ja '
+        + '1. marraskuuta luutnantti Giulio Gavotti pudotti Etrich Taube -koneesta neljä '
+        + 'kranaattia Tajuraan ja Ain Zaraan — historian ensimmäinen ilmapommitus. '
+        + 'Turkkilaiset puolestaan olivat ensimmäiset, jotka ampuivat lentokoneen alas, '
+        + 'kivääreillä. Guglielmo Marconi tuli itse Libyaan tekemään kokeita Italian '
+        + 'pioneerijoukkojen kanssa langattomalla lennättimellä.'
+        + '\n\nOuchyn rauhassa 1912 Libya jäi Italialle. Sotaa pidetään ensimmäisen '
+        + 'maailmansodan esinäytöksenä: Balkanin liiton jäsenet näkivät, miten helposti '
+        + 'osmanit hävisivät, ja hyökkäsivät lokakuussa 1912 — ensimmäinen Balkanin sota '
+        + 'alkoi muutamaa päivää ennen kuin Libyan sota päättyi.',
+      lahde: 'en-Wikipedia "Italo-Turkish War", johdanto-osa sekä osio "Military campaign" '
+        + '("Italian troops landing in Libya", "Trench phase"). Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä nähtiin sodassa ensimmäistä kertaa historiassa?',
+        vaihtoehdot: [
+          'Lentokoneesta pudotettu pommi',
+          'Sukellusvene taistelussa',
+          'Panssarivaunu aavikolla',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Omar al-Mukhtarin vangitseminen ja teloitus Soluchin
+     * keskitysleirissä 1931.
+     * Lähde: en.wikipedia.org: Omar al-Mukhtar
+     */
+    {
+      id: 'soluch-1931',
+      otsikko: 'Opettaja, joka piti aavikkoa hallussaan kaksikymmentä vuotta',
+      nimio: 'Soluch 1931',
+      vuosi: '1911–1931',
+      paikka: 'Soluchin leiri, Kyrenaika',
+      lat: 31.6667, lon: 20.25,
+      kortti: 'Omar al-Mukhtar oli koraaninopettaja, josta tuli Kyrenaikan vastarinnan '
+        + 'johtaja. Hän piti italialaisia loitolla lähes kaksikymmentä vuotta. Haavoituttuaan '
+        + 'taistelussa hänet vangittiin ja hirtettiin 73-vuotiaana leirissä, kannattajiensa '
+        + 'nähden.',
+      teksti: 'Omar al-Mukhtar syntyi 1858 Zanzurin kylässä lähellä Tobrukia osmanien '
+        + 'Kyrenaikassa. Hän menetti isänsä lapsena ja vietti nuoruutensa köyhyydessä, '
+        + 'mutta sai koulutuksensa ensin kylän moskeijassa ja sitten kahdeksan vuotta '
+        + 'senussi-veljeskunnan yliopistossa Jaghbubissa. Hänestä tuli tunnettu Koraanin '
+        + 'tuntija ja imaami, joka kutsuttiin ratkomaan heimojen välisiä riitoja.'
+        + '\n\nVuonna 1895 senussien johtaja matkusti hänen kanssaan etelään Kufraan ja '
+        + 'edelleen Tšadiin, jossa Mukhtar nimitettiin Zawiyat Ayn Kalkin sheikiksi. Kun '
+        + 'Ranska eteni Tšadiin 1899, hänet lähetettiin puolustamaan aluetta. Vuonna 1902 '
+        + 'hänet kutsuttiin takaisin pohjoiseen ja nimitettiin Pohjois-Kyrenaikan '
+        + 'levottoman Zawiyat Laqsurin sheikiksi.'
+        + '\n\nVuodesta 1911 Mukhtar järjesti ja johti Libyan vastarintaa Italian '
+        + 'siirtomaavaltaa vastaan ensimmäisessä ja toisessa italialais-senussilaisessa '
+        + 'sodassa. Häntä kutsuttiin aavikon leijonaksi. Lähes kaksikymmentä vuotta '
+        + 'kestänyt taistelu päättyi 11. syyskuuta 1931, kun hän haavoittui Slontan '
+        + 'lähellä ja joutui vangiksi.'
+        + '\n\nItalialainen tuomioistuin määräsi hänet kuolemaan siinä toivossa, että '
+        + 'vastarinta kuolisi hänen mukanaan. Mukhtar hirtettiin 16. syyskuuta 1931 '
+        + 'Soluchin keskitysleirissä kannattajiensa nähden 73-vuotiaana. Hänen kuvansa on '
+        + 'ollut Libyan kymmenen dinaarin setelissä vuodesta 1971, ja hänen viimeisistä '
+        + 'vuosistaan tehtiin vuonna 1981 elokuva Aavikon leijona.',
+      lahde: 'en-Wikipedia "Omar al-Mukhtar", johdanto-osa sekä osiot "Early life", '
+        + '"Capture and execution" ja "Legacy". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä oli Omar al-Mukhtarin ammatti ennen vastarintaa?',
+        vaihtoehdot: [
+          'Kauppias',
+          'Koraaninopettaja ja imaami',
+          'Osmanien upseeri',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  NGA: [
+    /*
+     * Beninin retkikunta 1897 ja Beninin pronssien ryöstö.
+     * Lähde: en.wikipedia.org: Benin Expedition of 1897
+     */
+    {
+      id: 'beninin-retkikunta',
+      otsikko: 'Kaupunki, jonka taide huutokaupattiin retken maksamiseksi',
+      nimio: 'Benin 1897',
+      vuosi: '1897',
+      paikka: 'Benin City, Niger Coast -protektoraatti',
+      lat: 6.3333, lon: 5.6222,
+      kortti: 'Britannian rangaistusretkikunta valtasi Beninin helmikuussa 1897. '
+        + 'Kaupungista vietiin noin 2 500 esinettä, joiden joukossa yli tuhat metallilaattaa '
+        + 'ja veistosta. Amiraliteetti huutokauppasi saaliin kattaakseen retken kulut.',
+      teksti: 'Beninin kuningaskunta oli säilyttänyt itsenäisyytensä Afrikan jaossa, ja '
+        + 'kuningas eli oba hallitsi alueensa kauppaa yksinoikeudella — mitä Royal Niger '
+        + 'Company piti uhkana. Vuonna 1892 varakonsuli Henry Gallwey sai obalta '
+        + 'allekirjoituksen vapaakauppasopimukseen, jota oba ei ollut halunnut '
+        + 'allekirjoittaa. Kun oba silti vaati tullimaksuja, britit tulkitsivat sen '
+        + 'sopimusrikkomukseksi ja vihamieliseksi teoksi.'
+        + '\n\nJoulukuun lopulla 1896 James Phillipsin johtama 250 hengen seurue lähti '
+        + 'Benin Cityyn keskustelemaan kauppasuhteista, mutta Phillips ei odottanut obalta '
+        + 'lupaa ennen rajan ylitystä. Beninin joukot hyökkäsivät seurueen kimppuun '
+        + '4. tammikuuta, ja lähes kaikki surmattiin tai vangittiin.'
+        + '\n\nBritannia hyökkäsi 9. helmikuuta 1 200 miehellä Harry Rawsonin johdolla ja '
+        + 'valtasi Benin Cityn vähäisin omin tappioin; beniniläisten kaatuneiden määrä ei '
+        + 'ole tiedossa. Tammikuussa vangitut afrikkalaiset kantajat vapautettiin. Talot, '
+        + 'pyhäköt ja päälliköiden palatsit ryöstettiin ja poltettiin, myös obanpalatsi '
+        + '21. helmikuuta. Oba vietiin maanpakoon Calabariin.'
+        + '\n\nSaaliista lähetettiin Britanniaan virallisten lukujen mukaan noin 2 500 '
+        + 'esinettä, muun muassa yli tuhat metallilaattaa ja veistosta, jotka tunnetaan '
+        + 'Beninin pronsseina. Noin 40 prosenttia päätyi British Museumiin, osa jaettiin '
+        + 'sotilaille ja loput amiraliteetti huutokauppasi jo toukokuussa 1897 retken '
+        + 'kulujen kattamiseksi; ostajina olivat enimmäkseen museot, etenkin Saksassa. '
+        + 'Esineiden palauttamisesta käydään yhä keskustelua.',
+      lahde: 'en-Wikipedia "Benin Expedition of 1897", johdanto-osa sekä osiot '
+        + '"Background" ja "Aftermath". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi amiraliteetti huutokauppasi Beninin esineitä?',
+        vaihtoehdot: [
+          'Kattaakseen retkikunnan kulut',
+          'Palauttaakseen ne Beniniin',
+          'Rahoittaakseen museon rakentamisen',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Jaja of Opobon vangitseminen neuvottelujen varjolla 1887.
+     * Lähde: en.wikipedia.org: Jaja of Opobo
+     */
+    {
+      id: 'jaja-opobo',
+      otsikko: 'Kuningas, joka kutsuttiin neuvotteluun ja vietiin laivaan',
+      nimio: 'Jaja',
+      vuosi: '1887',
+      paikka: 'Opobo, Nigerin suisto',
+      lat: 4.5114, lon: 7.54,
+      kortti: 'Jaja myytiin lapsena orjaksi, osti itsensä vapaaksi ja perusti oman '
+        + 'kuningaskuntansa. Vuonna 1870 hän myi kahdeksantuhatta tonnia palmuöljyä '
+        + 'suoraan briteille. Kun hän kieltäytyi lopettamasta brittikauppiaiden '
+        + 'verottamista, hänet kutsuttiin neuvotteluun.',
+      teksti: 'Jubo Jubogha eli kuningas Jaja syntyi noin 1821 igbomaassa. Lapsena hänet '
+        + 'siepattiin ja myytiin orjaksi ja vietiin Bonnyyn. Palveltuaan isäntäänsä '
+        + 'useita vuosia hän osti itsensä vapaaksi, otti isäntänsä kuoltua kaupan '
+        + 'haltuunsa ja nousi Anna Pepple -kauppahuoneen johtoon.'
+        + '\n\nSisäinen valtataistelu Bonnyssa pakotti Jajan irtautumaan, ja vuonna 1869 '
+        + 'hän perusti Opobon kuningaskunnan 26 mailia Bonnysta itään. Opobosta tuli '
+        + 'seudun merkittävä palmuöljyn kauppapaikka. Jaja sulki sekä eurooppalaiset että '
+        + 'afrikkalaiset välikädet pois ja hallitsi käytännössä yksin: vuonna 1870 hän '
+        + 'myi kahdeksantuhatta tonnia palmuöljyä suoraan briteille ja laivasi öljyä '
+        + 'suoraan Liverpooliin.'
+        + '\n\nJaja lähetti lapsensa kouluun Glasgow’hun ja palkkasi eurooppalaisia '
+        + 'opettajia rakennuttamaansa maalliseen kouluun Opobossa. Lähetyssaarnaajilta hän '
+        + 'kielsi pääsyn kaupunkiin kokonaan.'
+        + '\n\nBerliinin konferenssi 1884 määritteli Opobon brittialueeksi. Kun Jaja ei '
+        + 'suostunut lopettamaan brittikauppiaiden verottamista, varakonsuli Henry '
+        + 'Hamilton Johnston kutsui hänet neuvotteluihin 1887. Saapuessaan Jaja '
+        + 'siepattiin brittialukselle, tuomittiin Accrassa Kultarannikolla ja karkotettiin '
+        + 'ensin Lontooseen ja sitten Länsi-Intiaan. Vuonna 1891 hän sai luvan palata '
+        + 'Opoboon mutta kuoli matkalla, ja Opobon valta hiipui nopeasti. Vuonna 1903 '
+        + 'kaupungin keskustaan pystytettiin hänen muistomerkkinsä.',
+      lahde: 'en-Wikipedia "Jaja of Opobo", johdanto-osa ja osio "Life and career". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Jaja joutui karkotetuksi?',
+        vaihtoehdot: [
+          'Hän hävisi meritaistelun',
+          'Hänet siepattiin neuvottelukutsun varjolla',
+          'Hän luopui vallasta vapaaehtoisesti',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  SOM: [
+    /*
+     * Vuosien 1884–1886 sopimukset ja Britannian Somalimaa. Merkki on
+     * Adeninlahdella Berberan edustalla (45,3 / 11,6), koska saman
+     * erän Laas Geel ja Dhambalin täyttävät rannikon nimiöt.
+     * Lähde: en.wikipedia.org: Berbera
+     */
+    {
+      id: 'berberan-sopimukset',
+      otsikko: 'Protektoraatti, jota sen perustaja neuvoi hylkäämään',
+      nimio: 'Berbera 1884',
+      vuosi: '1884–1886',
+      paikka: 'Berbera, Adeninlahden rannikko',
+      lat: 11.6, lon: 45.3,
+      kortti: 'Berbera oli 1800-luvulla Somalian niemimaan tärkein satama ja vuonna 1856 '
+        + '"maailman vapain satama". Sopimussarja 1884–1886 teki rannikosta Britannian '
+        + 'protektoraatin — jota Winston Churchill kehotti vuonna 1907 hylkäämään.',
+      teksti: 'Berbera oli 1700- ja 1800-luvuilla Somalian niemimaan tärkein satama. '
+        + 'Vuosittainen markkina, joka kesti lokakuusta huhtikuuhun, oli Mordechai Abirin '
+        + 'mukaan "Itä-Afrikan itärannikon merkittävimpiä kaupallisia tapahtumia": paikalle '
+        + 'kokoontuivat Isaaqin alaklaanit, karavaanit Hararista ja sisämaasta sekä '
+        + 'banjaanikauppiaat Porbandarista, Mangaloresta ja Mumbaista. Kaupankäynnin '
+        + 'yksityiskohdat pidettiin salassa eurooppalaisilta kauppiailta.'
+        + '\n\nVuoden 1833 kauppakaudella satamakaupunki paisui 70 000 hengen kokoiseksi, '
+        + 'ja yhtenä päivänä sisämaasta saapui yli kuusituhatta tavaralla lastattua '
+        + 'kamelia. Vietäviä olivat karja, kahvi, suitsuke, mirha, akasiakumi, sahrami, '
+        + 'höyhenet, vaha, voisula, vuodat, kulta ja norsunluu. Vuonna 1856 ilmestynyt '
+        + 'kauppalehti kutsui Berberaa "maailman vapaimmaksi satamaksi ja koko lahden '
+        + 'tärkeimmäksi kauppapaikaksi".'
+        + '\n\nVuosina 1884–1886 britit tekivät peräkkäisiä sopimuksia pohjoisen '
+        + 'somalirannikon klaanien kanssa ja perustivat alueelle protektoraatin, '
+        + 'Britannian Somalimaan. Sitä miehitettiin Adenista ja hallittiin Brittiläisestä '
+        + 'Intiasta käsin vuoteen 1898, sitten ulkoministeriöstä ja vuodesta 1905 '
+        + 'siirtomaaministeriöstä.'
+        + '\n\nBerbera oli Adeninlahden eteläpuolen ainoa suojaisa satama, mutta britit '
+        + 'katuivat pian hallintaansa. Siirtomaaministeriön alivaltiosihteeri Winston '
+        + 'Churchill kävi Berberassa vuonna 1907 ja esitti koko protektoraatin '
+        + 'hylkäämistä. Hallinto ei ulottanut infrastruktuuria rannikon ulkopuolelle, ja '
+        + 'suunniteltu Berbera–Harar-rautatie kaatui parlamentissa, koska sen pelättiin '
+        + 'haittaavan Ranskan ja Britannian sopua.',
+      lahde: 'en-Wikipedia "Berbera", osiot "Precolonialism" ja "British Somaliland". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Churchill esitti Berberan-käyntinsä jälkeen 1907?',
+        vaihtoehdot: [
+          'Protektoraatin hylkäämistä',
+          'Sataman laajentamista',
+          'Rautatien rakentamista Hararista',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Illigin sopimus 1905 ja dervissiliikkeen kaksi vuosikymmentä.
+     * Merkki on Illigissä eli nykyisessä Eylissä.
+     * Lähde: en.wikipedia.org: Dervish movement (Somali)
+     */
+    {
+      id: 'illigin-sopimus',
+      otsikko: 'Sopimus, joka antoi kapinaliikkeelle oman laakson',
+      nimio: 'Illig 1905',
+      vuosi: '1899–1920',
+      paikka: 'Illig (Eyl), Nugaalin laakso',
+      lat: 7.9667, lon: 49.85,
+      kortti: 'Britannia aseisti kilpailevat klaanit dervissiliikettä vastaan. Kun '
+        + 'rangaistusretket eivät riittäneet, Italia teki liikkeen johtajan kanssa '
+        + 'sopimuksen, joka luovutti sille Nugaalin laakson — ja vahvisti sitä '
+        + 'entisestään.',
+      teksti: 'Dervissiliike oli aseellinen vastarintaliike ja valtio, jonka päämaja oli '
+        + 'Talehissa vuosina 1895–1920. Sitä johti runoilija ja uskonnollinen johtaja '
+        + 'Mohammed Abdullah Hassan, joka vaati itsenäisyyttä brittiläisistä ja '
+        + 'italialaisista siirtomaaisännistä. Hassan perusti Khususi-nimisen hallitsevan '
+        + 'neuvoston, johon kuului sufilaisia heimovanhimpia, ja otti mukaan osmanien '
+        + 'lähettämän neuvonantajan.'
+        + '\n\nVuosina 1899–1905 liike keräsi noin 25 000 nuorta eri klaaneista, hankki '
+        + 'tuliaseita ja hyökkäsi Jigjigan etiopialaisvaruskuntaan. Britannian '
+        + 'siirtomaahallinto julistettiin viholliseksi, ja britit etsivät liittolaisia '
+        + 'kilpailevista somaliklaaneista ja antoivat näille aseita ja varusteita. '
+        + 'Rangaistusretket dervissien tukikohtiin alkoivat 1904.'
+        + '\n\nDervissit kärsivät tappioita, hajaantuivat pienempiin osastoihin ja '
+        + 'siirtyivät sissisotaan. Vuonna 1905 Hassan allekirjoitti Illigin sopimuksen ja '
+        + 'siirtyi kannattajineen Italian hallitsemalle alueelle: sopimuksessa '
+        + 'dervisseille luovutettiin Nugaalin laakso, ja Hassan sai italialaisen '
+        + 'avustuksen ja suojatun itsehallinnollisen aseman. Se vahvisti liikettä.'
+        + '\n\nVuodesta 1908 dervissit palasivat Britannian Somalimaahan, ja britit '
+        + 'vetäytyivät sisämaasta rannikolle. Ensimmäisen maailmansodan aikana osmanit ja '
+        + 'saksalaiset tunnustivat liikkeen liittolaisekseen. Vuonna 1920 Britannia '
+        + 'hyökkäsi Talehin linnoituksiin yhdistetyllä maa- ja ilmavoimien iskulla; Hassan '
+        + 'pääsi pakoon mutta kuoli 1921 malariaan tai influenssaan, ja liike hajosi. Se '
+        + 'oli siirtomaa-ajan pitkäkestoisimpia ja verisimpiä liikkeitä '
+        + 'Saharan eteläpuolisessa Afrikassa.',
+      lahde: 'en-Wikipedia "Dervish movement (Somali)", johdanto-osa. '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Illigin sopimus 1905 antoi dervisseille?',
+        vaihtoehdot: [
+          'Nugaalin laakson hallinnan',
+          'Berberan sataman',
+          'Aseita Britannialta',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
 };

@@ -1163,6 +1163,18 @@ ennen erää maastokohteet (PHL:llä ja CHN:llä neljä, UZB:llä kaksi),
 mutta kohteita oli yhteensä kolme ja skandaaleja ei yhtään; eläintäky
 oli vain Kiinalla. Erästä tuli **38 kohdetta, 1 maastokohde, 4
 eläintäkyä ja 10 skandaalia** eli 53 uutta karttamerkkiä, ja
+## Erä M15 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Afrikan viides erä: **SDN, TCD, LBY, NGA ja SOM**. Kaikilla viidellä
+oli ennen erää maastokohteita (3–4) mutta ei yhtään eläintäkyä eikä
+skandaalia, ja kohteita oli vain Libyalla yksi — Leptis Magna, joka
+asuu maan omassa `js/packs/fokuskohteet-lby.js`:ssä. Työ oli siis
+kohde-, eläintäky- ja skandaalityötä: 39 uutta kohdetta, 5 eläintäkyä
+ja 10 skandaalia, yhteensä 54 uutta karttamerkkiä. Erä on kuvaton
+kuten K2-erät 1–4 ja maailman erät M1–M11, ja jokainen väite on
+en-Wikipedian raakatekstin katteessa lähderivillä, joka nimeää
+artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
 `node tools/laske-karttanostot.mjs` sanoo erän jälkeen kaikista
 viidestä *täysi*; taulukot ajaa Fable.
 
@@ -1405,3 +1417,78 @@ päälle, joten piste on alueen itäpäässä (lon −0,5 / lat 15,2).
 kuvaputken ämpäritunnus ilman kansiota (`elain-gha`, `elain-sen`,
 `elain-mli`, `elain-lbr`, `elain-sle`): kun kuvaputki toimittaa kuvan, se
 ilmestyy kortille ilman koodimuutosta, ja siihen asti kortti on kuvaton.
+lopussa, ja testien lukumäärät päivitettiin (eläintäkyjä 81 → 86,
+skandaaleja 183 → 193 ja skandaalimaita 79 → 84).
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Sudan (SDN) | Meroë, Jebel Barkal, Kerma, Vanha Dongola, Soleb, Naqa, Dinder, Sennar | (oli jo: Jebel Marra, Punainenmeri, Niili) | arruikatsa | Khartumin piiritys 1885, Wadi Halfa 1959–1964 |
+| Tšad (TCD) | Guelta d'Archei, Aloban kaari, Ouniangan järvet, Zakouma, Fitri, Manda, Abéché, Iro | (oli jo: Emi Koussi, Tšadjärvi, Chari) | sapelisarvioryksi | Rabihin kallo 1900, Toumaïn reisiluu 2001–2022 |
+| Libya (LBY) | Sabratha, Kyrene, Ptolemais, Ghadames, Tadrart Acacus, Garama, Ubarin hiekkameri (oli jo: Leptis Magna) | (oli jo: Bikku Bitti, Välimeri, Iso-Syrtti) | saharangaselli | Tobruk 1911, Soluch 1931 |
+| Nigeria (NGA) | Sukur, Osun-Osogbo, Zuma Rock, Igbo-Ukwu, Yankari, Kainji, Nok, Badagry | (oli jo: Chappal Waddi, Guineanlahti, Nigerjoki, Benue) | drilli | Beninin retkikunta 1897, Jaja of Opobo 1887 |
+| Somalia (SOM) | Laas Geel, Dhambalin, Amud, Zeila, Bosaso, Hobyo, Hamar Weyne, Barawa | (oli jo: Shimbiris, Adeninlahti, Intian valtameri, Jubba) | beira | Berberan sopimukset 1884–1886, Illigin sopimus 1905 |
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin, ja
+jokaisen kohteen lähin on kirjattu sen koordinaattirivin viereen. Koko
+erän lähin merkki on Igbo-Ukwu 19,3 lautayksikön päässä Lagosista ja
+toiseksi lähin Sabratha 24,9 yksikön päässä Tripolista; raja
+`KAUPUNGIN_KOHDALLA_SADE` on 7. Ras Hafun ja Tšad-järvi ovat itse
+pelikaupunkeja, joten kumpaakaan ei otettu kohteeksi. `node
+tools/tarkista-nostopaikat.mjs` antaa kaikille 39 kohteelle rivin
+*pääkartta*, ja `node tools/tarkista-nimiolimitys.mjs` sanoo yhä
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**M3:n Myanmar-linja rajasi sisällön kolmessa maassa.** Sudanin,
+Libyan ja Somalian nykytila on selkkaus, joten kohteet kirjoitettiin
+vain historiasta ja luonnosta ja skandaalit vain 1800- ja 1900-luvun
+historiasta. Kokonaan pois jäivät Somalian **Taleh**, jonka
+artikkelissa on kaksi osiota käynnissä olevasta kiistasta, ja Tšadin
+**Faya-Largeau**, jonka koko historiaosuus on 1970- ja 1980-lukujen
+sotaa; Sudanin **Musawwarat es-Sufra** jäi pois sekä nimiösyystä että
+siksi, että sen nykytila on artikkelin mukaan selkkaus. Mogadishun
+kortti on rajattu Hamar Weynen vanhan kaupunginosan moskeijaan (Fakhr
+al-Dinin moskeija, 1269) eikä kaupungin nykytilaan. Yhdenkään kortin
+aihe ei ole käynnissä oleva konflikti.
+
+**Merkkien päällekkäisyys karsi kaksitoista ehdokasta.** Nigeriassa
+Ife on 9,1 lautayksikköä Osun-Osogbosta, Ogbuniken luolat 6,8 yksikköä
+Igbo-Ukwusta, Gashaka-Gumti 12,3 yksikköä Chappal Waddista ja Vanhan
+Oyon kansallispuisto 3,3 yksikköä Orjarannikosta eli suoraan
+pelikaupungin päällä. Tšadissa Gaoui on 4,0 yksikköä Chari-merkistä,
+Ouara 14,4 yksikköä Abéchésta ja Fada 11,9 yksikköä Guelta
+d'Archeista. Libyassa Apollonia on 4,7 yksikköä Kyrenestä ja Ubarin
+kaupunki 9,9 yksikköä Germasta. Somaliassa Maydh on 10,2 yksikköä
+Shimbiriksestä, Aw-Barkhadle 5,4 yksikköä Laas Geelistä ja Gondershe
+5,6 yksikköä Mercasta. Sudanissa Nuri ja El-Kurru ovat alle viiden
+yksikön päässä Jebel Barkalista, ja niiden pyramidit mainitaan sen
+kortissa.
+
+**Kolme skandaalimerkkiä on siirretty naapuriruutuun** samalla
+periaatteella kuin erissä M3 ja M6: Khartumin piiritys on Sinisen
+Niilin varrella kaakkoon kaupungista, koska Niili-merkki istuu
+täsmälleen Khartumin kohdalla; Berberan sopimukset ovat Adeninlahdella
+kaupungin edustalla, koska saman erän Laas Geel ja Dhambalin täyttävät
+rannikon nimiöt; ja Rabihin kallo on Kousserin taistelupaikalta
+koilliseen, koska Chari-joen nimiö on Kousserin päällä. Jokaisen
+kortin `paikka`-rivi kertoo tapahtuman oikean paikan, ja syy on
+kirjattu merkin viereen koodiin.
+
+**Eläintäyt eivät toista mitään aiempaa lajia.** Fennekki on jo
+Algerian täky ja nubiantorvikauris Jordanian, joten Libyan lajiksi
+tuli saharangaselli; kirahvi on Kenian ja norsu Tansanian ja Namibian,
+joten Tšadiin valittiin sapelisarvioryksi, joka julistettiin luonnosta
+hävinneeksi vuonna 2000 ja palautettiin Tšadiin vuodesta 2016; gorilla
+on Ugandan täky, joten Nigeriaan tuli drilli. Somalian beiran piste
+oli erän tiukin tapaus: laudan SOM-muoto ei kata Somalimaan
+luoteisosaa, joten piste haettiin levinneisyyden itäpäästä Nugaalin
+laaksosta, jonka artikkeli nimeää erikseen. Kaikki viisi pistettä ovat
+maalla, oman maansa rajojen sisällä ja vähintään 35 lautayksikön
+päässä jokaisesta kaupunkimerkistä; lähin on Libyan saharangaselli
+62,4 yksikköä Murzukista.
+
+**Kuvaputkelle jää viisi eläintäkykuvaa.** SDN, TCD, LBY, NGA ja SOM
+saivat `kuva`-kenttään kuvaputken tunnuksen ilman kansiota
+(`elain-sdn`, `elain-tcd`, `elain-lby`, `elain-nga`, `elain-som`),
+joka osoittaa ämpäriin: kun kuvaputki tekee kuvan, se ilmestyy
+kortille ilman koodimuutosta, ja siihen asti kortti on kuvaton.
