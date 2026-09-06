@@ -5594,4 +5594,489 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /* ==================================================================
+   * ERÄ M2, OSEANIA (6.9.2026). Omistaja: *"Jatka kartta nostojen tekoa
+   * koko maailmaan."* Viisi maata, kaksi skandaalia kummallekin. Kaikki
+   * pisteet on tarkistettu maan fokuslehden rajausta vasten ja mitattu
+   * irti pelikaupungeista (KAUPUNGIN_KOHDALLA_SADE 7); perustelut ja
+   * mitat ovat maiden maastokohdepakeissa (js/packs/maastokohteet-aus.js
+   * ja sisarpakit). Erä on kuvaton.
+   * ================================================================ */
+  AUS: [
+    /*
+     * Houtman Abrolhos, Länsi-Australian edustalla.
+     * Lähde: en.wikipedia.org: Batavia (1628 ship)
+     */
+    {
+      id: 'batavian-haaksirikko',
+      otsikko: 'Batavia 1629 — haaksirikko, joka muuttui verilöylyksi',
+      nimio: 'Batavia 1629',
+      vuosi: '1629',
+      paikka: 'Houtman Abrolhos, Länsi-Australian edustalla',
+      lat: -28.4903, lon: 113.7933,
+      kortti: 'Kolmesataa ihmistä pääsi hengissä maihin autiolle luodolle. Sitten '
+        + 'komentaja lähti hakemaan apua, ja se, joka jäi käskyvaltaan, oli suunnitellut '
+        + 'kapinaa jo ennen karilleajoa. Kun apu vihdoin palasi, eloonjääneitä ei ollut '
+        + 'enää kolmesataa vaan runsaat sata — ja loput oli tappanut oma väki.',
+      teksti: 'Batavia oli Alankomaiden Itä-Intian kauppakomppanian lippulaiva, joka '
+        + 'rakennettiin Amsterdamissa 1628. Neitsytmatkallaan se ajoi 4. kesäkuuta 1629 '
+        + 'karille Houtman Abrolhosin luotoketjulle Länsi-Australian edustalla. Aluksen '
+        + '341 matkustajasta ja miehistön jäsenestä noin kolmesataa pääsi maihin; loput '
+        + 'hukkuivat yrittäessään.\n\n'
+        + 'Komentaja Francisco Pelsaert purjehti avoveneellä lähes 3 000 kilometriä '
+        + '33 päivässä Bataviaan eli nykyiseen Jakartaan hakemaan apua. Käskyvaltaan jäi '
+        + 'komppanian virkamies Jeronimus Cornelisz, joka oli suunnitellut kapinaa jo '
+        + 'ennen haaksirikkoa. Hän lähetti parikymmentä miestä sotilas Wiebbe Hayesin '
+        + 'johdolla muka etsimään juomavettä lähisaarilta ja jätti heidät kuolemaan.\n\n'
+        + 'Sen jälkeen Cornelisz ja hänen kannattajansa surmasivat viikkojen kuluessa '
+        + 'noin 125 eloonjäänyttä, myös naisia ja lapsia. Hayesin joukko löysi kuitenkin '
+        + 'vettä, kuuli tapahtuneesta ja alkoi taistella kapinallisia vastaan. Viimeisin '
+        + 'ja verisin yhteenotto keskeytyi lokakuussa 1629, kun Pelsaert palasi '
+        + 'Sardam-aluksella.\n\n'
+        + 'Cornelisz ja kuusi hänen miestään tuomittiin ja teloitettiin — he olivat '
+        + 'ensimmäiset eurooppalaiset, jotka teloitettiin laillisesti Australiassa. Kaksi '
+        + 'lievemmistä rikoksista tuomittua jätettiin mantereelle, ja heistä tuli '
+        + 'ensimmäiset mantereelle pysyvästi jääneet eurooppalaiset; heistä ei kuultu '
+        + 'sen koommin. Bataviasta lähteneistä matkustajista vain 122 pääsi perille.',
+      lahde: 'en-Wikipedia "Batavia (1628 ship)", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuka tappoi suurimman osan Batavian haaksirikosta selvinneistä?',
+        vaihtoehdot: [
+          'Luodon alkuperäisasukkaat',
+          'Nälkä ja jano autiolla luodolla',
+          'Kapinaan noussut osa eloonjääneistä itse',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Glenrowan, Victoria (hotellin piiritys).
+     * Lähde: en.wikipedia.org: Ned Kelly
+     */
+    {
+      id: 'glenrowanin-piiritys',
+      otsikko: 'Glenrowan 1880 — auran teristä taottu haarniska',
+      nimio: 'Glenrowan 1880',
+      vuosi: '1880',
+      paikka: 'Glenrowan, Victoria (hotellin piiritys)',
+      lat: -36.4625, lon: 146.2225,
+      kortti: 'Jengi aikoi suistaa poliisijunan raiteilta ja hyökätä sen jälkeen '
+        + 'Benallaan. Poliisi sai vihjeen, ja suunnitelma kääntyi päinvastaiseksi: '
+        + 'neljä rosvoa ja kymmeniä panttivankeja hotellissa, ympärillä aseistettu '
+        + 'piiritys. Aamulla ulos käveli mies, jonka päällä oli auran teristä taottu '
+        + 'rautapuku.',
+      teksti: 'Edward "Ned" Kelly syntyi joulukuussa 1854 Victorian maaseudulla '
+        + 'irlantilaisten vanhempien kolmantena lapsena. Isä oli pakkosiirretty vanki, ja '
+        + 'perhe koki olevansa suurmaanomistajien poljettavana ja Victorian poliisin '
+        + 'vainoama. Kelly ehti istua kaksi vankeustuomiota jo teini-ikäisenä.\n\n'
+        + 'Vuonna 1878 Kellyjen kotona sattui väkivaltainen välikohtaus poliisin kanssa, '
+        + 'ja Ned asetettiin syytteeseen murhan yrityksestä. Hän pakeni metsiin ja vannoi '
+        + 'kostavansa äitinsä puolesta, joka oli joutunut vankilaan. Kun hän, veljensä Dan '
+        + 'sekä Joe Byrne ja Steve Hart ampuivat kolme poliisia, Victorian hallitus julisti '
+        + 'heidät lainsuojattomiksi.\n\n'
+        + 'Kaksi vuotta jengi vältteli poliisia laajan tukijaverkoston avulla ja ryösti '
+        + 'muun muassa Euroan ja Jerilderien. Vuonna 1880 se yritti suistaa poliisijunan '
+        + 'raiteilta alkusoittona hyökkäykselle Benallaan, poliisitoiminnan tukikohtaan. '
+        + 'Poliisi oli saanut vihjeen ja kohtasi jengin Glenrowanissa, jossa se piti '
+        + 'kymmeniä panttivankeja hotellissa.\n\n'
+        + 'Kahdentoista tunnin piirityksessä lainsuojattomat käyttivät auran teristä '
+        + 'takomiaan haarniskoja. Kelly oli ainoa eloon jäänyt, ja hänet vangittiin '
+        + 'vakavasti haavoittuneena. Tuhannet kannattajat vetosivat armahduksen puolesta, '
+        + 'mutta hänet tuomittiin murhasta ja hirtettiin Melbournen vankilassa.',
+      lahde: 'en-Wikipedia "Ned Kelly", johdanto-osa ja osio "Family background and early '
+        + 'life". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä Kellyn jengin haarniskat oli taottu?',
+        vaihtoehdot: [
+          'Auran teristä',
+          'Junanvaunun seinälevyistä',
+          'Kaivosmiesten kypäristä',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  FJI: [
+    /*
+     * Nairain saari, jonka luona Eliza haaksirikkoutui.
+     * Lähde: en.wikipedia.org: Charles Savage (beachcomber)
+     */
+    {
+      id: 'elizan-musketit',
+      otsikko: 'Elizan musketit — merimies, joka muutti Fidžin sodat',
+      nimio: 'Elizan musketit',
+      vuosi: '1808–1813',
+      paikka: 'Nairain saari, jonka luona Eliza haaksirikkoutui',
+      lat: -17.8, lon: 179.4167,
+      kortti: 'Hylystä nostettiin muutama musketti, ja sillä yksi saari nousi koko '
+        + 'saariston herraksi. Ruotsalaissyntyinen merimies näytti Baun päälliköille, '
+        + 'mitä ase tekee — ja jäi itse taistelemaan. Viisi vuotta myöhemmin hän seisoi '
+        + 'aseettomana kalliolla ja luuli osaavansa puhua itsensä ulos.',
+      teksti: 'Charles Savage oli todennäköisesti ruotsalaissyntyinen merimies, joka '
+        + 'jätettiin Tongaan noin vuonna 1807. Sieltä hänet vietiin Fidžille '
+        + 'Eliza-aluksella, joka haaksirikkoutui Nairain saaren lähellä.\n\n'
+        + 'Savage puhui sekä tongaa että fidžiä ja pääsi nopeasti Baun saaren päällikön '
+        + 'Naulivoun suosioon. Elizan hylystä hän sai talteen musketteja ja näytti Baun '
+        + 'johtajille, mitä niillä tehdään. Ilmeisesti juuri silloin tuliaseita käytettiin '
+        + 'Fidžillä ensimmäisen kerran. Savage johti pientä palkkasoturijoukkoa Naulivoun '
+        + 'palveluksessa, ja koska joukolla ei ollut fidžiläisen sodankäynnin kulttuurisia '
+        + 'pidäkkeitä — kuten sitä, ettei vastapuolen päällikköä tähdätä heti alussa — '
+        + 'siitä tuli pelätty.\n\n'
+        + 'Kertomusten mukaan hän rakensi vihollisen linnoituksen ulkopuolelle '
+        + 'nuolenkestävän suojan, josta ampui rangaistuksetta. Osa väitteistä on '
+        + 'liioittelua ja eurooppalaista tarinankerrontaa, mutta hänen vaikutuksestaan Baun '
+        + 'nousuun on väitelty vakavasti.\n\n'
+        + 'Vuonna 1813 Savage oli mukana Hunter-aluksen santelipuukaupassa. Kuudentena '
+        + 'syyskuuta hän joutui Wailean väen väijytykseen, ja joukko puolustautui '
+        + 'kalliolla, joka sai nimen Dillon\'s Rock. Neuvottelujen aikana Savage luotti '
+        + 'kielitaitoonsa ja laskeutui alas aseetta. Hänet lyötiin maahan ja hukutettiin '
+        + 'kaivoon.',
+      lahde: 'en-Wikipedia "Charles Savage (beachcomber)", johdanto-osa sekä osiot '
+        + '"Arrival at Fiji", "Exploits with the Bau" ja "The events of Dillon\'s Rock". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä Charles Savage sai musketit, joilla hän palveli Baun päällikköä?',
+        vaihtoehdot: [
+          'Britannian laivasto antoi ne lahjaksi',
+          'Haaksirikkoutuneen Elizan hylystä',
+          'Hän osti ne Tongan kuninkaalta',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Baun saari, Kubunan päällikkösuvun keskus.
+     * Lähde: en.wikipedia.org: Seru Epenisa Cakobau
+     */
+    {
+      id: 'cakobaun-lasku',
+      otsikko: 'Cakobaun lasku — tulipalo, joka maksoi kokonaisen maan',
+      nimio: 'Cakobaun lasku',
+      vuosi: '1849–1875',
+      paikka: 'Baun saari, Kubunan päällikkösuvun keskus',
+      lat: -17.9722, lon: 178.614,
+      kortti: 'Amerikkalaisen konsulin talo paloi saarella vuonna 1849. Lasku lähetettiin '
+        + 'miehelle, joka ei ollut vielä edes päällikkö, saati kuningas — ja se oli '
+        + '44 000 dollaria. Neljännesvuosisataa myöhemmin sama lasku luovutti koko '
+        + 'saariston Britannian kruunulle, ja paluumatka Sydneystä toi mukanaan vielä '
+        + 'pahemman.',
+      teksti: 'Yhdysvaltain hallitus tunnusti Seru Epenisa Cakobaun vaatimuksen '
+        + 'yhdistyneen Fidžin kuninkuudesta paljon ennen kuin muut fidžiläiset päälliköt '
+        + 'sen hyväksyivät. Pitkällä aikavälillä tunnustus kääntyi häntä vastaan.\n\n'
+        + 'Amerikkalaiset pitivät häntä vastuullisena tuhopoltosta, joka tuhosi '
+        + 'Yhdysvaltain konsulin John Brown Williamsin kodin Nukulaun saarella vuonna '
+        + '1849, ja vaativat 44 000 dollarin korvausta. Tapahtuma-aikaan Cakobau ei ollut '
+        + 'vielä edes Vunivalu saati kuningas. Velan olivat aiheuttaneet Rewan päälliköt, '
+        + 'eikä hän kyennyt maksamaan sitä.\n\n'
+        + 'Peläten amerikkalaisten hyökkäystä ja liittämistä Cakobau päätti luovuttaa '
+        + 'saaret Yhdistyneelle kuningaskunnalle. Hän ojensi sotanuijansa kuningatar '
+        + 'Victorialle 10. lokakuuta 1874, kun luovutusasiakirja allekirjoitettiin. '
+        + 'Cakobau säilytti Baun Vunivalun arvon ja luovutti korkeimman Tui Viti '
+        + '-arvonimen kuningattarelle.\n\n'
+        + 'Juhlimaan lähtenyt lähetystö purjehti Sydneyyn ja sai siellä tuhkarokon. Paluu '
+        + 'käynnisti epidemian. Vuonna 1875 Fidžin ylilääkäri William MacGregor kirjasi '
+        + 'saarelaistyöläisten kuolleisuudeksi 540 tuhatta kohti. Cakobau eli sen jälkeen '
+        + 'hiljaa ja kuoli 1. helmikuuta 1883.',
+      lahde: 'en-Wikipedia "Seru Epenisa Cakobau", osio "Cession of power"; epidemian '
+        + 'kuolleisuusluku "History of Fiji", osio "After annexation (1875 to 1911)". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä syntyi velka, jonka takia Cakobau luovutti Fidžin Britannialle?',
+        vaihtoehdot: [
+          'Amerikkalaisen konsulin talon tuhopoltosta',
+          'Brittiläisten kauppiaiden lainoista',
+          'Sokeriruokoplantaasien perustamisesta',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  NZL: [
+    /*
+     * Matauri Bay, Cavallisaaret (laivan hylyn lepopaikka).
+     * Lähde: en.wikipedia.org: Sinking of the Rainbow Warrior
+     */
+    {
+      id: 'rainbow-warriorin-upotus',
+      otsikko: 'Rainbow Warrior 1985 — salainen palvelu upotti protestilaivan',
+      nimio: 'Rainbow Warrior',
+      vuosi: '1985',
+      paikka: 'Matauri Bay, Cavallisaaret (laivan hylyn lepopaikka)',
+      lat: -35.0333, lon: 173.9,
+      kortti: 'Kaksi räjähdystä satamassa juuri ennen puoltayötä, yksi kuollut '
+        + 'valokuvaaja ja laiva pohjassa. Ensin kiistettiin kaikki. Sitten selvisi, että '
+        + 'tekijät olivat ystävällismielisen valtion salaisen palvelun agentteja, ja '
+        + 'pääministeri joutui lukemaan lehdistölle kahdensadan sanan tunnustuksen.',
+      teksti: 'Rainbow Warrior oli Greenpeacen lippulaiva, joka oli kampanjoinut '
+        + 'valaanpyyntiä, hylkeenpyyntiä, ydinkokeita ja ydinjätteen mereen laskemista '
+        + 'vastaan. Keväällä 1985 se siirsi 300 marshallinsaarelaista Rongelapin atollilta, '
+        + 'jonka amerikkalaiset ydinkokeet olivat saastuttaneet, ja purjehti sitten '
+        + 'Uuteen-Seelantiin johtamaan mielenosoituslaivastoa Ranskan Mururoan ydinkokeita '
+        + 'vastaan.\n\n'
+        + 'Ranskan ulkomaantiedustelun DGSE:n operaatio sai koodinimen Satanique. Agentti '
+        + 'Christine Cabon soluttautui Greenpeacen Aucklandin toimistoon '
+        + 'ympäristöaktivistin valeasussa ja seurasi laivan viestintää. Kymmenentenä '
+        + 'heinäkuuta 1985 kaksi operaattoria upotti laivan Aucklandin satamassa. '
+        + 'Valokuvaaja Fernando Pereira palasi ensimmäisen räjähdyksen jälkeen hakemaan '
+        + 'kalustoaan ja hukkui toiseen.\n\n'
+        + 'Ranska kiisti aluksi kaiken. Uuden-Seelannin poliisi sai kaksi agenttia kiinni, '
+        + 'ja skandaali kaatoi puolustusministeri Charles Hernun. Agentit tunnustivat '
+        + 'taposta ja saivat kymmenen vuotta, mutta viettivät vain kaksi vuotta Ranskan '
+        + 'Polynesian Haossa ennen vapautustaan.\n\n'
+        + 'Ranska pyysi anteeksi ja maksoi korvaukset Uudelle-Seelannille, Pereiran '
+        + 'perheelle ja Greenpeacelle; välitystuomioistuin määräsi 8,1 miljoonaa '
+        + 'dollaria. Hylky nostettiin, mutta vauriot olivat korjauskelvottomat, ja se '
+        + 'upotettiin 12. joulukuuta 1987 Matauri Bayhin tekoriutaksi.',
+      lahde: 'en-Wikipedia "Sinking of the Rainbow Warrior", johdanto-osa ja osio '
+        + '"Background", sekä "Rainbow Warrior (1955)", osio "Bombing". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuka upotti Rainbow Warriorin Aucklandin satamassa 1985?',
+        vaihtoehdot: [
+          'Ranskan ulkomaantiedustelun agentit',
+          'Laivan oma miehistö vakuutuspetoksena',
+          'Uuden-Seelannin merivoimat',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Parihakan kylä, Taranaki.
+     * Lähde: en.wikipedia.org: Parihaka
+     */
+    {
+      id: 'parihakan-valtaus',
+      otsikko: 'Parihaka 1881 — 1 600 sotilasta kylää vastaan, joka ei puolustautunut',
+      nimio: 'Parihaka 1881',
+      vuosi: '1881',
+      paikka: 'Parihakan kylä, Taranaki',
+      lat: -39.2883, lon: 173.8404,
+      kortti: 'Kylä vastasi maiden takavarikointiin kyntämällä uudisasukkaiden peltoja ja '
+        + 'pystyttämällä aitoja teiden poikki. Aseisiin ei tartuttu kertaakaan. Marraskuun '
+        + 'aamuna 1881 kylään ratsasti 1 600 sotilasta, ja vastaan tuli satoja hyppiviä ja '
+        + 'laulavia lapsia, jotka tarjosivat heille ruokaa.',
+      teksti: 'Parihaka perustettiin noin 1866 Taranakiin maalle, jonka hallitus oli '
+        + 'takavarikoinut Uuden-Seelannin sotien jälkeen. Perustajat olivat päälliköt '
+        + 'Te Whiti o Rongomai ja Tohu Kākahi. Kylä kasvoi yli kahdentuhannen asukkaan '
+        + 'yhteisöksi, joka veti puoleensa maansa menettäneitä maoreja ja teki vaikutuksen '
+        + 'eurooppalaisiin vierailijoihin siisteydellään, ahkeruudellaan ja laajoilla '
+        + 'viljelyksillään.\n\n'
+        + 'Kun Taranakiin virtasi uudisasukkaita, hallitus alkoi ottaa haltuun myös niitä '
+        + 'takavarikoituja maita, joita ei ollut vielä asutettu. Parihakan väki kieltäytyi '
+        + 'korvauksista. Vuodesta 1878 Te Whiti ja Tohu vastasivat väkivallattomilla '
+        + 'kampanjoilla: ensin kynnettiin uudisasukkaiden peltoja, sitten pystytettiin '
+        + 'aitoja teiden poikki. Yli 400 maoria vangittiin ja pidettiin Eteläsaarella '
+        + 'ilman oikeudenkäyntiä jopa kuusitoista kuukautta.\n\n'
+        + 'Alkuperäisasukkaiden ministerin John Brycen painostuksesta hallitus toimi '
+        + 'lokakuun 1881 lopulla, kun myötämielinen kuvernööri oli maasta poissa. '
+        + 'Viidentenä marraskuuta 1 600 sotilasta ja ratsuväkeä marssi kylään aamun '
+        + 'sarastaessa. Heitä vastaan tulivat hyppivät ja laulavat lapset ruokaa '
+        + 'tarjoten.\n\n'
+        + 'Te Whiti ja Tohu vangittiin kuudeksitoista kuukaudeksi, 1 600 asukasta '
+        + 'karkotettiin ympäri Taranakia ilman ruokaa ja suojaa, ja jäljelle jääneille '
+        + '600:lle annettiin kulkuluvat. Sotilaat ryöstivät ja tuhosivat lähes kaikki '
+        + 'kylän rakennukset.',
+      lahde: 'en-Wikipedia "Parihaka", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Parihakan asukkaat vastustivat maiden takavarikointia?',
+        vaihtoehdot: [
+          'Sissisodalla vuoristosta käsin',
+          'Väkivallattomasti kyntäen ja aitoja pystyttäen',
+          'Vetoamalla Lontoon tuomioistuimiin',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  PNG: [
+    /*
+     * Ok Tedin kaivos, Läntinen maakunta.
+     * Lähde: en.wikipedia.org: Ok Tedi environmental disaster
+     */
+    {
+      id: 'ok-tedin-jate',
+      otsikko: 'Ok Tedi — kaksi miljardia tonnia jätettä jokeen',
+      nimio: 'Ok Tedi',
+      vuosi: '1984–2013',
+      paikka: 'Ok Tedin kaivos, Läntinen maakunta',
+      lat: -5.2114, lon: 141.1395,
+      kortti: 'Patoallas sortui vuonna 1984, ja sen jälkeen rikastushiekka laskettiin '
+        + 'yksinkertaisesti jokeen — vuosikymmenten ajan. Tuhat kilometriä uomaa nousi '
+        + 'kymmenen metriä, syvä ja hidas joki muuttui matalaksi koskeksi, ja '
+        + '50 000 ihmisen elämä meni sekaisin. Yhtiön oma toimitusjohtaja sanoi lopulta, '
+        + 'ettei kaivokseen olisi pitänyt koskaan lähteä.',
+      teksti: 'Ok Tedin ympäristökatastrofi vahingoitti tuhannen kilometrin matkalla Ok '
+        + 'Tedi- ja Fly-jokia Papua-Uuden-Guinean Läntisessä maakunnassa vuosina '
+        + '1984–2013, ja vahinko jatkuu yhä. Syynä oli noin kahden miljardin tonnin '
+        + 'käsittelemätön kaivosjäte, joka laskettiin jokeen sen jälkeen, kun kaivoksen '
+        + 'rikastushiekan patojärjestelmä sortui vuonna 1984.\n\n'
+        + 'Vuonna 1999 BHP ilmoitti, että jokeen oli laskettu yli kymmenen vuoden ajan '
+        + '90 miljoonaa tonnia jätettä vuodessa. Yhtiön toimitusjohtaja Paul Anderson '
+        + 'sanoi, ettei kaivos sopinut yhtiön ympäristöarvoihin ja ettei siihen olisi '
+        + 'koskaan pitänyt lähteä. Vuonna 2006 jokeen päätyi yhä 80 miljoonaa tonnia '
+        + 'jätettä ja eroosioainesta vuodessa, ja noin 1 588 neliökilometriä metsää on '
+        + 'kuollut tai kärsii.\n\n'
+        + 'Joenpohja nousi kymmenen metriä, ja syvästä ja hitaasta joesta tuli matala ja '
+        + 'koskinen — se katkaisi paikallisten kulkureitit. Kohonnut uoma aiheutti '
+        + 'tulvia, jotka jättivät saastuneen mutakerroksen taro-, banaani- ja '
+        + 'sagoviljelmille.\n\n'
+        + 'Maanomistajat nostivat ryhmäkanteen Ok Tedi Miningia ja BHP Billitonia '
+        + 'vastaan. Fly-joen alajuoksun kylissä katsotaan, että vahinko elinkeinoille on '
+        + 'paljon suurempi kuin kaivoksesta saatu hyöty. Katastrofia pidetään yhtenä '
+        + 'pahimmista ihmisen aiheuttamista ympäristötuhoista.',
+      lahde: 'en-Wikipedia "Ok Tedi environmental disaster", johdanto-osa ja osio '
+        + '"Environmental impact". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä käynnisti Ok Tedin ympäristökatastrofin vuonna 1984?',
+        vaihtoehdot: [
+          'Maanjäristys kaatoi kaivostornin',
+          'Rikastushiekan patojärjestelmän sortuminen',
+          'Öljysäiliöaluksen haaksirikko joen suulla',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Port Breton, Uuden-Irlannin lounaisrannikko. Artikkelilla ei ole
+     * koordinaattia; piste on valittu saaren lounaiskulmaan, jonka
+     * artikkeli nimeää (Verronin vuoriston juurelle).
+     * Lähde: en.wikipedia.org: De Rays Expedition
+     */
+    {
+      id: 'de-raysin-uusi-ranska',
+      otsikko: 'Uusi Ranska 1880 — markiisi myi paratiisin, jota ei ollut',
+      nimio: 'Uusi Ranska 1880',
+      vuosi: '1880',
+      paikka: 'Port Breton, Uuden-Irlannin lounaisrannikko',
+      lat: -4.72, lon: 152.83,
+      kortti: 'Esite lupasi pääkaupungin, leveät kadut, komeat julkiset rakennukset ja '
+        + 'Rivieran ilmaston. Kolmesataaneljäkymmentä italialaista maksoi 1 800 frangia '
+        + 'kullassa tai viisi vuotta työtään ja purjehti Barcelonasta. Perillä oli '
+        + 'sademetsä, joka laskeutui suoraan mereen — eikä yhtään taloa.',
+      teksti: 'Markiisi de Rays oli ranskalainen aatelismies, joka yritti perustaa '
+        + 'siirtokunnan eteläiselle Tyynellemerelle. Paikka, jota hän kutsui nimellä La '
+        + 'Nouvelle France, oli nykyinen Uusi-Irlanti Bismarckin saaristossa. Vuonna 1879 '
+        + 'hän levitti ympäri Eurooppaa mainoksia, jotka kuvasivat pääkaupunki Port '
+        + 'Bretonin vilkkaaksi ja jo kahdesti onnistuneesti asutetuksi siirtokunnaksi, '
+        + 'jossa oli komeita julkisia rakennuksia, leveitä teitä ja viljelykelpoista '
+        + 'maata.\n\n'
+        + 'Kolmesataaneljäkymmentä siirtolaista Venetosta liittyi retkikuntaan. Kukin '
+        + 'maksoi 1 800 frangia kullassa tai sitoutui viiden vuoden työhön, ja '
+        + 'vastineeksi luvattiin kaksikymmentä hehtaaria maata ja nelihuoneinen talo. '
+        + 'Neljästä retkikunnastaan markiisi keräsi yli seitsemän miljoonaa frangia.\n\n'
+        + 'Sekä Ranska että Italia kutsuivat hanketta huijaukseksi eivätkä myöntäneet '
+        + 'osallistujille passeja. Moni ei uskonut viranomaisia, ja de Rays järjesti '
+        + 'lähdön Barcelonasta. India-laiva purjehti 9. heinäkuuta 1880, ja matka kesti '
+        + 'yli kolme kuukautta ahtaissa ja sairauden täyttämissä oloissa.\n\n'
+        + 'Neljäntenätoista lokakuuta maihin nousseet huomasivat, ettei mitään Uutta '
+        + 'Ranskaa ollut. Verronin vuoriston juurella oli tiheää sademetsää, josta ei '
+        + 'saanut peltoa, ja siirtolaiset sairastuivat malariaan. Satakaksikymmentäkolme '
+        + 'heistä kuoli ennen kuin Australian viranomaiset pelastivat loput.',
+      lahde: 'en-Wikipedia "De Rays Expedition", johdanto-osa sekä osiot "The Paradise of '
+        + 'New France", "The voyage" ja "Settlement in Port Breton". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä siirtolaiset löysivät Port Bretonista lokakuussa 1880?',
+        vaihtoehdot: [
+          'Valmiin kaupungin, mutta ei ruokaa',
+          'Toisen retkikunnan, joka oli ehtinyt ensin',
+          'Ei mitään siirtokuntaa, vain jyrkkää sademetsää',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  SLB: [
+    /*
+     * Sinalagun satama, Kwaion rannikko, Malaita.
+     * Lähde: en.wikipedia.org: Malaita massacre
+     */
+    {
+      id: 'malaitan-verenvuodatus',
+      otsikko: 'Malaita 1927 — veronkanto, joka päättyi rankaisuretkeen',
+      nimio: 'Kwaio 1927',
+      vuosi: '1927',
+      paikka: 'Sinalagun satama, Kwaion rannikko, Malaita',
+      lat: -9.05, lon: 161.05,
+      kortti: 'Piirivirkamies tiesi hyökkäyksestä etukäteen ja päätti silti pystyttää '
+        + 'veronkantopöydän maihin: pako olisi näyttänyt heikkoudelta. Basiana maksoi '
+        + 'veronsa ensimmäisenä, palasi jonoon kiväärin piippu kainalossa — ja sen '
+        + 'jälkeen kuoli viisitoista virkamiestä ja lopulta noin kuusikymmentä kwaiota.',
+      teksti: 'Britannian Salomonsaarten protektoraatin Malaitan piirivirkamies William R. '
+        + 'Bell keräsi saarella päiveroa, jota kwaiot pitivät sekä rasitteena että '
+        + 'hyökkäyksenä perinteisiä arvoja vastaan. Syyskuussa 1927 Basianan johtamat '
+        + 'kwaiosoturit suunnittelivat hyökkäystä veronkantoon.\n\n'
+        + 'Juoni levisi ympäri saarta, ja Bell sai varoituksen hyvissä ajoin. Hän arvioi '
+        + 'kuitenkin paikallisia tapoja tuntien, että paras keino oli näyttää voimaa: '
+        + 'veron kerääminen laivasta käsin tai yksi mies kerrallaan olisi paljastanut '
+        + 'heikkoutta.\n\n'
+        + 'Maanantaina 3. lokakuuta 1927 Bell ankkuroi laivansa Sinalagun satamaan ja '
+        + 'pystytti tavanomaisen veronkantopisteen läheiseen notkoon. Tiistaiaamuna '
+        + 'soturit saapuivat. Basiana maksoi veronsa ensimmäisenä, haki kiväärinsä ja '
+        + 'palasi jonoon piilottaen piipun kainaloonsa; jonon kärjessä hän löi Bellin '
+        + 'kuoliaaksi. Samaan aikaan toinen ryhmä katkaisi verotalon seiniä sitovat '
+        + 'köynnökset, ja seinät romahtivat sisällä olleiden poliisien päälle. '
+        + 'Kaikkiaan viisitoista virkamiestä sai surmansa.\n\n'
+        + 'Kostoretki järjestettiin nopeasti. Siinä kuoli noin kuusikymmentä kwaiota, '
+        + 'lähes kaksisataa vangittiin ja heidän esi-isiensä pyhäköitä ja rituaaliesineitä '
+        + 'tuhottiin ja häpäistiin järjestelmällisesti. Tapahtuma muutti kwaioiden elämää '
+        + 'syvästi.',
+      lahde: 'en-Wikipedia "Malaita massacre", johdanto-osa ja osio "Tax collection '
+        + 'massacre". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi William Bell pystytti veronkantopisteen maihin, vaikka tiesi juonesta?',
+        vaihtoehdot: [
+          'Hän ei uskonut varoitusta todeksi',
+          'Näyttääkseen voimaa; pako olisi paljastanut heikkoutta',
+          'Kuvernööri oli käskenyt hänet rantaan',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Savon saaren edusta, Ironbottom Sound.
+     * Lähde: en.wikipedia.org: Battle of Savo Island
+     */
+    {
+      id: 'savon-yotaistelu',
+      otsikko: 'Savo 1942 — viiden istuvan ankan taistelu',
+      nimio: 'Savo 1942',
+      vuosi: '1942',
+      paikka: 'Savon saaren edusta, Ironbottom Sound',
+      lat: -9.1333, lon: 159.8167,
+      kortti: 'Japanilainen osasto purjehti alas salmea, jota liittoutuneet kutsuivat '
+        + 'nimellä The Slot, ja yllätti suojajoukon täydellisesti pimeässä. Neljä '
+        + 'risteilijää upposi, japanilaiset selvisivät vähällä — ja aamulla laivasto '
+        + 'lähti purkamatta maihinnousujoukkojensa muonaa.',
+      teksti: 'Savon saaren taistelu käytiin 8.–9. elokuuta 1942, ja se oli Guadalcanalin '
+        + 'kampanjan ensimmäinen suuri meritaistelu. Japanin laivasto kokosi vasta-iskuksi '
+        + 'liittoutuneiden maihinnousulle seitsemän risteilijän ja yhden hävittäjän '
+        + 'osaston vara-amiraali Gunichi Mikawan johdolla.\n\n'
+        + 'Osasto purjehti Uuden-Britannian ja Uuden-Irlannin tukikohdista alas '
+        + 'Uuden-Georgian salmea, jota liittoutuneet kutsuivat nimellä The Slot. '
+        + 'Tarkoitus oli katkaista maihinnousu hyökkäämällä kuljetuslaivaston ja sen '
+        + 'suojajoukon kimppuun. Liittoutuneiden suojana oli kahdeksan risteilijää ja '
+        + 'viisitoista hävittäjää vara-amiraali Victor Crutchleyn johdolla, mutta '
+        + 'taisteluun ehti vain viisi risteilijää ja seitsemän hävittäjää.\n\n'
+        + 'Yötaistelussa Mikawa yllätti liittoutuneet täysin ja upotti yhden '
+        + 'australialaisen ja kolme amerikkalaista risteilijää kärsien itse vain vähäisiä '
+        + 'vaurioita. Yhdysvaltain laivastohistorian johtaja, kontra-amiraali Samuel J. '
+        + 'Cox pitää tätä ja Tassafarongan taistelua maansa laivaston pahimpina tappioina '
+        + 'Pearl Harborin jälkeen.\n\n'
+        + 'Mikawa pelkäsi liittoutuneiden lentotukialusten iskua päivänvalossa ja '
+        + 'vetäytyi yön turvin sen sijaan, että olisi etsinyt ja tuhonnut kuljetusalukset. '
+        + 'Silti liittoutuneiden laivasto lähti suunniteltua aiemmin purkamatta kaikkia '
+        + 'varusteitaan, ja maihin nousseet merijalkaväen joukot jäivät niukoille '
+        + 'muonavaroille.',
+      lahde: 'en-Wikipedia "Battle of Savo Island", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä japanilainen osasto jätti tekemättä Savon voiton jälkeen?',
+        vaihtoehdot: [
+          'Se ei etsinyt eikä tuhonnut kuljetusaluksia',
+          'Se ei ottanut vangiksi yhtään merimiestä',
+          'Se ei pommittanut Henderson Fieldin lentokenttää',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
 };

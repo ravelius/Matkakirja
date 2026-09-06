@@ -482,3 +482,66 @@ siksi Brasilian kolmesta maastokohteesta yksikään ei ole joki.
 huumekauppaa. Ne on kirjoitettu asiallisesti ja tiukasti lähteen
 katteessa: mitä tapahtui, kuka teki ja mitä siitä seurasi.
 `node tools/tarkista-nimiolimitys.mjs` antaa "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+## Erä M2 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Maailman
+erä M2 on Oseania: **AUS, FJI, NZL, PNG ja SLB**, joilla kaikilla oli nolla
+karttamerkkiä. Erä toi 35 kohdetta, 15 maastokohdetta ja 10 skandaalia eli
+**60 uutta karttanostoa**. Kohteet ja maastokohteet asuvat maan omassa
+`js/packs/maastokohteet-<iso>.js`-tiedostossa (viisi uutta tiedostoa,
+rekisteröity `js/packs/maastokohteet.js`-hakemistoon); skandaalit ovat
+`js/packs/skandaalit.js`:n lopussa lohkossa "ERÄ M2, OSEANIA". Erä on
+kuvaton, ja jokaisella nostolla on vain maailmankartan rivi.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Australia (AUS) | Port Arthur, Ubirr, Parkesin radioteleskooppi, Broken Hill, Mungojärvi, Snowy Mountains -hanke, Eurekan paalutus, Cooktown | Mount Augustus (vuori), Iso valliriutta (meri), Tasmania (saari) | koala (oli jo) | Batavia 1629, Glenrowan 1880 |
+| Fidži (FJI) | Levuka, Sigatokan dyynit, Taveuni, Sri Siva Subramaniya, Vatukoula | Bligh Water (meri), Vanua Levu (saari), Kadavu (saari) | **puuttuu** | Elizan musketit, Cakobaun lasku |
+| Uusi-Seelanti (NZL) | Waitangi, Ruapekapeka, Cape Reinga, Whakarewarewa, Waitomon luola, Napier, Arrowtown, Denniston | Ruapehu (vuori), Taupojärvi (meri), Waikato (joki) | kiivi (oli jo) | Rainbow Warrior 1985, Parihaka 1881 |
+| Papua-Uusi-Guinea (PNG) | Kokodan polku, Rabaul, Kukin suo, Trobriandsaaret, Gorokan näytös, Lae, Pangunan kaivos, Milne Bay | Mount Wilhelm (vuori), Flyjoki (joki), Bismarckinmeri (meri) | paratiisilintu (oli jo) | Ok Tedi, Uusi Ranska 1880 |
+| Salomonsaaret (SLB) | Tulagi, Kennedysaari, Marovon laguuni, Arnavonsaaret, Langa Langa, Tetepare | Popomanaseu (vuori), Uuden-Georgian salmi (meri), Rennell (saari) | **puuttuu** | Kwaio 1927, Savo 1942 |
+
+**Kaksi vajetta, molemmat kirjattuina.**
+
+1. *Fidži 5 kohdetta ja Salomonsaaret 6 kohdetta kahdeksan sijaan.* Syy ei
+   ole lähteissä vaan lehden ikkunassa. Fidžin fokuslehden rajaus on
+   137 × 146 lautayksikköä ja Salomonsaarten 329 × 240
+   (`js/packs/fokus-grc.js` FOKUS_POHJAT), ja kohteet ovat molemmissa
+   maissa muutamassa rykelmässä. Kymmenen ja yksitoista merkkiä on se
+   määrä, joka mahtuu ilman että naapurin nimiö jää toisen alle
+   (`tools/tarkista-nimiolimitys.mjs`). Perustelut ja karsitut ehdokkaat
+   ovat tiedostojen otsikkokommenteissa.
+2. *Fidžin ja Salomonsaarten eläintäky puuttuu, ja se on kuvaputken työ.*
+   `tests/elaintakyt.test.mjs` vaatii jokaiselta tietueelta vähintään yhden
+   kuvan, eikä tietuetta voi siksi kirjoittaa ennen kuin kuva on olemassa.
+   Tilaukset ovat erän raportissa.
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin — Australiassa niitä on
+kaksikymmentä — ja jokaisen kohteen lähin on kirjattu sen koordinaattirivin
+viereen. Koko erän lähin on Popomanaseu 11,5 lautayksikön päässä
+Honiarasta; raja `KAUPUNGIN_KOHDALLA_SADE` on 7. Tästä säännöstä karsiutui
+Fidžin Tomanivi (7,2 Suvasta) sekä Salomonsaarten Henderson Field ja Gold
+Ridge.
+
+**Kolme jätettiin pois säännöllä N3** (sama nimi kartalla vain kerran):
+Murray ja Kosciuszko ovat jo `js/packs/maailmankartta-nimet.js`:n omia
+nimiöitä ("Murray"-jokirivi sekä "Kaakkois-Australian ylängöt" ja "Suuri
+vedenjakajavuoristo", joiden `huippu` on Kosciuszko), ja Aoraki on
+"Uuden-Seelannin Alpit" -rivin huippu. Tilalle tulivat Mount Augustus,
+Tasmania ja Ruapehu. Uluru ja Sepik ovat pelikaupunkeja, joten nekään eivät
+saaneet uutta merkkiä.
+
+**Kiertävä kartta tarkistettu.** Fidžin itäiset saaret ylittävät
+antimeridiaanin. Laudan x on `((lon + 175) mod 360) · 33,33`, joten 180° E
+antaa x 11 833,3 ja jatkuu siististi kohti laudan reunaa 12 000. Taveuni
+(tasan 180°) osuu lehden rajaukseen, mutta Laun saariryhmä (n. 178,8° W eli
+x ≈ 11 873) jäisi sen ulkopuolelle, joten sieltä ei valittu mitään. Samasta
+syystä Salomonsaarten Santa Cruzin saaret (Vanikoro, La Pérousen
+haaksirikko) jäivät pois: ne ovat rajauksen itäpuolella.
+
+**Vartiot menivät läpi ilman muutoksia.** `savuke-maastokohteet.mjs`
+vartio 7a olettaa maalta fokuslehden rajauksen (`lehdenRajaus`), ja
+kaikilla viidellä maalla se on olemassa — vartiota ei siis tarvinnut
+koskea, vaan jokainen uusi rivi mitattiin sen sisään ennen kirjoittamista.
+`tools/tarkista-nimiolimitys.mjs` antaa yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0".

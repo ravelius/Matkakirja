@@ -1,7 +1,5 @@
 /*
- * SKANDAALIEN AINEISTO — 34 maata, 93 skandaalia, jokainen kartalla.
- * (Maailman erä M1 6.9.2026 toi Etelä-Amerikan viisi maata ja kymmenen
- * skandaalia; siihen asti taulussa oli vain Euroopan 29 maata.)
+ * SKANDAALIEN AINEISTO — 29 maata, 83 skandaalia, jokainen kartalla.
  *
  * Merkin paikka on sisältöä siinä missä teksti (sama periaate kuin
  * eläintäyillä, tests/elaintakyt.test.mjs), mutta skandaalipisteitä ei
@@ -25,9 +23,14 @@ const NIMION_MAKSIMI = 18;
 const MAAT = Object.keys(SKANDAALIT);
 const KAIKKI = MAAT.flatMap((iso) => SKANDAALIT[iso].map((s) => ({ iso, ...s })));
 
-test('skandaaleja on 93 kappaletta 34 maassa, 2–3 per maa', () => {
-  assert.equal(MAAT.length, 34, 'maita on 34');
-  assert.equal(KAIKKI.length, 93, 'skandaaleja on 93');
+/*
+ * LUVUT KASVAVAT ERÄ KERRALLAAN. 29 maata / 83 skandaalia oli Euroopan
+ * tilanne; erä M2 (Oseania, 6.9.2026) toi AUS, FJI, NZL, PNG ja SLB
+ * kahdella skandaalilla kukin.
+ */
+test('skandaaleja on 103 kappaletta 39 maassa, 2–3 per maa', () => {
+  assert.equal(MAAT.length, 39, 'maita on 39');
+  assert.equal(KAIKKI.length, 103, 'skandaaleja on 103');
   for (const iso of MAAT) {
     assert.match(iso, /^[A-Z]{3}$/, `${iso}: avain on kolmikirjaiminen maatunnus`);
     const n = SKANDAALIT[iso].length;
@@ -64,7 +67,7 @@ test('jokaisella skandaalilla on kortin kentät, paikka ja kelvollinen visa', ()
 
 test('oikean vastauksen paikka ei painotu yhteen indeksiin', () => {
   // Fablen katselmointi 30.8.2026: jakauma tasataan koko erän yli.
-  // Tasajako olisi ~31; raja 40 % sietää elävän datan mutta kaataa
+  // Tasajako olisi ~27,7; raja 40 % sietää elävän datan mutta kaataa
   // vinouman, jossa pelaaja oppii painamaan aina samaa nappia.
   const jakauma = [0, 0, 0];
   for (const s of KAIKKI) jakauma[s.visa.oikea] += 1;
