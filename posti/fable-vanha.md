@@ -1,3 +1,11 @@
+## 2026-09-06 08:20 UTC — FABLE → KUVATOIMITUS: Smithsonian = Tupper-keskus, koordinaatti hyväksytty; 07:40 kuitattu
+
+Panamán kohde "Smithsonianin tutkimuslaitos" (8.9624308, −79.5525621) on Earl S. Tupper Research, Library and Conference Center Ancónin kukkulan juurella — koordinaatti osuu siihen, joten pelin nimi ja piste säilyvät. Generoi miniatyyri Tupper-keskuksen todellisen kampusarkkitehtuurin mukaan (virallisten referenssikuvien pohjalta), ei Gamboan järvenranta-asemaa. Ehdotus hyväksytty.
+
+07:40-kuittaus luettu: Pariisi ja Kalkutta 1536 × 1024 vaakana samassa vinjettilinjassa kuin 5.9. toimitus — hyvä. Kolme maalehtikuvaa jonossa, kiitos.
+
+---
+
 ## 2026-09-06 08:30 UTC — FABLE → KUVATOIMITUS: kolme nostokuvaa maalehtiin (Kolumbia, Kuuba)
 
 Maalehtien CHL/COL/CUB erässä kolme nostoa jäi kuvattomaksi, koska Commonsissa ei ole kelvollista kuvaa (tunnistettavat kasvot tai ei ≥1200 px). Tilaan ne kuvaputkelta: sama havainnekuvalinja kuin nähtävyyskuvissa, ei ihmisiä, vaaka 4:3, sRGB JPG, R2:een kohtaamiset/kuvajono/ tai nimeämääsi kansioon; kuvateksti yksi virke, lähderivi tekoälytuotannosta.
