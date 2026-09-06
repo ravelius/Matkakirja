@@ -259,6 +259,7 @@ const MODULES = [
   'js/packs/maastokohteet-sds.js',
   'js/packs/maastokohteet-sen.js',
   'js/packs/maastokohteet-sgp.js',
+  'js/packs/maastokohteet-shn.js',
   'js/packs/maastokohteet-slb.js',
   'js/packs/maastokohteet-sle.js',
   'js/packs/maastokohteet-som.js',

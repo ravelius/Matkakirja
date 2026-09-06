@@ -1935,6 +1935,69 @@ export const ELAINTAKYT = {
     lon: 48.5,
     lat: 8.5,
   },
+  /*
+   * ── ERÄ M16 6.9.2026: TUNISIA, SYYRIA JA JEMEN ─────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M16 (TUN, SYR, YEM, SHN) toi kolme uutta eläintäkyä.
+   *
+   * SAINT HELENA JÄI ILMAN TÄKYÄ. Saaren tikkuri (Saint Helena plover,
+   * wirebird) olisi luonteva valinta, mutta tämän tiedoston paikka
+   * tarkistetaan testissä laudan MAA-ALUETTA vasten (js/mapart.js
+   * isOnLand, map.outlines) eikä maan countryShapes-rengasta vasten.
+   * Maailmankartan outlines-taulussa ei ole Saint Helenan saarta
+   * lainkaan, joten yksikään saaren piste ei läpäise testiä. Vartiota
+   * ei kierretty eikä poikkeuslistaa lisätty; vaje on kirjattu
+   * docs/moduulit/karttanostot-kattavuus.md:n erälohkoon.
+   *
+   * PAIKAT ON MITATTU. Jokainen piste on oman maansa rajojen sisällä,
+   * maalla ja vähintään 35 lautayksikön päässä jokaisesta
+   * kaupunkimerkistä (tests/elaintakyt.test.mjs
+   * VAHIN_ETAISYYS_KAUPUNKIIN) sekä 30 yksikön päässä muista
+   * eläintäyistä.
+   *
+   * KUVA TULEE KUVAPUTKELTA. Erä on kuvaton, joten `kuva`-kentässä on
+   * pelkkä ämpäritunnus (js/media.js assetOsoite:
+   * `kohtaamiset/elaimet/<tunnus>.jpg`).
+   */
+  TUN: {
+    elain: 'dorkasgaselli',
+    otsikko: 'Antilooppi, joka ei juo',
+    teksti: 'Dorkasgaselli on pieni gaselli, joka elää Afrikan ja Arabian nurmi- ja aroalueilla, wadeissa, vuoriautiomaissa ja puoliaavikoilla. Säkäkorkeus on 55–65 senttimetriä, pituus 90–110 senttimetriä ja paino 15–20 kiloa, ja tuntomerkkinä ovat pitkät korvat ja voimakkaasti kaartuvat sarvet, jotka taipuvat ensin ulos ja sitten sisään ja eteenpäin. Saharan alalajilla turkki on hyvin vaalea, kellanruskea, ja valkoista alapuolta reunustaa ruskea juova; Saharan pohjoispuolella eläimet ovat okranvärisempiä ja niillä on tummat kyljet ja kasvojuovat. Laji on sopeutunut autiomaahan niin hyvin, että se saa suurimman osan vedestään mehevistä kasveista — juoda se silti tarvitsee, ja veden äärellä se juo mielellään. Ravintona ovat lehdet, kukat ja akasioiden palot sekä autiomaapensaiden lehdet, oksat ja hedelmät; sateen jälkeen gasellien on nähty kaivavan mukuloita maasta, ja ne nousevat toisinaan takajaloilleen syödäkseen puiden lehviä. Juoksuvauhti yltää 80 kilometriin tunnissa, ja vaaran uhatessa gaselli nykii häntäänsä ja loikkii pää pystyssä, ehkä kertoakseen saalistajalle nähneensä tämän. Maailmassa arvioidaan olevan 35 000–40 000 yksilöä.',
+    lahde: 'en-Wikipedia "Dorcas gazelle", johdanto sekä osiot "Description", '
+      + '"Behaviour" ja "Threats". Tarkistettu 6.9.2026.',
+    kuva: 'elain-tun',
+    // Piste on Keski-Tunisian aroylängöllä Bou Hedman seudulla, 103,8
+    // lautayksikköä Karthagosta (vähimmäisetäisyys 35).
+    lon: 9.6,
+    lat: 34.47,
+  },
+  SYR: {
+    elain: 'kaljuiibis',
+    otsikko: 'Lintu, joka löytyi uudelleen paimenten tiedosta',
+    teksti: 'Kaljuiibis on muuttava vanhan maailman iibis, joka viihtyy avoimilla mailla, kallioisilla vuorilla ja puoliaavikoilla usein juoksevan veden lähellä. Se on 70–80 senttimetriä pitkä ja kiiltävän musta, ja toisin kuin useimmat iibikset se ei kahlaa; kasvot ja pää ovat höyhenettömät ja punaiset, ja nokka on pitkä, kaareva ja punainen. Se pesii yhdyskunnissa rannikon tai vuorten kalliohyllyillä, munii tavallisesti kaksi tai kolme munaa risupesään ja syö liskoja, hyönteisiä ja muita pieniä eläimiä; ulostetutkimus on osoittanut, että liskot ja pimikkäät ovat pääravintoa. Laji oli aikoinaan levinnyt Lähi-itään, Pohjois-Afrikkaan sekä Etelä- ja Keski-Eurooppaan, ja sen fossiiliaineisto ulottuu vähintään 1,8 miljoonan vuoden päähän; Euroopasta se katosi yli kolmesataa vuotta sitten. Syyriassa lintu oli julistettu hävinneeksi yli seitsemänkymmentä vuotta aiemmin, mutta kevään 2002 maastotutkimuksissa, jotka tehtiin beduiinipaimentolaisten ja paikallisten metsästäjien tiedon varassa, löytyi viisitoista vanhaa pesäpaikkaa ja Palmyran läheltä yhä elävä seitsemän linnun pesimäyhdyskunta. Vuonna 2006 satelliittilähettimet paljastivat, että Syyrian linnut talvehtivat Etiopian ylängöillä. Vuonna 2019 luonnonvaraisia lintuja arvioitiin olevan noin 700, lähes kaikki Etelä-Marokossa.',
+    lahde: 'en-Wikipedia "Northern bald ibis", johdanto sekä osiot '
+      + '"Distribution and habitat", "Feeding" ja "Conservation". '
+      + 'Tarkistettu 6.9.2026.',
+    kuva: 'elain-syr',
+    // Piste on Palmyran autiomaa-arolla Keski-Syyriassa, 64,6
+    // lautayksikköä Alepposta (vähimmäisetäisyys 35).
+    lon: 38.4,
+    lat: 34.9,
+  },
+  YEM: {
+    elain: 'jemeninkameleontti',
+    otsikko: 'Kypäräpää, joka juo omasta otsastaan',
+    teksti: 'Jemeninkameleontti on Arabian niemimaan lounaisosan laji, jota tavataan Jemenissä ja Saudi-Arabiassa. Nimi tulee pään päällä olevasta korkeasta harjasta eli kypärästä, joka kasvaa eläimen mukana ja on suurimmilla aikuisilla noin viisi senttimetriä korkea; kypärä ei ole pelkkä koriste, vaan se ohjaa kastetta ja sadevettä eläimen suuhun. Uros on kuonosta hännänpäähän 43–61 senttimetriä pitkä, naaras enintään noin 35 senttimetriä mutta tanakampi. Poikaset kuoriutuvat vaaleanvihreinä ja ilman kypärää, ja säikähtäessään ne saattavat pudottautua maahan ja muuttua stressistä kirkkaanpunaisiksi. Aikuiset naaraat ovat vihreitä valkoisin, oranssein, keltaisin tai ruskein täplin, urokset kirkkaampia ja selväpiirteisin keltaisin tai sinisin vöin. Värinvaihto kertoo aggressiosta, sosiaalisesta asemasta, lisääntymisestä ja stressistä. Laji on puissa elävä ja viihtyy ylätasangoilla, vuorilla ja laaksoissa; se syö pääasiassa hyönteisiä mutta on niitä harvoja kameleontteja, jotka syövät myös kasviksia ja hedelmiä — ilmeisesti saadakseen vettä kuivana aikana. Naaras elää noin viisi, uros noin kahdeksan vuotta.',
+    lahde: 'en-Wikipedia "Veiled chameleon", johdanto sekä osiot "Etymology", '
+      + '"Description", "Habitat and distribution" ja "Diet". '
+      + 'Tarkistettu 6.9.2026.',
+    kuva: 'elain-yem',
+    // Piste on Jemenin ylängöllä Maribin lounaispuolella, 50,4
+    // lautayksikköä Sanasta (vähimmäisetäisyys 35).
+    lon: 45.6,
+    lat: 14.8,
+  },
 };
 
 

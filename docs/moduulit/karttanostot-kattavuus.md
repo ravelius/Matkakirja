@@ -1492,3 +1492,85 @@ saivat `kuva`-kenttään kuvaputken tunnuksen ilman kansiota
 (`elain-sdn`, `elain-tcd`, `elain-lby`, `elain-nga`, `elain-som`),
 joka osoittaa ämpäriin: kun kuvaputki tekee kuvan, se ilmestyy
 kortille ilman koodimuutosta, ja siihen asti kortti on kuvaton.
+## Erä M16 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Erä
+M16 kattaa **TUN, SYR, YEM ja SHN**. Tunisialla oli ennen erää yksi
+kohde ja Syyrialla yksi, Jemenillä ja Saint Helenalla ei yhtäkään;
+kaikilta puuttuivat eläintäky ja skandaalit. Erä kirjoitti yhteensä
+**30 uutta karttamerkkiä**: 23 kohdetta ja maastokohdetta, 3 eläintäkyä
+ja 8 skandaalia. Erä on kuvaton kuten K2-erät 1–4 ja maailman erät
+M1–M11, ja jokainen väite on en-Wikipedian raakatekstin katteessa
+lähderivillä, joka nimeää artikkelin ja osan sekä tarkistuspäivän
+6.9.2026. Taulukot ajaa Fable.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Tunisia (TUN) | Dougga, El Jemin amfiteatteri, Kairouanin altaat, Kerkouane, Soussen ribat, Matmata, Sbeitla (oli jo: Karthagon sotasatama) | (oli jo: Jabal ash Shanabi, Välimeri, Medjerda) | dorkasgaselli | Bardon sopimus 1881, Saharan meri 1877–1882 |
+| Syyria (SYR) | Krak des Chevaliers, Bosra, Ugarit, Ebla, Apamea, Resafa, Mari (oli jo: Belin temppeli) | (oli jo: Hermonvuori, Välimeri, Eufrat) | kaljuiibis | Tell Halaf 1899–1943, Dura-Europos 1920–1937 |
+| Jemen (YEM) | Shibam, Zabid, Maribin pato, Tarim, Jibla, Baraqish, Thula, Al Hajjarah | (oli jo: Jabal an-Nabi Shu'ayb, Adeninlahti, Sokotra) | jemeninkameleontti | Perim 1857, Mokka 1616–1719 |
+| Saint Helena (SHN) | High Knoll Fort, Plantation House, Saint Helenan lentoasema | Diana's Peak, Sandy Bay | — (ks. alla) | Longwood House 1815–1858, Deadwood 1900–1902 |
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin, ja jokaisen kohteen
+lähin on kirjattu sen koordinaattirivin viereen. Erän lähin merkki on
+Thula 12,4 lautayksikön päässä Sanasta ja toiseksi lähin Al Hajjarah
+19,0 yksikön päässä samasta laatasta; raja `KAUPUNGIN_KOHDALLA_SADE` on
+7. `node tools/tarkista-nostopaikat.mjs` antaa kaikille 30:lle rivin
+*pääkartta*, ja `node tools/tarkista-nimiolimitys.mjs` sanoo yhä
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Saint Helena on erän erikoistapaus, ja sen vaje on tarkoituksellinen.**
+Saari on 16 × 8 kilometriä, ja maailmankartan mitassa se mahtuu noin
+neljän lautayksikön ruutuun (piirretty saari on x 5640,6…5644,7 ja
+y 3746,1…3749,5), kun yhden merkin nimiölaatikko on parikymmentä
+yksikköä leveä. Merkit ovat siis toistensa päällä, ja ladonnan
+erottelupassi joutuu levittämään ne saaren ympärille. Enimmäismäärä
+haettiin koneellisesti kokeilemalla kaikki yhdistelmät kahdeksasta
+ehdokkaasta: **viisi kohdetta ja kaksi skandaalia** on suurin joukko,
+jolla nimiölimitys pysyy nollassa eikä yhtään nimiötä jää väistön
+piilottamaksi — kuudes tuottaa aina vähintään yhden limityksen. Pois
+jäivät siksi Jaakobin tikkaat (Jacob's Ladder) ja Longwood House
+kohteena; Longwoodin tarina kerrotaan erän skandaalina. Vaje on
+**kohteita −5 ja maastoa −1**.
+
+**Saint Helenan eläintäky puuttuu, ja syy on tekninen.** Saaren tikkuri
+(*Saint Helena plover*, wirebird) olisi maan luonteva täky, mutta
+`tests/elaintakyt.test.mjs` vaatii, että täyn piste osuu laudan
+MAA-ALUEELLE (`js/mapart.js` `isOnLand`, `map.outlines`) eikä maan
+`countryShapes`-renkaaseen. Maailmankartan `outlines`-taulussa ei ole
+Saint Helenan saarta lainkaan — saari on vain countryShapes-renkaana —
+joten yksikään saaren piste ei läpäise testiä. Vartiota ei kierretty
+eikä poikkeuslistaa lisätty: vaje jää Fablen ratkaistavaksi (joko
+`outlines`-tauluun lisätään saari tai testiin oma perusteltu
+poikkeus, kuten Islannilla on jo rajatestissä).
+
+**Herkät aiheet rajattiin `docs/aasia-tyoaineisto/spec-asia.md`:n ja
+M3:n Myanmar-linjan mukaan.** Syyrian ja Jemenin nykytila on sotaa,
+joten kohteiksi kelpuutettiin vain antiikin ja keskiajan paikkoja,
+joiden lähdeartikkelin nykytilaosuus ei ole taistelua, ja kortit
+kertovat kohteen oman historian. **Maaloula jätettiin pois**, koska sen
+artikkelin koko History-osio on vuoden 2013 taistelu. Dura-Europos ja
+Tell Halaf kirjoitettiin kohteiden sijaan skandaaleiksi, koska
+kummankin tarina on kaivauksen ja löytöjen tarina. Shibamin kortissa
+sanotaan yhdellä toteavalla virkkeellä, että kohde on ollut
+vaarantuneiden maailmanperintökohteiden luettelossa vuodesta 2015 —
+se on kohteen nykyinen asema Unescon listalla. Skandaalit ovat kaikissa
+neljässä maassa 1800- ja 1900-luvun historiaa: siirtomaasopimuksia,
+insinöörihaaveita, arkeologiaa ja kauppaa. **Al Mukalla** jäi pois,
+koska sen artikkelin nykyosuus on aseellista toimintaa.
+
+**Muut pois jääneet ehdokkaat.** Tunisin medina (6,6 lautayksikköä
+Karthagon sotasataman merkistä eli käytännössä sen nimiön päällä),
+Djerba ja Ichkeulin järvi (maastotyyppejä, eikä maastossa ollut
+vajetta), Awwamin temppeli (noin neljä lautayksikköä Maribin padosta)
+sekä Speery Island (ei omaa en-Wikipedian artikkelia, ohjaus vie
+Saint Helenan yleisartikkeliin).
+
+**Kolme eläintäkyä, kaikki kuvattomia.** `kuva`-kentässä on kuvaputken
+ämpäritunnus ilman kansiota (`elain-tun`, `elain-syr`, `elain-yem`):
+kun kuvaputki toimittaa kuvan, se ilmestyy kortille ilman
+koodimuutosta. Paikat on mitattu koneellisesti — jokainen piste on maan
+rajojen sisällä, maalla ja vähintään 35 lautayksikön päässä jokaisesta
+kaupunkimerkistä sekä 30 yksikön päässä muista eläintäyistä. Lähimmäksi
+kaupunkia jäi Jemenin kameleontti (50,4 yksikköä Sanasta).

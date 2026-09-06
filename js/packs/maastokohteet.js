@@ -140,6 +140,7 @@ import { MAASTOKOHTEET_SDN } from './maastokohteet-sdn.js';
 import { MAASTOKOHTEET_SDS } from './maastokohteet-sds.js';
 import { MAASTOKOHTEET_SEN } from './maastokohteet-sen.js';
 import { MAASTOKOHTEET_SGP } from './maastokohteet-sgp.js';
+import { MAASTOKOHTEET_SHN } from './maastokohteet-shn.js';
 import { MAASTOKOHTEET_SLB } from './maastokohteet-slb.js';
 import { MAASTOKOHTEET_SLE } from './maastokohteet-sle.js';
 import { MAASTOKOHTEET_SOM } from './maastokohteet-som.js';
@@ -240,6 +241,7 @@ export const MAASTOKOHTEET = {
   SDS: MAASTOKOHTEET_SDS,
   SEN: MAASTOKOHTEET_SEN,
   SGP: MAASTOKOHTEET_SGP,
+  SHN: MAASTOKOHTEET_SHN,
   SLB: MAASTOKOHTEET_SLB,
   SLE: MAASTOKOHTEET_SLE,
   SOM: MAASTOKOHTEET_SOM,

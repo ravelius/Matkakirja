@@ -12374,4 +12374,419 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /* ══ ERÄ M16 6.9.2026: TUNISIA, SYYRIA, JEMEN, SAINT HELENA ══════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M16 tuo kaksi skandaalia kuhunkin neljään maahan — kahdeksan
+   * uutta. Kaikki ovat kuvattomia, ja jokaisen lähderivi nimeää
+   * en-Wikipedian artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+   *
+   * AIHEET OVAT 1800- JA 1900-LUVUN HISTORIAA. Syyriassa ja Jemenissä
+   * tämä on sitova rajaus (docs/aasia-tyoaineisto/spec-asia.md ja M3:n
+   * Myanmar-linja): käynnissä olevaa selkkausta ei kerrota, vaan
+   * kortit ovat siirtomaa-ajan ja arkeologian tapauksia.
+   *
+   * PAIKAT ON MITATTU. Yksikään merkki ei ole pelikaupungin kohdalla
+   * (KAUPUNGIN_KOHDALLA_SADE 7 lautayksikköä, js/fokuskohteet.js):
+   * lähin on Bardon sopimus 63,2 lautayksikön päässä Karthagosta.
+   * Saint Helenan kaksi merkkiä ovat saaren oikealla paikalla, ja
+   * laudan St. Helena -kaupunki on tyylitellysti 82 yksikön päässä
+   * koillisessa.
+   *
+   * TELL HALAF JA DURA-EUROPOS OVAT SKANDAALEJA EIVÄTKÄ KOHTEITA.
+   * Kummankin tarina on kaivauksen ja löytöjen tarina, ei paikan
+   * oman historian; kohteina ne olisivat myös kaksi merkkiä lisää
+   * samaan Eufratin mutkaan (js/packs/maastokohteet-syr.js Mari).
+   *
+   * LONGWOOD HOUSE ON SKANDAALI, KOSKA SAARELLE EI MAHDU ENEMPÄÄ
+   * MERKKEJÄ. Perustelu on maastokohteet-shn.js:n otsikkokommentissa:
+   * Saint Helena mahtuu neljän lautayksikön ruutuun, ja viisi kohdetta
+   * plus nämä kaksi skandaalia on suurin joukko, jolla nimiöt eivät
+   * mene päällekkäin.
+   * ══════════════════════════════════════════════════════════════════ */
+  TUN: [
+    /*
+     * Ksar Saïdin palatsi Le Bardossa Tunisin laidalla.
+     * Lähde: en.wikipedia.org: Treaty of Bardo
+     */
+    {
+      id: 'bardon-sopimus',
+      otsikko: 'Rajaretki, joka maksoi maan itsenäisyyden',
+      nimio: 'Bardon sopimus',
+      vuosi: '1881',
+      paikka: 'Ksar Saïdin palatsi, Le Bardo',
+      lat: 36.80944, lon: 10.13444,
+      kortti: 'Tunisian bey oli velkaantunut eurooppalaisille pankeille, ja Ranska tarvitsi '
+        + 'tekosyyn. Sen antoi rajaseudun heimon retki Algerian puolelle keväällä 1881. '
+        + 'Kolmekymmentäkuusituhatta miestä marssi maahan, ja toukokuussa beyn palatsissa '
+        + 'allekirjoitettiin sopimus, joka teki Tunisiasta Ranskan protektoraatin.',
+      teksti: 'Bardon sopimus eli Ksar Saïdin sopimus perusti Ranskan protektoraatin '
+        + 'Tunisiaan, ja järjestely kesti toiseen maailmansotaan asti. Sopimus '
+        + 'allekirjoitettiin 12. toukokuuta 1881 Ranskan edustajien ja Tunisian beyn '
+        + 'Muhammed as-Sadiqin välillä, ja se asetti maan ranskalaisen '
+        + 'yleisresidentin valvontaan.'
+        + '\n\nNimi tulee hovin asuinpaikasta: Ksar Saïdin palatsista Le Bardossa, jonne '
+        + 'husainidien beyt olivat asettuneet 1700-luvun alussa. Sopimuksen sanamuoto puhui '
+        + 'järjestyksen palauttamisesta ja beyn suojelemisesta sisäistä vastarintaa vastaan, '
+        + 'ja sillä perusteella Ranska sai hallita tiettyjä alueita ja vastata Tunisian '
+        + 'ulkopolitiikasta.'
+        + '\n\nTaustalla oli tunisialaisen khroumir-heimon huhtikuinen retki Algerian '
+        + 'puolelle, joka kelpasi tekosyyksi hyökkäykselle. Ulkoministeri Jules Ferry sai '
+        + 'lähetettyä noin 36 000 miehen retkikunnan, eikä vastarintaa juuri ollut sen '
+        + 'paremmin heimon kuin beynkään puolelta. Sopimuksen jälkeen joukot vedettiin pois '
+        + 'ja miehityksen sanottiin olleen väliaikainen.'
+        + '\n\nLoppu tuli kahdessa vaiheessa. La Marsan sopimukset 8. kesäkuuta 1883 antoivat '
+        + 'Ranskalle oikeuden puuttua myös Tunisian sisäisiin asioihin, ja yleisresidentin '
+        + 'vallan alla maa menetti käytännössä itsemääräämisoikeutensa sekä ulko- että '
+        + 'sisäasioissa.',
+      lahde: 'en-Wikipedia "Treaty of Bardo", johdanto sekä osiot "Name" ja "Background". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä toimi tekosyynä Ranskan hyökkäykselle?',
+        vaihtoehdot: [
+          'Beyn kieltäytyminen maksamasta velkojaan',
+          'Heimoretki Algerian puolelle',
+          'Ranskalaisen konsulin murha',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Chott el Djerid, Tunisian suurin suola-allas.
+     * Lähde: en.wikipedia.org: Sahara Sea
+     */
+    {
+      id: 'saharan-meri',
+      otsikko: 'Meri, jota ei koskaan tullut',
+      nimio: 'Saharan meri',
+      vuosi: '1877–1882',
+      paikka: 'Chott el Djerid, Etelä-Tunisia',
+      lat: 33.7, lon: 8.43,
+      kortti: 'Suezin kanavan mies uskoi, että Saharaan voisi laskea meren. Suunnitelma oli '
+        + 'kaivaa kanava Gabèsinlahdelta Tunisian suola-altaille ja päästää Välimeri sisään. '
+        + 'Sisämeren piti tuoda sadetta autiomaahan ja parantaa säätä Euroopassa asti.',
+      teksti: 'Saharan meri oli nimitys hankkeelle, jossa Saharan merenpinnan alapuolelle '
+        + 'jäävät sisäaltaat olisi täytetty Atlantin tai Välimeren vedellä. Tavoitteena oli '
+        + 'sisämeri, joka toisi kosteaa ilmaa, sadetta ja maanviljelystä syvälle '
+        + 'autiomaahan. Ajatus nousi esiin useaan otteeseen 1800-luvun lopulla ja 1900-luvun '
+        + 'alussa, ja sitä pohdittiin Marokon, Algerian, Tunisian ja Egyptin osalta.'
+        + '\n\nEnsimmäisenä ehdotuksen teki vuonna 1877 skotlantilainen yrittäjä ja '
+        + 'orjuudenvastustaja Donald Mackenzie, joka aikoi kaivaa kanavan Juby-niemen '
+        + 'pohjoispuolisilta laguuneilta El Djoufin tasangolle. Hän uskoi tasangon olevan '
+        + 'jopa 61 metriä merenpinnan alapuolella — eikä ollut koskaan käynyt alueella.'
+        + '\n\nRanskalainen maantieteilijä François Élie Roudaire ja Suezin kanavasta tunnettu '
+        + 'diplomaatti Ferdinand de Lesseps esittivät 1878 samaa Tunisiaan: kanava '
+        + 'Gabèsinlahdelta Chott el Fejejiin päästäisi meren valumaan altaisiin. Hinnaksi '
+        + 'arvioitiin 30 miljoonaa dollaria. Kaikki eivät innostuneet; Alexander William '
+        + 'Mitchinson varoitti, että laajojen alueiden tulvittaminen loisi tautien vaivaamia '
+        + 'soita.'
+        + '\n\nRanskan hallitus hylkäsi hankkeen ja lopetti rahoituksen, kun maastomittaukset '
+        + 'osoittivat, ettei suuri osa alueista ollutkaan merenpinnan alapuolella. Ajatus jäi '
+        + 'silti elämään kirjallisuudessa: Jules Vernen viimeinen romaani viittaa suoraan '
+        + 'Roudairen ja de Lessepsin suunnitelmaan.',
+      lahde: 'en-Wikipedia "Sahara Sea", johdanto sekä osiot "19th century" ja "Appearances '
+        + 'in literature". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi hanke lopulta haudattiin?',
+        vaihtoehdot: [
+          'Rahoittajat vetäytyivät sodan takia',
+          'Tunisian bey kielsi kaivamisen',
+          'Mittaukset osoittivat maan olevan merenpinnan yläpuolella',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  SYR: [
+    /*
+     * Tell Halaf Khaburin laaksossa Koillis-Syyriassa.
+     * Lähde: en.wikipedia.org: Tell Halaf
+     */
+    {
+      id: 'tell-halafin-veistokset',
+      otsikko: 'Kivijumalat, jotka palasivat sirpaleina',
+      nimio: 'Tell Halaf',
+      vuosi: '1899–1943',
+      paikka: 'Tell Halaf, Khaburin laakso',
+      lat: 36.8266, lon: 40.0396,
+      kortti: 'Saksalainen diplomaatti etsi Bagdadin radalle reittiä, kun kyläläiset kertoivat '
+        + 'hänelle hiekkaan haudatuista kivijumalista. Kolmessa päivässä maasta nousi '
+        + 'patsaita. Niistä tuli hänen elämäntyönsä ja oma museo Berliiniin — ja marraskuussa '
+        + '1943 tuhkaa ja sirpaleita.',
+      teksti: 'Marraskuun 19. päivänä 1899 Max von Oppenheim oli matkalla Kairosta '
+        + 'Pohjois-Mesopotamian halki Deutsche Bankin toimeksiannosta etsimässä reittiä '
+        + 'Bagdadin radalle. Paikallisten kertomukset veivät hänet Tell Halafille, ja '
+        + 'kolmessa päivässä kaivettiin esiin useita merkittäviä veistoksia, muun muassa '
+        + 'niin kutsuttu istuva jumalatar, sekä läntisen palatsin sisäänkäynti. Kaivauslupaa '
+        + 'hänellä ei ollut, joten hän hautasi patsaat takaisin ja jatkoi matkaa.'
+        + '\n\nOppenheim erosi diplomaattikunnasta lokakuussa 1910 ja aloitti kaivaukset '
+        + '5. elokuuta 1911 viiden arkeologin ryhmällä. Saksasta tuotiin kalustoa pientä '
+        + 'höyryveturia myöten, ja noin 750 000 markan kustannukset maksettiin hänen isänsä '
+        + 'pankkiiriomaisuudesta. Esiin tulivat kuningas Kaparan läntisen palatsin patsaat ja '
+        + 'reliefit sekä uudenlaista maalattua keramiikkaa, jonka mukaan koko Halafin '
+        + 'kulttuuri on nimetty.'
+        + '\n\nLöydöt jaettiin ranskalaisen mandaattihallinnon kanssa: noin kaksi kolmasosaa '
+        + 'vietiin Berliiniin ja 35 kappaletta jäi Aleppon museon kokoelman ytimeksi. '
+        + 'Pergamonmuseo ei suostunut Oppenheimin taloudellisiin ehtoihin, joten hän avasi '
+        + 'heinäkuussa 1930 oman Tell Halaf -museonsa Berliinin Charlottenburgiin.'
+        + '\n\nMarraskuussa 1943 museoon osui fosforipommi. Rakennus paloi kokonaan, puu- ja '
+        + 'kalkkikiviesineet tuhoutuivat, ja basalttiveistokset halkesivat sammutusveden '
+        + 'lämpöshokissa kymmeniksi kappaleiksi. Sirpaleet makasivat Pergamonmuseon '
+        + 'kellareissa vuosikymmeniä, ja vasta vuosina 2001–2010 yli kolmekymmentä veistosta '
+        + 'koottiin uudelleen noin 27 000 palasta.',
+      lahde: 'en-Wikipedia "Tell Halaf", osiot "Discovery", "Excavations by Max von '
+        + 'Oppenheim", "Tell Halaf Museum, Berlin" ja "Reconstruction of the artefacts". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Oppenheim oli alun perin alueella?',
+        vaihtoehdot: [
+          'Hän etsi reittiä Bagdadin rautatielle',
+          'Hän johti Pergamonmuseon retkikuntaa',
+          'Hän oli Osmanivaltakunnan muinaismuistojen tarkastaja',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Dura-Europoksen rauniokukkula Eufratin yläpuolella.
+     * Lähde: en.wikipedia.org: Dura-Europos
+     */
+    {
+      id: 'dura-europoksen-juoksuhauta',
+      otsikko: 'Juoksuhauta, joka osui maalaukseen',
+      nimio: 'Dura-Europos',
+      vuosi: '1920–1937',
+      paikka: 'Dura-Europos, Eufrat',
+      lat: 34.747, lon: 40.730,
+      kortti: 'Ensimmäisen maailmansodan jälkimainingeissa brittijoukot kaivautuivat asemiin '
+        + 'Eufratin yläpuoliselle jyrkänteelle. Lapio osui seinään, jonka maalaukset olivat '
+        + 'kuin eiliseltä. Kaupunki oli maannut hiekan alla lähes 1 700 vuotta.',
+      teksti: 'Dura-Europos oli Seleukos I Nikatorin noin 300 eaa. perustama rajakaupunki '
+        + '90 metriä Eufratin yläpuolella olevalla jyrkänteellä. Sasanidit valloittivat sen '
+        + 'piirityksen jälkeen vuosina 256–257 jaa., väestö vietiin pois, ja kaupunki peittyi '
+        + 'hiekkaan ja mutaan. Koska paikalle ei koskaan rakennettu mitään uutta, sitä on '
+        + 'kutsuttu autiomaan Pompejiksi.'
+        + '\n\nPaikan tunnisti uudelleen amerikkalainen Wolfe-retkikunta 1885, kun John Henry '
+        + 'Haynes valokuvasi Palmyran portin. Sodan ja arabikapinan jälkimainingeissa '
+        + 'brittijoukot kapteeni Murphyn johdolla tutkivat raunioita, ja 30. maaliskuuta 1920 '
+        + 'juoksuhautaa kaivanut sotilas paljasti Belin temppelistä hehkuvan tuoreet '
+        + 'seinämaalaukset. Bagdadissa ollut arkeologi James Henry Breasted hälytettiin '
+        + 'paikalle.'
+        + '\n\nSuuret kaivaukset tehtiin 1920- ja 1930-luvuilla ranskalais-amerikkalaisin '
+        + 'voimin. Franz Cumont julkaisi ensimmäiset tulokset 1922–1923 ja tunnisti paikan '
+        + 'Dura-Europokseksi, ja Clark Hopkinsin ja Michael Rostovtzeffin retkikunnat '
+        + 'jatkoivat vuoteen 1937, jolloin rahat loppuivat — vain osa kaivauksista ehdittiin '
+        + 'julkaista.'
+        + '\n\nMerkittävin löytö tehtiin 1932, kun Hopkins kaivoi esiin synagogan läntisen '
+        + 'muurin vierestä. Se oli säilynyt siksi, että se oli täytetty maalla kaupungin '
+        + 'puolustusta vahvistettaessa vuonna 256. Kokoushuoneen seinillä on ihmisiä ja '
+        + 'eläimiä esittävä maalaussarja, laajin antiikista säilynyt, ja löytö oli '
+        + 'uskonnonhistoriallinen yllätys. Maalaukset ovat Damaskoksessa.',
+      lahde: 'en-Wikipedia "Dura-Europos", johdanto sekä osiot "Overview" (Archaeology) ja '
+        + '"Synagogue". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi synagogan maalaukset säilyivät niin hyvin?',
+        vaihtoehdot: [
+          'Ne oli peitetty rappauksella',
+          'Rakennus oli täytetty maalla puolustusta varten',
+          'Ne maalattiin uudelleen bysanttilaisaikana',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  YEM: [
+    /*
+     * Perimin eli Mayyunin saari Bab el-Mandebin salmessa.
+     * Lähde: en.wikipedia.org: Perim
+     */
+    {
+      id: 'perimin-majakka',
+      otsikko: 'Majakka, joka oli oikeasti lippu',
+      nimio: 'Perim',
+      vuosi: '1857',
+      paikka: 'Perimin saari, Bab el-Mandeb',
+      lat: 12.66, lon: 43.42,
+      kortti: 'Punaisenmeren portilla on paljas saari, jolla ei ole vettä. Kun Britannia kuuli '
+        + 'huhun, että ranskalaiset olisivat lähettämässä sinne sotalaivan, se lähetti '
+        + 'Adenista maihinnousuosaston — ja ilmoitti rakentavansa majakan.',
+      teksti: 'Perim eli arabiaksi Mayyun on jemeniläinen tulivuorisaari Bab el-Mandebin '
+        + 'salmessa Punaisenmeren eteläisellä sisäänkäynnillä, ja se jakaa salmen kahdeksi '
+        + 'väyläksi. Vaikka saarella on suojaisa luonnonsatama ja ratkaiseva sijainti, '
+        + 'kirjoitettu historia ohitti sen 1800-luvun puoliväliin asti: paljaalla ja '
+        + 'vedettömällä saarella oli vaikea elää, ja siellä kävivät vain kalastajat ja '
+        + 'helmenkalastajat kausittain.'
+        + '\n\nVuonna 1856 pääministeri Palmerston piti ranskalaisten tukemaa Suezin kanavaa '
+        + 'keinona kasvattaa Ranskan valtaa Britannian kustannuksella ja hyväksyi Perimin '
+        + 'miehityksen yhdeksi vastatoimeksi. Bombayn kuvernööri Lord Elphinstone kirjoitti '
+        + 'joulukuussa 1856 Adenin residentille, että saari oli määrä ottaa haltuun ja sinne '
+        + 'oli rakennettava majakka; koska saari oli otettu Itä-Intian kauppakomppanian nimiin '
+        + 'jo 1799, muodollisuuksia ei katsottu tarvittavan.'
+        + '\n\nPäätöstä saattoi jouduttaa perätön tieto siitä, että ranskalaiset olisivat '
+        + 'lähettäneet Réunionilta fregatin liittämään saaren itselleen. Julkilausuttu syy oli '
+        + 'kuitenkin majakka, ja pitkän kiistelyn jälkeen yksitoistametrinen majakka vihittiin '
+        + '1. huhtikuuta 1861. Vaarallisilla vesillä hukkui silti yhä laivoja.'
+        + '\n\nVuonna 1881 lontoolainen Hinton Spalding sai luvan perustaa saarelle '
+        + 'hiiliaseman, ja Perim Coal Company toimitti ensimmäisen lastinsa 29. elokuuta 1883. '
+        + 'Perim ja Aden kilpailivat Punaisenmeren hiilikaupasta 1930-luvun puoliväliin asti, '
+        + 'ja vuosina 1923–1927 Perimissä lastattiin enemmän hiiltä kuin Adenissa. Öljy '
+        + 'syrjäytti hiilen, yhtiö meni konkurssiin 1935, ja saari vaipui takaisin '
+        + 'merkityksettömyyteen.',
+      lahde: 'en-Wikipedia "Perim", johdanto sekä osiot "History" ja "Perim under British '
+        + 'rule". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä oli miehityksen julkilausuttu syy?',
+        vaihtoehdot: [
+          'Merirosvouden torjunta',
+          'Helmenkalastuksen suojelu',
+          'Majakan rakentaminen salmeen',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Mokan satamakaupunki Punaisenmeren rannalla.
+     * Lähde: en.wikipedia.org: Mocha, Yemen; History of coffee
+     */
+    {
+      id: 'mokan-kahvipensaat',
+      otsikko: 'Pensaat, jotka lähtivät laivaan',
+      nimio: 'Mokka',
+      vuosi: '1616–1719',
+      paikka: 'Mokan satama, Punainenmeri',
+      lat: 13.320278, lon: 43.25,
+      kortti: 'Yli sadan vuoden ajan lähes kaikki maailman kahvi kulki yhden jemeniläisen '
+        + 'sataman kautta, ja elävien pensaiden vienti oli tarkoin vartioitua. Vuonna 1616 '
+        + 'hollantilainen kauppias sai muutaman niistä laivaan. Sata vuotta myöhemmin Mokan '
+        + 'nimi oli jäljellä enää juoman nimessä.',
+      teksti: 'Mokka oli Punaisenmeren rannikon satamakaupunki ja Sanaan pääsatama, kunnes '
+        + 'Aden ja al-Hudayda syrjäyttivät sen 1800-luvulla. Kahvi ei kasvanut Mokassa vaan '
+        + 'tuotiin sinne kameleilla Jemenin ylängöiltä ja Etiopiasta; sataman kautta se '
+        + 'lähetettiin maailmalle, ja 1600-luvun loppuun asti Jemen oli maailman tärkein '
+        + 'kahvin tuottaja ja viejä.'
+        + '\n\nKilpajuoksun eläviin kahvipuihin voitti hollantilainen kauppias Pieter van den '
+        + 'Broecke, joka sai vuonna 1616 haltuunsa tarkoin vartioituja pensaita Mokasta ja '
+        + 'vei ne Amsterdamin kasvitieteelliseen puutarhaan. Tapaus sai aikanaan vähän '
+        + 'huomiota, mutta se muutti kahvin historian.'
+        + '\n\nAmsterdamin kasvihuoneissa pensaat menestyivät. Kaupungin pormestari Nicolaes '
+        + 'Witsen kehotti Batavian kuvernööriä Joan van Hoornia hankkimaan taimia Mokasta '
+        + 'Alankomaiden Itä-Intiaan, ja ensimmäisen lähetyksen siemenistä kasvatettu istutus '
+        + 'onnistui niin hyvin, että Hollannin Itä-Intian komppania pystyi vuonna 1719 '
+        + 'tyydyttämään koko Euroopan kysynnän jaavalaisella kahvilla. Pian viljelmiä oli '
+        + 'myös Ceylonilla ja Sumatralla.'
+        + '\n\nMokan asema mureni. Kaupungin kahvikauppa siirtyi 1800-luvulla brittien '
+        + 'hallitsemaan Adeniin, ja Etiopiasta tuotu kahvi myytiin kolmasosalla arabialaisen '
+        + 'hinnasta. Nykyään Mokka ei ole enää merkittävä satama ja paikallinen talous elää '
+        + 'kalastuksesta, mutta kaupungin nimi jäi elämään mokkakahvissa ja mokkapannussa.',
+      lahde: 'en-Wikipedia "Mocha, Yemen", johdanto ja osio "History", sekä "History of '
+        + 'coffee", osiot "Spread of coffee cultivation" ja "Dutch". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuka vei ensimmäiset elävät kahvipensaat pois Mokasta?',
+        vaihtoehdot: [
+          'Hollantilainen kauppias Pieter van den Broecke',
+          'Ranskalainen upseeri Gabriel de Clieu',
+          'Portugalilainen amiraali Afonso de Albuquerque',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  SHN: [
+    /*
+     * Longwood House Saint Helenan sisäylängöllä.
+     * Lähde: en.wikipedia.org: Longwood House; Saint Helena
+     */
+    {
+      id: 'longwoodin-vanki',
+      otsikko: 'Talo, joka ei kelvannut kenellekään',
+      nimio: 'Longwood House',
+      vuosi: '1815–1858',
+      paikka: 'Longwood House, Saint Helena',
+      lat: -15.95004, lon: -5.68305,
+      kortti: 'Britannia valitsi 1815 Euroopan tarkimmin vartioidun vangin asuinpaikaksi '
+        + 'entisen maatilan keskellä Atlanttia. Talo oli kostea ja tuulinen, ja kuvernööri '
+        + 'kieltäytyi siirtämästä vankia parempaan. Kuusi vuotta myöhemmin vanki kuoli — ja '
+        + 'lopulta talon osti Ranska.',
+      teksti: 'Vuonna 1815 Britannian hallitus valitsi Saint Helenan Napoleon Bonaparten '
+        + 'karkotuspaikaksi Waterloon tappion ja vallasta luopumisen jälkeen. Hänet tuotiin '
+        + 'saarelle lokakuussa 1815, ja hän asui Balcombe-perheen pihapaviljongissa The '
+        + 'Briarsissa siihen asti, kunnes Longwood House valmistui joulukuussa 1815.'
+        + '\n\nLongwood oli alun perin Itä-Intian kauppakomppanian maatila ja sen jälkeen '
+        + 'varakuvernöörin maaseutuasunto, ja se muutettiin Napoleonin käyttöön 1815. '
+        + 'Britannian hallitus myönsi lopulta, ettei talo kelvannut entiselle keisarille ja '
+        + 'hänen seurueelleen, ja rakennutti lähelle uuden talon — jota hän ei koskaan '
+        + 'ehtinyt ottaa käyttöön.'
+        + '\n\nHelmikuussa 1818 kuvernööri Hudson Lowe ehdotti Lord Bathurstille, että vanki '
+        + 'siirrettäisiin vapautuneeseen Rosemary Halliin saaren suojaisemmalle ja '
+        + 'varjoisammalle puolelle, niin kuin Napoleon itse toivoi. Kenraali Gourgaud’n '
+        + 'Lontoossa tekemät paljastukset saivat Bathurstin kuitenkin pitämään Longwoodia '
+        + 'turvallisempana, koska sieltä oli vaikeampi paeta. Uuden talon rakentaminen alkoi '
+        + 'vasta lokakuussa 1818, kolme vuotta Napoleonin saapumisen jälkeen. Hän kuoli '
+        + 'Longwoodissa 5. toukokuuta 1821.'
+        + '\n\nSen jälkeen talo palautui kauppakomppanialle ja edelleen kruunulle, ja sitä '
+        + 'käytettiin maatalouteen. Tiedot rappiosta kantautuivat Napoleon III:lle, joka '
+        + 'neuvotteli Britannian kanssa vuodesta 1854, ja vuonna 1858 Ranskan valtio osti '
+        + 'Longwoodin ja hautalaakson 7 100 punnalla. Ne ovat yhä Ranskan omaisuutta.',
+      lahde: 'en-Wikipedia "Longwood House", johdanto sekä osiot "History" ja "After '
+        + 'Napoleon\'s death", ja "Saint Helena", osio "British rule (1815–1821) and '
+        + 'Napoleon\'s exile". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Napoleonia ei siirretty parempaan taloon?',
+        vaihtoehdot: [
+          'Hän kieltäytyi muuttamasta',
+          'Longwoodista pakenemista pidettiin vaikeampana',
+          'Uusi talo paloi ennen valmistumista',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Deadwoodin tasanko Longwoodin pohjoispuolella. Koordinaatti on
+     * likiarvo: lähde ei anna leirille omaa koordinaattia, ja artikkelin
+     * mukaan leireistä ei ole jäljellä jälkeäkään.
+     * Lähde: en.wikipedia.org: Saint Helena; High Knoll Fort
+     */
+    {
+      id: 'deadwoodin-leiri',
+      otsikko: 'Kuusituhatta vankia keskellä Atlanttia',
+      nimio: 'Deadwood',
+      vuosi: '1900–1902',
+      paikka: 'Deadwoodin tasanko, Saint Helena',
+      lat: -15.936, lon: -5.674,
+      kortti: 'Kun Suezin kanava vei laivat pohjoiseen, saaren talous kuihtui. Sitten '
+        + 'saarelle tuotiin yli kuusituhatta buurisotavankia, ja väkiluku nousi kaikkien '
+        + 'aikojen ennätykseen. Kymmenen vuotta myöhemmin väkeä oli enää runsas kolmasosa '
+        + 'siitä, eikä leireistä ollut jäljellä mitään.',
+      teksti: 'Saint Helenan 1800-luvun vauraus perustui siihen, että purjelaivat Euroopan ja '
+        + 'Aasian välillä tarvitsivat välipysähdyksen. Se loppui, kun Suezin kanava siirsi '
+        + 'kauppareitit pohjoiseen vuonna 1869: satamassa käyneiden laivojen määrä putosi '
+        + '1 100:sta vuonna 1855 vain 288:aan vuonna 1889.'
+        + '\n\nVuoden 1899 loppuun mennessä saari oli yhdistetty Lontooseen merenalaisella '
+        + 'kaapelilla, ja lennätin toi uutiset perille tunneissa. Vuosina 1900 ja 1901 '
+        + 'saarella pidettiin yli 6 000 buurisotavankia toisen buurisodan aikana. Leirit '
+        + 'olivat Deadwoodin tasangolla ja Broadbottomissa, ja vankeja pidettiin myös '
+        + 'Jamestownissa ja High Knoll Fortissa.'
+        + '\n\nTunnetuimpia vankeja olivat kenraali Piet Cronjé ja hänen vaimonsa, jotka '
+        + 'joutuivat vangeiksi Paardebergin taistelun jälkeen. Vankien ja heidän '
+        + 'vartijoidensa myötä saaren väkiluku nousi kaikkien aikojen huippuunsa, 9 850 '
+        + 'henkeen vuonna 1901. Vuonna 2019 julkaistun selvityksen mukaan leireistä ei ole '
+        + 'jäljellä jälkeäkään, mutta buurien hautausmaa on yhä koskettava paikka.'
+        + '\n\nNousu jäi lyhyeksi. Vuoteen 1911 mennessä asukkaita oli enää 3 520, ja vuonna '
+        + '1906 Britannian hallitus veti varuskunnan pois saarelta; sotilaiden kulutuksen '
+        + 'loppuminen vei taloudelta pohjan. Tilalle yritettiin uusiseelantilaisesta '
+        + 'pellavasta tehtyä kuituteollisuutta, joka elvytettiin 1907 ja tuotti hyvin '
+        + 'ensimmäisen maailmansodan aikana.',
+      lahde: 'en-Wikipedia "Saint Helena", osio "Crown colony (1834–1981)", ja "High Knoll '
+        + 'Fort", artikkelin runko. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä oli saaren väkiluvun ennätys vuonna 1901?',
+        vaihtoehdot: [
+          'Noin 3 500 henkeä',
+          'Noin 6 000 henkeä',
+          'Noin 9 850 henkeä',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
 };
