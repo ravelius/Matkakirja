@@ -283,8 +283,12 @@ export function vektorijanat(viivat, sade) {
  * pathsData-viivan Line2:na, joten yksi olio scenessä antaa koko
  * konstruktoriketjun — uutta kirjastoa ei ladata eikä vendor-vientiä
  * tarvita. Palauttaa null, kunnes olio on scenessä.
+ *
+ * Vienti: myös Ihmisen matkan vanat (js/aikajana-vanat.js) piirtää fat
+ * lineä samalla temppulla, eikä luokkien hakua kannata kirjoittaa
+ * kahdesti.
  */
-function line2Luokat(pallo) {
+export function line2Luokat(pallo) {
   let olio = null;
   pallo.scene?.()?.traverse?.((o) => { if (!olio && o.type === 'Line2') olio = o; });
   if (!olio?.geometry || !olio.material?.resolution) return null;

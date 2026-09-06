@@ -1389,11 +1389,19 @@ export function johdaVanat(kentat, aineisto, {
     if (osa.length < 2) return;
     const indeksit = tihennaAjoilla(osa, dpIndeksit(osa, dpKm), aikaV, aikaOsuus);
     const karjet = monotonisetAjat(chaikinTasoitus(indeksit.map((k) => ({ ...osa[k] })), kierroksia));
+    /*
+     * KÄRKI KANTAA OMAN VIRTANSA SÄVYN: selkäranka kulkee kolmen
+     * virran läpi (päävirta › siperia › amerikat), ja jos koko vana
+     * piirrettäisiin päätevirran värillä, Arabian kohta olisi
+     * turkoosi vaikka Arabia on kartalla oranssi (nähty selaimessa
+     * 6.9.2026). Virta kulkee edeltäjäketjussa kärjen mukana.
+     */
     vanat.push({
       tunnus,
       virta,
       paksuus,
       pisteet: karjet.map((p) => [+p.lat.toFixed(3), +kierraLon(p.lon).toFixed(3), Math.round(p.aika)]),
+      virrat: karjet.map((p) => p.virta ?? virta),
     });
   };
 
@@ -1409,6 +1417,7 @@ export function johdaVanat(kentat, aineisto, {
         virta: aineisto.nauhat,
         paksuus: aineisto.nauhanPaksuus ?? 2,
         pisteet: n.pisteet.map(([lat, lon, aika]) => [lat, lon, aika]),
+        virrat: n.pisteet.map(() => aineisto.nauhat),
       });
     });
   }
