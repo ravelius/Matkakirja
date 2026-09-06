@@ -82,7 +82,7 @@ commitit olivat vain kontissa; jos tätä tiedostoa ei ole päivitetty
    "aarteen piste syttyy liian lähelle ateenaa, ei pysty painamaan …
    sama ongelma myös sofiassa" (aarrepiste jää nappulan alle pallolla;
    tasokartalla toimii). Molemmat mitattava Playwrightilla, yksi commit.
-3. **Nimet korttien päällä (Opus)** — omistaja: "kaupunkien nimet
+3. **POIMITTU, julkaistaan v1644 — ei tehdä uudestaan.** Nimet korttien päällä (Opus) — omistaja: "kaupunkien nimet
    näkyvät popup sivujen päällä" (pallon CSS2D-nimet piirtyvät
    kohdekortin päälle). Yksi sääntö CSS2D-kerrokselle, ei korttikohtaisia
    paikkauksia.
