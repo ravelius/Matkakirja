@@ -1323,3 +1323,104 @@ kutsu `valitseLinssi`ä eikä sulje laukkua, selitteen ALLE tulee
 Aktivoi-nappi (ei kappaleen sisään), ja se kutsuu `valitseLinssi`ä ja
 sulkee laukun ("Ota pois" kytkee pois). Testi lukee myös CSS:stä, että
 napilla on `min-height: 44px`.
+
+## Aikajanan ajon dynamiikka: kaari, kasvava viiva, vilisevä kello (omistaja 6.9.2026 keskipäivä)
+
+Omistajan palaute iPhone-kuvakaappauksesta (Ihmisen matka ajossa,
+pysäkki Pinnacle Point) sanatarkasti:
+
+> *"Kartta on liian kaukana ja se saisi liikkua jo aiemmin ja pidemmän
+> aikaa piirtäen viivaa seuraavaan paikkaan. Lisää dynamiikka tällä.
+> Vuosinumerot saisivat vilistää yksittäisistä numeroista alkaen
+> vuosituhansien läpi."*
+
+Kolme muutosta `js/aikajana.js`:ään (moottori, siis myös keksinnöt) ja
+yksi mitta `js/linssit/ihmisen-matka.js`:ään.
+
+**1. Pysäkillä ollaan aina lähikuvassa.** Ennen pitkä hyppy näytettiin
+NOSTAMALLA kamera: pysäkin näkyvä leveys laskettiin edellisen pysäkin
+etäisyydestä (`pysakinLahikuva`, 2,2 × väli, katto 3 600 lautayksikköä)
+ja kamera jäi siihen korkeuteen myös perillä. Mitattuna 390 × 844:
+**2 149 yksikköä = 7 176 km ruudun leveydellä** — koko eteläinen
+Afrikka ja Madagaskar ruudulla, lamppu pisteenä. Nyt kaaren oma
+`lahikuva` on **560** (1,3 × keksintöjen 434, mitattu 1 870 km) ja se
+pätee JOKA pysäkillä. Sama luku 390 × 844:llä ja työpöydällä, koska
+pyydetty leveys on lautayksiköitä ruudun leveydellä.
+
+**2. Pitkä hyppy näytetään liikkeellä.** Pysäkkiväli ajetaan yhtenä
+kaarena (`ajaValia`): kamera lähtee edellisen lampun lähikuvasta,
+kulkee ISOYMPYRÄÄ pitkin (sama viiva, jota reitti piirtää), nousee
+matkan puolivälissä korkeintaan `AIKAJANAN_HYPYN_KATTOON` (3 600 →
+**1 600**) ja laskeutuu perille takaisin lähikuvaan. Nousun profiili on
+`aikajananHypynKaari` = sin²(πe): nolla ja nolladerivaatta molemmissa
+päissä, huippu puolivälissä; leveys interpoloidaan geometrisesti
+(`hypynLeveys`), koska kameran korkeus on logaritminen. Lyhyellä
+välillä (alle 255 yksikköä) nousua ei tule lainkaan.
+
+**Liike alkaa aiemmin ja kestää pidempään.**
+`AIKAJANAN_KAMERAN_ENNAKKO_OSUUS` 0,4 → **0,8**: ajo kesti ennen 1 540
+ms pysäkkivälin 7 200 ms:sta (21 %) ja kartta seisoi loput; nyt ajo on
+noin 3 400 ms eli lähes puolet välistä. Loppu on ennallaan: ajo
+pysähtyy `AIKAJANAN_KAMERAN_JALKIJATTO_MS` (−300 ms) ennen syttymistä,
+ja saapumishetki lasketaan yhä `aikaSeuraavaan`-funktiolla, joten
+kello, karuselli (`KARUSELLIN_ENNAKKO_MS`) ja kamera pysyvät samassa
+tahdissa. Luenta pidättää tauon loppua (`pidataTaukoaLuennalle`), joten
+pitkän selostuksen jälkeen ajo lähtee heti kun selostaja on vaiennut.
+Vähennetty liike (`prefers-reduced-motion`) hyppää kuten ennen.
+
+**Reittiviiva piirtyy matkalla.** Sama kehyssilmukka kasvattaa viivan
+kärkeä `REITIN_KARJEN_ENNAKON` (0,08) verran kameran edellä, joten
+kamera seuraa viivan päätä eikä toisin päin; perillä viiva on valmis.
+Geometria lasketaan kerran ja kasvu tehdään **katkoviivalla** — sama
+ratkaisu ja sama mittaus kuin avauslennon jäljessä
+(`js/pallolauta/reitit.js jalki`, karttapallo.md 10.3): kasvava
+pistelista jää Globe.gl:n interpolK-tweenin taakse, katkon luvut eivät.
+Mitattu kuorma kehystä kohti Chromiumilla: **0,05–0,28 ms**
+`paivitaReitti`ssä.
+
+**Valokeila kulkee viivan mukana.** Viiva piirtyy pallon PINTAAN eli
+tummennuskalvon alle (kalvo on kotelon päällä, lamput sen päällä), ja
+mitattuna kalvo syö siitä 86 % — sama kuva kalvon kanssa ja ilman
+(`scratchpad/aikajana-ajo/kuvat/viiva-kalvon-kanssa.png` ja
+`viiva-ilman-kalvoa.png`) näyttää, että viiva oli käytännössä
+näkymätön. Kaksi korjausta: `REITIN_VARI` 0,72 → **0,95** (kuljettu
+matka jää hennoksi jäljeksi myös keilan ulkopuolella) ja reikä seuraa
+ajon aikana viivan kärkeä (`siirraReikaMatkalla`), jolloin piirtyvä
+pää on aina kirkkaassa kohdassa. Keila myös laajenee kaaren huipulla
+`AJON_REIAN_KERROIN` (1,8) verran, koska silloin kamera on kauimpana ja
+matkaa näkyy ruudulla eniten. Syttymishetkellä reikä siirtyy uuden
+lampun kohdalle kuten ennen (`siirraReika`). Tasokartalla (`?lauta=kartta`) sama viiva on
+SVG-polku omassa kerroksessaan (`.aikajana-reitti`, `pathLength=1`,
+kasvu `stroke-dasharray`); isoympyrän pisteet projisoidaan laudalle
+`reitinKuvio`-funktiolla samalla kaavalla kuin pysäkit, ja
+päivämääräraja katkaisee polun osiin. Kaari kertoo laudan kentässä
+`aikajana.lauta`.
+
+**3. Kello vilisee.** Aamun toteutus pyöristi NÄYTETYN lukeman
+pysäkkivälin askeleeseen (`kellonAskel`, 1 000 tai 10 000 vuotta),
+jolloin kello luki "165 000" ja kaksi tai kolme viimeistä nollaa
+seisoivat koko kaaren ajan — mitattuna nolla numeromuutosta kolmessa
+sekunnissa. Nyt `naytaVuosi` antaa mittarille lukeman **yhden vuoden
+tarkkuudella** (`askel: 1`, murto-osa päällä myös syvässä ajassa), ja
+mekaanisen matkamittarin kuljetussääntö tekee lopun: mitattuna 3
+sekunnissa ykkösrulla 25, kymmenet 20, sadat 3 ja tuhannet 1 vaihdosta.
+Kello näyttää siis joka hetki oikean lukeman (164 371) ja pysähtyy
+pysäkillä aineiston omaan tasalukuun.
+
+`KELLON_ASKELEET` ja `kellonAskel` jäivät **sisäiseksi tahdiksi**:
+niistä tulee naksahdus (`AIKAJANA_NAKSU_VALI_MS` — 60 naksahdusta
+sekunnissa olisi rätinää) ja etunollien piilotus, jota ei kannata
+laskea joka kehyksellä. Kaaren loppupään vuosilukutila
+(`KELLON_JAA_RAJA`) juoksee samalla periaatteella: `KELLON_VUOSI_TARKKUUS`
+50 → **1**, ja koska aineiston luvut ovat kokonaisia vuosia
+nykyhetkestä, kello päätyy yhä tasan siihen lukuun, jonka pysäkki sanoo
+(750 → "n. 1250 jaa.").
+
+**Vartijat.** `tests/aikajana.test.mjs` (ennakko 80 %, ajon osuus
+välistä, perillä perusmitta, mittarille askel 1),
+`tests/ihmisen-matka.test.mjs` (kaaren profiili ja `hypynLeveys`,
+väliajon kytkennät, `reitinKuvio` ja päivämääräraja, ja uusi vartija
+"kellon lukema on jatkuva: kaikki neljä alinta numeroa vilisevät", joka
+ajaa oikean pysäkkivälin läpi ja laskee rullien vaihdot),
+`tests/aikajanamerkit.test.mjs` (naksahdus lukee askelta, ei näytettyä
+lukemaa).

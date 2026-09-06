@@ -518,7 +518,9 @@ test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa se
   // prefers-reduced-motion vaihtaa merkin ilman liikettä; pysäytetty kello liukuu.
   // (Askel ja suunta ovat "vuotta sitten" -asteikon jatke (5.9.2026): keksinnöillä
   // ne ovat 1 ja 1, eli entinen kello — ks. tests/ihmisen-matka.test.mjs.)
-  assert.match(MOOTTORI, /asetaMatkamittari\(this\.rullat, arvo, \{[\s\S]{0,700}heti: heti \|\| this\.reducedMotion,[\s\S]{0,700}askel,\n\s*suunta,/);
+  // Näytetty lukema on TÄYSI: askel 1 (omistaja 6.9.2026 keskipäivä,
+  // "Vuosinumerot saisivat vilistää yksittäisistä numeroista alkaen").
+  assert.match(MOOTTORI, /asetaMatkamittari\(this\.rullat, arvo, \{[\s\S]{0,900}heti: heti \|\| this\.reducedMotion,[\s\S]{0,900}askel: 1,\n\s*suunta,/);
   // Käyvä kello antaa mittarille murto-osavuoden joka kehyksellä.
   assert.match(MOOTTORI, /this\.tila = tila;\n\s*this\.naytaVuosi\(tila\.vuosi\);/);
   // Lamput ovat napautettavia (omistaja 3.9.2026) ja paneeli raahattava.
@@ -1079,9 +1081,21 @@ test('lähikuva on omistajan mitta: mitattu 1 525 km ruudun leveydellä', () => 
   assert.ok(Math.abs(asteet - 13) < 0.2, `pyydetty kaista ${asteet}°`);
 });
 
-test('kameran ennakko on 40 % pysäkin kestosta ja ajo päättyy ennen syttymistä', () => {
-  assert.equal(AIKAJANAN_KAMERAN_ENNAKKO_OSUUS, 0.4);
-  assert.equal(AIKAJANAN_KAMERAN_ENNAKKO_MS, Math.round(AIKAJANA_VIIVE_MS * 0.4));
+/*
+ * ENNAKKO ON 80 % PYSÄKIN KESTOSTA (omistaja 6.9.2026 keskipäivä:
+ * *"se saisi liikkua jo aiemmin ja pidemmän aikaa piirtäen viivaa
+ * seuraavaan paikkaan"*). Aamun 40 % jätti kartan seisomaan neljä
+ * viidesosaa pysäkkivälistä; nyt liike alkaa jo pysäkin lukuajan
+ * lopulla ja täyttää lähes puolet välistä.
+ */
+test('kameran ennakko on 80 % pysäkin kestosta ja ajo päättyy ennen syttymistä', () => {
+  assert.equal(AIKAJANAN_KAMERAN_ENNAKKO_OSUUS, 0.8);
+  assert.equal(AIKAJANAN_KAMERAN_ENNAKKO_MS, Math.round(AIKAJANA_VIIVE_MS * 0.8));
+  // Ajo on selvästi pidempi kuin ennen: pysäkkiväli on tauko + matka
+  // (4 600 + 2 600 ms), ja ajon osuus siitä yli kolmanneksen.
+  const vali = AIKAJANA_VIIVE_MS + 10 * 260;
+  const ajo = AIKAJANAN_KAMERAN_ENNAKKO_MS + AIKAJANAN_KAMERAN_JALKIJATTO_MS;
+  assert.ok(ajo / vali > 0.35, `ajo täyttää vain ${Math.round((ajo / vali) * 100)} % välistä`);
   // Omistaja 6.9.2026: "Kamera pysähtyy ennen syttymistä" — jälkijättö
   // negatiivinen, 200–400 ms ennen valoa.
   assert.ok(AIKAJANAN_KAMERAN_JALKIJATTO_MS <= -200 && AIKAJANAN_KAMERAN_JALKIJATTO_MS >= -400);
@@ -1114,11 +1128,12 @@ test('kameran pehmennys lähtee ja pysähtyy nollanopeudella', () => {
 });
 
 test('kamera seuraa pysäkkejä vain pallolla ja ajo alkaa lähikuvasta', () => {
-  assert.match(metodi('ajaPysakille'), /if \(!this\.pallolla \|\| !t \|\| !kamera\?\.ajaKamera\) return Promise\.resolve\(false\);/);
-  // Leveys tulee kaaren omasta mitasta (5.9.2026): ilman `lahikuva`-kenttää
-  // se on AIKAJANAN_LAHIKUVA_LEVEYS, eli keksinnöillä entinen vakio.
-  assert.match(metodi('ajaPysakille'), /leveys: this\.pysakinLeveys\(i\),/);
-  assert.match(metodi('pysakinLeveys'), /return this\.lahikuva;/);
+  assert.match(metodi('ajaPysakille'), /if \(!this\.pallolla \|\| !kamera\?\.ajaKamera\) return Promise\.resolve\(false\);/);
+  // PERILLÄ LEVEYS ON AINA KAAREN PERUSMITTA (omistaja 6.9.2026
+  // keskipäivä: "Kartta on liian kaukana"). Pitkä hyppy näytetään
+  // liikkeellä eikä nostamalla kameraa — nousu on kaaren huipulla.
+  assert.match(metodi('ajaPysakille'), /leveys: this\.lahikuva,/);
+  assert.match(metodi('hypynHuippu'), /return this\.lahikuva;/);
   assert.match(MOOTTORI, /this\.lahikuva = kaari\.lahikuva \?\? AIKAJANAN_LAHIKUVA_LEVEYS;/);
   assert.match(metodi('ajaPysakille'), /pehmennys: aikajananKameranPehmennys/);
   assert.match(metodi('sovitaAlkuun'), /if \(this\.pallolla\) \{[\s\S]{0,300}return this\.ajaPysakille\(i, kesto\);/);
@@ -1129,7 +1144,9 @@ test('kamera seuraa pysäkkejä vain pallolla ja ajo alkaa lähikuvasta', () => 
   // Ennakko lasketaan samalla puhtaalla funktiolla kuin karusellin.
   assert.match(metodi('tarkistaKameraEnnakko'), /aikaSeuraavaan\(this\.tila, this\.tapahtumat, tahti, AIKAJANAN_KAMERAN_ENNAKKO_MS \+ AIKAJANA_ALIASKEL_MS\)/);
   assert.match(metodi('tarkistaKameraEnnakko'), /Math\.max\(AIKAJANAN_KAMERAN_POHJA_MS, eta \+ AIKAJANAN_KAMERAN_JALKIJATTO_MS\)/);
-  assert.match(metodi('tarkistaKameraEnnakko'), /if \(!this\.pallolla \|\| this\.reducedMotion\) return;/);
+  // Tasokartallakin ajetaan, jos kaari piirtää reittiviivan: kamera ei
+  // liiku, mutta viiva kasvaa kohti seuraavaa paikkaa samaa tahtia.
+  assert.match(metodi('tarkistaKameraEnnakko'), /if \(this\.reducedMotion\) return;\n\s*if \(!this\.pallolla && !this\.reittiOsat\) return;/);
   // Kaaren lopussa kamera peräytyy koko kaareen: loppusanat lupaavat
   // kaikki valot, eikä lähikuvassa näkyisi kuin yksi.
   assert.match(metodi('lopeta'), /if \(this\.pallolla\) \{\n\s*this\.kameraKohde = null;\n\s*this\.sovitaKaareen\(\);/);

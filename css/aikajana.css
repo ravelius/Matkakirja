@@ -693,7 +693,9 @@
 .aikajana-kello.tekstina .vuosi-numero,
 .aikajana-kello.tekstina .vuosi-erotin,
 .aikajana-kello.tekstina .aikajana-kelloyksikko { display: none; }
-.aikajana-kelloteksti { line-height: 1.1em; white-space: nowrap; }
+/* Tasalevyiset numerot: vuosiluku juoksee vuosi kerrallaan, eikä
+   teksti saa nytkähdellä leveyden mukana (KELLON_VUOSI_TARKKUUS). */
+.aikajana-kelloteksti { line-height: 1.1em; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .aikajana-kelloyksikko {
   align-self: flex-end;
   margin-left: 0.3em;
@@ -1228,6 +1230,23 @@
  * jossa kerrotaan miksi vanha pari siirsi merkin väärään paikkaan.
  */
 .aikajana-valot { pointer-events: none; }
+/*
+ * REITTIVIIVA TASOKARTALLA (js/aikajana.js rakennaReitti). Paksuus on
+ * RUUDUN pikseleitä eikä lautayksiköitä — `non-scaling-stroke` pitää
+ * viivan yhtä paksuna joka zoomilla, kuten pallolla `pathStroke` on
+ * ruutupikseleitä (REITIN_PAKSUUS_PX). Kasvu tehdään
+ * `stroke-dasharray`lla, kun polun `pathLength` on 1, joten mitään ei
+ * tarvitse piirtää uudestaan (piirraPatka).
+ */
+.aikajana-reitti { pointer-events: none; }
+.aikajana-reittiviiva {
+  fill: none;
+  stroke: rgba(255, 208, 102, 0.95);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
 /* Palava lamppu ottaa napautuksen (js napautaValoa); sammunut on näkymätön. */
 .aikajana-valo.palaa { pointer-events: auto; cursor: pointer; }
 .aikajana-valo.palaa:focus-visible { outline: none; }
