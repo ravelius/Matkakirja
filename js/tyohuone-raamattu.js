@@ -3539,7 +3539,15 @@ export const RAAMATTU = {
           + 'sellaisia ei macille. on kuitenkin iso vaiva minulle etayhteyden '
           + 'kautta klikkailla"): Macille vain ajot, jotka Actionsissa '
           + 'kestaisivat yli 15 minuuttia; lyhyemmat ajetaan Actionsissa tai '
-          + 'kontissa, ja Mac-ajot niputetaan yhdeksi komennoksi kerrallaan.',
+          + 'kontissa, ja Mac-ajot niputetaan yhdeksi komennoksi kerrallaan. '
+          + 'MAC GITHUBIN AJOKONEENA (omistaja 6.9.2026 ilta, Fablen kysymykseen '
+          + 'etaohjauksesta: "tehdaan 1. vaihtoehto"): Mac Studio rekisteroidaan '
+          + 'repon self-hosted-runneriksi taustapalveluna, ja pitkat ajot '
+          + 'kaynnistetaan workflow_dispatch-tyonkuluilla (runs-on self-hosted, '
+          + 'macOS), jolloin Fable kaynnistaa poltot itse eika omistajan '
+          + 'tarvitse klikkailla etayhteydella; avaimet GitHubin secreteissa. '
+          + 'Mac-tyonkulut vain kasin kaynnistettavia (ei pull_request-'
+          + 'laukaisua), etteivat ulkopuoliset PR:t paase koneelle.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
