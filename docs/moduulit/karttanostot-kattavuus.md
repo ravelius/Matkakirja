@@ -1246,3 +1246,81 @@ lajin suurin kanta; bukharanhirvi Amudarjan tugai-vyöhykkeellä; ja
 tarsieri Etelä-Mindanaon Saranganissa. Filippiineillä Bohol olisi ollut
 lajin tunnetuin koti, mutta piste olisi osunut saman erän Chocolate
 Hills -merkin päälle.
+## Erä M13 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Eteläinen Afrikka: **MDG, MOZ, NAM, ZAF, ZWE**. Kaikilla viidellä oli
+ennen erää maastokohteet kunnossa (3–4), mutta kohteita ei ollut
+yhtäkään paitsi Zimbabwella yksi (Suuri Zimbabwe,
+`js/packs/fokuskohteet-zwe.js`, jota ei toistettu). Eläintäky oli jo
+MDG:llä, NAM:lla ja ZAF:lla; skandaali ei yhdelläkään. Erä on kuvaton
+kuten K2-erät 1–4 ja maailman erät M1–M11, ja jokainen väite on
+en-Wikipedian raakatekstin katteessa lähderivillä, joka nimeää
+artikkelin ja osan sekä tarkistuspäivän 6.9.2026. Taulukon luvut
+ajetaan `node tools/laske-karttanostot.mjs --md` -työkalulla erikseen.
+
+Kohteet kirjoitettiin maiden omiin, jo olemassa oleviin
+`js/packs/maastokohteet-<iso>.js`-tiedostoihin, joten uusia rivejä
+`js/packs/maastokohteet.js`-hakemistoon, `sw.js`:n SHELL-listaan tai
+`tools/build-standalone.mjs`:n MODULES-listaan ei tarvittu. Eläintäyt
+ovat `js/packs/elaintakyt.js`:n lopussa ja skandaalit
+`js/packs/skandaalit.js`:n lopussa; kummankin testin lukumäärä
+päivitettiin (eläintäkyjä 81 → 83, skandaaleja 183 → 193 ja maita
+79 → 84).
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Madagaskar (MDG) | Ambohimanga, Tsingy de Bemaraha, Baobabien kuja, Isalo, Andasibe-Mantadia, Ranomafana, Merirosvojen hautausmaa, Antsiranana | (oli jo: Maromokotro, Mosambikin kanaali, Mangoky) | (oli jo: sifaka) | Tamatave 1885, Nosy Be 1849 |
+| Mosambik (MOZ) | Gorongosa, Sofala, Inhambane, Cahora Bassa, Quelimane, Angoche, Manyikeni, Maputo | (oli jo: Monte Binga, Intian valtameri, Sambesi) | dugongi | Gaza 1895, Delagoa 1889 |
+| Namibia (NAM) | Spitzkoppe, Kolmanskop, Fish Riverin kanjoni, Etosha, Sossusvlei, Swakopmund, Hoban meteoriitti, Cape Cross | (oli jo: Brandberg, Atlantti, Oranjejoki) | (oli jo: erämaanorsu) | Waterberg 1904, Caprivi 1890 |
+| Etelä-Afrikka (ZAF) | Sterkfonteinin luolat, Kruger, Isandlwana, Cape Agulhas, Stellenbosch, Pilgrim's Rest, Vredefortin kraatteri, iSimangaliso | (oli jo: Mafadi, Pöytävuori, Intian valtameri, Oranjejoki) | (oli jo: afrikanpingviini) | Hopetown 1869, Mapungubwe 1933 |
+| Zimbabwe (ZWE) | Matobo, Mana Pools, Hwange, Chinhoyin luolat, Naletale, Birchenough Bridge, Mutare (+ Suuri Zimbabwe oli jo) | (oli jo: Mount Nyangani, Sambesi, Limpopo) | musta sarvikuono | Rudd 1888, Kariba 1958 |
+
+Kaikki viisi maata ovat erän jälkeen tavoitteessa: `node
+tools/laske-karttanostot.mjs` sanoo niistä "täysi". Uusia karttamerkkejä
+tuli 51 (39 kohdetta, 2 eläintäkyä, 10 skandaalia).
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin.
+Lähin uusi merkki on Mosambikin **Sofala** 21,5 lautayksikön päässä
+Mosambik-laatasta ja toiseksi lähin Madagaskarin **Andasibe-Mantadia**
+23,4 yksikön päässä Madagaskar-laatasta; raja `KAUPUNGIN_KOHDALLA_SADE`
+on 7. Alueen pelikaupungit rajasivat silti sisältöä: **Mosambikin
+saari**, **Viktorian putoukset**, **Kimberley**, **Kapkaupunki** ja
+**Namib** ovat kaupunkeja, joten Mosambikin saarta, itse putouksia ja
+Kimberleyn Big Holea ei kirjoitettu kohteiksi lainkaan.
+Kimberleyn timanttikuume kerrotaan sen sijaan Hopetownin
+skandaalikortissa 40,1 yksikön päässä Kimberleystä — sieltä timantti
+oikeasti löytyi.
+
+**Nimiölimitys ratkaisi kuusi valintaa.** Namibian **Twyfelfontein** on
+3,2 lautayksikön päässä maan oman erämaanorsu-eläintäyn merkistä ja
+**Lüderitz** 3,3 yksikön päässä Kolmanskopista; kummastakin parista
+mahtui kartalle vain toinen (tilalle Spitzkoppe, Kolmanskop jäi).
+Etelä-Afrikan **Robben Island** on 5,9 yksikön päässä Pöytävuoresta ja
+**Blyde River** 10,9 yksikön päässä Pilgrim's Restistä. Madagaskarin
+**Tôlanaro** on 22,7 yksikön päässä sifakasta, ja tilalle tuli
+Antsiranana. Zimbabwen **Khami** on 14,4 yksikön päässä Matobosta;
+Matobo valittiin, ja Khami jäi odottamaan. `node
+tools/tarkista-nimiolimitys.mjs` sanoo koko maailmasta yhä "NIMIÖ
+NIMIÖN PÄÄLLÄ: 0"; tiedoksi luetellussa "nimiö symbolin päällä"
+-listassa on yksi uusi rivi (ZAF:n Mapungubwe 1933 -nimiö Zimbabwen
+Limpopo-merkin symbolin päällä), mikä on väistön oma sallittu tinkiminen.
+
+**Herkät aiheet asiallisesti.** Waterbergin taistelu 1904 ja sitä
+seurannut hererokansanmurha kerrotaan artikkelin omalla tarkkuudella
+ilman kuvailua, jota lähteessä ei ole; sama koskee Gazan valtakunnan
+kukistumista 1895 ja Kariban altaan tieltä siirrettyjä 57 000 tongaa.
+Nykypolitiikka on jätetty pois: Etelä-Afrikan **Graaff-Reinet**
+karsiutui juuri siksi, että sen artikkelin nykytila on helmikuun 2026
+nimenmuutos. Mosambikin **Ibo** ja **Quirimbas** jätettiin pois M3:n
+Myanmar-linjalla, koska artikkelien nykytila on aseellista konfliktia.
+
+**Kaksi eläintäkyä, molemmat kuvattomia.** `kuva`-kentässä on
+kuvaputken ämpäritunnus ilman kansiota (`elain-moz`, `elain-zwe`).
+Mosambikin dugongin piste jouduttiin siirtämään mantereelle
+Inhassoroon Bazaruton saariston vastarannalle: testi vaatii eläintäyn
+maalle ja maan rajojen sisään (`tests/elaintakyt.test.mjs`), ja
+saariston oma vesialue on laudan maskissa merta. Zimbabwen musta
+sarvikuono seisoo Gonarezhoun kansallispuistossa 122,1 yksikön päässä
+lähimmästä kaupunkimerkistä.

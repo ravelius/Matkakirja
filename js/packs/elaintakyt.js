@@ -1722,6 +1722,45 @@ export const ELAINTAKYT = {
     lon: 124.8,
     lat: 6.0,
   },
+  /*
+   * ══ ERÄ M13, ETELÄINEN AFRIKKA 6.9.2026 ═══════════════════════════
+   *
+   * Mosambik ja Zimbabwe olivat erän ainoat maat, joilta eläintäky
+   * puuttui (MDG, NAM ja ZAF olivat jo kunnossa). Kumpikin on kuvaton:
+   * `kuva` on kuvaputken ämpäritunnus ilman kansiota, ja kortti kantaa
+   * tekstin yksinään siihen asti kunnes kuva tulee.
+   */
+  MOZ: {
+    elain: 'dugongi',
+    otsikko: 'Meriruohon laiduntaja Bazaruton matalikoilla',
+    teksti: 'Dugongi (Dugong dugon) on merinisäkäs ja yksi neljästä elossa olevasta sireenieläinlajista; kolme muuta ovat manaatteja. Se on sukunsa Dugongidae viimeinen edustaja — lähin nykysukulainen, merilehmä, metsästettiin sukupuuttoon 1700-luvulla. Dugongi elää täysin meriruohosta ja pysyy siksi matalilla rannikkovesillä: laajoissa suojaisissa lahdissa, mangrovekanavissa, suurten rannikkosaarten vesillä ja riuttojen välissä. Manaateista sen erottaa delfiinimäinen pyrstö, ja alaspäin kääntynyt kuono on sopeuma pohjan meriruohon syömiseen. Aikuinen on harvoin yli kolme metriä pitkä; sen mittainen yksilö painaa noin 420 kiloa. Dugongia on metsästetty tuhansia vuosia lihan ja rasvan takia, ja koska se elää 70-vuotiaaksi ja lisääntyy hitaasti, se toipuu tappioista huonosti — IUCN luokittelee sen vaarantuneeksi. Mosambikissa suurin jäljellä oleva kanta, noin 120 yksilöä, elää Bazaruton saariston kansallispuistossa, jonka vedet suojeltiin 1971.',
+    lahde: 'en-Wikipedia "Dugong", johdanto sekä osiot "Description" ja '
+      + '"Conservation", ja "Bazaruto Archipelago", osio "Wildlife". '
+      + 'Tarkistettu 6.9.2026.',
+    kuva: 'elain-moz',
+    // Piste on Inhassorossa Bazaruton saariston vastarannalla — saaristo
+    // kuuluu Vilanculosin ja Inhassoron piireihin — 72,1 lautayksikköä
+    // Mosambik-laatasta (vähimmäisetäisyys 35). Merkki on mantereella,
+    // koska testi vaatii eläintäyn maalle ja maan rajojen sisään
+    // (tests/elaintakyt.test.mjs); saariston oma vesialue jää laudan
+    // maskissa mereksi.
+    lon: 35.2,
+    lat: -21.53333333,
+  },
+  ZWE: {
+    elain: 'musta sarvikuono',
+    otsikko: 'Koukkuhuuli, joka syö oksat eikä ruohoa',
+    teksti: 'Musta sarvikuono (Diceros bicornis) eli koukkuhuulisarvikuono elää itäisessä ja eteläisessä Afrikassa, muun muassa Zimbabwessa, ja se on sukunsa Diceros ainoa elossa oleva laji. Nimestä huolimatta väri vaihtelee ruskeasta harmaaseen. Aikuinen on säästä 1,32–1,8 metriä korkea ja 2,8–3,75 metriä pitkä ja painaa tavallisesti 800–1 400 kiloa; kallossa on kaksi keratiinista sarvea, joista etummainen on tyypillisesti puoli metriä pitkä. Ero Afrikan toiseen sarvikuonoon on huulessa: valkoisella sarvikuonolla on leveä nelikulmainen huuli ruohon syömiseen, mustalla terävä ja tarttuva ylähuuli, jolla se riipii lehdet ja oksat — se on siis selailija, ei laiduntaja, ja kantaa päätään korkeammalla. Ravinnoksi kelpaa jopa 220 kasvilajia, mieluiten akasioita ja tyräkkikasveja. Zimbabwessa laji elää muun muassa Gonarezhoun kansallispuistossa, ja Matobon kukkuloille se palautettiin 1990-luvulla Sambesin laaksosta.',
+    lahde: 'en-Wikipedia "Black rhinoceros", johdanto sekä osiot '
+      + '"Description" ja "Diet", "Gonarezhou National Park", osio '
+      + '"Fauna", sekä "Matobo National Park", osio "Fauna". '
+      + 'Tarkistettu 6.9.2026.',
+    kuva: 'elain-zwe',
+    // Piste on Gonarezhoun kansallispuistossa Kaakkois-Zimbabwessa,
+    // 122,1 lautayksikköä Mosambik-laatasta (vähimmäisetäisyys 35).
+    lon: 31.66666667,
+    lat: -21.66666667,
+  },
 };
 
 

@@ -10830,4 +10830,477 @@ export const SKANDAALIT = {
       },
     },
   ],
+
+  /*
+   * ══ ERÄ M13, ETELÄINEN AFRIKKA 6.9.2026 ═══════════════════════════
+   *
+   * Viisi maata — MDG, MOZ, NAM, ZAF ja ZWE — joilta skandaalit
+   * puuttuivat kokonaan, kaksi kutakin. Kaikki ovat 1800- tai
+   * 1900-luvun tapauksia; nykypolitiikka on jätetty pois (Raamattu).
+   * Herkät aiheet (Waterberg 1904, Gazan valtakunnan kukistuminen)
+   * kerrotaan asiallisesti ja lähteen katteessa, ilman kuvailua, jota
+   * artikkelissa ei ole.
+   *
+   * PAIKAT EIVÄT OSU PELIKAUPUNKEIHIN eivätkä saman erän kohteiden
+   * päälle: Kimberleyn timanttikuume kerrotaan Hopetownin kohdalla
+   * (Kimberley on pelikaupunki), Ruddin myönnytys Fort Salisburyn eli
+   * Hararen kohdalla (Bulawayo olisi Khamin ja Matobon nimiöiden
+   * päällä) ja Delagoan rata rajan asemalla Ressano Garciassa
+   * (Maputo on erän oma kohde).
+   */
+  MDG: [
+    /*
+     * Toamasina (Tamatave), missä rauhansopimus allekirjoitettiin.
+     * Lähde: en.wikipedia.org: Franco-Hova Wars
+     */
+    {
+      id: 'tamataven-sopimus',
+      otsikko: 'Rauha, jonka selittävä kirje jäi näyttämättä',
+      nimio: 'Tamatave 1885',
+      vuosi: '1883–1885',
+      paikka: 'Toamasina (Tamatave)',
+      lat: -18.155, lon: 49.41,
+      kortti: 'Sopimuksen mukana kulki "selittävä kirje", jonka oli määrä kertoa mitä '
+        + 'teksti oikeastaan tarkoitti. Ranskan parlamentille sitä ei näytetty, kun se '
+        + 'äänesti sopimuksen hyväksymisestä.',
+      teksti: 'Ranskan ja Merinan kuningaskunnan sodat olivat kaksi Ranskan sotaretkeä '
+        + 'Madagaskarille vuosina 1883–1896. Ne kaatoivat saarta hallinneen kuningashuoneen '
+        + 'ja tekivät Madagaskarista Ranskan siirtomaan. Sana "hova" tarkoitti merinojen '
+        + 'yhteiskuntaluokkaa, ja siitä tuli sotien nimi eurooppalaisissa lähteissä.'
+        + '\n\nSyy sotaan oli vanha myönnytys. Kuningatar Ranavalona I:n kuoltua 1861 hänen '
+        + 'poikansa Radama II nousi valtaan; jo prinssinä hän oli antanut ranskalaiselle '
+        + 'Joseph-François Lambertille peruskirjan, joka luovutti laajoja maa-alueita '
+        + 'välittämättä siitä, mikä merkitys esi-isien mailla saarella oli. Kun myönnytykset '
+        + 'myöhemmin peruttiin, Ranska hyökkäsi 1883 palauttaakseen ne.'
+        + '\n\nSota päättyi Tamatavessa 17. joulukuuta 1885 allekirjoitettuun '
+        + 'rauhansopimukseen. Madagaskar luovutti Antsirananan eli Diego-Suarezin '
+        + 'pohjoisrannikolta Ranskalle ja maksoi kymmenen miljoonan frangin sakon.'
+        + '\n\nSopimukseen kuului myös "selittävä kirje", jonka piti täsmentää tekstin '
+        + 'tulkinta. Sitä ei koskaan esitetty Ranskan parlamentille, kun se äänesti '
+        + 'sopimuksen ratifioinnista. Käytännössä sopimus siirsi Madagaskarin ulkopolitiikan '
+        + 'Ranskan käsiin, ja Ranska käytti sitä kiristääkseen otettaan alueesta — vaikka '
+        + 'protektoraattia ei muodollisesti julistettu.',
+      lahde: 'en-Wikipedia "Franco-Hova Wars", johdanto-osa sekä osiot '
+        + '"Background" ja "First Franco-Hova War". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä sopimukseen kuulunutta asiakirjaa ei näytetty Ranskan parlamentille?',
+        vaihtoehdot: [
+          'Kauppasopimuksen liitettä',
+          'Selittävää kirjettä',
+          'Karttaa rajoista',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Nosy Be, Ranskan sokerisiirtokunta Madagaskarin luoteispuolella.
+     * Lähde: en.wikipedia.org: Nosy Be
+     */
+    {
+      id: 'nosy-been-sokeri',
+      otsikko: 'Saari, joka nousi kapinaan orjuuden lakkauttamista vastaan',
+      nimio: 'Nosy Be 1849',
+      vuosi: '1837–1849',
+      paikka: 'Nosy Be',
+      lat: -13.315, lon: 48.2675,
+      kortti: 'Kun Ranska lakkautti orjuuden siirtomaissaan 1848, saarella syttyi kapina — '
+        + 'ei orjuutta vaan sen lakkauttamista vastaan. Kapinoijat olivat sakalavoja, jotka '
+        + 'olivat itse laajasti mukana orjakaupassa.',
+      teksti: 'Nosy Be on saari Madagaskarin luoteispuolella Mosambikin kanaalissa. Sen '
+        + 'ensimmäisiä asukkaita olivat pienet antankarana- ja zafinofotsy-ryhmät, sitten '
+        + 'saarelle muutti sakalavoja, joista tuli suurin väestöryhmä; myöhemmin heidän '
+        + 'joukkoonsa tuli komorilaisia, intialaisia ja antandroyta.'
+        + '\n\nSaari astui saaren historiaan, kun kuningas Radama I ilmoitti aikovansa '
+        + 'valloittaa koko Madagaskarin lännen. Suunnitelma toteutui 1837, kun Boinan '
+        + 'sakalavakuningaskunta ja kuningatar Tsiomekon armeija hävisivät ja alue siirtyi '
+        + 'Ranavalona I:n haltuun.'
+        + '\n\nRanskalaiset ottivat saaren haltuunsa 1840 ja perustivat sinne tukikohdan, '
+        + 'jonka nimeksi tuli amiraali de Hellin mukaan Hell-Ville. Siirtokunnasta '
+        + 'kehittyi istutustalous: ranskalaiset asuttajat viljelivät ennen kaikkea '
+        + 'sokeriruokoa ja värväsivät työvoimaa velkatyöläisinä Itä-Afrikasta.'
+        + '\n\nVuoden 1848 päätös lakkauttaa orjuus Ranskan siirtomaissa johti seuraavana '
+        + 'vuonna sakalavojen kapinaan ranskalaisia vastaan. Ranska piti asemansa sekä '
+        + 'sotavoimin että diplomatialla ja nimitti saaren entisen hallitsijan Binaon sen '
+        + 'pääkuvernööriksi. 1800-luvun lopulla ja 1900-luvun alussa saarta hallittiin '
+        + 'Madagaskarin siirtomaan sisäisenä protektoraattina, ja tukikohdasta tuli tärkeä '
+        + 'kauppasatama Mosambikin kanaalissa.',
+      lahde: 'en-Wikipedia "Nosy Be", osio "History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Ketä vastaan sakalavat kapinoivat 1849?',
+        vaihtoehdot: [
+          'Ranskalaisia vastaan',
+          'Merinojen kuningatarta vastaan',
+          'Komorilaisia kauppiaita vastaan',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+
+  MOZ: [
+    /*
+     * Manjacaze, Gazan valtakunnan viimeinen pääpaikka.
+     * Lähde: en.wikipedia.org: Gungunhana
+     */
+    {
+      id: 'gazan-keisari',
+      otsikko: 'Keisari, joka vietiin näytille Lissaboniin',
+      nimio: 'Gaza 1895',
+      vuosi: '1895–1906',
+      paikka: 'Manjacaze, Gazan valtakunta',
+      lat: -24.71167, lon: 33.88278,
+      kortti: 'Portugalin siirtomaahallinto päätti olla teloittamatta kukistettua '
+        + 'kuningasta. Syy ei ollut armo vaan julkisuus: hänet tunnettiin jo Euroopan '
+        + 'lehdistössä, ja niin hänet lähetettiin maanpakoon seitsemän vaimonsa kanssa.',
+      teksti: 'Ngungunyane, jota lähteissä kutsutaan myös nimillä Gungunhana ja Mdungazwe '
+        + 'Ngungunyane Nxumalo, oli Gazan valtakunnan kuningas ja Portugalin vasalli, joka '
+        + 'nousi kapinaan. Hän hallitsi noin vuodesta 1884 ja sai lisänimen "Gazan '
+        + 'leijona".'
+        + '\n\nGazan valtakunnan oli perustanut hänen isoisänsä Soshangane, joka johti '
+        + 'nguninkielisen sotajoukon pohjoiseen Zululandista. Isä Mzila hallitsi 1861–1884, '
+        + 'ja pääkaupunki siirtyi Limpopon laaksosta Mossurizeen Save-joen pohjoispuolelle. '
+        + 'Vanha pääpaikka Chaimite jäi pyhiinvaelluskohteeksi ja esi-isien hengille '
+        + 'omistetuksi muistopaikaksi.'
+        + '\n\nKenraali Joaquim Mouzinho de Albuquerque kukisti hänet, ja 28. joulukuuta '
+        + '1895 hänet vangittiin Chaimiten linnoitetussa kylässä. Portugalin '
+        + 'siirtomaahallinto päätti karkottaa hänet sen sijaan, että olisi asettanut hänet '
+        + 'teloitusryhmän eteen, kuten tapa olisi ollut — hän oli jo tunnettu Euroopan '
+        + 'lehdistössä.'
+        + '\n\nHänet kuljetettiin Lissaboniin poikansa Godiden ja muiden arvohenkilöiden '
+        + 'kanssa. Maaliskuussa 1896 hänestä otettiin valokuva seitsemän vaimonsa kanssa, '
+        + 'jotka oli otettu mukaan vankeina. Lyhyen Monsanton linnakkeessa vietetyn ajan '
+        + 'jälkeen hänet siirrettiin Azoreille Terceiralle, missä hän kuoli yksitoista '
+        + 'vuotta myöhemmin 23. joulukuuta 1906.',
+      lahde: 'en-Wikipedia "Gungunhana", johdanto-osa ja osio "Biography". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi kuningasta ei teloitettu?',
+        vaihtoehdot: [
+          'Hän oli tehnyt rauhansopimuksen',
+          'Hänet tunnettiin jo Euroopan lehdistössä',
+          'Portugali ei ollut sodassa',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Ressano Garcia, Maputon lahden radan raja-asema.
+     * Lähde: en.wikipedia.org: Maputo Bay; Pretoria–Maputo railway
+     */
+    {
+      id: 'delagoan-rata',
+      otsikko: 'Rata, joka otettiin haltuun ja maksettiin takaisin',
+      nimio: 'Delagoa 1889',
+      vuosi: '1889–1900',
+      paikka: 'Ressano Garcia, Maputon lahti',
+      lat: -25.44278, lon: 31.99528,
+      kortti: 'Portugali otti haltuunsa radan, joka vei sen satamasta Transvaaliin. '
+        + 'Yksitoista vuotta myöhemmin välimiesoikeus määräsi sen maksamaan osakkaille '
+        + 'lähes miljoona puntaa.',
+      teksti: 'Maputon lahti, entiseltä nimeltään Delagoan lahti, oli 1800-luvulla '
+        + 'toistuvasti riidan kohteena. Vuonna 1861 kuninkaallisen laivaston kapteeni '
+        + 'Bickford julisti Inhacan ja Elephantin saaret Britannian alueeksi, mistä '
+        + 'Lissabon protestoi. Riita vietiin 1872 välimiesmenettelyyn Ranskan presidentin '
+        + 'Adolphe Thiersin ratkaistavaksi, ja hänen seuraajansa marsalkka MacMahon '
+        + 'ratkaisi asian 19. huhtikuuta 1875 Portugalin hyväksi.'
+        + '\n\nRata lahden satamasta Transvaaliin oli valmisteltu pitkään. Pretorian '
+        + 'hallitus kilpailutti hankkeen ja myönsi 1870 toimiluvan yksityiselle yhtiölle '
+        + 'luvaten maksun vakuudeksi 850 maatilan alueet; rahoitus ei järjestynyt, ja '
+        + 'hallitus otti rakentamisen itselleen 1876.'
+        + '\n\nVuonna 1889 syntyi uusi riita Portugalin ja Britannian välille, kun Portugali '
+        + 'otti radan haltuunsa. Asia meni jälleen välimiesoikeuteen, ja 1900 Portugali '
+        + 'todettiin korvausvelvolliseksi ja määrättiin maksamaan rautatieyhtiön osakkaille '
+        + 'lähes miljoona puntaa.'
+        + '\n\nItse rata valmistui vaiheittain: Maputosta rajan asemalle Ressano Garciaan '
+        + 'kuljettiin 1. maaliskuuta 1890, rakentaminen Etelä-Afrikan puolella oli alkanut '
+        + '2. kesäkuuta 1887, ja koko 567 kilometrin reitti avattiin liikenteelle 2. '
+        + 'marraskuuta 1894.',
+      lahde: 'en-Wikipedia "Maputo Bay", osio "History", ja "Pretoria–Maputo railway", '
+        + 'osio "History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä välimiesoikeus määräsi Portugalille 1900?',
+        vaihtoehdot: [
+          'Radan palauttamisen Britannialle',
+          'Sataman sulkemisen',
+          'Lähes miljoonan punnan korvaukset',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+
+  NAM: [
+    /*
+     * Waterbergin ylätasanko, hererokansannousun ratkaisutaistelu.
+     * Lähde: en.wikipedia.org: Battle of Waterberg
+     */
+    {
+      id: 'waterbergin-kasky',
+      otsikko: 'Käsky, joka annettiin vasta taistelun jälkeen',
+      nimio: 'Waterberg 1904',
+      vuosi: '1904',
+      paikka: 'Waterbergin ylätasanko',
+      lat: -20.41667, lon: 17.21667,
+      kortti: 'Saksalainen komentaja aikoi saartaa hererot ylätasangon juurelle. Suunnitelma '
+        + 'epäonnistui, väki pääsi pakoon autiomaahan — ja seuraukset olivat pahemmat kuin '
+        + 'taistelu itse.',
+      teksti: 'Waterbergin taistelu, hereroksi ovita yOhamakari, käytiin 11. elokuuta 1904 '
+        + 'Waterbergillä Saksan Lounais-Afrikassa, ja se oli hererokansannousun ratkaiseva '
+        + 'yhteenotto. Saksan joukkoja johti kenraaliluutnantti Lothar von Trotha; miehiä '
+        + 'oli runsaat 1 500, ja heillä oli 1 625 nykyaikaista kivääriä, 30 tykkiä ja 14 '
+        + 'konekivääriä. Hererot olivat Samuel Mahareron johdolla koonneet 3 500–6 000 '
+        + 'soturia perheineen odottaessaan rauhanneuvotteluja.'
+        + '\n\nSitä ennen sotatoimia oli johtanut siirtomaakuvernööri, eversti Theodor '
+        + 'Leutwein, joka yhdisti sotilaallisen paineen neuvotteluihin. Kesäkuussa 1904 '
+        + 'keisarikunta korvasi hänet von Trothalla.'
+        + '\n\nTrothan suunnitelma oli puristaa hererot ylätasangon eteläpuolelle ja sulkea '
+        + 'pakotiet etelään ja kaakkoon. Kaakkoisen sulkuosaston komentaja ei ehtinyt '
+        + 'asemiin eikä ilmoittanut siitä, ja lännestä edennyt osasto ei pysähtynyt '
+        + 'sovitulle linjalle: pääosa hereroista ja heidän karjansa pääsi aukosta itään '
+        + 'Omahekenin autiomaahan.'
+        + '\n\nLokakuun 2. päivänä von Trotha antoi tuhoamiskäskyn, jonka mukaan jokainen '
+        + 'Saksan rajojen sisältä tavattu herero ammuttaisiin. Pako autiomaan halki johti '
+        + 'kansanmurhaan: kymmenettuhannet kuolivat janoon, nälkään ja tauteihin. Kun '
+        + 'Berliini kumosi käskyn, vangitut selviytyjät vietiin Hain saaren leiriin. Samuel '
+        + 'Maharero pääsi noin tuhannen miehen kanssa Kalaharin yli Bechuanamaahan, jossa '
+        + 'britit antoivat turvapaikan sillä ehdolla, ettei kapinaa jatketa heidän '
+        + 'maallaan.',
+      lahde: 'en-Wikipedia "Battle of Waterberg", johdanto-osa sekä osiot "Armies", '
+        + '"Preparations for battle", "Battle" ja "Aftermath". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi saarrostus epäonnistui?',
+        vaihtoehdot: [
+          'Sulkuosasto ei ehtinyt asemiin',
+          'Tykistö jäi jälkeen',
+          'Sade esti liikkumisen',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Katima Mulilo, Caprivin kaistaleen suurin taajama Sambesin
+     * varrella. Lähde: en.wikipedia.org: Caprivi Strip;
+     * Heligoland–Zanzibar Treaty
+     */
+    {
+      id: 'caprivin-kaistale',
+      otsikko: 'Housut napista: kaistale, joka ei vienyt merelle',
+      nimio: 'Caprivi 1890',
+      vuosi: '1890',
+      paikka: 'Katima Mulilo, Caprivin kaistale',
+      lat: -17.50389, lon: 24.275,
+      kortti: 'Saksa sai kapean kaistaleen, jotta se pääsisi Sambesille ja sitä pitkin '
+        + 'Afrikan itärannikolle. Vasta jälkeenpäin selvisi, ettei jokea pitkin pääse '
+        + 'minnekään: tiellä ovat Viktorian putoukset.',
+      teksti: 'Caprivin kaistale on kapea kieleke Namibian koillisnurkassa. Etelässä on '
+        + 'Botswana, pohjoisessa Angola ja Sambia, ja itäkärjessä Namibia, Botswana ja '
+        + 'Sambia kohtaavat yhdessä pisteessä, 150 metrin päässä Zimbabwesta. Leveyttä '
+        + 'kaistaleella on 32:sta 105 kilometriin, ja sen suurin taajama on Katima Mulilo '
+        + 'siellä, missä Sambesi saavuttaa kaistaleen.'
+        + '\n\nSaksan Lounais-Afrikka sai alueen 1890 saadakseen pääsyn Sambesille ja sitä '
+        + 'kautta reitin mantereen itärannikolle ja Saksan Itä-Afrikkaan. Reitti osoittautui '
+        + 'kelvottomaksi: noin 65 kilometriä kaistaleesta itään ovat Viktorian putoukset, ja '
+        + 'alempana joessa ovat vielä Kariban kuilu ja Cahora Bassa.'
+        + '\n\nKauppa tehtiin 1. heinäkuuta 1890 allekirjoitetussa Helgolandin ja Sansibarin '
+        + 'sopimuksessa. Saksa sai Caprivin kaistaleen, Helgolandin saariston Pohjanmerellä '
+        + 'ja vapaat kädet Saksan Itä-Afrikan ytimessä; vastineeksi se tunnusti Britannian '
+        + 'aseman Sansibarissa ja luovutti Witulandin protektoraatin.'
+        + '\n\nSopimuksen harhaanjohtavan nimen keksi entinen liittokansleri Otto von '
+        + 'Bismarck hyökätäkseen halveksimaansa seuraajaa Leo von Caprivia vastaan. Nimi '
+        + 'antoi ymmärtää, että Saksa oli vaihtanut afrikkalaisen valtakunnan pikkuruiseen '
+        + 'Helgolandiin — "housut napista". Imperialistit ottivat sanonnan omakseen ja '
+        + 'huusivat maanpetoksesta.',
+      lahde: 'en-Wikipedia "Caprivi Strip", johdanto-osa, ja "Heligoland–Zanzibar Treaty", '
+        + 'johdanto-osa sekä osiot "Terms" ja "Aftermath". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi kaistale ei vienyt Saksaa merelle?',
+        vaihtoehdot: [
+          'Britannia sulki joen',
+          'Joki kuivui kesäisin',
+          'Viktorian putoukset katkaisevat joen',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+
+  ZAF: [
+    /*
+     * Hopetown Oranjejoen varrella, timanttikuumeen lähtöpiste.
+     * Lähde: en.wikipedia.org: Star of South Africa (diamond)
+     */
+    {
+      id: 'etela-afrikan-tahti',
+      otsikko: 'Timantti, joka maksoi viisisataa lammasta',
+      nimio: 'Hopetown 1869',
+      vuosi: '1869–1871',
+      paikka: 'Hopetown, Oranjejoen ranta',
+      lat: -29.62583, lon: 24.08556,
+      kortti: 'Paimen sai löydöstään viisisataa lammasta, kymmenen härkää ja hevosen. '
+        + 'Ostaja myi saman kiven eteenpäin yli yhdellätoista tuhannella punnalla — ja '
+        + 'kaksi vuotta myöhemmin alkoi ryntäys.',
+      teksti: 'Etelä-Afrikan tähti, joka tunnetaan myös nimellä Dudleyn timantti, on 47,69 '
+        + 'karaatin valkoinen timantti. Sen löysi 1869 griqua-paimen Oranjejoen rannalta, ja '
+        + 'ennen hiontaa kivi painoi 83,5 karaattia.'
+        + '\n\nPaimen myi kiven naapuritilan isännälle Schalk van Niekerkille, joka oli jo '
+        + 'ennestään tunnettu seudulla: hän oli hankkinut 1866 runsaan 21 karaatin timantin '
+        + 'ostamalla sen 15-vuotiaalta pojalta Erasmus Jacobsilta. Maksu Etelä-Afrikan '
+        + 'tähdestä oli 500 lammasta, kymmenen härkää ja hevonen.'
+        + '\n\nVan Niekerk myi kiven eteenpäin Lilienfeldin veljeksille Hopetownissa 11 200 '
+        + 'punnalla — nykyrahassa runsaat 1,3 miljoonaa puntaa. Veljekset lähettivät sen '
+        + 'Englantiin, jossa se vaihtoi omistajaa kahdesti, kunnes sen osti kreivitär '
+        + 'Georgina Ward.'
+        + '\n\nLöytö muutti koko maan. Suuri kivi houkutteli seudulle timantinetsijöitä, ja '
+        + 'heinäkuussa 1871 syntyi ryntäys lähistön uudelle timanttikentälle Colesberg '
+        + 'Koppjelle. Paikkaa kutsuttiin ensin nimellä New Rush; myöhemmin siitä tuli '
+        + 'Kimberley.',
+      lahde: 'en-Wikipedia "Star of South Africa (diamond)", johdanto-osa. '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä kaupunki syntyi vuoden 1871 ryntäyksen paikalle?',
+        vaihtoehdot: [
+          'Hopetown',
+          'Kimberley',
+          'Bloemfontein',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Mapungubwen kukkula Limpopon ja Shashen yhtymäkohdassa.
+     * Lähde: en.wikipedia.org: Kingdom of Mapungubwe
+     */
+    {
+      id: 'mapungubwen-sarvikuono',
+      otsikko: 'Kultasarvikuono, jota ei haluttu näyttää',
+      nimio: 'Mapungubwe 1933',
+      vuosi: '1933',
+      paikka: 'Mapungubwen kukkula',
+      lat: -22.1925, lon: 29.23889,
+      kortti: 'Aarteenetsijät kaivoivat kukkulalta kultaa ja jättivät osan löydöistä '
+        + 'ilmoittamatta. Sitten hallitus otti paikan haltuunsa — ei suojellakseen sitä '
+        + 'vaan koska löytö oli väärä.',
+      teksti: 'Mapungubwe oli valtio Shashe- ja Limpopo-jokien yhtymäkohdassa nykyisen '
+        + 'Etelä-Afrikan alueella, Suuresta Zimbabwesta etelään. Paikalliset tunsivat '
+        + 'kukkulan omista suullisista perinteistään ja pitivät sitä pyhänä ja esi-isien '
+        + 'kuninkaiden voiman täyttämänä; perinne kielsi vierailun ja jopa kukkulan '
+        + 'osoittamisen sormella.'
+        + '\n\n1900-luvun alussa Mopanen alueen maanviljelijäsuku Van Graanit kuulivat '
+        + 'tarinan valkoisesta miehestä, joka oli elänyt erakkona Limpopon rantaluolassa ja '
+        + '"noussut pyhälle kukkulalle ja löytänyt sieltä asioita". Vuosien etsinnän jälkeen '
+        + 'he pakottivat 1933 nimettömäksi jääneen paikallisen oppaan mukaansa; arkeologin '
+        + '1937 kirjoittaman kuvauksen mukaan opas "vapisi kirjaimellisesti pelosta, ja '
+        + 'häntä oli pideltävä paikallaan" ennen kuin hän näytti salaisen polun.'
+        + '\n\nRyhmä kaivoi esiin keramiikan sirpaleita sekä kupari-, lasi- ja kultaesineitä '
+        + 'ja runsaasti koristellun hautauksen. Kaikkea ei ilmoitettu. Nuorempi Van Graan, '
+        + 'entinen Pretorian yliopiston opiskelija, kertoi löydöstä yliopiston arkeologille.'
+        + '\n\nPretorian yliopisto, tuolloin yksinomaan afrikaaneri-instituutio, sai oikeudet '
+        + 'aarteeseen, ja Hertzogin hallitus otti alueen monopolikseen. Löytö oli '
+        + 'hankala: se kumosi valkoisen ylivallan myytin takapajuisesta Afrikasta, ja aivan '
+        + 'kuten Suuren Zimbabwen kohdalla hallitus yritti salata, vähätellä ja "suojella" '
+        + 'paikkaa. Vuonna 1933 kaivetut luut haudattiin takaisin kukkulalle vasta 20. '
+        + 'marraskuuta 2007.',
+      lahde: 'en-Wikipedia "Kingdom of Mapungubwe", johdanto-osa sekä osiot "Burials" ja '
+        + '"Rediscovery". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi hallitus otti löytöpaikan haltuunsa?',
+        vaihtoehdot: [
+          'Se halusi rakentaa museon',
+          'Löytö kumosi valkoisen ylivallan myytin',
+          'Kukkula oli sotilasaluetta',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+
+  ZWE: [
+    /*
+     * Fort Salisbury, jonne pioneerikolonna pysähtyi 1890 — myönnytyksen
+     * suora seuraus. Lähde: en.wikipedia.org: Rudd Concession
+     */
+    {
+      id: 'ruddin-myonnytys',
+      otsikko: 'Sopimus, josta kiväärit poistettiin lehteen',
+      nimio: 'Rudd 1888',
+      vuosi: '1888–1890',
+      paikka: 'Fort Salisbury (Harare)',
+      lat: -17.863889, lon: 31.029722,
+      kortti: 'Kuninkaalle luvattiin tuhat kivääriä, satatuhatta patruunaa, höyrylaiva ja '
+        + 'sata puntaa kuussa. Kun sopimus julkaistiin lehdissä, kivääreistä ei puhuttu '
+        + 'sanaakaan.',
+      teksti: 'Ruddin myönnytys oli kirjallinen sopimus yksinoikeudesta kaivostoimintaan '
+        + 'Matabelemaassa, Mashonamaassa ja niiden naapurialueilla. Kuningas Lobengula '
+        + 'myönsi sen 30. lokakuuta 1888 Charles Ruddille, James Rochfort Maguirelle ja '
+        + 'Francis Thompsonille, jotka toimivat Cecil Rhodesin asiamiehinä.'
+        + '\n\nEhdot olivat sellaiset, ettei kukaan kilpailija pystynyt vastaamaan: tuhat '
+        + 'Martini–Henry-takaaladattavaa kivääriä, 100 000 patruunaa, höyrylaiva Sambesille '
+        + 'tai vaihtoehtoisesti 500 puntaa kertakorvausta, sekä sata puntaa kuukaudessa '
+        + 'ikuisesti. Kuninkaalle painavinta olivat aseet: hänellä oli 600–800 kivääriä '
+        + 'mutta tuskin lainkaan patruunoita.'
+        + '\n\nRhodes tiesi, että lupaus tuhannesta kivääristä otettaisiin Etelä-Afrikassa '
+        + 'huonosti vastaan, ja Rudd valmisteli asiakirjasta version, josta ne oli jätetty '
+        + 'pois. Cape Times ja Cape Argus julkaisivat sen 24. marraskuuta 1888: hinnaksi '
+        + 'kerrottiin "suuri kuukausittainen käteismaksu, tykkivene puolustustarkoituksiin '
+        + 'Sambesille ja muita palveluksia".'
+        + '\n\nLobengula yritti perua sopimuksen vedoten siihen, että ehtoja oli suullisesti '
+        + 'rajattu, ja lähetti lähettiläitä kuningatar Victorian puheille Windsoriin. Yritykset '
+        + 'kaatuivat. Myönnytys tuotti Rhodesin yhtiölle kuninkaallisen peruskirjan '
+        + 'lokakuussa 1889, ja pioneerikolonna pysähtyi tulevan pääkaupungin Fort '
+        + 'Salisburyn paikalle 12. syyskuuta 1890 ja nosti lipun seuraavana aamuna.',
+      lahde: 'en-Wikipedia "Rudd Concession", johdanto-osa sekä osiot "Negotiations", '
+        + '"Publication" ja "Pioneer Column". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä jätettiin pois lehdissä julkaistusta sopimuksesta?',
+        vaihtoehdot: [
+          'Tuhat kivääriä',
+          'Kuukausimaksu',
+          'Kaivosoikeudet',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Kariban pato Sambesilla. Lähde: en.wikipedia.org: Kariba Dam
+     */
+    {
+      id: 'kariban-allas',
+      otsikko: 'Eläimet pelastettiin veneisiin, ihmiset siirrettiin pois',
+      nimio: 'Kariba 1958',
+      vuosi: '1955–1961',
+      paikka: 'Kariban pato, Sambesi',
+      lat: -16.52222, lon: 28.76167,
+      kortti: 'Nousevasta vedestä pelastettiin noin 6 000 suurta eläintä erillisellä '
+        + 'operaatiolla. Saman altaan tieltä siirrettiin 57 000 ihmistä, eikä siitä '
+        + 'kirjoitettu yhtä hyviä uutisia.',
+      teksti: 'Kariban pato rakennettiin Sambesille 1950-luvulla, ja sen taakse syntyi yksi '
+        + 'maailman suurimmista tekojärvistä. Rakennustyö oli vaarallista, ja aikakauden '
+        + 'valokuvat padon työmaalta näyttävät, millaisissa oloissa työtä tehtiin.'
+        + '\n\nAltaan täyttyminen pakotti siirtymään noin 57 000 tongaa, jotka asuivat '
+        + 'Sambesin varrella joen molemmin puolin. Siitä, kuinka paljon apua siirretyt '
+        + 'saivat, on esitetty hyvin erilaisia arvioita. Brittikirjailija David Howarth '
+        + 'kuvasi Pohjois-Rhodesian toimia myönteisesti: mallipuutarhoja, eroosiota estävää '
+        + 'kynnön muuttamista, kastelupuutarha Sinazongwessa, osuuskuntia, lainoja '
+        + 'viljelijöille, kouluja ja terveysasemia.'
+        + '\n\nAmerikkalainen kirjailija Jacques Leslie kirjoitti teoksessaan Deep Water '
+        + '2005, ettei tilanne ollut juuri muuttunut 1970-luvulta, ja piti Karibaa Afrikan '
+        + 'historian pahimpana patosiirtoketkuna. Siirretyt perustivat 2002 Basilwizi '
+        + 'Trustin ajaakseen omia asioitaan ja toimiakseen välittäjänä Sambesin laakson '
+        + 'asukkaiden ja päättäjien välillä.'
+        + '\n\nEläimille järjestettiin oma pelastusretkikunta. Vuosina 1958–1961 Operation '
+        + 'Noah pyydysti ja siirsi nousevan veden uhkaamalta alueelta noin 6 000 suurta '
+        + 'eläintä sekä lukemattomia pieniä.',
+      lahde: 'en-Wikipedia "Kariba Dam", osiot "Population displacement and resettlement" '
+        + 'ja "Operation Noah". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka monta ihmistä altaan tieltä siirrettiin?',
+        vaihtoehdot: [
+          'Noin 6 000',
+          'Noin 57 000',
+          'Noin 570 000',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
 };
