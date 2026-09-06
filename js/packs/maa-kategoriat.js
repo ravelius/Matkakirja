@@ -45650,4 +45650,431 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * SINGAPORE (SGP) — Opus-lehtiagentti 6.9.2026. Faktat en-Wikipedian
+   * raakateksteistä samana päivänä; koottu tiedostoon
+   * docs/mantereet-tyoaineisto/faktapohja-singapore.md, jossa on myös
+   * artikkelit ja osiot noston tarkkuudella.
+   *
+   * RAJAUS. Singapore on kaupunkivaltio, joten maa ja kaupunki ovat sama
+   * paikka ja päällekkäisyys kaupunkilehden kanssa oli suurin riski.
+   * KULTTUURI_KATEGORIAT.singapore kertoo jo vuoden 1819 sopimuksen ja
+   * Rafflesin, väkiluvun kasvun, vapaasataman, Cavenagh-sillan, vuoden
+   * 1822 Jackson-suunnitelman, Thian Hock Kengin, Sri Mariammanin ja
+   * Raffles Hotelin. Karttamerkit (maastokohteet-sgp.js) kattavat
+   * kasvitieteellisen puutarhan, Pulau Ubinin, Kranjin, Rafflesin
+   * majakan, Haw Par Villan ja Bukit Timahin; skandaalit.js Baringsin ja
+   * Pan-Electricin. Maalehti ei koske yhteenkään näistä: historia alkaa
+   * 1300-luvulta, luonto pysyy poissa puutarhasta ja Bukit Timahilta, ja
+   * Malesian liitto 1963–1965 kerrotaan maan introssa
+   * (asia-artikkelit.js) eikä nostona.
+   */
+  SGP: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Singaporen historia ei ala vuodesta 1819. Joen suulla oli satama jo '
+          + '1300-luvulla, ja 1900-luku käänsi saaren kahdesti ympäri: ensin '
+          + 'miehitysvuodet, sitten muutto kylistä kerrostaloihin.',
+      nostot: [
+        {
+          otsikko: 'Satama, joka jäi kukkulan alle',
+          aika: '1299–1398',
+          tiedosto: 'JavaneseGoldOrnaments-14C-NationalMuseumofSingapore-20090712.jpg',
+          teksti: 'Malaijien kronikan mukaan palembanginlainen ruhtinas Sang Nila Utama '
+              + 'nousi maihin Temasekin saarelle vuonna 1299, näki punaruumiisen ja '
+              + 'mustapäisen eläimen katoavan viidakkoon, sai kuulla sen olevan leijona '
+              + 'ja antoi kaupungille nimen Singapura, leijonakaupunki. Kiinalainen '
+              + 'kauppias Wang Dayuan kävi saarella 1330-luvulla ja kuvasi kaksi '
+              + 'asutusta: kukkulan lähteen luona olevan Ban Zun ja salmen suulla '
+              + 'olevan Long Ya Menin. Vaihdossa kulki punakultaa, puuvillapainokankaita, '
+              + 'sinistä satiinia, lakkapuuta ja sarvinokkalintujen nokkakypäriä. '
+              + 'Seitsemänkymmenen aluksen siamilainen laivasto piiritti muurattua '
+              + 'kaupunkia kuukauden saamatta sitä.',
+          selite: 'Fort Canningin kukkulalta löytyi 1928 vesisäiliötä kaivettaessa '
+            + 'itäjaavalaistyylisiä kultakoruja 1300-luvulta. Suurin osa katosi '
+            + 'miehitysvuosina; jäljellä ovat yksi rannerengas ja kaksi rengasta.',
+          lahde: 'Jon Callas, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kivi, jonka teksti räjäytettiin palasiksi',
+          aika: '1819–1843',
+          tiedosto: 'SingaporeStone-NationalMuseumofSingapore-20090712.jpg',
+          teksti: 'Kesäkuussa 1819 viidakkoa raivanneet työmiehet löysivät joen suun '
+              + 'kalliokärjestä kolmimetrisen hiekkakivipaaden, jonka sileäksi hiotulle '
+              + 'sivulle oli hakattu viitisenkymmentä riviä kirjoitusta parin '
+              + 'senttimetrin kirjaimin. Sitä ei osannut lukea kukaan saarella, ja '
+              + 'löytäjät säikähtivät niin, ettei heitä saatu jatkamaan raivausta. '
+              + 'Tammikuussa 1843 paasi räjäytettiin insinöörin käskystä, jotta joensuu '
+              + 'saataisiin leveämmäksi linnoitusta ja sen komentajan asuntoa varten. '
+              + 'Everstiluutnantti James Low oli anonut paatta säästettäväksi ja tuli '
+              + 'räjähdyksen jälkeen joen yli poimimaan kappaleita, joissa vielä näkyi '
+              + 'kirjaimia.',
+          selite: 'Ainoa säilynyt palanen on Singaporen kansallismuseossa, joka nimesi '
+            + 'sen 2006 yhdeksi maan yhdestätoista kansallisaarteesta. Kirjoitusta ei ole '
+            + 'saatu luetuksi: arvaukset liikkuvat vanhan jaavan, sanskritin ja tamilin '
+            + 'välillä.',
+          lahde: 'Jon Callas, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kolme ja puoli vuotta banaanirahalla',
+          aika: '1942–1945',
+          tiedosto: 'One dollar note issued by the Japanese Government during the occupation of Malaya, North Borneo, Sarawak and Brunei (1942, obverse).jpg',
+          teksti: 'Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän '
+              + 'valon saari. Britannian setelit poistuivat, ja tilalle tuli '
+              + 'miehityshallinnon oma raha, jota painettiin lisää aina kun sitä '
+              + 'tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan '
+              + 'lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa '
+              + 'riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. '
+              + 'Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat '
+              + 'riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, '
+              + 'enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka '
+              + 'vuosi.',
+          selite: 'Miehityshallinnon yhden dollarin seteli. Setelien banaanipuukuvista '
+            + 'tuli rahan lempinimi, ja sen arvo suli sitä mukaa kuin painokone kävi.',
+          lahde: 'Kevin Dooley, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kylästä kymmenenteen kerrokseen',
+          aika: '1960–',
+          tiedosto: 'Blocks 48 and 49, Stirling Road, Singapore.jpg',
+          teksti: 'Väkiluku kasvoi 940 700:sta 1,7 miljoonaan kymmenessä vuodessa, ja '
+              + 'suuri osa asui ahtaissa kauppataloissa tai epävirallisissa asumuksissa. '
+              + 'Helmikuussa 1960 perustettu asuntohallitus HDB ilmoitti heti '
+              + 'rakentavansa viidessä vuodessa yli viisikymmentätuhatta asuntoa niin '
+              + 'halvalla, että köyhinkin voisi muuttaa niihin. Toukokuussa 1961 Bukit '
+              + 'Ho Sween asumukset paloivat, ja palopaikalle suunniteltiin ja '
+              + 'rakennettiin asuinalue niin nopeasti kuin ehdittiin. Vuoteen 1965 '
+              + 'mennessä asuntoja oli 54 430. Vuodesta 1968 asunnon sai maksaa '
+              + 'eläkerahaston kertymällä, ja 1980-luvulla useimmat hakijat ostivat sen '
+              + 'sijaan että olisivat vuokranneet.',
+          selite: 'Queenstown oli maan ensimmäinen satelliittikaupunki: sitä rakensi '
+            + '1950-luvulla vielä HDB:n edeltäjä ja 1960-luvulla HDB. Alueelle nousi '
+            + 'vuosina 1952–1968 kaikkiaan 19 372 asuntoa, enimmäkseen matalia '
+            + 'porrastaloja.',
+          lahde: 'Seloloving, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Vuonna 1819 saari oli sademetsää, ja siitä on jäljellä murto-osa. Osa '
+          + 'eläimistä on silti palannut takaisin ja opetellut elämään betonikanavien ja '
+          + 'siltojen keskellä.',
+      nostot: [
+        {
+          otsikko: 'Saukot, jotka opettelivat portaat',
+          tiedosto: 'Lutrogale perspicillata - Jurong Eco Garden.jpg',
+          teksti: 'Sileäturkkisaukko painaa seitsemästä yhteentoista kiloon, ja '
+              + 'Singaporessa se on muuttanut kaupunkilaiseksi. Pesäkoloa ei tarvitse '
+              + 'kaivaa, kun rakennusten alta löytyy rako, ja pystyseinäisiin '
+              + 'betonikanaviin se kulkee portaita ja tikkaita pitkin. Kaupungin '
+              + 'vesiväyliltä on laskettu seitsemäntoista perhettä, jotka kalastavat '
+              + 'tilapiaa ja nukkuvat siltojen alla — ja tyhjentävät toisinaan jonkun '
+              + 'pihalammikon koikarpeista. Marraskuussa 2017 täällä nähtiin luonnossa '
+              + 'syntynyt seitsemän poikasen pentue, suurin koskaan kirjattu. Tavallinen '
+              + 'pentue on enintään viisi.',
+          selite: 'Sileäturkkisaukon tuntee litteästä hännästä ja karvattomasta, '
+            + 'vinoneliön muotoisesta kuonosta. Kuva on Jurongin puutarhasta saaren '
+            + 'länsiosassa.',
+          lahde: 'JJ Harrison, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Naaras muuraa itsensä sisään',
+          tiedosto: 'Anthracoceros albirostris (Oriential Pied Hornbill).jpg',
+          teksti: 'Sarvinokkalintu ei kaiva itse pesäkoloaan vaan ottaa käyttöön '
+              + 'valmiin. Kun naaras on valinnut kolon ja mennyt sisään, se muuraa aukon '
+              + 'umpeen syljen, mudan, hedelmänpalojen, ulosteen ja puunkuoren seoksella '
+              + 'ja jättää vain raon, josta koiras työntää ruokaa. Poikaset kasvavat '
+              + 'kolossa kuukausia. Lintu on tärkeä isojen siementen levittäjä, sillä '
+              + 'harvalla muulla on tarpeeksi leveä kita. Singaporen kanta hävisi '
+              + 'paikallisesti 1960-luvulla ja palasi 1990-luvulla; nyt lintu on yleinen '
+              + 'koko saarella ja syö täällä muiden lintujen munia ja poikasia enemmän '
+              + 'kuin muualla.',
+          selite: 'Aikuinen sarvinokkalintu on 55–60 senttiä pitkä, ja nokan päällä on '
+            + 'sivuiltaan litistynyt kypärä. Kuva on Sungei Bulohin kosteikolta.',
+          lahde: 'Tan Pek Nan, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Siperiasta Australiaan, tauko mudassa',
+          aika: '1986–2003',
+          tiedosto: 'Sungei Buloh Wetland Reserve Interior 1.jpg',
+          teksti: 'Saaren luoteiskulmassa oleva Sungei Buloh oli 1980-luvun puoliväliin '
+              + 'asti tuntematon paikka. Vuonna 1986 luonnonsuojeluyhdistyksen '
+              + 'paikallisosasto vaati sen suojelua, koska lintulajeja oli '
+              + 'poikkeuksellisen paljon: joukossa oli Siperiasta Australiaan matkalla '
+              + 'olevia muuttajia. Ehdotus meni läpi, ja alue sai luonnonpuiston aseman '
+              + '1989, avattiin 1993 ja rauhoitettiin kokonaan vuoden 2002 alussa maan '
+              + 'ensimmäisenä suojeltuna kosteikkona. Sen jälkeen se on ollut ASEANin '
+              + 'perintöpuisto ja osa rantalintujen kansainvälistä levähdyspaikkaverkkoa. '
+              + 'Piiloista voi katsella kuoveja, viklojen parvia ja toisinaan '
+              + 'suistokrokotiilin.',
+          selite: 'Vuoroveden paljastama muta on lintujen ruokapöytä: sieltä ne '
+            + 'poimivat matoja ja kotiloita. Takamangrovessa lentää atlaskehrääjä, '
+            + 'Kaakkois-Aasian suurin yöperhonen.',
+          lahde: 'Calvin Teo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Neljännesprosentti maasta, puolet lajeista',
+          tiedosto: 'Tree Top Walk at MacRitchie, Singapore 3.jpg',
+          teksti: 'Vuonna 1819 saari oli enimmäkseen sademetsää. Raivaus viljelmiksi oli '
+              + 'pääosin tehty 1900-luvun alkuun mennessä, ja joidenkin arvioiden mukaan '
+              + 'luontaisista elinympäristöistä on hävinnyt 95 prosenttia. Yli '
+              + 'kaksikymmentä makeanveden kalalajia ja sata lintulajia katosi maasta '
+              + 'kokonaan. Silti yli puolet maan luontaisesta eliöstöstä elää yhä '
+              + 'luonnonsuojelualueilla, jotka ovat vain neljännesprosentin maan '
+              + 'pinta-alasta. Lajeja on laskettu noin kahdeksankymmentä nisäkästä, '
+              + 'joista neljäkymmentäviisi on lepakoita, 395 lintua, 110 matelijaa ja '
+              + '1 358 luontaista putkilokasvia. Puistoja yhdistää yli kolmensadan '
+              + 'kilometrin vihervyöhykeverkosto.',
+          selite: 'Latvusnäkymä MacRitchien altaan metsästä saaren keskeltä. Metsässä '
+            + 'liikkuu myös sambarhirviä, jotka palasivat 1970-luvulla eläintarhasta '
+            + 'karattuaan.',
+          lahde: 'Mokkie, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Singaporelaista ruokaa ei syödä kotona vaan hallissa, jossa kymmenet '
+          + 'myyntipisteet jakavat samat pöydät. Kolme keittiöperinnettä on kuluttanut '
+          + 'toisiaan niin kauan, ettei enää erotu, mistä mikin tuli.',
+      nostot: [
+        {
+          otsikko: 'Yhteisön ruokasali pääsi Unescon listalle',
+          aika: '1950-luku–2020',
+          tiedosto: 'Marine Terrace Market Hawker Centre 01-12-2024(1).jpg',
+          teksti: 'Katukeittiöhallit syntyivät 1950- ja 1960-luvun kaupungistumisessa '
+              + 'osin siksi, että luvattomien katukauppiaiden hygienia oli huono. '
+              + 'Nykyään jokainen myyntipiste saa tarkastuksesta kirjainarvosanan, joka '
+              + 'on pidettävä esillä: A vaatii vähintään 85 prosenttia, huonoin D jää '
+              + 'neljäänkymmeneen. Vuonna 1987 otettiin lisäksi käyttöön virhepisteet. '
+              + 'Vuonna 2016 kaksi hallipistettä sai maailman ensimmäisinä '
+              + 'katuruokamyyjinä Michelin-tähden. Unesco otti katukeittiökulttuurin '
+              + 'aineettoman kulttuuriperinnön luetteloon 16. joulukuuta 2020 ja kutsui '
+              + 'halleja yhteisön ruokasaleiksi.',
+          selite: 'Halli asuintalon alakerrassa illalla. Vuodesta 2021 tarjottimen ja '
+            + 'roskien jättäminen pöytään on ollut lain vastaista.',
+          lahde: 'LN9267, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kanariisin tärkein osa ei ole kana',
+          tiedosto: 'Hainanese chicken rice in Singapore.jpg',
+          teksti: 'Ruoka syntyi niukkuudesta: munintaikänsä ohittanut kana keitettiin '
+              + 'liemeksi ja riisiksi, jotta kaikki maku saatiin talteen. Ensimmäiset '
+              + 'kanariisiravintolat avattiin miehitysvuosina, kun britit joutuivat '
+              + 'lähtemään ja heidän hainanilaiset palvelijansa jäivät ilman '
+              + 'toimeentuloa. Kana haudutetaan kiehumispisteen alapuolella ja upotetaan '
+              + 'kypsänä jäihin, jolloin nahasta tulee hyytelömäinen. Liemestä kuoritaan '
+              + 'rasva, ja riisi keitetään kanaliemessä inkiväärin, valkosipulin ja '
+              + 'pandanuslehtien seurassa. Singaporessa sanotaan, ettei '
+              + 'kanariisin tärkein osa ole kana vaan riisi.',
+          selite: 'Riisi tulee omalla lautasellaan, kana viipaloituna toisella, ja '
+            + 'kastikkeeksi survotaan tuoretta punaista chiliä ja valkosipulia.',
+          lahde: 'Pauloleong2002, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Rapu, joka syntyi työntökärryissä',
+          aika: '1956–',
+          tiedosto: 'Chilli Crab.JPG',
+          teksti: 'Portugalilaiset toivat chilin Malakkaan 1500-luvulla; sitä ennen '
+              + 'malaijit maustoivat pippurilla. Nykyinen chilirapu keksittiin vasta '
+              + '1950-luvulla, kun Cher Yam Tian ja hänen miehensä Lim Choo Ngee alkoivat '
+              + 'vuonna 1956 myydä työntökärryistään rapuja, jotka oli paistettu '
+              + 'pullochilikastikkeen ja tomaattikastikkeen seoksessa. Alkuperäisessä '
+              + 'ohjeessa pullokastiketta ei ollut lainkaan. Kärryistä kasvoi ravintola '
+              + 'Upper East Coast Roadin varrelle, ja levinneimmän version teki '
+              + 'kokki Hooi Kok Wai 1960-luvulla. Kastike kauhotaan lautaselta '
+              + 'mantou-sämpylöillä.',
+          selite: 'Rapuna on tavallisimmin mutarapu. Kastike on samalla kertaa makea ja '
+            + 'suolainen, ja siihen vatkataan lopuksi kananmunaa.',
+          lahde: 'Terence Ong, Wikimedia Commons (CC BY 2.5)',
+        },
+        {
+          otsikko: 'Kahvi kaadetaan kannusta kannuun',
+          aika: '1919–',
+          tiedosto: 'Kaya toast from Ya Kun Kaya Toast, Singapore - 20160813.jpg',
+          teksti: 'Hainanilaiset saapuivat Singaporeen vasta 1870-luvulla, kun muut '
+              + 'kiinalaisryhmät olivat jo vallanneet kaupan ja käsityön, joten heille '
+              + 'jäi palvelutyö. Siitä syntyi kopitiam, hainanilainen kahvila. Kahvi on '
+              + 'robustaa, ja paahdossa papujen joukkoon menee sokeria ja margariinia: '
+              + 'kaksikymmentäviisi minuuttia 180 asteessa, suola puolivälissä ja sokeri '
+              + 'lopuksi karamellipinnaksi. Jauhe pannaan musliinipussiin, päälle '
+              + 'kaadetaan kiehuvaa vettä ja juoma kaadetaan edestakaisin kahden '
+              + 'pitkänokkaisen kannun välillä, jotta se ilmastuu ja jäähtyy. '
+              + 'Tilaussanastossa on ainakin 54 vakiomuotoa.',
+          selite: 'Kaya on kookoksesta ja kananmunasta keitetty hillo, joka korvasi '
+            + 'brittilaivojen hedelmähillon. Aamiaisella sen kanssa tulee kaksi pehmeäksi '
+            + 'keitettyä munaa, tummaa soijaa ja valkopippuria.',
+          lahde: 'Jacklee, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä kanariisin kanalle tehdään heti kypsymisen jälkeen?',
+        vaihtoehdot: [
+          'Grillataan hiilillä',
+          'Upotetaan jäihin',
+          'Marinoidaan soijassa',
+          'Kääritään banaaninlehteen',
+        ],
+        oikea: 1,
+        fakta: 'Jäähdytys tekee kanan nahasta hyytelömäisen. Riisi taas keitetään '
+            + 'kanaliemessä inkiväärin, valkosipulin ja pandanuslehtien seurassa.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Kansallislaulu syntyi kahdessa viikossa kaupunginvaltuuston tilauksesta. '
+          + 'Muu musiikki on tullut koululaisilta, haamujuhlan katulavoilta ja '
+          + 'levy-yhtiöiden ulkopuolelta.',
+      nostot: [
+        {
+          otsikko: 'Kahdessa viikossa valmis kansallislaulu',
+          aika: '1958–1965',
+          tiedosto: 'Victoria Theatre and Concert Hall, Singapore - 20101126.jpg',
+          teksti: 'Zubir Said tuli Sumatralta Singaporeen 1928 kaksikymmentäyksivuotiaana '
+              + 'vastoin isänsä tahtoa: isä piti musiikkia uskonnon vastaisena. Hän '
+              + 'soitti malaijilaisessa bangsawan-teatteriryhmässä, päätyi sen '
+              + 'kapellimestariksi ja teki sittemmin elokuvamusiikkia. Heinäkuussa 1958 '
+              + 'kaupunginvaltuuston varapormestari pyysi häneltä tunnuslaulua nimeltä '
+              + 'Majulah Singapura, eteenpäin Singapore, joka oli teatterin seinään '
+              + 'tuleva tunnuslause. Sävel ja sanat valmistuivat kahdessa viikossa. '
+              + 'Vaikeinta oli mahduttaa kaikki sanat lyhyeen sävelmään ja tehdä siitä '
+              + 'niin yksinkertainen, että kaikki kansanryhmät ymmärtäisivät sen.',
+          selite: 'Kantaesitys oli Victoria-teatterissa 6. syyskuuta 1958. Lain mukaan '
+            + 'laulu lauletaan malaijiksi, vaikka virallisia käännöksiä on kolmella '
+            + 'muulla kielellä.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Koululaiset tekivät oman laulutyylinsä',
+          aika: '1982–1985',
+          teksti: 'Xinyao tarkoittaa singaporelaisten nuorten itse tekemiä lauluja: nimi '
+              + 'on lyhenne, jonka alkuosa on Singapore ja loppuosa laulu. Aiheet olivat '
+              + 'ystävyys, koulu ja nuoruuden rakkaus, ja esikuvana oli Taiwanin '
+              + 'kampuskansanlaulu. Ensimmäinen radio-ohjelma tuli huhtikuussa 1982, ja '
+              + 'seuraavana vuonna kansalaistalolle rekisteröityi ensimmäinen ryhmä. '
+              + 'Vuoden 1984 ensimmäinen albumi myi kolmekymmentätuhatta kappaletta. '
+              + 'Syyskuussa 1985 pidettiin kaksipäiväinen festivaali, jossa esiintyi sata '
+              + 'nuorta lauluntekijää; liput loppuivat viikkoa aiemmin. Vuoden lopussa '
+              + 'rekisteröityjä ryhmiä oli neljätoista.',
+          selite: 'Genre hiipui 1990-luvulla, kun tekijät siirtyivät muualle ja '
+            + 'kotimarkkina osoittautui liian pieneksi. Opetusministeriöllä on ollut '
+            + 'vuodesta 2015 oma koulujen xinyao-ohjelmansa.',
+        },
+        {
+          otsikko: 'Etupenkki on varattu hengille',
+          tiedosto: 'Getai stage, Singapore - 20120124.jpg',
+          teksti: 'Getai eli laulunäyttämö on äänekäs lavaesitys, jollaisia pidetään '
+              + 'seitsemännen kuukalenterikuukauden haamujuhlan aikana ja jumaluuksien '
+              + 'syntymäpäivinä. Lavat pystytetään telttoihin tyhjille kentille, '
+              + 'parkkipaikoille ja asuinalueiden pihoille, taustat tehdään pahvista ja '
+              + 'kankaasta ja juontaja vaihtaa kesken lauseen mandariinin, hokkienin, '
+              + 'teochew’n, kantonin ja englannin välillä. Ensimmäinen penkkirivi '
+              + 'jätetään tyhjäksi ja eristetään yleisöltä, koska se on varattu hengille '
+              + 'ja jumaluuksille. Muoto syntyi miehitysvuosina, kun huvipuiston '
+              + 'juomakauppias tarjosi juoman ostaneille kolme tuntia elävää musiikkia.',
+          selite: 'Getain kukoistuskausi oli 1950-luku kolmessa huvipuistossa. Kun ne '
+            + 'suljettiin, esitykset siirtyivät kaduille ja kentille, joissa ne ovat '
+            + 'edelleen.',
+          lahde: 'Ah leong 99, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Peranakaanipojasta kansallispäivän säveltäjä',
+          aika: '1974–2005',
+          teksti: 'Dick Lee aloitti viisitoistavuotiaana pianistina, perusti veljiensä '
+              + 'kanssa oman yhtyeen ja julkaisi esikoisalbuminsa 1974. Hän oli '
+              + 'ensimmäisiä, jotka toivat aasialaisia aineksia paikalliseen '
+              + 'popmusiikkiin: läpimurto koko seudulla oli albumi The Mad Chinaman '
+              + '1989. Sen jälkeen hän muutti Japaniin ja kirjoitti lauluja aasialaisille '
+              + 'tähdille. Musikaaleista tunnetuimpia ovat Beauty World 1988 ja Fried '
+              + 'Rice Paradise 1991. Kansallispäivän tunnuslauluja hän on tehnyt kaksi: '
+              + 'Home vuonna 1998 ja We Will Get There 2002, ja jälkimmäisenä vuonna hän '
+              + 'oli myös paraatin luova johtaja.',
+          selite: 'Leen isä oli peranakaani ja kirjoitti The Straits Timesiin. Poika sai '
+            + 'maan korkeimman taidepalkinnon Cultural Medallionin vuonna 2005.',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Singaporen modernin maalaustaiteen tekivät muualta tulleet: Kiinasta ja '
+          + 'Pariisista saapuneet maalarit, jotka jäivät ja alkoivat maalata trooppista '
+          + 'valoa niillä välineillä, jotka olivat tulleet mukana.',
+      nostot: [
+        {
+          otsikko: 'Neljä maalaria ja kuukausi Balilla',
+          aika: '1952–1953',
+          teksti: 'Nanyang-tyyli sai nimensä sanasta, jolla Kaakkois-Aasiaa kutsuttiin '
+              + 'Kiinasta katsoen: eteläinen meri. Sen tekivät maahan muuttaneet '
+              + 'kiinalaissyntyiset maalarit 1940-luvun lopulta 1960-luvulle, ja he '
+              + 'yhdistivät läntisen öljyvärin ja akvarellin kiinalaiseen tussiperinteeseen. '
+              + 'Aiheiksi tulivat trooppiset hedelmät, kyläpihat ja batiikkikankaat. '
+              + 'Vuonna 1952 neljä heistä matkusti Balille kuukaudeksi, koska erään '
+              + 'belgialaismaalarin näyttelyt olivat 1930-luvulla saaneet heidät '
+              + 'kuvittelemaan saaren. Seuraavan vuoden näyttelyssä oli yli sata matkalla '
+              + 'syntynyttä työtä, ja yhdessä niistä ääriviivat on vedetty valkoisella '
+              + 'kuin batiikissa.',
+          selite: 'Retki oli suuntauksen käännekohta ja innoitti myöhemmin muitakin '
+            + 'ryhmiä lähtemään maalausmatkoille eri puolille Kaakkois-Aasiaa.',
+        },
+        {
+          otsikko: 'Kaksisataa maalausta, jotka jäivät kouluun',
+          aika: '1942–2003',
+          tiedosto: 'Singapore Art Museum - 20131211.jpg',
+          teksti: 'Liu Kang muutti viisivuotiaana Kiinasta Malaijaan, jossa isä kävi '
+              + 'kumikauppaa, ja opiskeli Shanghaissa ja Pariisin taidekorkeakoulussa '
+              + '1929–1933. Sota toi hänet 1942 Singaporeen. Miehityksen ajaksi hän jätti '
+              + 'kaksisataa maalaustaan erääseen kouluun ja totesi palatessaan, että '
+              + 'kaikki olivat poissa. Vuonna 1946 hän piirsi kolmekymmentäkuusi kuvaa '
+              + 'kirjasarjaan, joka kertoi miehitysajan oloista. Vuonna 2003, vuotta '
+              + 'ennen kuolemaansa, hän lahjoitti taidemuseolle yli tuhat työtä — '
+              + 'suurimman taidelahjoituksen, jonka maan kulttuuriperintölautakunta oli '
+              + 'siihen mennessä saanut.',
+          selite: 'Singaporen taidemuseo toimii entisessä koulurakennuksessa Bras Basah '
+            + 'Roadin varrella. Liu Kangin lahjoituksen arvoksi laskettiin noin '
+            + 'kahdeksantoista miljoonaa Singaporen dollaria.',
+          lahde: 'ProjectManhattan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Gibbonit, joilla oli aluksi häntä',
+          aika: '1948–1991',
+          teksti: 'Chen Wen Hsi saapui Singaporeen 1948 aikoen viipyä enintään kolme '
+              + 'kuukautta, mutta kollegat ja siirtomaahallinnon ylikomissaari '
+              + 'suostuttelivat hänet jäämään. Hän opetti koulussa ja taideakatemiassa ja '
+              + 'piti elämänsä aikana kolmekymmentäkahdeksan yksityisnäyttelyä. '
+              + 'Tunnetuimpia ovat gibbonimaalaukset, joiden innoitus tuli 1200-luvun '
+              + 'kiinalaisen maalarin teoksen jäljennöksestä. Chen ei ollut koskaan '
+              + 'nähnyt gibbonia eikä siksi tiennyt, ettei sillä ole häntää — hän maalasi '
+              + 'niitä hännällisinä, kunnes eräs ulkomaalainen korjasi virheen. Sen '
+              + 'jälkeen hän osti lemmikkikaupasta gibbonin kolmellasadalla dollarilla ja '
+              + 'kasvatti niitä lopulta kuusi.',
+          selite: 'Chen oli saanut jo Kiinassa tunnustusta maalari Xu Beihongilta. '
+            + 'Singaporessa hän kokeili tussin rinnalla fauvismia ja kubismia.',
+        },
+        {
+          otsikko: 'Pariisista Siglapiin, nimeksi santelipuu',
+          aika: '1953–1982',
+          tiedosto: 'Nanyang Academy of Fine Arts Campus 1.jpg',
+          teksti: 'Georgette Chen syntyi antiikkikauppiaan perheeseen ja vietti lapsuuden '
+              + 'Pariisin ja Kiinan väliä. Vuonna 1930 kaksi hänen työtään valittiin '
+              + 'Salon d’Automneen ja yhden osti pariisilainen museo, mikä oli tuolloin '
+              + 'aasialaiselle harvinaista. Sota vei hänet Hongkongiin, japanilaiset '
+              + 'pidättivät pariskunnan 1944 ja hän jäi leskeksi. Vuonna 1953 hän piti '
+              + 'Singaporessa kahdeksankymmenen työn näyttelyn ja jäi kaupunkiin lopuksi '
+              + 'ikäänsä. Hän opetteli malaijia ja otti nimekseen Chendana, santelipuu, '
+              + 'jonka hänen malaijilaiset ystävänsä keksivät. Hän maalasi rambutaneja, '
+              + 'jokinäkymiä sekä sikhivartijoita turbaaniensa värien takia.',
+          selite: 'Nanyangin taideakatemia, jossa Chen opetti vuodesta 1954 vuoteen 1981. '
+            + 'Maan korkeimman taidepalkinnon hän sai 1982 sairaalasta käsin: mitalin '
+            + 'nouti hänen oppilaansa.',
+          lahde: 'Calvin Teo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+  ],
 };

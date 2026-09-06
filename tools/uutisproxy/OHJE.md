@@ -137,6 +137,20 @@
 > js/packs/uutislahteet.js:n AFG-kommentissa. Julkaisu
 > Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Singapore):** sallittuihin lisättiin
+> www.channelnewsasia.com (maalehti SGP, testattu 6.9.2026: CNA:n
+> Singapore-osaston syötteestä jäsentyy kaksitoista juttua, ja kolmesta
+> eri artikkelisivusta poimittiin `<article>`-lohkosta 10, 19 ja 47 yli
+> 60 merkin kappaletta sekä `og:image` joka kerta). Syötteen osoitteessa
+> on kyselymerkkijono (`?_format=xml&category=10416`), mutta sallittujen
+> lista vertaa vain osoitteen alkua, joten pelkkä isäntänimi riittää.
+> The Straits Times hylättiin, koska sen artikkelisivuista vain osalla
+> on `<article>`-elementti; Berita Harianilla (malaiji) sitä ei ole
+> lainkaan ja Zaobaon (kiina) kokeillut RSS-osoitteet vastaavat
+> 404:llä. Tamil Murasu läpäisi molemmat testit ja on kirjattu
+> varalähteeksi js/packs/uutislahteet.js:n SGP-kommenttiin. Julkaisu
+> Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

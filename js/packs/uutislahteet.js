@@ -831,4 +831,31 @@ export const UUTISLAHTEET = {
     kieli: 'fa',
     syote: 'https://tolonews.com/fa/rss.xml',
   },
+  /*
+   * SINGAPORE (SGP), Opus-lehtiagentti 6.9.2026. CNA on Mediacorpin
+   * uutiskanava ja maan luetuimpia uutissivustoja; syöte on sen
+   * Singapore-osasto. Testattu 6.9.2026: syötteestä jäsentyy
+   * kaksitoista juttua, ja kolmesta eri artikkelisivusta poimittiin
+   * <article>-lohkosta 10, 19 ja 47 yli 60 merkin kappaletta sekä
+   * og:image joka kerta.
+   *
+   * KIELI ON ENGLANTI TARKOITUKSELLA: se on Singaporen neljästä
+   * virallisesta kielestä se, jolla asiat hoituvat.
+   *
+   * Testattu ja hylätty: The Straits Times
+   * (straitstimes.com/news/singapore/rss.xml) läpäisi syötetestin (44
+   * juttua) ja ensimmäisen artikkelin (14 kappaletta), mutta toisella
+   * kokeillulla artikkelisivulla ei ollut <article>-elementtiä eikä
+   * [itemprop="articleBody"]-merkintää lainkaan; Berita Harian
+   * (malaiji) läpäisi syötetestin mutta artikkelisivulla on vain
+   * og:image eikä yhtään <article>-elementtiä; Zaobaon (kiina)
+   * kokeillut RSS-osoitteet vastaavat 404:llä. Tamil Murasu (tamili,
+   * tamilmurasu.com.sg/rss.xml) läpäisi molemmat testit ja jää
+   * varalähteeksi.
+   */
+  SGP: {
+    nimi: 'CNA',
+    kieli: 'en',
+    syote: 'https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=10416',
+  },
 };

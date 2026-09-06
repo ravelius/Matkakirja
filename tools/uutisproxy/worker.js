@@ -132,6 +132,9 @@ const SALLITUT = [
   // darinkielinen syöte ja artikkelisivut ovat samalla isäntänimellä,
   // ilman www-etuliitettä.
   'https://tolonews.com/',
+  // Singaporen uutislähde (maalehti 6.9.2026): CNA:n syöte on
+  // /api/v1/rss-outbound-feed ja artikkelisivut samalla isäntänimellä.
+  'https://www.channelnewsasia.com/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

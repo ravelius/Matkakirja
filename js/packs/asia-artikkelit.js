@@ -2828,28 +2828,42 @@ export const ASIA_ARTIKKELIT = {
    * ennallaan.
    */
   Singapore: {
+    /*
+     * Muita pidempi tarkoituksella: maalehden maaosasto
+     * (MAA_KATEGORIAT SGP) nojaa tähän introon yksin, sama malli kuin
+     * Egyptillä ja Kenialla. Intro kirjoitettiin uusiksi 6.9.2026
+     * maalehden mukana niin, että VALTIOLLINEN KAARI on kokonaan
+     * täällä: aihesivujen historia alkaa 1300-luvulta eikä kerro
+     * Malesian liittoa lainkaan. Mitta on tiukka — tests/vanha-
+     * maailma.test.mjs vaatii introlta 100–1200 merkkiä, joten uusi
+     * aines mahtui vain tiivistämällä vanhoja kappaleita.
+     * Lähteet: en-Wikipedia "Singapore", "Kingdom of Singapura",
+     * "Japanese occupation of Singapore" ja "State of Singapore
+     * (Malaysia)", luettu 6.9.2026.
+     */
     intro: 'Singapore on saarivaltio Malakan salmen suulla, noin '
       + 'asteen verran päiväntasaajasta pohjoiseen. Pääsaaren lisäksi '
       + 'siihen kuuluu yli kuusikymmentä pientä saarta, ja koko maa '
       + 'mahtuu yhden suurkaupungin alalle: se on **kaupunkivaltio**, '
-      + 'jolla ei ole erillistä pääkaupunkia. Lännessä on Malakan '
-      + 'salmi, etelässä Singaporen salmi ja pohjoisessa kapea '
-      + 'Johorin salmi, jonka yli pääsee pengertietä Malesiaan.'
+      + 'jolla ei ole erillistä pääkaupunkia. Pohjoisessa kapean '
+      + 'Johorin salmen yli pääsee pengertietä Malesiaan.'
       + '\n\n'
-      + 'Nykyinen kaupunki alkaa vuodesta 1819, kun brittiläinen '
-      + 'virkamies Stamford Raffles perusti joen suulle kauppa-aseman '
-      + 'ja teki siitä **vapaasataman**. Ennen häntä saarella asui '
-      + 'noin tuhat ihmistä; vuoteen 1860 mennessä väkeä oli yli '
-      + 'kahdeksankymmentätuhatta. Kiinalaiset, malaijit, intialaiset '
-      + 'ja eurooppalaiset kauppahuoneet asettuivat saman joen '
-      + 'varrelle, ja Suezin kanavan avaaminen vuonna 1869 lyhensi '
-      + 'matkan Eurooppaan niin, että höyrylaivoja alkoi kulkea '
-      + 'salmen kautta entistä tiheämmin.'
+      + 'Joen suulla oli muurattu satamakaupunki jo **1300-luvulla**, '
+      + 'ja sitä kutsuttiin ensin Temasekiksi ja sitten Singapuraksi. '
+      + 'Nykyinen kaupunki alkaa vuodesta **1819**, kun Stamford '
+      + 'Raffles perusti joen suulle kauppa-aseman ja teki siitä '
+      + '**vapaasataman**. Ennen häntä saarella asui noin tuhat '
+      + 'ihmistä; vuoteen 1860 mennessä väkeä oli yli '
+      + 'kahdeksankymmentätuhatta, ja Suezin kanavan avaaminen 1869 '
+      + 'toi salmeen entistä tiheämmän höyrylaivaliikenteen.'
       + '\n\n'
-      + 'Virallisia kieliä on neljä — englanti, malaiji, '
+      + 'Japani miehitti saaren vuosina **1942–1945**. Vuonna 1963 '
+      + 'Singaporesta tuli Malesian liittovaltion pienin mutta '
+      + 'väkirikkain osavaltio, ja kaksi vuotta myöhemmin, '
+      + '**9. elokuuta 1965**, se erosi liitosta itsenäiseksi '
+      + 'valtioksi. Virallisia kieliä on neljä — englanti, malaiji, '
       + 'mandariinikiina ja tamili — ja ilmasto on trooppinen '
-      + 'sademetsäilmasto ilman selviä vuodenaikoja. Singapore oli '
-      + 'osa Malesiaa vuosina 1963–1965 ja siitä lähtien itsenäinen.',
+      + 'sademetsäilmasto ilman selviä vuodenaikoja.',
     teksti: 'Singapore on Malakan niemimaan eteläkärjessä, aivan '
       + 'päiväntasaajan tuntumassa. Pinta-alaa on noin 730 '
       + 'neliökilometriä, ja se kasvaa yhä: merta täytetään maalla. '
