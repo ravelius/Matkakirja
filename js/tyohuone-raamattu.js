@@ -3534,7 +3534,12 @@ export const RAAMATTU = {
           + 'ja TestFlight jaavat GitHub Actionsiin; Macille siirretaan '
           + 'pitkakestoiset ajot - laattapoltot, pallon Mercator-sarja, '
           + 'etusivupallon kuvasarja ja muut Chromium-renderoinnit seka '
-          + 'suorituskykymittaukset aidolla naytonohjaimella.',
+          + 'suorituskykymittaukset aidolla naytonohjaimella. RAJA (omistaja '
+          + '6.9.2026 ilta, sanatarkasti: "jos menee alle vartissa niin '
+          + 'sellaisia ei macille. on kuitenkin iso vaiva minulle etayhteyden '
+          + 'kautta klikkailla"): Macille vain ajot, jotka Actionsissa '
+          + 'kestaisivat yli 15 minuuttia; lyhyemmat ajetaan Actionsissa tai '
+          + 'kontissa, ja Mac-ajot niputetaan yhdeksi komennoksi kerrallaan.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
