@@ -1,0 +1,129 @@
+{
+  "orderId": "fable-elaintakyt-4-20260906-0520",
+  "receivedAt": "2026-09-06T05:26:49.600313+00:00",
+  "sourceMailboxSha": "2bc0f8bf157c35ffca862ed6c2a5f14641b96e76",
+  "sourceHeading": "2026-09-06 05:20 UTC",
+  "originalOrderText": "## 2026-09-06 05:20 UTC — FABLE → KUVATOIMITUS: neljä eläintäkykuvaa (Bolivia, Kolumbia, Fidži, Salomonsaaret)\n\nKuittaus 05:04 luettu, kiitos. Uusi pieni tilaus omistajan luvalla (ei erillistä hyväksyntää): maailman karttanostojen erissä M1 ja M2 neljä maata sai tai tarvitsee eläintäyn, jolle ei ole Commons-kuvaa. Sama linja kuin aiemmissa eläintäkykuvissa (js/packs/elaintakyt.js): luonnonvalokuvamainen, seepiaan taittuva, laji tunnistettavasti oikein, ei ihmisiä, vaaka 4:3, sRGB JPG, R2:een kansioon jonka nimeät. Kuvateksti = lajin suomenkielinen nimi ja paikka yhdessä virkkeessä, lähderivi tieteellisellä nimellä.\n\n- BOL — boliviandelfiini (*Inia boliviensis*): vaaleanpunertava jokidelfiini nousemassa pintaan Bolivian Amazonian ruskeassa jokivedessä, matala savannirantaviiva taustalla.\n- COL — kultamyrkkysammakko (*Phyllobates terribilis*): kirkkaankeltainen sammakko märällä lehdellä Chocón sademetsän varjossa, lähikuva.\n- FJI — fidžinleguaani (*Brachylophus fasciatus*): vihreä poikkiraidallinen leguaani puunoksalla Viti Levun sademetsässä.\n- SLB — ducorpsinkakadu (*Cacatua ducorpsii*): valkoinen kakadu Salomonsaarten alavan sademetsän oksalla, lyhyt töyhtö pystyssä.\n\nToimitus kuvatoimitus.md:hen JSON-liitteineen (URL, kuvateksti sanasta sanaan, lähderivi). Fable hyväksyy ja kytkee.\n",
+  "status": "queued-with-fji-location-alignment-pending",
+  "productionStarted": false,
+  "productionOwner": "root-coordinates-sol-nonencounter-production",
+  "count": 4,
+  "sourceCheckedMainSha": "05cc51c516ed43e17dd5b4e7ec4582ef1afa72f8",
+  "canonicalCountryRecordsPresent": false,
+  "canonicalCheckNote": "These four country records are not yet present in elaintakyt.js at the freshly fetched main. Preserve the exact order and recheck Fable integration data before final metadata/delivery.",
+  "format": "Landscape 4:3 sRGB JPG. Natural wildlife photograph with restrained sepia bias, species colors still recognizable, no people. Quiet natural background; no synthetic bokeh/texture. Generous edge margin for game fade.",
+  "r2Prefix": "kohtaamiset/elaimet/",
+  "approvalRoute": "Fable states owner authorization to approve these deliveries; production visual QA first. No image is approved or delivered by this receipt.",
+  "sourceLabelRequirement": "Final image source label must identify AI generation and include the scientific name plus factual reference; never label generated pixels as a Commons or wildlife photographer image.",
+  "rows": [
+    {
+      "countryCode": "BOL",
+      "requestedFinnishName": "boliviandelfiini",
+      "scientificName": "Inia boliviensis",
+      "originalOrderLine": "- BOL — boliviandelfiini (*Inia boliviensis*): vaaleanpunertava jokidelfiini nousemassa pintaan Bolivian Amazonian ruskeassa jokivedessä, matala savannirantaviiva taustalla.",
+      "status": "queued-for-reference-inspection-and-generation",
+      "productionStarted": false,
+      "canonicalRecordVerified": false,
+      "existingAssetCheckRequired": true,
+      "sources": [
+        {
+          "url": "https://wwf.panda.org/knowledge_hub/where_we_work/amazon/species/key_species_for_conservation/",
+          "publisher": "WWF",
+          "finding": "Inia boliviensis occurs in the Mamore and Itenez subbasins; a Bolivia Amazon lowland setting is supported."
+        }
+      ],
+      "visualReferencesInspected": false,
+      "rootQaPassed": false,
+      "fableApproved": false,
+      "r2Verified": false
+    },
+    {
+      "countryCode": "COL",
+      "requestedFinnishName": "kultamyrkkysammakko",
+      "scientificName": "Phyllobates terribilis",
+      "originalOrderLine": "- COL — kultamyrkkysammakko (*Phyllobates terribilis*): kirkkaankeltainen sammakko märällä lehdellä Chocón sademetsän varjossa, lähikuva.",
+      "status": "queued-for-reference-inspection-and-generation",
+      "productionStarted": false,
+      "canonicalRecordVerified": false,
+      "existingAssetCheckRequired": true,
+      "sources": [
+        {
+          "url": "https://amphibiansoftheworld.amnh.org/Amphibia/Anura/Dendrobatoidea/Dendrobatidae/Dendrobatinae/Phyllobates/Phyllobates-terribilis",
+          "publisher": "American Museum of Natural History",
+          "finding": "Distribution around the Cauca type locality and north into Valle del Cauca, Colombia. Use the Pacific lowland rainforest region; do not confuse the Choco biogeographic region with the modern department or the Amazon."
+        },
+        {
+          "url": "https://colombia.wcs.org/en-us/WCS-VISUAL/Photo-Gallery/Poison-Dart-Frogs-of-Colombia.aspx",
+          "publisher": "WCS Colombia",
+          "finding": "Species-specific photo and Pacific Colombian context available for future visual reference inspection."
+        }
+      ],
+      "visualReferencesInspected": false,
+      "rootQaPassed": false,
+      "fableApproved": false,
+      "r2Verified": false
+    },
+    {
+      "countryCode": "FJI",
+      "requestedFinnishName": "fidžinleguaani",
+      "scientificName": "Brachylophus fasciatus",
+      "originalOrderLine": "- FJI — fidžinleguaani (*Brachylophus fasciatus*): vihreä poikkiraidallinen leguaani puunoksalla Viti Levun sademetsässä.",
+      "status": "awaiting-fable-location-alignment",
+      "productionStarted": false,
+      "canonicalRecordVerified": false,
+      "existingAssetCheckRequired": true,
+      "sources": [
+        {
+          "url": "https://www.iucn-isg.org/species/iguana-species/",
+          "publisher": "IUCN SSC Iguana Specialist Group",
+          "finding": "Separates B. fasciatus (Lau Banded Iguanas) from B. bulabula (Central Fijian Banded Iguanas)."
+        },
+        {
+          "url": "https://www.iucn-isg.org/wp-content/uploads/2013/04/Newsletter_112.pdf",
+          "publisher": "IUCN SSC Iguana Specialist Group, Fall 2008, page 4",
+          "finding": "The taxonomy update preserves fasciatus for Lau/Tonga and assigns central Fiji banded iguanas to bulabula."
+        },
+        {
+          "url": "https://pubs.usgs.gov/publication/70000002",
+          "publisher": "USGS / Keogh et al. 2008, Royal Society",
+          "finding": "Primary molecular and morphological study distinguishes the Lau fasciatus clade from central Fiji animals."
+        }
+      ],
+      "visualReferencesInspected": false,
+      "rootQaPassed": false,
+      "fableApproved": false,
+      "r2Verified": false,
+      "alignmentProposal": {
+        "preferred": "Preserve Brachylophus fasciatus and change scene/caption locality from Viti Levu to the Lau Islands, Fiji.",
+        "alternate": "If Viti Levu is essential, ask Fable to change the taxon to Brachylophus bulabula and confirm the Finnish display name.",
+        "fableAccepted": false
+      }
+    },
+    {
+      "countryCode": "SLB",
+      "requestedFinnishName": "ducorpsinkakadu",
+      "scientificName": "Cacatua ducorpsii",
+      "originalOrderLine": "- SLB — ducorpsinkakadu (*Cacatua ducorpsii*): valkoinen kakadu Salomonsaarten alavan sademetsän oksalla, lyhyt töyhtö pystyssä.",
+      "status": "queued-for-reference-inspection-and-generation",
+      "productionStarted": false,
+      "canonicalRecordVerified": false,
+      "existingAssetCheckRequired": true,
+      "sources": [
+        {
+          "url": "https://birdnet.cornell.edu/taxonomy/species/Cacatua%20ducorpsii",
+          "publisher": "Cornell Lab BirdNET+",
+          "finding": "Taxonomic identity Cacatua ducorpsii / Solomons Corella."
+        },
+        {
+          "url": "https://avibase.bsc-eoc.org/species.jsp?avibaseid=D238FDA1E324B26D&lang=EN",
+          "publisher": "Birds Canada Avibase",
+          "finding": "Distribution includes Solomon Islands islands Malaita and Guadalcanal."
+        }
+      ],
+      "visualReferencesInspected": false,
+      "rootQaPassed": false,
+      "fableApproved": false,
+      "r2Verified": false
+    }
+  ]
+}
