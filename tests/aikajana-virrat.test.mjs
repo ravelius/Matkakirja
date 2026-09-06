@@ -439,12 +439,15 @@ test('kaari pyytää virrat, ei tummennusta eikä reittiviivaa; tekstit on kirjo
   assert.equal(k.virrat.virrat, IHMISEN_MATKA_VIRRAT);
   assert.equal(k.virrat.maamaski, MAAMASKI);
   assert.ok(k.virrat.retki && k.virrat.vanha && k.virrat.peitto);
-  // Päätös 14 (Fable 6.9.2026): avausteksti ja loppusanat puhuvat väristä, eivät valoista.
+  // Virrat vanoina (Fable 7.9.2026): avausteksti ja loppusanat puhuvat vanasta ja
+  // pääreitistä, eivät valoista eivätkä koko mantereen värjäytymisestä.
   const data = lue('../js/linssit/ihmisen-matka-data.js');
   assert.ok(!/TODO \(Fable/.test(data), 'tekstien TODO on tehty');
-  assert.match(k.esittely.teksti, /Väri leviää kartalla samaa vauhtia kuin ihminen/);
+  assert.match(k.esittely.teksti, /Kartalle piirtyy yksi vana — todennäköinen pääreitti/);
   assert.match(k.esittely.teksti, /Harmaa on vanha väestö/);
-  assert.match(k.loppusanat.teksti, /^Koko maailma on nyt värissä/);
+  assert.match(k.esittely.teksti, /Löytöpaikat ovat todisteita, eivät reitti/);
+  assert.match(k.loppusanat.teksti, /^Vanat ulottuvat nyt/);
+  assert.match(k.loppusanat.teksti, /Reitti on todennäköinen, ei todistettu/);
   assert.ok(!/valo/i.test(k.esittely.teksti) && !/valo/i.test(k.loppusanat.teksti), 'tekstit eivät enää puhu valoista');
 });
 

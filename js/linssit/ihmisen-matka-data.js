@@ -113,34 +113,44 @@ export const IHMISEN_MATKA_KUVAJUURI = 'https://media.matkakirja.app/aikajana/ih
 
 /** Matkalaukun selite: mitä linssi on. */
 export const IHMISEN_MATKA_ESITTELY = 'Ihmisen matka Afrikasta koko maapallolle: '
-  + 'kaksikymmentä paikkaa, joista on löytynyt luu, jälki tai helmi. Kello juoksee '
-  + 'kolmestasadastatuhannesta vuodesta tähän päivään, ja kartta värjäytyy sitä mukaa '
-  + 'kuin ihminen levisi — maata pitkin, ranta rannalta.';
+  + 'kello juoksee kolmestasadastatuhannesta vuodesta tähän päivään, ja kartalle '
+  + 'piirtyy vana sitä mukaa kuin ihminen levisi — maata pitkin, ranta rannalta. '
+  + 'Kaksikymmentä paikkaa, joista on löytynyt luu, jälki tai helmi, ovat todisteita '
+  + 'matkasta.';
 
 /*
- * Avausteksti ja loppusanat on kirjoitettu VÄRIVIRROILLE (Fable 6.9.2026,
- * omistajan päätös 14): pallolla linssi näyttää leviämisen laajenevina
- * värialueina (js/aikajana-virrat.js), ja tekstit nimeävät värit ja
- * vanhan väestön harmaan niin kuin ne kartalla näkyvät.
+ * Avausteksti ja loppusanat on kirjoitettu VANOILLE (Fable 7.9.2026 yö,
+ * omistajan linjaus 6.9.2026 ilta "Virrat vanoina", Raamattu): pallolla
+ * linssi piirtää leviämisen yhtenä kirkkaana pääreittinä ja ohuempina
+ * haaroina (js/aikajana-vanat.js), kamera seuraa selkärankaa Afrikasta
+ * Amerikkoihin, ja tekstit nimeävät vanat ja värit niin kuin ne kartalla
+ * näkyvät. Löytöpaikat ovat todisteita, eivät reitti — se sanotaan
+ * pelaajalle suoraan, ja lopussa muistutetaan, ettei reitti ole
+ * todistettu.
  */
 /** Kaaren alkusanat (avausjakso ennen käynnistystä). */
 export const IHMISEN_MATKA_ALOITUS = 'Tulet seuraavaksi näkemään, miten yksi laji '
   + 'levisi yhdestä maanosasta kaikkiin. Kukaan ei suunnitellut matkaa: jokainen '
   + 'sukupolvi siirtyi vain vähän kauemmas kuin edellinen, ja tuhat sukupolvea '
-  + 'myöhemmin oltiin toisella puolella maapalloa. Väri leviää kartalla samaa vauhtia '
-  + 'kuin ihminen — meripihka Afrikasta Aasiaan ja Australiaan, sininen Eurooppaan, '
-  + 'sinivihreä Siperiaan ja siitä turkoosina Amerikkoihin, ruusu saarelta saarelle '
-  + 'Tyynellämerellä. Harmaa on vanha väestö, neandertalilaiset ja denisovalaiset, '
-  + 'joka väistyy tulijoiden tieltä. Kuva poksahtaa kartalle aina, kun jostakin '
-  + 'löytyy jälki siitä, että täällä oli joku ennen muita.';
+  + 'myöhemmin oltiin toisella puolella maapalloa. Kartalle piirtyy yksi vana — '
+  + 'todennäköinen pääreitti Afrikasta Arabian ja Keski-Aasian kautta Siperiaan, '
+  + 'Beringin maasiltaa Alaskaan ja rannikkoa pitkin Chileen — ja sen rinnalle '
+  + 'ohuemmat: sininen Eurooppaan, meripihka Intian rantoja Australiaan, ruusu '
+  + 'saarelta saarelle Tyynellämerellä. Harmaa on vanha väestö, neandertalilaiset '
+  + 'ja denisovalaiset, joka väistyy tulijoiden tieltä. Löytöpaikat ovat todisteita, '
+  + 'eivät reitti: kuusi niistä näet matkalla, loput neljätoista voit katsoa '
+  + 'esityksen jälkeen.';
 
-/** Loppusanat, kun koko maailma on värissä. */
-export const IHMISEN_MATKA_LOPPU = 'Koko maailma on nyt värissä, Marokon kukkulalta '
-  + 'Tyynenmeren yli Uuteen-Seelantiin, ja kaksikymmentä kuvaa merkitsee paikat, joista '
-  + 'löytö on kertonut matkasta. Matkaan meni kolmesataatuhatta vuotta eikä yksikään '
-  + 'kulkija tiennyt olevansa matkalla — jokainen vain siirsi leirinsä seuraavan rannan '
-  + 'taakse. Ihminen oli siis kiertänyt maapallon kerran jo kauan ennen kuin kukaan '
-  + 'keksi laskea päiviä; Fogg teki saman uudelleen, kello kädessä.';
+/** Loppusanat, kun vanat ulottuvat koko maailmaan. */
+export const IHMISEN_MATKA_LOPPU = 'Vanat ulottuvat nyt Marokon kukkulalta '
+  + 'Tyynenmeren yli Uuteen-Seelantiin, ja pisteet merkitsevät kaksikymmentä paikkaa, '
+  + 'joista luu, jälki tai helmi on kertonut matkasta. Matkaan meni kolmesataatuhatta '
+  + 'vuotta eikä yksikään kulkija tiennyt olevansa matkalla — jokainen vain siirsi '
+  + 'leirinsä seuraavan rannan taakse. Reitti on todennäköinen, ei todistettu: '
+  + 'Amerikkaan tulleissa oli myös Itä-Aasiasta pohjoiseen nousseita, ja Afrikassa '
+  + 'ihmisiä asui monessa paikassa yhtä aikaa. Ihminen oli kiertänyt maapallon kerran '
+  + 'jo kauan ennen kuin kukaan keksi laskea päiviä; Fogg teki saman uudelleen, kello '
+  + 'kädessä.';
 
 export const IHMISEN_MATKA = [
   {

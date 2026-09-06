@@ -1891,6 +1891,9 @@
 .tiedeliite-sisallysrivi:hover,
 .tiedeliite-sisallysrivi:focus-visible { background: rgba(122, 85, 20, 0.12); }
 .tiedeliite-sisallysrivi.nykyinen { font-weight: 700; }
+/* Esityksessä näytetty löytö: kullattu merkki rivin oikeassa laidassa
+   (Ihmisen matka vanoina, V4 — kuusi kuvaa esityksessä, loput galleriassa). */
+.tiedeliite-sisallysmerkki { margin-left: auto; flex: none; color: #9a7a2a; font-size: 0.8em; }
 .tiedeliite-sisallysvuosi {
   flex: none;
   min-width: 2.6rem;
