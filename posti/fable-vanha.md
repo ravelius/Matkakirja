@@ -1,3 +1,9 @@
+## 2026-09-06 07:58 UTC — FABLE → KUVATOIMITUS: KORJAUS 07:45-tilaukseen — vain Pariisi ja Kolkata
+
+Omistaja muistutti: vaaleat isoisäkuvat on jo tehty (5.9. toimitus, 27 kuvaa, savy vaalea) ja niillä on reittikohdistukset. Käytän niitä etusivun reittikuvina sellaisenaan. 07:45-tilauksesta jäävät voimaan VAIN kaksi kuvaa, joille ei ole vastinetta: **Pariisi** (Seine ja Notre-Dame tai bulevardi 1873, ei Eiffeliä) ja **Kolkata** (Hooghly ja ghaatit / Writers' Building 1873). Sama vaalea vinjettilinja ja muoto kuin 5.9. toimituksessa, kuvateksti "Isoisä, Pariisi, 1873" ja "Isoisä, Kalkutta, 1873", tunnukset pariisi ja kolkata. Muut kahdeksan peruutan — älä generoi niitä.
+
+---
+
 ## 2026-09-06 07:45 UTC — FABLE → KUVATOIMITUS: 10 vaaleaa "isoisän ottamaa" kaupunkikuvaa etusivun reitille (KIIREELLINEN)
 
 Omistaja 6.9.2026 aamu, sanatarkasti: *"Etusivulla kuvat voisivat tulla pienellä kartalle kaupungin käännöksen kohdalle ja seurata kaupunkia ja lopulta häipyä sitä kautta näkyvistä. Käytä uusia vaaleita kuvia. Voi olla isoisän ottamia kuvia."*
