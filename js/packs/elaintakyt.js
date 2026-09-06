@@ -1457,6 +1457,70 @@ export const ELAINTAKYT = {
     lon: 127.0,
     lat: -8.55,
   },
+
+  /* ==================== MAAILMAN ERÄ M6, LÄHI-ITÄ (6.9.2026) =========
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Neljä uutta täkyä: CYP, OMN, ARE ja KWT. Qatar jäi ilman, ja syy on
+   * mitattu eikä arvattu: merkin on oltava vähintään 35 lautayksikön
+   * päässä jokaisesta kaupunkimerkistä (tests/elaintakyt.test.mjs), ja
+   * koko Qatarin maa-alueen kaukaisin piste Dohasta on 31,8 yksikköä.
+   * Sama tilanne kuin Hongkongissa erässä M3. Kaikki neljä ovat
+   * KUVATTOMIA: `kuva`-kentässä on kuvaputken ämpäritunnus ilman
+   * kansiota, ja kun kuva syntyy, se ilmestyy kortille ilman
+   * koodimuutosta.
+   *
+   * Saudi-Arabialla on jo arabianoryksi, joten sitä ei toisteta (N3).
+   * ================================================================ */
+  CYP: {
+    elain: 'kyproksenpöllönen',
+    /*
+     * Karttanimi (js/elaintaky.js elaintakyNimio): "kyproksenpöllönen"
+     * on 17 merkkiä ja sen nimiölaatikko meni Asinoun kirkon nimiön
+     * päälle (tools/tarkista-nimiolimitys.mjs). Lyhennys on lajin oma
+     * sukunimi — Otus-suvun linnut ovat suomeksi pöllösiä — eikä siis
+     * keksitty nimi; sama sopimus kuin Kreikan merikilpikonnalla.
+     */
+    nimio: 'pöllönen',
+    otsikko: 'Kaksi nuottia pimeässä',
+    teksti: 'Kyproksenpöllönen (Otus cyprius) on pieni pöllö, jota ei tavata missään muualla kuin Kyproksella. Pitkään sitä pidettiin samana lajina kuin kyläpöllöstä, mutta kolme eroa erottaa ne: kyproksenpöllösen laulu on kaksinuottinen eikä yksinuottinen, siltä puuttuu ruskeanpunainen värimuoto kokonaan, ja sen höyhenpuku on tummempi. Laji pesii koloissa — luonnon omissa, rakennusten raoissa ja pöntöissä — ja se on tarpeen, sillä saarella ei ole yhtään tikkalajia ja kalabrianmänty tekee koloja vasta vanhana. Pöllöstä on tavattu merenpinnan tasolta 1 900 metriin asti, ja koska saaren korkein kohta on 1 952 metriä, se elää käytännössä koko saarella. Akamasin niemimaalla, jossa tämä merkki on, se on osa niemen omaa eläimistöä hedelmälepakoiden, siilien ja kettujen rinnalla.',
+    lahde: 'en-Wikipedia "Cyprus scops owl", johdanto sekä osiot "Taxonomy and systematics", '
+      + '"Distribution and habitat" ja "Breeding", ja en-Wikipedia "Akamas", osio "Biology '
+      + 'and ecology". Tarkistettu 6.9.2026.',
+    kuva: 'elain-cyp',
+    lon: 32.29,
+    lat: 35.06,
+  },
+  OMN: {
+    elain: 'arabianleopardi',
+    otsikko: 'Kaksikymmentä jäljellä',
+    teksti: 'Arabianleopardi (Panthera pardus nimr) on leopardin alalajeista pienin, ja se kuvailtiin tieteelle 1830. Vielä 1970-luvun lopulla se eli laajalti Arabian niemimaan karuilla kukkuloilla ja vuorilla, mutta kanta on nyt pahasti pirstoutunut ja pienenee yhä. Vuonna 2008 arvioitiin, että jäljellä on 45–200 yksilöä kolmena erillisenä osakantana Länsi-Saudi-Arabiassa, Omanissa ja Jemenissä; vuoden 2023 arvio on 100–120 yksilöä Omanissa ja Jemenissä, joista 70–84 aikuista, ja Saudi-Arabiasta laji on mahdollisesti hävinnyt kokonaan. Yksi viimeisistä turvapaikoista on Dhofarin Jabal Samhanin luonnonsuojelualue, 4 500 neliökilometriä vuoristoa ilman vakinaista asutusta. Alueella arvioidaan elävän noin kaksikymmentä arabianleopardia.',
+    lahde: 'en-Wikipedia "Arabian leopard", johdanto, ja en-Wikipedia "Jabal Samhan Nature '
+      + 'Reserve", johdanto. Tarkistettu 6.9.2026.',
+    kuva: 'elain-omn',
+    lon: 55.0,
+    lat: 17.3,
+  },
+  ARE: {
+    elain: 'arabiantahri',
+    otsikko: 'Vuohi, joka juo joka kolmas päivä',
+    teksti: 'Arabiantahri (Arabitragus jayakari) on tahreista pienin: tanakka vuorivuohi, jonka sarvet kaartuvat taaksepäin sekä uroksilla että naarailla. Turkki on pitkä ja punaruskea, ja selkää pitkin kulkee tumma juova; vanhimmilla uroksilla kuono ja silmäjuovat tummuvat mustiksi ja harja kasvaa pitkäksi. Kaviot ovat kuin kumia, jotta ne pitävät jyrkillä kalliorinteillä. Laji elää Hajarin vuorten rinteillä Omanissa ja Arabiemiirikunnissa aina 1 800 metriin asti sekä Jebel Hafeetin seudulla. Toisin kuin muut tahrit se ei muodosta laumoja vaan kulkee yksin tai pienenä perheenä. Kesällä sen on juotava kahden tai kolmen päivän välein, ja siksi se laskeutuu wadeihin — juuri silloin se on salametsästäjän ulottuvilla. Oldfield Thomas kuvasi lajin 1894, ja vuonna 2018 villikannaksi arvioitiin noin 2 450 yksilöä.',
+    lahde: 'en-Wikipedia "Arabian tahr", johdanto sekä osiot "Description", "Habitat and '
+      + 'range", "Behaviour and ecology" ja "Threats". Tarkistettu 6.9.2026.',
+    kuva: 'elain-are',
+    lon: 56.25,
+    lat: 25.4,
+  },
+  KWT: {
+    elain: 'hietakissa',
+    otsikko: 'Korvat matalalla, kuulo maassa',
+    teksti: 'Hietakissa (Felis margarita) on pieni villikissa, joka elää hiekka- ja kiviaavikoilla kaukana vesipaikoista. Turkki on hiekanvärinen tai vaaleanharmaa, joten eläin katoaa maastoon. Ruumis on 39–52 senttiä ja häntä 23–31 senttiä. Korvat ovat vain 5–7 senttiä ja ne istuvat matalalla pään sivuilla — siitä on hyötyä, kun saalis liikkuu hiekan alla. Käpälänpohjia peittää pitkä karva, joka eristää anturat aavikon kuumuudelta ja kylmyydeltä. Päivät kissa lepää maanalaisessa pesässä ja metsästää öisin, jolloin se kulkee keskimäärin 5,4 kilometriä pieniä jyrsijöitä ja lintuja etsien; se tappaa ja syö myös myrkkykäärmeitä. Keväällä naaras synnyttää kaksi tai kolme poikasta. Laji kuvailtiin tieteelle 1858 Algerian Saharasta, ja se kuuluu Kuwaitin noin kahdenkymmenenkahdeksan nisäkäslajin joukkoon.',
+    lahde: 'en-Wikipedia "Sand cat", johdanto, ja en-Wikipedia "Wildlife of Kuwait", osio '
+      + '"Fauna". Tarkistettu 6.9.2026.',
+    kuva: 'elain-kwt',
+    lon: 46.7,
+    lat: 29.2,
+  },
 };
 
 /** Maatunnukset siinä järjestyksessä kuin ne on kirjoitettu. */

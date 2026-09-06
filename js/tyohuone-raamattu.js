@@ -3376,6 +3376,15 @@ export const RAAMATTU = {
           + 'pelaa linssin lapi selaimessa, kirjaa havainnot ja korjaa '
           + 'ennen kuin omistaja nakee sen. Rakennetaan agenttiparvella '
           + '(aineisto, moottori, kuvat, musiikki), Fable tarkistaa tekstit.',
+        'PELIN OSOITE ON matkakirja.app (omistaja 6.9.2026 aamu, sanatarkasti: '
+          + '"Siirra vain peli"): peli julkaistaan GitHub Pagesista, mutta sen '
+          + 'osoite on https://matkakirja.app/ (www ohjaa juureen; vanha '
+          + 'ravelius.github.io/Matkakirja ohjaa uuteen). DNS on Cloudflaressa '
+          + '(tyonkulku pelin-verkkotunnus.yml: A/AAAA/CNAME + R2:n CORS), '
+          + 'Pages-asetus Custom domain + Enforce HTTPS omistajan tekemana. '
+          + 'Workerien (ehdotukset, sahke, Pollo) sallitut originit kattavat '
+          + 'seka uuden etta vanhan osoitteen. Media tulee edelleen '
+          + 'osoitteesta media.matkakirja.app.',
         'LAUKKU VIERII, TILASTOT VAKASEN ALLA, AKTIVOI ON NAPPI (omistaja '
           + '6.9.2026 aamu, sanatarkasti: "Laukku pitaa olla skrollattava myos. '
           + 'Ja tee paremmat ikonit uusille linsseille. Voivat olla muun kuin '

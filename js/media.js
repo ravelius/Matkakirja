@@ -28,7 +28,8 @@
  * yhä varareitiksi, jos ämpäri ei vastaa.
  *
  * Ämpärillä on CORS-sääntö, joka sallii GETin osoitteesta
- * https://ravelius.github.io. Sitä tarvitaan kahteen kohtaan:
+ * https://ravelius.github.io (6.9.2026 alkaen https://matkakirja.app).
+ * Sitä tarvitaan kahteen kohtaan:
  * js/sound.js loadRealSamples hakee tehosteet fetchillä ja purkaa ne
  * decodeAudioDatalla, ja sw.js noutaa kuvat omaan pitkäikäiseen
  * koriinsa mode: 'cors' -pyynnöllä. Tavallinen <audio>- ja

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1628, teksti: 'iOS-kuori matkakirja.app; nostot Lahi-ita M6' },
   { v: 1627, teksti: 'Lehdet Cairns, Panama; nostot Afrikka, Aasia 2' },
   { v: 1626, teksti: 'Laukku vierii, tilastot vakasen alle, Aktivoi-nappi' },
   { v: 1625, teksti: 'Media omasta osoitteesta media.matkakirja.app; maatiedot' },
