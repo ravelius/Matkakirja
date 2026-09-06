@@ -184,6 +184,31 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'joka tuotiin Ranskasta vuonna 1853 ja josta tuli maan '
       + 'tunnusmerkki.',
   },
+  /* Perun maaintro kirjoitettiin 6.9.2026 maalehden (MAA_KATEGORIAT.PER)
+   * yhteydessä samasta en-Wikipedian aineistosta kuin lehti
+   * (docs/mantereet-tyoaineisto/faktapohja-peru.md). Vain intro-kenttä,
+   * kuten Brasilialla ja Argentiinalla. Guanokausi ja Andien rautatie
+   * jätettiin pois, koska ne ovat Liman kaupunkilehden nostoja. */
+  Peru: {
+    intro: 'Peru on vuonna 1873 viisikymmentäkaksivuotias tasavalta, joka '
+      + 'kasvaa kolmesta täysin erilaisesta maasta. Rannikolla on '
+      + 'aavikko, jota kylmä Humboldtin merivirta pitää sateettomana ja '
+      + 'jonka edustalta nostetaan viidesosa maailman merikalansaaliista. '
+      + 'Sen takana kohoavat Andit, joilla kasvaa kolmetuhatta '
+      + 'perunalajiketta ja jonne kondori nousee lämpöpatsaita pitkin '
+      + 'viidentuhannen metrin korkeuteen. Idässä alkaa Amazon, jonka '
+      + 'sademetsästä on 1800-luvulla kartoitettu vasta reunat.'
+      + '\n\n'
+      + '**Ennen espanjalaisia tämä oli Tawantinsuyu, neljän osan '
+      + 'valtakunta — Amerikan suurin valtio, joka rakennettiin ilman '
+      + 'pyörää, rautaa ja kirjoitusta.** Sen koossa piti neljänkymmenen '
+      + 'tuhannen kilometrin tieverkko, jolla juoksijat kuljettivat '
+      + 'viestit ja solmuköysistöt kirjanpidon. Vanhempaa on silti '
+      + 'enemmän: Supen laaksossa oli kaupunki jo viisituhatta vuotta '
+      + 'sitten, ja Nazcan aavikkoon piirrettiin kuvia, jotka näkyvät '
+      + 'vain ilmasta. Pizarro saapui Cajamarcaan 1532, ja itsenäisyys '
+      + 'julistettiin vasta kolmesataa vuotta myöhemmin.',
+  },
   /*
    * SÃO PAULO (23.8.2026). Väitteet ovat samasta erästä kuin lehden
    * tekstit (js/packs/kulttuuri-kategoriat.js, avain saopaulo), ja ne

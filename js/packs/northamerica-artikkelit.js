@@ -176,6 +176,56 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'lennättimen ja höyryn voimalla. Isoisän matkapäiväkirja osuu '
       + 'maahan hetkellä, jolloin se on yhtä aikaa vanha ja aivan uusi.',
   },
+  /* Kanadan ja Meksikon maaintrot kirjoitettiin 6.9.2026 maalehtien
+   * (MAA_KATEGORIAT.CAN ja .MEX) yhteydessä. Molemmat nojaavat samaan
+   * en-Wikipedian aineistoon kuin lehdet — docs/mantereet-tyoaineisto/
+   * faktapohja-kanada.md ja faktapohja-meksiko.md — eikä niissä väitetä
+   * enempää kuin lehden nostoissa. Vain intro-kenttä: nämä ovat maita
+   * eivätkä kaupunkeja, joten kolmikappaleista teksti-kenttää ei ole
+   * (sama ratkaisu kuin avaimella Yhdysvallat). */
+  Kanada: {
+    intro: 'Kanada on isoisän matkavuonna kuusivuotias valtio ja maailman '
+      + 'toiseksi suurin maa, jonka asutus painautuu kapeaksi nauhaksi '
+      + 'etelärajan tuntumaan. Konfederaatio syntyi 1. heinäkuuta 1867 '
+      + 'neljästä provinssista, ja juuri vuonna 1873 siihen liittyy '
+      + 'Prinssi Edwardin saari — sama saari, joka isännöi ensimmäistä '
+      + 'liittoneuvottelua yhdeksän vuotta aiemmin. Valtiota vanhempi on '
+      + 'yhtiö: Hudson’s Bay Company sai vuonna 1670 peruskirjan, joka '
+      + 'antoi sille kolmasosan nykyisestä Kanadasta, ja se myi maat '
+      + 'takaisin vasta 1869.'
+      + '\n\n'
+      + 'Kaiken tämän alla on paljon vanhempi maa. **First Nations, '
+      + 'inuiitit ja métisit ovat perustuslaissa tunnustetut kolme '
+      + 'alkuperäiskansaa, ja pelkästään First Nations -hallintoja on yli '
+      + 'kuusisataa.** Turkiskauppa kulki heidän reiteillään ja söi '
+      + 'heidän ruokaansa: pemmikaania ja bannockia. Newfoundlandin '
+      + 'pohjoiskärjessä on kahdeksan turverakennuksen pohjat vuodelta '
+      + '1021 — ainoa kiistaton todiste eurooppalaisista Amerikassa '
+      + 'ennen Kolumbusta. Isoisän matkavuonna lännessä ei ole vielä '
+      + 'siviilihallintoa, ja sinne lähetetään punatakkinen ratsupoliisi.',
+  },
+  Meksiko: {
+    intro: 'Meksiko on vuonna 1873 viisikymmentäkaksivuotias tasavalta, '
+      + 'joka on juuri selvinnyt vuosikymmenten sisällissodista ja '
+      + 'ranskalaisten miehityksestä. Edellisenä kesänä maa hautasi '
+      + 'presidenttinsä Benito Juárezin — zapoteekkipaimenen, joka '
+      + 'kaksitoistavuotiaaksi asti puhui vain omaa kieltään ja nousi '
+      + 'maan ensimmäiseksi alkuperäiskansaan kuuluneeksi presidentiksi. '
+      + 'Uudenvuodenpäivänä 1873 avataan pääkaupungin ja Veracruzin '
+      + 'välinen rautatie, joka aloitettiin keisarikunnan aikaan ja '
+      + 'päätettiin tasavallassa.'
+      + '\n\n'
+      + '**Meksikon syvyys mitataan kuitenkin vuosituhansissa.** '
+      + 'Teotihuacánissa asui satatuhatta ihmistä jo silloin kun Rooma '
+      + 'oli suurimmillaan, Monte Albánin aukio tasoitettiin vuoristossa '
+      + 'viisisataa vuotta ennen ajanlaskun alkua, ja mayat kirjoittivat '
+      + 'ainoaa Amerikan kirjoitusjärjestelmää, joka on saatu luettua. '
+      + 'Ruoka kertoo saman: maissi keitetään kalkkivedessä ja kaakaopavut '
+      + 'kelpasivat rahaksi. Acapulcon satamasta lähti '
+      + 'kaksisataaviisikymmentä vuotta laivoja Manilaan, joten Meksiko '
+      + 'on ollut Tyynenmeren portti kauemmin kuin useimmat Euroopan '
+      + 'valtiot ovat olleet olemassa.',
+  },
   /* Chicagon kaksi väkilukua eivät ole lehden omasta erästä, joten ne
    * on tarkistettu erikseen en-Wikipedian artikkelista Chicago
    * 23.8.2026: kaupungin väkiluku 2,74 miljoonaa ja metropolialueen
