@@ -8171,4 +8171,484 @@ export const SKANDAALIT = {
       },
     },
   ],
+
+  /*
+   * ══ ERÄ M6, LÄHI-ITÄ 6.9.2026 ═══════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M6 (CYP, OMN, QAT, ARE, KWT) tuo kaksi skandaalia kuhunkin
+   * viiteen maahan — kymmenen uutta. Kaikki ovat kuvattomia kuten erän
+   * muutkin nostot, ja jokaisen lähderivi nimeää en-Wikipedian
+   * artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+   *
+   * PAIKAT ON MITATTU. Yksikään uusi merkki ei ole pelikaupungin
+   * kohdalla (KAUPUNGIN_KOHDALLA_SADE 7 ja kaupunkikaton säde 8,
+   * js/fokuskohteet.js): lähin on Souk Al-Manakh 9,7 lautayksikön
+   * päässä Kuwait-laatasta ja kaukaisin Ubarin löytö 45,7 yksikön
+   * päässä Salalahista. Kaksi merkkiä on siirretty tarkoituksella
+   * naapuriruutuun, koska maastokohteiden nosto istuu jo tapahtuman
+   * omalla paikalla (sama ratkaisu kuin erässä M3): Zubarahin hävitys
+   * on niemimaan pohjoisrannalla ja Souk Al-Manakh Kuwaitinlahden
+   * suulla. Kummankin `paikka`-rivi kertoo tapahtuman oikean paikan.
+   *
+   * HERKÄT AIHEET ASIALLISESTI (docs/aasia-tyoaineisto/spec-asia.md).
+   * Nykypolitiikkaa ei kirjoiteta: Kyproksen kohdalla pysytään 1100- ja
+   * 1800-luvun tapahtumissa, ja 1900-luvun aiheet ovat talous- ja
+   * ympäristöskandaaleja. Kolonialismi kerrotaan neutraalina
+   * historiana ja lähteen katteessa.
+   */
+  CYP: [
+    /*
+     * Larnaka, jossa Cesnola oli Yhdysvaltain konsuli 1865–1877.
+     * Lähde: en.wikipedia.org: Luigi Palma di Cesnola
+     */
+    {
+      id: 'cesnolan-kokoelma',
+      otsikko: 'Konsuli, joka kaivoi saaren tyhjäksi',
+      nimio: 'Cesnola',
+      vuosi: '1865–1877',
+      paikka: 'Larnaka, Kypros',
+      lat: 34.91667, lon: 33.63333,
+      kortti: 'Yhdysvaltain konsuli Larnakassa kaivoi Kyproksen hautoja ja temppeleitä '
+        + 'kaksitoista vuotta ja lähetti saarelta pois noin 35 000 esinettä. New Yorkin '
+        + 'Metropolitan-museo osti kokoelman ja teki miehestä ensimmäisen johtajansa.',
+      teksti: 'Luigi Palma di Cesnola oli italialaissyntyinen upseeri, joka palveli Yhdysvaltain '
+        + 'sisällissodassa ratsuväkirykmentin everstinä ja sai kunniamitalin Aldien '
+        + 'taistelusta. Sodan jälkeen hänet nimitettiin Yhdysvaltain konsuliksi Larnakaan, ja '
+        + 'virkaa hän hoiti vuodesta 1865 vuoteen 1877.'
+        + '\n\nKonsulin varsinainen työ oli kaivaminen. Cesnola kaivatti hautoja ja pyhäköitä '
+        + 'ympäri saarta, laajimmin Kourionin alueella: Ayios Ermoyenisin hautausmaalla ja '
+        + 'Apollon Hylatesin pyhäkössä vuosina 1874–1875. Tavoite ei ollut tutkimus vaan '
+        + 'arvoesineet. Saarelta lähti noin kolmekymmentäviisituhatta esinettä, ja yksi '
+        + 'kuljetusaluksista, Napried, upposi matkalla noin viidentuhannen esineen kanssa.'
+        + '\n\nJust perustettu Metropolitan-museo osti kokoelman 1872 — isoisäsi matkaa '
+        + 'edeltävänä vuonna — ja seitsemän vuotta myöhemmin Cesnolasta tuli museon '
+        + 'ensimmäinen johtaja. Vuonna 1880 taidekriitikko Clarence Cook ja Gaston Feuardent '
+        + 'väittivät New York Heraldissa, että patsaita oli koottu vääristä paloista. '
+        + 'Erityinen tutkijalautakunta puhdisti Cesnolan maineen, ja hän johti museota '
+        + 'kuolemaansa 1904 asti.'
+        + '\n\nKyproksella arvio on toinen: siellä toimintaa pidetään ryöstönä. Tutkija Ahmet '
+        + 'Gazioğlu on Cesnolan omaan kirjaan nojaten kuvannut, että tämä kaivoi usein '
+        + 'laittomasti ja kiristi lupia, ja että hän oli ongelma viranomaisille sekä '
+        + 'lainhalveksuntansa että käytöksensä takia.',
+      lahde: 'en-Wikipedia "Luigi Palma di Cesnola", osio "Post war", ja en-Wikipedia '
+        + '"Kourion", osio "History of excavations". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Cesnolan kokoelmalle tapahtui?',
+        vaihtoehdot: [
+          'Metropolitan-museo osti sen ja Cesnolasta tuli museon johtaja',
+          'Britannian hallinto takavarikoi sen Larnakassa',
+          'Se palautettiin Kyprokselle 1880-luvulla',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Limassol, jonne Rikhard Leijonamieli nousi maihin 1191. Merkki
+     * on kaupungin itälaidalla noin viisi kilometriä keskustasta:
+     * Khirokitian nosto on niin lähellä, että keskustan kohdalla kaksi
+     * nimiötä menisi päällekkäin (tools/tarkista-nimiolimitys.mjs).
+     * Lähde: en.wikipedia.org: Cyprus in the Middle Ages
+     */
+    {
+      id: 'kypros-myydaan',
+      otsikko: 'Saari, joka myytiin kahdesti vuodessa',
+      nimio: 'Rikhard',
+      vuosi: '1191–1192',
+      paikka: 'Limassol, Kypros',
+      lat: 34.66, lon: 33.1,
+      kortti: 'Rikhard Leijonamieli valloitti Kyproksen kesken ristiretken, verotti sen '
+        + 'tyhjiin ja myi saaren temppeliherroille. Vuoden kuluttua temppeliherrat myivät '
+        + 'sen eteenpäin, koska eivät saaneet asukkaita pysymään aloillaan.',
+      teksti: 'Rikhard Leijonamieli nousi maihin Limassolissa 1. kesäkuuta 1191. Hän ei ollut '
+        + 'tullut valloittamaan vaan etsimään sisartaan ja morsiantaan Berengariaa, joiden '
+        + 'laiva oli eronnut laivastosta myrskyssä. Saaren hallitsija Isaakios Komnenos vaati '
+        + 'Berengariaa nousemaan maihin, ja kun tämä kieltäytyi, Isaakios ei antanut laivalle '
+        + 'muonaa.'
+        + '\n\nRikhard piti tätä loukkauksena ja valtasi saaren, mikä kävi helposti. Isaakios '
+        + 'joutui lupaamaan apua ristiretkelle Saladinia vastaan mutta rikkoi valansa. '
+        + 'Rikhard vangitutti hänet hopeakahleisiin — rautaan hän oli vannonut olevansa '
+        + 'panematta miestä — ja Isaakios kuoli vankina 1194 tai 1195. Kyproslainen '
+        + 'kronikoitsija Neofytos antoi Rikhardille liikanimen kurja.'
+        + '\n\nRistiretkilaivasto jatkoi Akkoniin 5. kesäkuuta, mutta Rikhardin sotaväki jäi '
+        + 'saarelle ja korotti veroja. Kapinoiden jälkeen kuningas myi Kyproksen '
+        + 'temppeliherrojen ritarikunnalle. Uudet omistajat nostivat veroja lisää eivätkä '
+        + 'siksi saaneet asukkaita puolelleen.'
+        + '\n\n6. huhtikuuta 1192 puhkesi kapina, jonka jälkeen temppeliherrat myivät saaren '
+        + 'eteenpäin Guy de Lusignanille. Guy oli juuri menettänyt Jerusalemin kuninkaan '
+        + 'arvonsa ja asettui Kyprokselle toukokuussa 1192. Hän kutsui saarelle Palestiinan '
+        + 'paroneja ja jakoi näille suuria läänityksiä — ja siitä alkoi Lusignanien '
+        + 'kolmensadan vuoden kausi.',
+      lahde: 'en-Wikipedia "Cyprus in the Middle Ages", osiot "Crusades–Lusignan period '
+        + '1095–1489" ja "Guy of Lusignan". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi temppeliherrat myivät Kyproksen eteenpäin?',
+        vaihtoehdot: [
+          'Paavi kielsi heitä hallitsemasta saarta',
+          'Asukkaat kapinoivat verotusta vastaan eivätkä he saaneet saarta haltuunsa',
+          'Saarella riehui rutto',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  OMN: [
+    /*
+     * Jiddat al-Harasis, Al Wustan suojelualue Keski-Omanissa.
+     * Lähde: en.wikipedia.org: Al Wusta Wildlife Reserve
+     */
+    {
+      id: 'oryksin-suojelualue',
+      otsikko: 'Ensimmäinen poistettu maailmanperintökohde',
+      nimio: 'Oryksin alue',
+      vuosi: '1994–2007',
+      paikka: 'Jiddat al-Harasis, Oman',
+      lat: 19.9, lon: 56.4,
+      kortti: 'Arabianoryksin suojelualue oli maailmanperintökohde kolmetoista vuotta. Kun '
+        + 'sen alta löytyi öljyä ja aluetta pienennettiin yhdeksälläkymmenellä prosentilla, '
+        + 'Unesco teki jotain, mitä se ei ollut koskaan ennen tehnyt.',
+      teksti: 'Arabianoryksi on valkoinen antilooppi, joka metsästettiin luonnosta sukupuuttoon. '
+        + 'Laji palautettiin Omanin keskiaavikolle tarhakannasta, ja alue nimettiin '
+        + 'Arabianoryksin suojelualueeksi. Unesco liitti sen maailmanperintöluetteloon 1994 '
+        + 'nimenomaan onnistuneen palautuksen takia.'
+        + '\n\nSitten alueelta löytyi öljyä. Oman päätti pienentää suojelualuetta yhdeksälläkymmenellä '
+        + 'prosentilla, ja samaan aikaan kanta romahti: vuonna 1996 alueella oli laskettu 450 '
+        + 'yksilöä, vuonna 2007 enää 65. Syiksi Unesco nimesi salametsästyksen ja elinympäristön '
+        + 'tuhoutumisen. Lisääntymiskykyisiä pareja oli jäljellä neljä.'
+        + '\n\n28. kesäkuuta 2007 Unesco poisti kohteen luettelosta. Se oli ensimmäinen kerta '
+        + 'maailmanperintöluettelon historiassa, kun kohde poistettiin — ei siksi, että se olisi '
+        + 'tuhoutunut onnettomuudessa, vaan siksi että valtio itse pienensi sen.'
+        + '\n\nSuojelualue on yhä olemassa, nykyään nimellä Al Wustan luonnonsuojelualue. Oryksin '
+        + 'lisäksi siellä elää vuorigaselleja, nubianvuohia, arabiansusia, mesimäyriä ja '
+        + 'karakaaleja. Maailmanperintöluettelosta se ei ole enää löytynyt.',
+      lahde: 'en-Wikipedia "Al Wusta Wildlife Reserve", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi suojelualue poistettiin maailmanperintöluettelosta?',
+        vaihtoehdot: [
+          'Alue tuhoutui hiekkamyrskyssä',
+          'Unesco lakkautti koko luokan',
+          'Oman pienensi aluetta 90 prosentilla öljylöydön jälkeen',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Shisrin kaivauspaikka Dhofarissa, "Hiekan Atlantis".
+     * Lähde: en.wikipedia.org: Atlantis of the Sands
+     */
+    {
+      id: 'ubarin-loyto',
+      otsikko: 'Hiekan Atlantis, jota ei ollutkaan',
+      nimio: 'Ubarin löytö',
+      vuosi: '1992',
+      paikka: 'Shisr, Dhofar, Oman',
+      lat: 18.25333, lon: 53.64758,
+      kortti: 'Helmikuussa 1992 The New York Times kertoi, että Arabian hiekasta oli löytynyt '
+        + 'kadonnut kaupunki Ubar. Uutinen kiersi maailman. Kaivauksia johtanut arkeologi itse '
+        + 'oli eri mieltä.',
+      teksti: 'Tarina alkoi 1930, kun tutkimusmatkailija Bertram Thomas lähestyi Rub al-Khalin '
+        + 'eteläreunaa. Beduiinioppaat kertoivat hänelle kadonneesta kaupungista, jonka pahat '
+        + 'asukkaat olivat vetäneet päälleen Jumalan vihan. Thomas merkitsi kartalle uran, '
+        + 'jonka sanottiin johtavan Ubariin, mutta ei koskaan ehtinyt seurata sitä.'
+        + '\n\nKuusikymmentä vuotta myöhemmin Nicholas Clappin retkikunta kaivoi beduiinikaivon '
+        + 'kohdalta Shisrissä. Muutamassa viikossa esiin tuli yli kaksituhatta vuotta vanhan '
+        + 'linnoituksen muuri ja tornit. Clapp päätteli, että kyseessä oli Ubar, ja samasti sen '
+        + 'Koraanin Iramiin. Retkikunnan jäsen Ranulph Fiennes ilmoitti, että paikka oli '
+        + 'Ptolemaioksen kartan Omanum Emporium.'
+        + '\n\nKaivauksia johtanut arkeologi Juris Zarins ei uskonut väitettä. Hän totesi 1996, '
+        + 'että klassiset ja arabialaiset lähteet käyttävät sanaa Ubar alueesta ja kansasta '
+        + 'eivätkä kaupungista — Ptolemaios kirjoittaa kartalleen isoin kirjaimin Iobaritae. '
+        + 'Vasta myöhäiskeskiajan Tuhannen ja yhden yön tarinat tekivät alueesta kaupungin.'
+        + '\n\nVuoteen 2007 mennessä tulkinta oli tämä: Shisr oli suitsukekaravaanien '
+        + 'karavaaniserain itäisin jäänne, ei kadonnut kaupunki. Linnoitus ei tuhoutunut '
+        + 'hiekkamyrskyssä vaan romahti kaivon päälle syntyneeseen vajoamaan. Portilla lukee '
+        + 'yhä: tervetuloa Ubariin, beduiinitarujen kadonneeseen kaupunkiin.',
+      lahde: 'en-Wikipedia "Atlantis of the Sands", osiot "Introduction", "Early explorers in '
+        + 'Dhofar" ja "Dhofar". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä kaivauksia johtanut Juris Zarins päätteli Ubarista?',
+        vaihtoehdot: [
+          'Että Ubar oli alue ja kansa, ei kaupunki',
+          'Että kaupunki tuhoutui hiekkamyrskyssä',
+          'Että paikka oli väärennös',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  QAT: [
+    /*
+     * Merkki on Dohan ja Al Wakrahin edustan merellä: molemmat
+     * kaupungit ovat pelikaupunki Dohan kahdeksan yksikön säteellä.
+     * Lähde: en.wikipedia.org: Al Wakrah
+     */
+    {
+      id: 'dohan-ryosto',
+      otsikko: 'Ryöstöretki, joka synnytti maan',
+      nimio: 'Dohan ryöstö',
+      vuosi: '1867–1868',
+      paikka: 'Doha ja Al Wakrah, Qatar',
+      lat: 25.1, lon: 51.7,
+      kortti: 'Kaksi qatarilaista kaupunkia hävitettiin vuoden 1867 lopulla niin perusteellisesti, '
+        + 'että brittiasiakirja kuvasi ne pyyhkäistyiksi pois olemassaolosta. Seuraus oli '
+        + 'päinvastainen kuin oli tarkoitettu.',
+      teksti: 'Vuonna 1867 Na’im-heimon vanhimmat pyysivät apua Jassim bin Mohammed Al Thanilta, '
+        + 'jonka vaikutusvalta ja maine oikeudenmukaisuudesta olivat kasvussa. Jassim kokosi '
+        + 'joukot ja marssi Al Wakrahiin ottaakseen kiinni Bahrainin edustajan Ahmed bin '
+        + 'Mohammed Al Khalifan. Tämä pakeni linnakkeeseen ja sieltä edelleen pohjoiseen Al '
+        + 'Khuwayriin.'
+        + '\n\nSitten tuli ansa. Al Khalifat kirjoittivat kirjeen, jossa vakuuttivat, ettei '
+        + 'Jassimia kohtaan tunnettu kaunaa, ja kutsuivat hänet Bahrainiin. Perillä hänet '
+        + 'vangittiin. Muhammad bin Khalifa kokosi laivaston, sai tuekseen Abu Dhabin ja '
+        + 'hyökkäsi Qatarin rannikolle.'
+        + '\n\nAl Wakrah ja Doha ryöstettiin vuoden 1867 lopulla. Myöhempi brittiläinen '
+        + 'asiakirja tiivisti tapahtuneen kylmästi: kaupungit pyyhkäistiin väliaikaisesti pois '
+        + 'olemassaolosta, talot purettiin ja asukkaat kuljetettiin pois. Kesäkuussa 1868 '
+        + 'qatarilaiset yrittivät vastaiskua ja hävisivät Damsahin taistelun, mutta saartoivat '
+        + 'sen jälkeen bahrainilaiset Jebel Wakrahin kohdalla ja vangitsivat kaksi komentajaa. '
+        + 'Lopuksi vaihdettiin vangit.'
+        + '\n\nBritannia puuttui asiaan, koska hyökkäys rikkoi merirauhaa. Sen jälkeen tehty '
+        + 'sopimus käsitteli Qataria omana yksikkönään eikä Bahrainin osana — ja juuri siitä '
+        + 'lasketaan Qatarin erillisen aseman alku.',
+      lahde: 'en-Wikipedia "Al Wakrah", osiot "History" ja "Qatari–Bahraini War". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Jassim bin Mohammed joutui vangiksi?',
+        vaihtoehdot: [
+          'Hänet vangittiin taistelussa Al Wakrahissa',
+          'Britannian laivasto pidätti hänet merellä',
+          'Hänet houkuteltiin Bahrainiin kirjeellä, jossa luvattiin turva',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Merkki on niemimaan pohjoisrannalla noin kaksikymmentä
+     * kilometriä varsinaisista raunioista koilliseen: Zubarahin oma
+     * nosto (js/packs/maastokohteet-qat.js) istuu jo kaupungin
+     * paikalla, eikä kahta nimiötä mahdu samaan kohtaan.
+     * Lähde: en.wikipedia.org: Zubarah
+     */
+    {
+      id: 'zubarahin-havitys',
+      otsikko: 'Merirosvous, joka tyhjensi kaupungin',
+      nimio: 'Zubarahin loppu',
+      vuosi: '1878',
+      paikka: 'Al Zubarah, Qatar',
+      lat: 26.1, lon: 51.2,
+      kortti: 'Syyskuussa 1878 muutama zubarahlainen ryösti ohi kulkeneen veneen ja tappoi '
+        + 'neljä ihmistä. Kuukautta myöhemmin koko kaupunkia ei enää ollut — ja sen tyhjyys '
+        + 'teki siitä lopulta maailmanperintökohteen.',
+      teksti: 'Zubarah oli 1760-luvulta lähtien Qatarin pohjoisrannikon vilkkain '
+        + 'helmenpyyntisatama. Sata vuotta myöhemmin sen maine oli toinen: syyskuussa 1878 '
+        + 'joukko kaupungin asukkaita ryösti ohi purjehtineen veneen, ja neljä ihmistä sai '
+        + 'surmansa.'
+        + '\n\nBritannian poliittinen residentti Edward Ross vaati ottomaaniviranomaisia '
+        + 'rankaisemaan kaupunkilaisia ja tarjosi laivastonsa avuksi. Hän kävi neuvottelemassa '
+        + 'wali Abdullah Pashan kanssa Basrassa. Pian tapaamisen jälkeen Jassim bin Mohammed '
+        + 'Al Thani ja Nasir bin Mubarak hyökkäsivät Zubarahiin kahdentuhannen aseistetun '
+        + 'miehen kanssa.'
+        + '\n\n22. lokakuuta kaupunki oli ryöstetty ja Murairin linnake saarrettu; sitä '
+        + 'puolusti viisisataa Na’im-heimon miestä. He antautuivat epäedullisin ehdoin, ja '
+        + 'suurin osa Zubarahin asukkaista siirrettiin Dohaan. Bahrainin hallitsija raivostui, '
+        + 'koska hänellä oli sopimus juuri Na’imien kanssa.'
+        + '\n\nVuonna 1888 kuului huhu, että Jassim aikoi rakentaa kaupungin uudelleen '
+        + 'tukikohdaksi vävylleen, mutta britit varoittivat häntä ja aie raukesi. Zubarah jäi '
+        + 'autioksi — ja juuri siksi se säilyi. Unesco liitti sen maailmanperintöluetteloon '
+        + '2013 ja perusteli valintaa poikkeuksellisella säilyneisyydellä.',
+      lahde: 'en-Wikipedia "Zubarah", osiot "1878 destruction" ja "World Heritage Site". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Zubarah on niin hyvin säilynyt?',
+        vaihtoehdot: [
+          'Se rakennettiin kivestä eikä mudasta',
+          'Se jäi autioksi vuoden 1878 hävityksen jälkeen',
+          'Sitä on kunnostettu yhtäjaksoisesti 1800-luvulta asti',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  ARE: [
+    /*
+     * Umm Al Quwain, jonka linnoitukset ja suuret alukset
+     * brittiretkikunta tuhosi 1819.
+     * Lähde: en.wikipedia.org: Persian Gulf campaign of 1819
+     */
+    {
+      id: 'merirosvorannikko',
+      otsikko: 'Rannikko, jonka nimi oli jo syyte',
+      nimio: 'Merirosvorannikko',
+      vuosi: '1819–1820',
+      paikka: 'Umm Al Quwain, Arabiemiirikunnat',
+      lat: 25.58, lon: 55.55,
+      kortti: 'Britannia lähetti 1819 kolmetuhatta sotilasta hävittämään merirosvot Persianlahden '
+        + 'etelärannikolta. Nimi Merirosvorannikko jäi kartoille — mutta jo tuolloin oman '
+        + 'hallinnon virkamies epäili syytettä.',
+      teksti: 'Marraskuun 3. päivänä 1819 brittiretkikunta lähti Bombaysta kohti Ras Al Khaimaa. '
+        + 'Kenraalimajuri William Keir Grantilla oli kolmetuhatta sotilasta, ja mukana '
+        + 'purjehtivat sekä kuninkaallisen laivaston että Itä-Intian kauppakomppanian alukset. '
+        + 'Muscatin sulttaani lähetti kuusisataa miestä ja kaksi laivaa.'
+        + '\n\nRas Al Khaima räjäytettiin ja sinne jätettiin kahdeksansadan sepoyn varuskunta. '
+        + 'Sen jälkeen tuhottiin Umm Al Quwainin, Ajmanin, Fashtin, Sharjahin, Abu Hailin ja '
+        + 'Dubain linnoitukset ja suuremmat alukset. Kuninkaallinen laivasto ei menettänyt '
+        + 'yhtään miestä.'
+        + '\n\nSeuraavana vuonna solmittu yleinen merirauhan sopimus kielsi merirosvouden ja '
+        + 'orjuuden ja määräsi jokaisen käyttökelpoisen aluksen rekisteröitäväksi. Alukset '
+        + 'saivat punavalkoiset liput, jotka elävät yhä emiraattien lipuissa. Rannikon nimi '
+        + 'vaihtui Merirosvorannikosta Sopimusrannikoksi.'
+        + '\n\nSyyte ei ollut kiistaton edes silloin. Bombayn hallinnon kansliapäällikkö F. '
+        + 'Warden kirjoitti 1819 muistion, jonka mukaan Qawasim ei ollut syyllistynyt '
+        + 'merirosvouteen ennen vuoden 1804 loppua vaan osoittanut kunnioitusta Britannian '
+        + 'lipulle. Sharjahin hallitsija ja historioitsija Sultan bin Mohammed Al Qasimi vei '
+        + 'ajatuksen pidemmälle kirjassaan The Myth of Arab Piracy in the Gulf: hänen mukaansa '
+        + 'syyte oli sodan tekosyy, jolla kauppakomppania halusi lopettaa arabien oman '
+        + 'Intian-kaupan.',
+      lahde: 'en-Wikipedia "Persian Gulf campaign of 1819", johdanto-osa sekä osiot "Campaign" '
+        + 'ja "Treaty and aftermath". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Bombayn kansliapäällikkö F. Warden esitti vuonna 1819?',
+        vaihtoehdot: [
+          'Että Qawasim ei ollut harjoittanut merirosvousta ennen vuotta 1804',
+          'Että retkikunta oli liian pieni',
+          'Että Muscatin sulttaani olisi tehtävä koko niemimaan hallitsijaksi',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Jebel Ali, Dubai Worldin satama- ja kiinteistötoimintojen
+     * keskus; Dubain keskusta on pelikaupungin säteellä.
+     * Lähde: en.wikipedia.org: Dubai World
+     */
+    {
+      id: 'dubai-world',
+      otsikko: 'Kuusi sanaa, jotka pudottivat pörssit',
+      nimio: 'Dubai World',
+      vuosi: '2009',
+      paikka: 'Jebel Ali, Dubai, Arabiemiirikunnat',
+      lat: 25.0, lon: 55.05,
+      kortti: 'Marraskuussa 2009 Dubain hallitus pyysi valtionyhtiönsä velkojia odottamaan '
+        + 'puoli vuotta. Velkaa oli 59 miljardia dollaria, ja Euroopan pörssit putosivat '
+        + 'yli kolme prosenttia yhdessä päivässä.',
+      teksti: 'Dubai World oli emiraatin valtion omistama yhtiöryhmä, joka rakensi satamia, '
+        + 'saaria ja asuinalueita. Kuuden vuoden nousun jälkeen kiinteistömarkkina kääntyi '
+        + 'laskuun finanssikriisissä.'
+        + '\n\n25. marraskuuta 2009 Dubain hallitus ilmoitti, että yhtiö aikoo pyytää kaikkia '
+        + 'rahoittajiaan pysähtymään ja pidentämään eräpäiviä ainakin 30. toukokuuta 2010 '
+        + 'asti. Yhtiö oli irtisanonut 10 500 työntekijää. Velkaa oli 59 miljardia dollaria, '
+        + 'lähes kolme neljäsosaa koko emiraatin 80 miljardin velasta, ja siihen sisältyi '
+        + '3,5 miljardin laina, jota ei kyetty maksamaan joulukuun eräpäivään mennessä.'
+        + '\n\nLuottoluokittajat Moody’s ja Standard & Poor’s pudottivat Dubain '
+        + 'valtiollisten yhtiöiden luokituksia rajusti; Moody’sin päätöksessä ne '
+        + 'menettivät sijoituskelpoisen luokkansa. Euroopan päähintaindeksit laskivat 26. '
+        + 'marraskuuta yli kolme prosenttia ja Aasian osakkeet seuraavana päivänä. Sitten '
+        + 'markkinat rauhoittuivat: velka ei ollut tarpeeksi suuri kaatamaan järjestelmää.'
+        + '\n\n30. marraskuuta Dubain valtiovarainhallinnon johtaja totesi, ettei hallitus ollut '
+        + 'taannut yhtiön velkoja — mitään sopimusta takauksesta ei ollut. Dubain ja Abu '
+        + 'Dhabin pörssit laskivat päivässä 7,3 ja 8,3 prosenttia. 14. joulukuuta Abu Dhabi '
+        + 'antoi yllättäen kymmenen miljardin dollarin avun, josta 4,1 miljardia meni saman '
+        + 'päivän erääntyvään Nakheelin joukkolainaan.',
+      lahde: 'en-Wikipedia "Dubai World", osio "2009 debt standstill". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka suuret velat Dubai Worldilla oli marraskuussa 2009?',
+        vaihtoehdot: [
+          '5,9 miljardia dollaria',
+          '59 miljardia dollaria',
+          '590 miljardia dollaria',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  KWT: [
+    /*
+     * Merkki on Kuwaitinlahden suulla: itse Souk Al-Manakh oli Jiblan
+     * kaupunginosassa Kuwait Cityssä, joka on pelikaupungin säteellä.
+     * Lähde: en.wikipedia.org: Souk Al-Manakh stock market crash
+     */
+    {
+      id: 'souk-al-manakh',
+      otsikko: 'Pysäköintihallin pörssi',
+      nimio: 'Souk Al-Manakh',
+      vuosi: '1979–1982',
+      paikka: 'Jibla, Kuwait City, Kuwait',
+      lat: 29.15, lon: 48.25,
+      kortti: 'Ilmastoidussa pysäköintihallissa toimi pörssi, joka oli hetken maailman '
+        + 'kolmanneksi suurin. Se kaatui, kun yksi postipäivätty shekki ei mennyt läpi.',
+      teksti: '1970-luvun öljytulot jättivät monille kuwaitilaisille suuret käteisvarat, ja '
+        + 'virallinen pörssi ylikuumeni ja romahti 1977. Hallitus pelasti sijoittajat ja '
+        + 'tiukensi sääntöjä. Juuri se ajoi rohkeimmat keinottelijat teknisesti laittomalle '
+        + 'rinnakkaismarkkinalle, joka sai nimen Souk Al-Manakh ja toimi ilmastoidussa '
+        + 'pysäköintihallissa Jiblan vanhassa kaupunginosassa.'
+        + '\n\nMarkkina erikoistui sääntelemättömiin, muualla Persianlahdella rekisteröityihin '
+        + 'yhtiöihin. Kun se perustettiin 1979, Kuwaitissa oli jo enemmän osakkeita kuin '
+        + 'missään muussa lahden maassa. Parissa vuodessa listalla oli seitsemänkymmentä '
+        + 'yhtiötä, joista noin neljäkymmentä muista maista, ja markkina-arvo hyppäsi '
+        + 'muutamassa kuukaudessa viidestä miljardista sataan miljardiin dollariin — hetken '
+        + 'aikaa kolmanneksi suurin maailmassa Yhdysvaltain ja Japanin jälkeen.'
+        + '\n\nKaupat maksettiin postipäivätyillä shekeillä, mikä oli sääntelemätöntä '
+        + 'luotonantoa. Elokuussa 1982 välittäjä vei erään passivirkailijan shekin pankkiin, '
+        + 'eikä sille ollut katetta. Syyskuussa valtiovarainministeriö määräsi kaikki '
+        + 'epäilyttävät shekit selvitettäviksi ja sulki markkinan.'
+        + '\n\nVirallinen tutkinta laski katteettomien shekkien arvoksi 94 miljardia dollaria '
+        + 'noin kuudeltatuhannelta sijoittajalta. Kaikki Kuwaitin pankit yhtä lukuun ottamatta '
+        + 'olivat teknisesti maksukyvyttömiä ja pysyivät pystyssä vain keskuspankin tuella; '
+        + 'ainoa vahingoittumattomana selvinnyt oli National Bank of Kuwait.',
+      lahde: 'en-Wikipedia "Souk Al-Manakh stock market crash", johdanto-osa sekä osiot '
+        + '"Background" ja "Crash". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Souk Al-Manakhin romahdus alkoi?',
+        vaihtoehdot: [
+          'Öljyn hinta romahti yhdessä yössä',
+          'Yksi postipäivätty shekki osoittautui katteettomaksi',
+          'Keskuspankki nosti korkoa',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Kuwaitin eteläiset helmimatalikot Kubbarin ja Umm al Maradimin
+     * välissä. Lähde: en.wikipedia.org: Pearl hunting
+     */
+    {
+      id: 'helmisukelluksen-loppu',
+      otsikko: 'Viljelty helmi lopetti kokonaisen elinkeinon',
+      nimio: 'Helmien loppu',
+      vuosi: '1900–1940',
+      paikka: 'Kuwaitin eteläiset helmimatalikot',
+      lat: 28.9, lon: 48.35,
+      kortti: 'Tuhansia vuosia helmet nostettiin merestä sukeltamalla, ja Persianlahti oli '
+        + 'kaupan sydän. Sitten japanilainen yrittäjä keksi, miten simpukan saa tekemään '
+        + 'helmen tilauksesta.',
+      teksti: 'Suurin osa maailman merihelmistä nostettiin tuhansien vuosien ajan sukeltajien '
+        + 'käsin Intian valtamerestä: Persianlahdelta, Punaiseltamereltä ja Mannarinlahdelta. '
+        + 'Isidoros Kharaxilaisen Parthian-reittikuvauksen katkelma, joka on säilynyt '
+        + '200-luvun teoksessa, kertoo jo helmisukelluksesta erään Persianlahden saaren '
+        + 'ympärillä.'
+        + '\n\nMatalassa Persianlahdessa helmiä oli paljon, ja elinkeino kukoisti Kuwaitissa, '
+        + 'Qatarissa ja Arabiemiirikunnissa; suurin viejä oli Bahrain. Helmenpyynti oli '
+        + 'Itä-Arabian talouden kulmakivi ja muovasi koko rannikon yhteiskuntaa — kuka oli '
+        + 'kapteeni, kuka sukeltaja, kuka kauppias.'
+        + '\n\nKauniin kertomuksen alla on karu puoli, jota lähde ei kierrä: tuohon aikaan '
+        + 'elinkeino nojasi orjatyöhön. Lahden eteläosassa kauppiaat ajautuivat toistuvasti '
+        + 'velkakierteeseen, koska helmien hinta heilui arvaamattomasti eikä kukaan voinut '
+        + 'tietää, mitä kausi toisi.'
+        + '\n\nLopun toi tekniikka. Japanilainen yrittäjä Kōkichi Mikimoto teki tunnetuksi '
+        + 'menetelmän, jossa simpukan sisään istutetaan hiukkanen, joka saa sen muodostamaan '
+        + 'helmen. Viljelyhelmitarhat syrjäyttivät sukeltamisen, ja nykyään maailmassa '
+        + 'tuotetaan miljardeja helmiä vuodessa. Lahden helmilaivastot jäivät rannoille.',
+      lahde: 'en-Wikipedia "Pearl hunting", johdanto-osa sekä osiot "Persian Gulf" ja '
+        + '"Eastern Arabia and Persian Gulf". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä lopetti Persianlahden helmisukelluksen elinkeinona?',
+        vaihtoehdot: [
+          'Simpukoiden sukupuutto',
+          'Öljyn löytyminen kielsi sukeltamisen',
+          'Viljelyhelmi, jonka menetelmän Kōkichi Mikimoto teki tunnetuksi',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
 };

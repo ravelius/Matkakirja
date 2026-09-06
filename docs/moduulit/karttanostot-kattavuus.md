@@ -830,3 +830,108 @@ toteavasti, ja molemmat maan skandaalit ovat siirtomaakaudelta (1769 ja
 skandaalit ovat vuosilta 1911 ja 1960. Thaimaan ja Singaporen
 skandaalit ovat talousrikoksia ja hovihistoriaa, kuten Hongkongissa
 erässä M3.
+## Erä M6 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Maailman erä M6 on Lähi-itä: **CYP, OMN, QAT, ARE ja KWT** — viisi
+maata, joilla oli yhteensä kaksitoista karttamerkkiä ja yksi kohde.
+Erä toi **38 kohdetta ja maastokohdetta, 4 eläintäkyä ja 10 skandaalia
+eli 52 uutta karttanostoa**. Kohteet ja maastokohteet asuvat maan
+omassa `js/packs/maastokohteet-<iso>.js`-tiedostossa (kaikilla viidellä
+tiedosto oli jo olemassa, joten `js/packs/maastokohteet.js`-hakemistoon,
+`sw.js`:ään eikä `tools/build-standalone.mjs`:ään ei tarvinnut koskea);
+eläintäyt ovat `js/packs/elaintakyt.js`:n lopussa ja skandaalit
+`js/packs/skandaalit.js`:n lopussa lohkossa "ERÄ M6, LÄHI-ITÄ".
+Erä on kuvaton, ja jokaisella nostolla on vain maailmankartan rivi.
+Faktat ovat en-Wikipedian raakatekstistä, ja jokainen lähderivi nimeää
+artikkelin ja sen osan sekä tarkistuspäivän 6.9.2026.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Kypros (CYP) | Paphoksen mosaiikit, Palaipafos, Kourion, Khirokitia, Asinoun kirkko, Kykkoksen luostari, Kap Greco | Levantinmeri (meri) | kyproksenpöllönen | Cesnolan kokoelma, Rikhardin Kypros-kauppa |
+| Oman (OMN) | Bahlan linnoitus, Nizwan linnoitus, Batin haudat, Sur, Sumhuram, Sharqiyan hiekat, Nakhalin linnoitus, Musandam | Masirah (saari) | arabianleopardi | Oryksin suojelualue, Ubarin löytö |
+| Qatar (QAT) | Zubarah, Jassasiya, Al Reem, Dukhan, Al Thakhira | Bahraininlahti (meri) | **mahdoton** | Dohan ryöstö, Zubarahin loppu |
+| Arabiemiirikunnat (ARE) | Hili, Jebel Hafeet, Fujairahin linna, Al Bidyan moskeija, Mleiha, Ed Dur, Julfar, Qasr al-Hosn | Sir Bani Yas (saari) | arabiantahri | Merirosvorannikko, Dubai World |
+| Kuwait (KWT) | Failaka, Bahra 1, Burganin kenttä, Kubbar, Umm al Maradim | Bubiyan (saari) | hietakissa | Souk Al-Manakh, Helmien loppu |
+
+`node tools/laske-karttanostot.mjs` sanoo erän jälkeen Omanista ja
+Arabiemiirikunnista *täysi*; Kypros on −1 kohdetta, Qatar −3 kohdetta ja
+eläintäky, Kuwait −3 kohdetta. Kolme vajetta on mitattu eikä arvattu, ja
+kaikki kolme johtuvat samasta asiasta: maa on pieni ja pelikaupunki
+istuu sen keskellä.
+
+**Miksi Qatar, Kuwait ja Kypros jäivät vajaiksi.** Mitta on
+`tools/tarkista-nimiolimitys.mjs`, joka laskee poltettavien nimiöiden
+laatikot laudan yksiköissä. Qatarin fokuslehden rajaus on 68,9 × 99,5
+lautayksikköä ja Doha on itärannalla sen keskellä; kaupunkikaton
+(`KAUPUNKIKATON_SADE` 8) ja rajauksen jälkeen käyttökelpoista tilaa jää
+noin 25 × 25 yksikköä pohjoiseen ja kapea kaistale länteen, ja siihen
+mahtuu viisi kohdetta. Kuwaitin rajaus on 103,3 × 100,5 yksikköä ja
+Kuwait City lahden pohjukassa; kolme ilmeistä ehdokasta (Al Jahran
+punainen linnake, Kazma, Umm an Namil) olisi tullut olemassa olevien
+maastomerkkien päälle 2–3 yksikön päähän. Kyproksen rajaus on 100,9 ×
+66,5 yksikköä, ja seitsemän kohdetta on se määrä, jolla jokainen nimiö
+pysyy näkyvissä. Jokaisen tiedoston otsikkokommentti luettelee karsitut
+ehdokkaat ja mitatut etäisyydet.
+
+**Qatarin eläintäky on mahdoton, ja se on laskettu.**
+`tests/elaintakyt.test.mjs` vaatii merkiltä vähintään 35 lautayksikön
+etäisyyden jokaiseen kaupunkimerkkiin. Koko Qatarin maa-alue
+haravoitiin kahden sadasosa-asteen ruudukolla (maan rengas ja
+`js/mapart.js` `isOnLand`): kaukaisin maapiste Dohasta on niemimaan
+pohjoiskärki, ja sekin vain 31,8 yksikön päässä. Sama tilanne kuin
+Hongkongissa erässä M3. Ehdokas odottaa valmiina: arabianoryksi, jota
+Al Reemin biosfäärialue suojelee.
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin, ja
+jokaisen kohteen lähin on kirjattu sen koordinaattirivin viereen. Koko
+erän lähin merkki on Failaka 8,8 lautayksikön päässä Kuwait-laatasta;
+raja `KAUPUNGIN_KOHDALLA_SADE` on 7 ja kaupunkikaton säde 8. Tästä
+säännöstä karsiutuivat Qatarin Al Wakrah (5,0), Al Wajbahin linnake
+(4,2) ja Barzanin tornit (5,7), Omanin Al-Baleed (5,8) sekä
+Arabiemiirikuntien Al Shindagha ja Al Fahidi. `node
+tools/tarkista-nimiolimitys.mjs` antaa yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0", ja
+kaikki 64 Lähi-idän merkkiä pitävät nimiönsä näkyvissä.
+
+**Kaksi skandaalimerkkiä on siirretty naapuriruutuun** samalla
+periaatteella kuin erässä M3 (Hongkongin Carrian ja Colombon Golden
+Key): Zubarahin hävitys on niemimaan pohjoisrannalla, koska Zubarahin
+oma nosto istuu jo raunioiden päällä, ja Souk Al-Manakh Kuwaitinlahden
+suulla, koska tapahtumapaikka Jibla on Kuwait Cityn sisällä. Kolmas
+siirto on Kyproksen Rikhard-skandaali, joka on Limassolin itälaidalla
+viiden kilometrin päässä keskustasta, koska Khirokitian nimiö on
+keskustan kohdalla. Jokaisen kortin `paikka`-rivi kertoo tapahtuman
+oikean paikan, ja syy on kirjattu merkin viereen koodiin.
+
+**Sääntö N3 karsi kolme ehdokasta.** Saudi-Arabialla on jo
+arabianoryksi, joten Omanin eläintäyksi valittiin arabianleopardi
+(Jabal Samhanin luonnonsuojelualue) eikä oryksi; Kyproksen Salamis ja
+Famagusta ovat käytännössä Pediaíos-nimiön päällä, joten kumpaakaan ei
+otettu. Yksikään uusi nimi ei ole laudan omassa nimitaulussa
+(`js/packs/maailmankartta-nimet.js`).
+
+**Herkät aiheet asiallisesti** (`docs/aasia-tyoaineisto/spec-asia.md`).
+Kyproksesta ei kirjoitettu vuoden 1974 jälkeisiä kiistoja eikä
+nykypolitiikkaa: molemmat skandaalit ovat 1100- ja 1800-luvulta, ja
+saaren hallinnollinen nykytilanne jätettiin kokonaan mainitsematta.
+Warbahin saari jätettiin pois Kuwaitin listalta, koska sen artikkelin
+historiaosuus on kokonaan rajakiistaa. Kolonialismi kerrotaan
+neutraalina historiana ja lähteen katteessa (Fujairahin linnan
+pommitus 1925, vuoden 1819 retkikunta ja sen kiistetty peruste).
+Sotahistoriaa ei ole otettu kohteiksi.
+
+**Vartiot menivät läpi ilman muutoksia.** `savuke-maastokohteet.mjs`
+vartio 7a olettaa maalta fokuslehden rajauksen (`lehdenRajaus`), ja
+kaikilla viidellä maalla se on olemassa (`js/packs/fokus-grc.js`
+FOKUS_POHJAT) — vartiota ei siis tarvinnut koskea, vaan jokainen uusi
+rivi mitattiin sen sisään ennen kirjoittamista. Savuke menee läpi 8/8.
+`tests/elaintakyt.test.mjs` ja `tests/skandaalit.test.mjs` lukumäärät
+päivitettiin (eläintäkyjä 61 → 65, skandaaleja 123 → 133 ja maita
+49 → 54).
+
+**Kuvaputkelle jää neljä eläintäkykuvaa.** CYP, OMN, ARE ja KWT saivat
+`kuva`-kenttään kuvaputken tunnuksen ilman kansiota (`elain-cyp`,
+`elain-omn`, `elain-are`, `elain-kwt`), joka osoittaa ämpäriin: kun
+kuvaputki tekee kuvan, se ilmestyy kortille ilman koodimuutosta, ja
+siihen asti kortti on kuvaton.
