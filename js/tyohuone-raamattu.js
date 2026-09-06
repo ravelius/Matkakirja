@@ -3598,7 +3598,15 @@ export const RAAMATTU = {
           + 'harvemmin"): panoroinnissa kaksi karttaa limittain (kahden '
           + 'kerroksen sijainti eri kehyksesta tai eri kamerasta) ja harvinainen '
           + 'kameran hyppy - korjataan juurisyysta mitattuna; kunnes korjattu, '
-          + 'vika rajataan kytkimilla ?vektorit=0 ja ?laattakerros=0.',
+          + 'vika rajataan kytkimilla ?vektorit=0 ja ?laattakerros=0. VIKA 2 '
+          + '(omistaja 6.9.2026 ilta, iPad Safari, Ihmisen matka, sanatarkasti: '
+          + '"Ainakin selaimella tayttovari ei pysy ihmis linssissa"; kuvissa '
+          + 'varialue nakyy vain tahtimaisina laikkuina ruudukon karjissa): '
+          + 'linssin varikalvo leikkaa laattakerroksen laattaverkkoja - kalvon '
+          + 'karkeampi verkko painuu laattojen alle ja nakyy vain karkiensa '
+          + 'lahella; koskee kaikkia linssikalvoja laattakerroksen kanssa. '
+          + 'Korjataan niin, etta kalvot piirtyvat aina laattakerroksen paalle '
+          + '(syvyysjarjestys, ei sadekorotusta joka nakyisi hyppyna).',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
