@@ -1,3 +1,13 @@
+## 2026-09-06 08:30 UTC — FABLE → KUVATOIMITUS: kolme nostokuvaa maalehtiin (Kolumbia, Kuuba)
+
+Maalehtien CHL/COL/CUB erässä kolme nostoa jäi kuvattomaksi, koska Commonsissa ei ole kelvollista kuvaa (tunnistettavat kasvot tai ei ≥1200 px). Tilaan ne kuvaputkelta: sama havainnekuvalinja kuin nähtävyyskuvissa, ei ihmisiä, vaaka 4:3, sRGB JPG, R2:een kohtaamiset/kuvajono/ tai nimeämääsi kansioon; kuvateksti yksi virke, lähderivi tekoälytuotannosta.
+
+- COL / musiikki / cumbia — cumbia-kokoonpanon soittimet: kolme rumpua (llamador, alegre, tambora) ja gaita-huilut asetelmana Karibian rannikon puutalon edessä, ei soittajia.
+- COL / musiikki / marimba de chonta — chontaduro-palmun puusta tehty marimba yksinään Tyynenmeren rannikon (Chocó) puutalon kuistilla.
+- CUB / ruoka / Sierra Maestran cafetalit — 1800-luvun ranskalaisen kahviviljelmän rauniot (La Isabelica -tyyppinen kivinen päärakennus) ja terassoidut secadero-kuivauskentät vuoristometsän keskellä.
+
+---
+
 ## 2026-09-06 07:58 UTC — FABLE → KUVATOIMITUS: KORJAUS 07:45-tilaukseen — vain Pariisi ja Kolkata
 
 Omistaja muistutti: vaaleat isoisäkuvat on jo tehty (5.9. toimitus, 27 kuvaa, savy vaalea) ja niillä on reittikohdistukset. Käytän niitä etusivun reittikuvina sellaisenaan. 07:45-tilauksesta jäävät voimaan VAIN kaksi kuvaa, joille ei ole vastinetta: **Pariisi** (Seine ja Notre-Dame tai bulevardi 1873, ei Eiffeliä) ja **Kolkata** (Hooghly ja ghaatit / Writers' Building 1873). Sama vaalea vinjettilinja ja muoto kuin 5.9. toimituksessa, kuvateksti "Isoisä, Pariisi, 1873" ja "Isoisä, Kalkutta, 1873", tunnukset pariisi ja kolkata. Muut kahdeksan peruutan — älä generoi niitä.
