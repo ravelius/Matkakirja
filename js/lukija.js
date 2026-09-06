@@ -285,6 +285,44 @@ export const LUKIJAN_OHITETTAVAT = [
   '.quiz-hint-text',
   '.quiz-result',
 
+  /*
+   * ── KORTTIEN TAITTORIVIT (6.9.2026, LUKIJA KAIKKIIN TEKSTIKORTTEIHIN)
+   *
+   * Kohdemallin korteilla (kohdekortti, täkynosto, skandaali, eläintäky,
+   * syvennys, historian hetki, tiedeliite, kohtaamiskortti) on lehden
+   * maston kaltaisia rivejä, jotka ovat KAPPALE-ELEMENTTEJÄ taittosyistä
+   * eivätkä siis jää pois lajinsa perusteella:
+   *
+   *   • ylärivi = aihesymboli ja luokan nimi ("Skandaali", "Eläin")
+   *   • lööpin nimiö ("Lisälehti", "Tiedeliite") ja päiväysrivi
+   *     ("Ateena · 1896") — samat kuin lehden nimiö ja päivämäärä
+   *   • liitteen otsake ja "Kysy pululta:" -nimilappu
+   *   • kortin lähderivit ja kuvatekstit
+   *   • varmistus- ja varoituslauseet sekä lunastuksen palkkiorivi:
+   *     käyttöliittymän puhetta napeille, ei juttua
+   *
+   * VISAT OVAT SPOILERISUOJASSA kuten lehdessäkin: minivisan kysymys,
+   * vaihtoehdot ja palkkiorivi asuvat `.fokusvirta-visa`-laatikossa,
+   * joka jää kokonaan luennan ulkopuolelle.
+   */
+  '.fokusnosto-ylarivi',
+  '.fokuskohde-ylarivi',
+  '.fokusvirta-ylarivi',
+  '.looppi-nimio',
+  '.looppi-paivays',
+  '.fokusnosto-liite-otsake',
+  '.fokusnosto-kysy-otsikko',
+  '.fokuskohde-kysy-otsikko',
+  '.fokusnosto-lahde',
+  '.fokuskohde-lahde',
+  '.fokuskierros-lahde',
+  '.fokusvirta-kuvateksti',
+  '.fokusvirta-varmistus',
+  '.fokusvirta-varoitus',
+  '.elaintaky-palkkio',
+  '.fokusvirta-visa',
+  '.fokusvirta-visa-tulos',
+
   // Lukija itse ei kuulu luettavaan.
   '.lukija-nappi',
 ];
@@ -1858,7 +1896,16 @@ function kaynnistaLuenta(nappi, isanta, { lueOtsikko = false } = {}) {
      * otsikko on hänelle uutinen eikä taittoa. Masto ja lehden nimi
      * pysyvät ohituslistalla kummassakin tapauksessa.
      */
-    kohdat = kokoaLuettavatKohdat(kohde, { ohitaEkaOtsikko: !lueOtsikko });
+    /*
+     * KORTIN OTSIKKO LUETAAN MUKAAN (`__lukijaOtsikko`, 6.9.2026).
+     * Lehden sivulla otsikko on taittoa, jonka lukija näki avatessaan
+     * sivun — kortilla se on jutun lööppi ("Valokuva paljasti
+     * aarrevarkauden"), ja omistajan tilaus on lukea KORTIN TEKSTI,
+     * jonka alku se on. Otsikko liittyy ensimmäiseen kappaleeseen
+     * esirivinä (keraaKohdat), ei omaksi pysähdyspaikakseen.
+     */
+    const otsikollinen = lueOtsikko || nappi.__lukijaOtsikko === true;
+    kohdat = kokoaLuettavatKohdat(kohde, { ohitaEkaOtsikko: !otsikollinen });
     teksti = kohdat.map((k) => k.teksti).join('\n');
   } else {
     teksti = napinTeksti(nappi);
@@ -2007,6 +2054,119 @@ export function paivitaLukija(nappi, { vahimmais = LUETTAVAN_VAHIMMAIS } = {}) {
   if (!riittaa && lukijaLukee(nappi)) pysaytaLukija();
 }
 
+/* ------------------------------------------------------------------ */
+/* LUKIJA KAIKKIIN TEKSTIKORTTEIHIN (omistaja 6.9.2026 ilta)           */
+/* ------------------------------------------------------------------ */
+
+/*
+ * OMISTAJAN LINJAUS, SANATARKASTI (iPad, skandaalikortti "Valokuva
+ * paljasti aarrevarkauden" Ateenassa): *"Kaikissa missä on tekstiä,
+ * saisi olla striimi lukijan symboli"*.
+ *
+ * Eli JOKAISESSA kortissa, jossa on leipätekstiä, on SAMA kaiutin kuin
+ * lehdessä, ja se lukee kortin tekstin samalla striimiäänellä. Raamattu
+ * (LUENTA): *"Luenta on striimiääni, jonka kytkin on kortin
+ * KAIUTINKUVAKE … mykistettynä kuvakkeen päällä on vinoviiva; päälle
+ * kytkeminen aloittaa ruudulla olevan merkinnän alusta."*
+ *
+ * ── YKSI APURI, EI YHTÄTOISTA KOPIOTA ──────────────────────────────
+ *
+ * Kortteja on tusina ja niitä tulee lisää. Jos jokainen kytkisi
+ * lukijan itse, seuraava kortti unohtaisi sen — sama vika, joka
+ * ohituslistassa opittiin (ks. tiedoston alku). Tämä apuri on kaikkien
+ * korttien ainoa sisäänkäynti, ja se nojaa kokonaan lehden koeteltuun
+ * `liitaLukija`-koneistoon: sama nappi, sama kuvake, sama
+ * ohjauspaneeli, sama "vain yksi luenta kerrallaan".
+ *
+ * ── KORTTI EI OLE DIALOGI ──────────────────────────────────────────
+ *
+ * Lehden nappi pysähtyy dialogin `close`-tapahtumaan. Kelluva kortti
+ * ei ole <dialog> vaan kerros, joka POISTETAAN DOM:sta — siksi
+ * sulkeminen tunnistetaan napin irtoamisesta puusta (ks. tiedoston
+ * lopun tarkkailija).
+ *
+ * ── MYKISTETTY KERTOO SEN ITSE ─────────────────────────────────────
+ *
+ * Pelin äänet pois → kuvakkeen päälle vinoviiva ja nimeksi syy. Nappi
+ * ei katoa: hiljainen kortti näyttäisi siltä, ettei sillä ole luentaa
+ * lainkaan. Ilman yhtään taustajärjestelmää (ei workeria, ei laitteen
+ * ääntä) nappia ei tule ollenkaan — sama sääntö kuin lehdellä
+ * (`liitaLukija` palauttaa null), koska silloin luentaa ei ole
+ * saatavilla millään.
+ */
+
+/** Kortin otsikkorivit tärkeysjärjestyksessä: kaiutin menee ylimpään. */
+const KORTIN_OTSIKKORIVIT = '.fokusnosto-ylarivi, .fokuskohde-ylarivi,'
+  + ' .fokusvirta-ylarivi, .looppi-nimio';
+
+/** Rivi, jolle kaiutin asetellaan (css/styles.css). */
+const KORTIN_RIVILUOKKA = 'lukija-otsikkorivi';
+
+const KORTIN_LUE_OTSIKKO = 'Kuuntele kortti';
+const KORTIN_MYKKA_OTSIKKO = 'Äänet ovat mykistettynä — luentaa ei ole';
+
+/** Kortin kaiuttimen mykistysmerkki ja nimi pelin äänivalinnan mukaan. */
+function paivitaKortinKaiutin(nappi) {
+  if (!nappi) return;
+  const mykka = !aanetPaalla();
+  nappi.classList.toggle('mykistetty', mykka);
+  nappi.dataset.lukijaNimi = mykka
+    ? KORTIN_MYKKA_OTSIKKO
+    : (nappi.dataset.lukijaKorttiNimi || KORTIN_LUE_OTSIKKO);
+  merkitseTila(nappi, lukijaLukee(nappi));
+}
+
+/**
+ * Kaiutinkuvake tekstikortin otsikkoriville.
+ *
+ * Kutsutaan VASTA kun kortin sisältö on ladottu: nappi piilotetaan
+ * itsestään, jos luettavaa on liian vähän (paivitaLukija), eikä
+ * tyhjästä kortista koottu teksti kertoisi sitä.
+ *
+ * @param {Element} kortti kortin juuri, jonka tekstit luetaan
+ * @param {{ teksti?: Element|(() => Element|string)|string,
+ *   otsikko?: string, rivi?: Element|null, luokka?: string }} asetukset
+ *   `teksti` on luettava lähde (oletus: kortti itse — silloin luenta saa
+ *   myös korostuksen ja vierityksen); `rivi` pakottaa napin paikan.
+ * @returns {Element|null} nappi, tai null jos luentaa ei ole
+ */
+export function lisaaLukijanappi(kortti, {
+  teksti = null, otsikko = KORTIN_LUE_OTSIKKO, rivi = null, luokka = 'lukija-kortti',
+} = {}) {
+  if (!kortti || typeof kortti.querySelector !== 'function') return null;
+  if (!lukijaTuettu()) return null;
+  const koti = rivi ?? kortti.querySelector(KORTIN_OTSIKKORIVIT) ?? kortti;
+  const nappi = liitaLukija(koti, teksti ?? kortti, { luokka, nimi: otsikko });
+  if (!nappi) return null;
+  /*
+   * VAIN YKSI LUENTA KERRALLAAN. Uusi kortti ruudulle tarkoittaa, että
+   * pelaaja siirtyi toiseen tekstiin — edellisen kortin luenta ei saa
+   * jatkua sen alla. Oma nappi jätetään rauhaan, koska sama kortti
+   * voidaan varustaa uudestaan kesken luennan (sisällön päivitys).
+   */
+  if (ajossa && ajossa.nappi !== nappi) pysaytaLukija();
+  koti.classList?.add(KORTIN_RIVILUOKKA);
+  // Kortin lööppi kuuluu luentaan (ks. kaynnistaLuenta).
+  nappi.__lukijaOtsikko = true;
+  nappi.dataset.lukijaKorttiNimi = otsikko;
+  paivitaLukija(nappi);
+  paivitaKortinKaiutin(nappi);
+  return nappi;
+}
+
+/*
+ * Äänivalinnan vaihto päivittää jokaisen ruudulla olevan kortin
+ * kaiuttimen: vinoviiva syttyy ja sammuu samassa hetkessä kuin
+ * valikon mykistys, myös kortilla joka oli jo auki.
+ */
+if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
+  document.addEventListener(AANIVALINTA_TAPAHTUMA, () => {
+    for (const nappi of document.querySelectorAll('.lukija-kortti')) {
+      paivitaKortinKaiutin(nappi);
+    }
+  });
+}
+
 /*
  * LUENTA SEIS JOKAISESTA PONNAHDUSIKKUNASTA (omistajan tilaus
  * 15.8.2026: "matkakirjan luenta pitäisi pysähtyä aina jos mikä vain
@@ -2037,6 +2197,18 @@ if (typeof document !== 'undefined' && typeof MutationObserver === 'function') {
       || Boolean(solmu.querySelector?.('.postikortti')));
   const tarkkailija = new MutationObserver((muutokset) => {
     if (!lukijaLukee()) return;
+    /*
+     * KORTIN SULKEMINEN PYSÄYTTÄÄ LUENNAN (6.9.2026). Kelluva kortti ei
+     * ole <dialog> vaan kerros, jonka sulkija POISTAA puusta — silloin
+     * `close`-tapahtumaa ei tule eikä liitaLukijan dialogikuuntelija
+     * laukea. Napin irtoaminen puusta on sama asia ja näkyy tälle
+     * samalle tarkkailijalle, joten yksi rivi kattaa jokaisen
+     * korttiperheen eikä uusi kortti voi unohtaa kytkentää.
+     */
+    if (ajossa?.nappi && ajossa.nappi.isConnected === false) {
+      pysaytaLukija();
+      return;
+    }
     for (const muutos of muutokset) {
       if (muutos.type === 'attributes') {
         if (muutos.target.tagName === 'DIALOG' && muutos.target.open) {

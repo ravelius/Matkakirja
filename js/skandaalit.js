@@ -64,6 +64,7 @@ import { taytaLahderivi } from './tekijakortti.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { sfx } from './sound.js';
+import { lisaaLukijanappi } from './lukija.js';
 
 /** Kortin kuvan leveys (sama kuin syvennystarinalla). */
 const SKANDAALI_KUVA_PX = 800;
@@ -202,6 +203,10 @@ export function avaaSkandaali(ui, iso, skandaali) {
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
   document.body.appendChild(kerros);
+  // Kaiutin kortin otsikkoriville (omistaja 6.9.2026, juuri tästä
+  // kortista: "Kaikissa missä on tekstiä, saisi olla striimi lukijan
+  // symboli") — js/lukija.js lisaaLukijanappi.
+  lisaaLukijanappi(kortti, { otsikko: 'Kuuntele lisälehti' });
 
   const kiinni = () => {
     sfx.play('paper');

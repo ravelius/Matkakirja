@@ -127,6 +127,7 @@ import {
 } from './pollo.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 import { sfx } from './sound.js';
+import { lisaaLukijanappi } from './lukija.js';
 import { taytaLahderivi } from './tekijakortti.js';
 
 /*
@@ -1006,6 +1007,18 @@ function piirraKehys(ui, city, data, tila) {
   koti.appendChild(kortti);
   ui.fokusvirtaKortti = kortti;
   piirraSisalto(ui, city, data, tila, sisalto);
+  /*
+   * KAIUTIN VAIN KOHTAAMISKORTILLE (omistaja 6.9.2026: "Kaikissa missä
+   * on tekstiä, saisi olla striimi lukijan symboli"). Kohtaaminen on
+   * kortin ainoa oma leipäteksti — oppitunti ja sähketehtävä ovat PULUN
+   * repliikkejä, eikä pulun puhetta lueta (Raamattu, PULUN AANI). Kortin
+   * lukija lukee siis vain hahmon nimen ja kohtaamisen kuvauksen;
+   * varmistuslause, varoitus ja napit jäävät ulos (js/lukija.js
+   * LUKIJAN_OHITETTAVAT).
+   */
+  if (!data.sahketehtava && (tila.vaihe === 'kohtaaminen' || tila.vaihe === 'valmis')) {
+    lisaaLukijanappi(kortti, { otsikko: 'Kuuntele kohtaaminen' });
+  }
 }
 
 /**

@@ -12235,6 +12235,81 @@ button.lukija-nappi:focus-visible,
    vasempaan (--arkki-reunus). */
 .dialog #arrival-city > button.lukija-nappi { right: var(--arkki-reunus, 0.95rem); }
 
+/*
+ * ── KORTTIEN KAIUTIN (js/lukija.js lisaaLukijanappi, 6.9.2026) ────
+ *
+ * Omistaja 6.9.2026 illalla: *"Kaikissa missä on tekstiä, saisi olla
+ * striimi lukijan symboli"*. Kaiutin asuu kortin OTSIKKORIVISSÄ
+ * (aihesymbolin rivi) samalla tavalla kuin lehdessä otsikkorivin
+ * oikeassa reunassa — ei erillisenä nappina kortin kulmassa, jossa se
+ * osuisi sulkuruksin päälle.
+ *
+ * Rivi on kortin ainoa asemointiankkuri, joten myös luentasoittimen
+ * paneeli laskeutuu sen ALLE eikä kortin yläkulmaan.
+ */
+.lukija-otsikkorivi { position: relative; padding-right: 2.4rem; }
+
+.lukija-otsikkorivi > button.lukija-nappi,
+.dialog .lukija-otsikkorivi > button.lukija-nappi {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 2.1rem;
+  height: 2.1rem;
+  min-width: 2.1rem;
+  min-height: 2.1rem;
+  place-items: center end;
+  background: none;
+  box-shadow: none;
+  color: #46331f;
+}
+
+.lukija-otsikkorivi > button.lukija-nappi:hover:not(:disabled),
+.lukija-otsikkorivi > button.lukija-nappi:focus-visible {
+  background: none;
+  color: rgba(70, 51, 31, 1);
+}
+
+.lukija-otsikkorivi > button.lukija-nappi.lukee {
+  background: none;
+  box-shadow: none;
+  color: #a8741a;
+}
+
+.lukija-otsikkorivi > button.lukija-nappi .viiva-ikoni svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.lukija-otsikkorivi > .lukija-paneeli {
+  top: calc(100% + 0.3rem);
+  right: 0;
+}
+
+/*
+ * MYKISTETTYNÄ VINOVIIVA (Raamattu, LUENTA): sama merkki kuin
+ * matkakirjakortin kaiuttimella (.fact-kuuntele.mykistetty), jotta
+ * "ei ääntä" näyttää kaikkialla samalta. Nappi jää näkyviin — piilossa
+ * se väittäisi, ettei kortilla ole luentaa lainkaan.
+ */
+button.lukija-nappi.mykistetty {
+  color: rgba(70, 51, 31, 0.5);
+  overflow: visible;
+}
+
+button.lukija-nappi.mykistetty::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1.4rem;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  pointer-events: none;
+}
+
 /* Luenta käynnissä: kaiutin tummuu ja saa hennon kehän. Ääni ei näy
  * ruudulla, joten napin on kerrottava tilansa itse. */
 button.lukija-nappi.lukee,

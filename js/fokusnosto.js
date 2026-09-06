@@ -128,6 +128,7 @@ import { fokusvirtaSisalto } from './fokusvirta.js';
 import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
+import { lisaaLukijanappi } from './lukija.js';
 import { taytaLahderivi } from './tekijakortti.js';
 
 /* ==================== POOLI ==================== */
@@ -999,6 +1000,8 @@ function avaaNostonKortti(ui, nosto) {
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
   document.body.appendChild(kerros);
+  // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
+  lisaaLukijanappi(kortti, { otsikko: 'Kuuntele kortti' });
 
   const kiinni = () => {
     sfx.play('paper');
