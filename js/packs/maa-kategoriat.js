@@ -39534,8 +39534,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Mies, joka keksi nuotit ennen Eurooppaa',
           aika: '505–571',
-          tiedosto: '"Yared An (sic) His Disciples Singing A Song In Front Of '
-            + 'King Gebreme Skel . . ." (3171512810).jpg',
+          tiedosto: '"Yared An (sic) His Disciples Singing A Song In Front Of King Gebreme Skel . . ." (3171512810).jpg',
           teksti: 'Pyhä Yared syntyi Aksumissa 505 ja sävelsi zeman, '
               + 'Etiopian kirkon kirkkolaulun, sekä merkintätavan, jolla '
               + 'se kirjoitettiin muistiin. Perimätiedon mukaan poikana '
@@ -39552,8 +39551,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kymmenkielinen soitin, joka soi paastonaikana',
-          tiedosto: 'Begena, Ethiopia, wood, leather, skin, bowel strings, iron '
-            + 'nails - Linden-Museum - Stuttgart, Germany - DSC03896.jpg',
+          tiedosto: 'Begena, Ethiopia, wood, leather, skin, bowel strings, iron nails - Linden-Museum - Stuttgart, Germany - DSC03896.jpg',
           teksti: 'Begena on kymmenkielinen laatikkolyyra, jota soitetaan '
               + 'vain zemaan eli hengelliseen musiikkiin. Perimätieto '
               + 'sanoo sen olevan sama soitin, jolla Daavid rauhoitti '
@@ -39612,8 +39610,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Kirjaimisto, johon vokaalit kasvoivat kiinni',
-          tiedosto: 'Ethiopian - Leaf from Gunda Gunde Gospels - Walters W850154R '
-            + '- Open Obverse.jpg',
+          tiedosto: 'Ethiopian - Leaf from Gunda Gunde Gospels - Walters W850154R - Open Obverse.jpg',
           teksti: 'Geezin kirjaimisto polveutuu muinaisesta '
               + 'eteläarabialaisesta kirjoituksesta ja oli aluksi pelkkiä '
               + 'konsonantteja, jotka kirjoitettiin oikealta vasemmalle. '
@@ -39817,10 +39814,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kuningatar, joka hautasi keisarin pään portaiden alle',
           aika: '25–22 eaa.',
-          tiedosto: 'Relief with queen Amanishakheto and her name in Meroitic '
-            + 'hieroglyphs, 1st century BC, sandstone, from Pyramid 6, '
-            + 'Meroe, Sudan, ÄM 2244, 2245, in the Ägyptisches Museum '
-            + 'Berlin.jpg',
+          tiedosto: 'Relief with queen Amanishakheto and her name in Meroitic hieroglyphs, 1st century BC, sandstone, from Pyramid 6, Meroe, Sudan, ÄM 2244, 2245, in the Ägyptisches Museum Berlin.jpg',
           teksti: 'Kushin hallitsijan arvonimi kandake tarkoitti '
               + 'kuningatarta tai kuningataräitiä, ja kun sen kantaja '
               + 'hallitsi itse, hän käytti myös kuninkaan arvoa qore. '
@@ -39841,8 +39835,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kirjoitus, joka osataan lukea muttei ymmärtää',
           aika: '1909',
-          tiedosto: 'Egyptian - Votive Plaque of King Tanyidamani - Walters 22258 '
-            + '- Back.jpg',
+          tiedosto: 'Egyptian - Votive Plaque of King Tanyidamani - Walters 22258 - Back.jpg',
           teksti: 'Meroën valtakunnalla oli oma kirjoituksensa 200-luvulta '
               + 'eaa. alkaen, ja itse asiassa kaksi: hieroglyfimuoto '
               + 'juhlallisiin piirtokirjoituksiin ja kursiivi arkeen. '
@@ -40388,8 +40381,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Palmu, josta kansa sai nimensä',
-          tiedosto: 'A doum palm tree (Hyphaene thebaica) in Nubia sheltering 3 p '
-            + 'Wellcome V0043198.jpg',
+          tiedosto: 'A doum palm tree (Hyphaene thebaica) in Nubia sheltering 3 p Wellcome V0043198.jpg',
           teksti: 'Nyikang on shillukien esi-isä ja kuningaskunnan '
               + 'perustaja, ja hänen kauttaan kansa ymmärtää itsensä '
               + 'yhdeksi. Nimi tarkoittaa Kangin poikaa, mutta sanalla '
