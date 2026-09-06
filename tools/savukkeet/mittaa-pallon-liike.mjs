@@ -5,6 +5,7 @@
  *       [--nakyma=puhelin|tyopoyta] [--throttle=4] [--lauta=pallo|kartta]
  *       [--laatu=aina] [--proto=A|A7|B1|C] [--vaihe=liike|zoom|kaikki]
  *       [--ulos=<kansio>] [--tunniste=<nimi>] [--korkeus=0.35] [--dpr=1]
+ *       [--vartio]
  *
  * Omistaja 6.9.2026 ilta (Raamattu, PALAUTE v1642:STA, LIIKKEEN AIKAINEN
  * TARKKUUS): *"Saisiko tuota siirron aikaista matalampaa resoluutiota
@@ -34,6 +35,16 @@
  *   B1  --laatu=aina + updatePov enintään 8 kertaa sekunnissa liikkeessä
  *   C   lepokerros jää päälle liikkeessä (ei kootaa uudestaan)
  *
+ * VARTIO (--vartio): sama ajo, mutta lopuksi mittarin luvut verrataan
+ * suunnitelman docs/moduulit/pallon-liike-taydella-tarkkuudella.md
+ * luvun 5 taulukkoon ("Vaadittu E1:n jälkeen") ja jokaisesta mitasta
+ * tulostetaan OK/FAIL-rivi (OHI = mittausta ei ajettu tällä --vaihe- tai
+ * --lauta-valinnalla). Yksikin FAIL antaa poistumiskoodin 1, joten
+ * mittari kelpaa laattakerroksen (E1) hyväksymisportiksi. Ilman lippua
+ * tuloste on ennallaan (JSON-raportti) ja koodi 0. Rajat ovat yhdessä
+ * paikassa vakiossa RAJAT; mittojen määritelmät (reunan FWHM, musteraja
+ * 150) EIVÄT muutu — ennen/jälkeen-luvut pysyvät vertailukelpoisina.
+ *
  * Chromium piirtää ohjelmistorasteroijalla: absoluuttiset kehysajat
  * eivät vastaa laitetta, mutta suhteet (tila vs. tila) ja JS-osuudet
  * (updatePov, laattamäärät, pyynnöt) ovat päteviä. CPU-throttle 4×
@@ -50,7 +61,13 @@ const NAKYMA = arg('nakyma', 'puhelin');
 const THROTTLE = Number(arg('throttle', NAKYMA === 'puhelin' ? 4 : 1));
 const LAUTA = arg('lauta', 'pallo');
 const LAATU = arg('laatu', null);
+/*
+ * TODO: poistetaan E3:n jälkeen — --proto (A/A7/B1/C) ja niiden
+ * sivunsisäiset paikkaukset dokumentoivat suunnitelman luvun 2.4
+ * mittaukset, joten ne jäävät E1:n ja E2:n ajaksi paikalleen.
+ */
 const PROTO = arg('proto', null);
+const VARTIO = process.argv.includes('--vartio');
 const VAIHE = arg('vaihe', 'kaikki');
 const KORKEUS = Number(arg('korkeus', 0.35));
 const ZOOM_LOPPU = Number(arg('zoomloppu', 0.05));
@@ -403,11 +420,164 @@ if ((VAIHE === 'kaikki' || VAIHE === 'zoom') && LAUTA === 'pallo') {
   tulos.zoom.lepo.viiva = pinta(loppuKuva, keski);
 }
 
+/* ================= VARTIO (--vartio) ================= */
+/*
+ * Suunnitelman luvun 5 hyväksymisrajat YHDESSÄ paikassa. Nämä ovat
+ * rajoja, eivät mittoja: mittojen määritelmät (reunan FWHM, musteraja
+ * 150) asuvat pallon-liike-mittarit.mjs:ssä eivätkä muutu.
+ */
+const RAJAT = {
+  reunaEro: 1, // liike vs lepo, mediaani ja p90 (px)
+  reunaMediaani: 3,
+  reunaP90: 5,
+  muste: 2, // musteviivan paksuus liikkeessä (px)
+  updatePovMs: 10,
+  updatePovMax: 40,
+  laattoja: 120, // laattaverkkoja scenessä lähikuvassa (pohja + kerros)
+  drawCalls: 120,
+  tekstuuritLevossa: 20, // uudestaan luodut tekstuurit panoroinnin jälkeen
+  eroPiikki: 1.5, // zoomsarjan ero vs naapurien keskiarvo
+};
+
+/**
+ * Vertaa raportin luvut rajoihin. Palauttaa rivit { tila, nimi, teksti },
+ * joissa tila on OK, FAIL tai OHI (mittausta ei ajettu tällä valinnalla).
+ */
+function vartioRivit(t) {
+  const rivit = [];
+  const lisaa = (tila, nimi, teksti) => { rivit.push({ tila, nimi, teksti }); };
+  const arvio = (ehto, nimi, teksti) => lisaa(ehto ? 'OK' : 'FAIL', nimi, teksti);
+  const liikeAjettu = VAIHE === 'kaikki' || VAIHE === 'liike';
+  const zoomAjettu = (VAIHE === 'kaikki' || VAIHE === 'zoom') && LAUTA === 'pallo';
+  // Moottorin luvut (updatePov, laattaverkot, dc, tekstuurit) ovat pallon
+  // omia; tasokartalla mitataan vain kuvan reuna ja muste (luku 2.1).
+  const pallolla = LAUTA === 'pallo';
+  const p90 = (r) => r?.p90 ?? r?.p75 ?? 0;
+
+  /* 1–2. Reunan leveys ja musteviivan paksuus (luku 2.1). Liikkeestä
+   * otetaan PAHIN kahdesta kaappauksesta (25 % ja 55 % matkasta). */
+  const lepoViiva = t.lepo?.viiva;
+  const liikeViivat = [['25 %', t.liike?.viiva], ['55 %', t.liike?.viiva2]]
+    .filter(([, v]) => Boolean(v));
+  const pahin = liikeViivat.map(([, v]) => v).sort((a, b) => (b.reuna.leveys - a.reuna.leveys)
+    || (p90(b.reuna) - p90(a.reuna)) || (b.muste.paksuus - a.muste.paksuus))[0];
+  if (!liikeAjettu) {
+    lisaa('OHI', 'reuna liikkeessä', `--vaihe=${VAIHE}: liikevaihetta ei ajettu`);
+    lisaa('OHI', 'muste liikkeessä', `--vaihe=${VAIHE}: liikevaihetta ei ajettu`);
+  } else if (!lepoViiva || !pahin) {
+    lisaa('FAIL', 'reuna liikkeessä', 'kuvamittausta ei saatu');
+    lisaa('FAIL', 'muste liikkeessä', 'kuvamittausta ei saatu');
+  } else {
+    const lm = lepoViiva.reuna.leveys; const lp = p90(lepoViiva.reuna);
+    const km = pahin.reuna.leveys; const kp = p90(pahin.reuna);
+    const osuudet = liikeViivat.map(([nimi, v]) => `${nimi} ${v.reuna.leveys}/${p90(v.reuna)}`).join(', ');
+    arvio(Math.abs(km - lm) <= RAJAT.reunaEro && Math.abs(kp - lp) <= RAJAT.reunaEro
+      && km <= RAJAT.reunaMediaani && kp <= RAJAT.reunaP90
+      && lm <= RAJAT.reunaMediaani && lp <= RAJAT.reunaP90, 'reuna liikkeessä',
+    `liike ${km}/${kp} px (${osuudet}), lepo ${lm}/${lp} px `
+      + `— raja: ero ≤ ${RAJAT.reunaEro} px ja molemmat ≤ ${RAJAT.reunaMediaani}/${RAJAT.reunaP90} px`);
+    arvio(pahin.muste.paksuus <= RAJAT.muste, 'muste liikkeessä',
+      `${pahin.muste.paksuus} px (lepo ${lepoViiva.muste.paksuus} px) — raja ≤ ${RAJAT.muste} px`);
+  }
+
+  /* 3. updatePov panoroinnissa (luku 2.2). */
+  const u = t.pano?.updatePov;
+  if (!pallolla) lisaa('OHI', 'updatePov', `--lauta=${LAUTA}: ei laattamoottoria`);
+  else if (!liikeAjettu) lisaa('OHI', 'updatePov', `--vaihe=${VAIHE}: panorointia ei ajettu`);
+  else if (!u) lisaa('FAIL', 'updatePov', 'mittausta ei saatu');
+  else {
+    arvio(u.msPerKutsu <= RAJAT.updatePovMs && u.max <= RAJAT.updatePovMax, 'updatePov',
+      `${u.msPerKutsu} ms / kutsu, max ${u.max} ms (n ${u.n}) `
+      + `— raja ≤ ${RAJAT.updatePovMs} ms ja max ≤ ${RAJAT.updatePovMax} ms`);
+  }
+
+  /* 4–5. Laattaverkot ja piirtokutsut lähikuvassa. Luvun 5 taulukon
+   * "ennen" (227–312 laattaa, 215–240 dc) on LEVON luku, joten mitta
+   * on levon pahin; liikkeen luku näkyy rivillä vertailuksi. */
+  const lepoTilat = [t.lepo?.tila, t.lepoPaluu?.tila].filter(Boolean);
+  const liikeTila = t.liike?.tila;
+  if (!pallolla || !liikeAjettu) {
+    const syy = pallolla ? `--vaihe=${VAIHE}: lähikuvaa ei mitattu` : `--lauta=${LAUTA}: ei laattamoottoria`;
+    lisaa('OHI', 'laattaverkot', syy);
+    lisaa('OHI', 'piirtokutsut', syy);
+  } else if (!lepoTilat.length) {
+    lisaa('FAIL', 'laattaverkot', 'mittausta ei saatu');
+    lisaa('FAIL', 'piirtokutsut', 'mittausta ei saatu');
+  } else {
+    const laattoja = Math.max(...lepoTilat.map((x) => x.laattoja ?? 0));
+    const dc = Math.max(...lepoTilat.map((x) => x.drawCalls ?? 0));
+    arvio(laattoja <= RAJAT.laattoja, 'laattaverkot',
+      `lepo ${laattoja} (liikkeessä ${liikeTila?.laattoja ?? '?'}, takana ${lepoTilat[0].takana ?? '?'}) `
+      + `— raja ≤ ${RAJAT.laattoja}`);
+    arvio(dc <= RAJAT.drawCalls, 'piirtokutsut',
+      `lepo ${dc} (liikkeessä ${liikeTila?.drawCalls ?? '?'}) — raja ≤ ${RAJAT.drawCalls}`);
+  }
+
+  /* 6. Tekstuureja uudestaan levossa panoroinnin jälkeen (luku 2.2:n
+   * sarake "tex levossa uudestaan": 27 → 210). */
+  const tex0 = t.pano?.jalkeen?.tekstuurit;
+  const tex1 = t.pano?.levossaJalkeen?.tila?.tekstuurit;
+  if (!pallolla) lisaa('OHI', 'tekstuurit levossa', `--lauta=${LAUTA}: ei laattamoottoria`);
+  else if (!liikeAjettu) lisaa('OHI', 'tekstuurit levossa', `--vaihe=${VAIHE}: panorointia ei ajettu`);
+  else if (typeof tex0 !== 'number' || typeof tex1 !== 'number') lisaa('FAIL', 'tekstuurit levossa', 'mittausta ei saatu');
+  else {
+    arvio(tex1 - tex0 <= RAJAT.tekstuuritLevossa, 'tekstuurit levossa',
+      `${tex1 - tex0} uudestaan (${tex0} → ${tex1}) — raja ≤ ${RAJAT.tekstuuritLevossa}`);
+  }
+
+  /* 7–9. Zoomsarja: tyhjä pohja, ero-piikit ja tason vaihdot. */
+  const sarja = t.zoom?.sarja ?? [];
+  if (!zoomAjettu) {
+    for (const nimi of ['zoomin tyhjä', 'zoomin ero-piikki', 'zoomin tason vaihdot']) {
+      lisaa('OHI', nimi, LAUTA === 'pallo' ? `--vaihe=${VAIHE}: zoomia ei ajettu` : `--lauta=${LAUTA}: zoomia ei ajeta`);
+    }
+  } else if (!sarja.length) {
+    lisaa('FAIL', 'zoomin tyhjä', 'kuvasarjaa ei saatu');
+    lisaa('FAIL', 'zoomin ero-piikki', 'kuvasarjaa ei saatu');
+    lisaa('FAIL', 'zoomin tason vaihdot', `${(t.zoom?.tasot ?? []).length} vaihtoa, kuvasarjaa ei saatu`);
+  } else {
+    const tyhjat = sarja.filter((r) => r.tyhja > 0);
+    arvio(tyhjat.length === 0, 'zoomin tyhjä',
+      `${sarja.length} kuvaa, tyhjää yli 0 ${tyhjat.length} kuvassa `
+      + `(max ${Math.max(...sarja.map((r) => r.tyhja))}) — raja 0 joka kuvassa`);
+    const piikit = [];
+    for (let i = 1; i < sarja.length - 1; i += 1) {
+      const a = sarja[i - 1].ero; const v = sarja[i].ero; const b = sarja[i + 1].ero;
+      if (a == null || v == null || b == null) continue;
+      const naapurit = (a + b) / 2;
+      if (naapurit > 0 && v > RAJAT.eroPiikki * naapurit) piikit.push(`#${i} ${v} vs ${naapurit.toFixed(1)}`);
+    }
+    arvio(piikit.length === 0, 'zoomin ero-piikki',
+      `${piikit.length ? piikit.join(', ') : 'ei piikkejä'} `
+      + `(erot ${sarja.map((r) => r.ero).filter((x) => x != null).join(' ')}) `
+      + `— raja ≤ ${RAJAT.eroPiikki} × naapurien keskiarvo`);
+  }
+  if (zoomAjettu && sarja.length) {
+    const tasot = (t.zoom?.tasot ?? []).map((x) => x.taso);
+    const taakse = tasot.filter((v, i) => i > 0 && v < tasot[i - 1]).length;
+    arvio(taakse === 0, 'zoomin tason vaihdot',
+      `${tasot.length} vaihtoa (${tasot.join(' → ') || '-'}), joista ${taakse} taaksepäin `
+      + '— raja: monotoninen, ei edestakaisin');
+  }
+  return rivit;
+}
+
 tulos.virheet = virheet.slice(0, 5);
 tulos.kuvat = kuvat;
+if (VARTIO) tulos.vartio = vartioRivit(tulos);
 const raportti = join(ULOS, `${NAKYMA}-${TUNNISTE}${VAIHE === 'kaikki' ? '' : `-${VAIHE}`}.json`);
 writeFileSync(raportti, JSON.stringify(tulos, null, 1));
-console.log(JSON.stringify(tulos, null, 1));
+if (VARTIO) {
+  console.log('VARTIO — docs/moduulit/pallon-liike-taydella-tarkkuudella.md luku 5 '
+    + `(${NAKYMA}, dpr ${dpr}, throttle ${THROTTLE}×, lauta ${LAUTA})`);
+  const levein = Math.max(...tulos.vartio.map((r) => r.nimi.length));
+  for (const r of tulos.vartio) console.log(`${r.tila.padEnd(4)} ${r.nimi.padEnd(levein)}  ${r.teksti}`);
+  const laske = (tila) => tulos.vartio.filter((r) => r.tila === tila).length;
+  console.log(`VARTIO: ${laske('OK')} OK, ${laske('FAIL')} FAIL, ${laske('OHI')} OHI`);
+  if (laske('FAIL')) process.exitCode = 1;
+} else {
+  console.log(JSON.stringify(tulos, null, 1));
+}
 console.log('RAPORTTI', raportti);
 await selain.close();
 palvelin.close();
