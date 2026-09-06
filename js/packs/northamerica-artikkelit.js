@@ -983,4 +983,29 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'niin, että elokuu on lämpimin kuukausi ja syyskuu kesäkuuta '
       + 'leudompi.',
   },
+  Grönlanti: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // GRL) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla. Faktat en-Wikipedian artikkeleista "Greenland",
+    // "Hans Egede" ja "Culture of Greenland" (tarkistettu 6.9.2026).
+    intro: 'Grönlanti on maailman suurin saari, joka ei ole manner, ja '
+      + 'neljä viidesosaa siitä on mannerjäätikön alla. Grönlanniksi '
+      + 'maa on Kalaallit Nunaat, kalaallien maa, ja nykyväestö '
+      + 'polveutuu thulelaisista, joiden kulttuuri vaelsi Alaskasta '
+      + 'itään ja saapui Grönlantiin noin vuonna 1300. Kaikki '
+      + 'kaupungit ja kylät ovat jäättömällä rannikolla, enimmäkseen '
+      + 'lännessä, ja välit ovat pitkät. Nuukissa vuorokauden '
+      + 'keskilämpötila liikkuu viiden pakkasasteen ja kymmenen '
+      + 'lämpöasteen välillä, mutta jäätikön laella mitattiin '
+      + '22. joulukuuta 1991 koko pohjoisen pallonpuoliskon ennätys, '
+      + '69,6 pakkasastetta.'
+      + '\n\n'
+      + 'Eurooppalaisten kartoille saaren eteläinen rannikko pääsi '
+      + '1502, ja vuonna 1721 pappi Hans Egede purjehti Bergenistä '
+      + 'etsimään kadonneita pohjoismaisia asukkaita, ei löytänyt heitä '
+      + 'ja perusti sen sijaan nykyisen Nuukin. **Metsästys on yhä '
+      + 'kulttuurin sydän** — maan oman hallinnon sanoin sen sielu — ja '
+      + 'kalastus on tärkein elinkeino ja viennin pääosa. Ruoka tulee '
+      + 'mereltä: hylkeestä, valaasta, kalasta ja linnusta.',
+  },
 };

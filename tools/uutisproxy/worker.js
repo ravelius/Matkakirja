@@ -153,6 +153,11 @@ const SALLITUT = [
   // Libyan uutislähde (maalehti 6.9.2026): syöte ja artikkelilinkit
   // ovat samalla isäntänimellä ilman www-etuliitettä.
   'https://almarsad.co/',
+  // Grönlannin uutislähde (maalehti 6.9.2026): KNR:n syöte ja
+  // artikkelisivut ovat samalla isäntänimellä ilman www-etuliitettä,
+  // ja sama etuliite kattaa sekä tanskan- että grönlanninkielisen
+  // osaston (/da/… ja /kl/…).
+  'https://knr.gl/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

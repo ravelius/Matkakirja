@@ -210,6 +210,19 @@
 > LBY-kommentissa. Julkaisu tapahtuu automaattisesti mainista, kuten
 > alempien merkintöjen kohdalla.
 >
+> **Päivitys 6.9.2026 (Grönlanti):** sallittuihin lisättiin `knr.gl`
+> (maalehti GRL, testattu 6.9.2026: syötteessä 25 juttua, ja
+> artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy kuusi yli
+> 60 merkin kappaletta sekä `og:image`). Osoitteessa **ei ole
+> www-etuliitettä**, ja sama etuliite kattaa sekä tanskan- että
+> grönlanninkielisen osaston. Taulussa on tanskankielinen syöte
+> `https://knr.gl/da/rss`, vaikka grönlanninkielinen `/kl/rss` toimisi
+> yhtä hyvin: MyMemory ei tunne kalaallisutia, joten Käännä-nappi jäisi
+> pysyvästi tyhjäksi. Grönlannin toinen valtakunnallinen lehti
+> Sermitsiaq.AG hylättiin, koska sivustolla ei ole RSS-syötettä
+> lainkaan; perustelut ovat js/packs/uutislahteet.js:n GRL-kommentissa.
+> Julkaisu Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

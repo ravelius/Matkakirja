@@ -978,4 +978,33 @@ export const UUTISLAHTEET = {
     kieli: 'ar',
     syote: 'https://almarsad.co/feed/',
   },
+  /*
+   * KNR eli Kalaallit Nunaata Radioa on Grönlannin yleisradio ja
+   * en-Wikipedian "Music of Greenland" -artikkelin mukaan maan tärkein
+   * mediatalo. Testattu 6.9.2026: syötteessä 25 juttua, tuorein saman
+   * päivän aamulta, ja artikkelisivun ensimmäisestä <article>-lohkosta
+   * jäsentyy kuusi yli 60 merkin kappaletta sekä og:image.
+   *
+   * KIELI ON TANSKA, VAIKKA GRÖNLANNINKIELINEN SYÖTE ON OLEMASSA. Sama
+   * talo julkaisee molemmilla kielillä, ja osoite https://knr.gl/kl/rss
+   * antaa 25 juttua kalaallisutiksi ja läpäisee artikkelisivutestin yhtä
+   * hyvin. Kieli-kenttä on kuitenkin MyMemory-käännöksen lähdekieli,
+   * eikä MyMemory tunne kalaallisutia: langpair=kl|fi palauttaa tyhjän
+   * käännöksen, jolloin lehden Käännä-nappi ei tuottaisi koskaan mitään.
+   * Tanskankielinen syöte antaa saman grönlantilaisen uutisen
+   * käännettävässä muodossa. Jos MyMemory joskus lisää kalaallisutin,
+   * tämä rivi vaihdetaan osoitteeseen /kl/rss ja kieleksi kl.
+   *
+   * Testattu ja hylätty: Sermitsiaq.AG (sermitsiaq.ag), maan toinen
+   * valtakunnallinen lehti — sivustolta ei löydy RSS-syötettä lainkaan
+   * (/rss, /feed, /rss.xml, /services/rss ja /api/rss vastaavat 404:llä
+   * eikä etusivun HTML:ssä ole application/rss+xml -linkkiä). KNR:n
+   * vanha osoite https://knr.gl/kl/rss.xml aukeaa mutta on kuollut
+   * arkisto: kymmenen juttua vuosilta 2015–2017.
+   */
+  GRL: {
+    nimi: 'KNR',
+    kieli: 'da',
+    syote: 'https://knr.gl/da/rss',
+  },
 };

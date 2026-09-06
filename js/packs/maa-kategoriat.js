@@ -48265,4 +48265,415 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * GRÖNLANTI (GRL) — Pohjois-Amerikan laudan maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-gronlanti.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA on tässä tiukka, koska Grönlannilla
+   * on paljon karttaa ja vain yksi pelikaupunki (Nuuk, jolla ei ole
+   * kaupunkilehteä). maastokohteet-grl.js kattaa Gunnbjørn Fjeldin,
+   * Ilulissatin jäävuonon, Diskonsaaren, Hvalseyn, Ivittuutin,
+   * Kangerlussuaqin, mannerjäätikön, Sisimiutin, Uummannaqin,
+   * Ittoqqortoormiitin ja Koillis-Grönlannin kansallispuiston;
+   * skandaalit.js Kvanefjeldin kaivoskiistan ja Eirik Punaisen
+   * nimenannon 985; elaintakyt.js grönlanninkoiran. Maalehti EI toista
+   * niitä: historiassa ei ole Eirik Punaista eikä norjalaisrauniota,
+   * luonto-osiossa ei jäätikköä eikä jäävuonoa, eikä missään
+   * grönlanninkoiraa — Rasmussen-nosto kertoo matkasta, ei koirarodusta.
+   *
+   * HERKÄT AIHEET: nykypolitiikka on kokonaan pois (M3:n Myanmar-linja).
+   * Itsehallinnosta, Tanskan ja Grönlannin suhteesta tai Yhdysvaltain
+   * nykyisestä kiinnostuksesta ei ole yhtään nostoa. Tupilak kerrotaan
+   * uskomuksena ja taidemuotona; en-Wikipedian maininnat ruumiinosista
+   * on jätetty pois, koska ne eivät selitä taidetta vaan vain
+   * järkyttäisivät. Metsästys ja hylkeenliha kerrotaan sellaisina kuin
+   * ne ovat, ilman kaunistelua ja ilman anteeksipyytelyä.
+   *
+   * KUVAT: 16 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin.
+   * NELJÄ NOSTOA JÄI KUVATTOMAKSI: Ammassalikin puukartat (ainoa
+   * Commons-kuva on 800 px leveä), kalattuut (Commonsissa ei ole yhtään
+   * kuvaa grönlantilaisesta tanssista, haitarista tai kuorosta), Sumé
+   * (levynkansi on tekijänoikeuden alainen) ja grönlanninkahvi.
+   * HYLÄTYT: "Kasape dræber høvdingen Oungortok" (juuri tämä Aronin
+   * puupiirros on Sumut-levyn kannessa, mutta se esittää tapon),
+   * "20190628 Tupilaq 2021" ja "Tupilakker" (museovitriini
+   * opastekyltteineen), "Little Auk ... at Qagssissalik, Greenland"
+   * (extmetadatan Artist on "no rights reserved"), "Rasmussen und
+   * Birket-Smith" ja "Knud rasmussen arnold fanck ..." (Artist
+   * "Unknown author"), "Qilaatersorneq near Ammassalik Fjord"
+   * (kymmeniä tunnistettavia kasvoja; tilalle Jens Kreutzmannin
+   * piirros samasta aiheesta).
+   *
+   * TUNNISTETTAVAT KASVOT: mukana vain kuvia, joissa tunnistuva
+   * henkilö ON jutun aihe (Knud Rasmussen matkatovereineen, Rasmus
+   * Lyberth lavalla) — sama linja kuin Kenian lehdessä. KAKSI KUVAA on
+   * otettu Grönlannin ulkopuolella, ja selite sanoo sen suoraan:
+   * grönlanninhai (Nunavut) ja pikkuruokit (Huippuvuoret).
+   */
+  GRL: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Grönlanti on ollut Euroopan kartoilla viisisataa vuotta ja ihmisten '
+          + 'asuttama monta kertaa kauemmin — ja melkein joka kerta, kun ulkopuolinen tuli '
+          + 'katsomaan, hän löysi jotain muuta kuin oli tullut hakemaan.',
+      nostot: [
+        {
+          otsikko: 'Kartta, joka salakuljetettiin Lissabonista',
+          aika: '1500–1502',
+          tiedosto: 'Cantino planisphere (1502).jpg',
+          teksti: 'Ferraran herttua lähetti Alberto Cantinon Portugaliin muka '
+              + 'hevoskauppiaaksi, ja tämä keräsi salaa tietoa löytöretkistä. Marraskuussa '
+              + '1502 Cantino kirjoitti herttualleen maksaneensa kaksitoista kultadukaattia '
+              + 'kartasta, jonka oli saanut Lissabonista pois. Se on vanhin säilynyt kartta, '
+              + 'jossa näkyvät Portugalin löydöt sekä idässä että lännessä — ja siinä on '
+              + 'Grönlannin eteläinen rannikko. Saaren eurooppalaisen uudelleenlöydön tekivät '
+              + 'João Fernandes Lavrador ja Pedro de Barcelos vuosina 1495–98, ja kuningas '
+              + 'Manuel I lähetti Gaspar Corte-Realin sinne 1500 etsimään Luoteisväylää. Meri '
+              + 'oli jäässä, joten retki kääntyi etelään.',
+          selite: 'Cantinon planisfääri on 220 senttiä leveä ja 105 korkea, ja sitä '
+            + 'säilytetään yhä Modenan Biblioteca Estensessä.',
+          lahde: 'Tuntematon portugalilainen kartantekijä, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Pappi, joka etsi kadonneita ja löysi naapurit',
+          aika: '1721–1728',
+          tiedosto: 'Map of Greenland; 1745 (p. 1, A Description of Greenland, Hans Egede).png',
+          teksti: 'Hans Egede oli kuullut Lofooteilla, että Grönlantiin oli joskus '
+              + 'purjehdittu Norjasta eikä sieltä ollut kuulunut mitään kolmeensataan '
+              + 'vuoteen. Hän anoi kuninkaalta luvan lähteä etsimään unohdettua siirtokuntaa, '
+              + 'ja 2. toukokuuta 1721 Haabet lähti Bergenistä mukanaan Egede, vaimo, neljä '
+              + 'lasta ja neljäkymmentä siirtolaista. Norjalaisia ei löytynyt — vain '
+              + 'kalaallit, joiden kieltä Egede alkoi opetella. Isä meidän -rukouksen '
+              + 'jokapäiväinen leipä tuotti vaikeuksia, koska leipää ei syöty: hän kokeili '
+              + 'sanaa mamaq luullen sen tarkoittavan ruokaa, vaikka se tarkoittaa "kuinka '
+              + 'herkullista".',
+          selite: 'Kartta Egeden kirjasta A Description of Greenland (1745). Otsikossa '
+            + 'lukee "Old Greenland as to its Eastern and Western Parts" — juuri se jako '
+            + 'johti hänet harhaan, sillä hän etsi Itäistä asutusta itärannikolta.',
+          lahde: 'Hans Egede, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Lehti, jonka piti pelastaa tarinat',
+          aika: '1861',
+          tiedosto: 'Illustration from Greenlandic newspaper Atuagagdliutit, first supplement 1861-01-01.png',
+          teksti: 'Tanskalainen geologi Hinrich Johannes Rink pelkäsi grönlantilaisten '
+              + 'menettävän oman kulttuurinsa ja keksi lääkkeeksi sanomalehden: jos tarinat '
+              + 'saisi painetuiksi, ne eläisivät. Atuagagdliutitin ensimmäinen numero ilmestyi '
+              + '1. tammikuuta 1861 — kahdeksan suurta sivua, kuusitoista palstaa, '
+              + 'kolmensadan kappaleen painos, jaettiin ilmaiseksi. Kuvitus oli Euroopan '
+              + 'mitassa uraauurtava: puupiirroksia ja maalauksia täysvärisinä, ja erään '
+              + 'väitteen mukaan lehden vuoden 1861 värikuva oli maailman ensimmäinen '
+              + 'sanomalehdessä. Painokoneella oli silti nurja puolensa: suullinen kerronta '
+              + 'väheni sen tultua.',
+          selite: 'Kuva Atuagagdliutitin ensimmäisestä liitteestä 1. tammikuuta 1861: '
+            + 'jääkarhunpyynti, ja kuvan alla selite kalaallisutiksi.',
+          lahde: 'Atuagagdliutit, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Mies, joka ajoi Luoteisväylän koirilla',
+          aika: '1910–1933',
+          tiedosto: 'Knud Rasmussen 1924.jpg',
+          teksti: 'Knud Rasmussen syntyi 1879 Jacobshavnissa tanskalaisen lähetyssaarnaajan '
+              + 'ja inuiitti-tanskalaisen äidin poikana ja oppi lapsena kielen, metsästyksen '
+              + 'ja valjakon ajon. Kaksi vuotta hän yritti näyttelijäksi ja oopperalaulajaksi '
+              + 'tuloksetta. Vuonna 1910 hän perusti Peter Freuchenin kanssa Thulen '
+              + 'kauppa-aseman, maailman pohjoisimman, ja siitä tuli tukikohta seitsemälle '
+              + 'retkelle. Viidennellä, 1921–24, hän jätti retkikuntansa ja ajoi kuusitoista '
+              + 'kuukautta kahden grönlantilaisen kanssa Alaskan Nomeen — ensimmäisenä '
+              + 'eurooppalaisena Luoteisväylän poikki koiravaljakolla.',
+          selite: 'Rasmussen (vas.) ja kaksi grönlantilaista matkakumppaniaan vuonna 1924, '
+            + 'pian sen jälkeen kun valjakko oli tullut perille.',
+          lahde: 'National Photo Company Collection (Library of Congress), '
+            + 'Wikimedia Commons (PD)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Grönlannissa ei ole matelijoita eikä sammakoita ja hyönteisiäkin vain '
+          + 'seitsemänsataa lajia — mutta meressä uivat maailman vanhin selkärankainen ja '
+          + 'valas, jonka hammas myytiin Euroopassa yksisarvisen sarvena.',
+      nostot: [
+        {
+          otsikko: 'Yksisarvisen sarvi tuli Grönlannista',
+          tiedosto: 'Monodon monoceros pod.jpg',
+          teksti: 'Sarvivalaan koiraan kierteinen torahammas on itse asiassa vasen '
+              + 'kulmahammas: se puhkeaa huulen läpi kahden tai kolmen vuoden iässä, kasvaa '
+              + 'puolestatoista kolmeen metriin ja painaa jopa 7,45 kiloa. Se ei ole pelkkä '
+              + 'ase vaan aistinelin, jossa on miljoonia hermopäätteitä — vuonna 2016 kuvattu '
+              + 'droneaineisto näytti valaiden napauttavan sillä turskia tainnoksiin. '
+              + 'Keskiajan Euroopassa hampaita myytiin yksisarvisen sarvina myrkkyä ja tauteja '
+              + 'vastaan, ja hinnan sanottiin olleen satakertainen kullan painoon nähden. '
+              + 'Elisabet I sai Martin Frobisherilta hampaan, jonka arvoksi ilmoitettiin '
+              + 'kymmenentuhatta puntaa.',
+          selite: 'Sarvivalasparvi Grönlannin edustalla ilmasta kuvattuna. Kauppa alkoi '
+            + 'todennäköisesti viikingeistä ja Grönlannin norjalaisista.',
+          lahde: 'Kristin Laidre, Polar Science Center / NOAA, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kala, joka on vanhempi kuin höyrykone',
+          tiedosto: 'Greenland shark profile.jpg',
+          teksti: 'Grönlanninhailla on pisin tiedossa oleva elinikä kaikista '
+              + 'selkärankaisista. Ikä luetaan silmän linssin kiteistä radiohiiliajoituksella, '
+              + 'ja arvio asettuu 272 ja 510 vuoden välille; vanhimmaksi mitattu yksilö oli '
+              + '392-vuotias sadan vuoden virhemarginaalilla. Sukukypsyys tulee vasta noin '
+              + '150-vuotiaana ja poikaset syntyvät elävinä 8–18 vuoden kantoajan jälkeen. '
+              + 'Hai kasvaa puolesta sentistä senttiin vuodessa ja ui hitaammin kuin mikään '
+              + 'muu kala kokoonsa nähden. Moni yksilö on lisäksi lähes sokea, koska silmiin '
+              + 'tarttuu loisäyriäinen — haju ja kuulo riittävät.',
+          selite: 'Grönlanninhai lähikuvassa jään reunalla Admiralty Inletissä Kanadan '
+            + 'Nunavutissa; laji elää koko Pohjois-Atlantilla ja Jäämerellä.',
+          lahde: 'Hemming1952, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maan ainoa metsä on viisitoista kilometriä pitkä',
+          tiedosto: 'Quinnguadalen.jpg',
+          teksti: 'Qinnguan laakso Etelä-Grönlannissa on maan ainoa luonnonmetsä. Se on noin '
+              + 'viidentoista kilometrin mittainen kouru, jonka molemmin puolin vuoret '
+              + 'nousevat puoleentoista kilometriin ja joka päättyy Tasersuaq-järveen. Laakso '
+              + 'on viidenkymmenen kilometrin päässä merestä ja suojassa sisämaan jäätiköiltä '
+              + 'puhaltavalta kylmältä tuulelta, joten hieskoivu ja paju kasvavat siellä '
+              + 'seitsemän tai kahdeksan metrin korkuisiksi ja kasvilajeja on yli '
+              + 'kolmesataa. Samanlaisia metsiä on saattanut olla muuallakin: varhaiset '
+              + 'asukkaat kaatoivat puut polttoon ja rakennuksiin.',
+          selite: 'Qinnguan laakso. Muualla Grönlannin kasvillisuus on enimmäkseen ruohoa ja '
+            + 'matalaa pensasta; täällä tiheikkö yltää ihmistä korkeammalle.',
+          lahde: 'Svickova, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Saaret, jotka ilmestyvät ja katoavat',
+          aika: '1969–2022',
+          tiedosto: 'Kaffeklubben photo.Martin.Nissen jpg.jpg',
+          teksti: 'Maapallon pohjoisimpana maana pidettiin pitkään Kap Morris Jesupia, kunnes '
+              + 'kanadalaisryhmä mittasi 1969 Kaffeklubben-saaren ja totesi sen yltävän 750 '
+              + 'metriä pohjoisemmaksi. Sen jälkeen kilpailu on ollut vilkas. Vuonna 1978 '
+              + 'löytyi Oodaaq, joka nähtiin varmuudella viimeksi 1979, ja 2003 tutkija '
+              + 'Dennis Schmitt löysi 35 metriä pitkän kivikasan, jolle annettiin '
+              + 'epävirallinen nimi 83-42. Vuoden 2022 syvyysmittaus osoitti, ettei se '
+              + 'ollutkaan kiinni merenpohjassa vaan kiviainesta merijään päällä. '
+              + 'Kaffeklubben on siis yhä kiistaton ykkönen.',
+          selite: 'Kaffeklubben-saari ahtojään keskellä. Saari kirjattiin ensi kerran 1900, '
+            + 'ja siellä käytiin ensimmäisen kerran 1921.',
+          lahde: 'Martin Nissen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Neljä viidesosaa maasta on jäätikön alla, joten ruoka tulee mereltä: '
+          + 'hylkeestä, valaasta, kalasta ja linnusta. Kaupan hyllyille tavara saapuu '
+          + 'kesällä laivalla ja talvella lentokoneella.',
+      nostot: [
+        {
+          otsikko: 'Kansallisruoka on keitto, jota ei kiirehditä',
+          tiedosto: 'Phoeca groenlandica piece of meat upernavik 2007-06-26.JPG',
+          teksti: 'Suaasat on Grönlannin kansallisruoka: keitto, joka tehdään perinteisesti '
+              + 'hylkeenlihasta, mutta yhtä hyvin valaasta, porosta tai merilinnuista. Mukaan '
+              + 'tulee sipulia ja perunaa, mausteeksi suolaa, mustapippuria ja laakerinlehti '
+              + '— ei sen enempää. Liemi suurustetaan riisillä tai niin, että ohria liotetaan '
+              + 'vedessä yön yli, jolloin tärkkelys liukenee itsestään keitinveteen. Sama '
+              + 'keitto tunnetaan inuiittien ruokana muuallakin arktisella alueella, ja '
+              + 'kesällä aterioidaan usein ulkona, kun sää on leudompi.',
+          selite: 'Nuoren grönlanninhylkeen lihaa Upernavikissa. Juuri tällaisesta palasta '
+            + 'keitto tehdään.',
+          lahde: 'Kim Hansen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Viisisataa lintua hylkeennahassa',
+          tiedosto: 'Little Auks (Alle alle) on Fuglesangen, Svalbard.jpg',
+          teksti: 'Kiviaq on Pohjois-Grönlannin talviherkku, ja sen tekeminen on koko kylän '
+              + 'työ. Hylkeennahkaan pakataan jopa viisisataa pikkuruokkia kokonaisina, nokat '
+              + 'ja höyhenet mukaan luettuina. Ilma puristetaan pois, nahka ommellaan umpeen '
+              + 'ja saumat tiivistetään hylkeenrasvalla, joka pitää kärpäset loitolla. Käärö '
+              + 'kätketään kiviröykkiöön ja päälle asetetaan iso kivi. Kolmessa kuukaudessa '
+              + 'linnut käyvät läpi hapatuksen, ja ne syödään talvella, etenkin '
+              + 'syntymäpäivinä ja häissä. Käyminen tapahtuu ilman happea, ja siihen liittyy '
+              + 'riskinsä: Knud Rasmussenin kuoleman katsotaan alkaneen kiviaq-annoksesta.',
+          selite: 'Pikkuruokkeja Fuglesangenilla Huippuvuorilla. Sama laji pesii jyrkillä '
+            + 'rinteillä myös Grönlannissa, missä se on metsästettävä lintu.',
+          lahde: 'AWeith, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Mikä kuivuu, se säilyy',
+          tiedosto: 'Dried ammasat upernavik 2007-07-08.jpg',
+          teksti: 'Ammassat eli villakuore on arkiruokaa, koska se kuivuu vaivatta. '
+              + 'Länsirannikolta nostetaan ruijanpallasta, grönlanninpallasta, puna-ahventa '
+              + 'ja rasvakalaa, itärannikolta nieriää; grönlanninturskaa ja isosimppua '
+              + 'syödään vain hätävarana. Sarvivalaan ja valkovalaan raaka nahka eli mattak on '
+              + 'tärkeä C-vitamiinin lähde. Merilevää säilötään talveksi, syksyllä poimitaan '
+              + 'mustikat ja variksenmarjat, kesällä ruusujuuri ja horsman lehdet. '
+              + 'Kaksikymmentäyksi lintulajia on luvallista metsästää, ja lämpenevä ilmasto '
+              + 'on pidentänyt kasvukautta niin, että osa viljelijöistä kokeilee parsakaalia.',
+          selite: 'Kuivattuja ammassateja tarjolla Upernavikissa. Kuivuminen on syy siihen, '
+            + 'että juuri tämä pikkukala on arkiruokaa.',
+          lahde: 'Kim Hansen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kahvi sytytetään, olut pannaan jäätiköstä',
+          teksti: 'Grönlanninkahvi tarjotaan bordeaux-lasissa: kuumaa kahvia, viskiä, Kahlúaa '
+              + 'ja Grand Marnieria, päälle kermavaahtoa, ja seos sytytetään palamaan ennen '
+              + 'juomista. Panimoilla on oma temppunsa. Greenland Brewhouse Narsaqissa alkoi '
+              + 'tehdä olutta jäätiköstä otetusta, noin kahdentuhannen vuoden ikäisestä '
+              + 'jäästä, ja jäätikkövedellä panevat myös Godthaab Bryghus Nuukissa ja '
+              + 'Icefiord Bryghus Ilulissatissa, joka maustaa oluensa variksenmarjalla ja '
+              + 'väinönputkella. Vuoteen 1954 asti alkoholin myyntiä rajoitettiin ankarasti, '
+              + 'ja siltä ajalta on jäänyt tapa panna itse.',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Grönlannin kansallisruoka suaasat perinteisesti keitetään?',
+        vaihtoehdot: [
+          'Poronlihasta',
+          'Hylkeenlihasta',
+          'Turskasta',
+          'Myskihärästä',
+        ],
+        oikea: 1,
+        fakta: 'Keittoon tulee myös sipulia ja perunaa, ja liemi suurustetaan riisillä tai '
+            + 'yön yli liotetulla ohralla.',
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Grönlantilainen kuvataide lähti liikkeelle kahdesta tilauksesta: '
+          + 'tanskalainen virkamies pyysi piirroksia omasta perinteestä, ja tanskalaiset '
+          + 'vieraat halusivat nähdä, miltä kostohirviö näyttää.',
+      nostot: [
+        {
+          otsikko: 'Metsästäjä, joka sairastui ja tarttui siveltimeen',
+          aika: '1822–1869',
+          tiedosto: 'Aron fra Kangeq, Fortællingen om Kigutikkak- Kigutikkak i skoven, , KKS1971-51, Statens Museum for Kunst.jpg',
+          teksti: 'Aron syntyi Kangeqissa 1822 ja eli metsästäjänä, kunnes tuberkuloosi teki '
+              + 'työstä mahdotonta. Hän alkoi piirtää. Vuonna 1858 tanskalainen virkamies '
+              + 'Hinrich Johannes Rink pyysi grönlantilaisia lähettämään piirroksia, karttoja '
+              + 'ja kirjoitettuja kertomuksia oman kansansa historiasta; Aronin taidon Rink '
+              + 'tunnisti heti ja toimitti hänelle piirustusvälineet. Aron teki pieniä '
+              + 'akvarelleja ja puupiirroksia, joista osa päätyi Atuagagdliutitin kuvitukseksi, '
+              + 'ja kirjoitti kuviensa alle selityksen siitä, mitä niissä tapahtuu. '
+              + 'Elinaikanaan häntä ei juuri huomattu.',
+          selite: 'Aronin puupiirros kertomuksesta Kigutikkak. Painolaattojen saumat '
+            + 'erottuvat kuvassa suorina viivoina.',
+          lahde: 'Aron of Kangeq, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Hirviö, jota ei ollut tarkoitus näyttää kenellekään',
+          tiedosto: 'Kaarale Andreassen, En tupilak harpuneres af en kajakmand, , KKS2002-6, Statens Museum for Kunst.jpg',
+          teksti: 'Inuiittien uskomuksessa tupilak oli kostohirviö, jonka angakkuq eli '
+              + 'shamaani kokosi salassa eläimen osista ja herätti henkiin loitsulaululla, '
+              + 'minkä jälkeen se laskettiin mereen etsimään tiettyä vihollista. Työ oli '
+              + 'tekijälleen vaarallista: jos kohteella oli vahvempi taika, tupilak kääntyi '
+              + 'takaisin, ja ainoa pelastus oli tunnustaa teko julkisesti. Koska tupilakit '
+              + 'tehtiin salassa katoavista aineksista, yhtään ei ole säilynyt. Eurooppalaiset '
+              + 'vieraat halusivat silti nähdä, miltä sellainen näyttää, ja niin niistä '
+              + 'alettiin veistää kuvia kaskelotin hampaisiin.',
+          selite: 'Kârale Andreassenin piirros, jossa kajakkimies harppuunoi tupilakin. '
+            + 'Andreassen oli angakkuq Mitsivarniannan poika ja piirsi 1920-luvulla isänsä '
+            + 'tupilakit.',
+          lahde: 'Kârale Andreassen, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Kartat, joita luetaan sormenpäillä',
+          aika: '1885',
+          teksti: 'Kun Gustav Holmin retkikunta pääsi 1880-luvulla Ammassalikin rannikolle '
+              + 'Itä-Grönlantiin, se tapasi tunumiit-yhteisöjä, joilla monien mukaan ei ollut '
+              + 'ollut aiempaa suoraa kosketusta eurooppalaisiin. Umivikista kotoisin ollut '
+              + 'Kunit tuli Holmin luo 8. helmikuuta 1885 ja myi hänelle puisia '
+              + 'rannikkokarttoja: kapuloita, joiden reunaan vuonot ja niemet on veistetty '
+              + 'kohokuvaksi niin, että kartta luetaan sormin eikä silmin. Maaliskuussa hän '
+              + 'toi vielä yhden. Pariisin maantieteellisessä seurassa epäiltiin 1886, '
+              + 'olivatko paikalliset voineet tehdä sellaista; Holm kumosi epäilyn. Kartat '
+              + 'ovat nyt Grönlannin kansallismuseossa Nuukissa.',
+        },
+        {
+          otsikko: 'Lippu, joka voitti äänin 14–11',
+          aika: '1985',
+          tiedosto: 'Greenland Flag - Tasiilaq.jpg',
+          teksti: 'Grönlanti sai oman lippunsa vasta 1985, ja tie sinne oli mutkainen. Vuonna '
+              + '1973 viisi grönlantilaista ehdotti vihreä-valko-sinistä lippua; seuraavana '
+              + 'vuonna sanomalehti keräsi yksitoista ehdotusta, joista kaikki yhtä lukuun '
+              + 'ottamatta olivat ristilippuja, ja järjesti äänestyksen. Komitea ei päässyt '
+              + 'sopuun, ehdotuksia pyydettiin lisää, ja lopulta Thue Christiansenin '
+              + 'puna-valkoinen kiekko voitti vihreä-valkoisen ristin äänin 14–11. Samana '
+              + 'vuonna huomattiin, että tanskalaisen soutuseuran lipussa oli täsmälleen sama '
+              + 'kuvio. Seura oli vanhempi, ja se antoi luvan.',
+          selite: 'Erfalasorput eli "meidän lippumme". Valkoinen raita on jäätikkö, punainen '
+            + 'meri, ja kiekko on aurinko, jonka alaosa on painunut mereen; oikealla näkyy '
+            + 'Dannebrog, jota liputetaan usein rinnalla.',
+          lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Grönlannissa on kaksi musiikkiperinnettä, jotka eivät ole sulautuneet '
+          + 'toisiinsa: rumpu ja laulu, jotka ovat olleet täällä aina, ja viulu, haitari ja '
+          + 'kuoro, jotka tulivat laivalla.',
+      nostot: [
+        {
+          otsikko: 'Kaksintaistelu, jonka voittaa naurattaja',
+          tiedosto: 'Ajaguttaq singing a drum-song.jpg',
+          teksti: 'Grönlantilainen rumpu on soikea ja puukehyksinen, ja sen kalvona on karhun '
+              + 'rakko. Rumputanssit ovat Wikipedian sanoin maan ainoa täysin alkuperäinen '
+              + 'musiikki, ja parhaiten ne ovat säilyneet idässä ja koillisessa. Tanssin '
+              + 'ytimessä on yksi tanssija, joka sepittää laulut; perhe laulaa ne hänen '
+              + 'tanssiessaan, tavallisesti qaggissa eli juuri sitä varten rakennetussa '
+              + 'lumitalossa. Moni tanssi on kaksintaistelu: kaksi laulusukulaista laulaa '
+              + 'vuorotellen toistensa vioista, vitsit on valmisteltu etukäteen, ja voittaja '
+              + 'on se, jolle yleisö nauraa eniten. Näin ratkottiin vakaviakin riitoja.',
+          selite: 'Jens Kreutzmannin piirros Ajaguttaqista rumpulaulussa on vanhin tunnettu '
+            + 'kuva grönlantilaisesta rumputanssista.',
+          lahde: 'Jens Kreutzmann, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Polkka, jonka toivat lähetyssaarnaajat',
+          aika: '1916–',
+          teksti: 'Tanskalaisten mukana Grönlantiin tulivat viulu, haitari ja virsi, ja '
+              + 'herrnhutilaiset lähetyssaarnaajat toivat lisäksi vaskisoittimia ja '
+              + 'moniäänisen kuoron — juuri kuorosta tuli heidän vaikutusvaltaisin '
+              + 'tuontitavaransa. Soittimista syntyi kalattuut, grönlantilainen polkka, jolla '
+              + 'on omat virtuoosinsa, kuten haitarinsoittaja Louis Andreasen; uudempi tyyli '
+              + 'vaigat muistuttaa countrya. Kansallislaulu Nunarput utoqqarsuanngoravit, '
+              + '"Maamme, joka olet käynyt niin vanhaksi", on ollut virallinen vuodesta 1916; '
+              + 'sen sävelsi Jonathan Petersen ja sanoitti Henrik Lund, molemmat '
+              + 'grönlantilaisia.',
+        },
+        {
+          otsikko: 'Levy, jonka osti joka viides grönlantilainen',
+          aika: '1973',
+          teksti: 'Malik Høegh ja Per Berthelsen perustivat 1972 yhtyeen, jonka nimi oli '
+              + 'kysymys: Sumé tarkoittaa missä. Seuraavana vuonna ilmestyi esikoislevy '
+              + 'Sumut, minne, ja sen osti arviolta kaksikymmentä prosenttia koko Grönlannin '
+              + 'väestöstä. Levy laulettiin kokonaan grönlanniksi, siinä käytettiin '
+              + 'rumputanssin aineksia, ja sanoitukset arvostelivat siirtomaavaltaa: '
+              + 'kappaleessa Nunaqarfiit laulettiin, että on aika elää taas inuiitteina eikä '
+              + 'länsimaalaisina. Kannessa oli Aron Kangeqilaisen 1800-luvun puupiirros. '
+              + 'Yhtye hajosi 1977, mutta sen tarinasta tehtiin dokumentti 2014.',
+        },
+        {
+          otsikko: 'Grönlanniksi euroviisukarsintaan',
+          aika: '1979',
+          tiedosto: 'Rasmus Lyberth2.jpg',
+          teksti: 'Rasmus Lyberth syntyi Maniitsoqissa 1951, kasvoi Nuukissa ja alkoi '
+              + 'kaksitoistavuotiaana esiintyä kitaransa kanssa. Vuonna 1969 hän lähti '
+              + 'Kööpenhaminaan ja levytti esikoisalbuminsa Erningaan 1974. Vuonna 1979 hän '
+              + 'osallistui Tanskan euroviisukarsintaan kappaleella Faders bøn, Isän rukous, '
+              + 'jonka hän lauloi grönlanniksi, ja sijoittui yhdenneksitoista '
+              + 'seitsemästätoista. Wikipedian mukaan Lyberth muutti grönlantilaista '
+              + 'musiikkia eniten esiintymällä pelkän viihdyttämisen vuoksi. Maan suurin '
+              + 'levy-yhtiö ULO julkaisee sekä häntä, Suméa että hiphop-ryhmä Nuuk Possea.',
+          selite: 'Rasmus Lyberth esiintymässä Aarhusissa 2013, lähes neljäkymmentä vuotta '
+            + 'ensilevynsä jälkeen.',
+          lahde: 'Nico-dk, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+  ],
 };
