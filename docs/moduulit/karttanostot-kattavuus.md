@@ -1,7 +1,8 @@
 # Karttanostojen kattavuus maittain
 
-Päivitetty: 2.9.2026 (Fable, runko; K2-erän inventaario ja erä 1 täyttivät
-taulukon).
+Päivitetty: 6.9.2026 (Fable, runko; K2-erän inventaario ja erät 1–2 täyttivät
+taulukon). Taulukko-osio on aina `node tools/laske-karttanostot.mjs --md`
+-tulosteesta, ei käsin korjattu.
 Omistaja 2.9.2026: *"pitäisi jatkaa kaikki Euroopan maat loppuun
 näiden karttanostojen osalta. ja muistathan että kohdekaupunkien
 nostot eivät tule pääkartalle?"* Tavoite per maa: 8 kohdetta,
@@ -41,41 +42,41 @@ kuratoidussa `fokuskohteet-grc.js`:ssä, ja Islannin Þjórsá on
 maastokohde `maastokohteet-isl.js`:ssä. Peli katsoo listat joka
 tapauksessa yhdessä (`js/fokuskohteet.js` KOHDE_MAAT).
 
-## Kattavuus 2.9.2026 (erän 1 jälkeen)
+## Kattavuus Euroopassa 6.9.2026 (erien 2–4 jälkeen)
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Itävalta (AUT) | 0 | 4 | 1 | 3 | 0 | 5 | 9 | 3 | kohteita −8 |
-| Bulgaria (BGR) | 12 | 6 | 1 | 3 | 0 | 5 | 18 | 7 | täysi |
-| Bosnia ja Hertsegovina (BIH) | 9 | 5 | 1 | 2 | 0 | 4 | 18 | 2 | täysi |
-| Sveitsi (CHE) | 8 | 5 | 1 | 3 | 0 | 0 | 16 | 0 | täysi |
-| Tšekki (CZE) | 8 | 3 | 1 | 3 | 0 | 4 | 14 | 4 | täysi |
-| Saksa (DEU) | 8 | 13 | 1 | 3 | 0 | 6 | 25 | 5 | täysi |
-| Tanska (DNK) | 0 | 3 | 1 | 3 | 1 | 4 | 7 | 4 | kohteita −8 |
-| Espanja (ESP) | 0 | 5 | 1 | 3 | 3 | 15 | 16 | 10 | kohteita −8 |
-| Viro (EST) | 8 | 3 | 1 | 3 | 0 | 4 | 13 | 5 | täysi |
-| Suomi (FIN) | 0 | 4 | 1 | 3 | 0 | 7 | 6 | 8 | kohteita −8 |
-| Ranska (FRA) | 2 | 6 | 1 | 3 | 0 | 9 | 9 | 11 | kohteita −6 |
-| Britannia (GBR) | 3 | 5 | 1 | 3 | 2 | 7 | 13 | 7 | kohteita −5 |
-| Kreikka (GRC) | 20 | 15 | 1 | 3 | 0 | 4 | 33 | 9 | täysi |
-| Kroatia (HRV) | 8 | 11 | 1 | 3 | 0 | 3 | 23 | 2 | täysi |
-| Unkari (HUN) | 11 | 6 | 1 | 3 | 0 | 3 | 20 | 3 | täysi |
-| Irlanti (IRL) | 0 | 3 | 1 | 3 | 0 | 6 | 9 | 3 | kohteita −8 |
 | Islanti (ISL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
-| Italia (ITA) | 10 | 9 | 1 | 3 | 0 | 10 | 20 | 12 | täysi |
-| Liettua (LTU) | 0 | 3 | 1 | 3 | 0 | 6 | 9 | 3 | kohteita −8 |
+| Sveitsi (CHE) | 8 | 5 | 1 | 3 | 1 | 0 | 17 | 0 | täysi |
+| Tšekki (CZE) | 8 | 3 | 1 | 3 | 0 | 4 | 14 | 4 | täysi |
+| Viro (EST) | 8 | 3 | 1 | 3 | 0 | 4 | 13 | 5 | täysi |
 | Latvia (LVA) | 8 | 3 | 1 | 2 | 0 | 5 | 16 | 2 | täysi |
-| Alankomaat (NLD) | 0 | 3 | 1 | 3 | 0 | 7 | 10 | 3 | kohteita −8 |
-| Norja (NOR) | 0 | 4 | 1 | 3 | 2 | 8 | 13 | 3 | kohteita −8 |
-| Puola (POL) | 0 | 5 | 1 | 3 | 0 | 9 | 12 | 5 | kohteita −8 |
-| Portugali (PRT) | 0 | 4 | 1 | 3 | 1 | 7 | 11 | 4 | kohteita −8 |
+| Tanska (DNK) | 8 | 3 | 1 | 3 | 1 | 4 | 15 | 4 | täysi |
+| Ruotsi (SWE) | 8 | 4 | 1 | 3 | 0 | 4 | 14 | 5 | täysi |
+| Itävalta (AUT) | 8 | 4 | 1 | 3 | 2 | 5 | 17 | 3 | täysi |
+| Bosnia ja Hertsegovina (BIH) | 9 | 5 | 1 | 2 | 0 | 4 | 18 | 2 | täysi |
+| Irlanti (IRL) | 8 | 3 | 1 | 3 | 0 | 6 | 17 | 3 | täysi |
+| Liettua (LTU) | 8 | 3 | 1 | 3 | 0 | 6 | 17 | 3 | täysi |
+| Alankomaat (NLD) | 8 | 3 | 1 | 3 | 0 | 7 | 18 | 3 | täysi |
+| Suomi (FIN) | 8 | 4 | 1 | 3 | 1 | 7 | 14 | 8 | täysi |
 | Romania (ROU) | 12 | 4 | 1 | 2 | 0 | 4 | 19 | 3 | täysi |
-| Venäjä (RUS) | 0 | 8 | 1 | 3 | 0 | 9 | 14 | 6 | kohteita −8 |
-| Ruotsi (SWE) | 0 | 4 | 1 | 3 | 0 | 4 | 6 | 5 | kohteita −8 |
-| Turkki (TUR) | 22 | 6 | 1 | 3 | 0 | 3 | 28 | 6 | täysi |
-| Ukraina (UKR) | 0 | 5 | 1 | 3 | 0 | 9 | 13 | 4 | kohteita −8 |
+| Unkari (HUN) | 11 | 6 | 1 | 3 | 0 | 3 | 20 | 3 | täysi |
+| Norja (NOR) | 8 | 4 | 1 | 3 | 2 | 8 | 20 | 3 | täysi |
+| Portugali (PRT) | 8 | 4 | 1 | 3 | 2 | 7 | 19 | 4 | täysi |
+| Bulgaria (BGR) | 12 | 6 | 1 | 3 | 0 | 5 | 18 | 7 | täysi |
+| Kroatia (HRV) | 8 | 11 | 1 | 3 | 0 | 3 | 23 | 2 | täysi |
+| Puola (POL) | 8 | 5 | 1 | 3 | 0 | 9 | 20 | 5 | täysi |
+| Ukraina (UKR) | 8 | 5 | 1 | 3 | 0 | 9 | 21 | 4 | täysi |
+| Ranska (FRA) | 8 | 6 | 1 | 3 | 6 | 9 | 15 | 11 | täysi |
+| Iso-Britannia (GBR) | 8 | 5 | 1 | 3 | 9 | 7 | 20 | 7 | täysi |
+| Venäjä (RUS) | 8 | 8 | 1 | 3 | 2 | 9 | 22 | 6 | täysi |
+| Saksa (DEU) | 8 | 13 | 1 | 3 | 4 | 6 | 28 | 5 | täysi |
+| Italia (ITA) | 10 | 9 | 1 | 3 | 3 | 10 | 22 | 12 | täysi |
+| Espanja (ESP) | 8 | 5 | 1 | 3 | 4 | 15 | 25 | 10 | täysi |
+| Turkki (TUR) | 22 | 6 | 1 | 3 | 2 | 3 | 29 | 6 | täysi |
+| Kreikka (GRC) | 20 | 15 | 1 | 3 | 1 | 4 | 33 | 9 | täysi |
 
-Maita 29, tavoitteessa 14, vajaita 15.
+Maita 29, tavoitteessa 29, vajaita 0. Euroopan kohdetavoite on täynnä.
 
 ## Erä 1: viisi heikointa maata, ennen ja jälkeen
 
@@ -123,10 +124,16 @@ niiden sisällä ne lajit, joissa vaje on suurin.
 
 - **K2, erä 1 (tehty)** — ISL, CHE, CZE, EST, LVA: 8 kohdetta kuhunkin,
   yhteensä 40 uutta karttanostoa.
-- **Erä 2 (ehdotus)** — DNK 11, SWE 11, AUT 12, IRL 12, LTU 12
-  karttamerkkiä. Kaikilla nolla kohdetta ja pienin merkkimäärä
-  jäljellä olevista; maasto, eläintäky ja skandaalit ovat niissä jo
-  tavoitteessa, joten työ on puhdasta kohdetyötä samalla mallilla.
+- **Erä 2 (tehty 6.9.2026)** — DNK, SWE, AUT, IRL, LTU: 8 kohdetta
+  kuhunkin, yhteensä 40 uutta karttanostoa. Omistaja 6.9.2026:
+  *"Jatka kartta nostojen tekoa koko maailmaan."* Kaikilla viidellä oli
+  nolla kohdetta ja pienin merkkimäärä jäljellä olevista, joten työ oli
+  puhdasta kohdetyötä erän 1 mallilla. Yksikään uusi merkki ei ole
+  pelikaupungin kohdalla: lähin on Tarán kukkula 15,1 lautayksikön
+  päässä Dublinista (raja `KAUPUNGIN_KOHDALLA_SADE` on 7), joten kaikki
+  40 ovat pääkartan merkkejä. Kuvaton erä, kuten erä 1. Ainoa hylätty
+  ehdokas oli Drottningholm: kuusi yksikköä Tukholmasta eli kaupungin
+  kohdalla.
 - **Erä 3 (ehdotus)** — NLD 13, FIN 14, PRT 15, NOR 16, POL 17.
 - **Erä 4 (ehdotus)** — UKR 17, RUS 20, ESP 26 sekä vajaat FRA (−6) ja
   GBR (−5), jotka ovat lähimpänä maalia.
@@ -153,3 +160,275 @@ täyttyy kaikkialla. Koko jäljellä oleva vaje on siis kohteissa.
    Kuvaton kohde on parempi kuin tarkistamaton kuva.
 5. **Lähde on en-Wikipedia + artikkelin osa + tarkistuspäivä**, ja
    jokainen väite on lähteen katteessa (faktakuri).
+
+## Kattavuus koko maailmassa 6.9.2026
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Työkalu laskee siitä lähtien KAIKKI laudan maat, ei enää Euroopan 29:ää:
+joukko on maailmankartan oma maalista (`map.cityCountry` -taulun uniikit
+ISO-tunnukset, **112 maata**) eli täsmälleen ne maat, joissa pelaaja voi
+olla. Nimet tulevat pelin omasta nimitaulusta (`map.countryShapes`), ja
+kohdelista suoraan pelin `KOHDE_MAAT`-taulusta — työkaluun ei siis
+tarvitse lisätä riviä, kun uusi `fokuskohteet-<iso>.js` syntyy.
+Tavoite ja sarakkeet ovat samat kuin yllä.
+
+Rivit on ryhmitelty maanosittain ja maanosan sisällä **heikoimmasta
+vahvimpaan** (pääkartan ja kohdekartan merkkien summa) — siinä
+järjestyksessä, jossa erät valitaan. Maanosa tulee laudan omasta
+`cityManner`-taulusta; Euroopan laudan 29 maata pysyvät Euroopassa,
+joten Turkki ja Venäjä ovat tässäkin siellä, missä niiden erät on
+suunniteltu.
+
+Edellä oleva 2.9.2026 taulukko on jätetty koskematta tarkoituksella:
+rinnakkaiset erät päivittävät sitä, ja Euroopan luvut näkyvät tässä
+osiossa tuoreina.
+
+**Tilanne yhdellä silmäyksellä (erien 2–4 jälkeen, 6.9.2026 aamu).** 112 maasta **29 on tavoitteessa** ja 83 vajaita; **32 maalla ei ole yhtäkään karttamerkkiä**. Kaikki tavoitteessa olevat ovat Euroopassa, jonka kohdetavoite täyttyi erillä 2–4 (115 uutta kohdetta yhdessä yössä). Euroopan ulkopuolella kohdetavoitteesta (8) jää vajaaksi jokainen maa, maastotavoitteesta (3) 44 maata, eläintäky puuttuu 59 maasta ja skandaalitavoite (2) jää täyttymättä 83 maassa — skandaaleja ei ole kirjoitettu Euroopan ulkopuolelle yhteenkään maahan.
+
+### Eurooppa (29 maata)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Islanti (ISL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Sveitsi (CHE) | 8 | 5 | 1 | 3 | 1 | 0 | 17 | 0 | täysi |
+| Tšekki (CZE) | 8 | 3 | 1 | 3 | 0 | 4 | 14 | 4 | täysi |
+| Viro (EST) | 8 | 3 | 1 | 3 | 0 | 4 | 13 | 5 | täysi |
+| Latvia (LVA) | 8 | 3 | 1 | 2 | 0 | 5 | 16 | 2 | täysi |
+| Tanska (DNK) | 8 | 3 | 1 | 3 | 1 | 4 | 15 | 4 | täysi |
+| Ruotsi (SWE) | 8 | 4 | 1 | 3 | 0 | 4 | 14 | 5 | täysi |
+| Itävalta (AUT) | 8 | 4 | 1 | 3 | 2 | 5 | 17 | 3 | täysi |
+| Bosnia ja Hertsegovina (BIH) | 9 | 5 | 1 | 2 | 0 | 4 | 18 | 2 | täysi |
+| Irlanti (IRL) | 8 | 3 | 1 | 3 | 0 | 6 | 17 | 3 | täysi |
+| Liettua (LTU) | 8 | 3 | 1 | 3 | 0 | 6 | 17 | 3 | täysi |
+| Alankomaat (NLD) | 8 | 3 | 1 | 3 | 0 | 7 | 18 | 3 | täysi |
+| Suomi (FIN) | 8 | 4 | 1 | 3 | 1 | 7 | 14 | 8 | täysi |
+| Romania (ROU) | 12 | 4 | 1 | 2 | 0 | 4 | 19 | 3 | täysi |
+| Unkari (HUN) | 11 | 6 | 1 | 3 | 0 | 3 | 20 | 3 | täysi |
+| Norja (NOR) | 8 | 4 | 1 | 3 | 2 | 8 | 20 | 3 | täysi |
+| Portugali (PRT) | 8 | 4 | 1 | 3 | 2 | 7 | 19 | 4 | täysi |
+| Bulgaria (BGR) | 12 | 6 | 1 | 3 | 0 | 5 | 18 | 7 | täysi |
+| Kroatia (HRV) | 8 | 11 | 1 | 3 | 0 | 3 | 23 | 2 | täysi |
+| Puola (POL) | 8 | 5 | 1 | 3 | 0 | 9 | 20 | 5 | täysi |
+| Ukraina (UKR) | 8 | 5 | 1 | 3 | 0 | 9 | 21 | 4 | täysi |
+| Ranska (FRA) | 8 | 6 | 1 | 3 | 6 | 9 | 15 | 11 | täysi |
+| Iso-Britannia (GBR) | 8 | 5 | 1 | 3 | 9 | 7 | 20 | 7 | täysi |
+| Venäjä (RUS) | 8 | 8 | 1 | 3 | 2 | 9 | 22 | 6 | täysi |
+| Saksa (DEU) | 8 | 13 | 1 | 3 | 4 | 6 | 28 | 5 | täysi |
+| Italia (ITA) | 10 | 9 | 1 | 3 | 3 | 10 | 22 | 12 | täysi |
+| Espanja (ESP) | 8 | 5 | 1 | 3 | 4 | 15 | 25 | 10 | täysi |
+| Turkki (TUR) | 22 | 6 | 1 | 3 | 2 | 3 | 29 | 6 | täysi |
+| Kreikka (GRC) | 20 | 15 | 1 | 3 | 1 | 4 | 33 | 9 | täysi |
+
+### Lähi-itä (12 maata)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Kypros (CYP) | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | kohteita −8, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
+| Oman (OMN) | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | kohteita −8, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
+| Qatar (QAT) | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | kohteita −8, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
+| Arabiemiirikunnat (ARE) | 1 | 2 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −7, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
+| Kuwait (KWT) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Saudi-Arabia (SAU) | 1 | 2 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −7, maastoa −1, skandaaleja −2 |
+| Jemen (YEM) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Iran (IRN) | 1 | 3 | 0 | 0 | 0 | 0 | 3 | 1 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
+| Jordania (JOR) | 1 | 3 | 0 | 0 | 0 | 0 | 3 | 1 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
+| Syyria (SYR) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
+| Irak (IRQ) | 3 | 3 | 0 | 0 | 0 | 0 | 5 | 1 | kohteita −5, eläintäky puuttuu, skandaaleja −2 |
+| Egypti (EGY) | 4 | 3 | 0 | 0 | 3 | 0 | 9 | 1 | kohteita −4, eläintäky puuttuu, skandaaleja −2 |
+
+### Aasia (19 maata)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Hongkong (HKG) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Indonesia (IDN) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Intia (IND) | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
+| Sri Lanka (LKA) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Myanmar (MMR) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Nepal (NPL) | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
+| Singapore (SGP) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Thaimaa (THA) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Vietnam (VNM) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Taiwan (TWN) | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | kohteita −8, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
+| Japani (JPN) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
+| Kazakstan (KAZ) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Etelä-Korea (KOR) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Mongolia (MNG) | 1 | 2 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −7, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
+| Pakistan (PAK) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Uzbekistan (UZB) | 1 | 2 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −7, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
+| Afganistan (AFG) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
+| Filippiinit (PHL) | 0 | 4 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Kiina (CHN) | 1 | 4 | 1 | 0 | 0 | 0 | 5 | 0 | kohteita −7, skandaaleja −2 |
+
+### Afrikka (27 maata)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Saint Helena (SHN) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Etelä-Sudan (SDS) | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | kohteita −8, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
+| Angola (AGO) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Kamerun (CMR) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Kongo (COD) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Algeria (DZA) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Etiopia (ETH) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
+| Ghana (GHA) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Kenia (KEN) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
+| Liberia (LBR) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Marokko (MAR) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
+| Madagaskar (MDG) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
+| Mali (MLI) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Mosambik (MOZ) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Namibia (NAM) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
+| Sudan (SDN) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Senegal (SEN) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Sierra Leone (SLE) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Tšad (TCD) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Tansania (TZA) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
+| Uganda (UGA) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
+| Libya (LBY) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
+| Nigeria (NGA) | 0 | 4 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Somalia (SOM) | 0 | 4 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
+| Tunisia (TUN) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
+| Etelä-Afrikka (ZAF) | 0 | 4 | 1 | 0 | 0 | 0 | 4 | 0 | kohteita −8, skandaaleja −2 |
+| Zimbabwe (ZWE) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
+
+### Pohjois-Amerikka (7 maata)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Kanada (CAN) | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
+| Kuuba (CUB) | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
+| Grönlanti (GRL) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Guatemala (GTM) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Nicaragua (NIC) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Meksiko (MEX) | 1 | 0 | 1 | 0 | 0 | 0 | 1 | 0 | kohteita −7, maastoa −3, skandaaleja −2 |
+| Yhdysvallat (USA) | 0 | 0 | 1 | 0 | 4 | 0 | 3 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
+
+### Etelä-Amerikka (11 maata)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Argentiina (ARG) | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
+| Bolivia (BOL) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Brasilia (BRA) | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
+| Chile (CHL) | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
+| Kolumbia (COL) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Ecuador (ECU) | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Panama (PAN) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Paraguay (PRY) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Uruguay (URY) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Venezuela (VEN) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Peru (PER) | 0 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
+
+### Oseania (7 maata)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Australia (AUS) | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
+| Fidži (FJI) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Uusi-Seelanti (NZL) | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
+| Papua-Uusi-Guinea (PNG) | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
+| Salomonsaaret (SLB) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Itä-Timor (TLS) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+| Vanuatu (VUT) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
+
+Maita 112, tavoitteessa 29, vajaita 83.
+
+## Maailman erät (ehdotus)
+
+Sama sääntö kuin Euroopassa: erä on **viisi maata taulukon heikoimmasta
+päästä**, ja jokaiselle kirjoitetaan **8 kohdetta, 3 maastokohdetta,
+1 eläintäky ja 2 skandaalia**. Kohdekaupungin kohdalle
+(`KAUPUNGIN_KOHDALLA_SADE`, 7 lautayksikköä) ei sijoiteta uutta
+pääkartan merkkiä, ja jokainen väite on en-Wikipedian katteessa
+lähderivillä. Erät ovat maanosittain, jotta yksi erä on yhtä
+lähdeaineistoa ja yhtä karttaseutua — ja jotta parvi voi ajaa
+useampaa maanosaa rinnakkain ilman, että kaksi erää koskee samaan
+tiedostoon.
+
+| erä | maanosa | maat (merkkejä nyt) |
+|---|---|---|
+| M1 | Etelä-Amerikka | Argentiina (ARG) 0, Bolivia (BOL) 0, Brasilia (BRA) 0, Chile (CHL) 0, Kolumbia (COL) 0 |
+| M2 | Oseania | Australia (AUS) 0, Fidži (FJI) 0, Uusi-Seelanti (NZL) 0, Papua-Uusi-Guinea (PNG) 0, Salomonsaaret (SLB) 0 |
+| M3 | Aasia | Hongkong (HKG) 0, Indonesia (IDN) 0, Intia (IND) 0, Sri Lanka (LKA) 0, Myanmar (MMR) 0 |
+| M4 | Pohjois-Amerikka | Kanada (CAN) 0, Kuuba (CUB) 0, Grönlanti (GRL) 0, Guatemala (GTM) 0, Nicaragua (NIC) 0 |
+| M5 | Afrikka | Saint Helena (SHN) 0, Etelä-Sudan (SDS) 2, Angola (AGO) 3, Kamerun (CMR) 3, Kongo (COD) 3 |
+| M6 | Lähi-itä | Kypros (CYP) 2, Oman (OMN) 2, Qatar (QAT) 2, Arabiemiirikunnat (ARE) 3, Kuwait (KWT) 3 |
+| M7 | Eurooppa | Tanska (DNK) 11, Ruotsi (SWE) 11, Itävalta (AUT) 12, Irlanti (IRL) 12, Liettua (LTU) 12 |
+
+Erä M7 on sama kuin Euroopan "erä 2 (ehdotus)" yllä — sama viisikko,
+sama peruste. Muut kuusi ovat uusia.
+
+**Mitä työtä erä on.** Euroopan ulkopuolella vaje on kaikissa neljässä
+lajissa eikä vain kohteissa: 32 maalla ei ole yhtäkään karttamerkkiä,
+eläintäky puuttuu 59 maasta ja skandaalitavoite 83 maasta. Erän hinta on
+siis korkeampi kuin Euroopassa — yhtä maata kohti 8 + 3 kohdetta,
+1 eläintäky ja 2 skandaalia, eli viiden maan erässä noin 70 uutta
+riviä. Ensimmäinen erä kannattaa ajaa yhtenä maanosana, jotta mitta
+näkyy ennen kuin muut kuusi tilataan.
+
+**Ajojärjestys ehdotuksena.** M1 ja M2 ensin (kaikki kymmenen maata
+nollassa, ja niiden maastokohteet puuttuvat kokonaan — sama putki kuin
+Euroopan erässä 1), sitten M3 ja M4, sitten M5 ja M6, ja M7 vasta
+lopuksi: Euroopan heikoinkin maa on 11 merkissä, eli muualla sama työ
+tuottaa moninkertaisen hyödyn.
+## Erä 4 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Erä vei loppuun Euroopan viimeiset vajaat maat. Yhteensä 35 uutta
+kohdetta, kaikki maan omaan `js/packs/maastokohteet-<iso>.js`-tiedostoon
+lohkoon "K2-ERÄ 4 6.9.2026". Yhdenkään tyyppi ei ole maastoa, kaikilla on
+vain maailmankartan rivi (erillislaudasta luovuttu, Raamattu 30.8.2026),
+ja erä on kuvaton. Taulukon luvut ajetaan `tools/laske-karttanostot.mjs`
+-työkalulla erikseen.
+
+| maa | uusia | kohteet |
+|---|---:|---|
+| Ukraina (UKR) | 8 | Kamjanets-Podilskyin linna, Tšernobylin ydinvoimala, Hersonesos, Lviv, Hortytsja, Poltavan taistelu, Sofijivkan puisto, Derzhprom |
+| Venäjä (RUS) | 8 | Kizhin pogosta, Solovetskin luostari, Kazanin kreml, Veliki Novgorod, Kolan syväreikä, Tunguskan räjähdys, Tobolskin kreml, Jasnaja Poljana |
+| Espanja (ESP) | 8 | Santiago de Compostela, Segovian akvedukti, Altamiran luola, Toledo, Córdoban moskeijakatedraali, Las Médulas, Méridan roomalainen teatteri, Salamancan yliopisto |
+| Ranska (FRA) | 6 | Mont-Saint-Michel, Carcassonnen linnoituskaupunki, Lascaux, Chartresin katedraali, Pont du Gard, Carnacin kivirivit |
+| Britannia (GBR) | 5 | Stonehenge, Hadrianuksen muuri, Skara Brae, Ironbridge, Bathin roomalaiset kylpylät |
+
+FRA:lla oli jo kaksi ja GBR:llä kolme kuratoitua kohdetta
+(`js/packs/fokuskohteet-fra.js`, `-gbr.js`); niihin ei koskettu eikä
+yhtäkään niiden kohteista toistettu.
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-listan kaupunkiin, ja jokaisen
+kohteen lähin on kirjattu sen koordinaattirivin viereen. Koko erän lähin
+on Toledo 23,9 lautayksikön päässä Madridista; raja
+`KAUPUNGIN_KOHDALLA_SADE` on 7. Kolme kohdetta jätettiin pois juuri
+tästä säännöstä: Alhambra (Granadan kohdalla), Versailles (7,3 yksikköä
+Pariisista) ja Forth Bridge (7,1 yksikköä Edinburghista).
+## Erä 3 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Viisi maata, kahdeksan kohdetta kuhunkin, yhteensä 40 uutta
+karttanostoa. Kaikki asuvat maan omassa
+`js/packs/maastokohteet-<iso>.js`-tiedostossa lohkossa "K2-ERÄ 3
+6.9.2026" — sama ratkaisu ja sama perustelu kuin erässä 1, koska
+`js/fokuskohteet.js` KOHDE_MAAT on yhä rinnakkaisen erän hallussa.
+Erä on kuvaton; kortti kantaa tekstin ja lähteen. Taulukon luvut
+päivittää Fable laskurilla (`node tools/laske-karttanostot.mjs --md`).
+
+| maa | kohteet |
+|---|---|
+| Alankomaat (NLD) | Woudagemaal, Deltatyöt, Vredespaleis, Domtoren, Bourtange, Giethoorn, Kröller-Müllerin museo, Nijmegen |
+| Suomi (FIN) | Olavinlinna, Turun linna, Vanha Rauma, Verla, Petäjäveden vanha kirkko, Sammallahdenmäki, Kerimäen kirkko, Bomarsund |
+| Portugali (PRT) | Sintra, Batalhan luostari, Tomarin luostari, Guimarães, Almendresin kivikehä, São Vicenten niemi, Elvas, Óbidos |
+| Norja (NOR) | Urnesin sauvakirkko, Røros, Altan kalliopiirrokset, Nordkapp, Nidarosin tuomiokirkko, Vemork, Flåmsbana, Eidsvollin rakennus |
+| Puola (POL) | Malborkin linna, Auschwitz-Birkenau, Jasna Góra, Zamość, Westerplatte, Gniezno, Elblągin kanava, Krzemionki |
+
+Kaikki 40 ovat pääkartan merkkejä: lähin uusi merkki on Sintra 9,2
+lautayksikön päässä Lissabonista, eli yli `KAUPUNGIN_KOHDALLA_SADE`n
+(7) ja yli kaupunkikaton säteen (8). Muissa maissa lähin on 15,2–61,1
+yksikön päässä.
+
+Pois jätettiin kohteita, joiden nimi on jo kartalla (sääntö N3):
+Suomenlinna (Helsingin kohdekartan piste), Afsluitdijk, Delft, Porto,
+Coimbra, Wieliczka, Toruń ja Wrocław (kaupunkien fokusvirran nostoja
+omalla karttapaikallaan) sekä Białowieża (Puolan eläintäky).
+Kinderdijk pudotettiin, koska sen nimiö osui Van Meegeren -skandaalin
+nimiön päälle (`tools/tarkista-nimiolimitys.mjs`); tilalle tuli
+Woudagemaal.

@@ -27,6 +27,39 @@
  * mahdollista olemassa olevaa fokuskohteet-pakkia EI ole tarvinnut
  * koskea eikä yhtään sen kohdetta ole toistettu täällä.
  *
+ * ── K2-ERÄ 4 6.9.2026: KOHTEITA MAASTON RINNALLE ───────────────────
+ *
+ * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+ * Venäjällä oli neljätoista karttamerkkiä ja NOLLA kuratoitua kohdetta
+ * (docs/moduulit/karttanostot-kattavuus.md), joten koko vaje oli
+ * kohteissa. Tässä ovat ne kahdeksan; yhdenkään tyyppi ei ole maastoa,
+ * vaan historiaa, kulttuuria, tekniikkaa tai kaupunkia.
+ *
+ * MIKSI NE OVAT TÄSSÄ TIEDOSTOSSA EIVÄTKÄ fokuskohteet-rus.js:ssä.
+ * Sama syy kuin erässä 1: kohdepakki vaatisi rivin
+ * js/fokuskohteet.js:n KOHDE_MAAT-tauluun ja lehden poltettujen nimien
+ * lohkon (js/packs/fokus-grc.js FOKUS_LISANIMET), eikä kumpaankaan
+ * kosketa tässä erässä. Maastokohteiden hakemisto
+ * (js/packs/maastokohteet.js) liittää listan peliin sellaisenaan.
+ *
+ * KAIKKI KAHDEKSAN OVAT KAUKANA PELIKAUPUNGISTA. Venäjällä on kaksi
+ * pelikaupunkia (Moskova ja Pietari), ja etäisyys mitattiin jokaiseen
+ * js/packs/maailmankartta.js CITIES-listan kaupunkiin; jokaisen
+ * kohteen lähin on kirjattu sen oman koordinaattirivin viereen. Lähin
+ * koko erässä on Veliki Novgorod 75,9 lautayksikön päässä Pietarista —
+ * raja KAUPUNGIN_KOHDALLA_SADE on 7 (js/fokuskohteet.js), joten
+ * yksikään ei kuulu kohdekartalle vaan kaikki ovat pääkartan merkkejä.
+ *
+ * NELJÄ KOHDETTA ON EUROOPAN LAUDAN KAAVAN ITÄPUOLELLA, mutta se ei
+ * enää vaikuta mihinkään: erillislaudasta on luovuttu (Raamattu
+ * 30.8.2026), eikä uusiin kohteisiin kirjoiteta `europe`-riviä
+ * lainkaan. Kaikki kahdeksan osuvat Venäjän fokuslehden rajaukseen
+ * (js/packs/fokus-grc.js FOKUS_POHJAT.RUS).
+ *
+ * KUVATON ERÄ. Kortti kantaa tekstin ja lähteen, ei kuvaa — sama linja
+ * kuin erässä 1. Faktat on tarkistettu en-Wikipediasta kohde
+ * kerrallaan 6.9.2026.
+ *
  * Venäjän maastokohteet. Faktat en-Wikipediasta 29.8.2026. Venäjällä on KURATOITU fokuslehti (tools/fokuskartta/maat.mjs FOKUSMAAT.RUS), jonka meret ovat JÄÄMERI, BARENTSINMERI, OHOTANMERI ja BERINGINMERI — Barentsinmeren merkki istuu siis lehteen poltetun nimen päälle. Vuoria lehdellä ei ole yhtään. Suurin osa maasta on Euroopan laudan kaavan (lon -11...41) itäpuolella, joten useimmat kohteet saavat vain maailmankartan rivin.
  */
 export const MAASTOKOHTEET_RUS = [
@@ -221,6 +254,280 @@ export const MAASTOKOHTEET_RUS = [
       + 'ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin '
       + 'kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.',
     lahde: 'en-Wikipedia "Ob (river)", johdanto-osa (tarkistettu 29.8.2026).',
+  },
+  /* ================================================================
+   * K2-ERÄ 4 6.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston
+   * alussa. Uusilla kohteilla on vain maailmankartan rivi: Euroopan
+   * erillislaudasta on luovuttu (Raamattu 30.8.2026), eikä uutta
+   * `europe`-koordinaattia siksi lasketa. Yllä olevien maastokohteiden
+   * vanhoihin riveihin ei ole koskettu.
+   * ============================================================== */
+  {
+    id: 'kizhin-pogosta',
+    nimi: 'Kizhin pogosta',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Kuinka monta kupolia Kirkastuksen kirkossa on?',
+      'Mitä sana pogosta tarkoittaa?',
+    ],
+    korostukset: ['pogosta|pogosta'],
+    nappi: 'Kirkko, joka tehtiin ilman naulaa',
+    // 35.225 E / 62.0667 N — en-Wikipedia "Kizhi Pogost";
+    // lähin pelikaupunki Pietari 196,1 lautayksikön päässä.
+    laudat: {
+      maailmankartta: { x: 7007.5, y: 821.1 },
+    },
+    teksti: 'Kizhin pogosta on 1600-luvulle juontuva kokonaisuus Kizhin saarella '
+      + 'Äänisellä Karjalan tasavallassa. Sana tarkoittaa aidan sisään jäävää aluetta, '
+      + 'ja täällä sen sisällä ovat kaksi suurta puukirkkoa — 22-kupolinen '
+      + 'Kirkastuksen kirkko ja 9-kupolinen Esirukouksen kirkko — sekä kellotapuli. '
+      + 'Unesco otti kohteen maailmanperintöluetteloonsa 1990.\n\n'
+      + 'Rakennusten perusyksikkö on pyöreä mäntyhirsi, halkaisijaltaan noin '
+      + 'kolmekymmentä senttiä ja pituudeltaan kolmesta viiteen metriin. Koko pogosta '
+      + 'rakennettiin ilman ainuttakaan naulaa, ja tuhannet hirret tuotiin mantereelta '
+      + '— aikanaan mittava kuljetusurakka.\n\n'
+      + 'Kirkastuksen kirkon alttari laskettiin 6. kesäkuuta 1714. Se on lämmittämätön '
+      + 'kesäkirkko, joka nousi salaman polttaman edeltäjänsä paikalle, eikä '
+      + 'rakentajien nimiä tiedetä. Tarun mukaan pääkirvesmies käytti koko työhön yhtä '
+      + 'kirvestä ja heitti sen valmistuttua järveen sanoen, ettei toista samanlaista '
+      + 'ole eikä tule. Kirkko on 37 metriä korkea ja yksi Pohjois-Euroopan '
+      + 'korkeimmista puurakennuksista.',
+    lahde: 'en-Wikipedia "Kizhi Pogost", johdanto-osa sekä osiot "General '
+      + 'information" ja "The Church of the Transfiguration" (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'solovetskin-luostari',
+    nimi: 'Solovetskin luostari',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mikä oli Solovetskin kapina?',
+      'Mitä luostarissa tuotettiin?',
+    ],
+    korostukset: ['vanhauskoiset|vanhauskoisten'],
+    nappi: 'Linnoitusluostari Vienanmerellä',
+    // 35.7106 E / 65.0244 N — en-Wikipedia "Solovetsky Monastery";
+    // lähin pelikaupunki Pietari 319,3 lautayksikön päässä.
+    laudat: {
+      maailmankartta: { x: 7023.7, y: 664.9 },
+    },
+    teksti: 'Solovetskin luostari on linnoitettu luostari Solovetskin saarilla '
+      + 'Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, '
+      + 'jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin '
+      + '1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja '
+      + 'heitä pidetään sen toisina perustajina.\n\n'
+      + 'Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja '
+      + 'politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 '
+      + 'kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja '
+      + 'helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 '
+      + 'palvelijaa, käsityöläistä ja talonpoikaa.\n\n'
+      + 'Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva '
+      + 'varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset '
+      + '1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, '
+      + 'ja vuosien 1668–1676 Solovetskin kapina nousi patriarkka Nikonin '
+      + 'kirkkouudistusta vastaan. Vuosina 1926–1939 luostari muutettiin '
+      + 'neuvostovankilaksi ja työleiriksi, josta tuli koko Gulag-järjestelmän '
+      + 'esikuva.',
+    lahde: 'en-Wikipedia "Solovetsky Monastery", johdanto-osa ja osio "History" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'kazanin-kreml',
+    nimi: 'Kazanin kreml',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka määräsi kremlin rakennettavaksi?',
+      'Mikä Söyembikän torni on?',
+    ],
+    korostukset: ['Söyembikän torni|Söyembikän torni'],
+    nappi: 'Kremli khaanien linnan raunioilla',
+    // 49.1056 E / 55.7992 N — en-Wikipedia "Kazan Kremlin";
+    // lähin pelikaupunki Moskova 382,0 lautayksikön päässä.
+    laudat: {
+      maailmankartta: { x: 7470.2, y: 1128.6 },
+    },
+    teksti: 'Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana '
+      + 'Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, '
+      + 'ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui '
+      + 'työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, '
+      + 'jota kutsuttiin Barmaksi.\n\n'
+      + 'Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on '
+      + 'ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, '
+      + 'ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. '
+      + 'Katedraalin viisikerroksinen kellotorni purettiin 1930.\n\n'
+      + 'Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari '
+      + 'Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen '
+      + 'kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla '
+      + 'pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennettu Kul Šarifin '
+      + 'moskeija ja Konstantin Tonin suunnittelema kuvernöörin talo vuosilta '
+      + '1843–1853, nykyään Tatarstanin presidentin palatsi.',
+    lahde: 'en-Wikipedia "Kazan Kremlin", johdanto-osa ja osio "History and monuments" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'veliki-novgorod',
+    nimi: 'Veliki Novgorod',
+    tyyppi: 'kaupunki',
+    kysymykset: [
+      'Mikä Novgorodin tasavalta oli?',
+      'Mikä oli hansan kontor?',
+    ],
+    korostukset: ['hansaliitto|hansaliiton', 'Volhov|Volhov-joen'],
+    nappi: 'Tasavalta, joka hallitsi Venäjän pohjoista',
+    // 31.2667 E / 58.55 N — en-Wikipedia "Veliky Novgorod";
+    // lähin pelikaupunki Pietari 75,9 lautayksikön päässä.
+    laudat: {
+      maailmankartta: { x: 6875.6, y: 997.1 },
+    },
+    teksti: 'Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen '
+      + 'keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki '
+      + 'lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. '
+      + 'Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta '
+      + 'uuttakaupunkia.\n\n'
+      + 'Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä '
+      + 'ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin '
+      + 'tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.\n\n'
+      + 'Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan '
+      + 'välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor '
+      + 'kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli '
+      + 'Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti '
+      + 'vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.',
+    lahde: 'en-Wikipedia "Veliky Novgorod", johdanto-osa ja osio "Early developments" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'kolan-syvareika',
+    nimi: 'Kolan syväreikä',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Kuinka syvälle reikä ylsi?',
+      'Miksi kairaus keskeytettiin vuodeksi?',
+    ],
+    korostukset: ['maankuori|maankuoreen'],
+    nappi: 'Maailman syvin ihmisen tekemä reikä',
+    // 30.61 E / 69.3965 N — en-Wikipedia "Kola Superdeep Borehole";
+    // lähin pelikaupunki Rovaniemi 233,1 lautayksikön päässä.
+    laudat: {
+      maailmankartta: { x: 6853.7, y: 418.1 },
+    },
+    teksti: 'Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi '
+      + 'vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli '
+      + 'neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua '
+      + 'maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla '
+      + 'Petšengan piirissä lähellä Norjan rajaa.\n\n'
+      + 'Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla '
+      + 'Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 '
+      + 'paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — '
+      + 'viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin '
+      + 'halkaisijaltaan 23 senttiä.\n\n'
+      + '6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa '
+      + 'porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä '
+      + 'oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, '
+      + 'kairaus pysäytettiin noin vuodeksi tieteellisten ja juhlallisten vierailujen '
+      + 'ajaksi — ja juuri tuo seisokki saattoi osaltaan aiheuttaa rikkoutumisen, kun '
+      + 'työ jatkui.',
+    lahde: 'en-Wikipedia "Kola Superdeep Borehole", johdanto-osa ja osio "Drilling" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'tunguskan-rajahdys',
+    nimi: 'Tunguskan räjähdys',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Miksi paikalta ei löydy kraatteria?',
+      'Kuinka laajalta alueelta metsä kaatui?',
+    ],
+    korostukset: ['evenkit|evenkiläiset'],
+    nappi: 'Räjähdys, joka ei jättänyt kraatteria',
+    // 101.9097 E / 60.9031 N — en-Wikipedia "Tunguska event";
+    // lähin pelikaupunki Irkutsk 416,0 lautayksikön päässä.
+    laudat: {
+      maailmankartta: { x: 9230.3, y: 880.4 },
+    },
+    teksti: 'Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä '
+      + 'Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 '
+      + 'megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. '
+      + 'Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.\n\n'
+      + 'Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen '
+      + 'asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi '
+      + '5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. '
+      + 'Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.\n\n'
+      + 'Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat '
+      + 'Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes '
+      + 'yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta '
+      + 'muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi '
+      + 'ikkunoita satojen kilometrien päässä. Järistys rekisteröitiin seismisillä '
+      + 'asemilla halki Euraasian, ja paineaalto havaittiin Saksassa, Tanskassa, '
+      + 'Kroatiassa ja Britanniassa asti.',
+    lahde: 'en-Wikipedia "Tunguska event", johdanto-osa ja osio "Description" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'tobolskin-kreml',
+    nimi: 'Tobolskin kreml',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka oli Semjon Remezov?',
+      'Ketkä rakensivat kremliä pakkotyössä?',
+    ],
+    korostukset: ['Semjon Remezov|Semjon Remezov'],
+    nappi: 'Siperian ainoa kivikremli',
+    // 68.2531 E / 58.1992 N — en-Wikipedia "Tobolsk Kremlin";
+    // lähin pelikaupunki Jekaterinburg 263,8 lautayksikön päässä.
+    laudat: {
+      maailmankartta: { x: 8108.4, y: 1014.2 },
+    },
+    teksti: 'Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo '
+      + 'Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova '
+      + 'kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki '
+      + 'Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, '
+      + 'ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian '
+      + 'metropoliitta Paavali.\n\n'
+      + '1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian '
+      + 'ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 '
+      + 'kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.\n\n'
+      + 'Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi '
+      + 'kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. '
+      + 'Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan '
+      + 'sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa '
+      + 'etelämmäksi. Vuoden 1714 kivirakentamisen kielto ei pysäyttänyt työtä, joka '
+      + 'jatkui vuoteen 1718.',
+    lahde: 'en-Wikipedia "Tobolsk Kremlin", johdanto-osa ja osio "History" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'jasnaja-poljana',
+    nimi: 'Jasnaja Poljana',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Mitkä kaksi romaania kirjoitettiin täällä?',
+      'Mitä Jasnaja Poljana tarkoittaa?',
+    ],
+    korostukset: ['Lev Tolstoi|Lev Tolstoin'],
+    nappi: 'Talo, jossa Sota ja rauha syntyi',
+    // 37.5261 E / 54.0761 N — en-Wikipedia "Yasnaya Polyana";
+    // lähin pelikaupunki Moskova 78,2 lautayksikön päässä.
+    laudat: {
+      maailmankartta: { x: 7084.2, y: 1208.3 },
+    },
+    teksti: 'Jasnaja Poljana on kirjailijakotimuseo, Lev Tolstoin entinen koti '
+      + 'kaksitoista kilometriä Tulasta lounaaseen ja kaksisataa kilometriä '
+      + 'Moskovasta. Nimi tarkoittaa kirkasta aukiota. Tolstoi syntyi tässä talossa 9. '
+      + 'syyskuuta 1828 ja kirjoitti siellä sekä Sodan ja rauhan että Anna Kareninan; '
+      + 'hänet on haudattu lähistölle.\n\n'
+      + 'Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti '
+      + 'kenraalimajuri, ruhtinas Sergei Volkonski, ja se siirtyi hänen pojalleen '
+      + 'Nikolaille, kirjailijan isoisälle. Nikolai aloitti päärakennuksen '
+      + 'rakentamisen 1810 tilan korkeimmalle kohdalle, pystytti tallit, vaunuvajan, '
+      + 'kylpyrakennuksen ja kaksi kasvihuonetta sekä istutti ranskalaisen puutarhan, '
+      + 'englantilaisen maisemapuiston lampineen ja pitkät koivu- ja tammikujat.\n\n'
+      + 'Tolstoi kutsui Jasnaja Poljanaa saavuttamattomaksi kirjalliseksi '
+      + 'linnakkeekseen. Kesäkuussa 1921 tila kansallistettiin museoksi, ja sen '
+      + 'ensimmäinen johtaja oli kirjailijan tytär Aleksandra Tolstaja. Museossa on '
+      + 'Tolstoin henkilökohtaista omaisuutta ja hänen 22 000 niteen kirjastonsa; '
+      + 'alueella ovat myös koulu, jonka hän perusti talonpoikaislapsille, ja puisto, '
+      + 'jossa on hänen koristelematon hautansa.',
+    lahde: 'en-Wikipedia "Yasnaya Polyana", johdanto-osa sekä osiot "Early history" ja '
+      + '"Leo Tolstoy at Yasnaya Polyana" (tarkistettu 6.9.2026).',
   },
 ];
 
