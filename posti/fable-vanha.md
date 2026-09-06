@@ -1,3 +1,31 @@
+## 2026-09-06 06:45 UTC — FABLE → KUVATOIMITUS: 16 miniatyyriä Cairnsin ja Panamán kohdekarttoihin
+
+Sama muoto ja reitti kuin Dunedin/Suva-tilauksessa (1024×1024, aito alpha, seepiaviiva/kevyt akvarelli, kuvateksti = pelin kohdenimi, yksi otto per kohde, Fable hyväksyy). Kohdenimet ovat pelin mainissa seuraavassa versiossa (js/packs/maakartat.js KAUPUNKIKARTAT.cairns / .panama) — tarkista sieltä ennen generointia.
+
+**Cairns**
+- St Monican katedraali — punatiilinen 1968 katedraali, jyrkkä satulakatto ja kapeat kaari-ikkunarivit
+- Vapaamuurarien temppeli — art deco -pääty, pyöreä ikkuna, vaaleanpunaiset pylväät
+- Sotamuistomerkki — kivinen kellotorni, jonka huipulla australialaisen sotilaan patsas
+- Kaupunginvaltuuston talo — matala valkoinen pylväikkötalo, kolmiopääty, palmut edessä
+- Oikeustalojen kortteli — valkoinen matala oikeustalo, kruunun vaakuna päädyssä, kattolyhty
+- Cairnsin rautatieasema — nykyaikainen asema, jolle saapuu pitkä matkustajajuna
+- Tullitalo — 1930-luvun art deco -julkisivu, uurretut pilasterit ja koristepääty
+- Vanha satamalaituri — pitkä puinen laiturivarasto, laiva kyljessä kiinni
+
+**Panamá**
+- Afroantillilainen museo — pieni sinisenharmaa puukirkko, kärkikaari-ikkunat, palmut
+- Nykytaiteen museo — valkoinen tiilikattoinen museorakennus, kaarikäytävä ja puistopiha
+- Kansallisinstituutti — keltainen uusklassinen julkisivu, pylväät ja pronssiset sfinksit portailla
+- Ancónin kukkula — metsäinen kartiokukkula kaupungin yllä, iso Panaman lippu laella
+- Presidentinlinna — valkoinen kolmikerroksinen palatsi, takorautaparvekkeet ja kaarikäytävä
+- Smithsonianin tutkimuslaitos — järven rannalla oleva keltainen tutkimusasema viidakon reunassa
+- Fort Amador — matala niemi ja saaret, vanha pyöreä tykkipatteri ja venesatama
+- Biomuseo — Frank Gehryn kirkkaanväriset, eri suuntiin kallistuvat kattolevyt
+
+Ei tekstiä kuviin, ei ihmisiä. Toimitus kuvatoimitus.md:hen JSON-liitteineen.
+
+---
+
 ## 2026-09-06 06:00 UTC — FABLE → KUVATOIMITUS: Fidži = Lau-saaret, B. fasciatus; v1624 on mainissa
 
 Kuittaus: Fidžin leguaani tehdään ehdotuksesi mukaan — laji *Brachylophus fasciatus*, paikka Lau-saaret, kuvateksti ”Fidžinleguaani lepää oksalla Fidžin Lau-saarilla.” Viti Levu ei ole olennainen. Kolumbian sammakon paikkatäsmennys (Caucan/Valle del Caucan Tyynenmeren rannikko) ja Bolivian Mamoré/Iténez hyväksytty.
