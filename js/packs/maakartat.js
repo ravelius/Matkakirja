@@ -11514,6 +11514,115 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Nairobin rautatiemuseo', lat: -1.293725, lon: 36.822194 },
     ],
   },
+  /*
+   * MIAMI (6.9.2026). Rajaus on 3,8 × 4,9 kilometriä Wynwoodista
+   * Miami-joen suulle — perustelu ja itäreunan valinta ovat
+   * tools/piirra-kaupunkikartta.mjs:n miami-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * tequestat ja Miami Circle, vuoden 1873 kourallinen perheitä
+   * lahden rannalla, Julia Tuttle ja rautatie 1896 sekä South Beachin
+   * art deco; teemasivu kertoo Evergladesista, Biscayne Baystä,
+   * kahdesta vuodenajasta ja kalkkikivestä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * MIAMI CIRCLE JÄÄ POIS AIHESYISTÄ, ei etäisyyden takia: se
+   * mahtuisi ruutuun (25,76947 / −80,188961) mutta on noston M1 aihe.
+   * Samasta syystä ruudun ulkopuolelle jäävät Little Havanan
+   * Máximo Gómez Park ja South Beachin art deco -korttelit.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ TAI SEN
+   * TUNTUMASSA (tarkistus-miami.md, kohta F): Frost Science on 128
+   * metrin päässä Pérezin museosta ja Bayside Marketplace 378 metrin
+   * päässä Vapaudentornista mutta on ostoskeskus eikä kohde.
+   * Vizcaya on 3,5 kilometriä etelässä. Kaikki mainitaan
+   * matkaoppaassa.
+   */
+  miami: {
+    polku: 'assets/kartat/miami-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 25.8060, etela: 25.7620, lansi: -80.2160, ita: -80.1780 },
+    esittely: 'Kartan alue ulottuu Wynwoodin varastokortteleista '
+      + 'pohjoisessa Miami-joen suulle etelässä. Oikeassa reunassa on '
+      + 'Biscayne Bay, keskellä keskustan ruutukaava ja vasemmalla '
+      + 'moottoritie, joka erottaa keskustan lännen kaupunginosista. '
+      + 'Alaosassa joki mutkittelee lahteen. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Denverissä ja Houstonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026; Pérezin museon koordinaatti
+       * luettiin artikkelin coord-mallineesta, koska rajapinta ei
+       * palauta sille koordinaattia. Pienin väli on 462 metriä
+       * (Bayfront Park – Olympia-teatteri).
+       */
+      { nimi: 'Wynwoodin muraalikorttelit', lat: 25.804, lon: -80.199 },
+      { nimi: 'Esittävän taiteen keskus', lat: 25.7876332, lon: -80.1920912 },
+      { nimi: 'Pérezin taidemuseo', lat: 25.785894, lon: -80.186705 },
+      { nimi: 'Lyric-teatteri', lat: 25.78188889, lon: -80.198 },
+      { nimi: 'Vapaudentorni', lat: 25.78, lon: -80.18972222 },
+      { nimi: 'Bayfront Park', lat: 25.775, lon: -80.186 },
+      { nimi: 'Olympia-teatteri', lat: 25.7742, lon: -80.19051683 },
+      { nimi: 'Piirikunnan oikeustalo', lat: 25.77461111, lon: -80.19513889 },
+    ],
+  },
+  /*
+   * HALIFAX (6.9.2026). Rajaus on 3,3 × 4,2 kilometriä
+   * linnoituskukkulalta niemimaan eteläkärkeen — perustelu ja ruudun
+   * pystysuunta ovat tools/piirra-kaupunkikartta.mjs:n
+   * halifax-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * mi'kmaqit ja Kjipuktuk, vuoden 1749 perustaminen, isoisän
+   * matkavuoden 1873 purjelaivasatama ja vuoden 1917 räjähdys;
+   * teemasivu kertoo satamasta, säästä, hurrikaaneista ja
+   * graniittirannikosta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe. Lähimpänä on Pyhän Paavalin kirkko, joka näkyy
+   * noston H2 kuvassa vuoden 1759 kaiverruksessa — juttu kertoo
+   * kuitenkin rakennuksesta ja sen esikuvasta Lontoossa, mitä lehti
+   * ei käsittele lainkaan.
+   *
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-halifax.md, kohta E): Province House on 115 metriä
+   * Pyhän Paavalin kirkosta, Nova Scotian taidegalleria 59 metriä
+   * Province Housesta ja 131 metriä merimuseosta, ja
+   * kaupunginkirjasto 206 metriä vanhasta hautausmaasta. Ne
+   * mainitaan matkaoppaan jaksossa 2, ja kirjastolle on siellä oma
+   * kuva.
+   *
+   * FORT NEEDHAM, AFRICVILLE JA FAIRVIEW LAWN JÄÄVÄT POIS: kaksi
+   * jälkimmäistä ovat ruudun ulkopuolella pohjoisessa, ja
+   * muistokellotorni on noston H4 aihe.
+   */
+  halifax: {
+    polku: 'assets/kartat/halifax-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 44.6560, etela: 44.6180, lansi: -63.6000, ita: -63.5580 },
+    esittely: 'Kartan alue kattaa Halifaxin niemimaan koko leveyden: '
+      + 'oikealla on satama, vasemmalla Northwest Armin kapea vuono ja '
+      + 'väliin jää keskustan ruutukaava. Yläreunassa erottuu '
+      + 'linnoituskukkulan tähtimäinen muoto ja alareunassa niemen '
+      + 'metsäinen kärki. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 6.9.2026,
+       * ja kaikki välit on mitattu uudelleen: pienin on 222 metriä
+       * (linnoitus – kellotorni), toiseksi pienin 238 metriä
+       * (kellotorni – Pyhän Paavalin kirkko).
+       */
+      { nimi: 'Halifaxin linnoitus', lat: 44.6475, lon: -63.58027778 },
+      { nimi: 'Vanha kellotorni', lat: 44.64722222, lon: -63.5775 },
+      { nimi: 'Pyhän Paavalin kirkko', lat: 44.6475, lon: -63.57472222 },
+      { nimi: 'Atlantin merimuseo', lat: 44.64769444, lon: -63.57105556 },
+      { nimi: 'Julkinen puutarha', lat: 44.64277778, lon: -63.58222222 },
+      { nimi: 'Vanha hautausmaa', lat: 44.6434, lon: -63.5728 },
+      { nimi: 'Pier 21', lat: 44.63777778, lon: -63.56583333 },
+      { nimi: 'Point Pleasant Park', lat: 44.62277778, lon: -63.56916667 },
+    ],
+  },
 };
 
 /*

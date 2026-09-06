@@ -42542,4 +42542,600 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * MIAMIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 6.9.2026, paketti
+   * O9). Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.miami, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 6.9.2026
+   * (artikkelit "Wynwood", "Adrienne Arsht Center for the Performing
+   * Arts", "Pérez Art Museum Miami", "Lyric Theater (Miami)",
+   * "Freedom Tower (Miami)", "Bayfront Park", "Olympia Theater
+   * (Miami)" ja "Miami-Dade County Courthouse").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat tequestat ja Miami Circle, vuoden 1873 kourallinen perheitä,
+   * Julia Tuttle ja rautatie 1896 sekä South Beachin art deco;
+   * teemasivu kertoo Evergladesista, Biscayne Baystä, kahdesta
+   * vuodenajasta ja kalkkikivestä. Yksikään kartan kohteista ei ole
+   * niiden aihe. Lähimpänä on Esittävän taiteen keskus, jonka torni
+   * on art decoa kuten noston M4 hotellit — juttu kertoo kuitenkin
+   * tavaratalosta ja konserttitalosta, joita lehti ei käsittele.
+   *
+   * OVERTOWNIN HISTORIA kerrotaan Lyric-teatterin jutussa suoraan
+   * lähteen sanoin: rotuerottelu, "Little Broadway" ja 1960-luvun
+   * pakkolunastukset. Yksityiskohtia ei koristella eikä väkivaltaa
+   * kuvata (spec-mantereet.md, USA-linjaus; pilari 4).
+   *
+   * BAYFRONT PARKIN JUTUSSA EI KERROTA vuoden 1933 murhayrityksestä
+   * eikä patsaiden töhrimisestä 2020: edellinen on väkivaltaa ilman
+   * opetusarvoa tässä yhteydessä, jälkimmäinen nykypolitiikkaa.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 800 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * miami-lohkossa eikä matkakirjan valokuvataulussa.
+   */
+  miami: {
+    'Wynwoodin muraalikorttelit': {
+      aika: '2009',
+      teksti: 'Wynwood oli pitkään teollisuus- ja varastokortteli, jota '
+          + 'kutsuttiin nimillä Little San Juan ja El Barrio: '
+          + 'puertoricolaisia muutti alueelle 1950-luvulla sekä '
+          + 'saarelta että koillisen kaupungeista. Puertoricolaisten '
+          + 'ravintolat, kaupat ja torit reunustavat katuja yhä.'
+          + '\n\n'
+          + 'Kun Midtown Miamin rakennustyöt alkoivat 2005 vanhan '
+          + 'ratapihan paikalla, huomio palasi alueelle ja taiteilijat '
+          + 'alkoivat asettua tyhjiin varastoihin. Vuonna 2009 '
+          + 'kaupunkikehittäjä Tony Goldman tilasi taiteilijoilta '
+          + 'Wynwood Wallsin. Ajatus oli yksinkertainen: muuttaa '
+          + 'varastorakennukset teoksiksi.'
+          + '\n\n'
+          + 'Wynwood Walls on ulkoilmanäyttely, jonka teokset '
+          + 'vaihtuvat, ja se on maailman suurin ulkoilmassa oleva '
+          + 'katutaidemuseo. Kaupunginosan rajat ovat selvät: 20th '
+          + 'Street etelässä, moottoritie I-195 pohjoisessa, I-95 '
+          + 'lännessä ja Florida East Coast Railwayn rata idässä.',
+      kuvat: [
+        {
+          tiedosto: 'Wynwood Walls Miami Florida October 2013.jpg',
+          selite: 'Portin takana avautuu pihamaa, jonka jokainen '
+            + 'seinä on maalattu.',
+          lahde: 'Dan Lundberg, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Esittävän taiteen keskus': {
+      aika: '2006',
+      teksti: 'Adrienne Arsht Center on yksi Yhdysvaltain suurimmista '
+          + 'esittävän taiteen keskuksista. Se avattiin 5. lokakuuta '
+          + '2006 nimellä Carnival Center, ja nykyisen nimensä se sai '
+          + 'tammikuussa 2008, kun Adrienne Arsht lahjoitti talolle '
+          + 'kolmekymmentä miljoonaa dollaria.'
+          + '\n\n'
+          + 'Osa keskuksesta seisoo vanhan Sears-tavaratalon paikalla. '
+          + 'Talo oli vuodelta 1929 ja art decoa — siis vanhempaa kuin '
+          + 'Ocean Driven hotellit — ja se merkittiin kansalliseen '
+          + 'rekisteriin 1997. Vuoteen 2001 mennessä siitä oli '
+          + 'jäljellä enää seitsenkerroksinen torni, jonka Sears oli '
+          + 'rakentanut myymälänsä pääsisäänkäynniksi. Rakentajat '
+          + 'päättivät säilyttää tornin ja liittää sen uuteen taloon.'
+          + '\n\n'
+          + 'Keskus järjestää maksuttomia yleisötapahtumia ja '
+          + 'taidekasvatusta tuhansille lapsille vuodessa, ja vuodesta '
+          + '2020 se on vienyt yli sata pop up -esitystä sairaaloihin, '
+          + 'puistoihin ja kirjastoihin ympäri piirikuntaa.',
+      kuvat: [
+        {
+          tiedosto: 'Adrienne Arsht Center for the Performing Arts of Miami-Dade County - Flickr - Phillip Pessar.jpg',
+          selite: 'Oopperatalon lasiseinä kaartuu kadun yli, ja '
+            + 'vanha tavaratalon torni näkyy sen takana.',
+          lahde: 'Phillip Pessar, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pérezin taidemuseo': {
+      aika: '2013',
+      teksti: 'Museo perustettiin 1984 nimellä Center for the Fine Arts '
+          + 'ja se toimi Flagler Streetillä Philip Johnsonin '
+          + 'suunnittelemassa kulttuurikeskuksessa. Vuosina 1996–2013 '
+          + 'se oli Miami Art Museum. Nykyisen nimensä ja nykyisen '
+          + 'talonsa museo sai 2013.'
+          + '\n\n'
+          + 'Uuden talon suunnittelivat sveitsiläiset Herzog & de '
+          + 'Meuron, ja sen muoto viittaa Stiltsvilleen — Biscayne '
+          + 'Bayn paaluille rakennettuihin puutaloihin. Rakennuksen '
+          + 'ympärillä riippuu kasveja pitkinä pylväinä, ja se seisoo '
+          + 'Maurice A. Ferré Parkissa aivan lahden rannalla.'
+          + '\n\n'
+          + 'Kokoelmassa oli 2016 lähes kaksituhatta teosta, '
+          + 'pääasiassa 1900- ja 2000-luvun taidetta Amerikoista, '
+          + 'Länsi-Euroopasta ja Afrikasta. Muutto näkyi heti '
+          + 'kävijämäärissä: vanhassa osoitteessa kävi noin 60 000 '
+          + 'ihmistä vuodessa, uudessa talossa yli 150 000 '
+          + 'ensimmäisten neljän kuukauden aikana.',
+      kuvat: [
+        {
+          tiedosto: 'PAMM MRD 08.jpg',
+          selite: 'Riippuvat kasvipylväät varjostavat museon '
+            + 'julkisivua lahden puolelta.',
+          lahde: 'Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lyric-teatteri': {
+      aika: '1913',
+      teksti: 'Lyric-teatterin rakennutti ja omisti georgialainen '
+          + 'liikemies Geder Walker, ja se avattiin 1913 Overtownissa, '
+          + 'jota tuolloin kutsuttiin nimellä Colored Town. Salissa '
+          + 'oli neljäsataa paikkaa. Miami News kuvasi taloa 1915 '
+          + 'sanoin, että se on mahdollisesti kaunein ja kallein '
+          + 'mustien omistama teatteri koko etelässä.'
+          + '\n\n'
+          + 'Teatteri oli osa korttelia, jota sanottiin Little '
+          + 'Broadwayksi: hotellit, ravintolat ja yökerhot vetivät '
+          + 'sekä mustia että valkoisia vieraita, ja alue sai '
+          + 'lempinimen etelän Harlem. Lyricissä esiintyivät ja '
+          + 'puhuivat muun muassa W. E. B. Du Bois, Mary McLeod '
+          + 'Bethune, Marian Anderson, Bessie Smith, Ethel Waters ja '
+          + 'Fisk Jubilee Singers. Walkerin kuoltua 1919 talo siirtyi '
+          + 'hänen vaimolleen Henriettalle.'
+          + '\n\n'
+          + 'Elokuvateatterina Lyric toimi lähes viisikymmentä vuotta, '
+          + 'ja 1959 se myytiin seurakunnalle. 1960-luvulla '
+          + 'liittovaltio, osavaltio ja kaupunki pakkolunastivat '
+          + 'Overtownin rakennuksia moottoritietä ja kaupunkiuudistusta '
+          + 'varten, ja suurin osa Little Broadwayn taloista '
+          + 'purettiin. Lyric säilyi mutta oli vuosikymmeniä kiinni. '
+          + 'Se merkittiin kansalliseen rekisteriin 4. tammikuuta 1989 '
+          + 'ja on nyt kulttuurikeskus.',
+      kuvat: [
+        {
+          tiedosto: 'Miami FL Historic Overtown Lyric Theatre.jpg',
+          selite: 'Ennallistettu julkisivu kaartuu kadun yli, ja '
+            + 'talon nimi on kaiverrettu sisäänkäynnin yläpuolelle.',
+          lahde: 'Pietro, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Vapaudentorni: {
+      aika: '1925',
+      teksti: 'Vapaudentorni rakennettiin 1925 The Miami News '
+          + '-lehden toimitaloksi ja painoksi. Suunnittelijat olivat '
+          + 'Schultze and Weaver, ja tyyli lainaa espanjalaisesta '
+          + 'uusrenessanssista: 78 metriä korkean tornin esikuva on '
+          + 'Sevillan Giralda, ja kupolissa oli koristemajakka. Lehti '
+          + 'muutti pois 1966.'
+          + '\n\n'
+          + 'Nimensä talo sai seuraavasta tehtävästään. Liittovaltio '
+          + 'käytti taloa 1960-luvulla Kuubasta lähteneiden '
+          + 'pakolaisten vastaanottoon: täällä kirjattiin tulijat ja '
+          + 'annettiin terveyden- ja hammashoitoa. Vuonna 1972 '
+          + 'suurin pakolaisaalto oli ohi, ja 1974 valtio myi talon '
+          + 'yksityisille.'
+          + '\n\n'
+          + 'Torni merkittiin kansalliseen rekisteriin 10. syyskuuta '
+          + '1979 ja nimettiin kansalliseksi historialliseksi '
+          + 'maamerkiksi 6. lokakuuta 2008 juuri sen takia, mitä se '
+          + 'merkitsi Kuubasta lähteneille. Toisen kerroksen juhlasalin '
+          + 'seinällä on suuri seinämaalaus, jonka miamilaiset '
+          + 'taiteilijat tekivät 1988 vuoden 1926 alkuperäisen '
+          + 'raunioituneen teoksen pohjalta. Nykyään talo on Miami '
+          + 'Dade Collegen museo ja kulttuurikeskus.',
+      kuvat: [
+        {
+          tiedosto: 'Freedom tower miami-1.jpg',
+          selite: 'Valaistu torni erottuu iltahämärässä matalampien '
+            + 'talojen ja palmurivin takaa.',
+          lahde: 'betty del rio, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bayfront Park': {
+      aika: '1925',
+      teksti: 'Bayfront Park on 32 eekkerin eli runsaan '
+          + 'kolmentoista hehtaarin puisto keskustan reunalla Biscayne '
+          + 'Bayn rannassa. Sitä alettiin rakentaa 1924 Warren Henry '
+          + 'Manningin suunnitelmien mukaan, ja se avattiin '
+          + 'maaliskuussa 1925.'
+          + '\n\n'
+          + 'Puisto sai uuden muodon vuodesta 1980 alkaen, kun '
+          + 'japanilais-amerikkalainen taiteilija ja '
+          + 'maisema-arkkitehti Isamu Noguchi suunnitteli sen '
+          + 'uudelleen. Hänen käsialaansa on myös puiston tunnetuin '
+          + 'teos: Challengerin muistomerkki, sadan jalan korkuinen '
+          + 'kaksoiskierteeksi kierretty teräsveistos, joka vihittiin '
+          + '28. tammikuuta 1988 kaksi vuotta avaruussukkulan '
+          + 'onnettomuuden jälkeen. Jalustan graniittilaattaan on '
+          + 'kaiverrettu runo ja miehistön nimet.'
+          + '\n\n'
+          + 'Puistossa on amfiteatteri ja paviljonki, ja siellä '
+          + 'järjestetään konsertteja, joulunviettoa ja uudenvuoden '
+          + 'juhlat. Pohjoispuolella on Bayside Marketplace ja '
+          + 'seitsemän korttelia pohjoisempana museopuisto, jossa ovat '
+          + 'Pérezin taidemuseo ja tiedemuseo.',
+      kuvat: [
+        {
+          tiedosto: 'Bayfront Park, Miami, FL - IMG 7999.JPG',
+          selite: 'Puiston pyöreä suihkulähde kaartuu kivikehänä '
+            + 'keskustan tornien edessä.',
+          lahde: 'Daderot, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Olympia-teatteri': {
+      aika: '1926',
+      teksti: 'Olympia-teatterin suunnitteli John Eberson, ja se '
+          + 'avattiin 18. helmikuuta 1926 mykkäelokuvateatterina. '
+          + 'Eberson oli erikoistunut niin sanottuun '
+          + 'ilmapiiriteatteriin: sali on rakennettu näyttämään '
+          + 'espanjalaiselta puutarhalta, jonka yllä on tähtitaivas. '
+          + 'Floridassa on jäljellä enää neljä tällaista salia.'
+          + '\n\n'
+          + 'Ohjelmisto seurasi aikaa. Kun äänielokuva ja vaudeville '
+          + 'yleistyivät, lavalla nähtiin Marx-veljekset ja Gypsy Rose '
+          + 'Lee; 1950- ja 1960-luvuilla Etta James, Della Reese ja '
+          + 'B. B. King. Elokuussa 1956 Elvis Presley esiintyi '
+          + 'talossa viisitoista kertaa loppuunmyydylle salille.'
+          + '\n\n'
+          + '1960-luvun lopulla käyttö hiipui ja teatteria kaavailtiin '
+          + 'purettavaksi parkkipaikaksi. Liikemies Maurice Gusman '
+          + 'osti talon 1970 ja lahjoitti sen kaupungille 1975. Sali '
+          + 'oli välillä rockklubi ja sitten taas konserttitalo; '
+          + 'kansalliseen rekisteriin se merkittiin 1984.',
+      kuvat: [
+        {
+          tiedosto: 'Olympia Theatre Miami exterior 2016.jpg',
+          selite: 'Katos ja vanha lippuluukku ovat yhä paikallaan '
+            + 'kadun varrella.',
+          lahde: 'Phillip Pessar, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Piirikunnan oikeustalo': {
+      aika: '1928',
+      teksti: 'Daden piirikunnan oikeustalo rakennettiin 1925–28 '
+          + 'Flagler Streetin varrelle. Se on 361 jalkaa eli 110 '
+          + 'metriä korkea ja siinä on 28 kerrosta; valmistuessaan se '
+          + 'oli Miamin, koko Floridan ja Mason–Dixonin linjan '
+          + 'eteläpuolen korkein rakennus. Suunnittelija A. Ten Eyck '
+          + 'Brown oli piirtänyt luonnokset alun perin Atlantan '
+          + 'kaupungintalon kilpailuun, jossa ne hylättiin.'
+          + '\n\n'
+          + 'Talo nousi vanhan oikeustalon ympärille, ja vanha '
+          + 'rakennus purettiin sisältä pois sitä mukaa kuin uusi '
+          + 'kohosi. Kymmenennessä kerroksessa työ pysähtyi: '
+          + 'rakennus alkoi vajota pehmeään maahan. Neuvoa haettiin '
+          + 'arkkitehdilta, joka oli kohdannut saman ongelman Mexico '
+          + 'Cityn Palacio de Bellas Artesin kanssa, ja hän totesi '
+          + 'perustuspaalut liian matalaksi. Vahvistukseksi valettiin '
+          + 'betonituet, jotka täyttävät yhä suuren osan kellarin '
+          + 'arkistoa.'
+          + '\n\n'
+          + 'Oikeustalo valmistui 1928 neljän miljoonan dollarin '
+          + 'hinnalla ja merkittiin kansalliseen rekisteriin 4. '
+          + 'tammikuuta 1989. Se on yhä piirikunnan siviilioikeuden '
+          + 'päätalo.',
+      kuvat: [
+        {
+          tiedosto: 'Dade County Courthouse (Miami, Florida).jpg',
+          selite: 'Portaittain kapeneva torni päättyy pyramidiin, '
+            + 'joka näkyy yhä keskustan kattojen yli.',
+          lahde: 'Tamanoeconomico, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * HALIFAXIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 6.9.2026, paketti
+   * O9). Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.halifax, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 6.9.2026
+   * (artikkelit "Citadel Hill (Fort George)", "Halifax Town Clock",
+   * "St. Paul's Church (Halifax, Nova Scotia)", "Maritime Museum of
+   * the Atlantic", "Halifax Public Gardens", "Old Burying Ground
+   * (Halifax, Nova Scotia)", "Pier 21" ja "Point Pleasant Park").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat mi'kmaqit ja Kjipuktuk, vuoden 1749 perustaminen, isoisän
+   * matkavuoden 1873 purjelaivasatama ja vuoden 1917 räjähdys;
+   * teemasivu kertoo satamasta, säästä, hurrikaaneista ja
+   * graniittirannikosta. Yksikään kartan kohteista ei ole niiden
+   * aihe.
+   *
+   * LINNOITUS JA KELLOTORNI OVAT SAMALLA KUKKULALLA (222 metrin
+   * päässä toisistaan), joten jutut on kirjoitettu tarkoituksella eri
+   * asioista: linnoitusjuttu neljästä peräkkäisestä linnoituksesta ja
+   * kukkulan madaltamisesta, kellotornijuttu Kentin herttuasta,
+   * Vulliamyn koneistosta ja Whitechapelin kelloista. Sama koskee
+   * Pyhän Paavalin kirkkoa ja vanhaa hautausmaata: kirkkojuttu kertoo
+   * rakennuksesta ja sen lontoolaisesta esikuvasta, hautausmaajuttu
+   * kaupungin ensimmäisestä ja tunnustuksista riippumattomasta
+   * hautapaikasta.
+   *
+   * TITANIC mainitaan merimuseon jutussa, koska museon suurin
+   * näyttely käsittelee sitä ja koska laudan visa kysyy siitä
+   * (northamerica-questions.js, halifax, kysymys 2) — reseptin mukaan
+   * visan vastauksen on löydyttävä lehden teksteistä.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 800 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * halifax-lohkossa eikä matkakirjan valokuvataulussa — myös
+   * valokuvataulun linnoitus- ja rantalaudoituskuvat on tarkistettu
+   * ja kierretty.
+   */
+  halifax: {
+    'Halifaxin linnoitus': {
+      aika: '1856',
+      teksti: 'Kukkulalla on ollut neljä linnoitusta siitä asti, kun '
+          + 'britit perustivat kaupungin 1749. Kaikkia on kutsuttu '
+          + 'nimellä Fort George, mutta virallisesti sen nimen sai vain '
+          + 'kolmas, vuosina 1794–1800 rakennettu linnoitus: '
+          + 'lokakuun 20. päivänä 1798 annettu päiväkäsky nimesi sen '
+          + 'kuningas Yrjö III:n mukaan. Ensimmäinen, toinen ja '
+          + 'nykyinen neljäs ovat virallisesti Halifax Citadel.'
+          + '\n\n'
+          + 'Nykyinen linnoitus on betoninen tähtilinnoitus. Sen '
+          + 'rakentaminen ja kukkulan tasoittaminen ovat laskeneet '
+          + 'laen kymmenestä kahteentoista metriä alkuperäistä '
+          + 'matalammaksi. Linnoitusta vastaan ei koskaan hyökätty, '
+          + 'mutta se oli vuosikymmenet sataman ja laivastotelakan '
+          + 'puolustuksen kulmakivi.'
+          + '\n\n'
+          + 'Kukkula on syy siihen, miksi keskellä kaupunkia on suuri '
+          + 'nurmirinne ilman taloja: linnoituksen ampumasektorit oli '
+          + 'pidettävä avoimina. Nykyään Parks Canada hoitaa aluetta, '
+          + 'ja linnoitus on ennallistettu siihen asuun, jossa se oli '
+          + 'viktoriaanisella ajalla valmistuessaan.',
+      kuvat: [
+        {
+          tiedosto: 'Ditch, Halifax Citadel (3609170469).jpg',
+          selite: 'Vallihaudan graniittimuuri nousee ruohovallin '
+            + 'alle sumuisena aamuna.',
+          lahde: 'CP Hoffman from Washington, DC, United States, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha kellotorni': {
+      aika: '1803',
+      teksti: 'Kellotorni rakennettiin lokakuussa 1803, ja kello on '
+          + 'käynyt 20. päivästä lokakuuta 1803 lähtien. Se on '
+          + 'pysähtynyt vain kerran: Halifaxin räjähdyksessä 1917. '
+          + 'Idea oli Kentin herttuan Edwardin, joka johti Britannian '
+          + 'Pohjois-Amerikan joukkoja ja halusi korjata varuskunnan '
+          + 'myöhästelytavan. Herttua oli tunnetusti pikkutarkka '
+          + 'täsmällisyydestä ja piti mekaanisista laitteista, '
+          + 'erityisesti sellaisista jotka soivat.'
+          + '\n\n'
+          + 'Koneiston teki Benjamin Vulliamy, sama kellontekijä joka '
+          + 'valmisti Kew\'n observatorion regulaattorikellon. Kolme '
+          + 'rautakelloa valettiin Whitechapelin kellovalimossa '
+          + 'Lontoossa — samassa, josta tuli myös Liberty Bell. '
+          + 'Piirustukset teki kapteeni William Fenwick.'
+          + '\n\n'
+          + 'Torni haluttiin alun perin muualle linnoitukseen, mutta '
+          + 'varakuvernööri John Wentworth määräsi sen itärinteelle '
+          + 'Brunswick Streetiä kohti, jotta myös kaupunkilaiset '
+          + 'näkisivät kellon eivätkä vain sotilaat. Alimmassa '
+          + 'kerroksessa oli asunto vahtimestarille perheineen; '
+          + 'pisimpään tehtävää hoiti tykkimies William White. '
+          + 'Kellotaulut maalattiin 1990-luvun alussa takaisin '
+          + 'alkuperäisen sinisiksi.',
+      kuvat: [
+        {
+          tiedosto: 'Looking up Carmichael Street to the Clock, 2014.JPG',
+          selite: 'Katu nousee suoraan kellotornia kohti, ja torni '
+            + 'sulkee näkymän kukkulan rinteellä.',
+          lahde: 'Nelro2, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Paavalin kirkko': {
+      aika: '1750',
+      teksti: 'Pyhän Paavalin seurakunta perustettiin 1749, samana '
+          + 'vuonna kuin kaupunki, ja kirkon rakentaminen alkoi '
+          + 'seuraavana vuonna. Pastori William Tutty vihki sen '
+          + 'käyttöön 2. syyskuuta 1750. Se on Kanadan vanhin '
+          + 'säilynyt protestanttinen kirkko ja koko Halifaxin vanhin '
+          + 'rakennus.'
+          + '\n\n'
+          + 'Pohjakaava ei ole omaperäinen eikä sen ollut tarkoituskaan '
+          + 'olla: se seuraa James Gibbsin suunnitteleman Marybone '
+          + 'Chapelin kaavaa Westminsteristä. Gibbs oli sama arkkitehti, '
+          + 'joka piirsi St Martin-in-the-Fieldsin Trafalgar Squarelle. '
+          + 'Torni on myöhempi lisäys, ja kirkon alla on krypta.'
+          + '\n\n'
+          + 'Kirkko seisoo Grand Paraden eteläpäässä; aukion '
+          + 'pohjoispäässä on kaupungintalo. Vuosisatojen mittaan '
+          + 'kirkossa on siunattu monta seudun tunnettua vainajaa, '
+          + 'muun muassa kuvernööri Charles Lawrence 1760 ja '
+          + 'katolinen pappi Pierre Maillard 1762 — jälkimmäisen '
+          + 'siunaustilaisuuteen osallistui suuri joukko mi\'kmaqeja. '
+          + 'Kirkko nimettiin kansalliseksi historialliseksi kohteeksi '
+          + '1981.',
+      kuvat: [
+        {
+          tiedosto: 'St. Paul\'s Church (3609041903).jpg',
+          selite: 'Valkoinen puukirkko kapeine torneineen seisoo '
+            + 'aukion päässä puiden keskellä.',
+          lahde: 'CP Hoffman from Washington, DC, United States, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Atlantin merimuseo': {
+      aika: '1948',
+      teksti: 'Museo perustettiin 1948 nimellä Maritime Museum of '
+          + 'Canada, ja se toimi aluksi laivastotukikohdassa. '
+          + 'Ensimmäinen palkattu johtaja Niels Jannasch aloitti 1959 '
+          + 'ja jatkoi vuoteen 1985. Nykyinen rakennus valmistui 1981 '
+          + 'osana sataman uudistusta, ja museo oli ensimmäisiä '
+          + 'kohteita, jotka avattiin uudistetulle rannalle.'
+          + '\n\n'
+          + 'Se on Kanadan vanhin ja suurin merimuseo: kokoelmassa on '
+          + 'yli 30 000 esinettä, 70 pienvenettä ja kokonainen '
+          + 'höyrylaiva. CSS Acadia on 180 jalkaa pitkä '
+          + 'merenmittausalus vuodelta 1913, ja museo sai sen 1982. '
+          + 'Museolla on lisäksi 30 000 valokuvaa ja Kanadan suurin '
+          + 'laivamuotokuvien kokoelma sekä 1880-luvun Robertson '
+          + 'Store, vanha laivavarustamon myymälä.'
+          + '\n\n'
+          + 'Museon tunnetuin näyttely kertoo Titanicista. Halifax oli '
+          + 'huhtikuussa 1912 lähin suuri satama onnettomuuspaikalle, '
+          + 'ja pelastustyöt johdettiin täältä. Julkisivun lippurivissä '
+          + 'lukee "Welcome aboard L44 38N G63 34W" — se on museon oma '
+          + 'sijainti asteina ja minuutteina.',
+      kuvat: [
+        {
+          tiedosto: 'Maritime Museum of the Atlantic 9-04-04.JPG',
+          selite: 'Puuverhoiltu museorakennus ja ankkurit sen edessä '
+            + 'sataman laiturilla.',
+          lahde: 'Phobophile~commonswiki, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Julkinen puutarha': {
+      aika: '1874',
+      teksti: 'Halifax Public Gardens on viktoriaaninen puutarha, joka '
+          + 'perustettiin muodollisesti 1867 — samana vuonna kuin '
+          + 'Kanadan konfederaatio. Nykyinen puutarha syntyi 1874, kun '
+          + 'kaksi vanhempaa aluetta yhdistettiin: Nova Scotia '
+          + 'Horticultural Societyn 1837 istuttama puutarha ja sen '
+          + 'viereen 1866 avattu julkinen puisto.'
+          + '\n\n'
+          + 'Puutarhuriksi palkattiin 1872 Richard Power, ja hänen '
+          + 'akselisymmetrinen suunnitelmansa ohjaa aluetta yhä. '
+          + 'Powerin aikana tulivat soittolava, suihkulähteet, patsaat '
+          + 'ja takorautaportit sekä tiheät kuviolliset '
+          + 'kesäkukkaistutukset. Soittolavan suunnitteli arkkitehti '
+          + 'Henry Busch. Kuudentoista eekkerin alueella on kolme '
+          + 'suihkulähdettä, kaksi kivisiltaa ja kolme lampea.'
+          + '\n\n'
+          + 'Puutarha nimettiin kansalliseksi historialliseksi '
+          + 'kohteeksi 1984. Hurrikaani Juan tuhosi 2003 suuren osan '
+          + 'puista, ja puutarha avattiin uudelleen vasta Kanadan '
+          + 'päivänä 2004 — ennallistus rahoitettiin osin miljoonan '
+          + 'dollarin radiokeräyksellä. Osa vanhoista puista selvisi, '
+          + 'muun muassa 1860-luvulta oleva amerikanjalava.',
+      kuvat: [
+        {
+          tiedosto: 'CA-halifax-publ-garden-05.jpg',
+          selite: 'Puron yli näkyy suihkulähde, jonka ympärillä '
+            + 'syyslehdet ovat kaikissa väreissä.',
+          lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha hautausmaa': {
+      aika: '1749',
+      teksti: 'Vanha hautausmaa perustettiin 1749, samana vuonna kuin '
+          + 'kaupunki, ja se oli vuosikymmeniä Halifaxin ainoa '
+          + 'hautapaikka. Alun perin se oli tunnustuksista '
+          + 'riippumaton ja palveli kaikkia kaupunkilaisia; 1793 se '
+          + 'siirtyi anglikaaniselle Pyhän Paavalin seurakunnalle. '
+          + 'Hautausmaa suljettiin 1844, kun Camp Hillin hautausmaa '
+          + 'avattiin.'
+          + '\n\n'
+          + 'Vuosien mittaan tänne haudattiin noin kaksitoistatuhatta '
+          + 'ihmistä, mutta hautakiviä on jäljellä vain noin '
+          + 'tuhatkaksisataa: osa on kadonnut ja monella ei ollut '
+          + 'kiveä lainkaan. Kirjattuina on neljä mi\'kmaq-hautausta '
+          + 'ja 167 mustan haligonialaisen hautausta, kaikki '
+          + 'merkitsemättömiä. Yksi kivi kuitenkin on: pastori William '
+          + 'Furmagen, joka opetti Halifaxin ensimmäisessä mustien '
+          + 'lasten koulussa.'
+          + '\n\n'
+          + 'Paikka rappeutui pitkään, kunnes Old Burying Ground '
+          + 'Foundation kunnosti sen 1980-luvulla. Säätiö hoitaa '
+          + 'hautausmaata yhä ja palkkaa kesäisin oppaita; harvinaisten '
+          + '1700-luvun hautakivien ennallistaminen jatkuu.',
+      kuvat: [
+        {
+          tiedosto: 'Old Burying Ground, Halifax (3608978899).jpg',
+          selite: 'Tummuneet liuskekivet nojaavat toisiinsa '
+            + 'lehmusten alla keskellä kaupunkia.',
+          lahde: 'CP Hoffman from Washington, DC, United States, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pier 21': {
+      aika: '1928',
+      teksti: 'Pier 21 oli valtamerilaivojen terminaali ja '
+          + 'maahantulohalli vuosina 1928–1971. Sen kautta Kanadaan '
+          + 'tuli lähes miljoona siirtolaista, ja se on maan viimeinen '
+          + 'säilynyt satamassa toiminut maahantulopaikka; sitä '
+          + 'verrataan usein Ellis Islandiin.'
+          + '\n\n'
+          + 'Vanha Pier 2 kaupungin pohjoispäässä oli rakennettu 1880, '
+          + 'mutta vuoteen 1913 mennessä oli selvää, että laivojen '
+          + 'kasvava koko vaatii uuden paikan. Maailmansota ja '
+          + 'Halifaxin räjähdys viivyttivät työtä, ja uusi kokonaisuus '
+          + 'valmistui vasta 1928: rahtilaiturit, viljasiilot, uusi '
+          + 'rautatieasema ja kuusisataa jalkaa pitkä kaksikerroksinen '
+          + 'halli. Maahantulotoiminnot olivat toisessa kerroksessa, ja '
+          + 'viereisessä tiilirakennuksessa olivat tulli, '
+          + 'lipunmyynti, lennätin ja avustusjärjestöjen toimistot.'
+          + '\n\n'
+          + 'Kävelysilta johti radan yli laitureille, joilta lähtivät '
+          + 'siirtolaisjunat — kymmenien vaunujen mittaisia junia, '
+          + 'jotka veivät tulijat halki Kanadan uusiin koteihinsa. '
+          + 'Nykyään talossa toimivat Kanadan maahanmuuttomuseo, joka '
+          + 'avattiin yleisölle 1999 ja on Atlantin provinssien ainoa '
+          + 'kansallinen museo, sekä taidekorkeakoulu NSCAD.',
+      kuvat: [
+        {
+          tiedosto: 'Pier 21 2010 1.JPG',
+          selite: 'Tiilinen terminaalirakennus ja vanha '
+            + 'matkustajavaunu sen edessä laiturialueella.',
+          lahde: 'Skeezix1000, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Point Pleasant Park': {
+      aika: '1796',
+      teksti: 'Niemimaan eteläkärjessä on metsäinen puisto, jossa oli '
+          + 'aikanaan useita tykkipattereita. Yksi rakennus on yhä '
+          + 'pystyssä: Prince of Wales Tower vuodelta 1796 on '
+          + 'Pohjois-Amerikan vanhin martellotorni. Puiston polut '
+          + 'kulkevat vanhojen varustusten raunioiden lomassa, ja '
+          + 'kärjestä näkee sataman yli avomerelle.'
+          + '\n\n'
+          + 'Cornwallis asettui 1749 ensin juuri tänne, mutta paikka '
+          + 'oli liian avoin säälle ja asutus siirrettiin '
+          + 'linnoituskukkulan juurelle. Alue jäi Britannian valtion '
+          + 'omistukseen, ja se vuokrattiin kaupungille '
+          + 'seremoniallisella yhden shillingin vuosivuokralla. '
+          + 'Alkuperäisen sopimuksen neuvotteli Sir William Young '
+          + '1866. Nykyään maa on Kanadan valtion ja vuokralaisena '
+          + 'Halifaxin kunta.'
+          + '\n\n'
+          + 'Kesäisin puistossa esittää Shakespeare by the Sea '
+          + '-teatteriryhmä näytelmiä Cambridge Batteryn raunioilla: '
+          + 'sekä Shakespearea että satuihin perustuvia musikaaleja. '
+          + 'Ryhmällä on lisäksi kahdeksankymmenen paikan sisätila '
+          + 'puiston alaparkkipaikalla sadepäivien varalle.',
+      kuvat: [
+        {
+          tiedosto: 'Prince of Wales Tower - 2017 (35781219381).jpg',
+          selite: 'Pyöreä kivitorni seisoo nurmella männikön keskellä '
+            + 'ilman muuta rakennusta ympärillään.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

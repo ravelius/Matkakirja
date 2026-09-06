@@ -84979,4 +84979,1075 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MIAMI (Opus 6.9.2026, paketti O9) — P-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-miami.md ja sen riippumaton tarkistus
+   * tarkistus-miami.md (tuomio "kelpaa kolmen korjauksen jälkeen";
+   * kaikki kolme on tehty, ks. alla). Väitteet on luettu
+   * en-Wikipedian raakatekstistä 6.9.2026: "Miami", "History of
+   * Miami", "Tequesta", "Miami Circle", "Julia Tuttle", "Cape
+   * Florida Light", "Everglades", "Biscayne Bay", "Miami Beach
+   * Architectural District", "Miami Beach, Florida".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * koskettu; saapumiskortin isoisä sanoo suoraan, että hänen
+   * kartallaan tässä oli vain mangrovea ja hyttysiä — juuri se
+   * 1873-kulma, jolle nosto M2 rakentuu.
+   *
+   * SIVUJA ON KAKSI kuten Denverissä ja Houstonissa (kaupunki +
+   * teemasivu). Teemasivun id on vakioaihe 'luonto', koska
+   * AIHE_IKONIT ei tarjoa kosteikolle omaa kuvaketta eikä uusia
+   * sivu-id:itä tehdä; sivun nimi "Ruohojoki ja lahti" kertoo aiheen.
+   *
+   * TARKISTUKSEN KAIKKI KORJAUKSET ON TEHTY:
+   *  - A: kaupungin perustamisesta kerrotaan 502 ÄÄNESTÄJÄÄ eikä
+   *    yleisartikkelin "runsaat 300 asukasta". Luvut ovat keskenään
+   *    ristiriidassa (äänestäjiä ei voi olla enemmän kuin asukkaita),
+   *    ja ero selitetään samassa virkkeessä: äänioikeus oli rajattu
+   *    Miamissa ja Daden piirikunnassa asuviin miehiin.
+   *  - B: 50 jalkaa on KALKKIKIVEN paksuus, ei maakerroksen. Lehti
+   *    sanoo kalkkikivikerroksen olevan enintään noin 15 metriä ja
+   *    maakerroksen ohut ilman lukua, koska lähde ei anna sille lukua.
+   *  - C: märän kauden kastepisteraja on 70 °F eli 21 °C.
+   *
+   * PILARI 1 JA SPEC-MANTEREET.MD:N LINJAUS 1: tequestat tulevat
+   * ensimmäisenä nostona ennen kaupungin perustamista, ja heidän
+   * elämäntapansa kerrotaan heidän omin ehdoin. Kansaa ei ole enää
+   * erillisenä yhteisönä, ja se kerrotaan tapahtumina (taudit, sodat,
+   * muutto Kuubaan) eikä "kadonneen kansan" romantiikkana. Miami
+   * Circlen tekijyys kirjoitetaan lähteen varauksella ("luetaan
+   * ansioksi"), koska lähde sanoo "are credited with".
+   *
+   * EI NYKYPOLITIIKKAA EIKÄ NYKYRIKOLLISUUTTA: artikkelin huumesota,
+   * poliisipäällikkö ja Ku Klux Klan 1920-luvulla, vuoden 1980
+   * levottomuudet, vuoden 1933 murhayritys Bayfront Parkissa ja
+   * patsaiden töhriminen 2020 on jätetty kokonaan pois. Overtownin
+   * rotuerottelu ja 1960-luvun pakkolunastukset kerrotaan suoraan
+   * lähteen sanoin nähtävyysjutussa, ilman yksityiskohtien
+   * korostusta (spec-mantereet.md, USA-linjaus).
+   *
+   * ILMASTONMUUTOS näkyy vain neutraalina luonnontieteellisenä
+   * tosiasiana ja lyhyesti, koska laudan visa käsittelee sen jo
+   * (northamerica-questions.js, miami, kysymys 5).
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026 pyyntöön
+   * 429:llä ("Daily API request limit exceeded"), eikä lukuja keksitä
+   * (Samarkand-malli v965) — js/packs/saatiedot.js jää koskematta ja
+   * lehti näkyy ilman säätä kuten Denverissä ja Houstonissa. Oppaan
+   * sääjakso nojaa siksi en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen.
+   *
+   * KUVAT haettiin Commonsin API:sta kategoria- ja hakusanahauilla
+   * (Miami, Florida skylines; Aerial photographs of Miami, Florida;
+   * History of Miami, Florida; Cape Florida Light; Miami Circle;
+   * Everglades National Park; Pérez Art Museum Miami), lisenssi ja
+   * tekijä luettiin extmetadatasta 6.9.2026, ja jokainen valittu kuva
+   * katsottiin silmin 800–900 px esikatseluna.
+   * HYLKÄYKSET: "From above Brickell Key 120313-8541-jikatu.jpg"
+   * (iso pankin kattotunnus hallitsee kuvaa), "Miami Beach and Port
+   * of Miami Skyline (2720195951).jpg" (auringonlaskun siluetti,
+   * kaupunki ei erotu), "Establishing shot - Miami.jpg"
+   * (rakennustelineet ja nosturit oikeustalon päällä), "Cape Florida
+   * Lighthouse (2).jpg" (majakan sisäportaat, ei majakkaa), "Fort
+   * Dallas Former Slave Quarters Miami (8633509298).jpg" (kova
+   * mustavalkokäsittely), "Fort Dallas Park.jpg" (pelkkä puistokyltti),
+   * "Wynwood Art District (8139425353).jpg" ja "Calle Ocho Little
+   * Havana - Rooster Alley.jpg" (edellinen on pelkkä kyltti,
+   * jälkimmäinen sikarimainos), "Lifeguard tower, Miami Beach,
+   * FL.jpg" (tunnistettavat kasvot etualalla), "PAMM MRD 09.jpg" ja
+   * "PAMM MRD 12.jpg" (työmaakartioita ja tekijänoikeudellisia
+   * veistoksia), "PAMM MRD 20.jpg" (yökuva ihmisjoukosta),
+   * "Freedom Tower Miami East View.JPG" (parkkipaikka vie puolet
+   * kuvasta), "Bayfront Park - panoramio (3).jpg" (orava, ei puisto),
+   * "Ocean Drive South Beach Miami.jpg" (täynnä autoja ja
+   * tunnistettavia ihmisiä), "Biscayne National Park, Florida
+   * (ce927b40-...).jpg" (snorklaajien kasvot ja filminauhan reunat)
+   * ja "Beer and lobster (25537004601).jpg" (tienvarsikyltti).
+   *
+   * AIHETOISTO, joka on tarkoituksellinen ja kirjattu: Cape Floridan
+   * majakka esiintyy kahdessa kuvassa, mutta eri tiedostoina ja eri
+   * aiheena — nostossa M2 majakka itse rannalta nähtynä ja teemasivun
+   * nostossa L4 majakan tornista avautuva näkymä mangroven yli
+   * kaupunkiin. Sama koskee art decoa: nosto M4 näyttää yhden
+   * julkisivun Ocean Drivella ja oppaan jakso 3 rannan, jonka takana
+   * hotellirivi jatkuu.
+   *
+   * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+   * (northamerica-valokuvat.js, miami), jossa se on jo tarkistettu —
+   * vanha puoli on Library of Congressin vedos Miami-joelta 1904 ja
+   * uusi sama joki keskustan kohdalla 2023. Selitteet on kirjoitettu
+   * uudestaan yhdeksi virkkeeksi reseptin mukaan.
+   */
+  miami: [
+    {
+      id: 'kaupunki',
+      nimi: 'Miami',
+      johdanto: 'Miami on Yhdysvaltain suurista kaupungeista nuorin — se '
+        + 'perustettiin vasta 1896. Kaupunki mahtuu matalalle '
+        + 'kalkkikivitasangolle Evergladesin ja Biscayne Bayn väliin, ja '
+        + 'kadulla puhutaan kahta kieltä.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: Brickellin
+       * siluetti lahdelta, Coconut Grove ilmasta ja Edgewater
+       * pengertieltä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Downtown Miami photo (version 2) Don Ramey Logan.jpg',
+          selite: 'Brickellin tornirivi nousee Biscayne Bayn takaa '
+            + 'kirkkaassa iltapäivävalossa.',
+          lahde: 'Don Ramey Logan, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Downtown Coconut Grove.jpg',
+          selite: 'Coconut Groven venesatama ja mangrovesaaret ilmasta '
+            + 'nähtynä, keskusta kaukana horisontissa.',
+          lahde: 'Anthony Quintano from Mount Laurel, United States, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Miami (49167870223).jpg',
+          selite: 'Pengertieltä katsottuna Edgewaterin tornit ja '
+            + 'satamasaaret jakavat lahden kahtia.',
+          lahde: 'Mike McBey, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat — siluetti pengertieltä, keskusta kattotasolta ja
+       * estesaaren nauha ilmasta. Miamille ei ole vielä generoitu
+       * herokuvia, joten karusellissa on kolme aitoa valokuvaa
+       * (vertaa Denveriin ja Cairnsiin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Downtown Miami skyline May 2011.jpg',
+          selite: 'Keskustan siluetti näkyy kokonaisena lahden yli '
+            + 'pengertien kohdalta.',
+          lahde: 'Daniel Christensen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Downtown Miami historic CBD.jpg',
+          selite: 'Kattotasolta erottuu, miten vanha liikekeskusta '
+            + 'kapenee sataman ja joen väliin.',
+          lahde: 'B137, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Flight from Quito, Ecuador to Miami - the famous strip (16039429263).jpg',
+          selite: 'Estesaari erottuu ilmasta kapeana nauhana, jonka '
+            + 'toisella puolella on lahti ja toisella avomeri.',
+          lahde: 'Murray Foubister, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Indians canoeing on Miami River - J.N. Chamberlain, photographer, Miami, Fla. LCCN00650881.jpg',
+          vuosi: '1904',
+          selite: 'Ruuhia Miami-joella vuonna 1904, kun joki oli yhä '
+            + 'reitti Evergladesilta lahden rannalle.',
+          lahde: 'Library of Congress, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Miami River Downtown Miami Florida 1 May 2023.jpg',
+          selite: 'Sama joki keskustan kohdalla nykyään: rannat ovat '
+            + 'tornitaloja, mutta rahtia lastataan yhä.',
+          lahde: 'Phillip Pessar, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kansa, joka lähti Kuubaan',
+          teksti: 'Tequestat asuivat Miamin seudulla noin kahdentuhannen '
+            + 'vuoden ajan ennen eurooppalaisia. Miami-joen suulla oli '
+            + 'satojen ihmisten kylä, joka ajoittuu vuosiin 500–600 eaa. '
+            + 'Kansa kalasti, metsästi ja keräsi hedelmiä ja juuria eikä '
+            + 'viljellyt maata. Sen ansioksi luetaan Miami Circle, joen '
+            + 'suulle kallioon hakattu ympyrä. Vuonna 1513 Juan Ponce de '
+            + 'León purjehti Biscayne Baylle ja kirjasi paikan nimellä '
+            + 'Chequescha — Miamin ensimmäinen tunnettu nimi. '
+            + 'Espanjalaiset rakensivat joen suulle lähetysaseman 1567, '
+            + 'mutta se jäi lyhytikäiseksi. Taudit ja sodat harvensivat '
+            + 'kansaa, ja 1700-luvun puoliväliin mennessä sen uskotaan '
+            + 'muuttaneen kokonaan Kuubaan.',
+          tiedosto: 'Miami Circle Brickell Point Site.jpg',
+          selite: 'Miami Circlen ympyrä on merkitty nurmikkoon aivan '
+            + 'joen suulla tornitalon juurella.',
+          lahde: 'Phillip Pessar, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Miami Circle',
+        },
+        {
+          otsikko: '1873: kourallinen perheitä lahden rannalla',
+          teksti: 'Isoisän matkavuonna Miamia ei ollut olemassa. Vuosina '
+            + '1858–1896 seudulla asui vain kourallinen perheitä pienissä '
+            + 'kylissä Biscayne Bayn rannalla; ensimmäinen niistä oli joen '
+            + 'suulla, ja sitä kutsuttiin vuoroin nimillä Miami, Miamuh ja '
+            + 'Fort Dallas. Vuoden 1850 laskennassa asukkaita oli '
+            + 'yhdeksänkymmentäkuusi. Vuonna 1870 William Brickell osti '
+            + 'maata joen etelärannalta, ja perhe piti tontillaan '
+            + 'kauppa-asemaa ja postitoimistoa koko loppuvuosisadan. '
+            + 'Laivoja varoitti riutasta Cape Floridan majakka, joka oli '
+            + 'rakennettu 1825, poltettu 1836 ja korjattu 1846.',
+          tiedosto: 'Cape Florida Lighthouse from the beach.JPG',
+          selite: 'Cape Floridan majakka seisoo Key Biscaynen kärjessä '
+            + 'samalla paikalla kuin isoisän aikaan.',
+          lahde: 'Bradleyjs34, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cape Florida Light',
+        },
+        {
+          otsikko: 'Appelsiininkukkia rautatiemagnaatille',
+          teksti: 'Julia Tuttle muutti Clevelandista 1891 ja osti 640 '
+            + 'eekkeriä Miami-joen pohjoisrannalta. Hän yritti taivutella '
+            + 'rautatiemagnaatti Henry Flagleria jatkamaan rataansa '
+            + 'etelään, mutta tämä kieltäytyi. Joulukuussa 1894 pakkanen '
+            + 'tuhosi sitrussadon Pohjois-Floridassa, ja 7. helmikuuta '
+            + '1895 toinen pakkanen vei loputkin — Miamin seutu säästyi. '
+            + 'Flaglerin lähettämä tarkastaja palasi appelsiininkukkien '
+            + 'kanssa. Ensimmäinen juna saapui 13. huhtikuuta 1896, ja '
+            + 'kaupunki perustettiin saman vuoden heinäkuun 28. päivänä. '
+            + 'Perustamiskokouksessa oli 502 äänestäjää — äänioikeus oli '
+            + 'rajattu Miamissa ja Daden piirikunnassa asuviin miehiin.',
+          tiedosto: 'Julia Tuttle Statue.jpg',
+          selite: 'Julia Tuttlen patsaan jalustaan on veistetty '
+            + 'appelsiininkukka, ruuhi ja alligaattori.',
+          lahde: 'Juleskramer, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Julia Tuttle',
+        },
+        {
+          otsikko: 'Pastellikorttelit, jotka melkein purettiin',
+          teksti: 'South Beachin pastellinväriset hotellit ovat maailman '
+            + 'suurin art deco -kokoelma. Suurin osa taloista nousi '
+            + 'lamavuosien ja 1940-luvun alun välillä: tyyli saapui '
+            + 'Miamiin vasta sen jälkeen, kun kiinteistömarkkinat '
+            + 'romahtivat 1925 ja vuoden 1926 hurrikaani jätti seudulla '
+            + '25 000 ihmistä kodittomiksi. Sitä ennen rakennettiin '
+            + 'välimerellistä tyyliä, jota korttelissa on yhä jäljellä. '
+            + 'Kun taloja alettiin purkaa, sisustussuunnittelija Barbara '
+            + 'Baer Capitman perusti 1976 tovereineen Miami Design '
+            + 'Preservation Leaguen. Alue merkittiin kansalliseen '
+            + 'rekisteriin 14. toukokuuta 1979, ja siihen kuuluu 960 '
+            + 'historiallista rakennusta.',
+          tiedosto: 'Ocean Drive - Art Deco buildings in Miami (5410501624).jpg',
+          selite: 'Ocean Driven hotellijulkisivussa toistuvat pyöreät '
+            + 'kulmat, kaiteet ja pystyt siivekkeet.',
+          lahde: 'Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Miami Beach Architectural District',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Miami South Beach - Lifeguard Tower.jpg',
+          selite: 'South Beachin hengenpelastajatornit on maalattu '
+            + 'kirkkain värein, eikä kahta samanlaista ole.',
+          lahde: 'Summerbrize, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Miami on Floridan toiseksi suurin kaupunki ja '
+          + 'Miami-Daden piirikunnan keskus. Se on rakennettu leveälle '
+          + 'tasangolle, jonka länsipuolella on Everglades ja '
+          + 'itäpuolella Biscayne Bay; korkeus merenpinnasta on '
+          + 'useimmissa kaupunginosissa vain noin kaksi metriä. '
+          + 'Golfvirta kulkee lämpimänä noin 24 kilometrin päässä '
+          + 'rannikosta ja pitää ilmaston leutona ympäri vuoden. '
+          + 'Vuoden 2020 laskennassa 70,2 prosenttia asukkaista oli '
+          + 'latinoja.',
+        artikkeli: {
+          nimi: 'Matkailijan Miami',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa aamu alkaa espanjaksi ja iltapäivä '
+            + 'jatkuu vedessä: keskustan museokortteli, Little Havanan '
+            + 'kadut ja estesaaren ranta mahtuvat kaikki samaan '
+            + 'päivään.',
+          nosto: 'Miamia sanotaan Latinalaisen Amerikan pääkaupungiksi. '
+            + 'Se on El Pason jälkeen Yhdysvaltain toiseksi suurin '
+            + 'kaupunki, jossa espanjankieliset ovat enemmistönä, ja '
+            + 'suurin, jossa kuubalaistaustaiset ovat suurin ryhmä. '
+            + 'Kaupungin oma englannin murre syntyi toisen ja kolmannen '
+            + 'polven latinojen puheessa: rytmi tulee espanjasta, mutta '
+            + 'kyseessä on äidinkielinen murre eikä opittu kieli.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Keskustassa liikkuu Metromover: maksuton '
+                + 'kohotettu automaattijuna, jolla on kolme linjaa ja '
+                + '21 asemaa — pysäkki noin kahden korttelin välein. '
+                + 'Sen lisäksi on Metrorailin kaupunkirata, kaksi '
+                + 'linjaa ja 23 asemaa. Maan alle ei juuri rakenneta, '
+                + 'koska pohjavesi on viiden tai kuuden metrin '
+                + 'syvyydessä — siksi radat ovat pylväiden päällä tai '
+                + 'maan tasalla. PortMiami on '
+                + 'maailman vilkkain risteilysatama: vuonna 2017 sen '
+                + 'kautta kulki 5 340 559 matkustajaa, ja terminaaleja '
+                + 'on seitsemän.',
+              kuva: {
+                tiedosto: 'Metromover Downtown Miami, March 2023.jpg',
+                selite: 'Metromoverin kaksi vaunua kulkevat kuljettajatta '
+                  + 'betonipalkin päällä keskustan kortteleiden yli.',
+                lahde: 'Phillip Pessar, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kaksi kieltä ja Little Havana',
+              teksti: 'Kaupungin länsipuolella on Little Havana, jonka '
+                + 'pääkatu Calle Ocho eli kahdeksas katu on '
+                + 'kuubalaissiirtolaisten kortteleiden selkäranka. '
+                + 'Versaillesin ravintola on kadun tunnetuin osoite. '
+                + 'Pohjoisessa on Wynwoodin muraalikortteli ja sen '
+                + 'vieressä Little Haiti, entinen Lemon City. '
+                + 'Etelässä Coconut Grove on asutettu jo 1825, ja sen '
+                + 'kapeat mutkaiset kadut ja tiheä puusto erottavat sen '
+                + 'muusta kaupungista.',
+            },
+            {
+              otsikko: 'Rannalle ja lahdelle',
+              teksti: 'Biscayne Bayn takana on estesaari, jolla ovat '
+                + 'Miami Beach ja South Beach. Ocean Driven hotellirivi '
+                + 'kulkee viidenneltä kadulta viidennelletoista ja on '
+                + 'rannan puolella Lummus Parkin vieressä. Lahdessa on '
+                + 'koralliriuttoja, joten snorklaus ja sukellus ovat '
+                + 'tavallisia harrastuksia. Kaupungissa on yli 80 '
+                + 'puistoa ja puutarhaa; suurimmat ovat Bayfront Park ja '
+                + 'sen pohjoispuolinen museopuisto keskustassa.',
+              kuva: {
+                tiedosto: 'Miami Beach - Beach scene.jpg',
+                selite: 'Leveä hiekkaranta, aurinkovarjojen rivi ja '
+                  + 'hengenpelastajan torni Miami Beachillä aamulla.',
+                lahde: 'P. Hughes, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Miamin keittiö sekoittaa latinalaisamerikkalaista, '
+                + 'karibialaista, soul- ja juutalaista ruokaa '
+                + 'amerikkalaiseen; lopputulosta kutsutaan nimellä '
+                + 'floribbean. Kuubalaissiirtolaiset toivat 1960-luvulla '
+                + 'cubano-voileivän, medianochen, kuubalaisen espresson, '
+                + 'bistec de palomillan ja croquetat. Niitä myydään '
+                + 'katuun avautuvista ikkunoista kauppojen ja '
+                + 'ravintoloiden edustalla. Meri näkyy ruokalistoilla: '
+                + 'kalaravintoloita on Miami-joen varressa ja pitkin '
+                + 'Biscayne Bayn rantaa.',
+              kuva: {
+                tiedosto: 'Versailles, Calle Ocho, Miami - Cuban Sandwich.jpg',
+                selite: 'Cubano-voileipä paistetaan litteäksi ja '
+                  + 'tarjoillaan kuumana Calle Ocholla.',
+                lahde: 'Todd Van Hoosear, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Miami-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa vuosigraafia, '
+                + 'koska ERA5-normaaleja ei saatu haettua. Ilmasto on '
+                + 'trooppinen monsuuni-ilmasto: kuuma ja märkä kausi '
+                + 'kestää toukokuusta lokakuuhun, lämmin ja kuiva '
+                + 'marraskuusta huhtikuuhun. Talven ylimmät ovat 24,7 ja '
+                + '26,8 asteen välillä ja tammikuu on viilein '
+                + 'keskilämmöllä 20,1 astetta. Sadetta tulee 1 572 '
+                + 'millimetriä vuodessa, ja suurin osa siitä kesän '
+                + 'iltapäiväkuuroina. Hurrikaanikausi on kesäkuun '
+                + 'alusta marraskuun loppuun ja riski on suurimmillaan '
+                + 'elokuun puolivälistä syyskuun loppuun.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'South Beachin art deco -korttelit',
+                tahdet: 3,
+                selite: '960 suojeltua taloa ja maailman suurin art deco '
+                  + '-kokoelma yhdessä kaupunginosassa.',
+              },
+              {
+                mita: 'Everglades kaupungin laidalla',
+                tahdet: 3,
+                selite: 'Ruohojoki alkaa aivan länsipuolelta, ja sen '
+                  + 'alligaattorit ovat eksyneet valtateille asti.',
+              },
+              {
+                mita: 'Calle Ocho ja Little Havana',
+                tahdet: 2,
+                selite: 'Kuubalaiskortteleiden pääkatu, jossa espanja on '
+                  + 'arkikieli ja kahvi tilataan ikkunasta.',
+              },
+              {
+                mita: 'Vapaudentorni',
+                tahdet: 2,
+                selite: 'Vuoden 1925 lehtitalo, joka otti mallia '
+                  + 'Sevillan Giraldasta ja josta tuli pakolaisten '
+                  + 'vastaanottopaikka.',
+              },
+              {
+                mita: 'Biscayne Bayn riutat',
+                tahdet: 2,
+                selite: 'Lahdessa on koralliriuttoja ja satoja saaria '
+                  + 'aivan kaupungin edustalla.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5 ja
+             * teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Kesä on märkä ja hyvin kostea',
+                teksti: 'Touko–lokakuussa iltapäivän ukkoskuurot ovat '
+                  + 'päivittäisiä ja kastepiste pysyy yli 21 asteessa.',
+              },
+              {
+                otsikko: 'Hurrikaanikausi kannattaa tietää',
+                teksti: 'Kausi kestää kesäkuun alusta marraskuun loppuun, '
+                  + 'ja riskihuippu on elokuun puolivälistä syyskuun '
+                  + 'loppuun.',
+              },
+              {
+                otsikko: 'Kaupunki on hyvin matalalla',
+                teksti: 'Korkeus merenpinnasta on useimmissa '
+                  + 'kaupunginosissa noin kaksi metriä, ja noin 40 '
+                  + 'prosenttia asunnoista on tulvariskialueella.',
+              },
+              {
+                otsikko: 'Espanja auttaa enemmän kuin luulisi',
+                teksti: 'Seitsemänkymmentä prosenttia asukkaista on '
+                  + 'latinoja, ja monessa kaupassa espanja on '
+                  + 'ensimmäinen kieli.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Ruohojoki ja lahti',
+      johdanto: 'Kaupungin länsipuolella alkaa ruohojoki ja itäpuolella '
+        + 'lahti, jossa on satoja saaria. Väliin jää kalkkikivikaista, '
+        + 'joka on juuri ja juuri merenpinnan yläpuolella.',
+      tehtava: {
+        kysymys: 'Kuinka kaukana Miamin rannikosta Golfvirta kulkee?',
+        vaihtoehdot: [
+          'noin 24 kilometrin päässä',
+          'noin 240 kilometrin päässä',
+          'aivan rannassa',
+          'vasta Bahaman toisella puolella',
+        ],
+        oikea: 0,
+        fakta: 'Lämmin Golfvirta kulkee pohjoiseen noin 24 kilometrin '
+          + 'päässä rannikosta. Se on syy siihen, että Miamin ilmasto '
+          + 'pysyy lämpimänä ja leutona läpi vuoden.',
+      },
+      nostot: [
+        {
+          otsikko: 'Joki, joka on ruohoa',
+          teksti: 'Miamin länsilaidalla alkaa Everglades, trooppinen '
+            + 'suoalue, joka peittää suurimman osan Etelä-Floridasta. '
+            + 'Vesi ei virtaa uomassa vaan leveänä ja matalana '
+            + 'ruohikkona Okeechobee-järveltä etelään Florida Bayhin — '
+            + 'siitä nimi ruohojoki. Alue ulottuu aivan asuinalueiden '
+            + 'reunaan, ja suon alligaattorit ovat eksyneet '
+            + 'kaupunginosiin ja valtateille asti. Everglades ja lahti '
+            + 'ovat saman järjestelmän kaksi päätä: sama vesi kulkee '
+            + 'suon läpi ja päätyy lopulta merelle.',
+          tiedosto: 'Rainstorm over a Sawgrass Prairie - 2020 Photo Contest (52687302392).jpg',
+          selite: 'Sadekuuro laskeutuu Evergladesin sarapreerian ylle '
+            + 'ilman yhtäkään puuta horisontissa.',
+          lahde: 'evergladesnps, Wikimedia Commons (PD)',
+          wiki: 'Everglades',
+        },
+        {
+          otsikko: 'Lahti, jossa on satoja saaria',
+          teksti: 'Biscayne Bay ulottuu Miamin edustalta etelään Florida '
+            + 'Bayhin, ja siinä on useita satoja luonnollisia ja '
+            + 'keinotekoisia estesaaria. Suurin niistä kantaa Miami '
+            + 'Beachin ja South Beachin, eli kaupungin kuuluisin ranta '
+            + 'on itse asiassa saarella. Lahdessa on koralliriuttoja, ja '
+            + 'sen matalat rannat ovat mangrovea: juuriston seasta '
+            + 'löytyy kalanpoikasia, ja se vaimentaa myrskyaaltoa. '
+            + 'Rantaviiva näyttää suoralta vain kartalla — vedessä se '
+            + 'hajoaa saariksi, kanaviksi ja matalikoiksi.',
+          tiedosto: 'Biscayne National Park H-mangrove shoreline.jpg',
+          selite: 'Mangroven juuret muodostavat lahden rannalle tiheän '
+            + 'seinän, jonka takana vesi on peilityyni.',
+          lahde: 'National Park Service Digital Image Archives, Wikimedia Commons (PD)',
+          wiki: 'Biscayne Bay',
+        },
+        {
+          otsikko: 'Kaksi vuodenaikaa, ei neljä',
+          teksti: 'Miamissa on kuuma ja märkä kausi toukokuusta '
+            + 'lokakuuhun sekä lämmin ja kuiva kausi marraskuusta '
+            + 'huhtikuuhun. Märkä kausi määritellään kosteudesta eikä '
+            + 'kalenterista: se alkaa, kun vuorokauden keskikastepiste '
+            + 'nousee yli 21 asteen. Vuosina 1956–1997 kesä alkoi '
+            + 'aikaisimmillaan 16. huhtikuuta ja myöhimmillään 3. '
+            + 'kesäkuuta, mediaanipäivä oli 21. toukokuuta. Kesällä '
+            + 'iltapäivän ukkoskuuro tai merituuli katkaisee helteen '
+            + 'lähes päivittäin, ja suurin osa vuoden 1 572 millimetrin '
+            + 'sateesta tulee juuri silloin.',
+          tiedosto: 'Downtown Miami summer shower 20100707.jpg',
+          selite: 'Kesäkuuro vetää harmaan verhon keskustan tornien yli '
+            + 'kesken kirkkaan päivän.',
+          lahde: 'Averette, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Miami',
+        },
+        {
+          otsikko: 'Kaupunki huokoisen kiven päällä',
+          teksti: 'Miamin peruskallio on Miamin kalkkikiveä eli '
+            + 'ooliittia, ja kerros on enintään noin viisitoista metriä '
+            + 'paksu; sen päällä on vain ohut maakerros. Kivi syntyi '
+            + 'jääkausien merenpinnan heilahduksista: noin 130 000 '
+            + 'vuotta sitten merenpinta oli noin kahdeksan metriä '
+            + 'nykyistä ylempänä ja koko Etelä-Florida oli matalan '
+            + 'meren alla. Kallion alla on Biscaynen pohjavesiesiintymä, '
+            + 'josta koko metropolialue ottaa juomavetensä. Siksi maata '
+            + 'ei voi kaivaa viittä tai kuutta metriä syvemmälle '
+            + 'osumatta veteen — ja siksi radat kulkevat kaupungissa '
+            + 'pylväiden päällä.',
+          tiedosto: 'Cape Florida Lighthouse (5).jpg',
+          selite: 'Majakan tornista katsottuna kaupunki on ohut nauha '
+            + 'mangrovemeren ja taivaan välissä.',
+          lahde: 'Tamanoeconomico, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Miami',
+        },
+      ],
+    },
+  ],
+  /*
+   * HALIFAX (Opus 6.9.2026, paketti O9) — P-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-halifax.md ja sen riippumaton tarkistus
+   * tarkistus-halifax.md (tuomio "kelpaa kahden korjauksen ja kahden
+   * auki kirjoitettavan ristiriidan jälkeen"; kaikki on tehty, ks.
+   * alla). Väitteet on luettu en-Wikipedian raakatekstistä 6.9.2026:
+   * "Halifax, Nova Scotia", "History of Halifax, Nova Scotia",
+   * "Mi'kmaq", "Halifax Explosion", "Citadel Hill (Fort George)",
+   * "Halifax Town Clock", "Province House (Nova Scotia)",
+   * "Donair".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * koskettu. Saapumiskortin isoisä puhuu postilaivoista, jotka
+   * lähtevät Eurooppaan säällä kuin säällä — juuri se 1873-kulma,
+   * jolle nosto H3 rakentuu.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto', koska AIHE_IKONIT ei tarjoa satamalle omaa
+   * kuvaketta eikä uusia sivu-id:itä tehdä; sivun nimi "Satama, sumu
+   * ja myrskyt" kertoo aiheen.
+   *
+   * TARKISTUKSEN KAIKKI KOHDAT ON HOIDETTU:
+   *  - A: räjähdyksen uhriluvusta ja Imon kansallisuudesta on kaksi
+   *    lähdeversiota. Lehti käyttää tarkempaa artikkelia
+   *    ("Halifax Explosion"): VÄHINTÄÄN 1 782 kuollutta, ja Imo on
+   *    norjalainen alus, joka oli rahdattu Belgian
+   *    avustustoimikunnalle. Yleisartikkelin "noin 2 000" ja
+   *    "belgialainen avustusalus" jäävät pois.
+   *  - B: kaupunkioikeuksien vuosiluku jätetään kokonaan pois, koska
+   *    sama lähdeartikkeli antaa sille kaksi eri vuotta (1841 ja
+   *    1842) eikä kumpikaan ole toista tarkempi.
+   *  - C: Cornwallisin mukana tulleiden määrä kirjoitetaan muodossa
+   *    "runsaat tuhat", koska lähteet vaihtelevat (1 176–2 500) ja
+   *    kuljetusaluksia oli 13 tai 15.
+   *  - D: sataman mi'kmaq-nimestä annetaan MOLEMMAT lähteen
+   *    käännökset, koska lähde ei valitse niiden välillä.
+   *
+   * PILARI 1 JA SPEC-MANTEREET.MD:N LINJAUS 1: mi'kmaqit tulevat
+   * ensimmäisenä nostona ennen kaupungin perustamista, ja paikan OMA
+   * NIMI (Kjipuktuk) kerrotaan ennen siirtomaanimeä. Kansa kuvataan
+   * elävänä nykypäivän toimijana (väkiluku 2023, kielen puhujat 2021,
+   * Treaty Day). Perustamisesta sanotaan suoraan, että se rikkoi
+   * vuoden 1726 sopimuksia ja aloitti sodan — mutta ILMAN
+   * julmuuksien yksityiskohtia (pilari 4): Cornwallisin
+   * skalppausjulistusta ja Dartmouthin vuoden 1751 tapahtumia ei
+   * kerrota lainkaan.
+   *
+   * AFRICVILLE on luettu mutta jätetty tästä lehdestä pois: kaupungin
+   * 1960-luvulla purkama musta yhteisö vaatisi oman nostonsa, eikä
+   * sitä voi käsitellä ohimennen kunnioittavasti. Se on kirjattu
+   * tarkistusraporttiin jatkotyöksi, ei unohduksena.
+   *
+   * EI NYKYPOLITIIKKAA: kuntaliitoksen hallintokiistat,
+   * laivanrakennussopimukset ja Public Gardensin puiden
+   * vahingoittaminen 2022 on jätetty pois.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026 pyyntöön
+   * 429:llä ("Daily API request limit exceeded"), eikä lukuja keksitä
+   * (Samarkand-malli v965) — js/packs/saatiedot.js jää koskematta.
+   * Oppaan sääjakso nojaa siksi en-Wikipedian Climate-osioon ja sanoo
+   * sen ääneen.
+   *
+   * KUVAT haettiin Commonsin API:sta kategoria- ja hakusanahauilla
+   * (Halifax Harbour, Downtown Halifax, Cityscapes of Halifax,
+   * Halifax Citadel, Halifax Public Gardens, Point Pleasant Park,
+   * Pier 21, Maritime Museum of the Atlantic, History of Halifax),
+   * lisenssi ja tekijä luettiin extmetadatasta 6.9.2026, ja jokainen
+   * valittu kuva katsottiin silmin 800–900 px esikatseluna.
+   * HYLKÄYKSET: "Halifax waterfront.jpg" (utuinen, risteilijän kylki
+   * täyttää kuvan), "Emerald Princess cruise ship departing Halifax,
+   * Nova Scotia 2024.jpg" (varustamon tunnus on kuvan pääaihe),
+   * "HMCS Sackville with Flags.jpg" ja "Citadel Entrance
+   * (48540940721).jpg" sekä "Day 4 - Halifax, Nova Scotia
+   * (48746027523).jpg" ja "(48746030133).jpg" (tunnistettavia
+   * kasvoja), "Halifax - NS - Pier 21.jpg" (pelkkä rakennuksen
+   * kyltti), "Halifax boardwalk.JPG" (ravintolan mainoskyltti ja
+   * ihmisiä), "Saint Paul's Church, Halifax (46908890264).jpg"
+   * (linja-auton mainos peittää kirkon), "Point Pleasant Park June
+   * 2016.jpg" (soratie ja opastaulu, ei puistoa),
+   * "CA-halifax-publ-garden-03.jpg" (kukkaistutus, joka on
+   * käytännössä museomainos), "Beer and lobster (25537004601).jpg"
+   * (tienvarsikyltti) ja "Heartwood - Halifax Harbour
+   * (21153878643).jpg" (annos, jolla ei ole tekemistä Nova Scotian
+   * keittiön kanssa).
+   *
+   * YKSI TIETOINEN POIKKEUS: avauskuvassa "View of Halifax from
+   * Citadel Hill on a foggy day" näkyy talon seinässä pieni
+   * vuokrailmoitus. Se ei ole kuvan päälle lisätty merkintä vaan osa
+   * katunäkymää, ja se on ainoa Commonsin sumukuva Halifaxista, joka
+   * täyttää leveysvaatimuksen — sumu taas on kaupungin oma sääilmiö
+   * eikä sitä voi jättää lehdestä pois.
+   *
+   * ENNEN JA NYT: valokuvataulun paria EI kopioitu, koska sen puolet
+   * eivät esitä samaa paikkaa (hevosraitiovaunut 1894 / lautta).
+   * Lehteen haettiin oma pari, jossa molemmat puolet katsovat
+   * satamaa Dartmouthin suuntaan: vanha puoli on Richard Shortin
+   * piirroksesta tehty kaiverrus vuodelta 1759 ja uusi puoli sama
+   * näkymä lautan kannelta nykyään. Kaiverruksen alalaidassa on
+   * kustantajan oma teksti — reseptin nimenomainen poikkeus
+   * ("julkaisijan oma litera, joka selitetään kuvatekstissä").
+   */
+  halifax: [
+    {
+      id: 'kaupunki',
+      nimi: 'Halifax',
+      johdanto: 'Halifax on rakennettu maailman suurimpiin kuuluvan '
+        + 'luonnonsataman ympärille. Mi\'kmaqit kutsuvat paikkaa nimellä '
+        + 'Kjipuktuk; britit perustivat tähän 1749 linnoituskaupungin, '
+        + 'joka katsoo yhä merelle päin.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: siluetti
+       * satamasta, ranta veneen kannelta ja kellotorni keskustan
+       * kattojen keskellä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: '2022-08-15 01 Wide angle view of Halifax skyline, Nova Scotia, Canada.jpg',
+          selite: 'Halifaxin siluetti satamasta katsottuna, lautta '
+            + 'matkalla Dartmouthiin ja konttinosturit vasemmalla.',
+          lahde: 'Gordon Leggett, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Halifax from the Water (48540602992).jpg',
+          selite: 'Rantaviiva veden tasalta: laiturit, vanhat '
+            + 'makasiinit ja tornit yhtenä rivinä.',
+          lahde: 'WabbitWanderer from London, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'City of Halifax - panoramio.jpg',
+          selite: 'Vanha kellotorni jää keskustan kattojen ja rakenteilla '
+            + 'olevien tornien väliin, satama sumussa taustalla.',
+          lahde: 'Jiaqian AirplaneFan, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat — silta sataman kapeikon yli talvella, linnoituksen
+       * ruohorinne ja kaupunki sumussa. Halifaxille ei ole vielä
+       * generoitu herokuvia, joten karusellissa on kolme aitoa
+       * valokuvaa (vertaa Denveriin ja Cairnsiin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'A. Murray MacKay Bridge in Halifax.jpg',
+          selite: 'MacKayn silta ylittää sataman kapeimman kohdan; vesi '
+            + 'on auki, vaikka rannat ovat lumessa.',
+          lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Citadel Hill Halifax.JPG',
+          selite: 'Linnoituksen ruohorinne nousee keskustan yläpuolelle, '
+            + 'ja laella liehuu lippu.',
+          lahde: 'Citobun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'View of Halifax from Citadel Hill on a foggy day (3609158827).jpg',
+          selite: 'Sumupäivänä katu häviää linnoituskukkulalta katsottuna '
+            + 'jo muutaman korttelin päässä.',
+          lahde: 'CP Hoffman from Washington, DC, United States, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Halifax looking down George Street, Nova Scotia, Canada, 1759.jpg',
+          vuosi: '1759',
+          selite: 'George Street laskee satamaan ja Dartmouthiin vuoden '
+            + '1759 piirroksessa; alalaidan teksti on kustantajan oma '
+            + 'nimiö.',
+          lahde: 'Richard Short / James Mason, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Halifax-Dartmouth Ferry - Halifax Skyline Sunset (22756203545).jpg',
+          selite: 'Sama salmi nykyään: Dartmouthin lautta ylittää sen '
+            + 'edestakaisin päivät pitkät.',
+          lahde: 'Tony Webster from San Francisco, California, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kjipuktuk, suuri satama',
+          teksti: 'Mi\'kmaqit ovat asuttaneet Nova Scotian niemimaata '
+            + 'kauan ennen kirjoitettua historiaa. Sataman '
+            + 'mi\'kmaq-nimi on Kjipuktuk eli Chebookt, joka käännetään '
+            + 'sekä päällikkösatamaksi että suureksi satamaksi. Ennen '
+            + 'siirtomaakautta yhteisöt liikkuivat vuodenaikojen mukaan: '
+            + 'kesät vietettiin Bedford Basinin rannoilla ja ennen '
+            + 'talvea siirryttiin sisämaahan. Kansan alue on Mi\'kma\'ki, '
+            + 'yksi viidestä Wabanaki-liiton maasta. Vuonna 2023 '
+            + 'mi\'kmaqeja oli alueella 66 748, ja vuoden 2021 '
+            + 'väestönlaskennassa 9 245 ilmoitti puhuvansa '
+            + 'mi\'kmawi\'simkiä. Kansa katsoo, etteivät 1700-luvun '
+            + 'sopimukset luovuttaneet maaoikeutta.',
+          tiedosto: 'Mi\'kmaq people at Tufts Cove, Nova Scotia, Canada, ca. 1871.jpg',
+          selite: 'Mi\'kmaq-asumus Tufts Covessa sataman toisella '
+            + 'rannalla noin vuonna 1871.',
+          lahde: 'Joseph S. Rogers, Wikimedia Commons (PD)',
+          wiki: 'Mi\'kmaq',
+        },
+        {
+          otsikko: 'Kolmetoista laivaa ja kukkula',
+          teksti: 'Kuningas Yrjö II määräsi 1749 Edward Cornwallisin '
+            + 'perustamaan Nova Scotialle uuden pääkaupungin. '
+            + 'Cornwallis saapui Chebuctoon 21. kesäkuuta 1749 '
+            + 'sotasluupilla ja kolmellatoista kuljetusaluksella '
+            + 'mukanaan runsaat tuhat uudisasukasta perheineen. Kaupunki '
+            + 'nimettiin kauppaneuvoston puheenjohtajan, Halifaxin toisen '
+            + 'jaarlin mukaan. Perustaminen rikkoi vuoden 1726 sopimuksia '
+            + 'mi\'kmaqien kanssa ja aloitti sodan. Sotien kausi '
+            + 'päättyi rauhan- ja ystävyyssopimuksiin, ja '
+            + 'kirveenhautajaisseremonia pidettiin 25. kesäkuuta 1761 '
+            + 'kuvernöörin puutarhassa nykyisen Spring Garden Roadin '
+            + 'varrella. Sopimusten muistoksi vietetään Treaty Dayta '
+            + 'lokakuun ensimmäisenä päivänä.',
+          tiedosto: 'Church of Saint Paul and the Parade at Halifax in Nova Scotia, 1759.jpg',
+          selite: 'Vuoden 1759 kaiverruksessa puinen kaupunki kiertää '
+            + 'sotilasparaatikenttää, jonka päässä on kirkko.',
+          lahde: 'Richard Short / Dominic Serres / Ignace Fougeron, Wikimedia Commons (PD)',
+          wiki: 'History of Halifax, Nova Scotia',
+        },
+        {
+          otsikko: '1873: purjeita ja odotettu rata',
+          teksti: 'Isoisän matkavuonna Halifax oli brittiläinen '
+            + 'varuskunta- ja laivastosatama, joka oli ollut kuusi vuotta '
+            + 'osa Kanadaa. Konfederaatio 1867 sai osakseen vastustusta '
+            + 'juuri Halifaxin kauppiailta: maakunta oli varakas ja sen '
+            + 'kauppasuhteet Bostoniin ja New Yorkiin toimivat. '
+            + 'Brittivaruskunta pysyi kaupungissa vuoteen 1906 ja '
+            + 'laivasto vuoteen 1910. Kaupunki odotti tulevansa Kanadan '
+            + 'talvisatamaksi, mutta Intercolonial Railway valmistui '
+            + 'vasta 1876 ja kiersi pohjoisen kautta; useimmat viejät '
+            + 'lähettivät tavaransa Bostonin tai Portlandin kautta. '
+            + 'Kaupungissa syntyi silti kaksi Kanadan suurimmista '
+            + 'pankeista, ja purjelaivakausi oli huipussaan.',
+          tiedosto: 'Barque Noel, Halifax Graving Yard, Halifax, Nova Scotia, 1890.jpg',
+          selite: 'Parkkilaiva Noel kuivatelakassa vuonna 1890, '
+            + 'purjelaivoja odottamassa satamassa taustalla.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'History of Halifax, Nova Scotia',
+        },
+        {
+          otsikko: 'Kuudes joulukuuta 1917',
+          teksti: 'Ranskalainen rahtialus Mont-Blanc ja norjalainen Imo, '
+            + 'joka oli rahdattu Belgian avustustoimikunnalle, '
+            + 'törmäsivät Halifaxin satamassa aamulla 6. joulukuuta '
+            + '1917. Mont-Blanc kuljetti räjähdysaineita; törmäys '
+            + 'vaurioitti kannen bentsolitynnyreitä, höyryt syttyivät, ja '
+            + 'noin kaksikymmentä minuuttia myöhemmin laiva räjähti. '
+            + 'Räjähdys oli aikansa suurin ihmisen aiheuttama. Vähintään '
+            + '1 782 ihmistä kuoli ja arviolta 9 000 loukkaantui, ja '
+            + 'lähes kaikki rakennukset kahdeksansadan metrin säteellä '
+            + 'tuhoutuivat. Hyökyaalto vei mennessään Tufts Coven '
+            + 'mi\'kmaq-yhteisön. Apu tuli Bostonista.',
+          tiedosto: 'Blast cloud from the Halifax Explosion, December 6, 1917.jpg',
+          selite: 'Räjähdyksen savupilvi kuvattuna sataman suulta noin '
+            + 'kaksikymmentä minuuttia törmäyksen jälkeen.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'Halifax Explosion',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Halifax Town Clock 2.jpg',
+          selite: 'Vanha kellotorni seisoo linnoituskukkulan rinteessä '
+            + 'kaupunkiin päin, jotta myös kaupunkilaiset näkevät ajan.',
+          lahde: 'Hayden Soloviev, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Halifax on Nova Scotian pääkaupunki ja Atlantin '
+          + 'Kanadan väkirikkain kunta. Nykyinen Halifax Regional '
+          + 'Municipality syntyi 1. huhtikuuta 1996, kun Halifax, '
+          + 'Dartmouth, Bedford ja Halifaxin piirikunta yhdistettiin '
+          + 'yhdeksi kunnaksi. Vuonna 2024 metropolialueella arvioitiin '
+          + 'olevan 530 167 asukasta, joista 348 634 asui taajamassa. '
+          + 'Kaupunki on Atlantin Kanadan hallinnon, kaupan ja '
+          + 'kulttuurin keskus, ja satama on yhä sen selkäranka.',
+        artikkeli: {
+          nimi: 'Matkailijan Halifax',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jonka ydin mahtuu kävelymatkalle: '
+            + 'satamalaudoitus, linnoituskukkula ja viktoriaaninen '
+            + 'puutarha ovat kaikki puolen tunnin päässä toisistaan.',
+          nosto: 'Halifaxin kuntaan kuuluu maata paljon enemmän kuin '
+            + 'kaupunkia: taajama on 238 neliökilometriä eli alle viisi '
+            + 'prosenttia kunnan maapinta-alasta. Loppu on rannikkoa, '
+            + 'metsää ja maaseutua, jossa on kalasatamia, maatiloja ja '
+            + 'yli kahdentuhannen hehtaarin Long Lake Provincial Park '
+            + 'aivan kaupungin kyljessä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Halifax Stanfield International Airport palvelee '
+                + 'koko maakuntaa, ja vuonna 2025 sen kautta kulki '
+                + '4 140 484 matkustajaa — Kanadan kahdeksanneksi '
+                + 'vilkkain lentoasema. Junayhteys on VIA Railin Ocean, '
+                + 'joka lähtee 1920-luvun asemalta sataman eteläpäässä. '
+                + 'Satamassa kulkee myös Halifax Transitin lautta '
+                + 'Dartmouthiin, ja se on osa tavallista '
+                + 'joukkoliikennettä eikä turistiristeily. Keskusta on '
+                + 'niin pieni, että useimmat kohteet ovat kävelymatkan '
+                + 'päässä toisistaan.',
+              kuva: {
+                tiedosto: 'Halifax station (Nova Scotia).jpg',
+                selite: 'Rautatieaseman keltainen pylväsjulkisivu '
+                  + 'kaukojunien päätepysäkillä sataman kupeessa.',
+                lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kävelymatkat keskustassa',
+              teksti: 'Vuoden 1749 asemakaavaan kuului keskellä '
+                + 'sotilasparaatikenttä, ja Grand Parade on yhä '
+                + 'kaupungin aukio: pohjoispäässä on kaupungintalo ja '
+                + 'eteläpäässä Pyhän Paavalin kirkko. Rannassa kulkee '
+                + 'neljän kilometrin puinen kävelyreitti, jonka varrella '
+                + 'ovat museot ja vanhat makasiinit. Kortteleiden '
+                + 'sisällä ovat Nova Scotian taidegalleria — noin '
+                + '19 000 teosta 150 vuotta vanhassa talossa — ja '
+                + 'kaupunginkirjasto, joka on palkittu arkkitehtuurista '
+                + 'kenraalikuvernöörin mitalilla.',
+              kuva: {
+                tiedosto: 'Halifax central library Oct2014 front.jpg',
+                selite: 'Kirjaston lasilaatikot on ladottu ristiin niin, '
+                  + 'että ylin kerros työntyy kadun yli.',
+                lahde: 'Citobun, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Puistot ja kukkulat',
+              teksti: 'Halifax Common annettiin kaupunkilaisten käyttöön '
+                + '1763, ja se on Kanadan vanhin julkinen puisto. '
+                + 'Linnoituskukkulan rinteet ovat kesäisin täynnä '
+                + 'auringonottajia ja leijoja, ja niiden kupeessa on '
+                + 'viktoriaaninen Public Gardens. Niemimaan kärjessä on '
+                + 'metsäinen Point Pleasant Park, jossa kulkee polkuja '
+                + 'vanhojen brittipatterien lomassa. Mannerpuolella on '
+                + 'Sir Sandford Fleming Park ja sen Dingle Tower, jonka '
+                + 'Connaughtin herttua vihki 1912.',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Halifaxin oma ruoka on donair: ohuiksi leikattua '
+                + 'paistia pitaleivässä, päällä makea valkoinen kastike '
+                + 'sekä tomaattia ja sipulia. Se syntyi kaupungissa '
+                + '1970-luvulla ja on nykyään sen virallinen ruoka. '
+                + 'Muuten pöytä tulee mereltä, ja rannan makasiineissa '
+                + 'on kalaravintoloita vieri vieressä. Alexander Keithin '
+                + 'panimo on toiminut kaupungissa 1800-luvulta asti ja '
+                + 'kuuluu samaan teollisuuden sukupolveen kuin Starr '
+                + 'Manufacturing ja Morse\'s Tea.',
+              kuva: {
+                tiedosto: 'Donair (47003391564).jpg',
+                selite: 'Halifaxin donair tarjoillaan lautaselta: lihaa, '
+                  + 'valkoista kastiketta ja pitaleipä alla.',
+                lahde: 'Paulo O from Halifax, Canada, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Halifax-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa vuosigraafia, '
+                + 'koska ERA5-normaaleja ei saatu haettua. Ilmasto on '
+                + 'kostea mannerilmasto, jota Golfvirta leudontaa: '
+                + 'lämpötila pysyy tavallisesti kahdeksan pakkasasteen '
+                + 'ja kahdenkymmenenkahdeksan lämpöasteen välissä. '
+                + 'Tammikuu on kylmin ja ainoa kuukausi, jonka '
+                + 'keskiylin on pakkasella (−0,1 astetta). Yli '
+                + 'kolmenkymmenen asteen päiviä on normaalivuonna kolme, '
+                + 'hallayötä 131 ja kokonaan pakkasen puolella olevia '
+                + 'päiviä 49. Hallaton kausi kestää keskimäärin 182 '
+                + 'päivää, tavallisesti toukokuun alusta lokakuun '
+                + 'loppuun.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Halifaxin linnoitus',
+                tahdet: 3,
+                selite: 'Neljäs linnoitus samalla kukkulalla vuodesta '
+                  + '1749; sitä vastaan ei koskaan hyökätty.',
+              },
+              {
+                mita: 'Sataman kävelyreitti',
+                tahdet: 3,
+                selite: 'Neljä kilometriä puulaudoitusta museoiden, '
+                  + 'laitureiden ja aukioiden ohi.',
+              },
+              {
+                mita: 'Vanha kellotorni',
+                tahdet: 2,
+                selite: 'Kentin herttuan kello vuodelta 1803, joka on '
+                  + 'pysähtynyt vain kerran.',
+              },
+              {
+                mita: 'Julkinen puutarha',
+                tahdet: 2,
+                selite: 'Viktoriaaninen puutarha konfederaation '
+                  + 'vuodelta 1867, kansallinen historiallinen kohde.',
+              },
+              {
+                mita: 'Peggys Cove',
+                tahdet: 2,
+                selite: 'Graniittirannikon majakkakylä kaupungin '
+                  + 'ulkopuolella, yli 600 000 kävijää vuodessa.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5 ja
+             * teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Sumu on osa kaupunkia',
+                teksti: 'Meri tuo sumua etenkin kevätkesällä, ja '
+                  + 'sumupäivänä satamaristeily ei näytä juuri mitään.',
+              },
+              {
+                otsikko: 'Kesä tulee myöhään',
+                teksti: 'Meri viivästyttää vuodenaikoja: elokuu on '
+                  + 'lämpimin ja syyskuu leudompi kuin kesäkuu.',
+              },
+              {
+                otsikko: 'Hurrikaanien loppupää yltää tänne',
+                teksti: 'Juan 2003, Dorian 2019 ja Fiona 2022 aiheuttivat '
+                  + 'kaatuneita puita ja päiviä kestäneitä sähkökatkoja.',
+              },
+              {
+                otsikko: 'Talvi on leuto mutta pitkä',
+                teksti: 'Hallayötä on vuodessa 131 ja kokonaan pakkasen '
+                  + 'puolella olevia päiviä 49.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Satama, sumu ja myrskyt',
+      johdanto: 'Halifaxissa sää tulee mereltä ja kaupunki on rakennettu '
+        + 'sen ehdoilla. Satama ei jäädy, kesä tulee myöhässä ja syksyllä '
+        + 'hurrikaanien loppupää yltää tänne asti.',
+      tehtava: {
+        kysymys: 'Mikä kuukausi on Halifaxissa lämpimin?',
+        vaihtoehdot: ['elokuu', 'heinäkuu', 'kesäkuu', 'syyskuu'],
+        oikea: 0,
+        fakta: 'Meri lämpenee hitaasti ja jäähtyy hitaasti, joten '
+          + 'vuodenajat tulevat Halifaxiin myöhässä. Elokuu on lämpimin '
+          + 'kuukausi ja syyskuu kolmanneksi leudoin — kesäkuuta '
+          + 'lämpimämpi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Satama, jota ei tarvinnut kaivaa',
+          teksti: 'Halifaxin satama on maailman suurimpia '
+            + 'luonnonsatamia, ja juuri se toi kaupungin tähän. '
+            + 'Sisääntuloa voitiin puolustaa tykkipattereilla McNabs '
+            + 'Islandilta, Georges Islandilta, Point Pleasantista, '
+            + 'Northwest Armilta ja York Redoubtista, joten yhtään '
+            + 'linnoitusta ei tarvinnut rakentaa avomerelle. Sataman '
+            + 'perällä on Bedford Basin, laaja suojaisa allas, johon '
+            + 'johtaa kapea salmi nimeltä The Narrows. Nykyään Halifax '
+            + 'on Kanadan neljän suurimman konttisataman joukossa, ja '
+            + 'vuonna 2024 sinne saapui 201 risteilyalusta ja 360 000 '
+            + 'matkustajaa.',
+          tiedosto: 'Halifax, Nova Scotia - From the Eagle\'s Nest in Bedford.JPG',
+          selite: 'Bedford Basinin takaa katsottuna kaupunki jää kapean '
+            + 'salmen ja sen ylittävän sillan taakse.',
+          lahde: 'Figure8, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Halifax, Nova Scotia',
+        },
+        {
+          otsikko: 'Meri tekee sään',
+          teksti: 'Halifaxin ilmasto on kostea mannerilmasto, jota '
+            + 'Golfvirta leudontaa: talvi on leudompi ja kesä viileämpi '
+            + 'kuin samalla leveydellä sisämaassa, ja lämpötila pysyy '
+            + 'tavallisesti kahdeksan pakkasasteen ja '
+            + 'kahdenkymmenenkahdeksan lämpöasteen välissä. Meri myös '
+            + 'viivästyttää vuodenaikoja voimakkaasti: tammikuu on '
+            + 'kylmin, elokuu lämpimin ja syyskuu keskilämmöltään '
+            + 'kolmanneksi leudoin kuukausi. Ennätykset kertovat '
+            + 'ääripäät: 37,2 astetta 10. heinäkuuta 1912 ja 29,4 '
+            + 'pakkasastetta 18. helmikuuta 1922.',
+          tiedosto: 'Bedford Basin, Nova Scotia (42617373191).jpg',
+          selite: 'Syksy tulee altaan rannalle vasta lokakuussa, kun '
+            + 'meri on vielä lämmin.',
+          lahde: 'Coastal Elite from Halifax, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Halifax, Nova Scotia',
+        },
+        {
+          otsikko: 'Hurrikaanien pohjoinen pää',
+          teksti: 'Trooppiset myrskyt heikkenevät matkalla pohjoiseen, '
+            + 'mutta yltävät silti Nova Scotiaan. Hurrikaani Juan iski '
+            + 'syyskuussa 2003 kakkosluokan myrskynä ja aiheutti '
+            + 'huomattavaa vahinkoa; se kaatoi suuren osan Public '
+            + 'Gardensin puista, ja puutarha avattiin uudelleen vasta '
+            + 'Kanadan päivänä 2004. Earl sivusi rannikkoa 2010, Dorian '
+            + 'rantautui 2019 juuri kaupungin eteläpuolelle ja Fiona '
+            + 'iski 2022. Kaksi viimeistä kaatoivat puita ja veivät '
+            + 'sähköt päiviksi, mutta Halifax selvisi verrattain '
+            + 'vähällä.',
+          tiedosto: 'Dorian Aftermath HalifaxNS 2019 03 Public Gardens.jpg',
+          selite: 'Myrskyn jälkeen kaatunutta puuta sahataan pois '
+            + 'puutarhan käytävältä.',
+          lahde: 'Verne Equinox, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Halifax, Nova Scotia',
+        },
+        {
+          otsikko: 'Graniittia ja majakoita',
+          teksti: 'Kaupungin ulkopuolella rannikko muuttuu paljaaksi '
+            + 'graniitiksi. Tunnetuin kohta on Peggys Cove, pieni '
+            + 'kalastajakylä ja majakka noin tunnin ajomatkan päässä; '
+            + 'se saa yli 600 000 kävijää vuodessa. Halifaxin oma '
+            + 'rannikko on samaa kiveä: Point Pleasant Parkin polut '
+            + 'kulkevat kallion ja männikön välissä, ja Long Lake '
+            + 'Provincial Park suojelee yli kahdentuhannen hehtaarin '
+            + 'erämaata heti kaupungin länsipuolella. Puisto '
+            + 'perustettiin 1984, ja se tuo erämaan aivan '
+            + 'kaupunkiasutuksen kylkeen.',
+          tiedosto: 'Peggys Cove - NS - Leuchtturm.jpg',
+          selite: 'Peggys Coven majakka seisoo paljaalla graniitilla '
+            + 'ilman puita tai puutarhaa ympärillään.',
+          lahde: 'Taxiarchos228, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Halifax, Nova Scotia',
+        },
+      ],
+    },
+  ],
 };

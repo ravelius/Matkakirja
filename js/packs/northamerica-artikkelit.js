@@ -854,4 +854,133 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'ei vielä ollut. Itsenäisyyspäivää vietetään 28. marraskuuta, '
       + 'jolloin kansalliskokous julisti 1821 kannaksen irti Espanjasta.',
   },
+  /* MIAMI (Opus 6.9.2026, paketti O9). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain miami); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-miami.md ja
+   * tarkistus-miami.md. Avain on kaupungin wiki-nimi (js/packs/
+   * northamerica.js: 'Miami'), joka on tässä sama kuin näyttönimi.
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026
+   * ("Miami", "History of Miami", "Tequesta", "Julia Tuttle").
+   *
+   * TARKISTUKSEN KORJAUS ON TEHTY: kaupungin perustamisesta kerrotaan
+   * 502 äänestäjää eikä yleisartikkelin "runsaat 300 asukasta" —
+   * luvut ovat ristiriidassa, ja tarkempi artikkeli voittaa.
+   *
+   * PILARI 1: tequestat mainitaan ennen kaupungin perustamista.
+   * Everglades ja merenpinnan nousu ovat myös laudan visan aiheita
+   * (northamerica-questions.js), joten niitä toistetaan tässä vain
+   * sen verran kuin johdatus vaatii. */
+  Miami: {
+    intro: 'Miami on Floridan toiseksi suurin kaupunki ja '
+      + 'Miami-Daden piirikunnan keskus. Se on rakennettu leveälle '
+      + 'tasangolle, jonka länsipuolella on Evergladesin ruohojoki ja '
+      + 'itäpuolella Biscayne Bay saarineen ja riuttoineen. Korkeus '
+      + 'merenpinnasta on useimmissa kaupunginosissa vain noin kaksi '
+      + 'metriä, ja lämmin Golfvirta kulkee runsaan '
+      + 'kahdenkymmenen kilometrin päässä rannikosta.'
+      + '\n\n'
+      + 'Ennen kaupunkia seutu oli tequestojen maata: joen suulla oli '
+      + 'kylä jo vuosina 500–600 eaa. Isoisän matkavuonna 1873 tässä ei '
+      + 'ollut kaupunkia lainkaan, vain kourallinen perheitä lahden '
+      + 'rannalla ja Brickellin kauppa-asema joen etelärannalla. '
+      + 'Kaupunki syntyi vasta, kun Julia Tuttle sai Henry Flaglerin '
+      + 'jatkamaan rautatietään etelään: **Miami perustettiin 28. '
+      + 'heinäkuuta 1896**, ja perustamiskokouksessa oli 502 '
+      + 'äänestäjää.'
+      + '\n\n'
+      + 'Kasvu oli niin nopeaa, että talvivieraat antoivat kaupungille '
+      + 'lempinimen **Magic City**. Nykyään Miamia sanotaan '
+      + 'Latinalaisen Amerikan pääkaupungiksi: vuoden 2020 laskennassa '
+      + '70,2 prosenttia asukkaista oli latinoja, ja kadulla espanja '
+      + 'kuuluu yhtä usein kuin englanti.',
+    teksti: 'Miamin peruskallio on Miamin kalkkikiveä eli ooliittia, '
+      + 'ja sen alla on Biscaynen pohjavesiesiintymä, josta koko '
+      + 'metropolialue ottaa juomavetensä. Siksi maata ei voi kaivaa '
+      + 'viittä tai kuutta metriä syvemmälle osumatta veteen, ja siksi '
+      + 'kaupungin radat kulkevat pylväiden päällä tai maan tasalla.'
+      + '\n\n'
+      + 'Kaupungin väkiluku oli vuoden 1900 laskennassa 1 681 ja '
+      + 'vuonna 1950 jo 249 276. Kasvu hidastui vuosisadan '
+      + 'jälkipuoliskolla, mutta kääntyi taas nousuun 2000-luvulla '
+      + 'keskustan tornirakentamisen myötä; vuoden 2020 laskennassa '
+      + 'asukkaita oli 442 241. Kuubasta muutti Miamiin runsaasti '
+      + 'väkeä vuoden 1959 vallankumouksen jälkeen, ja vuonna 1985 '
+      + 'kaupunki valitsi ensimmäisen Kuubassa syntyneen pormestarinsa.'
+      + '\n\n'
+      + 'Matkailu on kaupungin suurimpia yksityisiä toimialoja, ja '
+      + 'PortMiami on maailman vilkkain risteilysatama. Downtownin '
+      + 'Brickell Avenuella on maan suurin kansainvälisten pankkien '
+      + 'keskittymä. Ruoka kertoo saman tarinan kuin katukuva: '
+      + 'latinalaisamerikkalainen, karibialainen ja amerikkalainen '
+      + 'keittiö ovat sekoittuneet omaksi tyylikseen, jota kutsutaan '
+      + 'nimellä floribbean.',
+  },
+  /* HALIFAX (Opus 6.9.2026, paketti O9). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain halifax); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-halifax.md ja
+   * tarkistus-halifax.md. Avain on kaupungin wiki-nimi (js/packs/
+   * northamerica.js: 'Halifax (Kanada)'), joka EI ole sama kuin
+   * näyttönimi — ui.js lukee ARTIKKELIT[city.wiki ?? city.name].
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026
+   * ("Halifax, Nova Scotia", "History of Halifax, Nova Scotia",
+   * "Mi'kmaq", "Halifax Explosion").
+   *
+   * TARKISTUKSEN KORJAUKSET ON TEHTY: kaupunkioikeuksien vuosilukua ei
+   * kerrota (lähde antaa kaksi eri vuotta), Cornwallisin mukana
+   * tulleiden määrä on "runsaat tuhat" (lähteet vaihtelevat) ja
+   * räjähdyksen uhriluku on tarkemman artikkelin "vähintään 1 782".
+   *
+   * PILARI 1: mi'kmaqit ja paikan oma nimi Kjipuktuk mainitaan ennen
+   * brittien perustamaa kaupunkia. Vuoden 1917 räjähdys ja jäätymätön
+   * satama ovat myös laudan visan aiheita (northamerica-questions.js),
+   * mutta ne kuuluvat kaupungin ytimeen eikä niitä voi ohittaa. */
+  'Halifax (Kanada)': {
+    intro: 'Halifax on Nova Scotian pääkaupunki ja Atlantin Kanadan '
+      + 'väkirikkain kunta. Kaupunki kiertää satamaa, joka on maailman '
+      + 'suurimpia luonnonsatamia ja pysyy auki läpi talven. '
+      + 'Mi\'kmaqit kutsuvat paikkaa nimellä **Kjipuktuk** eli '
+      + 'Chebookt, joka käännetään sekä päällikkösatamaksi että '
+      + 'suureksi satamaksi; kansa on liikkunut näillä rannoilla kauan '
+      + 'ennen kirjoitettua historiaa.'
+      + '\n\n'
+      + 'Britit perustivat Halifaxin 21. kesäkuuta 1749, kun Edward '
+      + 'Cornwallis saapui Chebuctoon kolmellatoista kuljetusaluksella '
+      + 'ja runsaan tuhannen uudisasukkaan kanssa. Kaupunki nimettiin '
+      + 'kauppaneuvoston puheenjohtajan, Halifaxin toisen jaarlin '
+      + 'mukaan. Perustaminen rikkoi sopimuksia mi\'kmaqien kanssa ja '
+      + 'aloitti sodan, joka päättyi vasta rauhan- ja '
+      + 'ystävyyssopimuksiin; niiden muistoksi vietetään Treaty Dayta '
+      + 'lokakuun ensimmäisenä päivänä.'
+      + '\n\n'
+      + 'Halifaxista tuli nopeasti kuninkaallisen laivaston suurin '
+      + 'tukikohta Atlantin rannikolla, ja sotilaallinen leima näkyy '
+      + 'yhä kaupunkikuvassa. **Isoisän matkavuonna 1873 Halifax oli '
+      + 'brittiläinen varuskuntakaupunki**, joka oli ollut kuusi vuotta '
+      + 'osa Kanadaa ja odotti rautatietä, joka valmistui vasta 1876.',
+    teksti: 'Nykyinen Halifax Regional Municipality syntyi 1. '
+      + 'huhtikuuta 1996, kun Halifax, Dartmouth, Bedford ja Halifaxin '
+      + 'piirikunta yhdistettiin yhdeksi kunnaksi. Kunnan maapinta-ala '
+      + 'on valtava, mutta taajamaa on siitä alle viisi prosenttia: '
+      + 'loppu on rannikkoa, metsää ja maaseutua. Vuonna 2024 '
+      + 'metropolialueella arvioitiin olevan 530 167 asukasta.'
+      + '\n\n'
+      + 'Kaupungin historian raskain päivä on 6. joulukuuta 1917, '
+      + 'jolloin räjähdysainelastissa ollut rahtialus Mont-Blanc '
+      + 'törmäsi toiseen alukseen ja räjähti satamassa. Vähintään '
+      + '1 782 ihmistä kuoli ja arviolta 9 000 loukkaantui; räjähdys '
+      + 'oli aikansa suurin ihmisen aiheuttama. Apua tuli Bostonista, '
+      + 'ja side kaupunkien välillä on säilynyt siitä asti. Vuonna '
+      + '1912 Halifax oli lähin suuri satama Titanicin '
+      + 'onnettomuuspaikalle, ja uhreja on haudattu kaupungin '
+      + 'hautausmaille.'
+      + '\n\n'
+      + 'Nykyään Halifax on Atlantin Kanadan hallinnon, kaupan ja '
+      + 'kulttuurin keskus. Suurimpia työllistäjiä ovat '
+      + 'puolustusministeriö, satama, telakka, yliopistot ja '
+      + 'terveydenhuolto, ja kaupunki on Kanadan neljän suurimman '
+      + 'konttisataman joukossa. Ilmasto on kostea mannerilmasto, '
+      + 'jota Golfvirta leudontaa — meri viivästyttää vuodenaikoja '
+      + 'niin, että elokuu on lämpimin kuukausi ja syyskuu kesäkuuta '
+      + 'leudompi.',
+  },
 };
