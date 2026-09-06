@@ -47,10 +47,25 @@ export const OMAT_ARTIKKELIT = {
       + 'Casablanca — ja pohjoisessa Tanger, kahden meren portti.',
   },
   Libya: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // LBY) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Libya on Pohjois-Afrikan valtio, jossa kapean rannikkokaistan '
       + 'takana aukeaa Saharan suuri hiekkameri. Lähes koko maa on '
       + 'aavikkoa — siksi melkein kaikki libyalaiset asuvat meren '
-      + 'äärellä.',
+      + 'äärellä. Nimi on kolmetuhatta vuotta vanha ja luettiin '
+      + 'ensimmäisen kerran faaraon seinästä, mutta valtio, joka sitä '
+      + 'kantaa, on nuori: itsenäisyys tuli YK:n päätöksellä '
+      + 'jouluaattona 1951, ja kahdeksan vuotta myöhemmin aavikon alta '
+      + 'löytyi öljy. Rannikolla on kaksi poikkeusta hiekkaan — Vihreä '
+      + 'vuori, jolle sataa enemmän kuin muualle maahan, ja lähes '
+      + 'kaksituhatta kilometriä rantaa, jonne kilpikonnat tulevat '
+      + 'munimaan. Etelässä on Fezzan, jonka keitailla karavaanit '
+      + 'lepäsivät ja jonka aavikossa kohoaa tulivuori, jonka pohjalla '
+      + 'on järviä ja hyttysiä. Keittiö on lampaan, ohran ja mausteiden '
+      + 'keittiö, ja juhlissa soivat säkkipilli ja kehärummut. Juomavesi '
+      + 'tulee nykyään putkea pitkin aavikosta: hiekan alla on '
+      + 'fossiilista pohjavettä, joka satoi ennen viimeistä jääkautta.',
     artikkeli: 'Libya on suuri maa Välimeren rannalla Egyptin ja '
       + 'Tunisian välissä. Pinta-alaltaan se on yli viisi kertaa Suomen '
       + 'kokoinen, mutta valtaosa siitä on Saharan aavikkoa: hiekkaa, '

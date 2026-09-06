@@ -47840,4 +47840,429 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * LIBYA (LBY, 6.9.2026). Faktapohja:
+   * docs/mantereet-tyoaineisto/faktapohja-libya.md — jokainen väite on
+   * en-Wikipedian raakatekstistä, artikkeli ja osio nimettyinä.
+   *
+   * RAJAUS. Tripolilla on kaupunkilehti (vanhakaupunki, riemukaari,
+   * kellotorni, kuparisepät, karavaanikauppa, bazin ja tee), ja
+   * karttanostot kattavat Sabrathan, Kyrenen, Ptolemaiksen,
+   * Ghadamesin, Tadrart Acacuksen, Garaman, Ubarin hiekkameren,
+   * Bikku Bittin, Leptis Magnan, Italian ja osmanien sodan 1911,
+   * Omar al-Mukhtarin ja saharangasellin. Maalehti EI koske yhteenkään
+   * niistä: historia alkaa vasta 1918:n tasavallasta, ruokasivulla ei
+   * ole bazinia eikä teetä, musiikkisivulla ei maloufia (se on
+   * africa-kulttuuri.js:n tripoli-nostossa) eikä luontosivulla
+   * hiekkameriä. Nykypolitiikkaa ja käynnissä olevia selkkauksia ei
+   * käsitellä: historia päättyy 1960-luvulle.
+   */
+  LBY: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Libya on paljon nuorempi kuin nimensä: sana on kolmetuhatta vuotta '
+          + 'vanha, mutta valtio, joka sitä kantaa, syntyi vasta 1951 — ja muuttui '
+          + 'köyhästä rikkaaksi kahdeksan vuotta myöhemmin.',
+      nostot: [
+        {
+          otsikko: 'Nimi, joka luettiin faaraon seinästä',
+          aika: '1208 eaa. – 1934',
+          tiedosto: 'Royaume de Tripoli 1707.jpg',
+          teksti: 'Sana Libya on kirjoitettu ensimmäisen kerran Ramses II:n aikaisiin '
+              + 'hieroglyfeihin muodossa rbw. Se tarkoitti berberiheimojen liittoa, '
+              + 'jonka neljänkymmenentuhannen miehen armeija kävi kuningas Meryeyn '
+              + 'johdolla sotaa faarao Merneptahia vastaan tämän viidentenä '
+              + 'hallitusvuotena 1208 eaa.; tappio on kirjattu Karnakin suureen '
+              + 'piirtokirjoitukseen. Kreikkalaisille Libya tarkoitti koko '
+              + 'Pohjois-Afrikkaa Egyptiä lukuun ottamatta, mutta sitten nimi jäi '
+              + 'kirjoihin: seutua sanottiin Tripolitaniaksi, Kyrenaikaksi ja '
+              + 'Fezzaniksi. Federico Minutilli kaivoi nimen esiin '
+              + '1903, ja 1934 kolme maakuntaa yhdistettiin yhdeksi siirtomaaksi, '
+              + 'jolle annettiin tuo antiikin nimi.',
+          selite: 'Guillaume de L’Islen kartalla vuodelta 1707 alue on vielä palasina: '
+            + 'Tripolin kuningaskunta rannikolla, Fezzanin kuningaskunta etelässä ja '
+            + 'niiden välissä Sirtin aavikko.',
+          lahde: 'Guillaume de L’Isle, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Tasavalta, jonka pääkaupunki oli pikkukaupunki',
+          aika: '1918–1920',
+          teksti: 'Syksyllä 1918 Tripolitanian johtajat julistivat oman tasavallan ja '
+              + 'veivät asiansa Pariisin rauhankonferenssiin. Pääkaupungiksi tuli '
+              + 'Aziziya, pikkukaupunki noin neljäkymmentä kilometriä Tripolista '
+              + 'etelään, ja alue ulottui laajimmillaan Nafusa-vuorilta Misrataan. '
+              + 'Johdossa oli neljä miestä — Sulayman al-Baruni, Ramadan Asswehly, '
+              + 'Abdul Nabi Belkheir ja Ahmad Almarid — jotka toimivat kukin omillaan, '
+              + 'ja heidän rinnallaan neuvoa-antava kokous. Se oli ensimmäinen '
+              + 'muodollisesti julistettu tasavaltalainen hallitusmuoto koko '
+              + 'arabimaailmassa, mutta yksikään suurvalta ei tunnustanut sitä. '
+              + 'Vuonna 1920 edustajat kokoontuivat Aziziyaan kansalliskongressiin.',
+          selite: 'Aziziya on yhä pieni kauppapaikka Tripolin eteläpuolella, '
+            + 'reitin varrella, joka vie rannikolta Nafusa-vuorille ja edelleen '
+            + 'Fezzaniin.',
+        },
+        {
+          otsikko: 'Valtio, jonka YK sääti',
+          aika: '1949–1963',
+          tiedosto: '1959 United Kingdom of Libya passport cover.jpg',
+          teksti: 'YK:n yleiskokous päätti 21. marraskuuta 1949, että Libyan on tultava '
+              + 'itsenäiseksi ennen vuoden 1952 alkua. Perustuslaki kirjoitettiin YK:n '
+              + 'suojissa lokakuussa 1951, ja jouluaattona samana vuonna Idris I puhui '
+              + 'kansalle radiosta Bengasista: liittovaltio oli syntynyt kolmesta '
+              + 'maakunnasta. Kyrenaikan ja Tripolitanian kilpailu ratkaistiin '
+              + 'omalaatuisesti — Tripoli ja Bengasi olivat vuorotellen pääkaupunkeja '
+              + 'kahden vuoden jaksoissa. Uuden maan vientitavaraa olivat vuodat, '
+              + 'villa, hevoset ja strutsinsulat, ja tulot henkeä kohti olivat '
+              + 'maailman alhaisimpia. Liittovaltiorakenne purettiin 1963, ja saman '
+              + 'vuoden huhtikuussa naiset saivat äänioikeuden.',
+          selite: 'Kuningaskunnan passin kannessa lukee sekä arabiaksi että '
+            + 'englanniksi "yhdistynyt": nimi muistuttaa kolmesta maakunnasta, jotka '
+            + 'liitto sitoi yhteen.',
+          lahde: 'Huddyhuddy, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kaivo, joka muutti kaiken',
+          aika: '1956–1967',
+          tiedosto: 'El Saharara oil field, Libya.jpg',
+          teksti: 'Vuonna 1956 Libya myönsi kahdelle yhdysvaltalaiselle yhtiölle '
+              + 'etsintäluvan, joka kattoi noin viisi ja puoli miljoonaa hehtaaria '
+              + 'aavikkoa. Kesäkuussa 1959 Esson tutkijat varmistivat suuret '
+              + 'esiintymät Zaltanissa Kyrenaikassa, ja luvanhaltijat alkoivat '
+              + 'palauttaa puolet voitoistaan veroina. Libyan etuna ei ollut vain '
+              + 'määrä: raakaöljy on laadukasta ja Eurooppaan on matkaa vain meren '
+              + 'yli. Henkeä kohti laskettu tuotanto oli 1920-luvun alussa noin '
+              + 'neljäkymmentä dollaria vuodessa, vuonna 1967 jo yli tuhat. Sirtin '
+              + 'altaassa on yhä noin neljä viidesosaa maan todetuista öljyvaroista '
+              + 'ja yhdeksän kymmenesosaa tuotannosta.',
+          selite: 'Öljykenttä keskellä aavikkoa on oma pikkukaupunkinsa: säiliöt, '
+            + 'soihtu ja putkilinjat, joita pitkin öljy kulkee satojen kilometrien '
+            + 'päähän rannikon satamiin.',
+          lahde: 'Javier Blas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Lähes koko maa on aavikkoa, ja juuri siksi poikkeukset ovat niin '
+          + 'jyrkkiä: tulivuoren pohjalla on järviä, rannikkovuorella sataa kuin '
+          + 'Kreikassa, ja rantahiekkaan tulee kilpikonnia munimaan.',
+      nostot: [
+        {
+          otsikko: 'Tulivuori, jonka pohjalla on vettä',
+          tiedosto: 'Wau-en-Namus-1.jpg',
+          teksti: 'Keskellä itäistä Fezzania on musta läiskä, joka erottuu vaaleasta '
+              + 'aavikosta jopa satelliittikuvissa: tulivuoren tefra peittää '
+              + 'kolmesataa neliökilometriä, ja pasaatit ovat kuljettaneet sitä yli '
+              + 'sata kilometriä lounaaseen. Kaldera on neljä kilometriä leveä ja sata '
+              + 'metriä syvä, ja sen pohjalla kohoaa satanelikymmenmetrinen '
+              + 'kuonakartio. Kartion ympärillä kaartuu kolme pientä järveä, osa '
+              + 'punaisia, osa lämpimiä ja suolaisia, ja niiden rannalla kasvaa neljän '
+              + 'metrin ruokoa, akasioita ja taatelipalmuja. Sorsat ja nokikanat '
+              + 'pysähtyvät niille — ja hyttyset. Nimi Waw an Namus on kirjaimellisesti '
+              + 'hyttysten keidas.',
+          selite: 'Kuonakartio nousee kalderan pohjalta, ja sen juurella näkyy '
+            + 'järven vihreä reuna: keitaan vesi tulee pohjavedestä, ei sateesta, '
+            + 'jota tänne tulee tuskin lainkaan.',
+          lahde: 'Rolfcosar, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Vuori, jolle sataa kuusisataa milliä',
+          tiedosto: 'Green Mountain, Libya.jpg',
+          teksti: 'Jebel Akhdar eli Vihreä vuori on metsäinen ylätasanko, joka '
+              + 'reunustaa rannikkoa noin kolmesataakolmekymmentä kilometriä '
+              + 'Bengasista Dernan itäpuolelle ja nousee yhdeksäänsataan metriin. '
+              + 'Sadetta tulee noin kuusisataa milliä vuodessa, enemmän kuin '
+              + 'missään muualla maassa, joka on maailman vähämetsäisimpiä. Metsää '
+              + 'on runsaat kolmetuhatta neliökilometriä, ja siitä kolmasosa on '
+              + 'raivattu pelloiksi. Rinteillä kasvaa katajaa, '
+              + 'mastiksipistaasia ja johanneksenleipäpuuta. Yli puolet Libyan '
+              + 'kotoperäisistä kasveista elää täällä, ja seitsemää niistä ei ole '
+              + 'missään muualla. Maanviljelyn toivat seudulle kreikkalaiset noin '
+              + 'kuusisataa vuotta ennen ajanlaskun alkua.',
+          selite: 'Vuoren laaksot ovat tiheää makia-pensaikkoa ja kalliorinteitä, '
+            + 'ja niiden takana alkaa muutaman kilometrin päässä rannikko.',
+          lahde: 'Syed Wali Peeran, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaksituhatta kilometriä rantaa',
+          tiedosto: 'Ras al Helal 1.jpg',
+          teksti: 'Libyan rantaviiva on lähes kaksituhatta kilometriä pitkä, ja siihen '
+              + 'mahtuu koralliriuttoja, meriruohoniittyjä, suolamaita ja mutatasankoja. '
+              + 'Maasta on kirjattu 87 nisäkäslajia ja 338 lintulajia. Rannat ovat '
+              + 'valeunikilpikonnan pesimäalueita, ja rannikon vesissä elää '
+              + 'munkkihylje, joka on luokiteltu äärimmäisen uhanalaiseksi. '
+              + 'Kansallispuistoja on seitsemän: El-Kouf perustettiin 1975 Vihreän '
+              + 'vuoren rinteille ja Karabolli 1992 Tripolin itäpuolelle, ja '
+              + 'jälkimmäinen nimettiin samana vuonna lintujen suojelualueeksi, jolla '
+              + 'on sata lajia. Kaksi kosteikkoa liitettiin Ramsarin sopimukseen '
+              + 'huhtikuussa 2000. Rannoilla nähdään flamingoja ja kattohaikaroita.',
+          selite: 'Ras al-Hilalin rannalla Vihreä vuori laskeutuu suoraan mereen, '
+            + 'ja männyt kasvavat kalliolla vain muutaman metrin päässä vedestä.',
+          lahde: 'Maher27777, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Tuuli, joka värjää Italian sateen',
+          tiedosto: 'Dust storm off Libya (MODIS 2016-05-26).jpg',
+          teksti: 'Libyan aavikolta puhaltaa tuuli, jota sanotaan täällä qibliyyksi, '
+              + 'qiblan suunnasta tulevaksi, ja Euroopassa sirokoksi. Se yltää '
+              + 'Pohjois-Afrikassa ja Etelä-Euroopassa hirmumyrskyn nopeuksiin, ja '
+              + 'satakilometriset puuskat ovat tavallisimpia keväällä ja syksyllä, '
+              + 'huipussaan maaliskuussa ja marraskuussa. Matkalla Välimeren yli '
+              + 'tuuli kerää kosteutta, ja Etelä-Italiassa sataa niin sanottua '
+              + 'veresadetta: pisaroiden mukana tulee alas Libyan punainen hiekka. '
+              + 'Kun sirokko osuu nousuveden kanssa yksiin, Venetsian laguuniin '
+              + 'nousee acqua alta. Pöly hankaa koneita ja tunkeutuu talojen sisään.',
+          selite: 'Pölyvirta lähtee rannikolta ulapalle kuin joki: aavikon '
+            + 'hiekkameret riittävät pitämään myrskyt käynnissä vuosikymmeniä.',
+          lahde: 'Jeff Schmaltz, MODIS Land Rapid Response Team, NASA GSFC, Wikimedia Commons (PD)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä tulivuoren nimi Waw an Namus tarkoittaa?',
+        vaihtoehdot: [
+          'Mustaa hiekkaa',
+          'Hyttysten keidas',
+          'Kolmen järven kattila',
+          'Kadonnutta kaivoa',
+        ],
+        oikea: 1,
+        fakta: 'Kalderan järvet pitävät yllä hyttysparvia keskellä Saharaa — ja niiden '
+            + 'ansiosta myös muuttavia sorsia ja nokikanoja.',
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Libyan tieteessä on kyse mittaamisesta: täältä kotoisin oleva mies '
+          + 'mittasi maapallon, yksi sääaseman mittari mittasi kuumuuden väärin, ja '
+          + 'öljynetsijät mittasivat hiekan alta jotain arvokkaampaa kuin öljy.',
+      nostot: [
+        {
+          otsikko: 'Mies, joka mittasi maapallon varjon avulla',
+          aika: '276–196 eaa.',
+          tiedosto: 'Eratosthenes, Eratosthenis Werlds Karta (FL27971615 2725315).jpg',
+          teksti: 'Eratosthenes syntyi 276 eaa. Kyrenessä nykyisen Libyan rannikolla ja '
+              + 'nousi Aleksandrian kirjaston pääkirjastonhoitajaksi. Hän keksi sanan '
+              + 'maantiede, laski ensimmäisenä maan akselikallistuman ja kokosi '
+              + 'maailmankartan, jossa oli pituus- ja leveyspiirit. Kuuluisin työ oli '
+              + 'maapallon ympärysmitta: kesäpäivänseisauksen keskipäivänä sauva ei '
+              + 'heittänyt Syenessä varjoa lainkaan, Aleksandriassa heitti, ja varjon '
+              + 'kulma oli 7,2 astetta eli viideskymmenesosa ympyrästä. Kaupunkien '
+              + 'väli oli askelmittaajien mukaan 5 000 stadionia, joten ympärysmitaksi '
+              + 'tuli 250 000. Ihailijat sanoivat häntä moniottelijaksi, arvostelijat '
+              + 'Beetaksi: hän oli joka lajissa toinen.',
+          selite: 'Eratostheneen maailmankartta piirrettiin uudelleen vielä '
+            + '1700-luvulla: siinä on Britannian saaret, Intia ja Punainen meri, '
+            + 'mutta Afrikka loppuu päiväntasaajan tienoille.',
+          lahde: 'Eran Laorin karttakokoelma / Israelin kansalliskirjasto, '
+            + 'Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Ennätys, joka kaatui päivälleen 90 vuotta myöhemmin',
+          aika: '1922–2012',
+          teksti: 'Aziziyan sääasemalla mitattiin 13. syyskuuta 1922 lukema 58,0 '
+              + 'astetta, ja sitä pidettiin vuosikymmeniä maapallon korkeimpana '
+              + 'mitattuna lämpötilana. Maailman ilmatieteen järjestö julisti sen '
+              + 'pätemättömäksi 13. syyskuuta 2012, päivälleen '
+              + 'yhdeksänkymmentä vuotta myöhemmin. Syitä löytyi kolme: asema oli '
+              + 'siirretty 1919 linnakkeeseen mustan asfaltin päälle, '
+              + 'maksimimittari oli rikkoutunut ja korvattu kalibroimattomalla '
+              + 'kasvihuonemittarilla, ja kirjaajaksi oli vaihtunut kokematon mies, '
+              + 'joka merkitsi lukemat vääriin sarakkeisiin. Hän luki mittarin '
+              + 'väripylvästä väärästä päästä, ja tulos oli 7–8 astetta liian '
+              + 'korkea. Ennätys on nyt Death Valleyn 56,7 astetta.',
+          selite: 'Ennätyksen kaatoi lopulta käsiala: lokikirjan sivuilla ylin ja '
+            + 'alin lukema vaihtoivat saraketta juuri niinä päivinä, joina uusi '
+            + 'kirjaaja aloitti.',
+        },
+        {
+          otsikko: 'Vesi, joka satoi kolmekymmentäkahdeksantuhatta vuotta sitten',
+          tiedosto: 'Libyan pivot irrigation 460142568 02e969004a o.jpg',
+          teksti: 'Kun Etelä-Libyassa etsittiin 1953 öljyä, hiekan alta löytyi jotain '
+              + 'muuta: valtava määrä juomakelpoista pohjavettä. Nubian hiekkakiven '
+              + 'esiintymä on maailman suurin tunnettu fossiilisen veden varasto. Se '
+              + 'ulottuu runsaan kahden miljoonan neliökilometrin alalle neljän maan '
+              + 'alle — Libyan, Egyptin, Sudanin ja Tšadin — ja siinä arvioidaan '
+              + 'olevan 150 000 kuutiokilometriä vettä. Vesi on sadevettä, ja '
+              + 'isotooppitutkimus osoittaa kaksi täydentymisjaksoa: toinen 38 000 '
+              + 'vuotta sitten Välimereltä, toinen noin 361 000 vuotta sitten '
+              + 'trooppiselta Atlantilta. Nykyisin esiintymää ei täydennä mikään, ja '
+              + 'neljä maata on vuodesta 2006 sopinut sen tutkimisesta yhdessä.',
+          selite: 'Al Kufran keitaalla pyörivät kastelupuomit piirtävät aavikkoon '
+            + 'ympyröitä: jokaisen alla kasvaa viljaa vedellä, joka satoi ennen '
+            + 'viimeistä jääkautta.',
+          lahde: 'futureatlas.com, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Joki, joka kulkee putkessa',
+          aika: '1984–1996',
+          tiedosto: 'MMR 13.jpg',
+          teksti: 'Suuri keinojoki vie fossiilista pohjavettä aavikosta rannikon '
+              + 'kaupunkeihin, ja se on maailman suurin kastelujärjestelmä. Vesi '
+              + 'kulkee jopa 1 600 kilometriä ja kattaa 70 prosenttia kaikesta '
+              + 'Libyassa käytetystä makeasta vedestä. Putkistoa on 2 820 kilometriä, '
+              + 'kaivoja yli 1 300, ja useimmat niistä ovat yli viidensadan metrin '
+              + 'syvyisiä; vettä siirtyy kuusi ja puoli miljoonaa kuutiometriä '
+              + 'vuorokaudessa. Työ alkoi 1984, ja ensimmäinen vaihe vihittiin 1991. '
+              + 'Ensimmäinen vesi tuli Tripoliin 1996. Hinta ylitti 25 miljardia '
+              + 'dollaria — noin kymmenesosa siitä, mitä sama vesimäärä olisi '
+              + 'maksanut merivedestä puhdistettuna.',
+          selite: 'Betoniputket lasketaan aavikkoon kaivettuun kaivantoon ja '
+            + 'peitetään: valmiista joesta ei näy maan päälle mitään.',
+          lahde: 'Jaap Berk, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Libyan keittiössä näkyy neljä perintöä — amazigh, arabi, ottomaani ja '
+          + 'Välimeri — ja etelässä viides: aavikon oma taito säilöä ruokaa ilman '
+          + 'jääkaappia.',
+      nostot: [
+        {
+          otsikko: 'Taikinakumpu, jonka ohje on yli tuhat vuotta vanha',
+          tiedosto: 'Asida-Libya.JPG',
+          teksti: 'Asida tehdään sekoittamalla vehnäjauhoja kiehuvaan veteen, kunnes '
+              + 'syntyy sileä kumpu. Nimi tulee juuresta, joka tarkoittaa kiertämistä '
+              + 'ja vaivaamista, ja vanhin tunnettu ohje on 900-luvun keittokirjassa: '
+              + 'Ibn Sayyar al-Warraq kuvaa taatelista ja kirkastetusta voista '
+              + 'keitetyn paksun vanukkaan. Sama ruoka on 1200-luvun andalusialaisessa '
+              + 'keittokirjassa, ja Leo Africanus kirjasi 1500-luvulla version, jossa '
+              + 'on arganöljyä. Libyassa asida tarjoillaan taatelin tai '
+              + 'johanneksenleipäpuun siirapissa, jota sanotaan rubiksi, ja sulatetun '
+              + 'voin kanssa. Sitä syödään Mawlidina, idinä, lapsen '
+              + 'nimenantojuhlassa ja synnyttäneille naisille.',
+          selite: 'Kumpu nostetaan keskelle kulhoa ja siirappi kaadetaan ympärille, '
+            + 'jotta jokainen sormin otettu pala kastuu erikseen.',
+          lahde: 'Hakeem.gadi, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Liha, joka kypsyy maan alla',
+          teksti: 'Lammas on Libyan syödyin liha, ja etelässä syödään myös kamelia. '
+              + 'Gideed on ikivanha säilöntätapa: lampaan- tai kamelinlihapalat '
+              + 'suolataan, kuivataan auringossa ja pannaan oliiviöljyyn odottamaan '
+              + 'kylmiä kuukausia tai aikaa, jolloin tuoretta lihaa ei ole; sitä '
+              + 'lisätään keittoihin, kuskusiin ja patoihin. Juhlien ruoka on '
+              + 'bourdeem, jossa lammas kypsyy hitaasti maahan kaivetussa kuopassa '
+              + 'hehkuvien hiilten päällä sipulien, tomaattien ja perunoiden kanssa; '
+              + 'tulos on savuinen ja niin mureaa, että liha hajoaa sormissa. '
+              + 'Kolmas tapa on shwaya, grillaus vartaassa tai pienen avotulen päällä '
+              + '— sekin kuuluu erityisesti uhrijuhlaan.',
+          selite: 'Kuivattu ja öljyyn säilötty liha on aavikon jääkaappi: se kestää '
+            + 'kuukausia ja antaa keitolle maun, jota tuore liha ei anna.',
+        },
+        {
+          otsikko: 'Leipä, joka paistetaan hiekan alla',
+          teksti: 'Aavikon ja beduiinien leipä on khobz mallah, joka paistetaan kuuman '
+              + 'hiekan alla: taikina painetaan hiekkaan, päälle kaadetaan hehkuvat '
+              + 'hiilet, ja valmis leipä kaivetaan esiin ja pyyhitään puhtaaksi. Tapa '
+              + 'tunnetaan koko arabimaailman aavikkoseuduilla, sen juuret ovat '
+              + 'ajanlaskun ensimmäisillä vuosisadoilla, ja Libyassa se on tavallisin '
+              + 'Sebhassa ja Sirtessä. Toinen nimi on khobza jamar. Muualla maassa '
+              + 'leipä paistetaan savisessa tannour-uunissa kuivilla oliivipuun '
+              + 'haloilla, ja kaupungeissa syödään myös pieniä patonkeja eli eish '
+              + 'finoa, litteää mafrudia, ohutta happamatonta raqaqia ja pannulla '
+              + 'paistettua tawehia.',
+          selite: 'Hiekka toimii kuin uuni: se pitää lämmön tasaisena ja päästää '
+            + 'kosteuden ulos, joten leivästä tulee kova kuorinen ja pehmeä sisältä.',
+        },
+        {
+          otsikko: 'Keitto, tonnikala ja kolme maustesekoitusta',
+          tiedosto: 'وجبات شعبيه 22.jpg',
+          teksti: 'Arkiruoan runko on yksinkertainen. Shorba on lampaan- ja '
+              + 'vihanneskeitto, jossa on minttua ja tomaattisosetta; fasoulia on '
+              + 'papupata tomaattikastikkeessa; bureek on rapea täytetty käännös, ja '
+              + 'ejja perunasta, tomaatista ja yrteistä tehty munakas, joka '
+              + 'tarjoillaan paastonajan iltapöydässä pannulla paistetun ftat-leivän '
+              + 'kanssa. Säilyketonnikala on koululounaiden perusta ja maan '
+              + 'edullisinta proteiinia. Maku tulee mausteista: harissasta, jossa on '
+              + 'chiliä, valkosipulia ja kuminaa, sekä sekoituksista bzarr ja '
+              + 'bokharat, joissa on korianteria, kurkumaa, inkivääriä, neilikkaa, '
+              + 'muskottia ja kanelia. Ramadanin juoma on kuivatusta aprikoosista '
+              + 'sekoitettu qamar al-din.',
+          selite: 'Ravintola-annos kokoaa arjen ruoat yhdelle tarjottimelle: '
+            + 'grillattua lihaa, riisiä kikherneillä, papupataa ja salaattia.',
+          lahde: 'Mhjwbyabrahy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Libyan musiikilla on kaksi suuntaa: aavikolta tulevat säkkipilli ja '
+          + 'kamelinajajan laulu, rannikolta improvisoitu laulu, joka päätyi '
+          + '1980-luvulla Kairon kautta koko arabimaailman radioihin.',
+      nostot: [
+        {
+          otsikko: 'Säkkipilli, joka päättyy kahteen sarveen',
+          tiedosto: 'الرقص التقليدي الشعبي مع لبس غدامسي التقليدي لوحة فنية جميلة. من فرقة القادري.jpg',
+          teksti: 'Zukra on libyalainen säkkipilli, jossa on kaksoisputki ja kaksi '
+              + 'lehmänsarvea putkien päissä. Se on rakenteeltaan vanhempi kuin '
+              + 'tunisialainen serkkunsa mizwad, ja sitä soitetaan maan eri puolilla '
+              + 'eri tavoin: etelässä ja lännessä säkin kanssa, idässä suoraan suulla '
+              + 'ilman säkkiä, jolloin soitin on käytännössä kaksoisklarinetti. Zukra '
+              + 'kuuluu juhliin, häihin ja hautajaisiin. Sen rinnalla soivat '
+              + 'bambuhuilu, tamburiini, oud ja darbuka — ja taputus, joka on niin '
+              + 'monimutkaista, että se on oma soittimensa. Beduiinien kiertävät '
+              + 'runolaulajat ovat levittäneet lauluja maan halki; huda on '
+              + 'kamelinajajan laulu, jonka rytmin sanotaan matkivan kävelevän kamelin '
+              + 'askelia.',
+          selite: 'Juhlatanssi on askelta ja asua: ghadamesilaisessa juhlapuvussa '
+            + 'raidalliset viitat lentävät ja keltaiset nahkatohvelit lyövät tahtia.',
+          lahde: 'Alhotmane, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Naisten laulut, jotka alkoivat ministerin paluusta',
+          aika: '1919–',
+          teksti: 'Zamzamat on naisten lauluperinne, joka liitetään Tripoliin ja jonka '
+              + 'synty ajoitetaan vuoteen 1919: sillä juhlittiin erään ministerin '
+              + 'paluuta. Laulaja Kamila al-Makhla ja hänen sokea sisarensa '
+              + 'säilyttivät lauluja, joita mestarit olivat esittäneet kaupungin '
+              + 'kokoontumispaikoissa, muun muassa Khouja-hotellissa. Esiintyjät ovat '
+              + 'yksinomaan naisia: kuoro laulaa duff-kehärumpujen säestyksellä ja '
+              + 'sepittää säkeet paikan päällä morsiamen hyveistä ja sulhasen '
+              + 'ansioista, ja liverrys ja taputus jatkuvat, kunnes sulhasen väki '
+              + 'saapuu. Tunnettuja nimiä ovat Aisha al-Fizika, Mama Nissa ja Khadija '
+              + 'al-Funsha, jota kutsutaan Libyan ruusuksi.',
+          selite: 'Kehärumpu, taputus ja liverrys riittävät: zamzamat ei tarvitse '
+            + 'yhtään kielisoitinta, ja sanat syntyvät sitä mukaa kuin lauletaan.',
+        },
+        {
+          otsikko: 'Kaksi selitystä yhdelle nimelle',
+          teksti: 'Mirskaawi on itäisen Libyan kansanomainen laji, tutuin Bengasissa, '
+              + 'Al-Baydassa ja Dernassa. Nimen alkuperästä on kaksi selitystä: '
+              + 'toisten mukaan se tulee eteläisestä keidaskaupungista Murzuqista, '
+              + 'toisten — kuten musiikintutkija Tariq al-Hassin — mukaan sanasta '
+              + 'morisco, jolla tarkoitettiin al-Andalusista paenneita muslimeja. '
+              + 'Kappale alkaa mawwal-tyylisellä laulualulla ja päättyy '
+              + 'vauhdikkaaseen tabrouilaan. Rannikon oma '
+              + 'laji on jarr suwahli, maan vanhimpia: jarr tarkoittaa vetämistä, '
+              + 'suwahli rannikkolaista. Se on rytmiltään ja sanoiltaan vapaa, ja '
+              + 'siinä soivat oud, ney, darbuka, bendir ja qanun — 1900-luvun '
+              + 'puolivälistä myös kitara, viulu ja haitari.',
+          selite: 'Kumpikin selitys kertoo saman: itäisen Libyan musiikkiin on '
+            + 'tultu joko aavikon eteläpuolelta tai meren yli lännestä.',
+        },
+        {
+          otsikko: 'Bengasista Kairoon',
+          aika: '1970–1988',
+          teksti: 'Ahmed Fakroun perusti ensimmäisen yhtyeensä Bengasissa 1970 ja soitti '
+              + 'sillä koulujen tanssiaisissa. Hän oli monisoittaja — saz, mandola, '
+              + 'darbuka, kitara, basso ja koskettimet — ja yhdisti rannikon vanhan '
+              + 'jarr suwahlin rockiin. Lontoossa hän levytti Tommy Vancen '
+              + 'kanssa, ja Pariisissa syntyivät Soleil Soleil ja Mots d’Amour. '
+              + '1970- ja 1980-luvulla libyalainen vapaa musiikki levisi Egyptiin, '
+              + 'jossa siitä tuli musiqa shababiyya, nuorisomusiikki. Sen vei perille '
+              + 'Hamid al-Shaeri, joka aloitti Libyan radion urkurina ja julkaisi '
+              + 'Kairossa levyt Ayonha ja Raheel. Hänen tuottamassaan Law Lekissä '
+              + 'soivat rumpukone ja perinteinen libyalainen taputus samaan aikaan.',
+          selite: 'Rannikon vapaa laulu kesti matkan studioon: sama improvisoitu '
+            + 'rytmi soi Pariisin syntetisaattorilevyillä ja Kairon radiohiteissä.',
+        },
+      ],
+    },
+  ],
 };

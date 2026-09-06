@@ -150,6 +150,9 @@ const SALLITUT = [
   // Bolivian uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
   // samalla isäntänimellä, ilman www-etuliitettä.
   'https://eldeber.com.bo/',
+  // Libyan uutislähde (maalehti 6.9.2026): syöte ja artikkelilinkit
+  // ovat samalla isäntänimellä ilman www-etuliitettä.
+  'https://almarsad.co/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

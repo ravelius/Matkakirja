@@ -197,6 +197,19 @@
 > ovat js/packs/uutislahteet.js:n BOL-kommentissa. Julkaisu
 > Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Libya):** sallittuihin lisättiin almarsad.co
+> (maalehti LBY, testattu 6.9.2026: syötteessä kymmenen juttua,
+> artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy kahdeksan
+> yli 60 merkin kappaletta ja `og:image` löytyy). Al Marsad on
+> arabiankielinen, ja oikealta vasemmalle kirjoitettava teksti toimii
+> ilman lisätöitä. Osoitteessa ei ole www-etuliitettä sen paremmin
+> syötteessä kuin artikkelilinkeissäkään, joten listalla on vain yksi
+> isäntänimi. Alwasat on Cloudflaren botti-eston takana, ja Libya
+> Observer, 218 TV ja Ean Libya vastaavat uudelleenohjauksella, jota
+> worker ei seuraa; perustelut ovat js/packs/uutislahteet.js:n
+> LBY-kommentissa. Julkaisu tapahtuu automaattisesti mainista, kuten
+> alempien merkintöjen kohdalla.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

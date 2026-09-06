@@ -957,4 +957,25 @@ export const UUTISLAHTEET = {
     kieli: 'es',
     syote: 'https://eldeber.com.bo/feed/',
   },
+  /*
+   * Al Marsad (صحيفة المرصد الليبية) on libyalainen verkkolehti.
+   * Testattu 6.9.2026: syötteessä kymmenen juttua, ja artikkelisivun
+   * ensimmäisestä <article>-lohkosta jäsentyy kahdeksan yli 60 merkin
+   * kappaletta sekä og:image. Syöte ja artikkelilinkit ovat samalla
+   * isäntänimellä ilman www-etuliitettä, joten SALLITUT-listalla
+   * riittää yksi rivi.
+   *
+   * Testattu ja hylätty: Alwasat (alwasat.ly/feed — Cloudflaren
+   * botti-esto, 403), Libya Observer (www.libyaobserver.ly/rss.xml —
+   * 301 eikä worker seuraa uudelleenohjauksia), 218 TV
+   * (www.218tv.net/feed/ — 302) ja Ean Libya (eanlibya.com/feed/ —
+   * 301). Englanninkielinen Libya Herald (libyaherald.com/feed/)
+   * läpäisi syötetestin viidelläkymmenellä jutulla, mutta
+   * paikalliskielinen lähde on ensisijainen.
+   */
+  LBY: {
+    nimi: 'Al Marsad',
+    kieli: 'ar',
+    syote: 'https://almarsad.co/feed/',
+  },
 };
