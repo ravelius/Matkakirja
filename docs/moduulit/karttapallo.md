@@ -2564,3 +2564,117 @@ ja `kytkeLaatunosto` jäivät paikoilleen. Rivimäärät: js/pallo.js
 `tests/pallolepokerros.test.mjs` vaatii, ettei pallo.js enää määrittele
 siirrettyjä nimiä ja että uusi moduuli ei tuo mitään. Seuraava erä E1
 rakentaa näiden apurien päälle itse laattakerroksen.
+
+
+**E1 tehty: laattakerros — sama tarkkuus liikkeessä kuin levossa
+(6.9.2026 ilta).** Suunnitelman
+docs/moduulit/pallon-liike-taydella-tarkkuudella.md luvun 4 mukainen
+laattakerros on tiedostossa `js/pallolaatat.js` (`luoLaattakerros`) ja
+kytketty palloon `js/pallo.js`:n `rakennaPallo`- ja
+`kytkeLaatunosto`-funktioista. Pinta on nyt kaksi kerrosta: kirjaston
+oma laattamoottori jää KARKEAKSI POHJAKSI (`POHJAN_TASO_MAX = 5`, näkyy
+napojen yli ja siihen asti kunnes kerroksen laatta saapuu), ja sen
+päälle piirretään pyramidin laatat yksi verkko kerrallaan — taso ruudun
+pikseleistä hystereesillä (`LAATTAKERROS_TERAVYYS 1`,
+`LAATTAKERROS_HYSTEREESI_ALAS 0,7`), sisään-häive 260 ms, ulos-häive
+vain karkeamman valmiin peiton päältä, LRU-kiintiö (48 näkyvää + 24
+muistissa, katto 96 Mt) ja tekstuurien vienti enintään kaksi kehyksessä.
+Liike/lepo-laatutilat eivät enää vaihda kynnyksiä eivätkä pikselisuhdetta
+(pikselisuhde `min(dpr, 3)` kerran asennuksessa), eikä lepokerrosta
+luoda. Perääntymistie on `?laattakerros=0`: silloin kaikki toimii
+täsmälleen kuten v1645 (vipu `js/ui-apurit.js` `laattakerrosPaalla`).
+
+Kolme mitattua tarkennusta suunnitelmaan, kaikki samasta syystä — kerros
+päivittyy kymmenen kertaa sekunnissa, ei kerran levossa:
+
+1. **Näkyvän alueen näytteitä ei saa kysyä kirjastolta.**
+   `pallo.toGlobeCoords` testaa joka kutsulla pallon kaikki
+   laattaverkot, joten 81 näytettä maksoi puhelinnäkymässä **444 ms**
+   (Chromium, ei hidastusta, 47 000 kolmiota). Näytteet lasketaan
+   analyyttisesti (`laattakerroksenOsuma`: kamera on säteellä
+   R(1 + korkeus) suunnassa (lat, lng) eikä sillä ole kallistusta, joten
+   ruudun säde leikkaa pallon toisen asteen yhtälöllä). Ero
+   säteenjäljitykseen samassa näkymässä 0,03–0,05°, ja päivityksen hinta
+   putosi **473 ms → 0,5 ms**.
+2. **Takapuolen laatat on karsittava ennen laattakattoa**
+   (`laattakerroksenNakyvissa`). Näkyvä alue on lat/lon-laatikko, mutta
+   pallolla näkyy kalotti: yleiskuvassa laatikon kulmat ovat pallon
+   takana. Ilman karsintaa kerroksen taso KARKENI kesken sisäänzoomauksen
+   (mitattu 3 → 2 → 4 → 5 → 6 → 7), koska laatikko kasvoi katon yli.
+   Karsinnan jälkeen tasot ovat monotoniset **3 → 4 → 5 → 6 → 7**.
+3. **Latausjono kootaan joka päivityksellä** näkyvistä lataamattomista
+   (lähin ensin), ja puretun laatan kesken oleva haku katkaistaan
+   (`AbortController`). Kertaalleen jonoon jätetyt vanhentuneet tietueet
+   veivät zoomissa kaiken kaistan laatoilta, joita ei enää katsottu:
+   ilman tätä kymmenen sekunnin zoomin jälkeen yksikään laatta ei ehtinyt
+   valmiiksi kuudessa sekunnissa, sen kanssa näkymä on täysi.
+
+Mitattu ennen ja jälkeen (`tools/savukkeet/mittaa-pallon-liike.mjs`,
+Fogg Ateenassa korkeudella 0,35, panorointi kaksi ruudunleveyttä itään
+4 s:ssa; puhelin 390 × 844 dpr 3 CPU 4×, työpöytä 1440 × 900 dpr 2):
+
+| Mitta (puhelin) | Ennen (v1645) | Jälkeen (E1) | Suunnitelman raja |
+| --- | --- | --- | --- |
+| Reunan leveys levossa (mediaani / p90) | 2 / 4 px | 2 / 4 px | ≤ 3 / 5 px |
+| Reunan leveys liikkeessä (25 % / 55 %) | 5 / 8 px | **2 / 4 px** | = lepo ± 1 px |
+| Musteviivan paksuus levossa (med / p75) | 1 / 2 px | 2 / 3 px | — |
+| Musteviivan paksuus liikkeessä | 7–8 / 9–12 px | **2 / 2–5 px** | ≤ 2 px |
+| updatePov ms / kutsu (max) | 3,8 (32,4) | 8,7 (23,3) | ≤ 10 ms, max ≤ 40 |
+| Laattapyyntöjä 4 s:n panoroinnissa | 188 | **27** | ≤ 120 |
+| Laattaverkkoja scenessä lähikuvassa | 288 (pohja Z8) | 46 pohja + 15–35 kerros | ≤ 120 |
+| Piirtokutsuja / kehys | 218 | 36–65 | ≤ 120 |
+| Tekstuureja uudestaan levossa panoroinnin jälkeen | 183 | **4** | ≤ 20 |
+| Zoom 2,5 → 0,05: tyhjän osuus keskialueella | 0,000 | 0,000 | 0,000 |
+| Zoom: perättäisten kuvien ero (mean ΔL) | 21,8–27,9 | 25,1–27,0 | ei piikkiä |
+| Zoom: kerroksen tason vaihdot | (ei kerrosta) | 3 → 4 → 5 → 6 → 7 | monotoninen |
+| Zoom: pohjan tason vaihdot 10 s:ssa | 7, joista 2 edestakaisin | 3, monotoninen | — |
+
+| Mitta (työpöytä) | Ennen (v1645) | Jälkeen (E1) |
+| --- | --- | --- |
+| Reunan leveys levossa | 2 / 4 px | 2 / 5 px (kolmen sekunnin lepo 3 / 6 px, ks. alla) |
+| Reunan leveys liikkeessä | 2 / 4 px ¹ | 2 / 5 px |
+| Musteviivan paksuus liikkeessä | 1 / 2 px ¹ | 2 / 3 px |
+| updatePov ms / kutsu (max) | 11,0 (25,7) | 2,1 (3,6) |
+| Laattapyyntöjä 4 s:n panoroinnissa | 249 | 55 |
+| Piirtokutsuja / kehys | 247–302 | 64–139 |
+| Zoom lopussa levossa (reuna / muste) | 2 / 4 ja 2 / 2 px | 2 / 5 ja 2 / 2 px |
+
+¹ Työpöydän liikekaappaus osui hetkeen, jossa kirjaston taso oli jo
+palautunut seitsemään, joten se ei näytä liikkeen omaa karkeutta;
+puhelimen luvut kertovat sen.
+
+Neljä lukua on syytä lukea oikein.
+
+1. **Musteviiva paksuni levossa 1 → 2 px**, koska kerros valitsee
+   terävyydellä 1 pyramidin tason z6 (120 px/aste), kun pallon oma
+   Mercator-sarja tarjosi Z8:n (231 px/aste 38° N:ssä, poltettu pyramidin
+   z7:stä): pyramidin kartografia on tasokohtaista, joten karkeammalla
+   tasolla muste ja nimet on piirretty suhteessa isommiksi. Ruudun tarve
+   samassa näkymässä on 116 laitepikseliä leveysastetta kohti ja z6
+   antaa 139, joten yhtään yksityiskohtaa ei jää näyttämättä.
+2. **Kehysajat kontissa kasvoivat** (p50 233 → 1567 ms panoroinnissa),
+   koska pikselisuhde ei enää putoa liikkeessä kolmesta kahteen. Se on
+   ohjelmistorasteroijan täyttökustannus (suunnitelman luku 2.3 (c):
+   sama näkymä dpr 3 = 1042 ms, dpr 2 = 413 ms) eikä ennusta laitetta,
+   jolla 3 Mpx ja 60 piirtokutsua on kevyt kehys.
+3. **Ensimmäinen näkymä täyttyy hitaammin kuin ennen.** Pohja on nyt
+   tasolla 5, joten ennen kuin kerroksen laatat saapuvat, kuva on
+   karkeampi kuin ennen (jossa pohja meni Z8:aan). Kontissa jokainen
+   laatta haetaan ämpäristä välityspalvelimen läpi (~1 laatta/s), joten
+   mittarin 3,5 sekunnin lepo ei riitä työpöydän leveään näkymään:
+   ensimmäinen kaappaus on 3 / 6 px ja seuraavat 2 / 5 px. Laitteella
+   ja HTTP-välimuistin kanssa tämä on murto-osa sekunnista; E4 esilataa
+   avauslennon käytävän pyramidilaatoille.
+4. **Savukkeet antavat saman tuloksen kerros päällä ja pois**
+   (`?laattakerros=0`): pallolauta 42/42, avauslento 6/7 (P6 kaatuu
+   molemmilla), pallolaatat-offline 10/11 (vartio 4 kaatuu molemmilla),
+   siirtokoreografia ja kartta-tila kaatuvat molemmilla `page.goto`-
+   aikakattoon (30 s, `waitUntil: 'load'`) tässä kontissa. Yksi ero:
+   `savuke-pallolauta.mjs` KUVAKANSIOLLA ajettuna kaatuu Playwrightin
+   30 s:n kaappauskattoon maatiedot-linssin kohdalla — sama kaappaus
+   kestää ohjelmistorasteroijalla ilman kerrosta 22,6 s ja kerroksen
+   kanssa 33,7 s (1 690 piirtokutsua tulee linssin omista polygoneista,
+   ei kerroksesta). Ilman kuvakansiota savuke ei kaappaa mitään ja menee
+   läpi. Kyse on kontin rasteroijasta, ei laitteesta — mutta
+   kaappauskatto kannattaa nostaa, kun savuketta seuraavan kerran
+   kosketaan.

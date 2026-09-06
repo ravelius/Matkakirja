@@ -43,21 +43,33 @@ import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 import {
   haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
 } from './laattapyramidi.js';
-import { laatuAinaPaalla } from './ui-apurit.js';
+import { laattakerrosPaalla, laatuAinaPaalla } from './ui-apurit.js';
 /*
- * Laattakerroksen puhtaat apurit (erä E0, suunnitelma
- * docs/moduulit/pallon-liike-taydella-tarkkuudella.md luku 6) asuvat
- * moduulissa js/pallolaatat.js. Ne TUODAAN tänne ja VIEDÄÄN EDELLEEN,
- * jotta testit, savukkeet ja js/pallolauta/ näkevät ne edelleen
- * js/pallo.js:stä — siirto ei muuttanut yhtään rajapintaa.
+ * Laattakerros ja sen puhtaat apurit (erät E0 ja E1, suunnitelma
+ * docs/moduulit/pallon-liike-taydella-tarkkuudella.md luvut 4 ja 6)
+ * asuvat moduulissa js/pallolaatat.js. Apurit TUODAAN tänne ja VIEDÄÄN
+ * EDELLEEN, jotta testit, savukkeet ja js/pallolauta/ näkevät ne
+ * edelleen js/pallo.js:stä — siirto ei muuttanut yhtään rajapintaa.
  */
 import {
-  LAATU_KAUKORAJA, LAATU_LEPOVIIVE_MS, LEPOKERROS_HAIVE_SISAAN_MS, LEPOKERROS_KANGASKATTO,
-  LEPOKERROS_KOROTUS, LEPOKERROS_KORKEUSRAJA, LEPOKERROS_KUVAKATTO, LEPOKERROS_MITTAMATKA_PX,
+  LAATTAKERROS_OLETUS, LAATU_KAUKORAJA, LAATU_LEPOVIIVE_MS, LEPOKERROS_HAIVE_SISAAN_MS,
+  LEPOKERROS_KANGASKATTO, LEPOKERROS_KOROTUS, LEPOKERROS_KORKEUSRAJA, LEPOKERROS_KUVAKATTO,
+  LEPOKERROS_MITTAMATKA_PX,
   LEPOKERROS_NAYTTEITA, LEPOKERROS_SYVYYSSIIRTO, THREE_CLAMP, THREE_LINEAR,
   THREE_LINEAR_MIPMAP_LINEAR, lepokerroksenAlue, lepokerroksenKerrokset, lepokerroksenLaattakatto,
   lepokerroksenSilmat, lepokerroksenSuunnitelma, lepokerroksenTasoRiittaa, lepokerroksenVerkko,
-  luoLepokerroksenAjoitus,
+  luoLaattakerros, luoLepokerroksenAjoitus,
+} from './pallolaatat.js';
+
+export {
+  LAATTAKERROS_HAIVE_MS, LAATTAKERROS_HYSTEREESI_ALAS, LAATTAKERROS_LAATTAKATTO_MUISTI,
+  LAATTAKERROS_LAATTAKATTO_NAKYVA, LAATTAKERROS_LAATTAKATTO_TAVUT, LAATTAKERROS_NAYTTEITA,
+  LAATTAKERROS_OLETUS, LAATTAKERROS_PAIVITYSVALI_LIIKE_MS, LAATTAKERROS_RENDER_ORDER_POHJA,
+  LAATTAKERROS_RINNAKKAIN, LAATTAKERROS_SILMAT_MAX, LAATTAKERROS_SILMAT_MIN,
+  LAATTAKERROS_SYVYYSSIIRTO, LAATTAKERROS_TERAVYYS, LAATTAKERROS_TEKSTUUREJA_PER_KEHYS,
+  LAATTAKERROS_VARA_AST, LAATTAKERROS_VARA_OSUUS, laatanKartta, laattakerroksenLRU,
+  laattakerroksenNakyvissa, laattakerroksenOsuma, laattakerroksenPeitto, laattakerroksenSilmat,
+  laattakerroksenTaso, luoLaattakerros,
 } from './pallolaatat.js';
 
 export {
@@ -458,6 +470,19 @@ export function lataaPallokirjasto(doc = document) {
   return kirjastoLupaus;
 }
 
+/*
+ * POHJA JÄÄ KARKEAKSI, KUN LAATTAKERROS ON PÄÄLLÄ (erä E1, suunnitelma
+ * docs/moduulit/pallon-liike-taydella-tarkkuudella.md luku 4.1).
+ * Kirjaston oma laattamoottori on silloin vain POHJA: se näkyy napojen
+ * yli (pyramidin rajaus 84° N…66° S) ja sen ajan, kun kerroksen laatta
+ * ei ole vielä saapunut. Tasolla 5 se on 128 laattaa koko maailmalle ja
+ * sen tasonvaihdot (0–5) tapahtuvat kerroksen alla näkymättömissä;
+ * mitattu hinta tasolla 8 oli 33 ms per updatePov ja 975 kertyvää
+ * laattaa (suunnitelman luku 2.2). Ilman kerrosta (?laattakerros=0)
+ * katto on luettelon oma syvin taso kuten ennen.
+ */
+export const POHJAN_TASO_MAX = 5;
+
 /**
  * Pallon runko: Globe.gl-instanssi koteloon, pinta laattamoottorilla
  * (luettelo ämpärissä) tai z4-tekstuurilla varana. Jaettu valikkopallon
@@ -473,7 +498,10 @@ export function rakennaPallo(Globe, kotelo, laatat) {
     .backgroundColor('rgba(0,0,0,0)')
     .showAtmosphere(true).atmosphereColor('#d9a13b').atmosphereAltitude(0.18);
   if (laatat && pallo.globeTileEngineUrl) {
-    pallo.globeTileEngineUrl(pallonLaatta).globeTileEngineMaxLevel(laattatasoMax(laatat));
+    const syvin = laattatasoMax(laatat);
+    pallo.globeTileEngineUrl(pallonLaatta).globeTileEngineMaxLevel(
+      laattakerrosPaalla(globalThis, LAATTAKERROS_OLETUS) ? Math.min(syvin, POHJAN_TASO_MAX) : syvin,
+    );
     asennaLaatunosto(pallo, kotelo);
     asennaNapakannet(pallo);
   } else {
@@ -695,7 +723,25 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
   const renderer = pallo.renderer?.();
   const maxAniso = renderer?.capabilities?.getMaxAnisotropy?.() ?? 1;
   const alkuperainen = moottori.updatePov;
-  const lepokerros = luoLepokerros({
+  /*
+   * LAATTAKERROS KORVAA LEPOKERROKSEN JA LAATUTILAT (erä E1). Kun kerros
+   * on päällä, kirjaston kynnykset ja pikselisuhde EIVÄT enää vaihdu
+   * liikkeen mukaan (asetaTila palaa heti): kynnykset ovat kirjaston
+   * oletus, pohja on naulattu tasoon POHJAN_TASO_MAX, ja pikselisuhde
+   * asetetaan kerran lepotilan arvoon. Terävyys tulee kerrokselta, joka
+   * päivittyy jokaisella updatePov-kutsulla ja harventaa itse
+   * (LAATTAKERROS_PAIVITYSVALI_LIIKE_MS). Ilman kerrosta
+   * (?laattakerros=0) kaikki alla oleva toimii täsmälleen kuten v1645 —
+   * se on perääntymistie, jota ei saa rikkoa.
+   */
+  const kerrosPaalla = laattakerrosPaalla(ikkuna, LAATTAKERROS_OLETUS);
+  const kerros = kerrosPaalla ? luoLaattakerros({
+    pallo, kotelo, ikkuna, renderer,
+    kolmiulotteinen, pallonSarja: () => laattaluettelo,
+    lauta: PALLO_LAUTA, naparaja: NAPAKANNEN_LEVEYS,
+  }) : null;
+  if (kerros) lepokerrokset.set(pallo, kerros);
+  const lepokerros = kerros ? null : luoLepokerros({
     pallo, kotelo, ikkuna, renderer, laattataso: () => moottori.level,
   });
   let lepo = false;
@@ -716,6 +762,8 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
   const piirtokorkeus = () => kotelo.clientHeight * Math.min(dpr, LAATU_PIKSELISUHDE_LEPO);
   const asetaTila = (lepoon) => {
     lepo = lepoon;
+    // Kerros päällä: kynnykset ja pikselisuhde jäävät asennuksen arvoihin.
+    if (kerros) return;
     if (aina()) lepoon = true;
     const nakyma = kameranNakyma();
     kynnysLat = Number.isFinite(nakyma?.lat) ? nakyma.lat : 0;
@@ -760,7 +808,10 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     // Sama lepo ajoittaa lepokerroksen (pyramidin laatat näkyvän päälle) —
     // kerros kootaan vasta AIDON levon jälkeen, ei raahauksen tauolla
     // (LEPOKERROS_LEPOVIIVE_MS ja sormivahti, ks. luoLepokerroksenAjoitus).
-    lepokerros.levossa();
+    // Laattakerros ei odota lepoa: se päivittyy myös liikkeessä, ja tämä
+    // on vain harventamaton päivitys pysähdyksen jälkeen.
+    if (kerros) kerros.paivita(kamera, false);
+    else lepokerros.levossa();
     for (const viive of [0, 800, 2500]) {
       const t = ikkuna.setTimeout(() => { ajastimet.delete(t); if (lepo) teroita(); }, viive);
       ajastimet.add(t);
@@ -778,8 +829,9 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
         // Lepokerros pois HETI liikkeen alkaessa (ei LAATU_LIIKEVIIVE_MS:n
         // jälkeen) ja ilman häivytystä: ensimmäisestä liikekehyksestä
         // alkaen pallo piirtyy täsmälleen kuten ennen kerrosta (omistaja
-        // 6.9.2026 ilta, ks. LEPOKERROS JA LIIKE alempana).
-        lepokerros.piilota();
+        // 6.9.2026 ilta, ks. LEPOKERROS JA LIIKE alempana). Laattakerros
+        // ei piiloudu koskaan — se on liikkeessä yhtä terävä kuin levossa.
+        lepokerros?.piilota();
         edellinen = paikka.clone();
         if (lepo && nyt - liikeAlku >= LAATU_LIIKEVIIVE_MS) asetaTila(false);
         else {
@@ -800,9 +852,20 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
         lepoAjastin = ikkuna.setTimeout(lepoon, LAATU_LEPOVIIVE_MS);
       }
     }
+    // Laattakerros päivittyy JOKAISELLA kutsulla; se harventaa itse
+    // (enintään 10 kertaa sekunnissa liikkeessä).
+    if (kerros && kam) kerros.paivita(kam, true);
     return alkuperainen.call(this, kam);
   };
   asetaTila(false);
+  /*
+   * Pikselisuhde kerran asennuksessa, kun kerros on päällä: puskurin koon
+   * vaihto on raskas kehys eikä kuvan tarkkuus saa vaihtua liikkeessä.
+   */
+  if (kerros && renderer) {
+    const suhde = Math.min(dpr, LAATU_PIKSELISUHDE_LEPO);
+    if (renderer.getPixelRatio?.() !== suhde) renderer.setPixelRatio(suhde);
+  }
   /*
    * PAKOTUS VAIKUTTAA HETI (pakotaPallonLaatu): kynnykset ja
    * pikselisuhde asetetaan uudestaan samasta liike/lepo-tilasta, ja
@@ -824,7 +887,8 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     laatuKuuntelijat.delete(pakotus);
     ikkuna.clearTimeout(lepoAjastin);
     for (const t of ajastimet) ikkuna.clearTimeout(t);
-    lepokerros.pura();
+    lepokerros?.pura();
+    if (kerros) { kerros.pura(); lepokerrokset.delete(pallo); }
     moottori.updatePov = alkuperainen;
   };
 }
@@ -1114,9 +1178,15 @@ function lisaaNapakannet(kolmi, sade) {
  * laattamäärä ämpäriin. Lepokerros lukee saman z7:n suoraan.
  */
 
-/** Asennetut lepokerrokset pallo-instanssia kohti (savukkeet, lauta). */
+/** Asennetut lepo- tai laattakerrokset pallo-instanssia kohti (savukkeet, lauta). */
 const lepokerrokset = new WeakMap();
-/** Pallon lepokerroksen kahva ({ mittarit, kokoa, piilota }) tai null. */
+/**
+ * Pallon pintakerroksen kahva ({ mittarit, kokoa, piilota, levossa })
+ * tai null. Kerros on LAATTAKERROS, kun se on päällä (oletus), ja vanha
+ * LEPOKERROS silloin kun se on sammutettu (?laattakerros=0). Kahvan
+ * muoto on sama molemmilla, joten js/pallolauta/lauta.js:n accessor ja
+ * savukkeet toimivat kummallakin ilman muutosta.
+ */
 export function pallonLepokerros(pallo) {
   return lepokerrokset.get(pallo) ?? null;
 }

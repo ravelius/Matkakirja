@@ -1,23 +1,35 @@
 /*
- * PALLON LAATTAKERROKSEN APURIT — puhtaat funktiot ilman kirjastoa.
+ * PALLON LAATTAKERROS JA SEN PUHTAAT APURIT.
  *
- * Tässä moduulissa ovat pallon lepokerroksen (ja erässä E1 tulevan
- * laattakerroksen) puhtaat laskimet: näkyvän alueen rajaus, laattakatto,
- * tason valinta, laattaruudukko, Millerin UV, verkon puskurit ja levon
- * ajoitus. Ne eivät koske kirjastoon, DOMiin eivätkä pallon tilaan, joten
- * ne ovat yksin testattavia (tests/pallolepokerros.test.mjs) ja E1 voi
- * rakentaa niiden päälle itse kerroksen — kerroksen elinkaari
+ * Moduulin alkuosa (erä E0) on pallon lepokerroksen puhtaat laskimet:
+ * näkyvän alueen rajaus, laattakatto, tason valinta, laattaruudukko,
+ * Millerin UV, verkon puskurit ja levon ajoitus. Ne eivät koske
+ * kirjastoon, DOMiin eivätkä pallon tilaan, joten ne ovat yksin
+ * testattavia (tests/pallolepokerros.test.mjs) — lepokerroksen elinkaari
  * (luoLepokerros) ja laatunosto (kytkeLaatunosto) ovat yhä js/pallo.js:ssä,
  * joka tuo ja vie nämä nimet edelleen.
  *
- * Erä E0 suunnitelmasta docs/moduulit/pallon-liike-taydella-tarkkuudella.md
- * (luvut 4 ja 6): mekaaninen siirto js/pallo.js:stä, sanatarkasti.
+ * Moduulin loppuosa (erä E1) on itse LAATTAKERROS: pyramidin laatat
+ * laatta kerrallaan pallon pinnalle, taso hystereesillä ruudun
+ * pikseleistä, ristihäive ja LRU-kiintiö — sama tarkkuus liikkeessä kuin
+ * levossa. Ks. luoLaattakerros ja sen otsikko alempana.
  *
- * MODUULI EI TUO MITÄÄN. Siksi kaksi laatunoston vakiota, joita nämä
- * apurit tarvitsevat (LAATU_LEPOVIIVE_MS, LAATU_KAUKORAJA), muuttivat
- * mukana: js/pallo.js tuo ne täältä takaisin. Toisin päin tuonti tekisi
- * kehän, jossa LEPOKERROS_KORKEUSRAJA jäisi alustamatta.
+ * Erät E0 ja E1 suunnitelmasta
+ * docs/moduulit/pallon-liike-taydella-tarkkuudella.md (luvut 4 ja 6).
+ *
+ * MODUULI EI TUO js/pallo.js:ÄÄ. Siksi kaksi laatunoston vakiota, joita
+ * nämä apurit tarvitsevat (LAATU_LEPOVIIVE_MS, LAATU_KAUKORAJA), muuttivat
+ * mukana E0:ssa: js/pallo.js tuo ne täältä takaisin. Toisin päin tuonti
+ * tekisi kehän, jossa LEPOKERROS_KORKEUSRAJA jäisi alustamatta — samasta
+ * syystä kerros saa kirjaston luokat, pallon laattaluettelon ja laudan
+ * tunnuksen kutsujalta (luoLaattakerros-parametrit) eikä tuo niitä.
+ * Laattapyramidi ja projektio ovat oma asiansa: ne EIVÄT tuo palloa,
+ * joten ne tuodaan tästä suoraan — sama ovi kuin tasokartalla.
  */
+import {
+  haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
+} from './laattapyramidi.js';
+import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 
 /** Kuinka kauan kameran on oltava paikallaan ennen lepolaatua (ms). */
 export const LAATU_LEPOVIIVE_MS = 260;
@@ -362,3 +374,825 @@ export function luoLepokerroksenAjoitus({
  * tarvitsee ne lepokerroksen tekstuuriin, joten ne viedään erikseen.
  */
 export { THREE_CLAMP, THREE_LINEAR, THREE_LINEAR_MIPMAP_LINEAR };
+
+/*
+ * ======== LAATTAKERROS: SAMA TARKKUUS LIIKKEESSÄ KUIN LEVOSSA =======
+ *
+ * OMISTAJA 6.9.2026 ilta (Raamattu, PALLO LEVOSSA YHTA TERAVA KUIN
+ * TASOKARTTA › PALAUTE v1642:STA, LIIKKEEN AIKAINEN TARKKUUS,
+ * sanatarkasti): *"Saisiko tuota siirron aikaista matalampaa
+ * resoluutiota mitenkään parannettua? Siinä ei oikeastaan ole mikään
+ * muu häiritsevää kuin rannan ääriviiva, koska se kasvaa niin paljon
+ * paksummaksi."* ja LISÄYS: *"Google Earthissä myös sisäänpäin zoomaus
+ * näyttää portaattomalta."*
+ *
+ * MIKÄ TÄMÄ ON. Lepokerros on yksi kangas, joka kootaan levossa ja
+ * poistetaan liikkeen alkaessa. Laattakerros on sama tekniikka LAATTA
+ * KERRALLAAN ja PYSYVÄNÄ: pyramidin laatat (pohja + viiva + nosto
+ * samassa järjestyksessä kuin tasokartalla) piirretään pallon pinnalle
+ * yksi verkko per laatta, taso valitaan ruudun pikseleistä hystereesillä,
+ * uudet laatat häipyvät vanhojen päälle ja vanhat pysyvät kunnes uudet
+ * peittävät ne. Mitään ei pureta kerralla, joten liikkeessä ja levossa
+ * näkyy sama kartta — se, jonka ruutu tarvitsee.
+ *
+ * KIRJASTON MOOTTORI JÄÄ POHJAKSI (js/pallo.js POHJAN_TASO_MAX): se
+ * naulataan tasoon 5 ja näkyy vain napojen yli (pyramidin rajaus
+ * 84° N…66° S) ja sen ajan, kun kerroksen laatta ei ole vielä saapunut.
+ * Kynnyksiä ja pikselisuhdetta ei enää vaihdeta liikkeen mukaan.
+ *
+ * PIIRTOJÄRJESTYS on lepokerroksen (ks. PIIRTOJÄRJESTYS js/pallo.js:ssä):
+ * kerros on TÄSMÄLLEEN pinnan säteellä (LEPOKERROS_KOROTUS 1, ei
+ * suurennosta eli ei hyppyä) ja järjestys pohjaa vasten tulee
+ * syvyyssiirrosta (LAATTAKERROS_SYVYYSSIIRTO −8, factor 0). Kerroksen
+ * omat tasot erottaa toisistaan jänteen painuma: hienomman laatan verkko
+ * on lähempänä kameraa kuin karkeamman, joten se voittaa syvyystestin
+ * ilman omaa siirtoa, ja renderOrder (LAATTAKERROS_RENDER_ORDER_POHJA +
+ * z) piirtää karkeat ensin.
+ *
+ * HÄIVE VAIN PEITON PÄÄLLE (v1641:n oppi: kaksi karttaa päällekkäin on
+ * röpelöä). Sisään häivytetään aina — uusi laatta tulee vanhan tai
+ * pohjan päälle, jotka peittävät sen alla olevan kokonaan. Ulos
+ * häivytetään VAIN, kun karkeampi valmis laatta on jo sen alla; jos
+ * hienommat laatat peittävät alueen kokonaan, ylimääräinen poistetaan
+ * heti (se ei näy), ja jos mikään ei peitä, se pidetään.
+ */
+/** Tason valinta: laatan pikseli ≥ laitepikseli × tämä (1 = ei venytystä). */
+export const LAATTAKERROS_TERAVYYS = 1;
+/**
+ * Hystereesi: nykyisestä tasosta luovutaan vasta, kun sen venytys
+ * ylittää 1/0,7 = 1,43. Ilman tätä ruudun tarve heilahtaisi tason
+ * rajalla edestakaisin (mitattu v1645: zoomissa 2–4 edestakaista
+ * vaihtoa kahdeksassa sekunnissa).
+ */
+export const LAATTAKERROS_HYSTEREESI_ALAS = 0.7;
+/** Näytepisteitä ruudulla sivua kohti (9 × 9 = 81 laskettua osumaa). */
+export const LAATTAKERROS_NAYTTEITA = 9;
+/** Reunus näkyvän alueen ympärille: vähintään näin monta astetta… */
+export const LAATTAKERROS_VARA_AST = 0.5;
+/** …ja vähintään tämä osuus laatikon suuremmasta sivusta (liikkeen vara). */
+export const LAATTAKERROS_VARA_OSUUS = 0.03;
+/** Näkyviä laattoja enintään: tätä isompi määrä pudottaa tason karkeammaksi. */
+export const LAATTAKERROS_LAATTAKATTO_NAKYVA = 48;
+/** Valmiita mutta näkymättömiä laattoja muistissa enintään (LRU). */
+export const LAATTAKERROS_LAATTAKATTO_MUISTI = 24;
+/** Tekstuurimuistin kiintiö: LRU purkaa, kunnes alitetaan (96 Mt). */
+export const LAATTAKERROS_LAATTAKATTO_TAVUT = 96 * 1048576;
+/** Rinnakkaisia laattalatauksia enintään. */
+export const LAATTAKERROS_RINNAKKAIN = 6;
+/** Tekstuureja näytönohjaimelle kehystä kohti (vienti ei saa ryöpytä). */
+export const LAATTAKERROS_TEKSTUUREJA_PER_KEHYS = 2;
+/** Häive sisään ja ulos (ms). Reduced motion: 0. */
+export const LAATTAKERROS_HAIVE_MS = 260;
+/** Kerros päivittyy liikkeessä enintään 10 kertaa sekunnissa. */
+export const LAATTAKERROS_PAIVITYSVALI_LIIKE_MS = 100;
+/** Verkon silmiä laatan sivulla vähintään / enintään. */
+export const LAATTAKERROS_SILMAT_MIN = 16;
+export const LAATTAKERROS_SILMAT_MAX = 160;
+/** polygonOffsetUnits: syvyyspuskurin askelta kameraa kohti (negatiivinen). */
+export const LAATTAKERROS_SYVYYSSIIRTO = -8;
+/** renderOrder = tämä + z: karkeat tasot ensin, kaikki läpinäkyvien alkuun. */
+export const LAATTAKERROS_RENDER_ORDER_POHJA = -10;
+/** Onko kerros oletuksena päällä (?laattakerros=0 sammuttaa). */
+export const LAATTAKERROS_OLETUS = true;
+/** Laatan sivu pikseleinä, kun pyramidin luettelo ei kerro muuta. */
+export const LAATTAKERROS_LAATTA = 512;
+
+/**
+ * Tason valinta hystereesillä. `nykyinen` on nykyinen taso (olio tai z)
+ * tai null.
+ *
+ * Kaksi ehtoa, ei yhtä: nykyisestä pidetään kiinni vain, jos se on
+ * (a) riittävän terävä (leveys/360 ≥ tarve × HYSTEREESI_ALAS) JA
+ * (b) korkeintaan yhtä hieno kuin tarve vaatii. Pelkkä (a) jättäisi
+ * ulos zoomatessa hienon tason ikuisesti voimaan — se täyttää ehdon
+ * aina — ja näkyvä alue kasvaisi satoihin laattoihin.
+ */
+export function laattakerroksenTaso(tasot, tarvePxAste, nykyinen = null, {
+  teravyys = LAATTAKERROS_TERAVYYS, hystereesi = LAATTAKERROS_HYSTEREESI_ALAS,
+} = {}) {
+  const tarve = lepokerroksenTaso(tasot, tarvePxAste, teravyys);
+  if (!tarve) return null;
+  const z = Number.isFinite(nykyinen?.z) ? nykyinen.z : nykyinen;
+  const nyt = (tasot ?? []).find((t) => t && t.z === z && t.leveys > 0) ?? null;
+  if (!nyt || nyt.z > tarve.z) return tarve;
+  return nyt.leveys / 360 >= tarvePxAste * hystereesi ? nyt : tarve;
+}
+
+/*
+ * NÄYTTEET LASKETAAN, EI SÄTEENJÄLJITETÄ (mitattu 6.9.2026). Lepokerros
+ * kysyi näkyvän alueen kirjastolta (`toGlobeCoords`) kerran levossa;
+ * laattakerros tarvitsee sen kymmenen kertaa sekunnissa, eikä kirjaston
+ * säteenjäljitys kestä sitä: 81 kutsua maksoi puhelinnäkymässä
+ * **444 ms** (Chromium, ei hidastusta), koska jokainen kutsu testaa
+ * pallon kaikki laattaverkot — mittausnäkymässä 47 000 kolmiota, siis
+ * 3,8 miljoonaa kolmiotestiä päivitystä kohti.
+ *
+ * Sama vastaus saadaan kahdella rivillä geometriaa: kamera on
+ * TÄSMÄLLEEN säteellä R(1 + korkeus) suunnassa (lat, lng), sillä ei ole
+ * kallistusta (OrbitControls, ylös = +Y), ja pallo on origokeskinen —
+ * ruudun pisteen säde leikkaa pallon toisen asteen yhtälöllä. Mitattu
+ * ero säteenjäljitykseen samassa näkymässä (Ateena, korkeus 0,35,
+ * 374 × 771): laatikon reunat 0,03–0,05° kohdallaan, hinta alle 0,1 ms.
+ *
+ * @param {object} pov   { lat, lng, altitude }
+ * @param {number} sx    ruudun x normalisoituna −1…1 (oikealle)
+ * @param {number} sy    ruudun y normalisoituna −1…1 (YLÖS)
+ * @returns {{lat: number, lng: number}|null} null, jos säde ohittaa pallon
+ */
+export function laattakerroksenOsuma(pov, sx, sy, { fov = 50, kuvasuhde = 1, sade = 100 } = {}) {
+  if (!Number.isFinite(pov?.lat) || !Number.isFinite(pov?.lng) || !Number.isFinite(pov?.altitude)) return null;
+  const n = pallonPiste(pov.lat, pov.lng, 1);
+  /*
+   * Ruudun oikea (itä) ja ylös (pohjoinen) kameran kehyksessä. Oikea on
+   * r = ylös × n = (n.z, 0, −n.x) normalisoituna (y on nolla, koska
+   * maailman ylös on +Y), ja ylös on u = n × r. Navalla r on
+   * määrittelemätön; siellä kelpaa mikä tahansa suunta.
+   */
+  let rx = n.z;
+  let rz = -n.x;
+  const rl = Math.hypot(rx, rz);
+  if (rl < 1e-9) { rx = 1; rz = 0; } else { rx /= rl; rz /= rl; }
+  const ux = n.y * rz;
+  const uy = n.z * rx - n.x * rz;
+  const uz = -n.y * rx;
+  const tanY = Math.tan((fov / 2) * RAD);
+  const tanX = tanY * kuvasuhde;
+  let dx = -n.x + rx * sx * tanX + ux * sy * tanY;
+  let dy = -n.y + uy * sy * tanY;
+  let dz = -n.z + rz * sx * tanX + uz * sy * tanY;
+  const dl = Math.hypot(dx, dy, dz);
+  if (!(dl > 0)) return null;
+  dx /= dl; dy /= dl; dz /= dl;
+  const etaisyys = sade * (1 + pov.altitude);
+  const cx = n.x * etaisyys;
+  const cy = n.y * etaisyys;
+  const cz = n.z * etaisyys;
+  const b = 2 * (cx * dx + cy * dy + cz * dz);
+  const c = etaisyys * etaisyys - sade * sade;
+  const disc = b * b - 4 * c;
+  if (disc < 0) return null;
+  const t = (-b - Math.sqrt(disc)) / 2;
+  if (!(t > 0)) return null;
+  const px = cx + t * dx;
+  const py = cy + t * dy;
+  const pz = cz + t * dz;
+  return {
+    lat: Math.asin(Math.max(-1, Math.min(1, py / sade))) / RAD,
+    lng: Math.atan2(px, pz) / RAD,
+  };
+}
+
+/**
+ * Onko laatta pallon NÄKYVÄLLÄ puolella? Näkyvä alue on kalotti, jonka
+ * reunalla pinnan normaalin ja kameran suunnan pistetulo on R/d =
+ * 1/(1 + korkeus). Testi on kalottien leikkaus: laatan keskipisteen
+ * kulmaetäisyys kameran alta saa olla enintään horisontti + laatan oma
+ * kulmasäde, joten osittainkin näkyvä laatta jää mukaan.
+ *
+ * Miksi tämä tarvitaan: näkyvä alue on lat/lon-LAATIKKO, ja yleiskuvassa
+ * laatikon kulmat ovat pallon takapuolella. Ilman testiä kerros loisi
+ * takapuolen laatat (kirjaston moottorilla niitä oli mitattuna 45–139)
+ * ja laattakatto pudottaisi tasoa turhaan — mitattu 6.9.2026: zoomissa
+ * taso KARKENI kesken sisäänzoomauksen (3 → 2), kun laatikko kasvoi
+ * nopeammin kuin taso tarkentui.
+ *
+ * @param {object} alue    laatan { lat0, lat1, lon0, lon1 }
+ * @param {object} pov     { lat, lng, altitude }
+ */
+export function laattakerroksenNakyvissa(alue, pov) {
+  if (!alue || !Number.isFinite(pov?.altitude)) return true;
+  const n = pallonPiste(pov.lat, pov.lng, 1);
+  const latK = (alue.lat0 + alue.lat1) / 2;
+  const lonK = (alue.lon0 + alue.lon1) / 2;
+  const c = pallonPiste(latK, lonK, 1);
+  const nurkka = pallonPiste(alue.lat1, alue.lon1, 1);
+  const pistetulo = (a, b) => Math.max(-1, Math.min(1, a.x * b.x + a.y * b.y + a.z * b.z));
+  const sade = Math.acos(pistetulo(c, nurkka));
+  const horisontti = Math.acos(Math.max(-1, Math.min(1, 1 / (1 + Math.max(0, pov.altitude)))));
+  return Math.acos(pistetulo(c, n)) <= horisontti + sade;
+}
+
+/** Verkon silmien määrä laatan sivun asteista (LEPOKERROS_RUUDUKKO_AST). */
+export function laattakerroksenSilmat(asteet) {
+  return Math.max(LAATTAKERROS_SILMAT_MIN, Math.min(LAATTAKERROS_SILMAT_MAX,
+    Math.ceil(Math.abs(asteet) / LEPOKERROS_RUUDUKKO_AST)));
+}
+
+/**
+ * Yhden laatan "kartta": sama muoto kuin lepokerroksenLaatat, mutta
+ * kansX0/kansY0 tulevat laatan omasta pikselipaikasta. Kerros ei kokoa
+ * yhtä kangasta vaan piirtää laatan omaksi tekstuurikseen, joten UV
+ * (lepokerroksenUV) juoksee laatan sisällä 0…1 ja sauma katoaa: laatta
+ * asetetaan omalle pituuspiirilleen, ja pallo on jaksollinen.
+ */
+export function laatanKartta(taso, sarake, rivi, {
+  laatta = LAATTAKERROS_LAATTA, arkki = null, projektio = null, laudanY = null,
+} = {}) {
+  if (!taso || !(laatta > 0)) return null;
+  if (!(sarake >= 0 && rivi >= 0 && sarake < taso.sarakkeita && rivi < taso.riveja)) return null;
+  const w = Math.min(laatta, taso.leveys - sarake * laatta);
+  const h = Math.min(laatta, taso.korkeus - rivi * laatta);
+  if (!(w > 0 && h > 0)) return null;
+  return {
+    kansX0: sarake * laatta, kansY0: rivi * laatta, leveys: w, korkeus: h,
+    laatat: [{ sarake, rivi, x: 0, y: 0, w, h }],
+    ppu: taso.pikseliaPerYksikko, arkki, projektio, laudanY,
+  };
+}
+
+/**
+ * Peittotesti: peittävätkö tason z + 1 (tai `kohdeZ`) valmiit laatat
+ * laatan `{ z, sarake, rivi }` alueen kokonaan? Millerin pyramidissa
+ * tasot eivät sisäkkäisty siististi 2 × 2:na (sarakkeita on
+ * 675 · 2^z / 512, ei potenssia kahdesta), joten alue projisoidaan
+ * pikseleinä ja osuvat laatat luetellaan. Rajauksen ulkopuolelle jäävät
+ * sarakkeet ja rivit eivät ole peiton este — niitä ei ole olemassa.
+ *
+ * @param {object} laatta  { z, sarake, rivi }
+ * @param {Set|object} valmiit  avaimet 'z/sarake/rivi', jotka ovat valmiita
+ * @param {Array} tasot    pyramidin tasot
+ */
+export function laattakerroksenPeitto(laatta, valmiit, tasot, {
+  laattaKoko = LAATTAKERROS_LAATTA, kohdeZ = null,
+} = {}) {
+  const nyt = (tasot ?? []).find((t) => t && t.z === laatta?.z) ?? null;
+  const kohde = (tasot ?? []).find((t) => t && t.z === (kohdeZ ?? (laatta?.z ?? 0) + 1)) ?? null;
+  if (!nyt || !kohde || kohde.z <= nyt.z) return false;
+  const s = kohde.leveys / nyt.leveys;
+  const x0 = laatta.sarake * laattaKoko;
+  const x1 = Math.min(nyt.leveys, x0 + laattaKoko);
+  const y0 = laatta.rivi * laattaKoko;
+  const y1 = Math.min(nyt.korkeus, y0 + laattaKoko);
+  if (!(x1 > x0 && y1 > y0)) return false;
+  const on = valmiit instanceof Set ? (a) => valmiit.has(a) : (a) => Boolean(valmiit?.[a]);
+  const s0 = Math.floor((x0 * s) / laattaKoko);
+  const s1 = Math.ceil((x1 * s) / laattaKoko) - 1;
+  const r0 = Math.floor((y0 * s) / laattaKoko);
+  const r1 = Math.ceil((y1 * s) / laattaKoko) - 1;
+  for (let r = r0; r <= r1; r += 1) {
+    if (r < 0 || r >= kohde.riveja) continue;
+    for (let sar = s0; sar <= s1; sar += 1) {
+      if (sar < 0 || sar >= kohde.sarakkeita) continue;
+      if (!on(`${kohde.z}/${sar}/${r}`)) return false;
+    }
+  }
+  return true;
+}
+
+/**
+ * LRU: mitkä tietueet puretaan? Näkyviä ei pureta koskaan. Muista
+ * pidetään enintään `katto` tuoreinta, ja jos tekstuurimuisti ylittää
+ * `tavukatto`n, puretaan vanhimmasta alkaen kunnes alitetaan.
+ *
+ * @param {Array} tietueet  [{ avain, nakyva, kaytetty, tavut }]
+ * @returns {string[]} purettavien avaimet purkujärjestyksessä
+ */
+export function laattakerroksenLRU(tietueet, katto = LAATTAKERROS_LAATTAKATTO_MUISTI,
+  tavukatto = LAATTAKERROS_LAATTAKATTO_TAVUT) {
+  const kaikki = [...(tietueet ?? [])].filter(Boolean);
+  const ehdokkaat = kaikki.filter((t) => !t.nakyva).sort((a, b) => (a.kaytetty ?? 0) - (b.kaytetty ?? 0));
+  const ulos = [];
+  const purettu = new Set();
+  const yli = Math.max(0, ehdokkaat.length - Math.max(0, katto));
+  for (let i = 0; i < yli; i += 1) { ulos.push(ehdokkaat[i].avain); purettu.add(ehdokkaat[i].avain); }
+  let tavuja = kaikki.reduce((s, t) => s + (purettu.has(t.avain) ? 0 : (t.tavut ?? 0)), 0);
+  for (const t of ehdokkaat) {
+    if (tavuja <= tavukatto) break;
+    if (purettu.has(t.avain)) continue;
+    ulos.push(t.avain);
+    purettu.add(t.avain);
+    tavuja -= t.tavut ?? 0;
+  }
+  return ulos;
+}
+
+/**
+ * Laattakerroksen elinkaari yhdelle pallolle. Kutsutaan laatunoston
+ * asennuksesta (js/pallo.js kytkeLaatunosto), kun kerros on päällä.
+ *
+ * Kirjaston luokat, pallon laattaluettelo ja laudan tunnus TUODAAN
+ * SISÄÄN (kolmiulotteinen, pallonSarja, lauta, naparaja): ne asuvat
+ * js/pallo.js:ssä, joka tuo tämän moduulin — tuonti toisin päin tekisi
+ * kehän, jossa moduulin vakiot jäisivät alustamatta (ks. otsikko).
+ *
+ * @returns {{ paivita(pov, liikkeessa): boolean, mittarit(): object, pura(): void }}
+ */
+export function luoLaattakerros({
+  pallo, kotelo, ikkuna, renderer,
+  kolmiulotteinen, pallonSarja = () => null, lauta = 'maailmankartta', naparaja = 90,
+}) {
+  const doc = kotelo?.ownerDocument ?? ikkuna?.document ?? null;
+  const aika = () => ikkuna.performance?.now?.() ?? Date.now();
+  const reduced = () => Boolean(ikkuna.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
+  const mittarit = {
+    tila: 'ei', taso: null, laattoja: 0, valmiita: 0, hapyvia: 0, pyyntoja: 0, pyydettyja: 0,
+    syy: '', kaytetytTavut: 0, jonossa: 0, scenessa: 0, purettuja: 0, paivityksia: 0,
+    /** Haettiinko pyramidi.json tästä (savukkeet laskevat sen kerroksen pyynnöksi). */
+    luettelo: false,
+    /** Lepokerroksen kenttä; kerros ei kokoa yhtä kangasta (savukkeiden tuloste). */
+    kangas: null,
+  };
+  const pyydetyt = new Set();
+  /** avain 'z/sarake/rivi' → tietue. */
+  const laatat = new Map();
+  const jono = [];
+  const vientijono = [];
+  let ladattavia = 0;
+  let vientiRaf = 0;
+  let taso = null;
+  let pyramidi;
+  let pyramidiHaussa = false;
+  let kerrokset = null;
+  let sukupolvi = 0;
+  let viimePaivitys = -Infinity;
+  let purettu = false;
+
+  /*
+   * Kirjaston luokat ja pallon ryhmä haetaan scenestä KERRAN. Haku
+   * traversoi koko näyttämön, ja kerros päivittyy kymmenen kertaa
+   * sekunnissa — muistiin pantuna se on yksi haku per pallo.
+   */
+  let kolmiMuisti = null;
+  const kolmi = () => {
+    if (kolmiMuisti) return kolmiMuisti;
+    const k = kolmiulotteinen?.(pallo) ?? null;
+    if (k?.laatatValmiit && k.Texture && k.BufferGeometry && k.BufferAttribute && k.juuri) kolmiMuisti = k;
+    return k;
+  };
+
+  const laudanY = (lat) => projisoiLaudalle(lauta, 0, lat)?.y ?? NaN;
+  const yLat = (y) => laudaltaAsteiksi(lauta, 0, y)?.lat ?? NaN;
+  const tasoZ = (z) => (pyramidi?.tasot ?? []).find((t) => t.z === z) ?? null;
+  const laattaKoko = () => pyramidi?.laatta ?? LAATTAKERROS_LAATTA;
+  const luovuta = (syy) => { mittarit.syy = syy; return false; };
+
+  /* ---------------- kuvat ---------------- */
+
+  /**
+   * Laatan kuva: createImageBitmap (dekoodaus pääsäikeen ulkopuolella).
+   * Vara on tavallinen Image + decode(), jos selain ei tunne bittikarttaa
+   * tai haku kaatuu. CORS on pakko: kangas menee WebGL-tekstuuriksi.
+   */
+  const haeKuva = async (url, merkki = null) => {
+    pyydetyt.add(url);
+    mittarit.pyyntoja += 1;
+    if (ikkuna.createImageBitmap && ikkuna.fetch) {
+      try {
+        const vastaus = await ikkuna.fetch(url, { mode: 'cors', credentials: 'omit', signal: merkki ?? undefined });
+        if (!vastaus.ok) return null;
+        return await ikkuna.createImageBitmap(await vastaus.blob());
+      } catch { /* vara alla */ }
+    }
+    // Katkaistu lataus (laatta purettiin kesken haun) ei mene varapolulle:
+    // se ottaisi latauspaikan takaisin siltä laatalta, jota katsotaan.
+    if (merkki?.aborted) return null;
+    // Varapolku on OMA verkkopyyntönsä (haku kaatui): savukkeiden vartio
+    // vähentää kerroksen pyynnöt tasokartan pyynnöistä, joten molemmat
+    // lasketaan.
+    mittarit.pyyntoja += 1;
+    return new Promise((ok) => {
+      const kuva = new ikkuna.Image();
+      kuva.crossOrigin = 'anonymous';
+      kuva.decoding = 'async';
+      kuva.fetchPriority = 'high';
+      kuva.onload = () => (kuva.decode ? kuva.decode().then(() => ok(kuva), () => ok(kuva)) : ok(kuva));
+      kuva.onerror = () => ok(null);
+      kuva.src = url;
+    });
+  };
+
+  const luoKangas = (w, h) => {
+    if (ikkuna.OffscreenCanvas) {
+      try { return new ikkuna.OffscreenCanvas(w, h); } catch { /* vara alla */ }
+    }
+    const kangas = doc?.createElement?.('canvas');
+    if (!kangas) return null;
+    kangas.width = w;
+    kangas.height = h;
+    return kangas;
+  };
+
+  /* ---------------- häive ---------------- */
+
+  const haivyta = (materiaali, kohde, kesto, valmis = null) => {
+    const alku = materiaali.opacity;
+    materiaali.__kohde = kohde;
+    // Valmis laatta on läpinäkymätön (nopeampi ja kirjoittaa syvyyden);
+    // ulos-häive tarvitsee läpinäkyvyyden takaisin, muuten opacity ei
+    // vaikuta mihinkään.
+    if (kohde < 1 && !materiaali.transparent) { materiaali.transparent = true; materiaali.needsUpdate = true; }
+    const paata = () => {
+      materiaali.opacity = kohde;
+      if (kohde >= 1 && materiaali.transparent) { materiaali.transparent = false; materiaali.needsUpdate = true; }
+      valmis?.();
+    };
+    if (!(kesto > 0) || alku === kohde) { paata(); return; }
+    const t0 = aika();
+    const askel = () => {
+      if (materiaali.__haive !== askel) return;
+      const t = Math.min(1, (aika() - t0) / kesto);
+      const e = 1 - (1 - t) ** 3;
+      materiaali.opacity = alku + (kohde - alku) * e;
+      if (t < 1) { ikkuna.requestAnimationFrame(askel); return; }
+      materiaali.__haive = null;
+      paata();
+    };
+    materiaali.__haive = askel;
+    ikkuna.requestAnimationFrame(askel);
+  };
+
+  /* ---------------- tietueen purku ---------------- */
+
+  const poista = (t) => {
+    if (!t) return;
+    // Kesken oleva haku katkaistaan: purettu laatta ei saa pitää
+    // latauspaikkaa (LAATTAKERROS_RINNAKKAIN) sen laatan tieltä, jota
+    // juuri katsotaan.
+    try { t.katkaisin?.abort?.(); } catch { /* ei väliä */ }
+    t.katkaisin = null;
+    if (t.materiaali) t.materiaali.__haive = null;
+    if (t.verkko) {
+      t.verkko.parent?.remove(t.verkko);
+      t.verkko.geometry?.dispose?.();
+    }
+    t.tekstuuri?.dispose?.();
+    t.materiaali?.dispose?.();
+    t.verkko = null;
+    t.materiaali = null;
+    t.tekstuuri = null;
+    t.scenessa = false;
+    laatat.delete(t.avain);
+    mittarit.purettuja += 1;
+  };
+
+  /* ---------------- laatan luonti ---------------- */
+
+  /*
+   * Laatan lat/lon-suorakaide sen omista pikselirajoista. Rivin
+   * leveysasteet muistetaan: Millerin käänteismuunnos (laudaltaAsteiksi)
+   * ajetaan päivityksessä sadoille laattaehdokkaille, ja rivejä on
+   * kourallinen.
+   */
+  const rivimuisti = new Map();
+  const laatanAlue = (tasoOlio, sarake, rivi) => {
+    const { arkki, projektio } = pyramidi;
+    const koko = laattaKoko();
+    const ppu = tasoOlio.pikseliaPerYksikko;
+    const lonPx = (px) => ((px / ppu + arkki.x) / projektio.leveys) * 360 + projektio.lon0;
+    const latPx = (py) => {
+      const avain = `${tasoOlio.z}/${py}`;
+      let lat = rivimuisti.get(avain);
+      if (lat === undefined) { lat = yLat(py / ppu + arkki.y); rivimuisti.set(avain, lat); }
+      return lat;
+    };
+    const x0 = sarake * koko;
+    const y0 = rivi * koko;
+    const w = Math.min(koko, tasoOlio.leveys - x0);
+    const h = Math.min(koko, tasoOlio.korkeus - y0);
+    return {
+      lon0: lonPx(x0), lon1: lonPx(x0 + w),
+      lat1: latPx(y0), lat0: latPx(y0 + h),
+    };
+  };
+
+  const lataa = async (t) => {
+    const tasoOlio = tasoZ(t.z);
+    const luokat = kolmi();
+    if (!tasoOlio || !luokat?.laatatValmiit || !luokat.Texture || !luokat.BufferGeometry || !luokat.BufferAttribute) {
+      t.tila = 'virhe';
+      return;
+    }
+    const kartta = laatanKartta(tasoOlio, t.sarake, t.rivi, {
+      laatta: laattaKoko(), arkki: pyramidi.arkki, projektio: pyramidi.projektio, laudanY,
+    });
+    if (!kartta) { t.tila = 'virhe'; return; }
+    const kerrostasot = (pyramidinKerrostasot(t.z) ?? [])
+      .filter((k) => (k.nosto ? kerrokset.nosto : (k.viiva ? kerrokset.viiva : true)));
+    if (!kerrostasot.length) { t.tila = 'virhe'; return; }
+    const katkaisin = ikkuna.AbortController ? new ikkuna.AbortController() : null;
+    t.katkaisin = katkaisin;
+    const kuvat = await Promise.all(kerrostasot.map((k) => (pyramidinLaattaOlemassa(k, t.sarake, t.rivi)
+      ? haeKuva(pyramidinLaattaUrl(k, t.sarake, t.rivi), katkaisin?.signal ?? null) : null)));
+    t.katkaisin = null;
+    if (purettu || !laatat.has(t.avain)) { for (const k of kuvat) k?.close?.(); return; }
+    if (!kuvat.some(Boolean)) { t.tila = 'virhe'; return; }
+    const kangas = luoKangas(kartta.leveys, kartta.korkeus);
+    const ctx = kangas?.getContext?.('2d');
+    if (!ctx) { t.tila = 'virhe'; return; }
+    for (const kuva of kuvat) {
+      if (!kuva) continue;
+      ctx.drawImage(kuva, 0, 0, kartta.leveys, kartta.korkeus);
+      kuva.close?.();
+    }
+    // Verkko: laatan oma lat/lon-suorakaide, UV laatan omalla kankaalla.
+    const alue = laatanAlue(tasoOlio, t.sarake, t.rivi);
+    if (!Number.isFinite(alue.lat0) || !Number.isFinite(alue.lat1) || !(alue.lat1 > alue.lat0)) {
+      t.tila = 'virhe';
+      return;
+    }
+    const nx = laattakerroksenSilmat(alue.lon1 - alue.lon0);
+    const ny = laattakerroksenSilmat(alue.lat1 - alue.lat0);
+    const sade = pallo.getGlobeRadius() * LEPOKERROS_KOROTUS;
+    const puskurit = lepokerroksenVerkko({ alue, kartta, sade, nx, ny });
+    const geometria = new luokat.BufferGeometry();
+    geometria.setAttribute('position', new luokat.BufferAttribute(puskurit.paikat, 3));
+    geometria.setAttribute('normal', new luokat.BufferAttribute(puskurit.normaalit, 3));
+    geometria.setAttribute('uv', new luokat.BufferAttribute(puskurit.uvt, 2));
+    geometria.setIndex(puskurit.indeksit);
+    const tekstuuri = new luokat.Texture(kangas);
+    const malli = luokat.tekstuurimalli;
+    // Sama väriavaruus kuin laatoilla — muuten sävy hyppäisi kerroksen alla.
+    if (malli && 'colorSpace' in malli) tekstuuri.colorSpace = malli.colorSpace;
+    else if (malli && 'encoding' in malli) tekstuuri.encoding = malli.encoding;
+    const webgl2 = Boolean(renderer?.capabilities?.isWebGL2);
+    tekstuuri.generateMipmaps = webgl2;
+    tekstuuri.minFilter = webgl2 ? THREE_LINEAR_MIPMAP_LINEAR : THREE_LINEAR;
+    tekstuuri.magFilter = THREE_LINEAR;
+    tekstuuri.wrapS = THREE_CLAMP;
+    tekstuuri.wrapT = THREE_CLAMP;
+    tekstuuri.anisotropy = renderer?.capabilities?.getMaxAnisotropy?.() ?? 1;
+    tekstuuri.needsUpdate = true;
+    const materiaali = new luokat.LaattaMateriaali({
+      map: tekstuuri, transparent: true, opacity: 0, depthWrite: true,
+      polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: LAATTAKERROS_SYVYYSSIIRTO,
+    });
+    const verkko = new luokat.Mesh(geometria, materiaali);
+    verkko.renderOrder = LAATTAKERROS_RENDER_ORDER_POHJA + t.z;
+    // Kerros ei ota napautuksia: pelin merkit ja onGlobeClick kuten ennen.
+    verkko.raycast = () => {};
+    verkko.userData.laattakerros = { z: t.z, sarake: t.sarake, rivi: t.rivi };
+    t.alue = alue;
+    t.tekstuuri = tekstuuri;
+    t.materiaali = materiaali;
+    t.verkko = verkko;
+    t.silmat = [nx, ny];
+    t.tavut = Math.round(kartta.leveys * kartta.korkeus * 4 * (webgl2 ? 4 / 3 : 1));
+    t.tila = 'valmis';
+    vientijono.push(t);
+    ajaVienti();
+  };
+
+  /* ---------------- latausjono ---------------- */
+
+  const kaynnista = () => {
+    if (purettu) return;
+    jono.sort((a, b) => a.etaisyys - b.etaisyys);
+    while (ladattavia < LAATTAKERROS_RINNAKKAIN && jono.length) {
+      const t = jono.shift();
+      if (!laatat.has(t.avain) || t.tila !== 'ladataan' || t.aloitettu) continue;
+      t.aloitettu = true;
+      ladattavia += 1;
+      lataa(t)
+        .catch((syy) => { t.tila = 'virhe'; mittarit.syy = String(syy?.message ?? syy); })
+        .then(() => { ladattavia -= 1; kaynnista(); });
+    }
+    mittarit.jonossa = jono.length;
+  };
+
+  /* ---------------- tekstuurien vienti (≤ 2 / kehys) ---------------- */
+
+  const ajaVienti = () => {
+    if (purettu || vientiRaf || !vientijono.length) return;
+    vientiRaf = ikkuna.requestAnimationFrame(() => {
+      vientiRaf = 0;
+      let n = 0;
+      while (vientijono.length && n < LAATTAKERROS_TEKSTUUREJA_PER_KEHYS) {
+        const t = vientijono.shift();
+        if (!laatat.has(t.avain) || !t.tekstuuri) continue;
+        renderer?.initTexture?.(t.tekstuuri);
+        t.viety = true;
+        n += 1;
+        // Vanhentunut tietue (sukupolvi vaihtui eikä laatta ole enää
+        // näkyvissä) ei mene sceneen; lataus itse ei koskaan peruunnu.
+        if (t.nakyva) lisaaSceneen(t);
+      }
+      if (vientijono.length) ajaVienti();
+    });
+  };
+
+  /* ---------------- scene ---------------- */
+
+  const lisaaSceneen = (t) => {
+    if (!t.verkko || t.scenessa) return;
+    const juuri = kolmi()?.juuri;
+    if (!juuri) return;
+    juuri.add(t.verkko);
+    t.scenessa = true;
+    haivyta(t.materiaali, 1, reduced() ? 0 : LAATTAKERROS_HAIVE_MS);
+  };
+
+  /**
+   * Onko ylimääräisen laatan alla valmis karkeampi laatta? Vain silloin
+   * ulos-häive on turvallinen: alla on jo koko kartta, eikä kahta
+   * karttaa jää päällekkäin (v1641:n oppi).
+   */
+  const karkeampiValmis = (t, valittu, valmiit) => {
+    if (!(valittu.z < t.z)) return false;
+    const oma = tasoZ(t.z);
+    if (!oma) return false;
+    const koko = laattaKoko();
+    const s = valittu.leveys / oma.leveys;
+    const sar = Math.floor(((t.sarake + 0.5) * koko * s) / koko);
+    const rivi = Math.floor(((t.rivi + 0.5) * koko * s) / koko);
+    return valmiit.has(`${valittu.z}/${sar}/${rivi}`);
+  };
+
+  /* ---------------- päivitys ---------------- */
+
+  const varmistaPyramidi = () => {
+    if (pyramidi !== undefined || pyramidiHaussa) return;
+    pyramidiHaussa = true;
+    mittarit.luettelo = true;
+    haePyramidinLuettelo()
+      .then((p) => { pyramidi = p ?? null; })
+      .catch(() => { pyramidi = null; })
+      .then(() => { if (!purettu) suorita(); });
+  };
+
+  function suorita() {
+    if (purettu) return false;
+    const luokat = kolmi();
+    if (!luokat?.laatatValmiit || !luokat.Texture || !luokat.BufferGeometry || !luokat.BufferAttribute) {
+      return luovuta('kirjaston luokat puuttuvat');
+    }
+    varmistaPyramidi();
+    if (pyramidi === undefined) return luovuta('pyramidin luettelo haussa');
+    if (!pyramidi) return luovuta('pyramidin luetteloa ei saatu');
+    kerrokset = lepokerroksenKerrokset(pallonSarja(), pyramidi);
+    if (!kerrokset) return luovuta('pallon sarja ja pyramidi eri versiota');
+    const W = kotelo.clientWidth;
+    const H = kotelo.clientHeight;
+    if (!(W > 0 && H > 0)) return luovuta('kotelo piilossa');
+    const pov = pallo.pointOfView?.();
+    if (!pov || !Number.isFinite(pov.altitude)) return luovuta('ei kameraa');
+    const kam = pallo.camera?.();
+    const linssi = {
+      fov: Number.isFinite(kam?.fov) ? kam.fov : 50,
+      kuvasuhde: Number.isFinite(kam?.aspect) && kam.aspect > 0 ? kam.aspect : W / H,
+      sade: pallo.getGlobeRadius(),
+    };
+    const osuma = (x, y) => laattakerroksenOsuma(pov, (2 * x) / W - 1, 1 - (2 * y) / H, linssi);
+    const keski = osuma(W / 2, H / 2);
+    const alas = osuma(W / 2, H / 2 + LEPOKERROS_MITTAMATKA_PX);
+    if (!keski || !alas || !(Math.abs(keski.lat - alas.lat) > 1e-6)) return luovuta('keskipiste ei pallolla');
+    const naytteet = [];
+    const N = LAATTAKERROS_NAYTTEITA;
+    for (let j = 0; j < N; j += 1) {
+      for (let i = 0; i < N; i += 1) naytteet.push(osuma((W * i) / (N - 1), (H * j) / (N - 1)));
+    }
+    const rajaus = pyramidi.rajaus ?? pyramidi.arkki;
+    const latMax = Math.min(naparaja, yLat(rajaus.y));
+    const latMin = Math.max(-naparaja, yLat(rajaus.y + rajaus.h));
+    const raaka = lepokerroksenAlue(naytteet, pov.lng, { latMin, latMax, vara: 0 });
+    if (!raaka) return luovuta('ei näytteitä pallolla');
+    /*
+     * Vara on aina vähintään puoli astetta ja lisäksi 3 % laatikosta:
+     * reunan uudet laatat ehtivät saapua ennen kuin panorointi tuo ne
+     * näkyviin (suunnitelman luku 4.4, "reunan laatat saapuvat hitaasti").
+     */
+    const vara = Math.max(LAATTAKERROS_VARA_AST,
+      LAATTAKERROS_VARA_OSUUS * Math.max(raaka.lat1 - raaka.lat0, raaka.lon1 - raaka.lon0));
+    const alue = lepokerroksenAlue(naytteet, pov.lng, { latMin, latMax, vara }) ?? raaka;
+    // Ruudun tarve: laitepikseleitä astetta kohti keskellä (fov on pystykulma).
+    const suhde = renderer?.getPixelRatio?.() ?? (ikkuna.devicePixelRatio || 1);
+    const tarvePxAste = (LEPOKERROS_MITTAMATKA_PX * suhde) / Math.abs(keski.lat - alas.lat);
+    let valittu = laattakerroksenTaso(pyramidi.tasot, tarvePxAste, taso);
+    let kartta = null;
+    let nakyvatLaatat = null;
+    while (valittu) {
+      kartta = lepokerroksenLaatat({
+        taso: valittu, laatta: laattaKoko(), arkki: pyramidi.arkki,
+        projektio: pyramidi.projektio, alue, laudanY,
+      });
+      // Takapuoli pois ENNEN kattoa: laatikon kulmat ovat yleiskuvassa
+      // pallon toisella puolella eivätkä saa pudottaa tasoa.
+      nakyvatLaatat = kartta
+        ? kartta.laatat.filter((l) => laattakerroksenNakyvissa(laatanAlue(valittu, l.sarake, l.rivi), pov))
+        : null;
+      if (nakyvatLaatat?.length && nakyvatLaatat.length <= LAATTAKERROS_LAATTAKATTO_NAKYVA) break;
+      valittu = tasoZ(valittu.z - 1);
+      kartta = null;
+      nakyvatLaatat = null;
+    }
+    if (!valittu || !kartta) return luovuta('alue ei mahdu laattakattoon');
+    if (taso?.z !== valittu.z) sukupolvi += 1;
+    taso = valittu;
+    const nyt = aika();
+    const ppu = valittu.pikseliaPerYksikko;
+    const keskiX = (((keski.lng - pyramidi.projektio.lon0) / 360) * pyramidi.projektio.leveys - pyramidi.arkki.x) * ppu;
+    const keskiY = (laudanY(keski.lat) - pyramidi.arkki.y) * ppu;
+    const koko = laattaKoko();
+
+    /* 1. näkyvät laatat: tietue, latausjono ja sceneen lisäys. */
+    const nakyvat = new Set();
+    for (const l of nakyvatLaatat) {
+      const avain = `${valittu.z}/${l.sarake}/${l.rivi}`;
+      nakyvat.add(avain);
+      let t = laatat.get(avain);
+      if (!t) {
+        t = {
+          avain, z: valittu.z, sarake: l.sarake, rivi: l.rivi, alue: null, tila: 'ladataan',
+          verkko: null, materiaali: null, tekstuuri: null, kaytetty: nyt, tavut: 0,
+          nakyva: true, scenessa: false, viety: false, aloitettu: false, haipyy: false,
+          katkaisin: null, etaisyys: 0, sukupolvi,
+        };
+        laatat.set(avain, t);
+      }
+      // Etäisyys ruudun keskeltä laattapikseleinä (sauma kierretään auki).
+      let dx = (l.sarake + 0.5) * koko - keskiX;
+      while (dx > valittu.leveys / 2) dx -= valittu.leveys;
+      while (dx < -valittu.leveys / 2) dx += valittu.leveys;
+      t.etaisyys = Math.hypot(dx, (l.rivi + 0.5) * koko - keskiY);
+      t.kaytetty = nyt;
+      t.nakyva = true;
+      t.haipyy = false;
+      // Ulos häipymässä ollut laatta palasi näkyviin: käännetään häive
+      // takaisin. Sisään häipyvään ei kosketa — uudelleenaloitus joka
+      // päivityksellä (10 kertaa sekunnissa) ei koskaan päättyisi.
+      if (t.materiaali && t.materiaali.__kohde === 0) {
+        haivyta(t.materiaali, 1, reduced() ? 0 : LAATTAKERROS_HAIVE_MS);
+      }
+      if (t.tila === 'valmis' && t.viety && !t.scenessa) lisaaSceneen(t);
+    }
+    for (const t of laatat.values()) if (!nakyvat.has(t.avain)) t.nakyva = false;
+
+    /* 2. ylimääräiset: poista peiton alta, häivytä karkeamman päältä, muuten pidä. */
+    const valmiit = new Set();
+    for (const t of laatat.values()) {
+      if (t.tila === 'valmis' && t.scenessa && t.materiaali && t.materiaali.opacity >= 1) valmiit.add(t.avain);
+    }
+    for (const t of [...laatat.values()]) {
+      if (t.nakyva || !t.scenessa || t.haipyy) continue;
+      if (t.z < valittu.z && laattakerroksenPeitto(t, valmiit, pyramidi.tasot, {
+        laattaKoko: koko, kohdeZ: valittu.z,
+      })) { poista(t); continue; }
+      if (!karkeampiValmis(t, valittu, valmiit)) continue;
+      t.haipyy = true;
+      haivyta(t.materiaali, 0, reduced() ? 0 : LAATTAKERROS_HAIVE_MS, () => poista(t));
+    }
+
+    /* 3. LRU: näkymättömiä valmiita muistissa katon verran. */
+    for (const avain of laattakerroksenLRU([...laatat.values()])) {
+      const t = laatat.get(avain);
+      if (t && !t.haipyy) poista(t);
+    }
+
+    /*
+     * 4. Latausjono KOOTAAN JOKA PÄIVITYKSELLÄ näkyvistä lataamattomista,
+     * lähin ensin. Zoomatessa taso vaihtuu monta kertaa sekunnissa, ja
+     * kertaalleen jonoon jätetyt vanhentuneet tietueet veisivät kaistan
+     * laatoilta, joita ei enää katsota (mitattu: jono ei tyhjentynyt
+     * zoomin aikana lainkaan). Kesken oleva lataus jatkuu loppuun —
+     * liike ei peru latauksia, vain vanhentuneiden lisäyksen sceneen.
+     */
+    jono.length = 0;
+    for (const t of laatat.values()) {
+      if (t.nakyva && t.tila === 'ladataan' && !t.aloitettu) jono.push(t);
+    }
+
+    const tietueet = [...laatat.values()];
+    mittarit.tila = 'nakyy';
+    mittarit.taso = valittu.z;
+    mittarit.laattoja = tietueet.length;
+    mittarit.valmiita = tietueet.filter((t) => t.tila === 'valmis').length;
+    mittarit.hapyvia = tietueet.filter((t) => t.scenessa && t.materiaali && t.materiaali.opacity < 1).length;
+    mittarit.scenessa = tietueet.filter((t) => t.scenessa).length;
+    mittarit.kaytetytTavut = tietueet.reduce((s, t) => s + (t.tavut ?? 0), 0);
+    mittarit.pyydettyja = pyydetyt.size;
+    mittarit.paivityksia += 1;
+    mittarit.syy = '';
+    kaynnista();
+    return true;
+  }
+
+  const paivita = (pov, liikkeessa = false) => {
+    if (purettu) return false;
+    const nyt = aika();
+    if (liikkeessa && nyt - viimePaivitys < LAATTAKERROS_PAIVITYSVALI_LIIKE_MS) return false;
+    viimePaivitys = nyt;
+    return suorita();
+  };
+
+  return {
+    paivita,
+    /** Päivitä heti ilman harvennusta (savukkeet ja vartijat). */
+    kokoa: () => paivita(null, false),
+    /** Lepokerroksen rajapinta: kerros päivittyy, se ei kokoa eikä piiloudu. */
+    levossa: () => paivita(null, false),
+    piilota: () => false,
+    mittarit: () => ({ ...mittarit, pyydetyt: [...pyydetyt], nakyvissa: mittarit.scenessa > 0 }),
+    pura: () => {
+      purettu = true;
+      sukupolvi += 1;
+      if (vientiRaf) ikkuna.cancelAnimationFrame?.(vientiRaf);
+      vientiRaf = 0;
+      vientijono.length = 0;
+      jono.length = 0;
+      for (const t of [...laatat.values()]) poista(t);
+      laatat.clear();
+      mittarit.tila = 'purettu';
+      mittarit.laattoja = 0;
+      mittarit.scenessa = 0;
+    },
+  };
+}
