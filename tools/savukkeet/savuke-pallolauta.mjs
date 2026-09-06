@@ -65,6 +65,10 @@
  *      raportoidaan, montako (pallon laatoissa ei vielä nostotasoa).
  *  14. Karttaselite toimii pallolla: kappalemäärät > 0, väripallo
  *      sytyttää valot pistekerrokseen (laji valo) ja OFF sammuttaa.
+ *  16. MERKIT KORTIN ALLA (omistaja 6.9.2026 ilta, iPhone-kaappaus:
+ *      *"kaupunkien nimet näkyvät popup sivujen päällä"*): kohdekortin
+ *      sisus on pikselilleen sama merkkien kanssa ja ilman niitä, eli
+ *      yksikään pallon html-merkki ei piirry kortin päälle.
  *
  *   VAIHE 2, SIIRROT PALLOLLA (sama sivu):
  *   8. Liiku EI avaa linssikarttaa: pallo jää laudaksi, svg#board tyhjä;
@@ -414,6 +418,87 @@ if (AMPARI_TOIMII) {
     vaadi('    sulkeva napautus ei avaa mitään uutta (omistaja 31.8.2026)',
       !napautus.virhe && !napautus.auki2, JSON.stringify(napautus));
     await sivu.evaluate(() => { for (const e of document.querySelectorAll('.fokuskohde-popup, .skandaali-kerros, .hetki-kerros, .fokusnosto-kerros, .syvennys-kerros')) e.remove(); });
+
+    /*
+     * ── 16. MERKIT KORTIN ALLA (omistaja 6.9.2026 ilta) ──────────────
+     *
+     * Sanatarkasti (iPhone-kaappaus): *"kaupunkien nimet näkyvät popup
+     * sivujen päällä"* — SOFIA ja DUBROVNIK piirtyivät Kreikan
+     * kohdekortin otsikon ja sulkunapin päälle. Syy oli Globe.gl:n
+     * CSS2D-renderöijässä: se kirjoittaa jokaiselle merkille oman
+     * z-indexin (1…N), eikä yksikään pallon esivanhemmista ollut
+     * pinontakonteksti, joten luvut kilpailivat karttaruudun pinossa
+     * kortin (z-index 6) kanssa. Korjaus on kuoren isolation (css
+     * styles.css, osio PALLOLAUTA).
+     *
+     * Vartio on PIKSELITODISTUS eikä lukujen luenta: kortti avataan,
+     * kaapataan sen sisus, piilotetaan kaikki pallon html-merkit ja
+     * kaapataan uudelleen. Jos yksikään merkki piirtyisi kortin päälle,
+     * kuvat eroaisivat. Kortin sisus rajataan reunoista sisäänpäin,
+     * jottei pyöristetty kulma tai varjo tuo kaappaukseen pallon
+     * elävää laattakarttaa.
+     */
+    const MERKKIEN_VALITSIN = '.pallolauta-nimi, .pallolauta-nosto, .pallolauta-piste,'
+      + ' .pallolauta-nappula, .pallolauta-kohde, .pallolauta-kone, .pallolauta-vesinimi,'
+      + ' .pallolauta-maanimi';
+    const pino = await sivu.evaluate(async (valitsin) => {
+      const { ui } = window.matkakirja;
+      // Kortti, jonka päälle merkkejä osuu: käydään elävät nostot läpi,
+      // kunnes limitys löytyy (näkymä ratkaisee, mikä kohde osuu).
+      for (const o of ui.pallolauta.nostot.osumat().filter((x) => x.perhe === 'nosto' && !x.poltettu)) {
+        ui.pallolauta.napautaNosto(o.id);
+        await new Promise((r) => setTimeout(r, 500));
+        const kortti = document.querySelector('.fokuskohde-popup');
+        if (kortti) {
+          const kr = kortti.getBoundingClientRect();
+          const limittyvat = [...document.querySelectorAll(valitsin)].filter((m) => {
+            const r = m.getBoundingClientRect();
+            return r.width > 0 && !(r.right < kr.left || r.left > kr.right
+              || r.bottom < kr.top || r.top > kr.bottom);
+          });
+          if (limittyvat.length) {
+            const kuori = document.querySelector('.pallo-kuori.pallolauta');
+            return {
+              id: o.id,
+              limittyvat: limittyvat.map((m) => m.textContent.trim() || m.className.split(' ')[0]),
+              isolaatio: getComputedStyle(kuori).isolation,
+              laatikko: { x: kr.x, y: kr.y, w: kr.width, h: kr.height },
+            };
+          }
+        }
+        for (const e of document.querySelectorAll('.fokuskohde-popup')) e.remove();
+        ui.fokuskohdeAuki = null;
+      }
+      return { virhe: 'yksikään kohdekortti ei jäänyt merkkien alle — vartio ei todista mitään' };
+    }, MERKKIEN_VALITSIN);
+    if (pino.virhe) vaadi('16. pallon merkit jäävät kohdekortin alle', false, pino.virhe);
+    else {
+      const reuna = 14; // pyöristetty kulma ja varjo pois rajauksesta
+      const rajaus = {
+        x: pino.laatikko.x + reuna,
+        y: pino.laatikko.y + reuna,
+        width: Math.max(1, pino.laatikko.w - 2 * reuna),
+        height: Math.max(1, pino.laatikko.h - 2 * reuna),
+      };
+      const merkkienKanssa = await sivu.screenshot({ clip: rajaus });
+      await sivu.addStyleTag({ content: `${MERKKIEN_VALITSIN.split(',').map((s) => s.trim()).join(',')} { display: none !important; }` });
+      await sivu.waitForTimeout(200);
+      const ilmanMerkkeja = await sivu.screenshot({ clip: rajaus });
+      vaadi('16. pallon merkit jäävät kohdekortin alle (kortin sisus pikselilleen sama merkkien kanssa ja ilman)',
+        merkkienKanssa.equals(ilmanMerkkeja) && pino.isolaatio === 'isolate',
+        JSON.stringify({ id: pino.id, limittyvat: pino.limittyvat, isolaatio: pino.isolaatio }));
+      tieto('16. kortin päälle osuvat merkit', `${pino.id}: ${pino.limittyvat.join(', ')}`);
+      if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, 'pallolauta-kortti-merkkien-paalla.png') });
+      await sivu.evaluate(() => {
+        for (const e of document.querySelectorAll('.fokuskohde-popup')) e.remove();
+        window.matkakirja.ui.fokuskohdeAuki = null;
+        // Vartion oma piilotustyyli pois, ettei se jää seuraaviin vartioihin.
+        for (const t of document.querySelectorAll('style')) {
+          if (t.textContent.includes('.pallolauta-nimi') && t.textContent.includes('display: none !important')) t.remove();
+        }
+      });
+      await sivu.waitForTimeout(200);
+    }
 
     /* 14. Karttaselite ja aihevalot pallolla. */
     const selite = await sivu.evaluate(async () => {

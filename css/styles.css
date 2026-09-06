@@ -24229,10 +24229,39 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
  * nappeja, jotka kelluvat kartan päällä (event-toast, maalehti-nappi
  * z-index 3), joten ne jäävät pallon päälle täsmälleen kuten kartan.
  */
+/*
+ * PALLON MERKIT JÄÄVÄT KORTTIEN ALLE (omistaja 6.9.2026 ilta,
+ * iPhone-kaappaus sanatarkasti: *"kaupunkien nimet näkyvät popup
+ * sivujen päällä"* — SOFIA ja DUBROVNIK piirtyivät Kreikan kohdekortin
+ * otsikon ja sulkunapin päälle, ATEENA kortin reunaan).
+ *
+ * SYY: Globe.gl:n CSS2D-renderöijä (three CSS2DRenderer) lajittelee
+ * html-merkit syvyyden mukaan ja kirjoittaa JOKAISELLE oman
+ * pinontatason elementin omaan tyyliin (z-index 1…N, N = merkkien
+ * määrä, pallolla ~60 kpl). Kirjaston oma kerros, .scene-container,
+ * .pallo-kotelo ja tämä kuori ovat kaikki z-index: auto, joten yksikään
+ * niistä ei ollut pinontakonteksti — luvut eivät jääneet pallon sisään
+ * vaan kilpailivat suoraan KARTTARUUDUN pinossa. Siellä kelluvat
+ * kohdekortti (.fokuskohde-popup, z-index 6), karttaselite (6),
+ * fokusvirran kortti (6), aloitusportti (6), lentokalvo (7) ja
+ * maalehti-nappi (3), joten jokainen merkki, jonka lajittelunumero
+ * sattui olemaan niitä isompi, piirtyi kortin päälle. Tasokartalla
+ * vikaa ei ole: sen nimet ovat svg#boardin sisällä.
+ *
+ * KORJAUS: kuori on oma pinontakontekstinsa (isolation), mutta EI saa
+ * omaa pinontatasoa (z-index: auto pysyy, ks. yllä). Kirjaston luvut,
+ * nopan kerros ja lennon merkit pinoutuvat keskenään pallon sisällä, ja
+ * karttaruudulle kuori on yksi taso — täsmälleen se, mitä ylläoleva
+ * lupaus tarkoittaa. Kuori on jo nyt oma kontekstinsa aina kun
+ * peittävyys on alle yhden (häivytys, .linssin-alla), joten tämä vain
+ * tekee siitä pysyvän. Vartiot: tests/pallolauta.test.mjs ja
+ * tools/savukkeet/savuke-pallolauta.mjs (vartio 16).
+ */
 .pallo-kuori.pallolauta {
   position: absolute;
   inset: 0;
   z-index: auto;
+  isolation: isolate;
   background: transparent;
   /* Ruudun oma pohja on tummaa nahkaa (.map-pane); pallo kelluu siinä. */
   /* Linssikartan häivytys (vaihe 4): pallo häipyy heränneen kartan
@@ -24397,12 +24426,17 @@ body.radio-tila .linssikartta-kehys, body.aikajana-paalla .linssikartta-kehys { 
  * lentokerroksen asia eikä tämän laudan.
  */
 /*
- * MERKIT PELIN PÄÄLLÄ LENNON AJAN. Pinontataso jäi, vaikka harso
- * lähti: kone ja kaksi nimeä piirtyvät pelin muiden kerrosten päälle,
- * jottei mikään myöhemmin lisätty kerros peitä niitä. Kotelo ei ole
- * oma pinontakontekstinsa (position: relative ilman z-indexiä), joten
- * merkin oma z-index riittää — ja sääntö on voimassa vain lennon ajan,
- * jottei muu peli muuta pinoaan.
+ * MERKIT PALLON OMIEN KERROSTEN PÄÄLLÄ LENNON AJAN. Pinontataso jäi,
+ * vaikka harso lähti: kone ja kaksi nimeä piirtyvät pallon muiden
+ * kerrosten (laattakartta, nopan kuori) päälle, jottei mikään
+ * myöhemmin lisätty kerros peitä niitä. Sääntö on voimassa vain lennon
+ * ajan, jottei muu peli muuta pinoaan.
+ *
+ * TASO ON PALLON SISÄINEN (6.9.2026 ilta): kuori on nyt oma
+ * pinontakontekstinsa (isolation: isolate, ks. osion alku), joten tämä
+ * kolmonen järjestää merkit pallon sisällä eikä karttaruudun pinossa.
+ * Se on tarkoituskin — karttaruudun kortit ja kuplat kuuluvat kaikkien
+ * pallon merkkien päälle, myös lennon aikana.
  */
 .pallo-kuori.pallolauta.pallolauta-lennossa .pallolauta-nimi,
 .pallo-kuori.pallolauta.pallolauta-lennossa .pallolauta-kone { z-index: 3; }

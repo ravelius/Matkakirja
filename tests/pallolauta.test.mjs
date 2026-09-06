@@ -759,3 +759,40 @@ test('avauslento: kone on heti lentosuunnassa — käännöksen kesto on nolla',
   assert.match(avaus, /kuljettaja\.aseta\(lahtoPos, lentokaari\(\)\);/);
   assert.match(avaus, /piirraJalki\(hypynVaihe\(0\)\.e\);/);
 });
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * PALLON MERKIT JÄÄVÄT KORTTIEN ALLE (omistaja 6.9.2026 ilta)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * iPhone-kaappaus, sanatarkasti: *"kaupunkien nimet näkyvät popup
+ * sivujen päällä"* — SOFIA ja DUBROVNIK piirtyivät Kreikan kohdekortin
+ * otsikon ja sulkunapin päälle, ATEENA kortin reunaan.
+ *
+ * Syy: Globe.gl:n CSS2D-renderöijä lajittelee html-merkit syvyyden
+ * mukaan ja kirjoittaa JOKAISELLE oman z-indexin (1…N) elementin omaan
+ * tyyliin. Kirjaston kerros, .scene-container, .pallo-kotelo ja kuori
+ * olivat kaikki z-index: auto, joten yksikään ei ollut pinontakonteksti
+ * ja luvut kilpailivat suoraan karttaruudun pinossa kortin
+ * (.fokuskohde-popup, z-index 6) kanssa. Tasokartalla vikaa ei ole:
+ * sen nimet asuvat svg#boardin sisällä.
+ *
+ * Vartio: kuori on oma pinontakontekstinsa (isolation) EIKÄ ota omaa
+ * pinontatasoa — muuten se nousisi karttaruudun kelluvien nappien ja
+ * korttien päälle. Selainpuolen todiste on savukkeen vartio 16
+ * (tools/savukkeet/savuke-pallolauta.mjs): kortin sisus on pikselilleen
+ * sama merkkien kanssa ja ilman.
+ */
+test('pallon html-merkit jäävät korttien alle: kuori on oma pinontakontekstinsa', () => {
+  const css = lue('../css/styles.css');
+  const saanto = css.match(/\.pallo-kuori\.pallolauta \{[^}]*\}/)?.[0] ?? '';
+  assert.ok(saanto, 'pallolaudan kuoren sääntö puuttuu');
+  assert.match(saanto, /isolation: isolate;/, 'kuori ei ole oma pinontakontekstinsa');
+  assert.match(saanto, /z-index: auto;/, 'kuori ottaisi oman pinontatason karttaruudussa');
+  // Lennon merkit saavat tasonsa pallon SISÄLLÄ; kortti (z-index 6) voittaa yhä.
+  assert.match(css, /\.pallo-kuori\.pallolauta\.pallolauta-lennossa \.pallolauta-nimi,/);
+  // Savukkeen vartio on olemassa ja vertaa kortin sisusta kahdesti.
+  const savuke = lue('../tools/savukkeet/savuke-pallolauta.mjs');
+  assert.match(savuke, /16\. pallon merkit jäävät kohdekortin alle/);
+  assert.match(savuke, /merkkienKanssa\.equals\(ilmanMerkkeja\)/);
+});
