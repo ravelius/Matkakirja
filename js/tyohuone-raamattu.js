@@ -3408,7 +3408,7 @@ export const RAAMATTU = {
           + 'kartalle omalla hetkellaan; fablemax tekee suunnitelman ja '
           + 'prototyypin, omistaja arvioi kuvakaappaukset ennen hiontaa. TARKENNUS '
           + '(omistaja 6.9.2026 iltapaiva: "Suunnitellaan yhdessa ennen toteutusta"): '
-          + 'ensin vain suunnitelma (docs/moduulit/ihmisen-matka-virrat.md), joka '
+          + 'ensin vain suunnitelma (moduulidokumentti ihmisen-matka-virrat), joka '
           + 'kaydaan omistajan kanssa lapi kohta kohdalta; koodia ei kirjoiteta '
           + 'ennen yhteista paatosta.',
         'AIKAJANAN AJO: KAMERA LAHEMPANA, LIIKKUU PIDEMPAAN VIIVAA PIIRTAEN, '
