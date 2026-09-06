@@ -1,0 +1,388 @@
+{
+  "clarificationId": "fable-v1640-feature-order-counts-20260906",
+  "sourceMailboxSha": "e9ce5c6ada24e6fd485a6ff7aadb0d92f0ec37ab",
+  "sourceMainSha": "699b13dc5e08032ba1770674bd98ddaff8ca4994",
+  "sourceHeading": "## 2026-09-06 13:20 UTC — FABLE → KUVATOIMITUS: lehtierän v1640 kuvatilaus (nostokuvat + 32 miniatyyriä)",
+  "reportedReadyFeatureCount": 61,
+  "explicitOrderItemCount": 55,
+  "explicitItemCountsByCountry": {
+    "KEN": 2,
+    "TZA": 1,
+    "UGA": 2,
+    "MAR": 2,
+    "DZA": 4,
+    "TUN": 3,
+    "NGA": 6,
+    "GHA": 7,
+    "SEN": 9,
+    "GTM": 4,
+    "NIC": 9,
+    "PAN": 6
+  },
+  "canonicalMissingCountInFirst12Countries": 56,
+  "mainMissingButNotExplicitlyOrdered": [
+    {
+      "countryCode": "GTM",
+      "categoryId": "historia",
+      "index": 3,
+      "hasImage": false,
+      "record": {
+        "otsikko": "Presidentti, joka astui virkaan isoisän matkavuonna",
+        "aika": "1873",
+        "teksti": "Justo Rufino Barrios aloitti presidenttinä 4. kesäkuuta 1873. Hän oli lakimies San Marcosista, noussut kenraaliksi kapinallisarmeijassa ja yksi vuoden 1871 vallankumouksen johtajista. Uudistukset olivat perusteellisia: kirkko erotettiin valtiosta, siviiliavioliitosta tuli ainoa virallinen, väestökirjanpito siirtyi seurakunnilta viranomaisille, hautausmaista tehtiin maallisia ja alkeiskoulusta ilmainen ja pakollinen. Vastustajiaan kohtaan hän oli suvaitsematon, ja monet joutuivat maanpakoon. Hän kaatui 1885 yrittäessään yhdistää Väli-Amerikan uudelleen.",
+        "selite": "Justo Rufino Barrios johti Guatemalaa 1873–1885, ja hänen liberaaliuudistuksensa siirsivät koulut, avioliitot ja väestökirjanpidon kirkolta valtiolle."
+      }
+    }
+  ],
+  "unidentifiedDifferenceFromReportedReadyCount": 6,
+  "preliminaryOrder": {
+    "orderId": "fable-maalehdet-eth-sdn-sds-pending-details-20260906-1320",
+    "reportedCount": 29,
+    "reportedCountryCounts": {
+      "ETH": 6,
+      "SDN": 6,
+      "SDS": 16
+    },
+    "canonicalMissingCount": 29,
+    "canonicalMissingCountsByCountry": {
+      "ETH": 6,
+      "SDN": 7,
+      "SDS": 16
+    },
+    "status": "awaiting-promised-fable-exact-subject-brief",
+    "activeProductionCount": 0,
+    "canonicalRows": [
+      {
+        "countryCode": "ETH",
+        "categoryId": "historia",
+        "index": 2,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Sata vuotta, jolloin keisari oli vieras omassa linnassaan",
+          "aika": "1769–1855",
+          "teksti": "Ras Mikael Sehul syrjäytti keisari Iyoas I:n 7. toukokuuta 1769, ja siitä alkoi Zemene Mesafint, ruhtinaiden aika. Keisarit istuivat yhä Gondarissa, mutta valta oli maakuntien ruhtinailla, jotka taistelivat keskenään siitä, kuka saisi pitää kuninkaiden kuningasta holhouksessaan. Nimi on Raamatun Tuomarien kirjasta. Vahvimmat suvut olivat Yejjun Warra Seh -dynastia ja Tigren ruhtinaat, ja kausi päättyi vasta 11. helmikuuta 1855, kun Kassa Haylu kruunattiin keisari Tewodros II:ksi lyötyään kaikki kilpailijansa.",
+          "wiki": "Zemene Mesafint"
+        }
+      },
+      {
+        "countryCode": "ETH",
+        "categoryId": "historia",
+        "index": 3,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Keisari, joka tilasi maalleen postin ja polkupyörät",
+          "aika": "1886–1913",
+          "teksti": "Menelik II siirsi pääkaupunkinsa Addis Abebaan 1886 ja kruunattiin Entoton vuorella 3. marraskuuta 1889. Hänen luottomiehensä oli sveitsiläinen insinööri Alfred Ilg, joka viipyi maassa 29 vuotta ja sai ainoana ulkomaalaisena bitwoded-arvon. Menelikin aikana maahan tuli posti 1893, oma hopeataaleri 1894, isorokkorokotukset 1898, ensimmäinen valtion koulu 1906, polkupyörät joulukuussa 1907 ja autot tammikuussa 1908. Rautatie Djiboutista aloitettiin 1897, mutta se valmistui pääkaupunkiin asti vasta 1917, neljä vuotta keisarin kuoleman jälkeen.",
+          "wiki": "Menelik II"
+        }
+      },
+      {
+        "countryCode": "ETH",
+        "categoryId": "musiikki",
+        "index": 3,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Tanssi, joka tehdään pelkillä hartioilla",
+          "teksti": "Eskista tarkoittaa amharaksi tanssivia hartioita. Jalat pysyvät lähes paikallaan, ja liike tulee ylävartalosta: hartiat, rintakehä, pää ja niska nytkähtelevät rummun tahdissa niin nopeasti, että tanssia pidetään yhtenä Afrikan teknisesti vaativimmista. Tanssi on kotoisin amharojen alueelta, mutta sitä tanssitaan koko maassa häissä ja juhlissa, ja sillä on omat alueelliset tyylinsä. Parhaalle tanssijalle annetaan shilimat: katsoja painaa setelin tanssijan hikiselle otsalle, johon se jää kiinni.",
+          "wiki": "Eskista"
+        }
+      },
+      {
+        "countryCode": "ETH",
+        "categoryId": "kirjat",
+        "index": 2,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Käärö, joka mitattiin potilaan pituiseksi",
+          "teksti": "Sairas tilasi suojakäärön dabtaralta, kirkon oppineelta, joka ei ollut pappi. Käärö kirjoitettiin geeziksi nahalle, ja siihen maalattiin silmiä, geometrisia kuvioita ja rukouksia; teksti tehtiin juuri sitä ihmistä varten, jota sen piti auttaa. Käärö ripustettiin kaulaan tai kiedottiin vartalon ympärille, ja koska geeziä osasivat vain harvat, teksti piti lukea sairaalle ääneen, jotta se vaikuttaisi. Vanhimmat säilyneet ovat 1500-luvulta, ja niitä uskotaan tehdyn jo 900-luvulta alkaen.",
+          "wiki": "Ethiopian art"
+        }
+      },
+      {
+        "countryCode": "ETH",
+        "categoryId": "kirjat",
+        "index": 3,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Kolmastoista kuukausi, jossa on viisi päivää",
+          "teksti": "Etiopian kalenterissa on kaksitoista kolmenkymmenen päivän kuukautta ja niiden perässä kolmastoista, johon jää viisi päivää — karkausvuonna kuusi. Vuosi vaihtuu meidän syyskuumme 11. päivänä, ja uudenvuodenpäivää sanotaan amharaksi Enkutatashiksi, korujen lahjaksi. Ajanlaskun alkupiste on eri kuin lännessä, joten vuosiluku on seitsemän tai kahdeksan vuotta pienempi kuin muualla maailmassa. Neljän vuoden karkauskierto on nimetty evankelistojen mukaan: Johanneksen, Matteuksen, Markuksen ja Luukkaan vuodet seuraavat toisiaan.",
+          "wiki": "Ethiopian calendar"
+        }
+      },
+      {
+        "countryCode": "ETH",
+        "categoryId": "luonto",
+        "index": 0,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Metsäsaaret, joita kirkot ovat vartioineet 1 500 vuotta",
+          "teksti": "Pohjois-Etiopian ylängöistä on raivattu pelloiksi niin paljon, että alkuperäistä metsää on jäljellä noin neljä prosenttia — ja lähes kaikki siitä kasvaa kirkkojen ympärillä. Perinteen mukaan kirkon kuuluu seisoa metsässä, ja siksi noin 35 000 kirkkometsää on säilynyt vihreinä saarekkeina keskellä kynnettyä maata; pienin on kolme hehtaaria, suurin kolmesataa. Metsät nostavat pohjaveden pintaa, viilentävät ja pitävät pölyttäjät hengissä. Kun reunat alkoivat kulua, papit ja kyläläiset ryhtyivät muuraamaan niiden ympärille kiviaitoja.",
+          "wiki": "Ethiopian Orthodox Tewahedo Church"
+        }
+      },
+      {
+        "countryCode": "SDN",
+        "categoryId": "historia",
+        "index": 0,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Rauhansopimus, joka kesti lähes seitsemänsataa vuotta",
+          "aika": "652",
+          "teksti": "Arabiarmeija tuli Egyptistä etelään vuonna 652 ja kohtasi Makurian kristillisen kuningaskunnan Dongolan muurien edessä. Valloitus jäi tekemättä, ja sen sijaan syntyi baqt: sopimus, jonka mukaan kumpikaan ei hyökkää toisen kimppuun ja kauppiaat saavat kulkea vapaasti rajan yli. Nubian oli lähetettävä pohjoiseen vuosittain kolmesataakuusikymmentä orjaa, ja Egyptistä tuli vastineeksi laivalasteittain vehnää ja linssejä. Sopimusta ei ehkä koskaan kirjoitettu paperille, mutta sen mukaan elettiin 1300-luvulle asti — pitempään kuin minkään toisen tunnetun sopimuksen mukaan.",
+          "wiki": "Mukurra"
+        }
+      },
+      {
+        "countryCode": "SDN",
+        "categoryId": "musiikki",
+        "index": 0,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Musiikkilaji, joka nimettiin salkun mukaan",
+          "aika": "1920-luku",
+          "teksti": "Omdurmanissa syntyi 1920-luvulla uusi kaupunkilaulu: solisti ja kuoro, säestyksenä pelkkä tar-kehärumpu, ja sävelmät lainattiin uskonnollisesta ylistyslaulusta madeehista mutta sanat olivat maallisia. Tyylin aloitti Muhamad Wad El Faki, joka oli oppinut äänenkäytön koraanikoulussa. Nimen se sai vasta 1940-luvulla, kun radiojuontaja Ahmed Mohamed Saleh soitti ohjelmassaan vanhoja levyjä, joita hän kantoi salkussa — hageeba tarkoittaa salkkua. Ensimmäiset savikiekot äänitettiin Kairossa 1930-luvulla ja myytiin Omdurmanista käsin.",
+          "wiki": "Music of Sudan"
+        }
+      },
+      {
+        "countryCode": "SDN",
+        "categoryId": "musiikki",
+        "index": 2,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Naiset, joiden laulu saattoi ratkaista riidan",
+          "teksti": "Länsi-Sudanissa on hakamat: arvostettuja naisia, joiden ase on runo. He ylistävät tai pilkkaavat oman heimonsa miehiä, ja heidän sanansa painaa niin paljon, että rauhantyötä tekevät järjestöt ovat pyytäneet heitä käyttämään vaikutusvaltaansa sovitteluun ja ympäristöasioihin. Etnomusikologi Roxane Connick Carlisle kuvasi 1960-luvun kenttätyössään zaghawa-kansan naislaulajia: vapaa rytmi, laskeva melodia oktaavin sisällä ja ennen kaikkea merkitsevä teksti. Naisten omaa musiikkia ovat myös dalooka-rummun tahdittamat aghani al-banat eli tyttöjen laulut.",
+          "wiki": "Music of Sudan"
+        }
+      },
+      {
+        "countryCode": "SDN",
+        "categoryId": "musiikki",
+        "index": 3,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Perjantain rumpu ei ole esitys vaan rukous",
+          "teksti": "Sudanissa on lukuisia sufilaisia veljeskuntia, ja jokaisella on oma zikrinsä eli muistamisen menonsa: lausuntaa, rumpuja, tanssia, pukuja ja suitsuketta, joiden tarkoitus on viedä osallistuja tavallisen tajunnan tuolle puolen. Menot pidetään useimmiten perjantai-iltapäivällä, ja tunnetuin niistä kokoontuu sheikki Hamed el-Nilin haudalle Omdurmanissa. Osallistujat eivät pidä zikriä musiikkiesityksenä lainkaan vaan rukouksen muotona — vaikka ulkopuoliselle se kuulostaa ja näyttää konsertilta.",
+          "wiki": "Suufilaisuus"
+        }
+      },
+      {
+        "countryCode": "SDN",
+        "categoryId": "kuvataide",
+        "index": 2,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Koulu, joka teki kirjaimista kuvia",
+          "aika": "1957–",
+          "teksti": "Ibrahim El-Salahi syntyi Omdurmanissa 1930 perheeseen, jossa isä piti koraanikoulua — sieltä hän oppi arabialaisen kalligrafian, josta tuli myöhemmin hänen maalaustensa runko. Opiskeltuaan Lontoon Slade School of Fine Artissa 1954–1957 hän palasi Khartumiin, ja hänen ympärilleen syntyi Khartumin koulu, joka yhdisti islamilaisen kirjainkuvion, afrikkalaisen muodon ja länsimaisen modernismin. Vuonna 2013 Tate Modern järjesti hänestä ensimmäisen afrikkalaista nykytaiteilijaa esittelevän retrospektiivinsä.",
+          "wiki": "Ibrahim El-Salahi"
+        }
+      },
+      {
+        "countryCode": "SDN",
+        "categoryId": "luonto",
+        "index": 1,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Riutta keskellä merta, kaukana rannasta",
+          "aika": "2016",
+          "teksti": "Sanganeb on erillinen korallirakennelma keskellä Punaistamerta, kaukana rannikon riutoista. Sadan kolmenkymmenen kilometrin päässä Port Sudanista pohjoiseen aukeaa Dungonabin lahti, jonka keskiosaa, Rawayahin laguunia, kiertää oma riuttakehänsä. Alue merkittiin Ramsar-kosteikoksi 2009 ja hyväksyttiin maailmanperintöluetteloon 2016 nimellä Sanganeb sekä Dungonabin lahti ja Mukkawarin saari. Lahden rannan mangrovet ja pikkusaaret ovat merkittävä lintualue: siellä elävät muun muassa valkosilmälokki ja nokihaukka.",
+          "wiki": "Dungonab Bay"
+        }
+      },
+      {
+        "countryCode": "SDN",
+        "categoryId": "luonto",
+        "index": 2,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Keltainen Niili, joka kuivui kahdentuhannen vuoden takana",
+          "teksti": "Wadi Howar on yli 1 100 kilometriä pitkä kuiva uoma, joka alkaa Tšadin Ennedistä ja päättyy Niiliin Vanhan Dongolan kohdalla. Nykyään siihen sataa noin 25 millimetriä vuodessa, mutta 9 500–4 500 vuotta sitten se oli Niilin sivujoki, jota kutsutaan Keltaiseksi Niiliksi: silloin Saharan eteläraja oli viisisataa kilometriä nykyistä pohjoisempana ja uoman varrella laidunsi karjaa. Kuivumisen aikana joesta tuli ensin makeanveden järvien ketju, joka näkyy vielä Ptolemaioksen maailmankartalla, ja noin kaksituhatta vuotta sitten se kuoli kokonaan.",
+          "wiki": "Wadi Howar"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "historia",
+        "index": 0,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Kuningas, jonka terveydestä riippui koko kansan onni",
+          "aika": "1400-luku",
+          "teksti": "Shilluk-kuningaskunta syntyi Valkoisen Niilin länsirannalle, ja perimätiedon mukaan sen perusti Nyikang 1400-luvun jälkipuoliskolla. Kuninkaan arvo on reth, ja se on yhtä lailla uskonnollinen kuin poliittinen: hallitsijan terveys ja kansan hyvinvointi ajateltiin samaksi asiaksi, ja menot toistavat Nyikangin tarinaa. Charles Seligman tutki hallitsemistapaa 1911, ja James George Frazer otti sen 1916 esimerkiksi pyhästä kuninkuudesta Kultaisessa oksassa. Valtakunta oli vahvimmillaan 1700- ja 1800-luvun vaihteessa, ja sen pääkaupunki oli Fashoda.",
+          "wiki": "Shilluk Kingdom"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "historia",
+        "index": 2,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Heittoveitsi, jossa on kolme terää",
+          "teksti": "Azandeja hallitsi Avongara-suku, ja heidän seutunsa ulottuu nykyisen Etelä-Sudanin lounaiskolkasta Kongoon ja Keski-Afrikan tasavaltaan. Kuuluisin heidän esineistään on shongo: kaareva heittoveitsi, jossa on usein monta terää eri suuntiin ja joka osoittaa, kuinka taitavia zandeseppiä oli. Kansa asuu maanviljelijöinä: pelloilla kasvaa maissia, riisiä, maapähkinää, seesamia, maniokkia ja bataattia, ja puutarhoissa mangoa, appelsiinia, banaania ja ananasta. Zandea puhuu noin 1,1 miljoonaa ihmistä.",
+          "wiki": "Azande people"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "historia",
+        "index": 3,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Maa, jolle piti ensin keksiä nimi",
+          "aika": "2011",
+          "teksti": "Kansanäänestys järjestettiin 9.–15. tammikuuta 2011, ja 98,83 prosenttia äänestäneistä kannatti eroa. Nimestä väiteltiin komiteassa vielä sen jälkeen: ehdolla olivat muun muassa Azania, Nile Republic, Kush Republic ja Juwama, joka olisi ollut yhdistelmä kolmen suurimman kaupungin nimistä Juba, Wau ja Malakal. Nimeksi valittiin 23. tammikuuta Etelä-Sudanin tasavalta. Maa itsenäistyi 9. heinäkuuta 2011 Afrikan 54. valtiona, liittyi 14. heinäkuuta YK:n 193. jäseneksi ja 27. heinäkuuta Afrikan unioniin. Syyskuussa Google Maps piirsi rajan kartalle.",
+          "wiki": "Etelä-Sudan"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "tarinat",
+        "index": 0,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Veijari, joka tekee kaiken väärin",
+          "teksti": "Azandejen tarinoiden päähenkilö on Ture, veijari, joka tekee harkitsemattomia päätöksiä ja äkkipikaisia tekoja ja saa niistä aina seuraukset. Tarinoita ei kerrota siksi että Turea ihailtaisiin vaan päinvastoin: hän näyttää, mitä yhteisössä ei sovi tehdä, ja kuulija oppii säännöt nauramalla niiden rikkojalle. Zanden kirjallisuus on suullista; osan siitä kirjasivat ylös lähetyssaarnaajat 1900-luvun alussa, ja käännöksiä julkaistiin 1960-luvulla — muun muassa antropologi E. E. Evans-Pritchardin kokoelma Ture-tarinoita.",
+          "wiki": "Azande people"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "tarinat",
+        "index": 1,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Kolme oraakkelia, joilla oli eri hinta",
+          "teksti": "Azandet käyttivät kolmea oraakkelia, ja niillä oli selvä arvojärjestys. Arvostetuin oli benge, myrkkyoraakkeli, jota vain miehet saivat käyttää ja jonka päätöstä ei kyseenalaistettu. Sitä halvempi ja kaikille avoin oli termiittioraakkeli, jonka vastausta naiset, miehet ja lapset saivat kysyä. Halvin ja epäluotettavimpana pidetty oli hankausoraakkeli, kahdesta puupalasta tehty väline, joka kulki mukana ja jolta saattoi kysyä missä ja milloin tahansa. Pitkään oraakkelit olivat myös oikeuslaitos: ne osoittivat, kuka oli aiheuttanut onnettomuuden.",
+          "wiki": "Azande people"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "tarinat",
+        "index": 2,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Keihäänherrat uhraavat härän",
+          "teksti": "Dinkojen uskonnossa on yksi luoja, Nhialic, ja hänen alaisuudessaan joukko jumalia ja henkiä. Nhialic on kaukainen eikä puutu ihmisten asioihin suoraan, joten yhteys hoidetaan uhrilla: kalastuskeihään herrat, oma pappissukunsa, uhraavat härkiä. Pyhä voima ei tule kirjasta vaan luonnosta ja ympäröivästä maailmasta. Nuoret miehet tulevat aikuisiksi vihkimysmenossa, jossa otsaan piirretään merkki terävällä esineellä, ja samalla he saavat toisen nimensä — sen mukaan, minkä värinen heidän lehmänsä on.",
+          "wiki": "Dinkat"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "ruoka",
+        "index": 0,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Sama taikina paistetaan tai keitetään",
+          "teksti": "Etelä-Sudanin keittiö nojaa viljaan: maissiin, durraan ja hirssiin. Kansallisruoka on kisra, ohut durrasta hapatettu lettu, ja samasta jauhosta keitetään aseeda, paksu puuro. Hirssistä tehdään wala-wala. Puuron kanssa syödään pataa, ja se kauhotaan kädellä kaikkien yhteiseltä vadilta. Papuja, linssejä ja maapähkinöitä on joka pöydässä, samoin okraa ja jamssia; lihaa on vuohta, lammasta ja kanaa, ja se keitetään, grillataan tai kuivataan. Arabialainen keittiö on jättänyt jälkensä pohjoisimpiin ruokiin.",
+          "wiki": "South Sudanese cuisine"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "ruoka",
+        "index": 1,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Pinaattipata, joka maistuu maapähkinältä",
+          "teksti": "Kombo tehdään kolmesta aineksesta: pinaatista tai muusta lehtivihanneksesta, maapähkinävoista ja tomaatista. Maapähkinä antaa padalle paksuuden ja rasvan, joten liha ei ole välttämätön — samasta syystä maapähkinä on koko seudun tärkein valkuaisen lähde. Sama pähkinä päätyy myös jälkiruokaan: ful sudani on makeinen, jossa paahdetut maapähkinät sidotaan sokerilla. Kalastajakylissä pöydässä on kajaik, kuivatusta kalasta keitetty pata, ja kaupungeissa paistetaan mandazia, kolmion muotoista uppopaistettua leipää.",
+          "wiki": "South Sudanese cuisine"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "musiikki",
+        "index": 0,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Ksylofoni, jota soittaa kolme ihmistä yhtä aikaa",
+          "teksti": "Kpaningbo on iso puinen ksylofoni, jota soittaa kolme ihmistä yhtä aikaa: kuviot lomittuvat toistensa väliin, niin ettei kukaan soita koko melodiaa yksin. Loppukylä täydentää soiton kelloilla ja muilla lyömäsoittimilla, jotka kiertävät soittajalta toiselle. Wayo-levyllä azandejen rumpalit yhdistävät hengellisen laulun tähän lomittuvaan rytmiin. Etelä-Sudanin kansanmusiikki on muutenkin monen kansan musiikkia: dinkojen laulujen runous on erityisen arvostettua ja azandet tunnetaan tarinankerronnastaan.",
+          "wiki": "Culture of South Sudan"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "musiikki",
+        "index": 1,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Juban yöt, jolloin soittivat Skylarks ja Rejaf Jazz",
+          "aika": "1970–1980-luvut",
+          "teksti": "Juba oli 1970- ja 1980-luvuilla vilkkaan yöelämän kaupunki, ja lavalla soittivat muun muassa Skylarks ja Rejaf Jazz. Musiikissa kuului koko naapuruston kirjo: monet muusikot lauloivat englanniksi, suahiliksi, juba-arabiaksi, omalla kielellään tai sekoittaen niitä kaikkia. Myöhemmin tähän tuli lisää sävyjä, kun eteläsudanilaisia asui pitkiä aikoja Etiopiassa, Keniassa ja Ugandassa ja oppi sikäläiset kielet ja tyylit. Emmanuel Kembe laulaa kansanmusiikkia, reggaeta ja afrobeatia, Yaba Angelosi afrobeatia, r&b:tä ja zoukia.",
+          "wiki": "Culture of South Sudan"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "musiikki",
+        "index": 2,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Poika saa nimensä lempihäriltään",
+          "teksti": "Nuerien keskuudessa lähes jokaisella on karjanimi. Poika valitsee nimensä lempihärkänsä mukaan — sen muodon ja värin — ja tyttö saa nimen lehmästä, jota hän lypsää; joskus nimi periytyy eläimen mukana sukupolvelta toiselle. Lauluissa ylistetään juuri sitä eläintä, jonka nimen laulaja kantaa. Myös dinkat saavat toisen nimensä lehmän värin mukaan aikuistumismenossa. Historialliset tapahtumat jäävät nimiin samalla tavalla: lapsi voi saada nimen sen mukaan, mitä hänen syntymävuotenaan tapahtui.",
+          "wiki": "Nuerit"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "musiikki",
+        "index": 3,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Rumpu, joka veistettiin ihmisen muotoiseksi",
+          "teksti": "Azandejen soittimet ovat myös veistoksia: rummut ja sansa-peukalopianot tehtiin toisinaan ihmisen tai eläimen muotoisiksi, toisinaan puhtaan kuviollisiksi. Peukalopianossa on laatikon päälle kiinnitetyt metallikielet, joita näppäillään peukaloilla, ja se kulkee mukana taskussa. Soittimia käytettiin häissä ja kylän yhteisissä tansseissa. Sama kädentaito näkyy zandejen puu- ja saviveistoksissa, jotka esittävät tärkeitä eläimiä tai esi-isiä.",
+          "wiki": "Azande people"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "kielet",
+        "index": 0,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Kuusikymmentä kieltä ja yksi virallinen",
+          "teksti": "Etelä-Sudanissa puhutaan yli kuuttakymmentä alkuperäiskieltä, ja useimmat niistä kuuluvat nilo-saharalaiseen kielikuntaan — mukana on sekä Niilin sudanilaisia että Keski-Sudanin kieliä. Virallinen kieli on englanti. Läntisen Bahr el Ghazalin ja Sudanin rajaseudulla asuu ihmisiä, joiden esi-isät jäivät seudulle palatessaan pyhiinvaellukselta Mekasta Länsi-Afrikkaan; he puhuvat tšadilaisia kieliä ja elävät osan vuodesta paimentolaisina. Itsenäistymisen jälkeen maa on suunnannut katseensa itään ja suahilinkieliseen Itä-Afrikan yhteisöön.",
+          "wiki": "Culture of South Sudan"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "kielet",
+        "index": 1,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Kieli, joka syntyi varuskunnassa",
+          "teksti": "Juba-arabia syntyi 1800-luvulla sotilaiden jälkeläisten keskuudessa: väki oli koottu eri kansoista, ja yhteiseksi kieleksi muodostui sudaninarabiaan perustuva pidgin, jonka kielioppi on hyvin yksinkertainen ja sanastossa näkyvät dinka, bari, pojulu ja shilluk. Se on kaikesta huolimatta maan puhutuin kieli, yleisempi kuin virallinen englanti, ja sitä kuulee etenkin Ekvatorian maakunnassa ja Juban kaduilla. Vasta 1970-luvulla se tunnustettiin omaksi kielimuodokseen eikä pelkäksi huonoksi arabiaksi.",
+          "wiki": "Juba Arabic"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "kielet",
+        "index": 2,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Kieli, jossa vokaalilla on kolme pituutta",
+          "teksti": "Dinkan kielessä on piirre, joka on maailman kielissä harvinainen: vokaalilla voi olla kolme eri pituutta, ja pituus vaihtaa sanan merkityksen. Kieli myös taivuttaa sanoja vokaalia vaihtamalla samaan tapaan kuin englannin goose ja geese. Murteita on toistakymmentä — Padang, Rek, Agaar, Bor ja muut — ja ne ovat niin erilaisia, että kukin tarvitsee oman kirjakielensä; yhtenäistä kielioppia on vasta ehdotettu. Lähin sukukieli on nuer. Sanastossa on paljon yhteistä nubian kanssa, luultavasti keskiajan Alwan valtakunnan ajoilta.",
+          "wiki": "Dinkan kieli"
+        }
+      },
+      {
+        "countryCode": "SDS",
+        "categoryId": "kielet",
+        "index": 3,
+        "hasImage": false,
+        "record": {
+          "otsikko": "Zande on yhden kansan ja monen kielen nimi",
+          "teksti": "Azandet kutsuvat kieltään nimellä Pa-Zande, ja sitä puhuu noin 1,1 miljoonaa ihmistä. Nimi zande tarkoittaa myös laajempaa kieliryhmää, johon kuuluvat muun muassa adio, barambu, apambia, geme, kpatiri ja nzakara. Kieli kulkee suullisesti: kirjattua zande-kirjallisuutta on vähän, ja sekin on enimmäkseen 1900-luvun alun lähetyssaarnaajien muistiin merkitsemää suullista perinnettä, jota käännettiin 1960-luvulla. Azandet tunnetaan koko seudulla juuri tarinankertojinaan.",
+          "wiki": "Azande people"
+        }
+      }
+    ],
+    "productionStarted": false
+  },
+  "questionToFable": "Luettelossa on 55 yksilöityä nostokuvaa, ei 61. Puuttuuko siitä kuusi aihetta vai onko yhteissumma 61 virhe? GTM:n Barrios-nosto on mainissa kuvattomana mutta ei ole tilausrivillä. ETH/SDN/SDS: mainin kuvattomia 6+7+16=29; odotan lupaamaasi täsmällistä aihelistaa.",
+  "scopeRule": "Queue the 55 explicit feature subjects and 32 explicit miniatures. Keep the announced 29 awaiting promised details outside active production counts. Do not invent additional subjects to reach 61."
+}

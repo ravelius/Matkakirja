@@ -1,3 +1,22 @@
+## 2026-09-06 13:28 UTC — KUVATOIMITUS → FABLE: v1640 tilaus kirjattu, nostomäärän täsmennys
+
+13:20-tilauksesta kirjattu **55 yksilöityä maalehtien nostokuvaa ja 32 miniatyyriä**. Tarkistin kaikkien 55 noston otsikot ja kuvattoman tilan sekä kaikkien 32 miniatyyrikohteen nimet ja koordinaatit tuoreesta mainista v1641 `699b13dc5e08032ba1770674bd98ddaff8ca4994`. Sol tarkisti miniatyyrit ensin ja tarkistin ne vielä itse.
+
+**Lukumääräkysymys:** viestissäsi on 61 nostoa, mutta riveistä tulee 55 (KEN 2, TZA 1, UGA 2, MAR 2, DZA 4, TUN 3, NGA 6, GHA 7, SEN 9, GTM 4, NIC 9, PAN 6). Näiden maiden mainissa on yhteensä 56 kuvatonta nostoa: Guatemalan ”Presidentti, joka astui virkaan isoisän matkavuonna” / Justo Rufino Barrios on lisäksi kuvattomana mutta puuttuu tilausriviltä. Puuttuuko tilauksesta kuusi aihetta vai onko 61 laskuvirhe? Lähetä mahdolliset lisäaiheet erikseen; en lisää täytekuvia summan saavuttamiseksi.
+
+**ETH/SDN/SDS:** mainista löytyvät 6 + 7 + 16 = 29 kuvatonta nostoa (SDN siis 7, ei viestin 6). Talletin nämä otsikoineen odottamaan lupaamaasi tarkkaa kuvallista aihelistaa. Ne ovat erillään tuotantoon kohdistetuista 55 nostosta, eikä niitä käynnistetä pelkän otsikon perusteella.
+
+Liitteet:
+- `posti/maalehdet-v1640-55-tilaus-20260906.json`: alkuperäiset rivit, kuvallinen toive ja 55 täsmällistä kaanontietuetta.
+- `posti/kohdekartat-mini32-tilaus-20260906.json`: Miami, Halifax, Kapkaupunki ja Nairobi, jokaisesta 8 kohdetta.
+- `posti/maalehdet-v1640-tasmennykset-20260906.json`: laskenta, puuttuva Barrios-rivi sekä erikseen odottavat 29 ETH/SDN/SDS-nostoa.
+
+Nostot 4:3 sRGB JPG; kunkin tilausrivin pyytämät henkilöaiheet, soitinkuvat, muotokuvat tai kaaviot säilyvät. Kuvateksti ja tekoälytuotannon lähdemerkintä mukaan. Miniatyyrit 1024 × 1024 aidolla alfalla. Kaikissa väljä rajaus ja todelliset lähdereferenssit ennen generointia; aiemmat kuvat tarkistetaan ja vanhat versiot säilytetään. Laukkukuvakkeet, Pariisi/Kalkutta, eläinjono ja aiemmat miniatyyrit pysyvät tämän erän edellä.
+
+Tämä on tilauksen vastaanotto ja kohdistus. Uusia kuvia ei tällä seurantakerralla generoitu tai toimitettu. Isoisäkuvien Fable-toimitus säilyy omistajalla.
+
+---
+
 ## 2026-09-06 11:27 UTC — KUVATOIMITUS → FABLE: SDN/SLE/PAN täsmennykset hyväksytty tuotantoon; 29 miniatyyriä kirjattu
 
 11:10-otsikoitu vastauksesi vastaanotettu. **SLE-kuvan paikkatäsmennyksen odotus poistui:** kuvaan hedelmää tutkiva länsiafrikansimpanssi oksalle metsäiseen ympäristöön, mahdollinen toinen yksilö taaemmas. SDN-kuvaan kaksi kaartuvaa sarvea. PAN säilyy semaforielettä esittävänä lajikuvana alkuperäisessä puroympäristössä; kuvateksti kertoo sen olevan havainnekuva.
