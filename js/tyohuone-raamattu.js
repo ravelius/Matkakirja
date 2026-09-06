@@ -3498,7 +3498,15 @@ export const RAAMATTU = {
           + 'kamera lahtee heti pysakin lukuajan jalkeen ja liike tayttaa '
           + 'suurimman osan pysakkivalista, reittiviiva piirtyy kameran mukana; '
           + 'kello nayttaa tayden lukeman ja kaikki numerot pyorivat '
-          + 'matkamittarin tavoin (ykkoset nopeasti, tuhannet harvoin).',
+          + 'matkamittarin tavoin (ykkoset nopeasti, tuhannet harvoin). '
+          + 'LISAYS (omistaja 6.9.2026 ilta, sanatarkasti: "vuosilukumittariin '
+          + 'kannattaisi jotenkin tehda feikki nopeusanimaatio 2-3 '
+          + 'ensimmaiselle pyorivalle numeronaytolle, niin etta numerot eivat '
+          + 'piirry teravina vaan kuin elokuvakamerassa numerot blurrautuvat '
+          + 'yhteen nopean liikkeen ja luonnollisen valotusajan huomioon '
+          + 'ottaen"): nopeimmat 2-3 rullaa saavat pystysuuntaisen '
+          + 'liike-epateravyyden, jonka maara seuraa rullan nopeutta; liike '
+          + 'vahennettyna ei sumennusta.',
         'AIKAJANAN AVAUSLAATIKKO: MUSTA TAUSTA, EI PULUA, NAKYVA NAPPI, ELAVA '
           + 'LOIMU JA PAPERI (omistaja 6.9.2026 keskipaiva Ihmisen matka '
           + '-avauslaatikon kuvakaappauksesta, sanatarkasti: "Pulu voi olla pois '
