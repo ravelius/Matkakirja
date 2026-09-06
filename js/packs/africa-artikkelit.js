@@ -1112,10 +1112,24 @@ export const OMAT_ARTIKKELIT = {
       + 'vuoren gaselleina.',
   },
   Angola: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // AGO) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Angola on eteläisen Afrikan suuri rannikkovaltio, jonka '
-      + 'historia kulkee Kongon kuningaskunnasta orjakaupan satamien '
-      + 'kautta öljyrikkauteen — ja jonka musiikki tanssittaa koko '
-      + 'maailmaa.',
+      + 'nimi on kuninkaan arvonimi: ngola oli Ndongon hallitsija, ja '
+      + 'portugalilaiset alkoivat kutsua koko seutua sen mukaan. '
+      + 'Rannikko on kuivaa ja etelässä aavikkoa, sisämaa vehreää '
+      + 'ylänköä ja pohjoinen sademetsää, ja niiden välissä maa putoaa '
+      + 'kilometrin alaspäin yhtenä jyrkänteenä. Ndongon ja Matamban '
+      + 'kuningatar Njinga neuvotteli ja soti Portugalia vastaan '
+      + 'neljäkymmentä vuotta 1600-luvulla, ja kuningaskunta kaatui '
+      + 'vasta 1671. Maa oli Portugalin siirtomaa yli neljäsataa vuotta '
+      + 'ja itsenäistyi 1975; sen jälkeen se on rakentanut itseään '
+      + 'öljyn ja timanttien voimin. Idän chokwet veistivät naamiot ja '
+      + 'päällikönistuimet ja piirsivät hiekkaan yhden viivan kuviot, '
+      + 'joita tutkitaan nykyään matematiikkana. Luandasta ovat '
+      + 'lähteneet maailmalle semba, kizomba ja kuduro — ja jo paljon '
+      + 'aiemmin soittojousi, josta tuli Brasilian berimbau.',
     artikkeli: 'Angola levittäytyy Atlantin rannikolta ylängöille: '
       + 'rannikko on kuivaa, sisämaa vehreää savannia ja pohjoisessa '
       + 'sademetsää. Pääkaupunki Luanda on kasvanut lahden ympärille '

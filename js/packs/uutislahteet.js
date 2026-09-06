@@ -1007,4 +1007,30 @@ export const UUTISLAHTEET = {
     kieli: 'da',
     syote: 'https://knr.gl/da/rss',
   },
+  /*
+   * Correio da Kianda on angolalainen portugalinkielinen
+   * uutissivusto. Testattu 6.9.2026: syötteessä yksitoista juttua,
+   * tuorein samalta päivältä, ja artikkelisivun ainoasta
+   * <article>-lohkosta jäsentyy kahdeksantoista yli 60 merkin
+   * kappaletta sekä og:image. Syöte vastaa suoraan 200:lla eikä ohjaa
+   * muualle, ja artikkelit ovat samalla isäntänimellä.
+   *
+   * Testattu ja hylätty: Jornal de Angola (Angular-sovellus, joka
+   * palauttaa jokaiselle polulle saman HTML-rungon — RSS:ää ei ole),
+   * ANGOP (/feed/ antaa HTML:ää, /rss/ vastaa 503:lla), Novo Jornal
+   * (/feed/ ohjaa /feed.html:ään ja se edelleen /404.html:ään), O País
+   * (301 ja katkeava yhteys), Angola24Horas, Club-K ja Platina Line
+   * (403, botti-esto), Ver Angola (/va/pt/rss palauttaa HTML-sivun),
+   * Rede Angola (syöte aukeaa, mutta tuorein juttu on toukokuulta
+   * 2017), Mercado (tuore syöte, mutta artikkelisivulla ei ole
+   * <article>-elementtiä eikä [itemprop="articleBody"]-merkintää) ja
+   * Folha 8 (läpäisisi molemmat testit, mutta on kärkevä
+   * oppositiojulkaisu, jonka otsikot ovat nykypoliittisia
+   * kannanottoja — peli näyttää otsikot sellaisinaan).
+   */
+  AGO: {
+    nimi: 'Correio da Kianda',
+    kieli: 'pt',
+    syote: 'https://correiokianda.info/feed/',
+  },
 };

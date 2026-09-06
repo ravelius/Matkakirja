@@ -48676,4 +48676,414 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * ANGOLA (AGO) — Afrikan laudan maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-angola.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA: Angolassa ei ole kaupunkilehteä,
+   * mutta kartta on täynnä. maastokohteet-ago.js kattaa Morro de Mocon,
+   * Atlantin, Cuanzan, M’banza-Kongon, São Miguelin linnoituksen,
+   * Kalandulan putoukset, Quiçaman ja Ionan kansallispuistot,
+   * Moçâmedesin, Benguelan radan ja Cuito Cuanavalen; skandaalit.js
+   * Baixa do Cassangen lakon 1961 ja Nevinsonin orjatiematkan;
+   * elaintakyt.js jättiläisseeprantiloopin. Maalehti EI toista niitä —
+   * siksi historiassa ei ole Kongon kuningaskuntaa, Luandan
+   * linnoitusta, Benguelan rataa eikä 1900-luvun sotia, luonnossa ei
+   * kansallispuistoja eikä Kalandulaa, ja Moçâmedes esiintyy vain
+   * etäisyysmittana.
+   *
+   * HERKÄT AIHEET: orjakauppa mainitaan vain siltä osin kuin se
+   * selittää nzimbu-rahan ja chokwe-taiteen 1800-luvun nousun (se on
+   * skandaalikorttien aihe), sisällissota vain Dundon museon
+   * kokoelman ja kuduron ajoituksen kohdalla. Nykypolitiikkaa ei ole.
+   *
+   * KUVAT: 13 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin.
+   * SEITSEMÄN NOSTOA JÄI KUVATTOMAKSI: nzimbu-simpukkaraha,
+   * Tigres-saari, Ngola Ritmos, Bonga, kuduro, Tchitundu-Hulu ja
+   * lusona — Commonsissa ei ole näistä yhtään kelvollista tiedostoa.
+   * HYLÄTYT: Cavazzin "Istorica Descrittione" -kuparipiirrokset
+   * (1600-luvun karikatyyrinen eurooppalainen kuvasto afrikkalaisista),
+   * "Queen Nzinga 1657" ja "Recueil. Portraits de la reine de Matamba"
+   * (extmetadatan Artist tyhjä), "Lusona 1–7" (Unknown author),
+   * "Kuduro Tarian" (esittää italialaista suihkulähdettä),
+   * "Le pavillon national de lAngola" (vuoden 2012 arkkitehtuuri-
+   * biennaali, ei 2013 palkittu taidepaviljonki), "Kizomba dancers by
+   * Debarshi Ray" (tunnistettavat kasvot eurooppalaisella
+   * tanssilattialla), "Cervejacuca" (kaupallinen olutpullo),
+   * "Funge" ja "Fuba e fumbua" (puoliksi syödyt annokset käytettyine
+   * ruokailuvälineineen).
+   *
+   * TUNNISTETTAVAT KASVOT: ainoa ihmishahmon sisältävä kuva on Luandan
+   * Njinga-patsas, jossa hahmo ON jutun aihe — sama linja kuin Kenian
+   * lehden juoksijakuvissa.
+   */
+  AGO: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Maan nimi on kuninkaan arvonimi, jonka portugalilaiset ymmärsivät '
+          + 'väärin päin: ngola oli Ndongon hallitsija, ei hänen maansa. Siitä '
+          + 'valtakunnasta on jäljellä nimi, jalanjäljet kalliossa ja kuningatar, jota '
+          + 'ei unohdettu.',
+      nostot: [
+        {
+          otsikko: 'Arvonimi, josta tuli maan nimi',
+          aika: '1535–1671',
+          tiedosto: '1770 Bonne (coloured excerpt).png',
+          teksti: 'Angolan nimi ei ole koskaan tarkoittanut maata. Kwanzan ja Lucalan '
+              + 'jokien välisellä ylängöllä oli Ndongon kuningaskunta, jonka '
+              + 'hallitsijan arvonimi oli ngola, ja portugalilaiset alkoivat kutsua '
+              + 'koko seutua sen mukaan: Reino de Angola esiintyy jo Paulo Dias de '
+              + 'Novaisin vuoden 1571 valtakirjassa, ja Kongon kuninkaan arvonimien '
+              + 'joukossa Angola oli mainittu jo 1535. Ndongo oli tarkkaan järjestetty '
+              + 'valtio. Pääkaupungissa kabasassa asui tiheimmillään 50 000 ihmistä, '
+              + 'alueita hallitsivat sobat, ja kuninkaan tärkein neuvonantaja tendala '
+              + 'valittiin yleensä orjuutettujen joukosta.',
+          selite: 'Ote Bonnen vuoden 1770 Länsi-Afrikan kartasta; kuningaskuntien '
+            + 'alueet on väritetty jälkikäteen. Kartta nimeää Loangon ja Kongon sekä '
+            + 'Kongon pääkaupungin São Salvadorin.',
+          lahde: 'Nerika, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kuningatar, joka teki saattajastaan tuolin',
+          aika: 'n. 1583–1663',
+          tiedosto: 'Nzingambande.jpg',
+          teksti: 'Njinga sai nimensä siitä, että napanuora oli syntyessä kiertynyt '
+              + 'kaulan ympärille: kimbundun kujinga tarkoittaa kiertämistä. Isä antoi '
+              + 'hänelle sotilaskoulutuksen ja taistelukirveen, ndongolaisten soturien '
+              + 'perinteisen aseen, ja lähetyssaarnaajat opettivat lukemaan portugalia. '
+              + 'Vuonna 1622 hän neuvotteli Luandassa veljensä lähettiläänä: '
+              + 'portugalilaisille oli tuotu tuolit, hänelle vain matto. Njingan '
+              + 'saattaja asettui silloin itse tuoliksi, ja kuningatar puhui '
+              + 'kuvernöörille kasvotusten. Veroa hän ei luvannut — sitä maksavat vain '
+              + 'valloitetut. Kaksi vuotta myöhemmin hän nousi Ndongon valtaistuimelle '
+              + 'ja hallitsi neljäkymmentä vuotta.',
+          selite: 'Njinga Mbanden patsas Luandassa. Jalustan teksti nimittää hänet '
+            + 'Ndongon ja Matamban hallitsijaksi.',
+          lahde: 'Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Raha, joka poimittiin meren pohjasta',
+          aika: '1500–1800-luku',
+          teksti: 'Kongon kuningaskunnan raha ei ollut metallia vaan simpukkaa. Luandan '
+              + 'saaren rannoilta poimittiin pienen Olivella nana -kotilon kuoria, '
+              + 'joita sanottiin nzimbuiksi tai zimboiksi, ja niitä kelpuutettiin '
+              + 'maksuvälineeksi pohjoisessa Beninin kuningaskuntaan asti. Benguelassa '
+              + 'käytettiin toista kotiloa: Achatina monetarian kuori leikattiin '
+              + 'renkaaksi, jonka keskellä oli reikä. Eurooppalaisille kuljetus oli '
+              + 'kultakaivos, sillä kuoret olivat Afrikassa paljon arvokkaampia kuin '
+              + 'siellä mistä ne haettiin, ja voittojen kerrotaan yltäneen viiteensataan '
+              + 'prosenttiin. Lopulta tuonti kasvoi niin suureksi, että inflaatio söi '
+              + 'rahan arvon.',
+        },
+        {
+          otsikko: 'Kalliot, joissa on kuningattaren jalanjäljet',
+          aika: '1671',
+          tiedosto: 'Pungo Andongo, Malange, Angola2.JPG',
+          teksti: 'Malanjen maakunnassa savannista kohoaa joukko miljoonia vuosia '
+              + 'vanhoja jättikallioita, Pedras Negras de Pungo Andongo. Kallioihin on '
+              + 'hakattu jalanjälkiä, ja perimätieto sanoo niitä Ndongon ja Matamban '
+              + 'hallitsijan Ana de Sousa Gingan jäljiksi. Kivien keskellä on '
+              + 'Pungo-Andongon kylä, joka oli kuningaskunnan viimeinen pääkaupunki: '
+              + 'vuonna 1671 portugalilaiset piirittivät ja valtasivat sen, orjuuttivat '
+              + 'suuren osan asukkaista ja lopettivat valtakunnan. Voiton jälkeen '
+              + 'rakennetun linnoituksen rauniot seisovat yhä kylässä samojen kallioiden '
+              + 'keskellä.',
+          selite: 'Yksi Pungo Andongon läntisen ryhmän jättikallioista Malanjen '
+            + 'maakunnassa. Muodostuma on Cacuson ylätasangon jatke.',
+          lahde: 'Paulo César Santos, Wikimedia Commons (CC0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Angola on kolme maata päällekkäin: rannikolla ei sada käytännössä '
+          + 'lainkaan, ylängöllä turve pidättää enemmän vettä kuin moni järvi, ja '
+          + 'niiden välissä maa putoaa kilometrin alaspäin yhtenä jyrkänteenä.',
+      nostot: [
+        {
+          otsikko: 'Kaksi lehteä, jotka eivät kuole',
+          tiedosto: 'Welwitschia in the Namibe desert.JPG',
+          teksti: 'Itävaltalainen kasvitieteilijä Friedrich Welwitsch löysi 1859 Angolan '
+              + 'aavikolta kasvin, jonka äärellä hän kirjoitti voineensa vain polvistua '
+              + 'ja tuijottaa sitä, puoliksi peläten että kosketus paljastaisi sen '
+              + 'mielikuvituksen tuotteeksi. Welwitschia mirabilis kasvattaa koko '
+              + 'elämänsä aikana vain kaksi lehteä, jotka jatkavat kasvuaan vuosisadasta '
+              + 'toiseen, repeytyvät tuulessa nauhoiksi ja voivat yltää neljään metriin. '
+              + 'Vanhimmat yksilöt saattavat olla kaksituhatta vuotta vanhoja. Sadetta '
+              + 'rannikolla ei tule juuri lainkaan, joten kasvi juo pohjavettä ja '
+              + 'merisumua. Afrikaansiksi se on tweeblaarkanniedood: kaksi lehteä, ei '
+              + 'voi kuolla.',
+          selite: 'Welwitschia Namiben aavikolla Angolan puolella. Laji kasvaa tuhannen '
+            + 'kilometrin kaistaleella Angolan ja Namibian rannikkoa.',
+          lahde: 'Paulo César Santos, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Suo, joka juottaa Kalaharin',
+          tiedosto: 'Cuito and Okavango (2018).jpg',
+          teksti: 'Okavangon suisto on Botswanassa, mutta sen vesi on Angolan. Joki on '
+              + 'Angolassa Cubango, Namibiassa Kavango ja Botswanassa Okavango; se '
+              + 'lähtee 1 300 metristä hiekkaisilta ylängöiltä eikä laske koskaan '
+              + 'mereen. Vuonna 2015 alkanut tutkimushanke paikansi 2023 alkulähteen: '
+              + 'paksun turvemaan, jota luchazin kielellä sanotaan nimellä Lisima Lya '
+              + 'Mwono, elämän lähde. Turve on paikoin yli kolme ja puoli metriä syvää '
+              + 'ja pidättää arviolta 423 kuutiokilometriä vettä, yli 95 prosenttia koko '
+              + 'altaan vedestä. Tammikuun sateet ehtivät suistoon vasta kesällä, '
+              + 'keskellä Botswanan kuivinta aikaa.',
+          selite: 'Ilmakuva Cuiton ja Okavangon yhtymäkohdasta vuodelta 2018. Cuito on '
+            + 'suiston tärkein sivuhaara.',
+          lahde: 'Hp.Baumeler, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Halkeama, josta näkee kymmenentuhatta neliökilometriä',
+          tiedosto: 'Tundavala Gap.jpg',
+          teksti: 'Lubangosta on kahdeksantoista kilometriä paikkaan, jossa maa loppuu '
+              + 'kesken. Tundavalan halkeama on kanjoni Serra da Leban jyrkänteessä: '
+              + 'reuna on yli 2 200 metrissä, ja sen alla aukeaa tasanko tuhat metriä '
+              + 'alempana. Näköalapaikalta katse kantaa kymmenentuhannen neliökilometrin '
+              + 'yli Moçâmedesin suuntaan. Jyrkänne on osa eteläisen Afrikan suurta '
+              + 'jyrkännettä ja samalla Huílan ja Namiben maakuntien luonnollinen raja. '
+              + 'Nimi tulee nyanekan sanasta Ntandavala, joka merkitsee muun muassa '
+              + 'aukkoa ja kahden reunan väliin jäänyttä tilaa. Kulttuurimaisemaksi '
+              + 'halkeama julistettiin 21. elokuuta 2012.',
+          selite: 'Tundavalan kanjoni Serra da Leban vuoristossa. Jyrkänne on Humpatan '
+            + 'ylätasangon länsilaita.',
+          lahde: 'tim kubacki, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Yö, jona niemimaasta tuli saari',
+          teksti: 'Namiben rannikolla oli kalastajakylä São Martinho dos Tigres ja sen '
+              + 'takana kapea kannas, joka piti kylän kiinni mantereessa. Kannaksen yli '
+              + 'kulki vesijohto. Neljäntenätoista maaliskuuta 1962 meri mursi kannaksen '
+              + 'läpi: aamuun mennessä Península dos Tigres oli Ilha dos Tigres, Angolan '
+              + 'suurin saari, yhdeksänkymmentäkahdeksan neliökilometriä hiekkaa ilman '
+              + 'juomavettä. Kylä tyhjeni, ja myöhemmin hylättiin myös Kunene-joen '
+              + 'suulla ollut pumppuasema. Molemmista tuli aavekaupunkeja, joita aavikko '
+              + 'ottaa vähitellen takaisin.',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Angolalaisen aterian pohja on aina sama: kulhollinen puuroa, jonka '
+          + 'viereen tulee pata. Vasta puuron väristä näkee, ollaanko pohjoisessa vai '
+          + 'etelässä.',
+      nostot: [
+        {
+          otsikko: 'Harmaa pohjoisessa, keltainen etelässä',
+          tiedosto: 'Moamba traditional dish in Luanda.JPG',
+          teksti: 'Funge on angolalaisen aterian perusta, ja sen väri kertoo '
+              + 'maantieteen. Pohjois-Angolassa funge de bombo keitetään '
+              + 'maniokkijauhosta, ja siitä tulee hyytelömäistä ja harmaata; etelässä '
+              + 'sama puuro tehdään maissijauhosta, jolloin se on keltaista ja '
+              + 'muistuttaa polentaa — silloin sen nimi on pirão. Jauho on kummassakin '
+              + 'tapauksessa fubaa, ja samasta jauhosta tehdään Brasiliassa angu. Puuro '
+              + 'itsessään on mieto mutta täyttävä; maku tulee padasta tai tulisesta '
+              + 'gindungosta, jossa on chiliä, valkosipulia ja sipulia. Fungea syödään '
+              + 'sormin: pieni pallo pyöräytetään kämmenellä ja kastetaan kastikkeeseen.',
+          selite: 'Luandalainen lautasellinen: keskellä valkoinen funge, ympärillä kanaa '
+            + 'palmuöljykastikkeessa, okraa, banaania ja villipinaattia.',
+          lahde: 'Rui Gabriel Correia, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kansallisruoka, jolla on kaksi ehdokasta',
+          tiedosto: 'Muamba.jpg',
+          teksti: 'Kun angolalaiselta kysyy kansallisruokaa, vastaus on joko funge tai '
+              + 'moamba de galinha — molempia on pidetty siinä asemassa. Moamba de '
+              + 'galinha on kanaa, joka haudutetaan palmuhedelmätahnassa okran, '
+              + 'valkosipulin ja punaisen palmuöljyn kanssa ja tarjotaan riisin ja '
+              + 'fungen kanssa; palmuöljy antaa padalle sen värin. Maapähkinöistä '
+              + 'tehdään sama ruoka toisin: moamba de ginguba korvaa palmutahnan '
+              + 'maapähkinäkastikkeella. Sama ruokalaji on kansallisruoka myös Kongon '
+              + 'molemmin puolin ja Gabonissa, jossa se on nimeltään poulet nyembwe.',
+          selite: 'Moamba de galinha savipadassa. Punainen palmuöljy antaa kastikkeelle '
+            + 'sen värin ja tuoksun.',
+          lahde: 'Adriao, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Kalulu ladotaan kerroksiin',
+          tiedosto: 'Calulu.jpg',
+          teksti: 'Kalulu tehdään kahdesta kalasta yhtä aikaa: pannuun ladotaan '
+              + 'vuorotellen kerros kuivattua ja kerros tuoretta kalaa, ja väliin '
+              + 'tomaattia, valkosipulia, okraa, bataattia, pinaattia ja palmuöljyä. '
+              + 'Haudutus tehdään keskilämmöllä, ja lautaselle tulee fungea ja '
+              + 'palmuöljypapuja. Nimen alkuperästä kiistellään. Angolassa bakongot '
+              + 'sanoivat caluluksi sitä annosta, jonka naiset panivat aterian '
+              + 'päätteeksi sivuun aviomiehilleen, ja monet kielentutkijat pitävät tätä '
+              + 'sanan selityksenä; toiset johtavat sen arawakista. Sukulaiset ovat joka '
+              + 'tapauksessa kaukana: Jamaikan callaloo ja Brasilian caruru.',
+          selite: 'Kalakalulu, joka on Angolan lisäksi myös São Tomén ja Príncipen '
+            + 'ruokalaji. Oikeassa yläkulmassa fungea.',
+          lahde: 'elingunnur, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Baobabin hedelmästä jäätelöä',
+          tiedosto: 'Cocada amarela.jpg',
+          teksti: 'Aterian makea pää on Angolassa portugalilaisen ja afrikkalaisen '
+              + 'keittiön sekoitus. Cocada amarela on keltainen kookosvanukas, jossa on '
+              + 'sokeria, kookosraastetta, munankeltuaisia ja jauhettua kanelia; sama '
+              + 'jälkiruoka tunnetaan Mosambikissa, mutta Brasilian samanniminen '
+              + 'makeinen on aivan eri asia. Mukua on baobabin kuivattu hedelmä, ja '
+              + 'siitä tehdään usein jäätelöä. Maapähkinä tulee jälkiruokiinkin: doce de '
+              + 'ginguba on pähkinäkarkkia ja pé-de-moleque pähkinän ja karamellin '
+              + 'sekoitus. Etelä-Angolassa juodaan kissanguaa, alkoholitonta '
+              + 'maissijauhojuomaa, jolla on sijansa myös parannusrituaaleissa.',
+          selite: 'Cocada amarela tarjoiluvalmiina, päällä jauhettua kanelia.',
+          lahde: 'Mysticgabian, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä jauhosta eteläisessä Angolassa tavallisempi pirão-puuro '
+            + 'keitetään?',
+        vaihtoehdot: [
+          'Maniokkijauhosta',
+          'Riisijauhosta',
+          'Durrajauhosta',
+          'Maissijauhosta',
+        ],
+        oikea: 3,
+        fakta: 'Pohjoisessa tavallisempi funge de bombo tehdään maniokista ja on '
+            + 'harmaata; maissijauhosta keitetty pirão on keltaista.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Angolasta on lähtenyt kolmesti musiikki, joka on jäänyt muualle: '
+          + 'soittojousi Brasiliaan, semba ja kizomba Lissabonin tanssisaleihin ja '
+          + 'kuduro sinne, mistä sitä ei osattu odottaa.',
+      nostot: [
+        {
+          otsikko: 'Jousi, joka lähti Brasiliaan',
+          tiedosto: 'Berimbau 2010 - 4331674127 .jpg',
+          teksti: 'Brasilian berimbau on angolalainen soitin, ja sen nimikin on '
+              + 'lainattu: kimbundun mbirimbau. Soittimessa on yksi kieli ja '
+              + 'kalebassikaikupohja, ja sitä soitetaan kepillä sekä kolikolla tai '
+              + 'kivellä, jolla kieltä painetaan sävelen vaihtamiseksi. Musikologi '
+              + 'Gerhard Kubikin mukaan berimbau ja lounaisangolalainen mbulumbumba ovat '
+              + 'identtiset rakenteeltaan, soittotavaltaan, viritykseltään ja monelta '
+              + 'peruskuvioltaan. Soittojousi ei voi olla lähtöisin muualta: sitä ei '
+              + 'käytä yksikään alkuperäisamerikkalainen eikä eurooppalainen kansa. '
+              + 'Capoeiran säestykseen berimbau ilmestyi Bahiassa vasta 1900-luvun '
+              + 'alussa ja syrjäytti vähitellen rummun.',
+          selite: 'Viisi berimbauta seinällä. Kalebassi toimii kaikupohjana, ja soinnin '
+            + 'korkeutta muutetaan kolikolla tai kivellä.',
+          lahde: 'Jean Marconi, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kotibileistä syntyi semba',
+          teksti: 'Vuonna 1947 joukko nuoria miehiä kokoontui Luandassa Manuel dos '
+              + 'Passosin kotiin ja perusti yhtyeen Ngola Ritmos. He lauloivat '
+              + 'kimbunduksi aikana, jolloin siirtomaahallinto ei sitä suosinut: Liceu '
+              + 'Vieira Dias soitti kitaraa, muut rumpuja ja akasiakepeistä tehtyjä '
+              + 'helistimiä. Pariskuntien tanssima massemba oli kansanhuvia, mutta '
+              + 'yhtyeen kitaroissa siitä tuli semba, jonka nimi tarkoittaa navan '
+              + 'kosketusta. Sembassa kerrotaan arjen tarinoita nokkelin sanakääntein, '
+              + 'ja sitä soitetaan yhtä lailla hautajaisissa kuin juhlissa. Liceu '
+              + 'pidätettiin 1959 ja karkotettiin Kap Verden Tarrafaliin; hän palasi '
+              + 'vasta kymmenen vuoden kuluttua.',
+        },
+        {
+          otsikko: 'Juoksija, joka kuljetti viestejä',
+          teksti: 'José Adelino Barceló de Carvalho aloitti laulamisen '
+              + 'viisitoistavuotiaana, mutta lähti Angolasta yleisurheilijana ja nousi '
+              + 'Portugalin neljänsadan metrin ennätysmieheksi Benfican riveissä. '
+              + 'Urheilijan asema antoi liikkumavapauden, jota harvalla oli, ja hän '
+              + 'käytti sen nimellä Bonga Kuenda: viestejä kulki maanpaossa olevien ja '
+              + 'kotiin jääneiden välillä. Kun turvallisuuspoliisi tajusi juoksijan ja '
+              + 'viestinviejän olevan sama mies, hän pakeni Rotterdamiin ja levytti '
+              + 'siellä 1972 ensimmäisen levynsä Angola 72. Sen sanoituksista annettiin '
+              + 'Angolassa pidätysmääräys. Nimellä Bonga hän on julkaissut yli '
+              + 'kolmekymmentä levyä.',
+        },
+        {
+          otsikko: 'Van Damme, humalainen tanssi ja Fruity Loops',
+          teksti: 'Kuduro syntyi Luandassa 1980-luvun lopulla, kun tuottajat sekoittivat '
+              + 'afrikkalaista lyömäsoitinta karibialaiseen socaan ja zoukiin sekä '
+              + 'eurooppalaiseen houseen ja technoon; ensin tyyliä sanottiin batidaksi, '
+              + 'biitiksi. Tony Amado kertoo keksineensä tanssin nähtyään Jean-Claude '
+              + 'Van Dammen tanssivan humalaista kohtausta vuoden 1989 elokuvassa '
+              + 'Kickboxer — tanssi syntyi siis ennen musiikkia. Ensimmäiset kappaleet '
+              + 'tehtiin Euroopasta tuoduilla sekvenssereillä, joiden pieni muisti '
+              + 'selittää lyhyet luupit. Kun tietokoneet yleistyivät ja Fruity Loops '
+              + 'levisi kopioina, kuduro karkasi musseque-kaupunginosiin ja sieltä '
+              + 'maailmalle.',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Angolan kuvataide on vanhinta ja uusinta yhtä aikaa: kalliopiirroksia '
+          + 'aavikon yksittäisvuorilla, hiekkaan piirrettyä geometriaa — ja Venetsian '
+          + 'biennaalin Kultainen leijona, jonka maan ensimmäinen paviljonki voitti '
+          + '2013 ensimmäisenä afrikkalaisena.',
+      nostot: [
+        {
+          otsikko: 'Pyhä kukkula, jonka ikää ei osata sanoa',
+          teksti: 'Namiben maakunnassa Virein kunnassa on neljä kalliotaidekohdetta '
+              + 'kilometrin säteellä toisistaan: Tchitundu-Hulu. Nimi tulkitaan taivaan '
+              + 'kukkulaksi, sielujen kukkulaksi tai pyhäksi kukkulaksi. Isompi kohde '
+              + 'sai 1973 lisänimen mumule, mies, ja pienempi mucai, nainen. Mumule '
+              + 'peittää 726 metriä korkean yksittäisvuoren rinteet, ja huipun '
+              + 'kalliosuojassa on yli 180 maalausta, enimmäkseen punaisella ja '
+              + 'valkoisella. Kuviot ovat pääosin geometrisia, samankeskisiä ympyröitä '
+              + 'ja viivoja, ja ne on tehty kiveä lävistämällä tai hiomalla. Ikä on yhä '
+              + 'auki: kaivausaineisto viittaa ajanlaskun edelliseen vuosituhanteen, '
+              + 'pigmenttinäytteet seuraavaan.',
+        },
+        {
+          otsikko: 'Yksi viiva, joka ei nouse hiekasta',
+          teksti: 'Itä-Angolan chokwet ja luchazit piirtävät hiekkaan kuvioita, joita '
+              + 'sanotaan nimellä lusona. Piirtäjä tasoittaa maan, painaa siihen '
+              + 'tasavälisen pisteverkon ja vetää sitten yhden yhtenäisen viivan '
+              + 'pisteiden lomitse. Pisteet ovat puita, ihmisiä tai eläimiä, viiva on '
+              + 'polku, joki tai aita, ja valmis kuvio toimii muistin apuvälineenä: '
+              + 'siihen on sidottu sananlasku, satu tai arvoitus. Kuvioista 80 '
+              + 'prosenttia on symmetrisiä ja 60 prosenttia piirrettävissä yhdellä '
+              + 'viivalla. Tutkijat päättelevät, että piirtäjät tunsivat säännön, jonka '
+              + 'mukaan sivumitoiltaan jaoton suorakaide tuottaa aina yhden viivan '
+              + 'kuvion.',
+        },
+        {
+          otsikko: 'Naamio, joka tanssii naiseutta',
+          tiedosto: 'Angola, tchokwe, maschera muana pwo, xx sec..JPG',
+          teksti: 'Chokwe-veistotaide on Keski-Afrikan kerätyimpiä, ja sen tunnetuin '
+              + 'muoto on pwo-naamio, jota käytetään naiseuteen ja hedelmällisyyteen '
+              + 'liittyvissä naamiaistansseissa. Aineksia ovat puu, raffia, kupari ja '
+              + 'messinki, helmet ja luonnonpigmentit. Samasta työpajasta tulevat '
+              + 'esi-isähahmot, nuuska-astiat ja päällikönistuimet, joiden malli on '
+              + 'otettu varhaisista portugalilaisista huonekaluista mutta jotka on '
+              + 'veistetty täyteen chokwe-elämän kohtauksia. Perinne laajeni '
+              + '1800-luvulla, kun chokwet vaurastuivat metsästyksellä ja '
+              + 'norsunluukaupalla sen jälkeen, kun Portugali kielsi orjakaupan '
+              + 'Angolassa 1830-luvulla.',
+          selite: 'Chokwelaisten muana pwo -naamio 1900-luvulta: otsassa kaiverrettu '
+            + 'kuvio ja ympärillä kuiduista tehty päähine.',
+          lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Metsästäjä, joka sai rannerenkaan',
+          tiedosto: 'Angola, chokwe, re ed eroe culturale chibinda ilunga, xix secolo.jpg',
+          teksti: 'Chokwe-veistosten toistuvin hahmo on Chibinda Ilunga, luba-ruhtinas, '
+              + 'joka perimätiedon mukaan nai lundahallitsijan tyttären Lueji '
+              + 'A’Nkonden. Isä oli antanut valtaa merkitsevän rukan-rannerenkaan '
+              + 'tyttärelleen poikiensa ohi, ja veljet lähtivät maanpakoon. Chibinda toi '
+              + 'mukanaan luba-metsästystaidot ja hallintotavat, ja kun Lueji sairastui, '
+              + 'hän luovutti renkaan miehelleen. Veistoksissa Chibinda tunnetaan '
+              + 'komeasta hiuslaitteesta, lääkesarvesta ja sauvasta. Suurimman kokoelman '
+              + 'näitä kokosi timanttiyhtiön perustama Dundon museo; sodan aikana '
+              + 'teoksia katosi, ja osa on sittemmin jäljitetty ja palautettu.',
+          selite: 'Chokwelainen Chibinda Ilunga -veistos 1800-luvulta: komea hiuslaite, '
+            + 'kaksi sauvaa ja rinnalla riippuva lääkesarvi.',
+          lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+    },
+  ],
 };

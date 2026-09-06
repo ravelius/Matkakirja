@@ -158,6 +158,9 @@ const SALLITUT = [
   // ja sama etuliite kattaa sekä tanskan- että grönlanninkielisen
   // osaston (/da/… ja /kl/…).
   'https://knr.gl/',
+  // Angolan uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä, ilman www-etuliitettä.
+  'https://correiokianda.info/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

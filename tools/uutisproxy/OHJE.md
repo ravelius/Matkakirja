@@ -223,6 +223,17 @@
 > lainkaan; perustelut ovat js/packs/uutislahteet.js:n GRL-kommentissa.
 > Julkaisu Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Angola):** sallittuihin lisättiin
+> correiokianda.info (maalehti AGO, testattu 6.9.2026: syötteessä
+> yksitoista juttua ja tuorein samalta päivältä, artikkelisivun
+> `<article>`-lohkosta jäsentyy kahdeksantoista yli 60 merkin kappaletta
+> ja `og:image` löytyy). Osoitteessa EI ole www-etuliitettä. Angolan
+> suurimmat lehdet eivät kelvanneet: Jornal de Angola ja ANGOP eivät
+> tarjoa RSS:ää lainkaan, Angola24Horas, Club-K ja Platina Line ovat
+> botti-eston takana ja Mercadon artikkelisivuilta puuttuu
+> `<article>`; perustelut ovat js/packs/uutislahteet.js:n
+> AGO-kommentissa. Julkaisu Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,
