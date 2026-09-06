@@ -46077,4 +46077,438 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * LIBERIA (LBR) — Afrikan laudan maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-liberia.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA: Liberiassa ei ole kaupunkilehteä
+   * (Kap Palmasilla ei ole KULTTUURI_KATEGORIAT-lohkoa), mutta kartalla
+   * on paljon. maastokohteet-lbr.js kattaa Mount Wuteven, Atlantin,
+   * Cavallan, Providence Islandin (vuoden 1822 asutus ja Ducorin
+   * sopimus), Sapon kansallispuiston, Yekepan, Harperin (Marylandin
+   * tasavalta ja maan nimen alkuperä), Robertsportin, Buchananin,
+   * Gbarngan ja Bopolun; skandaalit.js Firestonen kumisopimuksen 1926
+   * ja Kansainliiton Christyn raportin 1930; elaintakyt.js
+   * kääpiövirtahevon. Maalehti EI toista niitä: luonto-aihetta ei ole
+   * lainkaan, historia alkaa vasta vuoden 1847 julistuksesta, eikä
+   * kumi- tai rautamalmitaloutta kerrota uudestaan. Kru-merimiehet ovat
+   * maalehden oma aihe — kartta kertoo paikoista, lehti ihmisistä.
+   *
+   * HERKÄT AIHEET: vuodesta 1980 alkava vallankaappaus- ja
+   * sisällissotahistoria on jätetty pois (M3:n Myanmar-linja), samoin
+   * nykypolitiikka; sodat mainitaan vain siltä osin kuin ne selittävät
+   * hipco-sukupolven taustan. Sande-seurasta kerrotaan naamio
+   * taide-esineenä, ei vihkimysrituaalin yksityiskohtia. Dan-kansasta
+   * käytetään nimeä Dan, koska en-Wikipedia sanoo liberialaisen
+   * liikanimen gio olevan halventava (bassaksi "orja") — nosto kertoo
+   * senkin ääneen.
+   *
+   * KUVAT: 11 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin. YHDEKSÄN NOSTOA JÄI
+   * KUVATTOMAKSI, koska Liberia on Commonsissa ohut: Martha Ann
+   * Ricksistä on neljä kuvaa ja kaikki alle 1200 px, vai-kirjoituksesta
+   * on vain pieniä skannauksia ja SVG:itä, eikä Blydenistä, Bai T.
+   * Mooresta, Miatta Fahnbullehista tai kru-merimiehistä löydy
+   * kelvollista tiedostoa lainkaan. Kohteet on kirjattu kuvaputken
+   * tilauslistaan. HYLÄTYT: "Bundu-masker – Nationaal Museum van
+   * Wereldculturen" (extmetadatan Artist on "Unknown author"),
+   * "Sowei mask, Mende – Glenbow Museum" ja "Masque Bundu Mende –
+   * Musée de la Compagnie des Indes" (näyttelytekstit kuvassa),
+   * "LIBERIAN NATIONAL FLAG - panoramio" (seinämaalauksessa on väärä
+   * määrä raitoja), "Gio performance, Gwealey" (kyläkuva, jossa
+   * tunnistettavia kasvoja, eikä naamiota näy).
+   *
+   * TUNNISTETTAVAT KASVOT: mukana on vain Takun J, joka ON jutun aihe —
+   * sama linja kuin Kenian Kipchoge-kuvissa.
+   */
+  LBR: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Liberia julistautui tasavallaksi 1847, kun muuta mannerta vasta '
+          + 'jaettiin Euroopassa — ja sen tunnetuin vientituote on yhä lippu, jota '
+          + 'käyttävät toisten maiden laivat.',
+      nostot: [
+        {
+          otsikko: 'Kauppias, joka vannoi valan tammikuussa',
+          aika: '1809–1876',
+          tiedosto: 'Joseph Jenkins Roberts.jpg',
+          teksti: 'Joseph Jenkins Roberts syntyi vapaana Norfolkissa Virginiassa 1809 ja '
+              + 'purjehti helmikuussa 1829 Harriet-laivalla siirtokuntaan äitinsä, viiden '
+              + 'sisaruksensa, vaimonsa ja lapsensa kanssa. Vaimo ja lapsi kuolivat '
+              + 'ensimmäisen vuoden aikana, kuten moni muukin tulokas. '
+              + 'Roberts kävi kauppaa palmutuotteilla, punapuulla ja norsunluulla, oli '
+              + '1833 ylisheriffi ja nousi 1841 siirtokunnan ensimmäiseksi '
+              + 'afroamerikkalaiseksi kuvernööriksi. Kansanäänestyksen jälkeen yksitoista '
+              + 'edustajaa allekirjoitti itsenäisyysjulistuksen 26. heinäkuuta 1847, ja '
+              + 'Roberts vannoi presidentin valan tammikuussa 1848. Britannia tunnusti '
+              + 'maan ensimmäisenä, Yhdysvallat vasta 1862.',
+          selite: 'Roberts johti Liberiaa kahdesti, 1848–1856 ja 1872–1876, ja oli '
+            + 'ensimmäinen afrikkalaista syntyperää oleva mies maan johdossa.',
+          lahde: 'Augustus Washington / Rufus Anson, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Seitsemän naista ompeli valtion tunnuksen',
+          aika: '1847',
+          tiedosto: 'Cover of pamphlet, Liberia, 1847-1893, showing flag of Liberia LCCN94509915.jpg',
+          teksti: 'Kuvernööri Roberts pyysi 10. heinäkuuta 1847 kirjeellä Susannah '
+              + 'Elizabeth Lewisiä kokoamaan komitean uuden valtion lippua varten. '
+              + 'Seitsemän naista suunnitteli ja ompeli sen käsin: yksitoista punaista ja '
+              + 'valkoista raitaa, yksi jokaista julistuksen allekirjoittajaa kohti, '
+              + 'sininen neliö Afrikan mantereen merkiksi ja siihen valkoinen tähti, '
+              + 'joka kertoo mantereen ensimmäisestä itsenäisestä tasavallasta. Lippu '
+              + 'hyväksyttiin 24. elokuuta 1847, ja Lewis piti Monroviassa juhlapuheen. '
+              + 'Päivästä tuli kansallinen juhlapäivä 1915, ja vuoden 2022 viidensadan '
+              + 'dollarin seteliin painettiin kuva komitean naisista työnsä ääressä.',
+          selite: 'Liberian lippu on kaiverrettu vuoden 1893 esitteen kanteen; raitoja '
+            + 'on yksitoista, ja ensimmäinen ja viimeinen ovat punaisia.',
+          lahde: 'Library of Congress (PPOC), Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Miehet, jotka neuvottelivat työnsä ulapalla',
+          aika: '1790–1924',
+          teksti: 'Kru-kansan miehet purjehtivat Länsi-Afrikan rannikkoa 1790-luvulta '
+              + 'alkaen vapaina merimiehinä, ja suullinen perinne pitää tiukasti kiinni '
+              + 'siitä, ettei heitä orjuutettu. Erottautumisen merkiksi he tatuoivat '
+              + 'otsaansa ja nenänselkäänsä indigonsinisen juovan. Työ sovittiin merellä: '
+              + 'miehistöt soutivat kanooteilla jopa kymmenen mailin päähän vastaan '
+              + 'tulevaa laivaa, ja päämies esitti laatikosta aiemmat työtodistuksensa. '
+              + 'Britannian laivastossa krumiehiä palveli 1820-luvulta vuoteen 1924, ja '
+              + 'Etelä-Afrikan Simon\'s Townissa on parikymmentä hautaa, joiden kivissä '
+              + 'lukevat laivoilla annetut nimet: Tom Ropeman, Bottle of Beer, Will '
+              + 'Cockroach.',
+          selite: 'Krumiehet purjehtivat vieraiden laivoissa vapaina merimiehinä ja '
+            + 'palasivat kotirannikolle työjaksojen välissä.',
+        },
+        {
+          otsikko: 'Lippu, jota vuokrataan maailman laivoille',
+          aika: '1948–',
+          tiedosto: 'Navío Chem Altamira, Kiel, Alemania, 2019-08-30, DD 29.jpg',
+          teksti: 'Liberian avoin laivarekisteri perustettiin 1948, ja sen takana oli '
+              + 'Edward Stettinius, Rooseveltin sota-ajan ulkoministeri. Yhtiörakenne oli '
+              + 'suora: neljännes tuloista Liberian valtiolle, kymmenesosa maan '
+              + 'sosiaaliohjelmiin, loput Stettiniuksen yhtiölle. Kreikkalainen '
+              + 'laivanvarustaja Stavros Niarchos rekisteröi ensimmäisen aluksen, '
+              + 'World Peacen, 11. maaliskuuta 1949. Kahdeksassatoista vuodessa Liberia '
+              + 'ohitti Britannian maailman suurimpana rekisterinä. Lipun alla purjehtii '
+              + 'arviolta 1 700 ulkomaisessa omistuksessa olevaa alusta, ja Panama, '
+              + 'Liberia ja Marshallinsaaret kantavat yhdessä noin puolet maailman '
+              + 'rahtikapasiteetista.',
+          selite: 'Liberian rekisteri on maailman toiseksi suurin heti Panaman jälkeen, '
+            + 'ja sitä hoitaa yhtiö Yhdysvaltain Virginiassa.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Liberian lipun yksitoista raitaa merkitsevät?',
+        vaihtoehdot: [
+          'Yhtätoista alkuperäiskansaa',
+          'Julistuksen allekirjoittajia',
+          'Yhtätoista siirtolaislaivaa',
+          'Perustettuja siirtokuntia',
+        ],
+        oikea: 1,
+        fakta: 'Sininen neliö on Afrikan manner ja valkoinen tähti mantereen ensimmäinen '
+            + 'itsenäinen tasavalta.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Liberiassa ateria tarkoittaa riisiä ja kaikki muu on sen päälle '
+          + 'kaadettavaa — ja kaksi kasvia, mauste ja kahvipuu, ovat vieneet maan nimen '
+          + 'maailmalle.',
+      nostot: [
+        {
+          otsikko: 'Liemi, jota sanotaan keitoksi',
+          tiedosto: 'A prepared dish of palm butter soup.jpg',
+          teksti: 'Riisi tarjoillaan joko kuivana lihan tai kalan kanssa tai niin, että '
+              + 'päälle kaadetaan pata, jota sanotaan keitoksi vaikka se on paksua. '
+              + 'Palmuvoiliemi keitetään öljypalmun hedelmälihasta, gbassajama '
+              + 'survotuista kassavanlehdistä punaisessa palmuöljyliemessä, ja potato '
+              + 'greens tehdään bataatin lehdistä. Lorman ruoka torborgee kypsentää '
+              + 'afrikanmunakoisot käyneessä palmuöljyssä, ja maku jää tarkoituksella '
+              + 'kitkeräksi. Kala on tärkein eläinproteiini: vuonna 1997 mitattuna sen '
+              + 'osuus oli Ylä-Guinean maissa 30–80 prosenttia. Riisistä jauhetaan myös '
+              + 'leipää, country brehiä.',
+          selite: 'Palmuvoiliemi saa punaisen värinsä öljypalmun hedelmälihasta, ja se '
+            + 'tarjoillaan riisin kanssa.',
+          lahde: 'Foundation Digital Schools Liberia, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kassava survotaan palloksi',
+          tiedosto: 'GB Bowl.jpg',
+          teksti: 'Kassavan juuri ei kelpaa pöytään sellaisenaan, joten se survotaan: '
+              + 'dumboy keitetystä juuresta, fufu kuivatusta. Tulos on kimmoisa pallo, '
+              + 'josta revitään sormin pala ja kastetaan se liemeen. Koillis-Liberian oma '
+              + 'muunnos on glea-gbar, jota sanotaan lyhyesti GB:ksi ja joka tarjoillaan '
+              + 'tulisen sekalihakeiton kanssa. Fufun voi tehdä myös banaanista tai '
+              + 'taarosta, ja taaron juuria eli eddoita syödään sellaisenaankin. Sama '
+              + 'ruokalaji tunnetaan eri nimillä pitkin Länsi-Afrikkaa.',
+          selite: 'GB eli glea-gbar on koillisen oma survottu kassavaruoka, joka '
+            + 'tarjoillaan mausteisen sekalihakeiton kanssa.',
+          lahde: 'Foundation Digital Schools Liberia, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Mauste, joka antoi rannikolle nimen',
+          aika: '1461–',
+          tiedosto: 'Gousse de poivre de Guinée ou de maniguette ou de graine de paradis ou (ou encore atakoun au Bénin).jpg',
+          teksti: 'Portugalilaiset saapuivat rannikolle 1461 ja nimesivät sen Costa da '
+              + 'Pimentaksi, pippurirannikoksi; myöhemmin nimi kääntyi muotoon Grain '
+              + 'Coast, jyvärannikko. Kyse oli maniguetista, inkiväärin sukuisesta '
+              + 'kasvista, jonka viiden sentin palossa on kymmeniä punaruskeita siemeniä. '
+              + 'Maku on pistävä kuin mustapippurissa mutta sitrusmainen. Kuningas '
+              + 'Alfonso V myönsi 1469 Fernão Gomesille yksinoikeuden Guineanlahden '
+              + 'kauppaan sadantuhannen realin vuosimaksusta ja lupauksesta tutkia 160 '
+              + 'kilometriä uutta rannikkoa vuodessa. Keskiajan Euroopassa jyvät '
+              + 'korvasivat kalliin pippurin, ja Pariisin talousopas suositteli niitä '
+              + 'ummehtuneen viinin parantamiseen.',
+          selite: 'Paratiisinjyvien palko on viidestä seitsemään senttiä pitkä, ja se on '
+            + 'täynnä pieniä, pistävän makuisia siemeniä.',
+          lahde: 'Adoscam, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kahvipuu, joka pelasti toisten plantaasit',
+          aika: '1740–',
+          tiedosto: 'Café Libéria.jpg',
+          teksti: 'Coffea liberica kasvaa luonnonvaraisena Länsi-Afrikan metsissä, ja se '
+              + 'on kolmesta kaupallisesta kahvilajista järein: puu kohoaa parikymmentä '
+              + 'metriä, ja sato poimitaan tikkailta. Papu on epäsymmetrinen ja kärjestä '
+              + 'koukkumainen, lähes kaksi kertaa arabican painoinen; maussa on '
+              + 'jakkihedelmää. Espanjalaiset munkit veivät '
+              + 'lajin 1740-luvulla Filippiinien Lipaan, jossa siitä tuli kapeng barako. '
+              + 'Kun kahviruoste tuhosi 1800-luvun lopulla viljelmiä, liberica kesti '
+              + 'Filippiineillä kaikkia muita pidempään, ja se istutettiin hätävaraksi '
+              + 'myös Jaavalle ja Borneolle kuolleiden arabica-puiden tilalle. Osuus '
+              + 'maailman kahvista on silti alle puolitoista prosenttia.',
+          selite: 'Liberican pavut ovat kaupallisten kahvilajien suurimmat, ja niiden '
+            + 'kärjessä on lajille ominainen koukku.',
+          lahde: 'Meria z Geoian, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Liberialainen kuvataide on käytössä olevaa taidetta: naamio ratkaisee '
+          + 'riidan, tilkkutyö vie viestin kuningattarelle ja maakunnan lippu ommellaan '
+          + 'kankaasta.',
+      nostot: [
+        {
+          otsikko: 'Peitto, jota ommeltiin 25 vuotta',
+          aika: '1892',
+          teksti: 'Martha Ann Ricks syntyi orjaksi Tennesseessä noin 1817. Hänen isänsä '
+              + 'George Erskine osti perheensä vapaaksi, ja 13-vuotias tytär muutti 1830 '
+              + 'Clay-Ashlandiin. Perhe viljeli maata ja kasvatti kalkkunoita, ankkoja ja '
+              + 'lampaita; 1858 Ricks voitti palkinnon tekemistään silkkisukista. '
+              + 'Kaksikymmentäviisi vuotta hän ompeli tilkkutyötä, jonka aiheena on '
+              + 'Liberian kahvipuu: valkealle satiinille yli kolmesataa vihreää lehteä, '
+              + 'punaiset marjat ja keskellä elämänpuun runko. Lähettiläs Edward Blyden '
+              + 'järjesti 76-vuotiaalle audienssin, ja Ricks luovutti työnsä kuningatar '
+              + 'Victorialle Windsorin linnassa 16. heinäkuuta 1892. Peitto on kadoksissa.',
+          selite: 'Ricksin peiton aiheena on Liberian kahvipuu: yli kolmesataa lehteä '
+            + 'ja punaiset marjat valkealla satiinilla.',
+        },
+        {
+          otsikko: 'Maakunnan lippu on tilkkutyötä',
+          aika: '1965',
+          tiedosto: 'Flag of Grand Cape Mount County.jpg',
+          teksti: 'Presidentti William Tubman otti 29. marraskuuta 1965 käyttöön '
+              + 'yhdeksän maakuntalippua, jotta maakunnista tulisi ihmisten mielessä '
+              + 'oikeita kokonaisuuksia. Suunnittelun malli haettiin liberialaisesta '
+              + 'tilkkutyöperinteestä, ja jokaisessa lipussa on kansallislippu '
+              + 'ylänurkassa. Maakuntia on nykyään viisitoista, ja niiden liput seisovat '
+              + 'presidentinlinnan edessä renkaana kansallislipun ympärillä. Verkon '
+              + 'lippuharrastajat ovat pitäneet niitä sekavina, mutta lipputieteilijä '
+              + 'Steven A. Knowlton on huomauttanut, että arvostelu unohtaa lippujen '
+              + 'asiayhteyden ja sen, että ne on tehty kankaasta ommellen eikä '
+              + 'piirto-ohjelmalla.',
+          selite: 'Grand Cape Mountin maakuntalipussa kohoaa niemen kukkula, jolle on '
+            + 'pystytetty kansallislippu.',
+          lahde: 'LiberiaForEver, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Naamio, joka tulee sovittelemaan',
+          tiedosto: 'Dean Gle Mask - Dan people, Liberia or Cote d\'Ivoire, late 19th or early 20th century, wood, pigment - Brooklyn Museum - Brooklyn, NY - DSC08596.JPG',
+          teksti: 'Dan-kansan tärkein taidemuoto on naamio, ja veistäjät tekevät myös '
+              + 'kuvioituja puulusikoita. Miesten seurat kutsuvat naamion avulla metsän '
+              + 'suojelushenget paikalle, ja naamiokulkue on se elin, joka sovittelee '
+              + 'riidat, panee säännöt täytäntöön ja ojentaa väärintekijän: naamion takaa '
+              + 'puhuu henki, ei naapuri. Pojat käyvät vihkimyksensä aikana metsäkoulun, '
+              + 'jota sanotaan boniksi. Rauhanteolla on oma seuransa, leopardin mukaan '
+              + 'nimetty Gor, joka liitti kylät ensimmäistä kertaa yhteen liittoon. '
+              + 'Liberiassa Danista on käytetty myös nimeä gio, joka on bassaa ja '
+              + 'tarkoittaa orjaa — sitä pidetään loukkaavana.',
+          selite: 'Deangle-naamio on veistetty Liberian tai Norsunluurannikon puolella '
+            + '1800-luvun lopulla tai 1900-luvun alussa.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Naamio, jota tanssivat naiset',
+          tiedosto: 'The Childrens Museum of Indianapolis - Sande helmet mask.jpg',
+          teksti: 'Länsi-Afrikassa naamio on lähes aina miesten, mutta Liberian ja Sierra '
+              + 'Leonen rajaseudulla alueen lukuisimmat ja tärkeimmät puunaamiot tehdään '
+              + 'naisten Sande-seuralle. Kypärämallinen sowo, jota sanotaan myös '
+              + 'bunduksi, peittää koko pään, ja sen alla on musta rafiapuku. Naamio '
+              + 'esiintyy tyttöjen aikuistumisjuhlissa, mutta myös arvovieraita '
+              + 'vastaanotettaessa ja päälliköiden hautajaisissa. Mende-kansan mukaan '
+              + 'hyvässä naamiossa on korkea otsa eli viisaus, alas luodut silmät eli '
+              + 'vaatimattomuus, kiiltävän musta pinta eli salaisuus ja kaulassa '
+              + 'renkaat, jotka muistuttavat hengen noususta vedestä. Silmät veistetään '
+              + 'ihmistä suuremmiksi, suu ja nenä pienemmiksi.',
+          selite: 'Jokaisella kypäränaamiolla on oma henkilönimensä, joka vastaa '
+            + 'paikallisen Sande-osaston henkeä.',
+          lahde: 'Mende-veistäjä / The Children\'s Museum of Indianapolis, Wikimedia '
+            + 'Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Liberian merimiehet toivat kitaran Länsi-Afrikkaan, ja siitä kasvoi '
+          + 'koko rannikon populaarimusiikki; kotona rap puhuu nykyään sitä kieltä, jota '
+          + 'kadulla puhutaan.',
+      nostot: [
+        {
+          otsikko: 'Kitara, joka tuli laivan mukana',
+          aika: '1800-luvun loppu–1928',
+          teksti: 'Kru-merimiehet toivat portugalilaisilta laivoilta kitaran kotiin ja '
+              + 'alkoivat soittaa sitä kuin paikallista luuttua tai harppua: kahdella '
+              + 'sormella näppäillen, synkopoidussa neljäjakoisessa poljennossa. '
+              + 'Sävelmiin sekoittui trinidadilaista calypsoa, ja tuloksena oli kevyt, '
+              + 'keinuva tyyli. Nimen se sai juomasta: soittajat esiintyivät niissä '
+              + 'ulkoilmakapakoissa, joissa tarjoiltiin palmuviiniä. 1920-luvulla eräs '
+              + 'krumies opetti tyylin ghanalaiselle Kwame Asarelle, jonka Kumasi Trio '
+              + 'levytti sen Lontoossa 1928. Siitä kasvoi highlife, ja palmuviinimusiikkia '
+              + 'pidetään yhtenä Länsi-Afrikan ensimmäisistä populaarimusiikin muodoista.',
+          selite: 'Palmuviinimusiikkia soitetaan akustisella kitaralla pienessä '
+            + 'kokoonpanossa, ja sanat kertovat arjesta.',
+        },
+        {
+          otsikko: 'Sana, jota yritettiin vaihtaa kansallislaulusta',
+          aika: '1847–1978',
+          teksti: 'All Hail, Liberia, Hail! sai sanansa Daniel Bashiel Warnerilta, josta '
+              + 'tuli myöhemmin maan kolmas presidentti, ja sävelensä Olmstead Lucalta. '
+              + 'Laulusta tuli kansallislaulu heti itsenäistymisvuonna 1847. Heinäkuussa '
+              + '1974 parlamentti valtuutti presidentti William Tolbertin asettamaan '
+              + 'komission, joka kävisi kansallissymbolit läpi ja poistaisi niistä '
+              + 'erottavat ainekset; jäseniä nimitettiin 51 ja puheenjohtajaksi McKinley '
+              + 'Alfred Deshield. Komissio esitti raportissaan 1978, että laulun sana '
+              + 'benighted, pimeydessä elävä, vaihdettaisiin sanaan undaunted, '
+              + 'lannistumaton. Muutosta ei koskaan tehty, eikä lippuun komissio '
+              + 'ehdottanut mitään muutosta.',
+          selite: 'Kansallislaulun sanat kirjoitti Daniel Bashiel Warner, josta tuli '
+            + 'myöhemmin Liberian kolmas presidentti.',
+        },
+        {
+          otsikko: 'Laulaja, joka lähti saadakseen laulaa',
+          aika: '1968–',
+          teksti: 'Miatta Fahnbulleh kasvoi Monroviassa diplomaattiperheessä ja halusi '
+              + 'laulajaksi aikana, jolloin naisen esiintymistä julkisilla lavoilla '
+              + 'paheksuttiin kotimaassa. Hän kävi lukion Sierra Leonessa, opiskeli '
+              + 'Keniassa ja muutti 1968 Yhdysvaltoihin lukemaan journalismia; sieltä tie '
+              + 'vei Harlemin Apollo-teatterin lavalle ja Negro Ensemble Companyn '
+              + 'tuotantoihin. Vuonna 1973 hän palasi laulamaan presidentin '
+              + 'virkaanastujaisiin, kiersi 1976 Yhdysvaltoja Hugh '
+              + 'Masekelan kanssa ja esiintyi 1977 Lagosin FESTAC-festivaalilla. Levyt '
+              + 'In Kokolioko ja Miatta ilmestyivät 1979. Vuonna 2005 hän perusti '
+              + 'tyttökoulun, joka jakaa yli 180 stipendiä.',
+          selite: 'Miatta Fahnbulleh lauloi Harlemin Apollo-teatterissa ja kiersi '
+            + 'Yhdysvaltoja Hugh Masekelan kanssa 1976.',
+        },
+        {
+          otsikko: 'Rap, joka puhuu kolokwaa',
+          aika: '1980-luku–',
+          tiedosto: 'Hipco artist Takun J.jpg',
+          teksti: 'Hipco — puhekielessä pelkkä co — on liberialainen rapin laji, jonka '
+              + 'nimen loppuosa tulee kolokwasta, maan omasta puhutusta englannista. '
+              + 'Tyyli syntyi 1980-luvulla ja jatkui sotavuosien läpi, mutta nimen se sai '
+              + 'vasta 2002–2003; suosio alkoi 2004, ja siitä tuli maan kuunnelluin '
+              + 'musiikki. Sanoitukset puuttuvat yhteiskunnan epäkohtiin, ja jo kielen '
+              + 'valinta on kannanotto. Vuonna 2014 Unicef teetti hipco-artisteilla '
+              + 'ebolan torjunnasta kappaleita, jotka soivat radiossa ympäri maan, ja '
+              + '2020 seitsemän artistia levytti käsienpesulaulun Sanitize. Maan '
+              + 'musiikkigaalassa on oma hipco-sarjansa.',
+          selite: 'Takun J on hipcon uranuurtajia; hänen esikoisalbuminsa The Time '
+            + 'ilmestyi 2007 ja toinen albumi My Way 2012.',
+          lahde: 'Jefferson Krua, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Liberiassa kirjoitetaan kahdella keksinnöllä: 1830-luvulla itse '
+          + 'kehitetyllä tavukirjaimistolla ja englannilla, joka on matkan varrella '
+          + 'muuttunut omaksi kielekseen.',
+      nostot: [
+        {
+          otsikko: 'Kirjaimisto, joka keksittiin kylässä',
+          aika: '1830-luku',
+          teksti: 'Momolu Duwalu Bukele Jondun kylästä nykyisessä Grand Cape Mountin '
+              + 'maakunnassa kehitti 1830-luvun alussa vai-kielelle oman '
+              + 'tavukirjaimiston: yksi merkki on konsonantti ja vokaali yhdessä, ja '
+              + 'rivit luetaan vasemmalta oikealle. Se on N’Kon ohella Länsi-Afrikan '
+              + 'onnistuneimpia omia kirjoitusjärjestelmiä sekä käyttäjien että '
+              + 'kirjallisuuden määrällä mitattuna. Bukelen serkku kirjoitti noin 1845 '
+              + 'viisikymmensivuisen käsikirjoituksen, joka tunnetaan Roran kirjana. '
+              + 'Merkit ovat yksinkertaistuneet sukupolvi sukupolvelta, ja Liberian '
+              + 'yliopisto täydensi merkistön 1960-luvulla kattamaan kaikki kielen '
+              + 'tavut. Unicode-standardiin vai päätyi 2008.',
+          selite: 'Vai-kirjaimiston merkki vastaa aina yhtä tavua, ja merkistössä on '
+            + 'satoja merkkejä yhden aakkoston sijaan.',
+        },
+        {
+          otsikko: 'Pienoisromaani, jota luetaan yhä kouluissa',
+          aika: '1968',
+          teksti: 'Bai T. Moore syntyi 1916 Dimehin gola-kylässä, opiskeli maataloutta '
+              + 'Virginiassa ja palasi 1941 virkamieheksi. Hän keräsi kansantarinoita, '
+              + 'toimitti 1947 runoantologian Echoes from the Valley ja kuului 1962 '
+              + 'ryhmään, joka yhdenmukaisti vai-kirjaimiston Liberian yliopistossa. '
+              + 'Vuonna 1968 ilmestyi tositapahtumiin perustuva pienoisromaani Murder in '
+              + 'the Cassava Patch, jossa mustasukkainen mies surmaa nuoren naisen; '
+              + 'kirjaa on luettu kouluissa siitä asti. Romaanissa The Money Doubler '
+              + 'huijari lupaa kaksinkertaistaa rahat afrikkalaisella tieteellä, ja koko '
+              + 'vuoropuhelu on liberianenglantia. Moore perusti maan kansallisen '
+              + 'kulttuurikeskuksen.',
+          selite: 'Bai T. Moore keräsi kansantarinoita virkatyönsä ohessa ja kirjoitti '
+            + 'maan luetuimman romaanin.',
+        },
+        {
+          otsikko: 'Kolme seminaaria sanoi ei',
+          aika: '1850–1912',
+          teksti: 'Edward Wilmot Blyden syntyi 1832 Saint Thomasilla Tanskan '
+              + 'Länsi-Intiassa ja purjehti keväällä 1850 Yhdysvaltoihin opiskelemaan '
+              + 'papiksi. Kolme teologista oppilaitosta kieltäytyi ottamasta häntä '
+              + 'ihonvärin takia, ja hän lähti samana vuonna Liberiaan. Siellä hän '
+              + 'aloitti maan ainoan sanomalehden Liberia Heraldin kirjeenvaihtajana, '
+              + 'toimi sen päätoimittajana 1855–1856, opetti 1861 alkaen kreikkaa ja '
+              + 'latinaa Liberia Collegessa ja johti oppilaitosta 1880–1884. Blyden '
+              + 'edusti maataan lähettiläänä Britanniassa ja Ranskassa, ja hänen '
+              + 'panafrikkalaisia kirjoituksiaan lukivat Marcus Garvey, George Padmore '
+              + 'ja Kwame Nkrumah. Padmore antoi tyttärelleen nimen Blyden.',
+          selite: 'Blyden opetti kreikkaa ja latinaa Liberia Collegessa ja johti '
+            + 'oppilaitosta neljä vuotta.',
+        },
+        {
+          otsikko: 'Kieli, jolla ei ole yhtään kirjaa',
+          teksti: 'Liberiassa puhutaan englantia neljällä eri tavalla. Koulujen ja '
+              + 'uutistenlukijoiden yleiskielen rinnalla elävät siirtolaisten '
+              + 'jälkeläisten oma englanti, merimiesten kru-pidgin ja kaikkein '
+              + 'laajimmin kolokwa, jonka nimi tulee sanasta colloquial. Kolokwa '
+              + 'polveutuu 1700-luvun rannikkopidginistä, ja sen äänteet tulevat '
+              + 'kru-kielistä, bassasta, klaosta ja vaista. Lauseen loppuun liitetään '
+              + 'usein pieni o, joka korostaa asian merkitystä tai oikaisee '
+              + 'väärinkäsityksen. Washington Postin mukaan kolokwa on lähes kokonaan '
+              + 'puhuttu kieli: sillä ei ole julkaistu yhtään kokonaista kirjaa. '
+              + 'Merimiesten pidgin on sammumassa, koska se eli laivatyön mukana.',
+          selite: 'Kolokwaa puhutaan Monrovian kaduilla ja markkinoilla, mutta koulussa '
+            + 'ja uutisissa käytetään yleiskieltä.',
+        },
+      ],
+    },
+  ],
 };

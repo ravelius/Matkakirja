@@ -858,4 +858,28 @@ export const UUTISLAHTEET = {
     kieli: 'en',
     syote: 'https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml&category=10416',
   },
+  /*
+   * Daily Observer on Monrovian vanhin ja levikiltään suurin
+   * päivälehti. Testattu 6.9.2026: syötteessä viisikymmentä juttua, ja
+   * artikkelisivun [itemprop="articleBody"]-lohkosta jäsentyy kolme yli
+   * 60 merkin kappaletta sekä og:image.
+   *
+   * SYÖTE ON HAKUOSOITE, koska lehden julkaisujärjestelmä (BLOX)
+   * tarjoaa RSS:n vain sitä kautta: /feed vastaa 301:llä eikä worker
+   * seuraa uudelleenohjauksia.
+   *
+   * Testattu ja hylätty: Liberian Investigator (syöte kymmenen juttua,
+   * mutta artikkelisivun ensimmäisessä <article>-lohkossa ei ole
+   * yhtään yli 60 merkin kappaletta), The New Dawn (syöte aukesi
+   * kerran ja katkesi sen jälkeen toistuvasti kesken haun) ja New
+   * Public Trust (301). FrontPage Africa
+   * (frontpageafricaonline.com/feed/) läpäisi molemmat testit ja on
+   * käyttökelpoinen varalähde, mutta sen syötteessä on vain kymmenen
+   * juttua Daily Observerin viittäkymmentä vastaan.
+   */
+  LBR: {
+    nimi: 'Daily Observer',
+    kieli: 'en',
+    syote: 'https://www.liberianobserver.com/search/?f=rss&t=article&l=50',
+  },
 };

@@ -135,6 +135,10 @@ const SALLITUT = [
   // Singaporen uutislähde (maalehti 6.9.2026): CNA:n syöte on
   // /api/v1/rss-outbound-feed ja artikkelisivut samalla isäntänimellä.
   'https://www.channelnewsasia.com/',
+  // Liberian uutislähde (maalehti 6.9.2026): Daily Observerin syöte on
+  // hakuosoite (/search/?f=rss...) ja artikkelisivut ovat samalla
+  // isäntänimellä, joten yksi etuliite riittää.
+  'https://www.liberianobserver.com/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

@@ -1757,9 +1757,23 @@ export const OMAT_ARTIKKELIT = {
       + 'Kamerunvuori savuaa merellä taustalla.',
   },
   Liberia: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // LBR) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Liberia on Afrikan vanhin tasavalta: vapautettujen '
       + 'orjien 1847 perustama valtio, jonka nimi tarkoittaa '
-      + 'vapauden maata.',
+      + 'vapauden maata. Eurooppalaiset tunsivat rannikon '
+      + 'pippurirannikkona, koska sieltä ostettiin paratiisinjyviä, '
+      + 'ja sisämaassa alkaa Ylä-Guinean sademetsävyöhyke. Maassa '
+      + 'puhutaan yli kahtakymmentä kieltä, ja vai-kansa kehitti '
+      + 'omalleen 1830-luvulla tavukirjaimiston, jota käytetään yhä. '
+      + 'Kru-merimiehet purjehtivat vuosisatoja koko Länsi-Afrikan '
+      + 'rannikkoa ja toivat mukanaan kitaran, josta kasvoi '
+      + 'palmuviinimusiikki ja sen jälkeen highlife. Riisi on ateria '
+      + 'ja kaikki muu sen päälle kaadettavaa, ja kahvilaji Coffea '
+      + 'liberica sai nimensä täältä. Lipussa on yksitoista raitaa ja '
+      + 'yksi valkoinen tähti, ja sen alla purjehtii maailman '
+      + 'toiseksi suurin kauppalaivasto.',
     artikkeli: 'Liberia sijaitsee Länsi-Afrikan rannikolla '
       + 'sademetsävyöhykkeellä. Yhdysvalloista palanneet vapautetut '
       + 'orjat perustivat sen tasavallaksi 1847 — Afrikan '

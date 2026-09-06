@@ -151,6 +151,19 @@
 > varalähteeksi js/packs/uutislahteet.js:n SGP-kommenttiin. Julkaisu
 > Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Liberia):** sallittuihin lisättiin
+> www.liberianobserver.com (maalehti LBR, testattu 6.9.2026: syötteessä
+> viisikymmentä juttua, ja artikkelisivun
+> `[itemprop="articleBody"]`-lohkosta jäsentyy leipäteksti ja
+> `og:image` löytyy). Daily Observerin syöte on hakuosoite
+> `https://www.liberianobserver.com/search/?f=rss&t=article&l=50`,
+> koska lehden julkaisujärjestelmä tarjoaa RSS:n vain sen kautta ja
+> `/feed` vastaa 301:llä — worker ei seuraa uudelleenohjauksia.
+> FrontPage Africa läpäisi samat testit ja jäi varalähteeksi; Liberian
+> Investigator ja The New Dawn hylättiin, perustelut ovat
+> js/packs/uutislahteet.js:n LBR-kommentissa. Julkaisu
+> Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,
