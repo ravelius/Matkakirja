@@ -105,7 +105,15 @@ import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 // Rekisteri myös kokonaisena: sähketehtävän sisältöhakemisto kerää
 // maan kaupunkien virroista täkyjen ja nostojen otsikot.
 import { FOKUSVIRRAT, fokusvirtaKaupungille } from './packs/fokusvirrat.js';
-import { livianPaljastusKesken } from './livia.js';
+import { livianKuplanLukuaika, livianPaljastusKesken } from './livia.js';
+/*
+ * PULUN ÄÄNI ATEENASSA JA SOFIASSA (Raamattu: PULUN ÄÄNI VAIN ATEENA
+ * JA SOFIA ENSIN). Kupla tulee ensin, ääni seuraa sitä — sama sopimus
+ * kuin avauksessa (js/livia.js naytaRepliikki). Muut kaupungit ovat
+ * hiljaisia ilman ehtoja kutsupaikoissa: livianKaupunkiIndeksi
+ * palauttaa niille null.
+ */
+import { livianKaupunkiAanitetty, soitaLivianKaupunkiAani } from './liviapuhe.js';
 import { luennanLoppuun } from './luenta.js';
 import { natiiviVastaus } from './natiivi.js';
 // Sähketehtävän vapaa vastaus lainaa pöllöltä kaksi asiaa: odotusrivin
@@ -675,6 +683,29 @@ const SAAPUMISKUPLAN_PALJASTUSVALI_MS = 500;
 const SAAPUMISKUPLAN_PALJASTUSKATTO_MS = 90_000;
 
 /**
+ * ÄÄNITETYN REPLIIKIN KUPLARYTMI.
+ *
+ * Osiin jaettu puheenvuoro (js/pollo.js naytaPuheenvuoro) etenee
+ * oletuksena sanamäärään sidotulla lukurytmillä, joka on selvästi
+ * nopeampi kuin pulun puhe. Kun repliikki on äänitetty, osat odottavat
+ * kuplan LUKUAIKAA — sama sääntö kuin avauksessa (js/livia.js
+ * livianKuplanLukuaika), jonka vakiot on mitoitettu juuri puheen
+ * mittaan. Kuplat pinoutuvat eivätkä korvaa toisiaan, joten koko
+ * repliikki jää ruudulle siksi aikaa kun se puhutaan.
+ *
+ * Kaupunki, jota ei ole äänitetty, saa tyhjän asetusolion — rytmi
+ * pysyy ennallaan eikä kutsupaikkaan tarvita ehtoa.
+ *
+ * @param {string} kaupunkiId kaupungin tunnus
+ * @param {string} kentta pakkauksen kentän nimi
+ * @returns {object} lisäasetukset polloPuheenvuorolle
+ */
+function livianPuherytmi(kaupunkiId, kentta) {
+  return livianKaupunkiAanitetty(kaupunkiId, kentta)
+    ? { viive: livianKuplanLukuaika } : {};
+}
+
+/**
  * Livian saapumispuheenvuoro kuplana, kerran per saapuminen.
  *
  * SISÄLTÖ VALITAAN TÄSSÄ, EI KUTSUPAIKASSA: fokuskaupungin maadoitus
@@ -764,9 +795,20 @@ export function fokusvirtaSaapumiskupla(ui, city) {
        * ehto vartioi myös jatko-osia — kaupungista lähtenyt pelaaja ei
        * kuule tämän kaupungin puheenvuoron loppua.
        */
-      polloPuheenvuoro(jaaPuheenvuoroksi(teksti), {
+      /*
+       * ÄÄNI VAIN MAADOITUKSESTA. Kaupunkien omia saapumisrepliikkejä
+       * (LIVIAN_SAAPUMISET) ei ole äänitetty, ja äänitettyjä
+       * maadoituksia on toistaiseksi kaksi (Ateena ja Sofia) — muualla
+       * kupla toimii ilman ääntä täsmälleen kuten ennen.
+       */
+      const kentta = maadoitus ? 'maadoitus' : '';
+      const nakyi = polloPuheenvuoro(jaaPuheenvuoroksi(teksti), {
         jatkuuko: () => !ui.dead && ui.game?.cityOf?.()?.id === city.id,
+        ...livianPuherytmi(city.id, kentta),
       });
+      // Kupla ensin, ääni sen jälkeen — sama järjestys kuin avauksessa
+      // (js/livia.js naytaRepliikki).
+      if (nakyi) soitaLivianKaupunkiAani(ui, city.id, kentta);
     }), SAAPUMISKUPLAN_TAUKO_MS);
   };
   const luenta = luennanLoppuun(ui);
@@ -2239,7 +2281,7 @@ function sahkeAvain(ui, city) {
  * KERRAN PER TEHTÄVÄ PER ISTUNTO. Kortti piirretään uudelleen joka
  * ohilyönnistä, eikä sama saate saa toistua joka kerta.
  */
-function sahkeSaateKuplaan(ui, avain, teksti) {
+function sahkeSaateKuplaan(ui, city, avain, teksti, kentta) {
   if (!teksti) return false;
   ui.sahkeSaateSanottu ??= new Set();
   if (ui.sahkeSaateSanottu.has(avain)) return false;
@@ -2252,7 +2294,13 @@ function sahkeSaateKuplaan(ui, avain, teksti) {
   clearTimeout(ui.sahkeSaateAjastin);
   ui.sahkeSaateAjastin = setTimeout(() => {
     if (ui.dead) return;
-    polloPuheenvuoro(jaaPuheenvuoroksi(teksti), { jatkuuko: () => !ui.dead });
+    const nakyi = polloPuheenvuoro(jaaPuheenvuoroksi(teksti), {
+      jatkuuko: () => !ui.dead,
+      ...livianPuherytmi(city?.id, kentta),
+    });
+    // Sofian sähkevaiheet on äänitetty (js/liviapuhe.js
+    // LIVIAN_KAUPUNKILAHTEET); muut kaupungit vaikenevat itsestään.
+    if (nakyi) soitaLivianKaupunkiAani(ui, city?.id, kentta);
   }, SAHKE_SAATE_VIIVE_MS);
   return true;
 }
@@ -2360,8 +2408,13 @@ function piirraSahkePullat(ui, city, data, kohde) {
         'sai vinkin sähkeen vastaukseen'),
       // Vinkki tulee KUPLAAN eikä kortille: se on Livian puhetta, ja
       // kuplasta se jää myös chat-historiaan (js/pollo.js).
-      jalkeen: () => polloPuheenvuoro(jaaPuheenvuoroksi(tehtava.vinkki),
-        { jatkuuko: () => !ui.dead }),
+      jalkeen: () => {
+        const nakyi = polloPuheenvuoro(jaaPuheenvuoroksi(tehtava.vinkki), {
+          jatkuuko: () => !ui.dead,
+          ...livianPuherytmi(city.id, 'vinkki'),
+        });
+        if (nakyi) soitaLivianKaupunkiAani(ui, city.id, 'vinkki');
+      },
     });
   }
 
@@ -2392,7 +2445,11 @@ function piirraSahkePullat(ui, city, data, kohde) {
       'sai suoran linkin sähkeen vastaukseen'),
     jalkeen: () => {
       if (tehtava.linkkiSaate) {
-        polloPuheenvuoro(jaaPuheenvuoroksi(tehtava.linkkiSaate), { jatkuuko: () => !ui.dead });
+        const nakyi = polloPuheenvuoro(jaaPuheenvuoroksi(tehtava.linkkiSaate), {
+          jatkuuko: () => !ui.dead,
+          ...livianPuherytmi(city.id, 'linkkiSaate'),
+        });
+        if (nakyi) soitaLivianKaupunkiAani(ui, city.id, 'linkkiSaate');
       }
       linkkiNappi();
     },
@@ -2670,8 +2727,8 @@ function piirraSahketehtava(ui, city, data, kohde) {
         valiMs: SAHKE_PALUU_RIVIVALI_MS,
       });
     // Odotusteksti on Livian puhetta: se kuuluu kuplaan kuten saatekin.
-    sahkeSaateKuplaan(ui, `${avain}:odotus`,
-      tehtava.odotus ?? 'Livia on matkalla. Se palaa kun se palaa.');
+    sahkeSaateKuplaan(ui, city, `${avain}:odotus`,
+      tehtava.odotus ?? 'Livia on matkalla. Se palaa kun se palaa.', 'odotus');
     piirraNapit(kohde, [nappi('Selvä', 'primary', () => suljeKasin(ui))]);
     return;
   }
@@ -2686,7 +2743,7 @@ function piirraSahketehtava(ui, city, data, kohde) {
    * marginaalimerkinnän asu), mutta yksikään kutsupaikka ei enää
    * aseta sitä — savuke vahtii sitä (tools/savuke-sahketehtava.mjs).
    */
-  sahkeSaateKuplaan(ui, avain, tehtava.johdanto ?? '');
+  sahkeSaateKuplaan(ui, city, avain, tehtava.johdanto ?? '', 'johdanto');
 
   const ohi = ui.sahkeOhi.get(avain) ?? 0;
   const lomake = html('div', 'fokusvirta-sahkelomake');
@@ -2896,6 +2953,14 @@ function sahkeOsui(ui, city, data) {
      * käytetään vain siellä, missä puhuu pelkkä Livia.
      */
     piirraTeksti(sisalto, [tehtava.oikein, tehtava.fakta].filter(Boolean).join('\n\n'));
+    /*
+     * KUITTAUS ON LIVIAN REPLIIKKI, VAIKKA SE ON KORTILLA. Äänite
+     * kattaa vain `oikein`-osan (js/liviapuhe.js
+     * LIVIAN_KAUPUNKILAHTEET); faktakappale on kertojan asiaa eikä
+     * sitä lueta pulun äänellä. Kortti piirtyy oikeasta vastauksesta
+     * kerran, joten ääni ei toistu.
+     */
+    soitaLivianKaupunkiAani(ui, city.id, 'oikein');
     piirraNapit(sisalto, [nappi(tehtava.lento ?? 'Anna Livian mennä', 'primary', () => {
       sfx.play('paper');
       suljeFokusvirta(ui);
@@ -2907,6 +2972,19 @@ function sahkeOsui(ui, city, data) {
 /** Ajastin, joka tuo Livian takaisin — ja aarteen mukanaan. */
 function aloitaSahkelento(ui, city, data) {
   clearTimeout(ui.sahkeLentoAjastin);
+  /*
+   * LENTO ODOTTAA KUITTAUKSEN PUHEEN LOPPUUN.
+   *
+   * Kun `oikein` on äänitetty (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET),
+   * paluukupla katkaisisi sen kesken: uusi repliikki häivyttää aina
+   * edellisen (soitaLivianAani). Odotus venytetään siksi kuplan
+   * lukuaikaan — sama sääntö kuin avauksessa (js/livia.js
+   * livianKuplanLukuaika) — mutta lento ei koskaan lyhene siitä, mitä
+   * se oli. Äänettömissä kaupungeissa tahti on entinen.
+   */
+  const lento = livianKaupunkiAanitetty(city.id, 'oikein')
+    ? Math.max(SAHKE_LENTO_MS, livianKuplanLukuaika(data.sahketehtava?.oikein ?? ''))
+    : SAHKE_LENTO_MS;
   ui.sahkeLentoAjastin = setTimeout(() => {
     if (ui.dead) return;
     // Pelaaja on voinut lähteä kaupungista tai laatta on jo käännetty
@@ -2914,10 +2992,13 @@ function aloitaSahkelento(ui, city, data) {
     if (ui.game?.cityOf?.()?.id !== city.id) return;
     if (!ui.game.tokens?.has(city.id)) return;
     const tehtava = data.sahketehtava ?? {};
-    naytaPolloKupla(ui, tehtava.paluu ?? 'Perillä oltiin. Pöllö kertoi paikan.');
+    const nakyi = naytaPolloKupla(ui, tehtava.paluu ?? 'Perillä oltiin. Pöllö kertoi paikan.');
+    // Ainoa kaupunkirepliikki, joka saa kaikuversion: Livia palaa
+    // lennolta ja aloittaa jo ilmasta (js/liviapuhe.js).
+    if (nakyi) soitaLivianKaupunkiAani(ui, city.id, 'paluu');
     clearTimeout(ui.sahkeAarreAjastin);
     ui.sahkeAarreAjastin = setTimeout(() => paljastaSahkeAarre(ui, city, data), SAHKE_PALUU_MS);
-  }, SAHKE_LENTO_MS);
+  }, lento);
 }
 
 /**

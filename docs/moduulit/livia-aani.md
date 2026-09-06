@@ -26,7 +26,8 @@ Omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti:
 | Tiedosto | Tehtävä |
 | --- | --- |
 | `js/livia.js` | repliikkien kaanoni ja kuplien ajoitus (vain päätoimittaja kirjoittaa) |
-| `js/liviapuhe.js` | tiedostonimet, soitin, kaikuversion valinta |
+| `js/liviapuhe.js` | tiedostonimet, soitin, kaikuversion valinta, kaupunkilähteet |
+| `js/fokusvirta.js` | Ateenan ja Sofian kuplat: mistä ääni lähtee |
 | `tools/generoi-pulu.mjs` | ääniehdokkaat, generointi, kaiku, manifesti, vienti |
 | `.github/workflows/generoi-pulu.yml` | ajo (avain on vain secretissä) |
 | `tests/livia-aani.test.mjs` | nimet, kaiku, manifestin muoto, kytkentä peliin |
@@ -54,11 +55,51 @@ kaanonista tekstiä. Kaanonin sanajärjestys ei siis voi muuttua
 [squawks] [breathless] [sighs] [flatly] [mutters] [casually]
 [helpfully]`.
 
+## Kaupunkikohtaiset lähteet (Ateena ja Sofia ensin)
+
+Raamattu, PULUN ÄÄNI VAIN ATEENA JA SOFIA ENSIN: puhe soi aluksi
+kahdessa kaupungissa, jotta ääni ehditään kuunnella ja hyväksyä ennen
+kuin koko repliikistö ajetaan. Lähteen nimi on **kaupungin tunnus** ja
+indeksi tulee kenttälistan järjestyksestä (`js/liviapuhe.js
+LIVIAN_KAUPUNKILAHTEET`):
+
+| Lähde | Kentät järjestyksessä | Tiedostot |
+| --- | --- | --- |
+| `ateena` | `pollo.maadoitus` | `livia-ateena-1.mp3` |
+| `sofia` | `pollo.maadoitus`, sähketehtävän `johdanto`, `vinkki`, `linkkiSaate`, `oikein`, `odotus`, `paluu` | `livia-sofia-1.mp3` … `livia-sofia-7.mp3` |
+
+Tekstit luetaan pakkauksista (`js/packs/fokusvirta-ateena.js`,
+`js/packs/fokusvirta-sofia.js`) — niitä ei kopioida työkaluun eikä
+peliin. Järjestystä ei saa muuttaa jälkikäteen: numero on
+tiedostonimessä. Uusi kenttä lisätään listan LOPPUUN.
+
+Peli soittaa nämä kutsulla `soitaLivianKaupunkiAani(ui, city.id,
+'<kenttä>')`, joka on hiljainen jokaiselle kaupungille, jota ei ole
+taulussa. Kutsupaikat ovat `js/fokusvirta.js`:ssä siellä, missä teksti
+oikeasti tulee ruudulle (kevyt kulku, `FOKUSVIRTA_KORTIT = false`):
+maadoitus `fokusvirtaSaapumiskupla`, johdanto ja odotus
+`sahkeSaateKuplaan`, vinkki ja linkkiSaate pullanapeista, oikein
+kuittauskortista ja paluu `aloitaSahkelento`:n kuplasta.
+
+**Kupla odottaa puheen loppuun.** Osiin jaettu puheenvuoro
+(`js/pollo.js naytaPuheenvuoro`) etenee oletuksena 1,8–4,2 sekunnin
+rytmillä. Äänitetty repliikki saa asetuksen `viive` ja etenee kuplan
+lukuajalla (`js/livia.js livianKuplanLukuaika`) — sama sääntö kuin
+avauksessa. Samasta syystä sähkelento (`aloitaSahkelento`) odottaa
+kuittauksen (`oikein`) lukuajan ennen paluukuplaa, jottei paluun ääni
+katkaise kuittausta kesken.
+
+Tagitaulua ei näille lähteille ole eikä vaadita: v2-malli ei lähetä
+tageja lainkaan.
+
 ## Kaiku
 
 Saapumisrepliikit (`js/liviapuhe.js LIVIAN_SAAPUMISREPLIIKIT`) ovat
-`avaus-1` (Livia lennähtää mukaan) ja `paljastus-1` (tulee sähkeen
-kanssa). Niistä tehdään ffmpegillä oma `-kaiku.mp3`, jossa kaikuinen ja
+`avaus-1` (Livia lennähtää mukaan), `paljastus-1` (tulee sähkeen
+kanssa) ja `sofia-7` (`paluu`: Livia palaa pöllön luota ja aloittaa
+raporttinsa jo ilmasta). Muut kaupunkirepliikit sanotaan pelaajan
+vieressä, joten niissä kaiulla ei olisi mitään kerrottavaa. Näistä
+kolmesta tehdään ffmpegillä oma `-kaiku.mp3`, jossa kaikuinen ja
 vaimennettu raita häipyy 1,5 sekunnissa pois ja kuiva raita nousee
 täyteen tasoon — pulu huutaa viestiä jo lentäessä ja on perillä reilun
 sekunnin kuluttua. Peli soittaa saapumisrepliikistä kaikuversion, muista
@@ -124,7 +165,8 @@ Kuiva ajo laskee jokaiselle repliikille ylityksen merkkeinä.
   Kreeta, Sisilia, Odessa, Marseille, Pariisi), 190–260 merkkiä eli
   2–3 kertaa liian pitkiä puheeksi sellaisenaan.
 - `js/fokusvirta.js` fokuskaupunkien maadoituskommentit (paketeissa
-  `js/packs/fokusvirta-<id>.js`, kenttä `liviaMaadoitus`).
+  `js/packs/fokusvirta-<id>.js`, kenttä `pollo.maadoitus`) — Ateena ja
+  Sofia on jo äänitetty, muut neljä eivät.
 - `js/pollo.js LIVIAN_MIETINNAT` — 52 odotusriviä (yleiset, vastaus,
   pitkat). Lyhyitä (30–60 merkkiä) ja arvottuja: sopisivat äänitettäviksi
   hyvin, mutta niitä on paljon.

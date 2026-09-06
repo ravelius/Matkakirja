@@ -1855,7 +1855,9 @@ test('linssin aikana puhekuplat menevät jonoon ja ohjekuplat pudotetaan', () =>
   // Puhe odottaa vuoroaan: saapumiskupla, puheenvuoro (osineen yhtenä)
   // ja onnittelu lykätään.
   assert.match(lahde, /return this\.lykkaaLinssiin\(\(\) => this\.naytaSaapumiskupla\(/);
-  assert.match(lahde, /return this\.lykkaaLinssiin\(\(\) => this\.naytaPuheenvuoro\(palat, \{ kuittaus, jatkuuko \}\)\);/);
+  // Rytmi (viive) kulkee jonoon lykätyn puheenvuoron mukana: äänitetty
+  // repliikki puhuu linssin jälkeen samalla tahdilla kuin ilman linssiä.
+  assert.match(lahde, /this\.naytaPuheenvuoro\(palat, \{ kuittaus, jatkuuko, viive \}\),/);
   assert.match(lahde, /this\.lykkaaLinssiin\(\(\) => this\.naytaOnnittelu\(/);
   // Portti on ENNEN chattiin kirjaamista: muuten virran järjestys olisi
   // eri kuin se, jossa repliikit lopulta sanotaan.
@@ -1889,9 +1891,9 @@ test('linssin oma kupla ohittaa portin — mutta vain linssin kutsumana', () => 
   assert.match(lahde, /export function polloLinssikupla\(osat, asetukset = \{\}\) \{\n\s*return Boolean\(nykyinenPollo\?\.naytaPuheenvuoro\(osat, \{ \.\.\.asetukset, linssinOma: true \}\)\);/);
   // Portti kysyy lipun kummassakin kuplafunktiossa.
   assert.match(lahde, /if \(!linssinOma && linssiEstaa\(this\.doc\)\) \{\n\s*return this\.lykkaaLinssiin\(\(\) => this\.naytaSaapumiskupla\(/);
-  assert.match(lahde, /if \(!linssinOma && linssiEstaa\(this\.doc\)\) \{\n\s*return this\.lykkaaLinssiin\(\(\) => this\.naytaPuheenvuoro\(/);
+  assert.match(lahde, /if \(!linssinOma && linssiEstaa\(this\.doc\)\) \{\n\s*return this\.lykkaaLinssiin\(\n?\s*\(\) => this\.naytaPuheenvuoro\(/);
   // Osiin jaettu puheenvuoro puhuu loppuun: lippu kulkee jatko-osiin.
-  assert.match(lahde, /this\.puheenvuoro = \{\n\s*palat, seuraava: 1, kuittaus, jatkuuko, linssinOma,\n\s*\};/);
+  assert.match(lahde, /this\.puheenvuoro = \{\n\s*palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive,\n\s*\};/);
   assert.match(lahde, /linssinOma: nyt\.linssinOma,/);
   // Muut vientifunktiot EIVÄT saa lippua: ohitus on vain linssin.
   for (const nimi of ['polloSaapumiskupla', 'polloPuheenvuoro', 'polloAvauskupla']) {
