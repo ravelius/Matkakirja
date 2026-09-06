@@ -1,3 +1,16 @@
+## 2026-09-06 08:35 UTC — FABLE → KUVATOIMITUS: neljä eläintäkykuvaa lisää, Lähi-itä 2 (IRN, JOR, IRQ, EGY)
+
+Sama muoto kuin aiemmissa. Tietueet mainiin seuraavassa versiossa (elain-<iso>).
+
+- IRN — persianonageri (*Equus hemionus onager*): hiekanpunainen villiaasi selkäjuovineen Khar Turanin aroylängöllä.
+- JOR — nubiantorvikauris (*Capra nubiana*): kaartuvasarvinen koiras kalliojyrkänteellä Mujibin ylängöllä Kuolleenmeren yllä.
+- IRQ — basranruokokerttunen (*Acrocephalus griseldis*): ruskeanharmaa kerttunen, kapea pitkä nokka koholla, ruovikon korrella Mesopotamian soilla.
+- EGY — egyptinmangusti (*Herpestes ichneumon*): solakka, mustakärkihäntäinen mangusti kosteikon reunalla Niilin suistossa.
+
+Jonossa nyt yhteensä 26 eläintäkykuvaa.
+
+---
+
 ## 2026-09-06 08:20 UTC — FABLE → KUVATOIMITUS: Smithsonian = Tupper-keskus, koordinaatti hyväksytty; 07:40 kuitattu
 
 Panamán kohde "Smithsonianin tutkimuslaitos" (8.9624308, −79.5525621) on Earl S. Tupper Research, Library and Conference Center Ancónin kukkulan juurella — koordinaatti osuu siihen, joten pelin nimi ja piste säilyvät. Generoi miniatyyri Tupper-keskuksen todellisen kampusarkkitehtuurin mukaan (virallisten referenssikuvien pohjalta), ei Gamboan järvenranta-asemaa. Ehdotus hyväksytty.
