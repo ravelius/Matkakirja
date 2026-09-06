@@ -3448,6 +3448,93 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -16.9110, etela: -16.9330, lansi: 145.7640, ita: 145.7855 },
     meri: true,
   },
+  honiara: {
+    /*
+     * POINT CRUZISTA MATANIKAUN ITÄPUOLELLE (6.9.2026). Ruutu on
+     * 2,2 × 3,3 kilometriä: kapea idästä länteen kulkeva nauha, koska
+     * kaupunki itsekin on sellainen. Honiara on rakennettu Kukum
+     * Highwayn ja rannan väliin, ja kaikki kohteet ovat kilometrin
+     * levyisellä kaistalla meren ja rinteen välissä.
+     *
+     * RUUTU ON LEVEÄMPI KUIN KORKEA, ja se on tarkoituksellista.
+     * Etelässä rinne nousee heti asumattomaksi metsäksi, joten
+     * korkeamman ruudun alaosa olisi tyhjää; idässä sen sijaan ovat
+     * katedraali ja Matanikaun silta ja lännessä Point Cruzin satama.
+     *
+     * KOHTEITA ON VIISI. Faktapohjan seitsemästä ehdokkaasta pudotettiin
+     * kaksi: Red House on pääministerin virka-asunto (ei
+     * nykypolitiikkaa) ja Lawson Taman stadionista ei löytynyt
+     * Commonsista kuvasäännöt täyttävää kuvaa (ainoat kaksi ovat
+     * vuoden 2000 haalistuneita filmikuvia väkijoukosta). Keskustan
+     * kohteet ovat lisäksi poikkeuksellisen tiiviissä: tori,
+     * keskuspankki ja kansallisarkisto ovat 126–179 metrin päässä
+     * museosta eivätkä mahdu omiksi numeroikseen (tarkistus-honiara.md,
+     * kohta I).
+     *
+     * GEOSEARCHIN VARAKOORDINAATIT KIERRETTIIN. Seitsemän eri
+     * artikkelia palauttaa saman pisteen −9,435092/159,951239 ja kuusi
+     * artikkelia kaupungin oman pisteen; kartalle otettiin vain
+     * kohteet, joilla on oma koordinaatti.
+     *
+     * meri: true. Ironbottom Sound on OSM:ssä rantaviivaa, ja ilman
+     * lippua kartan koko pohjoisreuna olisi paperin värinen.
+     *
+     * ENSIMMÄINEN RAJAUS ULOTTUI ITÄÄN ARVOON 159,9760 JA SE
+     * HYLÄTTIIN. Koeajo 6.9.2026 näytti, miksi: Matanikaun itäpuoli
+     * on kartalla lähes tyhjää rinnettä, ja kaikki viisi kohdetta
+     * puristuivat kuvan vasempaan puoliskoon. Itäraja vedettiin
+     * katedraalin taakse arvoon 159,9700.
+     */
+    rajat: { pohjoinen: -9.4270, etela: -9.4460, lansi: 159.9450, ita: 159.9700 },
+    meri: true,
+  },
+  portvila: {
+    /*
+     * VILAN SATAMA JA SEN ITÄRANTA (6.9.2026). Ruutu on
+     * 2,9 × 3,7 kilometriä ja kattaa koko kaupungin ytimen:
+     * pohjoisessa katedraali ja Kormanin stadion, keskellä
+     * Independence Park, etelässä Saralana Parkin kulttuurikeskus ja
+     * parlamentti.
+     *
+     * VANUATUN KANSALLINEN YLIOPISTO PUDOTETTIIN kartalta, vaikka
+     * faktapohja ehdotti sitä (−17,728/168,315): yliopisto
+     * perustettiin vasta 2019 ja sen kampus on lähteen omien sanojen
+     * mukaan yhä rakenteilla (tarkistus-portvila.md, kohta A), eikä
+     * Commonsista löydy siitä yhtään kuvaa nähtävyysjuttua varten.
+     * Ruudun pohjoisreuna jää siksi numeroimatta; se on hyväksytty
+     * hinta siitä, että meren täyttö toimii (ks. alla).
+     *
+     * ITÄRAJAA LAAJENNETTIIN TARKISTUKSEN JÄLKEEN arvoon 168,3400.
+     * Faktapohjan alkuperäinen ruutu päättyi arvoon 168,3300, jolloin
+     * kartalle jäi neljä kohdetta; tarkistus (tarkistus-portvila.md,
+     * kohta A2) löysi viidenneksi Kormanin stadionin
+     * (−17,733909/168,337374), joka on 2,3 kilometrin päässä
+     * lähimmästä muusta kohteesta. Stadion asettuu kuvan oikeaan
+     * laitaan (x 92,5 %); vielä idemmäs vedettyä rajausta EI voi
+     * käyttää, ks. alla.
+     *
+     * MEREN TÄYTTÖ RATKAISI RAJAUKSEN LOPULLISESTI. Koeajot 6.9.2026:
+     * rajauksella −17,7290 / 168,3420 työkalu varoitti "meri peittäisi
+     * 127 % rajauksesta" ja piirsi pelkän rantanauhan, samoin
+     * rajauksella −17,7240 / 168,3420 (125 %). Kun itäraja palautettiin
+     * arvoon 168,3400 ja pohjoisraja arvoon −17,7240, rantaviivaketju
+     * sulkeutui oikein ja satama sekä laguuni täyttyivät vedeksi.
+     *
+     * IRIRIKI JA IFIRA EIVÄT OLE KARTALLA. Molemmat saaret ovat
+     * Vilan satamassa aivan keskustan edessä, mutta en-Wikipedian
+     * koordinaatit osoittavat 3–5 kilometriä lounaaseen Mele Bayn
+     * suuntaan (tarkistus-portvila.md, kohta M). Väärää pistettä ei
+     * piirretä, ja saaret näkyvät kartalla joka tapauksessa maana.
+     *
+     * KULTTUURIKESKUS JA PARLAMENTTI OVAT 210 METRIN PÄÄSSÄ
+     * toisistaan eli niukasti yli 200 metrin säännön. Ne ovat saman
+     * puiston (Saralana Park) laidoilla ja eri juttujen aiheita.
+     *
+     * meri: true. Vilan satama ja Mele Bay ovat OSM:ssä rantaviivaa.
+     */
+    rajat: { pohjoinen: -17.7240, etela: -17.7500, lansi: 168.3050, ita: 168.3400 },
+    meri: true,
+  },
   panama: {
     /*
      * CASCO VIEJOSTA AMADORIN AALLONMURTAJALLE (6.9.2026). Ruutu on

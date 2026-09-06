@@ -40875,4 +40875,410 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * HONIARA (Opus 6.9.2026, paketti O9). Kohteet ovat kohdekartan
+   * viisi pistettä (maakartat.js: KAUPUNKIKARTAT.honiara), ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 6.9.2026
+   * (artikkelit "Solomon Islands National Museum", "Point Cruz",
+   * "Solomon Islands Parliament Building", "Holy Cross Cathedral,
+   * Honiara", "Guadalcanal American Memorial", "Honiara").
+   *
+   * EI NYKYPOLITIIKKAA EIKÄ LEVOTTOMUUKSIA. Lähdeartikkelit kertovat
+   * vuosien 1998–2003 jännitteistä, vuoden 2006 mellakoista ja
+   * vuoden 2021 levottomuuksista sekä kansallismuseon ryöstelystä;
+   * mitään näistä ei ole otettu mukaan (sama peruste kuin Suvan
+   * vallankaappauksissa).
+   *
+   * TOISEN MAAILMANSODAN OSUUS ON TAPAHTUMIA JA RAKENTEITA, EI
+   * TAISTELUKUVAUSTA (Perustuslain pilari 4). Muistomerkin kohdalla
+   * kerrotaan mitä siellä on ja miksi se on siinä; uhriluvuista
+   * käytetään vain parlamenttitalon oma peruste, koska lähteen muut
+   * luvut ovat keskenään ristiriitaisia (tarkistus-honiara.md, K).
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI: lehden nostot
+   * ovat vuoden 1873 tilanne, kaupungin nimi, keskustori, pijin,
+   * Mendañan nimet, Henderson Field, Rautapohja ja kaupungin synty
+   * 1952. Point Cruz on kartalla satamana ja parlamentti
+   * arkkitehtuurina.
+   *
+   * KUVAT tarkistettu Commonsin rajapinnasta 6.9.2026 ja katsottu
+   * silmin; yksikään tiedosto ei ole sama kuin lehden honiara-lohkossa
+   * eikä oceania-valokuvat.js:n honiara-taulussa.
+   */
+  honiara: {
+    'Salomonsaarten kansallismuseo': {
+      aika: '1969',
+      teksti: 'Salomonsaarten kansallismuseo avattiin virallisesti '
+          + 'kesäkuussa 1969. Rakennuksen rahoitti Gulbenkian-säätiö, '
+          + 'ja hankkeen järjesti Honiara Museum Association, joka '
+          + 'koostui enimmäkseen ulkomaisista siirtomaavirkamiehistä; '
+          + 'saarelaisten edustus rajoittui Solomon Dakeihin ja Silas '
+          + 'Sitaihin. Juuri tässä vaiheessa salomonsaarelaiset '
+          + 'alkoivat lahjoittaa kokoelmaan omia kulttuurisesti '
+          + 'tärkeitä esineitään. Vuonna 1972 museosta tuli valtion '
+          + 'laitos, ja se laajensi sekä tonttiaan Honiarassa että '
+          + 'toimintaansa ulkosaarille.'
+        + '\n\n'
+        + 'Museo on useiden rakennusten ryhmä, ja jokaisessa on oma '
+          + 'näyttelynsä. Kokoelmissa on arkeologiaa, vanhoja '
+          + 'maksuvälineitä, aseita, kieliaineistoa, koruja, '
+          + 'perinnemusiikkia ja -tanssia, maatalousvälineitä sekä '
+          + 'kalastusvälineitä. Museon takana olevassa '
+          + 'kulttuurikeskuksessa on kahdeksan perinteistä taloa '
+          + 'vuodelta 1981; ne edustavat maan yhdeksää provinssia. '
+          + 'Museolla on myös oma arkeologian tutkimusohjelma, ja se '
+          + 'on kaivanut muun muassa Santa Isabelilla Kian seudulla '
+          + '2010-luvulla.'
+        + '\n\n'
+        + 'Museon ja poliisiaseman välissä seisoo japanilainen 155 '
+          + 'millimetrin haupitsi, jolle amerikkalaiset sotilaat '
+          + 'antoivat lempinimen Pistol Pete. Sillä tulitettiin '
+          + 'Henderson Fieldin lentokenttää. Museo on myös pyytänyt '
+          + 'esineitään takaisin ulkomailta: vuonna 1973 se pyysi '
+          + 'Australian Museumia palauttamaan simpukkakoristeisen '
+          + 'kilven, mutta pyyntö hylättiin.',
+      kuvat: [
+        {
+          tiedosto: 'Honiara National Museum.jpg',
+          selite: 'Museon pihalla seisoo veistettyjä puupaaluja, ja '
+            + 'seinää kiertää kalojen, kilpikonnan ja ihmishahmojen '
+            + 'kuvakaista.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Point Cruz': {
+      aika: '1956',
+      teksti: 'Point Cruz on niemi keskellä Honiaraa, Tandai Highwayn '
+          + 'varrella noin neljäsosamailin päässä parlamenttitalosta '
+          + 'pohjoiseen. Ghari-kielellä paikan nimi on naho-ni-ara, '
+          + '"kohti itä- ja kaakkoispasaatituulia" — ja siitä on '
+          + 'saanut nimensä myös koko kaupunki.'
+        + '\n\n'
+        + 'Niemen satama on Salomonsaarten pääsaapumissatama. '
+          + 'Satamalaitos Solomon Islands Ports Authority perustettiin '
+          + 'lailla 4. kesäkuuta 1956, ja satama pystyy käsittelemään '
+          + 'kahdenkymmenen jalan kontteja. Vuonna 2014 se sai '
+          + 'Club of Ports -tunnustuksen Tyynenmeren alueen '
+          + 'dynaamisimpana satamana. Maaliskuussa 1959 laituriin '
+          + 'kiinnittyi kuninkaallinen jahti Britannia prinssi '
+          + 'Philipin vierailun aikana.'
+        + '\n\n'
+        + 'Niemellä toimii myös Point Cruzin purjehdusseura, jonka '
+          + 'uuden kerhotalon vihki käyttöön kommodori sir Robert '
+          + 'Foster 15. elokuuta 1964. Sisällä on muistolaatta, joka '
+          + 'kertoo Douglas Albert Munrosta — ainoasta Yhdysvaltain '
+          + 'rannikkovartioston jäsenestä, joka on saanut '
+          + 'kunniamitalin.',
+      kuvat: [
+        {
+          tiedosto: 'Honiara panorama2.jpg',
+          selite: 'Sataman edustalla on ankkurissa rahtilaivoja, ja '
+            + 'kaupunki laskeutuu kukkuloilta rantaan.',
+          lahde: 'Friars Balsam, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Parlamenttitalo: {
+      aika: '1993',
+      teksti: 'Salomonsaarten parlamenttitalo kohoaa kukkulalla '
+          + 'Hibiscus Avenuen yläpuolella. Vuosina 1978–1994 '
+          + 'parlamentti kokoontui Kalala Housessa, jossa toimii '
+          + 'nykyään ylioikeus. Uusi talo rakennettiin Yhdysvaltain '
+          + 'hallituksen viiden miljoonan dollarin lahjana, ja '
+          + 'ensimmäinen istunto pidettiin marraskuussa 1993. '
+          + 'Sisällä on yksikamarinen istuntosali, kuudensadan hengen '
+          + 'yleisölehteri, kirjasto, puhemiehen ja sihteerin huoneet '
+          + 'sekä valiokuntahuoneita — mutta ei työhuoneita '
+          + 'kansanedustajille.'
+        + '\n\n'
+        + 'Suunnittelijaksi valittiin honolululainen arkkitehtitoimisto '
+          + 'Wimberly Allison Tong & Goo. Projektiarkkitehti Michael '
+          + 'J. Batchelorin mukaan hallitus pyysi rakennusta, joka '
+          + 'olisi "olennaisesti salomonsaarelainen tyyliltään, ei '
+          + 'päälle asetettua arkkitehtuuria". Kaksikerroksinen, noin '
+          + 'kahdentuhannen neliömetrin talo on teräsrunkoinen ja '
+          + 'raudoitettua betonia, ja siinä on paljon lasia.'
+        + '\n\n'
+        + 'Katto on abstrakti versio kahdesta paikallisesta '
+          + 'kattotyylistä: kartiomainen muoto tulee Temotun '
+          + 'perinteestä ja katon poikkeuksellinen harja on ominainen '
+          + 'Guadalcanalin katoille. Huipun yksityiskohta on vain '
+          + 'Salomonsaarilla. Katossa on seitsemän pääelementtiä, yksi '
+          + 'kutakin maan seitsemää provinssia kohti. Halkaisija on '
+          + '37,1 metriä ja korkeus lakipisteessä kolmetoista metriä, '
+          + 'ja kahdeksantoista metrin matkalla katto kannattaa '
+          + 'itsensä ilman yhtäkään pilaria. Talo rakennettiin '
+          + 'Guadalcanalin taisteluissa kaatuneiden 450 '
+          + 'yhdysvaltalaissotilaan ja 1 200 merijalkaväen sotilaan '
+          + 'muistoksi, ja sen rakensi japanilainen yritys.',
+      kuvat: [
+        {
+          tiedosto: 'Police boats and parliament house Honiara.jpg',
+          selite: 'Parlamentin kartiokatto näkyy laiturille asti, ja '
+            + 'sen edessä on lehtikattoinen katos.',
+          lahde: 'Phenss, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Holy Crossin katedraali': {
+      aika: '1957 ja 1978',
+      teksti: 'Honiaran ensimmäinen katolinen katedraali pystytettiin '
+          + 'Vavayan harjanteen juurelle kukkulalle, jota kutsutaan '
+          + 'nykyään yleisesti Cathedral Hilliksi. Se oli väliaikainen '
+          + 'ratkaisu, ja se tehtiin suuresta quonset-parakista: '
+          + 'kirkko siunattiin ja avattiin yleisölle 1957. Julkisivuun '
+          + 'muurattiin tiili Salomonsaarten ensimmäisestä katolisesta '
+          + 'lähetysasemasta, joka oli rakennettu 1845.'
+        + '\n\n'
+        + 'Paikan valintaan oli oma syynsä. Sen uskottiin olevan se '
+          + 'kohta, johon Álvaro de Mendañan retkikunta pystytti '
+          + 'Salomonsaarten ensimmäisen ristin vuonna 1568.'
+        + '\n\n'
+        + 'Pysyvän katedraalin peruskivi laskettiin 1976 samalle '
+          + 'kukkulalle, ja rakennus vihittiin ja avattiin 1978. '
+          + 'Samana vuonna paavi Johannes Paavali II korotti Honiaran '
+          + 'arkkihiippakunnaksi bullalla "Laetentur insulae multae". '
+          + 'Katedraali on arkkihiippakunnan istuin.',
+      kuvat: [
+        {
+          tiedosto: 'Holy Cross Cathedral in Honiara.jpg',
+          selite: 'Kirkkosalin puinen harjakatto nousee korkealle, ja '
+            + 'penkkirivien päässä seisoo puinen risti.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Guadalcanalin muistomerkki': {
+      aika: '1992',
+      teksti: 'Guadalcanal American Memorial vihittiin 7. elokuuta '
+          + '1992, tasan viisikymmentä vuotta Red Beachin '
+          + 'maihinnousun jälkeen. Muistomerkki syntyi Robert F. '
+          + 'Reynoldsin aloitteesta American Battle Monuments '
+          + 'Commissionin ja Guadalcanal–Solomon Islands Memorial '
+          + 'Commissionin yhteistyönä, ja ABMC pitää sitä yllä. '
+          + 'Vihkiäisistä kertova teksti on kaiverrettu punaisiin '
+          + 'marmoritauluihin muistomerkin sisäpihalla.'
+        + '\n\n'
+        + 'Merkki seisoo kukkulalla Skyway Driven varrella — '
+          + 'ensimmäisellä kukkulalla, jonka amerikkalaiset joukot '
+          + 'valtasivat — Matanikaujoesta länteen. Sieltä avautuu '
+          + 'näkymä Mount Austenille ja Rautapohjan salmelle. '
+          + 'Muistomerkki on pylonin muotoinen, pohjaltaan noin '
+          + 'metrin sivultaan ja runsaat seitsemän metriä korkea, ja '
+          + 'sen neljä sivua on suunnattu neljään ilmansuuntaan, '
+          + 'joissa taisteltiin. Marmoritaulut kertovat lyhyesti '
+          + 'viidestä taistelusta ja luettelevat menetettyjen alusten '
+          + 'nimet.'
+        + '\n\n'
+        + 'Muistomerkin teksti kuuluu: "Yhdysvallat on pystyttänyt '
+          + 'tämän muistomerkin nöyränä kunnianosoituksena pojilleen '
+          + 'ja liittolaisilleen, jotka maksoivat viimeisen hinnan '
+          + 'Salomonsaarten vapauttamisesta 1942–1943." Muistotilaisuus '
+          + 'pidetään joka vuosi 7. elokuuta. Mount Austenilla on '
+          + 'japanilaisten pystyttämä muistomerkki heidän omille '
+          + 'kaatuneilleen.',
+      kuvat: [
+        {
+          tiedosto: 'Deputy Secretary Wendy Sherman at Official Ceremony at U.S. Memorial - Skyline Ridge on Guadalcanal, Solomon Islands (52271653420).jpg',
+          selite: 'Valkoseinäinen muistomerkkipiha kukkulalla, ja sen '
+            + 'takana laskeutuvat Honiaran katot ja meri.',
+          lahde: 'U.S. Department of State from United States, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * PORT VILA (Opus 6.9.2026, paketti O9). Kohteet ovat kohdekartan
+   * viisi pistettä (maakartat.js: KAUPUNKIKARTAT.portvila), ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 6.9.2026
+   * (artikkelit "Korman Stadium", "Cathédrale du Sacré-Cœur, Port
+   * Vila", "Independence Park, Port Vila", "Vanuatu Cultural Centre",
+   * "National Museum of Vanuatu", "Parliament of Vanuatu",
+   * "Port Vila", "Cyclone Pam").
+   *
+   * EI NYKYPOLITIIKKAA. Parlamentin nykyiset puolueet, puhemies ja
+   * pääministeri jätetään pois, ja Kormanin stadionin nimikkohenkilö
+   * mainitaan vain "vanuatulaisena poliitikkona"
+   * (tarkistus-portvila.md, kohta A2).
+   *
+   * INDEPENDENCE PARKIN LÄHDE ON TYNKÄ, ja se sanotaan tässä
+   * rehellisesti: en-Wikipedia kertoo puistosta vain, että se on
+   * yksi Port Vilan tärkeimmistä kriketkentistä. Puiston nimestä EI
+   * päätellä, että itsenäisyys olisi julistettu siellä — lähde ei
+   * sano niin (tarkistus-portvila.md, kohta E).
+   *
+   * KULTTUURIKESKUKSEN PERUSTAMISVUOSI 1959 on "National Museum of
+   * Vanuatu" -artikkelin leipätekstistä. Kulttuurikeskuksen oman
+   * artikkelin luokitus sanoo 1955, mutta luokitus ei ole lähde
+   * (tarkistus-portvila.md, kohta B).
+   *
+   * SYKLONI PAMIN JÄLJET NÄKYVÄT stadionin kuvassa, ja teksti
+   * kertoo sen ääneen (Raamatun linjaus 20.8.2026 tuhoutuneen
+   * kaupungin nykykuvista).
+   *
+   * KUVAT tarkistettu Commonsin rajapinnasta 6.9.2026 ja katsottu
+   * silmin; yksikään tiedosto ei ole sama kuin lehden
+   * portvila-lohkossa eikä oceania-valokuvat.js:n portvila-taulussa.
+   */
+  portvila: {
+    'Kormanin stadion': {
+      aika: '2015',
+      teksti: 'Kormanin stadion on Vanuatun kansallisstadion ja '
+          + 'maajoukkueen kotikenttä. Katsomoon mahtuu 6 500 katsojaa. '
+          + 'Stadion on nimetty vanuatulaisen poliitikon mukaan, ja '
+          + 'samassa urheilukeskuksessa on myös Vanuatun '
+          + 'kriketkenttä.'
+        + '\n\n'
+        + 'Kuva stadionista on otettu 14. maaliskuuta 2015, päivä sen '
+          + 'jälkeen kun luokan viisi sykloni Pam kulki Port Vilan '
+          + 'ohi. Myrskyn silmänseinämä meni juuri kaupungin '
+          + 'itäpuolelta, ja vahingot olivat valtavat: koko '
+          + 'pääkaupungissa oli sen jälkeen toiminnassa enää yksi '
+          + 'matkapuhelinmasto, ja sähköverkko oli tuhoutunut.'
+        + '\n\n'
+        + 'Vanuatu on syklonien tiellä joka vuosi, ja urheilukentät '
+          + 'ovat myrskyn jälkeen usein ensimmäisiä kokoontumis- ja '
+          + 'jakelupaikkoja. Sama stadion oli 1987 sykloni Uman ja '
+          + '2015 Pamin jälkeen jälleenrakennustyön näyttämö.',
+      kuvat: [
+        {
+          tiedosto: 'Korman Stadium (Mar. 14, 2015).jpg',
+          selite: 'Stadion sykloni Pamin jälkeisenä päivänä: puut ovat '
+            + 'lehdettömiä ja tie täynnä oksia.',
+          lahde: 'Julie Lyn from Washington, DC, USA, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän sydämen katedraali': {
+      aika: 'nykyaika',
+      teksti: 'Cathédrale du Sacré-Cœur on Port Vilan moderni '
+          + 'katolinen katedraali ja Port Vilan hiippakunnan istuin. '
+          + 'Nimi on ranskaksi, kuten monet muutkin kaupungin nimet: '
+          + 'ranska on englannin ja bislaman ohella yksi Vanuatun '
+          + 'virallisista kielistä.'
+        + '\n\n'
+        + 'Kristinusko on Vanuatun valtauskonto, ja siihen kuuluu yli '
+          + 'yhdeksänkymmentä prosenttia väestöstä. Suurin kirkkokunta '
+          + 'on Vanuatun presbyteerikirkko, johon kuuluu kolmasosa '
+          + 'väestöstä; katolinen kirkko ja Melanesian kirkko ovat '
+          + 'kumpikin noin viidentoista prosentin kokoisia.'
+        + '\n\n'
+        + 'Kirkkokuntien jako kertoo saarten lähetyshistoriasta: '
+          + 'lähetyssaarnaajia alkoi saapua Uusille Hebrideille 1839, '
+          + 'ja presbyteerit menestyivät erityisesti eteläisillä '
+          + 'saarilla. Ni-vanuatulaiset yhdistivät kristinuskon '
+          + 'perinteisiin kastom-uskomuksiin, mikä hämmensi '
+          + 'eurooppalaisia mutta on yhä osa saarten arkea.',
+      kuvat: [
+        {
+          tiedosto: 'Port-Vila cath Sacre Coeur.JPG',
+          selite: 'Katedraalin valkoinen harjakatto laskeutuu lähes '
+            + 'maahan asti, ja päädyssä on tumma risti.',
+          lahde: 'Gérard Janot, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Independence Park': {
+      aika: 'nykyaika',
+      teksti: 'Independence Park on yksi Port Vilan tärkeimmistä '
+          + 'kriketkentistä. Enempää en-Wikipedia ei kentästä kerro, '
+          + 'ja se on syytä sanoa ääneen: puiston nimi houkuttelee '
+          + 'olettamaan, että Vanuatun itsenäisyys julistettiin '
+          + 'täällä, mutta lähde ei väitä niin.'
+        + '\n\n'
+        + 'Puiston toisella puolella seisoo Port Vilan '
+          + 'presbyteerikirkko, jota kaupungin nähtävyysluettelo pitää '
+          + 'yhtenä sen vaikuttavimmista rakennuksista. Kenttä on '
+          + 'kaupungin suurin avoin nurmialue, ja sen laidalla on '
+          + 'katettu katsomo.'
+        + '\n\n'
+        + 'Kriketti on Vanuatussa vakiintunut laji, ja Port Vilassa on '
+          + 'sille useampi kenttä: Independence Parkin lisäksi '
+          + 'Kormanin stadionin urheilukeskuksessa on oma '
+          + 'kriketkenttänsä.',
+      kuvat: [
+        {
+          tiedosto: 'PortVilaIndependencePark2.jpg',
+          selite: 'Nurmikentän laidalla on pitkä katettu katsomo, ja '
+            + 'sen takana levittäytyvät suuret sadepuut.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanuatun kulttuurikeskus': {
+      aika: '1959',
+      teksti: 'Vanuatun kulttuurikeskus, bislamaksi Vanuatu Kaljoral '
+          + 'Senta, on maan kansallinen kulttuurilaitos. Se '
+          + 'perustettiin 1959, ja se on kattojärjestö, johon kuuluvat '
+          + 'kansallismuseo, kansallinen elokuva- ja ääniyksikkö, '
+          + 'kulttuuri- ja historiakohteiden kartoitus, '
+          + 'kansallisarkisto, kansalliskirjasto, yleinen kirjasto, '
+          + 'kenttätyöntekijäyksikkö sekä Tafean ja Malekulan '
+          + 'kulttuurikeskukset.'
+        + '\n\n'
+        + 'Keskus sijaitsee Saralana Parkissa parlamentin edessä, '
+          + 'lähellä kansalliskirjastoa ja Malvatumauria eli '
+          + 'päälliköiden kansallisneuvostoa. Nykyinen talo avattiin '
+          + '17. marraskuuta 1995 kello 9.30, ja avajaisia edelsi '
+          + 'neljä päivää rituaaleja ja kulttuuritoimintaa. '
+          + 'Avajaispäivästä tehtiin kansallinen kulttuuripäivä.'
+        + '\n\n'
+        + 'Museossa on perinteisiä esineitä useilta saarilta, ja '
+          + 'kansallisessa audiovisuaalisessa arkistossa on maan '
+          + 'tärkein kokoelma 1800-luvun lopusta tähän päivään. '
+          + 'Talossa on myös Tabu Room, arkistotila, johon omistajat '
+          + 'voivat tallettaa kastom-esineitä ja jonne pääsyä '
+          + 'säädellään kastom-perinteen mukaan. Museo pitää lisäksi '
+          + 'kastom-koulua, jossa perinteisiä taitoja ja tarinoita '
+          + 'siirretään nuorille. Vuonna 1989 johto siirtyi '
+          + 'ulkomaiselta antropologilta Kirk Huffmanilta '
+          + 'ni-vanuatulaiselle Jack Keitadille.',
+      kuvat: [
+        {
+          tiedosto: 'National Cultural Centre, Vanuatu.jpg',
+          selite: 'Sisäänkäynnin edessä on lehtikatto ja veistetty '
+            + 'puupaalu, ja koko rakennus jää suuren varjopuun alle.',
+          lahde: 'PhillipC, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanuatun parlamenttitalo': {
+      aika: '1980',
+      teksti: 'Vanuatun parlamentti perustettiin heinäkuussa 1980, '
+          + 'kun maa itsenäistyi. Sitä edelsi Uusien Hebridien '
+          + 'edustajakokous. Parlamentti on yksikamarinen, siinä on '
+          + '52 jäsentä, vaalikausi on neljä vuotta ja edustajat '
+          + 'valitaan yhden äänen siirtymättömällä vaalitavalla.'
+        + '\n\n'
+        + 'Talon nimi on bislamaksi Palamen blong Vanuatu ja '
+          + 'ranskaksi Parlement du Vanuatu — kolme kieltä samassa '
+          + 'rakennuksessa on Vanuatussa arkea eikä juhlaa.'
+        + '\n\n'
+        + 'Parlamenttia vastapäätä on muistomerkkejä: kaksi '
+          + 'perinteistä totemipaalua ja monumentti, joka esittää sian '
+          + 'syöksyhammasta. Syöksyhammas on Vanuatun vanhin '
+          + 'arvonmerkki, ja se näkyy myös maan vaakunassa. Talon '
+          + 'takana levittäytyy Saralana Park, jonka toisella laidalla '
+          + 'on kulttuurikeskus.',
+      kuvat: [
+        {
+          tiedosto: 'Vanuatu Parliament, Port Vila - Flickr - PhillipC.jpg',
+          selite: 'Punakattoisen parlamenttitalon edessä on valkoinen '
+            + 'kolmiokatoksinen sisäänkäynti ja pyöreä suihkulähde.',
+          lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

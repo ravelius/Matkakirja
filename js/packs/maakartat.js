@@ -10692,6 +10692,102 @@ export const KAUPUNKIKARTAT = {
     ],
   },
   /*
+   * HONIARA (6.9.2026). Rajaus on 2,1 × 2,7 kilometriä Point Cruzin
+   * satamasta Matanikaun länsipuolelle — perustelu, hylätty laajempi
+   * itäraja ja meri-lippu ovat tools/piirra-kaupunkikartta.mjs:n
+   * honiara-lohkossa.
+   *
+   * VIISI KOHDETTA, JA SE ON LÄHDETILANNE. Honiaran keskusta on
+   * poikkeuksellisen tiivis: tori (179 m), keskuspankki (126 m) ja
+   * kansallisarkisto (150 m) ovat kaikki alle kahdensadan metrin
+   * päässä kansallismuseosta, eivätkä niiden numeroympyrät mahtuisi
+   * erilleen (tarkistus-honiara.md, kohta I). Seitsemän muuta
+   * artikkelia jakaa saman geosearch-varakoordinaatin
+   * −9,435092/159,951239, joka ei ole minkään niistä oikea sijainti.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN KIRJOITUSVAIHEESSA: Red House on
+   * pääministerin virka-asunto (ei nykypolitiikkaa) eikä siitä ole
+   * Commonsissa kuvaa, ja Lawson Taman stadionin kolme
+   * kuvasäännöt täyttävän kokoista tiedostoa ovat kaikki hylättäviä
+   * (kaksi haalistunutta filmikuvaa väkijoukosta, yksi näyttelyn
+   * filmiruutu).
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat vuoden
+   * 1873 tilanne ja blackbirding, kaupungin nimi ja Point Cruzin oma
+   * nimi, keskustori, pijin, Mendañan nimet, Henderson Field,
+   * Rautapohja ja kaupungin synty 1952. Point Cruz ja parlamentti
+   * ovat kartalla eri asiana kuin lehdessä: nimen sijaan satama ja
+   * synnyn sijaan arkkitehtuuri.
+   */
+  honiara: {
+    polku: 'assets/kartat/honiara-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -9.4270, etela: -9.4460, lansi: 159.9450, ita: 159.9700 },
+    esittely: 'Kartan alue on Honiaran keskusta Ironbottom Soundin '
+      + 'rannalla. Lännessä on Point Cruzin satamaniemi, keskellä '
+      + 'Mendana Avenuen varsi museoineen ja parlamentteineen, idässä '
+      + 'Matanikaujoen laakso ja etelässä kukkulat, joille kaupunki '
+      + 'kiipeää. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään. Koordinaatit en-Wikipedian
+       * geosearch-rajapinnasta 6.9.2026; Point Cruzin piste on
+       * pyöristetty minuutin tarkkuuteen (9°26′S 159°57′E) eikä siksi
+       * osu laiturin päähän vaan niemen keskelle.
+       */
+      { nimi: 'Salomonsaarten kansallismuseo', lat: -9.431111, lon: 159.954167 },
+      { nimi: 'Point Cruz', lat: -9.433333, lon: 159.950000 },
+      { nimi: 'Parlamenttitalo', lat: -9.433611, lon: 159.955833 },
+      { nimi: 'Holy Crossin katedraali', lat: -9.436252, lon: 159.963472 },
+      { nimi: 'Guadalcanalin muistomerkki', lat: -9.442609, lon: 159.957515 },
+    ],
+  },
+  /*
+   * PORT VILA (6.9.2026). Rajaus on 2,9 × 3,7 kilometriä Vilan
+   * sataman itärannalla — perustelu, itärajan laajennus ja meri-lippu
+   * ovat tools/piirra-kaupunkikartta.mjs:n portvila-lohkossa.
+   *
+   * VIISI KOHDETTA. Faktapohja ehdotti kuudenneksi Vanuatun
+   * kansallista yliopistoa, mutta se perustettiin vasta 2019 ja sen
+   * kampus on lähteen omien sanojen mukaan yhä rakenteilla — eikä
+   * Commonsissa ole siitä yhtään kuvaa (tarkistus-portvila.md,
+   * kohta A). Iririkin ja Ifiran saaret jätettiin pois, koska
+   * en-Wikipedian koordinaatit osoittavat 3–5 kilometriä väärään
+   * paikkaan Mele Bayn suuntaan (kohta M).
+   *
+   * KULTTUURIKESKUS JA PARLAMENTTI OVAT 210 METRIN PÄÄSSÄ toisistaan
+   * eli niukasti yli 200 metrin säännön. Ne ovat Saralana Parkin
+   * kahdella laidalla ja kertovat kartalla eri asian.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat vuoden
+   * 1873 tilanne, Franceville 1889, kondominio, bislama, Teouman
+   * lapita-hautausmaa, Roi Mata, Cookin nimet sekä kulttuurikeskus ja
+   * sandroing. Kulttuurikeskus on kartalla rakennuksena ja
+   * kokoelmana, lehdessä kastomin tallentajana.
+   */
+  portvila: {
+    polku: 'assets/kartat/portvila-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -17.7240, etela: -17.7500, lansi: 168.3050, ita: 168.3400 },
+    esittely: 'Kartan alue on Port Vilan keskusta Vilan sataman '
+      + 'itärannalla. Lännessä on satama ja sen edessä Iririkin saari, '
+      + 'keskellä kauppakadut ja Independence Park, etelässä Saralana '
+      + 'Parkin kulttuurikeskus ja parlamentti ja idässä laguuni. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään. Koordinaatit en-Wikipedian
+       * geosearch- ja coordinates-rajapinnoista 6.9.2026.
+       */
+      { nimi: 'Kormanin stadion', lat: -17.733909, lon: 168.337374 },
+      { nimi: 'Pyhän sydämen katedraali', lat: -17.734722, lon: 168.315278 },
+      { nimi: 'Independence Park', lat: -17.740000, lon: 168.317000 },
+      { nimi: 'Vanuatun kulttuurikeskus', lat: -17.745200, lon: 168.317500 },
+      { nimi: 'Vanuatun parlamenttitalo', lat: -17.745556, lon: 168.315556 },
+    ],
+  },
+  /*
    * PANAMÁ (6.9.2026). Rajaus on 4,4 × 4,8 kilometriä Casco Viejosta
    * Ancónin kukkulan yli Amadorin aallonmurtajalle — perustelu ja
    * hylätty laajempi rajaus ovat tools/piirra-kaupunkikartta.mjs:n

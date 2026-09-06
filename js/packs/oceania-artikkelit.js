@@ -841,4 +841,112 @@ export const OCEANIA_ARTIKKELIT = {
       + 'seudulla toimii neljä tunnustettua perinteisten omistajien '
       + 'ryhmää.',
   },
+  /* HONIARA (Opus 6.9.2026, paketti O9). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain honiara); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-honiara.md ja
+   * tarkistus-honiara.md. Avain on kaupungin wiki-nimi
+   * (js/packs/oceania.js: 'Honiara').
+   *
+   * TARKISTUKSEN KORJAUKSET NÄKYVÄT TÄSSÄKIN: Saksan protektoraattia
+   * ei mainita (1884 vs. 1886 -ristiriita), Guadalcanalin pinta-alaa
+   * ei anneta lukuna, lentokentän etäisyys on Honiara-artikkelin
+   * "runsaat kymmenen kilometriä", ja blackbirding-luku on
+   * Pijin-artikkelin täsmällinen 13 000 Queenslandiin.
+   *
+   * EI NYKYPOLITIIKKAA: vuosien 1998–2003, 2006 ja 2021 levottomuudet
+   * jätetty pois. Ironbottom Sound ja Guadalcanalin taistelut ovat
+   * laudan visan omia vastausfaktoja, joten niitä ei toisteta tässä
+   * enempää kuin kehyksen verran. */
+  Honiara: {
+    intro: 'Honiara on Salomonsaarten pääkaupunki Guadalcanalin '
+      + 'luoteisrannikolla. **Vuonna 1873 sitä ei ollut olemassa**: '
+      + 'saarilla ei ollut siihen aikaan minkäänlaista '
+      + 'siirtomaahallintoa, ja Britannian protektoraatti julistettiin '
+      + 'vasta 1893. Kaupunki syntyi vasta toisen maailmansodan '
+      + 'jälkeen sotilastukikohdan paikalle.'
+      + '\n\n'
+      + 'Nimi tulee sanoista *nagho ni ara*, jotka tarkoittavat '
+      + 'suunnilleen itätuulen paikkaa. Sama nimi on niemellä, jonka '
+      + 'ympärille kaupunki rakennettiin: Point Cruzin ghari-kielinen '
+      + 'nimi on naho-ni-ara. Honiarasta tuli protektoraatin '
+      + 'pääkaupunki 1952, koska amerikkalaiset olivat rakentaneet '
+      + 'sodan aikana tiet, laiturit ja lentokentän valmiiksi, ja '
+      + 'heinäkuussa 1978 itsenäisten Salomonsaarten pääkaupunki.'
+      + '\n\n'
+      + 'Kaupunki on **maan nopeimmin kasvava väestökeskus**: '
+      + 'asukkaita oli 1979 vielä 18 346 ja 2019 jo 129 569, ja noin '
+      + 'puolet heistä on alle kolmekymmenvuotiaita. Honiaran kautta '
+      + 'levisi myös pijin, joka on nykyään koko maan pääkieli.',
+    teksti: 'Honiara on Guadalcanalin luoteisrannikolla ohuena '
+      + 'nauhana meren ja jyrkkien kukkuloiden välissä. Matanikaujoki '
+      + 'virtaa kaupungin läpi, ja Kukum Highway vie runsaat kymmenen '
+      + 'kilometriä itään lentokentälle, joka oli sota-aikana '
+      + 'Henderson Field. Kaupungin edustalla oleva vesialue on '
+      + 'Ironbottom Sound eli Rautapohja.'
+      + '\n\n'
+      + 'Ennen kaupunkia seudulla oli kyliä, valaanpyytäjiä ja '
+      + 'lähetyssaarnaajia. Anglikaaninen Melanesian-lähetys '
+      + 'perustettiin 1849, ja 1870-luvun alussa australialaiset '
+      + 'istuttajat siirsivät työvoimanvärväyksensä näille vesille; '
+      + 'Queenslandin viljelmille vietiin kaikkiaan noin 13 000 '
+      + 'salomonsaarelaista. Toisen maailmansodan taistelut '
+      + 'lentokentästä käytiin 7.8.1942–9.2.1943.'
+      + '\n\n'
+      + 'Nykyään Honiara on maan hallinto- ja kauppakeskus. '
+      + 'Keskustori on maan suurin kauppapaikka, ja sen venerampilta '
+      + 'kalastajat kantavat saaliinsa suoraan pöydälle. '
+      + 'Parlamenttitalon kartiokatto yhdistää Temotun ja '
+      + 'Guadalcanalin perinteiset kattomuodot.',
+  },
+  /* PORT VILA (Opus 6.9.2026, paketti O9). Sama erä kuin lehden
+   * tekstit (js/packs/kulttuuri-kategoriat.js, avain portvila);
+   * pohjana docs/mantereet-tyoaineisto/faktapohja-portvila.md ja
+   * tarkistus-portvila.md. Avain on kaupungin wiki-nimi
+   * (js/packs/oceania.js: 'Port Vila').
+   *
+   * 1873-KEHYS ON KIRJOITETTU TARKISTUKSEN MUKAAN: Franceville on
+   * 1889, ei 1873, eikä Efatella ollut isoisän aikaan kuntaa eikä
+   * hallintoa. Chevillard saapui 1880. Kielten määrä on "yli sata",
+   * koska lähteet antavat 138, 113 ja 100+. Yasuria ja Pentecostin
+   * maahyppyä ei mainita: ne ovat laudan visan omia vastausfaktoja ja
+   * muiden saarten aiheita. */
+  'Port Vila': {
+    intro: 'Port Vila on Vanuatun pääkaupunki ja maan tärkein satama. '
+      + 'Se on rakennettu Efaten rannalle suojaisan luonnonsataman '
+      + 'ympärille, ja sataman suulla makaa Iririkin saari. Alueen '
+      + 'oma nimi on eteläefaten kielellä *Efil* ja mele-filan '
+      + 'kielellä *Ifira*; Vila on niiden muunnos.'
+      + '\n\n'
+      + '**Vuonna 1873 kaupunkia ei ollut** — ei kuntaa eikä '
+      + 'hallintoa. Santelipuu oli hakattu loppuun 1860-luvun '
+      + 'puoliväliin mennessä, mutta valaanpyyntialuksia kävi yhä ja '
+      + 'työvoimaa hakevat alukset veivät saarelaisia Queenslandin, '
+      + 'Fidžin ja Uuden-Kaledonian viljelmille. Britannia ja Ranska '
+      + 'julistivat Uudet Hebridit puolueettomaksi alueeksi 1878, ja '
+      + 'ensimmäinen ranskalainen istuttaja saapui Efatelle 1880.'
+      + '\n\n'
+      + 'Sitten tuli poikkeuksellinen välivuosi. Franceville '
+      + 'julistautui itsenäiseksi kunnaksi 9. elokuuta 1889 ja '
+      + 'toteutti **yleisen äänioikeuden sukupuoleen ja rotuun '
+      + 'katsomatta** — yhtenä ensimmäisistä tunnetun historian '
+      + 'itsehallinnollisista yhteisöistä. Kunta hajosi jo '
+      + 'seuraavana kesänä.',
+    teksti: 'Port Vila sijaitsee Efaten rannalla Shefan provinssissa. '
+      + 'Väkiluku oli vuoden 2020 väestönlaskennassa 49 034 ja '
+      + 'pinta-ala 23,6 neliökilometriä. Kaupunki on niin pieni, että '
+      + 'kauppahalli, kulttuurikeskus, kaupungintalo ja katedraali '
+      + 'ovat kaikki saman kävelyn varrella.'
+      + '\n\n'
+      + 'Vuoden 1887 jälkeen saaria hallitsivat Ranska ja Britannia '
+      + 'yhdessä, ja 1906 järjestely virallistettiin kondominioksi: '
+      + 'kaksi erillistä hallinto-, laki-, tuomioistuin- ja '
+      + 'finanssijärjestelmää, jotka kohtasivat vain yhteisessä '
+      + 'tuomioistuimessa. Ni-vanuatulaisilta oli suljettu kummankin '
+      + 'vallan kansalaisuus. Vanuatu itsenäistyi 1980.'
+      + '\n\n'
+      + 'Nykyään arjen kieli on bislama, mutta englanti ja ranska ovat '
+      + 'molemmat virallisia. Kaupungissa on Vanuatun kulttuurikeskus, '
+      + 'jonka kokoelmista osa on tabu, ja sen kenttätyöntekijät ovat '
+      + 'tallentaneet suullista perinnettä vuodesta 1976.',
+  },
 };

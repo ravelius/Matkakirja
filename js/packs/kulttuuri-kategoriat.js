@@ -81732,4 +81732,1069 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * HONIARA (Opus 6.9.2026, paketti O9) — Oseanian laudan seitsemäs
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-honiara.md ja sen tarkistus tarkistus-honiara.md
+   * (tuomio "kelpaa korjausten jälkeen"). Väitteet on luettu
+   * en-Wikipedian raakateksteistä 6.9.2026: "Honiara", "Guadalcanal",
+   * "Solomon Islands", "Guadalcanal campaign", "Blackbirding",
+   * "Pijin", "Point Cruz", "Honiara Central Market", "Ironbottom
+   * Sound", "Solomon Islands Parliament Building".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei uusia kysymyksiä.
+   * Saapumisteksti (oceania-saapumiset.js) ja valokuvataulu
+   * (oceania-valokuvat.js) olivat jo olemassa eikä niihin koskettu.
+   *
+   * SIVUJA ON KAKSI kuten Dunedinissa ja Cairnsissa (kaupunki +
+   * teemasivu). Faktapohja tarjosi kolmannen teeman (Guadalcanalin
+   * luonto), mutta se on saaren eikä kaupungin aineistoa ja kuuluu
+   * SLB:n maalehteen.
+   *
+   * TARKISTUKSEN KAIKKI KORJAUKSET ON TEHTY:
+   *  - Saksan protektoraatti JÄTETTY POIS: "Guadalcanal" sanoo 1884
+   *    ja "Solomon Islands" 1886, eikä kumpikaan koske Guadalcanalia.
+   *    Lehden kannalta olennainen vuosi on 1893 (Britannia).
+   *  - Blackbirding-luvuista käytetään Pijin-artikkelin täsmällistä
+   *    "noin 13 000 salomonsaarelaista Queenslandiin", ei
+   *    Guadalcanal-artikkelin epätarkkaa 60 000:ta eikä
+   *    Bislama-artikkelin "satojatuhansia" (tarkistus, kohta B).
+   *  - Guadalcanalin pinta-alaa EI anneta lukuna (infobox 5 358 km²,
+   *    leipäteksti 5 302 km²).
+   *  - Lentokentän etäisyys on Honiara-artikkelin "runsaat kymmenen
+   *    kilometriä keskustasta", ei Guadalcanal-artikkelin kahdeksaa.
+   *  - Sääluvut VAIN lentokentän NOAA-ruudusta 1991–2020; artikkelin
+   *    toista sääruutua ei käytetä (tarkistus, kohta D).
+   *  - 1873-kehykseen otettiin tarkistuksen löytämä Pijin-artikkelin
+   *    aikataulu (värväys siirtyi Uusiin Hebrideihin ja Santa Cruziin
+   *    1870-luvun alussa) ja työläisten paluu 1904 (kohdat F ja G).
+   *
+   * EI NYKYPOLITIIKKAA: vuosien 1998–2003, 2006 ja 2021 levottomuudet
+   * on jätetty kokonaan pois, samoin kansallismuseon ryöstely.
+   * Chinatownin "Asian Wild West" -luonnehdinta jätettiin pois
+   * eksotisoivana (tarkistus, kohta K).
+   *
+   * UHRILUVUISTA käytetään vain parlamenttitalon oma peruste (450 +
+   * 1 200), koska muistomerkkiartikkelin muut luvut ovat keskenään
+   * ristiriitaisia.
+   *
+   * ENNEN–NYT-PARI ON 1940-LUVULTA, EI 1800-LUVULTA, ja kuvateksti
+   * sanoo sen ääneen: Honiaraa ei ollut ennen sotaa, joten seudun
+   * varhaisin PD-kuvasto on sota-ajan laivastokuvia. Commonsin ainoa
+   * isoisän aikaa lähestyvä aineisto (Auckland Museumin litografiat
+   * 1851) esittää väkivaltaista kohtausta eikä kelpaa peliin.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026
+   * "Daily API request limit exceeded" (HTTP 429), joten
+   * js/packs/saatiedot.js:ään ei lisätty riviä (Samarkand-malli
+   * v965, sama kuin Suvassa ja Cairnsissa). Oppaan sääjakso nojaa
+   * en-Wikipedian sääruutuun ja sanoo sen.
+   */
+  honiara: [
+    {
+      id: 'kaupunki',
+      nimi: 'Honiara',
+      johdanto: 'Honiara on Tyynenmeren nuorimpia pääkaupunkeja: 1873 '
+        + 'paikalla oli rantakyliä ja kookospalmuja, ja kaupunki nousi '
+        + 'vasta kun sota jätti tänne lentokentän, tiet ja laiturit.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin. Ne ovat silti kolme laajaa yleiskuvaa: keskusta
+       * rinteeltä, koko rannikko ilmasta ja kukkuloiden takaa avautuva
+       * Rautapohjan salmi.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Honiara View.jpg',
+          selite: 'Honiaran keskusta laskeutuu rinteeltä satamaan, ja '
+            + 'sen takana avautuu Rautapohjan salmi.',
+          lahde: 'Kahunapule Michael Johnson from Pukalani, Hawaii, United States of America, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Aerial view of Honiara, 2013.jpg',
+          selite: 'Ilmasta katsottuna kaupunki on ohut nauha rannan ja '
+            + 'vihreiden kukkuloiden välissä.',
+          lahde: 'Jenny Scott from Adelaide, Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Honiara Seen from a Hilltop.jpg',
+          selite: 'Kukkulalta näkyy, kuinka talot piiloutuvat '
+            + 'palmujen sekaan ja rahtilaivat odottavat redillä.',
+          lahde: 'Kahunapule Michael Johnson from Pukalani, Hawaii, United States of America, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: kolme laajaa yleiskuvaa kaupungin eri
+       * puolilta — purjehdusseuran ranta, Mendana Avenuen
+       * konttorikortteli ja auringonnousu esikaupunkien yllä.
+       * Honiaralle ei ole generoitu herokuvia, joten karusellissa on
+       * kolme aitoa valokuvaa.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Honiara - Looking toward the Ocean.jpg',
+          selite: 'Rannassa on lehtikattoisia paviljonkeja ja laituri, '
+            + 'jonka kylkeen on kiinnittynyt työveneitä.',
+          lahde: 'Kahunapule Michael Johnson from Pukalani, Hawaii, United States of America, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Honiara (9536970944).jpg',
+          selite: 'Mendana Avenuen varrella on vaaleita kaksikerroksisia '
+            + 'konttoritaloja ja iso varjopuu.',
+          lahde: 'Jenny Scott from Adelaide, Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Rising Sun in Honiara (31811061454).jpg',
+          selite: 'Aurinko nousee usvan läpi kukkuloille, joiden '
+            + 'puiden lomassa kaupunki jatkuu.',
+          lahde: 'Kahunapule Michael Johnson from Pukalani, Hawaii, United States of America, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'IronbottomSound.jpg',
+          vuosi: '1942',
+          selite: 'Elokuussa 1942 salmessa kulki hävittäjä ja rannalla '
+            + 'ei ollut kaupunkia — Honiaraa ei vielä ollut olemassa.',
+          lahde: 'U.S. Navy, photo was taken from USS San Juan (CL-54)., Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'A bit of Honiara (32274638120).jpg',
+          selite: 'Samassa salmessa odottavat nyt rahtilaivat, ja '
+            + 'rannalla on kaupungin punaisia peltikattoja.',
+          lahde: 'Kahunapule Michael Johnson from Pukalani, Hawaii, United States of America, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Vuonna 1873 kaupunkia ei ollut',
+          teksti: 'Kun isoisä kulki Salomonsaarten ohi 1873, Honiaraa ei '
+            + 'ollut olemassa missään muodossa. Britannian protektoraatti '
+            + 'julistettiin vasta 1893, eikä saarilla ollut siihen asti '
+            + 'minkäänlaista siirtomaahallintoa: rannoilla kävivät '
+            + 'valaanpyytäjät, lähetyssaarnaajat ja työvoimaa hakevat '
+            + 'alukset. Anglikaaninen Melanesian-lähetys oli perustettu '
+            + '1849. Australialaiset istuttajat siirsivät värväyksensä '
+            + 'Uusiin Hebrideihin ja Santa Cruzin saarille juuri '
+            + '1870-luvun alussa, ja Queenslandin viljelmille vietiin '
+            + 'kaikkiaan noin 13 000 salomonsaarelaista. Britannia sääti '
+            + '1872 lain, jonka piti hillitä värväystä — se ei '
+            + 'onnistunut.',
+          tiedosto: 'Bonegi Beach.jpg',
+          selite: 'Guadalcanalin luoteisrannikkoa Bonegi Beachillä, '
+            + 'jossa ajopuu, hiekka ja kookospalmut jatkuvat '
+            + 'kilometrikaupalla.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Guadalcanal',
+        },
+        {
+          otsikko: 'Nimi tarkoittaa tuulen suuntaa',
+          teksti: 'Honiaran nimi tulee sanoista nagho ni ara, jotka '
+            + 'kääntyvät yhdessä Guadalcanalin kielistä suunnilleen '
+            + 'muotoon "itätuulen paikka" tai "kaakkoistuulta päin". '
+            + 'Sama nimi on niemellä, jonka ympärille kaupunki '
+            + 'rakennettiin: Point Cruzin ghari-kielinen nimi on '
+            + 'naho-ni-ara. Kaupunki on saaren luoteisrannikolla, ja '
+            + 'Matanikaujoki virtaa sen läpi Chinatownin ohi. '
+            + 'Selkärankana on Kukum Highway, joka vie runsaat kymmenen '
+            + 'kilometriä itään lentokentälle. Vuonna 1983 kaupungin '
+            + '22 neliökilometrin alue julistettiin '
+            + 'pääkaupunkiterritorioksi, jolla on provinssin kaltainen '
+            + 'itsehallinto.',
+          tiedosto: 'Pointcruz - panoramio.jpg',
+          selite: 'Point Cruzin niemellä kuorma-autot odottavat lastia '
+            + 'kauppakortteleiden edessä.',
+          lahde: 'Joshua Fang, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Point Cruz',
+        },
+        {
+          otsikko: 'Tori, jonne kala tuodaan veneellä',
+          teksti: 'Honiaran keskustori on maan suurin tuore- ja '
+            + 'kalatori, ja se on hallinnut maan sisäistä kauppaa pian '
+            + '1950-luvun perustamisestaan lähtien. Torilla on oma '
+            + 'rantaviivansa Rautapohjan salmeen ja venerampi, jotta '
+            + 'kalastajat saavat saaliinsa suoraan veneestä pöydälle; '
+            + 'ramppia pidetään merkkinä siitä, kuinka paljon '
+            + 'salomonsaarelaiset arvostavat kalan tuoreutta. Vuonna '
+            + '2014 myyjiä oli noin tuhat, ja heistä arviolta neljä '
+            + 'viidestä oli naisia. Osa tulee kaupunkiin vain '
+            + 'myyntikaudeksi, ja tavaraa saapuu koko maasta — siksi '
+            + 'toria pidetään Salomonsaarten kansanryhmien '
+            + 'kohtaamispaikkana.',
+          tiedosto: 'Honiara Central Market, Solomon Islands, 2012. Photo- Yvonne Green - DFAT (12784104894).jpg',
+          selite: 'Kuivattuja kookospähkinöitä kasassa torilla, ja '
+            + 'pinon päällä on käsin kirjoitettu hintalappu.',
+          lahde: 'Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Honiara Central Market',
+        },
+        {
+          otsikko: 'Kieli, joka syntyi viljelmillä ja palasi kotiin',
+          teksti: 'Salomonsaarten pijin syntyi Queenslandin ja Fidžin '
+            + 'viljelmillä, joilla melanesialaiset työntekijät ja '
+            + 'englanninkieliset työnjohtajat tarvitsivat yhteisen '
+            + 'kielen. Kun työntekijät palasivat sopimuskautensa '
+            + 'päätyttyä tai pakkopalautettiin työvoimakaupan loputtua '
+            + '1904, kieli tuli mukana saarille. Honiarassa siitä tuli '
+            + '1960-luvulla kaupungin pääkieli ja kokonaisen nuorten '
+            + 'kaupunkilaisten sukupolven äidinkieli, ja kaupungin '
+            + 'kautta se levisi koko maahan. Honiara veti puoleensa '
+            + 'väkeä joka saarelta: Matanikaun suun itäpuolella asuu '
+            + 'Ontong Javan polynesialaisyhteisö.',
+          tiedosto: 'Honiara Chinatown.jpg',
+          selite: 'Honiaran Chinatownissa ravintolan kyltti on '
+            + 'kirjoitettu sekä kiinaksi että englanniksi.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Pijin',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Local handicraft at Art in the Park, Honiara, Solomon Islands, 2012. Photo- Yvonne Green - DFAT (12783680375).jpg',
+          selite: 'Käsintehtyjä kaulanauhoja rivissä sinisellä '
+            + 'kankaalla Honiaran Art in the Park -käsityötapahtumassa.',
+          lahde: 'Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Honiara on Salomonsaarten pääkaupunki ja maan '
+          + 'nopeimmin kasvava kaupunki. Se on rakennettu Guadalcanalin '
+          + 'luoteisrannikolle ohueksi nauhaksi meren ja jyrkkien '
+          + 'kukkuloiden väliin, ja koko keskusta mahtuu kävelymatkalle '
+          + 'Mendana Avenuen varteen: tori, kansallismuseo, '
+          + 'taidegalleria ja satama ovat kilometrin säteellä. Kaupunki '
+          + 'on nuori — se sai pääkaupunkiasemansa vasta 1952 — ja se '
+          + 'näkyy: siirtomaa-ajan kortteleita ei juuri ole, vaan '
+          + 'katukuva on peltikattoja, betonia ja hyvin paljon vihreää. '
+          + 'Puolet asukkaista on alle kolmekymmenvuotiaita. Matkailija '
+          + 'tulee Honiaraan kahdesta syystä: sukeltamaan Rautapohjan '
+          + 'hylyille ja katsomaan sitä maailmaa, joka alkaa heti '
+          + 'kaupungin ulkopuolelta — saaristoa, jossa liikutaan '
+          + 'veneellä ja pikkukoneella.',
+        artikkeli: {
+          nimi: 'Matkailijan Honiara',
+          taitto: 'opas',
+          teksti: 'Kahdeksankymmentä vuotta vanha pääkaupunki, joka '
+            + 'rakennettiin sotilastukikohdan päälle — ja meri, jonka '
+            + 'pohja on täynnä historiaa.',
+          nosto: 'Honiaraa ei ollut olemassa isoisän aikaan eikä vielä '
+            + 'sadan vuoden päästä siitä: vuonna 1979 kaupungissa asui '
+            + '18 346 ihmistä, vuonna 2019 jo 129 569.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Honiaran kansainvälinen lentokenttä on runsaan '
+                + 'kymmenen kilometrin päässä itään Kukum Highwayta '
+                + 'pitkin. Se on sodanaikainen Henderson Field, joka '
+                + 'avattiin uudelleen 1969 maan suurimpana '
+                + 'lentoasemana ja jota on sittemmin parannettu isoja '
+                + 'koneita varten; valtion oma Solomon Airlines toimii '
+                + 'täältä. Point Cruzin satama on maan '
+                + 'pääsaapumissatama ja pystyy käsittelemään '
+                + 'kahdenkymmenen jalan kontteja. Saaristoon lähdetään '
+                + 'veneellä: kaksikymmentäkuusi tuntia kestävää '
+                + 'matkaa Gizoon sanotaan yhdeksi Tyynenmeren '
+                + 'kauneimmista. Matkailutoimisto on Mendana Avenuella '
+                + 'purjehdusseuran ja Mendana-hotellin välissä, ja sen '
+                + 'virkailijat voivat radioida etukäteen syrjäisten '
+                + 'seutujen majataloihin, että vieraita on tulossa.',
+              kuva: {
+                tiedosto: 'Honiara (9534190983).jpg',
+                selite: 'Solomon Postin oranssi talo on Mendana '
+                  + 'Avenuen varrella palmujen ja kukkaruukkujen '
+                  + 'keskellä.',
+                lahde: 'Jenny Scott from Adelaide, Australia, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kaupunki rannan ja rinteen välissä',
+              teksti: 'Honiara on rakennettu sinne, missä tasaista maata '
+                + 'on: kapealle kaistalle Rautapohjan salmen ja '
+                + 'kukkuloiden väliin. Matanikaujoki halkoo kaupungin '
+                + 'ja virtaa Chinatownin ohi mereen. Lännessä ovat '
+                + 'White Riverin ja Tanaghain esikaupungit, idässä '
+                + 'Kukum ja lentokenttä. Joen suun itäpuolella on Lord '
+                + 'Howe Settlement, suuri polynesialaisyhteisö Ontong '
+                + 'Javan atollilta, ja sen edustan matalassa vedessä '
+                + 'näkyy 23. lokakuuta 1942 tuhotun japanilaisaluksen '
+                + 'hylky. Kaupungin itärannalla on Honiara Children’s '
+                + 'Park, kaupungin ainoa lasten virkistysalue — muut '
+                + 'alueet ovat yksityisiä. Puistoa uhkaa rantaeroosio: '
+                + 'vanhan ja syöpyneen rantaviivan väliä on mitattu '
+                + 'kuudesta kahdeksaan metriä.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: kalaramppi keskellä kaupunkia',
+              teksti: 'Keskustori on Honiaran sydän ja koko maan suurin '
+                + 'kauppapaikka. Sen erikoisuus on venerampi: torilla '
+                + 'on oma rantaviivansa, ja kalastajat vetävät veneensä '
+                + 'suoraan rantaan ja kantavat saaliin pöydälle. Tori '
+                + 'on kaupungin halvimman ruoan paikka, ja se on '
+                + 'kaupunginvaltuuston omistama ja ylläpitämä — toinen '
+                + 'valtuuston tori on Kukumissa. Vuonna 2006 osa '
+                + 'torialueesta varattiin kukkien ja ruukkukasvien '
+                + 'ympärivuotiselle myynnille. Yksi ohje kannattaa '
+                + 'muistaa: valtuusto kieltää tuotteiden pesemisen '
+                + 'torin merivedellä, koska vesi on saastunutta.',
+              kuva: {
+                tiedosto: 'Rear view Honiara Central Market.jpg',
+                selite: 'Torihalli merenpuolelta: rannassa ruostuu '
+                  + 'vanhan aluksen runko, ja sen takana alkaa '
+                  + 'venerampin laituri.',
+                lahde: 'Phenss, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kuusi kuukautta yhdestä kentästä',
+              teksti: 'Guadalcanalin kampanja alkoi 7. elokuuta 1942 ja '
+                + 'päättyi 9. helmikuuta 1943. Sen jäljet ovat yhä '
+                + 'kaupungissa ja sen ympärillä. Kansallismuseo on '
+                + 'Mendana-hotellia vastapäätä, ja sen ja poliisiaseman '
+                + 'välissä seisoo japanilainen 155 millimetrin '
+                + 'haupitsi, jolle amerikkalaissotilaat antoivat '
+                + 'lempinimen Pistol Pete. Museon takana on '
+                + 'kulttuurikeskus, jossa on kahdeksan perinteistä '
+                + 'taloa vuodelta 1981 maan yhdeksästä provinssista, ja '
+                + 'sen vieressä 2012 valmistunut taidegalleria ja '
+                + 'ulkoilmateatteri. Guadalcanal American Memorial on '
+                + 'kukkulalla kaupungin länsipuolella, ja japanilaisten '
+                + 'veteraanien rakentama rauhanpuisto on noin kolmen ja '
+                + 'puolen kilometrin päässä rannikkotietä. Vilun '
+                + 'ulkoilmamuseo on 25 kilometriä länteen; sen perusti '
+                + 'Fred Kona 1975.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Honiara-artikkelin '
+                + 'sääruudusta (lentokentän mittausasema, '
+                + 'normaalikausi 1991–2020); lehdellä ei ole omaa '
+                + 'vuosigraafia, koska Open-Meteon arkisto ei vastannut '
+                + 'kyselyihin. Ilmasto on trooppinen sademetsäilmasto, '
+                + 'ja päivän keskilämpötila on noin 28 astetta ympäri '
+                + 'vuoden: kuukausikeskiarvot liikkuvat 26,6 ja 27,6 '
+                + 'asteen välillä. Sadetta tulee vuodessa noin 1 968 '
+                + 'millimetriä, mikä on selvästi vähemmän kuin '
+                + 'Salomonsaarilla keskimäärin. Marras–huhtikuu on '
+                + 'sateisempi kuin touko–lokakuu: helmikuun 290 '
+                + 'millimetriä on yli kolminkertainen kesäkuun 86 '
+                + 'millimetriin verrattuna. Kuumin koskaan mitattu '
+                + 'lukema koko Salomonsaarilla on Honiaran 36,1 '
+                + 'astetta 1. helmikuuta 2010.',
+              kuva: {
+                tiedosto: 'Drinking Water (32531542411).jpg',
+                selite: 'Rinnetalon kylkeen on nostettu sadevesisäiliö, '
+                  + 'josta juomavesi otetaan.',
+                lahde: 'Kahunapule Michael Johnson from Pukalani, Hawaii, United States of America, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Keskustori',
+                tahdet: 3,
+                selite: 'Maan suurin tori, jonne kala tuodaan veneellä '
+                  + 'suoraan rantarampin kautta.',
+              },
+              {
+                mita: 'Kansallismuseo',
+                tahdet: 3,
+                selite: 'Vuonna 1969 avattu museo ja sen takana '
+                  + 'perinteisten talojen kulttuurikeskus.',
+              },
+              {
+                mita: 'Guadalcanal American Memorial',
+                tahdet: 2,
+                selite: 'Kukkulalla, josta näkee Mount Austenille ja '
+                  + 'Rautapohjan salmelle.',
+              },
+              {
+                mita: 'Parlamenttitalo',
+                tahdet: 2,
+                selite: 'Kartiokatto, joka yhdistää Temotun ja '
+                  + 'Guadalcanalin perinteiset kattomuodot.',
+              },
+              {
+                mita: 'Vilun ulkoilmamuseo',
+                tahdet: 2,
+                selite: 'Sotakaluston jäänteitä ja muistomerkkejä 25 '
+                  + 'kilometriä kaupungista länteen.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua.
+             * Sääluvut ovat samasta sääruudusta kuin jakso 5.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Sateisin kausi marras–huhtikuussa',
+                teksti: 'Vuosisade on noin 1 968 millimetriä, ja '
+                  + 'sateisimmat kuukaudet ovat helmikuu ja maaliskuu.',
+              },
+              {
+                otsikko: 'Räjähtämätöntä sotamateriaalia',
+                teksti: 'Museon rakennustöissä 1991 kaivettiin esiin '
+                  + 'kolmekymmentä räjähtämätöntä japanilaisammusta; '
+                  + 'maastossa niitä on yhä.',
+              },
+              {
+                otsikko: 'Torin merivesi',
+                teksti: 'Kaupunginvaltuusto kieltää tuotteiden pesun '
+                  + 'torin merivedellä, koska vesi on saastunutta.',
+              },
+              {
+                otsikko: 'Saaristoon veneellä',
+                teksti: 'Muille saarille kuljetaan laivalla tai '
+                  + 'pikkukoneella; Gizoon on kaksikymmentäkuusi '
+                  + 'tuntia merta.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Rautapohjan meri',
+      johdanto: 'Guadalcanalin ja Tulagin välinen salmi sai '
+        + 'lempinimensä siitä, mitä sen pohjalla on. Kuuden kuukauden '
+        + 'taistelu yhdestä lentokentästä jätti jälkeensä hylkyjä, '
+        + 'muistomerkkejä ja pääkaupungin.',
+      tehtava: {
+        kysymys: 'Kuinka monta pääelementtiä Salomonsaarten '
+          + 'parlamenttitalon katossa on?',
+        vaihtoehdot: [
+          'Kolme',
+          'Viisi',
+          'Seitsemän',
+          'Yhdeksän',
+        ],
+        oikea: 2,
+        fakta: 'Katon seitsemän pääelementtiä vastaavat maan '
+          + 'seitsemää provinssia, ja katon muoto yhdistää Temotun '
+          + 'kartion ja Guadalcanalin harjan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Nimi, joka lupasi kultaa',
+          teksti: 'Espanjalainen Álvaro de Mendaña de Neira purjehti '
+            + 'Perusta ja näki saaret ensimmäisenä eurooppalaisena '
+            + '1568. Hän ei nimennyt saaristoa, mutta muut alkoivat '
+            + 'kutsua sitä nimellä Islas Salomón: matkakertomukset '
+            + 'sekoitettiin optimistisesti tarinoihin rikkaasta '
+            + 'kuningas Salomonista, ja saarten uskottiin olevan '
+            + 'Raamatun Ofir. Guadalcanal sai nimensä retkikunnan '
+            + 'jäsenen Pedro de Ortega Valencian kotikylästä '
+            + 'Andalusiasta. Nimi kirjoitettiin vuosien mittaan myös '
+            + 'muodoissa Guadarcana, Guarcana ja Guadalcanar, ja britit '
+            + 'vahvistivat nykyisen asun vasta 1932. Saaren oma nimi on '
+            + 'Isatabu.',
+          tiedosto: 'Shoreline (32274632350).jpg',
+          selite: 'Guadalcanalin rantaviivaa ilmasta: turkoosi meri, '
+            + 'jokisuu ja kilometrien kookosmetsä.',
+          lahde: 'Kahunapule Michael Johnson from Pukalani, Hawaii, United States of America, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Solomon Islands',
+        },
+        {
+          otsikko: 'Lentokenttä, jonka takia sodittiin',
+          teksti: 'Japanilaiset joukot saapuivat Guadalcanalille '
+            + 'toukokuussa 1942. Kun amerikkalainen tiedustelulento '
+            + 'havaitsi, että saaren pohjoisrannikolle Lunga Pointiin '
+            + 'rakennettiin lentokenttää, tilanne muuttui kriittiseksi: '
+            + 'kenttä uhkasi Yhdysvaltain ja Australian välisiä '
+            + 'yhteyksiä. Yhdysvallat teki 7. elokuuta 1942 sodan '
+            + 'ensimmäisen maihinnousunsa, ja kenttä vallattiin vähällä '
+            + 'vaivalla — mutta sen pitäminen seuraavat kuusi kuukautta '
+            + 'oli koko Tyynenmeren sotanäyttämön kiivaimpia '
+            + 'kamppailuja. Laivaston rakennusjoukot viimeistelivät '
+            + 'kentän ja nimesivät sen Henderson Fieldiksi Midwayssä '
+            + 'kaatuneen merijalkaväen lentäjän mukaan.',
+          tiedosto: 'Aerial view of Henderson Field, Guadalcanal, in late August 1942.jpg',
+          selite: 'Elokuussa 1942 kuvattu Henderson Field on aukea '
+            + 'kiitorata kookosviljelmän ja joen välissä.',
+          lahde: 'U.S. Navy (photographed from a USS Saratoga (CV-3) plane), Wikimedia Commons (PD)',
+          wiki: 'Guadalcanal campaign',
+        },
+        {
+          otsikko: 'Rautapohjan meri',
+          teksti: 'Guadalcanalin ja Tulagin välisissä meritaisteluissa '
+            + 'upposi niin monta alusta molemmilta puolilta, että '
+            + 'vesialuetta alettiin kutsua nimellä Ironbottom Sound eli '
+            + 'Rautapohja. Cape Esperancen taistelu käytiin 11. '
+            + 'lokakuuta 1942 saaren luoteisrannikon edustalla, ja '
+            + 'marraskuun alun monipäiväinen meritaistelu käänsi koko '
+            + 'kampanjan. Japanilaiset joukot evakuoitiin helmikuussa '
+            + '1943, ja saari julistettiin turvatuksi 9. helmikuuta. '
+            + 'Etsinnät ovat jatkuneet sodan jälkeen: noin '
+            + 'seitsemäntuhannen japanilaissotilaan jäänteet ovat yhä '
+            + 'kateissa saarella, ja luita on kaivettu esiin vielä '
+            + '2010-luvulla.',
+          tiedosto: 'US Navy Destroyer Squadron 12 in Ironbottom Sound in early 1944.jpg',
+          selite: 'Viisi hävittäjää tekee kaarroksia Rautapohjan '
+            + 'salmessa vuonna 1944, ja taustalla häämöttää Savon '
+            + 'saari.',
+          lahde: 'U.S. Navy, Wikimedia Commons (PD)',
+          wiki: 'Ironbottom Sound',
+        },
+        {
+          otsikko: 'Kaupunki tukikohdan päälle',
+          teksti: 'Heti sodan jälkeen Britannian Salomonsaarten '
+            + 'protektoraatin pääkaupunki siirrettiin Tulagista '
+            + 'Guadalcanalille, ja Honiarasta tuli virallisesti '
+            + 'pääkaupunki 1952. Päätöksen saneli se, että '
+            + 'amerikkalaiset olivat rakentaneet sodan aikana tiet, '
+            + 'laiturit ja lentokentän valmiiksi; hallintorakennuksia '
+            + 'avattiin tammikuusta 1952 alkaen. Kaupunki kasvoi '
+            + 'nopeasti: sille meni kaksi kolmasosaa maan '
+            + 'kehitysvaroista 1960- ja 1970-luvuilla, vaikka vain viisi '
+            + 'prosenttia salomonsaarelaisista asui siellä. '
+            + 'Heinäkuussa 1978 Honiarasta tuli itsenäisten '
+            + 'Salomonsaarten pääkaupunki.',
+          tiedosto: 'Long shot of the Solomon Islands Parliament House. (10708895683).jpg',
+          selite: 'Parlamenttitalon kartiomainen katto nousee sinistä '
+            + 'taivasta vasten, ja sen edessä on lehtikattoinen katos.',
+          lahde: 'Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Solomon Islands Parliament Building',
+        },
+      ],
+    },
+  ],
+  /*
+   * PORT VILA (Opus 6.9.2026, paketti O9) — Oseanian laudan
+   * kahdeksas kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-portvila.md ja sen tarkistus tarkistus-portvila.md
+   * (tuomio "kelpaa korjausten jälkeen"). Väitteet on luettu
+   * en-Wikipedian raakateksteistä 6.9.2026: "Port Vila", "Vanuatu",
+   * "Efate", "Franceville, New Hebrides", "Bislama", "Roi Mata",
+   * "Vanuatu Cultural Centre", "National Museum of Vanuatu",
+   * "Sand drawing", "Blackbirding", "Cyclone Pam".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei uusia kysymyksiä.
+   * Saapumisteksti (oceania-saapumiset.js) ja valokuvataulu
+   * (oceania-valokuvat.js) olivat jo olemassa eikä niihin koskettu.
+   *
+   * TEHTÄVÄNANNON 1873-OLETUS OSOITTAUTUI VÄÄRÄKSI, ja lehti kertoo
+   * asian oikein. Toimeksianto sanoi, että Port Vila oli 1873 "pieni
+   * ranskalais-brittiläinen kauppa-asema (Franceville)". Franceville
+   * perustettiin vasta 1889 ja hajosi 1890; Uudet Hebridit
+   * julistettiin puolueettomaksi alueeksi 1878 ja yhteishallinto
+   * alkoi 1887, kondominio 1906. Vuonna 1873 Efatella ei ollut
+   * kuntaa eikä hallintoa (faktapohja, sisältölinjaus; tarkistus,
+   * kohta C).
+   *
+   * TARKISTUKSEN KAIKKI KORJAUKSET ON TEHTY:
+   *  - Chevillard saapui Efatelle 1880 ("Vanuatu"), ei 1890-luvulla;
+   *    Port Vila -artikkelin lähteetöntä virkettä ei käytetä.
+   *  - Franceville on KUNTA, ei tasavalta (infoboxin
+   *    government_type = Republic on ristiriidassa leipätekstin
+   *    kanssa); väkiluku 540 kerrotaan muodossa "noin viisisataa",
+   *    koska luku on vain infoboxissa.
+   *  - Kielten määrä on "yli sata" (138 / 113 / 100+ kolmessa eri
+   *    artikkelissa).
+   *  - Blackbirdingista EI käytetä Bislama-artikkelin
+   *    "satojatuhansia", vaan Blackbirding-artikkelin omat rajatut
+   *    luvut.
+   *  - Kulttuurikeskuksen perustamisvuosi on 1959 (leipäteksti);
+   *    luokituksen 1955 ei ole lähde.
+   *  - Vienti- ja tuontiosuuksia (35,7 % / 86,9 %) ei käytetä, koska
+   *    lähde merkitsee ne lähteettömiksi.
+   *  - Independence Parkista EI väitetä, että itsenäisyys olisi
+   *    julistettu siellä — lähde ei sano niin.
+   *
+   * EI NYKYPOLITIIKKAA: nykyiset puolueet, pormestari, pääministeri
+   * ja veroparatiisikeskustelu on jätetty pois.
+   *
+   * SYKLONIT KERROTAAN LUONNONILMIÖNÄ ja Pamin jäljet näkyvät
+   * kohdekartan stadionin kuvassa; teksti sanoo sen ääneen
+   * (Raamattu, tuhoutuneen kaupungin nykykuvat 20.8.2026).
+   *
+   * ENNEN–NYT-PARI ON NOIN VUODELTA 1897 eli isoisän matkasta
+   * neljännesvuosisata eteenpäin, ja kuvateksti sanoo sen. W. A.
+   * Lucasin kuvat ovat kaupungin varhaisimmat Commonsista löytyvät
+   * valokuvat.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026
+   * "Daily API request limit exceeded" (HTTP 429), joten
+   * js/packs/saatiedot.js:ään ei lisätty riviä (Samarkand-malli
+   * v965). Oppaan sääjakso nojaa en-Wikipedian sääruutuun ja sanoo
+   * sen.
+   */
+  portvila: [
+    {
+      id: 'kaupunki',
+      nimi: 'Port Vila',
+      johdanto: 'Port Vila on rakennettu suojaisan luonnonsataman '
+        + 'ympärille Efaten rannalle. Kaupungilla on ollut kaksi '
+        + 'hallintoa, kaksi lakia ja kaksi tuomioistuinta yhtä aikaa — '
+        + 'ja yhden vuoden oma kunta.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin. Ne ovat silti kolme laajaa yleiskuvaa: satama
+       * Iririkin saarineen, koko kaupunki ilmasta ja lahti
+       * auringonlaskussa.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Port Vila Vanuatu Harbour.JPG',
+          selite: 'Vilan sataman suulla makaa Iririkin saari '
+            + 'lehtikattoisine mökkeineen, ja poijuissa keinuu '
+            + 'purjeveneitä.',
+          lahde: 'Steffen Wurzel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Central Port Vila, Vanuatu, 29 Nov. 2006 - Flickr - PhillipC.jpg',
+          selite: 'Ilmasta näkyy koko kaupunki: vihreä niemi, lahti, '
+            + 'Iririki ja risteilijä laiturissa.',
+          lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Port Vila Harbour (Imagicity 816).jpg',
+          selite: 'Aurinko laskee lahden taakse, ja saaret piirtyvät '
+            + 'tummina siluetteina veden yli.',
+          lahde: 'Graham Crumb, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: kolme laajaa yleiskuvaa kaupungin eri
+       * puolilta — Iririki lahden yli, sataman suu purjelaivoineen ja
+       * saaren rinne rantamökkeineen. Port Vilalle ei ole generoitu
+       * herokuvia, joten karusellissa on kolme aitoa valokuvaa.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Port Vila - Iririki Island - panoramio.jpg',
+          selite: 'Iririkin saari näkyy lahden yli vain parin minuutin '
+            + 'venematkan päähän keskustasta.',
+          lahde: 'Jean Van Jean, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Port Vila harbour, Vanuatu, June 2009 (3653339680).jpg',
+          selite: 'Kahden maston purjelaiva liukuu sataman suulla, ja '
+            + 'takana levittäytyy metsäinen ranta.',
+          lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Port Vila - View on Vila Bay - panoramio (1).jpg',
+          selite: 'Saaren rinteessä on rivi lehtikattoisia mökkejä, ja '
+            + 'niiden edessä ankkuroi katamaraani.',
+          lahde: 'Jean Van Jean, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'ANHC jetty at Port Vila.tif',
+          vuosi: 'n. 1897',
+          selite: 'Kauppahuoneen kivilaituri ja pensaikkoinen ranta '
+            + 'noin vuonna 1897 — kaupungin varhaisin tunnettu '
+            + 'valokuva, isoisän matkasta neljännesvuosisata '
+            + 'eteenpäin.',
+          lahde: 'W. A. Lucas, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Waterfront, Port Vila, 2007 (2).JPG',
+          selite: 'Samalla rannalla kulkee nyt kivetty rantapolku, ja '
+            + 'lahden takana ovat hotellit ja purjeveneet.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Vuonna 1873 kuntaa ei ollut',
+          teksti: 'James Cook kartoitti Efaten 1774 ja nimesi sen '
+            + 'Sandwich Islandiksi; retkikunta ei noussut maihin mutta '
+            + 'pani merkille hyvät satamat. Isoisän matkan aikaan 1873 '
+            + 'saarella ei ollut kuntaa eikä hallintoa. Santelipuu oli '
+            + 'hakattu loppuun 1860-luvun puoliväliin mennessä, mutta '
+            + 'valaanpyyntialuksia kävi yhä, lähetyssaarnaajia oli '
+            + 'tullut vuodesta 1839 ja työvoimaa hakevat alukset veivät '
+            + 'saarelaisia Queenslandin, Fidžin ja Uuden-Kaledonian '
+            + 'viljelmille. Britannia ja Ranska julistivat Uudet '
+            + 'Hebridit puolueettomaksi alueeksi vasta 1878, '
+            + 'ensimmäinen kookosviljelmä istutettiin Efatelle 1877 ja '
+            + 'ensimmäinen ranskalainen istuttaja saapui 1880.',
+          tiedosto: 'Trypot and \'Astrolabe\' anchor, Port Vila, Vanuatu, April 2008 (2425651555).jpg',
+          selite: 'Kirjaston pihalla on valaanpyytäjien traanipata ja '
+            + 'vanha ankkuri, jäänteitä ajalta ennen kaupunkia.',
+          lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Vanuatu',
+        },
+        {
+          otsikko: 'Kunta, joka julistautui itsenäiseksi',
+          teksti: 'Uusilla Hebrideillä ei ollut 1880-luvulla toimivaa '
+            + 'hallintoa, ja se turhautti asukkaita. Ranskalaisia '
+            + 'haittasi erityisesti se, että Ranskan laki tunnusti vain '
+            + 'siviilivihkimisen ja lähin viranomainen oli '
+            + 'Uudessa-Kaledoniassa. Franceville — nykyinen Port '
+            + 'Vila — julistautui 9. elokuuta 1889 itsenäiseksi '
+            + 'kunnaksi ja valitsi johtajakseen Ferdinand-Albert '
+            + 'Chevillardin. Asukkaita oli noin viisisataa. Yhteisö oli '
+            + 'yksi ensimmäisistä tunnetun historian itsehallinnoista, '
+            + 'jotka toteuttivat yleisen äänioikeuden sukupuoleen ja '
+            + 'rotuun katsomatta. Kesäkuuhun 1890 mennessä kunta oli '
+            + 'hajonnut, mutta vuoden 1905 kartassa nimi Franceville '
+            + 'luki yhä Port Vilan rinnalla.',
+          tiedosto: 'Australasian New Hebrides Company Store (cropped).tif',
+          selite: 'Kauppahuoneen aaltopeltinen myymälä ja sen kuistilla '
+            + 'seisova henkilökunta noin vuonna 1897.',
+          lahde: 'W. A. Lucas, Wikimedia Commons (PD)',
+          wiki: 'Franceville, New Hebrides',
+        },
+        {
+          otsikko: 'Kaksi hallintoa yhdessä kaupungissa',
+          teksti: 'Vuoden 1887 jälkeen Uusia Hebrideitä hallitsivat '
+            + 'Ranska ja Britannia yhdessä, ja järjestely '
+            + 'virallistettiin 1906 kondominioksi. Se oli ainutlaatuinen '
+            + 'hallintomuoto: kaksi erillistä hallinto-, laki-, '
+            + 'tuomioistuin- ja finanssijärjestelmää, jotka kohtasivat '
+            + 'vain yhteisessä tuomioistuimessa. Ni-vanuatulaisilta oli '
+            + 'suljettu kummankin vallan kansalaisuus, ja he olivat '
+            + 'virallisesti kansalaisuudettomia; koulutus ja '
+            + 'terveydenhuolto jäivät lähetysseurojen käsiin. Port '
+            + 'Vilan postitalo merkitsi epävirallista rajaa kaupungin '
+            + 'kahden sektorin välillä: British Paddock etelässä, '
+            + 'Quartier français pohjoisessa. Vanuatu itsenäistyi 1980.',
+          tiedosto: 'PortVilaPostOffice.jpg',
+          selite: 'Vanuatu Postin oranssi talo seisoo yhä siinä '
+            + 'kohdassa, jossa kaupungin brittiläinen ja ranskalainen '
+            + 'puoli aikoinaan kohtasivat.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'New Hebrides',
+        },
+        {
+          otsikko: 'Kieli, joka on nimetty merimakkaran mukaan',
+          teksti: 'Bislama on englantipohjainen kreolikieli ja Vanuatun '
+            + 'kansalliskieli. Yli 95 prosenttia sen sanoista tulee '
+            + 'englannista, loput muutamasta kymmenestä ranskan sanasta '
+            + 'ja saarten omista kielistä — käytännössä kasvi- ja '
+            + 'eläinnimistöstä. Nimi juontuu 1800-luvun alun sanasta '
+            + 'Beach-la-Mar, joka tulee ranskan sanasta bêche de mer '
+            + 'eli merimakkara: 1840-luvun alussa merimakkaroita '
+            + 'kuivattiin samaan aikaan kuin santelipuuta hakattiin. '
+            + 'Bislama on Port Vilan ja Luganvillen asukkaiden '
+            + 'äidinkieli ja muualla maassa toinen kieli, ja '
+            + 'kansallislaulun sanat ovat sillä. Vanuatussa puhutaan '
+            + 'yli sataa alkuperäiskieltä.',
+          tiedosto: 'PortVilaCityHall.jpg',
+          selite: 'Kaupungintalo seisoo keskustan kukkulalla, ja sen '
+            + 'julkisivussa on Vanuatun lippu ja kaupungin vaakuna.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bislama',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'The Nambanga House (Imagicity 440).jpg',
+          selite: 'Jättiläismäisen nambanga-banjaanin ilmajuurten '
+            + 'suojaan on rakennettu talo.',
+          lahde: 'Graham Crumb, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Port Vila on Vanuatun pääkaupunki ja maan tärkein '
+          + 'satama. Se on rakennettu Efaten rannalle suojaisan '
+          + 'luonnonsataman ympärille, ja sataman suulla makaa Iririkin '
+          + 'saari kahden minuutin venematkan päässä keskustasta. '
+          + 'Kaupunki on pieni: asukkaita oli vuoden 2020 '
+          + 'väestönlaskennassa 49 034, ja koko keskusta mahtuu '
+          + 'kävelymatkan päähän rantakadusta. Kaupungin kaksikielisyys '
+          + 'näkyy katukuvassa — kadunnimet, kaupat ja kirkot ovat '
+          + 'ranskaksi ja englanniksi, ja arjen puhekieli on bislama. '
+          + 'Kauppahalli, kulttuurikeskus, kaupungintalo ja '
+          + 'presbyteerikirkko ovat kaikki yhden kävelyn varrella. '
+          + 'Kaupungin ulkopuolelta alkaa toinen Vanuatu: yli 80 '
+          + 'saarta, joista noin 65:llä asutaan, ja niille lähdetään '
+          + 'lautalla tai pikkukoneella.',
+        artikkeli: {
+          nimi: 'Matkailijan Port Vila',
+          taitto: 'opas',
+          teksti: 'Satamakaupunki, jolla oli kerran kaksi hallitusta ja '
+            + 'kerran oma kunta — ja jonka museossa osa esineistä on '
+            + 'yhä tabu.',
+          nosto: 'Vanuatussa puhutaan yli sataa alkuperäiskieltä, ja '
+            + 'Port Vilan väestönlaskennassa 2020 yhdeksän kymmenestä '
+            + 'oli lukutaitoinen englanniksi, lähes puolet ranskaksi ja '
+            + 'neljä viidestä jollakin saarten omalla kielellä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Bauerfieldin kansainvälinen lentoasema on '
+                + 'kaupungissa, ja Air Vanuatun pääkonttori on Vanuatu '
+                + 'Housessa Port Vilassa. Satama on maan tärkein, ja '
+                + 'siellä käy sekä rahtia että risteilijöitä. '
+                + 'Ulkosaarille lähdetään lentäen tai lautalla: Tanna '
+                + 'ja Espiritu Santo ovat päivittäisen lennon päässä, '
+                + 'syrjäisemmät saaret harvemmin. Matkailu on '
+                + 'kasvanut erityisesti Australiasta ja '
+                + 'Uudesta-Seelannista — vuonna 1997 kävijöitä oli yli '
+                + '80 000. Kaupungin ulkopuolella useimmat elävät '
+                + 'omavaraistaloudessa ja syövät saariruokaa, jota '
+                + 'bislamaksi sanotaan nimellä aelan kakae.',
+              kuva: {
+                tiedosto: 'Daybreak, Port Vila, Vanuatu, 11 June 2009 (3619811281).jpg',
+                selite: 'Aamurusko värjää lahden vaaleanpunaiseksi, ja '
+                  + 'maihinnousualus odottaa rannan edustalla.',
+                lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Satama, saari ja kaksi kaupunginosaa',
+              teksti: 'Kaupunki kiertyy Vilan sataman itärannalle. '
+                + 'Sataman suulla on Iririkin saari, jonne pääsee '
+                + 'kahdessa minuutissa veneellä; sen historia on '
+                + 'brittiläinen. Vuonna 1910 saarelle perustettiin '
+                + 'Uusien Hebridien ensimmäinen brittiläinen sairaala '
+                + 'presbyteerilähetyssaarnaaja John G. Patonin '
+                + 'muistoksi, ja 1913 saarella toimi brittiresidenssi, '
+                + 'joka vuokrasi saaren yhdeksäksikymmeneksiyhdeksäksi '
+                + 'vuodeksi; residenssiin noustiin 179 porrasta. '
+                + 'Itsenäistyessä 1980 residenssi hylättiin, ja 1983 '
+                + 'Ifiran saarelaiset vuokrasivat saaren '
+                + 'lomakeskukseksi. Kaupungin nähtävää: parlamentin '
+                + 'edessä on kaksi perinteistä totemipaalua ja sian '
+                + 'syöksyhammasta esittävä monumentti, kauppahallia '
+                + 'vastapäätä värikäs seinämaalaus ja kukkulalla '
+                + 'pitkulainen kaupungintalo.',
+              kuva: {
+                tiedosto: 'PortVilaPresbyterianChurch.jpg',
+                selite: 'Presbyteerikirkon keltainen harjakatto '
+                  + 'laskeutuu nurmelle asti Independence Parkia '
+                  + 'vastapäätä.',
+                lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kauppahalli rannan tuntumassa',
+              teksti: 'Kauppahalli on kaupungin arjen keskus, ja sen '
+                + 'edessä olevan hallintorakennuksen seinässä on '
+                + 'värikäs maalaus. Vanuatun talous nojaa yhä suurelta '
+                + 'osin omavaraisviljelyyn: perheiden puutarhapalstat '
+                + 'tuottavat ruoan, ja tori on paikka, jossa ylijäämä '
+                + 'muuttuu rahaksi. Maatalous ja kalastus ovat '
+                + 'kaupungin tärkeimmät elinkeinot turismin ohella. '
+                + 'Hallin ranskankielinen nimikilpi Marché de Port Vila '
+                + 'muistuttaa siitä, että kaupungilla on kaksi '
+                + 'siirtomaakieltä ja yksi yhteinen puhekieli.',
+              kuva: {
+                tiedosto: 'Port Vila - The market house - panoramio.jpg',
+                selite: 'Kauppahallin edessä on paanukattoinen kilpi, '
+                  + 'jossa lukee Marché de Port Vila.',
+                lahde: 'Jean Van Jean, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kastom talteen',
+              teksti: 'Vanuatun kulttuurikeskus aloitti 1976 suullisen '
+                + 'perinteen keruuprojektin, jota on kuvattu '
+                + 'Tyynenmeren menestyksekkäimmäksi ruohonjuuritason '
+                + 'kulttuuridokumentointiohjelmaksi. Se koulutti '
+                + 'ni-vanuatulaisia tallentamaan omaa perinnettään, ja '
+                + '1990 ohjelma laajennettiin naisten perinteeseen '
+                + 'Jean Tarissein johdolla; 1994 siitä oli kehittynyt '
+                + 'naiskenttätyöntekijöiden verkosto. Työ liittyi '
+                + 'itsenäisyysajan ajatteluun: kastomista tuli tapa '
+                + 'puhua siitä, mikä on omaa. Keskuksessa on myös '
+                + 'kansallinen audiovisuaalinen arkisto, jonka '
+                + 'aineisto ulottuu 1800-luvun lopulle. Yksi '
+                + 'kokoelmien esine on Louvressa: Pohjois-Ambrymin '
+                + 'Magamin kylän pyhä Lengnangulong-kivi vietiin 1949, '
+                + 'ja kylä on vuodesta 1997 pyytänyt joko palautusta '
+                + 'tai omistuksen tunnustamista. Museossa on kivestä '
+                + 'kopio.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Port Vila '
+                + '-artikkelin sääruudusta (Bauerfieldin lentoasema, '
+                + 'lähteenä Saksan ilmatieteen laitos); lehdellä ei ole '
+                + 'omaa vuosigraafia, koska Open-Meteon arkisto ei '
+                + 'vastannut kyselyihin. Ilmastossa on selvästi '
+                + 'sateisempia ja kuivempia kuukausia, ja koska '
+                + 'pasaatituulet ovat lähes pysyviä, ilmasto '
+                + 'luokitellaan meritrooppiseksi eikä '
+                + 'ekvatoriaaliseksi. Vuosikeskilämpötila on 24,3 '
+                + 'astetta: helmikuussa päivälämpö nousee 31,2 '
+                + 'asteeseen ja heinäkuussa jää 26,4 asteeseen, ja '
+                + 'yölämpötila vaihtelee 18 ja 23 asteen välillä. '
+                + 'Sadetta tulee vuodessa noin 2 339 millimetriä ja '
+                + 'sadepäiviä on 153. Sateisin kuukausi on maaliskuu '
+                + '(321 mm) ja kuivin syyskuu (87 mm). Trooppiset '
+                + 'syklonit eivät ole harvinaisia: sykloni Uma '
+                + 'vaurioitti kaupunkia 1987 ja luokan viisi Pam '
+                + '13. maaliskuuta 2015.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Vanuatun kulttuurikeskus',
+                tahdet: 3,
+                selite: 'Kansallismuseo, kastom-koulu ja arkisto, jonka '
+                  + 'osa aineistosta on tabu.',
+              },
+              {
+                mita: 'Kauppahalli',
+                tahdet: 3,
+                selite: 'Kaupungin arjen keskus rannan tuntumassa, '
+                  + 'ranskankielinen nimikilpi ovella.',
+              },
+              {
+                mita: 'Iririkin saari',
+                tahdet: 2,
+                selite: 'Kahden minuutin venematka keskustasta; entinen '
+                  + 'brittiresidenssin saari.',
+              },
+              {
+                mita: 'Independence Park',
+                tahdet: 2,
+                selite: 'Kaupungin suurin nurmikenttä ja sitä '
+                  + 'vastapäätä presbyteerikirkko.',
+              },
+              {
+                mita: 'Sacré-Cœurin katedraali',
+                tahdet: 2,
+                selite: 'Port Vilan hiippakunnan istuin ja kaupungin '
+                  + 'tunnetuin moderni kirkko.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua.
+             * Sääluvut ovat samasta sääruudusta kuin jakso 5.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Syklonit kuuluvat asiaan',
+                teksti: 'Syklonit eivät ole Vanuatussa harvinaisia: '
+                  + 'Uma 1987 ja luokan viisi Pam 13. maaliskuuta 2015 '
+                  + 'vaurioittivat kaupunkia pahoin.',
+              },
+              {
+                otsikko: 'Sateisin kausi joulu–huhtikuussa',
+                teksti: 'Vuosisade on noin 2 339 millimetriä, ja '
+                  + 'maaliskuussa sitä tulee 321 millimetriä — lähes '
+                  + 'nelinkertaisesti syyskuuhun verrattuna.',
+              },
+              {
+                otsikko: 'Osa museon aineistosta on tabu',
+                teksti: 'Kaikkea ei näytetä, ja se on tarkoituksellista: '
+                  + 'osaan pääsevät vain miehet, osaan vain naiset ja '
+                  + 'osaan vain tiettyjen ryhmien jäsenet.',
+              },
+              {
+                otsikko: 'Kolme kieltä',
+                teksti: 'Bislama on arjen kieli, mutta englanti ja '
+                  + 'ranska ovat molemmat virallisia — ja kadunnimissä '
+                  + 'näkyy kumpikin.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Kolmetuhatta vuotta ja kaksi lippua',
+      johdanto: 'Efatella on asuttu kolmetuhatta vuotta, ja saaren omat '
+        + 'tarinat osoittivat arkeologille haudan, jota kukaan ei ollut '
+        + 'löytänyt. Kartoille kirjoitetut nimet ovat sitä paljon '
+        + 'nuorempaa kerrostumaa.',
+      tehtava: {
+        kysymys: 'Millä välineellä Vanuatun hiekkapiirros eli '
+          + 'sandroing piirretään?',
+        vaihtoehdot: [
+          'Yhdellä sormella',
+          'Kepillä',
+          'Harjalla',
+          'Kammalla',
+        ],
+        oikea: 0,
+        fakta: 'Piirtäjä vetää yhtenäisen kiemurtelevan viivan yhdellä '
+          + 'sormella hiekkaan, vulkaaniseen tuhkaan tai saveen; '
+          + 'UNESCO on tunnustanut perinteen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Hautausmaa, joka löytyi 2004',
+          teksti: 'Melanesialaiset ovat asuneet Port Vilan seudulla '
+            + 'tuhansia vuosia. Syksyllä 2004 arkeologinen retkikunta '
+            + 'löysi Teoumasta hautausmaan: 25 hautaa ja niissä '
+            + 'kolmisenkymmentä lapita-kulttuurin edustajan luurankoa. '
+            + 'Löytöpaikan keramiikka on ajoitettu 1200-luvulle ennen '
+            + 'ajanlaskun alkua, ja koko kaivauksesta on sittemmin '
+            + 'kertynyt 94 yksilön jäänteet. Lapita-ihmiset asuttivat '
+            + 'Vanuatun saaret noin kolmetuhatta vuotta sitten ja '
+            + 'toivat mukanaan jamssin, taaron ja banaanin sekä siat ja '
+            + 'kanat. Heidän tulonsa osui yhteen useiden lajien '
+            + 'häviämisen kanssa: saarilta katosivat muun muassa '
+            + 'maakrokotiili ja maakilpikonna.',
+          tiedosto: 'PortVilaLapita.jpg',
+          selite: 'Lapita-kulttuurin savipata on esillä '
+            + 'kulttuurikeskuksen vitriinissä, ja sen kylkeen on '
+            + 'painettu hienoa kuviointia.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Port Vila',
+        },
+        {
+          otsikko: 'Roi Matan valtakunta',
+          teksti: 'Roi Mata oli päällikkyyden arvonimi Vanuatun '
+            + 'keskisaarilla, ja sitä kantoi päällikködynastia '
+            + '1000-luvulta 1600-luvulle. Tunnetuin on viimeinen, jonka '
+            + 'uskotaan eläneen noin vuonna 1600; hänen '
+            + 'hallintokautensa maine on rauhanomainen. Ranskalainen '
+            + 'arkeologi José Garanger löysi hänen hautansa Eretokan '
+            + 'saarelta 1967 — ei umpimähkään kaivamalla vaan '
+            + 'analysoimalla paikallista suullista perinnettä. Haudassa '
+            + 'oli yli 25 hänen seurueensa jäsentä. Kolme Roi Mataan '
+            + 'liittyvää kohdetta Efatella, Lelepassa ja Eretokalla '
+            + 'merkittiin UNESCOn maailmanperintöluetteloon 2008; alue '
+            + 'on 886 hehtaarin kokoinen.',
+          tiedosto: 'Lelepa cliffs, Vanuatu, 2006 - Flickr - PhillipC.jpg',
+          selite: 'Lelepan saaren valkoiset kalkkikivijyrkänteet '
+            + 'kuuluvat Roi Matan maailmanperintöalueeseen.',
+          lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Roi Mata',
+        },
+        {
+          otsikko: 'Nimet, jotka kartat toivat',
+          teksti: 'Ensimmäinen eurooppalainen kosketus oli huhtikuussa '
+            + '1606, kun portugalilainen Pedro Fernandes de Queirós '
+            + 'purjehti Espanjan kruunun palveluksessa Callaosta. '
+            + 'Espanjalaiset perustivat Espiritu Santolle asutuksen '
+            + 'nimeltä Nueva Jerusalén, mutta se hylättiin kuukauden '
+            + 'jälkeen. Ranskalainen Louis Antoine de Bougainville '
+            + 'purjehti saarten ohi 22. toukokuuta 1768 ja nimesi ne '
+            + 'Suuriksi Kykladeiksi; hänen nimistään on jäänyt vain '
+            + 'Pentecost. James Cook tutki saaret heinä–syyskuussa 1774 '
+            + 'ja nimesi ne Uusiksi Hebrideiksi. Paikan omat nimet ovat '
+            + 'vanhempia: alue on eteläefaten kielellä Efil ja '
+            + 'mele-filan kielellä Ifira — ja Vila on niiden muunnos.',
+          tiedosto: 'The Landing at Tana one of the New Hebrides, by William Hodges.jpg',
+          selite: 'Retkikunnan taiteilija William Hodges maalasi Cookin '
+            + 'maihinnousun Tannan saarelle noin 1775; kuva on '
+            + 'eurooppalaisen matkalaisen näkökulma.',
+          lahde: 'William Hodges, Wikimedia Commons (PD)',
+          wiki: 'Vanuatu',
+        },
+        {
+          otsikko: 'Talo, jossa osa esineistä on tabu',
+          teksti: 'Vanuatun kulttuurikeskus perustettiin 1959, ja se on '
+            + 'kattojärjestö, johon kuuluvat kansallismuseo, '
+            + 'kansallisarkisto, kansalliskirjasto ja '
+            + 'kenttätyöntekijäverkosto. Vuoteen 1996 mennessä '
+            + 'kokoelmassa oli noin 2 500 tuntia äänitallennetta, '
+            + '2 300 tuntia videota ja kolmetuhatta '
+            + 'mustavalkovalokuvaa 1950-luvulle asti. Osa aineistosta '
+            + 'on tabu: joihinkin pääsevät vain miehet, joihinkin vain '
+            + 'naiset ja joihinkin vain tiettyjen kulttuuriryhmien '
+            + 'jäsenet. Keskus on tallentanut myös sandroing-perinteen, '
+            + 'jossa yhtenäinen kiemurteleva viiva piirretään yhdellä '
+            + 'sormella hiekkaan; se toimii viestintänä noin '
+            + 'kahdeksankymmenen kielikunnan välillä.',
+          tiedosto: 'Sand drawing, Vanuatu.jpg',
+          selite: 'Hiekkaan piirretty symmetrinen kuvio syntyy yhdestä '
+            + 'yhtenäisestä viivasta.',
+          lahde: 'PhillipC, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Sand drawing',
+        },
+      ],
+    },
+  ],
 };
