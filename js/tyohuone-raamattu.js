@@ -3466,7 +3466,16 @@ export const RAAMATTU = {
           + '(valitaso liikkeessa, ladattujen tarkkojen laattojen pito ilman '
           + 'purkua, lepokerros marginaalilla liikkuvana pintana, kirjaston '
           + 'laattavalinnan rajaus nakyvaan alueeseen) ja omistaja valitsee '
-          + 'mittausten perusteella.',
+          + 'mittausten perusteella. LISAYS (omistaja 6.9.2026 ilta, '
+          + 'sanatarkasti: "Google Earthissa myos sisaanpain zoomaus nayttaa '
+          + 'portaattomalta. Sen voisin myos samalla tutkia, miten sen saisi '
+          + 'toteutettua. Tama on pelin ehka yksi keskeisimmista '
+          + 'tekniikoista, niin kaytetaan siihen nyt kaikki resurssit, etta '
+          + 'saadaan toimimaan."): samaan tyohon kuuluu portaaton zoomaus '
+          + '(tarkempi taso tulee vanhemman paalle haivyttaen, ei '
+          + 'poksahduksia eika tyhjia ruutuja), ja tahan saa kayttaa '
+          + 'fablemaxia toteutukseen asti - se on poikkeus FABLEMAX VAIN '
+          + 'TARPEESEEN -saantoon omistajan omalla paatoksella.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
