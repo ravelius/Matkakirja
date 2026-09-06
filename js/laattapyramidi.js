@@ -1771,3 +1771,55 @@ export function nollaaPyramidi(ui) {
   mittarit.viivoja = 0;
   mittarit.nostoja = 0;
 }
+
+/* ------------------------------------------------------------ pallon lepokerros */
+
+/*
+ * PALLON LEPOKERROS LUKEE SAMAA PYRAMIDIA (Raamattu 6.9.2026, PALLO
+ * LEVOSSA YHTA TERAVA KUIN TASOKARTTA): kun karttapallon kamera
+ * pysähtyy, pallo kokoaa näkyvän alueen päälle kerroksen suoraan tämän
+ * pyramidin laatoista (js/pallo.js asennaLepokerros). Pallon Z8 on
+ * 182 px/aste ja se on poltettu tämän pyramidin z7:stä (240 px/aste),
+ * joten laatan matka Milleristä Mercatoriin ja jpeg:ksi maksaa
+ * terävyyttä, jonka lepokerros saa takaisin lukemalla alkuperäisen.
+ *
+ * NÄMÄ OVAT AINOAT OVET LUETTELOON JA OSOITTEISIIN. Pallo ei rakenna
+ * laatan osoitetta itse eikä arvaa laataston bittikarttaa: se kysyy
+ * tästä moduulista samat vastaukset, jotka tasokartta itse käyttää
+ * (laattaUrl, laattaOlemassa, nosto- ja viivatason tasot). Jos osoite-
+ * kaava tai luettelon muoto joskus vaihtuu, pallo seuraa perässä
+ * ilman omaa muutosta — ja kahta eriytynyttä kopiota ei synny.
+ */
+
+/** Pyramidin luettelo (sama nouto ja välimuisti kuin tasokartalla) tai null. */
+export function haePyramidinLuettelo() {
+  return haeLuettelo();
+}
+
+/**
+ * Tason z kerrokset piirtojärjestyksessä pohja → viiva → nosto (sama
+ * järjestys kuin varmistaKerrokset: reitti kartan päällä, noston
+ * symboli reitin päällä). Puuttuva kerros jää listasta pois: viiva- ja
+ * nostotasoa ei ole joka tasolla eikä joka luettelossa. Null, jos
+ * luetteloa ei ole tai tasoa z ei ole.
+ */
+export function pyramidinKerrostasot(z) {
+  const pohja = luettelo?.tasot?.find((t) => t.z === z) ?? null;
+  if (!pohja) return null;
+  const kerrokset = [pohja];
+  const viiva = viivatasonTasot()?.find((t) => t.z === z);
+  if (viiva) kerrokset.push(viiva);
+  const nosto = nostotasonTasot()?.find((t) => t.z === z);
+  if (nosto) kerrokset.push(nosto);
+  return kerrokset;
+}
+
+/** Laatan osoite tasokartan omalla kaavalla (pohja, viiva tai nosto). */
+export function pyramidinLaattaUrl(taso, sarake, rivi) {
+  return laattaUrl(taso, sarake, rivi);
+}
+
+/** Onko laatta olemassa levyllä (harvan tason bittikartta)? */
+export function pyramidinLaattaOlemassa(taso, sarake, rivi) {
+  return laattaOlemassa(taso, sarake, rivi);
+}

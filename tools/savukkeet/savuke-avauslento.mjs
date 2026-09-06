@@ -420,9 +420,17 @@ if (PALLOLLA) {
   const svgSuurin = Math.max(0, ...avauksenJalkeen.map((n) => n.svgLapsia));
   const svgIntro = Math.max(0, ...tulos.nayte.map((n) => n.svgLapsia));
 
-  vaadi('P1 tasokartta ei herää: svg#board tyhjä ja pyramidipyyntöjä 0',
-    svgSuurin === 0 && pyynnot.pyramidi === 0 && tulos.svgLapsia === 0,
-    `svg#board enimmillään ${svgSuurin} lasta, pyramidipyyntöjä ${pyynnot.pyramidi}`);
+  // Lepokerros (js/pallo.js luoLepokerros) pyytää levossa pyramidin
+  // laattoja samoista osoitteista kuin tasokartta: tasokartan pyynnöt
+  // ovat erotus (savuke-pallolauta, vartio 2).
+  const lepokerroksenPyynnot = await sivu.evaluate(() => {
+    const m = window.matkakirja.ui.pallolauta?.lepokerros?.()?.mittarit?.() ?? null;
+    return m ? m.pyyntoja + (m.luettelo ? 1 : 0) : 0;
+  });
+  const tasokartanPyynnot = pyynnot.pyramidi - lepokerroksenPyynnot;
+  vaadi('P1 tasokartta ei herää: svg#board tyhjä ja tasokartan pyramidipyyntöjä 0',
+    svgSuurin === 0 && tasokartanPyynnot <= 0 && tulos.svgLapsia === 0,
+    `svg#board enimmillään ${svgSuurin} lasta, tasokartan pyramidipyyntöjä ${tasokartanPyynnot} (lepokerros ${lepokerroksenPyynnot})`);
   console.log(`INFO  aloitusnäytön oma lauta ennen vaihdosta: svg#board enintään ${svgIntro} lasta`);
   vaadi('P2 lento pallolla: kaari ja kone',
     lennonTila.pallo && lennonTila.kaaria === 1 && lennonTila.koneita === 1,
