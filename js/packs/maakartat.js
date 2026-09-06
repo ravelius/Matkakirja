@@ -11389,6 +11389,131 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Hermann Park', lat: 29.721, lon: -95.391 },
     ],
   },
+  /*
+   * KAPKAUPUNKI (6.9.2026). Rajaus on 3,7 x 2,9 kilometriä
+   * Victoria & Alfredin satama-altaista Company's Gardenin
+   * museokorttelin eteläpuolelle — perustelu, merentäyttö ja
+   * hylätty laajennus ovat tools/piirra-kaupunkikartta.mjs:n
+   * kapkaupunki-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat khoe-
+   * ja san-kansat lahdella, yhtiön vihannestarha ja orjuus, vuoden
+   * 1873 satama ja timantit sekä Bo-Kaap ja arabialainen afrikaans;
+   * teemasivu kertoo Pöytävuoresta, fynbosista, Maclearin
+   * kiviröykkiöstä ja pöytäliinapilvestä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-kapkaupunki.md, kohta E): Groote Kerk on 55 metrin,
+   * St George's Cathedral 88 metrin ja Grand Parade 99 metrin
+   * päässä lähimmästä kohteesta, ja Koopmans-de Wet House 185
+   * metriä Greenmarket Squaresta. Iziko South African National
+   * Gallery on tasan 200 metriä Etelä-Afrikan museosta eikä ylitä
+   * sääntöä. Ne mainitaan matkaoppaassa tai jäävät pois.
+   *
+   * RAUTATIEASEMA PUDOTETTIIN KUVASYYSTÄ, ei etäisyyden takia:
+   * Commonsista ei löytynyt kuvasäännöt täyttävää kuvaa (ainoa
+   * sisäkuva on täynnä mainoksia). Tilalle otettiin Rust en Vreugd
+   * (Panamán ja Houstonin ennakkotapaus). Aseman historia kerrotaan
+   * lehden nostossa K3 ja matkaoppaan jaksossa 1.
+   *
+   * PÖYTÄVUORI, BO-KAAP JA COMPANY'S GARDEN EIVÄT OLE KARTALLA
+   * AIHESYISTÄ: ne ovat lehden omien nostojen ja teemasivun aihe.
+   * Robben Island on 6,9 kilometriä Bloubergstrandista eikä mahtuisi
+   * ruutuun.
+   */
+  kapkaupunki: {
+    polku: 'assets/kartat/kapkaupunki-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -33.899, etela: -33.932, lansi: 18.406, ita: 18.437 },
+    esittely: 'Kartan alue on Kapkaupungin vanha ydin meren ja '
+      + 'vuoren välissä. Yläreunassa ovat Victoria & Alfredin '
+      + 'satama-altaat ja niiden takana Taffelinlahti; keskellä '
+      + 'kulkee 1800-luvun ruutukaava, jonka pitkät kadut osoittavat '
+      + 'satamasta vuorelle. Vasemmalla oleva tyhjä rinne on Signal '
+      + 'Hill, ja oikeassa alakulmassa erottuu viisikulmainen '
+      + 'linnoitus. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Denverissä ja Houstonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026, ja kaikki 28 väliä on
+       * mitattu uudelleen haversinilla: pienin on 273 metriä
+       * (kaupungintalo – District Six -museo).
+       */
+      { nimi: 'V&A Waterfront', lat: -33.903056, lon: 18.422778 },
+      { nimi: 'Greenmarket Square', lat: -33.922222, lon: 18.42 },
+      { nimi: 'Iziko Slave Lodge', lat: -33.92506, lon: 18.420393 },
+      { nimi: 'Kaupungintalo', lat: -33.925278, lon: 18.423889 },
+      { nimi: 'Hyväntoivonlinnoitus', lat: -33.9259, lon: 18.4278 },
+      { nimi: 'District Six -museo', lat: -33.927723, lon: 18.423673 },
+      { nimi: 'Iziko Etelä-Afrikan museo', lat: -33.928889, lon: 18.415 },
+      { nimi: 'Rust en Vreugd', lat: -33.9304, lon: 18.4205 },
+    ],
+  },
+  /*
+   * NAIROBI (6.9.2026). Rajaus on 3,1 x 2,7 kilometriä Museum
+   * Hilliltä rautatiealueelle — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n nairobi-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * maasait ja paikka ennen kaupunkia, Ugandan radan rakentaminen,
+   * ruttovuosi ja pääkaupungiksi tulo sekä matatu-kulttuuri;
+   * teemasivu kertoo kansallispuistosta, sarvikuonoista,
+   * Kitengelan muuttokäytävästä ja Wangari Maathain kahdesta
+   * kamppailusta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe. Lähimpänä on rautatiemuseo, jonka juttu kertoo
+   * museon omista vetureista eikä radan rakentamisesta.
+   *
+   * UHURU PARK JA KARURAN METSÄ EIVÄT OLE NUMEROITUINA KOHTEINA:
+   * ne ovat teemasivun noston L4 aihe. Uhuru Park näkyy kartalla
+   * puistona ruudun lounaisosassa; Karura on 5,5 kilometriä
+   * pohjoisreunan yläpuolella. Kansallispuisto on noin 11
+   * kilometriä ruudun keskeltä kaakkoon.
+   *
+   * PARLAMENTTITALO PUDOTETTIIN, vaikka etäisyys riittää (374 m
+   * kongressikeskuksesta): sen artikkelin ainoa laaja historiaosuus
+   * koskee vuoden 2024 mielenosoituksia ja niiden uhreja, eikä
+   * juttu mahtuisi lehden linjaukseen "ei nykypolitiikkaa" ilman
+   * että rakennuksen tarina jää tyhjäksi (tarkistus-nairobi.md,
+   * kohta F). Times Tower on 208 metriä kongressikeskuksesta eikä
+   * kanna juttua.
+   *
+   * ARBORETUM JA KANSALLISMUSEO OVAT 216 METRIN PÄÄSSÄ toisistaan
+   * eli niukasti yli 200 metrin säännön. Ne ovat Museum Hillin
+   * vastakkaisilla puolilla ja eri juttujen aiheita.
+   */
+  nairobi: {
+    polku: 'assets/kartat/nairobi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -1.27, etela: -1.2975, lansi: 36.808, ita: 36.832 },
+    esittely: 'Kartan alue ulottuu Museum Hilliltä pohjoisessa '
+      + 'rautatiealueelle etelässä. Yläreunassa mutkittelee '
+      + 'Nairobi-joki, keskellä kulkee Uhuru Highway leveänä '
+      + 'vinottaisena nauhana, ja sen oikealla puolella on '
+      + 'liikekeskustan tiivis ruutukaava. Vasemmalla laidalla '
+      + 'levittäytyy vihreä vyöhyke arboretumista Uhuru Parkiin, ja '
+      + 'oikeassa alakulmassa haarautuvat ratapihan raiteet. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * 6.9.2026, ja kaikki 28 väliä on mitattu uudelleen
+       * haversinilla: pienin on 216 metriä (arboretum –
+       * kansallismuseo).
+       */
+      { nimi: 'Nairobin arboretum', lat: -1.2743, lon: 36.8131 },
+      { nimi: 'Kenian kansallismuseo', lat: -1.273889, lon: 36.815 },
+      { nimi: 'Nairobin yliopisto', lat: -1.279722, lon: 36.816667 },
+      { nimi: 'Jeevanjeen puutarha', lat: -1.281014, lon: 36.819476 },
+      { nimi: 'Kenian kansallisarkisto', lat: -1.2849, lon: 36.8259 },
+      { nimi: 'Nairobi Gallery', lat: -1.286789, lon: 36.817833 },
+      { nimi: 'Kenyattan kongressikeskus', lat: -1.288611, lon: 36.823056 },
+      { nimi: 'Nairobin rautatiemuseo', lat: -1.293725, lon: 36.822194 },
+    ],
+  },
 };
 
 /*

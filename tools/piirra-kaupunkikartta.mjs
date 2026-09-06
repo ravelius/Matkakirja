@@ -3913,6 +3913,70 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -22.884, etela: -22.930, lansi: -43.238, ita: -43.158 },
     meri: true,
   },
+  kapkaupunki: {
+    /*
+     * KAUPUNKIKULHO JA VANHA SATAMA (6.9.2026). Ruutu on
+     * 3,7 x 2,9 kilometriä: pohjoisessa Victoria & Alfredin
+     * satama-altaat, keskellä 1800-luvun ruutukaava Adderley
+     * Streetin ympärillä ja etelässä Company's Gardenin vihreä
+     * kiila museoineen. Kaupunki on rakennettu Pöytävuoren,
+     * Leijonanpään ja Paholaisenhuipun muodostamaan luonnolliseen
+     * amfiteatteriin (en-Wikipedia, "Cape Town", Geography), ja
+     * ruutu on juuri sen kulhon pohja.
+     *
+     * PÖYTÄVUORI EI OLE KARTALLA, ja se on päätös. Vuoren laki on
+     * kolme kilometriä eteläreunan alapuolella, ja se on lehden
+     * teemasivun koko aihe (kulttuuri-kategoriat.js, kapkaupunki,
+     * sivu luonto) — kohdekartta ei toista lehden juttuja
+     * (New Yorkin sääntö). Ruudun eteläreuna jää siksi vuoren
+     * juurelle, jossa katuverkko vielä on.
+     *
+     * BO-KAAP ON RUUDUSSA MUTTA EI NUMEROITUNA. Kaupunginosa on
+     * lehden noston K4 aihe. Se näkyy kartalla lännessä Signal
+     * Hillin rinteen mukulakivikortteleina, ja matkaopas kertoo
+     * miten sinne kävellään.
+     *
+     * meri: true. Table Bay on OSM:ssä pääosin rantaviivaa, ja
+     * ilman lippua kartan koko pohjoisreuna jäisi paperin
+     * väriseksi (sama mittaus kuin Riossa).
+     *
+     * EI laajennusta: reunus veisi pohjoisessa avomerelle,
+     * lännessä Signal Hillin tyhjälle rinteelle ja etelässä
+     * Pöytävuoren kalliolle — kohdekartan kannalta tyhjään.
+     */
+    rajat: { pohjoinen: -33.8990, etela: -33.9320, lansi: 18.4060, ita: 18.4370 },
+    meri: true,
+  },
+  nairobi: {
+    /*
+     * MUSEUM HILLILTÄ RAUTATIEMUSEOLLE (6.9.2026). Ruutu on
+     * 3,1 x 2,7 kilometriä: pohjoisessa Museum Hill ja arboretum,
+     * keskellä liikekeskusta, etelässä rautatiealue. Nairobi
+     * syntyi radan varteen, ja ruutu kulkee siksi radalta
+     * museokukkulalle eikä toisin päin.
+     *
+     * UHURU PARK JA KARURAN METSÄ EIVÄT OLE NUMEROITUINA
+     * KOHTEINA. Molemmat ovat lehden teemasivun noston aihe
+     * (Wangari Maathain kaksi kamppailua), eikä kohdekartta
+     * toista lehden juttuja. Uhuru Park näkyy silti kartalla
+     * puistona ruudun lounaisosassa; Karura on kuusi kilometriä
+     * pohjoiseen eikä mahtuisi ruutuun.
+     *
+     * KANSALLISPUISTO ON SEITSEMÄN KILOMETRIN PÄÄSSÄ etelään
+     * eikä mahdu samaan ruutuun keskustan kanssa. Se on
+     * teemasivun pääaihe.
+     *
+     * ARBORETUM JA KANSALLISMUSEO OVAT 216 METRIN PÄÄSSÄ
+     * toisistaan eli niukasti yli 200 metrin säännön. Ne ovat
+     * Museum Hillin vastakkaisilla puolilla ja eri juttujen
+     * aiheita (metsäkoeasema 1907 ja luonnonhistoriallinen
+     * seura 1910).
+     *
+     * Ei meri-lippua: Nairobi on 480 kilometriä sisämaassa, ja
+     * Nairobi-joki on OSM:ssä tavallinen vesiväylä.
+     */
+    rajat: { pohjoinen: -1.2700, etela: -1.2975, lansi: 36.8080, ita: 36.8320 },
+  },
 };
 
 /*

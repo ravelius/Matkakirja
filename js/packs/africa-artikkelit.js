@@ -353,11 +353,40 @@ export const OMAT_ARTIKKELIT = {
       + 'radioista. Vanha sananlasku sopii kaupungille: kun hämähäkin '
       + 'verkot yhdistyvät, ne sitovat leijonankin.',
   },
+  /*
+   * KAPKAUPUNGIN INTRO LAAJENNETTIIN 6.9.2026 (Opus, paketti O9)
+   * reseptin mittaan: etusivun leipäteksti on 7–10 virkkeen johdatus
+   * kaupunkiin (docs/aasia-tyoaineisto/lehtityo-resepti.md, Mitat).
+   * Vanha kolmivirkkeinen versio jäi lyhyeksi. Lähteinä
+   * en-Wikipedian "Cape Town", "History of Cape Town" ja "Table
+   * Mountain" 6.9.2026; sama aineisto kuin kaupunkilehdellä
+   * (js/packs/kulttuuri-kategoriat.js, avain kapkaupunki, sekä
+   * docs/mantereet-tyoaineisto/faktapohja-kapkaupunki.md).
+   * artikkeli-kenttä on ennallaan.
+   */
   Kapkaupunki: {
-    intro: 'Kapkaupunki lepää Pöytävuoren juurella kahden valtameren '
-      + 'tuntumassa. Satamakaupunki on Etelä-Afrikan vanhin ja '
-      + 'kauneimpana pidetty — ja sen historia kertoo koko maan '
-      + 'tarinan.',
+    intro: 'Kapkaupunki on rakennettu Pöytävuoren, Leijonanpään ja '
+      + 'Paholaisenhuipun muodostamaan luonnolliseen amfiteatteriin '
+      + 'meren rannalle. Kaupungin edustalla on Taffelinlahti, ja '
+      + 'siitä etelään työntyy neljänkymmenen kilometrin mittainen '
+      + 'Kapin niemimaa. Se on Etelä-Afrikan **lainsäädännöllinen '
+      + 'pääkaupunki**: parlamentti kokoontuu täällä, hallitus '
+      + 'Pretoriassa.'
+      + '\n\n'
+      + 'Ennen eurooppalaisia alue oli khoe- ja san-kansojen maata, ja '
+      + 'lahdella kävivät kauppaa ǁAmmaqua-vedenmiehet. Hollantilainen '
+      + 'Itä-Intian kauppakomppania perusti paikalle 1652 '
+      + 'huoltoaseman, jonka vihannestarhasta kasvoi kaupunki. '
+      + 'Työvoimapula ratkaistiin tuomalla orjuutettuja ihmisiä '
+      + 'Indonesiasta, Madagaskarilta ja Intiasta.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Kapkaupunki oli siirtomaan '
+      + 'pääkaupunki ja Intian-reitin tärkein satama. Se oli saanut '
+      + 'oman parlamenttinsa 1854 ja paikallisesti vastuullisen '
+      + 'pääministerin edellisenä vuonna 1872. Kaupungin edustalla on '
+      + '**Robben Island**, jossa Nelson Mandela istui vankina '
+      + 'kahdeksantoista vuotta; vapauduttuaan 1990 hän piti '
+      + 'ensimmäisen puheensa kaupungintalon parvekkeelta.',
     artikkeli: 'Kapkaupunki sijaitsee Afrikan lounaiskärjessä, '
       + 'tasahuippuisen Pöytävuoren ja meren välissä. Kaupungin ohi '
       + 'kiertää Hyväntoivonniemi, jonka ympäri purjehtiminen avasi '
@@ -1302,10 +1331,42 @@ export const OMAT_ARTIKKELIT = {
       + 'edustalla meri kuhisee elämää — kylmä kumpuava vesi tekee '
       + 'siitä yhden valtameren kalaisimmista kulmista.',
   },
+  /*
+   * NAIROBIN INTRO LAAJENNETTIIN 6.9.2026 (Opus, paketti O9)
+   * reseptin mittaan: etusivun leipäteksti on 7–10 virkkeen johdatus
+   * kaupunkiin. Lähteinä en-Wikipedian "Nairobi", "History of
+   * Nairobi", "Nairobi National Park" ja "Uganda Railway" 6.9.2026;
+   * sama aineisto kuin kaupunkilehdellä
+   * (js/packs/kulttuuri-kategoriat.js, avain nairobi, sekä
+   * docs/mantereet-tyoaineisto/faktapohja-nairobi.md).
+   * artikkeli-kenttä on ennallaan.
+   *
+   * 1873-KEHYS: Nairobia ei ollut olemassa isoisän matkavuonna, ja
+   * intro sanoo sen suoraan.
+   */
   Nairobi: {
-    intro: 'Nairobi on Itä-Afrikan nuori suurkaupunki, joka syntyi '
-      + 'rautatien varteen ja kasvoi savannin rajalle — kirahvit '
-      + 'laiduntavat pilvenpiirtäjien katseen alla.',
+    intro: 'Nairobi on Kenian pääkaupunki ja Itä-Afrikan tärkein '
+      + 'rahoituskeskus. Se sijaitsee **1 795 metrissä** '
+      + 'merenpinnasta, joten päiväntasaajan kaupungin illat ovat '
+      + 'viileitä ja ilma kirkasta; lempinimi on Green City in the '
+      + 'Sun. Ennen kaupunkia paikka oli suoinen ylängön kohta, jossa '
+      + 'maasait paimensivat karjaansa, akamba-kauppiaat kulkivat ja '
+      + 'kikujut viljelivät yläpuolisia rinteitä.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 täällä ei ollut kaupunkia lainkaan. '
+      + 'Nairobi syntyi Ugandan radan varikkoleiristä, kun juna saapui '
+      + 'paikalle 30. toukokuuta 1899. Kaupunki poltettiin 1900-luvun '
+      + 'alussa ruttoepidemian jälkeen ja rakennettiin uudelleen; '
+      + '1907 siitä tuli protektoraatin pääkaupunki Mombasan tilalle. '
+      + 'Nimi tulee maasain ilmauksesta Enkare Nyirobi, viileiden '
+      + 'vesien paikka.'
+      + '\n\n'
+      + 'Nairobi on lähteen mukaan **maailman ainoa pääkaupunki, '
+      + 'jonka rajojen sisällä on kansallispuisto**. Vuonna 1946 '
+      + 'perustettu puisto on Kenian ensimmäinen, ja sen aidaton '
+      + 'eteläraja aukeaa yhä savannille. Kaupungissa toimivat YK:n '
+      + 'ympäristöohjelma ja YK:n Nairobin toimisto, ja kaduilla '
+      + 'kulkevat maalatut matatut.',
     artikkeli: 'Nairobi syntyi 1899 rautatietyömaan leiriksi '
       + 'ylängölle, jossa maasait juottivat karjaansa viileän veden '
       + 'paikalla — nimi tulee maasain sanoista enkare nyrobi, '
