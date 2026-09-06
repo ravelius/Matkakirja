@@ -3376,6 +3376,12 @@ export const RAAMATTU = {
           + 'pelaa linssin lapi selaimessa, kirjaa havainnot ja korjaa '
           + 'ennen kuin omistaja nakee sen. Rakennetaan agenttiparvella '
           + '(aineisto, moottori, kuvat, musiikki), Fable tarkistaa tekstit.',
+        'LEHDEN TAPAA-NAPPI POIS (omistaja 6.9.2026 aamu, sanatarkasti: '
+          + '"Tapaa nappi pitaa ottaa pois"): kaupunkilehden alapalkissa '
+          + 'ei ole enaa tehtavanappia ("Tapaa Dafni" / "Etsi katko"). '
+          + 'Kohtaamiseen ja katkoon paastaan kartan kultaisesta merkista, '
+          + 'jonka Livia neuvoo saapuessa. Lehti on lukemista varten; '
+          + 'Poistu-, Seuraava- ja liite-napit jaavat.',
         'ISOISAN KUVAT POIS ETUSIVULTA (omistaja 6.9.2026 yo, sanatarkasti: '
           + '"Jata isoisan kuvat pois etusivulta"): etusivun pallon paalla ei '
           + 'nayteta isoisan kuvia lainkaan - pinokerros poistettiin koodista '
