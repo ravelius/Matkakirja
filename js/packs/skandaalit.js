@@ -8651,4 +8651,584 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /*
+   * ══ ERÄ M9, LÄHI-ITÄ 2 6.9.2026 ═════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M9 (SAU, IRN, JOR, IRQ, EGY) tuo kaksi skandaalia kuhunkin
+   * viiteen maahan — kymmenen uutta. Kaikki ovat kuvattomia kuten erän
+   * muutkin nostot, ja jokaisen lähderivi nimeää en-Wikipedian
+   * artikkelin ja osan sekä tarkistuspäivän.
+   *
+   * PAIKAT ON MITATTU. Yksikään uusi merkki ei ole pelikaupungin
+   * kohdalla (KAUPUNGIN_KOHDALLA_SADE 7 lautayksikköä,
+   * js/fokuskohteet.js): lähin on Bagdadin patteri 11,2 yksikön päässä
+   * Bagdad-laatasta ja toiseksi lähin Denderan horoskooppi 15,7
+   * yksikön päässä Luxorista.
+   *
+   * KAKSI KORTTIA VEI KOHTEEN PAIKAN. Tayman kivi ja Nimrudin
+   * oikeusjuttu ovat paikoilla, jotka olisivat kelvanneet myös
+   * kohteiksi; koska kaksi nimiötä samassa pisteessä on nimiölimitys
+   * (tools/tarkista-nimiolimitys.mjs), Tayman keidas ja Nimrud
+   * jätettiin maastokohteet-pakeista pois ja aihe kannetaan
+   * skandaalikortilla.
+   *
+   * HERKKIEN AIHEIDEN LINJAUS ON SITOVA (docs/aasia-tyoaineisto/
+   * spec-asia.md). Yksikään kortti ei koske nykypolitiikkaan eikä
+   * käynnissä oleviin konflikteihin: aiheet ovat vuosilta 1820–1902
+   * sekä kaksi 1900-luvun tapausta (Bagdadin patteri 1936–1938 ja
+   * Azraqin kosteikon kuivuminen 1960–1992), joista jälkimmäinen on
+   * vesitalouden ympäristötapaus.
+   */
+  SAU: [
+    /*
+     * Ha'il, Jabal Shammarin emiirikunta (Wallinin tukikohta 1845 ja
+     * paikka, jossa hänen valeasunsa paljastui 1847).
+     * Lähde: en.wikipedia.org: Georg August Wallin
+     */
+    {
+      id: 'wallinin-valeasu',
+      otsikko: 'Abd al-Wali, joka oli Yrjö Aukusti Wallin',
+      nimio: 'Wallinin valeasu',
+      vuosi: '1843–1849',
+      paikka: "Ha'il, Jabal Shammar",
+      lat: 27.5236, lon: 41.6957,
+      kortti: 'Ahvenanmaalta lähtenyt kielitieteilijä otti Kairossa arabialaisen '
+        + 'nimen ja eli muslimina, jotta pääsisi lähelle sitä yhteiskuntaa, jota '
+        + 'hän halusi tutkia. Valeasu vei hänet myös Mekkaan ja Medinaan, jonne '
+        + 'muiden kuin muslimien ei ollut lupa mennä. Toisella kerralla asu '
+        + 'petti — ja retki päättyi ennen aikojaan.',
+      teksti: 'Georg August Wallin, suomeksi Yrjö Aukusti Wallin, syntyi Sundissa '
+        + 'Ahvenanmaalla 1811 ja luki Helsingin yliopistossa itämaisia kieliä. '
+        + 'Vuosina 1841–1842 hän opiskeli Pietarissa egyptiläisen sheikin '
+        + 'Muhammad Ayyad al-Tantawin johdolla, ja juuri al-Tantawin kertomusten '
+        + 'katsotaan vaikuttaneen eniten hänen päätökseensä matkustaa '
+        + 'Lähi-itään.'
+        + '\n\nApurahahakemuksessaan Wallin vetosi siihen, että arabian murteita '
+        + 'ei ollut tutkittu, ja siihen, että hän halusi tutkia wahhabilaista '
+        + 'liikettä. Henkilökohtaisesti häntä vieraannutti se, mitä hän piti '
+        + 'eurooppalaisen sivistyksen pinnallisuutena. Vuonna 1843 hän matkusti '
+        + 'Marseillen ja Konstantinopolin kautta Kairoon, opetteli Lähi-idän '
+        + 'tapoja ja islamin perusteet, otti käyttöön yksinkertaisen elämäntavan '
+        + 'ja esiintyi muslimina nimellä Abd al-Wali. Monet uskovat hänen '
+        + 'kääntyneen islamiin, mutta päiväkirjoissa ja kirjeissä ei ole siitä '
+        + 'todistetta — pikemminkin ne kertovat epäilystä uskontoja kohtaan.'
+        + '\n\nEnsimmäinen retki alkoi 1845, ja sen määränpää oli Mekka, kaupunki '
+        + 'joka oli kielletty muilta kuin muslimeilta. Reitti kulki Kairosta '
+        + "Ma'anin, Al-Jaufin, Jubban ja Ha'ilin kautta Medinaan, Mekkaan ja "
+        + 'Jeddaan. Kolmannella retkellään 1847 hän aikoi tutkia Najdia, mutta '
+        + "Ha'iliin päästyään hän tajusi valeasunsa paljastuneen ja kääntyi "
+        + 'pohjoiseen Mesopotamiaan ja Persiaan.'
+        + '\n\nEuroopassa Wallinia palkittiin: Lontoon Kuninkaallinen '
+        + 'maantieteellinen seura julkaisi hänen muistiinpanonsa ja antoi '
+        + 'kultamitalinsa 1851, ja hänestä tuli itämaisen kirjallisuuden '
+        + 'professori Helsinkiin. Richard Burton, joka valmistautui omaan '
+        + 'Mekan-matkaansa, kirjoitti Wallinille pitkän kysymyskirjeen — mutta '
+        + 'Wallin oli jo kuollut, päivää ennen 41-vuotispäiväänsä 1852. Hänen '
+        + 'hautakivessään Hietaniemessä on nimi Georg Aug. Wallin ja sen alla '
+        + 'arabiaksi Abd al-Wali.',
+      lahde: 'en-Wikipedia "Georg August Wallin", osiot "Early life and '
+        + 'education", "Expeditions to Arabia", "Return and professorship" ja '
+        + '"Legacy". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Millä nimellä Wallin esiintyi matkoillaan?',
+        vaihtoehdot: [
+          'Abd al-Wali',
+          'Ibn Battuta',
+          'Sheikh Ibrahim',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Tayman keidas, jossa steelat olivat pystyssä.
+     * Lähde: en.wikipedia.org: Tayma stones
+     */
+    {
+      id: 'tayman-kivi',
+      otsikko: 'Kivi luvattiin Saksaan ja päätyi Pariisiin',
+      nimio: 'Tayman kivi',
+      vuosi: '1876–1884',
+      paikka: 'Tayman keidas, Tabuk',
+      lat: 27.6289, lon: 38.5464,
+      kortti: 'Kolme eurooppalaista matkaajaa löysi saman kiven kymmenen vuoden '
+        + 'sisällä, ja jokainen halusi sen omaan maahansa. Kivi oli 150-kiloinen '
+        + 'kalkkikivipaasi, jossa oli 23 riviä arameaa. Se oli määrä lähettää '
+        + 'Saksaan, mutta se päätyi Ranskaan — ja mies, joka lähti hakemaan sitä, '
+        + 'ei ehtinyt julkaista löytöään.',
+      teksti: 'Tayman keidas Luoteis-Arabiassa oli vuosituhansia karavaanitien '
+        + 'pysähdyspaikka, ja sen raunioissa seisoi kivipaasia, joiden '
+        + 'kirjoitukset ovat noin 400- ja 500-luvuilta eaa. Ensimmäisenä ne '
+        + 'huomasi nykyaikana brittiläinen Charles Montagu Doughty vuonna 1876. '
+        + 'Hän kopioi kaksi tekstiä, ja kopiot julkaistiin hänen kirjassaan '
+        + 'Travels in Arabia Deserta 1888. Käsin kirjoitetussa huomautuksessa '
+        + 'kopioiden alla kerrotaan, että toinenkin samanlainen kivi oli sanottu '
+        + 'olevan Hadaj-kaivon sortuneiden raunioiden joukossa.'
+        + '\n\nRanskalainen Charles Huber näki paadet paikallaan 1878 ja otti '
+        + 'niistä kopiot, jotka hän julkaisi Pariisin maantieteellisen seuran '
+        + 'lehdessä. Hän teki toisen matkan hakeakseen paadet, mutta kuoli ennen '
+        + 'kuin ehti julkaista ne. Saksalainen Julius Euting kertoi nähneensä '
+        + 'kiven sunnuntaina 17. helmikuuta 1884 Taymassa Huberin seurassa. '
+        + 'Ensimmäisen julkaisun teki Theodor Nöldeke 10. heinäkuuta 1884 '
+        + 'Eutingin antamien tietojen pohjalta.'
+        + '\n\nItse Tayman kivi on kalkkikiveä, 150 kiloa, 110 senttimetriä pitkä, '
+        + '43 leveä ja 12 paksu, ja siinä on 23 riviä arameankielistä tekstiä. '
+        + 'Teksti kertoo, kuinka pappi Salm-shezeb, Pet-Osirin poika, toi Taymaan '
+        + 'uuden jumalan, Hagamin Salmin, kuinka temppelille annettiin '
+        + 'lahjoitusmaat ja kuinka pappeudesta tehtiin perinnöllinen. Kiven '
+        + 'yläosassa seisovan hahmon pää muistuttaa assyrialaisten ja '
+        + 'babylonialaisten sotureiden kypäriä.'
+        + '\n\nKivi oli alun perin määrä lähettää Saksaan. Lopulta se lähetettiin '
+        + 'Ranskaan, ja siellä se on yhä: Louvren kokoelmissa Pariisissa. '
+        + 'Ensimmäiset neljä Tayman piirtokirjoitusta löydettiin 1878 ja '
+        + 'julkaistiin 1884 Corpus Inscriptionum Semiticarumin toisessa osassa '
+        + 'numeroina 113–116; kymmenen lisää julkaistiin 1972 ja seitsemän vielä '
+        + '1987.',
+      lahde: 'en-Wikipedia "Tayma stones", johdanto sekä osiot "Discovery" ja '
+        + '"The Tayma Stone". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Missä museossa Tayman kivi on nykyään?',
+        vaihtoehdot: [
+          'Berliinin Pergamon-museossa',
+          'Louvressa Pariisissa',
+          'British Museumissa',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  IRN: [
+    /*
+     * Shiraz, yksi tupakkakapinan kolmesta pääkeskuksesta.
+     * Lähde: en.wikipedia.org: Tobacco Protest
+     */
+    {
+      id: 'tupakkakapina',
+      otsikko: 'Koko maa lakkasi polttamasta',
+      nimio: 'Tupakkakapina',
+      vuosi: '1890–1892',
+      paikka: 'Shiraz, Qajar-Iran',
+      lat: 29.6, lon: 52.5333,
+      kortti: 'Šaahi myi maansa koko tupakan viidenkymmenen vuoden ajaksi yhdelle '
+        + 'englantilaiselle majurille. Kauppiaat sulkivat basaarit, ja joulukuussa '
+        + '1891 maan korkein uskonoppinut julisti tupakan käytön kielletyksi. Kun '
+        + 'jopa hovin palvelijat kieltäytyivät valmistamasta šaahin vesipiippua, '
+        + 'sopimus purettiin.',
+      teksti: 'Qajar-Iran oli 1800-luvulla ahtaalla: tappiot sodissa ja jatkuva '
+        + 'ulkomaisen pääoman paine olivat pakottaneet hallituksen myöntämään '
+        + 'toimilupia toisensa jälkeen, eivätkä iranilaiset kauppiaat pystyneet '
+        + 'kilpailemaan eurooppalaisten etuoikeuksien kanssa. Vuonna 1872 Naser '
+        + 'al-Din Shah oli antanut Paul Reuterille oikeudet teihin, lennättimiin, '
+        + 'myllyihin, tehtaisiin ja luonnonvaroihin; kotimainen ja venäläinen '
+        + 'vastustus pakotti purkamaan sopimuksen runsaan vuoden jälkeen.'
+        + '\n\nMaaliskuun 20. päivänä 1890 šaahi myönsi majuri G. F. Talbotille '
+        + 'täyden monopolin tupakan tuotantoon, myyntiin ja vientiin '
+        + 'viideksikymmeneksi vuodeksi. Talbot maksoi vuosittain 15 000 puntaa '
+        + 'sekä neljänneksen voitoista, ja syksyllä 1890 toimilupa siirtyi '
+        + 'Imperial Tobacco Corporation of Persia -yhtiölle. Kaikkien tupakan '
+        + 'tuottajien oli myytävä satonsa yhtiön asiamiehille.'
+        + '\n\nVastarinnan keskuksiksi nousivat Shiraz, Tabriz ja Teheran. '
+        + 'Toukokuussa 1891 šaahi karkotti Shirazista mullah Sayyid Ali Akbarin, '
+        + 'joka oli saarnannut toimilupaa vastaan. Matkallaan Akbar tapasi Jamal '
+        + 'al-Din al-Afghanin, joka kirjoitti kirjeen johtavalle oppineelle '
+        + 'Mirza ShiraziIle. Joulukuussa 1891 Shirazi antoi fatwan, jonka mukaan '
+        + 'tupakan käyttö oli sotaa aikakauden imaamia vastaan.'
+        + '\n\nBoikotti oli täydellinen: basaarit suljettiin, ja kerrotaan, että '
+        + 'hovin naiset lopettivat polttamisen ja palvelijat kieltäytyivät '
+        + 'valmistamasta šaahin vesipiippua. Tammikuussa 1892 šaahi peruutti '
+        + 'toimiluvan, ja 26. tammikuuta kaupunginkuuluttaja ilmoitti Teheranissa '
+        + 'fatwan päättyneen. Yhtiölle jouduttiin maksamaan 500 000 punnan '
+        + 'korvaus, jota varten Iran otti lainan Venäjältä. Historioitsija Nikki '
+        + 'Keddie on todennut, että iranilaiset näkivät ensi kerran voivansa '
+        + 'voittaa sekä šaahin että ulkomaiset edut.',
+      lahde: 'en-Wikipedia "Tobacco Protest", johdanto sekä osiot "Background", '
+        + '"The Tobacco Régie and subsequent protests", "Shirazi\'s fatwa and the '
+        + 'repudiation of the concession" ja "Aftermath". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä šaahi joutui tekemään tammikuussa 1892?',
+        vaihtoehdot: [
+          'Peruuttamaan tupakkatoimiluvan',
+          'Luopumaan valtaistuimesta',
+          'Kieltämään basaarit',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Susan akropoli, jonka Grande Tranchée -kaivannosta stelat
+     * nousivat. Lähde: en.wikipedia.org: Susa; Code of Hammurabi
+     */
+    {
+      id: 'susan-kaivausmonopoli',
+      otsikko: 'Kaivausmonopoli, joka vei Hammurabin lain Pariisiin',
+      nimio: 'Susan monopoli',
+      vuosi: '1894–1912',
+      paikka: 'Susa, Khuzestan',
+      lat: 32.1897, lon: 48.2461,
+      kortti: 'Kahdella sopimuksella Ranska sai yksinoikeuden kaikkiin Iranin '
+        + 'kaivauksiin — ilman aikarajaa. Susasta nousi maailman kuuluisin '
+        + 'lakikivi, ja se vietiin Louvreen. Kaivausten johtaja rakennutti '
+        + 'paikalle linnan muinaisista tiilistä ja erosi lopulta syytettynä '
+        + 'varojen huonosta hoidosta.',
+      teksti: 'Susa Khuzestanin maakunnassa on yksi Lähi-idän vanhimmista '
+        + 'kaupungeista. Ranskalaiset kaivaukset alkoivat 1885–1886, kun '
+        + 'Marcel-Auguste ja Jane Dieulafoy löysivät lasitettuja tiiliä sekä '
+        + 'akhaimenidipalatsin pylväänjalkoja ja kapiteeleja — mutta eivät '
+        + 'tunnistaneet savitiiliseiniä, jotka tuhoutuivat kaivamisen myötä. '
+        + 'Vuoden 1885 jälkeen lähes kaikki Susan kaivaukset olivat Ranskan '
+        + 'valtion järjestämiä ja valtuuttamia.'
+        + '\n\nKahdessa sopimuksessa 1894 ja 1899 Ranska sai yksinoikeuden '
+        + 'kaikkiin Iranin arkeologisiin kaivauksiin toistaiseksi. Jacques de '
+        + 'Morgan johti suuria kaivauksia 1897–1911 vasta perustetun Délégation '
+        + 'en Perse -laitoksen johdossa. Akropolin Grande Tranchée -kaivannosta '
+        + 'nousivat muun muassa Naram-Sinin steela, kokoelma babylonialaisia '
+        + 'rajakiviä, kuningatar Napir-Asun pronssipatsas — ja Hammurabin lain '
+        + 'steela.'
+        + '\n\nHammurabin lakisteela löytyi kolmena suurena kappaleena akropolin '
+        + 'kummulta joulukuun 1901 ja tammikuun 1902 välillä, ja isä '
+        + 'Jean-Vincent Scheil julkaisi siitä ensimmäisen raportin. Kivi on 2,25 '
+        + 'metriä korkea ja siinä on noin 4 130 riviä nuolenpääkirjoitusta. Se '
+        + 'ei ollut alun perin Susasta: elamilainen kuningas Shutruk-Nakhunte oli '
+        + 'vienyt sen saaliina, todennäköisesti Sipparista, ja hiotti siitä '
+        + 'seitsemän lakipylvästä pois kirjoittaakseen tilalle omaa tarinaansa. '
+        + 'Steela on nyt Louvren toisessa kerroksessa Pariisissa.'
+        + '\n\nJälki oli raskas. De Morgan oli koulutukseltaan kaivosinsinööri ja '
+        + 'kiinnostunut ennen muuta kivikautisista kerroksista, joten hän tuhosi '
+        + 'suuren osan myöhemmistä rakennekerroksista ja samalla monen löydön '
+        + 'alkuperätiedot. Hän rakennutti akropolin pohjoisreunaan '
+        + 'keskiaikaistyylisen Shushin linnan muinaisen paikan omista tiilistä; '
+        + 'linnaa pidettiin Ranskan valtion omaisuutena Iranin hallinnon '
+        + 'ulkopuolella. De Morgan erosi 1912 syytettynä laitoksen varojen '
+        + 'huonosta hoidosta, ja Ranskan kaivausmonopoli purettiin vasta 1927.',
+      lahde: 'en-Wikipedia "Susa", osio "Excavation history", ja en-Wikipedia '
+        + '"Code of Hammurabi", johdanto ja osio "Louvre stele". Tarkistettu '
+        + '6.9.2026.',
+      visa: {
+        kysymys: 'Mistä kaupungista Hammurabin steela alun perin ryöstettiin Susaan?',
+        vaihtoehdot: [
+          'Ninivestä',
+          'Urukista',
+          'Sipparista',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  JOR: [
+    /*
+     * Dhiban, muinainen Dibon, jossa steela seisoi.
+     * Lähde: en.wikipedia.org: Mesha Stele
+     */
+    {
+      id: 'meshan-steela',
+      otsikko: 'Kivi, joka rikottiin nuotiolla ja kylmällä vedellä',
+      nimio: 'Meshan steela',
+      vuosi: '1868–1870',
+      paikka: 'Dhiban (muinainen Dibon)',
+      lat: 31.5, lon: 35.7833,
+      kortti: 'Lähetyssaarnaaja löysi ehjän moabilaisen kivipaaden, ja uutinen '
+        + 'käynnisti kilpajuoksun Ranskan, Britannian ja Saksan välillä. '
+        + 'Kilpailun keskellä paikallinen heimo kuumensi kiven nuotiossa ja '
+        + 'jäähdytti sen vedellä niin, että se halkesi. Teksti pelastui, koska '
+        + 'siitä oli ehditty ottaa paperipainanne.',
+      teksti: 'Anglikaanisen lähetysseuran pappi Frederick Augustus Klein löysi '
+        + 'kiven ehjänä elokuussa 1868 muinaisen Dibonin paikalta, nykyisestä '
+        + 'Dhibanista Jordaniassa. Hänet vei paikalle Bani Sakher -heimon '
+        + 'päällikön poika Sattam Al-Fayez, mutta kumpikaan ei osannut lukea '
+        + 'tekstiä. Tuohon aikaan Levantissa liikkui joukoittain harrastelijoita '
+        + 'ja arkeologeja etsimässä todisteita Raamatun kertomuksille, ja uutinen '
+        + 'löydöstä käynnisti kilpajuoksun Ranskan, Britannian ja Saksan välillä.'
+        + '\n\nJerusalemin Ranskan konsulaatissa työskennellyt arkeologi Charles '
+        + 'Simon Clermont-Ganneau ei uskaltanut lähteä kalliille ja vaaralliselle '
+        + 'matkalle itse, vaan lähetti Yacoub Caravacca -nimisen miehen ottamaan '
+        + 'kivestä paperipainanteen. Caravacca haavoittui työn aikana, ja toinen '
+        + 'hänen kahdesta ratsumiehestään pelasti painanteen repimällä sen vielä '
+        + 'kosteana irti kivestä seitsemänä kappaleena.'
+        + '\n\nMarraskuussa 1869 Bani Hamida -heimo rikkoi kiven. Ottomaanihallinto '
+        + 'oli puuttunut omistuskiistaan ja käskenyt luovuttaa kiven Saksan '
+        + 'konsulaatille, ja kun heimo huomasi Saltin hallitsijan painostavan '
+        + 'sitä, se kuumensi kiven nuotiossa, heitti päälle kylmää vettä ja '
+        + 'hakkasi palaset rikki lohkareilla. Tekoa on pidetty uhmana '
+        + 'ottomaanihallintoa kohtaan.'
+        + '\n\nSuurin osa alkuperäisestä tekstistä saatiin lopulta takaisin: '
+        + 'sirpaleista koottiin 613 kirjainta noin tuhannesta, ja loput '
+        + 'Clermont-Ganneau täydensi painanteen avulla. Kokonaisuus on nyt '
+        + 'Louvressa, ja museovieras erottaa alkuperäiset ruskeat palat sileästä '
+        + 'mustasta täytteestä. Steela on eteläisen Levantin ensimmäinen suuri '
+        + 'kanaanilainen piirtokirjoitus ja alueen pisin rautakautinen teksti — '
+        + 'moabilaisen kielen tärkein todiste ja seemiläisen epigrafian '
+        + 'kulmakivi.',
+      lahde: 'en-Wikipedia "Mesha Stele", johdanto ja osio '
+        + '"Description and discovery". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten steelan teksti saatiin talteen ennen kiven rikkomista?',
+        vaihtoehdot: [
+          'Valokuvaamalla',
+          'Paperipainanteella',
+          'Kopioimalla käsin',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Azraqin kosteikko itäisellä aavikolla.
+     * Lähde: en.wikipedia.org: Azraq Wetland Reserve
+     */
+    {
+      id: 'azraqin-kosteikko',
+      otsikko: 'Keidas, joka pumpattiin tyhjäksi',
+      nimio: 'Azraqin keidas',
+      vuosi: '1960–1992',
+      paikka: 'Azraqin kosteikko, itäinen aavikko',
+      lat: 31.8333, lon: 36.8167,
+      kortti: 'Azraq oli neljännesmiljoona vuotta vanha keidas keskellä aavikkoa '
+        + 'ja miljoonien muuttolintujen levähdyspaikka. Kun pääkaupungin '
+        + 'kasvava väestö tarvitsi vettä, pohjavesi alkoi virrata putkia pitkin '
+        + 'Ammaniin. Vuonna 1992 lähteet olivat kuivat.',
+      teksti: 'Azraqin kosteikko syntyi noin 250 000 vuotta sitten, kun pohjavesi '
+        + 'nousi pintaan Jordanian itäisellä aavikolla. Se on ollut ammoisista '
+        + 'ajoista sekä ihmisten kauppateiden että lintujen muuttoreittien '
+        + 'risteys: miljoonat kuutiometrit makeaa vettä houkuttelivat '
+        + 'kamelikaravaanit, jotka kuljettivat mausteita ja yrttejä Arabian, '
+        + 'Mesopotamian ja Syyrian välillä, ja miljoonat muuttolinnut pysähtyivät '
+        + 'Azraqiin Afrikan ja Euroopan väliä lentäessään.'
+        + '\n\n1960-luvulla pohjavettä alettiin pumpata Ammanin kasvavan väestön '
+        + 'tarpeisiin. Vuonna 1978 Jordanian kuninkaallinen luonnonsuojeluseura '
+        + 'RSCN perusti alueelle kahdentoista neliökilometrin kosteikkosuojelu-'
+        + 'alueen. Se ei riittänyt: vuoteen 1992 mennessä luonnonlähteet olivat '
+        + 'kuivuneet ja pohjavesivarasto lakannut antamasta. Azraqin puhvelit '
+        + 'kuolivat kaikki, ja moni muuttolintu siirtyi Galileanjärvelle.'
+        + '\n\nAlueen tilaa on kuvattu ekologiseksi romahdukseksi. Luvut kertovat '
+        + 'saman: helmikuussa 1967 laskettiin 347 000 muuttolintua, helmikuussa '
+        + '2000 enää 1 200. Kosteikon peittämästä 25 neliökilometristä on '
+        + 'kuivunut. Nykyään lähteet ovat keinotekoisia, jotta paikka pysyisi '
+        + 'matkailukohteena.'
+        + '\n\nRSCN jatkaa työtä kasvavaa väestöä ja vedentarvetta vastaan. '
+        + 'Jordanian vesiministeriön Azraqille antama kymmenen miljoonan '
+        + 'kuutiometrin vuosittainen vesimäärä riittää palauttamaan kosteikosta '
+        + 'noin kymmenesosan. Vuonna 2018 alueella oli yhä yli 500 laitonta '
+        + 'kaivoa. Azraqin pohjavesi antaa neljäsosan Ammanin juomavedestä.',
+      lahde: 'en-Wikipedia "Azraq Wetland Reserve", johdanto sekä osiot "History" '
+        + 'ja "Azraq today". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mihin Azraqin pohjavettä pumpattiin 1960-luvulta lähtien?',
+        vaihtoehdot: [
+          'Kastelupelloille Wadi Rumiin',
+          'Ammanin juomavedeksi',
+          'Kuolleenmeren tehtaille',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  IRQ: [
+    /*
+     * Khujut Rabu lähellä Ktesifonia, josta ruukku löytyi.
+     * Lähde: en.wikipedia.org: Baghdad Battery
+     */
+    {
+      id: 'bagdadin-patteri',
+      otsikko: 'Savipurkki, josta tehtiin muinainen paristo',
+      nimio: 'Bagdadin patteri',
+      vuosi: '1936–1938',
+      paikka: 'Khujut Rabu, Ktesifonin liepeillä',
+      lat: 33.0939, lon: 44.5806,
+      kortti: 'Ruukku, kuparisylinteri ja rautatanko bitumilla kiinnitettynä — '
+        + 'siinä kaikki. Museon laboratorion johtaja arveli, että kyseessä oli '
+        + 'sähköpari, ja arvelusta tuli sitkeä tarina muinaisesta paristosta. '
+        + 'Arkeologit eivät ole hyväksyneet sitä, eikä esineen olinpaikka ole '
+        + 'enää tiedossa.',
+      teksti: 'Bagdadin patteri eli partialainen patteri on nimi esineelle, joka '
+        + 'koostuu savisesta ruukusta, kupariputkesta ja rautatangosta; osat on '
+        + 'kiinnitetty toisiinsa bitumilla. Se löytyi 1936 Khujut Rabusta '
+        + 'lähellä Ktesifonia, partialaisten ja sassanidien pääkaupunkia, ja sen '
+        + 'arvellaan olevan jommaltakummalta kaudelta.'
+        + '\n\nWilhelm König, joka oli tuolloin Irakin kansallismuseon '
+        + 'laboratorion johtaja, esitti että esine olisi toiminut galvaanisena '
+        + 'kennona — ehkä pinnoitukseen tai jonkinlaiseen sähköhoitoon. Hänen '
+        + 'kuvauksessaan ruukku oli noin 15 senttimetriä korkea, kupariputken '
+        + 'halkaisija 26 milliä ja korkeus 9 senttiä, ja sen sisällä oli '
+        + 'kokonaan hapettunut rautatanko bitumitulpan pitämänä.'
+        + '\n\nVäite ei kestä tarkastelua. Yhtään tuolta ajalta peräisin olevaa '
+        + 'sähköpinnoitettua esinettä ei tunneta, ja arkeologit hylkäävät '
+        + 'ajatuksen yksimielisesti. Kupariputki ei ole vesitiivis, joten neste '
+        + 'ympäröisi myös rautatankoa. Vaihtoehtoinen selitys on, että ruukku oli '
+        + 'säiliö suojaus-, puolustus- tai kirousloitsuille: kymmenen samanlaista '
+        + 'saviastiaa oli löydetty jo aiemmin, neljä 1930 Seleukiasta ja kuusi '
+        + 'Ktesifonista, ja osassa oli bitumilla suljettu pronssisylinteri, jonka '
+        + 'sisällä oli papyruskääre.'
+        + '\n\nAjoituskin on epävarma. König arveli esineen partialaiseksi eli '
+        + 'vuosien 250 eaa. ja 224 jaa. väliltä, mutta British Museumin Lähi-idän '
+        + 'osaston St John Simpsonin mukaan löydön alkuperäistä kaivausta ja '
+        + 'yhteyttä ei kirjattu kunnolla ja todisteet ajoitukselle ovat hyvin '
+        + 'heikot — keramiikan tyyli on sassanidien aikaista. Esineen olinpaikka '
+        + 'ei ole ollut tiedossa vuoden 2003 jälkeen.',
+      lahde: 'en-Wikipedia "Baghdad Battery", johdanto ja osio "Physical '
+        + 'description and dating". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä museon laboratorion johtaja König arveli esineen olleen?',
+        vaihtoehdot: [
+          'Galvaaninen kenno eli paristo',
+          'Mittalaite',
+          'Öljylamppu',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Nimrud, yksi Rassamin kaivauspaikoista Mosulin eteläpuolella.
+     * Lähde: en.wikipedia.org: Hormuzd Rassam
+     */
+    {
+      id: 'rassam-vastaan-budge',
+      otsikko: 'Kaivaja haastoi museon oikeuteen — ja voitti',
+      nimio: 'Rassamin juttu',
+      vuosi: '1893',
+      paikka: 'Nimrud, Mosulin eteläpuoli',
+      lat: 36.0989, lon: 43.3272,
+      kortti: 'Mosulissa syntynyt Hormuzd Rassam kaivoi British Museumille '
+        + 'vuosikymmeniä. Museon oma virkamies kirjoitti, että Rassam oli '
+        + 'käyttänyt sukulaisiaan salakuljettamaan löytöjä ja lähettänyt '
+        + 'Lontooseen vain roskaa. Iäkäs Rassam vei asian oikeuteen 1893.',
+      teksti: 'Hormuzd Rassam oli assyrialainen Mosulista ja yksi 1800-luvun '
+        + 'tuotteliaimmista Mesopotamian kaivajista. Hän uskoi, että kunnia '
+        + 'monista hänen löydöistään oli mennyt British Museumin johtaville '
+        + 'virkamiehille.'
+        + '\n\nVuonna 1893 Rassam haastoi museon intendentin E. A. Wallis Budgen '
+        + 'brittituomioistuimeen sekä herjauksesta että kunnianloukkauksesta. '
+        + 'Budge oli kirjoittanut, että Rassam oli käyttänyt "sukulaisiaan" '
+        + 'salakuljettamaan muinaisesineitä Ninivestä ja lähettänyt British '
+        + 'Museumille vain "roskaa". Syytökset loukkasivat iäkästä Rassamia '
+        + 'syvästi.'
+        + '\n\nOikeudessa Budge esitti osittaisen anteeksipyynnön, jota myöhempi '
+        + 'oikeusaste piti epäherrasmiesmäisenä. Tuomioistuimet asettuivat '
+        + 'kuitenkin täysin Rassamin puolelle. Myöhemmät arkeologiset todisteet, '
+        + 'muun muassa Balawatin porttien osalta, ovat tukeneet Rassamin omaa '
+        + 'kertomusta kiistasta.'
+        + '\n\nElämänsä loppuun mennessä Rassamin maine ja saavutukset saivat '
+        + 'jälleen tunnustusta ainakin kollegoiden keskuudessa. Kuninkaallinen '
+        + 'maantieteellinen seura kirjoitti muistokirjoituksessaan, että '
+        + 'Rassamin kuolema vei seuralta yhden sen vanhimmista ja '
+        + 'huomattavimmista jäsenistä.',
+      lahde: 'en-Wikipedia "Hormuzd Rassam", osio "Archaeological reputation". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Rassamin oikeusjuttu päättyi?',
+        vaihtoehdot: [
+          'Tuomioistuimet asettuivat Rassamin puolelle',
+          'Rassam hävisi jutun',
+          'Juttu raukesi',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  EGY: [
+    /*
+     * Denderan Hathor-temppeli, jonka katosta horoskooppi sahattiin.
+     * Lähde: en.wikipedia.org: Dendera zodiac
+     */
+    {
+      id: 'denderan-horoskooppi',
+      otsikko: 'Taivaankartta sahattiin irti katosta',
+      nimio: 'Denderan katto',
+      vuosi: '1820–1822',
+      paikka: 'Denderan Hathor-temppeli',
+      lat: 26.1417, lon: 32.67,
+      kortti: 'Denderan temppelin katossa oli ainoa täydellinen muinainen '
+        + 'taivaankartta, joka tunnetaan. Pariisilainen antiikkikauppias '
+        + 'palkkasi miehen irrottamaan sen sahoilla, tunkeilla, saksilla ja '
+        + 'ruudilla. Kuningas osti katon kirjastoonsa, ja siellä se on yhä — '
+        + 'Pariisissa.',
+      teksti: 'Denderan horoskooppi on kohokuva Hathorin temppelin '
+        + 'Osiris-kappelin eteishallin katosta Ylä-Egyptissä. Kappelia alettiin '
+        + 'rakentaa myöhäisellä ptolemaiolaiskaudella, ja eteishallin lisäsi '
+        + 'keisari Tiberius. Tähtitieteen historioitsija John H. Rogers on '
+        + 'kutsunut sitä ainoaksi täydelliseksi muinaiseksi taivaankartaksi, '
+        + 'joka meillä on: kiekon keskellä on pohjoisnapa, Pikku Karhu sakaalina, '
+        + 'ja sisemmällä kehällä eläinradan merkit.'
+        + '\n\nNapoleonin Egyptin-retkellä Vivant Denon piirsi sekä pyöreän että '
+        + 'suorakulmaisen horoskoopin, ja 1802 hän julkaisi kaiverrukset '
+        + 'teoksessaan Voyage dans la Basse et la Haute Egypte. Kiista kuvan '
+        + 'iästä leimahti heti: arviot vaihtelivat kymmenistä tuhansista vuosista '
+        + 'muutamaan sataan. Kiistaan, jota kutsutaan Denderan tapaukseksi, '
+        + 'osallistuivat muun muassa Joseph Fourier, joka päätyi vuoteen 2500 '
+        + 'eaa., Champollion, joka piti sitä 300-luvun jaa. uskonnollisena '
+        + 'horoskooppina, ja Georges Cuvier, joka ajoitti sen vuosien 123 ja 147 '
+        + 'jaa. väliin.'
+        + '\n\nAntiikkikauppias Sébastien Louis Saulnier palkkasi Claude '
+        + 'Lelorrainin irrottamaan pyöreän horoskoopin. Työkaluina olivat sahat, '
+        + 'tunkit, sakset ja ruuti. Kattokivi kuljetettiin 1821 Pariisiin, ja '
+        + '1822 Ludvig XVIII asetti sen Kuninkaalliseen kirjastoon, josta '
+        + 'myöhemmin tuli Ranskan kansalliskirjasto.'
+        + '\n\nVuonna 1922 horoskooppi siirrettiin kirjastosta Louvreen, jossa se '
+        + 'on yhä esillä. Vuonna 2022 egyptologi Zahi Hawass käynnisti '
+        + 'vetoomuksen sen ja muun muassa Rosettan kiven palauttamiseksi '
+        + 'Egyptiin.',
+      lahde: 'en-Wikipedia "Dendera zodiac", johdanto sekä osiot "Description" '
+        + 'ja "History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Millä välineillä horoskooppi irrotettiin katosta?',
+        vaihtoehdot: [
+          'Sahoilla, tunkeilla, saksilla ja ruudilla',
+          'Höyryvintturilla',
+          'Vain taltalla ja vasaralla',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Suezin kanava Ismailian kohdalla (kanavayhtiön hallintokaupunki).
+     * Lähde: en.wikipedia.org: Suez Company (1858–1997)
+     */
+    {
+      id: 'suezin-osakekauppa',
+      otsikko: 'Neljä miljoonaa puntaa yhdessä yössä',
+      nimio: 'Suezin osakkeet',
+      vuosi: '1875',
+      paikka: 'Suezin kanava, Ismailia',
+      lat: 30.5833, lon: 32.2667,
+      kortti: 'Egyptin hallitsija oli velkaa sata miljoonaa puntaa eikä saanut '
+        + 'enää lainaa joulukuun erään. Ranskalainen pankki tarjoutui ostamaan '
+        + 'hänen kanavaosakkeensa — mutta Britannian pääministeri ehti ensin, '
+        + 'lainarahalla. Joulukuussa 1875 Britanniasta tuli kanavayhtiön suurin '
+        + 'omistaja.',
+      teksti: 'Suezin kanavayhtiö, koko nimeltään Compagnie universelle du canal '
+        + 'maritime de Suez, perustettiin 1858 Ferdinand de Lessepsin toimesta '
+        + 'hoitamaan Egyptin myöntämää kanavatoimilupaa. Yhtiö rakensi kanavan '
+        + '1859–1869. Aluksi puolet osakkeista oli ranskalaisilla sijoittajilla '
+        + 'ja suurin osa lopuista Egyptin hallitsijalla Said Pashalla, joka osti '
+        + 'myymättä jääneet osakkeet, jotta yhtiö ylipäätään saisi tarvittavan '
+        + 'pääoman kokoon.'
+        + '\n\nSaidin seuraaja Ismail Pasha jatkoi suurten hankkeiden linjalla. '
+        + 'Vuonna 1873 hän otti 30 miljoonan punnan lainan — yli kaksi kertaa '
+        + 'kanavan rakennuskustannukset — rakentaakseen Egyptiin muuta '
+        + 'infrastruktuuria. Vuoteen 1875 mennessä Egyptin valtio oli sadan '
+        + 'miljoonan punnan veloissa, eikä kukaan enää suostunut lainaamaan '
+        + 'rahaa joulukuun useiden miljoonien punnan lyhennykseen.'
+        + '\n\nRanskalainen Société Générale oli kiinnostunut ostamaan Ismailin '
+        + 'kanavaosakkeet lyhennystä vastaan. Britannian pääministeri Benjamin '
+        + 'Disraeli toimi kuitenkin nopeammin: parlamentin ja kuningatar '
+        + 'Victorian luvalla hän sai Lionel de Rothschildilta neljän miljoonan '
+        + 'punnan lainan ja osti Ismailin 177 000 osaketta Britannian '
+        + 'hallituksen nimiin. Tarjous oli hieman ranskalaista parempi, ja '
+        + 'Ismail toimitti osakekirjansa Britannian konsulaattiin.'
+        + '\n\nJoulukuuhun 1875 mennessä Britanniasta oli tullut kanavayhtiön '
+        + 'suurin omistaja 44 prosentin osuudella. Loput 56 prosenttia pysyivät '
+        + 'ranskalaisilla osakkeenomistajilla. Yhtiö hoiti kanavaa vuoteen 1956 '
+        + 'asti, jolloin Egypti otti kanavan valtion omistukseen.',
+      lahde: 'en-Wikipedia "Suez Company (1858–1997)", johdanto sekä osiot '
+        + '"Creation and initial public offering" ja "Early operations". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Keneltä Disraeli sai lainan osakkeiden ostoon?',
+        vaihtoehdot: [
+          'Lionel de Rothschildilta',
+          'Société Généralelta',
+          'Englannin pankilta',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
 };

@@ -435,7 +435,11 @@ test('pallon laatat: oma pysyvä kori, katto, esilataus ja vanhan kansion siivou
   const luettelo = sw.slice(sw.indexOf('function laattaluettelo'), sw.indexOf('async function esilataaLaatat'));
   assert.match(luettelo, /event\.waitUntil\(paivitys\)/,
     'laatat.json: korin kappale heti ja päivitys taustalla — pallo ei saa odottaa verkkoa');
-  assert.match(luettelo, /const paivitys = fetch\(url, \{ mode: 'cors' \}\)/);
+  // Taustapäivitys ei saa tulla selaimen välimuistista: luettelo muuttuu
+  // saman nimen alla (ämpärin max-age 3600), laatat eivät koskaan.
+  assert.match(luettelo, /const paivitys = fetch\(url, \{ mode: 'cors', cache: 'no-cache' \}\)/);
+  assert.match(sw, /const vastaus = await fetch\(pyynto\.url, \{ mode: 'cors' \}\)/,
+    'laatta on immutable — sitä ei revalidoida');
   // Katto ja siivous ilman IndexedDB:tä: keys() antaa kirjoitusjärjestyksen.
   const katto = Number(sw.match(/const LAATTAKATTO = (\d+)/)?.[1]);
   assert.ok(katto >= 500 && katto <= 5000, `laattakatto ${katto} ei ole järkevä (≈ 30 Mt)`);

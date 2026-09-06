@@ -1,5 +1,20 @@
 /*
- * ETUSIVUN PINON KUVAT (js/etusivupallo.js).
+ * ETUSIVUN REITTIKUVAT (js/etusivupallo.js).
+ *
+ * ── KUVAT PALASIVAT, MUTTA PALLON PINNALLE (6.9.2026 aamu) ─────────
+ *
+ * OMISTAJA, sanatarkasti: *"Etusivulla kuvat voisivat tulla pienellä
+ * kartalle kaupungin käännöksen kohdalle ja seurata kaupunkia ja
+ * lopulta häipyä sitä kautta näkyvistä. Käytä uusia vaaleita kuvia.
+ * Voi olla isoisän ottamia kuvia."* Aiempi PINO (kortit ruudun
+ * laidassa, poistettu 6.9. klo 01.20) EI palaa: kuva on nyt ankkuroitu
+ * kaupungin lat/lon-pisteeseen ja seuraa sitä pallon pyöriessä.
+ *
+ * Kerros lukee kuvan `kaupunki`-kentästä: reitin jakson päättyessä
+ * juuri sen kaupungin kuva nousee pallolle. Kuvateksti ei näy pallolla
+ * (kuva on pieni), mutta se on kuvan alt-teksti.
+ *
+ * ── VANHA PINO (5.9.2026) ──────────────────────────────────────────
  *
  * Omistaja 5.9.2026 klo 22.45, sanatarkasti: *"isoisän kuvat voivat olla
  * blurrattuja ja haalealla ja jäädä tekstin alle"* ja *"ne voisivat
@@ -32,7 +47,12 @@
  *   1. `tunnus`     = kuvaputken tunnus SELLAISENAAN
  *                     (esim. 'isoisa-aden-hiilisatama-1873-kuva-v1').
  *   2. `osoite`     = `${ISOISAN_KUVAJUURI}<tunnus>.jpg` — polku
- *                     muodostetaan juuresta, ei koskaan käsin.
+ *                     muodostetaan juuresta, ei koskaan käsin. Tämä on
+ *                     kuvan LÄHDE (alkuperäinen ämpärin vedos).
+ *   2b. `pieni`     = vain reitin kaupungeille: repon pienennetty
+ *                     versio `${ETUSIVUN_PIENET}<kaupunki>.jpg`
+ *                     (320 px, laatu 0,8). Etusivun pallo lataa TÄMÄN;
+ *                     `osoite` jää lähteeksi ja muihin käyttöihin.
  *   3. `kuvateksti` = SANASTA SANAAN paikka + vuosi, esim.
  *                     'Adenin hiilisatama, 1873'. Ei henkilökuvausta.
  *   4. `kaupunki`   = se ETUSIVUN_REITIN jakso, jonka laskeutuessa kuva
@@ -65,6 +85,28 @@
 import { ISOISAN_KUVAJUURI } from '../isoisan-valokuvat.js';
 
 export { ISOISAN_KUVAJUURI };
+
+/*
+ * PIENENNETYT REITTIKUVAT REPOSSA (omistaja 6.9.2026 aamu,
+ * sanatarkasti: *"Etusivulle kuvat kannattaa varmaan pienentää
+ * valmiiksi että pyörii parhaiten. Kuvat saavat olla aika pieniä."*).
+ *
+ * Etusivun pallo ei enää hae reittikuvaa ämpärin 1024–1536 px
+ * vedoksena, vaan repon omana 320 px:n JPEG:nä (laatu 0,8, sRGB,
+ * 9–14 kt) — kymmenesosa tavuista ja murto-osa purkutyöstä juuri
+ * siinä kohdassa, jossa pallon on pyörittävä tasaisesti.
+ *
+ * Tiedostot on tehty ämpärin ALKUPERÄISISTÄ kuvista (kentän `osoite`
+ * osoite on yhä tietueessa, ja se on kuvan lähde): kuva skaalattiin
+ * pisimmältä sivultaan 320 px:iin Chromiumin kanvaasilla ja
+ * tallennettiin JPEG-laadulla 0,8. Sama työ toistuu ajamalla
+ * pienennys uudelleen samalla säännöllä, kun kuvaputki toimittaa
+ * uuden kuvan (esim. Pariisi ja Kalkutta).
+ *
+ * Kuvatekstit ja lähdeosoitteet ovat tietueissa alla; kansiossa on
+ * vain kaupunkitunnuksen mukaan nimetty tiedosto.
+ */
+export const ETUSIVUN_PIENET = 'assets/etusivu/reitti/';
 
 /**
  * SÄVYN OLETUKSET. `haalea` on kuvan peittävyys pinossa ja `sumennus`
@@ -101,15 +143,21 @@ export const ISOISAKUVAN_SAVYT = {
  * vaaleita vinjettikuvia (savy 'vaalea'), koko kuva paperireunoineen,
  * ei rajausta. Reitin jaksot: Lontoo, Kairo, Bombay, Singapore,
  * Kanton (Hongkongin jakso), Jokohama (Tokion jakso), San Francisco,
- * New York. Pariisille ja Kalkutalle ei ole kuvaa — Varanasi EI ole
- * Kalkutta (kuvaputken huomautus). Vanhat kaksi albumiinivedosta
- * poistuivat pinosta (omistaja 23.15: "kohta pitäisi tulla isoisän
- * uusia kuvia, niin käytä niitä ennemmin").
+ * New York. Kalkutan jakson kuvana on 6.9.2026 alkaen Benares
+ * (isoisän oma Gangesin-kuva samalta matkaosuudelta) — Varanasi EI ole
+ * Kalkutta (kuvaputken huomautus), joten kuvateksti pysyy Benaresina ja
+ * rivi palaa arvoon `kaupunki: null`, kun kuvaputki toimittaa Kalkutan
+ * oman kuvan. PARIISI ON AINOA REITIN KAUPUNKI ILMAN KUVAA: sille ei
+ * panna väliaikaista sijaista (päätoimittaja 6.9.2026 aamu), vaan
+ * Pariisin käännös jää ilman kuvaa kunnes kuvaputki toimittaa sen.
+ * Vanhat kaksi albumiinivedosta poistuivat pinosta (omistaja 23.15:
+ * "kohta pitäisi tulla isoisän uusia kuvia, niin käytä niitä ennemmin").
  */
 export const ETUSIVUN_ISOISAKUVAT = [
   {
     tunnus: 'isoisa-departure-aged-r20260905-v1',
     osoite: `${ISOISAN_KUVAJUURI}isoisa-departure-aged-r20260905-v1.jpg`,
+    pieni: `${ETUSIVUN_PIENET}lontoo.jpg`,
     kuvateksti: 'Isoisä, Lontoo, 1873',
     selite: 'Isoisä viivähtää arkun vieressä. Vaunun ikkunassa näkyvä saattaja vastaa hänen pieneen hyvästieleeseensä.',
     kaupunki: 'lontoo',
@@ -118,6 +166,7 @@ export const ETUSIVUN_ISOISAKUVAT = [
   {
     tunnus: 'isoisa-cairo-aged-r20260905-v1',
     osoite: `${ISOISAN_KUVAJUURI}isoisa-cairo-aged-r20260905-v1.jpg`,
+    pieni: `${ETUSIVUN_PIENET}kairo.jpg`,
     kuvateksti: 'Isoisä, Kairo, 1873',
     selite: 'Puutarhan varjoisa porttikäytävä, Kairo 1873',
     kaupunki: 'kairo',
@@ -126,6 +175,7 @@ export const ETUSIVUN_ISOISAKUVAT = [
   {
     tunnus: 'isoisa-bombay-aged-r20260905-v1',
     osoite: `${ISOISAN_KUVAJUURI}isoisa-bombay-aged-r20260905-v1.jpg`,
+    pieni: `${ETUSIVUN_PIENET}mumbai.jpg`,
     kuvateksti: 'Isoisä, Bombay, 1873',
     selite: 'Venemies ojentaa kätensä, kun isoisä siirtyy Bombayn rantaportailta veneeseen. Kulunut vedos säilyttää pienen auttavan eleen ja avoimen sataman, mutta katoksen varjo jättää isoisän kasvot arvoitukseksi.',
     kaupunki: 'mumbai',
@@ -134,6 +184,7 @@ export const ETUSIVUN_ISOISAKUVAT = [
   {
     tunnus: 'isoisa-singapore-aged-r20260905-v2',
     osoite: `${ISOISAN_KUVAJUURI}isoisa-singapore-aged-r20260905-v2.jpg`,
+    pieni: `${ETUSIVUN_PIENET}singapore.jpg`,
     kuvateksti: 'Isoisä, Singapore, 1873',
     selite: 'Isoisä odottaa varastokäytävän varjossa, kun paikallinen kantaja pysähtyy matka-arkun ääreen. Veneestä katsottuna he jäävät pieniksi hahmoiksi Boat Quayn pitkään varastoriviin.',
     kaupunki: 'singapore',
@@ -142,6 +193,7 @@ export const ETUSIVUN_ISOISAKUVAT = [
   {
     tunnus: 'isoisa-kanton-aged-r20260905-v1',
     osoite: `${ISOISAN_KUVAJUURI}isoisa-kanton-aged-r20260905-v1.jpg`,
+    pieni: `${ETUSIVUN_PIENET}hongkong.jpg`,
     kuvateksti: 'Isoisä, Kanton, 1873',
     selite: 'Isoisä istuu teehuoneen hämärässä ja seuraa, kuinka teeammattilainen näyttää lehtiä tarjottimelta. Käytössä taittunut vedos säilyttää yhteisen hetken mutta kadottaa isoisän kasvot varjoon.',
     kaupunki: 'hongkong',
@@ -150,6 +202,7 @@ export const ETUSIVUN_ISOISAKUVAT = [
   {
     tunnus: 'isoisa-yokohama-aged-r20260905-v1',
     osoite: `${ISOISAN_KUVAJUURI}isoisa-yokohama-aged-r20260905-v1.jpg`,
+    pieni: `${ETUSIVUN_PIENET}tokio.jpg`,
     kuvateksti: 'Isoisä, Jokohama, 1873',
     selite: 'Isoisän avoin muistikirja lepää sylissä. Kuistin varjosta hän kääntyy kohti rantaa, jolla ohikulkija jatkaa matkaansa.',
     kaupunki: 'tokio',
@@ -158,6 +211,7 @@ export const ETUSIVUN_ISOISAKUVAT = [
   {
     tunnus: 'isoisa-sanfrancisco-aged-r20260905-v1',
     osoite: `${ISOISAN_KUVAJUURI}isoisa-sanfrancisco-aged-r20260905-v1.jpg`,
+    pieni: `${ETUSIVUN_PIENET}sanfrancisco.jpg`,
     kuvateksti: 'Isoisä, San Francisco, 1873',
     selite: 'Isoisä tukeutuu hetkeksi matka-arkun kanteen varaston räystään alla. Lahdella pieni höyrylaiva etääntyy laiturista.',
     kaupunki: 'sanfrancisco',
@@ -166,6 +220,7 @@ export const ETUSIVUN_ISOISAKUVAT = [
   {
     tunnus: 'isoisa-newyork-aged-r20260905-v1',
     osoite: `${ISOISAN_KUVAJUURI}isoisa-newyork-aged-r20260905-v1.jpg`,
+    pieni: `${ETUSIVUN_PIENET}newyork.jpg`,
     kuvateksti: 'Isoisä, New York, 1873',
     selite: 'Isoisä jää liikkeen oviaukon varjoon, kun nainen ja pieni koira pysähtyvät hänen kohdalleen. Leveä Broadway ja matala hevosomnibus jatkuvat hetken takana kauas.',
     kaupunki: 'newyork',
@@ -302,9 +357,19 @@ export const ETUSIVUN_ISOISAKUVAT = [
   {
     tunnus: 'isoisa-benares-ghat-more-r20260905-v2',
     osoite: `${ISOISAN_KUVAJUURI}isoisa-benares-ghat-more-r20260905-v2.jpg`,
+    pieni: `${ETUSIVUN_PIENET}kolkata.jpg`,
     kuvateksti: 'Isoisän ottama kuva, Benares, 1873',
     selite: 'Benaresin jokirannassa veneilijät auttavat kukkakauppiasta keräämään veteen kaatuneet seppeleet.',
-    kaupunki: null,
+    /*
+     * KALKUTAN JAKSO TOISTAISEKSI (päätoimittajan tarkennus 6.9.2026
+     * aamu): reittikuvakerros tarvitsee kuvan jokaiselle kaupungille,
+     * ja Benares on isoisän oma Gangesin-kuva samalta matkaosuudelta.
+     * Kuvateksti pysyy kuvaputken sanana ("Benares"), koska se kertoo
+     * mitä kuvassa oikeasti on — Varanasi EI ole Kalkutta. Kuvaputki
+     * toimittaa Kalkutan (ja Pariisin) oman kuvan myöhemmin, jolloin
+     * tämä rivi palaa arvoon `kaupunki: null`.
+     */
+    kaupunki: 'kolkata',
     savy: 'vaalea',
   },
   {

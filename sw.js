@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1629';
+const CACHE = 'matkakirja-2026-08-09.1630';
 const SHELL = [
   './',
   './index.html',
@@ -497,6 +497,23 @@ const SHELL = [
   // pelin ENSIMMÄINEN ruutu olisi offline-tilassa vajaa.
   './assets/etusivu/kansikuva.png',
   './assets/etusivu/irtolehti.png',
+  /*
+   * Etusivun pallon REITTIKUVAT (omistaja 6.9.2026: *"Etusivulle kuvat
+   * kannattaa varmaan pienentää valmiiksi että pyörii parhaiten"*).
+   * Pienennetyt 320 px:n vedokset (9–14 kt) ovat repossa, koska pallo
+   * lataa ne heti kerroksen syntyessä: ilman esilatausta kaupungin
+   * käännös näyttäisi tyhjää. Pariisin kuva puuttuu, kunnes kuvaputki
+   * toimittaa sen (js/packs/etusivun-isoisakuvat.js).
+   */
+  './assets/etusivu/reitti/lontoo.jpg',
+  './assets/etusivu/reitti/kairo.jpg',
+  './assets/etusivu/reitti/mumbai.jpg',
+  './assets/etusivu/reitti/kolkata.jpg',
+  './assets/etusivu/reitti/singapore.jpg',
+  './assets/etusivu/reitti/hongkong.jpg',
+  './assets/etusivu/reitti/tokio.jpg',
+  './assets/etusivu/reitti/sanfrancisco.jpg',
+  './assets/etusivu/reitti/newyork.jpg',
   // Kuvalinssit. Nämä ovat binäärejä eivätkä moduuleja — ilman
   // esilatausta ne puuttuisivat juuri offline-tilassa, jossa linssejä
   // selaillaan eniten.
@@ -1606,11 +1623,18 @@ async function laattaPeilista(pyynto) {
  * jättäisi laudan tyhjäksi juuri käynnistyksessä. Siksi vanha kappale
  * kelpaa heti ja uusi haetaan sen rinnalla: uusi taso (esim. Z8) tulee
  * käyttöön seuraavassa käynnistyksessä. Ilman koria odotetaan verkkoa.
+ *
+ * TAUSTAPÄIVITYS EI SAA TULLA SELAIMEN VÄLIMUISTISTA (6.9.2026): ämpäri
+ * antaa luettelolle max-age 3600, joten tavallinen fetch palauttaisi
+ * tunnin ajan saman kappaleen — ja koska kori on jo yhden käynnistyksen
+ * jäljessä, uusi taso viipyisi kaksi käynnistystä. `no-cache` revalidoi
+ * ETagilla (304 on muutama sata tavua) eikä ohita koria: kappale
+ * tarjotaan yhä heti. Laatat itse eivät revalidoi — ne ovat immutable.
  */
 function laattaluettelo(event) {
   const { url } = event.request;
   return caches.open(LAATTACACHE).then(async (kori) => {
-    const paivitys = fetch(url, { mode: 'cors' })
+    const paivitys = fetch(url, { mode: 'cors', cache: 'no-cache' })
       .then((v) => {
         if (v && v.ok) kori.put(url, v.clone()).catch(() => {});
         return v;
