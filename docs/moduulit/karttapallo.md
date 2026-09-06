@@ -976,11 +976,16 @@ hieman lähemmäs. pallo voisi pyöriä hitaasti lennon aikana."*
   (`REITIN_VARIT.avauslennonSuunnitelma`, peittävyys 0,3). Jälki jää
   näkyviin lennon jälkeen ja katoaa vasta `pura()`:ssa saapumiskortin
   alla; poisto palauttaa kerroksen siirtymän, joten se häipyy pehmeästi.
-- **Zoom.** Avauslennolla on oma marginaali
+- **Zoom.** *(KUMOTTU 6.9.2026 — ks. osio "Avauslennon kamera seuraa
+  konetta" tämän luvun lopussa: rajaus ei ole enää kaupunkiparin
+  laatikko vaan lähtökaupunki ja `AVAUSLENNON_ALKULEVEYS`.)*
+  Avauslennolla oli oma marginaali
   (`AVAUSLENNON_RAJAUKSEN_MARGINAALI` 0,2) tavallisen lennon 0,35:n
   sijaan: Lontoo → Ateena 44,3° → 36,5° (1400 × 900) ja 40,6° → 33,4°
   (390 × 844).
-- **Hidas pyörintä.** `AVAUSLENNON_PYORINTA_AST` (5°) koko lennon
+- **Hidas pyörintä.** *(KUMOTTU 6.9.2026 — pallo ei pyöri lennossa
+  lainkaan; kamera seuraa konetta, ks. saman luvun loppu.)*
+  `AVAUSLENNON_PYORINTA_AST` (5°) koko lennon
   mitalla, `pyorinnanPehmennys`-liu'ulla (pehmeät päät, lähes tasainen
   väli). Rajauslaatikkoa siirretään lähtöön puoli pyörintää lännemmäs,
   jolloin kamera SEURAA konetta ja KONE on kuvassa lennon molemmissa
@@ -2258,3 +2263,144 @@ Node-fetchillä; skriptit `scratchpad/asettelu/tera-mittaa.mjs`,
    säilyy. Sama sw.js:n taustapäivityksessä (`cache: 'no-cache'`) —
    ämpäri antaa luettelolle max-age 3600, ja kori on jo yhden käynnistyksen
    jäljessä. Laatat itse eivät revalidoi: ne ovat immutable.
+**Avauslennon kamera seuraa konetta, ja valinnan pallo pyörii hitaammin
+(6.9.2026 aamupäivä).** Omistaja katsoi avauslennon ja lähtövalinnan ja
+pyysi sanatarkasti:
+
+> *"Kohdemaan valinnassa hitaampi pallon liike. Lentokonekohtauksessa
+> paljon lähempi zoom aste ja kamera seuraa konetta. Kartta myös zoomaa
+> koko ajan pikkuhiljaa lähemmäs konetta. Pallon ei tarvitse siis
+> liikkua lentokohtauksessa."* — ja erikseen: *"Maapallo saa olla vähän
+> vaaleampi sittenkin kun näin testikuvasi"*.
+
+1. **VALINNAN PYÖRINTÄ 0,4 → 0,16 °/s.** `ALOITUKSEN_PYORINTA_AST_S`
+   (js/pallolauta/lauta.js). Perustelu on ruudun mitta eikä maku:
+   valintanäkymä on mitattuna 1 200 lautayksikköä (36,0°) työpöydällä
+   1280 × 800 ja 986 yksikköä (29,6°) puhelimella 390 × 844, eli yksi
+   pituusaste on 36 ja 13 ruutupikseliä. 0,4 °/s liikutti kuvaa
+   14 px/s työpöydällä ja 5 px/s puhelimella — sen katse joutuu
+   seuraamaan; 0,16 °/s on 5,7 ja 2,1 px/s. Täysi kierros kestää
+   37 minuuttia. Silmukka, kolme pysäytintä ja
+   terävän tilan pakotus ovat ennallaan (kohta 3 yllä).
+2. **AVAUSLENTO ON NYT KAMERAN SEURANTAA, EI RAJAUSTA.**
+   `AVAUSLENNON_RAJAUKSEN_MARGINAALI` ja `AVAUSLENNON_PYORINTA_AST`
+   POISTUIVAT (js/pallolauta/avaus.js); tilalla on
+   `AVAUSLENNON_ALKULEVEYS` **600 lautayksikköä** (≈ 18°) ja seuranta,
+   joka kirjoittaa `pointOfView`n joka kehyksellä:
+
+   - **Kohde luetaan koneen omasta kellosta ja kaaresta**
+     (`hypynVaihe` + `lentokaarenKohta`) — samat kaksi kaavaa kuin
+     koneella (siirto.js) ja paksulla jäljellä, joten kolme yhtä aikaa
+     piirtyvää asiaa lukee yhtä totuutta.
+   - **Paikka silotetaan eksponentiaalisesti**
+     (`AVAUSLENNON_SEURANNAN_VIIVE_MS` 260 ms); viimeinen kehys
+     asetetaan täsmälleen koneen kohdalle. Kehysväliä EI katkaista
+     (toisin kuin valinnan pyörinnässä): eksponentti kyllästyy
+     itsestään, joten pitkä väli napsauttaa kameran koneen kohdalle
+     sen sijaan, että jälkijättö kasvaisi. Mitattu kontissa
+     (kehysväli ~250 ms): katkaisun kanssa 186 px sivussa, ilman 37 px.
+   - **Korkeus liukuu logaritmisesti** `liukuPehmennys`-käyrällä
+     (entinen `pyorinnanPehmennys`, nimi vaihtui koska pyörintää ei
+     enää ole) alkuleveydestä saapumisleveyteen — ei porrasta, vaan
+     koko lennon mittainen hidas lähentyminen.
+   - **Loppu on TÄSMÄLLEEN saapumisnäkymä** (`PALLOLAUDAN_
+     SAAPUMISLEVEYS` 240), joten laskeutumisen oma ajo (siirto.js
+     `laske` → `kamera.kotiin`) on nolla-ajo eikä siirtymä hypi.
+     Molemmat päät lasketaan `kamera.kameranKohde`lla, joten laattojen
+     tarkkuusraja (`lahinKorkeus`) pitää myös lennolla.
+   - **Kone ratsastaa hitusen keskilinjan yläpuolella**
+     (`AVAUSLENNON_KONEEN_NOSTO` 0,15 näkyvän alueen korkeudesta).
+     Syy on mitattu: isoisän valokuva (.lento-valokuva) on kapealla
+     ruudulla 37,5 vw leveä ja kiinni vasemmassa laidassa — mitattuna
+     390 × 844 kortti peitti x 16…246, y 392…561, ja täsmälleen
+     keskellä lentävä kone (195, 447) oli sen TAKANA koko lennon.
+     Nosto ajetaan sisään ja ulos trapetsilla
+     (`AVAUSLENNON_NOSTON_RAMPPI` 0,15, `nostonOsuus`), jottei kamera
+     loikkaa arkin väistyessä eikä laskeutuessa. Viimeisen kymmenyksen
+     ajan kone laskeutuu takaisin keskelle ja sipaisee kortin
+     häivytettyä ylälaitaa — se on tietoinen vaihtokauppa siitä, että
+     laskeutuminen osuu saapumisnäkymään pikselilleen.
+   - **Ele ei kilpaile seurannan kanssa:** lennon ajan kotelon päällä on
+     koko ruudun lentokalvo (js/ui.js `.flight-overlay`), joka ottaa
+     napautuksen ja ohittaa lennon; ohitus vie kameran maaliin.
+   - **Reduced motion:** kone ei lennä, joten `rajaus` on suoraan
+     kohdekaupungin saapumisnäkymä ja ui.js asettaa sen kerralla arkin
+     takana. Seurantasilmukkaa ei käynnistetä lainkaan.
+3. **LENTOREITIN LAATAT ETUKÄTEEN KORIIN.** Lähempi kuva pyytää Z7:ää
+   pitkin koko kaarta ja Z8:aa laskeutumisessa, eikä laattamoottori hae
+   mitään ennen kuin kamera on jo siellä. `js/pallo.js` sai
+   `reitinLaatat` (käytävä kaaren ympärillä, `REITIN_ESILATAUSTASOT`
+   [6, 7], säde 1 laatta) ja `esilataaLentoreitti`, jonka
+   `avaus.js valmistele` kutsuu heti — pergamenttiarkin takana on
+   sekunteja aikaa. Lontoo → Ateena (kaari 21,5°) on 24 näytettä ja
+   laskettuna 86 laattaa käytävässä (33 tasolla 6, 53 tasolla 7) plus
+   9 laskeutumislaattaa tasolla 8 — noin 1,4 Mt, kun koko maailman taso
+   7 olisi 21 845 laattaa. Tämä EI kuluta
+   `esilataaPallolaatat`in kerran-per-istunto-lupaa (reitti tiedetään
+   vasta lennon alkaessa), ja työntekijä ohittaa jo korissa olevat.
+   *Ei mitattavissa kontissa:* savukkeet ajavat `serviceWorkers: 'block'`
+   -tilassa, joten kutsu palauttaa nullin; vartija on
+   tests/pallo.test.mjs (käytävän geometria ja viestin muoto).
+4. **ETUSIVUN AVAUKSEN TUMMENNUS 0,18 → 0,12 ja reuna 0,44 → 0,34**
+   (css `.intro.intro-pallolla .intro-verho`). Portti jää ennalleen
+   (0,28 / 0,6): tilaus koski avausta.
+
+*Mitattu Playwrightilla (Chromium, swiftshader, laatat Noden fetchillä
+media.matkakirja.appista) 6.9.2026, Lontoo → Ateena. Lento venytettiin
+15-kertaiseksi, jotta kaappaus ehtii kunkin osuuden kohdalle; käyrä on
+lennon osuuden funktio, joten venytys ei muuta geometriaa.*
+
+| osuus | altitude 1280 × 800 | altitude 390 × 844 dpr 3 | näkyvä leveys (yks) | kone keskipisteestä (TP / puhelin) |
+|---|---|---|---|---|
+| 0 % | 0,194 | 0,700 | 600 | 0 px / 0 px |
+| 25 % | 0,172 | 0,622 | 532 | 126 px ylös / 122 px ylös |
+| 50 % | 0,127 | 0,456 | 391 | 193 px ylös / 130 px ylös |
+| 75 % | 0,092 | 0,331 | 284 | 162 px ylös / 123 px ylös |
+| 100 % | 0,078 | 0,280 | 240 | 8 px ylös / 16 px ylös |
+
+Vaakasuunnassa kone pysyi työpöydällä 1–45 px ja puhelimella 1–17 px
+keskilinjasta (kontin kehysväli 250 ms; oikealla laitteella jälkijättö
+on aikavakion 260 ms mittainen eli murto-osa tästä). Isoisän kortti oli
+mitattuna työpöydällä x 45…422 ja puhelimella x 16…246 — kone on siis
+molemmilla sen ulkopuolella koko lennon paitsi viimeisen kymmenyksen
+ajan, jolloin nosto laskee sen takaisin keskelle. Osuuden 0 % kuvassa
+kortti on koneen päällä, mutta se on VENYTYKSEN harha: kortti feidaa
+näkyviin 2 600 ms kalvon syntymisestä (LENNON_VALOKUVAN_VIIVE_MS), eli
+oikealla nopeudella vasta kun noston ramppi (15 % lennosta ≈ 1,2 s) on
+jo ylhäällä.
+
+Näkyvä leveys on sama lautayksikköinä molemmilla laitteilla (kameran
+kuvasuhdekorjaus, luku 10.3 kohta 1), ja perillä `kameranTila().leveys`
+on 240,0 eli tasan saapumisporras. Kaappaukset:
+`scratchpad/lento6/lento-{tyopoyta,puhelin}-{0,25,50,75,100}.png`.
+Pyörintä mitattiin samalla ajolla (lng 5 sekunnissa): kontin
+ohjelmistorasteroijalla 0,053 °/s työpöydällä ja 0,009 °/s puhelimella —
+kehysväli on siellä 250–600 ms ja pyörinnän dt katkaistaan 100 ms:iin,
+joten mitattu kulmanopeus on murto-osa nimellisestä; oikealla laitteella
+kello antaa täyden 0,16 °/s. Avauksen tummennus luettiin
+`getComputedStyle`lla: 0,12 / 0,34.
+
+Vartijat: tests/pallolauta.test.mjs (alkuleveys paljon vanhaa
+lähempänä, zoomi yhteen suuntaan, loppu = saapumisleveys, seuranta
+samasta kellosta, noston trapetsi, reduced motionin rajaus),
+tests/aloitus-pallolla.test.mjs (pyörinnän uusi haarukka),
+tests/pallo.test.mjs (reitin käytävä ja erillinen esilatausviesti).
+`tools/savukkeet/savuke-avauslento.mjs` sai samalla KAKSI korjausta.
+(1) Se reititti yhä vanhaa `pub-*.r2.dev`-isäntää eikä nykyistä
+media.matkakirja.appia, joten `--lauta pallo` mittasi mustaa palloa
+(0/7 vartiota); nyt molemmat isännät kelpaavat ja täytetty vastaus saa
+`access-control-allow-origin`-otsakkeen, jota THREE:n tekstuurilataus
+vaatii — mitattuna laattapyyntöjä 2 → 673. (2) P4 vaati LUKUA KAKSI
+pallon nimistä lennon aikana; seuraava kamera pitää reitin toisen pään
+kuvan ulkopuolella, joten kaukainen nimi ei enää lados. Vartio mittaa
+nyt sääntöä eikä lukua: mikään MUU kaupunki kuin Lontoo ja kohde ei saa
+nimeä. Ajossa (Lontoo → Ateena, 834 × 1194) **6/7 läpi** — myös P7,
+eli kamera on perillä kohdekaupungissa ja näkyvä leveys 240 ±5 %, mikä
+on tämän erän tärkein yksittäinen mitta (lennon zoomin loppupää =
+saapumisnäkymä). Ainoa punainen on P6 (kaupunkilehti aukeaa
+napautuksesta perillä), joka kaatuu kontin hitauteen samoin kuin
+aiemminkin (`{tulos: true, auki: false}`, ks. luvun aiempi merkintä
+5.9.2026). Vartion omat kaappaukset
+(`tools/savukkeet/kaappaukset/avauslento-pallo*.png`) jätettiin
+päivittämättä: ne ovat megatavun kokoisia eikä binäärihistoriaa
+kannata paisuttaa yhdestä ajosta.

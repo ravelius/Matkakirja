@@ -42,9 +42,16 @@
  *       muutakaan kalvoa kotelon päällä (omistaja 5.9.2026 klo 00.35:
  *       *"lentokonekohtauksessa kartta voi näkyä ilman sumennusta"*),
  *       ja terävä laatutila on pakotettuna päälle koko lennon ajan.
- *   P4  VAIN KAKSI NIMEÄ, EI PELITILAA. Lennon aikana pallolla on
- *       Lontoon ja kohdekaupungin nimet, ei nappulaa eikä kohteita;
- *       perillä nappula on takaisin.
+ *   P4  EI YHTÄÄN YLIMÄÄRÄISTÄ NIMEÄ, EI PELITILAA. Lennon aikana
+ *       pallolla saa olla vain Lontoon ja kohdekaupungin nimet — ei
+ *       nappulaa eikä kohteita; perillä nappula on takaisin.
+ *
+ *       KAKSI NIMEÄ EI ENÄÄ KELPAA VAATIMUKSEKSI (6.9.2026). Kamera
+ *       seuraa nyt konetta lähikuvassa (js/pallolauta/avaus.js), joten
+ *       reitin toinen pää on kuvan ulkopuolella suurimman osan lennosta
+ *       eikä sen nimeä ladota lainkaan: mitattuna lennon keskellä
+ *       ruudulla oli vain kohdekaupungin nimi. Vartio mittaa siksi sitä,
+ *       mikä on sääntö — että MIKÄÄN MUU kaupunki ei saa nimeä.
  *   P5  TEKSTIT JA ÄÄNET SAMOISTA KOUKUISTA. Lentokalvo, repliikin rivi
  *       ja kertojan äänite (puhe-lento-alku.mp3) ovat samat kuin
  *       tasokartalla — koreografia on yhteinen (js/ui.js).
@@ -164,13 +171,27 @@ await sivu.addInitScript(() => {
  * välimuistista, joten lento ei mittaa verkon hitautta vaan pelin
  * odotusta.
  */
+/*
+ * ÄMPÄRIN OSOITE ON media.matkakirja.app, EI pub-*.r2.dev (korjattu
+ * 6.9.2026). Reitti kuunteli yhä vanhaa r2.dev-isäntää, joten kaikki
+ * ämpäriliikenne — Globe.gl, laatat, kuvat — meni selaimen omaan
+ * verkkoon ja kaatui ERR_CONNECTION_RESETiin: `--lauta pallo` mittasi
+ * 0/7, koska palloa ei koskaan rakennettu. Molemmat isännät kelpaavat,
+ * jottei vanha osoite jää kiinni jos se vielä jossain elää.
+ *
+ * CORS-OTSAKE ON PAKOLLINEN. Laatat ladataan THREE:n tekstuurina
+ * (crossOrigin), joten ilman `access-control-allow-origin`-otsaketta
+ * selain hylkää täytetyn vastauksen ja pallo jää mustaksi — mitattu
+ * 6.9.2026: ilman otsaketta laattapyyntöjä 2, otsakkeen kanssa 673.
+ */
 const valimuisti = new Map();
-await sivu.route('**r2.dev/**', async (route) => {
+await sivu.route(/media\.matkakirja\.app|r2\.dev/, async (route) => {
   const url = route.request().url();
   if (!valimuisti.has(url)) {
     valimuisti.set(url, fetch(url).then(async (v) => ({
       status: v.status,
       contentType: v.headers.get('content-type') ?? 'application/octet-stream',
+      headers: { 'access-control-allow-origin': '*' },
       body: Buffer.from(await v.arrayBuffer()),
     })).catch((e) => ({ status: 502, contentType: 'text/plain', body: Buffer.from(String(e)) })));
   }
@@ -410,11 +431,13 @@ if (PALLOLLA) {
     !lennonTila.harso && !tulos.harso && lennonTila.laatuPakotettu && !tulos.laatuPakotettu,
     `harso lennolla=${lennonTila.harso} perillä=${tulos.harso}, `
     + `laatu pakotettu lennolla=${lennonTila.laatuPakotettu} perillä=${tulos.laatuPakotettu}`);
+  const sallitutNimet = new Set(['lontoo', KOHDE]);
+  const ylimaaraiset = lennonTila.pallonimia.filter((id) => !sallitutNimet.has(id));
   vaadi('P4 vain Lontoo ja kohde, ei pelitilaa lennon aikana',
-    lennonTila.pallonimia.length === 2
-      && lennonTila.pallonimia.includes('lontoo') && lennonTila.pallonimia.includes(KOHDE)
+    lennonTila.pallonimia.length > 0 && ylimaaraiset.length === 0
       && lennonTila.nappuloita === 0 && lennonTila.kohteita === 0,
-    `nimet=[${lennonTila.pallonimia.join(', ')}] nappula=${lennonTila.nappuloita} kohteet=${lennonTila.kohteita}`);
+    `nimet=[${lennonTila.pallonimia.join(', ')}] ylimääräiset=[${ylimaaraiset.join(', ')}] `
+    + `nappula=${lennonTila.nappuloita} kohteet=${lennonTila.kohteita}`);
   const kertojaP = tulos.aanet.find((a) => /puhe-lento-alku/.test(a.src));
   vaadi('P5 tekstit ja äänet samoista koukuista (kalvo, repliikki, kertoja)',
     lennonTila.kalvo && lennonTila.repliikki.trim().length > 0 && Boolean(kertojaP?.soi),

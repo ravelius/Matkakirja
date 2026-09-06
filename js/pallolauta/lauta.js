@@ -87,7 +87,7 @@ import {
 import { luoLinssikartta } from './linssikartta.js';
 import { luoLinssit } from './linssit.js';
 import { luoNappulanKuljettaja } from './siirto.js';
-import { luoAloituslennonKohtaus, pyorinnanPehmennys } from './avaus.js';
+import { liukuPehmennys, luoAloituslennonKohtaus } from './avaus.js';
 
 /**
  * Sallitut Globe.gl-kerrokset pallolaudalla (vaihe 3): pisteet
@@ -151,13 +151,22 @@ export const ALOITUSVALINNAN_KUPLALEVEYS_PX = 336;
 /**
  * PALLO PYÖRII HITAASTI VALINTANÄKYMÄSSÄ (omistaja 5.9.2026 klo 00.30:
  * *"karttapallo saisi pyöriä hitaast täydessä terävyydessä"*). Kamera
- * liukuu itään tämän verran sekunnissa — 0,4°/s eli täysi kierros noin
- * 15 minuutissa: liike näkyy, mutta kartta pysyy luettavana eikä valinta
- * karkaa. Terävä tila (js/pallo.js pakotaPallonLaatu) on pakotettuna
- * päällä koko valinnan ajan, joten laatat eivät pudota tasoa liikkeessä.
- * Reduced motion: ei pyörintää.
+ * liukuu itään tämän verran sekunnissa. Terävä tila (js/pallo.js
+ * pakotaPallonLaatu) on pakotettuna päällä koko valinnan ajan, joten
+ * laatat eivät pudota tasoa liikkeessä. Reduced motion: ei pyörintää.
+ *
+ * 0,4 → 0,16 °/s (omistaja 6.9.2026 aamupäivä: *"Kohdemaan valinnassa
+ * hitaampi pallon liike"*). PERUSTELU LUVULLE ON RUUDUN MITTA EIKÄ
+ * MAKU. Valintanäkymä on mitattuna (Chromium 6.9.2026) 1 200
+ * lautayksikköä eli 36,0° työpöydällä (1280 × 800) ja 986 yksikköä eli
+ * 29,6° puhelimella (390 × 844) — yksi pituusaste on siis 36 ja 13
+ * ruutupikseliä. 0,4 °/s liikutti kuvaa 14 px/s työpöydällä ja
+ * 5 px/s puhelimella, ja se luki silmässä *liikkeenä*, jota katse
+ * joutui seuraamaan; 0,16 °/s on 5,7 ja 2,1 px/s — pallo on
+ * pikemminkin *elossa* kuin liikkeessä. Täysi kierros kestää
+ * 37 minuuttia, joten valinta ei karkaa kuvasta odottaessakaan.
  */
-export const ALOITUKSEN_PYORINTA_AST_S = 0.4;
+export const ALOITUKSEN_PYORINTA_AST_S = 0.16;
 /** Pysähtymisen kesto (ms), kun pelaaja koskee palloon: pehmeä ease-out. */
 export const ALOITUKSEN_PYSAYTYS_MS = 900;
 /**
@@ -693,9 +702,10 @@ export async function avaaPallolauta(ui) {
    * voimaan (kirjaston OrbitControls kirjoittaa saman kameran).
    *
    * KOLME PYSÄYTINTÄ. (1) Sormi tai rulla koteloon → PEHMEÄ hidastus
-   * (ALOITUKSEN_PYSAYTYS_MS, sama smootherstep kuin avauslennon
-   * pyörinnässä) — ei nykäisyä. (2) Toinen kamera-ajo omistaa kuvan
-   * (kaupungin napautus, avauslento) → seis heti samassa kehyksessä,
+   * (ALOITUKSEN_PYSAYTYS_MS, sama pehmennys kuin avauslennon zoomilla,
+   * js/pallolauta/avaus.js liukuPehmennys) — ei nykäisyä. (2) Toinen
+   * kamera-ajo omistaa kuvan (kaupungin napautus, avauslento) → seis
+   * heti samassa kehyksessä,
    * jotta kaksi kirjoittajaa eivät kamppaile. (3) Vaihe vaihtuu tai
    * lauta menee piiloon → seis ja terävän tilan pakotus pois.
    *
@@ -747,7 +757,7 @@ export async function avaaPallolauta(ui) {
       if (oma.hidastus) {
         const t = Math.min(1, (hetki - oma.hidastus) / ALOITUKSEN_PYSAYTYS_MS);
         if (t >= 1) { seisAloituksenPyorinta(); return; }
-        kerroin = 1 - pyorinnanPehmennys(t);
+        kerroin = 1 - liukuPehmennys(t);
       }
       const pov = pallo.pointOfView();
       if (pov) {
