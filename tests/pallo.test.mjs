@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
-import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTAKANSIO, laattatasoMax, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS, laattakynnykset, lepokerroin, LAATU_TERAVYYS, napakerroin, NAPAKERROIN_MIN, NAPAKANNEN_LEVEYS, NAPAKANNEN_HAIVEPEITTO, NAPAKANSI_POHJOINEN, NAPAKANSI_ETELA, asennaNapakannet, kolmiulotteinen, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE } from '../js/pallo.js';
+import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTAKANSIO, laattatasoMax, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS, laattakynnykset, lepokerroin, LAATU_TERAVYYS, LAATU_TERAVYYS_KAUKO, LAATU_KAUKORAJA, laatuTeravyys, napakerroin, NAPAKERROIN_MIN, NAPAKANNEN_LEVEYS, NAPAKANNEN_HAIVEPEITTO, NAPAKANSI_POHJOINEN, NAPAKANSI_ETELA, asennaNapakannet, kolmiulotteinen, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE } from '../js/pallo.js';
 import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdetaso, laattojenKansio, LAATTA, tayteRivilla, nostaReuna, JAA_RAJA, JAA_SAVY, MERI_SAVY } from '../tools/tee-pallolaatat.mjs';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { LINSSI as PALLOLINSSI } from '../js/linssit/pallo.js';
@@ -121,6 +121,31 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, true, 'c')}`);
   assert.equal(pallonLaatta(3, 5, 4), `${PALLO_LAATAT}4/3/5.jpg`);
   assert.equal(PALLO_LAATTATASO_MAX, 8, 'taso 8 kaytossa 5.9.2026');
+  /*
+   * LUETTELO REVALIDOIDAAN, LAATAT EIVÄT (6.9.2026): laatat.json muuttuu
+   * saman nimen alla joka poltossa (ämpärin max-age 3600), joten
+   * `force-cache` jätti palaavan pelaajan vanhaan tasot.max-arvoon —
+   * taso 8 valmistui 6.9. klo 04.50 eikä olisi tullut käyttöön.
+   * Verkon katketessa kappale haetaan vielä korista (lentokonetila).
+   */
+  const tuore = await import(`../js/pallo.js?luettelo=${Date.now()}`);
+  const luettelovastaus = { ok: true, json: async () => ({ tasot: { min: 0, max: 8 } }) };
+  const pyynnot = [];
+  assert.deepEqual(
+    await tuore.laatatSaatavilla((osoite, valinnat) => { pyynnot.push(valinnat?.cache); return Promise.resolve(luettelovastaus); }),
+    { tasot: { min: 0, max: 8 } },
+  );
+  assert.deepEqual(pyynnot, ['no-cache'], 'luettelo on revalidoitava, ei force-cache');
+  const lento = await import(`../js/pallo.js?lentokone=${Date.now()}`);
+  const lennonPyynnot = [];
+  assert.deepEqual(
+    await lento.laatatSaatavilla((osoite, valinnat) => {
+      lennonPyynnot.push(valinnat?.cache);
+      return valinnat?.cache === 'no-cache' ? Promise.reject(new Error('offline')) : Promise.resolve(luettelovastaus);
+    }),
+    { tasot: { min: 0, max: 8 } },
+  );
+  assert.deepEqual(lennonPyynnot, ['no-cache', 'force-cache'], 'ilman verkkoa luettelo korista');
   // Luettelon puute tai virhe → varatekstuuri, ei kaatumista.
   assert.equal(await laatatSaatavilla(async () => ({ ok: false })), null);
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 7 } }), 7, 'varakansio ei kanna tasoa 8: vanha napalakki sekoittuisi (5.9.2026 klo 17.30)');
@@ -318,13 +343,29 @@ test('laatu palaa levossa: kynnykset ruudun pikseleistä, liike kevyt (omistaja 
   assert.equal(oletus[3], 1);
   // Lepokerroin iPhonen pystyruudulle (771 css-px × 3): 2^t ≥ 0,0263·H/h.
   const k = lepokerroin(771 * 3);
+  const kauko = lepokerroin(771 * 3, LAATU_TERAVYYS_KAUKO);
   const taso = (h, kerroin) => Math.min(PALLO_LAATTATASO_MAX, laattakynnykset(kerroin).findIndex((x) => x <= h));
   assert.equal(taso(0.135, 1), 6, 'kirjaston taso korkeudella 0,135');
   assert.equal(taso(0.135, k), 8, 'levossa syvin taso (kirjasto rajaa maxLeveliin)');
-  assert.equal(taso(2.5, k), 4, 'koko pallo levossa tasolla 4, ei 5 (128 laattaa)');
+  assert.equal(taso(2.5, kauko), 4, 'koko pallo levossa tasolla 4, ei 5 (128 laattaa)');
   assert.equal(lepokerroin(100), 1, 'ei koskaan karkeampi kuin kirjasto');
-  assert.ok(LAATU_TERAVYYS >= 0.5 && LAATU_TERAVYYS <= 1);
-  assert.ok(k > 3.5 && k < 5, `kerroin ${k}`);
+  // Terävyys 1,0 lähikuvassa: laatan pikseli on laitepikseli (omistaja
+  // 6.9.2026 "vielä röpelöistä, varsinkin teksti"). Työpöydällä
+  // (1081 css-px × 2) korkeus 0,30 nousee tasolta 7 tasolle 8.
+  assert.equal(LAATU_TERAVYYS, 1);
+  assert.ok(LAATU_TERAVYYS_KAUKO >= 0.5 && LAATU_TERAVYYS_KAUKO < LAATU_TERAVYYS);
+  assert.equal(laatuTeravyys(0.3), LAATU_TERAVYYS, 'lähikuva terävänä');
+  assert.equal(laatuTeravyys(LAATU_KAUKORAJA), LAATU_TERAVYYS, 'raja kuuluu lähikuvaan');
+  assert.equal(laatuTeravyys(2.5), LAATU_TERAVYYS_KAUKO, 'koko pallo yleiskuvana');
+  assert.equal(laatuTeravyys(undefined), LAATU_TERAVYYS, 'tuntematon korkeus ei karkeuta');
+  const poyta = lepokerroin(1081 * 2) * napakerroin(38.2);
+  assert.equal(taso(0.3, poyta), 8, 'työpöydällä korkeus 0,30 tasolle 8 (ennen 7)');
+  assert.ok(k > 7 && k < 8, `kerroin ${k}`);
+  assert.ok(kauko > 3.5 && kauko < 5, `kaukokerroin ${kauko}`);
+  // Kerroin lasketaan piirtopuskurin korkeudesta (ei ruudun leveydestä
+  // eikä pelkästä dpr:stä): fov on pystysuunnan kulma, ks. js/pallo.js.
+  assert.match(lue('../js/pallo.js'), /kotelo\.clientHeight \* Math\.min\(dpr, LAATU_PIKSELISUHDE_LEPO\)/);
+  assert.match(lue('../js/pallo.js'), /lepokerroin\(piirtokorkeus\(\), teravyys\)/);
   assert.ok(LAATU_LEPOVIIVE_MS >= 200 && LAATU_LEPOVIIVE_MS <= 400);
   assert.ok(LAATU_LIIKEVIIVE_MS > 0 && LAATU_LIIKEVIIVE_MS < LAATU_LEPOVIIVE_MS);
   assert.equal(LAATU_PIKSELISUHDE_LIIKE, 2, 'liikkeessä kirjaston katto');
@@ -609,5 +650,9 @@ test('napakerroin: navan lähellä karkeampi taso samalla terävyydellä (omista
   assert.ok(taso(napakerroin(80), 0.6) < taso(1, 0.6), 'navalla matalampi taso');
   const pallo = lue('../js/pallo.js');
   assert.match(pallo, /\* napakerroin\(kynnysLat\)/);
-  assert.match(pallo, /NAPAKERROIN_ASKEL\) asetaTila\(lepo\)/);
+  // Leveysaste JA korkeuden terävyysalue korjaavat kynnykset heti: yksi
+  // hyppy ei ehdi liikkeeksi (6.9.2026, ks. js/pallo.js laatuPov).
+  assert.match(pallo, /Math\.abs\(lat - kynnysLat\) >= NAPAKERROIN_ASKEL\n\s*\|\| laatuTeravyys\(nakyma\?\.altitude\) !== kynnysTeravyys\) asetaTila\(lepo\);/);
+  assert.match(pallo, /const lepoon = \(\) => \{\n\s*lepoAjastin = 0;\n\s*if \(!kamera\) return;\n\s*asetaTila\(true\);/,
+    'lepo laskee kynnykset aina uudestaan — hypyn jälkeen ne ovat väärät');
 });

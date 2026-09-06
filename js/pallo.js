@@ -114,11 +114,26 @@ let laattaluettelo = null;
  * syvin taso poltetaan puoliskoittain, ja luettelo päivitetään vasta,
  * kun molemmat puoliskot ovat ämpärissä — pallo ei siis pyydä
  * laattoja, joita ei vielä ole.
+ *
+ * VÄLIMUISTI: LUETTELO REVALIDOIDAAN, LAATAT EIVÄT (6.9.2026). Laatan
+ * osoitteessa on kansion versio ja ämpäri lähettää sille `immutable`,
+ * mutta laatat.json MUUTTUU saman nimen alla joka poltossa (ämpäri
+ * antaa sille max-age 3600). `force-cache` tarjosi selaimen kappaleen
+ * ikuisesti myös vanhentuneena, joten palaava pelaaja ei saanut uutta
+ * tasot.max-arvoa lainkaan — taso 8 valmistui 6.9. klo 04.50, eikä se
+ * olisi tullut käyttöön ennen kuin selain siivoaa korinsa. `no-cache`
+ * pakottaa revalidoinnin (ETag → 304, muutama sata tavua). Osoite
+ * pysyy samana, joten palvelutyöntekijän kori (sw.js laattaluettelo:
+ * kappale heti, päivitys taustalla) ja lentokonetila toimivat kuten
+ * ennen; jos verkkoa ei ole, luettelo haetaan vielä korista
+ * `force-cache`-pyynnöllä ennen kuin luovutetaan varatekstuuriin.
  */
 export function laatatSaatavilla(haku = globalThis.fetch) {
   if (!laatatLupaus) {
+    const osoite = `${PALLO_LAATAT}laatat.json`;
     laatatLupaus = Promise.resolve()
-      .then(() => haku(`${PALLO_LAATAT}laatat.json`, { cache: 'force-cache' }))
+      .then(() => haku(osoite, { cache: 'no-cache' }).catch(() => null))
+      .then((v) => (v?.ok ? v : haku(osoite, { cache: 'force-cache' })))
       .then((v) => (v.ok ? v.json() : null))
       .then((j) => {
         const kelpaa = Boolean(j && j.tasot && j.tasot.max >= 0);
@@ -377,11 +392,33 @@ export function rakennaPallo(Globe, kotelo, laatat) {
  *            (≤ 3) ja laattojen tekstuureille anisotrooppinen suodatus.
  * Kynnysten kerroin: taso t tarvitaan, kun 2^t ≥ 0,0263 · H / korkeus (H =
  * ruudun korkeus laitepikseleinä, fov 50°), eli kirjaston 8/2^t-kaavaan
- * kerroin H / 304. Terävyys 0,55 sallii 1,8× venytyksen, jotta koko pallo
- * (korkeus 2,5) pysyy tasolla 4 (128 laattaa) eikä hyppää tasolle 5
- * (512). Liikkeessä karkeammat laatat jäävät pohjalle (kirjasto pitää
- * matalammat tasot), joten tason vaihto ei välähdä tyhjää; levossa
+ * kerroin H / 304. Liikkeessä karkeammat laatat jäävät pohjalle (kirjasto
+ * pitää matalammat tasot), joten tason vaihto ei välähdä tyhjää; levossa
  * tarkat laatat latautuvat päälle sitä mukaa kuin ne saapuvat.
+ *
+ * ── MIKSI KERROIN ON RUUDUN KORKEUDESTA EIKÄ LEVEYDESTÄ ────────────
+ * (mitattu 6.9.2026, omistaja työpöydältä: *"vielä röpelöistä,
+ * varsinkin teksti"*)
+ *
+ * Globe.gl:n fov 50° on PYSTYSUUNNAN avauskulma, ja three.js:n
+ * perspektiivikamera pitää sen kiinteänä kuvasuhteesta riippumatta:
+ * leveämmällä ruudulla näkyy leveämpi kaista SAMALLA pikselitiheydellä.
+ * Ruutupikseleitä astetta kohti on siis H / (53,4 · korkeus) sekä pysty-
+ * että vaakasuunnassa — laatan venytys ei riipu ruudun leveydestä
+ * lainkaan. Mitattu selaimessa 2000 × 1160 dpr 2 -ruudulla korkeudella
+ * 0,0368: 550 css-px/aste pystyssä ja 550 (= 439 / cos 38°) vaakasuunnassa,
+ * eli täsmälleen kaava. Leveyden lisääminen kynnykseen nostaisi tasoa
+ * ilman yhtään lisättyä yksityiskohtaa ja nelinkertaistaisi laattamäärän,
+ * joten kerroin lasketaan siitä, mitä TODELLA piirretään: kotelon korkeus
+ * × lepotilan pikselisuhde (min(dpr, 3)).
+ *
+ * MITÄ LEVEÄ RUUTU SITTEN TEKEE: se vie kameran LÄHEMMÄS. Sama pyydetty
+ * näkyvä leveys on työpöydällä korkeus 0,074 ja puhelimessa 0,29
+ * (js/pallolauta/kamera.js korkeusLeveydesta jakaa kuvasuhteella), ja
+ * lähimmässä sallitussa näkymässä (PALLOLAUDAN_SIIRTOLEVEYS 120 yks =
+ * 3,6°) 2000 css-px leveä ruutu venyttää Z8:aa 4,8-kertaiseksi. Sitä ei
+ * korjaa mikään kynnys: taso 8 on syvin, joka ämpärissä on. Poltettujen
+ * nimien terävöinti sieltä eteenpäin vaatii tason 9 (venytys 2,4×) tai 10.
  *
  * Tason pudotus liikkeen alkaessa purkaa tarkat laatat (kirjaston oma
  * käytös); levossa ne haetaan uudestaan selaimen välimuistista. Se on
@@ -397,8 +434,31 @@ export const LAATU_LEPOVIIVE_MS = 260;
  * purkaa tarkat laatat, ja edestakainen vaihto hakisi ne yhä uudestaan.
  */
 export const LAATU_LIIKEVIIVE_MS = 120;
-/** Levossa sallittu venytys: 1 = laatan pikseli on laitepikseli. */
-export const LAATU_TERAVYYS = 0.55;
+/*
+ * TERÄVYYS = LAATAN PIKSELI ON LAITEPIKSELI (omistaja 6.9.2026 aamu:
+ * *"vielä röpelöistä, varsinkin teksti"*). Levossa kynnys pyöristyy
+ * kirjaston taulukossa aina ylöspäin, joten terävyys 1,0 takaa, että
+ * laatta on VÄHINTÄÄN yhtä tarkka kuin ruutu (venytys 1,0…0,5). Vanha
+ * 0,55 salli 1,8× venytyksen: mitattuna työpöydällä (2000 × 1160 dpr 2)
+ * korkeus 0,30 jäi tasolle 7, vaikka taso 8 oli ämpärissä.
+ *
+ * YLEISKUVASSA ENTINEN ARVO. Kaukaa katsottuna pallon kaarevuus tuo
+ * kuvaan reunat, joissa sama taso kattaa moninkertaisen alan: terävyys
+ * 1,0 nostaisi koko pallon näkymän (korkeus 2,5) tasolle 5 eli 512
+ * laattaan 128:n sijaan. Yli LAATU_KAUKORAJAN käytetään siksi entistä
+ * 0,55:tä — siellä nimiä ei lueta, ja lähikuva on se, jota omistaja
+ * katsoo. Mitatut laattamäärät: docs/moduulit/karttapallo.md luku 10.3.
+ */
+/** Levossa sallittu venytys lähikuvassa: 1 = laatan pikseli on laitepikseli. */
+export const LAATU_TERAVYYS = 1;
+/** Terävyys yleiskuvassa (kaarevuus tuo reunat kuvaan): entinen 0,55. */
+export const LAATU_TERAVYYS_KAUKO = 0.55;
+/** Korkeus, jonka yläpuolella terävyys on yleiskuvan arvo. */
+export const LAATU_KAUKORAJA = 0.6;
+/** Lepotilan terävyys kameran korkeudesta (lähikuva vs. yleiskuva). */
+export function laatuTeravyys(korkeus) {
+  return Number.isFinite(korkeus) && korkeus > LAATU_KAUKORAJA ? LAATU_TERAVYYS_KAUKO : LAATU_TERAVYYS;
+}
 /** Pikselisuhteen katto levossa (iPhone 3) ja liikkeessä (kirjasto 2). */
 export const LAATU_PIKSELISUHDE_LEPO = 3;
 export const LAATU_PIKSELISUHDE_LIIKE = 2;
@@ -528,12 +588,23 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
   const ajastimet = new Set();
 
   let kynnysLat = 0;
-  const kameranLat = () => { const p = pallo.pointOfView?.(); return Number.isFinite(p?.lat) ? p.lat : 0; };
+  let kynnysTeravyys = LAATU_TERAVYYS;
+  const kameranNakyma = () => pallo.pointOfView?.() ?? null;
+  /*
+   * Kertoimen H on se, mitä TODELLA piirretään: kotelon korkeus kertaa
+   * lepotilan pikselisuhde (dpr yli 3:n ei kasvata piirtopuskuria, joten
+   * pelkkä dpr yliarvioisi tarpeen). Ruudun LEVEYS ei ole kaavassa —
+   * perustelu ja mittaus ylempänä (fov on pystysuunnan avauskulma).
+   */
+  const piirtokorkeus = () => kotelo.clientHeight * Math.min(dpr, LAATU_PIKSELISUHDE_LEPO);
   const asetaTila = (lepoon) => {
     lepo = lepoon;
     if (aina()) lepoon = true;
-    kynnysLat = kameranLat();
-    const kerroin = (lepoon ? lepokerroin(kotelo.clientHeight * dpr) : 1) * napakerroin(kynnysLat);
+    const nakyma = kameranNakyma();
+    kynnysLat = Number.isFinite(nakyma?.lat) ? nakyma.lat : 0;
+    const teravyys = laatuTeravyys(nakyma?.altitude);
+    kynnysTeravyys = teravyys;
+    const kerroin = (lepoon ? lepokerroin(piirtokorkeus(), teravyys) : 1) * napakerroin(kynnysLat);
     moottori.thresholds = laattakynnykset(kerroin);
     const suhde = Math.min(dpr, lepoon ? LAATU_PIKSELISUHDE_LEPO : LAATU_PIKSELISUHDE_LIIKE);
     if (renderer && renderer.getPixelRatio?.() !== suhde) renderer.setPixelRatio(suhde);
@@ -553,10 +624,20 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
    * sama kamera uudestaan uusilla kynnyksillä, jotta se valitsee
    * tarkemman tason ja hakee laatat; terävöitys ajetaan vielä pari
    * kertaa, kun laatat ovat ehtineet saapua.
+   *
+   * KYNNYKSET LASKETAAN AINA UUDESTAAN, VAIKKA OLTAISIIN JO LEVOSSA
+   * (mitattu 6.9.2026). Yksi hyppy (pointOfView kestolla 0: sukellus,
+   * `?lauta`-palautus, aikajanan pysäkki) ei kestä LAATU_LIIKEVIIVE_MS:ää,
+   * joten `lepo` ei ehdi kääntyä liikkeeksi — vanha `if (lepo) return`
+   * jätti silloin edellisen näkymän kynnykset voimaan. Kynnykset
+   * riippuvat kameran leveysasteesta (napakerroin) ja korkeudesta
+   * (laatuTeravyys), joten hypyn jälkeen ne olivat väärät: mitattuna
+   * hyppy korkeuteen 2,5 piti lähikuvan kertoimen ja haki tason 5 (1 024
+   * laattaa) tason 4 (128) sijaan. Uudelleenlaskenta on 30 luvun taulukko.
    */
   const lepoon = () => {
     lepoAjastin = 0;
-    if (lepo || !kamera) return;
+    if (!kamera) return;
     asetaTila(true);
     alkuperainen.call(moottori, kamera);
     for (const viive of [0, 800, 2500]) {
@@ -575,8 +656,20 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
         if (!edellinen || !lepoAjastin) liikeAlku = nyt;
         edellinen = paikka.clone();
         if (lepo && nyt - liikeAlku >= LAATU_LIIKEVIIVE_MS) asetaTila(false);
-        // Napakerroin seuraa kameran leveysastetta myös liikkeessä.
-        else if (Math.abs(kameranLat() - kynnysLat) >= NAPAKERROIN_ASKEL) asetaTila(lepo);
+        else {
+          /*
+           * Napakerroin ja terävyys seuraavat kameraa myös liikkeessä.
+           * YKSI HYPPY EI EHDI LIIKKEEKSI, mutta sen jälkeen kynnykset
+           * ovat väärät: mitattu 6.9.2026, hyppy lähikuvasta korkeuteen
+           * 2,5 haki tason 5 (1 024 laattaa) vanhoilla kynnyksillä ennen
+           * kuin lepo korjasi sen tasoon 4 (256). Korkeuden vaihtuminen
+           * yleiskuvan puolelle (laatuTeravyys) korjaa sen heti.
+           */
+          const nakyma = kameranNakyma();
+          const lat = Number.isFinite(nakyma?.lat) ? nakyma.lat : 0;
+          if (Math.abs(lat - kynnysLat) >= NAPAKERROIN_ASKEL
+            || laatuTeravyys(nakyma?.altitude) !== kynnysTeravyys) asetaTila(lepo);
+        }
         ikkuna.clearTimeout(lepoAjastin);
         lepoAjastin = ikkuna.setTimeout(lepoon, LAATU_LEPOVIIVE_MS);
       }

@@ -1623,11 +1623,18 @@ async function laattaPeilista(pyynto) {
  * jättäisi laudan tyhjäksi juuri käynnistyksessä. Siksi vanha kappale
  * kelpaa heti ja uusi haetaan sen rinnalla: uusi taso (esim. Z8) tulee
  * käyttöön seuraavassa käynnistyksessä. Ilman koria odotetaan verkkoa.
+ *
+ * TAUSTAPÄIVITYS EI SAA TULLA SELAIMEN VÄLIMUISTISTA (6.9.2026): ämpäri
+ * antaa luettelolle max-age 3600, joten tavallinen fetch palauttaisi
+ * tunnin ajan saman kappaleen — ja koska kori on jo yhden käynnistyksen
+ * jäljessä, uusi taso viipyisi kaksi käynnistystä. `no-cache` revalidoi
+ * ETagilla (304 on muutama sata tavua) eikä ohita koria: kappale
+ * tarjotaan yhä heti. Laatat itse eivät revalidoi — ne ovat immutable.
  */
 function laattaluettelo(event) {
   const { url } = event.request;
   return caches.open(LAATTACACHE).then(async (kori) => {
-    const paivitys = fetch(url, { mode: 'cors' })
+    const paivitys = fetch(url, { mode: 'cors', cache: 'no-cache' })
       .then((v) => {
         if (v && v.ok) kori.put(url, v.clone()).catch(() => {});
         return v;

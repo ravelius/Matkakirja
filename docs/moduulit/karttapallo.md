@@ -2192,3 +2192,69 @@ jälkeen, vähennetty liike ilman salamaa) ja savuke
 0,3 / 0,8 / 1,2 / 1,5 / 2,5 / 3,5 / 4,5 / 6 / 25 s. Todennettu
 Playwrightilla (Chromium, swiftshader) 1280 × 800 ja 390 × 844 sekä
 pallolla että tasokartalla (`?lauta=kartta`) ja vähennetyllä liikkeellä.
+**Lepolaadun terävyys, hypyn kynnykset ja luettelon välimuisti (6.9.2026
+aamu).** Omistaja työpöydältä, kuvakaappaus Kreikasta lähimmässä
+zoomissa: *"vielä röpelöistä, varsinkin teksti"*. Mitattu selaimessa
+(Playwright + swiftshader, `serviceWorkers: 'block'`, media reititetty
+Node-fetchillä; skriptit `scratchpad/asettelu/tera-mittaa.mjs`,
+`tera-kaappaa.mjs`). Neljä havaintoa ja kolme korjausta:
+
+1. **Kynnysmoottori.** Globe.gl valitsee tason PELKÄSTÄ korkeudesta
+   (`thresholds.findIndex(k => k <= korkeus)`, `maxLevel` = luettelon 8).
+   Työpöydällä 2000 × 1160 dpr 2 (kotelo 1979 × 1081, piirtopuskuri
+   3958 × 2162) kynnys 0 oli **24,67** (= 8 · lepokerroin 3,91 ·
+   napakerroin 0,786) ja tasot **7 / 8 / 8** korkeuksilla 0,30 / 0,15 /
+   0,05; dpr 1:llä kynnys 12,33 ja tasot **6 / 7 / 8**; iPhonella
+   390 × 844 dpr 3 kynnys 26,39 ja tasot **7 / 8 / 8**.
+2. **Terävyys 0,55 → 1,0 lähikuvassa** (`LAATU_TERAVYYS`, js/pallo.js).
+   Kynnys pyöristyy aina ylöspäin, joten 1,0 takaa, että laatta on
+   levossa vähintään yhtä tarkka kuin ruutu; 0,55 salli 1,8× venytyksen.
+   Mitatut tasot ja laattamäärät samassa näkymässä (yksi lepo):
+   työpöytä dpr 2 korkeus 0,30 **taso 7 → 8**, laattoja **119 → 528**,
+   tekstuureja 170 → 605; dpr 1 korkeus 0,30 taso 6 → 7 (46 → 119) ja
+   0,15 taso 7 → 8 (42 → 139); iPhone saapumisnäkymä (korkeus 0,278)
+   **taso 7 → 8**, laattoja 85 → 207, tekstuureja 103 → 157. Hinta on
+   siis nelinkertainen laattamäärä siinä oktaavissa, jossa taso nousee —
+   `LAATU_TERAVYYS` on yksi vakio, jolla sen voi laskea takaisin.
+   Yleiskuvassa (korkeus > `LAATU_KAUKORAJA` 0,6) käytetään entistä
+   0,55:tä: pallon kaarevuus tuo reunat kuvaan, ja terävyys 1,0 nostaisi
+   koko pallon näkymän (2,5) tasolle 5 eli **1 024 laattaan** tason 4
+   (256) sijaan — mitattu.
+3. **RUUDUN LEVEYS EI KUULU KYNNYKSEEN.** Globe.gl:n fov 50° on
+   pystysuunnan avauskulma ja three.js pitää sen kiinteänä, joten
+   ruutupikseleitä astetta kohti on H / (53,4 · korkeus) sekä pysty- että
+   vaakasuunnassa: leveä ruutu näyttää leveämmän kaistan SAMALLA
+   tiheydellä. Mitattu korkeudella 0,0368 työpöydällä 550 css-px/aste
+   pystyssä ja 439 px vaakasuunnassa = 550 · cos 38° — täsmälleen kaava.
+   Leveyden lisääminen kertoimeen nostaisi tasoa nelinkertaisella
+   laattamäärällä ilman yhtään uutta yksityiskohtaa. Kerroin lasketaan
+   nyt piirtopuskurin korkeudesta (kotelon korkeus × min(dpr, 3)) eikä
+   `clientHeight × dpr`:stä, joka yliarvioisi dpr > 3 -laitteilla.
+   **Mitä leveä ruutu tekee, on viedä kameran lähemmäs:** sama pyydetty
+   näkyvä leveys on työpöydällä korkeus 0,074 ja puhelimessa 0,29, ja
+   lähin sallittu näkymä (`PALLOLAUDAN_SIIRTOLEVEYS` 120 yks = 3,6°)
+   venyttää työpöydällä Z8:aa **4,8-kertaiseksi** (puhelimella `lahinLeveys`
+   pitää rajan 2× venytyksessä, 103 yks). Siksi omistajan kuvakaappauksen
+   sumeat nimet EIVÄT korjaannu kynnyksillä: taso 8 on jo valittuna, ja se
+   on syvin ämpärissä oleva. Kaappaukset korkeudella 0,0368 ennen ja
+   jälkeen ovat tavu tavulta samat (`tera-poyta-lahin-{ennen,jalkeen}-rajaus.png`).
+   **Fablelle: seuraava askel on taso 9** (venytys 2,4×) tai 10 (1,2×)
+   nostosarjaan — tai poltettujen nimien korvaaminen elävillä
+   lähimmässä zoomissa.
+4. **Hyppy jätti kynnykset vanhoiksi (korjattu).** `lepoon()` palasi heti,
+   jos `lepo` oli jo tosi, ja yksi `pointOfView(pov, 0)` -hyppy ei kestä
+   `LAATU_LIIKEVIIVE_MS`:ää, joten kynnykset jäivät edellisen näkymän
+   leveysasteelle ja korkeudelle. Mitattu: hyppy lähikuvasta korkeuteen
+   2,5 haki tason 5 laatat (**1 024 kpl**) ennen kuin lepo olisi korjannut
+   sen. Nyt lepo laskee kynnykset aina uudestaan, ja terävyysalueen
+   vaihtuminen korjaa ne heti hypyn yhteydessä (sama koukku kuin
+   napakertoimen 4°:n askel). Korjauksen jälkeen sama hyppy hakee tason 4
+   (256 laattaa).
+5. **laatat.json ei enää jää selaimen välimuistiin.** Luettelo haettiin
+   `cache: 'force-cache'` -pyynnöllä, joka tarjoaa kappaleen vanhentuneenakin
+   — palaava pelaaja ei olisi saanut 6.9. klo 04.50 valmistunutta
+   `tasot.max = 8`:aa lainkaan. Nyt `no-cache` (ETag → 304); jos verkkoa ei
+   ole, kappale haetaan vielä `force-cache`-pyynnöllä, joten lentokonetila
+   säilyy. Sama sw.js:n taustapäivityksessä (`cache: 'no-cache'`) —
+   ämpäri antaa luettelolle max-age 3600, ja kori on jo yhden käynnistyksen
+   jäljessä. Laatat itse eivät revalidoi: ne ovat immutable.
