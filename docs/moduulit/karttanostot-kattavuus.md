@@ -183,7 +183,7 @@ Edellä oleva 2.9.2026 taulukko on jätetty koskematta tarkoituksella:
 rinnakkaiset erät päivittävät sitä, ja Euroopan luvut näkyvät tässä
 osiossa tuoreina.
 
-**Tilanne yhdellä silmäyksellä (erien M1, M2 ja M4 jälkeen, 6.9.2026 aamu).** 112 maasta **42 on tavoitteessa** ja 70 vajaita. Eurooppa on täynnä; maailman erät M1 (Etelä-Amerikka), M2 (Oseania) ja M4 (Pohjois-Amerikka) toivat yhteensä 190 uutta karttamerkkiä (kohteet, maastokohteet, eläintäyt, skandaalit). Fidžiltä ja Salomonsaarilta puuttuu eläintäky (kuva tilattu kuvaputkelta) ja kohteita on lehden ikkunan takia 5–6. Erä M3 (Aasia) on työn alla.
+**Tilanne yhdellä silmäyksellä (erien M1–M4 jälkeen, 6.9.2026 aamu).** 112 maasta **46 on tavoitteessa** ja 66 vajaita. Eurooppa on täynnä; maailman erät M1 (Etelä-Amerikka), M2 (Oseania), M3 (Aasia) ja M4 (Pohjois-Amerikka) toivat yhteensä noin 250 uutta karttamerkkiä (kohteet, maastokohteet, eläintäyt, skandaalit). Vajaiksi jäivät tarkoituksella Fidži ja Salomonsaaret (lehden ikkuna, eläintäkykuva tilattu) sekä Hongkong (koko alue on yhden nimiölaatikon kokoinen; eläintäky mahdoton kaupunkisäteen takia). Seuraavat erät M5 (Afrikka) ja M6 (Lähi-itä).
 
 ### Eurooppa (29 maata)
 
@@ -240,11 +240,6 @@ osiossa tuoreina.
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Hongkong (HKG) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
-| Indonesia (IDN) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
-| Intia (IND) | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
-| Sri Lanka (LKA) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
-| Myanmar (MMR) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
 | Nepal (NPL) | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
 | Singapore (SGP) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
 | Thaimaa (THA) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
@@ -259,6 +254,11 @@ osiossa tuoreina.
 | Afganistan (AFG) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
 | Filippiinit (PHL) | 0 | 4 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
 | Kiina (CHN) | 1 | 4 | 1 | 0 | 0 | 0 | 5 | 0 | kohteita −7, skandaaleja −2 |
+| Hongkong (HKG) | 4 | 2 | 0 | 2 | 0 | 0 | 8 | 0 | kohteita −4, maastoa −1, eläintäky puuttuu |
+| Indonesia (IDN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Intia (IND) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Sri Lanka (LKA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Myanmar (MMR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 
 ### Afrikka (27 maata)
 
@@ -332,7 +332,7 @@ osiossa tuoreina.
 | Uusi-Seelanti (NZL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Papua-Uusi-Guinea (PNG) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 
-Maita 112, tavoitteessa 42, vajaita 70.
+Maita 112, tavoitteessa 46, vajaita 66.
 
 ## Maailman erät (ehdotus)
 
@@ -350,7 +350,7 @@ tiedostoon.
 |---|---|---|
 | M1 (tehty 6.9.) | Etelä-Amerikka | Argentiina (ARG) 0, Bolivia (BOL) 0, Brasilia (BRA) 0, Chile (CHL) 0, Kolumbia (COL) 0 |
 | M2 (tehty 6.9.) | Oseania | Australia (AUS) 0, Fidži (FJI) 0, Uusi-Seelanti (NZL) 0, Papua-Uusi-Guinea (PNG) 0, Salomonsaaret (SLB) 0 |
-| M3 | Aasia | Hongkong (HKG) 0, Indonesia (IDN) 0, Intia (IND) 0, Sri Lanka (LKA) 0, Myanmar (MMR) 0 |
+| M3 (tehty 6.9.) | Aasia | Hongkong (HKG) 0, Indonesia (IDN) 0, Intia (IND) 0, Sri Lanka (LKA) 0, Myanmar (MMR) 0 |
 | M4 (tehty 6.9.) | Pohjois-Amerikka | Kanada (CAN) 0, Kuuba (CUB) 0, Grönlanti (GRL) 0, Guatemala (GTM) 0, Nicaragua (NIC) 0 |
 | M5 | Afrikka | Saint Helena (SHN) 0, Etelä-Sudan (SDS) 2, Angola (AGO) 3, Kamerun (CMR) 3, Kongo (COD) 3 |
 | M6 | Lähi-itä | Kypros (CYP) 2, Oman (OMN) 2, Qatar (QAT) 2, Arabiemiirikunnat (ARE) 3, Kuwait (KWT) 3 |
