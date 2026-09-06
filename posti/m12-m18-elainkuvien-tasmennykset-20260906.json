@@ -1,0 +1,98 @@
+{
+  "orderId": "fable-elaintakyt-maailma-m12-m18-24-20260906-1005",
+  "createdAt": "2026-09-06T10:11:30.569874+00:00",
+  "mainSha": "3acdf74bfb9d28fe5c7432d95a9f709e007a61fc",
+  "originalOrderSource": "posti/elaintakyt-maailma-m12-m18-24-tilaus-20260906.json",
+  "originalFeedbackPreserved": true,
+  "issues": [
+    {
+      "proposalId": "sdn-horn-prompt-correction-20260906",
+      "orderId": "fable-elaintakyt-maailma-m12-m18-24-20260906-1005",
+      "countryCode": "SDN",
+      "type": "visual-wording-correction-consistent-with-main",
+      "originalOrderLine": "- `elain-sdn` arruikatsa, *Ammotragus lervia* — kolmiosarvinen vuohilammas Punaisenmeren kukkuloiden kivikkorinteellä, koiraan kurkusta ja rinnasta riippuva pitkä takkuinen karva näkyvissä.",
+      "issue": "Kolmiosarvinen confuses triangular horn cross-section with horn count. Main already describes the cross-section correctly.",
+      "productionInstruction": "Arruikatsauroksella on kaksi tukevaa ulos, taakse ja sisään kaartuvaa sarvea sekä pitkä kurkusta ja rinnasta riippuva karva. Ei kolmatta sarvea.",
+      "gameTextChangeRequired": false,
+      "referenceIds": [
+        "barbary-zoo"
+      ],
+      "heldImageCount": 0,
+      "status": "prepared-factual-prompt-correction",
+      "fableAccepted": false,
+      "imageGenerated": false
+    },
+    {
+      "proposalId": "sle-chimpanzee-locality-alignment-20260906",
+      "orderId": "fable-elaintakyt-maailma-m12-m18-24-20260906-1005",
+      "countryCode": "SLE",
+      "type": "image-and-country-feature-alignment-proposal",
+      "issue": "Keihääntekoa kuvaava alkuperäistutkimus koskee Fongolia Senegalissa; Sierra Leonen karttapisteelle ei tässä tarkistuksessa löytynyt paikallista näyttöä samasta käyttäytymisestä.",
+      "proposedImage": "Länsiafrikansimpanssi metsäisen ympäristön oksalla tutkimassa kädessään hedelmää; toinen yksilö voi näkyä taaempana. Sierra Leonen lajikuva, ei keihääntekoa eikä työkalulla metsästystä.",
+      "proposedTitle": "Länsiafrikansimpanssin oma kulttuuri",
+      "proposedTextChange": "Säilytä levinneisyys. Rajaa käyttäytymisesimerkki: Senegalissa Fongolin simpanssiyhteisön on havaittu valmistavan teräväkärkisiä keppejä ja käyttävän niitä galagojen metsästykseen. Havainto kuvaa tämän yhteisön käyttäytymistä eikä osoita saman tavan esiintyvän kaikissa alalajin populaatioissa.",
+      "keepCurrentCountryAndMapPoint": true,
+      "referenceIds": [
+        "fongoli-study"
+      ],
+      "heldImageCount": 1,
+      "status": "prepared-for-fable-alignment",
+      "fableAccepted": false,
+      "imageGenerated": false
+    },
+    {
+      "proposalId": "pan-golden-frog-conservation-update-20260906",
+      "orderId": "fable-elaintakyt-maailma-m12-m18-24-20260906-1005",
+      "countryCode": "PAN",
+      "type": "country-feature-text-and-image-caption-proposal",
+      "issue": "Main says probably extinct in the wild since 2007; Smithsonian reports last pre-release observations in 2009 and experimental reintroductions in 2026.",
+      "proposedTextChange": "Lajin luonnonvaraiset kannat romahtivat chytridi-sienitaudin vuoksi. Smithsonianin mukaan viimeiset luonnonhavainnot ennen palautuskokeiluja olivat vuodelta 2009. Lajia kasvatetaan suojeluohjelmissa, ja helmikuussa 2026 PARC raportoi kokeellisista luontoonpalautuksista. Palautus ei vielä tarkoita elinvoimaisen luonnonkannan vakiintumista.",
+      "proposedImage": "Säilytä kultainen konna purokivellä ja nostettu etukäpälä. Kuva on lajia ja alkuperäistä elinympäristöä esittävä generoitu havainnekuva, ei dokumentti nykyisestä paikallisesta luonnonhavainnosta tai tunnistetusta palautuspaikasta.",
+      "proposedCaption": "Havainnekuva panamankultasammakon semaforieleestä alkuperäisessä puroympäristössä.",
+      "referenceIds": [
+        "parc-2026"
+      ],
+      "heldImageCount": 0,
+      "status": "prepared-for-fable-alignment",
+      "fableAccepted": false,
+      "imageGenerated": false
+    }
+  ],
+  "sources": [
+    {
+      "id": "barbary-zoo",
+      "url": "https://zoobarcelona.cat/en/node/129?language=es",
+      "title": "Zoo Barcelona: Barbary sheep",
+      "kind": "primary zoo species account",
+      "checkedAt": "2026-09-06T10:11:30.569874+00:00",
+      "readMethod": "web full page",
+      "finding": "Thick backward-curved horns and long neck/chest hair; main SDN describes triangular horn cross-section, not three horns.",
+      "visualReferenceInspected": false
+    },
+    {
+      "id": "fongoli-study",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0960982207008019",
+      "title": "Pruetz and Bertolani 2007: Savanna Chimpanzees, Pan troglodytes verus, Hunt with Tools",
+      "doi": "10.1016/j.cub.2006.12.042",
+      "kind": "primary research",
+      "checkedAt": "2026-09-06T10:11:30.569874+00:00",
+      "readMethod": "publisher search extract and abstract; PDF render and PMC full page unavailable",
+      "finding": "Reported spear-like hunting and tool construction observations were made at Fongoli in Senegal; this source does not establish the behavior at the Sierra Leone map location.",
+      "visualReferenceInspected": false
+    },
+    {
+      "id": "parc-2026",
+      "url": "https://www.si.edu/newsdesk/releases/golden-frogs-going-back-nature",
+      "title": "Smithsonian: Golden Frogs Going Back to Nature",
+      "publishedAt": "2026-02-25",
+      "kind": "primary conservation project news release",
+      "checkedAt": "2026-09-06T10:11:30.569874+00:00",
+      "readMethod": "full article via indexed official page; direct open failed",
+      "finding": "Reported no wild sightings since 2009 before release trials; 100 frogs entered mesocosms and many survivors were fully released after the 12-week trial. This does not establish a self-sustaining wild population.",
+      "visualReferenceInspected": false
+    }
+  ],
+  "gameMainChanged": false,
+  "imagesGenerated": false,
+  "imageApproval": false
+}

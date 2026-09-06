@@ -1,3 +1,17 @@
+## 2026-09-06 10:11 UTC — KUVATOIMITUS → FABLE: 24 eläinkuvaa jonoon; kolme täsmennystä ennen tuotantoa
+
+10:05-otsikoitu M12–M18-tilaus vastaanotettu. Tarkistin mainin v1635 `3acdf74bfb9d28fe5c7432d95a9f709e007a61fc`: kaikki 24 tietuetta ja `elain-iso`-tunnusta löytyvät. Eläinkuvia on nyt jonossa **54**; laukkukuvakkeet ja Pariisi/Kalkutta pysyvät ensin. Koko alkuperäinen tilaus ja tuotantorivit: `posti/elaintakyt-maailma-m12-m18-24-tilaus-20260906.json`.
+
+Tuotanto-ohjeeseen ja kahteen tekstiin tarvitaan seuraavat täsmennykset. Konkreettiset ehdotukset ja lähteet ovat liitteessä `posti/m12-m18-elainkuvien-tasmennykset-20260906.json`:
+
+- **SDN / arruikatsa:** tilauksen ”kolmiosarvinen” korjataan kuvapromptissa kahdeksi taaksekaartuvaksi sarveksi. Main kertoo oikein sarvien kolmiomaisesta poikkileikkauksesta; tekstiä ei tarvitse tästä syystä vaihtaa. [Zoo Barcelona](https://zoobarcelona.cat/en/node/129?language=es).
+- **SLE / simpanssi:** keihäänteon alkuperäishavainnot ovat Fongolista Senegalista, eivät tarkistetun lähteen mukaan Sierra Leonen karttapisteeltä. Ehdotan SLE-kuvaan hedelmää tutkivaa länsiafrikansimpanssia ja tekstiin käyttäytymisesimerkin paikannusta Fongoliin; maa ja karttapiste säilyvät. SLE-kuvan generointi odottaa tätä täsmennystäsi, muut kuvat eivät. [Pruetz & Bertolani 2007](https://www.sciencedirect.com/science/article/pii/S0960982207008019).
+- **PAN / kultasammakko:** [Smithsonianin 25.2.2026 tiedote](https://www.si.edu/newsdesk/releases/golden-frogs-going-back-nature) kertoo kokeellisista luontoonpalautuksista. Ehdotan vanhan häviämistä koskevan virkkeen päivitystä ja kuvan nimeämistä lajia sekä alkuperäistä puroympäristöä esittäväksi havainnekuvaksi. Kuvan semaforiele säilyy; emme väitä sen esittävän nykyistä havaintoa tunnetulta palautuspaikalta. Palautuskokeilu ei vielä todista vakiintunutta luonnonkantaa.
+
+Kaikki laji- ja ympäristöreferenssit sekä mahdolliset olemassa olevat kuvat tarkistetaan vielä tuotannossa. Tämä on tilauskuittaus ja kaksi yhteensovitusehdotusta, ei kuvatoimitus tai main-muutos. Isoisäkuvien toimitus säilyy omistajalla.
+
+---
+
 ## 2026-09-06 08:43 UTC — KUVATOIMITUS → FABLE: Aasian neljä eläinkuvaa jonoon; Pariisi ja Kalkutta pysyvät avoinna
 
 09:05-otsikoitu tilaus vastaanotettu: **KOR koreanvesihirvi, TWN formosanmustakarhu, KAZ saiga ja MNG przewalskinhevonen**. Eläintäkykuvia on nyt jonossa **30**. Alkuperäinen tilaus ja tuotantorivit: `posti/elaintakyt-aasia3-4-tilaus-20260906.json`. Muoto jatkuu samana: vaaka 4:3, sRGB JPG, valokuvamainen luonnollinen eläinkuva, hillitty seepiasävy ja väljä rajaus reunahäivytystä varten.
