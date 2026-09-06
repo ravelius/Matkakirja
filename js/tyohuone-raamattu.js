@@ -3743,7 +3743,10 @@ export const RAAMATTU = {
           + '(pollo pysyy lukemattomana). Tehosteet haetaan Freesoundista '
           + '(CC0, CC BY attribuutiolla), ei generoida: aanihaku.yml '
           + 'pulu-tehosteet, manifesti aanet/tehosteet/pulu/. Ohje '
-          + 'docs/moduulit/livia-aani.md ja aanet.md.',
+          + 'docs/moduulit/livia-aani.md ja aanet.md. KAIKU POIS ALUSTA (omistaja 6.9.2026 ilta, sanatarkasti: "ota kaiku '
+          + 'pois pulun tekstin alusta"): pulun repliikin alussa ei ole kaikua - '
+          + 'saapumisrepliikin kaikuversio (-kaiku) ei ole enaa kaytossa, pulu '
+          + 'puhuu kuivalla aanella alusta asti.',
         'ISOISAN VAALEAT KUVAT REITILLA JA ATEENAN LENNOLLA (omistaja 6.9.2026 '
           + 'aamupaiva, sanatarkasti: "Kayta Ateena lennossa mahdollisimman vaalea '
           + 'isoisan kuvaa. Etusivulla kuvat voisivat tulla pienella kartalle '
@@ -3757,7 +3760,15 @@ export const RAAMATTU = {
           + 'haipyy; kuvat ovat repossa valmiiksi pienennettyina (320 px, '
           + 'assets/etusivu/reitti/). Ateenan avauslennolla nakyy sarjan vaalein '
           + 'Valimeren kuva (Giza, luminanssi mitattu). Pariisi ja Kalkutta '
-          + 'saavat omat kuvansa kuvaputkesta.',
+          + 'saavat omat kuvansa kuvaputkesta. KUMOTTU LENNON OSALTA (omistaja '
+          + '6.9.2026 ilta, sanatarkasti: "ens. lentokohtauksesta, ota isoisan '
+          + 'kuva pois. kartta liikuu siina liian pikkutarkasti seuraten koneen '
+          + 'alku ja loppu nykaisyja. kartta saisi lentaa yhden tasaisen reitin '
+          + 'ja zoom muutoksen alusta loppuun"): ensimmaisella lennolla '
+          + '(Ateenan avauslento) isoisan kuvaa ei nayteta, ja kamera ajaa '
+          + 'lennon yhtena tasaisena kaarena alusta loppuun - yksi sijainnin ja '
+          + 'zoomin liuku, joka ei seuraa koneen nousun ja laskun nykaisyja. '
+          + 'Etusivun reittikuvat pysyvat.',
         'PALLO TERAVA LEVOSSA (omistaja 6.9.2026 aamupaiva, sanatarkasti: '
           + '"viela ropeloista, varsinkin teksti"): lepotilassa laatan pikseli '
           + 'vastaa laitepikselia (LAATU_TERAVYYS 1,0; yleiskuvassa 0,55), '
