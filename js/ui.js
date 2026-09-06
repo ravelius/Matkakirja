@@ -6059,6 +6059,24 @@ export class UI {
     this.sovitaIntroLohko(this.introArkki, this.introPalsta);
   }
 
+  /**
+   * Lohkon TEKSTIN korkeus. EI scrollHeight (7.9.2026): etusivun
+   * pergamenttiharso on lohkon oma ::before, joka ulottuu insetillä
+   * reilusti lohkon ulkopuolelle — ja absoluuttisesti asemoitu
+   * jälkeläinen kasvattaa scrollHeightia alaspäin. Harso siis kutisti
+   * kirjasinta, vaikka se on pelkkä koriste tekstin TAKANA: kun harson
+   * liukua pidennettiin (-4,6em → -11em), puhelimen avausteksti kutistui
+   * neljänneksen. Lasten laatikot kertovat tekstin todellisen korkeuden,
+   * eikä pseudo ole `children`-listassa.
+   */
+  introLohkonKorkeus(palsta) {
+    let pohja = 0;
+    for (const lapsi of palsta.children) {
+      pohja = Math.max(pohja, lapsi.offsetTop + lapsi.offsetHeight);
+    }
+    return pohja || palsta.scrollHeight;
+  }
+
   /** Pienentää palstan kirjasinta, kunnes se mahtuu kaistaan. */
   sovitaIntroLohko(kaistaEl, palsta, kerroin = 1) {
     const kaista = kaistaEl?.clientHeight;
@@ -6066,7 +6084,7 @@ export class UI {
     let koko = INTRO_FONT_MAX * kerroin;
     palsta.style.fontSize = `${koko}rem`;
     // Askelia riittävästi koko haarukkaan; INTRO_FONT_MIN on lattia.
-    for (let i = 0; i < 8 && palsta.scrollHeight > kaista; i++) {
+    for (let i = 0; i < 8 && this.introLohkonKorkeus(palsta) > kaista; i++) {
       koko = Math.max(INTRO_FONT_MIN * kerroin, koko - 0.09 * kerroin);
       palsta.style.fontSize = `${koko}rem`;
     }

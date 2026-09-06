@@ -6462,9 +6462,13 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  *   --harson-peitto    koko harson voimakkuus (pseudon peittävyys):
  *                      keskellä juuri tämä, reunoilla nolla.
  *   --harson-haivytys  mistä kohtaa sädettä häivytys alkaa. Ennen
- *                      tätä on tasainen lava, sen jälkeen seitsemän
- *                      pysäkin liuku nollaan asti — pitkä matka, jolla
- *                      silmä ei erota yhtään rajaa.
+ *                      tätä on tasainen lava, sen jälkeen liuku
+ *                      nollaan asti — pitkä matka, jolla silmä ei
+ *                      erota yhtään rajaa.
+ *   --harson-liuku     kuinka pitkällä matkalla (osuutena säteestä)
+ *                      liuku kulkee täydestä nollaan. Häivytys +
+ *                      liuku on oltava enintään 89,3 % (laatan reuna),
+ *                      muuten laatan suorakulmio näkyisi.
  *   --harson-sade      liukuvärin ellipsin säde laatan mitoista.
  *                      LIUVUN ON SAMMUTTAVA ENNEN LAATAN REUNAA:
  *                      säteellä 56 % reuna (50 % laatasta) osuu jo
@@ -6480,10 +6484,24 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * työpöytä, sanatarkasti: *"näkyy vielä vähän suoraa rajaa tekstin
  * vaaleassa taustassa"*). "Käytännössä nolla" ei riittänyt: meren
  * sinen päällä 0,03:n pergamenttihuntu erottuu vaakasuorana viivana
- * laatan reunassa. Liuku päättyy nyt pysäkkiin 0 kohdassa häivytys
- * + 45 % (palstalla 89 %, julisteella 85 % säteestä), ja laatan
- * reuna on 89,3 %:n kohdalla — reunalla peittävyys on tasan nolla.
- * Menetetty ala korvataan hieman isommalla laatalla (inset).
+ * laatan reunassa. Liuku päättyy pysäkkiin 0 kohdassa häivytys +
+ * liuku (molemmilla 89 % säteestä), ja laatan reuna on 89,3 %:n
+ * kohdalla — reunalla peittävyys on tasan nolla.
+ *
+ * LIUVUN MUOTO ON NOSTETTU KOSINI (omistaja 6.9.2026 klo 23.58, iPad
+ * pystyssä, sanatarkasti: *"Alaosan vaalean raja pitää feidautuu
+ * pidemmällä matkalla"*). Vanha pysäkkitaulukko oli suora liuku
+ * paloittain, ja sen jyrkin kohta osui juuri sinne, missä harso oli
+ * puolessa: silmä luki sen rajaksi. Nyt jokainen pysäkki on
+ * (1 + cos(pi·u)) / 2, jonka DERIVAATTA ON NOLLA molemmissa päissä —
+ * liuku ei ala eikä lopu mihinkään kulmaan, vaan sulaa palloon.
+ *
+ * MITATTU (Chromium, oikea ämpärivideo, teksti läpinäkyvänä:
+ * vaakarivien keskikirkkaus ja sen jyrkin muutos = se raja, jonka
+ * silmä lukee reunaksi). Avaustekstin harson jyrkin raja
+ * 834 × 1210 -ruudulla (omistajan iPad) 2,13 → 1,41 L‰/px, koko
+ * kuvan jyrkin raja 3,17 → 2,76 L‰/px. Liuvun pituus pystysuunnassa
+ * kasvoi 105 → 297 px eli lähes kolminkertaiseksi.
  *
  * Ala on em-mittainen ja siis tekstin kokoinen: kun fitIntro kutistaa
  * kirjasinta, harso kutistuu mukana eikä irtoa tekstistään.
@@ -6498,14 +6516,15 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   opacity: var(--harson-peitto);
   background: radial-gradient(ellipse var(--harson-sade) var(--harson-sade) at 50% 50%,
     rgba(243, 228, 196, 1) 0%,
-    rgba(243, 228, 196, 0.97) var(--harson-haivytys),
-    rgba(243, 228, 196, 0.86) calc(var(--harson-haivytys) + 10%),
-    rgba(243, 228, 196, 0.66) calc(var(--harson-haivytys) + 19%),
-    rgba(243, 228, 196, 0.42) calc(var(--harson-haivytys) + 28%),
-    rgba(243, 228, 196, 0.2) calc(var(--harson-haivytys) + 35%),
-    rgba(243, 228, 196, 0.09) calc(var(--harson-haivytys) + 40%),
-    rgba(243, 228, 196, 0.02) calc(var(--harson-haivytys) + 43%),
-    rgba(243, 228, 196, 0) calc(var(--harson-haivytys) + 45%),
+    rgba(243, 228, 196, 1) var(--harson-haivytys),
+    rgba(243, 228, 196, 0.962) calc(var(--harson-haivytys) + var(--harson-liuku) * 0.125),
+    rgba(243, 228, 196, 0.854) calc(var(--harson-haivytys) + var(--harson-liuku) * 0.25),
+    rgba(243, 228, 196, 0.691) calc(var(--harson-haivytys) + var(--harson-liuku) * 0.375),
+    rgba(243, 228, 196, 0.5) calc(var(--harson-haivytys) + var(--harson-liuku) * 0.5),
+    rgba(243, 228, 196, 0.309) calc(var(--harson-haivytys) + var(--harson-liuku) * 0.625),
+    rgba(243, 228, 196, 0.146) calc(var(--harson-haivytys) + var(--harson-liuku) * 0.75),
+    rgba(243, 228, 196, 0.038) calc(var(--harson-haivytys) + var(--harson-liuku) * 0.875),
+    rgba(243, 228, 196, 0) calc(var(--harson-haivytys) + var(--harson-liuku)),
     rgba(243, 228, 196, 0) 100%);
 }
 
@@ -6533,13 +6552,24 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * eli haaleampi harso on samalla LUETTAVAMPI kuin ennen — puhelimen
  * huonoin kohta nousi rajan 4,5 yli.
  *
- * SUORA RAJA EI PALAA: liuku päättyy nollaan 44 % + 45 % = 89 %:n
+ * LIUKU PIDEMMÄLLE MATKALLE (omistaja 6.9.2026 klo 23.58: *"Alaosan
+ * vaalean raja pitää feidautuu pidemmällä matkalla"*). Laatta
+ * -4,6em/-8em → -11em/-11em ja tasainen lava kutistuu 44 % → 32 %
+ * säteestä, joten liuku kulkee 57 % säteestä — pystysuunnassa 105 px
+ * → 297 px (omistajan iPad). Lava riittää yhä koko tekstin alle:
+ * tekstin reuna on 34 %:ssa säteestä, ja siitä ulos liuku on vasta
+ * alkamassa. Juuri siksi ISOMPI laatta ei heikennä luettavuutta vaan
+ * PARANTAA sitä — rivien päät ja nurkat saavat nyt enemmän harsoa
+ * kuin ennen.
+ *
+ * SUORA RAJA EI PALAA: liuku päättyy nollaan 32 % + 57 % = 89 %:n
  * kohdalla ja laatan reuna on 89,3 %:ssa (tests/etusivupallo.test.mjs).
  */
 .intro.intro-pallolla .intro-palsta::before {
-  inset: -4.6em -8em;
+  inset: -11em -11em;
   --harson-peitto: 0.46;
-  --harson-haivytys: 44%;
+  --harson-haivytys: 32%;
+  --harson-liuku: 57%;
 }
 
 /*
@@ -6558,13 +6588,23 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
  * paneelin reunan yli (mitattu reunapeitto 0,06 — käytännössä nolla).
  * Otsikon luettavuus mitattiin ensin: tumman otsikon huonoin kontrasti
  * nousi 3,77 → 4,56 (1440×900) ja 4,33 → 4,79 (2000×1160).
- * Häivytys alkaa 40 %:sta, joten liuku sammuu nollaan 85 %:ssa eikä
- * laatan reunalle (89,3 %) jää mitään.
+ * LIUKU PIDEMMÄLLE MYÖS TÄSSÄ (omistaja 6.9.2026 klo 23.58). Sama
+ * ilmiö kuin palstalla: julisteen harson ALAREUNA on avointa taivasta
+ * otsikon ja avaustekstin välissä, ja mittauksessa juuri se oli koko
+ * kuvan jyrkin raja. Laatta -2,2em/-5,6em → -3em/-6,4em, lava
+ * 40 % → 32 % ja liuku 57 % säteestä.
+ *
+ * PYSTYSUUNNASSA LAATTA KASVAA VAROVAISESTI. Työpöydällä (1440 × 900)
+ * otsikko on lähellä paneelin ylälaitaa: jos laatta kasvaisi yhtä
+ * paljon kuin palstalla, harso katkeaisi paneelin reunaan 0,5:n
+ * peittävyydellä. Nyt reunapeitto on 0,08 (ennen 0,06) — käytännössä
+ * yhä nolla.
  */
 .intro.intro-pallolla .intro-juliste::before {
-  inset: -2.2em -5.6em;
+  inset: -3em -6.4em;
   --harson-peitto: 0.6;
-  --harson-haivytys: 40%;
+  --harson-haivytys: 32%;
+  --harson-liuku: 57%;
 }
 
 /*
