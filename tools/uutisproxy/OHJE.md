@@ -35,6 +35,17 @@
 > js/packs/uutislahteet.js:n kommenteissa. Julkaisu Git-integraatiolla
 > mainista.
 >
+> **Päivitys 6.9.2026 (Guatemala, Nicaragua, Panama):** sallittuihin
+> lisättiin lahora.gt, www.confidencial.digital, confidencial.digital ja
+> www.panamaamerica.com.pa (maalehdet GTM/NIC/PAN, testattu 6.9.2026:
+> syöte aukeaa, artikkelisivun `<article>`-lohkosta jäsentyy leipäteksti
+> ja `og:image` löytyy). Confidencialin syöte on www-osoitteessa mutta
+> sen artikkelilinkit ilman www:tä, joten listalla on molemmat
+> isäntänimet. Prensa Libren (Guatemala) syöte aukeaa mutta
+> artikkelisivulta puuttuu sekä `<article>` että
+> `[itemprop="articleBody"]`, joten se hylättiin. Julkaisu tapahtuu
+> automaattisesti mainista, kuten alempien merkintöjen kohdalla.
+>
 > **Päivitys 6.9.2026 (Papua-Uusi-Guinea, Salomonsaaret):**
 > sallittuihin lisättiin www.postcourier.com.pg ja
 > theislandsun.com.sb (maalehdet PNG/SLB, testattu 6.9.2026: syötteessä

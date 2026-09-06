@@ -72,6 +72,13 @@ const SALLITUT = [
   'https://dailytrust.com/',
   'https://www.adomonline.com/',
   'https://aps.sn/',
+  // Guatemalan, Nicaraguan ja Panaman uutislähteet (maalehdet 6.9.2026).
+  // Confidencialin syöte on www-osoitteessa mutta artikkelilinkit ilman
+  // www:tä, joten molemmat isäntänimet ovat listalla.
+  'https://lahora.gt/',
+  'https://www.confidencial.digital/',
+  'https://confidencial.digital/',
+  'https://www.panamaamerica.com.pa/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

@@ -438,4 +438,48 @@ export const UUTISLAHTEET = {
     kieli: 'fr',
     syote: 'https://aps.sn/feed/',
   },
+  /*
+   * GUATEMALA, NICARAGUA JA PANAMA (Opus 6.9.2026, maalehtierä
+   * GTM+NIC+PAN). Jokainen lähde on testattu kahdesti kuten resepti
+   * vaatii: ensin syöte, sitten yksi artikkelisivu.
+   *
+   * La Hora on guatemalalainen päivälehti vuodesta 1920. Syötteessä oli
+   * testihetkellä 12 saman päivän juttua, ja artikkelisivulta löytyivät
+   * sekä <article>-lohko (53 yli 60 merkin kappaletta) että og:image.
+   * Prensa Libre kokeiltiin ensin: sen syöte aukeaa ja siinä on 99
+   * juttua, mutta artikkelisivulla ei ole <article>-elementtiä eikä
+   * [itemprop="articleBody"]-merkintää, joten popup jäisi tyhjäksi.
+   * Soy502:n rss.xml palauttaa HTML-sivun.
+   */
+  GTM: {
+    nimi: 'La Hora',
+    kieli: 'es',
+    syote: 'https://lahora.gt/feed/',
+  },
+  /*
+   * Confidencial on nicaragualainen uutissivusto. Syötteessä oli 62
+   * juttua, ja artikkelisivulla on <article>-lohko (31 yli 60 merkin
+   * kappaletta) ja og:image. HUOM: syöte on osoitteessa
+   * www.confidencial.digital mutta artikkelilinkit osoittavat
+   * isäntänimeen confidencial.digital ilman www:tä, joten workerin
+   * sallittujen listalla on molemmat. La Prensan (laprensani.com)
+   * syöte palautti 403:n.
+   */
+  NIC: {
+    nimi: 'Confidencial',
+    kieli: 'es',
+    syote: 'https://www.confidencial.digital/feed/',
+  },
+  /*
+   * Panamá América on panamalainen päivälehti. Syöte on lyhyt (kuusi
+   * juttua), mutta se jäsentyy, ja artikkelisivulla on <article>-lohko
+   * (kahdeksan yli 60 merkin kappaletta) ja og:image. La Prensan
+   * (prensa.com) /feed/ palauttaa HTML-sivun, TVN:n ja La Estrellan
+   * osaston rss-osoitteet 404:n.
+   */
+  PAN: {
+    nimi: 'Panamá América',
+    kieli: 'es',
+    syote: 'https://www.panamaamerica.com.pa/rss.xml',
+  },
 };

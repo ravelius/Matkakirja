@@ -37948,4 +37948,1389 @@ export const MAA_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * GUATEMALA (Opus 6.9.2026, maalehtierä GTM+NIC+PAN). Väitteet on
+   * luettu en-Wikipedian raakateksteistä 6.9.2026: "Guatemala",
+   * "Tecun Uman", "Antigua Guatemala", "Popol Vuh", "Justo Rufino
+   * Barrios", "Volcán de Fuego", "Sierra de los Cuchumatanes", "Maya
+   * Biosphere Reserve", "Monterrico, Guatemala", "Guatemalan cuisine",
+   * "Kak'ik", "Pepián", "Fiambre", "Maya textiles", "Marimba" ja
+   * "Rabinal Achí".
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA: Guatemalalla ei ole kaupunkilehteä,
+   * mutta maalla on kahdeksan kohdetta ja kolme maastokohdetta
+   * (js/packs/maastokohteet-gtm.js: Tajumulco, Atitlánjärvi, Motagua,
+   * Tikal, El Mirador, Quiriguá, Seibal, Iximche, Chichicastenango,
+   * Semuc Champey, San Felipe de Lara), eläintäky ketsaalista
+   * (js/packs/elaintakyt.js) ja kaksi skandaalia (js/packs/skandaalit.js:
+   * United Fruitin banaanisopimus 1904 ja Santa Marían purkaus 1902).
+   * Lehti EI toista niitä: Iximchestä kerrotaan vain pääkaupungin
+   * muuttolistan ensimmäisenä rivinä ja Chichicastenangosta vain
+   * käsikirjoituksen syntypaikkana.
+   *
+   * SISÄLTÖLINJAUS: sisällissota 1960–1996 ja nykypolitiikka on jätetty
+   * kokonaan pois samalla periaatteella kuin Kuuban vallankumous
+   * CUB-lohkosta. Valloitus ja Barriosin kova ote kerrotaan
+   * tapahtumina ilman väkivallan kuvausta.
+   *
+   * KUVAT: 15 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin. VIISI NOSTOA JÄI
+   * KUVATTOMAKSI: Barrios (ainoa muotokuva on 681 px leveä, ja
+   * ratsastajapatsaan kuvassa näkyy hevosen vatsa eikä miestä),
+   * vyökangaspuut, marimba de tecomates, kromaattinen marimba ja
+   * Rabinal Achí (näistä ei löytynyt yhtään >= 1200 px:n kuvaa ilman
+   * tunnistettavia kasvoja). HYLÄTYT: "GuatemalanMarimbaGourds­
+   * Chichicastenango" ja "Intérpretes de marimba en el Paseo de la
+   * Sexta" (tunnistettavat kasvot), "Tejedora K'aqchikel de Santa
+   * Catarina Palopó" (tunnistettavat kasvot), "Antigua Guatemala 1979 -
+   * Arco de Santa Catalina" (valokuvan valkoinen kehys),
+   * "Church of Santa Teresa ruins" (sininen tikas ja muovipeite).
+   */
+  GTM: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Isoisän matkavuonna 1873 Guatemala on kaksivuotiaan '
+          + 'liberaalivallankumouksen maa, mutta sen alla on mayaruhtinaita, '
+          + 'neljästi siirretty pääkaupunki ja kirja, joka melkein katosi.',
+      nostot: [
+        {
+          otsikko: 'Ruhtinas, jonka nimi säilyi vain omissa papereissa',
+          aika: '1524',
+          tiedosto: 'Statue of Tecun Uman - Central Plaza - Santa Cruz del Quiche - Quiche - Guatemala (15754040660).jpg',
+          teksti: 'Kʼicheʼ-mayojen viimeisiä hallitsijoita oli Tecun Uman. '
+              + 'Hän kaatui 12. helmikuuta 1524, kun Pedro de Alvarado eteni '
+              + 'Quetzaltenangon laaksoon 180 ratsumiehen, 300 jalkamiehen ja '
+              + 'tuhansien meksikolaisten liittolaisten kanssa. Ratsuväki oli '
+              + 'kʼicheʼille outo näky, sillä hevosia ei Amerikassa ollut. '
+              + 'Alvarado kertoi kirjeessään Cortésille vain kaataneensa '
+              + 'yhden Qʼumarkajin neljästä ruhtinaasta eikä maininnut nimeä '
+              + '— nimen Tecum Umam säilyttivät kʼicheʼien omat asiakirjat. '
+              + 'Guatemala julisti hänet kansallissankariksi 22. maaliskuuta '
+              + '1960.',
+          selite: 'Santa Cruz del Quichén keskusaukion patsas esittää Tecun '
+              + 'Umania, joka on ollut Guatemalan virallinen kansallissankari '
+              + 'vuodesta 1960.',
+          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Pääkaupunki, joka muutti neljä kertaa',
+          aika: '1524–1776',
+          tiedosto: 'Antigua Agua.jpg',
+          teksti: 'Guatemalan pääkaupunki on vaihtanut paikkaa neljästi. '
+              + 'Ensimmäinen oli Iximche 1524, toinen Almolongan laaksossa, '
+              + 'ja sen tuhosi 11. syyskuuta 1541 Agua-tulivuoresta '
+              + 'purkautunut mutavyöry. Kolmas perustettiin 10. maaliskuuta '
+              + '1543 Panchoyn laaksoon, ja se oli Guatemalan '
+              + 'kenraalikapteenikunnan pääkaupunki 230 vuotta. Vuoden 1773 '
+              + 'Santa Martan maanjäristykset kaatoivat sen, ja kruunu '
+              + 'määräsi 1776 pääkaupungin siirrettäväksi nykyiselle '
+              + 'paikalleen. Vanhaan kaupunkiin jäi silti väkeä, ja siitä '
+              + 'tuli La Antigua Guatemala.',
+          selite: 'Antigua Guatemala oli 1543–1773 koko Guatemalan '
+              + 'kenraalikapteenikunnan pääkaupunki, ja sen takana kohoaa '
+              + 'Agua-tulivuori, joka tuhosi kaupungin edeltäjän 1541.',
+          lahde: 'Ondřej Žváček, Wikimedia Commons (CC BY 2.5)',
+        },
+        {
+          otsikko: 'Pyhä kirja, joka päätyi Chicagoon',
+          aika: '1701–1941',
+          tiedosto: 'Popol vuh.jpg',
+          teksti: 'Popol Vuh on kʼicheʼ-mayojen luomiskertomus ja '
+              + 'sukuhistoria. Dominikaani Francisco Ximénez kirjoitti sen '
+              + 'muistiin Chichicastenangossa vuodesta 1701 alkaen kahtena '
+              + 'rinnakkaisena palstana, kʼicheʼksi ja espanjaksi. '
+              + 'Käsikirjoitus päätyi San Carlosin yliopiston kirjastoon, '
+              + 'josta Carl Scherzer kopioi sen 1854 — ja jonka hyllystä '
+              + 'apotti Brasseur de Bourbourg vei niteen 1855 Ranskaan. '
+              + 'Sieltä se kulki keräilijältä toiselle Chicagon '
+              + 'Newberry-kirjastoon, ja Adrián Recinos löysi sen sieltä '
+              + 'uudelleen 1941. Isoisän matkavuonna kirja oli Euroopassa.',
+          selite: 'Ximénezin käsikirjoituksen ensimmäisellä sivulla Popol '
+              + 'Vuhin teksti kulkee kahdessa palstassa: vasemmalla kʼicheʼ, '
+              + 'oikealla espanjankielinen käännös.',
+          lahde: 'Francisco Ximénez, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Presidentti, joka astui virkaan isoisän matkavuonna',
+          aika: '1873',
+          // Kuvaton (Opus 6.9.2026): Barriosista on Commonsissa vain 681
+          // px leveä muotokuva, ja Guatemala Cityn ratsastajapatsaasta
+          // otetussa kuvassa näkyy hevosen vatsa eikä miestä itseään.
+          teksti: 'Justo Rufino Barrios aloitti presidenttinä 4. kesäkuuta '
+              + '1873. Hän oli lakimies San Marcosista, noussut kenraaliksi '
+              + 'kapinallisarmeijassa ja yksi vuoden 1871 vallankumouksen '
+              + 'johtajista. Uudistukset olivat perusteellisia: kirkko '
+              + 'erotettiin valtiosta, siviiliavioliitosta tuli ainoa '
+              + 'virallinen, väestökirjanpito siirtyi seurakunnilta '
+              + 'viranomaisille, hautausmaista tehtiin maallisia ja '
+              + 'alkeiskoulusta ilmainen ja pakollinen. Vastustajiaan '
+              + 'kohtaan hän oli suvaitsematon, ja monet joutuivat '
+              + 'maanpakoon. Hän kaatui 1885 yrittäessään yhdistää '
+              + 'Väli-Amerikan uudelleen.',
+          selite: 'Justo Rufino Barrios johti Guatemalaa 1873–1885, ja hänen '
+              + 'liberaaliuudistuksensa siirsivät koulut, avioliitot ja '
+              + 'väestökirjanpidon kirkolta valtiolle.',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Guatemalassa on 37 tulivuorta, Väli-Amerikan korkein '
+          + 'ylänkö ja Amazonin pohjoispuolen laajin trooppinen metsä.',
+      nostot: [
+        {
+          otsikko: 'Vuori, jonka nimi tarkoittaa tulen paikkaa',
+          tiedosto: 'Volcan de Fuego in Guatemala - Eruption at night.jpg',
+          teksti: 'Guatemalassa on 37 tulivuorta, ja niistä neljä on '
+              + 'toiminnassa: Pacaya, Santiaguito, Tacaná ja Fuego. Fuego on '
+              + 'kaqchikeliksi Chi Qʼaqʼ, "siellä missä tuli on". Se seisoo '
+              + 'noin 16 kilometriä Antigua Guatemalasta länteen kolmen '
+              + 'departementin rajalla ja purkautuu tiuhaan; viimeisin '
+              + 'purkausjakso alkoi 5. kesäkuuta 2025. Tulivuoret ovat '
+              + 'siellä siksi, että Cocos-laatta painuu rannikon edustalla '
+              + 'Karibian laatan alle. Ylänköjen halki kulkeva Motaguan '
+              + 'siirros taas on aiheuttanut maan suurimmat maanjäristykset.',
+          selite: 'Fuego on yksi Guatemalan neljästä aktiivisesta '
+              + 'tulivuoresta, ja se purkaa hehkuvaa ainesta useita kertoja '
+              + 'tunnissa.',
+          lahde: 'Kieran Wood, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Väli-Amerikan korkein vuoristo ilman tulivuoria',
+          tiedosto: 'Sierra de los Cuchumatanes.jpg',
+          teksti: 'Sierra de los Cuchumatanes Länsi-Guatemalassa on '
+              + 'Väli-Amerikan korkein vuoristo, jossa ei ole yhtään '
+              + 'tulivuorta. Se kohoaa 500 metristä yli 3 800 metriin ja '
+              + 'kattaa noin 16 350 neliökilometriä; siitä 1 500 '
+              + 'neliökilometriä on yli kolmen kilometrin korkeudessa, mikä '
+              + 'tekee siitä koko Väli-Amerikan laajimman ylängön. Kallio on '
+              + 'karstia ja sedimenttikiveä paleotsooiselta ja '
+              + 'mesotsooiselta ajalta. Nimi tulee mamin sanoista cuchuj ja '
+              + 'matán, "se joka koottiin ylivoimalla".',
+          selite: 'Cuchumatanesin ylänkö laskeutuu Huehuetenangon laaksoon, '
+              + 'ja se on Väli-Amerikan korkein vuoristo, jossa ei ole '
+              + 'tulivuoria.',
+          lahde: 'Maricela Argueta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Metsä, joka elää purukumista ja palmunlehdistä',
+          aika: '1990',
+          tiedosto: 'Flickr - ggallice - Buried temple, Maya Biosphere Reserve, El Petén.jpg',
+          teksti: 'Maya-biosfäärialue perustettiin Peténiin 1990 '
+              + 'suojelemaan Amazonin pohjoispuolen suurinta trooppista '
+              + 'metsää. Se on 21 602 neliökilometriä, ja sen '
+              + 'monikäyttövyöhykkeellä paikallisyhteisöille on myönnetty '
+              + '25 vuoden metsänkäyttöoikeuksia. Sieltä kerätään kolmea '
+              + 'perinteistä tuotetta: chicleä eli sapotillipuun maitiaista, '
+              + 'josta tehtiin purukumia, xatea eli kukka-asetelmiin '
+              + 'myytävää palmunlehteä ja maustepippuria. Vuonna 2005 '
+              + 'sertifioitiin kestäväksi 4 500 neliökilometrin hakkuut.',
+          selite: 'Maya-biosfäärialueen metsässä on tuhansia raunioituneita '
+              + 'rakennuksia, jotka näkyvät enää kumpuina maanpinnalla.',
+          lahde: 'Geoff Gallice, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Musta hiekka, jolta kilpikonnat lähtevät',
+          tiedosto: 'Baby-turtle.jpg',
+          teksti: 'Monterrico on kylä Guatemalan Tyynenmeren rannikolla '
+              + 'Santa Rosan departementissa. Hiekka on tulivuorenmustaa, ja '
+              + 'pitkä ranta on neljän merikilpikonnalajin pesimäpaikka. '
+              + 'Munien kerääminen elo–marraskuussa on paikallista '
+              + 'perinnettä, ja osa keräilijöistä luovuttaa saaliistaan '
+              + 'sovitun osuuden tortugarioihin eli kuoriutumistarhoihin; '
+              + 'suurin osa rannalle munituista munista päätyy silti '
+              + 'syötäväksi. Kylässä asuu noin tuhat ihmistä, ja se on myös '
+              + 'pääkaupunkilaisten viikonloppuranta.',
+          selite: 'Tortugariossa kuoriutunut merikilpikonnan poikanen '
+              + 'lasketaan mereen samalta rannalta, jolle muna oli munittu.',
+          lahde: 'DrStockPhoto.com, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Guatemalan keittiö on mayakeittiö espanjalaisin '
+          + 'lisäyksin: pohjana maissi, chili ja pavut, ja neljä '
+          + 'pataruokaa on julistettu kansalliseksi kulttuuriperinnöksi.',
+      nostot: [
+        {
+          otsikko: 'Neljä ruokaa, jotka valtio julisti perinnöksi',
+          aika: '2007',
+          tiedosto: 'Pepián Guatemala.jpg',
+          teksti: 'Guatemalan kulttuuri- ja urheiluministeriö julisti 2007 '
+              + 'neljä ruokaa maan aineettomaksi kulttuuriperinnöksi: '
+              + 'pepiánin, jocónin, kaqʼikin ja banaanimolen. Kaikki ovat '
+              + 'recadoja eli sakeaan kastikkeeseen haudutettuja patoja, '
+              + 'joissa mayakeittiön ainekset ja espanjalaiset '
+              + 'valmistustavat sekoittuvat. Pepián on niistä vanhin ja '
+              + 'tunnetuin. Liha haudutetaan kastikkeessa, joka suurustetaan '
+              + 'kurpitsansiemenillä ja johon tulee tomaattia, tomatilloa ja '
+              + 'chiliä. Kaupungeissa se on tavallista katuruokaa.',
+          selite: 'Pepián on Guatemalan kansallisruokia, ja se keitetään '
+              + 'suurissa padoissa myös kadulla myytäväksi.',
+          lahde: 'Josué Goge, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Keitto, jonka nimi tarkoittaa punaista ja tulista',
+          tiedosto: '2010.05.13.141849 Kac-iq Fonda Calle Real Antigua Guatemala.jpg',
+          teksti: 'Kaqʼik on kalkkunakeitto, jonka nimi tulee qʼeqchiʼn '
+              + 'sanoista kaq, punainen, ja ik, tulinen tai chili. Se on '
+              + 'esikolumbiaanista perua, ja Verapazin perinteiseen reseptiin '
+              + 'kuuluvat chompipe-kalkkuna, valkosipuli, sipuli, minttu, '
+              + 'korianteri ja zamat-lehdet. Punaisen värin antaa jauhettu '
+              + 'annatto, ja väri on yhdistetty esikolumbiaanisten '
+              + 'uhrimenojen vereen. Keitto tarjotaan riisin, chilin ja '
+              + 'mashán-lehtiin käärittyjen valkoisten tamaalien sekä '
+              + 'kaakaojuoman kanssa.',
+          selite: 'Kaqʼik tarjotaan saviruukussa riisin ja mashán-lehteen '
+              + 'kääritty tamaalin kanssa.',
+          lahde: 'Hermann Luyken, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Salaatti, joka syntyi hautausmaalla',
+          aika: '1. marraskuuta',
+          tiedosto: 'Fiambre - 11042021.jpg',
+          teksti: 'Fiambre on kylmä salaatti, jota syödään vain kerran '
+              + 'vuodessa: pyhäinpäivänä ja vainajien päivänä. Tapa alkoi '
+              + 'siitä, että perheet veivät hautausmaalle vainajiensa '
+              + 'lempiruokia — ja kun kaikki toivat omansa, ruoat '
+              + 'sekoittuivat lopulta yhdeksi ainoaksi salaatiksi. Siinä voi '
+              + 'olla kymmeniä aineksia: makkaroita ja leikkeleitä, etikkaan '
+              + 'säilöttyä pikkumaissia ja sipulia, punajuurta, pacaya-palmun '
+              + 'kukintoja, juustoja, oliiveja ja kanaa. Punajuuri tekee '
+              + 'siitä punaisen, ilman sitä valkoisen, ja resepti periytyy '
+              + 'suvussa.',
+          selite: 'Fiambre kootaan kymmenistä aineksista, ja se syödään '
+              + 'kylmänä pyhäinpäivänä 1. marraskuuta.',
+          lahde: 'Gobierno de Guatemala, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Sadat tamaalit ja torstain perunanyytti',
+          tiedosto: 'Tamal Colorado de Guatemala, abierto.JPG',
+          teksti: 'Guatemalassa sanotaan olevan satoja tamaalilajeja. '
+              + 'Toisin kuin Meksikossa, ne kääritään useimmiten banaanin- '
+              + 'tai maxán-lehteen maissinlehden sijaan, ja taikina '
+              + 'keitetään valmiiksi ennen täyttämistä. Tamales colorados '
+              + 'saa värinsä tomaatista ja annatosta, ja sisällä on '
+              + 'paprikaa, kapriksia, oliiveja ja lihaa; tamales negros on '
+              + 'makea, sillä siihen tulee suklaata, rusinoita, luumuja ja '
+              + 'manteleita. Maissinlehteen kääritty pienempi chuchito on '
+              + 'oma lajinsa, ja torstaisin syödään perunataikinasta tehtyjä '
+              + 'pacheja.',
+          selite: 'Tamal colorado saa värinsä tomaatista ja annatosta, ja se '
+              + 'kypsennetään banaanin- tai maxán-lehden sisällä.',
+          lahde: 'Labarradulce, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi guatemalalaisessa fiambressa on kymmeniä aineksia?',
+        vaihtoehdot: [
+          'Se on ravintoloiden kilpailu parhaasta salaatista',
+          'Perheiden hautausmaalle viemät eri ruoat sekoittuivat yhdeksi',
+          'Se on espanjalaisen laivamuonan perillinen',
+          'Aineksia lisätään yksi joka vuosikymmen',
+        ],
+        oikea: 1,
+        fakta: 'Ruoat vietiin hautausmaalle vainajien lempiruokina, ja kun '
+            + 'jokainen perhe toi omansa, ne päätyivät samaan kulhoon.',
+      },
+    },
+    {
+      id: 'tekstiilit',
+      nimi: 'Tekstiilit',
+      johdanto: 'Guatemalassa vaatteesta näkee, mistä kylästä ihminen on: '
+          + 'jokaisella yhteisöllä on oma kuvionsa, ja kangas kudotaan yhä '
+          + 'vyötäröltä puuhun jännitetyillä kangaspuilla.',
+      nostot: [
+        {
+          otsikko: 'Kangaspuut, joista jää jäljelle kasa keppejä',
+          // Kuvaton (Opus 6.9.2026): jokaisessa >= 1200 px:n
+          // telar de cintura -kuvassa on kutojan tunnistettavat kasvot.
+          teksti: 'Telar de cintura eli vyökangaspuut ovat '
+              + 'esikolumbiaaninen keksintö, ja niitä käytetään yhä. Loimen '
+              + 'toinen pää sidotaan puuhun tai pylvääseen ja toinen kutojan '
+              + 'vyötärölle: kireyttä säädetään kallistamalla omaa vartaloa. '
+              + 'Yhtä tutkijaa lainaten laitteesta ei jää kankaan '
+              + 'valmistuttua muuta kuin kasa keppejä — ja silti sitä on '
+              + 'pidetty polkukangaspuita herkempänä kutojan omille '
+              + 'ideoille. Espanjalaiset toivat polkukangaspuut, mutta ne '
+              + 'eivät syrjäyttäneet vanhaa tapaa.',
+          selite: 'Vyökangaspuissa loimi kiristyy kutojan oman vartalon '
+              + 'painosta, ja kankaan valmistuttua laitteesta jää jäljelle '
+              + 'vain nippu keppejä.',
+        },
+        {
+          otsikko: 'Puku, jonka jokainen osa on oma sanansa',
+          tiedosto: 'Modern Mayan Textiles.jpg',
+          teksti: 'Naisen perinneasu on traje. Siihen kuuluu huipil eli '
+              + 'suorakaiteen muotoinen pusero, jonka keskellä on aukko '
+              + 'päälle, corte eli nilkkoihin ulottuva kiedottu hame ja faja '
+              + 'eli vyötärönauha, joka pitää kokonaisuuden koossa. Päässä '
+              + 'on usein pañuelo-liina tai cinta, metrien pituinen nauha, '
+              + 'joka punotaan hiuksiin. Huipil on tavallisesti vaaleaa '
+              + 'ohutta puuvillaa, johon kuviot on kudottu brokadina. '
+              + 'Miesten perinneasu on jäänyt paljon harvinaisemmaksi kuin '
+              + 'naisten.',
+          selite: 'Trajen osat ovat huipil, kiedottu corte-hame ja faja, '
+              + 'joka sitoo asun vyötäröltä.',
+          lahde: 'Alulo, Wikimedia Commons (CC0)',
+        },
+        {
+          otsikko: 'Kuvio kertoo, mistä kylästä olet',
+          tiedosto: 'Huipil San Antonio Aguas Calientes Front weaving and stitching.JPG',
+          teksti: 'Jokaisella yhteisöllä on oma huipil-kuvionsa, värinsä ja '
+              + 'pituutensa, ja lisäksi omat juhlahuipilinsa. Toisen kylän '
+              + 'kuvion käyttäminen omassa kylässä on ollut sopimatonta, '
+              + 'mutta vierailulla toisessa kylässä sen kuvion pukeminen on '
+              + 'kohteliaisuus. Yhteisön kuvio on kutojalle runko, ei '
+              + 'sääntökirja: sen sisään jokainen tekee omat '
+              + 'yksityiskohtansa, eikä kahta samanlaista synny. Guatemalan '
+              + 'kongressissa esitettiin 2011 lakia, joka suojaisi kuviot '
+              + 'jäljittelyltä ja auttaisi kutojia elämään työllään.',
+          selite: 'San Antonio Aguas Calientesin kylän huipileissa on omat '
+              + 'lintu- ja kukka-aiheensa, joista asun kotipaikan tunnistaa.',
+          lahde: 'Hubertl, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Napanuora, äitipuu ja valmis kangas',
+          tiedosto: 'Güipel ceremonial, Aldea de Chuacruz (Sololá, Guatemala).jpg',
+          teksti: 'Antropologi Linda Brown on kuvannut, miten '
+              + 'tzʼutujil-mayoilla kutominen kerrataan syntymänä. Köysi, '
+              + 'joka yhdistää kangaspuut pylvääseen, on nimeltään '
+              + 'napanuora, ja pylväs on Äitipuu, ensimmäisen luojaparin '
+              + 'ruumiillistuma. Kun kutoja istuu paikallaan ja kangas '
+              + 'kasvaa, hän toistaa raskauden kulun — ja lopuksi sekä lapsi '
+              + 'että kangas on irrotettava leikkaamalla siitä, missä ne '
+              + 'syntyivät. Kutomisen suojelija on Vanha Isoäiti, '
+              + 'ensimmäinen kätilö, joka liitetään synnytyksen '
+              + 'jumalattareen Chac Cheliin.',
+          selite: 'Chuacruzin kylän seremoniallinen huipil on kudottu '
+              + 'juhlakäyttöön, ja sen keskellä oleva kuvio ympäröi '
+              + 'pääaukkoa.',
+          lahde: 'José Luis Filpo Cabana, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Guatemalan kansallissoitin on marimba, ja sen ääneen '
+          + 'kuuluu surinaa, joka syntyy putken suulle pingotetusta '
+          + 'kalvosta.',
+      nostot: [
+        {
+          otsikko: 'Ensimmäinen kirjattu marimba soi katedraalin juhlassa',
+          aika: '1680',
+          // Kuvaton (Opus 6.9.2026): ainoassa >= 1200 px:n kuvassa
+          // kurpitsakaikupohjaisesta marimbasta on tunnistettavat kasvot.
+          teksti: 'Vanhin tunnettu maininta marimbasta Guatemalassa on 13. '
+              + 'marraskuuta 1680: soitin oli mukana Santiago de los '
+              + 'Caballerosin katedraalin vihkiäisjuhlissa, ja se oli '
+              + 'marimba de tecomates eli kurpitsakaikupohjilla varustettu. '
+              + 'Väli-Amerikan ensimmäinen maininta on vuodelta 1550, '
+              + 'jolloin Guatemalaan orjuutettujen afrikkalaisten kerrotaan '
+              + 'soittaneen sitä. Soitin levisi 1700- ja 1800-luvuilla maya- '
+              + 'ja ladinokokoonpanoihin, ja vuoden 1821 '
+              + 'itsenäisyysjulistuksessa se nimettiin maan '
+              + 'kansallissoittimeksi.',
+          selite: 'Marimba de tecomatesin kaikupohjina ovat eri kokoiset '
+              + 'kuivatut kurpitsat, jotka riippuvat kielten alla.',
+        },
+        {
+          otsikko: 'Surina, joka tulee sian suolesta',
+          tiedosto: 'Musicians playing a marimba, Flores, Guatemala 1923.jpg',
+          teksti: 'Marimban ääni ei ole puhdas, ja se on tarkoitus. '
+              + 'Jokaisen kielen alla on kaikupohja: perinteisessä '
+              + 'soittimessa eri kokoisia kurpitsoja, hienommassa veistetty '
+              + 'puinen putki, jonka pituus voidaan virittää tarkasti. '
+              + 'Väli-Amerikassa ja Meksikossa putken pohjaan tehdään reikä '
+              + 'ja se peitetään ohuella kalvolla, joka on otettu sian '
+              + 'suolesta. Kalvo värähtelee mukana ja tuottaa surisevan '
+              + 'säröäänen, jota kutsutaan nimellä charleo. Nykysoittimissa '
+              + 'putket ovat muovia ja kalvo paperia, mutta surina on yhä '
+              + 'siinä.',
+          selite: 'Floresissa 1923 soitetun marimban kielten alla riippuvat '
+              + 'puiset kaikuputket, joiden pohjan kalvo saa aikaan '
+              + 'charleo-surinan.',
+          lahde: 'Jerome O. Kilmartin, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Quetzaltenangolainen, joka teki marimbasta pianon',
+          aika: '1894',
+          // Kuvaton (Opus 6.9.2026): kromaattisesta marimbasta ei löytynyt
+          // yhtään >= 1200 px:n kuvaa ilman tunnistettavia kasvoja.
+          teksti: 'Vanha marimba oli diatoninen: siinä oli vain yksi '
+              + 'kieliriviin ladottu asteikko. Antigua Guatemalassa pappi '
+              + 'Joseph de Padilla oli 1700-luvun puolivälissä laajentanut '
+              + 'koskettimiston 42 kieleen ja nostanut soittimen neljälle '
+              + 'jalalle, jotta sitä voi soittaa seisten. Vuonna 1894 '
+              + 'quetzaltenangolainen Sebastián Hurtado rakensi ensimmäisen '
+              + 'kromaattisen eli kaksirivisen marimban hormigo-puusta. '
+              + 'Hänen poikansa esittivät soitinta Buffalossa New Yorkin '
+              + 'osavaltiossa 1908, ja niin marimba lähti maailmalle.',
+          selite: 'Kromaattisessa marimbassa on kaksi kielirivistöä pianon '
+              + 'koskettimiston tapaan, ja sillä voi soittaa kaikissa '
+              + 'sävellajeissa.',
+        },
+        {
+          otsikko: 'Näytelmä, jota on esitetty samana päivänä vuosisatoja',
+          aika: '25. tammikuuta',
+          // Kuvaton (Opus 6.9.2026): Rabinal Achín esityksestä tai
+          // naamioista ei löytynyt yhtään >= 1200 px:n Commons-kuvaa.
+          teksti: 'Rabinal Achí on kʼicheʼnkielinen tanssinäytelmä, jonka '
+              + 'oma nimi on Xajoj Tun, "rummun tanssi". Se esitetään joka '
+              + 'vuosi 25. tammikuuta Rabinalissa Baja Verapazissa Pyhän '
+              + 'Paavalin päivänä, ja koko kylä osallistuu. Soittimina ovat '
+              + 'rakorumpu ja kaksi torvea, ja hahmot erottaa toisistaan '
+              + 'puunaamioista. Juoni kertoo Rabinalin ja kʼicheʼien '
+              + 'todellisesta kiistasta. Veljeskunnan jäsen Bartolo Sis '
+              + 'kirjoitti vuorosanat muistiin 1850, ja Unesco nimesi '
+              + 'näytelmän ihmiskunnan mestariteokseksi 2005.',
+          selite: 'Rabinal Achí on harvoja ennen siirtomaa-aikaa syntyneitä '
+              + 'näytelmiä, joita esitetään yhä alkuperäisellä kielellään.',
+        },
+      ],
+    },
+  ],
+  /*
+   * NICARAGUA (Opus 6.9.2026, maalehtierä GTM+NIC+PAN). Väitteet on
+   * luettu en-Wikipedian raakateksteistä 6.9.2026: "Nicaragua",
+   * "History of Nicaragua", "Managua", "Old Cathedral of Managua",
+   * "Ancient footprints of Acahualinca", "Nicaraguan Sign Language",
+   * "Masaya Volcano", "Bosawás Biosphere Reserve", "Mombacho",
+   * "Apoyo Lagoon Natural Reserve", "Nicaraguan cuisine", "Gallo pinto",
+   * "Nacatamal", "Vigorón", "Pinolillo", "Music of Nicaragua",
+   * "José de la Cruz Mena", "Palo de Mayo", "El Güegüense",
+   * "Culture of Nicaragua" ja "Masaya".
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA: Nicaragualla ei ole kaupunkilehteä,
+   * mutta maalla on kahdeksan kohdetta ja kolme maastokohdetta
+   * (js/packs/maastokohteet-nic.js: Cosigüina, Ometepe, San Juanjoki,
+   * León, Granada, El Castillo, Bluefields, Solentiname, Somoton
+   * kanjoni, Ciudad Darío, Bilwi), eläintäky turkoosikulmamotmotista
+   * (js/packs/elaintakyt.js) ja neljä skandaalia
+   * (js/packs/skandaalit.js). Lehti EI toista niitä: Rubén Darío,
+   * Ernesto Cardenalin Solentiname, William Walker, Mosquitorannikko ja
+   * San Juanjoen kauttakulkureitti on jätetty karttanostoille, ja
+   * Leónin ja Granadan kilpailu kerrotaan vain siitä näkökulmasta,
+   * miksi pääkaupungiksi valittiin kolmas kaupunki.
+   *
+   * SISÄLTÖLINJAUS: vuoden 1979 vallankumous, contra-sota ja
+   * nykypolitiikka on jätetty kokonaan pois samalla periaatteella kuin
+   * Kuuban vallankumous CUB-lohkosta. Bosawásin maakiistat ja niiden
+   * väkivalta on samoin rajattu ulos.
+   *
+   * KUVAT: 11 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin.
+   * YHDEKSÄN NOSTOA JÄI KUVATTOMAKSI (Acahualincan jäljet, maan nimi,
+   * viittomakieli, José de la Cruz Mena, Palo de Mayo, chicherot, La
+   * Mocuana, La Cegua ja Masayan käsityötori) — niistä ei löytynyt
+   * yhtään >= 1200 px:n Commons-kuvaa, tai ainoissa riittävän suurissa
+   * on tunnistettavat kasvot. HYLÄTYT: "Palo-de-Mayo" (tunnistettavat
+   * kasvot ja tekijä tuntematon), "MainCrater Masaya" (kuvaan poltettu
+   * päiväysleima), "Mombacho from Nandasmo" (mainostaulut etualalla),
+   * "Mercado de Artesanías de Masaya" (kuvassa on katu ja autot),
+   * "Nicaragua-708" (täytetyt kanat korissa), "Quesillo de Nicaragua"
+   * (kuvassa ruokailija).
+   */
+  NIC: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Nicaraguan vanhimmat jäljet ovat kirjaimellisesti '
+          + 'jalanjälkiä, maan nimen selitys korjattiin vasta 2002, ja '
+          + 'pääkaupunki valittiin siksi, ettei se ollut kumpikaan '
+          + 'riitapuoli.',
+      nostot: [
+        {
+          otsikko: 'Jäljet, jotka löytyivät vuosi isoisän matkan jälkeen',
+          aika: '1874',
+          // Kuvaton (Opus 6.9.2026): ainoa Commons-kuva jäljistä
+          // ("HuellasdeAcahualinca") on 1 080 px leveä.
+          teksti: 'Managuanjärven etelärannalta löytyi 1874 rakennustöissä '
+              + 'jotain odottamatonta: ihmisen jalanjälkiä kivettyneessä '
+              + 'tuhkassa ja mudassa. Enintään viisitoista ihmistä oli '
+              + 'kulkenut siitä noin 2 120 vuotta sitten. Usein kerrotaan '
+              + 'heidän paenneen purkausta, mutta askelten väli osoittaa '
+              + 'kävelyä, ei juoksua. Amerikkalainen lääkäri Earl Flint toi '
+              + 'löydön tiedemaailman tietoon 1884, ja Carnegie-instituutti '
+              + 'kaivoi paikan esiin 1941–1942 ja rakensi sen ylle museon. '
+              + 'Jälkiä on löydetty vielä neljän metrin syvyydestä.',
+          selite: 'Acahualincan jalanjäljet ovat noin 2 120 vuotta vanhat, '
+              + 'ja ne säilyivät, koska Masayan tuhkakerros kivettyi niiden '
+              + 'päälle.',
+        },
+        {
+          otsikko: 'Maan nimi ei tullutkaan päälliköltä',
+          aika: '2002',
+          // Kuvaton (Opus 6.9.2026): nicaraoista tai chorotegoista ei
+          // löytynyt Commonsista kelvollista >= 1200 px:n kuvaa.
+          teksti: 'Nicaraguan nimi tulee sanasta Nicānāhuac, jolla nawatia '
+              + 'puhuneet nicaraot kutsuivat Suur-Nicoyan seutua nykyisen '
+              + 'Nicaraguan ja Costa Rican alueella. Pitkään opetettiin, '
+              + 'että nimi olisi syntynyt päällikkö Nicaraon nimestä ja '
+              + 'sanasta agua, vesi. Vuonna 2002 kävi ilmi, että päällikön '
+              + 'oikea nimi oli Macuilmiquiztli, ja selitys kaatui. '
+              + 'Nicaraot ja chorotegat olivat vaeltaneet etelään Meksikon '
+              + 'Cholulan laaksosta, ja kolmas kansa, subtiabat, saapui '
+              + 'Guerreron seudulta noin vuonna 1200.',
+          selite: 'Nicaraguan läntiset kansat olivat kielensä ja '
+              + 'kulttuurinsa puolesta osa Mesoamerikkaa, ja ne olivat '
+              + 'muuttaneet nykyisen Meksikon alueelta.',
+        },
+        {
+          otsikko: 'Pääkaupunki valittiin, koska se ei ollut kumpikaan',
+          aika: '1852',
+          tiedosto: 'Antigua Catedral de Managua.jpg',
+          teksti: 'Itsenäisen Nicaraguan politiikkaa hallitsi Leónin '
+              + 'liberaalin ja Granadan konservatiivisen eliitin kilpailu, '
+              + 'joka ajautui toistuvasti sisällissodaksi 1840- ja '
+              + '1850-luvuilla. Ratkaisu löytyi kaupunkien väliltä. Managua '
+              + 'oli ollut kalastajakylä, joka sai kaupunkioikeudet 1819 '
+              + 'nimellä Leal Villa de Santiago de Managua, ja juuri '
+              + 'sijainti riitapuolten puolivälissä teki siitä luontevan '
+              + 'kompromissin. Pääkaupungiksi se valittiin 1852. Isoisän '
+              + 'matkan jälkeisinä vuosina kaupunkia koettelivat suuret '
+              + 'tulvat 1876 ja 1885.',
+          selite: 'Managuan vanha katedraali kesti vuoden 1931 '
+              + 'maanjäristyksen, koska siitä oli valmiina vasta rautarunko, '
+              + 'mutta vuoden 1972 järistys teki siitä käyttökelvottoman.',
+          lahde: 'eric molina, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kieli, jonka syntyminen ehdittiin nähdä',
+          aika: '1977–1986',
+          // Kuvaton (Opus 6.9.2026): Nicaraguan viittomakielestä ei ole
+          // Commonsissa yhtään kuvaa.
+          teksti: 'Nicaraguan viittomakieli on harvinaisuus: se on yksi '
+              + 'harvoista kielistä, joiden syntyminen on ehditty '
+              + 'dokumentoimaan. Ennen 1970-lukua kuurot elivät maassa '
+              + 'erillään toisistaan ja käyttivät kotona kehitettyjä omia '
+              + 'viittomia. Managuan San Judasin kaupunginosaan '
+              + 'perustettiin 1977 erityiskoulu, jossa aloitti 50 kuuroa '
+              + 'lasta, ja 1980 Villa Libertadiin ammattikoulu; 1983 '
+              + 'oppilaita oli jo yli neljäsataa. Opetus keskittyi puhuttuun '
+              + 'espanjaan, mutta lapset kehittivät keskenään oman '
+              + 'kielensä. Henkilökunta ei ymmärtänyt sitä ja kutsui '
+              + 'kesäkuussa 1986 paikalle kielitieteilijän.',
+          selite: 'Nicaraguan viittomakieli syntyi kahden koulun oppilaiden '
+              + 'kesken 1980-luvulla, ja se on harvoja kieliä, joiden '
+              + 'kielioppi on nähty muodostuvan tyhjästä.',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Managuasta tuli Nicaraguan pääkaupunki?',
+        vaihtoehdot: [
+          'Se oli maan suurin kaupunki',
+          'Se oli sopivasti riitelevien Leónin ja Granadan välissä',
+          'Sen satama oli maan tärkein',
+          'Espanjan kruunu määräsi niin',
+        ],
+        oikea: 1,
+        fakta: 'Managua oli ollut kalastajakylä, ja se valittiin '
+            + 'pääkaupungiksi 1852 nimenomaan siksi, että se sijaitsi '
+            + 'kilpailevien kaupunkien puolivälissä.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Nicaragua on tulivuorten ja järvien maa: yhdessä '
+          + 'kraatterissa on palanut laavaa vuosisatoja, toisen pohjalla '
+          + 'ui kaloja, joita ei ole missään muualla.',
+      nostot: [
+        {
+          otsikko: 'Kraatteri, joka on savunnut vuosisatoja',
+          aika: '1670',
+          tiedosto: 'Volcán Masaya.jpg',
+          teksti: 'Masayan tulivuori tunnetaan myös vanhalla '
+              + 'nawatinkielisellä nimellään Popogatepe. Nykyinen kaldera '
+              + 'syntyi noin 2 500 vuotta sitten purkauksessa, joka syöksi '
+              + 'kahdeksan kuutiokilometriä basalttista ainesta. Vuonna '
+              + '1670 Nindirín kraatterissa oli kilometrin levyinen '
+              + 'laavajärvi, joka vuoti yli reunojen, ja 1772 laavaa '
+              + 'purkautui kylkihalkeamasta. Sen jälkeen laava on näkynyt '
+              + 'vain Santiagon kuilussa, joka savuaa yhä ja päästää suuria '
+              + 'määriä rikkidioksidia. Masayasta tuli 1979 Nicaraguan '
+              + 'ensimmäinen kansallispuisto.',
+          selite: 'Masayan Santiago-kuilu hehkuu öisin, koska sen pohjalla '
+              + 'on ajoittain näkyvissä sula laava.',
+          lahde: 'Kim Gunnarsson, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Amazonin jälkeen suurin sademetsä',
+          aika: '1997',
+          tiedosto: 'PenasBlancas, part of the Bosawas Reserve, Jinotega Department, Nicaragua.jpg',
+          teksti: 'Bosawásin biosfäärialue Pohjois-Nicaraguan Jinotegassa '
+              + 'on noin 20 000 neliökilometriä eli noin 15 prosenttia koko '
+              + 'maan pinta-alasta, ja se on Amazonin jälkeen läntisen '
+              + 'pallonpuoliskon suurin trooppinen sademetsä. Unesco otti '
+              + 'sen biosfäärialueeksi 1997. Nimi on lyhenne kolmesta '
+              + 'maastonkohdasta: Bocay-joesta, Saslaya-vuoresta ja '
+              + 'Waspuk-joesta. Alue on suurelta osin tutkimatta, ja '
+              + 'hyönteislajeja arvioidaan olevan 100 000–200 000. Se on '
+              + 'mayangna- ja miskitokansojen kotiseutua.',
+          selite: 'Peñas Blancasin kalliomassiivi kohoaa Bosawásin '
+              + 'sademetsän keskeltä Jinotegan departementissa.',
+          lahde: 'Rebecca Ore, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Sammunut vuori, jonka laella on oma metsänsä',
+          aika: '1570',
+          tiedosto: 'Mombacho taken from the Pan-American Highway.jpg',
+          teksti: 'Mombacho on 1 344 metriä korkea kerrostulivuori Granadan '
+              + 'kaupungin vieressä. Sen viimeisin purkaus oli 1570, eikä '
+              + 'sitä aiemmista ole historiallista tietoa. Huippu on niin '
+              + 'korkealla ja kostea, että siellä kasvaa sumumetsää ja '
+              + 'kääpiömetsää, joiden kasveja ja eläimiä ei tavata muualta '
+              + 'kuin tältä vuorelta. Rinteiltä on laskettu yli 700 '
+              + 'kasvilajia, joukossa runsaasti kämmeköitä. Vuori on yksi '
+              + 'Nicaraguan 78 suojelualueesta, ja vaativammalle El Puma '
+              + '-polulle pääsee vain oppaan kanssa.',
+          selite: 'Mombachon huippua peittää lähes jatkuvasti pilvi, ja '
+              + 'juuri se pitää yllä vuoren omaa sumumetsää.',
+          lahde: 'FurlongWiki, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kraatterijärvi, joka teki omat kalalajinsa',
+          aika: '2008–2010',
+          tiedosto: 'Lagoon Vista - Laguna de Apoyo - Near Granada - Nicaragua - 01 (31971805505) (2).jpg',
+          teksti: 'Laguna de Apoyo on sammuneen tulivuoren kalderaan '
+              + 'syntynyt järvi Masayan ja Granadan välissä. Se on lähes '
+              + 'pyöreä, halkaisijaltaan 6,6 kilometriä, 175 metriä syvä ja '
+              + 'noin 23 000 vuotta vanha; vettä ei virtaa ulos, vaan '
+              + 'tasapaino syntyy pohjaveden liikkeestä. Eristys on '
+              + 'tuottanut kuusi kirjoahvenlajia, joita ei ole missään '
+              + 'muualla maailmassa: ensimmäinen kuvattiin 1976, kolme '
+              + 'lisää 2008 ja kaksi viimeistä vasta 2010. Järvi on ollut '
+              + 'suojelualue 1991, ja siitä on kirjattu yli 230 lintulajia.',
+          selite: 'Laguna de Apoyon reunat ovat sammuneen tulivuoren '
+              + 'kalderan seinämät, ja järven pohja on 175 metrin syvyydessä.',
+          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Lännessä syödään maissia, itärannikolla kalaa ja '
+          + 'kookosta — ja koko maassa riisiä ja papuja, jotka on '
+          + 'kypsennetty samassa pannussa.',
+      nostot: [
+        {
+          otsikko: 'Kansallisruoka, jonka nimi on kirjava kukko',
+          tiedosto: 'Gallo pinto-IMG 0672.JPG',
+          teksti: 'Gallo pinto tarkoittaa kirjavaa kukkoa, ja nimi tulee '
+              + 'siitä, miltä ruoka näyttää: mustien tai punaisten papujen '
+              + 'kanssa kypsennetty riisi muuttuu täplikkääksi. Sekä '
+              + 'Nicaragua että Costa Rica pitävät sitä kansallisruokanaan, '
+              + 'ja siitä, kumman maan ruoka se alun perin on, kiistellään '
+              + 'yhä; juurten arvellaan yleisesti olevan afrokaribialaiset. '
+              + 'Nicaragualaisessa versiossa riisi keitetään suolan ja '
+              + 'sipulin kanssa, ja pavut kypsennetään valkosipulin, '
+              + 'oreganon ja sipulin kera. Ruoka kelpaa aamiaiseksi ja '
+              + 'lounaaksi.',
+          selite: 'Gallo pinto saa täplikkään värinsä siitä, että riisi '
+              + 'kypsennetään papujen keitinveden kanssa.',
+          lahde: 'C T Johansson, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Nyytti, jonka tekemiseen menee kaksi päivää',
+          tiedosto: 'Nacatamal y patacones con frijoles molidos.jpg',
+          teksti: 'Nacatamal on Nicaraguan juhlava tamaali, ja nimi tulee '
+              + 'nawatin sanoista nakat, liha, ja tamal. Pohjana on '
+              + 'kalkkivedessä keitetty maissitaikina, johon sekoitetaan '
+              + 'sianrasvaa, suolaa ja annattoa. Täytteeksi tulee '
+              + 'marinoitua sianlihaa, riisiä, perunaviipaleita, tomaattia, '
+              + 'sipulia, paprikaa, oliiveja ja mintunoksa sekä pieni '
+              + 'chile congo -chili; joskus mukaan pannaan luumuja, '
+              + 'rusinoita tai kapriksia. Kaikki kääritään '
+              + 'banaaninlehteen, sidotaan narulla tyynymäiseksi mytyksi ja '
+              + 'höyrytetään tunteja. Työ vie usein kaksi päivää ja koko '
+              + 'perheen.',
+          selite: 'Nacatamal kääritään banaaninlehteen ja sidotaan narulla, '
+              + 'ja lehti antaa kypsyessään ruoalle oman tuoksunsa.',
+          lahde: 'Arturo Sotillo, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Ruoka, joka sai nimensä lääkemainoksesta',
+          aika: '1914',
+          tiedosto: 'VIGORON.JPG',
+          teksti: 'Vigorón on Granadan oma ruoka ja yksi maan '
+              + 'tunnetuimmista. Osia on kolme: keitettyä kassavaa eli '
+              + 'yucaa, rapeaksi paistettua chicharrónia ja curtidoa eli '
+              + 'kaalisalaattia, johon tulee tomaattia, sipulia ja chiliä '
+              + 'etikkaan ja suolaan marinoituna. Kaikki tarjotaan '
+              + 'banaaninlehden päällä ja syödään ilman aterimia. Nimi on '
+              + 'peräisin sattumasta: María Luisa Cisneros Lacayo kehitti '
+              + 'annoksen Granadassa 1914 ja nimesi sen nähtyään julisteen, '
+              + 'jossa mainostettiin Vigorón-nimistä lääkejuomaa.',
+          selite: 'Vigorónin kolme osaa — keitetty yuca, chicharrón ja '
+              + 'etikkainen kaalisalaatti — tarjotaan banaaninlehdellä '
+              + 'ilman aterimia.',
+          lahde: 'Nicaraguan food, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Juoma, josta koko kansa sai lempinimensä',
+          tiedosto: 'Prepared pinol in two large mugs ready to drink.jpg',
+          teksti: 'Pinolillo on paahdetusta maissista ja pienestä määrästä '
+              + 'paahdettua kaakaota jauhettu juoma, jota maustetaan '
+              + 'kanelilla, maustepippurilla ja neilikalla ja joka '
+              + 'sekoitetaan veteen tai maitoon. Nimi tulee sanasta pinole, '
+              + 'joka tarkoittaa paahdettua ja jauhettua maissia. Juoma on '
+              + 'niin keskeinen, että nicaragualaiset kutsuvat itseään '
+              + 'nimellä pinoleros, pinolillon juojat. Perinteinen astia on '
+              + 'jícara, jícaro-puun kovasta hedelmäkuoresta tehty kulho, '
+              + 'johon kaiverretaan usein kukkia tai maisemia.',
+          selite: 'Pinol ja pinolillo jauhetaan paahdetusta maissista, ja '
+              + 'juoma on paksua ja rakenteeltaan hiukan karkeaa.',
+          lahde: 'GrammarFascist, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä nicaragualainen vigorón sai nimensä?',
+        vaihtoehdot: [
+          'Sen keksijän sukunimestä',
+          'Julisteesta, joka mainosti Vigorón-nimistä lääkejuomaa',
+          'Granadan kaupunginosasta',
+          'Espanjalaisesta sotilasarvosta',
+        ],
+        oikea: 1,
+        fakta: 'María Luisa Cisneros Lacayo kehitti annoksen Granadassa '
+            + '1914 ja otti nimen näkemästään lääkemainoksesta.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Nicaraguan marimbaa soitetaan istuen, soitin polvien '
+          + 'päällä — ja maan rakastetuin säveltäjä kirjoitti valssinsa '
+          + 'sokeana.',
+      nostot: [
+        {
+          otsikko: 'Marimba, jota soitetaan polvien päällä',
+          tiedosto: 'Marimbas en el baile de negras, Masaya Nicaragua tomada por Maynor Valenzuela.jpg',
+          teksti: 'Nicaraguan marimba eroaa muun Väli-Amerikan marimboista '
+              + 'soittotavaltaan: soittaja istuu ja pitää soitinta '
+              + 'polvillaan sen sijaan että seisoisi sen ääressä. Mukana on '
+              + 'tavallisesti basso, kitara ja guitarrilla, pieni '
+              + 'mandoliinia muistuttava kitara, ja kokoonpano soittaa '
+              + 'juhlissa taustamusiikkina. Soittimen kielet ovat kovaa '
+              + 'puuta, ja ne on ladottu eri mittaisten bambu- tai '
+              + 'metalliputkien päälle; lyömiseen käytetään kahta tai '
+              + 'neljää vasaraa.',
+          selite: 'Nicaraguan marimba on niin pieni, että se lepää '
+              + 'soittajan polvilla, ja sitä lyödään kahdella tai neljällä '
+              + 'vasaralla.',
+          lahde: 'Mynor 2009, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Säveltäjä, joka kirjoitti valssinsa sokeana',
+          aika: '1874–1907',
+          // Kuvaton (Opus 6.9.2026): Menasta tai hänen mukaansa nimetystä
+          // Leónin teatterista ei löytynyt >= 1200 px:n Commons-kuvaa.
+          teksti: 'José de la Cruz Mena syntyi Leónissa 3. toukokuuta 1874 '
+              + 'muusikkosukuun, opiskeli Managuan musiikkikoulussa ja '
+              + 'soitti trumpettia kaupungin orkestereissa. Hän sairastui '
+              + 'kaksikymmentäyksivuotiaana spitaaliin. Häntä ei siirretty '
+              + 'maan spitaalisiirtolaan, koska hän omisti kolme teostaan '
+              + 'presidentti José Santos Zelayalle. Viidessä vuodessa hän '
+              + 'sokeutui täysin, esiintyi enää harvoin ja kuoli 22. '
+              + 'syyskuuta 1907. Hänet tunnetaan nimellä "jumalallinen '
+              + 'spitaalinen", ja Leónin teatteri on nimetty hänen '
+              + 'mukaansa.',
+          selite: 'José de la Cruz Menan valssit ovat Nicaraguan '
+              + 'tunnetuinta taidemusiikkia, vaikka suuri osa hänen '
+              + 'tuotannostaan on kadonnut.',
+        },
+        {
+          otsikko: 'Toukotanko, jota lähetyssaarnaaja paheksui 1874',
+          aika: '1874',
+          // Kuvaton (Opus 6.9.2026): ainoassa Commons-kuvassa Palo de
+          // Mayosta on tunnistettavia kasvoja eikä tekijää ole merkitty.
+          teksti: 'Palo de Mayo on Karibian rannikon afronicaragualainen '
+              + 'juhla ja tanssi, joka on nimetty nauhoin koristellun '
+              + 'toukotangon mukaan. Se juhlii sadetta ja uutta kasvua, ja '
+              + 'perinne alkoi Bluefieldsissä; brittiuudisasukkaat toivat '
+              + 'nauhatanssin sinne todennäköisesti 1830-luvun alussa. '
+              + 'Isoisän matkan jälkeisenä vuonna 1874 moravialainen '
+              + 'lähetyssaarnaaja J. E. Lundberg kirjoitti sen jo '
+              + 'muuttuneen: juhlaa vietettiin öisin kuutamossa ja '
+              + 'meluisasti. Soittimina olivat puunrungosta koverretut '
+              + 'rummut, pyykkilautabasso ja aasin leukaluu.',
+          selite: 'Palo de Mayon toukotanko on korkea puinen tanko, jonka '
+              + 'latvasta riippuu pitkiä värillisiä nauhoja.',
+        },
+        {
+          otsikko: 'Pohjoisessa soi polkka',
+          // Kuvaton (Opus 6.9.2026): chichero-yhtyeestä ei löytynyt
+          // yhtään >= 1200 px:n Commons-kuvaa.
+          teksti: 'Nicaraguan musiikki jakautuu kolmeen alueeseen. Karibian '
+              + 'rannikolla kuuluu afrikkalainen ja alkuperäiskansojen '
+              + 'perintö, Tyynenmeren puolella alkuperäiskansojen ja '
+              + 'espanjalaisen kulttuurin sekoitus — ja maan pohjois- ja '
+              + 'keskiosissa musiikki on eurooppalaisempaa, koska seudulle '
+              + 'muutti aikanaan runsaasti saksalaisia. Siellä tanssitaan '
+              + 'yhä polkkaa ja masurkkaa. Yksityisjuhlissa soittaa usein '
+              + 'chichero-yhtye: trumpetti, pasuuna tai muu vaskisoitin ja '
+              + 'joukko lyömäsoittajia.',
+          selite: 'Chichero-yhtye on Nicaraguan juhlien vakiokokoonpano, '
+              + 'jossa vaskisoittimet ja lyömäsoittimet kulkevat mukana '
+              + 'ilman lavaa.',
+        },
+      ],
+    },
+    {
+      id: 'kansanperinne',
+      nimi: 'Kansanperinne',
+      johdanto: 'Nicaraguan tunnetuin näytelmä pilkkaa vallanpitäjiä '
+          + 'naamion takaa, ja maan kuuluisin tarina kertoo kadonneesta '
+          + 'aarteesta.',
+      nostot: [
+        {
+          otsikko: 'Näytelmä, jossa vanha mies huijaa kuvernööriä',
+          aika: '1500-luku',
+          tiedosto: 'Mascaras de El Gueguense.jpg',
+          teksti: 'El Güegüense on satiirinen naamionäytelmä ja Nicaraguan '
+              + 'tunnetuin kansanteos. Sen kirjoitti tuntematon tekijä '
+              + '1500-luvulla, ja se on läntisen pallonpuoliskon vanhimpia '
+              + 'alkuperäiskansojen tanssinäytelmiä. Nimi tulee nawatin '
+              + 'sanasta wewej, vanha tai viisas mies. Vuorosanoja on 314, '
+              + 'ja ne ovat sekaisin nawatia ja espanjaa; hahmoja on '
+              + 'neljätoista, joukossa kuvernööri Tastuanes ja neljä '
+              + 'muulia. Näytelmä esitetään Diriambassa 17.–27. tammikuuta, '
+              + 'ja Unesco nimesi sen mestariteokseksi 2005.',
+          selite: 'El Güegüensen hahmot tunnistaa puisista naamioista, ja '
+              + 'näytelmä siirtyi suullisena perinteenä kirjaksi vasta '
+              + '1942.',
+          lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Prinsessa, joka kätki aarteen ja jäi luolaan',
+          // Kuvaton (Opus 6.9.2026): La Mocuanasta ei ole Commonsissa
+          // kuvitusta.
+          teksti: 'La Mocuana on Nicaraguan kuuluisin kansantarina, ja sen '
+              + 'uskotaan pohjautuvan tositapahtumiin. Päällikkö otti '
+              + 'espanjalaiset ensin vieraanvaraisesti vastaan mutta käski '
+              + 'heidät sitten pois. Kun nämä palasivat aarteen perässä, '
+              + 'päällikkö piilotti sen, ja ainoa toinen paikan tietäjä oli '
+              + 'hänen tyttärensä. Tytär rakastui myöhemmin erään '
+              + 'espanjalaissotilaan poikaan ja antoi tälle isänsä aarteen '
+              + 'yhteistä tulevaisuutta varten — ja mies sulki hänet '
+              + 'luolaan ja pakeni kullan kanssa. Tyttö pääsi ulos luolan '
+              + 'takakautta ja jäi vaeltamaan metsiin.',
+          selite: 'La Mocuanan tarina liittyy piilotettuun aarteeseen, ja '
+              + 'sen kerrotaan pohjautuvan todelliseen päällikön tyttäreen.',
+        },
+        {
+          otsikko: 'Hahmo, joka varmisti että miehet tulivat kotiin',
+          // Kuvaton (Opus 6.9.2026): La Ceguasta ei ole Commonsissa
+          // kuvitusta.
+          teksti: 'La Cegua on metsässä asuva olento, jonka nimi tulee '
+              + 'todennäköisesti nawatin sanasta cihua, nainen. '
+              + 'Kertomukset vaihtelevat: toisissa hänellä on valkoinen '
+              + 'maissinlehtipuku ja huntu, toisissa pitkä musta tukka '
+              + 'kasvojen edessä tai guarumo-puun lehdistä tehty asu ja '
+              + 'banaaninlehtien käheyttämä ääni. Miehet lähtevät hänen '
+              + 'peräänsä metsäteille eivätkä palaa entisellään. Suojaksi '
+              + 'neuvotaan heittämään maahan sinapinsiemeniä, joita hän jää '
+              + 'poimimaan. Tarinan tehtävä on ilmeinen: se saa miehet '
+              + 'palaamaan töistä suoraan kotiin.',
+          selite: 'La Cegua kuuluu Nicaraguan varoittaviin '
+              + 'kansantarinoihin, joita on kerrottu maaseudulla '
+              + 'sukupolvesta toiseen.',
+        },
+        {
+          otsikko: 'Kaupunki, jota sanotaan kansanperinteen kehdoksi',
+          // Kuvaton (Opus 6.9.2026): Masayan käsityötorista ei löytynyt
+          // kelvollista kuvaa — ainoassa suuressa on katu ja autot.
+          teksti: 'Masayaa kutsutaan Nicaraguan kansanperinteen kehdoksi ja '
+              + 'käsityön sydämeksi. Kaupungin päätorilla myydään käsin '
+              + 'kudottuja riippumattoja, kirjottuja puseroita, '
+              + 'puuveistoksia ja hamppupunoksia, ja järven puoleisessa '
+              + 'kaupunginosassa on kokonainen kortteli, joka tekee vain '
+              + 'riippumattoja. Vanhaan 1900-luvun alun markkinahalliin on '
+              + 'kunnostettu erillinen käsityötori, jossa esitetään '
+              + 'torstai-iltaisin kansantansseja. Monimbón kaupunginosa on '
+              + 'Masayan alkuperäisasutuksista ainoa, joka on säilyttänyt '
+              + 'oman identiteettinsä.',
+          selite: 'Masayan käsityötori toimii vanhassa 1900-luvun alun '
+              + 'markkinahallissa, ja sen tavaroista tunnetuimpia ovat '
+              + 'käsin kudotut riippumatot.',
+        },
+      ],
+    },
+  ],
+  /*
+   * PANAMA (Opus 6.9.2026, maalehtierä GTM+NIC+PAN). Väitteet on luettu
+   * en-Wikipedian raakateksteistä 6.9.2026: "Panama", "History of
+   * Panama", "Isthmus of Panama", "Great American Interchange",
+   * "Barro Colorado Island", "Smithsonian Tropical Research Institute",
+   * "Harpy eagle", "Panamanian cuisine", "Sancocho", "Bollo",
+   * "Carimañola", "Music of Panama", "Tamborito", "Pollera",
+   * "Mola (art form)" ja "Culture of Panama".
+   *
+   * TYÖNJAKO PANAMÁN KAUPUNKILEHDEN JA KARTTANOSTOJEN KANSSA: Panamán
+   * kaupunkilehti (js/packs/kulttuuri-kategoriat.js, avain panama)
+   * kattaa jo hopeatien ja Ristien tien, Henry Morganin, Casco Viejon,
+   * panamahatun, Cerro Ancónin, cimarrónit, vuoden 1855 rautatien ja
+   * kanavan sulut. Maastokohteet (js/packs/maastokohteet-pan.js:
+   * Volcán Barú, Coiba, Chagres, Portobelo, Panaman rautatie, El Caño,
+   * Guna Yala, Los Santos, Bocas del Toro, Dariénin aukko,
+   * Helmisaaret), eläintäky kultasammakosta ja skandaalit (San Blasin
+   * kapina 1925, Dariénin hanke 1698) kantavat omansa. Maalehti EI
+   * toista niitä: kannaksesta kerrotaan geologiana ja eläimistönä,
+   * Guna Yalasta vain molan ja nuchukanan kautta.
+   *
+   * SISÄLTÖLINJAUS (sama kuin faktapohja-panama.md:ssä): Noriegan aika,
+   * vuoden 1989 hyökkäys ja kanavaa koskeva nykypolitiikka on jätetty
+   * kokonaan pois. Vuoden 1903 ero Kolumbiasta mainitaan vain
+   * juhlapäivänä.
+   *
+   * KUVAT: 14 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin.
+   * KUUSI NOSTOA JÄI KUVATTOMAKSI (vuoden 1826
+   * kongressi, ceviche, tamborito, congo, música típica ja nuchukana):
+   * niistä ei löytynyt yhtään >= 1200 px:n Commons-kuvaa ilman
+   * tunnistettavia kasvoja tai vesileimaa. HYLÄTYT: "Empolleradas
+   * Panameñas" ja "Pollera panameña, tesoro de la tradición"
+   * (tunnistettavat kasvot), "Pollera montuna azul" (vesileima ja
+   * kasvot), "Tamborito La Mochila" (tunnistettavat kasvot), "Harpy
+   * Eagle immature - Darién - Panama" (kuvaan poltettu tekijäleima),
+   * "Best Annual Music Festivals in Panama" (kuvattu San Franciscossa,
+   * ei Panamassa), "ISS022-E-13352 - View of Panama" (pelkkiä pilviä).
+   */
+  PAN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Panaman kannaksella on tehty Amerikan varhaisinta '
+          + 'keramiikkaa, nähty Tyynimeri ensi kertaa idästä päin ja '
+          + 'kutsuttu koolle maanosan ensimmäinen yhteinen kokous.',
+      nostot: [
+        {
+          otsikko: 'Kulta, joka kulki Jukatanille asti',
+          aika: '2500 eaa.–1501',
+          tiedosto: 'Panama Pendant with two figures DMA 1976-W-245.jpg',
+          teksti: 'Monagrillon arkeologiselta alueelta Azueron niemimaalta '
+              + 'on löydetty keramiikkaa vuosilta 2500–1200 eaa. — se on '
+              + 'Väli-Amerikan varhaisimpia. Samasta paikasta on myös yksi '
+              + 'seudun vanhimmista maissinviljelyn jäljistä. Monagrillosta '
+              + 'kehittyi Gran Coclén kulttuurialue, jonka kultasepäntyö '
+              + 'levisi kauas: coclélaisia kultaesineitä on löydetty '
+              + 'Chichén Itzástä Jukatanin niemimaalta asti. Kun '
+              + 'eurooppalaiset saapuivat 1501, kannaksella puhuttiin '
+              + 'tšibtša- ja tšoko-kieliä.',
+          selite: 'Panaman esikolumbiaanisissa kultariipuksissa toistuvat '
+              + 'ihmishahmot päähineineen, ja samanlaisia esineitä on '
+              + 'kulkeutunut kaukaisiin kauppapaikkoihin.',
+          lahde: 'FA2010, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Mies, joka näki Etelämeren ensimmäisenä',
+          aika: '1513',
+          tiedosto: 'Monumento a Balboa.jpg',
+          teksti: 'Vasco Núñez de Balboa kuuli Karibian rannikkoa '
+              + 'purjehtiessaan paikallisilta, että kannaksen toisella '
+              + 'puolella on toinen meri. Hän ylitti kannaksen Dariénin '
+              + 'kautta ja näki 25. syyskuuta 1513 ensimmäisenä '
+              + 'eurooppalaisena Tyynenmeren. Nimeksi tuli Etelämeri, koska '
+              + 'se oli kannaksen eteläpuolella. Kuusi vuotta myöhemmin, '
+              + '1519, Tyynenmeren rannalle perustettiin Panamán kaupunki '
+              + 'pienen alkuperäisasutuksen viereen. Espanjan valtakuntaan '
+              + 'kannas kuului yli kolmesataa vuotta, 1513–1821.',
+          selite: 'Panamán kaupungin Balboa-muistomerkissä valloittaja '
+              + 'seisoo maapallon päällä, jota kannattelevat neljää '
+              + 'maanosaa esittävät hahmot.',
+          lahde: 'Pabloalcides, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Itsenäisyys alkoi maakunnasta, ei pääkaupungista',
+          aika: '1821',
+          tiedosto: 'Iglesia de San Atanasio -La Villa de Los Santos, Los Santos.jpg',
+          teksti: 'Panaman itsenäistyminen alkoi maaseudulta. Azueron '
+              + 'niemimaan asukkaat julistivat 10. marraskuuta 1821 '
+              + 'eroavansa Espanjasta; tapahtuma tunnetaan nimellä Grito de '
+              + 'La Villa de Los Santos. Veraguasissa se katsottiin '
+              + 'maanpetokseksi ja pääkaupungissa hätiköinniksi, mutta se '
+              + 'pakotti erojulistusta valmistelevat kiirehtimään. '
+              + 'Kuningasmielinen everstiluutnantti José de Fábrega oli jo '
+              + 'käännytetty, ja 28. marraskuuta 1821 kokoontunut '
+              + 'kansalliskokous julisti kannaksen irti Espanjasta ja '
+              + 'liitti sen Bolívarin Kolumbiaan. Sitä päivää vietetään yhä '
+              + 'itsenäisyyspäivänä.',
+          selite: 'San Atanasion kirkko seisoo La Villa de Los Santosissa, '
+              + 'kaupungissa, jossa Azueron asukkaat julistivat 10. '
+              + 'marraskuuta 1821 eroavansa Espanjasta.',
+          lahde: 'Gualberto107, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kokous, jossa Amerikka tapasi itsensä',
+          aika: '1826',
+          // Kuvaton (Opus 6.9.2026): kongressista löytyi vain moderni
+          // karttakaavio, ei kuvaa.
+          teksti: 'Simón Bolívar kutsui kesäkuussa 1826 Panamán kaupunkiin '
+              + 'kokouksen, jota kutsutaan amfiktyoniseksi kongressiksi '
+              + 'antiikin kreikkalaisten kaupunkiliittojen mukaan. Paikalla '
+              + 'olivat edustajat Argentiinasta, Boliviasta, Brasiliasta, '
+              + 'Väli-Amerikasta, Yhdysvalloista, Suur-Kolumbiasta, '
+              + 'Chilestä, Meksikosta ja Perusta. Tarkoitus oli liittää '
+              + 'vasta itsenäistyneet maat yhdeksi puolustusliitoksi '
+              + 'Euroopan suurvaltoja vastaan, jotka puhuivat menetettyjen '
+              + 'siirtomaidensa takaisin ottamisesta. Paikaksi valittiin '
+              + 'kannas, koska sen kautta kuljettiin joka tapauksessa '
+              + 'kumpaankin suuntaan.',
+          selite: 'Vuoden 1826 kongressi oli ensimmäinen kerta, kun vasta '
+              + 'itsenäistyneiden Amerikan valtioiden edustajat '
+              + 'kokoontuivat saman pöydän ääreen.',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Panaman kannas on kapein kohta, jossa kaksi maanosaa '
+          + 'liittyy yhteen — ja sen syntyminen muutti sekä valtamerten '
+          + 'virrat että eläimistön molemmilla mantereilla.',
+      nostot: [
+        {
+          otsikko: 'Maakannas, joka pani jään navalle',
+          tiedosto: 'Nahl 1850, Der Isthmus von Panama auf der Höhe des Chagres River.jpg',
+          teksti: 'Panaman kannas nousi merestä arviolta noin kolme '
+              + 'miljoonaa vuotta sitten, kun Cocos-laatta työntyi Karibian '
+              + 'laatan alle ja nosti merenpohjaa; osa tutkijoista pitää '
+              + 'kannasta vanhempana, jopa 10–15 miljoonan vuoden ikäisenä. '
+              + 'Seuraukset olivat maailmanlaajuiset. Atlantin ja '
+              + 'Tyynenmeren vedet erosivat, syntyi Golfvirta, ja lämpimien '
+              + 'ja kylmien virtausten kierto muuttui niin, että '
+              + 'pohjoiselle navalle alkoi kertyä jääkalottia. Ajatuksen '
+              + 'esitti 1910 Henry Fairfield Osborn nisäkäsfossiilien '
+              + 'perusteella.',
+          selite: 'Charles Christian Nahlin öljymaalaus vuodelta 1850 '
+              + 'esittää Chagres-jokea, jota pitkin kannaksen yli '
+              + 'kuljettiin ennen rautatietä.',
+          lahde: 'Charles Christian Nahl, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Silta, jota pitkin eläimet vaihtoivat mantereita',
+          tiedosto: 'Glyptodon clavipes 01.jpg',
+          teksti: 'Kun kannas sulkeutui, alkoi suuri amerikkalainen vaihto: '
+              + 'maaeläimet pääsivät kulkemaan mantereelta toiselle, ja '
+              + 'liikenne kiihtyi noin 2,7 miljoonaa vuotta sitten. '
+              + 'Etelä-Amerikassa oli siihen asti kehittynyt oma '
+              + 'eläimistönsä erillään muusta maailmasta: vyötiäisiä, '
+              + 'muurahaiskarhuja ja laiskiaisia sekä niiden sukuisia '
+              + 'jättiläisiä — panssaroituja glyptodontteja ja norsun '
+              + 'kokoisia maalaiskiaisia. Suuria saalistajia olivat '
+              + 'pussinisäkkäät ja lentokyvyttömät kauhulinnut. Pohjoisesta '
+              + 'tuli kissoja, koiraeläimiä ja karhuja.',
+          selite: 'Glyptodon oli vyötiäisten sukulainen, jonka kilpi oli '
+              + 'yhtenäinen kupu; laji kehittyi Etelä-Amerikassa maanosien '
+              + 'ollessa erillään.',
+          lahde: 'H. Zell, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Saari, jonka jokainen puu on laskettu',
+          aika: '1923',
+          tiedosto: 'Barro Colorado Research.JPG',
+          teksti: 'Barro Colorado syntyi vahingossa: kun Chagres padottiin '
+              + 'Gatúnjärveksi 1913, vesi peitti metsän ja kukkuloiden '
+              + 'huiput jäivät saariksi. Suurin niistä on 15,6 '
+              + 'neliökilometriä. Se rauhoitettiin 17. huhtikuuta 1923, ja '
+              + 'vuodesta 1946 sitä on hoitanut Smithsonian-instituutti. '
+              + 'Saarelle perustettiin 1980 viidenkymmenen hehtaarin '
+              + 'koeala, jonka ensimmäisessä laskennassa 1982 kirjattiin '
+              + 'jokainen yli senttimetrin paksuinen puu ja pensas — noin '
+              + '240 000 runkoa ja 303 lajia. Laskenta uusitaan viiden '
+              + 'vuoden välein.',
+          selite: 'Barro Coloradon tutkimusasema on yksi maailman '
+              + 'tutkituimpia trooppisen metsän kenttäasemia, ja sinne '
+              + 'pääsee vain veneellä.',
+          lahde: 'Chad Carson, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Vaakunalintu, joka saalistaa apinoita',
+          tiedosto: 'Captive Harpia harpyja (Harpy Eagle) at Belize Zoo.jpg',
+          teksti: 'Harpyijakotka on Panaman kansallislintu ja sen vaakunan '
+              + 'lintu. Nimi tulee kreikan mytologian harpyijoista, '
+              + 'tuulihengistä, joilla oli petolinnun jalat ja naisen pää. '
+              + 'Naaras painaa tavallisesti 6–9 kiloa, ja laji on koko '
+              + 'levinneisyysalueensa suurin petolintu. Se elää sademetsän '
+              + 'ylimmässä latvuskerroksessa ja saalistaa etenkin apinoita '
+              + 'ja laiskiaisia; kamerapyydysten ja kirjallisuuden '
+              + 'perusteella saalislajeja tunnetaan 116. Elinympäristön '
+              + 'häviäminen on hävittänyt lajin lähes koko '
+              + 'Väli-Amerikasta.',
+          selite: 'Harpyijakotkan päälaen sulkatöyhtö nousee pystyyn, kun '
+              + 'lintu kuuntelee ääntä latvuksessa.',
+          lahde: 'Perryprog, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten Barro Coloradon saari syntyi?',
+        vaihtoehdot: [
+          'Se kohosi merestä tulivuoren purkauksessa',
+          'Kanavan tekojärvi peitti metsän, ja kukkulan huippu jäi saareksi',
+          'Se irtosi mantereesta maanjäristyksessä',
+          'Se rakennettiin kanavan ruoppausmassoista',
+        ],
+        oikea: 1,
+        fakta: 'Chagres padottiin 1913 Gatúnjärveksi, ja veden noustessa '
+            + 'metsäisten kukkuloiden huiput jäivät saariksi keskelle '
+            + 'kanavaa.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Panaman kansallisruokaa käytetään vertauskuvana koko '
+          + 'maasta: monta ainesta, yksi pata.',
+      nostot: [
+        {
+          otsikko: 'Keitto, joka on vertauskuva koko maasta',
+          tiedosto: 'Sancocho de guandú con carne salá.JPG',
+          teksti: 'Sancocho de gallina on Panaman kansallisruoka. '
+              + 'Perusaineksia on kolme: kana, ñame-jamssi ja culantro. '
+              + 'Jamssi antaa keitolle sen paksun rakenteen ja culantro '
+              + 'suurimman osan mausta ja vihertävästä sävystä. Mukaan '
+              + 'tulee usein myös kassavaa, maissintähkää ja otoe-juurta. '
+              + 'La Chorreran versio tehdään vain vapaana kasvaneesta '
+              + 'kanasta, ja Chiriquín maakunnan versio on tukevin ja '
+              + 'kurpitsan takia kellertävä. Ruokaa käytetään vertauskuvana '
+              + 'maan monimuotoisuudesta: jokainen aines tuo omansa samaan '
+              + 'pataan.',
+          selite: 'Sancocho tarjotaan valkoisen riisin kanssa, joka joko '
+              + 'sekoitetaan keittoon tai syödään lusikallisen rinnalla.',
+          lahde: 'Jdvillalobos, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Maissinyytti, joka voi olla raskaana',
+          tiedosto: 'Bollos.jpg',
+          teksti: 'Bollo on maissista, kassavasta tai perunasta tehty '
+              + 'nyytti, joka kääritään lehteen ja keitetään. Maissi- ja '
+              + 'kassavabollot ovat Panaman ja Kolumbian Karibian rannikon '
+              + 'alkuperäisruokaa, ja niitä on verrattu Andien humitaan ja '
+              + 'Brasilian pamonhaan. Panamassa päälajeja on kaksi: '
+              + 'tuoreesta maissista tehty bollo de maíz nuevo ja '
+              + 'kuivatusta maissista tehty, joka maustetaan voilla — tai '
+              + 'täytetään naudanlihalla, jolloin sitä kutsutaan nimellä '
+              + 'bollo preñado, raskaana oleva bollo. Käärepaperina on '
+              + 'nahuala-palmun lehti, maissinlehti tai banaaninlehti.',
+          selite: 'Bollot sidotaan maissinlehtiin ja keitetään; nyyttiä on '
+              + 'kuvattu tamaalin sukulaiseksi.',
+          lahde: 'George Lou, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kassavapasteija, jonka sisällä on lihaa',
+          tiedosto: 'Barranquilla - Carimañolas.jpg',
+          teksti: 'Carimañola muistuttaa empanadaa, mutta kuori ei ole '
+              + 'vehnää vaan keitettyä ja survottua kassavaa eli yucaa. '
+              + 'Taikinaan lisätään hieman voita, öljyä tai suolaa, se '
+              + 'muotoillaan torpedon muotoiseksi ja täytetään jauhelihalla, '
+              + 'revitulla kanalla tai juustolla; joskus mukaan tulee '
+              + 'kuullotettua sipulia, valkosipulia, paprikaa tai kuminaa. '
+              + 'Nyytti uppopaistetaan kullanruskeaksi ja tarjotaan sueron '
+              + 'tai tulisen ají-kastikkeen kanssa. Se on tavallista '
+              + 'aamiais- ja välipalaruokaa Panaman ja Kolumbian Karibian '
+              + 'rannikolla.',
+          selite: 'Carimañolan kuori tehdään keitetystä kassavasta, ja '
+              + 'nyytti muotoillaan torpedoksi ennen uppopaistoa.',
+          lahde: 'Jdvillalobos, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Kaksi merta, kaksi kalaa',
+          // Kuvaton (Opus 6.9.2026): panamalaisesta cevichestä ei
+          // löytynyt yhtään >= 1200 px:n Commons-kuvaa.
+          teksti: 'Kahden valtameren välissä oleva maa syö luonnollisesti '
+              + 'kalaa. Panaman ceviche tehdään useimmiten corvinasta tai '
+              + 'tilapiasta. Keittiön perusta on kuitenkin maalla: riisi, '
+              + 'maissi ja pavut. Yleisimpiä pääruokia ovat arroz con '
+              + 'pollo ja sancocho, ja aamiaispöydän vakiovieras on '
+              + 'hojaldre, taikinasta paistettu litteä leipä. Jouluateriaan '
+              + 'kuuluvat kanatamaalit, arroz con pollo, paistettu porsas, '
+              + 'kalkkuna ja täyte, ja pöydässä on hedelmiä ja '
+              + 'hedelmäkakkua. Juhlajuoma on ron ponche, rommilla '
+              + 'terästetty munatoti.',
+          selite: 'Corvina on Panaman Tyynenmeren puolen tavallisin '
+              + 'ruokakala, ja siitä tehdään sekä ceviche että paistetut '
+              + 'annokset.',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Panaman kansallistanssissa on kolme rumpua, naislaulaja '
+          + 'ja yleisö, joka taputtaa kaksi kertaa tahtiin.',
+      nostot: [
+        {
+          otsikko: 'Kolme rumpua ja laulaja ympyrän keskellä',
+          aika: '1600-luku',
+          // Kuvaton (Opus 6.9.2026): tamborito-rummuista ei löytynyt
+          // yhtään >= 1200 px:n Commons-kuvaa ilman tunnistettavia
+          // kasvoja.
+          teksti: 'Tamborito, "pieni rumpu", on Panaman kansallistanssi, ja '
+              + 'sen sävelmien juuret ulottuvat 1600-luvulle. Se on '
+              + 'espanjalaisen, alkuperäiskansojen ja afrikkalaisen '
+              + 'perinteen sekoitus: rytmi on afrikkalainen ja sanat '
+              + 'toistuvia kuten Länsi-Afrikan lauluperinteessä. '
+              + 'Esiintyjien ympärille muodostuu ihmisrengas, joka '
+              + 'taputtaa kahdesti tahtia kohti ja vastaa laulajan '
+              + 'säkeisiin. Rumpuja on kolme, kaikki koverrettu '
+              + 'paikallisista puista ja päällystetty parkitulla '
+              + 'naudannahalla: lyhyt ja leveä caja, pohjaäänen antava '
+              + 'repujador ja korkeaääninen repicador.',
+          selite: 'Tamboriton kolme rumpua ovat caja, repujador ja '
+              + 'repicador, ja ne koverretaan yhdestä puunrungosta.',
+        },
+        {
+          otsikko: 'Viisi kieltä ja kolme kieltä',
+          tiedosto: 'Mejorana2.jpg',
+          teksti: 'Panaman maaseudun soittimista tärkeimmät ovat '
+              + 'mejoranera ja rabel. Mejoranera on viisikielinen pieni '
+              + 'kitara, jolla säestetään mejorana-lauluja ja torrenteja; '
+              + 'rabel on kolmikielinen viulu, jolla soitetaan cumbioita, '
+              + 'puntoja ja pasilloja. Ne kuuluvat etenkin keskisiin '
+              + 'maakuntiin Cocléen, Herreraan, Los Santosiin ja '
+              + 'Veraguasiin. Näiden laulujen erikoisuus on laulutapa: '
+              + 'saloman ja mejoranan huudahtelevan tyylin sanotaan '
+              + 'periytyvän sevillalaisilta.',
+          selite: 'Mejoranera on viisikielinen panamalainen kitara, ja se '
+              + 'on maaseudun laulujen tärkein säestyssoitin.',
+          lahde: 'Kiam-shim, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Karibian rannikon oma perinne',
+          // Kuvaton (Opus 6.9.2026): congo-perinteestä ei löytynyt yhtään
+          // Panamassa kuvattua >= 1200 px:n Commons-kuvaa.
+          teksti: 'Panaman pohjoisrannikon mustien yhteisöjen musiikkia '
+              + 'kutsutaan nimellä congo, ja se on kotonaan Costa Arriban '
+              + 'seudulla Colónin maakunnassa, muun muassa Portobelossa. '
+              + 'Rannikon musiikkiin ovat vaikuttaneet sekä 1500–1800-'
+              + 'luvuilla Länsi-Afrikasta orjuutettuina tuodut ihmiset että '
+              + '1840-luvulta 1914 asti rautatie- ja kanavatöihin muuttaneet '
+              + 'karibialaiset — jamaikalaiset, trinidadilaiset, '
+              + 'barbadoslaiset, martiniquelaiset ja saintlucialaiset. '
+              + 'Siksi Panamassa soi myös calypso ja reggae.',
+          selite: 'Congo-perinne elää Panaman Karibian rannikon kylissä, ja '
+              + 'sen juuret ovat Länsi-Afrikasta tuotujen ihmisten '
+              + 'yhteisöissä.',
+        },
+        {
+          otsikko: 'Haitari, joka valtasi maaseudun',
+          aika: '1940-luku',
+          // Kuvaton (Opus 6.9.2026): panamalaisesta típico-yhtyeestä ei
+          // löytynyt yhtään kelvollista Commons-kuvaa.
+          teksti: 'Nykyistä panamalaista kansanmusiikkia kutsutaan nimillä '
+              + 'música típica ja pindín. Se on ottanut 1940-luvulta '
+              + 'lähtien mukaan güiron, congan ja ennen kaikkea haitarin, '
+              + 'joka on nyt lajin tunnusääni. Kaupungissa soi toinen '
+              + 'perinne: panamalainen Luis Russell soitti 1920-luvulla '
+              + 'Louis Armstrongin kanssa, ja 1960-luvulla syntyivät '
+              + 'Combos Nacionales, viiden ja kymmenen soittajan väliset '
+              + 'sähköiset yhtyeet, jotka sekoittivat jazzia, calypsoa, '
+              + 'salsaa, merengueä ja soulia. Panaman tunnetuin '
+              + 'salsamuusikko on Rubén Blades.',
+          selite: 'Música típicassa haitari on johtava soitin, ja sen '
+              + 'rinnalla soivat güiro ja conga.',
+        },
+      ],
+    },
+    {
+      id: 'kasityot',
+      nimi: 'Käsityöt',
+      johdanto: 'Panaman kansallispuvun tekemiseen menee puolitoista '
+          + 'vuotta, ja gunanaisten pusero syntyy leikkaamalla pois.',
+      nostot: [
+        {
+          otsikko: 'Puku, jota tehdään puolitoista vuotta',
+          tiedosto: 'Pollera SantoDomingo.jpg',
+          teksti: 'Pollera on Panaman kansallispuku: käsin tehty hame ja '
+              + 'pusero, joiden juuret ovat 1500- ja 1600-luvulla '
+              + 'saapuneiden espanjalaisnaisten vaatteissa. Puku ommellaan '
+              + 'mittatilaustyönä, koska istuvuutta pidetään olennaisena, '
+              + 'ja yhden valmistus vie puolestatoista kahteen vuoteen. '
+              + 'Päälajeja on kaksi: juhlava gala ja arkinen labor. '
+              + 'Tekotapoja on kolme — talco al sol bordada, gala de labor '
+              + 'zurcida calada ja marcada — ja kuviot ovat useimmiten '
+              + 'värikkäitä kukkia valkoisella pohjalla. Tekijöitä on '
+              + 'eniten Azueron niemimaalla.',
+          selite: 'Polleran kuviot tehdään pistoin ja pitsein ohuelle '
+              + 'puuvillalle, ja yhden puvun ompelu vie yli vuoden.',
+          lahde: 'BlundiesBestBoots, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Seitsemän ketjua ja vapisevat hiuskoristeet',
+          aika: 'tammikuu',
+          tiedosto: 'Ciudad de Panamá Carnival 1946, 41 of 58.jpg',
+          teksti: 'Pollera ei ole pelkkä puku vaan koko varustus. Siihen '
+              + 'kuuluvat huivi ja viuhka, seitsemän kullattua '
+              + 'hopeaketjua, viiden kamman sarja ja tembleques — helmillä '
+              + 'ja kristalleilla koristellut hiuskoristeet, jotka '
+              + 'värisevät liikkeen mukana; nimi tulee sanasta temblar, '
+              + 'vapista. Alla on kaksi alushametta. Puvut periytyvät '
+              + 'suvussa, ja niitä myydään myös käytettyinä. Tammikuussa '
+              + 'Las Tablasissa järjestetään Desfile de las Mil Polleras, '
+              + 'tuhannen polleran kulkue, jossa maan eri seutujen mallit '
+              + 'nähdään yhtaikaa.',
+          selite: 'Vuoden 1946 karnevaaliviikolla kuvatuissa polleroissa '
+              + 'näkyvät hiuksiin kiinnitetyt tembleques ja puvun oma '
+              + 'pitsireunus.',
+          lahde: 'Richard, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Pusero, joka tehdään leikkaamalla pois',
+          tiedosto: 'MolasGuna.jpg',
+          teksti: 'Mola on gunanaisten puseron kuviopaneeli, ja gunan '
+              + 'kielellä sana tarkoittaa paitaa. Kuviot olivat alun perin '
+              + 'kehomaalauksia; espanjalaisten tulon jälkeen samat '
+              + 'geometriset kuviot siirtyivät kankaalle, ensin '
+              + 'maalaamalla ja sitten ompelemalla. Kangas saatiin '
+              + '1800-luvulla vaihtokauppana laivoilta, jotka tulivat '
+              + 'ostamaan kookoksia. Tekotapa on käänteinen applikointi: '
+              + 'kahdesta seitsemään erivärista kangaskerrosta ommellaan '
+              + 'yhteen, ja kuvio syntyy leikkaamalla kerroksia pois ja '
+              + 'kääntämällä reunat alle. Parhaissa pistot ovat lähes '
+              + 'näkymättömiä.',
+          selite: 'Molissa kuviot esittävät geometrian ohella kukkia, '
+              + 'lintuja ja merieläimiä, ja jokainen paneeli tehdään '
+              + 'käsin.',
+          lahde: 'Ayaita, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Puuhahmot, jotka nukkuvat nyytissä',
+          // Kuvaton (Opus 6.9.2026): nuchukana-hahmoista ei ole
+          // Commonsissa kelvollista kuvaa.
+          teksti: 'Nuchukana ovat gunien veistämiä ihmisenmuotoisia '
+              + 'puuhahmoja. Niitä käytetään parantamiseen: kun joku '
+              + 'sairastuu, pidetään meno, jossa lauletaan ja poltetaan '
+              + 'tupakkaa, ja hahmoja pyydetään etsimään taudin syy. Kun '
+              + 'niitä ei tarvita, ne pidetään nyytissä talossa, jossa '
+              + 'niiden uskotaan pitävän pahat henget ulkona. Jokaisella on '
+              + 'oma tarinansa, ja ne periytyvät sukupolvelta toiselle; '
+              + 'niiden pesu kuuluu vain nuorille tytöille tai iäkkäille '
+              + 'isoäideille. Vanha ja kulunut hahmo heitetään pois, '
+              + 'joskus laulun saattelemana.',
+          selite: 'Nuchukana veistetään puusta ihmisen muotoon, ja niitä '
+              + 'säilytetään nyytissä talon sisällä.',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten gunanaisten mola-paneelin kuvio syntyy?',
+        vaihtoehdot: [
+          'Kuvio kudotaan suoraan kankaaseen',
+          'Useasta värillisestä kangaskerroksesta leikataan osia pois',
+          'Kuvio painetaan puukaavaimella',
+          'Kuvio maalataan kasviväreillä',
+        ],
+        oikea: 1,
+        fakta: 'Tekotapa on käänteinen applikointi: kahdesta seitsemään '
+            + 'kangaskerrosta ommellaan yhteen, ja kuvio paljastuu, kun '
+            + 'kerroksia leikataan auki ja reunat käännetään alle.',
+      },
+    },
+  ],
 };

@@ -782,4 +782,76 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'suurin konsulaattikeskittymä, 92 maata. Suurin vuotuinen '
       + 'tapahtuma on maaliskuinen karjanäyttely ja rodeo.',
   },
+  /* GUATEMALAN, NICARAGUAN JA PANAMAN maaintrot kirjoitettiin 6.9.2026
+   * maalehtien (MAA_KATEGORIAT.GTM, .NIC ja .PAN) yhteydessä samasta
+   * en-Wikipedian aineistosta kuin lehdet. Vain intro-kenttä, kuten
+   * Kanadalla, Meksikolla ja Kuuballa. Avaimet ovat maailmankartan
+   * countryShapes-taulun wiki-nimiä (js/packs/maailmankartta.js);
+   * Panamán kaupungilla on oma avaimensa 'Panama (kaupunki)', joten
+   * maan avain 'Panama' ei törmää siihen.
+   *
+   * Karttanostojen aiheita ei toisteta: Tikal ja Chichicastenango,
+   * Rubén Darío ja Solentiname sekä Portobelo ja Dariénin aukko ovat
+   * maastokohteiden omia. Nykypolitiikka ja käynnissä olevat
+   * selkkaukset on rajattu ulos samalla linjauksella kuin lehdissä. */
+  Guatemala: {
+    intro: 'Guatemala on isoisän matkavuonna 1873 kaksivuotiaan '
+      + 'liberaalivallankumouksen maa: presidentiksi astuu 4. kesäkuuta '
+      + 'Justo Rufino Barrios, joka erottaa kirkon valtiosta ja tekee '
+      + 'alkeiskoulusta ilmaisen ja pakollisen. Sitä ennen maa oli ollut '
+      + 'kolmesataa vuotta Espanjan kenraalikapteenikunta, jonka '
+      + 'pääkaupunki ehti muuttaa neljä kertaa — kahdesti siksi, että '
+      + 'tulivuori tai maanjäristys kaatoi sen. **Vuoden 1773 järistysten '
+      + 'jälkeen hylätystä kaupungista tuli La Antigua Guatemala.**'
+      + '\n\n'
+      + 'Kaiken tämän alla on paljon vanhempi maa. Mayakuningaskunnat '
+      + 'hallitsivat ylänköjä espanjalaisten tuloon 1524 asti, ja '
+      + 'kʼicheʼien pyhä kirja Popol Vuh kirjoitettiin muistiin '
+      + 'Chichicastenangossa 1700-luvun alussa. Maassa on 37 tulivuorta '
+      + 'ja niistä neljä toiminnassa, Väli-Amerikan korkein tulivuoreton '
+      + 'ylänkö ja Amazonin pohjoispuolen laajin trooppinen metsä. '
+      + 'Vaatteesta näkee yhä, mistä kylästä ihminen on: jokaisella '
+      + 'yhteisöllä on oma kuvionsa, ja kangas kudotaan vyötäröltä '
+      + 'puuhun jännitetyillä kangaspuilla.',
+  },
+  Nicaragua: {
+    intro: 'Nicaragua on Väli-Amerikan suurin maa, ja sen läntinen puoli '
+      + 'on tulivuorten ja järvien vyöhykettä. Maan nimi tulee sanasta '
+      + 'Nicānāhuac, jolla nawatia puhuneet nicaraot kutsuivat seutua; '
+      + 'vanha selitys päällikkö Nicaraon nimestä kaatui 2002, kun kävi '
+      + 'ilmi, että päällikön oikea nimi oli Macuilmiquiztli. Nicaraot ja '
+      + 'chorotegat olivat vaeltaneet etelään Meksikon Cholulan '
+      + 'laaksosta.'
+      + '\n\n'
+      + '**Itsenäisyyden ajan politiikkaa hallitsi Leónin liberaalin ja '
+      + 'Granadan konservatiivisen eliitin kilpailu**, joka ajautui '
+      + 'toistuvasti sisällissodaksi. Ratkaisu löytyi kaupunkien '
+      + 'väliltä: Managua oli kalastajakylä, joka sai kaupunkioikeudet '
+      + '1819 ja valittiin pääkaupungiksi 1852 juuri siksi, että se oli '
+      + 'sopivasti riitapuolten puolivälissä. Vuosi isoisän matkan '
+      + 'jälkeen, 1874, kaupungin rakennustöissä paljastui ihmisen '
+      + 'jalanjälkiä kivettyneessä tuhkassa — noin 2 120 vuotta vanhoja. '
+      + 'Maan itäinen puoli on toinen maailma: Karibian rannikolla '
+      + 'puhutaan englantia ja miskitoa ja tanssitaan toukotangon '
+      + 'ympärillä.',
+  },
+  Panama: {
+    intro: 'Panama on kapein kohta, jossa Pohjois- ja Etelä-Amerikka '
+      + 'liittyvät yhteen. Kannas nousi merestä arviolta kolme miljoonaa '
+      + 'vuotta sitten, ja seuraukset olivat maailmanlaajuiset: '
+      + 'Atlantin ja Tyynenmeren vedet erosivat, syntyi Golfvirta ja '
+      + 'pohjoiselle navalle alkoi kertyä jäätä. **Samalla avautui '
+      + 'silta, jota pitkin maaeläimet vaihtoivat mantereita** — '
+      + 'vyötiäiset ja laiskiaiset pohjoiseen, kissat ja karhut etelään.'
+      + '\n\n'
+      + 'Ihmisten historiassa kannas on ollut sama asia: paikka, jonka '
+      + 'yli kuljetaan. Azueron niemimaalla tehtiin Väli-Amerikan '
+      + 'varhaisinta keramiikkaa jo 2500 eaa., ja Coclén kultaesineitä '
+      + 'on löydetty Jukatanilta asti. Vasco Núñez de Balboa näki '
+      + 'kannaksen yli kulkiessaan 25. syyskuuta 1513 ensimmäisenä '
+      + 'eurooppalaisena Tyynenmeren. Isoisän matkavuonna 1873 Panama '
+      + 'oli osa Kolumbiaa, ja kannaksen yli kulki jo rautatie; kanavaa '
+      + 'ei vielä ollut. Itsenäisyyspäivää vietetään 28. marraskuuta, '
+      + 'jolloin kansalliskokous julisti 1821 kannaksen irti Espanjasta.',
+  },
 };
