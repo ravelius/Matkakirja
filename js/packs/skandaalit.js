@@ -10488,10 +10488,10 @@ export const SKANDAALIT = {
         kysymys: 'Miksi timantti hiottiin Lontoossa uudelleen?',
         vaihtoehdot: [
           'Se oli haljennut matkalla',
-          'Se ei tehnyt vaikutusta näyttelyvieraisiin',
           'Se oli liian suuri kruunuun',
+          'Se ei tehnyt vaikutusta näyttelyvieraisiin',
         ],
-        oikea: 1,
+        oikea: 2,
       },
     },
     /*
@@ -10534,10 +10534,10 @@ export const SKANDAALIT = {
         kysymys: 'Mihin Harappan tiilet käytettiin 1857?',
         vaihtoehdot: [
           'Uuden kaupungin muuriin',
-          'Rautatien ratasepeliksi',
           'Museon rakentamiseen',
+          'Rautatien ratasepeliksi',
         ],
-        oikea: 1,
+        oikea: 2,
       },
     },
   ],
@@ -10627,10 +10627,10 @@ export const SKANDAALIT = {
         kysymys: 'Miksi saari lakkasi olemasta saari?',
         vaihtoehdot: [
           'Se räjäytettiin',
-          'Araljärvi kuivui ja saari liittyi mantereeseen',
           'Se upposi',
+          'Araljärvi kuivui ja saari liittyi mantereeseen',
         ],
-        oikea: 1,
+        oikea: 2,
       },
     },
   ],
@@ -10676,10 +10676,10 @@ export const SKANDAALIT = {
         kysymys: 'Kuinka kauan kellot olivat poissa Balangigasta?',
         vaihtoehdot: [
           '17 vuotta',
-          '117 vuotta',
           '217 vuotta',
+          '117 vuotta',
         ],
-        oikea: 1,
+        oikea: 2,
       },
     },
     /*
@@ -10774,10 +10774,10 @@ export const SKANDAALIT = {
         kysymys: 'Missä sopimus allekirjoitettiin?',
         vaihtoehdot: [
           'Keisarin palatsissa',
-          'Sotalaiva HMS Cornwallisin kannella',
           'Kantonin tullissa',
+          'Sotalaiva HMS Cornwallisin kannella',
         ],
-        oikea: 1,
+        oikea: 2,
       },
     },
     /*
@@ -10886,10 +10886,10 @@ export const SKANDAALIT = {
         kysymys: 'Mitä sopimukseen kuulunutta asiakirjaa ei näytetty Ranskan parlamentille?',
         vaihtoehdot: [
           'Kauppasopimuksen liitettä',
-          'Selittävää kirjettä',
           'Karttaa rajoista',
+          'Selittävää kirjettä',
         ],
-        oikea: 1,
+        oikea: 2,
       },
     },
     /*
@@ -10977,10 +10977,10 @@ export const SKANDAALIT = {
         kysymys: 'Miksi kuningasta ei teloitettu?',
         vaihtoehdot: [
           'Hän oli tehnyt rauhansopimuksen',
-          'Hänet tunnettiin jo Euroopan lehdistössä',
           'Portugali ei ollut sodassa',
+          'Hänet tunnettiin jo Euroopan lehdistössä',
         ],
-        oikea: 1,
+        oikea: 2,
       },
     },
     /*
@@ -11160,10 +11160,10 @@ export const SKANDAALIT = {
         kysymys: 'Mikä kaupunki syntyi vuoden 1871 ryntäyksen paikalle?',
         vaihtoehdot: [
           'Hopetown',
-          'Kimberley',
           'Bloemfontein',
+          'Kimberley',
         ],
-        oikea: 1,
+        oikea: 2,
       },
     },
     /*
@@ -11206,10 +11206,10 @@ export const SKANDAALIT = {
         kysymys: 'Miksi hallitus otti löytöpaikan haltuunsa?',
         vaihtoehdot: [
           'Se halusi rakentaa museon',
-          'Löytö kumosi valkoisen ylivallan myytin',
           'Kukkula oli sotilasaluetta',
+          'Löytö kumosi valkoisen ylivallan myytin',
         ],
-        oikea: 1,
+        oikea: 2,
       },
     },
   ],
@@ -11296,10 +11296,10 @@ export const SKANDAALIT = {
         kysymys: 'Kuinka monta ihmistä altaan tieltä siirrettiin?',
         vaihtoehdot: [
           'Noin 6 000',
-          'Noin 57 000',
           'Noin 570 000',
+          'Noin 57 000',
         ],
-        oikea: 1,
+        oikea: 2,
       },
     },
   ],
