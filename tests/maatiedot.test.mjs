@@ -27,13 +27,19 @@ import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
  * jo olemassa olevia aukkoja ei kannata sulkea tyhjällä rivillä.
  * 6.9.2026 lista tyhjeni: viimeiset kuusi (BHR, IND, THA, VNM, IDN,
  * MYS) saivat rivinsä js/packs/asia-maatiedot.js:ään.
+ *
+ * 6.9.2026 (ilta): Uruguayn, Paraguayn ja Venezuelan maalehdet
+ * kirjoitettiin, ja niiden tunnusluvut tehdään erikseen samalla
+ * tools/kirjoita-maatiedot.mjs-työkalulla ja samasta aineistosta kuin
+ * muutkin Amerikkojen rivit (js/packs/southamerica-maatiedot.js).
+ * Siihen asti nämä kolme ovat odotuslistalla.
  */
 /*
  * Oseanian uudet maalehdet (FJI, PNG, SLB) saivat aihesivunsa 6.9.2026,
  * mutta tunnusluvut kirjoitetaan omana eränään js/packs/
  * oceania-maatiedot.js:ään. Lista saa vain lyhentyä.
  */
-const VIELA_ILMAN_TUNNUSLUKUJA = new Set(['FJI', 'PNG', 'SLB']);
+const VIELA_ILMAN_TUNNUSLUKUJA = new Set(['URY', 'PRY', 'VEN', 'FJI', 'PNG', 'SLB']);
 
 const SIJA = /^\d+\.\/\d+$/;
 

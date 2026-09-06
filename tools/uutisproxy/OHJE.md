@@ -11,6 +11,15 @@
 > js/packs/uutislahteet.js:n FJI-kommentissa. Julkaisu Git-
 > integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Uruguay, Paraguay, Venezuela):** sallittuihin
+> lisättiin www.montevideo.com.uy, www.abc.com.py ja www.elnacional.com
+> (maalehdet URY/PRY/VEN, testattu 6.9.2026: syöte aukeaa, artikkelisivun
+> ensimmäisestä `<article>`-lohkosta jäsentyy leipäteksti ja `og:image`
+> löytyy). ABC Colorin syöteosoitteessa on kyselymerkkijono
+> (`?outputType=xml`); se kulkee workerin läpi ongelmitta, koska peli
+> koodaa koko osoitteen url-parametriin. Julkaisu Git-integraatiolla
+> mainista.
+>
 > **Päivitys 6.9.2026 (Chile, Kolumbia):** sallittuihin lisättiin
 > www.lanacion.cl ja www.lasillavacia.com (maalehdet CHL/COL, testattu
 > 6.9.2026: syöte aukeaa, artikkelisivun ensimmäisestä `<article>`-

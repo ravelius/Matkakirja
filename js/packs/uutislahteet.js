@@ -178,6 +178,54 @@ export const UUTISLAHTEET = {
     syote: 'https://www.lasillavacia.com/feed/',
   },
   /*
+   * Montevideo Portal on Uruguayn luetuimpia uutissivustoja. Testattu
+   * 6.9.2026: syötteessä kahdeksan juttua (otsikot CDATA-kentissä, jotka
+   * DOMParser purkaa itsestään), ja artikkelisivun ensimmäisestä
+   * <article>-lohkosta jäsentyy kuusi yli 60 merkin kappaletta sekä
+   * og:image.
+   *
+   * Hylätyt: El Paísin /rss ja /rss/ vastaavat 302:lla eikä worker seuraa
+   * uudelleenohjauksia; El Observadorin syöte aukeaa, mutta sen
+   * ensimmäisessä <article>-lohkossa on vain ingressi (sama vika kuin El
+   * Paísilla 6.8.2026); La Repúblican /feed/ palauttaa 404 ja Teledocen
+   * syötteen linkit osoittavat etusivulle. La Diaria läpäisi molemmat
+   * testit, mutta sen leipätekstin seassa on kirjautumiskehote.
+   */
+  URY: {
+    nimi: 'Montevideo Portal',
+    kieli: 'es',
+    syote: 'https://www.montevideo.com.uy/anxml.aspx?59',
+  },
+  /*
+   * ABC Color on Paraguayn suurin päivälehti. Testattu 6.9.2026:
+   * syötteessä sata juttua ja artikkelisivun ensimmäisestä
+   * <article>-lohkosta jäsentyy viisi yli 60 merkin kappaletta sekä
+   * og:image.
+   *
+   * HUOM: osoitteessa on kyselymerkkijono (?outputType=xml), joka
+   * kulkee workerin läpi ongelmitta, koska peli koodaa koko osoitteen
+   * url-parametriin. Hylätyt: abc.com.py/rss.xml (404), Última Horan
+   * rss.xml ja rss/portada.xml (404), La Nación PY /feed/ (404) ja Hoy
+   * /rss (301 ilman toimivaa päätepistettä).
+   */
+  PRY: {
+    nimi: 'ABC Color',
+    kieli: 'es',
+    syote: 'https://www.abc.com.py/arc/outboundfeeds/rss/?outputType=xml',
+  },
+  /*
+   * El Nacional on Venezuelan vanhimpia päivälehtiä. Testattu 6.9.2026:
+   * syötteessä sata juttua ja artikkelisivun ensimmäisestä
+   * <article>-lohkosta jäsentyy 28 yli 60 merkin kappaletta sekä
+   * og:image. Efecto Cocuyon syöte vastasi myös 200:lla, mutta El
+   * Nacional läpäisi artikkelisivutestin ensimmäisellä yrityksellä.
+   */
+  VEN: {
+    nimi: 'El Nacional',
+    kieli: 'es',
+    syote: 'https://www.elnacional.com/feed/',
+  },
+  /*
    * KUUBA (CUB) JÄI ILMAN LÄHDETTÄ (Opus 6.9.2026) — Havannan lehti
    * näkyy siis ilman uutisosiota, eikä mikään mene rikki.
    *
