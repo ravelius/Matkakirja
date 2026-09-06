@@ -79608,4 +79608,1040 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * DUNEDIN (Opus 6.9.2026, paketti O9) — Oseanian laudan neljäs
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-dunedin.md ja sen riippumaton tarkistus
+   * tarkistus-dunedin.md (tuomio "kelpaa pienin korjauksin"). Molemmat
+   * pakolliset korjaukset oli jo tehty faktapohjaan ennen kirjoitusta
+   * (nimivirhe "Jim Moran" -> Jim Mora sekä väärä väite siitä, ettei
+   * Category:Dunedin Volcano olisi olemassa). Väitteet on luettu
+   * en-Wikipedian raakateksteistä 6.9.2026: "Dunedin", "University of
+   * Otago", "First Church of Otago", "Toitū Otago Settlers Museum",
+   * "Taiaroa Head", "Yellow-eyed penguin", "Ōtākou", "Ngāi Tahu",
+   * "Larnach Castle", "Dunedin Volcano", "Dunedin Chinese Garden",
+   * "Dunedin Airport" ja "Dunedin railway station".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei uusia kysymyksiä.
+   *
+   * SIVUJA ON KAKSI kuten Aucklandissa (kaupunki + teemasivu). Faktapohja
+   * tarjosi kolme teemaa; kolmas (rautatieasema, Baldwin Street,
+   * opiskelijakaupunki, Dunedin sound) on siirretty matkaoppaaseen ja
+   * kohdekartan juttuihin, jotta lehti pysyy Aucklandin mitassa.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026 jokaiseen
+   * pyyntöön "Daily API request limit exceeded", eikä lukuja keksitä
+   * (Samarkand-malli v965) — js/packs/saatiedot.js jää koskematta ja
+   * lehti näkyy ilman säätä, kuten Aucklandissakin. Oppaan sääjakso
+   * nojaa siksi en-Wikipedian sääruutuun ja sanoo sen ääneen: luvut ovat
+   * NIWAn normaalikaudelta 1991-2020 kaupungin omalta asemalta.
+   *
+   * ITSEMURHA EI OLE TEKSTISSÄ (ikäsopivuus, Perustuslain pilari 4):
+   * L4 kertoo Larnachin kuolleen parlamenttitalossa 1898 ilman
+   * yksityiskohtia. Kāi tahu on kuvattu elävänä kansana
+   * (spec-mantereet.md, Oseania): Ōtākou on rūnangan koti TÄNÄÄN, ei
+   * museokohde.
+   *
+   * KUVAT haettiin Commonsin API:sta kategoriahauilla, lisenssi ja
+   * tekijä luettiin extmetadatasta 6.9.2026, ja jokainen valittu kuva
+   * katsottiin silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "MA I239058 TePapa Princes-Street-Dunedin full.jpg"
+   * (upea vuoden 1863 katunäkymä, mutta lasilevylle on painettu studion
+   * omat tekstit "34 PRINCES ST. DUNEDIN 1863" ja "BURTON BROS
+   * DUNEDIN" — talon sääntö kieltää kuvan päälle lisätyn merkinnän),
+   * "The harbour, Suva..." -tyyppiset postikortit samasta syystä,
+   * "Baldwin St Dunedin MRD.jpg" ja "Baldwin Street.JPG" (tunnistettavat
+   * kasvot etualalla), "27 Octagon square, Dunedin..." (sekava, ihmisiä
+   * etualalla), "Dunedin cbd skyline.jpg" (sähkölangat halkovat taivaan,
+   * harmaa), "Organ pipes columnar joints Dunedin.jpg" (vain 1024 px
+   * leveä) ja "Dunedin Railway Station Full Exterior.jpg" (on jo
+   * matkakirjan valokuvataulussa).
+   * AIHETOISTO, joka on tarkoituksellinen: Octagon esiintyy kahdesti
+   * (ennen-nyt-parin nykykuvassa koko aukiona ja nostossa K1 Robert
+   * Burnsin patsaana) — eri tiedostot, eri mittakaava, ja aukio on koko
+   * kaupunkisuunnitelman risteyskohta.
+   *
+   * ENNEN JA NYT: pari EI ole sama kuin matkakirjan valokuvataulussa
+   * (js/packs/oceania-valokuvat.js), koska taulun vanha vedos on
+   * National Library NZ:n "no known copyright restrictions" -kuva, jota
+   * talon lisenssisääntö ei salli lehteen. Tilalle haettiin Albert Percy
+   * Godberin lasinegatiivi Octagonista vuodelta 1926 (PD) ja sen pariksi
+   * sama aukio nykyään.
+   */
+  dunedin: [
+    {
+      id: 'kaupunki',
+      nimi: 'Dunedin',
+      johdanto: 'Skotlantilaiset siirtolaiset rakensivat Dunedinin '
+        + 'Edinburghin kuvaksi maailman toiselle laidalle 1848, ja kulta '
+        + 'teki siitä isoisän matkan aikoihin hetkeksi Uuden-Seelannin '
+        + 'suurimman ja rikkaimman kaupungin.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti kolme
+       * laajaa yleiskuvaa kaupungin eri puolilta: koko kaupunki ilmasta,
+       * lahden suu ja keskusta kukkulalta.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Dunedin and the Otago Peninsula, Otago, New Zealand, 12th. Dec. 2010 - Flickr - PhillipC.jpg',
+          selite: 'Dunedin ja Otagon niemimaa ovat saman sammuneen '
+            + 'tulivuoren päällä, ja lahti täyttää sen kuluneimman osan.',
+          lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Otago Harbour towards Aramoana.jpg',
+          selite: 'Otago Harbour on 23 kilometriä pitkä, ja sen suulla '
+            + 'Aramoanan hiekkasärkkä erottaa lahden avomerestä.',
+          lahde: 'Pseudopanax at English Wikipedia, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Dunedin City Centre from Roslyn.jpg',
+          selite: 'Keskusta laskeutuu Stuart Streetiä pitkin satamaan, ja '
+            + 'sen ympärillä kaupunki nousee jyrkille rinteille.',
+          lahde: 'ChristchurchHistorian, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat kaupungin ERI puolilta — lahti niemimaan tieltä,
+       * Etelä-Tyynenmeren ranta ja aukio, jolle kaupunki piirrettiin.
+       * Dunedinille ei ole vielä generoitu herokuvia, joten karusellissa
+       * on kolme aitoa valokuvaa (vertaa Buenos Airesiin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Otago Bay (16353725589).jpg',
+          selite: 'Otago Harbourin rantatie kiertää niemimaan kylien ohi, '
+            + 'ja rinteillä kasvaa tī kōuka eli kaalipuu.',
+          lahde: 'Christoph Strässler from Oberdorf BL, Schweiz, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'St. Clair Beach Dunedin.jpg',
+          selite: 'St Clairin ranta on kaupungin eteläreunalla avointa '
+            + 'Tyyntämerta vasten, ja sen takana kohoavat vihreät kukkulat.',
+          lahde: 'Alexeyevitch, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Harbour Cone Hereweka, Dunedin, New Zealand.jpg',
+          selite: 'Hereweka eli Harbour Cone on Otagon niemimaan '
+            + 'tunnistettavin kartio ja osa samaa vanhaa tulivuorta kuin '
+            + 'kaupunki itse.',
+          lahde: 'Njhinku, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'View of the Octagon, Dunedin, 1926. ATLIB 295734.png',
+          vuosi: '1926',
+          selite: 'Octagonilla kulki 1920-luvulla raitiovaunu, ja aukion '
+            + 'takaa näkyy First Churchin torni.',
+          lahde: 'Godber, Albert Percy, 1875-1949, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'The Octagon, Dunedin City, Otago.jpg',
+          selite: 'Sama kahdeksankulmainen aukio on yhä kaupungin ydin, '
+            + 'jonka laidalla ovat kaupungintalo kellotorneineen ja '
+            + 'katedraali.',
+          lahde: 'AnnWoolliams, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Uusi Edinburgh maailman toisella laidalla',
+          teksti: 'Skotlannin vapaakirkon maallikkojärjestö perusti '
+            + 'Dunedinin 1848 Otago Harbourin perukkaan, ja nimi on '
+            + 'gaelia: Dùn Èideann on Edinburgh. Kaupunginmittaaja '
+            + 'Charles Kettle sai ohjeekseen jäljitellä emokaupunkia ja '
+            + 'piirsi komean, romanttisen katuverkon, jonka rakentajat '
+            + 'sitten taistelivat läpi mäkisen maaston. Maallisena '
+            + 'johtajana toimi Napoleonin sotien veteraani William '
+            + 'Cargill ja hengellisenä pastori Thomas Burns, runoilija '
+            + 'Robert Burnsin veljenpoika. 1850-luvun loppuun mennessä '
+            + 'kaupunkiin oli muuttanut noin 12 000 skottia, monet '
+            + 'teollistuneelta Lowlandsin alueelta.',
+          tiedosto: 'Dunedin Burns Statue.JPG',
+          selite: 'Octagonilla istuva Robert Burns on kaupungin '
+            + 'skotlantilaisen perustamisen tunnus, ja runoilijan '
+            + 'veljenpoika Thomas Burns oli siirtokunnan hengellinen '
+            + 'johtaja.',
+          lahde: 'Mattinbgn, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Dunedin',
+        },
+        {
+          otsikko: 'Kulta teki siirtokunnasta maan rikkaimman',
+          teksti: 'Vuonna 1861 löytyi kultaa Gabriel’s Gullystä, ja väki '
+            + 'tulvi Otagoon niin nopeasti, että Dunedinista tuli 1865 '
+            + 'väkiluvultaan Uuden-Seelannin ensimmäinen kaupunki. '
+            + 'Kultarahat rakensivat myös pysyvää: 1869 perustettiin '
+            + 'Otagon yliopisto, maan vanhin, ja 1875 dunedinilainen '
+            + 'James Mills perusti Union-laivayhtiön, josta kasvoi '
+            + 'eteläisen pallonpuoliskon suurin varustamo. Vuoteen 1874 '
+            + 'mennessä Dunedin lähiöineen oli ohittanut Aucklandin '
+            + 'asukasluvultaan — 29 832 vastaan 27 840 — ja oli hetken '
+            + 'koko maan suurin kaupunki.',
+          tiedosto: 'University of Otago Clocktower. NZ (22954035383).jpg',
+          selite: 'Otagon yliopiston rekisteritalo eli kellotorni on '
+            + 'muurattu tummasta Leith Valleyn basaltista ja vaaleasta '
+            + 'Oamarun kivestä.',
+          lahde: 'Bernard Spragg. NZ from Christchurch, New Zealand, Wikimedia Commons (CC0)',
+          wiki: 'University of Otago',
+        },
+        {
+          otsikko: 'Vuosi, jolloin kolme hanketta valmistui yhtä aikaa',
+          teksti: 'Isoisän matkan vuonna 1873 kolme erillistä '
+            + 'Dunedin-hanketta saapui maaliin. Marraskuun 23. päivänä '
+            + 'vihittiin käyttöön First Church of Otago; perustuskivi oli '
+            + 'laskettu viisi vuotta aiemmin, ja torni huippuineen kohoaa '
+            + '56 metriin. Samana vuonna kaupungin oma Bank of Otago '
+            + 'sulautui vasta perustettuun National Bank of New '
+            + 'Zealandiin, joka niin ikään toimi Dunedinista käsin. Ja '
+            + 'huhtikuun 9. päivänä Dunedin & Port Chalmers '
+            + '-rautatie, kaupungin ensimmäinen, myytiin Otagon '
+            + 'maakuntaneuvostolle 187 106 punnalla.',
+          tiedosto: 'First church of Otago.jpg',
+          selite: 'First Church of Otago on Robert Lawsonin suunnittelema '
+            + 'goottilainen kirkko, jonka torni ja huippu nousevat 56 '
+            + 'metriin.',
+          lahde: 'AnnWoolliams, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'First Church of Otago',
+        },
+        {
+          otsikko: 'Museo, joka perusti itsensä juhlavuonna',
+          teksti: 'Kun Otagon skotlantilainen siirtokunta täytti 50 vuotta '
+            + '1898, varhaiset uudisasukkaat perustivat juhlan kunniaksi '
+            + 'oman museonsa. Siitä kasvoi Toitū Otago Settlers Museum, '
+            + 'Uuden-Seelannin vanhin historiamuseo. Alkuun se keskittyi '
+            + 'vain vuosien 1848–1861 pioneereihin mutta laajeni '
+            + 'myöhemmin kattamaan kaikki tulokkaat, ja silloin sana '
+            + '"early" katosi nimestä. Museon kuljetussiipi on entinen '
+            + 'vuoden 1939 art deco -linja-autoasema, jossa nyt seisovat '
+            + 'kaupungin vanhat raitiovaunut ja veturit. Dunedinin '
+            + 'kaupunki otti museon omistukseensa 1991.',
+          tiedosto: 'Toitu Otago Settlers Museum main wing.jpg',
+          selite: 'Toitū Otago Settlers Museumin punatiilinen päärakennus '
+            + 'seisoo keskustan eteläreunalla rautatieaseman kupeessa.',
+          lahde: 'Tony Hisgett from Birmingham, UK, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Toitū Otago Settlers Museum',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: '00 1512 Dunedin (New Zealand) railway station.jpg',
+          selite: 'Dunedinin rautatieasema valmistui 1906 George Troupin '
+            + 'piirustusten mukaan, ja paikalliset pitävät sitä maan '
+            + 'valokuvatuimpana rakennuksena.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Dunedin on Eteläsaaren kaakkoiskulmassa, 23 kilometriä '
+          + 'pitkän Otago Harbour -lahden perukassa. Matkailijan Dunedin '
+          + 'on kaksiosainen: keskusta mahtuu Octagonin ympärille '
+          + 'muutaman korttelin alalle, ja siitä lähtee kapea niemimaa, '
+          + 'jonka kärjessä albatrossit pesivät. Kaupunki on rakennettu '
+          + 'sammuneen tulivuoren päälle, ja se tuntuu jaloissa: melkein '
+          + 'joka suuntaan Octagonilta nousee jyrkkä katu. Yliopisto tuo '
+          + 'keskustaan opiskelijoita, ja viktoriaaninen kivikeskusta on '
+          + 'peruja vuosista, jolloin kulta teki Dunedinista maan '
+          + 'rikkaimman kaupungin.',
+        artikkeli: {
+          nimi: 'Matkailijan Dunedin',
+          taitto: 'opas',
+          teksti: 'Skottien piirtämä kaupunki sammuneen tulivuoren '
+            + 'päällä, ja sen kupeessa niemimaa, jolla pesivät maailman '
+            + 'harvinaisin pingviini ja mantereen ainoat albatrossit.',
+          nosto: 'Kaupunkia ympäröivä kukkularengas — Mount Cargill, '
+            + 'Flagstaff, Saddle Hill, Signal Hill — ja koko Otagon '
+            + 'niemimaa ovat saman tulivuoren jäänteitä; Otago Harbour '
+            + 'täyttää sen vanhimman ja kuluneimman osan.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Dunedin Airport on Momonan kylässä noin puolen '
+                + 'tunnin ajomatkan päässä keskustasta; se avattiin 1962 '
+                + 'ja palveli vuonna 2024 lähes 904 000 matkustajaa. '
+                + 'Rautateitse kaupunkiin ei enää pääse säännöllisillä '
+                + 'henkilöjunilla, vaan asemalta lähtevät nykyään vain '
+                + 'turistijunat — parhaimmillaan täältä kulki sata junaa '
+                + 'päivässä. Keskustassa liikutaan kävellen: Octagonilta '
+                + 'on rautatieasemalle ja Toitū-museolle vain vartin '
+                + 'matka, ja lähes joka suunnassa vastassa on ylämäki. '
+                + 'Otagon niemimaan kärkeen Taiaroa Headille on runsaat '
+                + 'kaksikymmentä kilometriä, mutta rantatie mutkittelee, '
+                + 'joten matkaan kannattaa varata tunti.',
+            },
+            {
+              otsikko: 'Kaupunki sammuneen tulivuoren päällä',
+              teksti: 'Koko Dunedin lepää tulivuoren päällä. '
+                + 'Monipurkauspaikkainen kilpitulivuori oli aktiivinen '
+                + '16–10 miljoonaa vuotta sitten ja ulottui alun perin '
+                + 'nykyisestä kaupungista Aramoanaan asti. Otago Harbour '
+                + 'täyttää nyt tulivuoren vanhimmat ja eniten kuluneet '
+                + 'osat, ja kaupunkia ympäröivä kukkularengas — Mount '
+                + 'Cargill, Flagstaff, Saddle Hill ja Signal Hill — sekä '
+                + 'koko Otagon niemimaa ovat saman purkauskentän '
+                + 'jäänteitä. Laavan jäähtyessä syntyneet basalttipatsaat '
+                + 'näkyvät yhä paljaina rinteillä, esimerkiksi Mount '
+                + 'Cargillin Organ Pipesilla.',
+              kuva: {
+                tiedosto: 'Columnar basalt, Otago Peninsula, NZ.JPG',
+                selite: 'Basalttipatsaat syntyivät, kun paksu laavavirta '
+                  + 'jäähtyi ja halkeili säännöllisiksi pilareiksi.',
+                lahde: 'Benchill, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: puutarha nimeltä Lan Yuan',
+              teksti: 'Keskustan reunalla, Toitū-museon ja rautatieaseman '
+                + 'kupeessa, kukoistaa Lan Yuan — Uuden-Seelannin ainoa '
+                + 'aito kiinalainen puutarha ja yksi vain kolmesta koko '
+                + 'Kiinan ulkopuolella Portlandin ja Vancouverin ohella. '
+                + 'Puutarha suunniteltiin ja esivalmistettiin '
+                + 'Shanghaissa, purettiin ja koottiin uudelleen '
+                + 'Dunedinissa shanghailaisten käsityöläisten avulla; se '
+                + 'avattiin 2008. Puutarha on kunnianosoitus kaupungin '
+                + 'kiinalaisyhteisölle, joka on maan vanhin: '
+                + 'kantonilaisia asettui Dunediniin jo 1860-luvun '
+                + 'kultaryntäyksen aikaan, noin viisitoista vuotta '
+                + 'kaupungin perustamisen jälkeen.',
+              kuva: {
+                tiedosto: 'Entrance hall reflecting in the lake in the evening (Dunedin Chinese Garden).jpg',
+                selite: 'Lan Yuanin sisääntulohalli heijastuu puutarhan '
+                  + 'lampeen iltavalossa.',
+                lahde: 'Pseudopanax at English Wikipedia, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kasvu siirtyi pohjoiseen',
+              teksti: 'Vuoteen 1900 mennessä Dunedin ei enää ollut maan '
+                + 'suurin kaupunki. Vaikutusvalta ja kasvu olivat '
+                + 'siirtyneet pohjoisemmas — ilmiötä kutsuttiin nimellä '
+                + '"the drift north", ja se jatkui suuren osan '
+                + '1900-lukua. Kaupunki putosi lopulta neljänneksi '
+                + 'pääkeskukseksi Aucklandin, Wellingtonin ja '
+                + 'Christchurchin jälkeen. Vasta 1990-luvulla väestökato '
+                + 'tasaantui ja Dunedin keksi itsensä uudelleen '
+                + 'perintökaupunkina: viktoriaaniset pääkadut '
+                + 'kunnostettiin, ja juuri se kivikeskusta, jota '
+                + 'kultavuosien raha oli rakentanut, muuttui kaupungin '
+                + 'vahvuudeksi.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Dunedin-artikkelin '
+                + 'sääruudusta (NIWA, normaalikausi 1991–2020); lehdellä '
+                + 'ei ole omaa vuosigraafia, koska ERA5-lukuja ei saatu '
+                + 'haettua. Ilmasto on lauhkea ja merellinen: tammikuu on '
+                + 'lämpimin kuukausi keskilämpötilaltaan 15,2 astetta ja '
+                + 'heinäkuu kylmin 6,7 asteella, eli vuoden ääripäät ovat '
+                + 'yhdeksän asteen päässä toisistaan. Sadetta tulee noin '
+                + '720 millimetriä vuodessa ja se jakautuu tasaisesti — '
+                + 'kuivin kuukausi syyskuu saa 47 ja sateisin joulukuu 71 '
+                + 'millimetriä — mutta sade tulee usein tihkuna. '
+                + 'Aurinkoa paistaa vajaat 1 800 tuntia vuodessa. '
+                + 'Vuodenajat ovat käänteiset: kesä on joulu–helmikuussa.',
+              kuva: {
+                tiedosto: 'Dunedin Botanic Garden 05.jpg',
+                selite: 'Dunedinin kasvitieteellisen puutarhan '
+                  + 'kalliopuutarha rinteessä kukkii marraskuussa eli '
+                  + 'eteläisen pallonpuoliskon keväässä.',
+                lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Otagon niemimaa',
+                tahdet: 3,
+                selite: 'Kapea vanhan tulivuoren harjanne, jonka kärjessä '
+                  + 'pesivät kuninkaanalbatrossit ja rinteillä hoiho.',
+              },
+              {
+                mita: 'Rautatieasema',
+                tahdet: 3,
+                selite: 'Vuoden 1906 edustusrakennus, jonka lattiassa on '
+                  + 'lähes 750 000 Minton-laattaa.',
+              },
+              {
+                mita: 'Toitū Otago Settlers Museum',
+                tahdet: 2,
+                selite: 'Maan vanhin historiamuseo ja sen art deco '
+                  + '-linja-autoasemaan rakennettu kuljetussiipi.',
+              },
+              {
+                mita: 'Larnach Castle',
+                tahdet: 2,
+                selite: 'Uuden-Seelannin ainoa linnaksi kutsuttu talo '
+                  + 'niemimaan harjanteella.',
+              },
+              {
+                mita: 'Baldwin Street',
+                tahdet: 2,
+                selite: 'Maailman jyrkin katu, jonka jyrkin kohta nousee '
+                  + 'suhteessa 1:2,86.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Sääluvut ovat samasta sääruudusta kuin
+             * jakso 5. Pesimäalueita koskeva kohta on mukana, koska
+             * hoiho on uhanalainen ja rannat ovat sen elinaluetta.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Vuodenajat ovat käänteiset',
+                teksti: 'Kesä on joulu–helmikuussa ja talvi '
+                  + 'kesä–elokuussa; heinäkuun keskilämpötila on 6,7 '
+                  + 'astetta.',
+              },
+              {
+                otsikko: 'Tihkusadetta ympäri vuoden',
+                teksti: 'Vuosisade on noin 720 millimetriä ja se jakautuu '
+                  + 'kaikille kuukausille — sadepäiviä on kesälläkin '
+                  + 'seitsemästä kymmeneen kuukaudessa.',
+              },
+              {
+                otsikko: 'Katu voi olla jyrkempi kuin uskoo',
+                teksti: 'Baldwin Streetin jyrkin kohta nousee suhteessa '
+                  + '1:2,86, eli lähes 35 prosenttia — kävely ylös on '
+                  + 'oikea nousu.',
+              },
+              {
+                otsikko: 'Pingviinit ovat uhanalaisia',
+                teksti: 'Hoihon kanta on romahtanut niemimaalla, ja '
+                  + 'pesimärannoilla liikutaan vain merkityillä poluilla '
+                  + 'ja katselukojuista.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Otagon niemimaa',
+      johdanto: 'Otagon niemimaa on sammuneen tulivuoren jäänne, jonka '
+        + 'kärjessä kuninkaanalbatrossit pesivät ainoana paikkana '
+        + 'asutulla mantereella. Kāi tahulle sama kärki on Ōtākou, nimi '
+        + 'josta koko maakunta on saanut nimensä.',
+      tehtava: {
+        kysymys: 'Kuinka paljon keltasilmäpingviinin kanta on pudonnut '
+          + 'Otagon niemimaalla 1990-luvun puolivälistä?',
+        vaihtoehdot: [
+          'noin 25 prosenttia',
+          'noin 40 prosenttia',
+          'noin 75 prosenttia',
+          'kanta on kaksinkertaistunut',
+        ],
+        oikea: 2,
+        fakta: 'Otagon niemimaan hoiho-kanta on pudonnut 75 prosenttia '
+          + '1990-luvun puolivälistä, ja kehityssuunta ennakoi lajin '
+          + 'katoamista niemimaalta 20–40 vuoden sisällä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Nimi, joka kirjoitettiin väärin ja jäi',
+          teksti: 'Ōtākou on kāi tahun oman rūnangan koti tänäkin '
+            + 'päivänä. Ennen maorin kirjoitusasun vakiintumista '
+            + '1840-luvulla nimi kirjoitettiin ääntämyksen mukaan Otago, '
+            + 'ja juuri se muoto jäi koko maakunnan nimeksi — vaikka sitä '
+            + 'luullaan usein eurooppalaiseksi vääntymäksi. Syy on '
+            + 'eteläisessä murteessa: ng-äänne on siinä sulautunut '
+            + 'k:hon, joten Ngāi Tahu on täällä Kāi Tahu. Paikan '
+            + 'eurooppalaishistoria alkoi Weller-veljesten 1831 '
+            + 'perustamasta valaanpyyntiasemasta, joka oli hetken yksi '
+            + 'maan suurimmista siirtokunnista ja suljettiin '
+            + '1840-luvulla valaskantojen ehdyttyä.',
+          tiedosto: 'Otakou marae.jpg',
+          selite: 'Ōtākoun marae niemimaan kärjessä on paikallisen '
+            + 'rūnangan koti, ja sen rakennukset valmistuivat '
+            + '1940-luvulla.',
+          lahde: 'Photo by Avenue, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ōtākou',
+        },
+        {
+          otsikko: 'Kärki, jonne albatrossit tulevat mantereelle',
+          teksti: 'Taiaroa Head Otagon niemimaan kärjessä on maailman '
+            + 'ainoa kuninkaanalbatrossien pesimäyhdyskunta asutulla '
+            + 'mantereella; kaikki muut lajin pesimäpaikat ovat '
+            + 'syrjäisillä saarilla. Ensimmäinen muna löydettiin täältä '
+            + '1919, mutta ensimmäisen poikasen selviytyminen '
+            + 'lentokykyiseksi nähtiin vasta 1938, ornitologi Lance '
+            + 'Richdalen työn tuloksena. Yli sadan linnun kanta on '
+            + 'vuosikymmenten hoitotyön tulos: kissoja, hillereitä, '
+            + 'näätiä ja lumikkoja pyydystetään pesimäalueelta jatkuvasti '
+            + 'pois.',
+          tiedosto: 'Northern royal albatross chick at Taiaroa Head, Aaron Heimann.jpg',
+          selite: 'Kuninkaanalbatrossin poikanen kasvaa Taiaroa Headin '
+            + 'ruohikossa lajin ainoassa mantereella sijaitsevassa '
+            + 'yhdyskunnassa.',
+          lahde: 'Aaron Heimann, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Taiaroa Head',
+        },
+        {
+          otsikko: 'Maailman harvinaisin pingviini vetäytyy',
+          teksti: 'Hoiho eli keltasilmäpingviini on IUCN:n luokituksessa '
+            + 'uhanalainen, ja Otagon niemimaalla sen kanta on '
+            + 'romahtanut 75 prosenttia 1990-luvun puolivälistä. '
+            + 'Kehityssuunta ennakoi lajin katoamista niemimaalta '
+            + 'kokonaan 20–40 vuoden sisällä. Syitä on useita: meren '
+            + 'lämpeneminen, 2000-luvun puolivälin tautiepidemia joka '
+            + 'tappoi lintuja suoraan, sekä kalastuksen ja saastumisen '
+            + 'vaikutukset, joiden osuutta tutkijat pitävät mahdollisesti '
+            + 'yhtä suurena tai suurempana kuin ilmastonmuutoksen.',
+          tiedosto: 'Megadyptes antipodes -Otago Peninsula, Dunedin, New Zealand -family-8.jpg',
+          selite: 'Hoiho pesii Otagon niemimaan rinteillä kasvillisuuden '
+            + 'suojaan ja sille rakennettuihin pesäkoppeihin.',
+          lahde: 'Steve from Bangkok, Thailand, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Yellow-eyed penguin',
+        },
+        {
+          otsikko: 'Uuden-Seelannin ainoa linna',
+          teksti: 'William Larnach osti maan 1870 ja aloitti '
+            + 'rakennustyöt 1871. Sama arkkitehti Robert Lawson, joka '
+            + 'suunnitteli First Churchin, loihti tällä kertaa '
+            + 'goottilaisen kartanon niemimaan harjanteelle. Materiaaleja '
+            + 'tuotiin ympäri maailmaa: Oamarun kiveä, venetsialaista '
+            + 'lasia, italialaista marmoria. Paikallislehti nimesi '
+            + 'rakennuksen linnaksi joulukuussa 1874, muutama päivä sen '
+            + 'jälkeen kun William ja Eliza Larnach olivat muuttaneet '
+            + 'sisään; 1887 valmistui vielä juhlasali tyttären '
+            + '21-vuotislahjaksi. Larnach kuoli parlamenttitalossa 1898, '
+            + 'ja perhe myi kartanon 1906.',
+          tiedosto: 'Larnach Castle, Dunedin.jpg',
+          selite: 'Larnach Castle on Uuden-Seelannin ainoa linnaksi '
+            + 'kutsuttu rakennus, ja sen edustalla on muotopuutarha '
+            + 'suihkulähteineen.',
+          lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Larnach Castle',
+        },
+      ],
+    },
+  ],
+  /*
+   * SUVA (Opus 6.9.2026, paketti O9) — Oseanian laudan viides
+   * kaupunkilehti ja Tyynenmeren saarten ensimmäinen. Aineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-suva.md ja sen riippumaton
+   * tarkistus tarkistus-suva.md. Tarkistuksen molemmat pakolliset
+   * korjaukset oli jo tehty faktapohjaan ennen kirjoitusta: 1873-kehyksen
+   * ylilyönti ("ei edes kunnollista kylää") korjattiin lähteen omalla
+   * sanamuodolla ("in 1868, when Suva was still a small village"), ja
+   * H2-nostoon lisättiin päätoimittajan vaatima elävän nykypäivän virke.
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026: "Suva",
+   * "Fiji", "Colony of Fiji", "Seru Epenisa Cakobau", "Indo-Fijians",
+   * "Girmitiyas", "Grand Pacific Hotel (Fiji)", "Albert Park (Suva)",
+   * "Rewa River", "University of the South Pacific", "Kava" ja
+   * "Colo-i-Suva Forest Reserve".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti (js/packs/oceania-saapumiset.js) oli jo olemassa
+   * eikä siihen koskettu.
+   *
+   * KAI COLO -SOTA 1873 ON MUKANA päätoimittajan 24.8.2026 päätöksen
+   * NELJÄLLÄ SITOVALLA EHDOLLA (spec-mantereet.md): käytetty faktapohjan
+   * tiivistettyä versiota, EI tarkkoja surmalukuja, EI dynamiittia, EI
+   * vankien orjamyyntiä, ja kansa kuvataan elävänä nykypäivän toimijana.
+   * Nosto H2 päättyy siksi virkkeeseen ylänköjen kylistä tänään.
+   * Fidžin vallankaappaukset (1987, 2000, 2006) on jätetty kokonaan pois,
+   * vaikka lähdeartikkelit puhuvat niistä paljon — sama linjaus kuin
+   * muuallakin pelissä (ei nykypolitiikkaa).
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026 jokaiseen
+   * pyyntöön "Daily API request limit exceeded", eikä lukuja keksitä
+   * (Samarkand-malli v965). Oppaan sääjakso nojaa siksi en-Wikipedian
+   * sääruutuun ja sanoo sen ääneen: luvut ovat Laucala Bayn asemalta,
+   * Maailman ilmatieteen järjestön normaalikaudelta 1991-2020.
+   * LUKURISTIRIITA KIRJOITETTU AUKI: artikkelin leipäteksti sanoo
+   * kuivimman kuukauden heinäkuun saavan 125 mm, mutta saman artikkelin
+   * 1991-2020-sääruutu antaa heinäkuulle 136 mm. Oppaassa käytetään
+   * sääruudun lukua ja lähde sanotaan ääneen.
+   *
+   * KUVAT haettiin Commonsin API:sta kategoriahauilla (Suva, Views of
+   * Suva, History of Suva, Grand Pacific Hotel Fiji, Albert Park (Suva),
+   * Seru Epenisa Cakobau, Fiji Museum, Colo-i-Suva, Suva City Carnegie
+   * Library), lisenssi ja tekijä luettiin extmetadatasta 6.9.2026, ja
+   * jokainen valittu kuva katsottiin silmin 900 px esikatseluna.
+   * SUVAN KUVAPOOLI ON OHUT, ja se näkyy hylkäyksissä: Maksym Kozlenkon
+   * laaja Suva-sarja on enimmäkseen katukuvaa, jossa on tunnistettavia
+   * kasvoja lähietäisyydellä (hylätty "Suva, Fiji 28/31/54/62/64/67"),
+   * samoin "Main Market Suva MatthiasSuessen-8936.jpg" ja "Boats by Town
+   * Wharf - Flickr - mikecogh.jpg". Vanha kuvasto on suurelta osin
+   * postikortteja, joihin on painettu kustantajan teksti — hylätty
+   * "The harbour, Suva, Fiji (NYPL Hades-2359163-4043519).jpg" (THE ROSE
+   * SERIES -painatus ja käsin kirjoitettu vuosiluku). Hylätty myös
+   * "Girmitiyas, Indentured labour.jpg" (Commons-käyttäjän oma
+   * lyijykynäpiirros, ei dokumentti) ja "Suva City.jpg" (mainostaulut
+   * pääosassa, hämärä).
+   * KOLME ARVATTUA KATEGORIAA EI OLE OLEMASSA, kuten tarkistus varoitti:
+   * Category:Fijians, Category:Indo-Fijians ja Category:Rewa River.
+   * AIHETOISTO, joka on tarkoituksellinen: keskustan halki laskeva puro
+   * esiintyy kolmesti (avauskuvassa suulta päin, ennen-nyt-parin
+   * molemmissa puoliskoissa) — eri tiedostot ja eri mittakaava, ja juuri
+   * tuon puron rannalta koko kaupunki alkoi kasvaa. Albert Park on
+   * kannessa ja nostossa H4 kahtena eri kuvana.
+   *
+   * ENNEN JA NYT on sama pari kuin matkakirjan valokuvataulussa
+   * (js/packs/oceania-valokuvat.js) siltä osin, että vanha vedos on sama
+   * Henry Winkelmannin lasinegatiivi vuodelta 1903; nykykuva on
+   * kuitenkin eri, koska taulun nykykuva on rantapromenadilta eikä
+   * samalta purolta. Selitteet on kirjoitettu tänne omiksi yhden
+   * virkkeen versioikseen.
+   */
+  suva: [
+    {
+      id: 'kaupunki',
+      nimi: 'Suva',
+      johdanto: 'Suva nousi mangroverantaiselle niemelle vasta isoisän '
+        + 'matkan jälkeen: 1873 paikalla oli pieni kylä ja kariutunut '
+        + 'puuvillahanke, ja Fidžin pääkaupunki oli vielä Levuka.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin. Ne ovat silti kolme laajaa yleiskuvaa: lahti ja
+       * sisämaan vuoret, sataman suu ja Albert Parkin aukio.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Suva Panorama MatthiasSuessen-8640.jpg',
+          selite: 'Suvan lahden takana kohoavat Viti Levun sisämaan '
+            + 'vuoret, joiden oikeassa reunassa erottuu Joske’s Thumbin '
+            + 'kärki.',
+          lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Suva Bay (Imagicity 1016).jpg',
+          selite: 'Suvan lahtea reunustavat matalat mangroverannat, ja '
+            + 'sen takana nousee vuorijono, joka pysäyttää '
+            + 'kaakkoispasaatin kosteuden.',
+          lahde: 'Graham Crumb, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Albert Park Suva 1 July 2014.jpg',
+          selite: 'Albert Parkin nurmikenttä on kaupungin suurin avoin '
+            + 'tila, ja sen takana seisoo vuoden 1914 Grand Pacific '
+            + 'Hotel.',
+          lahde: 'Stemoc, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: kolme laajaa yleiskuvaa kaupungin eri puolilta —
+       * keskustan katot, illan lahti ja purosuu, jonka rannalta kaupunki
+       * alkoi. Suvalle ei ole vielä generoitu herokuvia, joten
+       * karusellissa on kolme aitoa valokuvaa.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Suva City 1 February 2015.jpg',
+          selite: 'Suvan keskustassa siirtomaa-ajan matalat talot ja '
+            + '1970-luvun konttoritornit seisovat samassa korttelissa.',
+          lahde: 'Stemoc, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Sunset Suva MatthiasSuessen-7976.jpg',
+          selite: 'Aurinko laskee Suvan lahdelle, jonka rannalla '
+            + 'kaupunkilaiset istuvat katosten alla.',
+          lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Suva, Fiji 36.jpg',
+          selite: 'Keskustan halki laskeva puro erottaa vanhat '
+            + 'kauppakorttelit satamasta.',
+          lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Fiji Islands. Suva creek scene and township, 1903, PH-NEG-2561 001.jpg',
+          vuosi: '1903',
+          selite: 'Vuonna 1903 puron rannassa oli veneveistämö ja '
+            + 'puutaloja, ja pääkaupunki oli ollut Suvassa runsaat '
+            + 'kaksikymmentä vuotta.',
+          lahde: 'Henry Winkelmann, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Suva, Fiji 91.jpg',
+          selite: 'Sama puro virtaa yhä keskustan halki, mutta rannoilla '
+            + 'ovat nyt ostoskeskukset ja bougainvillea.',
+          lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Niemi, joka ei ollut vielä kaupunki',
+          teksti: 'Vuonna 1868 Baun sotapäällikkö Cakobau lahjoitti '
+            + 'australialaiselle Polynesia-yhtiölle 5 000 neliökilometriä '
+            + 'maata maksuksi Yhdysvalloille velatuista korvauksista, ja '
+            + 'yli 575 neliökilometriä siitä oli Suvan lähellä. Yhtiö '
+            + 'aikoi perustaa puuvillaviljelmän, mutta maaperä ja ilmasto '
+            + 'osoittautuivat sopimattomiksi. Kun isoisä kulki ohi 1873, '
+            + 'seudulla oli vain pieni Suvan kylä: pääkaupunki oli '
+            + 'Levuka, eikä Fidži ollut vielä Britannian siirtomaa. '
+            + 'Kaupunki syntyi vasta 1877, kun siirtomaaviranomaiset '
+            + 'siirsivät pääkaupungin tänne — Levukan ahdas paikka '
+            + 'vuoren ja meren välissä esti laajentumisen.',
+          tiedosto: 'Admiralty Chart No 1757 Nukulau Island to Namuka Island, including Lauthala, Suva and Namuka Harbs., Fiji Islands, Published 1876.jpg',
+          selite: 'Brittiläinen merikartta Suvan satamasta julkaistiin '
+            + '1876, kaksi vuotta sen jälkeen kun saaret oli luovutettu '
+            + 'Britannialle.',
+          lahde: 'United Kingdom Hydrographic Office, Wikimedia Commons (PD)',
+          wiki: 'Suva',
+        },
+        {
+          otsikko: 'Tyynenmeren New York',
+          teksti: 'Suvaa on kutsuttu Tyynenmeren New Yorkiksi — ei kokonsa '
+            + 'vaan monikulttuurisuutensa takia. Kaupungin kaksi '
+            + 'suurinta väestöryhmää ovat alkuperäiset fidžiläiset eli '
+            + 'iTaukei ja intialaista syntyperää olevat indofidžiläiset; '
+            + 'lisäksi Suvassa asuu rotumalaisia, lauanialaisia, '
+            + 'rabilaisia, kiinalaisia ja eurooppalaisten jälkeläisiä. '
+            + 'Kaupunki isännöi enemmän kansainvälisiä ja alueellisia '
+            + 'järjestöjä kuin mikään muu Tyynenmeren saaripääkaupunki, '
+            + 'ja Etelä-Tyynenmeren yliopiston pääkampus tuo tänne '
+            + 'opiskelijoita kaikkialta valtamereltä.',
+          tiedosto: 'Carnegie Library Suva MatthiasSuessen-8648.jpg',
+          selite: 'Suvan Carnegie-kirjasto rakennettiin 1909 ja on yhä '
+            + 'käytössä kaupungin kirjastona.',
+          lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Suva',
+        },
+        {
+          otsikko: 'Laiva, joka toi 61 000 uutta asukasta',
+          teksti: 'Höyrylaiva Leonidas laski ankkurin Levukassa 14. '
+            + 'toukokuuta 1879 ja purki 498 intialaista sopimustyöläistä '
+            + '— ensimmäiset niistä yli 61 000:sta, jotka saapuivat '
+            + 'seuraavien 37 vuoden aikana viljelemään sokeriruokoa. '
+            + 'Sopimus, jota kutsuttiin girmitiksi englannin sanasta '
+            + 'agreement, sitoi työntekijän viideksi vuodeksi kerrallaan, '
+            + 'ja valtaosa jäi Fidžiin sopimuskauden päätyttyä. '
+            + 'Järjestelmä lakkautettiin virallisesti 1920. Sen perintö '
+            + 'elää: vuoden 2017 väestönlaskennassa indofidžiläisiä oli '
+            + '289 237 eli 32,7 prosenttia koko maan väestöstä.',
+          tiedosto: 'Fiji Museum in Suva.jpg',
+          selite: 'Fidžin museo toimii Thurston Gardensin puistossa, ja '
+            + 'sen sisäänkäyntiä koristaa saarten luontoa esittävä '
+            + 'seinämaalaus.',
+          lahde: 'Yuko Hara from Yokohama, Japan, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Indo-Fijians',
+        },
+        {
+          otsikko: 'Hotelli, jossa merimatka ei päättynyt',
+          teksti: 'Kun uusiseelantilainen Union Steamship Company avasi '
+            + 'Grand Pacific Hotelin 23. toukokuuta 1914, huoneet oli '
+            + 'suunniteltu ensimmäisen luokan laivahyteiksi '
+            + 'suolavesikylpyammeineen, ja 4,5 metriä leveä terassi '
+            + 'kiersi koko rakennuksen kuin laivan kansi — matkustajan ei '
+            + 'ollut tarkoitus tuntea astuneensa maihin. Hotellista tuli '
+            + 'siirtomaa-Suvan sydän: siellä yöpyivät muun muassa '
+            + 'Somerset Maugham 1916 ja James A. Michener kirjoittaessaan '
+            + 'Tarinoita Etelämereltä 1946–1947. Hotelli suljettiin '
+            + 'rappeutuneena 1992 ja avattiin entisöitynä uudelleen 24. '
+            + 'toukokuuta 2014, tasan sata vuotta avajaisistaan.',
+          tiedosto: 'GPH Suva MatthiasSuessen-7735.jpg',
+          selite: 'Grand Pacific Hotelin valkoinen julkisivu ja '
+            + 'kuninkaanpalmut ovat Suvan rantabulevardin tunnetuin '
+            + 'näkymä.',
+          lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Grand Pacific Hotel (Fiji)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Sacred Heart Suva MatthiasSuessen-8140.jpg',
+          selite: 'Pyhän sydämen katedraali kohoaa kaksitorniseksi Suvan '
+            + 'keskustan laidalla, ja julkisivun päällä seisoo '
+            + 'Kristus-patsas.',
+          lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Suva on Fidžin pääkaupunki ja Etelä-Tyynenmeren suurin '
+          + 'kaupunki. Se on rakennettu kukkulaiselle niemelle Viti Levun '
+          + 'kaakkoiskulmassa, Laucala Bayn ja Suva Harbourin väliin. '
+          + 'Matkailijan Suva on kompakti: siirtomaa-ajan hallintokortteli '
+          + 'puistoineen, museoineen ja hotelleineen mahtuu kilometrin '
+          + 'säteelle rantabulevardin varrelle, ja sen takaa alkavat '
+          + 'kauppakadut. Niemi on lähes meren ympäröimä, mutta sen '
+          + 'rantaa reunustavat mangrovemetsät eikä hiekka: lähin '
+          + 'hiekkaranta on 40 kilometrin päässä. Sade kuuluu asiaan '
+          + 'ympäri vuoden, ja sateenvarjo on Suvassa yhtä tavallinen '
+          + 'varuste kuin aurinkolasit.',
+        artikkeli: {
+          nimi: 'Matkailijan Suva',
+          taitto: 'opas',
+          teksti: 'Sateinen niemi, jolle britit piirsivät pääkaupungin — '
+            + 'ja jossa kaksi kansaa on sen jälkeen rakentanut yhteisen '
+            + 'kaupungin.',
+          nosto: 'Suvassa ei ole kuivaa kautta lainkaan: yksikään kuukausi '
+            + 'ei jää alle 60 millimetrin, ja vuosikertymä on lähes kolme '
+            + 'tuhatta millimetriä — yli kaksinkertainen saaren läntiseen '
+            + 'puoleen verrattuna.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Suvan oma lentokenttä on Nausorissa noin '
+                + 'kahdenkymmenen kilometrin päässä koilliseen. '
+                + 'Kaupungin sisällä liikutaan kävellen: '
+                + 'rantabulevardilta on Albert Parkin, Thurston Gardensin '
+                + 'ja Fidžin museon ohi kauppakaduille vain runsaan '
+                + 'kilometrin matka. Cumming Street on ollut vilkas ja '
+                + 'värikäs ostosalue siirtomaa-ajoista lähtien, kapeine '
+                + 'katuineen ja alkuperäisine julkisivuineen, ja aivan '
+                + 'sen vieressä on 2009 valmistunut TappooCity, '
+                + 'Etelä-Tyynenmeren suurin ostoskeskus Australian ja '
+                + 'Uuden-Seelannin ulkopuolella.',
+            },
+            {
+              otsikko: 'Sateinen niemi',
+              teksti: 'Suva on rakennettu kukkulaiselle niemelle Laucala '
+                + 'Bayn ja Suva Harbourin väliin. Vuoret niemen pohjois- '
+                + 'ja länsipuolella nappaavat kaakkoispasaatituulen '
+                + 'kosteuden juuri tässä kohdassa, ja siksi täällä sataa '
+                + 'ympäri vuoden. Fidžin toinen kuvernööri sir Arthur '
+                + 'Hamilton-Gordon totesi aikanaan, ettei ollut nähnyt '
+                + 'sateen tulevan missään niin kuin Suvassa eikä juuri '
+                + 'yhtään päivää ilman sadetta. Merkittävä osa '
+                + 'keskustasta, parlamenttirakennukset mukaan lukien, '
+                + 'seisoo täytetyllä mangrovesuolla — kaupunki laajeni '
+                + 'kirjaimellisesti meren päälle, koska niemellä ei ollut '
+                + 'tilaa. Sisämaan sateisin kolmannes valuu Rewajokeen, '
+                + 'joka on Fidžin pisin ja laskee Laucala Bayhin '
+                + 'kaupungin kupeessa.',
+              kuva: {
+                tiedosto: 'Colo-i-Suva Stream.jpg',
+                selite: 'Colo-i-Suvan sademetsäpuiston puro virtaa '
+                  + 'kymmenen kilometriä keskustasta pohjoiseen.',
+                lahde: 'Tucoxn, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: yaqonan malja',
+              teksti: 'Kava-kasvi, jota Fidžissä kutsutaan nimellä '
+                + 'yaqona, kesytettiin Pohjois-Vanuatussa noin 3 000 '
+                + 'vuotta sitten ja levisi Tyynellemerelle lapita-'
+                + 'kulttuurin mukana. Juoma valmistetaan kasvin juuresta '
+                + 'ja tarjoillaan usein puolikkaasta kookospähkinän '
+                + 'kuoresta, jota sanotaan biloksi. Maailman '
+                + 'terveysjärjestö arvioi vuonna 2016 perinteisen, '
+                + 'vesipohjaisen kavajuoman kohtuukäytön terveysriskin '
+                + 'hyväksyttävän matalaksi — toisin kuin orgaanisilla '
+                + 'liuottimilla valmistettujen uutteiden, joita monet '
+                + 'maat rajoittivat 2002 maksavaurioepäilyjen takia.',
+              kuva: {
+                tiedosto: 'Kava framställning.jpg',
+                selite: 'Kava siivilöidään kankaan läpi veistettyyn '
+                  + 'tanoa-maljaan, joka seisoo matalilla jaloilla '
+                  + 'mattojen päällä.',
+                lahde: 'Dave Lonsdale, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kaksitoista maata, yksi kampus',
+              teksti: 'Etelä-Tyynenmeren yliopisto perustettiin 1968, ja '
+                + 'sen pääkampus Suvan Laucala Bayssa nousi entisen '
+                + 'Uuden-Seelannin ilmavoimien tukikohdan paikalle. '
+                + 'Yliopisto palvelee aluetta, joka kattaa 33 miljoonaa '
+                + 'neliökilometriä merta — yli kolme kertaa Euroopan '
+                + 'kokoisen alueen — vaikka jäsenmaiden yhteinen '
+                + 'maapinta-ala vastaa vain Tanskan kokoa. Aluekeskuksia '
+                + 'on yksitoista eri puolilla Tyyntämerta, ja '
+                + 'jäsenmaiden väkiluku vaihtelee Tokelaun 1 500 '
+                + 'asukkaasta Fidžin yli 900 000:een. Se on suurin '
+                + 'yliopisto Tyynenmeren saarilla Havaijin ulkopuolella.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Suva-artikkelin '
+                + 'sääruudusta (Laucala Bayn asema, Maailman '
+                + 'ilmatieteen järjestön normaalikausi 1991–2020); '
+                + 'lehdellä ei ole omaa vuosigraafia, koska ERA5-lukuja '
+                + 'ei saatu haettua. Suvassa on trooppinen '
+                + 'sademetsäilmasto ilman varsinaista kuivaa kautta: '
+                + 'vuoden keskilämpötila on 26,2 astetta, ja kuukausien '
+                + 'ero on pieni — helmikuun 28,1 asteesta heinä-elokuun '
+                + '24,2 asteeseen. Sadetta tulee vuodessa noin 2 992 '
+                + 'millimetriä ja sadepäiviä on 188. Kesäkuusta '
+                + 'lokakuuhun sataa selvästi vähemmän kuin marras-'
+                + 'toukokuussa: kuivimman kuukauden heinäkuun 136 '
+                + 'millimetriä on alle puolet joulukuun 344 '
+                + 'millimetristä. Artikkelin leipäteksti puhuu heinäkuun '
+                + 'kohdalla 125 millimetristä; ero johtuu eri '
+                + 'mittausjaksosta. Trooppiset syklonit ovat mahdollisia '
+                + 'marraskuusta huhtikuuhun.',
+              kuva: {
+                tiedosto: 'Thurston Garden Suva MatthiasSuessen-7808.jpg',
+                selite: 'Thurston Gardensin juomavesilähde on ollut '
+                  + 'puiston kävijöiden käytössä vuodesta 1914.',
+                lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Grand Pacific Hotel',
+                tahdet: 3,
+                selite: 'Vuoden 1914 hotelli, jonka huoneet rakennettiin '
+                  + 'laivahyttien näköisiksi ja joka entisöitiin '
+                  + 'satavuotispäivänään.',
+              },
+              {
+                mita: 'Albert Park',
+                tahdet: 3,
+                selite: 'Aukio, jolla Fidžin itsenäisyys julistettiin '
+                  + '1970 ja jolla pelataan rugbya joka iltapäivä.',
+              },
+              {
+                mita: 'Fidžin museo',
+                tahdet: 2,
+                selite: 'Thurston Gardensin puistossa, kävelymatkan '
+                  + 'päässä rantabulevardilta.',
+              },
+              {
+                mita: 'Colo-i-Suva',
+                tahdet: 2,
+                selite: 'Sademetsäpuisto putouksineen ja uima-altaineen '
+                  + 'runsaan kymmenen kilometrin päässä keskustasta.',
+              },
+              {
+                mita: 'Cumming Street',
+                tahdet: 2,
+                selite: 'Kapea kauppakatu, joka on ollut vilkas '
+                  + 'siirtomaa-ajoista asti.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua.
+             * Sääluvut ovat samasta sääruudusta kuin jakso 5.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Sadetta joka kuukausi',
+                teksti: 'Kuivaa kautta ei ole lainkaan: sadepäiviä on '
+                  + 'vuodessa 188, ja vähäsateisinkin kuukausi saa yli '
+                  + 'sata millimetriä.',
+              },
+              {
+                otsikko: 'Ranta on mangrovea',
+                teksti: 'Suvan oma rantaviiva on mangrovemetsää; lähin '
+                  + 'hiekkaranta on 40 kilometrin päässä Pacific '
+                  + 'Harbourissa.',
+              },
+              {
+                otsikko: 'Syklonikausi marras–huhtikuussa',
+                teksti: 'Trooppiset syklonit osuvat saarille eteläisen '
+                  + 'kesän aikana, ja ne voimistavat Rewajoen tulvia.',
+              },
+              {
+                otsikko: 'Malja otetaan kaksin käsin',
+                teksti: 'Yaqona-seremoniassa juoma tarjotaan tietyssä '
+                  + 'järjestyksessä, ja vieraan odotetaan ottavan kuppi '
+                  + 'vastaan molemmin käsin.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Kuningaskunnasta pääkaupungiksi',
+      johdanto: 'Cakobau kruunasi itsensä Fidžin kuninkaaksi ja luopui '
+        + 'arvonimestä kolmessa vuodessa. Suva ei ollut osa sitä draamaa '
+        + 'vielä 1873 — se seisoi sivussa, kunnes Britannia teki siitä '
+        + 'pääkaupungin.',
+      tehtava: {
+        kysymys: 'Minä vuonna Fidžin saaret luovutettiin Britannialle?',
+        vaihtoehdot: [
+          '1868',
+          '1871',
+          '1874',
+          '1882',
+        ],
+        oikea: 2,
+        fakta: 'Cakobau ja muut ylimmät päälliköt allekirjoittivat '
+          + 'luovutuskirjan 10. lokakuuta 1874; pääkaupunki siirrettiin '
+          + 'Suvaan kolme vuotta myöhemmin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Mies, joka kruunasi itsensä kuninkaaksi',
+          teksti: 'Baun sotapäällikkö Seru Epenisa Cakobau julisti '
+            + 'itsensä koko Fidžin kuninkaaksi — tittelin, jota muut '
+            + 'päälliköt eivät koskaan täysin tunnustaneet. Kesäkuussa '
+            + '1871 hän perusti perustuslaillisen monarkian '
+            + 'eurooppalaisten uudisasukkaiden tuella, pääkaupunkinaan '
+            + 'Levuka. Kuningaskunta kesti kolme vuotta: velat, '
+            + 'verotusvastarinta ja puuvillan hinnan romahdus ajoivat '
+            + 'Cakobaun tarjoamaan saaria Britannialle, ja 10. lokakuuta '
+            + '1874 hän ja muut ylimmät päälliköt allekirjoittivat '
+            + 'luovutuskirjan. Cakobau luopui kuninkaantittelistä mutta '
+            + 'säilytti Baun oman Vunivalu-arvonimensä kuolemaansa 1883 '
+            + 'saakka.',
+          tiedosto: 'Thakombau, ex-king of Fiji, photograph by Dufty.jpg',
+          selite: 'Duftyn valokuvaamossa noin 1874 otettu muotokuva '
+            + 'Cakobausta, joka oli juuri luopunut Tui Viti '
+            + '-arvonimestään.',
+          lahde: 'Francis Herbert Dufty and Alfred William Buchanan Dufty, Wikimedia Commons (PD)',
+          wiki: 'Seru Epenisa Cakobau',
+        },
+        {
+          otsikko: 'Vuosi, jolloin sisämaassa käytiin sotaa',
+          teksti: 'Samaan aikaan kun isoisän matka vei hänet Fidžin ohi '
+            + '1873, saaren sisämaassa käytiin sotaa. Cakobaun hallitus '
+            + 'lähetti aseistetun joukon kukistamaan kai colo -heimoja, '
+            + 'jotka eivät olleet kääntyneet kristinuskoon eivätkä '
+            + 'tunnustaneet Cakobaun valtaa; taustalla oli myös kiista '
+            + 'maanomistuksesta. Kahdeksankuukautinen kampanja maalis–'
+            + 'lokakuussa 1873 päättyi antautumiseen. Sota oli yksi '
+            + 'viimeisistä merkeistä siitä, ettei koko saari ollut vielä '
+            + 'yhden hallinnon alla. Sisämaan heimojen jälkeläiset ovat '
+            + 'tänäkin päivänä elävä osa Fidžin iTaukei-väestöä, ja '
+            + 'ylänköjen kylissä vaalitaan omia perinteitä.',
+          tiedosto: 'Panorama view of Joske\'s Thumb.JPG',
+          selite: 'Joske’s Thumb on vanhan tulivuoren kovettunut kurkku '
+            + 'Viti Levun sisämaassa, ja sen juurella on kyliä yhä.',
+          lahde: 'Tucoxn, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Fiji',
+        },
+        {
+          otsikko: 'Pääkaupunki, joka piirrettiin tyhjälle maalle',
+          teksti: 'Kun Britannia päätti siirtää pääkaupungin Levukasta '
+            + 'Suvaan, kuninkaallisten insinöörien eversti F. E. Pratt '
+            + 'nimitettiin ylikartoittajaksi 1875 suunnittelemaan uutta '
+            + 'kaupunkia. Hallinnon virallinen siirto tapahtui 1882. '
+            + 'Kunnallisstatuksen Suva sai vasta 1910, ja sen pinta-ala '
+            + 'pysyi yhden neliömailin kokoisena aina vuoteen 1952, '
+            + 'jolloin Muanikaun ja Samabulan kaupunginosat liitettiin ja '
+            + 'ala kasvoi kolmeentoista neliökilometriin. Lokakuussa '
+            + '1952 Suvasta tuli virallisesti Fidžin ensimmäinen '
+            + 'kaupunki — seitsemänkymmentä vuotta sen jälkeen, kun se '
+            + 'oli jo alkanut toimia pääkaupunkina.',
+          tiedosto: 'Suva. View from back of Catholic Church. May 1903., PH-NEG-15081 001.jpg',
+          selite: 'Vuonna 1903 Suvan satamassa oli höyrylaivoja ja '
+            + 'rantaa reunusti jo yhtenäinen kaupunki; oikeassa reunassa '
+            + 'näkyy valokuvaajan oma negatiivin numero.',
+          lahde: 'Henry Winkelmann, Wikimedia Commons (PD)',
+          wiki: 'Suva',
+        },
+        {
+          otsikko: 'Aukio, jolla itsenäisyys julistettiin',
+          teksti: 'Prinssi Charles luovutti Fidžin itsenäisyysasiakirjat '
+            + 'pääministeri Ratu Sir Kamisese Maralle 10. lokakuuta 1970 '
+            + 'suuren väkijoukon edessä Albert Parkissa. Uusi Fidžin '
+            + 'lippu oli nostettu salkoon samalla aukiolla edellisenä '
+            + 'päivänä. Aukio oli ehtinyt olla otsikoissa jo kerran: '
+            + 'lentäjä Charles Kingsford Smith laskeutui tänne 1928 '
+            + 'ensimmäisellä Tyynenmeren ylittäneellä lennolla. Nimensä '
+            + 'puisto on saanut prinssi Albertilta, kuningatar Viktorian '
+            + 'puolisolta — samalta hallitsijalta, jolle saaret oli '
+            + 'aikanaan luovutettu.',
+          tiedosto: 'USP Bure MatthiasSuessen-8729.jpg',
+          selite: 'Albert Parkin nurmella pelataan rugbya iltapäivisin, '
+            + 'ja kentän takana kohoaa hallintorakennuksen kellotorni.',
+          lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Albert Park (Suva)',
+        },
+      ],
+    },
+  ],
 };

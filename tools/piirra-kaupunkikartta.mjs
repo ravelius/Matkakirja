@@ -3348,6 +3348,67 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -36.836, etela: -36.888, lansi: 174.7317, ita: 174.7967 },
     meri: true,
   },
+  dunedin: {
+    /*
+     * OCTAGONIN YMPÄRISTÖ JA POHJOINEN LAAKSO (6.9.2026). Ruutu on
+     * 5,0 × 5,0 km eli työkalun ohjeen alalaidassa, ja se riittää:
+     * Dunedinin kymmenen kohdetta mahtuvat siihen Baldwin Streetiltä
+     * (-45,84944) Queens Gardensiin (-45,87778).
+     *
+     * NIEMIMAA JÄÄ RUUDUN ULKOPUOLELLE, ja se on tietoinen valinta.
+     * Larnach Castle (170,627) on 9,7 ja Taiaroa Head (170,728) 20,5
+     * kilometrin päässä Octagonista; molempien ottaminen mukaan
+     * vaatisi yli 40 kilometrin ruudun, jonka keskiosassa olisi
+     * pelkkää lahtea. Kumpikin on sitä paitsi kaupunkilehden oma
+     * nosto (kulttuuri-kategoriat.js: dunedin, nostot L2 ja L4).
+     *
+     * LÄNSIREUNA ON VEDETTY RINTEESEEN 170,4785 asti, vaikka läntisin
+     * kohde (Otago Boys' High School) on 170,4950. Syy on lehden
+     * mittakaavajana vasemmassa alakulmassa (ui.js): tiukemmalla
+     * rajauksella Speight'sin panimo istui 27 %:n kohdalle ja osui
+     * janan päälle, kuten Kööpenhaminassa aikanaan Tivoli. Nyt
+     * panimo on 33 %:n kohdalla.
+     *
+     * meri: true. Otago Harbour on OSM:ssä rantaviivaa
+     * (natural=coastline) eikä vesimonikulmio, joten ilman lippua
+     * kartan koillisnurkka olisi paperin värinen.
+     */
+    rajat: { pohjoinen: -45.8411, etela: -45.8861, lansi: 170.4785, ita: 170.5432 },
+    meri: true,
+  },
+  suva: {
+    /*
+     * SIIRTOMAA-AJAN HALLINTOKORTTELI NIEMEN KÄRJESSÄ (6.9.2026).
+     * Ruutu on 3,1 × 3,1 km eli pelin tiiviimpiä — pienempi kuin San
+     * Franciscon 4,4 km. Syy on aineistossa: Suvan kohteet ovat
+     * poikkeuksellisen tiiviissä nauhassa rantabulevardin varrella
+     * (docs/mantereet-tyoaineisto/faktapohja-suva.md, osio 4 mittasi
+     * kuuden ensimmäisen kohteen välit 0,23–0,67 kilometriksi).
+     *
+     * ENSIMMÄINEN RAJAUS OLI 3,6 KM JA SE HYLÄTTIIN. Koeajo 6.9.2026
+     * näytti, miksi: kun ruutuun otettiin mukaan myös stadion 2,8
+     * kilometrin päässä idässä, koko siirtomaa-ajan kortteli puristui
+     * vasempaan reunaan (x 6–20 %) ja neljä viidesosaa kuvasta oli
+     * esikaupunkia ilman yhtään kohdetta. Stadion jätettiin siksi pois
+     * — sillä ei ole Commonsissa omaa kuvakategoriaakaan.
+     *
+     * KOHTEITA ON NELJÄ EIKÄ KYMMENTÄ. Se ei ole laiskuutta vaan
+     * lähdetilanne: en-Wikipediasta löytyy Suvan alueelta kaikkiaan
+     * kahdeksan koordinaatillista kohdetta, ja niistä kolme (Grand
+     * Pacific Hotel, Fidžin museo ja Albert Park) on kaupunkilehden
+     * omien nostojen aihe — kartta ei toista lehden nostoja. Fidžin
+     * museo on lisäksi vain 124 metrin päässä Thurston Gardensin
+     * pisteestä ja Albert Park 168 metrin päässä hallintorakennuksista,
+     * eli numeroympyrät menisivät päällekkäin (Petran ja Mekan oppi).
+     * Kartta on siksi Adenin kokoluokkaa; puuttuvat kohteet on kirjattu
+     * raporttiin.
+     *
+     * meri: true. Suva Harbour ja Laucala Bay ovat OSM:ssä
+     * rantaviivaa, ja ilman lippua puolet ruudusta olisi paperia.
+     */
+    rajat: { pohjoinen: -18.1329, etela: -18.1605, lansi: 178.4180, ita: 178.4470 },
+    meri: true,
+  },
   sanfrancisco: {
     /*
      * Niemen koillisnurkka: Aquatic Parkin rannasta Civic Centeriin ja

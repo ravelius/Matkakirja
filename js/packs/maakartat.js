@@ -10554,6 +10554,94 @@ export const KAUPUNKIKARTAT = {
     ],
   },
   /*
+   * DUNEDIN (6.9.2026). Rajaus on 5,0 kilometriä kanttiinsa Baldwin
+   * Streetiltä Queens Gardensiin — perustelu ja hylätyt vaihtoehdot
+   * ovat tools/piirra-kaupunkikartta.mjs:n dunedin-lohkossa.
+   *
+   * NIEMIMAA EI MAHDU RUUTUUN. Larnach Castle on 9,7 ja Taiaroa Head
+   * 20,5 kilometrin päässä Octagonista; molemmat ovat kaupunkilehden
+   * omia nostoja (kulttuuri-kategoriat.js: dunedin, nostot L2 ja L4),
+   * eivätkä ne siksi kuulu kartalle kummallakaan perusteella.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * skotlantilainen perustaminen Robert Burnsin patsaalla, kulta ja
+   * Otagon yliopiston kellotorni, vuoden 1873 kolmikko First Churchin
+   * kuvalla, Toitū Otago Settlers Museum, Ōtākou, Taiaroa Head, hoiho
+   * ja Larnach Castle — yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe. Octagon itse jätettiin pois samasta syystä: se on
+   * lehden ennen–nyt-parin nykykuva.
+   *
+   * KAHDEKSAN KOHDETTA, EI KYMMENTÄ. Karsinnan teki 200 metrin
+   * vähimmäisväli (Petran, Mekan ja Karachin oppi): Dunedinin
+   * kaupungintalo, St Paulsin kirkko, taidegalleria ja Lan Yuan ovat kaikki
+   * alle 150 metrin päässä jo valitusta kohteesta tai toisistaan.
+   * Taidegalleriasta ei myöskään löytynyt Commonsista kuvaa, jossa ei
+   * olisi tunnistettavia kasvoja tai näyttelyjulisteita.
+   */
+  dunedin: {
+    polku: 'assets/kartat/dunedin-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -45.8411, etela: -45.8861, lansi: 170.4785, ita: 170.5432 },
+    esittely: 'Kartan alue ulottuu Baldwin Streetiltä North East '
+      + 'Valleyn suulta Queens Gardensiin vanhan sataman rannalla. '
+      + 'Keskellä on Octagon, josta George Street ja Princes Street '
+      + 'haarautuvat, lännessä rinteet nousevat jyrkästi ja '
+      + 'koillisessa on Otago Harbourin perukka. Larnach Castle ja '
+      + 'Taiaroa Head jäävät kauas kartan itäpuolelle Otagon '
+      + 'niemimaalle. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Aucklandissa ja New Yorkissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026.
+       */
+      { nimi: 'Baldwin Street', lat: -45.84944, lon: 170.53472 },
+      { nimi: 'Kasvitieteellinen puutarha', lat: -45.8575, lon: 170.5225 },
+      { nimi: 'Otagon museo', lat: -45.86568, lon: 170.51084 },
+      { nimi: 'Knoxin kirkko', lat: -45.867152, lon: 170.507083 },
+      { nimi: 'Otago Boys High School', lat: -45.871597, lon: 170.495051 },
+      { nimi: 'Dunedinin rautatieasema', lat: -45.87528, lon: 170.50889 },
+      { nimi: 'Speightsin panimo', lat: -45.876374, lon: 170.499959 },
+      { nimi: 'Queens Gardens', lat: -45.87778, lon: 170.50417 },
+    ],
+  },
+  /*
+   * SUVA (6.9.2026). Rajaus on 3,1 kilometriä kanttiinsa niemen
+   * kärjessä — perustelu, hylätty laajempi rajaus ja kohdemäärän syy
+   * ovat tools/piirra-kaupunkikartta.mjs:n suva-lohkossa.
+   *
+   * NELJÄ KOHDETTA, JA SE ON LÄHDETILANNE EIKÄ VALINTA. Suvan
+   * alueelta löytyy en-Wikipediasta kahdeksan koordinaatillista
+   * kohdetta. Kolme niistä (Grand Pacific Hotel, Fidžin museo ja
+   * Albert Park) on kaupunkilehden omien nostojen aihe, ja stadion on
+   * 2,8 kilometrin päässä idässä eikä sillä ole Commonsissa omaa
+   * kuvakategoriaa. Jäljelle jäävät nämä neljä. Kohdekartta on
+   * Adenin kokoluokkaa.
+   */
+  suva: {
+    polku: 'assets/kartat/suva-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -18.1329, etela: -18.1605, lansi: 178.418, ita: 178.447 },
+    esittely: 'Kartan alue on Suvan niemen kärki. Lännessä on Suva '
+      + 'Harbour, pohjoisessa kauppakadut ja purosuu, keskellä '
+      + 'siirtomaa-ajan hallintokortteli rantabulevardin varrella ja '
+      + 'etelässä puutarhat ja valtionpäämiehen talo. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026; hallintorakennuksilla ja
+       * parlamentilla on sama piste, koska parlamentti toimii samassa
+       * talossa.
+       */
+      { nimi: 'Pyhän sydämen katedraali', lat: -18.1416, lon: 178.442 },
+      { nimi: 'Hallintorakennukset', lat: -18.145858, lon: 178.424413 },
+      { nimi: 'Thurston Gardens', lat: -18.1491, lon: 178.4247 },
+      { nimi: 'Valtionpäämiehen talo', lat: -18.151892, lon: 178.42614 },
+    ],
+  },
+  /*
    * SAN FRANCISCO (nippu 8, 23.8.2026). Rajaus on niemen
    * koillisnurkka: pohjoisessa Aquatic Parkin ranta, idässä lahti ja
    * Embarcadero, lännessä Pacific Heights ja etelässä Civic Center.
