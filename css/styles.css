@@ -1670,7 +1670,7 @@ body.aloitus-zoom .kiikari {
      päästää läpi sen värin, jonka kehä edustaa, ja vaimentaa muut —
      juuri niin kuin linssin taittovirhe näkyy vaaleaa taustaa
      vasten. */
-  mix-blend-mode: multiply;
+  mix-blend-mode: darken;
 }
 
 /* Lämmin kehä uloimpana: pitkät aallonpituudet taittuvat vähemmän. */
@@ -6290,20 +6290,76 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 .etusivupallo-kone { transition: opacity 260ms ease; }
 
 /*
+ * REITTIKUVAT PALLON PINNALLA (js/etusivupallo.js, omistaja 6.9.2026
+ * aamu: *"Etusivulla kuvat voisivat tulla pienellä kartalle kaupungin
+ * käännöksen kohdalle ja seurata kaupunkia ja lopulta häipyä sitä
+ * kautta näkyvistä. Käytä uusia vaaleita kuvia."*).
+ *
+ * VAALEA VINJETTI SULAUTUU PALLOON. Kuvaputken kuvat on vinjetoitu
+ * VAALEAAN paperinsävyyn, joten kuva näytetään KOKONAAN
+ * paperireunoineen — pyöreä rajaus leikkaisi juuri sen vinjetin, jonka
+ * takia reuna katoaa. `mix-blend-mode: multiply` kertoo kuvan pallon
+ * vaalealla karttapinnalla: vaalea reuna häviää näkyvistä ja jäljelle
+ * jäävät vain kuvan tummemmat sävyt. Ei kehystä, ei varjoa, ei tummaa
+ * reunusta.
+ *
+ * KERROS ON VIDEON PÄÄLLÄ MUTTA SVG:N ALLA (DOM-järjestys
+ * js/etusivupallo.js:ssä), joten kone ja punainen viiva piirtyvät aina
+ * kuvan päälle. Avaustekstin oma kerros (z-index 3) on koko pallon
+ * yläpuolella, joten kuva ei nouse otsikon päälle.
+ *
+ * EI YHTÄÄN CSS-ANIMAATIOTA eikä suodatinta (iOS-sääntö): paikka ja
+ * peittävyys tulevat piirrosta joka kehyksellä, ja häivytys on osa
+ * samaa laskentaa (REITTIKUVAN_ILMESTYS_S / _HAIPYMINEN_S).
+ */
+.etusivupallo-kuvat {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.etusivupallo-reittikuva {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  display: block;
+  opacity: 0;
+  /*
+   * REUNA HÄIPYY MASKILLA, EI SEKOITUSTILALLA (mitattu 6.9.2026
+   * Chromiumilla). `mix-blend-mode: multiply` ja `darken` kokeiltiin
+   * ensin: koska kuvat ovat vaaleita vinjettikuvia JA pallon pinta on
+   * yhtä vaalea pergamentti, kumpikin sekoitus söi kuvan kokonaan —
+   * kuvan osuus ruudun pikseleistä jäi 3–9 yksikköön 255:stä, eli
+   * kuvaa ei nähnyt. Nyt kuva piirtyy tavallisesti ja vaalea
+   * paperireuna häviää PEHMEÄLLÄ MASKILLA: se on läpinäkyvä jo ennen
+   * kuvan reunaa, joten laatikkoa ei synny — ei kehystä, ei varjoa,
+   * ei tummaa reunusta. Kuva näytetään kokonaan (ei rajausta), maski
+   * vain häivyttää sen ulkoreunan.
+   */
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 46%, transparent 78%);
+  mask-image: radial-gradient(circle at 50% 50%, #000 46%, transparent 78%);
+  filter: contrast(1.35) brightness(0.92);
+}
+
+/*
  * ISOISÄN KUVAT JÄTETTIIN POIS ETUSIVULTA (omistajan päätös 6.9.2026
  * klo 01.20, sanatarkasti: *"Jätä isoisän kuvat pois etusivulta"*).
  * Tässä olivat kuvapinon tyylit (`.etusivupallo-pino`,
  * `.etusivupallo-kuva`, kuvateksti ja `--pino-harsokorjaus`); ne on
  * poistettu kokonaan, koska js/etusivupallo.js ei enää luo pinon
  * DOMia — jäljelle jäänyt tyyli olisi kuollutta koodia. Palautus on
- * revert versiohistoriasta. Avauspaneelin kerrokset ovat nyt:
+ * revert versiohistoriasta. Saman aamun uusi tilaus toi kuvat takaisin
+ * PALLON PINNALLE (.etusivupallo-reittikuva yllä), ei pinoksi ruudun
+ * laitaan. Avauspaneelin kerrokset ovat nyt:
  *
- *   0  .etusivupallo   video, punainen viiva ja kone
+ *   0  .etusivupallo   video, reittikuvat, punainen viiva ja kone
  *   1  .intro-verho    pergamenttihuntu
  *   3  .intro-kartta ja .intro-arkki (otsikko, teksti, napit)
  *
- * Pakka js/packs/etusivun-isoisakuvat.js jää tallelle: kuvat odottavat
- * uutta käyttöpaikkaansa (albumi, lentokohtaus).
+ * Pakka js/packs/etusivun-isoisakuvat.js on reittikuvien totuus:
+ * kuvan `kaupunki`-kenttä kertoo, minkä käännöksen kohdalla se nousee.
  */
 
 /*
@@ -6473,6 +6529,13 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 @media (prefers-reduced-motion: reduce) {
   /* Kerros on paikallaan heti (Raamattu, sääntö 4). */
   .etusivupallo { transition: none; }
+  /*
+   * REITTIKUVA ILMESTYY JA HÄIPYY ILMAN LIIKETTÄ (omistajan pysyvä
+   * linjaus). Liike vähennettynä pallo on yksi pysäytyskuva eikä
+   * rAF-silmukkaa ole, joten peittävyys tulee portaittain
+   * (reittikuvanPeitto `portaittain`) ja pelkkä häivytys on tässä.
+   */
+  .etusivupallo-reittikuva { transition: opacity 600ms ease; }
 }
 
 .intro.intro-fade { opacity: 0; }
@@ -8683,7 +8746,7 @@ body.flight-active .fact-card {
   inset: 0;
   width: 100%;
   height: 100%;
-  mix-blend-mode: multiply;
+  mix-blend-mode: darken;
   opacity: 0.9;
   pointer-events: none;
 }
@@ -13855,7 +13918,7 @@ button.lukija-nappi.lukee,
  * taustan ja säteittäinen maski pehmentää reunat paperiin.
  */
 .quiz-kohtaaminen-kuva.piirros {
-  mix-blend-mode: multiply;
+  mix-blend-mode: darken;
   -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
   mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
 }
@@ -13978,7 +14041,7 @@ button.lukija-nappi.lukee,
   width: min(55%, 170px);
   margin: 0.55rem auto 0.35rem;
   /* Sama sulautus kuin kohtaamiskuvalla: ei laatikkoa. */
-  mix-blend-mode: multiply;
+  mix-blend-mode: darken;
   -webkit-mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
   mask-image: radial-gradient(ellipse at center, #000 55%, transparent 98%);
   /* Napautus avaa kätkökuvan koko näytölle (30.8.2026). */

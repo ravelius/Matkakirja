@@ -497,6 +497,23 @@ const SHELL = [
   // pelin ENSIMMÄINEN ruutu olisi offline-tilassa vajaa.
   './assets/etusivu/kansikuva.png',
   './assets/etusivu/irtolehti.png',
+  /*
+   * Etusivun pallon REITTIKUVAT (omistaja 6.9.2026: *"Etusivulle kuvat
+   * kannattaa varmaan pienentää valmiiksi että pyörii parhaiten"*).
+   * Pienennetyt 320 px:n vedokset (9–14 kt) ovat repossa, koska pallo
+   * lataa ne heti kerroksen syntyessä: ilman esilatausta kaupungin
+   * käännös näyttäisi tyhjää. Pariisin kuva puuttuu, kunnes kuvaputki
+   * toimittaa sen (js/packs/etusivun-isoisakuvat.js).
+   */
+  './assets/etusivu/reitti/lontoo.jpg',
+  './assets/etusivu/reitti/kairo.jpg',
+  './assets/etusivu/reitti/mumbai.jpg',
+  './assets/etusivu/reitti/kolkata.jpg',
+  './assets/etusivu/reitti/singapore.jpg',
+  './assets/etusivu/reitti/hongkong.jpg',
+  './assets/etusivu/reitti/tokio.jpg',
+  './assets/etusivu/reitti/sanfrancisco.jpg',
+  './assets/etusivu/reitti/newyork.jpg',
   // Kuvalinssit. Nämä ovat binäärejä eivätkä moduuleja — ilman
   // esilatausta ne puuttuisivat juuri offline-tilassa, jossa linssejä
   // selaillaan eniten.

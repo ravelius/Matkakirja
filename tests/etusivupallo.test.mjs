@@ -450,17 +450,17 @@ test('haaleus ja sumennus tulevat pakasta ja vaalea kuva jää selvemmäksi', ()
 });
 
 /*
- * ISOISÄN KUVAT POIS ETUSIVULTA (omistajan päätös 6.9.2026 klo 01.20,
- * sanatarkasti: *"Jätä isoisän kuvat pois etusivulta"*).
+ * KUVAPINO POIS ETUSIVULTA (omistajan päätös 6.9.2026 klo 01.20,
+ * sanatarkasti: *"Jätä isoisän kuvat pois etusivulta"*) — ruudun
+ * laitaan pinoutuvat kortit eivät palaa, vaikka saman aamun uusi
+ * tilaus toi kuvat takaisin PALLON PINNALLE (oma testinsä
+ * tests/etusivun-reittikuvat.test.mjs).
  *
- * Poisto EI OLE LIPPU vaan kaiken kuvapinoon liittyvän poisto: jos
- * kerros vielä loisi pinon DOMin tai css:ssä olisi sen tyylit, jäisi
- * kuollutta koodia ajoon ja seuraava lukija luulisi kuvien palanneen.
- * Tämä testi vartioi, ettei mikään niistä palaa hiljaa takaisin —
- * pakka (js/packs/etusivun-isoisakuvat.js) ja `saapumisenKuva` sen
- * sijaan JÄÄVÄT, ja niitä vartioidaan yllä.
+ * Poisto EI OLE LIPPU vaan kaiken pinoon liittyvän poisto: jos kerros
+ * vielä loisi pinon DOMin tai css:ssä olisi sen tyylit, jäisi
+ * kuollutta koodia ajoon ja seuraava lukija luulisi pinon palanneen.
  */
-test('etusivulla ei ole isoisän kuvia: ei pinoa, ei kortteja, ei tyylejä', () => {
+test('etusivulla ei ole vanhaa kuvapinoa: ei kortteja, ei pinon tyylejä', () => {
   const css = lue('../css/styles.css');
   const lahde = lue('../js/etusivupallo.js');
 
@@ -468,20 +468,24 @@ test('etusivulla ei ole isoisän kuvia: ei pinoa, ei kortteja, ei tyylejä', () 
   for (const kielletty of [
     "className = 'etusivupallo-pino'", 'laskeKortti', 'pinonAsento', 'PINON_KATTO',
     'PINON_SIIRTO', 'PINON_KULMA', 'PINON_LASKU_MS', 'PINON_HAIVYTYS_MS',
-    'kuvienLaskeutumiset', 'isoisakuvanSavy', 'rajausTyyli', 'valokuvanKuvateksti',
+    'kuvienLaskeutumiset', 'rajausTyyli', 'valokuvanKuvateksti',
   ]) {
     assert.ok(!lahde.includes(kielletty),
       `js/etusivupallo.js viittaa yhä kuvapinoon (${kielletty})`);
   }
   const kerros = lahde.slice(lahde.indexOf('export async function avaaEtusivupallo'));
-  // Kerroksessa saa yhä olla yksi <img>: videon juliste (poster).
   assert.ok(!/createElement\('figure'\)|createElement\('figcaption'\)/.test(kerros),
     'kerros luo yhä kuvakortin (figure/figcaption)');
-  assert.equal([...kerros.matchAll(/createElement\('img'\)/g)].length, 1,
-    'kerroksessa on oltava tasan yksi kuva: videon juliste');
-  // Perustelu on kirjattava koodiin, jottei poistoa kumota vahingossa.
+  /*
+   * Kaksi <img>-kohtaa: videon juliste ja reittikuva (yksi
+   * silmukassa, yksi per käännös). Kortteja ei ole — kuvateksti ei
+   * näy pallolla, joten figcaptionia ei synny.
+   */
+  assert.equal([...kerros.matchAll(/createElement\('img'\)/g)].length, 2,
+    'kerroksessa on oltava tasan kaksi kuvakohtaa: juliste ja reittikuva');
+  // Perustelu on kirjattava koodiin, jottei pino palaa vahingossa.
   assert.match(lahde, /Jätä isoisän kuvat pois etusivulta/,
-    'omistajan päätöstä ei ole kirjattu moduuliin');
+    'omistajan päätöstä (pino pois) ei ole kirjattu moduuliin');
 
   /* CSS: pinon tyylit ovat poissa, myös harsokorjaus. */
   for (const valitsin of [

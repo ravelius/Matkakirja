@@ -75,18 +75,47 @@ export const ISOISAN_VALOKUVAT = {
    * sitä: vaalea vinjetti ja paperin reunat ovat jo kuvassa, eikä
    * pahvireunusta ole leikattavaksi.
    *
-   * Kuva on kuvaputken toimitus 5.9.2026 illalla
-   * (isoisa-bombay-aged-r20260905-v1): isoisä astuu veneeseen selin
-   * kameraan Bombayn satamassa — hän on kuvassa, mutta ei hahmotu
+   * ── MAHDOLLISIMMAN VAALEA KUVA (omistaja 6.9.2026 aamu) ──────────
+   *
+   * Sanatarkasti: *"Käytä Ateena lennossa mahdollisimman vaalea isoisän
+   * kuvaa."* Avauslento päättyy Ateenaan Välimeren yli, joten kuva on
+   * valittu Kairo–Giza–Aleksandria-linjalta (päätoimittajan tarkennus
+   * samana aamuna), sikäli kuin se on vaaleimpien joukossa.
+   *
+   * MITTAUS 6.9.2026: kaikki isoisän kuvat (tämä taulu + pakin 27
+   * kuvaa) ladattiin ämpäristä ja niiden keskiluminanssi mitattiin
+   * Chromiumin kanvaasilla (Rec. 709: 0,2126R + 0,7152G + 0,0722B,
+   * kuva skaalattuna 200 px leveäksi). Kärki, keskiluminanssi 0–255
+   * (mediaani suluissa):
+   *
+   *   199,8 (219) isoisa-rio-aged-r20260905-v1        Rio de Janeiro
+   *   199,5 (210) isoisa-ballarat-aged-r20260905-v1   Melbourne/Ballarat
+   *   198,4 (218) isoisa-singapore-aged-r20260905-v2  Singapore
+   *   185,8 (205) isoisa-yokohama-aged-r20260905-v1   Jokohama
+   *   184,4 (201) isoisa-giza-aged-r20260905-v1       Giza      ← valittu
+   *   178,9 (209) isoisa-railway-aged-r20260905-v1    Yhdysvaltain länsi
+   *   175,4 (197) isoisa-sanfrancisco-aged-r20260905-v1
+   *   174,0 (186) isoisa-bombay-aged-r20260905-v1     (edellinen lennon kuva)
+   *   164,9 (169) isoisa-cairo-aged-r20260905-v1      Kairo
+   *   160,0 (163) isoisa-alexandria-harbor-more-r20260905-v2 Aleksandria
+   *
+   * Giza on koko joukon viidenneksi vaalein (27 kuvasta) ja Välimeren
+   * linjan selvästi vaalein — kolme vaaleampaa (Rio, Ballarat,
+   * Singapore) ovat toisella puolen maapalloa, eivätkä ne sovi
+   * Ateenaan päättyvän lennon kuvaksi. Kuva on kuvaputken 5.9.2026
+   * toimitus: pieni hahmo Gizan aavikolla, ei tunnistettavia kasvoja
    * (Raamattu: ISOISA JAA ARVOITUKSEKSI).
+   *
+   * Kuva on jo lähteessään vinjetoitu VAALEAAN (paperin sävyyn), joten
+   * sen päälle ei lisätä tummennusta — kortin oma reunahäivytys
+   * (css .lento-valokuva img, maski) riittää.
    */
   lento: {
-    osoite: `${ISOISAN_KUVAJUURI}isoisa-bombay-aged-r20260905-v1.jpg`,
-    selite: 'Bombayn satama 1873: isoisä astuu veneeseen selin kameraan, '
-      + 'taustalla höyrylaivoja ja rantakatu. Valokuva löytyi matkakirjan '
-      + 'välistä.',
+    osoite: `${ISOISAN_KUVAJUURI}isoisa-giza-aged-r20260905-v1.jpg`,
+    selite: 'Pieni hahmo Gizan aavikolla 1873, pyramidien juurella. '
+      + 'Valokuva löytyi matkakirjan välistä.',
     lahde: 'Kuvaputken generoitu valokuva',
-    kuvateksti: 'Isoisä, Bombay, 1873',
+    kuvateksti: 'Isoisä, Giza, 1873',
   },
 };
 

@@ -1170,6 +1170,50 @@ paikka, ristihäivytys):
   (vanhalla 05b-videolla): teksti pysyy luettavana kolmen kortin pinon
   päällä kaikissa kolmessa.
 
+**Kuvat pois etusivulta ja takaisin PALLON PINNALLE (6.9.2026).**
+Omistaja jätti kuvapinon pois yöllä klo 01.20 (*"Jätä isoisän kuvat pois
+etusivulta"*) ja tilasi aamulla kuvat takaisin toisenlaisina,
+sanatarkasti:
+
+> *"Etusivulla kuvat voisivat tulla pienellä kartalle kaupungin
+> käännöksen kohdalle ja seurata kaupunkia ja lopulta häipyä sitä kautta
+> näkyvistä. Käytä uusia vaaleita kuvia. Voi olla isoisän ottamia
+> kuvia."*
+
+- **Pino ei palaa.** Kortit, asennot ja katto ovat poissa sekä
+  moduulista että css:stä (vartio tests/etusivupallo.test.mjs).
+- **Kuva on ankkuroitu kaupunkiin.** Kerros `.etusivupallo-kuvat` on
+  videon päällä mutta SVG:n alla, joten kone ja punainen viiva piirtyvät
+  aina kuvan päälle. Ruutupaikka lasketaan joka kehyksellä samalla
+  projektiolla kuin koneen paikka (`pallonPiste` + `videostaRuudulle`),
+  joten kuva seuraa kaupunkia pallon pyöriessä ja katoaa sen mukana.
+- **Elinkaari:** ilmestys 600 ms, pito 1,2 s, häipyminen 2,8 s
+  (`REITTIKUVAN_ILMESTYS_S` / `_PITO_S` / `_HAIPYMINEN_S`), ja kuva
+  häipyy viimeistään pallon reunalla (kulma kameran akselista yli 70°,
+  10° vyö nollaan). Liike vähennettynä peittävyys on portaittainen ja
+  css häivyttää sen liikkumatta.
+- **Koko** on 14 % kerroksen lyhyemmästä sivusta (102 px 1280×800:lla,
+  52 px 390×844:llä), ja kuvan keskipiste on 0,58 × koko kaupungin
+  yläpuolella, jotta lähtevä kone jää vapaaksi.
+- **Vaalea reuna häivytetään maskilla, ei sekoitustilalla.** `multiply`
+  ja `darken` mitattiin ensin Chromiumilla: koska kuvat ovat vaaleita
+  vinjettikuvia ja pallon pinta on yhtä vaaleaa pergamenttia, molemmat
+  söivät kuvan (kuvan osuus ruudun pikseleistä 3–9 yksikköä 255:stä).
+  Nyt kuva piirtyy tavallisesti, pehmeä radial-maski häivyttää reunan ja
+  pieni `contrast(1.35) brightness(0.92)` pitää sen erottuvana; kuva jää
+  silti hyvin hennoksi (mitattu keskiero 11,5 / 255).
+- **Kuvat ovat repossa pienennettyinä** (omistaja: *"Etusivulle kuvat
+  kannattaa varmaan pienentää valmiiksi että pyörii parhaiten"*):
+  `assets/etusivu/reitti/<kaupunkitunnus>.jpg`, 320 px pisimmältä
+  sivulta, laatu 0,8, 9–13 kt. Lähde (ämpärin iso vedos) ja kuvateksti
+  ovat pakan tietueessa; sw.js:n SHELL esilataa tiedostot.
+- **Kaupunkien kattavuus:** yhdeksän kymmenestä. Kalkutan jaksolla on
+  Benares-kuva ja PARIISI ON ILMAN KUVAA, kunnes kuvaputki toimittaa
+  omat kuvansa — väliaikaista sijaista ei panna. Vartiot:
+  tests/etusivun-reittikuvat.test.mjs. Kaapattu Chromiumilla 1280×800 ja
+  390×844 (Kairon ja Bombayn käännökset, sama kuva 1,5 s myöhemmin ja
+  häipymässä).
+
 AVOIN: työpöydällä video suurennetaan cover-sovituksessa 1,75-kertaiseksi
 (2000 px leveällä 2,5-kertaiseksi), joten sumennettu 800 px:n kuva on
 pehmeä. Jos omistaja haluaa terävämmän, `tools/tee-etusivupallo.mjs`

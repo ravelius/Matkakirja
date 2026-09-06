@@ -41,6 +41,20 @@
  * uutta käyttöpaikkaansa (albumi, lentokohtaus), eikä pakkaa haluta
  * hakea uudelleen kuvaputkelta.
  *
+ * ── KUVAT TAKAISIN, MUTTA PALLON PINNALLE (6.9.2026 aamu) ──────────
+ *
+ * OMISTAJAN UUSI TILAUS, sanatarkasti: *"Etusivulla kuvat voisivat
+ * tulla pienellä kartalle kaupungin käännöksen kohdalle ja seurata
+ * kaupunkia ja lopulta häipyä sitä kautta näkyvistä. Käytä uusia
+ * vaaleita kuvia. Voi olla isoisän ottamia kuvia."*
+ *
+ * PINO EI PALAA: kuva on nyt pieni, ankkuroitu kaupungin
+ * lat/lon-pisteeseen ja lasketaan joka kehyksellä samalla
+ * projektiolla kuin kone ja punainen viiva (pallonPiste +
+ * videostaRuudulle). Se ilmestyy käännöksessä, seuraa kaupunkiaan
+ * pallon pyöriessä ja häipyy — viimeistään kun kaupunki lähestyy
+ * pallon reunaa. Ks. osio REITTIKUVAT PALLON PINNALLA.
+ *
  * (Raamattu: PELAAJAN LAUTAKYTKIN, VANHIN MAAILMANKUVA -LINSSI,
  * ETUSIVUN PALLO, kohta 3; docs/moduulit/karttapallo.md luku 0 kohta 5
  * ja luku 10.3.)
@@ -123,7 +137,7 @@
 
 import { laudaltaAsteiksi } from './fokusmitat.js';
 import { lataaKuvaSitkeasti, PEILI_JUURI, UUSINNAN_VIIVE_MS } from './media.js';
-import { ETUSIVUN_ISOISAKUVAT } from './packs/etusivun-isoisakuvat.js';
+import { ETUSIVUN_ISOISAKUVAT, isoisakuvanSavy } from './packs/etusivun-isoisakuvat.js';
 import {
   ETUSIVUPALLO_AVAIN, asetaEtusivupallo, etusivupalloOletus,
   etusivupalloOsoitteesta, etusivupalloPaalla,
@@ -534,6 +548,146 @@ export function saapumisenKuva(nro, kaupunki = null, kuvat = ETUSIVUN_ISOISAKUVA
   return { avain: kuvat[i].tunnus, kuva: kuvat[i] };
 }
 
+/* ==================== REITTIKUVAT PALLON PINNALLA ================= */
+
+/*
+ * OMISTAJA 6.9.2026 aamu, sanatarkasti: *"Etusivulla kuvat voisivat
+ * tulla pienellä kartalle kaupungin käännöksen kohdalle ja seurata
+ * kaupunkia ja lopulta häipyä sitä kautta näkyvistä. Käytä uusia
+ * vaaleita kuvia. Voi olla isoisän ottamia kuvia."*
+ *
+ * ERO VANHAAN PINOON: pino oli ruudun laidassa oleva korttikasa, eikä
+ * se palaa (ks. yllä *"Jätä isoisän kuvat pois etusivulta"*). Nyt kuva
+ * on ANKKUROITU KAUPUNGIN lat/lon-PISTEESEEN: ruutupaikka lasketaan
+ * joka kehyksellä samalla projektiolla kuin koneen ja punaisen viivan
+ * paikka (pallonPiste + videostaRuudulle), joten kuva seuraa kaupunkia
+ * pallon pyöriessä ja katoaa kaupungin mukana pallon reunan taakse.
+ *
+ * VAALEA REUNA SULAUTUU PALLOON (päätoimittajan tarkennus 6.9.2026):
+ * kuvaputken kuvat on vinjetoitu VAALEAAN paperinsävyyn, joten kuva
+ * näytetään KOKONAAN paperireunoineen — ei pyöreää rajausta, joka
+ * leikkaisi vinjetin — ja css sulattaa vaalean reunan pallon vaaleaan
+ * karttapintaan `mix-blend-mode: multiply` -sekoituksella. Ei kehystä,
+ * ei varjoa, ei tummaa reunusta.
+ */
+
+/** Kuvan koko: osuus kerroksen lyhyemmästä sivusta (omistaja: "pienellä"). */
+export const REITTIKUVAN_KOKO_OSUUS = 0.14;
+/*
+ * HARSOKORJAUS (mitattu Chromiumilla 6.9.2026). Pakan `haalea` on
+ * tehty kuvapinolle, joka lepäsi tummemman taustan päällä. Pallolla
+ * kuva on yhtä vaalean pergamentin päällä ja vielä avaustekstin
+ * pergamenttiharson alla, joten samalla haaleudella siitä ei näkynyt
+ * mitään: kuvan osuus ruudun pikseleistä jäi alle kymmeneen yksikköön
+ * 255:stä. Korjaus nostaa vaalean kuvan katon ykköseen — sama
+ * periaate kuin poistetun pinon `--pino-harsokorjaus`-muuttujassa.
+ */
+export const REITTIKUVAN_KIRKASTUS = 0.15;
+/** Kuvan keskipiste kaupungin YLÄPUOLELLA (osuus koosta): kone jää vapaaksi. */
+export const REITTIKUVAN_NOSTO = 0.58;
+/** Ilmestyminen, täysi näkyvyys ja häipyminen sekunteina (omistaja: ~600 ms / ~2,5–3 s). */
+export const REITTIKUVAN_ILMESTYS_S = 0.6;
+export const REITTIKUVAN_PITO_S = 1.2;
+export const REITTIKUVAN_HAIPYMINEN_S = 2.8;
+/** Kuvan elinikä käännöksestä: ilmestys + pito + häipyminen. */
+export const REITTIKUVAN_ELINIKA_S = REITTIKUVAN_ILMESTYS_S
+  + REITTIKUVAN_PITO_S + REITTIKUVAN_HAIPYMINEN_S;
+/**
+ * Reunaehto (omistaja: kuva häipyy *"viimeistään kun kaupunki lähestyy
+ * pallon reunaa"*): kulma kameran akselista asteina, ja vyö, jonka
+ * matkalla peittävyys valuu nollaan. 70° + 10° = 80°, eli kuva on
+ * poissa ennen näkyvän kalotin reunaa (noin 71–90° kameran korkeudesta
+ * riippuen), eikä koskaan litisty pallon reunalle.
+ */
+export const REITTIKUVAN_REUNAKULMA = 70;
+export const REITTIKUVAN_REUNAVYO = 10;
+
+/**
+ * KUVAN OSOITE PALLOLLE (omistaja 6.9.2026: *"Etusivulle kuvat
+ * kannattaa varmaan pienentää valmiiksi että pyörii parhaiten"*).
+ * Repon pienennetty 320 px:n vedos voittaa aina ämpärin ison kuvan;
+ * `osoite` jää lähteeksi, ja jos pienennystä ei vielä ole (uusi
+ * kuvaputken toimitus), kerros lataa lähteen eikä jää ilman kuvaa.
+ */
+export function reittikuvanOsoite(kuva) {
+  return kuva?.pieni ?? kuva?.osoite ?? '';
+}
+
+/** Kaupunkitunnus → pakan kuva. Ensimmäinen osuma voittaa. */
+export function reitinKuvat(kuvat = ETUSIVUN_ISOISAKUVAT) {
+  const kartta = new Map();
+  for (const k of kuvat) if (k?.kaupunki && !kartta.has(k.kaupunki)) kartta.set(k.kaupunki, k);
+  return kartta;
+}
+
+/**
+ * Käännökset, joissa kuva nousee pallolle: jokainen laskeutuminen,
+ * jolle pakasta löytyy kaupungin kuva. Aika on jakson loppu eli hetki,
+ * jolloin kone kääntyy kaupungin kohdalla; paikka on kaupungin oma
+ * lat/lon, johon kuva ankkuroidaan.
+ *
+ * KUVATON KAUPUNKI JÄTETÄÄN VÄLIIN (Pariisi 6.9.2026): väliaikaista
+ * sijaista ei panna, vaan käännös menee ilman kuvaa kunnes kuvaputki
+ * toimittaa Pariisin kuvan pakkaan.
+ */
+export function saapumisenHetket(reitti, kuvat = ETUSIVUN_ISOISAKUVAT) {
+  const kartta = reitinKuvat(kuvat);
+  const ulos = [];
+  const jaksot = reitti?.jaksot ?? [];
+  for (let i = 0; i < jaksot.length; i++) {
+    const j = jaksot[i];
+    if (j.pito || !(j.matka > 0)) continue;
+    const id = reitti.pisteet?.[i + 1]?.id ?? null;
+    const kuva = id ? kartta.get(id) : null;
+    if (!kuva) continue;
+    ulos.push({ id, kuva, lat: j.b.lat, lon: j.b.lon, aika: j.alku + j.kesto });
+  }
+  return ulos;
+}
+
+/**
+ * Kuvan ikä hetkellä t. Kello kelaa kierroksen mitassa, joten viimeisen
+ * käännöksen kuva saa jatkaa häipymistään loopin sauman yli.
+ */
+export function reittikuvanIka(t, aika, kesto) {
+  const ika = t - aika;
+  return ika < 0 && kesto > 0 ? ika + kesto : ika;
+}
+
+/** Pisteen kulma kameran akselista asteina (0 = pallon keskellä). */
+export function kameranKulma(paikka, kamera) {
+  const c = yksikko(kamera.lat, kamera.lon);
+  const p = yksikko(paikka.lat, paikka.lon);
+  return asteiksi(Math.acos(Math.min(1, Math.max(-1, piste3(p, c)))));
+}
+
+/**
+ * Kuvan peittävyys: ilmestyy pehmeästi, pysyy hetken ja häipyy — tai
+ * häipyy aikaisemmin, kun kaupunki lähestyy pallon reunaa. `huippu` on
+ * kuvan oma haaleus pakasta (isoisakuvanSavy).
+ *
+ * LIIKE VÄHENNETTYNÄ (`portaittain`) peittävyys ei liu'u kehyksittäin:
+ * kuva on joko esillä tai poissa, ja css hoitaa pelkän häivytyksen
+ * ilman liikettä (Raamattu, sääntö 4).
+ */
+export function reittikuvanPeitto(ika, kulma, asetukset = {}) {
+  const { huippu = 1, portaittain = false } = asetukset;
+  if (!(ika >= 0) || ika > REITTIKUVAN_ELINIKA_S) return 0;
+  const reuna = Math.min(1, Math.max(0,
+    1 - (kulma - REITTIKUVAN_REUNAKULMA) / REITTIKUVAN_REUNAVYO));
+  if (reuna <= 0) return 0;
+  if (portaittain) return huippu * reuna;
+  const sisaan = Math.min(1, ika / REITTIKUVAN_ILMESTYS_S);
+  const ulos = Math.min(1, Math.max(0,
+    (REITTIKUVAN_ELINIKA_S - ika) / REITTIKUVAN_HAIPYMINEN_S));
+  return huippu * Math.max(0, Math.min(sisaan, ulos, reuna));
+}
+
+/** Kuvan sivu kerroksen pikseleinä (lyhyempi sivu ratkaisee). */
+export function reittikuvanKoko(leveys, korkeus) {
+  return REITTIKUVAN_KOKO_OSUUS * Math.max(0, Math.min(leveys, korkeus));
+}
+
 /* ==================== KERROS ETUSIVULLE =========================== */
 /**
  * Kerroksen ja julisteen ilmestyminen (ms) — sama luku kuin css
@@ -655,6 +809,40 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
   if (juliste.complete) naytaJuliste();
   else juliste.addEventListener('load', naytaJuliste, { once: true });
 
+  /*
+   * REITTIKUVAT PALLON PINNALLE (omistaja 6.9.2026 aamu). Kerros on
+   * videon PÄÄLLÄ mutta SVG:n ALLA, joten kone ja punainen viiva
+   * piirtyvät aina kuvan päälle — kuva ei saa peittää konetta. Otsikko
+   * ja teksti ovat oma kerroksensa koko pallon yläpuolella (css
+   * z-index), joten niidenkään päälle kuva ei nouse.
+   *
+   * ESILATAUS REITIN ALUSSA: jokainen kuva saa osoitteensa jo tässä
+   * (lataaKuvaSitkeasti, sama uusintasääntö kuin julisteella), jotta
+   * käännöksessä ei ole latausviivettä. Ladattava tiedosto on repon
+   * PIENENNETTY 320 px:n vedos (ETUSIVUN_PIENET), ei ämpärin iso kuva
+   * — yhdeksän kuvaa on yhteensä noin 95 kt, ja ne ovat sw.js:n
+   * SHELLissä, joten ne ovat valmiina myös offline.
+   */
+  const kuvakerros = document.createElement('div');
+  kuvakerros.className = 'etusivupallo-kuvat';
+  const reittikuvat = saapumisenHetket(reitti).map((s) => {
+    const el = document.createElement('img');
+    el.className = 'etusivupallo-reittikuva';
+    el.decoding = 'async';
+    el.draggable = false;
+    // Kuvateksti ei näy pallolla (kuva on pieni) mutta on alt-teksti.
+    el.alt = s.kuva.kuvateksti ?? '';
+    el.style.opacity = '0';
+    void lataaKuvaSitkeasti(el, reittikuvanOsoite(s.kuva));
+    kuvakerros.appendChild(el);
+    return {
+      ...s,
+      el,
+      huippu: Math.min(1, isoisakuvanSavy(s.kuva).haalea + REITTIKUVAN_KIRKASTUS),
+    };
+  });
+  juuri.appendChild(kuvakerros);
+
   const svg = svgEl('svg', {
     class: 'etusivupallo-reitti',
     viewBox: `0 0 ${mitat.leveys} ${mitat.korkeus}`,
@@ -686,11 +874,13 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
   avaus?.classList.add('intro-pallolla');
 
   /*
-   * ISOISÄN KUVAT JÄTETTIIN POIS ETUSIVULTA (omistaja 6.9.2026 klo
-   * 01.20, sanatarkasti: *"Jätä isoisän kuvat pois etusivulta"*).
-   * Tässä kohdassa syntyi ennen kuvapinon oma kerros
-   * (`.etusivupallo-pino`) — nyt paneeliin ei lisätä mitään pallon
-   * lisäksi, eikä kuvakortteja lasketa yhdelläkään laskeutumisella.
+   * VANHA KUVAPINO EI PALAA (omistaja 6.9.2026 klo 01.20,
+   * sanatarkasti: *"Jätä isoisän kuvat pois etusivulta"*). Tässä syntyi
+   * ennen kuvapinon oma kerros (`.etusivupallo-pino`) kortteineen,
+   * asentoineen ja kattoineen — sitä ei ole. Saman aamun uusi tilaus
+   * toi kuvat takaisin PALLON PINNALLE (`.etusivupallo-kuvat` yllä),
+   * eli ankkuroituna kaupunkiin eikä ruudun laitaan pinoutuvana
+   * korttikasana.
    */
 
   /* ---------- piirto ---------- */
@@ -709,6 +899,35 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     pallonPiste(koneenTila(reitti, t), kameranNakyma(reitti, t, kamera), mitat),
     sovitusNyt(),
   );
+
+  /**
+   * REITTIKUVAT KAUPUNKIENSA PÄÄLLE. Sama projektio kuin koneella ja
+   * viivalla, joten kuva pysyy kaupungin kohdalla pallon pyöriessä.
+   * Peittävyys tulee reittikuvanPeitosta (ilmestys, pito, häipyminen ja
+   * pallon reuna); liike vähennettynä se on portaittainen, jolloin css
+   * häivyttää kuvan liikkumatta.
+   */
+  const piirraReittikuvat = (t, nakyma) => {
+    if (!reittikuvat.length) return;
+    const sov = sovitusNyt();
+    const koko = reittikuvanKoko(juuri.clientWidth, juuri.clientHeight);
+    for (const r of reittikuvat) {
+      const peitto = reittikuvanPeitto(
+        reittikuvanIka(t, r.aika, kesto),
+        kameranKulma(r, nakyma),
+        { huippu: r.huippu, portaittain: vahennettyLiike },
+      );
+      if (peitto <= 0) {
+        if (r.el.style.opacity !== '0') r.el.style.opacity = '0';
+        continue;
+      }
+      const p = videostaRuudulle(pallonPiste(r, nakyma, mitat), sov);
+      r.el.style.width = `${koko.toFixed(1)}px`;
+      r.el.style.transform = `translate(${p.x.toFixed(1)}px, `
+        + `${(p.y - koko * REITTIKUVAN_NOSTO).toFixed(1)}px) translate(-50%, -50%)`;
+      r.el.style.opacity = peitto.toFixed(3);
+    }
+  };
 
   const piirraHetki = (t) => {
     const nakyma = kameranNakyma(reitti, t, kamera);
@@ -747,11 +966,12 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     svg.style.opacity = Math.max(0, haivytys).toFixed(3);
 
     /*
-     * LASKEUTUMINEN EI TUO ENÄÄ MITÄÄN (omistaja 6.9.2026 klo 01.20:
-     * *"Jätä isoisän kuvat pois etusivulta"*). Tässä luettiin ennen
-     * `saapumisia` ja laskettiin kortti pinoon; nyt piirto on pelkkä
-     * viiva ja kone.
+     * KÄÄNNÖKSEN KUVA. Pinoa ei lasketa (`saapumisia`-laskuria ei enää
+     * lueta täällä): jokainen kuva elää oman käännöksensä ajan ja
+     * seuraa kaupunkiaan, ja piirto tapahtuu SVG:n alla, jotta kone
+     * jää aina kuvan päälle.
      */
+    piirraReittikuvat(t, nakyma);
   };
 
   const askel = () => {
@@ -822,6 +1042,7 @@ export async function avaaEtusivupallo(kotelo, asetukset = {}) {
     kesto,
     piirraHetki,
     koneRuudulla,
+    reittikuvat,
     sovitus: sovitusNyt,
     pura() {
       if (purettu) return;

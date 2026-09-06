@@ -33,10 +33,15 @@ test('jokaisella isoisän valokuvalla on osoite, selite ja kuvateksti "Isoisä, 
 test('avauslennon kuva on taulun avain `lento`, eikä sen kuvateksti kuvaile isoisää', () => {
   const lento = ISOISAN_VALOKUVAT.lento;
   assert.ok(lento, 'ISOISAN_VALOKUVAT.lento puuttuu');
-  // Omistaja 5.9.2026 illalla, sanasta sanaan.
-  assert.equal(valokuvanKuvateksti(lento), 'Isoisä, Bombay, 1873');
-  // Kuvaputken 5.9.2026 toimittama kuva, koko kuva ilman rajausta.
-  assert.match(lento.osoite, /isoisa-bombay-aged-r20260905-v1\.jpg$/);
+  /*
+   * MAHDOLLISIMMAN VAALEA KUVA (omistaja 6.9.2026 aamu: *"Käytä Ateena
+   * lennossa mahdollisimman vaalea isoisän kuvaa."*). Valinta on
+   * mitattu: Giza on isoisän 30 kuvan joukossa viidenneksi vaalein
+   * (keskiluminanssi 184,4/255) ja Välimeren linjan vaalein — mittaus
+   * ja koko kärkilista ovat js/isoisan-valokuvat.js:n kommentissa.
+   */
+  assert.equal(valokuvanKuvateksti(lento), 'Isoisä, Giza, 1873');
+  assert.match(lento.osoite, /isoisa-giza-aged-r20260905-v1\.jpg$/);
   assert.equal(lento.rajaus, undefined, 'uusi kuva ei tarvitse rajausta');
   assert.equal(rajausTyyli(lento), '');
   // Ei ulkonäköä kuvatekstissä eikä selitteessä (Raamattu: ISOISA JAA
