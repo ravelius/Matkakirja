@@ -3432,7 +3432,12 @@ export const RAAMATTU = {
           + 'ja vain kun sormi tai nappi on irti; ropelo oli ulos-haive, joka '
           + 'piirsi kaksi karttaa paallekkain - kerros POISTUU HETI kun liike '
           + 'alkaa (paalle-haive 260 ms sailyy). Tama tarkentaa ylla olevaa '
-          + '"pois kun liike alkaa" -kohtaa: pois ilman haivetta.',
+          + '"pois kun liike alkaa" -kohtaa: pois ilman haivetta. PALAUTE '
+          + 'v1641:STA (omistaja 6.9.2026 ilta, sanatarkasti: "piste venyy kun '
+          + 'karttaa panoroi. nyt kartta ei tokkinyt enaa"; kuvakaappaus: '
+          + 'Ateenan kultainen kaupunkipiste venyy kapseliksi liikkeen '
+          + 'suuntaan): kaupunkipisteen on pysyttava pyoreana myos '
+          + 'panoroitaessa - korjataan.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
