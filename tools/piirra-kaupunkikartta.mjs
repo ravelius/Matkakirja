@@ -3409,6 +3409,75 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -18.1329, etela: -18.1605, lansi: 178.4180, ita: 178.4470 },
     meri: true,
   },
+  cairns: {
+    /*
+     * CAIRNSIN VANHA KESKUSTA TRINITY INLETIN RANNALLA (6.9.2026).
+     * Ruutu on 2,4 × 2,6 kilometriä eli pelin tiiviimpiä, Suvan
+     * (3,1 km) ja Adenin luokkaa. Syy on aineistossa: Cairnsin koko
+     * perintölistattu keskusta on kahdeksansadan metrin levyinen
+     * nauha McLeod Streetin ja rantabulevardin välissä, ja kartan
+     * kahdeksan kohdetta mahtuvat 1,3 kilometrin kaareen
+     * katedraalilta vanhalle laiturille.
+     *
+     * VERTAILUPISTE ON VANHA LAITURI mutta RAJAUS ON KESKUSTAN
+     * YMPÄRILLÄ. Faktapohja (docs/mantereet-tyoaineisto/
+     * faktapohja-cairns.md, osio 4) valitsi vertailupisteeksi Cairns
+     * Wharf Complexin, koska kaupunki kasvoi 1876 juuri siitä
+     * satamasta — perustelu on hyvä, mutta jos ruutu keskitettäisiin
+     * laiturille, puolet kuvasta olisi Trinity Inletin vettä ja
+     * kaikki kohteet nousisivat yläreunaan. Ruutu on siksi vedetty
+     * keskustan ympärille ja laituri jää sen eteläreunaan.
+     *
+     * KURANDA JA BARRON FALLS EIVÄT MAHDU, eikä niitä yritetty ottaa
+     * mukaan: rata nousee 19 kilometriä luoteeseen, ja se on lehden
+     * oman noston aihe (kulttuuri-kategoriat.js: cairns, nosto K3).
+     * Sama koskee riuttaa ja Daintreetä, jotka ovat kymmenien ja
+     * satojen kilometrien päässä ja koko teemasivun aihe.
+     *
+     * KAKSI FAKTAPOHJAN KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+     * (Petran, Mekan ja Karachin oppi, ks. tarkistus-cairns.md kohta
+     * G): Cairns School of Arts on 178 metrin päässä valtuuston
+     * talosta ja Barrier Reef Hotel 161 metrin päässä tullitalosta,
+     * eli numeroympyrät menisivät päällekkäin. Tilalle tulivat
+     * katedraali, vapaamuurarien temppeli ja rautatieasema.
+     *
+     * meri: true. Trinity Bay ja Trinity Inlet ovat OSM:ssä
+     * rantaviivaa (natural=coastline) eikä vesimonikulmiota, joten
+     * ilman lippua kartan itäreuna olisi paperin värinen.
+     */
+    rajat: { pohjoinen: -16.9110, etela: -16.9330, lansi: 145.7640, ita: 145.7855 },
+    meri: true,
+  },
+  panama: {
+    /*
+     * CASCO VIEJOSTA AMADORIN AALLONMURTAJALLE (6.9.2026). Ruutu on
+     * 4,4 × 4,8 kilometriä eli San Franciscon kokoluokkaa, ja se
+     * kattaa kaupungin vanhan ytimen, Ancónin kukkulan ja kanavan
+     * Tyynenmeren suun.
+     *
+     * CASCO VIEJO KANTAA VAIN YHDEN KOHTEEN, ja se on mitattu eikä
+     * arvattu (tarkistus-panama.md, kohta F): katedraali, Casco
+     * Viejon oma piste, kanavamuseo ja historian museo ovat kaikki
+     * 22–83 metrin päässä toisistaan ja presidentinlinna 187 metrin
+     * päässä katedraalista. Koko vanhakaupunki on kolmensadan metrin
+     * levyinen niemi, joten siitä otetaan kartalle presidentinlinna
+     * ja loput kohteet haetaan ytimen ulkopuolelta.
+     *
+     * PANAMÁ VIEJO JA MIRAFLORES JÄTETTIIN ULKOPUOLELLE. Rauniot
+     * ovat 5,4 kilometriä itään ja sulut 6,4 kilometriä luoteeseen
+     * Casco Viejosta; molempien ottaminen samaan ruutuun vaatisi
+     * lähes kymmenen kilometrin rajauksen, jonka keskellä olisi
+     * enimmäkseen lahtea ja moottoritietä. Kumpikin on sitä paitsi
+     * lehden oman noston aihe (kulttuuri-kategoriat.js: panama,
+     * nostot K1 ja O4) — kartta ei toista lehden nostoja.
+     *
+     * meri: true. Panaman lahti ja kanavan suu ovat OSM:ssä
+     * rantaviivaa, ja ilman lippua kuvan itä- ja eteläreuna olisivat
+     * paperia.
+     */
+    rajat: { pohjoinen: 8.9680, etela: 8.9280, lansi: -79.5720, ita: -79.5280 },
+    meri: true,
+  },
   sanfrancisco: {
     /*
      * Niemen koillisnurkka: Aquatic Parkin rannasta Civic Centeriin ja

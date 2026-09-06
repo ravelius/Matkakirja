@@ -554,4 +554,77 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'Metro avattiin 1966, ja sen kumipyöräiset junat ovat '
       + 'tavallista hiljaisempia.',
   },
+  /* PANAMÁ (Opus 6.9.2026, paketti O9). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain panama); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-panama.md ja
+   * tarkistus-panama.md. Avain on kaupungin wiki-nimi (js/packs/
+   * northamerica.js: 'Panama (kaupunki)'), ei näyttönimi.
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026
+   * ("Panama City", "Panamá Viejo", "Casco Viejo, Panama",
+   * "Panama Canal Railway", "Panama Canal").
+   *
+   * YKSI LEHTI KAHDELLA LAUDALLA (Fablen päätös 24.8.2026,
+   * spec-mantereet.md): kaupunki-id 'panama' on sekä northamerica-
+   * että southamerica-laudalla, ja KULTTUURI_KATEGORIAT palvelee
+   * molempia. Kirjanpidossa Panamá lasketaan P-Amerikkaan, ja siksi
+   * intro asuu tässä taulussa.
+   *
+   * TARKISTUKSEN KORJAUKSET ON TEHTY: uusi kaupunki perustettiin
+   * 1673 (Panama City -artikkelin Casco Viejo -osion "1671" on
+   * ristiriidassa saman artikkelin History-osion ja Casco Viejo
+   * -artikkelin päivämäärällisen tiedon kanssa), ja rautatiestä
+   * käytetään sen avaamishetken omaa nimeä "valtamerten välinen" —
+   * lähde sanoo itse, että transcontinental-nimitys on myöhempi ja
+   * kiistelty.
+   *
+   * KANAVAN AVAUSVUOTTA 1914 ja 1999-luovutusta EI kerrata täällä
+   * kuin kerran, koska ne ovat myös laudan visan ja FACTS-taulun
+   * omia faktoja. Ei nykypolitiikkaa. */
+  'Panama (kaupunki)': {
+    intro: 'Panamá on Panaman pääkaupunki ja Amerikan Tyynenmeren '
+      + 'rannikon vanhin eurooppalainen kaupunki: Pedro Arias de Ávila '
+      + 'perusti sen 15. elokuuta 1519. Siitä tuli Perun valloituksen '
+      + 'lähtöpiste ja Espanjaan matkaavan kullan ja hopean '
+      + 'kauttakulkupaikka — lasti nostettiin maihin Tyynenmeren '
+      + 'puolella ja vietiin muulikaravaaneilla kannaksen yli '
+      + 'Karibialle.'
+      + '\n\n'
+      + 'Vuonna 1671 walesilainen kaappari Henry Morgan hyökkäsi '
+      + 'kaupunkiin 1 400 miehen joukolla, ja kaupunki paloi. **Uusi '
+      + 'Panamá perustettiin 21. tammikuuta 1673** noin kahdeksan '
+      + 'kilometriä lounaaseen meren ympäröimälle niemelle, jota '
+      + 'suojasivat muurit — se on nykyinen Casco Viejo. Isoisän matkan '
+      + 'vuonna 1873 kaupunki oli osa Kolumbiaa, ja kannaksen yli kulki '
+      + 'jo rautatie: Colónista Panamáan vievä rata oli valmistunut '
+      + '27. tammikuuta 1855.'
+      + '\n\n'
+      + 'Kanavaa ei silloin vielä ollut. Ranskalaiset aloittivat '
+      + 'kaivutyöt 1881 ja epäonnistuivat, ja Yhdysvaltain rakentama '
+      + 'sulkukanava avattiin vasta 1914. Nykyään Panamá on **kahden '
+      + 'maailman kaupunki**: pilvenpiirtäjien siluetti ja sen vieressä '
+      + 'matala vanhakaupunki, jonka Unesco lisäsi '
+      + 'maailmanperintöluetteloon 2003.',
+    teksti: 'Panamá on rakennettu kapean kannaksen Tyynenmeren '
+      + 'puoleiselle rannalle. Ilmasto on trooppinen savanni-ilmasto: '
+      + 'sadetta tulee noin 1 900 millimetriä vuodessa, lämpötila '
+      + 'pysyy ympäri vuoden 27 asteen tienoilla, ja taivas on lähes '
+      + 'jatkuvasti osittain pilvinen, koska kaupunki on '
+      + 'päiväntasaajan pilvivyöhykkeellä.'
+      + '\n\n'
+      + 'Kaupungin kauppaa hallitsivat vuodesta 1520 genovalaiset '
+      + 'kauppiaat, joille Espanjan kruunu antoi erikoisluvan — '
+      + 'Genovan tasavalta oli Espanjan tärkein pankkikumppani. '
+      + 'Vuoden 1671 tuhon jälkeen rakennettu uusi kaupunki paloi '
+      + '1700-luvulla vielä kolmesti, ja nykyinen katukuva syntyi '
+      + 'vasta 1800-luvun lopun ja 1900-luvun alkupuolen '
+      + 'jälleenrakennuksissa: uusklassisia ja afroantillilaisia '
+      + 'taloja siirtomaa-ajan raunioiden lomassa.'
+      + '\n\n'
+      + 'Kannaksen ylitys on tehnyt kaupungista rikkaan kolmesti: '
+      + 'ensin hopeareitin, sitten rautatien ja lopulta kanavan '
+      + 'ansiosta. Vuosina 1848–1869 kannaksen ylitti Atlantilta '
+      + 'Tyynellemerelle noin 375 000 ihmistä ja vastakkaiseen '
+      + 'suuntaan 225 000. Casco Viejon ydin, San Felipen '
+      + 'kaupunginosa, on nykyään kaupungin tiheimmin asuttu.',
+  },
 };
