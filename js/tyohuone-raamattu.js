@@ -3519,7 +3519,15 @@ export const RAAMATTU = {
           + 'rantaviivan mustetta ja rantaviiva omalle lapinakyvalle '
           + 'tasolleen (tasokartta piirtaa sen, pallo jattaa pois vektorin '
           + 'tieltä) - koko pyramidi z0-z8 ja pallon sarja samaan ajoon '
-          + 'omistajan Macilla (tools/polta-paikallisesti.sh).',
+          + 'omistajan Macilla (tools/polta-paikallisesti.sh). POLTOT AINA '
+          + 'MACILLA (omistaja 6.9.2026 ilta, sanatarkasti: "kirjaa raamattuun '
+          + 'etta poltetaan jatkossa aina macilla"): laattasarjat (pyramidi, '
+          + 'pallon Mercator-sarja, viiva-, ranta- ja nostotasot) poltetaan '
+          + 'jatkossa aina omistajan Mac Studiolla tools/polta-paikallisesti.sh '
+          + '-skriptilla, ei GitHub Actionsissa (mitattu 6.9.2026: z8 69 628 '
+          + 'laattaa 0,5 h, 3,4 x runnerin ydinnopeus, ei aikakattoa); Fable '
+          + 'valmistelee komennot ja omistaja ajaa ne; Actions-workflow jaa '
+          + 'varalle. Avaimet vain Macin ymparistossa, ei koskaan repoon.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
