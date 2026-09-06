@@ -51,7 +51,8 @@ test('maamaski: 720 × 360, pakkaus palaa samana, tunnetut pisteet', () => {
     assert.equal(MAA[ruutu(lat, lon)], 1, `${nimi} pitäisi olla maata`);
   }
   // Meressä — myös estot.
-  for (const [nimi, lat, lon] of [['Beringinsalmi', 65.8, -169], ['Gibraltar-esto', 36, -5.5], ['Atlantti', 30, -40], ['Bab-el-Mandeb-esto', 12.5, 43.25]]) {
+  for (const [nimi, lat, lon] of [['Beringinsalmi', 65.8, -169], ['Gibraltar-esto', 36, -5.5], ['Atlantti', 30, -40],
+    ['Bab-el-Mandeb-esto', 12.5, 43.25], ['Bab-el-Mandeb-esto (diagonaali)', 13.25, 43.25]]) {
     assert.equal(MAA[ruutu(lat, lon)], 0, `${nimi} pitäisi olla merta`);
   }
   // Pieni synteettinen maski pyöreänä matkana (alku merta, loppu maata).
@@ -338,6 +339,18 @@ test('koko kaari: Australia ennen Eurooppaa, Amerikat Siperian jälkeen, meri es
   assert.ok(siperia.aika > alaska.aika, `Tšuktšit ${siperia.aika} ennen Alaskaa ${alaska.aika}`);
   assert.ok(alaska.aika > chile.aika, 'Alaska ennen Chileä');
   assert.ok(alaska.aika <= 17000 && alaska.aika >= 15000, `Alaska ${alaska.aika} Beringian ikkunassa`);
+  /*
+   * Bab-el-Mandeb ylitetään IKKUNASSA, ei ruudukon diagonaalia pitkin
+   * (docs/moduulit/ihmisen-matka-vanat.md 2.1.3): maskin esto ulottui
+   * vain 13,0°N:ään, ja 8-naapurusto vuoti ruudusta (12,75°N, 42,75°E)
+   * ruutuun (13,25°N, 43,25°E) — Jemenin Tihama värjäytyi 179 513
+   * vuotta sitten. Afrikan puoli pysyy ennallaan.
+   */
+  const tihama = saapui(13.0, 43.7);
+  const djibouti = saapui(11.8, 42.9);
+  assert.equal(tihama.virta, 'paavirta');
+  assert.ok(tihama.aika <= 78000 && tihama.aika >= 55000, `Tihama ${tihama.aika}: ylityksen ikkuna 78–55 ka`);
+  assert.ok(djibouti.aika > 150000, `Djibouti ${djibouti.aika}: Afrikan puoli ennallaan`);
   // Meri estää: Madagaskar saa värin vain Tyynenmeren nauhasta (n. 1 500), ei päävirrasta.
   const madagaskar = saapui(-19, 47);
   assert.equal(madagaskar.virta, 'tyynimeri');
