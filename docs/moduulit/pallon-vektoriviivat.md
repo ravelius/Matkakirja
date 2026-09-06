@@ -708,6 +708,41 @@ musteen paksuus pallolla zoomissa 0,05 = vektorin paksuus (usva pois).
 
 ## 9. Mittarit, kokeilusivut ja kuvat
 
+**V0 tehty 6.9.2026** (`tools/tee-pallovektorit.mjs`,
+`.github/workflows/tee-pallovektorit.yml`,
+`tests/pallovektorit-aineisto.test.mjs`): tuotantoputki kirjoittaa
+int16-deltamuotoiset solutiedostot polkuun
+`julisteet/pallo/vektorit/<versio>/<laji>/l<k>/<sarake>_<rivi>.bin` ja
+`luettelo.json` (76 kt, kaikkien 1 524 solun tavut, viivat ja pisteet).
+Lähde `ne_10m_ocean.geojson` sha256
+`f9696a1337c746a0f6c8c13bc60d0f230d2ef8d105198d5657726c8f8e763fc2`
+(noudettu 6.9.2026 samasta osoitteesta kuin generoi-pyramidi.yml),
+rajat `nykyiset`, harvennus 0,006°. Ajo 1,5 s, tulos 9,0 Mt.
+
+| laji | k | tol | solu | soluja | viivoja | pisteitä | delta kt | + gzip kt | katkoja |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| rannikko | 0 | 0,1 | maailma | 1 | 6 069 | 31 595 | 171 | 127 | 82 |
+| rannikko | 1 | 0,03 | maailma | 1 | 6 069 | 74 655 | 339 | 280 | 20 |
+| rannikko | 2 | 0,008 | 10° | 378 | 6 069 | 178 874 | 765 | 635 | 14 |
+| rannikko | 3 | 0,004 | 10° | 378 | 6 069 | 256 224 | 1 067 | 851 | 14 |
+| rannikko | 4 | 0 | 10° | 378 | 6 069 | 406 798 | 1 656 | 1 251 | 0 |
+| rajat | 0 | 0,1 | maailma | 1 | 7 848 | 16 921 | 127 | 91 | 21 |
+| rajat | 1 | 0,03 | maailma | 1 | 7 848 | 20 990 | 143 | 105 | 21 |
+| rajat | 2 | 0,008 | 10° | 128 | 7 848 | 33 644 | 195 | 154 | 19 |
+| rajat | 3 | 0,004 | 10° | 128 | 7 848 | 44 730 | 239 | 187 | 17 |
+| rajat | 4 | 0 | 10° | 130 | 7 848 | 72 815 | 349 | 263 | 0 |
+
+Pistemäärät ja solumäärät ovat luvun 2.4 mittauksia myöten samat, eli
+tuotanto lukee saman geometrian kuin poltettu viiva. Kaksi eroa
+kokeiluun, molemmat tarkoituksellisia: (1) `katkoja` on niiden janojen
+määrä, joissa yksi askel ylitti int16:n ±3,2767° ja viiva katkaistiin
+uuteen osaan — kaikki ovat leveyspiireillä yli ±79° (Etelämantereen
+jäähyllyn reuna, Pohjois-Grönlanti), maapinnalla alle 150 km ja
+tarkimmilla tasoilla niitä ei ole yhtään; (2) solun vaihtuessa uusi osa
+alkaa rajapisteellä KERRAN — kokeilu toisti pisteen, jolloin jokaiseen
+saumaan jäi nollamittainen jana (LineSegments2 piirtäisi sen pisteenä).
+Ero tavuissa on 0,4 %.
+
 - `tools/savukkeet/mittaa-pallon-vektorit.mjs` — mittari (luku 2.0).
 - `tools/kokeilut/pallon-vektorit/pallo.html` — kokeilusivu pelin omalla
   pallolla; `vektorit.js` — neljä toteutustapaa; `tee-aineisto.mjs` —
