@@ -523,8 +523,69 @@ test('kirjasinkoko mitataan jo portin takana, ei kirjoituskoneen kanssa', () => 
   assert.match(render, /this\.piilotaAvausjuliste\(\);\n[\s\S]{0,900}?this\.fitIntro\(\);\n\s*this\.showAloitusportti\(\);/,
     'fitIntro ei aja portin takana — otsikko saisi kokonsa vasta kirjoituskoneen alkaessa');
   // Portin ohittava haara (pelin reset) mittaa myös ennen ajastimia.
-  assert.match(render, /this\.introShown = true;[\s\S]{0,600}?this\.fitIntro\(\);[\s\S]*?this\.naytaAvausjuliste\(/,
+  assert.match(render, /this\.introShown = true;[\s\S]*?this\.fitIntro\(\);[\s\S]*?this\.naytaAvausjuliste\(/,
     'resetistä palattaessa koko mitattaisiin vasta kertomuksen alkaessa');
+});
+
+/*
+ * KIRJOITUSKONETEKSTI EI HYPPÄÄ (omistaja 6.9.2026 klo 11.11, iPhone,
+ * sanatarkasti: *"Konekirjoitusteksti hyppää kun tekstiä tulee"*).
+ *
+ * JUURISYY: paikkarivi ja runko olivat TYHJIÄ siihen asti, kunnes
+ * kumpikin oma typeText alkoi (paikkarivi AVAUS_KERTOMUS_MS:n kohdalla,
+ * runko vasta rivin jälkeen). typeTextin varjoteksti varaa tilan vasta
+ * kirjoituksen alkaessa, joten keskitetty palsta kasvoi kahdessa
+ * askeleessa ja liukui ylöspäin kummallakin: mitattu Chromiumilla
+ * palstan yläreuna 558 → 535 → 439 px (390 × 844) ja 532 → 519 → 461 px
+ * (1280 × 800). Korjauksen jälkeen vakio molemmilla.
+ *
+ * Vartiot: tila varataan MOLEMMILLE ennen mittausta ja ennen julisteen
+ * ajastinketjua, eikä kirjoituksen alkuun jää yhtään fitIntroa.
+ */
+test('avaustekstin tila varataan ennen kirjoitusta eikä lohko kasva', () => {
+  const render = UI.match(/ {2}renderIntro\(\) \{[\s\S]*?\n {2}\}\n/)[0];
+  const varaus = render.indexOf('this.varaaKirjoitustila(this.introRunko, INTRO_TEXT)');
+  const paikka = render.indexOf('this.varaaKirjoitustila(this.introPaikka, this.introPaikkaTeksti)');
+  const mittaus = render.indexOf('this.fitIntro();', render.indexOf('this.introShown = true;'));
+  const juliste = render.indexOf('this.naytaAvausjuliste(');
+  assert.ok(paikka > 0 && varaus > 0, 'avaustekstin tilaa ei varata ennen kirjoitusta');
+  assert.ok(paikka < mittaus && varaus < mittaus,
+    'fitIntro mittaisi tyhjän palstan — kirjasinkoko muuttuisi kirjoituskoneen alkaessa');
+  assert.ok(mittaus < juliste, 'mittaus jäisi julisteen ajastinketjun jälkeen');
+  // Sama merkkijono varataan ja kirjoitetaan: rivi ei saa vaihtua välissä.
+  assert.match(render, /this\.introPaikkaTeksti = `\$\{this\.introPaikkarivi\(\)\}:`;/,
+    'paikkarivin teksti ei ole talletettu — varaus ja kirjoitus voisivat erota');
+  assert.match(render, /this\.typeText\(this\.introPaikka, this\.introPaikkaTeksti, 'intro',/,
+    'paikkarivi kirjoitetaan eri merkkijonosta kuin varaus tehtiin');
+  // Kirjoituksen alussa ei mitata: juuri se sai asettelun hyppäämään.
+  const kertomus = render.slice(render.indexOf('const aloitaRunko'));
+  assert.doesNotMatch(kertomus, /this\.fitIntro\(\)/,
+    'fitIntro kirjoituskoneen alussa — mittaus hyppäisi taas ensimmäisellä naksahduksella');
+  // Varaus on typeTextin lähtötila: tyhjä typed + koko teksti pendingissä.
+  const varaaja = UI.match(/ {2}varaaKirjoitustila\(target, text\) \{[\s\S]*?\n {2}\}/)[0];
+  assert.match(varaaja, /html\('span', 'typed'\)/, 'varaus ei tee typed-osaa');
+  assert.match(varaaja, /html\('span', 'pending'\)[\s\S]*?textContent = String\(text\)/,
+    'varaus ei pane koko tekstiä näkymättömään pending-osaan');
+  assert.match(CSS, /\.pending \{ visibility: hidden; \}/,
+    'varjoteksti ei ole näkymätön — varattu teksti näkyisi ruudulla');
+});
+
+/*
+ * PAIKKARIVI SAMALLA MUSTEELLA, PIENEMPÄNÄ JA LIHAVOITUNA (omistaja
+ * 6.9.2026 klo 11.11: *"Heathrow saisi olla samalla värillä kuin muut.
+ * Mutta vaikka vähän pienemmällä ja boldattuna?"*).
+ */
+test('avauksen paikkarivi on leipätekstin muste, pienempi ja lihava', () => {
+  const rivi = CSS.match(/\.intro-paikka \{[\s\S]*?\n\}/)[0];
+  assert.match(rivi, /color: var\(--map-ink\);/, 'paikkarivi ei ole leipätekstin muste');
+  assert.doesNotMatch(rivi, /--map-ink-soft|opacity:/,
+    'paikkarivi on yhä himmennetty — omistaja pyysi saman värin kuin muualla');
+  const koko = Number(rivi.match(/font-size: ([\d.]+)em;/)[1]);
+  assert.ok(koko > 0 && koko < 1, `paikkarivin koko ${koko}em ei ole leipätekstiä pienempi`);
+  assert.match(rivi, /font-weight: 700;/, 'paikkarivi ei ole lihavoitu');
+  const harvennus = Number(rivi.match(/letter-spacing: ([\d.]+)em;/)[1]);
+  assert.ok(harvennus <= 0.08,
+    `harvennus ${harvennus}em levittäisi lihavoidun rivin yli palstan`);
 });
 
 test('kirjoituskone ja luenta alkavat vasta alaviivan jälkeen', () => {

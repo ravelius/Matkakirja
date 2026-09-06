@@ -3386,6 +3386,19 @@ export const RAAMATTU = {
           + 'ilman erillista lupaa; matkakirjatekstit, kohtaamiset ja aarrekaari '
           + 'tehdaan uusiin maihin vasta kun Euroopan kaari on hiottu valmiiksi '
           + 'ja monistetaan siita.',
+        'KIRJOITUSKONE EI HYPI, PAIKKARIVI LIHAVANA (omistaja 6.9.2026 '
+          + 'aamupaiva TestFlight-kuvakaappauksesta, sanatarkasti: "Konekirjoitus '
+          + 'teksti hyppaa kun tekstia tulee. Heathrow saisi olla samalla varilla '
+          + 'kuin muut. Mutta vaikka vahan pienemmalla ja boldattuna?"): avauksen '
+          + 'paikkarivin ja rungon tila varataan jo ennen kirjoitusta, joten '
+          + 'palsta ei liu\'u; paikkarivi on leipatekstin mustetta, 0,8 em ja '
+          + 'lihava; etusivun reittikuva ei paista julisteotsikon lapi (pehmea '
+          + 'aukko kuvakerroksessa otsikon kohdalla).',
+        'LINSSIN SELITE LAUKUSSA ON YKSI RIVI (omistaja 6.9.2026 keskipaiva, '
+          + 'laukun kuvakaappauksesta, sanatarkasti: "Tassa on liikaa tekstia '
+          + 'linssista"): laukun varusteselite on yksi lause (Ihmisen matka: '
+          + '"Ihmisen matka Afrikasta koko maapallolle: kello juoksee, valot '
+          + 'syttyvat."); pidempi esittely kuuluu linssin omaan avauslaatikkoon.',
         'HITAAMPI ALOITUSPALLO, LENTO SEURAA KONETTA, MAAPALLO VAALEAMPI '
           + '(omistaja 6.9.2026 aamupaiva, sanatarkasti: "Kohdemaan valinnassa '
           + 'hitaampi pallon liike. Lentokone kohtauksessa paljon lahempi zoom '
