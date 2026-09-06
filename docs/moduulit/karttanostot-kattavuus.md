@@ -370,3 +370,32 @@ nollassa, ja niiden maastokohteet puuttuvat kokonaan — sama putki kuin
 Euroopan erässä 1), sitten M3 ja M4, sitten M5 ja M6, ja M7 vasta
 lopuksi: Euroopan heikoinkin maa on 11 merkissä, eli muualla sama työ
 tuottaa moninkertaisen hyödyn.
+## Erä 4 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Erä vei loppuun Euroopan viimeiset vajaat maat. Yhteensä 35 uutta
+kohdetta, kaikki maan omaan `js/packs/maastokohteet-<iso>.js`-tiedostoon
+lohkoon "K2-ERÄ 4 6.9.2026". Yhdenkään tyyppi ei ole maastoa, kaikilla on
+vain maailmankartan rivi (erillislaudasta luovuttu, Raamattu 30.8.2026),
+ja erä on kuvaton. Taulukon luvut ajetaan `tools/laske-karttanostot.mjs`
+-työkalulla erikseen.
+
+| maa | uusia | kohteet |
+|---|---:|---|
+| Ukraina (UKR) | 8 | Kamjanets-Podilskyin linna, Tšernobylin ydinvoimala, Hersonesos, Lviv, Hortytsja, Poltavan taistelu, Sofijivkan puisto, Derzhprom |
+| Venäjä (RUS) | 8 | Kizhin pogosta, Solovetskin luostari, Kazanin kreml, Veliki Novgorod, Kolan syväreikä, Tunguskan räjähdys, Tobolskin kreml, Jasnaja Poljana |
+| Espanja (ESP) | 8 | Santiago de Compostela, Segovian akvedukti, Altamiran luola, Toledo, Córdoban moskeijakatedraali, Las Médulas, Méridan roomalainen teatteri, Salamancan yliopisto |
+| Ranska (FRA) | 6 | Mont-Saint-Michel, Carcassonnen linnoituskaupunki, Lascaux, Chartresin katedraali, Pont du Gard, Carnacin kivirivit |
+| Britannia (GBR) | 5 | Stonehenge, Hadrianuksen muuri, Skara Brae, Ironbridge, Bathin roomalaiset kylpylät |
+
+FRA:lla oli jo kaksi ja GBR:llä kolme kuratoitua kohdetta
+(`js/packs/fokuskohteet-fra.js`, `-gbr.js`); niihin ei koskettu eikä
+yhtäkään niiden kohteista toistettu.
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-listan kaupunkiin, ja jokaisen
+kohteen lähin on kirjattu sen koordinaattirivin viereen. Koko erän lähin
+on Toledo 23,9 lautayksikön päässä Madridista; raja
+`KAUPUNGIN_KOHDALLA_SADE` on 7. Kolme kohdetta jätettiin pois juuri
+tästä säännöstä: Alhambra (Granadan kohdalla), Versailles (7,3 yksikköä
+Pariisista) ja Forth Bridge (7,1 yksikköä Edinburghista).
