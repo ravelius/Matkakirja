@@ -1644,9 +1644,27 @@ export const OMAT_ARTIKKELIT = {
       + 'kansa on nyt maailmalla.',
   },
   Kamerun: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // CMR) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Kamerunia kutsutaan Afrikaksi pienoiskoossa: yhdessä '
       + 'maassa on sademetsää, savannia, vuoria ja rannikkoa — ja '
-      + 'yli kaksisataa kieltä.',
+      + 'yli kaksisataa kieltä. Nimi on portugalilaisten antama: he '
+      + 'kastoivat Wouri-joen 1400-luvulla nimellä Rio dos Camarões, '
+      + 'katkarapujen joki. Pohjoisessa Tšad-järven suunnalla eli jo '
+      + 'kaksituhatta vuotta sitten Sao-sivilisaatio, jonka '
+      + 'muurikaupungeista kotokot polveutuvat, ja Mandaran vuorille '
+      + 'nousi 1500-luvun kynnyksellä oma kuningaskuntansa. Läntisillä '
+      + 'ruohikkomailla bamilekejen ja tikarien fonit hallitsevat yhä '
+      + 'chefferieitään, joissa helmitetty naamio, veistetty pilari ja '
+      + 'katonharjan piikkien määrä kertovat kunkin arvon. Ensimmäisen '
+      + 'maailmansodan jälkeen Saksan siirtomaa jaettiin Ranskan ja '
+      + 'Britannian kesken, ja vuoden 1961 kansanäänestys liitti '
+      + 'englanninkielisen etelän ranskankieliseen Kameruniin — siksi '
+      + 'maalla on kaksi eurooppalaista virallista kieltä. Ruoka '
+      + 'survotaan ja keitetään kärsivällisesti, musiikki syntyi '
+      + 'Doualan satamassa ja Yaoundén ylängöllä, ja jalkapallon '
+      + 'maailma oppi maan nimen kesällä 1990.',
     artikkeli: 'Kamerun ulottuu Guineanlahden rannalta Tšad-järvelle: '
       + 'etelässä sademetsää, keskellä ylänköä, pohjoisessa kuivaa '
       + 'savannia. Nimi tulee portugalin katkaravuista — '

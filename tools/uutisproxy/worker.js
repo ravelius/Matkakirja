@@ -101,6 +101,9 @@ const SALLITUT = [
   // Namibian uutislähde (maalehti NAM, 6.9.2026): syöte ja
   // artikkelisivut samalla isäntänimellä, ilman www-etuliitettä.
   'https://neweralive.na/',
+  // Kamerunin uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä, ilman www-etuliitettä.
+  'https://datacameroon.com/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

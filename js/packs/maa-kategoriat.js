@@ -42360,4 +42360,411 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KAMERUN (CMR) — Afrikan laudan maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-kamerun.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA: Kamerunilla ei ole kaupunkilehteä,
+   * mutta kartta kattaa poikkeuksellisen paljon. maastokohteet-cmr.js
+   * ottaa Kamerunvuoren, Guineanlahden, Sanagan, Foumbanin palatsin ja
+   * sulttaani Njoyan kirjaimiston, Djan, Bimbian orjasataman, Rhumsikin,
+   * Wazan, Kribin, Korupin ja Ngaoundéréen; skandaalit.js Nyosjärven
+   * 1986 ja Douala 1914:n; elaintakyt.js goliattisammakon. Siksi
+   * LUONTO JÄTETTIIN KOKONAAN POIS aiheista — kartta kertoo sen jo — ja
+   * viidenneksi aiheeksi tuli kuvataide. Historiassa ei ole Njoyaa,
+   * Bimbiaa eikä Saksan siirtomaahallinnon väkivaltaa; kuvataiteessa ei
+   * ole Foumbanin palatsimuseota.
+   *
+   * HERKÄT AIHEET: nykypolitiikka on kokonaan pois (M3:n Myanmar-linja).
+   * Maan nykyinen presidentti mainitaan vain virka-asemana Roger Millan
+   * paluujutussa, englanninkielisten alueiden nykytilanne jää lehden
+   * ulkopuolelle, ja historiaosuus päättyy vuoteen 1972.
+   *
+   * KUVAT: 13 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin.
+   * SEITSEMÄN NOSTOA JÄI KUVATTOMAKSI: Sao ja Kotoko, katkaravun joki,
+   * Mandaran kuningaskunta, makossan synty, Italia 1990, vuosi 2000 ja
+   * Françoise Mbango Etone — Commonsissa ei ole niistä kelvollista
+   * kuvaa. HYLÄTYT: "Achu de Bafut" (tunnistettavia kasvoja),
+   * "Masque royal éléphant, Musée du quai Branly" (museovitriini ja
+   * opastekyltti), "Case initiatique du laakam à bandjoun"
+   * (tunnistettava henkilö, joka ei ole jutun aihe), "Plage de sable du
+   * Wouri" (rannalla roskia), "Mandara Mountains - panoramio"
+   * (extmetadatan tekijä on katkaistu sähköpostiosoite),
+   * "Monument Reunification 4" (itse monumentti ei näy kuvassa).
+   *
+   * TUNNISTETTAVAT KASVOT: mukana on vain kuvia, joissa tunnistuva
+   * henkilö ON jutun aihe (Manu Dibango, Roger Milla, Barthélémy
+   * Toguo) — sama linja kuin Keniassa ja Itävallassa.
+   */
+  CMR: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kamerunin historia alkaa Tšad-järven eteläpuolisilta savanneilta ja '
+          + 'päättyy kansanäänestykseen, joka teki kahdesta siirtomaasta yhden maan — '
+          + 'ja jätti sille kaksi eurooppalaista virallista kieltä.',
+      nostot: [
+        {
+          otsikko: 'Kuningas, jota ei saanut nähdä',
+          aika: '2000 eaa.–1500-luku',
+          teksti: 'Charin jokialtaassa nykyisen Kamerunin ja Tšadin rajaseudulla eli '
+              + 'Sao, varhaisin sivilisaatio, joka on jättänyt näille seuduille selvät '
+              + 'jäljet. Sen juuret ovat Gajiganna-kulttuurissa, joka rakensi '
+              + 'linnoitettuja kaupunkeja jo noin 800 eaa. Kaupunkivaltioiden huippu '
+              + 'osui 900- ja 1400-lukujen väliin: jokaista ympäröi vahva muuri, ja '
+              + 'hallitsijaa pidettiin jumalallisena — seremonioita lukuun ottamatta '
+              + 'hän pysyi verhon takana näkymättömissä. Kuningatar-äidillä ja '
+              + 'hallitsijan vanhimmalla sisarella oli tuntuva poliittinen valta. '
+              + 'Kotokot perustivat oman kuningaskuntansa noin 1500 ja pitävät itseään '
+              + 'Saon perillisinä.',
+        },
+        {
+          otsikko: 'Joki, joka nimettiin katkaravuista',
+          aika: '1400-luku',
+          teksti: 'Portugalilaiset purjehtijat saapuivat Guineanlahdelle 1400-luvulla ja '
+              + 'kastoivat suuren suistojoen nimellä Rio dos Camarões, katkarapujen '
+              + 'joki: vedessä kuhisi Kamerunin haamukatkarapu. Joki on Wouri, ja '
+              + 'nimestä tuli ensin rannikon, sitten koko maan nimi — portugaliksi '
+              + 'Kamerun on yhä Camarões. Nimi kertoo, kuka nimen antoi: se on '
+              + 'eurooppalaisten eksonyymi, ei paikallinen sana. Sisämaassa elettiin '
+              + 'aivan omaa historiaansa — pohjoinen kuului Tšad-altaan ja Sahelin '
+              + 'islamilaisten kuningaskuntien piiriin, etelää hallitsivat pienet '
+              + 'kuninkaat, päälliköt ja fonit.',
+        },
+        {
+          otsikko: 'Kuningaskunta, jonka perusti nainen ja metsästäjä',
+          aika: '1500–1823',
+          teksti: 'Mandaran vuorille syntyi hieman ennen vuotta 1500 kuningaskunta, '
+              + 'jonka perustajiksi perinne nimeää naishallitsija Soukdan ja '
+              + 'metsästäjä Gayan. Leo Africanus kirjoitti siitä 1526 ja kehui '
+              + 'asukkaita rikkaiksi ja ahkeriksi sekä suuriksi oikeuden ja kohtuuden '
+              + 'ystäviksi. Pääkaupungiksi tuli Dulo noin 1580, ja Bornun keisari '
+              + 'Idris Alaoma asetti sinne kuninkaan 1614. Sulttaanikunta Mandarasta '
+              + 'tuli noin 1715, ja huipussaan se keräsi veroa viideltätoista '
+              + 'päällikkökunnalta — vuonna 1781 se voitti Bornun taistelussa ja 1809 '
+              + 'torjui Modibo Adaman joukot, jotka olivat jo vallanneet Dulon.',
+        },
+        {
+          otsikko: 'Kansanäänestys, joka teki kahdesta yhden',
+          aika: '1919–1972',
+          tiedosto: 'Reunification monument in Buea.jpg',
+          teksti: 'Ensimmäisen maailmansodan jälkeen Saksan Kamerun jaettiin kahdeksi '
+              + 'Kansainliiton mandaatiksi: suurempi osa Ranskalle, kapea läntinen '
+              + 'kaistale Britannialle. Ranskan puoli itsenäistyi 1. tammikuuta 1960 '
+              + 'Guinean jälkeen toisena Ranskan siirtomaana Saharan eteläpuolella. '
+              + 'Britannian puolella äänestettiin 11. helmikuuta 1961: pohjoinen '
+              + 'valitsi Nigerian, eteläinen Kamerunin. Ehdoista neuvoteltiin '
+              + 'Foumbanissa saman vuoden heinäkuussa, ja liittovaltion perustuslaki '
+              + 'hyväksyttiin elokuussa — Buea sai Länsi-Kamerunin pääkaupungin aseman '
+              + 'ja Yaoundé liittovaltion. Vuonna 1972 liittovaltio korvattiin '
+              + 'yhtenäisvaltiolla.',
+          selite: 'Buea Kamerunvuoren rinteellä oli Länsi-Kamerunin pääkaupunki, ja '
+            + 'sen puistossa seisoo yhdistymisen muistomerkki.',
+          lahde: 'A.R. Etoyiva, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kamerunilaisessa keittiössä lähes jokainen perusruoka survotaan, '
+          + 'keitetään monta kertaa tai hapatetaan — kiirettä ei ole, mutta makua on.',
+      nostot: [
+        {
+          otsikko: 'Kansallisruoka, jonka lehdet keitetään kolmesti',
+          tiedosto: 'Le Ndolé.JPG',
+          teksti: 'Ndolé on doualalainen pata, jossa on jauhettuja maapähkinöitä, '
+              + 'rapuja, valkosipulia, sipulia ja ndoleh-lehtiä, ja sitä pidetään '
+              + 'laajalti Kamerunin kansallisruokana. Työ alkaa lehdistä: ne keitetään '
+              + 'kaksi tai kolme kertaa suolatussa vedessä vuorisuolan kanssa, jotta '
+              + 'kitkeryys lähtee. Vasta sitten ne sekoitetaan tuoreesta '
+              + 'maapähkinätahnasta ja survotuista mausteista tehtyyn kastikkeeseen. '
+              + 'Mukaan tulee lihaa, savustettua kalaa tai katkarapuja — '
+              + 'katkarapuversiota sanotaan kuninkaalliseksi. Lisukkeena on '
+              + 'plantaanibanaania ja bobolo, hapatettua maniokkitahnaa, joka '
+              + 'höyrytetään marantalehdissä spiraaliksi kierrettynä.',
+          selite: 'Ndolén lehdet kiehuvat avotulella. Juuri toistuva keittäminen '
+            + 'suolavedessä vie kitkeryyden pois, ja siihen menee aikaa.',
+          lahde: 'Jessica Sagou, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Keitto, jonka värin tekee kalkkikivi',
+          tiedosto: 'Taro sauce jaune avec peau de boeuf.jpg',
+          teksti: 'Achu on tikarien ja ngembojen perusruoka Kamerunin luoteis- ja '
+              + 'länsiosissa: kokojamssi ja raa\'at banaanit keitetään, kuoritaan ja '
+              + 'survotaan huhmaressa sileäksi taikinaksi, joka muotoillaan lautaselle '
+              + 'oman kuoppansa kanssa. Kuoppaan kaadetaan keltainen keitto, joka '
+              + 'valmistetaan erikseen palmuöljystä, mausteista ja lihaliemestä — ja '
+              + 'kanwa- eli niki-vedestä, jossa on liuotettua kalkkikiveä. Juuri se '
+              + 'kääntää punaisen palmuöljyn keltaiseksi ja antaa ruoalle sen toisen '
+              + 'nimen, keltainen keitto. Seurana on naudanlihaa, sisäelimiä tai '
+              + 'naudannahkaa. Luoteessa ruoka on achu, lännessä taro.',
+          selite: 'Survottu kokojamssitaikina, keltainen keitto sen keskellä ja '
+            + 'palasia naudannahkaa reunoilla — achu tarjoillaan juuri näin.',
+          lahde: 'Minette Lontsie, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Neljäkymmentä kiloa pippuria banaaniviljelmältä',
+          aika: '1958–',
+          tiedosto: 'Piper nigrum Dried fruits with and without pericarp - Penja Cameroun.jpg',
+          teksti: 'Penjan laakso on vanhaa tulivuoren maata, ja siihen istutti '
+              + 'pippurin Antoine Decré, jolla oli seudulla banaaniviljelmä. '
+              + 'Ensimmäinen vientierä lähti maaliskuussa 1958: yksi neljänkymmenen '
+              + 'kilon säkki valkopippuria. Nykyään poivre de Penja on suojattu '
+              + 'maantieteellinen merkintä seitsemässätoista Afrikan OAPI-maassa ja '
+              + 'lisäksi Euroopan unionissa — harvinaista afrikkalaiselle '
+              + 'maataloustuotteelle. Michelin-kokit löysivät sen, ja toukokuussa 2016 '
+              + 'kilosta maksettiin jopa 321 euroa. Samasta köynnöksestä saadaan '
+              + 'vihreä, musta, valkoinen ja punainen pippuri; ero syntyy vain '
+              + 'poimintahetkestä ja käsittelystä.',
+          selite: 'Vasemmalla mustapippuri kuorineen, oikealla valkopippuri, josta '
+            + 'kuori on liotettu pois. Marja on sama, käsittely eri.',
+          lahde: 'Didier Descouens, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Havupuun sukulainen, joka silputaan keitoksi',
+          tiedosto: 'Gnetum africanum Leaves (Eru ou Okok).jpg',
+          teksti: 'Eru on sademetsän köynnös, joka lehdistään huolimatta on '
+              + 'paljassiemeninen kasvi — mäntyjen ja muiden havupuiden sukulainen. Se '
+              + 'kasvaa kymmenen metriä pitkäksi, kiipeää varjossa ali- ja '
+              + 'välikerroksen puihin ja tuottaa käpymäisiä lisääntymisosia. Paksut '
+              + 'lehdet silputaan hiuksenohuiksi suikaleiksi ja keitetään palmuöljyn, '
+              + 'rapujen ja savustetun kalan tai naudannahan kanssa; seurana on water '
+              + 'fufu eli maniokkitahna. Ruoka on lounaisen Manyu-kansan oma. Lehtiä '
+              + 'myydään toreilla ympäri vuoden verottomasti, ja kaupasta noin '
+              + 'kahdeksankymmentä prosenttia on maaseudun naisten käsissä.',
+          selite: 'Eru-lehtiä säkissä torilla. Kamerunissa kasvi tunnetaan myös '
+            + 'nimillä okok ja m\'fumbua.',
+          lahde: 'Minette Lontsie, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä muuttaa achu-keiton palmuöljyn keltaiseksi?',
+        vaihtoehdot: [
+          'Sahrami',
+          'Kalkkikivivesi',
+          'Kurkuma',
+          'Munankeltuainen',
+        ],
+        oikea: 1,
+        fakta: 'Kanwa- eli niki-vesi on kalkkikiviliuosta, ja se kääntää punaisen '
+            + 'palmuöljyn keltaiseksi. Siitä ruoka on saanut nimen keltainen keitto.',
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Kamerunin läntisillä ruohikkomailla taide ei ole koriste vaan '
+          + 'arvojärjestys: naamio, helmi, katonharja ja kangas kertovat kukin, kuka '
+          + 'kantajansa on.',
+      nostot: [
+        {
+          otsikko: 'Naamio, jossa kuningas muuttuu norsuksi',
+          tiedosto: 'Masque d\'éléphant.jpg',
+          teksti: 'Bamilekejen kuningasta kutsutaan foniksi, ja hänen valtaansa '
+              + 'edustavat norsu, puhveli ja leopardi; suullisen perinteen mukaan fon '
+              + 'voi muuttua norsuksi tai leopardiksi milloin haluaa. Norsunaamiossa '
+              + 'eli mbap mtengissä on ulkonevat pyöreät korvat, ihmismäiset kasvot ja '
+              + 'edessä ja takana polviin ulottuvat paneelit, jotka on kokonaan '
+              + 'peitetty geometrisella helmityöllä. Toistuva tasakylkinen kolmio on '
+              + 'leopardin merkki. Naamioita kantavat miehet hautajaisissa, '
+              + 'palatsijuhlissa ja kuninkaallisissa seremonioissa, ja fon voi antaa '
+              + 'luvan esiintyä leopardintaljan kanssa — se on näkyvä osoitus asemasta.',
+          selite: 'Norsunaamio kulkueessa chefferien juhlapaikalla. Leveä hattu ja '
+            + 'helmillä kirjotut paneelit kertovat kantajan arvon.',
+          lahde: 'Prosper Pérez, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kylä, jossa katonharja kertoo arvon',
+          tiedosto: 'Esplanade de la chefferie bandjoun.jpg',
+          teksti: 'Bandjounin chefferie on kahdenkymmenen kilometrin päässä '
+              + 'Bafoussamista, ja sen suuri maja on seitsemäntoista metriä korkea. '
+              + 'Sen rakennutti kuningas Notouom I noin neljäsataa vuotta sitten, ja '
+              + 'keskimmäiset kantopilarit ovat selvinneet kolmesta tulipalosta. '
+              + 'Julkisivut ovat bambua ja kasvikuitua geometrisin kuvioin, ovet on '
+              + 'nostettu puoli metriä maasta valumaveden takia, ja katon harjapiikkien '
+              + 'määrä kertoo asukkaan arvon. Sisällä leijonantaljat kuuluvat '
+              + 'päällikölle, pantterintaljat suurille arvohenkilöille ja oviin '
+              + 'veistetyt liskot alemmille. Museon tanssihatuista suurin painaa '
+              + 'kaksikymmentäviisi kiloa.',
+          selite: 'Chefferien aukio: kartiokattoisia majoja riveissä ja niiden '
+            + 'välissä pylväikköinen portti kuninkaan pihalle.',
+          lahde: 'Franco237, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kangas, joka kertoo mistä olet kotoisin',
+          tiedosto: 'Toghu cloth, north west region cameroon.jpg',
+          teksti: 'Toghu ja ndop ovat ruohikkomaiden omia kankaita, ja niiden kuviosta '
+              + 'tuli tikarien ja naapurikansojen tuntomerkki, joka erottui kauas: '
+              + 'sama kuviokieli kulkee vaatteissa, rakennuksissa, taide-esineissä ja '
+              + 'kuninkaallisten tilojen rajaamisessa. Tikarit tunnetaan myös hyvin '
+              + 'yksityiskohtaisista naamioistaan, joissa on voimakas nenä ja suuret '
+              + 'silmät, sekä koristelluista messinkipiipuistaan; heitä pidetään '
+              + 'seudun ainoana kansana, joka osasi taitaa rautaa. Ruohikkomaiden '
+              + 'palatseissa kattoa kannattavat pilarit, ovenpielet ja kynnykset on '
+              + 'veistetty käsin samalla kuviokielellä.',
+          selite: 'Toghu-kangas on mustaa samettia, johon kuviot on kirjottu '
+            + 'punaisella, keltaisella ja valkoisella langalla.',
+          lahde: 'serieminou, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Taiteilija, joka rakensi galleriansa kotikylään',
+          aika: '2005–',
+          tiedosto: 'Barthélémy TOGUO.jpg',
+          teksti: 'Barthélémy Toguo syntyi 1967 ja opiskeli Abidjanissa, Grenoblessa ja '
+              + 'Düsseldorfin taideakatemiassa. Hänen vesivärisarjansa lähtivät '
+              + 'liikkeelle passeista ja niiden leimoista, ja aiheina ovat '
+              + 'muuttoliike, siirtomaa-aika ja maanpako. Menestyksen jälkeen hän '
+              + 'rakennutti kotiseudulleen Bandjouniin taidekeskuksen, joka valmistui '
+              + '2007: näyttelytila, kirjasto, taiteilijaresidenssi ja luomutila. '
+              + 'Päärakennuksen kymmenmetrinen harjakatto noudattaa seudun omaa '
+              + 'rakennustapaa, ja tiloihin kutsutaan kyläläisiä pitämään hautajaisia, '
+              + 'ristiäisiä ja häitä. Unesco nimesi Toguon rauhantaiteilijaksi 2021.',
+          selite: 'Barthélémy Toguo asuu vuorotellen Pariisissa ja Bandjounissa, '
+            + 'jonne hän rakensi taidekeskuksensa.',
+          lahde: 'KAG1LP2MDIAKITE, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Kamerunin kaksi suurta tanssilajia syntyivät sadan kilometrin päässä '
+          + 'toisistaan — toinen sataman kaupungissa, toinen ylängön kylissä — ja '
+          + 'yhden niistä kertosäe kiertää yhä maailman radioissa.',
+      nostot: [
+        {
+          otsikko: 'Huuto, josta tuli tanssilaji',
+          aika: '1950-luku',
+          teksti: 'Makossa syntyi Doualassa dualojen kossa-tanssista. Nelle Eyoum '
+              + 'huusi yhtyeensä keikoilla "kossa kossa" lapsille, jotka alkoivat '
+              + 'siitä tanssia, ja huudosta jäi kappaleisiin kertosäe ja lajille nimi. '
+              + 'Sana m\'a kossa tarkoittaa dualaksi kiemuroita, ja kossa on jotain '
+              + 'kehotushuudon ja kirosanan väliltä — kiihoke, johon on pakko reagoida. '
+              + 'Tyyli alkoi muotoutua 1950-luvulla, mutta ensimmäiset levytykset '
+              + 'tulivat vasta vuosikymmen myöhemmin. Makossaa on sanottu hidastetuksi '
+              + 'assikoksi: siinä lyömäsoittimena on tyhjä pullo, jota viulisti '
+              + 'Jean-Luc Ponty kutsui pullo-bopiksi.',
+        },
+        {
+          otsikko: 'B-puoli, joka valloitti New Yorkin',
+          aika: '1972–1973',
+          tiedosto: 'DIBANGO.jpg',
+          teksti: 'Manu Dibango levytti 1972 kappaleen jalkapallolaulun kääntöpuolelle: '
+              + 'A-puoli juhli Kamerunin pääsyä Afrikan cupin puolivälieriin ja sitä, '
+              + 'että maa isännöi turnausta ensimmäistä kertaa. B-puolen nimi oli Soul '
+              + 'Makossa. David Mancuso löysi levyn brooklynilaisesta levykaupasta ja '
+              + 'soitti sitä juhlissaan, Frankie Crocker otti sen radioon, ja koska '
+              + 'alkuperäistä oli vaikea saada, vähintään kaksikymmentäkolme yhtyettä '
+              + 'levytti siitä oman version. Kertosäe ma-ma-ko, ma-ma-sa päätyi '
+              + 'myöhemmin Michael Jacksonin Thrilleriin ja Rihannan levylle: '
+              + 'kappaleesta tuli historian sampletuin afrikkalainen laulu.',
+          selite: 'Manu Dibango soitti saksofonia seitsemällä vuosikymmenellä. Hän '
+            + 'syntyi Doualassa 1933 ja kuoli 2020.',
+          lahde: 'Emmanuel Dautant, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Kitara, joka sidottiin kuulostamaan balafonilta',
+          aika: '1940–1990-luvut',
+          tiedosto: 'BalafonOuest2.jpg',
+          teksti: 'Bikutsi tarkoittaa betien kielellä maan lyömistä: tanssi tehdään '
+              + 'polkemalla jalat maahan, ja rytmi kulkee kuudessa kahdeksasosassa. '
+              + 'Juhlissa ensin puhutaan myyteistä, sitten siirrytään bikutsin puolelle, '
+              + 'jossa naiset laulavat balafonin kanssa tämän elämän asioista. '
+              + 'Ensimmäiset levytykset teki Anne-Marie Nzié 1940-luvulla. Messi Me '
+              + 'Nkonda Martin sitoi Los Camaroesissa sähkökitaran kielet yhteen '
+              + 'puuvillanaruilla, jolloin kitara alkoi kuulostaa balafonilta; '
+              + 'vuonna 1987 perustetun Les Têtes Brûléesin kitaristi Zanzibar sai '
+              + 'saman aikaan vaahtomuovilla tallan kohdalla.',
+          selite: 'Balafon on puinen laattasoitin, ja juuri sen ääntä bikutsin '
+            + 'kitaristit ovat jäljitelleet omilla kikoillaan.',
+          lahde: 'Happiraphael, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Soitin, jonka mukaan hengen antoi',
+          tiedosto: 'Mvet (MDMB 679).jpg',
+          teksti: 'Mvet on fangien kielisoitin, jonka runkona on yhdestä kahteen metriin '
+              + 'pitkä raffiapalmun tai bambun varsi ja kaikupohjina tavallisesti kolme '
+              + 'kalebassia. Pystysuora keskitalla jakaa neljä tai viisi kieltä, ja '
+              + 'niitä soitetaan tallan molemmilta puolilta. Soitin pidetään '
+              + 'vaakasuorassa rintaa vasten, ja keskimmäistä kalebassia avataan ja '
+              + 'suljetaan käsivarren liikkeellä. Sana tarkoittaa myös eeposlaulajien '
+              + 'perinnettä. Legendan mukaan soittimen sai soturi Oyono Ada Ngone, joka '
+              + 'menetti pakomatkalla tajuntansa ja kertoi herättyään tavanneensa '
+              + 'Eyo-nimisen hengen, joka antoi hänelle soittimen ja tarinat.',
+          selite: 'Mvetin kolme kalebassia toimivat kaikukoppina, ja kielet on '
+            + 'pingotettu rungon molemmin puolin keskitallan yli.',
+          lahde: 'Sguastevi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'urheilu',
+      nimi: 'Urheilu',
+      johdanto: 'Kamerunin urheiluhistoria on kahden kesän varassa: 1990 jalkapallon '
+          + 'maailma oppi maan nimen, ja 2000 se voitti kaiken mitä oli tarjolla.',
+      nostot: [
+        {
+          otsikko: 'Hallitseva maailmanmestari kaatui avausottelussa',
+          aika: '1990',
+          teksti: 'Italian MM-kisojen avausottelussa Kamerun kaatoi hallitsevan '
+              + 'maailmanmestarin Argentiinan 1–0 François Omam-Biyikin maalilla. '
+              + 'Sitten kaatui Romania 2–1, ja Neuvostoliitto vei viimeisen ottelun '
+              + '4–0 — Kamerunista tuli ensimmäinen joukkue, joka voitti MM-lohkonsa '
+              + 'negatiivisella maalierolla. Kahdeksannesvälierässä Kolumbia hävisi '
+              + 'jatkoajalla 2–1, ja Kamerun oli ensimmäinen afrikkalainen joukkue '
+              + 'puolivälierissä. Englantia vastaan Emmanuel Kundé teki '
+              + 'rangaistuspotkumaalin ja Eugène Ekéké johtomaalin, mutta Gary Lineker '
+              + 'tasoitti pilkulta ja ratkaisi toisella pilkulla jatkoajalla.',
+        },
+        {
+          otsikko: 'Kolmekymmentäkahdeksanvuotias vaihtomies',
+          aika: '1990–1994',
+          tiedosto: 'Milla2008.JPG',
+          teksti: 'Roger Milla oli lopettanut maajoukkueuransa 1988 kuusineljättä-'
+              + 'vuotiaana, kun maan presidentti soitti hänelle 1990 ja pyysi '
+              + 'palaamaan. Italiassa hän aloitti jokaisen ottelun penkiltä ja teki '
+              + 'silti neljä maalia, joista jokaista hän juhli kulmalipun luona '
+              + 'lambadaa muistuttavalla tanssilla. Kolumbiaa vastaan hän riisti pallon '
+              + 'maalivahti René Higuitalta rangaistusalueen ulkopuolelta ja käveli sen '
+              + 'tyhjään maaliin. Neljä vuotta myöhemmin hän palasi 42-vuotiaana ja '
+              + 'teki maalin Venäjää vastaan: MM-kisojen vanhin maalintekijä, oma '
+              + 'ennätys parannettuna. Passissa lukee virheen vuoksi Roger Miller.',
+          selite: 'Roger Milla Pekingin olympiakylässä 2008. Pelé valitsi hänet 2004 '
+            + 'sadan parhaan elävän jalkapalloilijan listalle.',
+          lahde: 'Jmex60, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Vuosi, jolloin voitettiin kaikki',
+          aika: '2000',
+          teksti: 'Kamerunin paras urheiluvuosi mahtui kahdeksaan kuukauteen. '
+              + 'Helmikuussa joukkue voitti Afrikan cupin, jota isännöivät yhdessä '
+              + 'Ghana ja Nigeria: finaalissa kaatui isäntämaa Nigeria '
+              + 'rangaistuspotkukilpailussa 4–3. Syyskuussa Sydneyssä pelattiin '
+              + 'olympiaturnaus, jonka jatkoajat ratkaistiin golden goal -säännöllä, ja '
+              + 'finaalissa Kamerun voitti Espanjan. Se oli maan ensimmäinen '
+              + 'olympiakulta. Katsojia oli 104 098, enemmän kuin missään '
+              + 'olympiajalkapallo-ottelussa aiemmin — edellinen ennätys oli vuodelta '
+              + '1984. Valmentajana oli Jean-Paul Akono.',
+        },
+        {
+          otsikko: 'Viisitoista metriä seitsemän kertaa',
+          aika: '2004–2008',
+          teksti: 'Françoise Mbango Etone syntyi Yaoundéssa 1976 ja voitti kolmiloikan '
+              + 'olympiakullan sekä Ateenassa 2004 että Pekingissä 2008. Pekingin '
+              + 'voittotulos 15,39 metriä oli olympiaennätys ja on yhä kaikkien aikojen '
+              + 'kolmanneksi pisin naisten kolmiloikka missä tahansa olosuhteissa. '
+              + 'Viidentoista metrin raja on historian aikana ylitetty vain '
+              + 'kahdenkymmenenviiden naisen voimin — Mbango Etone ylitti sen '
+              + 'seitsemän kertaa pelkästään Pekingin finaalin viimeisellä '
+              + 'yhdellätoista yrityksellään. Hän oli ensimmäinen Kamerunia edustanut '
+              + 'naisurheilija, joka voitti mitalin sekä MM-kisoissa että '
+              + 'olympialaisissa.',
+        },
+      ],
+    },
+  ],
 };

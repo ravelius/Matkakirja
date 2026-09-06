@@ -49,6 +49,16 @@
 > js/packs/uutislahteet.js:n NAM-kommentissa. Julkaisu Git-
 > integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Kamerun):** sallittuihin lisättiin
+> datacameroon.com (maalehti CMR, testattu 6.9.2026: syötteessä
+> kymmenen juttua, ja artikkelisivun ainoasta `<article>`-lohkosta
+> jäsentyy seitsemästä kahdeksaan yli 60 merkin kappaletta sekä
+> `og:image` — testattu kaksi eri artikkelia). Osoitteessa ei ole
+> www-etuliitettä. Kamerunin luetuimmat uutissivustot kaatuivat
+> artikkelisivun testiin, ei syötteen: perustelut hylkäyksille ovat
+> js/packs/uutislahteet.js:n CMR-kommentissa. Julkaisu Git-
+> integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

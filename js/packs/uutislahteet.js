@@ -629,4 +629,31 @@ export const UUTISLAHTEET = {
     kieli: 'en',
     syote: 'https://neweralive.na/feed/',
   },
+  /*
+   * DataCameroon on doualalainen ranskankielinen datajournalismin
+   * toimitus. Testattu 6.9.2026: syötteessä kymmenen juttua, ja
+   * artikkelisivun ainoasta <article>-lohkosta jäsentyy seitsemästä
+   * kahdeksaan yli 60 merkin kappaletta sekä og:image (testattu kaksi
+   * eri artikkelia). Ranska on maan kahdesta virallisesta kielestä
+   * puhutumpi, joten se valittiin englannin edelle.
+   *
+   * Testattu ja hylätty: Actu Cameroun (syötteessä kaksikymmentä
+   * juttua, mutta artikkelisivulla ei ole <article>-elementtiä,
+   * [itemprop="articleBody"]-merkintää eikä og:imagea), Camer.be
+   * (syöte antaa kaksikymmentä juttua ja og:image löytyy, mutta sivun
+   * 64 <article>-lohkosta ensimmäisessä ei ole yhtään yli 60 merkin
+   * kappaletta), Mimi Mefo Info ja Investir au Cameroun (syöte ja
+   * og:image kunnossa, mutta artikkelisivulla ei <article>-elementtiä),
+   * 237actu (artikkelisivun ensimmäisessä <article>-lohkossa ei
+   * kappaleita eikä sivulla og:imagea), CamerounWeb ja StopBlaBlaCam
+   * (syöte aukeaa mutta on tyhjä), Journal du Cameroun ja Cameroon
+   * Tribune (yhteys ei aukea lainkaan), Cameroon-Info.Net (522), The
+   * Guardian Post (404) sekä CRTV ja Le Bled Parle (301/308 eikä
+   * worker seuraa uudelleenohjauksia).
+   */
+  CMR: {
+    nimi: 'DataCameroon',
+    kieli: 'fr',
+    syote: 'https://datacameroon.com/feed/',
+  },
 };
