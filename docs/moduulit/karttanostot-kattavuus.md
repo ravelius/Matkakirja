@@ -42,41 +42,41 @@ kuratoidussa `fokuskohteet-grc.js`:ssä, ja Islannin Þjórsá on
 maastokohde `maastokohteet-isl.js`:ssä. Peli katsoo listat joka
 tapauksessa yhdessä (`js/fokuskohteet.js` KOHDE_MAAT).
 
-## Kattavuus 6.9.2026 (erän 2 jälkeen)
+## Kattavuus Euroopassa 6.9.2026 (erien 2–4 jälkeen)
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Itävalta (AUT) | 8 | 4 | 1 | 3 | 2 | 5 | 17 | 3 | täysi |
-| Bulgaria (BGR) | 12 | 6 | 1 | 3 | 0 | 5 | 18 | 7 | täysi |
-| Bosnia ja Hertsegovina (BIH) | 9 | 5 | 1 | 2 | 0 | 4 | 18 | 2 | täysi |
+| Islanti (ISL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Sveitsi (CHE) | 8 | 5 | 1 | 3 | 1 | 0 | 17 | 0 | täysi |
 | Tšekki (CZE) | 8 | 3 | 1 | 3 | 0 | 4 | 14 | 4 | täysi |
-| Saksa (DEU) | 8 | 13 | 1 | 3 | 4 | 6 | 28 | 5 | täysi |
-| Tanska (DNK) | 8 | 3 | 1 | 3 | 1 | 4 | 15 | 4 | täysi |
-| Espanja (ESP) | 0 | 5 | 1 | 3 | 4 | 15 | 17 | 10 | kohteita −8 |
 | Viro (EST) | 8 | 3 | 1 | 3 | 0 | 4 | 13 | 5 | täysi |
-| Suomi (FIN) | 0 | 4 | 1 | 3 | 1 | 7 | 6 | 8 | kohteita −8 |
-| Ranska (FRA) | 2 | 6 | 1 | 3 | 6 | 9 | 9 | 11 | kohteita −6 |
-| Britannia (GBR) | 3 | 5 | 1 | 3 | 9 | 7 | 15 | 7 | kohteita −5 |
-| Kreikka (GRC) | 20 | 15 | 1 | 3 | 1 | 4 | 33 | 9 | täysi |
-| Kroatia (HRV) | 8 | 11 | 1 | 3 | 0 | 3 | 23 | 2 | täysi |
-| Unkari (HUN) | 11 | 6 | 1 | 3 | 0 | 3 | 20 | 3 | täysi |
-| Irlanti (IRL) | 8 | 3 | 1 | 3 | 0 | 6 | 17 | 3 | täysi |
-| Islanti (ISL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
-| Italia (ITA) | 10 | 9 | 1 | 3 | 3 | 10 | 22 | 12 | täysi |
-| Liettua (LTU) | 8 | 3 | 1 | 3 | 0 | 6 | 17 | 3 | täysi |
 | Latvia (LVA) | 8 | 3 | 1 | 2 | 0 | 5 | 16 | 2 | täysi |
-| Alankomaat (NLD) | 0 | 3 | 1 | 3 | 0 | 7 | 10 | 3 | kohteita −8 |
-| Norja (NOR) | 0 | 4 | 1 | 3 | 2 | 8 | 12 | 3 | kohteita −8 |
-| Puola (POL) | 0 | 5 | 1 | 3 | 0 | 9 | 12 | 5 | kohteita −8 |
-| Portugali (PRT) | 0 | 4 | 1 | 3 | 2 | 7 | 11 | 4 | kohteita −8 |
-| Romania (ROU) | 12 | 4 | 1 | 2 | 0 | 4 | 19 | 3 | täysi |
-| Venäjä (RUS) | 0 | 8 | 1 | 3 | 2 | 9 | 14 | 6 | kohteita −8 |
+| Tanska (DNK) | 8 | 3 | 1 | 3 | 1 | 4 | 15 | 4 | täysi |
 | Ruotsi (SWE) | 8 | 4 | 1 | 3 | 0 | 4 | 14 | 5 | täysi |
+| Itävalta (AUT) | 8 | 4 | 1 | 3 | 2 | 5 | 17 | 3 | täysi |
+| Bosnia ja Hertsegovina (BIH) | 9 | 5 | 1 | 2 | 0 | 4 | 18 | 2 | täysi |
+| Irlanti (IRL) | 8 | 3 | 1 | 3 | 0 | 6 | 17 | 3 | täysi |
+| Liettua (LTU) | 8 | 3 | 1 | 3 | 0 | 6 | 17 | 3 | täysi |
+| Alankomaat (NLD) | 8 | 3 | 1 | 3 | 0 | 7 | 18 | 3 | täysi |
+| Suomi (FIN) | 8 | 4 | 1 | 3 | 1 | 7 | 14 | 8 | täysi |
+| Romania (ROU) | 12 | 4 | 1 | 2 | 0 | 4 | 19 | 3 | täysi |
+| Unkari (HUN) | 11 | 6 | 1 | 3 | 0 | 3 | 20 | 3 | täysi |
+| Norja (NOR) | 8 | 4 | 1 | 3 | 2 | 8 | 20 | 3 | täysi |
+| Portugali (PRT) | 8 | 4 | 1 | 3 | 2 | 7 | 19 | 4 | täysi |
+| Bulgaria (BGR) | 12 | 6 | 1 | 3 | 0 | 5 | 18 | 7 | täysi |
+| Kroatia (HRV) | 8 | 11 | 1 | 3 | 0 | 3 | 23 | 2 | täysi |
+| Puola (POL) | 8 | 5 | 1 | 3 | 0 | 9 | 20 | 5 | täysi |
+| Ukraina (UKR) | 8 | 5 | 1 | 3 | 0 | 9 | 21 | 4 | täysi |
+| Ranska (FRA) | 8 | 6 | 1 | 3 | 6 | 9 | 15 | 11 | täysi |
+| Iso-Britannia (GBR) | 8 | 5 | 1 | 3 | 9 | 7 | 20 | 7 | täysi |
+| Venäjä (RUS) | 8 | 8 | 1 | 3 | 2 | 9 | 22 | 6 | täysi |
+| Saksa (DEU) | 8 | 13 | 1 | 3 | 4 | 6 | 28 | 5 | täysi |
+| Italia (ITA) | 10 | 9 | 1 | 3 | 3 | 10 | 22 | 12 | täysi |
+| Espanja (ESP) | 8 | 5 | 1 | 3 | 4 | 15 | 25 | 10 | täysi |
 | Turkki (TUR) | 22 | 6 | 1 | 3 | 2 | 3 | 29 | 6 | täysi |
-| Ukraina (UKR) | 0 | 5 | 1 | 3 | 0 | 9 | 13 | 4 | kohteita −8 |
+| Kreikka (GRC) | 20 | 15 | 1 | 3 | 1 | 4 | 33 | 9 | täysi |
 
-Maita 29, tavoitteessa 19, vajaita 10.
+Maita 29, tavoitteessa 29, vajaita 0. Euroopan kohdetavoite on täynnä.
 
 ## Erä 1: viisi heikointa maata, ennen ja jälkeen
 
@@ -183,44 +183,39 @@ Edellä oleva 2.9.2026 taulukko on jätetty koskematta tarkoituksella:
 rinnakkaiset erät päivittävät sitä, ja Euroopan luvut näkyvät tässä
 osiossa tuoreina.
 
-**Tilanne yhdellä silmäyksellä.** 112 maasta **14 on tavoitteessa** ja
-98 vajaita; **32 maalla ei ole yhtäkään karttamerkkiä**. Kaikki
-tavoitteessa olevat ovat Euroopassa. Kohdetavoitteesta (8) jää vajaaksi
-98 maata, maastotavoitteesta (3) 44 maata, eläintäky puuttuu 59 maasta
-ja skandaalitavoite (2) jää täyttymättä 83 maassa — skandaaleja ei ole
-kirjoitettu Euroopan ulkopuolelle yhteenkään maahan.
+**Tilanne yhdellä silmäyksellä (erien 2–4 jälkeen, 6.9.2026 aamu).** 112 maasta **29 on tavoitteessa** ja 83 vajaita; **32 maalla ei ole yhtäkään karttamerkkiä**. Kaikki tavoitteessa olevat ovat Euroopassa, jonka kohdetavoite täyttyi erillä 2–4 (115 uutta kohdetta yhdessä yössä). Euroopan ulkopuolella kohdetavoitteesta (8) jää vajaaksi jokainen maa, maastotavoitteesta (3) 44 maata, eläintäky puuttuu 59 maasta ja skandaalitavoite (2) jää täyttymättä 83 maassa — skandaaleja ei ole kirjoitettu Euroopan ulkopuolelle yhteenkään maahan.
 
 ### Eurooppa (29 maata)
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Tanska (DNK) | 0 | 3 | 1 | 3 | 1 | 4 | 7 | 4 | kohteita −8 |
-| Ruotsi (SWE) | 0 | 4 | 1 | 3 | 0 | 4 | 6 | 5 | kohteita −8 |
-| Itävalta (AUT) | 0 | 4 | 1 | 3 | 2 | 5 | 9 | 3 | kohteita −8 |
-| Irlanti (IRL) | 0 | 3 | 1 | 3 | 0 | 6 | 9 | 3 | kohteita −8 |
-| Liettua (LTU) | 0 | 3 | 1 | 3 | 0 | 6 | 9 | 3 | kohteita −8 |
 | Islanti (ISL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
-| Alankomaat (NLD) | 0 | 3 | 1 | 3 | 0 | 7 | 10 | 3 | kohteita −8 |
-| Suomi (FIN) | 0 | 4 | 1 | 3 | 1 | 7 | 6 | 8 | kohteita −8 |
-| Norja (NOR) | 0 | 4 | 1 | 3 | 2 | 8 | 12 | 3 | kohteita −8 |
-| Portugali (PRT) | 0 | 4 | 1 | 3 | 2 | 7 | 11 | 4 | kohteita −8 |
 | Sveitsi (CHE) | 8 | 5 | 1 | 3 | 1 | 0 | 17 | 0 | täysi |
-| Puola (POL) | 0 | 5 | 1 | 3 | 0 | 9 | 12 | 5 | kohteita −8 |
-| Ukraina (UKR) | 0 | 5 | 1 | 3 | 0 | 9 | 13 | 4 | kohteita −8 |
 | Tšekki (CZE) | 8 | 3 | 1 | 3 | 0 | 4 | 14 | 4 | täysi |
 | Viro (EST) | 8 | 3 | 1 | 3 | 0 | 4 | 13 | 5 | täysi |
 | Latvia (LVA) | 8 | 3 | 1 | 2 | 0 | 5 | 16 | 2 | täysi |
+| Tanska (DNK) | 8 | 3 | 1 | 3 | 1 | 4 | 15 | 4 | täysi |
+| Ruotsi (SWE) | 8 | 4 | 1 | 3 | 0 | 4 | 14 | 5 | täysi |
+| Itävalta (AUT) | 8 | 4 | 1 | 3 | 2 | 5 | 17 | 3 | täysi |
 | Bosnia ja Hertsegovina (BIH) | 9 | 5 | 1 | 2 | 0 | 4 | 18 | 2 | täysi |
-| Ranska (FRA) | 2 | 6 | 1 | 3 | 6 | 9 | 9 | 11 | kohteita −6 |
-| Venäjä (RUS) | 0 | 8 | 1 | 3 | 2 | 9 | 14 | 6 | kohteita −8 |
-| Iso-Britannia (GBR) | 3 | 5 | 1 | 3 | 9 | 7 | 15 | 7 | kohteita −5 |
+| Irlanti (IRL) | 8 | 3 | 1 | 3 | 0 | 6 | 17 | 3 | täysi |
+| Liettua (LTU) | 8 | 3 | 1 | 3 | 0 | 6 | 17 | 3 | täysi |
+| Alankomaat (NLD) | 8 | 3 | 1 | 3 | 0 | 7 | 18 | 3 | täysi |
+| Suomi (FIN) | 8 | 4 | 1 | 3 | 1 | 7 | 14 | 8 | täysi |
 | Romania (ROU) | 12 | 4 | 1 | 2 | 0 | 4 | 19 | 3 | täysi |
 | Unkari (HUN) | 11 | 6 | 1 | 3 | 0 | 3 | 20 | 3 | täysi |
+| Norja (NOR) | 8 | 4 | 1 | 3 | 2 | 8 | 20 | 3 | täysi |
+| Portugali (PRT) | 8 | 4 | 1 | 3 | 2 | 7 | 19 | 4 | täysi |
 | Bulgaria (BGR) | 12 | 6 | 1 | 3 | 0 | 5 | 18 | 7 | täysi |
 | Kroatia (HRV) | 8 | 11 | 1 | 3 | 0 | 3 | 23 | 2 | täysi |
-| Espanja (ESP) | 0 | 5 | 1 | 3 | 4 | 15 | 17 | 10 | kohteita −8 |
+| Puola (POL) | 8 | 5 | 1 | 3 | 0 | 9 | 20 | 5 | täysi |
+| Ukraina (UKR) | 8 | 5 | 1 | 3 | 0 | 9 | 21 | 4 | täysi |
+| Ranska (FRA) | 8 | 6 | 1 | 3 | 6 | 9 | 15 | 11 | täysi |
+| Iso-Britannia (GBR) | 8 | 5 | 1 | 3 | 9 | 7 | 20 | 7 | täysi |
+| Venäjä (RUS) | 8 | 8 | 1 | 3 | 2 | 9 | 22 | 6 | täysi |
 | Saksa (DEU) | 8 | 13 | 1 | 3 | 4 | 6 | 28 | 5 | täysi |
 | Italia (ITA) | 10 | 9 | 1 | 3 | 3 | 10 | 22 | 12 | täysi |
+| Espanja (ESP) | 8 | 5 | 1 | 3 | 4 | 15 | 25 | 10 | täysi |
 | Turkki (TUR) | 22 | 6 | 1 | 3 | 2 | 3 | 29 | 6 | täysi |
 | Kreikka (GRC) | 20 | 15 | 1 | 3 | 1 | 4 | 33 | 9 | täysi |
 
@@ -337,7 +332,7 @@ kirjoitettu Euroopan ulkopuolelle yhteenkään maahan.
 | Itä-Timor (TLS) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
 | Vanuatu (VUT) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
 
-Maita 112, tavoitteessa 14, vajaita 98.
+Maita 112, tavoitteessa 29, vajaita 83.
 
 ## Maailman erät (ehdotus)
 
