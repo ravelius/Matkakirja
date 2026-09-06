@@ -81732,4 +81732,2170 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * HONIARA (Opus 6.9.2026, paketti O9) — Oseanian laudan seitsemäs
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-honiara.md ja sen tarkistus tarkistus-honiara.md
+   * (tuomio "kelpaa korjausten jälkeen"). Väitteet on luettu
+   * en-Wikipedian raakateksteistä 6.9.2026: "Honiara", "Guadalcanal",
+   * "Solomon Islands", "Guadalcanal campaign", "Blackbirding",
+   * "Pijin", "Point Cruz", "Honiara Central Market", "Ironbottom
+   * Sound", "Solomon Islands Parliament Building".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei uusia kysymyksiä.
+   * Saapumisteksti (oceania-saapumiset.js) ja valokuvataulu
+   * (oceania-valokuvat.js) olivat jo olemassa eikä niihin koskettu.
+   *
+   * SIVUJA ON KAKSI kuten Dunedinissa ja Cairnsissa (kaupunki +
+   * teemasivu). Faktapohja tarjosi kolmannen teeman (Guadalcanalin
+   * luonto), mutta se on saaren eikä kaupungin aineistoa ja kuuluu
+   * SLB:n maalehteen.
+   *
+   * TARKISTUKSEN KAIKKI KORJAUKSET ON TEHTY:
+   *  - Saksan protektoraatti JÄTETTY POIS: "Guadalcanal" sanoo 1884
+   *    ja "Solomon Islands" 1886, eikä kumpikaan koske Guadalcanalia.
+   *    Lehden kannalta olennainen vuosi on 1893 (Britannia).
+   *  - Blackbirding-luvuista käytetään Pijin-artikkelin täsmällistä
+   *    "noin 13 000 salomonsaarelaista Queenslandiin", ei
+   *    Guadalcanal-artikkelin epätarkkaa 60 000:ta eikä
+   *    Bislama-artikkelin "satojatuhansia" (tarkistus, kohta B).
+   *  - Guadalcanalin pinta-alaa EI anneta lukuna (infobox 5 358 km²,
+   *    leipäteksti 5 302 km²).
+   *  - Lentokentän etäisyys on Honiara-artikkelin "runsaat kymmenen
+   *    kilometriä keskustasta", ei Guadalcanal-artikkelin kahdeksaa.
+   *  - Sääluvut VAIN lentokentän NOAA-ruudusta 1991–2020; artikkelin
+   *    toista sääruutua ei käytetä (tarkistus, kohta D).
+   *  - 1873-kehykseen otettiin tarkistuksen löytämä Pijin-artikkelin
+   *    aikataulu (värväys siirtyi Uusiin Hebrideihin ja Santa Cruziin
+   *    1870-luvun alussa) ja työläisten paluu 1904 (kohdat F ja G).
+   *
+   * EI NYKYPOLITIIKKAA: vuosien 1998–2003, 2006 ja 2021 levottomuudet
+   * on jätetty kokonaan pois, samoin kansallismuseon ryöstely.
+   * Chinatownin "Asian Wild West" -luonnehdinta jätettiin pois
+   * eksotisoivana (tarkistus, kohta K).
+   *
+   * UHRILUVUISTA käytetään vain parlamenttitalon oma peruste (450 +
+   * 1 200), koska muistomerkkiartikkelin muut luvut ovat keskenään
+   * ristiriitaisia.
+   *
+   * ENNEN–NYT-PARI ON 1940-LUVULTA, EI 1800-LUVULTA, ja kuvateksti
+   * sanoo sen ääneen: Honiaraa ei ollut ennen sotaa, joten seudun
+   * varhaisin PD-kuvasto on sota-ajan laivastokuvia. Commonsin ainoa
+   * isoisän aikaa lähestyvä aineisto (Auckland Museumin litografiat
+   * 1851) esittää väkivaltaista kohtausta eikä kelpaa peliin.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026
+   * "Daily API request limit exceeded" (HTTP 429), joten
+   * js/packs/saatiedot.js:ään ei lisätty riviä (Samarkand-malli
+   * v965, sama kuin Suvassa ja Cairnsissa). Oppaan sääjakso nojaa
+   * en-Wikipedian sääruutuun ja sanoo sen.
+   */
+  honiara: [
+    {
+      id: 'kaupunki',
+      nimi: 'Honiara',
+      johdanto: 'Honiara on Tyynenmeren nuorimpia pääkaupunkeja: 1873 '
+        + 'paikalla oli rantakyliä ja kookospalmuja, ja kaupunki nousi '
+        + 'vasta kun sota jätti tänne lentokentän, tiet ja laiturit.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin. Ne ovat silti kolme laajaa yleiskuvaa: keskusta
+       * rinteeltä, koko rannikko ilmasta ja kukkuloiden takaa avautuva
+       * Rautapohjan salmi.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Honiara View.jpg',
+          selite: 'Honiaran keskusta laskeutuu rinteeltä satamaan, ja '
+            + 'sen takana avautuu Rautapohjan salmi.',
+          lahde: 'Kahunapule Michael Johnson from Pukalani, Hawaii, United States of America, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Aerial view of Honiara, 2013.jpg',
+          selite: 'Ilmasta katsottuna kaupunki on ohut nauha rannan ja '
+            + 'vihreiden kukkuloiden välissä.',
+          lahde: 'Jenny Scott from Adelaide, Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Honiara Seen from a Hilltop.jpg',
+          selite: 'Kukkulalta näkyy, kuinka talot piiloutuvat '
+            + 'palmujen sekaan ja rahtilaivat odottavat redillä.',
+          lahde: 'Kahunapule Michael Johnson from Pukalani, Hawaii, United States of America, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: kolme laajaa yleiskuvaa kaupungin eri
+       * puolilta — purjehdusseuran ranta, Mendana Avenuen
+       * konttorikortteli ja auringonnousu esikaupunkien yllä.
+       * Honiaralle ei ole generoitu herokuvia, joten karusellissa on
+       * kolme aitoa valokuvaa.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Honiara - Looking toward the Ocean.jpg',
+          selite: 'Rannassa on lehtikattoisia paviljonkeja ja laituri, '
+            + 'jonka kylkeen on kiinnittynyt työveneitä.',
+          lahde: 'Kahunapule Michael Johnson from Pukalani, Hawaii, United States of America, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Honiara (9536970944).jpg',
+          selite: 'Mendana Avenuen varrella on vaaleita kaksikerroksisia '
+            + 'konttoritaloja ja iso varjopuu.',
+          lahde: 'Jenny Scott from Adelaide, Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Rising Sun in Honiara (31811061454).jpg',
+          selite: 'Aurinko nousee usvan läpi kukkuloille, joiden '
+            + 'puiden lomassa kaupunki jatkuu.',
+          lahde: 'Kahunapule Michael Johnson from Pukalani, Hawaii, United States of America, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'IronbottomSound.jpg',
+          vuosi: '1942',
+          selite: 'Elokuussa 1942 salmessa kulki hävittäjä ja rannalla '
+            + 'ei ollut kaupunkia — Honiaraa ei vielä ollut olemassa.',
+          lahde: 'U.S. Navy, photo was taken from USS San Juan (CL-54)., Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'A bit of Honiara (32274638120).jpg',
+          selite: 'Samassa salmessa odottavat nyt rahtilaivat, ja '
+            + 'rannalla on kaupungin punaisia peltikattoja.',
+          lahde: 'Kahunapule Michael Johnson from Pukalani, Hawaii, United States of America, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Vuonna 1873 kaupunkia ei ollut',
+          teksti: 'Kun isoisä kulki Salomonsaarten ohi 1873, Honiaraa ei '
+            + 'ollut olemassa missään muodossa. Britannian protektoraatti '
+            + 'julistettiin vasta 1893, eikä saarilla ollut siihen asti '
+            + 'minkäänlaista siirtomaahallintoa: rannoilla kävivät '
+            + 'valaanpyytäjät, lähetyssaarnaajat ja työvoimaa hakevat '
+            + 'alukset. Anglikaaninen Melanesian-lähetys oli perustettu '
+            + '1849. Australialaiset istuttajat siirsivät värväyksensä '
+            + 'Uusiin Hebrideihin ja Santa Cruzin saarille juuri '
+            + '1870-luvun alussa, ja Queenslandin viljelmille vietiin '
+            + 'kaikkiaan noin 13 000 salomonsaarelaista. Britannia sääti '
+            + '1872 lain, jonka piti hillitä värväystä — se ei '
+            + 'onnistunut.',
+          tiedosto: 'Bonegi Beach.jpg',
+          selite: 'Guadalcanalin luoteisrannikkoa Bonegi Beachillä, '
+            + 'jossa ajopuu, hiekka ja kookospalmut jatkuvat '
+            + 'kilometrikaupalla.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Guadalcanal',
+        },
+        {
+          otsikko: 'Nimi tarkoittaa tuulen suuntaa',
+          teksti: 'Honiaran nimi tulee sanoista nagho ni ara, jotka '
+            + 'kääntyvät yhdessä Guadalcanalin kielistä suunnilleen '
+            + 'muotoon "itätuulen paikka" tai "kaakkoistuulta päin". '
+            + 'Sama nimi on niemellä, jonka ympärille kaupunki '
+            + 'rakennettiin: Point Cruzin ghari-kielinen nimi on '
+            + 'naho-ni-ara. Kaupunki on saaren luoteisrannikolla, ja '
+            + 'Matanikaujoki virtaa sen läpi Chinatownin ohi. '
+            + 'Selkärankana on Kukum Highway, joka vie runsaat kymmenen '
+            + 'kilometriä itään lentokentälle. Vuonna 1983 kaupungin '
+            + '22 neliökilometrin alue julistettiin '
+            + 'pääkaupunkiterritorioksi, jolla on provinssin kaltainen '
+            + 'itsehallinto.',
+          tiedosto: 'Pointcruz - panoramio.jpg',
+          selite: 'Point Cruzin niemellä kuorma-autot odottavat lastia '
+            + 'kauppakortteleiden edessä.',
+          lahde: 'Joshua Fang, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Point Cruz',
+        },
+        {
+          otsikko: 'Tori, jonne kala tuodaan veneellä',
+          teksti: 'Honiaran keskustori on maan suurin tuore- ja '
+            + 'kalatori, ja se on hallinnut maan sisäistä kauppaa pian '
+            + '1950-luvun perustamisestaan lähtien. Torilla on oma '
+            + 'rantaviivansa Rautapohjan salmeen ja venerampi, jotta '
+            + 'kalastajat saavat saaliinsa suoraan veneestä pöydälle; '
+            + 'ramppia pidetään merkkinä siitä, kuinka paljon '
+            + 'salomonsaarelaiset arvostavat kalan tuoreutta. Vuonna '
+            + '2014 myyjiä oli noin tuhat, ja heistä arviolta neljä '
+            + 'viidestä oli naisia. Osa tulee kaupunkiin vain '
+            + 'myyntikaudeksi, ja tavaraa saapuu koko maasta — siksi '
+            + 'toria pidetään Salomonsaarten kansanryhmien '
+            + 'kohtaamispaikkana.',
+          tiedosto: 'Honiara Central Market, Solomon Islands, 2012. Photo- Yvonne Green - DFAT (12784104894).jpg',
+          selite: 'Kuivattuja kookospähkinöitä kasassa torilla, ja '
+            + 'pinon päällä on käsin kirjoitettu hintalappu.',
+          lahde: 'Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Honiara Central Market',
+        },
+        {
+          otsikko: 'Kieli, joka syntyi viljelmillä ja palasi kotiin',
+          teksti: 'Salomonsaarten pijin syntyi Queenslandin ja Fidžin '
+            + 'viljelmillä, joilla melanesialaiset työntekijät ja '
+            + 'englanninkieliset työnjohtajat tarvitsivat yhteisen '
+            + 'kielen. Kun työntekijät palasivat sopimuskautensa '
+            + 'päätyttyä tai pakkopalautettiin työvoimakaupan loputtua '
+            + '1904, kieli tuli mukana saarille. Honiarassa siitä tuli '
+            + '1960-luvulla kaupungin pääkieli ja kokonaisen nuorten '
+            + 'kaupunkilaisten sukupolven äidinkieli, ja kaupungin '
+            + 'kautta se levisi koko maahan. Honiara veti puoleensa '
+            + 'väkeä joka saarelta: Matanikaun suun itäpuolella asuu '
+            + 'Ontong Javan polynesialaisyhteisö.',
+          tiedosto: 'Honiara Chinatown.jpg',
+          selite: 'Honiaran Chinatownissa ravintolan kyltti on '
+            + 'kirjoitettu sekä kiinaksi että englanniksi.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Pijin',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Local handicraft at Art in the Park, Honiara, Solomon Islands, 2012. Photo- Yvonne Green - DFAT (12783680375).jpg',
+          selite: 'Käsintehtyjä kaulanauhoja rivissä sinisellä '
+            + 'kankaalla Honiaran Art in the Park -käsityötapahtumassa.',
+          lahde: 'Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Honiara on Salomonsaarten pääkaupunki ja maan '
+          + 'nopeimmin kasvava kaupunki. Se on rakennettu Guadalcanalin '
+          + 'luoteisrannikolle ohueksi nauhaksi meren ja jyrkkien '
+          + 'kukkuloiden väliin, ja koko keskusta mahtuu kävelymatkalle '
+          + 'Mendana Avenuen varteen: tori, kansallismuseo, '
+          + 'taidegalleria ja satama ovat kilometrin säteellä. Kaupunki '
+          + 'on nuori — se sai pääkaupunkiasemansa vasta 1952 — ja se '
+          + 'näkyy: siirtomaa-ajan kortteleita ei juuri ole, vaan '
+          + 'katukuva on peltikattoja, betonia ja hyvin paljon vihreää. '
+          + 'Puolet asukkaista on alle kolmekymmenvuotiaita. Matkailija '
+          + 'tulee Honiaraan kahdesta syystä: sukeltamaan Rautapohjan '
+          + 'hylyille ja katsomaan sitä maailmaa, joka alkaa heti '
+          + 'kaupungin ulkopuolelta — saaristoa, jossa liikutaan '
+          + 'veneellä ja pikkukoneella.',
+        artikkeli: {
+          nimi: 'Matkailijan Honiara',
+          taitto: 'opas',
+          teksti: 'Kahdeksankymmentä vuotta vanha pääkaupunki, joka '
+            + 'rakennettiin sotilastukikohdan päälle — ja meri, jonka '
+            + 'pohja on täynnä historiaa.',
+          nosto: 'Honiaraa ei ollut olemassa isoisän aikaan eikä vielä '
+            + 'sadan vuoden päästä siitä: vuonna 1979 kaupungissa asui '
+            + '18 346 ihmistä, vuonna 2019 jo 129 569.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Honiaran kansainvälinen lentokenttä on runsaan '
+                + 'kymmenen kilometrin päässä itään Kukum Highwayta '
+                + 'pitkin. Se on sodanaikainen Henderson Field, joka '
+                + 'avattiin uudelleen 1969 maan suurimpana '
+                + 'lentoasemana ja jota on sittemmin parannettu isoja '
+                + 'koneita varten; valtion oma Solomon Airlines toimii '
+                + 'täältä. Point Cruzin satama on maan '
+                + 'pääsaapumissatama ja pystyy käsittelemään '
+                + 'kahdenkymmenen jalan kontteja. Saaristoon lähdetään '
+                + 'veneellä: kaksikymmentäkuusi tuntia kestävää '
+                + 'matkaa Gizoon sanotaan yhdeksi Tyynenmeren '
+                + 'kauneimmista. Matkailutoimisto on Mendana Avenuella '
+                + 'purjehdusseuran ja Mendana-hotellin välissä, ja sen '
+                + 'virkailijat voivat radioida etukäteen syrjäisten '
+                + 'seutujen majataloihin, että vieraita on tulossa.',
+              kuva: {
+                tiedosto: 'Honiara (9534190983).jpg',
+                selite: 'Solomon Postin oranssi talo on Mendana '
+                  + 'Avenuen varrella palmujen ja kukkaruukkujen '
+                  + 'keskellä.',
+                lahde: 'Jenny Scott from Adelaide, Australia, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kaupunki rannan ja rinteen välissä',
+              teksti: 'Honiara on rakennettu sinne, missä tasaista maata '
+                + 'on: kapealle kaistalle Rautapohjan salmen ja '
+                + 'kukkuloiden väliin. Matanikaujoki halkoo kaupungin '
+                + 'ja virtaa Chinatownin ohi mereen. Lännessä ovat '
+                + 'White Riverin ja Tanaghain esikaupungit, idässä '
+                + 'Kukum ja lentokenttä. Joen suun itäpuolella on Lord '
+                + 'Howe Settlement, suuri polynesialaisyhteisö Ontong '
+                + 'Javan atollilta, ja sen edustan matalassa vedessä '
+                + 'näkyy 23. lokakuuta 1942 tuhotun japanilaisaluksen '
+                + 'hylky. Kaupungin itärannalla on Honiara Children’s '
+                + 'Park, kaupungin ainoa lasten virkistysalue — muut '
+                + 'alueet ovat yksityisiä. Puistoa uhkaa rantaeroosio: '
+                + 'vanhan ja syöpyneen rantaviivan väliä on mitattu '
+                + 'kuudesta kahdeksaan metriä.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: kalaramppi keskellä kaupunkia',
+              teksti: 'Keskustori on Honiaran sydän ja koko maan suurin '
+                + 'kauppapaikka. Sen erikoisuus on venerampi: torilla '
+                + 'on oma rantaviivansa, ja kalastajat vetävät veneensä '
+                + 'suoraan rantaan ja kantavat saaliin pöydälle. Tori '
+                + 'on kaupungin halvimman ruoan paikka, ja se on '
+                + 'kaupunginvaltuuston omistama ja ylläpitämä — toinen '
+                + 'valtuuston tori on Kukumissa. Vuonna 2006 osa '
+                + 'torialueesta varattiin kukkien ja ruukkukasvien '
+                + 'ympärivuotiselle myynnille. Yksi ohje kannattaa '
+                + 'muistaa: valtuusto kieltää tuotteiden pesemisen '
+                + 'torin merivedellä, koska vesi on saastunutta.',
+              kuva: {
+                tiedosto: 'Rear view Honiara Central Market.jpg',
+                selite: 'Torihalli merenpuolelta: rannassa ruostuu '
+                  + 'vanhan aluksen runko, ja sen takana alkaa '
+                  + 'venerampin laituri.',
+                lahde: 'Phenss, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kuusi kuukautta yhdestä kentästä',
+              teksti: 'Guadalcanalin kampanja alkoi 7. elokuuta 1942 ja '
+                + 'päättyi 9. helmikuuta 1943. Sen jäljet ovat yhä '
+                + 'kaupungissa ja sen ympärillä. Kansallismuseo on '
+                + 'Mendana-hotellia vastapäätä, ja sen ja poliisiaseman '
+                + 'välissä seisoo japanilainen 155 millimetrin '
+                + 'haupitsi, jolle amerikkalaissotilaat antoivat '
+                + 'lempinimen Pistol Pete. Museon takana on '
+                + 'kulttuurikeskus, jossa on kahdeksan perinteistä '
+                + 'taloa vuodelta 1981 maan yhdeksästä provinssista, ja '
+                + 'sen vieressä 2012 valmistunut taidegalleria ja '
+                + 'ulkoilmateatteri. Guadalcanal American Memorial on '
+                + 'kukkulalla kaupungin länsipuolella, ja japanilaisten '
+                + 'veteraanien rakentama rauhanpuisto on noin kolmen ja '
+                + 'puolen kilometrin päässä rannikkotietä. Vilun '
+                + 'ulkoilmamuseo on 25 kilometriä länteen; sen perusti '
+                + 'Fred Kona 1975.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Honiara-artikkelin '
+                + 'sääruudusta (lentokentän mittausasema, '
+                + 'normaalikausi 1991–2020); lehdellä ei ole omaa '
+                + 'vuosigraafia, koska Open-Meteon arkisto ei vastannut '
+                + 'kyselyihin. Ilmasto on trooppinen sademetsäilmasto, '
+                + 'ja päivän keskilämpötila on noin 28 astetta ympäri '
+                + 'vuoden: kuukausikeskiarvot liikkuvat 26,6 ja 27,6 '
+                + 'asteen välillä. Sadetta tulee vuodessa noin 1 968 '
+                + 'millimetriä, mikä on selvästi vähemmän kuin '
+                + 'Salomonsaarilla keskimäärin. Marras–huhtikuu on '
+                + 'sateisempi kuin touko–lokakuu: helmikuun 290 '
+                + 'millimetriä on yli kolminkertainen kesäkuun 86 '
+                + 'millimetriin verrattuna. Kuumin koskaan mitattu '
+                + 'lukema koko Salomonsaarilla on Honiaran 36,1 '
+                + 'astetta 1. helmikuuta 2010.',
+              kuva: {
+                tiedosto: 'Drinking Water (32531542411).jpg',
+                selite: 'Rinnetalon kylkeen on nostettu sadevesisäiliö, '
+                  + 'josta juomavesi otetaan.',
+                lahde: 'Kahunapule Michael Johnson from Pukalani, Hawaii, United States of America, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Keskustori',
+                tahdet: 3,
+                selite: 'Maan suurin tori, jonne kala tuodaan veneellä '
+                  + 'suoraan rantarampin kautta.',
+              },
+              {
+                mita: 'Kansallismuseo',
+                tahdet: 3,
+                selite: 'Vuonna 1969 avattu museo ja sen takana '
+                  + 'perinteisten talojen kulttuurikeskus.',
+              },
+              {
+                mita: 'Guadalcanal American Memorial',
+                tahdet: 2,
+                selite: 'Kukkulalla, josta näkee Mount Austenille ja '
+                  + 'Rautapohjan salmelle.',
+              },
+              {
+                mita: 'Parlamenttitalo',
+                tahdet: 2,
+                selite: 'Kartiokatto, joka yhdistää Temotun ja '
+                  + 'Guadalcanalin perinteiset kattomuodot.',
+              },
+              {
+                mita: 'Vilun ulkoilmamuseo',
+                tahdet: 2,
+                selite: 'Sotakaluston jäänteitä ja muistomerkkejä 25 '
+                  + 'kilometriä kaupungista länteen.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua.
+             * Sääluvut ovat samasta sääruudusta kuin jakso 5.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Sateisin kausi marras–huhtikuussa',
+                teksti: 'Vuosisade on noin 1 968 millimetriä, ja '
+                  + 'sateisimmat kuukaudet ovat helmikuu ja maaliskuu.',
+              },
+              {
+                otsikko: 'Räjähtämätöntä sotamateriaalia',
+                teksti: 'Museon rakennustöissä 1991 kaivettiin esiin '
+                  + 'kolmekymmentä räjähtämätöntä japanilaisammusta; '
+                  + 'maastossa niitä on yhä.',
+              },
+              {
+                otsikko: 'Torin merivesi',
+                teksti: 'Kaupunginvaltuusto kieltää tuotteiden pesun '
+                  + 'torin merivedellä, koska vesi on saastunutta.',
+              },
+              {
+                otsikko: 'Saaristoon veneellä',
+                teksti: 'Muille saarille kuljetaan laivalla tai '
+                  + 'pikkukoneella; Gizoon on kaksikymmentäkuusi '
+                  + 'tuntia merta.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Rautapohjan meri',
+      johdanto: 'Guadalcanalin ja Tulagin välinen salmi sai '
+        + 'lempinimensä siitä, mitä sen pohjalla on. Kuuden kuukauden '
+        + 'taistelu yhdestä lentokentästä jätti jälkeensä hylkyjä, '
+        + 'muistomerkkejä ja pääkaupungin.',
+      tehtava: {
+        kysymys: 'Kuinka monta pääelementtiä Salomonsaarten '
+          + 'parlamenttitalon katossa on?',
+        vaihtoehdot: [
+          'Kolme',
+          'Viisi',
+          'Seitsemän',
+          'Yhdeksän',
+        ],
+        oikea: 2,
+        fakta: 'Katon seitsemän pääelementtiä vastaavat maan '
+          + 'seitsemää provinssia, ja katon muoto yhdistää Temotun '
+          + 'kartion ja Guadalcanalin harjan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Nimi, joka lupasi kultaa',
+          teksti: 'Espanjalainen Álvaro de Mendaña de Neira purjehti '
+            + 'Perusta ja näki saaret ensimmäisenä eurooppalaisena '
+            + '1568. Hän ei nimennyt saaristoa, mutta muut alkoivat '
+            + 'kutsua sitä nimellä Islas Salomón: matkakertomukset '
+            + 'sekoitettiin optimistisesti tarinoihin rikkaasta '
+            + 'kuningas Salomonista, ja saarten uskottiin olevan '
+            + 'Raamatun Ofir. Guadalcanal sai nimensä retkikunnan '
+            + 'jäsenen Pedro de Ortega Valencian kotikylästä '
+            + 'Andalusiasta. Nimi kirjoitettiin vuosien mittaan myös '
+            + 'muodoissa Guadarcana, Guarcana ja Guadalcanar, ja britit '
+            + 'vahvistivat nykyisen asun vasta 1932. Saaren oma nimi on '
+            + 'Isatabu.',
+          tiedosto: 'Shoreline (32274632350).jpg',
+          selite: 'Guadalcanalin rantaviivaa ilmasta: turkoosi meri, '
+            + 'jokisuu ja kilometrien kookosmetsä.',
+          lahde: 'Kahunapule Michael Johnson from Pukalani, Hawaii, United States of America, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Solomon Islands',
+        },
+        {
+          otsikko: 'Lentokenttä, jonka takia sodittiin',
+          teksti: 'Japanilaiset joukot saapuivat Guadalcanalille '
+            + 'toukokuussa 1942. Kun amerikkalainen tiedustelulento '
+            + 'havaitsi, että saaren pohjoisrannikolle Lunga Pointiin '
+            + 'rakennettiin lentokenttää, tilanne muuttui kriittiseksi: '
+            + 'kenttä uhkasi Yhdysvaltain ja Australian välisiä '
+            + 'yhteyksiä. Yhdysvallat teki 7. elokuuta 1942 sodan '
+            + 'ensimmäisen maihinnousunsa, ja kenttä vallattiin vähällä '
+            + 'vaivalla — mutta sen pitäminen seuraavat kuusi kuukautta '
+            + 'oli koko Tyynenmeren sotanäyttämön kiivaimpia '
+            + 'kamppailuja. Laivaston rakennusjoukot viimeistelivät '
+            + 'kentän ja nimesivät sen Henderson Fieldiksi Midwayssä '
+            + 'kaatuneen merijalkaväen lentäjän mukaan.',
+          tiedosto: 'Aerial view of Henderson Field, Guadalcanal, in late August 1942.jpg',
+          selite: 'Elokuussa 1942 kuvattu Henderson Field on aukea '
+            + 'kiitorata kookosviljelmän ja joen välissä.',
+          lahde: 'U.S. Navy (photographed from a USS Saratoga (CV-3) plane), Wikimedia Commons (PD)',
+          wiki: 'Guadalcanal campaign',
+        },
+        {
+          otsikko: 'Rautapohjan meri',
+          teksti: 'Guadalcanalin ja Tulagin välisissä meritaisteluissa '
+            + 'upposi niin monta alusta molemmilta puolilta, että '
+            + 'vesialuetta alettiin kutsua nimellä Ironbottom Sound eli '
+            + 'Rautapohja. Cape Esperancen taistelu käytiin 11. '
+            + 'lokakuuta 1942 saaren luoteisrannikon edustalla, ja '
+            + 'marraskuun alun monipäiväinen meritaistelu käänsi koko '
+            + 'kampanjan. Japanilaiset joukot evakuoitiin helmikuussa '
+            + '1943, ja saari julistettiin turvatuksi 9. helmikuuta. '
+            + 'Etsinnät ovat jatkuneet sodan jälkeen: noin '
+            + 'seitsemäntuhannen japanilaissotilaan jäänteet ovat yhä '
+            + 'kateissa saarella, ja luita on kaivettu esiin vielä '
+            + '2010-luvulla.',
+          tiedosto: 'US Navy Destroyer Squadron 12 in Ironbottom Sound in early 1944.jpg',
+          selite: 'Viisi hävittäjää tekee kaarroksia Rautapohjan '
+            + 'salmessa vuonna 1944, ja taustalla häämöttää Savon '
+            + 'saari.',
+          lahde: 'U.S. Navy, Wikimedia Commons (PD)',
+          wiki: 'Ironbottom Sound',
+        },
+        {
+          otsikko: 'Kaupunki tukikohdan päälle',
+          teksti: 'Heti sodan jälkeen Britannian Salomonsaarten '
+            + 'protektoraatin pääkaupunki siirrettiin Tulagista '
+            + 'Guadalcanalille, ja Honiarasta tuli virallisesti '
+            + 'pääkaupunki 1952. Päätöksen saneli se, että '
+            + 'amerikkalaiset olivat rakentaneet sodan aikana tiet, '
+            + 'laiturit ja lentokentän valmiiksi; hallintorakennuksia '
+            + 'avattiin tammikuusta 1952 alkaen. Kaupunki kasvoi '
+            + 'nopeasti: sille meni kaksi kolmasosaa maan '
+            + 'kehitysvaroista 1960- ja 1970-luvuilla, vaikka vain viisi '
+            + 'prosenttia salomonsaarelaisista asui siellä. '
+            + 'Heinäkuussa 1978 Honiarasta tuli itsenäisten '
+            + 'Salomonsaarten pääkaupunki.',
+          tiedosto: 'Long shot of the Solomon Islands Parliament House. (10708895683).jpg',
+          selite: 'Parlamenttitalon kartiomainen katto nousee sinistä '
+            + 'taivasta vasten, ja sen edessä on lehtikattoinen katos.',
+          lahde: 'Department of Foreign Affairs and Trade, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Solomon Islands Parliament Building',
+        },
+      ],
+    },
+  ],
+  /*
+   * PORT VILA (Opus 6.9.2026, paketti O9) — Oseanian laudan
+   * kahdeksas kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-portvila.md ja sen tarkistus tarkistus-portvila.md
+   * (tuomio "kelpaa korjausten jälkeen"). Väitteet on luettu
+   * en-Wikipedian raakateksteistä 6.9.2026: "Port Vila", "Vanuatu",
+   * "Efate", "Franceville, New Hebrides", "Bislama", "Roi Mata",
+   * "Vanuatu Cultural Centre", "National Museum of Vanuatu",
+   * "Sand drawing", "Blackbirding", "Cyclone Pam".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei uusia kysymyksiä.
+   * Saapumisteksti (oceania-saapumiset.js) ja valokuvataulu
+   * (oceania-valokuvat.js) olivat jo olemassa eikä niihin koskettu.
+   *
+   * TEHTÄVÄNANNON 1873-OLETUS OSOITTAUTUI VÄÄRÄKSI, ja lehti kertoo
+   * asian oikein. Toimeksianto sanoi, että Port Vila oli 1873 "pieni
+   * ranskalais-brittiläinen kauppa-asema (Franceville)". Franceville
+   * perustettiin vasta 1889 ja hajosi 1890; Uudet Hebridit
+   * julistettiin puolueettomaksi alueeksi 1878 ja yhteishallinto
+   * alkoi 1887, kondominio 1906. Vuonna 1873 Efatella ei ollut
+   * kuntaa eikä hallintoa (faktapohja, sisältölinjaus; tarkistus,
+   * kohta C).
+   *
+   * TARKISTUKSEN KAIKKI KORJAUKSET ON TEHTY:
+   *  - Chevillard saapui Efatelle 1880 ("Vanuatu"), ei 1890-luvulla;
+   *    Port Vila -artikkelin lähteetöntä virkettä ei käytetä.
+   *  - Franceville on KUNTA, ei tasavalta (infoboxin
+   *    government_type = Republic on ristiriidassa leipätekstin
+   *    kanssa); väkiluku 540 kerrotaan muodossa "noin viisisataa",
+   *    koska luku on vain infoboxissa.
+   *  - Kielten määrä on "yli sata" (138 / 113 / 100+ kolmessa eri
+   *    artikkelissa).
+   *  - Blackbirdingista EI käytetä Bislama-artikkelin
+   *    "satojatuhansia", vaan Blackbirding-artikkelin omat rajatut
+   *    luvut.
+   *  - Kulttuurikeskuksen perustamisvuosi on 1959 (leipäteksti);
+   *    luokituksen 1955 ei ole lähde.
+   *  - Vienti- ja tuontiosuuksia (35,7 % / 86,9 %) ei käytetä, koska
+   *    lähde merkitsee ne lähteettömiksi.
+   *  - Independence Parkista EI väitetä, että itsenäisyys olisi
+   *    julistettu siellä — lähde ei sano niin.
+   *
+   * EI NYKYPOLITIIKKAA: nykyiset puolueet, pormestari, pääministeri
+   * ja veroparatiisikeskustelu on jätetty pois.
+   *
+   * SYKLONIT KERROTAAN LUONNONILMIÖNÄ ja Pamin jäljet näkyvät
+   * kohdekartan stadionin kuvassa; teksti sanoo sen ääneen
+   * (Raamattu, tuhoutuneen kaupungin nykykuvat 20.8.2026).
+   *
+   * ENNEN–NYT-PARI ON NOIN VUODELTA 1897 eli isoisän matkasta
+   * neljännesvuosisata eteenpäin, ja kuvateksti sanoo sen. W. A.
+   * Lucasin kuvat ovat kaupungin varhaisimmat Commonsista löytyvät
+   * valokuvat.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026
+   * "Daily API request limit exceeded" (HTTP 429), joten
+   * js/packs/saatiedot.js:ään ei lisätty riviä (Samarkand-malli
+   * v965). Oppaan sääjakso nojaa en-Wikipedian sääruutuun ja sanoo
+   * sen.
+   */
+  portvila: [
+    {
+      id: 'kaupunki',
+      nimi: 'Port Vila',
+      johdanto: 'Port Vila on rakennettu suojaisan luonnonsataman '
+        + 'ympärille Efaten rannalle. Kaupungilla on ollut kaksi '
+        + 'hallintoa, kaksi lakia ja kaksi tuomioistuinta yhtä aikaa — '
+        + 'ja yhden vuoden oma kunta.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin. Ne ovat silti kolme laajaa yleiskuvaa: satama
+       * Iririkin saarineen, koko kaupunki ilmasta ja lahti
+       * auringonlaskussa.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Port Vila Vanuatu Harbour.JPG',
+          selite: 'Vilan sataman suulla makaa Iririkin saari '
+            + 'lehtikattoisine mökkeineen, ja poijuissa keinuu '
+            + 'purjeveneitä.',
+          lahde: 'Steffen Wurzel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Central Port Vila, Vanuatu, 29 Nov. 2006 - Flickr - PhillipC.jpg',
+          selite: 'Ilmasta näkyy koko kaupunki: vihreä niemi, lahti, '
+            + 'Iririki ja risteilijä laiturissa.',
+          lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Port Vila Harbour (Imagicity 816).jpg',
+          selite: 'Aurinko laskee lahden taakse, ja saaret piirtyvät '
+            + 'tummina siluetteina veden yli.',
+          lahde: 'Graham Crumb, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: kolme laajaa yleiskuvaa kaupungin eri
+       * puolilta — Iririki lahden yli, sataman suu purjelaivoineen ja
+       * saaren rinne rantamökkeineen. Port Vilalle ei ole generoitu
+       * herokuvia, joten karusellissa on kolme aitoa valokuvaa.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Port Vila - Iririki Island - panoramio.jpg',
+          selite: 'Iririkin saari näkyy lahden yli vain parin minuutin '
+            + 'venematkan päähän keskustasta.',
+          lahde: 'Jean Van Jean, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Port Vila harbour, Vanuatu, June 2009 (3653339680).jpg',
+          selite: 'Kahden maston purjelaiva liukuu sataman suulla, ja '
+            + 'takana levittäytyy metsäinen ranta.',
+          lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Port Vila - View on Vila Bay - panoramio (1).jpg',
+          selite: 'Saaren rinteessä on rivi lehtikattoisia mökkejä, ja '
+            + 'niiden edessä ankkuroi katamaraani.',
+          lahde: 'Jean Van Jean, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'ANHC jetty at Port Vila.tif',
+          vuosi: 'n. 1897',
+          selite: 'Kauppahuoneen kivilaituri ja pensaikkoinen ranta '
+            + 'noin vuonna 1897 — kaupungin varhaisin tunnettu '
+            + 'valokuva, isoisän matkasta neljännesvuosisata '
+            + 'eteenpäin.',
+          lahde: 'W. A. Lucas, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Waterfront, Port Vila, 2007 (2).JPG',
+          selite: 'Samalla rannalla kulkee nyt kivetty rantapolku, ja '
+            + 'lahden takana ovat hotellit ja purjeveneet.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Vuonna 1873 kuntaa ei ollut',
+          teksti: 'James Cook kartoitti Efaten 1774 ja nimesi sen '
+            + 'Sandwich Islandiksi; retkikunta ei noussut maihin mutta '
+            + 'pani merkille hyvät satamat. Isoisän matkan aikaan 1873 '
+            + 'saarella ei ollut kuntaa eikä hallintoa. Santelipuu oli '
+            + 'hakattu loppuun 1860-luvun puoliväliin mennessä, mutta '
+            + 'valaanpyyntialuksia kävi yhä, lähetyssaarnaajia oli '
+            + 'tullut vuodesta 1839 ja työvoimaa hakevat alukset veivät '
+            + 'saarelaisia Queenslandin, Fidžin ja Uuden-Kaledonian '
+            + 'viljelmille. Britannia ja Ranska julistivat Uudet '
+            + 'Hebridit puolueettomaksi alueeksi vasta 1878, '
+            + 'ensimmäinen kookosviljelmä istutettiin Efatelle 1877 ja '
+            + 'ensimmäinen ranskalainen istuttaja saapui 1880.',
+          tiedosto: 'Trypot and \'Astrolabe\' anchor, Port Vila, Vanuatu, April 2008 (2425651555).jpg',
+          selite: 'Kirjaston pihalla on valaanpyytäjien traanipata ja '
+            + 'vanha ankkuri, jäänteitä ajalta ennen kaupunkia.',
+          lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Vanuatu',
+        },
+        {
+          otsikko: 'Kunta, joka julistautui itsenäiseksi',
+          teksti: 'Uusilla Hebrideillä ei ollut 1880-luvulla toimivaa '
+            + 'hallintoa, ja se turhautti asukkaita. Ranskalaisia '
+            + 'haittasi erityisesti se, että Ranskan laki tunnusti vain '
+            + 'siviilivihkimisen ja lähin viranomainen oli '
+            + 'Uudessa-Kaledoniassa. Franceville — nykyinen Port '
+            + 'Vila — julistautui 9. elokuuta 1889 itsenäiseksi '
+            + 'kunnaksi ja valitsi johtajakseen Ferdinand-Albert '
+            + 'Chevillardin. Asukkaita oli noin viisisataa. Yhteisö oli '
+            + 'yksi ensimmäisistä tunnetun historian itsehallinnoista, '
+            + 'jotka toteuttivat yleisen äänioikeuden sukupuoleen ja '
+            + 'rotuun katsomatta. Kesäkuuhun 1890 mennessä kunta oli '
+            + 'hajonnut, mutta vuoden 1905 kartassa nimi Franceville '
+            + 'luki yhä Port Vilan rinnalla.',
+          tiedosto: 'Australasian New Hebrides Company Store (cropped).tif',
+          selite: 'Kauppahuoneen aaltopeltinen myymälä ja sen kuistilla '
+            + 'seisova henkilökunta noin vuonna 1897.',
+          lahde: 'W. A. Lucas, Wikimedia Commons (PD)',
+          wiki: 'Franceville, New Hebrides',
+        },
+        {
+          otsikko: 'Kaksi hallintoa yhdessä kaupungissa',
+          teksti: 'Vuoden 1887 jälkeen Uusia Hebrideitä hallitsivat '
+            + 'Ranska ja Britannia yhdessä, ja järjestely '
+            + 'virallistettiin 1906 kondominioksi. Se oli ainutlaatuinen '
+            + 'hallintomuoto: kaksi erillistä hallinto-, laki-, '
+            + 'tuomioistuin- ja finanssijärjestelmää, jotka kohtasivat '
+            + 'vain yhteisessä tuomioistuimessa. Ni-vanuatulaisilta oli '
+            + 'suljettu kummankin vallan kansalaisuus, ja he olivat '
+            + 'virallisesti kansalaisuudettomia; koulutus ja '
+            + 'terveydenhuolto jäivät lähetysseurojen käsiin. Port '
+            + 'Vilan postitalo merkitsi epävirallista rajaa kaupungin '
+            + 'kahden sektorin välillä: British Paddock etelässä, '
+            + 'Quartier français pohjoisessa. Vanuatu itsenäistyi 1980.',
+          tiedosto: 'PortVilaPostOffice.jpg',
+          selite: 'Vanuatu Postin oranssi talo seisoo yhä siinä '
+            + 'kohdassa, jossa kaupungin brittiläinen ja ranskalainen '
+            + 'puoli aikoinaan kohtasivat.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'New Hebrides',
+        },
+        {
+          otsikko: 'Kieli, joka on nimetty merimakkaran mukaan',
+          teksti: 'Bislama on englantipohjainen kreolikieli ja Vanuatun '
+            + 'kansalliskieli. Yli 95 prosenttia sen sanoista tulee '
+            + 'englannista, loput muutamasta kymmenestä ranskan sanasta '
+            + 'ja saarten omista kielistä — käytännössä kasvi- ja '
+            + 'eläinnimistöstä. Nimi juontuu 1800-luvun alun sanasta '
+            + 'Beach-la-Mar, joka tulee ranskan sanasta bêche de mer '
+            + 'eli merimakkara: 1840-luvun alussa merimakkaroita '
+            + 'kuivattiin samaan aikaan kuin santelipuuta hakattiin. '
+            + 'Bislama on Port Vilan ja Luganvillen asukkaiden '
+            + 'äidinkieli ja muualla maassa toinen kieli, ja '
+            + 'kansallislaulun sanat ovat sillä. Vanuatussa puhutaan '
+            + 'yli sataa alkuperäiskieltä.',
+          tiedosto: 'PortVilaCityHall.jpg',
+          selite: 'Kaupungintalo seisoo keskustan kukkulalla, ja sen '
+            + 'julkisivussa on Vanuatun lippu ja kaupungin vaakuna.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bislama',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'The Nambanga House (Imagicity 440).jpg',
+          selite: 'Jättiläismäisen nambanga-banjaanin ilmajuurten '
+            + 'suojaan on rakennettu talo.',
+          lahde: 'Graham Crumb, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Port Vila on Vanuatun pääkaupunki ja maan tärkein '
+          + 'satama. Se on rakennettu Efaten rannalle suojaisan '
+          + 'luonnonsataman ympärille, ja sataman suulla makaa Iririkin '
+          + 'saari kahden minuutin venematkan päässä keskustasta. '
+          + 'Kaupunki on pieni: asukkaita oli vuoden 2020 '
+          + 'väestönlaskennassa 49 034, ja koko keskusta mahtuu '
+          + 'kävelymatkan päähän rantakadusta. Kaupungin kaksikielisyys '
+          + 'näkyy katukuvassa — kadunnimet, kaupat ja kirkot ovat '
+          + 'ranskaksi ja englanniksi, ja arjen puhekieli on bislama. '
+          + 'Kauppahalli, kulttuurikeskus, kaupungintalo ja '
+          + 'presbyteerikirkko ovat kaikki yhden kävelyn varrella. '
+          + 'Kaupungin ulkopuolelta alkaa toinen Vanuatu: yli 80 '
+          + 'saarta, joista noin 65:llä asutaan, ja niille lähdetään '
+          + 'lautalla tai pikkukoneella.',
+        artikkeli: {
+          nimi: 'Matkailijan Port Vila',
+          taitto: 'opas',
+          teksti: 'Satamakaupunki, jolla oli kerran kaksi hallitusta ja '
+            + 'kerran oma kunta — ja jonka museossa osa esineistä on '
+            + 'yhä tabu.',
+          nosto: 'Vanuatussa puhutaan yli sataa alkuperäiskieltä, ja '
+            + 'Port Vilan väestönlaskennassa 2020 yhdeksän kymmenestä '
+            + 'oli lukutaitoinen englanniksi, lähes puolet ranskaksi ja '
+            + 'neljä viidestä jollakin saarten omalla kielellä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Bauerfieldin kansainvälinen lentoasema on '
+                + 'kaupungissa, ja Air Vanuatun pääkonttori on Vanuatu '
+                + 'Housessa Port Vilassa. Satama on maan tärkein, ja '
+                + 'siellä käy sekä rahtia että risteilijöitä. '
+                + 'Ulkosaarille lähdetään lentäen tai lautalla: Tanna '
+                + 'ja Espiritu Santo ovat päivittäisen lennon päässä, '
+                + 'syrjäisemmät saaret harvemmin. Matkailu on '
+                + 'kasvanut erityisesti Australiasta ja '
+                + 'Uudesta-Seelannista — vuonna 1997 kävijöitä oli yli '
+                + '80 000. Kaupungin ulkopuolella useimmat elävät '
+                + 'omavaraistaloudessa ja syövät saariruokaa, jota '
+                + 'bislamaksi sanotaan nimellä aelan kakae.',
+              kuva: {
+                tiedosto: 'Daybreak, Port Vila, Vanuatu, 11 June 2009 (3619811281).jpg',
+                selite: 'Aamurusko värjää lahden vaaleanpunaiseksi, ja '
+                  + 'maihinnousualus odottaa rannan edustalla.',
+                lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Satama, saari ja kaksi kaupunginosaa',
+              teksti: 'Kaupunki kiertyy Vilan sataman itärannalle. '
+                + 'Sataman suulla on Iririkin saari, jonne pääsee '
+                + 'kahdessa minuutissa veneellä; sen historia on '
+                + 'brittiläinen. Vuonna 1910 saarelle perustettiin '
+                + 'Uusien Hebridien ensimmäinen brittiläinen sairaala '
+                + 'presbyteerilähetyssaarnaaja John G. Patonin '
+                + 'muistoksi, ja 1913 saarella toimi brittiresidenssi, '
+                + 'joka vuokrasi saaren yhdeksäksikymmeneksiyhdeksäksi '
+                + 'vuodeksi; residenssiin noustiin 179 porrasta. '
+                + 'Itsenäistyessä 1980 residenssi hylättiin, ja 1983 '
+                + 'Ifiran saarelaiset vuokrasivat saaren '
+                + 'lomakeskukseksi. Kaupungin nähtävää: parlamentin '
+                + 'edessä on kaksi perinteistä totemipaalua ja sian '
+                + 'syöksyhammasta esittävä monumentti, kauppahallia '
+                + 'vastapäätä värikäs seinämaalaus ja kukkulalla '
+                + 'pitkulainen kaupungintalo.',
+              kuva: {
+                tiedosto: 'PortVilaPresbyterianChurch.jpg',
+                selite: 'Presbyteerikirkon keltainen harjakatto '
+                  + 'laskeutuu nurmelle asti Independence Parkia '
+                  + 'vastapäätä.',
+                lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kauppahalli rannan tuntumassa',
+              teksti: 'Kauppahalli on kaupungin arjen keskus, ja sen '
+                + 'edessä olevan hallintorakennuksen seinässä on '
+                + 'värikäs maalaus. Vanuatun talous nojaa yhä suurelta '
+                + 'osin omavaraisviljelyyn: perheiden puutarhapalstat '
+                + 'tuottavat ruoan, ja tori on paikka, jossa ylijäämä '
+                + 'muuttuu rahaksi. Maatalous ja kalastus ovat '
+                + 'kaupungin tärkeimmät elinkeinot turismin ohella. '
+                + 'Hallin ranskankielinen nimikilpi Marché de Port Vila '
+                + 'muistuttaa siitä, että kaupungilla on kaksi '
+                + 'siirtomaakieltä ja yksi yhteinen puhekieli.',
+              kuva: {
+                tiedosto: 'Port Vila - The market house - panoramio.jpg',
+                selite: 'Kauppahallin edessä on paanukattoinen kilpi, '
+                  + 'jossa lukee Marché de Port Vila.',
+                lahde: 'Jean Van Jean, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kastom talteen',
+              teksti: 'Vanuatun kulttuurikeskus aloitti 1976 suullisen '
+                + 'perinteen keruuprojektin, jota on kuvattu '
+                + 'Tyynenmeren menestyksekkäimmäksi ruohonjuuritason '
+                + 'kulttuuridokumentointiohjelmaksi. Se koulutti '
+                + 'ni-vanuatulaisia tallentamaan omaa perinnettään, ja '
+                + '1990 ohjelma laajennettiin naisten perinteeseen '
+                + 'Jean Tarissein johdolla; 1994 siitä oli kehittynyt '
+                + 'naiskenttätyöntekijöiden verkosto. Työ liittyi '
+                + 'itsenäisyysajan ajatteluun: kastomista tuli tapa '
+                + 'puhua siitä, mikä on omaa. Keskuksessa on myös '
+                + 'kansallinen audiovisuaalinen arkisto, jonka '
+                + 'aineisto ulottuu 1800-luvun lopulle. Yksi '
+                + 'kokoelmien esine on Louvressa: Pohjois-Ambrymin '
+                + 'Magamin kylän pyhä Lengnangulong-kivi vietiin 1949, '
+                + 'ja kylä on vuodesta 1997 pyytänyt joko palautusta '
+                + 'tai omistuksen tunnustamista. Museossa on kivestä '
+                + 'kopio.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Port Vila '
+                + '-artikkelin sääruudusta (Bauerfieldin lentoasema, '
+                + 'lähteenä Saksan ilmatieteen laitos); lehdellä ei ole '
+                + 'omaa vuosigraafia, koska Open-Meteon arkisto ei '
+                + 'vastannut kyselyihin. Ilmastossa on selvästi '
+                + 'sateisempia ja kuivempia kuukausia, ja koska '
+                + 'pasaatituulet ovat lähes pysyviä, ilmasto '
+                + 'luokitellaan meritrooppiseksi eikä '
+                + 'ekvatoriaaliseksi. Vuosikeskilämpötila on 24,3 '
+                + 'astetta: helmikuussa päivälämpö nousee 31,2 '
+                + 'asteeseen ja heinäkuussa jää 26,4 asteeseen, ja '
+                + 'yölämpötila vaihtelee 18 ja 23 asteen välillä. '
+                + 'Sadetta tulee vuodessa noin 2 339 millimetriä ja '
+                + 'sadepäiviä on 153. Sateisin kuukausi on maaliskuu '
+                + '(321 mm) ja kuivin syyskuu (87 mm). Trooppiset '
+                + 'syklonit eivät ole harvinaisia: sykloni Uma '
+                + 'vaurioitti kaupunkia 1987 ja luokan viisi Pam '
+                + '13. maaliskuuta 2015.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Vanuatun kulttuurikeskus',
+                tahdet: 3,
+                selite: 'Kansallismuseo, kastom-koulu ja arkisto, jonka '
+                  + 'osa aineistosta on tabu.',
+              },
+              {
+                mita: 'Kauppahalli',
+                tahdet: 3,
+                selite: 'Kaupungin arjen keskus rannan tuntumassa, '
+                  + 'ranskankielinen nimikilpi ovella.',
+              },
+              {
+                mita: 'Iririkin saari',
+                tahdet: 2,
+                selite: 'Kahden minuutin venematka keskustasta; entinen '
+                  + 'brittiresidenssin saari.',
+              },
+              {
+                mita: 'Independence Park',
+                tahdet: 2,
+                selite: 'Kaupungin suurin nurmikenttä ja sitä '
+                  + 'vastapäätä presbyteerikirkko.',
+              },
+              {
+                mita: 'Sacré-Cœurin katedraali',
+                tahdet: 2,
+                selite: 'Port Vilan hiippakunnan istuin ja kaupungin '
+                  + 'tunnetuin moderni kirkko.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua.
+             * Sääluvut ovat samasta sääruudusta kuin jakso 5.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Syklonit kuuluvat asiaan',
+                teksti: 'Syklonit eivät ole Vanuatussa harvinaisia: '
+                  + 'Uma 1987 ja luokan viisi Pam 13. maaliskuuta 2015 '
+                  + 'vaurioittivat kaupunkia pahoin.',
+              },
+              {
+                otsikko: 'Sateisin kausi joulu–huhtikuussa',
+                teksti: 'Vuosisade on noin 2 339 millimetriä, ja '
+                  + 'maaliskuussa sitä tulee 321 millimetriä — lähes '
+                  + 'nelinkertaisesti syyskuuhun verrattuna.',
+              },
+              {
+                otsikko: 'Osa museon aineistosta on tabu',
+                teksti: 'Kaikkea ei näytetä, ja se on tarkoituksellista: '
+                  + 'osaan pääsevät vain miehet, osaan vain naiset ja '
+                  + 'osaan vain tiettyjen ryhmien jäsenet.',
+              },
+              {
+                otsikko: 'Kolme kieltä',
+                teksti: 'Bislama on arjen kieli, mutta englanti ja '
+                  + 'ranska ovat molemmat virallisia — ja kadunnimissä '
+                  + 'näkyy kumpikin.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Kolmetuhatta vuotta ja kaksi lippua',
+      johdanto: 'Efatella on asuttu kolmetuhatta vuotta, ja saaren omat '
+        + 'tarinat osoittivat arkeologille haudan, jota kukaan ei ollut '
+        + 'löytänyt. Kartoille kirjoitetut nimet ovat sitä paljon '
+        + 'nuorempaa kerrostumaa.',
+      tehtava: {
+        kysymys: 'Millä välineellä Vanuatun hiekkapiirros eli '
+          + 'sandroing piirretään?',
+        vaihtoehdot: [
+          'Yhdellä sormella',
+          'Kepillä',
+          'Harjalla',
+          'Kammalla',
+        ],
+        oikea: 0,
+        fakta: 'Piirtäjä vetää yhtenäisen kiemurtelevan viivan yhdellä '
+          + 'sormella hiekkaan, vulkaaniseen tuhkaan tai saveen; '
+          + 'UNESCO on tunnustanut perinteen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Hautausmaa, joka löytyi 2004',
+          teksti: 'Melanesialaiset ovat asuneet Port Vilan seudulla '
+            + 'tuhansia vuosia. Syksyllä 2004 arkeologinen retkikunta '
+            + 'löysi Teoumasta hautausmaan: 25 hautaa ja niissä '
+            + 'kolmisenkymmentä lapita-kulttuurin edustajan luurankoa. '
+            + 'Löytöpaikan keramiikka on ajoitettu 1200-luvulle ennen '
+            + 'ajanlaskun alkua, ja koko kaivauksesta on sittemmin '
+            + 'kertynyt 94 yksilön jäänteet. Lapita-ihmiset asuttivat '
+            + 'Vanuatun saaret noin kolmetuhatta vuotta sitten ja '
+            + 'toivat mukanaan jamssin, taaron ja banaanin sekä siat ja '
+            + 'kanat. Heidän tulonsa osui yhteen useiden lajien '
+            + 'häviämisen kanssa: saarilta katosivat muun muassa '
+            + 'maakrokotiili ja maakilpikonna.',
+          tiedosto: 'PortVilaLapita.jpg',
+          selite: 'Lapita-kulttuurin savipata on esillä '
+            + 'kulttuurikeskuksen vitriinissä, ja sen kylkeen on '
+            + 'painettu hienoa kuviointia.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Port Vila',
+        },
+        {
+          otsikko: 'Roi Matan valtakunta',
+          teksti: 'Roi Mata oli päällikkyyden arvonimi Vanuatun '
+            + 'keskisaarilla, ja sitä kantoi päällikködynastia '
+            + '1000-luvulta 1600-luvulle. Tunnetuin on viimeinen, jonka '
+            + 'uskotaan eläneen noin vuonna 1600; hänen '
+            + 'hallintokautensa maine on rauhanomainen. Ranskalainen '
+            + 'arkeologi José Garanger löysi hänen hautansa Eretokan '
+            + 'saarelta 1967 — ei umpimähkään kaivamalla vaan '
+            + 'analysoimalla paikallista suullista perinnettä. Haudassa '
+            + 'oli yli 25 hänen seurueensa jäsentä. Kolme Roi Mataan '
+            + 'liittyvää kohdetta Efatella, Lelepassa ja Eretokalla '
+            + 'merkittiin UNESCOn maailmanperintöluetteloon 2008; alue '
+            + 'on 886 hehtaarin kokoinen.',
+          tiedosto: 'Lelepa cliffs, Vanuatu, 2006 - Flickr - PhillipC.jpg',
+          selite: 'Lelepan saaren valkoiset kalkkikivijyrkänteet '
+            + 'kuuluvat Roi Matan maailmanperintöalueeseen.',
+          lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Roi Mata',
+        },
+        {
+          otsikko: 'Nimet, jotka kartat toivat',
+          teksti: 'Ensimmäinen eurooppalainen kosketus oli huhtikuussa '
+            + '1606, kun portugalilainen Pedro Fernandes de Queirós '
+            + 'purjehti Espanjan kruunun palveluksessa Callaosta. '
+            + 'Espanjalaiset perustivat Espiritu Santolle asutuksen '
+            + 'nimeltä Nueva Jerusalén, mutta se hylättiin kuukauden '
+            + 'jälkeen. Ranskalainen Louis Antoine de Bougainville '
+            + 'purjehti saarten ohi 22. toukokuuta 1768 ja nimesi ne '
+            + 'Suuriksi Kykladeiksi; hänen nimistään on jäänyt vain '
+            + 'Pentecost. James Cook tutki saaret heinä–syyskuussa 1774 '
+            + 'ja nimesi ne Uusiksi Hebrideiksi. Paikan omat nimet ovat '
+            + 'vanhempia: alue on eteläefaten kielellä Efil ja '
+            + 'mele-filan kielellä Ifira — ja Vila on niiden muunnos.',
+          tiedosto: 'The Landing at Tana one of the New Hebrides, by William Hodges.jpg',
+          selite: 'Retkikunnan taiteilija William Hodges maalasi Cookin '
+            + 'maihinnousun Tannan saarelle noin 1775; kuva on '
+            + 'eurooppalaisen matkalaisen näkökulma.',
+          lahde: 'William Hodges, Wikimedia Commons (PD)',
+          wiki: 'Vanuatu',
+        },
+        {
+          otsikko: 'Talo, jossa osa esineistä on tabu',
+          teksti: 'Vanuatun kulttuurikeskus perustettiin 1959, ja se on '
+            + 'kattojärjestö, johon kuuluvat kansallismuseo, '
+            + 'kansallisarkisto, kansalliskirjasto ja '
+            + 'kenttätyöntekijäverkosto. Vuoteen 1996 mennessä '
+            + 'kokoelmassa oli noin 2 500 tuntia äänitallennetta, '
+            + '2 300 tuntia videota ja kolmetuhatta '
+            + 'mustavalkovalokuvaa 1950-luvulle asti. Osa aineistosta '
+            + 'on tabu: joihinkin pääsevät vain miehet, joihinkin vain '
+            + 'naiset ja joihinkin vain tiettyjen kulttuuriryhmien '
+            + 'jäsenet. Keskus on tallentanut myös sandroing-perinteen, '
+            + 'jossa yhtenäinen kiemurteleva viiva piirretään yhdellä '
+            + 'sormella hiekkaan; se toimii viestintänä noin '
+            + 'kahdeksankymmenen kielikunnan välillä.',
+          tiedosto: 'Sand drawing, Vanuatu.jpg',
+          selite: 'Hiekkaan piirretty symmetrinen kuvio syntyy yhdestä '
+            + 'yhtenäisestä viivasta.',
+          lahde: 'PhillipC, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Sand drawing',
+        },
+      ],
+    },
+  ],
+  /*
+   * DENVER (Opus 6.9.2026, paketti O9) — P-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-denver.md ja sen riippumaton tarkistus
+   * tarkistus-denver.md (tuomio "kelpaa kahden korjauksen jälkeen";
+   * molemmat korjaukset on tehty, ks. alla). Väitteet on luettu
+   * en-Wikipedian raakatekstistä 6.9.2026: "Denver", "History of
+   * Denver", "Kansas Pacific Railway", "Pike's Peak gold rush",
+   * "Red Rocks Amphitheatre", "Colorado State Capitol", "Arapaho",
+   * "Cheyenne".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * koskettu; kummankin faktat (mailin korkeus, kullankaivajien
+   * leiri, Union Depot) sopivat tähän lehteen.
+   *
+   * SIVUJA ON KAKSI kuten Montrealissa, Torontossa ja Cairnsissa
+   * (kaupunki + teemasivu). Teemasivun id on vakioaihe 'luonto',
+   * koska AIHE_IKONIT ei tarjoa vuoristolle omaa kuvaketta eikä
+   * uusia sivu-id:itä tehdä; sivun nimi "Vuoret ja ohut ilma"
+   * kertoo aiheen.
+   *
+   * TARKISTUKSEN MOLEMMAT KORJAUKSET ON TEHTY:
+   *  - K1 sanoo arapahoista KAKSI liittovaltion tunnustamaa
+   *    yhteisöä, ei kolmea: Northern Arapaho Tribe of the Wind River
+   *    Reservation (yhdessä itäisten shoshonien kanssa vuodesta
+   *    1878) ja Cheyenne and Arapaho Tribes Oklahomassa.
+   *  - K2 käyttää kultalöydöstä TARKEMPAA lähdettä ("Pike's Peak
+   *    gold rush": heinäkuun ensimmäinen viikko 1858, Green
+   *    Russellin ryhmä, noin 20 troy-unssia Little Dry Creekin
+   *    suulla) eikä yleisartikkelin karkeaa "marraskuussa 1858"
+   *    -muotoilua. Ristiriita on kirjattu tarkistusraporttiin.
+   *
+   * PILARI 1 JA SPEC-MANTEREET.MD:N LINJAUS 1: alkuperäiskansat
+   * tulevat ensimmäisenä nostona ennen kaupungin perustamista, ja
+   * kansojen OMAT NIMET (Hinono'eino, Tsétsėhéstȧhese) kerrotaan
+   * ennen siirtomaanimiä. Kansat kuvataan elävinä nykypäivän
+   * toimijoina. Sand Creek 1864 kerrotaan tapahtumana yhdellä
+   * neutraalilla virkkeellä ilman yksityiskohtia ja ilman
+   * uhrilukua (pilari 4); lähteen adjektiivia "brutal" ei toisteta,
+   * koska se on arvio eikä tosiasia.
+   *
+   * EI NYKYPOLITIIKKAA: Rocky Flatsin plutoniumsaastuminen, Ku Klux
+   * Klanin nousu 1920-luvulla, Soapy Smithin korruptiokausi ja
+   * vuoden 1972 olympiapäätös on jätetty kokonaan pois, vaikka
+   * lähdeartikkeli käsittelee niitä.
+   *
+   * KAKSI VÄITETTÄ, JOITA EI KIRJOITETA: (1) osavaltiotalon
+   * kultakupolin yhteyttä kultaryntäykseen ei toisteta, koska
+   * en-Wikipedian "Colorado State Capitol" ei sano sitä
+   * (northamerica-valokuvat.js:n vanha kuvateksti ei ole
+   * Wikipedia-katetta); (2) korkeusharjoittelun happifysiologiaa ei
+   * esitetä Wikipedia-katteisena, koska sitä ei ole "Denver"-
+   * artikkelissa — se jää laudan visan oman fact-kentän varaan
+   * (northamerica-questions.js, denver, kysymys 4).
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026 pyyntöön
+   * 429:llä ("Daily API request limit exceeded"), eikä lukuja
+   * keksitä (Samarkand-malli v965) — js/packs/saatiedot.js jää
+   * koskematta ja lehti näkyy ilman säätä kuten Cairnsissa ja
+   * Panamássa. Oppaan sääjakso nojaa siksi en-Wikipedian
+   * Climate-osioon ja sanoo sen ääneen.
+   *
+   * KUVAT haettiin Commonsin API:sta kategoria- ja hakusanahauilla
+   * (Cityscapes of Denver, Aerial photographs of Denver, History of
+   * Denver, Colorado State Capitol, Red Rocks Amphitheatre, Union
+   * Station (Denver), Denver Botanic Gardens, Molly Brown House,
+   * Front Range, Denver International Airport), lisenssi ja tekijä
+   * luettiin extmetadatasta 6.9.2026, ja jokainen valittu kuva
+   * katsottiin silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Denver Union Station - June 2022 - Sarah Stierch
+   * 01.jpg" (iso urheiluseuran mainosbanderolli etualalla — sama
+   * tiedosto on valokuvataulussa, mutta lehteen se ei kelpaa),
+   * "16th Street Mall (10094539945).jpg" ja "16th Street Mall
+   * (10094580263).jpg" (kumpikaan ei esitä 16th Street Mallia:
+   * edellinen on osavaltiotalo remonttiverhossa sponsorikilpineen,
+   * jälkimmäinen aseman katos), "Denver at night.jpg" (venytetty
+   * kalansilmäpanoraama, tummat heijastavat reunat), "Red Rocks
+   * Amphitheatre, Colorado 1.jpg" ja "-24.jpg" (tunnistettavia
+   * kasvoja etualalla), "Red Rock Amphitheatre.jpg" (lavan
+   * rakennustyömaa ja varoitusnauhat), "Denver skyline
+   * (55029503490).jpg" (kuvaus on lahjoituskehotus, kuvan päälle
+   * lisätyn merkinnän riski), "Civic Center Cultural Complex,
+   * Denver.jpg" (näyttelybanderollit), "Highland Bridge, Denver
+   * (55028556586).jpg" (katunäkymä yritystunnuksineen, ei
+   * yleiskuva), "Denver from Cabrini Shrine 2.jpg" (kuvasuhde
+   * 2,5:1 ja kaupunki utuisena täplänä), "Denver Skyline
+   * (6379810343).jpg" ja saman sarjan muut (tekijäksi merkitty
+   * poliittinen järjestö — lähderivi veisi lehden politiikkaan),
+   * "Denver Art Museum Denver Colorado 2024.jpg" (pyöräteline
+   * etualalla peittää julkisivun), "Daniels and Fisher Tower
+   * (55242051522).jpg" (mustavalkoinen yksityiskohta ovikilvestä,
+   * ei tornia) ja "Daniels & FIsher Tower 69000040.jpg"
+   * (tunnistettavia kasvoja alareunassa).
+   *
+   * AIHETOISTO, joka on tarkoituksellinen ja kirjattu: Kalliovuoret
+   * näkyvät sekä kansikuvissa että teemasivun nostoissa, mutta
+   * jokainen kuva on eri tiedosto ja eri paikasta otettu
+   * (Rocky Mountain Arsenalin preeria, Red Rocksin näköalapaikka,
+   * Cherry Creekin kattotaso, Kalliovuorten kansallispuisto).
+   *
+   * ENNEN JA NYT: vanha puoli on Detroit Publishing Companyn
+   * vedos noin vuodelta 1908 (PD) Union Depotin edustalta.
+   * Negatiivin alalaidassa on kustantajan oma litera ja otsikko —
+   * reseptin nimenomainen poikkeus ("julkaisijan oma litera, joka
+   * selitetään kuvatekstissä"), ja kuvateksti kertoo sen. Nykykuva
+   * on sama asema uuden laiturikatoksen alta nähtynä.
+   */
+  denver: [
+    {
+      id: 'kaupunki',
+      nimi: 'Denver',
+      johdanto: 'Denver on preerian ja Kalliovuorten saumassa tasan mailin '
+        + 'korkeudessa. Kulta toi tänne telttakylän 1858, mutta kaupungin '
+        + 'pelasti rautatie: isoisän matkavuonna 1873 rata oli kolme '
+        + 'vuotta vanha ja toi sata uutta asukasta päivässä.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: siluetti
+       * lumihuippujen edessä idästä, sama siluetti lännen kukkuloilta
+       * ja kaupunki preerian takaa.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Silicon Mountain.jpg',
+          selite: 'Denverin siluetti ja sen takana Front Rangen '
+            + 'lumihuiput iltavalossa.',
+          lahde: 'Sheila Sund, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Denver Downtown view from Red Rock Amphitheatre.jpg',
+          selite: 'Lännen kukkuloilta katsottuna keskusta nousee '
+            + 'yksin tasangolta esikaupunkien takaa.',
+          lahde: 'Mitul0520, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Denver Colorado Skyline at Rocky Mountain Arsenal (53658444917).jpg',
+          selite: 'Koillisen preerialta kaupunki näkyy kapeana '
+            + 'nauhana vuoriston ja ruohotasangon välissä.',
+          lahde: 'Tony Webster, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat — talvinen aamu vuoria kohti, ilmakuva ruutukaavasta
+       * ja kattotason näkymä lännen suuntaan. Denverille ei ole vielä
+       * generoitu herokuvia, joten karusellissa on kolme aitoa
+       * valokuvaa (vertaa Dunediniin ja Cairnsiin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: '2010 Denver and Front Range 01.jpg',
+          selite: 'Lumen jälkeen aamu valaisee kaupungin ja Front '
+            + 'Rangen harjanteet vaaleanpunaisiksi.',
+          lahde: 'Nicholas Hartmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Downtown Denver CO.jpg',
+          selite: 'Ilmasta erottuu, miten vanha vino ruutukaava ja '
+            + 'uudempi ilmansuuntien mukainen kaava kohtaavat.',
+          lahde: 'Ron Reiring, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Denver View (7611246112).jpg',
+          selite: 'Kattotasolta lännen suuntaan kaupunki loppuu '
+            + 'tasangolle ja vuoret alkavat horisontissa.',
+          lahde: 'Heath Alseike, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Welcome Arch and Union Depot, Denver, Colo..jpg',
+          vuosi: 'noin 1908',
+          selite: 'Tervetuloakaari ja Union Depot noin 1908; kuvan '
+            + 'alalaitaan on painettu kustantajan oma negatiivilitera '
+            + 'ja otsikko.',
+          lahde: 'Detroit Publishing Company, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Denver Union Station Story (44028427210).jpg',
+          selite: 'Sama asema nykyään uuden laiturikatoksen alta '
+            + 'nähtynä, valokyltti yhä paikallaan.',
+          lahde: 'Mobilus In Mobili, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Maa, joka oli sopimuksella toisten',
+          teksti: 'Seudulla asuivat apassit, utet, tšeijennit, comanchet '
+            + 'ja arapahot. Arapahot kutsuvat itseään nimellä '
+            + 'Hinono’eino, "meidän ihmisemme", ja tšeijennit '
+            + 'nimellä Tsétsėhéstȧhese. Vuoden 1851 Fort Laramien '
+            + 'sopimuksessa Yhdysvallat määritteli heidän alueekseen '
+            + 'maat North Platte -joelta Arkansas-joelle — juuri sen, '
+            + 'missä Denver on. Vuoden 1858 kultaryntäys toi '
+            + 'siirtolaistulvan näiden maiden yli, '
+            + 'ja Fort Wisen sopimuksessa 1861 luovutettiin yli '
+            + 'yhdeksänkymmentä prosenttia niistä. Osa tšeijenneistä '
+            + 'kiisti sopimuksen: sen oli allekirjoittanut pieni '
+            + 'vähemmistö päälliköistä. Erimielisyys johti vuosien '
+            + '1864–65 Coloradon sotaan ja Sand Creekin verilöylyyn.',
+          tiedosto: 'Arapaho camp with buffalo meat drying near Fort Dodge, Kansas, 1870 - NARA - 518892.jpg',
+          selite: 'Tasangoilla asuttiin liikkuvissa tiipiileireissä, '
+            + 'joissa puhvelinliha kuivattiin telineillä; kuva on '
+            + 'vuodelta 1870.',
+          lahde: 'William S. Soule, Wikimedia Commons (PD)',
+          wiki: 'Arapaho',
+        },
+        {
+          otsikko: 'Kaksikymmentä unssia ja kaupunki',
+          teksti: 'Heinäkuun ensimmäisellä viikolla 1858 Green Russellin '
+            + 'ryhmä löysi Little Dry Creekin suulta noin kaksikymmentä '
+            + 'troy-unssia kultaa, silloiselta arvoltaan noin 380 '
+            + 'dollaria. Kansas City Journal of Commerce julisti löydön '
+            + 'elokuussa otsikolla "THE NEW ELDORADO!!", ja ryntäykseen '
+            + 'lähti arviolta satatuhatta ihmistä. Marraskuussa 1858 '
+            + 'kenraali William Larimer ja kapteeni Jonathan Cox '
+            + 'asettivat poppelipölkkyjä merkitäkseen valtauksen '
+            + 'kukkulalle South Platten ja Cherry Creekin yhtymäkohdan '
+            + 'yläpuolella. Larimer nimesi paikan Kansasin '
+            + 'territoriokuvernöörin mukaan — tietämättä, että tämä oli '
+            + 'jo eronnut.',
+          tiedosto: 'Confluence Park - Denver - tps.jpg',
+          selite: 'Confluence Parkissa South Platte ja Cherry Creek '
+            + 'yhtyvät siinä, missä Denverin ensimmäiset telttakylät '
+            + 'olivat.',
+          lahde: 'Theperfectstorm, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Pike\'s Peak gold rush',
+        },
+        {
+          otsikko: '1873: kaupunki, jonka rata pelasti',
+          teksti: 'Mannertenvälinen rata vedettiin Cheyennen kautta sata '
+            + 'mailia pohjoisempaa, ja se uhkasi jättää Denverin syrjään. '
+            + 'Kaupunkilaiset keräsivät kolmessa päivässä 300 000 '
+            + 'dollaria oman radan rakentamiseksi. Ensimmäinen juna '
+            + 'Cheyennestä saapui 24. kesäkuuta 1870, ja kaksi kuukautta '
+            + 'myöhemmin Kansas Pacific sai linjansa valmiiksi idästä; '
+            + 'sen kaksi rakennusryhmää kohtasivat tasangolla 15. '
+            + 'elokuuta 1870. Isoisän matkavuonna rata oli siis kolme '
+            + 'vuotta vanha ja toi arviolta sata uutta asukasta '
+            + 'päivässä. Väkiluku nousi 4 759:stä yli 35 000:een '
+            + 'vuosikymmenessä.',
+          tiedosto: '\'Denver from the Highlands\' by Paul Frenzeny and Jules Tavernier, 1874.jpg',
+          selite: 'Vuoden 1874 painokuvassa matala kaupunki leviää '
+            + 'tasangolle joen mutkaan ja Front Range nousee taustalle.',
+          lahde: 'Jules Tavernier / Paul Frenzeny, Wikimedia Commons (PD)',
+          wiki: 'History of Denver',
+        },
+        {
+          otsikko: 'Merkki portaissa: tasan yksi maili',
+          teksti: 'Denverin lempinimi Mile High City ei ole kielikuva. '
+            + 'Kaupungin virallinen korkeus on tasan yksi maili eli '
+            + '5 280 jalkaa merenpinnasta, ja se määritellään '
+            + 'osavaltiotalon portailla olevan kiintopisteen mukaan. '
+            + 'Koko kaupungin korkeus vaihtelee 5 130 ja 5 690 jalan '
+            + 'välillä. Osavaltiotaloa ei kuitenkaan ollut isoisän '
+            + 'aikaan: Elijah E. Myersin suunnittelema graniittitalo '
+            + 'avattiin vasta marraskuussa 1894. Denver oli territorion '
+            + 'pääkaupunki vuodesta 1867, Colorado liittyi unioniin '
+            + '1876, ja pysyväksi pääkaupungiksi Denver vahvistettiin '
+            + 'kansanäänestyksellä 1881.',
+          tiedosto: 'CO State Capitol dusk.jpg',
+          selite: 'Coloradon osavaltiotalon kullattu kupoli kohoaa '
+            + 'valkoisesta graniitista Colfax Avenuen varrella.',
+          lahde: 'L. Chang, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Colorado State Capitol',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Mount Blue Sky with Denver Skyline, Colorado (US).jpg',
+          selite: 'Auringonlaskun aikaan kaupungin siluetti jää '
+            + 'Kalliovuorten harjanteiden eteen kultaiseen usvaan.',
+          lahde: 'Justusco, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Denver on Coloradon pääkaupunki Front Rangen '
+          + 'kaupunkikäytävän keskellä, Kalliovuorten ja itäisten '
+          + 'ylätasankojen välissä. Keskustan liikekortteli on noin '
+          + 'yhdeksäntoista kilometrin päässä vuorten juurelta, joten '
+          + 'kaupunki itse on tasankoa mutta vuoret ovat aina näkyvissä. '
+          + 'Ilmasto on viileä puolikuiva ja aurinkoa on noin 3 100 '
+          + 'tuntia vuodessa. Denver on Yhdysvaltain ainoa osavaltion '
+          + 'pääkaupunki, joka on yhdistetty kaupunki ja kunta.',
+        artikkeli: {
+          nimi: 'Matkailijan Denver',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa museokortteli, panimot ja '
+            + 'kansallispuistojen portti mahtuvat samaan päivään: '
+            + 'aamulla kävelymatka Civic Centerissä, iltapäivällä '
+            + 'vuoristopuisto kuudentoista kilometrin päässä.',
+          nosto: 'Denverillä on maine hyvin ulkoilmapainotteisena '
+            + 'kaupunkina: moni denveriläinen viettää viikonloput '
+            + 'vuorilla — talvella hiihtäen, kesällä vaeltaen, kiiveten, '
+            + 'melomassa ja telttaillen. Kaupunki omistaa itse noin '
+            + '14 000 eekkeriä vuoristopuistoja ja lisäksi vuoren, '
+            + 'jolla Winter Parkin hiihtokeskus toimii.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Denverin kansainvälinen lentokenttä on noin '
+                + 'kolmenkymmenen kilometrin päässä keskustasta, ja se '
+                + 'on samalla kaupungin virallinen sääasemapaikka. '
+                + 'Kaukojunat käyttävät kunnostettua Union Stationia. '
+                + 'Metropolialueelle avautui 2015 uusi lähijunaverkko. '
+                + 'Keskustan selkäranka on 16th Street Mall, mailin '
+                + 'mittainen jalankulkukatu, jota pitkin kulkee '
+                + 'maksuton bussi päästä päähän — se on käytännössä '
+                + 'ainoa liikenneväline, jota keskustassa tarvitsee.',
+              kuva: {
+                tiedosto: 'Denver International Airport (DEN) (52735460613).jpg',
+                selite: 'Lentokentän terminaalialue on katettu '
+                  + 'purjemaisilla kankailla, joiden alta kuljetaan '
+                  + 'junalaiturille.',
+                lahde: 'Matt Walter from Durham, NC USA, USA, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Museokortteli Civic Centerin kupeessa',
+              teksti: 'Denverin taidemuseossa on Daniel Libeskindin '
+                + 'suunnittelema siipi, ja kaupungin esittävän taiteen '
+                + 'keskus on maan toiseksi suurin Lincoln Centerin '
+                + 'jälkeen. Kaupunki osti abstraktin ekspressionistin '
+                + 'Clyfford Stillin koko jäämistön 2004 ja rakensi sille '
+                + 'oman museon taidemuseon viereen. Osavaltion historian '
+                + 'museo History Colorado Center avattiin huhtikuussa '
+                + '2012, ja aivan sen naapurissa ovat Byers-Evansin talo '
+                + 'ja Molly Brownin talo. Kaikki mahtuvat kävelymatkan '
+                + 'päähän toisistaan.',
+            },
+            {
+              otsikko: 'Vuorille päiväretkelle',
+              teksti: 'Denver on hankkinut vuoristopuistoja 1910-luvulta '
+                + 'lähtien, ja niitä on nyt noin 14 000 eekkeriä eli '
+                + 'runsaat viisituhatta hehtaaria. Tunnetuin on Red '
+                + 'Rocks Park kuudentoista kilometrin päässä lounaassa, '
+                + 'mutta lähempänäkin on kokonaisia laumoja: Genesee '
+                + 'Parkissa laiduntaa kaupungin oma biisonikarja aivan '
+                + 'valtatien vieressä. Kauimmainen omistus on Winter '
+                + 'Parkin hiihtokeskuksen vuori, 108 kilometriä '
+                + 'länteen.',
+              kuva: {
+                tiedosto: 'Bison herd at Genesee Park-2012 03 10 0599.jpg',
+                selite: 'Genesee Parkin biisonilauma laiduntaa rinteellä '
+                  + 'valtatien ja havumetsän välissä.',
+                lahde: 'Postdlf, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Denver tunnetaan uusmeksikolaisesta keittiöstä ja '
+                + 'chilistä: vihreä ja punainen chilikastike, '
+                + 'Colorado-burrito, Denver-munakas, aamiaisburrito, '
+                + 'empanadat, chiles rellenos ja tamalet. Muita '
+                + 'kaupungin omia ruokia ovat Kalliovuorten osterit, '
+                + 'sateenkaarirautu ja Denver-voileipä. Kaupungissa ja '
+                + 'sen naapureissa on runsaasti panimoita, ja Denver '
+                + 'isännöi joka syksy Great American Beer Festivalia. '
+                + 'Cinco de Mayo kerää keväällä yli puoli miljoonaa '
+                + 'kävijää.',
+              kuva: {
+                tiedosto: 'Smothered beef burrito.JPG',
+                selite: 'Vihreään chilikastikkeeseen hukutettu burrito on '
+                  + 'Coloradon oma annos.',
+                lahde: 'Jeffrey Beall, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Denver-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa vuosigraafia, '
+                + 'koska ERA5-normaaleja ei saatu haettua. Ilmasto on '
+                + 'viileä puolikuiva ja vuodenaikoja on neljä; suurin '
+                + 'osa sateesta tulee huhtikuun ja elokuun välillä. '
+                + 'Heinäkuu on lämpimin, keskimääräinen ylin 32 astetta, '
+                + 'ja vähintään 32 asteeseen noustaan 38 päivänä '
+                + 'vuodessa. Joulukuun keskimääräinen ylin on 7 astetta. '
+                + 'Lunta kertyy noin 136 senttiä, ja mitattavan lumen '
+                + 'tavallinen ikkuna on 17. lokakuuta – 27. huhtikuuta.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Red Rocksin amfiteatteri',
+                tahdet: 3,
+                selite: 'Kahden hiekkakivimonoliitin väliin rakennettu '
+                  + '9 525 hengen katsomo, vihitty 1941.',
+              },
+              {
+                mita: 'Osavaltiotalon portaat',
+                tahdet: 3,
+                selite: 'Kiintopiste, joka määrittää koko kaupungin '
+                  + 'virallisen korkeuden: tasan yksi maili.',
+              },
+              {
+                mita: 'Denverin taidemuseo',
+                tahdet: 2,
+                selite: 'Gio Pontin 1971 valmistunut linnamainen talo ja '
+                  + 'Libeskindin 2006 avattu titaanisiipi.',
+              },
+              {
+                mita: 'Kasvitieteellinen puutarha',
+                tahdet: 2,
+                selite: 'Pohjois-Amerikan laajin kokoelma viileän '
+                  + 'lauhkean vyöhykkeen kasveja, perustettu 1951.',
+              },
+              {
+                mita: '16th Street Mall',
+                tahdet: 2,
+                selite: 'Mailin mittainen jalankulkukatu, jolla kulkee '
+                  + 'maksuton bussi päästä päähän.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Korkeus, kuiva ilma, sään
+             * äkilliset käänteet ja raekuurot vaikuttavat kaikki
+             * siihen, miten kaupungissa liikutaan; luvut ovat samat
+             * kuin jaksossa 5 ja teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Korkeus tuntuu ensimmäisenä päivänä',
+                teksti: 'Kaupunki on tasan mailin korkeudessa ja koko '
+                  + 'alue 1 564–1 734 metrissä; vauhti kannattaa ottaa '
+                  + 'alusta rauhallisesti.',
+              },
+              {
+                otsikko: 'Ilma on kuivaa ja aurinko kirkas',
+                teksti: 'Aurinkoa on noin 3 100 tuntia vuodessa ja '
+                  + 'ilmankosteus on yleisesti matala.',
+              },
+              {
+                otsikko: 'Sää kääntyy nopeasti',
+                teksti: 'Sisämaan sijainti ylätasangolla Kalliovuorten '
+                  + 'juurella tuo äkillisiä säänmuutoksia, ja '
+                  + 'vuorokauden lämpötilavaihtelu on suuri läpi '
+                  + 'vuoden.',
+              },
+              {
+                otsikko: 'Rakeet ovat kaupungin oma riesa',
+                teksti: 'Yhdysvaltain kymmenen kalleimman raekuuron '
+                  + 'joukossa on kolme Denverin myrskyä: 1990, 2009 ja '
+                  + '2017.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Vuoret ja ohut ilma',
+      johdanto: 'Kaupungin länsipuolella nousee seinä, jonka takaa vedet '
+        + 'virtaavat toiselle valtamerelle. Korkeus näkyy Denverissä '
+        + 'kaikessa: ilmassa, auringossa ja siinä, miten puistot '
+        + 'kastellaan.',
+      tehtava: {
+        kysymys: 'Mistä Red Rocksin kallioiden punainen väri johtuu?',
+        vaihtoehdot: [
+          'hapettuneista mineraaleista',
+          'auringon polttamasta pinnasta',
+          'rautaruosteesta radan varrelta',
+          'punaisesta hiekasta, joka on lentänyt aavikolta',
+        ],
+        oikea: 0,
+        fakta: 'Red Rocksin muodostumat ovat osa Fountain-muodostumaa, '
+          + 'ja niiden punertava väri johtuu hapettuneista '
+          + 'mineraaleista. Samassa mullistuksessa kohosivat myös '
+          + 'läheiset Garden of the Gods ja Flatirons.',
+      },
+      nostot: [
+        {
+          otsikko: 'Seinä, jonka takaa vedet kääntyvät',
+          teksti: 'Denver on Front Rangen kaupunkikäytävän keskellä, '
+            + 'Kalliovuorten ja itäisten ylätasankojen välissä. '
+            + 'Keskustan liikekortteli on noin yhdeksäntoista '
+            + 'kilometrin päässä vuorten juurelta, ja maasto on '
+            + 'keskellä tasankoa mutta kumpuilee pohjoisessa, lännessä '
+            + 'ja etelässä. Front Range on Kalliovuorten itäisin jono ja '
+            + 'ulottuu Wyomingin eteläosista Coloradon keskiosiin. Sen '
+            + 'harjanne on mannerjakaja: lännestä vedet virtaavat '
+            + 'Tyynellemerelle, idästä Atlantille. Kaupungin '
+            + 'panoraamassa näkyy lumihuippuinen Mount Blue Sky.',
+          tiedosto: '13ers CO.JPG',
+          selite: 'Front Rangen lumihuippuja Kalliovuorten '
+            + 'kansallispuistossa Denveristä luoteeseen.',
+          lahde: 'Hogs555, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Front Range',
+        },
+        {
+          otsikko: 'Ohut ilma, kolmetuhatta tuntia aurinkoa',
+          teksti: 'Denverin ilmasto on viileä puolikuiva: kosteus on '
+            + 'yleisesti matala ja aurinkoa on noin 3 100 tuntia '
+            + 'vuodessa. Korkeuden ja kuivuuden takia vuorokauden '
+            + 'lämpötilavaihtelu on suuri läpi vuoden, ja sisämaan '
+            + 'sijainti ylätasangolla tuo äkillisiä säänmuutoksia. '
+            + 'Kaupungin virallinen sääasema on lentokentällä noin '
+            + 'kolmenkymmenen kilometrin päässä keskustasta, ja siitä '
+            + 'kiistellään: vuoden 2019 vertailussa lentokentän '
+            + 'keskilämpötila oli 10,1 astetta ja keskustan 11,7 '
+            + 'astetta.',
+          tiedosto: 'Skyline and Sunflowers (15429055175).jpg',
+          selite: 'Preerian auringonkukat kukkivat kaupungin ja '
+            + 'vuoriston edustalla kirkkaassa elokuun valossa.',
+          lahde: 'USFWS Mountain-Prairie, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Denver',
+        },
+        {
+          otsikko: 'Kaksi kalliota ja katsomo niiden välissä',
+          teksti: 'Red Rocks on avotaivasamfiteatteri kuudentoista '
+            + 'kilometrin päässä Denveristä lounaaseen, ja kaupunki '
+            + 'omistaa sen itse. Paikan tunnistaa kahdesta '
+            + 'monoliitista, joiden nimet ovat Ship Rock ja Creation '
+            + 'Rock; niiden välissä on 9 525 hengen katsomo. Kalliot '
+            + 'syntyivät osana Fountain-muodostumaa ja kohosivat '
+            + 'Laramide-orogeniassa, ja punertava väri johtuu '
+            + 'hapettuneista mineraaleista. Denver osti alueen 1927 '
+            + 'hintaan 54 133 dollaria, ja amfiteatteri vihittiin '
+            + '15. kesäkuuta 1941.',
+          tiedosto: 'Red Rocks Amphitheatre from top of amphitheatre.jpeg',
+          selite: 'Ylimmältä penkkiriviltä katsomo laskeutuu lavalle ja '
+            + 'sen takaa avautuu tasanko Denveriin asti.',
+          lahde: 'Dough4872, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Red Rocks Amphitheatre',
+        },
+        {
+          otsikko: 'Puistot, jotka kastellaan kaupungin ojasta',
+          teksti: 'Denverissä on yli kaksisataa puistoa, pienistä '
+            + 'taskupuistoista 127 hehtaarin City Parkiin. Suurin osa '
+            + 'hankittiin osavaltion mailta City Beautiful -liikkeen '
+            + 'aikaan, ja pormestari Robert Speer laajensi niitä '
+            + '1900-luvun alussa. Kaupungin ensimmäinen maisema-'
+            + 'arkkitehti Reinhard Schuetze suunnitteli Washington '
+            + 'Parkin, Cheesman Parkin ja City Parkin; myöhemmin '
+            + 'työhön osallistuivat myös Frederick Law Olmsted '
+            + 'nuorempi ja Saco Rienk DeBoer. Kaikki nämä puistot '
+            + 'kasteltiin kaupungin ojaa pitkin johdetulla South '
+            + 'Platten vedellä.',
+          tiedosto: 'Washington Park Denver.JPG',
+          selite: 'Washington Parkin Smithin lammen rannalla seisoo '
+            + 'vuoden 1913 venevaja.',
+          lahde: 'Jeffrey Beall, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Denver',
+        },
+      ],
+    },
+  ],
+  /*
+   * HOUSTON (Opus 6.9.2026, paketti O9) — P-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-houston.md ja sen riippumaton tarkistus
+   * tarkistus-houston.md (tuomio "kelpaa korjausten jälkeen";
+   * kaikki korjaukset on tehty, ks. alla). Väitteet on luettu
+   * en-Wikipedian raakatekstistä 6.9.2026: "Houston", "History of
+   * Houston", "Buffalo Bayou", "Houston Ship Channel", "Johnson
+   * Space Center", "Spindletop", "Karankawa people", "Atakapa",
+   * "Texas Medical Center".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * koskettu. Saapumiskortin isoisä puhuu puuvillasta, rautatiestä
+   * ja lahden satamasta — juuri se 1873-kulma, jolle tämä lehti
+   * rakentuu.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'tiede', koska AIHE_IKONIT ei tarjoa öljylle eikä
+   * avaruudelle omaa kuvaketta eikä uusia sivu-id:itä tehdä; sivun
+   * nimi "Öljy ja avaruus" kertoo aiheen.
+   *
+   * TARKISTUKSEN KAIKKI KORJAUKSET ON TEHTY:
+   *  - H1 sanoo alkuperäiskansojen jälkeläisjärjestöistä, että ne
+   *    ovat TUNNUSTAMATTOMIA ja että jäsenet lukevat itsensä
+   *    jälkeläisiksi (lähteen sanamuoto "claim descent",
+   *    "unrecognized"). "Houston"-artikkelin väitettä kansojen
+   *    olevan "lähes olemattomia" ei toisteta, koska tarkemmat
+   *    artikkelit nimeävät nykyiset järjestöt — ristiriita on
+   *    kirjattu tarkistusraporttiin (ennakkotapaus v925/v932).
+   *  - H2 ei väitä veljesten ostaneen 2 214 eekkeriä: lähde sanoo
+   *    heidän ostaneen PUOLET sen kokoisesta palstasta. Tekstissä
+   *    käytetään siksi hintaa, joka on lähteessä yksiselitteinen.
+   *  - T2 ei siteeraa Kuun pinnalta radioitua lausetta: sitä ei ole
+   *    luetuissa artikkeleissa sanatarkasti. Kutsumerkki "Houston"
+   *    riittää, ja visan oma fact-kenttä hoitaa lauseen
+   *    (northamerica-questions.js, houston, kysymys 4).
+   *  - T2 kertoo JSC:n pinta-alaksi 1 620 eekkeriä ja sanoo
+   *    erikseen, että lahjoitettu maa oli 1 000 eekkeriä — sama
+   *    artikkeli antaa molemmat luvut.
+   *
+   * PILARI 1 JA SPEC-MANTEREET.MD:N LINJAUS 1: alkuperäiskansat
+   * tulevat ensimmäisenä nostona, ja kansan OMA NIMI (Ishak, "ne
+   * ihmiset") kerrotaan ennen siirtomaanimeä Atakapa, joka on
+   * naapurikansan antama haukkumanimi. Kansat kuvataan elävinä.
+   * Rituaalikannibalismia koskevia väitteitä EI toisteta: lähde
+   * itse kertoo, ettei yksikään ulkopuolinen nähnyt tekoa ja että
+   * kertomusten uskottavuus on kiistanalainen (pilari 3 ja 4).
+   * Väitettä maan olleen "pitkälti asumaton" 1700-luvun lopulta
+   * 1830-luvulle ei esitetä tosiasiana.
+   *
+   * ORJUUS JA SISÄLLISSOTA kerrotaan suoraan ja lukuina, ilman
+   * osapuolinostalgiaa ja ilman yksityiskohtien korostusta
+   * (spec-mantereet.md, USA-linjaus). EI NYKYPOLITIIKKAA eikä
+   * nykyrikollisuutta: artikkelin Crime- ja Government-osiot on
+   * jätetty kokonaan pois. Otsoni ja ilmanlaatu mainitaan vain
+   * neutraalina luonnontieteellisenä tosiasiana, ilman poliittista
+   * kehystä.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026 pyyntöön
+   * 429:llä ("Daily API request limit exceeded"), eikä lukuja
+   * keksitä (Samarkand-malli v965). Oppaan sääjakso nojaa siksi
+   * en-Wikipedian Climate-osioon ja sanoo sen ääneen; luvut ovat
+   * William P. Hobby Airportin normaalikaudelta 1991–2020 ja
+   * George Bush Intercontinentalin mittauksista.
+   *
+   * KUVAT haettiin Commonsin API:sta kategoria- ja hakusanahauilla
+   * (Quality images of Houston, Buffalo Bayou Park, Port of
+   * Houston, Menil Collection, Armand Bayou Nature Center,
+   * Spindletop, Houston Livestock Show and Rodeo, Hurricane
+   * Harvey), lisenssi ja tekijä luettiin extmetadatasta 6.9.2026, ja
+   * jokainen valittu kuva katsottiin silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Houston (142714691).jpeg" (kuvan oikeassa
+   * alakulmassa vesileima viePhotos.com), "MFA houston.jpg" ja
+   * "MFAHCarolineWeissLaw.JPG" (isot jäsenhankintabanderollit
+   * julkisivulla), "USA - Texas - Houston - Museum of Fine
+   * Arts.jpg" (tunnistettava henkilö pääosassa), "Christ Church
+   * Cathedral Alter View.jpg" (kävijöiden kasvot luettavissa),
+   * "Houston seen from an Air Canada flight.jpg" (lentokoneen siipi
+   * ja yhtiötunnus pääosassa), "Centro de Houston.jpg" (ei
+   * yleiskuva; henkilö etualalla), "Houston, Texas North of Hobby
+   * Airport (15860217643).jpg" (utuinen ja tunnistamaton),
+   * "Texas Medical Center skyline in Houston.JPG" (pysäköintialue
+   * etualalla ja vastavalo), "TMC at night Nima.JPG" (yritysten
+   * valokyltit pääosassa), "J. Kick - View of Houston - Google Art
+   * Project.jpg" (1840-luvun akvarelli, jossa Houstonin taakse on
+   * maalattu vuoristo — kaupungin ympärillä ei ole vuoria, joten
+   * kuva johtaisi lukijaa harhaan) ja "Lucas gusher.jpg" (upea
+   * vuoden 1901 öljysuihku, mutta extmetadatan tekijäkenttä on
+   * pitkä epäselvyysmerkintä eikä nimi, jonka voisi kirjoittaa
+   * lähderiville).
+   *
+   * KOHDEKARTAN KAHDEKSAS KOHDE VAIHDETTIIN KUVASYYSTÄ. Faktapohja
+   * ehdotti kuvataiteen museota, mutta sen kaikissa Commonsin
+   * julkisivukuvissa on joko iso mainosbanderolli tai tunnistettava
+   * henkilö (ks. hylkäykset), eikä kartan kohde saa jäädä ilman
+   * juttukuvaa. Tilalle otettiin Hermann Park, joka on 500 metrin
+   * päässä samassa museokorttelissa ja jolla on Commonsin
+   * laatukuva. Museo mainitaan matkaoppaan jaksossa 2.
+   *
+   * ENNEN JA NYT: vanha puoli on Augustus Kochin vuoden 1873
+   * lintuperspektiivilitografia (PD), jonka J. J. Stoner julkaisi
+   * Madisonissa — täsmälleen isoisän matkavuodelta. Painolaatan
+   * alalaidassa on kustantajan oma otsikko ja kohdeluettelo:
+   * reseptin nimenomainen poikkeus, ja kuvateksti kertoo sen.
+   * Nykykuva on sama kaupunki rannikkopreerian takaa nähtynä.
+   */
+  houston: [
+    {
+      id: 'kaupunki',
+      nimi: 'Houston',
+      johdanto: 'Houston ei ole meren rannalla, mutta se on satamakaupunki: '
+        + 'kapea Buffalo Bayou kaivettiin laivaväyläksi lahdelle asti. '
+        + 'Isoisän matkavuonna 1873 tänne tultiin puuvillan ja '
+        + 'rautateiden takia — öljyä ei vielä ollut.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: keskusta
+       * puron yli lännestä, sama keskusta puistokaistaleen takaa ja
+       * ilmakuva lääketieteen keskuksen yltä pohjoiseen.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Downtown Houston and Buffalo Bayou.jpg',
+          selite: 'Keskusta nousee Buffalo Bayoun vihreiden törmien ja '
+            + 'moottoritiesillan takaa.',
+          lahde: 'Astronautilus, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Downtown Houston, TX Skyline - 2018.jpg',
+          selite: 'Iltavalossa tornit erottuvat ryppäinä, koska '
+            + 'Houstonilla ei ole kaavoituslakia.',
+          lahde: 'David Daniel Turner, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Aerial of Texas Medical Center with Downtown Houston in the background (cropped).jpg',
+          selite: 'Ilmasta katsottuna lääketieteen keskuksen tornit ovat '
+            + 'etualalla ja keskusta kaukana taustalla.',
+          lahde: 'University of Texas Health Science Center at Houston Office of Communications, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat — kaarisilta puiston yllä, puron mutka keskustaan
+       * päin ja kaupungin siluetti pystykuvana. Houstonille ei ole
+       * vielä generoitu herokuvia, joten karusellissa on kolme aitoa
+       * valokuvaa (vertaa Cairnsiin ja Panamáan).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Sabine Street Bridge (HDR).jpg',
+          selite: 'Sabine Streetin kaarisilta ylittää Buffalo Bayoun '
+            + 'puiston kävelytien kohdalla.',
+          lahde: 'Ed Uthman , Houston, Texas, USA, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Houston May 2022 13 (Buffalo Bayou Park and skyline).jpg',
+          selite: 'Puron rannat on istutettu puistoksi keskustan '
+            + 'juurelle asti.',
+          lahde: 'Michael Barera, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Buffalo Bayou - Downtown Houston.jpg',
+          selite: 'Illan valossa puro johtaa katseen suoraan keskustan '
+            + 'torneihin.',
+          lahde: 'Bry0909, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Old map-Houston-1873.jpg',
+          vuosi: '1873',
+          selite: 'Augustus Kochin lintuperspektiivikuva vuodelta 1873; '
+            + 'alalaitaan on painettu kustantajan oma otsikko ja '
+            + 'kohdeluettelo.',
+          lahde: 'Augustus Koch (1840-?)., Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Houston Downtown Skyline 2010.JPG',
+          selite: 'Sama kaupunki nykyään rannikkopreerian heinikon '
+            + 'takaa nähtynä.',
+          lahde: 'Ed Uthman , Houston, Texas, USA, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Ishak — "ne ihmiset" — ja karankawat',
+          teksti: 'Nykyisen Houstonin maalla asuivat karankawat ja '
+            + 'atakapat vähintään kaksituhatta vuotta ennen ensimmäisiä '
+            + 'tunnettuja uudisasukkaita. Atakapat kutsuivat itseään '
+            + 'nimellä Ishak, "ne ihmiset"; nimi Atakapa on choctawin '
+            + 'kieltä ja eurooppalaisten naapurikansalta omaksuma. '
+            + 'Läntiset ishakit olivat Hikike Ishak, auringonlaskun '
+            + 'kansa. Kieli oli kielisaareke, ja siitä julkaistiin '
+            + 'sanakirja 1932. Seudun paikannimissä se elää yhä: '
+            + 'Calcasieu tulee sanoista Katkōsh Yōk, "itkevä kotka". '
+            + 'Nykyään jälkeläisikseen itsensä lukevat ovat '
+            + 'järjestäytyneet, mutta yhtäkään järjestöä ei ole '
+            + 'liittovaltiollisesti tunnustettu.',
+          tiedosto: 'Armand Bayou.jpg',
+          selite: 'Aamu-usvassa puro levenee metsäisten törmien väliin '
+            + 'juuri sellaisena kuin rannikon purot olivat ennen '
+            + 'kaupunkia.',
+          lahde: 'Jim Evans, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Atakapa',
+        },
+        {
+          otsikko: 'Kaupunki, joka myytiin ennen kuin se oli olemassa',
+          teksti: 'Veljekset Augustus ja John Kirby Allen ostivat '
+            + '26. elokuuta 1836 maata Buffalo Bayoun varrelta. He '
+            + 'maksoivat siitä 5 000 dollaria, josta vain tuhat '
+            + 'käteisenä ja loput velkakirjoina. Neljä päivää myöhemmin '
+            + 'he julkaisivat lehdessä ilmoituksen kaupungista, jota ei '
+            + 'vielä ollut, ja nimesivät sen Sam Houstonin mukaan — '
+            + 'miehestä tuli saman vuoden aikana Texasin tasavallan '
+            + 'presidentti. Vuoden 1837 alussa paikalla asui noin '
+            + 'tusina ihmistä; toukokuussa, kun kongressi kokoontui '
+            + 'siellä, heitä oli jo noin 1 500.',
+          tiedosto: 'Allen\'s Landing Houston bayou view.jpg',
+          selite: 'Allenin veljesten maihinnousupaikalla puron rannassa '
+            + 'on yhä kiinnityspollarit ja laituritaso.',
+          lahde: 'Scott Ehardt, Wikimedia Commons (PD)',
+          wiki: 'Houston',
+        },
+        {
+          otsikko: '1873: puuvillaa, ratoja ja velkaa',
+          teksti: 'Vuoteen 1860 mennessä Houston oli puuvillan viennin '
+            + 'kauppa- ja rautatiekeskus: sisämaan radat yhtyivät '
+            + 'täällä ja jatkoivat Galvestonin ja Beaumontin satamiin. '
+            + 'Saman vuoden väestönlaskennassa kaupungissa oli 4 845 '
+            + 'asukasta, joista 1 069 orjuutettuja — yhdeksänkymmentä-'
+            + 'yhdeksän prosenttia kaupungin afroamerikkalaisesta '
+            + 'väestöstä. Sisällissodan jälkeen liikemiehet ryhtyivät '
+            + 'leventämään purojaan, jotta kauppa keskustan ja '
+            + 'Galvestonin sataman välillä kasvaisi. Vuoteen 1890 '
+            + 'mennessä Houston oli Texasin rautatiekeskus.',
+          tiedosto: 'T N Railroad Through Truss Swing Bridge Over Buffalo Bayou, Just Above Houston Ship Channel Turning Basin, Houston, Texas 1204101357 (5234927581).jpg',
+          selite: 'Vanha ristikkorakenteinen kääntösilta vie radan '
+            + 'Buffalo Bayoun yli laivaväylän kääntöaltaan yläpuolella.',
+          lahde: 'Patrick Feller from Humble, Texas, USA, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'History of Houston',
+        },
+        {
+          otsikko: 'Puro, joka kaivettiin valtamereksi',
+          teksti: 'Buffalo Bayou virtaa keskustan läpi ja jatkuu '
+            + 'Houstonin laivaväylänä; sen latvat ovat 48 kilometriä '
+            + 'kaupungista länteen. Keskusta on vain viisitoista metriä '
+            + 'merenpinnan yläpuolella. Kun Galveston tuhoutui vuoden '
+            + '1900 hirmumyrskyssä, syväsataman rakentaminen Houstoniin '
+            + 'kiihtyi: presidentti Roosevelt hyväksyi 1902 miljoonan '
+            + 'dollarin hankkeen, ja presidentti Wilson avasi sataman '
+            + '1914, seitsemän vuotta ruoppauksen aloittamisesta. Väylä '
+            + 'on 80 kilometriä pitkä, ja sen yläpää on neljän mailin '
+            + 'päässä keskustasta itään.',
+          tiedosto: 'GreensPortIndustrialPakr-BuffaloBayou (34933182210).jpg',
+          selite: 'Laivaväylän varrella vuorottelevat säiliökentät, '
+            + 'terminaalit ja telakat molemmin puolin uomaa.',
+          lahde: 'formulanone, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Houston Ship Channel',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Gerald D. Hines Waterwall Park.jpg',
+          selite: 'Tiilikaaren takaa syöksyy vesiseinä, joka on '
+            + 'kaupungin tunnetuin suihkulähde.',
+          lahde: 'Sitao Xiang, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Houston on Texasin suurin kaupunki ja koko '
+          + 'Yhdysvaltain neljänneksi suurin. Se on rakennettu '
+          + 'Meksikonlahden rannikkotasangolle, jonka läpi kulkee neljä '
+          + 'suurta puroa; keskusta on vain viitisentoista metriä '
+          + 'merenpinnan yläpuolella. Kaupungilla ei ole kaavoituslakia, '
+          + 'ja siksi se on levinnyt useaksi erilliseksi keskittymäksi '
+          + 'yhden ytimen sijaan. Kesät ovat kuumia ja kosteita, talvet '
+          + 'leutoja, ja ilmastointi on kaikkialla.',
+        artikkeli: {
+          nimi: 'Matkailijan Houston',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa museokortteli, maailman suurin '
+            + 'sairaalakeskittymä ja kuulentojen ohjaamo ovat saman '
+            + 'moottoritien varrella — ja jossa kesällä kävellään '
+            + 'mieluummin maan alla kuin kadulla.',
+          nosto: 'Museum Districtin laitokset keräävät yli seitsemän '
+            + 'miljoonaa kävijää vuodessa, ja keskustan Theater District '
+            + 'on seitsemäntoista korttelin alue, jossa on yhdeksän '
+            + 'suurta esittävän taiteen organisaatiota ja kuusi '
+            + 'esiintymissalia — toiseksi suurin teatteripaikkojen '
+            + 'keskittymä yhdysvaltalaisessa keskustassa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Houston on 266 kilometriä Austinista itään ja 400 '
+                + 'kilometriä Dallasista etelään. Sijainnit ilmoitetaan '
+                + 'yleensä sen mukaan, ovatko ne Interstate 610 -kehän '
+                + 'sisä- vai ulkopuolella; kehiä on kaikkiaan kolme, '
+                + 'uloin noin neljänkymmenen kilometrin säteellä. '
+                + 'Keskustassa kannattaa käyttää yhdentoista kilometrin '
+                + 'tunneli- ja kävelysiltaverkostoa, jonka varrella on '
+                + 'kauppoja ja ravintoloita ja joka suojaa kesähelteeltä '
+                + 'ja sateelta. Museokortteliin pääsee keskustasta '
+                + 'raitiovaunulla.',
+              kuva: {
+                tiedosto: 'View from Midtown Houston toward Museum District and METRORail train.JPG',
+                selite: 'Raitiovaunu kulkee Midtownista museokorttelia ja '
+                  + 'lääketieteen keskusta kohti.',
+                lahde: 'Agsftw, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Museokortteli ja teatterikortteli',
+              teksti: 'Museum Districtin laitoksissa käy yli seitsemän '
+                + 'miljoonaa vierasta vuodessa. Kuvataiteen museo on '
+                + 'galleriapinta-alaltaan maailman kymmenenneksi suurin '
+                + 'museo ja Amerikan mantereiden toiseksi suurin '
+                + 'taidemuseo; sen vanhin osa valmistui 1924 ja on '
+                + 'Texasin vanhin taidemuseorakennus. Lähellä ovat '
+                + 'Menilin kokoelma, Rothkon kappeli ja bysanttilaisen '
+                + 'freskokappelin museo. Keskustan Theater District on '
+                + 'seitsemäntoista korttelin alue teattereita ja '
+                + 'konserttisaleja.',
+            },
+            {
+              otsikko: 'Avaruuskeskus ja Space City',
+              teksti: 'Space Center Houston on NASAn Johnson Space '
+                + 'Centerin virallinen vierailukeskus noin neljänkymmenen '
+                + 'kilometrin päässä kaakossa Clear Lakessa. Siellä on '
+                + 'kuukiviä, avaruussukkulasimulaattori ja esittelyjä '
+                + 'miehitetyn avaruuslennon historiasta. Kunnostettu '
+                + 'Apollon lennonjohtohuone avattiin matkailijoille '
+                + 'kesäkuussa 2019, ja ulkona omassa hallissaan makaa '
+                + 'kokonainen Saturn V -raketti. Kaupunki sai '
+                + 'virallisen lempinimensä Space City vuonna 1967.',
+              kuva: {
+                tiedosto: 'Saturn V Rocket -- Johnson Space Center.jpg',
+                selite: 'Saturn V makaa kyljellään omassa hallissaan '
+                  + 'vaiheittain purettuna.',
+                lahde: 'Jim Evans, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään ja juhlitaan',
+              teksti: 'Houstonia arvostetaan monipuolisesta ruoka- ja '
+                + 'ravintolakulttuurista, ja yksi sen lempinimistä on '
+                + 'etelän ruokapääkaupunki. Suurin vuotuinen tapahtuma '
+                + 'on karjanäyttely ja rodeo, joka kestää kaksikymmentä '
+                + 'päivää maaliskuussa ja on maailman suurin lajissaan. '
+                + 'Muita ovat taideautoparaati ja kansainvälinen '
+                + 'festivaali. Kaupungissa on maan kolmanneksi suurin '
+                + 'konsulaattikeskittymä, 92 maata, ja Chinatown sekä '
+                + 'Mahatma Gandhi District ovat omia kaupunginosiaan.',
+              kuva: {
+                tiedosto: 'Plates of food from Black\'s Barbecue.jpg',
+                selite: 'Texasilaisella grillilautasella on naudan '
+                  + 'rintaa, kylkiluita ja makkaraa maissileivän kanssa.',
+                lahde: 'Kent Wang, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Houston-artikkelin '
+                + 'Climate-osiosta ja sääruudusta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska ERA5-normaaleja ei saatu haettua. '
+                + 'Ilmasto on kostea subtrooppinen. Kesällä 32 astetta '
+                + 'ylitetään keskimäärin 106 päivänä vuodessa, ja '
+                + 'kesäaamuina suhteellinen kosteus on yli yhdeksänkymmentä '
+                + 'prosenttia. Talvet ovat leutoja: tammikuun normaali '
+                + 'keskilämpötila on noin 12 astetta ja pakkasyö osuu '
+                + 'kohdalle keskimäärin kolmenatoista päivänä. Sadetta '
+                + 'kertyy noin 1 265 millimetriä, eniten huhtikuun ja '
+                + 'lokakuun välillä.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Space Center Houston',
+                tahdet: 3,
+                selite: 'NASAn vierailukeskus, jonka kunnostettu Apollon '
+                  + 'lennonjohtohuone avattiin yleisölle 2019.',
+              },
+              {
+                mita: 'Museum District',
+                tahdet: 3,
+                selite: 'Yli seitsemän miljoonaa kävijää vuodessa; '
+                  + 'kuvataiteen museo on mantereiden toiseksi suurin.',
+              },
+              {
+                mita: 'Buffalo Bayoun puisto',
+                tahdet: 2,
+                selite: 'Kaksi ja puoli mailia kunnostettua puronvartta '
+                  + 'keskustan kupeessa, avattu 2015.',
+              },
+              {
+                mita: 'Karjanäyttely ja rodeo',
+                tahdet: 2,
+                selite: 'Maailman suurin lajissaan, kaksikymmentä päivää '
+                  + 'maaliskuussa.',
+              },
+              {
+                mita: 'Keskustan tunnelit',
+                tahdet: 2,
+                selite: 'Yksitoista kilometriä ilmastoitua käytävää '
+                  + 'kauppoineen keskustan rakennusten alla.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Helle, kosteus, tulvat ja
+             * hirmumyrskykausi vaikuttavat siihen, milloin ja miten
+             * kaupungissa liikutaan; luvut ovat samat kuin jaksossa 5
+             * ja teemasivun nostossa T4.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Kesä on kuuma ja kostea',
+                teksti: '32 astetta ylitetään keskimäärin 106 päivänä '
+                  + 'vuodessa, ja kesäaamun suhteellinen kosteus on yli '
+                  + 'yhdeksänkymmentä prosenttia.',
+              },
+              {
+                otsikko: 'Tunnelit ovat oikea reitti',
+                teksti: 'Keskustan rakennukset yhdistää yhdentoista '
+                  + 'kilometrin ilmastoitu tunneli- ja '
+                  + 'kävelysiltaverkosto.',
+              },
+              {
+                otsikko: 'Tulvat kuuluvat kaupunkiin',
+                teksti: 'Tasainen maasto ja huonosti vettä läpäisevä '
+                  + 'savimaa tekevät paikallisista tulvista tavallisia; '
+                  + '2010-luvun puolivälissä niitä oli kolme peräkkäisenä '
+                  + 'vuonna.',
+              },
+              {
+                otsikko: 'Sadekausi on huhtikuusta lokakuuhun',
+                teksti: 'Suurin osa vuoden 1 265 millimetristä tulee '
+                  + 'silloin, kun Meksikonlahden kosteus haihtuu '
+                  + 'kaupungin ylle.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Öljy ja avaruus',
+      johdanto: 'Houstonin alla on suolakupoleja, jotka vangitsivat öljyn, '
+        + 'ja Houstonissa on ohjaamo, josta kuulennot johdettiin. Maa '
+        + 'vajoaa ja vesi tulvii — kaupunki on rakennettu insinöörityön '
+        + 'varaan.',
+      tehtava: {
+        kysymys: 'Miksi Houstonin maaperään syntyi öljyä vangitsevia '
+          + 'suolakupoleja?',
+        vaihtoehdot: [
+          'syvällä oleva suolakerros puristui ylöspäin ja veti sedimentit mukanaan',
+          'meri jätti suolaa kuiviin lampiin',
+          'öljy muutti hiekan suolaksi',
+          'suola valui maahan lahden rannalta',
+        ],
+        oikea: 0,
+        fakta: 'Sedimenttikerrosten alla on vedestä saostunut '
+          + 'vuorisuolakerros. Huokoiset kerrokset puristuivat ja '
+          + 'työntyivät ylöspäin, ja noustessaan suola veti mukanaan '
+          + 'ympäröiviä sedimenttejä kupoleiksi, jotka vangitsivat '
+          + 'öljyn ja kaasun.',
+      },
+      nostot: [
+        {
+          otsikko: 'Suolakupolit, jotka vangitsivat öljyn',
+          teksti: 'Houstonin maanpinnan alla on kiinteytymättömiä savia '
+            + 'ja heikosti sementoituneita hiekkoja useiden kilometrien '
+            + 'syvyyteen. Aines on peräisin Kalliovuorten kulumisesta, '
+            + 'ja se laskeutui hajoavan meriperäisen eloperäisen '
+            + 'aineksen päälle, joka muuttui ajan myötä öljyksi ja '
+            + 'kaasuksi. Kerrosten alla on vuorisuolaa. Kun huokoiset '
+            + 'kerrokset puristuivat, suola työntyi ylöspäin ja veti '
+            + 'mukanaan sedimenttejä kupoleiksi, jotka vangitsivat '
+            + 'ympäriltä tihkuvan öljyn. Juuri niitä lähdettiin '
+            + 'etsimään koko rannikkotasangolta.',
+          tiedosto: 'A replica of the Lucas Spindletop Gusher.jpg',
+          selite: 'Spindletopin porauskehikon puinen jäljennös seisoo '
+            + 'kentällä Beaumontin laidalla.',
+          lahde: 'Jim Evans, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Spindletop',
+        },
+        {
+          otsikko: 'Vuosi 1901: Spindletop',
+          teksti: 'Öljyn löytyminen Spindletopin kentältä Beaumontin '
+            + 'lähellä 1901 käynnisti Texasin öljyteollisuuden. Se oli '
+            + 'suurin siihen mennessä nähty öljysuihku: Beaumontin '
+            + 'kymmenentuhannen asukkaan väkiluku kolminkertaistui '
+            + 'kolmessa kuukaudessa ja nousi lopulta viiteenkymmeneen '
+            + 'tuhanteen. Vuoden 1902 loppuun mennessä oli perustettu '
+            + 'yli viisisataa yhtiötä ja toiminnassa oli 285 kaivoa; '
+            + 'kenttä tuotti sinä vuonna yli 17 miljoonaa tynnyriä. '
+            + 'Löytö innoitti etsintää koko Meksikonlahden '
+            + 'rannikkotasangolla, ja Houston sai satamansa ja '
+            + 'jalostamonsa täyteen työtä.',
+          tiedosto: 'Lucas gusher (Spindletop, Beaumont, Port Arthur, and vicinity, Texas - oil industry). LCCN2010649511.jpg',
+          selite: 'Spindletopin kentällä porauskehikot seisoivat '
+            + 'rivissä ja maassa lainehti öljy; kuvan alle on '
+            + 'kirjoitettu arkiston oma merkintä.',
+          lahde: 'Miscellaneous Items in High Demand, PPOC, Library of Congress, Wikimedia Commons (PD)',
+          wiki: 'Spindletop',
+        },
+        {
+          otsikko: 'Ohjaamo, jonka kutsumerkki on Houston',
+          teksti: 'Johnson Space Center rakennettiin 1962–63 maalle, '
+            + 'jonka Humble Oil lahjoitti Rice-yliopiston kautta — tuhat '
+            + 'eekkeriä karjalaidunta, jolla laitos on nykyään 1 620 '
+            + 'eekkerin laajuinen. Keskus avattiin syyskuussa 1963 '
+            + 'nimellä Manned Spacecraft Center ja nimettiin uudelleen '
+            + 'presidentti Lyndon B. Johnsonin mukaan 19. helmikuuta '
+            + '1973. Siellä on lennonjohtokeskus, joka on hoitanut '
+            + 'jokaisen NASAn miehitetyn lennon Gemini 4:stä alkaen, ja '
+            + 'sen radiokutsumerkki on yksinkertaisesti Houston. '
+            + 'Kaupunki sai siitä lempinimensä Space City 1967.',
+          tiedosto: 'Mission Operation Control Room 2, Johnson Space Center. 20-3-2017 (38888558160).jpg',
+          selite: 'Apollon aikainen lennonjohtohuone on säilytetty '
+            + 'konsoleineen, punaisine puhelimineen ja karttanäyttöineen.',
+          lahde: 'Alan Wilson from Stilton, Peterborough, Cambs, UK, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Johnson Space Center',
+        },
+        {
+          otsikko: 'Maa vajoaa, vesi nousee',
+          teksti: 'Houston on tasainen suoperäinen alue, jolle on '
+            + 'rakennettu laaja kuivatusjärjestelmä; viereinen preeria '
+            + 'valuu kaupunkiin. Kaupunki nojasi ennen pohjaveteen, '
+            + 'mutta maan vajoaminen pakotti siirtymään järviin, ja '
+            + 'kaakkoispuolella maa vajoaa yhä. Seudulla on yli 150 '
+            + 'aktiivista siirrosta, joiden yhteispituus on noin '
+            + 'viisisataa kilometriä; ne liikkuvat hitaasti ja '
+            + 'tasaisesti, joten maanjäristysriski on pieni. Tasainen '
+            + 'maasto ja huonosti vettä läpäisevä savi tekevät tulvista '
+            + 'tavallisia: 2010-luvun puolivälissä niitä oli kolme '
+            + 'peräkkäisenä vuonna.',
+          tiedosto: 'Braes Bayou after the Storm - Houston Texas - Flickr - david55king.jpg',
+          selite: 'Myrskyn jälkeen puro on täynnä reunoja myöten ja '
+            + 'rannan pyörätie katoaa veden alle.',
+          lahde: 'David King from Haifa, Israel, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Houston',
+        },
+      ],
+    },
+  ],
 };

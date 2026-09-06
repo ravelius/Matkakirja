@@ -3448,6 +3448,93 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -16.9110, etela: -16.9330, lansi: 145.7640, ita: 145.7855 },
     meri: true,
   },
+  honiara: {
+    /*
+     * POINT CRUZISTA MATANIKAUN ITÄPUOLELLE (6.9.2026). Ruutu on
+     * 2,2 × 3,3 kilometriä: kapea idästä länteen kulkeva nauha, koska
+     * kaupunki itsekin on sellainen. Honiara on rakennettu Kukum
+     * Highwayn ja rannan väliin, ja kaikki kohteet ovat kilometrin
+     * levyisellä kaistalla meren ja rinteen välissä.
+     *
+     * RUUTU ON LEVEÄMPI KUIN KORKEA, ja se on tarkoituksellista.
+     * Etelässä rinne nousee heti asumattomaksi metsäksi, joten
+     * korkeamman ruudun alaosa olisi tyhjää; idässä sen sijaan ovat
+     * katedraali ja Matanikaun silta ja lännessä Point Cruzin satama.
+     *
+     * KOHTEITA ON VIISI. Faktapohjan seitsemästä ehdokkaasta pudotettiin
+     * kaksi: Red House on pääministerin virka-asunto (ei
+     * nykypolitiikkaa) ja Lawson Taman stadionista ei löytynyt
+     * Commonsista kuvasäännöt täyttävää kuvaa (ainoat kaksi ovat
+     * vuoden 2000 haalistuneita filmikuvia väkijoukosta). Keskustan
+     * kohteet ovat lisäksi poikkeuksellisen tiiviissä: tori,
+     * keskuspankki ja kansallisarkisto ovat 126–179 metrin päässä
+     * museosta eivätkä mahdu omiksi numeroikseen (tarkistus-honiara.md,
+     * kohta I).
+     *
+     * GEOSEARCHIN VARAKOORDINAATIT KIERRETTIIN. Seitsemän eri
+     * artikkelia palauttaa saman pisteen −9,435092/159,951239 ja kuusi
+     * artikkelia kaupungin oman pisteen; kartalle otettiin vain
+     * kohteet, joilla on oma koordinaatti.
+     *
+     * meri: true. Ironbottom Sound on OSM:ssä rantaviivaa, ja ilman
+     * lippua kartan koko pohjoisreuna olisi paperin värinen.
+     *
+     * ENSIMMÄINEN RAJAUS ULOTTUI ITÄÄN ARVOON 159,9760 JA SE
+     * HYLÄTTIIN. Koeajo 6.9.2026 näytti, miksi: Matanikaun itäpuoli
+     * on kartalla lähes tyhjää rinnettä, ja kaikki viisi kohdetta
+     * puristuivat kuvan vasempaan puoliskoon. Itäraja vedettiin
+     * katedraalin taakse arvoon 159,9700.
+     */
+    rajat: { pohjoinen: -9.4270, etela: -9.4460, lansi: 159.9450, ita: 159.9700 },
+    meri: true,
+  },
+  portvila: {
+    /*
+     * VILAN SATAMA JA SEN ITÄRANTA (6.9.2026). Ruutu on
+     * 2,9 × 3,7 kilometriä ja kattaa koko kaupungin ytimen:
+     * pohjoisessa katedraali ja Kormanin stadion, keskellä
+     * Independence Park, etelässä Saralana Parkin kulttuurikeskus ja
+     * parlamentti.
+     *
+     * VANUATUN KANSALLINEN YLIOPISTO PUDOTETTIIN kartalta, vaikka
+     * faktapohja ehdotti sitä (−17,728/168,315): yliopisto
+     * perustettiin vasta 2019 ja sen kampus on lähteen omien sanojen
+     * mukaan yhä rakenteilla (tarkistus-portvila.md, kohta A), eikä
+     * Commonsista löydy siitä yhtään kuvaa nähtävyysjuttua varten.
+     * Ruudun pohjoisreuna jää siksi numeroimatta; se on hyväksytty
+     * hinta siitä, että meren täyttö toimii (ks. alla).
+     *
+     * ITÄRAJAA LAAJENNETTIIN TARKISTUKSEN JÄLKEEN arvoon 168,3400.
+     * Faktapohjan alkuperäinen ruutu päättyi arvoon 168,3300, jolloin
+     * kartalle jäi neljä kohdetta; tarkistus (tarkistus-portvila.md,
+     * kohta A2) löysi viidenneksi Kormanin stadionin
+     * (−17,733909/168,337374), joka on 2,3 kilometrin päässä
+     * lähimmästä muusta kohteesta. Stadion asettuu kuvan oikeaan
+     * laitaan (x 92,5 %); vielä idemmäs vedettyä rajausta EI voi
+     * käyttää, ks. alla.
+     *
+     * MEREN TÄYTTÖ RATKAISI RAJAUKSEN LOPULLISESTI. Koeajot 6.9.2026:
+     * rajauksella −17,7290 / 168,3420 työkalu varoitti "meri peittäisi
+     * 127 % rajauksesta" ja piirsi pelkän rantanauhan, samoin
+     * rajauksella −17,7240 / 168,3420 (125 %). Kun itäraja palautettiin
+     * arvoon 168,3400 ja pohjoisraja arvoon −17,7240, rantaviivaketju
+     * sulkeutui oikein ja satama sekä laguuni täyttyivät vedeksi.
+     *
+     * IRIRIKI JA IFIRA EIVÄT OLE KARTALLA. Molemmat saaret ovat
+     * Vilan satamassa aivan keskustan edessä, mutta en-Wikipedian
+     * koordinaatit osoittavat 3–5 kilometriä lounaaseen Mele Bayn
+     * suuntaan (tarkistus-portvila.md, kohta M). Väärää pistettä ei
+     * piirretä, ja saaret näkyvät kartalla joka tapauksessa maana.
+     *
+     * KULTTUURIKESKUS JA PARLAMENTTI OVAT 210 METRIN PÄÄSSÄ
+     * toisistaan eli niukasti yli 200 metrin säännön. Ne ovat saman
+     * puiston (Saralana Park) laidoilla ja eri juttujen aiheita.
+     *
+     * meri: true. Vilan satama ja Mele Bay ovat OSM:ssä rantaviivaa.
+     */
+    rajat: { pohjoinen: -17.7240, etela: -17.7500, lansi: 168.3050, ita: 168.3400 },
+    meri: true,
+  },
   panama: {
     /*
      * CASCO VIEJOSTA AMADORIN AALLONMURTAJALLE (6.9.2026). Ruutu on
@@ -3477,6 +3564,181 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 8.9680, etela: 8.9280, lansi: -79.5720, ita: -79.5280 },
     meri: true,
+  },
+  portoalegre: {
+    /*
+     * PORTO ALEGREN CENTRO HISTÓRICO GUAÍBAN RANNALLA (6.9.2026).
+     * Ruutu on koeajon jälkeen 3,0 × 3,0 kilometriä: vanha ruutukaava
+     * mahtuu siihen kokonaan, ja lännessä näkyy Guaíban vesi, joka on
+     * kaupungin määräävä piirre.
+     *
+     * ENSIMMÄINEN RAJAUS OLI 1,6 × 1,2 KM JA SE HYLÄTTIIN. Kaikki
+     * kahdeksan kohdetta mahtuivat siihen, mutta kuvassa ei ollut
+     * vettä lainkaan eikä yhtään puistoa — pelkkää korttelia
+     * reunasta reunaan. Nykyinen rajaus tuo länsireunaan Guaíban ja
+     * itäreunaan Redenção-puiston, eli kartta kertoo saman kuin
+     * lehden "Alueen rakenne": kaupunki on kapealla kaistalla
+     * rannan ja puiston välissä.
+     *
+     * PRAÇA DA MATRIZIN KOLMIKOSTA MAHTUU VAIN YKSI. Tuomiokirkko,
+     * Palácio Piratini ja Theatro São Pedro ovat 86–178 metrin
+     * päässä toisistaan (Petran, Mekan ja Karachin oppi), ja
+     * kartalle otettiin niistä Theatro São Pedro, koska se on ainoa
+     * kolmesta, joka oli olemassa isoisän matkan aikaan (1858).
+     * Aukio itse on lehden oman noston kuva-aihe.
+     *
+     * MOINHOS DE VENTON PUISTO JÄI ULKOPUOLELLE. Se on 2,9
+     * kilometriä itäkoilliseen ruudun keskeltä, ja sen mukaan
+     * ottaminen olisi venyttänyt kuvan 4,2 kilometriin leveäksi ja
+     * jättänyt keskiosaan kilometrin verran esikaupunkia ilman
+     * yhtään kohdetta. Sama koskee Beira-Rion ja Grêmion stadioneita
+     * (3,6 ja 7,5 km) — ja Beira-Rio on sitä paitsi lehden oman
+     * noston aihe.
+     *
+     * meri: true. Guaíba on OSM:ssä rantaviivaa eikä
+     * vesimonikulmiota, joten ilman lippua kuvan länsireuna olisi
+     * paperin värinen.
+     */
+    rajat: { pohjoinen: -30.0195, etela: -30.0465, lansi: -51.2405, ita: -51.2095 },
+    meri: true,
+  },
+  asuncion: {
+    /*
+     * ASUNCIÓNIN VANHA KESKUSTA JA LAHDEN RANTA (6.9.2026). Ruutu on
+     * 5,0 × 3,2 kilometriä eli Panamán kokoluokkaa. Se ulottuu
+     * lännessä Defensores del Chacon stadionille, idässä
+     * kansalliselle taidemuseolle ja pohjoisessa Paraguayjoen
+     * rantaan.
+     *
+     * TIIVIIMPI RUUTU EI RIITTÄNYT, ja syy on lähdetilanteessa.
+     * Asunciónin ytimestä löytyy en-Wikipediasta kilometrin säteellä
+     * kaikkiaan seitsemäntoista koordinaatillista kohdetta, mutta
+     * neljä niistä (Cabildo, Casa de la Independencia, Palacio de los
+     * López ja Panteón) on kaupunkilehden omien nostojen aihe —
+     * kartta ei toista lehden nostoja — ja kaksi (Universidad
+     * Católica ja Colegio Nacional) on 70 ja 163 metrin päässä
+     * katedraalista, eli numeroympyrät menisivät päällekkäin.
+     * Jäljelle jäi ytimestä neljä kohdetta, ja loput kolme haettiin
+     * kauempaa: Chacaritan stadion 1,0 kilometriä itään, kansallinen
+     * taidemuseo 1,8 kilometriä kaakkoon ja Defensores del Chacon
+     * stadion 2,2 kilometriä lounaaseen.
+     *
+     * KOHTEITA ON SEITSEMÄN EIKÄ KAHDEKSAA. Kansalliskirjasto,
+     * kongressitalo ja Encarnaciónin kirkko olivat listalla mutta
+     * putosivat lähteen takia: kirjaston artikkeli on yhden
+     * virkkeen tynkä, kongressin artikkeli käsittelee
+     * lainsäätäjää eikä rakennusta, ja Encarnaciónilla on
+     * en-Wikipediassa vain kaupunginosan tynkä, jonka koordinaatti
+     * on pyöristetty kokonaisiin minuutteihin. Lähteetön juttu ei
+     * ole juttu, ja seitsemän kohdetta on siksi lähdetilanne eikä
+     * valinta (Suvan malli).
+     *
+     * KASVITIETEELLINEN PUUTARHA JA MUSEO DEL BARRO JÄIVÄT POIS. Ne
+     * ovat 8 ja 6 kilometriä koilliseen ja itään; niiden mukaan
+     * ottaminen vaatisi lähes kymmenen kilometrin ruudun, jonka
+     * keskiosassa ei olisi yhtään kohdetta.
+     *
+     * meri: true. Asunciónin lahti ja Paraguayjoki ovat OSM:ssä
+     * rantaviivaa, ja ilman lippua kuvan pohjoisreuna olisi paperia.
+     */
+    rajat: { pohjoinen: -25.2710, etela: -25.3000, lansi: -57.6650, ita: -57.6150 },
+    meri: true,
+  },
+  montreal: {
+    /*
+     * VANHA MONTREAL JA KESKUSTA SAINT-LAURENTIN RANNALLA
+     * (6.9.2026). Ruutu on 3,5 × 3,1 kilometriä: idässä Vanhan
+     * sataman laiturit ja Habitat 67, lännessä taidemuseon kortteli,
+     * pohjoisessa Plateaun eteläkulma ja etelässä Lachine-kanavan
+     * suu.
+     *
+     * KOLME ISOA MONTREALIA JÄI TIETOISESTI ULKOPUOLELLE.
+     * Saint-Josephin oratorio on 5,3 kilometriä länteen, Olympiapuisto
+     * 6,1 kilometriä koilliseen ja Jean-Talonin kauppahalli 4,5
+     * kilometriä pohjoiseen. Kaikkien mahduttaminen samaan ruutuun
+     * vaatisi yli kahdentoista kilometrin rajauksen, eli New Yorkin
+     * ruudun kertaalleen ja vähän päälle — ja sen keskiosa olisi
+     * enimmäkseen asuinkortteleita ilman kohteita. Ne kuuluvat
+     * lehden ja matkaoppaan puolelle.
+     *
+     * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Notre-Damen basilika,
+     * Place Jacques-Cartier, Bonsecours-halli, Victoria-silta,
+     * Mont Royal, vanha satama, McGill, Place Ville Marie,
+     * Jean-Drapeaun saaret ja kaupungintalo ovat kaupunkilehden
+     * nostojen ja matkaoppaan kuvien aiheita, joten yksikään niistä
+     * ei ole kartan kohde, vaikka kaikki mahtuisivat ruutuun.
+     * Saint-Sulpicen seminaari seisoo basilikan vieressä, mutta se on
+     * eri rakennus ja eri tarina: 1687 valmistunut talo on kaupungin
+     * toiseksi vanhin rakennus, ja lehti kertoo basilikasta.
+     *
+     * EI meri: true, JA SE ON KOKEILTU 6.9.2026. Lippu piirrettiin
+     * kertaalleen mukaan, ja kuva oli pikselilleen sama: Saint
+     * Lawrence, Vanhan sataman altaat ja Lachine-kanava ovat OSM:ssä
+     * vesimonikulmioita eikä rantaviivaa, joten merentäytölle ei ole
+     * mitään täytettävää. Lippu jätettiin siksi pois turhana.
+     *
+     * ALAOIKEAN VESIKIILAN SUORA REUNA on OSM:n oma
+     * vesimonikulmion raja Saint Lawrencen ja sataman edustan
+     * välissä, ei piirtovirhe: sama kiila tulee näkyviin myös
+     * lipun kanssa ja ilman. Kartan kohteista yksikään ei osu sen
+     * päälle (tarkista-karttapisteet.mjs, 6.9.2026).
+     */
+    rajat: { pohjoinen: 45.5205, etela: 45.4930, lansi: -73.5850, ita: -73.5390 },
+  },
+  denver: {
+    /*
+     * DENVERIN YDINKESKUSTA JA CAPITOL HILL (6.9.2026). Ruutu on
+     * 3,6 × 4,1 kilometriä eli Suvan ja San Franciscon väliltä.
+     * Rajaus alkaa pohjoisessa Coors Fieldiltä, kulkee LoDon
+     * vinon ruutukaavan yli Capitol Hillin ohi ja päättyy idässä
+     * kasvitieteelliseen puutarhaan.
+     *
+     * KAKSI RUUTUKAAVAA SAMASSA KUVASSA on Denverin oma piirre eikä
+     * piirtovirhe: vanha kaupunki kääntyi 1858 South Platten mutkan
+     * mukaan 45 asteen kulmaan, ja myöhempi laajennus noudattaa
+     * ilmansuuntia. Colfax Avenue on niiden sauma.
+     *
+     * VERTAILUPISTE OLISI OSAVALTIOTALO, MUTTA RUUTU EI OLE SEN
+     * YMPÄRILLÄ. Faktapohja (docs/mantereet-tyoaineisto/
+     * faktapohja-denver.md, osio 4) laski kohteiden painopisteen
+     * osuvan Capitol Hillin ja LoDon väliin; jos ruutu keskitettäisiin
+     * osavaltiotalolle, Coors Field putoaisi pohjoisreunan yli.
+     *
+     * RED ROCKS, CONFLUENCE PARK JA UNION STATION EIVÄT OLE
+     * KARTALLA. Red Rocks on 16 kilometriä lounaaseen; Confluence
+     * Park ja Union Station mahtuisivat ruutuun, mutta ne ovat
+     * lehden nostojen K2 ja K3 sekä etusivun ennen–nyt-parin aihe,
+     * eikä kohdekartta toista lehden juttuja (New Yorkin sääntö).
+     *
+     * meri: ei. Denverissä ei ole rantaviivaa, ja South Platte on
+     * OSM:ssä tavallinen vesiväylä.
+     */
+    rajat: { pohjoinen: 39.7600, etela: 39.7280, lansi: -105.0030, ita: -104.9550 },
+  },
+  houston: {
+    /*
+     * KESKUSTASTA MUSEOKORTTELIN LÄPI HERMANN PARKIIN (6.9.2026).
+     * Ruutu on 5,9 × 5,3 kilometriä eli Rion ja Kairon kokoluokkaa.
+     * Laajuus on pakko: Houstonilla ei ole yhtä ydintä vaan useita
+     * erillisiä keskittymiä (en-Wikipedia "Houston", Cityscape —
+     * kaupunki hylkäsi kaavoituksen kolmesti kansanäänestyksellä),
+     * ja lehden kahdeksan kohdetta jakautuvat keskustan ja
+     * museokorttelin välille.
+     *
+     * KESKIPISTE ON KESKUSTA. Kaupungin virallinen koordinaatti
+     * (29,7604 / −95,3698) osuu keskustan länsireunaan, ja ruutu on
+     * vedetty sen ympärille niin, että Buffalo Bayoun puisto jää
+     * länsireunaan ja Hermann Park eteläreunaan.
+     *
+     * ALLEN'S LANDING, LAIVAVÄYLÄ JA JOHNSON SPACE CENTER JÄÄVÄT
+     * POIS. Kaksi ensimmäistä ovat lehden nostojen H2 ja H4 aihe, ja
+     * avaruuskeskus on neljänkymmenen kilometrin päässä kaakossa
+     * Clear Lakessa — se ei mahdu mihinkään järkevään ruutuun.
+     *
+     * meri: ei. Houston on 80 kilometriä sisämaassa, ja Buffalo
+     * Bayou on OSM:ssä vesiväylä eikä rantaviivaa.
+     */
+    rajat: { pohjoinen: 29.7680, etela: 29.7150, lansi: -95.4050, ita: -95.3500 },
   },
   sanfrancisco: {
     /*

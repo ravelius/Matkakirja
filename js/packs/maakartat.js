@@ -10692,6 +10692,102 @@ export const KAUPUNKIKARTAT = {
     ],
   },
   /*
+   * HONIARA (6.9.2026). Rajaus on 2,1 × 2,7 kilometriä Point Cruzin
+   * satamasta Matanikaun länsipuolelle — perustelu, hylätty laajempi
+   * itäraja ja meri-lippu ovat tools/piirra-kaupunkikartta.mjs:n
+   * honiara-lohkossa.
+   *
+   * VIISI KOHDETTA, JA SE ON LÄHDETILANNE. Honiaran keskusta on
+   * poikkeuksellisen tiivis: tori (179 m), keskuspankki (126 m) ja
+   * kansallisarkisto (150 m) ovat kaikki alle kahdensadan metrin
+   * päässä kansallismuseosta, eivätkä niiden numeroympyrät mahtuisi
+   * erilleen (tarkistus-honiara.md, kohta I). Seitsemän muuta
+   * artikkelia jakaa saman geosearch-varakoordinaatin
+   * −9,435092/159,951239, joka ei ole minkään niistä oikea sijainti.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN KIRJOITUSVAIHEESSA: Red House on
+   * pääministerin virka-asunto (ei nykypolitiikkaa) eikä siitä ole
+   * Commonsissa kuvaa, ja Lawson Taman stadionin kolme
+   * kuvasäännöt täyttävän kokoista tiedostoa ovat kaikki hylättäviä
+   * (kaksi haalistunutta filmikuvaa väkijoukosta, yksi näyttelyn
+   * filmiruutu).
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat vuoden
+   * 1873 tilanne ja blackbirding, kaupungin nimi ja Point Cruzin oma
+   * nimi, keskustori, pijin, Mendañan nimet, Henderson Field,
+   * Rautapohja ja kaupungin synty 1952. Point Cruz ja parlamentti
+   * ovat kartalla eri asiana kuin lehdessä: nimen sijaan satama ja
+   * synnyn sijaan arkkitehtuuri.
+   */
+  honiara: {
+    polku: 'assets/kartat/honiara-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -9.4270, etela: -9.4460, lansi: 159.9450, ita: 159.9700 },
+    esittely: 'Kartan alue on Honiaran keskusta Ironbottom Soundin '
+      + 'rannalla. Lännessä on Point Cruzin satamaniemi, keskellä '
+      + 'Mendana Avenuen varsi museoineen ja parlamentteineen, idässä '
+      + 'Matanikaujoen laakso ja etelässä kukkulat, joille kaupunki '
+      + 'kiipeää. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään. Koordinaatit en-Wikipedian
+       * geosearch-rajapinnasta 6.9.2026; Point Cruzin piste on
+       * pyöristetty minuutin tarkkuuteen (9°26′S 159°57′E) eikä siksi
+       * osu laiturin päähän vaan niemen keskelle.
+       */
+      { nimi: 'Salomonsaarten kansallismuseo', lat: -9.431111, lon: 159.954167 },
+      { nimi: 'Point Cruz', lat: -9.433333, lon: 159.950000 },
+      { nimi: 'Parlamenttitalo', lat: -9.433611, lon: 159.955833 },
+      { nimi: 'Holy Crossin katedraali', lat: -9.436252, lon: 159.963472 },
+      { nimi: 'Guadalcanalin muistomerkki', lat: -9.442609, lon: 159.957515 },
+    ],
+  },
+  /*
+   * PORT VILA (6.9.2026). Rajaus on 2,9 × 3,7 kilometriä Vilan
+   * sataman itärannalla — perustelu, itärajan laajennus ja meri-lippu
+   * ovat tools/piirra-kaupunkikartta.mjs:n portvila-lohkossa.
+   *
+   * VIISI KOHDETTA. Faktapohja ehdotti kuudenneksi Vanuatun
+   * kansallista yliopistoa, mutta se perustettiin vasta 2019 ja sen
+   * kampus on lähteen omien sanojen mukaan yhä rakenteilla — eikä
+   * Commonsissa ole siitä yhtään kuvaa (tarkistus-portvila.md,
+   * kohta A). Iririkin ja Ifiran saaret jätettiin pois, koska
+   * en-Wikipedian koordinaatit osoittavat 3–5 kilometriä väärään
+   * paikkaan Mele Bayn suuntaan (kohta M).
+   *
+   * KULTTUURIKESKUS JA PARLAMENTTI OVAT 210 METRIN PÄÄSSÄ toisistaan
+   * eli niukasti yli 200 metrin säännön. Ne ovat Saralana Parkin
+   * kahdella laidalla ja kertovat kartalla eri asian.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat vuoden
+   * 1873 tilanne, Franceville 1889, kondominio, bislama, Teouman
+   * lapita-hautausmaa, Roi Mata, Cookin nimet sekä kulttuurikeskus ja
+   * sandroing. Kulttuurikeskus on kartalla rakennuksena ja
+   * kokoelmana, lehdessä kastomin tallentajana.
+   */
+  portvila: {
+    polku: 'assets/kartat/portvila-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -17.7240, etela: -17.7500, lansi: 168.3050, ita: 168.3400 },
+    esittely: 'Kartan alue on Port Vilan keskusta Vilan sataman '
+      + 'itärannalla. Lännessä on satama ja sen edessä Iririkin saari, '
+      + 'keskellä kauppakadut ja Independence Park, etelässä Saralana '
+      + 'Parkin kulttuurikeskus ja parlamentti ja idässä laguuni. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään. Koordinaatit en-Wikipedian
+       * geosearch- ja coordinates-rajapinnoista 6.9.2026.
+       */
+      { nimi: 'Kormanin stadion', lat: -17.733909, lon: 168.337374 },
+      { nimi: 'Pyhän sydämen katedraali', lat: -17.734722, lon: 168.315278 },
+      { nimi: 'Independence Park', lat: -17.740000, lon: 168.317000 },
+      { nimi: 'Vanuatun kulttuurikeskus', lat: -17.745200, lon: 168.317500 },
+      { nimi: 'Vanuatun parlamenttitalo', lat: -17.745556, lon: 168.315556 },
+    ],
+  },
+  /*
    * PANAMÁ (6.9.2026). Rajaus on 4,4 × 4,8 kilometriä Casco Viejosta
    * Ancónin kukkulan yli Amadorin aallonmurtajalle — perustelu ja
    * hylätty laajempi rajaus ovat tools/piirra-kaupunkikartta.mjs:n
@@ -10744,6 +10840,168 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Smithsonianin tutkimuslaitos', lat: 8.9624308, lon: -79.5525621 },
       { nimi: 'Fort Amador', lat: 8.938056, lon: -79.547778 },
       { nimi: 'Biomuseo', lat: 8.9325, lon: -79.5449 },
+    ],
+  },
+  /*
+   * PORTO ALEGRE (6.9.2026). Rajaus on 3,0 kilometriä kanttiinsa
+   * Guaíban rannasta Redenção-puiston laitaan — perustelu ja hylätty
+   * tiiviimpi rajaus ovat tools/piirra-kaupunkikartta.mjs:n
+   * portoalegre-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Mercado Público, Grenal-derby ja Beira-Rio, Usina do Gasômetro,
+   * Iberê Camargon säätiö, kuusikymmentä atsoorilaisparia ja
+   * kaupungin perustaminen, Farroupilha-kapina ja charque, kaksi
+   * siirtolaisaaltoa, Mauán muuri, Redençãon kirpputori, Guaíban
+   * nimikiista, guaranit ja kaingangit sekä vuoden 2024 tulva.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * PRAÇA DA MATRIZILTA MAHTUU VAIN YKSI KOHDE. Tuomiokirkon ja
+   * Palácio Piratinin väli on 86 metriä, tuomiokirkon ja Theatro São
+   * Pedron 178 ja Piratinin ja teatterin 211 — numeroympyrät menisivät
+   * päällekkäin (Petran, Mekan ja Karachin oppi). Kartalle otettiin
+   * Theatro São Pedro, koska se on kolmesta ainoa, joka oli olemassa
+   * isoisän matkan aikaan: teatteri avattiin 1858. Aukio itse on
+   * lehden oman noston kuva-aihe. Tuomiokirkko olisi sitä paitsi
+   * pudonnut joka tapauksessa: se on 198 metrin päässä Otávio Rochan
+   * viaduktista.
+   *
+   * ATSOORILAISTEN MUISTOMERKKI OLI LISTALLA MUTTA PUDOTETTIIN. Se
+   * on pystytetty 1974 juuri niiden kuudenkymmenen atsoorilaisparin
+   * muistoksi, joista lehden ensimmäinen historianosto kertoo —
+   * sama aihe kahdesti ei kelpaa. Tilalle Joaquim Felizardon museo,
+   * joka asuu vuosina 1845–1853 rakennetussa Lopo Gonçalvesin
+   * kartanossa.
+   */
+  portoalegre: {
+    polku: 'assets/kartat/portoalegre-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -30.0195, etela: -30.0465, lansi: -51.2405, ita: -51.2095 },
+    esittely: 'Kartan alue on Porto Alegren vanha keskusta. Luoteessa '
+      + 'ja lännessä on Guaíba, jonka rannalle kaupunki rakennettiin, '
+      + 'keskellä 1700-luvun ruutukaava kukkuloineen ja idässä '
+      + 'Redenção-puiston vihreä laita. Kaupunki mahtuu kapealle '
+      + 'kaistalle veden ja puiston väliin. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Cairnsissa ja Dunedinissa. Koordinaatit en-Wikipedian
+       * coordinates- ja geosearch-rajapinnoista 6.9.2026; pienin
+       * väli on 293 metriä (Theatro São Pedro–Otávio Rochan
+       * viadukti).
+       */
+      { nimi: 'Vanha kaupungintalo', lat: -30.028199, lon: -51.228586 },
+      { nimi: 'Rio Grande do Sulin taidemuseo', lat: -30.0291, lon: -51.2317 },
+      { nimi: 'Nosso Senhor dos Passosin kappeli', lat: -30.03028, lon: -51.22249 },
+      { nimi: 'Theatro São Pedro', lat: -30.032039, lon: -51.230356 },
+      { nimi: 'Rio Grande do Sulin liittovaltionyliopisto', lat: -30.032439, lon: -51.219313 },
+      { nimi: 'Dores-kirkko', lat: -30.0325, lon: -51.235556 },
+      { nimi: 'Otávio Rochan viadukti', lat: -30.03364, lon: -51.22794 },
+      { nimi: 'Joaquim Felizardon museo', lat: -30.04204, lon: -51.224926 },
+    ],
+  },
+  /*
+   * ASUNCIÓN (6.9.2026). Rajaus on 5,0 × 3,2 kilometriä lahden
+   * rannasta stadionille ja taidemuseolle — perustelu ja hylätty
+   * kansalliskirjasto ovat tools/piirra-kaupunkikartta.mjs:n
+   * asuncion-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Cabildo ja kaupungin perustaminen, vuoden 1871 raitiovaunu,
+   * guaranin kieli, Casa de la Independencia, kolmoisliiton sota ja
+   * miehitys, Palacio de los López, Panteón, tereré, ñandutí,
+   * Costanera-rantabulevardi ja Asunciónin lahti. Yksikään kartan
+   * seitsemästä kohteesta ei ole niiden aihe.
+   *
+   * KOHTEITA ON SEITSEMÄN EIKÄ KAHDEKSAA, ja se on lähdetilanne
+   * eikä valinta (Suvan malli). Asunciónin ytimestä löytyy
+   * en-Wikipediasta kilometrin säteellä seitsemäntoista
+   * koordinaatillista kohdetta, mutta neljä niistä on lehden omien
+   * nostojen aihe, kaksi (Universidad Católica ja Colegio Nacional)
+   * on 70 ja 163 metrin päässä katedraalista, ja loput ovat
+   * artikkeleita, joista ei saa juttua kirjoitettua ilman arvailua:
+   * kansalliskirjaston artikkeli on yhden virkkeen tynkä,
+   * kongressitalosta kertova artikkeli käsittelee vain
+   * lainsäätäjää eikä rakennusta, ja Encarnaciónin nimellä on
+   * en-Wikipediassa vain kaupunginosan tynkä, jonka koordinaatti
+   * on pyöristetty kokonaisiin minuutteihin. Kaksi kohdetta
+   * haettiin ytimen ulkopuolelta, ja ne venyttivät ruudun viiteen
+   * kilometriin.
+   */
+  asuncion: {
+    polku: 'assets/kartat/asuncion-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -25.271, etela: -25.3, lansi: -57.665, ita: -57.615 },
+    esittely: 'Kartan alue on Asunciónin vanha keskusta ja sen ranta. '
+      + 'Pohjoisessa avautuu Asunciónin lahti ja Paraguayjoki, '
+      + 'keskellä on siirtomaa-ajan ruutukaava, jonka korttelit '
+      + 'laskeutuvat suorina linjoina rantaan, lännessä stadion ja '
+      + 'kaakossa kansallinen taidemuseo. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * SEITSEMÄN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates- ja
+       * geosearch-rajapinnoista 6.9.2026; pienin väli on 257 metriä
+       * (kaupunginteatteri–katedraali).
+       */
+      { nimi: 'Museo Memoria de la Ciudad', lat: -25.2782, lon: -57.6375 },
+      { nimi: 'Chacaritan stadion', lat: -25.2797, lon: -57.6255 },
+      { nimi: 'Kaupunginteatteri', lat: -25.2811, lon: -57.6349 },
+      { nimi: 'Asunciónin katedraali', lat: -25.2816, lon: -57.6324 },
+      { nimi: 'Ateneo Paraguayo', lat: -25.286225, lon: -57.637222 },
+      { nimi: 'Kansallinen taidemuseo', lat: -25.2887, lon: -57.6212 },
+      { nimi: 'Defensores del Chacon stadion', lat: -25.292072, lon: -57.657381 },
+    ],
+  },
+  /*
+   * MONTREAL (6.9.2026). Rajaus on 3,5 × 3,1 kilometriä taidemuseon
+   * korttelista Habitat 67:lle ja Plateaun eteläkulmasta
+   * Lachine-kanavan suulle — perustelu ja ulkopuolelle jätetyt
+   * kohteet ovat tools/piirra-kaupunkikartta.mjs:n montreal-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Notre-Damen basilika,
+   * Place Jacques-Cartier, Bonsecours-halli, Victoria-silta, Mont
+   * Royal, vanha satama, McGill, Place Ville Marie, Jean-Drapeaun
+   * saaret, Maisonneuven patsas ja kaupungintalo ovat kaupunkilehden
+   * nostojen ja matkaoppaan kuvien aiheita, joten yksikään niistä ei
+   * ole kartan kohde, vaikka kaikki mahtuisivat ruutuun.
+   * Saint-Sulpicen seminaari seisoo basilikan seinänaapurina, mutta
+   * se on eri rakennus ja eri tarina: talo valmistui 1687 ja on
+   * kaupungin toiseksi vanhin rakennus, ja lehti kertoo basilikasta.
+   *
+   * ORATORIO, OLYMPIAPUISTO JA JEAN-TALONIN HALLI OVAT KAUKANA:
+   * 5,3 kilometriä länteen, 6,1 koilliseen ja 4,5 pohjoiseen. Ne
+   * eivät mahdu samaan ruutuun keskustan kanssa ilman, että kartasta
+   * tulee New Yorkin kokoinen ja sen keskiosasta tyhjä.
+   */
+  montreal: {
+    polku: 'assets/kartat/montreal-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 45.5205, etela: 45.493, lansi: -73.585, ita: -73.539 },
+    esittely: 'Kartan alue ulottuu Plateaun eteläkulmasta '
+      + 'Saint Lawrencen rantaan. Luoteessa on keskustan ruutukaava, '
+      + 'jonka kadut nousevat Mont Royalin rinnettä, keskellä Vanhan '
+      + 'Montrealin vinot korttelit sulpitiaanien 1600-luvulla '
+      + 'vetämien katujen varrella, koillisessa Vanhan sataman '
+      + 'laiturit ja kaakossa joki. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * New Yorkissa ja Karachissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026; pienin väli on 257 metriä
+       * (Saint-Sulpicen seminaari–Pointe-à-Callière).
+       */
+      { nimi: 'Saint-Louis’n aukio', lat: 45.517015, lon: -73.569968 },
+      { nimi: 'Château Ramezay', lat: 45.508611, lon: -73.553333 },
+      { nimi: 'Kiinalaiskaupunki', lat: 45.50759, lon: -73.5608 },
+      { nimi: 'Saint-Sulpicen seminaari', lat: 45.503889, lon: -73.556944 },
+      { nimi: 'Pyhän Patrickin basilika', lat: 45.5035, lon: -73.5647 },
+      { nimi: 'Pointe-à-Callièren museo', lat: 45.5026, lon: -73.5542 },
+      { nimi: 'Habitat 67', lat: 45.5, lon: -73.543889 },
+      { nimi: 'Montrealin taidemuseo', lat: 45.4987, lon: -73.5801 },
     ],
   },
   /*
@@ -11017,6 +11275,118 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Maracanãn stadion', lat: -22.9122, lon: -43.2303 },
       { nimi: 'Lapan akvedukti', lat: -22.91259444, lon: -43.17985 },
       { nimi: 'Passeio Público', lat: -22.91379722, lon: -43.17598611 },
+    ],
+  },
+  /*
+   * DENVER (6.9.2026). Rajaus on 3,6 × 4,1 kilometriä keskustan ja
+   * Capitol Hillin ympärillä — perustelu, kahden ruutukaavan sauma ja
+   * hylätty osavaltiotalokeskitys ovat tools/piirra-kaupunkikartta.mjs:n
+   * denver-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * tšeijennit ja arapahot, vuoden 1858 kultalöytö ja kaupungin
+   * perustaminen jokien yhtymäkohtaan, rautatien tulo 1870 ja mailin
+   * merkki osavaltiotalon portaissa; teemasivu kertoo Front Rangesta,
+   * ohuesta ilmasta, Red Rocksista ja puistoista. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-denver.md, kohta E): Denver Public Library on 190
+   * metrin ja Byers–Evans House 137 metrin päässä taidemuseosta,
+   * ja Denver Civic Center 251 metrin päässä mutta aiheena sama
+   * museokortteli. Ne mainitaan matkaoppaan jaksossa 2.
+   *
+   * OSAVALTIOTALO, UNION STATION, CONFLUENCE PARK JA LARIMER SQUARE
+   * JÄÄVÄT POIS AIHESYISTÄ, eivät etäisyyden takia: kolme ensimmäistä
+   * ovat lehden nostojen ja etusivun ennen–nyt-parin aihe, ja Larimer
+   * Square kertoisi saman perustamistarinan kuin nosto K2. Red Rocks
+   * on 16 kilometriä lounaaseen ja teemasivun oma nosto.
+   */
+  denver: {
+    polku: 'assets/kartat/denver-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 39.7600, etela: 39.7280, lansi: -105.0030, ita: -104.9550 },
+    esittely: 'Kartan alue on Denverin keskusta ja Capitol Hill. '
+      + 'Vasemmalla erottuu vanha vino ruutukaava, joka kääntyi 1858 '
+      + 'South Platten mutkan mukaan, ja oikealla ilmansuuntien '
+      + 'mukainen myöhempi kaava; niiden sauma on leveä Colfax '
+      + 'Avenue. Pohjoisreunassa on LoDon vanha varastokortteli ja '
+      + 'idässä puistojen vyöhyke. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Cairnsissa ja Rio de Janeirossa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026, ja kaikki välit on
+       * mitattu uudelleen: pienin on 471 metriä (Daniels & Fisherin
+       * torni – esittävän taiteen keskus).
+       */
+      { nimi: 'Coors Field', lat: 39.75611111, lon: -104.99416667 },
+      { nimi: 'Daniels & Fisherin torni', lat: 39.74833333, lon: -104.99527778 },
+      { nimi: 'Esittävän taiteen keskus', lat: 39.74444444, lon: -104.9975 },
+      { nimi: 'Brown Palace -hotelli', lat: 39.74416667, lon: -104.98722222 },
+      { nimi: 'Katedraalibasilika', lat: 39.74028056, lon: -104.98193889 },
+      { nimi: 'Denverin taidemuseo', lat: 39.73718806, lon: -104.989345 },
+      { nimi: 'Molly Brownin talo', lat: 39.7375, lon: -104.98072222 },
+      { nimi: 'Kasvitieteellinen puutarha', lat: 39.7325, lon: -104.96083333 },
+    ],
+  },
+  /*
+   * HOUSTON (6.9.2026). Rajaus on 5,9 × 5,3 kilometriä keskustasta
+   * museokorttelin läpi Hermann Parkiin — perustelu ja keskipisteen
+   * valinta ovat tools/piirra-kaupunkikartta.mjs:n houston-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat ishakit
+   * ja karankawat, Allenin veljesten kaupunkikauppa 1836, vuoden
+   * 1873 puuvilla ja radat sekä laivaväylä; teemasivu kertoo
+   * suolakupoleista, Spindletopista, avaruuskeskuksesta ja tulvista.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ TAI SEN
+   * TUNTUMASSA (tarkistus-houston.md, kohta F): Rothkon kappeli on
+   * 243 metriä Menilin kokoelmasta, Houston City Hall 250 metriä Sam
+   * Houstonin puistosta ja luonnontieteen museo 150 metriä Hermann
+   * Parkin keskipisteestä.
+   *
+   * KAHDEKSAS KOHDE VAIHDETTIIN KUVASYYSTÄ. Faktapohja ehdotti
+   * kuvataiteen museota, mutta sen kaikissa Commonsin
+   * julkisivukuvissa on joko iso jäsenhankintabanderolli tai
+   * tunnistettava henkilö, eikä kartan kohde saa jäädä ilman
+   * juttukuvaa (Panamán ennakkotapaus: Way Onin hautausmaa
+   * pudotettiin samasta syystä). Tilalle Hermann Park samassa
+   * museokorttelissa; museo mainitaan matkaoppaan jaksossa 2.
+   *
+   * ALLEN'S LANDING, LAIVAVÄYLÄ JA JOHNSON SPACE CENTER JÄÄVÄT POIS
+   * AIHESYISTÄ tai etäisyyden takia: kaksi ensimmäistä ovat nostojen
+   * H2 ja H4 aihe, ja avaruuskeskus on 40 kilometrin päässä
+   * kaakossa Clear Lakessa.
+   */
+  houston: {
+    polku: 'assets/kartat/houston-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 29.7680, etela: 29.7150, lansi: -95.4050, ita: -95.3500 },
+    esittely: 'Kartan alue ulottuu Buffalo Bayoun mutkasta '
+      + 'pohjoisessa museokorttelin läpi Hermann Parkiin etelässä. '
+      + 'Yläreunassa kiemurtelee puro, sen oikealla puolella on '
+      + 'keskustan vinoon kääntynyt ruutukaava, ja moottoritiekehä '
+      + 'kiertää sen ympäri. Etelässä erottuu puiston pitkä '
+      + 'heijastusallas. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * 6.9.2026, ja kaikki välit on mitattu uudelleen: pienin on
+       * 300 metriä (Sam Houstonin puisto – Julia Idesonin talo).
+       */
+      { nimi: 'Market Squaren puisto', lat: 29.76266, lon: -95.36234 },
+      { nimi: 'Buffalo Bayoun puisto', lat: 29.761, lon: -95.384 },
+      { nimi: 'Sam Houstonin puisto', lat: 29.76, lon: -95.372 },
+      { nimi: 'Julia Idesonin kirjastotalo', lat: 29.75888889, lon: -95.36916667 },
+      { nimi: 'Astrosin stadion', lat: 29.75694444, lon: -95.35555556 },
+      { nimi: 'Kongressikeskus', lat: 29.75222222, lon: -95.35777778 },
+      { nimi: 'Menilin kokoelma', lat: 29.73722222, lon: -95.39861111 },
+      { nimi: 'Hermann Park', lat: 29.721, lon: -95.391 },
     ],
   },
 };
