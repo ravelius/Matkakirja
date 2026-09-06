@@ -773,4 +773,72 @@ export const OCEANIA_ARTIKKELIT = {
       + 'yksikään kuukausi ei jää alle kuudenkymmenen millimetrin, ja '
       + 'vuosikertymä on lähes kolme tuhatta millimetriä.',
   },
+  /* CAIRNS (Opus 6.9.2026, paketti O9). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain cairns); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-cairns.md ja
+   * tarkistus-cairns.md. Avain on kaupungin wiki-nimi (js/packs/
+   * oceania.js: 'Cairns'), joka on tässä sama kuin näyttönimi.
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026
+   * ("Cairns", "George Elphinstone Dalrymple", "Kuranda Scenic
+   * Railway").
+   *
+   * TARKISTUKSEN KORJAUKSET ON TEHTY: Dalrymplen leiri on "syksyllä
+   * 1873" eikä syyskuun lopulla (29.9. oli lähtöpäivä Cardwellista,
+   * ja Trinity Bayhin päästiin vasta Johnstone-joen jälkeen), ja
+   * alukset olivat kuttereita eivätkä kaljaaseja.
+   *
+   * PILARI 1: gimuy-walubarra-yidinjit ja seudun oma nimi Gimuy
+   * tulevat ennen siirtomaanimiä, ja neljä perinteisten omistajien
+   * ryhmää mainitaan nykyisinä. Dalrymplen oman matkakertomuksen
+   * rasistista kieltä ja väkivaltakuvauksia EI toisteta (pilari 4,
+   * spec-mantereet.md Oseania-linjaus 2).
+   *
+   * RIUTAN MITTOJA (2 300 km, lähes 3 000 riuttaa) EI toisteta
+   * täällä: ne ovat laudan visan ja saapumiskortin omia faktoja
+   * (js/packs/oceania-questions.js ja oceania-saapumiset.js). */
+  Cairns: {
+    intro: 'Cairns on Australian trooppisen pohjoisen suurin kaupunki. '
+      + 'Se on rakennettu kapealle rantakaistaleelle Korallimeren ja '
+      + 'Suuren vedenjakajavuoriston väliin, ja sen keskustan edusta on '
+      + 'laajaa liejuista vuorovesitasankoa. Ennen brittejä seutu oli '
+      + 'gimuy-walubarra-yidinjien maata, ja yidinyn kielellä paikka on '
+      + 'yhä **Gimuy**.'
+      + '\n\n'
+      + 'Isoisän matkan vuonna 1873 kaupunkia ei ollut olemassa. Silloin '
+      + 'tutkimusretkeilijä George Elphinstone Dalrymple leiriytyi '
+      + 'retkikuntineen Trinity Bayn rannalle — juuri sille paikalle, '
+      + 'josta kolmen vuoden kuluttua tuli Cairnsin kaupunki. Kaupunki '
+      + 'perustettiin 1876 satamaksi Hodgkinsonin kultakentille ja '
+      + 'nimettiin Queenslandin silloisen kuvernöörin William Cairnsin '
+      + 'mukaan. Paikka oli mangrovesuota ja hiekkaharjuja.'
+      + '\n\n'
+      + 'Kulta ehtyi, mutta rautatie Athertonin ylängölle ja '
+      + 'kiinalaisten siirtolaisten aloittama trooppinen maatalous '
+      + 'pitivät kaupungin pystyssä. Nykyään Cairns elää matkailusta ja '
+      + 'on ulkomaisille kävijöille Australian neljänneksi suosituin '
+      + 'kohde. Syy on **kaksi maailmanperintökohdetta samalla '
+      + 'rannalla** — riutta merellä ja sademetsä maalla.',
+    teksti: 'Cairns sijaitsee Kap Yorkin niemimaan itärannikolla '
+      + 'Korallimeren ja Suuren vedenjakajavuoriston välissä. Kaupungin '
+      + 'pohjoisosa on Trinity Bayn rannalla ja keskusta Trinity '
+      + 'Inletin varrella; osa lähiöistä on tulvatasangolla, ja Barron- '
+      + 'ja Mulgravejoki virtaavat kaupunkialueella mutta eivät '
+      + 'keskustan läpi.'
+      + '\n\n'
+      + 'Britit tunsivat rannikon nimellä Trinity Bay vuodesta 1770, '
+      + 'mutta ensimmäiset eurooppalaiset asettuivat sinne vasta '
+      + '1860-luvun lopulla merikurkkua pyytävinä kalastajina. Kaupunki '
+      + 'perustettiin 1876, ja pian sen jälkeen kiinalaiset siirtolaiset '
+      + 'aloittivat puuvillan, tupakan, kahvin, riisin, sokerin ja '
+      + 'banaanin viljelyn; vuonna 1886 heitä oli 60 prosenttia seudun '
+      + 'viljelijöistä. Rautatie Kurandaan valmistui 1891.'
+      + '\n\n'
+      + 'Toisen maailmansodan aikana Cairns oli liittoutuneiden '
+      + 'tukikohta Tyynenmeren operaatioille, ja sodan jälkeen '
+      + 'kaupungista kehittyi vähitellen matkailukeskus. Kansainvälinen '
+      + 'lentokenttä avattiin 1984. Vuoden 2021 väestönlaskennassa '
+      + 'alkuperäiskansojen osuus asukkaista oli 9,7 prosenttia, ja '
+      + 'seudulla toimii neljä tunnustettua perinteisten omistajien '
+      + 'ryhmää.',
+  },
 };

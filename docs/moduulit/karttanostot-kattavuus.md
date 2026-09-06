@@ -183,7 +183,7 @@ Edellä oleva 2.9.2026 taulukko on jätetty koskematta tarkoituksella:
 rinnakkaiset erät päivittävät sitä, ja Euroopan luvut näkyvät tässä
 osiossa tuoreina.
 
-**Tilanne yhdellä silmäyksellä (erien M1–M4 jälkeen, 6.9.2026 aamu).** 112 maasta **46 on tavoitteessa** ja 66 vajaita. Eurooppa on täynnä; maailman erät M1 (Etelä-Amerikka), M2 (Oseania), M3 (Aasia) ja M4 (Pohjois-Amerikka) toivat yhteensä noin 250 uutta karttamerkkiä (kohteet, maastokohteet, eläintäyt, skandaalit). Vajaiksi jäivät tarkoituksella Fidži ja Salomonsaaret (lehden ikkuna, eläintäkykuva tilattu) sekä Hongkong (koko alue on yhden nimiölaatikon kokoinen; eläintäky mahdoton kaupunkisäteen takia). Seuraavat erät M5 (Afrikka) ja M6 (Lähi-itä).
+**Tilanne yhdellä silmäyksellä (erien M1–M5 ja M8 jälkeen, 6.9.2026 aamupäivä).** 112 maasta **55 on tavoitteessa** ja 57 vajaita. Eurooppa on täynnä; maailman erät M1 (Etelä-Amerikka), M2 (Oseania), M3 (Aasia), M4 (Pohjois-Amerikka), M5 (Afrikka) ja M8 (Aasia 2) toivat yhteensä noin 360 uutta karttamerkkiä. Tarkoitukselliset vajeet: Fidži, Salomonsaaret, Hongkong ja Singapore (lehden ikkuna tai kaupunkisäde). Erä M6 (Lähi-itä) on työn alla.
 
 ### Eurooppa (29 maata)
 
@@ -240,10 +240,6 @@ osiossa tuoreina.
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Nepal (NPL) | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, skandaaleja −2 |
-| Singapore (SGP) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
-| Thaimaa (THA) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
-| Vietnam (VNM) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
 | Taiwan (TWN) | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | kohteita −8, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
 | Japani (JPN) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
 | Kazakstan (KAZ) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
@@ -255,21 +251,20 @@ osiossa tuoreina.
 | Filippiinit (PHL) | 0 | 4 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
 | Kiina (CHN) | 1 | 4 | 1 | 0 | 0 | 0 | 5 | 0 | kohteita −7, skandaaleja −2 |
 | Hongkong (HKG) | 4 | 2 | 0 | 2 | 0 | 0 | 8 | 0 | kohteita −4, maastoa −1, eläintäky puuttuu |
+| Singapore (SGP) | 5 | 1 | 0 | 2 | 0 | 0 | 8 | 0 | kohteita −3, maastoa −2, eläintäky puuttuu |
 | Indonesia (IDN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Intia (IND) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Sri Lanka (LKA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Myanmar (MMR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Nepal (NPL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Thaimaa (THA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Vietnam (VNM) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 
 ### Afrikka (27 maata)
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | Saint Helena (SHN) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
-| Etelä-Sudan (SDS) | 0 | 2 | 0 | 0 | 0 | 0 | 2 | 0 | kohteita −8, maastoa −1, eläintäky puuttuu, skandaaleja −2 |
-| Angola (AGO) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Kamerun (CMR) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Kongo (COD) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
-| Algeria (DZA) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
 | Etiopia (ETH) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
 | Ghana (GHA) | 0 | 3 | 0 | 0 | 0 | 0 | 3 | 0 | kohteita −8, eläintäky puuttuu, skandaaleja −2 |
 | Kenia (KEN) | 0 | 3 | 1 | 0 | 0 | 0 | 3 | 0 | kohteita −8, skandaaleja −2 |
@@ -291,6 +286,11 @@ osiossa tuoreina.
 | Tunisia (TUN) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
 | Etelä-Afrikka (ZAF) | 0 | 4 | 1 | 0 | 0 | 0 | 4 | 0 | kohteita −8, skandaaleja −2 |
 | Zimbabwe (ZWE) | 1 | 3 | 0 | 0 | 0 | 0 | 4 | 0 | kohteita −7, eläintäky puuttuu, skandaaleja −2 |
+| Angola (AGO) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Kamerun (CMR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Kongo (COD) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Algeria (DZA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Etelä-Sudan (SDS) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 
 ### Pohjois-Amerikka (7 maata)
 
@@ -324,15 +324,15 @@ osiossa tuoreina.
 
 | maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| Itä-Timor (TLS) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
 | Vanuatu (VUT) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | kohteita −8, maastoa −3, eläintäky puuttuu, skandaaleja −2 |
 | Fidži (FJI) | 5 | 3 | 0 | 2 | 0 | 0 | 10 | 0 | kohteita −3, eläintäky puuttuu |
 | Salomonsaaret (SLB) | 6 | 3 | 0 | 2 | 0 | 0 | 11 | 0 | kohteita −2, eläintäky puuttuu |
 | Australia (AUS) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Uusi-Seelanti (NZL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 | Papua-Uusi-Guinea (PNG) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Itä-Timor (TLS) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
 
-Maita 112, tavoitteessa 46, vajaita 66.
+Maita 112, tavoitteessa 55, vajaita 57.
 
 ## Maailman erät (ehdotus)
 
@@ -352,7 +352,7 @@ tiedostoon.
 | M2 (tehty 6.9.) | Oseania | Australia (AUS) 0, Fidži (FJI) 0, Uusi-Seelanti (NZL) 0, Papua-Uusi-Guinea (PNG) 0, Salomonsaaret (SLB) 0 |
 | M3 (tehty 6.9.) | Aasia | Hongkong (HKG) 0, Indonesia (IDN) 0, Intia (IND) 0, Sri Lanka (LKA) 0, Myanmar (MMR) 0 |
 | M4 (tehty 6.9.) | Pohjois-Amerikka | Kanada (CAN) 0, Kuuba (CUB) 0, Grönlanti (GRL) 0, Guatemala (GTM) 0, Nicaragua (NIC) 0 |
-| M5 | Afrikka | Saint Helena (SHN) 0, Etelä-Sudan (SDS) 2, Angola (AGO) 3, Kamerun (CMR) 3, Kongo (COD) 3 |
+| M5 (tehty 6.9.) | Afrikka | Saint Helena (SHN) 0, Etelä-Sudan (SDS) 2, Angola (AGO) 3, Kamerun (CMR) 3, Kongo (COD) 3 |
 | M6 | Lähi-itä | Kypros (CYP) 2, Oman (OMN) 2, Qatar (QAT) 2, Arabiemiirikunnat (ARE) 3, Kuwait (KWT) 3 |
 | M7 (tehty erinä 2–4) | Eurooppa | Tanska (DNK) 11, Ruotsi (SWE) 11, Itävalta (AUT) 12, Irlanti (IRL) 12, Liettua (LTU) 12 |
 
@@ -683,3 +683,150 @@ Myanmarista ei kirjoitettu juntta- eikä konfliktisisältöä, minkä takia
 kaksi muuten ilmeistä ehdokasta jäi pois: Goteikin viadukti (artikkeli
 kertoo sen tuhoutuneen 2025 sisällissodassa) ja Mogokin
 rubiinikaivokset (artikkelin nykytilaosuus on sotaa).
+
+## Erä M5 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Maailman
+erien ensimmäinen Afrikan erä: **SDS, AGO, CMR, COD ja DZA**. Neljällä maalla
+oli kolme maastokohdetta ja Etelä-Sudanilla kaksi, mutta yhdelläkään ei ollut
+yhtään kohdetta, eläintäkyä eikä skandaalia. Erä kirjoitti kullekin kahdeksan
+kohdetta, yhden eläintäyn ja kaksi skandaalia sekä Etelä-Sudanille lisäksi
+puuttuneen maastokohteen (Sudd) — yhteensä 56 uutta karttamerkkiä. Erä on
+kuvaton kuten K2-erät 1–4 ja maailman erät M1–M4, ja jokainen väite on
+en-Wikipedian raakatekstin katteessa lähderivillä, joka nimeää artikkelin ja
+osan sekä tarkistuspäivän 6.9.2026. `node tools/laske-karttanostot.mjs` sanoo
+erän jälkeen kaikista viidestä *täysi*; taulukot ajaa Fable.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Etelä-Sudan (SDS) | Gondokoro, Lado, Jonglein kanava, Boman puisto, Bandingilon puisto, Wau, Nzara, Nimule | Sudd (uusi; oli jo: Kinyeti, Valkoinen Niili) | kenkänokka | Fashoda 1898, Zubayr 1873 |
+| Angola (AGO) | M’banza-Kongo, São Miguelin linnoitus, Kalandulan putoukset, Quiçaman puisto, Ionan puisto, Moçâmedes, Benguelan rata, Cuito Cuanavale | (oli jo: Morro de Moco, Atlantti, Cuanza) | jättiläisseeprantilooppi | Cassange 1961, Orjatie 1905 |
+| Kamerun (CMR) | Foumbanin palatsi, Djan luonnonpuisto, Bimbia, Rhumsiki, Wazan kansallispuisto, Kribi, Korupin kansallispuisto, Ngaoundéré | (oli jo: Kamerunvuori, Guineanlahti, Sanaga) | goliattisammakko | Nyos 1986, Manga Bell 1914 |
+| Kongo (COD) | Ingan padot, Boyoman putoukset, Virungan puisto, Kahuzi-Biéga, Salongan puisto, Garamban puisto, Upemban puisto, Lubumbashin kaivokset | (oli jo: Mount Stanley, Tanganjikajärvi, Kongo) | bonobo | Casement 1904, Shinkolobwe |
+| Algeria (DZA) | Timgad, Djémila, Tipasa, Tassilin kalliotaide, Qal’at Bani Hammad, Tlemcen, M’zabin laakso, Constantine | (oli jo: Tahat, Välimeri, Chelif) | fennekki | Kärpäsviuhka 1827, Gerboise Bleue 1960 |
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin, ja jokaisen kohteen lähin on
+kirjattu sen koordinaattirivin viereen. Koko erän lähin merkki on Kribi 26,2
+lautayksikön päässä Kamerun-laatasta ja skandaaleista Deim Zubeir 28,6
+yksikön päässä Bahr el Ghazalista; raja `KAUPUNGIN_KOHDALLA_SADE` on 7.
+`node tools/tarkista-nostopaikat.mjs` antaa kaikille 56:lle rivin *pääkartta*,
+ja `node tools/tarkista-nimiolimitys.mjs` sanoo yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Neljä rajausta, jotka valitsivat sisällön.** (1) Sääntö N3 ja tiheä
+rannikko: Angolan rannikolla Lobito, Benguela ja Catumbela ovat samassa
+parinkymmenen lautayksikön ruudussa, joten radalle valittiin ylängön
+Huambo-piste (radan oma artikkeli ei anna koordinaatteja) ja Nevinsonin
+orjatien merkki jäi Benguelaan. Samasta syystä Kamerunista jäi pois Limbe ja
+Buea (molemmat alle kymmenen yksikön päässä Bimbiasta) ja Etelä-Sudanista
+Juba (kolmen yksikön päässä Gondokorosta) sekä Malakal, joka osuu Valkoisen
+Niilin vanhan merkin päälle. (2) M3:n Myanmar-linja: artikkeleita, joiden
+nykytila on sotaa, ei kirjoitettu. Kongosta jätettiin siksi pois Okapin
+luonnonpuisto (artikkelin nykytilaosuus kertoo aseellisesta miehityksestä ja
+siviiliuhreista), ja Virunga sekä Kahuzi-Biéga kirjoitettiin puistojen
+historiasta ja luonnosta — uhanalaisten kohteiden luettelo mainitaan
+asiallisesti yhtenä lauseena. Angolan Cuito Cuanavale on 1987–88 käyty
+taistelu ja kirjoitettu tapahtumahistoriana New Yorkin sopimukseen asti.
+(3) Tyyppi kertoo, mitä merkki näyttää: Tassili n'Ajjer on artikkelissa
+vuoristo, joten nosto rajattiin sen kalliotaiteeseen (`kulttuuri`) eikä
+kirjattu maastoksi, ja Sudd on `jarvi`. (4) Kaksi ehdokasta kaatui
+lähdeaineiston ohuuteen: Tundavalasta ja Tchitundo-Hulusta ei ole
+en-Wikipedian artikkelia lainkaan, ja Serra da Leban artikkeli on neljä riviä
+— niiden tilalle tulivat Moçâmedes ja Ionan puisto.
+
+**Eläintäkyjen paikat on mitattu koneellisesti.** Jokainen piste on maan
+rajojen sisällä, maalla ja vähintään 35 lautayksikön päässä jokaisesta
+kaupunkimerkistä (`tests/elaintakyt.test.mjs`). Kamerun oli erän ainoa tiukka
+tapaus: koko goliattisammakon rannikkokaista on 26–36 yksikön päässä
+Kamerun-laatasta, joten piste haettiin haravoimalla ja se asetettiin
+vyöhykkeen pohjoispäähän (lon 9,9 / lat 3,4; etäisyys 36,5).
+
+**Kuvat puuttuvat kaikilta viideltä eläintäyltä.** `kuva`-kentässä on
+kuvaputken ämpäritunnus ilman kansiota (`elain-dza`, `elain-ago`,
+`elain-cmr`, `elain-cod`, `elain-sds`): kun kuvaputki toimittaa kuvan, se
+ilmestyy kortille ilman koodimuutosta, ja siihen asti kortti on kuvaton.
+## Erä M8 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Aasian toinen erä: **NPL, THA, VNM, SGP, TLS**. Nepalilla oli ennen erää
+vain eläintäky, muilla neljällä ei yhtäkään karttamerkkiä. Erä on
+kuvaton kuten K2-erät 1–4 ja maailman erät M1–M4, ja jokainen väite on
+en-Wikipedian raakatekstin katteessa lähderivillä, joka nimeää
+artikkelin ja osan sekä tarkistuspäivän 6.9.2026. Taulukon luvut ajetaan
+`node tools/laske-karttanostot.mjs --md` -työkalulla erikseen.
+
+Kohteet ja maastokohteet asuvat maan omassa
+`js/packs/maastokohteet-<iso>.js`-tiedostossa (viisi uutta tiedostoa,
+rekisteröity `js/packs/maastokohteet.js`-hakemistoon, `sw.js`:n
+SHELL-listaan ja `tools/build-standalone.mjs`:n MODULES-listaan).
+Eläintäyt ovat `js/packs/elaintakyt.js`:n lopussa ja skandaalit
+`js/packs/skandaalit.js`:n lopussa; kummankin testin lukumäärä
+päivitettiin (eläintäkyjä 61 → 64, skandaaleja 123 → 133 ja maita
+49 → 54).
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Nepal (NPL) | Lumbini, Bhaktapur, Gorkha, Janakpur, Muktinath, Lo Manthang, Nuwakot, Bardiyan kansallispuisto | Dhaulagiri, Koshi, Rara-järvi | (oli jo) | Khumjungin jetin päänahka, Yrjö V:n metsästysretki |
+| Thaimaa (THA) | Ayutthaya, Sukhothai, Ban Chiang, Phanom Rung, Phimai, Khao Yai, Chiang Mai, Kuoleman rautatie | Doi Inthanon, Chao Phraya, Thaimaanlahti | kimalaislepakko | Phaulkonin nousu ja tuho, Sininen timantti |
+| Vietnam (VNM) | Hội An, Huế, Mỹ Sơn, Phong Nha, Điện Biên Phủ, Hồ-linnoitus, Hoa Lư, Po Nagar | Fansipan, Punainenjoki, Hạ Longin lahti | saola | Hanoin rottapalkkiot, Hội Anin hylky |
+| Singapore (SGP) | Kasvitieteellinen puutarha, Pulau Ubin, Kranji, Rafflesin majakka, Haw Par Villa | Bukit Timah | — | Barings, Pan-Electric |
+| Itä-Timor (TLS) | Cristo Rei, Maubara, Balibo, Lailin luola, Baucau, Baguia, Viqueque, Nino Konis Santana | Matebian, Ataúro, Timorinmeri | timorinpeippo | Lifaun pako, Manufahin kapina |
+
+Neljä maata viidestä on tavoitteessa (`node tools/laske-karttanostot.mjs`
+sanoo niistä "täysi"). Singapore ei ole, ja syy on mitattu.
+
+**Miksi Singapore jäi vajaaksi.** Koko maa mahtuu maailmankartalla noin
+10 × 10 lautayksikön ruutuun — vielä Hongkongiakin ahtaammin — ja yhden
+nostomerkin nimiölaatikko on leveämpi kuin koko maa. Kahdeksan merkkiä
+on maan yläraja aivan kuten Hongkongissa: viisi kohdetta, yksi
+maastokohde ja kaksi skandaalia, ja `tools/tarkista-nimiolimitys.mjs`
+antaa niistä nollan nimiö–nimiö-limitystä. Yhdeksäs toi ensimmäisen.
+Lisäksi Singaporen kaupunkilehden kohdekartta (`js/packs/maakartat.js`
+singapore, lat 1,276–1,308 ja lon 103,836–103,874) kattaa koko
+siirtomaa-ajan ytimen, ja sen ruutuun osuva nosto kuuluu kohdekartan
+pisteelle eikä pääkartalle (`tests/nostot-kartalla.test.mjs`). Sinne
+jäävät Fort Canningin kukkula, Raffles Hotel, Empress Place, Boat Quay
+ja Sri Mariamman -temppeli, jotka ovat jo kohdekartan pisteitä; samasta
+syystä molempien skandaalien merkit siirrettiin ruudun ulkopuolelle
+(Barings ruudun itäpuolelle, Pan-Electric Changiin saaren
+koilliskärkeen), ja syy on kirjattu kummankin kortin viereen. Eläintäkyä
+ei voitu tehdä lainkaan: merkin on oltava vähintään 35 lautayksikön
+päässä jokaisesta kaupunkimerkistä (`tests/elaintakyt.test.mjs`), ja
+jokainen piste Singaporen alueella on 12,6–21,6 yksikön päässä omasta
+laatastaan. Ehdokas odottaa valmiina: sarvinokkalintu (Anthracoceros
+albirostris), joka katosi Singaporesta 1800-luvulla ja palasi Pulau
+Ubinille 1990-luvulla.
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin.
+Lähin uusi merkki on Vietnamin Hanoin rottapalkkiot 12,8 lautayksikön
+päässä Hanoi-laatasta ja toiseksi lähin Itä-Timorin Betano 12,9
+yksikön päässä Dilistä; raja `KAUPUNGIN_KOHDALLA_SADE` on 7. Pois
+jätettiin juuri tästä säännöstä Nepalin Kathmandun laakson kohteet
+(Kirtipur, Pharpingin voimalaitos, Changu Narayan, Kathmandun
+Durbar-aukio), Vietnamin Cổ Loan linnoitus (4,9 yksikköä Hanoista) sekä
+Itä-Timorin **Tatamailau** (5,1 yksikköä Dilistä), joka on maan korkein
+vuori — sen tilalle maastokohteeksi tuli Matebian. Kathmandun laaksoon
+mahtui lisäksi vain yksi nimiö, joten Bhaktapurin naapurit jäivät pois
+myös limityssyystä.
+
+**Nimisääntö N3 karsi neljä ehdokasta.** Kartalla on jo
+`js/packs/maailmankartta-nimet.js`:ssä nimiöt Himalaja, Ganges ja
+Mekong, ja Etelä-Kiinan meri on Kiinan oma nosto
+(`js/packs/maastokohteet-chn.js`). Siksi Nepalin vuoreksi valittiin
+Dhaulagiri ja joeksi Koshi, ja Vietnamin joeksi Punainenjoki ja mereksi
+Hạ Longin lahti. Saman säännön ja nimiölimityksen takia jäivät pois
+myös Annapurna, Kali Gandaki ja Sa Pa (yhdeksän kilometriä
+Fansipanista).
+
+**Herkkien kohteiden linjaukset pidettiin**
+(`docs/aasia-tyoaineisto/spec-asia.md`, SITOVA). Vietnamin sodista
+kirjoitettiin vain lähteen katteessa ja ilman nykypolitiikkaa: Điện
+Biên Phủ on ensimmäisen Indokiinan sodan ratkaisutaistelu 1954, ja Mỹ
+Sơnin kortti mainitsee pommitusvaurion samalla tarkkuudella kuin
+artikkeli. Itä-Timorin miehityksestä kerrotaan vain Balibon kortissa
+toteavasti, ja molemmat maan skandaalit ovat siirtomaakaudelta (1769 ja
+1911–1912). Nepalin sisällissodasta ei kirjoitettu lainkaan; maan
+skandaalit ovat vuosilta 1911 ja 1960. Thaimaan ja Singaporen
+skandaalit ovat talousrikoksia ja hovihistoriaa, kuten Hongkongissa
+erässä M3.

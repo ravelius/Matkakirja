@@ -124,6 +124,7 @@ import { MAASTOKOHTEET_NGA } from './maastokohteet-nga.js';
 import { MAASTOKOHTEET_NIC } from './maastokohteet-nic.js';
 import { MAASTOKOHTEET_NLD } from './maastokohteet-nld.js';
 import { MAASTOKOHTEET_NOR } from './maastokohteet-nor.js';
+import { MAASTOKOHTEET_NPL } from './maastokohteet-npl.js';
 import { MAASTOKOHTEET_NZL } from './maastokohteet-nzl.js';
 import { MAASTOKOHTEET_OMN } from './maastokohteet-omn.js';
 import { MAASTOKOHTEET_PAK } from './maastokohteet-pak.js';
@@ -138,12 +139,15 @@ import { MAASTOKOHTEET_SAU } from './maastokohteet-sau.js';
 import { MAASTOKOHTEET_SDN } from './maastokohteet-sdn.js';
 import { MAASTOKOHTEET_SDS } from './maastokohteet-sds.js';
 import { MAASTOKOHTEET_SEN } from './maastokohteet-sen.js';
+import { MAASTOKOHTEET_SGP } from './maastokohteet-sgp.js';
 import { MAASTOKOHTEET_SLB } from './maastokohteet-slb.js';
 import { MAASTOKOHTEET_SLE } from './maastokohteet-sle.js';
 import { MAASTOKOHTEET_SOM } from './maastokohteet-som.js';
 import { MAASTOKOHTEET_SWE } from './maastokohteet-swe.js';
 import { MAASTOKOHTEET_SYR } from './maastokohteet-syr.js';
 import { MAASTOKOHTEET_TCD } from './maastokohteet-tcd.js';
+import { MAASTOKOHTEET_THA } from './maastokohteet-tha.js';
+import { MAASTOKOHTEET_TLS } from './maastokohteet-tls.js';
 import { MAASTOKOHTEET_TUN } from './maastokohteet-tun.js';
 import { MAASTOKOHTEET_TUR } from './maastokohteet-tur.js';
 import { MAASTOKOHTEET_TWN } from './maastokohteet-twn.js';
@@ -151,11 +155,12 @@ import { MAASTOKOHTEET_TZA } from './maastokohteet-tza.js';
 import { MAASTOKOHTEET_UGA } from './maastokohteet-uga.js';
 import { MAASTOKOHTEET_UKR } from './maastokohteet-ukr.js';
 import { MAASTOKOHTEET_UZB } from './maastokohteet-uzb.js';
+import { MAASTOKOHTEET_VNM } from './maastokohteet-vnm.js';
 import { MAASTOKOHTEET_YEM } from './maastokohteet-yem.js';
 import { MAASTOKOHTEET_ZAF } from './maastokohteet-zaf.js';
 import { MAASTOKOHTEET_ZWE } from './maastokohteet-zwe.js';
 
-/** Maan ISO-tunnus → maan maastokohteet. 77 maata. */
+/** Maan ISO-tunnus → maan maastokohteet. 97 maata. */
 export const MAASTOKOHTEET = {
   AFG: MAASTOKOHTEET_AFG,
   AGO: MAASTOKOHTEET_AGO,
@@ -219,6 +224,7 @@ export const MAASTOKOHTEET = {
   NIC: MAASTOKOHTEET_NIC,
   NLD: MAASTOKOHTEET_NLD,
   NOR: MAASTOKOHTEET_NOR,
+  NPL: MAASTOKOHTEET_NPL,
   NZL: MAASTOKOHTEET_NZL,
   OMN: MAASTOKOHTEET_OMN,
   PAK: MAASTOKOHTEET_PAK,
@@ -233,12 +239,15 @@ export const MAASTOKOHTEET = {
   SDN: MAASTOKOHTEET_SDN,
   SDS: MAASTOKOHTEET_SDS,
   SEN: MAASTOKOHTEET_SEN,
+  SGP: MAASTOKOHTEET_SGP,
   SLB: MAASTOKOHTEET_SLB,
   SLE: MAASTOKOHTEET_SLE,
   SOM: MAASTOKOHTEET_SOM,
   SWE: MAASTOKOHTEET_SWE,
   SYR: MAASTOKOHTEET_SYR,
   TCD: MAASTOKOHTEET_TCD,
+  THA: MAASTOKOHTEET_THA,
+  TLS: MAASTOKOHTEET_TLS,
   TUN: MAASTOKOHTEET_TUN,
   TUR: MAASTOKOHTEET_TUR,
   TWN: MAASTOKOHTEET_TWN,
@@ -246,6 +255,7 @@ export const MAASTOKOHTEET = {
   UGA: MAASTOKOHTEET_UGA,
   UKR: MAASTOKOHTEET_UKR,
   UZB: MAASTOKOHTEET_UZB,
+  VNM: MAASTOKOHTEET_VNM,
   YEM: MAASTOKOHTEET_YEM,
   ZAF: MAASTOKOHTEET_ZAF,
   ZWE: MAASTOKOHTEET_ZWE,

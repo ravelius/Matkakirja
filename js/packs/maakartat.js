@@ -10642,6 +10642,111 @@ export const KAUPUNKIKARTAT = {
     ],
   },
   /*
+   * CAIRNS (6.9.2026). Rajaus on 2,4 × 2,6 kilometriä vanhan
+   * keskustan ympärillä — perustelu ja hylätty laiturikeskitys ovat
+   * tools/piirra-kaupunkikartta.mjs:n cairns-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Gimuy ja
+   * yidinjit, Dalrymplen vuoden 1873 leiri ja kaupungin synty 1876,
+   * Kurandan rata sekä Grafton Streetin kiinalaiskaupunki; teemasivu
+   * kertoo riutasta ja Daintreestä. Yksikään kartan kahdeksasta
+   * kohteesta ei ole niiden aihe.
+   *
+   * KAKSI FAKTAPOHJAN KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-cairns.md, kohta G): Cairns School of Arts on 178
+   * metrin päässä valtuuston talosta ja Barrier Reef Hotel 161 metrin
+   * päässä tullitalosta. Tilalle katedraali, vapaamuurarien temppeli
+   * ja rautatieasema.
+   *
+   * KURANDA, BARRON FALLS, RIUTTA JA DAINTREE OVAT KAUKANA: rata
+   * nousee 19 kilometriä luoteeseen, riutan lähinkin kohde on
+   * kymmenien ja Daintree runsaan sadan kilometrin päässä. Ne ovat
+   * lehden ja matkaoppaan puolella, eivät kartalla.
+   */
+  cairns: {
+    polku: 'assets/kartat/cairns-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -16.9110, etela: -16.9330, lansi: 145.7640, ita: 145.7855 },
+    esittely: 'Kartan alue on Cairnsin vanha keskusta Trinity Bayn ja '
+      + 'Trinity Inletin rannalla. Pohjoisessa ovat katedraali ja '
+      + 'sotamuistomerkki, keskellä ruutukaava kauppakatuineen ja '
+      + 'etelässä rautatieasema ja vanha laiturialue, josta kaupunki '
+      + 'lähti kasvamaan 1876. Idässä avautuu Trinity Bay. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Dunedinissa ja Aucklandissa. Koordinaatit en-Wikipedian
+       * geosearch- ja coordinates-rajapinnoista 6.9.2026, ja kaikki
+       * välit on mitattu uudelleen: pienin on 236 metriä
+       * (vapaamuurarien temppeli–katedraali).
+       */
+      { nimi: 'St Monican katedraali', lat: -16.9171, lon: 145.7726 },
+      { nimi: 'Vapaamuurarien temppeli', lat: -16.9174, lon: 145.7704 },
+      { nimi: 'Sotamuistomerkki', lat: -16.9172, lon: 145.7752 },
+      { nimi: 'Kaupunginvaltuuston talo', lat: -16.9204, lon: 145.7752 },
+      { nimi: 'Oikeustalojen kortteli', lat: -16.9213, lon: 145.7777 },
+      { nimi: 'Cairnsin rautatieasema', lat: -16.92528, lon: 145.77222 },
+      { nimi: 'Tullitalo', lat: -16.9235, lon: 145.7791 },
+      { nimi: 'Vanha satamalaituri', lat: -16.9273, lon: 145.78 },
+    ],
+  },
+  /*
+   * PANAMÁ (6.9.2026). Rajaus on 4,4 × 4,8 kilometriä Casco Viejosta
+   * Ancónin kukkulan yli Amadorin aallonmurtajalle — perustelu ja
+   * hylätty laajempi rajaus ovat tools/piirra-kaupunkikartta.mjs:n
+   * panama-lohkossa.
+   *
+   * CASCO VIEJO KANTAA VAIN YHDEN KOHTEEN. Katedraali, Casco Viejon
+   * oma piste, kanavamuseo ja historian museo ovat 22–83 metrin
+   * päässä toisistaan ja presidentinlinna 187 metrin päässä
+   * katedraalista (tarkistus-panama.md, kohta F) — koko vanhakaupunki
+   * on kolmensadan metrin levyinen niemi. Kartalle otettiin
+   * presidentinlinna, ja loput seitsemän kohdetta ovat ytimen
+   * ulkopuolelta.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat vuoden
+   * 1519 perustaminen ja Panamá Viejo, Morganin hyökkäys 1671, Casco
+   * Viejon jälleenrakennus, Panama-hattu, Camino Real, cimarronit,
+   * rautatie 1855 ja kanava; Panamá Viejo ja Miraflores jäävät siksi
+   * kartan ulkopuolelle myös aiheena, eivät vain etäisyyden takia.
+   */
+  panama: {
+    polku: 'assets/kartat/panama-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 8.9680, etela: 8.9280, lansi: -79.5720, ita: -79.5280 },
+    esittely: 'Kartan alue ulottuu Casco Viejon niemeltä idässä '
+      + 'Ancónin kukkulan yli Amadorin aallonmurtajalle etelässä. '
+      + 'Keskellä kohoaa metsäinen kukkula, sen pohjoispuolella ovat '
+      + 'entisen kanava-alueen väljät korttelit ja idässä vanhan '
+      + 'kaupungin tiivis ruutukaava. Etelään työntyvä kapea kieleke '
+      + 'on kanavan kaivumassoista rakennettu aallonmurtaja. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Rio de Janeirossa. Koordinaatit en-Wikipedian geosearch- ja
+       * coordinates-rajapinnoista 6.9.2026; pienin väli on 383 metriä
+       * (nykytaiteen museo–kansallisinstituutti).
+       *
+       * WAY ONIN KIINALAINEN HAUTAUSMAA (8,9533 / −79,5461) OLI
+       * LISTALLA MUTTA PUDOTETTIIN: sille ei löydy Commonsista
+       * yhtään kuvaa (tarkistettu hakusanoilla ja kategorioilla
+       * 6.9.2026), eikä kartan kohde saa jäädä ilman juttukuvaa.
+       * Kannaksen kiinalaisten rautatietyöläisten tarina kerrotaan
+       * sen sijaan lehden nostossa H3.
+       */
+      { nimi: 'Afroantillilainen museo', lat: 8.963, lon: -79.5392 },
+      { nimi: 'Nykytaiteen museo', lat: 8.96092, lon: -79.54304 },
+      { nimi: 'Kansallisinstituutti', lat: 8.957583, lon: -79.542944 },
+      { nimi: 'Ancónin kukkula', lat: 8.957278, lon: -79.549444 },
+      { nimi: 'Presidentinlinna', lat: 8.953966, lon: -79.534364 },
+      { nimi: 'Smithsonianin tutkimuslaitos', lat: 8.9624308, lon: -79.5525621 },
+      { nimi: 'Fort Amador', lat: 8.938056, lon: -79.547778 },
+      { nimi: 'Biomuseo', lat: 8.9325, lon: -79.5449 },
+    ],
+  },
+  /*
    * SAN FRANCISCO (nippu 8, 23.8.2026). Rajaus on niemen
    * koillisnurkka: pohjoisessa Aquatic Parkin ranta, idässä lahti ja
    * Embarcadero, lännessä Pacific Heights ja etelässä Civic Center.

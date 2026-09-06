@@ -39224,4 +39224,606 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * CAIRNS (Opus 6.9.2026, paketti O9). Kohteet ovat kohdekartan
+   * kahdeksan pistettä (maakartat.js: KAUPUNKIKARTAT.cairns), ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 6.9.2026
+   * (artikkelit "St Monica's Cathedral", "Cairns Masonic Temple",
+   * "Cairns War Memorial", "Cairns City Council Chambers", "Cairns
+   * Court House Complex", "Cairns railway station", "Cairns Customs
+   * House" ja "Cairns Wharf Complex").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Gimuy ja yidinjit, Dalrymplen vuoden 1873 leiri, Kurandan
+   * rata ja Grafton Streetin kiinalaiskaupunki; teemasivu kertoo
+   * riutasta ja Daintreestä. Yksikään kartan kahdeksasta kohteesta ei
+   * ole niiden aihe. Lähimpänä ovat rautatieasema ja laituri, joita
+   * lehden opas sivuaa yhdellä virkkeellä — jutut kertovat vuoden
+   * 1891 puuasemasta, radan vaikutuksesta naapurisatamiin ja
+   * laiturialueen vaiheista, joita opas ei käsittele.
+   *
+   * KAKSI FAKTAPOHJAN KOHDETTA JÄI POIS 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-cairns.md, kohta G): Cairns School of Arts ja Barrier
+   * Reef Hotel. Tilalle katedraali, vapaamuurarien temppeli ja
+   * rautatieasema.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 900 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * cairns-lohkossa eikä matkakirjan valokuvataulussa. HYLÄTTY:
+   * "Former Cairns Court House, 2025, 01.jpg" (näyttelybanderollit
+   * julkisivulla ja henkilö etualalla) ja "Station Dusk.JPG"
+   * (mainosjulisteet pääosassa).
+   */
+  cairns: {
+    'St Monican katedraali': {
+      aika: '1968',
+      teksti: 'Cairnsin katolinen katedraali on virallisesti St '
+          + 'Monica’s War Memorial Cathedral, ja se on vihitty '
+          + 'Korallimeren taistelun muistolle. Taistelu käytiin '
+          + '4.–8. toukokuuta 1942 suoraan Cairnsista itään, ja '
+          + 'kaupungista lennettiin taistelulentoja sen tueksi. '
+          + 'Kirkko on siis sekä hiippakunnan pääkirkko että '
+          + 'sotamuistomerkki — harvinainen yhdistelmä.'
+          + '\n\n'
+          + 'Ian Ferrierin suunnittelema rakennus tehtiin vuosina '
+          + '1967–1968. Peruskivi laskettiin 28. toukokuuta 1967, '
+          + 'kirkko vihittiin 8. heinäkuuta 1968 ja avattiin '
+          + 'yleisölle 14. heinäkuuta. Lattioihin käytettiin '
+          + 'runsaasti marmoria. Arkkitehti oli aikonut ikkunoihin '
+          + 'kullan ja vaalean sinisen sävyt, mutta piispa Cahill ei '
+          + 'pitänyt sinisestä ja pyysi burgundinpunaista pohjaa; '
+          + 'lyijylasi-ikkunoihin oli tarkoitus vaihtaa varsinaiset '
+          + 'lasimaalaukset heti kun rahaa olisi.'
+          + '\n\n'
+          + 'Uuden katedraalin valmistuttua vanha St Monican kirkko '
+          + 'lakkasi toimimasta kirkkona ja piispanistuin siirrettiin '
+          + 'uuteen rakennukseen. Vanha katedraali seisoo yhä uuden '
+          + 'vieressä, ja samaan kortteliin kuuluvat myös piispantalo, '
+          + 'Pyhän Joosefin luostari ja koulun hallintorakennus. '
+          + 'Rakennus lisättiin Queenslandin perintörekisteriin 31. '
+          + 'elokuuta 1998.',
+      kuvat: [
+        {
+          tiedosto: 'Roman Catholic cathedral church St Monica, Cairns.JPG',
+          selite: 'Punatiilinen katedraali vuodelta 1968 ja sen takana '
+            + 'vanha valkoinen katedraali samassa korttelissa.',
+          lahde: 'Laurel Lodged, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vapaamuurarien temppeli': {
+      aika: '1935',
+      teksti: 'Cairnsin vapaamuurarien temppeli rakennettiin vuosina '
+          + '1934–1935. Urakkatarjoukset pyydettiin elokuussa 1934, ja '
+          + 'suunnittelijoina olivat pohjoisqueenslandilainen toimisto '
+          + 'Hill and Taylor, jolla oli konttorit Townsvillessä ja '
+          + 'Cairnsissa. Richard Hill ja Arthur Taylor olivat '
+          + 'perustaneet toimiston Cairnsiin 1927 ja ottaneet 1931 '
+          + 'haltuunsa CV Reesin toimiston Townsvillessä. Molemmat '
+          + 'näyttävät itsekin olleen vapaamuurareita.'
+          + '\n\n'
+          + 'Julkisivun keskellä on suuri pyöreä ikkuna kaarilistojen '
+          + 'ja ison lakikiven kehystämänä, ja sen alla rivi pieniä '
+          + 'neliöikkunoita. Räystäslistan alla lukee suurin kirjaimin '
+          + 'AD GLORIAM DEI — Jumalan kunniaksi — ja päätyä kruunaa '
+          + 'vapaamuurarien tunnus, puusepän suorakulma ja harppi. '
+          + 'Sisäänkäynnin sivuilla on vaaleanpunaiset pylväät '
+          + 'korinttilaisine kapiteeleineen.'
+          + '\n\n'
+          + 'Talo kertoo omaa tarinaansa siitä, millainen kaupunki '
+          + 'Cairns oli 1930-luvulla: sokerin ja matkailun välissä '
+          + 'elävä pohjoinen satamakaupunki, jolla oli varaa rakentaa '
+          + 'seurataloja kivestä. Rakennus lisättiin Queenslandin '
+          + 'perintörekisteriin 28. elokuuta 1998, ja se on yhä '
+          + 'yhdistyksen käytössä.',
+      kuvat: [
+        {
+          tiedosto: 'Cairns Masonic Temple, 2025, 01.jpg',
+          selite: 'Temppelin päädyssä lukee AD GLORIAM DEI, ja sen yllä '
+            + 'on suorakulman ja harpin tunnus.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sotamuistomerkki': {
+      aika: '1926',
+      teksti: 'Cairnsin sotamuistomerkki seisoo esplanadin ja Trinity '
+          + 'Bayn välissä Florence Streetin kohdalla. Se rakennettiin '
+          + '1925 ja paljastettiin 1926, aluksi eri paikassa kuin '
+          + 'nykyään. Muistomerkki on graniittia, hiekkakiveä ja '
+          + 'marmoria, ja sen huipulla seisoo digger — australialaisen '
+          + 'jalkaväkisotilaan patsas.'
+          + '\n\n'
+          + 'Digger-patsas oli Queenslandissa selvästi suosituin '
+          + 'ensimmäisen maailmansodan muistomerkin muoto, kun '
+          + 'eteläisissä osavaltioissa suosittiin obeliskia. '
+          + 'Queenslandiin pystytettiin 61 digger-patsasta, joista 59 '
+          + 'on yhä pystyssä. Pohjoisen patsaat teki lähes '
+          + 'poikkeuksetta townsvilleläinen kiviveistämö Melrose & '
+          + 'Fenwick, jolla oli sivukonttori myös Cairnsissa; sama '
+          + 'yritys toimitti diggerit Gordonvaleen ja Mareebaan.'
+          + '\n\n'
+          + 'Muistomerkin ympärillä on muistopuutarhan kävelytie, '
+          + 'jonka laattoihin on kirjattu neljä ensimmäisen '
+          + 'maailmansodan jälkeistä konfliktia sekä puolustus- ja '
+          + 'pelastusjärjestöjä. Paikalla on myös vuoden 1887 '
+          + 'laivastotykki ja vuoden 1940 kenttätykki. Muistomerkki '
+          + 'lisättiin Queenslandin perintörekisteriin 21. lokakuuta '
+          + '1992.',
+      kuvat: [
+        {
+          tiedosto: 'Cairns War Memorial, 2025, 01.jpg',
+          selite: 'Digger-patsas seisoo kellotornin päällä esplanadin '
+            + 'lippurivin keskellä.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kaupunginvaltuuston talo': {
+      aika: '1930',
+      teksti: 'Cairnsin kaupunginvaltuuston talo Abbott Streetin '
+          + 'varrella rakennettiin vuosina 1929–1930. Suunnittelijana '
+          + 'oli sama pohjoisqueenslandilainen toimisto Hill & Taylor, '
+          + 'joka piirsi muutamaa vuotta myöhemmin vapaamuurarien '
+          + 'temppelin, ja urakoitsijana Alex McKenzie.'
+          + '\n\n'
+          + 'Julkisivun päätyyn on kirjattu suurin kirjaimin CAIRNS '
+          + 'CITY COUNCIL ja sen alle CITY LIBRARY — talossa toimi '
+          + 'alusta asti sekä valtuusto että kirjasto. Pylväikkö ja '
+          + 'kolmiopääty ovat 1920-luvun lopun julkisen rakennuksen '
+          + 'vakiokieltä, mutta trooppinen ilmasto näkyy matalassa '
+          + 'sivusiivessä ja leveissä räystäissä.'
+          + '\n\n'
+          + 'Valtuusto on sittemmin muuttanut muualle, ja rakennus on '
+          + 'nykyään Cairnsin kaupunginkirjasto. Se lisättiin '
+          + 'Queenslandin perintörekisteriin 5. lokakuuta 1998. Talo '
+          + 'on hyvä mittatikku kaupungin kasvulle: kun se '
+          + 'valmistui, Cairnsin perustamisesta oli kulunut '
+          + 'viisikymmentäneljä vuotta.',
+      kuvat: [
+        {
+          tiedosto: 'Cairns City Library.jpg',
+          selite: 'Päätyyn kirjoitetut sanat CAIRNS CITY COUNCIL ja CITY '
+            + 'LIBRARY kertovat talon kaksi tehtävää.',
+          lahde: 'Neal Jennings, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Oikeustalojen kortteli': {
+      aika: '1921',
+      teksti: 'Abbott Streetin oikeustalojen kortteli rakennettiin '
+          + 'vuosina 1919–1921. Kokonaisuuteen kuuluu entinen '
+          + 'oikeustalo ja sen vieressä hallintorakennus, ja päädyssä '
+          + 'on kruunun vaakuna — merkki siitä, että talossa '
+          + 'istuttiin kuninkaan nimissä.'
+          + '\n\n'
+          + 'Rakennukset nousivat aikaan, jolloin Cairns oli '
+          + 'vakiinnuttanut asemansa Pohjois-Queenslandin '
+          + 'hallintokeskuksena. Kaupunki oli neljässäkymmenessä '
+          + 'vuodessa kasvanut kultakenttien satamasta seudun '
+          + 'pääkaupungiksi: rata ylängölle oli valmistunut 1891, ja '
+          + 'sokeriviljelmät olivat levinneet joka suuntaan.'
+          + '\n\n'
+          + 'Entinen oikeustalo on nykyään Cairnsin taidegalleria, ja '
+          + 'kortteli on yksi Far North Queenslandin merkittävimmistä '
+          + 'kulttuurimatkailukohteista. Se lisättiin Queenslandin '
+          + 'perintörekisteriin 21. lokakuuta 1992.',
+      kuvat: [
+        {
+          tiedosto: 'Side elevation, Cairns Court House, 2025.jpg',
+          selite: 'Oikeustalon takajulkisivu kaari-ikkunoineen ja '
+            + 'kattolyhtyineen valaistuna illalla.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Cairnsin rautatieasema': {
+      aika: '1891',
+      teksti: 'Ensimmäinen Cairnsin rautatieasema valmistui 1891, kun '
+          + 'ylängölle vievän radan ensimmäinen osa avattiin. '
+          + 'Asemarakennus oli kaksikerroksinen ja puinen, ja siinä '
+          + 'oli koristeelliset parvekkeet — juuri sellainen '
+          + 'trooppinen puuarkkitehtuuri, josta pohjoinen Queensland '
+          + 'tunnettiin. Radasta haarautui vuosien mittaan uusia '
+          + 'linjoja, jotka palvelivat puutavaraa, kaivoksia, '
+          + 'karjataloutta ja tupakanviljelyä.'
+          + '\n\n'
+          + 'Radalla oli seuraus, jota harvoin muistetaan: se ratkaisi '
+          + 'kilpailun pohjoisen satamien välillä. Cooktown ja Port '
+          + 'Douglas kutistuivat, kun Cairns sai yhteyden sisämaahan. '
+          + 'Puinen ratapiha ulottui laiturille asti, ja vuonna 1886 '
+          + 'rakennettu puinen rautatielaituri yhdisti sataman suoraan '
+          + 'rataan.'
+          + '\n\n'
+          + 'Asema uusittiin 1955 kaksikerroksiseksi vaaleatiiliseksi '
+          + 'nykyaikaiseksi rakennukseksi McLeod Streetin varrelle, '
+          + 'kun Queenslandin rautatiet paransi rataa ja otti käyttöön '
+          + 'ilmastoidut junat — Brisbanen ja Cairnsin väliä alkoi '
+          + 'ajaa The Sunlander. Samalta asemalta lähtee nykyään myös '
+          + 'Kurandan turistijuna.',
+      kuvat: [
+        {
+          tiedosto: 'The Spirit of Queensland train arriving in Cairns, Australia 01.jpg',
+          selite: 'Brisbanesta saapuva juna liukuu Cairnsin asemalle, '
+            + 'joka on rannikkoradan pohjoisin pääteasema.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tullitalo': {
+      aika: '1937',
+      teksti: 'Cairnsin tullitalo Abbott Streetin varrella rakennettiin '
+          + 'vuosina 1936–1937. Suunnitelmat teki arkkitehti Robert '
+          + 'Henry Bowen liittovaltion julkisten töiden Queenslandin '
+          + 'toimistossa, ja rakentajina olivat paikalliset urakoitsijat '
+          + 'Watkins & Deal.'
+          + '\n\n'
+          + 'Talo on kaksikerroksinen kivirakennus, jonka pohjakerros '
+          + 'oli toimistoja ja yläkerta tullin apukantajan asunto — '
+          + 'virkamies asui siis työpaikkansa yläkerrassa. Julkisivu '
+          + 'on 1930-luvun art decoa: pystysuorat listat, uurretut '
+          + 'pilasterit ja päädyn koristeaihe, joka nousee '
+          + 'räystäslistan yli.'
+          + '\n\n'
+          + 'Tulli tarvitsi oman talonsa, koska Cairns oli tuolloin '
+          + 'sokerin ja trooppisten hedelmien vientisatama. Nykyään '
+          + 'rakennus on ravintolakäytössä. Se lisättiin Queenslandin '
+          + 'perintörekisteriin 21. lokakuuta 1992.',
+      kuvat: [
+        {
+          tiedosto: 'Cairns Customs House, 2025.jpg',
+          selite: 'Vuoden 1937 tullitalon art deco -julkisivu, jonka '
+            + 'pohjakerroksessa toimii nykyään ravintola.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha satamalaituri': {
+      aika: '1910',
+      teksti: 'Wharf Streetin laiturialue on se paikka, josta koko '
+          + 'kaupunki lähti kasvamaan. Nykyinen perintölistattu '
+          + 'kokonaisuus rakennettiin vaiheittain vuosina 1910–1948, '
+          + 'mutta ensimmäinen puinen rautatielaituri oli valmistunut '
+          + 'jo 1886 ja yhdistänyt sataman suoraan ylängölle vievään '
+          + 'rataan.'
+          + '\n\n'
+          + 'Juuri rata ratkaisi Cairnsin tulevaisuuden. Kun '
+          + 'sisämaayhteys avautui, kaupungin satama sai koko '
+          + 'ylängön tuotteet — kullan, puutavaran, sokerin ja '
+          + 'myöhemmin hedelmät — ja naapurisatamat Cooktown ja Port '
+          + 'Douglas jäivät sen varjoon.'
+          + '\n\n'
+          + 'Laiturialueen rakennuksissa näkyy sataman oma '
+          + 'sosiaalihistoria: vuonna 1954 sinne rakennettiin '
+          + 'ahtaajien liiton sosiaalitilat, ja pari vuotta myöhemmin '
+          + 'niiden taakse lisättiin huoltosiipi. Kokonaisuus '
+          + 'lisättiin Queenslandin perintörekisteriin 17. joulukuuta '
+          + '1999.',
+      kuvat: [
+        {
+          tiedosto: 'Cairns Wharf, M.V. Waiben QUT-7269.jpg',
+          selite: 'Laivat makaavat kiinni Cairnsin laiturivarastojen '
+            + 'vieressä, ja laiturille on pinottu puutavaraa.',
+          lahde: 'Jack Bain, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * PANAMÁ (Opus 6.9.2026, paketti O9). Kohteet ovat kohdekartan
+   * kahdeksan pistettä (maakartat.js: KAUPUNKIKARTAT.panama), ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 6.9.2026
+   * (artikkelit "Afro-Antillean Museum of Panama", "Panama Museum of
+   * Contemporary Art", "National Institute of Panama", "Ancon Hill",
+   * "Palacio de las Garzas", "Smithsonian Tropical Research
+   * Institute", "Fort Amador" ja "Biomuseo").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat vuoden 1519 perustaminen, Morganin hyökkäys, Casco Viejon
+   * jälleenrakennus, Panama-hattu, Camino Real, cimarronit, rautatie
+   * ja kanava. Yksikään kartan kahdeksasta kohteesta ei ole niiden
+   * aihe. Ancónin kukkula ja Amadorin aallonmurtaja vilahtavat lehden
+   * matkaoppaassa yhdellä jaksolla kumpikin — jutut kertovat niistä
+   * eri asian (kukkulan luonnonsuojelun ja Balboa Heightsin
+   * hallintokorttelin; saarten patteristot ja niiden nykykäytön).
+   *
+   * WAY ONIN KIINALAINEN HAUTAUSMAA JÄTETTIIN KARTALTA POIS, koska
+   * sille ei löydy Commonsista yhtään kuvaa (tarkistettu
+   * hakusanoilla ja kategorioilla 6.9.2026) — perustelu on
+   * maakartat.js:n panama-lohkossa.
+   *
+   * EI NYKYPOLITIIKKAA: Ancónin kukkulan ja presidentinlinnan
+   * lähdeartikkelit käsittelevät vuoden 1964 mellakoita ja
+   * 1900-luvun lopun hallituksia; niitä ei ole otettu mukaan.
+   * Fort Amadorin juttu kertoo linnoituksista rakennuksina ja
+   * nykykäytöstä, ei sotilasoperaatioista.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 900 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * panama-lohkossa eikä matkakirjan valokuvataulussa.
+   */
+  panama: {
+    'Afroantillilainen museo': {
+      aika: '1980',
+      teksti: 'Afroantillilainen museo kertoo niiden ihmisten '
+          + 'historiasta, joita ilman kanavaa ei olisi rakennettu: '
+          + 'Karibialta tulleiden työläisten ja heidän jälkeläistensä. '
+          + 'Museo perustettiin 23. joulukuuta 1980, ja sen perusti '
+          + 'Reina Torres de Araúz, joka perusti monet muutkin maan '
+          + 'museoista.'
+          + '\n\n'
+          + 'Rakennus itsessään on osa samaa tarinaa. Se pystytettiin '
+          + '1909–1910 barbadoslaisten protestanttien kokoontumis'
+          + 'paikaksi, ja tontin hankkimisessa auttoi Panama Railroad '
+          + 'Company. Peruskivi laskettiin 1909, ja viisi rakennusta '
+          + 'vihittiin käyttöön 16. tammikuuta 1910. Seurakunta muutti '
+          + '1900-luvun puolivälissä Río Abajoon, ja talo rapistui '
+          + '1970-luvun loppuun mennessä pahoin.'
+          + '\n\n'
+          + 'Kokoelma alkoi valokuvista, ja kappelin vuoden 1910 '
+          + 'alttari oli näyttelyn keskeinen esine. Nykyään esillä on '
+          + 'kaksi asuindioraamaa — makuuhuone ja keittiö — sekä '
+          + 'kanavan kaivutyötä esittävä kohtaus, jossa on pätkä '
+          + 'rataa ja metallinen kippivaunu. Vitriineissä on myös '
+          + 'matka-arkku ja ostokuponkivihko, jollaisia käytettiin '
+          + 'kanava-alueen kaupoissa.',
+      kuvat: [
+        {
+          tiedosto: 'MuseoAfroantillano.JPG',
+          selite: 'Museo toimii vuosina 1909–1910 rakennetussa '
+            + 'puisessa lähetyskappelissa, jonka kärkikaari-ikkunat '
+            + 'ovat yhä alkuperäiset.',
+          lahde: 'Mónica J. Mora, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nykytaiteen museo': {
+      aika: '1983',
+      teksti: 'Panaman nykytaiteen museo eli MAC on maan ainoa '
+          + 'nykytaiteen museo. Sen juuret ovat vuonna 1962 '
+          + 'perustetussa Panaman taideinstituutissa, joka toimi '
+          + 'vuokratiloissa ja järjesti näyttelyjen lisäksi '
+          + 'näytelmiä, konsertteja ja elokuvaesityksiä.'
+          + '\n\n'
+          + 'Kokoelma syntyi tavalla, joka on samalla nokkela ja '
+          + 'köyhä: jokaiselta näyttelyn pitäneeltä taiteilijalta '
+          + 'pyydettiin lahjaksi yksi teos. Kaksikymmentä vuotta '
+          + 'myöhemmin kokoelma oli arvokas mutta koditon. Vuonna '
+          + '1983 johtokunta päätti hankkia sille seinät, ja laajan '
+          + 'keräyksen sekä pankkilainan turvin ostettiin ja '
+          + 'kunnostettiin entisen kanava-alueen vapaamuurarien '
+          + 'temppeli Ancónista. Muutostyön tekivät Coqui Calderón ja '
+          + 'Graciela de Eleta, jotka saivat siitä Vasco Núñez de '
+          + 'Balboan ansiomerkin.'
+          + '\n\n'
+          + 'Kokoelmassa on nykyään noin 1 200 teosta panamalaisilta '
+          + 'ja latinalaisamerikkalaisilta taiteilijoilta, myös '
+          + 'vuotta 1962 varhaisempia. Mukana ovat kaikki tekniikat '
+          + 'maalauksesta ja veistoksesta grafiikkaan, valokuvaan ja '
+          + 'installaatioon. Museo on yksityinen, voittoa '
+          + 'tavoittelematon ja yritysten sekä taiteen ystävien '
+          + 'rahoittama.',
+      kuvat: [
+        {
+          tiedosto: 'Museo de Arte Contemporáneo de Panamá.jpg',
+          selite: 'Museo toimii entisessä vapaamuurarien temppelissä '
+            + 'Ancónin kaupunginosassa vanhalla kanava-alueella.',
+          lahde: 'MACPanama, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallisinstituutti': {
+      aika: '1909',
+      teksti: 'Kansallisinstituutti on Panaman tunnetuin koulu ja '
+          + 'ensimmäinen, joka tarjosi korkea-asteen opetusta omissa '
+          + 'tiloissaan. Presidentti Manuel Amador Guerrero perusti '
+          + 'sen lailla 1. kesäkuuta 1907, ja opetus alkoi 25. '
+          + 'huhtikuuta 1909 väliaikaisissa tiloissa, kun oma talo oli '
+          + 'vasta rakenteilla.'
+          + '\n\n'
+          + 'Rakennuksen pystytti insinööri Florencio Harmodio '
+          + 'Arosemena, josta tuli myöhemmin Panaman presidentti, ja '
+          + 'se valmistui toukokuussa 1911. Koulu sijaitsee Santa '
+          + 'Anan kaupunginosassa Ancónin kukkulan juurella.'
+          + '\n\n'
+          + 'Panamalaiset kutsuvat koulua nimellä Nido de Águilas, '
+          + 'Kotkanpesä. Sen käyneiden joukossa on taiteilijoita, '
+          + 'tutkijoita ja poliitikkoja — muun muassa säveltäjä '
+          + 'Gonzalo Brenes ja säveltäjä-lyömäsoittaja Gladys de la '
+          + 'Lastra. Koulun julkisivun portaikko ja pylväikkö ovat '
+          + 'kaupunkikuvassa yhtä tunnistettavia kuin '
+          + 'presidentinlinnan haikarat.',
+      kuvat: [
+        {
+          tiedosto: 'Instituto Nacional de Panamá "Nido de Águilas".JPG',
+          selite: 'Kansallisinstituutin keltainen julkisivu valmistui '
+            + '1911, ja sen portaita vartioivat pronssiset sfinksit.',
+          lahde: 'Fermín Santana, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ancónin kukkula': {
+      aika: '199 m',
+      teksti: 'Ancónin kukkula kohoaa 199 metriin aivan kaupungin '
+          + 'keskellä, ja sen laella liehuu iso Panaman lippu. '
+          + 'Kukkula on ollut sotilaallisesti ja hallinnollisesti '
+          + 'tärkeä yhtä kauan kuin kaupunkikin: kun Henry Morgan '
+          + 'hyökkäsi 1671, hänen tiedustelijansa kiipesivät '
+          + 'ensimmäiseksi juuri Ancónille katsomaan, miten kaupunkia '
+          + 'puolustettiin.'
+          + '\n\n'
+          + 'Kukkula katsoo suoraan alas sille paikalle, jonne uusi '
+          + 'kaupunki rakennettiin tuhon jälkeen. Rinteillä on '
+          + 'entisen kanava-alueen hallintorakennuksia, ja laella on '
+          + 'muistolaatta vuoden 1977 Torrijos–Carter-sopimuksista, '
+          + 'joilla kanavan siirto Panamalle sovittiin.'
+          + '\n\n'
+          + 'Merkittävintä on kuitenkin metsä. Kukkulan sademetsä on '
+          + 'säilynyt saarekkeena keskellä miljoonakaupunkia, ja se on '
+          + 'nykyään suojeltu. Siellä näkee usein laiskiaisia, '
+          + 'valkokuonokoatteja, yhdeksänvyötäisiä vyötiäisiä, '
+          + 'Geoffroyn tamariineja ja kauriita. Kukkulan nimeä käyttää '
+          + 'myös panamalainen luonnonsuojelujärjestö ANCON.',
+      kuvat: [
+        {
+          tiedosto: 'Bandera de Panamá en el Cerro Ancón.jpg',
+          selite: 'Panaman lippu liehuu Ancónin kukkulan laella, ja sen '
+            + 'alla levittäytyy suojeltu sademetsäsaareke.',
+          lahde: 'Kiam-shim, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Presidentinlinna': {
+      aika: '1673',
+      teksti: 'Presidentinlinna on Casco Viejon vanhimpia rakennuksia. '
+          + 'Sen rakentaminen aloitettiin 1673 Panaman kuninkaallisen '
+          + 'audiencian tuomarin Luis de Lozada y Quiñónezin käskystä, '
+          + 'heti kun uusi kaupunki oli perustettu Morganin tuhon '
+          + 'jälkeen. Talo oli alusta asti hallintokäytössä ja toimi '
+          + '1700-luvulla muun muassa tullina ja kirjanpitokonttorina.'
+          + '\n\n'
+          + 'Vuonna 1756 rakennus paloi lähes kokonaan. Sen jälkeen se '
+          + 'oli vuorollaan tullivarasto 1821, poikien '
+          + 'opettajaseminaari 1872–1875, hallintotalo ja Panaman '
+          + 'kansallispankki. Vuonna 1875 se nimettiin virallisesti '
+          + 'presidentinlinnaksi. Nykyisen ilmeensä talo sai 1922, '
+          + 'kun presidentti Belisario Porras teetti arkkitehti '
+          + 'Leonardo Villanueva Meyerillä perusteellisen '
+          + 'kunnostuksen: taloon lisättiin toinen ja kolmas kerros '
+          + 'sekä andalusialainen sisäpiha. Uusi linna vihittiin 3. '
+          + 'elokuuta 1923.'
+          + '\n\n'
+          + 'Nimi tulee haikaroista. Presidentti Porras toi ne '
+          + 'sisäpihalle 1922 ystävänsä, runoilija Ricardo Mirón '
+          + 'ehdotuksesta, ja siitä lähtien talo on ollut Palacio de '
+          + 'las Garzas — Haikarain palatsi. Linnassa on myös '
+          + 'presidenttien muotokuvien galleria, joka alkoi 1855 '
+          + 'kolumbialaisen taidemaalarin Epifanio Garayn töistä.',
+      kuvat: [
+        {
+          tiedosto: 'Una mañana tranquila en el Palacio de Las Garzas.JPG',
+          selite: 'Presidentinlinnan valkoinen julkisivu ja Panaman '
+            + 'vaakuna sisäänkäynnin kaarien yläpuolella.',
+          lahde: 'Anelita Cocoa Celis, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Smithsonianin tutkimuslaitos': {
+      aika: '1923',
+      teksti: 'Smithsonianin trooppinen tutkimuslaitos on ainoa '
+          + 'Smithsonian-yksikkö, jonka kotipaikka on Yhdysvaltain '
+          + 'ulkopuolella. Se tutkii trooppisia ekosysteemejä ja '
+          + 'niiden merkitystä ihmiselle, ja sen tiloissa käy vuosittain '
+          + 'noin 1 200 vierailevaa tutkijaa yliopistoista ja '
+          + 'tutkimuslaitoksista eri puolilta maailmaa.'
+          + '\n\n'
+          + 'Laitos kasvoi pienestä kenttäasemasta, joka perustettiin '
+          + '1923 Barro Coloradon saarelle Gatún-järveen kanava-'
+          + 'alueella. Samana vuonna kanava-alueen kuvernööri julisti '
+          + 'saaren luonnonsuojelualueeksi — yhdeksi ensimmäisistä '
+          + 'koko Amerikassa. Taustalla oli vuonna 1910 aloitettu '
+          + 'biologinen kartoitus, joka laajeni uudelta kanava-'
+          + 'alueelta koko Panamaan. 1920- ja 1930-luvuilla saaresta '
+          + 'tuli ulkoilmalaboratorio yhdysvaltalaisille '
+          + 'yliopistotutkijoille.'
+          + '\n\n'
+          + 'Vuoden 1977 kanavasopimukset loivat Barro Coloradon '
+          + 'luonnonmuistomerkin, johon kuuluvat saari ja viisi sitä '
+          + 'ympäröivää niemeä, ja antoivat laitokselle sen '
+          + 'hoitovastuun. Panama myönsi laitokselle kansainvälisen '
+          + 'aseman 1985 ja laajensi 1997 sen hoitamien kohteiden '
+          + 'joukkoa entisen kanava-alueen ulkopuolelle.',
+      kuvat: [
+        {
+          tiedosto: 'Barro Colorado Research.JPG',
+          selite: 'Barro Coloradon tutkimusasema seisoo Gatún-järven '
+            + 'saarella, joka syntyi kanavan patoamisesta.',
+          lahde: 'Chad Carson, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fort Amador': {
+      aika: '1912',
+      teksti: 'Fort Amador ja sen vieressä ollut Fort Grant '
+          + 'rakennettiin suojaamaan kanavan Tyynenmeren päätä. '
+          + 'Amador oli mantereen puoleinen tukikohta Amerikkojen '
+          + 'sillan alapuolella, Grant taas sarja saaria hieman '
+          + 'kauempana rannikosta. Molemmat nimettiin virallisesti '
+          + '1912, kun aallonmurtaja valmistui: Amador ensimmäisen '
+          + 'presidentin Manuel Amador Guerreron ja Grant Ulysses S. '
+          + 'Grantin mukaan, joka oli kapteenina ylittänyt kannaksen '
+          + 'juuri siltä kohdalta 1852.'
+          + '\n\n'
+          + 'Aallonmurtaja itse on kanavan jäte. Culebran leikkauksen '
+          + 'kaivumassat ajettiin mangrovesuolle, jota kutsuttiin '
+          + 'Balboan kaatopaikaksi, ja täyttö kasvoi vähitellen '
+          + 'penkereeksi lähimmälle saarelle Naosille. Myöhemmin '
+          + 'pengertä jatkettiin Culebran, Perikon ja Flamencon '
+          + 'saarille.'
+          + '\n\n'
+          + 'Saaret olivat pitkään merirosvojen suosimia '
+          + 'suojapaikkoja: Francis Drake, James Cook ja Henry Morgan '
+          + 'kaikki käyttivät Tabogaa ja Perikoa ryöstöretkiensä '
+          + 'jälkeen. Kaikki linnoitukset luovutettiin Panamalle '
+          + '1999, ja alue on nykyään matkailukohde — vanhoissa '
+          + 'kasarmirakennuksissa on ravintoloita ja kauppoja, ja '
+          + 'venesatamasta lähtee lauttoja saarille.',
+      kuvat: [
+        {
+          tiedosto: 'IslaPerico Causeway Amador.JPG',
+          selite: 'Perikon saaren entiset tukikohtarakennukset ovat '
+            + 'nykyään ravintoloita, ja edustalla odottavat lautat.',
+          lahde: 'Ayaita, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Biomuseo: {
+      aika: '2014',
+      teksti: 'Biomuseo seisoo Amadorin aallonmurtajalla kanavan '
+          + 'eteläsuulla, ja se kertoo yhden ainoan asian: miten '
+          + 'Panaman kannaksen nouseminen muutti maailman. Kannas '
+          + 'syntyi geologisesti katsoen aivan äskettäin, ja sen '
+          + 'vaikutus läntisen pallonpuoliskon eliömaailmaan oli '
+          + 'valtava.'
+          + '\n\n'
+          + 'Rakennuksen suunnitteli Frank Gehry, ja se on hänen '
+          + 'ensimmäinen työnsä Latinalaisessa Amerikassa. Suunnittelu '
+          + 'alkoi 1999, mutta museo avattiin vasta 2. lokakuuta '
+          + '2014. Katto on kasa kirkkaanvärisiä, eri suuntiin '
+          + 'kallistuvia metallilevyjä, ja se näkyy kauas merelle.'
+          + '\n\n'
+          + 'Sisällä on 4 000 neliömetriä ja kahdeksan pysyvää '
+          + 'galleriaa, jotka Bruce Mau Design suunnitteli '
+          + 'kerrottavaksi järjestyksessä yhtenä tarinana. Lisäksi '
+          + 'talossa on julkinen atrium, vaihtuvien näyttelyjen tila, '
+          + 'museokauppa ja kahvila. Museoon pääsee taksilla tai '
+          + 'bussilla, ja sen vieressä on venesatamia ja rantatie.',
+      kuvat: [
+        {
+          tiedosto: 'Biomuseo panama.jpg',
+          selite: 'Gehryn suunnitteleman Biomuseon katto on kasa eri '
+            + 'suuntiin kallistuvia värillisiä metallilevyjä.',
+          lahde: 'Editorpana, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

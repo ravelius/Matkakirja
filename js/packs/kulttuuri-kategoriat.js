@@ -80644,4 +80644,1092 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * CAIRNS (Opus 6.9.2026, paketti O9) — Oseanian laudan kuudes
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-cairns.md ja sen tarkistus tarkistus-cairns.md
+   * (tuomio "kelpaa korjausten jälkeen"). Väitteet on luettu
+   * en-Wikipedian raakateksteistä 6.9.2026: "Cairns", "George
+   * Elphinstone Dalrymple", "Kuranda Scenic Railway", "Great Barrier
+   * Reef", "Daintree Rainforest", "Kuku Yalanji", "Yidiny people",
+   * "Coral bleaching", "Green Island (Queensland)", "Box jellyfish",
+   * "Irukandji jellyfish".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei uusia kysymyksiä.
+   * Saapumisteksti (oceania-saapumiset.js) ja valokuvataulu
+   * (oceania-valokuvat.js) olivat jo olemassa eikä niihin koskettu.
+   *
+   * SIVUJA ON KAKSI kuten Dunedinissa (kaupunki + teemasivu).
+   * Faktapohja tarjosi kolme teemaa; historia-teema on sulautettu
+   * kaupunkisivun nostoihin K1, K2 ja K4, jotta lehti pysyy
+   * Dunedinin mitassa.
+   *
+   * TARKISTUKSEN KAIKKI KORJAUKSET ON TEHTY:
+   *  - Daintreen ja Amazonin ikäero JÄTETTY POIS. Wikipedian oma
+   *    leipäteksti sanoo "nearly 100 million years older than the
+   *    Amazon", mutta saman virkkeen alaviitteen sitaatti sanoo "10
+   *    million years older" — kerroin on kymmenen, eikä lukua siksi
+   *    käytetä lainkaan (L3 nojaa 180 miljoonan vuoden ikään).
+   *  - K1: Dalrymple leiriytyi Trinity Bayhin SYKSYLLÄ 1873, ei
+   *    syyskuun lopulla; 29.9.1873 oli lähtöpäivä Cardwellista, ja
+   *    Trinity Bayhin päästiin vasta Mourilyan Harbourin ja
+   *    Johnstone-joen jälkeen (retkikunta palasi 22.12.1873).
+   *  - K1: alukset olivat KUTTEREITA (cutters), eivät kaljaaseja.
+   *  - L2: "yli puolet korallipeitteestä" on menetetty VUODESTA 1995,
+   *    ei "vuosien 1995 ja 2017 välillä".
+   *  - L4: Kuku Yalanjin maanpalautuksen luvuissa on lähderistiriita.
+   *    "Daintree Rainforest" sanoo 29.9.2021 ja 160 213 ha, "Kuku
+   *    Yalanji" sanoo 28.9.2021 ja 160 108 ha. Teksti sanoo siksi
+   *    "syyskuun lopussa 2021" ja "runsaat 160 000 hehtaaria" eikä
+   *    valitse puolta.
+   *  - K4: 1 450 asukkaan luku 1901 on faktapohjan oma vähennyslasku
+   *    — käytetään lähteen omaa muotoa (450 vuonna 1909, noin tuhat
+   *    vähemmän kuin 1901).
+   *
+   * PILARI 1 JA SPEC-MANTEREET.MD:N OSEANIA-LINJAUS: gimuy-walubarra-
+   * yidinjit ja seudun oma nimi Gimuy tulevat ensimmäisenä nostona
+   * ennen siirtomaahistoriaa, ja kansa kuvataan nykypäivän
+   * toimijana (neljä perinteisten omistajien ryhmää, 9,7 prosenttia
+   * väestöstä). Dalrymplen oma matkakertomus sisältää aikakauden
+   * rasistista kieltä ja yksityiskohtaisia väkivaltakuvauksia — niitä
+   * EI toisteta (pilari 4). Vuoden 1872 Battle Camp -yhteenotto
+   * kerrotaan tapahtumana, ja lähde itse on siitä yhden virkkeen
+   * mittainen.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026 pyyntöön
+   * 429:llä (vuorokausikiintiö täynnä), eikä lukuja keksitä
+   * (Samarkand-malli v965) — js/packs/saatiedot.js jää koskematta ja
+   * lehti näkyy ilman säätä kuten Dunedinissa ja Suvassa. Oppaan
+   * sääjakso nojaa siksi en-Wikipedian sääruutuun ja sanoo sen
+   * ääneen: luvut ovat Bureau of Meteorologyn asemalta Cairns Aero
+   * AWS, normaalikaudelta 1991-2020.
+   *
+   * KUVAT haettiin Commonsin API:sta kategoriahauilla (Cairns
+   * Queensland, Views of Cairns, Panoramics of Cairns, History of
+   * Cairns, Esplanade Cairns, Kuranda Scenic Railway, Great Barrier
+   * Reef, Daintree Rainforest, Tourism in Cairns, Buildings in
+   * Cairns), lisenssi ja tekijä luettiin extmetadatasta 6.9.2026, ja
+   * jokainen valittu kuva katsottiin silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "StateLibQld 1 100828.jpg" (upea vuoden 1890
+   * asemakuva, mutta negatiiville on painettu teksti "RAILWAY ST'N.
+   * CAIRNS" — talon sääntö kieltää kuvan päälle lisätyn merkinnän),
+   * "Cairns Marina-03 (23513469655).jpg" ja muut saman kuvaajan
+   * sarjasta (kuvaan lisätty ohut valkoinen kehys), "Cairns
+   * Museum.jpg" (tunnistettavia kasvoja etualalla), "Esplanade,
+   * Cairns, 2015 (02).JPG" (katunäkymä liikkeiden mainoskyltteineen,
+   * ei yleiskuva), "Station Dusk.JPG" (mainosjulisteet pääosassa),
+   * "Former Cairns Court House, 2025, 01.jpg" (näyttelybanderollit
+   * julkisivulla ja henkilö etualalla), "Cairns, Great Ocean Barrier
+   * Reef 02.jpg" (lentokoneen tuki halkaisee kuvan), "Great Barrier
+   * Reef photos 02.jpg" (hämärä ja sameanpuoleinen) ja "Kuranda
+   * Scenic Railway 1774.jpg" (yksityiskohta, henkilö reunassa).
+   * OSEANIA-VALOKUVATAULUN cairns-kohdan viisi tiedostoa on
+   * tarkoituksella kierretty, koska yksi tiedostonimi saa esiintyä
+   * kaupungissa vain kerran.
+   *
+   * ENNEN JA NYT EI OLE KAUPUNKINÄKYMÄ, ja se on lähdetilanne eikä
+   * valinta: Cairnsin vanhat kuvat ovat Queenslandin kirjastojen
+   * 1000 pikselin skannauksia eli alle talon 1200 pikselin rajan, ja
+   * ainoa iso vanha kaupunkikuva kantaa painettua tekstiä (ks.
+   * hylkäykset). Pariksi otettiin siksi kaupungin tunnetuin
+   * rakennustyö: Stoney Creekin ristikkosilta rakenteilla 1890 ja
+   * sama silta junan alla nykyään.
+   */
+  cairns: [
+    {
+      id: 'kaupunki',
+      nimi: 'Cairns',
+      johdanto: 'Cairnsia ei ollut vielä olemassa, kun isoisä matkusti: '
+        + 'vuonna 1873 paikalla oli retkikunnan leiri Trinity Bayn '
+        + 'rannalla, ja kaupunki perustettiin vasta kolme vuotta '
+        + 'myöhemmin kultakenttien satamaksi.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: keskusta
+       * vuoriston edessä, rannikkotasanko ylängöltä ja se ranta,
+       * jolla sademetsä ja riutta kohtaavat.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Cairns (Queensland).jpg',
+          selite: 'Cairnsin matala keskusta on kapealla '
+            + 'rantakaistaleella, ja sen takana nousee Suuri '
+            + 'vedenjakajavuoristo.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'CairnsQueensland.jpg',
+          selite: 'Kaupunki levittäytyy tasangolle vuoriston ja '
+            + 'Korallimeren väliin, ja sen halki kulkee Bruce Highway.',
+          lahde: 'The original uploader was Adz at English Wikipedia ., Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Cape tribulation.jpg',
+          selite: 'Cape Tribulationissa Cairnsista pohjoiseen sademetsä '
+            + 'kasvaa suoraan rantahiekkaan ja riutta alkaa muutaman '
+            + 'kilometrin päästä.',
+          lahde: 'Mwarnes, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat kaupungin ERI puolilta — rantatasanko vuoroveden
+       * aikaan, ylängön reuna merelle ja rantabulevardin laguuni.
+       * Cairnsille ei ole vielä generoitu herokuvia, joten
+       * karusellissa on kolme aitoa valokuvaa (vertaa Dunediniin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Trinity Bay from the Esplanade, Cairns 102 9163.jpg',
+          selite: 'Keskustan edusta on laajaa liejuista '
+            + 'vuorovesitasankoa, ja laskuveden aikaan mangroven taimet '
+            + 'jäävät kuiville.',
+          lahde: 'John Robert McPherson, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Henry Ross Lookout, 2015 (04).jpg',
+          selite: 'Kurandan ylängön reunalta näkyy koko rannikkotasanko '
+            + 'ja sen takana Korallimeri.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Saltwater Pool on Esplanade - Cairns - Flickr - brewbooks.jpg',
+          selite: 'Esplanadin suolavesilaguuni aamuvalossa, ja sen takana '
+            + 'aukeaa Trinity Bay.',
+          lahde: 'brewbooks from near Seattle, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Building Stoney Creek Bridge for the Cairns to Kuranda Railway, 1890.jpg',
+          vuosi: '1890',
+          selite: 'Stoney Creekin ristikkosiltaa pystytettiin 1890 '
+            + 'kallionseinämään vesiputouksen viereen.',
+          lahde: 'Queensland State Archives, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Kuranda Scenic Railway 14.jpg',
+          selite: 'Sama kaartuva silta kantaa yhä junia, jotka nousevat '
+            + 'Cairnsista Kurandaan.',
+          lahde: 'gillfoto, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Gimuy oli täällä ennen Cairnsia',
+          teksti: 'Ennen brittiläistä asutusta seutua asuttivat '
+            + 'gimuy-walubarra-yidinjit, ja yidinyn kielellä alue on yhä '
+            + 'nimeltään Gimuy. Kieltä on tutkinut perusteellisesti '
+            + 'kielitieteilijä R. M. W. Dixon, jonka Yidinyn kielioppi '
+            + 'ilmestyi 1977. Seutu on edelleen neljän tunnustetun '
+            + 'perinteisten omistajien ryhmän kotimaata: Dawul Wuru eli '
+            + 'yirrganydjit Cairnsin ja Port Douglasin välillä, '
+            + 'djabugayt Barron Gorgen kansallispuistossa, gunggandjit '
+            + 'yli 7 500 hehtaarilla Yarrabahin niemimaalla ja '
+            + 'yidinjiklaanit. Vuoden 2021 väestönlaskennassa '
+            + 'alkuperäiskansojen osuus kaupungin väestöstä oli 9,7 '
+            + 'prosenttia.',
+          tiedosto: 'Landscape near Cairns.jpg',
+          selite: 'Sademetsän reuna ja sokeriruokopellot vaihtuvat '
+            + 'toisikseen Cairnsin liepeillä.',
+          lahde: 'Dinkum, Wikimedia Commons (CC0)',
+          wiki: 'Cairns',
+        },
+        {
+          otsikko: 'Vuosi 1873: retkikunta nukkui tulevalla torilla',
+          teksti: 'Queenslandin hallitus lähetti George Elphinstone '
+            + 'Dalrymplen kartoittamaan Cardwellin pohjoispuolisia '
+            + 'rannikoita sokeriviljelyä varten. Retkikunta lähti '
+            + 'liikkeelle 29. syyskuuta 1873 kahdella kutterilla, Flying '
+            + 'Fishillä ja Coquettella, ja saapui syksyn mittaan Trinity '
+            + 'Bayhin. Wikipedian oma sanamuoto on suora: Dalrymple '
+            + 'leiriytyi paikalle, josta myöhemmin tuli Cairnsin '
+            + 'kaupunki. Rannalla asui runsaasti yidinjejä, jotka olivat '
+            + 'tunnettuja suurista, koristelluista ulokekanooteistaan. '
+            + 'Retkikunta palasi Cardwelliin 22. joulukuuta.',
+          tiedosto: 'Rainforest to Reef.jpg',
+          selite: 'Trinity Bayn tasanko avautuu ylängön reunalta merelle '
+            + 'päin, ja jossain tuolla rannalla oli syksyn 1873 leiri.',
+          lahde: 'Olivia Ellman, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'George Elphinstone Dalrymple',
+        },
+        {
+          otsikko: 'Rautatie, joka kiipesi vuorenrinnettä',
+          teksti: 'Rata Cairnsista Athertonin ylängölle aloitettiin 1886 '
+            + 'ja se ylsi Kurandaan 1891; matkustajaliikenne alkoi 25. '
+            + 'kesäkuuta 1891. Reitti nousee merenpinnasta 328 metriin '
+            + 'Macalisterin vuoriston läpi, ja siihen louhittiin käsin '
+            + 'viisitoista tunnelia ja rakennettiin 37 siltaa. Maata '
+            + 'kaivettiin kolme miljoonaa kuutiometriä, ja moni '
+            + 'työntekijä kuoli rakennustöissä. Ensimmäinen varsinainen '
+            + 'matkailujuna ajoi reitin 1936. Rata on nykyään '
+            + 'perintölistattu ja yhä samassa käytössä: yhdensuuntainen '
+            + 'matka kestää vajaat kaksi tuntia.',
+          tiedosto: 'Kuranda Railway - panoramio.jpg',
+          selite: 'Juna lähestyy yhtä radan viidestätoista käsin '
+            + 'louhitusta tunnelista Barron Gorgen rinteessä.',
+          lahde: 'qwesy qwesy, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Kuranda Scenic Railway',
+        },
+        {
+          otsikko: 'Grafton Streetin kiinalaiskaupunki',
+          teksti: 'Pian kaupungin perustamisen jälkeen kiinalaiset '
+            + 'siirtolaiset alkoivat kokeilla puuvillan, tupakan, '
+            + 'kahvin, riisin, sokerin ja banaanin viljelyä, ja '
+            + 'markkinapuutarhurit tuottivat kaivostyöläisille hedelmät '
+            + 'ja vihannekset. Vuonna 1886 kiinalaiset olivat 60 '
+            + 'prosenttia seudun viljelijöistä ja 90 prosenttia '
+            + 'puutarhureista — 795 henkeä. Grafton Streetin '
+            + 'kiinalaiskaupunki oli 1880-luvulta 1940-luvun puoliväliin '
+            + 'suurin ja pisimpään toiminut kiinalaisyhteisö Brisbanen '
+            + 'ulkopuolella Queenslandissa. Poliisin väestönlaskenta '
+            + 'kirjasi 1909 enää 450 kiinalaista, noin tuhat vähemmän '
+            + 'kuin 1901.',
+          tiedosto: 'Chinatown Cairns, circa 1890.jpg',
+          selite: 'Cairnsin kiinalaiskaupungin kattoja noin 1890; oikealla '
+            + 'kohoaa Crown Hotel ja sen vasemmalla puolella näkyy Lit '
+            + 'Sung Goongin temppeli.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+          wiki: 'Cairns',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Southern Cassowary (Casuarius casuarius) (9741540559).jpg',
+          selite: 'Kasuaari on Wet Tropicsin tunnusomaisin lintu ja '
+            + 'sademetsän tärkein siementen levittäjä.',
+          lahde: 'Bernard DUPONT from FRANCE, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Cairns on Australian trooppisen pohjoisen '
+          + 'matkailukaupunki, ja se on käytännössä kahden '
+          + 'maailmanperintökohteen välissä: Iso valliriutta alkaa '
+          + 'muutaman tunnin venematkan päästä ja Wet Tropicsin '
+          + 'sademetsä alkaa heti kaupungin takaa. Keskusta on pieni ja '
+          + 'kävelymitassa, mutta kaupungin oma ranta on liejuista '
+          + 'vuorovesitasankoa — uimaan mennään esplanadin '
+          + 'suolavesilaguuniin. Vuodenajat ovat käänteiset ja '
+          + 'kaksijakoiset: sadekausi marraskuusta toukokuuhun, '
+          + 'kuivempi kausi kesäkuusta lokakuuhun.',
+        artikkeli: {
+          nimi: 'Matkailijan Cairns',
+          taitto: 'opas',
+          teksti: 'Kaupunki, joka ei ole kohde vaan lähtöpaikka: '
+            + 'satamasta lähdetään riutalle, asemalta vuorille ja '
+            + 'maantietä pohjoiseen maailman vanhimpiin sademetsiin.',
+          nosto: 'Cairnsin seutu on Tourism Australian mukaan '
+            + 'ulkomaisten matkailijoiden neljänneksi suosituin kohde '
+            + 'Australiassa Sydneyn, Melbournen ja Brisbanen jälkeen — '
+            + 'ja ainoa niistä, josta pääsee samana päivänä sekä '
+            + 'riutalle että sademetsään.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Cairnsin kansainvälinen lentokenttä avattiin '
+                + '1984, ja se teki kaupungista matkailukohteen '
+                + 'erityisesti Japanin markkinoilla; nykyään täältä on '
+                + 'suoria lentoja myös Kiinasta. Rautateitse Cairns on '
+                + 'Queenslandin rannikkoradan pohjoinen pääteasema, ja '
+                + 'samalta asemalta lähtee myös Kurandan turistijuna. '
+                + 'Keskustassa liikutaan kävellen: esplanadilta '
+                + 'rautatieasemalle on runsas kilometri, ja kaupungin '
+                + 'vanha perintökortteli mahtuu muutaman korttelin '
+                + 'alalle. Kuranda on 19 kilometriä luoteeseen, ja sinne '
+                + 'pääsee junalla, köysiradalla tai maantietä.',
+            },
+            {
+              otsikko: 'Riutalle päiväretkellä',
+              teksti: 'Lähin tapa nähdä Iso valliriutta on lauttamatka '
+                + 'Green Islandille, korallikeolle noin 27 kilometrin '
+                + 'päässä kaupungista. Saari on ollut kansallispuisto '
+                + '1937 ja se kuuluu riutan maailmanperintöalueeseen; '
+                + 'siellä liikkuu lasipohjaisia veneitä, joista riuttaa '
+                + 'näkee kastumatta. Retkiveneet lähtevät satamasta '
+                + 'päivittäin sään salliessa, ja monet niistä jatkavat '
+                + 'ulkoriutan pontoneille. Matkailu tuo riutta-alueelle '
+                + 'yli kolme miljardia Australian dollaria vuodessa.',
+              kuva: {
+                tiedosto: 'Great Barrier Reef Corals.jpg',
+                selite: 'Ulkoriutan korallipuutarhassa kasvavat rinnakkain '
+                  + 'haarakorallit ja pehmytkorallit.',
+                lahde: 'Gökhan Tolun, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Vesi, jota ei koske ilman suojaa',
+              teksti: 'Pohjois-Queenslandin rannikkovesissä elää '
+                + 'laatikkomeduusa Chironex fleckeri, yksi maailman '
+                + 'myrkyllisimmistä eläimistä, sekä peukalonkokoinen '
+                + 'irukandji-meduusa. Rannoille pingotetaan '
+                + 'meduusaverkkoja ja pystytetään etikkapisteitä, ja '
+                + 'täysipeittävä uimapuku suojaa tehokkaasti. Cairnsin '
+                + 'oma rantaviiva on joka tapauksessa liejuinen '
+                + 'vuorovesitasanko, joten paikalliset uivat kaupungin '
+                + 'rakentamassa esplanadin laguunissa: 4 800 '
+                + 'neliömetrin suolavesiallas avattiin maaliskuussa '
+                + '2003 ja siitä tuli heti kaupungin suosituin paikka.',
+            },
+            {
+              otsikko: 'Ylös vuorelle ja sademetsään',
+              teksti: 'Kurandan juna kulkee Barron Gorgen '
+                + 'kansallispuiston läpi ja pysähtyy Barron Fallsin '
+                + 'näköalapaikalle. Kylässä perillä on eläintarha, '
+                + 'toreja, taidegallerioita ja alkuperäiskansojen '
+                + 'käsitöitä myyviä liikkeitä lyhyen kävelymatkan '
+                + 'päässä asemalta. Pohjoiseen mentäessä maantie vie '
+                + 'runsaan sadan kilometrin päähän Daintreen '
+                + 'sademetsään, jossa metsä ulottuu rantaan asti. '
+                + 'Sademetsäretkellä kannattaa muistaa, että kasuaari on '
+                + 'iso, nopea ja arvaamaton lintu — sitä katsotaan '
+                + 'etäältä.',
+              kuva: {
+                tiedosto: 'Barron Falls from Railway.jpg',
+                selite: 'Barron Falls on täydessä virrassa vain '
+                  + 'sadekaudella; kuivana aikana kalliot ovat lähes '
+                  + 'paljaat.',
+                lahde: 'David W Eckhoff, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Cairns-artikkelin '
+                + 'sääruudusta (Bureau of Meteorology, asema Cairns Aero '
+                + 'AWS, normaalikausi 1991–2020); lehdellä ei ole omaa '
+                + 'vuosigraafia, koska ERA5-lukuja ei saatu haettua. '
+                + 'Ilmasto on trooppinen monsuuni-ilmasto ja vuodessa on '
+                + 'käytännössä kaksi vuodenaikaa. Sadekausi kestää '
+                + 'marraskuusta toukokuuhun: helmikuussa sataa '
+                + 'keskimäärin 476 millimetriä, ja tammikuussa 1981 '
+                + 'kertyi kuukaudessa yli 1 417 millimetriä. Kuivempi '
+                + 'kausi kesä–lokakuussa saa 27–85 millimetriä '
+                + 'kuukaudessa. Keskimääräinen ylin lämpötila vaihtelee '
+                + 'heinäkuun 26,2 asteesta tammikuun 31,7 asteeseen, ja '
+                + 'vuosisade on 1 958 millimetriä. Trooppiset syklonit '
+                + 'muodostuvat marraskuun ja toukokuun välillä.',
+              kuva: {
+                tiedosto: 'Stoney Creek Falls.jpg',
+                selite: 'Stoney Creekin putous kuohuu sadekaudella '
+                  + 'suoraan Kurandan radan sillan alitse.',
+                lahde: 'JustARandomEditor123, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Iso valliriutta',
+                tahdet: 3,
+                selite: 'Maailmanperintökohde vuodesta 1981; retkiveneet '
+                  + 'lähtevät kaupungin satamasta päivittäin.',
+              },
+              {
+                mita: 'Kurandan rata',
+                tahdet: 3,
+                selite: 'Vuosien 1886–1891 vuoristorata, 15 käsin '
+                  + 'louhittua tunnelia ja 37 siltaa.',
+              },
+              {
+                mita: 'Daintreen sademetsä',
+                tahdet: 3,
+                selite: 'Noin 1 200 neliökilometriä yhtä maailman '
+                  + 'vanhimmista sademetsistä, runsaan sadan kilometrin '
+                  + 'päässä pohjoisessa.',
+              },
+              {
+                mita: 'Esplanadin laguuni',
+                tahdet: 2,
+                selite: '4 800 neliömetrin suolavesiallas kaupungin '
+                  + 'rantabulevardilla, avattu 2003.',
+              },
+              {
+                mita: 'Green Island',
+                tahdet: 2,
+                selite: 'Korallikeko 27 kilometrin päässä, '
+                  + 'kansallispuisto vuodesta 1937.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Meduusat ja syklonit ovat mukana,
+             * koska molemmat vaikuttavat siihen, milloin ja miten
+             * kaupungissa liikutaan; luvut ovat samat kuin jaksossa 5.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Vuodenaikoja on kaksi',
+                teksti: 'Sadekausi kestää marraskuusta toukokuuhun ja '
+                  + 'kuivempi kausi kesäkuusta lokakuuhun; helmikuussa '
+                  + 'sataa keskimäärin 476 millimetriä.',
+              },
+              {
+                otsikko: 'Meduusakausi on sama kuin sadekausi',
+                teksti: 'Laatikkomeduusa ja irukandji ovat rannikolla '
+                  + 'lämpimään aikaan — uidaan verkotetuilla rannoilla '
+                  + 'tai laguunissa, ja täysipeittävä puku suojaa.',
+              },
+              {
+                otsikko: 'Syklonit kuuluvat kuvaan',
+                teksti: 'Trooppisia sykloneita muodostuu marraskuun ja '
+                  + 'toukokuun välillä; joulukuun 2023 Jasper aiheutti '
+                  + 'pahimman tulvan sitten mittausten alkamisen 1915.',
+              },
+              {
+                otsikko: 'Kaupungin ranta ei ole uimaranta',
+                teksti: 'Keskustan edusta on laajaa liejuista '
+                  + 'vuorovesitasankoa; hiekkarannat ovat kaupungin '
+                  + 'pohjoispuolella.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Riutta ja sademetsä',
+      johdanto: 'Cairnsin edustalla kohtaa kaksi maailmanperintökohdetta: '
+        + 'maailman suurin koralliriutta ja yksi sen vanhimmista '
+        + 'sademetsistä. Kumpikaan ei ole muuttumaton — toinen lämpenee, '
+        + 'toinen palautettiin juuri asukkailleen.',
+      tehtava: {
+        kysymys: 'Miksi koralli muuttuu valkoiseksi, kun merivesi '
+          + 'lämpenee liikaa?',
+        vaihtoehdot: [
+          'se karkottaa sisällään elävät levät',
+          'se kalkkiutuu auringossa',
+          'sen kuori haalistuu suolasta',
+          'se kasvattaa uuden vaalean kerroksen',
+        ],
+        oikea: 0,
+        fakta: 'Koralli elää symbioosissa mikroskooppisten levien '
+          + 'kanssa, jotka antavat sille sekä värin että ravinnon. '
+          + 'Liiassa lämmössä koralli karkottaa levät ja muuttuu '
+          + 'valkoiseksi; lyhyestä lämpöjaksosta se voi vielä toipua.',
+      },
+      nostot: [
+        {
+          otsikko: 'Riutta on nuorempi kuin luulisi',
+          teksti: 'Vaikka riuttojen historia alueella on satojatuhansia '
+            + 'vuosia pitkä, nykyinen elävä riuttarakenne on nuori. '
+            + 'Great Barrier Reef Marine Park Authorityn mukaan se alkoi '
+            + 'kasvaa vanhemman kalkkikivialustan päälle noin 9 000 '
+            + 'vuotta sitten; CRC Reef Research Centre arvioi iäksi '
+            + '6 000–8 000 vuotta. Viimeisen jääkauden huipulla '
+            + 'merenpinta oli noin 120 metriä nykyistä alempana, ja kun '
+            + 'se nousi, korallit saivat kasvaa yhä ylemmäs '
+            + 'upponneiden rantakukkuloiden päällä. Riutta valittiin '
+            + 'maailmanperintökohteeksi 1981.',
+          tiedosto: 'The Great Barrier Reef, Cairns, Queensland (Ank Kumar) 01.jpg',
+          selite: 'Ilmasta katsottuna riutta on tuhansien erillisten '
+            + 'riuttalaikkujen kirjava matalikko avomeren reunalla.',
+          lahde: 'Ank Kumar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Great Barrier Reef',
+        },
+        {
+          otsikko: 'Väri, joka katoaa kun meri kuumenee',
+          teksti: 'Koralli elää symbioosissa mikroskooppisten levien '
+            + 'kanssa: ne antavat sille värin ja yhteyttävät sille '
+            + 'ravintoa. Kun vesi lämpenee liikaa, koralli karkottaa '
+            + 'levät ja muuttuu valkoiseksi. Lyhyestä lämpöjaksosta se '
+            + 'voi toipua, pitkästä ei. Laajoja joukkovalkaistumisia on '
+            + 'koettu kesinä 1998, 2002, 2006, 2016, 2017 ja 2020, ja '
+            + 'uusi vahvistettiin maaliskuussa 2022. Vuonna 2020 '
+            + 'julkaistun tutkimuksen mukaan riutta on menettänyt yli '
+            + 'puolet korallipeitteestään vuodesta 1995. Samana vuonna '
+            + '2022 riutan pohjois- ja keskiosien korallipeite oli '
+            + 'kuitenkin runsainta koko seurannan aikana.',
+          tiedosto: 'Coral Reef Bleaching.jpg',
+          selite: 'Vaalentunut koralli Isolla valliriutalla vuoden 2016 '
+            + 'lämpöaallon aikaan.',
+          lahde: 'Jay Galvin, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Coral bleaching',
+        },
+        {
+          otsikko: 'Metsä, joka on nähnyt dinosaurukset',
+          teksti: 'Daintreen sademetsä on noin 1 200 neliökilometrin '
+            + 'alue runsaan sadan kilometrin päässä Cairnsista '
+            + 'pohjoiseen, ja se on osa Australian itärannikon '
+            + 'vanhinta yhtäjaksoista sademetsäaluetta. Metsä on '
+            + 'säilynyt noin 180 miljoonaa vuotta. Siellä kasvaa lähes '
+            + '3 000 kasvilajia lähes 210 heimosta ja yli 900 puulajia, '
+            + 'ja siellä elää 30 prosenttia Australian sammakko-, '
+            + 'matelija- ja pussieläinlajeista, 90 prosenttia lepakko- '
+            + 'ja perhoslajeista ja yli 12 000 hyönteislajia — kaikki '
+            + 'alueella, joka on 0,12 prosenttia Australian '
+            + 'maapinta-alasta.',
+          tiedosto: 'Daintree Rainforest, Queensland (483845) (9443587310).jpg',
+          selite: 'Daintreen latvusto on monikerroksinen, ja alimpana '
+            + 'kasvavat viuhkapalmut ja köynnökset.',
+          lahde: 'Robert Linsdell from St. Andrews, Canada, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Daintree Rainforest',
+        },
+        {
+          otsikko: 'Sademetsä palautettiin asukkailleen',
+          teksti: 'Idän kuku yalanjit hakivat oikeutta esi-isiensä '
+            + 'maahan yli neljännesvuosisadan. Ensimmäinen '
+            + 'maaoikeusvaade jätettiin toukokuussa 1995, ja huhtikuussa '
+            + '2007 heidät tunnustettiin viidellätoista '
+            + 'maankäyttösopimuksella yli 230 000 hehtaarin perinteisiksi '
+            + 'omistajiksi Mossmanin ja Cooktownin välillä. Syyskuun '
+            + 'lopussa 2021 Queenslandin osavaltion hallitus luovutti '
+            + 'heille runsaat 160 000 hehtaaria maata, mukaan lukien '
+            + 'Daintreen kansallispuisto. Kaksi lähdeartikkelia antavat '
+            + 'sopimukselle eri päivän ja hieman eri hehtaariluvun, '
+            + 'joten tarkkaa lukua ei tässä väitetä. Aluetta hoidetaan '
+            + 'nyt yhdessä Queenslandin puistoviranomaisen kanssa.',
+          tiedosto: '20160923113050 - One of the many rivers in the Daintree (29917413112).jpg',
+          selite: 'Daintreen joet virtaavat metsän läpi merelle, ja '
+            + 'niiden varsilla kasvaa mangrovea.',
+          lahde: 'Felix Dance, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Kuku Yalanji',
+        },
+      ],
+    },
+  ],
+  /*
+   * PANAMÁ (Opus 6.9.2026, paketti O9) — P-Amerikan laudan
+   * kaupunkilehti, joka palvelee myös E-Amerikan lautaa. Fablen
+   * päätös 24.8.2026 (spec-mantereet.md): kaupunki-id 'panama' on
+   * molemmilla laudoilla ja sama KULTTUURI_KATEGORIAT-lohko riittää
+   * (Borneo/Sumatra-ennakkotapaus); kirjanpidossa Panamá lasketaan
+   * P-Amerikkaan. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-panama.md ja sen tarkistus tarkistus-panama.md
+   * (tuomio "kelpaa korjausten jälkeen"). Väitteet on luettu
+   * en-Wikipedian raakateksteistä 6.9.2026: "Panama City", "Panamá
+   * Viejo", "Casco Viejo, Panama", "History of Panama", "Panama
+   * Canal", "Panama Canal Railway", "Panama hat", "Ancon Hill",
+   * "Chagres and Fort San Lorenzo" ja "Biomuseo".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * koskettu.
+   *
+   * SIVUJA ON KAKSI kuten Montrealissa ja Torontossa (kaupunki +
+   * teemasivu). Teemasivun id on vakioaihe 'historia', koska
+   * AIHE_IKONIT ei tarjoa kannaksen ylitykselle omaa kuvaketta eikä
+   * uusia sivu-id:itä tehdä; sivun nimi 'Kannaksen oikotie' kertoo
+   * aiheen.
+   *
+   * TARKISTUKSEN KAIKKI KORJAUKSET ON TEHTY:
+   *  - H3:n otsikko EI väitä radan maksaneen itseään takaisin ennen
+   *    valmistumistaan. Lähde sanoo, että vain YLI KOLMASOSA
+   *    8 miljoonan dollarin hinnasta oli maksettu lipuilla ja
+   *    rahdilla, kun rata valmistui 28.1.1855.
+   *  - H3 käyttää radasta sen avaamishetken omaa nimeä "valtamerten
+   *    välinen rautatie" (inter-oceanic railroad). Artikkeli sanoo
+   *    itse, että transcontinental-nimitys on myöhempi ja kiistelty
+   *    ("later also described by some ... despite traversing only
+   *    the narrow isthmus"), joten sitä ei toisteta tosiasiana.
+   *  - K3: uusi kaupunki perustettiin 21.1.1673. "Panama City"
+   *    -artikkelin Casco Viejo -osio sanoo "built and settled in
+   *    1671", mutta saman artikkelin History-osio ja koko "Casco
+   *    Viejo, Panama" -artikkeli antavat 1673 päivämäärineen —
+   *    tarkempi lähde voittaa, ja ristiriita on kirjattu tähän.
+   *  - K2: kaupunki rakennettiin uudelleen LOUNAASEEN (5 mi / 8 km
+   *    southwest), ei länteen.
+   *  - K4: hattuja vietiin Yhdysvaltoihin Ecuadorista ja Panamasta;
+   *    lähde ei sano, että kaikki kulkivat Panaman kautta.
+   *
+   * EI NYKYPOLITIIKKAA (Raamattu, spec-mantereet.md): Noriegan
+   * sotilashallinto, vuoden 1989 invaasio, El Chorrillon palo,
+   * rahanpesukeskustelu ja vuoden 2024 kanavakiista on jätetty
+   * kokonaan pois, vaikka lähdeartikkelit käsittelevät niitä.
+   * Siirtomaahistoria, orjakauppa ja merirosvous kerrotaan
+   * tapahtumina neutraalisti ilman yksityiskohtien korostusta
+   * (pilari 4). Pilarin 1 kannalta paras käytettävissä oleva aines
+   * on cimarroniyhteisöt ja niiden 1582 sopimus: ne kuvaavat
+   * toimijuutta, eivät uhriutta.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026 pyyntöön
+   * 429:llä (vuorokausikiintiö täynnä), eikä lukuja keksitä
+   * (Samarkand-malli v965). Oppaan sääjakso nojaa siksi
+   * en-Wikipedian sääruutuun ja sanoo sen ääneen: luvut ovat
+   * normaalikaudelta 1991-2020.
+   *
+   * KUVAT haettiin Commonsin API:sta kategoria- ja hakusanahauilla
+   * (Historic District of Panamá — ei "Casco Viejo", joka EI OLE
+   * OLEMASSA; Panamá Viejo, Panama Canal Railway, Ancon Hill,
+   * History of Panama City, Miraflores Locks), lisenssi ja tekijä
+   * luettiin extmetadatasta 6.9.2026, ja jokainen valittu kuva
+   * katsottiin silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Arco Chato DSC08358.JPG" ja "Casco Viejo (Old City)
+   * Facade ... 01.jpg" (matkamuistomyymälän tavara ja iso seinämaalaus
+   * pääosassa), "Cerro Ancón desde el Casco Antiguo.jpg" (harmaa
+   * utuinen, merimuurissa graffiti, henkilö etualan reunassa),
+   * "Panama City from Ancon Hill - panoramio.jpg" (kuvasuhde 3,6:1
+   * rajautuisi lehdessä nauhaksi), "Panama Canal Railroad Company
+   * Train.jpg" (tunnistettavia kasvoja vaunussa), "Punta Culebra
+   * Panama.jpg" (opastaulu, ei näkymä), "A Photo Of The Amador
+   * Causeway.jpg" (ihmisjoukko ja liikekyltit), "Bandera de Panama
+   * en el Cerro Ancon visto desde su base.jpg" (lähes pelkkää
+   * taivasta) ja "Casco Viejo, Panama City (23652556793).jpg"
+   * (sama sarja, tunnistettavia kasvoja).
+   * AIHETOISTO, joka on tarkoituksellinen: Panamá Viejo esiintyy
+   * kahdesti (K1:ssä koko Plaza Mayor raunioineen ja matkaoppaan
+   * etusivukuvassa pelkkä katedraalin torni) — eri tiedostot, eri
+   * mittakaava, ja juuri se paikka on koko kaupungin alkukohta.
+   * Amadorin aallonmurtaja esiintyy avauskuvassa auringonlaskussa ja
+   * kohdekartan Fort Amador -jutussa saarten puolelta.
+   *
+   * ENNEN JA NYT: vanha puoli on Bedford Pimin teoksesta "The Gate
+   * of the Pacific" (1867) peräisin oleva vuoden 1863 litografia
+   * British Libraryn kokoelmasta (PD-old-70). Painolaatan omassa
+   * alareunassa on kustantajan litera — reseptin nimenomainen
+   * poikkeus ("julkaisijan oma litera, joka selitetään
+   * kuvatekstissä"), ja kuvateksti kertoo sen. Nykykuva on samasta
+   * suunnasta lahden yli otettu näkymä vanhaankaupunkiin.
+   */
+  panama: [
+    {
+      id: 'kaupunki',
+      nimi: 'Panamá',
+      johdanto: 'Panamá perustettiin 1519 kapealle satamakannakselle, '
+        + 'jonka läpi kulki Espanjan koko Amerikan-omaisuus. Isoisän '
+        + 'matkan aikaan kaupunki oli jo kerran poltettu ja rakennettu '
+        + 'uudelleen, eikä sen suurin muutos ollut vielä edes alkanut.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: nykykeskusta
+       * lahden yllä, kanavan Tyynenmeren suu ja kaivumassoista
+       * rakennettu aallonmurtaja saarineen.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Panama City financial district.jpg',
+          selite: 'Nykyinen keskusta kohoaa Panaman lahden rannalta, ja '
+            + 'sen edustalla vuorovesi paljastaa laajat matalikot.',
+          lahde: 'Dronepicr, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Entering In Panama Canal - panoramio.jpg',
+          selite: 'Kanavan Tyynenmeren suulla odottaa aina joukko '
+            + 'aluksia, ja taustalla kohoaa Ancónin kukkula.',
+          lahde: '---=XEON=---, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Isla Naos e Isla Perico.jpg',
+          selite: 'Amadorin aallonmurtaja yhdistää neljä saarta '
+            + 'mantereeseen, ja se rakennettiin kanavan kaivumassoista.',
+          lahde: 'Ayaita, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat kaupungin ERI puolilta — pilvenpiirtäjäkeskusta
+       * yöllä, aallonmurtajan rantatie ja kanavan sulut. Panamálle ei
+       * ole vielä generoitu herokuvia, joten karusellissa on kolme
+       * aitoa valokuvaa (vertaa Dunediniin ja Suvaan).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Panama - Panama City - panoramio (6).jpg',
+          selite: 'Nykykeskustan pilvenpiirtäjärivi nousee suoraan '
+            + 'lahden rannasta, ja edustalla vuorovesi paljastaa '
+            + 'kalliomatalikot.',
+          lahde: 'randreu, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Causeway de Amador 17-12-14.jpg',
+          selite: 'Aallonmurtajan rantatieltä aurinko laskee suoraan '
+            + 'Tyyneenmereen kanavan suun yllä.',
+          lahde: 'Edwinosb, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Miraflores Locks, Panama - 11.jpg',
+          selite: 'Miraflores-sulut nostavat konttilaivan kammiossa '
+            + 'ylemmäs, ja rannalla odottavat vetoveturit.',
+          lahde: 'Ivo Kruusamägi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Panama City, Eastern Suburb, Railway terminus on the right.jpg',
+          vuosi: '1863',
+          selite: 'Litografia kaupungin itälaidasta kymmenen vuotta '
+            + 'ennen isoisän matkaa; laatan alareunaan on painettu '
+            + 'kustantajan oma kuvateksti rautatien päätepisteestä.',
+          lahde: 'British Library, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Casco viejo desde la Cinta Costera.jpg',
+          selite: 'Sama matala vanhakaupunki lahden yli katsottuna '
+            + 'nykyään, kalastusveneet edustallaan.',
+          lahde: 'Felipe Valduga, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki hopeatien päässä',
+          teksti: 'Espanjalainen Pedro Arias de Ávila perusti Panamán '
+            + '15. elokuuta 1519 kapean satamansuun rannalle. '
+            + 'Muutamassa vuodessa kaupungista tuli lähtöpiste Perun '
+            + 'valloitukselle ja kauttakulkupaikka Espanjaan matkaavalle '
+            + 'kullalle ja hopealle: lasti purettiin maihin Tyynenmeren '
+            + 'puolella ja vietiin muulikaravaaneilla kannaksen yli '
+            + 'Nombre de Diosin ja myöhemmin Portobelon markkinoille. '
+            + 'Vuodesta 1520 kaupungin satamaa ja kauppaa — etenkin '
+            + 'orjakauppaa — hallitsivat genovalaiset kauppiaat, joille '
+            + 'Espanjan kruunu myönsi erikoisluvan; Genovan tasavalta '
+            + 'oli Espanjan tärkein pankkikumppani.',
+          tiedosto: 'Plaza Mayor PANAMÁ VIEJO.jpg',
+          selite: 'Panamá Viejon Plaza Mayor on nykyään nurmikenttä, '
+            + 'jonka laidalla seisoo katedraalin torni.',
+          lahde: 'Fermín Santana, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Panamá Viejo',
+        },
+        {
+          otsikko: 'Yhdeksän päivän marssi viidakon läpi',
+          teksti: 'Vuonna 1670 walesilainen kaappari Henry Morgan '
+            + 'määräsi hyökkäyksen, joka jätti Chagres-joen suulla '
+            + 'seisseen San Lorenzon linnakkeen raunioiksi. Seuraavana '
+            + 'vuonna hän käytti sitä tukikohtanaan ja marssi 1 400 '
+            + 'miehen kanssa kannaksen yli. Kaupungin miliisi kukistui '
+            + '28. tammikuuta 1671, ja tuli tuhosi kaupungin. Kumpi '
+            + 'sytytti sen, on yhä auki: Morgan syytti asukkaita ja '
+            + 'varakuningas Morgania, ja aikalaiskertomukset viittaavat '
+            + 'asukkaisiin — heillä oli syy, brittiläisillä ei, koska '
+            + 'kaupunkia ei ollut vielä ryöstetty. Panamá rakennettiin '
+            + 'uudelleen noin kahdeksan kilometriä lounaaseen.',
+          tiedosto: 'Toma aérea del Fuerte San Lorenzo.jpg',
+          selite: 'San Lorenzon linnake vartioi Chagres-joen suuta '
+            + 'Karibian puolella, ja sen muurit ovat yhä pystyssä.',
+          lahde: 'Garcia.dennis, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Panamá Viejo',
+        },
+        {
+          otsikko: 'Niemi, joka opetteli virheistään',
+          teksti: 'Uusi kaupunki perustettiin 21. tammikuuta 1673 lähes '
+            + 'meren ympäröimälle niemelle, jota suojasi alusta asti '
+            + 'muurien ja linnoitusten järjestelmä — opetus edellisen '
+            + 'kaupungin kohtalosta oli selvä. 1700-luvulla kolme '
+            + 'suurta tulipaloa tuhosi osan alueesta uudelleen, ja '
+            + 'nykyinen katukuva syntyi vasta 1800-luvun lopun ja '
+            + '1900-luvun alkupuolen jälleenrakennuksissa: siirtomaa-'
+            + 'ajan raunioiden lomaan nousi uusklassisia ja '
+            + 'afroantillilaisia taloja. Juuri se erottaa Casco Viejon '
+            + 'lähes puhtaasti siirtomaatyylisistä vanhoistakaupungeista '
+            + 'kuten Cartagenasta ja Quitosta. Unesco listasi alueen '
+            + 'maailmanperintökohteeksi 2003.',
+          tiedosto: 'Casco Viejo, Panama City, Panama.jpg',
+          selite: 'Casco Viejon parvekkeet ja takorautakaiteet ovat '
+            + '1800-luvun lopun ja 1900-luvun alun jälleenrakennusta.',
+          lahde: 'RB Photo, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Casco Viejo, Panama',
+        },
+        {
+          otsikko: 'Hattu, joka ei ole koskaan käynyt Panamassa valmistumassa',
+          teksti: 'Panama-hattu punotaan Ecuadorissa toquilla-oljesta, '
+            + 'ja se on saanut nimensä myyntipaikastaan eikä '
+            + 'valmistusmaastaan. Termi esiintyy painetussa tekstissä jo '
+            + '1828. Kun Kalifornian kultaryntäys alkoi 1848, kannaksen '
+            + 'ylittäjät tarvitsivat suojaa aurinkoa vastaan, ja vienti '
+            + 'Ecuadorista ja Panamasta Yhdysvaltoihin kasvoi vuoteen '
+            + '1850 mennessä 220 000 hattuun vuodessa. Suosio sai '
+            + 'lisäpotkun 1906, kun presidentti Theodore Roosevelt '
+            + 'kuvattiin Panama-hattu päässään kanavan työmaalla — '
+            + 'nimen sekaannus oli siitä lähtien lopullinen.',
+          tiedosto: 'Panama Hat factory in Cuenca, Ecuador.jpg',
+          selite: 'Punotut hatut kuivuvat verstaan lattialla Cuencassa '
+            + 'Ecuadorissa, jossa suurin osa niistä yhä tehdään.',
+          lahde: 'David Brossard, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Panama hat',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'TorreIglesiaPanamaViejo.JPG',
+          selite: 'Panamá Viejon katedraalin torni on ainoa vuoden 1519 '
+            + 'kaupungista jäljellä oleva korkea rakennus.',
+          lahde: 'Giovanni.ernesto, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Panamá on kannaksen kaupunki, ja kaikki siellä '
+          + 'liittyy jotenkin ylitykseen. Kaupunki jakautuu kolmeen '
+          + 'osaan: idässä ovat Panamá Viejon rauniot, keskellä '
+          + 'kolmensadan metrin levyinen Casco Viejon niemi ja lännessä '
+          + 'pilvenpiirtäjien keskusta. Kanava alkaa kaupungin '
+          + 'kupeesta, ja sen sulut ovat vartin ajomatkan päässä. '
+          + 'Ilmasto on trooppinen savanni-ilmasto: lämpötila pysyy '
+          + 'ympäri vuoden 27 asteen tienoilla, mutta sadekausi ja '
+          + 'kuiva kausi ovat kuin eri maita.',
+        artikkeli: {
+          nimi: 'Matkailijan Panamá',
+          taitto: 'opas',
+          teksti: 'Kaupunki, joka on ollut viisisataa vuotta oikotie: '
+            + 'ensin hopeareitti, sitten rautatie, lopulta kanava — ja '
+            + 'kaikki kolme näkyvät yhä samassa maisemassa.',
+          nosto: 'Vuosina 1848–1869 kannaksen ylitti Atlantilta '
+            + 'Tyynellemerelle noin 375 000 ihmistä ja vastakkaiseen '
+            + 'suuntaan 225 000 — ja se oli vasta ennen kanavaa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Tocumenin kansainvälinen lentokenttä on '
+                + 'kaupungin itäpuolella, ja sieltä keskustaan on '
+                + 'runsas puolen tunnin ajomatka. Kaupungissa on metro '
+                + 'ja bussit, mutta matkailijan Panamá on käytännössä '
+                + 'kolme erillistä aluetta, joiden välillä liikutaan '
+                + 'autolla: Panamá Viejo idässä, Casco Viejo keskellä '
+                + 'ja kanavan sulut luoteessa. Casco Viejo on niin '
+                + 'pieni, että sen kiertää kävellen tunnissa: koko '
+                + 'niemi on kolmensadan metrin levyinen, ja katedraali, '
+                + 'presidentinlinna ja kanavamuseo ovat parin sadan '
+                + 'metrin päässä toisistaan.',
+            },
+            {
+              otsikko: 'Vanhakaupunki, jossa asuu tuhat ihmistä',
+              teksti: 'San Felipe eli Casco Viejo on kaupungin pienin '
+                + 'ja tiheimmin asuttu kaupunginosa: vuoden 2023 '
+                + 'laskennassa siellä asui 1 258 ihmistä 0,3 '
+                + 'neliökilometrillä. Alue on kunnostettu viime '
+                + 'vuosikymmeninä ravintoloiden, museoiden ja hotellien '
+                + 'kortteliksi, ja se on kanavan jälkeen kaupungin '
+                + 'suosituin nähtävyys. Noin 800 rakennuksen joukossa '
+                + 'on karibialaista, tasavaltalaista, art deco- ja '
+                + 'ranskalaistyylistä arkkitehtuuria — ja aivan '
+                + 'kulmien takana yhä rapistuvia julkisivuja.',
+              kuva: {
+                tiedosto: 'Casco Viejo, Panama City (24196849171).jpg',
+                selite: 'Casco Viejon kadut ovat kapeita, ja parvekkeet '
+                  + 'työntyvät niiden ylle molemmin puolin.',
+                lahde: 'yakovlev.alexey from Moscow, Russia, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kukkula, jolta näkee molemmat merensä',
+              teksti: 'Ancónin kukkula kohoaa 199 metriin aivan '
+                + 'kaupungin keskellä, ja sen laella liehuu Panaman '
+                + 'lippu. Kukkula on suojeltu, ja sen metsässä elää '
+                + 'yhä laiskiaisia, valkokuonokoatteja, '
+                + 'yhdeksänvyötäisiä vyötiäisiä ja Geoffroyn '
+                + 'tamariineja — keskellä miljoonakaupunkia. Ylhäältä '
+                + 'näkee sekä vanhankaupungin niemen että kanavan '
+                + 'suun. Sama kukkula oli 1671 Morganin tiedustelijoiden '
+                + 'näköalapaikka: sieltä he katsoivat, miten kaupunkia '
+                + 'puolustettiin.',
+              kuva: {
+                tiedosto: 'Cerro Ancón.jpg',
+                selite: 'Panaman lippu liehuu Ancónin kukkulan laella '
+                  + 'palmujen yläpuolella.',
+                lahde: 'Vargasd30, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Aallonmurtaja, joka on kanavan jäte',
+              teksti: 'Amadorin aallonmurtaja työntyy kaupungin '
+                + 'eteläpuolelta merelle ja yhdistää neljä saarta '
+                + 'mantereeseen. Se on kirjaimellisesti kanavan '
+                + 'sivutuote: Culebran leikkauksesta kaivettu '
+                + 'kivimurska ajettiin mangrovesuolle, ja täyttö '
+                + 'kasvoi vähitellen penkereeksi saarille asti. Työ '
+                + 'valmistui 1912. Nykyään aallonmurtajalla on '
+                + 'rantatie, venesatamia ja arkkitehti Frank Gehryn '
+                + 'suunnittelema Biomuseo, jonka väriläiskikäs katto '
+                + 'näkyy kauas merelle.',
+              kuva: {
+                tiedosto: 'CausewayAmador.JPG',
+                selite: 'Aallonmurtajan rantatie kulkee saarelta '
+                  + 'toiselle Tyynenmeren ja kanavan suun välissä.',
+                lahde: 'Ayaita, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Panama City '
+                + '-artikkelin sääruudusta (normaalikausi 1991–2020); '
+                + 'lehdellä ei ole omaa vuosigraafia, koska '
+                + 'ERA5-lukuja ei saatu haettua. Lämpötila on '
+                + 'poikkeuksellisen tasainen: vuoden keskiarvo on 27,2 '
+                + 'astetta, keskimääräinen ylin 32,1 ja alin 22,3. '
+                + 'Sade ratkaisee vuodenajan. Kuiva kausi kestää '
+                + 'joulukuusta huhtikuuhun, ja helmikuussa sataa vain '
+                + '12 millimetriä; sadekausi kestää toukokuusta '
+                + 'marraskuuhun, ja lokakuussa kertyy 311 millimetriä. '
+                + 'Aurinkoa on eniten helmikuussa (70 prosenttia '
+                + 'mahdollisesta) ja vähiten kesä- ja lokakuussa (31 '
+                + 'prosenttia), koska kaupunki on päiväntasaajan '
+                + 'pilvivyöhykkeellä.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Miraflores-sulut',
+                tahdet: 3,
+                selite: 'Vierailukeskuksesta näkee valtamerialusten '
+                  + 'nousevan sulkukammiossa muutaman metrin päästä.',
+              },
+              {
+                mita: 'Casco Viejo',
+                tahdet: 3,
+                selite: 'Vuoden 1673 muurikaupunki, Unescon listalla '
+                  + '2003; noin 800 rakennusta neljästä eri tyylikaudesta.',
+              },
+              {
+                mita: 'Panamá Viejo',
+                tahdet: 3,
+                selite: 'Vuonna 1519 perustetun ensimmäisen kaupungin '
+                  + 'rauniot, Unescon listalla 1997.',
+              },
+              {
+                mita: 'Ancónin kukkula',
+                tahdet: 2,
+                selite: '199 metrin näköalakukkula keskellä kaupunkia, '
+                  + 'ja sen rinteillä sademetsän eläimiä.',
+              },
+              {
+                mita: 'Amadorin aallonmurtaja',
+                tahdet: 2,
+                selite: 'Kanavan kaivumassoista rakennettu penger '
+                  + 'saarille, ja sen päässä Gehryn Biomuseo.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Sääluvut ovat samasta sääruudusta
+             * kuin jakso 5. Ei nykyrikollisuutta eikä politiikkaa —
+             * käytännön asiat riittävät.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade ratkaisee vuodenajan',
+                teksti: 'Kuiva kausi on joulukuusta huhtikuuhun ja '
+                  + 'sadekausi toukokuusta marraskuuhun; lokakuussa '
+                  + 'sataa 311 millimetriä, helmikuussa 12.',
+              },
+              {
+                otsikko: 'Aurinko on harvoin paljaana',
+                teksti: 'Kaupunki on päiväntasaajan pilvivyöhykkeellä, '
+                  + 'ja auringonpaisteen osuus jää kesä- ja lokakuussa '
+                  + '31 prosenttiin mahdollisesta.',
+              },
+              {
+                otsikko: 'Vanhakaupunki on pieni',
+                teksti: 'Casco Viejon niemi on kolmensadan metrin '
+                  + 'levyinen, joten kaikki sen kohteet ovat parin '
+                  + 'sadan metrin päässä toisistaan.',
+              },
+              {
+                otsikko: 'Dollari käy rahasta',
+                teksti: 'Kanava on ollut Panaman hallinnassa '
+                  + 'keskipäivästä 31. joulukuuta 1999 lähtien, ja '
+                  + 'maan talous on yhä vahvasti dollariin sidottu.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Kannaksen oikotie',
+      johdanto: 'Kannas on kapeimmillaan vain päivämatkan levyinen, ja '
+        + 'jokainen aikakausi on keksinyt oman tapansa ylittää se — '
+        + 'muulilla, junalla ja lopulta sululla. Isoisän ajan oikotie '
+        + 'oli rautatie; kanava oli vielä ranskalaisten haave.',
+      tehtava: {
+        kysymys: 'Kuinka suuri osa Panaman rautatien kahdeksan '
+          + 'miljoonan dollarin hinnasta oli maksettu lipuilla ja '
+          + 'rahdilla jo silloin, kun rata valmistui 1855?',
+        vaihtoehdot: [
+          'ei mitään — rata oli velkainen',
+          'yli kolmasosa',
+          'täsmälleen puolet',
+          'koko hinta ja vähän yli',
+        ],
+        oikea: 1,
+        fakta: 'Kun ensimmäinen maksava juna ajoi koko matkan 28. '
+          + 'tammikuuta 1855, yli kolmasosa radan yli kahdeksan '
+          + 'miljoonan dollarin hinnasta oli jo maksettu lipuilla ja '
+          + 'rahtimaksuilla — rakentamisen aikana rataa käytettiin '
+          + 'siltä osin kuin se oli valmis.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tie, jota kutsuttiin Ristien tieksi',
+          teksti: 'Espanjan kruunu rahoitti jo 1519 kivetyn Camino '
+            + 'Realin kannaksen yli, ja 1534 avattiin sen rinnalle '
+            + 'sadekauden reitti Camino Real de Cruces: matka tehtiin '
+            + 'muulikaravaanilla Panamásta Chagres-joelle ja siitä '
+            + 'jokea alas Karibialle. Perusta louhittu hopea purettiin '
+            + 'maihin Tyynenmeren puolella ja lastattiin uudelleen '
+            + 'Nombre de Diosissa tai myöhemmin Portobelossa. Reitti '
+            + 'tunnettiin myös nimellä Camino de Cruces — Ristien tie '
+            + '— matkan varrelle jääneiden hautojen mukaan. Portobelon '
+            + 'ja San Lorenzon linnoitukset ovat olleet Unescon '
+            + 'maailmanperintöluettelossa vuodesta 1980.',
+          tiedosto: 'Portobelo.jpg',
+          selite: 'Portobelon linnoituksen tykki katsoo yhä ulos '
+            + 'ampuma-aukosta lahdelle, josta hopealaivat lähtivät.',
+          lahde: 'gailf548 from New York State, USA, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'History of Panama',
+        },
+        {
+          otsikko: 'Kun karanneet orjat ja merirosvot löysivät toisensa',
+          teksti: 'Espanjan hallinta kannaksesta oli epätäydellinen, ja '
+            + 'se teki hopeareitistä houkuttelevan saaliin. Merirosvot '
+            + 'alkoivat hyökätä rannikolle noin 1560, ja Francis Drake '
+            + 'ryösti aluetta 1572–73. Samaan aikaan karanneet orjat — '
+            + 'cimarronit — elivät omissa yhteisöissään kannaksen '
+            + 'sisämaassa ja saarilla ja tekivät ajoittain yhteistyötä '
+            + 'merirosvojen kanssa. Vuonna 1582 Espanja teki '
+            + 'cimarronien kanssa sopimuksen, joka takasi näille '
+            + 'vapauden vastineeksi sotilaallisesta tuesta. Suojaksi '
+            + 'Espanja rakensi Chagres-joen suulle San Lorenzon '
+            + 'linnakkeen, joka valmistui 1601.',
+          tiedosto: 'Captain Henry Morgan attacking Panama.jpg',
+          selite: 'Vuoden 1684 merirosvokronikan kuvitus kannaksen '
+            + 'taisteluista; laattaan on kaiverrettu sen oma otsikko.',
+          lahde: 'Alexandre Exquemelin, Wikimedia Commons (PD)',
+          wiki: 'History of Panama',
+        },
+        {
+          otsikko: 'Rautatie, joka maksoi kolmasosansa etuajassa',
+          teksti: 'Ennen rautatietä kannaksen ylitys tehtiin '
+            + 'uurroveneellä Chagres-jokea pitkin ja viimeiset 32 '
+            + 'kilometriä muulilla. Kalifornian kultaryntäys 1848 '
+            + 'muutti kaiken, ja Panama Railroad Companyn rata '
+            + 'Colónista Panamáan valmistui sateisena keskiyönä 27. '
+            + 'tammikuuta 1855, kun pääinsinööri George M. Totten löi '
+            + 'viimeisen naulan valaanöljylamppujen valossa. Rata '
+            + 'maksoi yli kahdeksan miljoonaa dollaria — '
+            + 'kahdeksankertaisesti arvion — ja vaati arviolta '
+            + '5 000–10 000 työntekijän hengen. Rataa käytettiin jo '
+            + 'rakennusaikana, ja kun ensimmäinen maksava juna ajoi '
+            + 'koko matkan, yli kolmasosa hinnasta oli tienattu '
+            + 'takaisin.',
+          tiedosto: 'Panama Canal Railway in 2015.jpg',
+          selite: 'Rata kulkee yhä kannaksen poikki, ja sen kiskot '
+            + 'katoavat viidakkoon kanavan varrella.',
+          lahde: 'Ivo Kruusamägi, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Panama Canal Railway',
+        },
+        {
+          otsikko: 'Sulku, joka nostaa laivan vuoren yli',
+          teksti: 'Ranskalainen Compagnie Universelle du Canal '
+            + 'Interocéanique aloitti Ferdinand de Lesseps’n johdolla '
+            + 'merenpinnan tasoisen kanavan kaivamisen 1. tammikuuta '
+            + '1881. Hanke kaatui: kuolonuhreja kertyi vuoteen 1889 '
+            + 'mennessä yli 22 000, ja yhtiö meni konkurssiin 800 000 '
+            + 'pienisijoittajan säästöjen mukana. Yhdysvallat osti '
+            + 'kaluston, kaivannot ja rautatien 1904 neljälläkymmenellä '
+            + 'miljoonalla dollarilla ja rakensi merenpintakanavan '
+            + 'sijasta sulkukanavan: laivat nostetaan Gatún-tekojärven '
+            + 'tasolle 26 metriin merenpinnan yläpuolelle ja lasketaan '
+            + 'toisella puolella takaisin. Kanava avattiin elokuussa '
+            + '1914, ja Panama sai sen hallintaansa keskipäivällä 31. '
+            + 'joulukuuta 1999.',
+          tiedosto: 'Container Ship Enters Miraflores Locks - Panama Canal.jpg',
+          selite: 'Konttilaiva lähestyy Miraflores-sulkuja, ja rannalla '
+            + 'liehuu Panaman lippu.',
+          lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Panama Canal',
+        },
+      ],
+    },
+  ],
 };

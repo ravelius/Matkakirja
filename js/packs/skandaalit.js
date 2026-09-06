@@ -7105,4 +7105,1070 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /* ==================================================================
+   * ERÄ M5, AFRIKKA (6.9.2026). Omistaja: *"Jatka kartta nostojen tekoa
+   * koko maailmaan."* Viisi maata, kaksi skandaalia kummallekin. Kaikki
+   * pisteet on tarkistettu maan fokuslehden rajausta vasten ja mitattu
+   * irti pelikaupungeista (KAUPUNGIN_KOHDALLA_SADE 7; lähin on Deim
+   * Zubeir 28,6 lautayksikön päässä Bahr el Ghazal -laatasta);
+   * perustelut ja mitat ovat maiden maastokohdepakeissa
+   * (js/packs/maastokohteet-dza.js ja sisarpakit). Erä on kuvaton.
+   * ================================================================ */
+  DZA: [
+    /*
+     * Algeri, deyn linnoitus.
+     * Lähde: en.wikipedia.org: Bakri-Busnach affair
+     */
+    {
+      id: 'karpasviuhka-1827',
+      otsikko: 'Kärpäsviuhka 1827 — isku, joka avasi sadan vuoden miehityksen',
+      nimio: 'Kärpäsviuhka',
+      vuosi: '1827',
+      paikka: 'Algeri, deyn linnoitus',
+      lat: 36.786944, lon: 3.060556,
+      kortti: 'Vehnä oli myyty, laskua ei ollut maksettu, ja velka oli kasvanut '
+        + 'neljääntoista miljoonaan frangiin. Kun Algerin hallitsija kysyi rahoistaan '
+        + 'suoraan Ranskan konsulilta juhlavastaanotolla, vastaus oli sama kuin '
+        + 'kolmenkymmenen vuoden ajan: ei mitään. Sitten hän löi konsulia kasvoihin '
+        + 'kärpäsviuhkan varrella, ja Pariisissa loukkauksesta tuli sotasyy.',
+      teksti: 'Livornosta 1600-luvulla saapuneet juutalaiset kauppiassuvut Bakri ja '
+        + 'Busnach nousivat Algerin kaupan johtoon ja perustivat 1700-luvun lopulla '
+        + 'yhtiön, joka hallitsi elintarvikkeiden — etenkin vehnän — vientiä Ranskaan. '
+        + 'Vallankumouksen ja Napoleonin sotien aikana Ranska osti viljaa velaksi, ja '
+        + 'koska yhtiö rahoitti toimintansa lainaamalla Algerin deyltä, velka oli '
+        + 'tosiasiassa velkaa Algerin hallitsijalle.'
+        + '\n\nVuosina 1800–1826 asia jäi ratkaisematta. Ranska myönsi velkansa 1801 '
+        + 'rauhansopimuksessa mutta ei maksanut sitä; yhtenä verukkeena käytettiin sitä, '
+        + 'että Bakri-Busnach kävi kauppaa myös Britannian kanssa. Vuonna 1826 Hussein '
+        + 'Dey kirjoitti Ranskan ulkoministerille, ja velaksi laskettiin neljätoista '
+        + 'miljoonaa frangia, josta Ranska lupasi maksaa seitsemän. Sitäkään se ei '
+        + 'maksanut.'
+        + '\n\nHuhtikuun 30. päivänä 1827 konsulit olivat koolla deyn luona. Hussein Dey '
+        + 'kysyi Ranskan konsulilta, aikooko maa maksaa sovitun. Kun vastaus oli, ettei '
+        + 'mitään ollut tapahtunut, dey löi häntä kasvoihin kärpäsviuhkan varrella ja '
+        + 'käski ulos. Toisen version mukaan dey tähtäsi kärpäseen ja osui vahingossa.'
+        + '\n\nRanskassa coup d’éventail nostatti vaatimuksen kunnian palauttamisesta. '
+        + 'Hallitus vaati nöyryyttäviä hyvityksiä — korkeimpien virkamiesten pyytämään '
+        + 'anteeksi ranskalaisella laivalla, Ranskan lipun nostoa linnoitukseen ja sadan '
+        + 'tykin kunnianlaukauksia. Kun ehdot torjuttiin, seurasi sodanjulistus ja kolme '
+        + 'vuotta kestänyt Algerin saarto. Vuonna 1830 Ranska maihinnousi ja valtasi '
+        + 'Algerin; miehitys kesti 1960-luvulle asti.',
+      lahde: 'en-Wikipedia "Bakri-Busnach affair", johdanto sekä osiot "Background" ja '
+        + '"The fly-whisk incident". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä kiista deyn ja Ranskan konsulin välillä alkoi?',
+        vaihtoehdot: [
+          'Maksamattomasta viljavelasta',
+          'Kalastusoikeuksista Välimerellä',
+          'Ranskalaisten vankien kohtelusta',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Regganen koekenttä Tanezrouftin autiomaassa.
+     * Lähde: en.wikipedia.org: Gerboise Bleue (nuclear test)
+     */
+    {
+      id: 'gerboise-bleue-1960',
+      otsikko: 'Gerboise Bleue 1960 — sininen hyppyrotta Saharan yllä',
+      nimio: 'Gerboise Bleue',
+      vuosi: '1960',
+      paikka: 'Reggane, Tanezrouftin autiomaa',
+      lat: 26.720278, lon: 0.172778,
+      kortti: 'Sadan metrin terästornin päähän nostettiin plutoniumpommi, ja aamulla '
+        + '13. helmikuuta 1960 autiomaa välähti. Ranskasta tuli neljäs ydinasevalta, ja '
+        + 'koe oli siihen mennessä ylivoimaisesti suurin ensimmäinen ydinkoe: 70 '
+        + 'kilotonnia eli enemmän kuin Yhdysvaltain, Neuvostoliiton ja Britannian '
+        + 'ensimmäiset yhteensä.',
+      teksti: 'Ranskan pääministeri Félix Gaillard määräsi huhtikuussa 1958 ydinkokeen '
+        + 'tehtäväksi vuoden 1960 ensimmäisellä neljänneksellä, ja Charles de Gaulle '
+        + 'vahvisti päätöksen neljännen tasavallan kaaduttua. Ensin kaavailtiin räjäytystä '
+        + 'Korsikan Argentellan kaivoksessa, mutta saaren laajat mielenosoitukset '
+        + 'lopettivat suunnitelman. Paikaksi tuli Saharan sotilaskoekeskus Regganen lähellä '
+        + 'Tanezrouftin autiomaassa — Algerian sodan keskellä.'
+        + '\n\nPommi räjäytettiin 13. helmikuuta 1960 kello 7.04 UTC sadan metrin '
+        + 'terästornin päässä. Komentopaikka oli kuudentoista kilometrin päässä, ja '
+        + 'räjähdyksen vaikutuksia tutkittiin sijoittamalla kalustoa eri etäisyyksille; '
+        + 'lentokoneet keräsivät näytteitä pilvestä. Toimittajia ei päästetty paikalle, '
+        + 'vaan lehdistölle annettiin silminnäkijäkuvaus: "autiomaa syttyi valtavaan '
+        + 'välähdykseen, jota seurasi 45 sekunnin kuluttua tuntuva paineaalto".'
+        + '\n\nKokeen nimi tulee hyppyrotasta, gerboise, ja sininen väri Ranskan lipun '
+        + 'ensimmäisestä väristä. Säteilyä mitattiin kilometrin päässä kymmenen radia '
+        + 'tunnissa ja vielä 570 kilometrin päässä kolme radia tunnissa. Asiakirjat '
+        + 'pidettiin salaisina vuosikymmeniä, ja armeija vakuutti vaikutusten olleen '
+        + 'vähäisiä, mutta paikalla olleet ovat kertoneet suojavarusteiden olleen '
+        + 'olemattomat. Vuonna 2009 Ranska suostui korvaamaan säteilylle altistuneille '
+        + 'uhreille ja julkaisemaan lisää asiakirjoja.',
+      lahde: 'en-Wikipedia "Gerboise Bleue (nuclear test)", johdanto sekä osiot "Name", '
+        + '"Test", "Fallout" ja "Subsequent tests". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi ensimmäistä ydinkoetta ei tehty Korsikalla?',
+        vaihtoehdot: [
+          'Kaivos osoittautui liian pieneksi',
+          'Saarella nousi laaja vastustus',
+          'Merivesi olisi vuotanut kaivokseen',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  AGO: [
+    /*
+     * Malanjen maakunta, Baixa do Cassangen puuvillaviljelmät.
+     * Lähde: en.wikipedia.org: Strike in Baixa do Cassange
+     */
+    {
+      id: 'baixa-do-cassange-1961',
+      otsikko: 'Baixa do Cassange 1961 — poltetut henkilökortit',
+      nimio: 'Cassange 1961',
+      vuosi: '1961',
+      paikka: 'Malanjen maakunta, Baixa do Cassangen viljelmät',
+      lat: -9.533333, lon: 16.35,
+      kortti: 'Puuvillayhtiön työläiset polttivat henkilökorttinsa ja vaativat parempia '
+        + 'oloja. Seuraavana päivänä Portugalin ilmavoimat pommittivat kahtakymmentä '
+        + 'kylää. Kuolleiden määrästä ei ole yksimielisyyttä, mutta tapaus katsotaan '
+        + 'Angolan itsenäisyyssodan ensimmäiseksi liikkeeksi.',
+      teksti: 'Tammikuun 3. päivänä 1961 portugalilais-belgialaisen puuvillayhtiö '
+        + 'Cotonangin maataloustyöläiset nousivat mielenosoitukseen Baixa do Cassangen '
+        + 'seudulla Malanjen maakunnassa Portugalin Angolassa. He vaativat parempia '
+        + 'työoloja, polttivat henkilökorttinsa ja kävivät yhtiön alueella '
+        + 'portugalilaisten kauppiaiden kimppuun. Mielenosoitusta johtivat kaksi siihen '
+        + 'asti tuntematonta angolalaista, António Mariano ja Kulu-Xingu, ja siitä '
+        + 'kasvoi nopeasti yleinen kansannousu.'
+        + '\n\nPortugalin viranomaiset vastasivat seuraavana päivänä ilmahyökkäyksellä '
+        + 'kahteenkymmeneen kylään. Uhriluvuista ei ole yksimielisyyttä: MPLA on '
+        + 'ilmoittanut noin kymmenentuhatta kuollutta, kun useimmat arviot liikkuvat '
+        + 'neljästäsadasta seitsemääntuhanteen. Viidenteen tammikuuta mennessä kapina oli '
+        + 'tukahdutettu.'
+        + '\n\nTapaus ei jäänyt yksittäiseksi. Runsaat kaksi kuukautta myöhemmin, 15. '
+        + 'maaliskuuta 1961, Holden Roberton johtama UPA nosti kansannousun Pohjois-'
+        + 'Angolan bakongo-alueella Ambuilassa; kahdessa päivässä surmattiin noin tuhat '
+        + 'valkoista angolalaista sekä tuntematon määrä siirtomaajärjestystä tukeneita '
+        + 'paikallisia. Portugalin armeija vastasi vastakumouksellisella operaatiolla, '
+        + 'joka tuhosi kymmeniä kyliä ja jossa kuoli noin kaksikymmentätuhatta ihmistä '
+        + 'ennen syyskuuta.'
+        + '\n\nLakkoa pidetään ensimmäisenä poliittisena liikkeenä, joka johti tasan '
+        + 'kuukautta myöhemmin alkaneeseen Angolan itsenäisyyssotaan ja kolmen vuoden '
+        + 'kuluessa Portugalin siirtomaasotaan. Angolassa 4. tammikuuta on nykyään '
+        + 'kansallinen muistopäivä.',
+      lahde: 'en-Wikipedia "Strike in Baixa do Cassange", johdanto ja osio "Revolts". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä työläiset tekivät henkilökorteilleen?',
+        vaihtoehdot: [
+          'Vaihtoivat ne keskenään',
+          'Lähettivät ne kuvernöörille',
+          'Polttivat ne',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Benguelan rannikko, jonne sisämaan saattueet päättyivät.
+     * Lähde: en.wikipedia.org: Henry Nevinson
+     */
+    {
+      id: 'nevinsonin-orjatie',
+      otsikko: 'Moderni orjuus 1905 — matka, joka paljasti kaakaon hinnan',
+      nimio: 'Orjatie 1905',
+      vuosi: '1904–1906',
+      paikka: 'Benguelan rannikko, orjatien pääte',
+      lat: -12.55, lon: 13.416667,
+      kortti: 'Lehti lähetti kirjeenvaihtajan tutkimaan huhua: viedäänkö Angolasta yhä '
+        + 'orjia São Tomén kaakaoviljelmille? Neljänsadanviidenkymmenen mailin matkan '
+        + 'jälkeen hän seurasi kahleisiin pantujen ihmisten jälkiä rannikolle — ja näki, '
+        + 'kuinka viranomaiset "vapauttivat" heidät ja kirjasivat vapaaehtoisiksi '
+        + 'työntekijöiksi.',
+      teksti: 'Henry Woodd Nevinson oli englantilainen kirjeenvaihtaja, joka oli '
+        + 'raportoinut buurisodasta ja Kreikan ja Turkin sodasta. Harper’s Monthly '
+        + 'Magazine palkkasi hänet 1904 selvittämään huhuja siitä, että Angolasta vietiin '
+        + 'yhä orjia São Tomén kaakaoviljelmille — vaikka orjakauppa oli muodollisesti '
+        + 'lakkautettu.'
+        + '\n\nNevinson matkasi sisämaahan noin 450 mailia ja löysi ketjun, jossa ihmisiä '
+        + 'luovutettiin velkojen kuittaamiseksi tai portugalilaisten asiamiesten '
+        + 'ottamina ja vietiin kahleissa rannikon kaupunkeihin. Siellä hän raivostui '
+        + 'siitä, mitä näki: viranomaiset "vapauttivat" saapuneet ja muuttivat heidän '
+        + 'asemansa vapaaehtoisiksi työntekijöiksi, jotka olivat muka suostuneet '
+        + 'lähtemään São Toméen viideksi vuodeksi.'
+        + '\n\nNevinson seurasi matkaa perille asti, vaikka hänen terveytensä oli niin '
+        + 'huono, että hän pelkäsi tulleensa myrkytetyksi. Viljelmillä olot olivat niin '
+        + 'ankarat, että joka viides työntekijä kuoli vuodessa.'
+        + '\n\nKertomus julkaistiin jatkokertomuksena elokuusta 1905 alkaen ja kirjana '
+        + 'nimellä A Modern Slavery Harper and Bros -kustantamolta 1906. Nevinson jatkoi '
+        + 'kampanjoivana toimittajana ja kirjoitti myöhemmin Intiasta Manchester '
+        + 'Guardianille sekä toimi ensimmäisessä maailmansodassa sotakirjeenvaihtajana.',
+      lahde: 'en-Wikipedia "Henry Nevinson", johdanto ja osio "Reporting"; rannikon '
+        + 'orjakaupasta myös en-Wikipedia "Benguela", osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Nevinsonin näkemät ihmiset kirjattiin vapaaehtoisiksi?',
+        vaihtoehdot: [
+          'Koska he olivat maksaneet matkansa itse',
+          'Koska orjakauppa oli muodollisesti lakkautettu ja asema piti nimetä uudelleen',
+          'Koska he olivat sopineet työstä lähetysaseman kanssa',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  CMR: [
+    /*
+     * Nyosjärvi Luoteis-Kamerunissa.
+     * Lähde: en.wikipedia.org: Lake Nyos disaster
+     */
+    {
+      id: 'nyosjarvi-1986',
+      otsikko: 'Nyosjärvi 1986 — järvi, joka huokaisi',
+      nimio: 'Nyos 1986',
+      vuosi: '1986',
+      paikka: 'Nyosjärvi, Luoteis-Kamerun',
+      lat: 6.44, lon: 10.3,
+      kortti: 'Elokuun 21. päivän iltana järvi kääntyi ympäri ja päästi kerralla '
+        + 'satojatuhansia tonneja hiilidioksidia. Kaasu on ilmaa raskaampaa, joten se '
+        + 'valui laaksoja pitkin kyliin ja tukahdutti nukkuvat: 1 746 ihmistä ja 3 500 '
+        + 'kotieläintä.',
+      teksti: 'Nyosjärvi on kraatterijärvi Luoteis-Kamerunissa. Sen pohjalle oli '
+        + 'kertynyt vuosien mittaan valtava määrä hiilidioksidia, joka pysyi liuenneena '
+        + 'syvän veden paineessa. Elokuun 21. päivänä 1986 kerrostuneisuus purkautui, ja '
+        + 'järvestä vapautui arviolta 100 000–300 000 tonnia kaasua eli noin 1,2 '
+        + 'kuutiokilometriä.'
+        + '\n\nLaukaisijaa ei tiedetä. Useimmat geologit epäilevät maanvyörymää, jotkut '
+        + 'pientä purkausta järven pohjassa, kolmannet järven pinnan viilenemistä '
+        + 'sateessa. Osa tutkijoista huomauttaa, ettei ulkoista syytä välttämättä '
+        + 'tarvita lainkaan: hiilidioksidin liukoisuus riippuu lämpötilasta, joten '
+        + 'kerrostuneisuus on itsessään epävakaa, ja kun kuplia kerran syntyy, ne '
+        + 'nostavat mukanaan lisää kyllästynyttä vettä ja koko järvi kääntyy.'
+        + '\n\nKaasupatsas nousi aluksi lähes sadan kilometrin tuntinopeudella, ja pinnalle '
+        + 'muodostui sadan metrin vesi- ja vaahtopatsas, joka sinkosi rantaan '
+        + 'vähintään 25 metrin aallon. Sitten kaasu laskeutui: se on puolitoista kertaa '
+        + 'ilmaa raskaampaa, joten se myötäili maanpintaa noin 50 metrin paksuisena '
+        + 'mattona ja valui laaksoja pitkin 20–50 kilometrin tuntivauhdilla. Noin 23 '
+        + 'kilometrin matkalla se oli väkevää tarpeeksi tukahduttamaan nukkuvat ihmiset '
+        + 'Nyosin, Kamin, Chan ja Subumin kylissä. Järven sininen vesi muuttui '
+        + 'punaruskeaksi, kun rautapitoinen syvä vesi hapettui pinnalla.'
+        + '\n\nNoin 4 000 asukasta pakeni alueelta, ja moni sai hengitysoireita, ihovaurioita '
+        + 'ja halvauksia. Järveen on sittemmin asennettu putkisto, joka poistaa '
+        + 'hiilidioksidia. Nyos ja kaksi vuotta aiempi Monounin onnettomuus ovat ainoat '
+        + 'kirjatut limniset purkaukset ihmiskunnan historiassa.',
+      lahde: 'en-Wikipedia "Lake Nyos disaster", johdanto sekä osiot "Eruption and gas '
+        + 'release" ja "Effects on survivors". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi kaasu tappoi juuri laaksojen kylissä?',
+        vaihtoehdot: [
+          'Kaasu on ilmaa raskaampaa ja valui laaksoja pitkin',
+          'Tuuli kääntyi yöllä laaksoihin päin',
+          'Kylät olivat järven pintaa korkeammalla',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Douala, Saksan Kamerunin satamakaupunki.
+     * Lähde: en.wikipedia.org: Rudolf Duala Manga Bell
+     */
+    {
+      id: 'duala-manga-bell-1914',
+      otsikko: 'Douala 1914 — kuningas, joka kirjoitti kirjeitä',
+      nimio: 'Manga Bell 1914',
+      vuosi: '1914',
+      paikka: 'Douala, Saksan Kamerun',
+      lat: 4.05, lon: 9.7,
+      kortti: 'Saksan valtiopäivät päätti siirtää dualat pois jokirannasta, jotta '
+        + 'rantatontit jäisivät eurooppalaisille. Kuningas vastusti kirjeillä, '
+        + 'vetoomuksilla ja juridiikalla. Kun ne sivuutettiin, hän etsi tukea muualta — '
+        + 'ja se maksoi hänelle hengen.',
+      teksti: 'Rudolf Duala Manga Bell syntyi 1873 Doualassa alueella, josta tuli '
+        + 'myöhemmin Saksan Kamerun. Hän oli Bellin sukuhaaran kuninkaan Manga Ndumbe '
+        + 'Bellin vanhin poika, kävi koulua sekä Doualassa että Saksassa ja opiskeli '
+        + '1890-luvulla Ulmin lukiossa. Isänsä jälkeen hän nousi hallitsijaksi 2. '
+        + 'syyskuuta 1908. Alussa hän tuki siirtomaahallintoa ja esiintyi eurooppalaisten '
+        + 'hallitsijoiden tapaan; varakkaana miehenä hän peri isältään myös suuret velat.'
+        + '\n\nVuonna 1910 Saksan valtiopäivät laati suunnitelman, jossa joen rannalla '
+        + 'asuvat dualat siirrettäisiin sisämaahan, jotta rantakaistale jäisi kokonaan '
+        + 'eurooppalaisten asuinalueeksi. Manga Bellistä tuli koko duala-kansan '
+        + 'vastarinnan johtaja. Hän ja muut päälliköt painostivat hallintoa ensin '
+        + 'kirjeillä, vetoomuksilla ja oikeudellisilla perusteluilla, mutta ne joko '
+        + 'sivuutettiin tai kumottiin.'
+        + '\n\nSitten Manga Bell kääntyi muiden Euroopan hallitusten puoleen ja lähetti '
+        + 'edustajia muiden kamerunilaiskansojen johtajille ehdottaen Saksan vallan '
+        + 'kaatamista. Bamounien sulttaani Ibrahim Njoya ilmoitti hänen toimistaan '
+        + 'viranomaisille, ja kuningas pidätettiin.'
+        + '\n\nLyhyen oikeudenkäynnin jälkeen Rudolf Duala Manga Bell hirtettiin '
+        + 'maanpetoksesta 8. elokuuta 1914. Kamerunissa hänestä tuli marttyyri, ja '
+        + 'tutkijat pitävät hänen toimintaansa varhaisena esimerkkinä kamerunilaisesta '
+        + 'kansallisaatteesta.',
+      lahde: 'en-Wikipedia "Rudolf Duala Manga Bell", johdanto ja osio "Early life and '
+        + 'reign". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi dualat oli määrä siirtää pois jokirannasta?',
+        vaihtoehdot: [
+          'Rannalle suunniteltiin satamaa',
+          'Alue oli tulvaherkkä',
+          'Rantakaistale haluttiin kokonaan eurooppalaisten asuinalueeksi',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  COD: [
+    /*
+     * Basankusu, Abir Congo Companyn ensimmäinen kauppa-asema.
+     * Lähde: en.wikipedia.org: Casement Report
+     */
+    {
+      id: 'casementin-raportti-1904',
+      otsikko: 'Casementin raportti 1904 — kumivero ja sen hinta',
+      nimio: 'Casement 1904',
+      vuosi: '1903–1908',
+      paikka: 'Basankusu, Abirin kauppa-asema',
+      lat: 1.222222, lon: 19.802778,
+      kortti: 'Kongon vapaavaltio oli Belgian kuninkaan yksityisomaisuutta, ja sen '
+        + 'asukkaat maksoivat veronsa kumina. Kun Britannian konsuli matkusti jokea ylös '
+        + 'ja kirjasi ylös sen, mitä ihmiset kertoivat, raportti muutti Euroopan '
+        + 'mielipiteen — mutta kesti vielä neljä vuotta, ennen kuin kuningas luopui '
+        + 'omistuksestaan.',
+      teksti: 'Berliinin konferenssi antoi 1885 Kongon vapaavaltion Belgian kuninkaan '
+        + 'Leopold II:n yksityiseen omistukseen, ja hän käytti sen luonnonvaroja — '
+        + 'ennen kaikkea kumia — oman varallisuutensa kartuttamiseen. Basankusu oli Abir '
+        + 'Congo Companyn ensimmäinen kauppa-asema Leopoldvillestä ylävirtaan. Yhtiö sai '
+        + 'suuren toimiluvan ja oikeuden verottaa asukkaita kumina; asemat Lopori- ja '
+        + 'Maringa-jokien varrella olivat eurooppalaisen asiamiehen johdossa ja aseistettujen '
+        + 'vartijoiden turvaamia. Kilo kumia maksoi yhtiölle 1,35 frangia ja myytiin '
+        + 'Euroopassa jopa kymmenellä.'
+        + '\n\nVeroa perittiin vankeudella, ruoskimisella ja muilla ruumiillisilla '
+        + 'rangaistuksilla. Väärinkäytöksistä oli kerrottu jo vuosia: lähetyslääkäri '
+        + 'Henry Grattan Guinness sai 1895 kuninkaalta lupauksia, joita ei pidetty, ja '
+        + 'toimittaja E. D. Morel kirjoitti asiasta toistuvasti.'
+        + '\n\nToukokuun 20. päivänä 1903 Britannian alahuone hyväksyi päätöslauselman, '
+        + 'joka vaati hallitusta neuvottelemaan Berliinin sopimuksen muiden '
+        + 'allekirjoittajien kanssa epäkohtien poistamisesta. Boman konsuli, irlantilainen '
+        + 'Roger Casement, sai tehtäväkseen tutkia asian. Raportti julkaistiin 1904, se '
+        + 'kokosi yhteen suuren joukon yksittäisiä kertomuksia tapoista, silpomisista, '
+        + 'sieppauksista ja pahoinpitelyistä, ja vahvisti Morelin syytökset.'
+        + '\n\nCasement ja Morel perustivat Congo Reform Associationin. Belgian parlamentti '
+        + 'pakotti Leopoldin asettamaan riippumattoman tutkintakomission, jonka löydökset '
+        + 'vahvistivat raportin kohta kohdalta. Vuonna 1908 parlamentti liitti '
+        + 'vapaavaltion Belgiaan Belgian Kongona.',
+      lahde: 'en-Wikipedia "Casement Report", johdanto sekä osiot "Publicity 1895–1903" ja '
+        + '"Aftermath"; Basankusun osuudesta en-Wikipedia "Basankusu", osio "Abir Congo '
+        + 'Company". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Millä tavalla Abirin toimiluvan alueen asukkaat maksoivat veronsa?',
+        vaihtoehdot: [
+          'Norsunluuna',
+          'Kumina',
+          'Kuparikiekkoina',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Shinkolobwen kaivos Haut-Katangassa.
+     * Lähde: en.wikipedia.org: Shinkolobwe
+     */
+    {
+      id: 'shinkolobwe',
+      otsikko: 'Shinkolobwe — kaivos, jota ei ollut kartoilla',
+      nimio: 'Shinkolobwe',
+      vuosi: '1915–2004',
+      paikka: 'Shinkolobwe, Haut-Katanga',
+      lat: -11.054972, lon: 26.547278,
+      kortti: 'Katangan malmi oli maailman rikkainta uraania, ja siitä tuli Manhattan-'
+        + 'hankkeen raaka-aine. Osa varastosta ehti jäädä Saksan käsiin 1940. Kaivos '
+        + 'suljettiin virallisesti vasta 2004 — ja sen nimi tarkoittaa paikallisittain '
+        + 'miestä, joka on pinnalta leppoisa mutta suuttuu, kun häntä ärsytetään.',
+      teksti: 'Shinkolobwe oli radium- ja uraanikaivos Haut-Katangan maakunnassa Kongon '
+        + 'demokraattisessa tasavallassa, noin 20 kilometriä Likasista länteen ja 145 '
+        + 'kilometriä Lubumbashista luoteeseen. Englantilainen geologi Robert Rich Sharp '
+        + 'löysi esiintymän 1915.'
+        + '\n\nMalmi oli maailman taloudellisinta uraania, ja siitä tuli Yhdysvaltain '
+        + 'Manhattan-hankkeen ja sitä seuranneiden 1940- ja 1950-luvun ydinaseiden '
+        + 'raaka-aine. Ennen toista maailmansotaa täältä louhittu uraani vietiin '
+        + 'käsiteltäväksi Belgiaan, ja juuri se varasto joutui 1940 Saksan armeijan '
+        + 'haltuun ja päätyi Saksan epäonnistuneeseen ydinohjelmaan.'
+        + '\n\nKaivos on geologinen erikoisuus. Uraanimineraalit sekä niiden seurana '
+        + 'koboltti, hopea, nikkeli, vismutti ja arseeni esiintyvät massiivisena '
+        + 'sulfidimalmina rakojen ja pikkusiirrosten juonteissa Katangan '
+        + 'poimurakenteessa; uraninitin kiteytyminen ajoittuu noin 630 miljoonan vuoden '
+        + 'taakse. Uraniniittikiteet olivat yleisesti sentin tai neljän kokoisia kuutioita, '
+        + 'ja paikalta on tunnistettu useita ennen tuntemattomia mineraaleja.'
+        + '\n\nKaivoksen nimi tulee läheisestä, jo kadonneesta kylästä. Sanaa käytetään '
+        + 'myös sanontana: se tarkoittaa miestä, joka on pinnalta rauhallinen mutta '
+        + 'suuttuu, kun häntä ärsytetään. Kaivos suljettiin virallisesti 2004.',
+      lahde: 'en-Wikipedia "Shinkolobwe", johdanto sekä osiot "Toponym" ja "Geology". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mihin Shinkolobwen uraania käytettiin 1940-luvulla?',
+        vaihtoehdot: [
+          'Manhattan-hankkeen ydinaseisiin',
+          'Kaivoslamppujen valoaineeksi',
+          'Sairaaloiden röntgenlaitteisiin',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  SDS: [
+    /*
+     * Kodok eli entinen Fashoda Valkoisen Niilin varrella.
+     * Lähde: en.wikipedia.org: Fashoda Incident
+     */
+    {
+      id: 'fashoda-1898',
+      otsikko: 'Fashoda 1898 — kaksi lippua saman linnakkeen edessä',
+      nimio: 'Fashoda 1898',
+      vuosi: '1898',
+      paikka: 'Kodok (Fashoda), Valkoinen Niili',
+      lat: 9.8875, lon: 32.110278,
+      kortti: 'Sadanneljänkymmenen hengen ranskalaisretkikunta käveli neljätoista '
+        + 'kuukautta halki Afrikan ja pystytti lipun autiolle Niilin linnakkeelle. '
+        + 'Kymmenen viikkoa myöhemmin paikalle saapui viisi brittiläistä tykkivenettä ja '
+        + '1 500 sotilasta. Miehet joivat viskiä yhdessä; Pariisissa ja Lontoossa '
+        + 'valmistauduttiin sotaan.',
+      teksti: 'Fashodan selkkaus oli Britannian ja Ranskan siirtomaakiistojen huipentuma '
+        + 'Itä-Afrikassa 10. heinäkuuta ja 3. marraskuuta 1898 välillä. Ranska tavoitteli '
+        + 'yhtenäistä vyöhykettä Nigeriltä Niilille ja lähetti kapteeni Jean-Baptiste '
+        + 'Marchandin viemään Fashodan seudun Ranskan suojelukseen. Retkikunta lähti '
+        + 'Brazzavillesta belgialaisella höyrylaivalla, nousi Ubangi-jokea niin pitkälle '
+        + 'kuin pääsi ja marssi sitten viidakon ja pensaikon halki Sudanin aavikoille '
+        + 'sata tonnia varusteita mukanaan — muun muassa kasattava teräshöyryvene, jonka '
+        + 'kattila painoi tonnin.'
+        + '\n\nNeljätoista kuukautta kestäneen taipaleen jälkeen Marchandin joukko saapui '
+        + 'Fashodaan 10. heinäkuuta 1898. Idästä luvatut tukiretkikunnat eivät '
+        + 'päässeet perille, joten sata kaksikymmentä senegalilaista tirailleuria ja '
+        + 'kourallinen ranskalaisupseereita olivat yksin satojen kilometrien päässä '
+        + 'kaikesta avusta.'
+        + '\n\nSyyskuun 18. päivänä joelle ilmestyi viisi brittiläistä tykkivenettä ja '
+        + 'niissä 1 500 brittiläistä, egyptiläistä ja sudanilaista sotilasta Herbert '
+        + 'Kitchenerin johdolla. Kitchener oli juuri voittanut Omdurmanin taistelun. Hän '
+        + 'saapui linnakkeelle 19. syyskuuta egyptiläisessä univormussa ja vaati '
+        + 'Egyptin lipun nostoa — kauas Ranskan lipusta. Marchand suostui sillä ehdolla, '
+        + 'ettei lippu ratkaise alueen asemaa.'
+        + '\n\nKomentajat käyttäytyivät hillitysti: Kitchener kohotti maljan Marchandille '
+        + 'viskillä, jonka juomista ranskalainen kutsui yhdeksi suurimmista uhrauksistaan '
+        + 'isänmaan hyväksi. Euroopassa kriisi kiihtyi kuitenkin sotapeloksi, ja '
+        + 'kuninkaallinen laivasto laati sotakäskyjä. Ranskan hallitus määräsi joukkonsa '
+        + 'hiljaisesti vetäytymään 3. marraskuuta.',
+      lahde: 'en-Wikipedia "Fashoda Incident", johdanto sekä osiot "Marchand expedition", '
+        + '"Kitchener\'s Advance" ja "French withdrawal". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Fashodan kriisi ratkesi?',
+        vaihtoehdot: [
+          'Ranska vetäytyi paikalta marraskuussa',
+          'Britannia luovutti linnakkeen Ranskalle',
+          'Alue jaettiin kahtia joen mukaan',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Deim Zubeir, orjakauppiaan päämaja Bahr el Ghazalissa.
+     * Lähde: en.wikipedia.org: Al-Zubayr Rahma Mansur
+     */
+    {
+      id: 'zubayrin-zaribat',
+      otsikko: 'Zubayrin zaribat 1873 — orjakauppias, josta tehtiin kuvernööri',
+      nimio: 'Zubayr 1873',
+      vuosi: '1856–1873',
+      paikka: 'Deim Zubeir, Bahr el Ghazal',
+      lat: 7.716667, lon: 26.216667,
+      kortti: 'Khartumista lähti 1856 pieni armeija perustamaan varustettuja '
+        + 'kauppa-asemia. Kolmenkymmenen zariban verkosto kasvoi valtioksi valtion '
+        + 'sisällä, ja kun Egyptin kediivi lähetti palkka-armeijan kukistamaan sen, '
+        + 'armeija hävisi. Niinpä kediivi teki toisin: hän nimitti orjakauppiaan '
+        + 'kuvernööriksi.',
+      teksti: 'Al-Zubayr Rahma Mansur syntyi noin 1830 Pohjois-Sudanissa ja aloitti '
+        + 'suuren mittakaavan kauppansa 1856 lähtemällä Khartumista pienen armeijan '
+        + 'kanssa. Hän rakensi verkoston varustettuja kauppa-asemia eli zaribia, joiden '
+        + 'toiminta keskittyi orjakauppaan ja norsunluuhun. Laajimmillaan hänen '
+        + 'kauppavaltakuntansa hallitsi suurta osaa Bahr el Ghazalista sekä alueita '
+        + 'nykyisen Tšadin ja Keski-Afrikan tasavallan puolella.'
+        + '\n\nVuonna 1871 saksalainen tutkimusmatkailija Georg Schweinfurth vieraili '
+        + 'hänen päämajassaan Deim Zubeirissa ja kuvasi orjakauppiaan hovia "vähintäänkin '
+        + 'ruhtinaalliseksi".'
+        + '\n\nEgyptin kediivi Isma\'il Pasha halusi alueen hallintaansa ja lähetti sitä '
+        + 'vastaan palkka-armeijan, mutta Rahma voitti sen. Niinpä kediivi liitti alueen '
+        + 'valtakuntaansa toisella tavalla: hän tunnusti 1873 Rahman vallan ja nimitti '
+        + 'hänet Bahr el Ghazalin kuvernööriksi. Lopulta Rahma hallitsi kolmeakymmentä '
+        + 'zaribaa ja sai beyn ja pashan arvot; Darfurin valtauksessa hän johti '
+        + 'eteläisiä joukkoja, ja häntä kutsuttiin mustaksi pashaksi.'
+        + '\n\nKun kenraali Charles Gordon saapui 1877 Sudanin kuvernööriksi, hänestä ja '
+        + 'Rahmasta tuli vastustajia. Britanniassa Rahma sai lähes myyttisen maineen '
+        + 'Gordonin arkkivihollisena: häntä sanottiin "rikkaimmaksi ja pahimmaksi" ja '
+        + 'kerrottiin, että hänen saattueeseensa kuului kahlehdittuja leijonia.',
+      lahde: 'en-Wikipedia "Al-Zubayr Rahma Mansur", johdanto sekä osiot "Background" ja '
+        + '"Opposition to Gordon". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi kediivi nimitti Rahman kuvernööriksi?',
+        vaihtoehdot: [
+          'Rahma oli luopunut orjakaupasta',
+          'Rahma oli voittanut häntä vastaan lähetetyn armeijan',
+          'Britannia vaati sitä sopimuksessa',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  /*
+   * ══ ERÄ M8, AASIA 2 6.9.2026 ════════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M8 (NPL, THA, VNM, SGP, TLS) tuo kaksi skandaalia kuhunkin
+   * viiteen maahan — kymmenen uutta. Kaikki ovat kuvattomia kuten erän
+   * muutkin nostot, ja jokaisen lähderivi nimeää en-Wikipedian
+   * artikkelin ja osan sekä tarkistuspäivän.
+   *
+   * PAIKAT ON MITATTU. Yksikään uusi merkki ei ole pelikaupungin
+   * kohdalla (KAUPUNGIN_KOHDALLA_SADE 7 lautayksikköä,
+   * js/fokuskohteet.js): lähin on Hanoin rottapalkkiot 12,8 yksikön
+   * päässä Hanoi-laatasta ja kaukaisin Hội Anin hylky 194,9 yksikön
+   * päässä Hanoista.
+   *
+   * KAKSI MERKKIÄ ON SIIRRETTY KOHDEKARTAN RUUDUN ULKOPUOLELLE, ja syy
+   * on sama kuin Hongkongin Carrianilla erässä M3: kohdekartan
+   * rajauksessa oleva skandaali kuuluu kohdekartan pisteelle eikä
+   * pääkartalle (tools/tarkista-nostopaikat.mjs). Singaporen
+   * kohdekartta (js/packs/maakartat.js singapore) rajautuu ruutuun lat
+   * 1,276–1,308 ja lon 103,836–103,874, ja sekä Barings Futuresin
+   * toimisto että pörssi osuvat sen sisään; merkit on siksi asetettu
+   * ruudun itäpuolelle ja saaren koilliskärkeen Changiin. Kummankin
+   * kortin `paikka`-rivi kertoo oikean osoitteen.
+   *
+   * HERKKIEN KOHTEIDEN LINJAUS ON SITOVA (docs/aasia-tyoaineisto/
+   * spec-asia.md). Nepalin sisällissodasta, Vietnamin sodasta ja
+   * Itä-Timorin miehityksestä ei kirjoiteta näissä korteissa
+   * lainkaan: Nepalin aiheet ovat 1911 ja 1960, Vietnamin 1902 ja
+   * 1990-luku, Itä-Timorin 1769 ja 1911–1912. Nykypolitiikkaa ei ole
+   * yhdelläkään kortilla.
+   */
+  NPL: [
+    /*
+     * Khumjung, Solukhumbu (luostari, jossa päänahkaa säilytetään).
+     * Lähde: en.wikipedia.org: Yeti; Khumjung
+     */
+    {
+      id: 'khumjungin-paanahka',
+      otsikko: 'Jetin päänahka, joka lensi Lontooseen',
+      nimio: 'Jetin päänahka',
+      vuosi: '1960–1961',
+      paikka: 'Khumjungin luostari, Solukhumbu',
+      lat: 27.816667, lon: 86.716667,
+      kortti: 'Everestin ensinousija palasi Himalajalle etsimään todisteita '
+        + 'lumimiehestä. Hän lainasi vuoristokylän luostarilta sen kalleimman '
+        + 'esineen, karvaisen päänahan, ja vei sen kylänvanhimman kanssa '
+        + 'Lontooseen tutkittavaksi. Vastaus tuli mikroskoopista eikä '
+        + 'vuorilta.',
+      teksti: 'Jeti on Himalajalla asuvaksi kerrottu suuri karvainen '
+        + 'ihmisenkaltainen olento, josta länsimaissa käytetään myös nimeä '
+        + 'inhottava lumimies. Vuonna 1953 Edmund Hillary ja Tenzing Norgay '
+        + 'kertoivat nähneensä Everestillä suuria jalanjälkiä, mutta Hillary '
+        + 'piti myöhemmin jetihavaintoja epäluotettavina.'
+        + '\n\nVuonna 1960 Hillary lähti Himalajalle Silver Hut -retkikunnan '
+        + 'kanssa nimenomaan keräämään ja tutkimaan aineellisia todisteita '
+        + 'jetistä. Khumjungin luostarissa säilytettiin esinettä, jota '
+        + 'pidettiin jetin päänahkana. Hillary lainasi sen ja matkusti sen '
+        + 'kanssa Lontooseen yhdessä kylänvanhimman Khumjo Chumbin kanssa.'
+        + '\n\nLontoossa nahasta leikattiin pieni näyte. Marca Burns tutki '
+        + 'ihon ja karvat yksityiskohtaisesti ja vertasi niitä vastaaviin '
+        + 'näytteisiin serausta, tiibetinsinikarhusta ja mustakarhusta. '
+        + 'Johtopäätös oli varovainen mutta selvä: näyte oli mitä '
+        + 'todennäköisimmin tehty eläimen nahasta, joka muistuttaa läheisesti '
+        + 'tutkittua seraunäytettä mutta ei ole täsmälleen sama — kenties '
+        + 'saman lajin paikallinen muoto tai lähisukulainen.'
+        + '\n\nPäänahka palautettiin Khumjungiin, jossa se on yhä. Myöhemmät '
+        + 'tutkimukset ovat toistaneet saman kuvion: 2008 BBC kertoi '
+        + 'Koillis-Intiasta kerätyistä karvoista, joita tutkittiin Oxford '
+        + 'Brookesin yliopistossa, ja lopulta niidenkin todettiin olevan '
+        + 'himalajangoralin karvoja.',
+      lahde: 'en-Wikipedia "Yeti", osio "History and sightings" (20th century), '
+        + 'ja "Khumjung", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä eläimestä Khumjungin päänahan todettiin olevan peräisin?',
+        vaihtoehdot: [
+          'Ruskeakarhusta',
+          'Serausta muistuttavasta eläimestä',
+          'Jakista',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Thorin ja Kasran leirit, Chitwanin Terai (metsästysretken alue).
+     * Lähde: en.wikipedia.org: 1911 hunt by George V in Nepal
+     */
+    {
+      id: 'yrjo-v-metsastysretki',
+      otsikko: 'Kymmenen päivää, 39 tiikeriä',
+      nimio: 'Yrjö V:n jahti',
+      vuosi: '1911',
+      paikka: 'Chitwanin Terai, Nepal',
+      lat: 27.5, lon: 84.333333,
+      kortti: 'Nepalin pääministeri keräsi kuukausien ajan 645 norsua ja '
+        + 'härkää ja sitoi ne viidakkoon houkuttimiksi. Vieraana oli '
+        + 'Britannian kuningas, jonka seurue oli kahdentoistatuhannen hengen '
+        + 'kokoinen. Kymmenessä päivässä kaadettiin enemmän riistaa kuin '
+        + 'useimmat museot omistavat.',
+      teksti: 'Britannian hallitsijoiden metsästysretket Nepaliin alkoivat '
+        + '1876, kun pääministeri Jung Bahadur Rana kutsui prinssi Albert '
+        + 'Edwardin retkelle, jolla kaadettiin kahdessa viikossa noin 23 '
+        + 'tiikeriä. Myöhemmin kutsuttuja olivat muun muassa arkkiherttua '
+        + 'Frans Ferdinand ja lordi Curzon.'
+        + '\n\nVuonna 1911 pääministeri Chandra Shumsher Jang Bahadur Rana '
+        + 'kutsui kuningas Yrjö V:n suurriistan metsästykseen Teraille. '
+        + 'Valmistelut kestivät kuukausia. Kuningas Prithvi Bir Bikram Shah '
+        + 'kuoli 11. joulukuuta, mutta valmisteluja ei keskeytetty. Tuhannet '
+        + 'ajomiehet ohjasivat riistaa kohti valmiita ampumapaikkoja.'
+        + '\n\nSeurue saapui Nepaliin 18. joulukuuta ja jäi kymmeneksi '
+        + 'päiväksi. Joka yö asetettiin syöttejä tiikerien houkuttelemiseksi. '
+        + 'Yhtenä päivänä norsurenkaan sisään jäi neljä tiikeriä kerralla, ja '
+        + 'kuningas ampui ne kaikki. Retken saldo oli 39 tiikeriä, 18 '
+        + 'sarvikuonoa, neljä karhua sekä useita piikkisikoja ja leopardeja. '
+        + 'Jouluaattona kuningas löi Chandra Shumsherin Kuninkaallisen '
+        + 'Victorian ritarikunnan ritariksi.'
+        + '\n\nJälkimaine on toisenlainen kuin aikalaisten. Sanjib Chaudhary '
+        + 'kuvasi retkeä 2018 mitä raaimmaksi ja kauheimmaksi '
+        + 'metsästysmatkaksi. Alue, jolla suurin osa jahdista käytiin, '
+        + 'muutettiin 1973 Nepalin ensimmäiseksi kansallispuistoksi.',
+      lahde: 'en-Wikipedia "1911 hunt by George V in Nepal", johdanto sekä '
+        + 'osiot "Planning", "The hunt" ja "Legacy". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä alueelle tehtiin myöhemmin, vuonna 1973?',
+        vaihtoehdot: [
+          'Siitä tuli Nepalin ensimmäinen kansallispuisto',
+          'Se raivattiin riisipelloiksi',
+          'Sinne rakennettiin lentokenttä',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  THA: [
+    /*
+     * Lopburi, kuningas Narain hovikaupunki (vallankaappauksen paikka).
+     * Lähde: en.wikipedia.org: Constantine Phaulkon
+     */
+    {
+      id: 'phaulkonin-nousu',
+      otsikko: 'Kreikkalainen, josta tuli Siamin pääministeri',
+      nimio: 'Phaulkon',
+      vuosi: '1647–1688',
+      paikka: 'Lopburi, Ayutthayan kuningaskunta',
+      lat: 14.7995, lon: 100.6534,
+      kortti: 'Kefalonialainen laivapoika päätyi Siamin hoviin ja nousi '
+        + 'kuninkaan lähimmäksi neuvonantajaksi. Hän hoiti valtakunnan '
+        + 'ulkosuhteet ja kaupan ja avasi ovet Ludvig XIV:n lähettiläille. '
+        + 'Kun kuningas sairastui, hovin kateus kääntyi häntä vastaan.',
+      teksti: 'Constantine Phaulkon syntyi 1647 kreikkalaisille vanhemmille '
+        + 'Kefalonian pohjoisosassa, joka oli silloin Venetsian hallussa. Hän '
+        + 'päätyi Siamiin ja nousi kuningas Narain suosioon: kertomusten '
+        + 'mukaan hän muun muassa tarkasti kruunun tilit ja osoitti, että '
+        + 'persialaiset kauppiaat olivat velkaa valtiolle eivätkä toisin '
+        + 'päin.'
+        + '\n\nPhaulkonista tuli Narain pääministeri ja hän sai siamilaisen '
+        + 'aatelisarvon Chao Phraya Wichayen. Hän ohjasi valtakunnan '
+        + 'ulkopolitiikkaa ja kauppaa ja rakensi läheiset suhteet Ranskan '
+        + 'hoviin. Vuonna 1682 hän vaihtoi anglikaanisuuden katolisuuteen ja '
+        + 'avioitui Maria Guyomar de Pinhan kanssa.'
+        + '\n\nLäheisyys kuninkaaseen synnytti kateutta. Kun Narai sairastui '
+        + 'parantumattomasti, levisi huhu, että Phaulkon aikoi käyttää '
+        + 'kruununperillistä sätkynukkena ja hallita itse. Se antoi Narain '
+        + 'kasvatusveljelle Phetrachalle perusteen vallankaappaukseen. '
+        + 'Lopburissa 31. maaliskuuta 1688 Phaulkon suunnitteli ranskalaisen '
+        + 'marsalkka Desfargesin kanssa juonen torjumista, mutta huhtikuussa '
+        + 'Desfarges jäi omaan linnakkeeseensa Bangkokiin.'
+        + '\n\nToukokuun 18. päivänä kuningas ja kruununperillinen '
+        + 'pidätettiin. Phaulkon kutsuttiin palatsiin, riisuttiin aseista ja '
+        + 'vangittiin. Kesäkuun 5. päivänä 1688 Phetracha julisti hänet '
+        + 'syylliseksi maanpetokseen, ja hänet teloitettiin Wat Sakin '
+        + 'seudulla. Ranskan ja Siamin läheinen kausi päättyi siihen.',
+      lahde: 'en-Wikipedia "Constantine Phaulkon", johdanto sekä osiot '
+        + '"Origins", "Rise to power" ja "Downfall and death". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä huhu antoi Phetrachalle perusteen vallankaappaukseen?',
+        vaihtoehdot: [
+          'Että Phaulkon oli varastanut valtion kassan',
+          'Että Phaulkon aikoi hallita kruununperillisen kautta itse',
+          'Että Phaulkon oli myynyt Ayutthayan kartat hollantilaisille',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Lampangin maakunta (varastetun lastin määränpää).
+     * Lähde: en.wikipedia.org: Blue Diamond Affair
+     */
+    {
+      id: 'sininen-timantti',
+      otsikko: 'Sininen timantti, joka ei koskaan palannut',
+      nimio: 'Sininen timantti',
+      vuosi: '1989–1990',
+      paikka: 'Lampangin maakunta, Thaimaa',
+      lat: 18.2888, lon: 99.4908,
+      kortti: 'Palvelija piilotti yhdeksänkymmentäyksi kiloa jalokiviä '
+        + 'pölynimurin pussiin ja lähetti ne kotiin pohjoiseen Thaimaahan. '
+        + 'Poliisi sai lastin takaisin ja lensi sen Riadiin. Siellä '
+        + 'huomattiin, että puolet kivistä oli väärennöksiä.',
+      teksti: 'Vuonna 1989 thaimaalainen työntekijä Kriangkrai Techamong '
+        + 'varasti prinssi Faisal bin Fahdin palatsista Riadista 91 kiloa '
+        + 'koruja ja jalokiviä. Hänellä oli pääsy prinssin makuuhuoneeseen, '
+        + 'ja hän piilotti saaliin palatsissa pölynimurin pussiin. Joukossa '
+        + 'oli 50 karaatin sininen timantti. Kivet lähetettiin hänen '
+        + 'kotiinsa Lampangin maakuntaan Thaimaahan.'
+        + '\n\nKivistä oli vaikea päästä eroon, ja Kriangkrai alkoi myydä '
+        + 'niitä pilkkahintaan. Bangkokilainen jalokivikauppias Santhi '
+        + 'Sithanakan kuuli kaupoista ja osti suurimman osan murto-osalla '
+        + 'niiden arvosta. Thaimaan poliisin tutkinta luutnanttikenraali '
+        + 'Chalor Kerdthesin johdolla johti pidätykseen ja korujen '
+        + 'takaisinsaantiin. Kriangkrai tuomittiin seitsemäksi vuodeksi ja '
+        + 'vapautui kolmen vuoden jälkeen.'
+        + '\n\nChalorin ryhmä lensi korut takaisin Saudi-Arabiaan. Siellä '
+        + 'havaittiin, että sininen timantti puuttui ja että noin puolet '
+        + 'palautetuista kivistä oli väärennöksiä. Bangkokissa levisi lehdissä '
+        + 'huhuja hyväntekeväisyysjuhlien valokuvista, joissa virkamiesten '
+        + 'vaimoilla näkyi palatsista varastettuja muistuttavia kaulakoruja.'
+        + '\n\nTapaus mutkistui vielä pahemmin. Saudiarabialainen liikemies '
+        + 'Mohammad al-Ruwaili katosi Bangkokissa 12. helmikuuta 1990, ja '
+        + 'kolme saudidiplomaattia oli surmattu kaupungissa kaksi viikkoa '
+        + 'aiemmin; murhat ovat yhä selvittämättä. Chalor tuomittiin '
+        + 'myöhemmin kuolemaan jalokivikauppiaan vaimon ja pojan murhien '
+        + 'tilaamisesta, ja tuomio muutettiin vankeudeksi.',
+      lahde: 'en-Wikipedia "Blue Diamond Affair", johdanto sekä osiot '
+        + '"Theft", "Recovery" ja "Investigation". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Saudi-Arabiassa huomattiin, kun korut palautettiin?',
+        vaihtoehdot: [
+          'Kaikki kivet olivat tallella',
+          'Lasti oli kadonnut matkalla',
+          'Sininen timantti puuttui ja puolet kivistä oli väärennöksiä',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  VNM: [
+    /*
+     * Hanoin ympäryskylät, Tonkin (rottatarhat kaupungin ulkopuolella).
+     * Lähde: en.wikipedia.org: Great Hanoi Rat Massacre
+     *
+     * MERKKI ON KAUPUNGIN ULKOPUOLELLA EIKÄ VIEMÄREISSÄ, ja syy on
+     * karttatekninen: Hanoi on pelikaupunki, ja sen laatan ympärillä
+     * seitsemän lautayksikön säteellä oleva nosto ei tule pääkartalle
+     * (KAUPUNGIN_KOHDALLA_SADE, js/fokuskohteet.js). Merkki on siksi
+     * siellä, missä terveystarkastajat löysivät rottatarhat: Hanoin
+     * ulkopuolisella maaseudulla, 12,8 yksikköä laatasta itään.
+     */
+    {
+      id: 'hanoin-rottapalkkiot',
+      otsikko: 'Palkkio rotanhännästä ja hännättömät rotat',
+      nimio: 'Rottapalkkiot',
+      vuosi: '1902',
+      paikka: 'Hanoi ja sen ympäryskylät, Tonkin',
+      lat: 20.85, lon: 106.15,
+      kortti: 'Ranskan siirtomaahallinto halusi puhdistaa uuden viemäristönsä '
+        + 'rotista ja lupasi sentin jokaisesta tapetusta. Todisteeksi riitti '
+        + 'häntä. Pian kaupungilla juoksi terveitä rottia ilman häntää, ja '
+        + 'maaseudulle ilmestyi tarhoja.',
+      teksti: 'Vuonna 1902 Ranskan Indokiinan kenraalikuvernementti ryhtyi '
+        + 'hävittämään Hanoin rottakantaa. Kaupunkiin oli juuri rakennettu '
+        + 'viemäristö, ja maailmalla oli menossa ruttopandemia, jonka '
+        + 'levittäjiksi Alexandre Yersin oli muutamaa vuotta aiemmin '
+        + 'osoittanut jyrsijät.'
+        + '\n\nEnsin palkattiin ammattirotanpyytäjiä, jotka laskeutuivat '
+        + 'viemäreihin. Huhtikuun viimeisellä viikolla kaadettiin 7 985 '
+        + 'rottaa, toukokuun 30. päivänä 15 041 ja kesäkuun 21. päivänä '
+        + 'peräti 20 112 yhtenä päivänä. Kanta ei silti pienentynyt, ja '
+        + 'pyytäjät alkoivat lakkoilla vaatien parempaa palkkaa työstä, jota '
+        + 'tehtiin jätevedessä käärmeiden ja tuhatjalkaisten seassa.'
+        + '\n\nSeuraavaksi hallinto avasi jahdin kaikille ja lupasi sentin '
+        + 'palkkion rottaa kohti. Ruumiiden sijaan virastoon vietiin pelkkä '
+        + 'häntä. Aluksi häntiä tuli runsaasti, mutta pian kaupungilla nähtiin '
+        + 'terveitä rottia, joilta häntä oli katkaistu: pyytäjät päästivät '
+        + 'ne takaisin lisääntymään. Rottia myös salakuljetettiin kaupunkiin '
+        + 'muualta, ja terveystarkastajat löysivät maaseudulta tarhoja, joissa '
+        + 'rottia kasvatettiin pelkkien häntien takia.'
+        + '\n\nPalkkiojärjestelmä lakkautettiin. Rottia oli enemmän kuin '
+        + 'ennen, ja vuonna 1903 rutto tarttui 159 ihmiseen, joista 110 '
+        + 'kuoli. Tapaus tunnetaan nykyään kouluesimerkkinä nurinkurisesta '
+        + 'kannustimesta.',
+      lahde: 'en-Wikipedia "Great Hanoi Rat Massacre", johdanto sekä osiot '
+        + '"First attempts to control the rat population", "Hiring vigilantes '
+        + 'and the unintended consequences" ja "Aftermath". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi hallinto lopetti palkkiojärjestelmän?',
+        vaihtoehdot: [
+          'Rahat loppuivat kesken',
+          'Rottia oli lopulta enemmän kuin ennen',
+          'Viemärit tulvivat ja työ kävi mahdottomaksi',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Cù Lao Chàmin edusta, Hội Anin ulkopuolella (hylyn paikka).
+     * Lähde: en.wikipedia.org: Hội An wreck
+     */
+    {
+      id: 'hoi-anin-hylky',
+      otsikko: 'Kolmesataatuhatta ruukkua seitsemänkymmenen metrin syvyydessä',
+      nimio: 'Hội Anin hylky',
+      vuosi: '1990–2000',
+      paikka: 'Cù Lao Chàmin edusta, Quảng Nam',
+      lat: 16.04, lon: 108.6,
+      kortti: 'Kalastajat löysivät 1990-luvun alussa hylyn, jonka lasti oli '
+        + 'yksinomaan vietnamilaista keramiikkaa. Ennen kuin viranomaiset '
+        + 'ehtivät paikalle, hylkyä oli jo raahattu koukuilla vuosien ajan. '
+        + 'Pelastusoperaatiosta tuli Kaakkois-Aasian suurin.',
+      teksti: 'Hylky lepää Etelä-Kiinan merellä noin 22 meripeninkulmaa '
+        + 'Keski-Vietnamin rannikolta ja 70 metrin syvyydessä. Se kuljetti '
+        + '1400-luvun puolivälin ja lopun vietnamilaista keramiikkaa, joka '
+        + 'oli valmistettu Punaisenjoen suiston uuneissa, kuten Chu Dausissa. '
+        + 'Löytö oli poikkeuksellinen, koska ehjät kappaleet olivat harvinaisia '
+        + '— lähes koko tuotanto oli aikanaan viety maasta.'
+        + '\n\nKalastajat löysivät paikan 1990-luvun alussa. Vuosien ajan '
+        + 'kohdetta ryöstettiin järjestelmällisesti: menetelmänä oli raahata '
+        + 'koukkurivistöä verkkoineen hylyn yli, jotta esineet irtoaisivat ja '
+        + 'jäisivät verkkoihin. Esineitä ilmestyi markkinoille eri puolilla '
+        + 'maailmaa. Viranomaiset saivat vihiä vasta, kun Da Nangin '
+        + 'lentoasemalla pidätettiin kaksi kauppiasta, joiden matkalaukut '
+        + 'olivat täynnä hylyn keramiikkaa.'
+        + '\n\nKohde oli tavallista sukellussyvyyttä syvemmällä, mutta jotain '
+        + 'oli tehtävä nopeasti. Vuonna 1996 liikemies Ong Soo Hin ja Oxfordin '
+        + 'yliopiston arkeologi Mensun Bound aloittivat kaivauksen yhdessä '
+        + 'Vietnamin kansallismuseon kanssa. Työ kesti neljä vuotta ja maksoi '
+        + 'arviolta neljätoista miljoonaa dollaria; talteen saatiin yli '
+        + '250 000 ehjää esinettä.'
+        + '\n\nVietnamilainen asiantuntijaryhmä valitsi ainutlaatuiset '
+        + 'kappaleet kansalliskokoelmaan, ja kuusi museota pitää niistä '
+        + 'pysyvää näyttelyä. Loput yhdeksänkymmentä prosenttia myytiin '
+        + 'huutokaupalla San Franciscossa vuonna 2000.',
+      lahde: 'en-Wikipedia "Hội An wreck", johdanto ja osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten viranomaiset saivat tiedon hylyn ryöstelystä?',
+        vaihtoehdot: [
+          'Sukeltaja ilmoitti siitä poliisille',
+          'Kalastajat kertoivat siitä museolle',
+          'Lentoasemalla pidätettiin kauppiaat, joiden laukut olivat täynnä keramiikkaa',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  SGP: [
+    /*
+     * Barings Futures Singapore, Raffles Place (kaupankäynnin paikka).
+     * Lähde: en.wikipedia.org: Barings Bank
+     *
+     * MERKKI ON RUUDUN ITÄPUOLELLA, koska Singaporen kohdekartta
+     * (js/packs/maakartat.js singapore) rajautuu ruutuun lat
+     * 1,276–1,308 ja lon 103,836–103,874 ja Raffles Place osuu sen
+     * keskelle. Kohdekartan rajauksessa oleva skandaali kuuluu
+     * kohdekartan pisteelle eikä pääkartalle
+     * (tools/tarkista-nostopaikat.mjs), eikä tässä erässä lisätä
+     * kohdekartan pisteitä.
+     */
+    {
+      id: 'baringsin-romahdus',
+      otsikko: 'Kaksisataakolmekymmentäkolme vuotta ja yksi kauppias',
+      nimio: 'Barings',
+      vuosi: '1992–1995',
+      paikka: 'Barings Futures Singapore, Raffles Place',
+      lat: 1.29, lon: 103.885,
+      kortti: 'Britannian vanhin liikepankki antoi saman miehen käydä kauppaa '
+        + 'ja tarkistaa omat kauppansa. Kolmessa vuodessa hän oli hukannut '
+        + 'kaksi kertaa pankin kaupankäyntipääoman verran rahaa. Kobe järisi, '
+        + 'ja peli oli pelattu.',
+      teksti: 'Barings Bank perustettiin Lontoossa 1762, ja se oli Englannin '
+        + 'vanhimpia liikepankkeja. Sen kaatoi 1995 valtava '
+        + 'kaupankäyntitappio, jonka aiheutti Singaporen johdannaiskaupan '
+        + 'päällikkö Nick Leeson.'
+        + '\n\nLeesonin tehtävä oli arbitraasi: hyötyä Nikkei 225 '
+        + '-futuurisopimusten hintaerosta Osakan pörssin ja Singaporen SIMEXin '
+        + 'välillä ostamalla toisesta ja myymällä heti toisesta pienellä '
+        + 'katteella asiakkaan lukuun. Sen sijaan hän alkoi tammikuun 1992 '
+        + 'lopulla tehdä samoja kauppoja pankin omalla rahalla ja veikata '
+        + 'Japanin markkinoiden suuntaa.'
+        + '\n\nVirhe oli rakenteellinen. Leeson oli SIMEXin kaupankäynnin '
+        + 'johtaja mutta samalla myös yksikön selvitystoiminnan päällikkö eli '
+        + 'vastasi omien kauppojensa kirjanpidon oikeellisuudesta. Tehtävät '
+        + 'olisivat normaalisti kuuluneet eri ihmisille. Hän saattoi toimia '
+        + 'ilman Lontoon valvontaa, väärensi kaupankäyntitietoja '
+        + 'tietojärjestelmiin ja piilotti tappiot niin sanotulle '
+        + 'viisi-kahdeksan-tilille. Useat ihmiset olivat esittäneet huolensa, '
+        + 'mutta niitä ei kuunneltu.'
+        + '\n\nKoben maanjäristys järkytti Aasian markkinoita, ja Leeson '
+        + 'veikkasi Nikkein nopeaa toipumista. Sitä ei tullut. Kun tappiot '
+        + 'löytyivät 23. helmikuuta 1995, ne olivat 827 miljoonaa puntaa eli '
+        + 'kaksinkertaiset pankin kaupankäyntipääomaan nähden. Barings '
+        + 'julistettiin maksukyvyttömäksi 26. helmikuuta, ja Leeson tuomittiin '
+        + 'kuudeksi ja puoleksi vuodeksi vankeuteen Changissa.',
+      lahde: 'en-Wikipedia "Barings Bank", osiot "1992–1995", "Internal '
+        + 'control", "Kobe earthquake" ja "Discovery". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä valvonnassa oli rakenteellisesti pielessä?',
+        vaihtoehdot: [
+          'Sama mies kävi kauppaa ja vastasi omien kauppojensa selvityksestä',
+          'Pankilla ei ollut lainkaan tilintarkastajaa',
+          'Kaupat tehtiin puhelimitse ilman kirjauksia',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Pörssin ja yhtiön kotipaikka Singaporen ydinkeskustassa.
+     * Lähde: en.wikipedia.org: Pan-Electric Industries
+     *
+     * MERKKI ON SAAREN KOILLISKÄRJESSÄ CHANGISSA samasta syystä kuin
+     * Barings: kohdekartan rajauksessa oleva skandaali kuuluu
+     * kohdekartan pisteelle eikä pääkartalle. Lisäksi Singaporen
+     * karttatila on täynnä — ruudun lounaispuolella nimiö osui
+     * Kasvitieteellisen puutarhan, Haw Par Villan ja Bukit Timahin
+     * päälle (tools/tarkista-nimiolimitys.mjs), ja Changi oli ainoa
+     * kohta, jossa limityksiä on nolla.
+     */
+    {
+      id: 'pan-electric',
+      otsikko: 'Kolme päivää, jolloin pörssi oli kiinni',
+      nimio: 'Pan-Electric',
+      vuosi: '1985',
+      paikka: 'Singaporen pörssi, Singapore',
+      lat: 1.3898, lon: 103.9877,
+      kortti: 'Meripelastukseen erikoistuneella yhtiöllä oli 71 tytäryhtiötä '
+        + 'ja 230 miljoonan dollarin markkina-arvo. Joulukuussa 1985 sen '
+        + 'termiinisopimukset jäivät maksamatta, ja kaksi pörssiä suljettiin '
+        + 'kolmeksi päiväksi. Osakkeet olivat aamulla arvottomia.',
+      teksti: 'Pan-Electric Industries oli singaporelainen yhtiö, joka teki '
+        + 'meripelastustyötä ja jolla oli lisäksi hotelli- ja '
+        + 'kiinteistöomistuksia. Tytäryhtiöitä oli 71 ja markkina-arvo 230 '
+        + 'miljoonaa Singaporen dollaria.'
+        + '\n\nJoulukuussa 1985 yhtiö romahti valtavien selvittämättömien '
+        + 'termiinisopimusten takia. Romahdus pakotti sulkemaan sekä '
+        + 'Singaporen että Kuala Lumpurin pörssin kolmeksi päiväksi. Yhtiön '
+        + 'velat olivat kaatuessa 480 miljoonaa dollaria, ja 5 500 '
+        + 'osakkeenomistajan osakkeet todettiin yhdessä yössä arvottomiksi.'
+        + '\n\nJälkiselvittelyssä yhtiön keskeisiä henkilöitä — muun muassa '
+        + 'Peter Tham, Tan Kok Liang ja Tan Koon Swan — asetettiin syytteeseen '
+        + 'ja tuomittiin eripituisiin vankeusrangaistuksiin. Luottamus pörssiin '
+        + 'romahti, osakekurssit syöksyivät ja osa välitysliikkeistä ajautui '
+        + 'konkurssiin.'
+        + '\n\nMaaliskuussa 1986 säädettiin uudet arvopaperilait, joiden '
+        + 'tarkoituksena oli suojata välitysliikkeitä luottoriskeiltä. Vielä '
+        + 'vuonna 2000 tapaus oli Singaporen historian suurin yritysromahdus '
+        + 'ja ainoa kerta, jolloin pörssi jouduttiin sulkemaan yllättäen.',
+      lahde: 'en-Wikipedia "Pan-Electric Industries", johdanto-osa. '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä poikkeuksellista romahdus aiheutti pörssille?',
+        vaihtoehdot: [
+          'Pörssi siirtyi sähköiseen kaupankäyntiin',
+          'Kaksi pörssiä suljettiin kolmeksi päiväksi',
+          'Pörssi muutti uusiin tiloihin',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  TLS: [
+    /*
+     * Lifau, Oecusse (Portugalin ensimmäinen tukikohta Timorilla).
+     * Lähde: en.wikipedia.org: Topasses; Lifau
+     */
+    {
+      id: 'lifaun-pako',
+      otsikko: 'Kuvernööri, joka ajettiin ulos omasta siirtokunnastaan',
+      nimio: 'Lifaun pako',
+      vuosi: '1702–1769',
+      paikka: 'Lifau, Oecusse',
+      lat: -9.216667, lon: 124.3,
+      kortti: 'Timorin santelipuukaupan hallitsi sekaväestö, jota kutsuttiin '
+        + 'topasseiksi. Kun Lissabon lähetti Lifauhun oikean kuvernöörin, '
+        + 'topassit ajoivat hänet pois. Toisella kerralla portugalilaiset '
+        + 'siirsivät koko pääkaupungin toiseen päähän saarta.',
+      teksti: 'Topassit olivat kahden mahtisuvun, Da Costan ja Hornayn, '
+        + 'johtama väestöryhmä, joka asui Oecussessa ja Floresilla. Ryhmä '
+        + 'syntyi 1560-luvulta alkaen Solorin portugalilaisen '
+        + 'kauppa-asemasta, jota käytettiin ponnahduslautana Timorin '
+        + 'santelipuukauppaan. Kun hollantilainen kauppakomppania valtasi '
+        + 'Solorin 1613, yhteisö siirtyi Larantukaan Floresille ja 1650-luvun '
+        + 'lopulla osin Länsi-Timoriin.'
+        + '\n\nVuoteen 1663 mennessä topassit olivat etninen sekoitus '
+        + 'portugalilaisia, floresilaisia, timorilaisia, intialaisia ja '
+        + 'hollantilaisia karkureita. Sotataidollaan he hallitsivat suurta '
+        + 'osaa Timorista, ja heidän keskuksensa oli Lifau. He painostivat '
+        + 'timorilaisia ruhtinaita toimittamaan santelipuuta rannikolle ja '
+        + 'myivät sen Macaon kauppiaille tai hollantilaisille.'
+        + '\n\nYhteisöllä oli omat valitsemansa kapteenit, eikä se juuri '
+        + 'pitänyt yhteyttä Portugalin Intian varakuninkaaseen. Portugali '
+        + 'asetti Lifauhun hallintomiehen 1656 ja varsinaisen kuvernöörin '
+        + '1702. Topassit vastustivat sitä väkivalloin ja ajoivat kuvernööri '
+        + 'António Coelho Guerreiron pois 1705.'
+        + '\n\nHyökkäykset jatkuivat, ja 1769 portugalilaiset siirsivät '
+        + 'tukikohtansa Lifausta itään Diliin. Siitä tuli Itä-Timorin '
+        + 'pääkaupunki. Kahden portugalilaisryhmän välillä vallitsi ajoittain '
+        + 'sotatila aina vuoteen 1785 asti.',
+      lahde: 'en-Wikipedia "Topasses", osiot "Influence on the Timor region" '
+        + 'ja "Independent position within the colonial system", sekä "Lifau", '
+        + 'osio "History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä portugalilaiset tekivät topassien hyökkäysten jälkeen 1769?',
+        vaihtoehdot: [
+          'Siirsivät pääkaupungin Lifausta Diliin',
+          'Luopuivat koko Timorista',
+          'Palkkasivat hollantilaiset avuksi',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Manufahin rannikko Betanon kohdalla (kapinan sydänalue).
+     * Lähde: en.wikipedia.org: East Timorese rebellion of 1911–1912
+     */
+    {
+      id: 'manufahin-kapina',
+      otsikko: 'Päävero, pakkotyö ja kolmen vuoden kapina',
+      nimio: 'Manufahi',
+      vuosi: '1911–1912',
+      paikka: 'Manufahin rannikko, Betano',
+      lat: -9.164444, lon: 125.725,
+      kortti: 'Portugali halusi Timorilta rahaa ja käsipareja: pääveron ja '
+        + 'pakkotyön. Manufahin ruhtinas kokosi kuningaskuntien liiton ja '
+        + 'nousi kapinaan. Sen kukistamiseen tarvittiin joukkoja Mosambikista '
+        + 'ja tykkivene Macaosta.',
+      teksti: 'Vuosien 1911–1912 kapina, jota kutsutaan myös suureksi '
+        + 'kapinaksi tai Manufahin kapinaksi, syntyi vastauksena Portugalin '
+        + 'siirtomaahallinnon yrityksiin kerätä päävero ja panna toimeen '
+        + 'pakkotyövelvollisuus. Ne kuuluivat laajempaan hankkeeseen, jolla '
+        + 'pyrittiin edistämään vientikasvien viljelyä ja rakentamaan '
+        + 'nykyaikaista infrastruktuuria.'
+        + '\n\nKapinat olivat alkaneet jo aiemmin. Manufahin alkuperäisen '
+        + 'kuningaskunnan liurai eli päällikkö Dom Boaventura johti '
+        + 'ensimmäistä kapinaa 1894–1901 ja toista 1907–1908. Vuonna 1911 hän '
+        + 'kokosi paikallisten kuningaskuntien liiton viimeiseen ja '
+        + 'vakavimpaan nousuun.'
+        + '\n\nHelmikuussa 1912 erään kuningaskunnan kapinalliset tunkeutuivat '
+        + 'siirtokunnan pääkaupunkiin Diliin, ryöstivät hallintotalon ja '
+        + 'surmasivat matkallaan ihmisiä. Elokuussa portugalilaiset toivat '
+        + 'joukkoja Mosambikista ja tykkiveneen Macaosta kukistamaan kapinan.'
+        + '\n\nHinta oli raskas: 3 424 timorilaista kaatui ja 12 567 haavoittui, '
+        + 'portugalilaisten puolella kaatui 289 ja haavoittui 600. Vuoden 1912 '
+        + 'jälkeen Portugalin valta ulottui koko alueelle, perinnöllisiä '
+        + 'liuraita ei enää nimitetty ja vanhat kuningaskunnat lakkasivat. '
+        + 'Kapinaa pidetään ratkaisevana itätimorilaisen oman identiteetin '
+        + 'synnyssä.',
+      lahde: 'en-Wikipedia "East Timorese rebellion of 1911–1912", '
+        + 'johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä portugalilaiset toivat joukot kapinan kukistamiseen?',
+        vaihtoehdot: [
+          'Brasiliasta',
+          'Goasta',
+          'Mosambikista',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
 };

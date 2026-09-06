@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1626';
+const CACHE = 'matkakirja-2026-08-09.1627';
 const SHELL = [
   './',
   './index.html',
@@ -415,6 +415,7 @@ const SHELL = [
   './js/packs/maastokohteet-nic.js',
   './js/packs/maastokohteet-nld.js',
   './js/packs/maastokohteet-nor.js',
+  './js/packs/maastokohteet-npl.js',
   './js/packs/maastokohteet-nzl.js',
   './js/packs/maastokohteet-omn.js',
   './js/packs/maastokohteet-pak.js',
@@ -429,12 +430,15 @@ const SHELL = [
   './js/packs/maastokohteet-sdn.js',
   './js/packs/maastokohteet-sds.js',
   './js/packs/maastokohteet-sen.js',
+  './js/packs/maastokohteet-sgp.js',
   './js/packs/maastokohteet-slb.js',
   './js/packs/maastokohteet-sle.js',
   './js/packs/maastokohteet-som.js',
   './js/packs/maastokohteet-swe.js',
   './js/packs/maastokohteet-syr.js',
   './js/packs/maastokohteet-tcd.js',
+  './js/packs/maastokohteet-tha.js',
+  './js/packs/maastokohteet-tls.js',
   './js/packs/maastokohteet-tun.js',
   './js/packs/maastokohteet-tur.js',
   './js/packs/maastokohteet-twn.js',
@@ -442,6 +446,7 @@ const SHELL = [
   './js/packs/maastokohteet-uga.js',
   './js/packs/maastokohteet-ukr.js',
   './js/packs/maastokohteet-uzb.js',
+  './js/packs/maastokohteet-vnm.js',
   './js/packs/maastokohteet-yem.js',
   './js/packs/maastokohteet-zaf.js',
   './js/packs/maastokohteet-zwe.js',
