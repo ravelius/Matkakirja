@@ -1654,7 +1654,443 @@ export const ELAINTAKYT = {
     lon: 93.6,
     lat: 45.35,
   },
+  /*
+   * ══ ERÄ M14, AASIA 4 6.9.2026 ══════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M14 (AFG, PAK, UZB, PHL, CHN) tuo neljä eläintäkyä; Kiinalla
+   * oli oma jo ennestään. Kaikki neljä ovat KUVATTOMIA kuten erien
+   * M4 ja M10 täyt: `kuva`-kentässä on kuvaputken ämpäritunnus ilman
+   * kansiota (elain-afg, elain-pak, elain-uzb, elain-phl), ja kun
+   * kuvaputki toimittaa kuvan, se ilmestyy kortille ilman
+   * koodimuutosta.
+   *
+   * PAIKAT ON MITATTU KONEELLA. Jokainen piste on maan rajojen
+   * sisällä, maalla ja vähintään 35 lautayksikön päässä jokaisesta
+   * kaupunkimerkistä sekä 30 yksikön päässä muista eläintäyistä
+   * (tests/elaintakyt.test.mjs). Etäisyys lähimpään pelikaupunkiin on
+   * kirjattu jokaisen tietueen koordinaattikommenttiin.
+   *
+   * Faktat on luettu en-Wikipedian raakatekstistä 6.9.2026 laji
+   * kerrallaan, ja lähderivi nimeää artikkelin ja osat.
+   */
+  AFG: {
+    elain: 'lumileopardi',
+    otsikko: 'Vuorten haamu, joka ei osaa karjua',
+    teksti: 'Lumileopardi on Panthera-suvun kissaeläin, jonka turkki on valkoisesta harmaaseen ja jossa on mustia täpliä päässä ja kaulassa sekä suurempia ruusukkeita selässä, kyljissä ja tuuheassa hännässä. Karvat ovat 5–12 senttimetriä pitkiä, säkäkorkeus noin 56 senttimetriä, ruumiin pituus 75–150 senttimetriä ja häntä 80–105 senttimetriä; urokset painavat keskimäärin 45–55 ja naaraat 35–40 kilogrammaa. Laji on sopeutunut kylmään vuoristoon: pienet pyöreät korvat vähentävät lämmönhukkaa, leveät tassut jakavat painon lumella ja niiden alapinnan karva parantaa otetta jyrkillä rinteillä. Paksu, rasvaa varastoiva häntä auttaa tasapainossa ja toimii nukkuessa peittona kasvojen suojana. Toisin kuin muut Panthera-lajit lumileopardi ei osaa karjua: sen äänihuulet ovat vain yhdeksän millimetriä pitkät. Afganistanissa laji elää Hindukušin itäosissa, ja syrjäisessä Wakhanin käytävässä se on tallentunut riistakameroihin 16 eri paikassa.',
+    lahde: 'en-Wikipedia "Snow leopard", johdanto sekä osiot "Characteristics" ja '
+      + '"Distribution and habitat". Tarkistettu 6.9.2026.',
+    kuva: 'elain-afg',
+    // Piste on Wakhanin käytävässä Koillis-Afganistanissa, 136,8
+    // lautayksikköä Kašgarista ja 158,4 Kabulista (vähimmäisetäisyys 35).
+    lon: 73.0,
+    lat: 37.0,
+  },
+  PAK: {
+    elain: 'markhor',
+    otsikko: 'Vuohi, jonka sarvet kiertyvät korkkiruuviksi',
+    teksti: 'Markhor on suuri villivuohi Keski- ja Etelä-Aasian rajaseudun vuoristoista, muun muassa Karakoramista ja Himalajalta, ja se on Pakistanin kansalliseläin. Nimi tulee persian sanasta markhar, kiharainen, ja se viittaa eläimen sarviin; kirjaimellisemmin sanat mar ja khor tarkoittavat käärmeensyöjää, sillä vanhan uskomuksen mukaan markhor tappoi ja söi käärmeitä. Aikuinen markhor on 65–115 senttimetriä korkea, 132–186 senttimetriä pitkä ja painaa 32–110 kiloa; koko Capra-suvussa sillä on suurin säkäkorkeus. Turkki on vaaleanruskeasta mustaan, kesällä sileä ja lyhyt, talvella pitkä ja tuuhea, ja alaraajojen karva on mustavalkoinen. Molemmilla sukupuolilla on tiukkaan kiertyneet korkkiruuvimaiset sarvet, jotka lähtevät päästä yhdessä ja levenevät kärkiä kohti: uroksilla ne kasvavat jopa 160 senttimetriä, naarailla 25. Laji elää 600–3 600 metrin korkeudessa tammi-, mänty- ja katajapensaikoissa, ja suurin kanta on Chitralin kansallispuistossa.',
+    lahde: 'en-Wikipedia "Markhor", johdanto sekä osiot "Description" ja "Distribution '
+      + 'and habitat". Tarkistettu 6.9.2026.',
+    kuva: 'elain-pak',
+    // Piste on Chitralin vuoristossa Pohjois-Pakistanissa, 107,3
+    // lautayksikköä Kabulista (vähimmäisetäisyys 35).
+    lon: 72.0,
+    lat: 35.9,
+  },
+  UZB: {
+    elain: 'bukharanhirvi',
+    otsikko: 'Hirvi, joka elää autiomaan jokivarressa',
+    teksti: 'Bukharanhirvi eli baktrianhirvi on keskiaasialaisen saksanhirven alalaji, joka elää alavilla jokivarsilla keskellä autiomaata. Se muistuttaa ekologialtaan sukulaistaan jarkandinhirveä, ja lajit erottaa toisistaan Tianšanin vuoristo. Väri on tuhkanharmaa kellertävällä kiillolla, takapuolessa on harmaanvalkoinen laikku ja huulten ja leuan reunat ovat vaaleat; sarvet ovat vaaleat, ja täysikasvuisella on kummassakin sarvessa viisi haaraa ja tyypillinen mutka kolmannen haaran jälkeen. Turkki on tummempi ja harmaanruskeampi kuin jarkandinhirvellä, ja jalat, pää ja kaula ovat tummat etenkin uroksilla. Vasat syntyvät täplikkäinä kuten euroopanhirvellä. Laji elää pajun ja poppelin reunustamissa tugai-metsissä eikä vaella, vaikka se voi levittäytyä viereiselle aavikolle yöllä tai viileinä aikoina. Vuonna 1999 hirviä oli jäljellä enintään 400; suojelun ansiosta kanta on kasvanut, ja Uzbekistanin Badai Tugain suojelualueella laskettiin 2009 yhteensä 374 yksilöä.',
+    lahde: 'en-Wikipedia "Bactrian deer", johdanto sekä osiot "Description", "Range" ja '
+      + '"Population". Tarkistettu 6.9.2026.',
+    kuva: 'elain-uzb',
+    // Piste on Amudarjan tugai-vyöhykkeellä Lounais-Uzbekistanissa,
+    // 144,6 lautayksikköä Samarkandista (vähimmäisetäisyys 35).
+    lon: 62.6,
+    lat: 40.2,
+  },
+  PHL: {
+    elain: 'tarsieri',
+    otsikko: 'Nyrkin kokoinen kädellinen, jolla on jättimäiset silmät',
+    teksti: 'Filippiinientarsieri on Filippiineillä kotoperäinen kädellinen, joka kuuluu noin 45 miljoonaa vuotta vanhaan tarsierien heimoon; heimon nimi tulee pitkästä nilkkaluusta eli tarsuksesta. Se on 85–160 millimetriä korkea ja siten yksi maailman pienimmistä kädellisistä: aikuinen on suunnilleen ihmisen nyrkin kokoinen, ja urokset painavat 80–160 grammaa. Silmät ovat kiinni kallossa eivätkä liiku kuopissaan, mutta kaulan erikoisrakenne sallii pään kääntämisen 180 astetta. Silmät ovat suhteettoman suuret — kaikista nisäkkäistä suurin silmän ja ruumiinpainon suhde — ja ne antavat yöeläimelle erinomaisen hämäränäön. Suuret kalvomaiset korvat liikkuvat lähes koko ajan. Pitkä nilkkaluu heittää eläimen vähintään kolmen metrin päähän puusta toiseen, ja sormien ja varpaiden pyöreät tyynyt tarttuvat lähes mihin tahansa pintaan. Ravinto on pääasiassa hyönteisiä, hämähäkkejä ja pieniä selkärankaisia. Lajia tavataan saariston kaakkoisosassa, muun muassa Boholilla, Samarilla ja Leytellä sekä Sarangania myöten.',
+    lahde: 'en-Wikipedia "Philippine tarsier", johdanto sekä osiot "Anatomy and '
+      + 'morphology", "Ecology" ja "Geographic range and habitat". Tarkistettu 6.9.2026.',
+    kuva: 'elain-phl',
+    // Piste on Etelä-Mindanaolla Saranganin seudulla, 344,7
+    // lautayksikköä Manilasta (vähimmäisetäisyys 35).
+    lon: 124.8,
+    lat: 6.0,
+  },
+  /*
+   * ══ ERÄ M13, ETELÄINEN AFRIKKA 6.9.2026 ═══════════════════════════
+   *
+   * Mosambik ja Zimbabwe olivat erän ainoat maat, joilta eläintäky
+   * puuttui (MDG, NAM ja ZAF olivat jo kunnossa). Kumpikin on kuvaton:
+   * `kuva` on kuvaputken ämpäritunnus ilman kansiota, ja kortti kantaa
+   * tekstin yksinään siihen asti kunnes kuva tulee.
+   */
+  MOZ: {
+    elain: 'dugongi',
+    otsikko: 'Meriruohon laiduntaja Bazaruton matalikoilla',
+    teksti: 'Dugongi (Dugong dugon) on merinisäkäs ja yksi neljästä elossa olevasta sireenieläinlajista; kolme muuta ovat manaatteja. Se on sukunsa Dugongidae viimeinen edustaja — lähin nykysukulainen, merilehmä, metsästettiin sukupuuttoon 1700-luvulla. Dugongi elää täysin meriruohosta ja pysyy siksi matalilla rannikkovesillä: laajoissa suojaisissa lahdissa, mangrovekanavissa, suurten rannikkosaarten vesillä ja riuttojen välissä. Manaateista sen erottaa delfiinimäinen pyrstö, ja alaspäin kääntynyt kuono on sopeuma pohjan meriruohon syömiseen. Aikuinen on harvoin yli kolme metriä pitkä; sen mittainen yksilö painaa noin 420 kiloa. Dugongia on metsästetty tuhansia vuosia lihan ja rasvan takia, ja koska se elää 70-vuotiaaksi ja lisääntyy hitaasti, se toipuu tappioista huonosti — IUCN luokittelee sen vaarantuneeksi. Mosambikissa suurin jäljellä oleva kanta, noin 120 yksilöä, elää Bazaruton saariston kansallispuistossa, jonka vedet suojeltiin 1971.',
+    lahde: 'en-Wikipedia "Dugong", johdanto sekä osiot "Description" ja '
+      + '"Conservation", ja "Bazaruto Archipelago", osio "Wildlife". '
+      + 'Tarkistettu 6.9.2026.',
+    kuva: 'elain-moz',
+    // Piste on Inhassorossa Bazaruton saariston vastarannalla — saaristo
+    // kuuluu Vilanculosin ja Inhassoron piireihin — 72,1 lautayksikköä
+    // Mosambik-laatasta (vähimmäisetäisyys 35). Merkki on mantereella,
+    // koska testi vaatii eläintäyn maalle ja maan rajojen sisään
+    // (tests/elaintakyt.test.mjs); saariston oma vesialue jää laudan
+    // maskissa mereksi.
+    lon: 35.2,
+    lat: -21.53333333,
+  },
+  ZWE: {
+    elain: 'musta sarvikuono',
+    otsikko: 'Koukkuhuuli, joka syö oksat eikä ruohoa',
+    teksti: 'Musta sarvikuono (Diceros bicornis) eli koukkuhuulisarvikuono elää itäisessä ja eteläisessä Afrikassa, muun muassa Zimbabwessa, ja se on sukunsa Diceros ainoa elossa oleva laji. Nimestä huolimatta väri vaihtelee ruskeasta harmaaseen. Aikuinen on säästä 1,32–1,8 metriä korkea ja 2,8–3,75 metriä pitkä ja painaa tavallisesti 800–1 400 kiloa; kallossa on kaksi keratiinista sarvea, joista etummainen on tyypillisesti puoli metriä pitkä. Ero Afrikan toiseen sarvikuonoon on huulessa: valkoisella sarvikuonolla on leveä nelikulmainen huuli ruohon syömiseen, mustalla terävä ja tarttuva ylähuuli, jolla se riipii lehdet ja oksat — se on siis selailija, ei laiduntaja, ja kantaa päätään korkeammalla. Ravinnoksi kelpaa jopa 220 kasvilajia, mieluiten akasioita ja tyräkkikasveja. Zimbabwessa laji elää muun muassa Gonarezhoun kansallispuistossa, ja Matobon kukkuloille se palautettiin 1990-luvulla Sambesin laaksosta.',
+    lahde: 'en-Wikipedia "Black rhinoceros", johdanto sekä osiot '
+      + '"Description" ja "Diet", "Gonarezhou National Park", osio '
+      + '"Fauna", sekä "Matobo National Park", osio "Fauna". '
+      + 'Tarkistettu 6.9.2026.',
+    kuva: 'elain-zwe',
+    // Piste on Gonarezhoun kansallispuistossa Kaakkois-Zimbabwessa,
+    // 122,1 lautayksikköä Mosambik-laatasta (vähimmäisetäisyys 35).
+    lon: 31.66666667,
+    lat: -21.66666667,
+  },
+  /*
+   * ── ERÄ M12, LÄNSI-AFRIKKA 6.9.2026 ────────────────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M12 (GHA, SEN, MLI, LBR, SLE) toi viisi uutta eläintäkyä;
+   * yhdelläkään viidestä maasta ei ollut täkyä ennestään, joten
+   * yhtäkään vanhaa tietuetta ei ole koskettu.
+   *
+   * PAIKKA ON MITATTU IRTI KAUPUNGEISTA JA MUISTA MERKEISTÄ. Jokainen
+   * piste on maan rajojen sisällä, maalla ja vähintään 35 lautayksikön
+   * päässä jokaisesta kaupunkimerkistä (tests/elaintakyt.test.mjs
+   * VAHIN_ETAISYYS_KAUPUNKIIN) sekä 30 yksikön päässä muista täyistä.
+   * Ghana ja Mali olivat erän tiukat tapaukset: Ghanassa Molen
+   * puiston kohta olisi ollut saman erän Mole-kohteen päällä, joten
+   * täky vietiin lounaisiin metsiin, ja Malissa Gourman norsujen
+   * läntinen pää osuisi Hombori Tondon päälle, joten piste on alueen
+   * itäpäässä.
+   *
+   * KUVA TULEE KUVAPUTKELTA. Erä on kuvaton, joten `kuva`-kentässä on
+   * pelkkä ämpäritunnus (js/media.js assetOsoite:
+   * `kohtaamiset/elaimet/<tunnus>.jpg`). Kun kuvaputki toimittaa kuvan,
+   * se ilmestyy kortille ilman koodimuutosta.
+   */
+  GHA: {
+    elain: 'valkokaulakalliovaris',
+    otsikko: 'Lintu, jonka luultiin kadonneen Ghanasta',
+    teksti: 'Valkokaulakalliovaris on keskikokoinen varpuslintu, jota tavataan vain Länsi-Afrikan kallioisissa metsissä Guineasta Ghanaan. Sen pää on lähes höyhenetön: paljas iho on kirkkaan keltainen, ja silmien takana on kaksi suurta pyöreää mustaa laikkua. Yläpuoli on harmaanmusta, alapuoli valkoinen, ja poikkeuksellisen pitkä tummanruskea pyrstö toimii tasapainottajana. Lintu ei juuri lennä pitkiä matkoja vaan liikkuu metsässä hyppien ja loikkien tai lyhyin lennoin matalassa kasvillisuudessa. Se syö hyönteisiä ja seuraa toisinaan ajajamuurahaisten parvia napaten niiden säikyttämiä otuksia; poikasille vanhemmat kantavat pieniä sammakoita. Pesä on syvä savikuppi, joka muurataan kallionpintaan tavallisesti luolassa, ja munia on kaksi kahdesti vuodessa. Ghanassa lajin luultiin kuolleen sukupuuttoon vuoteen 2003 asti, jolloin se löydettiin uudelleen maan eteläkeskiosasta.',
+    lahde: 'en-Wikipedia "White-necked rockfowl", johdanto sekä osiot "Distribution and '
+      + 'habitat", "Breeding" ja "Status and conservation". Tarkistettu 6.9.2026.',
+    kuva: 'elain-gha',
+    // Piste on Lounais-Ghanan metsävyöhykkeessä, 39,4 lautayksikköä
+    // Kumasi-laatasta (vähimmäisetäisyys 35).
+    lon: -2.2,
+    lat: 6.3,
+  },
+  SEN: {
+    elain: 'afrikanmanaatti',
+    otsikko: 'Vanhan maailman ainoa manaatti',
+    teksti: 'Afrikanmanaatti on ainoa manaattilaji vanhassa maailmassa ja dugongin ohella toinen kahdesta siellä elävästä sireenieläimestä. Sitä tavataan Senegalista Angolaan, ja sen elinympäristöjen kirjo on sireenieläimistä laajin: Atlantin ulkosaaria, Sahelin jokia ja päiväntasaajan sademetsävirtoja. Ruumis on keskeltä leveimmillään, häntä lapiomainen, ja väri harmaa — mutta levä ja muut pikkueliöt kasvavat sen päällä, joten eläin näyttää usein ruskealta tai vihertävältä. Pituutta voi olla 4,5 metriä ja painoa noin 360 kiloa, ja tavallinen matkavauhti on 5–8 kilometriä tunnissa, säikähtäneenä yli kolmekymmentä. Hampaita ovat vain vahvat poskihampaat, ja jos sellainen irtoaa, tilalle kasvaa uusi. Padot ovat lajin suurin uhka: Diaman pato on eristänyt Senegaljoen manaatit pysyvästi merestä ja Ghanan Akosombon pato omansa vastaavasti.',
+    lahde: 'en-Wikipedia "African manatee", johdanto sekä osiot "Range and habitat" ja '
+      + '"Description". Tarkistettu 6.9.2026.',
+    kuva: 'elain-sen',
+    // Piste on Ylä-Casamancen jokiseudulla Kaakkois-Senegalissa, 116,8
+    // lautayksikköä Dakar-laatasta (vähimmäisetäisyys 35).
+    lon: -13.5,
+    lat: 13.0,
+  },
+  MLI: {
+    elain: 'gourmannorsu',
+    otsikko: 'Vuoden mittainen kierros vesikuoppien väliä',
+    teksti: 'Malin norsut eivät ole oma lajinsa vaan afrikannorsuja, jotka ovat oppineet elämään aavikon laidalla. Ne ovat jäänteitä laumoista, jotka vielä 1970 kiersivät laajalti Sahelissa ja jotka salametsästys sitten hävitti; nykyään ne ovat kutistuneet Gourman seudulle, syrjäiselle alueelle Nigerin mutkan eteläpuolella Timbuktun tienoilla. Kanta on noin 400 yksilöä, ja se tekee vuosittain lähes viidensadan kilometrin vaellusmatkan, jopa 56 kilometriä vuorokaudessa. Reitti kiertää vastapäivään tilapäisten ja pysyvien vesikuoppien kautta: norsut pysyvät alueensa pohjoisosassa, kunnes sateet tulevat kesäkuussa, siirtyvät sitten etelään käyden lyhyesti Burkina Fason puolella ja palaavat taas pohjoiseen. Päivät ne viettävät piilossa akaasioiden keskellä ja tulevat juomaan ja syömään öisin. Kuivuudet ovat koetelleet kantaa: 1983 hallitus kuljetti norsuille vettä autoilla, ja 2009 aikuiset joutuivat kaivamaan vettä syvältä, mutta poikaset eivät ylettäneet siihen kärsällään.',
+    lahde: 'en-Wikipedia "Desert elephant", osio "Mali" sekä johdanto. Tarkistettu 6.9.2026.',
+    kuva: 'elain-mli',
+    // Piste on Gourman itäosassa Nigerin mutkan eteläpuolella, 117,1
+    // lautayksikköä Gao-laatasta (vähimmäisetäisyys 35).
+    lon: -0.5,
+    lat: 15.2,
+  },
+  LBR: {
+    elain: 'kääpiövirtahepo',
+    otsikko: 'Metsän virtahepo, joka nukkuu päivät',
+    teksti: 'Kääpiövirtahepo on Länsi-Afrikan metsien ja soiden asukki, ja valtaosa maailman kannasta elää Liberiassa; pieniä esiintymiä on Sierra Leonessa, Guineassa ja Norsunluurannikolla. Se on puolet tavallisen virtahevon korkeudesta ja alle neljänneksen sen painosta: säkäkorkeus 75–100 senttiä, pituus 150–175 senttiä ja paino 180–275 kiloa. Selkä viettää eteenpäin, jalat ja kaula ovat suhteessa pidemmät ja pää pienempi kuin isolla serkulla — kaikki sopeutumia tiheän metsäkasvillisuuden läpi kulkemiseen. Varpaat ovat harallaan ja räpylät vähäisemmät, jotta metsänpohjalla on hyvä kävellä, mutta korvissa ja sieraimissa on yhä voimakkaat lihasläpät sukeltamista varten. Iho erittää samaa hipposudorihappoa kuin isollakin virtahevolla: punertava neste ei ole hikeä eikä verta vaan toimii ilmeisesti antiseptisenä aurinkovoiteena. Laji on öinen ja arka, ja siksi sitä on tutkittu villinä hyvin vähän; luonnossa niitä arvioitiin 2015 olevan alle 2 500.',
+    lahde: 'en-Wikipedia "Pygmy hippopotamus", johdanto sekä osiot "Description" ja '
+      + '"Conservation". Tarkistettu 6.9.2026.',
+    kuva: 'elain-lbr',
+    // Piste on Cestos-joen seudun sademetsässä Keski-Liberiassa, 89,1
+    // lautayksikköä Kap Palmas -laatasta (vähimmäisetäisyys 35).
+    lon: -9.5,
+    lat: 5.6,
+  },
+  SLE: {
+    elain: 'länsiafrikansimpanssi',
+    otsikko: 'Simpanssi, joka veistää keihään',
+    teksti: 'Länsiafrikansimpanssi on äärimmäisen uhanalainen simpanssin alalaji, jota elää Norsunluurannikolla, Guineassa, Liberiassa, Malissa, Senegalissa, Ghanassa, Sierra Leonessa ja Guinea-Bissaussa; Beninistä, Burkina Fasosta ja Togosta se on hävinnyt. Suurimmat kannat ovat nykyään Guineassa, Sierra Leonessa ja Liberiassa, vaikka laji ulottui aikoinaan Etelä-Senegalista aina Niger-joelle asti. Se on simpanssin alalajeista geneettisesti eriytynein, ja käytös poikkeaa muista niin paljon, että sitä on ehdotettu omaksi lajikseen. Vain nämä simpanssit veistävät puisia keihäitä muiden kädellisten metsästämiseen, käyttävät luolia asuntoinaan, jakavat kasviravintoa keskenään ja liikkuvat myös öisin; kuumalla ne menevät veteen viilentymään ja leikkimään. Naaraat ovat seurallisia ja tukevat toisiaan riidoissa koiraiden kanssa, joten arvojärjestys on tasaisempi kuin Itä-Afrikan simpansseilla — naaraat myös metsästävät ja kulkevat mukana reviiripartioilla.',
+    lahde: 'en-Wikipedia "Western chimpanzee", johdanto sekä osiot "Distribution and habitat" '
+      + 'ja "Unique behaviors". Tarkistettu 6.9.2026.',
+    kuva: 'elain-sle',
+    // Piste on Pohjois-Sierra Leonen metsäisillä kukkuloilla Konon ja
+    // Tonkolilin välissä, 45,8 lautayksikköä Sierra Leone -laatasta
+    // (vähimmäisetäisyys 35).
+    lon: -11.5,
+    lat: 8.6,
+  },
+  /*
+   * ── ERÄ M15, AFRIKKA 5 6.9.2026 ────────────────────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M15 (SDN, TCD, LBY, NGA, SOM) toi viisi uutta eläintäkyä.
+   * Yhdelläkään viidestä maasta ei ollut täkyä ennestään.
+   *
+   * LAJIT EIVÄT TOISTA MITÄÄN AIEMPAA. Fennekki on jo Algerian täky
+   * ja nubiantorvikauris Jordanian, joten Libyan lajiksi valittiin
+   * saharangaselli; kirahvi on jo Kenian ja norsu Tansanian ja
+   * Namibian, joten Tšadin lajiksi tuli sapelisarvioryksi, jonka
+   * tarina on samalla erän paras: laji julistettiin luonnosta
+   * hävinneeksi vuonna 2000 ja palautettiin Tšadiin 2016 alkaen.
+   * Gorilla on jo Ugandan täky, joten Nigerian lajiksi valittiin
+   * drilli.
+   *
+   * PAIKAT ON MITATTU. Jokainen piste on oman maansa rajojen sisällä,
+   * maalla ja vähintään 35 lautayksikön päässä jokaisesta
+   * kaupunkimerkistä (tests/elaintakyt.test.mjs
+   * VAHIN_ETAISYYS_KAUPUNKIIN) sekä 30 yksikön päässä muista
+   * eläintäyistä. Lähin on Libyan saharangaselli 62,5 lautayksikön
+   * päässä Murzukista.
+   *
+   * KUVA TULEE KUVAPUTKELTA. Erä on kuvaton, joten `kuva`-kentässä on
+   * ämpäritunnus ilman kansiota (elain-sdn, elain-tcd, elain-lby,
+   * elain-nga, elain-som). Kun kuvaputki toimittaa kuvan, se ilmestyy
+   * kortille ilman koodimuutosta.
+   * ───────────────────────────────────────────────────────────────
+   */
+  SDN: {
+    elain: 'arruikatsa',
+    otsikko: 'Vuohilammas, joka juo vain kasveista',
+    teksti: 'Arruikatsa eli Ammotragus lervia on Pohjois-Afrikan kallioisten vuorten ainoa laji suvussaan. Se on säkäkorkeudeltaan noin metrin, hiekanruskea ja iän myötä tummuva, ja koirailla riippuu kurkusta ja rinnasta pitkä takkuinen karva. Sarvet ovat poikkileikkaukseltaan kolmiomaiset ja kaartuvat ulos, taakse ja sisään; ne voivat ylittää kahdeksankymmentä senttimetriä. Laji elää kuivilla vuorialueilla Saharan karun keskustan ympärillä, ja Sudanissa se tavataan Niilin länsipuolella sekä joen itäpuolella Punaisenmeren kukkuloilla. Arruikatsa saa kaiken tarvitsemansa nesteen ravinnostaan, mutta juo ja kylpee mielellään, jos vettä on. Se on hämärän eläin, joka on liikkeellä varhain aamulla ja myöhään iltapäivällä ja lepää päivän kuumuudessa; vaaran uhatessa se pakenee ylämäkeen ja hyppää paikaltaan yli kahden metrin korkeuteen.',
+    lahde: 'en-Wikipedia "Barbary sheep", johdanto sekä osiot "Description", '
+      + '"Range" ("Natural range") ja "Habitats". Tarkistettu 6.9.2026.',
+    kuva: 'elain-sdn',
+    // Piste on Punaisenmeren kukkuloilla Koillis-Sudanissa, 86,9
+    // lautayksikköä Suakinista (vähimmäisetäisyys 35).
+    lon: 35.0,
+    lat: 20.3,
+  },
+  TCD: {
+    elain: 'sapelisarvioryksi',
+    otsikko: 'Antilooppi, joka palasi luonnosta hävinneiden listalta',
+    teksti: 'Sapelisarvioryksi eli Oryx dammah oli aikoinaan levinnyt laajalti Pohjois-Afrikkaan sekä osiin Länsi- ja Keski-Afrikkaa. Se kestää aavikon oloja poikkeuksellisen hyvin: se tulee toimeen kuukausia juomatta ja saa suurimman osan päivittäisestä nesteestään kasveista. Kanta alkoi hiipua jo neoliittisen kauden ilmastonmuutoksessa, kun "vihreä Sahara" kuivui, ja myöhemmin lajia metsästettiin ankarasti sarvien takia; 1900-luvulla hevoset ja tuliaseet tekivät metsästyksestä tuhoisaa. Vuonna 2000 IUCN julisti sapelisarvioryksin luonnosta hävinneeksi. Tšad johtaa lajin palautushanketta Ouadi Rimé-Ouadi Achimin riistasuojelualueella, joka on 78 000 neliökilometrillään yksi maailman suurimmista suojelualueista: ensimmäinen 21 eläimen ryhmä päästettiin totutusaitaukseen alkuvuodesta 2016 ja vapaaksi sadekaudella, ja jo alkuvuonna 2017 syntyi vasa — ensimmäinen luonnossa yli kahteenkymmeneen vuoteen. Vuonna 2021 syntyi 60 vasaa, ja luonnossa eläviä oli noin 400. Vuonna 2023 laji siirrettiin punaisella listalla luokkaan erittäin uhanalainen.',
+    lahde: 'en-Wikipedia "Scimitar oryx", johdanto sekä osio "Status and '
+      + 'conservation". Tarkistettu 6.9.2026.',
+    kuva: 'elain-tcd',
+    // Piste on Ouadi Rimé-Ouadi Achimin suojelualueella Keski-Tšadissa,
+    // 119,8 lautayksikköä Darfurista (vähimmäisetäisyys 35).
+    lon: 19.6666,
+    lat: 15.5166,
+  },
+  LBY: {
+    elain: 'saharangaselli',
+    otsikko: 'Vaalein gaselli, joka juo kastetta',
+    teksti: 'Saharangaselli eli Gazella leptoceros on vaaleaturkkinen gaselli, jolla on pitkät ja hoikat sarvet ja joka on sopeutunut aavikkoon perusteellisesti. Se on gaselleista vaalein: yläpuoli on kellanvaalea tai kermanvärinen ja jalat ja alapuoli valkoiset. Koiraan sarvet ovat hoikat ja hieman S-kirjaimen muotoiset, naaraan vielä ohuemmat ja lähes suorat. Lajia tavataan Algeriassa, Tunisiassa, Libyassa ja Egyptissä hajanaisina taskuina keskisen Saharan alueella; havaintoja on tehty myös Nigeristä ja Tšadista, mutta niitä pidetään epävarmoina. Aavikon helle rajaa ruokailun aamuun ja iltaan, ja gaselli saa lähes kaiken vetensä kasteesta ja kasvien kosteudesta — avovettä se tarvitsee tuskin lainkaan. Se vaeltaa kasvillisuuden perässä ilman kiinteää muuttoreittiä, ja tyypillistä elinympäristöä ovat hiekkadyynit ja niiden väliset painanteet sekä kalliomaat. Lajia pidetään uhanalaisena, sillä luonnossa on alle 2 500 yksilöä.',
+    lahde: 'en-Wikipedia "Rhim gazelle", johdanto sekä osiot "Name", '
+      + '"Description" ja "Distribution and habitat". Tarkistettu 6.9.2026.',
+    kuva: 'elain-lby',
+    // Piste on Fezzanin ja Sirtin väliaavikolla Keski-Libyassa, 62,5
+    // lautayksikköä Murzukista (vähimmäisetäisyys 35).
+    lon: 15.0,
+    lat: 26.0,
+  },
+  NGA: {
+    elain: 'drilli',
+    otsikko: 'Serkku, jota on jäljellä neljätuhatta',
+    teksti: 'Drilli eli Mandrillus leucophaeus on kapeanenäapina, joka on sukua paviaaneille ja vielä läheisempää sukua mandrillille — lajit elävät eri puolilla Sanaga-jokea Kamerunissa eivätkä kohtaa. Villinä drilli elää keskimäärin kaksikymmentä vuotta. Sitä tavataan vain kolmessa maassa, Nigeriassa, Kamerunissa ja Päiväntasaajan Guineassa, ja levinneisyysalue on pienempi kuin Yhdysvaltain Länsi-Virginian osavaltio: läntisin raja on Nigerian Cross-joki ja eteläisin Kamerunin Sanaga. Kanta on pirstoutunut erillisiksi taskuiksi, ja luonnossa eläviä arvioidaan olevan noin neljätuhatta. Elinympäristöt vaihtelevat: osa elää metsissä, osa savannilla, vuorenhuipuilla ja sisämaan jyrkänteillä, ja Bioko-saaren drillit alankorannikon metsissä — niitä on nähty jopa rannoilla. Laji on luokiteltu erittäin uhanalaiseksi.',
+    lahde: 'en-Wikipedia "Drill (animal)", johdanto sekä osiot "Distribution" '
+      + 'ja "Taxonomy". Tarkistettu 6.9.2026.',
+    kuva: 'elain-nga',
+    // Piste on Cross-joen metsissä Kaakkois-Nigeriassa, 72,6
+    // lautayksikköä Lagosista (vähimmäisetäisyys 35).
+    lon: 9.0,
+    lat: 6.3,
+  },
+  SOM: {
+    elain: 'beira',
+    otsikko: 'Korvat kuin lautaset, vettä ei tarvita',
+    teksti: 'Beira eli Dorcatragus megalotis on pieni antilooppi, joka elää Afrikan sarven kuivilla alueilla ja on sukunsa ainoa nykyinen laji. Sen turkki on selästä punaharmaa, ja tumma juova erottaa sen valkoisesta alapuolesta kyynärpäästä takajalkaan. Korvat ovat suhteettoman suuret, ja niiden sisäpuoli on valkoisen karvan peitossa; sarvet ovat vain koirailla, ja ne kasvavat suorina piikkeinä pystyyn korvien vierestä. Laji on kotoperäinen Koillis-Afrikassa: sitä tavataan Djiboutin eteläkolkasta etelään Somalimaan ja Pohjois-Somalian halki ja Etiopian äärimmäiseen koilliseen, ja levinneisyyden pääosa on Somalimaasta itään Puntmaahan ja Nugaalin laaksoon. Beira viihtyy kivikkoisilla rinteillä kuivan heinän ja akasiapensaikon keskellä. Se ei tarvitse juomavettä lainkaan, vaan saa kaiken tarvitsemansa kasveista. Beira on äärimmäisen varovainen: pieninkin häiriö saa sen liikkeelle, ja se kiitää vuorenrinteen soraa pitkin ja loikkii kiveltä kivelle jyrkemmillä paikoilla.',
+    lahde: 'en-Wikipedia "Beira (antelope)", johdanto sekä osiot "Description", '
+      + '"Distribution", "Habitat" ja "Habits". Tarkistettu 6.9.2026.',
+    kuva: 'elain-som',
+    // Piste on Nugaalin laakson kivikkorinteillä Puntmaassa, 96,2
+    // lautayksikköä Ras Hafunista (vähimmäisetäisyys 35). Laudan
+    // SOM-muoto ei kata Somalimaan luoteisosaa, joten piste on haettu
+    // levinneisyyden itäpäästä, jonka artikkeli nimeää erikseen.
+    lon: 48.5,
+    lat: 8.5,
+  },
+  /*
+   * ── ERÄ M16 6.9.2026: TUNISIA, SYYRIA JA JEMEN ─────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M16 (TUN, SYR, YEM, SHN) toi kolme uutta eläintäkyä.
+   *
+   * SAINT HELENA JÄI ILMAN TÄKYÄ. Saaren tikkuri (Saint Helena plover,
+   * wirebird) olisi luonteva valinta, mutta tämän tiedoston paikka
+   * tarkistetaan testissä laudan MAA-ALUETTA vasten (js/mapart.js
+   * isOnLand, map.outlines) eikä maan countryShapes-rengasta vasten.
+   * Maailmankartan outlines-taulussa ei ole Saint Helenan saarta
+   * lainkaan, joten yksikään saaren piste ei läpäise testiä. Vartiota
+   * ei kierretty eikä poikkeuslistaa lisätty; vaje on kirjattu
+   * docs/moduulit/karttanostot-kattavuus.md:n erälohkoon.
+   *
+   * PAIKAT ON MITATTU. Jokainen piste on oman maansa rajojen sisällä,
+   * maalla ja vähintään 35 lautayksikön päässä jokaisesta
+   * kaupunkimerkistä (tests/elaintakyt.test.mjs
+   * VAHIN_ETAISYYS_KAUPUNKIIN) sekä 30 yksikön päässä muista
+   * eläintäyistä.
+   *
+   * KUVA TULEE KUVAPUTKELTA. Erä on kuvaton, joten `kuva`-kentässä on
+   * pelkkä ämpäritunnus (js/media.js assetOsoite:
+   * `kohtaamiset/elaimet/<tunnus>.jpg`).
+   */
+  TUN: {
+    elain: 'dorkasgaselli',
+    otsikko: 'Antilooppi, joka ei juo',
+    teksti: 'Dorkasgaselli on pieni gaselli, joka elää Afrikan ja Arabian nurmi- ja aroalueilla, wadeissa, vuoriautiomaissa ja puoliaavikoilla. Säkäkorkeus on 55–65 senttimetriä, pituus 90–110 senttimetriä ja paino 15–20 kiloa, ja tuntomerkkinä ovat pitkät korvat ja voimakkaasti kaartuvat sarvet, jotka taipuvat ensin ulos ja sitten sisään ja eteenpäin. Saharan alalajilla turkki on hyvin vaalea, kellanruskea, ja valkoista alapuolta reunustaa ruskea juova; Saharan pohjoispuolella eläimet ovat okranvärisempiä ja niillä on tummat kyljet ja kasvojuovat. Laji on sopeutunut autiomaahan niin hyvin, että se saa suurimman osan vedestään mehevistä kasveista — juoda se silti tarvitsee, ja veden äärellä se juo mielellään. Ravintona ovat lehdet, kukat ja akasioiden palot sekä autiomaapensaiden lehdet, oksat ja hedelmät; sateen jälkeen gasellien on nähty kaivavan mukuloita maasta, ja ne nousevat toisinaan takajaloilleen syödäkseen puiden lehviä. Juoksuvauhti yltää 80 kilometriin tunnissa, ja vaaran uhatessa gaselli nykii häntäänsä ja loikkii pää pystyssä, ehkä kertoakseen saalistajalle nähneensä tämän. Maailmassa arvioidaan olevan 35 000–40 000 yksilöä.',
+    lahde: 'en-Wikipedia "Dorcas gazelle", johdanto sekä osiot "Description", '
+      + '"Behaviour" ja "Threats". Tarkistettu 6.9.2026.',
+    kuva: 'elain-tun',
+    // Piste on Keski-Tunisian aroylängöllä Bou Hedman seudulla, 103,8
+    // lautayksikköä Karthagosta (vähimmäisetäisyys 35).
+    lon: 9.6,
+    lat: 34.47,
+  },
+  SYR: {
+    elain: 'kaljuiibis',
+    otsikko: 'Lintu, joka löytyi uudelleen paimenten tiedosta',
+    teksti: 'Kaljuiibis on muuttava vanhan maailman iibis, joka viihtyy avoimilla mailla, kallioisilla vuorilla ja puoliaavikoilla usein juoksevan veden lähellä. Se on 70–80 senttimetriä pitkä ja kiiltävän musta, ja toisin kuin useimmat iibikset se ei kahlaa; kasvot ja pää ovat höyhenettömät ja punaiset, ja nokka on pitkä, kaareva ja punainen. Se pesii yhdyskunnissa rannikon tai vuorten kalliohyllyillä, munii tavallisesti kaksi tai kolme munaa risupesään ja syö liskoja, hyönteisiä ja muita pieniä eläimiä; ulostetutkimus on osoittanut, että liskot ja pimikkäät ovat pääravintoa. Laji oli aikoinaan levinnyt Lähi-itään, Pohjois-Afrikkaan sekä Etelä- ja Keski-Eurooppaan, ja sen fossiiliaineisto ulottuu vähintään 1,8 miljoonan vuoden päähän; Euroopasta se katosi yli kolmesataa vuotta sitten. Syyriassa lintu oli julistettu hävinneeksi yli seitsemänkymmentä vuotta aiemmin, mutta kevään 2002 maastotutkimuksissa, jotka tehtiin beduiinipaimentolaisten ja paikallisten metsästäjien tiedon varassa, löytyi viisitoista vanhaa pesäpaikkaa ja Palmyran läheltä yhä elävä seitsemän linnun pesimäyhdyskunta. Vuonna 2006 satelliittilähettimet paljastivat, että Syyrian linnut talvehtivat Etiopian ylängöillä. Vuonna 2019 luonnonvaraisia lintuja arvioitiin olevan noin 700, lähes kaikki Etelä-Marokossa.',
+    lahde: 'en-Wikipedia "Northern bald ibis", johdanto sekä osiot '
+      + '"Distribution and habitat", "Feeding" ja "Conservation". '
+      + 'Tarkistettu 6.9.2026.',
+    kuva: 'elain-syr',
+    // Piste on Palmyran autiomaa-arolla Keski-Syyriassa, 64,6
+    // lautayksikköä Alepposta (vähimmäisetäisyys 35).
+    lon: 38.4,
+    lat: 34.9,
+  },
+  YEM: {
+    elain: 'jemeninkameleontti',
+    otsikko: 'Kypäräpää, joka juo omasta otsastaan',
+    teksti: 'Jemeninkameleontti on Arabian niemimaan lounaisosan laji, jota tavataan Jemenissä ja Saudi-Arabiassa. Nimi tulee pään päällä olevasta korkeasta harjasta eli kypärästä, joka kasvaa eläimen mukana ja on suurimmilla aikuisilla noin viisi senttimetriä korkea; kypärä ei ole pelkkä koriste, vaan se ohjaa kastetta ja sadevettä eläimen suuhun. Uros on kuonosta hännänpäähän 43–61 senttimetriä pitkä, naaras enintään noin 35 senttimetriä mutta tanakampi. Poikaset kuoriutuvat vaaleanvihreinä ja ilman kypärää, ja säikähtäessään ne saattavat pudottautua maahan ja muuttua stressistä kirkkaanpunaisiksi. Aikuiset naaraat ovat vihreitä valkoisin, oranssein, keltaisin tai ruskein täplin, urokset kirkkaampia ja selväpiirteisin keltaisin tai sinisin vöin. Värinvaihto kertoo aggressiosta, sosiaalisesta asemasta, lisääntymisestä ja stressistä. Laji on puissa elävä ja viihtyy ylätasangoilla, vuorilla ja laaksoissa; se syö pääasiassa hyönteisiä mutta on niitä harvoja kameleontteja, jotka syövät myös kasviksia ja hedelmiä — ilmeisesti saadakseen vettä kuivana aikana. Naaras elää noin viisi, uros noin kahdeksan vuotta.',
+    lahde: 'en-Wikipedia "Veiled chameleon", johdanto sekä osiot "Etymology", '
+      + '"Description", "Habitat and distribution" ja "Diet". '
+      + 'Tarkistettu 6.9.2026.',
+    kuva: 'elain-yem',
+    // Piste on Jemenin ylängöllä Maribin lounaispuolella, 50,4
+    // lautayksikköä Sanasta (vähimmäisetäisyys 35).
+    lon: 45.6,
+    lat: 14.8,
+  },
+  /* ============ MAAILMAN ERÄ M17, AMERIKAT 6.9.2026 ============
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M17 täydensi Amerikat (USA, MEX, ECU, PER, PAN). Näistä
+   * viidestä maasta USA:lla, Meksikolla ja Perulla oli eläintäky jo
+   * ennestään, joten uusia on kaksi: Ecuador ja Panama. Molemmat
+   * tulevat tauluun KUVATTOMINA — `kuva`-kentässä on kuvaputken
+   * ämpäritunnus ilman kansiota, ja kortti latoo siihen asti tekstin
+   * ja lähteen ilman kuvakehystä (js/elaintaky.js).
+   * ============================================================== */
+  ECU: {
+    elain: 'andienkarhu',
+    otsikko: 'Etelä-Amerikan ainoa karhu',
+    teksti: 'Andienkarhu eli silmälasikarhu on Andien oma laji ja Etelä-Amerikan ainoa karhu — samalla viimeinen elossa oleva lyhytkuonoinen karhu. Nimi tulee vaaleista kuvioista rinnassa, kaulassa ja kasvoissa, jotka joillakin yksilöillä näyttävät silmälaseilta. Se on karhuista jättiläispandan ohella kasvissyövin: lihaa on tavallisesti vain 5–7 prosenttia ruokavaliosta, ja loput ovat kaktusta, bromelioita, palmunpähkinöitä, bambun sydämiä, orkideansipuleita ja sammalta. Puremalihakset ja poskihampaat ovat sen mukaiset — ne on tehty jauhamaan ja murskaamaan sitkeää kasvia, jota harva muu eläin sen elinalueella kykenee avaamaan. Urokset painavat 100–200 kiloa ja naaraat 35–82, joten laji kilpailee jääkarhun kanssa nykykarhujen selvimmästä koon erosta sukupuolten välillä. Karhu on myös yksi neljästä puissa kiipeilevästä karhulajista, ja IUCN luokittelee sen vaarantuneeksi elinympäristön katoamisen takia.',
+    lahde: 'en-Wikipedia "Spectacled bear", johdanto sekä osiot '
+      + '"Etymology", "Size", "Behaviour" ja "Diet". '
+      + 'Tarkistettu 6.9.2026.',
+    kuva: 'elain-ecu',
+    // Piste on Sangayn kansallispuiston seudulla Keski-Ecuadorin
+    // Andeilla, 60,9 lautayksikköä Quitosta (vähimmäisetäisyys 35).
+    // Galápagos-merkin viereen ei voi sijoittaa mitään: saariryhmä on
+    // oma pelikaupunkinsa ja jää lisäksi maan lehden rajauksen ulkopuolelle.
+    lon: -78.3,
+    lat: -2,
+  },
+  PAN: {
+    elain: 'panamankultasammakko',
+    otsikko: 'Sammakko, joka viittoo',
+    teksti: 'Panamankultasammakko on Panamalle kotoperäinen konna, joka elää Länsi-Keski-Panaman pilvimetsien vuoripurojen varsilla Tabasarán vuoriston itärinteillä. Nimestään huolimatta se on todellinen konna. Se puhuu poikkeuksellisella tavalla: äänten lisäksi se viittoo etukäpälällään kilpailijoille ja mahdollisille kumppaneille, ja tämän semaforin uskotaan kehittyneen siksi, että kohisevien purojen äänessä huuto ei kanna. Kutsu on erikoinen myös siksi, ettei lajilla ole tärykalvoa lainkaan, mutta se silti vastaa lajitovereidensa ääntelyyn. Iho on myrkyllinen: siinä on muun muassa zetekitoksiini AB, joka salpaa hermosolujen natriumkanavia paljon tehokkaammin kuin sukulaisyhdisteensä saksitoksiini. Sammakko on Panaman kansallissymboli, se esiintyy arpalipuissa ja tarinoissa, ja kansallista kultasammakon päivää vietetään 14. elokuuta. Luonnosta laji on todennäköisesti hävinnyt vuodesta 2007 lähtien chytridi-sienitaudin takia, ja sitä kasvatetaan yli viidessäkymmenessä laitoksessa.',
+    lahde: 'en-Wikipedia "Panamanian golden frog", johdanto sekä osiot '
+      + '"Description", "Toxicity", "Distribution", "Behavior", '
+      + '"Conservation" ja "In culture". Tarkistettu 6.9.2026.',
+    kuva: 'elain-pan',
+    // Piste on Tabasarán vuoriston pilvimetsässä Coclén ja Veraguasin
+    // rajamailla, 44,8 lautayksikköä Panamásta (vähimmäisetäisyys 35).
+    // El Valle de Antón, lajin tunnetuin paikka, jäi 24,7 yksikköön eli
+    // kaupunkimerkin liepeille, joten piste on lajin levinneisyyden
+    // länsipäässä.
+    lon: -80.9,
+    lat: 8.6,
+  },
+
+  /* ================================================================
+   * ERÄ M18 (6.9.2026): PRY, URY, VEN. Kolme eteläamerikkalaista maata,
+   * joilla ei ollut eläintäkyä lainkaan. Kuvattomia: `kuva`-kentässä on
+   * kuvaputken ämpäritunnus ilman kansiota, ja kortti latoo tekstin
+   * ilman kuvakehystä kunnes kuva valmistuu. Paikat on mitattu
+   * koneellisesti — jokainen piste on maalla, maan monikulmion sisällä
+   * ja yli 35 lautayksikön päässä jokaisesta kaupunkimerkistä
+   * (tests/elaintakyt.test.mjs). Vanuatu jäi ilman eläintäkyä, koska
+   * yhtään ehdot täyttävää pistettä ei ole olemassa; perustelu on
+   * js/packs/maastokohteet-vut.js:n otsikkokommentissa.
+   * ============================================================== */
+  PRY: {
+    elain: 'chacopekari',
+    otsikko: 'Sika, joka löydettiin ensin fossiilina',
+    teksti: 'Chacopekari eli taguá on Paraguayn, Bolivian ja Argentiinan Gran Chacon pekari ja sukunsa Catagonus ainoa elävä laji. Se kuvattiin tieteelle 1930 pelkkien fossiilien perusteella ja sitä pidettiin sukupuuttoon kuolleena, kunnes elävä eläin löytyi 1971 Argentiinan Saltasta — paikallisille laji oli koko ajan tuttu. Chacopekari on kolmesta yleisesti hyväksytystä pekarilajista suurin, ja se eroaa sukulaisistaan pidemmillä korvilla, kuonolla ja hännällä sekä kolmannella takavarpaalla; suun ympärillä on valkoisia karvoja ja hartioilla valkoista turkkia. Kuiva ja pölyinen Chaco on muovannut sen: sivuontelot ovat poikkeuksellisen kehittyneet ja jalat pienet, jotta piikkipensaikossa on helpompi liikkua. Ravinto on kaktuksia, joita eläin pyörittää maassa sitkeällä kuonollaan piikit pois tai nyppii piikit hampaillaan ja sylkee ne ulos; munuaiset hajottavat kaktusten hapot ja kaksiosainen maha sulattaa karkean kasviaineksen. Lauma on enintään parikymmenpäinen, ja uhattuna se asettuu riviin puolustusmuuriksi. Kanta on noin 3 000 yksilöä ja laji on uhanalainen.',
+    lahde: 'en-Wikipedia "Chacoan peccary", johdanto sekä osiot "History", '
+      + '"Habitat", "Physical characteristics", "Behavior", "Food habits" ja '
+      + '"Conservation status". Tarkistettu 6.9.2026.',
+    kuva: 'elain-pry',
+    // Piste on Gran Chacon pensasaavikolla Luoteis-Paraguayssa, 129,6
+    // lautayksikköä lähimmästä kaupunkimerkistä (vähimmäisetäisyys 35).
+    lon: -61.6,
+    lat: -21.2,
+  },
+  URY: {
+    elain: 'kapybara',
+    otsikko: 'Maailman suurin jyrsijä käy vedessä viilentymässä',
+    teksti: 'Kapybara on maailman suurin elävä jyrsijä, ja sitä tavataan kaikissa Etelä-Amerikan maissa Chileä lukuun ottamatta. Se on puoliksi vedessä elävä kasvinsyöjä, joka asuu savanneilla ja tiheissä metsissä makean veden äärellä ja syö pääasiassa heinää ja vesikasveja. Aikuinen on 106–134 senttimetriä pitkä, säkäkorkeus on 50–62 senttimetriä ja paino tavallisesti 35–66 kilogrammaa; suurin punnittu villi uros oli uruguaylainen, 73,5 kilogrammaa. Nimi tulee tupin sanasta ka’apiûara, joka tarkoittaa suunnilleen ohutlehtien syöjää. Kapybara on erinomainen uimari ja pystyy pidättämään hengitystään veden alla jopa viisi minuuttia: aamun se lepää kuivalla maalla, kuuman iltapäivän vedessä viilentymässä ja laiduntaa myöhään illalla ja yöllä. Laumassa on yleensä 10–20 yksilöä, kuivana kautena vesipaikoille voi kerääntyä 50–100. Etuhampaat kasvavat jatkuvasti, koska heinä kuluttaa niitä, ja eläin syö omat ulosteensa saadakseen suolistobakteerit selluloosan pilkkomiseen.',
+    lahde: 'en-Wikipedia "Capybara", johdanto sekä osiot "Etymology", '
+      + '"Description", "Activities", "Diet and predation" ja '
+      + '"Social organization". Tarkistettu 6.9.2026.',
+    kuva: 'elain-ury',
+    // Piste on Keski-Uruguayn jokilaaksoissa, 87,2 lautayksikköä
+    // Montevideosta (vähimmäisetäisyys 35).
+    lon: -55.5,
+    lat: -32.5,
+  },
+  VEN: {
+    elain: 'jättimuurahaiskarhu',
+    otsikko: 'Kieli, joka käy ulkona kolmesti sekunnissa',
+    teksti: 'Jättimuurahaiskarhu on Keski- ja Etelä-Amerikan hyönteissyöjänisäkäs ja neljästä elävästä muurahaiskarhulajista suurin. Toisin kuin sukulaisensa ja laiskiaiset se elää lähes kokonaan maassa. Kokonaispituus on 182–217 senttimetriä, urokset painavat 33–50 ja naaraat 27–47 kilogrammaa. Pää on 30 senttimetriä pitkä ja lieriömäinen kuono vie siitä suurimman osan; näkö on heikko, mutta hajuaisti on noin neljäkymmentä kertaa ihmisen hajuaistia tarkempi. Hampaita ei ole lainkaan, ja noin 60 senttimetrin kieli on kiinnitetty omalla lihaksellaan suoraan rintalastaan; ojennettuna se ulottuu 45 senttimetriä ja liikkuu edestakaisin noin 160 kertaa minuutissa eli lähes kolmesti sekunnissa. Eläin etsii saaliinsa hajun perusteella, repii pesän auki etukynsillään ja kerää muurahaiset ja termiitit tahmealle kielelleen: se käy päivässä jopa kahdessasadassa pesässä, kussakin enintään minuutin, ja syö noin 35 000 hyönteistä. Emo kantaa poikastaan selässään vieroitukseen asti. Kansainvälinen luonnonsuojeluliitto luokittelee lajin vaarantuneeksi.',
+    lahde: 'en-Wikipedia "Giant anteater", johdanto sekä osiot "Description" '
+      + 'ja "Diet". Tarkistettu 6.9.2026.',
+    kuva: 'elain-ven',
+    // Piste on Apuren llanoilla Länsi-Venezuelassa, 105,2 lautayksikköä
+    // Caracasista (vähimmäisetäisyys 35).
+    lon: -68.5,
+    lat: 7.5,
+  },
 };
+
 
 /** Maatunnukset siinä järjestyksessä kuin ne on kirjoitettu. */
 export const ELAINTAKY_MAAT = Object.keys(ELAINTAKYT);

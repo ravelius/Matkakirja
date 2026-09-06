@@ -83,6 +83,7 @@ import { MAASTOKOHTEET_CYP } from './maastokohteet-cyp.js';
 import { MAASTOKOHTEET_CZE } from './maastokohteet-cze.js';
 import { MAASTOKOHTEET_DNK } from './maastokohteet-dnk.js';
 import { MAASTOKOHTEET_DZA } from './maastokohteet-dza.js';
+import { MAASTOKOHTEET_ECU } from './maastokohteet-ecu.js';
 import { MAASTOKOHTEET_EGY } from './maastokohteet-egy.js';
 import { MAASTOKOHTEET_ESP } from './maastokohteet-esp.js';
 import { MAASTOKOHTEET_EST } from './maastokohteet-est.js';
@@ -115,6 +116,7 @@ import { MAASTOKOHTEET_LTU } from './maastokohteet-ltu.js';
 import { MAASTOKOHTEET_LVA } from './maastokohteet-lva.js';
 import { MAASTOKOHTEET_MAR } from './maastokohteet-mar.js';
 import { MAASTOKOHTEET_MDG } from './maastokohteet-mdg.js';
+import { MAASTOKOHTEET_MEX } from './maastokohteet-mex.js';
 import { MAASTOKOHTEET_MLI } from './maastokohteet-mli.js';
 import { MAASTOKOHTEET_MMR } from './maastokohteet-mmr.js';
 import { MAASTOKOHTEET_MNG } from './maastokohteet-mng.js';
@@ -128,10 +130,13 @@ import { MAASTOKOHTEET_NPL } from './maastokohteet-npl.js';
 import { MAASTOKOHTEET_NZL } from './maastokohteet-nzl.js';
 import { MAASTOKOHTEET_OMN } from './maastokohteet-omn.js';
 import { MAASTOKOHTEET_PAK } from './maastokohteet-pak.js';
+import { MAASTOKOHTEET_PAN } from './maastokohteet-pan.js';
+import { MAASTOKOHTEET_PER } from './maastokohteet-per.js';
 import { MAASTOKOHTEET_PHL } from './maastokohteet-phl.js';
 import { MAASTOKOHTEET_PNG } from './maastokohteet-png.js';
 import { MAASTOKOHTEET_POL } from './maastokohteet-pol.js';
 import { MAASTOKOHTEET_PRT } from './maastokohteet-prt.js';
+import { MAASTOKOHTEET_PRY } from './maastokohteet-pry.js';
 import { MAASTOKOHTEET_QAT } from './maastokohteet-qat.js';
 import { MAASTOKOHTEET_ROU } from './maastokohteet-rou.js';
 import { MAASTOKOHTEET_RUS } from './maastokohteet-rus.js';
@@ -140,6 +145,7 @@ import { MAASTOKOHTEET_SDN } from './maastokohteet-sdn.js';
 import { MAASTOKOHTEET_SDS } from './maastokohteet-sds.js';
 import { MAASTOKOHTEET_SEN } from './maastokohteet-sen.js';
 import { MAASTOKOHTEET_SGP } from './maastokohteet-sgp.js';
+import { MAASTOKOHTEET_SHN } from './maastokohteet-shn.js';
 import { MAASTOKOHTEET_SLB } from './maastokohteet-slb.js';
 import { MAASTOKOHTEET_SLE } from './maastokohteet-sle.js';
 import { MAASTOKOHTEET_SOM } from './maastokohteet-som.js';
@@ -154,13 +160,18 @@ import { MAASTOKOHTEET_TWN } from './maastokohteet-twn.js';
 import { MAASTOKOHTEET_TZA } from './maastokohteet-tza.js';
 import { MAASTOKOHTEET_UGA } from './maastokohteet-uga.js';
 import { MAASTOKOHTEET_UKR } from './maastokohteet-ukr.js';
+import { MAASTOKOHTEET_USA } from './maastokohteet-usa.js';
+import { MAASTOKOHTEET_URY } from './maastokohteet-ury.js';
 import { MAASTOKOHTEET_UZB } from './maastokohteet-uzb.js';
+import { MAASTOKOHTEET_VEN } from './maastokohteet-ven.js';
 import { MAASTOKOHTEET_VNM } from './maastokohteet-vnm.js';
+import { MAASTOKOHTEET_VUT } from './maastokohteet-vut.js';
 import { MAASTOKOHTEET_YEM } from './maastokohteet-yem.js';
 import { MAASTOKOHTEET_ZAF } from './maastokohteet-zaf.js';
 import { MAASTOKOHTEET_ZWE } from './maastokohteet-zwe.js';
 
-/** Maan ISO-tunnus → maan maastokohteet. 97 maata. */
+/** Maan ISO-tunnus → maan maastokohteet. 102 maata. */
+/** Maan ISO-tunnus → maan maastokohteet. 101 maata. */
 export const MAASTOKOHTEET = {
   AFG: MAASTOKOHTEET_AFG,
   AGO: MAASTOKOHTEET_AGO,
@@ -183,6 +194,7 @@ export const MAASTOKOHTEET = {
   CZE: MAASTOKOHTEET_CZE,
   DNK: MAASTOKOHTEET_DNK,
   DZA: MAASTOKOHTEET_DZA,
+  ECU: MAASTOKOHTEET_ECU,
   EGY: MAASTOKOHTEET_EGY,
   ESP: MAASTOKOHTEET_ESP,
   EST: MAASTOKOHTEET_EST,
@@ -215,6 +227,7 @@ export const MAASTOKOHTEET = {
   LVA: MAASTOKOHTEET_LVA,
   MAR: MAASTOKOHTEET_MAR,
   MDG: MAASTOKOHTEET_MDG,
+  MEX: MAASTOKOHTEET_MEX,
   MLI: MAASTOKOHTEET_MLI,
   MMR: MAASTOKOHTEET_MMR,
   MNG: MAASTOKOHTEET_MNG,
@@ -228,10 +241,13 @@ export const MAASTOKOHTEET = {
   NZL: MAASTOKOHTEET_NZL,
   OMN: MAASTOKOHTEET_OMN,
   PAK: MAASTOKOHTEET_PAK,
+  PAN: MAASTOKOHTEET_PAN,
+  PER: MAASTOKOHTEET_PER,
   PHL: MAASTOKOHTEET_PHL,
   PNG: MAASTOKOHTEET_PNG,
   POL: MAASTOKOHTEET_POL,
   PRT: MAASTOKOHTEET_PRT,
+  PRY: MAASTOKOHTEET_PRY,
   QAT: MAASTOKOHTEET_QAT,
   ROU: MAASTOKOHTEET_ROU,
   RUS: MAASTOKOHTEET_RUS,
@@ -240,6 +256,7 @@ export const MAASTOKOHTEET = {
   SDS: MAASTOKOHTEET_SDS,
   SEN: MAASTOKOHTEET_SEN,
   SGP: MAASTOKOHTEET_SGP,
+  SHN: MAASTOKOHTEET_SHN,
   SLB: MAASTOKOHTEET_SLB,
   SLE: MAASTOKOHTEET_SLE,
   SOM: MAASTOKOHTEET_SOM,
@@ -254,8 +271,12 @@ export const MAASTOKOHTEET = {
   TZA: MAASTOKOHTEET_TZA,
   UGA: MAASTOKOHTEET_UGA,
   UKR: MAASTOKOHTEET_UKR,
+  USA: MAASTOKOHTEET_USA,
+  URY: MAASTOKOHTEET_URY,
   UZB: MAASTOKOHTEET_UZB,
+  VEN: MAASTOKOHTEET_VEN,
   VNM: MAASTOKOHTEET_VNM,
+  VUT: MAASTOKOHTEET_VUT,
   YEM: MAASTOKOHTEET_YEM,
   ZAF: MAASTOKOHTEET_ZAF,
   ZWE: MAASTOKOHTEET_ZWE,

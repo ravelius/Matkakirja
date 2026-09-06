@@ -63,7 +63,7 @@ const paikat = new Map(ELAINTAKY_MAAT.map((iso) => {
 }));
 
 test('jokaisella eläintäyllä on kaanoniteksti, kuva ja paikka', () => {
-  assert.equal(ELAINTAKY_MAAT.length, 81, 'eläintäkyjä on 81 maassa');
+  assert.equal(ELAINTAKY_MAAT.length, 105, 'eläintäkyjä on 105 maassa');
   for (const iso of ELAINTAKY_MAAT) {
     const taky = ELAINTAKYT[iso];
     assert.match(iso, /^[A-Z]{3}$/, `${iso}: avain on kolmikirjaiminen maatunnus`);

@@ -10328,4 +10328,3351 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /*
+   * ══ ERÄ M14, AASIA 4 6.9.2026 ═══════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M14 (AFG, PAK, UZB, PHL, CHN) tuo kaksi skandaalia kuhunkin
+   * viiteen maahan — kymmenen uutta. Kaikki ovat kuvattomia kuten
+   * erän muutkin nostot, ja jokaisen lähderivi nimeää en-Wikipedian
+   * artikkelin ja osan sekä tarkistuspäivän.
+   *
+   * PAIKAT ON MITATTU. Yksikään uusi merkki ei ole pelikaupungin
+   * kohdalla (KAUPUNGIN_KOHDALLA_SADE 7 lautayksikköä,
+   * js/fokuskohteet.js): lähin on Gandamak 29,0 yksikön päässä
+   * Kabul-laatasta ja toiseksi lähin Baguio 33,9 yksikön päässä
+   * Manilasta. Nimiölimitystä ei ole yhtään
+   * (tools/tarkista-nimiolimitys.mjs).
+   *
+   * AASIAN LINJAUS ON SITOVA (docs/aasia-tyoaineisto/spec-asia.md).
+   * Afganistanin, Pakistanin ja Kiinan kortit ovat historiaa eivätkä
+   * nykypolitiikkaa: 1842, 1849, 1842 ja 1928. Bamiyanin buddhien
+   * tuho jätettiin skandaaleista pois, koska sama aihe on jo maan
+   * fokuskohteena (js/packs/fokuskohteet-afg.js), ja Yuanmingyuan
+   * samasta syystä Kiinassa (js/packs/fokuskohteet-chn.js).
+   * Sotatapahtumat kerrotaan lähteen omalla tarkkuudella ilman
+   * uhrilukujen korostusta, ja Balangigan kortti kertoo kellojen
+   * matkan eikä sitä edeltäneitä tekoja yksityiskohtineen.
+   */
+  AFG: [
+    /*
+     * Gandamakin kylä Kabul–Jalalabad-tien varrella.
+     * Lähde: en.wikipedia.org: 1842 retreat from Kabul
+     */
+    {
+      id: 'gandamak-1842',
+      otsikko: 'Armeija, josta perille pääsi yksi',
+      nimio: 'Gandamak 1842',
+      vuosi: '1842',
+      paikka: 'Gandamak, Kabul–Jalalabadin tie',
+      lat: 34.2892, lon: 70.0383,
+      kortti: 'Tammikuussa 1842 yli 16 000 ihmistä lähti Kabulista kohti Jalalabadia '
+        + 'sopimuksella, joka lupasi heille vapaan kulun. Lupaus ei pitänyt. Talvitiellä '
+        + 'kolmen viikon matkasta tuli 1800-luvun Britannian pahin sotilaallinen tappio, '
+        + 'ja Jalalabadin porteille ratsasti lopulta yksi eurooppalainen.',
+      teksti: 'Ensimmäinen anglo-afgaanisota alkoi 1838, kun Itä-Intian kauppakomppania '
+        + 'pelkäsi Venäjän vaikutusvallan kasvua Afganistanissa. Kenraalikuvernööri lordi '
+        + 'Auckland päätti neuvonantajansa William Hay Macnaghtenin kehotuksesta tukea '
+        + 'Shuja Shah Durrania ja sivuutti Alexander Burnesin neuvon. Britit ja komppanian '
+        + 'joukot voittivat Dost Mohammad Barakzain ja miehittivät Kabulin 1839.'
+        + '\n\nAsema kävi kestämättömäksi, ja kapina Kabulissa pakotti kenraalimajuri '
+        + 'William Elphinstonen vetäytymään. Hän neuvotteli Dost Mohammadin pojan Wazir '
+        + 'Akbar Khanin kanssa sopimuksen, jonka mukaan armeija saisi kulkea turvallisesti '
+        + 'runsaan 140 kilometrin päähän Jalalabadin varuskuntaan.'
+        + '\n\nHeti kaupungista lähdön jälkeen kimppuun hyökättiin, ja kolonnaa ahdisteltiin '
+        + 'koko matkan lumisella tiellä. Kaikkiaan menetettiin 4 500 sotilasta ja noin 12 '
+        + '000 siviiliä: sotilaiden perheitä, työmiehiä, palvelijoita ja muuta '
+        + 'saattoväkeä. Viimeinen puolustus käytiin Gandamakin kylän liepeillä 13. '
+        + 'tammikuuta 1842.'
+        + '\n\nJalalabadiin pääsi eurooppalaisista vain apulaiskirurgi William Brydon ja '
+        + 'muutama intialainen sepoy. Yli sata brittivankia ja siviilipanttivankia '
+        + 'vapautettiin myöhemmin, ja noin 2 000 sepoyta palasi Intiaan seuraavan retken '
+        + 'jälkeen. The Economist kutsui vetäytymistä 2013 Britannian pahimmaksi '
+        + 'sotilaalliseksi katastrofiksi ennen Singaporen antautumista.',
+      lahde: 'en-Wikipedia "1842 retreat from Kabul", johdanto-osa ja osio "Background". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka moni eurooppalainen pääsi Jalalabadiin asti?',
+        vaihtoehdot: [
+          'Yksi',
+          'Noin sata',
+          'Puolet kolonnasta',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Tillya tepen kumpu Jowzjanissa lähellä Sheberghania.
+     * Lähde: en.wikipedia.org: Tillya tepe; National Museum of Afghanistan
+     */
+    {
+      id: 'baktrian-kulta',
+      otsikko: 'Kaksikymmentätuhatta korua, jotka katosivat',
+      nimio: 'Baktrian kulta',
+      vuosi: '1978–2003',
+      paikka: 'Tillya tepe, Jowzjan',
+      lat: 36.694444, lon: 65.789444,
+      kortti: 'Neuvostoliittolais-afganistanilainen retkikunta kaivoi 1978 kuudesta '
+        + 'hautakummusta yli 20 000 kulta- ja hopeaesinettä. Sitten aarre katosi. Vuosia '
+        + 'myöhemmin selvisi, ettei se ollut kadonnut vaan piilotettu — ja että museo, '
+        + 'josta sen olisi pitänyt löytyä, oli sillä välin ryöstetty lähes tyhjäksi.',
+      teksti: 'Tillya tepe eli kultainen kumpu on kaivauspaikka Pohjois-Afganistanin '
+        + 'Jowzjanin maakunnassa lähellä Sheberghania. Neuvostoarkeologi Viktor Sarianidin '
+        + 'johtama ryhmä kaivoi sen 1978, ja löytö tunnetaan nimellä Baktrian kulta.'
+        + '\n\nKuudesta hautakummusta, viisi naista ja yksi mies, löytyi noin 20 600 '
+        + 'esinettä: kaulakoruja puolijalokivineen, vöitä, medaljonkeja ja kruunu, tehtyinä '
+        + 'kullasta, hopeasta ja norsunluusta. Haudat ajoittuvat ensimmäisen vuosisadan '
+        + 'eaa. ja ensimmäisen vuosisadan jaa. vaihteeseen, ja niiden kolikot ovat '
+        + 'Tiberiuksen, Mithradates II:n ja jueh-tših-hallitsija Sapadbizesin ajalta. '
+        + 'Vainajat kuuluivat todennäköisesti jueh-tšeille eli varhaisille kušanoille.'
+        + '\n\nVuonna 1989 kulta siirrettiin Afganistanin keskuspankin maanalaiseen '
+        + 'holviin. Se osoittautui hyväksi ratkaisuksi: 1990-luvun alun levottomuuksissa '
+        + 'Kabulin kansallismuseo ryöstettiin useaan kertaan, ja esillä olleista 100 000 '
+        + 'esineestä katosi 70 prosenttia.'
+        + '\n\nKulta pysyi holvissa, ja se löydettiin uudelleen ja tuotiin julkisuuteen '
+        + 'vasta 2003. Arvokkaimmat esineet oli suljettu metallilaatikoihin ja viety '
+        + 'turvaan; ne kerättiin ja luetteloitiin 2004. Osa museon kadonneista esineistä on '
+        + 'löytynyt Kabulin holveista ja osa Sveitsistä.',
+      lahde: 'en-Wikipedia "Tillya tepe", johdanto-osa ja osio "Dates and context", sekä '
+        + '"National Museum of Afghanistan", osio "History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Missä Baktrian kulta oli 1990-luvun ryöstöjen aikana?',
+        vaihtoehdot: [
+          'Museon vitriineissä',
+          'Keskuspankin maanalaisessa holvissa',
+          'Viety maasta pois',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  PAK: [
+    /*
+     * Lahore, jossa vuoden 1849 sopimus allekirjoitettiin.
+     * Lähde: en.wikipedia.org: Koh-i-Noor
+     */
+    {
+      id: 'kohinoor-1849',
+      otsikko: 'Timantti, joka vaihtoi omistajaa yhdellä artiklalla',
+      nimio: 'Kohinoor 1849',
+      vuosi: '1849',
+      paikka: 'Lahore, Punjab',
+      lat: 31.582, lon: 74.3167,
+      kortti: 'Vuonna 1849 Punjab liitettiin Itä-Intian kauppakomppaniaan, ja '
+        + 'yksitoistavuotias maharadža Duleep Singh luovutti valtakuntansa kuuluisimman '
+        + 'jalokiven. Kivi lähti Lontooseen, jossa se ei tehnyt vaikutusta — ja se '
+        + 'hiottiin uudelleen. Neljä valtiota on sen jälkeen vaatinut sitä takaisin.',
+      teksti: 'Kohinoorin varhaishistoria on epävarma. Delhin sulttaani Alauddin Khalji '
+        + 'sai 1310 suuren timantin, ja 1700-luvun kronikoitsija Khafi Khan tunnisti sen '
+        + 'Kohinooriksi. Baburin poika Humayun sai timantin lahjaksi Gwaliorin hallitsijan '
+        + 'perheeltä, ja Baburnama kertoo arvioitsijoiden hinnanneen sen koko maailman '
+        + 'kahden ja puolen päivän ruoaksi. Historioitsija William Dalrymple huomauttaa, '
+        + 'ettei ole varmaa, oliko kyseessä sama kivi: suuria timantteja oli Intiassa '
+        + 'useita.'
+        + '\n\nToisen anglo-sikhisodan jälkeen kauppakomppania liitti Punjabin '
+        + 'itseensä 1849. Sikhivaltakunnan hallitsija oli tuolloin yksitoistavuotias '
+        + 'Duleep Singh, joka hallitsi komppanian liittolaisen Gulab Singhin varjossa. '
+        + 'Timantti luovutettiin kuningatar Viktorialle.'
+        + '\n\nLontoossa kivi asetettiin 1851 esille maailmannäyttelyyn, mutta sen vaisu '
+        + 'hionta ei tehnyt vaikutusta katsojiin. Prinssi Albert määräsi sen hiottavaksi '
+        + 'uudelleen soikeaksi briljantiksi Coster Diamondsilla. Sen jälkeen kiveä ovat '
+        + 'kantaneet vain kuningashuoneen naiset — sen sanotaan tuovan miehelle huonoa '
+        + 'onnea — ja se on siirtynyt kruunusta toiseen.'
+        + '\n\nTimantti on nyt esillä Lontoon Towerissa. Intian, Iranin, Pakistanin ja '
+        + 'Afganistanin hallitukset ovat kaikki vaatineet sitä omakseen Intian '
+        + 'itsenäistymisestä 1947 lähtien. Britannian hallitus katsoo kiven siirtyneen '
+        + 'laillisesti vuoden 1849 Lahoren sopimuksen ehdoilla ja on hylännyt vaatimukset.',
+      lahde: 'en-Wikipedia "Koh-i-Noor", johdanto-osa ja osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi timantti hiottiin Lontoossa uudelleen?',
+        vaihtoehdot: [
+          'Se oli haljennut matkalla',
+          'Se oli liian suuri kruunuun',
+          'Se ei tehnyt vaikutusta näyttelyvieraisiin',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Harappan kumpu Punjabissa Lahoren ja Multanin radan varrella.
+     * Lähde: en.wikipedia.org: Harappa
+     */
+    {
+      id: 'harappan-tiilet',
+      otsikko: 'Viisituhatta vuotta vanhat tiilet radan alle',
+      nimio: 'Harappan tiilet',
+      vuosi: '1857',
+      paikka: 'Harappa, Punjab',
+      lat: 30.628889, lon: 72.863889,
+      kortti: 'Lahoren ja Multanin rautatietä rakentavat insinöörit tarvitsivat sepeliä '
+        + 'ratapenkkaan. Lähellä oli kumpu, joka oli täynnä valmiiksi poltettuja tiiliä. '
+        + 'Niitä oli helppo hakea, ja niin ne murskattiin radan alle — vasta myöhemmin '
+        + 'selvisi, mitä kumpu oli ollut.',
+      teksti: 'Harappa oli Mohenjo-daron ohella Indus-laakson sivilisaation suurimpia '
+        + 'kaupunkeja. Kaupunki nousi noin 2600 eaa. Punjabin keskiosaan, ja sen '
+        + 'kypsyysvaiheessa 2600–1900 eaa. siellä uskotaan asuneen jopa 23 500 ihmistä 150 '
+        + 'hehtaarin alalla savitiilitaloissa — aikaansa nähden suuri kaupunki.'
+        + '\n\nVuonna 1857 Lahoren ja Multanin rautatietä rakentavat insinöörit ottivat '
+        + 'raunioista tiiliä ratasepeliksi. Vahinko oli suuri, ja se tehtiin ennen kuin '
+        + 'kukaan tiesi, minkä ikäisestä kaupungista oli kysymys: Indus-laakson '
+        + 'sivilisaatio tunnistettiin vasta 1920-luvun kaivauksissa Mohenjo-darossa ja '
+        + 'Harappassa.'
+        + '\n\nTuhosta huolimatta paikalta on saatu talteen runsaasti esineistöä. '
+        + 'Harappalaisessa kulttuurissa oli mahdollinen kirjoitusjärjestelmä, '
+        + 'kaupunkikeskuksia, viemäröintiä sekä monimuotoinen yhteiskunta- ja '
+        + 'talousjärjestelmä, ja sen varhaisimmat juuret ovat Mehrgarhin kaltaisissa '
+        + 'kulttuureissa noin 6000 eaa.'
+        + '\n\nNykyinen Harappan kylä on alle kilometrin päässä muinaisesta kaupungista, '
+        + 'ja siellä on yhä brittiajan rautatieasema. Paikka lisättiin 2004 Unescon '
+        + 'maailmanperintökohteiden aielistalle. Vuonna 2005 alueelle suunniteltu '
+        + 'huvipuistohanke keskeytettiin, kun rakentajat kaivoivat maasta esiin runsaasti '
+        + 'muinaisesineitä.',
+      lahde: 'en-Wikipedia "Harappa", johdanto-osa ja osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mihin Harappan tiilet käytettiin 1857?',
+        vaihtoehdot: [
+          'Uuden kaupungin muuriin',
+          'Museon rakentamiseen',
+          'Rautatien ratasepeliksi',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  UZB: [
+    /*
+     * Bukharan Arkin edusaukio.
+     * Lähde: en.wikipedia.org: Arthur Conolly; Charles Stoddart
+     */
+    {
+      id: 'bukhara-1842',
+      otsikko: 'Kaksi upseeria, jotka jäivät suureen peliin',
+      nimio: 'Bukhara 1842',
+      vuosi: '1838–1842',
+      paikka: 'Ark-linnoituksen aukio, Bukhara',
+      lat: 39.7756, lon: 64.4093,
+      kortti: 'Eversti Charles Stoddart lähetettiin Bukharaan neuvottelemaan '
+        + 'ystävyyssopimuksesta ja venäläisten orjien vapauttamisesta. Emiiri pidätytti '
+        + 'hänet. Kapteeni Arthur Conolly tuli pelastamaan häntä ja jäi itsekin vangiksi — '
+        + 'ja juuri Conolly oli keksinyt nimen sille, mihin molemmat olivat astuneet.',
+      teksti: 'Arthur Conolly (1807–1842) oli brittiläinen tiedustelu-upseeri, tutkimusmatkailija '
+        + 'ja kirjailija sekä Bengalin kevyen ratsuväen kapteeni Itä-Intian kauppakomppanian '
+        + 'palveluksessa. Hän teki lukuisia tiedusteluretkiä Keski-Aasiaan ja keksi '
+        + 'ilmauksen The Great Game, suuri peli, kuvaamaan Britannian ja Venäjän kamppailua '
+        + 'alueen herruudesta. Ilmaus esiintyy heinäkuussa 1840 kirjeessä, jonka hän '
+        + 'kirjoitti Kandaharin poliittiseksi agentiksi nimitetylle Henry Rawlinsonille.'
+        + '\n\nConolly matkusti usein valeasussa ja käytti nimeä Khan Ali, sanaleikkiä '
+        + 'omasta nimestään. Vuonna 1829 hän lähti Moskovasta Kaukasian kautta Keski-Aasiaan '
+        + 'ja saapui Heratiin syyskuussa 1830; matkakertomuksensa hän julkaisi 1834.'
+        + '\n\nEversti Charles Stoddart oli lähetetty Bukharaan taivuttelemaan emiiriä '
+        + 'vapauttamaan venäläiset orjat ja solmimaan ystävyyssopimus Britannian kanssa. '
+        + 'Emiiri Nasrullah Khan pidätytti hänet 1838. Marraskuussa 1841 Conolly saapui '
+        + 'kaupunkiin osana tehtäväänsä vapauttaa Stoddart, mutta epäonnistui.'
+        + '\n\nMolemmat teloitettiin vakoilusyytteellä 24. kesäkuuta 1842 Ark-linnoituksen '
+        + 'edustalla olevalla aukiolla. Pastori Joseph Wolff lähti selvittämään heidän '
+        + 'kohtaloaan, pääsi hädin tuskin hengissä pois ja julkaisi 1845 laajan '
+        + 'matkakertomuksen, joka teki miehistä tunnettuja Britanniassa vuosikausiksi.',
+      lahde: 'en-Wikipedia "Arthur Conolly", johdanto-osa ja osio "Biography", sekä '
+        + '"Charles Stoddart", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Minkä sanaparin Arthur Conolly keksi?',
+        vaihtoehdot: [
+          'The Great Game',
+          'The Silk Road',
+          'The Iron Curtain',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Vozroždenijan saari Aralinmerellä, nykyisin osa Aralkumia.
+     * Lähde: en.wikipedia.org: Vozrozhdeniya Island
+     */
+    {
+      id: 'vozrozdenija',
+      otsikko: 'Saari, joka lakkasi olemasta saari',
+      nimio: 'Vozroždenije',
+      vuosi: '1954–2002',
+      paikka: 'Vozroždenijan saari, Araljärvi',
+      lat: 45.15, lon: 59.3167,
+      kortti: 'Neuvostoliitto rakensi 1954 pienelle Aralinmeren saarelle koeaseman, jonka '
+        + 'nimi oli Aralsk-7. Saaren piti olla eristyksissä. Kun järvi kuivui, saari '
+        + 'kasvoi, liittyi mantereeseen ja lakkasi olemasta saari — ja sen jäljet jäivät '
+        + 'kaikkien ulottuville.',
+      teksti: 'Vozroždenije eli Uudestisyntyminen oli Araljärven saari, jonka alue jakautuu '
+        + 'nykyään Uzbekistanin ja Kazakstanin kesken. Se oli 1800-luvulla vain 200 '
+        + 'neliökilometriä. Venäläinen tutkimusretkikunta löysi saariryhmän 1848–1849 '
+        + 'kuunari Konstantinilla A. I. Butakovin johdolla, ja Nikolai I:n saari nimettiin '
+        + 'neuvostoaikana uudelleen Vozroždenijaksi.'
+        + '\n\nPunainen armeija etsi 1920-luvulla paikkaa biologisten aseiden tutkimus- ja '
+        + 'koekeskukselle. Ehdolla olivat muun muassa Solovetskin saaret ja Seligerjärven '
+        + 'Gorodomlja, mutta valinta osui Vozroždenijaan, ja koeasema Aralsk-7 rakennettiin '
+        + '1954 sinne ja naapurisaarelle Komsomolskille. Asiakirjojen mukaan asemalla '
+        + 'valmistettiin ja varastoitiin muun muassa pernaruttoitiöitä ja ruttobasilleja.'
+        + '\n\nSaaren kaupunki Kantubek oli Aralsk-7:n oma nimi kartalla; siellä asui noin '
+        + '1 500 ihmistä, ja sillä oli kerho, stadion, kouluja ja kauppoja sekä '
+        + 'Neuvostoliiton ainoa nelikiitoratainen lentokenttä, jonka radat leikkasivat '
+        + 'toisensa tähdeksi.'
+        + '\n\nMarraskuussa 1991 päätettiin lopettaa kokeet, ja huhtikuuhun 1992 mennessä '
+        + 'kaikki yksiköt oli evakuoitu; Kantubekista tuli aavekaupunki. Osaa säiliöistä '
+        + 'ei hävitetty asianmukaisesti, ja monet niistä alkoivat vuotaa. Vuonna 2002 '
+        + 'kymmenen pernaruttohautaa puhdistettiin Yhdysvaltain rahoittamassa ja '
+        + 'Uzbekistanin avustamassa hankkeessa. Järven kuivuessa saari kasvoi 2 300 '
+        + 'neliökilometriin, liittyi 2001 mantereeseen ja on nyt osa Aralkumin autiomaata.',
+      lahde: 'en-Wikipedia "Vozrozhdeniya Island", johdanto sekä osiot "Geography" ja '
+        + '"History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi saari lakkasi olemasta saari?',
+        vaihtoehdot: [
+          'Se räjäytettiin',
+          'Se upposi',
+          'Araljärvi kuivui ja saari liittyi mantereeseen',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  PHL: [
+    /*
+     * Balangigan kirkko Itä-Samarilla.
+     * Lähde: en.wikipedia.org: Balangiga bells
+     */
+    {
+      id: 'balangigan-kellot',
+      otsikko: 'Kolme kirkonkelloa, jotka olivat poissa 117 vuotta',
+      nimio: 'Balangiga',
+      vuosi: '1901–2018',
+      paikka: 'San Lorenzo de Martirin kirkko, Balangiga',
+      lat: 11.1092, lon: 125.3864,
+      kortti: 'Yhdysvaltain armeija vei 1901 Balangigan kirkosta kolme kelloa '
+        + 'sotasaaliina. Kaksi päätyi Wyomingiin ja yksi lopulta Etelä-Koreaan. '
+        + 'Filippiinit pyysi niitä takaisin 1950-luvun lopulta alkaen, ja vastaus tuli '
+        + 'vasta 2018.',
+      teksti: 'Balangigan kirkko vihittiin 1854 roomalaiselle marttyyrille San Lorenzolle. '
+        + 'Vanhin kello valettiin noin 1853, ja siinä on fransiskaanien vaakuna ja '
+        + 'kirjoitus "R. San Francisco Año El 1853"; suuaukon halkaisija on 79 senttimetriä '
+        + 'ja korkeus 76. Toinen kello valettiin 1889 kirkkoherra Agustín Delgadon '
+        + 'aloitteesta, ja kolmas ja pienin hankittiin ilmeisesti 1895.'
+        + '\n\nKellot vietiin Yhdysvaltoihin sotasaaliina Filippiinien–Yhdysvaltain sodan '
+        + 'aikana vuonna 1901. Kaupunki oli vallattu takaisin 29. syyskuuta, ja kun '
+        + '11. jalkaväkirykmentti lähti lokakuussa, se otti mukaansa palaneesta kirkosta '
+        + 'otetut kellot ja kirkon edustan tykin. Yksi kelloista oli soitettu merkiksi '
+        + 'hyökkäyksestä, ja pronssista olisi voinut valaa aseita.'
+        + '\n\nPieni merkkikello päätyi 9. jalkaväkirykmentin mukana Yhdysvaltoihin 1902 ja '
+        + 'sieltä lopulta 2. divisioonan museoon Camp Red Cloudiin Etelä-Koreaan. Kaksi '
+        + 'suurempaa kelloa vietiin 1904 Wyomingiin Fort D. A. Russellille, myöhemmälle '
+        + 'Francis E. Warrenin lentotukikohdalle.'
+        + '\n\nKatolinen kirkko, Filippiinien hallitus ja Balangigan asukkaat pyysivät '
+        + 'kelloja takaisin 1950-luvun lopulta lähtien, mutta yritykset kariutuivat '
+        + 'vuosikymmeniksi. Neuvottelut etenivät 2018, ja kellot palasivat Filippiineille '
+        + '11. joulukuuta 2018 — 117 vuoden jälkeen. Ne luovutettiin kotikirkkoonsa '
+        + '15. joulukuuta, ja seuraavana aamuna yhtä niistä soitettiin ensimmäistä kertaa '
+        + 'sitten vuoden 1901.',
+      lahde: 'en-Wikipedia "Balangiga bells", johdanto sekä osiot "History", "Removal to '
+        + 'the United States" ja "Return to Samar". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka kauan kellot olivat poissa Balangigasta?',
+        vaihtoehdot: [
+          '17 vuotta',
+          '217 vuotta',
+          '117 vuotta',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Baguio, jossa Rogelio Roxas kertoi tehneensä löytönsä.
+     * Lähde: en.wikipedia.org: Yamashita's gold
+     */
+    {
+      id: 'yamashitan-kulta',
+      otsikko: 'Aarre, jota kukaan ei ole löytänyt',
+      nimio: 'Yamashitan kulta',
+      vuosi: '1971–1996',
+      paikka: 'Baguio, Benguet',
+      lat: 16.4119, lon: 120.5933,
+      kortti: 'Tarina kertoo japanilaisten piilottaneen Kaakkois-Aasiasta ryöstetyn '
+        + 'saaliin Filippiinien luoliin ja tunneleihin. Aarteenetsijöitä on riittänyt yli '
+        + 'viisikymmentä vuotta, mutta asiantuntijat pitävät koko aarretta '
+        + 'todennäköisesti keksittynä. Yksi juttu eteni silti oikeuteen asti — ja tuotti '
+        + 'aikansa suurimman vahingonkorvaustuomion.',
+      teksti: 'Yamashitan kullaksi kutsutaan sotasaalista, jonka japanilaisten joukkojen '
+        + 'väitetään ryöstäneen ympäri Kaakkois-Aasiaa ja piilottaneen Filippiinien '
+        + 'luoliin, tunneleihin ja maanalaisiin tiloihin. Nimi tulee kenraali Tomoyuki '
+        + 'Yamashitasta, joka oli maan viimeinen japanilainen sotilaskuvernööri. '
+        + 'Aarteenetsijöitä ympäri maailmaa on riittänyt yli viisikymmentä vuotta, mutta '
+        + 'useimmat asiantuntijat pitävät aarteen olemassaoloa epätodennäköisenä.'
+        + '\n\nHistorioitsija Ambeth Ocampo on huomauttanut ihmettelevänsä, ettei viidessä '
+        + 'vuosikymmenessä ole karttojen, suullisten todistusten ja kehittyneiden '
+        + 'metallinilmaisimien avullakaan löytynyt mitään.'
+        + '\n\nMaaliskuussa 1988 filippiiniläinen aarteenetsijä Rogelio Roxas haastoi '
+        + 'Havaijin osavaltion tuomioistuimessa entisen presidentin Ferdinand Marcosin ja '
+        + 'tämän puolison Imeldan varkaudesta ja ihmisoikeusrikkomuksista. Roxasin mukaan '
+        + 'hän oli 1961 Baguiossa saanut japanilaisen sotilaan pojalta kartan, ja hänen '
+        + 'ryhmänsä oli 1971 avannut Baguion lähellä valtion mailla kammion, josta löytyi '
+        + 'pistimiä, samuraimiekkoja, radioita, luita — ja metrin korkuinen kullanvärinen '
+        + 'buddha sekä kultaharkoilla täytettyjä laatikoita.'
+        + '\n\nRoxas kertoi, että Marcos määräsi hänet pidätettäväksi ja takavarikoi '
+        + 'buddhan ja lopun kullan. Roxas kuoli oikeudenkäynnin aattona, mutta hänen '
+        + 'valaehtoinen kertomuksensa jäi todisteeksi. Vuonna 1996 hänen kuolinpesänsä ja '
+        + 'Golden Budha Corporation saivat siihenastisen historian suurimman '
+        + 'vahingonkorvaustuomion.',
+      lahde: 'en-Wikipedia "Yamashita\'s gold", johdanto sekä osiot "Treasure skeptics" ja '
+        + '"Rogelio Roxas lawsuit". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä asiantuntijat sanovat aarteesta?',
+        vaihtoehdot: [
+          'Sen olemassaolo on epätodennäköinen',
+          'Se on löydetty kokonaan',
+          'Se on Japanin hallussa',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  CHN: [
+    /*
+     * Nanjing, jossa sopimus allekirjoitettiin HMS Cornwallisin kannella.
+     * Lähde: en.wikipedia.org: Treaty of Nanking
+     */
+    {
+      id: 'nankingin-sopimus',
+      otsikko: 'Sopimus, joka kirjoitettiin sotalaivan kannella',
+      nimio: 'Nanking 1842',
+      vuosi: '1842',
+      paikka: 'Jangtse Nanjingin kohdalla',
+      lat: 32.060833, lon: 118.778889,
+      kortti: 'Britannian kauppatase Kiinan kanssa oli pahasti alijäämäinen, ja '
+        + 'salakuljetettu oopiumi tasoitti sen. Kun kiinalainen komissaari poltti '
+        + 'takavarikoidun oopiumin, seurasi sota. Rauha tehtiin 1842 laivan kannella '
+        + 'Nanjingin edustalla, ja se aloitti sarjan, jota Kiinassa on siitä asti sanottu '
+        + 'epätasa-arvoisiksi sopimuksiksi.',
+      teksti: '1700-luvun lopulla ja 1800-luvun alussa Britannian kauppa Kiinan kanssa oli '
+        + 'yhä pahemmin alijäämäistä: teetä ja posliinia tuotiin paljon, eikä vastaavaa '
+        + 'ollut tarjottavaa. Komppanian Intiassa kasvattamaa oopiumia huutokaupattiin '
+        + 'kauppiaille, jotka myivät sen salakuljetettavaksi Kiinaan, vaikka Kiinan laki '
+        + 'kielsi oopiumin tuonnin ja myynnin.'
+        + '\n\nKun Lin Zexu takavarikoi yksityisomistuksessa olleen oopiumin ja määräsi sen '
+        + 'poltettavaksi Humenissa, Britannia vaati ensin korvauksia ja julisti sitten '
+        + 'sodan. Ensimmäinen oopiumisota käytiin 1839–1842, ja ylivoimainen sotatekniikka '
+        + 'antoi Britannialle voiton.'
+        + '\n\nBrittiläisten sotalaivojen ollessa valmiina hyökkäämään Nanjingiin '
+        + 'neuvoteltiin HMS Cornwallisin kannella joen ankkuripaikalla. Sopimuksen '
+        + 'allekirjoittivat 29. elokuuta 1842 Henry Pottinger sekä Qing-hallinnon edustajat '
+        + 'Keying, Yilibu ja Niu Jian; artikloja oli kolmetoista. Daoguang-keisari '
+        + 'ratifioi sen 27. lokakuuta ja kuningatar Viktoria 28. joulukuuta.'
+        + '\n\nSopimus purki Kantonin kauppajärjestelmän ja Cohong-kauppiaiden monopolin, '
+        + 'avasi Kantonin rinnalle neljä uutta sopimussatamaa — Xiamenin, Fuzhoun, Ningbon '
+        + 'ja Shanghain — ja luovutti Hongkongin saaren Britannialle. Korvauksia kertyi '
+        + 'kaikkiaan 27 miljoonaa hopeadollaria: kuusi takavarikoidusta oopiumista, kuusi '
+        + 'Kantonin lunnaista, kolme kauppiaiden veloista ja kaksitoista sotakuluista.',
+      lahde: 'en-Wikipedia "Treaty of Nanking", johdanto sekä osiot "Background", "Foreign '
+        + 'trade" ja "Reparations and demobilisation". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Missä sopimus allekirjoitettiin?',
+        vaihtoehdot: [
+          'Keisarin palatsissa',
+          'Kantonin tullissa',
+          'Sotalaiva HMS Cornwallisin kannella',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Itäiset Qing-haudat Zunhuassa Hebeissä.
+     * Lähde: en.wikipedia.org: Looting of the Eastern Mausoleum
+     */
+    {
+      id: 'ita-qingin-haudat',
+      otsikko: 'Sotapäällikkö, joka räjäytti keisarien haudat',
+      nimio: 'Qing-haudat 1928',
+      vuosi: '1928',
+      paikka: 'Itäiset Qing-haudat, Zunhua',
+      lat: 40.185783, lon: 117.646923,
+      kortti: 'Kesäkuussa 1928 sotapäällikkö Sun Dianyingin joukot murtautuivat Kiinan '
+        + 'suurimpaan keisarilliseen hautakompleksiin. Rahaa ei ollut, palkat olivat '
+        + 'myöhässä, ja hautojen aarteista kerrottiin tarkkoja tietoja. Juttu paljastui, '
+        + 'kun yksi sotilaista meni myymään saalistaan pekingiläiseen antiikkiliikkeeseen.',
+      teksti: 'Itäiset Qing-haudat Zunhuassa Hebeissä ovat Kiinan suurin, täydellisin ja '
+        + 'parhaiten säilynyt keisarillinen hautakompleksi, 125 kilometriä Pekingistä '
+        + 'koilliseen. Sinne on haudattu viisi keisaria, 15 keisarinnaa, 136 hovinaista, '
+        + 'kolme prinssiä ja kaksi prinsessaa, ja alue kattaa 80 neliökilometriä.'
+        + '\n\nQing-valtakunnan hajottua 1912 uusi tasavalta ja hiljattain luopunut '
+        + 'keisariperhe sopivat hautojen suojelusta. Sopimusta oli yhä vaikeampi pitää: '
+        + 'rahoitus ja vartiointi kävivät epäsäännöllisiksi. Sun Dianying oli Fengtianin '
+        + 'armeijan komentaja, joka oli liittoutunut Chiang Kai-shekin kanssa 1926 '
+        + 'pohjoisella sotaretkellä ja joutui sen jälkeen aseistariisunnan kohteeksi; '
+        + 'hänen joukkojensa palkat, ruoka ja vesi myöhästyivät jatkuvasti, ja hän etsi '
+        + 'muuta rahoitusta.'
+        + '\n\nKesäkuun alussa 1928 hänen joukkonsa ryöstivät ja turmelivat useita '
+        + 'kompleksin päämausoleumeista, muun muassa Qianlong-keisarin ja '
+        + 'leskikeisarinna Cixin haudat. Tyhjennetyt kammiot muurattiin kivillä umpeen. '
+        + 'Rakennukset itsessään jäivät pystyyn.'
+        + '\n\nSamana päivänä eräs sotilas saapui pekingiläisen antiikkikauppiaan '
+        + 'liikkeeseen myymään huomiota herättävän arvokkaita esineitä. Sekä sotilas että '
+        + 'kauppias pidätettiin, ja kuulusteluissa paljastui koko operaatio ja sen '
+        + 'järjestäjä. Viimeinen keisari Puyi vaati sähkeillään ankaraa tutkintaa. Sun '
+        + 'Dianying lahjoi kuitenkin ne, jotka olisivat voineet rangaista häntä, eikä '
+        + 'ketään tuomittu.',
+      lahde: 'en-Wikipedia "Looting of the Eastern Mausoleum", johdanto sekä osiot '
+        + '"Background", "Aftermath" ja "Evasion", sekä "Eastern Qing tombs", johdanto-osa. '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten ryöstö paljastui?',
+        vaihtoehdot: [
+          'Sotilas yritti myydä saalista antiikkiliikkeessä',
+          'Vartija ilmiantoi joukot',
+          'Puyi näki sen omin silmin',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+
+  /*
+   * ══ ERÄ M13, ETELÄINEN AFRIKKA 6.9.2026 ═══════════════════════════
+   *
+   * Viisi maata — MDG, MOZ, NAM, ZAF ja ZWE — joilta skandaalit
+   * puuttuivat kokonaan, kaksi kutakin. Kaikki ovat 1800- tai
+   * 1900-luvun tapauksia; nykypolitiikka on jätetty pois (Raamattu).
+   * Herkät aiheet (Waterberg 1904, Gazan valtakunnan kukistuminen)
+   * kerrotaan asiallisesti ja lähteen katteessa, ilman kuvailua, jota
+   * artikkelissa ei ole.
+   *
+   * PAIKAT EIVÄT OSU PELIKAUPUNKEIHIN eivätkä saman erän kohteiden
+   * päälle: Kimberleyn timanttikuume kerrotaan Hopetownin kohdalla
+   * (Kimberley on pelikaupunki), Ruddin myönnytys Fort Salisburyn eli
+   * Hararen kohdalla (Bulawayo olisi Khamin ja Matobon nimiöiden
+   * päällä) ja Delagoan rata rajan asemalla Ressano Garciassa
+   * (Maputo on erän oma kohde).
+   */
+  MDG: [
+    /*
+     * Toamasina (Tamatave), missä rauhansopimus allekirjoitettiin.
+     * Lähde: en.wikipedia.org: Franco-Hova Wars
+     */
+    {
+      id: 'tamataven-sopimus',
+      otsikko: 'Rauha, jonka selittävä kirje jäi näyttämättä',
+      nimio: 'Tamatave 1885',
+      vuosi: '1883–1885',
+      paikka: 'Toamasina (Tamatave)',
+      lat: -18.155, lon: 49.41,
+      kortti: 'Sopimuksen mukana kulki "selittävä kirje", jonka oli määrä kertoa mitä '
+        + 'teksti oikeastaan tarkoitti. Ranskan parlamentille sitä ei näytetty, kun se '
+        + 'äänesti sopimuksen hyväksymisestä.',
+      teksti: 'Ranskan ja Merinan kuningaskunnan sodat olivat kaksi Ranskan sotaretkeä '
+        + 'Madagaskarille vuosina 1883–1896. Ne kaatoivat saarta hallinneen kuningashuoneen '
+        + 'ja tekivät Madagaskarista Ranskan siirtomaan. Sana "hova" tarkoitti merinojen '
+        + 'yhteiskuntaluokkaa, ja siitä tuli sotien nimi eurooppalaisissa lähteissä.'
+        + '\n\nSyy sotaan oli vanha myönnytys. Kuningatar Ranavalona I:n kuoltua 1861 hänen '
+        + 'poikansa Radama II nousi valtaan; jo prinssinä hän oli antanut ranskalaiselle '
+        + 'Joseph-François Lambertille peruskirjan, joka luovutti laajoja maa-alueita '
+        + 'välittämättä siitä, mikä merkitys esi-isien mailla saarella oli. Kun myönnytykset '
+        + 'myöhemmin peruttiin, Ranska hyökkäsi 1883 palauttaakseen ne.'
+        + '\n\nSota päättyi Tamatavessa 17. joulukuuta 1885 allekirjoitettuun '
+        + 'rauhansopimukseen. Madagaskar luovutti Antsirananan eli Diego-Suarezin '
+        + 'pohjoisrannikolta Ranskalle ja maksoi kymmenen miljoonan frangin sakon.'
+        + '\n\nSopimukseen kuului myös "selittävä kirje", jonka piti täsmentää tekstin '
+        + 'tulkinta. Sitä ei koskaan esitetty Ranskan parlamentille, kun se äänesti '
+        + 'sopimuksen ratifioinnista. Käytännössä sopimus siirsi Madagaskarin ulkopolitiikan '
+        + 'Ranskan käsiin, ja Ranska käytti sitä kiristääkseen otettaan alueesta — vaikka '
+        + 'protektoraattia ei muodollisesti julistettu.',
+      lahde: 'en-Wikipedia "Franco-Hova Wars", johdanto-osa sekä osiot '
+        + '"Background" ja "First Franco-Hova War". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä sopimukseen kuulunutta asiakirjaa ei näytetty Ranskan parlamentille?',
+        vaihtoehdot: [
+          'Kauppasopimuksen liitettä',
+          'Karttaa rajoista',
+          'Selittävää kirjettä',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Nosy Be, Ranskan sokerisiirtokunta Madagaskarin luoteispuolella.
+     * Lähde: en.wikipedia.org: Nosy Be
+     */
+    {
+      id: 'nosy-been-sokeri',
+      otsikko: 'Saari, joka nousi kapinaan orjuuden lakkauttamista vastaan',
+      nimio: 'Nosy Be 1849',
+      vuosi: '1837–1849',
+      paikka: 'Nosy Be',
+      lat: -13.315, lon: 48.2675,
+      kortti: 'Kun Ranska lakkautti orjuuden siirtomaissaan 1848, saarella syttyi kapina — '
+        + 'ei orjuutta vaan sen lakkauttamista vastaan. Kapinoijat olivat sakalavoja, jotka '
+        + 'olivat itse laajasti mukana orjakaupassa.',
+      teksti: 'Nosy Be on saari Madagaskarin luoteispuolella Mosambikin kanaalissa. Sen '
+        + 'ensimmäisiä asukkaita olivat pienet antankarana- ja zafinofotsy-ryhmät, sitten '
+        + 'saarelle muutti sakalavoja, joista tuli suurin väestöryhmä; myöhemmin heidän '
+        + 'joukkoonsa tuli komorilaisia, intialaisia ja antandroyta.'
+        + '\n\nSaari astui saaren historiaan, kun kuningas Radama I ilmoitti aikovansa '
+        + 'valloittaa koko Madagaskarin lännen. Suunnitelma toteutui 1837, kun Boinan '
+        + 'sakalavakuningaskunta ja kuningatar Tsiomekon armeija hävisivät ja alue siirtyi '
+        + 'Ranavalona I:n haltuun.'
+        + '\n\nRanskalaiset ottivat saaren haltuunsa 1840 ja perustivat sinne tukikohdan, '
+        + 'jonka nimeksi tuli amiraali de Hellin mukaan Hell-Ville. Siirtokunnasta '
+        + 'kehittyi istutustalous: ranskalaiset asuttajat viljelivät ennen kaikkea '
+        + 'sokeriruokoa ja värväsivät työvoimaa velkatyöläisinä Itä-Afrikasta.'
+        + '\n\nVuoden 1848 päätös lakkauttaa orjuus Ranskan siirtomaissa johti seuraavana '
+        + 'vuonna sakalavojen kapinaan ranskalaisia vastaan. Ranska piti asemansa sekä '
+        + 'sotavoimin että diplomatialla ja nimitti saaren entisen hallitsijan Binaon sen '
+        + 'pääkuvernööriksi. 1800-luvun lopulla ja 1900-luvun alussa saarta hallittiin '
+        + 'Madagaskarin siirtomaan sisäisenä protektoraattina, ja tukikohdasta tuli tärkeä '
+        + 'kauppasatama Mosambikin kanaalissa.',
+      lahde: 'en-Wikipedia "Nosy Be", osio "History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Ketä vastaan sakalavat kapinoivat 1849?',
+        vaihtoehdot: [
+          'Ranskalaisia vastaan',
+          'Merinojen kuningatarta vastaan',
+          'Komorilaisia kauppiaita vastaan',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+
+  MOZ: [
+    /*
+     * Manjacaze, Gazan valtakunnan viimeinen pääpaikka.
+     * Lähde: en.wikipedia.org: Gungunhana
+     */
+    {
+      id: 'gazan-keisari',
+      otsikko: 'Keisari, joka vietiin näytille Lissaboniin',
+      nimio: 'Gaza 1895',
+      vuosi: '1895–1906',
+      paikka: 'Manjacaze, Gazan valtakunta',
+      lat: -24.71167, lon: 33.88278,
+      kortti: 'Portugalin siirtomaahallinto päätti olla teloittamatta kukistettua '
+        + 'kuningasta. Syy ei ollut armo vaan julkisuus: hänet tunnettiin jo Euroopan '
+        + 'lehdistössä, ja niin hänet lähetettiin maanpakoon seitsemän vaimonsa kanssa.',
+      teksti: 'Ngungunyane, jota lähteissä kutsutaan myös nimillä Gungunhana ja Mdungazwe '
+        + 'Ngungunyane Nxumalo, oli Gazan valtakunnan kuningas ja Portugalin vasalli, joka '
+        + 'nousi kapinaan. Hän hallitsi noin vuodesta 1884 ja sai lisänimen "Gazan '
+        + 'leijona".'
+        + '\n\nGazan valtakunnan oli perustanut hänen isoisänsä Soshangane, joka johti '
+        + 'nguninkielisen sotajoukon pohjoiseen Zululandista. Isä Mzila hallitsi 1861–1884, '
+        + 'ja pääkaupunki siirtyi Limpopon laaksosta Mossurizeen Save-joen pohjoispuolelle. '
+        + 'Vanha pääpaikka Chaimite jäi pyhiinvaelluskohteeksi ja esi-isien hengille '
+        + 'omistetuksi muistopaikaksi.'
+        + '\n\nKenraali Joaquim Mouzinho de Albuquerque kukisti hänet, ja 28. joulukuuta '
+        + '1895 hänet vangittiin Chaimiten linnoitetussa kylässä. Portugalin '
+        + 'siirtomaahallinto päätti karkottaa hänet sen sijaan, että olisi asettanut hänet '
+        + 'teloitusryhmän eteen, kuten tapa olisi ollut — hän oli jo tunnettu Euroopan '
+        + 'lehdistössä.'
+        + '\n\nHänet kuljetettiin Lissaboniin poikansa Godiden ja muiden arvohenkilöiden '
+        + 'kanssa. Maaliskuussa 1896 hänestä otettiin valokuva seitsemän vaimonsa kanssa, '
+        + 'jotka oli otettu mukaan vankeina. Lyhyen Monsanton linnakkeessa vietetyn ajan '
+        + 'jälkeen hänet siirrettiin Azoreille Terceiralle, missä hän kuoli yksitoista '
+        + 'vuotta myöhemmin 23. joulukuuta 1906.',
+      lahde: 'en-Wikipedia "Gungunhana", johdanto-osa ja osio "Biography". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi kuningasta ei teloitettu?',
+        vaihtoehdot: [
+          'Hän oli tehnyt rauhansopimuksen',
+          'Portugali ei ollut sodassa',
+          'Hänet tunnettiin jo Euroopan lehdistössä',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Ressano Garcia, Maputon lahden radan raja-asema.
+     * Lähde: en.wikipedia.org: Maputo Bay; Pretoria–Maputo railway
+     */
+    {
+      id: 'delagoan-rata',
+      otsikko: 'Rata, joka otettiin haltuun ja maksettiin takaisin',
+      nimio: 'Delagoa 1889',
+      vuosi: '1889–1900',
+      paikka: 'Ressano Garcia, Maputon lahti',
+      lat: -25.44278, lon: 31.99528,
+      kortti: 'Portugali otti haltuunsa radan, joka vei sen satamasta Transvaaliin. '
+        + 'Yksitoista vuotta myöhemmin välimiesoikeus määräsi sen maksamaan osakkaille '
+        + 'lähes miljoona puntaa.',
+      teksti: 'Maputon lahti, entiseltä nimeltään Delagoan lahti, oli 1800-luvulla '
+        + 'toistuvasti riidan kohteena. Vuonna 1861 kuninkaallisen laivaston kapteeni '
+        + 'Bickford julisti Inhacan ja Elephantin saaret Britannian alueeksi, mistä '
+        + 'Lissabon protestoi. Riita vietiin 1872 välimiesmenettelyyn Ranskan presidentin '
+        + 'Adolphe Thiersin ratkaistavaksi, ja hänen seuraajansa marsalkka MacMahon '
+        + 'ratkaisi asian 19. huhtikuuta 1875 Portugalin hyväksi.'
+        + '\n\nRata lahden satamasta Transvaaliin oli valmisteltu pitkään. Pretorian '
+        + 'hallitus kilpailutti hankkeen ja myönsi 1870 toimiluvan yksityiselle yhtiölle '
+        + 'luvaten maksun vakuudeksi 850 maatilan alueet; rahoitus ei järjestynyt, ja '
+        + 'hallitus otti rakentamisen itselleen 1876.'
+        + '\n\nVuonna 1889 syntyi uusi riita Portugalin ja Britannian välille, kun Portugali '
+        + 'otti radan haltuunsa. Asia meni jälleen välimiesoikeuteen, ja 1900 Portugali '
+        + 'todettiin korvausvelvolliseksi ja määrättiin maksamaan rautatieyhtiön osakkaille '
+        + 'lähes miljoona puntaa.'
+        + '\n\nItse rata valmistui vaiheittain: Maputosta rajan asemalle Ressano Garciaan '
+        + 'kuljettiin 1. maaliskuuta 1890, rakentaminen Etelä-Afrikan puolella oli alkanut '
+        + '2. kesäkuuta 1887, ja koko 567 kilometrin reitti avattiin liikenteelle 2. '
+        + 'marraskuuta 1894.',
+      lahde: 'en-Wikipedia "Maputo Bay", osio "History", ja "Pretoria–Maputo railway", '
+        + 'osio "History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä välimiesoikeus määräsi Portugalille 1900?',
+        vaihtoehdot: [
+          'Radan palauttamisen Britannialle',
+          'Sataman sulkemisen',
+          'Lähes miljoonan punnan korvaukset',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+
+  NAM: [
+    /*
+     * Waterbergin ylätasanko, hererokansannousun ratkaisutaistelu.
+     * Lähde: en.wikipedia.org: Battle of Waterberg
+     */
+    {
+      id: 'waterbergin-kasky',
+      otsikko: 'Käsky, joka annettiin vasta taistelun jälkeen',
+      nimio: 'Waterberg 1904',
+      vuosi: '1904',
+      paikka: 'Waterbergin ylätasanko',
+      lat: -20.41667, lon: 17.21667,
+      kortti: 'Saksalainen komentaja aikoi saartaa hererot ylätasangon juurelle. Suunnitelma '
+        + 'epäonnistui, väki pääsi pakoon autiomaahan — ja seuraukset olivat pahemmat kuin '
+        + 'taistelu itse.',
+      teksti: 'Waterbergin taistelu, hereroksi ovita yOhamakari, käytiin 11. elokuuta 1904 '
+        + 'Waterbergillä Saksan Lounais-Afrikassa, ja se oli hererokansannousun ratkaiseva '
+        + 'yhteenotto. Saksan joukkoja johti kenraaliluutnantti Lothar von Trotha; miehiä '
+        + 'oli runsaat 1 500, ja heillä oli 1 625 nykyaikaista kivääriä, 30 tykkiä ja 14 '
+        + 'konekivääriä. Hererot olivat Samuel Mahareron johdolla koonneet 3 500–6 000 '
+        + 'soturia perheineen odottaessaan rauhanneuvotteluja.'
+        + '\n\nSitä ennen sotatoimia oli johtanut siirtomaakuvernööri, eversti Theodor '
+        + 'Leutwein, joka yhdisti sotilaallisen paineen neuvotteluihin. Kesäkuussa 1904 '
+        + 'keisarikunta korvasi hänet von Trothalla.'
+        + '\n\nTrothan suunnitelma oli puristaa hererot ylätasangon eteläpuolelle ja sulkea '
+        + 'pakotiet etelään ja kaakkoon. Kaakkoisen sulkuosaston komentaja ei ehtinyt '
+        + 'asemiin eikä ilmoittanut siitä, ja lännestä edennyt osasto ei pysähtynyt '
+        + 'sovitulle linjalle: pääosa hereroista ja heidän karjansa pääsi aukosta itään '
+        + 'Omahekenin autiomaahan.'
+        + '\n\nLokakuun 2. päivänä von Trotha antoi tuhoamiskäskyn, jonka mukaan jokainen '
+        + 'Saksan rajojen sisältä tavattu herero ammuttaisiin. Pako autiomaan halki johti '
+        + 'kansanmurhaan: kymmenettuhannet kuolivat janoon, nälkään ja tauteihin. Kun '
+        + 'Berliini kumosi käskyn, vangitut selviytyjät vietiin Hain saaren leiriin. Samuel '
+        + 'Maharero pääsi noin tuhannen miehen kanssa Kalaharin yli Bechuanamaahan, jossa '
+        + 'britit antoivat turvapaikan sillä ehdolla, ettei kapinaa jatketa heidän '
+        + 'maallaan.',
+      lahde: 'en-Wikipedia "Battle of Waterberg", johdanto-osa sekä osiot "Armies", '
+        + '"Preparations for battle", "Battle" ja "Aftermath". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi saarrostus epäonnistui?',
+        vaihtoehdot: [
+          'Sulkuosasto ei ehtinyt asemiin',
+          'Tykistö jäi jälkeen',
+          'Sade esti liikkumisen',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Katima Mulilo, Caprivin kaistaleen suurin taajama Sambesin
+     * varrella. Lähde: en.wikipedia.org: Caprivi Strip;
+     * Heligoland–Zanzibar Treaty
+     */
+    {
+      id: 'caprivin-kaistale',
+      otsikko: 'Housut napista: kaistale, joka ei vienyt merelle',
+      nimio: 'Caprivi 1890',
+      vuosi: '1890',
+      paikka: 'Katima Mulilo, Caprivin kaistale',
+      lat: -17.50389, lon: 24.275,
+      kortti: 'Saksa sai kapean kaistaleen, jotta se pääsisi Sambesille ja sitä pitkin '
+        + 'Afrikan itärannikolle. Vasta jälkeenpäin selvisi, ettei jokea pitkin pääse '
+        + 'minnekään: tiellä ovat Viktorian putoukset.',
+      teksti: 'Caprivin kaistale on kapea kieleke Namibian koillisnurkassa. Etelässä on '
+        + 'Botswana, pohjoisessa Angola ja Sambia, ja itäkärjessä Namibia, Botswana ja '
+        + 'Sambia kohtaavat yhdessä pisteessä, 150 metrin päässä Zimbabwesta. Leveyttä '
+        + 'kaistaleella on 32:sta 105 kilometriin, ja sen suurin taajama on Katima Mulilo '
+        + 'siellä, missä Sambesi saavuttaa kaistaleen.'
+        + '\n\nSaksan Lounais-Afrikka sai alueen 1890 saadakseen pääsyn Sambesille ja sitä '
+        + 'kautta reitin mantereen itärannikolle ja Saksan Itä-Afrikkaan. Reitti osoittautui '
+        + 'kelvottomaksi: noin 65 kilometriä kaistaleesta itään ovat Viktorian putoukset, ja '
+        + 'alempana joessa ovat vielä Kariban kuilu ja Cahora Bassa.'
+        + '\n\nKauppa tehtiin 1. heinäkuuta 1890 allekirjoitetussa Helgolandin ja Sansibarin '
+        + 'sopimuksessa. Saksa sai Caprivin kaistaleen, Helgolandin saariston Pohjanmerellä '
+        + 'ja vapaat kädet Saksan Itä-Afrikan ytimessä; vastineeksi se tunnusti Britannian '
+        + 'aseman Sansibarissa ja luovutti Witulandin protektoraatin.'
+        + '\n\nSopimuksen harhaanjohtavan nimen keksi entinen liittokansleri Otto von '
+        + 'Bismarck hyökätäkseen halveksimaansa seuraajaa Leo von Caprivia vastaan. Nimi '
+        + 'antoi ymmärtää, että Saksa oli vaihtanut afrikkalaisen valtakunnan pikkuruiseen '
+        + 'Helgolandiin — "housut napista". Imperialistit ottivat sanonnan omakseen ja '
+        + 'huusivat maanpetoksesta.',
+      lahde: 'en-Wikipedia "Caprivi Strip", johdanto-osa, ja "Heligoland–Zanzibar Treaty", '
+        + 'johdanto-osa sekä osiot "Terms" ja "Aftermath". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi kaistale ei vienyt Saksaa merelle?',
+        vaihtoehdot: [
+          'Britannia sulki joen',
+          'Joki kuivui kesäisin',
+          'Viktorian putoukset katkaisevat joen',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+
+  ZAF: [
+    /*
+     * Hopetown Oranjejoen varrella, timanttikuumeen lähtöpiste.
+     * Lähde: en.wikipedia.org: Star of South Africa (diamond)
+     */
+    {
+      id: 'etela-afrikan-tahti',
+      otsikko: 'Timantti, joka maksoi viisisataa lammasta',
+      nimio: 'Hopetown 1869',
+      vuosi: '1869–1871',
+      paikka: 'Hopetown, Oranjejoen ranta',
+      lat: -29.62583, lon: 24.08556,
+      kortti: 'Paimen sai löydöstään viisisataa lammasta, kymmenen härkää ja hevosen. '
+        + 'Ostaja myi saman kiven eteenpäin yli yhdellätoista tuhannella punnalla — ja '
+        + 'kaksi vuotta myöhemmin alkoi ryntäys.',
+      teksti: 'Etelä-Afrikan tähti, joka tunnetaan myös nimellä Dudleyn timantti, on 47,69 '
+        + 'karaatin valkoinen timantti. Sen löysi 1869 griqua-paimen Oranjejoen rannalta, ja '
+        + 'ennen hiontaa kivi painoi 83,5 karaattia.'
+        + '\n\nPaimen myi kiven naapuritilan isännälle Schalk van Niekerkille, joka oli jo '
+        + 'ennestään tunnettu seudulla: hän oli hankkinut 1866 runsaan 21 karaatin timantin '
+        + 'ostamalla sen 15-vuotiaalta pojalta Erasmus Jacobsilta. Maksu Etelä-Afrikan '
+        + 'tähdestä oli 500 lammasta, kymmenen härkää ja hevonen.'
+        + '\n\nVan Niekerk myi kiven eteenpäin Lilienfeldin veljeksille Hopetownissa 11 200 '
+        + 'punnalla — nykyrahassa runsaat 1,3 miljoonaa puntaa. Veljekset lähettivät sen '
+        + 'Englantiin, jossa se vaihtoi omistajaa kahdesti, kunnes sen osti kreivitär '
+        + 'Georgina Ward.'
+        + '\n\nLöytö muutti koko maan. Suuri kivi houkutteli seudulle timantinetsijöitä, ja '
+        + 'heinäkuussa 1871 syntyi ryntäys lähistön uudelle timanttikentälle Colesberg '
+        + 'Koppjelle. Paikkaa kutsuttiin ensin nimellä New Rush; myöhemmin siitä tuli '
+        + 'Kimberley.',
+      lahde: 'en-Wikipedia "Star of South Africa (diamond)", johdanto-osa. '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä kaupunki syntyi vuoden 1871 ryntäyksen paikalle?',
+        vaihtoehdot: [
+          'Hopetown',
+          'Bloemfontein',
+          'Kimberley',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Mapungubwen kukkula Limpopon ja Shashen yhtymäkohdassa.
+     * Lähde: en.wikipedia.org: Kingdom of Mapungubwe
+     */
+    {
+      id: 'mapungubwen-sarvikuono',
+      otsikko: 'Kultasarvikuono, jota ei haluttu näyttää',
+      nimio: 'Mapungubwe 1933',
+      vuosi: '1933',
+      paikka: 'Mapungubwen kukkula',
+      lat: -22.1925, lon: 29.23889,
+      kortti: 'Aarteenetsijät kaivoivat kukkulalta kultaa ja jättivät osan löydöistä '
+        + 'ilmoittamatta. Sitten hallitus otti paikan haltuunsa — ei suojellakseen sitä '
+        + 'vaan koska löytö oli väärä.',
+      teksti: 'Mapungubwe oli valtio Shashe- ja Limpopo-jokien yhtymäkohdassa nykyisen '
+        + 'Etelä-Afrikan alueella, Suuresta Zimbabwesta etelään. Paikalliset tunsivat '
+        + 'kukkulan omista suullisista perinteistään ja pitivät sitä pyhänä ja esi-isien '
+        + 'kuninkaiden voiman täyttämänä; perinne kielsi vierailun ja jopa kukkulan '
+        + 'osoittamisen sormella.'
+        + '\n\n1900-luvun alussa Mopanen alueen maanviljelijäsuku Van Graanit kuulivat '
+        + 'tarinan valkoisesta miehestä, joka oli elänyt erakkona Limpopon rantaluolassa ja '
+        + '"noussut pyhälle kukkulalle ja löytänyt sieltä asioita". Vuosien etsinnän jälkeen '
+        + 'he pakottivat 1933 nimettömäksi jääneen paikallisen oppaan mukaansa; arkeologin '
+        + '1937 kirjoittaman kuvauksen mukaan opas "vapisi kirjaimellisesti pelosta, ja '
+        + 'häntä oli pideltävä paikallaan" ennen kuin hän näytti salaisen polun.'
+        + '\n\nRyhmä kaivoi esiin keramiikan sirpaleita sekä kupari-, lasi- ja kultaesineitä '
+        + 'ja runsaasti koristellun hautauksen. Kaikkea ei ilmoitettu. Nuorempi Van Graan, '
+        + 'entinen Pretorian yliopiston opiskelija, kertoi löydöstä yliopiston arkeologille.'
+        + '\n\nPretorian yliopisto, tuolloin yksinomaan afrikaaneri-instituutio, sai oikeudet '
+        + 'aarteeseen, ja Hertzogin hallitus otti alueen monopolikseen. Löytö oli '
+        + 'hankala: se kumosi valkoisen ylivallan myytin takapajuisesta Afrikasta, ja aivan '
+        + 'kuten Suuren Zimbabwen kohdalla hallitus yritti salata, vähätellä ja "suojella" '
+        + 'paikkaa. Vuonna 1933 kaivetut luut haudattiin takaisin kukkulalle vasta 20. '
+        + 'marraskuuta 2007.',
+      lahde: 'en-Wikipedia "Kingdom of Mapungubwe", johdanto-osa sekä osiot "Burials" ja '
+        + '"Rediscovery". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi hallitus otti löytöpaikan haltuunsa?',
+        vaihtoehdot: [
+          'Se halusi rakentaa museon',
+          'Kukkula oli sotilasaluetta',
+          'Löytö kumosi valkoisen ylivallan myytin',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+
+  ZWE: [
+    /*
+     * Fort Salisbury, jonne pioneerikolonna pysähtyi 1890 — myönnytyksen
+     * suora seuraus. Lähde: en.wikipedia.org: Rudd Concession
+     */
+    {
+      id: 'ruddin-myonnytys',
+      otsikko: 'Sopimus, josta kiväärit poistettiin lehteen',
+      nimio: 'Rudd 1888',
+      vuosi: '1888–1890',
+      paikka: 'Fort Salisbury (Harare)',
+      lat: -17.863889, lon: 31.029722,
+      kortti: 'Kuninkaalle luvattiin tuhat kivääriä, satatuhatta patruunaa, höyrylaiva ja '
+        + 'sata puntaa kuussa. Kun sopimus julkaistiin lehdissä, kivääreistä ei puhuttu '
+        + 'sanaakaan.',
+      teksti: 'Ruddin myönnytys oli kirjallinen sopimus yksinoikeudesta kaivostoimintaan '
+        + 'Matabelemaassa, Mashonamaassa ja niiden naapurialueilla. Kuningas Lobengula '
+        + 'myönsi sen 30. lokakuuta 1888 Charles Ruddille, James Rochfort Maguirelle ja '
+        + 'Francis Thompsonille, jotka toimivat Cecil Rhodesin asiamiehinä.'
+        + '\n\nEhdot olivat sellaiset, ettei kukaan kilpailija pystynyt vastaamaan: tuhat '
+        + 'Martini–Henry-takaaladattavaa kivääriä, 100 000 patruunaa, höyrylaiva Sambesille '
+        + 'tai vaihtoehtoisesti 500 puntaa kertakorvausta, sekä sata puntaa kuukaudessa '
+        + 'ikuisesti. Kuninkaalle painavinta olivat aseet: hänellä oli 600–800 kivääriä '
+        + 'mutta tuskin lainkaan patruunoita.'
+        + '\n\nRhodes tiesi, että lupaus tuhannesta kivääristä otettaisiin Etelä-Afrikassa '
+        + 'huonosti vastaan, ja Rudd valmisteli asiakirjasta version, josta ne oli jätetty '
+        + 'pois. Cape Times ja Cape Argus julkaisivat sen 24. marraskuuta 1888: hinnaksi '
+        + 'kerrottiin "suuri kuukausittainen käteismaksu, tykkivene puolustustarkoituksiin '
+        + 'Sambesille ja muita palveluksia".'
+        + '\n\nLobengula yritti perua sopimuksen vedoten siihen, että ehtoja oli suullisesti '
+        + 'rajattu, ja lähetti lähettiläitä kuningatar Victorian puheille Windsoriin. Yritykset '
+        + 'kaatuivat. Myönnytys tuotti Rhodesin yhtiölle kuninkaallisen peruskirjan '
+        + 'lokakuussa 1889, ja pioneerikolonna pysähtyi tulevan pääkaupungin Fort '
+        + 'Salisburyn paikalle 12. syyskuuta 1890 ja nosti lipun seuraavana aamuna.',
+      lahde: 'en-Wikipedia "Rudd Concession", johdanto-osa sekä osiot "Negotiations", '
+        + '"Publication" ja "Pioneer Column". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä jätettiin pois lehdissä julkaistusta sopimuksesta?',
+        vaihtoehdot: [
+          'Tuhat kivääriä',
+          'Kuukausimaksu',
+          'Kaivosoikeudet',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Kariban pato Sambesilla. Lähde: en.wikipedia.org: Kariba Dam
+     */
+    {
+      id: 'kariban-allas',
+      otsikko: 'Eläimet pelastettiin veneisiin, ihmiset siirrettiin pois',
+      nimio: 'Kariba 1958',
+      vuosi: '1955–1961',
+      paikka: 'Kariban pato, Sambesi',
+      lat: -16.52222, lon: 28.76167,
+      kortti: 'Nousevasta vedestä pelastettiin noin 6 000 suurta eläintä erillisellä '
+        + 'operaatiolla. Saman altaan tieltä siirrettiin 57 000 ihmistä, eikä siitä '
+        + 'kirjoitettu yhtä hyviä uutisia.',
+      teksti: 'Kariban pato rakennettiin Sambesille 1950-luvulla, ja sen taakse syntyi yksi '
+        + 'maailman suurimmista tekojärvistä. Rakennustyö oli vaarallista, ja aikakauden '
+        + 'valokuvat padon työmaalta näyttävät, millaisissa oloissa työtä tehtiin.'
+        + '\n\nAltaan täyttyminen pakotti siirtymään noin 57 000 tongaa, jotka asuivat '
+        + 'Sambesin varrella joen molemmin puolin. Siitä, kuinka paljon apua siirretyt '
+        + 'saivat, on esitetty hyvin erilaisia arvioita. Brittikirjailija David Howarth '
+        + 'kuvasi Pohjois-Rhodesian toimia myönteisesti: mallipuutarhoja, eroosiota estävää '
+        + 'kynnön muuttamista, kastelupuutarha Sinazongwessa, osuuskuntia, lainoja '
+        + 'viljelijöille, kouluja ja terveysasemia.'
+        + '\n\nAmerikkalainen kirjailija Jacques Leslie kirjoitti teoksessaan Deep Water '
+        + '2005, ettei tilanne ollut juuri muuttunut 1970-luvulta, ja piti Karibaa Afrikan '
+        + 'historian pahimpana patosiirtoketkuna. Siirretyt perustivat 2002 Basilwizi '
+        + 'Trustin ajaakseen omia asioitaan ja toimiakseen välittäjänä Sambesin laakson '
+        + 'asukkaiden ja päättäjien välillä.'
+        + '\n\nEläimille järjestettiin oma pelastusretkikunta. Vuosina 1958–1961 Operation '
+        + 'Noah pyydysti ja siirsi nousevan veden uhkaamalta alueelta noin 6 000 suurta '
+        + 'eläintä sekä lukemattomia pieniä.',
+      lahde: 'en-Wikipedia "Kariba Dam", osiot "Population displacement and resettlement" '
+        + 'ja "Operation Noah". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka monta ihmistä altaan tieltä siirrettiin?',
+        vaihtoehdot: [
+          'Noin 6 000',
+          'Noin 570 000',
+          'Noin 57 000',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  /*
+   * ══ ERÄ M12, LÄNSI-AFRIKKA 6.9.2026 ══════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M12 (GHA, SEN, MLI, LBR, SLE) tuo kaksi skandaalia kuhunkin
+   * viiteen maahan — kymmenen uutta. Kaikki ovat kuvattomia kuten erän
+   * muutkin nostot, ja jokaisen lähderivi nimeää en-Wikipedian
+   * artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+   *
+   * PAIKAT ON MITATTU. Yksikään uusi merkki ei ole pelikaupungin
+   * kohdalla (KAUPUNGIN_KOHDALLA_SADE 7 lautayksikköä,
+   * js/fokuskohteet.js): lähin on Dékheulé 14,8 lautayksikön päässä
+   * Dakarista ja toiseksi lähin kultajakkaran sota 39,2 yksikön päässä
+   * Kumasi-laatasta, joka on laudalla rannikolla eikä kaupungin
+   * oikealla paikalla.
+   *
+   * KOLME PAIKKAVALINTAA ON TEHTY MERKKIEN PÄÄLLEKKÄISYYDEN TAKIA.
+   * (1) Dékheulén taistelupaikalla ei ole en-Wikipedian koordinaattia,
+   * joten merkki on Cayorin lähimmässä koordinaatillisessa paikassa
+   * Tivaouanessa (en-Wikipedia "Tivaouane"). (2) Lombokon linnakkeella
+   * ei myöskään ole koordinaattia; artikkelin mukaan se oli Gallinasin
+   * suulla lähellä Sulimaa, ja merkki on saman rannikon tunnetussa
+   * pisteessä, Moajoen suulla (en-Wikipedia "Moa River"). (3) Christyn
+   * raportti koski Liberian koko hallitusta Monroviassa, mutta
+   * Monrovian piste on jo saman erän Providence Islandilla, joten
+   * merkki on Sinoen satamakaupungissa Greenvillessä.
+   *
+   * HERKÄT AIHEET ON KIRJOITETTU LÄHTEEN KATTEESSA. Orjakaupan,
+   * pakkotyön ja siirtomaasotien luvut ovat artikkelien omia, eikä
+   * yhdenkään kortin aihe ole käynnissä oleva selkkaus: Sierra Leonen
+   * ja Liberian sisällissodat mainitaan vain siellä, missä artikkeli
+   * kertoo niistä mennyttä aikaa (Koidun kaivossopimus).
+   * ══════════════════════════════════════════════════════════════════ */
+  GHA: [
+    /*
+     * Kumasi, Asanten pääkaupunki. Laudan Kumasi-laatta on 39,2
+     * lautayksikön päässä kaupungin oikeasta paikasta.
+     * Lähde: en.wikipedia.org: War of the Golden Stool
+     */
+    {
+      id: 'kultajakkaran-sota',
+      otsikko: 'Jakkara, jolle kukaan ei istu',
+      nimio: 'Kultajakkara',
+      vuosi: '1900',
+      paikka: 'Kumasi, Asante',
+      lat: 6.7, lon: -1.6258,
+      kortti: 'Britannian kuvernööri saapui Kumasiin maaliskuussa 1900 ja vaati '
+        + 'istuakseen asantien kultajakkaralle. Jakkara ei ollut valtaistuin '
+        + 'vaan kansan sielu, eikä sillä istunut kukaan. Puhe kuunneltiin '
+        + 'vaiti, ja päälliköt lähtivät kotiin valmistelemaan sotaa.',
+      teksti: 'Kultajakkara oli ollut kauan asantien hallitsemisvallan vertauskuva. '
+        + 'Britannia oli miehittänyt Asanten tammikuussa 1896 ja karkottanut '
+        + 'kuninkaan Prempeh I:n maanpakoon. Kuvernööri Frederick Hodgson '
+        + 'saapui Kumasiin pienen joukon kanssa 25. maaliskuuta 1900, nousi '
+        + 'korokkeelle ja ilmoitti koolla olleille johtajille, että Prempeh ei '
+        + 'palaa, että vuoden 1874 Fomenan rauhansopimuksen mukainen '
+        + '160 000 punnan vuotuinen korvaus on yhä maksamatta ja että '
+        + 'kuningattarelle kuuluu kultajakkara.'
+        + '\n\n"Miksi ette tuoneet kultajakkaraa istuimekseni?" hän kysyi. '
+        + 'Vastaus oli hiljaisuus. Britannian parlamentissa David Lloyd George '
+        + 'sanoi seuraavana vuonna, että Hodgsonin retki kultajakkaran perään '
+        + 'muistutti graalin etsintää, ja siirtomaaministeri Joseph '
+        + 'Chamberlainilta kysyttiin toistuvasti, oliko kuvernööri ylipäätään '
+        + 'saanut lupaa vaatia jakkaraa.'
+        + '\n\nSota maksoi briteille ja heidän liittolaisilleen noin tuhat '
+        + 'kaatunutta, ja Asante liitettiin imperiumiin. Sotatavoitteessaan '
+        + 'asantit kuitenkin onnistuivat: jakkara oli piilotettu syvälle '
+        + 'metsään, eivätkä britit koskaan saaneet sitä. Vuonna 1901 he '
+        + 'pidättivät joukon päälliköitä, muun muassa Ejisun kuningataräidin '
+        + 'Yaa Asantewaan, ja karkottivat heidät Seychelleille 25 vuodeksi; '
+        + 'moni kuoli siellä, Yaa Asantewaa 1921. Jakkara löytyi vahingossa '
+        + '1921, kun työmiehet kaivoivat sen esiin ja veivät kultakoristeet.',
+      lahde: 'en-Wikipedia "War of the Golden Stool", johdanto-osa sekä osiot '
+        + '"The Golden Stool" ja "Aftermath". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä kuvernööri Hodgson vaati asanteilta Kumasissa?',
+        vaihtoehdot: [
+          'Kultajakkaraa istuimekseen',
+          'Kultakaivosten omistusta',
+          'Kumasin linnoituksen avaimia',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Salagan kauppakaupunki Itä-Gonjassa.
+     * Lähde: en.wikipedia.org: Salaga
+     */
+    {
+      id: 'salagan-orjatori',
+      otsikko: 'Etelän Timbuktu ja sen tori',
+      nimio: 'Salaga',
+      vuosi: '1800-luku',
+      paikka: 'Salaga, Itä-Gonja',
+      lat: 8.55, lon: -0.5167,
+      kortti: 'Salaga oli 1700- ja 1800-luvulla Kultarannikon suurin orjatori. '
+        + 'Samassa kaupungissa kulki myös kolapähkinä, karja ja maapähkinä, ja '
+        + 'sen monikansallisen väen takia sitä sanottiin etelän Timbuktuksi. '
+        + 'Torin paikalla kasvaa nykyään nuori baobab.',
+      teksti: 'Salaga on Itä-Gonjan piirikunnan pääkaupunki Pohjois-Ghanassa. Nimi '
+        + 'tulee dagbanin sanasta salgi, joka tarkoittaa asuinpaikkaan '
+        + 'tottumista. Kaupunki oli 1700- ja 1800-luvulla seudun tärkein '
+        + 'markkinapaikka, ja sen hallitseminen antoi monopolin sekä '
+        + 'pohjoiseen että etelään suuntautuvaan kauppaan. Salagaa hallitsi '
+        + 'gonjojen sotaisa kuningaskunta, mutta asukkaita olivat myös hausat, '
+        + 'wangarat, dagombat ja gurmat.'
+        + '\n\nTori oli Sahelin eteläisimmässä kolkassa ja välitti karjaa ja '
+        + 'maapähkinää Yendistä sekä kolapähkinää nykyisen Ghanan alueelta '
+        + 'Pohjois-Nigeriaan. Atlantin orjakaupan aikana samaa reittiä '
+        + 'kuljetettiin orjia rannikolle vietäviksi. Kaupungissa on lampi '
+        + 'nimeltä Wonkan bawa, hausaksi orjien peseytymispaikka, ja entisen '
+        + 'orjatorin kohdalla kasvaa nuori baobab.'
+        + '\n\nSalagan jälki näkyy yhä rannikolla: Accran Jamestownin toria '
+        + 'kutsutaan Salagan toriksi, koska sinne myytiin Salagasta tuotuja '
+        + 'ihmisiä. Vuonna 1892 kaupungissa puhkesi sisällissota, ja suuri osa '
+        + 'zongo-väestöstä lähti alueelta. Salaga oli 2012 noin 25 500 '
+        + 'asukkaan kaupunki.',
+      lahde: 'en-Wikipedia "Salaga", johdanto-osa sekä osiot "Etymology" ja '
+        + '"History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Salagaa kutsuttiin etelän Timbuktuksi?',
+        vaihtoehdot: [
+          'Se oli Saharan eteläisin kaupunki',
+          'Sen väki ja kauppa olivat monikansallisia',
+          'Siellä oli suuri käsikirjoituskirjasto',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  SEN: [
+    /*
+     * Dékheulén taistelupaikka Cayorissa. Taistelupaikalla ei ole
+     * en-Wikipedian koordinaattia, joten merkki on Tivaouanen
+     * koordinaatissa (en-Wikipedia "Tivaouane", 14,95 N / 16,8167 W).
+     * Lähde: en.wikipedia.org: Lat Dior
+     */
+    {
+      id: 'lat-dior-ja-rautatie',
+      otsikko: 'Kuningas, joka kielsi radan',
+      nimio: 'Dékheulé',
+      vuosi: '1886',
+      paikka: 'Dékheulé, Cayor',
+      lat: 14.95, lon: -16.8167,
+      kortti: 'Cayorin damel Lat Jor kertoi Ranskan kuvernöörille vastustavansa '
+        + 'Dakarin ja Saint-Louis’n rautatietä niin kauan kuin elää. Rata '
+        + 'valmistui 1886. Samana vuonna hänet houkuteltiin taisteluun, jota '
+        + 'ei voinut voittaa, ja Cayorin kuningaskunta lakkasi olemasta.',
+      teksti: 'Lat Jor Ngoné Latir Jop oli 1800-luvun wolof-valtion Cayorin '
+        + 'hallitsija ja on nykyään Senegalin kansallissankari. Hän nousi '
+        + 'damelin paikalle 1862, kun Ranskan asettama Majojo kukistettiin, '
+        + 'joutui pakenemaan 1864 ja liittyi Saloumin marabuutin Maba Diakhou '
+        + 'Bân oppilaaksi — ratkaisu, joka teki hänestä loppuiäkseen '
+        + 'harjoittavan muslimin ja käänsi Cayorin hallitsijasuvun perinteisen '
+        + 'maallisuuden.'
+        + '\n\nRanska tunnusti hänet Cayorin dameliksi 1870, ja liitto kesti '
+        + 'vuoteen 1883, jolloin hän aloitti kapinan rautatietä vastaan. '
+        + 'Kuvernööri Servatiukselle hänen kerrotaan sanoneen: "Niin kauan '
+        + 'kuin elän, vastustan kaikin voimin tämän radan rakentamista." '
+        + 'Ranskalaiset panivat hänen tilalleen veljenpojan Samba Lawbe '
+        + 'Fallin, ja Lat Jor kävi kolme vuotta sissisotaa pienen joukon '
+        + 'kanssa.'
+        + '\n\nVuoteen 1886 mennessä rata oli valmis ja ranskalaiset '
+        + 'vahvimmillaan. Samba Lawbe Fall sai surmansa neuvotteluissa '
+        + 'lokakuussa, ja loppuvuodesta Lat Jor kaatui Dékheulén taistelussa. '
+        + 'Cayor lakkasi olemasta itsenäinen valtio. Faidherben kerrotaan '
+        + 'sanoneen hänen sotilaistaan: heidät voi tappaa mutta ei häpäistä — '
+        + 'lause on nykyään Senegalin armeijan tunnuslause.',
+      lahde: 'en-Wikipedia "Lat Dior", johdanto-osa sekä osiot "First Reign as '
+        + 'Damel", "Return to Cayor" ja "Legacy". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä vastaan Lat Jor nousi kapinaan vuonna 1883?',
+        vaihtoehdot: [
+          'Ranskan asettamaa veroa',
+          'Islamin leviämistä Cayoriin',
+          'Dakarin ja Saint-Louis’n rautatietä',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Kabroussen kylä Ala-Casamancessa.
+     * Lähde: en.wikipedia.org: Aline Sitoé Diatta
+     */
+    {
+      id: 'aline-sitoe-diatta',
+      otsikko: 'Sadesaaja, joka kiellettiin',
+      nimio: 'Kabrousse',
+      vuosi: '1943',
+      paikka: 'Kabrousse, Ala-Casamance',
+      lat: 12.3556, lon: -16.7206,
+      kortti: 'Kabroussen kylässä nuori joola-nainen alkoi 1942 pitää sadetta '
+        + 'kutsuvia menoja. Sateet tulivat, sato oli runsas ja pyhiinvaeltajia '
+        + 'saapui joka kylästä. Vichy-Ranskan hallinto keräsi samaan aikaan '
+        + 'riisiä pakolla — ja päätti, että nainen oli kapinan alkuunpanija.',
+      teksti: 'Aline Sitoé Diatta syntyi noin 1920 Kabroussessa, jäi orvoksi ja '
+        + 'muutti 1935 Dakariin kotiapulaiseksi. Vuosina 1941–42 hän alkoi '
+        + 'nähdä näkyjä, joiden hän sanoi tulevan Emitailta, joolien '
+        + 'uskomuksen ylimmältä olennolta, ja jotka käskivät hänen palata '
+        + 'kotikyläänsä. Toukokuussa 1942 hän kutsui vanhimmat koolle ja '
+        + 'toimitti kasila-menon, jossa uhrattiin musta sonni. Sen jälkeen '
+        + 'satoi, ja seurasi kuuden viikon juhla-aika.'
+        + '\n\nOpetus törmäsi Vichy-Ranskan maatalouspolitiikkaan. Kun riisiä '
+        + 'ei enää saatu Indokiinasta, hallinto aloitti Casamancessa '
+        + 'pakko-ostokampanjan. Aline Sitoé puolusti paikallisia riisilajikkeita, '
+        + 'torjui maapähkinän kaltaiset rahakasvit ja ennusti pakko-ottojen, '
+        + 'päiveron ja koko Ranskan vallan loppua. Karjan uhraaminen vei '
+        + 'eläimiä, joita hallinto halusi pohjoisen kaupunkien ruoaksi.'
+        + '\n\nTammikuussa 1943 sotilasosastot lähetettiin hakemaan riisiä. '
+        + 'Yhteenottojen jälkeen Aline Sitoé pidätettiin seitsemäntoista muun '
+        + 'kanssa, ja Kabrousse joutui luovuttamaan kaikki riisivarastonsa. '
+        + 'Oikeus tuomitsi hänet kapinaan yllyttämisestä, vaikka Ziguinchorin '
+        + 'katoliset lähetyssaarnaajat vahvistivat hänen sanoneen tehtävänsä '
+        + 'olevan epäpoliittinen. Hänet karkotettiin Kayesiin ja siirrettiin '
+        + 'sieltä Timbuktun leiriin, jossa hän kuoli keripukkiin 22. toukokuuta '
+        + '1944. Kuolemasta kerrottiin julkisesti vasta 1983.',
+      lahde: 'en-Wikipedia "Aline Sitoé Diatta", johdanto-osa sekä osiot "Early '
+        + 'life", "Spiritual leadership" ja "Capture, exile, and death". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Missä Aline Sitoé Diatta kuoli?',
+        vaihtoehdot: [
+          'Kabroussessa',
+          'Ziguinchorissa',
+          'Timbuktun vankileirissä',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  MLI: [
+    /*
+     * Timbuktu. Laudan Timbuktu-laatta on 39,4 lautayksikön päässä
+     * kaupungin oikeasta paikasta, joten merkki ei ole sen kohdalla.
+     * Lähde: en.wikipedia.org: Timbuktu Manuscripts
+     */
+    {
+      id: 'timbuktun-kasikirjoitukset',
+      otsikko: 'Kirjat, jotka piilotettiin koteihin',
+      nimio: 'Ahmed Baba',
+      vuosi: '2012',
+      paikka: 'Timbuktu',
+      lat: 16.7666, lon: -3.0026,
+      kortti: 'Timbuktun kirjastoissa oli satojatuhansia käsikirjoituksia, joista '
+        + 'suurin osa oli yhä tutkimatta ja luetteloimatta. Kun kaupunki '
+        + 'kaatui 2012, osa niistä poltettiin ja varastettiin. Loput '
+        + 'katosivat — kaupunkilaisten koteihin.',
+      teksti: 'Timbuktun kirjurit käänsivät vuosisatojen ajan muun muassa Platonia, '
+        + 'Hippokratesta ja Avicennaa ja kopioivat kahdenkymmenenkahdeksan '
+        + 'niteen arabialaisen sanakirjan. Paikalliset kirjoittivat itse '
+        + 'historiaa, uskontoa, lakia, filosofiaa ja runoutta. Kronikoitsija '
+        + 'Mahmud Kati merkitsi muistiin elokuun 1583 tähdenlennot: "tähdet '
+        + 'lensivät kuin koko taivas olisi syttynyt tuleen". Käsikirjoitukset '
+        + 'periytyivät suvuittain, ja useimmat ovat huonossa kunnossa; '
+        + 'kokonaismäärää ei tiedetä.'
+        + '\n\nMalin sodan aikana 2012–2013 Ansar Dinen taistelijat polttivat '
+        + 'tai veivät 4 203 käsikirjoitusta, ja Ahmed Baban instituutin sekä '
+        + 'erään kirjaston kerrottiin palaneen vetäytymisen yhteydessä. '
+        + 'Yhdeksänkymmentä prosenttia pelastui, koska väestö järjestäytyi '
+        + 'SAVAMA-DCI-järjestön ympärille.'
+        + '\n\nEvakuoinnin järjestivät kirjastonhoitaja Abdel Kader Haidara, '
+        + 'jonka suvussa tehtävä oli kulkenut sukupolvelta toiselle, ja '
+        + 'yhdysvaltalainen kirjojen säilytyksen asiantuntija Stephanie '
+        + 'Diakité. Haidara turvautui paikallisiin perheisiin, jotka '
+        + 'piilottivat instituutin kokoelman koteihinsa, ennen kuin kirjat '
+        + 'kuljetettiin Bamakoon. Turvaan vietiin noin 350 000 '
+        + 'käsikirjoitusta, joista 300 000 oli yhä Bamakossa 2022. Etelässä '
+        + 'odotti uusi vaara: home ja kosteus.',
+      lahde: 'en-Wikipedia "Timbuktu Manuscripts", johdanto-osa sekä osiot '
+        + '"History", "Destruction and evacuation" ja "History of the '
+        + 'evacuation". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka monta käsikirjoitusta vietiin turvaan Bamakoon?',
+        vaihtoehdot: [
+          'Noin 4 200',
+          'Noin 350 000',
+          'Noin 20 000',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Office du Nigerin kastelualue Nionon tasangoilla.
+     * Lähde: en.wikipedia.org: Office du Niger
+     */
+    {
+      id: 'office-du-niger',
+      otsikko: 'Puuvillasuunnitelma, joka ei toteutunut',
+      nimio: 'Office du Niger',
+      vuosi: '1932',
+      paikka: 'Nionon tasangot, Ségou',
+      lat: 14.25, lon: -5.9833,
+      kortti: 'Ranskalainen suunnitelma oli kastella Nigerin vedellä lähes kaksi '
+        + 'miljoonaa hehtaaria Malin tasankoa ja siirtää sinne miljoonia '
+        + 'ihmisiä. Kastelua saatiin vuoteen 1948 mennessä noin 20 000 '
+        + 'hehtaaria — ja pakkotyöhön kymmeniätuhansia.',
+      teksti: 'Office du Niger on Malin puolittain itsenäinen valtionvirasto, joka '
+        + 'hallinnoi suurta kastelujärjestelmää Ségoun alueella. Vesi '
+        + 'ohjataan Nigeristä kanaviin Markalan padolla 35 kilometriä Ségousta '
+        + 'alavirtaan, ja sillä kastellaan lähes 100 000 hehtaaria tasankoa. '
+        + 'Siirtomaahallinto rakensi järjestelmän tuottamaan puuvillaa '
+        + 'tekstiiliteollisuudelle, mutta pääsato on nykyään riisi: noin '
+        + '320 000 tonnia vuodessa eli 40 prosenttia Malin koko tuotannosta.'
+        + '\n\nHanke keksittiin 1910-luvulla. Johtaja Émile Bélimen '
+        + 'suunnitelmissa oli 1920-luvun lopulla 1 850 000 hehtaaria '
+        + 'kasteltuja riisipeltoja, yli 3 000 kilometrin rata Pohjois-Afrikkaan '
+        + 'ja miljoonan tai kolmen ja puolen miljoonan malilaisen '
+        + 'pakkosiirto. Tavoitteisiin ei päästy, mutta kymmeniätuhansia '
+        + 'ihmisiä koottiin pakkotyöhön kauheissa oloissa. Vuoteen 1948 '
+        + 'mennessä kasteltua maata oli noin 20 000 hehtaaria ja viljelijöitä '
+        + 'alle 23 000; kansallistamisen aikaan 1960-luvun alussa heitä oli '
+        + '42 000.'
+        + '\n\nMaakiista sai jatkoa 2008, kun Malin hallitus alkoi tarjota '
+        + 'kastelemattomia maita 30 ja 50 vuoden vuokrasopimuksilla '
+        + 'ulkomaisille sijoittajille. Näkyvin tapaus on Malibya: Libyan '
+        + 'valtio sai 100 000 hehtaaria viideksikymmeneksi vuodeksi ilman '
+        + 'maanvuokraa. Sopimuksen sisältöä ei julkistettu, mutta vuodettu '
+        + 'jäljennös päätyi verkkoon; alueella asui kyliä, eikä ympäristö- ja '
+        + 'sosiaalisia vaikutusarvioita ole julkaistu.',
+      lahde: 'en-Wikipedia "Office du Niger", johdanto-osa sekä osiot "Historical '
+        + 'development" ja "Large-scale land leases". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Émile Bélimen suunnitelma olisi vaatinut ihmisiltä?',
+        vaihtoehdot: [
+          'Miljoonien malilaisten pakkosiirtoa',
+          'Nigerin kääntämistä toiseen suuntaan',
+          'Sadan padon rakentamista',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  LBR: [
+    /*
+     * Harbel Margibin maakunnassa, Firestonen istutusten keskus.
+     * Lähde: en.wikipedia.org: Firestone Natural Rubber Company
+     */
+    {
+      id: 'firestonen-sopimus',
+      otsikko: 'Miljoona eekkeriä kuudella sentillä',
+      nimio: 'Harbel',
+      vuosi: '1926',
+      paikka: 'Harbel, Margibi',
+      lat: 6.2833, lon: -10.35,
+      kortti: 'Liberian hallitus vuokrasi 1926 Firestonelle miljoona eekkeriä '
+        + 'yhdeksäksikymmeneksiyhdeksäksi vuodeksi kuuden sentin '
+        + 'eekkerihintaan — ja yhtiö sai valita maat mistä tahansa maan '
+        + 'alueelta. Kaupan mukana tuli laina, joka sitoi maan talouden.',
+      teksti: 'Yhdysvaltain kumin saanti oli 1920-luvulla eurooppalaisten '
+        + 'siirtomaavaltojen käsissä, ja kauppaministeri Herbert Hoover piti '
+        + 'kumia elintärkeänä raaka-aineena autonrenkaiden takia. Harvey '
+        + 'Firestone lähetti joulukuussa 1923 asiantuntijoita Liberiaan '
+        + 'tutkimaan maaperää, ja 1926 hallitus myönsi yhtiölle '
+        + '99 vuoden vuokrasopimuksen miljoonasta eekkeristä kuuden sentin '
+        + 'eekkerihinnalla. Syntyi maailman suurin kumiviljelmä; vielä 2005 '
+        + 'Firestonen istutukset olivat lähes kolmasosa Liberian '
+        + 'kumintuotannon alasta.'
+        + '\n\nYhdysvaltain hallitus oli mukana alusta asti. Tutkija Christine '
+        + 'Whyten mukaan ulkoministeriö toivoi, että jättisopimus pitäisi '
+        + 'Liberian amerikkalaisessa vaikutuspiirissä ilman suoraa '
+        + 'hallintoa, ja viime hetkellä sopimukseen lisätty '
+        + '25 miljoonan dollarin laina varmisti yritysvallan.'
+        + '\n\nIstutusten raivaus siirsi ihmisiä. Harbelin asukkaat joutuivat '
+        + 'muuttamaan naapurimaakuntaan, eikä menetyksistä maksettu riittävää '
+        + 'korvausta; uuden kylän nimi on bassaksi Queezahn, "valkoinen, '
+        + 'lähde pois tästä paikasta". Vuonna 1929 Liberian lakiasäätävä '
+        + 'kokous sai kuningas Maya Gedebeolta valituksen, jonka mukaan hanke '
+        + 'oli tuhonnut yhdeksän kylää ja pannut ihmiset valitsemaan '
+        + 'pakkotyön ja maastamuuton väliltä.',
+      lahde: 'en-Wikipedia "Firestone Natural Rubber Company", johdanto-osa ja '
+        + 'osio "Creation and early history". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Paljonko Firestone maksoi vuokramaasta eekkeriä kohti?',
+        vaihtoehdot: [
+          'Kuusi dollaria',
+          'Kuusi senttiä',
+          'Kuusikymmentä senttiä',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Greenville Sinoen maakunnassa. Christyn raportti koski koko
+     * Liberian hallitusta Monroviassa, mutta Monrovian piste on jo
+     * saman erän Providence Islandilla (js/packs/maastokohteet-lbr.js),
+     * joten merkki on Sinoen satamakaupungissa.
+     * Lähde: en.wikipedia.org: Charles D. B. King
+     */
+    {
+      id: 'christyn-raportti',
+      otsikko: 'Raportti, joka kaatoi presidentin',
+      nimio: 'Christyn raportti',
+      vuosi: '1930',
+      paikka: 'Greenville, Sinoe',
+      lat: 5.0167, lon: -9.0333,
+      kortti: 'Vaalinsa hävinnyt haastaja syytti Liberian hallitusta siitä, että '
+        + 'se värväsi ja myi sopimustyöläisiä orjina. Kansainliitto lähetti '
+        + 'komission tutkimaan asian, ja raportti 1930 tuki suurta osaa '
+        + 'syytöksistä. Presidentti ja varapresidentti erosivat.',
+      teksti: 'Charles D. B. King oli Liberian presidentti, jonka kaudella '
+        + 'solmittiin Firestonen kumisopimus ja jonka rahoitusta valvoi '
+        + 'Yhdysvaltain presidentin nimittämä neuvonantaja. Vuoden 1927 '
+        + 'vaaleissa King sai virallisen ilmoituksen mukaan 234 000 ääntä, '
+        + 'vaikka Liberiassa oli tuolloin 15 000 rekisteröityä äänestäjää. '
+        + 'Guinnessin ennätyskirja on siksi merkinnyt hänet historian '
+        + 'vilpillisimmän vaalituloksen voittajaksi.'
+        + '\n\nVaalin hävinnyt Thomas J. R. Faulkner syytti monia hallituksen '
+        + 'jäseniä siitä, että nämä värväsivät ja myivät sopimustyöläisiä '
+        + 'orjina. Liberia kielsi väitteet ja kieltäytyi yhteistyöstä, joten '
+        + 'Kansainliitto asetti komission, jota johti brittiläinen '
+        + 'eläintieteilijä Cuthbert Christy. Yhdysvaltain presidentti Herbert '
+        + 'Hoover katkaisi hetkeksi suhteet painostaakseen Liberiaa '
+        + 'suostumaan.'
+        + '\n\nKansainliitto julkaisi raportin 1930. Se tuki suurta osaa '
+        + 'Faulknerin väitteistä ja nimesi monia virkamiehiä, muun muassa '
+        + 'varapresidentti Allen Yancyn, joka joutui eroamaan sen jälkeen, kun '
+        + 'hänen osallisuutensa Espanjan hallitsemalle Fernando Pón saarelle '
+        + 'viedyn pakkotyön järjestelyihin tuli ilmi. Raportin mukaan '
+        + 'virkamiehet olivat hyväksyneet pakkotyön teiden rakentamiseen ja '
+        + 'tavaran laivaamiseen sekä päälliköiden nöyryyttämiseen, ja '
+        + '"törkeän pelottelun ja tukahduttamisen politiikkaa" oli vuosien '
+        + 'ajan järjestelmällisesti ylläpidetty. King ja Yancy erosivat.',
+      lahde: 'en-Wikipedia "Charles D. B. King", osiot "Presidential election of '
+        + '1927" ja "Forced labor and slavery scandal" sekä en-Wikipedia '
+        + '"Allen N. Yancy", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuka johti Kansainliiton tutkintakomissiota Liberiassa?',
+        vaihtoehdot: [
+          'Herbert Hoover',
+          'Thomas J. R. Faulkner',
+          'Cuthbert Christy',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  SLE: [
+    /*
+     * Lombokon orjalinnake Gallinasin rannikolla. Linnakkeella ei ole
+     * en-Wikipedian koordinaattia; artikkelin mukaan se oli Gallinasin
+     * suulla lähellä Sulimaa, ja merkki on saman rannikon
+     * koordinaatillisessa pisteessä, Moajoen suulla (en-Wikipedia
+     * "Moa River", 7,0192 N / 11,5413 W).
+     * Lähde: en.wikipedia.org: Lomboko
+     */
+    {
+      id: 'lombokon-linnake',
+      otsikko: 'Linnake, jota ei ollut olemassa',
+      nimio: 'Lomboko',
+      vuosi: '1849',
+      paikka: 'Gallinasin rannikko',
+      lat: 7.0192, lon: -11.5413,
+      kortti: 'Gallinasjoen suulla toimi orjalinnake vielä kauan sen jälkeen, kun '
+        + 'orjakauppa oli kielletty — ja keskellä Britannian omaa siirtomaata. '
+        + 'Vuonna 1839 sieltä lähti noin kaksituhatta ihmistä vuodessa. '
+        + 'Kymmenen vuotta myöhemmin laivasto poltti paikan.',
+      teksti: 'Lomboko oli espanjalaisen orjakauppiaan Pedro Blancon hallitsema '
+        + 'orjalinnake nykyisen Sierra Leonen alueella. Se koostui useista '
+        + 'suurista varastoista eli barracooneista, joihin sisämaasta tuodut '
+        + 'ihmiset suljettiin, sekä palatsimaisista rakennuksista, joissa '
+        + 'Blanco asui vaimoineen ja työntekijöineen.'
+        + '\n\nLinnake rakennettiin muutamalle pienelle saarelle Gallinasjoen '
+        + 'suulle lähelle Sulimaa. Alue oli Britannian Sierra Leonen '
+        + 'siirtomaan sisällä, mutta sitä hallitsivat espanjalaiset '
+        + 'orjakauppiaat. Vuoteen 1839 mennessä Gallinasjoen kautta vietiin '
+        + 'noin kaksituhatta orjuutettua ihmistä vuodessa, vaikka orjakauppa '
+        + 'oli laitonta.'
+        + '\n\nVuonna 1849 kuninkaallisen laivaston orjakauppaa vastaan '
+        + 'taisteleva Länsi-Afrikan laivasto-osasto hyökkäsi Lombokoon: '
+        + 'merijalkaväki vapautti orjuutetut ja tuhosi sitten linnoituksen. '
+        + 'Kaupankäynti oli jatkunut vuosikymmeniä sen jälkeen, kun sekä '
+        + 'Britannia että Espanja olivat sen kieltäneet, ja juuri siksi '
+        + 'laivasto-osasto oli ylipäätään olemassa: se partioi Länsi-Afrikan '
+        + 'rannikolla pysäyttämässä orjalaivoja.'
+        + '\n\nLomboko tunnetaan nykyään laajimmin Steven Spielbergin Amistad-'
+        + 'elokuvasta. Siinä päähenkilö Joseph Cinqué ja muut vangitut '
+        + 'tuodaan Lombokoon, ja elokuva näyttää heidän julman kohtelunsa; '
+        + 'loppukohtaus on juuri orjuutettujen vapauttaminen ja linnakkeen '
+        + 'tuho.',
+      lahde: 'en-Wikipedia "Lomboko", johdanto-osa ja osio "Legacy". Tarkistettu '
+        + '6.9.2026.',
+      visa: {
+        kysymys: 'Kuka hallitsi Lombokon orjalinnaketta?',
+        vaihtoehdot: [
+          'Pedro Blanco',
+          'Joseph Cinqué',
+          'Théodore Canot',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Koidu Konon piirikunnassa.
+     * Lähde: en.wikipedia.org: Koidu
+     */
+    {
+      id: 'koidun-kaivossopimus',
+      otsikko: 'Kaivos palkkiona palveluksesta',
+      nimio: 'Koidu',
+      vuosi: '1995',
+      paikka: 'Koidu, Kono',
+      lat: 8.6439, lon: -10.9717,
+      kortti: 'Sierra Leonen hallitus antoi 1995 Koidun timanttikaivoksen '
+        + 'toimiluvan eteläafrikkalaiselle yhtiölle — ei rahasta vaan '
+        + 'palkkioksi sotilaallisesta avusta. Kaksikymmentä vuotta myöhemmin '
+        + 'kaupunki haastoi kaivoksen omistajan oikeuteen maksamattomista '
+        + 'kiinteistöveroista.',
+      teksti: 'Koidu on Konon piirikunnan pääkaupunki Itä-Sierra Leonessa ja '
+        + 'timanttikaupan keskus: kaksi maailman kymmenestä suurimmasta '
+        + 'raakatimantista on löydetty kaupungin läpi virtaavasta Woyiejoesta. '
+        + 'Asukkaita oli vuoden 2015 laskennassa 128 030, ja kaupunki on maan '
+        + 'etnisesti ja uskonnollisesti moninaisimpia — yksikään ryhmä ei ole '
+        + 'siellä enemmistönä.'
+        + '\n\nVuonna 1995 hallitus teki sopimuksen eteläafrikkalaisen Branch '
+        + 'Energy Limitedin kanssa, joka oli hallituksille palkkasotilaita '
+        + 'toimittaneen Executive Outcomesin tytäryhtiö. Vuoden 1994 '
+        + 'kaivoslain nojalla neuvoteltu 25-vuotinen sopimus antoi yhtiölle '
+        + 'Koidun kaivoksen toimiluvan maksuna avusta sisällissodan '
+        + 'kapinallisia vastaan; valtiolle jäi kaivoksesta 60 prosentin '
+        + 'omistus.'
+        + '\n\nPanaman paperit paljastivat myöhemmin, että Beny Steinmetzin '
+        + 'suvun säätiö maksoi 1,2 miljoonaa dollaria puolesta '
+        + 'kaivoslupaa. Oikeudet siirtyivät 2003 Koidu Holdingsille '
+        + '28 miljoonalla dollarilla. Kaupunki haastoi 2015 yhtiön oikeuteen '
+        + '684 000 dollarin maksamattomista kiinteistöveroista, mutta '
+        + 'korkeimman oikeuden tuomari päätti huhtikuussa 2016, että yhtiöt '
+        + 'olivat erillisiä eikä omistaja siksi ollut verovelvollinen.',
+      lahde: 'en-Wikipedia "Koidu", johdanto-osa ja osio "History". Tarkistettu '
+        + '6.9.2026.',
+      visa: {
+        kysymys: 'Millä Sierra Leonen hallitus maksoi 1995 sotilaallisesta avusta?',
+        vaihtoehdot: [
+          'Rahalla',
+          'Maa-alueilla',
+          'Timanttikaivoksen toimiluvalla',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  /* ══════════════════════════════════════════════════════════════════
+   * ══ ERÄ M15, AFRIKKA 5 6.9.2026 ══════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M15 (SDN, TCD, LBY, NGA, SOM) tuo kaksi skandaalia kuhunkin
+   * viiteen maahan — kymmenen uutta. Kaikki ovat kuvattomia kuten erän
+   * muutkin nostot, ja jokaisen lähderivi nimeää en-Wikipedian
+   * artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+   *
+   * KAIKKI KYMMENEN OVAT HISTORIAA, EIVÄT NYKYPÄIVÄÄ. Fablen linjaus
+   * tälle erälle: Sudanin, Libyan ja Somalian nykytila on selkkaus,
+   * joten skandaalit kirjoitetaan vain 1800- ja 1900-luvun
+   * historiasta (M3:n Myanmar-linja). Vanhin kortti on vuodelta 1884
+   * ja nuorin vuodelta 1964; kaksi tiedeskandaalia (Toumaïn reisiluu
+   * ja Rabihin kallo) ulottuvat lähdeaineistossaan 2000-luvulle, mutta
+   * kummankin aihe on museoesineen kohtalo eikä käynnissä oleva
+   * konflikti.
+   *
+   * KAKSI MERKKIÄ ON SIIRRETTY NAAPURIRUUTUUN, koska tapahtumapaikan
+   * päällä on jo toinen nimiö. Khartumin piirityksen merkki on
+   * Sinisen Niilin varrella kaakkoon kaupungista, koska Niili-nimiö
+   * (js/packs/maastokohteet-sdn.js) istuu täsmälleen Khartumin
+   * kohdalla, ja Berberan sopimusten merkki on Adeninlahdella
+   * kaupungin edustalla, koska sama erä täytti rannikon Laas Geelin ja
+   * Dhambalinin nimiöillä. Kummankin `paikka`-rivi kertoo tapahtuman
+   * oikean paikan. Rabihin merkki on Kousserin taistelupaikalta
+   * koilliseen samasta syystä: Chari-joen nimiö on Kousserin päällä.
+   * ══════════════════════════════════════════════════════════════════ */
+  SDN: [
+    /*
+     * Khartumin piiritys 1884–1885. Merkki on Sinisen Niilin varrella
+     * noin kahdeksankymmentä kilometriä kaupungista kaakkoon (33,1 /
+     * 14,4), koska maan Niili-merkki on Khartumin kohdalla.
+     * Lähde: en.wikipedia.org: Siege of Khartoum
+     */
+    {
+      id: 'khartumin-piiritys',
+      otsikko: 'Kenraali, jonka piti evakuoida ja joka linnoittautui',
+      nimio: 'Khartum 1885',
+      vuosi: '1884–1885',
+      paikka: 'Khartum, Sinisen ja Valkoisen Niilin yhtymäkohta',
+      lat: 14.4, lon: 33.1,
+      kortti: 'Britannian hallitus lähetti Charles Gordonin Sudaniin yhdellä käskyllä: '
+        + 'tyhjentäkää varuskunnat ja tulkaa pois. Gordon päätti toisin, linnoitti '
+        + 'kaupungin ja jäi. Piiritys kesti kymmenen kuukautta, ja apujoukot saapuivat '
+        + 'kaksi päivää liian myöhään.',
+      teksti: 'Egypti oli valloittanut Sudanin 1820, mutta joutunut itse Britannian '
+        + 'sotilaalliseen otteeseen 1882. Vuonna 1881 Sudanissa alkoi kapina, jota johti '
+        + 'Muhammad Ahmad, mahdiksi julistautunut uskonnollinen johtaja. Egyptin armeija '
+        + 'kärsi tappion toisensa jälkeen, eikä Lontoo halunnut lähettää omia joukkoja: '
+        + 'pääministeri Gladstone painosti Egyptiä vetämään varuskuntansa pois ja nimitti '
+        + 'Sudanin entisen kenraalikuvernöörin Charles George Gordonin hoitamaan '
+        + 'evakuoinnin.'
+        + '\n\nGordon oli eri mieltä tehtävästään. Hän saapui Khartumiin helmikuussa 1884, '
+        + 'jossa oli 7 000 egyptiläistä sotilasta ja 27 000 siviiliä, ja ilmoitti '
+        + 'pelastavansa myös muut piiritetyt varuskunnat. Matkalla Berberissä hän kertoi '
+        + 'heimopäälliköille, että Egypti aikoo vetäytyä — tieto sai päälliköiden '
+        + 'uskollisuuden horjumaan. Huhtikuuhun mennessä kaupunki oli saarrettu, ja Gordon '
+        + 'maksoi joukoilleen itse painamillaan velkakirjoilla.'
+        + '\n\nRuoan piti riittää kuusi kuukautta, mutta piiritys kesti kymmenen. Vasta '
+        + 'julkisen painostuksen jälkeen Gladstone suostui heinäkuussa 1884 lähettämään '
+        + 'avustusretkikunnan, joka pääsi Sudaniin vasta tammikuussa 1885. Mahdi hyökkäsi '
+        + 'ennen sen saapumista: yön 25.–26. tammikuuta hyökkäyksessä varuskunta tuhoutui '
+        + 'ja Gordon sai surmansa. Retkikunnan kärki näki kaupungin kaksi päivää liian '
+        + 'myöhään ja kääntyi takaisin.'
+        + '\n\nBritanniassa lehdistö syytti Gladstonea hitaudesta, ja kuningatar Victoria '
+        + 'moitti häntä sähkeellä, joka vuoti julkisuuteen. Gladstonen hallitus kaatui '
+        + 'kesäkuussa 1885. Mahdi perusti Sudaniin uskonnollisen valtion, joka kesti '
+        + 'neljätoista vuotta.',
+      lahde: 'en-Wikipedia "Siege of Khartoum", johdanto-osa sekä osiot "Background", '
+        + '"Battle" ja "Aftermath". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä oli Gordonin virallinen tehtävä Khartumissa?',
+        vaihtoehdot: [
+          'Evakuoida varuskunnat pois Sudanista',
+          'Rakentaa rautatie Punaisellemerelle',
+          'Neuvotella rauha Egyptin kanssa',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Wadi Halfan vanhan kaupungin hukuttaminen Assuanin padon
+     * altaaseen 1964. Lähde: en.wikipedia.org: Wadi Halfa
+     */
+    {
+      id: 'wadi-halfa',
+      otsikko: 'Kaupunki, joka jäi padon altaan alle',
+      nimio: 'Wadi Halfa',
+      vuosi: '1959–1964',
+      paikka: 'Wadi Halfa, Pohjois-Sudan',
+      lat: 21.8, lon: 31.35,
+      kortti: 'Sopimus kahden maan välillä kertoi, että vesi nousee. Wadi Halfan '
+        + 'asukkaat saivat tietää, että heidän kaupunkinsa jää Assuanin padon altaan '
+        + 'alle ja että heidät siirretään satojen kilometrien päähän. Mielenosoitukset '
+        + 'vaiennettiin poikkeustilalla.',
+      teksti: 'Wadi Halfa oli 1800-luvulla perustettu Niilin satamakaupunki Egyptin rajalla, '
+        + 'Assuanista tulleiden höyrylaivojen päätepiste ja Sudanin rautatien pohjoinen '
+        + 'pää. Sähkelinja Egyptiin valmistui 1866, ja kaupungin ympärillä oli nubialaisia '
+        + 'muinaisjäännöksiä, muun muassa Buhenin egyptiläinen siirtokunta joen toisella '
+        + 'rannalla. Vuoteen 1956 mennessä kaupungissa asui 11 000 ihmistä.'
+        + '\n\n8. marraskuuta 1959 allekirjoitettiin Sudanin ja Yhdistyneen arabitasavallan '
+        + 'sopimus Niilin vesistä. Se merkitsi, että Assuanin suurpadon allas peittäisi '
+        + 'seudun ja että noin 52 000 ihmistä olisi siirrettävä muualle neljän vuoden '
+        + 'aikana vuodesta 1960 alkaen. Eniten menettivät nubialaiset.'
+        + '\n\nVastarinta oli avointa. Wadi Halfassa osoitettiin mieltä siirtoa vastaan '
+        + '23.–24. lokakuuta 1960, ja 26. lokakuuta mielenosoitukset levisivät Khartumiin, '
+        + 'jossa poliisi hajotti ne kyynelkaasulla. Hallitus julisti Wadi Halfaan '
+        + 'sotatilan ja katkaisi yhteydet muuhun maahan; Khartumissa Kairon yliopiston '
+        + 'kampus suljettiin väliaikaisesti ja noin viisikymmentä ihmistä pidätettiin.'
+        + '\n\nVanha kaupunki tuhoutui kokonaan tulvan alle vuonna 1964. Suurin osa '
+        + 'väestöstä siirrettiin, ja vuonna 1965 uudessa Halfassa asui vain 3 200 ihmistä. '
+        + '1970-luvulla alue oli arkeologien tiiviin tutkimuksen kohteena, kun nubialaisia '
+        + 'muistomerkkejä yritettiin pelastaa.',
+      lahde: 'en-Wikipedia "Wadi Halfa", johdanto-osa sekä osio "History" ("Ancient '
+        + 'Period", "Contemporary Period"). Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Wadi Halfan vanha kaupunki katosi?',
+        vaihtoehdot: [
+          'Se paloi tulipalossa',
+          'Se jäi Assuanin padon altaan alle',
+          'Hiekkamyrsky peitti sen',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  TCD: [
+    /*
+     * Rabih az-Zubayrin valtakunnan loppu ja kallon matka Pariisiin.
+     * Merkki on Kousserin taistelupaikalta koilliseen (15,9 / 12,7),
+     * koska Chari-joen nimiö istuu Kousserin kohdalla.
+     * Lähde: en.wikipedia.org: Rabih az-Zubayr
+     */
+    {
+      id: 'rabihin-kallo',
+      otsikko: 'Sotapäällikkö, jonka kallo lähetettiin Pariisiin',
+      nimio: 'Rabih',
+      vuosi: '1900',
+      paikka: 'Kousserin taistelu, Logonen ja Charin yhtymäkohta',
+      lat: 12.7, lon: 15.9,
+      kortti: 'Rabih az-Zubayr rakensi kymmenessä vuodessa neljänsadan miehen joukosta '
+        + 'viidentuhannen armeijan ja valtasi Kanem-Bornun. Ranska julisti hänet '
+        + 'laittomaksi hallitsijaksi. Taistelun jälkeen hänen päänsä nostettiin seipääseen '
+        + 'ja kallo lähetettiin Pariisiin.',
+      teksti: 'Rabih az-Zubayr syntyi noin 1840 Halfaya al-Mulukissa, myöhemmin Khartumin '
+        + 'esikaupungissa, ja aloitti sotilaana Egyptin armeijassa. Kun hänen '
+        + 'komentajansa joukot lyötiin Bahr el Ghazalissa, Rabih vei pienen osastonsa '
+        + 'länteen. Noin kymmenessä vuodessa neljänsadan miehen joukko kasvoi '
+        + 'viidentuhannen armeijaksi, ja vuosina 1892–1894 hän valloitti Kanem-Bornun '
+        + 'valtakunnan ja muutti sen sotilasdiktatuuriksi. Verotus oli tehokasta mutta '
+        + 'ankaraa, ja Bornun perinteisesti vauras maatalous kärsi niin pahoin, että '
+        + 'ruoantuotanto putosi vaarallisen alas.'
+        + '\n\nBritannia tunnusti Rabihin Bornun sulttaaniksi. Ranska teki päinvastoin: se '
+        + 'julisti hänen valtansa laittomaksi, jotta valloitukset voitiin perustella, ja '
+        + 'nosti ranskalaisessa julkisuudessa esiin hänen valtakuntansa orjatalouden. '
+        + 'Vuosina 1899–1900 Ranska lähetti alueelle useita retkikuntia.'
+        + '\n\n22. huhtikuuta 1900 Amédée-François Lamyn johtama ranskalais-bornulainen '
+        + 'joukko hyökkäsi Rabihin varustukseen Lakhtassa, kolmen mailin päässä '
+        + 'Kousserista. Lamy haavoittui kuolettavasti, mutta Rabihin joukot lyötiin '
+        + 'muutamassa tunnissa, ja pakoon yrittänyt Rabih ammuttiin.'
+        + '\n\nSurmaaja katkaisi Rabihin pään todisteeksi. Pää vietiin seipäässä Kousseriin '
+        + 'ja asetettiin muurille näytteille; kallo säilytettiin sotasaaliina laatikossa '
+        + 'ja lähetettiin loppuvuodesta 1900 Pariisiin antropologiseksi näytteeksi. Se '
+        + 'päätyi Musée de l\'Hommen kokoelmiin, joissa sen uskotaan yhä olevan. Rabihin '
+        + 'poika Fadlallah pyysi isänsä jäännöksiä takaisin samana vuonna — turhaan.',
+      lahde: 'en-Wikipedia "Rabih az-Zubayr", johdanto-osa sekä osiot "War with France" ja '
+        + '"Legacy" ("Remains"). Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Minne Rabihin kallo vietiin taistelun jälkeen?',
+        vaihtoehdot: [
+          'Se haudattiin Kousseriin',
+          'Se lähetettiin Pariisiin näytteeksi',
+          'Se palautettiin hänen pojalleen',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Toumaïn reisiluu: löytö 2001, unohdus laatikkoon, riita
+     * julkaisemisesta ja vasta 2020 ja 2022 ilmestyneet artikkelit.
+     * Merkki on Djurabin aavikon koordinaatilla (17 / 18), koska
+     * artikkeli ei anna Toros-Menallan kaivauspaikalle omaa
+     * koordinaattia — vain sen, että paikka on Pohjois-Tšadin
+     * Djurabissa.
+     * Lähde: en.wikipedia.org: Sahelanthropus; Djurab Desert
+     */
+    {
+      id: 'toumain-reisiluu',
+      otsikko: 'Reisiluu, joka nukkui laatikossa eläinluiden seassa',
+      nimio: 'Toumaï',
+      vuosi: '2001–2022',
+      paikka: 'Toros-Menalla, Djurabin aavikko',
+      lat: 18.0, lon: 17.0,
+      kortti: 'Kallo julistettiin ihmiskunnan varhaisimmaksi esi-isäksi, joka käveli '
+        + 'kahdella jalalla. Samasta kaivauksesta oli tullut reisiluu, mutta se pakattiin '
+        + 'eläinluiden joukkoon ja unohtui laatikkoon Ranskaan. Kun jatko-opiskelija löysi '
+        + 'sen, alkoi riita.',
+      teksti: 'Neljä Tšadin kansallisen tutkimuskeskuksen työntekijää — kolme tšadilaista '
+        + 'ja yksi ranskalainen — keräsi 19. heinäkuuta 2001 Djurabin aavikon '
+        + 'Toros-Menallan kaivauspaikalta luita, joista tuli maailmankuulut. Michel '
+        + 'Brunet työtovereineen kuvasi löydön 2002 uutena sukuna ja lajina, '
+        + 'Sahelanthropus tchadensis. Tšadin presidentti antoi kallolle lempinimen '
+        + 'Toumaï, joka merkitsee paikallisella dazan kielellä "elämän toivoa".'
+        + '\n\nBrunet ilmoitti löydöstä N\'Djamenassa ulkoministeriön ja televisioyleisön '
+        + 'edessä: "Ihmiskunnan esi-isä on tšadilainen." Tutkimusryhmä sanoi nimenomaan, '
+        + 'ettei kallon yhteydestä ollut löytynyt yhtään raajanluuta — juuri sellainen '
+        + 'luu olisi voinut todistaa tai kumota heidän päätelmänsä kaksijalkaisuudesta.'
+        + '\n\nToumaïn kanssa oli kuitenkin löytynyt reisiluu. Se pakattiin eläinluiden '
+        + 'joukkoon ja lähetettiin 2003 Poitiersin yliopistoon, jossa jatko-opiskelija '
+        + 'Aude Bergeret löysi sen sattumalta seuraavana vuonna. Geotieteiden laitoksen '
+        + 'johtaja Roberto Macchiarelli piti luuta ristiriitaisena kaksijalkaisuuden '
+        + 'kanssa. Kun Brunet kieltäytyi kommentoimasta, Bergeret ja Macchiarelli '
+        + 'pyysivät saada esitellä alustavat tuloksensa Pariisin antropologisen seuran '
+        + 'kokouksessa — pyyntö hylättiin, koska tuloksia ei ollut vielä julkaistu.'
+        + '\n\nKaksikko sai täyden kuvauksen julki vasta 2020 ja päätyi siihen, ettei '
+        + 'Sahelanthropus ollut kaksijalkainen. Vuonna 2022 Franck Guy työtovereineen '
+        + 'julkaisi oman tutkimuksensa samasta reisiluusta ja kahdesta kyynärluusta ja '
+        + 'päätyi päinvastaiseen tulokseen. Kiista jatkuu.',
+      lahde: 'en-Wikipedia "Sahelanthropus", osio "Taxonomy" ("Discovery"), ja '
+        + '"Djurab Desert", tietolaatikon koordinaatti. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Missä Toumaïn reisiluu oli vuosikausia?',
+        vaihtoehdot: [
+          'Museon näyttelyssä Tšadissa',
+          'Laatikossa eläinluiden joukossa',
+          'Kadoksissa aavikolla',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  LBY: [
+    /*
+     * Italian hyökkäys Libyaan 1911; merkki Tobrukissa, joka
+     * vallattiin lokakuussa 1911.
+     * Lähde: en.wikipedia.org: Italo-Turkish War
+     */
+    {
+      id: 'tobruk-1911',
+      otsikko: 'Sota, jossa pudotettiin maailman ensimmäinen lentopommi',
+      nimio: 'Tobruk 1911',
+      vuosi: '1911–1912',
+      paikka: 'Tobruk, Kyrenaika',
+      lat: 32.0833, lon: 23.9667,
+      kortti: 'Italia hyökkäsi osmanien Tripolitaniaan syyskuussa 1911 ja valloitti '
+        + 'rannikkokaupungit kolmessa viikossa. Sodassa nähtiin ensimmäistä kertaa '
+        + 'lentokone tiedustelussa ja pommituksessa — ja ensimmäistä kertaa myös '
+        + 'lentokone alas ammuttuna.',
+      teksti: 'Italian ja osmanien sota käytiin 29. syyskuuta 1911 – 18. lokakuuta 1912. '
+        + 'Italia valtasi osmanien Tripolitanian rannikkoalueet, joiden pääosat olivat '
+        + 'Fezzan, Kyrenaika ja Tripoli itse, ja niistä tuli Italian siirtomaat, jotka '
+        + 'myöhemmin yhdistyivät Italian Libyaksi. Italialaiset arvioivat, että 20 000 '
+        + 'miehen joukko riittäisi maan valtaamiseen, ja se valtasikin Tripolin, '
+        + 'Tobrukin, Dernan, Bengasin ja Homsin 3.–21. lokakuuta 1911.'
+        + '\n\nHelppo alku ei jatkunut. Shar al-Shattissa italialaiset kärsivät tappion, '
+        + 'jossa kaatui ainakin 21 upseeria ja 482 sotilasta, ja kostoksi he teloittivat '
+        + 'ampumalla ja hirttämällä 400 naista ja 4 000 miestä. Joukot kasvatettiin '
+        + 'sadaksituhanneksi mieheksi, ja sota jähmettyi asemasodaksi.'
+        + '\n\nSota jäi historiaan tekniikastaan. 23. lokakuuta 1911 kapteeni Carlo Piazza '
+        + 'lensi maailman ensimmäisen ilmatiedustelulennon vihollislinjojen yli, ja '
+        + '1. marraskuuta luutnantti Giulio Gavotti pudotti Etrich Taube -koneesta neljä '
+        + 'kranaattia Tajuraan ja Ain Zaraan — historian ensimmäinen ilmapommitus. '
+        + 'Turkkilaiset puolestaan olivat ensimmäiset, jotka ampuivat lentokoneen alas, '
+        + 'kivääreillä. Guglielmo Marconi tuli itse Libyaan tekemään kokeita Italian '
+        + 'pioneerijoukkojen kanssa langattomalla lennättimellä.'
+        + '\n\nOuchyn rauhassa 1912 Libya jäi Italialle. Sotaa pidetään ensimmäisen '
+        + 'maailmansodan esinäytöksenä: Balkanin liiton jäsenet näkivät, miten helposti '
+        + 'osmanit hävisivät, ja hyökkäsivät lokakuussa 1912 — ensimmäinen Balkanin sota '
+        + 'alkoi muutamaa päivää ennen kuin Libyan sota päättyi.',
+      lahde: 'en-Wikipedia "Italo-Turkish War", johdanto-osa sekä osio "Military campaign" '
+        + '("Italian troops landing in Libya", "Trench phase"). Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä nähtiin sodassa ensimmäistä kertaa historiassa?',
+        vaihtoehdot: [
+          'Lentokoneesta pudotettu pommi',
+          'Sukellusvene taistelussa',
+          'Panssarivaunu aavikolla',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Omar al-Mukhtarin vangitseminen ja teloitus Soluchin
+     * keskitysleirissä 1931.
+     * Lähde: en.wikipedia.org: Omar al-Mukhtar
+     */
+    {
+      id: 'soluch-1931',
+      otsikko: 'Opettaja, joka piti aavikkoa hallussaan kaksikymmentä vuotta',
+      nimio: 'Soluch 1931',
+      vuosi: '1911–1931',
+      paikka: 'Soluchin leiri, Kyrenaika',
+      lat: 31.6667, lon: 20.25,
+      kortti: 'Omar al-Mukhtar oli koraaninopettaja, josta tuli Kyrenaikan vastarinnan '
+        + 'johtaja. Hän piti italialaisia loitolla lähes kaksikymmentä vuotta. Haavoituttuaan '
+        + 'taistelussa hänet vangittiin ja hirtettiin 73-vuotiaana leirissä, kannattajiensa '
+        + 'nähden.',
+      teksti: 'Omar al-Mukhtar syntyi 1858 Zanzurin kylässä lähellä Tobrukia osmanien '
+        + 'Kyrenaikassa. Hän menetti isänsä lapsena ja vietti nuoruutensa köyhyydessä, '
+        + 'mutta sai koulutuksensa ensin kylän moskeijassa ja sitten kahdeksan vuotta '
+        + 'senussi-veljeskunnan yliopistossa Jaghbubissa. Hänestä tuli tunnettu Koraanin '
+        + 'tuntija ja imaami, joka kutsuttiin ratkomaan heimojen välisiä riitoja.'
+        + '\n\nVuonna 1895 senussien johtaja matkusti hänen kanssaan etelään Kufraan ja '
+        + 'edelleen Tšadiin, jossa Mukhtar nimitettiin Zawiyat Ayn Kalkin sheikiksi. Kun '
+        + 'Ranska eteni Tšadiin 1899, hänet lähetettiin puolustamaan aluetta. Vuonna 1902 '
+        + 'hänet kutsuttiin takaisin pohjoiseen ja nimitettiin Pohjois-Kyrenaikan '
+        + 'levottoman Zawiyat Laqsurin sheikiksi.'
+        + '\n\nVuodesta 1911 Mukhtar järjesti ja johti Libyan vastarintaa Italian '
+        + 'siirtomaavaltaa vastaan ensimmäisessä ja toisessa italialais-senussilaisessa '
+        + 'sodassa. Häntä kutsuttiin aavikon leijonaksi. Lähes kaksikymmentä vuotta '
+        + 'kestänyt taistelu päättyi 11. syyskuuta 1931, kun hän haavoittui Slontan '
+        + 'lähellä ja joutui vangiksi.'
+        + '\n\nItalialainen tuomioistuin määräsi hänet kuolemaan siinä toivossa, että '
+        + 'vastarinta kuolisi hänen mukanaan. Mukhtar hirtettiin 16. syyskuuta 1931 '
+        + 'Soluchin keskitysleirissä kannattajiensa nähden 73-vuotiaana. Hänen kuvansa on '
+        + 'ollut Libyan kymmenen dinaarin setelissä vuodesta 1971, ja hänen viimeisistä '
+        + 'vuosistaan tehtiin vuonna 1981 elokuva Aavikon leijona.',
+      lahde: 'en-Wikipedia "Omar al-Mukhtar", johdanto-osa sekä osiot "Early life", '
+        + '"Capture and execution" ja "Legacy". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä oli Omar al-Mukhtarin ammatti ennen vastarintaa?',
+        vaihtoehdot: [
+          'Kauppias',
+          'Koraaninopettaja ja imaami',
+          'Osmanien upseeri',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  NGA: [
+    /*
+     * Beninin retkikunta 1897 ja Beninin pronssien ryöstö.
+     * Lähde: en.wikipedia.org: Benin Expedition of 1897
+     */
+    {
+      id: 'beninin-retkikunta',
+      otsikko: 'Kaupunki, jonka taide huutokaupattiin retken maksamiseksi',
+      nimio: 'Benin 1897',
+      vuosi: '1897',
+      paikka: 'Benin City, Niger Coast -protektoraatti',
+      lat: 6.3333, lon: 5.6222,
+      kortti: 'Britannian rangaistusretkikunta valtasi Beninin helmikuussa 1897. '
+        + 'Kaupungista vietiin noin 2 500 esinettä, joiden joukossa yli tuhat metallilaattaa '
+        + 'ja veistosta. Amiraliteetti huutokauppasi saaliin kattaakseen retken kulut.',
+      teksti: 'Beninin kuningaskunta oli säilyttänyt itsenäisyytensä Afrikan jaossa, ja '
+        + 'kuningas eli oba hallitsi alueensa kauppaa yksinoikeudella — mitä Royal Niger '
+        + 'Company piti uhkana. Vuonna 1892 varakonsuli Henry Gallwey sai obalta '
+        + 'allekirjoituksen vapaakauppasopimukseen, jota oba ei ollut halunnut '
+        + 'allekirjoittaa. Kun oba silti vaati tullimaksuja, britit tulkitsivat sen '
+        + 'sopimusrikkomukseksi ja vihamieliseksi teoksi.'
+        + '\n\nJoulukuun lopulla 1896 James Phillipsin johtama 250 hengen seurue lähti '
+        + 'Benin Cityyn keskustelemaan kauppasuhteista, mutta Phillips ei odottanut obalta '
+        + 'lupaa ennen rajan ylitystä. Beninin joukot hyökkäsivät seurueen kimppuun '
+        + '4. tammikuuta, ja lähes kaikki surmattiin tai vangittiin.'
+        + '\n\nBritannia hyökkäsi 9. helmikuuta 1 200 miehellä Harry Rawsonin johdolla ja '
+        + 'valtasi Benin Cityn vähäisin omin tappioin; beniniläisten kaatuneiden määrä ei '
+        + 'ole tiedossa. Tammikuussa vangitut afrikkalaiset kantajat vapautettiin. Talot, '
+        + 'pyhäköt ja päälliköiden palatsit ryöstettiin ja poltettiin, myös obanpalatsi '
+        + '21. helmikuuta. Oba vietiin maanpakoon Calabariin.'
+        + '\n\nSaaliista lähetettiin Britanniaan virallisten lukujen mukaan noin 2 500 '
+        + 'esinettä, muun muassa yli tuhat metallilaattaa ja veistosta, jotka tunnetaan '
+        + 'Beninin pronsseina. Noin 40 prosenttia päätyi British Museumiin, osa jaettiin '
+        + 'sotilaille ja loput amiraliteetti huutokauppasi jo toukokuussa 1897 retken '
+        + 'kulujen kattamiseksi; ostajina olivat enimmäkseen museot, etenkin Saksassa. '
+        + 'Esineiden palauttamisesta käydään yhä keskustelua.',
+      lahde: 'en-Wikipedia "Benin Expedition of 1897", johdanto-osa sekä osiot '
+        + '"Background" ja "Aftermath". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi amiraliteetti huutokauppasi Beninin esineitä?',
+        vaihtoehdot: [
+          'Kattaakseen retkikunnan kulut',
+          'Palauttaakseen ne Beniniin',
+          'Rahoittaakseen museon rakentamisen',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Jaja of Opobon vangitseminen neuvottelujen varjolla 1887.
+     * Lähde: en.wikipedia.org: Jaja of Opobo
+     */
+    {
+      id: 'jaja-opobo',
+      otsikko: 'Kuningas, joka kutsuttiin neuvotteluun ja vietiin laivaan',
+      nimio: 'Jaja',
+      vuosi: '1887',
+      paikka: 'Opobo, Nigerin suisto',
+      lat: 4.5114, lon: 7.54,
+      kortti: 'Jaja myytiin lapsena orjaksi, osti itsensä vapaaksi ja perusti oman '
+        + 'kuningaskuntansa. Vuonna 1870 hän myi kahdeksantuhatta tonnia palmuöljyä '
+        + 'suoraan briteille. Kun hän kieltäytyi lopettamasta brittikauppiaiden '
+        + 'verottamista, hänet kutsuttiin neuvotteluun.',
+      teksti: 'Jubo Jubogha eli kuningas Jaja syntyi noin 1821 igbomaassa. Lapsena hänet '
+        + 'siepattiin ja myytiin orjaksi ja vietiin Bonnyyn. Palveltuaan isäntäänsä '
+        + 'useita vuosia hän osti itsensä vapaaksi, otti isäntänsä kuoltua kaupan '
+        + 'haltuunsa ja nousi Anna Pepple -kauppahuoneen johtoon.'
+        + '\n\nSisäinen valtataistelu Bonnyssa pakotti Jajan irtautumaan, ja vuonna 1869 '
+        + 'hän perusti Opobon kuningaskunnan 26 mailia Bonnysta itään. Opobosta tuli '
+        + 'seudun merkittävä palmuöljyn kauppapaikka. Jaja sulki sekä eurooppalaiset että '
+        + 'afrikkalaiset välikädet pois ja hallitsi käytännössä yksin: vuonna 1870 hän '
+        + 'myi kahdeksantuhatta tonnia palmuöljyä suoraan briteille ja laivasi öljyä '
+        + 'suoraan Liverpooliin.'
+        + '\n\nJaja lähetti lapsensa kouluun Glasgow’hun ja palkkasi eurooppalaisia '
+        + 'opettajia rakennuttamaansa maalliseen kouluun Opobossa. Lähetyssaarnaajilta hän '
+        + 'kielsi pääsyn kaupunkiin kokonaan.'
+        + '\n\nBerliinin konferenssi 1884 määritteli Opobon brittialueeksi. Kun Jaja ei '
+        + 'suostunut lopettamaan brittikauppiaiden verottamista, varakonsuli Henry '
+        + 'Hamilton Johnston kutsui hänet neuvotteluihin 1887. Saapuessaan Jaja '
+        + 'siepattiin brittialukselle, tuomittiin Accrassa Kultarannikolla ja karkotettiin '
+        + 'ensin Lontooseen ja sitten Länsi-Intiaan. Vuonna 1891 hän sai luvan palata '
+        + 'Opoboon mutta kuoli matkalla, ja Opobon valta hiipui nopeasti. Vuonna 1903 '
+        + 'kaupungin keskustaan pystytettiin hänen muistomerkkinsä.',
+      lahde: 'en-Wikipedia "Jaja of Opobo", johdanto-osa ja osio "Life and career". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Jaja joutui karkotetuksi?',
+        vaihtoehdot: [
+          'Hän hävisi meritaistelun',
+          'Hänet siepattiin neuvottelukutsun varjolla',
+          'Hän luopui vallasta vapaaehtoisesti',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  SOM: [
+    /*
+     * Vuosien 1884–1886 sopimukset ja Britannian Somalimaa. Merkki on
+     * Adeninlahdella Berberan edustalla (45,3 / 11,6), koska saman
+     * erän Laas Geel ja Dhambalin täyttävät rannikon nimiöt.
+     * Lähde: en.wikipedia.org: Berbera
+     */
+    {
+      id: 'berberan-sopimukset',
+      otsikko: 'Protektoraatti, jota sen perustaja neuvoi hylkäämään',
+      nimio: 'Berbera 1884',
+      vuosi: '1884–1886',
+      paikka: 'Berbera, Adeninlahden rannikko',
+      lat: 11.6, lon: 45.3,
+      kortti: 'Berbera oli 1800-luvulla Somalian niemimaan tärkein satama ja vuonna 1856 '
+        + '"maailman vapain satama". Sopimussarja 1884–1886 teki rannikosta Britannian '
+        + 'protektoraatin — jota Winston Churchill kehotti vuonna 1907 hylkäämään.',
+      teksti: 'Berbera oli 1700- ja 1800-luvuilla Somalian niemimaan tärkein satama. '
+        + 'Vuosittainen markkina, joka kesti lokakuusta huhtikuuhun, oli Mordechai Abirin '
+        + 'mukaan "Itä-Afrikan itärannikon merkittävimpiä kaupallisia tapahtumia": paikalle '
+        + 'kokoontuivat Isaaqin alaklaanit, karavaanit Hararista ja sisämaasta sekä '
+        + 'banjaanikauppiaat Porbandarista, Mangaloresta ja Mumbaista. Kaupankäynnin '
+        + 'yksityiskohdat pidettiin salassa eurooppalaisilta kauppiailta.'
+        + '\n\nVuoden 1833 kauppakaudella satamakaupunki paisui 70 000 hengen kokoiseksi, '
+        + 'ja yhtenä päivänä sisämaasta saapui yli kuusituhatta tavaralla lastattua '
+        + 'kamelia. Vietäviä olivat karja, kahvi, suitsuke, mirha, akasiakumi, sahrami, '
+        + 'höyhenet, vaha, voisula, vuodat, kulta ja norsunluu. Vuonna 1856 ilmestynyt '
+        + 'kauppalehti kutsui Berberaa "maailman vapaimmaksi satamaksi ja koko lahden '
+        + 'tärkeimmäksi kauppapaikaksi".'
+        + '\n\nVuosina 1884–1886 britit tekivät peräkkäisiä sopimuksia pohjoisen '
+        + 'somalirannikon klaanien kanssa ja perustivat alueelle protektoraatin, '
+        + 'Britannian Somalimaan. Sitä miehitettiin Adenista ja hallittiin Brittiläisestä '
+        + 'Intiasta käsin vuoteen 1898, sitten ulkoministeriöstä ja vuodesta 1905 '
+        + 'siirtomaaministeriöstä.'
+        + '\n\nBerbera oli Adeninlahden eteläpuolen ainoa suojaisa satama, mutta britit '
+        + 'katuivat pian hallintaansa. Siirtomaaministeriön alivaltiosihteeri Winston '
+        + 'Churchill kävi Berberassa vuonna 1907 ja esitti koko protektoraatin '
+        + 'hylkäämistä. Hallinto ei ulottanut infrastruktuuria rannikon ulkopuolelle, ja '
+        + 'suunniteltu Berbera–Harar-rautatie kaatui parlamentissa, koska sen pelättiin '
+        + 'haittaavan Ranskan ja Britannian sopua.',
+      lahde: 'en-Wikipedia "Berbera", osiot "Precolonialism" ja "British Somaliland". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Churchill esitti Berberan-käyntinsä jälkeen 1907?',
+        vaihtoehdot: [
+          'Protektoraatin hylkäämistä',
+          'Sataman laajentamista',
+          'Rautatien rakentamista Hararista',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Illigin sopimus 1905 ja dervissiliikkeen kaksi vuosikymmentä.
+     * Merkki on Illigissä eli nykyisessä Eylissä.
+     * Lähde: en.wikipedia.org: Dervish movement (Somali)
+     */
+    {
+      id: 'illigin-sopimus',
+      otsikko: 'Sopimus, joka antoi kapinaliikkeelle oman laakson',
+      nimio: 'Illig 1905',
+      vuosi: '1899–1920',
+      paikka: 'Illig (Eyl), Nugaalin laakso',
+      lat: 7.9667, lon: 49.85,
+      kortti: 'Britannia aseisti kilpailevat klaanit dervissiliikettä vastaan. Kun '
+        + 'rangaistusretket eivät riittäneet, Italia teki liikkeen johtajan kanssa '
+        + 'sopimuksen, joka luovutti sille Nugaalin laakson — ja vahvisti sitä '
+        + 'entisestään.',
+      teksti: 'Dervissiliike oli aseellinen vastarintaliike ja valtio, jonka päämaja oli '
+        + 'Talehissa vuosina 1895–1920. Sitä johti runoilija ja uskonnollinen johtaja '
+        + 'Mohammed Abdullah Hassan, joka vaati itsenäisyyttä brittiläisistä ja '
+        + 'italialaisista siirtomaaisännistä. Hassan perusti Khususi-nimisen hallitsevan '
+        + 'neuvoston, johon kuului sufilaisia heimovanhimpia, ja otti mukaan osmanien '
+        + 'lähettämän neuvonantajan.'
+        + '\n\nVuosina 1899–1905 liike keräsi noin 25 000 nuorta eri klaaneista, hankki '
+        + 'tuliaseita ja hyökkäsi Jigjigan etiopialaisvaruskuntaan. Britannian '
+        + 'siirtomaahallinto julistettiin viholliseksi, ja britit etsivät liittolaisia '
+        + 'kilpailevista somaliklaaneista ja antoivat näille aseita ja varusteita. '
+        + 'Rangaistusretket dervissien tukikohtiin alkoivat 1904.'
+        + '\n\nDervissit kärsivät tappioita, hajaantuivat pienempiin osastoihin ja '
+        + 'siirtyivät sissisotaan. Vuonna 1905 Hassan allekirjoitti Illigin sopimuksen ja '
+        + 'siirtyi kannattajineen Italian hallitsemalle alueelle: sopimuksessa '
+        + 'dervisseille luovutettiin Nugaalin laakso, ja Hassan sai italialaisen '
+        + 'avustuksen ja suojatun itsehallinnollisen aseman. Se vahvisti liikettä.'
+        + '\n\nVuodesta 1908 dervissit palasivat Britannian Somalimaahan, ja britit '
+        + 'vetäytyivät sisämaasta rannikolle. Ensimmäisen maailmansodan aikana osmanit ja '
+        + 'saksalaiset tunnustivat liikkeen liittolaisekseen. Vuonna 1920 Britannia '
+        + 'hyökkäsi Talehin linnoituksiin yhdistetyllä maa- ja ilmavoimien iskulla; Hassan '
+        + 'pääsi pakoon mutta kuoli 1921 malariaan tai influenssaan, ja liike hajosi. Se '
+        + 'oli siirtomaa-ajan pitkäkestoisimpia ja verisimpiä liikkeitä '
+        + 'Saharan eteläpuolisessa Afrikassa.',
+      lahde: 'en-Wikipedia "Dervish movement (Somali)", johdanto-osa. '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Illigin sopimus 1905 antoi dervisseille?',
+        vaihtoehdot: [
+          'Nugaalin laakson hallinnan',
+          'Berberan sataman',
+          'Aseita Britannialta',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  /* ══ ERÄ M16 6.9.2026: TUNISIA, SYYRIA, JEMEN, SAINT HELENA ══════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M16 tuo kaksi skandaalia kuhunkin neljään maahan — kahdeksan
+   * uutta. Kaikki ovat kuvattomia, ja jokaisen lähderivi nimeää
+   * en-Wikipedian artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+   *
+   * AIHEET OVAT 1800- JA 1900-LUVUN HISTORIAA. Syyriassa ja Jemenissä
+   * tämä on sitova rajaus (docs/aasia-tyoaineisto/spec-asia.md ja M3:n
+   * Myanmar-linja): käynnissä olevaa selkkausta ei kerrota, vaan
+   * kortit ovat siirtomaa-ajan ja arkeologian tapauksia.
+   *
+   * PAIKAT ON MITATTU. Yksikään merkki ei ole pelikaupungin kohdalla
+   * (KAUPUNGIN_KOHDALLA_SADE 7 lautayksikköä, js/fokuskohteet.js):
+   * lähin on Bardon sopimus 63,2 lautayksikön päässä Karthagosta.
+   * Saint Helenan kaksi merkkiä ovat saaren oikealla paikalla, ja
+   * laudan St. Helena -kaupunki on tyylitellysti 82 yksikön päässä
+   * koillisessa.
+   *
+   * TELL HALAF JA DURA-EUROPOS OVAT SKANDAALEJA EIVÄTKÄ KOHTEITA.
+   * Kummankin tarina on kaivauksen ja löytöjen tarina, ei paikan
+   * oman historian; kohteina ne olisivat myös kaksi merkkiä lisää
+   * samaan Eufratin mutkaan (js/packs/maastokohteet-syr.js Mari).
+   *
+   * LONGWOOD HOUSE ON SKANDAALI, KOSKA SAARELLE EI MAHDU ENEMPÄÄ
+   * MERKKEJÄ. Perustelu on maastokohteet-shn.js:n otsikkokommentissa:
+   * Saint Helena mahtuu neljän lautayksikön ruutuun, ja viisi kohdetta
+   * plus nämä kaksi skandaalia on suurin joukko, jolla nimiöt eivät
+   * mene päällekkäin.
+   * ══════════════════════════════════════════════════════════════════ */
+  TUN: [
+    /*
+     * Ksar Saïdin palatsi Le Bardossa Tunisin laidalla.
+     * Lähde: en.wikipedia.org: Treaty of Bardo
+     */
+    {
+      id: 'bardon-sopimus',
+      otsikko: 'Rajaretki, joka maksoi maan itsenäisyyden',
+      nimio: 'Bardon sopimus',
+      vuosi: '1881',
+      paikka: 'Ksar Saïdin palatsi, Le Bardo',
+      lat: 36.80944, lon: 10.13444,
+      kortti: 'Tunisian bey oli velkaantunut eurooppalaisille pankeille, ja Ranska tarvitsi '
+        + 'tekosyyn. Sen antoi rajaseudun heimon retki Algerian puolelle keväällä 1881. '
+        + 'Kolmekymmentäkuusituhatta miestä marssi maahan, ja toukokuussa beyn palatsissa '
+        + 'allekirjoitettiin sopimus, joka teki Tunisiasta Ranskan protektoraatin.',
+      teksti: 'Bardon sopimus eli Ksar Saïdin sopimus perusti Ranskan protektoraatin '
+        + 'Tunisiaan, ja järjestely kesti toiseen maailmansotaan asti. Sopimus '
+        + 'allekirjoitettiin 12. toukokuuta 1881 Ranskan edustajien ja Tunisian beyn '
+        + 'Muhammed as-Sadiqin välillä, ja se asetti maan ranskalaisen '
+        + 'yleisresidentin valvontaan.'
+        + '\n\nNimi tulee hovin asuinpaikasta: Ksar Saïdin palatsista Le Bardossa, jonne '
+        + 'husainidien beyt olivat asettuneet 1700-luvun alussa. Sopimuksen sanamuoto puhui '
+        + 'järjestyksen palauttamisesta ja beyn suojelemisesta sisäistä vastarintaa vastaan, '
+        + 'ja sillä perusteella Ranska sai hallita tiettyjä alueita ja vastata Tunisian '
+        + 'ulkopolitiikasta.'
+        + '\n\nTaustalla oli tunisialaisen khroumir-heimon huhtikuinen retki Algerian '
+        + 'puolelle, joka kelpasi tekosyyksi hyökkäykselle. Ulkoministeri Jules Ferry sai '
+        + 'lähetettyä noin 36 000 miehen retkikunnan, eikä vastarintaa juuri ollut sen '
+        + 'paremmin heimon kuin beynkään puolelta. Sopimuksen jälkeen joukot vedettiin pois '
+        + 'ja miehityksen sanottiin olleen väliaikainen.'
+        + '\n\nLoppu tuli kahdessa vaiheessa. La Marsan sopimukset 8. kesäkuuta 1883 antoivat '
+        + 'Ranskalle oikeuden puuttua myös Tunisian sisäisiin asioihin, ja yleisresidentin '
+        + 'vallan alla maa menetti käytännössä itsemääräämisoikeutensa sekä ulko- että '
+        + 'sisäasioissa.',
+      lahde: 'en-Wikipedia "Treaty of Bardo", johdanto sekä osiot "Name" ja "Background". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä toimi tekosyynä Ranskan hyökkäykselle?',
+        vaihtoehdot: [
+          'Beyn kieltäytyminen maksamasta velkojaan',
+          'Heimoretki Algerian puolelle',
+          'Ranskalaisen konsulin murha',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Chott el Djerid, Tunisian suurin suola-allas.
+     * Lähde: en.wikipedia.org: Sahara Sea
+     */
+    {
+      id: 'saharan-meri',
+      otsikko: 'Meri, jota ei koskaan tullut',
+      nimio: 'Saharan meri',
+      vuosi: '1877–1882',
+      paikka: 'Chott el Djerid, Etelä-Tunisia',
+      lat: 33.7, lon: 8.43,
+      kortti: 'Suezin kanavan mies uskoi, että Saharaan voisi laskea meren. Suunnitelma oli '
+        + 'kaivaa kanava Gabèsinlahdelta Tunisian suola-altaille ja päästää Välimeri sisään. '
+        + 'Sisämeren piti tuoda sadetta autiomaahan ja parantaa säätä Euroopassa asti.',
+      teksti: 'Saharan meri oli nimitys hankkeelle, jossa Saharan merenpinnan alapuolelle '
+        + 'jäävät sisäaltaat olisi täytetty Atlantin tai Välimeren vedellä. Tavoitteena oli '
+        + 'sisämeri, joka toisi kosteaa ilmaa, sadetta ja maanviljelystä syvälle '
+        + 'autiomaahan. Ajatus nousi esiin useaan otteeseen 1800-luvun lopulla ja 1900-luvun '
+        + 'alussa, ja sitä pohdittiin Marokon, Algerian, Tunisian ja Egyptin osalta.'
+        + '\n\nEnsimmäisenä ehdotuksen teki vuonna 1877 skotlantilainen yrittäjä ja '
+        + 'orjuudenvastustaja Donald Mackenzie, joka aikoi kaivaa kanavan Juby-niemen '
+        + 'pohjoispuolisilta laguuneilta El Djoufin tasangolle. Hän uskoi tasangon olevan '
+        + 'jopa 61 metriä merenpinnan alapuolella — eikä ollut koskaan käynyt alueella.'
+        + '\n\nRanskalainen maantieteilijä François Élie Roudaire ja Suezin kanavasta tunnettu '
+        + 'diplomaatti Ferdinand de Lesseps esittivät 1878 samaa Tunisiaan: kanava '
+        + 'Gabèsinlahdelta Chott el Fejejiin päästäisi meren valumaan altaisiin. Hinnaksi '
+        + 'arvioitiin 30 miljoonaa dollaria. Kaikki eivät innostuneet; Alexander William '
+        + 'Mitchinson varoitti, että laajojen alueiden tulvittaminen loisi tautien vaivaamia '
+        + 'soita.'
+        + '\n\nRanskan hallitus hylkäsi hankkeen ja lopetti rahoituksen, kun maastomittaukset '
+        + 'osoittivat, ettei suuri osa alueista ollutkaan merenpinnan alapuolella. Ajatus jäi '
+        + 'silti elämään kirjallisuudessa: Jules Vernen viimeinen romaani viittaa suoraan '
+        + 'Roudairen ja de Lessepsin suunnitelmaan.',
+      lahde: 'en-Wikipedia "Sahara Sea", johdanto sekä osiot "19th century" ja "Appearances '
+        + 'in literature". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi hanke lopulta haudattiin?',
+        vaihtoehdot: [
+          'Rahoittajat vetäytyivät sodan takia',
+          'Tunisian bey kielsi kaivamisen',
+          'Mittaukset osoittivat maan olevan merenpinnan yläpuolella',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  SYR: [
+    /*
+     * Tell Halaf Khaburin laaksossa Koillis-Syyriassa.
+     * Lähde: en.wikipedia.org: Tell Halaf
+     */
+    {
+      id: 'tell-halafin-veistokset',
+      otsikko: 'Kivijumalat, jotka palasivat sirpaleina',
+      nimio: 'Tell Halaf',
+      vuosi: '1899–1943',
+      paikka: 'Tell Halaf, Khaburin laakso',
+      lat: 36.8266, lon: 40.0396,
+      kortti: 'Saksalainen diplomaatti etsi Bagdadin radalle reittiä, kun kyläläiset kertoivat '
+        + 'hänelle hiekkaan haudatuista kivijumalista. Kolmessa päivässä maasta nousi '
+        + 'patsaita. Niistä tuli hänen elämäntyönsä ja oma museo Berliiniin — ja marraskuussa '
+        + '1943 tuhkaa ja sirpaleita.',
+      teksti: 'Marraskuun 19. päivänä 1899 Max von Oppenheim oli matkalla Kairosta '
+        + 'Pohjois-Mesopotamian halki Deutsche Bankin toimeksiannosta etsimässä reittiä '
+        + 'Bagdadin radalle. Paikallisten kertomukset veivät hänet Tell Halafille, ja '
+        + 'kolmessa päivässä kaivettiin esiin useita merkittäviä veistoksia, muun muassa '
+        + 'niin kutsuttu istuva jumalatar, sekä läntisen palatsin sisäänkäynti. Kaivauslupaa '
+        + 'hänellä ei ollut, joten hän hautasi patsaat takaisin ja jatkoi matkaa.'
+        + '\n\nOppenheim erosi diplomaattikunnasta lokakuussa 1910 ja aloitti kaivaukset '
+        + '5. elokuuta 1911 viiden arkeologin ryhmällä. Saksasta tuotiin kalustoa pientä '
+        + 'höyryveturia myöten, ja noin 750 000 markan kustannukset maksettiin hänen isänsä '
+        + 'pankkiiriomaisuudesta. Esiin tulivat kuningas Kaparan läntisen palatsin patsaat ja '
+        + 'reliefit sekä uudenlaista maalattua keramiikkaa, jonka mukaan koko Halafin '
+        + 'kulttuuri on nimetty.'
+        + '\n\nLöydöt jaettiin ranskalaisen mandaattihallinnon kanssa: noin kaksi kolmasosaa '
+        + 'vietiin Berliiniin ja 35 kappaletta jäi Aleppon museon kokoelman ytimeksi. '
+        + 'Pergamonmuseo ei suostunut Oppenheimin taloudellisiin ehtoihin, joten hän avasi '
+        + 'heinäkuussa 1930 oman Tell Halaf -museonsa Berliinin Charlottenburgiin.'
+        + '\n\nMarraskuussa 1943 museoon osui fosforipommi. Rakennus paloi kokonaan, puu- ja '
+        + 'kalkkikiviesineet tuhoutuivat, ja basalttiveistokset halkesivat sammutusveden '
+        + 'lämpöshokissa kymmeniksi kappaleiksi. Sirpaleet makasivat Pergamonmuseon '
+        + 'kellareissa vuosikymmeniä, ja vasta vuosina 2001–2010 yli kolmekymmentä veistosta '
+        + 'koottiin uudelleen noin 27 000 palasta.',
+      lahde: 'en-Wikipedia "Tell Halaf", osiot "Discovery", "Excavations by Max von '
+        + 'Oppenheim", "Tell Halaf Museum, Berlin" ja "Reconstruction of the artefacts". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Oppenheim oli alun perin alueella?',
+        vaihtoehdot: [
+          'Hän etsi reittiä Bagdadin rautatielle',
+          'Hän johti Pergamonmuseon retkikuntaa',
+          'Hän oli Osmanivaltakunnan muinaismuistojen tarkastaja',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Dura-Europoksen rauniokukkula Eufratin yläpuolella.
+     * Lähde: en.wikipedia.org: Dura-Europos
+     */
+    {
+      id: 'dura-europoksen-juoksuhauta',
+      otsikko: 'Juoksuhauta, joka osui maalaukseen',
+      nimio: 'Dura-Europos',
+      vuosi: '1920–1937',
+      paikka: 'Dura-Europos, Eufrat',
+      lat: 34.747, lon: 40.730,
+      kortti: 'Ensimmäisen maailmansodan jälkimainingeissa brittijoukot kaivautuivat asemiin '
+        + 'Eufratin yläpuoliselle jyrkänteelle. Lapio osui seinään, jonka maalaukset olivat '
+        + 'kuin eiliseltä. Kaupunki oli maannut hiekan alla lähes 1 700 vuotta.',
+      teksti: 'Dura-Europos oli Seleukos I Nikatorin noin 300 eaa. perustama rajakaupunki '
+        + '90 metriä Eufratin yläpuolella olevalla jyrkänteellä. Sasanidit valloittivat sen '
+        + 'piirityksen jälkeen vuosina 256–257 jaa., väestö vietiin pois, ja kaupunki peittyi '
+        + 'hiekkaan ja mutaan. Koska paikalle ei koskaan rakennettu mitään uutta, sitä on '
+        + 'kutsuttu autiomaan Pompejiksi.'
+        + '\n\nPaikan tunnisti uudelleen amerikkalainen Wolfe-retkikunta 1885, kun John Henry '
+        + 'Haynes valokuvasi Palmyran portin. Sodan ja arabikapinan jälkimainingeissa '
+        + 'brittijoukot kapteeni Murphyn johdolla tutkivat raunioita, ja 30. maaliskuuta 1920 '
+        + 'juoksuhautaa kaivanut sotilas paljasti Belin temppelistä hehkuvan tuoreet '
+        + 'seinämaalaukset. Bagdadissa ollut arkeologi James Henry Breasted hälytettiin '
+        + 'paikalle.'
+        + '\n\nSuuret kaivaukset tehtiin 1920- ja 1930-luvuilla ranskalais-amerikkalaisin '
+        + 'voimin. Franz Cumont julkaisi ensimmäiset tulokset 1922–1923 ja tunnisti paikan '
+        + 'Dura-Europokseksi, ja Clark Hopkinsin ja Michael Rostovtzeffin retkikunnat '
+        + 'jatkoivat vuoteen 1937, jolloin rahat loppuivat — vain osa kaivauksista ehdittiin '
+        + 'julkaista.'
+        + '\n\nMerkittävin löytö tehtiin 1932, kun Hopkins kaivoi esiin synagogan läntisen '
+        + 'muurin vierestä. Se oli säilynyt siksi, että se oli täytetty maalla kaupungin '
+        + 'puolustusta vahvistettaessa vuonna 256. Kokoushuoneen seinillä on ihmisiä ja '
+        + 'eläimiä esittävä maalaussarja, laajin antiikista säilynyt, ja löytö oli '
+        + 'uskonnonhistoriallinen yllätys. Maalaukset ovat Damaskoksessa.',
+      lahde: 'en-Wikipedia "Dura-Europos", johdanto sekä osiot "Overview" (Archaeology) ja '
+        + '"Synagogue". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi synagogan maalaukset säilyivät niin hyvin?',
+        vaihtoehdot: [
+          'Ne oli peitetty rappauksella',
+          'Rakennus oli täytetty maalla puolustusta varten',
+          'Ne maalattiin uudelleen bysanttilaisaikana',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  YEM: [
+    /*
+     * Perimin eli Mayyunin saari Bab el-Mandebin salmessa.
+     * Lähde: en.wikipedia.org: Perim
+     */
+    {
+      id: 'perimin-majakka',
+      otsikko: 'Majakka, joka oli oikeasti lippu',
+      nimio: 'Perim',
+      vuosi: '1857',
+      paikka: 'Perimin saari, Bab el-Mandeb',
+      lat: 12.66, lon: 43.42,
+      kortti: 'Punaisenmeren portilla on paljas saari, jolla ei ole vettä. Kun Britannia kuuli '
+        + 'huhun, että ranskalaiset olisivat lähettämässä sinne sotalaivan, se lähetti '
+        + 'Adenista maihinnousuosaston — ja ilmoitti rakentavansa majakan.',
+      teksti: 'Perim eli arabiaksi Mayyun on jemeniläinen tulivuorisaari Bab el-Mandebin '
+        + 'salmessa Punaisenmeren eteläisellä sisäänkäynnillä, ja se jakaa salmen kahdeksi '
+        + 'väyläksi. Vaikka saarella on suojaisa luonnonsatama ja ratkaiseva sijainti, '
+        + 'kirjoitettu historia ohitti sen 1800-luvun puoliväliin asti: paljaalla ja '
+        + 'vedettömällä saarella oli vaikea elää, ja siellä kävivät vain kalastajat ja '
+        + 'helmenkalastajat kausittain.'
+        + '\n\nVuonna 1856 pääministeri Palmerston piti ranskalaisten tukemaa Suezin kanavaa '
+        + 'keinona kasvattaa Ranskan valtaa Britannian kustannuksella ja hyväksyi Perimin '
+        + 'miehityksen yhdeksi vastatoimeksi. Bombayn kuvernööri Lord Elphinstone kirjoitti '
+        + 'joulukuussa 1856 Adenin residentille, että saari oli määrä ottaa haltuun ja sinne '
+        + 'oli rakennettava majakka; koska saari oli otettu Itä-Intian kauppakomppanian nimiin '
+        + 'jo 1799, muodollisuuksia ei katsottu tarvittavan.'
+        + '\n\nPäätöstä saattoi jouduttaa perätön tieto siitä, että ranskalaiset olisivat '
+        + 'lähettäneet Réunionilta fregatin liittämään saaren itselleen. Julkilausuttu syy oli '
+        + 'kuitenkin majakka, ja pitkän kiistelyn jälkeen yksitoistametrinen majakka vihittiin '
+        + '1. huhtikuuta 1861. Vaarallisilla vesillä hukkui silti yhä laivoja.'
+        + '\n\nVuonna 1881 lontoolainen Hinton Spalding sai luvan perustaa saarelle '
+        + 'hiiliaseman, ja Perim Coal Company toimitti ensimmäisen lastinsa 29. elokuuta 1883. '
+        + 'Perim ja Aden kilpailivat Punaisenmeren hiilikaupasta 1930-luvun puoliväliin asti, '
+        + 'ja vuosina 1923–1927 Perimissä lastattiin enemmän hiiltä kuin Adenissa. Öljy '
+        + 'syrjäytti hiilen, yhtiö meni konkurssiin 1935, ja saari vaipui takaisin '
+        + 'merkityksettömyyteen.',
+      lahde: 'en-Wikipedia "Perim", johdanto sekä osiot "History" ja "Perim under British '
+        + 'rule". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä oli miehityksen julkilausuttu syy?',
+        vaihtoehdot: [
+          'Merirosvouden torjunta',
+          'Helmenkalastuksen suojelu',
+          'Majakan rakentaminen salmeen',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Mokan satamakaupunki Punaisenmeren rannalla.
+     * Lähde: en.wikipedia.org: Mocha, Yemen; History of coffee
+     */
+    {
+      id: 'mokan-kahvipensaat',
+      otsikko: 'Pensaat, jotka lähtivät laivaan',
+      nimio: 'Mokka',
+      vuosi: '1616–1719',
+      paikka: 'Mokan satama, Punainenmeri',
+      lat: 13.320278, lon: 43.25,
+      kortti: 'Yli sadan vuoden ajan lähes kaikki maailman kahvi kulki yhden jemeniläisen '
+        + 'sataman kautta, ja elävien pensaiden vienti oli tarkoin vartioitua. Vuonna 1616 '
+        + 'hollantilainen kauppias sai muutaman niistä laivaan. Sata vuotta myöhemmin Mokan '
+        + 'nimi oli jäljellä enää juoman nimessä.',
+      teksti: 'Mokka oli Punaisenmeren rannikon satamakaupunki ja Sanaan pääsatama, kunnes '
+        + 'Aden ja al-Hudayda syrjäyttivät sen 1800-luvulla. Kahvi ei kasvanut Mokassa vaan '
+        + 'tuotiin sinne kameleilla Jemenin ylängöiltä ja Etiopiasta; sataman kautta se '
+        + 'lähetettiin maailmalle, ja 1600-luvun loppuun asti Jemen oli maailman tärkein '
+        + 'kahvin tuottaja ja viejä.'
+        + '\n\nKilpajuoksun eläviin kahvipuihin voitti hollantilainen kauppias Pieter van den '
+        + 'Broecke, joka sai vuonna 1616 haltuunsa tarkoin vartioituja pensaita Mokasta ja '
+        + 'vei ne Amsterdamin kasvitieteelliseen puutarhaan. Tapaus sai aikanaan vähän '
+        + 'huomiota, mutta se muutti kahvin historian.'
+        + '\n\nAmsterdamin kasvihuoneissa pensaat menestyivät. Kaupungin pormestari Nicolaes '
+        + 'Witsen kehotti Batavian kuvernööriä Joan van Hoornia hankkimaan taimia Mokasta '
+        + 'Alankomaiden Itä-Intiaan, ja ensimmäisen lähetyksen siemenistä kasvatettu istutus '
+        + 'onnistui niin hyvin, että Hollannin Itä-Intian komppania pystyi vuonna 1719 '
+        + 'tyydyttämään koko Euroopan kysynnän jaavalaisella kahvilla. Pian viljelmiä oli '
+        + 'myös Ceylonilla ja Sumatralla.'
+        + '\n\nMokan asema mureni. Kaupungin kahvikauppa siirtyi 1800-luvulla brittien '
+        + 'hallitsemaan Adeniin, ja Etiopiasta tuotu kahvi myytiin kolmasosalla arabialaisen '
+        + 'hinnasta. Nykyään Mokka ei ole enää merkittävä satama ja paikallinen talous elää '
+        + 'kalastuksesta, mutta kaupungin nimi jäi elämään mokkakahvissa ja mokkapannussa.',
+      lahde: 'en-Wikipedia "Mocha, Yemen", johdanto ja osio "History", sekä "History of '
+        + 'coffee", osiot "Spread of coffee cultivation" ja "Dutch". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuka vei ensimmäiset elävät kahvipensaat pois Mokasta?',
+        vaihtoehdot: [
+          'Hollantilainen kauppias Pieter van den Broecke',
+          'Ranskalainen upseeri Gabriel de Clieu',
+          'Portugalilainen amiraali Afonso de Albuquerque',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  SHN: [
+    /*
+     * Longwood House Saint Helenan sisäylängöllä.
+     * Lähde: en.wikipedia.org: Longwood House; Saint Helena
+     */
+    {
+      id: 'longwoodin-vanki',
+      otsikko: 'Talo, joka ei kelvannut kenellekään',
+      nimio: 'Longwood House',
+      vuosi: '1815–1858',
+      paikka: 'Longwood House, Saint Helena',
+      lat: -15.95004, lon: -5.68305,
+      kortti: 'Britannia valitsi 1815 Euroopan tarkimmin vartioidun vangin asuinpaikaksi '
+        + 'entisen maatilan keskellä Atlanttia. Talo oli kostea ja tuulinen, ja kuvernööri '
+        + 'kieltäytyi siirtämästä vankia parempaan. Kuusi vuotta myöhemmin vanki kuoli — ja '
+        + 'lopulta talon osti Ranska.',
+      teksti: 'Vuonna 1815 Britannian hallitus valitsi Saint Helenan Napoleon Bonaparten '
+        + 'karkotuspaikaksi Waterloon tappion ja vallasta luopumisen jälkeen. Hänet tuotiin '
+        + 'saarelle lokakuussa 1815, ja hän asui Balcombe-perheen pihapaviljongissa The '
+        + 'Briarsissa siihen asti, kunnes Longwood House valmistui joulukuussa 1815.'
+        + '\n\nLongwood oli alun perin Itä-Intian kauppakomppanian maatila ja sen jälkeen '
+        + 'varakuvernöörin maaseutuasunto, ja se muutettiin Napoleonin käyttöön 1815. '
+        + 'Britannian hallitus myönsi lopulta, ettei talo kelvannut entiselle keisarille ja '
+        + 'hänen seurueelleen, ja rakennutti lähelle uuden talon — jota hän ei koskaan '
+        + 'ehtinyt ottaa käyttöön.'
+        + '\n\nHelmikuussa 1818 kuvernööri Hudson Lowe ehdotti Lord Bathurstille, että vanki '
+        + 'siirrettäisiin vapautuneeseen Rosemary Halliin saaren suojaisemmalle ja '
+        + 'varjoisammalle puolelle, niin kuin Napoleon itse toivoi. Kenraali Gourgaud’n '
+        + 'Lontoossa tekemät paljastukset saivat Bathurstin kuitenkin pitämään Longwoodia '
+        + 'turvallisempana, koska sieltä oli vaikeampi paeta. Uuden talon rakentaminen alkoi '
+        + 'vasta lokakuussa 1818, kolme vuotta Napoleonin saapumisen jälkeen. Hän kuoli '
+        + 'Longwoodissa 5. toukokuuta 1821.'
+        + '\n\nSen jälkeen talo palautui kauppakomppanialle ja edelleen kruunulle, ja sitä '
+        + 'käytettiin maatalouteen. Tiedot rappiosta kantautuivat Napoleon III:lle, joka '
+        + 'neuvotteli Britannian kanssa vuodesta 1854, ja vuonna 1858 Ranskan valtio osti '
+        + 'Longwoodin ja hautalaakson 7 100 punnalla. Ne ovat yhä Ranskan omaisuutta.',
+      lahde: 'en-Wikipedia "Longwood House", johdanto sekä osiot "History" ja "After '
+        + 'Napoleon\'s death", ja "Saint Helena", osio "British rule (1815–1821) and '
+        + 'Napoleon\'s exile". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Napoleonia ei siirretty parempaan taloon?',
+        vaihtoehdot: [
+          'Hän kieltäytyi muuttamasta',
+          'Longwoodista pakenemista pidettiin vaikeampana',
+          'Uusi talo paloi ennen valmistumista',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Deadwoodin tasanko Longwoodin pohjoispuolella. Koordinaatti on
+     * likiarvo: lähde ei anna leirille omaa koordinaattia, ja artikkelin
+     * mukaan leireistä ei ole jäljellä jälkeäkään.
+     * Lähde: en.wikipedia.org: Saint Helena; High Knoll Fort
+     */
+    {
+      id: 'deadwoodin-leiri',
+      otsikko: 'Kuusituhatta vankia keskellä Atlanttia',
+      nimio: 'Deadwood',
+      vuosi: '1900–1902',
+      paikka: 'Deadwoodin tasanko, Saint Helena',
+      lat: -15.936, lon: -5.674,
+      kortti: 'Kun Suezin kanava vei laivat pohjoiseen, saaren talous kuihtui. Sitten '
+        + 'saarelle tuotiin yli kuusituhatta buurisotavankia, ja väkiluku nousi kaikkien '
+        + 'aikojen ennätykseen. Kymmenen vuotta myöhemmin väkeä oli enää runsas kolmasosa '
+        + 'siitä, eikä leireistä ollut jäljellä mitään.',
+      teksti: 'Saint Helenan 1800-luvun vauraus perustui siihen, että purjelaivat Euroopan ja '
+        + 'Aasian välillä tarvitsivat välipysähdyksen. Se loppui, kun Suezin kanava siirsi '
+        + 'kauppareitit pohjoiseen vuonna 1869: satamassa käyneiden laivojen määrä putosi '
+        + '1 100:sta vuonna 1855 vain 288:aan vuonna 1889.'
+        + '\n\nVuoden 1899 loppuun mennessä saari oli yhdistetty Lontooseen merenalaisella '
+        + 'kaapelilla, ja lennätin toi uutiset perille tunneissa. Vuosina 1900 ja 1901 '
+        + 'saarella pidettiin yli 6 000 buurisotavankia toisen buurisodan aikana. Leirit '
+        + 'olivat Deadwoodin tasangolla ja Broadbottomissa, ja vankeja pidettiin myös '
+        + 'Jamestownissa ja High Knoll Fortissa.'
+        + '\n\nTunnetuimpia vankeja olivat kenraali Piet Cronjé ja hänen vaimonsa, jotka '
+        + 'joutuivat vangeiksi Paardebergin taistelun jälkeen. Vankien ja heidän '
+        + 'vartijoidensa myötä saaren väkiluku nousi kaikkien aikojen huippuunsa, 9 850 '
+        + 'henkeen vuonna 1901. Vuonna 2019 julkaistun selvityksen mukaan leireistä ei ole '
+        + 'jäljellä jälkeäkään, mutta buurien hautausmaa on yhä koskettava paikka.'
+        + '\n\nNousu jäi lyhyeksi. Vuoteen 1911 mennessä asukkaita oli enää 3 520, ja vuonna '
+        + '1906 Britannian hallitus veti varuskunnan pois saarelta; sotilaiden kulutuksen '
+        + 'loppuminen vei taloudelta pohjan. Tilalle yritettiin uusiseelantilaisesta '
+        + 'pellavasta tehtyä kuituteollisuutta, joka elvytettiin 1907 ja tuotti hyvin '
+        + 'ensimmäisen maailmansodan aikana.',
+      lahde: 'en-Wikipedia "Saint Helena", osio "Crown colony (1834–1981)", ja "High Knoll '
+        + 'Fort", artikkelin runko. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä oli saaren väkiluvun ennätys vuonna 1901?',
+        vaihtoehdot: [
+          'Noin 3 500 henkeä',
+          'Noin 6 000 henkeä',
+          'Noin 9 850 henkeä',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  /* ================================================================
+   * ══ ERÄ M17, AMERIKAT 6.9.2026 ══════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M17 täydensi Amerikat (USA, MEX, ECU, PER, PAN). Yhdelläkään
+   * viidestä ei ollut skandaalia, joten tässä ovat kaikkien kymmenen
+   * kiintiöt, kaksi maata kohti. Kuvaton erä kuten aiemmatkin: kortti
+   * kantaa tekstin ja lähteen. Faktat en-Wikipediasta 6.9.2026, ja
+   * jokainen lähderivi nimeää artikkelin osan.
+   * ============================================================== */
+  USA: [
+    /*
+     * Teapot Domen öljykenttä, Natrona County, Wyoming.
+     * Lähde: en-Wikipedia "Teapot Dome scandal"
+     */
+    {
+      id: 'teapot-dome',
+      otsikko: 'Teapot Dome — laivaston öljy vuokrattiin lahjuksilla',
+      nimio: 'Teapot Dome 1922',
+      vuosi: '1922',
+      paikka: 'Teapot Domen öljykenttä, Wyoming',
+      lat: 43.29, lon: -106.24,
+      kortti: 'Laivasto oli siirtymässä hiilestä öljyyn, ja presidentti Taft oli varannut '
+        + 'sitä varten omat öljykentät. Sisäasiainministeri vuokrasi ne yhtiöille ilman '
+        + 'tarjouskilpailua ja rikastui matkalla. Hän oli ensimmäinen yhdysvaltalainen '
+        + 'ministeri, joka joutui vankilaan.',
+      teksti: 'Yhdysvaltain laivasto oli 1900-luvun alussa vaihtamassa hiiltä öljyyn, ja '
+        + 'presidentti William Howard Taft oli siksi varannut osan valtion öljyalueista '
+        + 'laivaston omiksi varannoiksi.'
+        + '\n\nVuonna 1921 presidentti Warren G. Hardingin määräyksellä Wyomingin Teapot '
+        + 'Domen sekä Kalifornian Elk Hillsin ja Buena Vistan kentät siirrettiin '
+        + 'laivastoministeriöltä sisäasiainministeriölle. Seuraavana vuonna '
+        + 'sisäasiainministeri Albert B. Fall vuokrasi Teapot Domen Harry F. Sinclairille ja '
+        + 'Elk Hillsin Edward L. Dohenylle ilman tarjouskilpailua.'
+        + '\n\nEhdot olivat yhtiöille erittäin edulliset, ja salaiset järjestelyt tekivät '
+        + 'Fallista rikkaan miehen: hän sai Dohenyltä marraskuussa 1921 sadantuhannen '
+        + 'dollarin korottoman lainan ja muita lahjoja yhteensä noin 404 000 dollarin '
+        + 'edestä. Senaattori Thomas J. Walshin johtama tutkinta oli jo hiipumassa, kun '
+        + 'Walsh löysi juuri sen lainan, jota Fall ei ollut osannut peittää.'
+        + '\n\nKorkein oikeus totesi 1927 vuokrasopimukset korruptiolla hankituiksi ja '
+        + 'palautti kentät laivastolle. Fall tuomittiin 1929 lahjusten ottamisesta, mutta '
+        + 'Doheny vapautettiin 1930 niiden antamisesta; Sinclair istui puoli vuotta '
+        + 'valamiehistön painostamisesta. Ennen Watergatea Teapot Domea pidettiin '
+        + 'Yhdysvaltain politiikan suurimpana skandaalina.',
+      lahde: 'en-Wikipedia "Teapot Dome scandal", johdanto-osa ja osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä paljasti Albert Fallin lopulta?',
+        vaihtoehdot: [
+          'Dohenyn koroton satatuhannen dollarin laina',
+          'Laivaston oma tarkastus öljykentällä',
+          'Sinclairin kirjeenvaihto Wyomingin kuvernöörin kanssa',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Kongressitalo, Washington.
+     * Lähde: en-Wikipedia "Crédit Mobilier scandal"
+     */
+    {
+      id: 'credit-mobilier',
+      otsikko: 'Crédit Mobilier — rata laskutti itseltään liikaa',
+      nimio: 'Crédit Mobilier',
+      vuosi: '1872–1873',
+      paikka: 'Kongressitalo, Washington',
+      lat: 38.8897, lon: -77.0089,
+      kortti: 'Union Pacificin johtajat perustivat oman rakennusyhtiön ja laskuttivat sillä '
+        + 'radasta lähes kaksinkertaisen hinnan. Ylimääräinen raha ja alihintainen osake '
+        + 'kiersivät Washingtoniin. Kun The Sun kertoi asiasta kesken vaalikampanjan, '
+        + 'tutkittavana oli kolmetoista kansanedustajaa.',
+      teksti: 'Kongressi valtuutti Union Pacific -rautatien 1864 ja lupasi mannerten '
+        + 'välisen radan rakentamiseen sata miljoonaa dollaria pääomaa, lainaa 16 000–48 000 '
+        + 'dollaria rautatiekilometriä kohti ja kahdenkymmenen miljoonan eekkerin maat.'
+        + '\n\nRadan johtajat perustivat rakentamista varten oman yhtiön, Crédit Mobilier of '
+        + 'Americanin. Rata maksoi rakentaa 50 miljoonaa dollaria, mutta Crédit Mobilier '
+        + 'laskutti siitä 94 miljoonaa, ja johtajat pitivät erotuksen — 44 miljoonaa — '
+        + 'itsellään.'
+        + '\n\nOsa ylimääräisestä rahasta ja yhdeksän miljoonan dollarin edestä alihintaista '
+        + 'osaketta käytettiin poliitikkojen lahjomiseen. Vuonna 1867 yhtiön johtoon nousi '
+        + 'kansanedustaja Oakes Ames, joka jakoi osakkeita kollegoilleen nimellishintaan, '
+        + 'vaikka markkinahinta oli paljon korkeampi. Riita liikekumppani Henry Simpson '
+        + 'McCombin kanssa johti siihen, että kirjeet vuodettiin The New York Sunille, ja '
+        + 'lehti julkaisi jutun 4. syyskuuta 1872 kesken Ulysses S. Grantin vaalikampanjan.'
+        + '\n\nKongressi tutki kolmeatoista jäsentään ja päätyi moittimaan Oakes Amesia ja '
+        + 'James Brooksia. Oikeusministeriön tutkinnassa selvisi, että osakkeita oli annettu '
+        + 'yli kolmellekymmenelle poliitikolle molemmista puolueista, muun muassa James A. '
+        + 'Garfieldille. Ketään ei asetettu syytteeseen, ja Garfield valittiin presidentiksi '
+        + '1880.',
+      lahde: 'en-Wikipedia "Crédit Mobilier scandal", johdanto-osa sekä osiot "Background", '
+        + '"The scandal" ja "Aftermath". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka paljon Crédit Mobilier laskutti 50 miljoonan radasta?',
+        vaihtoehdot: [
+          '60 miljoonaa dollaria',
+          '72 miljoonaa dollaria',
+          '94 miljoonaa dollaria',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  MEX: [
+    /*
+     * Cerro de las Campanas, Querétaro.
+     * Lähde: en-Wikipedia "Second Mexican Empire"
+     */
+    {
+      id: 'maximilianin-keisarikunta',
+      otsikko: 'Keisari, jonka Ranska toi ja jätti',
+      nimio: 'Querétaro 1867',
+      vuosi: '1867',
+      paikka: 'Cerro de las Campanas, Querétaro',
+      lat: 20.5933, lon: -100.4104,
+      kortti: 'Napoleon III tarvitsi Amerikkaan monarkistisen liittolaisen ja tarjosi '
+        + 'Meksikon kruunua itävaltalaiselle arkkiherttualle. Kun ranskalaiset joukot '
+        + 'lähtivät, keisari jäi. Hän kieltäytyi luopumasta kruunusta ja teloitettiin '
+        + 'kenraaliensa kanssa kesäkuussa 1867.',
+      teksti: 'Toinen Meksikon keisarikunta oli perustuslaillinen monarkia, jonka '
+        + 'meksikolaiset monarkistit pystyttivät Ranskan toisen keisarikunnan tuella. '
+        + 'Napoleon III halusi Meksikon konservatiivien, papiston ja aateliston avulla '
+        + 'monarkistisen liittolaisen Amerikkaan vastapainoksi Yhdysvaltain kasvavalle '
+        + 'vallalle.'
+        + '\n\nKruunua tarjottiin itävaltalaiselle arkkiherttualle Maximilianille, ja hänen '
+        + 'nousunsa vahvistettiin kiistanalaisella kansanäänestyksellä. Valtaistuimelle '
+        + 'noustessaan hän hyväksyi Miramarin sopimuksen, jonka mukaan Meksikon hallitus '
+        + 'maksaisi Ranskan sotaretken kulut ja elättäisi ranskalaiset joukot. Hänen '
+        + 'vaimostaan, belgialaisesta prinsessa Charlottesta, tuli keisarinna Carlota.'
+        + '\n\nRanskan armeija hallitsi Keski-Meksikoa, mutta tasavallan kannattajat '
+        + 'jatkoivat vastarintaa sekä tavallisin asein että sissisotana, eikä presidentti '
+        + 'Benito Juárez poistunut kertaakaan maasta. Helmikuussa 1867 viimeiset '
+        + 'ranskalaiset joukot lähtivät kotiin.'
+        + '\n\nMaximilian kieltäytyi luopumasta kruunusta ja siirtyi Querétaroon noin '
+        + 'kymmenentuhannen miehen kanssa. Tasavallan kenraalit Escobedo ja Corona '
+        + 'saartoivat kaupungin neljälläkymmenellätuhannella, ja 15. toukokuuta 1867 '
+        + 'keisarillinen upseeri avasi portit. Maximilian sekä kenraalit Tomás Mejía ja '
+        + 'Miguel Miramón tuomittiin kuolemaan ja ammuttiin 19. kesäkuuta 1867.',
+      lahde: 'en-Wikipedia "Second Mexican Empire", johdanto-osa sekä osiot "Origins of the '
+        + 'empire" ja "Fall of the empire". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Querétaro joutui tasavaltalaisten käsiin?',
+        vaihtoehdot: [
+          'Keisarillinen upseeri avasi kaupungin portit',
+          'Muurit murrettiin tykistöllä',
+          'Kaupunki antautui nälkiinnyttyään talven aikana',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Cananean kuparikaivos, Sonora.
+     * Lähde: en-Wikipedia "Cananea strike"
+     */
+    {
+      id: 'cananea-1906',
+      otsikko: 'Cananea — viisi pesoa, kahdeksan tuntia',
+      nimio: 'Cananea 1906',
+      vuosi: '1906',
+      paikka: 'Cananean kuparikaivos, Sonora',
+      lat: 30.9819, lon: -110.3006,
+      kortti: 'Kaivosyhtiö korotti amerikkalaisten työntekijöiden palkan viiteen dollariin '
+        + 'päivässä. Meksikolaiset saivat yhä enintään kolme. Kun korotus astui voimaan '
+        + '1. kesäkuuta 1906, kaksituhatta miestä käveli ulos — ja päivä päättyi '
+        + 'kolmeenkymmeneenkolmeen kuolleeseen.',
+      teksti: 'Cananea on vuoristoinen kaivoskaupunki Koillis-Sonorassa kolmenkymmenen '
+        + 'kilometrin päässä Yhdysvaltain rajasta. Eversti William Cornell Greene perusti '
+        + 'sinne Cananea Consolidated Copper Companyn 1896; Porfirio Díazin hallinto myi '
+        + 'usein maan luonnonvaroja ulkomaisille yhtiöille, ja Greene laajensi otteensa myös '
+        + 'liikenteeseen, sahoihin ja voimalaitoksiin. Suoni oli maailman suurimpia, ja 1906 '
+        + 'yhtiö työllisti 5 360 meksikolaista ja 2 200 amerikkalaista.'
+        + '\n\nTyöntekijöitä hiersivät kymmentuntiset päivät, huono ilmanvaihto ja palkkojen '
+        + 'epätasa-arvo. Murtumakohta tuli, kun Greene ilmoitti nostavansa amerikkalaisten '
+        + 'palkan viiteen dollariin päivässä; meksikolaisille jäi enintään kolme.'
+        + '\n\nKorotuksen voimaantulopäivänä 1. kesäkuuta 1906 meksikolaiset kaivosmiehet '
+        + 'jättivät työnsä. Jopa kaksituhatta miestä kokoontui poliisipäällikön toimiston '
+        + 'eteen huutamaan "cinco pesos, ocho horas" — viisi pesoa, kahdeksan tuntia. '
+        + 'Vaatimuksiin kuului myös se, että kolme neljäsosaa työpaikoista varattaisiin '
+        + 'meksikolaisille.'
+        + '\n\nIltapäivällä kulkue ohitti puutavaravaraston, jonka johtaja käänsi paloletkun '
+        + 'väkijoukkoon ja ampui sitä kohti. Varasto sytytettiin tuleen, ja yhteenotot '
+        + 'jatkuivat yöhön. Lakko päättyi ilman myönnytyksiä: noin 33 työntekijää kuoli, 22 '
+        + 'haavoittui ja 50 pidätettiin. Tapaus jäi merkiksi Díazin ajan kasvavasta '
+        + 'levottomuudesta ennen Meksikon vallankumousta.',
+      lahde: 'en-Wikipedia "Cananea strike", johdanto-osa sekä osiot "Location", '
+        + '"Background" ja "Strike". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä lakkolaiset huusivat poliisipäällikön toimiston edessä?',
+        vaihtoehdot: [
+          '"Tierra y libertad"',
+          '"Cinco pesos, ocho horas"',
+          '"Viva Cananea"',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  ECU: [
+    /*
+     * Loja, Etelä-Ecuadorin kiinapuumetsät.
+     *
+     * MIKSEI GALÁPAGOS EIKÄ QUITO. Ecuadorin kaksi ilmeisintä
+     * skandaalia — Galápagosin plantaasivaltias Manuel Julián Cobos
+     * (1904) ja vuoden 1894 "lipun myynti" — jäivät pois paikan takia,
+     * eivät aiheen. Galápagos on Ecuadorin fokuslehden ikkunan
+     * (x 2925–3533) LÄNSIPUOLELLA, joten saarille sijoitettu merkki ei
+     * piirtyisi lainkaan; sama syy on kirjattu Darwin-hetken kohdalle
+     * (tools/tarkista-nostopaikat.mjs POIKKEUS). Lipun myynti taas
+     * tapahtui Quitossa, joka on pelikaupunki: piste jäisi 1,6
+     * lautayksikön päähän laatasta, eikä kaupungin kohdalle kirjoiteta
+     * uutta pääkartan nostoa (tests/nostot-kartalla.test.mjs,
+     * KAUPUNGIN_KOHDALLA_SADE 7). Molemmat korvattiin mannermaan
+     * tapauksilla, joilla on oma paikkansa: Loja 129,1 yksikköä
+     * Quitosta ja Lago Agrio 57,6.
+     * Lähde: en-Wikipedia "Cinchona"
+     */
+    {
+      id: 'kiinapuun-kuori',
+      otsikko: 'Kiinapuu — monopoli, joka salakuljetettiin pois',
+      nimio: 'Kiinapuu 1860',
+      vuosi: '1638–1860',
+      paikka: 'Loja, Etelä-Ecuador',
+      lat: -3.9833, lon: -79.2,
+      kortti: 'Lojan metsien kuoresta saatiin ainoa toimiva lääke malariaan. Perun ja '
+        + 'naapureiden laki kielsi siementen ja taimien viennin, mutta 1800-luvulla ne '
+        + 'salakuljetettiin ulos maasta ja istutettiin Jaavalle ja Intiaan. Yksi kerääjistä '
+        + 'kuoli pahoinpitelyyn.',
+      teksti: 'Kiinapuun kuoresta saatiin kiniini, pitkään ainoa tehoava malarialääke. '
+        + 'Munkki Antonio de La Calancha mainitsi quina-kuoren 1638 puuna, joka kasvaa '
+        + 'Lojassa, ja kertoi että kahden kolikon painoinen jauhe sekoitettiin veteen ja '
+        + 'juotiin kuumeeseen. Jesuiittaisä Bernabé Cobo kirjoitti "kuumepuusta" 1653.'
+        + '\n\nTarkan kuvauksen teki vasta tähtitieteilijä Charles Marie de La Condamine, '
+        + 'joka tuli Quitoon 1735 mittaamaan meridiaanin kaarta; hänen kuvaamansa laji '
+        + 'Cinchona officinalis osoittautui kuitenkin hoidollisesti vähäarvoiseksi.'
+        + '\n\nKysynnän kasvaessa metsien puita alettiin hakata. Pitääkseen kuorimonopolinsa '
+        + 'Peru ja sen naapurimaat kielsivät kiinapuun siementen ja taimien viennin '
+        + '1800-luvun alusta lähtien. Siirtomaavallat halusivat silti kasvattaa puuta itse: '
+        + 'hollantilaiset lähettivät Justus Hasskarlin, jonka taimia viljeltiin Jaavalla '
+        + 'vuodesta 1854, ja englantilainen Clements Markham haki 1860 kasveja, jotka '
+        + 'istutettiin Sri Lankaan ja Etelä-Intian Nilgiriin.'
+        + '\n\nCharles Ledger ja hänen apulaisensa Manuel Incra Mamani keräsivät toista lajia '
+        + 'Boliviasta. Mamani jäi kiinni ja hänet pahoinpideltiin, mihin hän kuoli; Ledger '
+        + 'sai siemenet, joita britit eivät halunneet, ja loput myytiin hollantilaisille. '
+        + 'Cinchona ledgeriana tuotti Hollannin Indonesiassa 8–13 prosenttia kiniiniä. '
+        + '1800-luvulla britit perustivat Intiaan viljelmiä siemenistä, jotka he '
+        + 'salakuljettivat Ecuadorista, Perusta ja Boliviasta. Markham aateloitiin työstään.',
+      lahde: 'en-Wikipedia "Cinchona", osiot "Early references", "Economic significance" ja '
+        + '"Widespread cultivation". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Peru ja sen naapurit kielsivät siementen viennin?',
+        vaihtoehdot: [
+          'Pitääkseen kuorimonopolin itsellään',
+          'Suojellakseen puita hyönteisiltä',
+          'Estääkseen lääkkeen väärinkäytön',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Lago Agrion öljykenttä, Sucumbíos.
+     * Lähde: en-Wikipedia "Lago Agrio oil field"
+     */
+    {
+      id: 'lago-agrio',
+      otsikko: 'Lago Agrio — öljykenttä ja tuomio, jota ei pantu täytäntöön',
+      nimio: 'Lago Agrio 1993',
+      vuosi: '1993–2018',
+      paikka: 'Lago Agrion öljykenttä, Sucumbíos',
+      lat: 0.0746, lon: -76.7579,
+      kortti: 'Amazonin öljykenttä saastutti vedet ja maaperän cofánien alueella. '
+        + 'Asukkaat haastoivat yhtiön oikeuteen 1993, ja ecuadorilainen tuomioistuin määräsi '
+        + 'miljardikorvaukset. Yhtiö kieltäytyi maksamasta, ja riita jatkui '
+        + 'kansainvälisissä tuomioistuimissa neljännesvuosisadan.',
+      teksti: 'Lago Agrion öljykenttä on Nueva Lojan kaupungin lähellä Sucumbíosin '
+        + 'maakunnassa Ecuadorin Amazoniassa, läntisessä Oriente-altaassa. Öljy löytyi '
+        + 'seudulta 1960-luvulla, ja kenttä on yksi niistä kahdestatoista tuotantoalueesta, '
+        + 'jotka syntyivät kun Ecuador alkoi viedä öljyä.'
+        + '\n\nKenttä tunnetaan kansainvälisesti vakavista ympäristöongelmista: veden ja '
+        + 'maaperän saastumisesta, metsäkadosta ja kulttuurin murtumisesta. Alue on '
+        + 'cofánien maata lähellä Kolumbian rajaa.'
+        + '\n\nVuonna 1993 paikalliset asukkaat nostivat ryhmäkanteen Aguinda vastaan Texaco '
+        + 'pakottaakseen kentän entisen operaattorin siivoamaan alueen ja huolehtimaan '
+        + '30 000 saastumisesta kärsineestä asukkaasta. Chevron oli ostanut Texacon 2001. '
+        + 'Helmikuussa 2011 ecuadorilainen tuomioistuin määräsi Chevronin maksamaan kahdeksan '
+        + 'miljardia dollaria, ja Ecuadorin korkein oikeus vahvisti tuomion 2013 summalla 9,5 '
+        + 'miljardia.'
+        + '\n\nChevron oli aiemmin vaatinut käsittelyn siirtämistä New Yorkista '
+        + 'ecuadorilaisiin tuomioistuimiin ja hyväksynyt niiden toimivallan, mutta kieltäytyi '
+        + 'maksamasta ja kutsui päätöstä laittomaksi ja täytäntöönpanokelvottomaksi. '
+        + 'Yhdysvaltalainen tuomioistuin julisti tuomion täytäntöönpanokelvottomaksi 2014 ja '
+        + 'muutoksenhakutuomioistuin kaksi vuotta myöhemmin. Vuonna 2018 pysyvä '
+        + 'välitystuomioistuin Haagissa ratkaisi asian Chevronin hyväksi ja katsoi, että '
+        + 'vuoden 2013 tuomio oli saatu petoksella, lahjonnalla ja korruptiolla.',
+      lahde: 'en-Wikipedia "Lago Agrio oil field", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mihin Haagin välitystuomioistuin päätyi 2018?',
+        vaihtoehdot: [
+          'Chevronin oli maksettava 9,5 miljardia',
+          'Ecuadorin tuomio oli saatu petoksella ja lahjonnalla',
+          'Asia oli vanhentunut',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  PER: [
+    /*
+     * Callaon satama.
+     * Lähde: en-Wikipedia "Chincha Islands War"
+     */
+    {
+      id: 'chinchan-saaret',
+      otsikko: 'Chinchan saaret — Espanja otti guanon',
+      nimio: 'Chincha 1864',
+      vuosi: '1864–1866',
+      paikka: 'Callaon satama',
+      lat: -12.0522, lon: -77.1392,
+      kortti: 'Espanja lähetti "tieteellisen retkikunnan" Etelä-Amerikan vesille ja valtasi '
+        + 'Perun tärkeimmän tulonlähteen: guanolla lastatut Chinchan saaret. Sota levisi '
+        + 'neljään entiseen siirtomaahan ja toi mukanaan panssarilaivat.',
+      teksti: 'Chinchan saarten sota eli Espanjan ja Etelä-Amerikan sota oli sarja rannikko- '
+        + 'ja meritaisteluita Espanjan ja sen entisten siirtomaiden Perun, Chilen, Ecuadorin '
+        + 'ja Bolivian välillä. Se alkoi, kun Espanja valtasi guanorikkaat Chinchan saaret '
+        + '— yhtenä useista kuningatar Isabella II:n yrityksistä palauttaa Espanjan '
+        + 'vaikutusvalta entisiin siirtomaihin.'
+        + '\n\nEspanjan asema oli tuolloin vahva: Isabellan aikana laivastomenot kasvoivat, ja '
+        + 'maa nousi maailman neljänneksi suurimmaksi merivallaksi. 1850- ja 1860-luvuilla se '
+        + 'toimi siirtomaahankkeissa muun muassa Marokossa, Filippiineillä, Meksikossa ja '
+        + 'Dominikaanisessa tasavallassa.'
+        + '\n\nVuoden 1862 lopulla Espanja lähetti Etelä-Amerikan vesille "tieteellisen '
+        + 'retkikunnan", jonka salainen tarkoitus oli tukea Amerikassa asuvien Espanjan '
+        + 'kansalaisten rahallisia ja oikeudellisia vaatimuksia. Amiraali Luis '
+        + 'Hernández-Pinzón Álvarezin laivue koostui neljästä sota-aluksesta. Laivat saapuivat '
+        + 'Valparaísoon huhtikuussa 1863 ja sieltä Peruun, jonka itsenäisyyttä Espanja ei '
+        + 'ollut koskaan tunnustanut; silti Callaossa ne otettiin ystävällisesti vastaan.'
+        + '\n\nSota tunnetaan panssarilaivojen käytöstä. Yksi niistä, espanjalainen '
+        + 'panssarifregatti Numancia, oli ensimmäinen panssarilaiva, joka purjehti maailman '
+        + 'ympäri.',
+      lahde: 'en-Wikipedia "Chincha Islands War", johdanto-osa ja osio "Background". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Chinchan saarilta haettiin?',
+        vaihtoehdot: [
+          'Guanoa',
+          'Hopeaa',
+          'Salpietaria',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Cusco, Museo Machu Picchu.
+     * Lähde: en-Wikipedia "Peru–Yale University dispute"
+     */
+    {
+      id: 'yale-kiista',
+      otsikko: 'Machu Picchun esineet — sata vuotta New Havenissa',
+      nimio: 'Yale-kiista',
+      vuosi: '1911–2011',
+      paikka: 'Cusco',
+      lat: -13.5169, lon: -71.9786,
+      kortti: 'Hiram Bingham vei Machu Picchulta tuhansia esineitä Connecticutiin. Osapuolet '
+        + 'olivat eri mieltä siitä, oliko kyse lainasta vai lahjasta. Peru yritti saada '
+        + 'kokoelmansa takaisin 1920-luvulla — ja sai sen vasta yhdeksänkymmentä vuotta '
+        + 'myöhemmin.',
+      teksti: 'Perun ja Yalen yliopiston kiista oli vuosisadan mittainen riita siitä, kenelle '
+        + 'kuuluvat Machu Picchulta otetut inkojen esineet ja ihmisjäänteet. Machu Picchu on '
+        + 'inkojen paikka korkealla Andeilla, ja se oli käytössä noin vuosina 1420–1532.'
+        + '\n\nVuoden 1911 jälkeisinä vuosina yalelainen tutkimusmatkailija Hiram Bingham III '
+        + 'vei paikalta tuhansia esineitä — keramiikkaa, kivityökaluja ja ihmisluita — '
+        + 'Connecticutin New Haveniin. Siirtojen ehdoista oltiin eri mieltä: Binghamin ja '
+        + 'joidenkin muiden mukaan Yale oli sopinut lainaavansa esineitä kahdeksantoista '
+        + 'kuukauden tutkimusta varten.'
+        + '\n\nPeru yritti saada kokoelman takaisin 1920-luvulla, mutta Yale vastusti. Jännite '
+        + 'kiristyi vuosina 2006–2010, jolloin käytiin oikeutta, perulaiset ja Yalen omat '
+        + 'alumnit vetosivat julkisuudessa, ja presidentti Alan García kääntyi presidentti '
+        + 'Barack Obaman puoleen.'
+        + '\n\nYhdeksäntenätoista marraskuuta 2010 Peru ja Yale sopivat, että jäänteet ja '
+        + 'esineet palautetaan. Alkuvuodesta 2011 Yale ja Cuscon yliopisto sopivat lisäksi '
+        + 'museon ja tutkimuskeskuksen perustamisesta Cuscoon; Museo Machu Picchu avattiin '
+        + 'yleisölle marraskuussa 2011. Kokoelmaa pidetään arvokkaimpien inkakokoelmien '
+        + 'joukossa.',
+      lahde: 'en-Wikipedia "Peru–Yale University dispute", johdanto-osa ja osio "Background". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Milloin Peru ja Yale sopivat esineiden palauttamisesta?',
+        vaihtoehdot: [
+          'Vuonna 1920',
+          'Vuonna 2010',
+          'Vuonna 2021',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  PAN: [
+    /*
+     * Guna Yalan itäosa, Panaman Karibian saaristo.
+     *
+     * MIKSI EI PANAMAN KANAVASKANDAALI 1892. Ranskalaisen
+     * kanavayhtiön romahdus olisi ollut erän ilmeinen valinta, mutta
+     * sen kaikki paikat — Culebran leikkaus (4,2 lautayksikköä),
+     * Gatún (6,7) ja Colón (8,5) — ovat Panamá-laatan kyljessä, ja
+     * Colónissa on jo tämän erän rautatiemerkki. Kaupungin kohdalle ei
+     * kirjoiteta uutta pääkartan nostoa (tests/nostot-kartalla.test.mjs,
+     * KAUPUNGIN_KOHDALLA_SADE 7), joten skandaaliksi valittiin
+     * tapahtuma, jolla on oma paikkansa kaukana kannaksesta: piste on
+     * Guna Yalan itäosassa, 59,0 yksikköä Panamásta ja 14,9 yksikköä
+     * maan oman Guna Yala -kohdemerkin päästä.
+     * Lähde: en-Wikipedia "San Blas Rebellion"
+     */
+    {
+      id: 'san-blasin-kapina',
+      otsikko: 'San Blasin kapina — mola kiellettiin, kansa nousi',
+      nimio: 'San Blas 1925',
+      vuosi: '1925',
+      paikka: 'Guna Yalan itäosa',
+      lat: 9.13, lon: -77.93,
+      kortti: 'Panaman hallitus kielsi gunanaisilta molapaidat, nenärenkaat ja käsi- ja '
+        + 'jalkasiteet ja pakotti heidät länsimaisiin vaatteisiin. Helmikuussa 1925 gunat '
+        + 'julistivat oman tasavallan ja hyökkäsivät hallituksen hallitsemille saarille. '
+        + 'Rauha tehtiin yhdysvaltalaisen sotalaivan kannella.',
+      teksti: 'San Blasin saaret eli Guna Yala elivät levotonta aikaa sen jälkeen, kun Panama '
+        + 'julistautui itsenäiseksi 1903. Gunat olivat aiemmin tulleet toimeen Kolumbian '
+        + 'kanssa omien lakiensa ja tapojensa mukaan, mutta uusi hallitus pyrki ottamaan '
+        + 'alueen haltuunsa ja istuttamaan sinne länsimaisen ja kansallisen kulttuurin.'
+        + '\n\nSulauttaminen alkoi 1904, ja 1906 hallitus vei seitsemäntoista gunalasta '
+        + 'länsimaiseen kouluun; 1909 alueelle perustettiin poliisiraja, mikä johti '
+        + 'yhteenottoihin. Vuonna 1919 presidentti Belisario Porras aloitti pakkosulauttamisen '
+        + 'ja kielsi osan naisten perinteisestä puvusta: molapaidat, nenärenkaat sekä käsi- ja '
+        + 'jalkasiteet piti vaihtaa länsimaisiin vaatteisiin.'
+        + '\n\nVuonna 1925 gunajohtajat suunnittelivat kapinan. Heitä neuvoi yhdysvaltalainen '
+        + 'tutkimusmatkailija Richard Marsh, joka myös kirjoitti itsenäisyysjulistuksen; '
+        + 'johtajina olivat Ustupun päällikkö Nele Kantule ja Ailigandin päällikkö Simral '
+        + 'Colman. Aligandissa pidettiin 12. helmikuuta alkaen kokous, joka kesti '
+        + 'kaksikymmentäkuusi päivää ja julisti Tulen tasavallan rajoineen ja lippuineen. '
+        + 'Kapina alkoi 22. helmikuuta, kesti kolmesta neljään päivää ja vaati alle '
+        + 'kolmekymmentä kuollutta.'
+        + '\n\nYhdysvallat lähetti sotalaivan San Blasinlahdelle, ja osapuolet kutsuttiin sen '
+        + 'kannelle neuvottelemaan. Rauhansopimus allekirjoitettiin 4. maaliskuuta. Gunille '
+        + 'luvattiin kunnioittaa heidän tapojaan ja perua kouluun ja pukeutumiseen liittyneet '
+        + 'lait; vastineeksi he laskivat aseensa ja peruivat itsenäisyysjulistuksensa.',
+      lahde: 'en-Wikipedia "San Blas Rebellion", johdanto-osa sekä osiot "Background", '
+        + '"Revolution" ja "Result". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Missä vuoden 1925 rauhasta neuvoteltiin?',
+        vaihtoehdot: [
+          'Panamán presidentinpalatsissa',
+          'Yhdysvaltain sotalaivan kannella',
+          'Kolumbian kongressissa',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Uuden Kaledonian siirtokunta, Guna Yala.
+     * Lähde: en-Wikipedia "Darien scheme"
+     */
+    {
+      id: 'darienin-hanke',
+      otsikko: 'Darienin hanke — siirtokunta, joka vei Skotlannin vararikkoon',
+      nimio: 'Darien 1698',
+      vuosi: '1698–1700',
+      paikka: 'Uuden Kaledonian siirtokunta, Guna Yala',
+      lat: 8.83, lon: -77.66,
+      kortti: 'Skotlanti sijoitti viidenneksen koko liikkeessä olevasta rahastaan '
+        + 'siirtokuntaan Panaman kannakselle. Yli 80 prosenttia lähtijöistä kuoli vuodessa. '
+        + 'Vararikko heikensi vastustusta unionille Englannin kanssa.',
+      teksti: 'Darienin hanke oli Skotlannin kuningaskunnan sijoittajien tukema yritys '
+        + 'perustaa 1690-luvun lopulla siirtokunta nykyisen Panaman alueelle Dariénin '
+        + 'aukkoon. Siirtokunnan nimeksi tuli Uusi Kaledonia, ja ajatuksena oli hallita '
+        + 'maareittiä, joka yhdistäisi Tyynenmeren ja Atlantin.'
+        + '\n\nTakaajat tiesivät, että Vasco Núñez de Balboa oli nähnyt Tyynenmeren '
+        + 'ensimmäisenä eurooppalaisena juuri Dariénin kannaksen ylitettyään. Retkikunta '
+        + 'julisti 1698 hallitsevansa myös "Rapusaarta" eli nykyistä Viequesia Puerto '
+        + 'Ricossa, mutta valta jäi lyhyeksi.'
+        + '\n\nHanke epäonnistui. Yli kahdeksankymmentä prosenttia osallistujista kuoli '
+        + 'vuoden kuluessa, ja siirtokunta hylättiin kahdesti. Syitä on esitetty monia: huono '
+        + 'suunnittelu ja muonitus, hajanainen johto, kaupankäynnin puute sekä paikallisten '
+        + 'kansojen että naapurisiirtokuntien kanssa, trooppiset taudit, englantilaisten '
+        + 'kauppaintressien vastustus ja se, ettei osattu varautua Espanjan sotilaalliseen '
+        + 'vastaukseen. Lopullisesti paikka jätettiin maaliskuussa 1700 espanjalaisten '
+        + 'piirityksen ja satamasaarron jälkeen.'
+        + '\n\nCompany of Scotlandin takana oli noin viidennes kaikesta Skotlannissa '
+        + 'liikkuneesta rahasta, joten epäonnistuminen ajoi koko Skotlannin alamaan '
+        + 'talousahdinkoon. Se oli tärkeä tekijä siinä, että vastustus unionia kohtaan '
+        + 'heikkeni ennen vuoden 1707 sopimusta. Siirtokunnan maat kuuluvat nykyään Guna '
+        + 'Yalaan.',
+      lahde: 'en-Wikipedia "Darien scheme", johdanto-osa ja osio "Origins". Tarkistettu '
+        + '6.9.2026.',
+      visa: {
+        kysymys: 'Mitä hankkeen epäonnistuminen merkitsi Skotlannille?',
+        vaihtoehdot: [
+          'Se rahoitti Skotlannin oman laivaston',
+          'Se ajoi Skotlannin alamaan vararikkoon',
+          'Se toi Skotlannille siirtomaan Karibialla',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+
+  /* ================================================================
+   * ERÄ M18 (6.9.2026). Omistaja: *"Jatka kartta nostojen tekoa koko
+   * maailmaan."* Neljä maata, kaksi skandaalia kummallekin: PRY, URY,
+   * VEN ja VUT. Kaikki pisteet on tarkistettu maan fokuslehden
+   * rajausta vasten ja mitattu irti pelikaupungeista
+   * (KAUPUNGIN_KOHDALLA_SADE 7); perustelut ja mitat ovat maiden
+   * maastokohdepakeissa (js/packs/maastokohteet-pry.js ja sisarpakit).
+   * Erä on kuvaton.
+   * ================================================================ */
+  PRY: [
+    /*
+     * Humaitán linnoitus Paraguayjoen mutkassa Ñeembucússa.
+     * Lähde: en.wikipedia.org: Siege of Humaitá
+     */
+    {
+      id: 'humaitan-piiritys',
+      otsikko: 'Humaitá 1868 — Etelä-Amerikan Gibraltar',
+      nimio: 'Humaitá 1868',
+      vuosi: '1868',
+      paikka: 'Humaitán linnoitus, Ñeembucú',
+      lat: -27.07, lon: -58.5,
+      kortti: 'Liittoutuneiden laivat eivät päässeet joen ohi kahteen vuoteen. Kun '
+        + 'linnoitus vihdoin murtui heinäkuussa 1868, puolustajat eivät antautuneet vaan '
+        + 'katosivat suolle — ja voittajia moitittiin siitä, että kaikki oli kestänyt '
+        + 'näin kauan.',
+      teksti: 'Humaitán piiritys oli sotatoimi, jossa Kolmen liiton joukot — Brasilia, '
+        + 'Argentiina ja Uruguay — kiersivät, piirittivät ja valtasivat Humaitán '
+        + 'linnoituksen, paraguaylaisen tukikohdan, jota kutsuttiin Etelä-Amerikan '
+        + 'Gibraltariksi. Linnoitus kaatui 26. heinäkuuta 1868, ja tapahtumaa voi pitää '
+        + 'koko sodan avainhetkenä.\n\n'
+        + 'Liittoutuneita arvosteltiin ankarasti siitä, kuinka kauan valtaus kesti, ja '
+        + 'linnoituksen vahvuutta vähäteltiin. Kyse oli kuitenkin ammattiarmeijaa '
+        + 'edeltävistä joukoista, jotka sotivat kaukana kotoa vastassaan tottumaton '
+        + 'puolustustapa: tykistö oli kaivautunut valmiisiin asemiin ja ampui '
+        + 'sadetta jalkaväkeä vastaan.\n\n'
+        + 'Maasto oli Etelä-Paraguayn kosteikkoa, kartoittamatonta ja suurimmaksi osaksi '
+        + 'kulkukelvotonta. Se antoi paraguaylaisille suuren edun, vaikka heidän '
+        + 'huoltonsa oli surkea ja rohkeutensa esimerkillinen.\n\n'
+        + 'Liittoutuneet olivat ensin yrittäneet ottaa linnoituksen suoralla hyökkäyksellä '
+        + 'Paraguayjoelta ja kärsineet tuhoisan tappion, joka sekoitti ja lannisti joukot. '
+        + 'Taistelukunnon palauttaminen jäi uudelle ylipäällikölle, Caxiasin markiisille, '
+        + 'joka ei poliittisista syistä voinut ottaa riskiä uudesta katastrofista.',
+      lahde: 'en-Wikipedia "Siege of Humaitá", johdanto-osa ja osio "Context and '
+        + 'importance". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Humaitán puolustajille tapahtui, kun linnoitus kaatui?',
+        vaihtoehdot: [
+          'He antautuivat liittoutuneille',
+          'He pakenivat, ja suurin osa taisteli myöhemmin uudelleen',
+          'He räjäyttivät linnoituksen ja itsensä',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Nueva Germania, San Pedron maakunta.
+     * Lähde: en.wikipedia.org: Nueva Germania
+     */
+    {
+      id: 'nueva-germania',
+      otsikko: 'Nueva Germania 1887 — mallikylä, joka ei toiminut',
+      nimio: 'Nueva Germania',
+      vuosi: '1887',
+      paikka: 'Nueva Germania, San Pedro',
+      lat: -23.9, lon: -56.7,
+      kortti: 'Kaksi saksalaista lähti 1887 Paraguayn metsiin perustamaan mallikylää, '
+        + 'jonka piti todistaa oman kansan paremmuus. Kolmea vuotta myöhemmin perustaja '
+        + 'oli kuollut ja asukkaat ottivat kylän omiin nimiinsä.',
+      teksti: 'Nueva Germania on San Pedron maakunnan piirikunta Paraguayssa. Bernhard '
+        + 'Förster ja Elisabeth Förster-Nietzsche perustivat sen 23. elokuuta 1887 '
+        + 'saksalaiseksi siirtokunnaksi, jonka piti olla uuden maailman mallikylä ja '
+        + 'osoittaa saksalaisen kulttuurin ja yhteiskunnan ylivertaisuus. Hankkeen '
+        + 'taustalla olivat antisemitistiset ja rotuopilliset aatteet.\n\n'
+        + 'Elisabeth Förster-Nietzsche oli filosofi Friedrich Nietzschen sisar. '
+        + 'Siirtolaiset olivat pääosin vähävaraisia perheitä Saksin alueelta: liikkeelle '
+        + 'lähti viisi perhettä, myöhemmin neljätoista. Kylä perustettiin Aguaray '
+        + 'Guazú -joen rannalle noin 250 kilometrin päähän Asunciónista.\n\n'
+        + 'Hanke kaatui heti alkuunsa. Förster surmasi itsensä 1889, ja hänen '
+        + 'kuolemansa ja Förster-Nietzschen Saksaan-paluun jälkeen asukkaat ottivat '
+        + 'kylän hallinnan omiin käsiinsä ja sanoutuivat irti perustajiensa aatteista.\n\n'
+        + 'Rasistisen ja antisemitistisen historiansa vuoksi kylä esitetään usein '
+        + 'sensaatiohakuisesti, minkä nykyiset asukkaat torjuvat. Piirikunta on noin 297 '
+        + 'kilometrin päässä Asunciónista, ja sen halki virtaavat Aguaray Guazú ja '
+        + 'Aguaray mí sekä Tutytín ja Empaladon purot.',
+      lahde: 'en-Wikipedia "Nueva Germania", johdanto-osa sekä osiot "Geography" ja '
+        + '"History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Nueva Germanian perustajien hanke päättyi?',
+        vaihtoehdot: [
+          'Kylä hylättiin kokonaan',
+          'Paraguayn hallitus karkotti siirtolaiset',
+          'Perustaja surmasi itsensä ja asukkaat ottivat kylän omiin käsiinsä',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  URY: [
+    /*
+     * Río de la Platan suu Punta del Esten kaakkoispuolella.
+     * Lähde: en.wikipedia.org: Battle of the River Plate
+     */
+    {
+      id: 'graf-spee-1939',
+      otsikko: 'Graf Spee 1939 — 72 tuntia puolueettomassa satamassa',
+      nimio: 'Graf Spee 1939',
+      vuosi: '1939',
+      paikka: 'Río de la Platan suu, Uruguayn edustalla',
+      lat: -35.35, lon: -54.6,
+      kortti: 'Saksalainen risteilijä oli upottanut kauppalaivoja kuukausia, kun kolme '
+        + 'alusta löysi sen Río de la Platan suulta. Taistelun jälkeen se pakeni '
+        + 'puolueettoman maan satamaan eikä lähtenyt sieltä enää koskaan taistelemaan.',
+      teksti: 'Río de la Platan taistelu käytiin Etelä-Atlantilla 13. joulukuuta 1939, ja '
+        + 'se oli Britannian laivaston ensimmäinen meritaistelu toisessa maailmansodassa. '
+        + 'Saksan laivaston raskas risteilijä Admiral Graf Spee, komentajanaan kapteeni '
+        + 'Hans Langsdorff, kohtasi kommodori Henry Harwoodin osaston: kevyet risteilijät '
+        + 'HMS Ajax ja HMNZS Achilles sekä raskaan risteilijän HMS Exeter.\n\n'
+        + 'Graf Spee oli purjehtinut Etelä-Atlantille elokuussa 1939 jo ennen sodan alkua '
+        + 'ja aloittanut kauppasodan saatuaan siihen luvan 26. syyskuuta. Britit kokosivat '
+        + 'useita etsintäosastoja, ja Harwoodin osasto havaitsi aluksen Río de la Platan '
+        + 'suulla Argentiinan ja Uruguayn rannikoiden edustalla.\n\n'
+        + 'Taistelussa Exeter vaurioitui pahoin ja joutui vetäytymään Falklandin suuntaan, '
+        + 'ja Ajax ja Achilles saivat kohtalaisia vaurioita. Graf Speen vauriot eivät '
+        + 'olleet laajoja, mutta ne olivat ratkaisevia, sillä aluksen '
+        + 'polttoainejärjestelmä oli rikki.\n\n'
+        + 'Ajax ja Achilles varjostivat alusta, kunnes se ajoi puolueettoman Uruguayn '
+        + 'pääkaupungin Montevideon satamaan kiireellisiin korjauksiin. Langsdorffille '
+        + 'kerrottiin, ettei satamassaoloa voitaisi jatkaa yli 72 tuntia. Uskoen '
+        + 'ilmeisesti, että britit olivat koonneet ylivoimaisen laivueen odottamaan, hän '
+        + 'käski upottaa aluksen 17. joulukuuta ja riisti itseltään hengen kaksi päivää '
+        + 'myöhemmin.',
+      lahde: 'en-Wikipedia "Battle of the River Plate", johdanto-osa ja osio '
+        + '"Background". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Admiral Graf Speen matka päättyi?',
+        vaihtoehdot: [
+          'Miehistö upotti aluksen itse Montevideon edustalla',
+          'Britit upottivat sen taistelussa',
+          'Se pääsi pakenemaan Saksaan',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Fray Bentos, Río Negron maakunta (Anglon tehdasalue).
+     * Lähde: en.wikipedia.org: Liebig's Extract of Meat Company; Fray Bentos
+     */
+    {
+      id: 'anglon-lihauute',
+      otsikko: 'Fray Bentos 1863 — lihauute, joka syntyi vuotien jätteestä',
+      nimio: 'Anglo 1863',
+      vuosi: '1863–1979',
+      paikka: 'Fray Bentos, Río Negro',
+      lat: -33.1333, lon: -58.3,
+      kortti: 'Kemisti keksi tavan tiivistää naudanliha ruskeaksi tahnaksi, mutta '
+        + 'Euroopassa liha oli siihen liian kallista. Ratkaisu löytyi Uruguayn '
+        + 'jokirannasta, jossa karja teurastettiin siihen asti pelkkien vuotien vuoksi.',
+      teksti: 'Justus von Liebig kehitti 1847 väkevöidyn naudanlihauutteen, jonka piti olla '
+        + 'halpa ja ravitseva lihan korvike niille, joilla ei ollut varaa lihaan. '
+        + 'Menetelmässä rasva poistettiin, liha hienonnettiin ja keitettiin vedessä, ja '
+        + 'liemi haihdutettiin miedolla lämmöllä 80-prosenttiseksi tahnaksi. Liebig '
+        + 'julkaisi menetelmänsä 1847 ja halusi sen mahdollisimman monen ulottuville.\n\n'
+        + 'Euroopassa liha oli kuitenkin liian kallista raaka-aineeksi. Saksalainen '
+        + 'rautatieinsinööri George Christian Giebert luki 1862 Liebigin kirjeitä ja '
+        + 'ehdotti hänelle tehdasta Etelä-Amerikkaan: siellä karja teurastettiin ennen '
+        + 'säilyke- ja pakastusaikaa pelkkien vuotien takia, ja uutetta uskottiin '
+        + 'saatavan kolmasosalla eurooppalaisesta hinnasta.\n\n'
+        + 'Liebigin suostumuksella ja karjatilallisten rahoituksella Giebert perusti '
+        + 'Societé de Fray Bentos Giebert & Cie:n ja rakensi koelaitoksen Villa '
+        + 'Independenciaan, joka sai myöhemmin nimen Fray Bentos. Vuoden 1864 loppuun '
+        + 'mennessä uutetta oli viety 50 000 naulaa, arvoltaan 12 000 puntaa, ja Liebig '
+        + 'Extract of Meat Company perustettiin Lontoossa 4. joulukuuta 1865.\n\n'
+        + 'Tehdas toimi 117 vuotta ja suljettiin 1979. Alueelle avattiin museo '
+        + 'maaliskuussa 2005, ja 5. heinäkuuta 2015 tehdaskortteli Barrio Anglo '
+        + 'liitettiin maailmanperintöluetteloon nimellä Fray Bentosin kulttuuri- ja '
+        + 'teollisuusmaisema.',
+      lahde: 'en-Wikipedia "Liebig\'s Extract of Meat Company", osio "Early development", '
+        + 'ja "Fray Bentos", osio "History". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi lihauutetta ryhdyttiin valmistamaan juuri Uruguayssa?',
+        vaihtoehdot: [
+          'Siellä oli Euroopan halvin polttoaine',
+          'Siellä karja teurastettiin siihen asti pelkkien vuotien takia',
+          'Siellä kasvoi uutteeseen tarvittava mauste',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  VEN: [
+    /*
+     * San Carlosin linnake Maracaibon lahden suulla.
+     * Lähde: en.wikipedia.org: Venezuelan crisis of 1902–1903
+     */
+    {
+      id: 'venezuelan-saarto',
+      otsikko: 'Saarto 1902 — kolme suurvaltaa perimässä velkoja',
+      nimio: 'Saarto 1902',
+      vuosi: '1902–1903',
+      paikka: 'San Carlosin linnake, Maracaibon lahden suu',
+      lat: 10.987, lon: -71.601,
+      kortti: 'Kolme suurvaltaa lähetti sotalaivat perimään velkoja, ja pieni maa menetti '
+        + 'laivastonsa muutamassa päivässä. Presidentti ei silti taipunut, ja '
+        + 'Yhdysvallat katsoi vierestä.',
+      teksti: 'Venezuelan kriisi 1902–1903 oli Britannian, Saksan ja Italian Venezuelaa '
+        + 'vastaan asettama merisaarto joulukuusta 1902 helmikuuhun 1903. Syynä oli, että '
+        + 'presidentti Cipriano Castro kieltäytyi maksamasta ulkomaisia velkoja ja '
+        + 'korvauksia vahingoista, joita eurooppalaiset olivat kärsineet maan '
+        + 'sisällissodissa.\n\n'
+        + 'Castro oletti, että Yhdysvallat estäisi Monroen opin nojalla eurooppalaisen '
+        + 'sotilaallisen väliintulon. Presidentti Theodore Roosevelt ja ulkoministeriö '
+        + 'tulkitsivat oppia kuitenkin niin, että se koski alueen valtaamista eikä '
+        + 'väliintuloa sinänsä. Kun suurvallat lupasivat etukäteen, ettei aluevaltauksia '
+        + 'tule, Yhdysvallat pysyi virallisesti puolueettomana.\n\n'
+        + 'Venezuelan pieni laivasto lamautettiin nopeasti. Britit pommittivat '
+        + '13. joulukuuta Puerto Cabellon linnakkeita Saksan SMS Vinetan avustamana, ja '
+        + 'Italian tehtäväksi tuli Vela de Coron sataman saarto; myös Alankomaiden, '
+        + 'Belgian ja Espanjan sota-aluksia liittyi saartoon.\n\n'
+        + 'Tammikuussa 1903 saksalainen SMS Panther yritti päästä Maracaibon lahdelle ja '
+        + 'vaihtoi 17. tammikuuta laukauksia San Carlosin linnakkeen kanssa, mutta '
+        + 'vetäytyi puolen tunnin jälkeen, koska matalikot estivät sitä pääsemästä '
+        + 'tarpeeksi lähelle. Venezuelalaiset pitivät tätä voittona, ja saksalainen '
+        + 'komentaja lähetti raskaammin aseistetun Vinetan näyttämään esimerkkiä: '
+        + '21. tammikuuta se pommitti linnakkeen tuleen ja tuhosi sen, ja viereisessä '
+        + 'kaupungissa kuoli 25 siviiliä.',
+      lahde: 'en-Wikipedia "Venezuelan crisis of 1902–1903", johdanto-osa sekä osiot '
+        + '"Blockade" ja "Escalation". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Yhdysvallat ei estänyt eurooppalaisten saartoa?',
+        vaihtoehdot: [
+          'Se oli itse mukana saartamassa',
+          'Se ei saanut tietoa saarrosta ajoissa',
+          'Se tulkitsi Monroen opin koskevan vain alueen valtaamista',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Cubaguan saari Margaritan eteläpuolella.
+     * Lähde: en.wikipedia.org: Nueva Cádiz
+     */
+    {
+      id: 'nueva-cadiz',
+      otsikko: 'Nueva Cádiz — kaupunki, joka eli helmistä ja kuoli niiden mukana',
+      nimio: 'Nueva Cádiz',
+      vuosi: '1500–1541',
+      paikka: 'Cubaguan saari, Venezuelan rannikon edustalla',
+      lat: 10.8239, lon: -64.1667,
+      kortti: 'Etelä-Amerikan mantereen ensimmäinen espanjalaiskaupunki nousi pienelle '
+        + 'saarelle, jolla ei ollut juuri mitään. Se kannatti silti, koska pohjassa oli '
+        + 'helmiä — ja katosi, kun helmisimpukat loppuivat.',
+      teksti: 'Nueva Cádiz on arkeologinen kohde ja entinen satamakaupunki Cubaguan saarella '
+        + 'Venezuelan rannikon edustalla. Paikka perustettiin 1500 kausiluonteiseksi '
+        + 'asuinpaikaksi, ja 1515 siitä tuli ympärivuotinen kaupunki; se oli Amerikan '
+        + 'ensimmäisiä eurooppalaisia asutuksia.\n\n'
+        + 'Jo 1502 saarelle rakennettiin rancheríoita, joissa asuttiin kolmesta neljään '
+        + 'kuukautta vuodessa kauppakauden ajan. Saari kiinnosti runsaiden '
+        + 'helmisimpukkamatalikkojensa vuoksi. Asutus muuttui pysyväksi, ja vuoteen 1520 '
+        + 'mennessä — suuren alkuperäiskansojen kapinan jälkeen — vakinaisia asukkaita oli '
+        + 'yli 300.\n\n'
+        + 'Kaarle V:n antamalla kuninkaallisella määräyksellä 12. syyskuuta 1528 paikasta '
+        + 'tehtiin kaupunki nimeltä Nueva Cádiz, ja siitä tuli Etelä-Amerikan ensimmäinen '
+        + 'espanjalainen kaupunki. Vuonna 1530 siellä asui 223 eurooppalaista ja 700 '
+        + 'alkuperäisasukasta, ja huipussaan noin 1535 asukkaita oli yli 1 500.\n\n'
+        + 'Helmisimpukkamatalikot ehtyivät kuitenkin yhä pahemmin, ja espanjalaiset '
+        + 'joutuivat rajoittamaan tuotantoa. Kun Guajiran niemimaalta löytyi uusia '
+        + 'matalikkoja, kaupunki taantui nopeasti: 1539 saarella oli enää alle 50 ihmistä, '
+        + 'ja hirmumyrsky tuhosi jäljellä olleet rakennukset 1541. Osin veden alle jääneet '
+        + 'rauniot julistettiin Venezuelan kansallismonumentiksi 1979.',
+      lahde: 'en-Wikipedia "Nueva Cádiz", johdanto-osa ja osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Nueva Cádiz hylättiin?',
+        vaihtoehdot: [
+          'Helmisimpukkamatalikot ehtyivät',
+          'Kaupunki paloi maan tasalle',
+          'Kaupunki siirrettiin mantereelle',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  VUT: [
+    /*
+     * Espiritu Santon sataman väylä Luganvillen edustalla.
+     * Lähde: en.wikipedia.org: SS President Coolidge
+     */
+    {
+      id: 'coolidgen-uppoaminen',
+      otsikko: 'Coolidge 1942 — laiva, joka ajoi omalle miinakentälle',
+      nimio: 'Coolidge 1942',
+      vuosi: '1942',
+      paikka: 'Espiritu Santon sataman väylä',
+      lat: -15.524, lon: 167.235,
+      kortti: 'Purjehdusohjeista oli vahingossa jäänyt pois tieto siitä, missä omat miinat '
+        + 'olivat. Kapteeni valitsi leveimmän väylän, ja kaksi räjähdystä myöhemmin '
+        + 'tuhannet miehet kävelivät rantaan ilman tavaroitaan.',
+      teksti: 'SS President Coolidge oli 1931 valmistunut yhdysvaltalainen valtamerilaiva, '
+        + 'joka muutettiin kiireesti joukkojenkuljetusalukseksi alkuvuonna 1942: '
+        + 'siviilivarusteet purettiin tai suojattiin ja majoitus järjestettiin 5 000 '
+        + 'sotilaalle. Se lähti 6. lokakuuta San Franciscosta kohti Uutta-Kaledoniaa ja '
+        + 'Uusia Hebridejä mukanaan 172. jalkaväkirykmentti ja satamanpuolustusyksikkö, '
+        + 'jonka tehtävä oli suojata Espiritu Santon lentokenttää.\n\n'
+        + 'Saarelle oli rakennettu suuri tukikohta ja satama, jota suojasivat miinakentät. '
+        + 'Tieto turvallisesta sisääntuloreitistä oli vahingossa jäänyt pois aluksen '
+        + 'purjehdusohjeista, ja 26. lokakuuta 1942 kapteeni Henry Nelson pyrki satamaan '
+        + 'leveintä ja ilmeisintä väylää japanilaisia sukellusveneitä peläten. Alus osui '
+        + 'miinaan konehuoneen kohdalla ja hetkeä myöhemmin toiseen miinaan perän '
+        + 'lähellä.\n\n'
+        + 'Nelson ajoi aluksen matalikolle ja käski jättää sen. Koska uppoamiseen ei '
+        + 'uskottu, sotilaita kehotettiin jättämään tavaransa: pelastustöiden piti alkaa '
+        + 'seuraavina päivinä. Puolentoista tunnin aikana 5 340 miestä pääsi maihin ilman '
+        + 'paniikkia, mutta koralliriutta esti rantautumisen, ja alus kallistui, upposi '
+        + 'perä edellä ja liukui väylän pohjaan.\n\n'
+        + 'Uhreja oli kaksi: konehuoneessa työskennellyt Robert Reid sekä kapteeni Elwood '
+        + 'Joseph Euart, joka oli jo päässyt turvaan mutta palasi hakemaan sairastuvalle '
+        + 'jääneitä miehiä, pelasti heidät eikä päässyt itse ulos. Nouméassa joulukuussa '
+        + '1942 kokoontunut sotilaskomissio vapautti Nelsonin syytteistä, ja tutkinnassa '
+        + 'kävi ilmi, ettei kauppalaivaston aluksille annettu kaikkea saatavilla ollutta '
+        + 'taktista tietoa — etenkään miinojen sijaintia.',
+      lahde: 'en-Wikipedia "SS President Coolidge", johdanto-osa sekä osiot "Troopship", '
+        + '"Sinking" ja "Inquiries". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi President Coolidge upposi?',
+        vaihtoehdot: [
+          'Japanilainen sukellusvene torpedoi sen',
+          'Se ajoi omien miinojen päälle, koska miinatiedot puuttuivat ohjeista',
+          'Se paloi konehuoneen tulipalossa',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Erromangon saari, Tafean maakunta.
+     * Lähde: en.wikipedia.org: Erromango
+     */
+    {
+      id: 'erromangon-santelipuu',
+      otsikko: 'Erromango — santelipuu, taudit ja työvoimakauppa',
+      nimio: 'Erromango',
+      vuosi: '1825–1906',
+      paikka: 'Erromangon saari, Tafea',
+      lat: -18.8139, lon: 169.1228,
+      kortti: 'Kiinassa arvostettu tuoksupuu toi saarelle laivan toisensa jälkeen, ja '
+        + 'mukana tuli tauteja, joihin saarelaisilla ei ollut vastustuskykyä. Kun puu '
+        + 'loppui, alkoi toinen kauppa.',
+      teksti: 'Kauppias ja seikkailija Peter Dillon sai 1825 tietää Erromangon suurista '
+        + 'santelipuuvarannoista; puuta arvostettiin Kiinassa tuoksuöljyn ja veistotyön '
+        + 'vuoksi. Tieto levisi, ja saarelle tuli muitakin hyödyntäjiä, mistä seurasi '
+        + 'yhteenottoja saarelaisten ja kauppiaiden välillä.\n\n'
+        + 'Vuonna 1830 Havaijin kuningas Kamehameha III lähetti kaksi laivaa ja 479 '
+        + 'havaijilaista ottamaan saaren ja sen santelipuun haltuunsa. Toinen aluksista '
+        + 'räjähti vahingossa ankkurissa, kun ruutivarasto syttyi, ja mukana kuoli '
+        + 'retkikunnan johtaja Boki. Erromangolaiset vastustivat tulijoita voimalla, ja '
+        + 'tuotu tautiepidemia tappoi suurimman osan tongalaisista ja havaijilaisista '
+        + 'työntekijöistä sekä monta saarelaista; Havaijille pääsi palaamaan vain 20 '
+        + 'miestä.\n\n'
+        + 'Saaren väkiluku ennen eurooppalaiskontaktia arvioidaan 5 000:ksi, joidenkin '
+        + 'arvioiden mukaan jopa 20 000:ksi. Tuodut taudit tekivät tuhoa: isorokkoon '
+        + 'kuoli 1853 kuusikymmentä prosenttia erromangolaisista, ja 1861 seurasi '
+        + 'tuhkarokkoepidemia. Lähetyssaarnaajat syyttivät epidemioista '
+        + 'santelipuukauppiaita, ja saarelaiset kostivat surmaamalla lähetyssaarnaajia; '
+        + 'kaikkiaan heitä kuoli saarella kuusi.\n\n'
+        + 'Santelipuu oli loppuun käytetty 1865. Vuosina 1863–1906 noin 40 000 ihmistä '
+        + 'silloisilta Uusilta Hebrideiltä vietiin laivoilla pakkotyöhön Queenslandin '
+        + 'puuvilla- ja sokeriruokoviljelmille ja 10 000 lisää Uuden-Kaledonian '
+        + 'nikkelikaivoksiin sekä Fidžin, Samoan ja Havaijin viljelmille. Osa houkuteltiin '
+        + 'mukaan petoksella, osa pakotettiin, osa lähti vapaaehtoisesti. '
+        + 'Erromangolaisten tarkkaa määrää ei tiedetä, mutta 25 vuotta sen jälkeen kun '
+        + 'kauppa päättyi 1906, saaren väkiluku oli enää 381.',
+      lahde: 'en-Wikipedia "Erromango", osiot "The sandalwood trade", "Introduced diseases '
+        + 'and depopulation" ja "The labour trade and blackbirding". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka moni ihminen vietiin Uusilta Hebrideiltä pakkotyöhön '
+          + 'Queenslandiin vuosina 1863–1906?',
+        vaihtoehdot: [
+          'Noin 40 000',
+          'Noin 400',
+          'Noin 4 000',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
 };
