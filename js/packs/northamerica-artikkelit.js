@@ -653,4 +653,133 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'suuntaan 225 000. Casco Viejon ydin, San Felipen '
       + 'kaupunginosa, on nykyään kaupungin tiheimmin asuttu.',
   },
+  /* DENVER (Opus 6.9.2026, paketti O9). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain denver); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-denver.md ja
+   * tarkistus-denver.md. Avain on kaupungin wiki-nimi (js/packs/
+   * northamerica.js: 'Denver'), joka on tässä sama kuin näyttönimi.
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026
+   * ("Denver", "History of Denver", "Kansas Pacific Railway",
+   * "Pike's Peak gold rush").
+   *
+   * TARKISTUKSEN KORJAUKSET ON TEHTY: kultalöytö on heinäkuulta 1858
+   * (tarkempi lähde) eikä marraskuulta, ja rautatiestä kerrotaan
+   * molemmat päivämäärät — Denver Pacific 24.6.1870 Cheyennestä ja
+   * Kansas Pacific elokuussa 1870 idästä.
+   *
+   * PILARI 1: seudun alkuperäiskansat mainitaan ennen kaupungin
+   * perustamista. Mailin korkeuden luvut (5 280 jalkaa,
+   * 1 564-1 734 m) ovat laudan visan ja saapumiskortin omia faktoja
+   * (northamerica-questions.js ja northamerica-saapumiset.js), ja
+   * niitä toistetaan tässä vain sen verran kuin johdatus vaatii. */
+  Denver: {
+    intro: 'Denver on Coloradon pääkaupunki ja Kalliovuorten '
+      + 'itälaidan suurin kaupunki. Se seisoo Front Rangen '
+      + 'kaupunkikäytävän keskellä, vuoriston ja itäisten '
+      + 'ylätasankojen välissä, ja keskustan liikekortteli on noin '
+      + 'yhdeksäntoista kilometrin päässä vuorten juurelta. Kaupungin '
+      + 'lempinimi **Mile High City** ei ole kielikuva: korkeus on '
+      + 'tasan yksi maili merenpinnasta.'
+      + '\n\n'
+      + 'Ennen kaupunkia seutu oli apassien, utejen, tšeijennien, '
+      + 'comanchejen ja arapahojen maata. Kesällä 1858 löydetty kulta '
+      + 'toi ryntäyksen, ja marraskuussa samana vuonna maakeinottelijat '
+      + 'merkitsivät valtauksen South Platten ja Cherry Creekin '
+      + 'yhtymäkohdan yläpuolelle. Paikka nimettiin Kansasin '
+      + 'territoriokuvernöörin James W. Denverin mukaan — mies oli '
+      + 'kuitenkin jo ehtinyt erota virastaan.'
+      + '\n\n'
+      + 'Kaupungin pelasti rautatie. Mannertenvälinen rata vedettiin '
+      + 'Cheyennen kautta sata mailia pohjoisempaa, joten '
+      + 'denveriläiset rakensivat oman yhteytensä: ensimmäinen juna '
+      + 'saapui kesäkuussa 1870 ja Kansasin suunnalta elokuussa. '
+      + '1870-luvulla rata toi arviolta **sata uutta asukasta '
+      + 'päivässä**.',
+    teksti: 'Denver on Yhdysvaltain ainoa osavaltion pääkaupunki, '
+      + 'joka on yhdistetty kaupunki ja kunta. Se syntyi tässä '
+      + 'muodossa 1.12.1902, kun kaupunki erotettiin Arapahoen ja '
+      + 'Adamsin piirikunnista. Territorion pääkaupunki Denver oli '
+      + 'ollut jo vuodesta 1867, Colorado liittyi unioniin 1876 ja '
+      + 'pysyväksi pääkaupungiksi Denver vahvistettiin '
+      + 'kansanäänestyksellä 1881.'
+      + '\n\n'
+      + 'Ilmasto on viileä puolikuiva: kosteus on matala, aurinkoa on '
+      + 'noin 3 100 tuntia vuodessa ja vuorokauden lämpötilavaihtelu '
+      + 'on suuri läpi vuoden. Heinäkuu on lämpimin ja joulukuu '
+      + 'kylmin; talvella lumijaksot vuorottelevat chinook-tuulen '
+      + 'leutojen jaksojen kanssa. Kaupungin virallinen sääasema on '
+      + 'lentokentällä noin kolmenkymmenen kilometrin päässä '
+      + 'keskustasta, ja mittauspaikasta on kiistelty.'
+      + '\n\n'
+      + 'Denverissä on yli kaksisataa puistoa, ja niiden lisäksi '
+      + 'kaupunki omistaa noin 14 000 eekkeriä vuoristopuistoja '
+      + 'Kalliovuorten rinteillä — tunnetuimpana Red Rocks Park '
+      + 'amfiteattereineen. Historiallisia lempinimiä ovat myös '
+      + 'Queen City of the Plains ja Queen City of the West, jotka '
+      + 'muistuttavat sen asemasta itäisten ylätasankojen '
+      + 'maatalouden keskuksena.',
+  },
+  /* HOUSTON (Opus 6.9.2026, paketti O9). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain houston); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-houston.md ja
+   * tarkistus-houston.md. Avain on kaupungin wiki-nimi (js/packs/
+   * northamerica.js: 'Houston'). Väitteet on luettu en-Wikipedian
+   * raakateksteistä 6.9.2026 ("Houston", "History of Houston",
+   * "Buffalo Bayou", "Houston Ship Channel", "Johnson Space Center").
+   *
+   * TARKISTUKSEN KORJAUKSET ON TEHTY: veljesten maakaupasta kerrotaan
+   * hinta eikä pinta-ala (he ostivat puolet 2 214 eekkerin
+   * palstasta), ja Kuun pinnalta radioitua lausetta ei siteerata,
+   * koska sitä ei ole luetuissa artikkeleissa sanatarkasti.
+   *
+   * PILARI 1: karankawat ja atakapat mainitaan ennen uudisasukkaita,
+   * ja atakapojen oma nimi Ishak kerrotaan. Orjuus todetaan suoraan
+   * lukuna ilman yksityiskohtien korostusta (spec-mantereet.md,
+   * USA-linjaus). NASA-faktat (kutsumerkki, Space City) ovat myös
+   * laudan visan omia (northamerica-questions.js), mutta ne kuuluvat
+   * kaupungin ytimeen eikä niitä voi ohittaa. */
+  Houston: {
+    intro: 'Houston on Texasin suurin kaupunki ja koko Yhdysvaltain '
+      + 'neljänneksi suurin. Se on rakennettu Meksikonlahden '
+      + 'rannikkotasangolle noin kahdeksankymmenen kilometrin päähän '
+      + 'merestä, ja sen läpi kulkee neljä suurta puroa. Keskusta on '
+      + 'vain viitisentoista metriä merenpinnan yläpuolella. Maalla '
+      + 'asuivat karankawat ja atakapat vähintään kaksituhatta vuotta '
+      + 'ennen ensimmäisiä tunnettuja uudisasukkaita; atakapat '
+      + 'kutsuivat itseään nimellä **Ishak**, "ne ihmiset".'
+      + '\n\n'
+      + 'Kaupunki myytiin ennen kuin sitä oli olemassa. Veljekset '
+      + 'Augustus ja John Kirby Allen ostivat elokuussa 1836 maata '
+      + 'Buffalo Bayoun varrelta ja julkaisivat neljä päivää '
+      + 'myöhemmin lehti-ilmoituksen kaupungista, jonka he nimesivät '
+      + 'Sam Houstonin mukaan. Vuoden 1837 alussa paikalla asui noin '
+      + 'tusina ihmistä, toukokuussa jo puolitoista tuhatta.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Houston oli puuvillan viennin '
+      + 'kauppa- ja rautatiekeskus. Öljyä ei vielä ollut: '
+      + 'Spindletopin löytö tuli 1901 ja avaruuskeskus vasta '
+      + '1960-luvulla. Nykyään kaupungin lempinimi on **Space City**, '
+      + 'ja NASAn lennonjohdon kutsumerkki on Houston.',
+    teksti: 'Houston sijaitsee 266 kilometriä Austinista itään ja 400 '
+      + 'kilometriä Dallasista etelään. Suurin osa kaupungista on '
+      + 'lahden rannikkotasangolla, ja maaperä on savea, savista '
+      + 'liusketta ja heikosti sementoitunutta hiekkaa useiden '
+      + 'kilometrien syvyyteen. Sedimenttien alla on vuorisuolaa, '
+      + 'joka on työntynyt ylös kupoleiksi ja vanginnut öljyn ja '
+      + 'kaasun — juuri se teki seudusta öljyteollisuuden keskuksen.'
+      + '\n\n'
+      + 'Houston on Yhdysvaltain suurin kaupunki ilman '
+      + 'kaavoituslakia, ja äänestäjät hylkäsivät erillisten asuin- '
+      + 'ja liikealueiden perustamisen kolmesti: 1948, 1962 ja 1993. '
+      + 'Siksi kaupungissa ei ole yhtä liikekeskustaa vaan useita '
+      + 'erillisiä keskittymiä, joilla kullakin on oma siluettinsa. '
+      + 'Keskustan rakennukset yhdistää yhdentoista kilometrin '
+      + 'ilmastoitu tunneli- ja kävelysiltaverkosto.'
+      + '\n\n'
+      + 'Kaupunki on hyvin kansainvälinen: Greater Houstonin alueella '
+      + 'asuu arviolta 1,1 miljoonaa ulkomailla syntynyttä eli 21,4 '
+      + 'prosenttia väestöstä, ja kaupungissa on maan kolmanneksi '
+      + 'suurin konsulaattikeskittymä, 92 maata. Suurin vuotuinen '
+      + 'tapahtuma on maaliskuinen karjanäyttely ja rodeo.',
+  },
 };

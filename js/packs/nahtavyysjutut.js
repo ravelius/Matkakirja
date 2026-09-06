@@ -41281,4 +41281,599 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * DENVERIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 6.9.2026, paketti
+   * O9). Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.denver, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 6.9.2026
+   * (artikkelit "Coors Field", "Daniels & Fisher Tower", "Denver
+   * Performing Arts Complex", "Brown Palace Hotel (Denver)",
+   * "Cathedral Basilica of the Immaculate Conception (Denver)",
+   * "Denver Art Museum", "Molly Brown House" ja "Denver Botanic
+   * Gardens").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat tšeijennit ja arapahot, vuoden 1858 kultalöytö, rautatien
+   * tulo 1870 ja mailin merkki osavaltiotalon portaissa; teemasivu
+   * kertoo Front Rangesta, ohuesta ilmasta, Red Rocksista ja
+   * puistoista. Yksikään kartan kahdeksasta kohteesta ei ole niiden
+   * aihe. Lähimpänä on Coors Field, jonka ohut ilma sivuaa teemasivun
+   * nostoa L2 — juttu kertoo kuitenkin pallon lentoradasta ja
+   * kosteuskaapista, joita lehti ei käsittele lainkaan.
+   *
+   * KOLME FAKTAPOHJAN KOHDETTA JÄI POIS 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-denver.md, kohta E): Denver Public Library, Byers–Evans
+   * House ja Denver Civic Center. Ne mainitaan matkaoppaan jaksossa 2.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 900 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * denver-lohkossa eikä matkakirjan valokuvataulussa.
+   */
+  denver: {
+    'Coors Field': {
+      aika: '1995',
+      teksti: 'Coors Field avattiin 1995, ja se on Colorado Rockiesin '
+          + 'kotikenttä LoDon vanhassa varastokorttelissa. Kenttä on '
+          + 'noin 5 200 jalan eli runsaan 1 580 metrin korkeudessa ja '
+          + 'siten ylivoimaisesti korkein pesäpallostadion pääsarjassa: '
+          + 'seuraavaksi korkein, Chase Field Phoenixissa, on 1 100 '
+          + 'jalassa.'
+          + '\n\n'
+          + 'Suunnittelijat tiesivät jo etukäteen, että ohut ilma '
+          + 'kantaa palloa pidemmälle kuin muualla. Siksi ulkokentän '
+          + 'aidat vedettiin poikkeuksellisen kauas kotipesästä, ja '
+          + 'niin syntyi pääsarjan suurin ulkokenttä. Se ei silti '
+          + 'riittänyt: vuosikausia Coors Fieldillä lyötiin sekä eniten '
+          + 'kunnareita että — juuri sen suuren kenttäalan takia — '
+          + 'eniten kakkos- ja kolmoslyöntejä koko sarjassa.'
+          + '\n\n'
+          + 'Ratkaisu oli lopulta kosteuskaappi. Toukokuun 15. päivänä '
+          + '2002 pallot alettiin säilyttää ennen ottelua kosteammassa '
+          + 'tilassa, jotta ne eivät kuivuisi ohuessa ilmassa. Kentän '
+          + 'kuuluisin katsomonosa on Rockpile, jonka takimmainen rivi '
+          + 'on 600 jalan päässä kotipesästä — kauimpana kuin '
+          + 'yhdelläkään pääsarjan stadionilla.',
+      kuvat: [
+        {
+          tiedosto: 'Coors Field (23307824413).jpg',
+          selite: 'Kentän kaarevan sisäänkäynnin yllä lukee '
+            + 'stadionin nimi tiiliholvissa.',
+          lahde: 'Paul Sableman, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Daniels & Fisherin torni': {
+      aika: '1910',
+      teksti: 'Daniels & Fisherin torni rakennettiin 1910 osaksi '
+          + 'samannimistä tavarataloa. Valmistuessaan se oli korkein '
+          + 'rakennus Mississippi-joen ja Kalifornian välillä: 325 '
+          + 'jalkaa eli 99 metriä. Arkkitehti Frederick Sterner otti '
+          + 'mallin Venetsian Pyhän Markuksen aukion kellotornista, ja '
+          + 'kahdenkymmenen kerroksen tornissa on kellotaulu kaikilla '
+          + 'neljällä sivulla.'
+          + '\n\n'
+          + 'Kello sai äänensä 30. maaliskuuta 1911, kun ylimpiin '
+          + 'kahteen kerrokseen asennettiin 5 500 naulan painoinen '
+          + 'pronssikello. Sen valoi McShane Bell Company '
+          + 'Baltimoressa; kello oli kuusi jalkaa korkea ja viisi ja '
+          + 'puoli jalkaa leveä, ja sen 150 naulan kieleen kytkettiin '
+          + 'sähkömoottori, joka soitti tasatunnit. Kylkeen valettiin '
+          + 'lahjoittajien nimet.'
+          + '\n\n'
+          + 'Tornilla on myös oma kaupunkitarinansa. Kesäkuun 22. '
+          + 'päivänä 1918 Jack Williams, jota kutsuttiin '
+          + 'ihmiskärpäseksi, kiipesi jalustalta lipputangon huippuun '
+          + 'kolmessakymmenessäkahdeksassa minuutissa. Tavaratalo on '
+          + 'purettu aikoja sitten, mutta torni jäi jäljelle ja seisoo '
+          + 'nyt 16th Street Mallin kävelykadun varrella.',
+      kuvat: [
+        {
+          tiedosto: 'Clock Tower D & F.JPG',
+          selite: 'Kampanilemainen torni nousee kävelykadun aukion '
+            + 'yli kellotauluineen.',
+          lahde: 'Natkarch2, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Esittävän taiteen keskus': {
+      aika: '1979',
+      teksti: 'Denverin esittävän taiteen keskus on yksi Yhdysvaltain '
+          + 'suurimmista: neljän korttelin ja kahdentoista eekkerin '
+          + 'alue, jolla on kymmenen esiintymistilaa ja yli '
+          + 'kymmenentuhatta paikkaa. Tilat yhdistää kahdeksankymmenen '
+          + 'jalan eli parinkymmenen metrin korkuinen lasikatto, jonka '
+          + 'alla kuljetaan salista toiseen sateeltakin suojassa.'
+          + '\n\n'
+          + 'Denverin kaupunki omistaa ja hoitaa kolme suurinta '
+          + 'salia: Ellie Caulkinsin oopperatalon, Temple Hoyne '
+          + 'Buellin teatterin ja Boettcherin konserttisalin. Helen '
+          + 'Bonfilsin teatterikokonaisuutta hallinnoi Denver Center '
+          + 'for the Performing Arts. Alueella on siis kaupungin ja '
+          + 'säätiön tiloja rinnakkain.'
+          + '\n\n'
+          + 'Vakituisia esiintyjiä ovat Colorado Ballet, Colorado '
+          + 'Symphony ja Opera Colorado sekä Denver Centerin omat '
+          + 'teatteriryhmät. Ohjelmistossa on ammattiteatteria, '
+          + 'Broadway-kiertueita, nykytanssia ja balettia, kuoroja, '
+          + 'sinfoniakonsertteja, oopperaa ja popkonsertteja — usein '
+          + 'samana iltana eri saleissa.',
+      kuvat: [
+        {
+          tiedosto: 'Denver Performing Arts Complex.jpg',
+          selite: 'Lasiholvi kaartuu salien välisen kulkuaukion yli '
+            + 'kuin katettu katu.',
+          lahde: 'Onetwo1 at en.wikipedia, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Brown Palace -hotelli': {
+      aika: '1892',
+      teksti: 'Brown Palace rakennettiin 1892 hiekkakivestä ja '
+          + 'punaisesta graniitista, ja se on Denverin toiseksi '
+          + 'pisimpään toiminut hotelli. Nimi ei tule väristä vaan '
+          + 'ensimmäisestä omistajasta Henry C. Brownista, joka oli '
+          + 'ottanut haltuunsa Capitol Hillin alueen. Talo on '
+          + 'kolmiomainen, koska tontti on kolmen kadun välissä.'
+          + '\n\n'
+          + 'Suunnittelija oli Frank Edbrooke, ja rakennusta pidetään '
+          + 'hänen töidensä parhaiten säilyneenä esimerkkinä sekä '
+          + 'sisältä että ulkoa. Se on myös yksi maailman '
+          + 'ensimmäisistä atrium-hotelleista: huoneet kiertävät '
+          + 'kerroksittain avointa keskusaulaa, jonka yli kaartuu '
+          + 'lasikatto.'
+          + '\n\n'
+          + 'Runko tehtiin raudasta ja teräksestä ja verhoiltiin '
+          + 'sementillä ja hiekkakivellä. Scientific American '
+          + 'kirjoitti 21. toukokuuta 1892 kansijutussaan talon '
+          + 'olevan yksi Amerikan ensimmäisiä palonkestäviä '
+          + 'rakennuksia. Valmistuessaan se oli Denverin korkein '
+          + 'rakennus, ja se on yhä käytössä hotellina.',
+      kuvat: [
+        {
+          tiedosto: 'Brown Palace Hotel Denver CO.jpg',
+          selite: 'Kolmiomainen hiekkakivitalo täyttää koko korttelin '
+            + 'kärjen kolmen kadun välissä.',
+          lahde: 'Hustvedt, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Katedraalibasilika': {
+      aika: '1912',
+      teksti: 'Denverin katolinen katedraali seisoo Logan Streetin ja '
+          + 'Colfax Avenuen kulmassa North Capitol Hillin '
+          + 'kaupunginosassa, ja siihen mahtuu 895 ihmistä. '
+          + 'Rakentaminen alkoi 1901 ja valmistui vasta 1911; kirkko '
+          + 'vihittiin 1912. Paavi korotti sen pikkubasilikaksi 1979.'
+          + '\n\n'
+          + 'Kaupungin ensimmäinen katolinen kirkko oli St Mary’s, '
+          + 'joka rakennettiin 1860 nykyisten 15. ja Stout-katujen '
+          + 'kulmaan. Ikkunoihin ei saatu lasia, joten pappi naulasi '
+          + 'aukkojen eteen purjekangasta. Kun paavi Pius IX perusti '
+          + '1868 Coloradon ja Utahin apostolisen vikariaatin, St '
+          + 'Mary’sista tuli sen ensimmäinen katedraali — mutta '
+          + '1870-luvun kasvu vaati jo suurempaa kirkkoa.'
+          + '\n\n'
+          + 'Kivi on osoittautunut vaativaksi. Huhtikuussa 2016 '
+          + 'julkisivusta irtosi iso lohkare pääsisäänkäynnin '
+          + 'portaille. Tarkastuksessa löytyi lukuisia halkeamia ja '
+          + 'laastia menettäneitä saumoja, ja moni koristeveistos oli '
+          + 'niin epävakaa, että se piti irrottaa. Korjaus maksoi 4,4 '
+          + 'miljoonaa dollaria ja kesti vuoden.',
+      kuvat: [
+        {
+          tiedosto: 'Revised twin spires, Immaculate Conception Cathedral, Denver IMG 5612.JPG',
+          selite: 'Kaksi valkoista kaksoistornia kohoaa puiden yli '
+            + 'kirkkaalle taivaalle.',
+          lahde: 'Billy Hathorn, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Denverin taidemuseo': {
+      aika: '1893',
+      teksti: 'Museon juuret ovat 1893 perustetussa Denver Artists '
+          + 'Clubissa. Yhdistys muutti nimensä 1917 ja avasi '
+          + 'ensimmäiset galleriansa kaupungintalossa; nykyinen nimi '
+          + 'otettiin käyttöön 1923. Kokoelmassa on yli 70 000 teosta, '
+          + 'ja museo on yksi suurimmista länsirannikon ja Chicagon '
+          + 'välillä. Se tunnetaan erityisesti Amerikan '
+          + 'alkuperäiskansojen taiteen kokoelmastaan.'
+          + '\n\n'
+          + 'Vanhempi rakennus, nykyinen Martin Building, valmistui '
+          + '1971. Sen suunnitteli italialainen modernisti Gio Ponti '
+          + 'yhdessä paikallisen toimiston kanssa, ja se on Pontin '
+          + 'ainoa Yhdysvaltoihin valmistunut talo. Seitsenkerroksisen '
+          + 'linnamaisen rakennuksen julkisivussa on 24 sivua ja yli '
+          + 'miljoona heijastavaa lasilaattaa.'
+          + '\n\n'
+          + 'Toinen puoli museosta on Frederic C. Hamilton Building, '
+          + 'jonka Studio Daniel Libeskind suunnitteli yhdessä '
+          + 'denveriläisen toimiston kanssa. Lasi- ja titaanivuorattu '
+          + 'talo avattiin 7. lokakuuta 2006, se kaksinkertaisti '
+          + 'museon koon ja oli Libeskindin ensimmäinen valmistunut '
+          + 'rakennus Yhdysvalloissa.',
+      kuvat: [
+        {
+          tiedosto: 'Denver Art Museum (54940696014).jpg',
+          selite: 'Museon lasinen vastaanottorotunda kaartuu kadun '
+            + 'kulmassa vanhemman siiven vieressä.',
+          lahde: 'Daniel Hartwig, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Molly Brownin talo': {
+      aika: '1889',
+      teksti: 'Pennsylvania Streetin varrella seisova talo '
+          + 'rakennettiin 1889 Isaac ja Mary Largen kodiksi. '
+          + 'Arkkitehti William A. Lang yhdisti siinä aikakauden '
+          + 'muotivirtaukset, kuningatar Annen tyylin ja '
+          + 'richardsonilaisen romaanisen tyylin. Kun hopean hinta '
+          + 'romahti 1893, Larget myivät talon; sen osti seuraavana '
+          + 'vuonna kaivosmies J. J. Brown 30 000 dollarilla, ja 1898 '
+          + 'omistus siirtyi hänen vaimolleen Margaretille.'
+          + '\n\n'
+          + 'Margaret Brown selvisi Titanicin haaksirikosta ja '
+          + 'tunnettiin sen jälkeen nimellä Unsinkable Molly Brown. '
+          + 'Talo oli usein vuokralla, koska perhe matkusti paljon: '
+          + 'vuonna 1902 siinä asui Coloradon kuvernööri perheineen, '
+          + 'kun virka-asuntoa remontoitiin. Vuonna 1926 Margaret '
+          + 'muutti talon täysihoitolaksi, ja hänen kuolemansa jälkeen '
+          + 'se myytiin 1932 kuudellatuhannella dollarilla.'
+          + '\n\n'
+          + 'Talo rapistui vuosikymmeniä, ja 1970 sen purkaminen '
+          + 'näytti todennäköiseltä. Silloin joukko kaupunkilaisia '
+          + 'perusti Historic Denver -yhdistyksen ja keräsi varat '
+          + 'kunnostukseen. Työssä käytettiin arkkitehtuuritutkimusta, '
+          + 'maalikerrosten analyysia ja vuoden 1910 valokuvia. '
+          + 'Museona talo on toiminut vuodesta 1971.',
+      kuvat: [
+        {
+          tiedosto: 'Mollybrownhouse.JPG',
+          selite: 'Punaisen hiekkakiven ja vaalean kiven yhdistelmä '
+            + 'ja torniaiheinen kulma erottavat talon katukuvassa.',
+          lahde: 'Onetwo1 at English Wikipedia, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kasvitieteellinen puutarha': {
+      aika: '1951',
+      teksti: 'Denverin kasvitieteellinen puutarha perustettiin 1951 '
+          + 'Cheesman Parkin naapuriin. Paikalla oli aiemmin Prospect '
+          + 'Hillin hautausmaa: valtaosa vainajista siirrettiin pois '
+          + '1893, mutta siirtoja tehtiin vielä 1950-luvulla, ja niin '
+          + 'myöhään kuin 2008 kasteluputkia uusittaessa löytyi lisää '
+          + 'hautoja.'
+          + '\n\n'
+          + 'Puutarhan erikoisuus on Pohjois-Amerikan laajin kokoelma '
+          + 'viileän lauhkean vyöhykkeen kasveja eri puolilta '
+          + 'maailmaa. Sen lisäksi seitsemän puutarhaa esittelee '
+          + 'Coloradon ja naapurivaltioiden omaa kasvillisuutta. '
+          + 'Maailman ensimmäinen kuivapuutarhan mallialue avattiin '
+          + 'täällä 1986, ja kahta vuotta myöhemmin se sai nimen '
+          + 'Dryland Mesa.'
+          + '\n\n'
+          + 'Boettcherin trooppinen kasvihuone oli Amerikan '
+          + 'ensimmäinen kokonaan betonista ja pleksilasista tehty '
+          + 'kasvihuone. Jokainen ruutu suunniteltiin ohjaamaan '
+          + 'tiivistyvä kosteus seinille, jottei se tipu kävijöiden '
+          + 'niskaan. Rakennus sai maamerkkiaseman 1973.',
+      kuvat: [
+        {
+          tiedosto: 'Boettcher Memorial Tropical Conservatory West Entrance.jpg',
+          selite: 'Kasvihuoneen sisällä polku kiertää palmujen ja '
+            + 'viuhkalehtien läpi keskellä puolikuivaa kaupunkia.',
+          lahde: 'XxTechnicianxX, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * HOUSTONIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 6.9.2026, paketti
+   * O9). Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.houston, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä tai
+   * laajennusrajapinnasta 6.9.2026 (artikkelit "Market Square Park",
+   * "Buffalo Bayou Park", "Sam Houston Park", "Julia Ideson
+   * Building", "Daikin Park", "George R. Brown Convention Center",
+   * "Menil Collection" ja "Hermann Park").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat ishakit ja karankawat, Allenin veljesten kaupunkikauppa
+   * 1836, vuoden 1873 puuvilla ja radat sekä laivaväylä; teemasivu
+   * kertoo suolakupoleista, Spindletopista, avaruuskeskuksesta ja
+   * tulvista. Yksikään kartan kahdeksasta kohteesta ei ole niiden
+   * aihe. Lähimpänä on Market Squaren puisto, joka sivuaa kaupungin
+   * perustamista — juttu kertoo kuitenkin neljästä peräkkäisestä
+   * kauppahallista ja kaupungintalosta, joita lehti ei mainitse.
+   *
+   * KOHDELISTAN KAHDEKSAS VAIHDETTIIN KUVASYYSTÄ: faktapohja ehdotti
+   * kuvataiteen museota, mutta sen kaikissa Commonsin
+   * julkisivukuvissa on joko iso jäsenhankintabanderolli tai
+   * tunnistettava henkilö. Tilalle Hermann Park samassa
+   * museokorttelissa (Panamán ennakkotapaus, ks. tarkistus-houston.md
+   * kohta G).
+   *
+   * YKSI RISTIRIITA KIRJOITETTIIN AUKI: "Market Square Park" sanoo
+   * vuoden 1873 kaupungintalon palaneen 8.7.1976, mutta saman
+   * artikkelin mukaan uuden rakentaminen alkoi jo 1876 — vuosiluku
+   * on ilmeinen lyöntivirhe. Juttu kertoo siksi vain, että talo paloi
+   * ja uusi aloitettiin 1876, eikä väitä palolle päivämäärää.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 900 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * houston-lohkossa eikä matkakirjan valokuvataulussa.
+   */
+  houston: {
+    'Market Squaren puisto': {
+      aika: '1854',
+      teksti: 'Kaupungin alkuperäisessä mittauksessa tämä kortteli sai '
+          + 'nimen Congress Square. Se vaihtui Market Squareksi, kun '
+          + 'Augustus Allen valitsi 1837 parlamenttitalon paikaksi '
+          + 'Main Streetin ja Texas Avenuen luoteiskulman. Kaupungin '
+          + 'valtuusto tilasi 1840 aukiolle ensimmäisen kauppahallin ja '
+          + 'ensimmäisen kaupungintalon, ja urakoitsija sai molemmat '
+          + 'valmiiksi seuraavana vuonna.'
+          + '\n\n'
+          + 'Allen lahjoitti aukion kaupungille 1854, ja siitä tuli '
+          + 'avoin torikauppapaikka. Se oli aivan Allenin '
+          + 'maihinnousupaikan eli kaupungin ensimmäisen sataman '
+          + 'vieressä, ja liikekeskusta kasvoi torin ympärille. '
+          + 'Kaupungintaloja nousi ja paloi tälle samalle korttelille '
+          + 'useita peräkkäin.'
+          + '\n\n'
+          + 'Pormestari Thomas Scanlan kiersi 1871 itärannikkoa '
+          + 'katsomassa muiden kaupunkien kaupungintaloja, ja Houston '
+          + 'palkkasi Charles E. Hoaren suunnittelemaan italialaistyylisen '
+          + 'talon, jossa oli virastoja, myyntikojuja ja teatteri. Se '
+          + 'valmistui 1873 ja maksoi 400 000 dollaria — mutta paloi, ja '
+          + 'uuden rakentaminen alkoi jo 1876. Neljäs kaupungintalo '
+          + 'valmistui 1904.',
+      kuvat: [
+        {
+          tiedosto: 'Market Square Park.jpg',
+          selite: 'Puiston kukkapenkkien takana kahvilapaviljonki ja '
+            + '1800-luvun talot rajaavat vanhaa toriaukiota.',
+          lahde: 'Brian Reading, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Buffalo Bayoun puisto': {
+      aika: '2015',
+      teksti: 'Buffalo Bayoun puisto on 2,3 mailia eli runsaat kolme ja '
+          + 'puoli kilometriä pitkä nauha puron molemmin puolin aivan '
+          + 'keskustan kupeessa. Pinta-alaa on 160 eekkeriä, ja alue '
+          + 'ulottuu Shepherd Drivelta Sabine Streetille Allen Parkwayn '
+          + 'ja Memorial Driven väliin. Nykyisessä muodossaan se '
+          + 'avattiin 2015.'
+          + '\n\n'
+          + 'Maata alettiin varata puistoksi jo 1900-luvun alussa, ja '
+          + 'kaupunki sai tai osti tontteja puron varrelta '
+          + 'vuosikymmeniä. Rakentaminen pilkkoi alueen kuitenkin '
+          + 'pienemmiksi puistoiksi, kaduiksi ja lopulta '
+          + 'moottoritieksi, ja kun Allen Parkway ja Memorial Drive '
+          + 'reunustivat sitä kahden puolen, jalankulkijan oli vaikea '
+          + 'päästä sinne lainkaan.'
+          + '\n\n'
+          + '1950-luvulla toistuvat tulvat saivat armeijan '
+          + 'insinöörijoukot riisumaan törmät kasvillisuudesta ja '
+          + 'suoristamaan uoman, jotta tulvavesi kulkisi nopeammin '
+          + 'läpi. Hanke epäonnistui: kun puut poistettiin, tilalle '
+          + 'kasvoi pensaikkoa, joka esti virtausta entistä enemmän. '
+          + 'Vuonna 2011 kaupunki sopi Buffalo Bayou Partnershipin '
+          + 'kanssa 50 miljoonan dollarin kunnostuksesta.',
+      kuvat: [
+        {
+          tiedosto: 'Houston May 2022 12 (Buffalo Bayou Park).jpg',
+          selite: 'Puron mutka kaartaa metsäisten törmien välissä ja '
+            + 'oikealla kulkee puiston kävelytie.',
+          lahde: 'Michael Barera, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sam Houstonin puisto': {
+      aika: '1899',
+      teksti: 'Sam Houstonin puisto on Houstonin ensimmäinen puisto ja '
+          + 'omistettu kaupungin menneisyyden rakennuksille ja '
+          + 'kulttuurille. Pormestari Samuel H. Brashear nimitti 1899 '
+          + 'kaupungin ensimmäisen puistokomitean valmistelemaan '
+          + 'hanketta, ja puisto kehitettiin maalle, jonka hän osti '
+          + 'seuraavana vuonna kolmelta eri omistajalta.'
+          + '\n\n'
+          + 'Kaksikymmentä eekkeriä muotoiltiin viktoriaaniseksi '
+          + 'kyläksi: polut kulkivat vanhan myllyn ohi ja pikkupuron '
+          + 'ylittävän sillan yli, ja alueelle rakennettiin '
+          + 'soittolava, paviljonki ja kasvihuone. Kaupungininsinööri '
+          + 'John Maxey laati alkuperäisen suunnitelman, johon kuului '
+          + 'myös ajotie ja silta puron yli.'
+          + '\n\n'
+          + 'Puistossa oli alusta asti Kellum-Noblen talo, joka oli '
+          + 'siihen mennessä palvellut vuosikymmeniä kouluna. Sen '
+          + 'ympärille on sittemmin siirretty muita 1800-luvun '
+          + 'rakennuksia, ja niistä syntyi kaupungin oma '
+          + 'ulkoilmamuseo — myös George R. Brownin kongressikeskuksen '
+          + 'tieltä siirretty Pillot House tuotiin tänne 1965.',
+      kuvat: [
+        {
+          tiedosto: 'KellumNobleSamHoustonPark.jpg',
+          selite: 'Kellum-Noblen talo seisoo kaksikerroksisine '
+            + 'kuisteineen puiston aidan takana.',
+          lahde: 'WhisperToMe, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Julia Idesonin kirjastotalo': {
+      aika: '1926',
+      teksti: 'Julia Idesonin talo on Houstonin kaupunginkirjaston '
+          + 'vanhin osa. Sen suunnitteli bostonilainen Ralph Adams '
+          + 'Cram, ja se avattiin 1926 espanjalaisrenessanssin '
+          + 'tyylissä. Uusi talo korvasi aiemman Carnegie-kirjaston, '
+          + 'ja vuosina 1926–1976 se oli kaupungin ainoa '
+          + 'pääkirjastorakennus.'
+          + '\n\n'
+          + 'Nimi tulee Julia Bedford Idesonista, joka toimi '
+          + 'kirjastolaitoksen ensimmäisenä ylikirjastonhoitajana '
+          + 'neljäkymmentä vuotta. Kun pääkirjasto muutti 1976 uuteen '
+          + 'rakennukseen, vanha talo jäi tyhjilleen; se avattiin '
+          + 'uudelleen 1979 ja on nykyään arkiston, käsikirjoitusten '
+          + 'sekä Texasin ja paikallishistorian osastojen koti.'
+          + '\n\n'
+          + 'Talossa toimii myös Houston Metropolitan Research Center. '
+          + 'Rakennus liitettiin kansalliseen historiallisten paikkojen '
+          + 'rekisteriin 1977. Paikallinen tarina väittää talon olevan '
+          + 'kirjastonhoitaja Jacob Frank Cramerin ja hänen Petey-'
+          + 'koiransa kummittelema — Houston Chronicle on kertonut '
+          + 'legendasta useaan otteeseen.',
+      kuvat: [
+        {
+          tiedosto: 'Houston Public Library Julia Ideson Building.jpg',
+          selite: 'Vaalea espanjalaisrenessanssin tyylinen julkisivu '
+            + 'kaari-ikkunoineen näkyy puiden lomasta.',
+          lahde: 'Jim Evans, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Astrosin stadion': {
+      aika: '2000',
+      teksti: 'Houston Astrosin kotikenttä avattiin 2000, ja siinä on '
+          + 'sisäänvedettävä katto, luonnonnurmi ja 41 168 paikkaa, '
+          + 'joista 5 197 on klubipaikkoja ja 63 aitiota. Stadion '
+          + 'rakennettiin korvaamaan Astrodome, joka avattiin 1965 ja '
+          + 'oli maailman ensimmäinen katettu pesäpallo- ja '
+          + 'jalkapallostadion.'
+          + '\n\n'
+          + 'Paikka ei ollut tyhjä. Vuonna 1909 Houston Belt and '
+          + 'Terminal Railway tilasi kaupungille uuden rautatieaseman '
+          + 'newyorkilaisilta arkkitehdeiltä Warren and Wetmorelta, '
+          + 'jotka tunnetaan parhaiten Grand Central Terminalista. '
+          + 'Aseman rakentaminen vaati useiden vanhempien rakennusten '
+          + 'purkamista.'
+          + '\n\n'
+          + 'Asema jäi jäljelle. Sen pääaula otettiin stadionin '
+          + 'käyttöön: siitä tehtiin klubitila, kahvila, fanikauppa ja '
+          + 'toimistoja, ja vanha tiilijulkisivu jäi stadionin '
+          + 'pääsisäänkäynniksi. Kenttä on vaihtanut nimeä useasti — '
+          + 'alun perin Enron Field, sitten Astros Field, Minute Maid '
+          + 'Park ja nykyään Daikin Park.',
+      kuvat: [
+        {
+          tiedosto: 'Minute Maid Park - Houston, Texas - DSC01317.JPG',
+          selite: 'Ylhäältä katsottuna kaareva kattoristikko lepää '
+            + 'vanhan rautatieaseman tiilijulkisivun takana.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kongressikeskus': {
+      aika: '1987',
+      teksti: 'George R. Brownin kongressikeskus avattiin 26. '
+          + 'syyskuuta 1987 keskustan itälaidalle. Se on nimetty '
+          + 'insinööri ja liikemies George R. Brownin (1898–1983) '
+          + 'mukaan; hän ja hänen veljensä Herman kasvattivat Brown & '
+          + 'Root -yhtiön maailman suurimmaksi rakennus- ja '
+          + 'insinööritoimistoksi. Brownin perustama Texas Eastern '
+          + 'lahjoitti kuusi niistä yhdestätoista korttelista, joita '
+          + 'rakennus tarvitsi.'
+          + '\n\n'
+          + 'Talo maksoi 104,9 miljoonaa dollaria, sen rakentaminen '
+          + 'kesti kolmekymmentä kuukautta ja siihen tarvittiin yli '
+          + '1 200 työntekijää. Sadan jalan korkuinen punavalkosininen '
+          + 'rakennus korvasi vanhentuneen Albert Thomasin '
+          + 'kongressikeskuksen, joka muutettiin myöhemmin Bayou Place '
+          + '-viihdekeskukseksi teatterikorttelissa.'
+          + '\n\n'
+          + 'Suunnittelija oli John S. Chase, Texasin ensimmäinen '
+          + 'laillistettu mustaihoinen amerikkalainen arkkitehti. '
+          + 'Rakennus seisoo paikalla, jossa oli Pillot House — '
+          + 'ruokakauppaketjun perustajaperheen talo, joka siirrettiin '
+          + '1965 Sam Houstonin puistoon. Ensimmäinen kongressi '
+          + 'pidettiin talossa 11. lokakuuta 1987.',
+      kuvat: [
+        {
+          tiedosto: 'George R. Brown Convention Center - Houston, Texas - DSC01321.JPG',
+          selite: 'Punaiset putkitornit ja siniset ristikot toistuvat '
+            + 'valkoisen rakennuksen koko pituudelta.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Menilin kokoelma': {
+      aika: '1987',
+      teksti: 'Menilin kokoelma on John ja Dominique de Menilin '
+          + 'keräämä taidekokoelma ja sitä varten rakennettu museo. '
+          + 'Sitä on verrattu Yhdysvaltain suuriin yksityismuseoihin: '
+          + 'New Yorkin Frickiin, Bostonin Gardneriin ja Washingtonin '
+          + 'Phillipsiin. Museon perustana on Menil Foundation, joka '
+          + 'perustettiin 1954 edistämään ymmärrystä ja kulttuuria '
+          + 'ennen kaikkea taiteen kautta.'
+          + '\n\n'
+          + 'Renzo Pianon suunnittelema rakennus avattiin yleisölle '
+          + 'kesäkuussa 1987. Kokoelmassa on museon oman ilmoituksen '
+          + 'mukaan yli 25 000 esinettä, mutta esillä on kerrallaan '
+          + 'vain noin viisi prosenttia. Se oli Dominique de Menilin '
+          + 'tietoinen valinta: hän halusi teosten vaihtuvan jatkuvasti, '
+          + 'jotta kävijän kokemus olisi aina uusi.'
+          + '\n\n'
+          + 'Kokoelma ulottuu antiikista nykytaiteeseen. Mukana on '
+          + 'yli 900 afrikkalaista teosta, yli 800 Amerikan '
+          + 'alkuperäiskansojen teosta sekä bysanttilaisia ikoneja ja '
+          + 'keskiaikaista taidetta. Museo on kasvanut korttelin '
+          + 'kokoiseksi kampukseksi, johon kuuluvat myös Cy Twomblyn '
+          + 'galleria, Dan Flavinin valoteosinstallaatio, '
+          + 'bysanttilaisen freskokappelin museo ja piirustusinstituutti.',
+      kuvat: [
+        {
+          tiedosto: 'Menil Collection, Houston, Texas - 20130915-01.JPG',
+          selite: 'Matala harmaa museorakennus kätkeytyy '
+            + 'valkoisten valonohjainristikoiden alle nurmikentän '
+            + 'laitaan.',
+          lahde: 'Jacklee, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hermann Park': {
+      aika: '1914',
+      teksti: 'Hermann Park on 445 eekkerin eli noin 180 hehtaarin '
+          + 'kaupunkipuisto museokorttelin eteläpäässä. Se syntyi '
+          + '1914, kun George H. Hermann — joka omisti suuren osan '
+          + 'alueesta ja istui kaupungin puistolautakunnassa — testamenttasi '
+          + 'maansa Houstonille julkiseksi viheralueeksi. Puiston '
+          + 'suunnitteli maisema-arkkitehti George Kessler.'
+          + '\n\n'
+          + 'Puistossa käy noin kuusi miljoonaa ihmistä vuodessa. '
+          + 'Sen sisällä ovat Houstonin eläintarha ja luonnontieteen '
+          + 'museo, ulkoilmateatteri, japanilainen puutarha ja pitkä '
+          + 'heijastusallas, jonka päässä kohoaa pioneerien '
+          + 'muistomerkin obeliski. Obeliski vihittiin 30. elokuuta '
+          + '1936 San Jacinton satavuotisjuhlien yhteydessä.'
+          + '\n\n'
+          + 'Puiston pohjoispäässä ratsastaa Sam Houstonin '
+          + 'pronssipatsas kaariportin päällä. Se on puiston tunnetuin '
+          + 'maamerkki ja samalla kaupungin nimikkomiehen muistomerkki '
+          + '— sama mies, jonka mukaan Allenin veljekset nimesivät '
+          + 'kaupunkinsa lehti-ilmoituksessa 1836.',
+      kuvat: [
+        {
+          tiedosto: 'Sam Houston Monument in Hermann Park.JPG',
+          selite: 'Ratsastajapatsas seisoo kaariportin päällä puiston '
+            + 'pohjoispäässä kaupungin tornien edessä.',
+          lahde: 'Agsftw, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

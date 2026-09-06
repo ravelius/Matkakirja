@@ -82797,4 +82797,1105 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * DENVER (Opus 6.9.2026, paketti O9) — P-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-denver.md ja sen riippumaton tarkistus
+   * tarkistus-denver.md (tuomio "kelpaa kahden korjauksen jälkeen";
+   * molemmat korjaukset on tehty, ks. alla). Väitteet on luettu
+   * en-Wikipedian raakatekstistä 6.9.2026: "Denver", "History of
+   * Denver", "Kansas Pacific Railway", "Pike's Peak gold rush",
+   * "Red Rocks Amphitheatre", "Colorado State Capitol", "Arapaho",
+   * "Cheyenne".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * koskettu; kummankin faktat (mailin korkeus, kullankaivajien
+   * leiri, Union Depot) sopivat tähän lehteen.
+   *
+   * SIVUJA ON KAKSI kuten Montrealissa, Torontossa ja Cairnsissa
+   * (kaupunki + teemasivu). Teemasivun id on vakioaihe 'luonto',
+   * koska AIHE_IKONIT ei tarjoa vuoristolle omaa kuvaketta eikä
+   * uusia sivu-id:itä tehdä; sivun nimi "Vuoret ja ohut ilma"
+   * kertoo aiheen.
+   *
+   * TARKISTUKSEN MOLEMMAT KORJAUKSET ON TEHTY:
+   *  - K1 sanoo arapahoista KAKSI liittovaltion tunnustamaa
+   *    yhteisöä, ei kolmea: Northern Arapaho Tribe of the Wind River
+   *    Reservation (yhdessä itäisten shoshonien kanssa vuodesta
+   *    1878) ja Cheyenne and Arapaho Tribes Oklahomassa.
+   *  - K2 käyttää kultalöydöstä TARKEMPAA lähdettä ("Pike's Peak
+   *    gold rush": heinäkuun ensimmäinen viikko 1858, Green
+   *    Russellin ryhmä, noin 20 troy-unssia Little Dry Creekin
+   *    suulla) eikä yleisartikkelin karkeaa "marraskuussa 1858"
+   *    -muotoilua. Ristiriita on kirjattu tarkistusraporttiin.
+   *
+   * PILARI 1 JA SPEC-MANTEREET.MD:N LINJAUS 1: alkuperäiskansat
+   * tulevat ensimmäisenä nostona ennen kaupungin perustamista, ja
+   * kansojen OMAT NIMET (Hinono'eino, Tsétsėhéstȧhese) kerrotaan
+   * ennen siirtomaanimiä. Kansat kuvataan elävinä nykypäivän
+   * toimijoina. Sand Creek 1864 kerrotaan tapahtumana yhdellä
+   * neutraalilla virkkeellä ilman yksityiskohtia ja ilman
+   * uhrilukua (pilari 4); lähteen adjektiivia "brutal" ei toisteta,
+   * koska se on arvio eikä tosiasia.
+   *
+   * EI NYKYPOLITIIKKAA: Rocky Flatsin plutoniumsaastuminen, Ku Klux
+   * Klanin nousu 1920-luvulla, Soapy Smithin korruptiokausi ja
+   * vuoden 1972 olympiapäätös on jätetty kokonaan pois, vaikka
+   * lähdeartikkeli käsittelee niitä.
+   *
+   * KAKSI VÄITETTÄ, JOITA EI KIRJOITETA: (1) osavaltiotalon
+   * kultakupolin yhteyttä kultaryntäykseen ei toisteta, koska
+   * en-Wikipedian "Colorado State Capitol" ei sano sitä
+   * (northamerica-valokuvat.js:n vanha kuvateksti ei ole
+   * Wikipedia-katetta); (2) korkeusharjoittelun happifysiologiaa ei
+   * esitetä Wikipedia-katteisena, koska sitä ei ole "Denver"-
+   * artikkelissa — se jää laudan visan oman fact-kentän varaan
+   * (northamerica-questions.js, denver, kysymys 4).
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026 pyyntöön
+   * 429:llä ("Daily API request limit exceeded"), eikä lukuja
+   * keksitä (Samarkand-malli v965) — js/packs/saatiedot.js jää
+   * koskematta ja lehti näkyy ilman säätä kuten Cairnsissa ja
+   * Panamássa. Oppaan sääjakso nojaa siksi en-Wikipedian
+   * Climate-osioon ja sanoo sen ääneen.
+   *
+   * KUVAT haettiin Commonsin API:sta kategoria- ja hakusanahauilla
+   * (Cityscapes of Denver, Aerial photographs of Denver, History of
+   * Denver, Colorado State Capitol, Red Rocks Amphitheatre, Union
+   * Station (Denver), Denver Botanic Gardens, Molly Brown House,
+   * Front Range, Denver International Airport), lisenssi ja tekijä
+   * luettiin extmetadatasta 6.9.2026, ja jokainen valittu kuva
+   * katsottiin silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Denver Union Station - June 2022 - Sarah Stierch
+   * 01.jpg" (iso urheiluseuran mainosbanderolli etualalla — sama
+   * tiedosto on valokuvataulussa, mutta lehteen se ei kelpaa),
+   * "16th Street Mall (10094539945).jpg" ja "16th Street Mall
+   * (10094580263).jpg" (kumpikaan ei esitä 16th Street Mallia:
+   * edellinen on osavaltiotalo remonttiverhossa sponsorikilpineen,
+   * jälkimmäinen aseman katos), "Denver at night.jpg" (venytetty
+   * kalansilmäpanoraama, tummat heijastavat reunat), "Red Rocks
+   * Amphitheatre, Colorado 1.jpg" ja "-24.jpg" (tunnistettavia
+   * kasvoja etualalla), "Red Rock Amphitheatre.jpg" (lavan
+   * rakennustyömaa ja varoitusnauhat), "Denver skyline
+   * (55029503490).jpg" (kuvaus on lahjoituskehotus, kuvan päälle
+   * lisätyn merkinnän riski), "Civic Center Cultural Complex,
+   * Denver.jpg" (näyttelybanderollit), "Highland Bridge, Denver
+   * (55028556586).jpg" (katunäkymä yritystunnuksineen, ei
+   * yleiskuva), "Denver from Cabrini Shrine 2.jpg" (kuvasuhde
+   * 2,5:1 ja kaupunki utuisena täplänä), "Denver Skyline
+   * (6379810343).jpg" ja saman sarjan muut (tekijäksi merkitty
+   * poliittinen järjestö — lähderivi veisi lehden politiikkaan),
+   * "Denver Art Museum Denver Colorado 2024.jpg" (pyöräteline
+   * etualalla peittää julkisivun), "Daniels and Fisher Tower
+   * (55242051522).jpg" (mustavalkoinen yksityiskohta ovikilvestä,
+   * ei tornia) ja "Daniels & FIsher Tower 69000040.jpg"
+   * (tunnistettavia kasvoja alareunassa).
+   *
+   * AIHETOISTO, joka on tarkoituksellinen ja kirjattu: Kalliovuoret
+   * näkyvät sekä kansikuvissa että teemasivun nostoissa, mutta
+   * jokainen kuva on eri tiedosto ja eri paikasta otettu
+   * (Rocky Mountain Arsenalin preeria, Red Rocksin näköalapaikka,
+   * Cherry Creekin kattotaso, Kalliovuorten kansallispuisto).
+   *
+   * ENNEN JA NYT: vanha puoli on Detroit Publishing Companyn
+   * vedos noin vuodelta 1908 (PD) Union Depotin edustalta.
+   * Negatiivin alalaidassa on kustantajan oma litera ja otsikko —
+   * reseptin nimenomainen poikkeus ("julkaisijan oma litera, joka
+   * selitetään kuvatekstissä"), ja kuvateksti kertoo sen. Nykykuva
+   * on sama asema uuden laiturikatoksen alta nähtynä.
+   */
+  denver: [
+    {
+      id: 'kaupunki',
+      nimi: 'Denver',
+      johdanto: 'Denver on preerian ja Kalliovuorten saumassa tasan mailin '
+        + 'korkeudessa. Kulta toi tänne telttakylän 1858, mutta kaupungin '
+        + 'pelasti rautatie: isoisän matkavuonna 1873 rata oli kolme '
+        + 'vuotta vanha ja toi sata uutta asukasta päivässä.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: siluetti
+       * lumihuippujen edessä idästä, sama siluetti lännen kukkuloilta
+       * ja kaupunki preerian takaa.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Silicon Mountain.jpg',
+          selite: 'Denverin siluetti ja sen takana Front Rangen '
+            + 'lumihuiput iltavalossa.',
+          lahde: 'Sheila Sund, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Denver Downtown view from Red Rock Amphitheatre.jpg',
+          selite: 'Lännen kukkuloilta katsottuna keskusta nousee '
+            + 'yksin tasangolta esikaupunkien takaa.',
+          lahde: 'Mitul0520, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Denver Colorado Skyline at Rocky Mountain Arsenal (53658444917).jpg',
+          selite: 'Koillisen preerialta kaupunki näkyy kapeana '
+            + 'nauhana vuoriston ja ruohotasangon välissä.',
+          lahde: 'Tony Webster, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat — talvinen aamu vuoria kohti, ilmakuva ruutukaavasta
+       * ja kattotason näkymä lännen suuntaan. Denverille ei ole vielä
+       * generoitu herokuvia, joten karusellissa on kolme aitoa
+       * valokuvaa (vertaa Dunediniin ja Cairnsiin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: '2010 Denver and Front Range 01.jpg',
+          selite: 'Lumen jälkeen aamu valaisee kaupungin ja Front '
+            + 'Rangen harjanteet vaaleanpunaisiksi.',
+          lahde: 'Nicholas Hartmann, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Downtown Denver CO.jpg',
+          selite: 'Ilmasta erottuu, miten vanha vino ruutukaava ja '
+            + 'uudempi ilmansuuntien mukainen kaava kohtaavat.',
+          lahde: 'Ron Reiring, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Denver View (7611246112).jpg',
+          selite: 'Kattotasolta lännen suuntaan kaupunki loppuu '
+            + 'tasangolle ja vuoret alkavat horisontissa.',
+          lahde: 'Heath Alseike, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Welcome Arch and Union Depot, Denver, Colo..jpg',
+          vuosi: 'noin 1908',
+          selite: 'Tervetuloakaari ja Union Depot noin 1908; kuvan '
+            + 'alalaitaan on painettu kustantajan oma negatiivilitera '
+            + 'ja otsikko.',
+          lahde: 'Detroit Publishing Company, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Denver Union Station Story (44028427210).jpg',
+          selite: 'Sama asema nykyään uuden laiturikatoksen alta '
+            + 'nähtynä, valokyltti yhä paikallaan.',
+          lahde: 'Mobilus In Mobili, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Maa, joka oli sopimuksella toisten',
+          teksti: 'Seudulla asuivat apassit, utet, tšeijennit, comanchet '
+            + 'ja arapahot. Arapahot kutsuvat itseään nimellä '
+            + 'Hinono’eino, "meidän ihmisemme", ja tšeijennit '
+            + 'nimellä Tsétsėhéstȧhese. Vuoden 1851 Fort Laramien '
+            + 'sopimuksessa Yhdysvallat määritteli heidän alueekseen '
+            + 'maat North Platte -joelta Arkansas-joelle — juuri sen, '
+            + 'missä Denver on. Vuoden 1858 kultaryntäys toi '
+            + 'siirtolaistulvan näiden maiden yli, '
+            + 'ja Fort Wisen sopimuksessa 1861 luovutettiin yli '
+            + 'yhdeksänkymmentä prosenttia niistä. Osa tšeijenneistä '
+            + 'kiisti sopimuksen: sen oli allekirjoittanut pieni '
+            + 'vähemmistö päälliköistä. Erimielisyys johti vuosien '
+            + '1864–65 Coloradon sotaan ja Sand Creekin verilöylyyn.',
+          tiedosto: 'Arapaho camp with buffalo meat drying near Fort Dodge, Kansas, 1870 - NARA - 518892.jpg',
+          selite: 'Tasangoilla asuttiin liikkuvissa tiipiileireissä, '
+            + 'joissa puhvelinliha kuivattiin telineillä; kuva on '
+            + 'vuodelta 1870.',
+          lahde: 'William S. Soule, Wikimedia Commons (PD)',
+          wiki: 'Arapaho',
+        },
+        {
+          otsikko: 'Kaksikymmentä unssia ja kaupunki',
+          teksti: 'Heinäkuun ensimmäisellä viikolla 1858 Green Russellin '
+            + 'ryhmä löysi Little Dry Creekin suulta noin kaksikymmentä '
+            + 'troy-unssia kultaa, silloiselta arvoltaan noin 380 '
+            + 'dollaria. Kansas City Journal of Commerce julisti löydön '
+            + 'elokuussa otsikolla "THE NEW ELDORADO!!", ja ryntäykseen '
+            + 'lähti arviolta satatuhatta ihmistä. Marraskuussa 1858 '
+            + 'kenraali William Larimer ja kapteeni Jonathan Cox '
+            + 'asettivat poppelipölkkyjä merkitäkseen valtauksen '
+            + 'kukkulalle South Platten ja Cherry Creekin yhtymäkohdan '
+            + 'yläpuolella. Larimer nimesi paikan Kansasin '
+            + 'territoriokuvernöörin mukaan — tietämättä, että tämä oli '
+            + 'jo eronnut.',
+          tiedosto: 'Confluence Park - Denver - tps.jpg',
+          selite: 'Confluence Parkissa South Platte ja Cherry Creek '
+            + 'yhtyvät siinä, missä Denverin ensimmäiset telttakylät '
+            + 'olivat.',
+          lahde: 'Theperfectstorm, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Pike\'s Peak gold rush',
+        },
+        {
+          otsikko: '1873: kaupunki, jonka rata pelasti',
+          teksti: 'Mannertenvälinen rata vedettiin Cheyennen kautta sata '
+            + 'mailia pohjoisempaa, ja se uhkasi jättää Denverin syrjään. '
+            + 'Kaupunkilaiset keräsivät kolmessa päivässä 300 000 '
+            + 'dollaria oman radan rakentamiseksi. Ensimmäinen juna '
+            + 'Cheyennestä saapui 24. kesäkuuta 1870, ja kaksi kuukautta '
+            + 'myöhemmin Kansas Pacific sai linjansa valmiiksi idästä; '
+            + 'sen kaksi rakennusryhmää kohtasivat tasangolla 15. '
+            + 'elokuuta 1870. Isoisän matkavuonna rata oli siis kolme '
+            + 'vuotta vanha ja toi arviolta sata uutta asukasta '
+            + 'päivässä. Väkiluku nousi 4 759:stä yli 35 000:een '
+            + 'vuosikymmenessä.',
+          tiedosto: '\'Denver from the Highlands\' by Paul Frenzeny and Jules Tavernier, 1874.jpg',
+          selite: 'Vuoden 1874 painokuvassa matala kaupunki leviää '
+            + 'tasangolle joen mutkaan ja Front Range nousee taustalle.',
+          lahde: 'Jules Tavernier / Paul Frenzeny, Wikimedia Commons (PD)',
+          wiki: 'History of Denver',
+        },
+        {
+          otsikko: 'Merkki portaissa: tasan yksi maili',
+          teksti: 'Denverin lempinimi Mile High City ei ole kielikuva. '
+            + 'Kaupungin virallinen korkeus on tasan yksi maili eli '
+            + '5 280 jalkaa merenpinnasta, ja se määritellään '
+            + 'osavaltiotalon portailla olevan kiintopisteen mukaan. '
+            + 'Koko kaupungin korkeus vaihtelee 5 130 ja 5 690 jalan '
+            + 'välillä. Osavaltiotaloa ei kuitenkaan ollut isoisän '
+            + 'aikaan: Elijah E. Myersin suunnittelema graniittitalo '
+            + 'avattiin vasta marraskuussa 1894. Denver oli territorion '
+            + 'pääkaupunki vuodesta 1867, Colorado liittyi unioniin '
+            + '1876, ja pysyväksi pääkaupungiksi Denver vahvistettiin '
+            + 'kansanäänestyksellä 1881.',
+          tiedosto: 'CO State Capitol dusk.jpg',
+          selite: 'Coloradon osavaltiotalon kullattu kupoli kohoaa '
+            + 'valkoisesta graniitista Colfax Avenuen varrella.',
+          lahde: 'L. Chang, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Colorado State Capitol',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Mount Blue Sky with Denver Skyline, Colorado (US).jpg',
+          selite: 'Auringonlaskun aikaan kaupungin siluetti jää '
+            + 'Kalliovuorten harjanteiden eteen kultaiseen usvaan.',
+          lahde: 'Justusco, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Denver on Coloradon pääkaupunki Front Rangen '
+          + 'kaupunkikäytävän keskellä, Kalliovuorten ja itäisten '
+          + 'ylätasankojen välissä. Keskustan liikekortteli on noin '
+          + 'yhdeksäntoista kilometrin päässä vuorten juurelta, joten '
+          + 'kaupunki itse on tasankoa mutta vuoret ovat aina näkyvissä. '
+          + 'Ilmasto on viileä puolikuiva ja aurinkoa on noin 3 100 '
+          + 'tuntia vuodessa. Denver on Yhdysvaltain ainoa osavaltion '
+          + 'pääkaupunki, joka on yhdistetty kaupunki ja kunta.',
+        artikkeli: {
+          nimi: 'Matkailijan Denver',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa museokortteli, panimot ja '
+            + 'kansallispuistojen portti mahtuvat samaan päivään: '
+            + 'aamulla kävelymatka Civic Centerissä, iltapäivällä '
+            + 'vuoristopuisto kuudentoista kilometrin päässä.',
+          nosto: 'Denverillä on maine hyvin ulkoilmapainotteisena '
+            + 'kaupunkina: moni denveriläinen viettää viikonloput '
+            + 'vuorilla — talvella hiihtäen, kesällä vaeltaen, kiiveten, '
+            + 'melomassa ja telttaillen. Kaupunki omistaa itse noin '
+            + '14 000 eekkeriä vuoristopuistoja ja lisäksi vuoren, '
+            + 'jolla Winter Parkin hiihtokeskus toimii.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Denverin kansainvälinen lentokenttä on noin '
+                + 'kolmenkymmenen kilometrin päässä keskustasta, ja se '
+                + 'on samalla kaupungin virallinen sääasemapaikka. '
+                + 'Kaukojunat käyttävät kunnostettua Union Stationia. '
+                + 'Metropolialueelle avautui 2015 uusi lähijunaverkko. '
+                + 'Keskustan selkäranka on 16th Street Mall, mailin '
+                + 'mittainen jalankulkukatu, jota pitkin kulkee '
+                + 'maksuton bussi päästä päähän — se on käytännössä '
+                + 'ainoa liikenneväline, jota keskustassa tarvitsee.',
+              kuva: {
+                tiedosto: 'Denver International Airport (DEN) (52735460613).jpg',
+                selite: 'Lentokentän terminaalialue on katettu '
+                  + 'purjemaisilla kankailla, joiden alta kuljetaan '
+                  + 'junalaiturille.',
+                lahde: 'Matt Walter from Durham, NC USA, USA, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Museokortteli Civic Centerin kupeessa',
+              teksti: 'Denverin taidemuseossa on Daniel Libeskindin '
+                + 'suunnittelema siipi, ja kaupungin esittävän taiteen '
+                + 'keskus on maan toiseksi suurin Lincoln Centerin '
+                + 'jälkeen. Kaupunki osti abstraktin ekspressionistin '
+                + 'Clyfford Stillin koko jäämistön 2004 ja rakensi sille '
+                + 'oman museon taidemuseon viereen. Osavaltion historian '
+                + 'museo History Colorado Center avattiin huhtikuussa '
+                + '2012, ja aivan sen naapurissa ovat Byers-Evansin talo '
+                + 'ja Molly Brownin talo. Kaikki mahtuvat kävelymatkan '
+                + 'päähän toisistaan.',
+            },
+            {
+              otsikko: 'Vuorille päiväretkelle',
+              teksti: 'Denver on hankkinut vuoristopuistoja 1910-luvulta '
+                + 'lähtien, ja niitä on nyt noin 14 000 eekkeriä eli '
+                + 'runsaat viisituhatta hehtaaria. Tunnetuin on Red '
+                + 'Rocks Park kuudentoista kilometrin päässä lounaassa, '
+                + 'mutta lähempänäkin on kokonaisia laumoja: Genesee '
+                + 'Parkissa laiduntaa kaupungin oma biisonikarja aivan '
+                + 'valtatien vieressä. Kauimmainen omistus on Winter '
+                + 'Parkin hiihtokeskuksen vuori, 108 kilometriä '
+                + 'länteen.',
+              kuva: {
+                tiedosto: 'Bison herd at Genesee Park-2012 03 10 0599.jpg',
+                selite: 'Genesee Parkin biisonilauma laiduntaa rinteellä '
+                  + 'valtatien ja havumetsän välissä.',
+                lahde: 'Postdlf, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Denver tunnetaan uusmeksikolaisesta keittiöstä ja '
+                + 'chilistä: vihreä ja punainen chilikastike, '
+                + 'Colorado-burrito, Denver-munakas, aamiaisburrito, '
+                + 'empanadat, chiles rellenos ja tamalet. Muita '
+                + 'kaupungin omia ruokia ovat Kalliovuorten osterit, '
+                + 'sateenkaarirautu ja Denver-voileipä. Kaupungissa ja '
+                + 'sen naapureissa on runsaasti panimoita, ja Denver '
+                + 'isännöi joka syksy Great American Beer Festivalia. '
+                + 'Cinco de Mayo kerää keväällä yli puoli miljoonaa '
+                + 'kävijää.',
+              kuva: {
+                tiedosto: 'Smothered beef burrito.JPG',
+                selite: 'Vihreään chilikastikkeeseen hukutettu burrito on '
+                  + 'Coloradon oma annos.',
+                lahde: 'Jeffrey Beall, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Denver-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa vuosigraafia, '
+                + 'koska ERA5-normaaleja ei saatu haettua. Ilmasto on '
+                + 'viileä puolikuiva ja vuodenaikoja on neljä; suurin '
+                + 'osa sateesta tulee huhtikuun ja elokuun välillä. '
+                + 'Heinäkuu on lämpimin, keskimääräinen ylin 32 astetta, '
+                + 'ja vähintään 32 asteeseen noustaan 38 päivänä '
+                + 'vuodessa. Joulukuun keskimääräinen ylin on 7 astetta. '
+                + 'Lunta kertyy noin 136 senttiä, ja mitattavan lumen '
+                + 'tavallinen ikkuna on 17. lokakuuta – 27. huhtikuuta.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Red Rocksin amfiteatteri',
+                tahdet: 3,
+                selite: 'Kahden hiekkakivimonoliitin väliin rakennettu '
+                  + '9 525 hengen katsomo, vihitty 1941.',
+              },
+              {
+                mita: 'Osavaltiotalon portaat',
+                tahdet: 3,
+                selite: 'Kiintopiste, joka määrittää koko kaupungin '
+                  + 'virallisen korkeuden: tasan yksi maili.',
+              },
+              {
+                mita: 'Denverin taidemuseo',
+                tahdet: 2,
+                selite: 'Gio Pontin 1971 valmistunut linnamainen talo ja '
+                  + 'Libeskindin 2006 avattu titaanisiipi.',
+              },
+              {
+                mita: 'Kasvitieteellinen puutarha',
+                tahdet: 2,
+                selite: 'Pohjois-Amerikan laajin kokoelma viileän '
+                  + 'lauhkean vyöhykkeen kasveja, perustettu 1951.',
+              },
+              {
+                mita: '16th Street Mall',
+                tahdet: 2,
+                selite: 'Mailin mittainen jalankulkukatu, jolla kulkee '
+                  + 'maksuton bussi päästä päähän.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Korkeus, kuiva ilma, sään
+             * äkilliset käänteet ja raekuurot vaikuttavat kaikki
+             * siihen, miten kaupungissa liikutaan; luvut ovat samat
+             * kuin jaksossa 5 ja teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Korkeus tuntuu ensimmäisenä päivänä',
+                teksti: 'Kaupunki on tasan mailin korkeudessa ja koko '
+                  + 'alue 1 564–1 734 metrissä; vauhti kannattaa ottaa '
+                  + 'alusta rauhallisesti.',
+              },
+              {
+                otsikko: 'Ilma on kuivaa ja aurinko kirkas',
+                teksti: 'Aurinkoa on noin 3 100 tuntia vuodessa ja '
+                  + 'ilmankosteus on yleisesti matala.',
+              },
+              {
+                otsikko: 'Sää kääntyy nopeasti',
+                teksti: 'Sisämaan sijainti ylätasangolla Kalliovuorten '
+                  + 'juurella tuo äkillisiä säänmuutoksia, ja '
+                  + 'vuorokauden lämpötilavaihtelu on suuri läpi '
+                  + 'vuoden.',
+              },
+              {
+                otsikko: 'Rakeet ovat kaupungin oma riesa',
+                teksti: 'Yhdysvaltain kymmenen kalleimman raekuuron '
+                  + 'joukossa on kolme Denverin myrskyä: 1990, 2009 ja '
+                  + '2017.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Vuoret ja ohut ilma',
+      johdanto: 'Kaupungin länsipuolella nousee seinä, jonka takaa vedet '
+        + 'virtaavat toiselle valtamerelle. Korkeus näkyy Denverissä '
+        + 'kaikessa: ilmassa, auringossa ja siinä, miten puistot '
+        + 'kastellaan.',
+      tehtava: {
+        kysymys: 'Mistä Red Rocksin kallioiden punainen väri johtuu?',
+        vaihtoehdot: [
+          'hapettuneista mineraaleista',
+          'auringon polttamasta pinnasta',
+          'rautaruosteesta radan varrelta',
+          'punaisesta hiekasta, joka on lentänyt aavikolta',
+        ],
+        oikea: 0,
+        fakta: 'Red Rocksin muodostumat ovat osa Fountain-muodostumaa, '
+          + 'ja niiden punertava väri johtuu hapettuneista '
+          + 'mineraaleista. Samassa mullistuksessa kohosivat myös '
+          + 'läheiset Garden of the Gods ja Flatirons.',
+      },
+      nostot: [
+        {
+          otsikko: 'Seinä, jonka takaa vedet kääntyvät',
+          teksti: 'Denver on Front Rangen kaupunkikäytävän keskellä, '
+            + 'Kalliovuorten ja itäisten ylätasankojen välissä. '
+            + 'Keskustan liikekortteli on noin yhdeksäntoista '
+            + 'kilometrin päässä vuorten juurelta, ja maasto on '
+            + 'keskellä tasankoa mutta kumpuilee pohjoisessa, lännessä '
+            + 'ja etelässä. Front Range on Kalliovuorten itäisin jono ja '
+            + 'ulottuu Wyomingin eteläosista Coloradon keskiosiin. Sen '
+            + 'harjanne on mannerjakaja: lännestä vedet virtaavat '
+            + 'Tyynellemerelle, idästä Atlantille. Kaupungin '
+            + 'panoraamassa näkyy lumihuippuinen Mount Blue Sky.',
+          tiedosto: '13ers CO.JPG',
+          selite: 'Front Rangen lumihuippuja Kalliovuorten '
+            + 'kansallispuistossa Denveristä luoteeseen.',
+          lahde: 'Hogs555, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Front Range',
+        },
+        {
+          otsikko: 'Ohut ilma, kolmetuhatta tuntia aurinkoa',
+          teksti: 'Denverin ilmasto on viileä puolikuiva: kosteus on '
+            + 'yleisesti matala ja aurinkoa on noin 3 100 tuntia '
+            + 'vuodessa. Korkeuden ja kuivuuden takia vuorokauden '
+            + 'lämpötilavaihtelu on suuri läpi vuoden, ja sisämaan '
+            + 'sijainti ylätasangolla tuo äkillisiä säänmuutoksia. '
+            + 'Kaupungin virallinen sääasema on lentokentällä noin '
+            + 'kolmenkymmenen kilometrin päässä keskustasta, ja siitä '
+            + 'kiistellään: vuoden 2019 vertailussa lentokentän '
+            + 'keskilämpötila oli 10,1 astetta ja keskustan 11,7 '
+            + 'astetta.',
+          tiedosto: 'Skyline and Sunflowers (15429055175).jpg',
+          selite: 'Preerian auringonkukat kukkivat kaupungin ja '
+            + 'vuoriston edustalla kirkkaassa elokuun valossa.',
+          lahde: 'USFWS Mountain-Prairie, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Denver',
+        },
+        {
+          otsikko: 'Kaksi kalliota ja katsomo niiden välissä',
+          teksti: 'Red Rocks on avotaivasamfiteatteri kuudentoista '
+            + 'kilometrin päässä Denveristä lounaaseen, ja kaupunki '
+            + 'omistaa sen itse. Paikan tunnistaa kahdesta '
+            + 'monoliitista, joiden nimet ovat Ship Rock ja Creation '
+            + 'Rock; niiden välissä on 9 525 hengen katsomo. Kalliot '
+            + 'syntyivät osana Fountain-muodostumaa ja kohosivat '
+            + 'Laramide-orogeniassa, ja punertava väri johtuu '
+            + 'hapettuneista mineraaleista. Denver osti alueen 1927 '
+            + 'hintaan 54 133 dollaria, ja amfiteatteri vihittiin '
+            + '15. kesäkuuta 1941.',
+          tiedosto: 'Red Rocks Amphitheatre from top of amphitheatre.jpeg',
+          selite: 'Ylimmältä penkkiriviltä katsomo laskeutuu lavalle ja '
+            + 'sen takaa avautuu tasanko Denveriin asti.',
+          lahde: 'Dough4872, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Red Rocks Amphitheatre',
+        },
+        {
+          otsikko: 'Puistot, jotka kastellaan kaupungin ojasta',
+          teksti: 'Denverissä on yli kaksisataa puistoa, pienistä '
+            + 'taskupuistoista 127 hehtaarin City Parkiin. Suurin osa '
+            + 'hankittiin osavaltion mailta City Beautiful -liikkeen '
+            + 'aikaan, ja pormestari Robert Speer laajensi niitä '
+            + '1900-luvun alussa. Kaupungin ensimmäinen maisema-'
+            + 'arkkitehti Reinhard Schuetze suunnitteli Washington '
+            + 'Parkin, Cheesman Parkin ja City Parkin; myöhemmin '
+            + 'työhön osallistuivat myös Frederick Law Olmsted '
+            + 'nuorempi ja Saco Rienk DeBoer. Kaikki nämä puistot '
+            + 'kasteltiin kaupungin ojaa pitkin johdetulla South '
+            + 'Platten vedellä.',
+          tiedosto: 'Washington Park Denver.JPG',
+          selite: 'Washington Parkin Smithin lammen rannalla seisoo '
+            + 'vuoden 1913 venevaja.',
+          lahde: 'Jeffrey Beall, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Denver',
+        },
+      ],
+    },
+  ],
+  /*
+   * HOUSTON (Opus 6.9.2026, paketti O9) — P-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-houston.md ja sen riippumaton tarkistus
+   * tarkistus-houston.md (tuomio "kelpaa korjausten jälkeen";
+   * kaikki korjaukset on tehty, ks. alla). Väitteet on luettu
+   * en-Wikipedian raakatekstistä 6.9.2026: "Houston", "History of
+   * Houston", "Buffalo Bayou", "Houston Ship Channel", "Johnson
+   * Space Center", "Spindletop", "Karankawa people", "Atakapa",
+   * "Texas Medical Center".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * koskettu. Saapumiskortin isoisä puhuu puuvillasta, rautatiestä
+   * ja lahden satamasta — juuri se 1873-kulma, jolle tämä lehti
+   * rakentuu.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'tiede', koska AIHE_IKONIT ei tarjoa öljylle eikä
+   * avaruudelle omaa kuvaketta eikä uusia sivu-id:itä tehdä; sivun
+   * nimi "Öljy ja avaruus" kertoo aiheen.
+   *
+   * TARKISTUKSEN KAIKKI KORJAUKSET ON TEHTY:
+   *  - H1 sanoo alkuperäiskansojen jälkeläisjärjestöistä, että ne
+   *    ovat TUNNUSTAMATTOMIA ja että jäsenet lukevat itsensä
+   *    jälkeläisiksi (lähteen sanamuoto "claim descent",
+   *    "unrecognized"). "Houston"-artikkelin väitettä kansojen
+   *    olevan "lähes olemattomia" ei toisteta, koska tarkemmat
+   *    artikkelit nimeävät nykyiset järjestöt — ristiriita on
+   *    kirjattu tarkistusraporttiin (ennakkotapaus v925/v932).
+   *  - H2 ei väitä veljesten ostaneen 2 214 eekkeriä: lähde sanoo
+   *    heidän ostaneen PUOLET sen kokoisesta palstasta. Tekstissä
+   *    käytetään siksi hintaa, joka on lähteessä yksiselitteinen.
+   *  - T2 ei siteeraa Kuun pinnalta radioitua lausetta: sitä ei ole
+   *    luetuissa artikkeleissa sanatarkasti. Kutsumerkki "Houston"
+   *    riittää, ja visan oma fact-kenttä hoitaa lauseen
+   *    (northamerica-questions.js, houston, kysymys 4).
+   *  - T2 kertoo JSC:n pinta-alaksi 1 620 eekkeriä ja sanoo
+   *    erikseen, että lahjoitettu maa oli 1 000 eekkeriä — sama
+   *    artikkeli antaa molemmat luvut.
+   *
+   * PILARI 1 JA SPEC-MANTEREET.MD:N LINJAUS 1: alkuperäiskansat
+   * tulevat ensimmäisenä nostona, ja kansan OMA NIMI (Ishak, "ne
+   * ihmiset") kerrotaan ennen siirtomaanimeä Atakapa, joka on
+   * naapurikansan antama haukkumanimi. Kansat kuvataan elävinä.
+   * Rituaalikannibalismia koskevia väitteitä EI toisteta: lähde
+   * itse kertoo, ettei yksikään ulkopuolinen nähnyt tekoa ja että
+   * kertomusten uskottavuus on kiistanalainen (pilari 3 ja 4).
+   * Väitettä maan olleen "pitkälti asumaton" 1700-luvun lopulta
+   * 1830-luvulle ei esitetä tosiasiana.
+   *
+   * ORJUUS JA SISÄLLISSOTA kerrotaan suoraan ja lukuina, ilman
+   * osapuolinostalgiaa ja ilman yksityiskohtien korostusta
+   * (spec-mantereet.md, USA-linjaus). EI NYKYPOLITIIKKAA eikä
+   * nykyrikollisuutta: artikkelin Crime- ja Government-osiot on
+   * jätetty kokonaan pois. Otsoni ja ilmanlaatu mainitaan vain
+   * neutraalina luonnontieteellisenä tosiasiana, ilman poliittista
+   * kehystä.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026 pyyntöön
+   * 429:llä ("Daily API request limit exceeded"), eikä lukuja
+   * keksitä (Samarkand-malli v965). Oppaan sääjakso nojaa siksi
+   * en-Wikipedian Climate-osioon ja sanoo sen ääneen; luvut ovat
+   * William P. Hobby Airportin normaalikaudelta 1991–2020 ja
+   * George Bush Intercontinentalin mittauksista.
+   *
+   * KUVAT haettiin Commonsin API:sta kategoria- ja hakusanahauilla
+   * (Quality images of Houston, Buffalo Bayou Park, Port of
+   * Houston, Menil Collection, Armand Bayou Nature Center,
+   * Spindletop, Houston Livestock Show and Rodeo, Hurricane
+   * Harvey), lisenssi ja tekijä luettiin extmetadatasta 6.9.2026, ja
+   * jokainen valittu kuva katsottiin silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Houston (142714691).jpeg" (kuvan oikeassa
+   * alakulmassa vesileima viePhotos.com), "MFA houston.jpg" ja
+   * "MFAHCarolineWeissLaw.JPG" (isot jäsenhankintabanderollit
+   * julkisivulla), "USA - Texas - Houston - Museum of Fine
+   * Arts.jpg" (tunnistettava henkilö pääosassa), "Christ Church
+   * Cathedral Alter View.jpg" (kävijöiden kasvot luettavissa),
+   * "Houston seen from an Air Canada flight.jpg" (lentokoneen siipi
+   * ja yhtiötunnus pääosassa), "Centro de Houston.jpg" (ei
+   * yleiskuva; henkilö etualalla), "Houston, Texas North of Hobby
+   * Airport (15860217643).jpg" (utuinen ja tunnistamaton),
+   * "Texas Medical Center skyline in Houston.JPG" (pysäköintialue
+   * etualalla ja vastavalo), "TMC at night Nima.JPG" (yritysten
+   * valokyltit pääosassa), "J. Kick - View of Houston - Google Art
+   * Project.jpg" (1840-luvun akvarelli, jossa Houstonin taakse on
+   * maalattu vuoristo — kaupungin ympärillä ei ole vuoria, joten
+   * kuva johtaisi lukijaa harhaan) ja "Lucas gusher.jpg" (upea
+   * vuoden 1901 öljysuihku, mutta extmetadatan tekijäkenttä on
+   * pitkä epäselvyysmerkintä eikä nimi, jonka voisi kirjoittaa
+   * lähderiville).
+   *
+   * KOHDEKARTAN KAHDEKSAS KOHDE VAIHDETTIIN KUVASYYSTÄ. Faktapohja
+   * ehdotti kuvataiteen museota, mutta sen kaikissa Commonsin
+   * julkisivukuvissa on joko iso mainosbanderolli tai tunnistettava
+   * henkilö (ks. hylkäykset), eikä kartan kohde saa jäädä ilman
+   * juttukuvaa. Tilalle otettiin Hermann Park, joka on 500 metrin
+   * päässä samassa museokorttelissa ja jolla on Commonsin
+   * laatukuva. Museo mainitaan matkaoppaan jaksossa 2.
+   *
+   * ENNEN JA NYT: vanha puoli on Augustus Kochin vuoden 1873
+   * lintuperspektiivilitografia (PD), jonka J. J. Stoner julkaisi
+   * Madisonissa — täsmälleen isoisän matkavuodelta. Painolaatan
+   * alalaidassa on kustantajan oma otsikko ja kohdeluettelo:
+   * reseptin nimenomainen poikkeus, ja kuvateksti kertoo sen.
+   * Nykykuva on sama kaupunki rannikkopreerian takaa nähtynä.
+   */
+  houston: [
+    {
+      id: 'kaupunki',
+      nimi: 'Houston',
+      johdanto: 'Houston ei ole meren rannalla, mutta se on satamakaupunki: '
+        + 'kapea Buffalo Bayou kaivettiin laivaväyläksi lahdelle asti. '
+        + 'Isoisän matkavuonna 1873 tänne tultiin puuvillan ja '
+        + 'rautateiden takia — öljyä ei vielä ollut.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: keskusta
+       * puron yli lännestä, sama keskusta puistokaistaleen takaa ja
+       * ilmakuva lääketieteen keskuksen yltä pohjoiseen.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Downtown Houston and Buffalo Bayou.jpg',
+          selite: 'Keskusta nousee Buffalo Bayoun vihreiden törmien ja '
+            + 'moottoritiesillan takaa.',
+          lahde: 'Astronautilus, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Downtown Houston, TX Skyline - 2018.jpg',
+          selite: 'Iltavalossa tornit erottuvat ryppäinä, koska '
+            + 'Houstonilla ei ole kaavoituslakia.',
+          lahde: 'David Daniel Turner, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Aerial of Texas Medical Center with Downtown Houston in the background (cropped).jpg',
+          selite: 'Ilmasta katsottuna lääketieteen keskuksen tornit ovat '
+            + 'etualalla ja keskusta kaukana taustalla.',
+          lahde: 'University of Texas Health Science Center at Houston Office of Communications, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat — kaarisilta puiston yllä, puron mutka keskustaan
+       * päin ja kaupungin siluetti pystykuvana. Houstonille ei ole
+       * vielä generoitu herokuvia, joten karusellissa on kolme aitoa
+       * valokuvaa (vertaa Cairnsiin ja Panamáan).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Sabine Street Bridge (HDR).jpg',
+          selite: 'Sabine Streetin kaarisilta ylittää Buffalo Bayoun '
+            + 'puiston kävelytien kohdalla.',
+          lahde: 'Ed Uthman , Houston, Texas, USA, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Houston May 2022 13 (Buffalo Bayou Park and skyline).jpg',
+          selite: 'Puron rannat on istutettu puistoksi keskustan '
+            + 'juurelle asti.',
+          lahde: 'Michael Barera, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Buffalo Bayou - Downtown Houston.jpg',
+          selite: 'Illan valossa puro johtaa katseen suoraan keskustan '
+            + 'torneihin.',
+          lahde: 'Bry0909, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Old map-Houston-1873.jpg',
+          vuosi: '1873',
+          selite: 'Augustus Kochin lintuperspektiivikuva vuodelta 1873; '
+            + 'alalaitaan on painettu kustantajan oma otsikko ja '
+            + 'kohdeluettelo.',
+          lahde: 'Augustus Koch (1840-?)., Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Houston Downtown Skyline 2010.JPG',
+          selite: 'Sama kaupunki nykyään rannikkopreerian heinikon '
+            + 'takaa nähtynä.',
+          lahde: 'Ed Uthman , Houston, Texas, USA, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Ishak — "ne ihmiset" — ja karankawat',
+          teksti: 'Nykyisen Houstonin maalla asuivat karankawat ja '
+            + 'atakapat vähintään kaksituhatta vuotta ennen ensimmäisiä '
+            + 'tunnettuja uudisasukkaita. Atakapat kutsuivat itseään '
+            + 'nimellä Ishak, "ne ihmiset"; nimi Atakapa on choctawin '
+            + 'kieltä ja eurooppalaisten naapurikansalta omaksuma. '
+            + 'Läntiset ishakit olivat Hikike Ishak, auringonlaskun '
+            + 'kansa. Kieli oli kielisaareke, ja siitä julkaistiin '
+            + 'sanakirja 1932. Seudun paikannimissä se elää yhä: '
+            + 'Calcasieu tulee sanoista Katkōsh Yōk, "itkevä kotka". '
+            + 'Nykyään jälkeläisikseen itsensä lukevat ovat '
+            + 'järjestäytyneet, mutta yhtäkään järjestöä ei ole '
+            + 'liittovaltiollisesti tunnustettu.',
+          tiedosto: 'Armand Bayou.jpg',
+          selite: 'Aamu-usvassa puro levenee metsäisten törmien väliin '
+            + 'juuri sellaisena kuin rannikon purot olivat ennen '
+            + 'kaupunkia.',
+          lahde: 'Jim Evans, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Atakapa',
+        },
+        {
+          otsikko: 'Kaupunki, joka myytiin ennen kuin se oli olemassa',
+          teksti: 'Veljekset Augustus ja John Kirby Allen ostivat '
+            + '26. elokuuta 1836 maata Buffalo Bayoun varrelta. He '
+            + 'maksoivat siitä 5 000 dollaria, josta vain tuhat '
+            + 'käteisenä ja loput velkakirjoina. Neljä päivää myöhemmin '
+            + 'he julkaisivat lehdessä ilmoituksen kaupungista, jota ei '
+            + 'vielä ollut, ja nimesivät sen Sam Houstonin mukaan — '
+            + 'miehestä tuli saman vuoden aikana Texasin tasavallan '
+            + 'presidentti. Vuoden 1837 alussa paikalla asui noin '
+            + 'tusina ihmistä; toukokuussa, kun kongressi kokoontui '
+            + 'siellä, heitä oli jo noin 1 500.',
+          tiedosto: 'Allen\'s Landing Houston bayou view.jpg',
+          selite: 'Allenin veljesten maihinnousupaikalla puron rannassa '
+            + 'on yhä kiinnityspollarit ja laituritaso.',
+          lahde: 'Scott Ehardt, Wikimedia Commons (PD)',
+          wiki: 'Houston',
+        },
+        {
+          otsikko: '1873: puuvillaa, ratoja ja velkaa',
+          teksti: 'Vuoteen 1860 mennessä Houston oli puuvillan viennin '
+            + 'kauppa- ja rautatiekeskus: sisämaan radat yhtyivät '
+            + 'täällä ja jatkoivat Galvestonin ja Beaumontin satamiin. '
+            + 'Saman vuoden väestönlaskennassa kaupungissa oli 4 845 '
+            + 'asukasta, joista 1 069 orjuutettuja — yhdeksänkymmentä-'
+            + 'yhdeksän prosenttia kaupungin afroamerikkalaisesta '
+            + 'väestöstä. Sisällissodan jälkeen liikemiehet ryhtyivät '
+            + 'leventämään purojaan, jotta kauppa keskustan ja '
+            + 'Galvestonin sataman välillä kasvaisi. Vuoteen 1890 '
+            + 'mennessä Houston oli Texasin rautatiekeskus.',
+          tiedosto: 'T N Railroad Through Truss Swing Bridge Over Buffalo Bayou, Just Above Houston Ship Channel Turning Basin, Houston, Texas 1204101357 (5234927581).jpg',
+          selite: 'Vanha ristikkorakenteinen kääntösilta vie radan '
+            + 'Buffalo Bayoun yli laivaväylän kääntöaltaan yläpuolella.',
+          lahde: 'Patrick Feller from Humble, Texas, USA, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'History of Houston',
+        },
+        {
+          otsikko: 'Puro, joka kaivettiin valtamereksi',
+          teksti: 'Buffalo Bayou virtaa keskustan läpi ja jatkuu '
+            + 'Houstonin laivaväylänä; sen latvat ovat 48 kilometriä '
+            + 'kaupungista länteen. Keskusta on vain viisitoista metriä '
+            + 'merenpinnan yläpuolella. Kun Galveston tuhoutui vuoden '
+            + '1900 hirmumyrskyssä, syväsataman rakentaminen Houstoniin '
+            + 'kiihtyi: presidentti Roosevelt hyväksyi 1902 miljoonan '
+            + 'dollarin hankkeen, ja presidentti Wilson avasi sataman '
+            + '1914, seitsemän vuotta ruoppauksen aloittamisesta. Väylä '
+            + 'on 80 kilometriä pitkä, ja sen yläpää on neljän mailin '
+            + 'päässä keskustasta itään.',
+          tiedosto: 'GreensPortIndustrialPakr-BuffaloBayou (34933182210).jpg',
+          selite: 'Laivaväylän varrella vuorottelevat säiliökentät, '
+            + 'terminaalit ja telakat molemmin puolin uomaa.',
+          lahde: 'formulanone, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Houston Ship Channel',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Gerald D. Hines Waterwall Park.jpg',
+          selite: 'Tiilikaaren takaa syöksyy vesiseinä, joka on '
+            + 'kaupungin tunnetuin suihkulähde.',
+          lahde: 'Sitao Xiang, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Houston on Texasin suurin kaupunki ja koko '
+          + 'Yhdysvaltain neljänneksi suurin. Se on rakennettu '
+          + 'Meksikonlahden rannikkotasangolle, jonka läpi kulkee neljä '
+          + 'suurta puroa; keskusta on vain viitisentoista metriä '
+          + 'merenpinnan yläpuolella. Kaupungilla ei ole kaavoituslakia, '
+          + 'ja siksi se on levinnyt useaksi erilliseksi keskittymäksi '
+          + 'yhden ytimen sijaan. Kesät ovat kuumia ja kosteita, talvet '
+          + 'leutoja, ja ilmastointi on kaikkialla.',
+        artikkeli: {
+          nimi: 'Matkailijan Houston',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa museokortteli, maailman suurin '
+            + 'sairaalakeskittymä ja kuulentojen ohjaamo ovat saman '
+            + 'moottoritien varrella — ja jossa kesällä kävellään '
+            + 'mieluummin maan alla kuin kadulla.',
+          nosto: 'Museum Districtin laitokset keräävät yli seitsemän '
+            + 'miljoonaa kävijää vuodessa, ja keskustan Theater District '
+            + 'on seitsemäntoista korttelin alue, jossa on yhdeksän '
+            + 'suurta esittävän taiteen organisaatiota ja kuusi '
+            + 'esiintymissalia — toiseksi suurin teatteripaikkojen '
+            + 'keskittymä yhdysvaltalaisessa keskustassa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Houston on 266 kilometriä Austinista itään ja 400 '
+                + 'kilometriä Dallasista etelään. Sijainnit ilmoitetaan '
+                + 'yleensä sen mukaan, ovatko ne Interstate 610 -kehän '
+                + 'sisä- vai ulkopuolella; kehiä on kaikkiaan kolme, '
+                + 'uloin noin neljänkymmenen kilometrin säteellä. '
+                + 'Keskustassa kannattaa käyttää yhdentoista kilometrin '
+                + 'tunneli- ja kävelysiltaverkostoa, jonka varrella on '
+                + 'kauppoja ja ravintoloita ja joka suojaa kesähelteeltä '
+                + 'ja sateelta. Museokortteliin pääsee keskustasta '
+                + 'raitiovaunulla.',
+              kuva: {
+                tiedosto: 'View from Midtown Houston toward Museum District and METRORail train.JPG',
+                selite: 'Raitiovaunu kulkee Midtownista museokorttelia ja '
+                  + 'lääketieteen keskusta kohti.',
+                lahde: 'Agsftw, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Museokortteli ja teatterikortteli',
+              teksti: 'Museum Districtin laitoksissa käy yli seitsemän '
+                + 'miljoonaa vierasta vuodessa. Kuvataiteen museo on '
+                + 'galleriapinta-alaltaan maailman kymmenenneksi suurin '
+                + 'museo ja Amerikan mantereiden toiseksi suurin '
+                + 'taidemuseo; sen vanhin osa valmistui 1924 ja on '
+                + 'Texasin vanhin taidemuseorakennus. Lähellä ovat '
+                + 'Menilin kokoelma, Rothkon kappeli ja bysanttilaisen '
+                + 'freskokappelin museo. Keskustan Theater District on '
+                + 'seitsemäntoista korttelin alue teattereita ja '
+                + 'konserttisaleja.',
+            },
+            {
+              otsikko: 'Avaruuskeskus ja Space City',
+              teksti: 'Space Center Houston on NASAn Johnson Space '
+                + 'Centerin virallinen vierailukeskus noin neljänkymmenen '
+                + 'kilometrin päässä kaakossa Clear Lakessa. Siellä on '
+                + 'kuukiviä, avaruussukkulasimulaattori ja esittelyjä '
+                + 'miehitetyn avaruuslennon historiasta. Kunnostettu '
+                + 'Apollon lennonjohtohuone avattiin matkailijoille '
+                + 'kesäkuussa 2019, ja ulkona omassa hallissaan makaa '
+                + 'kokonainen Saturn V -raketti. Kaupunki sai '
+                + 'virallisen lempinimensä Space City vuonna 1967.',
+              kuva: {
+                tiedosto: 'Saturn V Rocket -- Johnson Space Center.jpg',
+                selite: 'Saturn V makaa kyljellään omassa hallissaan '
+                  + 'vaiheittain purettuna.',
+                lahde: 'Jim Evans, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään ja juhlitaan',
+              teksti: 'Houstonia arvostetaan monipuolisesta ruoka- ja '
+                + 'ravintolakulttuurista, ja yksi sen lempinimistä on '
+                + 'etelän ruokapääkaupunki. Suurin vuotuinen tapahtuma '
+                + 'on karjanäyttely ja rodeo, joka kestää kaksikymmentä '
+                + 'päivää maaliskuussa ja on maailman suurin lajissaan. '
+                + 'Muita ovat taideautoparaati ja kansainvälinen '
+                + 'festivaali. Kaupungissa on maan kolmanneksi suurin '
+                + 'konsulaattikeskittymä, 92 maata, ja Chinatown sekä '
+                + 'Mahatma Gandhi District ovat omia kaupunginosiaan.',
+              kuva: {
+                tiedosto: 'Plates of food from Black\'s Barbecue.jpg',
+                selite: 'Texasilaisella grillilautasella on naudan '
+                  + 'rintaa, kylkiluita ja makkaraa maissileivän kanssa.',
+                lahde: 'Kent Wang, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Houston-artikkelin '
+                + 'Climate-osiosta ja sääruudusta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska ERA5-normaaleja ei saatu haettua. '
+                + 'Ilmasto on kostea subtrooppinen. Kesällä 32 astetta '
+                + 'ylitetään keskimäärin 106 päivänä vuodessa, ja '
+                + 'kesäaamuina suhteellinen kosteus on yli yhdeksänkymmentä '
+                + 'prosenttia. Talvet ovat leutoja: tammikuun normaali '
+                + 'keskilämpötila on noin 12 astetta ja pakkasyö osuu '
+                + 'kohdalle keskimäärin kolmenatoista päivänä. Sadetta '
+                + 'kertyy noin 1 265 millimetriä, eniten huhtikuun ja '
+                + 'lokakuun välillä.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Space Center Houston',
+                tahdet: 3,
+                selite: 'NASAn vierailukeskus, jonka kunnostettu Apollon '
+                  + 'lennonjohtohuone avattiin yleisölle 2019.',
+              },
+              {
+                mita: 'Museum District',
+                tahdet: 3,
+                selite: 'Yli seitsemän miljoonaa kävijää vuodessa; '
+                  + 'kuvataiteen museo on mantereiden toiseksi suurin.',
+              },
+              {
+                mita: 'Buffalo Bayoun puisto',
+                tahdet: 2,
+                selite: 'Kaksi ja puoli mailia kunnostettua puronvartta '
+                  + 'keskustan kupeessa, avattu 2015.',
+              },
+              {
+                mita: 'Karjanäyttely ja rodeo',
+                tahdet: 2,
+                selite: 'Maailman suurin lajissaan, kaksikymmentä päivää '
+                  + 'maaliskuussa.',
+              },
+              {
+                mita: 'Keskustan tunnelit',
+                tahdet: 2,
+                selite: 'Yksitoista kilometriä ilmastoitua käytävää '
+                  + 'kauppoineen keskustan rakennusten alla.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Helle, kosteus, tulvat ja
+             * hirmumyrskykausi vaikuttavat siihen, milloin ja miten
+             * kaupungissa liikutaan; luvut ovat samat kuin jaksossa 5
+             * ja teemasivun nostossa T4.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Kesä on kuuma ja kostea',
+                teksti: '32 astetta ylitetään keskimäärin 106 päivänä '
+                  + 'vuodessa, ja kesäaamun suhteellinen kosteus on yli '
+                  + 'yhdeksänkymmentä prosenttia.',
+              },
+              {
+                otsikko: 'Tunnelit ovat oikea reitti',
+                teksti: 'Keskustan rakennukset yhdistää yhdentoista '
+                  + 'kilometrin ilmastoitu tunneli- ja '
+                  + 'kävelysiltaverkosto.',
+              },
+              {
+                otsikko: 'Tulvat kuuluvat kaupunkiin',
+                teksti: 'Tasainen maasto ja huonosti vettä läpäisevä '
+                  + 'savimaa tekevät paikallisista tulvista tavallisia; '
+                  + '2010-luvun puolivälissä niitä oli kolme peräkkäisenä '
+                  + 'vuonna.',
+              },
+              {
+                otsikko: 'Sadekausi on huhtikuusta lokakuuhun',
+                teksti: 'Suurin osa vuoden 1 265 millimetristä tulee '
+                  + 'silloin, kun Meksikonlahden kosteus haihtuu '
+                  + 'kaupungin ylle.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Öljy ja avaruus',
+      johdanto: 'Houstonin alla on suolakupoleja, jotka vangitsivat öljyn, '
+        + 'ja Houstonissa on ohjaamo, josta kuulennot johdettiin. Maa '
+        + 'vajoaa ja vesi tulvii — kaupunki on rakennettu insinöörityön '
+        + 'varaan.',
+      tehtava: {
+        kysymys: 'Miksi Houstonin maaperään syntyi öljyä vangitsevia '
+          + 'suolakupoleja?',
+        vaihtoehdot: [
+          'syvällä oleva suolakerros puristui ylöspäin ja veti sedimentit mukanaan',
+          'meri jätti suolaa kuiviin lampiin',
+          'öljy muutti hiekan suolaksi',
+          'suola valui maahan lahden rannalta',
+        ],
+        oikea: 0,
+        fakta: 'Sedimenttikerrosten alla on vedestä saostunut '
+          + 'vuorisuolakerros. Huokoiset kerrokset puristuivat ja '
+          + 'työntyivät ylöspäin, ja noustessaan suola veti mukanaan '
+          + 'ympäröiviä sedimenttejä kupoleiksi, jotka vangitsivat '
+          + 'öljyn ja kaasun.',
+      },
+      nostot: [
+        {
+          otsikko: 'Suolakupolit, jotka vangitsivat öljyn',
+          teksti: 'Houstonin maanpinnan alla on kiinteytymättömiä savia '
+            + 'ja heikosti sementoituneita hiekkoja useiden kilometrien '
+            + 'syvyyteen. Aines on peräisin Kalliovuorten kulumisesta, '
+            + 'ja se laskeutui hajoavan meriperäisen eloperäisen '
+            + 'aineksen päälle, joka muuttui ajan myötä öljyksi ja '
+            + 'kaasuksi. Kerrosten alla on vuorisuolaa. Kun huokoiset '
+            + 'kerrokset puristuivat, suola työntyi ylöspäin ja veti '
+            + 'mukanaan sedimenttejä kupoleiksi, jotka vangitsivat '
+            + 'ympäriltä tihkuvan öljyn. Juuri niitä lähdettiin '
+            + 'etsimään koko rannikkotasangolta.',
+          tiedosto: 'A replica of the Lucas Spindletop Gusher.jpg',
+          selite: 'Spindletopin porauskehikon puinen jäljennös seisoo '
+            + 'kentällä Beaumontin laidalla.',
+          lahde: 'Jim Evans, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Spindletop',
+        },
+        {
+          otsikko: 'Vuosi 1901: Spindletop',
+          teksti: 'Öljyn löytyminen Spindletopin kentältä Beaumontin '
+            + 'lähellä 1901 käynnisti Texasin öljyteollisuuden. Se oli '
+            + 'suurin siihen mennessä nähty öljysuihku: Beaumontin '
+            + 'kymmenentuhannen asukkaan väkiluku kolminkertaistui '
+            + 'kolmessa kuukaudessa ja nousi lopulta viiteenkymmeneen '
+            + 'tuhanteen. Vuoden 1902 loppuun mennessä oli perustettu '
+            + 'yli viisisataa yhtiötä ja toiminnassa oli 285 kaivoa; '
+            + 'kenttä tuotti sinä vuonna yli 17 miljoonaa tynnyriä. '
+            + 'Löytö innoitti etsintää koko Meksikonlahden '
+            + 'rannikkotasangolla, ja Houston sai satamansa ja '
+            + 'jalostamonsa täyteen työtä.',
+          tiedosto: 'Lucas gusher (Spindletop, Beaumont, Port Arthur, and vicinity, Texas - oil industry). LCCN2010649511.jpg',
+          selite: 'Spindletopin kentällä porauskehikot seisoivat '
+            + 'rivissä ja maassa lainehti öljy; kuvan alle on '
+            + 'kirjoitettu arkiston oma merkintä.',
+          lahde: 'Miscellaneous Items in High Demand, PPOC, Library of Congress, Wikimedia Commons (PD)',
+          wiki: 'Spindletop',
+        },
+        {
+          otsikko: 'Ohjaamo, jonka kutsumerkki on Houston',
+          teksti: 'Johnson Space Center rakennettiin 1962–63 maalle, '
+            + 'jonka Humble Oil lahjoitti Rice-yliopiston kautta — tuhat '
+            + 'eekkeriä karjalaidunta, jolla laitos on nykyään 1 620 '
+            + 'eekkerin laajuinen. Keskus avattiin syyskuussa 1963 '
+            + 'nimellä Manned Spacecraft Center ja nimettiin uudelleen '
+            + 'presidentti Lyndon B. Johnsonin mukaan 19. helmikuuta '
+            + '1973. Siellä on lennonjohtokeskus, joka on hoitanut '
+            + 'jokaisen NASAn miehitetyn lennon Gemini 4:stä alkaen, ja '
+            + 'sen radiokutsumerkki on yksinkertaisesti Houston. '
+            + 'Kaupunki sai siitä lempinimensä Space City 1967.',
+          tiedosto: 'Mission Operation Control Room 2, Johnson Space Center. 20-3-2017 (38888558160).jpg',
+          selite: 'Apollon aikainen lennonjohtohuone on säilytetty '
+            + 'konsoleineen, punaisine puhelimineen ja karttanäyttöineen.',
+          lahde: 'Alan Wilson from Stilton, Peterborough, Cambs, UK, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Johnson Space Center',
+        },
+        {
+          otsikko: 'Maa vajoaa, vesi nousee',
+          teksti: 'Houston on tasainen suoperäinen alue, jolle on '
+            + 'rakennettu laaja kuivatusjärjestelmä; viereinen preeria '
+            + 'valuu kaupunkiin. Kaupunki nojasi ennen pohjaveteen, '
+            + 'mutta maan vajoaminen pakotti siirtymään järviin, ja '
+            + 'kaakkoispuolella maa vajoaa yhä. Seudulla on yli 150 '
+            + 'aktiivista siirrosta, joiden yhteispituus on noin '
+            + 'viisisataa kilometriä; ne liikkuvat hitaasti ja '
+            + 'tasaisesti, joten maanjäristysriski on pieni. Tasainen '
+            + 'maasto ja huonosti vettä läpäisevä savi tekevät tulvista '
+            + 'tavallisia: 2010-luvun puolivälissä niitä oli kolme '
+            + 'peräkkäisenä vuonna.',
+          tiedosto: 'Braes Bayou after the Storm - Houston Texas - Flickr - david55king.jpg',
+          selite: 'Myrskyn jälkeen puro on täynnä reunoja myöten ja '
+            + 'rannan pyörätie katoaa veden alle.',
+          lahde: 'David King from Haifa, Israel, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Houston',
+        },
+      ],
+    },
+  ],
 };

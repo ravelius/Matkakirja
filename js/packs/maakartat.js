@@ -11277,6 +11277,118 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Passeio Público', lat: -22.91379722, lon: -43.17598611 },
     ],
   },
+  /*
+   * DENVER (6.9.2026). Rajaus on 3,6 × 4,1 kilometriä keskustan ja
+   * Capitol Hillin ympärillä — perustelu, kahden ruutukaavan sauma ja
+   * hylätty osavaltiotalokeskitys ovat tools/piirra-kaupunkikartta.mjs:n
+   * denver-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * tšeijennit ja arapahot, vuoden 1858 kultalöytö ja kaupungin
+   * perustaminen jokien yhtymäkohtaan, rautatien tulo 1870 ja mailin
+   * merkki osavaltiotalon portaissa; teemasivu kertoo Front Rangesta,
+   * ohuesta ilmasta, Red Rocksista ja puistoista. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-denver.md, kohta E): Denver Public Library on 190
+   * metrin ja Byers–Evans House 137 metrin päässä taidemuseosta,
+   * ja Denver Civic Center 251 metrin päässä mutta aiheena sama
+   * museokortteli. Ne mainitaan matkaoppaan jaksossa 2.
+   *
+   * OSAVALTIOTALO, UNION STATION, CONFLUENCE PARK JA LARIMER SQUARE
+   * JÄÄVÄT POIS AIHESYISTÄ, eivät etäisyyden takia: kolme ensimmäistä
+   * ovat lehden nostojen ja etusivun ennen–nyt-parin aihe, ja Larimer
+   * Square kertoisi saman perustamistarinan kuin nosto K2. Red Rocks
+   * on 16 kilometriä lounaaseen ja teemasivun oma nosto.
+   */
+  denver: {
+    polku: 'assets/kartat/denver-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 39.7600, etela: 39.7280, lansi: -105.0030, ita: -104.9550 },
+    esittely: 'Kartan alue on Denverin keskusta ja Capitol Hill. '
+      + 'Vasemmalla erottuu vanha vino ruutukaava, joka kääntyi 1858 '
+      + 'South Platten mutkan mukaan, ja oikealla ilmansuuntien '
+      + 'mukainen myöhempi kaava; niiden sauma on leveä Colfax '
+      + 'Avenue. Pohjoisreunassa on LoDon vanha varastokortteli ja '
+      + 'idässä puistojen vyöhyke. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Cairnsissa ja Rio de Janeirossa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026, ja kaikki välit on
+       * mitattu uudelleen: pienin on 471 metriä (Daniels & Fisherin
+       * torni – esittävän taiteen keskus).
+       */
+      { nimi: 'Coors Field', lat: 39.75611111, lon: -104.99416667 },
+      { nimi: 'Daniels & Fisherin torni', lat: 39.74833333, lon: -104.99527778 },
+      { nimi: 'Esittävän taiteen keskus', lat: 39.74444444, lon: -104.9975 },
+      { nimi: 'Brown Palace -hotelli', lat: 39.74416667, lon: -104.98722222 },
+      { nimi: 'Katedraalibasilika', lat: 39.74028056, lon: -104.98193889 },
+      { nimi: 'Denverin taidemuseo', lat: 39.73718806, lon: -104.989345 },
+      { nimi: 'Molly Brownin talo', lat: 39.7375, lon: -104.98072222 },
+      { nimi: 'Kasvitieteellinen puutarha', lat: 39.7325, lon: -104.96083333 },
+    ],
+  },
+  /*
+   * HOUSTON (6.9.2026). Rajaus on 5,9 × 5,3 kilometriä keskustasta
+   * museokorttelin läpi Hermann Parkiin — perustelu ja keskipisteen
+   * valinta ovat tools/piirra-kaupunkikartta.mjs:n houston-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat ishakit
+   * ja karankawat, Allenin veljesten kaupunkikauppa 1836, vuoden
+   * 1873 puuvilla ja radat sekä laivaväylä; teemasivu kertoo
+   * suolakupoleista, Spindletopista, avaruuskeskuksesta ja tulvista.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ TAI SEN
+   * TUNTUMASSA (tarkistus-houston.md, kohta F): Rothkon kappeli on
+   * 243 metriä Menilin kokoelmasta, Houston City Hall 250 metriä Sam
+   * Houstonin puistosta ja luonnontieteen museo 150 metriä Hermann
+   * Parkin keskipisteestä.
+   *
+   * KAHDEKSAS KOHDE VAIHDETTIIN KUVASYYSTÄ. Faktapohja ehdotti
+   * kuvataiteen museota, mutta sen kaikissa Commonsin
+   * julkisivukuvissa on joko iso jäsenhankintabanderolli tai
+   * tunnistettava henkilö, eikä kartan kohde saa jäädä ilman
+   * juttukuvaa (Panamán ennakkotapaus: Way Onin hautausmaa
+   * pudotettiin samasta syystä). Tilalle Hermann Park samassa
+   * museokorttelissa; museo mainitaan matkaoppaan jaksossa 2.
+   *
+   * ALLEN'S LANDING, LAIVAVÄYLÄ JA JOHNSON SPACE CENTER JÄÄVÄT POIS
+   * AIHESYISTÄ tai etäisyyden takia: kaksi ensimmäistä ovat nostojen
+   * H2 ja H4 aihe, ja avaruuskeskus on 40 kilometrin päässä
+   * kaakossa Clear Lakessa.
+   */
+  houston: {
+    polku: 'assets/kartat/houston-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 29.7680, etela: 29.7150, lansi: -95.4050, ita: -95.3500 },
+    esittely: 'Kartan alue ulottuu Buffalo Bayoun mutkasta '
+      + 'pohjoisessa museokorttelin läpi Hermann Parkiin etelässä. '
+      + 'Yläreunassa kiemurtelee puro, sen oikealla puolella on '
+      + 'keskustan vinoon kääntynyt ruutukaava, ja moottoritiekehä '
+      + 'kiertää sen ympäri. Etelässä erottuu puiston pitkä '
+      + 'heijastusallas. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * 6.9.2026, ja kaikki välit on mitattu uudelleen: pienin on
+       * 300 metriä (Sam Houstonin puisto – Julia Idesonin talo).
+       */
+      { nimi: 'Market Squaren puisto', lat: 29.76266, lon: -95.36234 },
+      { nimi: 'Buffalo Bayoun puisto', lat: 29.761, lon: -95.384 },
+      { nimi: 'Sam Houstonin puisto', lat: 29.76, lon: -95.372 },
+      { nimi: 'Julia Idesonin kirjastotalo', lat: 29.75888889, lon: -95.36916667 },
+      { nimi: 'Astrosin stadion', lat: 29.75694444, lon: -95.35555556 },
+      { nimi: 'Kongressikeskus', lat: 29.75222222, lon: -95.35777778 },
+      { nimi: 'Menilin kokoelma', lat: 29.73722222, lon: -95.39861111 },
+      { nimi: 'Hermann Park', lat: 29.721, lon: -95.391 },
+    ],
+  },
 };
 
 /*

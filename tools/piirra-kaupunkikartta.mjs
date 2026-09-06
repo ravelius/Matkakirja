@@ -3685,6 +3685,61 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 45.5205, etela: 45.4930, lansi: -73.5850, ita: -73.5390 },
   },
+  denver: {
+    /*
+     * DENVERIN YDINKESKUSTA JA CAPITOL HILL (6.9.2026). Ruutu on
+     * 3,6 × 4,1 kilometriä eli Suvan ja San Franciscon väliltä.
+     * Rajaus alkaa pohjoisessa Coors Fieldiltä, kulkee LoDon
+     * vinon ruutukaavan yli Capitol Hillin ohi ja päättyy idässä
+     * kasvitieteelliseen puutarhaan.
+     *
+     * KAKSI RUUTUKAAVAA SAMASSA KUVASSA on Denverin oma piirre eikä
+     * piirtovirhe: vanha kaupunki kääntyi 1858 South Platten mutkan
+     * mukaan 45 asteen kulmaan, ja myöhempi laajennus noudattaa
+     * ilmansuuntia. Colfax Avenue on niiden sauma.
+     *
+     * VERTAILUPISTE OLISI OSAVALTIOTALO, MUTTA RUUTU EI OLE SEN
+     * YMPÄRILLÄ. Faktapohja (docs/mantereet-tyoaineisto/
+     * faktapohja-denver.md, osio 4) laski kohteiden painopisteen
+     * osuvan Capitol Hillin ja LoDon väliin; jos ruutu keskitettäisiin
+     * osavaltiotalolle, Coors Field putoaisi pohjoisreunan yli.
+     *
+     * RED ROCKS, CONFLUENCE PARK JA UNION STATION EIVÄT OLE
+     * KARTALLA. Red Rocks on 16 kilometriä lounaaseen; Confluence
+     * Park ja Union Station mahtuisivat ruutuun, mutta ne ovat
+     * lehden nostojen K2 ja K3 sekä etusivun ennen–nyt-parin aihe,
+     * eikä kohdekartta toista lehden juttuja (New Yorkin sääntö).
+     *
+     * meri: ei. Denverissä ei ole rantaviivaa, ja South Platte on
+     * OSM:ssä tavallinen vesiväylä.
+     */
+    rajat: { pohjoinen: 39.7600, etela: 39.7280, lansi: -105.0030, ita: -104.9550 },
+  },
+  houston: {
+    /*
+     * KESKUSTASTA MUSEOKORTTELIN LÄPI HERMANN PARKIIN (6.9.2026).
+     * Ruutu on 5,9 × 5,3 kilometriä eli Rion ja Kairon kokoluokkaa.
+     * Laajuus on pakko: Houstonilla ei ole yhtä ydintä vaan useita
+     * erillisiä keskittymiä (en-Wikipedia "Houston", Cityscape —
+     * kaupunki hylkäsi kaavoituksen kolmesti kansanäänestyksellä),
+     * ja lehden kahdeksan kohdetta jakautuvat keskustan ja
+     * museokorttelin välille.
+     *
+     * KESKIPISTE ON KESKUSTA. Kaupungin virallinen koordinaatti
+     * (29,7604 / −95,3698) osuu keskustan länsireunaan, ja ruutu on
+     * vedetty sen ympärille niin, että Buffalo Bayoun puisto jää
+     * länsireunaan ja Hermann Park eteläreunaan.
+     *
+     * ALLEN'S LANDING, LAIVAVÄYLÄ JA JOHNSON SPACE CENTER JÄÄVÄT
+     * POIS. Kaksi ensimmäistä ovat lehden nostojen H2 ja H4 aihe, ja
+     * avaruuskeskus on neljänkymmenen kilometrin päässä kaakossa
+     * Clear Lakessa — se ei mahdu mihinkään järkevään ruutuun.
+     *
+     * meri: ei. Houston on 80 kilometriä sisämaassa, ja Buffalo
+     * Bayou on OSM:ssä vesiväylä eikä rantaviivaa.
+     */
+    rajat: { pohjoinen: 29.7680, etela: 29.7150, lansi: -95.4050, ita: -95.3500 },
+  },
   sanfrancisco: {
     /*
      * Niemen koillisnurkka: Aquatic Parkin rannasta Civic Centeriin ja
