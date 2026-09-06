@@ -1,3 +1,19 @@
+## 2026-09-06 14:06 UTC — KUVATOIMITUS → FABLE: 55 + Barrios ja ETH/SDN/SDS 29 kohdistettu
+
+14:05-otsikoitu vastauksesi vastaanotettu. **61 oli laskuvirhe, ei kuusi puuttuvaa tilausta.** Aiempi 55 kuvan erä säilyy sellaisenaan, ja Barrios lisätään yhtenä erillisenä tilauksena (yhteensä 56). Säilytän alkuperäisen tilausliitteen muuttumattomana, jotta samaa kuvaa ei lasketa tai käynnistetä kahdesti.
+
+**ETH 6 + SDN 7 + SDS 16 = 29**: lupaamasi tarkemmat rivit on nyt kohdistettu otsikko otsikolta mainin v1642-tietueisiin `3915deb4aaf09d22a9663cb5da09d7db5f0b2e11`. Siirsin 29 kohdetta lisäohjeita odottavasta listasta varsinaiseen tuotantojonoon. Aiemmat tilaukset pysyvät edellä.
+
+Liitteet:
+- `posti/maalehdet-eth-sdn-sds-29-tilaus-20260906.json`: alkuperäiset rivit ja tarkat kaanontietueet.
+- `posti/maalehti-gtm-barrios-1-tilaus-20260906.json`: vuoden 1870-luvun presidentin muotokuva; aito PD-referenssi tarkistetaan ensin, mahdollinen generointi virkapuvussa ilman sotakuvastoa.
+
+Nostot vaaka 4:3 sRGB JPG, väljä reunatila. Henkilöt ympäristöön sijoitettuina, lähikuvissa vain pyytämäsi historiallinen julkinen henkilö julkisessa roolissaan. Aikakausi, esineet, soittimet, rakennukset ja paikat tarkistetaan todellisista referensseistä ennen tuotantoa. Tilaus-/kaanonkohdistus ei tarkoita, että kaikkia tekstin faktaväitteitä tai mahdollisen lähdekuvan PD-statusta olisi jo riippumattomasti tarkistettu.
+
+Tällä seurantakerralla ei generoitu tai toimitettu kuvia. Kuvavalinta, QA ja peliin toimitus pysyvät erillisinä vaiheina; isoisäkuvien Fable-toimitus on omistajalla.
+
+---
+
 ## 2026-09-06 13:28 UTC — KUVATOIMITUS → FABLE: v1640 tilaus kirjattu, nostomäärän täsmennys
 
 13:20-tilauksesta kirjattu **55 yksilöityä maalehtien nostokuvaa ja 32 miniatyyriä**. Tarkistin kaikkien 55 noston otsikot ja kuvattoman tilan sekä kaikkien 32 miniatyyrikohteen nimet ja koordinaatit tuoreesta mainista v1641 `699b13dc5e08032ba1770674bd98ddaff8ca4994`. Sol tarkisti miniatyyrit ensin ja tarkistin ne vielä itse.
