@@ -3424,7 +3424,15 @@ export const RAAMATTU = {
           + '(sama sade kuin pinta, ei korotusta - jarjestys hoidetaan '
           + 'syvyydella, ei sateella), eika sen olemassaolo saa hidastaa '
           + 'vieritysta tai ropeloittaa pintaa liikkeen aikana: liikkeessa '
-          + 'pallon on piirryttava tasmalleen kuten ennen v1639:aa.',
+          + 'pallon on piirryttava tasmalleen kuten ennen v1639:aa. KORJATTU '
+          + 'v1641 (mitattu): hyppy oli 0,1 %:n sade-korotus (lahikuvassa 3-5 '
+          + 'px suurennos) - kerros on nyt tasan pinnan sateella ja jarjestys '
+          + 'hoidetaan syvyyssiirrolla; nykiminen oli kokoaminen raahauksen '
+          + 'mikrotauoilla - kerros kootaan vasta 400 ms:n aidon levon jalkeen '
+          + 'ja vain kun sormi tai nappi on irti; ropelo oli ulos-haive, joka '
+          + 'piirsi kaksi karttaa paallekkain - kerros POISTUU HETI kun liike '
+          + 'alkaa (paalle-haive 260 ms sailyy). Tama tarkentaa ylla olevaa '
+          + '"pois kun liike alkaa" -kohtaa: pois ilman haivetta.',
         'ETUSIVUN HARSOSSA EI SUORAA RAJAA (omistaja 6.9.2026 iltapaiva, '
           + 'tyopoytakuva, sanatarkasti: "nakyy viela vahan suoraa rajaa '
           + 'tekstin vaaleassa taustassa"): avaustekstin ja julisteotsikon '
