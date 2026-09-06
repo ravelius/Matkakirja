@@ -3,13 +3,23 @@
  *
  * Omistaja 2.9.2026: *"pitäisi jatkaa kaikki Euroopan maat loppuun
  * näiden karttanostojen osalta. ja muistathan että kohdekaupunkien
- * nostot eivät tule pääkartalle?"* Raamatun kirjaus (JOKAINEN NÄKYVÄ
+ * nostot eivät tule pääkartalle?"* Omistaja 6.9.2026: *"Jatka kartta
+ * nostojen tekoa koko maailmaan."* Raamatun kirjaus (JOKAINEN NÄKYVÄ
  * KARTTAMERKKI ON NIMETTY JA NAPAUTETTAVA) antaa erälle tavoitteen per
  * maa: 8 kohdetta, 3 maastokohdetta, 1 eläintäky, 2 skandaalia.
  *
  * Tämä työkalu laskee, missä kukin maa on menossa. Se ei arvaa mitään:
  * luvut tulevat samoista taulukoista kuin pelin kartta, ja karttarivit
  * pelin omalta passilta (tools/tarkista-nostopaikat.mjs paakartanNostot).
+ *
+ * === MITKÄ MAAT LASKETAAN (6.9.2026: KOKO MAAILMA) =================
+ *
+ * Joukko on maailmankartan oma maalista: map.cityCountry -taulun
+ * uniikit ISO-tunnukset (112 maata). Se on täsmälleen se joukko, jossa
+ * pelaaja voi olla — maa ilman yhtäkään laudan kaupunkia ei ole pelissä
+ * maana. Aiempi EUROOPAN_MAAT-lista on yhä alla, mutta enää yhtä
+ * tehtävää varten: se kertoo, mitkä maat kuuluvat EUROOPAN LAUTAAN
+ * (Turkki ja Venäjä mukaan lukien), kun rivit ryhmitellään maanosiin.
  *
  * === MITÄ LASKETAAN ================================================
  *
@@ -31,6 +41,19 @@
  *                   (js/syvennys.js, js/fokusnosto.js). Lehtisivuiksi
  *                   siirtyneitä ei lasketa — ne eivät ole karttamerkkejä.
  *
+ * === MISTÄ KOHDELISTA TULEE (6.9.2026) =============================
+ *
+ * Suoraan pelin omasta taulusta: js/fokuskohteet.js KOHDE_MAAT, johon
+ * samassa tiedostossa on liitetty maastokohteiden hakemisto. Ennen
+ * tässä oli oma KURATOIDUT-taulu, jonka jokainen uusi fokuskohteet-
+ * pakki olisi vaatinut lisäämään käsin — ja unohdettu rivi olisi
+ * näkynyt vain siinä, että maa näyttää liian heikolta. Taulu vietiin
+ * siksi vientilistalle (yksi sana js/fokuskohteet.js:ssä), ja työkalu
+ * lukee sen. Tuonti ei ole uusi riippuvuus: sama moduuli tulee joka
+ * tapauksessa tarkista-nostopaikat.mjs:n mukana. Jako maastoon ja
+ * muihin tehdään tyypistä, joten yhdistetty taulu antaa saman
+ * vastauksen kuin kaksi erillistä listaa.
+ *
  * === PÄÄKARTTA VS. KOHDEKARTTA =====================================
  *
  * Sarake `pääkartalla` on se määrä, joka maan merkeistä oikeasti näkyy
@@ -45,42 +68,12 @@
  *   node tools/laske-karttanostot.mjs            # taulukko
  *   node tools/laske-karttanostot.mjs --md       # markdown docs/:iin
  */
-import { FOKUSKOHTEET_BGR } from '../js/packs/fokuskohteet-bgr.js';
-import { FOKUSKOHTEET_BIH } from '../js/packs/fokuskohteet-bih.js';
-import { FOKUSKOHTEET_DEU } from '../js/packs/fokuskohteet-deu.js';
-import { FOKUSKOHTEET_FRA } from '../js/packs/fokuskohteet-fra.js';
-import { FOKUSKOHTEET_GBR } from '../js/packs/fokuskohteet-gbr.js';
-import { FOKUSKOHTEET_GRC } from '../js/packs/fokuskohteet-grc.js';
-import { FOKUSKOHTEET_HRV } from '../js/packs/fokuskohteet-hrv.js';
-import { FOKUSKOHTEET_HUN } from '../js/packs/fokuskohteet-hun.js';
-import { FOKUSKOHTEET_ITA } from '../js/packs/fokuskohteet-ita.js';
-import { FOKUSKOHTEET_ROU } from '../js/packs/fokuskohteet-rou.js';
-import { FOKUSKOHTEET_TUR } from '../js/packs/fokuskohteet-tur.js';
-import { MAASTOKOHTEET } from '../js/packs/maastokohteet.js';
+import { KOHDE_MAAT } from '../js/fokuskohteet.js';
 import { ELAINTAKYT } from '../js/packs/elaintakyt.js';
 import { SKANDAALIT } from '../js/packs/skandaalit.js';
 import { HISTORIAN_HETKET } from '../js/packs/historian-hetket.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 import { paakartanNostot, kohdekarttojenNostot } from './tarkista-nostopaikat.mjs';
-
-/*
- * KURATOIDUT KOHDELISTAT. Vain Euroopan laudan maat; muut mantereet
- * eivät kuulu tähän erään. Maa ilman riviä tässä on maa ilman
- * fokuskohteet-pakkia, ja sen kohdeluku on nolla.
- */
-const KURATOIDUT = {
-  BGR: FOKUSKOHTEET_BGR,
-  BIH: FOKUSKOHTEET_BIH,
-  DEU: FOKUSKOHTEET_DEU,
-  FRA: FOKUSKOHTEET_FRA,
-  GBR: FOKUSKOHTEET_GBR,
-  GRC: FOKUSKOHTEET_GRC,
-  HRV: FOKUSKOHTEET_HRV,
-  HUN: FOKUSKOHTEET_HUN,
-  ITA: FOKUSKOHTEET_ITA,
-  ROU: FOKUSKOHTEET_ROU,
-  TUR: FOKUSKOHTEET_TUR,
-};
 
 /** Euroopan laudan maat — sama joukko kuin skandaaleilla ja eläintäyillä. */
 export const EUROOPAN_MAAT = [
@@ -89,17 +82,61 @@ export const EUROOPAN_MAAT = [
   'NLD', 'NOR', 'POL', 'PRT', 'ROU', 'RUS', 'SWE', 'TUR', 'UKR',
 ];
 
-/** Maan nimi suomeksi taulukon ensimmäiseen sarakkeeseen. */
-export const MAANIMET = {
-  AUT: 'Itävalta', BGR: 'Bulgaria', BIH: 'Bosnia ja Hertsegovina',
-  CHE: 'Sveitsi', CZE: 'Tšekki', DEU: 'Saksa', DNK: 'Tanska',
-  ESP: 'Espanja', EST: 'Viro', FIN: 'Suomi', FRA: 'Ranska',
-  GBR: 'Britannia', GRC: 'Kreikka', HRV: 'Kroatia', HUN: 'Unkari',
-  IRL: 'Irlanti', ISL: 'Islanti', ITA: 'Italia', LTU: 'Liettua',
-  LVA: 'Latvia', NLD: 'Alankomaat', NOR: 'Norja', POL: 'Puola',
-  PRT: 'Portugali', ROU: 'Romania', RUS: 'Venäjä', SWE: 'Ruotsi',
-  TUR: 'Turkki', UKR: 'Ukraina',
-};
+/**
+ * MAAN NIMI SUOMEKSI — pelin omasta nimitaulusta, ei työkalun omasta.
+ *
+ * map.countryShapes on sama taulu, josta peli lukee maan nimen
+ * maapilleriin ja lehden otsikkoon (js/pollo.js, js/lehti.js), ja se
+ * kattaa kaikki 112 maata. Oma MAANIMET-taulu poistettiin 6.9.2026:
+ * kahta nimilistaa ei kannata pitää käsin synkassa.
+ */
+export function maanNimi(iso) {
+  return MAAILMANKARTTA.map.countryShapes?.[iso]?.nimi ?? iso;
+}
+
+/** Laudan maat: kaupunkien maat ilman kaksoiskappaleita. */
+export function maailmanMaat() {
+  return [...new Set(Object.values(MAAILMANKARTTA.map.cityCountry))].sort();
+}
+
+/** Maanosat siinä järjestyksessä, jossa ne tulostetaan. */
+export const MANTEREET = [
+  ['europe', 'Eurooppa'],
+  ['middleeast', 'Lähi-itä'],
+  ['asia', 'Aasia'],
+  ['africa', 'Afrikka'],
+  ['northamerica', 'Pohjois-Amerikka'],
+  ['southamerica', 'Etelä-Amerikka'],
+  ['oceania', 'Oseania'],
+];
+
+/**
+ * MAAN MANNER. Kaksi sääntöä, tässä järjestyksessä:
+ *
+ *  1. EUROOPAN LAUDAN MAA ON EUROOPASSA. Turkin neljä kaupunkia ja
+ *     Venäjän kymmenestä kahdeksan ovat lähdepaketeissa middleeast ja
+ *     asia, joten pelkkä enemmistölaskenta siirtäisi ne pois siitä
+ *     taulukosta, jossa niiden erät on tähän asti suunniteltu.
+ *  2. MUUTEN ENEMMISTÖ map.cityManner -taulusta, tasapelin ratkaisee
+ *     MANTEREET-listan järjestys. Näin Egypti on Lähi-idässä (Kairo,
+ *     Luxor ja Siinai ovat middleeast-paketissa) ja Indonesia Aasiassa —
+ *     kummassakin sama jako kuin pelin omissa lähdepaketeissa.
+ */
+export function maanManner(iso) {
+  if (EUROOPAN_MAAT.includes(iso)) return 'europe';
+  const { cityCountry, cityManner } = MAAILMANKARTTA.map;
+  const laskuri = new Map();
+  for (const [kaupunki, maa] of Object.entries(cityCountry)) {
+    if (maa !== iso) continue;
+    const manner = cityManner[kaupunki];
+    if (manner) laskuri.set(manner, (laskuri.get(manner) ?? 0) + 1);
+  }
+  let paras = null;
+  for (const [manner] of MANTEREET) {
+    if ((laskuri.get(manner) ?? 0) > (paras ? laskuri.get(paras) : 0)) paras = manner;
+  }
+  return paras ?? 'asia';
+}
 
 /**
  * MAASTON TYYPIT. Nämä viisi ovat maastokohteita; kaikki muu on
@@ -121,15 +158,16 @@ export function kattavuus() {
   const { kaikki, kartalla } = paakartanNostot(MAAILMANKARTTA);
   const linkit = kohdekarttojenNostot();
   const rivit = [];
-  for (const iso of EUROOPAN_MAAT) {
+  for (const iso of maailmanMaat()) {
     const maanRivit = kaikki.filter((r) => r.iso === iso);
     const kulttuuri = maanRivit.filter(
       (r) => r.id.startsWith('syvennys-') || r.id.startsWith('nosto-'),
     ).length;
-    const lista = [...(KURATOIDUT[iso] ?? []), ...(MAASTOKOHTEET[iso] ?? [])];
+    const lista = KOHDE_MAAT[iso] ?? [];
     rivit.push({
       iso,
-      nimi: MAANIMET[iso] ?? iso,
+      nimi: maanNimi(iso),
+      manner: maanManner(iso),
       kohteet: lista.filter((k) => !MAASTON_TYYPIT.has(k.tyyppi)).length,
       maastokohteet: lista.filter((k) => MAASTON_TYYPIT.has(k.tyyppi)).length,
       elaintaky: ELAINTAKYT[iso] ? 1 : 0,
@@ -157,29 +195,69 @@ export function vajeet(r) {
   return puuttuu;
 }
 
+/** Karttamerkkien yhteismäärä — erien järjestysperuste. */
+export function merkkeja(r) {
+  return r.paakartalla + r.kohdekartalla;
+}
+
+/**
+ * RIVIT MAANOSITTAIN, heikoimmasta vahvimpaan.
+ *
+ * Järjestys maanosan sisällä on karttamerkkien summa (pääkartta +
+ * kohdekartta) nousevasti — sama peruste, jolla erät on Euroopassa
+ * valittu. Tasapelin ratkaisee ISO, jotta ajo on toistettava.
+ *
+ * @returns {Array<{manner: string, nimi: string, rivit: Array<object>}>}
+ */
+export function maanosittain(rivit = kattavuus()) {
+  return MANTEREET.map(([manner, nimi]) => ({
+    manner,
+    nimi,
+    rivit: rivit
+      .filter((r) => r.manner === manner)
+      .sort((a, b) => merkkeja(a) - merkkeja(b) || a.iso.localeCompare(b.iso)),
+  })).filter((ryhma) => ryhma.rivit.length);
+}
+
+const MD_OTSIKKO = '| maa | kohteet | maastokohteet | eläintäky | skandaalit '
+  + '| hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |';
+
+function mdRivi(r) {
+  const v = vajeet(r);
+  return `| ${r.nimi} (${r.iso}) | ${r.kohteet} | ${r.maastokohteet} `
+    + `| ${r.elaintaky} | ${r.skandaalit} | ${r.hetket} | ${r.kulttuurinostot} `
+    + `| ${r.paakartalla} | ${r.kohdekartalla} | ${v.length ? v.join(', ') : 'täysi'} |`;
+}
+
+function tekstirivi(r) {
+  const v = vajeet(r);
+  return `${r.iso} ${String(r.nimi).padEnd(24)} koh ${String(r.kohteet).padStart(2)} `
+    + `maa ${String(r.maastokohteet).padStart(2)} elä ${r.elaintaky} `
+    + `ska ${String(r.skandaalit).padStart(2)} het ${r.hetket} `
+    + `kul ${String(r.kulttuurinostot).padStart(2)} `
+    + `| pää ${String(r.paakartalla).padStart(2)} koh ${String(r.kohdekartalla).padStart(2)} `
+    + `| ${v.length ? v.join(', ') : 'täysi'}`;
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   const rivit = kattavuus();
+  const ryhmat = maanosittain(rivit);
+  const vajaat = rivit.filter((r) => vajeet(r).length);
   if (process.argv.includes('--md')) {
-    console.log('| maa | kohteet | maastokohteet | eläintäky | skandaalit '
-      + '| hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |');
-    console.log('|---|---:|---:|---:|---:|---:|---:|---:|---:|---|');
-    for (const r of rivit) {
-      const v = vajeet(r);
-      console.log(`| ${r.nimi} (${r.iso}) | ${r.kohteet} | ${r.maastokohteet} `
-        + `| ${r.elaintaky} | ${r.skandaalit} | ${r.hetket} | ${r.kulttuurinostot} `
-        + `| ${r.paakartalla} | ${r.kohdekartalla} | ${v.length ? v.join(', ') : 'täysi'} |`);
+    for (const ryhma of ryhmat) {
+      console.log(`### ${ryhma.nimi} (${ryhma.rivit.length} maata)\n`);
+      console.log(MD_OTSIKKO);
+      console.log('|---|---:|---:|---:|---:|---:|---:|---:|---:|---|');
+      for (const r of ryhma.rivit) console.log(mdRivi(r));
+      console.log('');
     }
+    console.log(`Maita ${rivit.length}, tavoitteessa ${rivit.length - vajaat.length}, `
+      + `vajaita ${vajaat.length}.`);
   } else {
-    for (const r of rivit) {
-      const v = vajeet(r);
-      console.log(`${r.iso} ${String(r.nimi).padEnd(24)} koh ${String(r.kohteet).padStart(2)} `
-        + `maa ${String(r.maastokohteet).padStart(2)} elä ${r.elaintaky} `
-        + `ska ${String(r.skandaalit).padStart(2)} het ${r.hetket} `
-        + `kul ${String(r.kulttuurinostot).padStart(2)} `
-        + `| pää ${String(r.paakartalla).padStart(2)} koh ${String(r.kohdekartalla).padStart(2)} `
-        + `| ${v.length ? v.join(', ') : 'täysi'}`);
+    for (const ryhma of ryhmat) {
+      console.log(`\n== ${ryhma.nimi} (${ryhma.rivit.length} maata) ==`);
+      for (const r of ryhma.rivit) console.log(tekstirivi(r));
     }
-    const vajaat = rivit.filter((r) => vajeet(r).length);
     console.log(`\nmaita ${rivit.length}, tavoitteessa ${rivit.length - vajaat.length}, `
       + `vajaita ${vajaat.length}`);
   }

@@ -170,8 +170,14 @@ import { taytaLahderivi } from './tekijakortti.js';
  * täsmälleen yksi rivi, kuten yllä luvattiin. Pohja BGR.webp ja BGR.json
  * ovat ämpärissä (tarkistettu 25.8.2026), joten merkit saavat lehden,
  * jonka päälle asettua.
+ *
+ * VIENTILISTALLA 6.9.2026 (kattavuustyökalu). Taulu on maan kohteiden
+ * ainoa täysi lista — kuratoitu pakki JA maastokohteet yhdessä, ks.
+ * liitos alempana — ja tools/laske-karttanostot.mjs lukee juuri sen,
+ * jottei työkaluun tarvitse lisätä tuontia joka kerta kun uusi pakki
+ * syntyy. Peli itse käyttää taulua vain tämän tiedoston sisällä.
  */
-const KOHDE_MAAT = {
+export const KOHDE_MAAT = {
   GRC: FOKUSKOHTEET_GRC,
   BGR: FOKUSKOHTEET_BGR,
   ITA: FOKUSKOHTEET_ITA,

@@ -2074,3 +2074,21 @@ jäänyt aaltoja edeltävään maailmaan:
   ±5 %). Mittausikkunaa EI siis levennetty — se odottaa jo tapahtumaa
   (`waitForFunction`: kone näkyy, arkki väistyy, `kartalento` päättyy)
   eikä kelloa, ja kontin nopeus riitti sellaisenaan.
+
+**Karttanostojen kattavuusmittari koko maailmaan (6.9.2026).** Omistaja:
+*"Jatka kartta nostojen tekoa koko maailmaan."* `tools/laske-karttanostot.mjs`
+laski siihen asti vain Euroopan laudan 29 maata kovakoodatusta listasta;
+nyt se laskee kaikki laudan maat (`map.cityCountry` -taulun uniikit
+ISO-tunnukset, 112 maata) ja ryhmittelee rivit maanosittain
+(`map.cityManner`), maanosan sisällä heikoimmasta vahvimpaan. Maan nimi
+tulee pelin omasta taulusta (`map.countryShapes`) eikä työkalun omasta
+listasta, ja kohdelista suoraan `js/fokuskohteet.js`:n KOHDE_MAAT-taulusta
+— se vietiin vientilistalle (yksi sana), jottei työkaluun tarvitse lisätä
+tuontia joka kerta kun uusi `fokuskohteet-<iso>.js` syntyy. Sarakkeet,
+tavoitteet ja `--md`-tuloste ovat ennallaan. Vartija:
+`tests/laske-karttanostot.test.mjs` (rivejä yhtä monta kuin laudalla
+maita, jokaisella rivillä nimi eikä paljas ISO). Luvut ja maailman
+eräehdotukset: `docs/moduulit/karttanostot-kattavuus.md`, osio "Kattavuus
+koko maailmassa 6.9.2026" — 112 maasta 14 on tavoitteessa ja 32:lla ei
+ole yhtäkään karttamerkkiä. Pallolaudalle tämä on inventaariota, ei
+piirtoa: samat merkit näkyvät pallolla laudan omien kerrosten kautta.
