@@ -5946,24 +5946,88 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 }
 
 /*
- * OSA II FEIDAA SISÄÄN VASTA HETKEN PÄÄSTÄ (omistajan tilaus 5.9.2026
- * ilta, sanatarkasti: *"näytöllä näkyy otsikko, mutta "Osa II.." tulee
- * vasta noin reilun sekunnin päästä feidaten. sitten alkaa
- * kirjoituskone ja luenta"*).
+ * JULISTE RAKENTUU PALA PALALTA NAPIN JÄLKEEN (omistajan tilaus
+ * 6.9.2026 aamu, sanatarkasti: *"ota taustalta pois pelin otsikko …
+ * Kun nappia painetaan niin sitten tulee pienellä viiveellä yläviiva ja
+ * otsikko sitten pienen hetken päästä osa 2 teksti. se saisi tulla
+ * animoidusti niin että kirjainkoko ja kirkkaus välähtää isompana ja
+ * feidautuu nykyiseen, kuin pieni salaman isku. sitten tulisi alaviiva
+ * otsikkoon ja pienen hetken päästä alkaisi konekirjoitusteksti."*).
  *
- * Rivi piilotetaan PELKÄLLÄ PEITTÄVYYDELLÄ eikä displaylla: sen tila
- * julisteessa säilyy, joten mikään ei hyppää sen ilmestyessä. Viive ja
- * häivytyksen kesto ovat js/ui.js:n vakioita (OSAN_VIIVE_MS ja
- * OSAN_HAIVYTYS_MS); jälkimmäinen tulee tänne muuttujana
- * (--osan-haivytys), jotta luku on olemassa vain yhdessä paikassa.
+ * `.avaus-kesken` on julisteessa aloitusportista siihen asti, kunnes
+ * peli lähtee liikkeelle: se piilottaa KAIKEN, ja js/ui.js
+ * (naytaAvausjuliste) paljastaa palat yksi kerrallaan luokalla
+ * `.avaus-nakyy`. Ajat ovat js/ui.js:n AVAUS_*-vakioita, kestot tulevat
+ * tänne muuttujina (--viivan-piirto, --salaman-kesto, --salaman-kerroin),
+ * jotta luvut ovat olemassa vain yhdessä paikassa.
+ *
+ * PIILOTUS ON PEITTÄVYYTTÄ JA TRANSFORMIA, ei displayta eikä
+ * kirjasinkokoa: julisteen mitat ja rivijako pysyvät koko ajan samoina,
+ * joten fitIntron mitoitus ei liiku eikä mikään hyppää (vartijat:
+ * tests/lento-ajoitus.test.mjs, savuke E11f).
  */
-.juliste-osa { transition: opacity var(--osan-haivytys, 900ms) ease-out; }
-.intro-juliste.osa-piilossa .juliste-osa { opacity: 0; transition: none; }
+.intro-juliste.avaus-kesken .juliste-rivi,
+.intro-juliste.avaus-kesken .juliste-viiva { opacity: 0; }
+.intro-juliste.avaus-kesken .juliste-viiva > span { transform: scaleX(0); }
+
+/*
+ * VIIVA PIIRTYY KESKELTÄ ULOS: hiusviivat kasvavat merkin (◈) molemmin
+ * puolin skaalaamalla, merkki itse feidaa mukana. Leveys muuttuu
+ * transformilla, joten rivi ei elä asettelussa.
+ */
+.juliste-viiva > span:first-child { transform-origin: right center; }
+.juliste-viiva > span:last-child { transform-origin: left center; }
+
+.intro-juliste.avaus-kesken .juliste-viiva.avaus-nakyy {
+  opacity: 1;
+  transition: opacity var(--viivan-piirto, 520ms) ease-out;
+}
+
+.intro-juliste.avaus-kesken .juliste-viiva.avaus-nakyy > span {
+  transform: scaleX(1);
+  transition: transform var(--viivan-piirto, 520ms) cubic-bezier(0.22, 0.68, 0.28, 1);
+}
+
+/*
+ * SALAMAN LÄHTÖASENTO: rivi maalataan kerran täydellä peittävyydellä,
+ * SALAMAN_KERROIN-kokoisena ja kirkkaana (kirkkaus + vaalea hehku).
+ * Siirtymä on tässä pois päältä, jotta lähtöasento ehtii kehykseen
+ * ennen kuin js/ui.js vaihtaa luokan lopulliseen.
+ */
+.intro-juliste.avaus-kesken .juliste-rivi.avaus-salama {
+  opacity: 1;
+  transform: scale(var(--salaman-kerroin, 1.25));
+  filter: brightness(1.5) drop-shadow(0 0 0.5em rgba(255, 247, 222, 0.95));
+  transition: none;
+}
+
+/* …ja tästä se feidaa nykyiseen kokoon, väriin ja hehkuun. */
+.intro-juliste.avaus-kesken .juliste-rivi.avaus-nakyy {
+  opacity: 1;
+  transform: scale(1);
+  filter: brightness(1) drop-shadow(0 0 0 rgba(255, 247, 222, 0));
+  transition: opacity var(--salaman-kesto, 600ms) ease-out,
+    transform var(--salaman-kesto, 600ms) cubic-bezier(0.16, 0.84, 0.3, 1),
+    filter var(--salaman-kesto, 600ms) ease-out;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  /* Kaikki näkyy heti ilman viiveitä (Raamattu, sääntö 4). */
-  .juliste-osa { transition: none; }
-  .intro-juliste.osa-piilossa .juliste-osa { opacity: 1; }
+  /*
+   * SAMA JÄRJESTYS, PELKÄT HÄIVYTYKSET (Raamattu, arkkikirjasto:
+   * *"prefers-reduced-motion kunnioitetaan (pelkkä häivytys)"*): ei
+   * skaalausta eikä salamaa. js/ui.js jättää salamaluokan ottamatta,
+   * ja tämä on sen varmistus myös silloin, jos luokka ehtii elementille.
+   */
+  .intro-juliste.avaus-kesken .juliste-rivi.avaus-salama,
+  .intro-juliste.avaus-kesken .juliste-rivi.avaus-nakyy {
+    transform: none;
+    filter: none;
+    transition: opacity var(--salaman-kesto, 600ms) ease-out;
+  }
+  .intro-juliste.avaus-kesken .juliste-viiva.avaus-nakyy > span {
+    transform: scaleX(1);
+    transition: none;
+  }
 }
 
 /*
@@ -6245,14 +6309,33 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
 /*
  * SUMUVERHO KEVENEE PALLON PÄÄLLÄ. Video on jo sumennettu, joten
  * backdrop-filter maksaisi joka kehyksellä turhaan — sen tilalle pelkkä
- * pergamenttihuntu (omistajan ehto: efekti ei saa viedä etusivulla tehoja).
+ * huntu (omistajan ehto: efekti ei saa viedä etusivulla tehoja).
+ *
+ * HUNTU ON TUMMENNUS EIKÄ PERGAMENTTIA (omistajan tilaus 6.9.2026 aamu,
+ * sanatarkasti: *"maailmankartta-animaatio saisi olla vähän tummempi,
+ * kuin on ihan aloitusruudussa, ehkä siitä asteen vaaleampi mutta ei
+ * niin vaalea kuin nyt"*). Ennen tässä oli vaalea pergamenttihuntu
+ * (rgba(239, 220, 180, 0.38)), joka pesi pallon kalpeaksi heti napin
+ * painalluksesta.
+ *
+ * Sama kaava ja sama väri kuin aloitusportilla (.start-gate), yhtä
+ * astetta vaaleampana — portti 0,28 keskellä ja 0,6 reunoilla, avaus
+ * 0,18 ja 0,44. Luvut ovat nimettyinä muuttujina, jotta portin ja
+ * avauksen suhde on luettavissa yhdestä paikasta.
+ *
+ * Tekstin luettavuus EI ole tämän varassa: palstalla ja otsikolla on
+ * omat pergamenttiharsonsa (::before, alla).
  */
 .intro.intro-pallolla .intro-verho {
   /* Verho jää pallon ja tekstilohkojen väliin (z-index 1). */
   z-index: 1;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  background: rgba(239, 220, 180, 0.38);
+  --avauksen-tummennus: 0.18;
+  --avauksen-tummennus-reuna: 0.44;
+  background: radial-gradient(ellipse at 50% 50%,
+    rgba(36, 26, 18, var(--avauksen-tummennus)) 40%,
+    rgba(36, 26, 18, var(--avauksen-tummennus-reuna)) 100%);
 }
 
 /*
@@ -6352,6 +6435,39 @@ body.aloitus-zoom .alkureitit { visibility: hidden; }
   inset: -1.8em -3.6em;
   --harson-peitto: 0.8;
   --harson-haivytys: 36%;
+}
+
+/*
+ * HARSO ON PIILOSSA PORTIN TAKANA JA SYTTYY YLÄVIIVAN KANSSA (omistajan
+ * tilaus 6.9.2026 aamu: *"ota taustalta pois pelin otsikko"*). Ilman
+ * tätä aloitusportille jäisi vaalea soikio tyhjän otsikon paikalle:
+ * julisteen rivit ovat piilossa (.avaus-kesken), mutta harso on
+ * julisteen oma ::before eikä katoa niiden mukana. Luokan lisää
+ * js/ui.js naytaAvausjuliste ensimmäisessä vaiheessa.
+ */
+.intro.intro-pallolla .intro-juliste.avaus-kesken::before {
+  opacity: 0;
+  transition: opacity var(--viivan-piirto, 520ms) ease-out;
+}
+
+.intro.intro-pallolla .intro-juliste.avaus-kesken.avaus-harso::before {
+  opacity: var(--harson-peitto);
+}
+
+/*
+ * SAMA ODOTUS TEKSTIPALSTAN HARSOLLE: se syttyy vasta, kun
+ * kirjoituskone alkaa (js/ui.js naytaAvausjuliste viimeinen vaihe).
+ * Muuten pallon päällä olisi koko avauksen ajan tyhjä vaalea soikio
+ * odottamassa tekstiään — se erottuu selvästi nyt, kun taustapallo on
+ * tummennettu (omistaja 6.9.2026 aamu).
+ */
+.intro.intro-pallolla .intro-palsta.avaus-kesken::before {
+  opacity: 0;
+  transition: opacity var(--salaman-kesto, 600ms) ease-out;
+}
+
+.intro.intro-pallolla .intro-palsta.avaus-kesken.avaus-harso::before {
+  opacity: var(--harson-peitto);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -6746,14 +6862,23 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
   position: absolute;
   inset: 0;
   z-index: 6;
-  /* Reunakuulto tasaisen tummennuksen sijaan (arkkikirjaston
-     panos-aste): keskusta jää valoisammaksi, jotta julisteotsikko
-     lukee portin läpi, ja reunat kehystävät. Nappiryhmä ei enää
-     keskity otsikon päälle vaan asettuu sen ALLE (omistaja
-     26.8.2026: "Tämä on hässäkän näköinen"). */
-  background: radial-gradient(ellipse at 50% 42%,
-    rgba(36, 26, 18, 0.28) 40%, rgba(36, 26, 18, 0.6) 100%);
-  /* Juliste ja kartta sumenevat napin takana (omistaja 26.8.2026:
+  /*
+   * PORTIN TUMMENNUS on reunakuultoa tasaisen sijaan (arkkikirjaston
+   * panos-aste): keskusta jää valoisammaksi ja reunat kehystävät.
+   * Luvut ovat nimettyinä muuttujina, koska avauksen taustapallo saa
+   * saman kaavan yhtä astetta vaaleampana (.intro.intro-pallolla
+   * .intro-verho: 0,18 ja 0,44) — omistajan tilaus 6.9.2026 aamu.
+   *
+   * Soikio on nyt ruudun keskellä (ennen 42 %, jolloin valoisin kohta
+   * osui julisteotsikkoon): portin takana ei enää ole otsikkoa, vaan
+   * pelkkä pallo ja keskellä nappi.
+   */
+  --portin-tummennus: 0.28;
+  --portin-tummennus-reuna: 0.6;
+  background: radial-gradient(ellipse at 50% 50%,
+    rgba(36, 26, 18, var(--portin-tummennus)) 40%,
+    rgba(36, 26, 18, var(--portin-tummennus-reuna)) 100%);
+  /* Kartta sumenee napin takana (omistaja 26.8.2026:
      "Aloitusvalikossa tekstin ja kartan voi sumentaa") — portti on
      oma pintansa, tarkka sisältö palaa vasta napautuksesta. */
   -webkit-backdrop-filter: blur(6px);
@@ -6762,14 +6887,20 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
   padding: 1rem;
 }
 
-/* Nappiryhmä julisteen alapuolella: juliste täyttää ylälohkon (fitIntro),
-   joten 62 % korkeudesta on sen alaraja väljällä varalla. Ääniviihje
-   kelluu napin yläpuolella eikä siirrä sitä. */
+/*
+ * NAPPI IHAN KESKELLE RUUTUA (omistajan tilaus 6.9.2026 aamu,
+ * sanatarkasti: *"keskitä aloita seikkailu nappi ihan keskelle
+ * ruutua"*). Ennen ryhmä oli 62 %:n korkeudella julisteotsikon
+ * alapuolella; nyt otsikkoa ei ole portin takana lainkaan, joten
+ * ryhmä keskitetään sekä pysty- että vaakasuunnassa — sama sommitelma
+ * työpöydällä ja puhelimessa. Ääniviihje kelluu napin yläpuolella
+ * eikä siirrä sitä.
+ */
 .start-gate-keskus {
   position: absolute;
   left: 50%;
-  top: 62%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;

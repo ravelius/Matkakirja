@@ -1483,29 +1483,60 @@ const PALUU_KESTO_MS = 8000;
 const TYPE_MS = 50;
 const INTRO_TYPE_MS = 190;
 /*
- * AVAUKSEN KOLME VAIHETTA (omistajan tilaus 5.9.2026 ilta, sanatarkasti:
- * *"tuon etusivun voisi animoida niin että pallo lähtee heti pyörimään
- * ja näytöllä näkyy otsikko, mutta "Osa II.." tulee vasta noin reilun
- * sekunnin päästä feidaten. sitten alkaa kirjoituskone ja luenta"*).
+ * AVAUKSEN VIISI VAIHETTA (omistajan tilaus 6.9.2026 aamu, sanatarkasti:
+ * *"ota taustalta pois pelin otsikko ja keskitä aloita seikkailu nappi
+ * ihan keskelle ruutua. Kun nappia painetaan niin sitten tulee pienellä
+ * viiveellä yläviiva ja otsikko sitten pienen hetken päästä osa 2
+ * teksti. se saisi tulla animoidusti niin että kirjainkoko ja kirkkaus
+ * välähtää isompana ja feidautuu nykyiseen, kuin pieni salaman isku.
+ * sitten tulisi alaviiva otsikkoon ja pienen hetken päästä alkaisi
+ * konekirjoitusteksti."*).
  *
- *   1. pallo pyörii ja julisteotsikko (MATKAKIRJA, MAAILMAN YMPÄRI…)
- *      on ruudulla heti — pallon oma juliste näkyy jo ennen videota
- *      (js/etusivupallo.js),
- *   2. OSAN_VIIVE_MS:n päästä alaotsikko "osa II · unohdettu aarre"
- *      feidaa sisään OSAN_HAIVYTYS_MS:n ajan (css .juliste-osa,
- *      --osan-haivytys) — omistajan tarkennus 5.9.2026 klo 00.20,
- *      sanatarkasti: *"osa 2 saisi tulla sekunnin myöhemmin"*, joten
- *      viive on 1,3 s → 2,3 s,
- *   3. vasta häivytyksen jälkeen alkaa kirjoituskone ja sen perässä
- *      kertojan luenta — pari säilyttää keskinäisen järjestyksensä
- *      (paikkarivi naputetaan ensin, luenta alkaa rungon kanssa),
- *      koko pari vain siirtyy myöhemmäksi.
+ * Ennen tätä juliste oli kokonaan ruudulla jo aloitusportin takana
+ * sumennettuna (5.9.2026 vaiheistus, jossa vain "osa II" feidasi
+ * sisään). Nyt portin takana näkyy pelkkä pallo, ja juliste rakentuu
+ * napin painalluksesta pala palalta. Ajat ovat NAPIN PAINALLUKSESTA,
+ * jotta jokainen vaihe on yhtä ajastinta eikä ketju kasaa viiveitä:
  *
- * Vähennetyllä liikkeellä (prefers-reduced-motion) kaikki on ruudulla
- * heti eikä yhtään viivettä oteta (Raamattu, sääntö 4).
+ *   600 ms   AVAUS_YLAVIIVA_MS   yläviiva piirtyy keskeltä ulos
+ *                                (VIIVAN_PIIRTO_MS) ja otsikon
+ *                                pergamenttiharso feidaa mukana,
+ *  1050 ms   AVAUS_OTSIKKO_MS    MATKAKIRJA + Vernen kaksi riviä
+ *                                VÄLÄHTÄVÄT (SALAMAN_KERROIN-kokoisina
+ *                                ja kirkkaina) ja asettuvat
+ *                                SALAMAN_KESTO_MS:ssä lopulliseen
+ *                                kokoonsa — transformilla ja
+ *                                suodattimella, ei kirjasinkoolla,
+ *                                joten fitIntron mitoitus ei liiku,
+ *  1750 ms   AVAUS_OSA_MS        "osa II · unohdettu aarre" samalla
+ *                                salamalla (700 ms otsikon jälkeen),
+ *  2250 ms   AVAUS_ALAVIIVA_MS   alaviiva piirtyy (500 ms osan
+ *                                jälkeen),
+ *  2850 ms   AVAUS_KERTOMUS_MS   kirjoituskone ja luenta alkavat
+ *                                (600 ms alaviivan jälkeen) — pari
+ *                                säilyttää keskinäisen järjestyksensä
+ *                                (paikkarivi naputetaan ensin, luenta
+ *                                alkaa rungon kanssa).
+ *
+ * Vähennetyllä liikkeellä (prefers-reduced-motion) järjestys ja ajat
+ * ovat samat, mutta salamaa ei oteta: pelkät häivytykset (Raamattu,
+ * arkkikirjasto: *"prefers-reduced-motion kunnioitetaan (pelkkä
+ * häivytys)"*).
  */
-const OSAN_VIIVE_MS = 2300;
-const OSAN_HAIVYTYS_MS = 900;
+const AVAUS_YLAVIIVA_MS = 600;
+const AVAUS_OTSIKKO_MS = 1050;
+const AVAUS_OSA_MS = 1750;
+const AVAUS_ALAVIIVA_MS = 2250;
+const AVAUS_KERTOMUS_MS = 2850;
+/*
+ * Viivan piirto ja salaman häivytys viedään css:ään muuttujina
+ * (--viivan-piirto, --salaman-kesto, --salaman-kerroin), jotta luvut
+ * ovat olemassa vain tässä tiedostossa. Salaman lähtökoko on 1,25×
+ * lopullinen ja se feidaa nykyiseen 600 ms:ssä.
+ */
+const VIIVAN_PIIRTO_MS = 520;
+const SALAMAN_KESTO_MS = 600;
+const SALAMAN_KERROIN = 1.25;
 /*
  * KIRJOITTAJAN RYTMI. Sanaväli huojuu, ja välimerkin jälkeen pidetään
  * tauko: revennyt katkelma jättää lukijan pisimmäksi aikaa tyhjän
@@ -2963,11 +2994,11 @@ export class UI {
     this.revealShownFor = null;
     this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     /*
-     * Avausotsikon kaksivaiheinen ajastin (OSAN_VIIVE_MS →
-     * OSAN_HAIVYTYS_MS): kenttä, jotta piirto, portti ja destroy voivat
-     * perua ketjun (peruAvausosa).
+     * Avausjulisteen vaiheajastimet (AVAUS_*): lista, jotta piirto,
+     * portti ja destroy voivat perua koko ketjun kerralla
+     * (peruAvausjuliste).
      */
-    this.osanAjastin = null;
+    this.julisteAjastimet = [];
     /*
      * Pöllön vihjekuplan ajastin (paivitaValintavihje). Viive on
      * kentässä eikä suoraan vakiona, jotta savukkeen ei tarvitse odottaa
@@ -4332,9 +4363,9 @@ export class UI {
     document.body.classList.remove('radio-tila');
     for (const kalvo of document.querySelectorAll('.flight-overlay')) kalvo.remove();
     this.suljeAloitusportti();
-    // Avausotsikon feidausajastin: kuollut instanssi ei saa naputtaa
-    // avaustekstiä uuden pelin päälle (peruAvausosa nollaa ketjun).
-    this.peruAvausosa();
+    // Avausjulisteen vaiheajastimet: kuollut instanssi ei saa naputtaa
+    // avaustekstiä uuden pelin päälle (peruAvausjuliste nollaa ketjun).
+    this.peruAvausjuliste();
     clearTimeout(this.botTimer);
     // Kesken katkennut matka jättäisi automaattiheiton ajastimen
     // pyörimään uuden pelin päälle.
@@ -15359,7 +15390,7 @@ export class UI {
     if (!nakyy) {
       this.introShown = false;
       this.introRunko.textContent = '';
-      this.peruAvausosa();
+      this.peruAvausjuliste();
       if (this.introValinta) this.introValinta.hidden = true;
       stopIntroVoice(this);
       this.suljeAloitusportti();
@@ -15371,13 +15402,14 @@ export class UI {
     // samasta Aloita seikkailu -painalluksesta. Tausta on himmeänä takana.
     if (!this.aloitettu) {
       /*
-       * ALAOTSIKKO ON PIILOSSA JO PORTIN TAKANA: se feidaa sisään vasta
-       * avauksen toisessa vaiheessa (naytaAvausosa). Jos rivi
-       * piilotettaisiin vasta napautuksesta, se välähtäisi ensin pois
-       * ja tulisi sitten takaisin — portin läpi otsikko näkyy
-       * sumennettuna (css .start-gate), joten piilotus kuuluu tänne.
+       * KOKO JULISTE ON PIILOSSA JO PORTIN TAKANA (omistaja 6.9.2026
+       * aamu: *"ota taustalta pois pelin otsikko"*): viivat, otsikko,
+       * "osa II" ja otsikon harso paljastuvat vasta napin painalluksen
+       * jälkeen vaihe kerrallaan (naytaAvausjuliste). Jos piilotus
+       * tehtäisiin vasta napautuksesta, juliste välähtäisi ensin pois
+       * ja rakentuisi sitten takaisin.
        */
-      this.piilotaAvausosa();
+      this.piilotaAvausjuliste();
       /*
        * KIRJASINKOKO MITATAAN JO PORTIN TAKANA (omistaja 5.9.2026 klo
        * 00.20: *"etusivun otsikko hyppää alussa eri kokoon kun
@@ -15393,9 +15425,9 @@ export class UI {
       return;
     }
     this.introShown = true;
-    // Pelin resetistä palattaessa portti ohitetaan: alaotsikko piiloon
+    // Pelin resetistä palattaessa portti ohitetaan: juliste piiloon
     // tässä samassa piirrossa, ennen kuin mitään ehtii näkyä.
-    this.piilotaAvausosa();
+    this.piilotaAvausjuliste();
     // Sama mittaus myös tätä kautta (portti ohitettu): koko on
     // paikallaan ennen ensimmäistäkään kirjainta.
     this.fitIntro();
@@ -15451,11 +15483,11 @@ export class UI {
       this.fitIntro();
     };
     /*
-     * KIRJOITUSKONE JA LUENTA ALKAVAT VASTA OSA II:N JÄLKEEN (omistaja
-     * 5.9.2026 ilta). Pari säilyttää keskinäisen ajoituksensa —
+     * KIRJOITUSKONE JA LUENTA ALKAVAT VASTA ALAVIIVAN JÄLKEEN (omistaja
+     * 6.9.2026 aamu). Pari säilyttää keskinäisen ajoituksensa —
      * paikkarivi naputetaan ensin, ja sen valmistuttua kertoja aloittaa
-     * rungon kanssa — mutta koko pari odottaa alaotsikon häivytyksen
-     * loppuun (naytaAvausosa).
+     * rungon kanssa — mutta koko pari odottaa julisteen valmiiksi
+     * (naytaAvausjuliste, AVAUS_KERTOMUS_MS).
      */
     const aloitaKertomus = () => {
       if (this.dead || this.game.phase !== 'pickstart') return;
@@ -15467,59 +15499,128 @@ export class UI {
         aloitaRunko();
       }
     };
-    this.naytaAvausosa(aloitaKertomus);
+    this.naytaAvausjuliste(aloitaKertomus);
   }
 
   /**
-   * AVAUKSEN ALAOTSIKKO PIILOON (omistajan tilaus 5.9.2026 ilta): "osa
-   * II · unohdettu aarre" odottaa vuoroaan pelkkä peittävyys nollattuna,
-   * joten julisteen mitat ja rivijako pysyvät ennallaan eikä mikään
-   * hyppää sen ilmestyessä.
+   * KOKO JULISTE PIILOON (omistajan tilaus 6.9.2026 aamu, sanatarkasti:
+   * *"ota taustalta pois pelin otsikko"*): aloitusportin takana ruudulla
+   * on pelkkä pyörivä pallo, äänirivi ja nappi. Piilossa ovat viivat,
+   * otsikkorivit, "osa II" JA otsikon pergamenttiharso (css
+   * .avaus-kesken) — harso on julisteen oma ::before, ja ilman
+   * piilotusta se jäisi portille vaaleaksi läiskäksi tyhjän otsikon
+   * paikalle.
    *
-   * Häivytyksen kesto viedään css:ään muuttujana, jotta luku on
-   * olemassa vain tässä tiedostossa (OSAN_HAIVYTYS_MS).
+   * Piilotus on PELKKÄÄ PEITTÄVYYTTÄ JA TRANSFORMIA: julisteen mitat ja
+   * rivijako pysyvät ennallaan, joten fitIntro mittaa portin takana
+   * saman koon kuin avauksen jälkeen eikä mikään hyppää.
+   *
+   * SAMA ODOTUS KOSKEE TEKSTIPALSTAN HARSOA: sekin on tyhjä vaalea
+   * soikio, kunnes kirjoituskone alkaa (naytaAvausjuliste viimeinen
+   * vaihe), joten se odottaa vuoroaan samalla luokalla.
+   *
+   * Ajat ja mitat viedään css:ään muuttujina avauslohkon juureen (ne
+   * periytyvät sekä otsikolle että palstalle), jotta luvut ovat
+   * olemassa vain tässä tiedostossa (VIIVAN_PIIRTO_MS,
+   * SALAMAN_KESTO_MS, SALAMAN_KERROIN).
    */
-  piilotaAvausosa() {
-    this.peruAvausosa();
-    if (!this.introOtsikko || this.reducedMotion) return;
-    this.introOtsikko.style.setProperty('--osan-haivytys', `${OSAN_HAIVYTYS_MS}ms`);
-    this.introOtsikko.classList.add('osa-piilossa');
-  }
-
-  /** Avausotsikon ajastin pois ja alaotsikko takaisin näkyviin. */
-  peruAvausosa() {
-    if (this.osanAjastin) clearTimeout(this.osanAjastin);
-    this.osanAjastin = null;
-    this.introOtsikko?.classList.remove('osa-piilossa');
+  piilotaAvausjuliste() {
+    this.peruAvausjuliste();
+    if (!this.introOtsikko) return;
+    this.introEl?.style.setProperty('--viivan-piirto', `${VIIVAN_PIIRTO_MS}ms`);
+    this.introEl?.style.setProperty('--salaman-kesto', `${SALAMAN_KESTO_MS}ms`);
+    this.introEl?.style.setProperty('--salaman-kerroin', String(SALAMAN_KERROIN));
+    this.introOtsikko.classList.add('avaus-kesken');
+    this.introPalsta?.classList.add('avaus-kesken');
   }
 
   /**
-   * Feidaa alaotsikon sisään OSAN_VIIVE_MS:n päästä ja kutsuu
-   * `valmis`-kuittausta vasta häivytyksen (OSAN_HAIVYTYS_MS) jälkeen:
-   * kirjoituskone ja luenta alkavat siitä.
-   *
-   * Vähennetyllä liikkeellä ei oteta yhtään viivettä — kaikki on heti
-   * ruudulla (Raamattu, sääntö 4). Sama polku kelpaa myös silloin, kun
-   * otsikkoa ei jostain syystä ole olemassa: kertomus ei saa jäädä
-   * puuttuvan koristeen taakse.
+   * Avauksen ajastimet pois ja koko juliste takaisin näkyviin: ilman
+   * `avaus-kesken`-luokkaa julisteessa ei ole yhtään piilotusta, joten
+   * tämä on myös se polku, jolla katselutila ja pelin resetti saavat
+   * otsikon kerralla ruudulle.
    */
-  naytaAvausosa(valmis) {
-    if (!this.introOtsikko || this.reducedMotion) {
-      this.peruAvausosa();
+  peruAvausjuliste() {
+    for (const ajastin of this.julisteAjastimet) clearTimeout(ajastin);
+    this.julisteAjastimet = [];
+    this.introPalsta?.classList.remove('avaus-kesken', 'avaus-harso');
+    if (!this.introOtsikko) return;
+    this.introOtsikko.classList.remove('avaus-kesken', 'avaus-harso');
+    for (const osa of this.introOtsikko.querySelectorAll('.avaus-nakyy, .avaus-salama')) {
+      osa.classList.remove('avaus-nakyy', 'avaus-salama');
+    }
+  }
+
+  /**
+   * Paljastaa julisteen palan: joko pehmeästi feidaten (viivat) tai
+   * SALAMANA (otsikkorivit ja "osa II").
+   *
+   * Salama on kaksivaiheinen, koska siirtymä tarvitsee lähtöasennon
+   * omaksi kehyksekseen: ensin pala maalataan kerran isona ja kirkkaana
+   * (`avaus-salama`, ei siirtymää), ja vasta seuraavassa kehyksessä
+   * luokka vaihtuu lopulliseen (`avaus-nakyy`), jolloin css feidaa
+   * koon, kirkkauden ja hehkun nykyiseen SALAMAN_KESTO_MS:ssä. Koko
+   * muuttuu TRANSFORMILLA eikä kirjasinkoolla, joten fitIntron mitoitus
+   * pysyy paikallaan eikä asettelu hypi (vartija:
+   * tests/lento-ajoitus.test.mjs, savuke E11f).
+   *
+   * Vähennetyllä liikkeellä salamaa ei oteta lainkaan — pala vain
+   * feidaa paikalleen samassa järjestyksessä.
+   */
+  paljastaJulisteenOsa(valitsin, salamalla = false) {
+    const osat = this.introOtsikko?.querySelectorAll(valitsin);
+    if (!osat?.length) return;
+    if (!salamalla || this.reducedMotion) {
+      for (const osa of osat) osa.classList.add('avaus-nakyy');
+      return;
+    }
+    for (const osa of osat) osa.classList.add('avaus-salama');
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      for (const osa of osat) {
+        osa.classList.add('avaus-nakyy');
+        osa.classList.remove('avaus-salama');
+      }
+    }));
+  }
+
+  /**
+   * Rakentaa julisteen palasta palaan napin painalluksen jälkeen ja
+   * kuittaa `valmis` vasta lopuksi: kirjoituskone ja luenta alkavat
+   * siitä, eivät koskaan ennen alaviivaa.
+   *
+   * Jokainen vaihe on OMA ajastimensa napin painalluksesta (ks.
+   * AVAUS_*-vakiot), joten yhden vaiheen myöhästyminen ei siirrä muita.
+   * Sama polku kelpaa myös silloin, kun otsikkoa ei jostain syystä ole
+   * olemassa: kertomus ei saa jäädä puuttuvan koristeen taakse.
+   */
+  naytaAvausjuliste(valmis) {
+    if (!this.introOtsikko) {
+      this.peruAvausjuliste();
       valmis();
       return;
     }
-    this.osanAjastin = setTimeout(() => {
-      this.osanAjastin = null;
-      if (this.dead || this.game.phase !== 'pickstart') return;
-      // Luokan poisto käynnistää css-siirtymän (opacity 0 → 1).
-      this.introOtsikko.classList.remove('osa-piilossa');
-      this.osanAjastin = setTimeout(() => {
-        this.osanAjastin = null;
+    const vaihe = (ms, teko) => {
+      this.julisteAjastimet.push(setTimeout(() => {
         if (this.dead || this.game.phase !== 'pickstart') return;
-        valmis();
-      }, OSAN_HAIVYTYS_MS);
-    }, OSAN_VIIVE_MS);
+        teko();
+      }, ms));
+    };
+    vaihe(AVAUS_YLAVIIVA_MS, () => {
+      // Harso syttyy viivan kanssa: pergamentti on otsikon alusta.
+      this.introOtsikko.classList.add('avaus-harso');
+      this.paljastaJulisteenOsa('.juliste-viiva:first-child');
+    });
+    vaihe(AVAUS_OTSIKKO_MS,
+      () => this.paljastaJulisteenOsa('.juliste-nimi, .juliste-yla, .juliste-ala', true));
+    vaihe(AVAUS_OSA_MS, () => this.paljastaJulisteenOsa('.juliste-osa', true));
+    vaihe(AVAUS_ALAVIIVA_MS, () => this.paljastaJulisteenOsa('.juliste-viiva:last-child'));
+    vaihe(AVAUS_KERTOMUS_MS, () => {
+      // Tekstipalstan pergamenttiharso syttyy vasta kirjoituskoneen
+      // kanssa: muuten tyhjä vaalea soikio odottaisi tekstiään koko
+      // avauksen ajan pallon päällä.
+      this.introPalsta?.classList.add('avaus-harso');
+      valmis();
+    });
   }
 
   /**
