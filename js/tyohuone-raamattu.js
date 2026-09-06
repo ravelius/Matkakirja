@@ -3406,7 +3406,11 @@ export const RAAMATTU = {
           + 'ajan mukana) ja Tyynimeri merivirtana; kartta ei ole tumma; kamera '
           + 'seuraa aktiivisimman virran rintamaa ja pysakkien kuvat poksahtavat '
           + 'kartalle omalla hetkellaan; fablemax tekee suunnitelman ja '
-          + 'prototyypin, omistaja arvioi kuvakaappaukset ennen hiontaa.',
+          + 'prototyypin, omistaja arvioi kuvakaappaukset ennen hiontaa. TARKENNUS '
+          + '(omistaja 6.9.2026 iltapaiva: "Suunnitellaan yhdessa ennen toteutusta"): '
+          + 'ensin vain suunnitelma (docs/moduulit/ihmisen-matka-virrat.md), joka '
+          + 'kaydaan omistajan kanssa lapi kohta kohdalta; koodia ei kirjoiteta '
+          + 'ennen yhteista paatosta.',
         'AIKAJANAN AJO: KAMERA LAHEMPANA, LIIKKUU PIDEMPAAN VIIVAA PIIRTAEN, '
           + 'KELLO VILISTAA (omistaja 6.9.2026 keskipaiva Ihmisen matka -ajon '
           + 'kuvakaappauksesta, sanatarkasti: "Kartta on liian kaukana ja se '
