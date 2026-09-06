@@ -1,0 +1,164 @@
+{
+  "kuvaus": "Livian (pulun) omat ääniefektit ja muutama yleinen täyteääni. Omistajan tilaus 6.9.2026: \"Pululle ja muuallekin tarvitaan ääniefektejä … Näitä ei generoida.\" Haetaan valmiina äänitteinä Freesoundista (vain CC0 ja CC BY), ei ElevenLabsilta.",
+  "amparinKansio": "aanet/tehosteet/pulu",
+  "manifesti": "manifesti.json",
+  "tavoiteLufs": -14,
+  "tehosteet": [
+    {
+      "tunnus": "siivet-lento",
+      "peliavain": "pulu.siivet",
+      "kuvaus": "Siipien räpytys lennossa — Livia lennähtää paikalle tai lähtee",
+      "hakusanat": [
+        "pigeon wings flapping",
+        "bird wing flap take off",
+        "dove wings flapping close"
+      ],
+      "kestoMin": 0.8,
+      "kestoMax": 2.5,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "siivet-laskeutuminen",
+      "peliavain": "pulu.siivet-lasku",
+      "kuvaus": "Jarruttava siipien lepatus juuri ennen laskeutumista",
+      "hakusanat": [
+        "bird landing wing flaps",
+        "pigeon landing flutter",
+        "bird flutter perch landing"
+      ],
+      "kestoMin": 0.5,
+      "kestoMax": 2.5,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "tomahdys-laskeutuminen",
+      "peliavain": "pulu.tomahdys",
+      "kuvaus": "Pehmeä tömähdys: pulu laskeutuu — kuplan ilmestymisisku",
+      "hakusanat": [
+        "soft thud",
+        "light thump landing impact",
+        "soft body drop thud"
+      ],
+      "kestoMin": 0.2,
+      "kestoMax": 1.4,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "doing-vieteri",
+      "peliavain": "pulu.doing",
+      "kuvaus": "Sarjakuvamainen vieteri-doing: pulu sekoilee",
+      "hakusanat": [
+        "cartoon boing spring",
+        "spring boing sproing",
+        "comedy spring bounce"
+      ],
+      "kestoMin": 0.3,
+      "kestoMax": 2.0,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "sekoilu-2",
+      "peliavain": "pulu.sekoilu",
+      "kuvaus": "Toinen hassu täyteääni vaihteluksi: liukupilli tai bonk",
+      "hakusanat": [
+        "cartoon slide whistle down",
+        "slide whistle comedy",
+        "cartoon bonk"
+      ],
+      "kestoMin": 0.4,
+      "kestoMax": 2.5,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "ovi-auki",
+      "peliavain": "pulu.ovi-auki",
+      "kuvaus": "Oven avaus sisätilassa — pulu tulee sisään",
+      "hakusanat": [
+        "wooden door opening interior",
+        "door open creak",
+        "old door opening indoor"
+      ],
+      "kestoMin": 0.5,
+      "kestoMax": 3.0,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "ovi-lamahdys",
+      "peliavain": "pulu.ovi-kiinni",
+      "kuvaus": "Oven lämähdys kiinni — pulu lähtee",
+      "hakusanat": [
+        "door slam close",
+        "wooden door slam",
+        "heavy door shut slam"
+      ],
+      "kestoMin": 0.4,
+      "kestoMax": 2.5,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "viuhahdus-tulo",
+      "peliavain": "pulu.viuhahdus",
+      "kuvaus": "Viuhahdus sisään: jotain saapuu ruudulle vauhdilla",
+      "hakusanat": [
+        "whoosh in short",
+        "fast swoosh air movement",
+        "quick whoosh transition"
+      ],
+      "kestoMin": 0.3,
+      "kestoMax": 2.0,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "viuhahdus-lahto",
+      "peliavain": "pulu.viuhahdus-lahto",
+      "kuvaus": "Viuhahdus ulos: ohilento ja poistuminen",
+      "hakusanat": [
+        "whoosh away pass by",
+        "swoosh exit fast",
+        "air whoosh passing"
+      ],
+      "kestoMin": 0.3,
+      "kestoMax": 2.0,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "kujerrus",
+      "peliavain": "pulu.kujerrus",
+      "kuvaus": "Lyhyt kurkkuääni: pulun kujerrus",
+      "hakusanat": [
+        "pigeon coo short",
+        "dove cooing close",
+        "pigeon cooing single"
+      ],
+      "kestoMin": 0.5,
+      "kestoMax": 3.0,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "paperin-kahina",
+      "peliavain": "pulu.sahke",
+      "kuvaus": "Yleinen: sähkepaperin kahina, kun Livia lukee pöllön viestiä",
+      "hakusanat": [
+        "paper rustle handling",
+        "thin paper crumple",
+        "small note paper unfold"
+      ],
+      "kestoMin": 0.4,
+      "kestoMax": 2.5,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "kellon-kilahdus",
+      "peliavain": "pulu.kilahdus",
+      "kuvaus": "Yleinen: pieni kellon kilahdus, kuittaus tai huomionosoitus",
+      "hakusanat": [
+        "small bell ding",
+        "service desk bell ring",
+        "single bell chime short"
+      ],
+      "kestoMin": 0.5,
+      "kestoMax": 3.0,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    }
+  ]
+}

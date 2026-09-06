@@ -34,7 +34,82 @@
  */
 
 import { polloAvauskupla, polloKuplatPois, polloSaapumiskupla } from './pollo.js';
+import { sfx } from './sound.js';
 import { linssiEstaa } from './ui-apurit.js';
+
+/* ------------------------------------------------------------------ *
+ * Livian ääniefektit
+ * ------------------------------------------------------------------ */
+
+/*
+ * LIVIAN TEHOSTEET (omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti:
+ * *"Pululle ja muuallekin tarvitaan ääniefektejä: linnun siivet
+ * lentäessä, tömähdyksiä (pulu laskeutuu), hassuja täyteääniä kun pulu
+ * sekoilee (doing vieteriääni yms), oven lämähdys kiinni ja auki (pulu
+ * tulee tai lähtee), viuhahdusefektejä yms. Näitä ei generoida."*).
+ *
+ * Kolme ohjelmaa, kukin pari tehostetta porrastettuna: saapuminen,
+ * sekoilu ja lähtö. Ne ovat listoja eivätkä kutsuja, koska ajoitus on
+ * niiden ainoa sisältö — viuhahdus ja siipien räpytys menevät hieman
+ * päällekkäin, tömähdys tulee kun lennähdys on ohi ja kupla paikallaan.
+ *
+ * OVEA EI SOITETA. Omistajan tilauksessa ovi kuuluu sisätiloihin
+ * ("pulu tulee tai lähtee"), ja avausesittely tapahtuu maailmankartan
+ * yllä — ulkona. Ohje oli *"jätä pois jos epäselvää"*, ja se on
+ * epäselvää, joten ovitunnukset (pulu.ovi-auki, pulu.ovi-kiinni) ovat
+ * pelissä valmiina mutta ilman kutsupaikkaa; ensimmäinen sisäkohtaus
+ * saa ne käyttöönsä.
+ *
+ * ÄÄNI EI SAA KAATAA KUPLAA. Kaikki soitto on try-catchissa ja
+ * sfx.play() vaikenee itsestään, jos äänet ovat pois päältä, peli on
+ * taustalla tai tehostetta ei ole ladattu (js/sound.js
+ * lataaPulunTehosteet — manifesti tulee ämpäristä, ei repostä).
+ */
+const LIVIAN_TEHOSTEET = {
+  saapuu: [['pulu.viuhahdus', 0], ['pulu.siivet', 0.1], ['pulu.tomahdys', 0.45]],
+  sekoilee: [['pulu.doing', 0]],
+  lahtee: [['pulu.siivet', 0], ['pulu.viuhahdus-lahto', 0.18]],
+};
+
+/**
+ * SEKOILUREPLIIKIT. Omistaja nimesi esimerkiksi *"Melkein joka
+ * ikisen"* — Livian oman myöntämisen siitä, ettei hän sittenkään ole
+ * lukenut aivan kaikkia sähkeitä. Tunnistus on tekstistä eikä
+ * indeksistä: repliikit ovat kaanonia ja voivat siirtyä paikaltaan,
+ * mutta sanat pysyvät.
+ */
+const SEKOILUN_MERKIT = [
+  /Melkein joka ikisen/,
+  /ihan hiessä/,
+  /anteeksi valikoima/,
+];
+
+/** Onko repliikki niitä humoristisia kohtia, joihin doing kuuluu? */
+export function onLivianSekoilua(teksti) {
+  return SEKOILUN_MERKIT.some((merkki) => merkki.test(String(teksti ?? '')));
+}
+
+/**
+ * Soittaa yhden tehosteohjelman (saapuu, sekoilee, lahtee).
+ *
+ * Tämä on Livian AINOA kosketuspinta ääneen: kutsupaikat alla ovat
+ * yhden rivin mittaisia, jotta puheäänen ja tehosteiden työ mahtuvat
+ * samaan tiedostoon törmäämättä.
+ *
+ * @returns {boolean} tunnettiinko ohjelma.
+ */
+export function soitaLivianTehoste(laji) {
+  const ohjelma = LIVIAN_TEHOSTEET[laji];
+  if (!ohjelma) return false;
+  for (const [nimi, viive] of ohjelma) {
+    try {
+      sfx.play(nimi, { viive });
+    } catch {
+      /* ääni ei saa kaataa kuplaa */
+    }
+  }
+  return true;
+}
 
 /* ------------------------------------------------------------------ *
  * Avausesittely
@@ -98,6 +173,8 @@ const LUKUAIKA_ENINTAAN = 8200;
 /** Sarjan tila: yksi kerrallaan, ja ajastin peruttavissa. */
 let avausKesken = false;
 let avausAjastin = null;
+/** Näkyikö sarjasta yhtään kuplaa — vain silloin Livialla on mistä lähteä. */
+let avausNakyi = false;
 
 /** Onko avausesittely jo nähty tällä laitteella? */
 export function livianAvausNahty() {
@@ -174,6 +251,11 @@ function naytaRepliikki(ui, i) {
   // Lippu vasta kun sarja oikeasti näkyi (sama sopimus kuin pöllön
   // kutsukuplalla, js/ehdotukset.js ajastaEhdotusKupla).
   if (i === 0) merkitseNahdyksi();
+  // Livia lennähtää paikalle kerran; sen jälkeen doing kuuluu niihin
+  // repliikkeihin, joissa hän sekoilee (SEKOILUN_MERKIT).
+  avausNakyi = true;
+  if (i === 0) soitaLivianTehoste('saapuu');
+  else if (onLivianSekoilua(teksti)) soitaLivianTehoste('sekoilee');
   avausAjastin = setTimeout(() => seuraavaRepliikki(ui, i + 1), lukuaika(teksti));
 }
 
@@ -205,6 +287,10 @@ function lopetaAvaus() {
   clearTimeout(avausAjastin);
   avausAjastin = null;
   avausKesken = false;
+  // Lähtöääni vain jos Livia oikeasti näkyi: keskeytynyt sarja, jota ei
+  // koskaan aloitettu, ei saa lennättää tyhjää ruutua.
+  if (avausNakyi) soitaLivianTehoste('lahtee');
+  avausNakyi = false;
   polloKuplatPois();
 }
 
@@ -396,6 +482,9 @@ function paljastusRepliikki(ui, cityId, i, jalkeen, repliikit = LIVIAN_PALJASTUS
     jalkeen?.();
     return;
   }
+  // *"Melkein joka ikisen"* on omistajan nimeämä sekoilukohta: Livia
+  // myöntää, ettei ole sittenkään lukenut aivan kaikkia sähkeitä.
+  if (onLivianSekoilua(teksti)) soitaLivianTehoste('sekoilee');
   paljastusAjastin = setTimeout(seuraava, lukuaika(teksti));
 }
 

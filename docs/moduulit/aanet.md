@@ -594,3 +594,111 @@ js/linssit/radio.js), eikä megafonille ole vielä kutsupaikkaa
 soittaa testiäänen suoraan ja jokaisen ketjun läpi. Kirjasto säilyy
 offline `sw.js`:n `VENDORCACHE`-korissa. Vartijat:
 `tests/tehosteketju.test.mjs`, `tools/savukkeet/savuke-tehosteketju.mjs`.
+
+## Pulun tehosteet (omistaja 6.9.2026)
+
+Omistajan tilaus aamupäivällä, sanatarkasti: *"Pululle ja muuallekin
+tarvitaan ääniefektejä: linnun siivet lentäessä, tömähdyksiä (pulu
+laskeutuu), hassuja täyteääniä kun pulu sekoilee (doing vieteriääni
+yms), oven lämähdys kiinni ja auki (pulu tulee tai lähtee),
+viuhahdusefektejä yms. **Näitä ei generoida.**"*
+
+Viimeinen lause erottaa tämän kaikesta muusta tällä sivulla: nämä
+**haetaan valmiina äänitteinä Freesoundista**, eivät ElevenLabsilta.
+
+### Lähde ja lisenssit
+
+| asia | ratkaisu |
+|---|---|
+| lähde | Freesound, esikatselu-mp3 (`preview-hq-mp3`) |
+| lisenssit | **vain CC0 ja CC BY** — rajaus palvelimen puolella `license:("Creative Commons 0" OR "Attribution")`, ei jälkikäteen |
+| attribuutio | CC BY vaatii nimeämisen; tekijä, lisenssi, Freesoundin id ja sivu kirjataan manifestiin ja tulostetaan ajon lopuksi |
+| ei kelpaa | CC BY-NC ja Sampling+ — ne eivät koskaan päädy hakuun asti |
+| taso ja muoto | −14 LUFS, mp3, mono, 128 kbps, 44,1 kHz; hiljaisuus leikattu päistä, 20 ms häivytykset |
+
+Taso on tarkoituksella paljon kovempi kuin generoitujen tehosteiden
+−30 LUFS: nämä ovat lyhyitä iskuja eivätkä taustaa. Lopullisen
+kuuluvuuden asettaa peli (`PULUN_TASO`, alla).
+
+### Lista ja työnkulku
+
+Lista on `tools/tehosteet/pulu-tehosteet.json`: jokaisella tunnuksella
+on kuvaus, **hakusanat englanniksi** (Freesoundin aineisto on merkitty
+englanniksi), **kestorajat** ja **lisenssit** CC0 ensin. Muototarkistus
+ja valintalogiikka ovat `tools/tehostelista.mjs`:ssä, jotta testi voi
+tuoda ne tuomatta samalla API-avainta lukevaa hakutyökalua.
+
+```
+# koko lista: hae, normalisoi, vie ämpäriin ja kirjoita manifesti
+node tools/hae-freesound.mjs --pulu
+# vain yksi tunnus uusiksi (huono osuma vaihtoon) — manifesti täydentyy
+node tools/hae-freesound.mjs --pulu --tunnus siivet-lento
+# pelkkä haku ja valinta, ei latausta eikä vientiä
+node tools/hae-freesound.mjs --pulu --kuiva
+# lataa ja normalisoi, mutta jätä tiedostot levylle
+node tools/hae-freesound.mjs --pulu --ei-vientia
+```
+
+Ajo tehdään **työnkulussa** `.github/workflows/aanihaku.yml`
+(workflow_dispatch, syöte `tila: pulu-tehosteet`, lisäksi `tunnus` ja
+`kuiva`), koska Freesoundin avain on repon salaisuuksissa eikä sitä saa
+liittää keskusteluun. Salaisuudet: `FREESOUND_API` (tai jokin
+vaihtoehtoinen kirjoitusasu) **ja** neljä R2-salaisuutta
+`R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`,
+`R2_BUCKET` — samat kuin `vie-aanet.yml`:llä. Ajo tarkistaa ne nimeltä
+ennen kuin mitään haetaan. Uusia salaisuuksia ei tarvita.
+
+Kone valitsee jokaiselle tunnukselle **yhden** osuman kolmesta
+mitattavasta luvusta: arvosana (paino 3; alle kolme arviota on kohinaa,
+jolloin käytetään neutraalia 3/5), lataukset (paino 2, logaritmisesti)
+ja kesto (paino 1, haarukan keskikohta parhaana). **Kuuntele tulos ajon
+jälkeen** — kone ei kuuntele, ja huonon osuman vaihtaa `--tunnus`-ajolla.
+
+Ämpäriin syntyy `aanet/tehosteet/pulu/<tunnus>.mp3` ja
+`aanet/tehosteet/pulu/manifesti.json` (tunnus, tiedosto, Freesoundin
+id, nimi, tekijä, lisenssi, attribuutioteksti, sivu, kesto, pisteet).
+Repoon ei jää mitään: työkalu kirjoittaa `media/tehosteet-pulu/`-kansioon,
+joka on `.gitignoressa`, ja se tarkistetaan koneellisesti.
+
+### Tunnukset ja missä ne soivat
+
+Peli lukee manifestin ajossa (`js/sound.js lataaPulunTehosteet`) eikä
+tunne yhtään osoitetta ennalta — niin huonon osuman korvaaminen ei
+vaadi julkaisua. Ilman manifestia tehosteet ovat **hiljaa**:
+synteesivastinetta ei ole, koska arvattu siivenräpytys olisi huonompi
+kuin ei mitään. Voimakkuus on `PULUN_TASO` = 0,4 eli **−8 dB luentaan
+nähden** (omistajan vaatimus: tehoste ei nouse luennan päälle).
+
+| pelin tunnus | listan tunnus | missä soi |
+|---|---|---|
+| `pulu.siivet` | siivet-lento | Livian saapuminen ja lähtö (js/livia.js) |
+| `pulu.siivet-lasku` | siivet-laskeutuminen | vapaa |
+| `pulu.tomahdys` | tomahdys-laskeutuminen | kun avauskupla ilmestyy |
+| `pulu.doing` | doing-vieteri | sekoilurepliikit (esim. *"Melkein joka ikisen"*) |
+| `pulu.sekoilu` | sekoilu-2 | vapaa (toinen hassu ääni vaihteluksi) |
+| `pulu.ovi-auki` | ovi-auki | **ei kutsupaikkaa** — ks. alla |
+| `pulu.ovi-kiinni` | ovi-lamahdys | **ei kutsupaikkaa** — ks. alla |
+| `pulu.viuhahdus` | viuhahdus-tulo | Livian saapuminen |
+| `pulu.viuhahdus-lahto` | viuhahdus-lahto | Livian lähtö |
+| `pulu.kujerrus` | kujerrus | vapaa |
+| `pulu.sahke` | paperin-kahina | vapaa (yleinen) |
+| `pulu.kilahdus` | kellon-kilahdus | vapaa (yleinen) |
+
+**Ovea ei soiteta vielä.** Omistajan tilauksessa ovi kuuluu
+sisätiloihin, ja avausesittely tapahtuu maailmankartan yllä — ulkona.
+Ohje oli *"jätä pois jos epäselvää"*, joten ovitunnukset ovat pelissä
+valmiina mutta ilman kutsupaikkaa; ensimmäinen sisäkohtaus saa ne.
+
+Livian kytkentä on yhdessä apufunktiossa (`js/livia.js
+soitaLivianTehoste`) ja kolmessa yhden rivin kutsussa:
+
+- **saapuminen** — viuhahdus (0 s) + siivet (0,1 s) → tömähdys (0,45 s),
+  kun avauskupla ilmestyy
+- **sekoilu** — doing niissä repliikeissä, joissa Livia sekoilee
+  (`SEKOILUN_MERKIT`: *"Melkein joka ikisen"*, *"ihan hiessä"*,
+  *"anteeksi valikoima"*); tunnistus on tekstistä eikä indeksistä,
+  koska repliikit ovat kaanonia ja voivat siirtyä paikaltaan
+- **lähtö** — siivet (0 s) + viuhahdus (0,18 s), kun sarja päättyy tai
+  pelaaja valitsee kaupungin
+
+Vartija: `tests/pulu-tehosteet.test.mjs`.
