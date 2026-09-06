@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1653, teksti: 'Pallo: sormen tartunta laskien, kerrokset yhteen kehykseen' },
   { v: 1652, teksti: 'Pulu: tyhja vastaus yritetaan uudestaan, syy kerrotaan' },
   { v: 1651, teksti: 'Etusivu: pallo peittaa koko ruudun, tekstiharso haalea' },
   { v: 1650, teksti: 'Lukija kortteihin, avauslento kaarena, pulun kaiku pois' },
