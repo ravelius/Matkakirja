@@ -48,6 +48,10 @@ import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
  */
 const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
   'URY', 'PRY', 'VEN', 'FJI', 'PNG', 'SLB', 'GTM', 'NIC', 'PAN',
+  // Hongkongilla ei ole MAATIEDOT-riviä (maalehti HKG, 6.9.2026):
+  // Maailmanpankin ja V-Demin sarjat on laskettu suvereenien
+  // valtioiden kesken, eikä erityishallintoalue ole niissä vertailukelpoinen.
+  'HKG',
 ]);
 
 const SIJA = /^\d+\.\/\d+$/;

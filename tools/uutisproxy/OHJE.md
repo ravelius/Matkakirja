@@ -1,5 +1,18 @@
 # Uutisvälityksen käyttöönotto (omistajalle, n. 5 min)
 
+> **Päivitys 6.9.2026 (Hongkong):** sallittuihin lisättiin
+> `https://hongkongfp.com/` (maalehti HKG, testattu 6.9.2026: syötteessä
+> kolmekymmentä juttua, ja artikkelisivun `<article>`-lohkosta jäsentyy
+> 19–33 yli 60 merkin kappaletta sekä `og:image`). Syöteosoitteen
+> loppukauttaviiva on pakollinen, koska ilman sitä palvelin vastaa
+> uudelleenohjauksella eikä worker seuraa niitä. Kiinankielistä lähdettä
+> etsittiin yhdestätoista paikasta ilman tulosta — RTHK ja Bastille Post
+> läpäisivät syötetestin mutta eivät artikkelisivutestiä, Ming Pao ja
+> HKET vastaavat 403:lla, eikä HK01:llä, am730:llä, Sing Taolla, Wen Wei
+> Polla, Ta Kung Paolla, on.cc:llä tai HKCNewsillä ole toimivaa
+> RSS-osoitetta; perustelut ovat js/packs/uutislahteet.js:n
+> HKG-kommentissa. Julkaisu Git-integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

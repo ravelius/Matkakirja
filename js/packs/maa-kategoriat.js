@@ -40640,4 +40640,495 @@ export const MAA_KATEGORIAT = {
       },
     },
   ],
+  /*
+   * HONGKONG (HKG) — Aasian laudan maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-hongkong.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * MAA JA KAUPUNKI OVAT SAMA PAIKKA, joten työnjako kaupunkilehden
+   * kanssa on tavallista tiukempi. KULTTUURI_KATEGORIAT.hongkong kattaa
+   * jo Star Ferryn, Peak Tramin, raitiovaunut, pilvenpiirtäjät,
+   * liikenteen ja Octopus-kortin, alueen maantieteen, aamuteen ja dim
+   * sumin, Kowloonin muurikaupungin, sään sekä koko siirtomaahistorian
+   * 1841–1898 ja vuoden 1894 ruton. SIKSI MAALEHDESSÄ EI OLE
+   * HISTORIA-AIHETTA lainkaan eikä yhtään liikenne-, pilvenpiirtäjä-,
+   * dim sum- tai muurikaupunkinostoa. Ruoka-osasto kiertää aamuteen:
+   * nostot ovat seinäkylien pesuvatiateria, kadun kojut, paahdetut
+   * lihat ja munatortun historia.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN KANSSA (erä M3): maastokohteet-hkg.js
+   * kattaa Kowloonin muurikaupungin, Tai O:n, Tung Chungin linnakkeen,
+   * Tai Fu Tain, Tai Mo Shanin ja Lantaun; skandaalit.js Godberin paon
+   * ja Carrianin romahduksen. Hongkong jäi ilman eläintäkyä
+   * (elaintakyt.js), ja ehdokas oli Romerin puupuu. Maalehti ei toista
+   * niistä yhtäkään: luonto-osiossa ovat Sai Kungin geopuisto, Mai Po,
+   * kiinanvalkodelfiini ja orkideapuu.
+   *
+   * HERKÄT AIHEET (docs/aasia-tyoaineisto/spec-asia.md, sitova):
+   * 2010–2020-lukujen tapahtumia ja turvallisuuslakia ei mainita
+   * lainkaan. Vuosi 1997 esiintyy vain hallinnollisena vuosilukuna.
+   * Kowloonin keisarista kerrotaan mies ja kirjoitus, ei hänen
+   * iskulauseitaan eikä vuoden 2021 töhrimiskiistaa; naamyamin
+   * esityspaikoista mainitaan teehuoneet ja kadut, ei bordelleja;
+   * Happy Valleyn vuoden 1918 palo on yksi neutraali virke ilman
+   * yksityiskohtia (Perustuslaki 4). Hongkongin seiskarugbyn
+   * ensimmäistä pääsponsoria (savukeyhtiö) ei nimetä.
+   *
+   * KUVAT: 14 nostokuvaa Commonsista, lisenssi ja tekijä
+   * extmetadatasta, leveys >= 1200 px, jokainen katsottu silmin
+   * 480 px:n pikkukuvana. KUUSI NOSTOA JÄI KUVATTOMAKSI, koska
+   * Commonsissa ei ole aiheesta kelvollista vapaata kuvaa:
+   * kantopopin synty, Beyond, Lui Shou-kwan, Kowloonin keisari,
+   * Old Master Q ja Lee Lai Shan. Ne on kirjattu kuvaputken
+   * työlistalle erän raportissa.
+   *
+   * YKSI KUVA EI OLE HONGKONGISTA, JA SE ON TIETOINEN: naamyam-noston
+   * yehu (Dangao.jpg) on kuvattu Yhdysvalloissa, mutta kohde on
+   * kiinalainen yehu, ja selite kertoo soittimesta eikä paikasta.
+   * Vaihtoehto olisi ollut kuvaton nosto tai generoitu kuva; oikea
+   * valokuva oikeasta soittimesta on kummankin edellä.
+   *
+   * HYLÄTYT: kolme dai pai dong- ja siu mei -otosta, joihin on poltettu
+   * päivämääräleima ("HK 中環 Central ... Dai Pai Dong May 2024 R12S 01",
+   * "HK YTM TST ... siu mei hin Restaurant food window display",
+   * "HK 中環 Central ... 大龍燒鵝 siu mei restaurant November 2022");
+   * "Wong Tai Sin Dai Pai Dong" (aidassa vaalimainoksia kasvokuvineen);
+   * "Dai pai dong Central" (etualalla tunnistettavat kasvot);
+   * "Mai Po Marshes" (kuvassa on pelkkä muistolaatta); "HK Kln Park
+   * Hong Kong Avenue of Comic Stars Old Master Q visitors" (patsaan
+   * ympärillä tunnistettavia turisteja).
+   *
+   * TUNNISTETTAVAT KASVOT: yhdessäkään valitussa valokuvassa ei ole
+   * lähikuvaa tunnistuvista kasvoista — ihmiset ovat selin, kaukana
+   * tai kumartuneina työn ääreen. Sama linja kuin Kenian erässä.
+   * Chinneryn maalauksen henkilöt ovat 1800-luvun nimettömiä
+   * mallihahmoja, eivät eläviä ihmisiä.
+   */
+  HKG: [
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Hongkongin luonnossa on neljä asiaa, joita ei ole muualla samalla '
+          + 'tavalla: siemenetön puu, vaaleanpunainen delfiini, kuusikulmaisten '
+          + 'kivipylväiden rannikko ja kosteikko, jolla talvehtii neljäsosa yhden '
+          + 'lintulajin koko maailmankannasta.',
+      nostot: [
+        {
+          otsikko: 'Puu, joka on yhden puun klooni',
+          aika: '1880–2025',
+          tiedosto: 'Bauhinia blakeana flower.jpg',
+          teksti: 'Noin vuonna 1880 ranskalaisen ulkolähetysseuran lähetyssaarnaaja '
+              + 'löysi talon raunioiden läheltä Pok Fu Lamin rannalta Hongkong-saaren '
+              + 'länsipuolelta puun, jonka kukat olivat orkidean kokoisia ja '
+              + 'purppuranpunaisia. Pistokkaat vietiin lähetysaseman puutarhaan ja '
+              + 'sieltä Victorian kasvitieteelliseen puutarhaan, ja vuonna 1908 '
+              + 'osaston johtaja Stephen Troyte Dunn kuvasi lajin ja nimesi sen '
+              + 'kuvernööri Henry Blaken ja tämän puolison mukaan. Puu on steriili '
+              + 'risteymä eikä tee siemeniä, joten sitä lisätään vain varttamalla: '
+              + 'jokainen maailman orkideapuu on saman yhden puun klooni. Kantavanhemmat '
+              + 'varmistettiin vasta 2025 joukkorahoitetun perimähankkeen työnä.',
+          selite: 'Kaksiliuskaista lehteä sanotaan Hongkongissa viisaaksi lehdeksi, ja '
+            + 'sitä pannaan kirjanmerkiksi kokeisiin lukevan onneksi.',
+          lahde: 'Mokkie, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bauhinia × blakeana',
+        },
+        {
+          otsikko: 'Vaaleanpunainen delfiini, jonka väri on verta',
+          aika: '1637–',
+          tiedosto: 'Chinese white dolphin.jpg',
+          teksti: 'Seikkailija Peter Mundy kirjasi vuonna 1637 Hongkongin luota '
+              + 'Helmijoen läheltä valkoisen delfiinin — ensimmäinen englanniksi '
+              + 'tehty kuvaus lajista. Aikuinen on harmaa, valkoinen tai '
+              + 'vaaleanpunainen, mutta väri ei tule väriaineesta: se tulee ihon alta '
+              + 'verisuonista, jotka ovat kehittyneet ylisuuriksi lämmönsäätelyä '
+              + 'varten. Poikaset syntyvät tummanharmaina ja vaalenevat vasta vuosien '
+              + 'mittaan. Aikuinen on 2–3,5 metriä pitkä, painaa 150–230 kiloa ja voi '
+              + 'elää neljäkymmentä vuotta; ikä lasketaan hampaista. Suistoon '
+              + 'delfiinit hakeutuvat murtoveden takia.',
+          selite: 'Delfiinit elävät Lantaun pohjois- ja kaakkoispuolella, Sokon '
+            + 'saarilla ja Peng Chaulla, ja paikallisten suojelijoiden laskennoissa '
+            + 'kanta putosi 158 yksilöstä vuonna 2003 seitsemäänkymmeneenkahdeksaan '
+            + 'vuonna 2011.',
+          lahde: 'Leonard Reback, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Indo-Pacific humpback dolphin',
+        },
+        {
+          otsikko: 'Kuusikulmaiset pylväät ja ensimmäiset dinosauruksen luut',
+          aika: '2009–2024',
+          tiedosto: 'Hexagonal volcanic tuffs at East Dam of High Island Reservoir 1.jpg',
+          teksti: 'Hongkongin geopuisto avattiin 3. marraskuuta 2009, ja Unesco liitti '
+              + 'sen maailmanlaajuiseen geopuistoverkostoon 18. syyskuuta 2011. Alaa '
+              + 'on yli 150 neliökilometriä Uusien alueiden itä- ja koillisosassa. '
+              + 'Sai Kungin puolella maa on purkauksissa syntynyttä tuffia, joka '
+              + 'jäähtyessään halkeili pystysuoriksi pylväiksi: High Islandilla ne '
+              + 'ovat suoria ja yhdensuuntaisia, Ninepin-saarilla jopa kolmen metrin '
+              + 'paksuisia. Koillisessa kivi on sedimenttiä, ja Tolo-salmen vanhin '
+              + 'kerros on noin 400 miljoonaa vuotta vanha. Vuonna 2024 Port '
+              + 'Islandilta löytyivät Hongkongin ensimmäiset dinosauruksen luut.',
+          selite: 'Sai Kungin kivialuetta pidetään kansainvälisesti merkittävänä juuri '
+            + 'siksi, että pylväät ovat poikkeuksellisen suoria ja yhdensuuntaisia.',
+          lahde: 'Minghong, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Hong Kong UNESCO Global Geopark',
+        },
+        {
+          otsikko: 'Katkarapualtaat, joita hoidetaan lintujen takia',
+          aika: '1983–',
+          tiedosto: 'Mai Po Nature Reserve 03.jpg',
+          teksti: 'Mai Pon kosteikko Yuen Longin lähellä reunustaa matalaa Deep Bayta, '
+              + 'ja sisälahti on ollut Ramsar-kohde vuodesta 1995. WWF Hongkong on '
+              + 'hoitanut aluetta vuodesta 1983, ja sisään pääsee vain luvalla. '
+              + 'Lintulajeja on yli 350, ja muuttoaikaan alueella on ollut yli 55 000 '
+              + 'lintua kerrallaan; talvehtijoista neljäsosa on koko maailman '
+              + 'mustanaamalusikkanokkia, joita laskettiin 2012 vasta 2 693 ja 2022 jo '
+              + '6 162. Alueella on 24 vanhaa katkarapuallasta eli gei waita, joita '
+              + 'pidetään yhä yllä — ei enää katkaravun vaan lintujen ruoan takia. '
+              + 'Nisäkäslajeja on 38, enemmän kuin missään muualla Hongkongissa.',
+          selite: 'Gei wai on matala allas, jossa kasvatettiin ennen katkarapuja ja '
+            + 'jota nykyään hoidetaan lintujen ruokapaikkana.',
+          lahde: 'Baycrest, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Mai Po Marshes',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Neljä ruokaa, joita ei juuri tehdä kotona: kylän juhlavati, kadun '
+          + 'koju, paahtouunin liha ja leivonnainen, joka tuli Englannista Kantonin '
+          + 'kautta.',
+      nostot: [
+        {
+          otsikko: 'Juhla-ateria pesuvadissa',
+          tiedosto: 'Pun Choi at chinese new year.jpg',
+          teksti: 'Poon choi tarkoittaa vadillista ruokaa, ja perimätiedon mukaan se '
+              + 'syntyi hätätilanteessa: mongoleja paennut nuori Song-keisari saapui '
+              + 'saattueineen Guangdongin ja Hongkongin seudulle, kyläläiset keräsivät '
+              + 'parhaan ruokansa, mutta astioita ei ollut tarpeeksi — ateria pantiin '
+              + 'suuriin puisiin pesuvateihin. Uusien alueiden seinäkylissä siitä tuli '
+              + 'juhlaruoka. Aineet ladotaan kerroksiin: pohjalle retikka, siannahka '
+              + 'ja tofu, keskelle sianliha ja kuivatut sienet, päälle merikorva ja '
+              + 'merimakkara. Vati syödään ylhäältä alaspäin kerros kerrallaan eikä '
+              + 'sekoittaen, sillä kastike valuu syödessä alaspäin.',
+          selite: 'Ylimpänä ovat kalleimmat aineet, jotka eivät ehdi imeä kastiketta; '
+            + 'retikka, tofu ja siannahka odottavat pohjalla.',
+          lahde: 'Geoffreyrabbit, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Poon choi',
+        },
+        {
+          otsikko: 'Munatortun kaksi sukua',
+          aika: '1927–2014',
+          tiedosto: 'Egg Tarts with Puff Pastry.jpg',
+          teksti: 'Munatortun esi-isä on englantilainen custard tart, joka päätyi '
+              + 'Guangzhouhun länsimaisten tavaratalojen leipomoihin: leipurien piti '
+              + 'keksiä uutuuksia viikon erikoiseksi, ja noin 1927 Zhen Guang '
+              + '-ravintolan versio vakiintui siksi tortuksi, jota Guangzhoussa ja '
+              + 'Hongkongissa yhä syödään. Hongkongiin tortut tulivat Guangzhousta '
+              + '1940-luvulla ja olivat aluksi vain hienoissa länsimaisissa '
+              + 'ravintoloissa; 1960-luvulla halvat teeruokalat ottivat ne listalleen '
+              + 'ja tekivät niistä työväen leivonnaisen. Hongkongin tortut ovat '
+              + 'Guangzhoun tortuja pienempiä ja tulevat pöytään kahden tai kolmen '
+              + 'erissä.',
+          selite: 'Munatortun valmistustekniikka lisättiin kesäkuussa 2014 Hongkongin '
+            + 'aineettoman kulttuuriperinnön luetteloon; Macaon karamellipintainen '
+            + 'versio on eri sukua ja peräisin vuodelta 1989.',
+          lahde: 'See-ming Lee, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Egg tart',
+        },
+        {
+          otsikko: 'Kojut, joiden lupakortti oli muita isompi',
+          aika: '1945–',
+          tiedosto: 'Chan Si Kee Dai pai dong.jpg',
+          teksti: 'Sodan päätyttyä 1945 hallinto myönsi kaatuneiden ja vammautuneiden '
+              + 'virkamiesten perheille luvan pitää katukeittiötä. Lupakortti oli '
+              + 'muita suurempi, koska siihen tuli haltijan valokuva, ja kansa alkoi '
+              + 'sanoa kojuja ison luvan kojuiksi: dai pai dong. Tuntomerkkejä ovat '
+              + 'vihreäksi maalattu teräskeittiö, ilmastoinnin puute ja jakkarat '
+              + 'kadulla; pöytä jaetaan tuntemattomien kanssa, ja nuudelikojussa '
+              + 'istuva saa tilata maitoteensä muutaman kojun päästä. Uusia lupia ei '
+              + 'ole myönnetty vuoden 1956 jälkeen. Sana päätyi Oxford English '
+              + 'Dictionaryyn maaliskuussa 2016.',
+          selite: 'Ison luvan kojuja ei ole voinut periä vuoden 1956 jälkeen: lupa '
+            + 'siirtyy vain leskelle, ja heinäkuussa 2024 kojuja oli jäljellä '
+            + 'seitsemäntoista.',
+          lahde: 'Peachyeung316, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Dai pai dong',
+        },
+        {
+          otsikko: 'Paahdettua lihaa joka neljäs päivä',
+          tiedosto: 'HK CWB 銅鑼灣 Causeway Bay 渣甸街 Jardine\'s Bazaar shop April 2021 SS2 07 Ki\'s Roasted Goose Restaurant.jpg',
+          teksti: 'Siu mei on yleisnimi lihoille, jotka paahdetaan vartaissa avotulella '
+              + 'tai suuressa puulämmitteisessä grilliuunissa ja sivellään ennen '
+              + 'paistoa omalla kastikkeellaan — jokaisella lihalla on eri kastike. '
+              + 'Keskiverto hongkongilainen syö siu meitä joka neljäs päivä. '
+              + 'Suosituin on char siu eli grillattu porsas, toisena rapeakuorinen siu '
+              + 'yuk ja kolmantena paahdettu hanhi; joukkoon luetaan myös keitetty '
+              + 'valkoinen kana, vaikka sitä ei paahdeta lainkaan. Uunit ovat niin '
+              + 'isoja, ettei ruokaa tehdä kotona: se ostetaan liikkeestä valkoisen '
+              + 'riisin päälle, useimmiten mukaan.',
+          selite: 'Siu mei -myymälät saivat luvan tulla julkisille toreille vuonna '
+            + '1978, ja siitä lähtien tori on ollut tavallisen väen ostopaikka.',
+          lahde: 'KWOJNG ekwiuel AWAN, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Siu mei',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi dai pai dong -kojuja alettiin sanoa ison luvan kojuiksi?',
+        vaihtoehdot: [
+          'Kojut olivat muita kojuja leveämpiä',
+          'Lupa maksoi muita lupia enemmän',
+          'Lupakortti oli muita suurempi, koska siihen tuli valokuva',
+          'Lupia myönnettiin vain isoille perheille',
+        ],
+        oikea: 2,
+        fakta: 'Sodan jälkeen lupa myönnettiin kaatuneiden ja vammautuneiden '
+            + 'virkamiesten perheille, ja haltijan valokuva vaati muita isomman '
+            + 'kortin.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Hongkongin musiikki kulkee teehuoneen sokeasta laulajasta '
+          + 'bambuteatterin oopperaan ja siitä kantoninkieliseen poppiin, jota '
+          + 'pidettiin aluksi liian kotoisena kelvatakseen.',
+      nostot: [
+        {
+          otsikko: 'Sokeat mestarit teehuoneissa',
+          aika: '1800-luvun loppu–1920-luku',
+          tiedosto: 'Dangao.jpg',
+          teksti: 'Naamyam on kantoninkielinen kertova laulutraditio, joka muistuttaa '
+              + 'riimiteltyä puhelaulua ja syntyi Helmijoen suistossa Qing-kauden '
+              + 'lopulla. Säestys tuli kielisoittimista: zheng, jossa on '
+              + 'kuusitoista metallikieltä, ja yehu, kaksikielinen pystyviulu, jonka '
+              + 'kaikukoppa on kookoksenkuorta. Lajin tunnetuin haara oli dei seoi '
+              + 'naamyam, jota lauloivat sokeat laulajat; heitä puhuteltiin '
+              + 'kunnioittavasti sokeiksi mestareiksi. Laji kukoisti teehuonekulttuurin '
+              + 'mukana ja kaikui myös kaduilla, mutta väheni 1920-luvun lopulta, kun '
+              + 'kantonilainen ooppera vei yleisön ja sulautti naamyamin itseensä. '
+              + 'Tunnetuimpia laulajia olivat Chung Tak ja Dou Wun.',
+          selite: 'Yehu on kaksikielinen pystyviulu, jonka kaikukoppa on '
+            + 'kookoksenkuorta ja kansi ohutta puuta; se ja zheng olivat naamyamin '
+            + 'tavallisimmat säestyssoittimet.',
+          lahde: 'Badagnani, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Naamyam',
+        },
+        {
+          otsikko: 'Naiset, jotka näyttelivät miehiä',
+          aika: '1276–1960-luvut',
+          tiedosto: 'TaipingQingjiao grassland.JPG',
+          teksti: 'Kantonilainen ooppera tuli etelään Pohjois-Kiinasta 1200-luvun '
+              + 'lopulla: kun Song-keisari Gong pakeni 1276 satojentuhansien mukana '
+              + 'Guangdongiin, joukossa oli nanxi-näyttelijöitä. Ming- ja Qing-kauden '
+              + 'lait kielsivät miehiä ja naisia esiintymästä yhdessä, joten julkiset '
+              + 'ryhmät olivat pelkkiä miehiä ja miehet harjoittelivat falsettia. '
+              + '1920–1930-luvuilla suunta kääntyi päinvastaiseksi: miesroolia '
+              + 'esittävistä naisnäyttelijöistä tuli lipputulojen vetonauloja, ja Yam '
+              + 'Kim-fai vakiinnutti perinteen matalalla pinghou-rekisterillään. '
+              + 'Televisio ja elokuva veivät yleisön 1960-luvun lopulta, mutta '
+              + 'juhlien bambuteattereissa ooppera soi yhä.',
+          selite: 'Juhlien bambuteatterissa esiintyjät käyttävät paljettipukuja, joita '
+            + 'periytetään sukupolvelta toiselle; Yam Kim-fai antoi 1973 suojatilleen '
+            + 'Loong Kim-sangille täyden pukusarjan tämän ensimmäistä omaa '
+            + 'uudenvuoden esitystä varten.',
+          lahde: 'Larco, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cantonese opera',
+        },
+        {
+          otsikko: 'Laulu, joka teki kantonista popkielen',
+          aika: '1971–1978',
+          teksti: '1960-luvulla kantoninkielistä musiikkia pidettiin Hongkongissa '
+              + 'vanhanaikaisena tai kouluttamattomana, kun taas brittiläinen ja '
+              + 'amerikkalainen musiikki merkitsi sivistystä. Noin 1971 Sandra Lang, '
+              + 'joka ei ollut laulanut kantoninkielistä poppia lainkaan, kutsuttiin '
+              + 'laulamaan ensimmäinen kantoninkielinen tv-sarjan tunnuslaulu; sen '
+              + 'tekivät säveltäjä Joseph Koo ja sanoittaja Yip Siu-dak, ja se nousi '
+              + 'listojen kärkeen. Sam Huin ensimmäinen kantoninkielinen albumi Games '
+              + 'Gamblers Play myi 1974 kaksisataatuhatta kappaletta. Sanan Cantopop '
+              + 'otti käyttöön 1978 Billboardin kirjeenvaihtaja Hans Ebert.',
+          selite: 'Sam Hui lauloi puhuttua kantonia ja arjen aiheista — yksi hänen '
+            + 'tunnetuimmista lauluistaan kertoo 1960-luvun vedensäännöstelystä.',
+          wiki: 'Cantopop',
+        },
+        {
+          otsikko: 'Yhtye, joka kirjoitti swahiliksi',
+          aika: '1983–2005',
+          teksti: 'Beyond perustettiin Hongkongissa 1983, ja nimen ehdotti kitaristi '
+              + 'William Tang: sen piti kertoa itsensä ylittämisestä. Alkuvuodet olivat '
+              + 'omakustanteisia — ensimmäinen oma konsertti 1985 Caritas-keskuksessa '
+              + 'epäonnistui, ja managerin keräämistä 16 000 Hongkongin dollarista jäi '
+              + 'pian jäljelle tuhat. Vuonna 1989 Beyond oli ensimmäinen '
+              + 'hongkongilainen yhtye, joka esiintyi Pekingissä; kantoninkieliset '
+              + 'laulut eivät uponneet, ja puolet salista poistui ennen loppua. Vuoden '
+              + '1990 laulu Nelson Mandelasta toi kolminkertaisen platinan, ja 1991 '
+              + 'ilmestyi Amani, joka kirjoitettiin yhtyeen Tansanian-matkalla.',
+          selite: 'Amani tarkoittaa swahiliksi rauhaa, ja osa laulun sanoituksesta on '
+            + 'swahilia; yhtyeen laulaja ja pääsäveltäjä Wong Ka Kui kuoli 1993 '
+            + '31-vuotiaana onnettomuudessa tokiolaisessa televisiostudiossa.',
+          wiki: 'Beyond (band)',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Neljä tapaa katsoa samaa kaupunkia: öljyväri 1840-luvulta, tussi '
+          + '1960-luvulta, katukalligrafia lyhtypylväissä ja sarjakuva, joka on '
+          + 'ilmestynyt yhtäjaksoisesti vuodesta 1962.',
+      nostot: [
+        {
+          otsikko: 'Ainoa länsimainen maalari Etelä-Kiinassa',
+          aika: '1825–1852',
+          tiedosto: 'George Chinnery - Coolies Round the Food Vendor\'s Stall - Google Art Project.jpg',
+          teksti: 'George Chinnery opiskeli Lontoossa Royal Academyn kouluissa, teki '
+              + 'uran Kalkutassa brittiyhteisön johtavana taiteilijana ja pakeni '
+              + 'velkojaan 1825 Etelä-Kiinaan. Hän asui Macaossa kuolemaansa 1852 '
+              + 'asti ja kävi vuoteen 1832 säännöllisesti Kantonissa. Hän maalasi '
+              + 'kiinalaisia ja länsimaisia kauppiaita, laivureita ja heidän '
+              + 'perheitään, mutta myös maisemia ja tavallisten ihmisten arkea. '
+              + 'Koska hän oli ainoa Etelä-Kiinassa asunut länsimainen maalari '
+              + '1800-luvun alun ja puolivälin välillä, hänen kuvansa ovat myös '
+              + 'historian lähde. Vuonna 1846 hän vietti kuusi kuukautta Hongkongissa '
+              + 'ja piirsi vasta perustetun siirtokunnan tarkkaan.',
+          selite: 'Chinnery oppi isältään ja isoisältään Gurneyn pikakirjoituksen ja '
+            + 'kirjoitti omalla muunnoksellaan muistiinpanoja lyijykynäluonnostensa '
+            + 'reunoihin.',
+          lahde: 'George Chinnery, Wikimedia Commons (public domain)',
+          wiki: 'George Chinnery',
+        },
+        {
+          otsikko: 'Lauttayhtiön tarkastaja, joka uudisti tussin',
+          aika: '1948–1975',
+          teksti: 'Lui Shou-kwan syntyi Guangzhoussa 1919 maalarin poikana ja luki '
+              + 'taloustiedettä, mutta muutti 1948 Hongkongiin ja meni töihin '
+              + 'lauttayhtiöön. Hän tarkasti lauttoja vuoteen 1966 ja maalasi työn '
+              + 'ohessa. Vuonna 1962 hänen töitään oli näyttelyssä Hong Kong Art '
+              + 'Today, joka oli ensimmäinen näyttely, jonka aihe oli hongkongilainen '
+              + 'taide; samana vuonna hänestä tuli taidemuseon kunnianeuvonantaja. Hän '
+              + 'opetti tussimaalausta yliopiston arkkitehtuurin laitoksella ja '
+              + 'perusti 1968 oppilaidensa kanssa oman yhdistyksen. Tunnetuin on '
+              + 'Zen-sarja: abstrakteja tussitöitä, joissa toistuvat lootus ja liekki.',
+          selite: 'Lui Shou-kwania pidetään Hongkongin uuden tussiliikkeen '
+            + 'perustajana, ja Oxfordin Ashmolean-museo piti hänestä näyttelyn 2018.',
+          wiki: 'Lui Shou-Kwan',
+        },
+        {
+          otsikko: 'Kowloonin keisari kirjoitti sukupuunsa lyhtypylväisiin',
+          aika: '1956–2007',
+          teksti: 'Tsang Tsou-choi tuli Guangdongista Hongkongiin kuusitoistavuotiaana '
+              + 'työmiehenä, köyhänä ja tuskin lukutaitoisena. Kolmenkymmenenviiden '
+              + 'ikäisenä hän alkoi kirjoittaa katuja täyteen: lyhtypylväisiin, '
+              + 'sähkökaappeihin, pilareihin, jalkakäytäville ja seiniin tuli hänen '
+              + 'nimensä, arvonimensä ja noin kahdenkymmenen hengen sukuluettelo. Hän '
+              + 'sanoi tutkineensa sukupuunsa ja havainneensa, että suurin osa '
+              + 'Kowloonista oli kuulunut hänen esi-isilleen; asiakirjoja väitteelle '
+              + 'ei ole. Kun työ maalattiin yli, hän palasi kirjoittamaan heti maalin '
+              + 'kuivuttua.',
+          selite: 'Eräs lehti nimesi hänet kaupungin kymmenen vähiten vaikutusvaltaisen '
+            + 'ihmisen joukkoon, mutta hänen käsialansa päätyi Venetsian biennaaliin '
+            + '2003, Sotheby\'sin huutokauppaan 2004 ja lopulta M+ -museon '
+            + 'kokoelmiin.',
+          wiki: 'Tsang Tsou-choi',
+        },
+        {
+          otsikko: 'Sarjakuva, joka on ilmestynyt vuodesta 1962',
+          aika: '1962–',
+          teksti: 'Alfonso Wongin luoma Old Master Q ilmestyi hongkongilaisissa '
+              + 'lehdissä ensimmäisen kerran 3. helmikuuta 1962 ja jatkosarjana 1964. '
+              + 'Se ilmestyy yhä ja on Aasian vanhin yhtäjaksoisesti julkaistava '
+              + 'sarjakuva. Nimen alkuosa tarkoittaa vanhaa, ja jälkiosa on yli '
+              + 'kaksituhatta vuotta vanha kunnioittava arvonimi oppineelle; '
+              + 'englanninkielisen nimen Q on lyhenne sanasta cute. Päähenkilö on '
+              + 'laiha vanha mies Qing-kauden vanhanaikaisessa asussa, ja hänen '
+              + 'seurassaan kulkevat lyhyt Big Potato, kirjaviisas herra Chin ja '
+              + 'kilpailija herra Chiu.',
+          selite: 'Sarja kuvasi 1960–1980-luvuilla kaupunkiarjen ilmiöitä köyhyydestä '
+            + 'näpistelyyn ja pilaili muodille, nykytaiteelle ja rockmusiikille; '
+            + 'toistuva vitsi on kielimuuri kiinan ja englannin välillä.',
+          wiki: 'Old Master Q',
+        },
+      ],
+    },
+    {
+      id: 'urheilu',
+      nimi: 'Urheilu',
+      johdanto: 'Kaksi Hongkongin urheilutapahtumaa alkoi samana vuonna 1976, yksi '
+          + 'soisella maalla jo 1845 — ja yksi purjelauta toi alueelle sen '
+          + 'ensimmäisen olympiamitalin neljänkymmenenneljän vuoden odotuksen '
+          + 'jälkeen.',
+      nostot: [
+        {
+          otsikko: 'Lounas, jolla viisitoista muuttui seitsemäksi',
+          aika: '1976–',
+          tiedosto: 'Crowd cheering, Hong Kong Sevens 2009.jpg',
+          teksti: 'Hongkongin seiskarugbyturnaus syntyi lounaalla, jolla mainostaja '
+              + 'Rodney Bentham-Wood ehdotti rugbyliiton puheenjohtajalle Tokkie '
+              + 'Smithille viidentoista miehen kansainvälistä turnausta. Se olisi '
+              + 'tullut liian kalliiksi, joten joukkueiden kooksi sovittiin seitsemän. '
+              + 'Cathay Pacificin Jock Campbell tarjoutui maksamaan matkat, ja '
+              + 'ensimmäinen turnaus pelattiin 28. maaliskuuta 1976 Hong Kong Football '
+              + 'Clubilla. Mukana olivat muun muassa Fidži, Japani, Etelä-Korea, '
+              + 'Malesia, Sri Lanka, Thaimaa ja Tonga; finaalissa kohtasivat '
+              + 'australialainen ja uusiseelantilainen seura, ja Cantabrians voitti '
+              + '24–8.',
+          selite: 'Turnaus siirtyi 1982 Hongkongin stadionille, joka rakennettiin 1994 '
+            + 'uudelleen neljällekymmenelletuhannelle katsojalle.',
+          lahde: 'Jesús Gorriti, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Hong Kong Sevens',
+        },
+        {
+          otsikko: 'Suomaa, joka oli ainoa tasainen paikka',
+          aika: '1845–',
+          tiedosto: 'Happy Valley Racecourse 1.jpg',
+          teksti: 'Happy Valleyn kilparata rakennettiin 1845, koska se oli ainoa '
+              + 'tasainen maa koko Hongkong-saarella — ja se oli suota. Tieltä hallinto '
+              + 'kielsi riisinviljelyn ympäröivissä kylissä. Ensimmäinen kilpailu '
+              + 'ajettiin joulukuussa 1846, ja laji levisi vuosien mittaan '
+              + 'brittiyhteisöstä myös kiinalaisten asukkaiden keskuuteen. Radan '
+              + 'historian pahin onnettomuus sattui 26. helmikuuta 1918, kun '
+              + 'väliaikainen katsomo romahti ja siitä syttyi tulipalo. Nykyään '
+              + 'kilpailut ajetaan keskiviikkoiltaisin, ja seitsenkerroksisiin '
+              + 'katsomoihin mahtuu noin 55 000 katsojaa.',
+          selite: 'Radan sisäkentällä on yksitoista jalkapallokenttää sekä maahockey- '
+            + 'ja rugbykenttiä, joita kaupunki vuokraa harrastajille.',
+          lahde: 'Minghong, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Happy Valley Racecourse',
+        },
+        {
+          otsikko: 'Cheung Chaun tyttö ja neljänkymmenenneljän vuoden odotus',
+          aika: '1996',
+          teksti: 'Lee Lai Shan syntyi 1970 Cheung Chaun saarella, nousi purjelaudalle '
+              + 'kaksitoistavuotiaana, aloitti kilpailut seitsemäntoista ja pääsi '
+              + 'maajoukkueeseen yhdeksäntoista vanhana. Maailmanmestariksi hän tuli '
+              + '1993. Atlantan olympialaisissa 1996 hän voitti naisten '
+              + 'mistral-luokan — se oli Hongkongin ensimmäinen olympiamitali, vaikka '
+              + 'alue oli osallistunut kisoihin vuodesta 1952. Voiton jälkeen hän '
+              + 'sanoi toimittajille lauseen, joka jäi elämään: hongkongilaiset '
+              + 'urheilijat eivät ole roskaa. Cheung Chaun rannan lähelle on '
+              + 'pystytetty purjelautaa ja mastoa muistuttava muistomerkki.',
+          selite: 'Lee oli ensimmäinen hongkongilainen urheilija, jolle Kiinalainen '
+            + 'yliopisto myönsi kunniatohtorin arvon, ja hän kantoi 2008 ensimmäisenä '
+            + 'olympiatulta Hongkongin osuudella.',
+          wiki: 'Lee Lai Shan',
+        },
+        {
+          otsikko: 'Kaksituhatta vuotta vanha vene, uusi laji vuonna 1976',
+          tiedosto: 'Eastern District Dragon Boat Race - 2008-06-01 09h52m20s SN201358.jpg',
+          teksti: 'Lohikäärmevenesoutu on yli kaksituhatta vuotta vanha kiinalainen '
+              + 'perinne, joka liittyy Duanwun juhlaan eli kaksoisviidenteen: '
+              + 'viidennen kuukalenterikuukauden viidenteen päivään, joka osuu '
+              + 'useimmiten kesäkuulle. 1800-luvun eurooppalaiset tarkkailijat eivät '
+              + 'ymmärtäneet juhlan merkitystä ja kutsuivat näytöstä '
+              + 'lohikäärmevenejuhlaksi — se nimi jäi länteen. Nykyaikaisena '
+              + 'kansainvälisenä lajina soutu alkoi Hongkongissa 1976. Kilpaveneessä '
+              + 'on 18–20 melojaa, pienessä 8–10, ja lisäksi peränpitäjä ja rumpali.',
+          selite: 'Koristeellinen lohikäärmeen pää ja häntä kiinnitetään veneeseen '
+            + 'kilpailuja varten ja poistetaan harjoituksista, mutta rumpu jää '
+            + 'paikalleen rummuttajan harjoittelua varten.',
+          lahde: 'Stewart ~ 惡龍, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Dragon boat',
+        },
+      ],
+    },
+  ],
 };

@@ -2332,6 +2332,12 @@ export const ASIA_ARTIKKELIT = {
    * mainita lainkaan.
    */
   Hongkong: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // HKG, 6.9.2026) nojaa tähän introon yksin, sama malli kuin
+    // Egyptillä ja Kenialla. Intro on kirjoitettu 21.8.2026 eikä sitä
+    // ole tässä erässä muutettu — se kattaa jo maantieteen, vuoden 1841
+    // väkiluvun, kolme sopimusta, vuoden 1997 hallinnollisen käänteen ja
+    // liikenteen, eli juuri sen, mitä maalehden aiheet EIVÄT toista.
     intro: 'Hongkong on satamakaupunki Etelä-Kiinan meren rannalla, '
       + 'Helmijoen suiston itälaidalla. Kaupunki on rakennettu '
       + 'kapealle kaistaleelle vuorten ja veden väliin, ja '

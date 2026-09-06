@@ -84,6 +84,11 @@ const SALLITUT = [
   // ilman lähdettä, ks. js/packs/uutislahteet.js.
   'https://www.dabangasudan.org/',
   'https://www.radiotamazuj.org/',
+  // Hongkongin uutislähde (maalehti HKG, 6.9.2026): syöte ja
+  // artikkelisivut samalla isäntänimellä, ja syöteosoitteen
+  // loppukauttaviiva on pakollinen — ilman sitä palvelin vastaa
+  // uudelleenohjauksella, jota worker ei seuraa.
+  'https://hongkongfp.com/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

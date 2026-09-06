@@ -532,4 +532,29 @@ export const UUTISLAHTEET = {
    * Walta, Addis Zeybe, Shega ja Borkena eivät tarjonneet toimivaa
    * RSS-osoitetta.
    */
+  /*
+   * Hong Kong Free Press on hongkongilainen riippumaton uutissivusto.
+   * Testattu 6.9.2026: syötteessä kolmekymmentä juttua, ja
+   * artikkelisivun <article>-lohkosta jäsentyy 19–33 yli 60 merkin
+   * kappaletta sekä og:image (kaksi eri artikkelia testattu).
+   *
+   * KIELI ON ENGLANTI EIKÄ KANTONI, JA SIIHEN ON SYY. Englanti on
+   * Hongkongin toinen virallinen kieli, mutta kiinankielistä lähdettä
+   * etsittiin ensin yhdestätoista paikasta eikä yksikään läpäissyt
+   * molempia testejä: RTHK (rthk9.rthk.hk, syöte aukeaa, mutta
+   * artikkelisivulla ei ole <article>-elementtiä eikä
+   * [itemprop="articleBody"]-merkintää) ja Bastille Post
+   * (bastillepost.com/hongkong/feed, syöte aukeaa kymmenellä jutulla,
+   * artikkelisivulla ei <article>-elementtiä); Ming Pao ja HKET
+   * vastaavat 403:lla; HK01, am730, Sing Tao / stheadline, Wen Wei Po,
+   * Ta Kung Pao, on.cc ja HKCNews eivät tarjonneet toimivaa
+   * RSS-osoitetta. SCMP läpäisi molemmat testit, mutta sen
+   * <article>-lohkon toinen kappale on lähes 28 000 merkin CSS-lohko,
+   * joka päätyisi sellaisenaan popupiin — siksi se hylättiin.
+   */
+  HKG: {
+    nimi: 'Hong Kong Free Press',
+    kieli: 'en',
+    syote: 'https://hongkongfp.com/feed/',
+  },
 };
