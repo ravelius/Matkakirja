@@ -3386,6 +3386,17 @@ export const RAAMATTU = {
           + 'ilman erillista lupaa; matkakirjatekstit, kohtaamiset ja aarrekaari '
           + 'tehdaan uusiin maihin vasta kun Euroopan kaari on hiottu valmiiksi '
           + 'ja monistetaan siita.',
+        'HITAAMPI ALOITUSPALLO, LENTO SEURAA KONETTA, MAAPALLO VAALEAMPI '
+          + '(omistaja 6.9.2026 aamupaiva, sanatarkasti: "Kohdemaan valinnassa '
+          + 'hitaampi pallon liike. Lentokone kohtauksessa paljon lahempi zoom '
+          + 'aste ja kamera seuraa konetta. Kartta myos zoomaa koko ajan '
+          + 'pikkuhiljaa lahemmas konetta. Pallon ei tarvitse siis liikkua '
+          + 'lentokohtauksessa." ja "Maapallo saa olla vahan vaaleampi sittenkin '
+          + 'kun nain testikuvasi"): lahtomaan valinnassa pallo pyorii 0,16 '
+          + 'astetta sekunnissa (oli 0,4); avauslento alkaa 600 lautayksikon '
+          + 'leveydesta lahtokaupungin ymparilla ja kamera seuraa konetta '
+          + 'zoomaten tasaisesti saapumisnakymaan 240 asti, pallo itse ei '
+          + 'pyori; avauksen tummennus 0,12 (reunat 0,34), portissa 0,28.',
         'PULUN AANI VAIN ATEENA JA SOFIA ENSIN (omistaja 6.9.2026 keskipaiva, '
           + 'sanatarkasti: "Pulun teksteja ei kannata aani generoida kuin vasta '
           + 'Ateena + sofia. Ja lyhenna noidenkin tekstia ennen generointia. '
