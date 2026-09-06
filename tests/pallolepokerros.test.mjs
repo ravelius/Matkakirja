@@ -351,3 +351,42 @@ test('ajoitus: kokoaminen vasta aidon levon jälkeen, ei raahauksen tauolla', ()
   a.liike(); a.levossa(); a.pura(); kulje(loppuaika + 10);
   assert.equal(kokoamisia, 3);
 });
+
+test('E0: laattakerroksen apurit ovat js/pallolaatat.js:ssä, pallo.js vie ne edelleen', () => {
+  /*
+   * Erä E0 (docs/moduulit/pallon-liike-taydella-tarkkuudella.md luku 6):
+   * lepokerroksen puhtaat apurit siirrettiin sanatarkasti omaan moduuliin,
+   * jotta E1 voi rakentaa laattakerroksen niiden päälle. Rajapinta ei
+   * muuttunut — nimet näkyvät yhä js/pallo.js:stä (tämän tiedoston muut
+   * testit tuovat ne sieltä), mutta määrittely on vain yhdessä paikassa.
+   */
+  const pallo = lue('../js/pallo.js');
+  const laatat = lue('../js/pallolaatat.js');
+  const funktiot = [
+    'pallonPiste', 'lepokerroksenAlue', 'lepokerroksenLaattakatto', 'lepokerroksenTasoRiittaa',
+    'lepokerroksenTaso', 'lepokerroksenKerrokset', 'lepokerroksenLaatat', 'lepokerroksenUV',
+    'lepokerroksenSuunnitelma', 'lepokerroksenSilmat', 'lepokerroksenVerkko',
+    'luoLepokerroksenAjoitus',
+  ];
+  for (const nimi of funktiot) {
+    assert.match(laatat, new RegExp(`export function ${nimi}\\(`), `${nimi} puuttuu js/pallolaatat.js:stä`);
+    assert.ok(!new RegExp(`function ${nimi}\\(`).test(pallo), `${nimi} määritellään yhä js/pallo.js:ssä`);
+  }
+  const vakiot = [
+    'LEPOKERROS_KORKEUSRAJA', 'LEPOKERROS_TERAVYYS', 'LEPOKERROS_KATTOKERROIN',
+    'LEPOKERROS_LAATTAKATTO_MIN', 'LEPOKERROS_LAATTAKATTO_MAX', 'LEPOKERROS_KANGASKATTO',
+    'LEPOKERROS_TIHEYSOSUUS', 'LEPOKERROS_RUUDUKKO_AST', 'LEPOKERROS_RUUDUKKO_MIN',
+    'LEPOKERROS_RUUDUKKO_MAX', 'LEPOKERROS_VARA_AST', 'LEPOKERROS_KOROTUS',
+    'LEPOKERROS_SYVYYSSIIRTO', 'LEPOKERROS_HAIVE_SISAAN_MS', 'LEPOKERROS_LEPOVIIVE_MS',
+    'LEPOKERROS_KUVAKATTO', 'LEPOKERROS_NAYTTEITA', 'LEPOKERROS_MITTAMATKA_PX',
+    'RAD', 'THREE_LINEAR', 'THREE_LINEAR_MIPMAP_LINEAR', 'THREE_CLAMP',
+  ];
+  for (const nimi of vakiot) {
+    assert.match(laatat, new RegExp(`const ${nimi} =`), `${nimi} puuttuu js/pallolaatat.js:stä`);
+    assert.ok(!new RegExp(`const ${nimi} =`).test(pallo), `${nimi} määritellään yhä js/pallo.js:ssä`);
+  }
+  // Jälleenvienti pitää rajapinnan ennallaan, eikä uusi moduuli tuo mitään
+  // (tuonti js/pallo.js:ään tekisi kehän, jossa vakiot jäisivät alustamatta).
+  assert.match(pallo, /export \{[\s\S]*?\} from '\.\/pallolaatat\.js';/);
+  assert.ok(!/^import /m.test(laatat), 'js/pallolaatat.js ei saa tuoda mitään');
+});
