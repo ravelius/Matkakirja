@@ -2423,11 +2423,14 @@ kankaalle täsmälleen tasokartan osoitteilla ja ruudukolla
 (`js/laattapyramidi.js` uudet ovet `haePyramidinLuettelo`,
 `pyramidinKerrostasot`, `pyramidinLaattaUrl`, `pyramidinLaattaOlemassa`)
 ja piirretään pallon pinnalle 0,25°:n verkkona, jonka UV on Millerin
-kankaalla. Kerros häipyy päälle 260 ms ja pois 150 ms heti liikkeen
-alkaessa (reduced motion: heti). Säde 1,001 × pinta: laattojen päällä,
-kaikkien merkkien alla; syvyys kirjoitetaan ja kerros piirretään
-läpinäkyvien ensimmäisenä (renderOrder −1), jotta linssin polygonit ja
-napakannen häive jäävät sen päälle. Rajat: ei yleiskuvassa (korkeus >
+kankaalla. Kerros häipyy päälle 260 ms (reduced motion: heti) ja
+poistuu scenestä HETI ilman häivettä, kun liike alkaa (ks. korjaus
+alla). Säde TÄSMÄLLEEN pinnan (1,0): järjestys laattoihin nähden tulee
+syvyyssiirrosta (polygonOffset, 8 askelta kameraa kohti, ei
+kaltevuustermiä), merkit (≥ 1,0015) jäävät päälle; syvyys kirjoitetaan
+ja kerros piirretään läpinäkyvien ensimmäisenä (renderOrder −1), jotta
+linssin polygonit ja napakannen häive jäävät sen päälle. Rajat: ei
+yleiskuvassa (korkeus >
 0,6), laattakatto ruudun laitepikseleistä (4 × pikselit / 512², 16…64),
 kangas ≤ 8192 ja näytönohjaimen katto, tiheysvahti (karkeampaa kuin
 pallon omat Mercator-laatat katsotulla leveysasteella ei koota — mitattu
@@ -2448,4 +2451,38 @@ AVOIN: laattamoottori hakee levossa työpöydällä yli tuhat Z8-laattaa
 palvelimelle (fetchPriority high auttaa vain Chromiumissa); mobiilin
 muisti on riski, jos kangas 45 laattaa (~47 Mt) osuu laattamoottorin
 oman huipun päälle.
+
+**Lepokerroksen hyppy ja nykivä vieritys (6.9.2026 ilta, fablemax).**
+Omistaja v1639:stä sanatarkasti: *"kun kuva tarkentuu, niin se
+zoomautuu vähän sisään, mikä näkyy hyppynä. saako pois? vieritys ei ole
+jostain syystä enää niin sulavaa vaikka tarkkuus vieritys on pois
+päältä ja kartta on röpelöinen vierityksen aikana"*. Mitatut syyt
+(Chromium 390 × 844 dpr 2, Kreikka korkeus 0,09; skripti mittasi
+neljännesten SAD-siirtymän kerros näkyvissä vs. piilossa): (1) säde
+1,001 on lähikuvassa suurennos 1/(korkeus × 10) — mitattu 1,3 %, alaosan
+neljänneksissä dx ±3,0 ja dy −5,3 laitepikseliä, ja häive teki siitä
+zoomin sisään; (2) kerros koottiin samasta 260 ms:n levosta kuin
+laattataso nousee, joten raahauksen mikrotauko (350 ms sormi pohjassa)
+käynnisti kokoamisen ja tekstuurin viennin — tauon jälkeinen kehys
+1 117 ms, kun muut olivat ~430 ms (v1638 samassa kohdassa 633 ms;
+ohjelmistopiirto, absoluuttiset ajat eivät vastaa laitetta); (3)
+röpelö oli 150 ms:n ulos-häive liikkeessä: suurennettu kerros laattojen
+päällä kahtena kuvana. Korjaus (`js/pallo.js`): `LEPOKERROS_KOROTUS` 1
+ja materiaalille `polygonOffset` (`LEPOKERROS_SYVYYSSIIRTO` −8 askelta,
+factor 0 — kaltevuustermi kasvaisi pallon reunalla merkkien nostoa
+suuremmaksi; vähimmäisverkko 64 silmää pitää jänteen painuman alle
+puolen syvyysaskeleen jokaisella korkeudella, laskettu
+`tests/pallolepokerros.test.mjs`); liike poistaa kerroksen scenestä
+heti ilman häivettä; kokoaminen vasta aidon levon jälkeen
+(`LEPOKERROS_LEPOVIIVE_MS` 400 ms viimeisestä liikkeestä JA sormet irti
+kotelosta, `luoLepokerroksenAjoitus`); tekstuuri viedään
+näytönohjaimelle heti kokoamisen päätteeksi (`renderer.initTexture`).
+Mittaus korjauksen jälkeen: siirtymä kerros→ilman ≤ 0,18 px kaikissa
+neljänneksissä korkeuksilla 0,04 ja 0,09 (suurennos 0,00001);
+syvyystesti päällä vs. pois -erokuvassa vain nappulan varjo (ei
+z-fighting-täpliä); neljässä raahauksessa (tasainen ja mikrotauot)
+kokoamislaskuri ei kasvanut kertaakaan sormen ollessa pohjassa, ja
+tauon jälkeinen kehyspiikki katosi (max 517 ms = muiden kehysten
+tasoa). Laattamoottorin oma lepo (260 ms, kynnykset, pikselisuhde) on
+ennallaan — liikkeessä pallo piirtyy täsmälleen kuten v1638.
 

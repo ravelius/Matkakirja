@@ -734,8 +734,10 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     if (!kamera) return;
     asetaTila(true);
     alkuperainen.call(moottori, kamera);
-    // Sama lepo kokoaa lepokerroksen (pyramidin laatat näkyvän päälle).
-    void lepokerros.kokoa();
+    // Sama lepo ajoittaa lepokerroksen (pyramidin laatat näkyvän päälle) —
+    // kerros kootaan vasta AIDON levon jälkeen, ei raahauksen tauolla
+    // (LEPOKERROS_LEPOVIIVE_MS ja sormivahti, ks. luoLepokerroksenAjoitus).
+    lepokerros.levossa();
     for (const viive of [0, 800, 2500]) {
       const t = ikkuna.setTimeout(() => { ajastimet.delete(t); if (lepo) teroita(); }, viive);
       ajastimet.add(t);
@@ -751,9 +753,9 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
         const nyt = ikkuna.performance?.now?.() ?? Date.now();
         if (!edellinen || !lepoAjastin) liikeAlku = nyt;
         // Lepokerros pois HETI liikkeen alkaessa (ei LAATU_LIIKEVIIVE_MS:n
-        // jälkeen): terävä kerros on pinnassa kiinni eikä liu'u kameran
-        // mukana, joten se saa häipyä samalla kun laatat vielä pitävät
-        // tasonsa — ruudulla ei ole hetkeäkään kahta eri karttaa.
+        // jälkeen) ja ilman häivytystä: ensimmäisestä liikekehyksestä
+        // alkaen pallo piirtyy täsmälleen kuten ennen kerrosta (omistaja
+        // 6.9.2026 ilta, ks. LEPOKERROS JA LIIKE alempana).
         lepokerros.piilota();
         edellinen = paikka.clone();
         if (lepo && nyt - liikeAlku >= LAATU_LIIKEVIIVE_MS) asetaTila(false);
@@ -1025,17 +1027,63 @@ function lisaaNapakannet(kolmi, sade) {
  * on varsinainen kori. Liike kesken latauksen peruu kokoamisen
  * (sukupolvi): saapuvia kuvia ei enää piirretä.
  *
- * PIIRTOJÄRJESTYS. Kerros on säteellä LEPOKERROS_KOROTUS × pinta,
- * laattojen (1,0) päällä mutta KAIKKIEN pelin merkkien alla: aihevalot
- * ja napakannet 1,0015, reittien varjo 1,0018, reitit 1,002, helmet
- * 1,0025, kaupunkipisteet 1,003 ja html-merkit 1,004 (js/pallolauta/).
- * Materiaali on laattojen oma valaistu luokka (LaattaMateriaali), joten
- * sävy on sama kuin laatoilla (ks. napakansien mittaus), ja kerros
- * kirjoittaa syvyyden: se piirretään läpinäkyvien ensimmäisenä
- * (renderOrder −1), jotta sen päällä olevat läpinäkyvät kerrokset
- * (linssin polygonit, napakannen häive) testaavat syvyyttä sitä vasten
- * eivätkä jää sen alle. Navat rajataan napakansien alle
- * (NAPAKANNEN_LEVEYS) ja kartta-ala pyramidin rajaukseen (84° N…66° S).
+ * PIIRTOJÄRJESTYS: TÄSMÄLLEEN PINNAN SÄTEELLÄ, SYVYYSSIIRROLLA (omistaja
+ * 6.9.2026 ilta, sanatarkasti: *"kun kuva tarkentuu, niin se zoomautuu
+ * vähän sisään, mikä näkyy hyppynä. saako pois?"*). Ensimmäinen toteutus
+ * nosti kerroksen säteelle 1,001 × pinta kuten merkit; kamera on
+ * lähikuvassa vain korkeus × 100 yksikön päässä pinnasta, joten 0,1
+ * yksikön nosto suurentaa kuvaa 1/(korkeus × 10) — korkeudella 0,09
+ * laskettuna 1,1 %, mitattuna 1,3 % eli 3–5 laitepikseliä ruudun
+ * laidoilla, ja häipyvä
+ * kerros näytti zoomilta sisään (mittaus 6.9.2026 ilta, Chromium
+ * 390 × 844 dpr 2: neljännesten siirtymä kerros→ilman dx ±3,0, dy −5,3
+ * px). Nyt kerros on TÄSMÄLLEEN pinnan säteellä (LEPOKERROS_KOROTUS 1),
+ * jolloin se ei siirrä yhtään pikseliä (mitattu ±0,1 px), ja
+ * järjestys laattoihin nähden hoidetaan syvyyspuskurissa: materiaalin
+ * polygonOffset vetää kerroksen LEPOKERROS_SYVYYSSIIRTO syvyysyksikköä
+ * kameraa kohti (factor 0: vakio siirto, ei kaltevuustermiä, joka
+ * pallon reunalla kasvaisi merkkien nostoa suuremmaksi). Miksi se
+ * riittää: molemmat pinnat ovat pallon jänteitä, ja kerros voi jäädä
+ * laatan alle vain oman jänteensä painuman verran, R(1 − cos(silmä/2)) —
+ * 64 silmän vähimmäisverkolla (LEPOKERROS_RUUDUKKO_MIN) lähikuvassa
+ * 3 · 10⁻⁶ ja kaukana 0,375°:n silmällä 5 · 10⁻⁴ yksikköä, kun
+ * syvyyspuskurin askel (24 bittiä, near 0,05) on d² × 1,2 · 10⁻⁶ eli
+ * 2 · 10⁻⁵ lähimmällä korkeudella 0,04 ja 4 · 10⁻³ korkeudella 0,6 —
+ * painuma on aina alle puoli askelta, siirto 8 askelta. Merkit jäävät
+ * päälle: 8 askelta on korkeudella 0,6 0,034 yksikköä, kun matalin
+ * merkki (aihevalot ja napakannet 1,0015) on 0,15 yksikköä pinnasta;
+ * reittien varjo 1,0018, reitit 1,002, helmet 1,0025, kaupunkipisteet
+ * 1,003 ja html-merkit 1,004 (js/pallolauta/) vielä ylempänä. Vartio
+ * tests/pallolepokerros.test.mjs laskee saman. Materiaali on laattojen
+ * oma valaistu luokka (LaattaMateriaali), joten sävy on sama kuin
+ * laatoilla (ks. napakansien mittaus), ja kerros kirjoittaa syvyyden:
+ * se piirretään läpinäkyvien ensimmäisenä (renderOrder −1), jotta sen
+ * päällä olevat läpinäkyvät kerrokset (linssin polygonit, napakannen
+ * häive) testaavat syvyyttä sitä vasten eivätkä jää sen alle. Navat
+ * rajataan napakansien alle (NAPAKANNEN_LEVEYS) ja kartta-ala pyramidin
+ * rajaukseen (84° N…66° S).
+ *
+ * LEPOKERROS JA LIIKE (omistaja 6.9.2026 ilta, sanatarkasti: *"vieritys
+ * ei ole jostain syystä enää niin sulavaa vaikka tarkkuus vieritys on
+ * pois päältä ja kartta on röpelöinen vierityksen aikana"*). Mitattu
+ * syy (6.9.2026 ilta, Chromium-savuke, raahaus jossa sormi pysähtyy
+ * 350 ms:ksi): kerros koottiin samasta 260 ms:n levosta kuin laattataso
+ * nousee, joten raahauksen mikrotauko käynnisti kokoamisen — kymmenien
+ * laattojen purku, kankaan piirto ja 12–50 Mt:n tekstuurin vienti
+ * näytönohjaimelle osuivat siihen kehykseen, jolla sormi lähti taas
+ * liikkeelle (yksi kehys 1 117 ms, kun muut olivat 430 ms ohjelmisto-
+ * piirrolla; ilman kerrosta 633 ms). Röpelö oli kahden kartan häive:
+ * 1,001-säteinen kerros häipyi 150 ms liikkeessä laattojen päällä
+ * suurennettuna, siis kahtena kuvana. Nyt (1) kerros kootaan vasta
+ * AIDON levon jälkeen: LEPOKERROS_LEPOVIIVE_MS viimeisestä liikkeestä
+ * ja vasta kun yksikään sormi tai hiiren nappi ei ole pohjassa kotelon
+ * päällä (luoLepokerroksenAjoitus; raahauksen tauko ei siis koskaan
+ * kokoa), (2) liikkeen alkaessa kerros poistetaan scenestä HETI ilman
+ * häivytystä, jolloin jokainen liikekehys piirtyy täsmälleen kuten
+ * ennen kerrosta, ja (3) tekstuuri viedään näytönohjaimelle heti
+ * kokoamisen päätteeksi (renderer.initTexture) levossa, ei seuraavan
+ * kehyksen kylkiäisenä. Laattamoottorin oma lepo (LAATU_LEPOVIIVE_MS,
+ * kynnykset, pikselisuhde) on ennallaan — liikkeessä pallo on v1638.
  *
  * HYLÄTTY VARAKEINO: pallon oma Z9-sarja litteästä z8:sta. Pyramidissa ei
  * ole tasoa z8 (tasot 0–7, 2026-09-03a), joten Z9 olisi vain venytetty
@@ -1072,17 +1120,33 @@ export const LEPOKERROS_KANGASKATTO = 8192;
  * uudelleennäytteistystä ja jpeg-pakkauksen.
  */
 export const LEPOKERROS_TIHEYSOSUUS = 0.85;
-/** Verkon silmän koko asteina ja silmiä sivulla vähintään / enintään. */
+/**
+ * Verkon silmän koko asteina ja silmiä sivulla vähintään / enintään.
+ * Vähimmäismäärä on 64, ei 8: lähikuvassa syvyyspuskurin askel on
+ * pienimmillään, ja jänteen painuma pitää pysyä sen alla (ks.
+ * PIIRTOJÄRJESTYS) — 65² kärkeä on silti mitätön verkko.
+ */
 export const LEPOKERROS_RUUDUKKO_AST = 0.25;
-export const LEPOKERROS_RUUDUKKO_MIN = 8;
+export const LEPOKERROS_RUUDUKKO_MIN = 64;
 export const LEPOKERROS_RUUDUKKO_MAX = 160;
 /** Reunus näkyvän alueen ympärille asteina (pieni korjaus ei paljasta reunaa). */
 export const LEPOKERROS_VARA_AST = 0.5;
-/** Kerros laattojen päälle, kaikkien merkkien alle: säde × tämä. */
-export const LEPOKERROS_KOROTUS = 1.001;
-/** Häivytys päälle ja pois (ms). Reduced motion: 0. */
+/**
+ * Kerros TÄSMÄLLEEN pinnan säteellä (ei suurennosta, ks. PIIRTOJÄRJESTYS
+ * yllä); järjestys laattoihin nähden tulee syvyyssiirrosta.
+ */
+export const LEPOKERROS_KOROTUS = 1;
+/** polygonOffsetUnits: syvyyspuskurin askelta kameraa kohti (negatiivinen). */
+export const LEPOKERROS_SYVYYSSIIRTO = -8;
+/** Häivytys päälle (ms). Reduced motion: 0. Pois HETI liikkeestä, ilman häivettä. */
 export const LEPOKERROS_HAIVE_SISAAN_MS = 260;
-export const LEPOKERROS_HAIVE_ULOS_MS = 150;
+/**
+ * Aito lepo: kerros kootaan vasta, kun kamera on ollut paikallaan tämän
+ * ajan (LAATU_LEPOVIIVE_MS:n 260 ms:n lepo nostaa vain laattatason) ja
+ * sormet ovat irti. Raahauksen mikrotauko on tyypillisesti alle
+ * 300 ms; 400 ms jättää sen väliin (ks. LEPOKERROS JA LIIKE).
+ */
+export const LEPOKERROS_LEPOVIIVE_MS = 400;
 /** Purettuja laattakuvia muistissa enintään (512² × 4 t ≈ 1 Mt kukin). */
 export const LEPOKERROS_KUVAKATTO = 96;
 /** Näytepisteitä ruudulla sivua kohti (7 × 7 = 49 säteenjäljitystä). */
@@ -1324,6 +1388,50 @@ export function pallonLepokerros(pallo) {
 }
 
 /**
+ * Lepokerroksen ajoitus: aito lepo ennen kokoamista (ks. LEPOKERROS JA
+ * LIIKE). `levossa()` tulee laattamoottorin levosta (LAATU_LEPOVIIVE_MS
+ * viimeisestä liikkeestä) ja käynnistää loppuajan LEPOKERROS_LEPOVIIVE_MS:ään;
+ * `liike()` peruu kaiken; `sormiAlas()`/`sormiYlos()` laskevat pohjassa
+ * olevia osoittimia — kokoaminen odottaa, kunnes viimeinenkin on irti,
+ * ja lähtee silloin heti (kamera ei liiku, jos sormi ei liikkunut).
+ * Puhdas ja testattava: aika ja ajastimet tulevat ikkunasta.
+ *
+ * @returns {{ levossa(): void, liike(): void, sormiAlas(): void, sormiYlos(): void, pura(): void, tila(): object }}
+ */
+export function luoLepokerroksenAjoitus({
+  ikkuna, kokoa, lepoviive = LAATU_LEPOVIIVE_MS, viive = LEPOKERROS_LEPOVIIVE_MS,
+}) {
+  let lepo = false;
+  let sormia = 0;
+  let ajastin = 0;
+  let odottaa = false;
+  const peru = () => { if (ajastin) { ikkuna.clearTimeout(ajastin); ajastin = 0; } odottaa = false; };
+  const laukaise = () => {
+    ajastin = 0;
+    if (!lepo) return;
+    // Sormi pohjassa: raahauksen tauko. Kokoaminen odottaa irrotusta.
+    if (sormia > 0) { odottaa = true; return; }
+    odottaa = false;
+    kokoa();
+  };
+  return {
+    levossa() {
+      lepo = true;
+      peru();
+      ajastin = ikkuna.setTimeout(laukaise, Math.max(0, viive - lepoviive));
+    },
+    liike() { lepo = false; peru(); },
+    sormiAlas() { sormia += 1; },
+    sormiYlos() {
+      sormia = Math.max(0, sormia - 1);
+      if (sormia === 0 && odottaa) laukaise();
+    },
+    pura() { lepo = false; sormia = 0; peru(); },
+    tila: () => ({ lepo, sormia, odottaa, ajastettu: Boolean(ajastin) }),
+  };
+}
+
+/**
  * Lepokerroksen elinkaari yhdelle pallolle. Kutsutaan laatunoston
  * asennuksesta (kytkeLaatunosto): sama lepo, sama liike.
  */
@@ -1366,39 +1474,65 @@ function luoLepokerros({ pallo, kotelo, ikkuna, renderer, laattataso = () => NaN
     return lupaus;
   };
 
-  /** Peittävyyden liuku (ease-out), kirjaston oma silmukka piirtää kehykset. */
-  const haivyta = (materiaali, kohde, kesto, valmis = null) => {
+  /**
+   * Peittävyyden liuku päälle (ease-out), kirjaston oma silmukka piirtää
+   * kehykset. Poisto (poista) nollaa __haive-merkin, jolloin kesken
+   * oleva liuku päättyy hiljaa — pois ei häivytetä (LEPOKERROS JA LIIKE).
+   */
+  const haivyta = (materiaali, kohde, kesto) => {
     const alku = materiaali.opacity;
-    if (!(kesto > 0)) { materiaali.opacity = kohde; valmis?.(); return; }
+    if (!(kesto > 0)) { materiaali.opacity = kohde; return; }
     const t0 = ikkuna.performance?.now?.() ?? Date.now();
     const askel = () => {
+      if (materiaali.__haive !== askel) return;
       const t = Math.min(1, ((ikkuna.performance?.now?.() ?? Date.now()) - t0) / kesto);
       const e = 1 - (1 - t) ** 3;
       materiaali.opacity = alku + (kohde - alku) * e;
-      if (t < 1 && materiaali.__haive === askel) ikkuna.requestAnimationFrame(askel);
-      else if (materiaali.__haive === askel) valmis?.();
+      if (t < 1) ikkuna.requestAnimationFrame(askel);
     };
     materiaali.__haive = askel;
     ikkuna.requestAnimationFrame(askel);
   };
 
   const poista = (v) => {
+    v.material.__haive = null;
     v.parent?.remove(v);
     v.geometry?.dispose?.();
     v.material?.map?.dispose?.();
     v.material?.dispose?.();
   };
 
-  /** Liike alkoi: kesken oleva kokoaminen raukeaa, näkyvä kerros häipyy pois. */
+  /**
+   * Liike alkoi: kesken oleva kokoaminen raukeaa ja näkyvä kerros
+   * poistetaan scenestä HETI, ilman häivytystä — seuraava kehys on jo
+   * pelkkiä laattoja, täsmälleen kuten ennen kerrosta (LEPOKERROS JA
+   * LIIKE). Kerros on kiinni pinnassa samassa paikassa kuin laatat, joten
+   * poisto ei siirrä kuvaa; vain terävyys palaa laattojen tasolle.
+   */
   const piilota = () => {
     sukupolvi += 1;
+    ajoitus.liike();
     if (!verkko) return false;
     const v = verkko;
     verkko = null;
     mittarit.tila = 'piilossa';
-    haivyta(v.material, 0, reduced() ? 0 : LEPOKERROS_HAIVE_ULOS_MS, () => poista(v));
+    poista(v);
     return true;
   };
+  const ajoitus = luoLepokerroksenAjoitus({ ikkuna, kokoa: () => kahva.kokoa() });
+  /*
+   * Sormivahti: pohjassa oleva osoitin kotelon päällä on raahaus, vaikka
+   * kamera ei juuri nyt liikkuisi. Alas luetaan kotelosta, ylös ja
+   * peruutus DOKUMENTISTA: kirjasto kaappaa kankaalle laskeutuneen
+   * osoittimen (setPointerCapture), mutta html-merkkiin laskeutunut
+   * sormi voi irrota kotelon ulkopuolella, eikä laskuri saa jäädä
+   * pohjaan — silloin kerros ei kokoontuisi enää koskaan.
+   */
+  const sormiAlas = () => ajoitus.sormiAlas();
+  const sormiYlos = () => ajoitus.sormiYlos();
+  kotelo.addEventListener?.('pointerdown', sormiAlas);
+  doc?.addEventListener?.('pointerup', sormiYlos);
+  doc?.addEventListener?.('pointercancel', sormiYlos);
 
   const luovuta = (syy) => { mittarit.syy = syy; if (mittarit.tila === 'kokoaa') mittarit.tila = 'ei'; return false; };
 
@@ -1493,6 +1627,7 @@ function luoLepokerros({ pallo, kotelo, ikkuna, renderer, laattataso = () => NaN
     // Verkko ja tekstuuri.
     const nx = lepokerroksenSilmat(alue.lon1 - alue.lon0);
     const ny = lepokerroksenSilmat(alue.lat1 - alue.lat0);
+    // Täsmälleen pinnan säteellä (LEPOKERROS_KOROTUS on 1): ei suurennosta.
     const sade = pallo.getGlobeRadius() * LEPOKERROS_KOROTUS;
     const puskurit = lepokerroksenVerkko({ alue, kartta, sade, nx, ny });
     const geometria = new kolmi.BufferGeometry();
@@ -1513,7 +1648,14 @@ function luoLepokerros({ pallo, kotelo, ikkuna, renderer, laattataso = () => NaN
     tekstuuri.wrapT = THREE_CLAMP;
     tekstuuri.anisotropy = renderer?.capabilities?.getMaxAnisotropy?.() ?? 1;
     tekstuuri.needsUpdate = true;
-    const materiaali = new kolmi.LaattaMateriaali({ map: tekstuuri, transparent: true, opacity: 0, depthWrite: true });
+    // Vienti näytönohjaimelle nyt, levossa — ei seuraavan kehyksen
+    // kylkiäisenä, joka voisi olla liikkeen ensimmäinen (LEPOKERROS JA LIIKE).
+    renderer?.initTexture?.(tekstuuri);
+    // Syvyyssiirto laattojen edelle; ks. PIIRTOJÄRJESTYS (miksi factor 0).
+    const materiaali = new kolmi.LaattaMateriaali({
+      map: tekstuuri, transparent: true, opacity: 0, depthWrite: true,
+      polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: LEPOKERROS_SYVYYSSIIRTO,
+    });
     const uusi = new kolmi.Mesh(geometria, materiaali);
     uusi.renderOrder = -1;
     uusi.raycast = () => {};
@@ -1533,12 +1675,19 @@ function luoLepokerros({ pallo, kotelo, ikkuna, renderer, laattataso = () => NaN
   };
 
   const kahva = {
+    /** Kokoa heti (savukkeet ja vartijat); pelissä levossa() ajoittaa tämän. */
     kokoa: () => kokoa().catch((syy) => { mittarit.syy = String(syy?.message ?? syy); mittarit.tila = 'ei'; return false; }),
+    /** Laattamoottorin lepo: kokoaminen aidon levon jälkeen (ajoitus). */
+    levossa: () => ajoitus.levossa(),
     piilota,
     /** Mittarit savukkeille: tila, taso, laatat, pyynnöt ja niiden osoitteet. */
-    mittarit: () => ({ ...mittarit, pyydetyt: [...pyydetyt], nakyvissa: Boolean(verkko) }),
+    mittarit: () => ({ ...mittarit, pyydetyt: [...pyydetyt], nakyvissa: Boolean(verkko), ajoitus: ajoitus.tila() }),
     pura: () => {
       sukupolvi += 1;
+      ajoitus.pura();
+      kotelo.removeEventListener?.('pointerdown', sormiAlas);
+      doc?.removeEventListener?.('pointerup', sormiYlos);
+      doc?.removeEventListener?.('pointercancel', sormiYlos);
       if (verkko) { poista(verkko); verkko = null; }
       kuvat.clear();
       mittarit.tila = 'purettu';

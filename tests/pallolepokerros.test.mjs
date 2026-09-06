@@ -2,13 +2,15 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
-  LEPOKERROS_KORKEUSRAJA, LEPOKERROS_KOROTUS, LEPOKERROS_LAATTAKATTO_MAX, LEPOKERROS_LAATTAKATTO_MIN,
-  LEPOKERROS_RUUDUKKO_MAX, LEPOKERROS_RUUDUKKO_MIN, LAATU_KAUKORAJA, NAPAKANNEN_KOROTUS, PALLO_LAUTA,
+  LAATU_LEPOVIIVE_MS, LEPOKERROS_KORKEUSRAJA, LEPOKERROS_KOROTUS, LEPOKERROS_LAATTAKATTO_MAX,
+  LEPOKERROS_LAATTAKATTO_MIN, LEPOKERROS_LEPOVIIVE_MS, LEPOKERROS_RUUDUKKO_AST, LEPOKERROS_RUUDUKKO_MAX,
+  LEPOKERROS_RUUDUKKO_MIN, LEPOKERROS_SYVYYSSIIRTO, LAATU_KAUKORAJA, NAPAKANNEN_KOROTUS, PALLO_LAUTA,
   lepokerroksenAlue, lepokerroksenKerrokset, lepokerroksenLaatat, lepokerroksenLaattakatto,
   lepokerroksenSilmat, lepokerroksenSuunnitelma, lepokerroksenTaso, lepokerroksenTasoRiittaa,
-  lepokerroksenUV, lepokerroksenVerkko, pallonPiste,
+  lepokerroksenUV, lepokerroksenVerkko, luoLepokerroksenAjoitus, pallonPiste,
 } from '../js/pallo.js';
 import { projisoiLaudalle, laudaltaAsteiksi } from '../js/fokusmitat.js';
+import { PALLO_KORKEUS_MIN } from '../js/pallolauta/kamera.js';
 import { VALON_KORKEUS } from '../js/pallolauta/nostot.js';
 import { REITIN_VARJON_KORKEUS } from '../js/pallolauta/reitit.js';
 
@@ -181,8 +183,12 @@ test('verkko: kärjet pinnalla, UV kankaan sisällä, kolmiot ulospäin', () => 
   const kartta = lepokerroksenLaatat({ taso, laatta: LAATTA, arkki: ARKKI, projektio: PROJEKTIO, alue, laudanY });
   const nx = lepokerroksenSilmat(alue.lon1 - alue.lon0);
   const ny = lepokerroksenSilmat(alue.lat1 - alue.lat0);
-  assert.equal(nx, 56); // 14° / 0,25°
-  assert.equal(ny, 28);
+  // 14° / 0,25° = 56 ja 7° / 0,25° = 28 jäävät vähimmäismäärän (64) alle:
+  // lähikuvan jänteen painuma pysyy syvyysaskeleen alla (ks. syvyystesti).
+  assert.equal(LEPOKERROS_RUUDUKKO_MIN, 64);
+  assert.equal(nx, LEPOKERROS_RUUDUKKO_MIN);
+  assert.equal(ny, LEPOKERROS_RUUDUKKO_MIN);
+  assert.equal(lepokerroksenSilmat(30), 120); // 30° / 0,25°
   assert.equal(lepokerroksenSilmat(0.1), LEPOKERROS_RUUDUKKO_MIN);
   assert.equal(lepokerroksenSilmat(400), LEPOKERROS_RUUDUKKO_MAX);
   const sade = 100 * LEPOKERROS_KOROTUS;
@@ -210,11 +216,36 @@ test('verkko: kärjet pinnalla, UV kankaan sisällä, kolmiot ulospäin', () => 
   assert.ok(Math.abs(a[0] - nw.x) < 1e-6 || Math.abs(b[0] - nw.x) < 1e-6);
 });
 
-test('kerros laattojen päällä ja kaikkien merkkien alla; ei yleiskuvassa', () => {
-  assert.ok(LEPOKERROS_KOROTUS > 1);
-  assert.ok(LEPOKERROS_KOROTUS < NAPAKANNEN_KOROTUS, 'napakansi jää lepokerroksen päälle');
-  assert.ok(LEPOKERROS_KOROTUS - 1 < VALON_KORKEUS, 'aihevalot lepokerroksen päällä');
-  assert.ok(LEPOKERROS_KOROTUS - 1 < REITIN_VARJON_KORKEUS, 'reittien varjo lepokerroksen päällä');
+test('kerros täsmälleen pinnan säteellä: ei suurennosta, syvyyssiirto riittää laattoja vastaan ja jää merkkien alle', () => {
+  /*
+   * Omistaja 6.9.2026 ilta: "kun kuva tarkentuu, niin se zoomautuu vähän
+   * sisään, mikä näkyy hyppynä" — 1,001-säteinen kerros suurensi kuvaa
+   * 1/(korkeus × 10), korkeudella 0,09 mitattuna 1,3 % (3–5 px). Kerros
+   * on nyt täsmälleen säteellä 1, ja järjestys tulee syvyyssiirrosta.
+   */
+  assert.equal(LEPOKERROS_KOROTUS, 1, 'korotus suurentaisi kuvan: hyppy');
+  assert.ok(LEPOKERROS_SYVYYSSIIRTO < 0, 'siirto kameraa kohti');
+  // Syvyyspuskurin askel etäisyydellä d: d² (1/near − 1/far) / 2²⁴ (Globe.gl:
+  // near 0,05, far 125 000 mitattu 6.9.2026; 24-bittinen puskuri).
+  const askel = (d) => (d * d * (1 / 0.05 - 1 / 125000)) / 2 ** 24;
+  // Jänteen painuma: R (1 − cos(silmä/2)). Lähimmällä korkeudella näkyvä
+  // alue on pari astetta, ja vähimmäisverkko 64 silmää jakaa sen tiheästi;
+  // kaukana (korkeusraja) silmä on enintään 60° / 160 = 0,375°.
+  const painuma = (silmaAst) => 100 * (1 - Math.cos(((silmaAst / 2) * Math.PI) / 180));
+  const lahin = 100 * PALLO_KORKEUS_MIN;
+  const lahiSilma = 3 / LEPOKERROS_RUUDUKKO_MIN;
+  assert.ok(painuma(lahiSilma) < 0.5 * askel(lahin),
+    `lähikuva: painuma ${painuma(lahiSilma)} ≥ ½ askelta ${askel(lahin)}`);
+  const kauko = 100 * LEPOKERROS_KORKEUSRAJA;
+  const kaukoSilma = Math.max(LEPOKERROS_RUUDUKKO_AST, 60 / LEPOKERROS_RUUDUKKO_MAX);
+  assert.ok(painuma(kaukoSilma) < 0.5 * askel(kauko),
+    `kaukokuva: painuma ${painuma(kaukoSilma)} ≥ ½ askelta ${askel(kauko)}`);
+  // Siirto (8 askelta) on korkeusrajalla 0,034 yksikköä: alle matalimman
+  // merkin noston (aihevalot ja napakannet 0,15) neljäsosan.
+  const siirto = -LEPOKERROS_SYVYYSSIIRTO * askel(kauko);
+  assert.ok(siirto < 0.25 * (NAPAKANNEN_KOROTUS - 1) * 100, `siirto ${siirto} liian lähellä napakantta`);
+  assert.ok(siirto < 0.25 * VALON_KORKEUS * 100, 'aihevalot lepokerroksen päällä');
+  assert.ok(siirto < 0.25 * REITIN_VARJON_KORKEUS * 100, 'reittien varjo lepokerroksen päällä');
   assert.equal(LEPOKERROS_KORKEUSRAJA, LAATU_KAUKORAJA, 'sama raja kuin laatutilan yleiskuvalla');
   // Kartta-ala: pyramidin rajaus on 84° N…66° S, ja pohjoinen jää napakannen alle.
   assert.ok(Math.abs(laudaltaAsteiksi(PALLO_LAUTA, 0, RAJAUS.y).lat - 84) < 0.01);
@@ -224,8 +255,9 @@ test('kerros laattojen päällä ja kaikkien merkkien alla; ei yleiskuvassa', ()
 test('kytkennät: sama lepo kokoaa, liike piilottaa heti, osoitteet tasokartan moduulista', () => {
   const pallo = lue('../js/pallo.js');
   assert.match(pallo, /const lepokerros = luoLepokerros\(\{\n\s*pallo, kotelo, ikkuna, renderer, laattataso: \(\) => moottori\.level,\n\s*\}\);/);
-  assert.match(pallo, /alkuperainen\.call\(moottori, kamera\);\n[^\n]*\n[^\n]*void lepokerros\.kokoa\(\);/,
-    'lepokerros kootaan samassa lepoon-kutsussa kuin laatutaso nousee');
+  assert.match(pallo, /alkuperainen\.call\(moottori, kamera\);\n(?:\s*\/\/[^\n]*\n)*\s*lepokerros\.levossa\(\);/,
+    'laatutason lepo ajoittaa lepokerroksen (levossa), ei kokoa suoraan');
+  assert.ok(!/void lepokerros\.kokoa\(\)/.test(pallo), 'kokoaminen ei lähde laatutason 260 ms:n levosta suoraan');
   const liike = pallo.match(/edellinen\.distanceToSquared\(paikka\) > 1e-10\) \{[\s\S]*?lepokerros\.piilota\(\);[\s\S]*?if \(lepo && nyt - liikeAlku >= LAATU_LIIKEVIIVE_MS\)/);
   assert.ok(liike, 'piilotus tapahtuu heti liikkeestä, ennen LAATU_LIIKEVIIVE_MS-viivettä');
   assert.match(pallo, /lepokerros\.pura\(\);\n\s*moottori\.updatePov = alkuperainen;/);
@@ -236,10 +268,86 @@ test('kytkennät: sama lepo kokoaa, liike piilottaa heti, osoitteet tasokartan m
   for (const vienti of ['haePyramidinLuettelo', 'pyramidinKerrostasot', 'pyramidinLaattaUrl', 'pyramidinLaattaOlemassa']) {
     assert.match(pyramidi, new RegExp(`export function ${vienti}\\(`), `${vienti} puuttuu laattapyramidi.js:stä`);
   }
-  // Piirtojärjestys: syvyys kirjoitetaan ja kerros piirretään läpinäkyvien ensimmäisenä.
-  assert.match(pallo, /transparent: true, opacity: 0, depthWrite: true/);
+  // Piirtojärjestys: syvyys kirjoitetaan, syvyyssiirto ilman kaltevuustermiä,
+  // ja kerros piirretään läpinäkyvien ensimmäisenä.
+  assert.match(pallo, /transparent: true, opacity: 0, depthWrite: true,\n\s*polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: LEPOKERROS_SYVYYSSIIRTO,/);
   assert.match(pallo, /uusi\.renderOrder = -1;/);
   assert.match(pallo, /uusi\.raycast = \(\) => \{\};/, 'kerros ei ota napautuksia');
+  // Tekstuuri viedään näytönohjaimelle levossa, ei seuraavan kehyksen kylkiäisenä.
+  assert.match(pallo, /renderer\?\.initTexture\?\.\(tekstuuri\);/);
+  // Liike poistaa kerroksen heti: ei ulos-häivettä.
+  assert.ok(!/LEPOKERROS_HAIVE_ULOS_MS/.test(pallo), 'ulos-häive palasi');
+  assert.match(pallo, /const piilota = \(\) => \{\n\s*sukupolvi \+= 1;\n\s*ajoitus\.liike\(\);[\s\S]*?poista\(v\);\n\s*return true;/);
+  // Sormivahti: alas kotelosta, ylös ja peruutus dokumentista (sormi voi
+  // irrota kotelon ulkopuolella); purku irrottaa kaikki.
+  assert.match(pallo, /kotelo\.addEventListener\?\.\('pointerdown', sormiAlas\)/);
+  assert.match(pallo, /kotelo\.removeEventListener\?\.\('pointerdown', sormiAlas\)/);
+  for (const laji of ['pointerup', 'pointercancel']) {
+    assert.match(pallo, new RegExp(`doc\\?\\.addEventListener\\?\\.\\('${laji}', sormiYlos\\)`));
+    assert.match(pallo, new RegExp(`doc\\?\\.removeEventListener\\?\\.\\('${laji}', sormiYlos\\)`));
+  }
   // Lauta antaa kahvan savukkeille.
   assert.match(lue('../js/pallolauta/lauta.js'), /lepokerros: \(\) => pallonLepokerros\(pallo\),/);
+});
+
+test('ajoitus: kokoaminen vasta aidon levon jälkeen, ei raahauksen tauolla', () => {
+  /*
+   * Omistaja 6.9.2026 ilta: "vieritys ei ole jostain syystä enää niin
+   * sulavaa". Mitattu syy: kerros koottiin laatutason 260 ms:n levosta,
+   * jonka raahauksen mikrotauko laukaisi. Nyt: LEPOKERROS_LEPOVIIVE_MS
+   * viimeisestä liikkeestä JA sormet irti.
+   */
+  assert.ok(LEPOKERROS_LEPOVIIVE_MS >= 400, 'raahauksen mikrotauko (alle 300 ms) ei saa koota');
+  assert.ok(LEPOKERROS_LEPOVIIVE_MS > LAATU_LEPOVIIVE_MS, 'kerros vasta laattatason levon jälkeen');
+  const ajastimet = new Map();
+  let id = 0;
+  let nyt = 0;
+  const ikkuna = {
+    setTimeout: (fn, ms) => { id += 1; ajastimet.set(id, { fn, aika: nyt + ms }); return id; },
+    clearTimeout: (t) => { ajastimet.delete(t); },
+  };
+  const kulje = (ms) => {
+    nyt += ms;
+    for (const [t, a] of [...ajastimet]) if (a.aika <= nyt) { ajastimet.delete(t); a.fn(); }
+  };
+  let kokoamisia = 0;
+  const a = luoLepokerroksenAjoitus({ ikkuna, kokoa: () => { kokoamisia += 1; } });
+  const loppuaika = LEPOKERROS_LEPOVIIVE_MS - LAATU_LEPOVIIVE_MS;
+
+  // Aito lepo: laattatason lepo (260 ms) → loppuaika → kokoa kerran.
+  a.levossa();
+  kulje(loppuaika - 1);
+  assert.equal(kokoamisia, 0, 'ei ennen viivettä');
+  kulje(1);
+  assert.equal(kokoamisia, 1);
+
+  // Liike ennen viivettä peruu.
+  a.levossa(); a.liike(); kulje(loppuaika + 10);
+  assert.equal(kokoamisia, 1, 'liike perui');
+
+  // Raahauksen tauko: sormi pohjassa → odottaa; irrotus kokoaa heti.
+  a.sormiAlas(); a.liike(); a.levossa(); kulje(loppuaika + 10);
+  assert.equal(kokoamisia, 1, 'sormi pohjassa: ei kokoamista tauolla');
+  assert.equal(a.tila().odottaa, true);
+  a.sormiYlos();
+  assert.equal(kokoamisia, 2, 'irrotus kokoaa');
+  assert.equal(a.tila().odottaa, false);
+
+  // Sormi irtoaa ja liike jatkuu (damping): irrotuksen jälkeen tullut liike peruu odotuksen.
+  a.sormiAlas(); a.liike(); a.levossa(); kulje(loppuaika + 10); a.liike(); a.sormiYlos();
+  assert.equal(kokoamisia, 2, 'liike irrotuksen jälkeen: ei kokoamista ennen uutta lepoa');
+
+  // Kaksi sormea (nipistys): kumpikin irti ennen kokoamista.
+  a.sormiAlas(); a.sormiAlas(); a.liike(); a.levossa(); kulje(loppuaika + 10); a.sormiYlos();
+  assert.equal(kokoamisia, 2, 'toinen sormi vielä pohjassa');
+  a.sormiYlos();
+  assert.equal(kokoamisia, 3);
+
+  // Napautus ilman liikettä: sormi alas ja ylös, kerros paikallaan → ei uutta kokoamista.
+  a.sormiAlas(); a.sormiYlos();
+  assert.equal(kokoamisia, 3);
+
+  // Purku vaientaa kaiken.
+  a.liike(); a.levossa(); a.pura(); kulje(loppuaika + 10);
+  assert.equal(kokoamisia, 3);
 });
