@@ -2322,4 +2322,260 @@ export const SAATIEDOT = {
       + 'asteesta noustaan heinäkuun 14,4 asteeseen, eikä yksikään '
       + 'kuukausi ole keskimäärin pakkasella.',
   },
+  /*
+   * 14 lehtikaupunkia 6.9.2026: kaikilta puuttui säärivi kokonaan.
+   * Open-Meteon ERA5-arkisto vastasi tänä päivänä KAIKKIIN pyyntöihin
+   * "Daily API request limit exceeded. Please try again tomorrow."
+   * — myös 33 minuutin / 22 uudelleenyrityksen jälkeen — joten kaikki
+   * neljätoista riviä on laskettu tehtävänannon varakeinolla:
+   * en-Wikipedian kaupunkiartikkelin Climate-osion Weather box
+   * -mallineesta (kentät high/low/mean/precipitation, EI record
+   * high/low). Jos malline ilmoitti vain Fahrenheitin ja tuuman
+   * (tyypillistä yhdysvaltalaisille artikkeleille), luvut on
+   * muunnettu (F-32)*5/9 ja tuuma*25,4; jos mallineessa ei ollut
+   * erillistä mean-kenttää, keskilämpö on high- ja low-kenttien
+   * keskiarvo. Lähde ja normaalikausi on merkitty jokaisen rivin
+   * kohdalle erikseen, koska ne EIVÄT ole Open-Meteota eivätkä aina
+   * samaa 1991–2020-jaksoa kuin muu paketti — ks. myös loppuraportti.
+   */
+  // Lähde: en-Wikipedia "Dunedin", Climate-osio, Weather box
+  // "Dunedin (1991–2020 normals)", luettu 6.9.2026 — ei Open-Meteo
+  dunedin: {
+    lat: -45.87,
+    lon: 170.50,
+    keskilampo: [15.2, 15.1, 13.9, 11.8, 9.6, 7.4, 6.7, 7.8, 9.5, 11, 12.3, 14],
+    ylin: [19, 19, 18, 15, 13, 11, 10, 11, 13, 15, 16, 18],
+    alin: [12, 12, 10, 8, 6, 4, 3, 4, 6, 7, 9, 10],
+    sade: [71, 70, 54, 61, 64, 59, 52, 55, 47, 60, 63, 71],
+    luonnehdinta: 'Dunedinin vuodenkierto on maltillinen: tammikuun '
+      + 'keskilämpö on 15,2 astetta ja heinäkuun 6,7 astetta, joten ero '
+      + 'kesän ja talven välillä jää alle kymmeneen asteeseen. Sade '
+      + 'jakautuu lähes tasan ympäri vuoden, syyskuun 47 millimetristä '
+      + 'tammikuun 71 millimetriin, eikä selvää kuivaa tai sadekautta '
+      + 'ole. Talvi on silti leuto: alimmat lämpötilat pysyvät '
+      + 'plussan puolella jokaisena kuukautena, heinäkuunkin alin on '
+      + '3 astetta.',
+  },
+  // Lähde: en-Wikipedia "Suva", Climate-osio, Weather box
+  // "Suva (Laucala Bay) (1991–2020 normals)" (WMO), luettu 6.9.2026
+  // — ei Open-Meteo
+  suva: {
+    lat: -18.14,
+    lon: 178.44,
+    keskilampo: [27.9, 28.1, 28, 27.2, 25.9, 25, 24.2, 24.2, 24.7, 25.6, 26.5, 27.4],
+    ylin: [31, 32, 31, 30, 29, 28, 27, 27, 28, 29, 30, 31],
+    alin: [25, 25, 25, 24, 23, 22, 21, 21, 22, 23, 23, 24],
+    sade: [343, 276, 340, 335, 233, 156, 136, 144, 188, 248, 247, 344],
+    luonnehdinta: 'Suvan lämpötila pysyy ympäri vuoden trooppisen '
+      + 'tasaisena: kylmimpänä heinä-elokuussa keskilämpö on 24,2 '
+      + 'astetta ja lämpimimpänä helmikuussa 28,1 astetta. Sadetta '
+      + 'kertyy eniten joulu-maaliskuussa, jolloin useana kuukautena '
+      + 'ylitetään 300 millimetriä, ja vähiten heinä-elokuussa, '
+      + '136–144 millimetriä. Koko vuoden sademäärä nousee lähes '
+      + '3 000 millimetriin.',
+  },
+  // Lähde: en-Wikipedia "Porto Alegre", Climate-osio, Weather box
+  // "Porto Alegre (1991–2020, extremes 1949–present)" (Instituto
+  // Nacional de Meteorologia), luettu 6.9.2026 — ei Open-Meteo
+  portoalegre: {
+    lat: -30.03,
+    lon: -51.23,
+    keskilampo: [25, 24.7, 23.5, 20.7, 17.2, 14.8, 14.1, 15.7, 17.2, 19.7, 21.7, 24],
+    ylin: [31, 31, 29, 26, 23, 20, 20, 22, 23, 25, 28, 30],
+    alin: [21, 21, 20, 17, 14, 11, 10, 12, 13, 16, 17, 19],
+    sade: [121, 111, 103, 114, 113, 130, 164, 120, 148, 153, 106, 116],
+    luonnehdinta: 'Porto Alegressa on selvä eteläisen pallonpuoliskon '
+      + 'vuodenkierto: tammikuun keskilämpö on 25 astetta ja '
+      + 'heinäkuun 14,1 astetta. Sadetta riittää joka kuukausi '
+      + '103–164 millimetriä, joten kuivaa kautta ei ole — sateisin '
+      + 'kuukausi on heinäkuu keskitalvella. Vuoden kertymä jää '
+      + 'silti kohtuulliseksi, runsaaseen 1 500 millimetriin.',
+  },
+  // Lähde: en-Wikipedia "Asunción", Climate-osio, Weather box
+  // "Asunción (1991–2020, extremes 1991–present)" (WMO), luettu
+  // 6.9.2026 — ei Open-Meteo
+  asuncion: {
+    lat: -25.30,
+    lon: -57.64,
+    keskilampo: [28, 26.9, 25.9, 23.2, 19.4, 18.3, 17.1, 19.6, 21.5, 24.1, 25.2, 26.9],
+    ylin: [34, 33, 32, 29, 25, 24, 22, 26, 28, 30, 31, 33],
+    alin: [23, 23, 22, 19, 16, 14, 14, 15, 17, 20, 20, 22],
+    sade: [133, 146, 131, 152, 134, 71, 48, 39, 79, 158, 195, 177],
+    luonnehdinta: 'Asunciónin kesä on kuuma: tammikuun keskilämpö on '
+      + '28 astetta, kun heinäkuussa jäädään 17,1 asteeseen. '
+      + 'Sademäärä vaihtelee voimakkaasti kuukaudesta toiseen, '
+      + 'elokuun niukoista 39 millimetristä marraskuun 195 '
+      + 'millimetriin, ja vuoden kertymä on 1 463 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Cairns", Climate-osio, Weather box
+  // "Cairns Aero (1991–2020 normals)" (Australian Bureau of
+  // Meteorology), luettu 6.9.2026 — ei Open-Meteo
+  cairns: {
+    lat: -16.92,
+    lon: 145.77,
+    keskilampo: [27.9, 27.8, 27.2, 25.8, 24.1, 22.6, 21.7, 22.2, 23.8, 25.4, 26.8, 27.8],
+    ylin: [32, 32, 31, 30, 28, 27, 26, 27, 29, 30, 31, 32],
+    alin: [24, 24, 23, 22, 20, 19, 17, 17, 19, 21, 23, 24],
+    sade: [389, 476, 367, 178, 81, 43, 36, 27, 28, 63, 85, 186],
+    luonnehdinta: 'Cairnsin lämpötila pysyy ympäri vuoden trooppisen '
+      + 'tasaisena, 21,7–27,9 asteen välillä. Sademäärässä ero on '
+      + 'sitäkin jyrkempi: helmikuussa satelee 476 millimetriä, '
+      + 'elokuussa vain 27, ja suurin osa vuoden 1 959 millimetrin '
+      + 'kertymästä sataa joulu-huhtikuun välisenä aikana.',
+  },
+  // Lähde: en-Wikipedia "Panama City", Climate-osio, Weather box
+  // "Panama City (1991–2020)" (WMO/NOAA, Tocumen), luettu 6.9.2026
+  // — ei Open-Meteo
+  panama: {
+    lat: 8.98,
+    lon: -79.52,
+    keskilampo: [26.8, 27.1, 27.5, 28, 27.6, 27.2, 27.2, 27.2, 26.9, 26.6, 26.6, 26.9],
+    ylin: [32, 33, 33, 33, 32, 32, 32, 32, 31, 31, 31, 32],
+    alin: [21, 22, 22, 23, 23, 23, 23, 23, 22, 22, 22, 22],
+    sade: [24, 12, 14, 71, 222, 242, 190, 221, 268, 311, 259, 125],
+    luonnehdinta: 'Panaman keskilämpö pysyy ympäri vuoden lähes '
+      + 'muuttumattomana, 26,6–28 asteen välissä. Sademäärä sen '
+      + 'sijaan vaihtelee jyrkästi: helmikuussa kertyy vain 12 '
+      + 'millimetriä, kun lokakuussa sadetta on 311 millimetriä, ja '
+      + 'suurin osa vuoden 1 959 millimetristä sataa huhti-marraskuun '
+      + 'välillä.',
+  },
+  // Lähde: en-Wikipedia "Honiara", Climate-osio, Weather box
+  // "Honiara International Airport (1991–2020)" (NOAA), luettu
+  // 6.9.2026 — ei Open-Meteo
+  honiara: {
+    lat: -9.43,
+    lon: 159.95,
+    keskilampo: [27.6, 27.5, 27.4, 27.3, 27.3, 26.9, 26.7, 26.6, 26.9, 27, 27.3, 27.5],
+    ylin: [32, 32, 31, 32, 32, 31, 31, 31, 32, 32, 32, 32],
+    alin: [24, 23, 23, 23, 23, 22, 22, 22, 22, 22, 23, 23],
+    sade: [239, 290, 285, 190, 112, 86, 100, 95, 90, 118, 145, 211],
+    luonnehdinta: 'Honiarassa lämpötila pysyy käytännössä '
+      + 'muuttumattomana ympäri vuoden: kuukausien keskilämpöjen ero '
+      + 'on vain yksi aste, elokuun 26,6:sta tammikuun 27,6:een. '
+      + 'Sademäärä sen sijaan vaihtelee selvästi, kesäkuun 86 '
+      + 'millimetristä helmikuun 290 millimetriin, ja vuoteen '
+      + 'kertyy kaikkiaan 1 961 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Port Vila", Climate-osio, Weather box
+  // (lähde Deutscher Wetterdienst, "Baseline climate means
+  // 1961–1990"), luettu 6.9.2026 — ei Open-Meteo
+  portvila: {
+    lat: -17.73,
+    lon: 168.32,
+    keskilampo: [26.4, 26.5, 26.3, 25.3, 24.1, 23, 22.1, 22, 22.7, 23.4, 24.6, 25.7],
+    ylin: [31, 31, 31, 30, 29, 27, 26, 27, 28, 29, 29, 31],
+    alin: [23, 23, 23, 22, 20, 20, 18, 18, 18, 20, 21, 22],
+    sade: [316, 274, 321, 255, 210, 180, 94, 87, 87, 134, 192, 187],
+    luonnehdinta: 'Port Vilan keskilämpö pysyttelee 22–26,5 asteen '
+      + 'välissä ympäri vuoden. Sadetta kertyy eniten alkuvuodesta, '
+      + 'maaliskuussa 321 millimetriä, ja vähiten elo-syyskuussa, 87 '
+      + 'millimetriä kumpanakin, ja koko vuoden kertymä nousee yli '
+      + '2 300 millimetriin.',
+  },
+  // Lähde: en-Wikipedia "Denver", Climate-osio, Weather box "Denver
+  // Water Department (1991–2020 normals)" (xmACIS2); alkuperä
+  // Fahrenheit/tuuma, muunnettu — luettu 6.9.2026 — ei Open-Meteo
+  denver: {
+    lat: 39.74,
+    lon: -104.99,
+    keskilampo: [1.6, 1.9, 6.5, 10.1, 15.3, 21.4, 24.8, 23.8, 19, 11.5, 5.4, 1.1],
+    ylin: [9, 9, 14, 18, 23, 30, 33, 32, 28, 20, 13, 9],
+    alin: [-6, -6, -1, 2, 8, 13, 17, 16, 10, 3, -2, -6],
+    sade: [11, 15, 29, 50, 67, 44, 48, 46, 30, 29, 20, 12],
+    luonnehdinta: 'Denverissä vuodenaikojen ero on suuri: '
+      + 'joulu-helmikuun keskilämpö pysyy pari astetta plussan '
+      + 'puolella (1,1–1,9 astetta), kun heinäkuussa noustaan 24,8 '
+      + 'asteeseen. Sadetta kertyy niukasti, vain 401 millimetriä '
+      + 'vuodessa, ja sekin painottuu kevääseen: toukokuun 67 '
+      + 'millimetriin tammikuun niukan 11 millimetrin sijaan.',
+  },
+  // Lähde: en-Wikipedia "Houston", Climate-osio, Weather box
+  // "Houston (William P. Hobby Airport) (1991–2020 normals)"
+  // (NOAA); alkuperä Fahrenheit/tuuma, muunnettu — luettu 6.9.2026
+  // — ei Open-Meteo
+  houston: {
+    lat: 29.76,
+    lon: -95.37,
+    keskilampo: [12.8, 14.9, 18.2, 21.4, 25.3, 28.3, 29.3, 29.5, 27.3, 22.8, 17.4, 13.8],
+    ylin: [18, 20, 23, 26, 30, 33, 34, 34, 32, 28, 23, 19],
+    alin: [8, 10, 13, 17, 21, 24, 25, 25, 23, 18, 12, 9],
+    sade: [104, 72, 83, 104, 138, 155, 117, 138, 146, 147, 99, 110],
+    luonnehdinta: 'Houstonin kesä on kuuma ja kostea: elokuun '
+      + 'keskilämpö on 29,5 astetta ja sadetta kertyy silloinkin 138 '
+      + 'millimetriä. Sadetta riittää itse asiassa joka kuukausi '
+      + 'vähintään 72 millimetriä, kesäkuun 155 millimetristä '
+      + 'helmikuun 72 millimetriin, ja vuoden kertymä nousee 1 413 '
+      + 'millimetriin. Talvi on leuto: tammikuun keskilämpökin on '
+      + '12,8 astetta.',
+  },
+  // Lähde: en-Wikipedia "Miami", Climate-osio, Template:Miami
+  // weatherbox: "Miami International Airport, 1991–2020 normals"
+  // (NOAA); alkuperä Fahrenheit/tuuma, muunnettu — luettu 6.9.2026
+  // — ei Open-Meteo
+  miami: {
+    lat: 25.76,
+    lon: -80.19,
+    keskilampo: [20.3, 21.5, 22.8, 24.8, 26.7, 28.2, 28.9, 29, 28.3, 26.7, 23.8, 21.8],
+    ylin: [25, 26, 27, 29, 30, 32, 33, 33, 32, 30, 27, 26],
+    alin: [16, 17, 19, 21, 23, 25, 25, 25, 25, 23, 20, 18],
+    sade: [46, 55, 62, 85, 161, 267, 187, 243, 260, 194, 90, 62],
+    luonnehdinta: 'Miamin talvi on lauha ja kuiva: tammikuun '
+      + 'keskilämpö on 20,3 astetta ja sadetta kertyy vain 46 '
+      + 'millimetriä. Kesä on sekä kuuma että sateinen — elokuun '
+      + 'keskilämpö 29 astetta ja kesäkuun sademäärä 267 millimetriä '
+      + '— ja koko vuoden kertymä on 1 712 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Halifax, Nova Scotia", Climate-osio,
+  // Template:Halifax weatherbox: "Halifax (Citadel Hill), 1981–2010
+  // normals" (Environment Canada); alkuperä Fahrenheit/tuuma,
+  // muunnettu — luettu 6.9.2026 — ei Open-Meteo. HUOM:
+  // normaalikausi on 1981–2010, EI 1991–2020 kuten muu paketti.
+  halifax: {
+    lat: 44.65,
+    lon: -63.57,
+    keskilampo: [-4.1, -3.6, -0.2, 4.9, 10.1, 15.2, 18.8, 19.1, 15.5, 9.9, 4.8, -0.8],
+    ylin: [0, 0, 4, 9, 14, 20, 23, 23, 19, 13, 8, 3],
+    alin: [-8, -7, -4, 1, 6, 11, 14, 15, 12, 6, 2, -4],
+    sade: [140, 110, 133, 118, 119, 112, 110, 96, 109, 124, 151, 145],
+    luonnehdinta: 'Halifaxissa talvi on pakkasella: tammikuun '
+      + 'keskilämpö on -4,1 astetta, kun elokuussa noustaan 19,1 '
+      + 'asteeseen. Sadetta sataa joka kuukausi 96–151 millimetriä '
+      + 'ilman selvää kuivaa kautta, ja vuoden kertymä on 1 467 '
+      + 'millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Cape Town", Climate-osio, Weather box
+  // "Cape Town International Airport (1991–2020 normals)", luettu
+  // 6.9.2026 — ei Open-Meteo
+  kapkaupunki: {
+    lat: -33.92,
+    lon: 18.42,
+    keskilampo: [23.1, 22.2, 20.5, 17.9, 15.4, 13.2, 12.7, 13, 14.5, 16.9, 18.6, 20.7],
+    ylin: [29, 28, 26, 24, 21, 18, 18, 18, 20, 22, 24, 26],
+    alin: [17, 17, 15, 12, 10, 8, 7, 8, 9, 12, 13, 16],
+    sade: [9, 10, 13, 40, 61, 92, 85, 72, 44, 28, 25, 13],
+    luonnehdinta: 'Kapkaupungin sadekausi osuu talveen: tammikuussa '
+      + 'sadetta on vain 9 millimetriä, kun kesäkuussa sitä kertyy '
+      + '92. Lämpötila taas on huipussaan tammikuussa, 23,1 astetta, '
+      + 'ja alimmillaan heinäkuussa, 12,7 astetta — siis '
+      + 'päinvastoin kuin sademäärässä. Koko vuoden sademäärä jää '
+      + '492 millimetriin.',
+  },
+  // Lähde: en-Wikipedia "Nairobi", Climate-osio, Weather box "Jomo
+  // Kenyatta International Airport (1991–2020 normals)", luettu
+  // 6.9.2026 — ei Open-Meteo
+  nairobi: {
+    lat: -1.29,
+    lon: 36.82,
+    keskilampo: [20.5, 20.8, 21.6, 20.8, 19.8, 18.5, 17.7, 18.2, 19.4, 20.6, 19.9, 19.7],
+    ylin: [27, 27, 28, 26, 25, 24, 24, 24, 26, 27, 25, 26],
+    alin: [14, 14, 15, 15, 15, 13, 12, 13, 13, 14, 15, 15],
+    sade: [58, 36, 75, 130, 109, 29, 11, 19, 17, 50, 131, 85],
+    luonnehdinta: 'Nairobin lämpötila pysyy ympäri vuoden '
+      + 'maltillisena, 17,7–21,6 asteen välillä, vaikka kaupunki on '
+      + 'lähellä päiväntasaajaa. Sadetta kertyy selvästi eniten '
+      + 'huhtikuussa (130 mm) ja marraskuussa (131 mm), kun taas '
+      + 'heinäkuussa sitä on vain 11 millimetriä. Vuoden kertymä on '
+      + '750 millimetriä.',
+  },
 };
