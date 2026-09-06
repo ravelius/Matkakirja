@@ -633,7 +633,9 @@ export function kaikuSuodatin({ kesto = KAIUN_KESTO, vaimennus = KAIUN_VAIMENNUS
    */
   return [
     '[0:a]asplit=2[kauas][lahella]',
-    `[kauas]aecho=0.8:0.85:340|620:0.45,volume='${v}*max(0,1-t/${k})':eval=frame[marka]`,
+    // aecho vaatii yhtä monta vaimennusta kuin viivettä (340|620 →
+    // 0.45|0.3); yksi vaimennus kaatoi ffmpegin 6.9.2026 ajossa.
+    `[kauas]aecho=0.8:0.85:340|620:0.45|0.3,volume='${v}*max(0,1-t/${k})':eval=frame[marka]`,
     `[lahella]volume='min(1,t/${k})':eval=frame[kuiva]`,
     '[marka][kuiva]amix=inputs=2:normalize=0[ulos]',
   ].join(';');
