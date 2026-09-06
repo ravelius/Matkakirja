@@ -2519,6 +2519,96 @@ tools/polta-paikallisesti.sh --sarjat z8 --nostoversio 2026-09-07a \
 # → js/pallo.js: PALLO_LAATTATUNNISTE = 'd'
 ```
 
+### Rantaviiva omalla tasollaan (`--ilman-rantaviivaa`)
+
+Omistajan päätös 6.9.2026 ilta, sanatarkasti: *"joo poltetaan vain
+uudestaan ilman viivaa nyt kun on mac studio viritetty"*. Rantaviivan
+muste siirtyy pohjalaatoista NELJÄNTEEN läpinäkyvään pyramidiin
+(`<rantaversio>/ranta/z…`), jotta karttapallo voi jättää sen lataamatta
+ja piirtää tilalle pikselin levyisen vektoriviivan
+(docs/moduulit/pallon-vektoriviivat.md, luvut 4.5 ja 6, erä V4).
+Tasokartalla kuva ei muutu: se lataa rantatason pohjan päälle
+(pohja → **ranta** → viiva → nosto).
+
+Pohjan sisältö muuttuu, joten **koko pyramidi poltetaan uuteen
+versioon** — z8:n lisäystä olemassa oleviin versioihin tämä ei ole.
+Skripti vaatii siksi uudet versiot kaikille kerroksille, ja koska
+pohjan versio vaihtuu, myös pallon oma Mercator-sarja (lepokerroksen
+versiovahti, js/pallo.js `lepokerroksenKerrokset`):
+
+```bash
+tools/polta-paikallisesti.sh --sarjat kaikki --ilman-rantaviivaa \
+  --versio 2026-09-07a \
+  --rantaversio 2026-09-07a-ranta \
+  --viivaversio 2026-09-07a-viivat \
+  --nostoversio 2026-09-07a-nostot \
+  --pallo --pallotunniste e --siivoa
+```
+
+Mitä se ajaa:
+
+| shardit | mitä |
+| --- | --- |
+| `z0-z6`, `z7a`–`z7d`, `z8-001`…`z8-085` | pohja **ilman rantaviivaa** |
+| `viiva-z0-z7`, `viiva-z8-01`…`-11` | reitit, rajat, piirit (uusi versio) |
+| `nosto-z5-z7`, `nosto-z8` | poltetut merkit (uusi versio) |
+| `ranta-z0-z7`, `ranta-z8-01`…`-11` | **rantaviiva** (uusi taso) |
+
+Rantatason laattoja on 12 096 (z0–z7 4 992, z8 7 104) eli suunnilleen
+saman verran kuin viivatasolla, ja ne piirtyvät ilman korkeusruudukkoa
+— tason oma osuus ajasta on minuutteja, ei tunteja.
+
+Luettelo kootaan kokonaan uutena (`--sarjat kaikki` ei tee
+z8-yhdistystä eikä `vertaa_luettelo`-tarkistusta), ja luettelojobi
+saa `--data`-kansion, koska rantatason peite lasketaan Natural Earthin
+rantaviivasta.
+
+Pallon sarja poltetaan tässä tilassa **ilman rantatasoa**
+(`tools/tee-pallolaatat.mjs --ilman-rantaa`), koska pallolla
+rantaviiva on vektori; `--pallon-ranta` palauttaa sen, jos
+vektorikerrosta ei ole vielä julkaistu.
+
+**Julkaisussa muuttuvat koodirivit** (Fable tekee, ei tämä skripti):
+
+| tiedosto | vakio | uusi arvo |
+| --- | --- | --- |
+| js/pallo.js | `PALLO_LAATTAVERSIO` | pohjan uusi versio |
+| js/pallo.js | `PALLO_LAATTATUNNISTE` | `--pallotunniste`-kirjain |
+
+Pyramidin oma versio, viiva-, nosto- ja rantaversio ovat luettelossa
+eivätkä koodissa, joten js/laattapyramidi.js ei muutu.
+
+**Mitä uusintapoltto maksaa kuvassa.** Rantaviiva oli pohjapiirron
+osiossa 4 eli järvien, jokien, paperin rakeen ja reunahäivytyksen
+ALLA; omalla tasollaan se on niiden PÄÄLLÄ, ja patina ajetaan sille
+läpinäkyvän musteen reseptillä (RESEPTIT.nosto) kuten nosto- ja
+viivatasolle. Mitattu Ateenan otoksesta (z0–z4, 1,26 Mpx, PNG:t
+scratchpadissa; vanha pohja vs. rannaton pohja + rantataso päällä):
+
+| mitta | luku |
+| --- | --- |
+| pikseleitä, joissa mikä tahansa ero | 25,0 % |
+| ero > 8/255 | 7,4 % |
+| ero > 16/255 | 3,2 % |
+| suurin ero | 60/255 |
+| z4: musteen omalla alalla (10,1 % laatasta) | keskiero 10,4/255 |
+| z4: musteen ULKOPUOLELLA | keskiero 1,7/255 |
+| z4: vahvan musteen luminanssi (uusi − vanha) | +6,7/255 (hitusen vaaleampi) |
+
+Ero on siis **rantaviivan oman 3 pikselin vyön sisällä** eikä
+kartalla muualla; silmällä laatat ovat samat (montaasit
+scratchpadissa). Sama luokka kuin reittien ja rajojen siirto
+viivatasolle 31.8.2026. Ilman rantatason patinaa vahva muste olisi
+25,7 yksikköä TUMMEMPI kuin ennen — siksi taso ajetaan
+RESEPTIT.nosto-patinalla eikä ilman.
+
+Työnkulkuun (.github/workflows/generoi-pyramidi.yml) rantatasoa **ei
+lisätty**: se vaatisi uuden syötteen, uuden matriisirivin, oman
+vientihaaran ja `--ilman-rantaviivaa`-lipun jokaiselle pohjashardille
+— eikä se olisi yhden rivin lisäys. Ja koska pohja on tässä joka
+tapauksessa poltettava kokonaan uudestaan, ajo tehdään Mac Studiolla
+tällä skriptillä, kuten z8:kin.
+
 Työnkulkuun z8:aa **ei lisätty**. Matriisiin mahtuisi kyllä 85 kaistaa,
 mutta jokainen job maksaisi oman `npm install`- ja
 Chromium-asennuksensa ja oman aineistonoutonsa, ja shardin

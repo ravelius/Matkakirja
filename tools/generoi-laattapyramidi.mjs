@@ -82,13 +82,14 @@ import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { ikkunanRajat, keraaMaailma } from './fokuskartta/maailma.mjs';
+import { ikkunanRajat, keraaMaailma, rannikot } from './fokuskartta/maailma.mjs';
 import { ikkunanPalat } from './korkeuspalat-lukija.mjs';
 import { keraaSisalto, sisallonYhteenveto } from './fokuskartta/sisalto.mjs';
 import { keraaNostot, nostojenYhteenveto } from './fokuskartta/nostot.mjs';
 import { lueRajaviivasto, rajatLaudalle, RAJASETIT } from './fokuskartta/rajat.mjs';
 import { RESEPTIT, TAUSTA, patinoiSelaimessa } from './patina.mjs';
 import { laudanProjektio, SYVYYS } from './fokuskartta/piirto.js';
+import { RANTATYYLI } from './fokuskartta/maailmapiirto.js';
 import { nostosymPolttoLaatikko } from '../js/fokusnosto-symbolit.js';
 import { NOSTOLADONTA_SAANTO } from '../js/nostoladonta.js';
 
@@ -294,6 +295,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
     + '[--nostotaso --nostoversio <v>] [--viivataso --viivaversio <v> [--eipiirit]] '
+    + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
     + '[--saumatesti [--saumakohta sarake,rivi]]');
   process.exit(1);
 }
@@ -519,8 +521,49 @@ if (!RAJASETIT[RAJASETTI]) {
     + `(tunnetut: ${Object.keys(RAJASETIT).join(', ')})`);
   process.exit(1);
 }
-if (NOSTOTASO && VIIVATASO) {
-  console.error('--nostotaso ja --viivataso ovat eri ajoja; anna vain toinen.');
+/*
+ * RANTATASO (omistaja 6.9.2026 ilta, sanatarkasti: *"joo poltetaan
+ * vain uudestaan ilman viivaa nyt kun on mac studio viritetty"*):
+ * rantaviivan muste siirtyy pohjalaatoista NELJÄNTEEN läpinäkyvään
+ * laattapyramidiin polkuun ranta/z<taso>/<sarake>/<rivi>.
+ *
+ * MIKSI OMA TASO. Karttapallo piirtää rantaviivan vektorina
+ * (js/pallovektorit.js), joka on aina tasan pikselin levyinen;
+ * poltettu viiva jäisi sen alle venytettynä usvana. Kun muste on
+ * omalla tasollaan, pallo jättää sen lataamatta ja tasokartta lataa
+ * sen pohjan päälle — tasokartan kuva ei muutu (ks.
+ * docs/moduulit/pallon-vektoriviivat.md luvut 4.5 ja 6, erä V4).
+ *
+ * TASOT z0–z7 (tai z8) KUTEN VIIVATASOLLA: rantaviiva on kartalla joka
+ * tasolla, toisin kuin nostot.
+ *
+ * RANTAVERSIO on tason oma versio-osa polussa samasta syystä kuin
+ * nosto- ja viivatasolla: kerroksen uusintapoltto ei saa koskea pohjan
+ * ikuiseen välimuistiin.
+ */
+const RANTATASO = lippu('rantataso');
+const RANTAVERSIO_ANNETTU = valitsin('rantaversio', null);
+const RANTAVERSIO = RANTAVERSIO_ANNETTU ?? VERSIO;
+/*
+ * POHJA ILMAN RANTAVIIVAA (`--ilman-rantaviivaa`). Piirtomoottorin
+ * osio 4 ohitetaan tyyliparametrilla (`tyyli.rantaviiva: false`,
+ * tools/fokuskartta/maailmapiirto.js), EI oletuksena: vanhat lehdet,
+ * pilotit ja testit kutsuvat ilman kenttää ja saavat rantaviivan
+ * kuten ennenkin.
+ *
+ * LUETTELO KERTOO SEN PELILLE (`pohja.rantaviiva: false`), jotta
+ * myöhempi lukija — ja pallon sarjan poltto — näkee ämpäristä, kumpi
+ * pohja siellä on. Peli ei lue kenttää: sille riittää, että
+ * rantataso on olemassa.
+ */
+const ILMAN_RANTAVIIVAA = lippu('ilman-rantaviivaa');
+if ([NOSTOTASO, VIIVATASO, RANTATASO].filter(Boolean).length > 1) {
+  console.error('--nostotaso, --viivataso ja --rantataso ovat eri ajoja; anna vain yksi.');
+  process.exit(1);
+}
+if (RANTATASO && ILMAN_RANTAVIIVAA) {
+  console.error('--ilman-rantaviivaa on POHJA-ajon lippu; rantataso on juuri se '
+    + 'muste, joka pohjasta jää pois.');
   process.exit(1);
 }
 /*
@@ -554,7 +597,7 @@ const PATINA_TASO = valitsin('patina', 'taysi');
  * `--patina ei` kytkee patinan pois myös nostotasolta.
  */
 const PATINA = PATINA_TASO === 'ei' ? null
-  : ((NOSTOTASO || VIIVATASO) ? RESEPTIT.nosto : RESEPTIT[PATINA_TASO]);
+  : ((NOSTOTASO || VIIVATASO || RANTATASO) ? RESEPTIT.nosto : RESEPTIT[PATINA_TASO]);
 if (PATINA_TASO !== 'ei' && !PATINA) {
   console.error(`Tuntematon patinataso: ${PATINA_TASO}`);
   process.exit(1);
@@ -774,6 +817,32 @@ const lautaSisalto = await keraaSisalto(pack, join(JUURI, 'js', 'packs'));
  * rajat.mjs); tämä ajo ei tiedä valtioista mitään, vain viivoista.
  */
 const rajaViivat = rajatLaudalle(lueRajaviivasto(RAJASETTI), kaava, laatikko);
+
+/*
+ * RANTATASON SISÄLTÖ ON RANTAVIIVA — SAMA KUTSU KUIN POHJASSA.
+ *
+ * `rannikot(kansio, { laatikko })` on täsmälleen se, minkä
+ * keraaMaailma kokoaa pohjalle (maailma.mjs: meriRenkaat harvennuksella
+ * 0,006° ja rannikotRenkaista samalla laatikolla), joten tason muste
+ * osuu pikselilleen siihen kohtaan, josta se pohjasta jäi pois.
+ *
+ * LAISKASTI, koska aineistokansiota ei ole aina: `--vain-luettelo`
+ * osaa laskea nosto- ja viivatason peitteen pelkästä laudasta, ja
+ * sama ajo tekee rantatason peitteen vain jos rantataso on pyydetty
+ * (--rantataso tai --rantaversio).
+ */
+let rantaViivatMuisti = null;
+function rantaViivat() {
+  if (rantaViivatMuisti) return rantaViivatMuisti;
+  try {
+    rantaViivatMuisti = rannikot(dataKansio, { laatikko });
+  } catch (e) {
+    console.error(`Rantataso tarvitsee ne_10m_ocean.geojson-tiedoston kansiosta ${dataKansio} `
+      + `(--data <kansio>): ${e.message}`);
+    process.exit(1);
+  }
+  return rantaViivatMuisti;
+}
 
 /**
  * Yhden tason mitat. Leveys on aina 2 * edellinen, joten sarakemäärä
@@ -1197,6 +1266,67 @@ function viivatasonPeite(mitat, osat = null) {
   return joukko;
 }
 
+/* ------------------------------------------------- rantatason peite */
+
+/*
+ * MUSTEEN ULOTTUMA PIKSELEINÄ — PAPERIVAKIO, EI REITTIYKSIKKÖ.
+ *
+ * Rantaviivan leveys on paperivakio (RANTATYYLI, paperiS = 1), joten
+ * ulottuma on sama luku joka tasolla: puolet leveimmästä vedosta
+ * (usva 3 px) plus patinan musteen ulottuma laatan reunan yli. Pyöreä
+ * liitos ei ulotu vetoa kauemmas, joten puolikas riittää.
+ */
+const RANTA_ULOTTUMA_PX = RANTATYYLI.usva.leveys / 2;
+
+/**
+ * Tason rantaviivalliset laatat joukkona "sarake:rivi".
+ *
+ * SAMA SOPIMUS KUIN VIIVATASOLLA: tämä funktio antaa sekä työlistan
+ * että luettelon bittikartan, joten peli ei voi pyytää laattaa, jota
+ * ajo ei kirjoittanut — eikä jättää pyytämättä laattaa, joka on.
+ *
+ * SAUMAN YLI EI VEDETÄ (maailmapiirto.js viivaPolku): Natural Earth
+ * katkaisee monikulmionsa pituusasteelle ±180, ja kierrosta vastaava
+ * hyppy on aina yli puoli arkkia. Peitteen on noudatettava samaa
+ * sääntöä, tai se lupaisi laattoja, joihin ei piirry mitään.
+ */
+function rantatasonPeite(mitat) {
+  const joukko = new Set();
+  const m = RANTA_ULOTTUMA_PX + VIIVA_MARGINAALI_PX;
+  /*
+   * KARTTA-ALAN RIVIT: piirto leikkaa musteen atlaskehyksen
+   * marginaaliin (piirraRantataso), ja rantaviivan aineisto ulottuu
+   * laatikon puolen asteen varan verran sen yli. Ilman tätä rajausta
+   * luettelo lupaisi marginaaliin täysin läpinäkyviä laattoja.
+   */
+  const S = mitat.leveys / 6400;
+  const yYla = Math.round(KEHYS.yla * S);
+  const yAla = mitat.korkeus - Math.round(KEHYS.ala * S);
+  const riviAlku = Math.floor(yYla / LAATTA);
+  const riviLoppu = Math.floor(Math.max(yYla, yAla - 1) / LAATTA);
+  const puoliArkki = arkinBbox.w / 2;
+  const px = (bx) => (bx - arkinBbox.x) * mitat.px;
+  const py = (by) => (by - arkinBbox.y) * mitat.px;
+  for (const viiva of rantaViivat()) {
+    let ex = null;
+    let ey = null;
+    for (const [lon, lat] of viiva) {
+      const bx = kaava.lautaX(lon);
+      const by = kaava.lautaY(lat);
+      if (ex !== null && Math.abs(bx - ex) <= puoliArkki) {
+        lisaaJana(joukko, mitat, px(ex), py(ey), px(bx), py(by), m);
+      }
+      ex = bx;
+      ey = by;
+    }
+  }
+  for (const avain of [...joukko]) {
+    const rivi = Number(avain.split(':')[1]);
+    if (rivi < riviAlku || rivi > riviLoppu) joukko.delete(avain);
+  }
+  return joukko;
+}
+
 /** Tason nostolaatasto bittikarttana base64:nä (sama muoto kuin
  *  pohjan `laatasto`, ks. teeLuettelo — peli purkaa ne samalla
  *  koodilla). */
@@ -1237,13 +1367,19 @@ const nostoPeitteet = new Map(
 const viivaPeitteet = new Map(
   VIIVATASO ? tasot.map((m) => [m.z, viivatasonPeite(m, VIIVAOSAT)]) : [],
 );
+/* RANTATASOAJOSSA SAMA SÄÄNTÖ: työlista on rantatasonPeite. */
+const rantaPeitteet = new Map(
+  RANTATASO ? tasot.map((m) => [m.z, rantatasonPeite(m)]) : [],
+);
 const tarvitaan = new Set();
 const lohkot = new Map();
 for (const mitat of tasot) {
-  const peite = NOSTOTASO ? nostoPeitteet.get(mitat.z) : viivaPeitteet.get(mitat.z);
+  let peite = viivaPeitteet.get(mitat.z);
+  if (NOSTOTASO) peite = nostoPeitteet.get(mitat.z);
+  else if (RANTATASO) peite = rantaPeitteet.get(mitat.z);
   for (let rivi = 0; rivi < mitat.riveja; rivi += 1) {
     for (let sarake = 0; sarake < mitat.sarakkeita; sarake += 1) {
-      if ((NOSTOTASO || VIIVATASO) && !peite.has(`${sarake}:${rivi}`)) continue;
+      if ((NOSTOTASO || VIIVATASO || RANTATASO) && !peite.has(`${sarake}:${rivi}`)) continue;
       if (!alueella(mitat, sarake, rivi)) continue;
       if (SARAKKEET) {
         /*
@@ -1297,6 +1433,12 @@ for (const m of tasot) {
     + (ALUE ? `  (alueella ${tassa})` : ''));
 }
 console.log(`  laattoja ajossa ${tyot.length} (${lohkot.size} lohkoa à ${LOHKO}x${LOHKO})`);
+if (RANTATASO) {
+  console.log(`  rantataso       ${rantaViivat().length} viivaa · versio ${RANTAVERSIO} `
+    + '· polku ranta/z<taso>');
+} else if (ILMAN_RANTAVIIVAA) {
+  console.log('  pohja           ILMAN RANTAVIIVAA (muste on rantatasolla)');
+}
 if (ALUE) {
   console.log(`  alue            lon ${ALUE.lon0}..${ALUE.lon1} lat ${ALUE.lat0}..${ALUE.lat1}`);
 }
@@ -1362,6 +1504,7 @@ if (lippu('vain-lista')) {
     muoto: MUOTO,
     laatta: LAATTA,
     nostotaso: NOSTOTASO || undefined,
+    rantataso: RANTATASO || undefined,
     alue: ALUE,
     tasot: TASOT,
     laatat: tyot.map(({ mitat, sarake, rivi }) => [mitat.z, sarake, rivi]),
@@ -1383,7 +1526,7 @@ if (lippu('vain-lista')) {
  */
 if (lippu('vain-palat')) {
   const kaarim = AJON_KAARIMINUUTIT[0] ?? KARKEA_KAARIMINUUTIT;
-  const nimet = (NOSTOTASO || VIIVATASO || kaarim !== 1)
+  const nimet = (NOSTOTASO || VIIVATASO || RANTATASO || kaarim !== 1)
     ? []
     : ikkunanPalat(ikkunanRajat({ laatikko: korkeudenLaatikko(), ruutu: RUUTU }));
   /*
@@ -1404,7 +1547,7 @@ if (KUIVA) {
    * suurin yksittäinen muistierä ja se, joka päättää mahtuuko shardi
    * ajokoneelle — ja sen näkee nyt ilman että mitään kootaan.
    */
-  if (!NOSTOTASO && !VIIVATASO) {
+  if (!NOSTOTASO && !VIIVATASO && !RANTATASO) {
     const kl = korkeudenLaatikko();
     const r = ikkunanRajat({ laatikko: kl, ruutu: RUUTU });
     const kaarim = AJON_KAARIMINUUTIT.join('+');
@@ -1461,9 +1604,18 @@ if (VIIVATASO && (HARVA || lippu('harvamittaus'))) {
   console.error('--viivataso ei tue --harva/--harvamittaus-lippuja.');
   process.exit(1);
 }
+/*
+ * RANTATASO TUKEE SAUMATESTIÄ samasta syystä kuin viivataso: muste
+ * piirretään ARKIN koordinaateissa, ja juuri se on se asia, joka
+ * saumatestillä todistetaan. Harva karsinta on pohjakuvan ominaisuus.
+ */
+if (RANTATASO && (HARVA || lippu('harvamittaus'))) {
+  console.error('--rantataso ei tue --harva/--harvamittaus-lippuja.');
+  process.exit(1);
+}
 let aineisto = null;
 let sisalto = null;
-if (!NOSTOTASO && !VIIVATASO) {
+if (!NOSTOTASO && !VIIVATASO && !RANTATASO) {
   /*
    * YKSI AJO, YKSI RUUDUKKO. Ruudukko kootaan kerran ja tarjoillaan
    * selainsivulle yhtenä tiedostona, joten ajo jonka tasot
@@ -1790,7 +1942,7 @@ if (HARVA) {
 
 const tyokansio = join(tmpdir(), `pyramidi-${process.pid}`);
 mkdirSync(tyokansio, { recursive: true });
-if (!NOSTOTASO && !VIIVATASO) {
+if (!NOSTOTASO && !VIIVATASO && !RANTATASO) {
   const { grid, ...korkeudenMitat } = aineisto.korkeus;
   writeFileSync(join(tyokansio, 'korkeus.bin'),
     Buffer.from(grid.buffer, grid.byteOffset, grid.byteLength));
@@ -1846,6 +1998,14 @@ writeFileSync(join(tyokansio, 'sisalto.json'), JSON.stringify(VIIVATASO
   }
   : (sisalto ?? null)));
 /*
+ * RANTATASON AINEISTO OMANA TIEDOSTONAAN. Se on pelkkä rantaviiva —
+ * ei korkeusruudukkoa, ei merimaskia, ei järviä — ja juuri siksi
+ * rantatason ajo on nopea: sivu lataa yhden vektoritiedoston ja
+ * piirtää siitä mustetta läpinäkyvälle kankaalle.
+ */
+writeFileSync(join(tyokansio, 'ranta.json'),
+  JSON.stringify(RANTATASO ? { rannikot: rantaViivat() } : null));
+/*
  * POLTETTAVAT KARTTANOSTOT omana tiedostonaan samasta syystä kuin
  * sisältö. Piirtoon menee VAIN `poltettava`-merkit: estetyn maan
  * merkit lasketaan mukaan tilastoon, mutta niitä ei polteta eikä
@@ -1872,7 +2032,7 @@ writeFileSync(join(tyokansio, 'nostot.json'),
 const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
 <body style="margin:0;background:#333"><canvas id="k"></canvas>
 <script type="module">
-  import { piirraMaailma, piirraNostotaso, piirraViivataso } from './maailmapiirto.js';
+  import { piirraMaailma, piirraNostotaso, piirraViivataso, piirraRantataso } from './maailmapiirto.js';
   /*
    * PELIN OMA SYMBOLIKIRJASTO. Poltettu merkki piirretään täsmälleen
    * samalla funktiolla kuin elävä (Raamattu 31.8.2026: poltetun ja
@@ -1893,15 +2053,24 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
    */
   const VIIVATASO = ${VIIVATASO};
   const VIIVA_REITIT_ALIN = ${VIIVA_REITIT_ALIN};
+  /*
+   * RANTATASOAJO LATAA VAIN RANTAVIIVAN: läpinäkyvälle tasolle
+   * piirretään pelkkä rannikon muste (ks. RANTATASO ylempänä).
+   */
+  const RANTATASO = ${RANTATASO};
   // Erikoispiirien passi (ks. ERIKOISPIIRIT POIS VIIVATASOLTA).
   const PIIRIT = ${PIIRIT};
   const nostot = await (await fetch('./nostot.json')).json().catch(() => null);
   let aineisto = null;
   let sisalto = null;
+  let rannikot = null;
   if (!NOSTOTASO) {
     sisalto = await (await fetch('./sisalto.json')).json();
   }
-  if (!NOSTOTASO && !VIIVATASO) {
+  if (RANTATASO) {
+    rannikot = (await (await fetch('./ranta.json')).json())?.rannikot ?? [];
+  }
+  if (!NOSTOTASO && !VIIVATASO && !RANTATASO) {
     aineisto = await (await fetch('./aineisto.json')).json();
     aineisto.korkeus.grid = new Int16Array(await (await fetch('./korkeus.bin')).arrayBuffer());
     aineisto.meri = aineisto.meri
@@ -1953,6 +2122,8 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       piirraViivataso(kangas, {
         ...yhteiset, passit: { reitit: saumaZ >= VIIVA_REITIT_ALIN, piirit: PIIRIT },
       });
+    } else if (RANTATASO) {
+      piirraRantataso(kangas, { ...yhteiset, rannikot });
     } else {
       piirraMaailma(kangas, aineisto, {
         ...yhteiset, nostot, piirraNosto: piirraNostosymPolttoon,
@@ -2105,6 +2276,8 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
         piirraViivataso(kangas, {
           ...yhteiset, passit: { reitit: (perus.__z ?? 7) >= VIIVA_REITIT_ALIN, piirit: PIIRIT },
         });
+      } else if (RANTATASO) {
+        piirraRantataso(kangas, { ...yhteiset, rannikot });
       } else {
         piirraMaailma(kangas, aineisto, {
           ...yhteiset, nostot, piirraNosto: piirraNostosymPolttoon,
@@ -2179,6 +2352,13 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
         sisalto,
         passit: { reitit: asetukset.__z >= VIIVA_REITIT_ALIN, piirit: PIIRIT },
       });
+    } else if (RANTATASO) {
+      /*
+       * RANTATASO: sama lohkokoneisto, eri piirto. Kankaalle jää vain
+       * rannikon kaksi vetoa; patina saa läpinäkyvän mustereseptin
+       * (RESEPTIT.nosto) kuten nosto- ja viivatasolla.
+       */
+      piirraRantataso(kangas, { ...asetukset, rannikot });
     } else {
       piirraMaailma(kangas, aineisto, {
         ...asetukset, sisalto, nostot, piirraNosto: piirraNostosymPolttoon,
@@ -2243,6 +2423,8 @@ const palvelin = createServer((req, res) => {
     '/aineisto.json': join(tyokansio, 'aineisto.json'),
     '/sisalto.json': join(tyokansio, 'sisalto.json'),
     '/nostot.json': join(tyokansio, 'nostot.json'),
+    // Rantatason aineisto: pelkkä rantaviiva (ks. RANTATASO).
+    '/ranta.json': join(tyokansio, 'ranta.json'),
     /*
      * PELIN OMA SYMBOLIKIRJASTO SIVULLE. Poltettu merkki piirretään
      * TÄSMÄLLEEN samalla koodilla kuin elävä (piirraNostosymPolttoon),
@@ -2336,8 +2518,15 @@ console.log(`  sivu pystyssä   ${((Date.now() - sivuAlkoi) / 1000).toFixed(1)} 
  * Yhden arkin lehdelle (tools/tee-yleislehti.mjs) kytkintä ei anneta,
  * ja piirit piirtyvät siellä kuten ennen.
  */
+/*
+ * RANTAVIIVA POIS POHJASTA (`--ilman-rantaviivaa`, omistaja 6.9.2026
+ * ilta): sama kytkinmalli kuin erikoispiireillä. Muste on silloin
+ * omalla läpinäkyvällä tasollaan (--rantataso), ja jos se olisi
+ * molemmissa, kartalla olisi kaksinkertainen viiva.
+ */
 const TYYLI = {
   meret: MERET, kehys: KEHYS, kompassi: KOMPASSI, asteverkko: false,
+  ...(ILMAN_RANTAVIIVAA ? { rantaviiva: false } : {}),
 };
 
 /*
@@ -2515,6 +2704,7 @@ for (const { mitat, bx, by } of lohkot.values()) {
     let kansio = join(kohdekansio, `z${mitat.z}`, String(sarake));
     if (NOSTOTASO) kansio = join(kohdekansio, 'nostot', `z${mitat.z}`, String(sarake));
     if (VIIVATASO) kansio = join(kohdekansio, 'viivat', `z${mitat.z}`, String(sarake));
+    if (RANTATASO) kansio = join(kohdekansio, 'ranta', `z${mitat.z}`, String(sarake));
     mkdirSync(kansio, { recursive: true });
     writeFileSync(join(kansio, `${rivi}.${MUOTO}`), puskuri);
 
@@ -2710,6 +2900,55 @@ function teeLuettelo() {
     };
   })(),
   /*
+   * RANTATASO — NELJÄS laattapyramidi pohjan, nostotason ja viivatason
+   * rinnalle (omistaja 6.9.2026 ilta). Pohjalaatoissa ei ole
+   * rantaviivaa, kun ne on poltettu `--ilman-rantaviivaa`; muste on
+   * tason laatoissa polussa <rantataso.versio>/ranta/z….
+   *
+   * MIKSI OMA TASO — karttapallo (Raamattu, "PALLO LEVOSSA YHTA TERAVA
+   * KUIN TASOKARTTA" lisäyksineen): pallo piirtää rantaviivan
+   * vektorina, joka on aina tasan pikselin levyinen, ja jättää tämän
+   * tason lataamatta. Tasokartta lataa sen pohjan päälle, joten sen
+   * kuva ei muutu (kerrosjärjestys pohja → ranta → viiva → nosto,
+   * js/laattapyramidi.js varmistaKerrokset).
+   *
+   * TIIVISTELISTAA EI OLE, kuten ei viivatasollakaan: rantaviivalla ei
+   * ole pelissä elävää kerrosta, joten pelille riittää tieto siitä,
+   * mitkä laatat ovat olemassa.
+   *
+   * KENTTÄ SYNTYY VAIN, KUN RANTATASO ON PYYDETTY (--rantataso tai
+   * --rantaversio). Muuten peite vaatisi rantaviiva-aineiston jokaiseen
+   * ajoon — myös nosto- ja viivatason shardeihin, joilla ei ole
+   * aineistokansiota lainkaan.
+   *
+   * YHTEENSOPIVUUS ON SAMA KUIN VIIVATASOLLA: vanha peli ei tunne
+   * `rantataso`-kenttää, joten se piirtää pohjan sellaisenaan.
+   * JULKAISUJÄRJESTYS on siksi selain ensin, rantatason laatat toisena
+   * ja rannaton pohja vasta kolmantena.
+   */
+  rantataso: (() => {
+    if (!(RANTATASO || RANTAVERSIO_ANNETTU) || !tasot.length) return null;
+    const laatastot = {};
+    for (const m of tasot) laatastot[m.z] = nostotasoBase64(m, rantatasonPeite(m));
+    return {
+      versio: RANTAVERSIO,
+      tasot: tasot.map((m) => m.z),
+      laatastot,
+    };
+  })(),
+  /*
+   * POHJAN OMINAISUUDET: onko rantaviiva poltettu pohjalaattoihin.
+   *
+   * Peli ei lue tätä — sille riittää rantatason olemassaolo — mutta
+   * ämpäristä on voitava nähdä, kumpi pohja siellä on: rantaviivaton
+   * pohja ilman rantatasoa olisi kartta ilman rantaviivaa, eikä sitä
+   * saa päätellä laattoja katsomalla. Kenttä syntyy vain
+   * `--ilman-rantaviivaa`-ajossa; vanhoissa luetteloissa sitä ei ole,
+   * ja sen puuttuminen tarkoittaa "rantaviiva on pohjassa".
+   */
+  pohja: (NOSTOTASO || VIIVATASO || RANTATASO || !ILMAN_RANTAVIIVAA)
+    ? undefined : { rantaviiva: false },
+  /*
    * MERISÄVY: se yksi väri, jolla peli maalaa karsittujen umpimeren
    * laattojen paikan (ks. umpimeriSavy). Null, jos mitään ei karsittu.
    */
@@ -2728,7 +2967,7 @@ function teeLuettelo() {
    * on saatava kirjattua oma tarkkuutensa ilman että toinen pyyhkii
    * sen (ks. LUETTELO TÄYDENTYY).
    */
-  korkeus: (NOSTOTASO || VIIVATASO) ? undefined : {
+  korkeus: (NOSTOTASO || VIIVATASO || RANTATASO) ? undefined : {
     kaariminuutit: Object.fromEntries(tasot.map((m) => [m.z, kaariminuutitTasolle(m.z)])),
     aineisto: [...new Set(tasot.map((m) => kaariminuutitTasolle(m.z)))]
       .sort((a, b) => a - b)
@@ -2745,7 +2984,7 @@ function teeLuettelo() {
      * Tason oma tarkkuus myös tässä, jotta se kulkee `tasot`-taulukon
      * mukana erien yli samalla koodilla kuin laatasto.
      */
-    kaariminuutit: (NOSTOTASO || VIIVATASO) ? undefined : kaariminuutitTasolle(m.z),
+    kaariminuutit: (NOSTOTASO || VIIVATASO || RANTATASO) ? undefined : kaariminuutitTasolle(m.z),
     pikseliaPerYksikko: Math.round(m.px * 1e6) / 1e6,
     sarakkeita: m.sarakkeita,
     riveja: m.riveja,
@@ -2816,7 +3055,7 @@ if (existsSync(luetteloPolku)) {
        * laatastoineen) jäävät sellaisinaan. Vain nostotaso-olio ja
        * eräkirjanpito päivittyvät.
        */
-      if ((NOSTOTASO || VIIVATASO) && vanha.tasot?.length) {
+      if ((NOSTOTASO || VIIVATASO || RANTATASO) && vanha.tasot?.length) {
         luettelo.tasot = vanha.tasot;
       } else {
         const omat = new Set(luettelo.tasot.map((t) => t.z));
@@ -2828,12 +3067,21 @@ if (existsSync(luetteloPolku)) {
         alue: ALUE,
         nostotaso: NOSTOTASO || undefined,
         viivataso: VIIVATASO || undefined,
+        rantataso: RANTATASO || undefined,
         paikkaus: PAIKKAUS_LAHDE || undefined,
       }];
       // Osa-ajo matalilla tasoilla (koeajo z0–z3) ei saa pyyhkiä
       // olemassa olevaa nostotasoa pois luettelosta.
       luettelo.nostotaso = luettelo.nostotaso ?? vanha.nostotaso ?? null;
       luettelo.viivataso = luettelo.viivataso ?? vanha.viivataso ?? null;
+      luettelo.rantataso = luettelo.rantataso ?? vanha.rantataso ?? null;
+      /*
+       * POHJAN RANTAVIIVA on POHJA-AJON tieto: vain se tietää, millä
+       * lipulla laatat piirrettiin. Merkkitasojen ajot kantavat vanhan
+       * kentän eteenpäin muuttumatta; pohja-ajo kirjoittaa sen aina
+       * itse (myös pois, jos rantaviiva on taas mukana).
+       */
+      if (NOSTOTASO || VIIVATASO || RANTATASO) luettelo.pohja = vanha.pohja ?? luettelo.pohja;
       /*
        * KORKEUSTARKKUUS TÄYDENTYY TASOITTAIN, kuten `tasot`. z7-shardi
        * ei tunne z0–z6:n tarkkuutta eikä päinvastoin, ja nostotaso- tai
@@ -2880,6 +3128,8 @@ if (NOSTOTASO) {
   console.log(`\nVie ämpäriin: pyramidi/<nostoversio>/nostot/z<taso>/<sarake>/<rivi>.${MUOTO}`);
 } else if (VIIVATASO) {
   console.log(`\nVie ämpäriin: pyramidi/<viivaversio>/viivat/z<taso>/<sarake>/<rivi>.${MUOTO}`);
+} else if (RANTATASO) {
+  console.log(`\nVie ämpäriin: pyramidi/<rantaversio>/ranta/z<taso>/<sarake>/<rivi>.${MUOTO}`);
 } else {
   console.log(`\nVie ämpäriin: pyramidi/<versio>/z<taso>/<sarake>/<rivi>.${MUOTO}`);
 }

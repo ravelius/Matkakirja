@@ -542,6 +542,7 @@ const mittarit = {
   karkeita: 0,
   nostoja: 0,
   viivoja: 0,
+  rantoja: 0,
   ladattu: 0,
   epaonnistui: 0,
   esiladattu: 0,
@@ -598,8 +599,12 @@ export function pyramidinMittarit() {
  * viritys — mutta juuri se vakuutus, jonka puuttuminen näkyi
  * tuplanäkymänä 2.9.2026.
  */
-const tasonVersio = (taso) => (taso.nosto ? luettelo?.nostotaso?.versio
-  : (taso.viiva ? luettelo?.viivataso?.versio : luettelo?.versio)) ?? '';
+const tasonVersio = (taso) => {
+  if (taso.nosto) return luettelo?.nostotaso?.versio ?? '';
+  if (taso.viiva) return luettelo?.viivataso?.versio ?? '';
+  if (taso.ranta) return luettelo?.rantataso?.versio ?? '';
+  return luettelo?.versio ?? '';
+};
 const avain = (taso, sarake, rivi) => `${tasonVersio(taso)}:${taso.z}:${sarake}:${rivi}`;
 
 /**
@@ -647,6 +652,11 @@ function laattaUrl(taso, sarake, rivi) {
     return pyramidiUrl(`${luettelo.viivataso.versio}/viivat/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
+  // Rantataso samoin: <rantaversio>/ranta/z… (omistaja 6.9.2026 ilta).
+  if (taso.ranta) {
+    return pyramidiUrl(`${luettelo.rantataso.versio}/ranta/z${taso.z}/${sarake}/${rivi}`
+      + `.${luettelo.muoto ?? 'webp'}`);
+  }
   return pyramidiUrl(`${luettelo.versio}/z${taso.z}/${sarake}/${rivi}`
     + `.${luettelo.muoto ?? 'webp'}`);
 }
@@ -657,7 +667,12 @@ function laattaUrl(taso, sarake, rivi) {
  * etuliitteensä — muuten kerroksen kiinnitys merkitsisi pohjalaatan
  * noudetuksi ja esilataus ohittaisi sen.
  */
-const noutoEtuliite = (taso) => (taso.nosto ? 'n' : (taso.viiva ? 'v' : ''));
+const noutoEtuliite = (taso) => {
+  if (taso.nosto) return 'n';
+  if (taso.viiva) return 'v';
+  if (taso.ranta) return 'r';
+  return '';
+};
 const noutoAvain = (taso, sarake, rivi) => `${noutoEtuliite(taso)}${taso.z}:${sarake}:${rivi}`;
 
 /**
@@ -919,6 +934,25 @@ function varmistaKerrokset(ui) {
     && ui.pyramidiTarkkaKerros?.parentNode === ui.pyramidiKerros) return;
   ui.pyramidiPohjaKerros = el('g', { class: 'pyramidi-pohjataso' }, ui.pyramidiKerros);
   ui.pyramidiTarkkaKerros = el('g', { class: 'pyramidi-tarkkataso' }, ui.pyramidiKerros);
+  /*
+   * RANTATASO — VIIDES KERROS, JA SEN PAIKKA ON POHJAN JA VIIVATASON
+   * VÄLISSÄ (omistaja 6.9.2026 ilta: *"joo poltetaan vain uudestaan
+   * ilman viivaa nyt kun on mac studio viritetty"*). Järjestys
+   * pohja → RANTA → viiva → nosto on täsmälleen se, jossa muste oli
+   * ennenkin: rantaviiva oli pohjapiirron osiossa 4 eli reittien,
+   * rajojen ja nostojen alla. Kun se poltetaan omalle tasolleen,
+   * kerroksen on tultava samaan väliin — muuten reitti kulkisi
+   * rantaviivan ALTA.
+   *
+   * MIKSI OMA TASO: karttapallo piirtää rantaviivan vektorina
+   * (js/pallovektorit.js) ja jättää tämän kerroksen lataamatta;
+   * tasokartalla kuva ei muutu, koska kerros on pohjan päällä.
+   *
+   * EI HÄIVYTYSTÄ, samasta syystä kuin viivatasolla: rantaviiva on
+   * kartalla joka tasolla (z0–z8), joten opacity-haara olisi sääntö,
+   * joka ei koskaan laukea.
+   */
+  ui.pyramidiRantaKerros = el('g', { class: 'pyramidi-rantataso' }, ui.pyramidiKerros);
   /*
    * VIIVATASO — NELJÄS KERROS, JA SEN PAIKKA ON PERUSTELTU (omistaja
    * 31.8.2026 ilta). Järjestys pohja → tarkka → VIIVA → nosto:
@@ -1469,6 +1503,71 @@ function nostotasonTasot() {
  * tason nostolliset laatat, ja seuraava syvä näkymä siivoaa ne
  * paivitaKerroksen omalla kirjanpidolla.
  */
+/* ------------------------------------------------------------ rantataso */
+
+/**
+ * Rantatason tasot — pohjan tasogeometria rantatason laatastolla.
+ *
+ * Sama rakenne kuin viivatasonTasot ja samasta syystä: laattaruudukko
+ * on TÄSMÄLLEEN pohjan ruudukko samalla z:lla. Vaihtuu `laatasto`
+ * (rantatason bittikartta — sisämaan laattoja EI OLE OLEMASSA) ja
+ * `ranta: true`, joka ohjaa osoitteen ranta-alipolkuun (laattaUrl) ja
+ * noutokirjanpidon omalle avaimelleen (noutoAvain). `__bitit: undefined`
+ * on pakollinen: levityskopio toisi pohjan tason valmiiksi puretun
+ * bittikartan mukanaan.
+ *
+ * VANHA LUETTELO ILMAN `rantataso`-KENTTÄÄ palauttaa nullin, kerros jää
+ * tyhjäksi eikä yksikään pyyntö lähde — rantaviiva tulee silloin
+ * pohjalaatoista kuten ennenkin.
+ */
+function rantatasonTasot() {
+  const rt = luettelo?.rantataso;
+  if (!rt?.tasot?.length || !rt.laatastot) return null;
+  if (!luettelo.__rantaTasot) {
+    luettelo.__rantaTasot = luettelo.tasot
+      .filter((t) => rt.tasot.includes(t.z) && rt.laatastot[t.z])
+      .map((t) => ({
+        ...t, laatasto: rt.laatastot[t.z], __bitit: undefined, ranta: true,
+      }));
+  }
+  return luettelo.__rantaTasot.length ? luettelo.__rantaTasot : null;
+}
+
+/**
+ * Päivittää rantatason kerroksen.
+ *
+ * TYHJÄ KERROS ON KOKO YHTEENSOPIVUUS, kuten viivatasolla: vanha
+ * luettelo ei tunne kenttää, kerros jää tyhjäksi ja peli on
+ * täsmälleen se, mikä se oli ennen tätä erää. SIKSI TÄMÄ SELAINMUUTOS
+ * ON JULKAISUKELPOINEN YKSIN, ja siksi julkaisujärjestys on selain
+ * ensin, rantatason laatat toisena ja rannaton pohja vasta
+ * kolmantena.
+ *
+ * VANHA TASO SAA JÄÄDÄ UUDEN ALLE, kuten viivatasolla: rantaviiva on
+ * karttavakiota ja samassa kohdassa joka tasolla, joten edellisen
+ * tason laatta osuu uuden PÄÄLLE eikä viereen.
+ */
+function paivitaRantataso(ui, taso, laatta, arkki, alue, nakyva) {
+  const kerros = ui.pyramidiRantaKerros;
+  if (!kerros) return;
+  const tasot = rantatasonTasot();
+  const oma = tasot?.find((t) => t.z === taso.z) ?? null;
+  if (!oma) {
+    if (ui.pyramidiRanta?.laatat.size) {
+      poistaVanhaTaso(ui.pyramidiRanta);
+      for (const kuva of ui.pyramidiRanta.laatat.values()) peruLaatta(kuva);
+      ui.pyramidiRanta.laatat = new Map();
+      ui.pyramidiRanta.z = null;
+    }
+    mittarit.rantoja = 0;
+    return;
+  }
+  ui.pyramidiRanta ??= tyhjaTila(kerros);
+  ui.pyramidiRanta.kerros = kerros;
+  paivitaKerros(ui.pyramidiRanta, oma, laatta, arkki, alue, nakyva, 'low');
+  mittarit.rantoja = ui.pyramidiRanta.laatat.size;
+}
+
 /* ------------------------------------------------------------ viivataso */
 
 /**
@@ -1703,7 +1802,14 @@ export function paivitaPyramidi(ui) {
   ui.pyramidiLaatat = ui.pyramidiTarkka.laatat;
 
   /*
-   * VIIVATASO TARKAN PÄÄLLE JA NOSTOJEN ALLE. Kiinnitysalue on sama
+   * RANTATASO ENSIN, HETI POHJAN PÄÄLLE: rantaviiva oli pohjapiirron
+   * osiossa 4 eli reittien ja rajojen alla, ja sama järjestys pätee
+   * omalla tasollaan.
+   */
+  paivitaRantataso(ui, taso, laatta, arkki, kiinnitys, nakyva);
+
+  /*
+   * VIIVATASO RANNAN PÄÄLLE JA NOSTOJEN ALLE. Kiinnitysalue on sama
    * kuin tarkalla tasolla, ja prioriteetti matala samasta syystä kuin
    * nostoilla: pohjakartta menee aina merkintöjen edelle.
    */
@@ -1732,8 +1838,8 @@ export function paivitaPyramidi(ui) {
    * Viereiset zoomtasot tulevat jonon perälle.
    */
   jonotaEsilataus(taso, laatta, arkki, nakyva, suunta);
-  jonotaTasovaihto([...tasot, ...(nostotasonTasot() ?? []), ...(viivatasonTasot() ?? [])],
-    taso, laatta, arkki, nakyva);
+  jonotaTasovaihto([...tasot, ...(nostotasonTasot() ?? []), ...(viivatasonTasot() ?? []),
+    ...(rantatasonTasot() ?? [])], taso, laatta, arkki, nakyva);
 }
 
 /** Tyhjentää laatat (laudan vaihto, pelin loppu). */
@@ -1751,16 +1857,19 @@ export function nollaaPyramidi(ui) {
   if (!ui?.pyramidiKerros) return;
   clearTimeout(ui.pyramidiTarkka?.ajastin);
   clearTimeout(ui.pyramidiKarkea?.ajastin);
+  clearTimeout(ui.pyramidiRanta?.ajastin);
   clearTimeout(ui.pyramidiViiva?.ajastin);
   clearTimeout(ui.pyramidiNosto?.ajastin);
   while (ui.pyramidiKerros.firstChild) ui.pyramidiKerros.firstChild.remove();
   // Kerrokset ja niiden tilat rakennetaan seuraavassa päivityksessä.
   ui.pyramidiPohjaKerros = null;
   ui.pyramidiTarkkaKerros = null;
+  ui.pyramidiRantaKerros = null;
   ui.pyramidiViivaKerros = null;
   ui.pyramidiNostoKerros = null;
   ui.pyramidiTarkka = null;
   ui.pyramidiKarkea = null;
+  ui.pyramidiRanta = null;
   ui.pyramidiViiva = null;
   ui.pyramidiNosto = null;
   ui.pyramidiLaatat = new Map();
@@ -1768,6 +1877,7 @@ export function nollaaPyramidi(ui) {
   mittarit.nakymassa = 0;
   mittarit.ruudulla = 0;
   mittarit.karkeita = 0;
+  mittarit.rantoja = 0;
   mittarit.viivoja = 0;
   mittarit.nostoja = 0;
 }
@@ -1797,16 +1907,23 @@ export function haePyramidinLuettelo() {
 }
 
 /**
- * Tason z kerrokset piirtojärjestyksessä pohja → viiva → nosto (sama
- * järjestys kuin varmistaKerrokset: reitti kartan päällä, noston
- * symboli reitin päällä). Puuttuva kerros jää listasta pois: viiva- ja
- * nostotasoa ei ole joka tasolla eikä joka luettelossa. Null, jos
- * luetteloa ei ole tai tasoa z ei ole.
+ * Tason z kerrokset piirtojärjestyksessä pohja → ranta → viiva → nosto
+ * (sama järjestys kuin varmistaKerrokset: rantaviiva kartan päällä,
+ * reitti sen päällä, noston symboli ylimpänä). Puuttuva kerros jää
+ * listasta pois: ranta-, viiva- ja nostotasoa ei ole joka tasolla eikä
+ * joka luettelossa. Null, jos luetteloa ei ole tai tasoa z ei ole.
+ *
+ * RANTA-TASO TUNNISTUU KENTÄSTÄ `ranta: true`, jotta pallon lepokerros
+ * voi joko käyttää tai OHITTAA sen: kun pallon vektorikerros piirtää
+ * rantaviivan (js/pallovektorit.js), poltettu muste jäisi sen alle
+ * venytettynä usvana.
  */
 export function pyramidinKerrostasot(z) {
   const pohja = luettelo?.tasot?.find((t) => t.z === z) ?? null;
   if (!pohja) return null;
   const kerrokset = [pohja];
+  const ranta = rantatasonTasot()?.find((t) => t.z === z);
+  if (ranta) kerrokset.push(ranta);
   const viiva = viivatasonTasot()?.find((t) => t.z === z);
   if (viiva) kerrokset.push(viiva);
   const nosto = nostotasonTasot()?.find((t) => t.z === z);

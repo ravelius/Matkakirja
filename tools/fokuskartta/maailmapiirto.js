@@ -159,6 +159,50 @@ export function tekstinLatoja(ctx, S) {
   return { teksti, tekstinLeveys };
 }
 
+/* ========================================================== rantaviiva
+ *
+ * RANTAVIIVAN MUSTE YHDESSÄ PAIKASSA, KAHDELLE KUTSUJALLE.
+ *
+ * Sama kaksi vetoa piirretään nyt kahdesta kohdasta: pohjapiirron
+ * osiosta 4 (piirraMaailma) ja omalta läpinäkyvältä tasoltaan
+ * (piirraRantataso). Jos ne olisivat kaksi kopiota, ne ajautuisivat
+ * ennen pitkää eri levyisiksi — ja juuri siitä syntyisi se
+ * kaksoisreuna, jonka koko taso on olemassa poistaakseen. Siksi
+ * tyyli ja vedot ovat tässä, ja molemmat kutsuvat samaa funktiota.
+ *
+ * LEVEYS ON PAPERIVAKIO (P): kostea usva 3 ja kynä 1,1 — mitat ovat
+ * maalehden prototyypistä, ks. osio 4.
+ */
+export const RANTATYYLI = {
+  usva: { vari: 'rgba(74,52,33,0.18)', leveys: 3 },
+  muste: { vari: 'rgba(58,40,25,0.85)', leveys: 1.1 },
+};
+
+/**
+ * Rannikon kaksi vetoa kankaalle.
+ *
+ * @param {CanvasRenderingContext2D} ctx
+ * @param {(g:object, viivat:Array)=>void} viivaPolku kutsujan oma polku
+ *   (sauman katkaisu on kutsujan koordinaatistossa)
+ * @param {Array} rannikot rantaviivat polyviivoina
+ * @param {number} P paperin mittakaava
+ */
+export function piirraRannikkoKankaalle(ctx, viivaPolku, rannikot, P) {
+  if (!rannikot?.length) return;
+  ctx.save();
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  ctx.strokeStyle = RANTATYYLI.usva.vari;
+  ctx.lineWidth = RANTATYYLI.usva.leveys * P;
+  viivaPolku(ctx, rannikot);
+  ctx.stroke();
+  ctx.strokeStyle = RANTATYYLI.muste.vari;
+  ctx.lineWidth = RANTATYYLI.muste.leveys * P;
+  viivaPolku(ctx, rannikot);
+  ctx.stroke();
+  ctx.restore();
+}
+
 /* =========================================================== moottori */
 
 /*
@@ -858,19 +902,24 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * lihonut siitä, että lehti esitti pienempää aluetta. Kertoimella S
    * tämä oli laattapyramidin syvimmällä tasolla mitattuna 19-23
    * pikselin vyö (z6 11 px, z3 1 px) — ks. P:n määrittely ylempänä.
+   *
+   * === RANTAVIIVAN VOI JÄTTÄÄ POIS (`tyyli.rantaviiva: false`) =======
+   *
+   * Omistajan päätös 6.9.2026 ilta: *"joo poltetaan vain uudestaan
+   * ilman viivaa nyt kun on mac studio viritetty"* — pohja poltetaan
+   * ilman rantaviivan mustetta ja rantaviiva saa oman läpinäkyvän
+   * tasonsa (piirraRantataso alempana), jotta karttapallo voi jättää
+   * sen lataamatta ja piirtää tilalle pikselin levyisen vektoriviivan
+   * (docs/moduulit/pallon-vektoriviivat.md luvut 4.5 ja 6, erä V4).
+   * Tasokartalla kuva ei muutu: se lataa rantatason pohjan päälle.
+   *
+   * KYTKIN ON TYYLISSÄ EIKÄ OLETUS. Vanhat lehdet, pilotit ja testit
+   * kutsuvat ilman kenttää ja saavat rantaviivan kuten ennenkin; vain
+   * `--ilman-rantaviivaa`-pyramidiajo asettaa sen falseksi.
    */
-  ctx.save();
-  ctx.lineJoin = 'round';
-  ctx.lineCap = 'round';
-  ctx.strokeStyle = 'rgba(74,52,33,0.18)';
-  ctx.lineWidth = 3 * P;
-  viivaPolku(ctx, aineisto.rannikot);
-  ctx.stroke();
-  ctx.strokeStyle = 'rgba(58,40,25,0.85)';
-  ctx.lineWidth = 1.1 * P;
-  viivaPolku(ctx, aineisto.rannikot);
-  ctx.stroke();
-  ctx.restore();
+  if (tyyli.rantaviiva !== false) {
+    piirraRannikkoKankaalle(ctx, viivaPolku, aineisto.rannikot, P);
+  }
 
   /* ================================================== 5. JÄRVET
    *
@@ -3470,6 +3519,117 @@ export function piirraViivataso(canvas, asetukset) {
       kierros: projektio.leveys ?? 0,
     }, reittityyli);
   }
+
+  ctx.restore();
+  ctx.restore();
+  return { w: W, h: H };
+}
+
+/* ================================================================
+ * RANTATASO — rantaviiva omalle läpinäkyvälle laattatasolleen
+ * ================================================================
+ *
+ * OMISTAJAN PÄÄTÖS 6.9.2026 ilta, sanatarkasti: *"joo poltetaan vain
+ * uudestaan ilman viivaa nyt kun on mac studio viritetty"*. Rantaviivan
+ * muste (osio 4) siirtyy pohjalaatoista omaan läpinäkyvään pyramidiin
+ * nosto- ja viivatason rinnalle, ja pohja poltetaan
+ * `--ilman-rantaviivaa`.
+ *
+ * MIKSI: karttapallo piirtää rantaviivan vektorina (js/pallovektorit.js,
+ * docs/moduulit/pallon-vektoriviivat.md), jolloin se on aina tasan
+ * pikselin levyinen. Poltettu viiva jäisi sen alle venytettynä
+ * usvavyönä — lähikuvassa mitattuna 4 px vektorin 2 px:n alla (luku
+ * 2.2). Kun muste on omalla tasollaan, pallo jättää sen lataamatta ja
+ * vektori on ainoa rantaviiva. TASOKARTALLA KUVA EI MUUTU: se lataa
+ * rantatason pohjan päälle (pohja → ranta → viiva → nosto).
+ *
+ * SAMA MUSTE, SAMA GEOMETRIA. Vedot tulevat samasta
+ * piirraRannikkoKankaalle-funktiosta kuin pohjassa ja rantaviivat
+ * samasta harvennuksesta (tools/fokuskartta/maailma.mjs rannikot,
+ * harvennus 0,006°), joten tason kuva on sitä samaa mustetta, joka
+ * pohjasta jäi pois.
+ *
+ * PIIRTOJÄRJESTYS MUUTTUU HITUSEN, JA SE ON TÄMÄN TASON HINTA. Pohjassa
+ * rantaviiva oli osiossa 4 eli järvien, jokien, paperin rakeen ja
+ * reunahäivytyksen ALLA; omalla tasollaan se on niiden PÄÄLLÄ. Ero on
+ * mitattu Ateenan otoksesta (docs/moduulit/laattapyramidi.md,
+ * "Rantaviiva omalla tasollaan") ja se rajoittuu musteen omiin
+ * pikseleihin — sama luokka kuin reittien siirto viivatasolle.
+ */
+
+/**
+ * Läpinäkyvä rantatason lohko — sama arkkigeometria kuin
+ * piirraMaailmassa, mutta ei aineistoa, ei paperia, ei kehystä:
+ * kankaalle jää vain rantaviivan muste, kaikki muu on läpinäkyvää.
+ *
+ * Asetukset ovat sama osajoukko kuin piirraViivatasolla: bbox,
+ * projektio, leveys, tyyli (kehys — leikkuria varten), koko, siirto,
+ * arkki, paperiS ja `rannikot`. `koko`/`siirto`/`arkki` toimivat
+ * täsmälleen kuten pohjapiirrossa, joten lohkosta leikattu laatta on
+ * tavulleen sama kuin erikseen piirretty.
+ */
+export function piirraRantataso(canvas, asetukset) {
+  const {
+    bbox, projektio, leveys, tyyli = {}, koko = null, siirto = null,
+    rannikot = null, paperiS = null,
+  } = asetukset;
+  const px = leveys / bbox.w;
+  const W = Math.round(leveys);
+  const H = Math.round(bbox.h * px);
+  canvas.width = W;
+  canvas.height = H;
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, W, H);
+
+  const GX = siirto?.x ?? 0;
+  const GY = siirto?.y ?? 0;
+  const GW = koko?.w ?? W;
+  const GH = koko?.h ?? H;
+  const S = GW / 6400;
+  const P = paperiS ?? S;
+
+  /*
+   * KARTTA-ALAN LEIKKURI — sama laatikko kuin pohjapiirron osioilla
+   * 4–8, ja juuri siksi rantaviiva rajautuu tällä tasolla täsmälleen
+   * niin kuin se rajautui pohjassa: atlaskehyksen kermaiseen
+   * marginaaliin muste ei ulotu kummassakaan.
+   */
+  const kehys = tyyli.kehys ?? null;
+  const yYla = kehys ? Math.round(kehys.yla * S) : 0;
+  const yAla = kehys ? GH - Math.round(kehys.ala * S) : GH;
+
+  const { lautaX, lautaY } = laudanProjektio(projektio);
+  const origo = asetukset.arkki ?? { x: bbox.x, y: bbox.y };
+  const arkkiSiirto = asetukset.arkki ? { x: GX, y: GY } : { x: 0, y: 0 };
+  const kuvaX = (lon) => (lautaX(lon) - origo.x) * px;
+  const kuvaY = (lat) => (lautaY(lat) - origo.y) * px;
+
+  /*
+   * SAMA POLKU KUIN POHJASSA, SAUMAN KATKAISU MUKAAN LUKIEN: laudan
+   * kierrosta vastaava hyppy on aina puoli ARKKIA eikä puoli laattaa.
+   */
+  const viivaPolku = (g, viivat) => {
+    g.beginPath();
+    for (const viiva of viivat) {
+      let edellinen = null;
+      for (let i = 0; i < viiva.length; i += 1) {
+        const x = kuvaX(viiva[i][0]);
+        const y = kuvaY(viiva[i][1]);
+        if (edellinen === null || Math.abs(x - edellinen) > GW / 2) g.moveTo(x, y);
+        else g.lineTo(x, y);
+        edellinen = x;
+      }
+    }
+  };
+
+  ctx.save();
+  ctx.translate(-arkkiSiirto.x, -arkkiSiirto.y);
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(arkkiSiirto.x, yYla, W, yAla - yYla);
+  ctx.clip();
+
+  piirraRannikkoKankaalle(ctx, viivaPolku, rannikot, P);
 
   ctx.restore();
   ctx.restore();

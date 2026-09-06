@@ -719,9 +719,11 @@ if (!LUETTELO.viivataso) {
       vaarassaPolussa: kuvat.filter((k) => !(k.getAttribute('href') ?? '')
         .includes('/viivat/')).length,
       /*
-       * KERROSJÄRJESTYS: viivataso tarkan päällä ja noston alla.
-       * Reitin kuuluu olla kartan päällä, mutta noston symbolin
-       * reitin päällä.
+       * KERROSJÄRJESTYS: ranta tarkan päällä, viiva rannan päällä ja
+       * nosto ylimpänä. Rantaviiva on maaston reuna, reitin kuuluu
+       * kulkea sen päällä, ja noston symbolin reitin päällä.
+       * Rantataso lisättiin 6.9.2026 (omistajan päätös: pohja
+       * poltetaan ilman rantaviivaa, ks. laattapyramidi.md 10d).
        */
       jarjestys: [...(ui.pyramidiKerros?.children ?? [])]
         .map((k) => k.getAttribute('class')).filter(Boolean),
@@ -731,9 +733,9 @@ if (!LUETTELO.viivataso) {
     viiva1.laattoja > 0 && viiva1.vaarassaPolussa === 0,
     `laattoja ${viiva1.laattoja}, väärässä polussa ${viiva1.vaarassaPolussa} `
     + `(taso z${viiva1.taso})`);
-  vaadi('V1b kerrosjärjestys on pohja - tarkka - viiva - nosto',
-    viiva1.jarjestys.join(' ').includes('pyramidi-tarkkataso pyramidi-viivataso '
-      + 'pyramidi-nostotaso'),
+  vaadi('V1b kerrosjärjestys on pohja - tarkka - ranta - viiva - nosto',
+    viiva1.jarjestys.join(' ').includes('pyramidi-tarkkataso pyramidi-rantataso '
+      + 'pyramidi-viivataso pyramidi-nostotaso'),
     viiva1.jarjestys.join(' '));
   const viivapyynnot = pyynnot.filter((p) => p.includes('/viivat/'));
   const viivabitit = {};
