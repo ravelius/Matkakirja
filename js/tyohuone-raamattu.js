@@ -5212,8 +5212,17 @@ export const RAAMATTU = {
           + 'varivirtoina: nelja virtaa, ylitykset ja portit, 0,5 asteen '
           + 'maamaski ja saapumisajan laskenta, canvas-kalvo pallolla, '
           + 'virtaa seuraava kamera, mitattu suorituskyky, vaiheistus ja '
-          + 'avoimet kysymykset omistajalle (Fablemax 6.9.2026; SUUNNITELMA, '
-          + 'odottaa omistajan vastauksia ennen toteutusta).',
+          + 'avoimet kysymykset omistajalle; luku 11 omistajan paatokset, '
+          + 'luku 13 hiontakierros (Fablemax 6.9.2026; TOTEUTETTU '
+          + 'js/aikajana-virrat*.js, odottaa omistajan katselmusta ennen '
+          + 'julkaisua).',
+        'docs/moduulit/pallon-liike-taydella-tarkkuudella.md — pallon liike '
+          + 'ja zoom taydella tarkkuudella: mittaukset (rantaviivan paksuus, '
+          + 'laattamoottorin hinta), kirjastovertailu (MapLibre, '
+          + '3d-tiles-renderer, Cesium, OpenGlobus), valittu ratkaisu (oma '
+          + 'laattakerros pyramidin laatoista Globe.gl:n sisalla) ja '
+          + 'Opus-parven erat E0-E5 tehtavanantoineen (Fablemax 6.9.2026; '
+          + 'SUUNNITELMA, toteutus Opus-parvella).',
         'docs/moduulit/karttanostot-kattavuus.md — karttanostojen kattavuus '
           + 'maittain (kohteet, maastokohteet, eläintäyt, skandaalit, hetket) '
           + 'ja tavoite per maa; täytetään koneellisesti erissä.',
