@@ -61835,6 +61835,34 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Johannes Meyer, Wikimedia Commons (CC0)',
         },
       ],
+      /*
+       * ENNEN JA NYT (6.9.2026): pari puuttui Montrealilta, vaikka
+       * matkakirjan valokuvataulussa (js/packs/northamerica-valokuvat.js,
+       * avain montreal) on valmis ja tarkistettu pari samasta paikasta.
+       * Tiedostonimet, vuosi ja lähderivit on kopioitu sieltä
+       * sellaisinaan; selitteet on kirjoitettu tänne omiksi yhden
+       * virkkeen versioikseen. Place Jacques-Cartier on sama aukio
+       * kummassakin kuvassa, ja se on myös matkaoppaan jakson 2
+       * aiheena — eri tiedosto ja eri aikataso.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Jacques Cartier Square. Montreal LCCN2017659148.jpg',
+          vuosi: '1901',
+          selite: 'Place Jacques-Cartier oli torikauppapaikka, jolle '
+            + 'hevoskärryt asettuivat kahteen riviin aukion päässä '
+            + 'seisovan Nelsonin pylvään alle.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Place Jacques-Cartier, Vieux-Montréal, Montreal, Quebec (30068046525).jpg',
+          selite: 'Sama aukio on nykyään terassien ja katutaiteilijoiden '
+            + 'paikka, mutta rinne, kiveys ja pylväs ovat entisellään, '
+            + 'sillä Vanha Montreal suojeltiin historiallisena alueena '
+            + '1964.',
+          lahde: 'Ken Lund, Commons (CC BY-SA 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kirkko, joka sai taivaansinisen kattonsa juuri tuolloin',
@@ -78357,6 +78385,2261 @@ export const KULTTUURI_KATEGORIAT = {
             + 'aaltokuvioinen mosaiikkipäällyste.',
           lahde: 'SouDiana, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Salvador, Bahia',
+        },
+      ],
+    },
+  ],
+  /*
+   * PORTO ALEGRE (Opus 6.9.2026). Alusta asti tehty kaupunkilehti:
+   * kohteella ei ollut kategorioita eikä ARTIKKELIT-merkintää ennen
+   * tätä erää. Pohjana ovat docs/mantereet-tyoaineisto/
+   * faktapohja-portoalegre.md ja sen riippumaton tarkistus
+   * tarkistus-portoalegre.md, jotka luettiin YHDESSÄ; ristiriidoissa
+   * TARKISTUS VOITTAA. Faktat on koostettu en-Wikipedian
+   * raakateksteistä 24.8.2026: Porto Alegre, History of Porto Alegre,
+   * Timeline of Porto Alegre, Porto Alegre Public Market, Ragamuffin
+   * War, German Brazilians, Italian Brazilians, Rio Grande do Sul,
+   * Grêmio FBPA, SC Internacional, Usina do Gasômetro, Iberê Camargo
+   * Foundation, Farroupilha Park, Kaingang, Mbyá Guaraní people ja
+   * 2024 Rio Grande do Sul floods.
+   *
+   * TARKISTUSRAPORTIN KOLME KOHTAA ON OTETTU HUOMIOON. (1) C- ja
+   * D-kohdat koskivat Commons-kategorioiden nimiä ja kuvamääriä
+   * (Parque Farroupilha, Kaingangs, Mbya Guarani); kuvat on haettu
+   * korjatuilla nimillä. (2) E-kohta totesi faktapohjan kohdekartan
+   * ilmansuunnat epäluotettaviksi — kohdekarttaa ei tässä erässä
+   * tehty, joten suuntasanoja ei käytetä missään tekstissä.
+   * (3) A-kohta vahvisti lehden kantavan 1873-kehyksen oikeaksi:
+   * saksalaissiirtolaisuus alkoi 1824 ja italialainen vasta 1875,
+   * eli isoisän matkavuosi osuu näiden kahden aallon väliin. Sitä
+   * pääartikkelin oma, harhaanjohtava muotoilu ("vuonna 1824 alkoi
+   * saapua siirtolaisia... erityisesti saksalaisia, italialaisia")
+   * ei kerro, joten nosto H3 käyttää erikoisartikkeleiden tarkempia
+   * vuosilukuja ja sanoo eron ääneen.
+   *
+   * KAKSI LÄHDERISTIRIITAA RATKAISTIIN NÄIN. (1) Vuoden 2024 tulvien
+   * kuolonuhriluku on artikkelissa kahtena: infoboxin 181 (tilanne
+   * 7.7.2024, osavaltiohallinto ja YK) ja leipätekstin "vähintään
+   * 169" (toukokuun alun uutislähde kesken tulvan). Nosto L4 kertoo
+   * molemmat luvut ja sanoo kumpi on kumpi. (2) Saksalaissiirtolaisten
+   * saapumisvuosi on "Timeline of Porto Alegre" -artikkelissa 1825 ja
+   * "German Brazilians" -artikkelissa 25.7.1824; lehti käyttää
+   * jälkimmäisen tarkempaa päivämäärää.
+   *
+   * SISÄLTÖLINJAUS ON RAAMATUN PILARI 3 JA spec-mantereet.md.
+   * Kaingang ja mbyá-guaraní kuvataan NYKYISINÄ, elävinä kansoina
+   * omilla nimillään ja omine toimineen (nosto L3 päättyy kansojen
+   * omaan tekemiseen, ei kadonneeseen menneisyyteen).
+   * Charque-talouden orjatyö kerrotaan tapahtumana ja lukuina
+   * kaunistelematta (H4), ilman julmuuksien yksityiskohtia.
+   * Farroupilha-kapina on tapahtumahistoriaa ilman sankarikehystä
+   * kummallekaan osapuolelle. Vuoden 2024 tulvat kerrotaan
+   * luonnonilmiönä ja lukuina; uhrien kärsimystä ei kuvailla eikä
+   * nykypolitiikkaa käsitellä lainkaan (osallistuva budjetointi,
+   * World Social Forum ja sotilashallinnon vuodet on jätetty pois).
+   *
+   * VISA (js/packs/southamerica-questions.js, kohta portoalegre) on
+   * luettu: sen viisi kysymystä koskevat kaupungin sijaintia maan
+   * eteläkulmassa, mate-juomaa, Guaíbaa, gaúchoja ja chimarrãota.
+   * Vastaukset löytyvät lehdestä (sijainti etusivun leipätekstistä ja
+   * johdannosta, Guaíba nostosta L2 ja oppaan jaksosta 2, mate ja
+   * chimarrão nostosta L1 ja oppaan jaksosta 3, gaúchot nostosta H4),
+   * mutta yhtäkään visan fact-kentän sanamuotoa ei toisteta.
+   * MINITEHTÄVÄT eivät toista visaa, ja kummankin vastaus on SAMAN
+   * SIVUN nostotekstissä: historiasivu kysyy pääkaupunkistatuksen
+   * vuotta (vastaus H1:ssä) ja luontosivu Guaíban vuoden 2024
+   * ennätyskorkeutta (vastaus L4:ssä).
+   *
+   * SIVU-ID:T ovat talon vakioaiheita (js/ui-apurit.js AIHE_IKONIT):
+   * kaupunki, historia ja luonto. Kolmatta teemaa (mate ja
+   * gaúcho-kulttuuri) ei tehty omaksi sivukseen, koska se on jo
+   * katettu laudan visassa ja saapumiskortin faktoissa; aihe jatkuu
+   * nostoissa L1 ja H4 sekä oppaan jaksossa 3 eri yksityiskohdilla.
+   *
+   * KUVAT: 24 kuvaa, kaikki Wikimedia Commonsista; niistä 22 on tässä
+   * erässä valittuja ja kaksi (ennen ja nyt -pari) kopioitu valmiiksi
+   * tarkistettuina matkakirjan valokuvataulusta. Lisenssi ja tekijä
+   * on luettu rajapinnan extmetadatasta (LicenseShortName, Artist,
+   * Restrictions) ja JOKAINEN valittu kuva on katsottu silmin 900
+   * pikselin esikatseluna. Kaikki ovat vähintään 1200 px leveitä,
+   * lisenssit ovat PD, CC0, CC BY tai CC BY-SA, eikä yhdelläkään ole
+   * Restrictions-merkintää. Kansikuvan Cais Mauá on Commonsin
+   * Featured picture. Kategoriat ja haut, joista kuvat löytyivät:
+   * Cais Mauá, Rio Guaíba, Aerial photographs of Porto Alegre,
+   * Mercado Público de Porto Alegre, Usina do Gasômetro, Fundação
+   * Iberê Camargo, Estádio Beira-Rio, Parque Farroupilha, Ragamuffin
+   * War, São Leopoldo, Mbya Guarani, Charqui sekä haut "Enchente
+   * Porto Alegre 2024", "Praça da Matriz Porto Alegre" ja "Muro da
+   * Mauá Porto Alegre".
+   *
+   * KUVAHYLKÄYKSET SYINEEN. VESILEIMA TAI KUVAAJAN SIGNEERAUS:
+   * "Fim de tarde em Porto Alegre" (oikean ylänurkan logo), "Brique
+   * da Redenção (Parque Farroupilha) (8404734474)" (davisanchez.com)
+   * ja "DAS DORES VISTA AÉREA" (Claudio Macedo). PÄIVÄYSLEIMA KUVASSA:
+   * "Fundação Iberê Camargo vista de dentro do Guaíba" (poltettu
+   * 03.09.2017 13:42). MUSEON TAI ARKISTON MERKINTÄ: "Artefatos -
+   * Artesanato indígena Kaingang" ja "Imagem de palhoças Kaingang"
+   * (Museu Ferroviário Regional de Bauru -vesileima), "État de Rio
+   * Grande do Sul - Ville S. Leopoldo" (värikalibrointipalkki ja
+   * albumipahvin reunat), "Mappa do Theatro da Guerra... 1839"
+   * (Brasilian kansalliskirjaston leima ja arkistonumero kuvan
+   * päällä), "Colonos alemães em S Leopoldo" (postikorttiin painettu
+   * kuvateksti DER ANFANG IM URWALD). TUNNISTETTAVAT KASVOT:
+   * "Mercado público de porto alegre" ja "Mercado Público (Porto
+   * Alegre, Brasil)" (etualan jalankulkijat lähikuvassa), "Mercado
+   * Público - Marcus Nunes - 2008-12-29 06" (kahvilan asiakkaat) ja
+   * "Enchente Porto Alegre 2024 31" (siivoustyötä tekevät ihmiset).
+   * MUU SYY: "Estádio
+   * Beira-Rio .JPG" (kuva on kieltokyltti), "Muro da Mauá (Porto
+   * Alegre, Brasil) 1" (kuvassa on seinälle ripustettu maalaus, ei
+   * muuri), "Porto Alegre RS - Lago Guaíba" hyväksyttiin mutta
+   * "Porto Alegre e o Guaíba" hylättiin (yökuva, jossa kaupunki on
+   * pelkkiä valopisteitä) ja "Grenal 1940" hylättiin, koska vedokseen
+   * on kirjoitettu käsin ottelun tulos ja pelaajien nimikirjoituksia.
+   *
+   * KAINGANG-NOSTOSTA LUOVUTTIIN KUVASYISTÄ, ja se on tietoinen
+   * ratkaisu. Faktapohjan nosto L2 käsitteli kaingangeja omana
+   * nostonaan, mutta Commonsin koko kaingang-aineisto on joko
+   * varhaisen 1900-luvun etnografisia muotokuvia (tunnistettavat
+   * kasvot), museovesileimattuja esinekuvia tai nykypäivän
+   * mielenosoituskuvia (tunnistettavat kasvot) — yhtään kuvasäännöt
+   * täyttävää kuvaa ei löytynyt. Kansa EI silti jäänyt pois lehdestä:
+   * nosto L3 kertoo molemmista Guaíban rantojen kansoista, kaingangit
+   * mukaan lukien, ja käyttää kuvana mbyá-guaraníen omaa
+   * maissikuvaa. Kuvaputkelle ei tilata piirrosta, koska kyse on
+   * elävistä kansoista eikä karttakohteesta.
+   *
+   * AIHETOISTO, TARKOITUKSELLINEN JA KIRJATTU. (1) Guaíban ranta
+   * näkyy kolmessa kuvassa eri rooleissa: kansikuvan siluetissa
+   * kaupunki järven takaa, kansikuvan Cais Maúan nostureissa satama
+   * auringonlaskussa ja avauskuvassa sama laiturilinja päivällä
+   * veneestä. (2) Usina do Gasômetro esiintyy kahdesti eri
+   * tiedostolla ja eri suunnasta: nostossa K3 läheltä joelta piippu
+   * pystyssä ja matkaoppaan etusivukuvassa rannalta iltapäivällä,
+   * kun väkeä on kokoontunut sen edustalle — juuri se, mistä oppaan
+   * teksti kertoo. (3) Parque Farroupilha näkyy avauskuvan
+   * suihkulähteessä ja noston L1 sunnuntaikirpputorilla, eri
+   * tiedostot ja eri puolet puistoa. Yksikään tiedostonimi ei toistu
+   * lehden sisällä, eikä yksikään ole sama kuin
+   * js/packs/southamerica-valokuvat.js:n portoalegre-lohkossa
+   * (Porto Alegre circa 1903, Mercado Público 2023, Usina do
+   * Gasômetro 2021, Chimarrão em cuia gajeta, Panoramic of Historic
+   * Center) — paitsi ennen ja nyt -pari, joka on tarkoituksella
+   * kopioitu sieltä sellaisenaan talon tavan mukaan.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty
+   * tässä erässä: Open-Meteon arkisto vastasi 429 ("Daily API request
+   * limit exceeded") koko ajon ajan, eikä lukuja keksitä. Oppaan
+   * jakso 5 nojaa siis en-Wikipedian Porto Alegre -artikkelin
+   * Climate-osioon ja SANOO SEN ÄÄNEEN — Samarkandin, Vancouverin,
+   * Liman ja Salvadorin malli. Mittauspiste olisi keskusta
+   * -30,03 / -51,23.
+   *
+   * KUVATEKSTIT: jokainen selite on YKSI virke ja kertoo KOHTEESTA,
+   * ei siitä miltä kuva näyttää. Matkailijalle-etusivukuva on tuore
+   * ja MALTILLINEN PYSTY (3024x3780, w/h 0,80).
+   */
+  portoalegre: [
+    {
+      id: 'kaupunki',
+      nimi: 'Porto Alegre',
+      johdanto: 'Guaíban rantaan 1772 perustettu atsoorilaiskylä kasvoi '
+        + 'Rio Grande do Sulin pääkaupungiksi. Isoisän matkan aikoihin '
+        + 'asukkaita oli jo lähes 44 000 ja kivinen markkinahalli oli '
+        + 'ollut auki nelisen vuotta.',
+      kansikuvat: [
+        {
+          tiedosto: 'Porto Alegre Skyline.JPG',
+          selite: 'Porto Alegre on rakennettu Guaíban itärannalle, ja '
+            + 'keskustan tornien takaa erottuvat tuomiokirkon kupoli ja '
+            + 'osavaltion hallintokorttelit.',
+          lahde: '(WT-shared) Ricardo Rmx, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Cais Mauá by Renato Soares (edited).jpg',
+          selite: 'Cais Maúan laiturit, nosturit ja niiden takana '
+            + 'nousevat varastohallit ovat kaupungin vanha satama '
+            + 'Guaíban rannassa.',
+          lahde: 'Renato Soares via MTur Destinos, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Pôr do sol Lago Guaíba 1.JPG',
+          selite: 'Guaíba on matala ja laaja vesialue, jonka yli aurinko '
+            + 'laskee suoraan kaupungin edestä.',
+          lahde: 'Jonas Schen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleisnäkymää kaupungin eri puolilta —
+       * keskusta veneestä katsottuna lännestä, kukkularivi ja järvi
+       * etelästä sumun yllä sekä keskuspuisto keskeltä kaupunkia.
+       * Yksikään ei ole minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Vista de Porto Alegre a partir do Rio Guaíba 01.jpg',
+          selite: 'Keskustan tornirivi nousee suoraan sataman '
+            + 'varastohallien takaa, ja rantaviiva jatkuu molempiin '
+            + 'suuntiin niin pitkälle kuin näkyy.',
+          lahde: 'Paulo rsmenezes, Wikimedia Commons (CC BY-SA 3.0 br)',
+        },
+        {
+          tiedosto: 'Fog over Guaiba River.jpg',
+          selite: 'Kaupungin eteläpuolella maasto nousee kukkuloiksi, '
+            + 'joiden takaa Guaíba avautuu laajaksi vesialueeksi.',
+          lahde: 'Felipe Valduga, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Acro-íris no chafariz do Parque Farroupilha Porto Alegre.jpg',
+          selite: 'Parque Farroupilha eli Redenção on kaupungin '
+            + 'keskuspuisto, ja sen lampi ja suihkulähde ovat aivan '
+            + 'keskustan kupeessa.',
+          lahde: 'Hedestad, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: tiedostonimet, vuosi ja lähderivit on kopioitu
+       * matkakirjan valokuvataulusta (js/packs/southamerica-valokuvat.js,
+       * avain portoalegre) sellaisinaan, koska ne on jo tarkistettu
+       * Commonsista; selitteet on kirjoitettu tänne omiksi yhden
+       * virkkeen versioikseen.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Porto Alegre, Rio Grande do Sul circa 1903.jpg',
+          vuosi: 'noin 1903',
+          selite: 'Sadan vuoden takainen Porto Alegre oli matalien '
+            + 'talojen kaupunki, jonka takana kukkulat näkyivät vielä '
+            + 'tyhjinä.',
+          lahde: 'Virgílio Cardoso de Oliveira, teoksesta A Patria Brazileira (PD)',
+        },
+        {
+          tiedosto: 'Panoramic of Historic Center, Porto Alegre, Brazil 2014-01-18.JPG',
+          selite: 'Sama historiallinen keskusta on jäänyt tornitalojen '
+            + 'väliin, ja kaupunki jatkuu nykyään niille kukkuloille '
+            + 'asti.',
+          lahde: 'Eugenio Hansen OFS, Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Halli, joka on selvinnyt neljästä tulipalosta',
+          tiedosto: 'Mercado Público de Porto Alegre 2021 2.jpg',
+          teksti: 'Torikauppiaat saivat kivisen katon päänsä päälle, kun '
+            + 'Mercado Público avattiin 3. lokakuuta 1869. Rakennustyö '
+            + 'oli alkanut viisi vuotta aiemmin, 29. elokuuta 1864, '
+            + 'arkkitehti Frederico Heydtmannin suunnitelmalla, jota '
+            + 'muutettiin ja suurennettiin matkan varrella; isoisän '
+            + 'saapuessa halli oli siis ollut auki nelisen vuotta. Toinen '
+            + 'kerros tuli 1913, ja rakennus on selvinnyt tulipaloista '
+            + '1912, 1976, 1979 ja 2013 sekä vuoden 1941 suurtulvasta. '
+            + 'Viimeisimmässä palossa 6. heinäkuuta 2013 tuhoutui noin '
+            + 'kolmannes rakenteista. Hallissa on nykyään 109 liikettä.',
+          selite: 'Mercado Público on seissyt keskustan torin laidalla '
+            + 'vuodesta 1869, ja sen kulmassa toimii yhä yli satavuotias '
+            + 'Bar Naval.',
+          lahde: 'Hedestad, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Porto Alegre Public Market',
+        },
+        {
+          otsikko: 'Kaksi seuraa, joiden ottelusta tuli oma sanansa',
+          tiedosto: 'Estádio Beira-Rio 2021 01.jpg',
+          teksti: 'Kun Brasilian vanhin jalkapalloseura Sport Club Rio '
+            + 'Grande pelasi näytösottelun Porto Alegressa 7. syyskuuta '
+            + '1903, pallo puhkesi kesken pelin — ja liikemies Cândido '
+            + 'Dias, kaupungin ainoa pallonomistaja, lainasi omansa. '
+            + 'Kahdeksan päivää myöhemmin hän perusti 32 muun kanssa '
+            + 'Grêmion, jonka perustajista suurin osa kuului kaupungin '
+            + 'saksalaissiirtolaisyhteisöön. Vuonna 1909 Poppen veljekset '
+            + 'perustivat Internacionalin nimenomaan ilman '
+            + 'ennakkoluuloja avoimena seurana. Näiden kahden ottelu on '
+            + 'nimeltään Grenal.',
+          selite: 'Estádio Beira-Rio on Internacionalin kotikenttä '
+            + 'Guaíban rannalla, ja Grêmio pelaa toisella puolella '
+            + 'kaupunkia Humaitán kaupunginosassa.',
+          lahde: 'Hedestad, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'SC Internacional',
+        },
+        {
+          otsikko: 'Hiilivoimala, josta tuli sunnuntaipaikka',
+          tiedosto: 'Gasometro Guaiba.JPG',
+          teksti: 'Nimestään huolimatta Usina do Gasômetro ei koskaan '
+            + 'tuottanut kaasua: se oli hiilikäyttöinen sähkövoimala, '
+            + 'joka sai nimensä kaupunginosalta, ja se vihittiin '
+            + 'käyttöön 11. marraskuuta 1928. Amerikkalaisomisteinen '
+            + 'yhtiö ajoi sitä vuoteen 1974, minkä jälkeen kaupunki aikoi '
+            + 'purkaa rakennuksen kehätien tieltä. Kansalaisjärjestöjen '
+            + 'kampanja pelasti sen: maa-alue siirtyi kaupungille 1982, '
+            + 'rakennus suojeltiin 1982 ja 1983, restauroitiin 1988 ja '
+            + 'avattiin kulttuurikeskuksena 1991.',
+          selite: 'Usina do Gasômetron piippu on kaupungin tunnetuin '
+            + 'maamerkki Guaíban rannalla, ja rakennus on toiminut '
+            + 'kulttuurikeskuksena vuodesta 1991.',
+          lahde: 'Lechatjaune, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Usina do Gasômetro',
+        },
+        {
+          otsikko: 'Museo, jonka rampit kiertyvät toistensa lomaan',
+          tiedosto: '2021 Fundação Iberê Camargo 01.jpg',
+          teksti: 'Maalari Iberê Camargo syntyi 1914 ja kuoli 1994, ja '
+            + 'hänen nimeään kantava säätiö perustettiin jo vuotta '
+            + 'myöhemmin. Aluksi se toimi taiteilijan entisessä kodissa, '
+            + 'eli kokoelma oli esillä samoissa huoneissa, joissa teokset '
+            + 'oli maalattu. Toukokuussa 2008 '
+            + 'säätiö sai oman rakennuksen Guaíban rantaan: '
+            + 'Pritzker-palkitun portugalilaisarkkitehdin Álvaro Sizan '
+            + 'suunnitteleman valkoisen museon, jonka kaarevat rampit '
+            + 'kiertyvät toistensa lomaan. Säätiön kunniapresidenttinä '
+            + 'toimii taiteilijan '
+            + 'leski Maria Coussirat Camargo.',
+          selite: 'Fundação Iberê Camargo avattiin 2008 Guaíban rantaan '
+            + 'Cristalin kaupunginosaan, ja sen suunnitteli '
+            + 'portugalilainen Álvaro Siza.',
+          lahde: 'Hedestad, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Iberê Camargo Foundation',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'A bela Usina do Gasômetro.jpg',
+          selite: 'Usina do Gasômetron edusta on kaupungin suosituin '
+            + 'paikka katsoa auringonlaskua Guaíban yli.',
+          lahde: 'LopesRobson, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Porto Alegre on Rio Grande do Sulin pääkaupunki ja '
+          + 'Brasilian eteläisin osavaltion pääkaupunki. Matkailijan '
+          + 'Porto Alegre mahtuu kapealle kaistalle Guaíban rannan ja '
+          + 'Redenção-puiston väliin: rannassa ovat Cais Maúan '
+          + 'varastohallit ja Usina do Gasômetro, muutaman korttelin '
+          + 'päässä sisämaahan Mercado Público ja Praça da Matriz '
+          + 'tuomiokirkkoineen, ja niiden takana alkaa puisto, jossa '
+          + 'sunnuntaisin on kirpputori. Kaupunki on rakennettu '
+          + 'neljänkymmenen kukkulan päälle, joten kadut nousevat ja '
+          + 'laskevat koko ajan.',
+        artikkeli: {
+          nimi: 'Matkailijan Porto Alegre',
+          taitto: 'opas',
+          teksti: 'Pampan pohjoisportti Guaíban rannalla, kaupunki jossa '
+            + 'sadanta huipentuu talveen eikä kesään.',
+          nosto: 'Vuoden 1872 väestönlaskennassa Porto Alegressa oli '
+            + '43 998 asukasta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Porto Alegre on satamakaupunki ilman merta: se '
+                + 'sijaitsee suistoalueella, joka on syntynyt viiden '
+                + 'joen yhtymäkohtaan, ja sieltä vedet laskevat Guaíban '
+                + 'kautta edelleen etelään. Nimi tarkoittaa '
+                + 'kirjaimellisesti iloista satamaa. Rannassa on kaksi '
+                + 'aivan eri-ikäistä kerrosta vierekkäin: Cais Maúan '
+                + 'varastohallit nostureineen ja niiden takana '
+                + 'keskustan tornit. Kaupunki on Brasilian '
+                + 'eteläisin osavaltion pääkaupunki, ja sama '
+                + 'tasankokulttuuri jatkuu siitä etelään Uruguayhin ja '
+                + 'Argentiinaan asti.',
+              kuva: {
+                tiedosto: 'Cais do porto de Porto Alegre visto do Guaíba.JPG',
+                selite: 'Cais Maúan varastohallit muodostavat yhtenäisen '
+                  + 'rivin Guaíban rantaan, ja rivin päässä kohoaa Usina '
+                  + 'do Gasômetron piippu.',
+                lahde: 'Tumpatumcla~commonswiki, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Porto Alegre on Brasilian pääkaupungeista se, '
+                + 'jossa vuodenajat erottuvat selvimmin: joulukuussa '
+                + 'valoisaa aikaa on neljätoista tuntia ja kesäkuussa '
+                + 'kymmenen. Muuten tasaista maisemaa rikkoo '
+                + 'neljäkymmentä kukkulaa, ja niiden välistä avautuu '
+                + 'Guaíba, jota paikalliset kutsuvat järveksi ja '
+                + 'maantieteilijät toisinaan joeksi. Lunta sataa '
+                + 'äärimmäisen harvoin — kirjattuja kertoja on kuudelta '
+                + 'vuodelta — mutta Etelä-Brasilian ja Uruguayn yllä '
+                + 'havaitun otsonikerroksen aukon takia alueella '
+                + 'mitataan ajoittain poikkeuksellisen voimakasta '
+                + 'UV-säteilyä.',
+              kuva: {
+                tiedosto: 'Aerial photograph of Porto Alegre (5744748343).jpg',
+                selite: 'Kaupunki nousee kukkuloille myös keskustan '
+                  + 'ulkopuolella, ja rinteiden väliin jäävät laaksot '
+                  + 'ovat puiden peitossa.',
+                lahde: 'Pedro Belleza, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: kuppi kiertää ja kortteli valvoo',
+              teksti: 'Aurinkoisina sunnuntaina kaupunkilaiset '
+                + 'kokoontuvat kahteen paikkaan: Usina do Gasômetron '
+                + 'edustalle rantaan ja Redenção-puiston Brique da '
+                + 'Redenção -kirpputorille, joka aukeaa yhdeksältä '
+                + 'aamulla. Molemmissa istutaan, jutellaan ja juodaan '
+                + 'matea. Illat ovat toisenlaiset: SoHo-nimellä tunnettu '
+                + 'korttelinpätkä kokoaa baarit ja klubit yhteen, Cidade '
+                + 'Baixan historiallisella João Alfredo -kadulla '
+                + 'soitetaan kaikkea brasilialaisesta popista rockiin, '
+                + 'ja Moinhos de Vento tunnetaan kahviloistaan ja '
+                + 'liikkeistään.',
+            },
+            {
+              otsikko: 'Historian käännekohta: muuri joen ja kaupungin väliin',
+              teksti: 'Vuoden 1941 suurtulvan jälkeen historiallisen '
+                + 'keskustan suojaksi rakennettiin viemäröintijärjestelmä '
+                + 'ja penger, Muro da Mauá, joka erottaa Cais Maúan '
+                + 'laiturit kaupungista. Muuri esti pahimman vahingon '
+                + 'vielä vuoden 2024 tulvassakin, vaikka vesi nousi '
+                + 'muualla kaupungissa korkeammalle kuin koskaan '
+                + 'mitatussa historiassa. Nykyään muurin betonipintaan '
+                + 'on maalattu muraaleja, joista osa esittää kaupunkia '
+                + 'itseään.',
+              kuva: {
+                tiedosto: 'Muro da Mauá (Porto Alegre, Brasil) 11.JPG',
+                selite: 'Muro da Mauá on vuoden 1941 tulvan jälkeen '
+                  + 'rakennettu penger, jonka betonipintaan on '
+                  + 'sittemmin maalattu muraaleja.',
+                lahde: 'Eugenio Hansen, OFS, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Porto Alegresta puuttuu, joten nämä '
+                + 'luvut ovat en-Wikipedian Porto Alegre -artikkelin '
+                + 'Climate-osiosta eivätkä samasta lähteestä kuin lehden '
+                + 'vuosigraafit. Ilmasto on kostea subtrooppinen. Talvi '
+                + 'on leuto mutta tuulinen ja sateinen, tavallisesti '
+                + 'kymmenen ja yhdeksäntoista asteen välillä; '
+                + 'pakkasennätys on neljä astetta pakkasella heinäkuulta '
+                + '1918. Kesällä lämpötila nousee usein kolmeenkymmeneen '
+                + 'ja joskus neljäänkymmeneen, ja virallinen ennätys on '
+                + '40,7 astetta tammikuun ensimmäiseltä päivältä 1943. '
+                + 'Toisin kuin pohjoisemmassa Brasiliassa sadanta '
+                + 'huipentuu täällä talveen; vuosisadanta on noin 1 500 '
+                + 'millimetriä. Syyskuun 20. päivä on '
+                + 'Farroupilha-juhlaviikon huipennus.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Portugali toi rannalle atsoorilaisperheitä, kapinalliset '
+        + 'yrittivät kolmesti vallata kaupungin takaisin, ja saksalaiset '
+        + 'ja italialaiset siirtolaiset saapuivat puolen vuosisadan '
+        + 'välein toisistaan.',
+      tehtava: {
+        kysymys: 'Minä vuonna Porto Alegresta tuli maakunnan pääkaupunki?',
+        vaihtoehdot: [
+          '1750',
+          '1772',
+          '1773',
+          '1822',
+        ],
+        oikea: 2,
+        fakta: 'Kylä perustettiin virallisesti 26. maaliskuuta 1772, ja '
+          + 'maakunnan pääkaupungiksi se tuli 24. heinäkuuta 1773.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kuusikymmentä paria, jotka jäivät rannalle',
+          tiedosto: 'Praça da Matriz, Porto Alegre.jpg',
+          teksti: 'Madridin sopimus 13. tammikuuta 1750 vaihtoi alueita '
+            + 'Portugalin ja Espanjan kruunujen välillä, ja korvaukseksi '
+            + 'menetetystä Sacramenton siirtokunnasta Portugali toi '
+            + 'kuusikymmentä atsoorilaisparia asuttamaan Rio Grande do '
+            + 'Sulin koillisnurkkaa. Maanjako venyi vuosia, ja lopulta '
+            + 'perheet jäivät sinne, minne olivat ensin pysähtyneet: '
+            + 'Porto de Viamãoon, kaupungin ensimmäiseen nimeen. '
+            + 'Virallinen perustamispäivä on 26. maaliskuuta 1772, ja '
+            + 'vuotta myöhemmin, 24. heinäkuuta 1773, kylästä tuli '
+            + 'maakunnan pääkaupunki.',
+          selite: 'Praça da Matriz on kaupungin ruutukaavan '
+            + 'historiallinen keskus, ja sen ympärillä ovat '
+            + 'tuomiokirkko, osavaltion hallintopalatsi ja Theatro São '
+            + 'Pedro.',
+          lahde: 'Hikaru Barata, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Porto Alegre',
+        },
+        {
+          otsikko: 'Kaupunki, joka kesti kolme piiritystä',
+          tiedosto: 'Planta da cidade de Porto-Allegre (Cartográfico) — com a linha de trincheiras e fortificações que lhe tem servido de defesa desde o memoravel dia 15 de junho de 1836, com as... por L. P. Dias.jpg',
+          teksti: 'Kenraali Bento Gonçalves valtasi Porto Alegren 20. '
+            + 'syyskuuta 1835 ja käynnisti sillä Farroupilha-kapinan. '
+            + 'Keisarikunnan joukot ottivat kaupungin takaisin 15. '
+            + 'kesäkuuta 1836, eivätkä kapinalliset saaneet sitä enää '
+            + 'kertaakaan haltuunsa, vaikka piirittivät sitä kolmesti: '
+            + 'ensin 1836, sitten 1837–1838 ja lopuksi kesäkuusta 1838 '
+            + 'joulukuuhun 1840. Keisari Pedro II antoi kaupungille 19. '
+            + 'lokakuuta 1841 arvonimen Leal e Valorosa, uskollinen ja '
+            + 'urhea, ja se lukee yhä vaakunassa. Sota päättyi 1. '
+            + 'maaliskuuta 1845.',
+          selite: 'L. P. Diasin vuoden 1839 kartassa on merkitty '
+            + 'kaivantojen ja varustusten linja, joka oli puolustanut '
+            + 'kaupunkia 15. kesäkuuta 1836 lähtien, sekä kaksi '
+            + 'panoraamanäkymää kaupungista.',
+          lahde: 'L. P. Dias, Wikimedia Commons (PD)',
+          wiki: 'Ragamuffin War',
+        },
+        {
+          otsikko: 'Kaksi siirtolaisaaltoa, viisikymmentä vuotta erillään',
+          tiedosto: 'Ponte 25 de Julho e Igreja Matriz ao Fundo - São Leopoldo.jpg',
+          teksti: 'Keisari Pedro I käski maaliskuussa 1824 perustaa São '
+            + 'Leopoldon siirtokunnan, ja 25. heinäkuuta samana vuonna '
+            + 'ensimmäiset 39 saksalaissiirtolaista asettuivat Rio dos '
+            + 'Sinosin eteläiselle rannalle. Italialaiset saapuivat '
+            + 'osavaltioon vasta 1875, valtaosin köyhinä talonpoikina '
+            + 'Trentinosta ja Venetosta, ja asettuivat viininviljelyyn '
+            + 'Serra Gaúchan vuoristoon; vuoteen 1914 mennessä heitä oli '
+            + 'tullut satatuhatta. Isoisän matkavuosi osuu siis näiden '
+            + 'kahden aallon väliin.',
+          selite: 'São Leopoldon 25. heinäkuuta -silta on nimetty '
+            + 'päivästä, jona ensimmäiset saksalaissiirtolaiset '
+            + 'asettuivat Rio dos Sinosin rannalle 1824.',
+          lahde: 'Kelly da Silva KS, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'German Brazilians',
+        },
+        {
+          otsikko: 'Kuivaliha, joka sytytti kapinan',
+          tiedosto: 'Charque.jpg',
+          teksti: 'Rio Grande do Sulin talous nojasi 1800-luvulla '
+            + 'charqueen — suolattuun ja kuivattuun naudanlihaan, jota '
+            + 'valmistettiin orjatyöllä Pelotasin seudun laitoksissa ja '
+            + 'jota myytiin halpana ruokana orjuutetuille ihmisille '
+            + 'muualle Brasiliaan. Mustien osuus osavaltion väestöstä oli '
+            + 'vielä 1822 puolet, 1858 neljännes ja vuoteen 2005 '
+            + 'mennessä 5,2 prosenttia; suurin osa heistä oli tuotu '
+            + 'Angolasta. Kun Uruguayn ja Argentiinan halvempi kuivaliha '
+            + 'alkoi 1830-luvulla syrjäyttää gaúcho-tuottajia, '
+            + 'tyytymättömyydestä tuli yksi kapinan syistä.',
+          selite: 'Charque on suolattua ja kuivattua naudanlihaa, ja sen '
+            + 'valmistus oli 1800-luvulla Rio Grande do Sulin tärkein '
+            + 'elinkeino.',
+          lahde: 'Pedro Antunes from Araraquara, Brasil, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Rio Grande do Sul',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Neljäkymmentä kukkulaa ja laaja Guaíba muovaavat '
+        + 'kaupunkia yhä. Kaingang ja mbyá-guaraní asuivat rannoilla '
+        + 'kauan ennen atsoorilaisia, ja vuonna 2024 vesi näytti, kuinka '
+        + 'nopeasti se voi nousta.',
+      tehtava: {
+        kysymys: 'Kuinka korkealle Guaíba nousi Porto Alegressa toukokuussa 2024?',
+        vaihtoehdot: [
+          '3,15 metriin',
+          '4,76 metriin',
+          '5,31 metriin',
+          '7,40 metriin',
+        ],
+        oikea: 2,
+        fakta: 'Guaíba nousi 5,31 metriin ja ylitti sillä vuoden 1941 '
+          + 'tulvan ennätyksen, joka oli 4,76 metriä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Suoalue, josta tuli vapautuksen kentät',
+          tiedosto: 'Brique da Redenção - Parque Farroupilha.jpg',
+          teksti: 'Nykyisen Redenção-puiston paikalla oli 1800-luvun '
+            + 'alussa tulviva suoalue vanhan kaupunginportin '
+            + 'ulkopuolella. Kaupunginvaltuusto pyysi maata julkiseen '
+            + 'käyttöön jo 23. helmikuuta 1807, mutta mittaus tehtiin '
+            + 'vasta 1820-luvulla, ja aluetta käytettiin nahan '
+            + 'kuivatukseen ja kunnan kaatopaikkana. Vuonna 1884 sen '
+            + 'kadun nimi muutettiin Campos da Redençãoksi, vapautuksen '
+            + 'kentiksi, juhlistamaan kaupungin varhaista orjuuden '
+            + 'lakkautusta — neljä vuotta ennen koko Brasilian '
+            + 'lakkautusta. Nykyinen puisto muotoutui 1935.',
+          selite: 'Brique da Redenção on sunnuntaisin puistokadulle '
+            + 'levittäytyvä kirpputori, ja puisto sai nykyisen muotonsa '
+            + '1935 Farroupilha-kapinan satavuotisjuhliin.',
+          lahde: 'Hedestad, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Farroupilha Park',
+        },
+        {
+          otsikko: 'Vesi, jota toiset sanovat järveksi ja toiset joeksi',
+          tiedosto: 'Porto Alegre RS - Lago Guaíba.jpg',
+          teksti: 'Guaíba syntyy siinä, missä neljä jokea yhtyy '
+            + 'kaupungin edustalla, ja jatkuu sieltä etelään kohti '
+            + 'Patojen laguunia ja lopulta merta. Onko se järvi vai '
+            + 'joki? Kysymystä on puitu paikallisessa tieteellisessä '
+            + 'keskustelussa pitkään, eikä Wikipedia itsekään valitse '
+            + 'puolta; käytännössä kaupunkilaiset sanovat sitä '
+            + 'järveksi. Vesi on matalaa ja leveää, ja sen matalikoilla '
+            + 'ruokailee jalohaikaroita. Rauhallinen se ei aina ole: '
+            + 'vuoden 1941 suurtulvassa Guaíba nousi 4,76 metriin, ja '
+            + 'lukema pysyi ennätyksenä yli kahdeksankymmentä vuotta.',
+          selite: 'Jalohaikara kalastaa Guaíban matalikolla, ja '
+            + 'vesialueen leveys tekee siitä kaupungin auringonlaskujen '
+            + 'näyttämön.',
+          lahde: 'Alcimar Luiz Callegari, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Guaíba (water body)',
+        },
+        {
+          otsikko: 'Kaksi kansaa, jotka asuivat rannoilla ensin',
+          tiedosto: 'Milho tradicional Mbyá Guarani.png',
+          teksti: 'Guaíban rantojen vanhimmat asukkaat ovat kaingang ja '
+            + 'mbyá-guaraní, ja molemmat elävät yhä. Kaingangeja on noin '
+            + '51 000 neljässä osavaltiossa, ja heidän jê-kieliperheeseen '
+            + 'kuuluva kielensä on aivan eri kuin naapureiden. Yhteisö '
+            + 'jakautuu kahteen puoliskoon, kamé ja kanhru, jotka '
+            + 'maalaavat kuvionsa eri tavoin: toiset suorin viivoin ja '
+            + 'siksakein, toiset pistein ja ympyröin. Mbyá-guaraníta on '
+            + 'Brasiliassa noin 8 400, ja heidän kyliään johtaa kaksi '
+            + 'henkilöä: hengellinen karaí ja poliittinen mburuvichá.',
+          selite: 'Mbyá-guaraníen oma maissi on säilynyt viljelyssä '
+            + 'sukupolvesta toiseen, ja siemenet vaihtavat omistajaa '
+            + 'kylien välillä.',
+          lahde: 'Daiana Yxapy, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kaingang',
+        },
+        {
+          otsikko: 'Vesi, joka nousi korkeammalle kuin koskaan',
+          tiedosto: 'Enchente Porto Alegre 2024 07.jpg',
+          teksti: 'Huhti- ja toukokuussa 2024 ilmakehän jumiutunut '
+            + 'painekuvio esti säärintamien liikkeen, ja Porto Alegren '
+            + 'alueelle satoi toukokuun kahtenatoista ensimmäisenä '
+            + 'päivänä 333 millimetriä — lähes kolme kertaa niin paljon '
+            + 'kuin toukokuussa keskimäärin. Guaíba nousi 5,31 metriin '
+            + 'ja ylitti vuoden 1941 ennätyksen 4,76 metriä. '
+            + 'Lentokenttä, lähijunat ja linja-autoasema tulvivat, ja '
+            + 'molempien jalkapalloseurojen stadionit olivat viikkoja '
+            + 'poissa käytöstä. Koko osavaltiossa yli 580 000 ihmistä '
+            + 'joutui jättämään kotinsa; kuolleiden määräksi artikkeli '
+            + 'antaa kaksi lukua, heinäkuun 2024 tilanteen 181 ja '
+            + 'tulvan aikaisen uutislähteen 169.',
+          selite: 'Vuoden 2024 tulvan jälki näkyy Mercado Públicon '
+            + 'seinässä vaakasuorana rajana, johon vesi keskustassa '
+            + 'nousi.',
+          lahde: 'Ricardo André Frantz, Wikimedia Commons (CC BY 4.0)',
+          wiki: '2024 Rio Grande do Sul floods',
+        },
+      ],
+    },
+  ],
+  /*
+   * ASUNCIÓN (Opus 6.9.2026). Alusta asti tehty kaupunkilehti:
+   * kohteella ei ollut kategorioita eikä ARTIKKELIT-merkintää ennen
+   * tätä erää. Pohjana ovat docs/mantereet-tyoaineisto/
+   * faktapohja-asuncion.md ja sen riippumaton tarkistus
+   * tarkistus-asuncion.md, jotka luettiin YHDESSÄ; ristiriidoissa
+   * TARKISTUS VOITTAA. Tarkistuksen neljä pakollista korjausta (K1:n
+   * lukumäärä, K3:n kirjoitusasu jopará, L3:n rakennusvaiheet ja H3:n
+   * lähteetön aikamääre) oli jo viety faktapohjaan sen omassa
+   * korjaushistoriassa, ja lehti käyttää korjattuja muotoja. Faktat
+   * on koostettu en-Wikipedian raakateksteistä 24.8.2026: Asunción,
+   * Paraguayan War, Sacking of Asunción, Palacio de los López,
+   * National Pantheon of the Heroes, Casa de la Independencia Museum,
+   * Guarani language, Tereré ja Ñandutí.
+   *
+   * SISÄLTÖLINJAUS ON RAAMATUN PILARI 3 JA spec-mantereet.md.
+   * Kolmoisliiton sota 1864–1870 on lehdessä mukana, koska isoisän
+   * matkavuosi 1873 osuu suoraan sen jälkeiseen miehitykseen
+   * (1869–1876) — ilman sitä pelaaja ei ymmärtäisi, miksi kaupungin
+   * kaksi tärkeintä nähtävyyttä olivat vuonna 1873 keskeneräisiä
+   * raunioita. Sota kerrotaan tapahtumina, vuosilukuina ja lukuina;
+   * EI taistelukuvauksia, EI julmuuksien yksityiskohtia, EI
+   * osapuolikehystä kummallekaan suunnalle. Guaraní esitetään
+   * elävänä nykykielenä ja guaranílaisten oma kulttuuri elävänä
+   * arkena, ei museokehyksessä. Nykypolitiikka on kokonaan poissa:
+   * vuosien 1954–1989 diktatuuria ei käsitellä, ja Mercosurin synty
+   * 1991 kerrotaan ilman sen ajoittamista vallanvaihtoon (faktapohjan
+   * osio 7 kohta 7 jätti tulkinnan kirjoittajalle; valitsin
+   * varovaisemman muotoilun).
+   *
+   * KAKSI LÄHDEHUOMIOTA. (1) Väestötappioluvuista lehti antaa
+   * HAARUKAN eikä yhtä lukua, koska en-Wikipedia itse toteaa lukujen
+   * olevan kiistanalaisia: matalin tutkimusarvio on noin 21 000
+   * kuollutta eli seitsemän prosenttia, korkein 60–70 prosenttia.
+   * Vanhempaa, artikkelin itsensä "ilman tukea" -merkitsemää 90
+   * prosentin arviota EI käytetä. Vuoden 1871 väestönlaskennan
+   * kolme lukua ovat kova fakta haarukan rinnalla. (2) Asunciónin oma
+   * kielijakauma (espanja 56,9 %, jopará 27,4 %, guaraní 11,2 %) on
+   * artikkelissa merkitty lähteettömäksi, joten sitä EI käytetä;
+   * nosto K3 nojaa "Guarani language" -artikkelin kunnolla
+   * lähteistettyihin faktoihin.
+   *
+   * VISA (js/packs/southamerica-questions.js, kohta asuncion) on
+   * luettu. Sen viides kysymys ("kaupunkien äiti") on lähes sama
+   * asia kuin nosto K1, joten K1 on kirjoitettu tarkoituksella eri
+   * yksityiskohdista kuin visan fact-kenttä: perustajan nimi, tarkka
+   * päivämäärä, nimen alkuperä ja viisi nimeltä mainittua kaupunkia
+   * plus 65 muuta. Visan sanamuotoa "Asunciónista käsin perustettiin
+   * monta kaupunkia" ei toisteta. Muiden kysymysten vastaukset
+   * löytyvät lehdestä (pääkaupunki ja perustamisvuosi K1:stä, kaksi
+   * virallista kieltä K3:sta, Paraguayjoki oppaan jaksosta 2, tereré
+   * nostosta L1). MINITEHTÄVÄT eivät toista visaa, ja kummankin
+   * vastaus on SAMAN SIVUN nostotekstissä: historiasivu kysyy
+   * miehityksen päättymisvuotta (vastaus H2:ssa) ja arkisivu
+   * ñandutí-sanan merkitystä (vastaus L2:ssa).
+   *
+   * SIVU-ID:T. Kaksi kolmesta (kaupunki, historia) on talon
+   * vakioaiheita (js/ui-apurit.js AIHE_IKONIT). Kolmas, `kulttuuri`,
+   * on taulun ulkopuolella ja piirtyy yleiskuvakkeella — sama
+   * perusteltu poikkeus kuin Salvadorin `mustarooma`-, Adelaiden
+   * `saksalaisperinne`- ja Chicagon `arkkitehtuuri`-sivuilla.
+   * Vakioaihe `ruoka` olisi ollut saatavilla mutta harhaanjohtava:
+   * sivun neljästä nostosta vain yksi koskee juomaa, ja muut
+   * kertovat käsityöstä, rantabulevardista ja lahden linnuista.
+   *
+   * KUVAT: 24 kuvaa, kaikki Wikimedia Commonsista. Lisenssi ja tekijä
+   * on luettu rajapinnan extmetadatasta (LicenseShortName, Artist,
+   * Restrictions) ja JOKAINEN valittu kuva on katsottu silmin 900
+   * pikselin esikatseluna. Kaikki ovat vähintään 1200 px leveitä,
+   * lisenssit ovat PD, CC0, CC BY tai CC BY-SA, eikä yhdelläkään ole
+   * Restrictions-merkintää. Kategoriat ja haut, joista kuvat
+   * löytyivät: Asunción, Palacio de los López, Cabildo of Asunción,
+   * Casa de la Independencia (Asunción), Panteón Nacional de los
+   * Héroes, Avenida Costanera (Asunción), Bay of Asunción, Trams in
+   * Asunción, Crafts of Paraguay, War of the Triple Alliance sekä
+   * haut "terere", "ñandutí" ja "Estación Central del Ferrocarril
+   * Asunción".
+   *
+   * KUVAHYLKÄYKSET SYINEEN. VESILEIMA TAI KUVAAJAN SIGNEERAUS:
+   * "Bahía De Asunción (43639068)" (kuvan alalaidassa lukee
+   * copyright, kuvaajan nimi ja Flickr-osoite, lisäksi nimikirjoitus).
+   * KUVAN PÄÄLLE LISÄTTY TEKSTI: "Tereré equipo" (kuvaan on ladottu
+   * espanjankieliset selitetekstit JARRA O UN TERMO, BOMBILLA ja
+   * GUAMPA nuolineen). TUNNISTETTAVAT KASVOT: "Esto es Paraguay
+   * (8041869527)" (kaksi katukauppiasta lähikuvassa), "Casa de la
+   * Independencia 161717 HDR" (vartija profiilissa, kasvot
+   * luettavissa), "Panteón Nacional de los Héroes (8039932606)"
+   * (yleisö ulkoilmanäytöksessä). MUU SYY: "CAÑONERA SOBRE EL RIO EN
+   * ASUNSION DEL PARAGUAY" (kuvan aihe on sotalaiva), "Nueva Asunción
+   * costa" (kuvassa on huvivenesatama, joka ei kerro kaupungista),
+   * "Terere harvesting" (kuva ei esitä matea eikä Paraguayta),
+   * "Assunção (4842086674)" ja "Assunção (4841455363)" (tiiliraunio
+   * puiden keskellä, kohde tunnistamaton), "Plaza Infante Rivarola
+   * 100737 HDR" (kuvan hallitseva aihe on ostoskeskuksen julkisivu),
+   * "Palacio de López 2023" (etualan lippu peittää rakennuksen, ja
+   * extmetadatan tekijänimi on kiinankielinen virastonimi, jota ei
+   * voi merkitä lähderiville luettavasti).
+   *
+   * AIHETOISTO, TARKOITUKSELLINEN JA KIRJATTU. Asunciónin
+   * Commons-pooli on ohut, ja se näkyy: (1) Costanera-rantabulevardi
+   * esiintyy kolmessa eri tiedostossa ja kolmessa eri roolissa —
+   * kansikuvassa etelämpänä Cerro Lambarén juurella, avauskuvassa
+   * ilmasta keskustan kohdalta ja nostossa L3 iltavalaistuna
+   * puistona. Jokainen kertoo eri asian samasta rannasta, ja L3:n
+   * teksti kertoo juuri tuosta puistosta. (2) Vanha keskusasema on
+   * avauskuvassa katutasosta ja oppaan jaksossa 1 tornin puolelta.
+   * (3) Cabildo on nostossa K1 päivällä ja oppaan jaksossa 4
+   * valaistuna illalla. Yksikään tiedostonimi ei toistu lehden
+   * sisällä, eikä yksikään ole sama kuin
+   * js/packs/southamerica-valokuvat.js:n asuncion-lohkossa
+   * (Movimiento insurgente paraguayo 1912, Mercado 4, Tereré -
+   * infusión 2, National Pantheon of the Heroes, Gran Palacio
+   * Nacional de Paraguay).
+   *
+   * ENNEN JA NYT -PARIA EI OTETTU VALOKUVATAULUSTA, ja se on
+   * poikkeus talon tavasta. Taulun vanha kuva on vuoden 1912
+   * sisällissodan katunäkymä ja sen uusi kuva López-palatsi, eli ne
+   * eivät esitä samaa paikkaa eivätkä siis muodosta paria. Tilalle
+   * valittiin kaksi kuvaa samasta näkymästä: vuoden 1869 kaiverrus
+   * joelta katsottuna ja nykyinen satama samalta rannalta. Vanhassa
+   * on `vuosi`, joten se piirtyy harmaasävynä kuten postikortissa.
+   *
+   * SÄÄRIVIÄ EI OLE js/packs/saatiedot.js:ssä eikä sitä lisätty
+   * tässä erässä: Open-Meteon arkisto vastasi 429 ("Daily API request
+   * limit exceeded") koko ajon ajan, eikä lukuja keksitä. Oppaan
+   * jakso 5 nojaa siis en-Wikipedian Asunción-artikkelin
+   * Climate-osion WMO 1991–2020 -sääruutuun ja SANOO SEN ÄÄNEEN —
+   * Samarkandin, Vancouverin ja Salvadorin malli. Mittauspiste olisi
+   * keskusta -25,28 / -57,63.
+   *
+   * KUVATEKSTIT: jokainen selite on YKSI virke ja kertoo KOHTEESTA,
+   * ei siitä miltä kuva näyttää. Matkailijalle-etusivukuva on tuore
+   * ja MALTILLINEN PYSTY (1206x1731, w/h 0,70).
+   */
+  asuncion: [
+    {
+      id: 'kaupunki',
+      nimi: 'Asunción',
+      johdanto: 'Paraguayjoen rannalle 1537 pystytetystä linnakkeesta '
+        + 'lähdettiin perustamaan kymmeniä muita siirtokuntia. Isoisän '
+        + 'matkan aikoihin kaupunki eli yhä sodanjälkeistä miehitystä, '
+        + 'joka päättyi vasta 1876.',
+      kansikuvat: [
+        {
+          tiedosto: 'Palacio de Lopez from above.jpg',
+          selite: 'Palacio de los López seisoo aivan Paraguayjoen '
+            + 'rannassa, ja sen edestä kulkee Costanera-rantabulevardi.',
+          lahde: 'Cmasi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Panorama nuevo centro de Asunción.png',
+          selite: 'Kaupungin uusi keskusta on kasvanut vanhan '
+            + 'ruutukaavan itäpuolelle omaksi tornialueekseen.',
+          lahde: 'Overkill53, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Costanera Sur Cerro Lambaré 2.png',
+          selite: 'Costanera Surin puisto ulottuu Asunciónin lahden '
+            + 'rantaan, ja taustalla kohoaa 160-metrinen Cerro Lambaré.',
+          lahde: 'Overkill53, Wikimedia Commons (CC0)',
+        },
+      ],
+      /*
+       * AVAUSKUVAT: kolme laajaa yleisnäkymää kaupungin eri puolilta —
+       * rantabulevardi ja lahti ilmasta, vanhan ruutukaavan katulinja
+       * keskustassa ja vanhan keskusaseman kortteli. Yksikään ei ole
+       * minkään noston aiheena.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Costanera Asunción.png',
+          selite: 'Costanera-rantabulevardi erottaa keskustan Paraguayjoen '
+            + 'rannasta, ja sen takana avautuu Asunciónin lahti.',
+          lahde: 'Overkill53, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'La Encarnación (Asunción).jpg',
+          selite: 'Vanhan keskustan ruutukaava on samassa muodossa kuin '
+            + 'siirtomaa-aikana, ja korttelit laskeutuvat suorina '
+            + 'katulinjoina kohti jokea.',
+          lahde: 'LittleT889, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Estación Central del Ferrocarril en Asunción by Felipe Méndez.jpg',
+          selite: 'Vanha keskusrautatieasema laituriholveineen seisoo '
+            + 'Plaza Uruguayan laidalla keskellä kaupunkia.',
+          lahde: 'FF MM, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'PARAGUAY. — La ville de l\'Assomption occupée par l\'armée alliée.jpeg',
+          vuosi: '1869',
+          selite: 'Kuvalehden kaiverrus 3. huhtikuuta 1869 esittää '
+            + 'Asunciónia joelta katsottuna liittoutuneiden joukkojen '
+            + 'miehittämänä, neljä vuotta ennen isoisän matkaa.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Porto de assunção (4831205415).jpg',
+          selite: 'Samalla rannalla on nykyään Asunciónin satama, jonne '
+            + 'jokilaivat ja proomut yhä tulevat Paraguayjokea pitkin.',
+          lahde: 'Gabriel Fernandes from São Paulo, Brasil, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Linnake, josta lähdettiin perustamaan muita',
+          tiedosto: 'Cabildo Asuncion.JPG',
+          teksti: 'Espanjalainen Juan de Salazar y Espinosa pystytti '
+            + 'Paraguayjoen rannalle linnakkeen elokuussa 1537 ja nimesi '
+            + 'sen Neitsyt Marian taivaaseenastumisen juhlapäivän '
+            + 'mukaan. Kun alkuperäisväestö tuhosi tuoreen Buenos Airesin '
+            + '1542, sen espanjalaiset pakenivat tänne, ja Asunciónista '
+            + 'tuli koko laajan siirtokuntaprovinssin keskus. Täältä '
+            + 'lähetettiin retkikuntia perustamaan uusia kaupunkeja: '
+            + 'Villarrica, Corrientes, Santa Fe, Córdoba, Santa Cruz de '
+            + 'la Sierra ja 65 muuta — sekä Buenos Aires toistamiseen.',
+          selite: 'Cabildo oli siirtomaa-ajan kaupunginhallinnon talo, '
+            + 'ja rakennus on nykyään tasavallan kulttuurikeskus.',
+          lahde: 'Preyes, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Asunción',
+        },
+        {
+          otsikko: 'Raitiovaunu, joka ehti juuri isoisän aikaan',
+          tiedosto: 'Ex-Brussels tram on display by former train station in Asunción in 2006.jpg',
+          teksti: 'Asunciónissa alkoi kulkea raitiovaunu vuonna 1871 — '
+            + 'kaksi vuotta ennen isoisän matkaa. Ensimmäiset vaunut '
+            + 'vedettiin hevosilla ja höyryllä, ja sähköraitiovaunut '
+            + 'otettiin käyttöön 1913. Verkosto ajoi yli sata vuotta: '
+            + 'viimeinen linja lopetettiin 1990-luvun puolivälissä ja '
+            + 'liikenne suljettiin virallisesti marraskuussa 1997. '
+            + 'Viimeiset vaunut olivat tulleet käytettyinä Brysselistä. '
+            + 'Kulkumuoto, jonka isoisä olisi juuri ehtinyt nähdä '
+            + 'syntyvän, katosi kaupungista kokonaan ennen 2000-lukua.',
+          selite: 'Vanhan keskusaseman viereen Plaza Uruguayalle '
+            + 'nostettiin 2005 näytille brysseliläinen raitiovaunu, '
+            + 'jollaisia kaupungissa ajettiin viimeisinä vuosikymmeninä.',
+          lahde: 'Peter Collins from Maidenhead, UK, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Asunción',
+        },
+        {
+          otsikko: 'Kieli, joka ei väistynyt siirtomaakielen tieltä',
+          tiedosto: 'Cartel de un negocio en Asunción escrito en 4 idiomas español, alemán, inglés y guaraní.jpg',
+          teksti: 'Amerikoissa alkuperäiskielet ovat lähes kaikkialla '
+            + 'väistyneet siirtomaakielten tieltä. Paraguay on '
+            + 'poikkeus: guarania puhuu enemmistö maan väestöstä, ja '
+            + 'maaseudulla puolet asukkaista on yksikielisiä '
+            + 'guaraninpuhujia. Kun maa demokratisoitui, vuoden 1992 '
+            + 'perustuslaki nosti guaranin espanjan rinnalle '
+            + 'tasavertaiseksi viralliseksi kieleksi. Guaraní on myös '
+            + 'yksi Mercosurin kolmesta virallisesta kielestä espanjan '
+            + 'ja portugalin ohella — ainoa alkuperäiskieli koko '
+            + 'kauppaliiton papereissa.',
+          selite: 'Asunciónin liikkeen opasteessa lukee uloskäynti '
+            + 'neljällä kielellä: espanjaksi, saksaksi, englanniksi ja '
+            + 'guaraniksi, jolla se on Ñesẽha.',
+          lahde: 'Chipachyryry, Wikimedia Commons (CC0)',
+          wiki: 'Guarani language',
+        },
+        {
+          otsikko: 'Talo, jonka ohi käveltiin hakemaan itsenäisyyttä',
+          tiedosto: 'Asuncion - Casa de la Independencia.jpg',
+          teksti: 'Keskustan kadunkulmassa seisoo vuonna 1772 rakennettu '
+            + 'talo: seinät adobea, runko bambua ja palmupuuta. Sen '
+            + 'suojissa paraguaylaiset salaliittolaiset kokoontuivat '
+            + 'suunnittelemaan kapinaa Espanjan vallanpitäjiä vastaan, '
+            + 'ja yön 14.–15. toukokuuta 1811 aikana Pedro Juan '
+            + 'Caballeron johtama ryhmä käveli talon vierestä kuvernööri '
+            + 'Bernardo de Velascon asunnolle ja pakotti tämän '
+            + 'antautumaan. Talo avattiin museona 14. toukokuuta 1965, '
+            + 'ja siinä on nähtävänä muun muassa Cabildon istuntosalin '
+            + 'jäljennös.',
+          selite: 'Casa de la Independencia on Asunciónin vanhimpia '
+            + 'säilyneitä rakennuksia, ja sen kylkeä kiertää kapea '
+            + 'kujanne nimeltä Callejón Histórico.',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Casa de la Independencia Museum',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'El Gran Panteón de Asunción.jpg',
+          selite: 'Sankarien kansallinen panteoni on kaupungin tunnetuin '
+            + 'rakennus, ja sen edessä kunniavartiosto vaihtuu useita '
+            + 'kertoja päivässä.',
+          lahde: 'FF MM, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Asunción on Paraguayn pääkaupunki ja yksi Río de la '
+          + 'Platan altaan pisimpään yhtäjaksoisesti asutuista '
+          + 'paikoista. Matkailijan Asunción mahtuu muutaman korttelin '
+          + 'alueelle vanhaan keskustaan: joen rannassa ovat Palacio de '
+          + 'los López ja Costanera-rantabulevardi, niiden takana '
+          + 'Cabildo, katedraali ja Casa de la Independencia, ja '
+          + 'muutaman korttelin päässä Panteón de los Héroes. Vanha '
+          + 'kaupunki on rakennettu seitsemälle matalalle kukkulalle, '
+          + 'joten kadut nousevat rannasta ylöspäin.',
+        artikkeli: {
+          nimi: 'Matkailijan Asunción',
+          taitto: 'opas',
+          teksti: 'Jokisatama syvällä sisämaassa, kaupunki jossa '
+            + 'alkuperäiskansan kieli on virallinen espanjan rinnalla.',
+          nosto: 'Sodanjälkeisessä väestönlaskennassa 1871 koko '
+            + 'Paraguayssa oli 221 079 asukasta, joista miehiä 28 746.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Asunción on Etelä-Amerikan sisämaassa, lähes yhtä '
+                + 'kaukana Tyynestämerestä kuin Atlantista: matkaa '
+                + 'lännen rannikolle on noin 1 300 ja idän rannikolle '
+                + 'noin 1 000 kilometriä. Kaupunki on Mercosur-alueen '
+                + 'keskellä, ja siitä on lyhyt matka Buenos Airesiin, '
+                + 'Montevideoon, Córdobaan, São Pauloon ja Porto '
+                + 'Alegreen. Perinteinen tie tänne on ollut jokea pitkin: '
+                + 'Paraguayjoki vie laivat etelään Río de la Platalle ja '
+                + 'sieltä merelle. Kaupunki isännöi vuoden 2031 '
+                + 'Pan-Amerikan kisoja.',
+              kuva: {
+                tiedosto: 'Estación del Ferrocarril 20180801.jpg',
+                selite: 'Keskusaseman torni Plaza Uruguayan laidalla on '
+                  + 'yksi vanhan keskustan tunnistettavimmista '
+                  + 'rakennuksista.',
+                lahde: 'Cmasi, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on Paraguayjoen vasemmalla rannalla '
+                + 'lähellä kohtaa, jossa jokeen yhtyy Pilcomayo. '
+                + 'Luoteessa Asunciónin lahti erottaa kaupungin Paraguayn '
+                + 'Länsialueesta ja Argentiinasta. Vanha kaupunki on '
+                + 'rakennettu seitsemälle matalalle kukkulalle, joista '
+                + 'yksi, Loma Cabará, on perustamispaikka; korkein kohta '
+                + 'ei kuitenkaan ole mikään niistä vaan Nazarethin '
+                + 'kaupunginosan Colina Alta -katu, 170 metriä '
+                + 'merenpinnasta. Tunnetumpi Cerro Lambaré jää '
+                + 'kymmenen metriä matalammaksi.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: käsityö myydään kojulta',
+              teksti: 'Paraguayn tunnetuimmat käsityöt myydään '
+                + 'keskustan pikkuliikkeistä ja kojuilta. Ñandutí-pitsi '
+                + 'on niistä kuuluisin: se tehdään kehykseen '
+                + 'pingotetulle kankaalle säteittäisistä langoista, ja '
+                + 'yksi valmis kiekko voi olla pienempi kuin kämmen. '
+                + 'Samoista liikkeistä ostetaan myös tereré-juoman '
+                + 'välineet, '
+                + 'guampa-astia ja bombilla-pilli, joita ilman kylmää '
+                + 'matea ei juoda.',
+              kuva: {
+                tiedosto: 'La Recova 122502.jpg',
+                selite: 'La Recovan matkamuistoliike myy ohuesta '
+                  + 'puuvillasta ommeltuja ja käsin kirjottuja '
+                  + 'vaatteita.',
+                lahde: 'Cmasi, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: sopimus joka nimettiin kaupungin mukaan',
+              teksti: 'Maaliskuussa 1991 Argentiinan, Brasilian, '
+                + 'Uruguayn ja Paraguayn presidentit allekirjoittivat '
+                + 'Asunciónissa sopimuksen, joka perusti Etelän '
+                + 'yhteismarkkinat eli Mercosurin. Siitä lähtien '
+                + 'kaupungin nimi on ollut osa koko mantereen '
+                + 'talousintegraation nimistöä. Sopimuksen jäljet '
+                + 'näkyvät arjessa: guaraní on yksi liiton kolmesta '
+                + 'virallisesta kielestä, ja Etelä-Amerikan '
+                + 'jalkapalloliiton päämaja on aivan naapurissa Luquen '
+                + 'kaupungissa.',
+              kuva: {
+                tiedosto: 'Antiguo Cabildo Asunción.jpg',
+                selite: 'Vanha Cabildo on nykyään tasavallan '
+                  + 'kulttuurikeskus, ja se on yksi niistä vanhan '
+                  + 'keskustan rakennuksista, jotka Costanera yhdistää '
+                  + 'jokeen.',
+                lahde: 'FF MM, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Pelin säärivi Asunciónista puuttuu, joten nämä '
+                + 'luvut ovat en-Wikipedian Asunción-artikkelin '
+                + 'sääruudusta (WMO 1991–2020) eivätkä samasta lähteestä '
+                + 'kuin lehden vuosigraafit. Ilmasto on kostea '
+                + 'subtrooppinen. Kesä joulukuusta helmikuuhun on hyvin '
+                + 'kuuma ja kostea, tammikuun keskilämpötila noin 28 '
+                + 'astetta; talvi kesäkuusta elokuuhun on leuto, '
+                + 'heinäkuun keskilämpötila noin 17 astetta, mutta '
+                + 'pakkasöitäkin sattuu. Sateisin kuukausi on huhtikuu '
+                + '166 millimetrillä ja kuivin heinäkuu 39 '
+                + 'millimetrillä; vuodessa sadetta tulee noin 1 460 '
+                + 'millimetriä 83 sadepäivänä. Kuumin mitattu lukema on '
+                + '43,0 astetta 17. lokakuuta 2023 ja kylmin 1,2 astetta '
+                + 'pakkasella 27. kesäkuuta 2011.',
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuosien 1864–1870 sota jätti Paraguayn autioksi ja '
+        + 'pääkaupungin vieraiden joukkojen haltuun vuoteen 1876 asti. '
+        + 'Isoisän matka osuu suoraan tuon miehityksen keskivaiheille.',
+      tehtava: {
+        kysymys: 'Mihin vuoteen asti vieraat joukot miehittivät Asunciónia?',
+        vaihtoehdot: [
+          '1869',
+          '1870',
+          '1873',
+          '1876',
+        ],
+        oikea: 3,
+        fakta: 'Kaupunki antautui 1. tammikuuta 1869, ja miehitys jatkui '
+          + 'vuoteen 1876 — kolme vuotta isoisän matkan jälkeen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sota, jonka hinnasta ei ole yksimielisyyttä',
+          tiedosto: 'Market place, 19th century Asunción.jpg',
+          teksti: 'Kolmoisliiton sodassa 1864–1870 Paraguay taisteli '
+            + 'yksin Brasiliaa, Argentiinaa ja Uruguayta vastaan ja '
+            + 'hävisi tuhoisasti. Väestötappioista tutkijat eivät ole '
+            + 'päässeet yksimielisyyteen: matalin arvio päätyy noin 21 '
+            + '000 kuolleeseen eli seitsemään prosenttiin sodanaikaisesta '
+            + 'väestöstä, 1990-luvun tarkin väestöntutkimus taas 60–70 '
+            + 'prosenttiin. Wikipedia itse toteaa tarkkojen lukujen '
+            + 'selvittämisen ehkä mahdottomaksi. Yksi kova luku on '
+            + 'vuoden 1871 väestönlaskenta: 221 079 asukasta, joista '
+            + '106 254 naista, 86 079 lasta ja 28 746 miestä.',
+          selite: 'Argentiinalainen kenraali ja akvarellisti José Ignacio '
+            + 'Garmendia, joka itse osallistui sotaan, maalasi '
+            + 'Asunciónin torin 1800-luvulla.',
+          lahde: 'José Ignacio Garmendia (1841-1925), Wikimedia Commons (PD)',
+          wiki: 'Paraguayan War',
+        },
+        {
+          otsikko: 'Kaupunki, jossa asui vieras armeija',
+          tiedosto: 'Allied troops occupying Asunción.jpg',
+          teksti: 'Asunción tyhjennettiin asukkaista kaksi päivää ennen '
+            + 'kuin brasilialaisjoukot ottivat sen haltuunsa 1. '
+            + 'tammikuuta 1869. Kaupungista vietiin järjestelmällisesti '
+            + 'irtaimisto: aatelisperheiden palatsien, ministeriöiden ja '
+            + 'kongressitalon sisustukset, López-perheen huonekalut, '
+            + 'venetsialaiset peilit ja pianot lastattiin laivoihin. '
+            + 'Kaupunkiin asettui noin 30 000 brasilialaista, 4 000 '
+            + 'argentiinalaista ja 200 uruguaylaista sotilasta sekä 800 '
+            + 'paraguaylaista legioonalaista. Miehitys päättyi vasta '
+            + '1876.',
+          selite: 'Garmendian akvarelli vuodelta 1870 esittää '
+            + 'liittoutuneiden joukkoja Asunciónissa sodan päätyttyä.',
+          lahde: 'José Ignacio Garmendia (1841-1925), Wikimedia Commons (PD)',
+          wiki: 'Sacking of Asunción',
+        },
+        {
+          otsikko: 'Palatsi, jossa ei koskaan asunut sen rakennuttaja',
+          tiedosto: '00 3819 Asunción - Paraguay (Südamerika).jpg',
+          teksti: 'Presidentti Carlos Antonio López tilasi 1857 palatsin, '
+            + 'jonka piti tulla hänen poikansa ja seuraajansa Francisco '
+            + 'Solano Lópezin kodiksi. Englantilainen arkkitehti Alonso '
+            + 'Taylor johti työtä, ja rakennus oli olennaisesti valmis '
+            + '1867 — mutta poika ei ehtinyt koskaan asua siellä. '
+            + 'Tammikuussa 1869 joukot ryöstivät sisustuksen ja '
+            + 'majoittuivat palatsiin koko seitsenvuotisen miehityksen '
+            + 'ajaksi, ja vuoteen 1876 mennessä rakennus oli hylätty ja '
+            + 'rappeutunut. Presidentti Juan Bautista Egusquiza sai sen '
+            + 'valmiiksi vasta 1894.',
+          selite: 'Palacio de los López on yhä Paraguayn hallituksen '
+            + 'istuin, ja tässä vuoden 1970 diakuvassa se on maalattu '
+            + 'valkoiseksi.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Palacio de los López',
+        },
+        {
+          otsikko: 'Kappeli, joka odotti valmistumistaan seitsemänkymmentä vuotta',
+          tiedosto: 'Panteón nacional de los Héroes - Paraguay.jpg',
+          teksti: 'Lokakuussa 1863 Francisco Solano López tilasi '
+            + 'italialaiselta arkkitehdilta Alejandro Ravizzalta '
+            + 'kappelin Neitsyt Marian kunniaksi. Kolmoisliiton sota '
+            + 'keskeytti työt, ja rakennus jäi telineiden ympäröimäksi '
+            + 'yli seitsemäksikymmeneksi vuodeksi: isoisä olisi nähnyt '
+            + 'sen keskeneräisenä. Vasta toisen sodan, Chacon sodan, '
+            + 'jälkeen kappeli valmistui ja vihittiin kansalliseksi '
+            + 'sankaripanteoniksi 12. lokakuuta 1936. Sinne on haudattu '
+            + 'muun muassa molemmat López-presidentit ja Acosta Ñun '
+            + 'taistelun lapsisotilaat.',
+          selite: 'Panteonin päädyssä lukee latinaksi Fides et Patria, '
+            + 'usko ja isänmaa.',
+          lahde: 'Garcia.dennis, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'National Pantheon of the Heroes',
+        },
+      ],
+    },
+    {
+      id: 'kulttuuri',
+      nimi: 'Arki ja perintö',
+      johdanto: 'Kylmä mate kädestä käteen, hämähäkinseitin nimeä kantava '
+        + 'pitsi ja lahti, joka on tärkeämpi linnuille kuin ihmisille. '
+        + 'Asunciónin arki kantaa guaraní-perintöä yhtä vahvasti kuin '
+        + 'sen kadunnimet.',
+      tehtava: {
+        kysymys: 'Mitä sana ñandutí tarkoittaa guaranin kielellä?',
+        vaihtoehdot: [
+          'auringonlaskua',
+          'hämähäkinseittiä',
+          'jokivettä',
+          'valkoista kukkaa',
+        ],
+        oikea: 1,
+        fakta: 'Ñandutí tarkoittaa hämähäkinseittiä, ja pitsi tehdään '
+          + 'juuri sen näköiseksi säteittäisistä langoista.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kuppi, joka kiertää myös tuntemattomalle',
+          tiedosto: 'Yuyos para terere.jpg',
+          teksti: 'Tereré on jääkylmää yerba matea, johon lisätään pohã '
+            + 'ñana eli lääkinnällisiä ja virkistäviä yrttejä. Sitä '
+            + 'juodaan yhteisestä sarviastiasta metallipillin läpi, ja '
+            + 'sama pilli kiertää koko seurueessa. Tapa juontaa '
+            + 'esikolumbiaaniselta ajalta ja vakiintui siirtomaakaudella. '
+            + 'Unesco julisti teréren ja sen valmistustaidon '
+            + 'aineettomaksi kulttuuriperinnöksi 17. joulukuuta 2020. '
+            + 'Paraguayssa se on virallinen kansallisjuoma, ja sillä on '
+            + 'oma päivänsä helmikuun viimeisenä lauantaina.',
+          selite: 'Pohã ñana eli teréren yrtit myydään nippuina, ja ne '
+            + 'lisätään juomaan tuoreina.',
+          lahde: 'Overkill53, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tereré',
+        },
+        {
+          otsikko: 'Pitsi, joka kantaa hämähäkin nimeä',
+          tiedosto: 'Nanduti lace.jpg',
+          teksti: 'Ñandutí tarkoittaa guaraniksi hämähäkinseittiä, ja '
+            + 'pitsi tehdään juuri sen näköiseksi. Kangas pingotetaan '
+            + 'kehykseen, ja siihen vedetään säteittäisiä puuvilla- tai '
+            + 'silkkilankoja, joista syntyy pyöreitä seittikuvioita; '
+            + 'yhteen kiekkoon voi kertyä jopa sataviisikymmentä '
+            + 'sädettä. Tekijä käyttää työssään vain kolmea välinettä ja '
+            + 'nimeää työvaiheet niiden mukaan: lyijykynä piirtää '
+            + 'kuvion, neula kutoo sen, ja sakset irrottavat valmiin '
+            + 'kiekon alustakankaasta.',
+          selite: 'Ñandutí-pitsi tehdään kehykseen pingotetulle '
+            + 'kankaalle, ja valmis kiekko leikataan lopuksi irti '
+            + 'alustastaan.',
+          lahde: 'Trey Jones, Wikimedia Commons (PD)',
+          wiki: 'Ñandutí',
+        },
+        {
+          otsikko: 'Rantabulevardi, joka syntyi juhlavuodesta',
+          tiedosto: 'Parque Lineal Costanera Sur.png',
+          teksti: 'Kun Paraguay vietti itsenäisyytensä '
+            + 'kaksisataavuotisjuhlaa toukokuussa 2011, Asunción avasi '
+            + 'samalla noin kolmentoista hehtaarin rantapuiston. Se '
+            + 'yhdistää vanhan keskustan rakennukset joen rantaan: '
+            + 'Palacio de los López, Cabildo ja katedraali ovat nyt '
+            + 'kävelymatkan päässä vedestä. Hankkeen ensimmäinen vaihe '
+            + 'valmistui loppuvuodesta 2019 pyöräkaistoineen, '
+            + 'kulkureitteineen ja kuntoiluvälineineen; toinen vaihe '
+            + 'lisää siltoja ja liikuntapaikkoja. Tieltä siirtyneille '
+            + 'perheille rakennettiin 144 uutta asuntoa.',
+          selite: 'Costanera Surin puisto kulkee Paraguayjoen rantaa '
+            + 'pitkin, ja siihen kuuluu kävelyalue, pyöräkaista ja '
+            + 'valaistu aukio.',
+          lahde: 'Overkill53, Wikimedia Commons (CC0)',
+          wiki: 'Asunción',
+        },
+        {
+          otsikko: 'Lahti, joka on tärkeämpi linnuille kuin ihmisille',
+          tiedosto: 'Barco saliendo de la bahía de Asunción - panoramio.jpg',
+          teksti: 'Asunciónin lahti kaupungin luoteispuolella ei näytä '
+            + 'paljolta: matalaa vettä, kausittain tulvivaa ruovikkoa ja '
+            + 'mutarantaa, jonka rantaviiva siirtyy Paraguayjoen '
+            + 'vedenkorkeuden mukaan. Linnuille se on yksi mantereen '
+            + 'tärkeimmistä pysähdyspaikoista. Alueelta on laskettu 258 '
+            + 'lintulajia, joista seitsemän on maailmanlaajuisesti '
+            + 'uhanalaisia ja 28 pesii Pohjois-Amerikassa ja muuttaa '
+            + 'talveksi tänne. Yli kolme prosenttia koko maailman '
+            + 'kanelisirriäiskannasta lepää lahdella muuttomatkallaan.',
+          selite: 'Asunciónin lahti avautuu kaupungin luoteispuolelle, ja '
+            + 'sen kautta jokilaivat kulkevat Paraguayjoelle.',
+          lahde: 'Marcelo Ramirez, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Asunción',
+        },
+      ],
+    },
+  ],
+  /*
+   * DUNEDIN (Opus 6.9.2026, paketti O9) — Oseanian laudan neljäs
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-dunedin.md ja sen riippumaton tarkistus
+   * tarkistus-dunedin.md (tuomio "kelpaa pienin korjauksin"). Molemmat
+   * pakolliset korjaukset oli jo tehty faktapohjaan ennen kirjoitusta
+   * (nimivirhe "Jim Moran" -> Jim Mora sekä väärä väite siitä, ettei
+   * Category:Dunedin Volcano olisi olemassa). Väitteet on luettu
+   * en-Wikipedian raakateksteistä 6.9.2026: "Dunedin", "University of
+   * Otago", "First Church of Otago", "Toitū Otago Settlers Museum",
+   * "Taiaroa Head", "Yellow-eyed penguin", "Ōtākou", "Ngāi Tahu",
+   * "Larnach Castle", "Dunedin Volcano", "Dunedin Chinese Garden",
+   * "Dunedin Airport" ja "Dunedin railway station".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei uusia kysymyksiä.
+   *
+   * SIVUJA ON KAKSI kuten Aucklandissa (kaupunki + teemasivu). Faktapohja
+   * tarjosi kolme teemaa; kolmas (rautatieasema, Baldwin Street,
+   * opiskelijakaupunki, Dunedin sound) on siirretty matkaoppaaseen ja
+   * kohdekartan juttuihin, jotta lehti pysyy Aucklandin mitassa.
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026 jokaiseen
+   * pyyntöön "Daily API request limit exceeded", eikä lukuja keksitä
+   * (Samarkand-malli v965) — js/packs/saatiedot.js jää koskematta ja
+   * lehti näkyy ilman säätä, kuten Aucklandissakin. Oppaan sääjakso
+   * nojaa siksi en-Wikipedian sääruutuun ja sanoo sen ääneen: luvut ovat
+   * NIWAn normaalikaudelta 1991-2020 kaupungin omalta asemalta.
+   *
+   * ITSEMURHA EI OLE TEKSTISSÄ (ikäsopivuus, Perustuslain pilari 4):
+   * L4 kertoo Larnachin kuolleen parlamenttitalossa 1898 ilman
+   * yksityiskohtia. Kāi tahu on kuvattu elävänä kansana
+   * (spec-mantereet.md, Oseania): Ōtākou on rūnangan koti TÄNÄÄN, ei
+   * museokohde.
+   *
+   * KUVAT haettiin Commonsin API:sta kategoriahauilla, lisenssi ja
+   * tekijä luettiin extmetadatasta 6.9.2026, ja jokainen valittu kuva
+   * katsottiin silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "MA I239058 TePapa Princes-Street-Dunedin full.jpg"
+   * (upea vuoden 1863 katunäkymä, mutta lasilevylle on painettu studion
+   * omat tekstit "34 PRINCES ST. DUNEDIN 1863" ja "BURTON BROS
+   * DUNEDIN" — talon sääntö kieltää kuvan päälle lisätyn merkinnän),
+   * "The harbour, Suva..." -tyyppiset postikortit samasta syystä,
+   * "Baldwin St Dunedin MRD.jpg" ja "Baldwin Street.JPG" (tunnistettavat
+   * kasvot etualalla), "27 Octagon square, Dunedin..." (sekava, ihmisiä
+   * etualalla), "Dunedin cbd skyline.jpg" (sähkölangat halkovat taivaan,
+   * harmaa), "Organ pipes columnar joints Dunedin.jpg" (vain 1024 px
+   * leveä) ja "Dunedin Railway Station Full Exterior.jpg" (on jo
+   * matkakirjan valokuvataulussa).
+   * AIHETOISTO, joka on tarkoituksellinen: Octagon esiintyy kahdesti
+   * (ennen-nyt-parin nykykuvassa koko aukiona ja nostossa K1 Robert
+   * Burnsin patsaana) — eri tiedostot, eri mittakaava, ja aukio on koko
+   * kaupunkisuunnitelman risteyskohta.
+   *
+   * ENNEN JA NYT: pari EI ole sama kuin matkakirjan valokuvataulussa
+   * (js/packs/oceania-valokuvat.js), koska taulun vanha vedos on
+   * National Library NZ:n "no known copyright restrictions" -kuva, jota
+   * talon lisenssisääntö ei salli lehteen. Tilalle haettiin Albert Percy
+   * Godberin lasinegatiivi Octagonista vuodelta 1926 (PD) ja sen pariksi
+   * sama aukio nykyään.
+   */
+  dunedin: [
+    {
+      id: 'kaupunki',
+      nimi: 'Dunedin',
+      johdanto: 'Skotlantilaiset siirtolaiset rakensivat Dunedinin '
+        + 'Edinburghin kuvaksi maailman toiselle laidalle 1848, ja kulta '
+        + 'teki siitä isoisän matkan aikoihin hetkeksi Uuden-Seelannin '
+        + 'suurimman ja rikkaimman kaupungin.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti kolme
+       * laajaa yleiskuvaa kaupungin eri puolilta: koko kaupunki ilmasta,
+       * lahden suu ja keskusta kukkulalta.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Dunedin and the Otago Peninsula, Otago, New Zealand, 12th. Dec. 2010 - Flickr - PhillipC.jpg',
+          selite: 'Dunedin ja Otagon niemimaa ovat saman sammuneen '
+            + 'tulivuoren päällä, ja lahti täyttää sen kuluneimman osan.',
+          lahde: 'Phillip Capper from Wellington, New Zealand, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Otago Harbour towards Aramoana.jpg',
+          selite: 'Otago Harbour on 23 kilometriä pitkä, ja sen suulla '
+            + 'Aramoanan hiekkasärkkä erottaa lahden avomerestä.',
+          lahde: 'Pseudopanax at English Wikipedia, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Dunedin City Centre from Roslyn.jpg',
+          selite: 'Keskusta laskeutuu Stuart Streetiä pitkin satamaan, ja '
+            + 'sen ympärillä kaupunki nousee jyrkille rinteille.',
+          lahde: 'ChristchurchHistorian, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat kaupungin ERI puolilta — lahti niemimaan tieltä,
+       * Etelä-Tyynenmeren ranta ja aukio, jolle kaupunki piirrettiin.
+       * Dunedinille ei ole vielä generoitu herokuvia, joten karusellissa
+       * on kolme aitoa valokuvaa (vertaa Buenos Airesiin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Otago Bay (16353725589).jpg',
+          selite: 'Otago Harbourin rantatie kiertää niemimaan kylien ohi, '
+            + 'ja rinteillä kasvaa tī kōuka eli kaalipuu.',
+          lahde: 'Christoph Strässler from Oberdorf BL, Schweiz, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'St. Clair Beach Dunedin.jpg',
+          selite: 'St Clairin ranta on kaupungin eteläreunalla avointa '
+            + 'Tyyntämerta vasten, ja sen takana kohoavat vihreät kukkulat.',
+          lahde: 'Alexeyevitch, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Harbour Cone Hereweka, Dunedin, New Zealand.jpg',
+          selite: 'Hereweka eli Harbour Cone on Otagon niemimaan '
+            + 'tunnistettavin kartio ja osa samaa vanhaa tulivuorta kuin '
+            + 'kaupunki itse.',
+          lahde: 'Njhinku, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'View of the Octagon, Dunedin, 1926. ATLIB 295734.png',
+          vuosi: '1926',
+          selite: 'Octagonilla kulki 1920-luvulla raitiovaunu, ja aukion '
+            + 'takaa näkyy First Churchin torni.',
+          lahde: 'Godber, Albert Percy, 1875-1949, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'The Octagon, Dunedin City, Otago.jpg',
+          selite: 'Sama kahdeksankulmainen aukio on yhä kaupungin ydin, '
+            + 'jonka laidalla ovat kaupungintalo kellotorneineen ja '
+            + 'katedraali.',
+          lahde: 'AnnWoolliams, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Uusi Edinburgh maailman toisella laidalla',
+          teksti: 'Skotlannin vapaakirkon maallikkojärjestö perusti '
+            + 'Dunedinin 1848 Otago Harbourin perukkaan, ja nimi on '
+            + 'gaelia: Dùn Èideann on Edinburgh. Kaupunginmittaaja '
+            + 'Charles Kettle sai ohjeekseen jäljitellä emokaupunkia ja '
+            + 'piirsi komean, romanttisen katuverkon, jonka rakentajat '
+            + 'sitten taistelivat läpi mäkisen maaston. Maallisena '
+            + 'johtajana toimi Napoleonin sotien veteraani William '
+            + 'Cargill ja hengellisenä pastori Thomas Burns, runoilija '
+            + 'Robert Burnsin veljenpoika. 1850-luvun loppuun mennessä '
+            + 'kaupunkiin oli muuttanut noin 12 000 skottia, monet '
+            + 'teollistuneelta Lowlandsin alueelta.',
+          tiedosto: 'Dunedin Burns Statue.JPG',
+          selite: 'Octagonilla istuva Robert Burns on kaupungin '
+            + 'skotlantilaisen perustamisen tunnus, ja runoilijan '
+            + 'veljenpoika Thomas Burns oli siirtokunnan hengellinen '
+            + 'johtaja.',
+          lahde: 'Mattinbgn, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Dunedin',
+        },
+        {
+          otsikko: 'Kulta teki siirtokunnasta maan rikkaimman',
+          teksti: 'Vuonna 1861 löytyi kultaa Gabriel’s Gullystä, ja väki '
+            + 'tulvi Otagoon niin nopeasti, että Dunedinista tuli 1865 '
+            + 'väkiluvultaan Uuden-Seelannin ensimmäinen kaupunki. '
+            + 'Kultarahat rakensivat myös pysyvää: 1869 perustettiin '
+            + 'Otagon yliopisto, maan vanhin, ja 1875 dunedinilainen '
+            + 'James Mills perusti Union-laivayhtiön, josta kasvoi '
+            + 'eteläisen pallonpuoliskon suurin varustamo. Vuoteen 1874 '
+            + 'mennessä Dunedin lähiöineen oli ohittanut Aucklandin '
+            + 'asukasluvultaan — 29 832 vastaan 27 840 — ja oli hetken '
+            + 'koko maan suurin kaupunki.',
+          tiedosto: 'University of Otago Clocktower. NZ (22954035383).jpg',
+          selite: 'Otagon yliopiston rekisteritalo eli kellotorni on '
+            + 'muurattu tummasta Leith Valleyn basaltista ja vaaleasta '
+            + 'Oamarun kivestä.',
+          lahde: 'Bernard Spragg. NZ from Christchurch, New Zealand, Wikimedia Commons (CC0)',
+          wiki: 'University of Otago',
+        },
+        {
+          otsikko: 'Vuosi, jolloin kolme hanketta valmistui yhtä aikaa',
+          teksti: 'Isoisän matkan vuonna 1873 kolme erillistä '
+            + 'Dunedin-hanketta saapui maaliin. Marraskuun 23. päivänä '
+            + 'vihittiin käyttöön First Church of Otago; perustuskivi oli '
+            + 'laskettu viisi vuotta aiemmin, ja torni huippuineen kohoaa '
+            + '56 metriin. Samana vuonna kaupungin oma Bank of Otago '
+            + 'sulautui vasta perustettuun National Bank of New '
+            + 'Zealandiin, joka niin ikään toimi Dunedinista käsin. Ja '
+            + 'huhtikuun 9. päivänä Dunedin & Port Chalmers '
+            + '-rautatie, kaupungin ensimmäinen, myytiin Otagon '
+            + 'maakuntaneuvostolle 187 106 punnalla.',
+          tiedosto: 'First church of Otago.jpg',
+          selite: 'First Church of Otago on Robert Lawsonin suunnittelema '
+            + 'goottilainen kirkko, jonka torni ja huippu nousevat 56 '
+            + 'metriin.',
+          lahde: 'AnnWoolliams, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'First Church of Otago',
+        },
+        {
+          otsikko: 'Museo, joka perusti itsensä juhlavuonna',
+          teksti: 'Kun Otagon skotlantilainen siirtokunta täytti 50 vuotta '
+            + '1898, varhaiset uudisasukkaat perustivat juhlan kunniaksi '
+            + 'oman museonsa. Siitä kasvoi Toitū Otago Settlers Museum, '
+            + 'Uuden-Seelannin vanhin historiamuseo. Alkuun se keskittyi '
+            + 'vain vuosien 1848–1861 pioneereihin mutta laajeni '
+            + 'myöhemmin kattamaan kaikki tulokkaat, ja silloin sana '
+            + '"early" katosi nimestä. Museon kuljetussiipi on entinen '
+            + 'vuoden 1939 art deco -linja-autoasema, jossa nyt seisovat '
+            + 'kaupungin vanhat raitiovaunut ja veturit. Dunedinin '
+            + 'kaupunki otti museon omistukseensa 1991.',
+          tiedosto: 'Toitu Otago Settlers Museum main wing.jpg',
+          selite: 'Toitū Otago Settlers Museumin punatiilinen päärakennus '
+            + 'seisoo keskustan eteläreunalla rautatieaseman kupeessa.',
+          lahde: 'Tony Hisgett from Birmingham, UK, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Toitū Otago Settlers Museum',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: '00 1512 Dunedin (New Zealand) railway station.jpg',
+          selite: 'Dunedinin rautatieasema valmistui 1906 George Troupin '
+            + 'piirustusten mukaan, ja paikalliset pitävät sitä maan '
+            + 'valokuvatuimpana rakennuksena.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Dunedin on Eteläsaaren kaakkoiskulmassa, 23 kilometriä '
+          + 'pitkän Otago Harbour -lahden perukassa. Matkailijan Dunedin '
+          + 'on kaksiosainen: keskusta mahtuu Octagonin ympärille '
+          + 'muutaman korttelin alalle, ja siitä lähtee kapea niemimaa, '
+          + 'jonka kärjessä albatrossit pesivät. Kaupunki on rakennettu '
+          + 'sammuneen tulivuoren päälle, ja se tuntuu jaloissa: melkein '
+          + 'joka suuntaan Octagonilta nousee jyrkkä katu. Yliopisto tuo '
+          + 'keskustaan opiskelijoita, ja viktoriaaninen kivikeskusta on '
+          + 'peruja vuosista, jolloin kulta teki Dunedinista maan '
+          + 'rikkaimman kaupungin.',
+        artikkeli: {
+          nimi: 'Matkailijan Dunedin',
+          taitto: 'opas',
+          teksti: 'Skottien piirtämä kaupunki sammuneen tulivuoren '
+            + 'päällä, ja sen kupeessa niemimaa, jolla pesivät maailman '
+            + 'harvinaisin pingviini ja mantereen ainoat albatrossit.',
+          nosto: 'Kaupunkia ympäröivä kukkularengas — Mount Cargill, '
+            + 'Flagstaff, Saddle Hill, Signal Hill — ja koko Otagon '
+            + 'niemimaa ovat saman tulivuoren jäänteitä; Otago Harbour '
+            + 'täyttää sen vanhimman ja kuluneimman osan.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Dunedin Airport on Momonan kylässä noin puolen '
+                + 'tunnin ajomatkan päässä keskustasta; se avattiin 1962 '
+                + 'ja palveli vuonna 2024 lähes 904 000 matkustajaa. '
+                + 'Rautateitse kaupunkiin ei enää pääse säännöllisillä '
+                + 'henkilöjunilla, vaan asemalta lähtevät nykyään vain '
+                + 'turistijunat — parhaimmillaan täältä kulki sata junaa '
+                + 'päivässä. Keskustassa liikutaan kävellen: Octagonilta '
+                + 'on rautatieasemalle ja Toitū-museolle vain vartin '
+                + 'matka, ja lähes joka suunnassa vastassa on ylämäki. '
+                + 'Otagon niemimaan kärkeen Taiaroa Headille on runsaat '
+                + 'kaksikymmentä kilometriä, mutta rantatie mutkittelee, '
+                + 'joten matkaan kannattaa varata tunti.',
+            },
+            {
+              otsikko: 'Kaupunki sammuneen tulivuoren päällä',
+              teksti: 'Koko Dunedin lepää tulivuoren päällä. '
+                + 'Monipurkauspaikkainen kilpitulivuori oli aktiivinen '
+                + '16–10 miljoonaa vuotta sitten ja ulottui alun perin '
+                + 'nykyisestä kaupungista Aramoanaan asti. Otago Harbour '
+                + 'täyttää nyt tulivuoren vanhimmat ja eniten kuluneet '
+                + 'osat, ja kaupunkia ympäröivä kukkularengas — Mount '
+                + 'Cargill, Flagstaff, Saddle Hill ja Signal Hill — sekä '
+                + 'koko Otagon niemimaa ovat saman purkauskentän '
+                + 'jäänteitä. Laavan jäähtyessä syntyneet basalttipatsaat '
+                + 'näkyvät yhä paljaina rinteillä, esimerkiksi Mount '
+                + 'Cargillin Organ Pipesilla.',
+              kuva: {
+                tiedosto: 'Columnar basalt, Otago Peninsula, NZ.JPG',
+                selite: 'Basalttipatsaat syntyivät, kun paksu laavavirta '
+                  + 'jäähtyi ja halkeili säännöllisiksi pilareiksi.',
+                lahde: 'Benchill, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: puutarha nimeltä Lan Yuan',
+              teksti: 'Keskustan reunalla, Toitū-museon ja rautatieaseman '
+                + 'kupeessa, kukoistaa Lan Yuan — Uuden-Seelannin ainoa '
+                + 'aito kiinalainen puutarha ja yksi vain kolmesta koko '
+                + 'Kiinan ulkopuolella Portlandin ja Vancouverin ohella. '
+                + 'Puutarha suunniteltiin ja esivalmistettiin '
+                + 'Shanghaissa, purettiin ja koottiin uudelleen '
+                + 'Dunedinissa shanghailaisten käsityöläisten avulla; se '
+                + 'avattiin 2008. Puutarha on kunnianosoitus kaupungin '
+                + 'kiinalaisyhteisölle, joka on maan vanhin: '
+                + 'kantonilaisia asettui Dunediniin jo 1860-luvun '
+                + 'kultaryntäyksen aikaan, noin viisitoista vuotta '
+                + 'kaupungin perustamisen jälkeen.',
+              kuva: {
+                tiedosto: 'Entrance hall reflecting in the lake in the evening (Dunedin Chinese Garden).jpg',
+                selite: 'Lan Yuanin sisääntulohalli heijastuu puutarhan '
+                  + 'lampeen iltavalossa.',
+                lahde: 'Pseudopanax at English Wikipedia, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kasvu siirtyi pohjoiseen',
+              teksti: 'Vuoteen 1900 mennessä Dunedin ei enää ollut maan '
+                + 'suurin kaupunki. Vaikutusvalta ja kasvu olivat '
+                + 'siirtyneet pohjoisemmas — ilmiötä kutsuttiin nimellä '
+                + '"the drift north", ja se jatkui suuren osan '
+                + '1900-lukua. Kaupunki putosi lopulta neljänneksi '
+                + 'pääkeskukseksi Aucklandin, Wellingtonin ja '
+                + 'Christchurchin jälkeen. Vasta 1990-luvulla väestökato '
+                + 'tasaantui ja Dunedin keksi itsensä uudelleen '
+                + 'perintökaupunkina: viktoriaaniset pääkadut '
+                + 'kunnostettiin, ja juuri se kivikeskusta, jota '
+                + 'kultavuosien raha oli rakentanut, muuttui kaupungin '
+                + 'vahvuudeksi.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Dunedin-artikkelin '
+                + 'sääruudusta (NIWA, normaalikausi 1991–2020); lehdellä '
+                + 'ei ole omaa vuosigraafia, koska ERA5-lukuja ei saatu '
+                + 'haettua. Ilmasto on lauhkea ja merellinen: tammikuu on '
+                + 'lämpimin kuukausi keskilämpötilaltaan 15,2 astetta ja '
+                + 'heinäkuu kylmin 6,7 asteella, eli vuoden ääripäät ovat '
+                + 'yhdeksän asteen päässä toisistaan. Sadetta tulee noin '
+                + '720 millimetriä vuodessa ja se jakautuu tasaisesti — '
+                + 'kuivin kuukausi syyskuu saa 47 ja sateisin joulukuu 71 '
+                + 'millimetriä — mutta sade tulee usein tihkuna. '
+                + 'Aurinkoa paistaa vajaat 1 800 tuntia vuodessa. '
+                + 'Vuodenajat ovat käänteiset: kesä on joulu–helmikuussa.',
+              kuva: {
+                tiedosto: 'Dunedin Botanic Garden 05.jpg',
+                selite: 'Dunedinin kasvitieteellisen puutarhan '
+                  + 'kalliopuutarha rinteessä kukkii marraskuussa eli '
+                  + 'eteläisen pallonpuoliskon keväässä.',
+                lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Otagon niemimaa',
+                tahdet: 3,
+                selite: 'Kapea vanhan tulivuoren harjanne, jonka kärjessä '
+                  + 'pesivät kuninkaanalbatrossit ja rinteillä hoiho.',
+              },
+              {
+                mita: 'Rautatieasema',
+                tahdet: 3,
+                selite: 'Vuoden 1906 edustusrakennus, jonka lattiassa on '
+                  + 'lähes 750 000 Minton-laattaa.',
+              },
+              {
+                mita: 'Toitū Otago Settlers Museum',
+                tahdet: 2,
+                selite: 'Maan vanhin historiamuseo ja sen art deco '
+                  + '-linja-autoasemaan rakennettu kuljetussiipi.',
+              },
+              {
+                mita: 'Larnach Castle',
+                tahdet: 2,
+                selite: 'Uuden-Seelannin ainoa linnaksi kutsuttu talo '
+                  + 'niemimaan harjanteella.',
+              },
+              {
+                mita: 'Baldwin Street',
+                tahdet: 2,
+                selite: 'Maailman jyrkin katu, jonka jyrkin kohta nousee '
+                  + 'suhteessa 1:2,86.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Sääluvut ovat samasta sääruudusta kuin
+             * jakso 5. Pesimäalueita koskeva kohta on mukana, koska
+             * hoiho on uhanalainen ja rannat ovat sen elinaluetta.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Vuodenajat ovat käänteiset',
+                teksti: 'Kesä on joulu–helmikuussa ja talvi '
+                  + 'kesä–elokuussa; heinäkuun keskilämpötila on 6,7 '
+                  + 'astetta.',
+              },
+              {
+                otsikko: 'Tihkusadetta ympäri vuoden',
+                teksti: 'Vuosisade on noin 720 millimetriä ja se jakautuu '
+                  + 'kaikille kuukausille — sadepäiviä on kesälläkin '
+                  + 'seitsemästä kymmeneen kuukaudessa.',
+              },
+              {
+                otsikko: 'Katu voi olla jyrkempi kuin uskoo',
+                teksti: 'Baldwin Streetin jyrkin kohta nousee suhteessa '
+                  + '1:2,86, eli lähes 35 prosenttia — kävely ylös on '
+                  + 'oikea nousu.',
+              },
+              {
+                otsikko: 'Pingviinit ovat uhanalaisia',
+                teksti: 'Hoihon kanta on romahtanut niemimaalla, ja '
+                  + 'pesimärannoilla liikutaan vain merkityillä poluilla '
+                  + 'ja katselukojuista.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Otagon niemimaa',
+      johdanto: 'Otagon niemimaa on sammuneen tulivuoren jäänne, jonka '
+        + 'kärjessä kuninkaanalbatrossit pesivät ainoana paikkana '
+        + 'asutulla mantereella. Kāi tahulle sama kärki on Ōtākou, nimi '
+        + 'josta koko maakunta on saanut nimensä.',
+      tehtava: {
+        kysymys: 'Kuinka paljon keltasilmäpingviinin kanta on pudonnut '
+          + 'Otagon niemimaalla 1990-luvun puolivälistä?',
+        vaihtoehdot: [
+          'noin 25 prosenttia',
+          'noin 40 prosenttia',
+          'noin 75 prosenttia',
+          'kanta on kaksinkertaistunut',
+        ],
+        oikea: 2,
+        fakta: 'Otagon niemimaan hoiho-kanta on pudonnut 75 prosenttia '
+          + '1990-luvun puolivälistä, ja kehityssuunta ennakoi lajin '
+          + 'katoamista niemimaalta 20–40 vuoden sisällä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Nimi, joka kirjoitettiin väärin ja jäi',
+          teksti: 'Ōtākou on kāi tahun oman rūnangan koti tänäkin '
+            + 'päivänä. Ennen maorin kirjoitusasun vakiintumista '
+            + '1840-luvulla nimi kirjoitettiin ääntämyksen mukaan Otago, '
+            + 'ja juuri se muoto jäi koko maakunnan nimeksi — vaikka sitä '
+            + 'luullaan usein eurooppalaiseksi vääntymäksi. Syy on '
+            + 'eteläisessä murteessa: ng-äänne on siinä sulautunut '
+            + 'k:hon, joten Ngāi Tahu on täällä Kāi Tahu. Paikan '
+            + 'eurooppalaishistoria alkoi Weller-veljesten 1831 '
+            + 'perustamasta valaanpyyntiasemasta, joka oli hetken yksi '
+            + 'maan suurimmista siirtokunnista ja suljettiin '
+            + '1840-luvulla valaskantojen ehdyttyä.',
+          tiedosto: 'Otakou marae.jpg',
+          selite: 'Ōtākoun marae niemimaan kärjessä on paikallisen '
+            + 'rūnangan koti, ja sen rakennukset valmistuivat '
+            + '1940-luvulla.',
+          lahde: 'Photo by Avenue, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Ōtākou',
+        },
+        {
+          otsikko: 'Kärki, jonne albatrossit tulevat mantereelle',
+          teksti: 'Taiaroa Head Otagon niemimaan kärjessä on maailman '
+            + 'ainoa kuninkaanalbatrossien pesimäyhdyskunta asutulla '
+            + 'mantereella; kaikki muut lajin pesimäpaikat ovat '
+            + 'syrjäisillä saarilla. Ensimmäinen muna löydettiin täältä '
+            + '1919, mutta ensimmäisen poikasen selviytyminen '
+            + 'lentokykyiseksi nähtiin vasta 1938, ornitologi Lance '
+            + 'Richdalen työn tuloksena. Yli sadan linnun kanta on '
+            + 'vuosikymmenten hoitotyön tulos: kissoja, hillereitä, '
+            + 'näätiä ja lumikkoja pyydystetään pesimäalueelta jatkuvasti '
+            + 'pois.',
+          tiedosto: 'Northern royal albatross chick at Taiaroa Head, Aaron Heimann.jpg',
+          selite: 'Kuninkaanalbatrossin poikanen kasvaa Taiaroa Headin '
+            + 'ruohikossa lajin ainoassa mantereella sijaitsevassa '
+            + 'yhdyskunnassa.',
+          lahde: 'Aaron Heimann, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Taiaroa Head',
+        },
+        {
+          otsikko: 'Maailman harvinaisin pingviini vetäytyy',
+          teksti: 'Hoiho eli keltasilmäpingviini on IUCN:n luokituksessa '
+            + 'uhanalainen, ja Otagon niemimaalla sen kanta on '
+            + 'romahtanut 75 prosenttia 1990-luvun puolivälistä. '
+            + 'Kehityssuunta ennakoi lajin katoamista niemimaalta '
+            + 'kokonaan 20–40 vuoden sisällä. Syitä on useita: meren '
+            + 'lämpeneminen, 2000-luvun puolivälin tautiepidemia joka '
+            + 'tappoi lintuja suoraan, sekä kalastuksen ja saastumisen '
+            + 'vaikutukset, joiden osuutta tutkijat pitävät mahdollisesti '
+            + 'yhtä suurena tai suurempana kuin ilmastonmuutoksen.',
+          tiedosto: 'Megadyptes antipodes -Otago Peninsula, Dunedin, New Zealand -family-8.jpg',
+          selite: 'Hoiho pesii Otagon niemimaan rinteillä kasvillisuuden '
+            + 'suojaan ja sille rakennettuihin pesäkoppeihin.',
+          lahde: 'Steve from Bangkok, Thailand, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Yellow-eyed penguin',
+        },
+        {
+          otsikko: 'Uuden-Seelannin ainoa linna',
+          teksti: 'William Larnach osti maan 1870 ja aloitti '
+            + 'rakennustyöt 1871. Sama arkkitehti Robert Lawson, joka '
+            + 'suunnitteli First Churchin, loihti tällä kertaa '
+            + 'goottilaisen kartanon niemimaan harjanteelle. Materiaaleja '
+            + 'tuotiin ympäri maailmaa: Oamarun kiveä, venetsialaista '
+            + 'lasia, italialaista marmoria. Paikallislehti nimesi '
+            + 'rakennuksen linnaksi joulukuussa 1874, muutama päivä sen '
+            + 'jälkeen kun William ja Eliza Larnach olivat muuttaneet '
+            + 'sisään; 1887 valmistui vielä juhlasali tyttären '
+            + '21-vuotislahjaksi. Larnach kuoli parlamenttitalossa 1898, '
+            + 'ja perhe myi kartanon 1906.',
+          tiedosto: 'Larnach Castle, Dunedin.jpg',
+          selite: 'Larnach Castle on Uuden-Seelannin ainoa linnaksi '
+            + 'kutsuttu rakennus, ja sen edustalla on muotopuutarha '
+            + 'suihkulähteineen.',
+          lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Larnach Castle',
+        },
+      ],
+    },
+  ],
+  /*
+   * SUVA (Opus 6.9.2026, paketti O9) — Oseanian laudan viides
+   * kaupunkilehti ja Tyynenmeren saarten ensimmäinen. Aineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-suva.md ja sen riippumaton
+   * tarkistus tarkistus-suva.md. Tarkistuksen molemmat pakolliset
+   * korjaukset oli jo tehty faktapohjaan ennen kirjoitusta: 1873-kehyksen
+   * ylilyönti ("ei edes kunnollista kylää") korjattiin lähteen omalla
+   * sanamuodolla ("in 1868, when Suva was still a small village"), ja
+   * H2-nostoon lisättiin päätoimittajan vaatima elävän nykypäivän virke.
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026: "Suva",
+   * "Fiji", "Colony of Fiji", "Seru Epenisa Cakobau", "Indo-Fijians",
+   * "Girmitiyas", "Grand Pacific Hotel (Fiji)", "Albert Park (Suva)",
+   * "Rewa River", "University of the South Pacific", "Kava" ja
+   * "Colo-i-Suva Forest Reserve".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti (js/packs/oceania-saapumiset.js) oli jo olemassa
+   * eikä siihen koskettu.
+   *
+   * KAI COLO -SOTA 1873 ON MUKANA päätoimittajan 24.8.2026 päätöksen
+   * NELJÄLLÄ SITOVALLA EHDOLLA (spec-mantereet.md): käytetty faktapohjan
+   * tiivistettyä versiota, EI tarkkoja surmalukuja, EI dynamiittia, EI
+   * vankien orjamyyntiä, ja kansa kuvataan elävänä nykypäivän toimijana.
+   * Nosto H2 päättyy siksi virkkeeseen ylänköjen kylistä tänään.
+   * Fidžin vallankaappaukset (1987, 2000, 2006) on jätetty kokonaan pois,
+   * vaikka lähdeartikkelit puhuvat niistä paljon — sama linjaus kuin
+   * muuallakin pelissä (ei nykypolitiikkaa).
+   *
+   * SÄÄRIVIÄ EI OLE. Open-Meteon arkisto vastasi 6.9.2026 jokaiseen
+   * pyyntöön "Daily API request limit exceeded", eikä lukuja keksitä
+   * (Samarkand-malli v965). Oppaan sääjakso nojaa siksi en-Wikipedian
+   * sääruutuun ja sanoo sen ääneen: luvut ovat Laucala Bayn asemalta,
+   * Maailman ilmatieteen järjestön normaalikaudelta 1991-2020.
+   * LUKURISTIRIITA KIRJOITETTU AUKI: artikkelin leipäteksti sanoo
+   * kuivimman kuukauden heinäkuun saavan 125 mm, mutta saman artikkelin
+   * 1991-2020-sääruutu antaa heinäkuulle 136 mm. Oppaassa käytetään
+   * sääruudun lukua ja lähde sanotaan ääneen.
+   *
+   * KUVAT haettiin Commonsin API:sta kategoriahauilla (Suva, Views of
+   * Suva, History of Suva, Grand Pacific Hotel Fiji, Albert Park (Suva),
+   * Seru Epenisa Cakobau, Fiji Museum, Colo-i-Suva, Suva City Carnegie
+   * Library), lisenssi ja tekijä luettiin extmetadatasta 6.9.2026, ja
+   * jokainen valittu kuva katsottiin silmin 900 px esikatseluna.
+   * SUVAN KUVAPOOLI ON OHUT, ja se näkyy hylkäyksissä: Maksym Kozlenkon
+   * laaja Suva-sarja on enimmäkseen katukuvaa, jossa on tunnistettavia
+   * kasvoja lähietäisyydellä (hylätty "Suva, Fiji 28/31/54/62/64/67"),
+   * samoin "Main Market Suva MatthiasSuessen-8936.jpg" ja "Boats by Town
+   * Wharf - Flickr - mikecogh.jpg". Vanha kuvasto on suurelta osin
+   * postikortteja, joihin on painettu kustantajan teksti — hylätty
+   * "The harbour, Suva, Fiji (NYPL Hades-2359163-4043519).jpg" (THE ROSE
+   * SERIES -painatus ja käsin kirjoitettu vuosiluku). Hylätty myös
+   * "Girmitiyas, Indentured labour.jpg" (Commons-käyttäjän oma
+   * lyijykynäpiirros, ei dokumentti) ja "Suva City.jpg" (mainostaulut
+   * pääosassa, hämärä).
+   * KOLME ARVATTUA KATEGORIAA EI OLE OLEMASSA, kuten tarkistus varoitti:
+   * Category:Fijians, Category:Indo-Fijians ja Category:Rewa River.
+   * AIHETOISTO, joka on tarkoituksellinen: keskustan halki laskeva puro
+   * esiintyy kolmesti (avauskuvassa suulta päin, ennen-nyt-parin
+   * molemmissa puoliskoissa) — eri tiedostot ja eri mittakaava, ja juuri
+   * tuon puron rannalta koko kaupunki alkoi kasvaa. Albert Park on
+   * kannessa ja nostossa H4 kahtena eri kuvana.
+   *
+   * ENNEN JA NYT on sama pari kuin matkakirjan valokuvataulussa
+   * (js/packs/oceania-valokuvat.js) siltä osin, että vanha vedos on sama
+   * Henry Winkelmannin lasinegatiivi vuodelta 1903; nykykuva on
+   * kuitenkin eri, koska taulun nykykuva on rantapromenadilta eikä
+   * samalta purolta. Selitteet on kirjoitettu tänne omiksi yhden
+   * virkkeen versioikseen.
+   */
+  suva: [
+    {
+      id: 'kaupunki',
+      nimi: 'Suva',
+      johdanto: 'Suva nousi mangroverantaiselle niemelle vasta isoisän '
+        + 'matkan jälkeen: 1873 paikalla oli pieni kylä ja kariutunut '
+        + 'puuvillahanke, ja Fidžin pääkaupunki oli vielä Levuka.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin. Ne ovat silti kolme laajaa yleiskuvaa: lahti ja
+       * sisämaan vuoret, sataman suu ja Albert Parkin aukio.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Suva Panorama MatthiasSuessen-8640.jpg',
+          selite: 'Suvan lahden takana kohoavat Viti Levun sisämaan '
+            + 'vuoret, joiden oikeassa reunassa erottuu Joske’s Thumbin '
+            + 'kärki.',
+          lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Suva Bay (Imagicity 1016).jpg',
+          selite: 'Suvan lahtea reunustavat matalat mangroverannat, ja '
+            + 'sen takana nousee vuorijono, joka pysäyttää '
+            + 'kaakkoispasaatin kosteuden.',
+          lahde: 'Graham Crumb, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Albert Park Suva 1 July 2014.jpg',
+          selite: 'Albert Parkin nurmikenttä on kaupungin suurin avoin '
+            + 'tila, ja sen takana seisoo vuoden 1914 Grand Pacific '
+            + 'Hotel.',
+          lahde: 'Stemoc, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: kolme laajaa yleiskuvaa kaupungin eri puolilta —
+       * keskustan katot, illan lahti ja purosuu, jonka rannalta kaupunki
+       * alkoi. Suvalle ei ole vielä generoitu herokuvia, joten
+       * karusellissa on kolme aitoa valokuvaa.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Suva City 1 February 2015.jpg',
+          selite: 'Suvan keskustassa siirtomaa-ajan matalat talot ja '
+            + '1970-luvun konttoritornit seisovat samassa korttelissa.',
+          lahde: 'Stemoc, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Sunset Suva MatthiasSuessen-7976.jpg',
+          selite: 'Aurinko laskee Suvan lahdelle, jonka rannalla '
+            + 'kaupunkilaiset istuvat katosten alla.',
+          lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Suva, Fiji 36.jpg',
+          selite: 'Keskustan halki laskeva puro erottaa vanhat '
+            + 'kauppakorttelit satamasta.',
+          lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Fiji Islands. Suva creek scene and township, 1903, PH-NEG-2561 001.jpg',
+          vuosi: '1903',
+          selite: 'Vuonna 1903 puron rannassa oli veneveistämö ja '
+            + 'puutaloja, ja pääkaupunki oli ollut Suvassa runsaat '
+            + 'kaksikymmentä vuotta.',
+          lahde: 'Henry Winkelmann, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Suva, Fiji 91.jpg',
+          selite: 'Sama puro virtaa yhä keskustan halki, mutta rannoilla '
+            + 'ovat nyt ostoskeskukset ja bougainvillea.',
+          lahde: 'Maksym Kozlenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Niemi, joka ei ollut vielä kaupunki',
+          teksti: 'Vuonna 1868 Baun sotapäällikkö Cakobau lahjoitti '
+            + 'australialaiselle Polynesia-yhtiölle 5 000 neliökilometriä '
+            + 'maata maksuksi Yhdysvalloille velatuista korvauksista, ja '
+            + 'yli 575 neliökilometriä siitä oli Suvan lähellä. Yhtiö '
+            + 'aikoi perustaa puuvillaviljelmän, mutta maaperä ja ilmasto '
+            + 'osoittautuivat sopimattomiksi. Kun isoisä kulki ohi 1873, '
+            + 'seudulla oli vain pieni Suvan kylä: pääkaupunki oli '
+            + 'Levuka, eikä Fidži ollut vielä Britannian siirtomaa. '
+            + 'Kaupunki syntyi vasta 1877, kun siirtomaaviranomaiset '
+            + 'siirsivät pääkaupungin tänne — Levukan ahdas paikka '
+            + 'vuoren ja meren välissä esti laajentumisen.',
+          tiedosto: 'Admiralty Chart No 1757 Nukulau Island to Namuka Island, including Lauthala, Suva and Namuka Harbs., Fiji Islands, Published 1876.jpg',
+          selite: 'Brittiläinen merikartta Suvan satamasta julkaistiin '
+            + '1876, kaksi vuotta sen jälkeen kun saaret oli luovutettu '
+            + 'Britannialle.',
+          lahde: 'United Kingdom Hydrographic Office, Wikimedia Commons (PD)',
+          wiki: 'Suva',
+        },
+        {
+          otsikko: 'Tyynenmeren New York',
+          teksti: 'Suvaa on kutsuttu Tyynenmeren New Yorkiksi — ei kokonsa '
+            + 'vaan monikulttuurisuutensa takia. Kaupungin kaksi '
+            + 'suurinta väestöryhmää ovat alkuperäiset fidžiläiset eli '
+            + 'iTaukei ja intialaista syntyperää olevat indofidžiläiset; '
+            + 'lisäksi Suvassa asuu rotumalaisia, lauanialaisia, '
+            + 'rabilaisia, kiinalaisia ja eurooppalaisten jälkeläisiä. '
+            + 'Kaupunki isännöi enemmän kansainvälisiä ja alueellisia '
+            + 'järjestöjä kuin mikään muu Tyynenmeren saaripääkaupunki, '
+            + 'ja Etelä-Tyynenmeren yliopiston pääkampus tuo tänne '
+            + 'opiskelijoita kaikkialta valtamereltä.',
+          tiedosto: 'Carnegie Library Suva MatthiasSuessen-8648.jpg',
+          selite: 'Suvan Carnegie-kirjasto rakennettiin 1909 ja on yhä '
+            + 'käytössä kaupungin kirjastona.',
+          lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Suva',
+        },
+        {
+          otsikko: 'Laiva, joka toi 61 000 uutta asukasta',
+          teksti: 'Höyrylaiva Leonidas laski ankkurin Levukassa 14. '
+            + 'toukokuuta 1879 ja purki 498 intialaista sopimustyöläistä '
+            + '— ensimmäiset niistä yli 61 000:sta, jotka saapuivat '
+            + 'seuraavien 37 vuoden aikana viljelemään sokeriruokoa. '
+            + 'Sopimus, jota kutsuttiin girmitiksi englannin sanasta '
+            + 'agreement, sitoi työntekijän viideksi vuodeksi kerrallaan, '
+            + 'ja valtaosa jäi Fidžiin sopimuskauden päätyttyä. '
+            + 'Järjestelmä lakkautettiin virallisesti 1920. Sen perintö '
+            + 'elää: vuoden 2017 väestönlaskennassa indofidžiläisiä oli '
+            + '289 237 eli 32,7 prosenttia koko maan väestöstä.',
+          tiedosto: 'Fiji Museum in Suva.jpg',
+          selite: 'Fidžin museo toimii Thurston Gardensin puistossa, ja '
+            + 'sen sisäänkäyntiä koristaa saarten luontoa esittävä '
+            + 'seinämaalaus.',
+          lahde: 'Yuko Hara from Yokohama, Japan, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Indo-Fijians',
+        },
+        {
+          otsikko: 'Hotelli, jossa merimatka ei päättynyt',
+          teksti: 'Kun uusiseelantilainen Union Steamship Company avasi '
+            + 'Grand Pacific Hotelin 23. toukokuuta 1914, huoneet oli '
+            + 'suunniteltu ensimmäisen luokan laivahyteiksi '
+            + 'suolavesikylpyammeineen, ja 4,5 metriä leveä terassi '
+            + 'kiersi koko rakennuksen kuin laivan kansi — matkustajan ei '
+            + 'ollut tarkoitus tuntea astuneensa maihin. Hotellista tuli '
+            + 'siirtomaa-Suvan sydän: siellä yöpyivät muun muassa '
+            + 'Somerset Maugham 1916 ja James A. Michener kirjoittaessaan '
+            + 'Tarinoita Etelämereltä 1946–1947. Hotelli suljettiin '
+            + 'rappeutuneena 1992 ja avattiin entisöitynä uudelleen 24. '
+            + 'toukokuuta 2014, tasan sata vuotta avajaisistaan.',
+          tiedosto: 'GPH Suva MatthiasSuessen-7735.jpg',
+          selite: 'Grand Pacific Hotelin valkoinen julkisivu ja '
+            + 'kuninkaanpalmut ovat Suvan rantabulevardin tunnetuin '
+            + 'näkymä.',
+          lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Grand Pacific Hotel (Fiji)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Sacred Heart Suva MatthiasSuessen-8140.jpg',
+          selite: 'Pyhän sydämen katedraali kohoaa kaksitorniseksi Suvan '
+            + 'keskustan laidalla, ja julkisivun päällä seisoo '
+            + 'Kristus-patsas.',
+          lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Suva on Fidžin pääkaupunki ja Etelä-Tyynenmeren suurin '
+          + 'kaupunki. Se on rakennettu kukkulaiselle niemelle Viti Levun '
+          + 'kaakkoiskulmassa, Laucala Bayn ja Suva Harbourin väliin. '
+          + 'Matkailijan Suva on kompakti: siirtomaa-ajan hallintokortteli '
+          + 'puistoineen, museoineen ja hotelleineen mahtuu kilometrin '
+          + 'säteelle rantabulevardin varrelle, ja sen takaa alkavat '
+          + 'kauppakadut. Niemi on lähes meren ympäröimä, mutta sen '
+          + 'rantaa reunustavat mangrovemetsät eikä hiekka: lähin '
+          + 'hiekkaranta on 40 kilometrin päässä. Sade kuuluu asiaan '
+          + 'ympäri vuoden, ja sateenvarjo on Suvassa yhtä tavallinen '
+          + 'varuste kuin aurinkolasit.',
+        artikkeli: {
+          nimi: 'Matkailijan Suva',
+          taitto: 'opas',
+          teksti: 'Sateinen niemi, jolle britit piirsivät pääkaupungin — '
+            + 'ja jossa kaksi kansaa on sen jälkeen rakentanut yhteisen '
+            + 'kaupungin.',
+          nosto: 'Suvassa ei ole kuivaa kautta lainkaan: yksikään kuukausi '
+            + 'ei jää alle 60 millimetrin, ja vuosikertymä on lähes kolme '
+            + 'tuhatta millimetriä — yli kaksinkertainen saaren läntiseen '
+            + 'puoleen verrattuna.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Suvan oma lentokenttä on Nausorissa noin '
+                + 'kahdenkymmenen kilometrin päässä koilliseen. '
+                + 'Kaupungin sisällä liikutaan kävellen: '
+                + 'rantabulevardilta on Albert Parkin, Thurston Gardensin '
+                + 'ja Fidžin museon ohi kauppakaduille vain runsaan '
+                + 'kilometrin matka. Cumming Street on ollut vilkas ja '
+                + 'värikäs ostosalue siirtomaa-ajoista lähtien, kapeine '
+                + 'katuineen ja alkuperäisine julkisivuineen, ja aivan '
+                + 'sen vieressä on 2009 valmistunut TappooCity, '
+                + 'Etelä-Tyynenmeren suurin ostoskeskus Australian ja '
+                + 'Uuden-Seelannin ulkopuolella.',
+            },
+            {
+              otsikko: 'Sateinen niemi',
+              teksti: 'Suva on rakennettu kukkulaiselle niemelle Laucala '
+                + 'Bayn ja Suva Harbourin väliin. Vuoret niemen pohjois- '
+                + 'ja länsipuolella nappaavat kaakkoispasaatituulen '
+                + 'kosteuden juuri tässä kohdassa, ja siksi täällä sataa '
+                + 'ympäri vuoden. Fidžin toinen kuvernööri sir Arthur '
+                + 'Hamilton-Gordon totesi aikanaan, ettei ollut nähnyt '
+                + 'sateen tulevan missään niin kuin Suvassa eikä juuri '
+                + 'yhtään päivää ilman sadetta. Merkittävä osa '
+                + 'keskustasta, parlamenttirakennukset mukaan lukien, '
+                + 'seisoo täytetyllä mangrovesuolla — kaupunki laajeni '
+                + 'kirjaimellisesti meren päälle, koska niemellä ei ollut '
+                + 'tilaa. Sisämaan sateisin kolmannes valuu Rewajokeen, '
+                + 'joka on Fidžin pisin ja laskee Laucala Bayhin '
+                + 'kaupungin kupeessa.',
+              kuva: {
+                tiedosto: 'Colo-i-Suva Stream.jpg',
+                selite: 'Colo-i-Suvan sademetsäpuiston puro virtaa '
+                  + 'kymmenen kilometriä keskustasta pohjoiseen.',
+                lahde: 'Tucoxn, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Arjen ilmiö: yaqonan malja',
+              teksti: 'Kava-kasvi, jota Fidžissä kutsutaan nimellä '
+                + 'yaqona, kesytettiin Pohjois-Vanuatussa noin 3 000 '
+                + 'vuotta sitten ja levisi Tyynellemerelle lapita-'
+                + 'kulttuurin mukana. Juoma valmistetaan kasvin juuresta '
+                + 'ja tarjoillaan usein puolikkaasta kookospähkinän '
+                + 'kuoresta, jota sanotaan biloksi. Maailman '
+                + 'terveysjärjestö arvioi vuonna 2016 perinteisen, '
+                + 'vesipohjaisen kavajuoman kohtuukäytön terveysriskin '
+                + 'hyväksyttävän matalaksi — toisin kuin orgaanisilla '
+                + 'liuottimilla valmistettujen uutteiden, joita monet '
+                + 'maat rajoittivat 2002 maksavaurioepäilyjen takia.',
+              kuva: {
+                tiedosto: 'Kava framställning.jpg',
+                selite: 'Kava siivilöidään kankaan läpi veistettyyn '
+                  + 'tanoa-maljaan, joka seisoo matalilla jaloilla '
+                  + 'mattojen päällä.',
+                lahde: 'Dave Lonsdale, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Historian käännekohta: kaksitoista maata, yksi kampus',
+              teksti: 'Etelä-Tyynenmeren yliopisto perustettiin 1968, ja '
+                + 'sen pääkampus Suvan Laucala Bayssa nousi entisen '
+                + 'Uuden-Seelannin ilmavoimien tukikohdan paikalle. '
+                + 'Yliopisto palvelee aluetta, joka kattaa 33 miljoonaa '
+                + 'neliökilometriä merta — yli kolme kertaa Euroopan '
+                + 'kokoisen alueen — vaikka jäsenmaiden yhteinen '
+                + 'maapinta-ala vastaa vain Tanskan kokoa. Aluekeskuksia '
+                + 'on yksitoista eri puolilla Tyyntämerta, ja '
+                + 'jäsenmaiden väkiluku vaihtelee Tokelaun 1 500 '
+                + 'asukkaasta Fidžin yli 900 000:een. Se on suurin '
+                + 'yliopisto Tyynenmeren saarilla Havaijin ulkopuolella.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Suva-artikkelin '
+                + 'sääruudusta (Laucala Bayn asema, Maailman '
+                + 'ilmatieteen järjestön normaalikausi 1991–2020); '
+                + 'lehdellä ei ole omaa vuosigraafia, koska ERA5-lukuja '
+                + 'ei saatu haettua. Suvassa on trooppinen '
+                + 'sademetsäilmasto ilman varsinaista kuivaa kautta: '
+                + 'vuoden keskilämpötila on 26,2 astetta, ja kuukausien '
+                + 'ero on pieni — helmikuun 28,1 asteesta heinä-elokuun '
+                + '24,2 asteeseen. Sadetta tulee vuodessa noin 2 992 '
+                + 'millimetriä ja sadepäiviä on 188. Kesäkuusta '
+                + 'lokakuuhun sataa selvästi vähemmän kuin marras-'
+                + 'toukokuussa: kuivimman kuukauden heinäkuun 136 '
+                + 'millimetriä on alle puolet joulukuun 344 '
+                + 'millimetristä. Artikkelin leipäteksti puhuu heinäkuun '
+                + 'kohdalla 125 millimetristä; ero johtuu eri '
+                + 'mittausjaksosta. Trooppiset syklonit ovat mahdollisia '
+                + 'marraskuusta huhtikuuhun.',
+              kuva: {
+                tiedosto: 'Thurston Garden Suva MatthiasSuessen-7808.jpg',
+                selite: 'Thurston Gardensin juomavesilähde on ollut '
+                  + 'puiston kävijöiden käytössä vuodesta 1914.',
+                lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Grand Pacific Hotel',
+                tahdet: 3,
+                selite: 'Vuoden 1914 hotelli, jonka huoneet rakennettiin '
+                  + 'laivahyttien näköisiksi ja joka entisöitiin '
+                  + 'satavuotispäivänään.',
+              },
+              {
+                mita: 'Albert Park',
+                tahdet: 3,
+                selite: 'Aukio, jolla Fidžin itsenäisyys julistettiin '
+                  + '1970 ja jolla pelataan rugbya joka iltapäivä.',
+              },
+              {
+                mita: 'Fidžin museo',
+                tahdet: 2,
+                selite: 'Thurston Gardensin puistossa, kävelymatkan '
+                  + 'päässä rantabulevardilta.',
+              },
+              {
+                mita: 'Colo-i-Suva',
+                tahdet: 2,
+                selite: 'Sademetsäpuisto putouksineen ja uima-altaineen '
+                  + 'runsaan kymmenen kilometrin päässä keskustasta.',
+              },
+              {
+                mita: 'Cumming Street',
+                tahdet: 2,
+                selite: 'Kapea kauppakatu, joka on ollut vilkas '
+                  + 'siirtomaa-ajoista asti.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua.
+             * Sääluvut ovat samasta sääruudusta kuin jakso 5.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Sadetta joka kuukausi',
+                teksti: 'Kuivaa kautta ei ole lainkaan: sadepäiviä on '
+                  + 'vuodessa 188, ja vähäsateisinkin kuukausi saa yli '
+                  + 'sata millimetriä.',
+              },
+              {
+                otsikko: 'Ranta on mangrovea',
+                teksti: 'Suvan oma rantaviiva on mangrovemetsää; lähin '
+                  + 'hiekkaranta on 40 kilometrin päässä Pacific '
+                  + 'Harbourissa.',
+              },
+              {
+                otsikko: 'Syklonikausi marras–huhtikuussa',
+                teksti: 'Trooppiset syklonit osuvat saarille eteläisen '
+                  + 'kesän aikana, ja ne voimistavat Rewajoen tulvia.',
+              },
+              {
+                otsikko: 'Malja otetaan kaksin käsin',
+                teksti: 'Yaqona-seremoniassa juoma tarjotaan tietyssä '
+                  + 'järjestyksessä, ja vieraan odotetaan ottavan kuppi '
+                  + 'vastaan molemmin käsin.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'historia',
+      nimi: 'Kuningaskunnasta pääkaupungiksi',
+      johdanto: 'Cakobau kruunasi itsensä Fidžin kuninkaaksi ja luopui '
+        + 'arvonimestä kolmessa vuodessa. Suva ei ollut osa sitä draamaa '
+        + 'vielä 1873 — se seisoi sivussa, kunnes Britannia teki siitä '
+        + 'pääkaupungin.',
+      tehtava: {
+        kysymys: 'Minä vuonna Fidžin saaret luovutettiin Britannialle?',
+        vaihtoehdot: [
+          '1868',
+          '1871',
+          '1874',
+          '1882',
+        ],
+        oikea: 2,
+        fakta: 'Cakobau ja muut ylimmät päälliköt allekirjoittivat '
+          + 'luovutuskirjan 10. lokakuuta 1874; pääkaupunki siirrettiin '
+          + 'Suvaan kolme vuotta myöhemmin.',
+      },
+      nostot: [
+        {
+          otsikko: 'Mies, joka kruunasi itsensä kuninkaaksi',
+          teksti: 'Baun sotapäällikkö Seru Epenisa Cakobau julisti '
+            + 'itsensä koko Fidžin kuninkaaksi — tittelin, jota muut '
+            + 'päälliköt eivät koskaan täysin tunnustaneet. Kesäkuussa '
+            + '1871 hän perusti perustuslaillisen monarkian '
+            + 'eurooppalaisten uudisasukkaiden tuella, pääkaupunkinaan '
+            + 'Levuka. Kuningaskunta kesti kolme vuotta: velat, '
+            + 'verotusvastarinta ja puuvillan hinnan romahdus ajoivat '
+            + 'Cakobaun tarjoamaan saaria Britannialle, ja 10. lokakuuta '
+            + '1874 hän ja muut ylimmät päälliköt allekirjoittivat '
+            + 'luovutuskirjan. Cakobau luopui kuninkaantittelistä mutta '
+            + 'säilytti Baun oman Vunivalu-arvonimensä kuolemaansa 1883 '
+            + 'saakka.',
+          tiedosto: 'Thakombau, ex-king of Fiji, photograph by Dufty.jpg',
+          selite: 'Duftyn valokuvaamossa noin 1874 otettu muotokuva '
+            + 'Cakobausta, joka oli juuri luopunut Tui Viti '
+            + '-arvonimestään.',
+          lahde: 'Francis Herbert Dufty and Alfred William Buchanan Dufty, Wikimedia Commons (PD)',
+          wiki: 'Seru Epenisa Cakobau',
+        },
+        {
+          otsikko: 'Vuosi, jolloin sisämaassa käytiin sotaa',
+          teksti: 'Samaan aikaan kun isoisän matka vei hänet Fidžin ohi '
+            + '1873, saaren sisämaassa käytiin sotaa. Cakobaun hallitus '
+            + 'lähetti aseistetun joukon kukistamaan kai colo -heimoja, '
+            + 'jotka eivät olleet kääntyneet kristinuskoon eivätkä '
+            + 'tunnustaneet Cakobaun valtaa; taustalla oli myös kiista '
+            + 'maanomistuksesta. Kahdeksankuukautinen kampanja maalis–'
+            + 'lokakuussa 1873 päättyi antautumiseen. Sota oli yksi '
+            + 'viimeisistä merkeistä siitä, ettei koko saari ollut vielä '
+            + 'yhden hallinnon alla. Sisämaan heimojen jälkeläiset ovat '
+            + 'tänäkin päivänä elävä osa Fidžin iTaukei-väestöä, ja '
+            + 'ylänköjen kylissä vaalitaan omia perinteitä.',
+          tiedosto: 'Panorama view of Joske\'s Thumb.JPG',
+          selite: 'Joske’s Thumb on vanhan tulivuoren kovettunut kurkku '
+            + 'Viti Levun sisämaassa, ja sen juurella on kyliä yhä.',
+          lahde: 'Tucoxn, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Fiji',
+        },
+        {
+          otsikko: 'Pääkaupunki, joka piirrettiin tyhjälle maalle',
+          teksti: 'Kun Britannia päätti siirtää pääkaupungin Levukasta '
+            + 'Suvaan, kuninkaallisten insinöörien eversti F. E. Pratt '
+            + 'nimitettiin ylikartoittajaksi 1875 suunnittelemaan uutta '
+            + 'kaupunkia. Hallinnon virallinen siirto tapahtui 1882. '
+            + 'Kunnallisstatuksen Suva sai vasta 1910, ja sen pinta-ala '
+            + 'pysyi yhden neliömailin kokoisena aina vuoteen 1952, '
+            + 'jolloin Muanikaun ja Samabulan kaupunginosat liitettiin ja '
+            + 'ala kasvoi kolmeentoista neliökilometriin. Lokakuussa '
+            + '1952 Suvasta tuli virallisesti Fidžin ensimmäinen '
+            + 'kaupunki — seitsemänkymmentä vuotta sen jälkeen, kun se '
+            + 'oli jo alkanut toimia pääkaupunkina.',
+          tiedosto: 'Suva. View from back of Catholic Church. May 1903., PH-NEG-15081 001.jpg',
+          selite: 'Vuonna 1903 Suvan satamassa oli höyrylaivoja ja '
+            + 'rantaa reunusti jo yhtenäinen kaupunki; oikeassa reunassa '
+            + 'näkyy valokuvaajan oma negatiivin numero.',
+          lahde: 'Henry Winkelmann, Wikimedia Commons (PD)',
+          wiki: 'Suva',
+        },
+        {
+          otsikko: 'Aukio, jolla itsenäisyys julistettiin',
+          teksti: 'Prinssi Charles luovutti Fidžin itsenäisyysasiakirjat '
+            + 'pääministeri Ratu Sir Kamisese Maralle 10. lokakuuta 1970 '
+            + 'suuren väkijoukon edessä Albert Parkissa. Uusi Fidžin '
+            + 'lippu oli nostettu salkoon samalla aukiolla edellisenä '
+            + 'päivänä. Aukio oli ehtinyt olla otsikoissa jo kerran: '
+            + 'lentäjä Charles Kingsford Smith laskeutui tänne 1928 '
+            + 'ensimmäisellä Tyynenmeren ylittäneellä lennolla. Nimensä '
+            + 'puisto on saanut prinssi Albertilta, kuningatar Viktorian '
+            + 'puolisolta — samalta hallitsijalta, jolle saaret oli '
+            + 'aikanaan luovutettu.',
+          tiedosto: 'USP Bure MatthiasSuessen-8729.jpg',
+          selite: 'Albert Parkin nurmella pelataan rugbya iltapäivisin, '
+            + 'ja kentän takana kohoaa hallintorakennuksen kellotorni.',
+          lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Albert Park (Suva)',
         },
       ],
     },

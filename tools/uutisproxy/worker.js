@@ -35,6 +35,11 @@ const SALLITUT = [
   // Saksan uutislähde (Berliinin lehti, 7.8.2026): tagesschaun syöte
   // ja artikkelisivut ovat samalla isäntänimellä.
   'https://www.tagesschau.de/',
+  // Kanadan, Meksikon ja Perun uutislähteet (maalehdet 6.9.2026):
+  // syöte ja artikkelisivut samalla isäntänimellä.
+  'https://globalnews.ca/',
+  'https://www.jornada.com.mx/',
+  'https://rpp.pe/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

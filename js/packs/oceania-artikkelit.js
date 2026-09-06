@@ -673,4 +673,104 @@ export const OCEANIA_ARTIKKELIT = {
       + 'jonka korjaustyön ensimmäisen vaiheen on määrä valmistua '
       + 'vuoteen 2030 mennessä.',
   },
+  /* DUNEDIN (Opus 6.9.2026, paketti O9). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain dunedin): väitteet on
+   * luettu en-Wikipedian raakateksteistä 6.9.2026, ja pohjana ovat
+   * docs/mantereet-tyoaineisto/faktapohja-dunedin.md ja
+   * tarkistus-dunedin.md. Avain on kaupungin wiki-nimi
+   * (js/packs/oceania.js: 'Dunedin (Uusi-Seelanti)'), ei näyttönimi —
+   * ARTIKKELIT haetaan city.wiki ?? city.name -avaimella. Kāi tahun
+   * eteläinen murre näkyy nimissä (Ōtākou), ja kansa on kuvattu
+   * nykyisenä. Kultaryntäyksen tarkkoja väestölukuja 1 700 -> 15 000 EI
+   * toisteta täällä, koska ne ovat laudan OCEANIA_FACTS-rivillä. */
+  'Dunedin (Uusi-Seelanti)': {
+    intro: 'Dunedin on Uuden-Seelannin Eteläsaaren kaakkoiskulmassa, '
+      + '23 kilometriä pitkän Otago Harbour -lahden perukassa. '
+      + 'Skotlannin vapaakirkon maallikkojärjestö perusti kaupungin '
+      + '1848, ja nimi on gaelia: **Dùn Èideann on Edinburgh**. '
+      + 'Kaupunginmittaaja Charles Kettle sai ohjeekseen jäljitellä '
+      + 'emokaupunkia, ja hänen komea katuverkkonsa piirrettiin '
+      + 'mäkiseen maastoon, joka pani rakentajat koville.'
+      + '\n\n'
+      + 'Kultaa löytyi Gabriel’s Gullystä 1861, ja väki tulvi Otagoon. '
+      + 'Dunedinista tuli 1865 maan väkirikkain kaupunki, ja rahalla '
+      + 'rakennettiin pysyvää: Otagon yliopisto perustettiin 1869 ja se '
+      + 'on maan vanhin. **Isoisän matkan vuonna 1873 kolme hanketta '
+      + 'valmistui yhtä aikaa** — First Church vihittiin käyttöön, '
+      + 'kaupungin oma pankki sulautui uuteen National Bankiin ja '
+      + 'ensimmäinen rautatie myytiin maakunnalle.'
+      + '\n\n'
+      + 'Vuosisadan vaihteessa kasvu siirtyi pohjoisemmas, ja Dunedin '
+      + 'jäi neljänneksi pääkeskukseksi. Se säilytti kuitenkin sen, '
+      + 'minkä kulta oli maksanut: viktoriaanisen kivikeskustan, joka '
+      + '1990-luvulla kunnostettiin ja josta tuli kaupungin uusi '
+      + 'käyntikortti.',
+    teksti: 'Dunedin lepää sammuneen tulivuoren päällä. Kilpitulivuori '
+      + 'purkautui 16–10 miljoonaa vuotta sitten, ja Otago Harbour '
+      + 'täyttää nyt sen vanhimman ja eniten kuluneen osan; Mount '
+      + 'Cargill, Flagstaff, Saddle Hill, Signal Hill ja koko Otagon '
+      + 'niemimaa ovat saman purkauskentän jäänteitä.'
+      + '\n\n'
+      + 'Kaupunki syntyi 1848 skotlantilaisena siirtokuntana ja kasvoi '
+      + 'kultaryntäyksen varassa. 1850-luvun loppuun mennessä tänne oli '
+      + 'muuttanut noin 12 000 skottia, ja 1874 Dunedin lähiöineen oli '
+      + 'väkiluvultaan maan suurin: 29 832 asukasta Aucklandin 27 840:tä '
+      + 'vastaan. Vuonna 1875 täällä perustettiin Union-laivayhtiö, '
+      + 'josta kasvoi eteläisen pallonpuoliskon suurin varustamo.'
+      + '\n\n'
+      + 'Nykyään joka viides dunedinilainen on 15–24-vuotias, ja '
+      + 'opiskelijaelämä värittää katukuvaa. UNESCO nimesi kaupungin '
+      + '2014 kirjallisuuden luovaksi kaupungiksi, ensimmäisenä '
+      + 'Uudessa-Seelannissa. Kaupungin kupeessa Otagon niemimaa on '
+      + 'kuninkaanalbatrossien ja keltasilmäpingviinien pesimäaluetta.',
+  },
+  /* SUVA (Opus 6.9.2026, paketti O9). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain suva); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-suva.md ja tarkistus-suva.md.
+   * 1873-KEHYS ON KIRJOITETTU TARKISTUKSEN MUKAAN: Suva oli 1873 pieni
+   * kylä, ei tyhjä maapala — lähteen oma sanamuoto on "in 1868, when
+   * Suva was still a small village". Vallankaappauksia ei mainita
+   * (ei nykypolitiikkaa). Päivämäärän vaihtumislinjaa ja Viti Levun
+   * kokoa EI toisteta, koska ne ovat laudan visan omia vastausfaktoja. */
+  Suva: {
+    intro: 'Suva on Fidžin pääkaupunki ja Etelä-Tyynenmeren suurimpia '
+      + 'kaupunkeja. Se on rakennettu kukkulaiselle niemelle Laucala '
+      + 'Bayn ja Suva Harbourin väliin. **Vuonna 1873 Suva oli vielä '
+      + 'pieni kylä**: pääkaupunki oli Levuka, saaria hallitsi '
+      + 'Cakobaun kolmivuotias kuningaskunta, eikä luovutusta '
+      + 'Britannialle ollut vielä tehty.'
+      + '\n\n'
+      + 'Sen jälkeen kaikki tapahtui nopeasti. Fidži luovutettiin '
+      + 'Britannialle 10. lokakuuta 1874, ja jo 1877 siirtomaa'
+      + 'viranomaiset siirsivät pääkaupungin Levukasta Suvaan, koska '
+      + 'vanha satamakaupunki ei mahtunut kasvamaan vuoren ja meren '
+      + 'väliin. Hallinto muutti virallisesti 1882, kunnallisstatus tuli '
+      + '1910 ja kaupunkioikeudet vasta lokakuussa 1952.'
+      + '\n\n'
+      + 'Suvaa kutsutaan joskus **Tyynenmeren New Yorkiksi**. '
+      + 'Kaupungissa asuvat rinnakkain alkuperäiset fidžiläiset eli '
+      + 'iTaukei ja indofidžiläiset, joiden esivanhemmat saapuivat '
+      + 'sopimustyöläisinä 1879 alkaen, ja se isännöi enemmän '
+      + 'kansainvälisiä ja alueellisia järjestöjä kuin mikään muu '
+      + 'Tyynenmeren saaripääkaupunki.',
+    teksti: 'Suva sijaitsee Viti Levun kaakkoiskulmassa Rewan '
+      + 'provinssissa. Niemi on lähes meren ympäröimä, mutta sen rantaa '
+      + 'reunustavat mangrovemetsät eikä hiekka: lähin hiekkaranta on 40 '
+      + 'kilometrin päässä Pacific Harbourissa. Merkittävä osa '
+      + 'keskustasta, parlamenttirakennukset mukaan lukien, seisoo '
+      + 'täytetyllä mangrovesuolla.'
+      + '\n\n'
+      + 'Kaupungin alku oli maakauppa. Cakobau lahjoitti 1868 '
+      + 'australialaiselle Polynesia-yhtiölle 5 000 neliökilometriä '
+      + 'maata maksuksi Yhdysvalloille velatuista korvauksista, ja yli '
+      + '575 neliökilometriä siitä oli Suvan lähellä; puuvillaviljelmä '
+      + 'ei menestynyt. Kuninkaallisten insinöörien eversti F. E. Pratt '
+      + 'nimitettiin ylikartoittajaksi 1875, ja hän piirsi uuden '
+      + 'pääkaupungin.'
+      + '\n\n'
+      + 'Nykyään Suva on Fidžin kauppa- ja hallintokeskus ja '
+      + 'Etelä-Tyynenmeren yliopiston kotikaupunki. Sade kuuluu arkeen: '
+      + 'yksikään kuukausi ei jää alle kuudenkymmenen millimetrin, ja '
+      + 'vuosikertymä on lähes kolme tuhatta millimetriä.',
+  },
 };

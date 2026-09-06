@@ -93,4 +93,48 @@ export const UUTISLAHTEET = {
     kieli: 'de',
     syote: 'https://www.tagesschau.de/infoservices/alle-meldungen-100~rss2.xml',
   },
+  /*
+   * Global News on Corus Entertainmentin valtakunnallinen uutissivusto
+   * ja Kanadan luetuimpia. Testattu 6.9.2026 (UA
+   * matkakirja-uutisvalitys/1.0): syöte aukeaa ja artikkelisivulta
+   * jäsentyy <article> (20 yli 60 merkin kappaletta) sekä og:image.
+   *
+   * CBC kokeiltiin ensin, koska yleisradio on ollut valinta
+   * Britanniassa, Ruotsissa ja Saksassa: sen SYÖTE aukeaa ongelmitta,
+   * mutta ARTIKKELISIVULLA ei ole <article>-elementtiä eikä
+   * [itemprop="articleBody"]-merkintää, joten popupiin jäisi vain
+   * syötteen parin lauseen kuvaus (sama vika kuin El Paísilla
+   * 6.8.2026). CTV Newsin vanha RSS-osoite palauttaa 404.
+   */
+  CAN: {
+    nimi: 'Global News',
+    kieli: 'en',
+    syote: 'https://globalnews.ca/feed/',
+  },
+  /*
+   * La Jornada on Mexico Cityn suuria päivälehtiä ja sen syöte on
+   * avoin. Testattu 6.9.2026: syöte aukeaa ja artikkelisivulta
+   * jäsentyy <article> sekä og:image. Excélsiorin rss.xml palauttaa
+   * 404 ja Milenion /rss 403:n (botti-esto).
+   */
+  MEX: {
+    nimi: 'La Jornada',
+    kieli: 'es',
+    syote: 'https://www.jornada.com.mx/rss/edicion.xml',
+  },
+  /*
+   * RPP Noticias on Perun seuratuimpia uutislähteitä, ja sen radio on
+   * jo pelissä (js/packs/radiot.js, PER). Testattu 6.9.2026: syöte
+   * aukeaa ja artikkelisivulta jäsentyy <article> sekä og:image.
+   *
+   * HUOM: osoite rpp.pe/feed ohjaa osoitteeseen rpp.pe/rss. Tässä on
+   * ohjauksen päätepiste, koska worker ei seuraa uudelleenohjauksia
+   * (sama ratkaisu kuin SVT:llä). La Repúblican arcio/rss palauttaa
+   * 404:n.
+   */
+  PER: {
+    nimi: 'RPP Noticias',
+    kieli: 'es',
+    syote: 'https://rpp.pe/rss',
+  },
 };

@@ -1,5 +1,10 @@
 # Uutisvälityksen käyttöönotto (omistajalle, n. 5 min)
 
+> **Päivitys 6.9.2026 (Kanada, Meksiko, Peru):** sallittuihin lisättiin
+> globalnews.ca, www.jornada.com.mx ja rpp.pe (maalehdet CAN/MEX/PER,
+> testattu 6.9.2026: syöte aukeaa, artikkelisivulta jäsentyy `<article>` ja
+> `og:image`). Julkaisu Git-integraatiolla mainista.
+>
 > **Päivitys 7.8.2026 (automaattijulkaisu):** repo on kytketty
 > Cloudflaren Git-integraatioon (Workers Builds), ja repossa on nyt
 > `wrangler.jsonc`, joka kertoo sille workerin sisääntulopisteen.

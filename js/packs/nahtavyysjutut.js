@@ -38721,4 +38721,507 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * DUNEDIN (Opus 6.9.2026, paketti O9). Kohteet ovat kohdekartan
+   * kahdeksan pistettä (maakartat.js: KAUPUNKIKARTAT.dunedin), ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 6.9.2026
+   * (artikkelit "Baldwin Street", "Dunedin Botanic Garden", "Tūhura
+   * Otago Museum", "Knox Church, Dunedin", "Otago Boys' High School",
+   * "Dunedin railway station", "Speight's" ja "Queens Gardens,
+   * Dunedin").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat skotlantilainen perustaminen, kultaryntäys ja yliopisto,
+   * vuoden 1873 kolmikko, Toitū Otago Settlers Museum, Ōtākou, Taiaroa
+   * Head, hoiho ja Larnach Castle; kartan kahdeksasta kohteesta
+   * yksikään ei ole niiden aihe. Lähimpänä ovat rautatieasema ja
+   * Baldwin Street, jotka vilahtavat lehden matkaoppaassa yhdellä
+   * virkkeellä — jutut kertovat neljästä asemasta, Minton-laatoista,
+   * kadun nimen alkuperästä ja ennätyksen menetyksestä ja
+   * palauttamisesta, joita opas ei käsittele.
+   *
+   * ISOISÄN VUOSI 1873 NÄKYY YHDESSÄ JUTUSSA: Knoxin kirkon
+   * arkkitehtiriita ratkesi 16. tammikuuta 1873, kun David Rossin
+   * sopimus päättyi ja Robert Lawson kutsuttiin takaisin.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 6.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 900 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * dunedin-lohkossa. HYLÄTTY: Dunedinin taidegallerian ainoat
+   * ulkokuvat (tunnistettavat kasvot sisäänkäynnillä ja suuret
+   * näyttelyjulisteet julkisivulla) — siksi galleria jätettiin myös
+   * kartalta pois.
+   */
+  dunedin: {
+    'Baldwin Street': {
+      aika: '1987',
+      teksti: 'Baldwin Street nousee North East Valleyn pohjalta Signal '
+          + 'Hillin rinnettä kohti Opohoa noin 350 metrin matkan. '
+          + 'Alapää on loivempi ja asfalttia, ylin 200 metriä on '
+          + 'betonia, koska Dunedinin hallaöinä pinnan on pysyttävä '
+          + 'pitävänä. Ylin 161 metrin osuus nousee 47 metriä, ja '
+          + 'jyrkin kohta noin seitsemänkymmentä metriä huipulta on '
+          + 'suhteessa 1:2,86 eli 35 prosenttia. Jyrkkyys ei ollut '
+          + 'kenenkään tarkoitus: Dunedinin katuverkko piirrettiin '
+          + 'ruudukoksi maastosta piittaamatta, ja kaavat tehtiin '
+          + 'usein Lontoossa. Tämänkin osan mittasi 1800-luvun '
+          + 'puolivälissä Charles Kettle. Katu on nimetty William '
+          + 'Baldwinin mukaan, joka istui Otagon maakuntaneuvostossa, '
+          + 'perusti sanomalehden ja jakoi alueen tonteiksi.'
+          + '\n\n'
+          + 'Guinnessin ennätyskirja tunnusti kadun maailman '
+          + 'jyrkimmäksi 1987, kun lähetystoimittaja Jim Mora oli '
+          + 'kampanjoinut asian puolesta kaksi vuotta. Siihen asti '
+          + 'titteliä olivat pitäneet kaksi San Franciscon katua. '
+          + 'Heinäkuun 16. päivänä 2019 ennätys siirtyi walesilaiselle '
+          + 'Ffordd Pen Llechille, mutta huhtikuussa 2020 Guinness '
+          + 'muutti mittaustapansa kadun keskilinjan mukaiseksi ja '
+          + 'Baldwin Street sai tittelin takaisin.'
+          + '\n\n'
+          + 'Autoille katu on umpiperä, mutta yläpäästä pääsee '
+          + 'kävellen Buchanan Streetiä pitkin naapurikaduille. Nekin '
+          + 'ovat jyrkkiä: Arnold Street nousee suhteessa 1:3,6, '
+          + 'Dalmeny Street 1:3,7 ja Calder Avenue 1:5,4.',
+      kuvat: [
+        {
+          tiedosto: 'Baldwin Street (8321363311).jpg',
+          selite: 'Baldwin Streetin talot on rakennettu vaakasuoraan, '
+            + 'vaikka katu nousee niiden ohi jyrkimmillään 35 prosentin '
+            + 'kaltevuudella.',
+          lahde: 'Tristan Schmurr from Luxembourg, Luxembourg, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kasvitieteellinen puutarha': {
+      aika: '1863',
+      teksti: 'Dunedinin kasvitieteellinen puutarha perustettiin 1863 '
+          + 'keskustan pohjoispäähän, yliopiston ja kaupungin vanhimpiin '
+          + 'kuuluvan Northern Cemeteryn väliin. Puutarha jakautuu '
+          + 'kahteen osaan: alapuutarha on noin 25 metrin korkeudella '
+          + 'jokitasangolla ja yläpuutarha nousee Signal Hillin '
+          + 'harjanteelle 85 metriin. Sijainti tekee siitä '
+          + 'opiskelijoiden puiston, koska se on yliopiston ja North '
+          + 'East Valleyn suun välissä, ja pääkatu George Street päättyy '
+          + 'sen kulmaan.'
+          + '\n\n'
+          + 'Alapuutarhassa on lämmitetty edwardiaaninen lasihuone '
+          + 'nimeltä Winter Garden, ruusu- ja yrttitarha, sorsalampi, '
+          + 'esiintymislava ja japanilainen puutarha, joka muistuttaa '
+          + 'Dunedinin ystävyyskaupungista Otarusta. Leithin sivuhaara '
+          + 'Lindsay Creek virtaa alapuutarhan halki. Kaksi kohdetta on '
+          + 'suojeltu toisen luokan historiallisina paikkoina: Wolf '
+          + 'Harrisin lahjoittama koristeellinen suihkulähde vuodesta '
+          + '1982 ja esiintymislava vuodesta 1986. Puutarhassa on myös '
+          + 'Cecil Thomasin veistospari, joka esittää Peter Pania ja '
+          + 'Darlingin lapsia.'
+          + '\n\n'
+          + 'Yläpuutarhan halkaisee mutkitteleva Lovelock Avenue, joka '
+          + 'on nimetty dunedinilaisen olympiavoittajan Jack Lovelockin '
+          + 'mukaan. Tien molemmin puolin kulkee metsäpolkuja, ja '
+          + 'yläpuutarhassa on maantieteellisesti järjestettyjä '
+          + 'kasvialueita.',
+      kuvat: [
+        {
+          tiedosto: 'Dunedin Botanic Garden - Dunedin, NZ - DSC04180.jpg',
+          selite: 'Alapuutarhan käytävät kiertävät vanhoja puita, ja '
+            + 'rinteessä ylempänä alkaa yläpuutarhan metsäpolusto.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Otagon museo': {
+      aika: '1868',
+      teksti: 'Nimeä Otago Museum käytti ensimmäisenä James Hector '
+          + 'geologisista kokoelmistaan, jotka olivat esillä Dunedinin '
+          + 'suurnäyttelyssä 1865. Osa niistä muodosti museon ytimen, ja '
+          + 'museo avattiin yleisölle 12. syyskuuta 1868 Princes '
+          + 'Streetin Exchange-rakennuksessa. Kokoelma kasvoi nopeasti '
+          + 'ulos tiloistaan, ja nykyisen paikan perustuskivi Great King '
+          + 'Streetillä laskettiin joulukuussa 1874. Dunedinilaisen '
+          + 'arkkitehdin David Rossin suunnittelema talo avattiin '
+          + 'elokuussa 1877, ja se on yhä osa museota: alkuperäinen '
+          + 'sisäänkäynti Oamarun kiven doorilaisine pylväineen näkyy '
+          + 'kadulle, vaikka kävijät tulevat nykyään puiston puolelta.'
+          + '\n\n'
+          + 'Museon hallinto siirtyi Otagon yliopistolle 1877, ja '
+          + 'järjestely kesti vuoteen 1955, jolloin sille säädettiin '
+          + 'oma säätiölaki. Rakennus on luokiteltu ensimmäisen luokan '
+          + 'historialliseksi paikaksi. Ensimmäinen suuri laajennus oli '
+          + 'John Burnsiden suunnittelema Hocken-siipi 1910, joka '
+          + 'rakennettiin tohtori Thomas Hockenin käsikirjoituksille; '
+          + 'niistä kasvoi Hocken-kokoelma. Willi Fels -siipi avattiin '
+          + '1930 ja siinä ovat nykyään maailman kansojen ja tangata '
+          + 'whenuan galleriat, ja satavuotissiipi tuli 1963.'
+          + '\n\n'
+          + 'Museo sai 2022 uuden nimen Tūhura Otago Museum: tūhura '
+          + 'tarkoittaa maoriksi tutkimista ja löytämistä. Kokoelmat '
+          + 'kattavat sekä luonnontieteen näytteet että Otagon ja koko '
+          + 'maailman esineistön, ja talossa on lisäksi tiedekeskus, '
+          + 'jonka trooppisessa sademetsähuoneessa lentää perhosia.',
+      kuvat: [
+        {
+          tiedosto: 'Otago Museum exterior wide angle.jpg',
+          selite: 'David Rossin 1877 valmistunut sisäänkäynti Great King '
+            + 'Streetillä on tehty Oamarun kivestä doorilaisin pylväin.',
+          lahde: 'Rosi Crane, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Knoxin kirkko': {
+      aika: '1872–1876',
+      teksti: 'Knoxin seurakunta syntyi 1860, kun First Churchista '
+          + 'lähtenyt kolmannes ja kaupungin itsenäinen seurakunta '
+          + 'yhdistyivät. Ensimmäinen kirkko avattiin 6. toukokuuta 1861 '
+          + 'Great Kingin ja Frederick Streetin kulmassa, ja se oli '
+          + 'siirtokunnan toinen presbyteerikirkko. Tontin lahjoitti '
+          + 'John Hyde Harris, joka ehdotti myös nimeä. Talo oli puinen, '
+          + 'ja ensimmäinen pappi oli Englannista tammikuussa 1861 '
+          + 'saapunut D. M. Stuart.'
+          + '\n\n'
+          + 'Kultaryntäys kasvatti väkimäärää niin nopeasti, että 1871 '
+          + 'päätettiin rakentaa uusi kirkko tuhannelle hengelle. Tontti '
+          + 'ostettiin Georgen ja Pittin kadun kulmasta 569 punnalla, ja '
+          + 'suunnittelukilpailuun tuli 17 ehdotusta. Voittaja oli '
+          + 'Robert Lawson, mutta hänen suunnitelmansa ylitti budjetin, '
+          + 'ja tilalle otettiin David Rossin — saman miehen, joka '
+          + 'suunnitteli Otagon museon — piirustukset. Ross ja '
+          + 'rakennustoimikunta riitautuivat kivilaadusta, ja Rossin '
+          + 'sopimus päättyi 16. tammikuuta 1873; hän vei asian '
+          + 'oikeuteen, voitti ja sai kahden punnan vahingonkorvauksen. '
+          + 'Lawson kutsuttiin takaisin 1874.'
+          + '\n\n'
+          + 'Perustuskivi laskettiin 25. marraskuuta 1872, tasan '
+          + 'kolmesataa vuotta John Knoxin kuolemasta. Kirkko avattiin '
+          + '5. marraskuuta 1876, ja se maksoi lopulta 18 383 puntaa; '
+          + 'velka maksettiin loppuun vasta 1891. Lawsonin 1200-luvun '
+          + 'gotiikkaa jäljittelevä kirkko on muurattu Leithin varren '
+          + 'louhosten sinikivestä ja koristeltu Oamarun kivellä, '
+          + 'pohjakaava on latinalainen risti ja torni nousee 51 '
+          + 'metriin. Istumapaikkoja on 900.',
+      kuvat: [
+        {
+          tiedosto: '00 1505 Dunedin (New Zealand) - Knox Church.jpg',
+          selite: 'Knoxin kirkon 51-metrinen torni on Oamarun kiveä ja '
+            + 'seinät Leithin varren sinikiveä.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Otago Boys High School': {
+      aika: '1863',
+      teksti: 'Koulu perustettiin 3. elokuuta 1863 nimellä Dunedin High '
+          + 'School, ja se on Uuden-Seelannin vanhimpia poikakouluja. '
+          + 'Alku oli traaginen: ensimmäinen rehtori Thomas Campbell, '
+          + 'Cambridgen St John’s Collegen kasvatti, saapui perheineen '
+          + 'Deborah Baylle 3. heinäkuuta 1863 ja nousi seuraavana '
+          + 'päivänä höyrylaiva Pride of Yarraan päästäkseen Dunediniin. '
+          + 'Laiva törmäsi Kilgour Pointin edustalla toiseen alukseen ja '
+          + 'upposi; kolmetoista ihmistä menehtyi, heidän joukossaan '
+          + 'koko Campbellin seurue. Englannin kielen opettaja George P. '
+          + 'Abram hoiti rehtorin tehtäviä, kunnes uusi valittiin.'
+          + '\n\n'
+          + 'Nykyiselle paikalleen Arthur Streetin rinteeseen koulu '
+          + 'muutti 1885. Robert Lawsonin suunnittelema päätornirakennus '
+          + 'maksoi 14 800 puntaa, ja W. A. Carlton muurasi sen '
+          + 'sinikivestä, Port Chalmersin breksiasta ja Oamarun '
+          + 'kivestä. Rakennusta pidetään maan hienoimpia uusgoottilaisia '
+          + 'töitä, ja se on luokiteltu ensimmäisen luokan '
+          + 'historialliseksi paikaksi. Korkealla keskustan yläpuolella '
+          + 'se näkyy kauas ja siltä näkyy kauas.'
+          + '\n\n'
+          + 'Alkuperäisellä tontilla Tennyson Streetillä toimii nykyään '
+          + 'Otago Girls High School, koulun sisarkoulu. Koululla on '
+          + 'oma maja Mount Aspiringin kansallispuistossa, ja retket '
+          + 'sinne kuuluvat lukuvuoteen.',
+      kuvat: [
+        {
+          tiedosto: 'Otago Boys High School.jpg',
+          selite: 'Robert Lawsonin 1885 valmistunut päätornirakennus on '
+            + 'sinikiveä, Port Chalmersin breksiaa ja Oamarun kiveä.',
+          lahde: 'Benchill, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dunedinin rautatieasema': {
+      aika: '1906',
+      teksti: 'Nykyinen asema on Dunedinin neljäs; kolme edellistä '
+          + 'seisoivat lännempänä. Radan rakentaminen Port Chalmersiin '
+          + 'aloitettiin maanantaina 29. elokuuta 1870, ja Samuel '
+          + 'Packham juhli ensimmäistä kottikärryllistä rikkomalla sen '
+          + 'päälle viinipullon. Lokakuussa 1870 raideleveys muutettiin '
+          + 'kapeaksi 3 jalan 6 tuuman raiteeksi, kuten uusi rautatielaki '
+          + 'vaati. Etelään päin James Macandrew käänsi ensimmäisen '
+          + 'turpeen 18. maaliskuuta 1871. Rata Port Chalmersiin '
+          + 'valmistui 1872, Christchurchiin 1878 ja Invercargilliin '
+          + 'seuraavana vuonna, ja ensimmäiset konepajat avattiin '
+          + 'Hillsidessä 1875.'
+          + '\n\n'
+          + 'Suurta pääasemaa suunniteltiin Cumberland Streetille jo '
+          + 'aikaisin, mutta hanke ei edennyt perustusten laskemista '
+          + 'pidemmälle, ja 1884 viereen pystytettiin väliaikainen '
+          + 'lautarakennus. Valtion rahoitusta odotettiin lähes '
+          + 'kaksikymmentä vuotta. Nykyinen asema otettiin käyttöön '
+          + 'sunnuntaina 21. lokakuuta 1906. Sen suunnitteli George '
+          + 'Troup flaamilaisen renessanssin tyyliin, ja rakennus on '
+          + 'hänen tunnetuin työnsä — se toi hänelle lempinimen '
+          + '"Gingerbread George".'
+          + '\n\n'
+          + 'Paikalliset arvelevat asemaa maan valokuvatuimmaksi '
+          + 'rakennukseksi ja eteläisen pallonpuoliskon toiseksi '
+          + 'valokuvatuimmaksi Sydneyn oopperatalon jälkeen. '
+          + 'Parhaimmillaan asemalla kulki sata junaa päivässä; nyt '
+          + 'säännöllistä kaukoliikennettä tai lähijunia ei ole, vaan '
+          + 'asemalta lähtevät turistijunat Taieri Gorgeen ja '
+          + 'rannikolle.',
+      kuvat: [
+        {
+          tiedosto: 'Dunedin Railway Station, 2013 (01).jpg',
+          selite: 'Aseman julkisivu on tummaa basalttia ja vaaleaa '
+            + 'Oamarun kiveä, ja kellotorni nousee vasemmalta '
+            + 'siivestä.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Speightsin panimo': {
+      aika: '1876',
+      teksti: 'James Speight, Charles Greenslade ja William Dawson '
+          + 'perustivat panimon Rattray Streetille 1876 lähdettyään '
+          + 'töistä skotlantilaisesta Wellpark-panimosta. Neljä vuotta '
+          + 'myöhemmin panimo voitti kultamitalin Melbournen '
+          + 'kansainvälisessä näyttelyssä, ja siitä syntyi Gold Medal '
+          + 'Ale -nimi, joka on yhä talon tunnetuin tuote. Vuoteen 1887 '
+          + 'mennessä Speightsista oli tullut Uuden-Seelannin suurin '
+          + 'panimo, ja se vei olutta Australiaan ja Tyynenmeren '
+          + 'saarille.'
+          + '\n\n'
+          + 'Vuonna 1923 panimo sulautui yhdeksän muun kanssa New '
+          + 'Zealand Breweries -yhtiöksi, ja samana vuonna kuoli '
+          + 'perustajista Dawson. Vuonna 1960 yhtiö yritti yksinkertaistaa '
+          + 'valikoimaansa ja vaihtoi tuotenimen, mutta muutos kesti '
+          + 'vain kaksi kuukautta: Speightsin nimi palautettiin saman '
+          + 'vuoden lokakuussa. Vuonna 1977 New Zealand Breweries siirtyi '
+          + 'Lionille, ja 2001 osa tuotannosta siirtyi Aucklandin '
+          + 'Newmarketiin.'
+          + '\n\n'
+          + 'Panimo on yhä Rattray Streetin rinteessä, ja sen '
+          + 'punatiilinen rakennus kuuluu kaupungin '
+          + 'katukuvaan. Speights on yksi Uuden-Seelannin pisimpään '
+          + 'toimineista olutmerkeistä, ja sen nimeä kantaa myös ketju '
+          + 'ravintoloita ympäri maata.',
+      kuvat: [
+        {
+          tiedosto: 'New Zealand Breweries Ltd (Speight\'s Building), Dunedin, New Zealand.jpg',
+          selite: 'Panimon punatiilinen rakennus nousee Rattray Streetin '
+            + 'rinteeseen, ja seinässä lukee yhä New Zealand Breweries '
+            + 'Ltd.',
+          lahde: 'Ulrich Lange, Bochum, Germany, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Queens Gardens': {
+      aika: '1904',
+      teksti: 'Queens Gardens on karkeasti kolmion muotoinen puu- ja '
+          + 'nurmialue aivan Warehouse Precinctin pohjoispäässä, noin '
+          + 'kaksisataa metriä itään Exchangesta, joka oli kaupungin '
+          + 'vanha kauppakeskus Princes Streetillä. Puisto seisoo '
+          + 'täyttömaalla hyvin lähellä sitä paikkaa, johon maorien '
+          + 'waka-kanootit aikanaan rantautuivat; lahden osa täytettiin '
+          + '1800-luvun viimeisinä vuosina. Aluetta kutsuttiin aluksi '
+          + 'nimellä The Triangle, se nimettiin virallisesti Victoria '
+          + 'Gardensiksi 1904 ja siitä tuli puhekielessä Queenʼs '
+          + 'Gardens.'
+          + '\n\n'
+          + 'Puistoa hallitsee kaupungin päämuistomerkki, 28 metriä '
+          + 'korkea kahdeksankulmainen kenotafi, joka rakennettiin '
+          + '1924–1927. Sen vieressä on pienempi muistomerkki, johon on '
+          + 'kirjattu Uuden-Seelannin Victoria Cross -ristin saajat. '
+          + 'Puistossa on myös kuningatar Viktorian ja Donald M. '
+          + 'Stuartin patsaat sekä kelttiläinen risti, joka pystytettiin '
+          + '2000 ensimmäisten eurooppalaisten uudisasukkaiden '
+          + 'muistoksi. Osa reunapuista on istutettu sotavuosien '
+          + 'muistoksi, ja niiden juurella on laatat.'
+          + '\n\n'
+          + 'Puiston muoto muuttui 1968, kun Dunedinin katuverkkoa '
+          + 'järjesteltiin uudelleen: läpiajotie erotti pohjoisimman '
+          + 'kärjen muusta puistosta, ja juuri sille pikkukolmiolle '
+          + 'kelttiläinen risti nousi. Puisto on Anzac-päivän '
+          + 'muistotilaisuuksien paikka joka huhtikuu.',
+      kuvat: [
+        {
+          tiedosto: 'Dunedin War Memorial (4296482072).jpg',
+          selite: 'Kenotafi kohoaa 28 metriin puiden keskeltä ja on '
+            + 'kaupungin päämuistomerkki.',
+          lahde: 'Rexness, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * SUVA (Opus 6.9.2026, paketti O9). Kohteet ovat kohdekartan neljä
+   * pistettä (maakartat.js: KAUPUNKIKARTAT.suva), ja jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 6.9.2026 (artikkelit "Sacred
+   * Heart Cathedral, Suva", "Government Buildings, Suva", "Thurston
+   * Gardens" ja "Government House, Suva").
+   *
+   * EI VALLANKAAPPAUKSIA. Kaikki neljä lähdeartikkelia kertovat
+   * Fidžin vallankaappauksista 1987, 2000 ja 2006 — niitä ei ole
+   * otettu mukaan (ei nykypolitiikkaa). Parlamentin ja
+   * valtionpäämiehen talon vaiheet kerrotaan vuosilukuina ilman
+   * poliittista kehystä.
+   *
+   * THURSTON GARDENSIN 1843 KERROTAAN TAPAHTUMANA ILMAN
+   * YKSITYISKOHTIA (Perustuslain pilari 4): lähdeartikkeli kuvaa
+   * vanhan Suvan kylän tuhon graafisesti, ja tässä sanotaan vain, että
+   * kylä tuhoutui 1843 ja puutarhat ovat sen paikalla.
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI: lehden nostot
+   * ovat vuoden 1876 merikartta, Carnegie-kirjasto, Fidžin museo,
+   * Grand Pacific Hotel, Cakobau, kai colo -sota, vuoden 1903
+   * satamanäkymä ja Albert Park.
+   *
+   * KUVAT tarkistettu Commonsin rajapinnasta 6.9.2026 ja katsottu
+   * silmin; yksikään tiedosto ei ole sama kuin lehden suva-lohkossa.
+   */
+  suva: {
+    'Pyhän sydämen katedraali': {
+      aika: '1902',
+      teksti: 'Suvan katedraali on Fidžin katolisen kirkon pääkirkko, ja '
+          + 'se seisoo Pratt Streetin varrella keskustassa. Rakennus '
+          + 'valmistui 1902, ja sen hiekkakivi tuotiin laivalla '
+          + 'Sydneyn lähellä olevista louhoksista yli meren. '
+          + 'Arkkitehtuurin esikuvina olivat Rooman kirkot.'
+          + '\n\n'
+          + 'Julkisivu on runsaasti koristeltu, ikkunoissa on '
+          + 'lasimaalauksia, ja kellarikerroksessa on krypta. Kahden '
+          + 'tornin väliin, päätykolmion päälle, on nostettu '
+          + 'Kristus-patsas, joka näkyy alas kadulle. Katedraali toimii '
+          + 'Suvan arkkihiippakunnan istuimena; hiippakunta '
+          + 'perustettiin 1966.'
+          + '\n\n'
+          + 'Kirkko kuuluu siihen Suvan keskustaan, jossa siirtomaa-ajan '
+          + 'kivirakennukset ja uudempi rakennuskanta seisovat samoissa '
+          + 'kortteleissa.',
+      kuvat: [
+        {
+          tiedosto: 'Sacred Heart Cathedral, Suva Fiji July 2014.jpg',
+          selite: 'Katedraalin hiekkakivinen julkisivu ja kaksi tornia '
+            + 'ovat Pratt Streetin päässä, ja päätyä koristaa '
+            + 'Kristus-patsas.',
+          lahde: 'Stemoc, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Hallintorakennukset: {
+      aika: '1937–1939',
+      teksti: 'Hallintorakennusten perustuskivi laskettiin 1937, ja talon '
+          + 'suunnitteli siirtomaan pääarkkitehti Walter Frederick '
+          + 'Hedges. Hän oli aiemmin toiminut pääarkkitehtina '
+          + 'Malaijiliittovaltioissa, jossa hän suunnitteli Kuala '
+          + 'Lumpurin sairaalan ja Perakin sulttaanin palatsin Istana '
+          + 'Iskandariahin, ja sitä ennen Kultarannikon siirtomaassa. '
+          + 'Kuvernööri sir Harry Luke vihki art deco -tyylisen talon '
+          + 'käyttöön toukokuussa 1939.'
+          + '\n\n'
+          + 'Talo oli siirtomaahallinnon ja lakiasäätävän neuvoston '
+          + 'koti. Kun Fidži itsenäistyi 1970, neuvostosta tuli maan '
+          + 'parlamentti ja se jatkoi samassa talossa. Parlamentti '
+          + 'siirtyi myöhemmin väliaikaisiin tiloihin ja 1992 '
+          + 'valmistuneeseen omaan kortteliinsa, mutta palasi vanhaan '
+          + 'taloonsa vuoden 2014 vaalien jälkeen. Nykyään rakennuksissa '
+          + 'toimivat pääministerin kanslia, ylioikeus ja useita '
+          + 'ministeriöitä.'
+          + '\n\n'
+          + 'Rakennus on Albert Parkia vastapäätä, ja sen ympäri '
+          + 'kiertävät Southern Cross Road, Gladstone Road, Thurston '
+          + 'Street ja Victoria Parade. Edessä seisoo kaksi patsasta: '
+          + 'Ratu Seru Epenisa Cakobau ja Ratu sir Lala Sukuna. '
+          + 'Gladstone Roadin puoleinen kellotorni kunnostettiin '
+          + '2010-luvulla; kellon rakensi ja kokosi Cumbria Clock '
+          + 'Company vuonna 1939.',
+      kuvat: [
+        {
+          tiedosto: 'Government Buildings Suva MatthiasSuessen-8446.jpg',
+          selite: 'Art deco -tyylisen hallintorakennuksen edessä on '
+            + 'nurmikenttä ja patsas, ja talon takaa kohoaa '
+            + 'kellotorni.',
+          lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Thurston Gardens': {
+      aika: '1879',
+      teksti: 'Thurston Gardens on Fidžin kasvitieteellinen puutarha '
+          + 'keskellä Suvaa, Albert Parkin ja valtionpäämiehen talon '
+          + 'välissä. Puutarhat ovat vanhan Suvan kylän paikalla; kylä '
+          + 'tuhoutui 1843. Vuonna 1879 sir John Bates Thurston kutsui '
+          + 'Mauritiuksen metsien ja kasvitieteellisten puutarhojen '
+          + 'johtajan John Hornen käymään ja laatimaan ehdotuksen '
+          + 'puutarhasta. Nimi oli aluksi Suva Botanical Gardens, ja se '
+          + 'muutettiin 1976 Thurstonin muistoksi — hän oli Fidžin '
+          + 'viides kuvernööri helmikuusta 1888 maaliskuuhun 1897.'
+          + '\n\n'
+          + 'Puutarha järjestettiin uudelleen 1913, jolloin ojat '
+          + 'vedettiin maan alle ja istutettiin 101 kuninkaanpalmun ja '
+          + '39 puusaniaisen kujat. Kellotorni ja soittolava '
+          + 'rakennettiin 1918 Suvan ensimmäisen pormestarin muistoksi. '
+          + 'Fidžin museo toimii rakennuksessa, joka nousi puutarhan '
+          + 'alueelle 1955, ja museo myös hoitaa puutarhaa.'
+          + '\n\n'
+          + 'Alue on suvalaisten päiväpuisto: palmuja, inkiväärikasveja, '
+          + 'lumpeita ja muuta saarten omaa kasvillisuutta kasvaa '
+          + 'käytävien varsilla, ja varjo on trooppisessa kosteudessa '
+          + 'yhtä tervetullut kuin sadekatos.',
+      kuvat: [
+        {
+          tiedosto: 'Thurston Gardens from Cakobau Rd and QE Dr.jpg',
+          selite: 'Puutarhan portti Cakobau Roadin ja Queen Elizabeth '
+            + 'Driven kulmassa avautuu palmujen ja suurten varjopuiden '
+            + 'alle.',
+          lahde: 'Tucoxn, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Valtionpäämiehen talo': {
+      aika: '1928',
+      teksti: 'Ensimmäinen kuvernöörin residenssi rakennettiin 1880-luvun '
+          + 'alussa, pian sen jälkeen kun pääkaupunki oli siirtynyt '
+          + 'Suvaan. Se oli kaksi pientä puurunkoista taloa. Rakennus '
+          + 'paloi maan tasalle 1921 salamaniskun jälkeen, ja tilalle '
+          + 'nousi 1928 nykyinen kaksikerroksinen, georgiaanisessa '
+          + 'tyylissä rakennettu kartano kaari-ikkunaisine '
+          + 'parvekekäytävineen.'
+          + '\n\n'
+          + 'Talo oli 1970–1987 kenraalikuvernöörin virka-asunto ja on '
+          + 'vuodesta 1987 ollut tasavallan presidentin koti. Se seisoo '
+          + 'Fidžin museon eteläpuolella nurmirinteessä, ja pääportti '
+          + 'on Queen Elizabeth Driven varrella lähellä ylimpien '
+          + 'päälliköiden neuvoston rakennusta.'
+          + '\n\n'
+          + 'Sisään ei pääse, mutta kuukauden ensimmäisellä viikolla '
+          + 'portin edessä tehdään vartionvaihto, joka on Suvan '
+          + 'katsotuimpia tapahtumia. Vartijat ovat Fidžin tasavallan '
+          + 'puolustusvoimista.',
+      kuvat: [
+        {
+          tiedosto: 'Presidential Pallace Suva MatthiasSuessen-8769.jpg',
+          selite: 'Vuoden 1928 kartano seisoo nurmirinteen päällä, ja '
+            + 'sen molemmissa kerroksissa kiertää kaarikäytävä.',
+          lahde: 'User:Matthias Süßen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

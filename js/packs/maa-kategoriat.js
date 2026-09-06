@@ -28421,4 +28421,1413 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * KANADA (CAN) — P-Amerikan toinen maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-kanada.md. Jokainen
+   * luku, päiväys ja nimi on haettu en-Wikipedian raakatekstistä
+   * 6.9.2026 (prop=extracts&explaintext), ei muistista.
+   *
+   * AIHEVALINTA: historia, alkuperäiskansat, luonto, ruoka, urheilu.
+   * Kuvataide ja tiede jätettiin pois, koska Kanadan vahvin aineisto on
+   * valtiosynnyssä, luonnossa ja urheilussa. Torontolla, Vancouverilla ja
+   * Montrealilla on jo omat historia- ja alkuperäiskansasivunsa
+   * (kulttuuri-kategoriat.js), joten maalehti EI toista niiden sisältöä:
+   * kaupunkisivut kertovat Mississaugoista, Musqueamista ja Yorkin
+   * palosta, maasivut koko maasta.
+   *
+   * HERKÄT AIHEET (spec-mantereet.md, Perustuslain pilarit 3 ja 4):
+   *  - Sisäoppilaitosjärjestelmä kerrotaan suoraan mutta ilman
+   *    väkivallan yksityiskohtia ja ilman kuolinlukuja: tarkoitus,
+   *    laajuus (150 000 lasta, 80 koulua huipussaan), kesto (1876–1997)
+   *    ja tunnustaminen (TRC 2008–2015, anteeksipyyntö 11.6.2008,
+   *    kansallinen päivä 30.9.) riittävät. Kansa näytetään elävänä
+   *    nykypäivän toimijana, ei kukistettuna jäänteenä.
+   *  - Cypress Hillsin verilöyly kesäkuussa 1873 on NWMP-noston
+   *    taustalla, mutta se mainitaan vain yleisenä rajaseudun
+   *    väkivaltana ilman uhrilukuja.
+   *
+   * MINITEHTÄVÄ on yksi (maalehti.md, vaihe 2): luonto-sivulla, ja sen
+   * vastaus löytyy saman sivun L3-nostosta. Tarkistettu, ettei se osu
+   * northamerica-questions.js:n kysymyksiin (siellä ei ole majava- eikä
+   * patoaiheista kysymystä).
+   *
+   * KUVAT: 20 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin 900 px:n esikatselussa.
+   * Naismithin sääntöasiakirjassa ja Julienin piirroksessa näkyy
+   * julkaisijan oma teksti — reseptin sallima poikkeus, kerrottu
+   * kuvatekstissä. HYLÄTYT: "Indians from N.Y. state reservation"
+   * (näyttelykuva, jossa kansaa esitellään yleisölle), "Curling in High
+   * Park" (valokuvan oma valkoinen kehys), "Selecting curling rocks"
+   * (tunnistettavat kasvot), Royal Montreal Curling Clubin muistolaatta
+   * (pelkkää tekstiä), nykyaikaiset muovilacrossemailat (eivät vastaa
+   * noston aihetta).
+   */
+  CAN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kanada on isoisän matkavuonna kuusivuotias valtio, jonka '
+          + 'sisällä on kaksisataa vuotta vanhempi turkiskauppayhtiö ja '
+          + 'tuhat vuotta vanhempi eurooppalainen leiripaikka.',
+      nostot: [
+        {
+          otsikko: 'Viisisataa vuotta ennen Kolumbusta',
+          aika: '1021',
+          tiedosto: "2022-08-27 05 View of L'Anse aux Meadows, NFL CAN.jpg",
+          teksti: 'Newfoundlandin pohjoiskärjessä on kahdeksan turvekattoisen '
+              + 'rakennuksen pohjat ja yli 800 esinettä — ainoa kiistaton '
+              + 'todiste siitä, että eurooppalaiset kävivät Amerikassa ennen '
+              + 'Kolumbusta. Norjalainen tutkija Helge Ingstad ja arkeologi '
+              + 'Anne Stine Ingstad kaivoivat paikan 1961–1968 sen jälkeen, '
+              + 'kun kyläläinen George Decker oli vienyt heidät kumpujen '
+              + 'luo. Radiohiiliajoitus antoi haarukan 990–1050, mutta '
+              + 'vuosilustot tarkensivat vuonna 2021 yhden vuoden: 1021. '
+              + 'Löydetyt voipähkinät eivät kasva näin pohjoisessa, joten '
+              + 'purjehdittiin myös etelämmäksi.',
+          selite: 'Newfoundlandin L’Anse aux Meadows on ainoa kiistaton '
+            + 'kohde, jossa eurooppalaiset asuivat Amerikassa ennen '
+            + 'Kolumbusta, ja vuosilustot ajoittavat asumisen vuoteen 1021.',
+          lahde: 'Gordon Leggett, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'L’Anse aux Meadows',
+        },
+        {
+          otsikko: 'Yhtiö, joka omisti kolmasosan maasta',
+          aika: '1670–2025',
+          tiedosto: 'York Factory, Manitoba (2017).jpg',
+          teksti: 'Kaarle II myönsi 2. toukokuuta 1670 peruskirjan yhtiölle, '
+              + 'joka sai yksinoikeuden kaikkeen kauppaan Hudsoninlahteen '
+              + 'laskevien jokien alueella. Rupert’s Land oli '
+              + '3 861 400 neliökilometriä eli yli kolmasosa nykyisestä '
+              + 'Kanadasta, eikä kukaan tiennyt sen rajoja. Hinnat '
+              + 'laskettiin yhdessä yksikössä: yksi Made Beaver oli vuoden '
+              + 'käytetty priimamajavannahka, ja saukonnahat, hirvennahat ja '
+              + 'villahuovat hinnoiteltiin siinä. Alue myytiin Kanadalle '
+              + '1869. Yhtiö eli vielä 155 vuotta ja purkautui 2025.',
+          selite: 'York Factory oli Hudson’s Bay Companyn päätukikohta '
+            + 'vuodesta 1774, ja yhtiö hallitsi turkiskauppaa Rupert’s '
+            + 'Landissa peruskirjastaan 1670 aina alueen luovutukseen 1869.',
+          lahde: 'Travel Manitoba, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Hudson’s Bay Company',
+        },
+        {
+          otsikko: 'Saari, joka kutsui juhlat ja tuli itse viimeisenä',
+          aika: '1864–1873',
+          tiedosto: 'Charlottetown Conference Delegates, September 1864.JPG',
+          teksti: 'Prinssi Edwardin saaren Charlottetownissa alkoi 1. '
+              + 'syyskuuta 1864 kokous, jossa oli tarkoitus puhua vain '
+              + 'meriprovinssien liitosta. Kanadan provinssin lähetystö '
+              + 'pyysi päästä mukaan, sai luvan ja käänsi keskustelun koko '
+              + 'Brittiläisen Pohjois-Amerikan liitoksi. Quebecin kokous '
+              + 'jatkoi lokakuussa, ja 1. heinäkuuta 1867 syntyi neljän '
+              + 'provinssin Dominion of Canada. Kutsujaisisäntä jäi '
+              + 'ulkopuolelle: Prinssi Edwardin saari liittyi vasta 1. '
+              + 'heinäkuuta 1873, kun sen talous oli ajautunut ahtaalle.',
+          selite: 'Charlottetownin kokouksessa syyskuussa 1864 sovittiin '
+            + 'Kanadan konfederaation perustasta, mutta kokouksen isäntä '
+            + 'Prinssi Edwardin saari liittyi liittovaltioon vasta '
+            + '1. heinäkuuta 1873.',
+          lahde: 'George P. Roberts, Wikimedia Commons (PD)',
+          wiki: 'Kanadan historia',
+        },
+        {
+          otsikko: 'Punatakit lähtevät länteen',
+          aika: '1873',
+          tiedosto: 'The Start From Fort Dufferin, 1874.jpg',
+          teksti: 'Kanadan parlamentti hyväksyi 23. toukokuuta 1873 lain, '
+              + 'joka perusti North-West Mounted Policen. Pääministeri John '
+              + 'A. Macdonald määritteli tehtäväksi "rauhan säilyttämisen ja '
+              + 'rikosten ehkäisyn" valtavassa lännessä, jossa ei ollut '
+              + 'siviilihallintoa ja jonne rajan takaa tuotiin viinaa. '
+              + 'Univormun punainen takki valittiin tarkoituksella '
+              + 'muistuttamaan brittiläistä sotilaspukua. Seuraavana vuonna '
+              + 'joukko ratsasti 1 400 kilometriä länteen; retki oli niin '
+              + 'huonosti suunniteltu, että historioitsijat kutsuvat sitä '
+              + 'fiaskoksi. Vuonna 1920 nimeksi tuli RCMP.',
+          selite: 'North-West Mounted Police perustettiin 23. toukokuuta '
+            + '1873 valvomaan lakia Luoteisterritorioissa, ja sen punainen '
+            + 'takki valittiin muistuttamaan brittiläistä sotilaspukua; '
+            + 'kuvan piirsi retkelle osallistunut Henri Julien.',
+          lahde: 'Henri Julien, Wikimedia Commons (PD)',
+          wiki: 'Kanadan ratsupoliisi',
+        },
+      ],
+    },
+    {
+      id: 'alkuperaiskansat',
+      nimi: 'Alkuperäiskansat',
+      johdanto: 'Kanadan perustuslaki tuntee kolme alkuperäiskansaa — First '
+          + 'Nations, inuiitit ja métisit — ja niiden sisällä on yli '
+          + 'kuusisataa omaa hallintoa.',
+      nostot: [
+        {
+          otsikko: 'Kansa, joka syntyi turkiskaupan varrella',
+          tiedosto: 'Red River Cart.jpg',
+          teksti: 'Métis-kansat syntyivät 1600-luvun puolivälissä, kun First '
+              + 'Nations- ja inuiittinaiset avioituivat eurooppalaisten, '
+              + 'etenkin ranskalaisten, turkiskauppiaiden kanssa. Heistä '
+              + 'tuli oma kansansa omine kielineen ja kulkuneuvoineen: '
+              + 'Punaisenjoen kärryt olivat kokonaan puuta ja nahkaa, joten '
+              + 'ne saattoi korjata preerialla ilman seppää. Vuoden 2021 '
+              + 'väestölaskennassa Kanadan alkuperäiskansoihin kuului yli '
+              + '1,8 miljoonaa ihmistä eli viisi prosenttia väestöstä, ja '
+              + 'heidän keski-ikänsä oli 33,6 vuotta muun väestön 41,8 '
+              + 'vuotta vastaan.',
+          selite: 'Punaisenjoen kärryt olivat métis-kansan kulkuneuvo '
+            + 'preerialla: kokonaan puusta ja nahasta tehdyn kärryn saattoi '
+            + 'korjata matkalla ilman seppää.',
+          lahde: 'KrttiDesigns, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kanadan alkuperäiskansat',
+        },
+        {
+          otsikko: 'Paalu, jota ei palvota',
+          aika: '1830–1880',
+          tiedosto: 'Haida totem pole from Tanu.jpg',
+          teksti: 'Haidan kielellä toteemipaalu on gyáaʼaang. Paalut '
+              + 'kaiverretaan jättiläistuijasta, ja niissä kerrotaan '
+              + 'sukulinjoja, tapahtumia ja oikeuksia — ne eivät ole '
+              + 'palvonnan kohteita, vaikka niin usein luullaan. Osa on '
+              + 'suorastaan häpeäpaaluja, jotka pystytettiin muistuttamaan '
+              + 'maksamattomasta velasta. Kaiverrus kukoisti vuosina '
+              + '1830–1880, kun rautatyökalut ja turkiskaupan varallisuus '
+              + 'kohtasivat, ja loppui lähes kokonaan vuoteen 1901 '
+              + 'mennessä. Paalu kestää sateisella rannikolla 60–80 vuotta; '
+              + 'nyt niitä kaiverretaan taas.',
+          selite: 'Toteemipaalu kertoo suvun linjaa, tapahtumia ja '
+            + 'oikeuksia eikä ole palvonnan kohde, ja jättiläistuijasta '
+            + 'tehty paalu kestää rannikkoilmastossa 60–80 vuotta.',
+          lahde: 'Vysotsky, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Toteemipaalu',
+        },
+        {
+          otsikko: 'Kivi, joka toimii ihmisen sijasta',
+          aika: '1999',
+          tiedosto: 'Nappatuq Foxe-PI 2002-07-26.jpg',
+          teksti: 'Inuksuk tarkoittaa sanatarkasti sitä, joka toimii ihmisen '
+              + 'sijasta. Puuttomalla tundralla pystyyn ladotut kivet '
+              + 'kertovat reitin, kalapaikan, ruokakätkön tai '
+              + 'metsästysaidan. Baffininsaaren Inuksuk Pointissa niitä on '
+              + 'yli sata, ja paikka on ollut kansallinen historiallinen '
+              + 'kohde vuodesta 1969. Sama merkki on nyt kokonaisen '
+              + 'territorion tunnus: Nunavut irrotettiin '
+              + 'Luoteisterritorioista 1. huhtikuuta 1999. Se on '
+              + '1 836 994 neliökilometriä ja siellä asui vuoden 2021 '
+              + 'laskennassa 36 858 ihmistä.',
+          selite: 'Inuksuk tarkoittaa sitä, joka toimii ihmisen sijasta, ja '
+            + 'puuttomalla tundralla kiviladelma kertoo reitin, kalapaikan '
+            + 'tai ruokakätkön.',
+          lahde: 'Ansgar Walk, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Nunavut',
+        },
+        {
+          otsikko: 'Koulut, joita kesti sata kaksikymmentä vuotta',
+          aika: '1876–1997',
+          tiedosto: 'MohawkInstitute.jpg',
+          teksti: 'Kanadan valtio rahoitti ja kirkot ylläpitivät '
+              + 'sisäoppilaitosverkkoa, jonka tarkoitus oli irrottaa '
+              + 'alkuperäiskansojen lapset omasta kielestään ja '
+              + 'kulttuuristaan. Järjestelmä laajeni vuoden 1876 Indian '
+              + 'Actin jälkeen, koulunkäynti tuli pakolliseksi 1894 ja '
+              + 'huipussaan 1930-luvun alussa kouluja oli noin 80 ja '
+              + 'oppilaita yli 17 000. Kaikkiaan niissä oli noin 150 000 '
+              + 'lasta, ja viimeinen suljettiin 1997. Totuus- ja '
+              + 'sovintokomissio nimitti järjestelmän 2015 kulttuuriseksi '
+              + 'kansanmurhaksi; 30. syyskuuta on nyt kansallinen päivä.',
+          selite: 'Brantfordin Mohawk Institute oli yksi Kanadan '
+            + 'sisäoppilaitoksista, ja rakennuksessa toimii nykyään '
+            + 'Woodland Cultural Centre -museo.',
+          lahde: 'Illustratedjc, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Kanadassa on maailman suurin vuorovesi, Sveitsiä suurempi '
+          + 'kansallispuisto ja pato, joka näkyy avaruuteen.',
+      nostot: [
+        {
+          otsikko: 'Kuumat lähteet, joista tuli puisto',
+          aika: '1885',
+          tiedosto: 'Lake Moraine-Banff National Park.jpg',
+          teksti: 'Rautatietyömiehet törmäsivät 1883 Kalliovuorilla kuumiin '
+              + 'lähteisiin, ja niiden omistuksesta syntyi heti riita. '
+              + 'Pääministeri John A. Macdonald ratkaisi sen 25. marraskuuta '
+              + '1885 varaamalla lähteiden ympäriltä 26 neliökilometriä '
+              + 'suojelualueeksi. Vuoden 1887 laki laajensi alueen 674 '
+              + 'neliökilometriin ja antoi sille nimen Rocky Mountains '
+              + 'Park — Kanadan ensimmäinen ja Pohjois-Amerikan kolmas '
+              + 'kansallispuisto Yellowstonen ja Mackinacin jälkeen. Nyt '
+              + 'Banff on 6 641 neliökilometriä nakoda-kansan vanhaa maata.',
+          selite: 'Banffista tuli 25. marraskuuta 1885 Kanadan ensimmäinen '
+            + 'kansallispuisto, kun kiista rautatietyömiesten löytämien '
+            + 'kuumien lähteiden omistuksesta ratkaistiin suojelemalla ne.',
+          lahde: 'Florian Fuchs, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Banffin kansallispuisto',
+        },
+        {
+          otsikko: 'Sata miljardia tonnia kahdesti päivässä',
+          tiedosto: 'NB-00047 - Hopewell Rocks (51303497332).jpg',
+          teksti: 'Fundynlahti kapenee suppiloksi New Brunswickin ja Nova '
+              + 'Scotian väliin, ja suppilossa vuorovesi resonoi. '
+              + 'Korkeuseroa on keskimäärin noin kuusitoista metriä, kun '
+              + 'maailman keskiarvo on yksi. Yhden puolen vuorokauden '
+              + 'vuorovesijakson aikana lahteen virtaa ja siitä pois noin '
+              + 'sata miljardia tonnia vettä — kaksi kertaa niin paljon '
+              + 'kuin maailman kaikki joet yhteensä samassa ajassa. '
+              + 'Mi’kmaqit ja passamaquoddyt kutsuivat lahtea nimellä '
+              + 'Bakudabakek, avoin väylä.',
+          selite: 'Fundynlahdella on maailman suurin vuorovesivaihtelu, '
+            + 'keskimäärin noin kuusitoista metriä, ja yhden vuorovesijakson '
+            + 'aikana liikkuu noin sata miljardia tonnia vettä.',
+          lahde: 'Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Fundynlahti',
+        },
+        {
+          otsikko: 'Pato, joka löytyi satelliittikuvasta',
+          aika: '2007',
+          tiedosto: 'North American Beaver (Castor canadensis) - Algonquin Provincial Park, Ontario 01.jpg',
+          teksti: 'Majava on Kanadan kansallissymboli ja avainlaji: sen '
+              + 'patoamat lammikot ja kosteikot nostavat koko seudun '
+              + 'lajimäärää. Vuonna 2007 satelliittikuvista löytyi Wood '
+              + 'Buffalon kansallispuiston eteläreunalta pato, joka on 850 '
+              + 'metriä pitkä — yli kaksi kertaa Hooverin padon leveys. '
+              + 'Majava reagoi virtaavan veden ääneen: kun tutkijat '
+              + 'soittivat nauhaa kuivalla maalla, eläin peitti soittimen '
+              + 'oksilla ja mudalla. Kanadan ensimmäisessä postimerkissä on '
+              + 'majava eikä hallitsija.',
+          selite: 'Kanadanmajava on avainlaji, jonka padot ja lammikot '
+            + 'nostavat seudun lajimäärää, ja se on Kanadan '
+            + 'kansallissymboli sekä maan ensimmäisen postimerkin aihe.',
+          lahde: 'Ryan Hodnett, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kanadanmajava',
+        },
+        {
+          otsikko: 'Puisto, joka on Sveitsiä suurempi',
+          aika: '1922',
+          tiedosto: 'Wood Buffalo Wood Buffalo National Park 2007.jpg',
+          teksti: 'Wood Buffalon kansallispuisto perustettiin 1922 '
+              + 'suojelemaan metsäbiisonia, jota siellä on nyt noin kolme '
+              + 'tuhatta. Puisto on 44 741 neliökilometriä eli Sveitsiä '
+              + 'suurempi ja maailman toiseksi suurin kansallispuisto. Se '
+              + 'on trumpettikurjen ainoa tunnettu luonnollinen '
+              + 'pesimäalue ja sisältää Peace-Athabascan suistoalueen, '
+              + 'yhden maailman suurimmista makean veden suistoista. '
+              + 'Vuonna 2013 Kanadan tähtitieteellinen seura julisti puiston '
+              + 'maailman suurimmaksi pimeän taivaan suojelualueeksi.',
+          selite: 'Wood Buffalon kansallispuisto perustettiin 1922 '
+            + 'metsäbiisonin suojaksi, ja se on 44 741 neliökilometrillään '
+            + 'Sveitsiä suurempi ja maailman toiseksi suurin '
+            + 'kansallispuisto.',
+          lahde: 'Naturedata, Wikimedia Commons (CC0)',
+          wiki: 'Wood Buffalon kansallispuisto',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka pitkä on maailman pisin majavapato, joka löytyi '
+            + 'Wood Buffalon kansallispuistosta?',
+        vaihtoehdot: [
+          '85 metriä',
+          '250 metriä',
+          '850 metriä',
+          '2 500 metriä',
+        ],
+        oikea: 2,
+        fakta: 'Pato löytyi satelliittikuvista vuonna 2007, ja se on yli '
+            + 'kaksi kertaa Hooverin padon levyinen.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kanadan keittiön kolme kulmakiveä ovat alkuperäiskansojen '
+          + 'keksintöjä, ja neljäs syntyi 1950-luvulla maalaiskrouvissa.',
+      nostot: [
+        {
+          otsikko: 'Neljäkymmentä ämpäriä yhtä pulloa kohti',
+          tiedosto: 'Duchesnay (Québec)-Cabane à sucre de la station touristique Duchesnay-2014-12-14.jpg',
+          teksti: 'Vaahterasiirapin keksivät Koillis-Amerikan '
+              + 'alkuperäiskansat. Algonkinit veistivät runkoon V-loven, '
+              + 'ohjasivat mahlan ruo’on tai tuohen kautta astiaan, '
+              + 'jäädyttivät osan vedestä yön yli ja keittivät loput '
+              + 'saviruukuissa. Työmäärä ei ole muuttunut: siirapiksi '
+              + 'keitetään 20–50 tilavuutta mahlaa yhtä tilavuutta '
+              + 'siirappia kohti. Keittopaikkaa sanotaan Québecissä nimellä '
+              + 'cabane à sucre, ja provinssi tuottaa yksin 72 prosenttia '
+              + 'maailman vaahterasiirapista.',
+          selite: 'Vaahterasiirappi syntyy keittämällä 20–50 tilavuutta '
+            + 'mahlaa yhdeksi tilavuudeksi siirappia, ja Québec tuottaa '
+            + 'yksin 72 prosenttia maailman siirapista.',
+          lahde: 'Veillg1, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Vaahterasiirappi',
+        },
+        {
+          otsikko: 'Neljäkymmentä kiloa yhdessä säkissä',
+          aika: '1814',
+          tiedosto: 'Pemmican ball.jpg',
+          teksti: 'Pemmikaani on creen sanaa pimîhkân, joka juontuu sanasta '
+              + 'pimî, rasva: kuivattua ja hienonnettua lihaa, sulatettua '
+              + 'talia ja joskus marjoja. Viisi kiloa tuoretta lihaa antaa '
+              + 'yhden kilon kuivattua. Punaisenjoen métisit pakkasivat sen '
+              + 'noin neljänkymmenenyhden kilon säkkeihin, joita sanottiin '
+              + 'sanalla taureau — yhteen meni yhden biisonin liha. Ruoka '
+              + 'oli niin tärkeää turkiskaupalle, että kuvernööri Miles '
+              + 'Macdonell kielsi sen viennin 1814 ja sytytti riidan, jota '
+              + 'kutsutaan pemmikaanisodaksi.',
+          selite: 'Pemmikaani on kuivatusta lihasta, talista ja joskus '
+            + 'marjoista tehtyä matkaruokaa, ja métisien noin '
+            + 'neljänkymmenenyhden kilon taureau-säkkiin meni yhden '
+            + 'biisonin liha.',
+          lahde: 'Jen Arrr, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Pemmikaani',
+        },
+        {
+          otsikko: 'Leipä, joka jakaa mielipiteet',
+          tiedosto: 'Préparation bannique 2.jpg',
+          teksti: 'Bannock on Kanadan alkuperäiskansojen levinnein ruokalaji: '
+              + 'sitä paistetaan arktiselta alueelta preerialle ja '
+              + 'Tyynenmeren rannikolle asti, pannulla, uunissa tai kepin '
+              + 'ympärillä. Nykyresepti — vehnäjauhoa, sokeria, laardia ja '
+              + 'suolaa — on kuitenkin peräisin 1800-luvun lopun '
+              + 'reservaattimuonasta, jota jaettiin kun pääsy omiin '
+              + 'luonnonruokiin katkesi. Siksi ruoka jakaa mielipiteet: '
+              + 'osalle se on oman kulttuurin lohturuokaa, osalle muistutus '
+              + 'siitä, mistä ainekset tulivat.',
+          selite: 'Bannock on Kanadan alkuperäiskansojen levinnein '
+            + 'ruokalaji, mutta sen nykyresepti perustuu 1800-luvun lopun '
+            + 'reservaattimuonaan eli vehnäjauhoon, sokeriin ja laardiin.',
+          lahde: 'Thérèse Ottawa, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Riita siitä, kuka teki sotkun ensin',
+          aika: '1957–1964',
+          tiedosto: 'Poutine from Windsor, ON.jpg',
+          teksti: 'Poutine syntyi Keski-Québecissä 1950-luvun lopulla, mutta '
+              + 'kaksi paikkakuntaa vaatii kunniaa. Warwickissa Fernand '
+              + 'Lachance huudahti 1957 asiakkaalle, joka pyysi '
+              + 'juustonarskuja ranskalaisten sekaan: "tästä tulee '
+              + 'kirottu sotku!" — ja lisäsi kastikkeen vasta 1962. '
+              + 'Drummondvillessä Jean-Paul Roy myi samaa yhdistelmää 1958 '
+              + 'ja otti sen ruokalistalle 1964. Ratkaiseva ainesosa on '
+              + 'tuoreus: narskut menettävät narinansa vuorokaudessa, joten '
+              + 'ravintolan on oltava lähellä meijeriä.',
+          selite: 'Poutine syntyi Keski-Québecissä 1950-luvun lopulla, ja '
+            + 'sen juustonarskujen on oltava alle vuorokauden vanhoja, '
+            + 'muuten narina katoaa.',
+          lahde: 'Antonydstevens, Wikimedia Commons (CC0)',
+          wiki: 'Poutine',
+        },
+      ],
+    },
+    {
+      id: 'urheilu',
+      nimi: 'Urheilu',
+      johdanto: 'Kanadassa on Pohjois-Amerikan vanhin urheiluseura, vanhin '
+          + 'joukkuepeli ja koripallon keksijä — joka keksi lajinsa '
+          + 'kahdessa viikossa.',
+      nostot: [
+        {
+          otsikko: 'Peli, joka kesti kolme päivää',
+          aika: '1637',
+          tiedosto: 'Miniature Lacrosse Stick MET TR.165.35.2011 d.jpeg',
+          teksti: 'Lacrosse on Pohjois-Amerikan vanhin järjestäytynyt '
+              + 'urheilulaji, ja sen juuret ovat alkuperäiskansoilla '
+              + '1100-luvulta. Perinteisessä pelissä oli sadasta tuhanteen '
+              + 'pelaajaa, kenttä oli kilometrien mittainen ja ottelu kesti '
+              + 'auringonnoususta laskuun kaksi tai kolme päivää. Peliä '
+              + 'sanottiin Luojan peliksi. Jesuiitta Jean de Brébeuf näki '
+              + 'huronien pelaavan 1637 ja antoi sille ranskalaisen nimen. '
+              + 'Hammaslääkäri William George Beers kirjoitti säännöt 1860, '
+              + 'ja ensimmäinen niiden mukainen ottelu pelattiin 1867.',
+          selite: 'Lacrosse on Pohjois-Amerikan vanhin järjestäytynyt '
+            + 'urheilulaji, ja perinteisessä pelissä saattoi olla tuhat '
+            + 'pelaajaa kilometrien mittaisella kentällä kolmen päivän ajan.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (CC0)',
+          wiki: 'Haavipallo',
+        },
+        {
+          otsikko: 'Ensimmäinen ottelu katon alla',
+          aika: '1875',
+          tiedosto: 'A Typical Canadian Experience (5360279172).jpg',
+          teksti: 'Jäällä on pelattu mailapelejä niin kauan kuin järvet ovat '
+              + 'jäätyneet, mutta 3. maaliskuuta 1875 Montrealissa pelattiin '
+              + 'ensimmäinen sisäotteluksi järjestetty jääkiekko-ottelu — ja '
+              + 'siitä lasketaan nykylajin alku. Laji sai vaikutteita '
+              + 'skotlantilaisesta shintysta ja englantilaisesta '
+              + 'maahockeysta. Palkinto tilattiin 1892 ja jaettiin ensi '
+              + 'kerran 1893: Stanley Cup. Vuonna 1994 jääkiekosta tehtiin '
+              + 'laissa Kanadan virallinen talviurheilulaji — kesälajiksi '
+              + 'nimettiin samalla lacrosse.',
+          selite: 'Nykyjääkiekon lasketaan alkaneen Montrealissa 3. '
+            + 'maaliskuuta 1875 pelatusta ensimmäisestä sisäottelusta, ja '
+            + 'laji on ollut vuodesta 1994 Kanadan virallinen '
+            + 'talviurheilulaji.',
+          lahde: 'Steve Harris from Toronto, Canada, Wikimedia Commons '
+            + '(CC BY 2.0)',
+          wiki: 'Jääkiekko',
+        },
+        {
+          otsikko: 'Kaksikymmentä miestä ja rautaiset kivet',
+          aika: '1807',
+          tiedosto: "An early 19th Curling stone with owner's mark.jpg",
+          teksti: 'Montreal Curling Club perustettiin 27. tammikuuta 1807 '
+              + 'Gillis Tavernissa, kun kaksikymmentä skotlantilaistaustaista '
+              + 'miestä sopi säännöistä. Graniittikiviä ei ollut saatavilla, '
+              + 'joten ensimmäiset kivet valettiin raudasta ja peli '
+              + 'pelattiin jäätyneellä Saint Lawrence -joella. Seurasta tuli '
+              + 'Pohjois-Amerikan ensimmäinen curlingseura ja koko '
+              + 'maanosan vanhin yhä toimiva urheiluseura. Kolmekymmentä '
+              + 'vuotta myöhemmin sama joukko rakensi Kanadan ensimmäisen '
+              + 'sisäjäähallin.',
+          selite: 'Montreal Curling Club perustettiin 27. tammikuuta 1807 ja '
+            + 'on Pohjois-Amerikan vanhin yhä toimiva urheiluseura; '
+            + 'ensimmäiset kivet valettiin raudasta, koska graniittia ei '
+            + 'ollut saatavilla.',
+          lahde: 'Rosser1954, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Curling',
+        },
+        {
+          otsikko: 'Kaksi viikkoa aikaa keksiä peli',
+          aika: '1891',
+          tiedosto: 'Naismith Rules of Basketball 1892 first draft.jpg',
+          teksti: 'Ontariossa 1861 syntynyt James Naismith opiskeli ja opetti '
+              + 'McGillissä ja oli yliopiston ensimmäinen urheilujohtaja. '
+              + 'Springfieldin YMCA-koulussa hänen esimiehensä antoi '
+              + 'hänelle neljätoista päivää aikaa keksiä sisäpeli, joka ei '
+              + 'veisi tilaa eikä olisi liian kova. Naismith pyysi '
+              + 'talonmieheltä kahta laatikkoa ja sai persikkakorit, '
+              + 'kirjoitti kolmetoista sääntöä ja järjesti ensimmäisen '
+              + 'ottelun joulukuussa 1891 yhdeksän vastaan yhdeksän '
+              + 'jalkapallolla. Tärkein sääntö: pallon kanssa ei saa juosta.',
+          selite: 'James Naismith kirjoitti koripallolle kolmetoista sääntöä '
+            + 'ja kielsi pallon kanssa juoksemisen tehdäkseen pelistä '
+            + 'turvallisen; asiakirjan alalaidassa on hänen oma '
+            + 'käsinkirjoitettu merkintänsä.',
+          lahde: 'James Naismith, Wikimedia Commons (PD)',
+          wiki: 'James Naismith',
+        },
+      ],
+    },
+  ],
+  /*
+   * MEKSIKO (MEX) — P-Amerikan kolmas maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-meksiko.md; kaikki
+   * luvut tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO MEXICO CITYN KANSSA: kaupunkilehdellä on jo omat historia-
+   * ja atsteekkiperintö-sivunsa (Tenochtitlánin perustaminen, vuoden 1521
+   * piiritys, vajoava kaupunki, Templo Mayor, nahuatl, chinampat), joten
+   * maalehti EI toista valloitusta vaan aloittaa itsenäisyydestä ja
+   * käsittelee muinaisuudessa Teotihuacánin, Monte Albánin, Chichén
+   * Itzán ja mayakirjoituksen — kaikki pääkaupungin ulkopuolelta.
+   *
+   * SISÄLTÖLINJAUS (spec-mantereet.md): "arkeologia, kulttuuri ja
+   * historia kantavat; nykyväkivaltaa ei käsitellä". Nykyinen huumesota
+   * on siksi jätetty kokonaan pois; jos omistaja haluaa sen mukaan, se
+   * tarvitsee oman linjauksensa. Alkuperäiskansojen sivilisaatiot
+   * kerrotaan omina korkeakulttuureinaan eikä esihistoriana.
+   *
+   * KAKSI OIKAISUA YLEISIIN KÄSITYKSIIN, jotka en-Wikipedia sanoo
+   * suoraan ja jotka kirjoitettiin auki:
+   *  - Chichén Itzán päiväntasausvarjo: ilmiö näkyy lähes muuttumattomana
+   *    useiden viikkojen ajan, joten sillä EI voi määrittää päivää;
+   *    tarkoituksellisuus on artikkelin mukaan "erittäin epätodennäköinen".
+   *  - Molen suklaa: legenda sijoittaa sen siirtomaa-aikaan, mutta
+   *    artikkelin mukaan suklaa lisättiin moleen todennäköisesti vasta
+   *    2000-luvulla. Molemmat kerrotaan ja legenda merkitään legendaksi.
+   *
+   * KUVAT: 20 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin. Nebelin litografiassa ja
+   * Posadan kirjasivulla näkyy julkaisijan oma teksti — reseptin sallima
+   * poikkeus. HYLÄTYT: "Astoria el mariachi" (newyorkilaisen ravintolan
+   * kyltti, ei mariachia), "Puentes sobre la Barranca de Metlac"
+   * (moottoritiesilta, ei rautatietä), "Cenote Pool Uinic ... 08"
+   * (polku, ei cenotea), "Barrancas del Cobre ... 23712251243"
+   * (mallikuvaus kalliolla), "Professor James Naismith FMedSci FRS"
+   * (aivan eri henkilö).
+   */
+  MEX: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1873 Meksiko on 52-vuotias tasavalta, joka on juuri '
+          + 'haudannut ensimmäisen alkuperäiskansaan kuuluneen '
+          + 'presidenttinsä ja avannut ensimmäisen rautatiensä merelle.',
+      nostot: [
+        {
+          otsikko: 'Kirkonkellot kutsuvat kapinaan',
+          aika: '1810',
+          tiedosto: 'Generalísimo Miguel Hidalgo y Costilla.png',
+          teksti: 'Doloresin kirkkoherra Miguel Hidalgo y Costilla kutsui '
+              + 'seurakuntansa koolle 16. syyskuuta 1810 ja huusi kapinaan. '
+              + 'Sanoista on eri versioita; syytekirjaan päätyi "Eläköön '
+              + 'uskonto! Eläköön Amerikka ja alas huono hallinto!" Hidalgo '
+              + 'teloitettiin jo 1811, hänen seuraajansa José María Morelos '
+              + '1815, ja sota jatkui sissisotana yksitoista vuotta. '
+              + 'Ratkaisu tuli 1821, kun rojalistikomentaja Agustín de '
+              + 'Iturbide sopi sissijohtaja Vicente Guerreron kanssa. Heidän '
+              + 'lippunsa vihreä, valkoinen ja punainen ovat yhä Meksikon '
+              + 'värit.',
+          selite: 'Miguel Hidalgo y Costilla aloitti Meksikon '
+            + 'itsenäisyyssodan 16. syyskuuta 1810 Doloresin kirkossa, ja '
+            + 'sota päättyi vasta 27. syyskuuta 1821.',
+          lahde: 'Joaquín Ramírez, Wikimedia Commons (PD)',
+          wiki: 'Meksikon itsenäisyyssota',
+        },
+        {
+          otsikko: 'Paimenpojasta presidentiksi',
+          aika: '1806–1872',
+          tiedosto: 'Benito Pablo Juárez García in 1852.png',
+          teksti: 'Benito Juárez syntyi 21. maaliskuuta 1806 zapoteekkiperheeseen '
+              + 'San Pablo Guelataon vuoristokylässä Oaxacassa. Hän jäi '
+              + 'orvoksi kolmivuotiaana, oli paimenena kahdentoista '
+              + 'ikävuoteen asti eikä puhunut siihen mennessä sanaakaan '
+              + 'espanjaa — vain zapoteekkia. Kaupunkiin päästyään hän '
+              + 'aloitti palvelijana, opiskeli lakia ja nousi Oaxacan '
+              + 'kuvernööriksi ja 1858 tasavallan presidentiksi, '
+              + 'ensimmäisenä alkuperäiskansaan kuuluvana. Juárez kuoli '
+              + 'sydänkohtaukseen 18. heinäkuuta 1872, vuosi ennen isoisän '
+              + 'matkaa.',
+          selite: 'Benito Juárez oli Meksikon ensimmäinen alkuperäiskansaan '
+            + 'kuulunut presidentti, joka johti maata vuodesta 1858 '
+            + 'kuolemaansa 18. heinäkuuta 1872 asti.',
+          lahde: 'Julius Campe, Wikimedia Commons (CC0)',
+          wiki: 'Benito Juárez',
+        },
+        {
+          otsikko: 'Rautatie, joka avattiin uudenvuodenpäivänä',
+          aika: '1873',
+          tiedosto: '9804-Puente Metlac-Fortín, Veracruz, México-Enrique Carpio Fotógrafo-EIMG 5544.jpg',
+          teksti: 'Yhtiö perustettiin Lontoossa syyskuussa 1864 nimellä '
+              + 'Imperial Mexican Railway, ja se nimettiin uudelleen '
+              + 'heinäkuussa 1867, kun Ranskan keisarikunta vetäytyi '
+              + 'Meksikosta. Rata sai siis alkunsa keisarikunnassa ja '
+              + 'valmistui tasavallassa: presidentti Sebastián Lerdo de '
+              + 'Tejada vihki pääradan Mexico Citystä Veracruziin 1. '
+              + 'tammikuuta 1873. Vaikein osuus on Metlacin rotko, jonka '
+              + 'yli rata kaartaa sillalla — sama kohta, jonka José María '
+              + 'Velasco maalasi kuuluisaksi.',
+          selite: 'Ferrocarril Mexicanon päärata Mexico Citystä Veracruziin '
+            + 'vihittiin 1. tammikuuta 1873, ja sen vaikein kohta on '
+            + 'Metlacin rotkon ylittävä kaartuva silta.',
+          lahde: 'Enrique Carpio Fotógrafo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kaksisataaviisikymmentä vuotta Tyynenmeren yli',
+          aika: '1565–1815',
+          tiedosto: 'Fuerte de San Diego, Acapulco, Guerreri (32450057624).jpg',
+          teksti: 'Augustinolaismunkki Andrés de Urdaneta löysi 1565 '
+              + 'paluureitin Filippiineiltä Meksikoon Kuroshio-virran '
+              + 'avulla, ja siitä alkoi Manilan galleonien liikenne. '
+              + 'Alukset lähtivät Manilasta kesä- tai heinäkuussa ja '
+              + 'saapuivat Acapulcoon vasta seuraavan vuoden maalis- tai '
+              + 'huhtikuussa. Ne rakennettiin Cavitessa filippiiniläisestä '
+              + 'kovapuusta, purjeet kudottiin Ilocosissa ja köysistö '
+              + 'punottiin Manila-hampusta, ja miehistön valtaosa oli '
+              + 'filippiiniläisiä. Reitti kesti 250 vuotta ja päättyi '
+              + 'vuoden 1815 levottomuuksiin.',
+          selite: 'Acapulcon Fuerte de San Diego rakennettiin suojaamaan '
+            + 'Manilan galleonien satamaa; reitti Filippiineiltä Meksikoon '
+            + 'oli käytössä vuodesta 1565 vuoteen 1815.',
+          lahde: 'Comisión Mexicana de Filmaciones from México D. F., México, '
+            + 'Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+    },
+    {
+      id: 'muinaisuus',
+      nimi: 'Muinaisuus',
+      johdanto: 'Meksikossa on kaupunki, jonka nimenkin antoivat vasta '
+          + 'myöhemmät tulijat, ja kirjoitusjärjestelmä, jonka avain '
+          + 'säilyi sen tuhoajan muistiinpanoissa.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki, jonka nimeä ei tiedetä',
+          aika: '100 eaa. – 550 jaa.',
+          tiedosto: 'Teotihuacan, Pyramid of the Sun and Avenue of the Dead (20686678965).jpg',
+          teksti: 'Teotihuacán perustettiin noin sata vuotta ennen '
+              + 'ajanlaskun alkua, ja huipussaan siinä asui noin satatuhatta '
+              + 'ihmistä kahdenkymmenenyhden neliökilometrin alueella — '
+              + 'aikansa Amerikan suurin kaupunki ja ehkä maailman '
+              + 'kuudenneksi suurin. Sen monumentit ryöstettiin ja '
+              + 'poltettiin noin vuonna 550. Nimen antoivat vasta '
+              + 'vuosisatoja myöhemmin atsteekit, jotka löysivät rauniot: '
+              + 'Teotihuacán tarkoittaa jumalten syntymäpaikkaa. Kaupungin '
+              + 'oma nimi ja kieli ovat yhä tuntemattomia.',
+          selite: 'Teotihuacánissa asui huipussaan noin satatuhatta ihmistä, '
+            + 'ja sen nimen antoivat vasta atsteekit vuosisatoja kaupungin '
+            + 'tuhon jälkeen — asukkaiden oma nimi kaupungille ei ole '
+            + 'tiedossa.',
+          lahde: 'Arian Zwegers from Brussels, Belgium, Wikimedia Commons '
+            + '(CC BY 2.0)',
+          wiki: 'Teotihuacán',
+        },
+        {
+          otsikko: 'Vuori, jonka huippu tasoitettiin',
+          aika: '500 eaa.',
+          tiedosto: 'Monte Alban, Main Plaza, Building J, and the North Platform (20498776500).jpg',
+          teksti: 'Oaxacan laakson keskellä kohoaa harjanne, jonka huippu '
+              + 'tasoitettiin käsin noin vuonna 500 ennen ajanlaskun alkua. '
+              + 'Neljäsataa metriä laakson pohjan yläpuolelle, 1 940 metrin '
+              + 'korkeuteen, rakennettiin aukio ja sen ympärille temppelit '
+              + 'ja palatsit. Monte Albán oli zapoteekkien poliittinen ja '
+              + 'taloudellinen keskus lähes tuhat vuotta, ja rinteitä '
+              + 'porrastettiin sadoiksi keinotekoisiksi terasseiksi. Paikka '
+              + 'oli helppo puolustaa: laaksosta näkyy joka suuntaan.',
+          selite: 'Monte Albánin aukio rakennettiin käsin tasoitetulle '
+            + 'harjanteelle 400 metriä Oaxacan laakson yläpuolelle, ja '
+            + 'kaupunki oli zapoteekkien keskus lähes tuhat vuotta.',
+          lahde: 'Arian Zwegers from Brussels, Belgium, Wikimedia Commons '
+            + '(CC BY 2.0)',
+          wiki: 'Monte Albán',
+        },
+        {
+          otsikko: 'Käärme portailla — mutta ei kalenteri',
+          tiedosto: 'Chichen Itza, El Castillo (14180679857).jpg',
+          teksti: 'Kukulcánin temppeli eli El Castillo on noin '
+              + 'kolmekymmentä metriä korkea, sen sivu on 55,3 metriä ja '
+              + 'terasseja on yhdeksän. Päiväntasausten aikaan iltapäivällä '
+              + 'pyramidin luoteiskulma heittää pohjoisportaikon kaiteeseen '
+              + 'kolmiosarjan, joka näyttää alas luikertelevalta käärmeeltä. '
+              + 'Yleinen selitys on, että ilmiö rakennettiin merkitsemään '
+              + 'päiväntasausta, mutta se on epätodennäköistä: sama varjo '
+              + 'näkyy lähes muuttumattomana useita viikkoja tasausten '
+              + 'molemmin puolin, joten päivää ei voi siitä päätellä.',
+          selite: 'Kukulcánin temppelin portaisiin lankeaa päiväntasausten '
+            + 'aikaan käärmemäinen varjo, mutta sama ilmiö näkyy useiden '
+            + 'viikkojen ajan, joten sillä ei voi määrittää päivää.',
+          lahde: 'Arian Zwegers from Brussels, Belgium, Wikimedia Commons '
+            + '(CC BY 2.0)',
+          wiki: 'Chichén Itzá',
+        },
+        {
+          otsikko: 'Polttaja, joka jätti jälkeensä avaimen',
+          aika: '1952',
+          tiedosto: 'Dresden Codex f8461796.png',
+          teksti: 'Mayakirjoitus on ainoa olennaisesti luettu '
+              + 'mesoamerikkalainen kirjoitusjärjestelmä: siinä on sekä '
+              + 'sanamerkkejä että tavumerkkejä, hieman japanin '
+              + 'kirjoituksen tapaan. Piispa Diego de Landa poltatti '
+              + '1500-luvulla mayakoodekseja mutta laati samalla '
+              + 'muistiinpanot, joita hän luuli aakkosiksi. Niitä pidettiin '
+              + 'neljäsataa vuotta hölynpölynä, kunnes Juri Knorozov osoitti '
+              + '1952, että merkit olivat tavuja. Vuoden 1973 '
+              + 'Palenque-kokouksessa kolme tutkijaa luki yhdessä '
+              + 'iltapäivässä kuuden hallitsijan sukupuun.',
+          selite: 'Dresdenin koodeksi on yksi harvoista säilyneistä '
+            + 'mayakäsikirjoituksista, ja mayakirjoituksen avaimeksi '
+            + 'osoittautui lopulta piispa Diego de Landan virheellinen '
+            + 'aakkosluettelo.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Meksikon keittiön perusta on kolme keksintöä: kalkkiin '
+          + 'keitetty maissi, rahaksi kelvannut kaakao ja kastike, jossa '
+          + 'on kymmeniä aineksia.',
+      nostot: [
+        {
+          otsikko: 'Kalkki, joka teki maissista ruokaa',
+          aika: '1200 eaa.',
+          tiedosto: 'Tortilleras Nebel.jpg',
+          teksti: 'Maissi keitetään Mesoamerikassa emäksisessä '
+              + 'kalkkivedessä, pestään ja kuoritaan ennen jauhamista. '
+              + 'Vanhimmat välineet ovat Guatemalan etelärannikolta '
+              + 'vuosilta 1200–1500 ennen ajanlaskun alkua. Kikka ei ole '
+              + 'makuasia vaan ravitsemusta: emäs vapauttaa jyvän '
+              + 'tryptofaanin ihmisen käyttöön ja ehkäisee siten niasiinin '
+              + 'puutostautia pellagraa, pehmentää jyvän ja vähentää '
+              + 'homemyrkkyjä lähes kokonaan. Ilman sitä maissiin nojaava '
+              + 'ruokavalio sairastuttaa — kuten kävi Euroopassa, jonne '
+              + 'menetelmä ei kulkeutunut.',
+          selite: 'Maissin keittäminen kalkkivedessä vapauttaa jyvän '
+            + 'tryptofaanin ja ehkäisee niasiinin puutostautia pellagraa; '
+            + 'kuvan alalaidassa on litografian oma painettu nimi.',
+          lahde: 'Carl Nebel, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Sata papua yhdestä kalkkunasta',
+          aika: '1545',
+          tiedosto: 'SplitCacaoPod.JPG',
+          teksti: 'Kaakaopavut olivat Mesoamerikassa rahaa viimeistään '
+              + 'neljäsataa vuotta ennen ajanlaskun alkua. Espanjalaiset '
+              + 'kirjasivat kurssin vuonna 1545: kolmellakymmenellä pavulla '
+              + 'sai pienen kanin, yhdellä ison tomaatin ja sadalla '
+              + 'kalkkunakanan. Rahaa myös väärennettiin — kuori '
+              + 'tyhjennettiin ja täytettiin amaranttitaikinalla, vahalla '
+              + 'tai avokadonkiven paloilla. Juoma itse oli eliitin ja '
+              + 'seremonioiden asia, ja pavut kelpasivat sekä lahjaksi että '
+              + 'veroksi. Papu kasvaa suoraan rungosta paksun kotelon '
+              + 'sisällä.',
+          selite: 'Kaakaopavut kelpasivat Mesoamerikassa rahana, ja vuonna '
+            + '1545 kirjatun kurssin mukaan sadalla pavulla sai '
+            + 'kalkkunakanan.',
+          lahde: 'AlejandroLinaresGarcia, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kaakaopuu',
+        },
+        {
+          otsikko: 'Viisikymmentä kastiketta samalla nimellä',
+          tiedosto: 'Mole casero, picante, México.jpg',
+          teksti: 'Mole tulee nahuatlin sanasta mōlli, kastike; '
+              + 'chīlmōlli tarkoitti chilikastiketta, ja Bernardino de '
+              + 'Sahagún kirjasi 1500-luvulla molli-kastikkeita kalalle, '
+              + 'riistalle ja vihanneksille. Nykyään Meksikossa on noin '
+              + 'viisikymmentä erillistä molea, ja Puebla ja Oaxaca '
+              + 'kiistelevät alkuperästä. Tunnetuin legenda kertoo Santa '
+              + 'Claran luostarin nunnista, jotka kokosivat arkkipiispan '
+              + 'vierailua varten kaiken mitä oli. Suklaa on kuitenkin '
+              + 'todennäköisesti lisätty moleen vasta 2000-luvulla, ei '
+              + 'siirtomaa-aikana.',
+          selite: 'Mole on nahuatlin mōlli eli kastike, ja Meksikossa on '
+            + 'noin viisikymmentä erillistä molea; suklaa lisättiin niihin '
+            + 'todennäköisesti vasta 2000-luvulla.',
+          lahde: 'Petrvs III, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Keittiö, joka pääsi luetteloon',
+          aika: '2010',
+          tiedosto: 'Chile cascabel mexicano en el Mercado de Medellín.jpg',
+          teksti: 'Unesco merkitsi perinteisen meksikolaisen keittiön '
+              + 'vuonna 2010 ihmiskunnan aineettoman kulttuuriperinnön '
+              + 'luetteloon. Perusteena ei ollut yksittäinen ruokalaji vaan '
+              + 'kokonainen ketju: viljelytapa, kotitalouksien työnjako, '
+              + 'juhlat ja se, että ruoanlaitto on sosiaalinen investointi. '
+              + 'Chili on ketjun näkyvin osa — kuivattuja lajikkeita on '
+              + 'markkinoilla kymmeniä, ja moni myyjä jauhattaa niistä '
+              + 'asiakkaalle valmiin sekoituksen. Meksikossa perinteitä '
+              + 'alettiin koota talteen jo 1982, kun pelättiin niiden '
+              + 'katoavan.',
+          selite: 'Unesco merkitsi perinteisen meksikolaisen keittiön 2010 '
+            + 'aineettoman kulttuuriperinnön luetteloon, ja kuivattuja '
+            + 'chilejä on markkinoilla kymmeniä lajikkeita.',
+          lahde: 'Katia Flores Torres, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Meksikolainen keittiö',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Meksikon musiikki syntyi kolmesta suunnasta: Espanjan '
+          + 'kielisoittimista, alkuperäiskansojen rytmeistä ja '
+          + 'Länsi-Afrikasta tuodusta perinteestä.',
+      nostot: [
+        {
+          otsikko: 'Kahdeksan viulua ja iso basso',
+          aika: '2011',
+          // Kuvaton (Fable 6.9.2026): ainoa ≥1200 px:n guitarrón-kuva
+          // (Guitarron.jpg) on esiintyvien muusikoiden lähikuva
+          // tunnistettavin kasvoin — sama hylkäysperuste kuin muualla
+          // lehtityössä. Soitinkuva haetaan myöhemmin.
+          teksti: 'Mariachi kehittyi Länsi-Meksikon maaseudulla ainakin '
+              + '1700-luvulta lähtien, ja sen keskuksena pidetään Coculan '
+              + 'kaupunkia Jaliscossa. Kokoonpanossa voi olla kahdeksan '
+              + 'viulua ja kaksi trumpettia, ja rytmin pitävät '
+              + 'korkeaääninen vihuela sekä guitarrón, pyöreäselkäinen '
+              + 'bassokitara. Varsinaista solistia ei ole: kaikki '
+              + 'soittajat laulavat vuorotellen. Ensimmäinen mariachi-äänite '
+              + 'tehtiin 1908, ja presidentti Porfirio Díazille soitettiin '
+              + '1905. Unesco merkitsi lajin luetteloonsa 2011.',
+          selite: 'Mariachi-yhtyeen rytmin pitävät korkeaääninen vihuela ja '
+            + 'pyöreäselkäinen bassokitara guitarrón, eikä yhtyeellä ole '
+            + 'varsinaista solistia vaan kaikki laulavat vuorotellen.',
+          wiki: 'Mariachi',
+        },
+        {
+          otsikko: 'Lava, joka on soitin',
+          tiedosto: 'Jaranas.jpg',
+          teksti: 'Veracruzin rannikon son jarocho syntyi kahden ja puolen '
+              + 'vuosisadan aikana kolmesta perinteestä: alkuperäiskansojen '
+              + 'musiikista, Etelä-Espanjan fandangosta ja Karibialle '
+              + 'orjuutettuina tuotujen ihmisten rytmeistä. Soittimina ovat '
+              + 'pieni jarana jarocha, lehmänsarvesta tehdyllä plektralla '
+              + 'soitettava requinto, arpa-harppu ja leona-basso — sekä '
+              + 'tarima, puinen lava, jota tanssija lyö kantapäillään. '
+              + 'Laulajat vaihtavat improvisoituja säkeitä. Tunnetuin son '
+              + 'jarocho on "La Bamba".',
+          selite: 'Son jarochon soittimiin kuuluu tarima eli puinen lava, '
+            + 'jota tanssija lyö kantapäillään, ja lajin tunnetuin kappale '
+            + 'on "La Bamba".',
+          lahde: 'Koffermejia, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Uutinen, joka myytiin lauluna',
+          tiedosto: "Page 1- The calavera of Don Quijote, from '36 Grabados' (Mexico, 1943) MET DP872823.jpg",
+          teksti: 'Corrido on kertova balladi, jonka nimi tulee verbistä '
+              + 'correr, juosta. Kaava on tiukka: laulaja tervehtii, '
+              + 'pohjustaa, kertoo tarinan, vetää opetuksen ja hyvästelee. '
+              + 'Tyypillisesti säkeistöjä on kahdeksan ja rivissä kahdeksan '
+              + 'tavua. Ennen radiota corrido oli uutisväline: laulut '
+              + 'painettiin lentolehtisiksi ja myytiin toreilla. Lehtisiä '
+              + 'kuvitti José Guadalupe Posada, jonka luurankopiirrokset '
+              + 'eli kalaverat tekivät vainajista tavallisia ihmisiä '
+              + 'juhlimassa, ratsastamassa ja kinastelemassa.',
+          selite: 'José Guadalupe Posadan kalaverapiirrokset kuvittivat '
+            + 'lentolehtisiä, joilla corridoja myytiin toreilla ennen '
+            + 'radiota; kuvan alalaidassa on julkaisun oma teksti.',
+          lahde: 'José Guadalupe Posada / Arsacio Vanegas, Wikimedia Commons '
+            + '(CC0)',
+        },
+        {
+          otsikko: 'Tanssi, joka kiellettiin kirkonkirouksen uhalla',
+          aika: '1790',
+          tiedosto: 'TapatioDanceMuseoLuzDF.JPG',
+          teksti: 'Jarabe tapatío tanssittiin aluksi naisparien kesken, '
+              + 'koska kirkko paheksui sekapareja. Kun se esitettiin '
+              + 'julkisesti Mexico Cityn Coliseo-teatterissa 1790, '
+              + 'siirtomaa- ja kirkonviranomaiset kielsivät sen '
+              + 'kirkonkirouksen ja raipparangaistuksen uhalla — mikä teki '
+              + 'siitä kapinan symbolin ja levitti sen aukioille. '
+              + 'Itsenäistymisen jälkeen tanssi nousi juhlien keskiöön, '
+              + 'guadalajaralainen Jesús González Rubio sävelsi sille '
+              + 'vakiosävelmän, ja Anna Pavlova otti sen ohjelmistoonsa '
+              + '1919.',
+          selite: 'Jarabe tapatío kiellettiin vuoden 1790 julkisen '
+            + 'esityksen jälkeen kirkonkirouksen uhalla, mistä tuli sen '
+            + 'menestyksen alku ja josta kasvoi Meksikon kansallistanssi.',
+          lahde: 'Thelmadatter, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Meksikossa on metsä, jonne saapuu miljoonia perhosia '
+          + 'kolmen sukupolven päästä, ja kanjonisto, joka on '
+          + 'Grand Canyonia laajempi.',
+      nostot: [
+        {
+          otsikko: 'Matka, jota kukaan ei tee loppuun',
+          aika: '1975',
+          tiedosto: 'Wintering monarchs roosting in clusters in Mexico (33801924098).jpg',
+          teksti: 'Monarkkiperhoset lentävät syksyisin Kanadasta ja '
+              + 'Yhdysvalloista Michoacánin ja Méxicon osavaltion rajalle, '
+              + 'sadan kilometrin päähän Mexico Citystä, ja talvehtivat '
+              + 'oyamel-kuusissa loka–maaliskuun. Paluu pohjoiseen kestää '
+              + 'useita sukupolvia: yksikään perhonen ei tee koko kierrosta, '
+              + 'vaan matkan viimeistelevät sen jälkeläiset. Talvehtimisalueet '
+              + 'olivat tieteelle tuntemattomia vuoteen 1975 asti. Suojelu '
+              + 'alkoi 1980, ja 56 000 hehtaarin alue on ollut '
+              + 'maailmanperintökohde vuodesta 2008.',
+          selite: 'Monarkkiperhosten muutto on monisukupolvinen — yksikään '
+            + 'perhonen ei tee koko kierrosta — ja niiden meksikolaiset '
+            + 'talvehtimisalueet löydettiin tieteelle vasta 1975.',
+          lahde: 'U.S. Fish and Wildlife Service - Midwest Region, Wikimedia '
+            + 'Commons (PD)',
+          wiki: 'Monarkkiperhonen',
+        },
+        {
+          otsikko: 'Kaivo, jonka kehä piirtää kraatterin',
+          tiedosto: 'Cenote-ik-kil.png',
+          teksti: 'Cenote tulee jukateekkimayan sanasta tsʼonoʼot, paikka '
+              + 'jossa on pohjavettä. Kun kalkkikivikatto romahtaa, alta '
+              + 'paljastuu pohjavesi, ja Yucatánin niemimaalla tällaisia '
+              + 'kaivoja on arviolta kymmenentuhatta. Mayoille ne olivat '
+              + 'vedenottopaikkoja ja joskus uhripaikkoja. Kartalla ne '
+              + 'paljastavat myös jotain paljon vanhempaa: tavallista '
+              + 'tiheämpi cenotejono muodostaa kaaren, joka seuraa '
+              + 'Chicxulubin törmäyskraatterin reunaa — 66 miljoonaa vuotta '
+              + 'sitten iskeytyneen meteoriitin jälkeä.',
+          selite: 'Cenote syntyy, kun kalkkikivikatto romahtaa ja paljastaa '
+            + 'pohjaveden, ja Yucatánissa tiheämpi cenotejono seuraa '
+            + 'Chicxulubin törmäyskraatterin reunaa.',
+          lahde: 'Dmadeo, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cenote',
+        },
+        {
+          otsikko: 'Salamanteri, joka ei kasva aikuiseksi',
+          tiedosto: 'Axolotl ganz.jpg',
+          teksti: 'Aksolotli on salamanteri, joka tulee sukukypsäksi '
+              + 'käymättä läpi muodonmuutosta: se säilyttää ulkokidukset ja '
+              + 'pysyy koko elämänsä vedessä. Nimi on nahuatlia ja liittyy '
+              + 'jumala Xolotliin. Laji eli Meksikon laakson järvissä, '
+              + 'joiden kuivattaminen alkoi jo atsteekkien aikana ja '
+              + 'kiihtyi 1900-luvulla — alueella on nyt Mexico City. '
+              + 'Villejä yksilöitä arvioidaan olevan 50–1 000, ja laji on '
+              + 'äärimmäisen uhanalainen. Laboratorioissa se on kuuluisa '
+              + 'siitä, että se kasvattaa uudelleen raajan tai osan aivoista.',
+          selite: 'Aksolotli tulee sukukypsäksi käymättä läpi '
+            + 'muodonmuutosta ja pystyy kasvattamaan uudelleen raajan tai '
+            + 'osan aivoistaan, mutta villejä yksilöitä on jäljellä vain '
+            + '50–1 000.',
+          lahde: 'LoKiLeCh, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Aksolotli',
+        },
+        {
+          otsikko: 'Kuusi kanjonia ja juoksevat ihmiset',
+          tiedosto: 'Divisadero, Barrancas del Cobre, Chihuahua.jpg',
+          teksti: 'Barrancas del Cobre eli Kuparikanjoni ei ole yksi rotko '
+              + 'vaan kuusi, ja yhdessä ne kattavat 65 000 neliökilometriä '
+              + 'Sierra Madre Occidentalia Chihuahuassa. Nimi tulee '
+              + 'seinämien kuparinvihreästä väristä. Alueella asuu noin '
+              + 'seitsemänkymmentätuhatta rarámuria, joiden nimi on tulkittu '
+              + 'tarkoittavan juoksevia ihmisiä: he muuttavat kesäksi '
+              + 'viileille ylängöille ja talveksi alas kanjoniin, ja '
+              + 'yhteisöleikissä rarajipari puupalloa potkitaan '
+              + 'tuntikausia jyrkkiä polkuja pitkin.',
+          selite: 'Kuparikanjoni on kuuden rotkon järjestelmä, joka kattaa '
+            + '65 000 neliökilometriä, ja siellä asuvat rarámurit '
+            + 'tunnetaan kestävyysjuoksustaan.',
+          lahde: 'Comisión Mexicana de Filmaciones from México D. F., mÉXICO, '
+            + 'Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Tarahumarat',
+        },
+      ],
+    },
+  ],
+  /*
+   * PERU (PER) — E-Amerikan kolmas maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-peru.md; kaikki luvut
+   * tarkistettu en-Wikipedian raakatekstistä 6.9.2026.
+   *
+   * TYÖNJAKO LIMAN KANSSA: Liman kaupunkilehti kattaa jo guanokauden
+   * (1840), Malinowskin Andien rautatien, cevichen, chifan ja "Historian
+   * hetki: Machu Picchu 1911" -sivun. Maalehti EI toista niitä: se
+   * käsittelee inkavaltakuntaa, valloitusta, Túpac Amaru II:ta,
+   * itsenäisyyttä, Caralia, Nazcaa, kipuja, mochekulttuuria sekä
+   * luontoa, ruokaa ja musiikkia.
+   *
+   * SISÄLTÖLINJAUS (spec-mantereet.md, Perustuslain pilarit 3 ja 4):
+   * Titicaca on kahden maan järvi ja teksti kunnioittaa molempia rantoja.
+   * Vuosien 1980–2000 sisäinen konflikti (Sendero Luminoso) on JÄTETTY
+   * POIS: se on tuoretta poliittista historiaa, jota linjaus "ei
+   * nykypolitiikkaa eikä nykyrikollisuutta" ei kata ilman omistajan
+   * erillistä päätöstä. Túpac Amaru II:n ja Atahualpan kohtalot
+   * kerrotaan tapahtumina ilman kuvausta.
+   *
+   * KUVAT: 20 nostokuvaa Commonsista, lisenssi ja tekijä extmetadatasta,
+   * leveys >= 1200 px, jokainen katsottu silmin. Kondorikuva on lajikuva
+   * eikä Perusta: Perun omissa otoksissa lintu on kaukainen läiskä
+   * (Raamattu, "eläinkohteen kuva näyttää itse eläimen"), eikä kuvateksti
+   * siksi väitä kuvauspaikkaa. Kipukuvan kiinnitysalustassa näkyy museon
+   * pieni luettelonumero. HYLÄTYT: "Sacsayhuaman Fortress ... (44)"
+   * (kaukainen maisema, ei muuria), "Peru Chenopodium quinoa"
+   * (tunnistettavia kasvoja kymmeniä), "Musicos de la danza de sikuris"
+   * (mainoskyltit katsomossa), "Supaypa Wasin Tusuq" (yleisö
+   * tunnistettavissa), "Cajon peruano." (pimeä ja epätarkka),
+   * "Pachamanca de cerdo"/"Pachamanca in Peru" (muovisäkit kuopassa).
+   */
+  PER: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vuonna 1873 Peru on 52-vuotias tasavalta, jonka alla on '
+          + 'kolmensadan vuoden siirtomaakausi ja sen alla Amerikan suurin '
+          + 'valtakunta.',
+      nostot: [
+        {
+          otsikko: 'Valtakunta ilman pyörää ja kirjoitusta',
+          aika: '1438–1533',
+          tiedosto: 'Sacsayhuamán, Cusco, Perú, 2015-07-31, DD 05.JPG',
+          teksti: 'Tawantinsuyu tarkoittaa ketšuaksi neljän osan '
+              + 'valtakuntaa. Sadassa vuodessa se levisi Cuzcosta '
+              + 'Ecuadorista Chileen ja oli Amerikan suurin '
+              + 'esikolumbiaaninen valtio — ilman pyörää, vetojuhtia, '
+              + 'rautaa ja kirjoitusta. Koossa sen piti tie: Qhapaq Ñan oli '
+              + 'noin 40 000 kilometriä pitkä ja kattoi lähes kaksi '
+              + 'miljoonaa neliökilometriä. Lyhyin välein oli '
+              + 'chasqui-juoksijoiden asemia, päivämatkan välein tambo-'
+              + 'majataloja ja varastoja. Tiet ja sillat pidettiin kunnossa '
+              + 'mita-verotyönä.',
+          selite: 'Sacsayhuamánin muurit Cuzcossa on ladottu ilman laastia '
+            + 'niin tiiviisti, että kivien väliin ei mahdu terää; '
+            + 'inkavaltakunta rakennettiin ilman pyörää, rautaa ja '
+            + 'kirjoitusta.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Inkavaltakunta',
+        },
+        {
+          otsikko: 'Huone täyteen kultaa',
+          aika: '1532',
+          tiedosto: 'El cuarto del Rescate, Cajamarca, Peru.jpg',
+          teksti: 'Francisco Pizarro saapui Cajamarcaan 15. marraskuuta 1532 '
+              + 'sadankuudenkymmenenkahdeksan miehen kanssa, joista 62 oli '
+              + 'ratsain. Seuraavana aamuna hän oli asettanut väijytyksen '
+              + 'aukiolle, jonne Atahualpa saapui noin kuudentuhannen '
+              + 'aseettoman seuralaisen kanssa. Vangittuna inka tarjosi '
+              + 'täyttävänsä ison huoneen kullalla ja kahdesti saman verran '
+              + 'hopealla. Aarre alkoi virrata Cuzcosta 20. joulukuuta 1532 '
+              + 'ja oli koossa 3. toukokuuta 1533. Espanjalaiset opettivat '
+              + 'vangilleen shakin.',
+          selite: 'Cajamarcan Cuarto del Rescate on huone, jonka Atahualpa '
+            + 'lupasi täyttää kullalla lunnaiksi vuonna 1532, ja aarre oli '
+            + 'koossa toukokuussa 1533.',
+          lahde: 'Miguel Francisco Rueda Ñañez, Wikimedia Commons '
+            + '(CC BY-SA 4.0)',
+          wiki: 'Atahualpa',
+        },
+        {
+          otsikko: 'Kuraka, joka kirjoitti kirjeitä ensin',
+          aika: '1780',
+          tiedosto: 'Tupac Amaru II monument in Tungasuca, Canas Province.jpg',
+          teksti: 'José Gabriel Condorcanqui oli kolmen kylän kuraka eli '
+              + 'päällikkö, viimeisen Vilcabamban inkan jälkeläinen ja '
+              + 'vauras muulikuljettaja. Hän vetosi vuosia viranomaisiin '
+              + 'Tintassa, Cuzcossa ja Limassa, jotta intiaanivero ja '
+              + 'kaivosten pakkotyö kevenisivät — kirjeisiin ei vastattu. '
+              + 'Marraskuun 4. päivänä 1780 hän otti nimen Túpac Amaru II ja '
+              + 'aloitti kapinan, joka levisi Ylä-Peruun asti. Liike ei '
+              + 'alun perin tavoitellut itsenäisyyttä vaan '
+              + 'oikeudenmukaisuutta; hänet teloitettiin Cuzcossa '
+              + 'toukokuussa 1781.',
+          selite: 'Tungasucan muistomerkki esittää Túpac Amaru II:ta, joka '
+            + 'vetosi vuosia kirjeitse Andien kansojen puolesta ennen kuin '
+            + 'aloitti kapinan marraskuussa 1780.',
+          lahde: 'Kevin Villavicencio, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Túpac Amaru II',
+        },
+        {
+          otsikko: 'Julistus, joka vaati vielä kolme vuotta',
+          aika: '1821–1824',
+          tiedosto: 'La Independencia del Perú.jpg',
+          teksti: 'José de San Martín julisti Perun itsenäiseksi Limassa 28. '
+              + 'heinäkuuta 1821, mutta julistus ei vielä ratkaissut mitään: '
+              + 'espanjalaiset pitivät ylänköjä hallussaan. Ratkaisu tuli '
+              + 'vasta Ayacuchon taistelussa joulukuussa 1824, joka päätti '
+              + 'Espanjan vallan koko Etelä-Amerikassa. Täysi suvereniteetti '
+              + 'saavutettiin kuitenkin vasta 16. helmikuuta 1827, kun Gran '
+              + 'Colombian varuskunta luovutti Real Felipen linnakkeen '
+              + 'perulaisille. Isoisän matkavuonna 1873 tasavalta oli siis '
+              + 'vasta 52-vuotias.',
+          selite: 'Juan Lepianin maalaus esittää hetkeä, jolloin José de '
+            + 'San Martín julisti Perun itsenäiseksi Limassa 28. heinäkuuta '
+            + '1821 — sota jatkui silti Ayacuchon taisteluun 1824 asti.',
+          lahde: 'Juan Lepiani, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+    {
+      id: 'muinaisuus',
+      nimi: 'Muinaisuus',
+      johdanto: 'Perussa on Amerikan vanhin kaupunki, kuvia jotka näkyvät '
+          + 'vain ilmasta ja kirjanpitoa, joka on tehty solmuista.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki ennen keramiikkaa',
+          aika: '3000–1800 eaa.',
+          tiedosto: 'Vista Caral 1.jpg',
+          teksti: 'Supen laaksossa 182 kilometriä Limasta pohjoiseen on '
+              + 'pyramideja ja upotettuja pyöreitä aukioita, joiden ikä on '
+              + 'noin viisituhatta vuotta. Caral on Amerikan vanhin tunnettu '
+              + 'kaupunki ja koko maanosan varhaisin sivilisaatio — '
+              + 'puolitoista tuhatta vuotta ennen olmeekkeja. Kaupunki '
+              + 'nousi ilman keramiikkaa ja ilman puolustusmuureja, ja se '
+              + 'eli kaupasta rannikon kalastajakylän Ásperon kanssa: '
+              + 'sisämaan puuvillaa vaihdettiin verkkoihin ja kalaan. '
+              + 'Meri on 23 kilometrin päässä.',
+          selite: 'Caral on Amerikan vanhin tunnettu kaupunki, noin '
+            + 'viisituhatta vuotta vanha, ja se rakennettiin ilman '
+            + 'keramiikkaa ja ilman puolustusmuureja.',
+          lahde: 'Johnattan Rupire, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Caral',
+        },
+        {
+          otsikko: 'Viivat, jotka ovat vain kämmenen syvyisiä',
+          aika: '500 eaa. – 500 jaa.',
+          tiedosto: 'Líneas de Nazca, Nazca, Perú, 2015-07-29, DD 52.JPG',
+          teksti: 'Nazcan aavikon kuviot tehtiin vuosien 500 eaa. ja 500 '
+              + 'jaa. välillä poistamalla pinnasta punaruskeiksi '
+              + 'hapettuneita kiviä, jolloin alta paljastui keltaharmaa '
+              + 'maa. Viivat ovat vain kymmenen tai viisitoista senttimetriä '
+              + 'syviä, ja yli puolet niistä on runsaan kolmenkymmenen '
+              + 'sentin levyisiä — mutta yhteispituutta on yli 1 300 '
+              + 'kilometriä ja alaa noin viisikymmentä neliökilometriä. '
+              + 'Eläinkuviot erottuvat parhaiten noin viidensadan metrin '
+              + 'korkeudesta. Drooneilla on 2000-luvulla löytynyt satoja '
+              + 'uusia.',
+          selite: 'Nazcan viivat on tehty poistamalla aavikon pinnasta '
+            + 'tummia kiviä, ja vain 10–15 senttimetriä syviä uria on '
+            + 'yhteensä yli 1 300 kilometriä.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Nazcan linjat',
+        },
+        {
+          otsikko: 'Kirjanpito, joka tehtiin solmuista',
+          tiedosto: 'Fragmentary quipu (khipu), a main cord with top, subsidiary, & tertiary cords, Inca, Peru, Late Horizon, 1476-1534 AD, cotton, plant & camelid fiber, indigo & red dye - Dallas Museum of Art - DSC04704.jpg',
+          teksti: 'Kipu on puuvillasta ja kamelieläinten kuidusta punottu '
+              + 'naruköysistö, jossa tieto koodattiin narun väriin, '
+              + 'paikkaan ja solmuihin. Luvut merkittiin kymmenjärjestelmän '
+              + 'paikkamerkinnällä, joten yhdestä köysistöstä saattoi lukea '
+              + 'satoja lukuja. Yhdessä kipussa on muutamasta useaan '
+              + 'tuhanteen naruun. Varhaisimmat varmat kiput ovat '
+              + 'ensimmäiseltä vuosituhannelta jaa. Wari-valtakunnasta; '
+              + 'inkat käyttivät niitä veroihin, väestölaskentaan, '
+              + 'kalenteriin ja sotilasorganisaatioon.',
+          selite: 'Kipu on solmuköysistö, jossa luvut merkittiin '
+            + 'kymmenjärjestelmän paikkamerkinnällä ja jolla inkat pitivät '
+            + 'kirjaa veroista, väestöstä ja kalenterista.',
+          lahde: 'Daderot, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Hauta, jota ryöstäjät eivät löytäneet',
+          aika: '1987',
+          tiedosto: 'Portrait Vessel of a Ruler, 100 BC - 500 AD, Moche, north coast of Peru, ceramic and pigment - Art Institute of Chicago - DSC00321.JPG',
+          teksti: 'Pohjois-Perun rannikon mochet valmistivat ruukkuja, '
+              + 'joiden kasvot ovat tunnistettavia yksilöitä eivätkä '
+              + 'tyyppikuvia — samat kasvot toistuvat eri ruukuissa eri '
+              + 'ikäisinä. Vuonna 1987 arkeologi Walter Alva kaivoi '
+              + 'Lambayequen laaksossa Huaca Rajadan kummusta haudan, joka '
+              + 'oli säilynyt koskemattomana: Sipánin herra. Löytö on yksi '
+              + 'Etelä-Amerikan tärkeimmistä 1900-luvun lopun '
+              + 'arkeologisista löydöistä, ja vuoteen 2007 mennessä '
+              + 'kummusta oli kaivettu neljätoista hautaa.',
+          selite: 'Mochekulttuurin muotokuvaruukut esittävät tunnistettavia '
+            + 'yksilöitä eri ikäisinä, ja Sipánin herran koskematon hauta '
+            + 'löytyi Huaca Rajadasta vuonna 1987.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+          wiki: 'Mochen kulttuuri',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Perun rannikolla virtaa kylmä meri keskellä tropiikkia, ja '
+          + 'sen takana nousevat Andit ja Amazon.',
+      nostot: [
+        {
+          otsikko: 'Lintu, joka ei räpytä',
+          tiedosto: 'Condor des Andes mâle adulte.jpg',
+          teksti: 'Andienkondorin siipiväli yltää 3,3 metriin ja paino '
+              + 'viiteentoista kiloon; se on maailman suurimpia lentäviä '
+              + 'lintuja ja yleisesti maailman suurimpana petolintuna '
+              + 'pidetty. Lentotallentimet kertovat, että kolme neljäsosaa '
+              + 'siivenlyönneistä liittyy nousuun ja että lintu räpyttää '
+              + 'siipiään vain noin prosentin lentoajastaan — loput se '
+              + 'liitää lämpöpatsailla. Charles Darwin kertoo katsoneensa '
+              + 'kondoreita puoli tuntia näkemättä yhtäkään siivenlyöntiä. '
+              + 'Pesä on jopa viidentuhannen metrin korkeudessa.',
+          selite: 'Andienkondorin siipiväli yltää 3,3 metriin, ja lintu '
+            + 'räpyttää siipiään vain noin prosentin lentoajastaan — loput '
+            + 'matkasta se liitää lämpöpatsailla.',
+          lahde: 'Hugo Pedel, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Andienkondori',
+        },
+        {
+          otsikko: 'Savi, jota papukaijat käyvät syömässä',
+          aika: '1973',
+          tiedosto: 'Red-and-green macaw (Ara chloropterus) flying from clay lick at Manu National Park.jpg',
+          teksti: 'Manún kansallispuisto perustettiin 29. toukokuuta 1973, '
+              + 'ja se nousee Amazonin tasangolta lähes neljäntuhannen '
+              + 'metrin korkeuteen — sademetsästä sumumetsän kautta Andien '
+              + 'niittyihin. Alaa on 17 163 neliökilometriä, ja se on jaettu '
+              + 'vyöhykkeisiin, joista tiukimpaan pääsevät vain tutkijat. '
+              + 'Jokien törmiin syntyneillä savipaljastumilla käy '
+              + 'aamuisin satoja arapapukaijoja: linnut syövät savea, joka '
+              + 'auttaa niitä sietämään ravintonaan olevien siementen '
+              + 'myrkkyjä. Maailmanperintökohde 1987.',
+          selite: 'Manún kansallispuisto ulottuu Amazonin tasangolta lähes '
+            + 'neljäntuhannen metrin korkeuteen, ja sen jokitörmien '
+            + 'savipaljastumilla käy aamuisin satoja arapapukaijoja.',
+          lahde: 'Cesarcarcamoc, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Manún kansallispuisto',
+        },
+        {
+          otsikko: 'Kylmä meri keskellä tropiikkia',
+          tiedosto: 'Sea Lion Isla Paracas.jpg',
+          teksti: 'Perun rannikkoa pitkin virtaa pohjoiseen kylmä ja '
+              + 'vähäsuolainen Humboldtin merivirta, joka ulottuu tuhannen '
+              + 'kilometrin päähän merelle. Pintavesi jäähtyy Perun '
+              + 'edustalla kuuteentoista asteeseen, kun trooppisilla '
+              + 'merillä ollaan yleensä yli kahdessakymmenessäviidessä. '
+              + 'Kumpuaminen nostaa ravinteet pintaan, ja virrasta '
+              + 'saadaan 18–20 prosenttia koko maailman merikalansaaliista. '
+              + 'Kalan päällä elää valtava merilintu- ja hyljekanta. '
+              + 'Virran nimesi Alexander von Humboldt, vaikka José de '
+              + 'Acosta kuvasi sen 250 vuotta aiemmin.',
+          selite: 'Humboldtin merivirran kumpuaminen nostaa ravinteet '
+            + 'pintaan, ja virrasta saadaan 18–20 prosenttia maailman '
+            + 'merikalansaaliista — kalan päällä elää valtava '
+            + 'merilintukanta.',
+          lahde: 'Aguakina, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Humboldtin merivirta',
+        },
+        {
+          otsikko: 'Saaria, joita lisätään joka viikko',
+          tiedosto: '00 1634 Titicacasee - Uros islands.jpg',
+          teksti: 'Titicaca on Etelä-Amerikan suurin järvi sekä pinta-alaltaan '
+              + 'että vesitilavuudeltaan, ja sen pinta on 3 812 metrin '
+              + 'korkeudessa. Järvi on kahden maan: länsiranta kuuluu Perun '
+              + 'Punoon ja itäranta Bolivian La Pazin departementtiin. '
+              + 'Uros-kansa rakentaa vesialueelle kelluvia saaria '
+              + 'totora-kaislasta: pohja lahoaa alta ja pinnalle lisätään '
+              + 'jatkuvasti uutta kaislaa. Vuoden 1986 myrskyn jälkeen moni '
+              + 'saari siirrettiin lähemmäs rantaa; vuonna 2011 saarilla '
+              + 'asui noin 1 200 ihmistä.',
+          selite: 'Uros-kansan kelluvat saaret Titicacajärvellä rakennetaan '
+            + 'totora-kaislasta, jota lisätään pinnalle jatkuvasti, koska '
+            + 'pohja lahoaa alta.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Titicaca',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Peru antoi maailmalle perunan ja kvinoan, ja molemmat '
+          + 'kesytettiin saman järven rannoilla.',
+      nostot: [
+        {
+          otsikko: 'Kolmetuhatta lajiketta yhdessä maassa',
+          tiedosto: 'Papa nativa.jpg',
+          teksti: 'Peruna kesytettiin seitsemän–kymmenentuhatta vuotta '
+              + 'sitten Titicacan ympäristössä, ja vanhimmat '
+              + 'arkeologisesti varmennetut mukulat ovat Perun rannikolta '
+              + 'noin vuodelta 2500 eaa. Maailmassa on noin viisituhatta '
+              + 'perunalajiketta, joista kolmetuhatta Andeilla; yhdessä '
+              + 'laaksossa voi olla yli sata ja yhdellä perheellä '
+              + 'toistakymmentä. Ylängöillä perunat pakastekuivataan '
+              + 'chuñoksi yön pakkasessa ja päivän auringossa, jolloin ne '
+              + 'säilyvät vuosia. Liman perunakeskus säilyttää 4 870 '
+              + 'perunan geenivaraa.',
+          selite: 'Andeilla kasvaa noin kolmetuhatta perunalajiketta, ja '
+            + 'ylängöillä perunat pakastekuivataan chuñoksi yön pakkasessa '
+            + 'ja päivän auringossa.',
+          lahde: 'Mayasaberes, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Peruna',
+        },
+        {
+          otsikko: 'Siemen, joka ei ole vilja',
+          tiedosto: 'Red Quinoa.jpg',
+          teksti: 'Kvinoa ei ole heinäkasvi vaan revonhäntäkasvien '
+              + 'sukulainen, ja syötävä osa on siemen eikä jyvä. Sitä '
+              + 'käytettiin karjan rehuna jo 5 200–7 000 vuotta sitten ja '
+              + 'ihmisravinnoksi 3 000–4 000 vuotta sitten Titicacan '
+              + 'altaassa. Siemenissä on runsaasti proteiinia, kuitua ja '
+              + 'B-vitamiineja sekä enemmän kaliumia ja magnesiumia kuin '
+              + 'monissa viljoissa. Kasvi kasvaa metristä kahteen, ja '
+              + 'kukinto voi olla vihreä, punainen tai purppura — '
+              + 'sadonkorjuun aikaan ylängön pellot ovat ruosteenpunaisia.',
+          selite: 'Kvinoa ei ole vilja vaan revonhäntäkasvien sukulainen, ja '
+            + 'sen siemeniä on syöty Titicacan altaassa 3 000–4 000 vuotta.',
+          lahde: 'Richard H. Moore, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kvinoa',
+        },
+        {
+          otsikko: 'Pata, joka on maa itse',
+          tiedosto: 'Pachamanca en Huaraz (2024).jpg',
+          teksti: 'Pachamanca on ketšuan sanoista pacha, maa, ja manka, '
+              + 'pata. Kuoppaan ladotaan kiviä, ne kuumennetaan tuntikausia '
+              + 'ja päälle asetetaan kerroksittain yrttimarinoitua lihaa, '
+              + 'perunaa, chuñoa, härkäpapuja, bataattia, ocaa, ullucoa ja '
+              + 'maissikakkuja, minkä jälkeen kuoppa peitetään lehdillä ja '
+              + 'mullalla. Kolme aluetta tekee sitä eniten: ylä-Huallagan '
+              + 'laakso sianlihalla ja chincho-yrtillä, Mantaron laakso '
+              + 'lampaalla ja Ayacucho. Rannikolla ja Amazonissa sitä ei '
+              + 'juuri tehdä, koska sopivaa kiveä ja puuta ei ole.',
+          selite: 'Pachamanca kypsennetään maakuopassa kuumien kivien '
+            + 'päällä, ja nimi tulee ketšuan sanoista pacha, maa, ja manka, '
+            + 'pata.',
+          lahde: 'Stanglavine, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Juoma, joka sai nimensä satamasta',
+          aika: '1764',
+          tiedosto: 'Alambique de pisco.jpg',
+          teksti: 'Pisco tislataan käyneestä rypälemehusta. Espanjalaiset '
+              + 'siirtolaiset kehittivät sen 1500-luvulla korvaamaan '
+              + 'Espanjasta tuotua orujoa: rypäleitä kasvoi paikan päällä, '
+              + 'ja väkevää juomaa mahtui laivaan vähemmällä tilalla. '
+              + 'Vanhin tunnettu maininta sanasta perulaisesta paloviinasta '
+              + 'on vuodelta 1764, ja nimi tulee Piscon satamakaupungista, '
+              + 'josta juomaa vietiin Eurooppaan. Wieniläinen lehti kertoi '
+              + '1835, että Chilessä juotiin paljon perulaista piscoa, '
+              + 'kunnes tullit synnyttivät sinne oman version. Nimestä '
+              + 'kiistellään yhä.',
+          selite: 'Pisco tislataan käyneestä rypälemehusta, ja se sai '
+            + 'nimensä Piscon satamakaupungista, josta juomaa vietiin '
+            + 'Eurooppaan.',
+          lahde: 'Futuropopular, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Andien musiikissa soivat espanjalaisen kielisoittimen, '
+          + 'esikolumbiaanisen huilun ja Länsi-Afrikasta tuodun rytmin '
+          + 'perilliset.',
+      nostot: [
+        {
+          otsikko: 'Kitara, joka mahtui viitan alle',
+          tiedosto: 'Armadillo backed Bolivian Charango 10.jpg',
+          teksti: 'Charango syntyi siirtomaakaudella, kun ketšua- ja '
+              + 'aymarayhteisöt rakensivat oman versionsa espanjalaisista '
+              + 'kielisoittimista. Se on noin 66 senttimetriä pitkä ja '
+              + 'siinä on tavallisesti kymmenen kieltä viitenä parina. '
+              + 'Kaikukoppa tehtiin perinteisesti vyötiäisen '
+              + 'selkäkilvestä, jota sanotaan nimellä quirquincho; nykyään '
+              + 'useimmat tehdään puusta, jota monet pitävät parempana '
+              + 'kaikupohjana. Soitin levisi Boliviaan, Ecuadoriin, '
+              + 'Pohjois-Chileen ja Luoteis-Argentiinaan asti.',
+          selite: 'Charangossa on tavallisesti kymmenen kieltä viitenä '
+            + 'parina, ja kaikukoppa tehtiin perinteisesti vyötiäisen '
+            + 'selkäkilvestä.',
+          lahde: 'Lardyfatboy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Laatikko, jonka päällä istutaan',
+          tiedosto: 'Homemade cajón.jpg',
+          teksti: 'Cajón tarkoittaa espanjaksi laatikkoa. Soittaja istuu sen '
+              + 'päällä ja lyö käsin etulevyä: viisi sivua tehdään '
+              + 'kolmen–kahden sentin paksusta puusta ja soittopinta eli '
+              + 'tapa ohuemmasta vanerista, ja takana on ääniaukko. Soitin '
+              + 'kehittyi Perun rannikolla Länsi- ja Keski-Afrikasta '
+              + 'orjuutettuina tuotujen ihmisten jälkeläisten käsissä, ja '
+              + 'se on ollut afroperulaisen música criollan keskeisin '
+              + 'lyömäsoitin 1800-luvun lopulta. Espanjaan se kulki '
+              + 'myöhemmin ja päätyi flamencoon.',
+          selite: 'Cajónin soittaja istuu laatikon päällä ja lyö käsin '
+            + 'ohutta etulevyä, ja soitin kehittyi Perun rannikon '
+            + 'afroperulaisessa yhteisössä 1800-luvulla.',
+          lahde: 'Luislema, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Huilupari, joka ei soita yksin',
+          tiedosto: 'Sikus de la variedad Malta - Parejas - Ira y Arka.jpg',
+          teksti: 'Siku eli Andien panhuilu tehdään ruokoputkista, ja se '
+              + 'soitetaan pareittain. Sävelasteikko on jaettu kahteen '
+              + 'soittimeen, ira ja arka, joten kumpikaan ei pysty '
+              + 'soittamaan melodiaa yksin: sävel syntyy vasta kun kaksi '
+              + 'soittajaa vuorottelee putkiaan. Sikun ja quena-huilun '
+              + 'ympärille rakentuu huayno, Andien suosituin laulu- ja '
+              + 'tanssimusiikki. Samasta perinteestä ammensi Daniel Alomía '
+              + 'Robles, kun hän sävelsi 1913 zarzuelaansa "El Cóndor '
+              + 'Pasan": siitä on tehty yli neljätuhatta versiota, ja Peru '
+              + 'julisti sen kansalliseksi kulttuuriperinnöksi 2004.',
+          selite: 'Siku-panhuilut soitetaan pareittain, ira ja arka, koska '
+            + 'sävelasteikko on jaettu kahteen soittimeen eikä kumpikaan '
+            + 'pysty soittamaan melodiaa yksin.',
+          lahde: 'Abel Christian Apaza Amanqui, Wikimedia Commons '
+            + '(CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Sakset, jotka eivät ole sakset',
+          aika: '2010',
+          tiedosto: 'Peruvian Scissors Dance Costume (Danza de las tijeras) - MIM PHX (2014-02-09 14.03.52 by ksblack99).jpg',
+          teksti: 'Saksitanssin ketšuankielinen nimi on Supaypa wasin '
+              + 'tusuq. Laji on chanka-alkuperää eteläisiltä Andeilta, ja '
+              + 'siinä kaksi tai useampi tanssija haastaa toisensa '
+              + 'vuorotellen yhä vaikeampiin liikkeisiin, kumpikin oman '
+              + 'viulun ja harpun säestämänä. Nimen antava soitin ei ole '
+              + 'sakset lainkaan vaan kaksi irrallista, noin '
+              + 'kahdenkymmenenviiden sentin metallilevyä, jotka yhdessä '
+              + 'muistuttavat tylppäkärkisiä saksia; ne korvasivat '
+              + 'aikanaan litteät kivet, joilla oli sama ääni. Unesco '
+              + 'merkitsi tanssin luetteloonsa 2010.',
+          selite: 'Saksitanssin nimen antava soitin ei ole sakset vaan '
+            + 'kaksi irrallista, noin kahdenkymmenenviiden sentin '
+            + 'metallilevyä, jotka korvasivat aikanaan samalta kuulostaneet '
+            + 'litteät kivet.',
+          lahde: 'ksblack99, Wikimedia Commons (PD)',
+        },
+      ],
+    },
+  ],
 };

@@ -176,6 +176,56 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'lennättimen ja höyryn voimalla. Isoisän matkapäiväkirja osuu '
       + 'maahan hetkellä, jolloin se on yhtä aikaa vanha ja aivan uusi.',
   },
+  /* Kanadan ja Meksikon maaintrot kirjoitettiin 6.9.2026 maalehtien
+   * (MAA_KATEGORIAT.CAN ja .MEX) yhteydessä. Molemmat nojaavat samaan
+   * en-Wikipedian aineistoon kuin lehdet — docs/mantereet-tyoaineisto/
+   * faktapohja-kanada.md ja faktapohja-meksiko.md — eikä niissä väitetä
+   * enempää kuin lehden nostoissa. Vain intro-kenttä: nämä ovat maita
+   * eivätkä kaupunkeja, joten kolmikappaleista teksti-kenttää ei ole
+   * (sama ratkaisu kuin avaimella Yhdysvallat). */
+  Kanada: {
+    intro: 'Kanada on isoisän matkavuonna kuusivuotias valtio ja maailman '
+      + 'toiseksi suurin maa, jonka asutus painautuu kapeaksi nauhaksi '
+      + 'etelärajan tuntumaan. Konfederaatio syntyi 1. heinäkuuta 1867 '
+      + 'neljästä provinssista, ja juuri vuonna 1873 siihen liittyy '
+      + 'Prinssi Edwardin saari — sama saari, joka isännöi ensimmäistä '
+      + 'liittoneuvottelua yhdeksän vuotta aiemmin. Valtiota vanhempi on '
+      + 'yhtiö: Hudson’s Bay Company sai vuonna 1670 peruskirjan, joka '
+      + 'antoi sille kolmasosan nykyisestä Kanadasta, ja se myi maat '
+      + 'takaisin vasta 1869.'
+      + '\n\n'
+      + 'Kaiken tämän alla on paljon vanhempi maa. **First Nations, '
+      + 'inuiitit ja métisit ovat perustuslaissa tunnustetut kolme '
+      + 'alkuperäiskansaa, ja pelkästään First Nations -hallintoja on yli '
+      + 'kuusisataa.** Turkiskauppa kulki heidän reiteillään ja söi '
+      + 'heidän ruokaansa: pemmikaania ja bannockia. Newfoundlandin '
+      + 'pohjoiskärjessä on kahdeksan turverakennuksen pohjat vuodelta '
+      + '1021 — ainoa kiistaton todiste eurooppalaisista Amerikassa '
+      + 'ennen Kolumbusta. Isoisän matkavuonna lännessä ei ole vielä '
+      + 'siviilihallintoa, ja sinne lähetetään punatakkinen ratsupoliisi.',
+  },
+  Meksiko: {
+    intro: 'Meksiko on vuonna 1873 viisikymmentäkaksivuotias tasavalta, '
+      + 'joka on juuri selvinnyt vuosikymmenten sisällissodista ja '
+      + 'ranskalaisten miehityksestä. Edellisenä kesänä maa hautasi '
+      + 'presidenttinsä Benito Juárezin — zapoteekkipaimenen, joka '
+      + 'kaksitoistavuotiaaksi asti puhui vain omaa kieltään ja nousi '
+      + 'maan ensimmäiseksi alkuperäiskansaan kuuluneeksi presidentiksi. '
+      + 'Uudenvuodenpäivänä 1873 avataan pääkaupungin ja Veracruzin '
+      + 'välinen rautatie, joka aloitettiin keisarikunnan aikaan ja '
+      + 'päätettiin tasavallassa.'
+      + '\n\n'
+      + '**Meksikon syvyys mitataan kuitenkin vuosituhansissa.** '
+      + 'Teotihuacánissa asui satatuhatta ihmistä jo silloin kun Rooma '
+      + 'oli suurimmillaan, Monte Albánin aukio tasoitettiin vuoristossa '
+      + 'viisisataa vuotta ennen ajanlaskun alkua, ja mayat kirjoittivat '
+      + 'ainoaa Amerikan kirjoitusjärjestelmää, joka on saatu luettua. '
+      + 'Ruoka kertoo saman: maissi keitetään kalkkivedessä ja kaakaopavut '
+      + 'kelpasivat rahaksi. Acapulcon satamasta lähti '
+      + 'kaksisataaviisikymmentä vuotta laivoja Manilaan, joten Meksiko '
+      + 'on ollut Tyynenmeren portti kauemmin kuin useimmat Euroopan '
+      + 'valtiot ovat olleet olemassa.',
+  },
   /* Chicagon kaksi väkilukua eivät ole lehden omasta erästä, joten ne
    * on tarkistettu erikseen en-Wikipedian artikkelista Chicago
    * 23.8.2026: kaupungin väkiluku 2,74 miljoonaa ja metropolialueen
@@ -444,5 +494,64 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'kaupungista 2005, ja sen jälkeen tulvasuojaus on rakennettu '
       + 'uudelleen; kymmenen vuotta myöhemmin väkiluku oli 80 prosenttia '
       + 'vuoden 2000 tasosta.',
+  },
+  /* MONTREAL (6.9.2026). Kaupunkilehti kirjoitettiin 23.8.2026
+   * (js/packs/kulttuuri-kategoriat.js, avain montreal), mutta sen
+   * lohkokommentin lupaama ARTIKKELIT-merkintä jäi silloin
+   * lisäämättä — etusivun leipäteksti puuttui lehdestä kokonaan.
+   * Tämä merkintä korjaa puutteen samasta aineistosta: jokainen väite
+   * on lehden omista teksteistä ja niiden lähteistä
+   * (docs/mantereet-tyoaineisto/faktapohja-montreal.md ja
+   * tarkistus-montreal.md, en-Wikipedia 23.8.2026) — uusia
+   * lähdehakuja ei tehty. Tarkistusraportin C-kohta on otettu
+   * huomioon: vuosilukua 1763 ei käytetä, koska sitä ei ole
+   * "Montreal"-artikkelissa, vaan teksti kertoo vain valtauksen 1760
+   * ja antautumisen Britannialle. Sisältölinjaus on sama kuin
+   * lehdessä: kaksikielisyys todetaan kaupungin peruskirjan ja
+   * väestönlaskennan tasolla, ei nykypolitiikkaa. */
+  Montreal: {
+    intro: 'Montreal on Québecin suurin ja Kanadan toiseksi suurin '
+      + 'kaupunki, saari keskellä Saint Lawrence -jokea. Saaren '
+      + 'keskellä kohoaa Mont Royal, jonka nimestä kaupungin oma nimi '
+      + 'on lyhentynyt. Ranskalaiset '
+      + 'lähetyssaarnaajat perustivat paikalle Ville-Marien 1642, ja '
+      + '**siirtokunta oli 1650-luvun alussa niin pieni, että se oltiin '
+      + 'hylkäämässä** — vuoteen 1685 mennessä asukkaita oli kuusisataa '
+      + 'ja paikasta oli tullut turkiskaupan keskus.'
+      + '\n\n'
+      + 'Ranska hallitsi siirtokuntaa vuoteen 1760, jolloin Montreal '
+      + 'antautui brittihyökkäykselle Seitsenvuotisen sodan aikana. '
+      + 'Kaupunkioikeudet tulivat 1832, ja sen jälkeen kasvu oli nopeaa: '
+      + 'Lachine-kanava vei 1825 laivat koskien ohi ja Victoria-silta '
+      + '1859 rautatien joen yli. Vuoteen 1860 mennessä Montreal oli '
+      + 'Brittiläisen Pohjois-Amerikan suurin kaupunki, joka hallitsi '
+      + 'muun maan taloutta ja kulttuuria.'
+      + '\n\n'
+      + 'Isoisän matkavuoden tienoilla kaupunki oli keskellä '
+      + 'rakennustöitä. **Notre-Damen kirkon sisustus — syvänsininen '
+      + 'holvikatto kultatähtineen — tehtiin juuri vuosina 1872–1879**, '
+      + 'ja kaupungintalo nousi 1873 vanhan jesuiittapuutarhan '
+      + 'paikalle. Vuoden 1871 väestönlaskennassa asukkaita oli '
+      + '130 022.',
+    teksti: 'Montreal on saari Saint Lawrence -joessa. Saaren keskellä '
+      + 'kohoaa Mont Royal, jonka rinteeltä koko kaupunki näkyy '
+      + 'kerralla, ja joen väylä vie valtamerialukset Atlantilta '
+      + 'Suurille järville asti.'
+      + '\n\n'
+      + 'Paul Chomedey de Maisonneuve perusti Ville-Marien 1642, ja '
+      + 'sulpitiaanimunkit vetivät saarelle ensimmäiset katulinjat. '
+      + 'Kaupunki siirtyi Britannian valtaan 1760, sai kaupunkioikeudet '
+      + '1832 ja kasvoi rautateiden ja sataman varassa mantereen '
+      + 'solmukohdaksi. Satama on noin 1 600 kilometrin päässä '
+      + 'Atlantilta, mutta se on silti lyhin suora reitti '
+      + 'Pohjois-Amerikan Keskilännestä Eurooppaan.'
+      + '\n\n'
+      + 'Nykyään ranska on kaupungin peruskirjan mukainen virallinen '
+      + 'kieli, ja Montreal on samalla yksi Kanadan kaksikielisimmistä '
+      + 'kaupungeista. Keskustan alla kulkee käytäväverkosto, joka sai '
+      + 'alkunsa 1962 Place Ville Marien työmaalla ja on kasvanut '
+      + 'yhdeksi maailman laajimmista maanalaisista jalankulkualueista. '
+      + 'Metro avattiin 1966, ja sen kumipyöräiset junat ovat '
+      + 'tavallista hiljaisempia.',
   },
 };
