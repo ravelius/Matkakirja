@@ -1,0 +1,102 @@
+# Apple-tilin sertifikaattien siivous App Store Connect -rajapinnalla.
+#
+# Tausta (6.9.2026): TestFlight-ajo (ios-testflight.yml) kaatui virheeseen
+# "Your account has reached the maximum number of certificates. To create a
+# new one, you must choose a certificate to revoke." Ajo allekirjoittaa
+# automaattisesti (-allowProvisioningUpdates), ja jokainen CI-ajo tuoreella
+# mac-runnerilla on luonut tilille uuden KEHITYSsertifikaatin, jonka
+# yksityinen avain katosi runnerin mukana. Ne ovat siis kuolleita, mutta
+# vievät kiintiön. Omistaja 6.9.2026: "Fable siivoaa CI:llä".
+#
+#   toiminto: listaa — näyttää tilin sertifikaatit (tyyppi, nimi, vanhenee,
+#                      tunnus). Ei muuta mitään.
+#   toiminto: peru   — peruu VAIN kehityssertifikaatit (certificateType
+#                      DEVELOPMENT / IOS_DEVELOPMENT / MAC_APP_DEVELOPMENT).
+#                      Jakelusertifikaatteihin (DISTRIBUTION, IOS_DISTRIBUTION,
+#                      MAC_*_DISTRIBUTION, DEVELOPER_ID_*) EI kosketa.
+#
+# Salaisuudet samat kuin TestFlight-ajolla: ASC_KEY_ID, ASC_ISSUER_ID,
+# ASC_KEY_P8 (.p8 sellaisenaan tai base64). Avainta ei tulosteta.
+name: iOS sertifikaattien siivous
+
+on:
+  workflow_dispatch:
+    inputs:
+      toiminto:
+        description: 'listaa | peru'
+        required: true
+        default: 'listaa'
+        type: choice
+        options: [listaa, peru]
+
+jobs:
+  sertit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+      ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+      TOIMINTO: ${{ github.event.inputs.toiminto }}
+    steps:
+      - name: Pura avain
+        run: |
+          set -euo pipefail
+          for n in ASC_KEY_ID ASC_ISSUER_ID ASC_KEY_P8; do
+            if [ -z "${!n:-}" ]; then echo "::error::$n puuttuu"; exit 1; fi
+          done
+          hakemisto="$RUNNER_TEMP/asc"; mkdir -p "$hakemisto"; chmod 700 "$hakemisto"
+          polku="$hakemisto/AuthKey.p8"
+          if printf '%s' "$ASC_KEY_P8" | grep -q "BEGIN PRIVATE KEY"; then
+            printf '%s\n' "$ASC_KEY_P8" > "$polku"
+          else
+            printf '%s' "$ASC_KEY_P8" | openssl base64 -d -A -out "$polku"
+          fi
+          chmod 600 "$polku"
+          grep -q "BEGIN PRIVATE KEY" "$polku" || { echo "::error::ASC_KEY_P8 ei ole .p8-avain"; exit 1; }
+          echo "ASC_AVAIN_POLKU=$polku" >> "$GITHUB_ENV"
+
+      - name: Asenna JWT-kirjasto
+        run: pip install --quiet "pyjwt[crypto]==2.9.0"
+
+      - name: Listaa ja (valinnaisesti) peru
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os, sys, time, json, urllib.request, urllib.error
+          import jwt
+          kid = os.environ['ASC_KEY_ID']; iss = os.environ['ASC_ISSUER_ID']
+          avain = open(os.environ['ASC_AVAIN_POLKU']).read()
+          toiminto = os.environ['TOIMINTO']
+          def tunnus():
+              nyt = int(time.time())
+              return jwt.encode({'iss': iss, 'iat': nyt, 'exp': nyt + 600, 'aud': 'appstoreconnect-v1'}, avain, algorithm='ES256', headers={'kid': kid, 'typ': 'JWT'})
+          def kutsu(metodi, polku):
+              req = urllib.request.Request('https://api.appstoreconnect.apple.com' + polku, method=metodi,
+                                           headers={'Authorization': 'Bearer ' + tunnus(), 'Accept': 'application/json'})
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as v:
+                      data = v.read()
+                      return v.status, (json.loads(data) if data else {})
+              except urllib.error.HTTPError as e:
+                  return e.code, json.loads(e.read() or b'{}')
+          tila, d = kutsu('GET', '/v1/certificates?limit=200')
+          if tila != 200:
+              print('::error::sertifikaattien listaus epäonnistui', tila, json.dumps(d)[:500]); sys.exit(1)
+          sertit = d.get('data', [])
+          KEHITYS = {'DEVELOPMENT', 'IOS_DEVELOPMENT', 'MAC_APP_DEVELOPMENT'}
+          print(f'sertifikaatteja: {len(sertit)}')
+          for s in sertit:
+              a = s['attributes']
+              print(f"  {a.get('certificateType'):22} {a.get('displayName') or a.get('name'):40} vanhenee {str(a.get('expirationDate'))[:10]}  id {s['id']}")
+          if toiminto != 'peru':
+              print('listaa-tila: ei muutoksia'); sys.exit(0)
+          perutut = 0
+          for s in sertit:
+              a = s['attributes']
+              if a.get('certificateType') in KEHITYS:
+                  t2, d2 = kutsu('DELETE', '/v1/certificates/' + s['id'])
+                  print(('peruttu' if t2 == 204 else f'VIRHE {t2}'), a.get('certificateType'), a.get('displayName') or a.get('name'), s['id'], '' if t2 == 204 else json.dumps(d2)[:300])
+                  perutut += (t2 == 204)
+          print(f'peruttu {perutut} kehityssertifikaattia; jakelusertifikaatteihin ei koskettu')
+          PY
