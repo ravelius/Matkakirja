@@ -75,6 +75,7 @@ const SHELL = [
   './js/maalehti.js',
   './js/lukija.js',
   './js/pollo.js',
+  './js/liviapuhe.js',
   './js/livia.js',
   './js/puhe.js',
   // Tehosteketjut (Tuna, 5.9.2026): moduuli kuuluu kuoreen, kirjasto

@@ -3128,7 +3128,7 @@ export class UI {
      * laitelippu on tarkoituksella tämän ulkopuolella — se on kerran
      * per laite, ei kerran per peli.
      */
-    nollaaLivianVihjeet();
+    nollaaLivianVihjeet(this);
   }
 
   /**
