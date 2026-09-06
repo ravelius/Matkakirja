@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1640, teksti: 'Lehdet 15 maata ja 4 kaupunkia, pulun aani Dr. Von' },
   { v: 1639, teksti: 'Pallon lepokerros: levossa terava kuin tasokartta' },
   { v: 1638, teksti: 'Etusivun harso ilman rajaa, SLE ja PAN elaintekstit' },
   { v: 1637, teksti: 'Aikajanan ajo, kuusi maalehtea, Ihmisen matka -suunnitelma' },
