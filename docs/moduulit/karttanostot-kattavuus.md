@@ -1574,3 +1574,80 @@ koodimuutosta. Paikat on mitattu koneellisesti — jokainen piste on maan
 rajojen sisällä, maalla ja vähintään 35 lautayksikön päässä jokaisesta
 kaupunkimerkistä sekä 30 yksikön päässä muista eläintäyistä. Lähimmäksi
 kaupunkia jäi Jemenin kameleontti (50,4 yksikköä Sanasta).
+## Erä M17 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Erä
+M17 on **Amerikkojen täydennys**: USA, MEX, ECU, PER ja PAN. Kolmella
+niistä oli entuudestaan yksi merkki (USA:n biisoninvasa, Meksikon
+aksolotli ja Templo Mayor, Perun vikunja), muilla ei mitään. Erän
+jälkeen kaikki viisi ovat laskurin (`node tools/laske-karttanostot.mjs`)
+mukaan tilassa *täysi*: 8 kohdetta, 3 maastokohdetta, 1 eläintäky ja
+2 skandaalia kutakin. Uusia rivejä on 54 (kohteet ja maastokohteet)
++ 2 eläintäkyä + 10 skandaalia. Erä on kuvaton, ja faktat ovat
+en-Wikipedian raakatekstistä; jokainen lähderivi nimeää artikkelin
+osan ja tarkistuspäivän 6.9.2026.
+
+Kohteet ja maastokohteet asuvat maiden uusissa
+`js/packs/maastokohteet-<iso>.js`-tiedostoissa (rekisteröity
+`js/packs/maastokohteet.js`-hakemistoon, `sw.js`:n SHELL-listalle ja
+`tools/build-standalone.mjs`:n MODULES-listalle), eläintäyt
+`js/packs/elaintakyt.js`:ään ja skandaalit `js/packs/skandaalit.js`:ään.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Yhdysvallat (USA) | Mesa Verde, Cahokia, Chacon kanjoni, Gettysburg, Kill Devil Hills, Promontory, Independence Hall, Mammothin luola | Mount St. Helens, Crater Lake, Nantucket | (oli jo: biisoninvasa) | Teapot Dome 1922, Crédit Mobilier 1872 |
+| Meksiko (MEX) | Teotihuacán, Palenque, Chichén Itzá, Monte Albán, El Tajín, Guanajuato, Chihuahuan rata (+ oli jo: Templo Mayor) | Popocatépetl, Cozumel, Usumacinta | (oli jo: aksolotli) | Querétaro 1867, Cananea 1906 |
+| Ecuador (ECU) | Ingapirca, Cuenca, Guayaquil, Yasuní, Paholaisen nenä, Panamahattu, Valdivian kulttuuri, Otavalo | Cotopaxi, Quilotoa, Napo | andienkarhu | Kiinapuu 1860, Lago Agrio 1993 |
+| Peru (PER) | Nazcan viivat, Chan Chan, Caral, Kuélap, Sipán, Chavín de Huántar, Arequipa, Colcan kanjoni | Huascarán, Apurímac, Ballestas-saaret | (oli jo: vikunja) | Chincha 1864, Yale-kiista |
+| Panama (PAN) | Portobelo, Panaman rautatie, El Caño, Guna Yala, Los Santos, Bocas del Toro, Dariénin aukko, Helmisaaret | Volcán Barú, Coiba, Chagres | panamankultasammakko | San Blas 1925, Darien 1698 |
+
+**Yhdysvallat karsi eniten, koska pelikaupunkeja on kahdeksantoista.**
+Laudalla ovat New York, San Francisco, Nome, Anchorage, Sitka,
+Yellowstone, Mount Rushmore, Chicago, Appalakit, Denver, Santa Fe,
+Grand Canyon, Los Angeles, Havaiji, Houston, New Orleans, Miami ja San
+Juan, joten kohteet on valittu niiden välistä. Lähin uusi merkki on
+Independence Hall 49,1 lautayksikön päässä New Yorkista; raja
+`KAUPUNGIN_KOHDALLA_SADE` on 7. Alaskan ja Havaijin kohteet jäivät pois
+USA-lehden rajauksen takia (x 1329,0–3947,3 / y 1219,2–2533,4).
+
+**Kolme paikkaa, jotka kaupunkisääntö pudotti.** (1) Ecuadorin Mitad
+del Mundo on 5,9 yksikköä Quitosta. (2) Panaman Culebran leikkaus 4,2,
+Barro Colorado 5,2 ja Gatúnjärvi 6,7 yksikköä Panamásta — kannas on
+laudalla niin pieni, että koko kanavavyöhyke mahtuu kymmenen yksikön
+säteelle, joten sieltä otettiin vain yksi merkki (Panaman rautatie
+Colónin päästä, 8,5). (3) Meksikossa Teotihuacán jäi 9,1 yksikköön eli
+juuri rajan yli, ja se on 13,2 yksikköä Templo Mayorista.
+
+**Kolme skandaalia vaihdettiin paikan takia, ei aiheen.** Ecuadorin
+vuoden 1894 "lipun myynti" (La venta de la bandera), Galápagosin
+plantaasivaltias Manuel Julián Cobos (1904) ja Panaman ranskalaisen
+kanavayhtiön romahdus 1892 olisivat olleet erän ilmeiset valinnat, mutta
+yhdellekään ei ollut kartalla paikkaa. Lipun myynti tapahtui Quitossa
+(1,6 lautayksikköä laatasta) ja koko Panaman kanavavyöhyke on alle
+seitsemän yksikön päässä Panamásta; `tests/nostot-kartalla.test.mjs`
+pitää kaupungin kohdalla olevien pääkartan nostojen listaa, joka saa
+vain laskea. Cobos taas asui Galápagosilla, joka on Ecuadorin
+fokuslehden ikkunan (x 2925–3533) länsipuolella: saarille sijoitettu
+merkki ei piirtyisi lainkaan, ja sama syy on kirjattu Darwin-hetkeen
+(`tools/tarkista-nostopaikat.mjs`, POIKKEUS). Tilalle valittiin saman
+maan tapaukset, joilla on oma paikkansa: Lojan kiinapuumonopoli ja sen
+salakuljetus (129,1 yksikköä Quitosta), Lago Agrion öljyriita (57,6) ja
+San Blasin kapina 1925 (59,0 yksikköä Panamásta). Kaikilla kolmella on
+oma en-Wikipedian artikkelinsa.
+
+**Sääntö N3 ohjasi maastovalintoja.** Laudan oma nimitaulu
+(`js/packs/maailmankartta-nimet.js`) kantaa jo Kalliovuoret, Sierra
+Nevadan, Kaskadit, Yläjärven, Coloradon, Rio Granden, Sierra Madre
+Occidentalin, Andit, Amazonin, Marañónin, Ucayalin ja Titicacan, joten
+yhtäkään niistä ei ole tässä erässä. Perun Chinchan saaret jäivät pois
+maastokolmikosta, koska ne ovat laudalla käytännössä Ballestas-saarten
+päällä; guanosodan merkki on siksi Callaon satamassa.
+`node tools/tarkista-nimiolimitys.mjs` sanoo yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0",
+`node tools/tarkista-nostopaikat.mjs` antaa "ILMAN PAIKKAA 0", ja
+`tools/savukkeet/savuke-maastokohteet.mjs` menee läpi 8/8.
+
+**Kuvat puuttuvat kahdelta eläintäyltä.** ECU ja PAN saivat
+`kuva`-kenttään kuvaputken tunnuksen ilman kansiota (`elain-ecu`,
+`elain-pan`), joka osoittaa ämpäriin: kun kuvaputki tekee kuvan, se
+ilmestyy kortille ilman koodimuutosta, ja siihen asti kortti on
+kuvaton.

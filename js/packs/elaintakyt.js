@@ -1998,6 +1998,47 @@ export const ELAINTAKYT = {
     lon: 45.6,
     lat: 14.8,
   },
+  /* ============ MAAILMAN ERÄ M17, AMERIKAT 6.9.2026 ============
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M17 täydensi Amerikat (USA, MEX, ECU, PER, PAN). Näistä
+   * viidestä maasta USA:lla, Meksikolla ja Perulla oli eläintäky jo
+   * ennestään, joten uusia on kaksi: Ecuador ja Panama. Molemmat
+   * tulevat tauluun KUVATTOMINA — `kuva`-kentässä on kuvaputken
+   * ämpäritunnus ilman kansiota, ja kortti latoo siihen asti tekstin
+   * ja lähteen ilman kuvakehystä (js/elaintaky.js).
+   * ============================================================== */
+  ECU: {
+    elain: 'andienkarhu',
+    otsikko: 'Etelä-Amerikan ainoa karhu',
+    teksti: 'Andienkarhu eli silmälasikarhu on Andien oma laji ja Etelä-Amerikan ainoa karhu — samalla viimeinen elossa oleva lyhytkuonoinen karhu. Nimi tulee vaaleista kuvioista rinnassa, kaulassa ja kasvoissa, jotka joillakin yksilöillä näyttävät silmälaseilta. Se on karhuista jättiläispandan ohella kasvissyövin: lihaa on tavallisesti vain 5–7 prosenttia ruokavaliosta, ja loput ovat kaktusta, bromelioita, palmunpähkinöitä, bambun sydämiä, orkideansipuleita ja sammalta. Puremalihakset ja poskihampaat ovat sen mukaiset — ne on tehty jauhamaan ja murskaamaan sitkeää kasvia, jota harva muu eläin sen elinalueella kykenee avaamaan. Urokset painavat 100–200 kiloa ja naaraat 35–82, joten laji kilpailee jääkarhun kanssa nykykarhujen selvimmästä koon erosta sukupuolten välillä. Karhu on myös yksi neljästä puissa kiipeilevästä karhulajista, ja IUCN luokittelee sen vaarantuneeksi elinympäristön katoamisen takia.',
+    lahde: 'en-Wikipedia "Spectacled bear", johdanto sekä osiot '
+      + '"Etymology", "Size", "Behaviour" ja "Diet". '
+      + 'Tarkistettu 6.9.2026.',
+    kuva: 'elain-ecu',
+    // Piste on Sangayn kansallispuiston seudulla Keski-Ecuadorin
+    // Andeilla, 60,9 lautayksikköä Quitosta (vähimmäisetäisyys 35).
+    // Galápagos-merkin viereen ei voi sijoittaa mitään: saariryhmä on
+    // oma pelikaupunkinsa ja jää lisäksi maan lehden rajauksen ulkopuolelle.
+    lon: -78.3,
+    lat: -2,
+  },
+  PAN: {
+    elain: 'panamankultasammakko',
+    otsikko: 'Sammakko, joka viittoo',
+    teksti: 'Panamankultasammakko on Panamalle kotoperäinen konna, joka elää Länsi-Keski-Panaman pilvimetsien vuoripurojen varsilla Tabasarán vuoriston itärinteillä. Nimestään huolimatta se on todellinen konna. Se puhuu poikkeuksellisella tavalla: äänten lisäksi se viittoo etukäpälällään kilpailijoille ja mahdollisille kumppaneille, ja tämän semaforin uskotaan kehittyneen siksi, että kohisevien purojen äänessä huuto ei kanna. Kutsu on erikoinen myös siksi, ettei lajilla ole tärykalvoa lainkaan, mutta se silti vastaa lajitovereidensa ääntelyyn. Iho on myrkyllinen: siinä on muun muassa zetekitoksiini AB, joka salpaa hermosolujen natriumkanavia paljon tehokkaammin kuin sukulaisyhdisteensä saksitoksiini. Sammakko on Panaman kansallissymboli, se esiintyy arpalipuissa ja tarinoissa, ja kansallista kultasammakon päivää vietetään 14. elokuuta. Luonnosta laji on todennäköisesti hävinnyt vuodesta 2007 lähtien chytridi-sienitaudin takia, ja sitä kasvatetaan yli viidessäkymmenessä laitoksessa.',
+    lahde: 'en-Wikipedia "Panamanian golden frog", johdanto sekä osiot '
+      + '"Description", "Toxicity", "Distribution", "Behavior", '
+      + '"Conservation" ja "In culture". Tarkistettu 6.9.2026.',
+    kuva: 'elain-pan',
+    // Piste on Tabasarán vuoriston pilvimetsässä Coclén ja Veraguasin
+    // rajamailla, 44,8 lautayksikköä Panamásta (vähimmäisetäisyys 35).
+    // El Valle de Antón, lajin tunnetuin paikka, jäi 24,7 yksikköön eli
+    // kaupunkimerkin liepeille, joten piste on lajin levinneisyyden
+    // länsipäässä.
+    lon: -80.9,
+    lat: 8.6,
+  },
 };
 
 

@@ -12789,4 +12789,504 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /* ================================================================
+   * ══ ERÄ M17, AMERIKAT 6.9.2026 ══════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M17 täydensi Amerikat (USA, MEX, ECU, PER, PAN). Yhdelläkään
+   * viidestä ei ollut skandaalia, joten tässä ovat kaikkien kymmenen
+   * kiintiöt, kaksi maata kohti. Kuvaton erä kuten aiemmatkin: kortti
+   * kantaa tekstin ja lähteen. Faktat en-Wikipediasta 6.9.2026, ja
+   * jokainen lähderivi nimeää artikkelin osan.
+   * ============================================================== */
+  USA: [
+    /*
+     * Teapot Domen öljykenttä, Natrona County, Wyoming.
+     * Lähde: en-Wikipedia "Teapot Dome scandal"
+     */
+    {
+      id: 'teapot-dome',
+      otsikko: 'Teapot Dome — laivaston öljy vuokrattiin lahjuksilla',
+      nimio: 'Teapot Dome 1922',
+      vuosi: '1922',
+      paikka: 'Teapot Domen öljykenttä, Wyoming',
+      lat: 43.29, lon: -106.24,
+      kortti: 'Laivasto oli siirtymässä hiilestä öljyyn, ja presidentti Taft oli varannut '
+        + 'sitä varten omat öljykentät. Sisäasiainministeri vuokrasi ne yhtiöille ilman '
+        + 'tarjouskilpailua ja rikastui matkalla. Hän oli ensimmäinen yhdysvaltalainen '
+        + 'ministeri, joka joutui vankilaan.',
+      teksti: 'Yhdysvaltain laivasto oli 1900-luvun alussa vaihtamassa hiiltä öljyyn, ja '
+        + 'presidentti William Howard Taft oli siksi varannut osan valtion öljyalueista '
+        + 'laivaston omiksi varannoiksi.'
+        + '\n\nVuonna 1921 presidentti Warren G. Hardingin määräyksellä Wyomingin Teapot '
+        + 'Domen sekä Kalifornian Elk Hillsin ja Buena Vistan kentät siirrettiin '
+        + 'laivastoministeriöltä sisäasiainministeriölle. Seuraavana vuonna '
+        + 'sisäasiainministeri Albert B. Fall vuokrasi Teapot Domen Harry F. Sinclairille ja '
+        + 'Elk Hillsin Edward L. Dohenylle ilman tarjouskilpailua.'
+        + '\n\nEhdot olivat yhtiöille erittäin edulliset, ja salaiset järjestelyt tekivät '
+        + 'Fallista rikkaan miehen: hän sai Dohenyltä marraskuussa 1921 sadantuhannen '
+        + 'dollarin korottoman lainan ja muita lahjoja yhteensä noin 404 000 dollarin '
+        + 'edestä. Senaattori Thomas J. Walshin johtama tutkinta oli jo hiipumassa, kun '
+        + 'Walsh löysi juuri sen lainan, jota Fall ei ollut osannut peittää.'
+        + '\n\nKorkein oikeus totesi 1927 vuokrasopimukset korruptiolla hankituiksi ja '
+        + 'palautti kentät laivastolle. Fall tuomittiin 1929 lahjusten ottamisesta, mutta '
+        + 'Doheny vapautettiin 1930 niiden antamisesta; Sinclair istui puoli vuotta '
+        + 'valamiehistön painostamisesta. Ennen Watergatea Teapot Domea pidettiin '
+        + 'Yhdysvaltain politiikan suurimpana skandaalina.',
+      lahde: 'en-Wikipedia "Teapot Dome scandal", johdanto-osa ja osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä paljasti Albert Fallin lopulta?',
+        vaihtoehdot: [
+          'Dohenyn koroton satatuhannen dollarin laina',
+          'Laivaston oma tarkastus öljykentällä',
+          'Sinclairin kirjeenvaihto Wyomingin kuvernöörin kanssa',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Kongressitalo, Washington.
+     * Lähde: en-Wikipedia "Crédit Mobilier scandal"
+     */
+    {
+      id: 'credit-mobilier',
+      otsikko: 'Crédit Mobilier — rata laskutti itseltään liikaa',
+      nimio: 'Crédit Mobilier',
+      vuosi: '1872–1873',
+      paikka: 'Kongressitalo, Washington',
+      lat: 38.8897, lon: -77.0089,
+      kortti: 'Union Pacificin johtajat perustivat oman rakennusyhtiön ja laskuttivat sillä '
+        + 'radasta lähes kaksinkertaisen hinnan. Ylimääräinen raha ja alihintainen osake '
+        + 'kiersivät Washingtoniin. Kun The Sun kertoi asiasta kesken vaalikampanjan, '
+        + 'tutkittavana oli kolmetoista kansanedustajaa.',
+      teksti: 'Kongressi valtuutti Union Pacific -rautatien 1864 ja lupasi mannerten '
+        + 'välisen radan rakentamiseen sata miljoonaa dollaria pääomaa, lainaa 16 000–48 000 '
+        + 'dollaria rautatiekilometriä kohti ja kahdenkymmenen miljoonan eekkerin maat.'
+        + '\n\nRadan johtajat perustivat rakentamista varten oman yhtiön, Crédit Mobilier of '
+        + 'Americanin. Rata maksoi rakentaa 50 miljoonaa dollaria, mutta Crédit Mobilier '
+        + 'laskutti siitä 94 miljoonaa, ja johtajat pitivät erotuksen — 44 miljoonaa — '
+        + 'itsellään.'
+        + '\n\nOsa ylimääräisestä rahasta ja yhdeksän miljoonan dollarin edestä alihintaista '
+        + 'osaketta käytettiin poliitikkojen lahjomiseen. Vuonna 1867 yhtiön johtoon nousi '
+        + 'kansanedustaja Oakes Ames, joka jakoi osakkeita kollegoilleen nimellishintaan, '
+        + 'vaikka markkinahinta oli paljon korkeampi. Riita liikekumppani Henry Simpson '
+        + 'McCombin kanssa johti siihen, että kirjeet vuodettiin The New York Sunille, ja '
+        + 'lehti julkaisi jutun 4. syyskuuta 1872 kesken Ulysses S. Grantin vaalikampanjan.'
+        + '\n\nKongressi tutki kolmeatoista jäsentään ja päätyi moittimaan Oakes Amesia ja '
+        + 'James Brooksia. Oikeusministeriön tutkinnassa selvisi, että osakkeita oli annettu '
+        + 'yli kolmellekymmenelle poliitikolle molemmista puolueista, muun muassa James A. '
+        + 'Garfieldille. Ketään ei asetettu syytteeseen, ja Garfield valittiin presidentiksi '
+        + '1880.',
+      lahde: 'en-Wikipedia "Crédit Mobilier scandal", johdanto-osa sekä osiot "Background", '
+        + '"The scandal" ja "Aftermath". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka paljon Crédit Mobilier laskutti 50 miljoonan radasta?',
+        vaihtoehdot: [
+          '60 miljoonaa dollaria',
+          '72 miljoonaa dollaria',
+          '94 miljoonaa dollaria',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  MEX: [
+    /*
+     * Cerro de las Campanas, Querétaro.
+     * Lähde: en-Wikipedia "Second Mexican Empire"
+     */
+    {
+      id: 'maximilianin-keisarikunta',
+      otsikko: 'Keisari, jonka Ranska toi ja jätti',
+      nimio: 'Querétaro 1867',
+      vuosi: '1867',
+      paikka: 'Cerro de las Campanas, Querétaro',
+      lat: 20.5933, lon: -100.4104,
+      kortti: 'Napoleon III tarvitsi Amerikkaan monarkistisen liittolaisen ja tarjosi '
+        + 'Meksikon kruunua itävaltalaiselle arkkiherttualle. Kun ranskalaiset joukot '
+        + 'lähtivät, keisari jäi. Hän kieltäytyi luopumasta kruunusta ja teloitettiin '
+        + 'kenraaliensa kanssa kesäkuussa 1867.',
+      teksti: 'Toinen Meksikon keisarikunta oli perustuslaillinen monarkia, jonka '
+        + 'meksikolaiset monarkistit pystyttivät Ranskan toisen keisarikunnan tuella. '
+        + 'Napoleon III halusi Meksikon konservatiivien, papiston ja aateliston avulla '
+        + 'monarkistisen liittolaisen Amerikkaan vastapainoksi Yhdysvaltain kasvavalle '
+        + 'vallalle.'
+        + '\n\nKruunua tarjottiin itävaltalaiselle arkkiherttualle Maximilianille, ja hänen '
+        + 'nousunsa vahvistettiin kiistanalaisella kansanäänestyksellä. Valtaistuimelle '
+        + 'noustessaan hän hyväksyi Miramarin sopimuksen, jonka mukaan Meksikon hallitus '
+        + 'maksaisi Ranskan sotaretken kulut ja elättäisi ranskalaiset joukot. Hänen '
+        + 'vaimostaan, belgialaisesta prinsessa Charlottesta, tuli keisarinna Carlota.'
+        + '\n\nRanskan armeija hallitsi Keski-Meksikoa, mutta tasavallan kannattajat '
+        + 'jatkoivat vastarintaa sekä tavallisin asein että sissisotana, eikä presidentti '
+        + 'Benito Juárez poistunut kertaakaan maasta. Helmikuussa 1867 viimeiset '
+        + 'ranskalaiset joukot lähtivät kotiin.'
+        + '\n\nMaximilian kieltäytyi luopumasta kruunusta ja siirtyi Querétaroon noin '
+        + 'kymmenentuhannen miehen kanssa. Tasavallan kenraalit Escobedo ja Corona '
+        + 'saartoivat kaupungin neljälläkymmenellätuhannella, ja 15. toukokuuta 1867 '
+        + 'keisarillinen upseeri avasi portit. Maximilian sekä kenraalit Tomás Mejía ja '
+        + 'Miguel Miramón tuomittiin kuolemaan ja ammuttiin 19. kesäkuuta 1867.',
+      lahde: 'en-Wikipedia "Second Mexican Empire", johdanto-osa sekä osiot "Origins of the '
+        + 'empire" ja "Fall of the empire". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Querétaro joutui tasavaltalaisten käsiin?',
+        vaihtoehdot: [
+          'Keisarillinen upseeri avasi kaupungin portit',
+          'Muurit murrettiin tykistöllä',
+          'Kaupunki antautui nälkiinnyttyään talven aikana',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Cananean kuparikaivos, Sonora.
+     * Lähde: en-Wikipedia "Cananea strike"
+     */
+    {
+      id: 'cananea-1906',
+      otsikko: 'Cananea — viisi pesoa, kahdeksan tuntia',
+      nimio: 'Cananea 1906',
+      vuosi: '1906',
+      paikka: 'Cananean kuparikaivos, Sonora',
+      lat: 30.9819, lon: -110.3006,
+      kortti: 'Kaivosyhtiö korotti amerikkalaisten työntekijöiden palkan viiteen dollariin '
+        + 'päivässä. Meksikolaiset saivat yhä enintään kolme. Kun korotus astui voimaan '
+        + '1. kesäkuuta 1906, kaksituhatta miestä käveli ulos — ja päivä päättyi '
+        + 'kolmeenkymmeneenkolmeen kuolleeseen.',
+      teksti: 'Cananea on vuoristoinen kaivoskaupunki Koillis-Sonorassa kolmenkymmenen '
+        + 'kilometrin päässä Yhdysvaltain rajasta. Eversti William Cornell Greene perusti '
+        + 'sinne Cananea Consolidated Copper Companyn 1896; Porfirio Díazin hallinto myi '
+        + 'usein maan luonnonvaroja ulkomaisille yhtiöille, ja Greene laajensi otteensa myös '
+        + 'liikenteeseen, sahoihin ja voimalaitoksiin. Suoni oli maailman suurimpia, ja 1906 '
+        + 'yhtiö työllisti 5 360 meksikolaista ja 2 200 amerikkalaista.'
+        + '\n\nTyöntekijöitä hiersivät kymmentuntiset päivät, huono ilmanvaihto ja palkkojen '
+        + 'epätasa-arvo. Murtumakohta tuli, kun Greene ilmoitti nostavansa amerikkalaisten '
+        + 'palkan viiteen dollariin päivässä; meksikolaisille jäi enintään kolme.'
+        + '\n\nKorotuksen voimaantulopäivänä 1. kesäkuuta 1906 meksikolaiset kaivosmiehet '
+        + 'jättivät työnsä. Jopa kaksituhatta miestä kokoontui poliisipäällikön toimiston '
+        + 'eteen huutamaan "cinco pesos, ocho horas" — viisi pesoa, kahdeksan tuntia. '
+        + 'Vaatimuksiin kuului myös se, että kolme neljäsosaa työpaikoista varattaisiin '
+        + 'meksikolaisille.'
+        + '\n\nIltapäivällä kulkue ohitti puutavaravaraston, jonka johtaja käänsi paloletkun '
+        + 'väkijoukkoon ja ampui sitä kohti. Varasto sytytettiin tuleen, ja yhteenotot '
+        + 'jatkuivat yöhön. Lakko päättyi ilman myönnytyksiä: noin 33 työntekijää kuoli, 22 '
+        + 'haavoittui ja 50 pidätettiin. Tapaus jäi merkiksi Díazin ajan kasvavasta '
+        + 'levottomuudesta ennen Meksikon vallankumousta.',
+      lahde: 'en-Wikipedia "Cananea strike", johdanto-osa sekä osiot "Location", '
+        + '"Background" ja "Strike". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä lakkolaiset huusivat poliisipäällikön toimiston edessä?',
+        vaihtoehdot: [
+          '"Tierra y libertad"',
+          '"Cinco pesos, ocho horas"',
+          '"Viva Cananea"',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  ECU: [
+    /*
+     * Loja, Etelä-Ecuadorin kiinapuumetsät.
+     *
+     * MIKSEI GALÁPAGOS EIKÄ QUITO. Ecuadorin kaksi ilmeisintä
+     * skandaalia — Galápagosin plantaasivaltias Manuel Julián Cobos
+     * (1904) ja vuoden 1894 "lipun myynti" — jäivät pois paikan takia,
+     * eivät aiheen. Galápagos on Ecuadorin fokuslehden ikkunan
+     * (x 2925–3533) LÄNSIPUOLELLA, joten saarille sijoitettu merkki ei
+     * piirtyisi lainkaan; sama syy on kirjattu Darwin-hetken kohdalle
+     * (tools/tarkista-nostopaikat.mjs POIKKEUS). Lipun myynti taas
+     * tapahtui Quitossa, joka on pelikaupunki: piste jäisi 1,6
+     * lautayksikön päähän laatasta, eikä kaupungin kohdalle kirjoiteta
+     * uutta pääkartan nostoa (tests/nostot-kartalla.test.mjs,
+     * KAUPUNGIN_KOHDALLA_SADE 7). Molemmat korvattiin mannermaan
+     * tapauksilla, joilla on oma paikkansa: Loja 129,1 yksikköä
+     * Quitosta ja Lago Agrio 57,6.
+     * Lähde: en-Wikipedia "Cinchona"
+     */
+    {
+      id: 'kiinapuun-kuori',
+      otsikko: 'Kiinapuu — monopoli, joka salakuljetettiin pois',
+      nimio: 'Kiinapuu 1860',
+      vuosi: '1638–1860',
+      paikka: 'Loja, Etelä-Ecuador',
+      lat: -3.9833, lon: -79.2,
+      kortti: 'Lojan metsien kuoresta saatiin ainoa toimiva lääke malariaan. Perun ja '
+        + 'naapureiden laki kielsi siementen ja taimien viennin, mutta 1800-luvulla ne '
+        + 'salakuljetettiin ulos maasta ja istutettiin Jaavalle ja Intiaan. Yksi kerääjistä '
+        + 'kuoli pahoinpitelyyn.',
+      teksti: 'Kiinapuun kuoresta saatiin kiniini, pitkään ainoa tehoava malarialääke. '
+        + 'Munkki Antonio de La Calancha mainitsi quina-kuoren 1638 puuna, joka kasvaa '
+        + 'Lojassa, ja kertoi että kahden kolikon painoinen jauhe sekoitettiin veteen ja '
+        + 'juotiin kuumeeseen. Jesuiittaisä Bernabé Cobo kirjoitti "kuumepuusta" 1653.'
+        + '\n\nTarkan kuvauksen teki vasta tähtitieteilijä Charles Marie de La Condamine, '
+        + 'joka tuli Quitoon 1735 mittaamaan meridiaanin kaarta; hänen kuvaamansa laji '
+        + 'Cinchona officinalis osoittautui kuitenkin hoidollisesti vähäarvoiseksi.'
+        + '\n\nKysynnän kasvaessa metsien puita alettiin hakata. Pitääkseen kuorimonopolinsa '
+        + 'Peru ja sen naapurimaat kielsivät kiinapuun siementen ja taimien viennin '
+        + '1800-luvun alusta lähtien. Siirtomaavallat halusivat silti kasvattaa puuta itse: '
+        + 'hollantilaiset lähettivät Justus Hasskarlin, jonka taimia viljeltiin Jaavalla '
+        + 'vuodesta 1854, ja englantilainen Clements Markham haki 1860 kasveja, jotka '
+        + 'istutettiin Sri Lankaan ja Etelä-Intian Nilgiriin.'
+        + '\n\nCharles Ledger ja hänen apulaisensa Manuel Incra Mamani keräsivät toista lajia '
+        + 'Boliviasta. Mamani jäi kiinni ja hänet pahoinpideltiin, mihin hän kuoli; Ledger '
+        + 'sai siemenet, joita britit eivät halunneet, ja loput myytiin hollantilaisille. '
+        + 'Cinchona ledgeriana tuotti Hollannin Indonesiassa 8–13 prosenttia kiniiniä. '
+        + '1800-luvulla britit perustivat Intiaan viljelmiä siemenistä, jotka he '
+        + 'salakuljettivat Ecuadorista, Perusta ja Boliviasta. Markham aateloitiin työstään.',
+      lahde: 'en-Wikipedia "Cinchona", osiot "Early references", "Economic significance" ja '
+        + '"Widespread cultivation". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Peru ja sen naapurit kielsivät siementen viennin?',
+        vaihtoehdot: [
+          'Pitääkseen kuorimonopolin itsellään',
+          'Suojellakseen puita hyönteisiltä',
+          'Estääkseen lääkkeen väärinkäytön',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Lago Agrion öljykenttä, Sucumbíos.
+     * Lähde: en-Wikipedia "Lago Agrio oil field"
+     */
+    {
+      id: 'lago-agrio',
+      otsikko: 'Lago Agrio — öljykenttä ja tuomio, jota ei pantu täytäntöön',
+      nimio: 'Lago Agrio 1993',
+      vuosi: '1993–2018',
+      paikka: 'Lago Agrion öljykenttä, Sucumbíos',
+      lat: 0.0746, lon: -76.7579,
+      kortti: 'Amazonin öljykenttä saastutti vedet ja maaperän cofánien alueella. '
+        + 'Asukkaat haastoivat yhtiön oikeuteen 1993, ja ecuadorilainen tuomioistuin määräsi '
+        + 'miljardikorvaukset. Yhtiö kieltäytyi maksamasta, ja riita jatkui '
+        + 'kansainvälisissä tuomioistuimissa neljännesvuosisadan.',
+      teksti: 'Lago Agrion öljykenttä on Nueva Lojan kaupungin lähellä Sucumbíosin '
+        + 'maakunnassa Ecuadorin Amazoniassa, läntisessä Oriente-altaassa. Öljy löytyi '
+        + 'seudulta 1960-luvulla, ja kenttä on yksi niistä kahdestatoista tuotantoalueesta, '
+        + 'jotka syntyivät kun Ecuador alkoi viedä öljyä.'
+        + '\n\nKenttä tunnetaan kansainvälisesti vakavista ympäristöongelmista: veden ja '
+        + 'maaperän saastumisesta, metsäkadosta ja kulttuurin murtumisesta. Alue on '
+        + 'cofánien maata lähellä Kolumbian rajaa.'
+        + '\n\nVuonna 1993 paikalliset asukkaat nostivat ryhmäkanteen Aguinda vastaan Texaco '
+        + 'pakottaakseen kentän entisen operaattorin siivoamaan alueen ja huolehtimaan '
+        + '30 000 saastumisesta kärsineestä asukkaasta. Chevron oli ostanut Texacon 2001. '
+        + 'Helmikuussa 2011 ecuadorilainen tuomioistuin määräsi Chevronin maksamaan kahdeksan '
+        + 'miljardia dollaria, ja Ecuadorin korkein oikeus vahvisti tuomion 2013 summalla 9,5 '
+        + 'miljardia.'
+        + '\n\nChevron oli aiemmin vaatinut käsittelyn siirtämistä New Yorkista '
+        + 'ecuadorilaisiin tuomioistuimiin ja hyväksynyt niiden toimivallan, mutta kieltäytyi '
+        + 'maksamasta ja kutsui päätöstä laittomaksi ja täytäntöönpanokelvottomaksi. '
+        + 'Yhdysvaltalainen tuomioistuin julisti tuomion täytäntöönpanokelvottomaksi 2014 ja '
+        + 'muutoksenhakutuomioistuin kaksi vuotta myöhemmin. Vuonna 2018 pysyvä '
+        + 'välitystuomioistuin Haagissa ratkaisi asian Chevronin hyväksi ja katsoi, että '
+        + 'vuoden 2013 tuomio oli saatu petoksella, lahjonnalla ja korruptiolla.',
+      lahde: 'en-Wikipedia "Lago Agrio oil field", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mihin Haagin välitystuomioistuin päätyi 2018?',
+        vaihtoehdot: [
+          'Chevronin oli maksettava 9,5 miljardia',
+          'Ecuadorin tuomio oli saatu petoksella ja lahjonnalla',
+          'Asia oli vanhentunut',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  PER: [
+    /*
+     * Callaon satama.
+     * Lähde: en-Wikipedia "Chincha Islands War"
+     */
+    {
+      id: 'chinchan-saaret',
+      otsikko: 'Chinchan saaret — Espanja otti guanon',
+      nimio: 'Chincha 1864',
+      vuosi: '1864–1866',
+      paikka: 'Callaon satama',
+      lat: -12.0522, lon: -77.1392,
+      kortti: 'Espanja lähetti "tieteellisen retkikunnan" Etelä-Amerikan vesille ja valtasi '
+        + 'Perun tärkeimmän tulonlähteen: guanolla lastatut Chinchan saaret. Sota levisi '
+        + 'neljään entiseen siirtomaahan ja toi mukanaan panssarilaivat.',
+      teksti: 'Chinchan saarten sota eli Espanjan ja Etelä-Amerikan sota oli sarja rannikko- '
+        + 'ja meritaisteluita Espanjan ja sen entisten siirtomaiden Perun, Chilen, Ecuadorin '
+        + 'ja Bolivian välillä. Se alkoi, kun Espanja valtasi guanorikkaat Chinchan saaret '
+        + '— yhtenä useista kuningatar Isabella II:n yrityksistä palauttaa Espanjan '
+        + 'vaikutusvalta entisiin siirtomaihin.'
+        + '\n\nEspanjan asema oli tuolloin vahva: Isabellan aikana laivastomenot kasvoivat, ja '
+        + 'maa nousi maailman neljänneksi suurimmaksi merivallaksi. 1850- ja 1860-luvuilla se '
+        + 'toimi siirtomaahankkeissa muun muassa Marokossa, Filippiineillä, Meksikossa ja '
+        + 'Dominikaanisessa tasavallassa.'
+        + '\n\nVuoden 1862 lopulla Espanja lähetti Etelä-Amerikan vesille "tieteellisen '
+        + 'retkikunnan", jonka salainen tarkoitus oli tukea Amerikassa asuvien Espanjan '
+        + 'kansalaisten rahallisia ja oikeudellisia vaatimuksia. Amiraali Luis '
+        + 'Hernández-Pinzón Álvarezin laivue koostui neljästä sota-aluksesta. Laivat saapuivat '
+        + 'Valparaísoon huhtikuussa 1863 ja sieltä Peruun, jonka itsenäisyyttä Espanja ei '
+        + 'ollut koskaan tunnustanut; silti Callaossa ne otettiin ystävällisesti vastaan.'
+        + '\n\nSota tunnetaan panssarilaivojen käytöstä. Yksi niistä, espanjalainen '
+        + 'panssarifregatti Numancia, oli ensimmäinen panssarilaiva, joka purjehti maailman '
+        + 'ympäri.',
+      lahde: 'en-Wikipedia "Chincha Islands War", johdanto-osa ja osio "Background". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä Chinchan saarilta haettiin?',
+        vaihtoehdot: [
+          'Guanoa',
+          'Hopeaa',
+          'Salpietaria',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Cusco, Museo Machu Picchu.
+     * Lähde: en-Wikipedia "Peru–Yale University dispute"
+     */
+    {
+      id: 'yale-kiista',
+      otsikko: 'Machu Picchun esineet — sata vuotta New Havenissa',
+      nimio: 'Yale-kiista',
+      vuosi: '1911–2011',
+      paikka: 'Cusco',
+      lat: -13.5169, lon: -71.9786,
+      kortti: 'Hiram Bingham vei Machu Picchulta tuhansia esineitä Connecticutiin. Osapuolet '
+        + 'olivat eri mieltä siitä, oliko kyse lainasta vai lahjasta. Peru yritti saada '
+        + 'kokoelmansa takaisin 1920-luvulla — ja sai sen vasta yhdeksänkymmentä vuotta '
+        + 'myöhemmin.',
+      teksti: 'Perun ja Yalen yliopiston kiista oli vuosisadan mittainen riita siitä, kenelle '
+        + 'kuuluvat Machu Picchulta otetut inkojen esineet ja ihmisjäänteet. Machu Picchu on '
+        + 'inkojen paikka korkealla Andeilla, ja se oli käytössä noin vuosina 1420–1532.'
+        + '\n\nVuoden 1911 jälkeisinä vuosina yalelainen tutkimusmatkailija Hiram Bingham III '
+        + 'vei paikalta tuhansia esineitä — keramiikkaa, kivityökaluja ja ihmisluita — '
+        + 'Connecticutin New Haveniin. Siirtojen ehdoista oltiin eri mieltä: Binghamin ja '
+        + 'joidenkin muiden mukaan Yale oli sopinut lainaavansa esineitä kahdeksantoista '
+        + 'kuukauden tutkimusta varten.'
+        + '\n\nPeru yritti saada kokoelman takaisin 1920-luvulla, mutta Yale vastusti. Jännite '
+        + 'kiristyi vuosina 2006–2010, jolloin käytiin oikeutta, perulaiset ja Yalen omat '
+        + 'alumnit vetosivat julkisuudessa, ja presidentti Alan García kääntyi presidentti '
+        + 'Barack Obaman puoleen.'
+        + '\n\nYhdeksäntenätoista marraskuuta 2010 Peru ja Yale sopivat, että jäänteet ja '
+        + 'esineet palautetaan. Alkuvuodesta 2011 Yale ja Cuscon yliopisto sopivat lisäksi '
+        + 'museon ja tutkimuskeskuksen perustamisesta Cuscoon; Museo Machu Picchu avattiin '
+        + 'yleisölle marraskuussa 2011. Kokoelmaa pidetään arvokkaimpien inkakokoelmien '
+        + 'joukossa.',
+      lahde: 'en-Wikipedia "Peru–Yale University dispute", johdanto-osa ja osio "Background". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Milloin Peru ja Yale sopivat esineiden palauttamisesta?',
+        vaihtoehdot: [
+          'Vuonna 1920',
+          'Vuonna 2010',
+          'Vuonna 2021',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  PAN: [
+    /*
+     * Guna Yalan itäosa, Panaman Karibian saaristo.
+     *
+     * MIKSI EI PANAMAN KANAVASKANDAALI 1892. Ranskalaisen
+     * kanavayhtiön romahdus olisi ollut erän ilmeinen valinta, mutta
+     * sen kaikki paikat — Culebran leikkaus (4,2 lautayksikköä),
+     * Gatún (6,7) ja Colón (8,5) — ovat Panamá-laatan kyljessä, ja
+     * Colónissa on jo tämän erän rautatiemerkki. Kaupungin kohdalle ei
+     * kirjoiteta uutta pääkartan nostoa (tests/nostot-kartalla.test.mjs,
+     * KAUPUNGIN_KOHDALLA_SADE 7), joten skandaaliksi valittiin
+     * tapahtuma, jolla on oma paikkansa kaukana kannaksesta: piste on
+     * Guna Yalan itäosassa, 59,0 yksikköä Panamásta ja 14,9 yksikköä
+     * maan oman Guna Yala -kohdemerkin päästä.
+     * Lähde: en-Wikipedia "San Blas Rebellion"
+     */
+    {
+      id: 'san-blasin-kapina',
+      otsikko: 'San Blasin kapina — mola kiellettiin, kansa nousi',
+      nimio: 'San Blas 1925',
+      vuosi: '1925',
+      paikka: 'Guna Yalan itäosa',
+      lat: 9.13, lon: -77.93,
+      kortti: 'Panaman hallitus kielsi gunanaisilta molapaidat, nenärenkaat ja käsi- ja '
+        + 'jalkasiteet ja pakotti heidät länsimaisiin vaatteisiin. Helmikuussa 1925 gunat '
+        + 'julistivat oman tasavallan ja hyökkäsivät hallituksen hallitsemille saarille. '
+        + 'Rauha tehtiin yhdysvaltalaisen sotalaivan kannella.',
+      teksti: 'San Blasin saaret eli Guna Yala elivät levotonta aikaa sen jälkeen, kun Panama '
+        + 'julistautui itsenäiseksi 1903. Gunat olivat aiemmin tulleet toimeen Kolumbian '
+        + 'kanssa omien lakiensa ja tapojensa mukaan, mutta uusi hallitus pyrki ottamaan '
+        + 'alueen haltuunsa ja istuttamaan sinne länsimaisen ja kansallisen kulttuurin.'
+        + '\n\nSulauttaminen alkoi 1904, ja 1906 hallitus vei seitsemäntoista gunalasta '
+        + 'länsimaiseen kouluun; 1909 alueelle perustettiin poliisiraja, mikä johti '
+        + 'yhteenottoihin. Vuonna 1919 presidentti Belisario Porras aloitti pakkosulauttamisen '
+        + 'ja kielsi osan naisten perinteisestä puvusta: molapaidat, nenärenkaat sekä käsi- ja '
+        + 'jalkasiteet piti vaihtaa länsimaisiin vaatteisiin.'
+        + '\n\nVuonna 1925 gunajohtajat suunnittelivat kapinan. Heitä neuvoi yhdysvaltalainen '
+        + 'tutkimusmatkailija Richard Marsh, joka myös kirjoitti itsenäisyysjulistuksen; '
+        + 'johtajina olivat Ustupun päällikkö Nele Kantule ja Ailigandin päällikkö Simral '
+        + 'Colman. Aligandissa pidettiin 12. helmikuuta alkaen kokous, joka kesti '
+        + 'kaksikymmentäkuusi päivää ja julisti Tulen tasavallan rajoineen ja lippuineen. '
+        + 'Kapina alkoi 22. helmikuuta, kesti kolmesta neljään päivää ja vaati alle '
+        + 'kolmekymmentä kuollutta.'
+        + '\n\nYhdysvallat lähetti sotalaivan San Blasinlahdelle, ja osapuolet kutsuttiin sen '
+        + 'kannelle neuvottelemaan. Rauhansopimus allekirjoitettiin 4. maaliskuuta. Gunille '
+        + 'luvattiin kunnioittaa heidän tapojaan ja perua kouluun ja pukeutumiseen liittyneet '
+        + 'lait; vastineeksi he laskivat aseensa ja peruivat itsenäisyysjulistuksensa.',
+      lahde: 'en-Wikipedia "San Blas Rebellion", johdanto-osa sekä osiot "Background", '
+        + '"Revolution" ja "Result". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Missä vuoden 1925 rauhasta neuvoteltiin?',
+        vaihtoehdot: [
+          'Panamán presidentinpalatsissa',
+          'Yhdysvaltain sotalaivan kannella',
+          'Kolumbian kongressissa',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Uuden Kaledonian siirtokunta, Guna Yala.
+     * Lähde: en-Wikipedia "Darien scheme"
+     */
+    {
+      id: 'darienin-hanke',
+      otsikko: 'Darienin hanke — siirtokunta, joka vei Skotlannin vararikkoon',
+      nimio: 'Darien 1698',
+      vuosi: '1698–1700',
+      paikka: 'Uuden Kaledonian siirtokunta, Guna Yala',
+      lat: 8.83, lon: -77.66,
+      kortti: 'Skotlanti sijoitti viidenneksen koko liikkeessä olevasta rahastaan '
+        + 'siirtokuntaan Panaman kannakselle. Yli 80 prosenttia lähtijöistä kuoli vuodessa. '
+        + 'Vararikko heikensi vastustusta unionille Englannin kanssa.',
+      teksti: 'Darienin hanke oli Skotlannin kuningaskunnan sijoittajien tukema yritys '
+        + 'perustaa 1690-luvun lopulla siirtokunta nykyisen Panaman alueelle Dariénin '
+        + 'aukkoon. Siirtokunnan nimeksi tuli Uusi Kaledonia, ja ajatuksena oli hallita '
+        + 'maareittiä, joka yhdistäisi Tyynenmeren ja Atlantin.'
+        + '\n\nTakaajat tiesivät, että Vasco Núñez de Balboa oli nähnyt Tyynenmeren '
+        + 'ensimmäisenä eurooppalaisena juuri Dariénin kannaksen ylitettyään. Retkikunta '
+        + 'julisti 1698 hallitsevansa myös "Rapusaarta" eli nykyistä Viequesia Puerto '
+        + 'Ricossa, mutta valta jäi lyhyeksi.'
+        + '\n\nHanke epäonnistui. Yli kahdeksankymmentä prosenttia osallistujista kuoli '
+        + 'vuoden kuluessa, ja siirtokunta hylättiin kahdesti. Syitä on esitetty monia: huono '
+        + 'suunnittelu ja muonitus, hajanainen johto, kaupankäynnin puute sekä paikallisten '
+        + 'kansojen että naapurisiirtokuntien kanssa, trooppiset taudit, englantilaisten '
+        + 'kauppaintressien vastustus ja se, ettei osattu varautua Espanjan sotilaalliseen '
+        + 'vastaukseen. Lopullisesti paikka jätettiin maaliskuussa 1700 espanjalaisten '
+        + 'piirityksen ja satamasaarron jälkeen.'
+        + '\n\nCompany of Scotlandin takana oli noin viidennes kaikesta Skotlannissa '
+        + 'liikkuneesta rahasta, joten epäonnistuminen ajoi koko Skotlannin alamaan '
+        + 'talousahdinkoon. Se oli tärkeä tekijä siinä, että vastustus unionia kohtaan '
+        + 'heikkeni ennen vuoden 1707 sopimusta. Siirtokunnan maat kuuluvat nykyään Guna '
+        + 'Yalaan.',
+      lahde: 'en-Wikipedia "Darien scheme", johdanto-osa ja osio "Origins". Tarkistettu '
+        + '6.9.2026.',
+      visa: {
+        kysymys: 'Mitä hankkeen epäonnistuminen merkitsi Skotlannille?',
+        vaihtoehdot: [
+          'Se rahoitti Skotlannin oman laivaston',
+          'Se ajoi Skotlannin alamaan vararikkoon',
+          'Se toi Skotlannille siirtomaan Karibialla',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
 };
