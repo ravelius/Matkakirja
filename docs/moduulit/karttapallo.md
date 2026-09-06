@@ -328,7 +328,9 @@ koskee kameraa.
   1,7–2,6°) olisi pallolla Z7:llä ~4× venytetty dpr 2:lla. Ratkaisu:
   Z8 (182 px/aste; ajo aloitettu v1544, 65 536 laattaa) ja lähin
   korkeus rajataan 2× venytykseen → 2,1° ≈ 70 yksikköä. Z9 (262 144
-  laattaa) EI tehdä ennen mittausta laitteella.
+  laattaa) EI tehdä ennen mittausta laitteella. **VANHENTUNUT v1649:ssä:**
+  terävyys tulee nyt vektoriviivoista, ja lähin näkyvä leveys on vakio
+  `PALLOLAUDAN_LAHIN_LEVEYS` 60 yksikköä (~1,8°) — ks. luku 10.4.
 - **DOM-katto.** htmlElements ≤ 60 yhteensä (nimet 40, kohteet 12,
   elävät nostot 40 → priorisoidaan: kohteet > nappula > laatta >
   nimet > nostot, ja nimikatto laskee kun nostoja on). CSS2DRenderer
@@ -1260,8 +1262,9 @@ ajoa työpöytäselaimella ja pyysi neljä asiaa, sanatarkasti:
    Tanskaan ≈ 1 500 km ruudun leveydellä) osuu siis lukuun 260.
    Mittakaava on kilometriä pikseliä kohti (≈ 1,1 km/px), joten
    kapeampi ikkuna näyttää kapeamman kaistan; luku on yksi rivi, jos
-   omistaja haluaa toisin. Lähikuva ei mene laattojen tarkkuusrajan
-   (`PALLOLAUDAN_SIIRTOLEVEYS` = 120) alle.
+   omistaja haluaa toisin. Aikajanan lähikuva pysyy siirtonäkymän
+   katon (`PALLOLAUDAN_SIIRTOLEVEYS` = 120) yläpuolella; pelaajan oma
+   nipistys pääsee v1649:stä alkaen syvemmälle (luku 10.4).
 2. **KAMERA LÄHTEE ENNEN SYTTYMISTÄ JA SAAPUU VASTA SEN JÄLKEEN.**
    Saapumishetki lasketaan samalla puhtaalla funktiolla kuin karusellin
    ennakko (`aikaSeuraavaan`) — kello ei kulje vakionopeudella, joten
@@ -2248,7 +2251,9 @@ Node-fetchillä; skriptit `scratchpad/asettelu/tera-mittaa.mjs`,
    jälkeen ovat tavu tavulta samat (`tera-poyta-lahin-{ennen,jalkeen}-rajaus.png`).
    **Fablelle: seuraava askel on taso 9** (venytys 2,4×) tai 10 (1,2×)
    nostosarjaan — tai poltettujen nimien korvaaminen elävillä
-   lähimmässä zoomissa.
+   lähimmässä zoomissa. (v1649: raja ei enää tule laattatarkkuudesta
+   vaan on vakio 60 yksikköä, ja terävyys tulee vektoriviivoista;
+   poltetut nimet kasvavat yhä maaston mukana — ks. luku 10.4.)
 4. **Hyppy jätti kynnykset vanhoiksi (korjattu).** `lepoon()` palasi heti,
    jos `lepo` oli jo tosi, ja yksi `pointOfView(pov, 0)` -hyppy ei kestä
    `LAATU_LIIKEVIIVE_MS`:ää, joten kynnykset jäivät edellisen näkymän
@@ -2918,3 +2923,177 @@ MITKÄ RAJAT EIVÄT TÄYTY (vartio puhelimella 18 OK / 2 FAIL, työpöydällä
    kerralla. Luvun 5 rajat on mitattu puhelimella; kumpi korjataan —
    solukoko, latauksen jaksotus vai rajan näkymäkohtaisuus — on V3:n ja
    suunnitelman asia, ei kytkennän.
+
+### 10.4 v1649:n palaute — heiluri ja syvempi zoom (Opus 6.9.2026)
+
+Omistajan palaute v1649:stä (iPad), sanatarkasti:
+
+> "Kartta muuten pyörii nyt todella hyvin! Ainoastaan jos todella
+> nopeasti panoroi edestakaisin päästämättä sormea irti niin kartta
+> putoaa joiltain osin hetkeksi matalaan laatuun vaikka ko. osa on jo
+> ladattu ja ruudunpäivitys on hyvä."
+
+> "Voisiko syvemmin zoomin sallia jo nyt vaikka korkeusdataa ei ole
+> mutta rajat varmaan piirtyvät terävänä kun on vektori"
+
+#### 1. Heiluri: juurisyy mitattuna
+
+Uusi mittausvaihe `tools/savukkeet/mittaa-pallon-liike.mjs
+--vaihe=heiluri` laskee sormen kerran ruudun keskelle eikä nosta sitä:
+heiluri on sini ±20 % kotelon leveydestä, 3 Hz (6 edestakaista kahdessa
+sekunnissa). Lämmitys on sama heiluri kertaalleen läpi, sitten
+lataustauko sormi pohjassa, kunnes näkyvä alue on kokonaan scenessä.
+Mitat joka kehykseltä: näkyvän alueen peitto (`nakyviaScenessa /
+nakyvia`; alle 100 % = pohjan Z5 näkyy jossain kohtaa ruutua) ja
+`jumissa` = tietueita tilassa "ladataan", joita ei ole aloitettu eikä
+ole jonossa — laattoja, jotka kerros on unohtanut.
+
+KAKSI MITTAUSYMPÄRISTÖN RAJOITUSTA, jotka on kirjattava rehellisesti.
+(1) Heiluri on 3 Hz:n signaali, ja kontin ohjelmistorasteroija piirtää
+dpr 3:lla 1–2 kehystä SEKUNNISSA; suoraan kellosta ajettuna heiluri
+laskostuisi satunnaiseen vaiheeseen. Vaihe viedään siksi eteenpäin
+`min(HZ · dt, HEILURI_JAKSO_OSUUS)`:lla — nopealla laitteella tasan
+3 Hz, hitaalla enintään 0,3 jaksoa kehystä kohti, mikä on sama liike
+kerroksen päivitystä kohti kuin laitteella (3 Hz / 10 Hz = 0,3). Kesto
+mitataan jaksoina, ei sekunteina. Kellosta ajettavan version saa
+lipulla `--heilurijaksoosuus=99`. (2) Peittomitta vaatii, että laatan
+haku, dekoodaus ja tekstuurin vienti mahtuvat päivitysten väliin;
+sekunnin mittaisella kehyksellä koko putken pitäisi mahtua yhteen
+kehykseen, joten `RAJAT.heiluriKehysMs` (400 ms) antaa peittoriville
+OHI:n, kun kehysaika ylittää sen. `heilurin jumit` ei riipu kehysajasta
+eikä sitä ohiteta koskaan.
+
+MITATTU puhelinnäkymässä (390 × 844, dpr 3, CPU 4×) ENNEN korjausta,
+seitsemän ajoa: peitto **51,4 / 68,6 / 78,6 / 82,9 / 85,7 / 88,6 /
+92,9 %** — jokainen alle sadan — ja `jumissa` enimmillään 2. Suorin
+näyttö on lataustauon jälkeinen tila: näkyviä 28, scenessä 28, mutta
+tietueita 35 ja valmiita 31, eli **neljä näkyvän alueen laattaa oli
+muistissa tilassa "ladataan" ilman että lataus oli koskaan alkanut**.
+Puretuja laattoja 0 — LRU ei siis ollut syy, eikä sukupolvi-logiikka
+(kenttä `sukupolvi` kirjoitetaan mutta sitä ei lueta missään
+päätöksessä). Kontin kehysaika vaihtelee 0,8–2,0 s:n välillä ajosta
+toiseen, joten yksittäisen ajon peittoprosentti ei ole toistettava —
+suunta on.
+
+Juurisyy on latausjonon kokoamisehto. Jono koottiin joka päivityksellä
+PELKISTÄ näkyvistä laatoista, ja näkyvä alue laskettiin vain nykyisestä
+pov:sta. Heilurin ääripäässä reunan laatta on näkyvissä yhden
+päivityksen ajan (`LAATTAKERROS_PAIVITYSVALI_LIIKE_MS` 100 ms), ehtii
+jonoon muttei latauspaikkaan (`LAATTAKERROS_RINNAKKAIN` 6) — ja
+seuraavalla päivityksellä se putoaa jonosta kokonaan. Mittari näytti
+sen suoraan: levossa 28 näkyvästä laatasta 28 scenessä, heilurin
+alkaessa näkyviä 35 ja scenessä 31, ja ne neljä olivat olleet
+tietueina muistissa koko ajan tilassa "ladataan" ilman että lataus oli
+koskaan alkanut.
+
+Korjaus on kolme osaa (js/pallolaatat.js):
+
+1. **Ennakkoalue liikesuuntaan.** Alue laajennetaan sillä matkalla,
+   jonka kamera kulki edellisestä päivityksestä
+   (`LAATTAKERROS_LIIKEVARA_KERROIN` 2), ja lisäksi sillä laatikolla,
+   jonka kamera on PYYHKINYT viimeisen `LAATTAKERROS_PITO_MS`:n (2 s)
+   aikana — käännöksen kohdalla hetkellinen matka on nolla, vaikka
+   ruutu oli juuri 20 % leveydestä sivummalla. Ennakon laatat ladataan
+   ja pidetään, mutta ne EIVÄT osallistu tason valintaan: taso
+   valitaan yhä pelkistä näkyvistä laatoista
+   (`LAATTAKERROS_LAATTAKATTO_NAKYVA` 48), joten terävyys ei putoa
+   siitä, että jono kasvaa. Ennakon oma katto on
+   `LAATTAKERROS_LAATTAKATTO_ENNAKKO` 96.
+2. **Pito.** Laatta, joka on ollut näkyvissä tai ennakossa viimeisen
+   2 s:n aikana, pysyy jonossa (näkyvät ladataan silti ensin), sen
+   hakua ei katkaista eikä LRU:n MÄÄRÄkatto pura sitä. Tavukatto
+   (`LAATTAKERROS_LAATTAKATTO_TAVUT` 96 Mt) purkaa yhä myös pidettyjä —
+   muisti on kova raja. Aloittamaton tietue, jota ei enää katsota eikä
+   pidetä, poistetaan kokonaan: se on pelkkää kirjanpitoa.
+3. **Valmis laatta sceneen, jos se on yhä alueella.** Ennen tekstuurin
+   vienti lisäsi laatan sceneen vain, jos laatta sattui olemaan
+   näkyvissä juuri sillä kehyksellä; nyt riittää, että se on näkyvä tai
+   pidetty.
+
+JÄLKEEN samalla mittauksella: `jumissa` **0** joka ajossa (myös
+lataustauolla), ja peitto **100 %** niissä ajoissa, joissa kontin
+kehysaika pysyi alle sekunnin; hitaimmissa ajoissa jäljelle jää 1–3
+laattaa, jotka ovat oikeasti latauksessa (`pyyntoja` kasvaa) — se on
+kehysajan eikä logiikan mitta. Lataustauon jälkeinen tila on nyt
+näkyviä 35, scenessä 35, valmiita 35: heilurin koko alue on ladattu ja
+pidetty. Muste 2 px = levon muste.
+
+`--vartio` sai kolme uutta riviä: *heilurin peitto* (raja ≥ 100 %,
+OHI hitaassa ympäristössä), *heilurin jumit* (raja 0) ja *heilurin
+muste* (raja ≤ 2 px). Heiluri mitataan ilman CPU-hidastusta — muut
+vaiheet kuten ennen.
+
+#### 2. Lähin näkyvä leveys on nyt VAKIO 60 lautayksikköä
+
+Terävyys ei enää tule laattatasosta vaan vektoriviivoista (v1649,
+js/pallovektorit.js): rantaviiva ja rajat piirretään ruudun pikseliksi
+millä tahansa korkeudella. Laatta antaa vain maaston värin, joka saa
+olla pehmeä. Siksi vanha raja — laattatarkkuus ja
+`PALLON_SALLITTU_VENYTYS` 2 — on väärä mitta, ja se antoi lisäksi eri
+laitteille eri syvyyden (puhelin 103–107 yksikköä, iso ruutu katto 120).
+
+Uusi raja on yksi luku kaikille: `PALLOLAUDAN_LAHIN_LEVEYS` =
+`PALLOLAUDAN_SIIRTOLEVEYS` / 2 = **60 lautayksikköä ≈ 1,8°**. Yksi
+nipistys entisestä pohjasta vie siis vielä yhden portaan syvemmälle.
+`lahinLeveys` palauttaa vakion, `lahinKorkeus` muuttaa sen korkeudeksi
+ruudun kuvasuhteella, ja `korkeusMin` (OrbitControlsin `minDistance`,
+`kameranKohde`) lukee sen kuten ennen.
+
+Venytys uudessa rajassa, mitattu pyramidin syvimmästä tasosta (z8 =
+480 px/aste, `PYRAMIDIN_SYVIN_PX_ASTE`; funktio `laattojenVenytys`):
+
+| Näkymä | laitepikseliä | px/aste 1,8°:lla | venytys |
+| --- | --- | --- | --- |
+| puhelin 390 css × dpr 3 | 1 170 | 650 | **1,4×** |
+| iPad 834 × dpr 2 | 1 668 | 927 | **1,9×** |
+| työpöytä 1 440 × dpr 2 | 2 880 | 1 600 | **3,3×** |
+
+Ateenan lähikuvassa (mitattu selaimessa) laattakerros valitsee tason
+**8** — pyramidin syvimmän, eikä se yritä hakea olematonta z9:ää, koska
+`lepokerroksenTaso` palauttaa syvimmän saatavilla olevan — ja
+vektoritaso pysyy **lod 4**:ssä (`vektoritaso` palauttaa syvimmän, kun
+mikään ei riitä). Puhelimella näkyviä laattoja 24 (kaikki scenessä,
+40 Mt), työpöydällä 12 (24 Mt).
+
+MIKÄ EI MUUTU: `PALLOLAUDAN_SIIRTOLEVEYS` (120) on yhä siirtonäkymän
+katto (`siirtoZoomiKerroin`), joten siirtokoreografia ja ennakkozoomi
+pysyvät täsmälleen ennallaan; `PALLOLAUDAN_SAAPUMISLEVEYS` 240 sama;
+tasokartan oma lähin porras (js/kartta.js `ZOOMI_LAHIN` 88,
+`ZOOMI_LAHIN_KAPEA` 58, `SIIRTONAKYMAN_LAHIN_KERROIN` 3,5) on eri
+vakio eikä muutu. Merkit (CSS2D-nimet, pisteet levyinä), napakannet ja
+linssikalvot ovat ruutuankkuroituja eivätkä muutu syvyyden mukana;
+poltetut nostonimet sen sijaan kasvavat maaston mukana, eli
+työpöydällä 3,3× — se on syvemmän zoomin näkyvä hinta isolla ruudulla.
+
+Mittarin `--sarjapaikkaus` korvaa SERVATUN `laatat.json`:in versiot
+pyramidin versioilla. Sitä tarvitaan, kun ämpärin kaksi sarjaa ovat
+hetkellisesti eri versiota (ks. kohta 3) eikä kerros muuten piirrä
+lainkaan. Lippu on MITTAUSTELINE, EI TODISTE JULKAISTUSTA TILASTA:
+ilman sitä mittari ajaa sen, mitä ämpärissä oikeasti on, ja vartio
+kertoo, jos kerros ei piirrä (kaikki luvun 5 rivit OHI syineen).
+
+#### 3. Pohja vapautetaan, jos laattakerros ei piirrä
+
+Omistajan kuvakaappaus v1650:stä (iPad, Ateenan lähikuva) näytti
+selvästi sumean pohjan, laattojen välisiä sävyeroja ruutuina eikä
+yhtään poltettua nimeä — laattakerroksen sammumisen tuntomerkit.
+Kerros sammuu kokonaan, jos pyramidin ja pallon oman sarjan versiot
+eroavat (`lepokerroksenKerrokset`) tai jos pyramidin luetteloa ei saada.
+Sarjat poltetaan eri ajoissa, joten tämä on ihan tavallinen välitila
+(mitattu 6.9.2026: pyramidi 2026-09-07a, pallon sarja 2026-09-03a).
+Pohja jäi silloin naulattuna tasoon `POHJAN_TASO_MAX` (5), eli koko
+kartta oli z5:tä venytettynä — ja syvempi zoom olisi tehnyt siitä vielä
+kaksin verroin sumeamman.
+
+Nyt `kytkeLaatunosto` toteaa tilan piirtokoukussa
+(`POHJAN_VAPAUTUS_SYYT`), purkaa kerroksen ja palauttaa pohjalle sen
+OMAN syvimmän tason
+(`laatat.json` `tasot.max` = 8) ja v1645:n laatutilat. Kirjaston asetin
+on `triggerUpdate: false` (`globeTileEngineMaxLevel` → `tileEngine.maxLevel`),
+joten moottoria ei rakenneta uudestaan eikä `laatuPov`-kääre irtoa.
+Mitattu: moottorin taso 8, kuva terävä. Vapautus on kertakäyttöinen;
+ohimenevät syyt ("pyramidin luettelo haussa", "kirjaston luokat
+puuttuvat") eivät kelpaa siihen. Kerroksen KAHVA jää paikalleen
+(`lepokerrokset`), vaikka kerros puretaan: savukkeet lukevat siitä yhä
+kerroksen omat pyramidipyynnöt (savuke-pallolauta vartio 2 vähentää ne
+tasokartan pyynnöistä) ja mittarien tilan `purettu`.

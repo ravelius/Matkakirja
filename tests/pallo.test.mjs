@@ -16,8 +16,9 @@ import {
   REITIN_ESILATAUSTASOT, REITIN_LASKEUTUMISTASO,
 } from '../js/pallo.js';
 import {
-  PALLON_SALLITTU_VENYTYS, PALLOLAUDAN_SAAPUMISLEVEYS, PALLOLAUDAN_SIIRTOLEVEYS, PALLO_KORKEUS_MIN,
-  korkeusLeveydesta, laatanTarkkuus, lahinKorkeus, lahinLeveys,
+  PALLON_SALLITTU_VENYTYS, PALLOLAUDAN_SAAPUMISLEVEYS, PALLOLAUDAN_SIIRTOLEVEYS,
+  PALLOLAUDAN_LAHIN_LEVEYS, PALLO_KORKEUS_MIN, PYRAMIDIN_SYVIN_PX_ASTE,
+  korkeusLeveydesta, laatanTarkkuus, laattojenVenytys, lahinKorkeus, lahinLeveys,
 } from '../js/pallolauta/kamera.js';
 // Työpöytäselaimen rulla: kaksi sormea panoroi, cmd zoomaa (omistaja 5.9.2026).
 import {
@@ -476,25 +477,41 @@ test('lentoreitin esilataus lähtee erikseen eikä kuluta kerran-per-istunto-lup
     'kohdekaupungin Z8-laatta puuttuu');
 });
 
-test('lähin korkeus tulee laattatarkkuudesta ja laitteen dpr:stä (Z8 = 182 px/aste)', () => {
+test('lähin näkyvä leveys on vakio 60 yksikköä, ei laattatarkkuus (v1649)', () => {
   assert.ok(Math.abs(laatanTarkkuus(8) - 182.04) < 0.1, `Z8 ${laatanTarkkuus(8)}`);
   assert.equal(laatanTarkkuus(7) * 2, laatanTarkkuus(8), 'taso tuplaa tarkkuuden');
-  assert.equal(PALLON_SALLITTU_VENYTYS, 2, 'laatan pikseli enintään kahtena (karttapallo.md luku 6)');
-  // iPhone 390 css × dpr 2, Z8: 780 / (2 · 182) = 2,14° ≈ 71 lautayksikköä.
-  const leveys = lahinLeveys({ taso: 8, leveysPx: 390, dpr: 2 });
-  assert.ok(Math.abs(leveys - 71.4) < 2, `Z8 lähin leveys ${leveys}`);
-  // Sama korkeutena on suunnitelman 0,04 (PALLO_KORKEUS_MIN:n oletusarvo).
-  const korkeus = lahinKorkeus({ taso: 8, leveysPx: 390, dpr: 2 });
-  assert.ok(Math.abs(korkeus - PALLO_KORKEUS_MIN) < 0.004, `korkeus ${korkeus}`);
-  // Z7 (nykyinen laatat.json) on tasan kaksi kertaa kauempana (ilman kattoa).
-  assert.ok(Math.abs(lahinLeveys({ taso: 7, leveysPx: 390, dpr: 2, katto: Infinity }) - 2 * leveys) < 0.01);
-  // Tarkempi ruutu vaatii kauemmas: dpr 3 on 1,5-kertainen.
-  assert.ok(Math.abs(lahinLeveys({ taso: 8, leveysPx: 390, dpr: 3 }) - 1.5 * leveys) < 0.01);
-  // KATTO: raja ei koskaan estä pelin omaa lähintä näkymää (iPadilla
-  // Z7 vaatisi 305 yksikköä, jolloin ennakkozoomi ei zoomaisi mihinkään).
-  assert.equal(lahinLeveys({ taso: 7, leveysPx: 834, dpr: 2 }), PALLOLAUDAN_SIIRTOLEVEYS);
+  assert.equal(PALLON_SALLITTU_VENYTYS, 2, 'rasterin terävyysraja on yhä 2 (vertailukohta)');
+  /*
+   * OMISTAJAN PALAUTE v1649: *"Voisiko syvemmin zoomin sallia jo nyt
+   * vaikka korkeusdataa ei ole mutta rajat varmaan piirtyvät terävänä
+   * kun on vektori"*. Lähin leveys on nyt VAKIO — puolet siirtonäkymän
+   * katosta — eikä riipu laitteesta eikä laattatasosta.
+   */
+  assert.equal(PALLOLAUDAN_LAHIN_LEVEYS, 60);
+  assert.equal(PALLOLAUDAN_LAHIN_LEVEYS, PALLOLAUDAN_SIIRTOLEVEYS / 2, 'puolet vanhasta katosta');
+  for (const valinnat of [{}, { taso: 7, leveysPx: 390, dpr: 2 }, { taso: 8, leveysPx: 1440, dpr: 3 }]) {
+    assert.equal(lahinLeveys(valinnat), PALLOLAUDAN_LAHIN_LEVEYS, 'laite ei muuta rajaa');
+  }
+  // Sama korkeutena on syvempi kuin vanha kiinteä 0,04 (neliöruudulla).
+  const korkeus = lahinKorkeus({ kuvasuhde: 1 });
+  assert.ok(korkeus < PALLO_KORKEUS_MIN, `uusi raja ${korkeus} ei ole vanhaa syvempi`);
+  assert.ok(Math.abs(korkeus - korkeusLeveydesta(60, { min: 0, kuvasuhde: 1 })) < 1e-9);
+  // Kuvasuhde vaikuttaa yhä: sama leveys ruudun leveydellä on eri korkeus.
+  assert.ok(lahinKorkeus({ kuvasuhde: 1.6 }) < lahinKorkeus({ kuvasuhde: 0.46 }));
+  /*
+   * VENYTYS mitataan pyramidin syvimmästä tasosta (z8 = 480 px/aste),
+   * koska laattakerros piirtää sen — ei pallon Mercator-sarjasta.
+   * Puhelin 390 × dpr 3 → 1,4×, iPad 834 × dpr 2 → 1,9×, työpöytä
+   * 1440 × dpr 2 → 3,3×. Maasto pehmenee, viivat ovat vektoreita.
+   */
+  assert.equal(PYRAMIDIN_SYVIN_PX_ASTE, 480);
+  assert.ok(Math.abs(laattojenVenytys({ leveysPx: 390, dpr: 3 }) - 1.35) < 0.05);
+  assert.ok(Math.abs(laattojenVenytys({ leveysPx: 834, dpr: 2 }) - 1.93) < 0.05);
+  assert.ok(Math.abs(laattojenVenytys({ leveysPx: 1440, dpr: 2 }) - 3.33) < 0.05);
+  // Siirtonäkymä EI syvene: koreografian katto on yhä 120 ja saapumista lähempänä.
+  assert.equal(PALLOLAUDAN_SIIRTOLEVEYS, 120);
   assert.ok(PALLOLAUDAN_SIIRTOLEVEYS < PALLOLAUDAN_SAAPUMISLEVEYS, 'siirtonäkymä on saapumista lähempänä');
-  assert.ok(lahinLeveys({ taso: 8, leveysPx: 390, dpr: 3 }) < PALLOLAUDAN_SIIRTOLEVEYS, 'puhelimella katto ei purista');
+  assert.ok(PALLOLAUDAN_LAHIN_LEVEYS < PALLOLAUDAN_SIIRTOLEVEYS, 'sormi pääsee koreografiaa syvemmälle');
   // Kamera ei mene rajan alle: korkeusLeveydesta saa minimin parametrina.
   assert.equal(korkeusLeveydesta(1, { min: 0.08 }), 0.08);
   // Lauta johtaa tason laattaluettelosta ja putoaa Z7:ään ilman luetteloa.

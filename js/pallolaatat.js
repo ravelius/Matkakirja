@@ -490,6 +490,52 @@ export const LAATTAKERROS_NAYTTEITA = 9;
 export const LAATTAKERROS_VARA_AST = 0.5;
 /** …ja vähintään tämä osuus laatikon suuremmasta sivusta (liikkeen vara). */
 export const LAATTAKERROS_VARA_OSUUS = 0.03;
+/*
+ * NOPEA EDESTAKAINEN PANOROINTI (omistajan palaute v1649, iPad,
+ * sanatarkasti): *"Ainoastaan jos todella nopeasti panoroi edestakaisin
+ * päästämättä sormea irti niin kartta putoaa joiltain osin hetkeksi
+ * matalaan laatuun vaikka ko. osa on jo ladattu ja ruudunpäivitys on
+ * hyvä."*
+ *
+ * JUURISYY (mitattu tools/savukkeet/mittaa-pallon-liike.mjs
+ * --vaihe=heiluri, puhelin 390 × 844 dpr 3, 4×, 6.9.2026): näkyvä alue
+ * lasketaan VAIN nykyisestä pov:sta, ja latausjono kootaan joka
+ * päivityksellä pelkistä näkyvistä laatoista. Heilurin ääripäässä
+ * reunan laatta on näkyvissä yhden päivityksen ajan (100 ms), ehtii
+ * jonoon muttei latauspaikkaan (RINNAKKAIN 6) — ja seuraavalla
+ * päivityksellä se putoaa jonosta kokonaan. Mitattu: levossa 28
+ * näkyvästä laatasta 28 scenessä, heilurin alkaessa näkyviä 35 ja
+ * scenessä 31; ne neljä olivat olleet tietueina muistissa koko ajan
+ * tilassa "ladataan" ilman että lataus oli koskaan alkanut.
+ *
+ * KOLME KORJAUSTA (vakiot alla):
+ *  1. ENNAKKOALUE liikesuuntaan: alue laajennetaan sillä matkalla, jonka
+ *     kamera kulki edellisestä päivityksestä, kerrottuna
+ *     LIIKEVARA_KERROIN:lla ja MOLEMPIIN suuntiin (heiluri kääntyy).
+ *     Ennakon laatat ladataan ja pidetään, mutta ne EIVÄT osallistu
+ *     tason valintaan (LAATTAKATTO_NAKYVA) — tason on pysyttävä
+ *     terävänä, vaikka jono kasvaa.
+ *  2. PITO: laatta, joka on ollut näkyvissä tai ennakossa viimeisen
+ *     PITO_MS:n aikana, ei putoa jonosta, sen hakua ei katkaista eikä
+ *     LRU:n MÄÄRÄkatto pura sitä. Tavukatto (LAATTAKATTO_TAVUT) purkaa
+ *     yhä myös pidettyjä — muisti on kova raja.
+ *  3. Valmis laatta lisätään sceneen aina, kun se on yhä alueella
+ *     (näkyvä tai pidetty), ei vain jos se sattui olemaan näkyvissä
+ *     sillä kehyksellä, jolla tekstuuri vietiin näytönohjaimelle.
+ */
+/** Laatta pidetään (jono, LRU:n määräkatto) näin kauan viimeisestä näöstä. */
+export const LAATTAKERROS_PITO_MS = 2000;
+/** Ennakkoalue = näkyvä alue + tämä kertaa edellisen päivityksen matka. */
+export const LAATTAKERROS_LIIKEVARA_KERROIN = 2;
+/**
+ * …tai laajemmalti: se laatikko, jonka kamera on PYYHKINYT viimeisen
+ * PITO_MS:n aikana. Yhden päivitysvälin matka ei riitä, kun heiluri
+ * kääntyy: käännöksen kohdalla matka on nolla, vaikka ruutu on juuri
+ * ollut 20 % leveydestä sivummalla. Pyyhitty laatikko muistaa sen.
+ */
+export const LAATTAKERROS_LIIKEVARA_PYYHKAISY = true;
+/** Ennakkoalueen laattoja enintään (fling ei saa tilata satoja). */
+export const LAATTAKERROS_LAATTAKATTO_ENNAKKO = 96;
 /** Näkyviä laattoja enintään: tätä isompi määrä pudottaa tason karkeammaksi. */
 export const LAATTAKERROS_LAATTAKATTO_NAKYVA = 48;
 /** Valmiita mutta näkymättömiä laattoja muistissa enintään (LRU). */
@@ -699,21 +745,26 @@ export function laattakerroksenPeitto(laatta, valmiit, tasot, {
 }
 
 /**
- * LRU: mitkä tietueet puretaan? Näkyviä ei pureta koskaan. Muista
- * pidetään enintään `katto` tuoreinta, ja jos tekstuurimuisti ylittää
- * `tavukatto`n, puretaan vanhimmasta alkaen kunnes alitetaan.
+ * LRU: mitkä tietueet puretaan? Näkyviä ei pureta koskaan.
  *
- * @param {Array} tietueet  [{ avain, nakyva, kaytetty, tavut }]
+ * PIDETTYJÄ (`pito`, ks. LAATTAKERROS_PITO_MS) ei pura MÄÄRÄkatto: juuri
+ * nähty laatta on se, johon heiluri palaa sadassa millisekunnissa, ja
+ * sen purku maksaisi uuden haun, dekoodauksen ja tekstuurin viennin.
+ * TAVUKATTO purkaa yhä myös pidetyt — muisti on kova raja (omistajan
+ * palaute v1649 ja suunnitelman luku 4.4).
+ *
+ * @param {Array} tietueet  [{ avain, nakyva, pito, kaytetty, tavut }]
  * @returns {string[]} purettavien avaimet purkujärjestyksessä
  */
 export function laattakerroksenLRU(tietueet, katto = LAATTAKERROS_LAATTAKATTO_MUISTI,
   tavukatto = LAATTAKERROS_LAATTAKATTO_TAVUT) {
   const kaikki = [...(tietueet ?? [])].filter(Boolean);
   const ehdokkaat = kaikki.filter((t) => !t.nakyva).sort((a, b) => (a.kaytetty ?? 0) - (b.kaytetty ?? 0));
+  const vapaat = ehdokkaat.filter((t) => !t.pito);
   const ulos = [];
   const purettu = new Set();
-  const yli = Math.max(0, ehdokkaat.length - Math.max(0, katto));
-  for (let i = 0; i < yli; i += 1) { ulos.push(ehdokkaat[i].avain); purettu.add(ehdokkaat[i].avain); }
+  const yli = Math.max(0, vapaat.length - Math.max(0, katto));
+  for (let i = 0; i < yli; i += 1) { ulos.push(vapaat[i].avain); purettu.add(vapaat[i].avain); }
   let tavuja = kaikki.reduce((s, t) => s + (purettu.has(t.avain) ? 0 : (t.tavut ?? 0)), 0);
   for (const t of ehdokkaat) {
     if (tavuja <= tavukatto) break;
@@ -746,6 +797,25 @@ export function luoLaattakerros({
   const mittarit = {
     tila: 'ei', taso: null, laattoja: 0, valmiita: 0, hapyvia: 0, pyyntoja: 0, pyydettyja: 0,
     syy: '', kaytetytTavut: 0, jonossa: 0, scenessa: 0, purettuja: 0, paivityksia: 0,
+    /*
+     * NÄKYVÄN ALUEEN PEITTO (heilurimittaus, savuke --vaihe=heiluri).
+     * `nakyvia` on näkyvän alueen laattojen määrä, `nakyviaScenessa`
+     * niistä ne, jotka ovat scenessä (peittävät pohjan Z5:n), ja
+     * `nakyviaTaysin` ne, joiden häive on jo perillä. Osuus
+     * nakyviaScenessa / nakyvia on se luku, jonka on pysyttävä 100 %:ssa,
+     * kun jo ladattua aluetta panoroidaan edestakaisin.
+     */
+    nakyvia: 0, nakyviaScenessa: 0, nakyviaTaysin: 0, ladattavia: 0, ennakkoja: 0, pidettyja: 0,
+    /*
+     * JUMISSA on tämän erän tarkin mitta: tietue, joka on tilassa
+     * "ladataan", jota ei ole aloitettu eikä ole jonossa — laatta,
+     * jonka kerros on unohtanut. Juuri niitä heilurin ääripäähän jäi
+     * ennen v1649:n korjausta (mitattu 4 kpl 35:stä), ja pohjan Z5
+     * näkyi niiden kohdalla joka käännöksellä. Mitta ei riipu verkon
+     * viiveestä eikä kehysajasta, joten se kelpaa vartioksi myös
+     * hitaassa mittausympäristössä.
+     */
+    jumissa: 0,
     /** Haettiinko pyramidi.json tästä (savukkeet laskevat sen kerroksen pyynnöksi). */
     luettelo: false,
     /** Lepokerroksen kenttä; kerros ei kokoa yhtä kangasta (savukkeiden tuloste). */
@@ -764,6 +834,12 @@ export function luoLaattakerros({
   let kerrokset = null;
   let sukupolvi = 0;
   let viimePaivitys = -Infinity;
+  /**
+   * Kameran paikat viimeisen LAATTAKERROS_PITO_MS:n ajalta: liikevara on
+   * sekä seuraavan päivitysvälin ennuste (viimeisin ero × kerroin) että
+   * se laatikko, jonka kamera on jo pyyhkinyt (heilurin ääripäät).
+   */
+  const povHistoria = [];
   let purettu = false;
 
   /*
@@ -995,7 +1071,8 @@ export function luoLaattakerros({
 
   const kaynnista = () => {
     if (purettu) return;
-    jono.sort((a, b) => a.etaisyys - b.etaisyys);
+    // Näkyvät ensin, sitten ennakko ja pidetyt — kumpikin ruudun keskeltä.
+    jono.sort((a, b) => (a.nakyva ? 0 : 1) - (b.nakyva ? 0 : 1) || a.etaisyys - b.etaisyys);
     while (ladattavia < LAATTAKERROS_RINNAKKAIN && jono.length) {
       const t = jono.shift();
       if (!laatat.has(t.avain) || t.tila !== 'ladataan' || t.aloitettu) continue;
@@ -1006,6 +1083,7 @@ export function luoLaattakerros({
         .then(() => { ladattavia -= 1; kaynnista(); });
     }
     mittarit.jonossa = jono.length;
+    mittarit.ladattavia = ladattavia;
   };
 
   /* ---------------- tekstuurien vienti (≤ 2 / kehys) ---------------- */
@@ -1021,9 +1099,14 @@ export function luoLaattakerros({
         renderer?.initTexture?.(t.tekstuuri);
         t.viety = true;
         n += 1;
-        // Vanhentunut tietue (sukupolvi vaihtui eikä laatta ole enää
-        // näkyvissä) ei mene sceneen; lataus itse ei koskaan peruunnu.
-        if (t.nakyva) lisaaSceneen(t);
+        /*
+         * VALMIS LAATTA MENEE SCENEEN, JOS SE ON YHÄ ALUEELLA — näkyvä
+         * tai juuri nähty (pito). Vanha ehto (vain `nakyva`) jätti
+         * heilurin ääripään laatan scenen ulkopuolelle, kun tekstuuri
+         * sattui valmistumaan sillä kehyksellä, jolla laatta oli
+         * käännöksen toisella puolella (omistajan palaute v1649).
+         */
+        if (t.nakyva || t.pito) lisaaSceneen(t);
       }
       if (vientijono.length) ajaVienti();
     });
@@ -1168,16 +1251,16 @@ export function luoLaattakerros({
 
     /* 1. näkyvät laatat: tietue, latausjono ja sceneen lisäys. */
     const nakyvat = new Set();
-    for (const l of nakyvatLaatat) {
+    /** Tietue laatalle (luodaan tarvittaessa), etäisyys ja pito päivitettynä. */
+    const varmista = (l, nakyva) => {
       const avain = `${valittu.z}/${l.sarake}/${l.rivi}`;
-      nakyvat.add(avain);
       let t = laatat.get(avain);
       if (!t) {
         t = {
           avain, z: valittu.z, sarake: l.sarake, rivi: l.rivi, alue: null, tila: 'ladataan',
           verkko: null, materiaali: null, tekstuuri: null, kaytetty: nyt, tavut: 0,
-          nakyva: true, scenessa: false, viety: false, aloitettu: false, haipyy: false,
-          katkaisin: null, etaisyys: 0, sukupolvi,
+          nakyva, scenessa: false, viety: false, aloitettu: false, haipyy: false,
+          katkaisin: null, etaisyys: 0, sukupolvi, pito: true, ennakko: !nakyva,
         };
         laatat.set(avain, t);
       }
@@ -1187,7 +1270,14 @@ export function luoLaattakerros({
       while (dx < -valittu.leveys / 2) dx += valittu.leveys;
       t.etaisyys = Math.hypot(dx, (l.rivi + 0.5) * koko - keskiY);
       t.kaytetty = nyt;
+      t.pito = true;
+      return t;
+    };
+    for (const l of nakyvatLaatat) {
+      const t = varmista(l, true);
+      nakyvat.add(t.avain);
       t.nakyva = true;
+      t.ennakko = false;
       t.haipyy = false;
       // Ulos häipymässä ollut laatta palasi näkyviin: käännetään häive
       // takaisin. Sisään häipyvään ei kosketa — uudelleenaloitus joka
@@ -1197,7 +1287,66 @@ export function luoLaattakerros({
       }
       if (t.tila === 'valmis' && t.viety && !t.scenessa) lisaaSceneen(t);
     }
-    for (const t of laatat.values()) if (!nakyvat.has(t.avain)) t.nakyva = false;
+    for (const t of laatat.values()) {
+      if (nakyvat.has(t.avain)) continue;
+      t.nakyva = false;
+      t.ennakko = false;
+    }
+
+    /*
+     * 1b. ENNAKKOALUE LIIKESUUNTAAN (omistajan palaute v1649). Vara on
+     * se matka, jonka kamera kulki edellisestä päivityksestä, kerrottuna
+     * LIIKEVARA_KERROIN:lla ja MOLEMPIIN suuntiin: heiluri kääntyy
+     * takaisin, joten jo ohitettu reuna tarvitaan yhtä pian kuin edessä
+     * oleva. Ennakon laatat ladataan ja pidetään, mutta ne EIVÄT olleet
+     * mukana tason valinnassa (LAATTAKATTO_NAKYVA) — taso pysyy yhtä
+     * terävänä kuin ennen, vaikka jono kasvaa.
+     */
+    const ennakko = new Set();
+    const edellinenPov = povHistoria[povHistoria.length - 1] ?? null;
+    const kulunut = edellinenPov ? nyt - edellinenPov.hetki : Infinity;
+    const tuore = edellinenPov && kulunut <= 4 * LAATTAKERROS_PAIVITYSVALI_LIIKE_MS;
+    const lonEro = (a, b) => Math.abs(((a - b + 540) % 360) - 180);
+    // Ennuste: seuraava päivitysväli vie yhtä pitkälle kuin edellinen.
+    let varaLat = tuore ? LAATTAKERROS_LIIKEVARA_KERROIN * Math.abs(pov.lat - edellinenPov.lat) : 0;
+    let varaLon = tuore ? LAATTAKERROS_LIIKEVARA_KERROIN * lonEro(pov.lng, edellinenPov.lng) : 0;
+    while (povHistoria.length && nyt - povHistoria[0].hetki > LAATTAKERROS_PITO_MS) povHistoria.shift();
+    if (LAATTAKERROS_LIIKEVARA_PYYHKAISY) {
+      // Pyyhitty laatikko: heilurin ääripää on yhtä lähellä kuin edessä oleva.
+      for (const h of povHistoria) {
+        varaLat = Math.max(varaLat, Math.abs(pov.lat - h.lat));
+        varaLon = Math.max(varaLon, lonEro(pov.lng, h.lng));
+      }
+    }
+    povHistoria.push({ lat: pov.lat, lng: pov.lng, hetki: nyt });
+    varaLat = Math.min(alue.lat1 - alue.lat0, varaLat);
+    varaLon = Math.min(alue.lon1 - alue.lon0, varaLon);
+    if (varaLat > 0 || varaLon > 0) {
+      const laaja = {
+        lat0: Math.max(latMin, alue.lat0 - varaLat), lat1: Math.min(latMax, alue.lat1 + varaLat),
+        lon0: alue.lon0 - varaLon, lon1: alue.lon1 + varaLon,
+      };
+      const ennakkoKartta = lepokerroksenLaatat({
+        taso: valittu, laatta: koko, arkki: pyramidi.arkki,
+        projektio: pyramidi.projektio, alue: laaja, laudanY,
+      });
+      const ehdokkaat = (ennakkoKartta?.laatat ?? [])
+        .filter((l) => !nakyvat.has(`${valittu.z}/${l.sarake}/${l.rivi}`))
+        .filter((l) => laattakerroksenNakyvissa(laatanAlue(valittu, l.sarake, l.rivi), pov));
+      for (const l of ehdokkaat) {
+        if (ennakko.size >= LAATTAKERROS_LAATTAKATTO_ENNAKKO) break;
+        const t = varmista(l, false);
+        t.ennakko = true;
+        ennakko.add(t.avain);
+        if (t.tila === 'valmis' && t.viety && !t.scenessa) lisaaSceneen(t);
+      }
+    }
+    /*
+     * PITO: laatta, joka on ollut näkyvissä tai ennakossa viimeisen
+     * LAATTAKERROS_PITO_MS:n aikana, ei putoa jonosta eikä LRU:n
+     * määräkatosta. Tavukatto purkaa yhä (ks. laattakerroksenLRU).
+     */
+    for (const t of laatat.values()) t.pito = nyt - (t.kaytetty ?? 0) <= LAATTAKERROS_PITO_MS;
 
     /* 2. ylimääräiset: poista peiton alta, häivytä karkeamman päältä, muuten pidä. */
     const valmiit = new Set();
@@ -1214,7 +1363,15 @@ export function luoLaattakerros({
       haivyta(t.materiaali, 0, reduced() ? 0 : LAATTAKERROS_HAIVE_MS, () => poista(t));
     }
 
-    /* 3. LRU: näkymättömiä valmiita muistissa katon verran. */
+    /*
+     * 3. LRU: näkymättömiä valmiita muistissa katon verran. Sitä ennen
+     * pois ALOITTAMATTOMAT tietueet, joita ei enää katsota eikä pidetä:
+     * ne ovat pelkkää kirjanpitoa (jono kootaan näkyvistä ja pidetyistä),
+     * ja laatta luodaan tarvittaessa uudestaan samalla avaimella.
+     */
+    for (const t of [...laatat.values()]) {
+      if (!t.nakyva && !t.pito && t.tila === 'ladataan' && !t.aloitettu) poista(t);
+    }
     for (const avain of laattakerroksenLRU([...laatat.values()])) {
       const t = laatat.get(avain);
       if (t && !t.haipyy) poista(t);
@@ -1227,13 +1384,29 @@ export function luoLaattakerros({
      * laatoilta, joita ei enää katsota (mitattu: jono ei tyhjentynyt
      * zoomin aikana lainkaan). Kesken oleva lataus jatkuu loppuun —
      * liike ei peru latauksia, vain vanhentuneiden lisäyksen sceneen.
+     *
+     * JONOSSA OVAT MYÖS PIDETYT (v1649:n korjaus): heilurin ääripäässä
+     * laatta on näkyvissä yhden päivityksen ajan, eikä se ehtinyt
+     * latauspaikkaan ennen kuin vanha ehto (`t.nakyva`) pudotti sen
+     * jonosta seuraavalla päivityksellä — se jäi ikuisesti tilaan
+     * "ladataan", ja pohjan Z5 näkyi sen kohdalla joka käännöksellä.
      */
     jono.length = 0;
     for (const t of laatat.values()) {
-      if (t.nakyva && t.tila === 'ladataan' && !t.aloitettu) jono.push(t);
+      if ((t.nakyva || t.pito) && t.tila === 'ladataan' && !t.aloitettu) jono.push(t);
     }
 
+    const jonossa = new Set(jono.map((t) => t.avain));
     const tietueet = [...laatat.values()];
+    const nakyvatTietueet = tietueet.filter((t) => t.nakyva);
+    mittarit.jumissa = tietueet
+      .filter((t) => t.tila === 'ladataan' && !t.aloitettu && !jonossa.has(t.avain)).length;
+    mittarit.nakyvia = nakyvat.size;
+    mittarit.nakyviaScenessa = nakyvatTietueet.filter((t) => t.scenessa).length;
+    mittarit.nakyviaTaysin = nakyvatTietueet
+      .filter((t) => t.scenessa && t.materiaali && t.materiaali.opacity >= 1).length;
+    mittarit.ennakkoja = ennakko.size;
+    mittarit.pidettyja = tietueet.filter((t) => t.pito && !t.nakyva).length;
     mittarit.tila = 'nakyy';
     mittarit.taso = valittu.z;
     mittarit.laattoja = tietueet.length;
@@ -1276,6 +1449,7 @@ export function luoLaattakerros({
       vientiRaf = 0;
       vientijono.length = 0;
       jono.length = 0;
+      povHistoria.length = 0;
       for (const t of [...laatat.values()]) poista(t);
       laatat.clear();
       mittarit.tila = 'purettu';

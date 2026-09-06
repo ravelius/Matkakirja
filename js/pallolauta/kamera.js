@@ -85,9 +85,11 @@ export const PALLO_KORKEUS_MIN = 0.04;
 /** Laatan sivu pikseleinä (sw.js:n ja tee-pallolaatat.mjs:n LAATTA). */
 export const LAATAN_PIKSELIT = 256;
 /**
- * Sallittu venytys: montako laitepikseliä yhtä laatan pikseliä kohden
- * kamera saa lähimmillään näyttää. 2 = laatan pikseli kahtena
- * (karttapallo.md luku 6: *"lähin korkeus rajataan 2× venytykseen"*).
+ * Rasterin terävyysraja: montako laitepikseliä yhtä laatan pikseliä
+ * kohden maasto kestää ennen kuin se näyttää pehmeältä. 2 = laatan
+ * pikseli kahtena (karttapallo.md luku 6). EI ENÄÄ ZOOMIN RAJA (v1649):
+ * viivat ovat vektoreita, joten kamera saa mennä tämän ohi — luku jää
+ * vertailukohdaksi mittauksiin (laattojenVenytys).
  */
 export const PALLON_SALLITTU_VENYTYS = 2;
 /** Maailmankartan laudan leveys lautayksikköinä (360°). */
@@ -141,45 +143,83 @@ export function korkeusLeveydesta(leveysYks, {
 }
 
 /*
- * ── LÄHIN KORKEUS TULEE LAATTOJEN TARKKUUDESTA ────────────────────
- * (pallolauta vaihe 5c; karttapallo.md luku 6: *"Z8 (182 px/aste) ja
- * lähin korkeus rajataan 2× venytykseen → 2,1° ≈ 70 yksikköä"*)
+ * ── LÄHIN NÄKYVÄ LEVEYS ON VAKIO, EI LAATTOJEN TARKKUUS ───────────
  *
- * Laatta antaa tasolla t 256 · 2^t / 360 pikseliä astetta kohden. Ruutu
- * näyttää W laitepikseliä (css-leveys × dpr) sen verran asteita kuin
- * kamera rajaa, eli venytys = (W / asteet) / tarkkuus. Kun venytys ei
- * saa ylittää kahta, lähin näkyvä leveys on asteet ≥ W / (2 · tarkkuus).
- * Syvempi taso sallii lähemmäs: Z8 on tasan kaksi kertaa tarkempi kuin
- * Z7, joten Z8:n puuttuminen (laatat.json sanoo max 7) tuplaa rajan.
+ * OMISTAJAN PALAUTE v1649 (sanatarkasti): *"Voisiko syvemmin zoomin
+ * sallia jo nyt vaikka korkeusdataa ei ole mutta rajat varmaan
+ * piirtyvät terävänä kun on vektori"*.
  *
- * KATTO KATOLLE: RAJA EI KOSKAAN ESTÄ PELIN OMAA LÄHINTÄ NÄKYMÄÄ. Iso
- * ruutu (iPad 834 px × dpr 2) tarvitsisi Z7:llä 9° eli 305 lautayksikköä
- * — enemmän kuin saapumisnäkymä (240), jolloin ennakkozoomi ei zoomaisi
- * mihinkään ja SIIRRON KOREOGRAFIA menettäisi lähikuvansa (mitattu
- * savuke-siirtokoreografialla 5.9.2026: iPadilla 50 → 50). Siksi raja ei
- * mene koskaan PALLOLAUDAN_SIIRTOLEVEYTTÄ karkeammaksi: isolla ruudulla
- * ja matalalla laattatasolla kuva on mieluummin venytetty kuin peli
- * jumissa — ja venytys on silti pienempi kuin ennen tätä vaihetta, kun
- * lähin korkeus oli kiinteä 0,04. Puhelimilla (390 px) Z8:n raja on 71
- * yksikköä eli katto ei tee mitään.
+ * MIKSI RAJA SAA SYVETÄ. v1649 toi pallolle vektoriviivat
+ * (js/pallovektorit.js): rantaviiva ja rajat piirretään ruudun
+ * pikseliksi millä tahansa korkeudella, eivät laatan pikseliksi. Kuvan
+ * TERÄVYYS ei siis enää tule laattatasosta — laatta antaa vain maaston
+ * värin, joka saa olla pehmeä. Aiemmin lähin leveys laskettiin
+ * laattatarkkuudesta (venytys enintään PALLON_SALLITTU_VENYTYS = 2), ja
+ * se on nyt väärä mitta: se rajasi zoomin sinne, missä RASTERI on
+ * terävä, vaikka silmä katsoo viivaa.
+ *
+ * VAKIO EIKÄ LAITEKOHTAINEN LUKU. Vanha kaava antoi lähimmäksi
+ * leveydeksi puhelimella 107 yksikköä ja isolla ruudulla katon
+ * PALLOLAUDAN_SIIRTOLEVEYS 120 — sama ele vei eri laitteilla eri
+ * syvyyteen. Uusi raja on yksi luku kaikille: PALLOLAUDAN_LAHIN_LEVEYS,
+ * puolet vanhasta katosta (120 → 60 lautayksikköä ≈ 1,8°). Yksi
+ * nipistys entisestä pohjasta vie siis vielä yhden portaan syvemmälle.
+ *
+ * VENYTYS uudessa rajassa (laattojenVenytys, mitattu 6.9.2026):
+ * pyramidin syvin taso z8 antaa 480 px/aste, ja lähin näkymä on 1,8°
+ * ruudun leveydellä. Puhelin 390 css × dpr 3 = 1170 px → 650 px/aste →
+ * venytys 1,4×; iPad 834 × 2 = 1668 px → 1,9×; työpöytä 1440 × 2 =
+ * 2880 px → 3,3×. Maasto on silloin pehmeä (PALLON_SALLITTU_VENYTYS 2
+ * ylittyy isolla ruudulla), viivat teräviä — juuri se, mitä omistaja
+ * pyysi. Kun korkeusdata ja syvempi pyramiditaso joskus tulevat, sama
+ * vakio kestää: venytys pienenee itsestään.
+ *
+ * SIIRTONÄKYMÄ EI SYVENE: PALLOLAUDAN_SIIRTOLEVEYS (120) on yhä
+ * siirtokoreografian ennakkozoomin katto (siirtoZoomiKerroin), joten
+ * pelin oma koreografia pysyy täsmälleen ennallaan; vain pelaajan oma
+ * nipistys pääsee syvemmälle. Tasokartan oma raja (js/kartta.js
+ * ZOOMI_LAHIN 88) on eri vakio eikä muutu.
  */
 /** Laattatason tarkkuus pikseleinä astetta kohden (Z8 = 182). */
 export function laatanTarkkuus(taso, laatanPikselit = LAATAN_PIKSELIT) {
   return (laatanPikselit * 2 ** taso) / 360;
 }
 
-/** Lähin sallittu näkyvä leveys (lautayksikköä) laattatarkkuudesta. */
-export function lahinLeveys({
-  taso, leveysPx, dpr = 1, venytys = PALLON_SALLITTU_VENYTYS,
-  laudanLeveys = PALLOLAUDAN_LEVEYS, katto = PALLOLAUDAN_SIIRTOLEVEYS,
+/**
+ * LÄHIN SALLITTU NÄKYVÄ LEVEYS (lautayksikköä) — vakio kaikille
+ * laitteille. Puolet siirtonäkymän katosta (PALLOLAUDAN_SIIRTOLEVEYS).
+ */
+export const PALLOLAUDAN_LAHIN_LEVEYS = PALLOLAUDAN_SIIRTOLEVEYS / 2;
+
+/**
+ * Laattapyramidin syvimmän tason tiheys pikseleinä astetta kohti
+ * (pyramidi.json 2026-09-03a: z8 leveys 172 800 px / 360° = 480). Tämä
+ * on se, mitä laattakerros (js/pallolaatat.js) pallolle piirtää — pallon
+ * oma Mercator-sarja (laatanTarkkuus) on enää kirjaston pohja.
+ */
+export const PYRAMIDIN_SYVIN_PX_ASTE = 480;
+
+/**
+ * Laattojen venytys annetulla näkyvällä leveydellä: montako
+ * laitepikseliä yhtä laatan pikseliä kohti. Mittaus ja testit — peli ei
+ * enää rajaa zoomia tällä (ks. yllä).
+ */
+export function laattojenVenytys({
+  leveysPx, dpr = 1, leveysYks = PALLOLAUDAN_LAHIN_LEVEYS,
+  laudanLeveys = PALLOLAUDAN_LEVEYS, pxAste = PYRAMIDIN_SYVIN_PX_ASTE,
 }) {
   const laitepikselit = Math.max(1, leveysPx) * Math.max(1, dpr);
-  const asteet = laitepikselit / (Math.max(0.1, venytys) * laatanTarkkuus(taso));
-  return Math.min(katto, (asteet / 360) * laudanLeveys);
+  const asteet = asteetLeveydesta(Math.max(1e-6, leveysYks), laudanLeveys);
+  return laitepikselit / (asteet * Math.max(1e-6, pxAste));
 }
 
-/** Lähin sallittu korkeus (altitude) laattatarkkuudesta. */
-export function lahinKorkeus(valinnat) {
+/** Lähin sallittu näkyvä leveys (lautayksikköä). */
+export function lahinLeveys({ lahin = PALLOLAUDAN_LAHIN_LEVEYS } = {}) {
+  return lahin;
+}
+
+/** Lähin sallittu korkeus (altitude) lähimmästä leveydestä. */
+export function lahinKorkeus(valinnat = {}) {
   const { fov = PALLO_FOV, laudanLeveys = PALLOLAUDAN_LEVEYS, kuvasuhde = 1 } = valinnat;
   return korkeusLeveydesta(lahinLeveys(valinnat), {
     fov, laudanLeveys, kuvasuhde, min: 0,
@@ -228,13 +268,11 @@ export function luoPallokamera({
   const kuvasuhde = () => ruudunLeveys() / ruudunKorkeus();
 
   /*
-   * LÄHIN KORKEUS LAATTATARKKUUDESTA (vaihe 5c). Lasketaan kutsuttaessa
-   * eikä kerran: kotelon leveys vaihtuu kääntyvällä ruudulla, ja
-   * laattaluettelon syvin taso vaihtuu, kun uusi taso ajetaan ämpäriin.
+   * LÄHIN KORKEUS VAKIOLEVEYDESTÄ (v1649). Lasketaan kutsuttaessa eikä
+   * kerran: kotelon KUVASUHDE vaihtuu kääntyvällä ruudulla, ja sama
+   * lautayksikkömäärä ruudun leveydellä on silloin eri korkeus.
    */
-  const korkeusMin = () => lahinKorkeus({
-    taso: laattataso, leveysPx: ruudunLeveys(), dpr, laudanLeveys, kuvasuhde: kuvasuhde(),
-  });
+  const korkeusMin = () => lahinKorkeus({ laudanLeveys, kuvasuhde: kuvasuhde() });
   /** Näkyvä leveys → korkeus laitteen tarkkuusrajalla. */
   const korkeus = (leveysYks) => korkeusLeveydesta(leveysYks, {
     laudanLeveys, kuvasuhde: kuvasuhde(), min: korkeusMin(),
@@ -423,6 +461,25 @@ export function luoPallokamera({
     korkeusMin,
     /** Lähin sallittu näkyvä leveys lautayksikköinä (savukkeet, vartijat). */
     lahinLeveys: () => leveys(korkeusMin()),
+    /**
+     * Laattojen venytys lähimmässä näkymässä (savukkeet ja mittarit;
+     * ks. laattojenVenytys). Terävyys tulee vektoriviivoilta, joten
+     * venytys saa ylittää PALLON_SALLITTU_VENYTYKSEN.
+     *   `kerros` = laattakerroksen pyramidin syvin taso (se, mitä
+     *              pallolle nyt piirretään),
+     *   `pohja`  = kirjaston oman Mercator-sarjan syvin taso
+     *              (perääntymistie ?laattakerros=0).
+     */
+    venytys: () => {
+      const leveysYks = leveys(korkeusMin());
+      return {
+        leveys: leveysYks,
+        kerros: laattojenVenytys({ leveysPx: ruudunLeveys(), dpr, laudanLeveys, leveysYks }),
+        pohja: laattojenVenytys({
+          leveysPx: ruudunLeveys(), dpr, laudanLeveys, leveysYks, pxAste: laatanTarkkuus(laattataso),
+        }),
+      };
+    },
     kameraAjossa: () => Boolean(ajo),
     pysaytaKameraAjo,
     siirtoZoomiKerroin,
