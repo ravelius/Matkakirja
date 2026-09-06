@@ -23,9 +23,14 @@ const NIMION_MAKSIMI = 18;
 const MAAT = Object.keys(SKANDAALIT);
 const KAIKKI = MAAT.flatMap((iso) => SKANDAALIT[iso].map((s) => ({ iso, ...s })));
 
-test('skandaaleja on 83 kappaletta 29 maassa, 2–3 per maa', () => {
-  assert.equal(MAAT.length, 29, 'maita on 29');
-  assert.equal(KAIKKI.length, 83, 'skandaaleja on 83');
+/*
+ * LUVUT KASVAVAT ERÄ KERRALLAAN. 29 maata / 83 skandaalia oli Euroopan
+ * tilanne; erä M2 (Oseania, 6.9.2026) toi AUS, FJI, NZL, PNG ja SLB
+ * kahdella skandaalilla kukin.
+ */
+test('skandaaleja on 123 kappaletta 49 maassa, 2–3 per maa', () => {
+  assert.equal(MAAT.length, 49, 'maita on 49');
+  assert.equal(KAIKKI.length, 123, 'skandaaleja on 123');
   for (const iso of MAAT) {
     assert.match(iso, /^[A-Z]{3}$/, `${iso}: avain on kolmikirjaiminen maatunnus`);
     const n = SKANDAALIT[iso].length;

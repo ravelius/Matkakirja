@@ -5064,4 +5064,2045 @@ export const SKANDAALIT = {
       },
     },
   ],
+  /*
+   * ── MAAILMAN ERÄ M1 6.9.2026 (ETELÄ-AMERIKKA) ────────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Skandaalitaulussa ei ollut ennen tätä erää yhtäkään Euroopan
+   * ulkopuolista maata; erä M1 tuo viisi maata ja kymmenen skandaalia
+   * (kiintiö 2 per maa). Kaikki ovat kuvattomia kuten erän muutkin
+   * nostot, ja jokainen väite on `lahde`-rivin en-Wikipedia-artikkelin
+   * katteessa (tarkistettu 6.9.2026).
+   *
+   * PAIKAT OVAT KAUKANA PELIKAUPUNGEISTA. Etelä-Amerikan kaupungeista
+   * vain Buenos Airesilla ja Rio de Janeirolla on kaupunkikartta
+   * (js/packs/maakartat.js), joten kohdekaupungin kohdalle osuva
+   * skandaali jäisi muualla kokonaan ilman karttapaikkaa
+   * (tools/tarkista-nostopaikat.mjs). Siksi jokainen kymmenestä on
+   * mitattu jokaista CITIES-kaupunkia vasten: lähin on Santiagon taistelu
+   * 26,1 lautayksikön päässä Valparaísosta, ja raja
+   * KAUPUNGIN_KOHDALLA_SADE on 7. Juuri tästä syystä Argentiinan
+   * corralito ja Kolumbian Proceso 8000 jäivät pois — edellinen on
+   * Buenos Airesin ytimessä, jälkimmäinen Bogotán.
+   *
+   * HERKÄT AIHEET. Kolme kymmenestä koskee diktatuuria ja yksi
+   * huumekauppaa. Ne on kirjoitettu asiallisesti ja tiukasti lähteen
+   * katteessa: mitä tapahtui, kuka teki, mitä siitä seurasi — ei
+   * kuvailua eikä väitteitä, joita artikkeli ei sano.
+   */
+  ARG: [
+    /*
+     * Estadio Gigante de Arroyito, Rosario (B-lohkon ratkaisuottelu).
+     * Lähde: en.wikipedia.org: Argentina v Peru (1978 FIFA World Cup)
+     */
+    {
+      id: 'rosario-1978',
+      otsikko: 'Argentiina–Peru 6–0 — ottelu, jota yhä epäillään',
+      nimio: 'Rosario 1978',
+      vuosi: '1978',
+      paikka: 'Estadio Gigante de Arroyito, Rosario',
+      lat: -32.8833, lon: -60.6667,
+      kortti: 'Isäntämaa tarvitsi finaalipaikkaan neljän maalin voiton ja sai '
+        + 'kuusi. Ottelu pelattiin sotilasjuntan Argentiinassa, ja epäilyt '
+        + 'sopimuksesta ovat eläneet siitä asti. Yksikään versio ei ole saanut '
+        + 'laajaa hyväksyntää, mutta kertomuksia riittää — pukukoppivierailusta '
+        + 'vehnälastiin.',
+      teksti: 'Vuoden 1978 MM-kisojen toisen lohkovaiheen ratkaisuottelu pelattiin '
+        + 'Rosariossa 21. kesäkuuta. Argentiinan oli voitettava Peru vähintään '
+        + 'neljällä maalilla ohittaakseen Brasilian maalierolla. Brasilia oli '
+        + 'pyytänyt, että sen ottelu Puolaa vastaan pelattaisiin samaan aikaan, '
+        + 'mutta Fifa hylkäsi pyynnön televisioinnin vuoksi — niinpä Brasilia '
+        + 'pelasi ensin ja voitti 3–1, ja Argentiina tiesi ottelun alkaessa '
+        + 'tarkalleen, mitä siltä vaadittiin.'
+        + '\n\nMinuutteja ennen alkua presidentti Jorge Rafael Videla kävi Perun '
+        + 'pukukopissa entisen Yhdysvaltain ulkoministerin Henry Kissingerin '
+        + 'kanssa ja luki pelaajille Perun diktaattorin Francisco Morales '
+        + 'Bermúdezin viestin maiden veljeydestä. Argentiina voitti 6–0: kaksi '
+        + 'maalia Mario Kempes, kaksi Leopoldo Luque, yksi Alberto Tarantini ja '
+        + 'yksi René Houseman.'
+        + '\n\nEpäilykset heräsivät myöhemmin. Kymmenen päivää kisojen jälkeen '
+        + 'Argentiina myönsi Perulle poikkeuksellisen takaisinmaksuttoman luoton. '
+        + 'Historioitsija David Yallopin mukaan amiraali Carlos Alberto Lacoste '
+        + 'tarjosi perulaisille lahjuksen ja 35 000 tonnia viljaa. '
+        + 'Valtiovarainministeri Juan Alemann kertoi, että hänen kotiinsa '
+        + 'sijoitettu pommi räjähti juuri sillä hetkellä, kun Argentiina teki '
+        + 'neljännen maalinsa.'
+        + '\n\nMonet ottelun pelaajista kiistävät kaiken. Héctor Chumpitaz, Jaime '
+        + 'Duarte, César Cueto ja Teófilo Cubillas ovat sanoneet, ettei todisteita '
+        + 'ole ja että Peru oli väsynyt kolmen päivän välein pelatuista otteluista. '
+        + 'Yksi asia muuttui pysyvästi: seuraavista kisoista alkaen lohkojen '
+        + 'ratkaisuottelut on pelattu samanaikaisesti.',
+      lahde: 'en-Wikipedia "Argentina v Peru (1978 FIFA World Cup)". Tarkistettu '
+        + '6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Argentiina tiesi ottelun alkaessa tarvitsevansa neljä maalia?',
+        vaihtoehdot: [
+          'Brasilian ottelu oli pelattu jo aiemmin samana päivänä',
+          'Fifa oli ilmoittanut maalirajan ennen kisoja',
+          'Perun liitto oli luvannut päästää neljä maalia',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * San Carlos de Bariloche (Priebken asuinkaupunki 1948–1996).
+     * Lähde: en.wikipedia.org: Erich Priebke
+     */
+    {
+      id: 'priebke-bariloche',
+      otsikko: 'Barilochen koulunjohtaja — 46 vuotta vapaana',
+      nimio: 'Bariloche 1994',
+      vuosi: '1948–1996',
+      paikka: 'San Carlos de Bariloche, Río Negro',
+      lat: -41.1333, lon: -71.3,
+      kortti: 'Andien lomakaupungissa asui saksalainen herkkukauppias, joka johti '
+        + 'kulttuuriyhdistystä ja työskenteli koululla. Hän oli asunut siellä lähes '
+        + 'viisikymmentä vuotta. Vuonna 1994 amerikkalainen tv-ryhmä odotti häntä '
+        + 'koulun ulkopuolella ja kysyi Rooman joukkomurhasta — ja hän vastasi '
+        + 'auton ikkunasta, avoimesti.',
+      teksti: 'Erich Priebke oli SS:n turvallisuuspoliisin upseeri, joka johti '
+        + 'yksikköä Ardeatinan luolien joukkomurhassa Roomassa 24. maaliskuuta 1944. '
+        + 'Siinä surmattiin 335 italialaista siviiliä kostoksi partisaani-iskusta, '
+        + 'jossa oli kuollut 33 saksalaista poliisia. Priebke laati teloituslistat. '
+        + 'Sodan jälkeen hän pakeni 1946 brittien vankileiriltä Riministä ja päätyi '
+        + 'lopulta Argentiinaan.'
+        + '\n\nBarilochessa hän eli vapaana miehenä 46 vuotta. Aluksi hän oli '
+        + 'tiskaaja ja tarjoilija, sitten oman herkkukaupan pitäjä, ja hänestä tuli '
+        + 'saksalais-argentiinalaisen kulttuuriyhdistyksen johtaja; matkat Eurooppaan '
+        + 'sujuivat esteettä. Esteban Buchin kirja El pintor de la Suiza Argentina '
+        + 'nimesi hänet 1991 osaksi kaupungissa 1950-luvulta asti asunutta '
+        + 'natsipiiriä.'
+        + '\n\nMaaliskuussa 1994 ABC Newsin tutkiva ryhmä jäljitti hänet kirjan '
+        + 'perusteella ja kaivoi arkistoista Lontoosta hänen oman sodanjälkeisen '
+        + 'tunnustuksensa. Toimittaja Sam Donaldson odotti häntä koulun ulkopuolella '
+        + 'ja haastatteli hänet auton ikkunasta. Priebke myönsi, kuka oli, ja '
+        + 'perusteli tekonsa käskyillä. Argentiinan viranomaiset pidättivät hänet '
+        + '10. toukokuuta 1994.'
+        + '\n\nLuovutus kesti. Puolustus vaati kaikkien italialaisten asiakirjojen '
+        + 'kääntämistä espanjaksi ja vetosi murhan viidentoista vuoden '
+        + 'vanhentumisaikaan; Italian sotilassyyttäjä muistutti, etteivät rikokset '
+        + 'ihmisyyttä vastaan vanhene. Argentiinan korkein oikeus määräsi luovutuksen '
+        + '1996. Italiassa Priebke tuomittiin lopulta elinkautiseen 1998, ja korkean '
+        + 'ikänsä vuoksi hän istui tuomionsa kotiarestissa kuolemaansa 2013 asti.',
+      lahde: 'en-Wikipedia "Erich Priebke". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä paljasti Priebken menneisyyden maailmalle 1994?',
+        vaihtoehdot: [
+          'Italian poliisin salainen operaatio',
+          'Amerikkalaisen tv-ryhmän tutkimustyö ja katuhaastattelu',
+          'Hänen oma kirjeensä Vatikaanille',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  BOL: [
+    /*
+     * Cochabamban keskusaukio (mielenosoitusten paikka).
+     * Lähde: en.wikipedia.org: Cochabamba Water War
+     */
+    {
+      id: 'cochabamban-vesisota',
+      otsikko: 'Cochabamban vesisota — kaupunki, joka osti vetensä takaisin',
+      nimio: 'Vesisota 2000',
+      vuosi: '1999–2000',
+      paikka: 'Cochabamban keskusaukio, Bolivia',
+      lat: -17.3935, lon: -66.157,
+      kortti: 'Kaupungin vesilaitos myytiin yhdelle tarjoajalle, ja laskut nousivat '
+        + 'kolmanneksella. Uusi laki näytti antavan yhtiölle oikeuden kaikkiin '
+        + 'vesivaroihin, myös yhteisöjen omiin kaivoihin. Neljässä kuukaudessa '
+        + 'Cochabamba sulki katunsa, ja sopimus purettiin.',
+      teksti: 'Maailmanpankin ehdoilla Bolivia laittoi Cochabamban vesilaitoksen '
+        + 'SEMAPAn myyntiin. Tarjouksen teki vain yksi taho: Aguas del Tunari, jossa '
+        + 'olivat mukana brittiläinen International Waters, Bechtelin tytäryhtiö, '
+        + 'United Utilities ja espanjalainen Abengoa sekä neljä bolivialaisyhtiötä. '
+        + 'Presidentti Hugo Banzerin hallitus hyväksyi 2,5 miljardin dollarin ja '
+        + 'neljänkymmenen vuoden sopimuksen, jossa yhtiölle taattiin vähintään '
+        + 'viidentoista prosentin vuosituotto.'
+        + '\n\nSopimuksen ehtona oli rahoittaa Misicunin pato, jota Maailmanpankki '
+        + 'oli pitänyt kannattamattomana mutta jota pormestari Manfred Reyes Villa '
+        + 'ajoi. Vettä ottaessaan yhtiö korotti maksuja keskimäärin 35 prosenttia, '
+        + 'noin kahteenkymmeneen dollariin kuukaudessa. Moni asiakas ansaitsi sata '
+        + 'dollaria kuussa, joten vesilasku ylitti ruokamenot.'
+        + '\n\nLaki 2029 näytti antavan yhtiölle monopolin kaikkiin vesivaroihin — '
+        + 'myös yhteisöjen itse rakentamiin järjestelmiin, joita ei ollut koskaan '
+        + 'liitetty SEMAPAan. Vastarinnan kokosi La Coordinadora, kastelijoiden '
+        + 'liiton, ammattiyhdistysten ja ympäristöväen yhteenliittymä, jonka '
+        + 'näkyvimmät hahmot olivat Omar Fernández ja Óscar Olivera.'
+        + '\n\nBanzer julisti 8. huhtikuuta 2000 piiritystilan. Kun kapteeni Robinson '
+        + 'Iriarte ampui väkijoukkoon ja lukiolainen Víctor Hugo Daza kuoli, viha '
+        + 'leimahti; yhtiön johto pakeni Santa Cruziin. Hallitus julisti sopimuksen '
+        + 'rauenneeksi, laki muutettiin 11. huhtikuuta, ja yhtiön 40 miljoonan '
+        + 'dollarin korvausvaatimus raukesi sovintoon 2006.',
+      lahde: 'en-Wikipedia "Cochabamba Water War". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä sytytti Cochabamban vesisodan?',
+        vaihtoehdot: [
+          'Pitkä kuivuus tyhjensi kaupungin altaat',
+          'Kaivosyhtiö saastutti kaupungin juomaveden',
+          'Vesilaitoksen yksityistäminen ja maksujen jyrkkä nousu',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Plaza Murillo, La Paz (hallituksen ydin).
+     * Lähde: en.wikipedia.org: Luis García Meza
+     */
+    {
+      id: 'kokaiinivallankaappaus-1980',
+      otsikko: 'Kokaiinivallankaappaus — kolmetoista kuukautta',
+      nimio: 'Kokaiinikaappaus',
+      vuosi: '1980–1981',
+      paikka: 'Plaza Murillo, La Paz',
+      lat: -16.4957, lon: -68.1336,
+      kortti: 'Heinäkuussa 1980 kenraali otti Bolivian väkivaltaisella '
+        + 'vallankaappauksella, jonka rahoitusta on epäilty huumekaupan lahjuksiksi. '
+        + 'Valta kesti kolmetoista kuukautta ja maksoi arviolta tuhat ihmishenkeä. '
+        + 'Lopulta jopa Washington piti etäisyyttä — ja se riitti kaatamaan '
+        + 'hallinnon.',
+      teksti: 'Luis García Meza Tejada oli uraupseeri, joka nousi kenraaliksi Hugo '
+        + 'Banzerin diktatuurin aikana. Hän johti armeijan oikeistosiipeä, joka ei '
+        + 'hyväksynyt paluuta siviilihallintoon: moni upseeri oli ollut mukana '
+        + 'Banzerin ajassa eikä pitänyt siitä, että uusi kongressi tutki talous- ja '
+        + 'ihmisoikeusrikkomuksia.'
+        + '\n\nMonella heistä oli väitteiden mukaan yhteydet kokaiinikauppiaisiin: '
+        + 'osa armeijasta toimi näiden suojelijoina lahjuksia vastaan, ja lahjuksilla '
+        + 'rahoitettiin tulevaa kaappausta. Käytännössä salakuljettajat ostivat '
+        + 'itselleen Bolivian seuraavan hallituksen. Ryhmä painosti presidentti Lidia '
+        + 'Gueileriä nimittämään García Mezan armeijan komentajaksi.'
+        + '\n\nKaappaus tehtiin 17. heinäkuuta 1980. Sen yhteydessä surmattiin '
+        + 'kansanedustaja ja presidenttiehdokas Marcelo Quiroga Santa Cruz, joka oli '
+        + 'vaatinut Banzeria oikeuteen. Puolueet lakkautettiin, oppositiojohtajat '
+        + 'karkotettiin, ammattiyhdistykset tukahdutettiin ja lehdistö vaiennettiin. '
+        + 'Amerikkalainen tutkimuslaitos Council on Hemispheric Affairs nimesi '
+        + 'hallinnon tammikuussa 1981 Latinalaisen Amerikan pahimmaksi '
+        + 'ihmisoikeusrikkojaksi Guatemalan ja El Salvadorin jälkeen.'
+        + '\n\nHuumekytkennät eristivät hallinnon kansainvälisesti, ja jopa Ronald '
+        + 'Reaganin hallinto pysytteli etäällä. Paine pakotti García Mezan eroamaan '
+        + '3. elokuuta 1981. Hänet tuomittiin poissaolevana, luovutettiin Brasiliasta '
+        + '1995 ja istui kolmenkymmenen vuoden tuomiotaan La Pazin San Pedron '
+        + 'vankilassa — samassa, johon hän oli aikanaan sulkenut vastustajansa. Hän '
+        + 'kuoli 2018.',
+      lahde: 'en-Wikipedia "Luis García Meza". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi vuoden 1980 kaappausta kutsutaan kokaiinivallankaappaukseksi?',
+        vaihtoehdot: [
+          'Sen rahoitusta on epäilty huumekaupan lahjuksiksi',
+          'Kaappaajat takavarikoivat maan kokaiinivarastot',
+          'Kaappaus tehtiin kokaiiniviljelmien lakon aikana',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  BRA: [
+    /*
+     * Curitiban liittovaltion oikeustalo (tutkinnan päänäyttämö).
+     * Lähde: en.wikipedia.org: Operation Car Wash
+     */
+    {
+      id: 'lava-jato',
+      otsikko: 'Lava Jato — autopesulasta kolmeen presidenttiin',
+      nimio: 'Lava Jato',
+      vuosi: '2014–2021',
+      paikka: 'Liittovaltion oikeustalo, Curitiba',
+      lat: -25.4284, lon: -49.2733,
+      kortti: 'Tutkinta alkoi pienen autopesulan rahanpesusta ja päätyi '
+        + 'valtionyhtiöiden korruptiovyyhtiin, jossa olivat mukana ministerit, '
+        + 'kuvernöörit ja kolme entistä presidenttiä. Petrobrasin johtajat olivat '
+        + 'ottaneet yhdestä viiteen prosenttia jokaisesta maksusta. Lopulta tutkinta '
+        + 'kaatui omiin viesteihinsä.',
+      teksti: 'Operação Lava Jato käynnistyi maaliskuussa 2014 Brasíliassa, kun '
+        + 'pienen autopesulan rahaliikennettä alettiin tutkia. Syyttäjäryhmää johti '
+        + 'Deltan Dallagnol ja tuomarina toimi Curitibassa Sergio Moro; myöhemmin '
+        + 'muut syyttäjät ja tuomarit hoitivat oman alueensa jutut.'
+        + '\n\nTutkijoiden mukaan valtionyhtiöiden poliittiset nimitykset kiristivät '
+        + 'järjestelmällisesti lahjuksia yksityisiltä toimittajilta. Osa rahasta '
+        + 'ohjattiin puolueille laittomaksi vaalirahoitukseksi, osa jäi omaan '
+        + 'taskuun. Suurimmat summat löytyivät öljy-yhtiö Petrobrasista — siitä '
+        + 'lempinimi Petrolão. Urakoitsijat, muun muassa Odebrecht ja OAS, '
+        + 'muodostivat kartellin, joka jakoi valtion urakat keskenään; kartellin '
+        + 'epäillään toimineen myös MM-kisojen stadionien, Angra 3 -ydinvoimalan ja '
+        + 'Belo Monten padon hankkeissa.'
+        + '\n\nSyytettyjä olivat liikemiehet, kansanedustajat, senaattorit, '
+        + 'kuvernöörit ja ministerit. Yhtiöt ja yksityishenkilöt sitoutuivat '
+        + 'maksamaan 25 miljardia realia sakkoja ja palautuksia. Entinen presidentti '
+        + 'Luiz Inácio Lula da Silva vangittiin Curitibassa huhtikuussa 2018.'
+        + '\n\nVuonna 2019 hakkeri Walter Delgatti Neto murtautui tutkijoiden '
+        + 'Telegram-ryhmiin, ja The Intercept Brasil julkaisi viestit. Ne näyttivät '
+        + 'osoittavan, että Moro oli antanut syyttäjille neuvoja ja tietoja ennen '
+        + 'oikeudenkäyntiä. Moro ja Dallagnol kiistivät kaiken, mutta mielipide '
+        + 'kääntyi: Lula vapautettiin marraskuussa 2019 korkeimman oikeuden '
+        + 'päätöksellä, ja tutkintaryhmä lakkautettiin 1. helmikuuta 2021.',
+      lahde: 'en-Wikipedia "Operation Car Wash". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä käänsi mielipiteen Lava Jato -tutkintaa vastaan?',
+        vaihtoehdot: [
+          'Petrobrasin ajautuminen konkurssiin',
+          'Vuodetut viestit tuomarin ja syyttäjien välillä',
+          'Todistajien katoaminen kesken oikeudenkäynnin',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Córrego do Feijãon kaivos, Brumadinho, Minas Gerais.
+     * Lähde: en.wikipedia.org: Brumadinho dam disaster
+     */
+    {
+      id: 'brumadinhon-pato',
+      otsikko: 'Brumadinho 2019 — mutavirta lounasaikaan',
+      nimio: 'Brumadinho 2019',
+      vuosi: '2019',
+      paikka: 'Córrego do Feijãon kaivos, Brumadinho',
+      lat: -20.1194, lon: -44.1197,
+      kortti: 'Rikastushiekkapato murtui puoli yhden aikaan päivällä, ja mutavirta '
+        + 'nieli kaivoksen oman ruokalan kesken lounaan. Kaksisataaseitsemänkymmentä '
+        + 'ihmistä kuoli. Sama yhtiö oli menettänyt padon jo kolme vuotta aiemmin, '
+        + 'eikä siitä määrätyistä sakoista ollut maksettu kuin murto-osa.',
+      teksti: 'Córrego do Feijãon rautamalmikaivoksen pato Minas Geraisissa hajosi '
+        + '25. tammikuuta 2019 kello 12.28. Pato oli rakennettu 1976, ja Vale S.A. '
+        + 'oli ostanut sen 2001. Kansallisen kaivosviraston rekisterissä se oli '
+        + 'luokiteltu pieneksi rakenteeksi, jonka riski oli matala.'
+        + '\n\nRomahdus vapautti mutavirran, joka pyyhkäisi kaivoksen '
+        + 'hallintorakennusten, ruokalan, asuintalojen, maatilojen, majatalojen ja '
+        + 'teiden yli. Kuolleita oli 270: tammikuussa 2019 vahvistettiin 259 '
+        + 'kuollutta ja yksitoista ilmoitettiin kadonneeksi, ja tammikuussa 2022 '
+        + 'kuusi ihmistä oli yhä kateissa.'
+        + '\n\nPato ei ollut ottanut vastaan rikastushiekkaa vuoden 2014 jälkeen, ja '
+        + 'yhtiön mukaan sitä tarkastettiin maastossa kahden viikon välein. '
+        + 'Joulukuussa 2018 Vale sai luvan käyttää padon jätettä uudelleen ja '
+        + 'lopettaa toiminnan. Julkisuuteen tuli tieto, että yhtiö tiesi rakennetta '
+        + 'valvovien antureiden ongelmista — mikä nosti kysymyksen siitä, oliko '
+        + 'varoituksia sivuutettu.'
+        + '\n\nOnnettomuudesta oli kolme vuotta ja kaksi kuukautta Marianan '
+        + 'patoturmaan, jossa kuoli 19 ihmistä ja Bento Rodriguesin kylä tuhoutui ja '
+        + 'jota pidetään Brasilian pahimpana ympäristökatastrofina. Sen mahdollisti '
+        + 'lähteen mukaan maan heikko ja aukkoinen valvonta; kolme vuotta '
+        + 'jälkeenpäin yhtiöt olivat maksaneet Marianasta määrätyistä 785 miljoonan '
+        + 'realin sakoista vain 3,4 prosenttia.',
+      lahde: 'en-Wikipedia "Brumadinho dam disaster". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä teki Brumadinhon padon murtumisesta erityisen tapauksen?',
+        vaihtoehdot: [
+          'Pato oli maailman suurin rikastushiekkapato',
+          'Pato oli rakennettu vasta edellisenä vuonna',
+          'Sama yhtiö oli menettänyt padon Marianassa kolme vuotta aiemmin',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  CHL: [
+    /*
+     * Villa Baviera (entinen Colonia Dignidad), Parral, Maulen alue.
+     * Lähde: en.wikipedia.org: Colonia Dignidad
+     */
+    {
+      id: 'colonia-dignidad',
+      otsikko: 'Colonia Dignidad — valtio valtiossa',
+      nimio: 'Colonia Dignidad',
+      vuosi: '1961–2005',
+      paikka: 'Villa Baviera, Parral, Maulen alue',
+      lat: -36.1, lon: -71.4,
+      kortti: 'Saksalainen siirtokunta Chilen maaseudulla eli piikkilanka-aidan, '
+        + 'vartiotornin ja valonheittimien takana. Sen perustaja oli paennut '
+        + 'Saksasta lapsiin kohdistuvia syytteitä. Pinochetin salainen poliisi '
+        + 'käytti aluetta vankien säilyttämiseen, ja osa yhteisön johdosta '
+        + 'osallistui tekoihin itse.',
+      teksti: 'Colonia Dignidad oli syrjäinen yhdyskunta Chilen Maulen alueella '
+        + 'Parralin kunnassa, Perquilauquén-joen pohjoisrannalla noin 35 kilometriä '
+        + 'kunnan keskustasta kaakkoon. Sen perusti 1961 saksalainen saarnaaja Paul '
+        + 'Schäfer, jota vastaan oli Länsi-Saksassa nostettu syytteitä lasten '
+        + 'hyväksikäytöstä. Yhteisö osti 3 062 hehtaarin tilan, ja alue kasvoi '
+        + 'lopulta noin 13 700 hehtaariin; asukkaita oli enimmillään kolmisensataa.'
+        + '\n\nUlospäin toiminta oli maataloutta, ja alueella oli eri aikoina koulu, '
+        + 'sairaala, kaksi kiitorataa, ravintola ja voimalaitos. Sisäänpäin yhteisö '
+        + 'oli suljettu: piikkilanka-aita, vartiotorni ja valonheittimet, ja '
+        + 'myöhemmissä raporteissa kerrottiin salaisista asevarastoista. Osa '
+        + 'ulkopuolisista kutsui yhteisöä kultiksi, osa harmittomiksi erakoiksi.'
+        + '\n\nChilen totuus- ja sovintokomission raporttien mukaan osa Pinochetin '
+        + 'salaisen poliisin DINA:n sieppaamista ihmisistä pidettiin vankeina '
+        + 'siirtokunnassa. Useimpia kidutettiin, ja monet myös teloitettiin '
+        + 'laittomasti. Chilen viranomaisten ja muiden tutkimukset paljastivat '
+        + 'lisäksi vuosikymmenten mittaisen lasten seksuaalisen hyväksikäytön.'
+        + '\n\nNimi muutettiin 1991 Villa Bavieraksi. Schäfer pakeni 1996 '
+        + 'Argentiinaan välttääkseen Chilessä nostetut hyväksikäyttösyytteet, ja '
+        + 'hänen lähdettyään ote asukkaista löystyi. Nykyään asukkaat saavat lähteä '
+        + 'vapaasti ja alue on avoinna matkailijoille.',
+      lahde: 'en-Wikipedia "Colonia Dignidad". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Colonia Dignidad kuuluu Chilen diktatuurin historiaan?',
+        vaihtoehdot: [
+          'Salainen poliisi piti siellä sieppaamiaan vankeja',
+          'Siirtokunta rahoitti oppositiota',
+          'Se ylläpiti maan ainoaa vapaata radioasemaa',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Estadio Nacional, Santiago (Chile–Italia, MM-kisojen B-lohko).
+     * Lähde: en.wikipedia.org: Battle of Santiago (1962 FIFA World Cup)
+     */
+    {
+      id: 'santiagon-taistelu-1962',
+      otsikko: 'Santiagon taistelu — ottelu, jonka poliisi keskeytti neljästi',
+      nimio: 'Santiago 1962',
+      vuosi: '1962',
+      paikka: 'Estadio Nacional, Santiago',
+      lat: -33.4644, lon: -70.6106,
+      kortti: 'Ottelua edelsi lehtisota: italialaiset toimittajat kuvasivat '
+        + 'isäntäkaupungin kurjaksi, ja chileläiset lehdet vastasivat samalla '
+        + 'mitalla. Kentällä ensimmäinen rike tuli 35 sekunnissa. Poliisin oli '
+        + 'tultava väliin neljä kertaa, ja tuomari keksi myöhemmin varoituskortit.',
+      teksti: 'Chile ja Italia kohtasivat MM-kisojen B-lohkossa Santiagossa 2. '
+        + 'kesäkuuta 1962. Ottelusta tuli tunnettu Santiagon taisteluna: kaksi '
+        + 'pelaajaa sai ulosajon, nyrkkejä heilui ja poliisin oli puututtava peliin '
+        + 'neljästi. Erotuomarina oli englantilainen Ken Aston, joka myöhemmin keksi '
+        + 'keltaisen ja punaisen kortin.'
+        + '\n\nTunnelmaa oli nostatettu etukäteen. Italialaiset toimittajat Antonio '
+        + 'Ghirelli ja Corrado Pizzinelli olivat kirjoittaneet, ettei Santiagon '
+        + 'puhelimista ole mihinkään, että sähke Eurooppaan maksaa kohtuuttomasti ja '
+        + 'että kaupunki on köyhä ja takapajuinen. Chileläiset lehdet vastasivat '
+        + 'kutsumalla italialaisia fasisteiksi ja dopingin käyttäjiksi. Toimittajat '
+        + 'joutuivat pakenemaan maasta, ja italialaiseksi luultu argentiinalainen '
+        + 'kirjoittaja hakattiin santiagolaisessa baarissa sairaalakuntoon.'
+        + '\n\nEnsimmäinen rike tuli 35 sekunnin kohdalla. Giorgio Ferrini ajettiin '
+        + 'ulos kahdeksannella minuutilla eikä suostunut poistumaan, joten poliisit '
+        + 'raahasivat hänet pois. Sekaannuksessa Leonel Sánchez mursi vasemmalla '
+        + 'koukullaan Humberto Maschion nenän, mutta Aston ei nähnyt sitä. Kun Mario '
+        + 'David myöhemmin yritti potkaista Sánchezia päähän, hänkin sai lähteä.'
+        + '\n\nChile voitti 2–0 viimeisen vartin aikana: Jaime Ramírez puskumaalilla '
+        + 'ja Jorge Toro matalalla kaukolaukauksella. Taustalla oli myös se, että '
+        + 'kisajärjestelyt olivat kärsineet vuoden 1960 Valdivian maanjäristyksestä, '
+        + 'ja italialaislehdet olivat kirjoittaneet kisojen antamisen Chilelle olleen '
+        + 'puhdasta hulluutta.',
+      lahde: 'en-Wikipedia "Battle of Santiago (1962 FIFA World Cup)". Tarkistettu '
+        + '6.9.2026.',
+      visa: {
+        kysymys: 'Kuka tuomitsi Santiagon taistelun ja mitä hän myöhemmin keksi?',
+        vaihtoehdot: [
+          'Chileläinen tuomari, joka keksi lisäajan',
+          'Englantilainen Ken Aston, joka keksi keltaisen ja punaisen kortin',
+          'Italialainen tuomari, joka keksi videotarkistuksen',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  COL: [
+    /*
+     * Barún saaren edusta, Cartagena (San Josén uppoamispaikka).
+     * Lähde: en.wikipedia.org: Spanish galleon San José
+     */
+    {
+      id: 'san-josen-galleoni',
+      otsikko: 'San José — aarrelaiva, josta riitelee neljä osapuolta',
+      nimio: 'San Josén aarre',
+      vuosi: '1708',
+      paikka: 'Barún saaren edusta, Cartagena',
+      lat: 10.1, lon: -75.9,
+      kortti: 'Kuudenkymmenenneljän tykin galleoni upposi taistelussa Cartagenan '
+        + 'edustalla, ja mukana painui pohjaan lähes kuusisataa miestä. Ruumassa oli '
+        + 'kultaa, hopeaa ja smaragdeja. Hylky löytyi 2015 kuudensadan metrin '
+        + 'syvyydestä — ja siitä lähtien siitä on riidelty.',
+      teksti: 'San José oli Espanjan laivaston 64-tykkinen galleoni, joka '
+        + 'laskettiin vesille 1698 Baskimaassa. Se toimi hopealaivueen lippulaivana '
+        + 'Espanjan perimyssodassa ja upposi taistelussa Barún saaren edustalla '
+        + 'lähellä Cartagenaa 8. kesäkuuta 1708.'
+        + '\n\nViimeisellä matkallaan laiva purjehti Panaman Portobelosta '
+        + 'Cartagenaan kolmen sotalaivan ja neljäntoista kauppalaivan saattueessa. '
+        + 'Ruumassa oli Perun varakuninkaanmaista kerättyä kultaa, hopeaa ja '
+        + 'smaragdeja, muun muassa Potosín kaivoksista nykyisen Bolivian alueelta. '
+        + 'Kun saattue kohtasi brittilaivueen, San Josén ruutivarastot räjähtivät, ja '
+        + 'lähes kaikki noin kuusisataa miestä kuoli. Hylky on siksi yhtä aikaa '
+        + 'vedenalainen kulttuuriperintökohde ja sotahauta.'
+        + '\n\nHylky paikannettiin marraskuussa 2015 kuudensadan metrin syvyydestä. '
+        + 'Lastin arvoksi on arvioitu noin 17 miljardia dollaria vuoden 2023 hinnoin. '
+        + 'Löytö laukaisi kansainvälisen omistuskiistan: Espanja vetoaa siihen, että '
+        + 'kyseessä on sen laivaston sotalaiva, Kolumbia siihen, että hylky on maan '
+        + 'vedenalaista kansallisomaisuutta. Vaatimuksia ovat esittäneet myös '
+        + 'pelastusyhtiö Sea Search Armada ja bolivialaiset alkuperäiskansojen '
+        + 'ryhmät.'
+        + '\n\nKolumbia ei ole ratifioinut YK:n merioikeusyleissopimusta eikä '
+        + 'Unescon vedenalaisen kulttuuriperinnön sopimusta, jotka molemmat tukevat '
+        + 'sotalaivan lippuvaltiolle kuuluvaa koskemattomuutta. Heinäkuusta 2017 '
+        + 'alkaen Kolumbian kulttuuriministeriö, antropologian ja historian '
+        + 'instituutti, laivasto ja merenkulkuviranomainen ovat tutkineet hylkyä ja '
+        + 'nostaneet siitä esineitä Cartagenaan suunniteltua museota varten.',
+      lahde: 'en-Wikipedia "Spanish galleon San José". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi San Josén hylystä kiistellään?',
+        vaihtoehdot: [
+          'Hylyn sijaintia ei tiedetä tarkasti',
+          'Hylky on kansainvälisillä vesillä eikä kenenkään',
+          'Espanja pitää sitä sotalaivanaan ja Kolumbia kansallisomaisuutenaan',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Ciénagan tori, Magdalena (lakkolaisten kokoontumispaikka).
+     * Lähde: en.wikipedia.org: Banana Massacre
+     */
+    {
+      id: 'banaanilakko-1928',
+      otsikko: 'Ciénaga 1928 — yhdeksän vaatimusta ja konekiväärit',
+      nimio: 'Ciénaga 1928',
+      vuosi: '1928',
+      paikka: 'Ciénagan tori, Magdalenan departementti',
+      lat: 11.0064, lon: -74.2464,
+      kortti: 'Banaanityöläiset olivat lakossa yhdeksän vaatimuksen puolesta: '
+        + 'sairaala, siistit asuntolat, palkka rahana eikä kupongeilla. Yhtiö '
+        + 'kieltäytyi neuvottelemasta, ja hallitus lähetti seitsemänsataa sotilasta. '
+        + 'Joulukuun viidentenä konekiväärit oli nostettu torin kulmien katoille.',
+      teksti: 'United Fruit Companyn banaaniviljelmien työläiset aloittivat lakon '
+        + '12. marraskuuta 1928. Vaatimuksia oli yhdeksän: alihankkijoiden kautta '
+        + 'palkkaamisen lopettaminen, pakollinen ryhmävakuutus, korvaukset '
+        + 'työtapaturmista, hygieeniset asuntolat ja kuusipäiväinen työviikko, '
+        + 'palkankorotus pienituloisimmille, viikoittainen palkanmaksu, '
+        + 'konttorikauppojen lakkauttaminen, kupongeilla maksamisen lopettaminen ja '
+        + 'sairaalapalvelujen parantaminen.'
+        + '\n\nLakosta kasvoi siihenastisen Kolumbian suurin työtaistelu: mukana oli '
+        + 'vähintään 25 000 työläistä. Yhtiö kieltäytyi neuvottelemasta viikkoja. '
+        + 'Yhdysvaltain edustajat ja yhtiön väki kuvasivat lakkoa sähkeissään '
+        + 'ulkoministeri Frank B. Kelloggille kommunistiseksi ja kumoukselliseksi, ja '
+        + 'Kolumbian hallitusta painosti sekin, että yhtiö saattoi katkaista '
+        + 'banaanien viennin Yhdysvaltoihin ja Eurooppaan.'
+        + '\n\nPresidentti Miguel Abadía Méndezin hallitus nimitti kenraali Carlos '
+        + 'Cortés Vargasin Magdalenan sotilaskomentajaksi ja lähetti alueelle 700 '
+        + 'miestä. Viidentenä joulukuuta noin 1 500 työläistä perheineen odotti '
+        + 'Ciénagan torilla sunnuntain messun jälkeen kuvernöörin puhetta. Sotilaat '
+        + 'nostivat konekiväärit torin kulmien matalille katoille, sulkivat kadut, '
+        + 'antoivat viiden minuutin varoituksen ja avasivat tulen väkijoukkoon.'
+        + '\n\nCortés Vargas otti vastuun 47 kuolleesta. Todellista määrää ei ole '
+        + 'koskaan vahvistettu: tutkija Herrera Soton kokoamat arviot vaihtelevat '
+        + '47:stä kahteen tuhanteen. Gabriel García Márquez kuvasi tapahtuman '
+        + 'romaanissaan Sadan vuoden yksinäisyys ja mainitsi kolmetuhatta kuollutta, '
+        + 'mutta sekin luku on kaunokirjallinen eikä laskettu.',
+      lahde: 'en-Wikipedia "Banana Massacre". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Ciénagan uhrien määrää ei tiedetä?',
+        vaihtoehdot: [
+          'Yhtiö esti lehdistön pääsyn alueelle vuosikausiksi',
+          'Kaikki asiakirjat tuhoutuivat myöhemmin tulipalossa',
+          'Tarkkoja kirjauksia ei ole, ja arviot vaihtelevat 47:stä kahteen tuhanteen',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  /* ==================================================================
+   * ERÄ M2, OSEANIA (6.9.2026). Omistaja: *"Jatka kartta nostojen tekoa
+   * koko maailmaan."* Viisi maata, kaksi skandaalia kummallekin. Kaikki
+   * pisteet on tarkistettu maan fokuslehden rajausta vasten ja mitattu
+   * irti pelikaupungeista (KAUPUNGIN_KOHDALLA_SADE 7); perustelut ja
+   * mitat ovat maiden maastokohdepakeissa (js/packs/maastokohteet-aus.js
+   * ja sisarpakit). Erä on kuvaton.
+   * ================================================================ */
+  AUS: [
+    /*
+     * Houtman Abrolhos, Länsi-Australian edustalla.
+     * Lähde: en.wikipedia.org: Batavia (1628 ship)
+     */
+    {
+      id: 'batavian-haaksirikko',
+      otsikko: 'Batavia 1629 — haaksirikko, joka muuttui verilöylyksi',
+      nimio: 'Batavia 1629',
+      vuosi: '1629',
+      paikka: 'Houtman Abrolhos, Länsi-Australian edustalla',
+      lat: -28.4903, lon: 113.7933,
+      kortti: 'Kolmesataa ihmistä pääsi hengissä maihin autiolle luodolle. Sitten '
+        + 'komentaja lähti hakemaan apua, ja se, joka jäi käskyvaltaan, oli suunnitellut '
+        + 'kapinaa jo ennen karilleajoa. Kun apu vihdoin palasi, eloonjääneitä ei ollut '
+        + 'enää kolmesataa vaan runsaat sata — ja loput oli tappanut oma väki.',
+      teksti: 'Batavia oli Alankomaiden Itä-Intian kauppakomppanian lippulaiva, joka '
+        + 'rakennettiin Amsterdamissa 1628. Neitsytmatkallaan se ajoi 4. kesäkuuta 1629 '
+        + 'karille Houtman Abrolhosin luotoketjulle Länsi-Australian edustalla. Aluksen '
+        + '341 matkustajasta ja miehistön jäsenestä noin kolmesataa pääsi maihin; loput '
+        + 'hukkuivat yrittäessään.\n\n'
+        + 'Komentaja Francisco Pelsaert purjehti avoveneellä lähes 3 000 kilometriä '
+        + '33 päivässä Bataviaan eli nykyiseen Jakartaan hakemaan apua. Käskyvaltaan jäi '
+        + 'komppanian virkamies Jeronimus Cornelisz, joka oli suunnitellut kapinaa jo '
+        + 'ennen haaksirikkoa. Hän lähetti parikymmentä miestä sotilas Wiebbe Hayesin '
+        + 'johdolla muka etsimään juomavettä lähisaarilta ja jätti heidät kuolemaan.\n\n'
+        + 'Sen jälkeen Cornelisz ja hänen kannattajansa surmasivat viikkojen kuluessa '
+        + 'noin 125 eloonjäänyttä, myös naisia ja lapsia. Hayesin joukko löysi kuitenkin '
+        + 'vettä, kuuli tapahtuneesta ja alkoi taistella kapinallisia vastaan. Viimeisin '
+        + 'ja verisin yhteenotto keskeytyi lokakuussa 1629, kun Pelsaert palasi '
+        + 'Sardam-aluksella.\n\n'
+        + 'Cornelisz ja kuusi hänen miestään tuomittiin ja teloitettiin — he olivat '
+        + 'ensimmäiset eurooppalaiset, jotka teloitettiin laillisesti Australiassa. Kaksi '
+        + 'lievemmistä rikoksista tuomittua jätettiin mantereelle, ja heistä tuli '
+        + 'ensimmäiset mantereelle pysyvästi jääneet eurooppalaiset; heistä ei kuultu '
+        + 'sen koommin. Bataviasta lähteneistä matkustajista vain 122 pääsi perille.',
+      lahde: 'en-Wikipedia "Batavia (1628 ship)", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuka tappoi suurimman osan Batavian haaksirikosta selvinneistä?',
+        vaihtoehdot: [
+          'Luodon alkuperäisasukkaat',
+          'Nälkä ja jano autiolla luodolla',
+          'Kapinaan noussut osa eloonjääneistä itse',
+        ],
+        oikea: 2,
+      },
+    },
+    /*
+     * Glenrowan, Victoria (hotellin piiritys).
+     * Lähde: en.wikipedia.org: Ned Kelly
+     */
+    {
+      id: 'glenrowanin-piiritys',
+      otsikko: 'Glenrowan 1880 — auran teristä taottu haarniska',
+      nimio: 'Glenrowan 1880',
+      vuosi: '1880',
+      paikka: 'Glenrowan, Victoria (hotellin piiritys)',
+      lat: -36.4625, lon: 146.2225,
+      kortti: 'Jengi aikoi suistaa poliisijunan raiteilta ja hyökätä sen jälkeen '
+        + 'Benallaan. Poliisi sai vihjeen, ja suunnitelma kääntyi päinvastaiseksi: '
+        + 'neljä rosvoa ja kymmeniä panttivankeja hotellissa, ympärillä aseistettu '
+        + 'piiritys. Aamulla ulos käveli mies, jonka päällä oli auran teristä taottu '
+        + 'rautapuku.',
+      teksti: 'Edward "Ned" Kelly syntyi joulukuussa 1854 Victorian maaseudulla '
+        + 'irlantilaisten vanhempien kolmantena lapsena. Isä oli pakkosiirretty vanki, ja '
+        + 'perhe koki olevansa suurmaanomistajien poljettavana ja Victorian poliisin '
+        + 'vainoama. Kelly ehti istua kaksi vankeustuomiota jo teini-ikäisenä.\n\n'
+        + 'Vuonna 1878 Kellyjen kotona sattui väkivaltainen välikohtaus poliisin kanssa, '
+        + 'ja Ned asetettiin syytteeseen murhan yrityksestä. Hän pakeni metsiin ja vannoi '
+        + 'kostavansa äitinsä puolesta, joka oli joutunut vankilaan. Kun hän, veljensä Dan '
+        + 'sekä Joe Byrne ja Steve Hart ampuivat kolme poliisia, Victorian hallitus julisti '
+        + 'heidät lainsuojattomiksi.\n\n'
+        + 'Kaksi vuotta jengi vältteli poliisia laajan tukijaverkoston avulla ja ryösti '
+        + 'muun muassa Euroan ja Jerilderien. Vuonna 1880 se yritti suistaa poliisijunan '
+        + 'raiteilta alkusoittona hyökkäykselle Benallaan, poliisitoiminnan tukikohtaan. '
+        + 'Poliisi oli saanut vihjeen ja kohtasi jengin Glenrowanissa, jossa se piti '
+        + 'kymmeniä panttivankeja hotellissa.\n\n'
+        + 'Kahdentoista tunnin piirityksessä lainsuojattomat käyttivät auran teristä '
+        + 'takomiaan haarniskoja. Kelly oli ainoa eloon jäänyt, ja hänet vangittiin '
+        + 'vakavasti haavoittuneena. Tuhannet kannattajat vetosivat armahduksen puolesta, '
+        + 'mutta hänet tuomittiin murhasta ja hirtettiin Melbournen vankilassa.',
+      lahde: 'en-Wikipedia "Ned Kelly", johdanto-osa ja osio "Family background and early '
+        + 'life". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä Kellyn jengin haarniskat oli taottu?',
+        vaihtoehdot: [
+          'Auran teristä',
+          'Junanvaunun seinälevyistä',
+          'Kaivosmiesten kypäristä',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  FJI: [
+    /*
+     * Nairain saari, jonka luona Eliza haaksirikkoutui.
+     * Lähde: en.wikipedia.org: Charles Savage (beachcomber)
+     */
+    {
+      id: 'elizan-musketit',
+      otsikko: 'Elizan musketit — merimies, joka muutti Fidžin sodat',
+      nimio: 'Elizan musketit',
+      vuosi: '1808–1813',
+      paikka: 'Nairain saari, jonka luona Eliza haaksirikkoutui',
+      lat: -17.8, lon: 179.4167,
+      kortti: 'Hylystä nostettiin muutama musketti, ja sillä yksi saari nousi koko '
+        + 'saariston herraksi. Ruotsalaissyntyinen merimies näytti Baun päälliköille, '
+        + 'mitä ase tekee — ja jäi itse taistelemaan. Viisi vuotta myöhemmin hän seisoi '
+        + 'aseettomana kalliolla ja luuli osaavansa puhua itsensä ulos.',
+      teksti: 'Charles Savage oli todennäköisesti ruotsalaissyntyinen merimies, joka '
+        + 'jätettiin Tongaan noin vuonna 1807. Sieltä hänet vietiin Fidžille '
+        + 'Eliza-aluksella, joka haaksirikkoutui Nairain saaren lähellä.\n\n'
+        + 'Savage puhui sekä tongaa että fidžiä ja pääsi nopeasti Baun saaren päällikön '
+        + 'Naulivoun suosioon. Elizan hylystä hän sai talteen musketteja ja näytti Baun '
+        + 'johtajille, mitä niillä tehdään. Ilmeisesti juuri silloin tuliaseita käytettiin '
+        + 'Fidžillä ensimmäisen kerran. Savage johti pientä palkkasoturijoukkoa Naulivoun '
+        + 'palveluksessa, ja koska joukolla ei ollut fidžiläisen sodankäynnin kulttuurisia '
+        + 'pidäkkeitä — kuten sitä, ettei vastapuolen päällikköä tähdätä heti alussa — '
+        + 'siitä tuli pelätty.\n\n'
+        + 'Kertomusten mukaan hän rakensi vihollisen linnoituksen ulkopuolelle '
+        + 'nuolenkestävän suojan, josta ampui rangaistuksetta. Osa väitteistä on '
+        + 'liioittelua ja eurooppalaista tarinankerrontaa, mutta hänen vaikutuksestaan Baun '
+        + 'nousuun on väitelty vakavasti.\n\n'
+        + 'Vuonna 1813 Savage oli mukana Hunter-aluksen santelipuukaupassa. Kuudentena '
+        + 'syyskuuta hän joutui Wailean väen väijytykseen, ja joukko puolustautui '
+        + 'kalliolla, joka sai nimen Dillon\'s Rock. Neuvottelujen aikana Savage luotti '
+        + 'kielitaitoonsa ja laskeutui alas aseetta. Hänet lyötiin maahan ja hukutettiin '
+        + 'kaivoon.',
+      lahde: 'en-Wikipedia "Charles Savage (beachcomber)", johdanto-osa sekä osiot '
+        + '"Arrival at Fiji", "Exploits with the Bau" ja "The events of Dillon\'s Rock". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä Charles Savage sai musketit, joilla hän palveli Baun päällikköä?',
+        vaihtoehdot: [
+          'Britannian laivasto antoi ne lahjaksi',
+          'Haaksirikkoutuneen Elizan hylystä',
+          'Hän osti ne Tongan kuninkaalta',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Baun saari, Kubunan päällikkösuvun keskus.
+     * Lähde: en.wikipedia.org: Seru Epenisa Cakobau
+     */
+    {
+      id: 'cakobaun-lasku',
+      otsikko: 'Cakobaun lasku — tulipalo, joka maksoi kokonaisen maan',
+      nimio: 'Cakobaun lasku',
+      vuosi: '1849–1875',
+      paikka: 'Baun saari, Kubunan päällikkösuvun keskus',
+      lat: -17.9722, lon: 178.614,
+      kortti: 'Amerikkalaisen konsulin talo paloi saarella vuonna 1849. Lasku lähetettiin '
+        + 'miehelle, joka ei ollut vielä edes päällikkö, saati kuningas — ja se oli '
+        + '44 000 dollaria. Neljännesvuosisataa myöhemmin sama lasku luovutti koko '
+        + 'saariston Britannian kruunulle, ja paluumatka Sydneystä toi mukanaan vielä '
+        + 'pahemman.',
+      teksti: 'Yhdysvaltain hallitus tunnusti Seru Epenisa Cakobaun vaatimuksen '
+        + 'yhdistyneen Fidžin kuninkuudesta paljon ennen kuin muut fidžiläiset päälliköt '
+        + 'sen hyväksyivät. Pitkällä aikavälillä tunnustus kääntyi häntä vastaan.\n\n'
+        + 'Amerikkalaiset pitivät häntä vastuullisena tuhopoltosta, joka tuhosi '
+        + 'Yhdysvaltain konsulin John Brown Williamsin kodin Nukulaun saarella vuonna '
+        + '1849, ja vaativat 44 000 dollarin korvausta. Tapahtuma-aikaan Cakobau ei ollut '
+        + 'vielä edes Vunivalu saati kuningas. Velan olivat aiheuttaneet Rewan päälliköt, '
+        + 'eikä hän kyennyt maksamaan sitä.\n\n'
+        + 'Peläten amerikkalaisten hyökkäystä ja liittämistä Cakobau päätti luovuttaa '
+        + 'saaret Yhdistyneelle kuningaskunnalle. Hän ojensi sotanuijansa kuningatar '
+        + 'Victorialle 10. lokakuuta 1874, kun luovutusasiakirja allekirjoitettiin. '
+        + 'Cakobau säilytti Baun Vunivalun arvon ja luovutti korkeimman Tui Viti '
+        + '-arvonimen kuningattarelle.\n\n'
+        + 'Juhlimaan lähtenyt lähetystö purjehti Sydneyyn ja sai siellä tuhkarokon. Paluu '
+        + 'käynnisti epidemian. Vuonna 1875 Fidžin ylilääkäri William MacGregor kirjasi '
+        + 'saarelaistyöläisten kuolleisuudeksi 540 tuhatta kohti. Cakobau eli sen jälkeen '
+        + 'hiljaa ja kuoli 1. helmikuuta 1883.',
+      lahde: 'en-Wikipedia "Seru Epenisa Cakobau", osio "Cession of power"; epidemian '
+        + 'kuolleisuusluku "History of Fiji", osio "After annexation (1875 to 1911)". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä syntyi velka, jonka takia Cakobau luovutti Fidžin Britannialle?',
+        vaihtoehdot: [
+          'Amerikkalaisen konsulin talon tuhopoltosta',
+          'Brittiläisten kauppiaiden lainoista',
+          'Sokeriruokoplantaasien perustamisesta',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  NZL: [
+    /*
+     * Matauri Bay, Cavallisaaret (laivan hylyn lepopaikka).
+     * Lähde: en.wikipedia.org: Sinking of the Rainbow Warrior
+     */
+    {
+      id: 'rainbow-warriorin-upotus',
+      otsikko: 'Rainbow Warrior 1985 — salainen palvelu upotti protestilaivan',
+      nimio: 'Rainbow Warrior',
+      vuosi: '1985',
+      paikka: 'Matauri Bay, Cavallisaaret (laivan hylyn lepopaikka)',
+      lat: -35.0333, lon: 173.9,
+      kortti: 'Kaksi räjähdystä satamassa juuri ennen puoltayötä, yksi kuollut '
+        + 'valokuvaaja ja laiva pohjassa. Ensin kiistettiin kaikki. Sitten selvisi, että '
+        + 'tekijät olivat ystävällismielisen valtion salaisen palvelun agentteja, ja '
+        + 'pääministeri joutui lukemaan lehdistölle kahdensadan sanan tunnustuksen.',
+      teksti: 'Rainbow Warrior oli Greenpeacen lippulaiva, joka oli kampanjoinut '
+        + 'valaanpyyntiä, hylkeenpyyntiä, ydinkokeita ja ydinjätteen mereen laskemista '
+        + 'vastaan. Keväällä 1985 se siirsi 300 marshallinsaarelaista Rongelapin atollilta, '
+        + 'jonka amerikkalaiset ydinkokeet olivat saastuttaneet, ja purjehti sitten '
+        + 'Uuteen-Seelantiin johtamaan mielenosoituslaivastoa Ranskan Mururoan ydinkokeita '
+        + 'vastaan.\n\n'
+        + 'Ranskan ulkomaantiedustelun DGSE:n operaatio sai koodinimen Satanique. Agentti '
+        + 'Christine Cabon soluttautui Greenpeacen Aucklandin toimistoon '
+        + 'ympäristöaktivistin valeasussa ja seurasi laivan viestintää. Kymmenentenä '
+        + 'heinäkuuta 1985 kaksi operaattoria upotti laivan Aucklandin satamassa. '
+        + 'Valokuvaaja Fernando Pereira palasi ensimmäisen räjähdyksen jälkeen hakemaan '
+        + 'kalustoaan ja hukkui toiseen.\n\n'
+        + 'Ranska kiisti aluksi kaiken. Uuden-Seelannin poliisi sai kaksi agenttia kiinni, '
+        + 'ja skandaali kaatoi puolustusministeri Charles Hernun. Agentit tunnustivat '
+        + 'taposta ja saivat kymmenen vuotta, mutta viettivät vain kaksi vuotta Ranskan '
+        + 'Polynesian Haossa ennen vapautustaan.\n\n'
+        + 'Ranska pyysi anteeksi ja maksoi korvaukset Uudelle-Seelannille, Pereiran '
+        + 'perheelle ja Greenpeacelle; välitystuomioistuin määräsi 8,1 miljoonaa '
+        + 'dollaria. Hylky nostettiin, mutta vauriot olivat korjauskelvottomat, ja se '
+        + 'upotettiin 12. joulukuuta 1987 Matauri Bayhin tekoriutaksi.',
+      lahde: 'en-Wikipedia "Sinking of the Rainbow Warrior", johdanto-osa ja osio '
+        + '"Background", sekä "Rainbow Warrior (1955)", osio "Bombing". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuka upotti Rainbow Warriorin Aucklandin satamassa 1985?',
+        vaihtoehdot: [
+          'Ranskan ulkomaantiedustelun agentit',
+          'Laivan oma miehistö vakuutuspetoksena',
+          'Uuden-Seelannin merivoimat',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Parihakan kylä, Taranaki.
+     * Lähde: en.wikipedia.org: Parihaka
+     */
+    {
+      id: 'parihakan-valtaus',
+      otsikko: 'Parihaka 1881 — 1 600 sotilasta kylää vastaan, joka ei puolustautunut',
+      nimio: 'Parihaka 1881',
+      vuosi: '1881',
+      paikka: 'Parihakan kylä, Taranaki',
+      lat: -39.2883, lon: 173.8404,
+      kortti: 'Kylä vastasi maiden takavarikointiin kyntämällä uudisasukkaiden peltoja ja '
+        + 'pystyttämällä aitoja teiden poikki. Aseisiin ei tartuttu kertaakaan. Marraskuun '
+        + 'aamuna 1881 kylään ratsasti 1 600 sotilasta, ja vastaan tuli satoja hyppiviä ja '
+        + 'laulavia lapsia, jotka tarjosivat heille ruokaa.',
+      teksti: 'Parihaka perustettiin noin 1866 Taranakiin maalle, jonka hallitus oli '
+        + 'takavarikoinut Uuden-Seelannin sotien jälkeen. Perustajat olivat päälliköt '
+        + 'Te Whiti o Rongomai ja Tohu Kākahi. Kylä kasvoi yli kahdentuhannen asukkaan '
+        + 'yhteisöksi, joka veti puoleensa maansa menettäneitä maoreja ja teki vaikutuksen '
+        + 'eurooppalaisiin vierailijoihin siisteydellään, ahkeruudellaan ja laajoilla '
+        + 'viljelyksillään.\n\n'
+        + 'Kun Taranakiin virtasi uudisasukkaita, hallitus alkoi ottaa haltuun myös niitä '
+        + 'takavarikoituja maita, joita ei ollut vielä asutettu. Parihakan väki kieltäytyi '
+        + 'korvauksista. Vuodesta 1878 Te Whiti ja Tohu vastasivat väkivallattomilla '
+        + 'kampanjoilla: ensin kynnettiin uudisasukkaiden peltoja, sitten pystytettiin '
+        + 'aitoja teiden poikki. Yli 400 maoria vangittiin ja pidettiin Eteläsaarella '
+        + 'ilman oikeudenkäyntiä jopa kuusitoista kuukautta.\n\n'
+        + 'Alkuperäisasukkaiden ministerin John Brycen painostuksesta hallitus toimi '
+        + 'lokakuun 1881 lopulla, kun myötämielinen kuvernööri oli maasta poissa. '
+        + 'Viidentenä marraskuuta 1 600 sotilasta ja ratsuväkeä marssi kylään aamun '
+        + 'sarastaessa. Heitä vastaan tulivat hyppivät ja laulavat lapset ruokaa '
+        + 'tarjoten.\n\n'
+        + 'Te Whiti ja Tohu vangittiin kuudeksitoista kuukaudeksi, 1 600 asukasta '
+        + 'karkotettiin ympäri Taranakia ilman ruokaa ja suojaa, ja jäljelle jääneille '
+        + '600:lle annettiin kulkuluvat. Sotilaat ryöstivät ja tuhosivat lähes kaikki '
+        + 'kylän rakennukset.',
+      lahde: 'en-Wikipedia "Parihaka", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Parihakan asukkaat vastustivat maiden takavarikointia?',
+        vaihtoehdot: [
+          'Sissisodalla vuoristosta käsin',
+          'Väkivallattomasti kyntäen ja aitoja pystyttäen',
+          'Vetoamalla Lontoon tuomioistuimiin',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  PNG: [
+    /*
+     * Ok Tedin kaivos, Läntinen maakunta.
+     * Lähde: en.wikipedia.org: Ok Tedi environmental disaster
+     */
+    {
+      id: 'ok-tedin-jate',
+      otsikko: 'Ok Tedi — kaksi miljardia tonnia jätettä jokeen',
+      nimio: 'Ok Tedi',
+      vuosi: '1984–2013',
+      paikka: 'Ok Tedin kaivos, Läntinen maakunta',
+      lat: -5.2114, lon: 141.1395,
+      kortti: 'Patoallas sortui vuonna 1984, ja sen jälkeen rikastushiekka laskettiin '
+        + 'yksinkertaisesti jokeen — vuosikymmenten ajan. Tuhat kilometriä uomaa nousi '
+        + 'kymmenen metriä, syvä ja hidas joki muuttui matalaksi koskeksi, ja '
+        + '50 000 ihmisen elämä meni sekaisin. Yhtiön oma toimitusjohtaja sanoi lopulta, '
+        + 'ettei kaivokseen olisi pitänyt koskaan lähteä.',
+      teksti: 'Ok Tedin ympäristökatastrofi vahingoitti tuhannen kilometrin matkalla Ok '
+        + 'Tedi- ja Fly-jokia Papua-Uuden-Guinean Läntisessä maakunnassa vuosina '
+        + '1984–2013, ja vahinko jatkuu yhä. Syynä oli noin kahden miljardin tonnin '
+        + 'käsittelemätön kaivosjäte, joka laskettiin jokeen sen jälkeen, kun kaivoksen '
+        + 'rikastushiekan patojärjestelmä sortui vuonna 1984.\n\n'
+        + 'Vuonna 1999 BHP ilmoitti, että jokeen oli laskettu yli kymmenen vuoden ajan '
+        + '90 miljoonaa tonnia jätettä vuodessa. Yhtiön toimitusjohtaja Paul Anderson '
+        + 'sanoi, ettei kaivos sopinut yhtiön ympäristöarvoihin ja ettei siihen olisi '
+        + 'koskaan pitänyt lähteä. Vuonna 2006 jokeen päätyi yhä 80 miljoonaa tonnia '
+        + 'jätettä ja eroosioainesta vuodessa, ja noin 1 588 neliökilometriä metsää on '
+        + 'kuollut tai kärsii.\n\n'
+        + 'Joenpohja nousi kymmenen metriä, ja syvästä ja hitaasta joesta tuli matala ja '
+        + 'koskinen — se katkaisi paikallisten kulkureitit. Kohonnut uoma aiheutti '
+        + 'tulvia, jotka jättivät saastuneen mutakerroksen taro-, banaani- ja '
+        + 'sagoviljelmille.\n\n'
+        + 'Maanomistajat nostivat ryhmäkanteen Ok Tedi Miningia ja BHP Billitonia '
+        + 'vastaan. Fly-joen alajuoksun kylissä katsotaan, että vahinko elinkeinoille on '
+        + 'paljon suurempi kuin kaivoksesta saatu hyöty. Katastrofia pidetään yhtenä '
+        + 'pahimmista ihmisen aiheuttamista ympäristötuhoista.',
+      lahde: 'en-Wikipedia "Ok Tedi environmental disaster", johdanto-osa ja osio '
+        + '"Environmental impact". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä käynnisti Ok Tedin ympäristökatastrofin vuonna 1984?',
+        vaihtoehdot: [
+          'Maanjäristys kaatoi kaivostornin',
+          'Rikastushiekan patojärjestelmän sortuminen',
+          'Öljysäiliöaluksen haaksirikko joen suulla',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Port Breton, Uuden-Irlannin lounaisrannikko. Artikkelilla ei ole
+     * koordinaattia; piste on valittu saaren lounaiskulmaan, jonka
+     * artikkeli nimeää (Verronin vuoriston juurelle).
+     * Lähde: en.wikipedia.org: De Rays Expedition
+     */
+    {
+      id: 'de-raysin-uusi-ranska',
+      otsikko: 'Uusi Ranska 1880 — markiisi myi paratiisin, jota ei ollut',
+      nimio: 'Uusi Ranska 1880',
+      vuosi: '1880',
+      paikka: 'Port Breton, Uuden-Irlannin lounaisrannikko',
+      lat: -4.72, lon: 152.83,
+      kortti: 'Esite lupasi pääkaupungin, leveät kadut, komeat julkiset rakennukset ja '
+        + 'Rivieran ilmaston. Kolmesataaneljäkymmentä italialaista maksoi 1 800 frangia '
+        + 'kullassa tai viisi vuotta työtään ja purjehti Barcelonasta. Perillä oli '
+        + 'sademetsä, joka laskeutui suoraan mereen — eikä yhtään taloa.',
+      teksti: 'Markiisi de Rays oli ranskalainen aatelismies, joka yritti perustaa '
+        + 'siirtokunnan eteläiselle Tyynellemerelle. Paikka, jota hän kutsui nimellä La '
+        + 'Nouvelle France, oli nykyinen Uusi-Irlanti Bismarckin saaristossa. Vuonna 1879 '
+        + 'hän levitti ympäri Eurooppaa mainoksia, jotka kuvasivat pääkaupunki Port '
+        + 'Bretonin vilkkaaksi ja jo kahdesti onnistuneesti asutetuksi siirtokunnaksi, '
+        + 'jossa oli komeita julkisia rakennuksia, leveitä teitä ja viljelykelpoista '
+        + 'maata.\n\n'
+        + 'Kolmesataaneljäkymmentä siirtolaista Venetosta liittyi retkikuntaan. Kukin '
+        + 'maksoi 1 800 frangia kullassa tai sitoutui viiden vuoden työhön, ja '
+        + 'vastineeksi luvattiin kaksikymmentä hehtaaria maata ja nelihuoneinen talo. '
+        + 'Neljästä retkikunnastaan markiisi keräsi yli seitsemän miljoonaa frangia.\n\n'
+        + 'Sekä Ranska että Italia kutsuivat hanketta huijaukseksi eivätkä myöntäneet '
+        + 'osallistujille passeja. Moni ei uskonut viranomaisia, ja de Rays järjesti '
+        + 'lähdön Barcelonasta. India-laiva purjehti 9. heinäkuuta 1880, ja matka kesti '
+        + 'yli kolme kuukautta ahtaissa ja sairauden täyttämissä oloissa.\n\n'
+        + 'Neljäntenätoista lokakuuta maihin nousseet huomasivat, ettei mitään Uutta '
+        + 'Ranskaa ollut. Verronin vuoriston juurella oli tiheää sademetsää, josta ei '
+        + 'saanut peltoa, ja siirtolaiset sairastuivat malariaan. Satakaksikymmentäkolme '
+        + 'heistä kuoli ennen kuin Australian viranomaiset pelastivat loput.',
+      lahde: 'en-Wikipedia "De Rays Expedition", johdanto-osa sekä osiot "The Paradise of '
+        + 'New France", "The voyage" ja "Settlement in Port Breton". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä siirtolaiset löysivät Port Bretonista lokakuussa 1880?',
+        vaihtoehdot: [
+          'Valmiin kaupungin, mutta ei ruokaa',
+          'Toisen retkikunnan, joka oli ehtinyt ensin',
+          'Ei mitään siirtokuntaa, vain jyrkkää sademetsää',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  SLB: [
+    /*
+     * Sinalagun satama, Kwaion rannikko, Malaita.
+     * Lähde: en.wikipedia.org: Malaita massacre
+     */
+    {
+      id: 'malaitan-verenvuodatus',
+      otsikko: 'Malaita 1927 — veronkanto, joka päättyi rankaisuretkeen',
+      nimio: 'Kwaio 1927',
+      vuosi: '1927',
+      paikka: 'Sinalagun satama, Kwaion rannikko, Malaita',
+      lat: -9.05, lon: 161.05,
+      kortti: 'Piirivirkamies tiesi hyökkäyksestä etukäteen ja päätti silti pystyttää '
+        + 'veronkantopöydän maihin: pako olisi näyttänyt heikkoudelta. Basiana maksoi '
+        + 'veronsa ensimmäisenä, palasi jonoon kiväärin piippu kainalossa — ja sen '
+        + 'jälkeen kuoli viisitoista virkamiestä ja lopulta noin kuusikymmentä kwaiota.',
+      teksti: 'Britannian Salomonsaarten protektoraatin Malaitan piirivirkamies William R. '
+        + 'Bell keräsi saarella päiveroa, jota kwaiot pitivät sekä rasitteena että '
+        + 'hyökkäyksenä perinteisiä arvoja vastaan. Syyskuussa 1927 Basianan johtamat '
+        + 'kwaiosoturit suunnittelivat hyökkäystä veronkantoon.\n\n'
+        + 'Juoni levisi ympäri saarta, ja Bell sai varoituksen hyvissä ajoin. Hän arvioi '
+        + 'kuitenkin paikallisia tapoja tuntien, että paras keino oli näyttää voimaa: '
+        + 'veron kerääminen laivasta käsin tai yksi mies kerrallaan olisi paljastanut '
+        + 'heikkoutta.\n\n'
+        + 'Maanantaina 3. lokakuuta 1927 Bell ankkuroi laivansa Sinalagun satamaan ja '
+        + 'pystytti tavanomaisen veronkantopisteen läheiseen notkoon. Tiistaiaamuna '
+        + 'soturit saapuivat. Basiana maksoi veronsa ensimmäisenä, haki kiväärinsä ja '
+        + 'palasi jonoon piilottaen piipun kainaloonsa; jonon kärjessä hän löi Bellin '
+        + 'kuoliaaksi. Samaan aikaan toinen ryhmä katkaisi verotalon seiniä sitovat '
+        + 'köynnökset, ja seinät romahtivat sisällä olleiden poliisien päälle. '
+        + 'Kaikkiaan viisitoista virkamiestä sai surmansa.\n\n'
+        + 'Kostoretki järjestettiin nopeasti. Siinä kuoli noin kuusikymmentä kwaiota, '
+        + 'lähes kaksisataa vangittiin ja heidän esi-isiensä pyhäköitä ja rituaaliesineitä '
+        + 'tuhottiin ja häpäistiin järjestelmällisesti. Tapahtuma muutti kwaioiden elämää '
+        + 'syvästi.',
+      lahde: 'en-Wikipedia "Malaita massacre", johdanto-osa ja osio "Tax collection '
+        + 'massacre". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi William Bell pystytti veronkantopisteen maihin, vaikka tiesi juonesta?',
+        vaihtoehdot: [
+          'Hän ei uskonut varoitusta todeksi',
+          'Näyttääkseen voimaa; pako olisi paljastanut heikkoutta',
+          'Kuvernööri oli käskenyt hänet rantaan',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Savon saaren edusta, Ironbottom Sound.
+     * Lähde: en.wikipedia.org: Battle of Savo Island
+     */
+    {
+      id: 'savon-yotaistelu',
+      otsikko: 'Savo 1942 — viiden istuvan ankan taistelu',
+      nimio: 'Savo 1942',
+      vuosi: '1942',
+      paikka: 'Savon saaren edusta, Ironbottom Sound',
+      lat: -9.1333, lon: 159.8167,
+      kortti: 'Japanilainen osasto purjehti alas salmea, jota liittoutuneet kutsuivat '
+        + 'nimellä The Slot, ja yllätti suojajoukon täydellisesti pimeässä. Neljä '
+        + 'risteilijää upposi, japanilaiset selvisivät vähällä — ja aamulla laivasto '
+        + 'lähti purkamatta maihinnousujoukkojensa muonaa.',
+      teksti: 'Savon saaren taistelu käytiin 8.–9. elokuuta 1942, ja se oli Guadalcanalin '
+        + 'kampanjan ensimmäinen suuri meritaistelu. Japanin laivasto kokosi vasta-iskuksi '
+        + 'liittoutuneiden maihinnousulle seitsemän risteilijän ja yhden hävittäjän '
+        + 'osaston vara-amiraali Gunichi Mikawan johdolla.\n\n'
+        + 'Osasto purjehti Uuden-Britannian ja Uuden-Irlannin tukikohdista alas '
+        + 'Uuden-Georgian salmea, jota liittoutuneet kutsuivat nimellä The Slot. '
+        + 'Tarkoitus oli katkaista maihinnousu hyökkäämällä kuljetuslaivaston ja sen '
+        + 'suojajoukon kimppuun. Liittoutuneiden suojana oli kahdeksan risteilijää ja '
+        + 'viisitoista hävittäjää vara-amiraali Victor Crutchleyn johdolla, mutta '
+        + 'taisteluun ehti vain viisi risteilijää ja seitsemän hävittäjää.\n\n'
+        + 'Yötaistelussa Mikawa yllätti liittoutuneet täysin ja upotti yhden '
+        + 'australialaisen ja kolme amerikkalaista risteilijää kärsien itse vain vähäisiä '
+        + 'vaurioita. Yhdysvaltain laivastohistorian johtaja, kontra-amiraali Samuel J. '
+        + 'Cox pitää tätä ja Tassafarongan taistelua maansa laivaston pahimpina tappioina '
+        + 'Pearl Harborin jälkeen.\n\n'
+        + 'Mikawa pelkäsi liittoutuneiden lentotukialusten iskua päivänvalossa ja '
+        + 'vetäytyi yön turvin sen sijaan, että olisi etsinyt ja tuhonnut kuljetusalukset. '
+        + 'Silti liittoutuneiden laivasto lähti suunniteltua aiemmin purkamatta kaikkia '
+        + 'varusteitaan, ja maihin nousseet merijalkaväen joukot jäivät niukoille '
+        + 'muonavaroille.',
+      lahde: 'en-Wikipedia "Battle of Savo Island", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä japanilainen osasto jätti tekemättä Savon voiton jälkeen?',
+        vaihtoehdot: [
+          'Se ei etsinyt eikä tuhonnut kuljetusaluksia',
+          'Se ei ottanut vangiksi yhtään merimiestä',
+          'Se ei pommittanut Henderson Fieldin lentokenttää',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  /* ==================================================================
+   * MAAILMAN ERÄ M4, 6.9.2026 — POHJOIS-AMERIKKA (CAN, CUB, GRL, GTM,
+   * NIC). Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko
+   * maailmaan."* Euroopan ulkopuolelle ei ollut kirjoitettu yhtäkään
+   * skandaalia; nämä kymmenen ovat viiden maan kiintiö, kaksi kutakin.
+   * Kuvaton erä kuten ensimmäinenkin: kortti kantaa tekstin ja
+   * lähteen. Jokainen piste on tarkistettu niin, ettei se ole
+   * pelikaupungin kohdalla (KAUPUNGIN_KOHDALLA_SADE 7,
+   * js/fokuskohteet.js). Faktat en-Wikipediasta 6.9.2026.
+   * ================================================================ */
+  CAN: [
+    /*
+     * Parlamenttikukkula, Ottawa.
+     * Lähde: en-Wikipedia "Pacific Scandal"
+     */
+    {
+      id: 'pacific-skandaali',
+      otsikko: 'Tyynenmeren skandaali — rata, joka maksoi pääministerin paikan',
+      nimio: 'Pacific 1873',
+      vuosi: '1873',
+      paikka: 'Parlamenttikukkula, Ottawa',
+      lat: 45.4247, lon: -75.695,
+      kortti: 'Kaksi yhtiötä kilpaili mannerradan urakasta, ja toinen niistä antoi '
+        + 'hallituspuolueen vaalikassaan 360 000 dollaria. Kun asianajajan kassakaapista '
+        + 'ilmeisesti varastettu sähke tuli päivänvaloon, Kanadan ensimmäinen pääministeri '
+        + 'joutui eroamaan. Seuraavissa vaaleissa äänestettiin ensimmäistä kertaa salaisella '
+        + 'lipulla.',
+      teksti: 'British Columbia liittyi Kanadaan 1871 ehdolla, että valtio rakentaa radan '
+        + 'Tyynenmeren rannikolta itäisiin maakuntiin. Urakasta kilpaili kaksi ryhmää: Hugh '
+        + 'Allanin Canada Pacific Railway Company ja David Lewis Macphersonin Inter-Oceanic '
+        + 'Railway Company.'
+        + '\n\nToisena huhtikuuta 1873 liberaali kansanedustaja Lucius Seth Huntington kertoi '
+        + 'alahuoneessa löytäneensä todisteet siitä, että Allan seurueineen oli saanut '
+        + 'urakan poliittisia lahjoituksia vastaan. Allan oli lisäksi luvannut pitää '
+        + 'amerikkalaisen pääoman poissa hankkeesta ja valehdellut siitä pääministeri John '
+        + 'A. Macdonaldille: molemmat olivat salaa tekemisissä yhdysvaltalaisten '
+        + 'rahoittajien kanssa, joilla oli osuutensa kilpailevassa Northern Pacific '
+        + '-radassa.'
+        + '\n\nOppositio ja George Brownin The Globe olettivat, että rahat oli käytetty '
+        + 'äänten ostamiseen vuoden 1872 vaaleissa — salaista lippua ei vielä ollut, ja '
+        + 'vaikka lahjonta oli laitonta, sen valvominen oli mahdotonta. Macdonald vakuutti '
+        + 'syyttömyyttään, mutta rahasiirrot tulivat esiin.'
+        + '\n\nMacdonald erosi 5. marraskuuta 1873, ja Alexander Mackenzien liberaalihallitus '
+        + 'nousi valtaan. Yhtenä ensitöistään se sääti salaisen äänestyksen, jota käytettiin '
+        + 'vuoden 1874 vaaleissa ensi kertaa. Rata rakennettiin lopulta aivan toisen yhtiön '
+        + 'voimin, ja se valmistui 1885 — silloin Macdonald oli jo palannut pääministeriksi.',
+      lahde: 'en-Wikipedia "Pacific Scandal", johdanto-osa sekä osiot "Background" ja '
+        + '"Scandal". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä uudistus tehtiin Kanadassa heti Tyynenmeren skandaalin jälkeen?',
+        vaihtoehdot: [
+          'Otettiin käyttöön salainen äänestyslippu',
+          'Rautateiden rakentaminen kiellettiin yksityisiltä',
+          'Pääministerin virka lakkautettiin vuodeksi',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Bre-X Mineralsin pääkonttori, Calgary.
+     * Lähde: en-Wikipedia "Bre-X"
+     */
+    {
+      id: 'bre-x',
+      otsikko: 'Bre-X — maailman suurin kultaesiintymä, jota ei ollut',
+      nimio: 'Bre-X 1997',
+      vuosi: '1997',
+      paikka: 'Bre-X Mineralsin pääkonttori, Calgary',
+      lat: 51.0447, lon: -114.0719,
+      kortti: 'Pennyosakkeesta kasvoi kuuden miljardin dollarin yhtiö, kun se kertoi '
+        + 'löytäneensä Borneon viidakosta seitsemänkymmentä miljoonaa unssia kultaa. '
+        + 'Näytteisiin oli sekoitettu paikallisilta ostettua huuhdottua kultaa. Kun '
+        + 'riippumaton tarkastus paljasti sen, osake putosi kuuteen senttiin ja arviolta '
+        + '40 000 sijoittajaa menetti kaiken.',
+      teksti: 'David Walsh perusti Bre-X Minerals Ltd:n 1989. Yhtiö teki jatkuvasti '
+        + 'tappiota, kunnes se osti maaliskuussa 1993 geologi John Felderhofin neuvosta '
+        + 'alueen Busangin joen läheltä Kalimantanista Indonesiasta. Ensimmäiset kokeet '
+        + 'eivät löytäneet kultaa, mutta joulukuussa 1993, päiviä ennen luvan umpeutumista, '
+        + 'geologi Michael de Guzman kertoi tietävänsä tarkan porauspaikan — se oli tullut '
+        + 'hänelle unessa.'
+        + '\n\nArviot kasvoivat vuosi vuodelta kahdesta miljoonasta unssista '
+        + 'kolmeenkymmeneen, kuuteenkymmeneen ja lopulta seitsemäänkymmeneen miljoonaan '
+        + 'unssiin. Osake nousi Torontossa 280 dollariin ja markkina-arvo yli kuuteen '
+        + 'miljardiin Kanadan dollariin. Jos luvut olisivat pitäneet paikkansa, yhtiöllä '
+        + 'olisi ollut noin kahdeksan prosenttia maailman kullasta.'
+        + '\n\nMaaliskuussa 1997 Freeport-McMoRanin oma tarkastus löysi kaivokselta '
+        + 'merkityksettömän määrän kultaa. De Guzman kuoli matkalla selittämään tulosta '
+        + 'pudottuaan helikopterista, ja kuolemaan liittyi niin paljon epäselvyyksiä, että '
+        + 'siitä syntyi omat huhunsa. Riippumaton Strathcona Minerals raportoi 4. toukokuuta '
+        + '1997, että näytteet oli suolattu kultapölyllä: de Guzman oli ostanut '
+        + 'paikallisilta arviolta 61 000 dollarin edestä huuhdottua kultaa kahden ja puolen '
+        + 'vuoden aikana.'
+        + '\n\nSeitsemäntenä toukokuuta osake romahti. Menettäjiin kuului kanadalaisia '
+        + 'eläkerahastoja: Ontarion opettajien eläkerahasto menetti sata miljoonaa dollaria. '
+        + 'Ratsupoliisi lopetti tutkinnan 1999 nostamatta syytteitä, ja ainoa syytetty '
+        + 'Felderhof vapautettiin 2007.',
+      lahde: 'en-Wikipedia "Bre-X", johdanto-osa sekä osiot "History", "Death of chief '
+        + 'geologist Michael de Guzman", "Fraud exposed" ja "Aftermath". Tarkistettu '
+        + '6.9.2026.',
+      visa: {
+        kysymys: 'Miten Bre-X:n kultanäytteet oli väärennetty?',
+        vaihtoehdot: [
+          'Näytteet oli otettu toisesta kaivoksesta',
+          'Laboratorion tulokset oli kirjoitettu uusiksi',
+          'Näytteisiin oli sekoitettu ostettua huuhdottua kultaa',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  CUB: [
+    /*
+     * Havannan satama.
+     * Lähde: en-Wikipedia "USS Maine (1889)"
+     */
+    {
+      id: 'uss-maine',
+      otsikko: 'Muistakaa Maine — räjähdys, jonka lehdet ratkaisivat',
+      nimio: 'Maine 1898',
+      vuosi: '1898',
+      paikka: 'Havannan satama',
+      lat: 23.1353, lon: -82.3342,
+      kortti: 'Yhdysvaltain sotalaiva räjähti Havannan satamassa helmikuun iltana 1898, ja '
+        + '261 miehistön jäsentä kuoli. Kaksi newyorkilaista lehteä tiesi syyllisen heti, '
+        + 'ilman todisteita. Kaksi kuukautta myöhemmin maat olivat sodassa — ja nykyisin '
+        + 'painavin selitys osoittaa laivan omaan hiilibunkkeriin.',
+      teksti: 'Maine lähetettiin tammikuussa 1898 Key Westistä Havannaan turvaamaan '
+        + 'yhdysvaltalaisia etuja Kuuban itsenäisyyssodan aikana. Viidentenätoista '
+        + 'helmikuuta kello 21.40 aluksessa räjähti yli viisi tonnia tykkien ruutipanoksia, '
+        + 'ja laivan etukolmannes tuhoutui. Suurin osa miehistöstä nukkui juuri siellä.'
+        + '\n\nSyy oli kiistanalainen heti. Laivaston tykistöasiantuntija Philip R. Alger '
+        + 'ilmoitti jo seuraavana päivänä syyksi hiilibunkkerin itsesyttymisen, mitä '
+        + 'laivaston apulaisministeri Theodore Roosevelt vastusti kirjeessään '
+        + 'ennenaikaisena kannanottona kesken tutkinnan.'
+        + '\n\nWilliam Randolph Hearstin New York Journal ja Joseph Pulitzerin New York '
+        + 'World tekivät tapauksesta kampanjan, jota alettiin kutsua keltaiseksi '
+        + 'journalismiksi. Journal omisti aiheelle viikon ajan keskimäärin kahdeksan ja '
+        + 'puoli sivua päivässä ja lupasi 50 000 dollarin palkkion syyllisten '
+        + 'tuomitsemisesta. Pulitzer piti yksityisesti ajatusta Espanjan käskystä '
+        + 'mielettömänä, mutta hänen lehtensä vaati silti Kuuban täyttä itsenäisyyttä '
+        + 'ainoana hyvityksenä.'
+        + '\n\nEspanjan tutkinta päätyi hiilipaloon, amerikkalainen Sampsonin lautakunta '
+        + 'miinaan. Sota alkoi 21. huhtikuuta 1898. Amiraali Hyman Rickoverin teettämä '
+        + 'tutkimus tuki 1970-luvulla hiilibunkkerihypoteesia, ja kiista syystä jatkuu yhä.',
+      lahde: 'en-Wikipedia "USS Maine (1889)", johdanto-osa sekä osiot "Sinking", "Yellow '
+        + 'journalism" ja "Investigations". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä keltaisella journalismilla tarkoitetaan Mainen tapauksessa?',
+        vaihtoehdot: [
+          'Lehdet paisuttelivat ja jopa keksivät uutisia sodan puolesta',
+          'Lehdet kieltäytyivät kirjoittamasta räjähdyksestä',
+          'Lehdet julkaisivat vain laivaston virallisia tiedotteita',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Playa Girón, Sikojenlahti.
+     * Lähde: en-Wikipedia "Bay of Pigs Invasion"
+     */
+    {
+      id: 'sikojenlahti',
+      otsikko: 'Sikojenlahti — salaoperaatio, jonka koko maailma näki',
+      nimio: 'Playa Girón 1961',
+      vuosi: '1961',
+      paikka: 'Playa Girón, Sikojenlahti',
+      lat: 22.0667, lon: -81.0333,
+      kortti: 'Yhdysvaltain tiedustelupalvelu rahoitti ja koulutti kuubalaispakolaisten '
+        + 'prikaatin ja laski sen maihin Sikojenlahdelle huhtikuussa 1961. Operaation piti '
+        + 'näyttää siltä, ettei Yhdysvalloilla ollut sen kanssa tekemistä. Kolmessa '
+        + 'päivässä maihinnousu oli lyöty ja salaisuus mennyt.',
+      teksti: 'Presidentti Dwight D. Eisenhower alkoi vuoden 1960 alussa pohtia keinoja '
+        + 'Fidel Castron syrjäyttämiseksi ja hyväksyi Richard Bissellin suunnitelman, johon '
+        + 'kuului puolisotilaallisen joukon kouluttaminen. Samaan aikaan alkoi Kuuban '
+        + 'kauppasaarto, mikä ajoi Castron kääntymään Neuvostoliiton puoleen; Yhdysvallat '
+        + 'katkaisi diplomaattisuhteet.'
+        + '\n\nCastron valtaannousun jälkeen Yhdysvaltoihin muuttaneet pakolaiset olivat '
+        + 'perustaneet vastavallankumouksellisen prikaati 2506:n. CIA rahoitti sen ja '
+        + 'koulutti sen Guatemalassa; mukana oli myös noin kuusikymmentä Alabaman '
+        + 'ilmakansalliskaartin jäsentä. Yli 1 400 miestä lähti veneillä Guatemalasta ja '
+        + 'Nicaraguasta 17. huhtikuuta 1961, ja kaksi päivää aiemmin kahdeksan CIA:n '
+        + 'toimittamaa B-26-pommittajaa oli iskenyt kuubalaisille lentokentille.'
+        + '\n\nPäävoima nousi maihin Playa Girónilla ja löi paikallisen miliisin. Kun '
+        + 'kansainvälinen yhteisö sai tietää operaatiosta, presidentti John F. Kennedy '
+        + 'päätti olla antamatta lisää ilmatukea — vaikka Eisenhowerin kaudella laadittu '
+        + 'suunnitelma oli edellyttänyt Yhdysvaltain ilma- ja merivoimien osallistumista.'
+        + '\n\nKuuban asevoimat löivät maihinnousun kolmessa päivässä, ja joukot antautuivat '
+        + '20. huhtikuuta. Vangit kuulusteltiin julkisesti, vangittiin ja tuomittiin. '
+        + 'Tappio vahvisti Castron asemaa kansallissankarina, syvensi maiden välistä juopaa '
+        + 'ja työnsi Kuuban lähemmäs Neuvostoliittoa — ja pohjusti seuraavan vuoden '
+        + 'ohjuskriisin.',
+      lahde: 'en-Wikipedia "Bay of Pigs Invasion", johdanto-osa. Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Missä maassa maihinnousuprikaati koulutettiin?',
+        vaihtoehdot: [
+          'Meksikossa',
+          'Guatemalassa',
+          'Puerto Ricossa',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  GRL: [
+    /*
+     * Kvanefjeldin ylätasanko Narsaqin yläpuolella.
+     * Lähde: en-Wikipedia "Kvanefjeld"
+     */
+    {
+      id: 'kuannersuit',
+      otsikko: 'Kuannersuit — vuori, jonka takia hallitus vaihtui',
+      nimio: 'Kuannersuit',
+      vuosi: '2021',
+      paikka: 'Kvanefjeld, Narsaq',
+      lat: 60.97, lon: -45.83,
+      kortti: 'Etelä-Grönlannin ylätasangolla on yksi maailman suurimmista harvinaisten '
+        + 'maametallien esiintymistä — ja malmin seassa uraania. Vuoden 2021 vaalit '
+        + 'käytiin kaivoksesta, ja louhinnan vastustajat voittivat. Uusi laki pysäytti '
+        + 'hankkeen, ja yhtiö haastoi Grönlannin ja Tanskan välimiesmenettelyyn.',
+      teksti: 'Kvanefjeld eli Kuannersuit sijaitsee Ilímaussaqin intruusion laajalla '
+        + 'ylätasangolla Narsaqin kaupungin yläpuolella. Siellä on poikkeuksellisen paljon '
+        + 'harvinaisten maametallien okseja sekä merkittäviä määriä uraania ja sinkkiä. '
+        + 'Esiintymä tunnistettiin 1950-luvulla, kylmän sodan uraanihuuman aikaan, ja '
+        + 'fyysikko Niels Bohr vieraili Narsaqissa 1957 tukemassa varhaisia tutkimuksia. '
+        + 'Kun Tanska luopui ydinvoimasta 1983, etsintä loppui.'
+        + '\n\nGrönlannin hallituksen politiikanmuutos 2010 avasi oven suurille kaivoksille. '
+        + 'Australialainen Greenland Minerals, nykyinen Energy Transition Minerals, hankki '
+        + 'alueen 2007 ja jätti 2015 hakemuksen avolouhoksesta.'
+        + '\n\nVuoden 2021 vaaleissa uraanilouhintaa vastustaneet puolueet, etenkin Inuit '
+        + 'Ataqatigiit, muodostivat hallituksen ja säätivät lain numero 20. Se kieltää '
+        + 'uraanin louhinnan ja etsinnän yli sadan miljoonasosan pitoisuuksissa, ja koska '
+        + 'Kvanefjeldin malmissa uraania on keskimäärin 250–350 miljoonasosaa, laki '
+        + 'käytännössä pysäytti koko hankkeen.'
+        + '\n\nMaaliskuussa 2022 yhtiö käynnisti välimiesmenettelyn Grönlannin ja Tanskan '
+        + 'hallituksia vastaan ja väitti kiellon olleen laiton pakkolunastus. Vuonna 2025 '
+        + 'Kvanefjeld oli yhä välitilassa: vuosien työ ja rahat eivät ole tuottaneet '
+        + 'kaivosta, kun taas naapurissa Tanbreezin hanke on edennyt uuden omistajan '
+        + 'käsissä.',
+      lahde: 'en-Wikipedia "Kvanefjeld", johdanto-osa sekä osiot "Exploration" ja "Politics '
+        + 'and Suspension". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mikä pysäytti Kvanefjeldin kaivoshankkeen?',
+        vaihtoehdot: [
+          'Malmi loppui kesken koelouhinnan',
+          'Laki, joka kieltää uraanin louhinnan yli sadan miljoonasosan pitoisuuksissa',
+          'Kaivosyhtiö meni konkurssiin',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Brattahlíð, nykyinen Qassiarsuk.
+     * Lähde: en-Wikipedia "Erik the Red"
+     */
+    {
+      id: 'vihrea-maa',
+      otsikko: 'Vihreä maa — historian tunnetuin kiinteistömainos',
+      nimio: 'Vihreä maa 985',
+      vuosi: '985',
+      paikka: 'Brattahlíð, Qassiarsuk',
+      lat: 61.1531, lon: -45.5169,
+      kortti: 'Islannista kolmeksi vuodeksi karkotettu Eirik Punainen tutki lännen jäisen '
+        + 'saaren ja palasi kertomaan siitä. Nimeksi hän antoi Grönlannin, vihreän maan, '
+        + 'omien sanojensa mukaan siksi, että suotuisa nimi houkuttelisi ihmisiä lähtemään. '
+        + 'Laivoja lähti kaksikymmentäviisi, perille pääsi neljätoista.',
+      teksti: 'Eirik Thorvaldsson tuomittiin Thorsnesin käräjillä maanpakoon Islannista '
+        + 'kolmeksi vuodeksi noin vuonna 982. Karkotusaikanaan hän purjehti länteen ja '
+        + 'tutki maata, jonka Gunnbjörn Ulfsson oli nähnyt lähes vuosisata aiemmin myrskyn '
+        + 'ajamana ja jota lainsuojaton Snæbjörn galti oli yrittänyt asuttaa — siinä '
+        + 'onnistumatta.'
+        + '\n\nPalattuaan Islantiin Eirik kertoi maasta, jonka nimi oli hänen oma '
+        + 'keksintönsä. Saagan mukaan hän antoi sille tarkoituksella houkuttelevamman nimen '
+        + 'kuin Islanti, sillä hän tiesi, että asutus onnistuisi vain, jos mukaan lähtisi '
+        + 'mahdollisimman paljon väkeä.'
+        + '\n\nMyyntipuhe tehosi. Kesällä 985 Eirik purjehti takaisin suuren '
+        + 'siirtolaisjoukon kanssa, mutta matka oli kaikkea muuta kuin se, mitä nimi lupasi: '
+        + 'kahdestakymmenestäviidestä lähteneestä laivasta perille pääsi neljätoista, osa '
+        + 'kääntyi takaisin ja loput todennäköisesti katosivat.'
+        + '\n\nIslantilaiset perustivat lounaisrannikolle kaksi siirtokuntaa — Itäisen '
+        + 'nykyisen Qaqortoqin seudulle ja Läntisen Nuukin lähelle — sillä vain ne '
+        + 'kelpasivat maanviljelyyn. Eirik rakensi Brattahlíðin tilan nykyisen Qassiarsukin '
+        + 'kohdalle ja oli Grönlannin mahtavin päällikkö. Kesäisin siirtokunnat lähettivät '
+        + 'miehiä Diskonlahdelle napapiirin pohjoispuolelle metsästämään hylkeitä, '
+        + 'mursunluuta ja rantaan ajautuneita valaita.',
+      lahde: 'en-Wikipedia "Erik the Red", johdanto-osa sekä osiot "Exile" ja "Greenland". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi Eirik Punainen antoi saarelle nimen Grönlanti?',
+        vaihtoehdot: [
+          'Saaren rannikko oli hänen nähdessään vihreä',
+          'Nimi oli jo käytössä norjalaisilla kauppiailla',
+          'Suotuisa nimi houkuttelisi asukkaita lähtemään mukaan',
+        ],
+        oikea: 2,
+      },
+    },
+  ],
+  GTM: [
+    /*
+     * Puerto Barrios, Izabal — radan pääte ja United Fruitin satama.
+     * Lähde: en-Wikipedia "Manuel Estrada Cabrera"
+     */
+    {
+      id: 'banaanisopimus-1904',
+      otsikko: 'Banaanisopimus 1904 — rata, satamat ja verovapaus',
+      nimio: 'Banaanisopimus',
+      vuosi: '1904',
+      paikka: 'Puerto Barrios, Izabal',
+      lat: 15.7267, lon: -88.5944,
+      kortti: 'Guatemalan rata pääkaupungista Puerto Barriosin satamaan jäi kuusikymmentä '
+        + 'mailia vajaaksi, kun rahat loppuivat. Presidentti Manuel Estrada Cabrera '
+        + 'ratkaisi asian kysymättä lainsäätäjältä tai tuomioistuimelta. Sopimus antoi '
+        + 'United Fruit Companylle verovapauksia, maata ja määräysvallan kaikkiin Atlantin '
+        + 'puolen rautateihin.',
+      teksti: 'Manuel Estrada Cabrera hallitsi Guatemalaa vuosina 1898–1920 eli pidempään '
+        + 'kuin kukaan muu maan johtaja. Hän oli lakimies ilman sotilastaustaa ja '
+        + 'nykyaikaisti teollisuutta ja liikennettä, mutta hallitsi diktaattorina: lakkoja '
+        + 'murrettiin asein ja vaaleja ohjailtiin.'
+        + '\n\nLiberaalipuolueen jäsenenä hän halusi rakentaa maanteitä, rautateitä ja '
+        + 'satamia vientitalouden hyväksi. Rataa Puerto Barriosin suuresta satamasta '
+        + 'pääkaupunkiin oli yritetty useaan otteeseen, mutta rahoitus loppui kotimaisen '
+        + 'kahvituotannon romahdukseen ja rata jäi kuusikymmentä mailia vajaaksi.'
+        + '\n\nEstrada Cabrera päätti yksin — lainsäätäjää tai tuomioistuinta kuulematta — '
+        + 'että ainoa keino saada rata valmiiksi oli sopimus United Fruit Companyn kanssa. '
+        + 'Vuonna 1904 allekirjoitettu sopimus yhtiön Minor Cooper Keithin kanssa antoi '
+        + 'sille verovapauksia, maalahjoituksia ja hallinnan kaikkiin Atlantin puolen '
+        + 'rautateihin.'
+        + '\n\nYhtiön tulo maan talouteen ja politiikkaan jäi presidentin katkerimmaksi '
+        + 'perinnöksi, ja sen vaikutusvalta oli väestön keskuudessa syvästi epäsuosittu. '
+        + 'Estrada Cabreran oma valta päättyi 1920, kun kansalliskokous julisti hänet '
+        + 'kykenemättömäksi ja hänet vangittiin korruptiosta.',
+      lahde: 'en-Wikipedia "Manuel Estrada Cabrera", johdanto-osa ja osio "First term: '
+        + 'United Fruit Company". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä United Fruit Company sai vuoden 1904 sopimuksessa?',
+        vaihtoehdot: [
+          'Verovapauksia, maata ja Atlantin puolen rautatiet',
+          'Yksinoikeuden kahvin vientiin',
+          'Oikeuden nimittää maan hallituksen',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Santa Marían tulivuori Quetzaltenangon lähellä.
+     * Lähde: en-Wikipedia "Santa María (volcano)"
+     */
+    {
+      id: 'santa-maria-1902',
+      otsikko: 'Santa Marían tuhka 1902 — kuka sai korvaukset',
+      nimio: 'Santa María 1902',
+      vuosi: '1902',
+      paikka: 'Santa Marían tulivuori, Quetzaltenango',
+      lat: 14.7561, lon: -91.5522,
+      kortti: 'Satoja vuosia hiljaa ollut tulivuori purki lokakuussa 1902 kahdeksan '
+        + 'kuutiokilometriä magmaa — se oli yksi 1900-luvun kolmesta suurimmasta '
+        + 'purkauksesta. Kukaan ei tunnistanut kuukausia jatkuneita järistyksiä '
+        + 'varoitukseksi, ja arviolta kuusituhatta ihmistä kuoli. Sitten alkoi toinen '
+        + 'vääryys.',
+      teksti: 'Santa María oli ollut hiljaa ainakin viisisataa vuotta, kun tammikuussa 1902 '
+        + 'alkoi seudulla järistysparvi ja huhtikuussa koettiin suuri maanjäristys. Purkaus '
+        + 'alkoi 24. lokakuuta, ja voimakkaimmat räjähdykset seurasivat kahtena seuraavana '
+        + 'päivänä.'
+        + '\n\nHohkakiveä satoi 273 000 neliökilometrin alalle ja tuhkaa kulkeutui San '
+        + 'Franciscoon asti, neljäntuhannen kilometrin päähän. Ensimmäinen merkki oli '
+        + 'hiekkasade Quetzaltenangon ylle; sitten tuuli kääntyi ja tuhka alkoi pudota '
+        + 'Helvetian kahviviljelmälle kymmenen kilometrin päässä lounaassa. Jopa 160 '
+        + 'kilometrin säteellä oli täysin pimeää 53 tuntia, ja moni kahviviljelmä tuhoutui.'
+        + '\n\nPurkauksen jälkeen alueelle saapui joukkoja ryöstämään, tappamaan ja '
+        + 'valtaamaan viljelmiä. Alkuperäisväestölle seuraukset olivat kaksinkertaiset: he '
+        + 'menettivät omaisiaan, kotinsa ja satonsa — ja heidät pakotettiin '
+        + 'jälleenrakennustöihin orjuutettuina.'
+        + '\n\nSamaan aikaan kreolimaanomistajat saivat menetyksistään korvaukseksi maata, '
+        + 'joka takavarikoitiin alkuperäisyhteisöiltä San Miguel Uspantánissa Quichén '
+        + 'maakunnassa, Panamissa Suchitepéquezissä ja Sololássa. Vuonna 1922 vanhaan '
+        + 'kraatteriin alkoi kasvaa Santiaguiton laavakupoli, joka on aktiivinen yhä '
+        + 'tänään.',
+      lahde: 'en-Wikipedia "Santa María (volcano)", johdanto-osa sekä osiot "1902 eruption" '
+        + 'ja "Santiaguito". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten purkauksen jälkeiset korvaukset jaettiin?',
+        vaihtoehdot: [
+          'Kaikki menettäjät saivat saman korvauksen valtiolta',
+          'Kreolimaanomistajat saivat maata, joka otettiin alkuperäisyhteisöiltä',
+          'Korvaukset maksoi tulivuorta tutkinut seura',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  NIC: [
+    /*
+     * Rivas — kolme taistelua ja kannaksen kauttakulkureitti.
+     * Lähde: en-Wikipedia "William Walker (filibuster)"
+     */
+    {
+      id: 'william-walker',
+      otsikko: 'Aqui fue Granada — mies, joka teki itsestään presidentin',
+      nimio: 'Walker 1856',
+      vuosi: '1856',
+      paikka: 'Rivas ja Granada',
+      lat: 11.4373, lon: -85.8264,
+      kortti: 'Nashvillelainen lehtimies ja lääkäri purjehti 1855 Nicaraguaan '
+        + 'kuudenkymmenen palkkasotilaan kanssa maan liberaalien avuksi. Vuotta myöhemmin '
+        + 'hän oli itse maan presidentti ja kumosi orjuuden kiellon. Kun keskiamerikkalainen '
+        + 'liittouma ajoi hänet pois, hänen miehensä polttivat Granadan ja jättivät '
+        + 'raunioihin kyltin.',
+      teksti: 'Ennen Panaman kanavaa tärkeä kauppareitti New Yorkista San Franciscoon kulki '
+        + 'Etelä-Nicaraguan halki: laivalla San Juanjokea ylös, Nicaraguajärven poikki ja '
+        + 'postivaunuilla Rivasin kannaksen yli Tyynellemerelle. Reittiä hallitsi Cornelius '
+        + 'Vanderbiltin Accessory Transit Company.'
+        + '\n\nVuonna 1854 syttyi sisällissota Granadaan tukeutuneiden legitimistien ja '
+        + 'Leóniin tukeutuneiden demokraattien välillä. Demokraatit pyysivät apua William '
+        + 'Walkerilta, joka kiersi Yhdysvaltain neutraliteettilait sopimalla presidentti '
+        + 'Francisco Castellónin kanssa "siirtolaisten" tuomisesta maahan. Walker purjehti '
+        + 'San Franciscosta 3. toukokuuta 1855, ja perillä joukkoon liittyi 110 paikallista.'
+        + '\n\nEnsimmäinen hyökkäys Rivasiin torjuttiin — opettaja Enmanuel Mongalo y Rubio '
+        + 'poltti hyökkääjien esikunnan — mutta lokakuussa 1855 Walker valtasi Granadan. '
+        + 'Presidentiksi hänet vihittiin 12. heinäkuuta 1856 vilpillisten vaalien jälkeen. '
+        + 'Hän teki englannista virallisen kielen ja kumosi vuoden 1821 asetuksen, jolla '
+        + 'orjuus oli lakkautettu.'
+        + '\n\nCosta Rican johtama liittouma löi hänet. Joulukuussa 1856 Walkerin kenraali '
+        + 'Charles Frederick Henningsen poltti Granadan paetessaan, ja jäljelle jäivät '
+        + 'raunioihin kirjoitetut sanat "Aqui Fue Granada", täällä oli Granada. Walker '
+        + 'luopui presidenttiydestä 1. toukokuuta 1857 ja teloitettiin Hondurasissa 1860.',
+      lahde: 'en-Wikipedia "William Walker (filibuster)", johdanto-osa sekä osiot '
+        + '"Nicaragua" ja "President of Nicaragua". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä sanat "Aqui fue Granada" tarkoittavat?',
+        vaihtoehdot: [
+          'Täällä oli Granada',
+          'Granada antautuu',
+          'Granadan portti',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Punta Gordan jokisuu — suunnitellun kanavareitin Karibian pää.
+     * Lähde: en-Wikipedia "Attempts to build a canal across Nicaragua"
+     */
+    {
+      id: 'kanavakonsessio',
+      otsikko: 'Kanavakonsessio 2013 — laki 840 ja kadonnut yhtiö',
+      nimio: 'Kanava 2013',
+      vuosi: '2013',
+      paikka: 'Punta Gordan jokisuu, kanavareitin Karibian pää',
+      lat: 11.55, lon: -83.78,
+      kortti: 'Nicaraguan kansalliskokous myönsi 2013 hongkongilaiselle yhtiölle '
+        + 'viidenkymmenen vuoden konsession rakentaa Panamaa suurempi kanava halki maan. '
+        + 'Samana vuonna säädetty laki salli lunastaa 908 neliökilometriä maata ilman '
+        + 'valitusoikeutta. Kanavaa ei koskaan kaivettu, ja yhtiön pääkonttori tyhjeni 2018 '
+        + 'jättämättä osoitetta.',
+      teksti: 'Ajatus kanavasta Nicaraguan halki on siirtomaa-ajalta, ja se on aina '
+        + 'nojannut samaan reittiin: San Juanjoki Karibialta Nicaraguajärvelle ja järven '
+        + 'poikki Rivasin kannakselle. Yhdysvallat luopui suunnitelmasta 1900-luvun alussa '
+        + 'ostettuaan ranskalaisten osuudet Panaman kanavasta.'
+        + '\n\nSyyskuussa 2012 Nicaraguan hallitus ja vasta perustettu HK Nicaragua Canal '
+        + 'Development Group allekirjoittivat aiesopimuksen. HKND oli miljardööri Wang '
+        + 'Jingin johtama yksityinen yhtiö. Kesäkuussa 2013 kansalliskokous hyväksyi lain, '
+        + 'joka antoi sille viidenkymmenen vuoden konsession, ja joulukuussa 2014 yhtiö '
+        + 'ilmoitti aloittavansa työt Briton kylässä Rivasissa.'
+        + '\n\nSamana vuonna säädetty laki 840 salli 908 neliökilometrin pakkolunastukset. '
+        + 'Se kieltää valitusoikeuden lunastuspäätöksestä, määrää korvaukset mitättömiksi '
+        + 'ja antaa sijoittajalle luvan myydä oikeuksiaan osissa. Sitä on kutsuttu '
+        + 'maakaappaukseksi, ja se johti mielenosoituksiin ja väkivaltaisiin yhteenottoihin '
+        + 'turvallisuusjoukkojen kanssa.'
+        + '\n\nRahoitusvaikeuksien jälkeen Wang sulki HKND:n pääkonttorin Kiinassa '
+        + 'huhtikuussa 2018 jättämättä osoitetta tai puhelinnumeroa. Aktivistit muistuttivat, '
+        + 'että sopimus oli purettava 72 kuukaudessa, jos rahoitusta ei saada — määräaika '
+        + 'umpeutui 14. kesäkuuta 2019 — mutta kansalliskokous kumosi lain 840 vasta '
+        + 'toukokuussa 2024.',
+      lahde: 'en-Wikipedia "Attempts to build a canal across Nicaragua", johdanto-osa sekä '
+        + 'osiot "Route" ja "HKND project (2010–2024)". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä laki 840 salli kanavahankkeen tieltä?',
+        vaihtoehdot: [
+          '908 neliökilometrin pakkolunastukset ilman valitusoikeutta',
+          'Kanavan rakentamisen ilman ympäristöselvitystä',
+          'Ulkomaisen työvoiman tuonnin ilman lupia',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  /*
+   * ══ ERÄ M3, AASIA 6.9.2026 ══════════════════════════════════════
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M3 (HKG, IDN, IND, LKA, MMR) tuo kaksi skandaalia kuhunkin
+   * viiteen maahan — kymmenen uutta, ja ensimmäiset Euroopan
+   * ulkopuolella Aasiassa. Kaikki ovat kuvattomia kuten erän muutkin
+   * nostot, ja jokaisen lähderivi nimeää en-Wikipedian artikkelin ja
+   * osan sekä tarkistuspäivän.
+   *
+   * PAIKAT ON MITATTU. Yksikään uusi merkki ei ole pelikaupungin
+   * kohdalla (KAUPUNGIN_KOHDALLA_SADE 7 lautayksikköä,
+   * js/fokuskohteet.js): lähin on Dambulla 12,9 yksikön päässä
+   * Colombo-laatasta ja kaukaisin Bre-X 195,9 yksikön päässä
+   * Borneosta.
+   *
+   * HERKKIEN KOHTEIDEN LINJAUS ON SITOVA (docs/aasia-tyoaineisto/
+   * spec-asia.md): Hongkongista ei kirjoiteta 2010–2020-lukujen
+   * protesteja eikä turvallisuuslakia, Myanmarista ei juntta- eikä
+   * konfliktisisältöä, ja siirtomaahistoria kerrotaan neutraalina.
+   * Molemmat Hongkongin skandaalit ovat 1970–80-luvun talous- ja
+   * virkarikoksia, ja molemmat Myanmarin aiheet ovat 1400–1700-luvun
+   * hovihistoriaa.
+   */
+  HKG: [
+    /*
+     * Kai Takin lentoasema, Kowloon (pakomatkan lähtöpaikka).
+     * Lähde: en.wikipedia.org: Peter Godber
+     */
+    {
+      id: 'godberin-pako',
+      otsikko: 'Godberin pako — ylikomisario ja lentokenttäpassi',
+      nimio: 'Godber',
+      vuosi: '1973–1975',
+      paikka: 'Kai Takin lentoasema, Kowloon',
+      lat: 22.33, lon: 114.195,
+      kortti: 'Poliisin oma korruption vastainen osasto käski ylikomisariota '
+        + 'selittämään, mistä neljä ja puoli miljoonaa oli tullut. Seuraavana '
+        + 'päivänä mies käveli virkakortillaan passintarkastuksen ohi ja nousi '
+        + 'Lontoon-koneeseen. Pako suututti kaupungin niin, että sen jäljiltä '
+        + 'perustettiin kokonaan uusi virasto.',
+      teksti: 'Peter Fitzroy Godber oli Hongkongin kuninkaallisen poliisin '
+        + 'ylikomisario ja Kowloonin apulaispiiripäällikkö. Häntä oli pidetty '
+        + 'rohkeana ja tehokkaana esimiehenä, ja hänet oli palkittu mitalein.'
+        + '\n\nKun eläkkeelle jääminen lähestyi 1973, poliisin korruption '
+        + 'vastainen osasto huomasi hänen tileillään Kanadassa, Australiassa, '
+        + 'Singaporessa, Yhdysvalloissa, Britanniassa ja Hongkongissa lähes 4,4 '
+        + 'miljoonaa Hongkongin dollaria — noin 865 000 Yhdysvaltain dollaria '
+        + 'silloisessa rahassa. Häntä pyydettiin selittämään varallisuutensa. '
+        + 'Kesäkuun 7. päivänä hän lähetti vaimonsa pois siirtokunnasta ja '
+        + 'seuraavana päivänä käytti siviili-ilmailuviraston kulkulupaansa, '
+        + 'ohitti maahanmuutto- ja passitarkastukset ja käveli Kai Takissa '
+        + 'suoraan Lontoon-koneeseen.'
+        + '\n\nPako raivostutti kaupungin. Se osoitti, ettei poliisin oma '
+        + 'sisäinen tutkinta ollut uskottava, ja mursi hallintoeliitin käsityksen '
+        + 'siitä, että eurooppalaiset virkamiehet olisivat lahjomattomia. Godber '
+        + 'pidätettiin Englannissa 29. huhtikuuta 1974 ja luovutettiin '
+        + 'Hongkongiin 7. tammikuuta 1975.'
+        + '\n\nOikeudenkäynti alkoi 17. helmikuuta ja kesti kuusi ja puoli '
+        + 'päivää. Godber tuomittiin lahjonnasta neljäksi vuodeksi vankeuteen ja '
+        + 'menettämään 25 000 dollaria; hänen mitalinsa peruutettiin 3. lokakuuta '
+        + '1975. Tapaus ja muut 1970-luvun korruptiojutut johtivat siihen, että '
+        + 'Hongkongiin perustettiin 1974 poliisista riippumaton '
+        + 'korruptiontorjuntavirasto ICAC.',
+      lahde: 'en-Wikipedia "Peter Godber", johdanto ja osio "Biography". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Godber pääsi ulos siirtokunnasta kesäkuussa 1973?',
+        vaihtoehdot: [
+          'Hän matkusti kalastusveneellä Macaoon',
+          'Hän ohitti passintarkastuksen siviili-ilmailuviraston kulkuluvallaan',
+          'Hän lensi väärällä passilla Singaporeen',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Gammon House, Central (yhtiön kuuluisin kauppa).
+     * Lähde: en.wikipedia.org: Carrian Group
+     *
+     * MERKKI ON SATAMAN ITÄPÄÄSSÄ EIKÄ CENTRALISSA, ja syy on
+     * karttatekninen. Hongkongin kaupunkilehden kohdekartta
+     * (js/packs/maakartat.js hongkong) rajautuu ruutuun lat
+     * 22,2665–22,3015 ja lon 114,1385–114,1805, ja Gammon House
+     * (Bank of America Tower) osuu keskelle sitä. Kohdekartan
+     * rajauksessa oleva skandaali kuuluu kohdekartan pisteelle eikä
+     * pääkartalle (tools/tarkista-nostopaikat.mjs, sääntö
+     * "nosto ilman kohdekartan pistettä"), eikä tässä erässä lisätä
+     * kohdekartan pisteitä. Merkki on siksi ruudun itäpuolella samalla
+     * Hongkong-saaren rannalla, noin kolme kilometriä Centralista
+     * itään; kortin `paikka`-rivi kertoo oikean osoitteen.
+     */
+    {
+      id: 'carrianin-romahdus',
+      otsikko: 'Carrian — talo, joka myytiin miljardilla voitolla',
+      nimio: 'Carrian',
+      vuosi: '1977–1983',
+      paikka: 'Gammon House, Central, Hongkong',
+      lat: 22.279, lon: 114.229,
+      kortti: 'Tuntematon yhtiö osti Centralista toimistotalon lähes miljardilla '
+        + 'ja ilmoitti kolme kuukautta myöhemmin myyvänsä sen 1,68 miljardilla. '
+        + 'Koko kaupunki halusi tietää, mistä rahat tulivat. Vastaus oli '
+        + 'yksinkertaisempi ja karumpi kuin huhut.',
+      teksti: 'Carrian Group perustettiin Hongkongissa 1977. Sen takana oli '
+        + 'George Tan Soon-gin, joka oli lähtenyt Singaporesta vuoden 1974 '
+        + 'konkurssin jälkeen. Vuonna 1979 Tan osti holdingyhtiön 700 miljoonalla '
+        + 'Hongkongin dollarilla ja teki siitä Carrian Investment Limitedin.'
+        + '\n\nTammikuussa 1980 konserni osti Centralista Gammon Housen 998 '
+        + 'miljoonalla — se oli siihenastisen Hongkongin kallein '
+        + 'kiinteistökauppa. Huhtikuussa se ilmoitti myyvänsä talon 1,68 '
+        + 'miljardilla. Tuotto oli niin huikea, että se hämmästytti koko '
+        + 'kiinteistö- ja rahoitusmarkkinan ja nosti yhtiön julkisuuteen. '
+        + 'Samana vuonna Carrian osti pörssiyhtiön ja käytti sitä varojen '
+        + 'keräämiseen.'
+        + '\n\nKonserni laajeni nopeasti Malesiaan, Thaimaahan, Singaporeen, '
+        + 'Filippiineille, Japaniin ja Yhdysvaltoihin. Pääoman alkuperästä '
+        + 'liikkui mitä mielikuvituksellisimpia huhuja: rahojen arveltiin '
+        + 'tulevan milloin Imelda Marcosilta, milloin Neuvostoliiton '
+        + 'valtionpankilta, milloin borneolaiselta metsäyhtiöltä.'
+        + '\n\nCarrian ajautui Bank Bumiputra Malaysia Berhadin ja sen '
+        + 'hongkongilaisen tytäryhtiön kanssa selvittämättömään vyyhtiin. '
+        + 'Kirjanpitopetossyytösten, pankin tilintarkastajan murhan ja yhtiön '
+        + 'neuvonantajan itsemurhan jälkeen konserni romahti 1983 Hongkongin '
+        + 'siihenastisesti suurimpaan konkurssiin. Ehtymättömältä näyttänyt '
+        + 'pääoma osoittautui pankkilainoiksi eikä miksikään muuksi.',
+      lahde: 'en-Wikipedia "Carrian Group", osiot "History" ja "Downfall". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä Carrianin ehtymättömältä näyttänyt pääoma lopulta tuli?',
+        vaihtoehdot: [
+          'Pankkilainoista',
+          'Malesian valtion sijoitusrahastosta',
+          'Kiinteistöjen todellisista myyntivoitoista',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  IDN: [
+    /*
+     * Rangkasbitung, Lebakin alue, Banten (Multatuli-museon kaupunki).
+     * Lähde: en.wikipedia.org: Max Havelaar; Multatuli; Rangkasbitung
+     */
+    {
+      id: 'max-havelaar',
+      otsikko: 'Max Havelaar — romaani, joka muutti siirtomaapolitiikan',
+      nimio: 'Max Havelaar',
+      vuosi: '1860',
+      paikka: 'Rangkasbitung, Lebakin alue, Jaava',
+      lat: -6.35556, lon: 106.25111,
+      kortti: 'Kirja alkaa kuin pilkka: "Olen kahvinvälittäjä ja asun '
+        + 'Lauriergrachtilla numerossa 37." Sen jälkeen se kertoo, mitä '
+        + 'kahvinvälittäjän kupin takana tapahtuu Jaavalla. Amsterdamissa '
+        + 'kirjoitettu romaani muutti sen, miten Alankomaat hallitsi Itä-Intiaa.',
+      teksti: 'Max Havelaar eli Alankomaiden kauppayhtiön kahvihuutokaupat on '
+        + 'vuoden 1860 romaani, jonka kirjoitti Multatuli — kirjailijanimi tulee '
+        + 'latinan sanoista multa tulī, olen kärsinyt paljon. Sen takana oli '
+        + 'Eduard Douwes Dekker, joka oli palvellut kaksi vuosikymmentä '
+        + 'siirtomaahallinnon viroissa Itä-Intiassa.'
+        + '\n\nRomaanin taustalla on cultuurstelsel eli viljelyjärjestelmä. '
+        + 'Siirtomaahallinto määräsi jaavalaiset viljelijät kasvattamaan '
+        + 'kiintiön kaupallisia kasveja, sokeria ja kahvia, riisin sijaan. '
+        + 'Samaan aikaan veronkantajille maksettiin palkkio kannetusta summasta. '
+        + 'Yhdistelmä johti vallan väärinkäyttöön etenkin Jaavalla ja '
+        + 'Sumatralla, ja seurauksena oli köyhyyttä ja nälänhätää. Siirtomaata '
+        + 'hallittiin hyvin pienellä määrällä sotilaita ja virkamiehiä: entiset '
+        + 'paikallishallitsijat säilyttivät valtansa ja käyttivät sitä.'
+        + '\n\nRomaanin päähenkilö Max Havelaar taistelee tätä turmeltunutta '
+        + 'järjestelmää vastaan. Kirja ei jäänyt kaunokirjallisuudeksi vaan '
+        + 'vaikutti ratkaisevasti siihen, miten Alankomaiden siirtomaapolitiikkaa '
+        + 'muotoiltiin ja muutettiin 1800-luvun lopulla ja 1900-luvun alussa.'
+        + '\n\nMultatulia pidetään yhtenä Alankomaiden suurimmista kirjailijoista. '
+        + 'Rangkasbitungiin, Lebakin alueen hallintokaupunkiin, avattiin 2018 '
+        + 'hänen mukaansa nimetty museo.',
+      lahde: 'en-Wikipedia "Max Havelaar", johdanto ja osio "Background", '
+        + 'en-Wikipedia "Multatuli", johdanto, sekä en-Wikipedia "Rangkasbitung". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä cultuurstelsel eli viljelyjärjestelmä vaati viljelijöiltä?',
+        vaihtoehdot: [
+          'Kiintiön kaupallisia kasveja, kuten kahvia ja sokeria, riisin sijaan',
+          'Määräosan sadosta luovutettavaksi kylän varastoon',
+          'Kolme kuukautta vuodessa työtä satamassa',
+        ],
+        oikea: 0,
+      },
+    },
+    /*
+     * Busangin seutu, Itä-Kalimantan. Artikkeli paikantaa kaivoksen
+     * viidakkoon Busang-joen varrelle eikä anna tarkkaa koordinaattia,
+     * joten merkki on joen seudulla Itä-Kalimantanissa.
+     * Lähde: en.wikipedia.org: Bre-X
+     */
+    {
+      id: 'bre-x-busang',
+      otsikko: 'Bre-X — kaivos, jossa ei ollut kultaa',
+      nimio: 'Bre-X 1997',
+      vuosi: '1993–1997',
+      paikka: 'Busangin seutu, Itä-Kalimantan',
+      lat: 0.6, lon: 116.1,
+      kortti: 'Pennyosake nousi kahdessa vuodessa kuuden miljardin dollarin '
+        + 'yhtiöksi, koska Borneon viidakosta oli muka löytynyt maailman suurin '
+        + 'kultaesiintymä. Näytteisiin oli lisätty kultaa jälkikäteen. Noin '
+        + '40 000 sijoittajaa menetti kaiken.',
+      teksti: 'Bre-X Minerals Ltd. oli kanadalainen kaivosyhtiö, jonka David '
+        + 'Walsh perusti 1989. Yhtiö oli listattu Albertan pörssiin ja teki '
+        + 'tappiota vuodesta toiseen. Maaliskuussa 1993 se osti geologi John '
+        + 'Felderhofin neuvosta viidakkopalstan Busang-joen läheltä '
+        + 'Kalimantanista.'
+        + '\n\nEnsimmäiset kokeet eivät näyttäneet kultaa. Joulukuussa 1993, '
+        + 'päiviä ennen kuin lupa olisi rauennut, pääsgeologi Michael de Guzman '
+        + 'ilmoitti tietävänsä täsmälleen, mihin pitää porata. Lokakuussa 1995 '
+        + 'yhtiö kertoi merkittävästä kultalöydöstä, ja osakekurssi lähti '
+        + 'nousuun. Toukokuussa 1996 osake huipentui 286,50 Kanadan dollariin ja '
+        + 'yhtiön markkina-arvo ylitti kuusi miljardia.'
+        + '\n\nNäytteet oli suolattu: niihin oli lisätty kultaa jälkikäteen, eikä '
+        + 'kaivoksessa ollut juuri lainkaan kultaa. Yhtiö romahti toukokuussa '
+        + '1997, kun väärennös paljastui, ja arviolta 40 000 sijoittajaa menetti '
+        + 'sijoituksensa kokonaan.'
+        + '\n\nDe Guzmania pidetään yleisesti huijauksen suunnittelijana. Hänen '
+        + 'kuolemansa oli hyvin epäselvä, perustaja Walsh kuoli pian sen jälkeen, '
+        + 'eikä muiden johtajien tietoisuudesta löytynyt näyttöä — niinpä '
+        + 'ketään ei koskaan tuomittu rikoksesta.',
+      lahde: 'en-Wikipedia "Bre-X", johdanto ja osio "History". '
+        + 'Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mitä näytteiden "suolaaminen" tarkoitti Bre-X:n tapauksessa?',
+        vaihtoehdot: [
+          'Näytteet säilöttiin suolaliuokseen kuljetusta varten',
+          'Poranäytteisiin lisättiin kultaa jälkikäteen',
+          'Näytteet otettiin väärästä kohdasta kaivosta',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  IND: [
+    /*
+     * Bangran kylä, Siwanin piiri, Bihar (huijarin kotikylä).
+     * Lähde: en.wikipedia.org: Natwarlal
+     */
+    {
+      id: 'natwarlal',
+      otsikko: 'Natwarlal — mies, joka myi Taj Mahalin',
+      nimio: 'Natwarlal',
+      vuosi: '1912–2009',
+      paikka: 'Bangran kylä, Siwanin piiri, Bihar',
+      lat: 26.22, lon: 84.36,
+      kortti: 'Hän myi Taj Mahalin, Punaisen linnakkeen, presidentinlinnan ja '
+        + 'parlamenttitalon — useampaan kertaan. Nykyrahassa myydyt kohteet '
+        + 'olisivat noin 129 miljardin rupian arvoisia. Vankilasta hän pakeni '
+        + 'kerta toisensa jälkeen.',
+      teksti: 'Mithilesh Kumar Srivastava syntyi 1912 Bangran kylässä Siwanin '
+        + 'piirissä Biharissa. Isä oli asemapäällikkö, ja siitä poika oppi, '
+        + 'miten rautateiden rahtiliikenne toimi.'
+        + '\n\nLahjansa hän huomasi sattumalta. Naapuri lähetti hänet viemään '
+        + 'pankkishekkejä, ja poika tajusi osaavansa jäljitellä naapurin '
+        + 'nimikirjoituksen; hän nosti tämän tililtä tuhat rupiaa ennen kuin '
+        + 'teko huomattiin. Hän pakeni Kalkuttaan, kirjoittautui '
+        + 'kauppatieteiden opiskelijaksi ja toimi satunnaisena '
+        + 'osakevälittäjänä. Kauppatieteen tutkinto ja välittäjän työ opettivat '
+        + 'pankkisäännöt, ja yhdessä asiakirjojen väärentämisen kanssa siinä oli '
+        + 'kaikki, mitä huijaukset vaativat.'
+        + '\n\nEnsimmäisen kerran hänet pidätettiin 1937 yhdeksän raudan tonnin '
+        + 'varastamisesta. Kuuluisaksi hän tuli myymällä sellaista, mikä ei ollut '
+        + 'hänen: Taj Mahalin, Punaisen linnakkeen, Rashtrapati Bhavanin ja '
+        + 'Intian parlamenttitalon — jokaisen useaan kertaan.'
+        + '\n\nNatwarlal tunnetaan yhtä hyvin vankilapaoistaan kuin huijauksistaan, '
+        + 'ja hänen nimestään tuli Intiassa yleissana huijarille. Hän kuoli '
+        + '25. heinäkuuta 2009. Kotitalonsa kerrotaan tulleen brittien '
+        + 'purkamaksi, mutta tontti kuuluu yhä suvulle.',
+      lahde: 'en-Wikipedia "Natwarlal", johdanto sekä osiot "Early life" ja '
+        + '"Career". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miten Natwarlal huomasi kykynsä väärentää nimikirjoituksia?',
+        vaihtoehdot: [
+          'Hän harjoitteli sitä koulussa kaverien kanssa',
+          'Hän jäljitteli naapurin nimikirjoituksen pankkishekkiin',
+          'Hän oppi sen työskennellessään kirjanpitäjänä',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Khanapur, Belgaumin piiri, Karnataka (väärentäjän kotiseutu).
+     * Lähde: en.wikipedia.org: Abdul Karim Telgi
+     */
+    {
+      id: 'telgin-leimapaperit',
+      otsikko: 'Telgin leimapaperit — väärennös virastojen sisällä',
+      nimio: 'Telgin leimat',
+      vuosi: '1990-luku–2003',
+      paikka: 'Khanapur, Belgaumin piiri, Karnataka',
+      lat: 15.64, lon: 74.51,
+      kortti: 'Intiassa lähes jokainen sopimus kirjoitetaan valtion leimapaperille. '
+        + 'Yksi mies painatti niitä itse ja palkkasi kolmesataa myyntimiestä. '
+        + 'Ostajina olivat pankit, vakuutusyhtiöt ja pörssivälittäjät — ja '
+        + 'toiminta ei olisi onnistunut ilman viranomaisia.',
+      teksti: 'Abdul Karim Telgi syntyi 1961. Isä oli rautateiden työntekijä ja '
+        + 'kuoli pojan ollessa nuori, joten Abdul Karim maksoi koulunsa '
+        + 'Khanapurissa myymällä hedelmiä ja vihanneksia junissa. Hän valmistui '
+        + 'kauppatieteiden maisteriksi 1984 Belgaumissa ja muutti Saudi-Arabiaan.'
+        + '\n\nSeitsemän vuoden kuluttua hän palasi Intiaan ja aloitti '
+        + 'väärentäjänuransa passeista. Hän perusti työvoiman vientiin '
+        + 'erikoistuneen matkatoimiston ja teki asiakirjoja, joilla työntekijät '
+        + 'pääsivät lentokentän tarkastuksista läpi silloinkin, kun passissa oli '
+        + 'merkintöjä, jotka olisivat pysäyttäneet heidät.'
+        + '\n\nSitten hän siirtyi vaikeampaan: valtion leimapaperiin, jolle '
+        + 'Intiassa kirjoitetaan sopimukset ja asiakirjat. Telgi palkkasi '
+        + 'kolmesataa asiamiestä, jotka myivät väärennöksiä suurostajille — '
+        + 'pankeille, vakuutusyhtiöille ja pörssivälittäjille. Huijauksen kooksi '
+        + 'arvioitiin noin 200 miljardia rupiaa eli 2,1 miljardia dollaria.'
+        + '\n\nEniten hämmennystä herätti se, ettei tällainen olisi onnistunut '
+        + 'ilman viranomaisia: mukana oli lukuisia poliiseja ja muita '
+        + 'virkamiehiä. Yksi heistä oli apulaistutkija Nikhil Kothari, jonka '
+        + 'omaisuus paljastui hänen palkkaansa nähden käsittämättömäksi. Telgi '
+        + 'kuoli 2017.',
+      lahde: 'en-Wikipedia "Abdul Karim Telgi", johdanto sekä osiot "Early life" '
+        + 'ja "Counterfeiting charges". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mihin väärennettyjä leimapapereita ostettiin?',
+        vaihtoehdot: [
+          'Postimerkkien keräilijöille',
+          'Pankeille, vakuutusyhtiöille ja pörssivälittäjille',
+          'Ulkomaisille suurlähetystöille',
+        ],
+        oikea: 1,
+      },
+    },
+  ],
+  LKA: [
+    /*
+     * Dambullan luostari, Matalen piiri (kapinallisten kruunajaispaikka).
+     * Lähde: en.wikipedia.org: Matale rebellion; George Byng, 7th Viscount
+     * Torrington
+     */
+    {
+      id: 'matalen-kapina',
+      otsikko: 'Koiravero ja Dambullan kruunajaiset',
+      nimio: 'Matalen kapina',
+      vuosi: '1848',
+      paikka: 'Dambullan luostari, Matalen piiri',
+      lat: 7.85667, lon: 80.64917,
+      kortti: 'Uusi kuvernööri poisti kahvin vientiveron ja paikkasi aukon '
+        + 'verottamalla aseita, koiria, kärryjä ja puoteja. Kandyn talonpojille '
+        + 'se oli sekä köyhdytys että loukkaus. Heinäkuun lopussa 1848 '
+        + 'Dambullan luostarissa kruunattiin uusi kuningas.',
+      teksti: 'Kandyn maakunnat olivat olleet brittihallinnossa 32 vuotta. '
+        + 'Vuoden 1840 kruununmaa-asetus antoi eurooppalaisten '
+        + 'plantaasinomistajien ottaa haltuunsa talonpoikien yhteismaat, joilla '
+        + 'ryhdyttiin kasvattamaan 1830-luvulla saarelle tuotua kahvia.'
+        + '\n\nBritanniassa alkanut lama iski Ceylonin kahviin ja kaneliin. '
+        + 'Siirtomaasihteeri James Emerson Tennent esitti Lontooseen, että '
+        + 'verotus siirrettäisiin välillisestä välittömään; kahvin vientivero '
+        + 'poistettiin ja kanelin veroa alennettiin. Aukko oli 40 000 puntaa, ja '
+        + 'sen paikkaamaan lähetettiin kuvernööriksi 35-vuotias lordi Torrington. '
+        + 'Heinäkuun 1. päivänä 1848 asetettiin lupamaksut aseille, koirille, '
+        + 'kärryille ja puodeille sekä pakkotyövelvollisuus plantaasiteillä, '
+        + 'ellei erillistä veroa maksanut.'
+        + '\n\nHeinäkuun 26. päivänä kapinan johtajat kokoontuivat Dambullan '
+        + 'vanhaan luostariin. Kello 11.30 Gongalegoda Banda kruunattiin '
+        + 'kuninkaaksi luostarin ylimunkin toimesta, ja Veera Puran Appusta '
+        + 'tuli pääministeri. Joukko marssi Matalen kautta ja tuhosi '
+        + 'verorekistereitä. Torrington julisti sotatilan Kandyyn 29. heinäkuuta '
+        + 'ja Kurunegalaan 31. heinäkuuta.'
+        + '\n\nGongalegoda Banda pidätettiin 21. syyskuuta ja tuomittiin '
+        + 'maanpetoksesta hirtettäväksi; tuomio muutettiin sadaksi raipaniskuksi '
+        + 'ja karkotukseksi Malakkaan. Torrington muistetaan juuri kapinan '
+        + 'kovakouraisesta tukahduttamisesta, ja kapinaa pidetään Sri Lankan '
+        + 'siirtymänä vanhasta aatelisjohtoisesta kapinasta kansanliikkeeseen.',
+      lahde: 'en-Wikipedia "Matale rebellion", osiot "Background", "Rebellion" ja '
+        + '"Legacy", sekä en-Wikipedia "George Byng, 7th Viscount Torrington", '
+        + 'osio "Career". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Mistä vuoden 1848 uudet verot perittiin?',
+        vaihtoehdot: [
+          'Riisisadosta ja kalansaaliista',
+          'Aseista, koirista, kärryistä ja puodeista',
+          'Talon ikkunoista ja savupiipuista',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Colombo (yhtiön kotipaikka ja oikeudenkäyntipaikka).
+     * Lähde: en.wikipedia.org: Golden Key Credit Card Company
+     *
+     * MERKKI ON COLOMBON ITÄLAIDALLA, ja syy on sama kuin Hongkongin
+     * Carrian-kortissa: kaupunkilehden kohdekartta
+     * (js/packs/maakartat.js colombo) on kapea nauha lat 6,904–6,957 ja
+     * lon 79,834–79,8767, ja Fortin liikekeskusta osuu keskelle sitä.
+     * Kohdekartan rajauksessa oleva skandaali kuuluisi kohdekartan
+     * pisteelle eikä pääkartalle, eikä tässä erässä lisätä kohdekartan
+     * pisteitä (tools/tarkista-nostopaikat.mjs). Merkki on siksi
+     * nauhan itäpuolella, ja kortin `paikka`-rivi sanoo Colombo.
+     */
+    {
+      id: 'golden-key',
+      otsikko: 'Golden Key — luottokorttiyhtiön kadonneet talletukset',
+      nimio: 'Golden Key',
+      vuosi: '1999–2008',
+      paikka: 'Colombo',
+      lat: 6.906, lon: 79.89,
+      kortti: 'Yhtiö oli tuonut luottokortit Sri Lankaan ja rakentanut '
+        + 'kauppiasverkon, jota kaikki muutkin käyttivät. Yhdeksäntoistatuhatta '
+        + 'miljoonaa rupiaa yli yhdeksältätuhannelta tallettajalta katosi '
+        + 'yhdeksän vuoden aikana. Loppuvuodesta 2008 koko maan rahoitusala '
+        + 'jäätyi.',
+      teksti: 'Golden Key Credit Card Company perustettiin 3. kesäkuuta 1977, ja '
+        + 'se oli osa Ceylinco Consolidatedia — konsernia, jolla oli yli '
+        + 'kolmesataa tytäryhtiötä.'
+        + '\n\n1980-luvun alussa yhtiö oli luottokorttialan uranuurtaja Sri '
+        + 'Lankassa. Se rakensi maan ensimmäisen kauppiasverkon, jota kaikki '
+        + 'muutkin korttiyhtiöt sittemmin käyttivät. Vuonna 1987 se toi maan '
+        + 'ensimmäisen kotimaisen kultakortin, 1991 korottomat maksuerät ja 2003 '
+        + 'ensimmäisen kotimaisen platinakortin.'
+        + '\n\nVuonna 2008 paljastui, että hallituksen puheenjohtaja Lalith '
+        + 'Kotelawala ja johtokunta olivat kavaltaneet varoja vuodesta 1999 '
+        + 'lähtien. Summa oli 26,5 miljardia rupiaa eli noin 200 miljoonaa '
+        + 'dollaria, ja se oli peräisin 9 054 tallettajalta. Puheenjohtaja ja '
+        + 'johtajat asetettiin Colombon ylioikeudessa syytteeseen 91 kohdasta, '
+        + 'joihin kuului kavallus ja luottamusaseman väärinkäyttö.'
+        + '\n\nSeuraukset ulottuivat koko rahoitusalalle: vuoden 2008 viimeisinä '
+        + 'viikkoina maata koetteli ankara maksuvalmiuskriisi, ja tapaus johti '
+        + 'mittaviin sääntelyuudistuksiin ja alan valvonnan kiristämiseen.',
+      lahde: 'en-Wikipedia "Golden Key Credit Card Company", johdanto sekä osiot '
+        + '"History" ja "GKCCC scandal (2008)". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Kuinka monelta tallettajalta kavalletut varat olivat peräisin?',
+        vaihtoehdot: [
+          '9 054 tallettajalta',
+          '312 tallettajalta',
+          'Noin miljoonalta tallettajalta',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
+  MMR: [
+    /*
+     * Bago (Pegu), Hanthawaddyn kuningaskunta — kellon valupaikka.
+     * Lähde: en.wikipedia.org: Great Bell of Dhammazedi
+     */
+    {
+      id: 'dhammazedin-kello',
+      otsikko: 'Dhammazedin kello — maailman suurin kello joen pohjassa',
+      nimio: 'Dhammazedin kello',
+      vuosi: '1484–1608',
+      paikka: 'Bago (Pegu), Hanthawaddyn kuningaskunta',
+      lat: 17.33333, lon: 96.48333,
+      kortti: 'Kuninkaan tähtientutkija varoitti: hetki on väärä, kello ei tule '
+        + 'soimaan. Kello valettiin silti, ja sen ääni oli ruma. Satakaksikymmentä '
+        + 'vuotta myöhemmin portugalilainen palkkasoturi yritti viedä sen pois — '
+        + 'eikä kukaan ole nähnyt sitä sen jälkeen.',
+      teksti: 'Dhammazedin suuri kello valettiin 5. helmikuuta 1484 Hanthawaddy '
+        + 'Pegun kuninkaan Dhammazedin käskystä ja lahjoitettiin Shwedagonin '
+        + 'pagodille. Sitä pidetään suurimpana koskaan valettuna kellona. '
+        + 'Kuninkaan tähtientutkija oli kehottanut siirtämään valamista, koska '
+        + 'hetki osui epäsuotuisaan krokotiilin tähdistöön, ja ennusti ettei '
+        + 'kello soisi; valmiin kellon ääni oli kertomusten mukaan epämiellyttävä.'
+        + '\n\nAikalaistekstien mukaan metallia kului 180 000 vissiä eli 294 '
+        + 'tonnia, ja seoksessa oli kuparin ja tinan lisäksi hopeaa ja kultaa. '
+        + 'Vuonna 1583 italialainen jalokivikauppias Gasparo Balbi mittasi sen '
+        + 'seitsemäksi askeleeksi ja kolmeksi kämmenenleveydeksi ja kirjoitti '
+        + 'päiväkirjaansa, että kello oli täynnä kirjaimia, joita mikään kansa '
+        + 'ei osannut lukea.'
+        + '\n\nPortugalilainen palkkasoturi Filipe de Brito e Nicote saapui '
+        + 'Ala-Burmaan 1590-luvulla ja nousi Syriamin eli nykyisen Thanlyinin '
+        + 'kuvernööriksi. Vuonna 1608 hän vei kellon Shwedagonista, vieritytti '
+        + 'sen alas Singuttaran kukkulalta lautalle ja antoi norsujen hinata sen '
+        + 'Bago-joelle. Kello aiottiin sulattaa tykeiksi.'
+        + '\n\nLautta sidottiin de Briton lippulaivaan. Kuorma osoittautui liian '
+        + 'raskaaksi, ja Bago- ja Yangon-jokien yhtymäkohdassa nykyisen Monkey '
+        + 'Pointin edustalla lautta hajosi. Kello vajosi pohjaan ja veti '
+        + 'lippulaivan mukanaan. Sitä on etsitty siitä lähtien.',
+      lahde: 'en-Wikipedia "Great Bell of Dhammazedi", johdanto sekä osiot '
+        + '"Description" ja "Theft from Shwedagon Pagoda". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi kello ei koskaan päätynyt Syriamiin sulatettavaksi?',
+        vaihtoehdot: [
+          'Munkit piilottivat sen matkan varrella',
+          'Lautta hajosi jokien yhtymäkohdassa ja kello upposi',
+          'Kuningas lunasti sen takaisin rahalla',
+        ],
+        oikea: 1,
+      },
+    },
+    /*
+     * Pathein (Bassein) — satama, jonka kirje tarjosi kauppapaikaksi.
+     * Lähde: en.wikipedia.org: The Golden Letter of King Alaungpaya
+     */
+    {
+      id: 'kultainen-kirje',
+      otsikko: 'Kultainen kirje, jota kukaan ei osannut lukea',
+      nimio: 'Kultainen kirje',
+      vuosi: '1756–2006',
+      paikka: 'Pathein (Bassein), Burma',
+      lat: 16.784167, lon: 94.733333,
+      kortti: 'Burman kuningas lähetti Yrjö II:lle kirjeen, joka oli kirjoitettu '
+        + 'kultalevylle ja reunustettu kahdellakymmenelläneljällä rubiinilla. '
+        + 'Lontoossa sitä pidettiin kuriositeettina eikä siihen vastattu. '
+        + 'Kirjastossa Hannoverissa se makasi väärän luettelomerkinnän alla 250 '
+        + 'vuotta.',
+      teksti: 'Toukokuun 7. päivänä 1756 kuningas Alaungpaya käski kanslian '
+        + 'laatia neljä kirjettä. Tärkein niistä oli kultainen ja osoitettu '
+        + 'Britannian kuninkaalle Yrjö II:lle. Siinä Alaungpaya tarjosi maiden '
+        + 'kauppasuhteen laajentamista: Itä-Intian kauppakomppania saisi '
+        + 'perustaa linnoitetun kauppapaikan Patheinin satamaan, sillä sen '
+        + 'silloinen tukikohta Negraisin saarella oli kaukana reiteiltä, vailla '
+        + 'infrastruktuuria ja epäterveellisessä ilmastossa.'
+        + '\n\nKirje on 54,7 senttiä pitkä ja 8,5 leveä, vain 0,2 millimetriä '
+        + 'paksu ja painaa rubiineineen sata grammaa. Kullan pitoisuus on '
+        + '95–99 prosenttia, ja kaksikymmentäneljä munanmuotoista rubiinia ovat '
+        + 'peräisin Mogokin seudun kaivoksesta. Kirje käärittiin punaiseen '
+        + 'paperiin ja pantiin koristeltuun norsunluusylinteriin, joka oli '
+        + 'tehty ontoksi kaiverretusta burmalaisen norsun syöksyhampaasta.'
+        + '\n\nKirje kulki Madrasin kautta ja saapui Lontooseen vasta maaliskuussa '
+        + '1758. Yrjö II eikä kauppakomppania ymmärtänyt sen sisältöä eikä '
+        + 'merkitystä, ja aloitetta pidettiin pikemmin kummallisuutena kuin '
+        + 'vakavana avauksena. Alaungpaya ei saanut vastausta eikä edes tietoa '
+        + 'siitä, että kirje oli perillä, ja piti sitä vakavana loukkauksena.'
+        + '\n\nYrjö II lähetti kirjeen kotikaupunkinsa Hannoverin kirjastoon, ja '
+        + 'salaneuvos Gerlach Adolph von Münchhausen kuvasi sen väärin: '
+        + 'sanskritinkieliseksi kirjelmäksi eräältä Coromandelin rannikon '
+        + 'ruhtinaalta. Väärän merkinnän alla se makasi lähes 250 vuotta, kunnes '
+        + 'se tunnistettiin 2006. Vuonna 2015 Unesco liitti kirjeen Maailman '
+        + 'muisti -rekisteriin Myanmarin, Saksan ja Britannian yhteisenä '
+        + 'perintönä.',
+      lahde: 'en-Wikipedia "The Golden Letter of King Alaungpaya", johdanto sekä '
+        + 'osiot "History", "Material" ja "Containers". Tarkistettu 6.9.2026.',
+      visa: {
+        kysymys: 'Miksi kultainen kirje unohtui Hannoverin kirjastoon 250 vuodeksi?',
+        vaihtoehdot: [
+          'Se oli luetteloitu väärin sanskritinkieliseksi kirjelmäksi',
+          'Se katosi kirjaston tulipalossa ja löytyi vasta myöhemmin',
+          'Kirjasto piti sitä väärennöksenä',
+        ],
+        oikea: 0,
+      },
+    },
+  ],
 };

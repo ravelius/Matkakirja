@@ -1143,6 +1143,179 @@ export const ELAINTAKYT = {
     lon: 25.45,
     lat: -33.8,
   },
+  /*
+   * ── MAAILMAN ERÄ M1 6.9.2026 (ETELÄ-AMERIKKA) ────────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erän M1 viidestä maasta ARG, BRA ja CHL olivat jo tässä taulussa
+   * (5.9.2026 kuvaputken erä), joten uusia tulee kaksi: BOL ja COL.
+   *
+   * NÄMÄ KAKSI OVAT KUVATTOMIA, ja se on tietoinen tila eikä unohdus.
+   * Erä M1 on kuvaton kauttaaltaan (ks. js/packs/maastokohteet-arg.js),
+   * eikä integroija generoi kuvia itse: kuvaputki tekee ne Fablen
+   * tilauksesta. Kortti kestää kuvattomuuden — js/elaintaky.js latoo
+   * tekstin ja lähteen ilman kuvakehystä, ja js/packs/elaintakyt.js
+   * elaintakynKuvat palauttaa tyhjän listan (tests/elaintakyt.test.mjs:
+   * "kuvaton tietue ei keksi tiedostoa"). Kun kuvat valmistuvat, ne
+   * lisätään `kuvat`-listana muiden tapaan.
+   *
+   * PAIKAT on tarkistettu samoilla ehdoilla kuin muutkin: piste on
+   * maalla, oman maansa monikulmion sisällä, vähintään 35 yksikön
+   * päässä lähimmästä kaupunkimerkistä ja 30 yksikön päässä toisesta
+   * eläintäystä (tests/elaintakyt.test.mjs).
+   */
+  BOL: {
+    elain: 'boliviandelfiini',
+    otsikko: 'Delfiini maassa, jolla ei ole merta',
+    teksti: 'Boliviandelfiini on makean veden delfiini, joka elää Ylä-Madeiran '
+      + 'vesistön joissa Bolivian Amazoniassa — meri on tuhansien kilometrien '
+      + 'päässä. Paikallisesti se tunnetaan nimellä bufeo, ja se on maailman suurin '
+      + 'makean veden delfiini: pituutta jopa 2,8 metriä ja painoa 180 kiloa. '
+      + 'Amazonin sukulaisistaan se erottuu suuremmalla hammasmäärällä, pienemmällä '
+      + 'kallolla ja pidemmällä vartalolla, ja koskien ja putousten sarja pitää '
+      + 'kannat erillään. Ranskalainen Alcide d\'Orbigny kuvasi lajin 1832 '
+      + 'Bolivian-matkoillaan; sen jälkeen tutkijat ovat pitäneet sitä milloin '
+      + 'omana lajinaan, milloin Amazonin jokidelfiinin alalajina. Syyskuussa 2012 '
+      + 'presidentti Evo Morales sääti sille suojelulain ja julisti sen '
+      + 'kansallisaarteeksi.',
+    lahde: 'en-Wikipedia "Bolivian river dolphin", johdanto-osa sekä osiot '
+      + '"Taxonomy" ja "Description". Tarkistettu 6.9.2026.',
+    /*
+     * Piste on Beninin savannin ja Mamorén jokitasangon puolivälissä:
+     * lajin elinalue on Ylä-Madeiran vesistö, ja merkin on oltava maalla
+     * eikä kartan uomassa, joka on maailmankartan mittakaavassa vettä.
+     */
+    lon: -64.9,
+    lat: -14.0,
+  },
+  COL: {
+    elain: 'kultamyrkkysammakko',
+    otsikko: 'Yksi milligramma, kymmenen ihmistä',
+    teksti: 'Kultamyrkkysammakko elää vain Kolumbian Tyynenmeren puoleisissa '
+      + 'sademetsissä Caucan ja Valle del Caucan departementeissa, ja se on '
+      + 'pienuudestaan huolimatta maailman myrkyllisin eläinlaji. Kuusisenttinen ja '
+      + 'noin kolmenkymmenen gramman painoinen sammakko erittää ihorauhasistaan '
+      + 'batrakotoksiinia: yhden villin yksilön keskimääräinen annos on noin '
+      + 'milligramma, mikä riittää tappamaan arviolta 10–20 ihmistä. Myrkky ei ole '
+      + 'sammakon omaa tekoa vaan tulee ravinnosta — vankeudessa hyönteisruoalla '
+      + 'kasvatetut yksilöt menettävät myrkyllisyytensä kokonaan. Emberá- ja '
+      + 'cofán-kansat ovat käyttäneet eritettä puhallusputken nuolissa, ja kärki '
+      + 'pysyy tappavana kaksi vuotta tai kauemmin. Laji on uhanalainen, koska sen '
+      + 'elinalue on alle 5 000 neliökilometriä ja metsä katoaa.',
+    lahde: 'en-Wikipedia "Golden poison frog", johdanto-osa sekä osiot '
+      + '"Distribution and habitat", "Toxicity" ja "Use by humans". '
+      + 'Tarkistettu 6.9.2026.',
+    // Piste on Chocón sademetsässä lajin elinalueella, irti rannikosta:
+    // rannikkokaistale on maailmankartan muodossa jo merta.
+    lon: -76.8,
+    lat: 3.8,
+  },
+  /*
+   * ── MAAILMAN ERÄ M4 6.9.2026: GRÖNLANTI, GUATEMALA JA NICARAGUA ──
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Kolmella Pohjois-Amerikan maalla ei ollut eläintäkyä lainkaan
+   * (docs/moduulit/karttanostot-kattavuus.md). Tekstit ovat Opuksen
+   * luonnoksia lähteineen — Fable tarkistaa ja kirjoittaa lopulliset
+   * sanamuodot, kuten Euroopan ulkopuolisessa erässä 5.9.2026.
+   *
+   * KUVA ON VIELÄ TILAAMATTA. `kuva`-kentässä on kuvaputken oma tunnus
+   * ilman kansiota, joten se osoittaa ämpäriin (js/media.js
+   * assetOsoite): kun kuvaputki tekee kuvan, se ilmestyy kortille
+   * ilman koodimuutosta, ja siihen asti kortti on kuvaton (404 ei
+   * kaada mitään, js/elaintaky.js hakee kuvan vasta avatessa).
+   */
+  GRL: {
+    elain: 'gronlanninkoira',
+    otsikko: 'Tuhat vuotta valjaissa',
+    teksti: 'Grönlanninkoira eli Kalaallit Qimmiat on suuri husky-tyyppinen rekikoira, jonka thulelaiset toivat Siperiasta Pohjois-Amerikkaan noin tuhat vuotta sitten. Rodun puhtautta varjellaan tarkasti: napapiirin pohjoispuolisessa Länsi-Grönlannissa ja koko Itä-Grönlannissa on kiellettyä tuoda maahan mitään muualta tullutta koiraa, ja vuodesta 2017 jokainen koira on mikrosirutettu ja kirjattu rekisteriin. Kanta pienenee silti: vuonna 2016 koiria oli noin 15 000 ja 2021 enää 12 000. Roald Amundsen käytti grönlanninkoiria retkellään etelänavalle.',
+    lahde: 'en-Wikipedia "Greenland Dog", johdanto-osa ja osio "History". Tarkistettu 6.9.2026.',
+    kuva: 'elain-grl',
+    /*
+     * Piste on Itä-Grönlannin sisämaassa: rannikko on maailmankartan
+     * karkeassa muodossa paikoin merta, ja lähin kaupunkimerkki (Nuuk)
+     * jää satojen yksiköiden päähän.
+     */
+    lon: -32,
+    lat: 68.5,
+  },
+  GTM: {
+    elain: 'ketsaali',
+    otsikko: 'Lintu, joka on myös raha',
+    teksti: 'Ketsaali on Guatemalan kansalliseläin: se on maan lipussa ja vaakunassa, ja maan rahayksikkö on nimetty sen mukaan. Koiraan viheriöivät pyrstösulat ovat pidemmät kuin lintu itse, ja naaras on vaatimattomampi. Laji pesii lahoihin puihin tai tikkojen tekemiin koloihin, ja emot hautovat vuorotellen: koiras päivällä, naaras yöllä. Ketsaali elää sumumetsissä ja vaeltaa vuodenaikojen mukaan rinteiltä latvustoon. Se on luokiteltu silmälläpidettäväksi, ja suurin uhka on elinympäristön häviäminen — Sierra de las Minasin vuoristossa ovat Mesoamerikan laajimmat sumumetsät, ja suuri osa siitä on ollut biosfäärialuetta vuodesta 1990.',
+    lahde: 'en-Wikipedia "Resplendent quetzal", johdanto-osa, ja "Sierra de las Minas", '
+      + 'johdanto-osa ja osio "Biosphere reserve". Tarkistettu 6.9.2026.',
+    kuva: 'elain-gtm',
+    // Piste on Sierra de las Minasin sumumetsävyöhykkeellä, 40,9
+    // lautayksikköä Guatemala Citystä (vähimmäisetäisyys 35).
+    lon: -89.3,
+    lat: 15.15,
+  },
+  NIC: {
+    elain: 'guardabarranco',
+    otsikko: 'Rotkojen vartija ja sen kellonpyrstö',
+    teksti: 'Turkoosikulmamotmot tunnetaan Nicaraguassa nimellä guardabarranco, rotkojen vartija; El Salvadorissa se on torogoz ja Jukatanin mayakielissä pájaro reloj, kellolintu. Nimi tulee pyrstöstä: kaksi pitkää sulkaa päättyy mailanmuotoisiin lippuihin, ja lintu heiluttaa niitä puolelta toiselle kuin kellon heiluria. Heilutus ei ole koristelua vaan viesti pedolle: näen sinut, älä vaivaudu. Toisin kuin useimmilla linnuilla, koreat pyrstösulat ovat molemmilla sukupuolilla. Motmot kaivaa pesäkolonsa tunnelina hiekkatörmään tai kalkkikiven halkeamaan, ja mayat pitivät sitä manalan vartijana, koska se pesi cenotejen reunoilla.',
+    lahde: 'en-Wikipedia "Turquoise-browed motmot", johdanto-osa sekä osiot "Behavior" ja '
+      + '"Cultural relevance". Tarkistettu 6.9.2026.',
+    kuva: 'elain-nic',
+    // Piste on Río San Juanin metsäseudulla järven itäpuolella, 61,3
+    // lautayksikköä Managuasta (vähimmäisetäisyys 35).
+    lon: -84.6,
+    lat: 11.7,
+  },
+  /*
+   * ── ERÄ M3, AASIA 6.9.2026 ─────────────────────────────────────
+   *
+   * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+   * Erä M3 (HKG, IDN, IND, LKA, MMR) toi kolme uutta eläintäkyä.
+   * Intialla oli täky jo ennestään (tiikerinpentu), eikä siihen ole
+   * koskettu.
+   *
+   * HONGKONG JÄI ILMAN TÄKYÄ, JA SYY ON MITATTU. Merkin on oltava
+   * vähintään 35 lautayksikön päässä jokaisesta kaupunkimerkistä
+   * (tests/elaintakyt.test.mjs VAHIN_ETAISYYS_KAUPUNKIIN), mutta koko
+   * Hongkongin alue on 11–20 yksikön päässä omasta laatastaan. Yksikään
+   * piste maan rajojen sisällä ei siis kelpaa, joten täky jää siihen
+   * asti, kunnes Hongkongille tehdään oma kohdekartta. Ehdokas oli
+   * valmiina: Romerin puupuu (Liuixalus romeri), Hongkongin pienin
+   * sammakkoeläin, jonka Chek Lap Kokin populaatio siirrettiin talteen
+   * 1992 ennen lentoaseman rakentamista.
+   *
+   * KUVA TULEE KUVAPUTKELTA. Erä on kuvaton, joten `kuva`-kenttään on
+   * kirjoitettu pelkkä ämpäritunnus (js/media.js assetOsoite:
+   * `kohtaamiset/elaimet/<tunnus>.jpg`). Kun kuvaputki toimittaa
+   * kuvan, tiedostoa ei tarvitse lisätä repoon eikä tähän tauluun
+   * kirjoittaa riviäkään lisää.
+   */
+  IDN: {
+    elain: 'babirusa',
+    otsikko: 'Torahampaat oman kuononsa läpi',
+    teksti: 'Babirusat eli hirvisiat ovat sikojen heimoon kuuluva suku, jota tavataan vain Sulawesin, Togianin, Sulan ja Burun saarilla Indonesiassa. Uroksen ylemmät kulmahampaat kasvavat pystysuoraan leukaluun haarakkeesta, puhkaisevat kuonon ihon ja kaartuvat taaksepäin kohti otsaa — alahampaatkin kasvavat ylöspäin. Naaraalla kulmahampaat ovat kituliaat tai puuttuvat kokonaan. Vielä 2002 asti kaikkia pidettiin yhtenä lajina, mutta suku jaettiin silloin useaksi: burunbabirusa elää Burulla ja Sulalla, tunnetuin laji on pohjoissulawesinbabirusa. Kaikki lajit ovat kansainvälisen luonnonsuojeluliiton mukaan uhanalaisia.',
+    lahde: 'en-Wikipedia "Babirusa", johdanto ja osio "Description". Tarkistettu 6.9.2026.',
+    kuva: 'elain-idn',
+    lon: 120.2,
+    lat: -1.5,
+  },
+  LKA: {
+    elain: 'sri lankan leopardi',
+    otsikko: 'Saaren ainoa huippupeto',
+    teksti: 'Sri Lankan leopardi on saarella elävä leopardin alalaji, jonka kuvaili 1956 srilankalainen eläintieteilijä Paulus Edward Pieris Deraniyagala. Turkki on kellanruskea tai ruosteenkeltainen, ja täplät ovat tiheässä ruusukkeina. Koska leopardi on saaren huippupeto eikä sillä ole kilpailijaa, alalaji on kehittynyt kookkaaksi: yksitoista mitattua urosta painoi keskimäärin 56 kiloa ja suurin 77. Lajia tavataan kaikissa saaren elinympäristöissä aavikkovyöhykkeeltä sademetsään, ja keskiylängöllä se on kirjattu myös teeviljelmiltä, männiköistä ja kotipuutarhoista. Vuodesta 2020 se on ollut vaarantunut: aikuisia yksilöitä arvioidaan olevan alle 800.',
+    lahde: 'en-Wikipedia "Sri Lankan leopard", johdanto sekä osiot "Characteristics" '
+      + 'ja "Distribution and habitat". Tarkistettu 6.9.2026.',
+    kuva: 'elain-lka',
+    lon: 81.4,
+    lat: 6.4,
+  },
+  MMR: {
+    elain: 'surkkunenäapina',
+    otsikko: 'Apina, joka aivastaa sateessa',
+    teksti: 'Myanmarinsurkkunenäapina löydettiin vuonna 2010 Kachinin osavaltion koillisosasta Gaoligongin vuorilta, ja se kuvailtiin uudeksi lajiksi 2011 turkkinsa, partansa ja häntänsä perusteella. Lisujen kielellä sen nimi on mey nwoah ja law waw -kansan kielellä myuk na tok te; molemmat tarkoittavat apinaa, jonka kasvot ovat ylöspäin. Nykerönenän ympärillä on niin vähän lihaa, että sateen kerrotaan saavan eläimen aivastelemaan — seudun ihmisten mukaan se istuu sateella pää painuksissa kasvot polvien välissä. Löytöretkikuntaa johtivat sveitsiläinen kädellistutkija Thomas Geissmann ja Ngwe Lwin, ja laji on äärimmäisen uhanalainen.',
+    lahde: 'en-Wikipedia "Myanmar snub-nosed monkey", johdanto ja osio '
+      + '"Discovery and taxonomy". Tarkistettu 6.9.2026.',
+    kuva: 'elain-mmr',
+    lon: 97.8,
+    lat: 26.3,
+  },
 };
 
 /** Maatunnukset siinä järjestyksessä kuin ne on kirjoitettu. */

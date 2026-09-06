@@ -1,7 +1,8 @@
 /*
- * ELÄINTÄKYJEN AINEISTO — 53 maata, 59 kuvaa, 53 paikkaa kartalla
+ * ELÄINTÄKYJEN AINEISTO — 55 maata, 59 kuvaa, 55 paikkaa kartalla
  * (Euroopan ulkopuolinen erä 5.9.2026 toi 24 uutta maata ja kuusi
- * karusellia, ks. js/packs/elaintakyt.js).
+ * karusellia; maailman erä M1 6.9.2026 toi Bolivian ja Kolumbian
+ * KUVATTOMINA, ks. js/packs/elaintakyt.js).
  *
  * Merkin paikka on tässä pelissä sisältöä siinä missä teksti: väärään
  * kohtaan piirretty eläin väittää jotain maantieteestä. Paikkoja ei voi
@@ -62,7 +63,7 @@ const paikat = new Map(ELAINTAKY_MAAT.map((iso) => {
 }));
 
 test('jokaisella eläintäyllä on kaanoniteksti, kuva ja paikka', () => {
-  assert.equal(ELAINTAKY_MAAT.length, 53, 'eläintäkyjä on 53 maassa');
+  assert.equal(ELAINTAKY_MAAT.length, 61, 'eläintäkyjä on 61 maassa');
   for (const iso of ELAINTAKY_MAAT) {
     const taky = ELAINTAKYT[iso];
     assert.match(iso, /^[A-Z]{3}$/, `${iso}: avain on kolmikirjaiminen maatunnus`);
@@ -83,8 +84,16 @@ test('jokaisella eläintäyllä on kaanoniteksti, kuva ja paikka', () => {
      * elaintakynKuvat). Testi katsoo siis samaa muotoa kuin kortti.
      */
     const kuvat = elaintakynKuvat(taky);
-    assert.ok(kuvat.length >= 1 && kuvat.length <= 2,
-      `${iso}: kuvia on ${kuvat.length} — kortti kantaa yhden tai kaksi`);
+    /*
+     * NOLLA KUVAA ON SALLITTU TILA (maailman erä M1, 6.9.2026).
+     * Kuvaputki tekee kuvat Fablen tilauksesta eikä integroija itse,
+     * joten uusi maa voi tulla tauluun kuvattomana — kortti latoo
+     * silloin tekstin ja lähteen ilman kuvakehystä (js/elaintaky.js) ja
+     * normalisoija palauttaa tyhjän listan. Yläraja on yhä kaksi:
+     * karuselli näyttää enintään kaksi kuvaa (omistaja 5.9.2026).
+     */
+    assert.ok(kuvat.length <= 2,
+      `${iso}: kuvia on ${kuvat.length} — kortti kantaa enintään kaksi`);
     for (const kuva of kuvat) {
       if (kuva.url) continue; // valmis osoite ei ole repon eikä ämpärin nimeämää
       assert.match(kuva.tiedosto,
