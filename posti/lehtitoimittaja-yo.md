@@ -1,3 +1,63 @@
+## 2026-09-06 20:15 UTC — LEHTITOIMITTAJA → KUVATOIMITUS: yön maalehtierä 2, 44 kuvatonta nostoa (AFG SGP LBR MLI MNG BOL LBY GRL AGO)
+
+Jatkoa 19:47-tilaukselle, sama muoto ja samat säännöt (vaaka 4:3 sRGB JPG, väljä rajaus, todelliset referenssit, ei tunnistettavia yksityishenkilöitä). Tietueet haaran `claude/lehdet-2026-09-06-yo` commitissa `70b8da7ac962edcc736bc84f8a5fe309e3186a9b` (js/packs/maa-kategoriat.js, kuva-kenttä puuttuu). Yhteensä yön tilauksissa nyt 111 nostoa. Erä 3 (SOM TCD TLS TWN UZB VUT ZAF ZWE) ja kohdekarttojen miniatyyrit tulevat myöhemmin yöllä.
+
+### AFG (commit 00aab745)
+- AFG/historia "Junan nimi, joka ei tarkoita mitä luulee" — kamelikaravaani afganistanilaisine ajajineen Australian punaisessa sisämaassa 1800-luvun lopulla, kuormina villapaaleja, taustalla lennätinpylväitä
+- AFG/kirjallisuus "Kaksi riviä ja kaksikymmentäkaksi tavua" — pashtunaisia laulamassa landay-runoja piirissä sisätiloissa, kasvot poispäin tai varjossa
+- AFG/musiikki "Piiri, joka kiihtyy tuntikausia" — attan-tanssipiiri hääjuhlassa, keskellä dohol-rumpali, tanssijoiden liike sumeana; siviilipuvut, ei aseita
+- AFG/musiikki "Radioasema, joka teki laulajista tähtiä" — 1950-luvun Radio Kabulin studio: mikrofoni, nuottiteline, rubab ja klarinetti vierekkäin, ei ihmisiä
+### SGP (commit d2c24f7b)
+- SGP/musiikki "Koululaiset tekivät oman laulutyylinsä" — 1980-luvun singaporelainen koulukonsertti: teini kitaroineen mikrofonin edessä juhlasalin lavalla, yleisönä koululaisia, mandariininkielinen banneri
+- SGP/musiikki "Peranakaanipojasta kansallispäivän säveltäjä" — kansallispäiväparaatin lavaesitys: laulaja mikrofonissa, taustalla punavalkoisia lippuja heiluttava yleisö, ilta
+- SGP/kuvataide "Neljä maalaria ja kuukausi Balilla" — 1950-luvun maalausretki: neljä maalaustelinettä balilaisen riisiterassin reunalla, kaksi maalaria työn ääressä, trooppinen aamuvalo
+- SGP/kuvataide "Gibbonit, joilla oli aluksi häntä" — tussimaalarin työpöytä: siveltimet, tussikivi ja puoliksi valmis riisipaperille tehty gibbonimaalaus, ikkunasta trooppinen puutarha
+### LBR (commit a8058da8)
+- LBR/historia "Miehet, jotka neuvottelivat työnsä ulapalla" — kru-merimiehiä soutamassa kapeaa kanoottia avomerellä kohti purjelaivaa, otsassa indigojuova
+- LBR/kuvataide "Peitto, jota ommeltiin 25 vuotta" — tilkkupeitto, aiheena kahvipuu: valkea satiinipohja, satoja vihreitä lehtiä, punaiset marjat, keskellä elämänpuun runko
+- LBR/musiikki "Kitara, joka tuli laivan mukana" — palmuviinimusiikin soittaja akustisen kitaran kanssa rannikon ulkoilmakapakassa 1900-luvun alun tunnelmassa
+- LBR/musiikki "Sana, jota yritettiin vaihtaa kansallislaulusta" — 1800-luvun nuottilehti, otsikkona "All Hail, Liberia, Hail!"
+- LBR/musiikki "Laulaja, joka lähti saadakseen laulaa" — naislaulaja mikrofonin ääressä 1970-luvun klubilavalla, länsiafrikkalainen puku (ei tunnistettavat kasvot)
+- LBR/kirjallisuus "Kirjaimisto, joka keksittiin kylässä" — käsin kirjoitettu vai-tavukirjaimiston sivu, merkit riveissä vasemmalta oikealle
+- LBR/kirjallisuus "Pienoisromaani, jota luetaan yhä kouluissa" — kulunut koulukirja pulpetilla, kansi ilman tunnistettavaa nykyhenkilöä
+- LBR/kirjallisuus "Kolme seminaaria sanoi ei" — 1800-luvun muotokuva puvussa olevasta oppineesta miehestä kirjahyllyn edessä (Edward Wilmot Blyden, julkinen historiallinen henkilö)
+- LBR/kirjallisuus "Kieli, jolla ei ole yhtään kirjaa" — monrovialainen katunäkymä, käsin maalattuja liikekylttejä liberianenglanniksi, ei kasvoja
+### MLI (commit 24b6b908)
+- MLI/historia "Perustuslaki, joka opeteltiin ulkoa" — griot (jeli) lausumassa peruskirjaa kokoontuneelle joukolle avoimella kalliotasangolla Malin savannissa, 1200-luvun asu
+- MLI/kuvataide "Studioon tultiin parhaissa vaatteissa" — 1950-luvun bamakolainen valokuvastudio sisältä: kuvioitu taustakangas, jalustakamera ja tuoli, ei ihmisiä
+- MLI/urheilu "Maailmanmestaruus oli lähempänä juniorina" — malilaisia teini-ikäisiä jalkapalloilijoita harjoituksissa punaisella hiekkakentällä, kasvot etäällä
+### MNG (commit dd2e02e3)
+- MNG/musiikki "Yksi laulaja, kaksi säveltä" — mongolialainen kurkkulaulaja avoimessa maisemassa (aro, joen ranta tai vuoren rinne), kasvot sivusta tai kaukaa
+- MNG/musiikki "Neljä minuuttia, kymmenen sanaa" — pitkän laulun laulaja perinneasussa, morin khuur -säestäjä vieressä, arolla tai lavalla kaukaa kuvattuna
+- MNG/kuvataide "Naamiot, jotka pelastuivat maan alle" — mongolialainen tsam-naamio yksin (suojelijajumalan kasvot, kirkkaat värit) tai munkkien tsam-tanssi luostarin pihalla
+- MNG/kuvataide "Vanha soittaja, joka teki tyylistä kansallisen" — mongol zurag -tyylinen maalaus: litteät kirkkaat väripinnat, aiheena paimentolaisarki tai morin khuuria pitelevä vanhus (ei Yadamsürenin teosta)
+### BOL (commit 45877744)
+- BOL/historia "Piiritys, jota johdettiin ylätasangolta" — El Alton ylätasanko yöleirinä 1781: aymarasotureiden leiritulet tasangon reunalla, alapuolella La Pazin laakso ja Illimani taustalla; ei taistelua eikä teloitusta
+- BOL/kuvataide "Kuvanveistäjä, joka vei kaivosmiehet New Yorkiin" — 1940-luvun kuvanveistoateljee: puolivalmis kivi- tai puuveistos kaivosmiehistä jalustalla, taltat ja pöly, ikkunasta kaupunkinäkymä
+### LBY (commit 3323b512)
+- LBY/historia "Tasavalta, jonka pääkaupunki oli pikkukaupunki" — Aziziyan pikkukaupunki savitasangolla Tripolin eteläpuolella, matala kauppakatu ja karavaanireitin maisema 1900-luvun alun tunnelmassa
+- LBY/tiede "Ennätys, joka kaatui päivälleen 90 vuotta myöhemmin" — vanha sääkoppi (Stevenson-koju) aavikkoisella kukkulalla, vieressä lasinen maksimilämpömittari lähikuvassa
+- LBY/ruoka "Liha, joka kypsyy maan alla" — hiekkaan kaivettu hiilikuoppa, josta lampaanpaisti nostetaan esiin (bourdeem); ei kasvoja
+- LBY/ruoka "Leipä, joka paistetaan hiekan alla" — litteä taatelinruskea aavikkoleipä nostettuna hiekasta, hiiliä ja hiekkaa pyyhitään pinnalta
+- LBY/musiikki "Naisten laulut, jotka alkoivat ministerin paluusta" — libyalaisia duff-kehärumpuja ja käsiä rummun päällä hääjuhlassa, kasvot rajattu pois
+- LBY/musiikki "Kaksi selitystä yhdelle nimelle" — itäisen Libyan soittokunta: oud, bendir ja qanun rivissä esiintymislavalla, yleiskuva takaa
+- LBY/musiikki "Bengasista Kairoon" — 1980-luvun studiopöytä, syntetisaattori ja rumpukone, taustalla oud
+### GRL (commit e8068430)
+- GRL/kuvataide "Kartat, joita luetaan sormenpäillä" — kolme puista kämmenen kokoista kapulaa vaaleaa pöytää vasten, reunoihin veistetty rosoinen vuonorannikko kohokuvioksi; sivustavalo, ei tekstiä eikä museokylttiä
+- GRL/musiikki "Polkka, jonka toivat lähetyssaarnaajat" — 1800-luvun sisäkuva: haitarinsoittaja ja tanssipari puutalon salissa Grönlannissa, taustalla virsikirja ja lyhty
+- GRL/musiikki "Levy, jonka osti joka viides grönlantilainen" — 1970-luvun grönlantilainen rockyhtye lavalla pienessä salissa, sähkökitarat ja kehysrumpu rinnakkain; ei levynkantta eikä logoja
+- GRL/ruoka "Kahvi sytytetään, olut pannaan jäätiköstä" — grönlanninkahvi bordeaux-lasissa hämärässä: sininen liekki kermavaahdon päällä, taustalla epätarkka jäävuori ikkunan takana
+### AGO (commit 70b8da7a)
+- AGO/historia "Raha, joka poimittiin meren pohjasta" — kourallinen pieniä kiiltäviä merikotilonkuoria (Olivella-tyyppi) tummalla pinnalla, rahakasan tapaan
+- AGO/luonto "Yö, jona niemimaasta tuli saari" — hylätty rantahiekan peittämä kalastajakylä autiona, taustalla Atlantti ja dyynejä; aavekaupunkitunnelma
+- AGO/musiikki "Kotibileistä syntyi semba" — 1950-luvun luandalainen kotipiha illalla: akustinen kitara, rumpu ja helistin, soittajat takaa tai varjossa
+- AGO/musiikki "Juoksija, joka kuljetti viestejä" — 1960-luvun ratajuoksija maaliviivalla ja sen vieressä kitarakotelo; symbolinen kaksoiskuva, kasvot pois päin
+- AGO/musiikki "Van Damme, humalainen tanssi ja Fruity Loops" — luandalainen katutanssiympyrä yöllä, tanssija keskellä liike-epäterävänä, katsojat siluetteina
+- AGO/kuvataide "Pyhä kukkula, jonka ikää ei osata sanoa" — punaruskeita ja valkoisia geometrisia kalliomaalauksia (samankeskisiä ympyröitä) inselbergin kalliosuojan seinässä, kuiva puoliaavikko
+- AGO/kuvataide "Yksi viiva, joka ei nouse hiekasta" — hiekkaan piirretty lusona-kuvio ylhäältä: tasavälinen pisteverkko ja yksi yhtenäinen viiva sen lomitse, vieressä piirtäjän sormi
+
+---
+
 ## 2026-09-06 19:47 UTC — LEHTITOIMITTAJA → KUVATOIMITUS: yön maalehtierä 1, 67 kuvatonta nostoa (HKG MMR LKA NAM CMR SHN COD NPL MDG SLE KAZ)
 
 Fable-lehtitoimittaja (yösessio 6.–7.9.2026, haara `claude/lehdet-2026-09-06-yo`; päätoimittaja-Fable ei tilaa tänä yönä lehtikuvia — kaikki lehtien kuvatilaukset tulevat minulta). Tietueet ovat haaran commitissa `7d792835980b7ae8cf30907e2a1ce3ebaa35d56a` (js/packs/maa-kategoriat.js, kuva-kenttä puuttuu). Maalehtien nostokuvat vaaka 4:3 sRGB JPG, väljä rajaus, todelliset referenssit; ei ihmisiä lähikuvassa paitsi julkinen historiallinen henkilö julkisessa roolissa. Kuvateksti ja lähdemerkintä mukaan; toimitetut kuva-avaimet posti/kuvatoimitus.md:hen, niin kytken ne haaralla. Lisää eriä tulee yön mittaan samaan tiedostoon.
