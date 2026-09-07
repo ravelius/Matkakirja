@@ -1208,4 +1208,74 @@ export const OCEANIA_ARTIKKELIT = {
       + 'aavikkoilmasto: kesän ylin keskilämpötila on 35,6 astetta ja '
       + 'talvella pakkasöitä on keskimäärin kaksitoista vuodessa.',
   },
+  /*
+   * TOWNSVILLE (Opus 7.9.2026, Fablen parvi). Avain on 'Townsville',
+   * koska js/packs/maailmankartta.js antaa kaupungille wiki-nimeksi
+   * 'Townsville' — ui.js hakee introa kentällä `city.wiki ?? city.name`.
+   * Sama erä kuin lehden tekstit (js/packs/kulttuuri-kategoriat.js,
+   * avain townsville): väitteet on luettu en-Wikipedian raakatekstistä
+   * 7.9.2026, lähdeaineistona
+   * docs/mantereet-tyoaineisto/faktapohja-townsville.md ja sen
+   * riippumaton tarkistus tarkistus-townsville.md, joka voittaa
+   * ristiriidassa.
+   *
+   * VUODEN 1873 KULMA: isoisän matkavuonna Townsville oli yhdeksän
+   * vuoden ikäinen satamakaupunki ilman rautatietä. Kultaa oli
+   * löytynyt Cape Riveriltä 1867, Ravenswoodista 1869 ja Charters
+   * Towersista jouluaattona 1871, ja kaikki se kulki Townsvillen
+   * laitureille maanteitse. Rata Charters Towersista valmistui vasta
+   * joulukuussa 1882. Tullilla ja oikeusistuimella oli tuolloin yhä
+   * yhteinen ahdas puurakennus.
+   *
+   * PERUSTAMISLEIRIN KUUKAUTTA EI ANNETA (tarkistus, kohta A):
+   * "Townsville" sanoo huhtikuu 1864, "Townsville Customs House"
+   * marraskuu 1864. Teksti sanoo vain vuoden.
+   */
+  Townsville: {
+    intro: 'Townsville on Pohjois-Queenslandin suurin kaupunki, '
+      + 'satama Cleveland Bayn rannalla 1 350 kilometriä Brisbanesta '
+      + 'pohjoiseen ja 350 kilometriä Cairnsista etelään. Asukkaita on '
+      + 'kaupungin oman ilmoituksen mukaan 204 541, ja keskustaa '
+      + 'hallitsee 286 metriä korkea graniittikallio Castle Hill.'
+      + '\n\n'
+      + 'Kaupunki syntyi tulvan takia. Burdekin-joki katkaisi joka '
+      + 'sadekausi karjatilojen tien etelän satamiin, joten **satama '
+      + 'oli pakko perustaa joen pohjoispuolelle** — ja niin Woodstock '
+      + 'Stationin John Melton Black lähetti 1864 miehiä etsimään '
+      + 'paikkaa. Leiri pystytettiin Ross Creekin rantaan Melton '
+      + 'Hillin alle. Nimi tuli sydneyläiseltä liikemieheltä Robert '
+      + 'Townsilta, joka rahoitti asutuksen mutta kävi paikalla vain '
+      + 'kerran, kolmen päivän ajan.'
+      + '\n\n'
+      + 'Kulta teki lopun. Cape River 1867, Ravenswood 1869 ja '
+      + 'Charters Towers jouluaattona 1871 — viisi kultakenttää lähetti '
+      + 'saaliinsa Townsvillen laitureille. **Isoisän matkavuonna 1873 '
+      + 'kaupungissa ei vielä ollut rautatietä, ja kulta tuli alas '
+      + 'maanteitse.** Rautateiden rakentaminen alkoi 1879, ja rata '
+      + 'Charters Towersiin valmistui joulukuussa 1882. Väkiluku oli '
+      + 'silloin 4 000; yhdeksän vuotta myöhemmin 13 000.',
+    teksti: 'Townsville on trooppisessa Queenslandissa mutta kuivalla '
+      + 'kaistaleella. Rannikko kääntyy juuri tässä itä—länsisuuntaan, '
+      + 'eikä kaakkoispasaati enää nouse rinnettä ylös — siksi talvet '
+      + 'ovat sinitaivaisia ja sade kertyy marras—huhtikuun kuudelle '
+      + 'kuukaudelle. Kaupungin keskellä on Castle Hill, edustalla '
+      + 'kahdeksan kilometrin päässä Magnetic Island, ja lävitse '
+      + 'virtaa Ross River.'
+      + '\n\n'
+      + 'Kaupunki on ollut aina jonkin toisen paikan satama: ensin '
+      + 'karjatilojen, sitten kultakenttien, sitten sokerin. Vuonna '
+      + '1896 Japani avasi tänne ensimmäisen australialaisen '
+      + 'konsulaattinsa, koska seudulla oli noin neljätuhatta '
+      + 'japanilaista työntekijää. Toisen maailmansodan aikana '
+      + 'kaupungissa oli yli 50 000 sotilasta. Vuonna 1992 Australian '
+      + 'korkein oikeus tunnusti alkuperäisen maaoikeuden jutussa, '
+      + 'jonka aloitti täkäläinen puutarhuri Eddie Mabo.'
+      + '\n\n'
+      + 'Nykyään Townsville on hallinnon ja raskaan teollisuuden '
+      + 'keskus: se on ainoa kaupunki maailmassa, joka jalostaa '
+      + 'kolmea perusmetallia — sinkkiä, kuparia ja nikkeliä. Täällä '
+      + 'ovat James Cook -yliopiston suurin kampus ja Australian '
+      + 'meritieteen instituutin päämaja. Flinders Street on yhä '
+      + 'vanhin katu.',
+  },
 };

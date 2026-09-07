@@ -98518,4 +98518,875 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TOWNSVILLE (Opus 7.9.2026, Fablen parvi) — Oseanian laudan
+   * kaupunkilehti, kaupunki-id `townsville`. Aineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-townsville.md ja sen
+   * erillinen tarkistus tarkistus-townsville.md (tuomio "kelpaa, kun
+   * kohtien A–H ratkaisut tehdään"; kaikki kahdeksan on tehty).
+   *
+   * LÄHTEET. Väitteet on luettu en-Wikipedian raakateksteistä
+   * 7.9.2026: "Townsville", "James Morrill (castaway)", "Magnetic
+   * Island", "Castle Hill, Townsville", "Charters Towers", "Eddie
+   * Mabo", "SS Yongala", "Townsville Customs House", "Townsville Post
+   * Office", "Townsville School of Arts", "St James Cathedral,
+   * Townsville", "Tobruk Memorial Baths", "Queens Gardens,
+   * Townsville", "Great Northern Hotel, Townsville", "Queensland
+   * Museum Tropics", "The Strand, Townsville". Toista kieliversiota ei
+   * tarvittu: jokaisella kohdekartan kohteella on oma
+   * englanninkielinen artikkeli, useimmilla Queensland Heritage
+   * Register -kuvauksen pohjalta.
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti.
+   * Saapumisteksti ja valokuvataulu olivat jo olemassa eikä niihin
+   * kosketa; ennen–nyt-pari kopioidaan valokuvataulusta
+   * (oceania-valokuvat.js, townsville) kuvavaiheessa.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto'; sivun nimi kertoo aiheen.
+   *
+   * AUSTRALIAN MAALEHTEÄ EI TOISTETA, EIKÄ KARTTANOSTOJA.
+   * Maalehti (maa-kategoriat.js, AUS) kertoo ensimmäisestä
+   * laivastosta, viimeisestä vankilaivasta, Eurekan paalutuksesta,
+   * liittovaltiosta, viidestäsadasta kansasta, emusta tähtien
+   * välissä, tulenhoidosta, Ulurusta, kullasta, lampaista,
+   * sähkelennättimestä, Murray-joesta, kengurusta, vesinokkaeläimestä,
+   * ISOSTA VALLIRIUTASTA, Nullarborista, damperista, swagista,
+   * kultakenttien riisistä ja vegemitestä. Karttanostoja
+   * (maastokohteet-aus.js) ovat Port Arthur, Ubirr, Parkesin
+   * radioteleskooppi, Broken Hill, Mungojärvi, Snowy Mountains,
+   * Eurekan paalutus, Cooktown, Mount Augustus, ISO VALLIRIUTTA ja
+   * Tasmania.
+   *
+   * CAIRNSIN JA DARWININ LEHTIÄ EI TOISTETA. Cairns kertoo riutasta,
+   * korallien vaalentumisesta ja Daintreesta; Darwin kertoo vuoden
+   * 1942 pommituksista ja hirmumyrsky Tracysta. Siksi tässä lehdessä
+   * EI OLE riuttanostoa eikä sotanostoa: riutta mainitaan vain
+   * matkaoppaassa, ja vuosi 1942 näkyy ainoastaan siinä, että
+   * postitalon kellotorni purettiin (kohdekartan juttu). Hirmumyrskyt
+   * ovat oppaan Hyvä tietää -rivillä.
+   *
+   * KOHDEKARTTA EI TOISTA NÄITÄ JUTTUJA (New Yorkin sääntö). Lehti
+   * kertoo perustamisesta, James Morrillista, vuodesta 1873,
+   * Japanin konsulaatista, Eddie Mabosta, kuivasta tropiikista,
+   * Nooan yöstä, Castle Hillistä ja Magnetic Islandista; kartta
+   * kertoo kahdeksan rakennuksen ja puiston oman historian.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: perustamisleirin kuukautta ei anneta (huhtikuu vai
+   *    marraskuu 1864), vain vuosi.
+   *  - B: vuosisade on leipätekstin 1 095 mm, ei tietolaatikon
+   *    1 134,7 mm; keskustan ja Woodstockin ero sanotaan ääneen.
+   *  - C: Queens Gardensin lajilista on kohteen oman artikkelin
+   *    (kaakao, öljypalmu, mango).
+   *  - D: vanhan rautatieaseman vuosilukua ei anneta (1913 vai 1914).
+   *  - E: postitalon vaiheiden vuosia ei sidota toisiinsa.
+   *  - F: Castle Hillin graniitti on vaaleanpunaista (kohteen oma
+   *    artikkeli), ei punaista (pääartikkeli).
+   *  - G: "Australian ensimmäinen ilmainen lainakirjasto" kerrotaan
+   *    lähteen väitteenä.
+   *  - H: rajaseudun väkivalta kerrotaan tapahtumana ilman
+   *    yksityiskohtia; haaksirikon lautan yksityiskohdat jätetään
+   *    pois; nykypolitiikkaa ei mainita.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026 ilta).
+   * Oppaan sääjakso nojaa en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen.
+   *
+   * MINITEHTÄVÄ EI TOISTA KULTTUURIVISAA. oceania-questions.js:n
+   * townsville-visa kysyy osavaltiota, merivaakkua, Magnetic Islandia,
+   * meritieteen laitosta ja verkkoaitauksia; teemasivun tehtävä kysyy,
+   * miksi Townsvillen talvi on kuiva, ja vastaus on saman sivun
+   * ensimmäisessä nostossa.
+   */
+  townsville: [
+    {
+      id: 'kaupunki',
+      nimi: 'Townsville',
+      johdanto: 'Townsville perustettiin 1864 satamaksi sinne, minne '
+        + 'Burdekin-joen tulva ei yltänyt. Isoisän matkavuonna 1873 '
+        + 'kaupunki oli yhdeksänvuotias eikä siellä ollut rautatietä: '
+        + 'kulta tuli laitureille maanteitse.',
+      nostot: [
+        {
+          otsikko: 'Satama, jonka tulva vaati',
+          aika: '1864—1866',
+          teksti: 'Burdekin-joki nousi joka sadekausi yli äyräiden, ja '
+            + 'silloin sisämaan karjatilat jäivät ilman yhteyttä etelän '
+            + 'satamiin. Siksi joen pohjoispuolelle oli pakko saada oma '
+            + 'satama. Woodstock Stationin John Melton Black, '
+            + 'sydneyläisen liikemiehen Robert Townsin työntekijä, '
+            + 'lähetti Andrew Ballin ja Mark Watt Reidin etsimään '
+            + 'paikkaa, ja leiri pystytettiin 1864 Ross Creekin '
+            + 'rantaan Melton Hillin alle. Towns kävi paikalla 1866 '
+            + 'kolme päivää — ensimmäisen ja ainoan kerran — ja lupasi '
+            + 'rahoituksen, jolloin kaupunki nimettiin hänen mukaansa. '
+            + 'Kunta julistettiin helmikuussa 1866, ja Blackista tuli '
+            + 'sen ensimmäinen pormestari.',
+        },
+        {
+          otsikko: 'Mies, joka palasi seitsemäntoista vuoden jälkeen',
+          aika: '1846—1863',
+          teksti: 'Englantilainen merimies James Morrill oli laivassa '
+            + 'nimeltä Peruvian, joka ajoi riutalle Korallimerellä '
+            + 'helmikuussa 1846. Purjelautalle pääsi 21 ihmistä, ja '
+            + 'neljänkymmenenkahden päivän jälkeen Cape Clevelandin '
+            + 'rantaan nousi seitsemän. Paikalliset klaanit toivat '
+            + 'ruokaa ja vettä ja opettivat eloonjääneet keräämään '
+            + 'ravintoa. Morrill jäi ainoana henkiin, sai nimen '
+            + 'Karckynjib-Wombil-Mooney ja oppi kahdeksan biri-kielen '
+            + 'murretta. Vuonna 1863 hän kiipesi Jarvisfieldin '
+            + 'lammasaseman aidalle ja huusi karjapaimenille '
+            + 'unohtumassa olevalla englannillaan olevansa '
+            + 'haaksirikkoutunut merimies. Ennen lähtöään hän varoitti '
+            + 'klaaniaan siirtymään rannikolle.',
+        },
+        {
+          otsikko: 'Vuosi 1873: viiden kultakentän satama',
+          aika: '1873',
+          teksti: 'Kultaa löytyi Cape Riveriltä 1867, Ravenswoodista '
+            + '1869 ja Charters Towersista jouluaattona 1871, kun '
+            + '12-vuotias aboriginaalipoika Jupiter Mosman etsi '
+            + 'salaman säikäyttämiä hevosia ja löysi puron pohjalta '
+            + 'kultamöhkäleen. Isoisän matkavuonna Townsville oli '
+            + 'näiden kenttien satama — myös Gilbertin ja Etheridgen — '
+            + 'mutta ilman rautatietä: radan rakentaminen alkoi vasta '
+            + '1879 ja rata Charters Towersiin valmistui joulukuussa '
+            + '1882. Kaupunki oli yhä pieni. Tulli ja oikeusistuin '
+            + 'jakoivat ahtaan kolmihuoneisen puurakennuksen, jonka '
+            + 'taakse oli 1871 lisätty kaksi toimistoa, ja vuonna 1882 '
+            + 'asukkaita oli 4 000.',
+        },
+        {
+          otsikko: 'Konsulaatti, jonka avasi sokeriruoko',
+          aika: '1896—1908',
+          teksti: 'Vuonna 1896 Japani perusti Townsvilleen ensimmäisen '
+            + 'australialaisen konsulaattinsa. Syy oli käytännöllinen: '
+            + 'seudulla työskenteli noin neljätuhatta japanilaista '
+            + 'siirtotyöläistä sokeriruokopelloilla ja meren '
+            + 'elinkeinoissa — kilpikonnan, trokosimpukan, '
+            + 'merimakkaran ja helmien pyynnissä. Konsulaatti oli '
+            + 'siellä missä työ oli, ei siellä missä hallinto. Kun '
+            + 'Valkoisen Australian politiikka astui voimaan, '
+            + 'japanilaisen työvoiman kysyntä väheni, ja konsulaatti '
+            + 'suljettiin 1908. Kaupunki oli jo sitä ennen tottunut '
+            + 'tuotuun työvoimaan: Robert Towns oli tuonut 8. '
+            + 'heinäkuuta 1866 ensimmäisen laivalastin Tyynenmeren '
+            + 'saarelaisia, 56 ihmistä.',
+        },
+        {
+          otsikko: 'Puutarhuri, joka muutti maan lain',
+          aika: '1974—1992',
+          teksti: 'Eddie Mabo työskenteli James Cook -yliopistossa '
+            + 'puutarhurina vuodesta 1967 vuoteen 1975. Yliopistolla '
+            + 'hän kuuli 1974 ensimmäisen kerran, mitä terra nullius '
+            + '-oppi tarkoitti: sen mukaan hän ei omistanut maata, '
+            + 'jonka hän oman kansansa perintöjärjestelmän mukaan '
+            + 'omisti. Vuonna 1981 samalla kampuksella pidettiin '
+            + 'maaoikeuskonferenssi, jossa Mabo selosti Murray '
+            + 'Islandin perintöjärjestelmää. Kuulijoiden joukossa '
+            + 'ollut lakimies ehdotti koeoikeudenkäyntiä. '
+            + 'Kymmenen vuoden jälkeen, 3. kesäkuuta 1992, Australian '
+            + 'korkein oikeus ratkaisi jutun Mabon hyväksi ja tunnusti '
+            + 'alkuperäisen maaoikeuden ensimmäistä kertaa maan '
+            + 'historiassa.',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Townsville on Pohjois-Queenslandin ja koko '
+          + 'Pohjois-Australian suurin taajama: asukkaita on '
+          + 'kaupungin oman ilmoituksen mukaan 204 541, ja vuoden 2021 '
+          + 'väestönlaskennassa 179 011. Vuonna 2021 yhdeksän '
+          + 'prosenttia asukkaista eli 21 180 ihmistä oli '
+          + 'aboriginaali- tai Torresinsalmen saarelaistaustaisia. '
+          + 'Alueen kansoja ovat wulgurukaba, bindal, girrugubba, '
+          + 'warakamai ja nawagi; wulgurukabat kutsuvat maataan '
+          + 'nimellä Gurrumbilbarra ja bindalit nimellä Thul Garrie '
+          + 'Waja. Keskusta on kolmen kilometrin kaistale Castle '
+          + 'Hillin ja meren välissä, ja kaikki oleellinen on '
+          + 'kävelymatkan päässä Flinders Streetiltä.',
+        artikkeli: {
+          nimi: 'Matkailijan Townsville',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa vuori on kadun päässä, talvi on '
+            + 'sininen ja lautta vie kahdeksan kilometrin päähän '
+            + 'saarelle, jonka nimen antoi rikkinäinen kompassi.',
+          nosto: 'Townsville on ainoa kaupunki maailmassa, joka '
+            + 'jalostaa kolmea eri perusmetallia — sinkkiä, kuparia ja '
+            + 'nikkeliä. Nikkelimalmi tuodaan laivalla Indonesiasta, '
+            + 'Filippiineiltä ja Uudesta-Kaledoniasta, sinkki tulee '
+            + 'junalla Canningtonin kaivokselta ja kuparirikaste Mount '
+            + 'Isasta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Townsville on Brucen valtatien ja rannikkoradan '
+                + 'varrella: Brisbaneen on 1 350 kilometriä etelään ja '
+                + 'Cairnsiin 350 kilometriä pohjoiseen. Spirit of '
+                + 'Queensland kulkee molempiin suuntiin ja The '
+                + 'Inlander sisämaahan Mount Isaan; nykyinen asema '
+                + 'avattiin 2003, ja Mount Isan rata vihittiin 1929. '
+                + 'Keskustassa liikutaan kävellen. Flinders Street on '
+                + 'vanhin katu ja sen varrella seisovat 1880-luvun '
+                + 'pankit; Tattersalls Hotel on vuodelta 1864. '
+                + 'Magnetic Islandille menee lautta rannan '
+                + 'aallonmurtajalta Nelly Baytiin, ja saarella on '
+                + '39,5 neliökilometrin kansallispuisto '
+                + 'kävelypolkuineen.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on kasvanut kolmen kiven ympärille. '
+                + 'Castle Hill nousee keskustan takaa, Mount Stuart '
+                + 'etelässä ja Magnetic Island merellä — kaikki kolme '
+                + 'kuuluvat samaan kvartsimonzoniittiseen '
+                + 'kivilajiprovinssiin. Ross River virtaa lävitse, ja '
+                + 'sen kolme patoa ja ruoppaus ovat tehneet siitä '
+                + 'syvän ja vakaan; Ross River Dam on kolmenkymmenen '
+                + 'kilometrin päässä suulta ja on kaupungin '
+                + 'vesivarasto. Vanha satama-alue on Ross Creekin '
+                + 'varrella. Puistoja on kolme kasvitieteellistä: '
+                + 'Anderson Park, Queens Gardens ja The Palmetum. '
+                + 'Ravintolat ovat Palmer Streetillä, Flinders '
+                + 'Streetillä ja The Strandilla.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: kuivan kauden ilta',
+              teksti: 'Toukokuusta lokakuuhun Townsvillessä sataa '
+                + 'tuskin lainkaan: syyskuun keskisade on 9,9 '
+                + 'millimetriä ja heinäkuun 13,9. Päivä on 26 asteen '
+                + 'tuntumassa ja yö laskee neljääntoista, mikä on '
+                + 'trooppisessa kaupungissa viileää. Kaakkoispasaati '
+                + 'puhaltaa tasaisesti, ja historioitsija Henry '
+                + 'Reynolds, joka tuli kaupunkiin 1965, muisti juuri '
+                + 'sen: lyhyet kirkkaat hämärät, kuunvaloiset yöt ja '
+                + 'ennen kaikkea pasaatituulet. Ilta vietetään ulkona, '
+                + 'ja The Strandin kahden kilometrin rantabulevardi on '
+                + 'silloin täynnä kävelijöitä.',
+            },
+            {
+              otsikko: 'Historian käännekohta: kutsu vuodelta 1866',
+              teksti: 'Kaupungin ensimmäinen vuosikymmen ei ollut '
+                + 'kaikille sama. Robert Towns toi 8. heinäkuuta 1866 '
+                + 'Blue Bell -aluksella 56 Tyynenmeren saarelaista '
+                + 'Loyautén saarilta ja Uusilta Hebrideiltä työhön '
+                + 'sokeriruoko- ja puuvillapelloille. Townsin '
+                + 'värvääjää Henry Ross Lewiniä vastaan esitettiin '
+                + 'syytöksiä siitä, että osa saarelaisista oli '
+                + 'siepattu, ja 1867 pidettiin tutkinta yhden '
+                + 'saarelaisen kuolemasta. Samaan aikaan '
+                + 'siirtokunnan eteneminen oli alkuperäisväestölle '
+                + 'väkivaltaista — juuri siksi James Morrill käski '
+                + 'klaaninsa siirtyä rannikolle ja tarjoutui '
+                + 'välittäjäksi. Tarjous hylättiin.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian '
+                + 'Townsville-artikkelin Climate-osiosta; lehdellä ei '
+                + 'ole omaa vuosigraafia, koska säänormaaleja ei '
+                + 'haettu tässä erässä. Ilmasto on trooppinen savanni '
+                + 'ja vuosi jakautuu kahtia. Marraskuusta huhtikuuhun '
+                + 'on sadekausi: tammikuun keskisade on 252,6 '
+                + 'millimetriä ja helmikuun 338,1, ja päivät ovat noin '
+                + '32 astetta. Toukokuusta lokakuuhun on kuiva kausi, '
+                + 'jolloin päivä on 26—30 astetta ja yö 14—21. '
+                + 'Vuosisade on 1 095 millimetriä 61 sadepäivänä, '
+                + 'mutta se vaihtelee kaupungin sisälläkin: keskustassa '
+                + '1 136 millimetriä ja lounaisessa Woodstockissa '
+                + '853. Paras aika tulla on kuiva kausi.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Castle Hill',
+                tahdet: 3,
+                selite: '286 metriä keskellä kaupunkia; ylös vie tie '
+                  + 'tai Goat Trackin 758 porrasta.',
+              },
+              {
+                mita: 'Magnetic Island',
+                tahdet: 3,
+                selite: 'Kahdeksan kilometriä merellä, 52 '
+                  + 'neliökilometriä, josta 39,5 kansallispuistoa.',
+              },
+              {
+                mita: 'The Strand',
+                tahdet: 2,
+                selite: 'Kahden kilometrin rantabulevardi uima-altaineen '
+                  + 'ja joka toinen syyskuu veistosnäyttely.',
+              },
+              {
+                mita: 'Flinders Street',
+                tahdet: 2,
+                selite: 'Kaupungin vanhin katu ja rivi 1880-luvun '
+                  + 'pankkitaloja.',
+              },
+              {
+                mita: 'Queensland Museum Tropics',
+                tahdet: 2,
+                selite: 'Hoitaa HMS Pandoran ja SS Yongalan '
+                  + 'hylkypaikat ja säilyttää niiden esineet.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksoissa ja
+             * nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade tulee tai on tulematta',
+                teksti: 'Vuosivaihtelu on poikkeuksellisen suuri: '
+                  + 'kahdentoista kuukauden sademäärät ovat vaihdelleet '
+                  + '217,9 millimetristä 3 459,8 millimetriin, ja '
+                  + 'kuivin vuosi kymmenestä saa vain puolet '
+                  + 'keskisateesta.',
+              },
+              {
+                otsikko: 'Hirmumyrskyjen kausi',
+                teksti: 'Myrskyt osuvat joulu—huhtikuussa; viimeisiä '
+                  + 'ovat olleet Kirrily 2024 ja Yasi 2011, ja '
+                  + 'helmikuussa 2019 tulva vaurioitti noin 3 300 '
+                  + 'kotia.',
+              },
+              {
+                otsikko: 'Uiminen on aidattua',
+                teksti: 'The Strandin rannalla on uitu ainakin '
+                  + '1870-luvulta, mutta uimapaikat on eri aikoina '
+                  + 'aidattu verkoilla — avovedessä on esiintynyt sekä '
+                  + 'meduusojen pistoja että haita.',
+              },
+              {
+                otsikko: 'Kaupunki vaihtuu nopeasti',
+                teksti: 'Väki vaihtuu tavallista tiheämmin, koska '
+                  + 'varuskunta ja valtion virastot tuovat lyhyiden '
+                  + 'sopimusten työntekijöitä ja kaivostyötä tehdään '
+                  + 'lentäen.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Kuiva tropiikki',
+      johdanto: 'Townsville on tropiikissa mutta kuivalla kaistaleella, '
+        + 'ja syy on rannikon suunnassa. Sama geologia, joka teki '
+        + 'keskustan kalliosta 286-metrisen, nostaa merestä saaren, '
+        + 'joka vei kapteeni Cookin kompassin.',
+      tehtava: {
+        kysymys: 'Miksi Townsvillen talvi on kuiva, vaikka '
+          + 'pohjoisempana rannikolla sataa ympäri vuoden?',
+        vaihtoehdot: [
+          'Kaupunki on liian kaukana merestä',
+          'Rannikko kääntyy tässä itä—länsisuuntaiseksi',
+          'Castle Hill pysäyttää sateen',
+          'Pasaatituulet lakkaavat talveksi',
+        ],
+        oikea: 1,
+        fakta: 'Pohjoisempana rannikko kulkee pohjois—etelä-suunnassa '
+          + 'ja kaakkoispasaati nousee sitä vasten, jolloin sataa. '
+          + 'Townsvillen kohdalla rannikko kääntyy itä—länsisuuntaan, '
+          + 'eikä nostetta synny.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tropiikki, jossa talvi on sininen',
+          teksti: 'Townsvillen ilmasto on trooppinen savanni, ja '
+            + 'sen erikoisuus on talvi. Muualla Queenslandin '
+            + 'itärannikon tropiikissa — esimerkiksi Cairnsissa — '
+            + 'sataa myös talvella, koska rannikko kulkee '
+            + 'pohjois—etelä-suunnassa ja kaakkoispasaati nousee sitä '
+            + 'vasten. Townsvillen kohdalla rannikko kääntyy '
+            + 'itä—länsisuuntaiseksi, eikä nostetta synny. Siksi '
+            + 'talvikuukaudet ovat sinitaivaisia: lämpimät päivät, '
+            + 'viileät yöt ja tasainen pasaati. Vuosisade on 1 095 '
+            + 'millimetriä 61 sadepäivänä, ja lähes kaikki siitä tulee '
+            + 'marras—huhtikuun kuudessa kuukaudessa. Syyskuun '
+            + 'keskisade on 9,9 millimetriä.',
+        },
+        {
+          otsikko: 'Nooan yö',
+          aika: '11.1.1998',
+          teksti: 'Vuosisade kertoo Townsvillestä vähemmän kuin sen '
+            + 'vaihtelu. Mittausten alettua 1871 kahdentoista '
+            + 'kuukauden sademäärät ovat vaihdelleet 217,9 '
+            + 'millimetristä — joulukuusta 1901 marraskuuhun 1902, '
+            + 'liittovaltion kuivuuden huipulla — aina 3 459,8 '
+            + 'millimetriin helmikuun 2025 ja tammikuun 2026 välillä. '
+            + 'Vaihtelu on näin sateiselle ilmastolle lähes '
+            + 'ainutlaatuinen; vertailukelpoisia ovat vain muutamat '
+            + 'Koillis-Brasilian kaupungit. Sateisin vuorokausi on '
+            + '11. tammikuuta 1998, jolloin satoi 548,8 millimetriä '
+            + 'pääosin kahdentoista tunnin aikana pimeän tultua. '
+            + 'Townsvillelaiset kutsuvat sitä yhä Nooan yöksi.',
+        },
+        {
+          otsikko: 'Kallio, joka yritettiin korottaa vuoreksi',
+          teksti: 'Castle Hill on vaaleanpunaista graniittia ja 286 '
+            + 'metriä merenpinnasta. Sen alkuperäiskansan nimi on '
+            + 'Cootharinga, ja se on toinen kahdesta seudulla '
+            + 'säilyneestä alkuperäiskansan paikannimestä. Kallio '
+            + 'määräsi kaupungin epäsäännöllisen katuverkon. '
+            + '1800-luvulla asukkaat kaatoivat sen puut ja villit '
+            + 'vuohet söivät loput; vuohet poistettiin vasta '
+            + '1930-luvulla, ja huipulle vievä tie rakennettiin '
+            + '1935—36 työllisyystyönä. Ylös pääsee myös Goat Trackia, '
+            + 'jossa on 758 porrasta. Kukkula merkittiin '
+            + 'perintörekisteriin 1993. Lähde kertoo myös, että '
+            + 'korkeutta on ainakin kahdesti yritetty nostaa, jotta '
+            + 'kallio kelpaisi vuoreksi.',
+        },
+        {
+          otsikko: 'Saari, joka väänsi kompassia',
+          aika: '1770',
+          teksti: 'Kahdeksan kilometriä rannikolta on 52 '
+            + 'neliökilometrin vuoristoinen saari, jonka wulgurun '
+            + 'kielinen nimi on Yunbenun. James Cook purjehti ohi '
+            + '1770 ja kutsui sitä nimellä Magnetical Island, koska '
+            + 'saaresta näytti lähtevän magneettinen veto, joka '
+            + 'häiritsi aluksen kompassia. Aluetta on sittemmin '
+            + 'tutkittu monenlaisilla laitteilla eikä syytä ole '
+            + 'löytynyt. Saari on käytännössä kaupungin lähiö, jossa '
+            + 'asuu vajaat 2 500 ihmistä; siitä 39,5 neliökilometriä '
+            + 'on kansallispuistoa ja lintujen suojelualuetta. Saaren '
+            + 'graniitti ei jäänyt paikalleen: sitä louhittiin '
+            + 'sataman maantäyttöön ja Townsvillen tullitalon '
+            + 'jalustaan.',
+        },
+      ],
+    },
+  ],
+  /*
+   * IQUITOS (Opus 7.9.2026, Fablen parvi) — E-Amerikan laudan
+   * kaupunkilehti, kaupunki-id `iquitos`. Aineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-iquitos.md ja sen erillinen
+   * tarkistus tarkistus-iquitos.md (tuomio "kelpaa, kun kohtien A–G
+   * ratkaisut tehdään"; kaikki seitsemän on tehty, ks. alla).
+   *
+   * LÄHTEET. Väitteet on luettu raakateksteistä 7.9.2026.
+   * en-Wikipedia: "Iquitos".
+   * es-Wikipedia: "Casa de Fierro", "Barrio de Belén", "Zona
+   * Monumental de Iquitos", "Catedral de Iquitos", "Ex Hotel Palace",
+   * "Malecón Tarapacá", "Casa Strassberger", "Casa Morey", "Mercado
+   * Central (Iquitos)", "Plaza Veintiocho de Julio", "Escuela
+   * Superior de Bellas Artes Víctor Morey Peña". Espanjankielinen
+   * Wikipedia on nimetty lähteeksi siellä missä sitä käytetään
+   * (Guatemala Cityn ja Saltan ennakkotapaus samasta parvierästä):
+   * yhdelläkään kohdekartan kahdeksasta kohteesta ei ole omaa
+   * englanninkielistä artikkelia.
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti.
+   * Saapumisteksti ja valokuvataulu olivat jo olemassa eikä niihin
+   * kosketa; ennen–nyt-pari kopioidaan valokuvataulusta
+   * (southamerica-valokuvat.js, iquitos) kuvavaiheessa.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto'; sivun nimi kertoo aiheen.
+   *
+   * PERUN MAALEHTEÄ EI TOISTETA, EIKÄ KARTTANOSTOJA. Maalehti
+   * (maa-kategoriat.js, PER) kertoo inkavaltakunnasta, Atahualpan
+   * lunnaista, kuraka Guaman Pomasta, itsenäisyydestä, Caralista,
+   * Nazcan viivoista, quipusta, Sipánin haudasta, HOATSINISTA,
+   * PAPUKAIJOJEN SAVILAIKUISTA, Humboldtin virrasta, Titicacan
+   * kelluvista saarista, perunasta, kvinoasta, pachamancasta,
+   * piscosta, charangosta, cajónista, panhuiluista ja saksista.
+   * Karttanostoja (maastokohteet-per.js) ovat Huascarán, Apurímac,
+   * Ballestas-saaret, Nazcan viivat, Chan Chan, Caral, Kuélap, Sipán,
+   * Chavín de Huántar, Arequipa ja Colcan kanjoni. Teemasivun
+   * lintunosto kertoo Allpahuayo-Mishanan KOTOPERÄISESTÄ
+   * harmaasiepposta, jota kumpikaan maalehden lintunosto ei käsittele.
+   *
+   * MANAUSIN JA LIMAN LEHTIÄ EI TOISTETA. Manaus kertoo
+   * OOPPERATALOSTA, SÄHKÖVALOISTA, LONTOOTA JÄLJITTELEVÄSTÄ
+   * TULLITALOSTA ja WICKHAMIN SIEMENISTÄ; Lima kertoo aavikosta,
+   * guanosta, cevichestä ja Machu Picchusta. Siksi tässä lehdessä
+   * kumibuumin loppu kerrotaan vain siitä, mitä KAUPUNGISSA tapahtui
+   * (Casementin raportti, yhtiön purkaminen, väen lähtö), ja Aasian
+   * viljelmät mainitaan yhdellä sivulauseella.
+   *
+   * KOHDEKARTTA EI TOISTA NÄITÄ JUTTUJA (New Yorkin sääntö).
+   * Erityisesti CASA DE FIERRO ON NOSTON I4 AIHE, joten se ei ole
+   * kartalla, ja kartan Mercado Central -juttu kertoo torin oman
+   * tarinan eikä rautatalon ristiriitaa. BELÉN on noston aihe eikä
+   * mahtuisi ruutuun (1,4 km etelään).
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: Casa de Fierron neljä lähdelausumaa kirjoitetaan lukijalle
+   *    auki; yhtäkään vuosilukua ei esitetä varmana.
+   *  - B: väkiluvuista sanotaan aina, kumpaa ne koskevat, ja vuoden
+   *    1873 arvio esitetään johtopäätöksenä eikä lähteen lukuna.
+   *  - C: kumibuumin vuodet ovat johdannon 1880—1914.
+   *  - D: Putumayon tapahtumat kerrotaan tapahtumina ja seurauksina,
+   *    ei tekoina; hintoja ja lapsiin kohdistuneita rikoksia ei
+   *    kerrota.
+   *  - E: ayahuasca on oppaan Hyvä tietää -varauksena, ei nostona,
+   *    eikä nimiä mainita.
+   *  - F: härkähain matka annetaan sekä maileina että kilometreinä
+   *    (3 360 mailia ≈ 5 400 km, lehden oma muunnos) ja sanotaan
+   *    satunnaiseksi.
+   *  - G: tulvavuoden 2012 lukemaa "117 m" ei käytetä, koska se on
+   *    korkeus merenpinnasta eikä tulvan syvyys.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026 ilta).
+   * Oppaan sääjakso nojaa en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen.
+   *
+   * MINITEHTÄVÄ EI TOISTA KULTTUURIVISAA. southamerica-questions.js:n
+   * iquitos-visa kysyy tiettömyyttä, maata, motokaria, kumia ja
+   * Marañónin ja Ucayalin yhtymäkohtaa; teemasivun tehtävä kysyy
+   * joen vuotuista vaihteluväliä, ja vastaus on saman sivun
+   * ensimmäisessä nostossa.
+   */
+  iquitos: [
+    {
+      id: 'kaupunki',
+      nimi: 'Iquitos',
+      johdanto: 'Iquitos on maailman suurin kaupunki, johon ei johda '
+        + 'maantietä. Isoisän matkavuonna 1873 se oli yhdeksänvuotias '
+        + 'laivastosatama ja noin tuhannen asukkaan kylä sademetsän '
+        + 'reunassa.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki, jonne ei johda tietä',
+          teksti: 'Iquitos on Loreton alueen ja Maynasin provinssin '
+            + 'pääkaupunki, Perun Amazonian suurin kaupunki ja koko '
+            + 'maan yhdeksänneksi väkirikkain. Metropolialueella asuu '
+            + '471 993 ihmistä neljässä piirissä: Iquitos, Punchana, '
+            + 'Belén ja San Juan Bautista. Se on maailman suurin '
+            + 'kaupunki, johon ei pääse maantietä pitkin ja joka ei '
+            + 'ole saarella — sinne tullaan joko jokea pitkin tai '
+            + 'lentäen. Siitä seuraa kaikki muu: tavara tulee '
+            + 'proomulla tai lentokoneella, elinkustannukset ovat '
+            + 'Perun keskitasoa korkeammat, ja kaupunki on Cuscon '
+            + 'jälkeen maan toiseksi kallein. Kaduilla liikkuu yli '
+            + '25 000 kolmipyöräistä motokaria ja bussit ovat isoja '
+            + 'puisia ajoneuvoja.',
+        },
+        {
+          otsikko: 'Yhdeksän lähetysasemaa ja yksi nimi',
+          aika: '1730—1767',
+          teksti: 'Kaupungin nimi tulee kansasta, jota espanjalaiset '
+            + 'kutsuivat iquitoiksi. He asuivat Pastazan, Tigren, '
+            + 'Nanayn ja Curarayn varsilla ja siirtyivät myöhemmin '
+            + 'Amazonin ja Itayan seudulle. Vuosina 1638—1769 kansat '
+            + 'koottiin '
+            + 'jesuiittojen lähetysasemille, ja noin 130 vuoden aikana '
+            + 'siellä työskenteli 161 lähetyssaarnaajaa: 63 kreolia, '
+            + '43 espanjalaista, 32 saksalaista ja hollantilaista, 20 '
+            + 'italialaista ja kolme muuta. Isä José Bahamonde '
+            + 'käytti 37 vuotta '
+            + 'yhdeksän Iquitos-aseman perustamiseen; niistä yksi oli '
+            + 'San Pablo de los Napeanos vuodelta 1757. Kaarle III '
+            + 'karkotti jesuiitat 20. elokuuta 1767, ja asemista jäi '
+            + 'jäljelle kourallinen kauppakyliä.',
+        },
+        {
+          otsikko: 'Vuosi 1873: yhdeksänvuotias laivastosatama',
+          aika: '1861—1876',
+          teksti: 'Peru halusi pitää kiinni Amazonin latvavesistä, ja '
+            + 'keino oli asuttaa ne. Presidentti Ramón Castilla perusti '
+            + 'Loreton departementin 7. tammikuuta 1861 ja määräsi '
+            + 'rakennettavaksi jokisataman strategiseen paikkaan; '
+            + 'väittelyn jälkeen valittiin Iquitosin kauppakylä. '
+            + '5. tammikuuta 1864 kolme laivaston höyrylaivaa — '
+            + 'Pastaza, Próspero ja Morona — saapui kylään, ja tuo '
+            + 'päivä on Perun ensimmäisen jokisataman perustamispäivä. '
+            + 'Paikalle pystytettiin heti Englannista tuotu telakka ja '
+            + 'laivastopaja. Genaro Herreran mukaan asukkaita oli '
+            + '648 vuonna 1866 ja 1 475 vuonna 1876 — isoisän '
+            + 'matkavuonna siis suunnilleen tuhat.',
+        },
+        {
+          otsikko: 'Rautatalo, josta lähteet eivät ole samaa mieltä',
+          teksti: 'Plaza de Armasin laidalla seisoo esivalmisteinen '
+            + 'rautatalo, jonka seinät, katto ja parveke ovat '
+            + 'suorakaiteen muotoisia rautalevyjä. Sen alkuperästä on '
+            + 'neljä eri kertomusta. Englanninkielinen Wikipedia sanoo '
+            + 'yhdessä kohdassa, että taloa vain väitetään Gustave '
+            + 'Eiffelin suunnittelemaksi ja että todisteet ovat '
+            + 'niukat; toisessa kohdassa se sanoo Eiffelin rakentaneen '
+            + 'sen Pariisin näyttelyyn 1878. Espanjankielinen '
+            + 'Wikipedia sanoo suunnitelman syntyneen noin 1860, '
+            + 'valmistuksen tapahtuneen Belgiassa ja talon olleen '
+            + 'esillä vuoden 1889 näyttelyssä. Varmaa on, että talo '
+            + 'tuli laivalla, oli liian iso ja jaettiin kahtia.',
+        },
+        {
+          otsikko: 'Kumi, joka toi kaupungin ja jätti sen',
+          aika: '1880—1914',
+          teksti: 'Kumibuumi teki Iquitosista Manausin rinnalla '
+            + 'Amazonin toisen pääkaupungin. Vuonna 1900 kaupungissa '
+            + 'oli kaksikymmentäviisi kumikauppahuonetta, ja väkiluku '
+            + 'nousi 1 475:stä 9 438:aan vuoden 1903 laskennassa. '
+            + 'Kumiyrittäjät hoitivat myös politiikan: Julio César '
+            + 'Aranasta tuli pormestari 1902 ja Cecilio '
+            + 'Hernándezista 1906. Aranan Peruvian Amazon Company piti '
+            + 'alkuperäiskansojen työntekijöitä lähes orjuutta '
+            + 'vastaavissa oloissa. Britannian pääkonsuli Roger '
+            + 'Casement julkaisi tutkintaraportin 1913, brittiosakkaat '
+            + 'painostettiin muutoksiin ja Arana joutui purkamaan '
+            + 'yhtiön. Kun Aasian kumi halpeni, moni lähti.',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Iquitos on 106 metrin korkeudessa Amazonin altaan '
+          + 'suurella tasangolla, ja kaupunkialue on 368,9 '
+          + 'neliökilometriä. Itaya ja Nanay rajaavat laajenemista '
+          + 'idässä ja pohjoisessa ja Moronacochan järvi lännessä, '
+          + 'joten kartalla kaupunki näyttää valtavalta jokisaarelta '
+          + 'olematta sitä. Keskusta on pieni ja kävelymatkan '
+          + 'kokoinen: Plaza de Armasilta on kortteli Malecón '
+          + 'Tarapacálle, viisi korttelia betonoitua rantakatua '
+          + 'Itaya-joen yllä. Noin yhdeksänkymmentä rakennusta on '
+          + 'julistettu Loreton arkkitehtoniseksi perinnöksi, ja '
+          + 'kumikauden julkisivujen kaakelit ovat Italiasta ja '
+          + 'Portugalista.',
+        artikkeli: {
+          nimi: 'Matkailijan Iquitos',
+          taitto: 'opas',
+          teksti: 'Kaupunki, johon ei aja mistään, jonka joki nousee '
+            + 'ja laskee kymmenen metriä vuodessa ja jonka '
+            + 'kaakelijulkisivut tilattiin aikanaan meren takaa.',
+          nosto: 'Belénin torille tuo tuotteitaan 150 '
+            + 'alkuperäiskansayhteisöä, ja siellä on inventoitu 390 '
+            + 'tuotetta: 231 kasviperäistä, 157 eläinperäistä ja kaksi '
+            + 'mineraaliperäistä. Niistä 84 prosenttia tuotetaan '
+            + 'alueella; loput tulevat rannikolta ja San Martínista.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaupunkiin tullaan lentäen tai jokea pitkin. '
+                + 'Crnl. FAP Francisco Secada Vignetta -lentoasemalle '
+                + 'on Limasta 8—9 vuoroa päivässä ja suora lento '
+                + 'kestää tunnin ja 45 minuuttia; kansainväliseltä '
+                + 'terminaalilta on yhteys Panama Cityyn. Jokea pitkin '
+                + 'matka on hitaampi mutta mahdollinen kumpaankin '
+                + 'suuntaan. Kaupungissa liikutaan motokarilla, joita '
+                + 'on yli 25 000, tai kävellen — keskusta on niin '
+                + 'pieni, että sen kiertää tunnissa. Suunniteltu '
+                + 'maantie Sarameriza-suuntaan liittäisi Iquitosin '
+                + 'ensimmäistä kertaa maan tieverkkoon.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Vanha keskusta on Plaza de Armasin ympärillä ja '
+                + 'laskeutuu itään Malecón Tarapacálle, joka '
+                + 'rakennettiin kumikaudella 1800-luvun lopulla ja on '
+                + 'nimetty Tarapacán departementin mukaan. Sen '
+                + 'varrella ovat kumiparonien talot, kirjasto ja '
+                + 'entinen Kolumbian konsulaatti. Malecónin eteläpäästä '
+                + 'maasto laskee Beléniin. Lounaassa on Plaza 28 de '
+                + 'Julio, kaupungin suurin aukio. Kaupungin ulkopuolella '
+                + 'ovat Quistocochan matkailukeskus kuuden kilometrin '
+                + 'päässä ja Allpahuayo-Mishanan suojelualue '
+                + 'kahdenkymmenen kilometrin päässä.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: San Juanin päivä',
+              teksti: 'Kesäkuun 24. päivä on Perun viidakon suurin '
+                + 'juhla, ja sen ruoka on juane: keitetty riisikäärö, '
+                + 'joka nimettiin Johannes Kastajan mukaan ja jolla '
+                + 'saattaa olla esikolumbiaanista alkuperää. Toinen '
+                + 'arjen ruoka on tacacho, paistetuista ja '
+                + 'chicharrónien kanssa survotuista banaaniviipaleista '
+                + 'tehty pallo, joka tarjoillaan chorizon kanssa; sana '
+                + 'tulee ketšuan ilmauksesta taka chu, survottu. '
+                + 'Helmikuussa on karnevaali, jossa kastellaan '
+                + 'ohikulkijoita vesipalloilla. Puhekieli on omaa '
+                + 'Amazonian espanjaa, jossa Juana ääntyy Fana.',
+            },
+            {
+              otsikko: 'Historian käännekohta: 5. tammikuuta 1864',
+              teksti: 'Sinä päivänä kolme Perun laivaston höyrylaivaa '
+                + 'ankkuroitui Iquitosin kylän eteen, ja kylästä tuli '
+                + 'Perun ensimmäinen jokisatama. Päätöksen takana oli '
+                + 'rajapolitiikka: Peru oli sopinut Brasilian kanssa '
+                + 'vapaasta purjehduksesta 23. lokakuuta 1851 ja '
+                + 'halusi vahvistaa vaatimuksensa asuttamalla '
+                + 'kiistanalaisen alueen. Iquitosista tuli Loreton '
+                + 'pääkaupunki 9. marraskuuta 1897, ja rajat sovittiin '
+                + 'Kolumbian kanssa 1922 ja Ecuadorin kanssa 1942. '
+                + 'Ilman tuota päivää kumibuumi olisi rakentanut '
+                + 'palatsinsa jonnekin muualle.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian '
+                + 'Iquitos-artikkelin Climate-osiosta; lehdellä ei ole '
+                + 'omaa vuosigraafia, koska säänormaaleja ei haettu '
+                + 'tässä erässä. Ilmasto on päiväntasaajan '
+                + 'sademetsäilmasto, jota ohjaa matalapainevyöhyke '
+                + 'eivätkä pasaatituulet, eikä hirmumyrskyjä ole. '
+                + 'Vuodenaikoja on kaksi. Sateinen kausi kestää '
+                + 'marraskuusta toukokuuhun, ja maaliskuussa ja '
+                + 'huhtikuussa sataa eniten, 280—300 millimetriä. '
+                + 'Heinä- ja elokuu ovat kuivimmat ja aurinkoisimmat, '
+                + 'mutta niissäkin on kaatosateita. Joki on '
+                + 'korkeimmillaan toukokuussa ja alimmillaan '
+                + 'lokakuussa — se ratkaisee, mihin veneellä pääsee.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Belénin tori',
+                tahdet: 3,
+                selite: 'Perun Amazonian suurin katutori; 390 '
+                  + 'inventoitua tuotetta ja 150 yhteisöä myyjinä.',
+              },
+              {
+                mita: 'Malecón Tarapacá',
+                tahdet: 3,
+                selite: 'Viisi korttelia rantakatua Itayan yllä, '
+                  + 'kumikauden julkisivut molemmin puolin.',
+              },
+              {
+                mita: 'Casa de Fierro',
+                tahdet: 2,
+                selite: 'Esivalmisteinen rautatalo Plaza de Armasin '
+                  + 'laidalla; lähteen mukaan Amerikan ensimmäinen.',
+              },
+              {
+                mita: 'Allpahuayo-Mishana',
+                tahdet: 2,
+                selite: 'Valkohiekkametsää 20 kilometriä pois; yli 600 '
+                  + 'lintulajia ja yksi kotoperäinen.',
+              },
+              {
+                mita: 'Quistococha',
+                tahdet: 2,
+                selite: '369 hehtaaria metsää, pieni eläintarha, '
+                  + 'akvaario ja tekoranta kuuden kilometrin päässä.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksoissa ja
+             * nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Kaikki tulee laivalla tai lentäen',
+                teksti: 'Koska maantietä ei ole, tavara maksaa '
+                  + 'enemmän kuin muualla Perussa: Iquitos on Cuscon '
+                  + 'jälkeen maan toiseksi kallein kaupunki.',
+              },
+              {
+                otsikko: 'Tulva on tavallinen',
+                teksti: 'Vuoden 2012 tulva oli kaupungin historian '
+                  + 'pahin luonnononnettomuus: helmikuussa vahingot '
+                  + 'koskivat yli 19 000 perhettä ja maaliskuussa yli '
+                  + '18 000, ja vesi nousi rantakaduille.',
+              },
+              {
+                otsikko: 'Ayahuasca-matkailua ei valvota',
+                teksti: 'Juoma on nimetty kansalliseksi '
+                  + 'kulttuuriperinnöksi ja mystiikkamatkailu on '
+                  + 'kasvanut, mutta shamaaneja ei valvota eikä '
+                  + 'kenelläkään ole todistusta pätevyydestään; '
+                  + 'kuolemantapauksia on raportoitu.',
+              },
+              {
+                otsikko: 'Helle ja kosteus',
+                teksti: 'Hellejaksoilla lämpötila voi nousta yli '
+                  + '37 asteen ja tuntua 45 asteelta; toisaalta '
+                  + 'mantereen eteläkärjestä tulee ajoittain kylmä '
+                  + 'aalto, joka tuo sadetta ja ukkosta.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Joki, joka nousee ja laskee',
+      johdanto: 'Iquitosissa vuodenaikoja on kaksi, ja ne mitataan '
+        + 'joen pinnasta. Amazon nousee toukokuuhun ja laskee '
+        + 'lokakuuhun, ja koko kaupunki — talot, tori ja metsä — on '
+        + 'sopeutunut siihen rytmiin.',
+      tehtava: {
+        kysymys: 'Kuinka paljon Amazonin pinta laskee Iquitosissa '
+          + 'toukokuun ja lokakuun välillä?',
+        vaihtoehdot: [
+          'Alle metrin',
+          'Kahdesta kolmeen metriä',
+          'Yhdeksästä kahteentoista metriä',
+          'Yli kolmekymmentä metriä',
+        ],
+        oikea: 2,
+        fakta: 'Joki on korkeimmillaan toukokuussa ja alimmillaan '
+          + 'lokakuussa, ja ero on yhdeksästä kahteentoista metriä. '
+          + 'Sen jälkeen se nousee taas sateiden mukana.',
+      },
+      nostot: [
+        {
+          otsikko: 'Yhdeksän metriä ylös ja alas',
+          teksti: 'Iquitosin ilmasto on päiväntasaajan '
+            + 'sademetsäilmasto: sataa ympäri vuoden eikä selvää '
+            + 'kuivakautta ole, mutta kesä on sateisempi. Sateinen '
+            + 'kausi alkaa marraskuussa ja päättyy toukokuuhun, ja '
+            + 'eniten sataa maaliskuussa ja huhtikuussa, 280—300 '
+            + 'millimetriä. Toukokuussa Amazon on korkeimmillaan. '
+            + 'Lokakuussa se on alimmillaan, yhdeksästä '
+            + 'kahteentoista metriä alempana, ja nousee sitten '
+            + 'kierroksen mukana uudelleen. Heinä- ja elokuu ovat '
+            + 'kuivimmat ja aurinkoisimmat kuukaudet, mutta niissäkin '
+            + 'tulee kaatosateita. Sadetta on enemmän kuin '
+            + 'Ayacuchossa, Cuscossa tai Limassa.',
+        },
+        {
+          otsikko: 'Kaupunginosa, joka nousee veden mukana',
+          teksti: 'Belén tunnetaan myös nimellä Amazonian Venetsia. '
+            + 'Sen talot ovat palafiitteja eli paalutaloja ja '
+            + 'asuinlauttoja Itaya-joen rannan takana, ja '
+            + 'kaupunginosan elämänrytmi vaihtuu vuodenajoittain joen '
+            + 'nousun ja laskun mukana. Kaupunginosa syntyi Belén '
+            + 'Cochan rannalle, joka oli Itayan pieni haara ja on '
+            + 'nykyään Itaya-niminen katu, ja levisi sieltä ylöspäin '
+            + 'Vizcarran kummulle ja Pijuayo Lomalle. Belénin tori on '
+            + 'Perun Amazonian suurin katutori: se alkaa 9 de '
+            + 'Diciembre -kadun päästä ja leviää kapeina käytävinä '
+            + 'useille kaduille. Siellä on inventoitu 390 tuotetta, '
+            + 'joista 60 on riistalajeja ja 56 kalalajeja.',
+        },
+        {
+          otsikko: 'Valkoisen hiekan metsä',
+          teksti: 'Kahdenkymmenen kilometrin päässä kaupungista alkaa '
+            + 'Allpahuayo-Mishanan kansallinen suojelualue, joka '
+            + 'kuuluu Nanayn valuma-alueeseen ja niin sanottuun Napon '
+            + 'ekoalueeseen. Sen erikoisuus ovat valkohiekkametsät, '
+            + 'joita ei ole muualla samanlaisina. Ekoalueella on '
+            + 'laskettu 112 sammakkoeläinlajia, 17 kädellislajia, '
+            + '1 900 kasvilajia ja yli 600 lintulajia. Yksi niistä on '
+            + 'kotoperäinen: Iquitosin harmaasieppo Polioptila '
+            + 'clementsi elää vain täällä ja on kaupungin symboli. '
+            + 'Kaupungin omalla metropolialueella on lisäksi 850 '
+            + 'kasvilajia, joista 22 palmulajia, sekä 130 nisäkäs- ja '
+            + '330 lintulajia.',
+        },
+        {
+          otsikko: 'Hai, joka tuli Atlantilta',
+          teksti: 'Kaupunkia ympäröi tulvametsä, jota kutsutaan '
+            + 'nimellä Iquitos varzea. Sen kierto on yksinkertainen: '
+            + 'puut pudottavat lehtensä maahan, ne muuttuvat '
+            + 'humukseksi, sade huuhtoo ravinteet jokiin ja antaa '
+            + 'vedelle sen vaalean tanniinivärin — ja sama alkaa '
+            + 'alusta. Metsässä elää 150 matelija- ja '
+            + 'sammakkoeläinlajia ja joissa 250 kalalajia. Joukossa on '
+            + 'yksi satunnainen vieras, joka ei ole jokikala '
+            + 'lainkaan: härkähai tulee Atlantilta asti, ja lähteen '
+            + 'mukaan matkaa kertyy 3 360 mailia eli noin 5 400 '
+            + 'kilometriä. Meri on Iquitosista kaukana, mutta joki '
+            + 'ei ole este.',
+        },
+      ],
+    },
+  ],
 };

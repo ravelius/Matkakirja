@@ -5725,6 +5725,53 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  townsville: {
+    /*
+     * TOWNSVILLEN KESKUSTA (7.9.2026). Ruutu on noin 2,0 x 1,7
+     * kilometria: luoteessa Queens Gardens Castle Hillin juurella,
+     * pohjoisessa The Strandin uimala, keskella Melton Hill ja
+     * Flinders Street, etelassa Ross Creekin varsi ja Great Northern
+     * Hotel.
+     *
+     * MERI-LIPPU PAALLA. Cleveland Bay tulee ruudun pohjoisreunaan
+     * The Strandin edessa ja Ross Creek kulkee etelareunassa, joten
+     * ilman lippua kaupungin molemmat rannat jaisivat paperin
+     * varisiksi ja kartta nayttaisi silta kuin keskusta jatkuisi
+     * merelle.
+     *
+     * CASTLE HILL ON RUUDUSSA MUTTA EI NUMEROITU: kukkula on lehden
+     * teemasivun nosto, eika kohdekartta toista lehden juttuja
+     * (New Yorkin saanto). Sen rinne nakyy lansireunassa ja selittaa,
+     * miksi katuverkko kaartuu.
+     *
+     * RUUTU EI YLETY MAGNETIC ISLANDILLE (8 km pohjoiseen) eika
+     * rautatieasemalle (1,5 km lounaaseen): kumpikin venyttaisi
+     * rajauksen niin, etta puolet kuvasta olisi merta tai
+     * esikaupunkia.
+     */
+    rajat: { pohjoinen: -19.2505, etela: -19.2660, lansi: 146.8070, ita: 146.8260 },
+    meri: true,
+    jalkakaydat: true,
+  },
+  iquitos: {
+    /*
+     * IQUITOSIN MONUMENTTIVYOHYKE (7.9.2026). Ruutu on noin 1,44 x
+     * 1,44 kilometria: pohjoisessa Casa Morey ja yliopistokortteli,
+     * keskella Plaza de Armas ja katedraali, idassa Malecon Tarapaca
+     * Itaya-joen yllä, etelassa Plaza 28 de Julio.
+     *
+     * MERI-LIPPU PAALLA, koska Itaya-joki kulkee ruudun italaidassa.
+     * Ilman lippua joki jaisi paperin variseksi, ja juuri se joki on
+     * syy siihen, etta kaupunki on olemassa.
+     *
+     * BELEN JAA ULKOPUOLELLE (1,4 km etelaan) ja se on tietoinen
+     * valinta kahdesta syysta: kaupunginosa on lehden teemasivun
+     * noston aihe, ja sen mukaan ottaminen tekisi ruudusta puolet
+     * tulvamaata ilman katuverkkoa.
+     */
+    rajat: { pohjoinen: -3.7440, etela: -3.7570, lansi: -73.2530, ita: -73.2400 },
+    meri: true,
+  },
 };
 
 /*

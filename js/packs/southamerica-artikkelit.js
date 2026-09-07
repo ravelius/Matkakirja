@@ -1252,4 +1252,70 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'puhaltavat kylmät surazo-tuulet laskevat lämpötilan yllättäen '
       + 'monella asteella.',
   },
+  /*
+   * IQUITOS (Opus 7.9.2026, Fablen parvi). Avain on 'Iquitos', koska
+   * js/packs/maailmankartta.js antaa kaupungille wiki-nimeksi
+   * 'Iquitos'. Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain iquitos): väitteet on
+   * luettu en- ja es-Wikipedian raakateksteistä 7.9.2026,
+   * lähdeaineistona docs/mantereet-tyoaineisto/faktapohja-iquitos.md
+   * ja sen riippumaton tarkistus tarkistus-iquitos.md, joka voittaa
+   * ristiriidassa.
+   *
+   * VUODEN 1873 KULMA: isoisän matkavuonna Iquitos oli yhdeksän
+   * vuoden ikäinen laivastosatama ja noin tuhannen asukkaan kylä.
+   * Genaro Herreran mukaan asukkaita oli 648 vuonna 1866 ja 1 475
+   * vuonna 1876; luku 1873:lle on näiden välistä eikä lähteen oma,
+   * ja se sanotaan tekstissä ääneen (tarkistus, kohta B).
+   *
+   * KUMIBUUMIN VUODET 1880—1914 johdannosta (tarkistus, kohta C).
+   * Putumayon tapahtumat kerrotaan tapahtumina ja seurauksina, ei
+   * tekoina (tarkistus, kohta D). MANAUSIN LEHDEN AIHEITA — Wickhamin
+   * siemeniä, oopperataloa, sähkövaloja ja tullitaloa — ei toisteta.
+   */
+  Iquitos: {
+    intro: 'Iquitos on Perun Amazonian pääkaupunki, Loreton alueen ja '
+      + 'Maynasin provinssin keskus Amazonin vasemmalla rannalla. '
+      + 'Metropolialueella asuu 471 993 ihmistä neljässä piirissä. '
+      + '**Se on maailman suurin kaupunki, johon ei pääse maantietä '
+      + 'pitkin ja joka ei ole saarella: sinne tullaan joko jokea '
+      + 'pitkin tai lentäen.**'
+      + '\n\n'
+      + 'Nimi tulee iquito-kansasta, joka asui Pastazan, Tigren, '
+      + 'Nanayn ja Curarayn varsilla. Jesuiitat perustivat Marañónin '
+      + 'varrelle yhdeksän lähetysasemaa vuosina 1730—1767, ja niistä '
+      + 'yksi oli San Pablo de los Napeanos vuodelta 1757. Nykyisen '
+      + 'kaupungin perustamispäivä on eri: presidentti Ramón Castilla '
+      + 'määräsi Amazonille jokisataman, ja **5. tammikuuta 1864 kolme '
+      + 'Perun laivaston höyrylaivaa saapui Iquitosin kylään.**'
+      + '\n\n'
+      + 'Kumi teki kaupungin ja jätti sen. Vuonna 1900 Iquitosissa oli '
+      + 'kaksikymmentäviisi kumikauppahuonetta, ja väkiluku nousi '
+      + '1 475:stä 9 438:aan kolmessakymmenessä vuodessa. Siirtolaiset '
+      + 'toivat mukanaan eurooppalaisen arkkitehtuurin ja Italiasta ja '
+      + 'Portugalista tuodut kaakelit. **Isoisän matkavuonna 1873 '
+      + 'mitään tästä ei vielä ollut: Iquitos oli noin tuhannen '
+      + 'asukkaan laivastosatama sademetsän reunassa.**',
+    teksti: 'Iquitos on 106 metrin korkeudessa Amazonin altaan '
+      + 'suurella tasangolla, kolmen joen syöttämänä: Amazon, Nanay ja '
+      + 'Itaya. Itaya ja Nanay estävät laajenemisen kahteen suuntaan ja '
+      + 'lännessä on Moronacochan järvi, joten kaupunki näyttää '
+      + 'kartalla valtavalta jokisaarelta — vaikka se ei sitä ole.'
+      + '\n\n'
+      + 'Kaupunki perustettiin sotilassatamaksi, koska Peru halusi '
+      + 'pitää kiinni Amazonin latvavesistä, ja se rikastui kumista '
+      + 'vuosina 1880—1914. Kumikausi jätti jälkeensä kaakeloidut '
+      + 'julkisivut ja rautatalon — ja Roger Casementin vuoden 1913 '
+      + 'tutkintaraportin, joka johti alueen suurimman kumiyhtiön '
+      + 'purkamiseen. Kun Aasian viljelmien kumi tuli halvemmaksi, '
+      + 'moni työläinen ja kauppias lähti.'
+      + '\n\n'
+      + 'Nykyään elanto tulee puutavarasta, öljystä, kalasta ja '
+      + 'matkailusta. Kaduilla liikkuu yli 25 000 kolmipyöräistä '
+      + 'motokaria, ja Belénin kaupunginosassa talot seisovat paalujen '
+      + 'ja lauttojen varassa, koska Amazonin pinta laskee toukokuusta '
+      + 'lokakuuhun yhdeksästä kahteentoista metriä. Kaupungin ympärillä '
+      + 'on tulvametsää, ja kaksikymmentä kilometriä poispäin alkaa '
+      + 'Allpahuayo-Mishanan valkohiekkametsä.',
+  },
 };
