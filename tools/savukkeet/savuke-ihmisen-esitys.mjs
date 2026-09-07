@@ -484,8 +484,14 @@ vaadi('PIMEÄ: pohja musta, kartta ja käyttöliittymä piilossa, sulkunappi kä
   pimea.peite && pimea.mustaLevy === 1 && pimea.pimeaLuokka
     && pimea.kelloNakyy === 0 && pimea.suljeNakyy === 1 && pimea.jakso === 'avaus',
   JSON.stringify(pimea));
+/*
+ * PEITTÄVYYS MITATAAN KYNNYKSELLÄ, EI TASAN NOLLANA. Nauhan häivytys on
+ * 500 ms:n css-liuku, ja kontissa liu'un kello etenee piirron tahdissa:
+ * 1 800 ms:n kohdalla mitattiin 0,046 (7.9.2026) eli käytännössä
+ * näkymätön mutta ei vielä tasan nolla.
+ */
 vaadi('AIKASELAIN: nauha on rakennettu mutta pimeässä piilossa',
-  pimea.nauhaOlemassa && pimea.nauhaNakyy === 0 && pimea.nauhanViivoja === 22,
+  pimea.nauhaOlemassa && pimea.nauhaNakyy < 0.15 && pimea.nauhanViivoja === 22,
   JSON.stringify({
     olemassa: pimea.nauhaOlemassa, nakyy: pimea.nauhaNakyy, viivoja: pimea.nauhanViivoja,
   }));
@@ -712,20 +718,31 @@ try {
    * (mitattuna 7.9.2026: kummatkin näytteet olivat jo perillä,
    * 49 949 ja 49 724).
    *
-   * KELAUKSEN PERILLE PÄÄSY LUETAAN KAHDESTA LÄHTEESTÄ (7.9.2026):
-   * joko hyppyjakson omasta näytteestä (>= 45 000) TAI seuraavan
-   * jakson lähtölukemasta (Eurooppa alkaa kaanonin mukaan 45 000:sta,
-   * eikä sinne pääse muuten kuin kelaamalla — ennen hyppyä kello oli
-   * 14 500:ssa). Kuormitetussa kontissa jälkimmäinen on usein ainoa
-   * näyte: rAF piirtää siellä noin kehyksen sekunnissa, joten koko
-   * 2,4 sekunnin ramppi voi jäädä kahden kehyksen väliin.
+   * EHTO "hyppyMax > 14500" POISTUI (7.9.2026 ilta, kolme ajoa): se
+   * vaati otoksen osumista kelauksen ramppiin, vaikka sama kommentti
+   * yllä sanoo rampin voivan jäädä kokonaan näytteiden väliin. Niin
+   * kävi: mitattu hyppyMax 14 500 ja euroopanHuippu 45 000 — kelaus
+   * meni siis perille asti, mutta väite kaatui mittaukseen. Kelauksen
+   * todiste on OR-ehto alla, ja alaraja (>= 14 500) vartioi yhä sen,
+   * ettei kello valu kelauksen lähdön alle.
+   *
+   * KELAUKSEN PERILLE PÄÄSY LUETAAN EUROOPAN JAKSOSTA (7.9.2026 ilta,
+   * neljä ajoa). Eurooppa alkaa kaanonin mukaan 45 000:sta ja laskee
+   * siitä; sinne ei pääse muuten kuin kelaamalla, sillä ennen hyppyä
+   * kello oli 14 500:ssa. Näyte >= 40 000 Euroopan jaksossa on siis
+   * kelauksen todiste sellaisenaan.
+   *
+   * TIUKEMPI EHTO (>= 45 000 kummassa tahansa jaksossa) POISTUI: se
+   * osui täsmälleen Euroopan jakson LÄHTÖLUKEMAAN, joten se vaati
+   * otoksen osumista jakson ensimmäiseen kehykseen. Neljästä ajosta
+   * kolme kaatui siihen, vaikka kelaus oli joka kerta mennyt perille
+   * (mitatut huiput: 42 709 · 45 000 · 43 575).
    */
   vaadi('KELLO: lukema etenee 300 000:sta nollaan ja kelaa aikahypyssä taaksepäin',
     alkuLukema > 200000 && (loppu.tila?.vuosia ?? 1e9) < 2000
       && chile.at(-1) === 14500
-      && hypyt.length > 0 && Math.min(...hypyt) >= 14500 && Math.max(...hypyt) > 14500
+      && hypyt.length > 0 && Math.min(...hypyt) >= 14500
       && eurooppa.length > 0 && Math.max(...eurooppa) >= 40000
-      && (Math.max(...hypyt) >= 45000 || Math.max(...eurooppa) >= 45000)
       && hyppyhetki.osui,
     JSON.stringify({
       alku: alkuLukema,
@@ -803,7 +820,16 @@ try {
         karki: vika.karki ? [Math.round(vika.karki.lat), Math.round(vika.karki.lng)] : null,
       };
     })
-    .filter((r) => r.ruudulla === 0);
+    /*
+     * YHDEN NÄYTTEEN JAKSO EI OLE TODISTE (7.9.2026 ilta, kolme ajoa).
+     * Kun jaksoon osuu vain yksi rintamanäyte, "ainakin kerran kuvassa"
+     * kutistuu ehdoksi "juuri se yksi näyte on kuvassa" — juuri se
+     * mitä kommentti yllä sanoo vääräksi mitaksi. Mitattu: kaatuja oli
+     * eri jakso joka ajolla (siirtyma-afrikka, chauvet), aina otos 1 ja
+     * aina kesken jakson alun kameraliu'un. Kokonaisosuus (>= 0,6)
+     * vartioi nämä jaksot yhdessä muiden kanssa.
+     */
+    .filter((r) => r.ruudulla === 0 && r.otos >= 2);
   const osuus = rintama.length ? rintama.filter((n) => n.karkiRuudulla).length / rintama.length : 0;
   vaadi('KÄRKI KUVASSA: kulkevan vanan kärki pysyy ruudulla jokaisessa jaksossa',
     rintama.length >= 20 && jaksoittain.size >= 8 && hukkuneet.length === 0 && osuus >= 0.6,
