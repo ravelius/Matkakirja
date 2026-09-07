@@ -106,7 +106,6 @@ Recognition). Portit: fail 0, karttapisteet ok. Poiminnassa lisäyskonfliktit
 5 tiedostossa liitetty liita-lisays.py:llä.
 
 ### Checkpointit (poimittu haaraan; loppuraportit ja kuvat täydennetään, jos agentit ehtivät)
-- Monterrey + Mérida: tekstit c8fe151, kuvat osa 1 ad3f78e (kuvahaku jatkuu)
 - Timbuktu + Lalibela: wip-tekstit 97c8052 (tekstit jatkuvat, kuvat tekemättä)
 - Townsville + Iquitos: wip a9d62d0 + tekstit 9bd523e (kuvahaku alkaa)
 - Whitehorse + Yellowknife: wip 7c31c9f + tekstit 8ac5ecc (kuvahaku alkaa)
@@ -163,6 +162,23 @@ kuvatyössä syntynyt, korjattu samassa). Pistokokeet: (1) Winnipeg kaupungiksi
 valmistuessaan 9.9.1855 Pohjois-Amerikan suurin kirkko ("Basilica of St. John
 the Baptist"); (3) Newfoundlandin aikavyöhyke Amerikoiden ainoa puolen tunnin
 poikkeama ("Newfoundland Time Zone"). Portit: fail 0, karttapisteet ok.
+
+### Kaupunkilehdet Monterrey + Mérida — c8fe151 (tekstit), ad3f78e (kuvat) — VALMIS
+Tiedostot: faktapohja-/tarkistus-monterrey.md ja -merida.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, northamerica-artikkelit.js, northamerica-saapumiset.js,
+piirra-kaupunkikartta.mjs, assets/kartat/monterrey-keskusta.png, merida-keskusta.png.
+Monterrey: kansi (kolme perustamisyritystä 1596, nimi, Cerro de la Silla, Fundidora),
+teemasivu luonto "Vuoret, luolat ja kuiva joki". Mérida: kansi (Tʼhó, Valkoinen
+kaupunki, kastisota, heneken), teemasivu ruoka "Jukatanin oma keittiö". 48 kuvaa
+Commonsista, tekijät tarkistettu extmetadataa vasten (47/48 täsmää, 1 vain
+"(PD)"-muoto). Monterreylla ei ennen–nyt-paria (ei ≥ 1200 px vanhaa kuvaa).
+Pistokokeet: (1) Cerro de la Sillan köysirata avattiin ja suljettiin 2.6.1961,
+5 kuoli (en-Wikipedia "Cerro de la Silla", johdanto); (2) niemimaan ensimmäinen
+rautatiekisko La Mejoradaan 1.4.1870 (es-Wikipedia "Parque de La Mejorada");
+(3) Méridan katedraali valmistui 1598, Amerikan toinen ("Cathedral of Mérida,
+Yucatán", History). Portit: fail 0, karttapisteet ok. HUOM: agentti muutti myös
+northamerica-saapumiset.js:ää (saapumisteksti) — päätoimittaja tarkistaa, että
+muutos on 1873-kehyksen mukainen eikä matkakirjatekstiä.
 
 ## Kuvaputken tilaukset (kuvattomat nostot ja miniatyyrit)
 
@@ -318,6 +334,32 @@ pronssihahmoa ja seppeleet; Pyhän Johannes Kastajan basilika — harmaa
 kivijulkisivu ja kaksi tornia; Anglikaaninen katedraali — uusgoottilainen
 kirkko ilman torninhuippua; Water Street — matalat perintörakennukset rinteessä.
 
+**Monterrey, kuvattomat nostot:** "Kuningasvuori, joka onkin kreivi" —
+kalliopiirros Nuevo Leónin paimentolaisryhmiltä; ennen–nyt-pari (vanha puoli:
+Obispadon kukkula 1904 tai vuoden 1791 kartta — päätös); kohdekartan Colegio
+Civil — 1700-luvun lopun uusklassinen oppilaitos ja aukio; Meksikon historian
+museo — valkoinen moderni museo kanavan varrella.
+**Monterrey, miniatyyrit (8):** Museo del Obispado — kukkulan kellertävä
+siirtomaatalo, kahdeksankulmainen kupoli; La Purísiman kirkko — betonikuoret
+kaartuvat katoksi, kivinen kellotorni; Colegio Civil — uusklassinen
+kaksikerroksinen oppilaitos ja aukio; Nuevo Leónin hallintopalatsi —
+vaaleanpunainen cantera-julkisivu, Voiton patsas; Meksikon historian museo —
+valkoinen kulmikas museo ja suihkulähdealtaat; Dulces Nombresin kappeli — pieni
+kermanvalkoinen kappeli, kaksi kellokaarta; Monterreyn katedraali —
+barokkijulkisivu ja yksi kellotorni; Barrio Antiguo — mukulakivikatu ja
+värilliset siirtomaatalot.
+**Mérida, kuvattomat nostot:** "Miksi kaupunkia sanotaan valkoiseksi" — kalkittu
+matala katunäkymä; "Sota, joka kesti isoisän koko elämän" — mayakylä tai Puhuvan
+ristin kappeli, ei taistelukuvaa; "Keitto, jonka nimi valehtelee" — sopa de lima.
+**Mérida, miniatyyrit (8):** Santa Anan kirkko — keltainen kirkko kahden
+valkoisen tornihuipun välissä; Peón Contrerasin teatteri — keltainen eklektinen
+oopperatalo; La Mejoradan puisto — kivikirkko ja fransiskaaniluostarin muuri;
+Casa de los Montejo — plateresco-portaali ja parvekkeen kivihahmot; Méridan
+kaupunginmuseo — vanha postipalatsi, puna-valkoinen vinoruutufriisi; San Juanin
+puisto ja kaari — valkoinen kaari kadun yli; San Cristóbalin kirkko —
+kivijulkisivu, simpukankuoren muotoinen kaari; Santa Isabelin ermita — matala
+keltainen kappeli, edessä puisto.
+
 ## Päätöstä vaativat asiat
 
 - **MAATESTIN_POIKKEUS laajeni VUT:iin** (tests/elaintakyt.test.mjs; sama kuin
@@ -365,6 +407,9 @@ kirkko ilman torninhuippua; Water Street — matalat perintörakennukset rintees
   maalehden/karttanoston aiheeksi.
 - Dili/Alice Springs: kuvitus kokonaan tekemättä (Commons 429) — joko
   kuvaputki tai uusi Commons-haku rauhallisempana hetkenä.
+- Monterrey/Mérida: Monterreyn ennen–nyt (1791 kartta vai ei paria); Méridan
+  San Juanin kaari sivuaa kansinostoa 2 (eri näkökulma); Macroplazan sijaluku
+  ja kastisodan uhriluku kirjoitettu auki ristiriitoineen.
 
 ## Keskeneräiset
 
