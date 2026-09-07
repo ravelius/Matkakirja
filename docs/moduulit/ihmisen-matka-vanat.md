@@ -2252,7 +2252,7 @@ tauolle; muuten se jatkoi.
    "alas" eikä "reunasta reunaan"; jos halutaan kirjaimellisesti koko
    ruudun levyinen, se vaatii kehyksen ohittamisen.
 
-### 15.8 Portit
+### 15.8 Portit ja ajetut savukkeet
 
 - `node --test tests/*.test.mjs` — `tests/aikaselain.test.mjs`
   (19 väitettä, oma pieni DOM: asettelu, aalto, veto, napautus,
@@ -2267,6 +2267,22 @@ tauolle; muuten se jatkoi.
   jaksoon asti.
 - `node tools/savukkeet/savuke-aikajana.mjs` — keksintölinssi ennallaan
   (nauhaa ei ole).
+
+AJETTU 7.9.2026 (kontti, ohjelmisto-WebGL):
+
+| Savuke | Tulos |
+| --- | --- |
+| `node --test tests/*.test.mjs` | 2 231 läpi, 0 kaatunutta, 13 ohitettua |
+| `savuke-ihmisen-tutkimus` | **44/44** (tabletti ja puhelin) |
+| `savuke-ihmisen-esitys` | **17/17** |
+| `savuke-aikajana` (regressio) | **13/13** |
+
+Savukkeissa korjattiin ajojen aikana neljä MITTAUSVIRHETTÄ, joissa
+väite kaatui vaikka koodi toimi (kaikki kirjattu commit-viesteihin):
+muistiväitteen jakso luettiin vanhasta muuttujasta, avaruusmittaus oli
+eri `evaluate`-kutsussa kuin pimeän mittaus, nauhan häivytystä
+verrattiin tasan nollaan, ja kellon kelaus vaadittiin osumaan harvaan
+otokseen. Yhtään tuotantokoodin väitettä ei löysätty.
 
 ## 16. Avaruus: musta alku on avaruus (7.9.2026)
 
