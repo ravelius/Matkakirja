@@ -34,14 +34,11 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
   speksattuna, valmiin mallin kanssa. Pienemmille malleille menee
   monistustyö, ei muodon hakeminen.
 
-- **Fablemax — syvätason agentti vaativimpiin pulmiin** (kirjattu
-  19.8.2026; määritys .claude/agents/fablemax.md). Fable kutsuu sen,
-  kun tehtävä vaatii max-tason ajattelua: arkkitehtuuri- ja
-  moduulisuunnitelmat, isot refaktoroinnit, dokumenttiremontit,
-  vaativat katselmoinnit ja sitkeät juurisyybugit (esim. kartan
-  tilabugin kierrokset). Rutiinityö menee tavallisille agenteille —
-  Fablemax on kallein työkalu, ja sitä käytetään vain kun halvempi
-  ei riitä. Aina isolation: worktree, kuten muutkin agentit.
+- **Fablemax — POISTETTU 7.9.2026.** Fable-mallin agenttityyppi
+  (.claude/agents/fablemax.md, 19.8.2026) on poistettu omistajan
+  säännöllä "agentteina saa käyttää vain opusta ja sonnettia". Vaativa
+  työ (arkkitehtuuri, isot refaktoroinnit, dokumenttiremontit) jaetaan
+  Opus-agenteille, tarvittaessa parvena, tarkasti rajattuina erinä.
 - **Agenttien mallivalinta (omistaja 26.8.2026, tiukennus 7.9.2026):**
   agentit ajetaan AINA Opus- (koodi, sisältö) tai Sonnet-mallilla
   (lukeva työ, tarkistukset). Fable-mallia EI käytetä agenttina
