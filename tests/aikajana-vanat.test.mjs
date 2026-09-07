@@ -308,6 +308,18 @@ test('vanamoduuli: kaista omalla varjostimella, pinnan syvyys, kalvojen jälkeen
   // Fragmentti: säde–pallo-leikkaus, etäisyys kolmeen janaan, rantamaski, pinnan syvyys.
   assert.match(VANAT_JS, /vec3 q = uKamera \+ suunta \* t0;/);
   assert.match(VANAT_JS, /float d3 = katkaistuun\(q, vP2, vP3/);
+  /*
+   * OMISTUSSÄÄNTÖ (luku 14.2): hulli piirtää vain siellä, missä OMA
+   * jana on lähin — ei "kolmesta lähin". Ilman tätä sama pikseli sai
+   * eri hulleilta eri peiton, LESS-testi päästi ensin piirtyneen ja
+   * jokaisen kärjen kohdalle jäi valojuova (helminauha), joka pomppi
+   * kameran liikkuessa (värinä). Peitto lasketaan omasta etäisyydestä.
+   */
+  assert.match(VANAT_JS, /if \(d1 < d2 - SUVAITSE \|\| d3 < d2 - SUVAITSE\) discard;/,
+    'omistussääntö puuttuu: hulli maalaisi taas naapurinsa alueelle');
+  assert.match(VANAT_JS, /float d = d2;/, 'peitto lasketaan oman janan etäisyydestä');
+  assert.ok(!/if \(d1 < d\) \{/.test(VANAT_JS), 'vanha "lähin kolmesta" -haara on poistettava');
+  assert.match(VANAT_JS, /float SUVAITSE = 1e-4 \* uSade;/, 'puolittajalla molemmat piirtävät');
   assert.match(VANAT_JS, /texture2D\(uMaski, uv\)\.r/);
   // Säde lasketaan pikselistä (gl_FragCoord + käänteinen MVP), ei nelikulmiosta: sama syvyys joka fragmentille.
   assert.match(VANAT_JS, /vec2 ndc = \(gl_FragCoord\.xy \/ uRuutu\) \* 2\.0 - 1\.0;/);

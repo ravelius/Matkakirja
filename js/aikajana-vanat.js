@@ -19,10 +19,12 @@
  *      pallon pinnalle piirretty verkko: jokainen jana saa yhden
  *      instanssoidun nelikulmion ("hullin"), joka peittää kaistan alueen
  *      ruudulla, ja FRAGMENTTIVARJOSTIN laskee jokaiselle pikselille
- *      säde–pallo-leikkauksella pinnan pisteen ja sen ETÄISYYDEN vanan
- *      lähimpään janaan (kolme janaa: oma ja naapurit). Peitto on
- *      etäisyyden pehmeä funktio, joten liitokset ovat pyöreitä ja reuna
- *      häipyy — ei helminauhaa, ei Line2:n suorakaiteita.
+ *      säde–pallo-leikkauksella pinnan pisteen ja sen ETÄISYYDEN OMAAN
+ *      janaansa. Hulli piirtää vain siellä, missä oma jana on lähempänä
+ *      kuin naapurit (OMISTUSSÄÄNTÖ, ks. FRAGMENTTI): pikseli kuuluu
+ *      täsmälleen yhdelle hullille, ja peitto on etäisyyden pehmeä
+ *      funktio. Liitokset ovat siten pyöreitä ja reuna häipyy — ei
+ *      helminauhaa, ei Line2:n suorakaiteita, ei värinää.
  *   2. KAISTA LEIKATAAN RANTAVIIVAAN: varjostin lukee rantamaskin
  *      (js/linssit/ihmisen-matka-rantamaski.js, Natural Earth 0,125°,
  *      sama perhe kuin pallon vektorirantaviivat) tekstuurina ja
@@ -547,25 +549,42 @@ void main() {
   vec3 q = uKamera + suunta * t0;
 
   float kulj = vMeta.z;
-  /* Lähin kolmesta janasta; parametri ja kärkiväli lähimmälle. */
+  /*
+   * OMISTUSSÄÄNTÖ: HULLI MAALAA VAIN OMAN JANANSA ALUEEN.
+   *
+   * Hulli tuntee kolme janaa (edellinen, oma, seuraava). Ennen tätä se
+   * otti niistä LÄHIMMÄN, ja silloin sama pikseli sai eri hulleilta eri
+   * peiton: hullin peitto vaimenee sen kolmen janan ikkunan päässä
+   * pyöreäksi kärjeksi, ja koska syvyys on kaikilla sama, LESS-testi
+   * päästi läpi sen, joka piirtyi ENSIN — ei sitä, jonka jana oli
+   * lähin. Tulos oli valojuova jokaisen kärjen kohdalla (helminauha) ja
+   * kameran liikkuessa juovat pomppivat hullista toiseen: juuri se
+   * "värinä pääviivan reunoilla", jonka omistaja näki (mitattu
+   * 7.9.2026, luku 14.2).
+   *
+   * Nyt hulli piirtää vain siellä, missä OMA jana (vP1→vP2) on
+   * lähempänä kuin naapurit. Alue on naapurien puolittajien rajaama
+   * pala, jokainen pikseli kuuluu täsmälleen yhdelle hullille, ja
+   * peitto lasketaan aina omasta etäisyydestä — se ei siis riipu
+   * piirtojärjestyksestä eikä kameran asennosta. Puolittajalla
+   * molemmat piirtävät (SUVAITSE), mutta siellä etäisyys ja kärkiväli
+   * ovat samat, joten sauma ei näy. Vanan PÄISSÄ naapurijana on
+   * rappeutunut (sama piste kahdesti), jolloin se ei koskaan ole
+   * lähempänä ja pyöreä pää säilyy; kasvun kärjessä katkaistu jana on
+   * omistaja, koska naapurin oma jana jää taakse.
+   */
   float t1; float t2; float t3;
   float d1 = katkaistuun(q, vP0, vP1, vMatka.x, vMatka.y, kulj, t1);
   float d2 = katkaistuun(q, vP1, vP2, vMatka.y, vMatka.z, kulj, t2);
   float d3 = katkaistuun(q, vP2, vP3, vMatka.z, vMatka.w, kulj, t3);
+  if (d2 > 1e8) discard;
+  float SUVAITSE = 1e-4 * uSade;
+  if (d1 < d2 - SUVAITSE || d3 < d2 - SUVAITSE) discard;
   float d = d2;
   float w = mix(vW.y, vW.z, t2);
   float aika = mix(vAika.y, vAika.z, t2);
   float meri = mix(vMeri.y, vMeri.z, t2);
   float ranta = mix(vRanta.y, vRanta.z, t2);
-  if (d1 < d) {
-    d = d1; w = mix(vW.x, vW.y, t1); aika = mix(vAika.x, vAika.y, t1);
-    meri = mix(vMeri.x, vMeri.y, t1); ranta = mix(vRanta.x, vRanta.y, t1);
-  }
-  if (d3 < d) {
-    d = d3; w = mix(vW.z, vW.w, t3); aika = mix(vAika.z, vAika.w, t3);
-    meri = mix(vMeri.z, vMeri.w, t3); ranta = mix(vRanta.z, vRanta.w, t3);
-  }
-  if (d > 1e8) discard;
 
   /*
    * Peitto etäisyydestä: maalla leveä ja rantaviivaan leikattu, merellä
