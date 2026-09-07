@@ -75,6 +75,26 @@
  * (Perustuslaki, faktakuri). Faktat on luettu en-Wikipedian
  * raakatekstistä kohde kerrallaan 6.9.2026.
  */
+/*
+ * ── ERÄ M20, 7.9.2026: YLÄRAJA MITATTIIN UUDELLEEN ──────────────────
+ *
+ * Yhdeksättä merkkiä kokeiltiin uudelleen, ja koekappaleeksi otettiin
+ * juuri se ehdokas, jonka tämä otsikkokommentti jo nimesi valmiiksi:
+ * Lei Cheng Ukin Han-hauta (114,1596 / 22,3357 → x 9638,7 / y 2454,6,
+ * 17,2 lautayksikköä Hongkong-laatasta). Tulos on sama kuin erässä M3:
+ * `node tools/tarkista-nimiolimitys.mjs HKG` antaa yhden
+ * nimiö–nimiö-limityksen (Lantau + skandaali "Carrian"), eikä
+ * kahdeksan merkin yläraja siis ole liikkunut.
+ *
+ * ELÄINTÄKY ON YHÄ MAHDOTON, ja mittaus toistettiin: maan monikulmion
+ * sisään osuu 887 ruudukkopistettä (0,01°), ja kaukaisinkin niistä on
+ * vain 22,2 lautayksikön päässä Hongkong-laatasta, kun
+ * tests/elaintakyt.test.mjs vaatii 35. Kaupunkisädettä ei kierretä
+ * poikkeuksella: Fidžin, Salomonsaarten ja Vanuatun poikkeus koskee
+ * vain laudan rantaviivaa, ei tätä vartiota.
+ *
+ * Vaje pysyy siis lukemassa kohteita −4, maastoa −1 ja eläintäky.
+ */
 export const MAASTOKOHTEET_HKG = [
   /* ─────────────────────────── KOHTEET (4) ─────────────────────── */
   {

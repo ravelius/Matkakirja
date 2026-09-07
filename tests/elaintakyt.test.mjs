@@ -68,7 +68,23 @@ const RAJATESTIN_POIKKEUS = new Set(['ISL', 'FJI']);
  * koska Lau-saaret ovat monikulmion ulkopuolella: se päättyy
  * x 11 833,3:een eli 180° E:hen, ja Lakeba on x ≈ 11 874.
  */
-const MAATESTIN_POIKKEUS = new Set(['FJI', 'SLB']);
+/*
+ * VANUATU LIITTYI MAATESTIN POIKKEUKSEEN 7.9.2026 (erä M20).
+ *
+ * Este on täsmälleen sama kuin Fidžillä ja Salomonsaarilla: laudan
+ * `map.outlines` tuntee Vanuatusta maaksi vain Efaten pohjoisosan Port
+ * Vilan ympärillä, ja siellä kaukaisin kelvollinen piste on 7,2
+ * lautayksikön päässä laatasta eli alle vartion 35:n. Espiritu Santoa,
+ * Malakulaa eikä Banksin saaria ei ole rantaviivassa lainkaan, vaikka
+ * ne ovat maan countryShapes-renkaassa ja pallon vektorirantaviivassa
+ * (js/pallovektorit.js).
+ *
+ * POIKKEUS KOSKEE VAIN TÄTÄ TESTIÄ. Kookoskravun piste (166,6 /
+ * −14,65, Espiritu Santon pohjoiskärki) on Vanuatun oman monikulmion
+ * SISÄLLÄ — rajatestiin ei siis tarvita poikkeusta — ja 118,7
+ * lautayksikön päässä Port Vilasta ilman mitään helpotusta.
+ */
+const MAATESTIN_POIKKEUS = new Set(['FJI', 'SLB', 'VUT']);
 
 /** Lyhin sallittu etäisyys kaupunkimerkkiin maailmankartan yksikköinä. */
 const VAHIN_ETAISYYS_KAUPUNKIIN = 35;
@@ -92,7 +108,7 @@ const paikat = new Map(ELAINTAKY_MAAT.map((iso) => {
 }));
 
 test('jokaisella eläintäyllä on kaanoniteksti, kuva ja paikka', () => {
-  assert.equal(ELAINTAKY_MAAT.length, 107, 'eläintäkyjä on 107 maassa');
+  assert.equal(ELAINTAKY_MAAT.length, 108, 'eläintäkyjä on 108 maassa');
   for (const iso of ELAINTAKY_MAAT) {
     const taky = ELAINTAKYT[iso];
     assert.match(iso, /^[A-Z]{3}$/, `${iso}: avain on kolmikirjaiminen maatunnus`);

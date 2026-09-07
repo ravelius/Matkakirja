@@ -2417,6 +2417,62 @@ export const ELAINTAKYT = {
     lon: 160.63,
     lat: -8.38,
   },
+  /* ================================================================
+   * ERÄ M20, 7.9.2026 — VANUATUN KOOKOSKRAPU (omistajan toive).
+   *
+   * Vanuatun eläintäky oli erässä M18 kirjattu MAHDOTTOMAKSI ja syyksi
+   * oli mitattu laudan maamuoto: `map.outlines` tuntee Vanuatusta
+   * maaksi vain Efaten pohjoisosan Port Vilan ympärillä, ja siellä
+   * kaukaisin kelvollinen piste on 7,2 lautayksikön päässä laatasta
+   * eli reilusti alle vartion 35:n.
+   *
+   * ESTE ON SAMA KUIN FIDŽILLÄ JA SALOMONSAARILLA (erä M19), ja niin
+   * on ratkaisukin: merkki pannaan eläimen todelliseen
+   * maantieteelliseen paikkaan ja laudan vanha piirros saa
+   * dokumentoidun poikkeuksen (MAATESTIN_POIKKEUS,
+   * tests/elaintakyt.test.mjs). Pallon vektorirantaviiva
+   * (js/pallovektorit.js) tuntee Espiritu Santon, vaikka laudan
+   * tyylitelty rantaviiva ei sitä piirrä.
+   *
+   * POIKKEUS EI KOSKE MITÄÄN MUUTA VARTIOTA, ja se on mitattu:
+   *  - piste on Vanuatun oman monikulmion SISÄLLÄ (rajatestiin ei siis
+   *    tarvita poikkeusta, toisin kuin Fidžillä),
+   *  - etäisyys Port Vilaan on 118,7 lautayksikköä (vähintään 35),
+   *  - etäisyys lähimpään toiseen eläintäkyyn 387,8 (vähintään 30),
+   *  - piste on VUT-lehden rajauksen sisällä, joten merkki näkyy myös
+   *    maalehden kartalla (toisin kuin Fidžin Lau-saarten merkki),
+   *  - `node tools/tarkista-nimiolimitys.mjs VUT` sanoo
+   *    "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+   *
+   * PAIKAN VALINTA ON HARAVOITU, EI ARVATTU. Koko saariketju käytiin
+   * läpi 0,05 asteen ruudukolla ja pisteille laskettiin kaikki neljä
+   * ehtoa yhtä aikaa; 276 pisteestä valittiin se, joka on kauimpana
+   * maan olemassa olevista merkeistä (24,7 yksikköä lähimpään, joka on
+   * Tabwemasana). Piste on Espiritu Santon pohjoiskärjessä.
+   * Aneityum eteläkärjessä karsiutui, koska se jää laudan
+   * VUT-monikulmion ulkopuolelle ja olisi vaatinut toisenkin
+   * poikkeuksen.
+   *
+   * TEKSTI ON LAJISTA, EI SAARESTA. en-Wikipedian "Coconut crab" ei
+   * nimeä Vanuatusta yhtäkään saarta, joten kortti kertoo lajin ja sen
+   * Vanuatuun kohdistuvan suojelutoimen (vähimmäiskokorajoitus) — ei
+   * väitetä mitään, mitä lähde ei sano.
+   * ============================================================== */
+  VUT: {
+    elain: 'kookoskrapu',
+    otsikko: 'Rapu, joka kiipeää palmuun mutta hukkuisi mereen',
+    teksti: 'Kookoskrapu on maalla elävä jättimäinen erakkorapu ja maailman suurin maalla elävä niveljalkainen: painoa voi olla 4,1 kiloa ja jalkaväliä jalankärjestä toiseen metri. Lajia tavataan Intian ja Tyynenmeren saarilla, ja levinneisyys seuraa karkeasti kookospalmun levinneisyyttä. Nuoret yksilöt suojaavat pehmeää takaruumistaan kotilonkuorella kuten muutkin erakkoravut, mutta aikuiset kovettavat sen itse kitiinillä ja kalkilla eivätkä enää kanna kuorta. Hengityselimenä ovat kidusten sijaan niin sanotut kidussuojakeuhkot, ja nuoruusvaiheen jälkeen eläin hukkuu, jos se on liian kauan veden alla. Hajuaisti on tarkka, ja sen avulla rapu löytää ruokansa. Se elää yksin kaivamassaan kolossa ja sulkee suuaukon toisella saksellaan, jotta kolo pysyy kosteana — hengityselimet vaativat sitä. Kiipeäminen sujuu: rapu on kuvattu kookos- ja pandanuspuissa, ja se selviää vahingoittumatta ainakin neljän ja puolen metrin pudotuksesta. Naaraat palaavat meren rajaan laskemaan munansa, toukat elävät planktonissa kolmesta neljään viikkoa, sukukypsyys saavutetaan noin viidessä vuodessa ja elinikä voi ylittää kuusikymmentä vuotta. Laji luokiteltiin vuonna 2018 vaarantuneeksi, ja Vanuatussa sitä suojaa saaliin vähimmäiskokoa koskeva rajoitus.',
+    lahde: 'en-Wikipedia "Coconut crab", johdanto sekä osiot "Description", "Respiration", '
+      + '"Sense of smell", "Life cycle", "Distribution", "Diet", "Habitat" ja '
+      + '"Conservation". Tarkistettu 7.9.2026.',
+    kuvat: [],
+    // Piste on Espiritu Santon pohjoiskärjessä (166,6 / −14,65),
+    // 118,7 lautayksikköä Port Vilasta ja maan monikulmion sisällä.
+    // Laudan rantaviiva ei tunne saarta — ks. erän otsikkokommentti ja
+    // tests/elaintakyt.test.mjs MAATESTIN_POIKKEUS.
+    lon: 166.6,
+    lat: -14.65,
+  },
 };
 
 

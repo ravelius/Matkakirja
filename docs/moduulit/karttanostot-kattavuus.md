@@ -1807,3 +1807,122 @@ lajia (kookoskrapu, *Birgus latro*) ei ole vielä tilattu kuvaputkelta. Saint
 Helenan vaje on niin ikään ennallaan. Taulukoiden lukuja ei ole päivitetty
 tässä erässä — ne ajetaan `node tools/laske-karttanostot.mjs --md`
 -työkalulla.
+
+
+## Erä M20 (tehty 7.9.2026): yhdeksän pienen maan täydennys
+
+Fablen tilaus 7.9.2026 illalla: täydennä karttanostot yhdeksälle
+pienelle maalle, joilla laskuri näytti vajetta — **QAT, KWT, CYP, HKG,
+SGP, SHN, FJI, SLB ja VUT**. Erän lähtökohta oli, että aiemmissa erissä
+kirjatut vajeet on *mitattu* eikä arvattu, joten jokainen niistä
+mitattiin uudelleen ehdokas kerrallaan `node tools/tarkista-nimiolimitys.mjs
+<ISO>` -työkalulla. Neljä maata oli aidosti täynnä, viidessä oli vielä
+tilaa. Erä toi **kaksitoista uutta kohdetta ja yhden eläintäyn** eli
+13 uutta karttamerkkiä; laskurin lukema nousi 103 → 108 maata
+tavoitteessa, vajaita jäi neljä.
+
+| maa | uudet kohteet | jäävä vaje |
+|---|---|---|
+| Qatar (QAT) | Fuwayrit, Al-Shahaniya, Mesaieed | eläintäky (mahdoton, ks. alla) |
+| Kuwait (KWT) | Warbah, Qaruh, Wadi al-Batin | — täysi |
+| Kypros (CYP) | Apostolos Andreas | — täysi |
+| Fidži (FJI) | Yasawa, Vatulele, Vilavilairevo | — täysi |
+| Salomonsaaret (SLB) | Santa Isabel, Makira | — täysi |
+| Singapore (SGP) | Sungei Buloh | kohteita −2, maastoa −2, eläintäky |
+| Vanuatu (VUT) | eläintäky: kookoskrapu | — täysi |
+| Hongkong (HKG) | — | kohteita −4, maastoa −1, eläintäky |
+| Saint Helena (SHN) | — | kohteita −5, maastoa −1, eläintäky |
+
+**Kolme vajetta oli liikkunut, ja se selvisi vain mittaamalla.** Erä M6
+kirjasi Kyprokselle vajeen kohteita −1 ja Qatarille −3 "koska maa on
+pieni"; erä M8 kirjasi Singaporen ylärajaksi kahdeksan merkkiä. Kaikissa
+kolmessa yläraja oli todellisuudessa yhtä tai kolmea merkkiä korkeammalla
+— ei siksi, että sääntö olisi muuttunut, vaan siksi, että ladonnan
+erottelupassi sijoittaa nimiöt eri tavalla eri ehdokkaille. Mittaus
+tehtiin siis aina sillä ehdokkaalla, joka oli tarkoitus kirjoittaa, eikä
+yleisellä arviolla.
+
+**Neljä maata oli aidosti täynnä, ja sekin mitattiin.** Hongkongin
+koekappaleeksi otettiin juuri se ehdokas, jonka erä M3 oli jättänyt
+odottamaan — Lei Cheng Ukin Han-hauta — ja se tuotti yhden
+nimiö–nimiö-limityksen, aivan kuten M3 ennusti. Saint Helenalla
+kahdeksatta merkkiä kokeiltiin neljässä eri pisteessä saarta, ja jokainen
+tuotti 1–2 limitystä. Kyproksella Soli tuotti yhden ja Machairas kaksi,
+ja Kyrenian linna, Bellapais ja Buffavento jäivät kaikki kaupunkikaton
+(8 lautayksikköä) alle Nikosiasta. Tamassos läpäisi nimiölimityksen
+mutta kaatui toiseen vartioon: se osuu Nikosian KOHDEKARTAN alueelle,
+ja `tests/nostot-kartalla.test.mjs` laskee sen kaupungin kohdalla
+olevaksi nostoksi, jonka luku saa vain laskea — se kuuluu siis Nikosian
+kohdekartalle, mikä on eri työ. Kyproksen kahdeksanneksi kohteeksi tuli
+sen tilalle Karpasin niemen kärjen Apostolos Andreas (44,7
+lautayksikköä Nikosiasta). Singaporen kymmenes merkki (Sentosa)
+tuotti yhden limityksen.
+
+**Vanuatun eläintäky: kookoskrapu (*Birgus latro*), omistajan toive.**
+Este oli sama kuin Fidžillä ja Salomonsaarilla erässä M19 — laudan
+`map.outlines` tuntee Vanuatusta maaksi vain Efaten pohjoisosan Port
+Vilan ympärillä — ja niin on ratkaisukin: `MAATESTIN_POIKKEUS` sai
+kolmannen maan (`tests/elaintakyt.test.mjs`), perustelu on testissä ja
+`js/packs/elaintakyt.js`:n erälohkossa. Poikkeus koskee vain laudan
+tyyliteltyä rantaviivaa: piste (166,6 / −14,65, Espiritu Santon
+pohjoiskärki) on Vanuatun oman monikulmion **sisällä**, 118,7
+lautayksikön päässä Port Vilasta ja 387,8 lähimmästä toisesta
+eläintäystä, ja se on VUT-lehden rajauksen sisällä, joten merkki näkyy
+myös maalehden kartalla — toisin kuin Fidžin Lau-saarten merkki. Paikka
+haravoitiin 0,05 asteen ruudukolla: 276 ehdot täyttävästä pisteestä
+valittiin se, joka on kauimpana maan olemassa olevista merkeistä.
+Kortti on toistaiseksi kuvaton; kuva haetaan Commonsista erikseen.
+
+**Saint Helenan eläintäyn este vaihtui, ja se on syytä tietää.** Erä M16
+kirjasi syyksi sen, ettei laudan `outlines` tunne saarta — tämä pitää
+yhä paikkansa, mutta se este on nyt ratkaistavissa samalla poikkeuksella
+kuin FJI, SLB ja VUT. Kaupunkisäde ei myöskään ole este: **kaikki** 347
+ruudukkopistettä saaren monikulmion sisällä ovat yli 35 lautayksikön
+päässä jokaisesta kaupunkimerkistä (kaukaisin 85,5), koska laudan
+St. Helena -laatta on tyylitellyllä paikalla saaren koillispuolella.
+Este on **nimiölimitys**: kahdeksas merkki ei mahdu saarelle, jonka
+halkaisija on maailmankartalla noin neljä lautayksikköä. Saaren tikkuri
+(wirebird) siis mahtuisi kaikkiin muihin vartioihin mutta ei ladontaan.
+Ratkaisu olisi pudottaa jokin nykyinen merkki sen tieltä — se on
+sisältöpäätös, ei integroijan tehtävä.
+
+**Qatarin, Hongkongin ja Singaporen eläintäyt ovat yhä mahdottomia, ja
+mittaus toistettiin.** Maiden monikulmioiden sisään osuu 2 456 / 887 /
+1 556 ruudukkopistettä, ja kaukaisin niistä on omasta kaupunkilaatastaan
+vain 32,3 / 22,2 / 19,8 lautayksikön päässä, kun
+`tests/elaintakyt.test.mjs` vaatii 35. Kaupunkisädettä **ei** kierretä
+poikkeuksella: FJI:n, SLB:n ja VUT:n poikkeus koskee vain laudan
+rantaviivaa. Qatarin ehdokas odottaa yhä valmiina (arabianoryksi,
+Al Reemin biosfäärialue) ja Singaporen sarvinokkalintu samoin.
+
+**Kaikki uudet merkit ovat pääkartalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin ja kirjattiin jokaisen
+koordinaattirivin viereen. Lähin uusi merkki on Al-Shahaniya 10,9 lautayksikön päässä Dohasta — yli
+sekä `KAUPUNGIN_KOHDALLA_SADE`-rajan (7) että kaupunkikaton säteen (8) —,
+ja toiseksi lähin Mesaieed 11,1 yksikköä samasta laatasta.
+`node tools/tarkista-nostopaikat.mjs` antaa kaikille kahdelletoista
+rivin *pääkartta*, ja `node tools/tarkista-nimiolimitys.mjs` sanoo
+jokaisesta yhdeksästä maasta "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Kaksi pistettä siirrettiin nimiön takia.** Wadi al-Batinin artikkelin
+oma koordinaatti (46,555 / 29,101) on 6,0 lautayksikön päässä Kuwaitin
+eläintäystä, joten piste siirtyi saman uoman pohjoisemmalle jaksolle
+(46,9 / 29,75), jolloin väli on 21,1. Vanuatun kookoskravun ensimmäinen
+koepiste Espiritu Santon keskiosassa oli Tabwemasanan nimiön päällä, ja
+piste siirtyi saaren pohjoiskärkeen.
+
+**Vartio 7a ilman savuketta.** `tools/savukkeet/savuke-maastokohteet.mjs`
+on 7.9.2026 alkaen ohituksessa (vanha kartta pois käytöstä, omistajan
+päätös; `tools/savukkeet/vanha-kartta-ohitus.mjs`), joten se tulostaa
+OHITUS-rivin eikä anna 8/8:aa. Savukkeen aineistovartio 7a ("jokainen
+kohde osuu maansa fokuslehden rajaukseen") ei kuitenkaan tarvitse
+selainta, ja se ajettiin erikseen samalla `osuuLehteen`-funktiolla
+kaikille 1 135 maastokohteelle: ikkunan ulkopuolella on **nolla**.
+Ontong Javan atolli karsiutui juuri tähän — se on Salomonsaarten lehden
+rajauksen pohjoispuolella.
+
+**Erä on kuvaton kohteiden osalta** kuten K2-erät 1–4 ja maailman erät
+M1–M19. Faktat on luettu en-Wikipedian raakatekstistä kohde kerrallaan,
+ja jokainen lähderivi nimeää artikkelin ja sen osan sekä
+tarkistuspäivän 7.9.2026. Taulukoita ei ole päivitetty käsin — ne
+ajetaan `node tools/laske-karttanostot.mjs --md` -työkalulla.

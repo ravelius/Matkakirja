@@ -277,4 +277,83 @@ export const MAASTOKOHTEET_SLB = [
     lahde: 'en-Wikipedia "Rennell Island", johdanto-osa ja osio "History" '
       + '(tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * ERÄ M20, 7.9.2026 — KAKSI KOHDETTA LISÄÄ.
+   *
+   * Erän M2 vaje oli kohteita −2. Lehden ikkuna (FOKUS_POHJAT.SLB:
+   * x 10 973,44…11 302,09, y 3400,21…3640,12) on Oseanian väljimpiä,
+   * ja mittaus osoitti että kaksi merkkiä mahtuu vielä ilman yhtäkään
+   * nimiö–nimiö-limitystä (`node tools/tarkista-nimiolimitys.mjs SLB`
+   * → "NIMIÖ NIMIÖN PÄÄLLÄ: 0"). Molemmat ovat yli viidenkymmenen
+   * lautayksikön päässä Honiarasta, eli kaukana sekä
+   * KAUPUNGIN_KOHDALLA_SADE-rajasta (7) että kaupunkikaton säteestä (8).
+   *
+   * ONTONG JAVA KARSIUTUI MITALLA: atolli on lon 159,35 / lat −5,27,
+   * joka projisoituu kohtaan y 3387,2 eli lehden rajauksen POHJOISPUOLELLE
+   * (rajaus alkaa y 3400,21). Merkki olisi ollut olemassa mutta
+   * maalehden kartalta ulottumattomissa (savuke-maastokohteet vartio 7a).
+   *
+   * Kuvaton erä kuten M2; faktat en-Wikipedian raakatekstistä
+   * 7.9.2026.
+   * ============================================================== */
+  {
+    id: 'santaisabel',
+    nimi: 'Santa Isabel',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Missä eurooppalaiset astuivat ensimmäisen kerran maihin Salomonsaarilla?',
+      'Miksi espanjalaiset jättivät siirtokuntansa?',
+    ],
+    korostukset: ['prikantiini|prikantiinin'],
+    nappi: 'Ensimmäinen maihinnousu 1568',
+    // 159.17611 E / -8.03056 N — en-Wikipedia "Santa Isabel (island)".
+    // Lähin pelikaupunki Honiara 51,9 lautayksikköä.
+    laudat: {
+      maailmankartta: { x: 11139.2, y: 3479.7 },
+    },
+    teksti: 'Santa Isabel on Isabelin maakunnan suurin saari ja koko maan pisin. Sen rannalla '
+      + 'tapahtui Salomonsaarten ensimmäinen eurooppalainen maihinnousu: espanjalainen '
+      + 'Álvaro de Mendaña astui maihin 7. helmikuuta 1568 ja merkitsi saaren kartalle '
+      + 'nimellä Santa Isabel de la Estrella. Espanjalaiset perustivat asutuksen ja '
+      + 'rakensivat pienen prikantiinin, jolla he mittasivat ympäröiviä meriä ja saaria — '
+      + 'noilla retkillä he "löysivät" muun muassa Malaitan, Guadalcanalin, Savon, '
+      + 'Choiseulin ja Makiran. Kohtaaminen saarelaisten kanssa alkoi sovinnollisesti, mutta '
+      + 'retkikunnan jatkuva tarve saada tuoretta ruokaa ja vettä kiristi välit nopeasti: '
+      + 'saarelaisten omavaraistalous ei kyennyt ruokkimaan vieraita loputtomiin. Kun '
+      + 'kultaa ei löytynyt, ruoka oli vähissä ja hyökkäykset ja taudit vaivasivat, '
+      + 'siirtokunta siirrettiin nykyisen Honiaran paikalle Guadalcanalille ja Santa Isabelin '
+      + 'asutus hylättiin. Saaren korkein kohta on 1 220 metrin Mount Sasari.',
+    lahde: 'en-Wikipedia "Santa Isabel (island)", johdanto-osa sekä osiot "Location and '
+      + 'geographic data" ja "History" (tarkistettu 7.9.2026).',
+  },
+  {
+    id: 'makira',
+    nimi: 'Makira',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Miksi saarta sanottiin pitkään San Cristóbaliksi?',
+      'Mitä lintuja itäisestä Makirasta on kadonnut?',
+    ],
+    korostukset: ['San Cristóbal|San Cristóbal'],
+    nappi: 'Saari, jonka nimi vaihtui takaisin',
+    // 161.82806 E / -10.55111 N — en-Wikipedia "Makira".
+    // Lähin pelikaupunki Honiara 75,1 lautayksikköä.
+    laudat: {
+      maailmankartta: { x: 11227.6, y: 3564.5 },
+    },
+    teksti: 'Makira, aiemmalta nimeltään San Cristóbal, on Makira-Ulawan maakunnan suurin '
+      + 'saari ja maan kolmanneksi väkirikkain Malaitan ja Guadalcanalin jälkeen. '
+      + 'Ensimmäisen kerran eurooppalaiset näkivät sen Álvaro de Mendañan retkikunnan '
+      + 'aikana kesäkuussa 1568: näkemä ja maihinnousu syntyivät paikallisretkellä, joka '
+      + 'lähti Guadalcanalilta pienellä aluksella, kertomusten Santiago-prikantiinilla, '
+      + 'jota komensi alférez Hernando Enriquez ja jonka luotsi oli Hernán Gallego. He '
+      + 'merkitsivät saaren kartalle nimellä San Cristóbal. Saaren itäosassa on 182 550 '
+      + 'hehtaarin enimmäkseen metsäinen alue, jonka BirdLife International on nimennyt '
+      + 'tärkeäksi lintualueeksi; maasto nousee rannikon kallioilta Baurojen ylängölle '
+      + '1 200 metriin asti. Kaikkia lintuja ei enää tavata: makiranluhtakanaa ei ole nähty '
+      + 'vuoden 1953 jälkeen, ja paksunokkakyyhky on ollut kateissa vuodesta 1927 ja '
+      + 'oletetaan hävinneen.',
+    lahde: 'en-Wikipedia "Makira", johdanto-osa sekä osiot "History", "Environment" ja '
+      + '"Birds" (tarkistettu 7.9.2026).',
+  },
 ];
