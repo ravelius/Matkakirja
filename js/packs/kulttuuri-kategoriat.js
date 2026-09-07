@@ -90389,6 +90389,27 @@ export const KULTTUURI_KATEGORIAT = {
    * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026 ilta).
    * Oppaan sääjakso nojaa siksi en-Wikipedian Climate-osioon ja
    * sanoo sen ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Salta City.jpg" (etualalla perhe, kasvot ja lapset
+   * selvästi luettavissa), "SaltaGuard.jpg" (vartionvaihdon gauchot
+   * ja katsojat profiilissa), "Catedral Basílica de Salta. Capital.jpg"
+   * (Milagro-kulkueen väkijoukko etualalla), "Gondola in Salta,
+   * Argentina.jpg" (309 px), "Bombo.JPG" (263 px), "Mercado Artesanal
+   * de Salta (Argentina).jpg" (1024 px), "Catedral de Salta 1.jpg"
+   * (600 px).
+   *
+   * KAIKKI KYMMENEN NOSTOA JÄÄ KUVATTOMAKSI, ja se on valinta.
+   * Kansisivun aiheet ovat tapahtumia ja päätöksiä (perustaminen,
+   * hartaus, vuosi 1873, rakennusjärjestys, vuoren geologia) ja
+   * teemasivu on musiikkia; niistä Commonsissa oleva kuvasto on joko
+   * kasvokuvia esiintyjistä, alle 1200 px:n soitinkuvia tai
+   * väkijoukkoja. Kaupungin kuvat ovat siellä missä ne kantavat:
+   * kannessa, avauksessa, ennen–nyt-parissa, matkaoppaassa ja
+   * kohdekartan kahdeksassa jutussa. Kuvattomat nostot on kirjattu
+   * kuvaputken tilaukseksi raportissa.
    */
   salta: [
     {
@@ -90398,6 +90419,84 @@ export const KULTTUURI_KATEGORIAT = {
         + 'Airesin väliselle tielle, ja tienvarsikaupunki se pysyi. '
         + 'Isoisän matkavuonna 1873 rautatietä ei vielä ollut, ja '
         + 'tavara kulki muulien selässä.',
+      /*
+       * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+       * (southamerica-valokuvat.js, salta), jossa se on jo
+       * tarkistettu. Sama rakennus, lähes sama kuvakulma: cabildon
+       * kaksi holvikaarikerrosta ja torni. Vanhan puolen tekijäksi
+       * extmetadata antaa "Unknown author"; tiedoston oma kuvaus
+       * nimeää Argentiinan kansallisarkiston kokoelman (Album
+       * Aficionados, inventaario 213332), ja lähderivi kertoo sen.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Cabildo de Salta siglo XIX.jpg',
+          vuosi: '1890-luku',
+          selite: '1800-luvun lopulla cabildon holvikaarien edessä '
+            + 'seisoi vaunu ja aukio oli vielä hiekkaa.',
+          lahde: 'Archivo General de la Nación (Argentiina), '
+            + 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Cabildo de Salta, Argentina.jpg',
+          vuosi: '2026',
+          selite: 'Sama talo tänään: kaksi kerrosta holvikaaria, '
+            + 'kellotorni keskellä ja kivetty aukio edessä.',
+          lahde: 'Dpalma01, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * omistajan 21.8.2026 linjauksen mukaiset laajat yleiskuvat:
+       * kaupunki vuorelta köysiradan alta, pääaukion holvikäytävä ja
+       * laakso ylhäältä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Vista de Salta (ciudad) mar 2021 03.jpg',
+          selite: 'Cerro San Bernardon köysirata laskeutuu kaupungin '
+            + 'ylle, ja laakso jatkuu vuorille asti.',
+          lahde: 'César Pérez, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Plaza 9 de Julio Salta.jpg',
+          selite: 'Pääaukion holvikäytävän alla on kahviloita, ja '
+            + 'kadun toisella puolella kasvaa appelsiinipuurivi.',
+          lahde: 'Bachelot Pierre J-P, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Vista panorámica de la Ciudad de Salta.JPG',
+          selite: 'Vuoren rinteeltä katsottuna ruutukaava täyttää '
+            + 'koko Lerman laakson.',
+          lahde: 'Marcos Combet, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: kolme aitoa valokuvaa, joissa kaupunki
+       * näkyy eri suunnista — vuori, pääaukion laita ja San
+       * Franciscon julkisivu. Saltalle ei ole generoitu herokuvia.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Ciudad Salta ARG.jpg',
+          selite: 'Köysiradan pylväs seisoo rinteellä, ja aurinko '
+            + 'laskee kaupungin taakse laaksoon.',
+          lahde: 'ViajeroExtraviado, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Salta-Square1.jpg',
+          selite: 'Américan kulttuurikeskus nousee pääaukion laidalla '
+            + 'naapureitaan korkeammalle ranskalaisine kattoineen.',
+          lahde: 'Fulviusbsas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Iglesia y Convento de San Francisco, Salta.JPG',
+          selite: 'San Franciscon punakeltainen julkisivu kohoaa '
+            + 'kadun yli, ja sen edessä seisoo pronssipatsas.',
+          lahde: 'Alexrebolledo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kaupunki, joka perustettiin tien varteen',
@@ -90484,6 +90583,17 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       matkailijalle: {
+        /*
+         * Osion valokuva otsikon alla oikealla, teksti kiertää.
+         * Tuore maltillinen pysty (3456 x 4608 eli 0,75) omistajan
+         * 20.8.2026 linjauksen mukaan.
+         */
+        kuva: {
+          tiedosto: 'Vista de Salta (ciudad) mar 2021 01.jpg',
+          selite: 'Kesäukkonen kerää pilvet laakson ylle, ja '
+            + 'auringonsäde osuu kaupungin keskustaan.',
+          lahde: 'César Pérez, Wikimedia Commons (CC BY-SA 4.0)',
+        },
         kappale: 'Salta on Argentiinan seitsemänneksi suurin kaupunki '
           + 'ja maan luoteisosan keskus: asukkaita on 627 704 vuoden '
           + '2022 laskennan mukaan, ja Valle de Lerman '
@@ -90834,6 +90944,25 @@ export const KULTTUURI_KATEGORIAT = {
    * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026 ilta).
    * Oppaan sääjakso nojaa en-Wikipedian Climate-osioon ja sanoo sen
    * ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Antofagasta - Casa Cultura (5204152314).jpg"
+   * (sisäkuva, penkeillä istuvat tunnistettavat), "Antofagasta -
+   * Sociedad Croata (5203555145).jpg" (sisäkuva salonkiin),
+   * "Compania Huanchaca de Bolivia.jpg" (postikortin päälle painettu
+   * otsikko ja kehys), "MuelleSalitreroMelbourneClark.jpg" (1020 px),
+   * "AduanaAntofagasta.png" (905 px), "TorreRelojAntofagasta.jpg"
+   * (483 px), "Antofa.jpg" (471 px), "MonumentoNaturalLaPortada(4).jpg"
+   * (800 px).
+   *
+   * SEITSEMÄN NOSTOA JA KAKSI KOHDEKARTAN JUTTUA JÄÄ KUVATTOMAKSI.
+   * Kaupungin syntyä, nimeä, vuotta 1873 ja maan vaihtoa ei voi
+   * kuvittaa sääntöjen mukaisella valokuvalla, ja Gibbsin talosta
+   * sekä kaupunginteatterista ei Commonsissa ole yhtään vähintään
+   * 1 200 pikselin kuvaa. Kuvaton on parempi kuin tarkistamaton;
+   * kohteet on kirjattu kuvaputken tilaukseksi raportissa.
    */
   antofagasta: [
     {
@@ -90844,6 +90973,87 @@ export const KULTTUURI_KATEGORIAT = {
         + 'matkavuonna 1873 kaupunki oli Bolivian satama — ja juuri '
         + 'silloin tehtiin sopimus, joka kuusi vuotta myöhemmin '
         + 'muutti sen Chilen kaupungiksi.',
+      /*
+       * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+       * (southamerica-valokuvat.js, antofagasta), jossa se on jo
+       * tarkistettu. Pari ei ole sama katu vaan sama kaupunki: vanha
+       * puoli on Nevin O. Winterin Chile-kirjan kuvalaatta vuodelta
+       * 1912 ja uusi yksi nykyisistä pääkaduista. Vanhassa on
+       * kirjapainon oma ohut kehysviiva, koska kuva on kirjan sivulta;
+       * se on osa alkuperäistä painatetta eikä kuvan päälle lisätty
+       * merkintä, ja se kirjataan tähän, jotta seuraava lukija ei
+       * ihmettele.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Una calle de Antofagasta (1912).jpg',
+          vuosi: '1912',
+          selite: 'Vuonna 1912 katu oli hiekkaa ja lasti kulki '
+            + 'muulikärryllä kohti rannikkovuoria.',
+          lahde: 'Winter, Nevin O. (Nevin Otto), 1869-1936, '
+            + 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'A main street in Antofagasta (pzidar paranal lv-1).jpg',
+          vuosi: '2011',
+          selite: 'Sama nousu kohti vuoria nykyään: pääkatu, '
+            + 'liikennevalot ja rinteille kiivennyt kaupunki.',
+          lahde: 'P. Zidar/ESO, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon ennenNyt-parin takia
+       * (js/lehti.js piirraLehtiKuvat), mutta ovat silti omistajan
+       * 21.8.2026 linjauksen mukaiset laajat yleiskuvat: kaupunki
+       * ilmasta, rantatie ja historiallinen kortteli.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Panorámica de Antofagasta 2018.jpg',
+          selite: 'Ilmasta katsottuna kaupunki on kapea nauha meren '
+            + 'ja rannikkovuoriston välissä.',
+          lahde: 'Limerickk, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Antofagasta desde Avenida Grecia (9492184712).jpg',
+          selite: 'Rantatie kulkee tornitalojen ja aallonmurtajien '
+            + 'välissä koko kaupungin läpi.',
+          lahde: 'Javier Jofre, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Barrio Histórico de Antofagasta.jpg',
+          selite: 'Historiallisen korttelin vanhat virastotalot '
+            + 'seisovat rannalla, ja takana nousee aavikkovuori.',
+          lahde: 'Municipalidad de Antofagasta, Wikimedia Commons '
+            + '(CC BY 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: kolme aitoa valokuvaa eri puolilta kaupunkia
+       * — lahti, satama-allas ja rinnekaupunginosa. Antofagastalle ei
+       * ole generoitu herokuvia.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Antofagasta bay Chile - panoramio.jpg',
+          selite: 'Lahden pohjukassa on hiekkaranta, purjeveneitä ja '
+            + 'sen takana sumuun katoava vuorijono.',
+          lahde: 'Daniel Nussbaum, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Antofagasta - Posa Historica (5203546661).jpg',
+          selite: 'Kalastussatama ja venesatama jakavat saman '
+            + 'suojaisan altaan keskellä kaupunkia.',
+          lahde: 'Municipalidad Antofagasta from Antofagasta, Chile, '
+            + 'Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Antofagasta vue du quartier Chango Lopez.jpg',
+          selite: 'Rinnekaupunginosasta katsottuna keskustan tornit '
+            + 'seisovat suoraan Tyynenmeren edessä.',
+          lahde: 'Bachelot Pierre J-P, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kaupunki ilman perustamiskirjaa',
@@ -90938,9 +91148,24 @@ export const KULTTUURI_KATEGORIAT = {
             + 'uudenaikaisin jalostamo. Yhdeksän vuotta myöhemmin, '
             + '1902, hopean hinta petti ja Pulacayon kaivos tulvi — ja '
             + 'kaikki loppui.',
+          tiedosto: 'Ruinas de Huanchaca, Chile.jpg',
+          selite: 'Ylhäältä katsottuna jalostamon perustukset '
+            + 'muodostavat rivistön kammioita ja pilareita.',
+          lahde: 'Marca Chile, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
       matkailijalle: {
+        /*
+         * Osion valokuva otsikon alla oikealla, teksti kiertää.
+         * Tuore maltillinen pysty (1704 x 2164 eli 0,79) omistajan
+         * 20.8.2026 linjauksen mukaan.
+         */
+        kuva: {
+          tiedosto: 'TorrePlazaColón-Catedral.jpg',
+          selite: 'Kellotorni ja katedraali seisovat vierekkäin '
+            + 'Colónin aukion laidalla suihkulähteen takana.',
+          lahde: 'Francisco Martínez, Wikimedia Commons (CC BY-SA 2.5)',
+        },
         kappale: 'Antofagasta on Chilen viidenneksi suurin kaupunki, '
           + 'asukkaita 401 096 vuoden 2024 laskennan mukaan, ja se on '
           + 'noin 1 100 kilometriä Santiagosta pohjoiseen. Kaupunki on '
@@ -91177,6 +91402,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ollut. Vuonna 2005 kokeiltiin kolmen neliömetrin '
             + 'paneeleita, joista tuli viisi litraa neliömetriltä '
             + 'päivässä.',
+          tiedosto: 'La camanchaca, neblina sobre el desierto de Atacama, desde un avión. Chile.jpg',
+          selite: 'Sumuvyö peittää aavikkovuorten välit valkoisena '
+            + 'mattona lentokoneen siiven alla.',
+          lahde: 'CARLOS TEIXIDOR CADENAS, Wikimedia Commons '
+            + '(CC BY-SA 4.0)',
         },
         {
           otsikko: 'Portti, jonka meri kaivoi',
@@ -91194,6 +91424,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kohde oli suljettuna jyrkänteen sortuman takia, ja '
             + 'vuodesta 2010 pääsy rannalle on kielletty kasviston ja '
             + 'eläimistön suojelemiseksi.',
+          tiedosto: 'MonumentoNaturalLaPortada.jpg',
+          selite: 'Kaari seisoo irrallaan rannikon edustalla, ja '
+            + 'sen vieressä jyrkänne katkeaa hiekkarantaan.',
+          lahde: 'Marcos Escalier from Antofagasta, Chile., '
+            + 'Wikimedia Commons (CC BY-SA 2.5)',
         },
         {
           otsikko: 'Kylmä virta ja sen linnut',
@@ -91227,6 +91462,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'pystytettiin 21. joulukuuta 2000 arkkitehti Eleonora '
             + 'Romanin suunnittelema muistomerkki, joka merkitsee '
             + 'piirin paikan ja toimii aurinkokalenterina.',
+          tiedosto: 'Hito al Tropico de Capricornio (2).jpg',
+          selite: 'Kolme vihertävää metallilevyä seisoo aavikolla '
+            + 'ja muodostaa portin kääntöpiirin kohdalle.',
+          lahde: 'Marcos Escalier from Antofagasta, Chile., '
+            + 'Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
