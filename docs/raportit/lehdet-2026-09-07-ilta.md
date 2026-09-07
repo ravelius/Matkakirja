@@ -106,7 +106,6 @@ Recognition). Portit: fail 0, karttapisteet ok. Poiminnassa lisäyskonfliktit
 5 tiedostossa liitetty liita-lisays.py:llä.
 
 ### Checkpointit (poimittu haaraan; loppuraportit ja kuvat täydennetään, jos agentit ehtivät)
-- Timbuktu + Lalibela: wip-tekstit 97c8052 (tekstit jatkuvat, kuvat tekemättä)
 - Whitehorse + Yellowknife: wip 7c31c9f + tekstit 8ac5ecc (kuvahaku alkaa)
 - Iqaluit + Santa Fe: ei vielä committia (agentti aloitti myöhään)
 Kaikki kolme poimittu haaraan lisäyskonfliktit liittäen; portit fail 0,
@@ -194,6 +193,22 @@ kaikki 18 nostoa ja 16 nähtävyysjuttua kuvattomia (Commons 429). Pistokokeet:
 Islandin 1770 kompassihäiriön takia ("Magnetic Island", History); (3) Amazon
 Iquitosissa korkeimmillaan toukokuussa, alimmillaan lokakuussa, 9–12 m
 ("Iquitos", Climate). Portit: fail 0, karttapisteet ok.
+
+### Kaupunkilehdet Timbuktu + Lalibela — 97c8052 (tekstit), 1ace32e (kuvat) — OSITTAIN KUVITETTU
+Tiedostot: faktapohja-/tarkistus-timbuktu.md ja -lalibela.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, africa-artikkelit.js, piirra-kaupunkikartta.mjs,
+assets/kartat/timbuktu-keskusta.png, lalibela-keskusta.png. Timbuktu: kansi
+(synty ja nimi, azalai, 1873 ilman yhtä hallitsijaa, 15 km joesta), teemasivu
+kirjallisuus "Kirjat ja oppineet". Lalibela: kansi (Roha ja mehiläiset,
+artesinen vesi, 1873 Tekle Giyorgis II, tukul-talot), teemasivu kuvataide "Kivi
+ja kuva". Kuvia 11 (Commonsin aineisto niukka: Timbuktun tuoreet kuvat
+päiväysleimaisia; 12 hylätty). Lalibelan SAAPUMISTEKSTIÄ ei kirjoitettu:
+lalibela on tests/vanha-maailma.test.mjs:n KAARETTOMAT-listalla — omistajan
+linjaus. Pistokokeet: (1) Sankoré rakennettiin uudelleen Kaaban mitoilla
+1578–1582 (en-Wikipedia "Sankoré Madrasah", History); (2) Laing Timbuktuun
+18.8.1826, 38 päivää; laatta 1903 ("Alexander Gordon Laing", Trip to
+Timbuktu); (3) Lalibelan risti n. 60 cm / 7 kg, varastettiin 1997, Belgiaan
+1999, palautettiin 2001 ("Lalibela Cross"). Portit: fail 0, karttapisteet ok.
 
 ## Kuvaputken tilaukset (kuvattomat nostot ja miniatyyrit)
 
@@ -395,6 +410,32 @@ uusgoottilainen kirkko ja 20 m kellotorni; Hotel Palace — art nouveau
 balustradeineen; Casa Strassberger — osittain raunioitunut kumikauden talo;
 Plaza 28 de Julio — väljä aukio, obeliski.
 
+**Timbuktu, kuvattomat:** kansikuvat 3 ja avauskuvat 3 — savikaupunki dyynien
+keskellä; nimi — hiekkakumpujen leiripaikka ja kameleja; suolakaravaani —
+kamelijono suolalaattoineen; joki — Kabaran kanava tulvan aikaan; Sankorén
+opetus — oppilaita moskeijan pihalla; Ahmad Baba — 1500-luvun oppinut kirjojensa
+ääressä; Leo Africanus — renessanssiajan kirja Afrikasta; jutut Laingin,
+Cailliéen ja Barthin talot, al-Wangarin kirjasto, Sankorén moskeija, Ahmed Baba
+-instituutti.
+**Timbuktu, miniatyyrit (8):** Djinguereberin moskeija — savimoskeija,
+pyramidiminareetista puupalkkeja; Gordon Laingin talo — matala savitalo,
+muistolaatta oven yllä; René Cailliéen talo — savitalo hiekkakujalla; Sidi
+Yahyan moskeija — koristeellinen puuovi, yksi minareetti; al-Wangarin kirjasto —
+savitalo, hyllyllinen käsikirjoituksia; Heinrich Barthin talo — kaksikerroksinen
+savitalo, muistolaatta; Sankorén moskeija — pyramidiminareetti hiekka-aukion
+takana; Ahmed Baba -instituutti — matala moderni kivitalo kaariaukkoineen.
+**Lalibela, kuvattomat:** kolmas kansikuva ja avauskuvat 3; mehiläiset
+vastasyntyneen ympärillä; artesinen kaivo kirkon vieressä; Tekle Giyorgis II
+Lastassa 1868; Lalibelan risti käsissä; kirkkojen ajoituskiista; jutut Biete
+Giyorgis, Golgotha Mikael, Gabriel-Rufael, Lehem, Abba Libanos.
+**Lalibela, miniatyyrit (8):** Biete Giyorgis — ristinmuotoinen monoliitti
+kuilussaan ylhäältä; Biete Golgotha Mikael — sisäseinä ihmishahmoreliefeineen;
+Biete Maryam — punakallioinen monoliitti ristinmuotoisine ikkunoineen; Biete
+Medhane Alem — suuri monoliitti pilarikäytävineen; Biete Gabriel-Rufael —
+kaarikäytävä kaivannon reunalla; Biete Lehem — pieni kallioon hakattu kammio;
+Biete Abba Libanos — vuoreen kiinni jäänyt julkisivu portaineen; Biete Amanuel —
+vapaasti seisova monoliitti, vaakapalkkikerrokset.
+
 ## Päätöstä vaativat asiat
 
 - **MAATESTIN_POIKKEUS laajeni VUT:iin** (tests/elaintakyt.test.mjs; sama kuin
@@ -448,6 +489,10 @@ Plaza 28 de Julio — väljä aukio, obeliski.
 - Townsville/Iquitos: nostojen ja juttujen kuvitus (34 kohdetta) kokonaan
   tekemättä — uusi Commons-haku rauhallisena hetkenä tai kuvaputki. Viereinen:
   Oseanian ja Etelä-Amerikan introt eivät ole intron mittatestin piirissä.
+- Timbuktu/Lalibela: Lalibelan saapumisteksti puuttuu (KAARETTOMAT-lista) —
+  omistajan linjaus; Ali Farka Touré on MLI-maalehden aihe, ei siirretty;
+  africa-valokuvat.js:n timbuktu-pari ei täytä nykyisiä kuvasääntöjä (403 px /
+  päiväysleima).
 
 ## Keskeneräiset
 
