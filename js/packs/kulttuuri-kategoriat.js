@@ -97714,4 +97714,808 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TIMBUKTU (Opus 7.9.2026, paketti O9) — Afrikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-timbuktu.md ja sen riippumaton tarkistus
+   * tarkistus-timbuktu.md (tuomio "kelpaa, kun kohtien A–H
+   * ratkaisut tehdään"; kaikki ratkaisut on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026:
+   * "Timbuktu", "History of Timbuktu", "Sankoré Madrasah",
+   * "Timbuktu Manuscripts", "Ahmad Baba al-Timbukti",
+   * "Ahmed Baba Institute", "Azalai", "Tarikh al-Sudan".
+   *
+   * RAJAUS MAALEHTEEN, KARTTANOSTOIHIN JA SKANDAALEIHIN NÄHDEN.
+   * Malin maalehti (maa-kategoriat.js MLI), karttanostot
+   * (maastokohteet-mli.js) ja skandaalinosto (skandaalit.js MLI,
+   * "Kirjat, jotka piilotettiin koteihin") on luettu kokonaan.
+   * TÄSSÄ LEHDESSÄ EI SIIS KÄSITELLÄ: Sundiataa, Kouroukan Fougaa,
+   * MANSA MUSAN PYHIINVAELLUSTA, Tondibin taistelua, Taoudennin
+   * suolakylää, tigadegenaa, foniota, chiwaraa, bogolania, Seydou
+   * Keïtaa, koraa, Ali Farka Tourén aavikkoblusia, Djennén
+   * moskeijaa eikä Askian hautaa — eikä myöskään VUOSIEN 2012–2013
+   * TAPAHTUMIA, jotka ovat kokonaan skandaalinostossa
+   * (Ahmed Baba -instituutin palo, Abdel Kader Haidara,
+   * SAVAMA-DCI, Mahmud Katin tähdenlennot 1583, Platon-käännökset,
+   * al-Muhkam-sanakirja). Peli ei käsittele nykysotia.
+   *
+   * KULTTUURIVISAN VASTAUS. africa-kulttuuri.js timbuktu.kysymys
+   * kysyy "Mistä Timbuktun kirjastot ovat kuuluisia?" (vanhoista
+   * käsikirjoituksista). Vastaus on kansisivun johdannossa ja
+   * teemasivun nostossa T2.
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * africa-saapumiset.js:n ja africa-kulttuuri.js:n
+   * timbuktu-merkintöihin EI koskettu (sama ratkaisu kuin
+   * Nairobissa, Dakarissa ja Lagosissa). Litteän taulun Ali Farka
+   * Touré -musiikkilinkkiä ei voi siirtää tähän lehteen, koska
+   * Touré on Malin maalehden aihe. Raportoitu Fablelle.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'kirjallisuus' (AIHE_IKONIT, js/ui-apurit.js).
+   *
+   * TARKISTUKSEN RATKAISUT:
+   *  - A: kukaan ei tiedä, kuka hallitsi Timbuktua 1873. Nosto K3
+   *    SANOO ERON ÄÄNEEN eikä nimeä yhtä hallitsijaa.
+   *  - B: etäisyys jokeen on 15 km (Geography-osio, "joen
+   *    pääuomaan") eikä johdannon 20 km.
+   *  - C: Sankorén "tutkintoportaat ja turbaanit" ovat artikkelissa
+   *    lähteettömiä (citation needed) eikä niitä käytetä.
+   *  - D: Ahmed Baba -instituutin käsikirjoitusmäärä on instituutin
+   *    oman artikkelin noin 20 000.
+   *  - F: Caillién karavaanin koko kerrotaan muodossa "noin
+   *    kuusisataa", ja se että Caillié antoi itse kaksi eri lukua.
+   *  - G: Djinguereber ajoitetaan vuoteen 1327.
+   *  - H: Rauhan liekin monumentti jätettiin kokonaan pois, koska
+   *    artikkelin päiväys on mahdoton (kapina päättyi 1996,
+   *    seremonia "29.3.2007").
+   *
+   * SÄÄRIVIÄ EI OLE: sen tekee erillinen agentti tässä erässä.
+   */
+  timbuktu: [
+    {
+      id: 'kaupunki',
+      nimi: 'Timbuktu',
+      johdanto: 'Aavikon eteläreunan kaupunki, jonka savimoskeijoissa '
+        + 'opetettiin ja jonka sukujen kirjastoihin kertyi '
+        + 'satojatuhansia käsikirjoituksia. Euroopassa nimestä tuli '
+        + 'sanonta paikasta, jota ei ole.',
+      nostot: [
+        {
+          otsikko: 'Nainen, jonka mukaan kaupunki nimettiin',
+          teksti: 'Timbuktu alkoi tuaregien kausiluonteisena '
+            + 'leiripaikkana ja muuttui pysyväksi 1100-luvun alussa. '
+            + 'Nimen alkuperästä on ainakin neljä selitystä, eikä '
+            + 'yksikään ole voittanut. Kaupungin oma 1600-luvun '
+            + 'kronikka Tarikh al-Sudan kertoo, että tuaregit '
+            + 'jättivät tavaransa paikkaan, jota vartioi heidän '
+            + 'orjanaisensa Tinbuktu — nimi tarkoitti heidän '
+            + 'kielellään kyhmyä, ja leiripaikka nimettiin hänen '
+            + 'mukaansa. Heinrich Barth johti nimen songhaista: '
+            + 'tùmbutu tarkoittaa koloa, ja kaupunki rakennettiin '
+            + 'hiekkakumpujen väliseen kuoppaan. Malilainen Sekene '
+            + 'Cissoko taas lukee siitä berberin pienten dyynien '
+            + 'paikan.',
+          wiki: 'Timbuktu',
+        },
+        {
+          otsikko: 'Suola tulee pohjoisesta, kolme viikkoa kerrallaan',
+          teksti: 'Timbuktu oli Saharan kauppareitin eteläinen '
+            + 'päätepiste, ja siihen koko kaupunki perustui. Vielä '
+            + '1900-luvun jälkipuoliskolle asti kivisuola tuotiin '
+            + 'kuudensadankuudenkymmenenneljän kilometrin päästä '
+            + 'pohjoisesta kahdessa vuosittaisessa karavaanissa: '
+            + 'toinen lähti marraskuun alussa, toinen maaliskuun '
+            + 'lopussa. Karavaanissa oli useita tuhansia kameleja, '
+            + 'matka kesti kolme viikkoa suuntaansa, ja paluumatkalla '
+            + 'jokainen kameli kantoi neljä tai viisi kolmenkymmenen '
+            + 'kilon laattaa. Menomatkalla vietiin ruokaa '
+            + 'kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, '
+            + 'ja Timbuktusta suola jatkaa veneellä muualle Maliin.',
+          wiki: 'Azalai',
+        },
+        {
+          /*
+           * TARKISTUKSEN KOHTA A: ristiriita kirjoitetaan auki.
+           * Vuosi 1873 osuu juuri siihen aukkoon, jota lähteet
+           * eivät osaa täyttää, ja se on tässä nostossa asia
+           * itsessään eikä ongelma.
+           */
+          otsikko: '1873: kaupunki ilman yhtä hallitsijaa',
+          teksti: 'Isoisän matkavuonna Timbuktu ei ollut kenenkään '
+            + 'eurooppalaisen vallan alla — eikä oikeastaan minkään '
+            + 'yhden vallan alla lainkaan. Massinan valtakunta '
+            + 'hallitsi kaupunkia vuodesta 1826, kunnes '
+            + 'Toucouleur-valtakunta ajoi sen pois 1865. Sen jälkeen '
+            + 'lähteet menevät ristiin: yksi tutkija nimeää '
+            + 'soninke-wangarat, vuoden 1924 artikkeli tuaregit, ja '
+            + 'afrikanisti John Hunwick kieltäytyy nimeämästä ketään '
+            + 'ja puhuu useista valtioista, jotka kilpailivat '
+            + 'vallasta varjomaisesti. Ranska liitti kaupungin '
+            + 'itseensä vasta 15. joulukuuta 1893. Ristiriita ei ole '
+            + 'lähteiden virhe vaan sen ajan kuva.',
+          wiki: 'Timbuktu',
+        },
+        {
+          otsikko: 'Kaupunki, joka ei ole joen rannalla',
+          teksti: 'Timbuktu on viisitoista kilometriä Nigerin '
+            + 'pääuomasta pohjoiseen, hiekkadyynien keskellä, ja sen '
+            + 'kadut ovat hiekan peitossa. Satama Kabara on kahdeksan '
+            + 'kilometrin päässä etelässä ja yhteydessä jokeen '
+            + 'kolmen kilometrin kanavalla, joka on kaivettu kahdesti: '
+            + 'ranskalaiset teettivät sen 1917–1921, ja kun se oli '
+            + 'liettynyt umpeen, se ruopattiin uudelleen 2007. Kabara '
+            + 'toimii satamana vain joulu- ja tammikuussa, koska '
+            + 'Nigerin tulva saapuu tänne asti vasta joulukuun '
+            + 'lopussa. Silloin korjataan myös kelluva riisi: se venyy '
+            + 'kolmimetriseksi veden noustessa ja leikataan '
+            + 'kanootista käsin.',
+          wiki: 'Timbuktu',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Timbuktu on Tombouctoun hallintoalueen pääkaupunki '
+          + 'Malin pohjoisosassa, Saharan eteläreunalla. Kaupungin '
+          + 'vanhaosa on savirakennusten ja hiekkakatujen aluetta, '
+          + 'jossa kolme suurta moskeijaa ja kuusitoista mausoleumia '
+          + 'ovat olleet maailmanperintökohteena vuodesta 1988. '
+          + 'Kaupunkiin ei pääse junalla: reitit ovat maantie, joki ja '
+          + 'lentokone. Matkailukausi on marraskuusta helmikuuhun, '
+          + 'jolloin ilma on viileimmillään — mutta senkin aikaan '
+          + 'päivälämpötila on kolmenkymmenen asteen paikkeilla.',
+        artikkeli: {
+          nimi: 'Matkailijan Timbuktu',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jota Euroopassa pidettiin satuna niin '
+            + 'kauan, että moni yllättyy sen olevan oikeasti olemassa: '
+            + 'savea, hiekkaa, kirjoja ja kolme moskeijaa.',
+          nosto: 'Timbuktu oli islamilaisen oppineisuuden '
+            + 'maailmankeskus 1200-luvulta 1600-luvulle. Kolme '
+            + 'moskeijaa toimivat kouluina, ja kaupungin kirjastoihin '
+            + 'kertyi vuoteen 2003 mennessä arviolta jopa 700 000 '
+            + 'käsikirjoitusta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Malissa ei ole rautateitä lukuun ottamatta '
+                + 'Koulikoroon päättyvää Dakar–Niger-rataa, joten '
+                + 'Timbuktuun pääsee maanteitse, veneellä tai '
+                + 'lentäen — lentoyhteys avattiin 1961, ja '
+                + 'lentoaseman kiitorata on 2 110 metriä, valaistu ja '
+                + 'päällystetty. Kun vesi on korkealla elokuusta '
+                + 'joulukuuhun, Nigerillä kulkee matkustajalautta '
+                + 'Koulikoron ja Gaon välillä noin viikoittain, ja '
+                + 'sen rinnalla liikkuvat pinassit eli suuret '
+                + 'moottoroidut ruuhet. Ne rantautuvat Korioumén '
+                + 'satamaan, josta on kahdeksantoista kilometriä '
+                + 'päällystettyä tietä kaupunkiin Kabaran kautta. '
+                + 'Tiet naapurikaupunkeihin ovat hiekkateitä.',
+            },
+            {
+              otsikko: 'Vanhassakaupungissa',
+              teksti: 'Vanhakaupunki on kävelymatkan kokoinen: '
+                + 'Djinguereberin moskeijasta Sankorélle on vajaa '
+                + 'kilometri, ja matkalle osuvat Sidi Yahyan moskeija, '
+                + 'kolmen tutkimusmatkailijan talot ja sukukirjastoja. '
+                + 'Kadut ovat hiekkaa, ja hiekka on myös kaupungin '
+                + 'suurin uhka: rakennukset ovat maata sekä kuitua, '
+                + 'olkea ja puuta, ja niitä pitää rapata uudelleen. '
+                + 'Djinguereberissä alkoi 2006 nelivuotinen kunnostus, '
+                + 'jossa vaihdettiin noin puolet kattopalkeista — '
+                + 'palkkipuu on nykyään tuotava Ghanasta, koska '
+                + 'alkuperäiset puulajit ovat kadonneet seudulta.',
+            },
+            {
+              otsikko: 'Suola ja tori',
+              teksti: 'Kivisuola on yhä se tavara, jota aavikon yli '
+                + 'säännöllisesti kuljetetaan. Laatat tulevat '
+                + 'Taoudennista, ja vaikka kamelikaravaanit ovat '
+                + 'suurelta osin korvautuneet kuorma-autoilla, reitti '
+                + 'on yhä yksi Saharan viimeisistä käytössä olevista '
+                + 'karavaaniteistä. Timbuktu on reitin päätepiste: '
+                + 'täältä suola jatkaa veneellä Moptiin ja muille '
+                + 'Sahelin markkinoille, joilla se lohkotaan, '
+                + 'punnitaan ja pakataan pienemmiksi eriksi. '
+                + 'Käsityön myynti ja opastyö ovat matkailun '
+                + 'tärkeimmät tulonlähteet kaupungissa.',
+            },
+            {
+              otsikko: 'Mawloud tammikuussa',
+              teksti: 'Kaupungin oma vuosijuhla on Mawloud, '
+                + 'viikon mittainen Muhammadin syntymän juhla '
+                + 'tammikuussa. Se saapui Persiasta noin vuonna 1600 '
+                + 'ja yhdistää sufilaisen islamin rituaalit kaupungin '
+                + 'kirjallisen perinteen juhlintaan. Juhlaviikon '
+                + 'huipentuma on ilta, jona tuhannet kokoontuvat '
+                + 'Sankorén moskeijan edessä olevalle suurelle '
+                + 'hiekka-aukiolle kuulemaan, kun kaupungin '
+                + 'arvostetuimpia käsikirjoituksia luetaan ääneen. '
+                + 'Toinen tunnettu tapahtuma on Festival au Désert, '
+                + 'joka pidettiin vuoteen 2010 asti aavikolla noin '
+                + 'seitsemänkymmenen kilometrin päässä kaupungista.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Timbuktu-'
+                + 'artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säärivi tehdään erikseen. '
+                + 'Ilmasto on kuuma aavikkoilmasto. Kuumimmat '
+                + 'kuukaudet ovat huhti-, touko- ja kesäkuu, jolloin '
+                + 'keskiylin on yli neljäkymmentä astetta — '
+                + 'toukokuussa 42,2. Viilein kuukausi on tammikuu, '
+                + 'jolloin keskiylin on 30,0 ja keskialin 13,0. '
+                + 'Keskiylin ei siis laske alle kolmenkymmenen minään '
+                + 'kuukautena. Mitatut ääriarvot ovat 49,0 ja 1,7 '
+                + 'astetta. Talvella puhaltaa harmattan, kuiva ja '
+                + 'pölyinen tuuli, joka rajoittaa näkyvyyttä ja kasaa '
+                + 'hiekkaa kaupunkiin.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Djinguereberin moskeija',
+                tahdet: 3,
+                selite: 'Vuonna 1327 rakennettu savimoskeija, jossa on '
+                  + 'rukoustila kahdelle tuhannelle.',
+              },
+              {
+                mita: 'Sankorén moskeija',
+                tahdet: 3,
+                selite: 'Kaupungin oppineisuuden keskus, jonka pyhäkkö '
+                  + 'rakennettiin uudelleen Kaaban mitoilla.',
+              },
+              {
+                mita: 'Sidi Yahyan moskeija',
+                tahdet: 2,
+                selite: 'Neljäkymmentä vuotta rakennettu moskeija, '
+                  + 'jonka matalat ovet ovat kaupungin koristeellisimmat.',
+              },
+              {
+                mita: 'Ahmed Baba -instituutti',
+                tahdet: 2,
+                selite: 'Kaupungin julkinen kirjasto, jossa on noin '
+                  + '20 000 käsikirjoitusta.',
+              },
+              {
+                mita: 'Tutkimusmatkailijoiden talot',
+                tahdet: 2,
+                selite: 'Laingin, Cailliéen ja Barthin asuinpaikat '
+                  + 'ovat kolmen korttelin päässä toisistaan.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Turvallisuusrivi on omistajan
+             * linjauksen mukainen (Raamattu, Kuvat ja lähteet,
+             * 20.8.2026): opas sanoo suoraan, jos matkustaminen on
+             * nykyisin vaarallista, asiallisesti ja lyhyesti.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Matkustaminen ei ole nyt turvallista',
+                teksti: 'Timbuktuun ja koko Malin pohjoisosaan '
+                  + 'matkustaminen ei ole tällä hetkellä turvallista, '
+                  + 'ja alue on ollut matkailulta käytännössä suljettu '
+                  + 'jo vuosia.',
+              },
+              {
+                otsikko: 'Kesällä on hyvin kuuma',
+                teksti: 'Huhti-, touko- ja kesäkuun keskiylin on yli '
+                  + 'neljäkymmentä astetta, ja kaupungin mitattu '
+                  + 'ennätys on 49,0 — matkailukausi on siksi '
+                  + 'marraskuusta helmikuuhun.',
+              },
+              {
+                otsikko: 'Harmattan vie näkyvyyden',
+                teksti: 'Talvituuli tuo Saharan pölyä, joka rajoittaa '
+                  + 'näkyvyyttä ja laskeutuessaan kasaa hiekkaa '
+                  + 'kaduille ja rakennusten kylkiin.',
+              },
+              {
+                otsikko: 'Satama toimii kahtena kuukautena',
+                teksti: 'Kabaraan pääsee veneellä vain joulu- ja '
+                  + 'tammikuussa, kun joki on tulvassa; muulloin '
+                  + 'veneet jäävät Korioumén satamaan.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjat ja oppineet',
+      johdanto: 'Timbuktussa kirja oli vaurauden merkki, ja opetus '
+        + 'kulki opettajalta oppilaalle ilman lukujärjestystä. '
+        + 'Kaupungin maine kulki Eurooppaan yhden ainoan kirjan '
+        + 'mukana.',
+      tehtava: {
+        kysymys: 'Kuinka monta kirjaa Ahmad Baba menetti, kun hänet '
+          + 'karkotettiin Marokkoon?',
+        vaihtoehdot: [
+          '1 600',
+          '160',
+          '16 000',
+          '60',
+        ],
+        oikea: 0,
+        fakta: 'Ahmad Baban yksityiskokoelmassa oli 1 600 kirjaa, ja '
+          + 'sitä pidettiin yhtenä aikansa rikkaimmista kirjastoista. '
+          + 'Hän itse palasi Timbuktuun 22. huhtikuuta 1608, mutta '
+          + 'kirjat eivät palanneet.',
+      },
+      nostot: [
+        {
+          /*
+           * TARKISTUKSEN KOHTA C: Sankorén "neljä tutkintoporrasta ja
+           * turbaanit" on artikkelissa merkitty lähteettömäksi
+           * (citation needed, helmikuu 2025) eikä sitä käytetä. Tämä
+           * nosto nojaa vain niihin kohtiin, joilla on lähdeviite.
+           */
+          otsikko: 'Yliopisto, jossa ei ollut yliopistoa',
+          teksti: 'Sankorén medresassa ei ollut keskushallintoa, '
+            + 'opiskelijaluetteloita eikä määrättyä opinto-ohjelmaa. '
+            + 'Koulu oli joukko yksittäisiä oppineita, joilla kullakin '
+            + 'oli omat oppilaansa; useimmat opiskelivat koko '
+            + 'koulutuksensa ajan saman opettajan johdolla, ja se '
+            + 'saattoi kestää kymmenen vuotta. Opetus pidettiin joko '
+            + 'moskeijassa tai opettajan kotona. Muualla '
+            + 'islamilaisessa maailmassa medresoja ylläpidettiin '
+            + 'lahjoitusrahastoilla, mutta täällä opiskelijat maksoivat '
+            + 'itse — rahalla tai vaihtotavaralla. 1500-luvulla '
+            + 'kaupungissa oli 150–180 koraanikoulua ja niissä '
+            + 'arviolta 4 000–9 000 oppilasta.',
+          wiki: 'Sankoré Madrasah',
+        },
+        {
+          otsikko: 'Kirja oli vaurauden merkki',
+          teksti: 'Timbuktulaisille lukutaito ja kirjat olivat '
+            + 'vaurauden, vallan ja siunauksen merkkejä, ja kirjojen '
+            + 'hankkimisesta tuli oppineiden päähuolenaihe. Osa '
+            + 'käsikirjoituksista kirjoitettiin kaupungissa, osa '
+            + 'tuotiin vilkkaan kirjakaupan kautta muualta '
+            + 'islamilaisesta maailmasta. Niitä piilotettiin '
+            + 'kellareihin, haudattiin maahan ja kätkettiin '
+            + 'moskeijoiden savimuureihin, ja suojelijoidensa '
+            + 'varjelemina monet selvisivät kaupungin rappion yli. '
+            + 'Vuonna 2003 kirjastoissa arvioitiin olevan jopa 700 000 '
+            + 'käsikirjoitusta; kirjastoja itseään on kuudenkymmenen '
+            + 'paikkeilla, ja osa niistä on vain hyllyrivi tai '
+            + 'kirja-arkku.',
+          wiki: 'Timbuktu Manuscripts',
+        },
+        {
+          otsikko: 'Oppinut, joka menetti kirjastonsa',
+          teksti: 'Ahmad Baba syntyi Araouanessa 26. lokakuuta 1556 ja '
+            + 'muutti Timbuktuun nuorena. Hän kirjoitti yli '
+            + 'neljäkymmentä kirjaa ja oli Sankorén viimeinen '
+            + 'kansleri; häntä pidetään kaupungin suurimpana '
+            + 'oppineena. Hän oli myös ensimmäisiä, jotka vastustivat '
+            + 'Marokon valloitusta 1591 — ja siitä seurasi karkotus. '
+            + 'Vuonna 1594 hänet vietiin Marokkoon, jossa hän jäi '
+            + 'Fesiin sulttaanin kuolemaan asti. Karkotuksessa '
+            + 'katosi hänen 1 600 kirjan kokoelmansa. Hän palasi '
+            + 'Timbuktuun 22. huhtikuuta 1608 ja kuoli siellä 1627.',
+          wiki: 'Ahmad Baba al-Timbukti',
+        },
+        {
+          otsikko: 'Mies, joka kertoi Timbuktusta paaville',
+          teksti: 'Leo Africanus syntyi Granadassa 1485, ja hänen '
+            + 'perheensä karkotettiin Espanjasta 1492. Hän opiskeli '
+            + 'Fesissä ja matkusti setänsä kanssa Pohjois-Afrikassa; '
+            + 'noilla matkoilla hän kävi Timbuktussa. Nuorena '
+            + 'miehenä merirosvot ottivat hänet vangiksi ja '
+            + 'esittelivät poikkeuksellisen oppineena orjana paavi '
+            + 'Leo X:lle, joka vapautti hänet ja tilasi häneltä '
+            + 'italiaksi kuvauksen Afrikasta. Siitä tuli '
+            + 'eurooppalaisten päälähde maanosasta vuosisadoiksi. '
+            + 'Hänen kuvauksensa kultalautasista ja oppineiden '
+            + 'joukosta teki Timbuktusta Euroopan mielessä '
+            + 'kultakaupungin.',
+          wiki: 'Leo Africanus',
+        },
+      ],
+    },
+  ],
+  /*
+   * LALIBELA (Opus 7.9.2026, paketti O9) — Afrikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-lalibela.md ja sen riippumaton tarkistus
+   * tarkistus-lalibela.md (tuomio "kelpaa, kun kohtien A–G
+   * ratkaisut tehdään"; kaikki ratkaisut on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026:
+   * "Lalibela", "Rock-Hewn Churches, Lalibela",
+   * "Gebre Meskel Lalibela", "Lalibela Cross",
+   * "Yemrehana Krestos Church", "Tekle Giyorgis II".
+   *
+   * RAJAUS MAALEHTEEN NÄHDEN ON TÄMÄN LEHDEN VAIKEIN ASIA.
+   * Etiopian maalehden (maa-kategoriat.js ETH) ensimmäinen nosto
+   * "Yksitoista kirkkoa, jotka kaivettiin alaspäin" kertoo jo
+   * louhintatavan, kirkkojen lukumäärän, Zagwe-kuninkaan,
+   * Jerusalem-symboliikan, Jerusalemin menetyksen 1187 ja
+   * Francisco Álvaresin valan — ja käyttää kuvaa
+   * Bete Giyorgis 01.jpg. TÄTÄ EI TOISTETA. Kaupunkilehti kertoo
+   * sen, mitä maalehti ei kerro: Rohan nimen ja mehiläiset,
+   * artesisen veden ja kaivannot, vuoden 1873 Lastan, kaupungin
+   * asuintalot; teemasivulla aksumilaisen perinnön kivessä,
+   * Lalibelan ristin, kirkkojen ajoituskiistan ja luolakirkko
+   * Yemrehana Krestosin. Kunkin yksittäisen kirkon oma tarina on
+   * kohdekartan nähtävyysjutuissa eikä lehdessä.
+   * Karttanostot (maastokohteet-eth.js: Aksum, Debre Damo, Fasil
+   * Ghebbi, Harar, Tiya…) ja Addis Abeban lehti (v1669) on luettu,
+   * eikä niiden aiheita toisteta.
+   *
+   * EI NYKYSOTAA: artikkelin 1900- ja 2000-luvun osiot jäävät
+   * kokonaan pois. Turvallisuus mainitaan matkaoppaassa lyhyesti ja
+   * asiallisesti (Raamattu, Kuvat ja lähteet, 20.8.2026).
+   *
+   * EI SAAPUMISTEKSTIÄ: lalibela on tests/vanha-maailma.test.mjs:n
+   * KAARETTOMAT-listalla, ja testi kaatuu, jos listalla olevalle
+   * kaupungille kirjoitetaan merkintä africa-saapumiset.js:ään.
+   * Listaa ei pureta ilman omistajan linjausta. Raportoitu Fablelle.
+   *
+   * EI KULTTUURIVISAA: africa-kulttuuri.js:ssä ei ole
+   * lalibela-merkintää, joten lehden ei tarvitse vastata mihinkään
+   * visakysymykseen. africa-questions.js:n viisi kysymystä on
+   * luettu, eikä minitehtävä toista niistä yhtäkään.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'kuvataide' (AIHE_IKONIT, js/ui-apurit.js).
+   *
+   * TARKISTUKSEN RATKAISUT:
+   *  - A: Tekle Giyorgis II:n kuolinvuosi on artikkelissa sekä
+   *    "noin lokakuu 1873" että "joitakin vuosia myöhemmin".
+   *    Nosto K3 EI väitä hänen kuolleen 1873 vaan kertoo, että hän
+   *    oli vankeudessa. Sokaisemista ei kerrota.
+   *  - B: Jordan-kaivannon mittoja (25 × 25 × 30 m) ei käytetä,
+   *    koska ne eivät voi koskea koko kaupungin halkaisevaa uomaa.
+   *  - C: rakennusvaiheiden lukumäärä (kaksi vai kolme) kirjoitetaan
+   *    auki teemasivun nostossa T3.
+   *  - D: käytetään kolmijakoa (pohjoinen ryhmä, eteläinen ryhmä,
+   *    erillinen Biete Giyorgis), koska artikkelin oma "neljä
+   *    ryhmää" on ristiriidassa sen oman luettelon kanssa.
+   *  - E: korkeus on kaupungin luku noin 2 500 m.
+   *  - F: kirkkojen stubien ehdotonta "Aksumin aikana" -väitettä ei
+   *    toisteta; ajoitus kerrotaan perinteisenä ja kiistanalaisena.
+   *
+   * SÄÄRIVIÄ EI OLE: sen tekee erillinen agentti tässä erässä.
+   */
+  lalibela: [
+    {
+      id: 'kaupunki',
+      nimi: 'Lalibela',
+      johdanto: 'Ylängön kaupunki 2 500 metrin korkeudessa, jonka '
+        + 'kirkkoja ei muurattu vaan louhittiin kalliosta alaspäin. '
+        + 'Vanha nimi oli Roha; nykyisen se sai kuninkaalta.',
+      nostot: [
+        {
+          otsikko: 'Mehiläiset, jotka tunnustivat kuninkaan',
+          teksti: 'Kaupungin vanha nimi oli Roha. Sinne pakeni vuonna '
+            + '1162 Kirwerna, Bugnan kuvernöörin palvelijatar, '
+            + 'synnyttämään. Hagiografian mukaan mehiläisparvi ympäröi '
+            + 'vastasyntyneen, ja äiti tulkitsi sen merkiksi tulevasta '
+            + 'vallasta; poika nimettiin Lalibelaksi, joka vanhassa '
+            + 'agaw-kielessä tarkoittaa, että mehiläiset tunnustavat '
+            + 'hänen valtansa. Ennustus herätti vihamielisyyttä '
+            + 'sukulaisissa, ja Lalibela vietti monta vuotta '
+            + 'maanpaossa Jerusalemissa. Palattuaan hän nousi valtaan '
+            + 'ja hallitsi noin 1181–1221. Kaupunki kantaa hänen '
+            + 'nimeään, ja kirkko muistaa hänet pyhimyksenä 19. '
+            + 'kesäkuuta.',
+          wiki: 'Gebre Meskel Lalibela',
+        },
+        {
+          otsikko: 'Vesi, joka nousee harjanteen laelle',
+          teksti: 'Lalibela seisoo vuorenharjanteella 2 500 metrin '
+            + 'korkeudessa, eikä vesi kulje sinne itsestään. Silti '
+            + 'kirkot liittyvät kaikki veteen: monen vieressä on '
+            + 'kaivo, joka täyttyy artesisesta geologisesta '
+            + 'järjestelmästä nostaen vettä harjanteen laelle. '
+            + 'Kirkkojen väliin hakatut kaivannot ja tunnelit '
+            + 'yhdistävät ryhmät toisiinsa, ja niiden louhinta tehtiin '
+            + 'ylhäältä alaspäin vasaroin ja taltoin. Kaupungin '
+            + 'vesiuoma kantaa nimeä Jordan; viisi kirkkoa on sen '
+            + 'pohjoispuolella, viisi eteläpuolella ja yksi jää '
+            + 'kummankin ryhmän ulkopuolelle.',
+          wiki: 'Rock-Hewn Churches, Lalibela',
+        },
+        {
+          /*
+           * TARKISTUKSEN KOHTA A. Nosto ei väitä Tekle Giyorgis
+           * II:n kuolleen 1873 — artikkeli antaa siitä kaksi eri
+           * tietoa. Kerrotaan vain, että hän oli vankeudessa.
+           * Sokaisemista ei kerrota (Kunnioitus-pilari).
+           */
+          otsikko: '1873: Lastan oma keisari',
+          teksti: 'Lalibela on Lastan pääkaupunki, ja Lastalla oli '
+            + 'isoisän matkan aikaan tuore muisto omasta '
+            + 'keisaristaan. Wagshum Gobeze, Wagin hallitsijan poika '
+            + 'ja vanhan Zagwe-valtaistuimen perijä, nousi kapinaan '
+            + 'Lastassa 1864 ja julistettiin keisariksi Soqotassa '
+            + 'elokuussa 1868 nimellä Tekle Giyorgis II. Hän kunnosti '
+            + 'Gondarin kirkot niin, että kronikoitsija kirjoitti: '
+            + '"Fasilin jälkeen kukaan ei tehnyt Gondarille sitä, '
+            + 'mitä Tekle Giyorgis teki." Adwan taistelun 11. '
+            + 'heinäkuuta 1871 hän hävisi, ja voittaja kruunattiin '
+            + 'puoli vuotta myöhemmin Yohannes IV:ksi. Vuonna 1873 '
+            + 'Lastan oma keisari oli vankeudessa.',
+          wiki: 'Tekle Giyorgis II',
+        },
+        {
+          otsikko: 'Talot, joissa portaat ovat ulkoseinällä',
+          teksti: 'Lalibela ei ole pelkkä kirkkoalue vaan kaupunki, '
+            + 'jossa asuu ihmisiä — vuoden 2007 laskennassa 17 367. '
+            + 'Sandro Angelini luetteloi 1970 kaupungin perinteiset '
+            + 'rakennukset ja erotti kaksi tyyppiä. Tukul on pyöreä, '
+            + 'kivestä ladottu talo, jossa on yleensä kaksi kerrosta '
+            + 'ja portaat ulkoseinällä ylempään kerrokseen. Chika on '
+            + 'yksikerroksinen pyöreä rakennus, joka on tehty maasta '
+            + 'ja risuista; Angelini piti sitä niukkuuden merkkinä. '
+            + 'Molemmat kuuluvat maailmanperintökohteen alueeseen, ja '
+            + 'niiden säilyminen on osa samaa suojelutyötä kuin '
+            + 'kirkkojen.',
+          wiki: 'Lalibela',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Lalibela on pieni kaupunki Etiopian ylängöllä '
+          + 'Amharan alueella, Lastan piirissä ja Pohjois-Wollon '
+          + 'vyöhykkeellä. Asukkaita oli vuoden 2007 laskennassa '
+          + '17 367, ja kaupungissa on lentoasema, suuri tori, kaksi '
+          + 'koulua ja sairaala. Yksitoista kalliokirkkoa on ollut '
+          + 'maailmanperintökohde vuodesta 1978, eivätkä ne ole museo: '
+          + 'kirkoissa asuu papisto ja niissä pidetään '
+          + 'jumalanpalveluksia joka päivä. Paras aika käydä on kuiva '
+          + 'kausi lokakuusta maaliskuuhun.',
+        artikkeli: {
+          nimi: 'Matkailijan Lalibela',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa kirkot ovat maanpinnan alapuolella '
+            + 'ja katot maan tasalla: sisään mennään alaspäin, '
+            + 'kaivantoja ja tunneleita pitkin.',
+          nosto: 'Kalliokirkot otettiin maailmanperintöluetteloon '
+            + 'vuonna 1978. Yksitoista kirkkoa on louhittu samasta '
+            + 'kalliosta, neljä niistä irti kalliosta joka suunnalta '
+            + 'ja seitsemän niin, että yksi seinä on yhä vuorta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lalibelassa on oma lentoasema, ja se on '
+                + 'käytännössä ainoa nopea reitti — kaupunki on '
+                + 'ylängöllä 2 500 metrin korkeudessa, ja tiet '
+                + 'nousevat sinne pitkiä mutkia. Kaupungin sisällä '
+                + 'liikutaan jalan: kirkkoalueen kaksi kaivantoryhmää '
+                + 'ovat parinsadan metrin päässä toisistaan, ja '
+                + 'erillään oleva Biete Giyorgis on lyhyen kävelyn '
+                + 'päässä lännessä. Kaupungin ulkopuolisiin kohteisiin '
+                + 'tarvitaan kyyti: Yemrehana Krestosin luolakirkolle '
+                + 'on 12,2 kilometriä koilliseen, ja sinne rakennettiin '
+                + 'tie vasta vuonna 2000 — sitä ennen matka oli '
+                + 'kokonainen päivä jalan tai muulilla.',
+            },
+            {
+              otsikko: 'Kirkkoalueella',
+              teksti: 'Kirkot on jaettu kolmeen: viisi Jordan-puron '
+                + 'pohjoispuolella, viisi eteläpuolella ja yksi '
+                + 'erillään. Ryhmien sisällä liikutaan kaivantoja ja '
+                + 'tunneleita pitkin, ja Biete Giyorgisiin mennään '
+                + 'kapeaa ihmisen hakkaamaa kanjonia myöten, joka '
+                + 'kiertää alaspäin ja muuttuu lopulta tunneliksi. '
+                + 'Viiden kirkon päälle pystytettiin 2008 Euroopan '
+                + 'unionin rahoituksella neljä suojakatosta; ne '
+                + 'oli tarkoitettu väliaikaisiksi ja ovat yhä '
+                + 'paikoillaan, ja niiden paino on nyt oma huolensa. '
+                + 'Katokset näkyvät kuvissa eivätkä ole rakennusvirhe '
+                + 'vaan suojelun keskeneräinen vaihe.',
+            },
+            {
+              otsikko: 'Genna ja Timkat',
+              teksti: 'Kaksi tammikuun juhlaa täyttävät kaupungin. '
+                + 'Genna vietetään 7. tammikuuta ja Timkat 19. '
+                + 'tammikuuta, ja kumpaankin liittyy monipäiväisiä '
+                + 'kulkueita, perinnemusiikkia ja rituaaleja. '
+                + 'Lalibela on Etiopian ortodoksisen kirkon pyhimpiä '
+                + 'kaupunkeja ja pyhiinvaelluksen päämäärä, joten '
+                + 'juhlien aikaan paikalla on moninkertaisesti '
+                + 'väkeä kaupungin omaan asukaslukuun nähden. Jos '
+                + 'haluaa nähdä kirkot rauhassa, kannattaa tulla '
+                + 'muulloin; jos haluaa nähdä ne käytössä, juuri '
+                + 'silloin.',
+            },
+            {
+              otsikko: 'Kaupungissa',
+              teksti: 'Kirkkojen ympärillä on tavallinen ylängön '
+                + 'kaupunki. Perinteisiä taloja on kahta lajia: '
+                + 'kaksikerroksinen kivestä ladottu tukul, jonka '
+                + 'ulkoseinällä nousevat portaat ylempään kerrokseen, '
+                + 'ja yksikerroksinen chika, joka on tehty maasta ja '
+                + 'risuista. Molemmat on luetteloitu osana '
+                + 'maailmanperintökohdetta. Kaupungissa on suuri '
+                + 'tori, kaksi koulua ja sairaala; asukkaita oli '
+                + 'vuoden 2007 laskennassa 17 367, kun vuoden 1994 '
+                + 'laskennassa heitä oli 8 484.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Lalibela-'
+                + 'artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säärivi tehdään erikseen. '
+                + 'Korkeus tasaa lämmön: keskiylin on koko vuoden '
+                + '20,6 ja 24,8 asteen välillä ja keskialin 8,1 ja '
+                + '12,3 asteen välillä. Vuodenkierto onkin sateen '
+                + 'kierto. Heinäkuussa sataa 259 ja elokuussa 278 '
+                + 'millimetriä, kun marraskuussa sataa 8 ja '
+                + 'joulukuussa 10. Kuiva kausi lokakuusta maaliskuuhun '
+                + 'on siksi se, jolloin kaivannoissa ja tunneleissa '
+                + 'kulkeminen on helpointa. Mitatut ääriarvot ovat '
+                + '31,0 ja 2,0 astetta.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Biete Giyorgis',
+                tahdet: 3,
+                selite: 'Ristinmuotoinen kirkko omassa kuilussaan; '
+                  + 'sisään mennään kapeaa kanjonia ja tunnelia myöten.',
+              },
+              {
+                mita: 'Biete Medhane Alem',
+                tahdet: 3,
+                selite: 'Uskotaan olevan maailman suurin '
+                  + 'monoliittikirkko.',
+              },
+              {
+                mita: 'Biete Maryam',
+                tahdet: 2,
+                selite: 'Mahdollisesti kirkoista vanhin, ja sen katto '
+                  + 'on maalattu raamatullisin kohtauksin.',
+              },
+              {
+                mita: 'Yemrehana Krestos',
+                tahdet: 2,
+                selite: 'Luolaan rakennettu kirkko 12 kilometriä '
+                  + 'koilliseen; sitä ei louhittu vaan muurattiin.',
+              },
+              {
+                mita: 'Genna ja Timkat',
+                tahdet: 2,
+                selite: 'Tammikuun 7. ja 19. päivä täyttävät kaupungin '
+                  + 'kulkueilla ja musiikilla.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Turvallisuusrivi on omistajan
+             * linjauksen mukainen (Raamattu, Kuvat ja lähteet,
+             * 20.8.2026).
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Tilanne alueella on ollut levoton',
+                teksti: 'Amharan alueella on viime vuosina ollut '
+                  + 'levottomuuksia, ja matkustaminen sinne voi olla '
+                  + 'ajoittain rajoitettua — kannattaa tarkistaa '
+                  + 'tilanne ennen matkaa.',
+              },
+              {
+                otsikko: 'Korkeus tuntuu',
+                teksti: 'Kaupunki on 2 500 metrissä, ja kirkkoalueella '
+                  + 'noustaan ja lasketaan portaita koko ajan; '
+                  + 'ensimmäisenä päivänä kannattaa ottaa rauhallisesti.',
+              },
+              {
+                otsikko: 'Heinä- ja elokuussa sataa paljon',
+                teksti: 'Sadetta tulee heinäkuussa 259 ja elokuussa '
+                  + '278 millimetriä, ja kaivannot ja tunnelit ovat '
+                  + 'silloin liukkaita.',
+              },
+              {
+                otsikko: 'Kirkot ovat käytössä',
+                teksti: 'Kohde ei ole museo vaan Etiopian '
+                  + 'ortodoksisen kirkon pyhä paikka, jossa pidetään '
+                  + 'jumalanpalveluksia päivittäin — osaan tiloista ei '
+                  + 'ole pääsyä muille kuin papeille.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kivi ja kuva',
+      johdanto: 'Lalibelan kirkkojen ovet ja ikkunat jäljittelevät '
+        + 'kivessä puurakennusta, jota ei enää ole missään. Sama '
+        + 'aksumilainen perinne näkyy kulkueristeissä ja luolakirkon '
+        + 'seinämaalauksissa.',
+      tehtava: {
+        kysymys: 'Mistä maasta vuonna 1997 varastettu Lalibelan risti '
+          + 'löytyi kaksi vuotta myöhemmin?',
+        vaihtoehdot: [
+          'Belgiasta',
+          'Italiasta',
+          'Egyptistä',
+          'Ranskasta',
+        ],
+        oikea: 0,
+        fakta: 'Risti paikannettiin Belgiaan 1999, kun addisabebalainen '
+          + 'kauppias oli myynyt sen belgialaiselle keräilijälle. Kun '
+          + 'keräilijän rahat oli palautettu ja sovittu, ettei '
+          + 'oikeustoimiin ryhdytä, risti palasi Etiopiaan 2001.',
+      },
+      nostot: [
+        {
+          otsikko: 'Puurakennus, joka veistettiin kiveen',
+          teksti: 'Lalibelan kirkoissa on aksumilainen tunnusmerkki: '
+            + 'kivestä tehty jäljitelmä puurakenteista. Biete '
+            + 'Amanuelissa se on niin selvä, että Stuart Munro-Hay '
+            + 'vertaa sitä Tigrayn ja Eritrean vanhoihin kirkkoihin, '
+            + 'joissa puu on yhä paikallaan. Kehystetyt ovet ja '
+            + 'ikkunat toistuvat aiheena, koska ne jäljittelevät '
+            + 'Aksumin steelojen muotoa: Biete Gabriel-Rufaelin '
+            + 'kaarikäytävä, Biete Maryamin ovi ja Biete Amanuelin '
+            + 'ikkunat ovat kaikki samaa perhettä. David Phillipson '
+            + 'muistuttaa, ettei aksumilainen tyyli todista '
+            + 'aksumilaista ikää — se todistaa katkeamattoman '
+            + 'perinteen.',
+          wiki: 'Lalibela',
+        },
+        {
+          otsikko: 'Risti, joka kävi Belgiassa',
+          teksti: 'Lalibelan risti on suuri koristeltu kulkueristi ja '
+            + 'yksi Etiopian arvokkaimmista perintöesineistä. Sitä '
+            + 'säilytetään Biete Medhane Alemissa. Risti on '
+            + 'arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä '
+            + 'ja seitsemän kilon painoinen, ja se on tehty yhdestä '
+            + 'metallikappaleesta — joko kullasta tai pronssista ja '
+            + 'kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka '
+            + 'toistuu etiopialaisissa kulkueristeissä; juhlapäivinä '
+            + 'ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata '
+            + 'uskovia rististillä siunatakseen heidät.',
+          wiki: 'Lalibela Cross',
+        },
+        {
+          /*
+           * TARKISTUKSEN KOHDAT C JA F: rakennusvaiheiden lukumäärä
+           * ja kirkkojen ikä kirjoitetaan auki. Lähteet ovat
+           * erimielisiä, ja se on tämän noston koko aihe.
+           */
+          otsikko: 'Kuka ne veisti, ja milloin',
+          teksti: 'Perinne ajoittaa kirkot Zagwe-kuningas Lalibelan '
+            + 'kaudelle, mutta tutkimus ei ole yksimielinen. David '
+            + 'Buxton huomautti, ettei näin suuri kivityö mahdu yhden '
+            + 'hallitsijan vuosikymmeniin, ja arveli työn jatkuneen '
+            + '1300-luvulle. David Phillipson on esittänyt, että '
+            + 'kolme kirkoista louhittiin puoli vuosituhatta '
+            + 'aiemmin, vuosina 600–800, linnoituksiksi tai '
+            + 'palatsirakenteiksi. Vaiheiden lukumäärästäkin on kaksi '
+            + 'lukemaa: yksi tutkimus laskee kolme rakennusvaihetta, '
+            + 'toinen kaksi. Kaivauksissa on löytynyt keramiikkaa '
+            + 'vuosilta 900–1100 — paikka oli asuttu ennen kuin siitä '
+            + 'tuli pyhä.',
+          wiki: 'Rock-Hewn Churches, Lalibela',
+        },
+        {
+          otsikko: 'Kirkko, jota ei louhittu vaan rakennettiin',
+          teksti: 'Kahdentoista kilometrin päässä koilliseen, Abuna '
+            + 'Yosef -vuoren rinteessä, on Yemrehana Krestosin '
+            + 'kirkko. Se on tehty päinvastoin kuin Lalibelan '
+            + 'kirkot: sitä ei louhittu kalliosta vaan muurattiin '
+            + 'kivestä ja puusta suuren luolan sisään. Seinissä on '
+            + 'sama vaakasuora kuvio upotettuja palkkeja ja ulkonevaa '
+            + 'kivityötä kuin Debre Damon vanhassa kirkossa, ja '
+            + 'nurkkakivet sekä ovi- ja ikkunakehykset ovat '
+            + 'aksumilaista tyyliä. Munro-Hay pitää sitä kaikista '
+            + 'tunnetuista muinaisista etiopialaisista kirkoista '
+            + 'koristeellisimpana, ja sen keskilaivan seinämaalauksia '
+            + 'Etiopian vanhimpina säilyneinä.',
+          wiki: 'Yemrehana Krestos Church',
+        },
+      ],
+    },
+  ],
 };

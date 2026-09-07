@@ -58810,4 +58810,524 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TIMBUKTU (Opus 7.9.2026, paketti O9). Kahdeksan kohdetta
+   * lännestä koilliseen. Tekstit en-Wikipedian raakateksteistä
+   * 7.9.2026: "Timbuktu", "Djinguereber Mosque",
+   * "Sidi Yahya Mosque", "Sankoré Madrasah", "Ahmed Baba Institute",
+   * "Mohammed Bagayogo", "Alexander Gordon Laing", "René Caillié",
+   * "Heinrich Barth", "Ahmad al-Bakkai al-Kunti".
+   *
+   * NÄMÄ JUTUT EIVÄT TOISTA LEHDEN JUTTUJA. Lehti kertoo kaupungin
+   * nimestä, suolakaravaanista, vuoden 1873 valtatilanteesta,
+   * joesta, Sankorén opetustavasta, käsikirjoituksista, Ahmad
+   * Babasta ja Leo Africanuksesta; nämä jutut kertovat rakennukset
+   * ja niissä asuneet ihmiset. Vuosien 2012–2013 tapahtumia ei
+   * käsitellä (skandaalit.js MLI hoitaa ne).
+   */
+  timbuktu: {
+    'Djinguereberin moskeija': {
+      aika: '1327',
+      teksti: 'Djinguereber tarkoittaa koyra chiinin kielellä suurta '
+          + 'moskeijaa, ja se on kaupungin kolmesta vanhasta '
+          + 'moskeijasta suurin. Se rakennettiin vuonna 1327 Mansa '
+          + 'Musan aikana. Rakennus on lähes kokonaan maata ja '
+          + 'orgaanisia aineita: kuitua, olkea ja puuta. Vain '
+          + 'pohjoisjulkisivun pieni osa vahvistettiin 1960-luvulla '
+          + 'kalkkikivestä, ja minareetti on niin ikään kalkkikiveä '
+          + 'savirappauksella. Sisällä on kolme pihaa, kaksi '
+          + 'minareettia ja kaksikymmentäviisi pilaririviä '
+          + 'itä–länsi-suunnassa; rukoustilaa on kahdelle tuhannelle.'
+        + '\n\n'
+        + 'Suunnittelu on perinteisesti luettu andalusialaisen '
+          + 'oppineen Abu Ishaq al-Sahilin ansioksi, ja Ibn Khaldunin '
+          + 'mukaan hän sai työstä kaksitoistatuhatta mithkalia '
+          + 'kultahiekkaa. Uudempi tutkimus torjuu tämän: '
+          + 'arabialaisissa lähteissä al-Sahili on varmuudella vain '
+          + 'Malin kaupungin audienssisalin suunnittelija, ja hänen '
+          + 'roolinsa näyttää olleen organisoiva eikä rakenteellinen. '
+          + 'Länsi-Afrikan moskeijatyyli juontuu Saharan moskeijoista '
+          + 'ja paikallisesta rakennusperinteestä.'
+        + '\n\n'
+        + 'Askia Daudin aikana Timbuktun kadi Aqib ibn Mahmud alkoi '
+          + 'kunnostaa moskeijaa 1570, ja työ aiheutti kiistan: kadi '
+          + 'paheksui sitä, että kunnostettu moskeija yhdistettiin '
+          + 'maalliseen valtaan. Nykyisin suurin uhka on hiekka ja '
+          + 'sade. Aga Khan Trust for Culture aloitti nelivuotisen '
+          + 'kunnostuksen kesäkuussa 2006; ensimmäisessä vaiheessa '
+          + 'tehtiin kuivatus ja päällystys moskeijan ympärille ja '
+          + 'vaihdettiin noin puolet kattopalkeista. Palkkipuu on '
+          + 'nykyään tuotava Ghanasta, koska alkuperäiset puulajit '
+          + 'ovat kadonneet seudulta.',
+      lahde: 'Wikipedia',
+    },
+    'Gordon Laingin talo': {
+      aika: '1826',
+      teksti: 'Skotlantilainen majuri Alexander Gordon Laing oli '
+          + 'ensimmäinen uuden ajan eurooppalainen, joka ylitti '
+          + 'Saharan pohjoisesta etelään ja pääsi Timbuktuun. Hän '
+          + 'lähti Englannista helmikuussa 1825, avioitui Tripolissa '
+          + 'Britannian konsulin tyttären Emma Warringtonin kanssa '
+          + '14. heinäkuuta ja lähti kaksi päivää myöhemmin aavikolle. '
+          + 'Tammikuussa 1826 hän suuntasi Tuatista Tanezrouftin yli. '
+          + 'Kirjeissään hän kertoi kuumeesta ja siitä, että hänen '
+          + 'karavaaninsa oli ryöstetty; hän kuvasi saaneensa '
+          + 'kaksikymmentäneljä haavaa ja menettäneensä oikean '
+          + 'kätensä.'
+        + '\n\n'
+        + 'Hän saapui kaupunkiin 18. elokuuta 1826 ja asui täällä '
+          + 'kolmekymmentäkahdeksan päivää. Syyskuun 21. päivän '
+          + 'kirjeessä hän kertoi asemansa olevan turvaton ja '
+          + 'aikovansa lähteä kolmen päivän kuluttua. Hän lähti '
+          + 'suunnitelmansa mukaisesti eikä häntä nähty enää: hän '
+          + 'kuoli heti kaupungin ulkopuolella oman saattueensa '
+          + 'käsissä. Papereita ei koskaan löydetty, ja hänen appensa '
+          + 'Hanmer Warrington syytti niiden hankkimisesta '
+          + 'ranskalaisia — näyttöä siitä ei ole koskaan ollut.'
+        + '\n\n'
+        + 'Ranskan hallitus asetti 1903 laatan taloon, jossa Laing '
+          + 'kaupungissa asui; siinä on hänen nimensä ja käyntinsä '
+          + 'päiväys. Talo on Djingareiberin kaupunginosassa, ja se '
+          + 'julistettiin kansalliseksi kulttuuriperinnöksi '
+          + 'asetuksella 18. joulukuuta 1992. Laing ja hänen '
+          + 'seuraajansa René Caillié saivat kumpikin Société de '
+          + 'Géographien kultamitalin vuodelta 1830 — toinen niistä '
+          + 'jaettiin kuolemanjälkeisesti.',
+      lahde: 'Wikipedia',
+    },
+    'René Cailliéen talo': {
+      aika: '1828',
+      teksti: 'René Caillié oli ensimmäinen eurooppalainen, joka '
+          + 'palasi Timbuktusta elävänä. Hän valmistautui vuosia: '
+          + 'vietti kahdeksan kuukautta Braknan paimentolaisten '
+          + 'parissa oppien arabiaa ja islamin tavat, ja kun rahoitusta '
+          + 'ei tullut Ranskan eikä Britannian hallitukselta, hän teki '
+          + 'töitä Sierra Leonessa ja maksoi matkan itse. Aikana, '
+          + 'jolloin normi olivat sotilaiden saattamat suuret '
+          + 'retkikunnat, hän matkusti yksin ja paikallisten tavoin. '
+          + 'Sairaus pidätti häntä Tiémén kylässä viisi kuukautta, ja '
+          + 'Djennéssä hän oli maaliskuussa 1828.'
+        + '\n\n'
+        + 'Kaupunki ei vastannut sitä, mitä Euroopassa oli luvattu. '
+          + 'Caillié kirjoitti: "Olin muodostanut aivan toisenlaisen '
+          + 'käsityksen Timbuktun mahtavuudesta ja rikkaudesta. '
+          + 'Kaupunki ei ensi näkemältä ollut muuta kuin joukko '
+          + 'rumannäköisiä, savesta rakennettuja taloja." Hän vietti '
+          + 'täällä kaksi viikkoa ja lähti 4. toukokuuta 1828 '
+          + 'karavaanin mukana, jossa oli noin kuusisataa kamelia — '
+          + 'hän antoi kirjassaan kaksi eri lukua, leipätekstissä '
+          + 'lähes kuusisataa ja lopun matkataulukossa seitsemästä '
+          + 'kahdeksaansataa.'
+        + '\n\n'
+        + 'Palkinto oli yhdeksäntuhatta frangia, jonka Société de '
+          + 'Géographie oli luvannut 1824 ensimmäiselle, joka pääsisi '
+          + 'kaupunkiin ja palaisi tiedon kanssa. Caillié sai sen, '
+          + 'nimitettiin Kunnialegioonan ritariksi 10. joulukuuta 1828 '
+          + 'ja sai kultamitalin 1830. Matkakertomus julkaistiin '
+          + 'kolmena niteenä valtion kustannuksella. Talo, jossa hän '
+          + 'asui, on merkitty vuoden 1896 Timbuktu-karttaan '
+          + 'Djinguereberin ja Sidi Yahyan moskeijoiden väliin.',
+      lahde: 'Wikipedia',
+    },
+    'Sidi Yahyan moskeija': {
+      aika: '1400–1440',
+      teksti: 'Sidi Yahyan moskeijan rakentaminen alkoi vuonna 1400 '
+          + 'sheikki el-Mokhtar Hamallan johdolla ja valmistui 1440 — '
+          + 'työ kesti neljäkymmentä vuotta. Kun tuaregit johtajanaan '
+          + 'Akil ottivat Timbuktun 1433, he antoivat päällikkyyden '
+          + 'Mohammed Naddille, chinguettiläiselle sanhajalle, joka '
+          + 'tilasi moskeijan. Vuonna 1441 kaupungin kuvernööri '
+          + 'nimitti läheisen ystävänsä Sidi Yahya al-Tadelsin sen '
+          + 'ensimmäiseksi imaamiksi. Hänet julistettiin myöhemmin '
+          + 'pyhimykseksi, ja hänen hautansa on moskeijassa.'
+        + '\n\n'
+        + 'Moskeijan matalat, koristeelliset ovet kertovat '
+          + 'marokkolaisesta vaikutuksesta ajalta, jolloin kaupunki '
+          + 'oli maghsharan-tuaregien hallussa. Rakennuksessa on '
+          + 'katettu rukoussali, sisäpihoja, puuovia ja kaariaukkoja. '
+          + 'Yksi minareetti nousee moskeijan ja pääpihan yli, mutta '
+          + 'se ei yllä kaupungin kahden muun suuren moskeijan '
+          + 'korkeuteen. Piha oli aikanaan hautausmaa, joka ei enää '
+          + 'ole käytössä; moskeijan imaamit on haudattu rakennuksen '
+          + 'pohjoispuolelle maan alle, ja siellä luetaan ilta- ja '
+          + 'aamurukoukset.'
+        + '\n\n'
+        + 'Vuosista 1468–1583 tiedetään vain, että kadi el-Aqib '
+          + 'kunnosti moskeijan 1569. Nykyinen ulkoasu on peräisin '
+          + 'vuodesta 1939, jolloin rakennus tehtiin olennaisesti '
+          + 'uudelleen. Yhteisö on pitänyt Sidi Yahyaa paremmassa '
+          + 'kunnossa kuin kahta muuta päämoskeijaa. Tutkija Prussin '
+          + 'Labelle huomauttaa, että moskeijan arkkitehtuuri poikkeaa '
+          + 'islamilaisen rakennustaiteen tavallisesta '
+          + 'kosmologiapainotuksesta: savi, muta ja kivi korostavat '
+          + 'maanläheisyyttä ja yhteyttä esivanhempiin, joiden ruumiit '
+          + 'lepäävät rakennuksen sisällä.',
+      lahde: 'Wikipedia',
+    },
+    'al-Wangarin kirjasto': {
+      aika: '1500-luku',
+      teksti: 'Kirjasto on nimetty oppineen Mohammed Bagayogo Es '
+          + 'Sudane Al Wangari Al Timbuktin mukaan. Hän syntyi '
+          + 'Djennéssä 1523 kadi Mahmud Bagayogon poikana ja kuului '
+          + 'juula-kansaan, mande-ryhmään, jossa oli kauppiaita ja '
+          + 'oppineita. Nuorena hän opiskeli veljensä kanssa '
+          + 'islamilaisen lain klassikoita. Kun Askia Daoud pyysi '
+          + 'häntä Djennén kadiksi — samaan virkaan, jota hänen isänsä '
+          + 'oli aikanaan kieltäytynyt ottamasta vastaan — hän kieltäytyi, '
+          + 'piileskeli veljensä kanssa moskeijassa useita kuukausia ja '
+          + 'pakeni lopulta opettajansa kanssa Timbuktuun.'
+        + '\n\n'
+        + 'Timbuktussa hänestä tuli Sankorén medresan sheikki ja '
+          + 'opettaja. Vuoteen 1583 mennessä hän oli niin merkittävä, '
+          + 'että toimi kaupungin tosiasiallisena kadina edeltäjänsä '
+          + 'kuoleman jälkeen ja antoi tuomioita Sidi Yahyan moskeijan '
+          + 'edessä — kahden korttelin päässä tästä talosta. Hän kuoli '
+          + '7. heinäkuuta 1593 Timbuktun vanhassakaupungissa, kaksi '
+          + 'vuotta marokkolaisvalloituksen jälkeen.'
+        + '\n\n'
+        + 'Bagayogo muistetaan oppineisuutensa lisäksi siitä, että hän '
+          + 'kieltäytyi taipumasta valloittajille. Merkittävä osa '
+          + 'hänen kirjoituksistaan on säilynyt käsikirjoituksina '
+          + 'kaupungissa, ja osa päätyi aikanaan ranskalaisiin '
+          + 'museoihin. Kirjasto on yksi niistä kaupungin '
+          + 'sukukirjastoista, joissa käsikirjoitukset ovat kulkeneet '
+          + 'perintönä sukupolvelta toiselle; niitä lasketaan olevan '
+          + 'kuudenkymmenen paikkeilla, ja osa on vain hyllyrivi tai '
+          + 'kirja-arkku.',
+      lahde: 'Wikipedia',
+    },
+    'Heinrich Barthin talo': {
+      aika: '1853–1854',
+      teksti: 'Saksalainen Heinrich Barth saapui Timbuktuun 7. '
+          + 'syyskuuta 1853. Hän oli lähtenyt liikkeelle kolmen miehen '
+          + 'retkikunnassa, mutta Richardson kuoli maaliskuussa 1851 '
+          + 'ja Overweg syyskuussa 1852, joten Barth jatkoi yksin. Kun '
+          + 'hän palasi Tripoliin syyskuussa 1855, matka oli ulottunut '
+          + 'kahdenkymmenenneljän leveysasteen ja kahdenkymmenen '
+          + 'pituusasteen yli — Tripolista Kameruniin ja Tšad-järveltä '
+          + 'Timbuktuun, yli kaksitoistatuhatta mailia. Hän puhui '
+          + 'sujuvasti arabiaa sekä fulania, hausaa ja kanuria ja '
+          + 'tutki erityisesti Songhain historiaa.'
+        + '\n\n'
+        + 'Timbuktussa hän asui kunta-suvun sheikin Ahmad al-Bakkai '
+          + 'al-Kuntin talossa. Al-Bakkai (1803–1865) oli '
+          + 'esikoloniaalisen Länsi-Sudanin viimeisiä merkittäviä '
+          + 'sovittelevan linjan puolustajia suhteessa kristittyyn '
+          + 'Eurooppaan, ja hän suojeli Barthia kaappausyritykseltä. '
+          + 'Massinan hallitsijalle hän kirjoitti fatwan muotoisen '
+          + 'kirjeen, jossa kiisti tämän oikeuden pidättää Barth tai '
+          + 'takavarikoida tämän omaisuus: kristitty ei ollut '
+          + 'muslimivallan alainen eikä islamin vihollinen vaan '
+          + 'ystävällismielisen maan kansalainen.'
+        + '\n\n'
+        + 'Barth arvosteli edeltäjänsä Caillién kuvausta kaupungista. '
+          + 'Caillién piirroksissa talot seisoivat erillään, mutta '
+          + 'Barthin mukaan "todellisuudessa kadut ovat kokonaan '
+          + 'suljettuja, sillä asunnot muodostavat yhtenäisiä, '
+          + 'katkeamattomia rivejä". Talosta, jossa Barth asui, on '
+          + 'valokuva vuodelta 1908 — otettu ennen kuin rakennus '
+          + 'sortui.',
+      lahde: 'Wikipedia',
+    },
+    'Sankorén moskeija': {
+      aika: '1300–1400-luku',
+      teksti: 'Sankorén moskeija ja medresa rakennettiin 1300- tai '
+          + 'varhaisella 1400-luvulla aghlal-heimoon kuuluneen '
+          + 'tuaregnaisen rahoituksella. Se sijaitsi Sankorén '
+          + 'kaupunginosassa, jossa asui suurin osa kaupungin '
+          + 'berbereistä ja arabeista. Nimi tarkoittaa songhaiksi '
+          + 'valkoisia mestareita tai valkoisia ylimyksiä; "valkoinen" '
+          + 'viittaa vaaleaihoisiin sanhaja-berbereihin. Kronikan '
+          + 'ranskantajat Octave Houdas ja Maurice Delafosse '
+          + 'käänsivät nimen muotoon "ylimysten kaupunginosa".'
+        + '\n\n'
+        + 'Rakennus on savea ja puupalkkeja, ja se on pienempi ja '
+          + 'koristelultaan vaatimattomampi kuin Djennén suuri '
+          + 'moskeija. Vuosina 1578–1582 Timbuktun ylituomari, imaami '
+          + 'Al-Aqib ibn Mahmud ibn Umar purki pyhäkön ja rakennutti '
+          + 'sen uudelleen Mekan Kaaban mitoilla. Piha oli myös '
+          + 'luokkahuone: opetus pidettiin avoimessa sisäpihassa tai '
+          + 'opettajan kotona.'
+        + '\n\n'
+        + 'Ibn Battuta kävi kaupungissa 1352 ja totesi, että suurin '
+          + 'osa asukkaista kuului sanhaja-berbereiden massufa-heimoon '
+          + '— mutta hän ei sanonut islamilaisesta oppineisuudesta '
+          + 'mitään. Vuosisataa myöhemmin massufan Aqit-suku muutti '
+          + 'Timbuktuun ja toi mukanaan syvän oppineisuusperinteen, ja '
+          + 'siitä alkoi se, mistä kaupunki tunnetaan. Kwame Nkrumah '
+          + 'sanoi Ghanan yliopiston avajaisissa 1961, että jos '
+          + 'Sankoré olisi selvinnyt vieraiden hyökkäysten tuhoista, '
+          + 'Afrikan akateeminen ja kulttuurihistoria olisi voinut '
+          + 'olla toinen kuin se tänään on.',
+      lahde: 'Wikipedia',
+    },
+    'Ahmed Baba -instituutti': {
+      aika: '1973',
+      teksti: 'Ahmed Baba -instituutti eli virallisemmin Ahmed Baba '
+          + 'Institute of Higher Learning and Islamic Research '
+          + 'perustettiin 1973, ja rahoitus tuli pääosin Kuwaitista. '
+          + 'Nimi on 1600-luvulla eläneen timbuktulaisen oppineen '
+          + 'Ahmad Baban. Instituutti on kaupungin ainoa julkinen '
+          + 'kirjasto; muut kokoelmat ovat sukujen hallussa.'
+        + '\n\n'
+        + 'Nykyisen rakennuksen suunnitteli eteläafrikkalainen '
+          + 'arkkitehti, ja se valmistui 2009. Se maksoi noin 5,8 '
+          + 'miljoonaa euroa, on 4 600 neliömetriä ja korvasi '
+          + 'neljäkymmentä vuotta vanhan rapistuneen talon. '
+          + 'Rakennuksessa on ilmastointi käsikirjoitusten säilytystä '
+          + 'varten ja automaattinen sammutusjärjestelmä — molemmat '
+          + 'ovat aavikon reunalla vaikeampia asioita kuin miltä '
+          + 'kuulostaa.'
+        + '\n\n'
+        + 'Kokoelmassa on noin kaksikymmentätuhatta käsikirjoitusta. '
+          + 'Suurin osa on 1300–1500-luvuilta ja arabiaksi, mutta '
+          + 'joukossa on songhaita, tamashekia ja bamanankania sekä '
+          + 'yksi turkin- ja yksi hepreankielinen teos. Aiheina ovat '
+          + 'lääketiede, tähtitiede, runous, kirjallisuus ja '
+          + 'islamilainen laki. Yksi niteistä on 1800-luvun akrostinen '
+          + 'runo, joka käsittelee rauhan saavuttamista Sokoton '
+          + 'kalifaatin ja Bornun välillä; Unesco liitti sen Maailman '
+          + 'muisti -rekisteriin 2017. Digitointia on tehty Norjan ja '
+          + 'Luxemburgin rahoituksella Unescon valvonnassa.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * LALIBELA (Opus 7.9.2026, paketti O9). Kahdeksan kirkkoa
+   * lännestä itään. Tekstit en-Wikipedian raakateksteistä 7.9.2026:
+   * "Lalibela", "Rock-Hewn Churches, Lalibela",
+   * "Church of Saint George, Lalibela", "Biete Medhane Alem",
+   * "Biete Maryam", "Biete Amanuel", "Biete Abba Libanos",
+   * "Biete Gabriel-Rufael", "Biete Lehem", "Lalibela Cross",
+   * "Gebre Meskel Lalibela".
+   *
+   * NÄMÄ JUTUT EIVÄT TOISTA LEHTEÄ EIVÄTKÄ ETIOPIAN MAALEHTEÄ.
+   * Maalehden nosto kertoo louhintatavan ja Jerusalem-symboliikan,
+   * lehti kertoo kuninkaan, veden, vuoden 1873 ja asuintalot; nämä
+   * jutut kertovat kunkin kirkon oman tarinan.
+   *
+   * AJOITUS KIRJOITETAAN LÄHTEEN MUKAAN. Neljän eteläisen ryhmän
+   * kirkon omat artikkelit sanovat kirkot rakennetun "Aksumin
+   * kuningaskunnan aikana", mutta pääartikkeli ajoittaa kirkot
+   * perinteisesti Zagwe-kuningas Lalibelan kaudelle ja esittää
+   * varhaisemman ajoituksen hypoteesina. Jutut noudattavat
+   * pääartikkelia (ks. tarkistus-lalibela.md, kohta F).
+   */
+  lalibela: {
+    'Biete Giyorgis': {
+      aika: '1100-luvun loppu',
+      teksti: 'Pyhän Yrjön kirkko on louhittu alaspäin vulkaanisesta '
+          + 'tuffista, joka on koko rakenteen ainoa materiaali. Se on '
+          + 'ajoitettu 1100-luvun loppuun tai 1200-luvun alkuun ja on '
+          + 'todennäköisesti viimeinen yhdestätoista kirkosta. '
+          + 'Pohjakaava on risti, ja katto on maanpinnan tasalla. '
+          + 'Kirkkoa on kutsuttu maailman kahdeksanneksi ihmeeksi, ja '
+          + 'se on kirkoista parhaiten säilynyt.'
+        + '\n\n'
+        + 'Ensi näkemältä paikka vaikuttaa täysin saavuttamattomalta: '
+          + 'joka puolella on pystysuora pudotus eikä sisäänkäyntisiltaa. '
+          + 'Sisään mennään hyvin kapeaa, ihmisen hakkaamaa kanjonia '
+          + 'pitkin, joka kiertää alaspäin ja muuttuu lähellä kirkkoa '
+          + 'tunneliksi — se kätkee kirkon entisestään. Ulkoseinillä on '
+          + 'yksinkertaisia avoimia hautoja pyhiinvaeltajille, jotka '
+          + 'kuolivat päästyään perille.'
+        + '\n\n'
+        + 'Etiopialaisen kulttuurihistorian mukaan kirkko rakennettiin '
+          + 'sen jälkeen, kun kuningas Gebre Mesqel Lalibela sai näyn, '
+          + 'jossa häntä käskettiin rakentaa se; käskyn antajaksi on '
+          + 'mainittu sekä Pyhä Yrjö että Jumala. Sisällä on '
+          + 'yksinkertainen Pyhän Yrjön pyhäkkö, ja verhon takana — '
+          + 'jonne muilla kuin papeilla ei ole pääsyä — on liitonarkin '
+          + 'jäljennös. Kirkko dokumentoitiin kolmiulotteisesti 2005.',
+      lahde: 'Wikipedia',
+    },
+    'Biete Golgotha Mikael': {
+      aika: '1100–1200-luku',
+      teksti: 'Golgata Mikaelin talo kuuluu Jordan-puron pohjoiseen '
+          + 'ryhmään, ja se on Lalibelan kirkoista se, joka '
+          + 'tunnetaan ennen kaikkea taiteestaan. Sisällä on '
+          + 'ihmishahmoja esittäviä reliefejä, jotka on hakattu '
+          + 'samasta kivestä kuin seinät. Yhdessä Biete Maryamin '
+          + 'maalausten kanssa ne ovat selvin osoitus siitä, ettei '
+          + 'Lalibela ole yksi rakennustyö vaan monta erilaista.'
+        + '\n\n'
+        + 'Kirkko on samalla Lalibelan pyhin paikka: sen kerrotaan '
+          + 'sisältävän kuningas Lalibelan haudan. Siinä on myös '
+          + 'jäljennökset Kristuksen ja Aadamin haudoista sekä '
+          + 'jouluseimestä — nimien ja rakennelmien järjestys toistaa '
+          + 'pyhiinvaeltajalle Jerusalemin paikkoja niin, että koko '
+          + 'kaupungin voi kiertää kuin pyhää maata.'
+        + '\n\n'
+        + 'Kirkko on ollut viime vuosina entisöinnin kohteena '
+          + 'yhdessä naapurinsa Biete Gabriel-Rufaelin kanssa. Työtä '
+          + 'on rahoittanut Yhdysvaltain suurlähetystö, ja se on '
+          + 'osoittautunut hankalaksi: Etiopian '
+          + 'kulttuuriperintöviranomaisen sekä paikallisen komitean ja '
+          + 'kirkon välillä on ollut erimielisyyttä siitä, mitä '
+          + 'hankkeeseen kuuluu.',
+      lahde: 'Wikipedia',
+    },
+    'Biete Maryam': {
+      aika: '1000–1200-luku',
+      teksti: 'Marian talo on mahdollisesti Lalibelan kirkoista '
+          + 'vanhin. Sen tarkkaa rakennusaikaa ei tiedetä: se on '
+          + 'rakennettu aikaisintaan 600-luvulla ja viimeistään '
+          + '1200-luvulla, ja perinne lukee sen Zagwe-kuningas '
+          + 'Lalibelan hallituskaudelle. Arkeologiset analyysit '
+          + 'ajoittavat paikan puolustusvarustusten rauniot noin '
+          + '700-luvulle ja monoliittiset kirkot kahteen vaiheeseen: '
+          + 'ensimmäinen 1000-luvulta 1100-luvun alkuun, toinen '
+          + '1100-luvun lopulta 1200-luvun alkuun.'
+        + '\n\n'
+        + 'Kirkko on Lalibelan värikkäin. Sen katto on maalattu, ja '
+          + 'maalauksissa on geometrisia kuvioita ja raamatullisia '
+          + 'kohtauksia. Kirkossa on myös jäljennökset Aadamin ja '
+          + 'Kristuksen haudoista. Sisätiloissa säilytetään '
+          + 'kulkueristejä, joita kannetaan juhlapäivinä ulos.'
+        + '\n\n'
+        + 'Rakennus kertoo kahdesta perinteestä yhtä aikaa. Sen ovi '
+          + 'on yksi Lalibelan selvimmistä esimerkeistä kehyksestä, '
+          + 'joka toistaa Aksumin steelojen muotoa — sama aihe '
+          + 'toistuu Biete Gabriel-Rufaelin kaarikäytävässä ja Biete '
+          + 'Amanuelin ikkunoissa. Harjakatto ja suoraviivaiset '
+          + 'listat taas viittaavat syyrialaiseen vaikutukseen. '
+          + 'Kirkko kuuluu Jordan-puron pohjoiseen ryhmään.',
+      lahde: 'Wikipedia',
+    },
+    'Biete Medhane Alem': {
+      aika: '1100–1200-luku',
+      teksti: 'Maailman Vapahtajan taloa pidetään maailman suurimpana '
+          + 'monoliittikirkkona: se on kokonaan yhtä kivipaatta, jonka '
+          + 'ympäriltä kallio on louhittu pois. Se rakennettiin '
+          + 'Zagwe-dynastian aikana ja kuuluu Jordan-puron pohjoiseen '
+          + 'ryhmään. Kirkkoa ympäröi pilarikäytävä, ja koko rakennus '
+          + 'on tehty samasta kivestä kuin sen katto ja lattia.'
+        + '\n\n'
+        + 'Täällä säilytetään Lalibelan ristiä, Etiopian '
+          + 'arvokkaimpia uskonnollisia perintöesineitä. Kirkko on '
+          + 'myös yksi niistä viidestä, joiden päälle pystytettiin '
+          + '2008 Euroopan unionin rahoituksella suojakatokset. Ne '
+          + 'oli tarkoitettu väliaikaisiksi siihen asti, kunnes '
+          + 'pysyvämpi ratkaisu löytyisi, mutta ne ovat yhä '
+          + 'paikoillaan — ja niiden paino on nyt oma ongelmansa.'
+        + '\n\n'
+        + 'Kirkkoon liittyy myös kysymys, johon lähteet vastaavat eri '
+          + 'tavoin. Erään 1500-luvun kertomuksen mukaan Lalibelassa '
+          + 'poltettiin yksi kirkoista vuonna 1531. Historioitsija '
+          + 'Richard Pankhurst suhtautuu kertomukseen epäillen, koska '
+          + 'aikakauden kuninkaalliset kronikat vaikenevat asiasta '
+          + 'kokonaan; jos jokin kirkko kuitenkin vahingoittui, se oli '
+          + 'hänen mukaansa todennäköisimmin juuri tämä — tai '
+          + 'kuudentoista kilometrin päässä oleva Gannata Maryam, '
+          + 'jossa on samanlainen pilarikäytävä.',
+      lahde: 'Wikipedia',
+    },
+    'Biete Gabriel-Rufael': {
+      aika: 'kiistanalainen',
+      teksti: 'Gabrielin ja Rafaelin talo on maanalainen kalliokirkko '
+          + 'Jordan-puron eteläisessä ryhmässä. Sen alkuperä on '
+          + 'Lalibelan kiistellyin. Perinne lukee kirkot '
+          + 'Zagwe-kuningas Lalibelan kaudelle, mutta Cambridgen '
+          + 'Afrikan arkeologian professori David Phillipson on '
+          + 'esittänyt, että juuri tämä kirkko sekä Merkorioksen ja '
+          + 'Danagelin kirkot louhittiin kalliosta puoli vuosituhatta '
+          + 'aiemmin, vuosina 600–800, linnoituksiksi tai muiksi '
+          + 'palatsirakenteiksi — ja että kuningas Lalibelan nimi '
+          + 'liitettiin niihin vasta hänen kuolemansa jälkeen.'
+        + '\n\n'
+        + 'Perinne kertoo rakennuksesta samaa: sitä pidetään '
+          + 'mahdollisena entisenä kuninkaanpalatsina, ja se on '
+          + 'yhdistetty pyhään leipomoon. Kirkon kaarikäytävä on yksi '
+          + 'Lalibelan selvimmistä esimerkeistä siitä, miten kivessä '
+          + 'toistetaan Aksumin steelojen muotoa: ikkunoiden ja ovien '
+          + 'kehykset jäljittelevät puurakennusta, jota ei ole enää '
+          + 'olemassa.'
+        + '\n\n'
+        + 'Kirkko on ollut italialaisen tutkimusryhmän '
+          + 'geologis-arkkitehtonisen pilottitutkimuksen kohteena, '
+          + 'jossa selvitettiin, miten kallion rakenne on ohjannut '
+          + 'louhintaa. Se on myös Yhdysvaltain suurlähetystön '
+          + 'rahoittaman entisöinnin kohde yhdessä Biete Golgotha '
+          + 'Mikaelin kanssa.',
+      lahde: 'Wikipedia',
+    },
+    'Biete Lehem': {
+      aika: '1100–1200-luku',
+      teksti: 'Biete Lehem on maanalainen monoliittikirkko Jordan-'
+          + 'puron eteläisessä ryhmässä, ja se on kirkoista pienimpiä. '
+          + 'Nimi tulee Betlehemistä: heprean bet lehem tarkoittaa '
+          + 'leivän taloa, ja amharaksi kirkkoa kutsutaan Pyhän '
+          + 'leivän taloksi.'
+        + '\n\n'
+        + 'Nimi ei ole sattumaa vaan osa suunnitelmaa. Lalibelan '
+          + 'rakennusten nimet ja sijoittelu toistavat Jerusalemin ja '
+          + 'Pyhän maan paikkoja niin, että pyhiinvaeltaja voi kiertää '
+          + 'ne kävellen: kaupungin läpi kulkee Jordan, kirkkojen '
+          + 'joukossa on Golgata ja Betlehem, ja ryhmien on tulkittu '
+          + 'esittävän maallista ja taivaallista Jerusalemia.'
+        + '\n\n'
+        + 'Nimen käytännöllinen puoli on sekin uskottava: leivän talo '
+          + 'on ollut myös leivän talo. Naapurikirkko Biete '
+          + 'Gabriel-Rufael on lähteissä yhdistetty pyhään leipomoon, '
+          + 'ja ehtoollisleivän valmistus on Etiopian ortodoksisessa '
+          + 'kirkossa oma tarkkaan säädelty toimituksensa. Kirkot '
+          + 'ovat yhä käytössä, joten leipää leivotaan Lalibelassa '
+          + 'edelleen.',
+      lahde: 'Wikipedia',
+    },
+    'Biete Abba Libanos': {
+      aika: '1200-luku',
+      teksti: 'Apotti Libanoksen talo on maanalainen kalliokirkko '
+          + 'Jordan-puron eteläisessä ryhmässä. Se on Lalibelan '
+          + 'kirkoista se, jolla on selvin oma tarinansa: paikallisen '
+          + 'historioitsijan Getachew Mekonnenin mukaan kuningatar '
+          + 'Masqal Kibra rakennutti sen miehensä Lalibelan '
+          + 'muistomerkiksi tämän kuoleman jälkeen.'
+        + '\n\n'
+        + 'Masqal Kibrasta on säilynyt useita perinteitä, ja ne '
+          + 'piirtävät kuvan vaikutusvaltaisesta kuningattaresta. Hän '
+          + 'sai piispan tekemään veljestään Hirunista niin ikään '
+          + 'piispan; toisen perinteen mukaan hän sai kuninkaan '
+          + 'luopumaan kruunusta veljenpoikansa hyväksi ja '
+          + 'kahdeksantoista kuukautta myöhemmin palaamaan valtaan. '
+          + 'Historioitsija Taddesse Tamrat epäilee, että kertomus '
+          + 'peittää alleen lyhyen vallankaappauksen.'
+        + '\n\n'
+        + 'Kirkko on osittain kiinni vuoressa: Lalibelan '
+          + 'yhdestätoista kirkosta neljä on irti kalliosta joka '
+          + 'suunnalta, ja seitsemän jakaa yhden seinän vuoren kanssa. '
+          + 'Sisäänkäynti on kaivannon pohjalta. Kirkosta on tehty '
+          + 'kolmiulotteinen malli Kapkaupungin yliopiston '
+          + 'Zamani-hankkeessa, joka dokumentoi Lalibelan kirkot '
+          + 'neljällä kenttäjaksolla vuosina 2005–2009.',
+      lahde: 'Wikipedia',
+    },
+    'Biete Amanuel': {
+      aika: '1100–1200-luku',
+      teksti: 'Immanuelin talo on maanalainen monoliittikirkko '
+          + 'Jordan-puron eteläisessä ryhmässä, ja se on yksi '
+          + 'Lalibelan neljästä vapaasti seisovasta kirkosta — sen '
+          + 'ympäriltä kallio on louhittu pois joka suunnalta. Sitä on '
+          + 'pidetty mahdollisena entisenä kuninkaallisena kappelina, '
+          + 'mikä sopisi sen huolelliseen viimeistelyyn.'
+        + '\n\n'
+        + 'Kirkko on paras esimerkki siitä, mikä tekee Lalibelasta '
+          + 'aksumilaisen perinteen jatkeen. Tutkija Stuart Munro-Hay '
+          + 'huomauttaa, että Biete Amanuelin julkisivussa on kivestä '
+          + 'tehty jäljitelmä puurakenteista — samoista '
+          + 'vaakapalkeista ja ulkonevista päistä, joita näkee yhä '
+          + 'joissakin Tigrayn ja Eritrean vanhoissa kirkoissa, joissa '
+          + 'puu on oikeasti paikallaan. Kirkon ikkunat toistavat '
+          + 'Aksumin steelojen muotoa.'
+        + '\n\n'
+        + 'Phillipson muistuttaa, ettei aksumilainen tyyli todista '
+          + 'aksumilaista ikää: piirteitä on voitu ottaa käyttöön '
+          + 'kauan Aksumin tuhon jälkeen. Se todistaa jotain muuta ja '
+          + 'kiinnostavampaa — katkeamattoman rakennusperinteen, joka '
+          + 'kesti vuosisatoja sen valtakunnan jälkeen, jossa se '
+          + 'syntyi. Koptilaisia vaikutteita näkyy koristeissa, mutta '
+          + 'runko on paikallinen.',
+      lahde: 'Wikipedia',
+    },
+  },
 };

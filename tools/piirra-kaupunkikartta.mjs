@@ -5640,6 +5640,91 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 12.0170, etela: 11.9870, lansi: 8.5050, ita: 8.5420 },
   },
+  timbuktu: {
+    /*
+     * VANHAKAUPUNKI DJINGUEREBERISTÄ SANKORÉLLE (7.9.2026). Ruutu on
+     * 1,09 × 1,09 kilometriä eli pelin tiiviimpiä, Fesin ja
+     * Vancouverin kokoluokkaa. Lounaassa on Djinguereberin moskeija,
+     * keskellä Sidi Yahyan moskeija ja sen ympärillä kolme
+     * tutkimusmatkailijan taloa sekä al-Wangarin sukukirjasto,
+     * koillisessa Sankorén moskeija ja Ahmed Baba -instituutti.
+     *
+     * TIIVIS RUUTU ON PAKKO. Kahdeksan kohdetta mahtuu 0,56 × 0,50
+     * kilometrin alalle, ja niiden pienimmät välit ovat 41, 68 ja
+     * 71 metriä (mitattu haversinilla, ks.
+     * docs/mantereet-tyoaineisto/tarkistus-timbuktu.md). Tässä
+     * mittakaavassa (3,0 m/px) ne ovat 14, 23 ja 24 pikseliä, eivätkä
+     * numeroympyrät hukuta toisiaan. Väljemmässä ruudussa
+     * vanhakaupunki olisi pieni täpläparvi kuvan keskellä.
+     *
+     * KUJAT VAATIVAT jalkakaydat: true JA palvelutiet: true, ja se on
+     * MITATTU eikä arvattu — ks. ajolokit alla tässä lohkossa.
+     * Timbuktun vanhankaupungin hiekkakadut ovat OSM:ssä pääosin
+     * service- ja footway-teitä, aivan kuten Fesin medinassa ja
+     * Teheranin katetussa basaarissa.
+     *
+     * EI meri-lippua: Timbuktu on hiekkadyynien keskellä 15
+     * kilometriä Nigerin pääuomasta pohjoiseen (en-Wikipedia,
+     * "Timbuktu", Geography), eikä ruudussa ole vettä.
+     *
+     * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA EIVÄTKÄ MALIN MAALEHTEÄ.
+     * Lehden nostot kertovat kaupungin synnystä ja nimestä,
+     * suolakaravaanista, vuoden 1873 valtatilanteesta ja kaupungin
+     * suhteesta jokeen; teemasivu kertoo Sankorén opetustavasta,
+     * käsikirjoituksista, Ahmad Babasta ja Leo Africanuksesta.
+     * Kohdekartta kertoo rakennukset ja niissä asuneet ihmiset.
+     * Malin maalehden aiheita (Mansa Musan pyhiinvaellus, Taoudennin
+     * suolakylä, Djennén moskeija) ei käsitellä, eikä vuosien
+     * 2012–2013 tapahtumia, jotka ovat jo skandaalinostona.
+     */
+    rajat: { pohjoinen: 16.7791, etela: 16.7693, lansi: -3.0128, ita: -3.0026 },
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
+  lalibela: {
+    /*
+     * KALLIOKIRKKOJEN KAKSI KAIVANTORYHMÄÄ (7.9.2026). Ruutu on
+     * 1,36 × 1,06 kilometriä. Lännessä on erillinen Biete Giyorgis
+     * omassa ristinmuotoisessa kuilussaan, keskellä pohjoinen ryhmä
+     * (Golgotha Mikael, Maryam, Medhane Alem) ja idässä eteläinen
+     * ryhmä (Gabriel-Rufael, Lehem, Abba Libanos, Amanuel).
+     *
+     * TÄMÄ ON PELIN TIIVEIN KOHDEKARTTA, ja se on kaupungin totuus
+     * eikä kartan vika. Kaikki kahdeksan kohdetta mahtuvat
+     * 0,28 × 0,48 kilometrin alalle, ja pienimmät välit ovat 36 ja
+     * 40 metriä (Golgotha Mikael – Maryam, Maryam – Medhane Alem;
+     * mitattu haversinilla, ks.
+     * docs/mantereet-tyoaineisto/tarkistus-lalibela.md). Yksitoista
+     * kirkkoa on louhittu saman kalliopaljastuman kahteen
+     * kaivantoryhmään, joten tiiviimpää ei ole olemassakaan.
+     *
+     * KAUPUNKI ON MUKANA RUUDUSSA, EI VAIN KIRKOT. Rajaus ulottuu
+     * kirkkojen ympärille joka suuntaan 180–290 metriä, jotta
+     * Lalibelan omat kadut ja rinteet näkyvät kirkkojen ympärillä —
+     * muuten kartta olisi pelkkä kahdeksan ympyrän rykelmä tyhjällä
+     * paperilla.
+     *
+     * jalkakaydat: true JA palvelutiet: true. Kirkkoalueen polut ja
+     * kaupungin kujat ovat OSM:ssä footway- ja service-teitä; ks.
+     * ajolokit alla.
+     *
+     * EI meri-lippua. Jordan-puro (Yordanos Wenz) on kausiuoma, ja
+     * kaupunki on 2 500 metrin korkeudella harjanteella
+     * (en-Wikipedia, "Lalibela").
+     *
+     * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA EIVÄTKÄ ETIOPIAN
+     * MAALEHTEÄ. Maalehden nosto "Yksitoista kirkkoa, jotka
+     * kaivettiin alaspäin" kertoo louhintatavan, kirkkojen määrän ja
+     * Jerusalem-symboliikan; kaupunkilehti kertoo kuningas
+     * Lalibelan tarinan, veden, vuoden 1873 ja asuintalot;
+     * teemasivu kertoo aksumilaisen perinnön, Lalibelan ristin,
+     * ajoituskiistan ja Yemrehana Krestosin. Kohdekartta kertoo
+     * kunkin kirkon oman tarinan.
+     */
+    rajat: { pohjoinen: 12.0370, etela: 12.0275, lansi: 39.0355, ita: 39.0480 },
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
 };
 
 /*

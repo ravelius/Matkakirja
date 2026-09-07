@@ -523,10 +523,49 @@ export const OMAT_ARTIKKELIT = {
       + 'fetsihattu — vaikka siitä, kuka sen ensimmäisenä teki, '
       + 'lähteet ovat eri mieltä.',
   },
+  /*
+   * TIMBUKTU (Opus 7.9.2026, paketti O9) — INTRO KIRJOITETTU UUSIKSI
+   * kaupunkilehden yhteydessä. Vanha intro oli kolme virkettä; uusi
+   * tekstilinjaus (Raamattu, omistaja 20.8.2026) vaatii 7–10
+   * virkkeen johdatuksen kaupunkiin. `artikkeli`-kenttä on ennallaan.
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-timbuktu.md ja
+   * sen riippumaton tarkistus tarkistus-timbuktu.md. Väitteet luettu
+   * en-Wikipedian raakateksteistä 7.9.2026: "Timbuktu",
+   * "History of Timbuktu", "Sankoré Madrasah".
+   *
+   * ETÄISYYS JOKEEN ON 15 KM eikä 20 km: artikkelin johdanto sanoo
+   * 20 km "jokeen" ja Geography-osio 15 km "joen pääuomaan".
+   * Tarkempi osio voittaa (tarkistus, kohta B).
+   *
+   * MALIN MAALEHDEN AIHEITA EI TOISTETA: Mansa Musan pyhiinvaellusta
+   * ei kerrota, ja vuosien 2012–2013 tapahtumat ovat jo
+   * skandaalinostona (skandaalit.js MLI).
+   */
   Timbuktu: {
-    intro: 'Timbuktu oli aavikon reunan kulta- ja kirjakaupunki, jonka '
-      + 'kirjastot hämmästyttivät maailmaa. Karavaanit tuovat sinne yhä '
-      + 'suolaa kuten tuhat vuotta sitten.',
+    intro: 'Timbuktu on Malin pohjoisosassa, Saharan eteläreunalla, '
+      + 'viisitoista kilometriä Nigerin pääuomasta pohjoiseen. '
+      + 'Kaupunki alkoi tuaregien kausiluonteisena leiripaikkana ja '
+      + 'muuttui pysyväksi 1100-luvun alussa, kun aavikon karavaanit '
+      + 'ja joen veneet alkoivat vaihtaa tavaraa juuri täällä. '
+      + 'Vaurauden toivat suola, kulta ja norsunluu.'
+      + '\n\n'
+      + 'Kaupungin kolme savimoskeijaa — **Djinguereber, Sidi Yahya '
+      + 'ja Sankoré** — olivat myös kouluja. 1500-luvulla kaupungissa '
+      + 'oli toistasataa koraanikoulua ja tuhansia oppilaita, ja '
+      + 'sukujen kirjastoihin kertyi satojatuhansia '
+      + 'käsikirjoituksia. Marokkolainen armeija '
+      + 'valloitti kaupungin 1591, ja oppineita karkotettiin ja '
+      + 'pakeni; sen jälkeen kaupungin maine muuttui Euroopassa '
+      + 'rikkaasta salaperäiseksi.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Timbuktu ei ollut minkään yhden '
+      + 'vallan alla: Massinan valtakunta oli hallinnut sitä vuoteen '
+      + '1865 ja Toucouleur sen jälkeen, mutta lähteet ovat '
+      + 'erimielisiä siitä, kuka piti valtaa Ranskan tuloon 1893 '
+      + 'asti. Nimestä oli jo tullut Euroopassa sanonta paikasta '
+      + 'keskellä ei-mitään — **vaikka kaupunki oli koko ajan '
+      + 'olemassa** ja sen kirjastot sen mukana.',
     artikkeli: 'Timbuktu sijaitsee Malissa Saharan eteläreunalla, '
       + 'muutaman kilometrin päässä Nigerjoen suuresta mutkasta. '
       + 'Kaupunki syntyi siinä, missä kameli kohtaa kanootin: aavikon '
@@ -771,6 +810,72 @@ export const OMAT_ARTIKKELIT = {
       + 'Mercato-torilla, yhdellä Afrikan suurimmista, myydään kaikkea '
       + 'mausteista kultaan — ja iltaisin klubeilla soi ethio-jazz, '
       + 'jota ei kuule missään muualla maailmassa.',
+  },
+  /*
+   * LALIBELA (Opus 7.9.2026, paketti O9) — UUSI MERKINTÄ
+   * kaupunkilehden yhteydessä. Avain on city.wiki eli "Lalibela"
+   * (js/packs/africa.js). Aineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-lalibela.md ja sen
+   * riippumaton tarkistus tarkistus-lalibela.md. Väitteet luettu
+   * en-Wikipedian raakateksteistä 7.9.2026: "Lalibela",
+   * "Rock-Hewn Churches, Lalibela", "Gebre Meskel Lalibela",
+   * "Tekle Giyorgis II".
+   *
+   * ETIOPIAN MAALEHDEN NOSTOA EI TOISTETA: maa-kategoriat.js ETH
+   * kertoo jo louhintatavan, kirkkojen määrän ja
+   * Jerusalem-symboliikan ("Yksitoista kirkkoa, jotka kaivettiin
+   * alaspäin"). Tämä merkintä kertoo kaupungin oman tarinan:
+   * Rohan nimi, kuningas Lalibela, Lastan asema ja nykyinen
+   * pikkukaupunki.
+   *
+   * SAAPUMISTEKSTIÄ EI KIRJOITETTU: lalibela on
+   * tests/vanha-maailma.test.mjs:n KAARETTOMAT-listalla, ja testi
+   * kaatuu, jos listalla olevalle kaupungille kirjoitetaan merkintä
+   * africa-saapumiset.js:ään. Artikkeli sen sijaan sallitaan (sama
+   * ratkaisu kuin Fesissä v1670).
+   */
+  Lalibela: {
+    intro: 'Lalibela on pieni kaupunki Etiopian ylängöllä Amharan '
+      + 'alueella, noin **2 500 metrin korkeudessa**, ja se on Lastan '
+      + 'pääkaupunki. Vuoden 2007 laskennassa asukkaita oli 17 367 — '
+      + 'kaupunki on siis pienempi kuin moni suomalainen '
+      + 'kuntakeskus, mutta se on Etiopian ortodoksisen kirkon '
+      + 'pyhimpiä paikkoja ja pyhiinvaelluksen päämäärä.'
+      + '\n\n'
+      + 'Kaupungin vanha nimi oli **Roha**, ja se nimettiin uudelleen '
+      + 'Zagwe-kuningas Gebre Meskel Lalibelan mukaan, joka hallitsi '
+      + 'noin 1181–1221. Hagiografian mukaan hän syntyi Rohassa 1162 '
+      + 'ja sai nimensä mehiläisparvesta, joka ympäröi vastasyntyneen: '
+      + 'vanhassa agaw-kielessä nimi tarkoittaa, että mehiläiset '
+      + 'tunnustavat hänen valtansa. Kaupunki oli Etiopian '
+      + 'pääkaupunki 1100-luvun lopulta 1200-luvulle.'
+      + '\n\n'
+      + 'Kalliokirkot otettiin maailmanperintöluetteloon 1978, ja '
+      + 'niitä on yksitoista. Kaupungin vesiuoma kantaa nimeä '
+      + 'Jordan, ja kirkot jakautuvat sen mukaan. Isoisän '
+      + 'matkavuonna 1873 Lastalla oli tuore muisto omasta '
+      + 'keisaristaan: **Wagshum Gobeze**, vanhan Zagwe-valtaistuimen '
+      + 'perijä, oli hallinnut Tekle Giyorgis II:na 1868–1871.',
+    artikkeli: 'Lalibela on kaupunki Etiopian pohjoisella ylängöllä '
+      + 'noin 2 500 metrin korkeudessa. Se tunnetaan yhdestätoista '
+      + 'kirkosta, joita ei muurattu vaan louhittiin kalliosta. Se on '
+      + 'yhä pyhiinvaelluskohde eikä museo.'
+      + '\n\n== Roha ja sen kuningas ==\n'
+      + 'Kaupungin vanha nimi oli Roha. Se sai nykyisen nimensä '
+      + 'kuningas Gebre Meskel Lalibelalta, joka hallitsi Zagwe-'
+      + 'dynastian aikana noin 1181–1221 ja vietti nuoruudessaan '
+      + 'vuosia maanpaossa Jerusalemissa. Kaupungin rakennuksilla on '
+      + 'raamatullisia nimiä, ja vesiuoma on nimeltään Jordan. '
+      + 'Hagiografian mukaan kuningas veisti kirkot enkelien avulla, '
+      + 'ja portugalilaisille papit kertoivat 1520-luvulla työn '
+      + 'kestäneen kaksikymmentäneljä vuotta.'
+      + '\n\n== Kaupunki kirkkojen ympärillä ==\n'
+      + 'Lalibelassa asuu runsaat seitsemäntoistatuhatta ihmistä. '
+      + 'Perinteisiä taloja on kahta lajia: pyöreä kivestä ladottu '
+      + 'tukul, jossa on usein kaksi kerrosta ja portaat ulkoseinällä, '
+      + 'sekä yksikerroksinen chika, joka on tehty maasta ja risuista. '
+      + 'Vilkkaimmillaan kaupunki on tammikuussa, kun kirkkoihin '
+      + 'saapuu pyhiinvaeltajia ja kulkueet kestävät useita päiviä.',
   },
   'Kongo (joki)': {
     intro: 'Kongojoki on Afrikan vesirikkain virta, joka kiertää '

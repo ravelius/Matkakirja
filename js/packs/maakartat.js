@@ -14565,6 +14565,130 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Olive Pinkin puutarha', lat: -23.706400, lon: 133.884900 },
     ],
   },
+  /*
+   * TIMBUKTUN VANHAKAUPUNKI (Opus 7.9.2026, paketti O9). Ruutu on
+   * 1,09 x 1,09 kilometriä: lounaassa Djinguereberin moskeija,
+   * keskellä Sidi Yahyan moskeija ja sen ympärillä kolme
+   * tutkimusmatkailijan taloa sekä al-Wangarin sukukirjasto,
+   * koillisessa Sankorén moskeija ja Ahmed Baba -instituutti.
+   * Perustelut piirra-kaupunkikartta.mjs:n timbuktu-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA, MALIN MAALEHTEÄ EIVÄTKÄ
+   * SKANDAALINOSTOA. Lehden nostot kertovat kaupungin nimestä,
+   * suolakaravaanista, vuoden 1873 valtatilanteesta ja kaupungin
+   * suhteesta jokeen; teemasivu kertoo Sankorén opetustavasta,
+   * käsikirjoituksista, Ahmad Babasta ja Leo Africanuksesta.
+   * Kohdekartta kertoo rakennukset ja niissä asuneet ihmiset.
+   * Vuosien 2012–2013 tapahtumia ei käsitellä missään: ne ovat jo
+   * skandaalinostona (skandaalit.js MLI).
+   *
+   * KOLME EHDOKASTA HYLÄTTIIN LÄHTEEN PUUTTEESSA: Grand Marché
+   * (kaupungin päätori), Bibliothèque Fondo Kati ja Musée
+   * d'Archéologie. Yhdelläkään ei ole kerrottavaa katetta
+   * en-Wikipediassa, eikä nähtävyysjuttua kirjoiteta ilman katetta.
+   * Rauhan liekin monumentti hylättiin siksi, että artikkelin
+   * päiväys sille on mahdoton (kapina päättyi 1996, seremonia
+   * "29.3.2007") — ks. tarkistus-timbuktu.md kohta H.
+   * Mamma Haidara -muistokirjastolle ei löytynyt sijaintia
+   * Wikipediasta, Overpassista eikä Nominatimista.
+   */
+  timbuktu: {
+    polku: 'assets/kartat/timbuktu-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 16.7791, etela: 16.7693, lansi: -3.0128, ita: -3.0026 },
+    esittely: 'Timbuktun vanhakaupunki on savea ja hiekkaa: kolme '
+      + 'suurta moskeijaa ja kuusitoista mausoleumia ovat olleet '
+      + 'maailmanperintökohteena vuodesta 1988. Kaupunki oli '
+      + 'islamilaisen oppineisuuden keskus 1200-luvulta 1600-luvulle, '
+      + 'ja moskeijat toimivat kouluina. 1800-luvulla samojen kujien '
+      + 'varrella asui kolme eurooppalaista, jotka olivat matkanneet '
+      + 'tänne vuosikausia. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään ja lopuksi
+       * koilliseen. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta (moskeijat ja instituutti) ja
+       * Overpassista (kolme taloa ja kirjasto) 7.9.2026.
+       *
+       * VÄLIT OVAT PELIN PIENIMPIÄ ja se on tässä oikein:
+       * vanhakaupunki on niin tiheä, ettei 200 metrin väljyyteen
+       * pääse ilman että puolet kohteista putoaa pois. Kolme
+       * pienintä väliä ovat al-Wangarin kirjasto – Barthin talo
+       * 41 m, Sankoré – Ahmed Baba 68 m ja Caillién talo – Sidi
+       * Yahya 71 m (mitattu haversinilla, ks.
+       * docs/mantereet-tyoaineisto/tarkistus-timbuktu.md). Ruutu on
+       * siksi tiivistetty 1,09 kilometrin levyiseksi (3,0 m/px);
+       * tarkista-karttapisteet.mjs vahvistaa peittoasteet.
+       */
+      { nimi: 'Djinguereberin moskeija', lat: 16.77139, lon: -3.01 },
+      { nimi: 'Gordon Laingin talo', lat: 16.77244, lon: -3.00873 },
+      { nimi: 'René Cailliéen talo', lat: 16.77233, lon: -3.00779 },
+      { nimi: 'Sidi Yahyan moskeija', lat: 16.77224, lon: -3.00713 },
+      { nimi: 'al-Wangarin kirjasto', lat: 16.77272, lon: -3.00659 },
+      { nimi: 'Heinrich Barthin talo', lat: 16.77255, lon: -3.00625 },
+      { nimi: 'Sankorén moskeija', lat: 16.77589, lon: -3.00564 },
+      { nimi: 'Ahmed Baba -instituutti', lat: 16.77639, lon: -3.00528 },
+    ],
+  },
+  /*
+   * LALIBELAN KALLIOKIRKOT (Opus 7.9.2026, paketti O9). Ruutu on
+   * 1,36 x 1,06 kilometriä: lännessä erillinen Biete Giyorgis,
+   * keskellä pohjoinen kaivantoryhmä ja idässä eteläinen ryhmä.
+   * Perustelut piirra-kaupunkikartta.mjs:n lalibela-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA EIVÄTKÄ ETIOPIAN
+   * MAALEHTEÄ. Maalehden nosto "Yksitoista kirkkoa, jotka
+   * kaivettiin alaspäin" (maa-kategoriat.js ETH) kertoo
+   * louhintatavan, kirkkojen määrän ja Jerusalem-symboliikan;
+   * kaupunkilehti kertoo kuningas Lalibelan tarinan, veden, vuoden
+   * 1873 ja asuintalot; teemasivu kertoo aksumilaisen perinnön,
+   * Lalibelan ristin, ajoituskiistan ja Yemrehana Krestosin.
+   * Kohdekartta kertoo kunkin kirkon oman tarinan.
+   *
+   * KOLME KIRKKOA JÄTETTIIN POIS VÄLIN TAKIA: Biete Meskel on
+   * 27 metriä Biete Maryamista, Biete Qeddus Mercoreus 29 metriä
+   * Biete Amanuelista, ja Biete Denagelilta puuttuu sekä artikkeli
+   * että koordinaatti. Yemrehana Krestos on 12,2 km koilliseen
+   * eli ruudun ulkopuolella; se on lehden teemasivun nosto.
+   */
+  lalibela: {
+    polku: 'assets/kartat/lalibela-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 12.037, etela: 12.0275, lansi: 39.0355, ita: 39.048 },
+    esittely: 'Lalibelan yksitoista kirkkoa on louhittu kalliosta '
+      + 'ylhäältä alaspäin, ja niiden väliin on hakattu kaivannot ja '
+      + 'tunnelit. Kirkot jakautuvat kolmeen: viisi Jordan-puron '
+      + 'pohjoispuolella, viisi eteläpuolella ja yksi erillään. Kohde '
+      + 'on ollut maailmanperintöluettelossa vuodesta 1978, ja '
+      + 'kirkoissa pidetään yhä jumalanpalveluksia. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään. Koordinaatit
+       * en-Wikipedian "Rock-Hewn Churches, Lalibela" -artikkelin
+       * coord-malleista; Biete Golgotha Mikael Overpassista, koska
+       * kirkolla ei ole omaa artikkelia eikä koordinaattia.
+       *
+       * TÄMÄ ON PELIN TIIVEIN KOHDEKARTTA, ja se on kaupungin
+       * totuus eikä kartan vika: kaikki kahdeksan mahtuvat
+       * 0,28 x 0,48 kilometrin alalle, ja pienimmät välit ovat 36 m
+       * (Golgotha Mikael – Maryam) ja 40 m (Maryam – Medhane Alem).
+       * Yksitoista kirkkoa on louhittu saman kalliopaljastuman
+       * kahteen kaivantoryhmään, joten tiiviimpää ei ole
+       * olemassakaan. Mitat haversinilla, ks.
+       * docs/mantereet-tyoaineisto/tarkistus-lalibela.md.
+       */
+      { nimi: 'Biete Giyorgis', lat: 12.03174, lon: 39.04113 },
+      { nimi: 'Biete Golgotha Mikael', lat: 12.03356, lon: 39.04304 },
+      { nimi: 'Biete Maryam', lat: 12.03371, lon: 39.04333 },
+      { nimi: 'Biete Medhane Alem', lat: 12.0337, lon: 39.0437 },
+      { nimi: 'Biete Gabriel-Rufael', lat: 12.0312, lon: 39.04464 },
+      { nimi: 'Biete Lehem', lat: 12.03169, lon: 39.04451 },
+      { nimi: 'Biete Abba Libanos', lat: 12.03141, lon: 39.04518 },
+      { nimi: 'Biete Amanuel', lat: 12.03182, lon: 39.04556 },
+    ],
+  },
 };
 
 /*
