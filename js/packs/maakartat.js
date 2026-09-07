@@ -12485,6 +12485,119 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kaupungintalo', lat: -34.9261, lon: 138.60018333 },
     ],
   },
+  /*
+   * HAVANNA (7.9.2026). Rajaus on 2,3 × 1,8 kilometriä vanhan
+   * kaupunginmuurin alalta Pradon reunaan — perustelu ja itäreunan
+   * valinta ovat tools/piirra-kaupunkikartta.mjs:n havanna-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kaupungin kaksi siirtoa, Uuden maailman avain, kaupunginmuurin
+   * purkaminen ja Havanna–Bejucal-rata; historiasivu kertoo de Soresin
+   * hyökkäyksestä ja Real Fuerzasta, 1700-luvun väkiluvusta, vuoden
+   * 1762 brittivalloituksesta ja USS Mainen tuhosta; linnoitussivu
+   * vaakunasta, Morrosta, La Cabañasta ja maailmanperinnöstä; opas
+   * amerikanautoista, Malecónista, sonista ja ilmastosta. Yksikään
+   * kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Castillo de
+   * la Real Fuerza (23,1414 / -82,3487), Morro, La Cabaña ja Punta
+   * mahtuisivat kolmea jälkimmäistä lukuun ottamatta ruutuun, mutta ne
+   * ovat lehden linnoitussivun neljän noston aihe. Malecón jätettiin
+   * pois samasta syystä: se on matkaoppaan jakson 2 aihe.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Gran Teatro on
+   * 181 metriä Capitoliosta ja Museo Nacional de Bellas Artes 147
+   * metriä Bacardí-talosta. Kummastakin parista valittiin se, jonka
+   * juttu kertoo enemmän kaupungin omasta historiasta.
+   *
+   * EL TEMPLETE EI OLE OMA KOHTEENSA VAAN OSA PLAZA DE ARMASIA. Se on
+   * 140 metriä kuvernöörin palatsista eli säännön alle, ja se on
+   * kirjoitettu Plaza de Armasin juttuun.
+   */
+  havanna: {
+    polku: 'assets/kartat/havanna-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 23.1450, etela: 23.1290, lansi: -82.3645, ita: -82.3430 },
+    esittely: 'Kartan alue on se, jonka sisällä Havanna eli kolmesataa '
+      + 'vuotta muurien takana: oikeassa reunassa on satamalahti, '
+      + 'keskellä vanhankaupungin ahdas ruudukko neljine aukioineen ja '
+      + 'vasemmalla se leveä kaari, jonka muurien purkaminen jätti '
+      + 'jälkeensä — Prado ja Capitolion aukio. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Halifaxissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 201 metriä
+       * (San Franciscon basilika – Plaza Vieja), toiseksi pienin 249
+       * metriä (El Capitolio – Intiaanittaren lähde).
+       */
+      { nimi: 'Katedraaliaukio', lat: 23.140892, lon: -82.351628 },
+      { nimi: 'Plaza de Armas', lat: 23.14, lon: -82.349167 },
+      { nimi: 'Bacardí-talo', lat: 23.1389, lon: -82.3571 },
+      { nimi: 'San Franciscon basilika', lat: 23.136944, lon: -82.348333 },
+      { nimi: 'Plaza Vieja', lat: 23.136078, lon: -82.350061 },
+      { nimi: 'El Capitolio', lat: 23.135278, lon: -82.359444 },
+      { nimi: 'Intiaanittaren lähde', lat: 23.133272, lon: -82.358361 },
+      { nimi: 'Pyhän Hengen kirkko', lat: 23.1325, lon: -82.3504 },
+    ],
+  },
+  /*
+   * MEXICO CITY (7.9.2026). Rajaus on 2,2 × 2,2 kilometriä eli lähes
+   * neliö historiallisen keskustan pohjoispuoliskosta — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n mexico-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat kotka ja
+   * kaktus, vuoden 1521 piiritys, vajoava kaupunki ja Zócalon nimi;
+   * historiasivu kertoo palatsien kaupungista, Chapultepecin linnasta,
+   * Reforman bulevardista ja Alameda Centralista; atsteekkisivu Templo
+   * Mayorista, nahuatlista, chinampoista ja nykyisestä perinnöstä.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS, ja kaikki
+   * viisi ovat ruudun sisällä: Zócalo, katedraali, kansallispalatsi,
+   * Templo Mayor ja Alameda Centralin itäpää. Ne näkyvät kartalla
+   * katuverkkona ja puistona mutta ilman numeroa, koska niiden tarina
+   * on jo lehdessä.
+   *
+   * PALACIO DE BELLAS ARTES ON KUUDES POISJÄTETTY. Sitä ei jätetty
+   * etäisyyden takia vaan siksi, että lehden vajoamisnostossa
+   * marmoripalatsi on nimenomaisena esimerkkinä; kartan piste kertoisi
+   * saman rakennuksen uudelleen.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Casa de los
+   * Azulejos on 86 metriä San Franciscon luostarikirkosta,
+   * Iturbiden palatsi 144 metriä samasta, ja Museo Nacional de Arte
+   * 127 metriä Palacio de Correosista.
+   */
+  mexico: {
+    polku: 'assets/kartat/mexico-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 19.445, etela: 19.425, lansi: -99.1475, ita: -99.1265 },
+    esittely: 'Kartta näyttää sen ruutukaavan, jonka espanjalaiset '
+      + 'piirsivät Tenochtitlanin raunioiden päälle: kadut kohtaavat '
+      + 'suorassa kulmassa, ja korttelit ovat lähes samankokoisia. '
+      + 'Oikeassa alakulmassa on Zócalon aukea, keskellä kulkee Madero '
+      + 'ja vasemmassa reunassa alkaa Alameda Centralin puisto. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 250 metriä (Palacio de Correos – San Franciscon
+       * luostarikirkko), toiseksi pienin 310 metriä (San Ildefonso –
+       * Kansojen museo).
+       */
+      { nimi: 'Plaza Garibaldi', lat: 19.441, lon: -99.139 },
+      { nimi: 'Santo Domingon aukio', lat: 19.438378, lon: -99.133717 },
+      { nimi: 'Kaupunginteatteri', lat: 19.436561, lon: -99.137267 },
+      { nimi: 'San Ildefonson kollegio', lat: 19.43605, lon: -99.130658 },
+      { nimi: 'Postipalatsi', lat: 19.435686, lon: -99.1404 },
+      { nimi: 'San Franciscon luostarikirkko', lat: 19.43345, lon: -99.140197 },
+      { nimi: 'Kansojen museo', lat: 19.433269, lon: -99.130464 },
+      { nimi: 'Vizcaínas-koulu', lat: 19.428433, lon: -99.140711 },
+    ],
+  },
 };
 
 /*

@@ -48301,4 +48301,659 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * HAVANNAN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026). Kartta on
+   * js/packs/maakartat.js: KAUPUNKIKARTAT.havanna, ja jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit "Plaza de
+   * la Catedral", "Havana Cathedral", "Plaza de Armas (Havana)", "El
+   * Templete", "Palacio de los Capitanes Generales", "Bacardi Building
+   * (Havana)", "Basilica of San Francisco de Asís, Havana", "Plaza
+   * Vieja, Havana", "National Capitol of Cuba", "Fuente de la India" ja
+   * "Church del Espíritu Santo, Havana").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat kaupungin kaksi siirtoa, Uuden maailman avain, kaupunginmuuri,
+   * Havanna–Bejucal-rata, de Soresin hyökkäys ja Real Fuerza,
+   * 1700-luvun väkiluku, vuoden 1762 brittivalloitus, USS Maine,
+   * vaakuna, Morro, La Cabaña ja maailmanperintö; opas kertoo
+   * amerikanautoista, Malecónista, sonista ja ilmastosta. Yksikään
+   * kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. San Franciscon
+   * basilikan jutussa EI kerrota vuoden 1762 piirityksestä, vaikka
+   * britit käyttivät kirkkoa jumalanpalveluksiinsa hallintovuotenaan:
+   * piiritys on lehden noston H3 aihe. Plaza Viejan jutussa
+   * maailmanperintöpäätöstä EI selitetä, vaikka entistäminen alkoi sen
+   * jälkeen — päätös on lehden noston L4 aihe. Plaza de Armasin
+   * jutussa ei mainita aukion pohjoislaidan Real Fuerzaa, joka on
+   * noston H1 aihe.
+   */
+  havanna: {
+    Katedraaliaukio: {
+      aika: '1748–1777',
+      teksti: 'Aukio oli alun perin suo, ja sen nimi oli Plaza de la '
+          + 'Ciénaga eli Suoaukio. Se kuivattiin ja otettiin laivaston '
+          + 'telakaksi. Santiago de Cuban piispa Diego Evelino Hurtado '
+          + 'de Compostela osti aukion laidalta tontin, ja vuonna 1727 '
+          + 'hyväksyttiin suunnitelma kirkosta, luostarista ja '
+          + 'kollegiosta. Kun katedraali valmistui, aukion ympärille '
+          + 'nousivat kaupungin komeimmat kartanot; niistä yhdessä, '
+          + 'kreivi Lombillon palatsissa, toimii nykyään '
+          + 'siirtomaataiteen museo.'
+          + '\n\n'
+          + 'Jesuiitat aloittivat katedraalin rakentamisen 1748 '
+          + 'vanhemman kirkon paikalle, ja työ valmistui 1777 — siis '
+          + 'kymmenen vuotta sen jälkeen, kun kuningas Kaarle III oli '
+          + 'karkottanut jesuiitat saarelta 1767. Kirkko vihittiin '
+          + '1782. Se on 30 metriä leveä ja 49 pitkä, pohjaltaan '
+          + 'latinalainen risti: keskilaiva on 15 metriä leveä, '
+          + 'sivulaivoja on kaksi ja sivukappeleita kahdeksan. '
+          + 'Barokkijulkisivun kellotornit ovat eri kokoiset. '
+          + 'Rakennuskivi on korallia, ja seinistä erottuu paljain '
+          + 'silmin merieläinten ja -kasvien fossiileja.'
+          + '\n\n'
+          + 'Kristoffer Kolumbuksen jäännökset lepäsivät täällä sata '
+          + 'vuotta. Kun Espanja luovutti Baselin rauhassa 1795 suuren '
+          + 'osan Hispaniolaa Ranskalle, jäännökset siirrettiin 1796 '
+          + 'Havannan katedraalin evankeliumialttarin alle. '
+          + 'Hautakiveen kaiverrettiin kehotus säilyttää ne uurnassa '
+          + 'tuhat vuotta; ne palautettiin Espanjaan 1898 ja ovat nyt '
+          + 'Sevillan katedraalissa. Piispa Espada, innokas '
+          + 'uusklassismin ihailija, vaihdatti 1800-luvun alussa '
+          + 'barokkialttarit uusklassisiin ja rapautti puukatot '
+          + 'umpeen. Alttarin yläpuolella on kolme haalistunutta '
+          + 'freskoa italialaiselta Giuseppe Perovanilta, ja kirkossa '
+          + 'on vuonna 1632 Sevillassa veistetty pyhän Kristoforoksen '
+          + 'kuva, kaupungin suojeluspyhimys.',
+      lahde: 'Wikipedia',
+    },
+    'Plaza de Armas': {
+      aika: '1520-luku',
+      teksti: 'Kun espanjalaiset perustivat kaupungin 1519, tapaan '
+          + 'kuului varata heti tilaa julkiselle aukiolle. Plaza de '
+          + 'Armas syntyi 1520-luvun alussa vanhankaupungin '
+          + 'ensimmäiseksi aukioksi, ja se oli sotilaiden ja '
+          + 'hallinnon paikka — nimi tarkoittaa aseiden aukiota. '
+          + '1580-luvulle tultaessa se oli otettu kokonaan '
+          + 'sotilaskäyttöön. Vuonna 1896 aukiota kuvattiin neljäksi '
+          + 'ceibapuiden varjostamaksi puistoksi, joiden keskellä '
+          + 'seisoi Ferdinand VII:n marmoripatsas.'
+          + '\n\n'
+          + 'Aukion itälaidalla on kuvernöörien palatsi. Kuvernööri '
+          + 'Felipe de Fondesviela, markiisi de la Torre, esitti '
+          + 'kaupunginvaltuustolle 28. tammikuuta 1773, että vanha '
+          + 'pääkirkko puretaan ja tilalle rakennetaan palatsi. Työ '
+          + 'alkoi 1776 kuubalaisen insinöörin Antonio Fernández de '
+          + 'Trebejos y Zaldívarin piirustusten mukaan. Aineet '
+          + 'tuotiin kaukaa laadun takaamiseksi: tiilet Málagasta, '
+          + 'takorautaristikot Bilbaosta, marmori Genovasta. Työ tehtiin '
+          + 'orjatyövoimalla ja edistyi hitaasti, ja vasta kuudes '
+          + 'kuvernööri Luis de las Casas pääsi muuttamaan sisään '
+          + '1791; talo valmistui 1792. Siinä oli kuvernöörin asunto, '
+          + 'kaupunginvaltuuston kokoushuone ja länsisiivessä vankila, '
+          + 'joka suljettiin 1834.'
+          + '\n\n'
+          + 'Palatsin vaiheet ovat kaupungin vaiheita. Viimeinen '
+          + 'siirtomaakuvernööri lähti 1898, yhdysvaltalaiset '
+          + 'sotilaskuvernöörit käyttivät taloa 1899–1902, tasavallan '
+          + 'presidentti asui siinä 1902–1920, ja sen jälkeen se '
+          + 'palasi kaupunginvaltuustolle; museona se on ollut 1968 '
+          + 'lähtien. Aukion koillisnurkassa seisoo El Templete, pieni '
+          + 'uusklassinen muistomerkki 16. marraskuuta 1519 pidetylle '
+          + 'ensimmäiselle messulle. Sen sisäseinät maalasi '
+          + 'ranskalainen Jean Baptiste Vermay, San Alejandron '
+          + 'taideakatemian perustaja ja ensimmäinen johtaja.',
+      lahde: 'Wikipedia',
+    },
+    'Bacardí-talo': {
+      aika: '1930',
+      teksti: 'Bacardí-rommiyhtiö halusi pääkonttorin ja järjesti '
+          + 'suunnittelukilpailun: se kutsui joukon arkkitehteja ja '
+          + 'lupasi voittajalle tuhat pesoa. Tuomaristossa istuivat '
+          + 'yhtiön johtaja Henri Schueg Chassin sekä arkkitehdit '
+          + 'Leonardo Morales y Pedroso, Enrique Gil, Emilio de Soto '
+          + 'ja Pedro Martínez Inclán. Voiton veivät Esteban '
+          + 'Rodríguez-Castells ja Rafael Fernández Ruenes. Tontti on '
+          + '1 320 neliömetriä Monserraten ja San Juan de Diosin '
+          + 'kulmassa Las Murallasin kaupunginosassa — sillä kaistalla, '
+          + 'jonka purettu kaupunginmuuri jätti jälkeensä.'
+          + '\n\n'
+          + 'Työ alkoi 6. tammikuuta 1930, ja yhtiö oli asettanut sille '
+          + '300 päivän määräajan; talo valmistui joulukuussa saman '
+          + 'vuoden puolella. Maaperä oli huono, joten perustukset '
+          + 'tehtiin kovapuupaaluille — jiquí ja júcaro negro — ja '
+          + 'lujabetonille. Marmori ja graniitti tuotiin Euroopasta: '
+          + 'Saksasta, Ruotsista, Norjasta, Italiasta, Ranskasta, '
+          + 'Belgiasta ja Unkarista. Ensimmäisen kerroksen seinät, '
+          + 'lattia ja katto ovat baijerilaista vaaleanpunaista '
+          + 'graniittia ja kaksi salia vihreää marmoria lattiasta '
+          + 'kattoon; kivityön teki baijerilainen Grasyma-yhtiö.'
+          + '\n\n'
+          + 'Talo oli valmistuessaan Havannan korkein. Huipulla, 47 '
+          + 'metrissä, on pronssinen lepakko eli yhtiön tunnus, ja '
+          + 'räystäslinjassa kiertää litteitä seireenireliefejä. '
+          + 'Hissejä on neljä: kaksi kymmenen hengen matkustajahissiä, '
+          + 'jotka nousevat 110 metriä minuutissa, 1 800 kilon '
+          + 'tavarahissi ja neljäs pelkästään kellarin ja ensimmäisen '
+          + 'kerroksen väliin. Talo siirtyi valtiolle 1960-luvun '
+          + 'alussa, ja italialainen rakennusliike entisti sen 2001; '
+          + 'marmori- ja graniittisisustus on tallella. Sitä pidetään '
+          + 'yhtenä Latinalaisen Amerikan hienoimmista art deco '
+          + '-rakennuksista.',
+      lahde: 'Wikipedia',
+    },
+    'San Franciscon basilika': {
+      aika: '1548–1591',
+      teksti: 'Fransiskaanien luostarikirkon rakentaminen alkoi 1548 '
+          + 'ja kesti vuoteen 1591, vaikka kirkko vihittiin käyttöön jo '
+          + '1575. Myrskyt vaurioittivat sitä 1680 ja 1692, ja '
+          + 'hirmumyrsky katkaisi tornin 1694. Nykyinen muoto on '
+          + 'aloitettu 1716, ja rakenteita uusittiin 1731–1738. '
+          + 'Pikkubasilikan arvon kirkko sai 1739. Julkisivu on '
+          + 'Oficios-kadun puolella, ja siinä on kolme kivipatsasta: '
+          + 'Neitsyt Marian tahraton sikiäminen, Franciscus '
+          + 'Assisilainen ja pyhä Dominicus.'
+          + '\n\n'
+          + 'Kirkon edessä oleva Plaza de San Francisco perustettiin 2. '
+          + 'kesäkuuta 1628, ja se on Havannan vanhimpia aukioita. '
+          + 'Vuonna 1761 kaupungin pormestari José Martín Félix de '
+          + 'Arrate piti sitä kaupungin parhaana paikkana, ja siihen '
+          + 'aikaan aukiolle avautuivat sekä raatihuone, poliisitalo, '
+          + 'vankila että tullikamari. Aukion Leijonain lähde on '
+          + 'italialaisen Giuseppe Gagginin työtä ja pystytettiin '
+          + '1836.'
+          + '\n\n'
+          + 'Kirkollinen käyttö loppui, ja rakennus sai maallisia '
+          + 'tehtäviä: 1842 siihen muutti Kuuban pääpostikonttori, ja '
+          + 'myöhemmin siinä toimi muitakin hallinnon virastoja. '
+          + 'Kellotorni on noin 42 metriä korkea. Sen huipulla seisoi '
+          + 'alun perin Franciscus Assisilaisen patsas, mutta pyörremyrsky '
+          + 'tuhosi sen 1846. Nykyään kirkkosali on konserttisali ja '
+          + 'vuoden 1739 ristikäytävässä on kirkkotaiteen museo. '
+          + 'Kirkon edessä jalkakäytävällä seisoo José Villa Soberónin '
+          + 'veistämä luonnollisen kokoinen pronssipatsas José María '
+          + 'López Lledínistä, jota kaupunki kutsui Pariisin '
+          + 'ritariksi; hänet on haudattu kirkon sisään.',
+      lahde: 'Wikipedia',
+    },
+    'Plaza Vieja': {
+      aika: '1559',
+      teksti: 'Aukio avattiin 1559 kolmantena Plaza de Armasin ja San '
+          + 'Franciscon jälkeen, ja sen nimi oli aluksi Plaza Nueva '
+          + 'eli Uusi aukio: se oli kansanomainen vaihtoehto '
+          + 'sotilaiden ja hallinnon aukiolle. Nimi vaihtui vasta, kun '
+          + 'kaupunkiin syntyi vielä uudempi aukio, Plaza del Santo '
+          + 'Cristo. Siirtomaa-aikana korttelit aukion ympärillä olivat '
+          + 'kreoliylimystön asuinaluetta, ja aukiolla nähtiin '
+          + 'teloituksia, kulkueita, härkätaisteluja ja juhlia — '
+          + 'kaupungin varakkaimmat katselivat niitä parvekkeiltaan.'
+          + '\n\n'
+          + '1700-luvulla aukiosta tuli tori ja sen nimi oli Plaza del '
+          + 'Mercado, kaupungin kaupallinen keskus. Kun Santo Criston '
+          + 'aukiolle avattiin 1814 uusi tori, Mercado Nuevo, vanha '
+          + 'sai nimekseen Plaza Vieja erotukseksi. Nimiä on kertynyt '
+          + 'muitakin: Plaza Real, Mayor, Mercado, Fernando VII, '
+          + 'Perustuslain aukio sekä Juan Bruno Zayasin ja Julián '
+          + 'Grimaun puisto.'
+          + '\n\n'
+          + 'Aukiota reunustavat 1600-, 1700- ja 1800-luvun '
+          + 'siirtomaatalot ja muutama 1900-luvun alun rakennus. '
+          + 'Alkuperäinen Carraran marmorista tehty suihkulähde, jota '
+          + 'ympäröi neljä delfiiniä, purettiin 1930-luvulla, kun '
+          + 'presidentti Gerardo Machado rakennutti aukion alle '
+          + 'pysäköintihallin. Entistäminen alkoi 1980-luvun alussa. '
+          + 'Aukio ja sen ympäristö ovat samalla yksi vanhankaupungin '
+          + 'seitsemästä kaupunginosasta, ja siinä asuu noin 17 400 '
+          + 'ihmistä.',
+      lahde: 'Wikipedia',
+    },
+    'El Capitolio': {
+      aika: '1926–1929',
+      teksti: 'Capitolio nousi paikalle, jolla oli ollut Villanuevan '
+          + 'rautatieaseman pääteasema; aivan sen vastapäätä olivat '
+          + 'seisoneet kaupunginmuurit, jotka purettiin 1863. Hanke '
+          + 'alkoi huhtikuussa 1926 presidentti Gerardo Machadon '
+          + 'kaudella, työtä johti Eugenio Rayneri Piedra ja '
+          + 'rakentamista valvoi yhdysvaltalainen Purdy and Henderson. '
+          + 'Talo on 207 metriä pitkä ja 91 leveä. Sen tekemiseen '
+          + 'tarvittiin yli 5 000 työntekijää, kolme vuotta, kolme '
+          + 'kuukautta ja kaksikymmentä päivää sekä noin 17 miljoonaa '
+          + 'dollaria.'
+          + '\n\n'
+          + 'Kupoli on teräsrungon päälle kivetty, ja teräs tehtiin '
+          + 'Yhdysvalloissa. Se on sijoitettu muuta rakennusta '
+          + 'edemmäs, jotta alle mahtuu apsis. Lähes 92-metrinen '
+          + 'kupoli oli Havannan korkein kohta vuoteen 1956, jolloin '
+          + '121-metrinen FOCSA-talo valmistui, ja rakennusaikanaan '
+          + 'maailman kolmanneksi korkein kupoli. Rayneri Piedran '
+          + 'mukaan esikuva oli Pariisin Panthéon ja sen kautta '
+          + 'Bramanten Tempietto. Pääsisäänkäynnin 55 porrasta '
+          + 'reunustavat italialaisen Angelo Zanellin 6,5-metriset '
+          + 'veistokset Työ ja Suojeleva hyve, ja pylväikkö on 36 '
+          + 'metriä leveä ja yli 16 korkea; sen kaksitoista '
+          + 'graniittipylvästä ovat kukin yli 14 metriä.'
+          + '\n\n'
+          + 'Kupolin alla seisoo Zanellin Tasavallan patsas. Se '
+          + 'valettiin pronssiin Roomassa kolmena kappaleena ja '
+          + 'koottiin vasta Kuubassa; se painaa 49 tonnia, on '
+          + 'päällystetty 22 karaatin kultalehdellä ja on 15 metriä '
+          + 'korkea, jalustoineen 17,54 — aikanaan maailman toiseksi '
+          + 'korkein sisätilassa oleva patsas heti Naran suuren '
+          + 'Buddhan jälkeen. Salin keskellä lattiassa on 25 karaatin '
+          + 'timantin jäljennös, Kuuban nollakilometri. Alkuperäinen '
+          + 'varastettiin 25. maaliskuuta 1946 ja palautettiin '
+          + 'arvoituksellisesti presidentti Ramón Grau San Martínille '
+          + '2. kesäkuuta 1947. Kaupunginhistorioitsija Eusebio Leal '
+          + 'julisti entistämisen päättyneeksi 30. elokuuta 2019, kun '
+          + 'kupoli paljastettiin.',
+      lahde: 'Wikipedia',
+    },
+    'Intiaanittaren lähde': {
+      aika: '1837',
+      teksti: 'Suihkulähde syntyi Villanuevan kreivin Claudio Martínez '
+          + 'de Pinillosin aloitteesta. Se tuotiin Italiasta 1837, ja '
+          + 'sen muotoili Carraran marmorista italialainen Giuseppe '
+          + 'Gaggini. Kolmimetrinen valkoinen marmoriveistos seisoo '
+          + 'suorakulmaisella jalustalla, jonka joka kulmassa on '
+          + 'delfiini; delfiinien kielistä valuu vesi suuriin simpukan '
+          + 'kuoriin, jotka muodostavat lähteen altaan. Hahmo esittää '
+          + 'intiaaninaista nimeltä Habana, jonka mukaan kaupunki on '
+          + 'nimetty.'
+          + '\n\n'
+          + 'Nainen istuu kalliolla ja katsoo itään. Kasvot ovat '
+          + 'intiaanin, mutta profiili on kreikkalainen — juuri se on '
+          + 'ollut voimakkain kritiikki veistäjää kohtaan, sillä '
+          + 'kreikkalainen profiili oli aikansa käsitys naisellisesta '
+          + 'täydellisyydestä. Vasemmalla olkapäällä on '
+          + 'sulkakruunu ja nuoliviini, oikea käsi pitelee soikean '
+          + 'kilven ylälaitaa, jossa on kaupungin alkuperäiset '
+          + 'tunnukset, ja vasemmassa on Amaltheian runsaudensarvi. '
+          + 'Siihen italialainen taiteilija vaihtoi eurooppalaisten '
+          + 'hedelmien tilalle kuubalaiset ja pani huipulle ananaksen. '
+          + 'Jalustaa koristavat laakerit ja seppeleet.'
+          + '\n\n'
+          + 'Lähde on muuttanut useammin kuin useimmat patsaat. Se '
+          + 'pystytettiin ensin muurien ulkopuolelle Alamedan päähän '
+          + 'eli nykyisen Pradon kohdalle, jossa oli vuodesta 1803 '
+          + 'seisonut Kaarle III:n patsas. Vuonna 1863 valtuusto '
+          + 'siirsi sen Parque Centralille, ja 1875 se palautettiin '
+          + 'alkuperäiselle paikalleen mutta käännettynä kohti Campo '
+          + 'de Marten kenttää. Vuonna 1928, kun viereinen alue '
+          + 'muuttui Veljeyden aukioksi, veistos käännettiin vielä 90 '
+          + 'astetta uutta Capitoliota kohti. Nyt se katsoo suoraan '
+          + 'pohjoiseen, joten kasvot ovat aina varjossa.',
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Hengen kirkko': {
+      aika: '1635',
+      teksti: 'Kirkko rakennettiin 1635 Cuba- ja Acosta-katujen '
+          + 'kulmaan, ja se uusittiin ja laajennettiin 1648, jolloin '
+          + 'siitä tuli seurakuntakirkko. Sen kiinnostavuus on '
+          + 'koruttomuudessa: seinät ovat korallikiveä ja koristelu on '
+          + 'niukkaa. Kuubalainen arkkitehti ja historioitsija Joaquín '
+          + 'Weiss luki sen 1600-luvun kuubalaiseen yksilaivaiseen '
+          + 'tyyliin, jossa kirkossa on vain yksi keskilaiva. '
+          + 'Kellotorni rakennettiin 1700-luvun ensi vuosina, '
+          + 'kuorin holvi noin 1720 ja sivulaiva — kahdeksan kertaa 29 '
+          + 'metriä — vuonna 1760 piispa Pedro Morell de Santa Cruzin '
+          + 'käskystä.'
+          + '\n\n'
+          + 'Kirkolla oli siirtomaa-aikana poikkeuksellinen asema. '
+          + 'Paavin bulla 1772 ja Kaarle III:n kuninkaallinen kirje '
+          + '1773 julistivat sen kaupungin ainoaksi turvakirkoksi: '
+          + 'kuka tahansa vainottu sai siellä suojan viranomaisilta ja '
+          + 'oikeudelta. Asiasta kertoo yhä metallilaatta kellotornin '
+          + 'juurella.'
+          + '\n\n'
+          + 'Kirkon alla on hautaholveja, jotka löydettiin 1953. '
+          + 'Niihin mennään alttarin vasemmalta puolelta, ja ne ovat '
+          + 'vanhempia kuin Vedadon Colón-hautausmaa, joka avattiin '
+          + '1876. Maalauksista osa on José Nicolás de la Escaleran, '
+          + 'jota kutsutaan Kuuban ensimmäiseksi maalariksi, ja osa '
+          + '1900-luvun Arístides Fernándezin — hänen suuri '
+          + 'öljymaalauksensa esittää Kristuksen hautaamista. Oikealla '
+          + 'seinällä on istuva ristiltäotettu Kristus.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * MEXICO CITYN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.mexico, ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit
+   * "Plaza Garibaldi", "Santo Domingo (Mexico City)", "Teatro de la
+   * Ciudad", "Colegio de San Ildefonso", "Palacio de Correos de
+   * México", "Convent of San Francisco, Madero Street, Mexico City",
+   * "Museo Nacional de las Culturas" ja "Colegio de San Ignacio de
+   * Loyola Vizcaínas").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat kotka ja kaktus, vuoden 1521 piiritys, vajoava kaupunki,
+   * Zócalon nimi, palatsien kaupunki, Chapultepecin linna, Reforman
+   * bulevardi, Alameda Central, Templo Mayor, nahuatl, chinampat ja
+   * nykyinen atsteekkiperintö. Yksikään kartan kohteista ei ole niiden
+   * aihe.
+   *
+   * VAJOAMINEN MAINITAAN KAHDESSA JUTUSSA MUTTA VAIN YHDEN RAKENNUKSEN
+   * MITTAISENA. San Franciscon luostarikirkon kaksi edeltäjää vajosivat
+   * ja purettiin, ja Vizcaínas-koulun Aldaco-kadun kivipalkeissa näkyy
+   * aaltoja. Kaupungin mittainen tarina — yhdeksän metriä, puoli
+   * metriä vuodessa, kanavat ja tunnelit — on lehden noston aihe, eikä
+   * sitä toisteta täällä.
+   *
+   * PALACIO DE BELLAS ARTES JÄTETTIIN POIS SAMASTA SYYSTÄ. Se on
+   * lehden vajoamisnostossa nimeltä mainittu esimerkki, joten kartalla
+   * se on rakennus muiden joukossa eikä numeroitu kohde.
+   */
+  mexico: {
+    'Plaza Garibaldi': {
+      aika: '1920',
+      teksti: 'Aukio on Eje Centralin varrella Hondurasin ja Perun '
+          + 'tasavallan katujen välissä, muutaman korttelin '
+          + 'pohjoispuolella Palacio de Bellas Artesia. Sen '
+          + 'alkuperäinen nimi oli Plaza Santa Cecilia. Nykyisen '
+          + 'nimensä se sai 1920 Meksikon vallankumouksen päätyttyä '
+          + 'everstiluutnantti Peppino Garibaldin mukaan, joka liittyi '
+          + 'maderistien joukkoihin Casas Grandesin hyökkäyksessä '
+          + 'Chihuahuassa.'
+          + '\n\n'
+          + 'Aukio on Mexico Cityn mariachi-musiikin koti. Aukion '
+          + 'pohjoislaidalla toimii yhä Salón Tenampa, josta tuli '
+          + 'mariachin päänäyttämö 1920-luvulla, kun Cirilo Marmolejo '
+          + 'orkestereineen alkoi soittaa siellä säännöllisesti. Muut '
+          + 'soittajat seurasivat perässä, ja aukiolla alettiin maksaa '
+          + 'muusikoille siitä, että he lauloivat tilaajan '
+          + 'kumppanille.'
+          + '\n\n'
+          + 'Meksikolaisen elokuvan kulta-aika 1930-luvulta '
+          + '1950-luvulle teki musiikista koko maan omaisuutta. '
+          + 'Charro-elokuvien tähdet Tito Guízar, Jorge Negrete, José '
+          + 'Alfredo Jiménez ja Pedro Infante lauloivat mariachia '
+          + 'vastanäyttelijättärilleen. Charro-elokuva on '
+          + 'sittemmin vaihtunut muuhun, mutta mariachi-yhtyeet '
+          + 'soittavat aukiolla yötä päivää, ja niiden rinnalle ovat '
+          + 'tulleet triot ja Veracruzin jarocho-yhtyeet; osa '
+          + 'soittajista asettuu riviin Eje Centralin varteen '
+          + 'kysymään keikkoja ohiajavilta. Kaupunki nimesi alueen '
+          + 'vuonna 2011 taikakortteliksi eli Barrio Mágicoksi.',
+      lahde: 'Wikipedia',
+    },
+    'Santo Domingon aukio': {
+      aika: '1590',
+      teksti: 'Kolme korttelia katedraalista pohjoiseen on aukio ja '
+          + 'sen kirkko, ja kirkko on kaikki mitä on jäljellä yhdestä '
+          + 'Uuden Espanjan ensimmäisistä luostareista. Dominikaanit '
+          + 'saapuivat 1526 ja muuttivat Guerreron suvun lahjoittamiin '
+          + 'taloihin — samalle tontille, jolle myöhemmin rakennettiin '
+          + 'inkvisition palatsi. Talojen tilalle tuli kirkko, '
+          + 'asuintilat ja vankila. Paikan ensimmäinen kirkko '
+          + 'vihittiin 1590, ja Filip II rahoitti sen ympärille '
+          + 'luostarin, jossa oli neljä sisäpihaa, sali, ruokala, '
+          + 'kirjasto ja sairastupa. Huono rakennustyö, pehmeä maa ja '
+          + 'maanjäristykset pakottivat rakentamaan uudelleen.'
+          + '\n\n'
+          + 'Nykyinen kirkko luetaan tyylinsä perusteella Pedro de '
+          + 'Arrietan työksi. Julkisivu on verhoiltu tezontlella, '
+          + 'verenpunaisella vulkaanisella kivellä, ja portaali on '
+          + 'enimmäkseen harmaanvalkoista canteraa. Pääoven ympärillä '
+          + 'on kaksitoista pylvästä, ja kivireliefissä pyhä Dominicus '
+          + 'polvistuu ottamaan vastaan taivaan avaimet pyhältä '
+          + 'Pietarilta ja kirjeet pyhältä Paavalilta. Pääalttari on '
+          + 'Manuel Tolsán uusklassinen työ, joka korvasi Pedro Patiño '
+          + 'Ixtolinquen barokkialttarin. Kuoripenkit muodostavat '
+          + 'hevosenkengän: 32 setripuista istuinta, joiden '
+          + 'selkänojaan on veistetty kuhunkin eri pyhimys. Kirkkoon '
+          + 'on haudattu valloittaja ja tutkimusmatkailija Francisco '
+          + 'Vázquez de Coronado.'
+          + '\n\n'
+          + 'Aukion länsilaitaa kiertää Portal de los Evangelistas, '
+          + 'toscanalainen pylväskäytävä pyöreine kaarineen. Sen alla '
+          + 'istuvat yhä kirjurit kirjoituskoneineen ja vanhoine '
+          + 'painokoneineen ja kirjoittavat asiakkaille, jotka eivät '
+          + 'itse kirjoita; palvelu on lähellä sitä, mitä asianajaja '
+          + 'tai neuvonantaja tekee. Aukion keskellä olevassa '
+          + 'suihkulähteessä seisoo Meksikon itsenäisyyssodan '
+          + 'sankarittaren Josefa Ortiz de Domínguezin patsas.',
+      lahde: 'Wikipedia',
+    },
+    Kaupunginteatteri: {
+      aika: '1918',
+      teksti: 'Teatteri rakennettiin 1918 Donceles-kadun numeroon 36 '
+          + 'vanhan Teatro Xicoténcatlin paikalle, ja se nimettiin '
+          + 'primadonna Esperanza Iriksen mukaan. Iris — oikealta '
+          + 'nimeltään María Esperanza Bonfil — oli Tabascon '
+          + 'osavaltiosta kotoisin oleva operettilaulaja, jonka ura '
+          + 'kukoisti Mexico Cityssä, Havannassa ja Madridissa ja joka '
+          + 'kiersi laajalti Amerikoissa. Tunnetuimpia rooleja olivat '
+          + 'Iloinen leski, Luxemburgin kreivi ja La princesa del '
+          + 'dólar; 1930-luvulla hän näytteli myös elokuvissa.'
+          + '\n\n'
+          + 'Iris rahoitti teatteria itse edellisen kiertueensa '
+          + 'tuotoilla. Arkkitehdit Capetillo Servín ja Federico '
+          + 'Mariscal ottivat esikuvaksi Milanon La Scalan. Teatteri '
+          + 'avattiin 25. toukokuuta 1918 kaksi päivää sen jälkeen, '
+          + 'kun laulajatar oli palannut Etelä-Amerikasta; paikalla '
+          + 'olivat presidentti Venustiano Carranza ja hänen '
+          + 'hallituksensa. Avausnäytäntö oli La Duquesa del '
+          + 'Bal-Tabarín, ja Iris lauloi osan numeroista itse. '
+          + 'Sodasta huolimatta hän sai lavalle Enrico Caruson ja Anna '
+          + 'Pavlovan. Palacio de Bellas Artesin avautumiseen 1930-luvulla '
+          + 'asti tämä oli kaupungin tärkein kulttuurinäyttämö.'
+          + '\n\n'
+          + 'Iris asui aikanaan teatterin lämpiössä ja piti omaa '
+          + 'aitiota niitä esityksiä varten, joissa ei itse esiintynyt. '
+          + 'Hänen kuollessaan 1962 talo oli käytännössä hylätty. '
+          + 'Kaupunki otti sen 1976 kulttuurikäyttöön ja antoi sille '
+          + 'nimen Teatro de la Ciudad. Ensimmäisessä korjauksessa '
+          + 'sähkökipinä sytytti tulipalon, joka tuhosi suuren osan '
+          + 'rakennuksesta, ja talo oli kiinni, kunnes entistäminen '
+          + 'aloitettiin uudelleen 1999 ja saatiin päätökseen 2002. '
+          + 'Vuonna 2008 kaupunki palautti Esperanza Iriksen nimen '
+          + 'teatterin nimeen.',
+      lahde: 'Wikipedia',
+    },
+    'San Ildefonson kollegio': {
+      aika: '1588',
+      teksti: 'Jesuiitat saapuivat Meksikoon 1572, ja kun Keski-Meksikon '
+          + 'lähetystyö oli enimmäkseen tehty, he ryhtyivät '
+          + 'perustamaan kouluja. Niistä tärkein oli San Ildefonso, '
+          + 'joka perustettiin 1588. Vuonna 1618 se yhdistettiin '
+          + 'lähes raunioituneeseen San Pedro y San Pablon kollegioon '
+          + 'ja sai kuninkaallisen sinetin Filip III:lta. Kollegio ei '
+          + 'ollut korkeakoulu nykyisessä mielessä vaan asuntola ja '
+          + 'koulu: nuorukaiset asuivat ja opiskelivat täällä mutta '
+          + 'olivat samalla kirjoilla kuninkaallisessa ja '
+          + 'paavillisessa yliopistossa.'
+          + '\n\n'
+          + 'Talo kasvoi koulun mukana. Laajennus aloitettiin 1712 ja '
+          + 'saatiin valmiiksi 1749; vanhempaa osaa kutsutaan siitä '
+          + 'lähtien nimellä Colegio Grande ja uutta nimellä Colegio '
+          + 'Chico, ja San Ildefonso -kadun julkisivu on samalta '
+          + 'ajalta. Kokonaisuus jakautuu kuuteen osaan: viisi on '
+          + 'siirtomaa-ajan barokkia — kaksi kollegiota, kappeli, El '
+          + 'Generalito ja Pasantesin pihamaa, kaikki valmiina 1749 — '
+          + 'ja yksi uusbarokkia, vuoden 1911 Bolívar-amfiteatteri. '
+          + 'Jesuiitat karkotettiin Espanjan alueilta 1767, ja koulu '
+          + 'rappeutui; rakennuksessa majoitettiin Flanderin '
+          + 'rykmentin sotilaita ja lääketieteellisen tiedekunnan '
+          + 'osastoja, ja sotien aikana se oli yhdysvaltalaisten ja '
+          + 'ranskalaisten joukkojen kasarmi.'
+          + '\n\n'
+          + 'Vuonna 1867 Benito Juárez siirsi opetuksen pois '
+          + 'kirkolta, ja San Ildefonsosta tuli Escuela Nacional '
+          + 'Preparatoria. Sitä johti Gabino Barreda, joka järjesti '
+          + 'koulun Auguste Comten positivistisen mallin mukaan; '
+          + 'tarkoitus oli tuottaa opiskelijat pian '
+          + 'uudelleenperustettavalle kansallisyliopistolle. Taloa '
+          + 'pidetään meksikolaisen muraaliliikkeen syntypaikkana, ja '
+          + 'sen seinillä on José Clemente Orozcon, Fernando Lealin, '
+          + 'Diego Riveran ja muiden seinämaalauksia. Koulu suljettiin '
+          + '1978, ja rakennus avattiin 1992 uudelleen museona ja '
+          + 'kulttuurikeskuksena.',
+      lahde: 'Wikipedia',
+    },
+    Postipalatsi: {
+      aika: '1902–1907',
+      teksti: 'Vuonna 1901 postilaitoksesta tehtiin oma virastonsa, ja '
+          + 'kun se käsitteli noin 130 miljoonaa lähetystä vuodessa, '
+          + 'päätettiin että sillä pitää olla oma talo. Suunnittelijaksi '
+          + 'valittiin italialainen arkkitehti Adamo Boari ja '
+          + 'rakennustöiden valvojaksi sotilasinsinööri Gonzalo Garita '
+          + 'y Frontera. Tontilla oli ollut fransiskaanien '
+          + 'kolmannen sääntökunnan sairaala, joka purettiin 1902. '
+          + 'Peruskivi laskettiin 14. syyskuuta 1902, ja työ kesti '
+          + 'siitä viisi vuotta. Presidentti Porfirio Díaz vihki talon '
+          + '1907 pudottamalla laatikkoon kaksi postikorttia: toinen '
+          + 'oli osoitettu Mexico Cityyn, toinen muualle maahan.'
+          + '\n\n'
+          + 'Perustus tehtiin uudella menetelmällä, jota kutsuttiin '
+          + 'Chicagoksi: 70 senttiä paksu betonilaatta terästen '
+          + 'vahvistamana. Teräsristikko valmistettiin pääosin New '
+          + 'Yorkissa Milliken Brothersilla ja tuotiin Meksikoon 1903. '
+          + 'Juuri se on syy siihen, että palatsi on kestänyt '
+          + 'maanjäristykset eikä ole painunut naapuriensa tavoin.'
+          + '\n\n'
+          + 'Tyyli on tarkoituksella sekoitus. Siinä on art nouveauta, '
+          + 'espanjalaista renessanssia, platereskia, rokokoota, '
+          + 'elisabetiaanista ja venetsialaista gotiikkaa, mauripiirteitä, '
+          + 'uusklassista, barokkia ja art decoa; jokaisen kerroksen '
+          + 'ikkunat ovat eri tyyliä, ja julkisivun pitää koossa '
+          + 'toistuva kaari. Kivi on chilucaa, lähes läpikuultavan '
+          + 'vaaleaa lajiketta, ja marmori, stukko ja valkoinen '
+          + 'cantera ovat Pueblasta; ikkunoiden kiillotettu messinki '
+          + 'tehtiin Italiassa, ja valaisimia kannattelevat '
+          + 'rautalohikäärmeet. 1950-luvulla naapurin Meksikon '
+          + 'keskuspankki otti talosta suuren osan ja rakennusten '
+          + 'väliin tehtiin kaksi siltaa; muutokset tuhosivat paljon '
+          + 'koristelua ja ylikuormittivat teräsrungon, ja vuoden 1985 '
+          + 'maanjäristys vaurioitti taloa pahoin. Entistäminen '
+          + '1990-luvulla palautti sen alkuperäiseen asuunsa.',
+      lahde: 'Wikipedia',
+    },
+    'San Franciscon luostarikirkko': {
+      aika: '1710–1716',
+      teksti: 'Luostari oli niiden kahdentoista ensimmäisen '
+          + 'fransiskaanin päämaja, jotka tulivat Martín de Valencian '
+          + 'johdolla Meksikoon ensimmäisellä paavin luvalla tehdä '
+          + 'lähetystyötä Uudessa Espanjassa. Se rakennettiin sinne, '
+          + 'missä oli ollut Moctezuma II:n eläintarha. Laajimmillaan '
+          + 'kirkko ja luostari peittivät korttelit, joita nykyään '
+          + 'rajaavat Bolívar, Madero, Eje Central ja Venustiano '
+          + 'Carranza — noin 32 000 neliömetriä. Ensimmäisen '
+          + 'ristikäytävän pihalla seisoi risti, jonka sanottiin '
+          + 'olevan korkeampi kuin kaupungin korkein torni; se oli '
+          + 'veistetty Chapultepecin metsän sypressistä.'
+          + '\n\n'
+          + 'Nykyinen kirkko on paikan kolmas: kaksi ensimmäistä '
+          + 'vajosivat pehmeään maahan ja jouduttiin purkamaan. Tämä '
+          + 'rakennettiin 1710–1716. Madero-kadun puoleinen ovi on '
+          + 'itse asiassa Balvaneran kappelin ovi, jonka julkisivu on '
+          + 'vuodelta 1766 ja jonka tekijäksi arvellaan yleensä '
+          + 'Lorenzo Rodríguezia. Oven edessä on atrium, josta laskee '
+          + 'useita porrasjaksoja alas kirkkoon, sillä tämäkin talo '
+          + 'painuu. Vuoden 1710 pääjulkisivu on jäänyt muurien '
+          + 'sisään, eikä sitä näe.'
+          + '\n\n'
+          + 'Talossa on nähty isoja hetkiä. Hernán Cortésille '
+          + 'pidettiin täällä sielunmessu, kun luultiin että hän oli '
+          + 'kuollut Keski-Amerikassa. Vuonna 1629 Gelvesin markiisi '
+          + 'saapui valepuvussa piiloon riitaannuttuaan arkkipiispan '
+          + 'kanssa, ja 1692 Galven kreivi puolisoineen sai luostarista '
+          + 'turvapaikan. Itsenäisyyssodan päättymistä juhlittiin '
+          + 'Te Deumilla, kun Agustín de Iturbiden 16 000 miehen '
+          + 'Trigarante-armeija marssi Madero-katua ohi. Reformisodan '
+          + 'jälkeen luostari lakkautettiin ja omaisuus takavarikoitiin, '
+          + 'ja suuri osa purettiin uusien katujen tieltä. Vanha '
+          + 'ristikäytävä Gante-kadun varrella on nyt metodistikirkko '
+          + 'ja entinen De Profundis -sali leipomo; ne ovat jäljellä '
+          + 'siksi, että purkaminen olisi tullut kalliimmaksi kuin '
+          + 'seisottaminen.',
+      lahde: 'Wikipedia',
+    },
+    'Kansojen museo': {
+      aika: '1731',
+      teksti: 'Museo seisoo Casa Denegridan eli Mustan talon paikalla. '
+          + 'Se kuului Moctezuma II:n uusiin palatseihin, ja '
+          + 'espanjalaiset kuvasivat sen ikkunattomaksi, mustaksi '
+          + 'maalatuksi huoneeksi, jossa hallitsija mietti sitä, mitä '
+          + 'ennustajat ja shamaanit olivat hänelle kertoneet. '
+          + 'Palatsit tuhoutuivat lähes kokonaan valloituksessa. Maa '
+          + 'annettiin Hernán Cortésille, joka rakensi palatsit '
+          + 'uudelleen espanjalaiseen tapaan käyttäen vanhojen '
+          + 'rakennusten kiviä; hänen poikansa myi tontin myöhemmin '
+          + 'takaisin Filip V:lle. Kaivauksissa tästä ja naapurista on '
+          + 'löytynyt muurin osia ja basalttilattia, joiden uskotaan '
+          + 'kuuluneen Mustaan taloon.'
+          + '\n\n'
+          + 'Rahaa oli lyöty raatihuoneella, mutta siirtomaan '
+          + 'vaurastuessa kolikoita tarvittiin enemmän, ja rahapaja '
+          + 'muutti tänne 1731. Sen johtaja Nicolás Peinado oli itse '
+          + 'arkkitehti ja teki ensimmäiset piirustukset; työn tekivät '
+          + 'Pedro de Arrieta ja Lorenzo Rodríguez. Muutostyö meni '
+          + 'kuitenkin niin pahasti pieleen, että varakuningas nimitti '
+          + 'José Eduardo Herreran tilalle ja Peinado päätyi '
+          + 'vankilaan. Luis Diez Navarro sai talon valmiiksi, ja sitä '
+          + 'laajennettiin vielä 1772–1779. Rahapajasta katu sai '
+          + 'nimensä: Moneda tarkoittaa kolikkoa.'
+          + '\n\n'
+          + 'Rahanlyönti siirtyi 1850 Apartado-kadulle, ja talossa '
+          + 'toimivat vuorollaan kaiverruskoulu, korkein oikeus ja '
+          + 'ministeriön virastoja. Vuonna 1865 keisari Maximilian '
+          + 'sijoitti tänne luonnonhistorian, arkeologian ja historian '
+          + 'julkisen museon; alkukokoelma tuli kuninkaallisesta ja '
+          + 'paavillisesta yliopistosta sekä siitä kansallismuseosta, '
+          + 'jonka presidentti Guadalupe Victoria oli perustanut 1825. '
+          + 'Kokoelmat hajautettiin muihin laitoksiin vuosina '
+          + '1909–1964, ja talo avattiin 5. joulukuuta 1965 maailman '
+          + 'kulttuurien museona — ainoana lajissaan Latinalaisessa '
+          + 'Amerikassa. Siinä on kuusitoista pysyvää salia ja yli '
+          + '12 000 esinettä.',
+      lahde: 'Wikipedia',
+    },
+    'Vizcaínas-koulu': {
+      aika: '1734',
+      teksti: 'Koulun perusti baskien veljeskunta Nuestra Señora de '
+          + 'Aránzazu, johon kuului Vizcayasta, Álavasta, '
+          + 'Guipúzcoasta ja Navarrasta tulleita pappeja, kauppiaita '
+          + 'ja aatelisia. Vuonna 1732 veljeskunta päätti perustaa '
+          + 'koulun orpotyttöjen ja leskien suojaksi ja opetukseksi; '
+          + 'hanketta johti kolme jäsentä, Francisco de Echeveste, '
+          + 'Manuel de Aldaco ja Ambrosio de Meave. Ensin pyydettiin '
+          + 'tonttia sieltä, missä nykyään kulkee Avenida Juárez, '
+          + 'mutta pyyntö evättiin. Tilalle tarjottiin San Juanin '
+          + 'kaupunginosan entistä toripaikkaa, josta oli tullut '
+          + 'kaatopaikka ja jota pidettiin hyvin huonona seutuna. '
+          + 'Tontti otettiin vastaan, vaikka se piti kuivattaa.'
+          + '\n\n'
+          + 'Työ aloitettiin juhlallisesti 31. heinäkuuta 1734, '
+          + 'baskien suojeluspyhimyksen Ignatius Loyolalaisen '
+          + 'päivänä, kun varakuningas Juan Antonio de Vizarrón y '
+          + 'Eguiarreta laski peruskiven. Kiven alle haudattiin '
+          + 'laatikko kulta- ja hopearahoja sekä hopeoitu laatta; '
+          + 'kukaan ei tiedä, missä ne nyt ovat. Hankkeen aloitti '
+          + 'Pedro Bueno Bazori, joka kuoli kauan ennen valmistumista, '
+          + 'ja työtä jatkoivat Miguel José de Quiera ja Miguel de '
+          + 'Rivera. Talo maksoi kaksi miljoonaa pesoa ja valmistui '
+          + '1750-luvulla. Se täyttää kokonaisen korttelin, ja idän, '
+          + 'lännen ja etelän puolella pohjakerros oli rivi koppeja, '
+          + 'jotka avautuivat vain kadulle: ne tuottivat vuokratuloa '
+          + 'ja pitivät samalla kadun erossa sisällä asuvista.'
+          + '\n\n'
+          + 'Koulu ei ollut luostari eikä vaatinut lupauksia, ja se '
+          + 'oli aikaansa edellä sillä tavoin, että avaaminen '
+          + 'viivästyi: Espanjan kruunu antoi lopullisen hyväksynnän '
+          + 'vasta 1767, kun paavi Klemens XIII oli puoltanut ja '
+          + 'Kaarle III noussut valtaistuimelle. Vuodesta 1878 opetus '
+          + 'on painottunut teknisiin ja ammatillisiin aineisiin, ja '
+          + 'nykyään koulu on yhteiskoulu esikoulusta lukioon. Se on '
+          + 'Meksikon ainoa siirtomaa-ajan oppilaitos, joka on '
+          + 'toiminut keskeytyksettä perustamisestaan asti; '
+          + 'oppilaisiin kuului itsenäisyyssodan sankaritar Josefa '
+          + 'Ortiz de Domínguez. Talo on painunut alusta asti — '
+          + 'pehmeä maa, tulvat, järistykset ja pohjaveden pumppaus — '
+          + 'ja Aldaco-kadun kivipalkeissa näkyvät aallot kertovat '
+          + 'sen, mutta silti sitä pidetään kaupungin parhaiten '
+          + 'säilyneenä barokkirakennuksena.',
+      lahde: 'Wikipedia',
+    },
+  },
 };

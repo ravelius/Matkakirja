@@ -3702,6 +3702,62 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: -34.9110, etela: -34.9310, lansi: 138.5930, ita: 138.6145 },
   },
+  havanna: {
+    /*
+     * VANHAKAUPUNKI JA PRADON REUNA (7.9.2026). Ruutu on
+     * 2,3 × 1,8 kilometriä eli Christchurchin ja Dubrovnikin
+     * kokoluokkaa. Se riittää, koska Havannan kahdeksan kohdetta
+     * mahtuvat kaikki muurien entiselle alalle: pohjoisin on Plaza de
+     * la Catedral (23,1409) ja eteläisin Pyhän Hengen kirkko
+     * (23,1325), itäisin San Franciscon basilika (-82,3483) ja
+     * läntisin El Capitolio (-82,3594).
+     *
+     * ITÄREUNA -82,3430 ON VEDETTY LAHDEN PUOLELLE, ja se on ruudun
+     * ainoa varsinainen valinta. Satamalaituri on -82,345 kohdalla,
+     * joten ilman tätä kaistaa kuvasta puuttuisi se vesi, jonka takia
+     * koko kaupunki on olemassa. Reuna on silti vedetty niin, ettei
+     * se yllä lahden itärannalle: siellä ovat La Cabaña ja Regla,
+     * jotka ovat kaupunkilehden oman linnoitussivun aihe.
+     *
+     * POHJOISREUNA 23,1450 JÄTTÄÄ MORRON JA LA CABAÑAN ULKOPUOLELLE
+     * (23,1502 ja 23,1472). Se on tarkoituksellista eikä tilanpuute:
+     * molemmat ovat lehden nostojen L2 ja L3 aihe, eikä kohdekartta
+     * toista lehden juttuja (New Yorkin sääntö). Puntan linna
+     * (23,1463) jää samasta syystä juuri reunan ulkopuolelle.
+     *
+     * meri: true. Havannan lahti on OSM:ssä rantaviivaa
+     * (natural=coastline) eikä vesimonikulmio, joten ilman lippua
+     * kuvan oikea reuna olisi paperin värinen.
+     */
+    rajat: { pohjoinen: 23.1450, etela: 23.1290, lansi: -82.3645, ita: -82.3430 },
+    meri: true,
+  },
+  mexico: {
+    /*
+     * HISTORIALLISEN KESKUSTAN POHJOISPUOLISKO (7.9.2026). Ruutu on
+     * 2,2 × 2,2 kilometriä eli lähes neliö, ja se kattaa sen osan
+     * ruutukaavasta, jossa kaikki kahdeksan kohdetta ovat: ylhäällä
+     * Plaza Garibaldi (19,4410), alhaalla Vizcaínas-koulu (19,4284),
+     * idässä Museo Nacional de las Culturas (-99,1305) ja lännessä
+     * San Franciscon luostarikirkko (-99,1402).
+     *
+     * KOKO CENTRO HISTÓRICO EI MAHDU EIKÄ SEN PIDÄ. Unescon rajaama
+     * historiallinen keskusta on noin 9 neliökilometriä; sen
+     * piirtäminen yhteen ruutuun tekisi juuri sitä katupuuroa, josta
+     * tiedoston alussa varoitetaan. Ruutu on rajattu kohteiden eikä
+     * hallinnollisen rajan mukaan.
+     *
+     * ZÓCALO JÄÄ RUUDUN SISÄÄN MUTTA ILMAN MERKKIÄ. Aukio, katedraali,
+     * kansallispalatsi ja Templo Mayor ovat kaikki kaupunkilehden
+     * omien nostojen aihe, joten ne näkyvät kartalla katuverkkona
+     * eivätkä numeroituina kohteina. Sama koskee Alameda Centralia,
+     * jonka itäpää osuu ruudun vasempaan reunaan.
+     *
+     * meri: ei. Mexico City on 2 240 metrin korkeudessa kuivatun
+     * Texcoco-järven pohjalla, eikä ruudun alueella ole avovettä.
+     */
+    rajat: { pohjoinen: 19.4450, etela: 19.4250, lansi: -99.1475, ita: -99.1265 },
+  },
   suva: {
     /*
      * SIIRTOMAA-AJAN HALLINTOKORTTELI NIEMEN KÄRJESSÄ (6.9.2026).
