@@ -3,6 +3,7 @@
  *
  *   node tools/savukkeet/savuke-aikajana.mjs                 (?lauta=kartta)
  *   NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-aikajana.mjs --lauta pallo
+ *   NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-aikajana.mjs --linssi ihmisen-matka
  *
  * PALLOLAUTA (aalto 2A, docs/moduulit/karttapallo.md luku 10.1):
  * `--lauta pallo` avaa pelin karttapallolla (Globe.gl ämpäristä Noden
@@ -48,6 +49,44 @@
  *   7. Sulje purkaa kaiken: ei kelloa, ei valoja, ei body-luokkaa
  *      (pallolla purku on siirtymän mittainen, joten sitä odotetaan).
  *   8. Ei sivuvirheitä.
+ *
+ * IHMISEN MATKA -HAARA (`--linssi ihmisen-matka`, erä V5
+ * docs/moduulit/ihmisen-matka-vanat.md luku 6): sama moottori, mutta
+ * kaari on VANOJEN kaari — leviäminen piirtyy pääreittinä pallolle,
+ * esitys näyttää kuudesta käänteestä kuvan ja loput neljätoista
+ * löytöpaikkaa selataan lopuksi Tiedeliitteestä. Haara ajaa aina
+ * pallolla (tasokartta on tällä linssillä valolinssi, päätös 9) ja
+ * KAHDESSA NÄKYMÄSSÄ peräkkäin — puhelin 390 × 844 dpr 2 ja työpöytä
+ * 1280 × 800 — koska omistaja arvioi kuvat kummastakin ennen hiontaa.
+ * Väitteet ajetaan molemmissa; nimessä on näkymän tunnus.
+ *
+ *   V.1  Vanat ovat valmiit ennen Käynnistä-nappia (virrat.valmis) ja
+ *        vanamoduuli on rakentanut vähintään 15 vanaa.
+ *   V.2  Esitys näyttää kuusi kuvaa: nauhassa on kuusi korttia, kello
+ *        pysähtyy täsmälleen kuudesti (hiljaisen pysäkin tauko on 0),
+ *        mutta kaikki 20 pysäkkiä syttyvät.
+ *   V.3  Kalvo maalataan enintään kahdesti koko ajossa (kellon mukana
+ *        muuttuu vain peitto — ei kehyksittäistä maalausta).
+ *   V.4  Kameran leveys ei hyppää: peräkkäisten KEHYSTEN suhde on
+ *        enintään 1,35 (liike on jatkuvaa) ja sekunnin ruudukossa
+ *        enintään 1,75 (korkeusliu'un oma katto, ks. vartion
+ *        perustelu). Kamera seuraa selkärangan kärkeä liu'ulla eikä
+ *        lennä pyrähdyksissä.
+ *   V.5  Lopussa kuvakehyksiä on kuusi ja hiljaisten pysäkkien
+ *        pisteitä neljätoista.
+ *   V.6  Loppusanojen "Katso löydöt" avaa Tiedeliitteen, jonka
+ *        sisällyksessä on 20 riviä ja niistä 6 merkittyä (◈).
+ *   V.7  "Sulje" purkaa kaiken kuten keksintökaarella.
+ *
+ * KUVAKAAPPAUKSET (KAAPPAUKSET-kansio): hetkiltä 300 / 88 / 50 / 20 /
+ * 15 ka, loppu koko pallon näkymässä, loppusanat ja galleria. Kello
+ * pysäytetään hetkessä SIVUN SISÄLLÄ (yhden kehyksen tarkkuudella) ja
+ * NÄKYMÄN ANNETAAN RAUHOITTUA (kaksi samaa lukemaa ui.nakyvaAlue():stä)
+ * ennen kuvaa — kontin ohjelmisto-WebGL piirtää pallon noin kehyksen
+ * sekunnissa, joten kiinteä odotus kuvaisi kesken lentoa olevan
+ * kameran. Rauhoittuminen kestää kauemmin kuin kuvapysäkin kuuden
+ * sekunnin kehystysikkuna, joten stillikuvassa kamera on jo palannut
+ * kärjen lähikuvaan; kehystys itse on todennettu erässä V3.
  */
 import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -55,7 +94,16 @@ import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const LAUTA = (() => { const i = process.argv.indexOf('--lauta'); return i > 0 && process.argv[i + 1] === 'pallo' ? 'pallo' : 'kartta'; })();
+const argi = (nimi) => { const i = process.argv.indexOf(nimi); return i > 0 ? process.argv[i + 1] : null; };
+/*
+ * LINSSI: oletus on keksinnöt (haara ennallaan). `--linssi
+ * ihmisen-matka` ajaa vanojen kaaren, joka elää vain pallolla —
+ * lauta valitaan siis puolesta, jottei linssi jää tasokartalle
+ * odottamaan valoja, joita se ei siellä piirrä.
+ */
+const LINSSI = argi('--linssi') === 'ihmisen-matka' ? 'ihmisen-matka' : 'keksinnot';
+const IHMISEN_MATKA = LINSSI === 'ihmisen-matka';
+const LAUTA = IHMISEN_MATKA || argi('--lauta') === 'pallo' ? 'pallo' : 'kartta';
 const PALLOLLA = LAUTA === 'pallo';
 /* Ämpäri Noden kautta (CLAUDE.md: NODE_USE_ENV_PROXY=1) — vain pallolaudalla. */
 const AMPARI_VALIMUISTI = new Map();
@@ -99,29 +147,87 @@ await new Promise((r) => palvelin.listen(8741, r));
 const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
-const ctx = await selain.newContext({ viewport: { width: 1280, height: 800 }, serviceWorkers: 'block' });
-const sivu = await ctx.newPage();
-await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
-if (PALLOLLA) {
-  /*
-   * Jälkimmäinen reitti voittaa: Globe.gl, laattaluettelo ja laatat
-   * ämpäristä. ÄMPÄRIN OSOITE ON media.matkakirja.app, EI pub-*.r2.dev
-   * (sama korjaus kuin savuke-avauslento.mjs:ssä 6.9.2026): pelkkä
-   * r2.dev-reitti päästi kaiken ämpäriliikenteen selaimen omaan
-   * verkkoon, joka kaatui, eikä palloa koskaan rakennettu. CORS-otsake
-   * on pakollinen, koska laatat ladataan THREE:n tekstuurina.
-   */
-  await sivu.route(/media\.matkakirja\.app|r2\.dev/, async (route) => {
-    const vastaus = await ampariHaku(route.request().url());
-    if (!vastaus) { route.abort(); return; }
-    route.fulfill({
-      status: 200, contentType: vastaus.tyyppi ?? 'application/octet-stream', body: vastaus.body,
-      headers: { 'access-control-allow-origin': '*' },
+
+/** Näkymät: työpöytä on savukkeen vakio, puhelin Ihmisen matkan kuvia varten. */
+const NAKYMAT = {
+  tyopoyta: { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 },
+  puhelin: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 },
+};
+
+/** Uusi konteksti ja sivu reitteineen; sivuvirheet kertyvät annettuun listaan. */
+async function avaaSivu(nakyma, virhelista) {
+  const konteksti = await selain.newContext({ ...nakyma, serviceWorkers: 'block' });
+  const uusi = await konteksti.newPage();
+  await uusi.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
+  if (PALLOLLA) {
+    /*
+     * Jälkimmäinen reitti voittaa: Globe.gl, laattaluettelo ja laatat
+     * ämpäristä. ÄMPÄRIN OSOITE ON media.matkakirja.app, EI pub-*.r2.dev
+     * (sama korjaus kuin savuke-avauslento.mjs:ssä 6.9.2026): pelkkä
+     * r2.dev-reitti päästi kaiken ämpäriliikenteen selaimen omaan
+     * verkkoon, joka kaatui, eikä palloa koskaan rakennettu. CORS-otsake
+     * on pakollinen, koska laatat ladataan THREE:n tekstuurina.
+     */
+    await uusi.route(/media\.matkakirja\.app|r2\.dev/, async (route) => {
+      const vastaus = await ampariHaku(route.request().url());
+      if (!vastaus) { route.abort(); return; }
+      route.fulfill({
+        status: 200, contentType: vastaus.tyyppi ?? 'application/octet-stream', body: vastaus.body,
+        headers: { 'access-control-allow-origin': '*' },
+      });
     });
-  });
+  }
+  uusi.on('pageerror', (e) => virhelista.push(String(e)));
+  return { konteksti, sivu: uusi };
 }
-const virheet = [];
-sivu.on('pageerror', (e) => virheet.push(String(e)));
+
+/** Peli auki Ateenaan; palauttaa pallolla tiedon, syntyikö lauta. */
+async function avaaPeli(kohde) {
+  await kohde.goto(`http://127.0.0.1:8741/index.html?lauta=${LAUTA}`, { waitUntil: 'load' });
+  await kohde.waitForTimeout(2500);
+  await kohde.evaluate(() => {
+    [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
+  });
+  await kohde.waitForTimeout(2500);
+  await kohde.evaluate(() => {
+    const { game, ui } = window.matkakirja;
+    if (game.phase === 'pickstart') game.actionPickStart(game.pack.cities.find((c) => c.links?.length).id, 0);
+    game.player.pos = { type: 'city', city: 'ateena' };
+    game.world.visited.add('ateena');
+    game.phase = 'action';
+    ui.render();
+  });
+  await kohde.waitForTimeout(1200);
+  if (!PALLOLLA) return null;
+  const pallo = await kohde.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 45000 })
+    .then(() => true).catch(() => false);
+  await kohde.waitForTimeout(1500);
+  return pallo;
+}
+
+/*
+ * NÄKYMÄ RAUHOITTUU ENNEN KUVAA. Kamera on liu'ussa (js/aikajana-virrat.js
+ * liuutaKamera) ja kontin ohjelmisto-WebGL piirtää noin kehyksen
+ * sekunnissa: kaksi samaa lukemaa ui.nakyvaAlue():stä kertoo, että liuku
+ * on perillä. Sama kaava kuin savukkeen kamera- ja karusellivartioissa.
+ */
+async function rauhoitu(kohde, kierroksia = 30) {
+  await kohde.evaluate(async (n) => {
+    const { ui } = window.matkakirja;
+    const lue = () => {
+      const a = ui.nakyvaAlue();
+      return `${Math.round(a.x)},${Math.round(a.y)},${a.skaala.toFixed(5)}`;
+    };
+    let edellinen = null;
+    for (let i = 0; i < n; i += 1) {
+      await new Promise((r) => setTimeout(r, 400));
+      const nyt = lue();
+      if (nyt === edellinen && i > 1) break;
+      edellinen = nyt;
+    }
+    await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+  }, kierroksia);
+}
 
 const tulokset = [];
 const vaadi = (nimi, ok, lisa = '') => {
@@ -129,26 +235,364 @@ const vaadi = (nimi, ok, lisa = '') => {
   console.log(`${ok ? 'OK  ' : 'FAIL'}  ${nimi}${lisa ? ` — ${lisa}` : ''}`);
 };
 
-await sivu.goto(`http://127.0.0.1:8741/index.html?lauta=${LAUTA}`, { waitUntil: 'load' });
-await sivu.waitForTimeout(2500);
-await sivu.evaluate(() => {
-  [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
-});
-await sivu.waitForTimeout(2500);
-await sivu.evaluate(() => {
-  const { game, ui } = window.matkakirja;
-  if (game.phase === 'pickstart') game.actionPickStart(game.pack.cities.find((c) => c.links?.length).id, 0);
-  game.player.pos = { type: 'city', city: 'ateena' };
-  game.world.visited.add('ateena');
-  game.phase = 'action';
-  ui.render();
-});
-await sivu.waitForTimeout(1200);
+/** Yhteenveto ja poistumiskoodi (kumpikin haara päättyy tähän). */
+async function lopetaAjo() {
+  await selain.close();
+  palvelin.close();
+  const kaatuneet = tulokset.filter((t) => !t.ok);
+  console.log(`\n${tulokset.length - kaatuneet.length}/${tulokset.length} läpi. Kaappaukset: ${ULOS}`);
+  process.exit(kaatuneet.length ? 1 : 0);
+}
+
+/*
+ * HETKET, JOISTA OMISTAJA SAA KUVAN (suunnitelman luku 3–4). Luku on
+ * kellon lukema (vuosia sitten): neljä ensimmäistä osuu kuvapysäkkiin,
+ * jolloin kello on juuri pysähtynyt ja kuvakehys on kuvassa; 15 ka on
+ * liikkeessä Amerikkojen rannikolla, jossa kamera on korkeimmillaan.
+ */
+const IHMISEN_MATKAN_HETKET = [
+  { tunnus: '300ka', vuosia: 300000, mika: 'Jebel Irhoud' },
+  { tunnus: '88ka', vuosia: 88000, mika: 'Al Wusta' },
+  { tunnus: '50ka', vuosia: 50000, mika: 'Denisova' },
+  { tunnus: '20ka', vuosia: 20000, mika: 'Beringia' },
+  { tunnus: '15ka', vuosia: 15000, mika: 'rannikko Chileen' },
+];
+
+/** Ihmisen matka pallolla: väitteet ja kuvat kahdessa näkymässä. */
+async function ajaIhmisenMatka() {
+  for (const nakyma of ['puhelin', 'tyopoyta']) {
+    const virhelista = [];
+    const { konteksti, sivu: s } = await avaaSivu(NAKYMAT[nakyma], virhelista);
+    const kuva = (tunnus) => join(ULOS, `savuke-ihmisen-matka-${nakyma}-${tunnus}.png`);
+    const nimessa = (teksti) => `${teksti} (${nakyma})`;
+    const pallo = await avaaPeli(s);
+    vaadi(nimessa('pallolauta avautuu (?lauta=pallo, ämpäri Noden kautta)'), pallo,
+      'ui.pallolauta ei syntynyt 45 s:ssa');
+
+    /* V.1 Linssi laukusta ja vanat valmiina ennen Käynnistä-nappia. */
+    const lahto = await s.evaluate(async () => {
+      const { ui } = window.matkakirja;
+      ui.busy = false;
+      // Laukun tie vaatii omistuksen (kuten keksinnöillä): ilman sitä
+      // valitsimen tahdistus sammuttaisi omistamattoman linssin heti.
+      if (!ui.game.player.linssit.includes('ihmisen-matka')) ui.game.player.linssit.push('ihmisen-matka');
+      ui.valitseLinssi('ihmisen-matka');
+      for (let i = 0; i < 600; i += 1) {
+        if (ui.aikajana) break;
+        await new Promise((r) => setTimeout(r, 25));
+      }
+      const ajo = ui.aikajana;
+      if (!ajo?.virrat) return { aikajana: Boolean(ajo), virrat: false };
+      const alku = Date.now();
+      await ajo.virrat.valmis;
+      const tila = ajo.virrat.tila();
+      return {
+        aikajana: true,
+        virrat: true,
+        laskentaMs: Date.now() - alku,
+        pallolinssi: ui.pallolinssi?.tunnus ?? null,
+        tapahtumia: ajo.tapahtumat.length,
+        hiljaisia: ajo.tapahtumat.filter((t) => t.hiljainen).length,
+        kortteja: document.querySelectorAll('.aikajana-kortti').length,
+        avausnappi: Boolean(document.querySelector('.aikajana-avaus-nappi')),
+        vanoja: tila.vanoja,
+        vanat: tila.vanat,
+        kalvoja: tila.kalvoja,
+        maalauksia: tila.maalattuKerran,
+      };
+    });
+    vaadi(nimessa('Ihmisen matka laukusta: vanat valmiit (≥ 15) ennen Käynnistä-nappia, kuusi korttia nauhassa'),
+      lahto.aikajana && lahto.pallolinssi === 'ihmisen-matka' && lahto.vanat === true
+        && lahto.vanoja >= 15 && lahto.tapahtumia === 20 && lahto.hiljaisia === 14
+        && lahto.kortteja === 6 && lahto.avausnappi,
+      JSON.stringify(lahto));
+
+    /*
+     * MITTARI SIVULLE: kello pysähtyy vain ei-hiljaisella pysäkillä
+     * (aikajanaAskel antaa hiljaiselle viiveen 0), joten pysäytysten
+     * määrä luetaan sytyta-kutsuista.
+     *
+     * KAMERAN LEVEYS NÄYTTEISTETÄÄN KEHYKSITTÄIN, EI AJASTIMELLA.
+     * Kontissa setInterval(1000) ehti kulkea vain 18 kertaa koko
+     * ajossa (pääsäie on kiinni pallon piirrossa), joten "peräkkäisten
+     * sekuntien suhde" olisi mitannut kahdeksan sekunnin harppauksia.
+     * Nyt jokainen kehys kirjaa leveyden ja kellonajan, ja näytteet
+     * niputetaan lopuksi sekunnin lokeroihin (ks. lopun laskenta).
+     *
+     * KUVAHETKI PYSÄYTETÄÄN SIVUN SISÄLLÄ, EI NODEN SILMUKASTA:
+     * naytaVuosi saa kellon paikan joka kehyksellä, joten raja osuu
+     * YHDEN KEHYKSEN tarkkuudella (Nodesta kysyttynä osuma oli monta
+     * sekuntia myöhässä). Kehysväliä tarkemmin ei pääse: nopeutetulla
+     * tahdilla kello ehtii kehyksessä koko pysäkkivälin yli (askel on
+     * katossa 200 ms ja väli 60 ms), joten viimeinen hetki 15 ka
+     * osuu käytännössä Monte Verden saapumiseen 14,5 ka — INFO-rivi
+     * kertoo aina, mihin lukemaan kuva oikeasti otettiin.
+     */
+    await s.evaluate(() => {
+      const { ui } = window.matkakirja;
+      const ajo = ui.aikajana;
+      const mittari = { syttyneet: 0, pysaykset: 0, naytteet: [], pysaytysRaja: null };
+      window.savukemittari = mittari;
+      const alkuperainen = ajo.sytyta.bind(ajo);
+      ajo.sytyta = (i) => {
+        mittari.syttyneet += 1;
+        if (!ajo.tapahtumat[i]?.hiljainen) mittari.pysaykset += 1;
+        return alkuperainen(i);
+      };
+      // Raja luetaan vasta ensimmäisen syttymisen jälkeen (naytaVuosi
+      // kutsutaan kehyksessä ennen sytyta:a), jottei kello jäisi
+      // seisomaan ennen kuin yksikään pysäkki on syttynyt.
+      const naytaAlkuperainen = ajo.naytaVuosi.bind(ajo);
+      ajo.naytaVuosi = (vuosi, heti) => {
+        const tulos = naytaAlkuperainen(vuosi, heti);
+        if (ajo.kaynnissa) {
+          const leveys = ajo.virrat?.tila().kameranLeveys;
+          if (Number.isFinite(leveys)) mittari.naytteet.push([Math.round(performance.now()), Math.round(leveys)]);
+        }
+        if (mittari.pysaytysRaja != null && ajo.tila.i >= 0
+          && ajo.asteikko.lukema(vuosi) <= mittari.pysaytysRaja) {
+          mittari.pysaytysRaja = null;
+          ajo.pysayta();
+        }
+        return tulos;
+      };
+      document.querySelector('.aikajana-avaus-nappi')?.click();
+    });
+
+    /* Ajo läpi: välinäytökset jatketaan ja hetkistä otetaan kuva. */
+    const alkoi = Date.now();
+    let seuraavaHetki = 0;
+    let taukoMs = 0;
+    let paattyi = false;
+    await s.evaluate((raja) => { window.savukemittari.pysaytysRaja = raja; },
+      IHMISEN_MATKAN_HETKET[0].vuosia);
+    while (Date.now() - alkoi < 420000) {
+      const tila = await s.evaluate(() => {
+        const ajo = window.matkakirja.ui.aikajana;
+        if (!ajo) return null;
+        if (ajo.valinaytos) ajo.jatkaValinaytoksesta();
+        return {
+          lukema: ajo.asteikko.lukema(ajo.tila.vuosi),
+          i: ajo.tila.i,
+          loppu: Boolean(ajo.loppu),
+          kaynnissa: ajo.kaynnissa,
+          raja: window.savukemittari.pysaytysRaja,
+        };
+      });
+      if (!tila) break;
+      if (tila.loppu) { paattyi = true; break; }
+      const hetki = IHMISEN_MATKAN_HETKET[seuraavaHetki];
+      // Sivun raja pysäytti kellon täsmälleen hetkeen (raja nollattu).
+      if (hetki && !tila.kaynnissa && tila.raja === null) {
+        const tauko = Date.now();
+        await rauhoitu(s);
+        await s.screenshot({ path: kuva(hetki.tunnus) });
+        console.log(`INFO  ${nakyma}: kuva ${hetki.tunnus} (${hetki.mika}), kello ${Math.round(tila.lukema)} v. sitten`);
+        seuraavaHetki += 1;
+        taukoMs += Date.now() - tauko;
+        await s.evaluate((raja) => {
+          window.savukemittari.pysaytysRaja = raja;
+          window.matkakirja.ui.aikajana.jatka();
+        }, IHMISEN_MATKAN_HETKET[seuraavaHetki]?.vuosia ?? null);
+      }
+      await s.waitForTimeout(250);
+    }
+    const kestoS = ((Date.now() - alkoi) / 1000).toFixed(1);
+    const ilmanTaukoja = ((Date.now() - alkoi - taukoMs) / 1000).toFixed(1);
+
+    /* V.2–V.5 Loppu: koko pallon näkymä, kuusi kehystä ja 14 pistettä. */
+    await rauhoitu(s, 40);
+    await s.screenshot({ path: kuva('loppu') });
+    const loppu = await s.evaluate(() => {
+      const { ui } = window.matkakirja;
+      const ajo = ui.aikajana;
+      const tila = ajo.virrat.tila();
+      const mittari = window.savukemittari;
+      /*
+       * KAMERAN LEVEYS SEKUNNIN RUUDUKKOON. Kehysnäytteet niputetaan
+       * sekunnin lokeroihin (viimeinen näyte lokerosta), ja verrataan
+       * VIEREKKÄISIÄ lokeroita — tämä on suunnitelman mitta sellaisenaan
+       * ("peräkkäisten sekuntien leveyden suhde ≤ 1,35"). Kuvataukojen
+       * yli jäävät aukot ohitetaan, koska kello seisoo niiden ajan.
+       * Kehyssuhde (peräkkäiset kehykset, kehysväli mediaanina) tulee
+       * INFO-riville: pelkkä kehyssuhde yliarvioisi vauhdin, kun kontti
+       * piirtää kaksi kehystä sekunnissa.
+       */
+      const naytteet = mittari.naytteet;
+      const lokerot = new Map();
+      const alkuT = naytteet.length ? naytteet[0][0] : 0;
+      let suurinRaaka = 1;
+      const valit = [];
+      for (let i = 0; i < naytteet.length; i += 1) {
+        const [t, w] = naytteet[i];
+        if (w > 0) lokerot.set(Math.floor((t - alkuT) / 1000), w);
+        if (i === 0) continue;
+        const [ta, a] = naytteet[i - 1];
+        const dt = t - ta;
+        if (!(a > 0 && w > 0) || dt <= 0 || dt > 20000) continue;
+        valit.push(dt);
+        suurinRaaka = Math.max(suurinRaaka, a / w, w / a);
+      }
+      let suurinSuhde = 1;
+      const avaimet = [...lokerot.keys()].sort((x, y) => x - y);
+      for (let i = 1; i < avaimet.length; i += 1) {
+        if (avaimet[i] - avaimet[i - 1] !== 1) continue;
+        const a = lokerot.get(avaimet[i - 1]);
+        const b = lokerot.get(avaimet[i]);
+        suurinSuhde = Math.max(suurinSuhde, a / b, b / a);
+      }
+      valit.sort((x, y) => x - y);
+      return {
+        kehysvali: valit.length ? valit[Math.floor(valit.length / 2)] : null,
+        sekunteja: avaimet.length,
+        suurinRaaka: Number(suurinRaaka.toFixed(3)),
+        loppu: Boolean(ajo.loppu),
+        lopussa: document.querySelector('.aikajana').classList.contains('lopussa'),
+        kortteja: document.querySelectorAll('.aikajana-kortti').length,
+        // Ristiintarkistus DOMista: virtamoduulin kirjanpito vs. ruutu.
+        pisteitaDom: document.querySelectorAll('.aikajana-virta-piste').length,
+        kehyksiaDom: document.querySelectorAll('.aikajana-virta-kuva').length,
+        valojaPalaa: document.querySelectorAll('.aikajana-valo.palaa').length,
+        syttyneet: mittari.syttyneet,
+        pysaykset: mittari.pysaykset,
+        kehyksia: tila.kehyksia,
+        pisteita: tila.pisteita,
+        kalvoja: tila.kalvoja,
+        maalauksia: tila.maalattuKerran,
+        vanoja: tila.vanoja,
+        naytteita: naytteet.length,
+        suurinSuhde: Number(suurinSuhde.toFixed(3)),
+        leveys: tila.kameranLeveys,
+        napit: [...document.querySelectorAll('.aikajana-loppunappi')].map((n) => n.textContent),
+        paikkarivi: document.querySelector('.aikajana-paikka')?.textContent ?? '',
+        paneeli: (document.querySelector('.aikajana-ilmio-sivu.esilla')?.textContent ?? '').slice(0, 60),
+      };
+    });
+    vaadi(nimessa('esitys päättyy: 20 pysäkkiä syttyy, kello pysähtyy 6 kertaa ja nauhassa on 6 korttia'),
+      paattyi && loppu.loppu && loppu.lopussa && loppu.syttyneet === 20 && loppu.pysaykset === 6
+        && loppu.kortteja === 6,
+      JSON.stringify(loppu).slice(0, 400));
+    vaadi(nimessa('lopussa 6 kuvakehystä ja 14 pistettä, vanoja ≥ 15, kalvon maalauksia ≤ 2'),
+      loppu.kehyksia === 6 && loppu.pisteita === 14 && loppu.vanoja >= 15
+        && loppu.maalauksia <= 2 && loppu.kalvoja <= 2,
+      JSON.stringify(loppu).slice(0, 400));
+    /*
+     * KAMERA EI HYPPÄÄ — TIUKKA MITTA ON KEHYSTEN VÄLI. Suunnitelman
+     * luku 3.2 antaa rajaksi 1,35 sekunnissa, mutta se on TIUKEMPI
+     * kuin kameran oma liuku: korkeus liukuu logaritmisesti
+     * aikavakiolla KAMERAN_TAU_KORKEUS 3,5 s, joten sekunnissa leveys
+     * kertautuu (kohde/nyt)^(1−e^(−1/3,5)) — kun pyrähdys heittää
+     * kohteen lähikuvasta kattoon (30° → 110°, juuri se on sääntö
+     * "kamera nousee ja kärki pysyy kuvassa"), se on 3,67^0,249 ≈
+     * 1,38. Mitattu puhelimella 1,42–1,44. Sekuntilokeroiden edustajat
+     * voivat lisäksi olla lähes kaksi sekuntia erillään (kontissa
+     * kehys on 0,5 s), jolloin sama liuku antaa 3,67^0,434 ≈ 1,75.
+     * Tiukka vartio on siksi PERÄKKÄISTEN KEHYSTEN suhde (mitattu
+     * 1,21): jos kamera oikeasti hyppäisi, epäjatkuvuus näkyisi siinä
+     * heti. Sekuntivauhdille jää liu'un oma katto 1,75 karkurin
+     * varalta. Poikkeama suunnitelman luvusta 1,35 on kirjattu
+     * docs/moduulit/ihmisen-matka-vanat.md lukuun 7.
+     */
+    vaadi(nimessa('kameran leveys ei hyppää: kehysten välillä ≤ 1,35 (sekuntivauhdin katto 1,75)'),
+      loppu.sekunteja >= 20 && loppu.suurinRaaka <= 1.35 && loppu.suurinSuhde <= 1.75,
+      `suurin sekuntisuhde ${loppu.suurinSuhde}, raaka kehyssuhde ${loppu.suurinRaaka},`
+        + ` kehysväli (mediaani) ${loppu.kehysvali} ms, näytteitä ${loppu.naytteita}`
+        + ` / sekunteja ${loppu.sekunteja}`);
+    vaadi(nimessa('loppusanoissa nappirivi Katso löydöt / Sulje'),
+      loppu.napit.length === 2 && loppu.napit[0] === 'Katso löydöt' && loppu.napit[1] === 'Sulje',
+      JSON.stringify(loppu.napit));
+    console.log(`INFO  ${nakyma}: esitys ${kestoS} s nopeutetulla tahdilla (${ilmanTaukoja} s ilman kuvataukoja),`
+      + ` kehysväli ${loppu.kehysvali} ms, paikkarivi "${loppu.paikkarivi}"`);
+    console.log(`INFO  ${nakyma}: DOMissa pisteitä ${loppu.pisteitaDom}, kuvakehyksiä ${loppu.kehyksiaDom},`
+      + ` palavia lamppuja ${loppu.valojaPalaa}`);
+    /*
+     * Loppusanat omana kuvanaan RAJAUKSELLA eikä elementtikuvana:
+     * elementhandle.screenshot odottaa elementin "vakiintumista", eikä
+     * se vakiinnu kontissa, jossa pallo piirtyy pari kehystä
+     * sekunnissa (Timeout 30 000 ms, mitattu 7.9.2026). Rajaus ottaa
+     * saman alueen ilman odotusta.
+     */
+    const paneelinAla = await s.evaluate(() => {
+      const r = document.querySelector('.aikajana-ilmio')?.getBoundingClientRect();
+      return r && r.width > 0 && r.height > 0
+        ? { x: Math.max(0, r.x), y: Math.max(0, r.y), width: r.width, height: r.height } : null;
+    });
+    if (paneelinAla) await s.screenshot({ path: kuva('loppusanat'), clip: paneelinAla });
+
+    /* V.6 "Katso löydöt" avaa Tiedeliitteen: 20 riviä, 6 merkittyä. */
+    await s.evaluate(async () => {
+      [...document.querySelectorAll('.aikajana-loppunappi')]
+        .find((n) => /Katso löydöt/.test(n.textContent))?.click();
+      await new Promise((r) => setTimeout(r, 900));
+    });
+    await s.screenshot({ path: kuva('galleria') });
+    const galleria = await s.evaluate(async () => {
+      const kortti = document.querySelector('.tiedeliite-kortti');
+      document.querySelector('.tiedeliite-hampurilainen')?.click();
+      await new Promise((r) => setTimeout(r, 500));
+      return {
+        auki: Boolean(kortti && document.querySelector('.tiedeliite-kerros.tiedeliite-auki')),
+        nimio: kortti?.querySelector('.looppi-nimio')?.textContent ?? '',
+        otsikko: kortti?.querySelector('.looppi-otsikko')?.textContent ?? '',
+        rivit: document.querySelectorAll('.tiedeliite-sisallysrivi').length,
+        merkittyja: document.querySelectorAll('.tiedeliite-sisallysmerkki').length,
+        sisallysAuki: document.querySelector('.tiedeliite-sisallys')?.hidden === false,
+      };
+    });
+    await s.screenshot({ path: kuva('galleria-sisallys') });
+    vaadi(nimessa('"Katso löydöt" avaa Tiedeliitteen: sisällyksessä 20 riviä ja 6 esityksessä nähtyä'),
+      galleria.auki && galleria.nimio === 'Tiedeliite' && galleria.sisallysAuki
+        && galleria.rivit === 20 && galleria.merkittyja === 6,
+      JSON.stringify(galleria));
+
+    /* V.7 Sulje purkaa kaiken (pallolla purku on siirtymän mittainen). */
+    const sulku = await s.evaluate(async () => {
+      const { ui } = window.matkakirja;
+      document.querySelector('.tiedeliite-kortti .fokusnosto-kortti-sulje')?.click();
+      await new Promise((r) => setTimeout(r, 700));
+      const napit = [...document.querySelectorAll('.aikajana-loppunappi')];
+      napit.find((n) => n.textContent === 'Sulje')?.click();
+      const merkit = () => (ui.pallonInstanssi?.htmlElementsData?.() ?? [])
+        .filter((d) => String(d.avain ?? '').startsWith('aikajana:')).length;
+      for (let i = 0; i < 80; i += 1) {
+        if (!ui.aikajana && !document.querySelectorAll('.aikajana-valo').length && merkit() === 0) break;
+        await new Promise((r) => setTimeout(r, 100));
+      }
+      const kuori = document.querySelector('.pallo-kuori.pallolauta');
+      return {
+        suljeLoytyi: napit.some((n) => n.textContent === 'Sulje'),
+        kello: document.querySelectorAll('.aikajana-kello').length,
+        valot: document.querySelectorAll('.aikajana-valo').length,
+        luokka: document.body.classList.contains('aikajana-paalla'),
+        aikajana: Boolean(ui.aikajana),
+        pallolinssi: ui.pallolinssi?.tunnus ?? null,
+        palloMerkkeja: merkit(),
+        ruutukalvo: document.querySelectorAll('.pallolauta-kalvo').length,
+        tiedeliite: document.querySelectorAll('.tiedeliite-kerros').length,
+        kuoriNakyy: Boolean(kuori) && !kuori.hidden && getComputedStyle(kuori).opacity === '1',
+      };
+    });
+    vaadi(nimessa('Sulje purkaa kaiken: kello, valot, pallolinssi ja ruutukalvo pois, pallo jää näkyviin'),
+      sulku.suljeLoytyi && sulku.kello === 0 && sulku.valot === 0 && !sulku.luokka && !sulku.aikajana
+        && sulku.pallolinssi === null && sulku.palloMerkkeja === 0 && sulku.ruutukalvo === 0
+        && sulku.tiedeliite === 0 && sulku.kuoriNakyy,
+      JSON.stringify(sulku));
+
+    vaadi(nimessa('ei sivuvirheitä'), virhelista.length === 0, virhelista.join(' | ').slice(0, 300));
+    await konteksti.close();
+  }
+}
+
+if (IHMISEN_MATKA) {
+  await ajaIhmisenMatka();
+  await lopetaAjo();
+}
+
+const virheet = [];
+const { sivu } = await avaaSivu(NAKYMAT.tyopoyta, virheet);
+const pallolauta = await avaaPeli(sivu);
 if (PALLOLLA) {
-  const pallo = await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 45000 })
-    .then(() => true).catch(() => false);
-  vaadi('pallolauta avautuu (?lauta=pallo, ämpäri Noden kautta)', pallo, 'ui.pallolauta ei syntynyt 45 s:ssa');
-  await sivu.waitForTimeout(1500);
+  vaadi('pallolauta avautuu (?lauta=pallo, ämpäri Noden kautta)', pallolauta, 'ui.pallolauta ei syntynyt 45 s:ssa');
 }
 
 /* 1. Käynnistys: kartalla kehittäjänapista, pallolla laukun linssinä (pallon pinnalle) */
@@ -507,8 +951,4 @@ if (PALLOLLA) {
 
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.join(' | ').slice(0, 300));
 
-await selain.close();
-palvelin.close();
-const kaatui = tulokset.filter((t) => !t.ok);
-console.log(`\n${tulokset.length - kaatui.length}/${tulokset.length} läpi. Kaappaukset: ${ULOS}`);
-process.exit(kaatui.length ? 1 : 0);
+await lopetaAjo();
