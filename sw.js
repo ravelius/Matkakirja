@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1679';
+const CACHE = 'matkakirja-2026-08-09.1680';
 const SHELL = [
   './',
   './index.html',
@@ -202,6 +202,8 @@ const SHELL = [
   // tulevat linssin mukana; piirto ja laskenta seuraavat js/aikajana.js:ää.
   './js/linssit/ihmisen-matka-virrat.js',
   './js/linssit/ihmisen-matka-maamaski.js',
+  // Kaistan rantamaski (7.9.2026): vana leikataan rantaviivaan
+  './js/linssit/ihmisen-matka-rantamaski.js',
   // Kertomus yhtenä kaarena (7.9.2026): kaanoni, sen ohjaaja (esitys),
   // jaksojen äänimaisemat ja tutkimusvaihe (esityksen jälkeen kartta
   // jää pelaajalle: nostot, viisi nappia, kysymykset pululle).

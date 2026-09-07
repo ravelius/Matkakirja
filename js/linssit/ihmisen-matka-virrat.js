@@ -304,6 +304,52 @@ export const IHMISEN_MATKA_VANAT = {
   ],
   /** Douglas–Peucker km, aikatihennyksen rajat, Chaikin-kierrokset, haaran katkaisu km. */
   yksinkertaistus: { dpKm: 60, aikaV: 1500, aikaOsuus: 0.06, chaikin: 2, haaranEroKm: 100 },
+  /*
+   * KAISTA (Raamattu "VANAT RANNIKKOA MAALAAVINA KAISTOINA", omistaja
+   * 7.9.2026 ilta; docs/moduulit/ihmisen-matka-vanat.md luku 14). Vana
+   * on yksi puoliläpinäkyvä kaista, joka leikataan rantaviivaan ja
+   * jonka leveys VAIHTELEE: `leveysKm` on koko leveys kertoimella 1, ja
+   * `alueet` kertovat, missä ihmisiä levittäytyi laajemmin sisämaahan
+   * (leveä, kerroin > 1) ja missä vain kuljettiin läpi (kapea,
+   * kerroin < 1). Alueen reuna on pehmeä (`pehmeys` astetta, oletus
+   * js/aikajana-vanat.js KAISTAN_ALUEEN_PEHMEYS); päällekkäiset alueet
+   * eivät summaudu vaan suurin levennys ja pienin kavennus kertautuvat.
+   *
+   * LEVEYS ON KUVITUKSELLINEN, EI TIEDEVÄITE (omistaja: *"Sen ei
+   * tarvitse olla aivan tieteellisesti oikein välttämättä. Sekin
+   * voidaan sitten jossain tekstissä selittää"*): kertoimet on
+   * kirjoitettu yleisellä maantiedolla — rannikot ja jokilaaksot,
+   * joissa asuttiin pitkään ja tiheästi (Levantti, Intian rannikko,
+   * Sunda, Eurooppa, Itä-Aasia), ovat leveitä; arot, taiga, Beringia ja
+   * Grönlanti, joiden läpi kuljettiin harvana, ovat kapeita; Amerikkojen
+   * rannikko on keskileveä (kerroin 1). `meriKerroin` on meren
+   * ylityksen leveys osuutena (Wallacea, Beringinsalmi, Tyynimeri:
+   * kapea pelkkä vana ilman rantaviivaa). `peitto` on kaistan peitto
+   * viivan (0,95) ja entisen halon (0,14) välistä.
+   */
+  kaista: {
+    leveysKm: 200,
+    meriKerroin: 0.3,
+    peitto: 0.5,
+    alueet: [
+      { nimi: 'Itä-Afrikka ja Afrikan sarvi', lat: [-5, 18], lon: [30, 52], kerroin: 1.4 },
+      { nimi: 'Etelä-Afrikan rannikko', lat: [-36, -30], lon: [17, 31], kerroin: 1.5 },
+      { nimi: 'Levantti ja Arabian länsirannikko', lat: [12, 37], lon: [32, 50], kerroin: 2.0 },
+      { nimi: 'Persianlahti ja Iranin rannikko', lat: [22, 30], lon: [50, 63], kerroin: 1.4 },
+      { nimi: 'Intian niemimaa ja Ceylon', lat: [6, 28], lon: [66, 90], kerroin: 1.8 },
+      { nimi: 'Kaakkois-Aasia ja Sunda', lat: [-10, 22], lon: [92, 120], kerroin: 2.0 },
+      { nimi: 'Sahul: Australian rannikot', lat: [-40, -10], lon: [113, 155], kerroin: 1.5 },
+      { nimi: 'Itä-Aasia ja Japani', lat: [22, 42], lon: [104, 146], kerroin: 1.6 },
+      { nimi: 'Eurooppa', lat: [36, 56], lon: [-10, 30], kerroin: 2.0 },
+      { nimi: 'Britannia', lat: [50, 60], lon: [-11, 2], kerroin: 1.5 },
+      { nimi: 'Fennoskandia', lat: [56, 71], lon: [4, 32], kerroin: 1.5 },
+      { nimi: 'Keski-Aasian arot', lat: [35, 52], lon: [50, 90], kerroin: 0.7 },
+      { nimi: 'Siperia', lat: [50, 76], lon: [80, 175], kerroin: 0.6 },
+      { nimi: 'Beringia ja Alaska', lat: [55, 72], lon: [175, -140], kerroin: 0.5 },
+      { nimi: 'Pohjois-Amerikan länsirannikko', lat: [30, 58], lon: [-140, -115], kerroin: 1.1 },
+      { nimi: 'Grönlanti ja arktinen Kanada', lat: [60, 84], lon: [-100, -10], kerroin: 0.5 },
+    ],
+  },
 };
 
 /**
