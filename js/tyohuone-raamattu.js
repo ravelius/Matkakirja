@@ -4192,6 +4192,16 @@ export const RAAMATTU = {
           + 'agenttina vain todella vaikeaan pulmaan". Kaksi 7.9. illalla '
           + 'kaynnistettya Fable-agenttia (linssinakyma, vanat) pysaytettiin ja '
           + 'tyo jatkettiin Opuksella niiden valitallennuksista.',
+        'IHMISEN MATKA: KELLO EI KULJE TAAKSEPAIN, PAITSI AIKAHYPYSSA (omistaja '
+          + '7.9.2026 ilta klo 21.50 Suomen aikaa, sanatarkasti: "Ja tarinan '
+          + 'jarjestys pitaa muuttaa. Outoa etta kello menee taaksepain etela '
+          + 'Afrikassa"): kertomuksen jaksot ovat aikajarjestyksessa vanhimmasta '
+          + 'nuorimpaan; ainoa taaksepain kulku on tarkoituksellinen, aaneen '
+          + 'kerrottu aikahyppy (Chile 14 500 -> Aasia 50 000). Fablen '
+          + 'kaanonkorjaus: Levantti (110 000) kerrotaan ennen Blombosta, ja '
+          + 'Blombos ajoittuu okrapajan mukaan noin 100 000 vuoteen (Henshilwood '
+          + '2011); helmet 75 000 ja piirros 73 000 mainitaan myohempina. '
+          + 'Blombos-jakson luenta generoidaan uusiksi.',
         'IHMISEN MATKA: MUSTA ALKU ON AVARUUS, PALLO ZOOMAUTUU PIMEYDESTA '
           + 'AFRIKKA EDELLA (omistaja 7.9.2026 ilta klo 21.35 Suomen aikaa, '
           + 'sanatarkasti: "Linssissa se musta alku onkin avaruus ja maapallo '

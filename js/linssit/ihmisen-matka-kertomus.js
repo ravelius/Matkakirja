@@ -103,17 +103,6 @@ export const IHMISEN_MATKA_KERTOMUS = [
     pulu: 'Simpukoita. Hyvä alku.',
   },
   {
-    id: 'blombos', vaihe: 'matka', kohde: 'blombos', alue: null, vuosia: 75000,
-    maisema: 'meren-ranta',
-    teksti: 'Samalla rannikolla joku hioi okraa punaiseksi ja pujotteli '
-      + 'simpukankuoria helmiksi. Kukaan ei tiedä, kenelle. Mutta se, joka tekee '
-      + 'helmiä, ajattelee jo niin kuin me.',
-    luenta: 'Samalla rannikolla joku hioi okraa punaiseksi ja pujotteli '
-      + 'simpukankuoria helmiksi. [softly] Kukaan ei tiedä, kenelle. [warmly] '
-      + 'Mutta se, joka tekee helmiä, ajattelee jo niin kuin me.',
-    pulu: null,
-  },
-  {
     id: 'levantti', vaihe: 'matka', kohde: 'skhul-qafzeh', alue: null, vuosia: 110000,
     maisema: 'vuoristotuuli',
     teksti: 'Ensimmäinen retki Afrikan ulkopuolelle ulottui Karmelvuorelle asti. '
@@ -122,6 +111,27 @@ export const IHMISEN_MATKA_KERTOMUS = [
     luenta: 'Ensimmäinen retki Afrikan ulkopuolelle ulottui Karmelvuorelle asti. '
       + '[softly] Se ei jäänyt. Ehkä ilmasto kääntyi, ehkä naapurit. Historia ei '
       + 'kerro, ja luut vaikenevat.',
+    pulu: null,
+  },
+  {
+    id: 'blombos', vaihe: 'matka', kohde: 'blombos', alue: null, vuosia: 100000,
+    maisema: 'meren-ranta',
+    /*
+     * JÄRJESTYS JA AJOITUS (omistaja 7.9.2026 ilta: "tarinan järjestys
+     * pitää muuttaa. Outoa että kello menee taaksepäin etelä Afrikassa"):
+     * Levantti (110 000) kerrotaan ENNEN Blombosta, ja Blombos ajoittuu
+     * okrapajan mukaan noin 100 000 vuoteen (Henshilwood ym. 2011, Science:
+     * "A 100,000-year-old ochre-processing workshop at Blombos Cave");
+     * helmet (75 000) ja piirros (73 000) ovat myöhempiä samassa luolassa,
+     * ja teksti sanoo sen. Kello ei enää kulje taaksepäin muualla kuin
+     * tarkoituksellisessa aikahypyssä. Luenta generoidaan uusiksi.
+     */
+    teksti: 'Etelän rannikolla joku hioi okraa punaiseksi, ja hänen jälkeensä '
+      + 'toiset pujottelivat simpukankuoria helmiksi. Kukaan ei tiedä, kenelle. '
+      + 'Mutta se, joka tekee helmiä, ajattelee jo niin kuin me.',
+    luenta: 'Etelän rannikolla joku hioi okraa punaiseksi, ja hänen jälkeensä '
+      + 'toiset pujottelivat simpukankuoria helmiksi. [softly] Kukaan ei tiedä, '
+      + 'kenelle. [warmly] Mutta se, joka tekee helmiä, ajattelee jo niin kuin me.',
     pulu: null,
   },
   {

@@ -20,8 +20,7 @@ import {
 
 /** Fablen pysäkkilista 5.9.2026 — tunnukset eivät muutu, järjestys on ajan. */
 const TUNNUKSET = [
-  'jebel-irhoud', 'omo-kibish', 'pinnacle-point', 'skhul-qafzeh', 'al-wusta',
-  'blombos', 'lida-ajer', 'madjedbebe', 'denisova', 'bacho-kiro',
+  'jebel-irhoud', 'omo-kibish', 'pinnacle-point', 'skhul-qafzeh', 'blombos', 'al-wusta', 'lida-ajer', 'madjedbebe', 'denisova', 'bacho-kiro',
   'lake-mungo', 'tianyuan', 'niah', 'chauvet', 'yana',
   'white-sands', 'beringia', 'monte-verde', 'lapita', 'aotearoa',
 ];
