@@ -1843,3 +1843,233 @@ MITATTU 7.9.2026 (kontti, ohjelmisto-WebGL):
   karuselli ja Tiedeliite ennallaan.
 - Kertomuskuvan napautus ruutukoordinaatilla (390 × 844) avasi noston
   kortin ("Okra ja helmet").
+
+## 14. Kaista rannikkoa pitkin (7.9.2026)
+
+### 14.1 Linjaus
+
+Omistaja 7.9.2026 illalla klo 18.05 Suomen aikaa, sanatarkasti
+(Raamattu, *IHMISEN MATKA: VANAT RANNIKKOA MAALAAVINA KAISTOINA, EI
+VIIVA JA HALO*):
+
+> *"Tarkista myös ne viivat, jotka leviävät kartalla. Niiden tavallaan
+> siinä pääviivan reunoilla olevassa hehkussa on välillä värinää. Ja
+> minusta olisi kiva, jos se hehku maalaisi rannikkoa sen ääriviivan
+> mukaisesti. Nythän se menee sattumanvaraisesti yli. Mutta koska eikös
+> meillä ole kartta piirretty jo vektoreina, niin se voisi maalata
+> nätisti sitä kartan ääriviivaa ja siitä sisäänpäin aluetta ja näkyä
+> vähän paremmin. Eli minun mielestä ei tarvitse olla ohutta ja
+> voimakasta viivaa ja sen ympärillä olevaa haloa vain, vaan ennemmin
+> niiden kahden välistä olevalla peitolla oleva väri, joka leviää
+> rannikkoa pitkin, levittäytyen hieman sisämaahan. Ja siitä voisi
+> tehdä hieman vaihtelevan paksuista sillä idealla, että jos jossain
+> kohdassa ihmisiä ehkä olisi levittäytynyt enemmän sisämaahan, niin
+> siinä se olisi paksumpaa ja joissain kohdissa, missä ehkä on vain
+> kuljettu läpi, niin se olisi kapeampaa. Sen ei tarvitse olla aivan
+> tieteellisesti oikein välttämättä. Sekin voidaan sitten jossain
+> tekstissä selittää, mutta se ainakin näyttäisi paremmalle."*
+
+Neljä vaatimusta: (1) värinä pois, (2) YKSI puoliläpinäkyvä kaista
+viivan ja halon välistä eikä ohutta viivaa + haloa, (3) kaista seuraa
+rantaviivaa ja leviää siitä SISÄMAAHAN, ei sattumanvaraisesti merelle,
+(4) leveys vaihtelee: asuttu leveä, läpikuljettu kapea.
+
+### 14.2 Tekniikka: kaista pallon pinnalla omalla varjostimella
+
+Line2 (viiva + halo) hylättiin: se ei häivytä reunaansa, sen jänteet
+näkyvät ketjuna suorakaiteita (luku 7, havainto 1) eikä sitä voi
+leikata rantaviivaan. Kaista on nyt oma verkko (js/aikajana-vanat.js):
+
+1. **Yksi instanssoitu nelikulmio ("hulli") per jana.** Kärkivarjostin
+   levittää sen janan ympärille (puolileveys + pehmennys + pyöreä pää)
+   ja nostaa pallon pinnan yläpuolelle jänteen painuman verran.
+2. **Kaikki lasketaan PINNAN PISTEESTÄ, ei nelikulmiosta.** Fragmentti
+   ampuu säteen `gl_FragCoord`ista käänteisellä MVP:llä ja leikkaa sen
+   pallon kanssa. Peitto on pinnan pisteen etäisyys janaan pehmeänä
+   funktiona, joten liitokset ovat pyöreitä ja reuna häipyy.
+3. **OMISTUSSÄÄNTÖ (korjaus 7.9.2026 ilta).** Hulli tuntee kolme janaa
+   (edellinen, oma, seuraava). Ensimmäinen toteutus otti niistä
+   LÄHIMMÄN — ja juuri se oli värinän syy. Kaikilla saman pikselin
+   fragmenteilla on sama syvyys (pinnan piste), joten LESS-testi
+   päästää läpi sen, joka piirtyy ENSIN. Ensin piirtyvä hulli saattoi
+   olla se, jonka kolmen janan ikkuna päättyi juuri siihen: sen peitto
+   oli vaimenemassa pyöreäksi kärjeksi, ja pikseli sai liian pienen
+   peiton, vaikka naapurihulli olisi maalannut sen täytenä. Tulos oli
+   VALOJUOVA jokaisen kärjen kohdalla (helminauha) ja kameran
+   liikkuessa juovat pomppivat hullista toiseen. Nyt hulli piirtää vain
+   siellä, missä OMA jana on lähempänä kuin naapurit
+   (`if (d1 < d2 - SUVAITSE || d3 < d2 - SUVAITSE) discard;`): alue on
+   naapurien puolittajien rajaama pala, pikseli kuuluu täsmälleen
+   yhdelle hullille eikä piirtojärjestys ratkaise mitään. Puolittajalla
+   molemmat piirtävät (SUVAITSE = 1e-4 × säde), mutta siellä etäisyys ja
+   kärkiväli ovat samat, joten sauma ei näy. Vanan päissä naapurijana on
+   rappeutunut (sama piste kahdesti), joten pyöreä pää säilyy; kasvun
+   kärjessä katkaistu jana on omistaja.
+4. **Rantamaski tekstuurina.** `tools/tee-rantamaski.mjs` rasteroi repon
+   `ne50.geojson`:n (Natural Earth 1:50m, sama perhe kuin pallon
+   vektorirantaviivat) 0,125°:n ruudukkoon 3 × 3 alinäytteellä ja
+   enemmistösäännöllä (≥ 5/9), jolloin bilineaarisen luvun
+   0,5-tasa-arvokäyrä kulkee rantaviivan päällä ±0,06°:n tarkkuudella.
+   Varjostin kertoo peiton maan osuudella: kaistan meren puoleinen reuna
+   ON rantaviiva ja väri leviää siitä sisämaahan.
+5. **Meren ylitykset kapeina.** Kärki saa `merisyys`-luvun 0…1
+   (etäisyys lähimpään maahan 25…45 km; mallin oma kulkumaski ratkaisee
+   ensin: ruutu, jossa malli käveli, on rannikkoa). Merikärjellä kaista
+   on `meriKerroin` = 0,3 leveydestä eikä maskaudu — Wallacea, Sahul,
+   Beringinsalmi ja Tyynenmeren nauhat kulkevat kapeana pelkkänä vanana.
+   Rannikkokärki, joka on mallin sileän vanan pyöristämänä vedessä,
+   maalaa RANNASTA sisämaahan (`iRanta` antaa etäisyyden rantaan
+   anteeksi), jottei lahti jää tyhjäksi.
+6. **Peitto 0,5** — omistajan haarukka "viivan (0,95) ja halon (0,14)
+   välistä". Kasvu (`uKuljettu`), kärkiväri (`uNyt`, `uRintama`, `uPito`)
+   ja tutkimusvaiheen korostus (`uVanaPeitto`) ovat UNIFORMEJA: kello ja
+   napit eivät koske puskureihin. Tutkimusvaiheen korostus tehdään
+   VAIMENTAMALLA muut (`KOROSTUKSEN_VAIMEA` 0,35); valittu virta pitää
+   kertoimen 1, koska kerroin yli yhden veisi kaistan yli omistajan
+   haarukan 0,45–0,6.
+7. **Piirto kalvojen jälkeen** (renderOrder 2 > kalvo 1) ja syvyys
+   pinnan pisteestä (`gl_FragDepthEXT`, bias 12/2²⁴): päällekkäiset
+   vanat eivät summaa peittoa, ja kerran maalatut kalvot eivät testaa
+   kaistan kirjoittamaa syvyyttä.
+8. **VAHVEMPI FRAGMENTTI VOITTAA** (`KAISTAN_ALFABIAS` 8/2²⁴). Kaksi
+   ERI vanaa menee liitoksissa päällekkäin. Kun syvyys oli molemmilla
+   sama, LESS päästi sen, joka piirtyi ensin — ja jos se sattui olemaan
+   naapurivanan häipyvä reuna, vahva kaista jäi sen alle ja liitokseen
+   jäi VAALEA HIUSVIIVA (nähtiin Hormuzin salmessa, kuva
+   `crop-sauma.png`). Peitto vedetään siksi syvyydestä: vahva fragmentti
+   on hitusen edempänä ja pääsee läpi myös myöhemmin piirtyneenä. Sama
+   peitto antaa yhä saman syvyyden, joten omistussäännön puolittajan
+   tasapelit ratkeavat kuten ennenkin. Pahin jäljelle jäävä virhe on,
+   että liitoksessa peitto voi olla 0,5:n sijaan 0,55 — silmälle
+   näkymätön, toisin kuin vaalea rako.
+
+### 14.3 Leveys aineistosta (kuvituksellinen, ei tiedeväite)
+
+`IHMISEN_MATKA_VANAT.kaista` (js/linssit/ihmisen-matka-virrat.js):
+perusleveys `leveysKm` = 200 km kertoimella 1, ja `alueet` on lista
+laatikoita, joista jokainen antaa kärjelle kertoimen pehmeällä reunalla
+(oletus 4° liukuvyö). Päällekkäiset alueet EIVÄT summaudu: suurin
+levennys (≥ 1) ja pienin kavennus (≤ 1) kertautuvat, ja tulos rajataan
+välille 0,3…3,5. Ruudulla on lisäksi vähimmäisleveys 7 px (meri 3 px),
+jotta kaista näkyy myös koko pallon näkymässä.
+
+| alue | kerroin | perustelu (yleinen maantiede, ei lähdeväite) |
+| --- | --- | --- |
+| Levantti ja Arabian länsirannikko | 2,0 | pullonkaula, jossa asuttiin pitkään ja tiheästi |
+| Eurooppa | 2,0 | asutettiin läpikotaisin, ei vain rannikkoa |
+| Kaakkois-Aasia ja Sunda | 2,0 | mannerjalusta oli kuivaa maata, asutus laaja |
+| Intian niemimaa ja Ceylon | 1,8 | rannikkoreitin sydän, jokisuut |
+| Itä-Aasia ja Japani | 1,6 | tiheä asutus, monta löytöpaikkaa |
+| Sahul: Australian rannikot | 1,5 | rannikko asuttiin, sisämaa harvemmin |
+| Etelä-Afrikan rannikko | 1,5 | Blombos ja Pinnacle Point: pitkä asutus |
+| Britannia, Fennoskandia | 1,5 | jään jälkeen asutettiin kokonaan |
+| Itä-Afrikka ja Afrikan sarvi | 1,4 | kotipesien maasto |
+| Persianlahti ja Iranin rannikko | 1,4 | rannikkoreitti |
+| Pohjois-Amerikan länsirannikko | 1,1 | rannikkoreitti etelään |
+| Etelä-Amerikan rannikko | 1,0 | keskileveä: kuljettu nopeasti, asutus ohut |
+| Keski-Aasian arot | 0,7 | läpikuljettu käytävä |
+| Siperia | 0,6 | harva asutus, pitkät välit |
+| Beringia ja Alaska, Grönlanti ja arktinen Kanada | 0,5 | kuljettiin läpi, ei jääty |
+
+Omistaja hyväksyi kuvituksellisuuden etukäteen (*"Sen ei tarvitse olla
+aivan tieteellisesti oikein välttämättä"*); leveysero on kartan kieltä,
+ei väite asukasluvusta. Selitys kuuluu Fablen tekstiin (ehdotus:
+tutkimusvaiheen Eurooppa-lappuun tai Tiedeliitteen alkuun yksi virke:
+*"Kaistan paksuus kertoo, jäätiinkö seudulle asumaan vai kuljettiinko
+sen läpi — se on piirtäjän arvio, ei mittaustulos."*).
+
+### 14.4 Mitatut luvut (kontti, ohjelmisto-WebGL — suhteellisia)
+
+Mittari `mittaa-kaistan-varina.mjs` (scratchpad, luku 10): linssi auki,
+tutkimusvaihe käynnissä (kello seis, vanat kokonaan piirretyt),
+kertomusesitys purettu, kamera Arabian yllä (lat 25°, lng 52°, altitude
+0,55), näkymä 834 × 1100. KAISTAN OMA KUVA saadaan erotuksena "kaappaus
+vanat päällä" − "kaappaus vanat pois" (`korosta(virta, {vaimea: 0,
+hehku: 0})` sammuttaa kaistan), jolloin laattakerros ja kaikki muut
+kerrokset putoavat mitasta pois. Vertailuluku on sama ero TAUSTALLA.
+
+| mitta (kaistan oma kuva, kynnys 40) | ennen (lähin kolmesta) | omistussääntö | + peitto syvyydessä |
+| --- | --- | --- | --- |
+| kaista hajoaa yhtenäisiin paloihin | 57 | 6 | **5** |
+| piiri / pinta-ala | 0,1235 | 0,0571 | **0,0559** |
+| suurin pala pinta-alasta | 26,9 % | 41,9 % | **45,1 %** |
+| pinta-ala (px) | 70 487 | 76 199 | 76 378 |
+| sama kynnyksellä 25: paloja / piiri per ala | 15 / 0,1159 | 7 / 0,0456 | — |
+| sama kynnyksellä 60: paloja / piiri per ala | 64 / 0,1778 | 16 / 0,1205 | — |
+
+Helminauha oli siis mitattavissa suoraan siitä, että valojuovan kohdalla
+peitto putoaa kynnyksen alle ja kaista katkeaa: 57 helmeä → 6 palaa.
+
+| värinä: peräkkäisten kehysten pikseliero (kamera 0,004°/askel ≈ 0,03 px, 4 kehystä) | ennen | omistussääntö | + peitto syvyydessä |
+| --- | --- | --- | --- |
+| kaistan REUNAVYÖ: ka / p99 / pisin | 1,57 / 14 / 90 | 1,17 / 11 / 85 | **1,20 / 12 / 59** |
+| kaistan sisus: ka / p99 / pisin | 0,43 / 2 / 78 | 0,43 / 2 / 40 | 0,43 / 2 / **47** |
+| tausta (vertailu, mittarin oma kohina) | 0 / 0 / 8 | 0 / 0 / 8 | 0 / 0 / 3 |
+| reunavyön pikseleitä / sisuspikseleitä | 35 376 / 55 508 | 19 847 / 71 172 | **19 500 / 71 549** |
+
+Reunavyö kutistui 44 %: kaarien reunat olivat itsessään reunaa. Yhden
+kehyksen pikseliero on pieni kummassakin, koska askel on alle
+pikselin — värinän varsinainen mitta on helminauhataulukko yllä, ja
+sen syy (piirtojärjestys ratkaisee peiton) on nyt poissa rakenteesta,
+ei vain säädetty pienemmäksi.
+
+| kehystahti | ennen | jälkeen |
+| --- | --- | --- |
+| `savuke-pallo-kehystahti --nakyma=puhelin`, pano JS/kehys p50 / p95 / pisin | 2,0 / 5,3 / 10,4 ms | 2,2 / 6,3 / 24,7 ms |
+| sama, yli 17 ms:n kehysten osuus (raja 3 %) | 0 % | 2,2 % (läpi) |
+| sama, zoom p50 / p95 / pisin | 1,8 / 5,6 / 6,2 ms | 2,2 / 4,2 / 5,6 ms |
+| LINSSIN kehysväli kaista näkyvissä (puhelin 390 × 844, tutkimusvaihe) p50 / p90 / pisin | 1 233 / 1 417 / 2 367 ms | 1 217 / 1 400 / 2 267 ms |
+
+Savuke ei avaa linssiä lainkaan (se panoroi Ateenan yllä), joten sen
+ennen/jälkeen mittaa samaa koodipolkua: ero on kontin kohinaa, ja
+molemmat menivät vartion läpi. Linssin oma kehysväli ei huonontunut —
+omistussääntö ei lisää työtä, se vain hylkää fragmentin aiemmin.
+
+Portit jälkeen: `node --test tests/*.test.mjs` 2 192 läpi / 0 kaatunutta
+/ 13 ohitettua, `tarkista-kaksoisavaimet`, `tarkista-niputus`,
+`tarkista-savukkeet` puhtaat, `savuke-ihmisen-tutkimus` 20/20 läpi.
+
+### 14.5 Kuvat (scratchpad, ei repossa)
+
+`kuvat-kaista.mjs` (834 × 1100 ja 390 × 844): esityksen puoliväli
+(pysäkki 9, 45 000 v. sitten) Eurooppa ja Intian rannikko samassa
+kuvassa, Intian rannikko lähempää, tutkimusvaihe Eurooppa korostettuna
+(`jalkeen2-tabletti-*.png`, `jalkeen2-puhelin-*.png`). Skripti purkaa
+kertomusesityksen (`ajo.esitys.pura()`), siirtyy pysäkille ja uusii
+kameran kohteen silmukassa — virtamoduuli ohjaa muuten kameraa ja
+kirjoittaisi yhden `pointOfView`n yli.
+`mittaa-kaistan-varina.mjs` jättää lisäksi jokaisen mitatun kehyksen
+(`ennen-k0-paalla.png` … `jalkeen-k3-pois.png`); Arabian lähikuva on
+paras vertailupari — samassa rajauksessa ennen näkyy helminauha, jälkeen
+tasainen kaista, joka päättyy rantaviivaan.
+
+### 14.6 Avoimet asiat
+
+1. **Ei-viereisten janojen päällekkäisyys.** Omistussääntö vertaa vain
+   kahteen naapuriin. Jos vana kulkee lähelle omaa kaukaista osaansa
+   (tai toinen vana risteää), molemmat hullit piirtävät, ja peiton
+   syvyysjärjestys (14.2 kohta 8) ratkaisee: vahvempi voittaa, mutta
+   sen päälle summautuu se, mitä heikompi ehti jo piirtää (0,5 → n.
+   0,55). Vanoissa haarat on katkaistu 100 km:n erolla rungosta, joten
+   päällekkäisyys on käytännössä vain liitoskohdissa eikä näy kuvissa.
+   Täydellinen korjaus olisi kaistan piirto omaan puskuriin ja
+   sommittelu kerran — oma erä, jos se joskus näkyy.
+2. **Kaista ei vielä TUNNE rantaviivaa, se leikkautuu siihen.** Väri
+   leviää janan ympäriltä ja maski katkaisee sen rannassa. Meren
+   puolelle kaista ei siis mene (paitsi merikärjissä, jossa se on
+   tarkoitus), mutta jos MALLIN oma vana oikaisee mantereen poikki,
+   kaista oikaisee sen mukana: Intian kuvassa kaista kulkee Dekkanin
+   yli, koska yksinkertaistettu vana kulkee siellä — rannikon ääriviiva
+   näkyy vain siellä, missä vana on rannan tuntumassa. Aidosti
+   rantaviivavektoria pitkin leviävä maalaus (etäisyyskenttä
+   rannikosta) olisi oma erä; toinen, halvempi keino olisi tihentää
+   vanan kärkiä rannikko-osuuksilla.
+3. **Vähimmäisleveys 7 px** pitää kaistan näkyvissä koko pallon
+   näkymässä, mutta lähikuvassa se ei rajoita mitään: silloin leveys on
+   maantieteellinen. Jos omistaja haluaa kaistan näkyvän vielä
+   selvemmin kaukaa, säätö on `KAISTAN_MIN_PX` eikä peitto.
+4. **Leveyskertoimien teksti** on Fablen kirjoitettava (14.3).
+5. **Kotipesät** ovat yhä Line2-renkaita. Ne eivät värise (peitto 0,28,
+   ei syvyyskirjoitusta), mutta ne ovat eri kieltä kuin kaista; jos
+   omistaja haluaa niistäkin kaistan, mekanismi on sama varjostin
+   ilman janaa (säde pisteestä).
