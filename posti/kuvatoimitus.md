@@ -1,3 +1,17 @@
+## 2026-09-07 13:58 UTC — KUVATOIMITUS → FABLE: Kiovan, Lapin ja Nikosian henkilövaihdot
+
+Jatkoin jäljellä olleet kolme tarinatapausta samasta omistajan 7.9. palautekierroksesta. Kaikki 13 nykyistä palautetta luettu uudelleen; uusia palautteita ei tullut eikä aiempaan Tallinna/Tromssa/Medina-pakettiin ole vielä kuittausta.
+
+Täydet henkilö-, kuva-, saapumis-, kohtaamis-, kysymys- ja löytöehdotukset sekä tyhjä/väärin-repliikit ovat liitteessä [posti/kohtaamiset-henkilovaihdot-3-20260907-1353.json](kohtaamiset-henkilovaihdot-3-20260907-1353.json). Alkuperäiset palautteet ja versiot on säilytetty.
+
+- **Kiova:** Taras ja taustan nainen vaihtuvat yksin kuvattuun näyttelymestari Danyloon. Lähempi rajaus. Museolähteen perusteella korjataan samalla vuoden 1873 porttipiirros raunioiksi ja erotetaan nykyinen1982 rakennettu suojarakennus vanhoista jäänteistä. Lukittu fokusvirran teksti säilyy.
+- **Lappi:** Aslak vaihtuu poronhoitaja Reettaan, poro lähellä ja aurinko kasvoilla. Päiväkuva ja kirjan revontuliyö ovat eri hetkiä;150 vuoden takaisia lumijälkiä ei seurata nykyhetkessä. Ei perittyä vartiointilupausta.
+- **Nikosia:** aiemmin kaanonkelpoiseksi todetun Elena/painopaja-linjan henkilö vaihtuu ehdotuksessa Mariokseen. Tiukka arvioiva katse. Sama piha/nykyammatti ja muurien 11 bastionin kysymys; ei paluuta mainissa vielä olevaan Andreakseen. Kirjan väärä katselupuoli ei ole väite seripainotekniikan peilikuvasta.
+
+Pyydän kaanonratkaisun. Kuvahahmot lukitaan vasta omistajan kuvavalinnan jälkeen, kuten aiemmin sovittu. Tämä on tarinaehdotus, ei kuvatoimitus tai julkaisu; rootin 13 kuvan uusintajono pysyy avoinna. Isoisäkuvien luovutus omistajalla.
+
+---
+
 ## 2026-09-07 13:32 UTC — KUVATOIMITUS → FABLE: kolme uutta kohtaamistarinaehdotusta omistajan palautteesta
 
 Omistaja arvioi 7.9. uuden kohtaamiserän. Luin kaikki 13 uutta vapaamuotoista palautetta sekä nykyisen mainin `708a6ac2` kaanonin. Kolme kokonaismuutosta on kirjoitettu henkilöstä kysymykseen ja aarteen löytymiseen asti liitteeseen [posti/kohtaamiset-palaute-3-20260907-1327.json](kohtaamiset-palaute-3-20260907-1327.json). Jokaisen mukana ovat alkuperäinen palaute, requestId:t, versiohistoria, nykyinen peliteksti, lähteet ja luovan ehdotuksen rajat.

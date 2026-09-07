@@ -1,0 +1,348 @@
+{
+  "createdAt": "2026-09-07T13:58:37.518101+00:00",
+  "scope": "Three queued person-change feedback cases; concrete proposals only",
+  "items": [
+    {
+      "cityId": "kiova",
+      "name": "Danylo",
+      "occupation": "näyttelymestari",
+      "title": "Kiova — väärä kerros",
+      "visual": "Yksi noin 32-vuotias Danylo, pitkät kapeat kasvot, hyvin lyhyt tumma tukka, siisti tumma kauluspaita. Tiivis ympäristömuotokuva Kultaisen portin museon sisällä, kamera lähellä ja kasvoissa vahva pysäyttävä katse suoraan pelaajaan. Molemmat kädet lepäävät matalan dokumentointikansion päällä, eikä henkilö kanna isoa pienoismallia. Hymy on juuri vaihtumassa epäileväksi tarkkuudeksi. Nainen poistuu kokonaan. Aidot keskiaikaiset muurijäänteet ja nykyinen suojarakennus erottuvat taustalla; ei keksittyjä museoesineitä eikä uusia ihmisiä. Koko pää ja kädet näkyvät, yksityiskohdissa hieno luonnonvalo.",
+      "framing": "Taras vaihtuu Danyloon; museon ammattirooli säilyy. Kuvan keskiaikaiset jäänteet erotetaan nykyisestä suojarakennuksesta. Danylo lukee kirjan piirrosta dokumentointitaitonsa avulla eikä tunnista sukua tai peri vartiointitehtävää. Isoisoisän kolme aaltoviivaa säilyvät fiktiivisenä vihjeenä.",
+      "saapuminen": "Istuin piirtämään portin raunioita kirjaani; pieni tyttö katsoi olkani yli ja pudisti päätään: kaari oli väärän muotoinen. Hän oli oikeassa, ja minä korjasin — kartanpiirtäjä tietää, milloin tarkastaja on pätevä. Vartija näytti kivessä merkin: kolme aaltoviivaa. Tunnistin ne heti — samalla merkillä isoisäni sulki kirjeensä.",
+      "henkilo": "Näyttelymestari Danylo järjestää Kultaisen portin museon dokumentointia ja erottaa vanhat muurijäänteet myöhemmistä rekonstruktioista.",
+      "kohtaaminen": "Danylon kädet pysähtyvät kansion päälle, kun kysyt aarteesta. ”Sinä katsoit uutta rakennusta. Kirjasi mies katsoi raunioita.” Hän nostaa katseensa suoraan sinuun. ”Tuo viiva on kiinnostava. Mutta mihin portti alun perin tehtiin?”",
+      "kysymys": {
+        "q": "Mikä oli Kiovan Kultaisen portin alkuperäinen tehtävä?",
+        "vaihtoehdot": [
+          "Pelkkä maksupaikka kauppiaiden kuormien punnitsemiseen",
+          "Varasto, johon lähiseudun verovilja kuljetettiin",
+          "Kaupungin juhlava sisäänkäynti ja puolustusportti",
+          "Vesitorni, josta vesi johdettiin kaupungin taloihin"
+        ],
+        "oikea": 2,
+        "fakta": "1000-luvun Kultainen portti oli juhlava sisäänkäynti ja osa kaupungin linnoitusta. Vanhoja muurijäänteitä suojaava nykyinen paviljonki rakennettiin vuonna 1982; museo avattiin vuonna 1983."
+      },
+      "aarre": "Danylo asettaa vanhan mittapiirroksen kirjan viereen. ”Sama viiva. Tämä kopio tehtiin ennen suojarakennusta.” Sen reunamerkintä johtaa kaupungin kätköön. Rasiassa on kolme aaltoviivaa, mutta ei nimeä.",
+      "outcomes": {
+        "empty": "Danylo tarkistaa mittapiirroksen. ”Paikka täsmää. Joku vain ehti ensin.”",
+        "wrong": "”Erotetaan ensin vanha portti nykyisestä rakennuksesta”, Danylo sanoo ja avaa kansion uudelleen."
+      },
+      "canonNotes": [
+        "Vuoden 1873 kupolin piirtäminen nykyisen kaltaisena olisi harhaanjohtavaa: ehdotus muuttaa kaaren saapumisen raunioiden kaareksi. Tämä on ehdotus Fablelle, ei mainin muutos.",
+        "Kysymyksen faktasta poistetaan väite lähes tuhannen vuoden yhtäjaksoisesta pääsisäänkäynnin käytöstä.",
+        "Fokusvirta-kiova.js:n omistajan hyväksymiä saapumis-/Livia-tekstejä ei saa ylikirjoittaa tämän mukana. Uusi kohtaaminen ja kaaren varjossa oleva saapuminen sovitetaan erikseen.",
+        "Kaupungin kätkö ei ole suojeltua muuria purettaessa löytyvä arkeologinen esine; Fable kohdistaa olemassa olevaan pelin kätkömekaniikkaan. Fiktiivinen mittapiirros ei ole museon todellinen dokumentti."
+      ],
+      "sources": [
+        {
+          "url": "https://sofiia-kyivska.ua/museum/2/",
+          "readMethod": "Official museum page read fully, paragraphs 29–33",
+          "supports": "11th-century gate; ceremonial entrance plus defensive role; semi-ruined by16th-17th centuries; protective pavilion 1982; museum 1983."
+        }
+      ],
+      "proposalId": "kiova-person-change-20260907-1353",
+      "feedbackId": "kiova-taras-r20260907-v1:44bb4619ef0211702b7e57c22a676c3e9857a73faea97567328b501e7683018d",
+      "imageId": "kiova-taras-r20260907-v1",
+      "originalFeedback": "kuva lähempää, poista nainen ja vaihda henkilö",
+      "feedbackSha256": "44bb4619ef0211702b7e57c22a676c3e9857a73faea97567328b501e7683018d",
+      "requestIds": [
+        "e92b1c45-ebad-4fb5-b71d-246763977387"
+      ],
+      "sourceUpdatedAt": "2026-09-07T07:41:14.424Z",
+      "currentMainSha": "708a6ac20f4404e847aff8e4a4d1872351781e11",
+      "currentCanonicalRecord": {
+        "id": "kiova",
+        "mykistetyt": [],
+        "otsikko": "Kiova — merkki portin holvissa",
+        "saapuminen": "Istuin piirtämään porttia kirjaani; pieni tyttö katsoi olkani yli ja pudisti päätään: kupoli oli väärän muotoinen. Hän oli oikeassa, ja minä korjasin — kartanpiirtäjä tietää, milloin tarkastaja on pätevä. Holvissa vartija näytti merkin, jota kukaan ei osaa lukea: kolme aaltoviivaa. Tunnistin ne heti — samalla merkillä isoisäni sulki kirjeensä.",
+        "henkilo": "Näyttelymestari Taras rakentaa Kultaisen portin museoon uutta näyttelyä ja tuntee dokumentointikansiot ulkoa.",
+        "kohtaaminen": "Museon käytävällä näyttelymestari Taras kannattelee portin pienoismallia lantiollaan. \"Tämänkö alle? Tämä valmistui viime kuussa.\" Sitten hän katsoo piirroksen viivaa. \"Tuo ei ole mallista. Vastaa ensin, mihin portti alun perin tehtiin.\"",
+        "kysymys": {
+          "q": "Kiovan Kultainen portti rakennettiin lähes tuhat vuotta sitten. Mikä sen tehtävä oli?",
+          "vaihtoehdot": [
+            "Se oli muurien juhlava pääportti kaupunkiin",
+            "Se oli tulliportti, jossa kauppiaiden kuormat punnittiin",
+            "Se oli vankila, jonka holveihin suljettiin sotavangit",
+            "Se oli kellotorni, joka kutsui kaupungin kokoon"
+          ],
+          "oikea": 0,
+          "fakta": "Jaroslav Viisas rakennutti portin 1000-luvulla Konstantinopolin mallin mukaan: se oli Kiovan muurien juhlava pääsisäänkäynti lähes tuhat vuotta. Porttitorniin nousi kirkko, jonka kullatut kupolit hehkuivat kauas — siitä nimi."
+        },
+        "aarre": "Taras avasi dokumentointikansion: vanhassa arkkikopiossa oli sama viiva, ja reunamerkintä osoitti holvin viereiseen kivilaatikkoon. Rasia oli siellä. Kopion reunassa ei ole nimeä — vain kolme aaltoviivaa."
+      },
+      "sameCityReviews": [
+        {
+          "imageId": "kiova-oksana-kultainen-portti-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "",
+          "updatedAt": "2026-09-04T20:18:22.969Z"
+        },
+        {
+          "imageId": "kiova-oksana-kultainen-portti-r20260905-night-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "",
+          "updatedAt": "2026-09-05T06:55:38.659Z"
+        },
+        {
+          "imageId": "kiova-oksana-kultainen-portti-r20260905-redo-a02",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "Vaihda henkilö ja mieti uusiksi",
+          "updatedAt": "2026-09-05T19:12:07.382Z"
+        },
+        {
+          "imageId": "kiova-taras-feedback-r20260905-v2",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "Tee pari versiota lisää",
+          "updatedAt": "2026-09-05T20:45:44.152Z"
+        },
+        {
+          "imageId": "kiova-taras-round2-r20260905-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "museo saisi näkyä taustalla enemmän ja siellä mielenkiintoisempia nähtävyyksiä",
+          "updatedAt": "2026-09-07T05:14:43.884Z"
+        },
+        {
+          "imageId": "kiova-taras-r20260907-v1",
+          "workflowStatus": "regenerate",
+          "archived": false,
+          "suggestion": "kuva lähempää, poista nainen ja vaihda henkilö",
+          "updatedAt": "2026-09-07T07:41:14.424Z"
+        }
+      ],
+      "currentImagePersonallyViewed": true,
+      "proposalStatus": "awaiting-fable",
+      "imageGenerated": false,
+      "imageApproved": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "cityId": "lappi",
+      "name": "Reetta",
+      "occupation": "poronhoitaja",
+      "title": "Lappi — jäljet eivät odota",
+      "visual": "Yksi noin 35-vuotias Reetta nykyaikaisessa ruosteenoranssissa talvityötakissa, tummassa pipossa ja työkäsineissä. Kamera selvästi lähemmäksi kuin Aslakin kuvassa: kasvot, molemmat kädet ja viereen uteliaana tullut poron pää muodostavat yhtenäisen kohtaamisen. Toinen poro voi olla matalalla taaempana. Aurinko siivilöityy lumisen metsän läpi kasvoille. Reetta katsoo suoraan kameraan, ensin hämmästyen, sitten melkein tuimasti arvioiden matkaajaa. Ei pukumaista etnistä asua eikä oletusta henkilön etnisyydestä. Sarvet ja kädet eivät leikkaannu. Talvinen päivä, ei päivänvalossa näkyviä revontulia.",
+      "framing": "Aslak vaihtuu Reettaan. Talvinen metsä, lähellä olevat porot ja siivilöityvä päivänvalo säilyvät. Vuoden1873 lumijäljet eivät ole nykyisiä jälkiä; Reetta auttaa tulkitsemaan aukean kuvausta nykymaisemassa. Suvun150-vuotinen odotus poistuu. Revontulet ovat vanhan kirjan yömuisto ja tietokysymyksen aihe, eivät päiväkuvan taivas.",
+      "saapuminen": "Taivas syttyi. Vihreä liekki juoksi taivaanrannasta toiseen ja kaartui pääni ylle kuin joki, joka olisi noussut virtaamaan taivaalle. Poromies sanoi tulen olevan ketun työtä: tunturissa juokseva kettu pyyhkäisee hännällään lumesta kipinöitä. Tulen alla hangella kulki jälkiä. Ne eivät olleet ketun. Ne olivat suksien — ja ne päättyivät keskelle aukeaa.",
+      "henkilo": "Poronhoitaja Reetta tuntee talvisen metsän ja seuraa tokkaansa päivänvalossa. Hän erottaa tuoreet kulkujäljet vanhan kirjan kuvauksesta.",
+      "kohtaaminen": "Reetta pysähtyy poron viereen, kun kysyt isoisän jäljistä. ”Niitä et enää seuraa. Lumi vaihtuu täällä useammin kuin ihmiset.” Suupieli liikahtaa. ”Mutta tuon aukean saatamme löytää. Kerro ensin: mikä revontulet oikeasti sytyttää?”",
+      "kysymys": {
+        "q": "Miten revontulivalo syntyy?",
+        "vaihtoehdot": [
+          "Varatut hiukkaset virittävät yläilmakehän happea ja typpeä, jotka vapauttavat valoa",
+          "Kuu heijastuu lumisista tuntureista yläilmakehään",
+          "Talven salamat jäävät paikoilleen taivaalle",
+          "Jäätynyt meri hohtaa ilmakehän läpi"
+        ],
+        "oikea": 0,
+        "fakta": "Revontulten alkuperäinen energianlähde on Aurinko. Magneettikentän suunnassa saapuvat elektronit törmäävät yläilmakehän happiatomeihin ja typpimolekyyleihin. Viritystilan purkautuessa syntyy valoa."
+      },
+      "aarre": "Reetta löytää kirjan kuvausta vastaavan aukean. Kuusen juurakon suojassa on rasia tuohikääreessä. Hän katsoo vieressä painunutta lunta. ”Nämä jäljet ovat tältä talvelta. Eivät kirjasta.”",
+      "outcomes": {
+        "empty": "Reetta näyttää painaumaa juurakon alla. ”Jotain tässä oli. Lumijäljet ovat vielä tuoreet.”",
+        "wrong": "Reetta vilkaisee aurinkoa puiden välissä. ”Aloita tuosta. Kirjan tuli ei tullut ketun hännästä.”"
+      },
+      "canonNotes": [
+        "Saapumisen yö ja nykykuvan päivä ovat eri hetkiä; nykykohtaaminen ei lupaa revontulia auringossa.",
+        "Tuohikääre ei ole säilynyt saman kinoksen alla150 vuotta. Kätkö on juurakon suojassa, nykyinen lumi vain sen ympärillä; säilymisen tarkkaa ikää ei väitetä.",
+        "Reetta ja aukea ovat fiktiota; pelin kaupunkitunnus lappi säilyy vaikka arviointikortin kaupunki on Rovaniemi. Ei oletusta saamelaistaustasta eikä pyhistä paikoista."
+      ],
+      "sources": [
+        {
+          "url": "https://www.ilmatieteenlaitos.fi/tietoa-revontulista",
+          "readMethod": "Full Finnish Meteorological Institute page read, paragraphs 78–86",
+          "supports": "Solar energy origin, electron collisions with oxygen/nitrogen, light emission; ordinary daylight prevents aurora observation."
+        }
+      ],
+      "proposalId": "lappi-person-change-20260907-1353",
+      "feedbackId": "lappi-aslak-r20260907-v2:8be8a93c8e2c88d3b9de7d777aba37908bc80e32ec9ad30c59c67cf0c630aab1",
+      "imageId": "lappi-aslak-r20260907-v2",
+      "originalFeedback": "Vaihda henkilö ja tee lähempi rajaus.",
+      "feedbackSha256": "8be8a93c8e2c88d3b9de7d777aba37908bc80e32ec9ad30c59c67cf0c630aab1",
+      "requestIds": [
+        "7a22068e-3c70-48d0-9822-7c64a1f3cce8"
+      ],
+      "sourceUpdatedAt": "2026-09-07T07:46:57.522Z",
+      "currentMainSha": "708a6ac20f4404e847aff8e4a4d1872351781e11",
+      "currentCanonicalRecord": {
+        "id": "lappi",
+        "mykistetyt": [],
+        "otsikko": "Lappi — tuli joka juoksi taivaalla",
+        "saapuminen": "Taivas syttyi. Vihreä liekki juoksi taivaanrannasta toiseen ja kaartui pääni ylle kuin joki, joka olisi noussut virtaamaan taivaalle. Poromies sanoi tulen olevan ketun työtä: tunturissa juokseva kettu pyyhkäisee hännällään lumesta kipinöitä. Tulen alla hangella kulki jälkiä. Ne eivät olleet ketun. Ne olivat suksien — ja ne päättyivät keskelle aukeaa.",
+        "henkilo": "Poromies Aslak lukee hangen jäljet kuin kirjaa ja seuraa tokkaansa tulien alla talvet läpeensä.",
+        "kohtaaminen": "Nuotiolla Aslak kaataa kuksaan kuumaa. \"Isoisäsi hiihti sukuni matkassa kolme päivää ja kysyi tulista joka ilta. Viimeisenä iltana hän kysyi yhden, johon kukaan ei osannut vastata. Vastaa siihen, niin hiihdämme aamulla jäljet päähän asti.\"",
+        "kysymys": {
+          "q": "Mikä revontulet tieteen mukaan sytyttää?",
+          "vaihtoehdot": [
+            "Auringon hiukkaset, jotka törmäävät ilmakehän kaasuihin",
+            "Kuunvalo, joka taittuu yläilmojen jääkiteistä",
+            "Salamat, jotka jäävät talven ajaksi loimottamaan yläilmoihin",
+            "Jäätyneen meren heijastus taivaankannessa"
+          ],
+          "oikea": 0,
+          "fakta": "Auringosta virtaa hiukkasia, jotka Maan magneettikenttä ohjaa napaseuduille; törmätessään ilmakehän happeen ja typpeen ne saavat taivaan hehkumaan vihreänä ja punaisena. Tarun tulikettu sai silti pitää nimen: revontulet."
+        },
+        "aarre": "Jälkien päässä kinos kätki tuohikääreen. Aslak osoitti hankea: \"Toiset jäljet alkavat tästä — eilen.\""
+      },
+      "sameCityReviews": [
+        {
+          "imageId": "lappi-aslak-nuotio-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "",
+          "updatedAt": "2026-09-04T20:18:47.306Z"
+        },
+        {
+          "imageId": "lappi-aslak-nuotio-v1-r20260905-night-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "",
+          "updatedAt": "2026-09-05T06:55:10.268Z"
+        },
+        {
+          "imageId": "lappi-aslak-r20260905-redo-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "",
+          "updatedAt": "2026-09-05T19:12:14.714Z"
+        },
+        {
+          "imageId": "lappi-aslak-feedback-r20260905-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "Paljon enemmän lunta ja tuulen tuiverrusta. Aurinko mukaan",
+          "updatedAt": "2026-09-05T20:45:47.724Z"
+        },
+        {
+          "imageId": "lappi-aslak-round2-r20260905-v2",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "aurinko saisi osua kasvoille puiden välistä siivilöityneenä",
+          "updatedAt": "2026-09-07T04:25:54.913Z"
+        },
+        {
+          "imageId": "lappi-aslak-r20260907-v2",
+          "workflowStatus": "regenerate",
+          "archived": false,
+          "suggestion": "Vaihda henkilö ja tee lähempi rajaus.",
+          "updatedAt": "2026-09-07T07:46:57.522Z"
+        }
+      ],
+      "currentImagePersonallyViewed": true,
+      "proposalStatus": "awaiting-fable",
+      "imageGenerated": false,
+      "imageApproved": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "cityId": "nikosia",
+      "name": "Marios",
+      "occupation": "seripainotaiteilija",
+      "title": "Nikosia — väärältä puolelta",
+      "visual": "Elena korvataan yhdellä uudella noin 55-vuotiaalla Marioksella: pitkä kapea hahmo, harmaat kiharat, siistit pyöreät silmälasit, mustansininen pellavapaita ja kulunut vaalea työesiliina. Hän seisoo samantyyppisen nykyisen käsityöpihan painopöydän ääressä, kädet rauhallisesti puukehyksellä. Kamera lähempänä ja katse täysin suoraan pelaajaan, tiukka, arvioiva ja juuri hienovaraisesti huvittunut. Aurinko siivilöityy puusta kasvoille. Seulapaino, siniset ja okraiset koevedokset sekä luettava oikea piharakennus. Ei kupariseppää tai harkkoa. Taustan nimetöntä kahvilavierasta ei tehdä toiseksi tarinahahmoksi.",
+      "framing": "Jatkaa Fablelle aiemmin toimitettua ja kuvavalinnasta riippuvaksi hyväksyttyä Elena/painopaja-linjaa, ei palaa mainin Andreakseen. Käyttäjän ”vaihda toinen henkilö” tulkitaan ensisijaisen kuvahahmon vaihtamiseksi; tämä tulkinta kirjataan näkyvästi. Ammatti ja paikka voivat säilyä, katse muuttuu arvioivaksi. Marios tunnistaa piirroksen väärän katselupuolen ammattitaidollaan eikä tunne sukua.",
+      "saapuminen": "Kävelin kaupungin muurien ulkopuolella ja yritin piirtää niiden muotoa. Tuuli käänsi sivun kesken viivan. Jatkoin piirrosta toiselle puolelle ja olin tyytyväinen, kunnes huomasin piirtäneeni itselleni kaksi eri suuntaa. Jätän ne tähän sinulle: minä en enää luota tähän paperiin.",
+      "henkilo": "Seripainotaiteilija Marios tekee koevedoksia Nikosian vanhankaupungin käsityöpihalla ja huomaa kuvioista niiden katselusuunnan.",
+      "kohtaaminen": "Marios jättää kädet painokehykselle ja mittaa sinua katseellaan. ”Aarretta. Oletko varma, että pidät edes sivua oikein päin?” Hän kääntää kirjaa hiukan. ”Nyt viivat jatkuvat. Montako bastionia tässä kaupungin muurikehässä on?”",
+      "kysymys": {
+        "q": "Kuinka monta bastionia muodostaa Nikosian venetsialaisten muurien kehän?",
+        "vaihtoehdot": [
+          "Kahdeksan",
+          "Yksitoista",
+          "Kolmetoista",
+          "Kuusitoista"
+        ],
+        "oikea": 1,
+        "fakta": "Venetsialaisten 1500-luvulla rakentamaa muurikehää vahvistaa yksitoista sydämenmuotoista bastionia."
+      },
+      "aarre": "Piirroksen kaksi puolta osoittavat samaan suuntaan vasta oikein luettuina. Marios neuvoo julkiselle kulkureitille, jonka varrella kaupungin kätkö odottaa. Rasian reunassa on sama kääntynyt viiva.",
+      "outcomes": {
+        "empty": "”Suunta on oikein”, Marios sanoo. Paikassa on vain paperin painauma.",
+        "wrong": "”Älä arvaa vielä. Katso koko kehää”, Marios sanoo ja kääntää sivun takaisin."
+      },
+      "canonNotes": [
+        "Aiempi ehdotus: posti/kuvapalaute-tarinaehdotukset-2026-09-06-erä1.json, nikosia/Elena. Mainissa on edelleen Andreas; henkilön lopullinen lukitseminen vasta käyttäjän kuvavalinnan jälkeen kuten Fable aiemmin edellytti.",
+        "Uusi saapuminen ei esitä nykyistä käsityökeskusta vuonna 1873. Siinä ei anneta bastionilukua ennen kysymystä.",
+        "Marios on fiktiivinen, ei väite oikeasta keskuksen yrittäjästä. Seripaino ei ole käänteisesti tulostava syväpainotekniikka; väärä puoli koskee kirjan kääntynyttä sivua eikä virheellistä väitettä seripainon peilikuvasta.",
+        "Kätkö ei ole antiikkiharkossa, työpajassa tai irrotettavassa muurin osassa. luennat:false ja middleeast säilyvät."
+      ],
+      "sources": [
+        {
+          "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/chrysaliniotissa-crafts-centre/",
+          "readMethod": "Official Visit Cyprus full page read",
+          "supports": "Eight contemporary craft workshops around central courtyard and café. Does not establish named silk-screen artist."
+        },
+        {
+          "url": "https://www.visitcyprus.com/discover-cyprus/culture/sites-and-monuments/the-medieval-walls-of-lefkosia-nicosia/",
+          "readMethod": "Official Visit Cyprus full page read",
+          "supports": "Sixteenth-century Venetian wall ring with eleven bastions."
+        }
+      ],
+      "proposalId": "nikosia-person-change-20260907-1353",
+      "feedbackId": "nikosia-elena-r20260907-v1:2910e9eb3fe158a2af418deb064986964f3ce1affe07b6b13ae893ff8c7d1d74",
+      "imageId": "nikosia-elena-r20260907-v1",
+      "originalFeedback": "Vaihda toinen henkilö. Voi olla tiukka ja arvioiva katse.",
+      "feedbackSha256": "2910e9eb3fe158a2af418deb064986964f3ce1affe07b6b13ae893ff8c7d1d74",
+      "requestIds": [
+        "54688335-44cb-4e4e-896c-f680461980fb"
+      ],
+      "sourceUpdatedAt": "2026-09-07T07:47:49.117Z",
+      "currentMainSha": "708a6ac20f4404e847aff8e4a4d1872351781e11",
+      "currentCanonicalRecord": {
+        "id": "nikosia",
+        "lauta": "middleeast",
+        "luennat": false,
+        "otsikko": "Nikosia — harkko jota ei voinut myydä",
+        "saapuminen": "Muurit kiersivät kaupungin täydellisenä tähtenä; kävelin kehän ympäri ja kirjasin vallisakarat: yksitoista. Sepänkujalla vasarat löivät kuparia eri tahdeissa; kuja soi kuin soittokunta. Vanhin seppä nosti liinan alta harkon, jossa oli härän taljan merkki — vanhempaa työtä kuin paja tai muurit. Kysyin hintaa. Väärä kysymys, seppä sanoi, ja peitti harkon.",
+        "henkilo": "Seppä Andreas, kaivosmiesten sukua, takoo kuparia kujalla, jolla saaren punainen metalli on soinut aina.",
+        "kohtaaminen": "Andreas kääntää harkkoa pihdeissä. \"Matkalainen sanoi: en voi myydä tätä enkä kantaa kauemmas — pitäkää, kunnes joku vastaa kysymykseen saarenne metallista. Isoisäni suostui — sellaista ei jätetä kadulle. Vastaa, niin harkko on sinun.\"",
+        "kysymys": {
+          "q": "Kyproksen saari ja eräs metalli ovat antaneet nimen toisilleen. Mikä metalli?",
+          "vaihtoehdot": [
+            "Kupari",
+            "Hopea",
+            "Tina",
+            "Rauta"
+          ],
+          "oikea": 0,
+          "fakta": "Kupari sai latinankielisen nimensä Kyproksesta: aes Cyprium, Kyproksen metalli, lyheni muotoon cuprum — siitä kupari. Saaren kaivokset olivat antiikin maailman tärkeimpiä, ja kuparia laivattiin härän taljan muotoisina harkkoina."
+        },
+        "aarre": "Harkko oli ontto; sisällä odotti kätkö. Andreas punnitsi puolikkaita: \"Merkki on lyöty valuun ennen kuin kupari jäähtyi, mutta valu on merkkiä vuosituhansia nuorempi — joku osaa yhä vanhan valajan työn.\""
+      },
+      "sameCityReviews": [
+        {
+          "imageId": "nikosia-andreas-kupari-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "",
+          "updatedAt": "2026-09-05T06:55:56.245Z"
+        },
+        {
+          "imageId": "nikosia-andreas-kupari-r20260905-redo-c1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "Vaihda henkilö ja mieti uusiksi",
+          "updatedAt": "2026-09-07T05:11:28.188Z"
+        },
+        {
+          "imageId": "nikosia-elena-r20260907-v1",
+          "workflowStatus": "regenerate",
+          "archived": false,
+          "suggestion": "Vaihda toinen henkilö. Voi olla tiukka ja arvioiva katse.",
+          "updatedAt": "2026-09-07T07:47:49.117Z"
+        }
+      ],
+      "currentImagePersonallyViewed": true,
+      "proposalStatus": "awaiting-fable",
+      "imageGenerated": false,
+      "imageApproved": false,
+      "gameIntegrationVerified": false
+    }
+  ],
+  "contract": "Root owns all encounter generation and final QA. Full new generations, preserve earlier versions, owner image approval before game publication. Fable aligns text and audio; no main write or review mutation by monitor. Do not change previously owner-approved focus narration. All new people/events/clues are fictional proposals."
+}
