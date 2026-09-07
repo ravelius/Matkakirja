@@ -3791,6 +3791,82 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -12.4565, etela: -12.4705, lansi: 130.8337, ita: 130.8480 },
     meri: true,
   },
+  dili: {
+    /*
+     * VANHA KAUPUNKI SATAMAN YMPÄRILLÄ (7.9.2026). Ruutu on
+     * 1,9 × 1,4 kilometriä eli Darwinin luokkaa. Se riittää, koska
+     * Dilin koko hallinto- ja perintökortteli on kilometrin levyisellä
+     * nauhalla sataman ja etelän kukkuloiden välissä: kartan kahdeksan
+     * kohdetta mahtuvat 1,3 kilometrin kaareen tuomiokirkolta
+     * kansallisstadionille.
+     *
+     * POHJOISREUNA -8,5495 ON MEREN PUOLELLA. Se on tarkoituksellista:
+     * Dili on rakennettu kapealle rantatasangolle, ja ruudun yläreunan
+     * pitää olla vettä, jotta lukija näkee kaupungin selkä vuoriin ja
+     * kasvot lahdelle päin.
+     *
+     * ETELÄREUNA -8,5625 ON TORIHALLIN MUKAAN. Kauempana etelässä
+     * maasto nousee heti Lahanen suuntaan, ja siellä olevat kohteet
+     * (Palácio das Cinzas, Balide Comarca) on jätetty pois
+     * sisältösyistä — nykypolitiikkaa ja miehitysajan väkivallan
+     * muistopaikkoja ei käsitellä.
+     *
+     * CRISTO REI EI MAHDU EIKÄ SITÄ YRITETTY OTTAA MUKAAN: patsas on
+     * kuusi kilometriä itään Fatucaman niemellä, ja se on jo pelin
+     * karttanosto (js/packs/maastokohteet-tls.js, kohde cristo-rei).
+     *
+     * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+     * (tarkistus-dili.md, kohta E): Casa Europa on 178 metriä
+     * hallituspalatsista, vastarintamuseo 182 metriä samasta ja Liceu
+     * Dr. Francisco Machado 112 metriä BNU-pankkitalosta.
+     *
+     * meri: true. Dilin lahti on OSM:ssä rantaviivaa
+     * (natural=coastline) eikä vesimonikulmio, joten ilman lippua
+     * kartan koko pohjoisreuna olisi paperin värinen — sama syy kuin
+     * Darwinissa ja Honiarassa.
+     */
+    rajat: { pohjoinen: -8.5495, etela: -8.5625, lansi: 125.5655, ita: 125.5825 },
+    meri: true,
+  },
+  alicesprings: {
+    /*
+     * TODD-JOEN VARSI ANZAC HILLILTÄ OLIVE PINKIIN (7.9.2026). Ruutu on
+     * 1,7 × 1,8 kilometriä eli pelin tiiviimpiä, Darwinin ja Dilin
+     * luokkaa. Tiiviys ei ole valinta vaan mitattu lähdetilanne:
+     * Alice Springsin koko perintökortteli mahtuu kahdensadan metrin
+     * ympyrään (tarkistus-alicesprings.md, kohta F), ja laajempi ruutu
+     * olisi pelkkää esikaupunkia ilman yhtään kohdetta.
+     *
+     * POHJOISREUNA -23,6925 ON ANZAC HILLIN MUKAAN ja eteläreuna
+     * -23,7085 Olive Pinkin kasvitieteellisen puutarhan mukaan. Näiden
+     * väliin jää koko kaupunki: kukkula pohjoisessa, ruutukaava
+     * keskellä ja puutarha etelässä Todd-joen mutkassa.
+     *
+     * LÄNSIREUNA 133,8705 ON RAUTATIEASEMAN MUKAAN. Asema on kartan
+     * ainoa kohde joen länsipuolella, ja juuri siksi se otettiin
+     * mukaan: rata on se, mikä teki Stuartin kylästä kaupungin 1929,
+     * ja lukijan pitää nähdä, kummalla puolella jokea se kulkee.
+     *
+     * LENNÄTINASEMA JÄTETTIIN POIS, vaikka se on kaupungin
+     * kuuluisin rakennus. Se on kolme kilometriä pohjoiseen eli
+     * kaukana rajauksesta, ja se on jo kolmen muun pelin osan aihe:
+     * saapumisteksti (oceania-saapumiset.js), matkakirjan
+     * valokuvataulun ennen–nyt-pari (oceania-valokuvat.js) ja
+     * AUS-maalehden lennätinnosto (maa-kategoriat.js).
+     *
+     * VIISI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: The Residency
+     * 88 m, Griffiths House 127 m, Hartley Street School 159 m,
+     * Adelaide House 174 m ja Stuart Arms Hotel 189 m Stuart Town
+     * Gaolista. Adelaide House on lisäksi kaupunkilehden noston K4
+     * aihe, ja Todd Mall (137 m Pioneer-teatterista) on teemasivun
+     * aihe.
+     *
+     * meri: ei. Alice Springs on 545 metrin korkeudessa mantereen
+     * keskellä, ja Todd-joki on OSM:ssä tavallinen vesiväylä — ja
+     * lisäksi useimmiten kuiva.
+     */
+    rajat: { pohjoinen: -23.6925, etela: -23.7085, lansi: 133.8705, ita: 133.8875 },
+  },
   saopaulo: {
     /*
      * VANHA YDIN LUZISTA LARGO DE SÃO FRANCISCOON (7.9.2026). Ruutu
@@ -5286,6 +5362,560 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 61.2245, etela: 61.2100, lansi: -149.9160, ita: -149.8700 },
     meri: true,
+  },
+  puntaarenas: {
+    /*
+     * LAMPURIPATSAALTA RANTABULEVARDILLE (7.9.2026). Ruutu on 1,86 ×
+     * 2,13 kilometriä eli 1600 × 1841 pikseliä — kuvasuhde 0,87 on
+     * Varanasin (1600 × 1595) ja Isfahanin (1600 × 1983) välissä.
+     *
+     * ENSIMMÄINEN RAJAUS ULOTTUI 600 METRIÄ ETELÄMMÄS (etelä
+     * −53,1712) satamalaiturille asti, ja se hylättiin kahdesta
+     * syystä. Arturo Pratin laituri osoittautui piirretyssä kuvassa
+     * 84-prosenttisesti vedeksi (tarkista-karttapisteet), ja
+     * kaupungintorille ei löytynyt lähdeartikkelia. Molemmat
+     * korvattiin: merisotamuseo ja rantabulevardi ovat kuivalla
+     * maalla ja molemmilla on lähde. Samalla ruudun alalaidasta
+     * poistui tyhjä kaistale, jolla ei ollut yhtään kohdetta.
+     *
+     * RUUTU ON PYSTY, KOSKA KAUPUNKI ON PYSTY. Punta Arenas on
+     * rakennettu kapealle rantakaistaleelle Brunswickin niemimaalla
+     * (en-Wikipedia, "Punta Arenas", Geography): länsipuolella maa
+     * nousee heti kukkuloiksi ja itäpuolella on Magalhãesinsalmi,
+     * joten kaupunki on kasvanut pohjoiseen ja etelään rantaa pitkin.
+     * Vaakaruutu olisi täyttynyt kolmanneksen verran salmella ja
+     * kolmanneksen verran tyhjällä rinteellä.
+     *
+     * MERI-LIPPU PÄÄLLÄ: itäreuna on salmella, ja rantaviiva kulkee
+     * kuvan oikeassa laidassa pohjoisesta etelään.
+     *
+     * KAHDEKSAN KOHDETTA MAHTUVAT 1,29 × 1,65 KILOMETRIN ALALLE, ja
+     * reunoille jää joka suuntaan yli 200 metriä. Pienin väli on 189
+     * metriä (Braun-Menéndezin palatsi – merisotamuseo), eli 163
+     * pikseliä tässä mittakaavassa (1,16 m/px).
+     *
+     * FUERTE BULNES, NAO VICTORIA -MUSEO JA VAPAA-ALUE JÄÄVÄT POIS,
+     * eikä se ole rajauksen vika vaan etäisyyden: Fuerte Bulnes on
+     * runsaat 50 kilometriä etelässä, Nao Victoria -museo 7,5
+     * kilometriä pohjoisessa (en-Wikipedia, "Punta Arenas", Museums)
+     * ja vapaa-alue 3,5 kilometriä pohjoisessa. Kaikki kolme
+     * kerrotaan lehdessä tai matkaoppaassa.
+     *
+     * MAGALHÃESIN PATSAS EI OLE OMA KOHTEENSA, vaikka se seisoo
+     * ruudussa: aukio kuuluu katedraalin viereen ja patsas on jo
+     * saapumistekstin aihe. Katedraali on kartalla sen sijaan.
+     */
+    rajat: { pohjoinen: -53.1478, etela: -53.1670, lansi: -70.9201, ita: -70.8923 },
+    meri: true,
+  },
+  santacruz: {
+    /*
+     * ENSIMMÄINEN KEHÄ JA SEN MOLEMMAT LAIDAT (7.9.2026). Ruutu on
+     * 3,12 × 2,88 kilometriä ja kattaa vanhan keskustan ruutukaavan,
+     * ensimmäisen kehäkadun sekä sen ulkopuolelta yliopiston lännessä
+     * ja hautausmaan idässä.
+     *
+     * RUUTU ON RAKENNETTU KEHÄKATUJEN VARAAN, koska kaupunki on:
+     * keskusta on espanjalaista ruutukaavaa, ja sen ympärillä alkaa
+     * kymmenen sisäkkäisen kehän ja 27 säteen verkko (en-Wikipedia,
+     * "Santa Cruz de la Sierra", Architecture and urban planning).
+     * Kartalta pitää siis erottua sekä ruutu että ensimmäinen kaari,
+     * ja se vaatii vähintään kolmen kilometrin ruudun.
+     *
+     * EI MERI-LIPPUA: Santa Cruz on sisämaassa. Piraí-joki kulkee
+     * ruudun länsipuolella noin kilometrin päässä yliopistosta, eikä
+     * sitä oteta mukaan — se levittäisi ruudun länteen pelkän
+     * tulvatasangon yli.
+     *
+     * KAKSI KOHDETTA ON 114 METRIN PÄÄSSÄ TOISISTAAN (Plaza 24 de
+     * Septiembre ja San Lorenzon katedraali), ja se on tietoinen
+     * poikkeus 200 metrin nyrkkisäännöstä samalla perusteella kuin
+     * Fèsin medinassa: tässä mittakaavassa (1,95 m/px) väli on 58
+     * pikseliä, eli numeroympyrät eivät mene päällekkäin.
+     * Katedraali on aukion laidalla, ja molemmilla on oma tarinansa —
+     * aukiolla nimihistoria, katedraalilla rakennus ja hopeaverhoilu.
+     *
+     * LOMAS DE ARENA, GÜEMBÉ JA KASVITIETEELLINEN PUUTARHA JÄÄVÄT
+     * POIS: kaikki kolme ovat kaupungin ulkopuolella (kasvitieteellinen
+     * puutarha 12 kilometriä idässä Cotocan tiellä). Ne kerrotaan
+     * matkaoppaassa.
+     */
+    rajat: { pohjoinen: -17.7729, etela: -17.7988, lansi: -63.1988, ita: -63.1693 },
+  },
+  monterrey: {
+    /*
+     * OBISPADON KUKKULALTA BARRIO ANTIGUOON (7.9.2026). Ruutu on
+     * noin 4,3 x 2,8 kilometriä: lännessä Obispadon kukkula ja sen
+     * museo, keskellä La Purísima ja Colegio Civil, idässä
+     * Macroplazan pohjoispää, katedraali ja Barrio Antiguo.
+     * Rajaus on tavallista leveämpi, koska Monterreyn vanhat
+     * kohteet ovat nauhassa Santa Catarinan pohjoispuolella eivätkä
+     * yhden aukion ympärillä.
+     *
+     * ETELÄREUNA ON VEDETTY JOEN YLI tarkoituksella: kuiva
+     * Santa Catarina halkoo kaupungin idästä länteen (en-Wikipedia
+     * "Monterrey", Geography), ja se on ruudun luettavin
+     * maastonmuoto. Ilman sitä kartta olisi pelkkää ruutukaavaa.
+     *
+     * Ei meri-lippua: joki on OSM:ssä uoma, ei rantaviivaa, eikä
+     * ruudussa ole muuta vettä.
+     *
+     * FUNDIDORAN PUISTO (2,5 km itään) JA CERRO DE LA SILLA (6 km
+     * itään) EIVÄT MAHDU RUUTUUN — ja se sopii, koska molemmat ovat
+     * lehden kansisivun nostojen aiheita eikä kohdekartta toista
+     * lehden juttuja (New Yorkin sääntö). Sama koskee Grutas de
+     * Garcíaa ja Chipinqueä, jotka ovat teemasivun aiheita
+     * kymmenien kilometrien päässä.
+     *
+     * KATEDRAALIN NAAPURIT EIVÄT OLE NUMEROITUJA KOHTEITA:
+     * Faro del Comercio on 70 metrin, MARCO 110 metrin ja
+     * Museo Metropolitano 175 metrin päässä siitä. Ne näkyvät
+     * kartalla rakennuksina ja mainitaan matkaoppaassa.
+     */
+    rajat: { pohjoinen: 25.6820, etela: 25.6570, lansi: -100.3470, ita: -100.3040 },
+  },
+  merida: {
+    /*
+     * SANTA ANASTA SANTA ISABELIN ERMITAAN (7.9.2026). Ruutu on
+     * noin 3,0 x 3,0 kilometriä ja kattaa koko siirtomaa-ajan
+     * Méridan: pohjoisessa Santa Anan kirkko ja Paseo de Montejon
+     * alku, keskellä Plaza Grande ja Peón Contrerasin teatteri,
+     * etelässä San Juanin ja San Cristóbalin kaupunginosat sekä
+     * Santa Isabelin ermita vanhan Campechen-tien varressa.
+     *
+     * RUUTUKAAVA ON POIKKEUKSELLISEN SÄÄNNÖLLINEN: parittomat kadut
+     * kulkevat itä–länsi ja parilliset pohjois–etelä (en-Wikipedia
+     * "Mérida, Yucatán", Geography), joten kartta on tiheä ristikko
+     * ja Paseo de Montejo erottuu siitä vinona bulevardina.
+     *
+     * Ei meri-lippua: Meksikonlahti on 35 kilometrin päässä eikä
+     * niemimaalla ole jokia lainkaan — pintavettä ei ruudussa ole.
+     *
+     * KATEDRAALI EI OLE NUMEROITU KOHDE, vaikka se on ruudun
+     * keskellä: se on lehden kansisivun noston 1 loppuhuipennus
+     * (Tʼhón kivet katedraalin seinissä). Samasta syystä ruudulla
+     * näkyvä Paseo de Montejo ja Lucas de Gálvezin tori eivät ole
+     * numeroituja — edellinen on noston 4 aihe, jälkimmäinen
+     * etusivun ennen–nyt-parin aihe.
+     *
+     * ETELÄREUNAA LASKETTIIN 300 METRIÄ ensimmäisestä yrityksestä
+     * (etela 20.9550 → 20.9520, lansi ja ita saman verran
+     * leveämmiksi), koska tools/tarkista-karttapisteet.mjs ilmoitti
+     * Santa Isabelin ermitan numeroympyrän peittävän lehden
+     * mittakaavajanan vasemmassa alakulmassa — sama korjaus kuin
+     * Kööpenhaminan Tivolissa.
+     */
+    rajat: { pohjoinen: 20.9790, etela: 20.9520, lansi: -89.6375, ita: -89.6085 },
+  },
+  winnipeg: {
+    /*
+     * KESKUSTA JA KAHDEN JOEN RISTEYS (7.9.2026). Ruutu on noin
+     * 2,3 × 2,2 kilometriä: pohjoisessa pörssikortteli ja Manitoban
+     * museo, keskellä Portage ja Main sekä Union Station, idässä
+     * Punaisenjoen yli Saint-Boniface ja lännessä parlamenttitalon
+     * puisto. Kaikki kahdeksan kohdetta ovat ruudussa.
+     *
+     * RUUTU ON LÄHES NELIÖ, KOSKA KAUPUNKI ON. Winnipegin
+     * ruutukaava on tasainen joka suuntaan, ja kohteet ovat
+     * kahdessa nauhassa: Main Streetin varrella pohjois–etelä ja
+     * Portage Avenuen varrella itä–länsi. Kapeampi ruutu leikkaisi
+     * toisen nauhan poikki.
+     *
+     * EI MERI-LIPPUA. Ruudussa on vain jokia — Punainen joki ja
+     * Assiniboine — ja ne ovat OSM:ssä tavallisia vesialueita, eivät
+     * rantaviivan takaista merta. Merentäyttö täyttäisi tässä koko
+     * ruudun (vertaa Halifaxin lohkokommentti).
+     *
+     * THE FORKS JA ESPLANADE RIEL NÄKYVÄT MUTTA EIVÄT OLE
+     * NUMEROITUJA. The Forks on lehden noston W1 koko aihe ja
+     * Esplanade Riel on matkakirjan valokuvataulun uusi puoli
+     * (northamerica-valokuvat.js, winnipeg) — kohdekartta ei toista
+     * lehden juttuja (New Yorkin sääntö).
+     *
+     * PANTAGES PLAYHOUSE JA ROYAL MANITOBA THEATRE CENTRE PUTOSIVAT
+     * 200 METRIN SÄÄNNÖLLÄ: Pantages on 149 metrin päässä
+     * Manitoban museosta ja teatterikeskus 112 metrin päässä
+     * Pantagesista (tarkistus-winnipeg.md, kohta H).
+     *
+     * MITTAKAAVAJANA PAKOTTI RAJAUSTA ALAS JA VASEMMALLE 7.9.2026.
+     * Ensimmäinen rajaus (49.8825 / -97.1500) asetti parlamenttitalon
+     * numeroympyrän kohtaan 9,7 % / 90,3 %, ja
+     * tarkista-karttapisteet.mjs varoitti sen peittävän lehden oman
+     * mittakaavajanan vasemmassa alakulmassa (Kööpenhaminan
+     * ennakkotapaus). Etelä- ja länsireunaa vedettiin ulospäin
+     * kaksisataa metriä, ja ympyrä siirtyi kohtaan 15 % / 82 %.
+     */
+    rajat: { pohjoinen: 49.9020, etela: 49.8805, lansi: -97.1520, ita: -97.1180 },
+  },
+  stjohns: {
+    /*
+     * SATAMA, NARROWS JA SIGNAL HILL (7.9.2026). Ruutu on noin
+     * 2,9 × 1,7 kilometriä. Lännessä on keskusta rinteineen,
+     * keskellä pitkä ja kapea satama-allas, ja idässä kallioinen
+     * Narrows sekä Signal Hill Cabot Towereineen.
+     *
+     * RUUTU ON VAAKA, KOSKA SATAMA ON. St. John'sin satama on
+     * kapea itä–länsi-suuntainen allas, ja koko kaupungin logiikka
+     * — kadut rinteessä, portti kallioiden välissä — näkyy vain
+     * silloin, kun molemmat päät mahtuvat samaan kuvaan.
+     *
+     * meri: true. Atlantti ja satama ovat OSM:ssä rantaviivan
+     * takana, ja ilman lippua ruudun itäpuoli ja koko satama-allas
+     * jäisivät paperin värisiksi.
+     *
+     * QUIDI VIDIN JÄRVI JÄÄ RUUDUN ULKOPUOLELLE, ja se on päätös.
+     * Regatta olisi hieno kohde, mutta järven karttapiste osuisi
+     * vesialueelle ja tarkista-karttapisteet.mjs hylkäisi sen.
+     * Regatta kerrotaan matkaoppaan urheilujaksossa.
+     *
+     * GOVERNMENT HOUSE, BANNERMAN PARK JA THE ROOMS OVAT RUUDUSSA
+     * MUTTA EIVÄT NUMEROITUJA: ne ovat 190, 75 ja 180 metrin
+     * päässä valituista kohteista (tarkistus-stjohns.md, kohta H).
+     */
+    rajat: { pohjoinen: 47.5745, etela: 47.5595, lansi: -52.7160, ita: -52.6770 },
+    meri: 'maa',
+  },
+  kumasi: {
+    /*
+     * KUMASIN YDIN KULTTUURIKESKUKSELTA STADIONILLE (7.9.2026).
+     * Ruutu on noin 2,4 × 3,3 kilometriä. Pohjoisessa ovat
+     * kulttuurikeskus, eläintarha ja Kejetian tori, keskellä Adumin
+     * liikekeskusta linnakkeineen ja Ramseyerin kirkkoineen,
+     * etelässä Rattrayn puisto ja Baba Yaran stadion.
+     *
+     * RUUTU ON LEVEÄMPI KUIN KORKEA JA SE ON TARKOITUKSELLISTA.
+     * Kumasi ei ole muurikaupunki vaan sademetsäharjanteelle
+     * levinnyt liikennekaupunki, jonka varallisuus tulee siitä, että
+     * se on maan pääteiden risteys (en-Wikipedia, "Kumasi",
+     * Economy). Kohteet asettuvat luode–kaakko-akselille, ja
+     * tiukempi neliöruutu jättäisi stadionin ulkopuolelle.
+     *
+     * EI MERI-LIPPUA: Kumasi on sisämaassa 250–300 metrin
+     * korkeudella, ja Subin ja Wiwi ovat OSM:ssä tavallisia
+     * vesiväyliä.
+     *
+     * MANHYIAN PALATSI EI OLE NUMEROITU KOHDE, vaikka se on ruudun
+     * koillisreunan tuntumassa (6,70348 / −1,61579). Se on Ghanan
+     * MAALEHDEN nosto ja AFRICA_FACTS-sähkeen aihe — kohdekartta ei
+     * toista maalehteä. Palatsi näkyy kartalla rakennuksena.
+     *
+     * KNUST JÄÄ RUUDUN ULKOPUOLELLE. Kampus on viisi kilometriä
+     * itään (6,678611 / −1,571111), ja sen mukaan ottaminen
+     * kaksinkertaistaisi ruudun leveyden. Yliopisto kerrotaan
+     * matkaoppaassa.
+     */
+    rajat: { pohjoinen: 6.7035, etela: 6.6755, lansi: -1.6345, ita: -1.6025 },
+  },
+  kano: {
+    /*
+     * VANHAKAUPUNKI JA SABON GARI (7.9.2026). Ruutu on noin
+     * 3,3 × 4,0 kilometriä eli pelin väljempiä — Berliinin ja
+     * Kööpenhaminan luokkaa mutta kaukana niiden koosta. Syy on
+     * mitattu eikä arvattu: Heinrich Barth mittasi 1851 Kanon
+     * muurin noin kymmenen mailin pituiseksi (en-Wikipedia,
+     * "Kano (city)", Kano under the Sokoto Caliphate), joten
+     * vanhakaupunki yksinään on kilometrejä leveä. Dala-kukkula on
+     * luoteessa, emiirin palatsi ja suurmoskeija keskellä ja
+     * Sabon Gari koillisessa; tiukempi ruutu pudottaisi joko
+     * kukkulan tai Sabon Garin.
+     *
+     * EI MERI-LIPPUA: Kano on Sudanin savannivyöhykkeessä 481
+     * metrin korkeudella, ja lähimmät vesistöt (Kano- ja
+     * Challawa-joki) ovat OSM:ssä tavallisia vesiväyliä.
+     *
+     * KURMIN TORI EI OLE NUMEROITU KOHDE, ja syy on koordinaatti
+     * eikä aihe: en-Wikipedian Kurmi Market -artikkelin {{coord}}
+     * on täsmälleen sama piste kuin Wikidatan Gidan Rumfa, ja
+     * Wikidatan oma Kurmi-arvo on kaupungin karkea keskipiste.
+     * OSM:ssä ei ole nimettyä Kurmi-kohdetta koko vanhassa
+     * kaupungissa. Perustelu on tarkistus-kano.md:n kohdassa F, ja
+     * tori kerrotaan lehden teemasivulla.
+     *
+     * JOS RUUTU NÄYTTÄÄ TYHJÄLTÄ, KOKEILE jalkakaydat: true JA
+     * palvelutiet: true. Kanon vanhankaupungin kujat ovat samaa
+     * tyyppiä kuin Fèsin medinassa, ja Fèsissä pelkkä vakiokysely
+     * piirsi vain muurin. Ensimmäinen ajo tehtiin tässä ilman
+     * lippuja, ja tulos katsottiin silmin ennen kuin rajaus
+     * hyväksyttiin.
+     */
+    rajat: { pohjoinen: 12.0170, etela: 11.9870, lansi: 8.5050, ita: 8.5420 },
+  },
+  timbuktu: {
+    /*
+     * VANHAKAUPUNKI DJINGUEREBERISTÄ SANKORÉLLE (7.9.2026). Ruutu on
+     * 1,09 × 1,09 kilometriä eli pelin tiiviimpiä, Fesin ja
+     * Vancouverin kokoluokkaa. Lounaassa on Djinguereberin moskeija,
+     * keskellä Sidi Yahyan moskeija ja sen ympärillä kolme
+     * tutkimusmatkailijan taloa sekä al-Wangarin sukukirjasto,
+     * koillisessa Sankorén moskeija ja Ahmed Baba -instituutti.
+     *
+     * TIIVIS RUUTU ON PAKKO. Kahdeksan kohdetta mahtuu 0,56 × 0,50
+     * kilometrin alalle, ja niiden pienimmät välit ovat 41, 68 ja
+     * 71 metriä (mitattu haversinilla, ks.
+     * docs/mantereet-tyoaineisto/tarkistus-timbuktu.md). Tässä
+     * mittakaavassa (3,0 m/px) ne ovat 14, 23 ja 24 pikseliä, eivätkä
+     * numeroympyrät hukuta toisiaan. Väljemmässä ruudussa
+     * vanhakaupunki olisi pieni täpläparvi kuvan keskellä.
+     *
+     * KUJAT VAATIVAT jalkakaydat: true JA palvelutiet: true, ja se on
+     * MITATTU eikä arvattu — ks. ajolokit alla tässä lohkossa.
+     * Timbuktun vanhankaupungin hiekkakadut ovat OSM:ssä pääosin
+     * service- ja footway-teitä, aivan kuten Fesin medinassa ja
+     * Teheranin katetussa basaarissa.
+     *
+     * EI meri-lippua: Timbuktu on hiekkadyynien keskellä 15
+     * kilometriä Nigerin pääuomasta pohjoiseen (en-Wikipedia,
+     * "Timbuktu", Geography), eikä ruudussa ole vettä.
+     *
+     * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA EIVÄTKÄ MALIN MAALEHTEÄ.
+     * Lehden nostot kertovat kaupungin synnystä ja nimestä,
+     * suolakaravaanista, vuoden 1873 valtatilanteesta ja kaupungin
+     * suhteesta jokeen; teemasivu kertoo Sankorén opetustavasta,
+     * käsikirjoituksista, Ahmad Babasta ja Leo Africanuksesta.
+     * Kohdekartta kertoo rakennukset ja niissä asuneet ihmiset.
+     * Malin maalehden aiheita (Mansa Musan pyhiinvaellus, Taoudennin
+     * suolakylä, Djennén moskeija) ei käsitellä, eikä vuosien
+     * 2012–2013 tapahtumia, jotka ovat jo skandaalinostona.
+     */
+    rajat: { pohjoinen: 16.7791, etela: 16.7693, lansi: -3.0128, ita: -3.0026 },
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
+  lalibela: {
+    /*
+     * KALLIOKIRKKOJEN KAKSI KAIVANTORYHMÄÄ (7.9.2026). Ruutu on
+     * 1,07 × 0,89 kilometriä. ENSIMMÄINEN RAJAUS OLI 1,36 × 1,06
+     * KILOMETRIÄ JA VÄÄRÄ: kirkot jäivät kuvan oikeaan laitaan ja
+     * vasemman kolmanneksen täytti tyhjä rinne, jolla ei ole OSM:ssä
+     * yhtään tietä. Ruutu siirrettiin kolmesataa metriä itään ja
+     * tiivistettiin. Lännessä on erillinen Biete Giyorgis
+     * omassa ristinmuotoisessa kuilussaan, keskellä pohjoinen ryhmä
+     * (Golgotha Mikael, Maryam, Medhane Alem) ja idässä eteläinen
+     * ryhmä (Gabriel-Rufael, Lehem, Abba Libanos, Amanuel).
+     *
+     * TÄMÄ ON PELIN TIIVEIN KOHDEKARTTA, ja se on kaupungin totuus
+     * eikä kartan vika. Kaikki kahdeksan kohdetta mahtuvat
+     * 0,28 × 0,48 kilometrin alalle, ja pienimmät välit ovat 36 ja
+     * 40 metriä (Golgotha Mikael – Maryam, Maryam – Medhane Alem;
+     * mitattu haversinilla, ks.
+     * docs/mantereet-tyoaineisto/tarkistus-lalibela.md). Yksitoista
+     * kirkkoa on louhittu saman kalliopaljastuman kahteen
+     * kaivantoryhmään, joten tiiviimpää ei ole olemassakaan.
+     *
+     * KAUPUNKI ON MUKANA RUUDUSSA, EI VAIN KIRKOT. Rajaus ulottuu
+     * kirkkojen ympärille joka suuntaan 190–300 metriä, jotta
+     * Lalibelan omat kadut ja rinteet näkyvät kirkkojen ympärillä —
+     * muuten kartta olisi pelkkä kahdeksan ympyrän rykelmä tyhjällä
+     * paperilla.
+     *
+     * jalkakaydat: true JA palvelutiet: true. Kirkkoalueen polut ja
+     * kaupungin kujat ovat OSM:ssä footway- ja service-teitä; ks.
+     * ajolokit alla.
+     *
+     * EI meri-lippua. Jordan-puro (Yordanos Wenz) on kausiuoma, ja
+     * kaupunki on 2 500 metrin korkeudella harjanteella
+     * (en-Wikipedia, "Lalibela").
+     *
+     * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA EIVÄTKÄ ETIOPIAN
+     * MAALEHTEÄ. Maalehden nosto "Yksitoista kirkkoa, jotka
+     * kaivettiin alaspäin" kertoo louhintatavan, kirkkojen määrän ja
+     * Jerusalem-symboliikan; kaupunkilehti kertoo kuningas
+     * Lalibelan tarinan, veden, vuoden 1873 ja asuintalot;
+     * teemasivu kertoo aksumilaisen perinnön, Lalibelan ristin,
+     * ajoituskiistan ja Yemrehana Krestosin. Kohdekartta kertoo
+     * kunkin kirkon oman tarinan.
+     */
+    rajat: { pohjoinen: 12.0365, etela: 12.0285, lansi: 39.0385, ita: 39.0483 },
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
+  townsville: {
+    /*
+     * TOWNSVILLEN KESKUSTA (7.9.2026). Ruutu on noin 2,0 x 1,7
+     * kilometria: luoteessa Queens Gardens Castle Hillin juurella,
+     * pohjoisessa The Strandin uimala, keskella Melton Hill ja
+     * Flinders Street, etelassa Ross Creekin varsi ja Great Northern
+     * Hotel.
+     *
+     * MERI-LIPPU PAALLA. Cleveland Bay tulee ruudun pohjoisreunaan
+     * The Strandin edessa ja Ross Creek kulkee etelareunassa, joten
+     * ilman lippua kaupungin molemmat rannat jaisivat paperin
+     * varisiksi ja kartta nayttaisi silta kuin keskusta jatkuisi
+     * merelle.
+     *
+     * CASTLE HILL ON RUUDUSSA MUTTA EI NUMEROITU: kukkula on lehden
+     * teemasivun nosto, eika kohdekartta toista lehden juttuja
+     * (New Yorkin saanto). Sen rinne nakyy lansireunassa ja selittaa,
+     * miksi katuverkko kaartuu.
+     *
+     * RUUTU EI YLETY MAGNETIC ISLANDILLE (8 km pohjoiseen) eika
+     * rautatieasemalle (1,5 km lounaaseen): kumpikin venyttaisi
+     * rajauksen niin, etta puolet kuvasta olisi merta tai
+     * esikaupunkia.
+     */
+    rajat: { pohjoinen: -19.2505, etela: -19.2660, lansi: 146.8070, ita: 146.8260 },
+    meri: true,
+    jalkakaydat: true,
+  },
+  iquitos: {
+    /*
+     * IQUITOSIN MONUMENTTIVYOHYKE (7.9.2026). Ruutu on noin 1,67 x
+     * 1,44 kilometria: pohjoisessa Casa Morey ja yliopistokortteli,
+     * keskella Plaza de Armas ja katedraali, idassa Malecon Tarapaca
+     * Itaya-joen yllä, etelassa Plaza 28 de Julio.
+     *
+     * MERI-LIPPU PAALLA, koska Itaya-joki kulkee ruudun italaidassa.
+     * Ilman lippua joki jaisi paperin variseksi, ja juuri se joki on
+     * syy siihen, etta kaupunki on olemassa. ITAREUNA VIETIIN
+     * PIDEMMALLE ITAAN (-73,2380) kuin kohteet vaatisivat, koska
+     * Itayan uoma on Maleconin alapuolisen tulvatasangon takana:
+     * tiukempi rajaus jatti joesta nakyviin vain kielekkeen.
+     *
+     * jalkakaydat: true, koska ilman lippua kuva on pelkka ruudukko —
+     * aukioiden (Plaza de Armas, Plaza 28 de Julio) ja Maleconin omat
+     * kaytavat ovat OSM:ssa jalankulkuteita, ja juuri ne tekevat
+     * kartasta Iquitosin nakoisen.
+     *
+     * BELEN JAA ULKOPUOLELLE (1,4 km etelaan) ja se on tietoinen
+     * valinta kahdesta syysta: kaupunginosa on lehden teemasivun
+     * noston aihe, ja sen mukaan ottaminen tekisi ruudusta puolet
+     * tulvamaata ilman katuverkkoa.
+     */
+    rajat: { pohjoinen: -3.7440, etela: -3.7570, lansi: -73.2530, ita: -73.2380 },
+    meri: true,
+    jalkakaydat: true,
+  },
+  whitehorse: {
+    /*
+     * YUKONJOEN LAAKSO KESKUSTASTA LENTOASEMAN PENKEREELLE (7.9.2026).
+     * Ruutu on noin 3,97 × 2,72 kilometriä. Yläreunassa on ruutukaavan
+     * keskusta joen länsirannalla, oikeassa alakulmassa Riverdale
+     * itärannalla ja vasemmassa laidassa se jyrkkä penger, jonka päällä
+     * ovat lentoasema, liikennemuseo ja Beringia-keskus.
+     *
+     * RUUTU ON TIIVIS, KOSKA KESKUSTA ON PIENI: kahdeksan kohdetta
+     * mahtuu 2,0 × 1,7 kilometrin alalle, ja reunoille jää joka
+     * suuntaan yli 300 metriä. Väljempi rajaus toisi mukaan vain
+     * Porter Creekin ja Whistle Bendin lähiöitä, joissa ei ole yhtään
+     * kohdetta — ja kaupungin pinta-ala on 414 neliökilometriä, joten
+     * "koko kaupunki" ei mahdu mihinkään ruutuun (en-Wikipedia
+     * "Whitehorse", Geography).
+     *
+     * EI MERI-LIPPUA. Whitehorse on sisämaassa, ja Yukonjoki on
+     * OSM:ssä tavallinen vesiväylä, joka kulkee kuvan halki
+     * pohjoisesta etelään.
+     *
+     * MILES CANYON JA CANYON CITY JÄÄVÄT ULKOPUOLELLE, ja se on
+     * päätös eikä unohdus: kanjoni on 6,4 ja Canyon City 7,2
+     * kilometriä etelään. Ne ovat lehden noston W3 koko aihe (kosket,
+     * jotka antoivat kaupungille nimen), eikä kohdekartta toista
+     * lehden juttuja (New Yorkin sääntö). Mukaan ottaminen olisi
+     * kolminkertaistanut ruudun ja hukuttanut keskustan.
+     *
+     * KAKSI KOHDETTA PUDOTETTIIN ETÄISYYSSÄÄNNÖLLÄ, ei aiheen:
+     * Downtown Whitehorse on 105 metriä ja Whitehorse Waterfront
+     * Trolleyn pysäkki 75 metriä MacBride-museosta. Molemmat
+     * kerrotaan matkaoppaassa.
+     */
+    rajat: { pohjoinen: 60.7250, etela: 60.7005, lansi: -135.0880, ita: -135.0150 },
+  },
+  yellowknife: {
+    /*
+     * OLD TOWNISTA FRAME LAKELLE (7.9.2026). Ruutu on noin 2,7 × 3,0
+     * kilometriä eli pelin tiiviimpiä, Fèsin ja Sansibarin
+     * kokoluokkaa. Syy on sama: Yellowknifen kaksi vanhinta osaa ovat
+     * pienet ja lähellä toisiaan. Oikeassa yläkulmassa on Old Townin
+     * kalliokärki Yellowknife Bayn rannalla, vasemmassa alalaidassa
+     * hallinnon New Town Frame Laken rannalla, ja niiden välissä
+     * Franklin Avenue eli 50th Avenue.
+     *
+     * MERI-LIPPU PÄÄLLÄ, koska Yellowknife Bay on OSM:ssä
+     * rantaviivan takana: ilman lippua kuvan koko oikea puoli jäisi
+     * paperin väriseksi, vaikka se on Isonorjajärveä.
+     *
+     * CON MINE JA GIANT MINE JÄÄVÄT ULKOPUOLELLE. Con on 2,4
+     * kilometriä etelään ja Giant 4 kilometriä pohjoiseen, ja
+     * molemmat ovat lehden omia juttuja (nostot Y3 ja Y5).
+     *
+     * NDILǪ EI OLE NUMEROITU KOHDE, vaikka niemi näkyy ruudun
+     * pohjoisreunassa: Yellowknives Denen yhteisö on lehden noston Y1
+     * aihe. Sama koskee asuntolaivoja Jolliffen saaren ympärillä
+     * (teemasivun nosto).
+     *
+     * KOLME KOHDETTA PUDOTETTIIN ETÄISYYSSÄÄNNÖLLÄ: Hudson's Bay
+     * Warehouse ja Canadian Pacific Airlines floatbase ovat 70 metrin
+     * päässä Wildcat Cafésta, ja The Gold Range jäi pois sävysyistä
+     * (se on baari).
+     */
+    rajat: { pohjoinen: 62.4740, etela: 62.4470, lansi: -114.3920, ita: -114.3390 },
+    meri: true,
+  },
+  iqaluit: {
+    /*
+     * KOKO KAUPUNKI YHDESSÄ RUUDUSSA (7.9.2026). Ruutu on noin
+     * 6,5 × 4,0 kilometriä, ja se on tarkoituksella koko Iqaluitin
+     * levyinen eikä pelkkä ydinkeskusta: kaupungin KOKO tieverkko
+     * ulottuu vain Sylvia Grinnellin puistosta lännessä Apexiin
+     * kaakossa (en-Wikipedia "Iqaluit", Transportation), eikä
+     * Nunavutin pääkaupungista johda tietä minnekään muualle. Tuo
+     * kahden pisteen väli ON kartan sisältö.
+     *
+     * KESKUSTA ON PIENI JA PISTEET OVAT TIHEÄSSÄ. Viisi kahdeksasta
+     * kohteesta (parlamenttitalo, Inuksuk-lukio, katedraali, Astro
+     * Hill, museo) mahtuu 800 metrin ruutuun, ja pienin väli on 207
+     * metriä (Inuksuk-lukio – Astro Hill). Kuva on siksi katsottava
+     * silmin ja pisteet vielä erikseen
+     * (tools/tarkista-karttapisteet.mjs iqaluit).
+     *
+     * EI meri-lippua, ja se on koeajettu päätös eikä unohdus.
+     * Koojesse Inlet ja Frobisherinlahti ovat OSM:ssä pelkkää
+     * rantaviivaa, joten kaikki kolme vaihtoehtoa kokeiltiin
+     * 7.9.2026 ja kuvat katsottiin:
+     *
+     *   meri: true  — täyttö valitsi väärän puolen ja maalasi
+     *     KAUPUNGIN veden väriseksi ja lahden paperiksi.
+     *     tools/tarkista-karttapisteet.mjs ilmoitti kuusi pistettä
+     *     kahdeksasta vedessä oleviksi.
+     *   meri: 'maa' — pisteet menivät maalle, mutta lahti jäi
+     *     paperin väriseksi eikä erottunut maasta lainkaan.
+     *   ei lippua   — rantaviiva piirtyy pelin omana rantanauhana
+     *     (#b99a68, sama kartankieli kuin pääkartan .sea-echo).
+     *     Nauha piirtää Koojesse Inletin, lahden rannan ja Apexin
+     *     niemen selvästi, ja pisteet ovat maalla.
+     *
+     * Kolmas voitti. Rannikkokaupunki ilman merentäyttöä on
+     * poikkeus, joten se on kirjattu tähän eikä jätetty arvattavaksi.
+     *
+     * LENTOKENTTÄ ON RUUDUSSA MUKANA, koska sen kiitotie on
+     * kaupungin suurin yksittäinen rakenne ja koska ilman sitä
+     * pohjoisreuna jäisi tyhjäksi. Qaummaarviit ja Katannilik jäävät
+     * ulkopuolelle: ne ovat teemasivun noston L4 aihe ja lisäksi
+     * lahden toisella puolella.
+     */
+    rajat: { pohjoinen: 63.7610, etela: 63.7250, lansi: -68.5720, ita: -68.4390 },
+  },
+  santafe: {
+    /*
+     * AUKIOLTA MUSEOKUKKULALLE (7.9.2026). Ruutu on noin 4,5 x 3,7
+     * kilometria: pohjoisessa aukio ja sen museokortteli, etelassa
+     * Santa Fe -joen takana Barrio de Analco ja osavaltiotalo, ja
+     * kaakossa Museum Hill.
+     *
+     * RUUTUA EI KESKITETA WIKIPEDIAN KAUPUNKIPISTEESEEN. Artikkelin
+     * koordinaatti (35,66722 / -105,96444) on noin kolme kilometria
+     * aukiolta lounaaseen eli nykyisen hallintoalueen painopisteessa;
+     * kartta ankkuroidaan historialliseen ytimeen San Franciscon
+     * ennakkotapauksen mukaan (spec-mantereet.md, linjaus 4).
+     *
+     * MUSEUM HILL VENYTTAA RUUTUA JA SE ON TARKOITUS. Kansantaiteen
+     * museo on 2,4 kilometria aukiolta kaakkoon, ja ilman sita ruutu
+     * olisi pelkka vanhakaupunki. Venytys tuo mukaan myos Canyon
+     * Roadin, joka kulkee aukiolta samaan suuntaan.
+     *
+     * Ei meri-lippua: Santa Fe on 2 130 metrin korkeudessa
+     * sisamaassa, ja Santa Fe -joki on OSM:ssa tavallinen vesivayla.
+     */
+    rajat: { pohjoinen: 35.6930, etela: 35.6600, lansi: -105.9620, ita: -105.9120 },
   },
 };
 

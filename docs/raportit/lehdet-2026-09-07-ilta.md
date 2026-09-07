@@ -89,6 +89,140 @@ ok (Nuukin viisi väliä 98–172 m, tiivis rajaus kuten Fesissä; ympyrät eiv�
 mene päällekkäin). Poiminnassa lisäyskonfliktit 4 tiedostossa liitetty
 liita-lisays.py:llä.
 
+### Kaupunkilehdet Punta Arenas + Santa Cruz — 517605e (tekstit), 64e0bcc (kuvat)
+Tiedostot: faktapohja-/tarkistus-puntaarenas.md ja -santacruz.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, southamerica-artikkelit.js, piirra-kaupunkikartta.mjs,
+assets/kartat/puntaarenas-keskusta.png, santacruz-keskusta.png. Punta Arenas: kansi
+(Sandy Point, Ancud ja Fuerte Bulnes 1843, 1873 rangaistussiirtola ja salmen
+puolueettomuus, lammastalous ja selkʼnamit), teemasivu luonto "Salmi ja
+Etelämanner" (Yelcho, Pardo). Santa Cruz: kansi (chanét ja Grigotá, kolme muuttoa,
+1810/Warnes, 1873 Andrés Ibáñez), teemasivu musiikki "Karnevaali ja camban
+tanssit". 31 kuvaa Commonsista; Santa Cruzilla ei ennen–nyt-paria. Pistokokeet:
+(1) Chile lähetti 1873 merenkulkumaille kirjeen salmen vapaudesta ja
+puolueettomuudesta (en-Wikipedia "Strait of Magellan", Legal status); (2) Andrés
+Ibáñez kansanedustaja 1872–1874 (es-Wikipedia "Andrés Ibáñez (político)",
+Incursión en Política); (3) Chile tunnusti selkʼnamit 5.9.2023 ("Selkʼnam people",
+Recognition). Portit: fail 0, karttapisteet ok. Poiminnassa lisäyskonfliktit
+5 tiedostossa liitetty liita-lisays.py:llä.
+
+### Checkpointit (poimittu haaraan; loppuraportit ja kuvat täydennetään, jos agentit ehtivät)
+- Iqaluit + Santa Fe: wip Iqaluitin tekstit ec5ce08 (Santa Fe ja kuvat kesken)
+Kaikki kolme poimittu haaraan lisäyskonfliktit liittäen; portit fail 0,
+karttapisteet ok kaikille kuudelle kaupungille. Näiden lehdet ovat siis
+pelissä TEKSTEINÄ ja kohdekarttoina; kuvat, kuvalähteet ja
+pistokoeväitteet täydennetään agenttien loppuraporteista, jos ne ehtivät
+(muuten päätoimittaja teettää kuvahaun erikseen: kansikuvat 3, avauskuvat 3,
+ennen–nyt-pari, nostojen kuvat, nähtävyysjuttujen kuvat).
+
+### Kaupunkilehdet Dili + Alice Springs — f6cd382 (tekstit), e3ac996 (kuvatilaus) — KUVATON
+Tiedostot: faktapohja-/tarkistus-dili.md ja -alicesprings.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, oceania-artikkelit.js, piirra-kaupunkikartta.mjs,
+assets/kartat/dili-keskusta.png, alicesprings-keskusta.png. Dili: kansi (1769,
+1873 jälleenrakennus ruutukaavaan, toinen maailmansota, Tetun Prasa), teemasivu
+luonto "Vuorten ja meren välissä". Alice Springs: kansi (Mparntwe, 1873
+lennätinasema ja nimenvaihto 1933, kameliajajat, Flynn), teemasivu kuvataide
+"Aavikon maalarit". YHTÄÄN KUVAA EI HAETTU: Commons vastasi koko ajan 429
+(8 agenttia samasta osoitteesta) — täsmällinen kuvatilaus on commitin e3ac996
+lohkokommenteissa (kansikuvat, avauskuvat, ennen–nyt, matkailijalle.kuva,
+nostokuvat, 16 miniatyyriä). Namatjiran ja Papunya Tulan teoksista ei kuvia
+(tekijänoikeus). Pistokokeet: (1) Casa Europan rakentaminen alkoi 1871, viisi
+vuotta tulipalon jälkeen (en-Wikipedia "Casa Europa", History); (2) Stuart Town
+Gaol valmistui 1907 ("Stuart Town Gaol", johdanto; "Alice Springs" sanoo 1909);
+(3) Tetun Prasa ← praça, ~50 000 äidinkielistä 2004 ("Tetun language",
+Names/History). Portit: fail 0, karttapisteet ok. Dilin kartta harva (Overpass
+177 elementtiä) — tiheämpi versio vaatisi palvelutiet+jalkakaydat-liput uudelleen.
+
+### Kaupunkilehdet Kumasi + Kano — e9c9d3a (tekstit), 885e098 + 7780dd1 (kuvat)
+Tiedostot: faktapohja-/tarkistus-kumasi.md ja -kano.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, africa-artikkelit.js, piirra-kaupunkikartta.mjs,
+assets/kartat/kumasi-keskusta.png, kano-keskusta.png. Kumasi: kansi (kum-puu,
+kultajakkara, Anokye 1695/Feyiase 1701, 1873 Wolseley ja 237 siltaa, Kumawood),
+teemasivu luonto "Metsä ja järvi" (Bosumtwe). Kano: kansi (Kanon kronikka, Ali
+Yaji, Rumfa, 1873 Sokoton emiirikunta ja Barth 1851, durbar), teemasivu kauppa
+"Kauppa ja käsityö". Kuvia Commonsista 9 (Kumasi) + 13 (Kano), ennen–nyt vain
+Kanolle. Pistokokeet: (1) Wolseley nimitettiin 13.8.1873, retkikunta rakensi 237
+siltaa ("Anglo-Ashanti wars", Third war); (2) Barth 1851: n. 10 mailin muuri,
+30 000 asukasta ("Kano (city)", Kano under the Sokoto Caliphate); (3) Bosumtwe
+pyhä, kalastus vain puulankuilta ("Lake Bosumtwi", johdanto). Portit: fail 0.
+
+### Kaupunkilehdet Winnipeg + St. John's — 49eb6ad (tekstit), 16da31c + 2beca05 (kuvat)
+Tiedostot: faktapohja-/tarkistus-winnipeg.md ja -stjohns.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, northamerica-artikkelit.js, piirra-kaupunkikartta.mjs,
+assets/kartat/winnipeg-keskusta.png, stjohns-keskusta.png. Winnipeg: kansi (The
+Forks, Seitsemän tammen taistelu 1816, marraskuu 1873 ja James McKay, Winnie-
+karhu), teemasivu luonto "Talvi, tulva ja preeria". St. John's: kansi (nimi
+1519, kapea portti, turska ja öljy, viisi paloa), teemasivu tiede "Viesti
+valtameren yli" (kaapeli 1866, Marconi 1901, Alcock ja Brown). 48 kuvaa
+Commonsista. 2beca05 sisältää myös Valparaíso-asennusvirheen korjauksen (agentin
+kuvatyössä syntynyt, korjattu samassa). Pistokokeet: (1) Winnipeg kaupungiksi
+8.11.1873, nimen antoi James McKay ("Winnipeg", Early history); (2) basilika
+valmistuessaan 9.9.1855 Pohjois-Amerikan suurin kirkko ("Basilica of St. John
+the Baptist"); (3) Newfoundlandin aikavyöhyke Amerikoiden ainoa puolen tunnin
+poikkeama ("Newfoundland Time Zone"). Portit: fail 0, karttapisteet ok.
+
+### Kaupunkilehdet Monterrey + Mérida — c8fe151 (tekstit), ad3f78e (kuvat) — VALMIS
+Tiedostot: faktapohja-/tarkistus-monterrey.md ja -merida.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, northamerica-artikkelit.js, northamerica-saapumiset.js,
+piirra-kaupunkikartta.mjs, assets/kartat/monterrey-keskusta.png, merida-keskusta.png.
+Monterrey: kansi (kolme perustamisyritystä 1596, nimi, Cerro de la Silla, Fundidora),
+teemasivu luonto "Vuoret, luolat ja kuiva joki". Mérida: kansi (Tʼhó, Valkoinen
+kaupunki, kastisota, heneken), teemasivu ruoka "Jukatanin oma keittiö". 48 kuvaa
+Commonsista, tekijät tarkistettu extmetadataa vasten (47/48 täsmää, 1 vain
+"(PD)"-muoto). Monterreylla ei ennen–nyt-paria (ei ≥ 1200 px vanhaa kuvaa).
+Pistokokeet: (1) Cerro de la Sillan köysirata avattiin ja suljettiin 2.6.1961,
+5 kuoli (en-Wikipedia "Cerro de la Silla", johdanto); (2) niemimaan ensimmäinen
+rautatiekisko La Mejoradaan 1.4.1870 (es-Wikipedia "Parque de La Mejorada");
+(3) Méridan katedraali valmistui 1598, Amerikan toinen ("Cathedral of Mérida,
+Yucatán", History). Portit: fail 0, karttapisteet ok. HUOM: agentti muutti myös
+northamerica-saapumiset.js:ää (saapumisteksti) — päätoimittaja tarkistaa, että
+muutos on 1873-kehyksen mukainen eikä matkakirjatekstiä.
+
+### Kaupunkilehdet Townsville + Iquitos — a9d62d0 + 9bd523e (tekstit), 511ffa9 (kuvat) — OSITTAIN KUVITETTU
+Tiedostot: faktapohja-/tarkistus-townsville.md ja -iquitos.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, oceania-artikkelit.js, southamerica-artikkelit.js,
+piirra-kaupunkikartta.mjs, assets/kartat/townsville-keskusta.png, iquitos-keskusta.png.
+Townsville: kansi (Burdekinin tulva 1864, James Morrill, 1873 viiden kultakentän
+satama ilman rautatietä, Japanin konsulaatti 1896, Eddie Mabo), teemasivu luonto
+"Kuiva tropiikki". Iquitos: kansi (kaupunki ilman tietä, jesuiitat ja nimi, 1873
+laivastosatama, rautatalo, kumi), teemasivu luonto "Joki, joka nousee ja laskee".
+Kuvia 17 (kansi-, avaus- ja ennen–nyt-kuvat; Iquitosin avauskaruselli 2 kuvaa);
+kaikki 18 nostoa ja 16 nähtävyysjuttua kuvattomia (Commons 429). Pistokokeet:
+(1) Townsvillen rata Charters Towersiin valmistui 12/1882 (en-Wikipedia
+"Townsville", Transport; "Charters Towers", History); (2) Cook nimesi Magnetical
+Islandin 1770 kompassihäiriön takia ("Magnetic Island", History); (3) Amazon
+Iquitosissa korkeimmillaan toukokuussa, alimmillaan lokakuussa, 9–12 m
+("Iquitos", Climate). Portit: fail 0, karttapisteet ok.
+
+### Kaupunkilehdet Timbuktu + Lalibela — 97c8052 (tekstit), 1ace32e (kuvat) — OSITTAIN KUVITETTU
+Tiedostot: faktapohja-/tarkistus-timbuktu.md ja -lalibela.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, africa-artikkelit.js, piirra-kaupunkikartta.mjs,
+assets/kartat/timbuktu-keskusta.png, lalibela-keskusta.png. Timbuktu: kansi
+(synty ja nimi, azalai, 1873 ilman yhtä hallitsijaa, 15 km joesta), teemasivu
+kirjallisuus "Kirjat ja oppineet". Lalibela: kansi (Roha ja mehiläiset,
+artesinen vesi, 1873 Tekle Giyorgis II, tukul-talot), teemasivu kuvataide "Kivi
+ja kuva". Kuvia 11 (Commonsin aineisto niukka: Timbuktun tuoreet kuvat
+päiväysleimaisia; 12 hylätty). Lalibelan SAAPUMISTEKSTIÄ ei kirjoitettu:
+lalibela on tests/vanha-maailma.test.mjs:n KAARETTOMAT-listalla — omistajan
+linjaus. Pistokokeet: (1) Sankoré rakennettiin uudelleen Kaaban mitoilla
+1578–1582 (en-Wikipedia "Sankoré Madrasah", History); (2) Laing Timbuktuun
+18.8.1826, 38 päivää; laatta 1903 ("Alexander Gordon Laing", Trip to
+Timbuktu); (3) Lalibelan risti n. 60 cm / 7 kg, varastettiin 1997, Belgiaan
+1999, palautettiin 2001 ("Lalibela Cross"). Portit: fail 0, karttapisteet ok.
+
+### Kaupunkilehdet Whitehorse + Yellowknife — 7c31c9f + 8ac5ecc (tekstit), c35b4f4 (kuvat) — OSITTAIN KUVITETTU
+Tiedostot: faktapohja-/tarkistus-whitehorse.md ja -yellowknife.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, piirra-kaupunkikartta.mjs, assets/kartat/whitehorse-
+keskusta.png, yellowknife-keskusta.png. Whitehorse: kansi (Kwanlin Dün, 1873 ja
+kulta, Miles Canyon, White Pass -rata, Robert Service), teemasivu "Laakso, sää ja
+tie". Yellowknife: kansi (Sǫǫ̀mbak'è, 1873 Old Fort Providence, kaksi kansaa,
+Con Mine, timantit ja Giant Minen arseeni), teemasivu "Järvi, jää ja kesäyö".
+Kuvia 14 (kansi/avaus/nostoja; Commons 429). Whitehorse ilman ennen–nyt-paria.
+Pistokokeet: (1) Whitehorse on Kanadan kuivin kaupunki (en-Wikipedia
+"Whitehorse", Climate); (2) Yukonin kuninkuuslohella pisin makean veden
+vaellus, yli 3 000 km ("Chinook salmon", Range); (3) valtikassa mursunnorsunluuta
+ja Franklinin retkikunnan alusten puuta ("Northwest Territories Legislative
+Building", Chamber). Portit: fail 0, karttapisteet ok.
+
 ## Kuvaputken tilaukset (kuvattomat nostot ja miniatyyrit)
 
 **MOZ, kuvattomat nostot (8):**
@@ -155,6 +289,191 @@ lasijulkisivu; Anchoragen vanha hautausmaa — hautakiviä lehtipuiden alla;
 Oscar Andersonin talo — pieni keltainen puutalo; Delaney Park Strip — leveä
 nurmikaistale tornien edessä.
 
+**Punta Arenas, kuvattomat nostot:** Sandy Point — punaiseksi maalatut peltikatot
+lähempää; Vuosi 1873 — 1800-luvun siirtola salmen rannalla; Miljoona hehtaaria
+lampaita — keritsemäsuoja tai lammaslauma Tulimaan arolla; 38 päivää salmessa —
+salmen kapeikko ylhäältä; Beaglen jäljillä — 1800-luvun merikartta salmesta;
+Hinaaja, joka haki 22 miestä — höyryhinaaja Yelcho jäissä; kohdekartan
+Merisotamuseo — laivastokokoelman talo Pedro Montt -kadulla.
+**Punta Arenas, miniatyyrit (8):** Lampuripatsas — pronssinen lampuri hevosineen
+ja lammaslauma; Sara Braunin hautausmaa — leikatut sypressikäytävät ja
+sukukappelit; Salesiaanien museo — museosali, kattoon ripustettu kanootti; Cerro
+de la Cruz — mukulakivinen näköalatasanne, alla ruutukaava; Sagrado Corazónin
+katedraali — tiilikirkko kellotorneineen; Braun-Menéndezin palatsi —
+liuskekivikattoinen kulmatorni takorauta-aidan takana; Merisotamuseo — ks.
+yllä; Salmen rantabulevardi — rantakatu, aallonmurtajaksi upotetun purjelaivan
+mastot.
+**Santa Cruz, kuvattomat nostot:** Chanét ja Grigotá — chané-keramiikkaa; Kolme
+muuttoa — Santa Cruz la Viejan rauniot; Warnes, Florida ja seitsemän vuotta —
+Warnesin muotokuva; Taquirari — taquiraritanssi ilman tunnistettavia kasvoja;
+Chovena — chovena-jonot hattuineen; Yksitoista päivää — cruceño-karnevaalin
+comparsa; ennen–nyt-parin vanha puoli — valokuva kaupungista ennen 1960;
+kuvattomat kohdekartan jutut: Avión Pirata, El Arenalin puisto, Plaza 24 de
+Septiembre, Noel Kempff Mercadon museo, Tahuichi Aguileran stadion.
+**Santa Cruz, miniatyyrit (8):** Avión Pirata — puistoon jäänyt nelimoottorinen
+Lockheed Constellation; Gabriel René Moreno -yliopisto — kampusrakennus Avenida
+Buschin varrella; El Arenalin puisto — laguuni ja saari keskellä kaupunkia;
+Yleinen hautausmaa — valkoiset kolumbaariokadut ja mausoleumit; Plaza 24 de
+Septiembre — palmuaukio ja Warnesin patsas; San Lorenzon katedraali —
+tiilinen kaksitorninen katedraali ylhäältä; Noel Kempff Mercadon museo —
+luonnonhistoriallinen näyttelysali; Tahuichi Aguileran stadion —
+jalkapallostadion kehäkatujen välissä.
+
+**Dili ja Alice Springs:** KOKO kuvitus tilaamatta/hakematta — lista commitin
+e3ac996 lohkokommenteissa (kulttuuri-kategoriat.js avaimet dili, alicesprings;
+nahtavyysjutut.js). Miniatyyrit Dili (8): Motaelin kirkko — valkoinen kirkko
+kellotorneineen ja pylväskuisteineen; Dilin satama — laituri riuttojen
+reunustamassa lahdessa; Hallituspalatsi — kolme kaksikerroksista siipeä ja
+pylväskäytävä meren puolelta; BNU-pankkitalo — modernistinen betoniritiläjulkisivu
+pilarien päällä; Kansallisstadion — kaksi katsomoa ja nurmivallit;
+Tuomiokirkko — 1980-luvun katedraali julkisivun puolelta; Kansallisarkisto —
+arkiston rakennus kadulta; Kaupungin torihalli — puoliympyräportaali "Mercado
+Municipal de Dili". Alice Springs (8): ANZAC Hill — laen muistomerkki ja näkymä
+kaupunkiin; Totem-teatteri — matala peltinen Sidney Williams -halli;
+Rautatieasema — 1980-luvun asemarakennus laitureineen; Stuart Town Gaol — matala
+kivinen vankila peltikattoineen; Pioneer-teatteri — katottoman elokuvateatterin
+julkisivu; Kaupunginkirjasto — rakennus ja ulkoseinän muraali; Australian
+naisten museo — entisen vankilan portti ja muuri; Olive Pinkin puutarha — kuivan
+alueen kasveja, taustalla MacDonnell-vuoret.
+**Kumasi, kuvattomat nostot:** kaikki kansinostot (kum-puu, kultajakkara, liitto
+1701, 1873 Wolseley, kaksi kuvausta, Kumawood) ja teemasivun puutarhakaupunki,
+Owabi, metsätalous; matkaoppaan pystykuva — kente-kutoja kapean kangaspuun
+ääressä; ennen–nyt-pari; kohdekartan jutut Prempeh II:n museo, eläintarha
+(lepakot puissa), Kejetian tori, Ramseyerin kirkko, Rattrayn puisto.
+**Kumasi, miniatyyrit (8):** Prempeh II:n museo — kulttuurikeskuksen matala
+rakennusryhmä pihoineen; Kumasin eläintarha — puissa lepäävä lepakkoparvi;
+Kejetian tori — peltikattojen meri ylhäältä; Komfo Anokyen sairaala — maahan
+lyöty miekka kivijalustallaan; Kumasin linnake — punainen linnakerakennus
+torneineen; Ramseyerin muistokirkko — kivikirkko tornikellotapuleineen; Baba
+Yaran stadion — soikea stadion keltaisine katsomoineen; Rattrayn puisto —
+tekojärvi ja tanssiva suihkulähde.
+**Kano, kuvattomat nostot:** kronikka, Ali Yaji, Rumfa, 1873, marokkonahka,
+maapähkinäpyramidit, hausa kauppakielenä; kohdekartan jutut Sabon Garin tori,
+Kofar Matan indigokuopat (ilman ihmisiä), suurmoskeija (juttukuva), Gidan
+Makaman museo.
+**Kano, miniatyyrit (8):** Sabon Garin tori — muurien ulkopuolinen
+kauppakortteli; Dala-kukkula — kallio kaupungin yllä ja porrastie; Kofar Matan
+värjäämöt — pyöreitä indigokuoppia maassa; Sani Abachan stadion — stadionin
+kaari ja hiekkakenttä; Kanon suurmoskeija — vihreä kupoli ja kaksi minareettia;
+Gidan Rumfa — Kofar Kudun portti palatsimuurissa; Kofar Nassarawan portti —
+savimuurin portti tien yli; Gidan Makaman museo — hausalaispihatalo
+sisäpihoineen.
+**Winnipeg, kuvattomat nostot:** "Winterpeg ja sen aurinko" — kaupunkikuva
+pakkaspäivänä; "Kesä, joka tulee kerralla" — preerian ukkospilvi kaupungin yllä.
+**Winnipeg, miniatyyrit (8):** Manitoban museo — Nonsuchin jäljennös
+museosalissa; Pörssikortteli — tiilivarastoja ja terrakottajulkisivuja
+talvikadulla; Burton Cummings -teatteri — julkisivu ja pystykyltti; Manitoba
+Hydro Place — lasitorni ja ilmanvaihtopiippu; Kanadan ihmisoikeusmuseo —
+lasipilvi ja Tower of Hope illalla; Saint-Bonifacen katedraali — tyhjä
+ruusuikkuna palaneessa julkisivussa; Union Station — beaux-arts-asema
+kupoleineen; Manitoban parlamenttitalo — kupoli ja Kultapoika.
+**St. John's, kuvattomat nostot:** Fort William — muistolaatta tukimuurissa
+Cavendish Squaren kulmassa (myös miniatyyri).
+**St. John's, miniatyyrit (8):** Colonial Building — kuusi joonialaista
+pylvästä ja vaakunapääty; Fort William — laatta tukimuurissa; Cabot Tower —
+torni paljaalla kukkulalla, tie kiemurtelee ylös; The Battery — värilliset
+talot kalliossa veden rajassa; Kansallinen sotamuistomerkki — viisi
+pronssihahmoa ja seppeleet; Pyhän Johannes Kastajan basilika — harmaa
+kivijulkisivu ja kaksi tornia; Anglikaaninen katedraali — uusgoottilainen
+kirkko ilman torninhuippua; Water Street — matalat perintörakennukset rinteessä.
+
+**Monterrey, kuvattomat nostot:** "Kuningasvuori, joka onkin kreivi" —
+kalliopiirros Nuevo Leónin paimentolaisryhmiltä; ennen–nyt-pari (vanha puoli:
+Obispadon kukkula 1904 tai vuoden 1791 kartta — päätös); kohdekartan Colegio
+Civil — 1700-luvun lopun uusklassinen oppilaitos ja aukio; Meksikon historian
+museo — valkoinen moderni museo kanavan varrella.
+**Monterrey, miniatyyrit (8):** Museo del Obispado — kukkulan kellertävä
+siirtomaatalo, kahdeksankulmainen kupoli; La Purísiman kirkko — betonikuoret
+kaartuvat katoksi, kivinen kellotorni; Colegio Civil — uusklassinen
+kaksikerroksinen oppilaitos ja aukio; Nuevo Leónin hallintopalatsi —
+vaaleanpunainen cantera-julkisivu, Voiton patsas; Meksikon historian museo —
+valkoinen kulmikas museo ja suihkulähdealtaat; Dulces Nombresin kappeli — pieni
+kermanvalkoinen kappeli, kaksi kellokaarta; Monterreyn katedraali —
+barokkijulkisivu ja yksi kellotorni; Barrio Antiguo — mukulakivikatu ja
+värilliset siirtomaatalot.
+**Mérida, kuvattomat nostot:** "Miksi kaupunkia sanotaan valkoiseksi" — kalkittu
+matala katunäkymä; "Sota, joka kesti isoisän koko elämän" — mayakylä tai Puhuvan
+ristin kappeli, ei taistelukuvaa; "Keitto, jonka nimi valehtelee" — sopa de lima.
+**Mérida, miniatyyrit (8):** Santa Anan kirkko — keltainen kirkko kahden
+valkoisen tornihuipun välissä; Peón Contrerasin teatteri — keltainen eklektinen
+oopperatalo; La Mejoradan puisto — kivikirkko ja fransiskaaniluostarin muuri;
+Casa de los Montejo — plateresco-portaali ja parvekkeen kivihahmot; Méridan
+kaupunginmuseo — vanha postipalatsi, puna-valkoinen vinoruutufriisi; San Juanin
+puisto ja kaari — valkoinen kaari kadun yli; San Cristóbalin kirkko —
+kivijulkisivu, simpukankuoren muotoinen kaari; Santa Isabelin ermita — matala
+keltainen kappeli, edessä puisto.
+
+**Townsville ja Iquitos:** kaikki 18 nostoa ja 16 juttua kuvattomia. Tärkeimmät:
+Iquitosin kolmas avauskuva — laaja yleiskuva keskustasta ilman kasvoja; Belén —
+paalutaloja ja asuinlauttoja korkean veden aikaan; Castle Hill — vaaleanpunainen
+graniittilaki ja Pyhimys-tikku-ukko kalliopinnalla.
+**Townsville, miniatyyrit (8):** Queens Gardens — trooppinen puutarha, hoop-mäntyjä
+ja mangopuita; Tobruk Memorial Baths — 50 m ulkoallas rannan vieressä; Vanha
+tullitalo — kolonnadillinen romaaninen kaksikerroksinen talo; St James
+-katedraali — punatiilinen katedraali kukkulalla, matala keskitorni; Tropiikin
+museo — matala moderni museo, edessä hylkyankkuri; Vanha postitalo —
+sementtirapattu renessanssitalo, kulmassa hoikka kellotorni; School of Arts —
+1890-luvun kuisti- ja teatterirakennus; Great Northern Hotel — kaksikerroksinen
+tiili- ja puuhotelli, isot parvekkeet.
+**Iquitos, miniatyyrit (8):** Casa Morey — kumiparonin talo, takorautaristikot;
+Kuvataidekoulu — matala koulu, amazonialainen muraali; Mercado Central —
+esivalmisteinen rautahalli, myyntipöytärivit; Iquitosin katedraali —
+uusgoottilainen kirkko ja 20 m kellotorni; Hotel Palace — art nouveau
+-kulmatorni, kaakeloitu julkisivu; Malecón Tarapacá — betonoitu rantakatu
+balustradeineen; Casa Strassberger — osittain raunioitunut kumikauden talo;
+Plaza 28 de Julio — väljä aukio, obeliski.
+
+**Timbuktu, kuvattomat:** kansikuvat 3 ja avauskuvat 3 — savikaupunki dyynien
+keskellä; nimi — hiekkakumpujen leiripaikka ja kameleja; suolakaravaani —
+kamelijono suolalaattoineen; joki — Kabaran kanava tulvan aikaan; Sankorén
+opetus — oppilaita moskeijan pihalla; Ahmad Baba — 1500-luvun oppinut kirjojensa
+ääressä; Leo Africanus — renessanssiajan kirja Afrikasta; jutut Laingin,
+Cailliéen ja Barthin talot, al-Wangarin kirjasto, Sankorén moskeija, Ahmed Baba
+-instituutti.
+**Timbuktu, miniatyyrit (8):** Djinguereberin moskeija — savimoskeija,
+pyramidiminareetista puupalkkeja; Gordon Laingin talo — matala savitalo,
+muistolaatta oven yllä; René Cailliéen talo — savitalo hiekkakujalla; Sidi
+Yahyan moskeija — koristeellinen puuovi, yksi minareetti; al-Wangarin kirjasto —
+savitalo, hyllyllinen käsikirjoituksia; Heinrich Barthin talo — kaksikerroksinen
+savitalo, muistolaatta; Sankorén moskeija — pyramidiminareetti hiekka-aukion
+takana; Ahmed Baba -instituutti — matala moderni kivitalo kaariaukkoineen.
+**Lalibela, kuvattomat:** kolmas kansikuva ja avauskuvat 3; mehiläiset
+vastasyntyneen ympärillä; artesinen kaivo kirkon vieressä; Tekle Giyorgis II
+Lastassa 1868; Lalibelan risti käsissä; kirkkojen ajoituskiista; jutut Biete
+Giyorgis, Golgotha Mikael, Gabriel-Rufael, Lehem, Abba Libanos.
+**Lalibela, miniatyyrit (8):** Biete Giyorgis — ristinmuotoinen monoliitti
+kuilussaan ylhäältä; Biete Golgotha Mikael — sisäseinä ihmishahmoreliefeineen;
+Biete Maryam — punakallioinen monoliitti ristinmuotoisine ikkunoineen; Biete
+Medhane Alem — suuri monoliitti pilarikäytävineen; Biete Gabriel-Rufael —
+kaarikäytävä kaivannon reunalla; Biete Lehem — pieni kallioon hakattu kammio;
+Biete Abba Libanos — vuoreen kiinni jäänyt julkisivu portaineen; Biete Amanuel —
+vapaasti seisova monoliitti, vaakapalkkikerrokset.
+
+**Whitehorse, kuvattomat:** ennen–nyt-pari — vanha vedos 1898–1910 rannasta ilman
+kehystä ja studioleimaa; avauskuvat 2 — yleiskuva keskustasta joen yli, laakso
+vuorineen; etusivukuva (pysty) — SS Klondike tai Miles Canyon; nostot 1873
+(kausileiri joen varrella), kosket (Miles Canyonin basalttikanjoni), rautatie
+(kapearaiteinen juna), Robert Service (1900-luvun alun pankkikonttori),
+kalaporras, ilmasto, Yukon Quest (valjakon lähtö), kolme vuorta; 7 juttua
+(kaikki paitsi SS Klondike).
+**Whitehorse, miniatyyrit (8):** MacBride-museo — hirsikattoinen museo
+rantatörmällä; Kristuksen katedraali — pieni valkoinen anglikaaninen kirkko
+tornineen; Yukonin parlamenttitalo — matala valkoinen teräsverhoiltu
+virastotalo; SS Klondike — valkoinen siipiratasalus kuivalla maalla; Yukonin
+liikennemuseo — tolpan päässä pyörivä hopeinen DC-3; Whitehorsen lentoasema —
+pieni pohjoinen terminaali; Beringia-keskus — mammutti lumisessa
+jääkausimaisemassa; Riverdale — matalia taloja joen itärannalla vuoren juurella.
+**Yellowknife, kuvattomat:** etusivukuva (pysty) — revontulikuva ilman
+vesileimaa; avauskuva 3 — kesäinen yleiskuva Frame Laken tai Old Townin yli;
+kaikki 10 nostoa paitsi asuntolaivat; kaikki 8 juttua.
+**Yellowknife, miniatyyrit (8):** Bank of Toronton hirsimökki — pieni hirsitalo,
+jossa toimi pankki; Back Bayn hautausmaa — vanhoja puuristejä kallioisella
+rannalla; Wildcat Cafe — hirsinen kahvilamökki; Weaver & Devoren kauppa —
+vanha hirsinen sekatavarakauppa; Ragged Ass Road — päällystämätön katu ja
+käsintehty kyltti; Luoteisterritorioiden parlamenttitalo — pyöreä sali
+kattoikkunoineen; Prince of Walesin pohjoinen perintökeskus — museo järven
+rannalla; Hirsikoulu — pieni yhden huoneen hirsikoulu.
+
 ## Päätöstä vaativat asiat
 
 - **MAATESTIN_POIKKEUS laajeni VUT:iin** (tests/elaintakyt.test.mjs; sama kuin
@@ -185,7 +504,141 @@ nurmikaistale tornien edessä.
 - Nuuk/Anchorage: molempien oppaiden etusivukuva puuttuu (Commonsissa ei
   ≥ 1200 px pystykuvaa) → kuvaputki. Viereinen havainto: tools/tarkista-tekijat.mjs
   ei odota 429:ää parvikuormassa.
+- Punta Arenas/Santa Cruz: Punta Arenasin SAAPUMISTEKSTI (matkakirjateksti,
+  ei tämän erän) väittää keskustan katujen köysistä tuulen takia — en-Wikipedia
+  merkitsi väitteen lähteettömäksi 2015; Fable päättää muutoksesta. Santa
+  Cruzin kuusi kohdetta vain es-Wikipediassa (Guatemalan lähderivi). Cerro de la
+  Cruzilla ei omaa artikkelia (faktat "Punta Arenas"-artikkelista). Aukio ja
+  katedraali 114 m päässä toisistaan (Fesin ennakkotapaus).
+- Kumasi/Kano: Kanon Gidan Rumfan ja suurmoskeijan artikkelikoordinaatit
+  identtiset → Wikidatan arvot; Kurmin tori pudotettu kartalta (tarkistus-kano.md
+  F). Kumasin linnake kantaa GHA-skandaalin karttanoston (pakko, testi).
+  Nykykonfliktit jätetty pois Kanosta. Viereinen: africa-valokuvat.js kano
+  vanha puoli vain 760 px.
+- Winnipeg/St. John's: Saint-Bonifacen julkisivu sekä avauskarusellissa että
+  kohdekartan jutussa (tietoinen); St. John'sin teemasivu tiede eikä sää
+  (Halifaxilla jo sumu); Beothuk-kansan häviäminen jätetty pois — ehdotus
+  maalehden/karttanoston aiheeksi.
+- Dili/Alice Springs: kuvitus kokonaan tekemättä (Commons 429) — joko
+  kuvaputki tai uusi Commons-haku rauhallisempana hetkenä.
+- Monterrey/Mérida: Monterreyn ennen–nyt (1791 kartta vai ei paria); Méridan
+  San Juanin kaari sivuaa kansinostoa 2 (eri näkökulma); Macroplazan sijaluku
+  ja kastisodan uhriluku kirjoitettu auki ristiriitoineen.
+- Townsville/Iquitos: nostojen ja juttujen kuvitus (34 kohdetta) kokonaan
+  tekemättä — uusi Commons-haku rauhallisena hetkenä tai kuvaputki. Viereinen:
+  Oseanian ja Etelä-Amerikan introt eivät ole intron mittatestin piirissä.
+- Timbuktu/Lalibela: Lalibelan saapumisteksti puuttuu (KAARETTOMAT-lista) —
+  omistajan linjaus; Ali Farka Touré on MLI-maalehden aihe, ei siirretty;
+  africa-valokuvat.js:n timbuktu-pari ei täytä nykyisiä kuvasääntöjä (403 px /
+  päiväysleima).
+- Whitehorse/Yellowknife: Whitehorse ilman ennen–nyt-paria (hyväksy tai tilaa
+  vanha vedos); Radium Kingin lähderivi valokuvataulun muodossa (Commons:
+  "Unknown author"). Viereinen: piirra-kaupunkikartta.mjs jättää ison svg:n
+  assets/kartat/-kansioon (gitignoressa).
 
-## Keskeneräiset
+## Keskeneräiset (sessio päättyi omistajan pyynnöstä, tokenit loppuivat)
 
-(täydennetään session päättyessä)
+- **Iqaluit + Santa Fe**: Iqaluitin tekstit ja kohdekartta haarassa (ec5ce08);
+  Santa Fen faktapohja, tarkistus, lehti (kansi + teemasivu "Taiteen kaupunki"),
+  KAUPUNKIKARTAT.santafe ja 8 juttua haarassa (3eab3d5), kartta-png ja
+  karttapisteet vihreinä (d77904f). PUUTTUU: molempien kuvat (Santa Fe kokonaan,
+  Iqaluitin matkaoppaan pystykuva), kuvalähteet ja pistokokeet.
+- **Puerto Montt + João Pessoa, São Luís + Ouro Preto, Kimberley + Managua**:
+  agentit käynnistettiin ja pysäytettiin heti — EI mitään tehtyä; aloitetaan
+  alusta samalla ohjeella (scratchpad/ohje-kaupunkipari.md:n sisältö on
+  tämän raportin liitteenä alla).
+- **Säärivit** (saatiedot.js): tekemättä kaikille tämän illan 22 kaupungille
+  sekä 43 aiemmalle lehtikaupungille (lista: comm kulttuuri-kategoriat vs
+  saatiedot -avaimet). Malli: v1661:n en-Wikipedia-ilmastotaulukkorivit
+  lahde-kentällä, tai Open-Meteo kun päiväraja sallii.
+- **Kuvitus**: Dili, Alice Springs kokonaan; Townsville, Iquitos, Timbuktu,
+  Lalibela, Whitehorse, Yellowknife, Kumasi osittain (Commons vastasi 429
+  koko illan, 8 agenttia samasta osoitteesta). Suositus: kuvahaku 1–2
+  agentilla kerrallaan rauhallisena hetkenä, tai kuvaputki.
+- Kaikki poiminnat läpäisivät portit (node --test # fail 0, kaksoisavaimet,
+  niputus, savukkeet, nimiölimitys 0, karttapisteet). Agenttien worktreet
+  katoavat session mukana; kaikki committoitu työ on tässä haarassa.
+
+## Liite: agentin ohje (kaupunkipari), käytetty 7.9.2026 illalla
+
+# Kaupunkiparin ohje (Fable-sessio 2, 7.9.2026 ilta)
+
+Olet Opus-toteuttaja Matkakirja-pelissä. Työskentelet omassa git-worktreessä,
+jonka pohja on haaran claude/lehdet-2026-09-07-ilta HEAD (= origin/main v1671).
+Päätoimittaja poimii committisi cherry-pickillä; ÄLÄ pushaa, ÄLÄ tee PR:ää.
+
+TEHTÄVÄ: KAUPUNKILEHDET kahdelle kaupungille (tunnukset annetaan tehtävässä;
+ne ovat js/packs/maailmankartta.js CITIES-taulun id-arvoja — sieltä näet myös
+"wiki"-kentän ja CITY_COUNTRY-maan). Kummallekin SAMA TÄYSI LAAJUUS kuin
+Lagosilla ja Fesillä v1670:ssä (commit 4d8126e, `git show 4d8126e --stat`):
+- faktapohja docs/mantereet-tyoaineisto/faktapohja-<kaupunki>.md en-Wikipedian
+  raakatekstistä ja ERILLINEN tarkistusraportti tarkistus-<kaupunki>.md
+  (lähteet luettu uudelleen; tarkistuspäivä 7.9.2026)
+- kansi + teemasivu js/packs/kulttuuri-kategoriat.js (avain = kaupunkitunnus),
+  3 kansikuvaa, 3 avauskuvaa, ennen–nyt-pari (jos sääntöjen mukainen vanha
+  kuva löytyy; muuten kirjaa kuten Lagosissa), matkaopas
+- kohdekartta 8 kohteella: js/packs/maakartat.js KAUPUNKIKARTAT.<kaupunki>
+  (ankkuri: ' * Lambertin tasapinta' -kommenttia EDELTÄVÄ };),
+  tools/piirra-kaupunkikartta.mjs KAUPUNGIT-rajaus, assets/kartat/<kaupunki>-
+  keskusta.png (KATSO png silmin), sekä 8 nähtävyysjuttua
+  js/packs/nahtavyysjutut.js. Kohteet EIVÄT toista lehden juttuja.
+- saapumisteksti (<mantere>-saapumiset.js) ja intro/artikkeli
+  (<mantere>-artikkelit.js), 1873-kehys; tarvittaessa <mantere>-valokuvat.js.
+  Mantereen tiedosto on se, jossa kaupungin avain jo on (grep "^  <kaupunki>: {"
+  js/packs/*-saapumiset.js).
+
+LUE ENSIN tässä järjestyksessä: tools/parvi/agentin-yhteiset-saannot.md,
+tools/parvi/kaupunkilehti-ohje.md (SITOVA — se nimeää muut luettavat
+dokumentit ja mallit), tools/parvi/kohdekartta-ohje.md. Lue mallikaupungin
+(Lagos tai Fes) toteutus KAIKISTA em. tiedostoista ennen kuin kirjoitat.
+Lue myös kaupungin maan maalehti (js/packs/maa-kategoriat.js) ja karttanostot
+(js/packs/maastokohteet-<iso>.js, skandaalit.js, elaintakyt.js) äläkä toista
+niiden aiheita.
+
+POIKKEAMAT yhteisiin sääntöihin (Fable 7.9.2026 ilta, sitovat):
+1. KAKSI COMMITTIA, ei yksi. Commit 1 = checkpoint HETI kun molempien
+   kaupunkien tekstit, kohdekartat (png + rajaus + karttapisteet) ja
+   nähtävyysjutut ovat valmiit ja portit vihreät — ENNEN yhtään kuvahakua
+   (kuvakentät tyhjinä/puuttuvina niin, että testit menevät läpi; otsikko
+   esim. "Kaupunkilehdet Salta ja Antofagasta: tekstit"). Commit 2 =
+   lopullinen kuvien jälkeen ("Kaupunkilehdet Salta ja Antofagasta: kuvat").
+   Kummankin pitää läpäistä portit. git add vain muuttamasi tiedostot.
+   Commit-viestin otsikko ASCII, ≤ 60 merkkiä; viestin loppuun rivit:
+   Co-Authored-By: Claude <noreply@anthropic.com>
+   Claude-Session: https://claude.ai/code/session_01QFAVkDyYhAPzL2NqPAo3Nh
+2. Säärivejä (js/packs/saatiedot.js, Open-Meteo, hae-saanormaalit) ET tee.
+3. EI matkakirjatekstiä, EI kohtaamisia, EI kysymyksiä. ÄLÄ koske:
+   js/tyohuone-raamattu.js, js/tyohuone-tilanne.js, js/main.js,
+   js/muutokset.js, sw.js, docs/tarina.md, docs/isoisan-raamattu.md, dist/.
+   Älä aja tools/uusi-versio.mjs. Ei git stash.
+4. Verkko: NODE_USE_ENV_PROXY=1. User-Agent Wikimedian rajapinnoille
+   TÄSMÄLLEEN "Matkakirja/1.0 (https://github.com/ravelius/Matkakirja)".
+   Ei sähköposteja, ei API-avaimia mihinkään.
+5. Kuvat vain Commonsista: lisenssi ja tekijä extmetadatasta, ≥ 1200 px,
+   JOKAINEN kuva katsottu (Read näyttää kuvan); tunnistettavat kasvot,
+   logot, vesileimat, heikot kuvat hylätään. Kuvaton on parempi kuin
+   tarkistamaton. Kuvia ET generoi. Rinnakkaisia Commons-hakuja enintään 2;
+   429 → odota 45 s (parvessa on 8 agenttia).
+6. Apuskriptit ja välitulokset VAIN omaan alikansioon
+   <scratchpad>/<kaupunki1>-<kaupunki2>/ (scratchpad-polku on tehtävässä).
+7. Jos huomaat, että jokin osa on jo tehty pohjassa, älä toista sitä.
+   Viereisiä ongelmia ET korjaa — kirjaat ne raporttiin.
+
+PORTIT ennen KUMPAAKIN committia (kaikki vihreitä, korjaa ennen committia):
+  node --test tests/*.test.mjs        (lue itse "# fail 0")
+  node tools/tarkista-kaksoisavaimet.mjs
+  node tools/tarkista-niputus.mjs
+  node tools/tarkista-savukkeet.mjs
+  node tools/tarkista-nimiolimitys.mjs
+  node tools/tarkista-karttapisteet.mjs <kaupunki1>
+  node tools/tarkista-karttapisteet.mjs <kaupunki2>
+
+LOPPURAPORTTI (vastauksesi, suomeksi, tiivis, ≤ 80 riviä):
+- molempien committien SHA ja otsikot; muutetut tiedostot
+- per kaupunki: lehden aiheet (kansi/teemasivu), kohdekartan 8 kohdetta
+  nimineen muodossa "kohde — mitä miniatyyrikuvan pitää esittää"
+- kuvien lähteet (tiedosto, tekijä, lisenssi) ja kuvattomat nostot muodossa
+  "nosto — mitä kuvan pitää esittää" (kuvaputkea varten)
+- KOLME pistokoeväitettä lähteineen (väite; en-Wikipedia-artikkeli ja osio)
+- porttien tulos (# pass / # fail), päätöstä vaativat asiat, mitä jäi
+  tekemättä ja miksi.

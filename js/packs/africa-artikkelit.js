@@ -523,10 +523,49 @@ export const OMAT_ARTIKKELIT = {
       + 'fetsihattu — vaikka siitä, kuka sen ensimmäisenä teki, '
       + 'lähteet ovat eri mieltä.',
   },
+  /*
+   * TIMBUKTU (Opus 7.9.2026, paketti O9) — INTRO KIRJOITETTU UUSIKSI
+   * kaupunkilehden yhteydessä. Vanha intro oli kolme virkettä; uusi
+   * tekstilinjaus (Raamattu, omistaja 20.8.2026) vaatii 7–10
+   * virkkeen johdatuksen kaupunkiin. `artikkeli`-kenttä on ennallaan.
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-timbuktu.md ja
+   * sen riippumaton tarkistus tarkistus-timbuktu.md. Väitteet luettu
+   * en-Wikipedian raakateksteistä 7.9.2026: "Timbuktu",
+   * "History of Timbuktu", "Sankoré Madrasah".
+   *
+   * ETÄISYYS JOKEEN ON 15 KM eikä 20 km: artikkelin johdanto sanoo
+   * 20 km "jokeen" ja Geography-osio 15 km "joen pääuomaan".
+   * Tarkempi osio voittaa (tarkistus, kohta B).
+   *
+   * MALIN MAALEHDEN AIHEITA EI TOISTETA: Mansa Musan pyhiinvaellusta
+   * ei kerrota, ja vuosien 2012–2013 tapahtumat ovat jo
+   * skandaalinostona (skandaalit.js MLI).
+   */
   Timbuktu: {
-    intro: 'Timbuktu oli aavikon reunan kulta- ja kirjakaupunki, jonka '
-      + 'kirjastot hämmästyttivät maailmaa. Karavaanit tuovat sinne yhä '
-      + 'suolaa kuten tuhat vuotta sitten.',
+    intro: 'Timbuktu on Malin pohjoisosassa, Saharan eteläreunalla, '
+      + 'viisitoista kilometriä Nigerin pääuomasta pohjoiseen. '
+      + 'Kaupunki alkoi tuaregien kausiluonteisena leiripaikkana ja '
+      + 'muuttui pysyväksi 1100-luvun alussa, kun aavikon karavaanit '
+      + 'ja joen veneet alkoivat vaihtaa tavaraa juuri täällä. '
+      + 'Vaurauden toivat suola, kulta ja norsunluu.'
+      + '\n\n'
+      + 'Kaupungin kolme savimoskeijaa — **Djinguereber, Sidi Yahya '
+      + 'ja Sankoré** — olivat myös kouluja. 1500-luvulla kaupungissa '
+      + 'oli toistasataa koraanikoulua ja tuhansia oppilaita, ja '
+      + 'sukujen kirjastoihin kertyi satojatuhansia '
+      + 'käsikirjoituksia. Marokkolainen armeija '
+      + 'valloitti kaupungin 1591, ja oppineita karkotettiin ja '
+      + 'pakeni; sen jälkeen kaupungin maine muuttui Euroopassa '
+      + 'rikkaasta salaperäiseksi.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Timbuktu ei ollut minkään yhden '
+      + 'vallan alla: Massinan valtakunta oli hallinnut sitä vuoteen '
+      + '1865 ja Toucouleur sen jälkeen, mutta lähteet ovat '
+      + 'erimielisiä siitä, kuka piti valtaa Ranskan tuloon 1893 '
+      + 'asti. Nimestä oli jo tullut Euroopassa sanonta paikasta '
+      + 'keskellä ei-mitään — **vaikka kaupunki oli koko ajan '
+      + 'olemassa** ja sen kirjastot sen mukana.',
     artikkeli: 'Timbuktu sijaitsee Malissa Saharan eteläreunalla, '
       + 'muutaman kilometrin päässä Nigerjoen suuresta mutkasta. '
       + 'Kaupunki syntyi siinä, missä kameli kohtaa kanootin: aavikon '
@@ -547,11 +586,42 @@ export const OMAT_ARTIKKELIT = {
       + 'Savesta rakennetut moskeijat rapataan yhä joka vuosi talkoilla '
       + 'uuteen kuosiin — samalla tavalla kuin vuosisatoja sitten.',
   },
+  /*
+   * KUMASIN INTRO KIRJOITETTIIN UUSIKSI 7.9.2026 (Opus, paketti O9)
+   * kaupunkilehden yhteydessä. Vanha versio oli neljä virkettä; uusi
+   * tekstilinjaus (Raamattu, omistaja 20.8.2026) vaatii etusivun
+   * leipätekstiltä 7–10 virkettä ja 1873-kehyksen. Lähteinä
+   * en-Wikipedian "Kumasi", "Asante Empire", "Golden Stool" ja
+   * "Anglo-Ashanti wars" 7.9.2026; sama aineisto kuin
+   * kaupunkilehdellä (js/packs/kulttuuri-kategoriat.js, avain
+   * kumasi, sekä docs/mantereet-tyoaineisto/faktapohja-kumasi.md).
+   * artikkeli-kenttä on ennallaan (Kapkaupunki-malli 6.9.2026).
+   */
   Kumasi: {
-    intro: 'Kumasi on Asanten kuningaskunnan vanha pääkaupunki Ghanan '
-      + 'vihreällä ylängöllä. Kultainen valtaistuin, kente-kankaat ja '
-      + 'Länsi-Afrikan suurimpiin kuuluva tori pitävät perinteet '
-      + 'elävinä.',
+    intro: 'Kumasi on Ghanan toiseksi suurin kaupunki ja Ashantin '
+      + 'alueen pääkaupunki, noin kahdensadan kilometrin päässä '
+      + 'Accrasta sademetsävyöhykkeellä. Nimi tulee twin sanasta '
+      + '**Kumase**, "kum-puun alla", ja se viittaa puuhun, jonka '
+      + 'ympärille kaupunki 1680-luvulla perustettiin. Perustaja oli '
+      + 'asantehene Osei Kofi Tutu I.'
+      + '\n\n'
+      + 'Kaupunki nousi merkittäväksi 1695, kun siitä tuli Asanten '
+      + 'pääkaupunki, ja vuonna 1701 asantit kukistivat Denkyiran '
+      + 'Feyiasen taistelussa ja avasivat tien rannikolle. Liiton '
+      + 'vertauskuva oli **kultainen jakkara Sika Dwa Kofi**, jonka '
+      + 'perimätiedon mukaan pappi Okomfo Anokye kutsui taivaalta; se '
+      + 'ei saa koskaan koskettaa maata. Kumasi on yhä asantehenen '
+      + 'istuinkaupunki, ja siksi sitä sanotaan myös nimellä '
+      + 'Oseikrom.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Kumasi oli vielä **oman '
+      + 'valtakuntansa pääkaupunki**: kolmas brittiläis-asantilainen '
+      + 'sota alkoi juuri silloin, ja britit saapuivat kaupunkiin '
+      + 'vasta 4. helmikuuta 1874. Brittihallintoon Kumasi siirtyi '
+      + '1896 ja Ashantin alueen pääkaupungiksi 1957. Kaupunkia '
+      + 'sanotaan puutarhakaupungiksi Maxwell Fryn vuoden 1945 '
+      + 'kaavan mukaan, ja sen Kejetian tori on Länsi-Afrikan suurin '
+      + 'yksittäinen tori.',
     artikkeli: 'Kumasi on Ghanan toiseksi suurin kaupunki ja Asanten '
       + 'kansan sydän sademetsävyöhykkeen ylängöllä. Kaupunkia '
       + 'kutsutaan puutarhakaupungiksi, ja sen keskustassa toimii '
@@ -740,6 +810,72 @@ export const OMAT_ARTIKKELIT = {
       + 'Mercato-torilla, yhdellä Afrikan suurimmista, myydään kaikkea '
       + 'mausteista kultaan — ja iltaisin klubeilla soi ethio-jazz, '
       + 'jota ei kuule missään muualla maailmassa.',
+  },
+  /*
+   * LALIBELA (Opus 7.9.2026, paketti O9) — UUSI MERKINTÄ
+   * kaupunkilehden yhteydessä. Avain on city.wiki eli "Lalibela"
+   * (js/packs/africa.js). Aineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-lalibela.md ja sen
+   * riippumaton tarkistus tarkistus-lalibela.md. Väitteet luettu
+   * en-Wikipedian raakateksteistä 7.9.2026: "Lalibela",
+   * "Rock-Hewn Churches, Lalibela", "Gebre Meskel Lalibela",
+   * "Tekle Giyorgis II".
+   *
+   * ETIOPIAN MAALEHDEN NOSTOA EI TOISTETA: maa-kategoriat.js ETH
+   * kertoo jo louhintatavan, kirkkojen määrän ja
+   * Jerusalem-symboliikan ("Yksitoista kirkkoa, jotka kaivettiin
+   * alaspäin"). Tämä merkintä kertoo kaupungin oman tarinan:
+   * Rohan nimi, kuningas Lalibela, Lastan asema ja nykyinen
+   * pikkukaupunki.
+   *
+   * SAAPUMISTEKSTIÄ EI KIRJOITETTU: lalibela on
+   * tests/vanha-maailma.test.mjs:n KAARETTOMAT-listalla, ja testi
+   * kaatuu, jos listalla olevalle kaupungille kirjoitetaan merkintä
+   * africa-saapumiset.js:ään. Artikkeli sen sijaan sallitaan (sama
+   * ratkaisu kuin Fesissä v1670).
+   */
+  Lalibela: {
+    intro: 'Lalibela on pieni kaupunki Etiopian ylängöllä Amharan '
+      + 'alueella, noin **2 500 metrin korkeudessa**, ja se on Lastan '
+      + 'pääkaupunki. Vuoden 2007 laskennassa asukkaita oli 17 367 — '
+      + 'kaupunki on siis pienempi kuin moni suomalainen '
+      + 'kuntakeskus, mutta se on Etiopian ortodoksisen kirkon '
+      + 'pyhimpiä paikkoja ja pyhiinvaelluksen päämäärä.'
+      + '\n\n'
+      + 'Kaupungin vanha nimi oli **Roha**, ja se nimettiin uudelleen '
+      + 'Zagwe-kuningas Gebre Meskel Lalibelan mukaan, joka hallitsi '
+      + 'noin 1181–1221. Hagiografian mukaan hän syntyi Rohassa 1162 '
+      + 'ja sai nimensä mehiläisparvesta, joka ympäröi vastasyntyneen: '
+      + 'vanhassa agaw-kielessä nimi tarkoittaa, että mehiläiset '
+      + 'tunnustavat hänen valtansa. Kaupunki oli Etiopian '
+      + 'pääkaupunki 1100-luvun lopulta 1200-luvulle.'
+      + '\n\n'
+      + 'Kalliokirkot otettiin maailmanperintöluetteloon 1978, ja '
+      + 'niitä on yksitoista. Kaupungin vesiuoma kantaa nimeä '
+      + 'Jordan, ja kirkot jakautuvat sen mukaan. Isoisän '
+      + 'matkavuonna 1873 Lastalla oli tuore muisto omasta '
+      + 'keisaristaan: **Wagshum Gobeze**, vanhan Zagwe-valtaistuimen '
+      + 'perijä, oli hallinnut Tekle Giyorgis II:na 1868–1871.',
+    artikkeli: 'Lalibela on kaupunki Etiopian pohjoisella ylängöllä '
+      + 'noin 2 500 metrin korkeudessa. Se tunnetaan yhdestätoista '
+      + 'kirkosta, joita ei muurattu vaan louhittiin kalliosta. Se on '
+      + 'yhä pyhiinvaelluskohde eikä museo.'
+      + '\n\n== Roha ja sen kuningas ==\n'
+      + 'Kaupungin vanha nimi oli Roha. Se sai nykyisen nimensä '
+      + 'kuningas Gebre Meskel Lalibelalta, joka hallitsi Zagwe-'
+      + 'dynastian aikana noin 1181–1221 ja vietti nuoruudessaan '
+      + 'vuosia maanpaossa Jerusalemissa. Kaupungin rakennuksilla on '
+      + 'raamatullisia nimiä, ja vesiuoma on nimeltään Jordan. '
+      + 'Hagiografian mukaan kuningas veisti kirkot enkelien avulla, '
+      + 'ja portugalilaisille papit kertoivat 1520-luvulla työn '
+      + 'kestäneen kaksikymmentäneljä vuotta.'
+      + '\n\n== Kaupunki kirkkojen ympärillä ==\n'
+      + 'Lalibelassa asuu runsaat seitsemäntoistatuhatta ihmistä. '
+      + 'Perinteisiä taloja on kahta lajia: pyöreä kivestä ladottu '
+      + 'tukul, jossa on usein kaksi kerrosta ja portaat ulkoseinällä, '
+      + 'sekä yksikerroksinen chika, joka on tehty maasta ja risuista. '
+      + 'Vilkkaimmillaan kaupunki on tammikuussa, kun kirkkoihin '
+      + 'saapuu pyhiinvaeltajia ja kulkueet kestävät useita päiviä.',
   },
   'Kongo (joki)': {
     intro: 'Kongojoki on Afrikan vesirikkain virta, joka kiertää '
@@ -1333,10 +1469,42 @@ export const OMAT_ARTIKKELIT = {
       + 'tammikuussa tekevät siitä paikan, jonne tullaan muistamaan — '
       + 'ja juhlimaan sitä, että elämä jatkuu.',
   },
+  /*
+   * KANON INTRO KIRJOITETTIIN UUSIKSI 7.9.2026 (Opus, paketti O9)
+   * kaupunkilehden yhteydessä. Vanha versio oli kolme virkettä; uusi
+   * tekstilinjaus (Raamattu, omistaja 20.8.2026) vaatii etusivun
+   * leipätekstiltä 7–10 virkettä ja 1873-kehyksen. Lähteinä
+   * en-Wikipedian "Kano (city)", "Kano Chronicle" ja "Kurmi Market"
+   * 7.9.2026; sama aineisto kuin kaupunkilehdellä
+   * (js/packs/kulttuuri-kategoriat.js, avain kano, sekä
+   * docs/mantereet-tyoaineisto/faktapohja-kano.md).
+   * artikkeli-kenttä on ennallaan (Kapkaupunki-malli 6.9.2026).
+   */
   Kano: {
-    intro: 'Kano on hausakaupunkien kuningatar: tuhatvuotinen '
-      + 'kauppakaupunki, jonka värjäyskuopat, muurit ja basaarit '
-      + 'ovat palvelleet karavaaneja vuosisatojen ajan.',
+    intro: 'Kano on Pohjois-Nigerian suurin kaupunki ja yksi '
+      + 'seitsemästä keskiaikaisesta hausakaupungista. Se tunnettiin '
+      + 'alun perin nimellä **Dala** kukkulan mukaan, jonka juurella '
+      + 'asui jo 600-luvulla rautaa työstänyt yhteisö. Islam saapui '
+      + 'kaupunkiin 1000-luvulla tai aiemmin Saharan-kaupan mukana, '
+      + 'ja sen myötä Kanosta tuli koko alueen kaupan hermokeskus.'
+      + '\n\n'
+      + 'Kaupungin ympärille rakennettiin savimuuri, jonka '
+      + 'perustuksen laski kuningas Gijimasu 1100-luvun alussa, ja '
+      + 'muurissa oli viisitoista porttia. Muhammad Rumfa '
+      + '(1463–1499) laajensi emiirin palatsia ja perusti Kurmin '
+      + 'torin, ja hänen aikanaan Kanon maine Saharan-kaupan '
+      + 'keskuksena oli keskiajalla korkeimmillaan. Heinrich Barth '
+      + 'kutsui kaupunkia 1851 **Keski-Afrikan suurimmaksi '
+      + 'kauppapaikaksi**.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Kano oli **Sokoton kalifaatin '
+      + 'suurin ja vaurain emiirikunta**; viimeinen sultaani oli '
+      + 'kukistettu 1805. Sama vuosi oli kaupungille raskas, sillä '
+      + '1873 on yksi sen nälkävuosista. Kudonta, värjäys ja '
+      + 'nahkatyö kulkivat kauppatavarana Marokkoon ja sieltä '
+      + 'Eurooppaan asti. Britannia liitti kaupungin imperiumiinsa '
+      + '1903, rautatie ylsi Kanoon 1911, ja kaupungin talous nojaa '
+      + 'yhä kauppaan.',
     artikkeli: 'Kano on Pohjois-Nigerian suurin kaupunki ja yksi '
       + 'Länsi-Afrikan vanhimmista: sen historia kauppapaikkana '
       + 'ulottuu yli tuhannen vuoden taakse. Kaupunki oli Saharan '
