@@ -177,8 +177,14 @@ export {
  * kerros näkyy — vanha 2026-09-05b hylätään versiotarkistuksessa, ja
  * siihen asti etusivu on pelkkää pergamenttia julisteotsikon kanssa
  * (sama varapolku kuin verkkovialla).
+ *
+ * 2026-09-07a = ensimmäinen MACILLA poltettu sarja (run 34097695593,
+ * 15 min kaikilla ytimillä): laattataso 6, lava 1400, kuva 1200 px,
+ * sumennus 6, laattasarja 2026-09-07a-nostot-e. Tarkempi kuin 05c
+ * (taso 5, 800 px) ilman lisäkustannusta, koska Macin kaistat jakavat
+ * kehykset.
  */
-export const ETUSIVUPALLO_VERSIO = '2026-09-05c';
+export const ETUSIVUPALLO_VERSIO = '2026-09-07a';
 export const ETUSIVUPALLO_JUURI = `${PEILI_JUURI}julisteet/etusivu/${ETUSIVUPALLO_VERSIO}/`;
 export const ETUSIVUPALLO_LUETTELO = `${ETUSIVUPALLO_JUURI}etusivu.json`;
 /**

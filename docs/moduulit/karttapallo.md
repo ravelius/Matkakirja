@@ -1073,6 +1073,9 @@ Kolme muutosta js/etusivupallo.js:ään, css/styles.css:ään ja
 tools/tee-etusivupallo.mjs:ään; uusi videoversio on
 `ETUSIVUPALLO_VERSIO = '2026-09-05c'` (työnkulku tee-etusivupallo on
 ajettava, ennen sitä etusivu on varapolullaan pelkkää pergamenttia).
+Sarja 2026-09-07a (7.9.2026, ensimmäinen Macilla poltettu, 15 min
+kaikilla ytimillä) nosti laattatason 6:een ja kuvan 1200 pikseliin
+samalla sumennuksella; vakio osoittaa nyt siihen.
 
 1. **Kerros koko paneelin taakse.** Kerros syntyy nyt `.intro`-paneelin
    ensimmäiseksi lapseksi eikä `.intro-kartta`-ylälohkoon, ja video
