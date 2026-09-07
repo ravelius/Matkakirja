@@ -5016,6 +5016,62 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 14.6505, etela: 14.6330, lansi: -90.5250, ita: -90.5010 },
   },
+  lagos: {
+    /*
+     * LAGOSIN SAAREN YDIN (7.9.2026). Ruutu on noin 2,0 × 1,7
+     * kilometriä: pohjoisessa keskusmoskeija ja Tinubun aukio,
+     * keskellä Marinan pankkikortteli ja Onikan puistot, etelässä
+     * kansallismuseo. Kaikki kahdeksan kohdetta ovat Lagosin
+     * saarella.
+     *
+     * MERI-LIPPU PÄÄLLÄ, koska ruudun pohjoisreuna avautuu laguuniin
+     * ja eteläreuna sataman pääväylälle — molemmat ovat OSM:ssä
+     * rantaviivan takana.
+     *
+     * IGA IDUNGANRAN, SHITTA-BEYN MOSKEIJA JA SILLAT JÄÄVÄT POIS
+     * AIHESYISTÄ. Oban palatsi on noston L1 loppuhuipennus,
+     * Shitta-Beyn moskeija noston L4 aihe ja Carterin sekä kolmas
+     * mannersilta teemasivun aihe, eikä kohdekartta toista lehden
+     * juttuja (New Yorkin sääntö). Palatsi ja moskeija olisivat
+     * mahtuneet ruutuun (6,4654 / 3,3900 ja 6,45773 / 3,38656);
+     * sillat eivät, koska Carterin silta on 2,0 kilometriä
+     * pohjoisempana.
+     *
+     * MAKOKO ON LAGUUNIN TOISELLA PUOLELLA mantereen rannalla eikä
+     * mahtuisi samaan ruutuun. Se on teemasivun oma nosto.
+     */
+    rajat: { pohjoinen: 6.4585, etela: 6.4435, lansi: 3.3865, ita: 3.4045 },
+    meri: true,
+  },
+  sansibar: {
+    /*
+     * KIVIKAUPUNKI JA CREEK ROADIN TOINEN PUOLI (7.9.2026). Ruutu on
+     * noin 1,6 × 1,0 kilometriä eli pelin tiiviimpiä, Christchurchin
+     * ja Vancouverin kokoluokkaa. Syy on sama: koko Kivikaupunki
+     * mahtuu kilometrin neliöön, ja väljempi ruutu jättäisi kaikki
+     * kohteet vasempaan laitaan ryppääksi. Itäreuna on vedetty
+     * Ngʼamboon Michenzanin kortteleille asti, jotta kartalla näkyy
+     * myös se puoli kaupunkia, joka ei ole vanhaa kivikaupunkia.
+     *
+     * MERI-LIPPU PÄÄLLÄ: länsireuna on Sansibarin kanaali, ja
+     * rantaviiva kulkee kuvan vasemmassa laidassa pohjoisesta
+     * etelään.
+     *
+     * VANHA LINNAKE, KRISTUKSEN KATEDRAALI JA FORODHANIN PUISTO
+     * JÄÄVÄT POIS. Linnake on noston S5 aihe ja katedraali noston S3
+     * aihe; Forodhanin puisto on Tansanian maalehden ruoka-aiheen
+     * nosto, eikä kaupunkilehti toista maalehteä. Kaikki kolme
+     * näkyvät silti kuvassa rakennuksena ja puistona.
+     *
+     * IHMEIDEN TALO PUDOTETTIIN ETÄISYYDEN TAKIA, ei aiheen: se on
+     * 71 metriä vanhasta linnakkeesta ja 151 metriä sulttaanin
+     * palatsista, eli 200 metrin sääntö sulkee sen pois heti kun
+     * palatsi on kartalla. Se kerrotaan matkaoppaan neljännessä
+     * jaksossa.
+     */
+    rajat: { pohjoinen: -6.1575, etela: -6.1665, lansi: 39.1855, ita: 39.2000 },
+    meri: true,
+  },
 };
 
 /*

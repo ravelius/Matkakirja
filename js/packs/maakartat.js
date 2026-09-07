@@ -13507,6 +13507,104 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Postipalatsi', lat: 14.637, lon: -90.513 },
     ],
   },
+  /*
+   * LAGOS (7.9.2026). Rajaus on noin 2,0 × 1,7 kilometriä Lagosin
+   * saaren pohjoislaidalta Onikanin puistoihin — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n lagos-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat aworien
+   * perustamistaru ja oban palatsi, Benin ja nimi Eko, vuoden 1861
+   * luovutussopimus, saro- ja aguda-paluumuuttajat sekä Shitta-Beyn
+   * moskeija ja Eyo-kulkue; teemasivu kertoo laguunista, Makokosta,
+   * silloista, täyttömaasta ja Lekin luonnonsuojelukeskuksesta.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-lagos.md, kohta G): Holy Cross -katedraali on 112
+   * metrin päässä Vapauden puistosta, John Randle -keskus 145 metrin
+   * päässä kansallismuseosta, Bookshop House 163 metrin päässä
+   * Kristuksen katedraalista ja Ilojo Bar 63 metrin päässä Tinubun
+   * aukiosta.
+   */
+  lagos: {
+    polku: 'assets/kartat/lagos-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 6.4585, etela: 6.4435, lansi: 3.3865, ita: 3.4045 },
+    esittely: 'Kartan alue kattaa Lagosin saaren ytimen. Vasemmassa '
+      + 'alakulmassa on vettä: sataman pääväylä, joka erottaa saaren '
+      + 'mantereesta. Rantaviivaa myötäilee Marina vinona nauhana '
+      + 'luoteesta kaakkoon, ja sen yläpuolella on liikekeskustan '
+      + 'tiivis kortteliverkko. Yläreunassa kadut haarautuvat vanhan '
+      + 'kaupungin epäsäännölliseksi kuvioksi, ja oikeassa '
+      + 'alakulmassa erottuvat Onikanin puistot ja aukio. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+       * ja kaikki 28 väliä on mitattu haversinilla: pienin on 293
+       * metriä (Vapauden puisto – King's College).
+       */
+      { nimi: 'Lagosin keskusmoskeija', lat: 6.457222, lon: 3.388056 },
+      { nimi: 'Tinubun aukio', lat: 6.4538, lon: 3.3894 },
+      { nimi: 'Ajelen hautausmaa', lat: 6.4515, lon: 3.3942 },
+      { nimi: 'Kristuksen katedraali', lat: 6.4508, lon: 3.3902 },
+      { nimi: 'King\'s College', lat: 6.44961, lon: 3.39905 },
+      { nimi: 'Vapauden puisto', lat: 6.4489, lon: 3.3965 },
+      { nimi: 'Tafawa Balewan aukio', lat: 6.447222, lon: 3.401389 },
+      { nimi: 'Nigerian kansallismuseo', lat: 6.444444, lon: 3.403333 },
+    ],
+  },
+  /*
+   * SANSIBAR (7.9.2026). Rajaus on noin 1,6 × 1,0 kilometriä
+   * Kivikaupungin niemeltä Creek Roadin yli Ngʼamboon — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n sansibar-lohkossa. Vasemmassa
+   * laidassa on Sansibarin kanaali, ja kuvan halki kulkee vinosti
+   * Creek Road, joka erottaa vanhan ja uuden kaupungin.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Shanganin arkeologia, Omanin sulttaanien pääkaupunki, vuoden
+   * 1873 sopimus ja Kristuksen katedraali, Sayyida Salme sekä vanha
+   * linnake ja elokuvajuhla; teemasivu kertoo monsuunista,
+   * dhow-aluksista, Changuusta ja merilevästä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-sansibar.md, kohta H): Malindin moskeija on 155
+   * metrin päässä vanhasta apteekista, Ijumaan moskeija 95 metrin
+   * päässä samasta ja Ihmeiden talo 151 metrin päässä sulttaanin
+   * palatsista. Ihmeiden talo kerrotaan matkaoppaassa; Forodhanin
+   * puisto jää pois, koska se on Tansanian maalehden aihe.
+   */
+  sansibar: {
+    polku: 'assets/kartat/sansibar-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -6.1575, etela: -6.1665, lansi: 39.1855, ita: 39.2000 },
+    esittely: 'Vasemmassa laidassa on meri, ja siihen työntyy '
+      + 'Kivikaupungin niemi, jonka kujaverkko on niin tiheää, että '
+      + 'se näyttää kaukaa kudokselta. Niemen juuresta kaartaa '
+      + 'vinosti ylhäältä alas leveä katu — Creek Road, joka kulkee '
+      + 'täytetyn salmen paikalla ja erottaa vanhan kaupungin '
+      + 'Ngʼambosta. Oikealla puolella korttelit ovat suurempia ja '
+      + 'suoraviivaisempia, ja alaoikealla erottuu liikenneympyrä. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+       * ja kaikki 28 väliä on mitattu haversinilla: pienin on 239
+       * metriä (Hamamnin kylpylä – Pyhän Joosefin katedraali).
+       */
+      { nimi: 'Vanha apteekki', lat: -6.1584, lon: 39.1926 },
+      { nimi: 'Sulttaanin palatsi', lat: -6.1599, lon: 39.1905 },
+      { nimi: 'Darajanin tori', lat: -6.1621, lon: 39.1935 },
+      { nimi: 'Hamamnin kylpylä', lat: -6.1623, lon: 39.1910 },
+      { nimi: 'Pyhän Joosefin katedraali', lat: -6.162778, lon: 39.188889 },
+      { nimi: 'Tippu Tipin talo', lat: -6.1640, lon: 39.1870 },
+      { nimi: 'Michenzanin korttelit', lat: -6.16526, lon: 39.1988 },
+      { nimi: 'Sansibarin valtionyliopisto', lat: -6.165833, lon: 39.191667 },
+    ],
+  },
 };
 
 /*

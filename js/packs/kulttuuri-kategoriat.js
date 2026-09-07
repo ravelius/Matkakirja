@@ -88089,4 +88089,906 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * LAGOS (Opus 7.9.2026, parvierä) — Afrikan laudan kaupunkilehti.
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-lagos.md ja sen
+   * riippumaton tarkistus tarkistus-lagos.md (tuomio "kelpaa, kun
+   * kohtien A-E ratkaisut tehdään"; kaikki viisi on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Lagos", "History of Lagos", "Lagos Island", "Lagos Colony",
+   * "Eyo festival", "Saro people", "Shitta-Bey Mosque", "Makoko",
+   * "Third Mainland Bridge", "Danfo", "Lagos Lagoon", "Nollywood",
+   * "Lekki Conservation Centre", "Amala (food)", "Agege bread".
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   * Saapumisteksti (africa-saapumiset.js), valokuvataulu
+   * (africa-valokuvat.js) ja litteä kulttuuritaulu
+   * (africa-kulttuuri.js) olivat jo olemassa eikä niihin kosketa —
+   * sama ratkaisu kuin Nairobissa ja Kapkaupungissa tässä samassa
+   * erässä. Litteän taulun Eyo-kuva, afrobeat-linkki ja jollof
+   * jäävät siis peliin, ja kulttuurivisan vastaus (afrobeat) pysyy
+   * näkyvissä.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu) kuten Nairobissa ja
+   * Miamissa. Teemasivun id on vakioaihe 'luonto', koska AIHE_IKONIT
+   * ei tarjoa laguunille omaa kuvaketta eikä uusia sivu-id:itä tehdä;
+   * sivun nimi "Laguuni ja sillat" kertoo aiheen.
+   *
+   * NIGERIAN MAALEHTEÄ EI TOISTETA. Maalehti (maa-kategoriat.js, NGA)
+   * kertoo Aminan muureista, Oyon kalebassista, Nana Asmaʼusta ja
+   * naisten sodasta, jollofista, suyasta, egusista ja iyánista,
+   * puhuvasta rummusta, jùjústa ja afrobeatista, Ifen päistä, Olowen
+   * ovesta ja adiresta sekä Tutuolasta, Achebesta ja Soyinkasta.
+   * Yksikään näistä ei ole tämän lehden aihe: oppaan ruokajakso
+   * käyttää siksi amalaa, eweduta, ofadaa, dodoa ja asaroa, ja
+   * elokuvajakso Nollywoodia eikä musiikkia.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: nimestä Èkó kerrotaan MOLEMMAT selitykset samassa
+   *    nostossa (edon ikurame, sotaleiri; joruban ereko, maatila),
+   *    koska Wikipedia antaa kaksi eikä valitse.
+   *  - B: nimi Lagos "todennäköisimmin" Portugalin Lagosin mukaan —
+   *    lähteen varaus säilytetään. Pelin oma visa
+   *    (africa-questions.js) sanoo nimen tulevan laguuneista; lehti
+   *    ei väitä visaa vääräksi vaan kertoo sanan merkityksen ja
+   *    lähteen todennäköisimmän selityksen. Raportoitu Fablelle.
+   *  - C: Makokon asukasluku 85 840 kerrotaan VARAUKSINEEN samassa
+   *    virkkeessä (aluetta ei laskettu vuoden 2007
+   *    väestönlaskennassa). Miljoonan arviota ei käytetä.
+   *  - D: Makokon purkutoimet 2005, 2012 ja 2026 jätetään kokonaan
+   *    pois — nykypolitiikkaa. Sama koskee Lekin tullipuomia ja
+   *    artikkelin Crime-osiota.
+   *  - E: Efunroye Tinubu nimetään lähteen sanoin (kohdekartan
+   *    nähtävyysjuttu), ei pehmennettynä.
+   *
+   * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+   * (africa-valokuvat.js, lagos), jossa se on jo tarkistettu — vanha
+   * puoli on satamakatu 1929 ja uusi sama ranta nykyään. Selitteet on
+   * kirjoitettu uudestaan yhdeksi virkkeeksi reseptin mukaan.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ: säänormaalit ovat oman agentin
+   * työlistalla. Oppaan sääjakso nojaa siksi en-Wikipedian
+   * Climate-osioon ja sanoo sen ääneen.
+   */
+  lagos: [
+    {
+      id: 'kaupunki',
+      nimi: 'Lagos',
+      johdanto: 'Lagos kasvoi laguunin saarille: aworien '
+        + 'kalastajakylästä tuli Beninin sotaleiri, siitä orjasatama '
+        + 'ja lopulta Britannian siirtomaa. Isoisän matkavuonna 1873 '
+        + 'kaupunkia hallittiin Kultarannikolta asti.',
+      nostot: [
+        {
+          otsikko: 'Savilautanen, joka upposi laguuniin',
+          teksti: 'Laguunin vanhimmat asukkaat olivat kalastajia, ja '
+            + 'aworit saapuivat 1400-luvulla Ogun-jokea alas sotaa '
+            + 'pakoon. Perimätiedon mukaan heidän hallitsijansa Olofin '
+            + 'sai Oduduwalta savilautasen ja ohjeen laskea se jokeen '
+            + 'ja asettua sinne, mihin se uppoaa; lautanen ajelehti '
+            + 'alavirtaan ja upposi Lagosin laguuniin. Olofin jakoi '
+            + 'saaren kymmenen poikansa kesken, ja yksi heistä, '
+            + 'Aromire, istutti viereiselle saarelle pippuria. Samalle '
+            + 'paikalle rakennettiin myöhemmin Lagosin oban palatsi, '
+            + 'ja siksi sen nimi Iga Idunganran tarkoittaa '
+            + 'kirjaimellisesti pippuripellon palatsia. Kaupan '
+            + 'painopiste siirtyi Isheristä Ebute-Mettaan, sitten '
+            + 'Iddoon ja lopulta Ekon saarelle.',
+          wiki: 'Lagos',
+        },
+        {
+          otsikko: 'Sotaleiri, jonka nimeksi jäi Eko',
+          teksti: '1500-luvun puolivälissä Beninin kuningaskunta '
+            + 'laajeni länteen hallitakseen rannikon kauppapaikkoja. '
+            + 'Noin 1600 puhkesi kiista beniniläisten ja aworien '
+            + 'välillä; oba Orhogbua hyökkäsi Iddoon, ja aworit '
+            + 'löivät hänet ensin takaisin. Lopulta Lagosin saaresta '
+            + 'tuli linnoitettu Beninin sotilastukikohta. Kun sen '
+            + 'komentaja Asheru kaatui, aworipäällikkö Ashipa palautti '
+            + 'jäännökset Beniniin ja sai vastineeksi Ekon '
+            + 'hallitsijan aseman; veronmaksu Beniniin päättyi vasta '
+            + '1830. Nimen Eko sanotaan tulevan edon sanasta ikurame, '
+            + 'sotaleiri — toinen selitys johtaa sen joruban sanasta '
+            + 'ereko, maatila. Portugalilaiset kutsuivat paikkaa ensin '
+            + 'nimellä Onim ja sitten Lagos.',
+          wiki: 'History of Lagos',
+        },
+        {
+          otsikko: 'Vuosi 1873: siirtomaa, jota hallittiin muualta',
+          teksti: 'Britannia puuttui Lagosin valtataisteluun 1851: '
+            + 'laivasto asetti Akitoyen oban paikalle ja syrjäytti '
+            + 'Kosokon, ja vuoden 1852 sopimus aloitti konsuliajan. '
+            + 'Kymmenen vuotta myöhemmin, 30. heinäkuuta 1861, virkaa '
+            + 'tekevä konsuli William McCoskry kutsui oba Dosunmun '
+            + 'HMS Prometheuksen kannelle. Dosunmu vastusti ehtoja, '
+            + 'mutta komentaja Bedingfieldin uhattua pommittaa '
+            + 'kaupunkia hän allekirjoitti luovutussopimuksen 6. '
+            + 'elokuuta 1861. Lagos julistettiin siirtomaaksi 5. '
+            + 'maaliskuuta 1862, mutta sitä hallittiin Kultarannikolta '
+            + 'asti; omaksi siirtomaakseen se erotettiin vasta 1886. '
+            + 'Isoisän matkavuonna päätökset tehtiin toisessa maassa.',
+          wiki: 'Lagos Colony',
+        },
+        {
+          otsikko: 'Paluumuuttajat rakensivat kaupungin uudelleen',
+          teksti: 'Kun Britannia oli kieltänyt orjakaupan, laivasto '
+            + 'vapautti ihmisiä ja asutti heidät Freetowniin. Heidän '
+            + 'jälkeläisiään alkoi muuttaa Lagosiin 1830-luvulta '
+            + 'alkaen, ja heitä kutsuttiin nimellä saro — lyhennys '
+            + 'sanoista Sierra Leone. Brasiliasta ja Kuubasta '
+            + 'palanneita sanottiin nimellä aguda. Saro asettuivat '
+            + 'Ebute Mettaan, Olowogbowoon ja Yabaan ja perustivat '
+            + 'kaupungin vanhimpia kirkkoja. Yksi heistä, Mohammed '
+            + 'Shitta Bey, rahoitti moskeijan, jonka rakentamista '
+            + 'valvoi brasilialainen arkkitehti João Baptista da '
+            + 'Costa; se vihittiin 4. heinäkuuta 1894, ja samassa '
+            + 'tilaisuudessa Shitta sai osmanien sulttaanilta '
+            + 'Bey-arvonimen.',
+          wiki: 'Saro people',
+        },
+        {
+          otsikko: 'Agogoro Eyo, pitkä valkoinen hahmo',
+          teksti: 'Eyo on juhla, jota vietetään vain Lagosissa. Se '
+            + 'järjestettiin saattamaan edesmenneen kuninkaan tai '
+            + 'päällikön sielua ja toivottamaan seuraaja '
+            + 'tervetulleeksi; ensimmäinen kulkue kulki 20. helmikuuta '
+            + '1854 oba Akitoyen muistoksi. Juhlapäivänä pääväylä '
+            + 'Carterin sillan päästä Tinubun aukiolle suljetaan, ja '
+            + 'kulkue etenee Idumotasta oban palatsille. Valkoisiin '
+            + 'kaapuihin pukeutuneet hahmot edustavat vainajien henkiä, '
+            + 'ja niitä sanotaan jorubaksi nimellä agogoro Eyo, pitkä '
+            + 'Eyo. Ryhmän tunnistaa hatun väristä: Adimu on musta, '
+            + 'Laba punainen, Oniko keltainen, Ologede vihreä ja Agere '
+            + 'violetti. Viikkoa ennen juhlaa Adimu tulee kadulle '
+            + 'sauvan kanssa.',
+          wiki: 'Eyo festival',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Lagos on Nigerian suurin kaupunki ja Afrikan '
+          + 'väkirikkaimpia. Se jakautuu kahteen: saareen, jolla ovat '
+          + 'liikekeskusta ja vanhin kaupunki, ja mantereeseen, jolla '
+          + 'asuu suurin osa lagosilaisista ja jolla on suurin osa '
+          + 'teollisuudesta. Kaupunki tuottaa noin kolmanneksen koko '
+          + 'maan bruttokansantuotteesta, ja Länsi- ja Keski-Afrikan '
+          + 'neljä suurinta pankkia ovat täällä. Lagos oli Nigerian '
+          + 'pääkaupunki vuoteen 1991, jolloin asema siirtyi Abujaan. '
+          + 'Väkiluvusta kiistellään: vuoden 2006 väestönlaskenta '
+          + 'antoi metropolialueelle noin yhdeksän miljoonaa, mutta '
+          + 'osavaltion oma laskenta puolestatoista kertaa enemmän. '
+          + 'Jorubankielinen nimi Èkó elää kaupungin omassa puheessa '
+          + 'portugalilaisten antaman nimen rinnalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Lagos',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa matkaa ei mitata kilometreissä '
+            + 'vaan tunneissa: keltainen pikkubussi, yksitoista '
+            + 'kilometriä siltaa laguunin yli ja saari, jonka '
+            + 'markkinat eivät lopu koskaan.',
+          nosto: 'Kolmas mannersilta on noin 11,8 kilometriä pitkä ja '
+            + 'oli Afrikan pisin silta vuoteen 1996, jolloin Kairon '
+            + '6. lokakuun silta valmistui. Sen kaiteen takaa näkyy '
+            + 'koko kaupunki kerralla: laguuni, yliopiston ranta, '
+            + 'kansallisteatteri ja Makokon paalukylä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kansainvälinen kenttä on Murtala Muhammed '
+                + 'Ikejassa, joka on myös Lagosin osavaltion '
+                + 'pääkaupunki. Saarelle pääsee kolmea siltaa: '
+                + 'Carterin silta Iddosta, Ekon silta ja kolmas '
+                + 'mannersilta. Kaupungissa liikutaan keltaisilla '
+                + 'danfo-pikkubusseilla, joissa on tavallisesti '
+                + '14—18 paikkaa; ne yleistyivät 1970-luvulla, kun '
+                + 'julkinen liikenne heikkeni, ja varhaiset autot '
+                + 'olivat matkustajakäyttöön muutettuja Volkswagen '
+                + 'Type 2 -pakettiautoja. Nimen uskotaan tulevan '
+                + 'joruban kiirettä tarkoittavasta sanasta. Kuljettajan '
+                + 'lisäksi mukana on rahastaja, ja bussit lähtevät '
+                + 'päätepaikoista, joita sanotaan parkeiksi. Lekin ja '
+                + 'Ikoyin välinen linkkisilta on Nigerian ensimmäinen '
+                + 'vinoköysisilta.',
+            },
+            {
+              otsikko: 'Saari ja manner',
+              teksti: 'Saari erottuu mantereesta pääväylästä, joka '
+                + 'laskee laguunin Atlantille ja muodostaa Lagosin '
+                + 'sataman. Lagosin saarella on liikekeskusta, '
+                + 'kaupungin suurimmat tukkutorit Idumota ja Balogun, '
+                + 'Marinan pankkikortteli ja oban palatsi. Ikoyi on '
+                + 'saaren itäpuoliskolla ja liitetty siihen '
+                + 'täyttömaalla; Victoria Island on etelässä, ja '
+                + 'Lekin niemi jatkuu siitä itään. Mantereella ovat '
+                + 'Ebute Metta, Yaba, Surulere ja Apapa sekä Ikeja. '
+                + 'Iddo on pieni asutus laguunin pääväylän toisella '
+                + 'puolella ja rautatien pääteasema; se on nykyään '
+                + 'liitetty mantereeseen niemen tavoin.',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Amala on tummaa jamssijauhopuuroa, jota '
+                + 'syödään ewedu-keiton kanssa; pala nipistetään '
+                + 'sormin ja kastetaan keittoon. Ofada-riisi on '
+                + 'paikallinen lyhytjyväinen riisi, dodo paistettuja '
+                + 'banaaneja ja asaro jamssimuhennos, jota syödään '
+                + 'monenlaisten vihannesten kanssa. Agege-leipä on '
+                + 'nimetty saman nimisen kaupunginosan mukaan ja on '
+                + 'pehmeää, tiivistä ja hieman makeaa. Ravintoloita '
+                + 'löytyy laidasta laitaan: kattoravintoloista '
+                + 'laguunin yllä tuulee mereltä, mikä on kuumassa '
+                + 'kaupungissa oma nautintonsa.',
+            },
+            {
+              otsikko: 'Nollywoodin kaupunki',
+              teksti: 'Nigerian elokuvateollisuuden keskus on '
+                + 'Surulere mantereella. Nimi Nollywood jäljitetään '
+                + 'vuoden 2002 New York Timesin artikkeliin, mutta '
+                + 'elokuvan tekeminen alkoi paljon aiemmin: '
+                + 'jorubankieliset kiertävät teatteriryhmät siirtyivät '
+                + 'valkokankaalle 1960-luvun puolivälissä, Ajani Ogun '
+                + 'valmistui 1976 ja Mosebolatan tuotti 1985 viidessä '
+                + 'päivässä 107 000 nairaa. Igbonkielinen Living in '
+                + 'Bondage käynnisti 1992 videokauden. Kaupungissa on '
+                + 'myös kansallisteatteri Iganmussa, jonka soikea '
+                + 'runko muistuttaa kaukaa laskeutunutta alusta, ja '
+                + 'Nike Art Gallery, viisikerroksinen galleria, jossa '
+                + 'on noin kahdeksantuhatta teosta. Paul McCartney '
+                + 'levytti Lagosissa albuminsa Band on the Run '
+                + 'elo—syyskuussa 1973 — sata vuotta isoisän matkan '
+                + 'jälkeen.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Lagos-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa vuosigraafia, '
+                + 'koska säänormaaleja ei haettu tässä erässä. '
+                + 'Ilmasto on trooppinen savanni-ilmasto. Sadekausi '
+                + 'kestää toukokuusta lokakuuhun ja kuiva kausi '
+                + 'marraskuusta huhtikuuhun, ja niiden väliin osuu '
+                + 'lyhyt kuiva jakso heinä—elokuussa. Sateisin '
+                + 'kuukausi on kesäkuu, jolloin sadetta tulee 316 '
+                + 'millimetriä; kuivin on tammikuu 13 millimetrillä. '
+                + 'Keskimääräiset ylimmät lämpötilat ovat 28—32 '
+                + 'astetta. Kuumin kuukausi on maaliskuu, jolloin '
+                + 'vuorokausi vaihtelee 26 ja 32 asteen välillä, ja '
+                + 'viilein elokuu, 24—28 astetta. Juhlia riittää: '
+                + 'karnevaali tammikuussa, Eko International Film '
+                + 'Festival maaliskuussa, valokuvajuhla marraskuussa '
+                + 'ja ruokajuhla joulukuussa.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kolmas mannersilta',
+                tahdet: 3,
+                selite: 'Yksitoista kilometriä laguunin yli; '
+                  + 'Afrikan pisin silta vuoteen 1996.',
+              },
+              {
+                mita: 'Lagosin saaren torit',
+                tahdet: 3,
+                selite: 'Idumota ja Balogun ovat kaupungin '
+                  + 'suurimmat tukkutorit, aivan pankkikorttelin '
+                  + 'vieressä.',
+              },
+              {
+                mita: 'Lekin luonnonsuojelukeskus',
+                tahdet: 3,
+                selite: '78 hehtaaria kosteikkoa ja savannia sekä '
+                  + 'Afrikan pisin latvuskävelysilta.',
+              },
+              {
+                mita: 'Makokon vesikylä',
+                tahdet: 2,
+                selite: 'Kolmasosa yhteisöstä on rakennettu paalujen '
+                  + 'varaan laguuniin; liikkuminen tapahtuu '
+                  + 'kanootilla.',
+              },
+              {
+                mita: 'Tarkwa Bay',
+                tahdet: 2,
+                selite: 'Suojaisa lahti sataman suulla, jonne '
+                  + 'pääsee vain veneellä.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5
+             * ja teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Matka mitataan tunneissa',
+                teksti: 'Saarelle johtaa kolme siltaa, ja ruuhka-'
+                  + 'aikaan koko kaupunki kulkee samaa reittiä — '
+                  + 'kilometrimäärä kertoo vähemmän kuin kellonaika.',
+              },
+              {
+                otsikko: 'Kaksi sadekautta ja väli',
+                teksti: 'Sadekausi kestää toukokuusta lokakuuhun, '
+                  + 'mutta heinä—elokuussa on lyhyt kuiva jakso — '
+                  + 'sateisin kuukausi on kesäkuu 316 millimetrillä.',
+              },
+              {
+                otsikko: 'Danfossa maksetaan rahastajalle',
+                teksti: 'Keltaisessa pikkubussissa on kuljettajan '
+                  + 'lisäksi rahastaja, joka kerää maksut matkan '
+                  + 'aikana; bussi lähtee päätepaikasta täyttyessään.',
+              },
+              {
+                otsikko: 'Eyo ei ole kalenterissa',
+                teksti: 'Kulkue järjestetään vain silloin, kun '
+                  + 'perinne sitä vaatii; Adimu-ryhmän ilmestyminen '
+                  + 'sauvan kanssa on ainoa varma ennakkotieto.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Laguuni ja sillat',
+      johdanto: 'Lagos on rakennettu vedelle: laguuni on yli '
+        + 'viisikymmentä kilometriä pitkä, kaupunki levittäytyy sen '
+        + 'rannoille ja saarille, ja osa asukkaista asuu paalujen '
+        + 'varassa keskellä vettä.',
+      tehtava: {
+        kysymys: 'Mistä Makoko sai nimensä?',
+        vaihtoehdot: [
+          'Laguunin kalasta',
+          'Akoko-lehdistä, joita alueella kasvoi runsaasti',
+          'Ensimmäisestä kalastajasta',
+          'Portugalilaisesta kauppiaasta',
+        ],
+        oikea: 1,
+        fakta: 'Nimi on jorubaa ja tarkoittaa kirjaimellisesti '
+          + '"poimi akoko". Akoko-lehtiä käytetään hedelmällisyyden '
+          + 'apuna ja päällikön kruunajaisissa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Laguuni, joka on nimensä toisinto',
+          teksti: 'Lagosin laguuni on yli viisikymmentä kilometriä '
+            + 'pitkä ja kolmesta kolmeentoista kilometriä leveä, ja '
+            + 'sen erottaa Atlantista pitkä hiekkasärkkä. Se on '
+            + 'Guineanlahden suurin laguuni ja pinta-alaltaan noin '
+            + '6 355 neliökilometriä, mutta niin matala, ettei '
+            + 'valtamerialus pääse sinne — vain proomut ja veneet. '
+            + 'Laguuniin laskevat Ogun- ja Osun-joet, ja se purkautuu '
+            + 'mereen Lagosin sataman kautta, joka on puolesta '
+            + 'kilometristä kilometriin leveä ja kymmenen kilometriä '
+            + 'pitkä väylä keskellä kaupunkia. Nimi on huvittava '
+            + 'toisinto itsestään: Lagos tarkoittaa portugaliksi '
+            + 'järviä, joten Lagosin laguuni on kaksi kertaa sama '
+            + 'sana.',
+          wiki: 'Lagos Lagoon',
+        },
+        {
+          otsikko: 'Kuusi kylää paalujen päällä',
+          teksti: 'Makoko on mantereen rannalla kolmannen '
+            + 'mannersillan kohdalla, ja kolmasosa yhteisöstä on '
+            + 'rakennettu paalujen varaan laguuniin. Kylää on kuusi: '
+            + 'neljä kelluvaa — Adogbo, Migbewhe, Oko Agbon ja '
+            + 'Yanshiwhe — ja kaksi maalla, Apollo ja Sogunro. '
+            + 'Vesirajan asukkaat ovat pääosin egun-kansaa, joka '
+            + 'muutti Badagrysta ja Beninin tasavallasta, ja '
+            + 'pääelinkeino on kalastus. Yhteisö syntyi 1700- ja '
+            + '1800-luvulla. Asukasluvuksi arvioidaan 85 840, mutta '
+            + 'lukua on vaikea vahvistaa, koska aluetta ei laskettu '
+            + 'vuoden 2007 väestönlaskennassa. Makokoa kutsutaan '
+            + 'joskus Afrikan Venetsiaksi.',
+          wiki: 'Makoko',
+        },
+        {
+          otsikko: 'Kolme siltaa ja yksi vuosi 1901',
+          teksti: 'Ensimmäinen silta Lagosin saaren ja mantereen '
+            + 'välille rakennettiin 1901: Carterin silta, joka on '
+            + 'nimetty vuosina 1891—1898 virassa olleen kuvernöörin '
+            + 'mukaan. Sen rinnalle tulivat myöhemmin Ekon silta ja '
+            + 'kolmas mannersilta. Kolmas mannersilta on noin 11,8 '
+            + 'kilometriä pitkä ja kahdeksankaistainen; ensimmäisen '
+            + 'vaiheen vihki presidentti Shehu Shagari 1980, ja '
+            + 'kokonaisuus valmistui presidentti Ibrahim Babangidan '
+            + 'aikana 1990. Se oli Afrikan pisin silta vuoteen 1996, '
+            + 'jolloin Kairon 6. lokakuun silta valmistui. Silta alkaa '
+            + 'Oworonshokista ja päättyy Adeniji Adelen liittymään '
+            + 'saarella; matkalta näkyvät laguuni, yliopiston ranta, '
+            + 'kansallisteatteri ja Makoko.',
+          wiki: 'Third Mainland Bridge',
+        },
+        {
+          otsikko: 'Kaupunki, joka tekee itse maansa',
+          teksti: 'Lagos on kasvanut myös ulospäin vedestä. Ikoyi on '
+            + 'liitetty Lagosin saareen täyttömaalla, ja osa saaria '
+            + 'erottavista salmista on ruopattu ja rakennettu umpeen. '
+            + 'Victoria Islandin merenpuoleinen Bar Beach on '
+            + 'rakennettu ympäristöllisesti uudelleen, ja laguunin '
+            + 'suulle nousee Eko Atlantic, joka laajentaa Victoria '
+            + 'Islandia. Kaupunki levittäytyy yli kolmenkymmenen '
+            + 'kilometrin matkalle laguunin lounais- ja länsirannalla. '
+            + 'Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin '
+            + 'suuri määrä kaupungin ja teollisuuden jätevettä, ja '
+            + 'Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja '
+            + 'maan painuminen koskettavat Lagosia enemmän kuin '
+            + 'useimpia Afrikan suurkaupunkeja.',
+          wiki: 'Lagos',
+        },
+        {
+          otsikko: 'Latvuskävelysilta mangroven yllä',
+          teksti: 'Lekin luonnonsuojelukeskus perustettiin 1990 '
+            + 'suojelemaan Lekin niemen kosteikkoja: suota, '
+            + 'suometsää ja savanniruohostoa. Alue on 78 hehtaaria, '
+            + 'ja sen halki kulkee kahdeksikon muotoinen polkuverkko '
+            + 'sekä 1,8 kilometrin luontopolku. Puinen kävelysilta '
+            + 'rakennettiin 1992, ja keskuksessa on Afrikan pisin '
+            + 'latvuskävelysilta sekä 21 metrin korkeuteen nouseva '
+            + 'puumaja, jonka tasanteelta näkee koko alueen. '
+            + 'Lintupiilo katsoo suolle, jolla elää krokotiileja ja '
+            + 'varaaneja; puissa liikkuu mona-apinoita ja '
+            + 'ruohostossa metsäantilooppeja. Suurin osa nisäkkäistä '
+            + 'on yöeläimiä, joten päiväkävelijä näkee useammin '
+            + 'lintuja kuin karvaa.',
+          wiki: 'Lekki Conservation Centre',
+        },
+      ],
+    },
+  ],
+  /*
+   * SANSIBAR (Opus 7.9.2026, parvierä) — Afrikan laudan kaupunkilehti.
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-sansibar.md ja sen
+   * riippumaton tarkistus tarkistus-sansibar.md (tuomio "kelpaa, kun
+   * kohtien A-F ratkaisut tehdään"; kaikki kuusi on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Zanzibar", "Zanzibar City", "Stone Town", "History of Zanzibar",
+   * "Christ Church, Zanzibar", "Emily Ruete", "Changuu", "Dhow",
+   * "Old Fort of Zanzibar", "House of Wonders", "Zanzibar
+   * International Film Festival", "Seaweed farming", "Unguja",
+   * "Kizimkazi Mosque".
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti.
+   * Saapumisteksti, valokuvataulu ja litteä kulttuuritaulu olivat jo
+   * olemassa eikä niihin kosketa — sama ratkaisu kuin Nairobissa ja
+   * Kapkaupungissa tässä erässä. Litteän taulun taarab-nosto, kuva
+   * ja Siti binti Saadin musiikkilinkki jäävät siis peliin, ja
+   * kulttuurivisan vastaus (taarab) pysyy näkyvissä.
+   *
+   * TANSANIAN MAALEHTEÄ EI TOISTETA, ERITYISESTI EI TAARABIA
+   * (Fablen nimenomainen ohje). Maalehti (maa-kategoriat.js, TZA)
+   * kertoo Helgoland—Sansibar-sopimuksesta, 38 minuutin sodasta,
+   * Nyereresta ja TAZARAsta, Ngorongorosta ja punakolobista,
+   * NEILIKASTA JA MAUSTESAARISTA, pilausta ja biriranista, chipsi
+   * mayaista, FORODHANIN ILTATORISTA, Tingatingasta, makondeveistosta,
+   * KIVIKAUPUNGIN OVISTA JA BARAZASTA, kangasta sekä TAARABISTA ja
+   * Siti binti Saadista. Yksikään näistä ei ole tämän lehden aihe:
+   * siksi lehti kertoo arkeologiasta, sulttaanikunnasta, vuodesta
+   * 1873, Sayyida Salmesta, vanhasta linnakkeesta ja elokuvajuhlasta
+   * sekä teemasivulla monsuunista, dhow-aluksista, Changuun
+   * kilpikonnista ja merilevästä.
+   *
+   * MERILEVÄNOSTO ON TARKOITUKSELLINEN. Kaupungin visa
+   * (africa-questions.js, sansibar) kysyy merilevän kasvatuksesta, ja
+   * moduuliohje vaatii, että visan opettava aihe näkyy kategorioissa.
+   * Minitehtävä ei silti kysy siitä eikä mistään muusta visan
+   * viidestä aiheesta.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto'; sivun nimi "Monsuuni ja meri" kertoo aiheen.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: pääkaupungin siirrosta EI anneta yhtä vuotta. Lähteet
+   *    antavat 1832 tai 1840 ("the date varies among sources"), ja
+   *    Stone Town -artikkeli sanoo 1824. Nosto sanoo "1800-luvun
+   *    alkupuoliskolla" ja kertoo kaksi vuosilukua.
+   *  - B: vanhasta linnakkeesta kerrotaan MOLEMMAT kerrokset —
+   *    portugalilaiset aloittivat, omanilaiset saivat valmiiksi
+   *    1600-luvun lopulla ja rakensivat uudelleen 1700-luvulla.
+   *  - C: Pyhän Joosefin katedraali 1893—1898 kohteen oman
+   *    artikkelin mukaan (Stone Town sanoo 1897).
+   *  - D: Ihmeiden talo on 71 metriä vanhasta linnakkeesta ja 151
+   *    metriä sulttaanin palatsista, joten se ei mahdu kohdekartalle;
+   *    se kerrotaan matkaoppaan neljännessä jaksossa.
+   *  - E: Michenzanista kerrotaan rakennukset, ei vuoden 1964
+   *    vallankumouksen kulkua.
+   *  - F: orjakauppa kerrotaan suoraan ja lähteen sanoin, tapahtumina
+   *    ja lukuina, ilman yksityiskohtien korostusta. Katedraalin
+   *    alttarista käytetään lähteen varausta ("sanotaan olevan").
+   *
+   * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+   * (africa-valokuvat.js, sansibar), jossa se on jo tarkistettu.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ: säänormaalit ovat oman agentin
+   * työlistalla. Oppaan sääjakso nojaa siksi en-Wikipedian
+   * Climate-osioon ja sanoo sen ääneen.
+   */
+  sansibar: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sansibar',
+      johdanto: 'Kivikaupunki kasvoi kalastajakylästä valtameren '
+        + 'kauppapaikaksi ja Omanin sulttaanien pääkaupungiksi. '
+        + 'Isoisän matkavuonna 1873 täällä suljettiin orjatori — ja '
+        + 'samana jouluna laskettiin sen paikalle kirkon peruskivi.',
+      nostot: [
+        {
+          otsikko: 'Shangani, kylä joka muuttui kiveksi',
+          teksti: 'Kreikkalais-roomalainen purjehdusopas mainitsee '
+            + 'ensimmäisellä vuosisadalla saaren nimeltä Menuthias, '
+            + 'joka on todennäköisesti Unguja. Fukuchanissa saaren '
+            + 'luoteisrannikolla on jälkiä vakiintuneesta viljely- ja '
+            + 'kalastusyhteisöstä viimeistään 500-luvulta: '
+            + 'savitiivistettä puutaloista, simpukkahelmiä ja raudan '
+            + 'kuonaa. Kauppa kasvoi 700-luvulta, ja 900-luvun lopulla '
+            + 'Sansibar oli jo keskeinen swahilikaupunki. Shangani, '
+            + 'kalastajakylä josta Kivikaupunki kasvoi, perustettiin '
+            + '1000-luvulla ja oli pieni ja vähäpätöinen — saaren '
+            + 'mahdit olivat Unguja Ukuu, Kizimkazi ja Tumbatu. Talot '
+            + 'tehtiin ensin puusta, sitten mudasta ja korallista ja '
+            + 'vasta 1200-luvulla kivestä.',
+          wiki: 'Stone Town',
+        },
+        {
+          otsikko: 'Sulttaani, joka muutti Muscatista',
+          teksti: 'Portugalilaiset rakensivat 1500-luvun alussa '
+            + 'kirkon Shanganiin. Kun sansibarilaiset ja pembalaiset '
+            + 'karkottivat heidät 1600-luvulla, paikalliset ylimykset '
+            + 'kutsuivat Omanin sulttaanin käyttämään valtaa vastineeksi '
+            + 'puolustuksesta. Poliittinen valta pysyi silti pitkälti '
+            + 'Mwinyi Mkuulla, tuolloin kuningatar Fatimalla. '
+            + '1800-luvun alkupuoliskolla Muscatin ja '
+            + 'Omanin sulttaani Said bin Sultan siirsi pääkaupunkinsa '
+            + 'Sansibariin — lähteet antavat vuodeksi 1832 tai 1840. '
+            + 'Hänen kuoltuaan 1856 testamentti jakoi valtakunnan '
+            + 'kahtia, ja 1861 Sansibar ja Oman erosivat: Majid bin '
+            + 'Saidista tuli Sansibarin ensimmäinen sulttaani.',
+          wiki: 'Sultanate of Zanzibar',
+        },
+        {
+          otsikko: 'Vuosi 1873 ja joulukuun peruskivi',
+          teksti: 'Malindin satama Sansibarin kaupungissa oli '
+            + 'Swahilirannikon pääsatama Lähi-idän orjakaupalle, ja '
+            + '1800-luvun puolivälissä sen kautta kulki jopa '
+            + 'viisikymmentätuhatta ihmistä vuodessa. Ratkaisu tuli '
+            + 'vasta 1873: konsuli Sir John Kirk uhkasi '
+            + 'sulttaani Barghashia koko saaren saarrolla, ja Barghash '
+            + 'allekirjoitti vastentahtoisesti sopimuksen, joka '
+            + 'lakkautti orjakaupan, sulki kaikki orjatorit ja suojeli '
+            + 'vapautettuja sulttaanin alueilla. Saman vuoden jouluna '
+            + 'laskettiin suurimman orjatorin paikalle anglikaanisen '
+            + 'kirkon peruskivi. Kirkko avattiin jouluna 1879, ja '
+            + 'alttarin sanotaan olevan täsmälleen siinä, missä torin '
+            + 'ruoskimispaalu oli.',
+          wiki: 'Christ Church, Zanzibar',
+        },
+        {
+          otsikko: 'Prinsessa, joka opetti itsensä kirjoittamaan',
+          teksti: 'Sayyida Salme syntyi 30. elokuuta 1844 sulttaani '
+            + 'Said bin Sultanin kolmestakymmenestäkuudesta lapsesta '
+            + 'nuorimpana. Lapsuutensa hän vietti Bet il Mtonin '
+            + 'palatsissa meren rannalla kahdeksan kilometriä '
+            + 'kaupungista pohjoiseen. Veli Majid opetti hänet '
+            + 'ratsastamaan ja ampumaan, ja kirjoittamaan hän opetti '
+            + 'itse itsensä — taito oli naisille tuolloin epätavallinen. '
+            + 'Juuri siksi hänestä tuli viisitoistavuotiaana veljensä '
+            + 'Barghashin puolueen sihteeri. Vuonna 1866 hän pakeni '
+            + 'brittiläisellä fregatilla Adeniin ja avioitui '
+            + 'saksalaisen kauppiaan kanssa. Hänen muistelmansa '
+            + 'ilmestyivät 1886 ja ovat ensimmäinen tunnettu '
+            + 'arabinaisen omaelämäkerta.',
+          wiki: 'Emily Ruete',
+        },
+        {
+          otsikko: 'Linnake, jossa näytetään elokuvia',
+          teksti: 'Vanha linnake on Kivikaupungin vanhin rakennus: '
+            + 'portugalilaiset aloittivat sen 1600-luvulla, omanilaiset '
+            + 'saivat sen valmiiksi vuosisadan lopulla ja rakensivat '
+            + 'uudelleen 1700-luvulla. Se on korkeamuurinen neliö, ja '
+            + 'sisäpihalla on yhä jäänteitä portugalilaisesta kirkosta. '
+            + '1800-luvulla linnake oli varuskunta ja vankila, ja '
+            + 'vuosina 1905—1928 se toimi Sansibarin rautatien '
+            + 'pääteasemana. Amfiteatteri lisättiin 1990-luvulla, ja '
+            + 'nykyään pihalla on kulttuurikeskus, jonka ulkoilmalava '
+            + 'täyttyy lähes joka ilta. Linnake on Sansibarin '
+            + 'elokuvajuhlan päänäyttämö: juhla perustettiin 1997, ja '
+            + 'sen palkinnot ovat Kultainen ja Hopeinen dhow.',
+          wiki: 'Old Fort of Zanzibar',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Sansibar on saariryhmä Intian valtameressä '
+          + 'Manner-Tansanian rannikolla, ja sen pääsaari on Unguja. '
+          + 'Sansibarin kaupunki on saaren länsirannikolla pienellä '
+          + 'niemellä: vanha osa on Kivikaupunki, uudempi on Ngʼambo, '
+          + 'swahiliksi toinen puoli, ja niiden välissä kulkee '
+          + 'entisen salmen paikalle vedetty katu. Kivikaupunki oli '
+          + 'sulttaanikunnan pääkaupunki ja on Unescon '
+          + 'maailmanperintökohde vuodesta 2000. Sen arkkitehtuuri on '
+          + 'pääosin 1800-luvulta ja yhdistää arabialaisia, '
+          + 'persialaisia, intialaisia ja eurooppalaisia aineksia. '
+          + 'Kadut ovat niin kapeita, ettei niillä kulje auto, joten '
+          + 'kaupungissa liikutaan jalan, pyörällä ja mopolla. '
+          + 'Sansibar on osa Tansaniaa mutta puoliksi itsehallinnollinen, '
+          + 'ja Kivikaupunki on sen hallinnon paikka.',
+        artikkeli: {
+          nimi: 'Matkailijan Sansibar',
+          taitto: 'opas',
+          teksti: 'Kaupunki, joka luetaan jalkapohjilla: kujat ovat '
+            + 'liian kapeita autolle, meri tuo kaksi tuulta vuodessa '
+            + 'ja saaren toisella laidalla on 1100-luvun moskeija.',
+          nosto: 'Kivikaupungin 1 709 rakennuksesta noin '
+            + 'kahdeksankymmentä prosenttia on rappeutumassa. Syy on '
+            + 'aineessa: korallikivi on hauras ja vaatii jatkuvaa '
+            + 'huoltoa. Vuoden 1994 suojelulaki määrittelee keinot, ja '
+            + 'Aga Khanin kulttuurirahasto on kunnostanut etenkin '
+            + 'rantakadun taloja.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Saarelle tullaan lautalla Dar es Salaamista '
+                + 'tai lentäen: Abeid Amani Karume International '
+                + 'Airport on aivan Kivikaupungin eteläpuolella. '
+                + 'Pääsatama on Malindissa, joka rakennettiin 1925 ja '
+                + 'jonka kautta kulkee yhdeksänkymmentä prosenttia '
+                + 'saarten kaupasta. Saarella liikutaan yksityisillä '
+                + 'daladala-pikkubusseilla; nimi tulee 1970- ja '
+                + '1980-luvuilta, jolloin matka kaupunkiin maksoi '
+                + 'viisi shillinkiä eli yhden dalan, ja meno ja paluu '
+                + 'tekivät daladalan. Pääasemat ovat Darajanin ja '
+                + 'Mwanakwerekwen toreilla, ja bussi lähtee '
+                + 'täyttyessään eikä aikataulun mukaan. Kivikaupungin '
+                + 'sisällä kaikki on kävelymatkan päässä.',
+            },
+            {
+              otsikko: 'Kivikaupunki ja Ngʼambo',
+              teksti: 'Kivikaupungin sydän on kujasokkelo, jossa '
+                + 'talot kohoavat molemmin puolin niin lähellä '
+                + 'toisiaan, että taivasta näkyy vain kaistale. '
+                + 'Rantakadulla kadut ovat leveämpiä ja rakennukset '
+                + 'suurempia ja säännöllisemmin aseteltuja: siellä '
+                + 'ovat entiset sulttaanien palatsit, linnoitus, '
+                + 'kirkot ja moskeijat. Creek Road erottaa vanhan '
+                + 'kaupungin Ngʼambosta, ja se kulkee sen salmen '
+                + 'paikalla, joka erotti niitä ennen täyttöä. '
+                + 'Kivikaupunki elää nykyään suurelta osin '
+                + 'matkailusta, ja sen suojelu on omaa työtään: '
+                + 'korallikivi rapautuu, jos taloa ei huolleta.',
+            },
+            {
+              otsikko: 'Saarelta saarelle',
+              teksti: 'Unguja on pääosin matalaa maata, ja sen '
+                + 'hiekkarantoja reunustavat korallirifit, jotka ovat '
+                + 'lajistoltaan rikkaita. Saariryhmän toinen suuri '
+                + 'saari on Pemba pohjoisessa. Kaupungin edustalla, '
+                + 'noin viiden kilometrin päässä luoteeseen, on '
+                + 'Changuu, jota kutsutaan vankilasaareksi. Saaren '
+                + 'eteläkärjessä Dimbanissa on Kizimkazin moskeija, '
+                + 'jonka kufilainen kaiverrus ajoittaa vuoteen 1107 — '
+                + 'se on Itä-Afrikan rannikon vanhimpia islamilaisia '
+                + 'rakennuksia, vaikka nykyinen rakennus on suurelta '
+                + 'osin 1700-luvulta. Hautausmaalla on pylväshautoja, '
+                + 'ja katto lepää mangrovepuun varsien varassa.',
+            },
+            {
+              otsikko: 'Ihmeiden talo rantakadulla',
+              teksti: 'Kivikaupungin suurin ja korkein rakennus on '
+                + 'Ihmeiden talo, joka valmistui 1883 sulttaani '
+                + 'Barghashille: 39 metriä korkea ja 50 metriä '
+                + 'kumpaankin suuntaan. Nimi tuli siitä, että se oli '
+                + 'ensimmäinen sähköistetty rakennus Sansibarissa ja '
+                + 'ensimmäinen hissillinen koko Itä-Afrikassa. '
+                + 'Leveitä ulkoparvekkeita kannattavat valurautapylväät '
+                + 'olivat uutta saaren rakennustaidossa, ja aineina '
+                + 'olivat korallikivi, betonilaatat, mangroveparrut ja '
+                + 'teräspalkit. Pääovi tehtiin niin leveäksi, että '
+                + 'sulttaani saattoi ratsastaa siitä sisään norsun '
+                + 'selässä. Sisäänkäynnin edessä on kaksi '
+                + '1500-luvun portugalilaista pronssitykkiä, jotka '
+                + 'persialaiset ottivat saaliiksi 1622. Kellotorni '
+                + 'lisättiin julkisivuun 1897. Talo on ollut suljettuna '
+                + 'vaurioiden takia, ja joulukuussa 2020 osa '
+                + 'julkisivua romahti korjaustöiden aikana.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian '
+                + 'Zanzibar-artikkelin Climate-osiosta; lehdellä ei '
+                + 'ole omaa vuosigraafia, koska säänormaaleja ei '
+                + 'haettu tässä erässä. Ilmasto on trooppinen '
+                + 'monsuuni-ilmasto, ja saaret ovat lähellä '
+                + 'päiväntasaajaa eli lämpimiä ympäri vuoden. Sateet '
+                + 'jakautuvat kahteen kauteen: pääsadekausi on '
+                + 'maalis—toukokuussa lounaismonsuunin aikaan ja '
+                + 'toinen huippu marras—joulukuussa; vähiten sataa '
+                + 'heinäkuussa. Kuumimmat kuukaudet ovat helmi— ja '
+                + 'maaliskuu, viileimmät heinä— ja elokuu. '
+                + 'Koillismonsuunin aikaan pohjois- ja itärannikolla '
+                + 'puhaltaa voimakas merituuli, joka viilentää '
+                + 'tuntuvasti. Elokuvajuhla ZIFF pidetään heinäkuussa.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kivikaupungin kujat',
+                tahdet: 3,
+                selite: 'Unescon maailmanperintökohde, jonka kadut '
+                  + 'ovat liian kapeita autoille.',
+              },
+              {
+                mita: 'Ihmeiden talo',
+                tahdet: 3,
+                selite: 'Sansibarin ensimmäinen sähköistetty '
+                  + 'rakennus ja Itä-Afrikan ensimmäinen hissitalo; '
+                  + 'suljettu vaurioiden takia.',
+              },
+              {
+                mita: 'Changuun kilpikonnat',
+                tahdet: 3,
+                selite: 'Aldabranjättiläiskilpikonnia saarella, '
+                  + 'jonka vankila ei koskaan saanut vankeja.',
+              },
+              {
+                mita: 'Kizimkazin moskeija',
+                tahdet: 2,
+                selite: 'Kufilainen kaiverrus vuodelta 1107 saaren '
+                  + 'eteläkärjessä.',
+              },
+              {
+                mita: 'Elokuvajuhla heinäkuussa',
+                tahdet: 2,
+                selite: 'Festival of the Dhow Countries täyttää '
+                  + 'vanhan linnakkeen amfiteatterin kymmeneksi '
+                  + 'päiväksi.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5
+             * ja teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Autolla ei pääse perille',
+                teksti: 'Kivikaupungin kujat ovat liian kapeita '
+                  + 'autoille — matkatavarat kulkevat viimeisen '
+                  + 'matkan jalan, pyörällä tai mopon kyydissä.',
+              },
+              {
+                otsikko: 'Kaksi sadekautta',
+                teksti: 'Pääsadekausi on maalis—toukokuussa ja '
+                  + 'toinen huippu marras—joulukuussa; kuivin '
+                  + 'kuukausi on heinäkuu.',
+              },
+              {
+                otsikko: 'Talot ovat hauraita',
+                teksti: 'Noin kahdeksankymmentä prosenttia '
+                  + 'Kivikaupungin 1 709 rakennuksesta on '
+                  + 'rappeutumassa, ja osa kohteista voi olla '
+                  + 'suljettuna korjausten takia.',
+              },
+              {
+                otsikko: 'Daladala lähtee täyttyessään',
+                teksti: 'Aikataulua ei ole eikä lippuja voi varata '
+                  + 'etukäteen; bussi lähtee, kun siihen ei mahdu '
+                  + 'enempää väkeä.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Monsuuni ja meri',
+      johdanto: 'Sansibarin vuosi kulkee kahden tuulen mukaan: '
+        + 'kaskazi puhaltaa koillisesta ja kusi lounaasta. Ne toivat '
+        + 'purjeet Arabiasta ja Intiasta ja vievät yhä kalastajan '
+        + 'ulos ja takaisin.',
+      tehtava: {
+        kysymys: 'Miksi Changuuta kutsutaan vankilasaareksi, vaikka '
+          + 'siellä ei koskaan ollut vankeja?',
+        vaihtoehdot: [
+          'Vankilaa ei koskaan rakennettu',
+          'Vankila valmistui 1894, mutta saaresta tehtiin sen sijaan '
+            + 'karanteenisaari',
+          'Vangit karkasivat heti ensimmäisenä yönä',
+          'Nimi tarkoittaa swahiliksi vankilaa',
+        ],
+        oikea: 1,
+        fakta: 'Vanha vankila muutettiin karanteenisairaalaksi, ja '
+          + 'vuonna 1923 saari nimettiin virallisesti Quarantine '
+          + 'Islandiksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaskazi ja kusi',
+          teksti: 'Sansibarin ilmasto on trooppinen monsuuni-ilmasto, '
+            + 'ja vuoden rytmin antavat kaksi tuulta. Koillismonsuuni, '
+            + 'swahiliksi kaskazi, tuo voimakkaita merituulia, jotka '
+            + 'viilentävät etenkin pohjois- ja itärannikkoa. '
+            + 'Lounaismonsuuni, kusi, tuo pääsadekauden maalis—'
+            + 'toukokuussa; toinen sadehuippu on marras—joulukuussa ja '
+            + 'vähiten sataa heinäkuussa. Juuri näiden tuulten takia '
+            + 'kaupunki on siinä missä se on: Arabian niemimaan, '
+            + 'Persianlahden ja Länsi-Intian kauppiaat purjehtivat '
+            + 'monsuunin avulla Intian valtameren yli ja laskivat '
+            + 'suojaisaan satamaan, joka on nykyisen Sansibarin '
+            + 'kaupungin paikalla. Tuuli päätti, milloin sai lähteä ja '
+            + 'milloin oli pakko jäädä.',
+          wiki: 'Zanzibar',
+        },
+        {
+          otsikko: 'Dhow, jonka nimen antoivat muut',
+          teksti: 'Dhow on yleisnimitys perinteisille purjealuksille, '
+            + 'joissa on yksi tai useampi masto ja settee-purjeet, '
+            + 'joskus latinalaispurjeet. Rungot ovat pitkiä ja '
+            + 'kapeita, ja alukset kuljettavat raskasta rahtia '
+            + 'Itä-Arabian, Iranin, Itä-Afrikan, Jemenin ja '
+            + 'Etelä-Aasian rannikoilla; suuremmassa on noin '
+            + 'kolmenkymmenen ja pienemmässä noin kahdentoista miehen '
+            + 'miehistö. Nimi on eurooppalaisten keksimä kokoava '
+            + 'sana — arabit ja intialaiset nimeävät jokaisen tyypin '
+            + 'erikseen, ja swahilirannikolla puhutaan jahazista. '
+            + 'Sanan itsensä uskotaan tulevan swahilin sanasta daw, '
+            + 'alus. Vuoden 1873 kirjassaan kapteeni G. L. Sulivan '
+            + 'erotteli neljä eri rannikkodhow-tyyppiä.',
+          wiki: 'Dhow',
+        },
+        {
+          otsikko: 'Vankilasaari, jossa ei ollut vankeja',
+          teksti: 'Changuu on saari kaupungin edustalla noin viiden '
+            + 'kilometrin päässä luoteeseen, ja se on nimetty '
+            + 'ympäröivässä meressä yleisen kalan mukaan. Saari oli '
+            + 'asumaton 1860-luvulle asti, jolloin sulttaani Majid bin '
+            + 'Said antoi sen kahdelle arabille; he käyttivät sitä '
+            + 'kapinallisten orjien säilytyspaikkana. Britannian ensimmäinen '
+            + 'ministeri Lloyd Mathews osti saaren 1893 ja rakennutti '
+            + 'sinne vankilan, joka valmistui 1894 — mutta yhtään '
+            + 'vankia ei koskaan tuotu. Sen sijaan saaresta tuli '
+            + 'karanteenipaikka koko Britannian Itä-Afrikalle, ja '
+            + 'vanhasta vankilasta tehtiin sairaala; 1923 saari '
+            + 'nimettiin virallisesti Quarantine Islandiksi.',
+          wiki: 'Changuu',
+        },
+        {
+          otsikko: 'Neljä kilpikonnaa vuonna 1919',
+          teksti: 'Seychellien brittikuvernööri lähetti 1919 '
+            + 'Changuulle lahjaksi neljä aldabranjättiläiskilpikonnaa '
+            + 'Aldabran saarelta. Ne lisääntyivät nopeasti, ja 1955 '
+            + 'niitä oli noin kaksisataa. Sitten alkoi katoaminen: '
+            + 'eläimiä varastettiin myytäväksi lemmikeiksi ja ruoaksi, '
+            + 'ja kanta putosi noin sataan vuonna 1988, viiteenkymmeneen '
+            + '1990 ja seitsemään vuonna 1996. Saarelle tuotiin '
+            + 'kahdeksankymmentä poikasta, joista neljäkymmentä katosi. '
+            + 'Vasta suuri aitaus käänsi suunnan: vuoteen 2000 mennessä '
+            + 'saarella oli seitsemäntoista aikuista, viisikymmentä '
+            + 'nuorta ja yhdeksänkymmentä poikasta. Laji on '
+            + 'kansainvälisen luonnonsuojeluliiton punaisella listalla '
+            + 'vaarantuneena.',
+          wiki: 'Changuu',
+        },
+        {
+          otsikko: 'Sato, joka korjataan vedestä',
+          teksti: 'Mausteiden ja matkailun rinnalla Sansibarin '
+            + 'tärkeimpiä vientituloja on merilevä. Viljelty laji on '
+            + 'punalevä Eucheuma, ja viljelmiä on esimerkiksi '
+            + 'Jambianin rannalla saaren itälaidalla. Työtä tekevät '
+            + 'enimmäkseen naiset: taimet sidotaan matalaan veteen '
+            + 'pingotettuihin köysiin, ja sato korjataan ja kuivataan '
+            + 'rannalla. Merilevänviljelyn taloudellisia mahdollisuuksia '
+            + 'tutki Adelaida K. Semesi vuodesta 1982 kuolemaansa 2001 '
+            + 'asti. Työ on käynyt vaikeammaksi: neljässäkymmenessä '
+            + 'vuodessa lämpötilat ja tuulen nopeudet ovat nousseet '
+            + 'merkittävästi, ja se yhdessä sademallien muutosten '
+            + 'kanssa saa sadon mätänemään tai tuhoutumaan korjuun '
+            + 'aikana.',
+          wiki: 'Zanzibar',
+        },
+      ],
+    },
+  ],
 };

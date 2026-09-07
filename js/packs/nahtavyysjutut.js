@@ -53569,4 +53569,492 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
   },
+  /*
+   * LAGOSIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026,
+   * parvierä). Kartta on js/packs/maakartat.js:
+   * KAUPUNKIKARTAT.lagos, ja jokainen väite on luettu en-Wikipedian
+   * raakatekstistä 7.9.2026 (artikkelit "Lagos Central Mosque",
+   * "Tinubu Square", "Cathedral Church of Christ, Lagos", "Ajele
+   * Cemetery", "Freedom Park (Lagos)", "King's College, Lagos",
+   * "Tafawa Balewa Square", "Nigerian National Museum", "Lagos",
+   * "History of Lagos", "Samuel Ajayi Crowther").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat aworien perustamistaru ja oban palatsi, Benin ja
+   * nimi Eko, vuoden 1861 luovutussopimus ja siirtomaan asema 1873,
+   * saro- ja aguda-paluumuuttajat ja Shitta-Beyn moskeija sekä
+   * Eyo-kulkue; teemasivu kertoo laguunista, Makokosta, silloista,
+   * täyttömaasta ja Lekin luonnonsuojelukeskuksesta. Lähimpänä on
+   * Kristuksen katedraali, jonka juttu kertoo rakennuksesta, uruista
+   * ja Crowtherin jäännösten siirrosta eikä paluumuuttajista.
+   *
+   * NELJÄ EHDOKASTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-lagos.md, kohta G): Holy Cross -katedraali 112 metriä
+   * Vapauden puistosta, John Randle -keskus 145 metriä
+   * kansallismuseosta, Bookshop House 163 metriä Kristuksen
+   * katedraalista ja Ilojo Bar 63 metriä Tinubun aukiosta. Pienin
+   * hyväksytty väli on 293 metriä (Vapauden puisto – King's College).
+   *
+   * EFUNROYE TINUBU NIMETÄÄN LÄHTEEN SANOIN orjakauppiaaksi
+   * (tarkistus-lagos.md, kohta E). Historia kerrotaan tapahtumina,
+   * ei kaunisteltuna eikä yksityiskohtia korostaen.
+   */
+  lagos: {
+    'Lagosin keskusmoskeija': {
+      aika: '1913 ja 1988',
+      teksti: 'Lagosin muslimiyhteisö perusti keskusmoskeijan '
+          + 'johtokunnan noin vuonna 1905. Ensimmäinen keskusmoskeija '
+          + 'valmistui heinäkuussa 1913, ja se palveli kaupunkia '
+          + 'seitsemänkymmentä vuotta. Moskeija on Nnamdi Azikiwe '
+          + 'Streetillä Lagosin saarella, ja se on Lagosin ylimmän '
+          + 'imaamin päämaja.'
+          + '\n\n'
+          + 'Ajatus uudesta rakennuksesta syntyi heti vanhan moskeijan '
+          + 'viisikymmenvuotisjuhlan jälkeen 1963. Osa jäsenistä piti '
+          + 'vanhaa rakennusta aikansa eläneenä ja halusi uuden, osa '
+          + 'olisi mieluummin laajentanut vanhaa. Rahaa kerättiin 1973 '
+          + 'laajennukseen ja naapuritonttien ostoon, mutta suunnitelma '
+          + 'haudattiin, kun enemmistö kannatti kokonaan uutta taloa. '
+          + 'Vanha moskeija purettiin 1983, ja välivuodet perjantairukous '
+          + 'pidettiin läheisessä Alli-Balogunin moskeijassa.'
+          + '\n\n'
+          + 'Uusi moskeija avattiin 28. toukokuuta 1988. Siinä on '
+          + 'neljä minareettia: kaksi pientä sisäänkäynnin päällä ja '
+          + 'kaksi korkeaa rakennuksen länsi- ja itäsiivessä. '
+          + 'Rukoushuone on 750 neliömetriä, ja sen keskellä on '
+          + 'viisitoista metriä halkaisijaltaan oleva metallikupoli, '
+          + 'joka erottuu ulos kullatusta alumiinivaipastaan. '
+          + 'Sisäänkäynti johtaa pylväskäytävään ja sen vierestä '
+          + 'sisäpihalle. Talossa on lisäksi toimistosiipi, '
+          + 'käsikirjasto, islamilainen keskus ja ylimmän imaamin '
+          + 'asunto.',
+      lahde: 'Wikipedia',
+    },
+    'Tinubun aukio': {
+      aika: '1800-luku',
+      teksti: 'Broad Streetin varrella oleva aukio on nimetty '
+          + 'Efunroye Tinubun mukaan. Lähde kuvaa hänet jorubalaiseksi '
+          + 'orjakauppiaaksi, kauppiaaksi ja aristokraatiksi. Aukiota '
+          + 'kutsuttiin ensin nimellä Ita Tinubu; ensimmäisen '
+          + 'tasavallan johtajat nimesivät sen itsenäisyyden jälkeen '
+          + 'Independence Squareksi, ja myöhemmin se sai takaisin '
+          + 'Tinubun nimen.'
+          + '\n\n'
+          + 'Historioitsijan mukaan paikalla oli kaupungin ensimmäinen '
+          + 'tuomioistuin, joka korvattiin 1918 korkeimmalla '
+          + 'oikeudella. Aukio oli kolmen maailman kohtauspaikka: '
+          + 'saarella syntyneet lagosilaiset, Brasiliasta palanneiden '
+          + 'suvut ja siirtomaahallinnon virkamiehet kulkivat samaa '
+          + 'nurmikkoa.'
+          + '\n\n'
+          + 'Nykyään aukio on rautaisen aidan sisällä. Siellä on kaksi '
+          + 'suihkulähdettä, kukkia ja trooppisia puita sekä '
+          + 'luonnollisen kokoinen Tinubun patsas kenotafin päällä. '
+          + 'Aukio kunnostettiin viimeksi 2017. Vuosina 2021 ja 2022 '
+          + 'siellä oli kaksi valokuvanäyttelyä ulkoilmassa: '
+          + 'ensimmäinen esitti Stephen Goldblattin kuvia vuoden 1970 '
+          + 'elokuvakuvauksista, jotka löytyivät Berliinistä lähes '
+          + 'viisikymmentä vuotta myöhemmin.',
+      lahde: 'Wikipedia',
+    },
+    'Ajelen hautausmaa': {
+      aika: '1800-luku – 1971',
+      teksti: 'Ajele oli Lagosin saaren suuri hautausmaa. Nimi '
+          + 'tarkoittaa jorubaksi hallinnon virkamiestä, ja se tuli '
+          + 'sinne haudatuista brittiläisistä siirtomaavirkamiehistä. '
+          + 'Hautausmaalle oli haudattu myös kaupungin omia '
+          + 'merkkihenkilöitä: James Pinson Labulo Davies, konsuli '
+          + 'Benjamin Campbell, poliisituomari Josiah Gerard, Thomas '
+          + 'Babington Macaulay ja Samuel Ajayi Crowther, '
+          + 'anglikaanisen kirkon ensimmäinen afrikkalainen piispa.'
+          + '\n\n'
+          + 'Joulukuussa 1971 Lagosin osavaltion sotilashallinto '
+          + 'purki hautausmaan tehdäkseen tilaa osavaltion '
+          + 'virastotalolle. Päätöstä arvosteltiin heti ja arvostellaan '
+          + 'yhä. Professori J. D. Y. Peel kirjoitti, että purku vei '
+          + 'lagosilaisilta sekä arvokkaan viheralueen keskeltä '
+          + 'kaupunkia että heidän esivanhempiensa muistomerkit. Wole '
+          + 'Soyinka kutsui sitä esi-isien paikan loukkaamiseksi.'
+          + '\n\n'
+          + 'Kohde on kartalla siksi, mitä siinä ei enää ole. '
+          + 'Hautausmaata ei ole, mutta paikka on: kaupungin '
+          + 'keskustassa on kortteli, jonka alla lepää osa Lagosin '
+          + '1800-luvun väestä. Crowtherin jäännökset siirrettiin '
+          + '1976 Kristuksen katedraaliin, joka on tämän kartan '
+          + 'toinen kohde.',
+      lahde: 'Wikipedia',
+    },
+    'Kristuksen katedraali': {
+      aika: '1867–1946',
+      teksti: 'Marinan varrella oleva anglikaaninen katedraali on '
+          + 'Nigerian kirkon vanhin. Ensimmäisen kirkkorakennuksen '
+          + 'peruskivi laskettiin 29. maaliskuuta 1867, ja katedraali '
+          + 'perustettiin 1869 — neljä vuotta ennen isoisän matkaa. '
+          + 'Sitä ennen, 1864, Samuel Ajayi Crowther oli tullut '
+          + 'anglikaanisen kirkon ensimmäiseksi afrikkalaiseksi '
+          + 'piispaksi.'
+          + '\n\n'
+          + 'Nykyinen rakennus on paljon nuorempi. Työ alkoi '
+          + 'arkkitehti Bagan Benjaminin piirustusten mukaan '
+          + '1. marraskuuta 1924, peruskiven laski Walesin prinssi — '
+          + 'myöhempi kuningas Edward VIII — 21. huhtikuuta 1925, ja '
+          + 'kirkko valmistui 1946. Katedraali on ollut vuorollaan '
+          + 'Länsi-Afrikan kirkkoprovinssin arkkipiispan, koko '
+          + 'Nigerian arkkipiispan ja nykyään Lagosin piispan istuin.'
+          + '\n\n'
+          + 'Vuonna 1976 Crowtherin jäännökset siirrettiin '
+          + 'katedraaliin ja hänelle pystytettiin kenotafi. Kirkon '
+          + 'urut ovat Nigerian suurimmat: saksalaisen Oberlinger '
+          + 'Orgelbaun rakentamat ja englantilaisen Harrison & '
+          + 'Harrisonin uusimat, 64 äänikertaa neljällä sormiolla ja '
+          + 'jalkiolla. Soittimessa on kaksi julkisivua, yksi alttaria '
+          + 'ja toinen oikeaa sivulaivaa kohti, ja lisäksi oma osansa '
+          + 'pääoven yläpuolisella parvella.',
+      lahde: 'Wikipedia',
+    },
+    "King's College": {
+      aika: '1909',
+      teksti: 'Vuonna 1908 Lagosin virkaa tekevä koulutusjohtaja '
+          + 'Henry Rawlingson Carr esitti kuvernööri Walter Egertonille '
+          + 'yksityiskohtaisen koulutussuunnitelman. Siitä syntyi '
+          + "King's College, ja Carria kutsutaan siksi joissakin "
+          + 'lähteissä koulun arkkitehdiksi. Maan luovutti oba '
+          + 'Esugbayi, ja tarkoitus oli parantaa jorubaväestön '
+          + 'koulunkäynnin mahdollisuuksia. Carr sai Lontoon '
+          + 'kouluviranomaiset vakuuttumaan siitä, ettei uusi koulu '
+          + 'kilpailisi lähetysseurojen kanssa vaan täydentäisi niitä.'
+          + '\n\n'
+          + 'Koulu aloitti 20. syyskuuta 1909 kymmenellä oppilaalla '
+          + 'Lagosin saarella, aivan nykyisen Tafawa Balewan aukion '
+          + 'vieressä. Rakentaminen ja kalustaminen maksoivat 10 001 '
+          + 'puntaa. Tarkoitus kirjattiin selvästi: antaa siirtomaan '
+          + 'nuorille korkeampaa yleissivistystä kuin olemassa olevat '
+          + 'koulut ja valmistaa heitä Lontoon yliopiston '
+          + 'pääsykokeeseen sekä ammatteihin ja virkoihin.'
+          + '\n\n'
+          + 'Oppilaita oli 1910 keskimäärin kuusitoista ja 1914 jo '
+          + 'kuusikymmentäseitsemän. Ensimmäinen rehtori oli herra '
+          + 'Lomax, ensimmäinen afrikkalainen rehtori Rex Akpofure. '
+          + 'Nykyään koulu on yksi Nigerian 104 unity school '
+          + '-koulusta, joiden tarkoitus on tuoda yhteen eri seuduilta '
+          + 'ja taustoista tulevia oppilaita. Vanhemmat luokat ovat '
+          + 'yhä saaren pääkampuksella, nuoremmat Victoria Islandilla.',
+      lahde: 'Wikipedia',
+    },
+    'Vapauden puisto': {
+      aika: '1882–2010',
+      teksti: 'Puiston paikalla oli Her Majesty’s Broad Street '
+          + 'Prison. Vankila perustettiin sen jälkeen kun Britannia '
+          + 'oli tehnyt Lagosista siirtomaan 1861. Ensimmäinen '
+          + 'rakennus tehtiin 1882 savimuureista ja ruohokatosta, '
+          + 'mutta se ei kestänyt kauan: siirtomaahallinnon '
+          + 'vastustajat sytyttivät sen toistuvasti tuleen, ja 1885 '
+          + 'hallinto toi tiilet Englannista ja rakensi vankilan '
+          + 'uudelleen.'
+          + '\n\n'
+          + 'Kaksi lukua kertovat, mihin siirtomaahallinnon rahat '
+          + 'menivät. Vankilaan käytettiin 1882 noin 16 000 puntaa; '
+          + 'koulutukseen samana vuonna 700 puntaa. Vuoden 1898 '
+          + 'siirtomaaraportin mukaan vankilassa oli sinä vuonna 676 '
+          + 'miestä, 26 naista ja 11 nuorta. Vankilassa istuivat '
+          + 'aikanaan muun muassa Herbert Macaulay ja muut '
+          + 'itsenäisyyden puolesta toimineet.'
+          + '\n\n'
+          + 'Vankila purettiin 1979, ja tontti oli vuosia '
+          + 'kaatopaikkana. Arkkitehti Theo Lawson suunnitteli 1999 '
+          + 'paikalle puiston, ja se avattiin lokakuussa 2010 '
+          + 'itsenäisyyden viisikymmenvuotisjuhlaan. Puisto on '
+          + 'kansallinen muistomerkki ja samalla taide- ja '
+          + 'virkistyskeskus: monumentit kertovat vankilasta ja '
+          + 'siirtomaa-ajasta, ja lava täyttyy iltaisin. Nigerian '
+          + 'ensimmäinen skeittipuisto avattiin puiston sisään '
+          + 'maaliskuussa 2024.',
+      lahde: 'Wikipedia',
+    },
+    'Tafawa Balewan aukio': {
+      aika: '1859–1972',
+      teksti: 'Aukio oli aluksi Lagos Race Course, kilparata, jolla '
+          + 'oli myös jalkapallokenttä ja krikettikenttä. Maan '
+          + 'luovutti siirtomaahallinnolle oba Dosunmu 1859 — kaksi '
+          + 'vuotta ennen luovutussopimusta — ja rakennutti sen '
+          + 'jälkeen ympäröivät korttelit. Rata oli seitsemän tai '
+          + 'kahdeksan furlongin mittainen eli noin maili, ja siellä '
+          + 'pidettiin Empire Day -paraatit.'
+          + '\n\n'
+          + 'Vuonna 1960 alue rakennettiin uudelleen itsenäisyyttä '
+          + 'varten. Ensimmäisenä lokakuuta 1960 pääministeri Abubakar '
+          + 'Tafawa Balewa piti täällä puheensa, kun unionin lippu '
+          + 'laskettiin. Nykyinen aukio rakennettiin vanhan radan '
+          + 'päälle 1972, ja se sai nimensä samalta pääministeriltä.'
+          + '\n\n'
+          + 'Portin päällä on neljä valkoista hevosta ja seitsemän '
+          + 'punaista kotkaa. Ne ovat kansallisvaakunan tunnuksia ja '
+          + 'merkitsevät voimaa ja arvokkuutta. Aukiolla on myös '
+          + 'muistokäytävä ja 26-kerroksinen Independence House '
+          + 'vuodelta 1963, joka oli pitkään Nigerian korkein '
+          + 'rakennus. Aukion krikettikenttä on Nigerian kriketin '
+          + 'perinteinen koti; betonipinta vaihdettiin kymmenen '
+          + 'kaistaleen nurmeen, ja työ valmistui tammikuussa 2022.',
+      lahde: 'Wikipedia',
+    },
+    'Nigerian kansallismuseo': {
+      aika: '1957',
+      teksti: 'Museon ensimmäiset arkkitehtiluonnokset esitettiin '
+          + 'heinäkuussa 1948 konferenssissa, jossa mietittiin '
+          + 'Nigerian museopolitiikkaa. Museon perusti 1957 '
+          + 'englantilainen arkeologi Kenneth Murray, joka oli '
+          + 'koonnut perinteisiä naamioita Cross Riverin alueelta; '
+          + 'ne olivat ensimmäisiä esineitä näyttelyssä. '
+          + 'Ensimmäisenä vuosikymmenenä British Museum lahjoitti '
+          + 'museolle kaksi laattaa ja muita esineitä.'
+          + '\n\n'
+          + 'Kokoelmassa arvioidaan olevan noin 47 000 esinettä: '
+          + 'puuta, norsunluuta, metallia ja terrakottaa. Tunnetuin on '
+          + 'Jemaan pää, Nok-kulttuurin terrakottapää, joka ajoitetaan '
+          + 'noin vuosien 900 ja 200 eaa. väliin. Esillä on naamioita, '
+          + 'tekstiilejä, rumpuja, ennustusmaljoja ja esi-isähahmoja, '
+          + 'muun muassa mumuye-hahmoja Adamawan osavaltiosta ja '
+          + 'igbojen ikenga-veistoksia, sekä ekpo-naamioita Calabarista '
+          + 'ja gelede-naamioita. Jorubaosastossa on egungun-asuja ja '
+          + 'saviastioita.'
+          + '\n\n'
+          + 'Museo on Onikanissa Lagosin saarella, ja sitä hallinnoi '
+          + 'museoiden ja muistomerkkien kansallinen toimikunta. '
+          + 'Viereisestä käsityökeskuksesta voi ostaa nigerialaista '
+          + 'käsityötä. Museo avattiin uudelleen huhtikuussa 2026 '
+          + 'laajan peruskorjauksen jälkeen; työhön kuului rakenteiden '
+          + 'vahvistaminen, sähköjen uusiminen ja kokoelman '
+          + 'digitointi.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * SANSIBARIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026,
+   * parvierä). Kartta on js/packs/maakartat.js:
+   * KAUPUNKIKARTAT.sansibar, ja jokainen väite on luettu
+   * en-Wikipedian raakatekstistä 7.9.2026 (artikkelit "Old
+   * Dispensary (Zanzibar)", "Sultan's Palace, Zanzibar", "Darajani
+   * Market", "Hamamni Persian Baths", "St. Joseph's Cathedral,
+   * Zanzibar", "Tippu Tip's House", "Tippu Tip", "Michenzani",
+   * "State University of Zanzibar", "Stone Town", "Zanzibar").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat Shanganin arkeologia, Omanin sulttaanien pääkaupunki,
+   * vuoden 1873 sopimus ja Kristuksen katedraali, Sayyida Salme sekä
+   * vanha linnake ja elokuvajuhla; teemasivu kertoo monsuunista,
+   * dhow-aluksista, Changuusta ja merilevästä. Lähimpänä on
+   * sulttaanin palatsi, jonka juttu kertoo rakennuksesta ja museosta
+   * eikä sulttaanikunnan synnystä.
+   *
+   * KOLME EHDOKASTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-sansibar.md, kohta H): Malindin moskeija 155 metriä
+   * vanhasta apteekista, Ijumaan moskeija 95 metriä samasta ja
+   * Ihmeiden talo 151 metriä sulttaanin palatsista. Pienin hyväksytty
+   * väli on 239 metriä (Hamamni – Pyhän Joosefin katedraali).
+   *
+   * TIPPU TIP NIMETÄÄN LÄHTEEN SANOIN orjakauppiaaksi
+   * (tarkistus-sansibar.md, kohta F). Michenzanista kerrotaan
+   * rakennukset eikä vuoden 1964 vallankumouksen kulkua (kohta E).
+   */
+  sansibar: {
+    'Vanha apteekki': {
+      aika: '1887–1894',
+      teksti: 'Rantakadun koristeellisin talo ei ollut alun perin '
+          + 'apteekki. Varakas ismailiitta-intialainen kauppias Tharia '
+          + 'Topan tilasi sen 1887 kuningatar Victorian kultaisen '
+          + 'juhlavuoden kunniaksi, ja hänen tarkoituksensa oli '
+          + 'hyväntekeväisyyssairaala köyhille. Topan kuoli 1891 talon '
+          + 'ollessa kesken. Leski jatkoi töitä mutta joutui '
+          + 'keskeyttämään 1893, kun rahat loppuivat, ja samana vuonna '
+          + 'talo myytiin perheriidan takia uudelle omistajalle, joka '
+          + 'sai sen valmiiksi 1894.'
+          + '\n\n'
+          + 'Vuonna 1900 talon osti toinen tunnettu intialainen '
+          + 'kauppias, Haji Nasser Nurmohamed. Hän päätti, että '
+          + 'pohjakerroksessa toimii apteekki ja ylemmät kerrokset '
+          + 'jaetaan asunnoiksi. Siitä tuli talon nimi, joka on '
+          + 'jäänyt käyttöön sata vuotta myöhemminkin.'
+          + '\n\n'
+          + 'Rakennus on Kivikaupungin monikulttuurisuuden '
+          + 'näyteikkuna. Veistetyt puuparvekkeet lasimaalauksineen '
+          + 'ovat intialaista perua, runko on perinteistä korallikiveä '
+          + 'ja kalkkikiveä, ja pinnassa on uusklassisia eurooppalaisia '
+          + 'stukkokoristeita. Sisällä on katettu sisäpiha ja '
+          + 'veistetyt sillat kerrosten välillä. Talo rappeutui '
+          + '1970- ja 1980-luvuilla; Aga Khanin kulttuurirahasto sai '
+          + '1990 luvan kunnostaa sen, ja työ valmistui huhtikuussa '
+          + '1994. Nykyään siellä on pieni Sansibarin historian museo.',
+      lahde: 'Wikipedia',
+    },
+    'Sulttaanin palatsi': {
+      aika: '1800-luvun loppu',
+      teksti: 'Mizingani Roadilla, Ihmeiden talon ja vanhan apteekin '
+          + 'välissä, seisoo kolmikerroksinen valkoinen talo, jonka '
+          + 'kattoreunaa kiertää hammastus. Se on rakennettu aiemman '
+          + 'palatsin Bait As-Sahelin paikalle; edellinen tuhoutui '
+          + 'vuoden 1896 sodassa. Nykyinen talo valmistui 1800-luvun '
+          + 'lopulla sulttaanin perheen asunnoksi.'
+          + '\n\n'
+          + 'Vuonna 1964 talo nimettiin Kansan palatsiksi ja otettiin '
+          + 'hallinnon käyttöön. Museoksi se muutettiin 1994. '
+          + 'Kokoelma kertoo Sansibarin hallitsijasuvusta ja '
+          + 'kaupungin historiasta: esillä on huonekaluja ja perheen '
+          + 'esineitä, jotka antavat kuvan siitä, millaista elämä '
+          + 'palatsissa oli 1800-luvulla.'
+          + '\n\n'
+          + 'Yksi kerros on omistettu sulttaani Sir Khalifa bin '
+          + 'Harubille ja toinen Sayyida Salmelle — prinsessalle, joka '
+          + 'pakeni saarelta 1866 ja kirjoitti Saksassa muistelmansa. '
+          + 'Hänen osastollaan on kirjoituksia, vaatteita ja '
+          + 'arkitavaroita. Museo on siis paikka, jossa kaupungin '
+          + 'kuuluisin karkulainen palasi kotiin vitriinin taakse.',
+      lahde: 'Wikipedia',
+    },
+    'Darajanin tori': {
+      aika: '1904',
+      teksti: 'Darajani on Kivikaupungin päätori. Sillä on kolme '
+          + 'nimeä: virallinen Darajani, vanha Estella Market — '
+          + 'kreivitär Estellan, Sansibarin pääministerin Lloyd '
+          + 'Mathewsin sisaren mukaan — ja arkinen Marikiti Kuu, '
+          + 'swahiliksi pääkauppapaikka.'
+          + '\n\n'
+          + 'Torin päärakennuksen rakensi 1904 Bomanjee Maneckjee '
+          + 'sulttaani Ali bin Hamudille. Sitä on myöhemmin laajennettu '
+          + 'ja korjattu. Tori on Darajani Roadin varrella '
+          + 'anglikaanisen katedraalin lähellä, eli aivan sillä '
+          + 'kohdalla, jossa Kivikaupungin kujat alkavat väljetä.'
+          + '\n\n'
+          + 'Darajani on ennen kaikkea ruokatori: merenherkkuja, '
+          + 'lihaa, hedelmiä, viljaa ja mausteita. Sen lisäksi '
+          + 'myydään melkein kaikkea muutakin, elektroniikasta '
+          + 'vaatteisiin. Tori on myös liikenteen solmu — se on toinen '
+          + 'saaren kahdesta daladala-pääasemasta, ja sieltä lähtevät '
+          + 'bussit pohjoiseen ja koilliseen.',
+      lahde: 'Wikipedia',
+    },
+    'Hamamnin kylpylä': {
+      aika: '1870–1888',
+      teksti: 'Sulttaani Barghash bin Said rakennutti kaupunkiin '
+          + 'yleisen kylpylän vuosina 1870–1888. Se toimi kylpylänä '
+          + 'vuoteen 1920 asti. Persialaiseksi sitä kutsutaan siksi, '
+          + 'että rakentaminen tilattiin shiraziarkkitehdeilta. Sana '
+          + 'hamamni tarkoittaa kylpyjen paikkaa, ja siitä on tullut '
+          + 'myös koko korttelin nimi.'
+          + '\n\n'
+          + 'Sisällä oli monimutkainen tilasarja: kuumia ja kylmiä '
+          + 'altaita, käymälöitä, parranajotiloja ja ravintola. Kuuma '
+          + 'vesi tuotiin maanalaisia akvedukteja pitkin. Sisäänpääsy '
+          + 'oli maksullinen, joten säännöllisesti kylpylää käyttivät '
+          + 'vain varakkaat sansibarilaiset. Kylpylä oli avoinna sekä '
+          + 'miehille että naisille, mutta eri aikoina.'
+          + '\n\n'
+          + 'Kylpylä ei ole enää toiminnassa, mutta se on avoinna '
+          + 'kävijöille ja kuuluu Kivikaupungin tärkeimpiin kohteisiin. '
+          + 'CHAM-yhdistyksen vapaaehtoiset kunnostivat sen 2006. '
+          + 'Kaikkiin osiin ei pääse: osa tiloista, muun muassa '
+          + 'entinen ravintola, on muutettu asunnoiksi.',
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Joosefin katedraali': {
+      aika: '1893–1898',
+      teksti: 'Ranskalaiset lähetyssaarnaajat rakensivat '
+          + 'roomalaiskatolisen katedraalin vuosina 1893–1898 '
+          + 'Baghanin alueelle Kenyatta Roadin tuntumaan. '
+          + 'Suunnittelun esikuvana oli Marseillen katedraali, ja '
+          + 'kirkot muistuttavat toisiaan — Kivikaupungin katedraali '
+          + 'on vain paljon pienempi.'
+          + '\n\n'
+          + 'Sen tunnusmerkki on kaksi tornia. Ne näkyvät kauas '
+          + 'Kivikaupungin ylitse ja mereltä saavuttaessa, ja ne ovat '
+          + 'helpoimmin tunnistettava osa kaupungin siluettia. Itse '
+          + 'kirkkoa on silti vaikea löytää: Baghanin kujat kiertävät '
+          + 'niin, että tornit näkyvät koko ajan mutta ovi ei. '
+          + 'Helpoin reitti on Kenyatta Roadia Gizenga Streetille ja '
+          + 'siitä ensimmäinen katu oikealle.'
+          + '\n\n'
+          + 'Laatat ja lasimaalaukset tuotiin aikoinaan Ranskasta. '
+          + 'Sisäseinille oli maalattu Vanhan testamentin kohtauksia, '
+          + 'mutta ne tuhoutuivat vuoden 2014 huonosti tehdyssä '
+          + 'restauroinnissa. Kapealla kirkkopihalla kasvoi pitkään '
+          + 'korkea palmu, joka näkyy lähes kaikissa vanhoissa kuvissa '
+          + 'kirkosta; se kaadettiin joskus 2000-luvulla. Kirkko on '
+          + 'yhä paikallisen katolisen seurakunnan käytössä.',
+      lahde: 'Wikipedia',
+    },
+    'Tippu Tipin talo': {
+      aika: '1800-luvun loppu',
+      teksti: 'Shanganin kaupunginosassa, Suicide Alleyn varrella, '
+          + 'on talo, jossa asui Tippu Tip (1837–1905). Lähde kuvaa '
+          + 'hänet mahtavaksi kauppiaaksi ja orjakauppiaaksi. Hän '
+          + 'johti sisämaahan retkikuntia, joissa saattoi olla '
+          + 'nelisentuhatta miestä, toi norsunluuta Sansibariin ja '
+          + 'nousi saaren rikkaimpien joukkoon.'
+          + '\n\n'
+          + 'Talo oli yksityisasunto vuoden 1964 vallankumoukseen asti, '
+          + 'ja sen jälkeen se muutettiin kerrostaloksi. Vaikka se on '
+          + 'matkailunähtävyys, se ei ole virallisesti avoinna '
+          + 'kävijöille, ja se on niin huonossa kunnossa, että sitä on '
+          + 'kutsuttu koko Afrikan komeimmaksi valtaustaloksi.'
+          + '\n\n'
+          + 'Kaksi asiaa kertoo yhä, kuka talon rakensi: suuri '
+          + 'veistetty puuovi ja mustavalkoiset marmoriportaat. '
+          + 'Kivikaupungin varallisuus tuli 1800-luvulla mausteista, '
+          + 'norsunluusta ja ihmiskaupasta, ja tämä talo on siitä '
+          + 'suorin muistutus, joka kaupungissa on jäljellä. Se on '
+          + 'noin viidentoista tai kahdenkymmenenviiden minuutin '
+          + 'kävelymatkan päässä vanhalta linnakkeelta.',
+      lahde: 'Wikipedia',
+    },
+    'Michenzanin korttelit': {
+      aika: '1960–1970-luku',
+      teksti: 'Creek Road erottaa historiallisen Kivikaupungin lännessä '
+          + 'ja Ngʼambon idässä. Heti kadun toisella puolella alkaa '
+          + 'Michenzani, Ngʼambon suuri kaupunginosa, joka tunnetaan '
+          + 'elementtitaloistaan. Ne rakennettiin 1960-luvun lopulla '
+          + 'ja 1970-luvun alussa osana Ngʼambon kaupunkiuudistusta, '
+          + 'ja rakentamisessa auttoi Itä-Saksa.'
+          + '\n\n'
+          + 'Talot ovat eri kokoisia: korkein on seitsemänkerroksinen, '
+          + 'matalin nelikerroksinen. Rakennustavan takia sama talo voi '
+          + 'olla eri osista eri korkuinen — esimerkiksi kortteli '
+          + 'numero seitsemän on osaksi viisi- ja osaksi '
+          + 'seitsenkerroksinen. Vaikka nämä ovat Sansibarin korkeimmat '
+          + 'julkiset rakennukset, niihin ei asennettu hissejä: '
+          + 'jokaiseen asuntoon mennään portaita.'
+          + '\n\n'
+          + 'Korttelit olivat aikanaan ylpeyden aihe. Huoltoa ei '
+          + 'kuitenkaan ole juuri tehty 1970-luvun jälkeen, ja vedenpaine '
+          + 'ei riitä toisesta kerroksesta ylöspäin, joten moni asukas '
+          + 'on asentanut oman pumppunsa — ne eivät ole talojen '
+          + 'alkuperäisen tyylin mukaisia. Osa asunnoista kunnostettiin '
+          + 'ja maalattiin uudelleen 2010.',
+      lahde: 'Wikipedia',
+    },
+    'Sansibarin valtionyliopisto': {
+      aika: '1999',
+      teksti: 'Sansibarin edustajainhuone perusti valtionyliopiston '
+          + 'lailla 1999, ja toiminta alkoi 2002. Yliopisto on '
+          + 'julkinen, ja sen pääkampus on Tunguussa saaren '
+          + 'keskiosassa; Kivikaupungin laidalla on sen '
+          + 'kaupunkikampus.'
+          + '\n\n'
+          + 'Yliopistossa on swahilin ja vieraiden kielten koulu, '
+          + 'täydennyskoulutuksen koulu, kasvatustieteiden koulu sekä '
+          + 'luonnon- ja yhteiskuntatieteiden koulu. Kieli-instituutti '
+          + 'on opettanut vuosia swahilia, arabiaa, englantia, '
+          + 'espanjaa, portugalia, ranskaa ja saksaa, ja se opettaa '
+          + 'swahilia ulkomaisille opiskelijoille eri puolilta '
+          + 'maailmaa. Kasvatustieteiden puoli kouluttaa opettajia, '
+          + 'joita saarilla tarvitaan.'
+          + '\n\n'
+          + 'Sansibarin osuus swahilin kielessä on suurempi kuin '
+          + 'saarten koko antaisi olettaa. Täällä puhuttava murre on '
+          + 'kiunguja, jossa on paljon arabialaisia lainasanoja, ja '
+          + 'juuri sillä on standardiswahilin asema — ei vain '
+          + 'Tansaniassa vaan muissakin maissa, joissa swahilia '
+          + 'puhutaan. Kieltä tullaan siis opiskelemaan sinne, mistä '
+          + 'sen standardi on peräisin.',
+      lahde: 'Wikipedia',
+    },
+  },
 };

@@ -322,11 +322,44 @@ export const OMAT_ARTIKKELIT = {
       + 'kupari- ja nahkasepät tekevät työtään kuten ennenkin. Vieraalle '
       + 'kaadetaan minttuteetä, ja tinkiminen hoidetaan hymyssä suin.',
   },
+  /*
+   * LAGOSIN INTRO LAAJENNETTIIN 7.9.2026 (Opus, parvierä) reseptin
+   * mittaan: etusivun leipäteksti on 7–10 virkkeen johdatus
+   * kaupunkiin. Lähteinä en-Wikipedian "Lagos", "History of Lagos",
+   * "Lagos Colony" ja "Eyo festival" 7.9.2026; sama aineisto kuin
+   * kaupunkilehdellä (js/packs/kulttuuri-kategoriat.js, avain lagos,
+   * sekä docs/mantereet-tyoaineisto/faktapohja-lagos.md).
+   * artikkeli-kenttä on ennallaan.
+   *
+   * 1873-KEHYS: Lagos oli isoisän matkavuonna Britannian siirtomaa,
+   * jota hallittiin Kultarannikolta, ja intro sanoo sen suoraan.
+   */
   Lagos: {
-    intro: 'Lagos on laguunin saarille ja rannoille rakennettu '
-      + 'jättiläinen, Afrikan väkirikkaimpia kaupunkeja. Se on Nigerian '
-      + 'talouden, musiikin ja elokuvan moottori, joka ei hiljene '
-      + 'koskaan.',
+    intro: 'Lagos on Nigerian suurin kaupunki ja Afrikan '
+      + 'väkirikkaimpia. Se on rakennettu laguunin saarille ja '
+      + 'rannoille, ja se jakautuu kahteen: saareen, jolla ovat '
+      + 'liikekeskusta ja vanhin kaupunki, ja mantereeseen, jolla '
+      + 'asuu suurin osa lagosilaisista. Nimi tulee portugalin '
+      + 'sanasta järvet; jorubankielinen nimi on **Èkó**, ja se elää '
+      + 'yhä kaupungin omassa puheessa.'
+      + '\n\n'
+      + 'Perimätiedon mukaan aworien hallitsija Olofin sai '
+      + 'savilautasen ja ohjeen asettua sinne, mihin se uppoaa — se '
+      + 'upposi tähän laguuniin. Noin vuodesta 1600 saari oli '
+      + 'linnoitettu Beninin sotilastukikohta, ja 1700-luvulla siitä '
+      + 'kasvoi yksi Atlantin orjakaupan suurimmista satamista. '
+      + 'Britannia puuttui kaupungin asioihin 1851, ja oba Dosunmu '
+      + 'allekirjoitti luovutussopimuksen 6. elokuuta 1861.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Lagos oli **Britannian siirtomaa, '
+      + 'jota hallittiin Kultarannikolta asti** — omaksi '
+      + 'siirtomaakseen se erotettiin vasta 1886. Kaupunkiin oli jo '
+      + 'muuttanut vapautettujen jälkeläisiä Freetownista ja '
+      + 'Brasiliasta, ja heidän jälkensä näkyy yhä saaren '
+      + 'rakennuksissa. Lagos oli Nigerian pääkaupunki vuoteen 1991, '
+      + 'jolloin asema siirtyi Abujaan. Kaupungin oma juhla on Eyo, '
+      + 'jonka valkoiset hahmot kulkivat ensimmäisen kerran '
+      + '20. helmikuuta 1854.',
     artikkeli: 'Lagos on Nigerian suurin kaupunki ja koko Afrikan '
       + 'suurimpia: asukkaita on suurkaupunkialueella toistakymmentä '
       + 'miljoonaa, eikä laskeminen ole helppoa, sillä kaupunki kasvaa '
@@ -475,10 +508,44 @@ export const OMAT_ARTIKKELIT = {
       + 'maksettiin. Rannoilla käyskentelevät pingviinit, braai-tulet '
       + 'savuavat viikonloppuisin ja jazzklubit soivat iltaisin.',
   },
+  /*
+   * SANSIBARIN INTRO LAAJENNETTIIN 7.9.2026 (Opus, parvierä)
+   * reseptin mittaan: etusivun leipäteksti on 7–10 virkkeen johdatus
+   * kaupunkiin. Lähteinä en-Wikipedian "Zanzibar", "Stone Town",
+   * "History of Zanzibar" ja "Christ Church, Zanzibar" 7.9.2026;
+   * sama aineisto kuin kaupunkilehdellä
+   * (js/packs/kulttuuri-kategoriat.js, avain sansibar, sekä
+   * docs/mantereet-tyoaineisto/faktapohja-sansibar.md).
+   * artikkeli-kenttä on ennallaan.
+   *
+   * 1873-KEHYS: isoisän matkavuosi on saaren historian käännekohta,
+   * ja intro sanoo sen suoraan. Taarabia ei mainita, koska se on
+   * Tansanian maalehden aihe (Fablen ohje).
+   */
   Sansibar: {
-    intro: 'Sansibar on maustesaari Intian valtameressä: neilikan '
-      + 'tuoksu, korallikivinen kivikaupunki ja dhow-purjeet kertovat '
-      + 'valtameren vanhasta kauppareitistä.',
+    intro: 'Sansibar on saariryhmä Intian valtameressä '
+      + 'Manner-Tansanian rannikolla, ja sen pääsaari on Unguja. '
+      + 'Kaupunki on saaren länsirannikolla pienellä niemellä: vanha '
+      + 'osa on **Kivikaupunki**, uudempi **Ngʼambo** eli toinen '
+      + 'puoli. Kadut ovat niin kapeita, ettei niillä kulje auto, '
+      + 'joten kaupungissa liikutaan jalan, pyörällä ja mopolla.'
+      + '\n\n'
+      + 'Kalastajakylä Shangani perustettiin 1000-luvulla ja oli '
+      + 'pitkään vähäpätöinen; saaren mahdit olivat Unguja Ukuu, '
+      + 'Kizimkazi ja Tumbatu. Portugalilaiset karkotettiin '
+      + '1600-luvulla, ja paikalliset ylimykset kutsuivat Omanin '
+      + 'sulttaanin puolustamaan saarta. 1800-luvun alkupuoliskolla '
+      + 'Said bin Sultan siirsi pääkaupunkinsa Muscatista tänne, ja '
+      + '1861 Sansibar ja Oman erosivat omiksi sulttaanikunnikseen.'
+      + '\n\n'
+      + 'Isoisän matkavuosi 1873 on saaren historian käännekohta: '
+      + 'Britannian konsuli uhkasi sulttaani Barghashia saarrolla, ja '
+      + 'sopimus **lakkautti orjakaupan ja sulki kaikki orjatorit**. '
+      + 'Saman vuoden jouluna laskettiin suurimman orjatorin paikalle '
+      + 'anglikaanisen kirkon peruskivi. Kivikaupunki on Unescon '
+      + 'maailmanperintökohde vuodesta 2000, ja sen arkkitehtuurissa '
+      + 'näkyvät arabialaiset, persialaiset, intialaiset ja '
+      + 'eurooppalaiset ainekset.',
     artikkeli: 'Sansibar on saariryhmä Tansanian rannikolla. Sen '
       + 'pääsaaren vanha keskus, Kivikaupunki eli Stone Town, on '
       + 'rakennettu korallikivestä kapeiden kujien sokkeloksi, jossa '
