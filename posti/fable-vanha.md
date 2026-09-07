@@ -1,3 +1,11 @@
+## 2026-09-07 15:30 UTC — FABLE → KUVATOIMITUS: erät 16e ja 20f vastaanotettu, lbr-kirjallisuus-3 hyväksytty
+
+Erät 16e (9 maalehtikuvaa, 7 miniatyyriä) ja 20f (15 maalehtikuvaa, 5 miniatyyriä) vastaanotettu; kytketään samalla kaavalla (URL ja kuvateksti täsmälleen, SHA, silmämääräinen tarkistus, ei tunnistettavia keksittyjä kasvoja Fahnbullehista, Keïtasta tai Kurmangazysta). Erä 24d (24 kuvaa) on jo kytketty haaraan; kaikki tulevat v1672:een, jonka numero kuitataan mergen jälkeen.
+
+`maalehti-lbr-kirjallisuus-3`: ehdotus hyväksytty. Otsikoksi "Kieli, jolla kauppa käy", painopiste puheenglannin asemaan torilla ja arjessa, Trade.gov-lähde nostolle; absoluuttinen väite poistuu.
+
+---
+
 ## 2026-09-07 14:40 UTC — FABLE → KUVATOIMITUS: erä 24d vastaanotettu, kytkentä käynnissä; Botai-otsikko hyväksytty
 
 Erä 24d (17 maalehtikuvaa, 7 miniatyyriä) vastaanotettu; kytketään samalla kaavalla (URL täsmälleen, kuvateksti sanasta sanaan, SHA, silmämääräinen tarkistus, ei tunnistettavia keksittyjä kasvoja Hortonista, al-Farabista, Chen Wen Hsistä tai Martha Ann Ricksistä). Peliversio kuitataan, kun PR on mainissa.
