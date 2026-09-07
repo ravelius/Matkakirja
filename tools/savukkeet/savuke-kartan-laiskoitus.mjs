@@ -268,8 +268,17 @@ if (AMPARI_TOIMII) {
   const {
     ctx, sivu, virheet, haetut, tavut,
   } = await avaaSivu({ lauta: 'kartta' });
+  /*
+   * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026, sanatarkasti: *"eli
+   * että se ei lataisi sitä millään lailla, eikä se olisi myöskään
+   * kytkettävissä päälle"*). Ennen vartio 7 vaati, että ?lauta=kartta
+   * lataa moduulin heti ja piirtää laudan. Nyt parametri ei vaihda
+   * lautaa lainkaan, ja vartio on KÄÄNTEINEN: moduulia ei haeta eikä
+   * lautaa piirretä. Vartio jäi paikalleen, koska juuri tämä on se asia,
+   * joka saa hiljaa palautua, jos joku avaa portin vahingossa.
+   */
   const piirtyi = await sivu.waitForFunction(
-    () => document.querySelectorAll('#board *').length > 100, null, { timeout: 30000 },
+    () => document.querySelectorAll('#board *').length > 100, null, { timeout: 8000 },
   ).then(() => true).catch(() => false);
   const tila = await sivu.evaluate(() => ({
     sijainen: window.matkakirja.ui.kartta.sijainen,
@@ -277,12 +286,12 @@ if (AMPARI_TOIMII) {
     svgLapsia: document.querySelectorAll('#board *').length,
     pallo: Boolean(window.matkakirja.ui.pallolauta),
   }));
-  vaadi('7. ?lauta=kartta lataa moduulin heti ja piirtää laudan',
-    piirtyi && tila.sijainen === false && tila.lepotila === false && !tila.pallo
-    && haetut.has('js/kartta.js'),
+  vaadi('7. ?lauta=kartta EI enää lataa moduulia eikä piirrä lautaa (vanha kartta pois käytöstä)',
+    !piirtyi && tila.sijainen === true && tila.lepotila === true
+    && tila.svgLapsia === 0 && !haetut.has('js/kartta.js'),
     JSON.stringify(tila));
   vaadi('7b. poistettua merisyvyyspakkaa ei haeta kartallakaan', !haetut.has(POISTETTU));
-  tieto('käynnistyksen JS tasokartalla (tavua)', tavut());
+  tieto('käynnistyksen JS ?lauta=kartta-osoitteella (tavua)', tavut());
   if (virheet.length) tieto('sivun virheet', virheet.slice(0, 5).join(' | '));
   await ctx.close();
 }

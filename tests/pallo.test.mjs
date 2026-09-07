@@ -520,7 +520,15 @@ test('lähin näkyvä leveys on vakio 60 yksikköä, ei laattatarkkuus (v1649)',
   assert.match(lauta, /ohj\.minDistance = pallonSade \* \(1 \+ kamera\.korkeusMin\(\)\);/);
 });
 
-test('turvatila: kaksi kaatumista peräkkäin sulkee pallon tältä laitteelta', () => {
+/*
+ * VÄLIAIKAISESTI POIS -VARTIO (omistaja 7.9.2026, sanatarkasti: *"Voisiko
+ * vanhan kartan ottaa pelistä ainakin väliaikaisesti kokonaan pois…"*).
+ * Laskuri ja sen rajat ovat ennallaan; SEURAUS muuttui: turvatila avaa
+ * pallon KEVENNETTYNÄ (laattakerros pois) eikä enää pudota peliä
+ * tasokartalle. Testiä ei poistettu — se vartioi nyt uutta seurausta ja
+ * nimenomaan sitä, ettei tasokarttaa herätetä.
+ */
+test('turvatila: kaksi kaatumista peräkkäin avaa pallon kevennettynä', () => {
   // Laskuri on laitteen asetus (localStorage), ei pelitilan kenttä.
   const muisti = new Map();
   const varasto = {
@@ -542,8 +550,14 @@ test('turvatila: kaksi kaatumista peräkkäin sulkee pallon tältä laitteelta',
   assert.ok(PALLON_TURVATILAN_UNOHDUS_MS >= 10000, 'vakaan istunnon mitta');
   // Turvatila luetaan käynnistyksessä ja pelaaja saa yhden rivin.
   const ui = lue('../js/ui.js');
-  assert.match(ui, /if \(palloTurvatilassa\(\)\) \{ this\.ilmoitaPallonTurvatila\(\); return false; \}/);
-  assert.match(ui, /Karttapallo pois käytöstä tällä laitteella — kytke päälle ratasvalikosta\./);
+  assert.match(ui, /if \(palloTurvatilassa\(\)\) \{ asetaPalloKevennys\(true\); this\.ilmoitaPallonTurvatila\(\); \}/,
+    'turvatila kytkee kevennyksen eikä palauta epätotta (lauta ei vaihdu)');
+  assert.match(ui, /Karttapallo kaatui aiemmin — avataan kevennettynä\./);
+  // Kevennys sammuttaa pallon raskaimman kerroksen — ei vaihda lautaa.
+  const apurit = lue('../js/ui-apurit.js');
+  assert.match(apurit, /export function asetaPalloKevennys\(paalla\) \{/);
+  assert.match(apurit, /if \(palloKevennysPaalla\) return false;/,
+    'laattakerrosPaalla kunnioittaa kevennystä ennen URL:ää ja muistia');
   // Kaatumiset: WebGL puuttuu, rakentaminen kaatuu tai konteksti kuolee.
   const lauta = lue('../js/pallolauta/lauta.js');
   assert.match(lauta, /if \(!webglTuettu\(document\)\) \{\n\s+palloKaatui\(\);/);

@@ -6,6 +6,7 @@ import { KUUNTELUN_ASKEL_S, TEHOSTEKETJUT, kuunteleTehosteketjut } from './tehos
 import { Game } from './game.js';
 import { UI } from './ui.js';
 import {
+  VANHA_KARTTA_KAYTOSSA,
   asetaKehittajaMaailma, asetaKehittajaTila, asetaLautaValinta,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, lautaValinta,
   laatuAinaPaalla, asetaLaatuAina,
@@ -133,7 +134,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1665';
+const APP_VERSION = '2026-08-09.1666';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -658,6 +659,19 @@ const LAUTAKYTKIMET = [
 
 const lautaValikko = document.getElementById('lauta-valikko');
 const lautaVihje = document.getElementById('lauta-vihje');
+/*
+ * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026, sanatarkasti: *"eikä se
+ * olisi myöskään kytkettävissä päälle"*). Pelilauta-osio päävalikossa
+ * kysyisi valintaa, jolla on enää yksi vaihtoehto, joten koko kotelo
+ * piilotetaan — rivejä ei rakenneta lainkaan. Ratasvalikon
+ * pallolauta-vipu piilotetaan samasta syystä alempana
+ * (paivitaKehittajaValikko). Paluu: VANHA_KARTTA_KAYTOSSA todeksi.
+ */
+if (!VANHA_KARTTA_KAYTOSSA) {
+  const kotelo = lautaValikko?.closest('.lauta-kotelo');
+  if (kotelo) kotelo.hidden = true;
+  else if (lautaValikko) lautaValikko.hidden = true;
+}
 
 /** Lyhyt rivi valikossa (sama tapa kuin ratasvalikon vihjerivillä). */
 const naytaLautaVihje = (teksti) => {
@@ -691,7 +705,7 @@ const vaihdaLauta = (lauta) => {
 };
 
 for (const tiedot of LAUTAKYTKIMET) {
-  if (!lautaValikko) break;
+  if (!lautaValikko || !VANHA_KARTTA_KAYTOSSA) break;
   const rivi = document.createElement('button');
   rivi.type = 'button';
   rivi.className = 'aanikytkin';
@@ -1610,7 +1624,13 @@ function paivitaKehittajaValikko() {
   }
   const pallolauta = lautaValinta() === 'pallo';
   merkitseKytkin(pallolautaNappi, pallolauta);
-  if (pallolautaNappi) {
+  /*
+   * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): vipu vaihtaisi
+   * lautaa, jota ei ole — se piilotetaan kokonaan ratasvalikosta.
+   * Nappi ja sen kuuntelija jäävät paikalleen paluuta varten.
+   */
+  if (pallolautaNappi) pallolautaNappi.hidden = !VANHA_KARTTA_KAYTOSSA;
+  if (pallolautaNappi && VANHA_KARTTA_KAYTOSSA) {
     pallolautaNappi.title = pallolauta
       ? 'Pallolauta on PÄÄLLÄ: karttapallo on pelin lauta ja tasokartta herää '
         + 'vain siirron ja linssin ajaksi — kytke pois palataksesi tasokartalle '
@@ -1670,19 +1690,23 @@ function paivitaKehittajaValikko() {
   /*
    * KARTTAPALLON TURVATILA (pallolauta vaihe 5c): laskuri kertoo, montako
    * kertaa pallo on kaatunut peräkkäin tällä laitteella; kahden jälkeen
-   * peli avaa tasokartan. Nappi on nollain eikä kytkin — "päällä"
-   * tarkoittaa, että turvatila on ottanut pallon pois käytöstä.
+   * pallo avataan KEVENNETTYNÄ (laattakerros pois). Nappi on nollain eikä
+   * kytkin — "päällä" tarkoittaa, että turvatila on kevennyksessä.
+   *
+   * EI ENÄÄ TASOKARTTAA (omistaja 7.9.2026): turvatila ei vaihda lautaa,
+   * koska vanha kartta on pois käytöstä (js/ui-apurit.js
+   * VANHA_KARTTA_KAYTOSSA).
    */
   const turvatila = palloTurvatilassa();
   merkitseKytkin(palloTurvatilaNappi, turvatila);
   if (palloTurvatilaNappi) {
     palloTurvatilaNappi.title = turvatila
-      ? 'Karttapallo on POIS KÄYTÖSTÄ tällä laitteella: se kaatui kahdesti '
-        + 'peräkkäin. Napauta nollataksesi laskurin ja yrittääksesi palloa '
-        + 'uudelleen (sivu ladataan uudestaan)'
+      ? 'Karttapallo avataan KEVENNETTYNÄ tällä laitteella (laattakerros pois): '
+        + 'se kaatui kahdesti peräkkäin. Napauta nollataksesi laskurin ja '
+        + 'yrittääksesi täyttä palloa uudelleen (sivu ladataan uudestaan)'
       : `Karttapallon kaatumislaskuri: ${pallonKaatumiset()}. Kahden peräkkäisen `
-        + 'kaatumisen jälkeen peli avaa tasokartan ja kertoo siitä rivillä; '
-        + 'napautus nollaa laskurin';
+        + 'kaatumisen jälkeen pallo avataan kevennettynä ja peli kertoo siitä '
+        + 'rivillä; napautus nollaa laskurin';
   }
   const ilme = ilmePakettiPaalla();
   merkitseKytkin(ilmeNappi, ilme);
@@ -1851,8 +1875,8 @@ palloTurvatilaNappi?.addEventListener('click', () => {
     naytaKehittajaVihje('Kaatumislaskuri nollattu.');
     return;
   }
-  // Turvatila purkautuu vasta käynnistyksessä (lauta valitaan silloin).
-  naytaKehittajaVihje('Karttapallo takaisin käyttöön — ladataan sivu…');
+  // Kevennys purkautuu vasta käynnistyksessä (laattakerros luetaan silloin).
+  naytaKehittajaVihje('Karttapallo täydellä laadulla — ladataan sivu…');
   setTimeout(() => { location.reload(); }, 350);
 });
 

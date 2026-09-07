@@ -230,7 +230,14 @@ const avaaPallo = async (aikakatko = 60000) => sivu
  * on siis harjoituksen alkuehto, ei mitattava asia — mitattava on se,
  * mitä työntekijä tekee laatoille.
  */
-await sivu.goto(`${osoite}?lauta=kartta`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+/*
+ * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): rekisteröintikäynti
+ * tehtiin ennen `?lauta=kartta`-osoitteella, koska tasokartta latautuu
+ * nopeasti eikä avaa palloa. Parametri ei enää vaihda lautaa, joten
+ * käynti tehdään suoraan pallolla — mitattava asia (mitä työntekijä
+ * tekee laatoille) ei muutu.
+ */
+await sivu.goto(`${osoite}?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: 60000 });
 await sivu.evaluate(() => navigator.serviceWorker.register('sw.js').catch(() => null));
 const ohjain = await sivu.waitForFunction(() => Boolean(navigator.serviceWorker?.controller), null,
   { timeout: 120000, polling: 1000 }).then(() => true).catch(() => false);

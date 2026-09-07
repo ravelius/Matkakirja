@@ -76,7 +76,15 @@ const RUUTUKOOT = [
  * pallolle, niin voidaan sulkea vanha kartta kokonaan."*): pallolaudalla
  * etusivun pallo on käytössä ilman lippua, ja lippu on enää poiskytkin.
  */
-test('lippu on oletuksena PÄÄLLÄ pallolaudalla ja pois ?lauta=kartta-tilassa', () => {
+/*
+ * VÄLIAIKAISESTI POIS -VARTIO (omistaja 7.9.2026: vanha kartta pois
+ * käytöstä kokonaan, *"eikä se olisi myöskään kytkettävissä päälle"*).
+ * Ennen tämä testi vaati, että `?lauta=kartta` palauttaa etusivun
+ * pienoiskarttaan. Nyt `?lauta=kartta` ei enää vaihda lautaa lainkaan,
+ * joten sama parametri EI saa muuttaa etusivun oletusta — juuri sitä
+ * testi nyt vartioi.
+ */
+test('lippu on oletuksena PÄÄLLÄ, eikä ?lauta=kartta enää sammuta sitä', () => {
   varasto.clear();
   globalThis.location.search = '';
   unohdaKehittajaKytkimet();
@@ -84,8 +92,8 @@ test('lippu on oletuksena PÄÄLLÄ pallolaudalla ja pois ?lauta=kartta-tilassa'
   assert.equal(etusivupalloPaalla(), true, 'pallolaudalla pallo näkyy ilman yhtään lippua');
   globalThis.location.search = '?lauta=kartta';
   unohdaKehittajaKytkimet();
-  assert.equal(etusivupalloOletus(), false, 'vanhalla kartalla etusivu jää pienoiskarttaan');
-  assert.equal(etusivupalloPaalla(), false);
+  assert.equal(etusivupalloOletus(), true, 'vanha kartta on pois käytöstä: parametri ei vaihda lautaa');
+  assert.equal(etusivupalloPaalla(), true);
   globalThis.location.search = '';
   unohdaKehittajaKytkimet();
 });

@@ -39,6 +39,13 @@ import { MAAILMANKARTTA } from '../../js/packs/maailmankartta.js';
 import { keraaNostot, nostojenYhteenveto } from '../fokuskartta/nostot.mjs';
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 /** Kameran varakohde kaupungeittain, jos peli ei ole vielä ladannut lehteä. */
 const POHJAT = {
   ateena: FOKUS_POHJAT.GRC.rajaus,

@@ -41,6 +41,30 @@ test('kaikki SHELLin tiedostot ovat olemassa', () => {
  */
 const SKANNATTAVAT = ['js', 'js/packs', 'js/linssit', 'js/pallolauta'];
 
+/*
+ * VANHA KARTTA POIS KÄYTÖSTÄ, VÄLIAIKAISESTI (omistaja 7.9.2026,
+ * sanatarkasti: *"Voisiko vanhan kartan ottaa pelistä ainakin
+ * väliaikaisesti kokonaan pois, eli että se ei lataisi sitä millään
+ * lailla, eikä se olisi myöskään kytkettävissä päälle?"*).
+ *
+ * Nämä neljä moduulia ovat tasokartan omia: ne tulivat aina yhdestä
+ * portista (js/kartta-lataus.js lataaTasokartta), joka ei enää tuo
+ * mitään (js/ui-apurit.js VANHA_KARTTA_KAYTOSSA = false). SHELLissä ne
+ * olisivat pelkkää esilatausta — palvelutyöntekijä hakisi js/kartta.js:n
+ * joka asennuksessa, vaikka peli ei sitä koskaan pyydä.
+ *
+ * TIEDOSTOT JÄÄVÄT REPOON. Tämä on VÄLIAIKAINEN vartio: kun vanha kartta
+ * palaa käyttöön, rivit palaavat sw.js:n SHELLiin ja tämä lista tyhjenee.
+ * Lista on nimeltä, jotta poisjättö on aina tietoinen päätös eikä
+ * unohdus — sama sääntö kuin NIPUTTAMATTOMAT-listalla alempana.
+ */
+const VANHA_KARTTA_POIS = new Set([
+  'js/kartta.js',
+  'js/packs/maailmankartta-varjostus.js',
+  'js/packs/maasto-tekstit-malli.js',
+  'js/packs/maasto-tekstit.js',
+]);
+
 /**
  * Hakemiston .js-tiedostot repon juuresta laskettuina polkuina.
  *
@@ -59,10 +83,19 @@ function moduulitLevylla(hakemisto) {
 
 test('kaikki js-moduulit ovat SHELLissä', () => {
   const levy = SKANNATTAVAT.flatMap(moduulitLevylla);
-  const unohtui = levy.filter((p) => !SHELL.includes(p));
+  const unohtui = levy.filter((p) => !SHELL.includes(p) && !VANHA_KARTTA_POIS.has(p));
   assert.deepEqual(unohtui, [],
     'nämä moduulit puuttuvat sw.js:n SHELL-listalta — offline hajoaisi. Korjaus on '
     + `sw.js:n SHELL-listaan: ${unohtui.map((p) => `'./${p}',`).join(' ')}`);
+
+  // Symmetria: pois jätetty moduuli ei saa olla myös SHELLissä — muuten
+  // lista valehtelisi siitä, mitä palvelutyöntekijä hakee.
+  const tuplana = [...VANHA_KARTTA_POIS].filter((p) => SHELL.includes(p));
+  assert.deepEqual(tuplana, [],
+    'tasokartan moduuli on sekä SHELLissä että VANHA_KARTTA_POIS-listalla — poista toisesta');
+  const kadonneet = [...VANHA_KARTTA_POIS].filter((p) => !existsSync(join(JUURI, p)));
+  assert.deepEqual(kadonneet, [],
+    'VANHA_KARTTA_POIS viittaa tiedostoihin joita ei enää ole — siivoa lista');
 });
 
 /*

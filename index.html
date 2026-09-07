@@ -193,9 +193,15 @@
                  Raamattu KARTTAPALLO ON PELILAUTA). Vipu tallentaa
                  valinnan laitteelle (js/ui-apurit.js lautaValinta) ja
                  lataa sivun uudestaan — lauta valitaan käynnistyksessä.
-                 Sama valinta URL-parametrilla ?lauta=pallo|kartta. -->
+                 Sama valinta URL-parametrilla ?lauta=pallo|kartta.
+
+                 PIILOSSA 7.9.2026 (omistaja: "eikä se olisi myöskään
+                 kytkettävissä päälle"): vanha kartta on pois käytöstä,
+                 joten vivulla ei ole toista lautaa vaihdettavaksi.
+                 js/main.js pitää sen piilossa niin kauan kuin
+                 js/ui-apurit.js VANHA_KARTTA_KAYTOSSA on epätosi. -->
             <button id="kehittaja-pallolauta-btn" class="ghost kehittaja-kytkin"
-                    type="button" aria-pressed="false">
+                    type="button" aria-pressed="false" hidden>
               <span class="viiva-ikoni" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M4.4 12h15.2"/><path d="M12 4c-3 2.2-3 13.8 0 16M12 4c3 2.2 3 13.8 0 16"/></svg></span>
               <span class="kehittaja-kytkin-nimi">pallolauta</span>
               <span class="kehittaja-kytkin-tila">pois</span>
@@ -390,7 +396,12 @@
               js/main.js:ssä; valinta lataa sivun uudestaan eikä koske
               tallennukseen — sama peli jatkuu toisella laudalla.
             -->
-            <div class="kertoja-kotelo lauta-kotelo">
+            <!-- PIILOSSA 7.9.2026 (omistaja: vanha kartta pois käytöstä
+                 kokonaan): valittavia lautoja on enää yksi, joten koko
+                 osio on piilossa. js/main.js pitää sen piilossa niin
+                 kauan kuin js/ui-apurit.js VANHA_KARTTA_KAYTOSSA on
+                 epätosi. -->
+            <div class="kertoja-kotelo lauta-kotelo" hidden>
               <p class="valikko-otsikko">Pelilauta</p>
               <div id="lauta-valikko" class="kertoja-valikko lauta-valikko"
                    role="radiogroup" aria-label="Pelilauta"></div>

@@ -45,6 +45,13 @@ import { packById } from '../../js/pack.js';
 import { HISTORIAN_HETKET, hetkenKuvat } from '../../js/packs/historian-hetket.js';
 import { TAKY_PALKKIO } from '../../js/fokusvirta.js';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 /** Hetki, jolla on kolme kuvaa — mittauskohde on sen lehtikuva. */
 const KOLMIKUVAINEN = 'trafalgar-victory-1805';
 

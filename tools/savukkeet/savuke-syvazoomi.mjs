@@ -78,7 +78,13 @@
  * 402 x 874 dpr 3, Kreikka, mittajana 25 km), josta jälkimmäinen
  * bugiraportti on kirjoitettu.
  */
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): mittari ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
 import { mittaaSyvaZoomi, tiivista } from './mittaa-syvazoomi.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
 
 let lapi = 0;
 let kaikki = 0;

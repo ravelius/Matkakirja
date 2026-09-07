@@ -48,7 +48,16 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 
-const LAUTA = (() => { const i = process.argv.indexOf('--lauta'); return i > 0 && process.argv[i + 1] === 'pallo' ? 'pallo' : 'kartta'; })();
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): `--lauta kartta`
+// ohjataan pallolle (tools/savukkeet/vanha-kartta-ohitus.mjs).
+import { vainPallo } from './vanha-kartta-ohitus.mjs';
+
+/*
+ * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): `--lauta kartta` ei
+ * enää vaihda lautaa, joten ajo tehdään pallolla ja siitä kerrotaan
+ * yhdellä rivillä (tools/savukkeet/vanha-kartta-ohitus.mjs).
+ */
+const LAUTA = vainPallo((() => { const i = process.argv.indexOf('--lauta'); return i > 0 ? process.argv[i + 1] : 'kartta'; })());
 const PALLOLLA = LAUTA === 'pallo';
 /* Ämpäri Noden kautta (CLAUDE.md: NODE_USE_ENV_PROXY=1) — vain pallolaudalla. */
 const AMPARI_VALIMUISTI = new Map();

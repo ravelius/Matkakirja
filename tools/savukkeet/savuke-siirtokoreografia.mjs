@@ -58,6 +58,10 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): `--lauta kartta`
+// ohjataan pallolle (tools/savukkeet/vanha-kartta-ohitus.mjs).
+import { vainPallo } from './vanha-kartta-ohitus.mjs';
+
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -66,7 +70,12 @@ const chromium = paketti.chromium ?? paketti.default?.chromium;
 const JUURI = new URL('../..', import.meta.url).pathname;
 const argit = process.argv.slice(2);
 const lautaArg = argit.indexOf('--lauta');
-const LAUTA = lautaArg >= 0 ? (argit[lautaArg + 1] ?? 'kartta') : 'kartta';
+/*
+ * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): `--lauta kartta` ei
+ * enää vaihda lautaa, joten ajo tehdään pallolla ja siitä kerrotaan
+ * yhdellä rivillä (tools/savukkeet/vanha-kartta-ohitus.mjs).
+ */
+const LAUTA = vainPallo(lautaArg >= 0 ? (argit[lautaArg + 1] ?? 'kartta') : 'kartta');
 /*
  * PIKSELISUHDE KONTISSA (`--dpr N`, oletus laitteen oma 3/2). Pallo
  * piirtyy WebGL:llä, ja kontin Chromium ajaa sen ohjelmistorasteroijalla

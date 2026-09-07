@@ -64,6 +64,13 @@ import { SKANDAALIT } from '../../js/packs/skandaalit.js';
 import { KAUPUNKIKARTAT } from '../../js/packs/maakartat.js';
 import { NOSTOSYM_MINI_RUUTU, nostosymTekstinLeveys } from '../../js/fokusnosto-symbolit.js';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));

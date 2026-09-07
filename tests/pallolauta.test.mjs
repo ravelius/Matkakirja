@@ -25,7 +25,9 @@ globalThis.localStorage = {
 globalThis.location = { search: '' };
 
 const apurit = await import('../js/ui-apurit.js');
-const { LAUTA_OLETUS, lautaValinta, asetaLautaValinta, unohdaKehittajaKytkimet } = apurit;
+const {
+  LAUTA_OLETUS, VANHA_KARTTA_KAYTOSSA, lautaValinta, asetaLautaValinta, unohdaKehittajaKytkimet,
+} = apurit;
 const kamera = await import('../js/pallolauta/kamera.js');
 const {
   korkeusLeveydesta, leveysKorkeudesta, PALLO_KORKEUS_MAX, PALLO_KORKEUS_MIN,
@@ -36,38 +38,59 @@ const { Game } = await import('../js/game.js');
 const { packById } = await import('../js/pack.js');
 const { PALLO_SUKELLUSLEVEYS } = await import('../js/pallo.js');
 
-test('laudan valinta: URL voittaa muistin, muisti voittaa oletuksen, oletus on pallo', () => {
+/*
+ * VÄLIAIKAISESTI POIS -VARTIO (omistaja 7.9.2026 aamu, sanatarkasti:
+ * *"Voisiko vanhan kartan ottaa pelistä ainakin väliaikaisesti kokonaan
+ * pois, eli että se ei lataisi sitä millään lailla, eikä se olisi
+ * myöskään kytkettävissä päälle?"*).
+ *
+ * Ennen tämä testi vartioi kolmen lähteen ketjua URL › muisti › oletus
+ * KAHDELLA laudalla. Ketju on ennallaan, mutta kelpaavia lautoja on enää
+ * yksi: 'kartta' ohitetaan kuin mikä tahansa tuntematon arvo. Testi
+ * vartioi nyt sitä, ETTEI vanhaa karttaa saa millään kytkettyä päälle.
+ */
+test('laudan valinta: vanhaa karttaa ei voi kytkeä päälle millään lähteellä', () => {
   assert.equal(LAUTA_OLETUS, 'pallo', 'pallo on oletuslauta (omistaja 5.9.2026: "Ota vanha kartta jo heti kokonaan pois ja korvaa pallolla")');
+  assert.equal(VANHA_KARTTA_KAYTOSSA, false, 'vanha kartta on väliaikaisesti pois käytöstä (omistaja 7.9.2026)');
   unohdaKehittajaKytkimet();
   assert.equal(lautaValinta(), 'pallo');
-  // Muisti ohjaa, kun URL ei sano mitään: palautusoptio on vanha kartta.
+  // 1. MUISTI: 'kartta' ei enää kelpaa, joten avainta ei edes kirjoiteta.
   asetaLautaValinta('kartta');
-  assert.equal(varasto.get('matkakirja-lauta'), 'kartta');
-  assert.equal(lautaValinta(), 'kartta');
-  // Oletuksen valinta poistaa avaimen: vakion vaihto tavoittaa laitteen.
-  asetaLautaValinta('pallo');
-  assert.equal(varasto.has('matkakirja-lauta'), false);
+  assert.equal(varasto.has('matkakirja-lauta'), false, 'kelpaamatonta lautaa ei talleteta');
   assert.equal(lautaValinta(), 'pallo');
-  // URL-parametri voittaa muistin; vieras arvo ohitetaan (katselutilan
-  // ?lauta=<laudan id> ei sotke).
-  asetaLautaValinta('kartta');
+  // Laitteelle aiemmin jäänyt vanha arvo ohitetaan kuten tuntematon arvo.
+  varasto.set('matkakirja-lauta', 'kartta');
+  unohdaKehittajaKytkimet();
+  assert.equal(lautaValinta(), 'pallo', 'vanha muistiarvo ei herätä tasokarttaa');
+  varasto.delete('matkakirja-lauta');
+  // 2. OSOITE: ?lauta=kartta on nyt yhtä tuntematon kuin ?lauta=maailmankartta.
+  globalThis.location = { search: '?lauta=kartta' };
+  unohdaKehittajaKytkimet();
+  assert.equal(lautaValinta(), 'pallo', '?lauta=kartta ei vaihda lautaa');
+  globalThis.location = { search: '?lauta=maailmankartta' };
+  unohdaKehittajaKytkimet();
+  assert.equal(lautaValinta(), 'pallo', 'tuntematon URL-arvo ei ole laudan valinta');
   globalThis.location = { search: '?lauta=pallo' };
   unohdaKehittajaKytkimet();
   assert.equal(lautaValinta(), 'pallo');
-  globalThis.location = { search: '?lauta=maailmankartta' };
-  unohdaKehittajaKytkimet();
-  assert.equal(lautaValinta(), 'kartta', 'tuntematon URL-arvo ei ole laudan valinta');
-  // Arvo muistetaan eikä lueta levyltä joka kerta.
-  varasto.set('matkakirja-lauta', 'pallo');
-  assert.equal(lautaValinta(), 'kartta', 'muistettu arvo pysyy, kunnes joku unohtaa sen');
-  unohdaKehittajaKytkimet();
-  assert.equal(lautaValinta(), 'pallo');
+  // 3. MUISTI EI OLE LEVYLUKU: arvo pysyy, kunnes joku unohtaa sen.
   globalThis.location = { search: '' };
+  unohdaKehittajaKytkimet();
+  varasto.set('matkakirja-lauta', 'kartta');
+  assert.equal(lautaValinta(), 'pallo', 'muistettu arvo pysyy, kunnes joku unohtaa sen');
+  varasto.delete('matkakirja-lauta');
   asetaLautaValinta('pallo');
   unohdaKehittajaKytkimet();
 });
 
-test('sama tallenne latautuu kummallakin laudalla identtiseksi pelitilaksi; pelitila ei tunne lautaa', () => {
+/*
+ * PELITILA EI TUNNE LAUTAA. Vanha kartta on väliaikaisesti pois käytöstä
+ * (omistaja 7.9.2026), joten `asetaLautaValinta('kartta')` ei enää vaihda
+ * lautaa — sääntö itse on silti voimassa ja tärkeä: tallenne on laudasta
+ * riippumaton, ja niin sen on oltava myös silloin, kun vanha kartta
+ * palaa. Testi lataa saman tallenteen kahdesti ja vartioi js/game.js:n.
+ */
+test('sama tallenne latautuu identtiseksi pelitilaksi; pelitila ei tunne lautaa', () => {
   const peli = new Game({
     players: [{ name: 'Fogg', color: '#c9a227', start: 'ateena' }],
     pack: packById('maailmankartta'),
@@ -78,14 +101,14 @@ test('sama tallenne latautuu kummallakin laudalla identtiseksi pelitilaksi; peli
   const lataa = (lauta) => {
     asetaLautaValinta(lauta);
     unohdaKehittajaKytkimet();
-    assert.equal(lautaValinta(), lauta);
     return JSON.stringify(Game.fromJSON(JSON.parse(tallenne)).toJSON());
   };
-  assert.equal(lataa('kartta'), lataa('pallo'), 'pelitila on sama kummallakin laudalla');
+  assert.equal(lataa('kartta'), lataa('pallo'), 'pelitila on sama laudan valinnasta riippumatta');
+  assert.equal(lautaValinta(), 'pallo', 'vanha kartta ei kytkeydy päälle valinnasta');
   assert.ok(!/"lauta"|pallolauta/.test(tallenne), 'tallenteessa ei ole laudan valintaa');
   const game = lue('../js/game.js');
   assert.ok(!/lautaValinta|matkakirja-lauta|pallolauta/.test(game), 'js/game.js ei muutu riviäkään (karttapallo.md luku 1)');
-  asetaLautaValinta('kartta');
+  asetaLautaValinta('pallo');
   unohdaKehittajaKytkimet();
 });
 
@@ -213,7 +236,13 @@ test('tasokartta pois tieltä yhdestä portista; kamera kulkee delegaatin kautta
   // Erä 5b: karttahaara kulkee latausportin kautta (heraaTasokartta →
   // varmistaKartta → kartta.heraa → drawBoardFor), pallohaara ei lataa
   // eikä piirrä mitään.
-  assert.match(ui, /if \(this\.pallolautaHalutaan\(\) \|\| this\.etusivunPalloKaytossa\(\)\) this\.kartta\.lepotila = true;\n    else void this\.heraaTasokartta\(\);/);
+  /*
+   * VÄLIAIKAISESTI POIS (omistaja 7.9.2026): karttahaaran EDESSÄ on nyt
+   * yksi portti — tasokartta jää lepotilaan kaikilla poluilla, myös kun
+   * etusivun pallo on kytketty pois. Vanha kaksihaarainen ehto jää
+   * paikalleen sen alle paluuta varten.
+   */
+  assert.match(ui, /if \(!VANHA_KARTTA_KAYTOSSA\) this\.kartta\.lepotila = true;\n\s*else if \(this\.pallolautaHalutaan\(\) \|\| this\.etusivunPalloKaytossa\(\)\) this\.kartta\.lepotila = true;\n\s*else void this\.heraaTasokartta\(\);/);
   // Delegaatti ja sen käyttö: kartta-oliota ei enää haeta suoraan ajoihin.
   assert.match(ui, /^  kamera\(\) \{\n    return this\.pallolautaPaalla\(\) \? this\.pallolauta\.kamera : this\.kartta;/m);
   assert.ok(!ui.includes('const kartta = this.kartta;'), 'ajot kulkevat this.kamera():n kautta');
@@ -227,15 +256,22 @@ test('tasokartta pois tieltä yhdestä portista; kamera kulkee delegaatin kautta
   // (tests/pallolinssit.test.mjs vartioi sopimuksen).
   assert.match(ui, /if \(tunnus && this\.pallolautaPaalla\(\) && !pallolle\) this\.avaaLinssikartta\(\{ linssi: true \}\);/);
   assert.match(ui, /^  tarkistaLinssikartta\(\) \{/m);
-  // Varapolku: kartta herää vain tälle istunnolle; laitteen valintaa ei
-  // kirjoiteta (pallo on oletus — yksi verkoton käynnistys ei saa lukita
-  // laitetta vanhaan karttaan).
+  /*
+   * VARAPOLKU EI AVAA VANHAA KARTTAA (omistaja 7.9.2026): kaatunut pallo
+   * yritetään uudelleen kevennettynä, ja vasta toisesta kaatumisesta
+   * pelaaja saa selkeän virheilmoituksen. Laitteen valintaa ei kirjoiteta
+   * kummassakaan tapauksessa.
+   */
   assert.doesNotMatch(ui, /asetaLautaValinta\(/);
   assert.match(ui, /this\.pallolautaEpaonnistui = true;/);
-  assert.match(ui, /Karttapallo ei latautunut — pelataan kartalla/);
-  // Kytkin: ratasvalikon vipu, URL-parametri ja SHELL.
-  assert.match(lue('../index.html'), /id="kehittaja-pallolauta-btn"/);
+  assert.match(ui, /Karttapallo kaatui — avataan kevennettynä\./);
+  assert.match(ui, /Karttapalloa ei saatu auki tällä laitteella\./);
+  assert.doesNotMatch(ui, /pelataan kartalla/, 'vanha kartta ei ole enää varapolku');
+  // Kytkin: nappi jää paikalleen mutta on piilossa, kunnes vanha kartta palaa.
+  const html = lue('../index.html');
+  assert.match(html, /id="kehittaja-pallolauta-btn"/);
   const main = lue('../js/main.js');
+  assert.match(main, /if \(pallolautaNappi\) pallolautaNappi\.hidden = !VANHA_KARTTA_KAYTOSSA;/);
   assert.match(main, /asetaLautaValinta\(halutaan \? 'pallo' : 'kartta'\);/);
   assert.match(main, /osoite\.searchParams\.delete\('lauta'\);/);
   const sw = lue('../sw.js');
@@ -349,14 +385,20 @@ test('vaihe 6: pelaajan asetusrivi on päävalikossa, samalla avaimella ja samal
   assert.equal((main.match(/asetaLautaValinta\(/g) ?? []).length, 2, 'valinnan kirjoittaa vain asetusrivi ja vipu');
 });
 
-test('vaihe 6: valinta on laitteen asetus — sama avain molemmilla kytkimillä, oletus poistaa avaimen', () => {
+test('vaihe 6: valinta on laitteen asetus — oletus poistaa avaimen, kelpaamaton ei kirjoita', () => {
   unohdaKehittajaKytkimet();
-  // Pelaajan rivi ja ratasvalikon vipu kirjoittavat saman avaimen.
+  /*
+   * VÄLIAIKAISESTI POIS (omistaja 7.9.2026): kytkimet kirjoittavat yhä
+   * saman avaimen, mutta ainoa kelpaava arvo on oletus 'pallo', joka
+   * POISTAA avaimen. Kelpaamaton 'kartta' ei kirjoita mitään — laite ei
+   * jää puolitilaan, jossa vanha kartta odottaisi paluutaan muistissa.
+   */
   asetaLautaValinta('kartta');
-  assert.equal(varasto.get('matkakirja-lauta'), 'kartta');
+  assert.equal(varasto.has('matkakirja-lauta'), false, 'kelpaamatonta lautaa ei talleteta');
   unohdaKehittajaKytkimet();
-  assert.equal(lautaValinta(), 'kartta');
-  // Paluu palloon (oletus) poistaa avaimen — eikä jätä laitetta puolitilaan.
+  assert.equal(lautaValinta(), LAUTA_OLETUS);
+  // Laitteelle aiemmin jäänyt arvo pyyhkiytyy, kun kytkintä käytetään.
+  varasto.set('matkakirja-lauta', 'kartta');
   asetaLautaValinta('pallo');
   assert.equal(varasto.has('matkakirja-lauta'), false);
   unohdaKehittajaKytkimet();
@@ -365,12 +407,7 @@ test('vaihe 6: valinta on laitteen asetus — sama avain molemmilla kytkimillä,
   varasto.set('matkakirja-pallo-kaatumiset', '2');
   asetaLautaValinta('pallo');
   assert.equal(varasto.has('matkakirja-pallo-kaatumiset'), false, 'pallon valinta nollaa turvatilalaskurin');
-  // Kartalle vaihtaessa laskuriin ei kosketa (turvatila on pallon asia).
-  varasto.set('matkakirja-pallo-kaatumiset', '2');
-  asetaLautaValinta('kartta');
-  assert.equal(varasto.get('matkakirja-pallo-kaatumiset'), '2');
   varasto.delete('matkakirja-pallo-kaatumiset');
-  asetaLautaValinta('pallo');
   unohdaKehittajaKytkimet();
 });
 

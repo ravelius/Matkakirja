@@ -15,6 +15,13 @@ import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;

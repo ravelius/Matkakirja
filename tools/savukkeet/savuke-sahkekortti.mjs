@@ -44,6 +44,13 @@ import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '../..');
 const ULOS = process.env.KAAPPAUSKANSIO ?? '/tmp/matkakirja-kaappaukset';
 mkdirSync(ULOS, { recursive: true });

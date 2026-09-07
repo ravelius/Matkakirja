@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1665';
+const CACHE = 'matkakirja-2026-08-09.1666';
 const SHELL = [
   './',
   './index.html',
@@ -18,14 +18,25 @@ const SHELL = [
   './js/ui.js',
   './js/siirtokoreografia.js',
   /*
-   * Tasokartta ja sen aineistopakat tulevat dynaamisena tuontina
-   * (js/kartta-lataus.js, laiskoituserä 5b 5.9.2026) — ne PYSYVÄT
-   * SHELLissä, koska laiskoitus siirtää latauksen ajankohtaa eikä
-   * poista sitä: ilman verkkoa linssikartan avaus tai ?lauta=kartta
-   * hakee moduulin tästä korista.
+   * TASOKARTTA POIS ESILATAUKSESTA (omistaja 7.9.2026, sanatarkasti:
+   * *"eli että se ei lataisi sitä millään lailla"*). Vanha kartta on
+   * väliaikaisesti pois käytöstä (js/ui-apurit.js VANHA_KARTTA_KAYTOSSA),
+   * eikä js/kartta-lataus.js lataaTasokartta enää tuo mitään — jos
+   * ne jäisivät SHELLiin, palvelutyöntekijä hakisi ne silti joka
+   * asennuksessa, ja juuri sen omistaja kielsi.
+   *
+   * SHELLISTÄ POIS TÄSSÄ ERÄSSÄ (tests/sw.test.mjs VANHA_KARTTA_POIS
+   * kertoo saman): js/kartta.js sekä sen omat aineistopakat
+   * js/packs/maasto-tekstit.js, js/packs/maasto-tekstit-malli.js ja
+   * js/packs/maailmankartta-varjostus.js. Tiedostot jäävät repoon ja
+   * yhden tiedoston versioon; SHELLiin ne palaavat samalla, kun
+   * VANHA_KARTTA_KAYTOSSA kääntyy todeksi.
+   *
+   * PYRAMIDIN LAATAT EIVÄT OLE TASOKARTAN OMAISUUTTA: pallon laattakerros
+   * lukee saman pyramidin luetteloa ja rantatasoa (js/pallolaatat.js),
+   * joten js/laattapyramidi.js ja laattakori jäävät ennalleen.
    */
   './js/kartta-lataus.js',
-  './js/kartta.js',
   './js/karttamittari.js',
   './js/fokusmitat.js',
   './js/laattapyramidi.js',
@@ -115,9 +126,6 @@ const SHELL = [
   './js/packs/vuori-valokuvat.js',
   './js/packs/maasto-nimet-vedet.js',
   './js/packs/maailmankartta-syvyys.js',
-  './js/packs/maasto-tekstit-malli.js',
-  './js/packs/maasto-tekstit.js',
-  './js/packs/maailmankartta-varjostus.js',
   './js/packs/linssi-topografia.js',
   './js/packs/linssi-maaluvut.js',
   './js/packs/linssi-muuttoliike.js',

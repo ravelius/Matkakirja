@@ -34,7 +34,10 @@ import {
   pisteMonikulmiossa, polloNimilappu, polunPituus,
   cachedImage, cachedSummary, fokusmoodiPaalla,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, unohdaKehittajaKytkimet,
-  lautaValinta, palloTurvatilassa, etusivupalloPaalla,
+  lautaValinta, palloTurvatilassa, asetaPalloKevennys, palloKevennetty, etusivupalloPaalla,
+  // VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): yksi vakio ratkaisee,
+  // ladataanko tasokarttaa lainkaan (js/ui-apurit.js).
+  VANHA_KARTTA_KAYTOSSA,
   laukunTilastotAuki, tallennaLaukunTilastot,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
 } from './ui-apurit.js';
@@ -3065,7 +3068,15 @@ export class UI {
      * js/kartta.js on paikallaan (heraaTasokartta) — piirto on yhden
      * mikrotehtävän, verkottomana SW-välimuistin haun, päässä entisestä.
      */
-    if (this.pallolautaHalutaan() || this.etusivunPalloKaytossa()) this.kartta.lepotila = true;
+    /*
+     * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): karttahaaraan ei
+     * mennä lainkaan — tasokartta jää lepotilaan myös silloin, kun
+     * etusivun pallo on kytketty pois (`?etusivupallo=0`). Ylälohkoon jää
+     * silloin pergamentti ja julisteotsikko, kuten silloin kun pallovideo
+     * ei lataudu; vanhaa pienoiskarttaa ei enää piirretä.
+     */
+    if (!VANHA_KARTTA_KAYTOSSA) this.kartta.lepotila = true;
+    else if (this.pallolautaHalutaan() || this.etusivunPalloKaytossa()) this.kartta.lepotila = true;
     else void this.heraaTasokartta();
     /*
      * NOPPA KARTAN SIIRTOKUOREEN, EI KARTTARUUTUUN (#98). Kuori on se
@@ -3909,11 +3920,18 @@ export class UI {
     if (lautaValinta() !== 'pallo') return false;
     /*
      * TURVATILA (vaihe 5c, karttapallo.md luku 6): kaksi kaatumista
-     * peräkkäin tällä laitteella → tasokartta ja yksi rivi. Laskuri on
-     * laitteen asetus (js/ui-apurit.js), ei pelitilan kenttä, ja
-     * ratasvalikon vipu nollaa sen.
+     * peräkkäin tällä laitteella. Laskuri on laitteen asetus
+     * (js/ui-apurit.js), ei pelitilan kenttä, ja ratasvalikon vipu
+     * nollaa sen.
+     *
+     * EI ENÄÄ TASOKARTTAA (omistaja 7.9.2026: vanha kartta pois
+     * käytöstä kokonaan). Ennen tämä palautti epätoden ja peli avasi
+     * tasokartan; nyt pallo pysyy lautana ja avataan KEVENNETTYNÄ —
+     * laattakerros pois tältä istunnolta (asetaPalloKevennys), yksi
+     * rivi pelaajalle. Kevennys kytketään heti tässä, koska
+     * js/pallolauta/lauta.js lukee laattakerroksen avatessaan pallon.
      */
-    if (palloTurvatilassa()) { this.ilmoitaPallonTurvatila(); return false; }
+    if (palloTurvatilassa()) { asetaPalloKevennys(true); this.ilmoitaPallonTurvatila(); }
     if (!this.aloituslentoPallolla()) return false;
     /*
      * LÄHTÖKAUPUNKI VALITAAN PALLOLTA (aalto 3A, omistaja 5.9.2026:
@@ -3988,6 +4006,17 @@ export class UI {
    * asia, jotta lataus ei piirrä lautaa kenenkään selän takana.
    */
   async varmistaKartta() {
+    /*
+     * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026, sanatarkasti:
+     * *"eli että se ei lataisi sitä millään lailla"*). Portti on tässä
+     * eikä kutsupaikoissa: sijainen jää paikalleen, eikä
+     * js/kartta-lataus.js lataaTasokarttaan mennä lainkaan — muuten
+     * jokainen kutsu kirjaisi konsoliin turhan varoituksen. Sijaisen
+     * rajapinta riittää pallolaudalla (kiertava, boardBounds,
+     * dieRestingSpot); herätys palauttaa aina false, joten kutsujat
+     * eivät piirrä tyhjää. Paluu: VANHA_KARTTA_KAYTOSSA (js/ui-apurit.js).
+     */
+    if (!VANHA_KARTTA_KAYTOSSA) return this.kartta;
     if (!this.kartta.sijainen) return this.kartta;
     let osat = null;
     try {
@@ -4097,52 +4126,77 @@ export class UI {
   }
 
   /**
-   * Pallo ei latautunut: tasokartta hereille tälle istunnolle ja laitteen
-   * valinta takaisin kartaksi, jotta seuraava käynnistys ei jää odottamaan
-   * palloa ilman verkkoa (tehtävänanto 5.9.2026). Yksi rivi pelaajalle.
+   * Pallo ei latautunut tai se kaatui. EI ENÄÄ TASOKARTTAA (omistaja
+   * 7.9.2026, sanatarkasti: *"Voisiko vanhan kartan ottaa pelistä ainakin
+   * väliaikaisesti kokonaan pois, eli että se ei lataisi sitä millään
+   * lailla, eikä se olisi myöskään kytkettävissä päälle?"*).
+   *
+   * KAKSI ASKELTA, EI KOLMATTA LAUTAA:
+   *   1. ensimmäinen kaatuminen tässä istunnossa → pallo yritetään
+   *      uudelleen KEVENNETTYNÄ (laattakerros pois, js/ui-apurit.js
+   *      asetaPalloKevennys) ja pelaaja saa siitä rivin;
+   *   2. jos kevennettykin kaatuu, peli näyttää selkeän virheilmoituksen
+   *      eikä avaa mitään lautaa. Vanha kartta ei ole vaihtoehto: sen
+   *      moduulia ei ladata (js/kartta-lataus.js VANHA_KARTTA_KAYTOSSA).
+   *
+   * Laitteen valintaa ei kirjoiteta kummassakaan tapauksessa
+   * (karttapallo.md luku 2), joten seuraava käynnistys yrittää palloa
+   * uudestaan täydellä laadulla.
    */
   pallolautaVarapolku() {
-    /*
-     * VAIN TÄLLE ISTUNNOLLE (karttapallo.md luku 2: varapolku ei kirjoita
-     * valintaa). Pallo on oletuslauta 5.9.2026 alkaen; jos yksi
-     * verkoton käynnistys tallentaisi kartan laitteelle, pallo ei enää
-     * palaisi koskaan. pallolautaEpaonnistui riittää: seuraava
-     * käynnistys yrittää palloa uudestaan.
-     */
-    this.pallolautaEpaonnistui = true;
     // Pallolla ollut linssi katoaa laudan mukana; kahva pois kirjoista.
     this.pallolinssi = null;
     this.pallolauta?.pura();
     this.pallolauta = null;
-    if (this.kartta.lepotila) this.kartta.heraa();
-    this.render();
     /*
-     * LÄHTÖVALINTA OLI PALLOLLA (aalto 3A): pallo kaatui kesken
-     * valinnan, joten kartta ottaa sen takaisin omalla lähikuvallaan —
-     * muuten valinta jäisi yleiskuvaan ilman kohdepisteitä. Lippu on
-     * nollattava ensin, koska aloitusvalintaAuki portittaa koko polun.
-     * `pallolautaEpaonnistui` on jo tosi, joten aloitaKartalta ei enää
-     * palaa pallolle.
+     * TOINEN YRITYS KEVENNETTYNÄ. `pallolautaEpaonnistui` jää epätodeksi,
+     * jotta pallolautaHalutaan päästää seuraavan avauksen läpi; render
+     * kutsuu avaaPallolautaa uudelleen samassa vuorossa. Kevennys on
+     * istunnon lippu eikä laitteen asetus, joten se ei jää päälle.
      */
-    if (this.game.phase === 'pickstart' && this.aloitusvalintaPallolla) {
-      this.aloitusvalintaPallolla = false;
-      void this.aloitaTasokartalta();
+    if (!palloKevennetty()) {
+      asetaPalloKevennys(true);
+      this.render();
+      const kevyt = this.buildToast({
+        kind: 'info',
+        text: 'Karttapallo kaatui — avataan kevennettynä.',
+      });
+      setTimeout(() => this.removeToast(kevyt), TOAST_MS.default * 3);
+      return;
     }
-    const box = this.buildToast({ kind: 'info', text: 'Karttapallo ei latautunut — pelataan kartalla.' });
-    setTimeout(() => this.removeToast(box), TOAST_MS.default * 3);
+    /*
+     * KEVENNETTYKIN KAATUI: lauta jää avaamatta ja pelaaja saa selkeän
+     * virheilmoituksen. Ruutu ei jää tyhjäksi mustaksi — pergamentti ja
+     * pelin muut osat (laukku, lehdet, valikot) ovat entisellään, ja
+     * ratasvalikon "pallon turvatila" nollaa laskurin uutta yritystä
+     * varten.
+     */
+    this.pallolautaEpaonnistui = true;
+    this.render();
+    const box = this.buildToast({
+      // 'bad' on talon punainen kupla (css/styles.css .event-toast.bad);
+      // omaa 'error'-luokkaa ei ole, joten se jäisi tyylittömäksi.
+      kind: 'bad',
+      icon: 'estetty',
+      text: 'Karttapalloa ei saatu auki tällä laitteella. Kokeile ladata sivu uudelleen.',
+    });
+    setTimeout(() => this.removeToast(box), TOAST_MS.default * 4);
   }
 
   /**
-   * TURVATILAN RIVI (vaihe 5c): pallo on suljettu tältä laitteelta kahden
-   * kaatumisen jälkeen. Rivi näytetään kerran istunnossa — pallolautaHalutaan
-   * kysytään joka piirrossa, eikä ilmoitus saa toistua.
+   * TURVATILAN RIVI (vaihe 5c): pallo on kaatunut kahdesti peräkkäin
+   * tällä laitteella, joten se avataan kevennettynä (laattakerros pois).
+   * Rivi näytetään kerran istunnossa — pallolautaHalutaan kysytään joka
+   * piirrossa, eikä ilmoitus saa toistua. (Ennen 7.9.2026 rivi kertoi
+   * pallon sulkeutuneen ja pelin siirtyneen tasokartalle; vanha kartta on
+   * nyt pois käytöstä eikä lauta enää vaihdu.)
    */
   ilmoitaPallonTurvatila() {
     if (this.pallonTurvatilaIlmoitettu || this.dead) return;
     this.pallonTurvatilaIlmoitettu = true;
     const box = this.buildToast({
       kind: 'info',
-      text: 'Karttapallo pois käytöstä tällä laitteella — kytke päälle ratasvalikosta.',
+      text: 'Karttapallo kaatui aiemmin — avataan kevennettynä. Nollaa ratasvalikosta.',
     });
     setTimeout(() => this.removeToast(box), TOAST_MS.default * 3);
   }
@@ -4186,6 +4240,19 @@ export class UI {
    * kaupungissa.
    */
   avaaLinssikartta(tiedot = {}) {
+    /*
+     * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026, sanatarkasti: *"ei
+     * lataisi sitä millään lailla"*). Linssikartta oli tasokartan
+     * VIIMEINEN pelinsisäinen herätyspolku. Kaikki käytössä olevat
+     * linssit (ihmisen-matka, keksinnot, radio, topografia, vertailu,
+     * maatiedot, vesistot) piirtävät jo pallon pinnalle `pallolle`-
+     * sopimuksella, joten tämä haara oli jo kuollut koodi; portti pitää
+     * sen kuolleena myös silloin, kun joku avaa uuden linssin ilman
+     * `pallolle`-toteutusta — sellainen linssi ei ilmesty tasokartalle
+     * vaan jää piirtämättä (konsolivaroitus paivitaLinssiTiedoissa).
+     * Kuori itse (js/pallolauta/linssikartta.js) jää repoon.
+     */
+    if (!VANHA_KARTTA_KAYTOSSA) return false;
     if (!this.pallolauta || this.linssikartta) return false;
     return Boolean(this.pallolauta.linssikartta?.avaa(tiedot));
   }
@@ -15689,6 +15756,14 @@ export class UI {
      * tietä (poistuu aallossa 3B).
      */
     if (this.aloituslentoPallolla()) { this.aloitaPallolta(); return; }
+    /*
+     * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tasokartan haaraan
+     * ei mennä enää missään tilanteessa. Jos pallo on epäonnistunut
+     * (aloituslentoPallolla epätosi), valinta avataan silti pallolla —
+     * pallolautaVarapolku on jo kertonut pelaajalle rivillä, mitä
+     * tapahtui, eikä puolikas tasokartta paranna tilannetta.
+     */
+    if (!VANHA_KARTTA_KAYTOSSA) { this.aloitaPallolta(); return; }
     void this.aloitaTasokartalta();
   }
 
@@ -15721,6 +15796,10 @@ export class UI {
    * pallolautaVarapolku antaa valinnan kartalle.
    */
   async aloitaTasokartalta() {
+    // VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tänne ei tulla
+    // pelistä lainkaan (aloitaKartalta ohjaa pallolle). Metodi jää
+    // paikalleen sitä varten, kun vanha kartta palaa käyttöön.
+    if (!VANHA_KARTTA_KAYTOSSA) return;
     // Moduuli ensin (laiskoituserä 5b): lähikuva ajetaan heti herätyksen
     // perään, joten sijaisen tynkä ei kelpaa tässä.
     await this.varmistaKartta();

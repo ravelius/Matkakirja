@@ -22,6 +22,87 @@ kiinteästä `../../node_modules`-polusta, ja koska repossa ei ole
 savuketta kirjoittaessa kopioi tuontilohko olemassa olevasta — älä
 kirjoita `import ... from '../../node_modules/...'`.
 
+## Ohituksessa: vanha kartta pois käytöstä (7.9.2026)
+
+Omistaja 7.9.2026 aamu, sanatarkasti: *"Voisiko vanhan kartan ottaa
+pelistä ainakin väliaikaisesti kokonaan pois, eli että se ei lataisi
+sitä millään lailla, eikä se olisi myöskään kytkettävissä päälle?"*
+
+`?lauta=kartta` ei enää vaihda lautaa (js/ui-apurit.js `LAUDAT`), eikä
+tasokartan moduulia haeta millään polulla (js/kartta-lataus.js
+`lataaTasokartta`, portti `VANHA_KARTTA_KAYTOSSA`). Peli avautuu siis
+aina pallolle.
+
+Alla olevat **49 savuketta** on kirjoitettu tasokartan varaan (svg#board
+-kerrokset, kartan lähikuva, panorointi, laattapyramidin pyynnöt).
+Ne on siirretty OHITUKSEEN: savuke tulostaa yhden `OHITUS`-rivin ja
+päättyy koodilla 0, joten ajojono ei katkea eikä kukaan luule vartion
+menneen läpi. Perustelu ja paluuohje: `tools/savukkeet/vanha-kartta-ohitus.mjs`.
+
+Kääntäminen pallolle on jokaisen kohdalla oma harkintansa (mitä vartio
+oikeasti mittaa ja onko sillä pallolla vastinetta), eikä sitä tehdä
+yhteisajolla — hiljaa vääräksi kääntynyt vartio olisi pahempi kuin
+ohitettu vartio.
+
+- `mittaa-nostopoltto`
+- `mittaa-syvazoomi`
+- `savuke-aanet-tausta`
+- `savuke-aarrekuva`
+- `savuke-elaintaky`
+- `savuke-esilataus`
+- `savuke-fokuskohteet`
+- `savuke-fokusvirta`
+- `savuke-havainnekuva`
+- `savuke-historian-hetket`
+- `savuke-ilme`
+- `savuke-jalkamatka`
+- `savuke-katselin-pollo`
+- `savuke-kehittajalehti`
+- `savuke-kohdekaupungit`
+- `savuke-kohtaamiskortti`
+- `savuke-kuvaputki`
+- `savuke-laattapyramidi`
+- `savuke-lehden-alareuna`
+- `savuke-lehden-mitta`
+- `savuke-lehtiasettelu`
+- `savuke-lehtiotsikko`
+- `savuke-lippuikkuna`
+- `savuke-lukijan-seuranta`
+- `savuke-maailmanakyma`
+- `savuke-maapilleri`
+- `savuke-maaselain`
+- `savuke-maastokohteet`
+- `savuke-matkakamera`
+- `savuke-matkakirjakulma`
+- `savuke-mediakanava`
+- `savuke-nahtavyysihme`
+- `savuke-nappula`
+- `savuke-nostolaatat`
+- `savuke-nostopoltto`
+- `savuke-paivityspopup`
+- `savuke-panorointi`
+- `savuke-postikortti`
+- `savuke-pro-tuottaja`
+- `savuke-sahkekortti`
+- `savuke-selitevalikko`
+- `savuke-siirtokohteet`
+- `savuke-sivunkaanto`
+- `savuke-syvazoomi`
+- `savuke-takyportti`
+- `savuke-tehosteketju`
+- `savuke-uloin-zoomi`
+- `savuke-vuosisaa`
+- `savuke-webkit-eleet`
+
+**Ei ohituksessa**, koska ne vartioivat nimenomaan uutta sääntöä tai
+ajavat pallolla: `savuke-pallolauta` (kolme uutta vartiota: `?lauta=kartta`
+ei vaihda lautaa, tasokartan moduulia ei haeta, kytkimet piilossa),
+`savuke-kartan-laiskoitus` (vartio 7 käännetty käänteiseksi),
+`savuke-pallolaatat-offline` (rekisteröintikäynti siirtyi pallolle) sekä
+`--lauta`-vipua käyttävät `savuke-aikajana`, `savuke-kartta-tila` ja
+`savuke-siirtokoreografia`, jotka ohjaavat `kartta`-pyynnön pallolle
+(`vainPallo`).
+
 | Savuke | Vartioi |
 | --- | --- |
 | savuke-lehtiotsikko | Lehden tarttuva nimiö, ylähampurilainen (sijainti + tasaus), sisällyslevy (ylös/ulkosulku/Etusivu-rivi), iPadin paperikaista |
