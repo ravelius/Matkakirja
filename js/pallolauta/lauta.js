@@ -207,6 +207,38 @@ export const MERKKIEN_SIIRTYMA_MS = 250;
 /** Napautuksen osuma ruudulla: lähin kaupunki tai kohde tämän säteen sisällä (px). */
 export const NAPAUTUKSEN_SADE_PX = 44;
 /*
+ * ══════════════════════════════════════════════════════════════════
+ * NIMILAPUN KOSKETUSVARA (vika v1680; omistaja 7.9.2026 ilta, iPad:
+ * *"Symboli ottaa klikkauksen mutta teksti ei."*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * v1673 lisäsi osumatestiin lapun laatikon (lappuunOsunut), mutta
+ * laatikko on TÄSMÄLLEEN PIIRRETTY MUSTE eikä kosketuspinta. Mitattu
+ * 7.9.2026 (Chromium 834 × 1100 dpr 2, aidot CDP-kosketukset,
+ * Istanbul ja Bukarest):
+ *
+ *   - vaakakyljen lapun laatikko on 33…80 px LEVEÄ mutta vain
+ *     11,4 px KORKEA (2 × NOSTOSYM_MINI_RUUTU × NOSTON_MITTA), eli
+ *     sormella on pystysuunnassa varaa ±5,7 px;
+ *   - napautuksen oma ruutupiste ei ole sormen kohta vaan
+ *     kirjaston säteen osuma pallon pintaan, joka projisoidaan
+ *     takaisin (getScreenCoords): ero sormeen oli yleiskuvassa
+ *     0,5…2,8 px ja lähikuvassa (korkeus 0,05) jopa 3,9 px
+ *     pystysuunnassa.
+ *
+ * Pystyvarasta jäi siis sormelle 1,8…4 px, kun KUVAKKEELLA on koko
+ * NAPAUTUKSEN_SADE_PX. Siksi teksti ei ottanut napautusta, vaikka
+ * laatikko oli oikeassa paikassa.
+ *
+ * KORJAUS: osumatestin laatikkoa venytetään tällä varalla joka
+ * suuntaan (vain osumatestissä — sovittelu, piirto ja lappuLaatikot
+ * käyttävät edelleen musteen mittaa). 16 px on valittu niin, että
+ * vaakalapun osumapinta on 11,4 + 2 × 16 = 43,4 px korkea eli
+ * suunnilleen sama 44 px:n kosketusvakio, joka kuvakkeella on
+ * säteenään.
+ */
+export const LAPUN_KOSKETUSVARA_PX = 16;
+/*
  * PALLON TAKAPUOLI EI OTA NAPAUTUKSIA (vika v1664; omistaja 7.9.2026
  * aamu, sanatarkasti: *"Kartta saattaa lennähtää myös aivan eri maahan,
  * jos klikkaan jotain karttanostoa. Äsken klikkasin Japanin kohdalla
@@ -1181,26 +1213,47 @@ export async function avaaPallolauta(ui) {
    * keskipistettä), jolloin tekstin napautus ei tehnyt mitään. Nyt
    * osumatesti tarkistaa myös lapun LAATIKON — sen saman, jonka
    * sovittelu laski (js/pallolauta/nostot.js `lappu(p)`), samassa
-   * ruutukoordinaatistossa. Piiloon sovitellulla lapulla laatikkoa ei
-   * ole, jolloin jäljellä on vain kuvake, kuten ennen.
+   * ruutukoordinaatistossa. Piiloon sovitellulla lapulla laatikko on
+   * pelkkä kuvakkeen ruutu, kuten ennen.
    *
-   * Kahden lapun mennessä päällekkäin voittaa se, jonka laatikon
-   * keskipiste on lähinnä — sama sääntö kuin merkeillä (js/fokusniput.js
-   * sääntö 9), jotta kaksi reittiä samaan nostoon ei voi eri mieltä.
+   * LAATIKKO ON MUSTE, OSUMAPINTA ON MUSTE + KOSKETUSVARA (vika v1680,
+   * ks. LAPUN_KOSKETUSVARA_PX): pelkkä muste on vaakakyljellä 11,4 px
+   * korkea, ja siitä meni jopa 3,9 px napautuksen oman ruutupisteen
+   * projektioeroon — sormelle jäi pari pikseliä. Osuma mitataan siksi
+   * ETÄISYYTENÄ LAATIKKOON (sisällä 0), ja se kelpaa varan sisällä.
+   *
+   * Kahden lapun mennessä päällekkäin voittaa PIENIN etäisyys, ja
+   * tasapelissä (esim. molempien musteen päällä, kumpikin 0) se, jonka
+   * laatikon keskipiste on lähinnä — sama sääntö kuin merkeillä
+   * (js/fokusniput.js sääntö 9), jotta kaksi reittiä samaan nostoon ei
+   * voi eri mieltä. Musteen päällä oleva sormi voittaa siis aina
+   * naapurin pelkän varan.
    */
+  /** Sormen etäisyys ruutulaatikkoon (0, jos sormi on sen sisällä). */
+  const laatikonEtaisyys = (kohta, r) => Math.hypot(
+    Math.max(r.x0 - kohta.x, 0, kohta.x - r.x1),
+    Math.max(r.y0 - kohta.y, 0, kohta.y - r.y1),
+  );
   const lappuunOsunut = (lat, lng) => {
     const kohta = pallo.getScreenCoords(lat, lng, 0);
     if (!kohta) return null;
     let paras = null;
     let parasMatka = Infinity;
+    let parasKeski = Infinity;
     for (const o of nostot.osumat()) {
       if (typeof o.lappu !== 'function' || !edessa(o.lat, o.lng)) continue;
       const p = pallo.getScreenCoords(o.lat, o.lng, 0);
       if (!p) continue;
       const r = o.lappu(p);
-      if (!r || kohta.x < r.x0 || kohta.x > r.x1 || kohta.y < r.y0 || kohta.y > r.y1) continue;
-      const d = Math.hypot((r.x0 + r.x1) / 2 - kohta.x, (r.y0 + r.y1) / 2 - kohta.y);
-      if (d < parasMatka) { parasMatka = d; paras = { laji: 'nosto', lat: o.lat, lng: o.lng, o }; }
+      if (!r) continue;
+      const matka = laatikonEtaisyys(kohta, r);
+      if (matka > LAPUN_KOSKETUSVARA_PX) continue;
+      const keski = Math.hypot((r.x0 + r.x1) / 2 - kohta.x, (r.y0 + r.y1) / 2 - kohta.y);
+      if (matka > parasMatka + 1e-6) continue;
+      if (Math.abs(matka - parasMatka) <= 1e-6 && keski >= parasKeski) continue;
+      parasMatka = matka;
+      parasKeski = keski;
+      paras = { laji: 'nosto', lat: o.lat, lng: o.lng, o };
     }
     return paras;
   };

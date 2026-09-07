@@ -25,7 +25,15 @@
  *   6. LAPUN TEKSTI OTTAA NAPAUTUKSEN (Raamattu, VIAT v1672;
  *      omistaja 7.9.2026: *"Karttanostoissa teksti ei ota klikkausta
  *      ainoastaan kuvake. Saisiko myös tekstit klikattaviksi?"*).
- *      Oikea napautus lapun ulkokolmannekseen avaa saman noston.
+ *      Oikea napautus lapun ulkokolmannekseen avaa saman noston —
+ *      sekä elävällä (CSS2D-elementti) että poltetulla musteella.
+ *   7. LAPPU ON KOSKETUSKOKOINEN (vika v1680; omistaja 7.9.2026 ilta,
+ *      iPad: *"Symboli ottaa klikkauksen mutta teksti ei."*). Sama
+ *      napautus KOSKETUSPOIKKEAMA_PX:n päässä musteen keskiviivasta —
+ *      musteen ulkopuolelta, mutta sieltä mistä sormi tähtää — avaa
+ *      saman noston. Vaakalapun muste on vain 11,4 px korkea, joten
+ *      ilman osumatestin kosketusvaraa (js/pallolauta/lauta.js
+ *      LAPUN_KOSKETUSVARA_PX) tämä napautus ei avaa mitään.
  *
  *   4. LAPPU LIUKUU, EI HYPPÄÄ. Sovittelun siirto kirjoitetaan
  *      `.pallolauta-nosto-siirto`-ryhmän CSS-muunnokseen, ja ryhmällä
@@ -304,23 +312,41 @@ if (auki) {
    *    `avaa` kääritään mittariin, ja vartio lukee, KENELLE napautus
    *    meni.
    *
-   *    KAKSI NAPAUTUSTA KUSTAKIN NÄKYMÄSTÄ:
+   *    KOLME LAPPUA KUSTAKIN NÄKYMÄSTÄ:
    *      a) omistajan nimeämä lappu (Bukarest "Strousberg", Helsinki
-   *         "Kirjasota") tekstin keskeltä;
-   *      b) lappu, jonka ULOMPI PÄÄ jäi vanhan säännön (lähin merkki
+   *         "Kirjasota", Istanbul "Mustameri") tekstin keskeltä;
+   *      b) ensimmäinen ELÄVÄ lappu (polttamaton nosto, jolla on oma
+   *         CSS2D-elementti) — poltettu ja elävä muste kulkevat eri
+   *         polkua, ja molempien on otettava napautus;
+   *      c) lappu, jonka ULOMPI PÄÄ jäi vanhan säännön (lähin merkki
    *         44 px) ulottumattomiin tai osui TOISEEN nostoon — juuri se
    *         tilanne, josta omistaja kirjoitti. Mitattu 7.9.2026:
    *         Bukarestissa yhdeksän lappua yhdestätoista, mm. "Draculan
    *         alaviite" ja "Nadia Comăneci", eivät saaneet ulkopäästään
    *         mitään; "Branin linna" ja "Balkanvuoret" avasivat naapurin.
+   *
+   *    JOKAINEN LAPPU NAPAUTETAAN KAHDESTI: täsmälleen musteen
+   *    keskiviivalta JA SORMEN POIKKEAMALLA (KOSKETUSPOIKKEAMA_PX
+   *    kohtisuoraan tekstistä ulos). Poikkeama on se, mikä vian
+   *    v1680 paljasti (omistaja 7.9.2026 ilta, iPad: *"Symboli ottaa
+   *    klikkauksen mutta teksti ei."*): vaakalapun muste on vain
+   *    11,4 px korkea, ja siitä meni jopa 3,9 px napautuksen oman
+   *    ruutupisteen projektioeroon — sormelle jäi pari pikseliä.
+   *    Osumatestin kosketusvara (js/pallolauta/lauta.js
+   *    LAPUN_KOSKETUSVARA_PX) antaa tekstille saman 44 px:n
+   *    kosketuspinnan, joka kuvakkeella on säteenään; ilman sitä
+   *    poikkeamanapautukset eivät avaa mitään.
    */
   const LAPPUNAKYMAT = [
     { nimi: 'Bukarest', lat: 44.43, lng: 26.10, etsi: 'strousberg' },
     { nimi: 'Helsinki', lat: 60.17, lng: 24.94, etsi: 'kirjasota' },
+    { nimi: 'Istanbul', lat: 41.01, lng: 28.98, etsi: 'mustameri' },
   ];
+  /** Sormen poikkeama tekstin keskiviivasta kohtisuoraan ulos (px). */
+  const KOSKETUSPOIKKEAMA_PX = 8;
   /** Yksi näkymä: kamera, ladonta ja napautuskohteet lapuista. */
   const lappukohteet = (nakyma, korkeus) => sivu.evaluate(async ({
-    lat, lng, alt, etsi,
+    lat, lng, alt, etsi, poikkeama,
   }) => {
     const l = window.matkakirja.ui.pallolauta;
     l.pallo.pointOfView({ lat, lng, altitude: alt }, 0);
@@ -336,15 +362,21 @@ if (auki) {
      * antaa saman laatikon, jota osumatesti käyttää.
      */
     const laput = l.nostot.osumaLaatikot().filter((r) => r.perhe === 'nosto' && r.nimi);
-    /** Napautuspiste lapun tekstistä: `osuus` 0,5 = keskeltä, 1 = ulkopää. */
-    const kohta = (r, osuus) => {
+    /**
+     * Napautuspiste lapun tekstistä: `osuus` 0,5 = keskeltä, 1 =
+     * ulkopää; `sivuun` siirtää pistettä kohtisuoraan tekstistä ulos
+     * (sormen poikkeama).
+     */
+    const kohta = (r, osuus, sivuun = 0) => {
       const puoli = r.puoli ?? 'oikea';
       const w = (r.x1 - r.x0) * 0.3;
       const h = (r.y1 - r.y0) * 0.3;
-      if (puoli === 'vasen') return { x: r.x0 + w * (1 - osuus) + 2, y: (r.y0 + r.y1) / 2 };
-      if (puoli === 'yla') return { x: (r.x0 + r.x1) / 2, y: r.y0 + h * (1 - osuus) + 2 };
-      if (puoli === 'ala') return { x: (r.x0 + r.x1) / 2, y: r.y1 - h * (1 - osuus) - 2 };
-      return { x: r.x1 - w * (1 - osuus) - 2, y: (r.y0 + r.y1) / 2 };
+      const ky = (r.y0 + r.y1) / 2 + sivuun;
+      const kx = (r.x0 + r.x1) / 2 + sivuun;
+      if (puoli === 'vasen') return { x: r.x0 + w * (1 - osuus) + 2, y: ky };
+      if (puoli === 'yla') return { x: kx, y: r.y0 + h * (1 - osuus) + 2 };
+      if (puoli === 'ala') return { x: kx, y: r.y1 - h * (1 - osuus) - 2 };
+      return { x: r.x1 - w * (1 - osuus) - 2, y: ky };
     };
     /** Kenelle VANHA sääntö (lähin merkki 44 px) antaisi tämän pisteen? */
     const vanhaVoittaja = (piste) => {
@@ -358,35 +390,58 @@ if (auki) {
       }
       return paras;
     };
-    const rivi = (r, osuus, laji) => {
-      const piste = kohta(r, osuus);
+    const rivi = (r, osuus, sivuun, laji) => {
+      const piste = kohta(r, osuus, sivuun);
       const vanha = vanhaVoittaja(piste);
       return {
         laji,
         id: r.id,
         nimi: r.nimi,
         poltettu: r.poltettu,
+        sormella: sivuun !== 0,
         vanha: vanha === r.id ? 'sama' : (vanha ? 'toinen' : 'ei mitään'),
         x: koti.left + piste.x,
         y: koti.top + piste.y,
       };
     };
-    const ulos = [];
-    const nimetty = laput.find((r) => r.nimi.toLowerCase().includes(etsi));
-    if (nimetty) ulos.push(rivi(nimetty, 0.5, 'nimetty'));
+    /** Valitut laput: nimetty, ensimmäinen elävä ja ulottumaton pää. */
+    const valitut = [];
+    const lisaa = (r, laji, osuus) => {
+      if (!r || valitut.some((v) => v.r.id === r.id)) return;
+      valitut.push({ r, laji, osuus });
+    };
+    lisaa(laput.find((v) => v.nimi.toLowerCase().includes(etsi)), 'nimetty', 0.5);
+    lisaa(laput.find((v) => !v.poltettu), 'elävä', 0.5);
     // Ensimmäinen, jonka ULKOPÄÄ jäi vanhalta säännöltä saamatta.
     for (const r of laput) {
-      const koe = rivi(r, 1, 'ulottumaton');
-      if (koe.vanha !== 'sama') { ulos.push(koe); break; }
+      if (rivi(r, 1, 0, 'ulottumaton').vanha === 'sama') continue;
+      lisaa(r, 'ulottumaton', 1);
+      break;
+    }
+    // Kumpikin: muste keskeltä ja sormen poikkeamalla musteen ulkopuolelta.
+    const ulos = [];
+    for (const v of valitut) {
+      ulos.push(rivi(v.r, v.osuus, 0, v.laji));
+      ulos.push(rivi(v.r, v.osuus, poikkeama, `${v.laji}+sormi`));
     }
     return ulos;
   }, {
-    lat: nakyma.lat, lng: nakyma.lng, alt: korkeus, etsi: nakyma.etsi,
+    lat: nakyma.lat,
+    lng: nakyma.lng,
+    alt: korkeus,
+    etsi: nakyma.etsi,
+    poikkeama: KOSKETUSPOIKKEAMA_PX,
   });
 
+  // Musteen napautukset (vartio 6) ja sormen poikkeamat (vartio 7)
+  // lasketaan erikseen, jotta vartiot mittaavat eri asiaa.
   let lappuKokeita = 0;
   let lappuOsui = 0;
   let ulottumattomia = 0;
+  let sormiKokeita = 0;
+  let sormiOsui = 0;
+  let sormiElavia = 0;
+  let sormiPoltettuja = 0;
   for (const nakyma of LAPPUNAKYMAT) {
     // eslint-disable-next-line no-await-in-loop
     const kohteet = await lappukohteet(nakyma, KORKEUDET[1]);
@@ -414,24 +469,46 @@ if (auki) {
           o.avaa = (ankkuri) => { window.__avattu.push(o.id); return alkuperainen(ankkuri); };
         }
       });
-      lappuKokeita += 1;
-      if (kohde.laji === 'ulottumaton') ulottumattomia += 1;
+      if (kohde.sormella) {
+        sormiKokeita += 1;
+        if (kohde.poltettu) sormiPoltettuja += 1; else sormiElavia += 1;
+      } else {
+        lappuKokeita += 1;
+        if (kohde.laji === 'ulottumaton') ulottumattomia += 1;
+      }
       // eslint-disable-next-line no-await-in-loop
       await sivu.mouse.click(kohde.x, kohde.y);
       // eslint-disable-next-line no-await-in-loop
       await sivu.waitForTimeout(500);
       // eslint-disable-next-line no-await-in-loop
       const avattu = await sivu.evaluate(() => window.__avattu ?? []);
-      if (avattu.length === 1 && avattu[0] === kohde.id) lappuOsui += 1;
+      const oikein = avattu.length === 1 && avattu[0] === kohde.id;
+      if (oikein && kohde.sormella) sormiOsui += 1;
+      else if (oikein) lappuOsui += 1;
       tieto(`  napautus ${nakyma.nimi} (${kohde.laji})`,
         `"${kohde.nimi}"${kohde.poltettu ? ' (poltettu)' : ''}, vanha sääntö: ${kohde.vanha} `
         + `→ avautui ${avattu.join(', ') || 'ei mitään'}`);
     }
   }
   vaadi('6. napautus nimilapun tekstiin avaa saman noston (myös kuvakkeen ulottumattomissa)',
-    lappuKokeita >= 2 && ulottumattomia >= 1 && lappuOsui === lappuKokeita,
+    lappuKokeita >= 3 && ulottumattomia >= 1 && lappuOsui === lappuKokeita,
     `napautuksia ${lappuKokeita} (joista vanhan säännön ulottumattomissa ${ulottumattomia}), `
     + `oikein ${lappuOsui}`);
+  /*
+   * 7. LAPUN TEKSTI ON KOSKETUSKOKOINEN (vika v1680; omistaja 7.9.2026
+   *    ilta, iPad: *"Symboli ottaa klikkauksen mutta teksti ei."*).
+   *    Napautus KOSKETUSPOIKKEAMA_PX:n päässä musteen keskiviivasta —
+   *    eli musteen ulkopuolelta, mutta sieltä mistä sormi lappua
+   *    tähtää — avaa saman noston kuin muste itse, sekä elävällä että
+   *    poltetulla musteella. Ennen kosketusvaraa (js/pallolauta/lauta.js
+   *    LAPUN_KOSKETUSVARA_PX) nämä napautukset eivät avanneet mitään:
+   *    vaakalapun muste on vain 11,4 px korkea.
+   */
+  vaadi('7. lapun teksti ottaa napautuksen myös sormen poikkeamalla '
+    + `(${KOSKETUSPOIKKEAMA_PX} px musteen ulkopuolelta), elävällä ja poltetulla musteella`,
+    sormiKokeita >= 3 && sormiElavia >= 1 && sormiPoltettuja >= 1 && sormiOsui === sormiKokeita,
+    `poikkeamanapautuksia ${sormiKokeita} (eläviä ${sormiElavia}, poltettuja `
+    + `${sormiPoltettuja}), oikein ${sormiOsui}`);
 
   tieto('sivun virheet', virheet.length ? virheet.join(' | ') : 'ei yhtään');
 }
