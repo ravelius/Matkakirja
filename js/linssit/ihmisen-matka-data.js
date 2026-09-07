@@ -61,8 +61,17 @@
  *                               kopioidaan taulun jälkeen silmukassa.
  *                  `lahde`      'Matkakirjan havainnekuva'
  *   `esine`      KORTIN KUVA eli itse löytö — kallo, helmi, jalanjälki,
- *                saviastia. Kuvat tulevat kuvaputkelta myöhemmin;
- *                osoitteet on kirjattu tässä valmiiksi.
+ *                saviastia. Kuvaputki toimitti kaikki kaksikymmentä
+ *                7.9.2026 (900 × 1200, pystykuva); jokainen ladattiin,
+ *                sha256 tarkistettiin ja kuva katsottiin silmällä.
+ *                Kentät:
+ *                  `osoite`     valmis osoite erähakemistossa
+ *                               (IHMISEN_MATKA_ESINEJUURI)
+ *                  `selite`     KUVAPUTKEN LOPULLINEN kuvarivi
+ *                               (toimituksen `caption`) sanasta sanaan
+ *                  `lahde`      ESINEEN_LAHDE — sama rivi kaikilla
+ *                  `viitteet`   toimituksen `sources`; kuvitus nojaa
+ *                               näihin, mutta rivi ei näy pelissä
  *   `esineAito`  aito PD/CC-kuva Wikimedia Commonsista. KAIKKI ovat
  *                toistaiseksi null: en varmentanut yhtäkään
  *                tiedostonimeä Commonsista, enkä kirjaa arvauksia.
@@ -103,13 +112,34 @@
  */
 
 /**
- * Kuvaputken generoitujen kuvien juuri ämpärissä. Havainnekuvat ovat
- * juuressa (aikajana/ihmisen-matka/<tunnus>.jpg) ja löytöjen kuvat
- * alikansiossa `esine/`, samalla tavalla kuin keksintölinssin
- * muotokuvat (js/linssit/keksinnot.js KEKSINTO_KUVAJUURI).
- * Havainnekuvat toimitettiin 5.9.2026; löytökuvat tulevat myöhemmin.
+ * Kuvaputken generoimien HAVAINNEKUVIEN juuri ämpärissä
+ * (aikajana/ihmisen-matka/<tunnus>.jpg), samalla tavalla kuin
+ * keksintölinssin muotokuvat (js/linssit/keksinnot.js
+ * KEKSINTO_KUVAJUURI). Toimitettu 5.9.2026.
  */
 export const IHMISEN_MATKA_KUVAJUURI = 'https://media.matkakirja.app/aikajana/ihmisen-matka';
+
+/**
+ * LÖYTÖKUVIEN juuri. Kuvaputki toimitti kaksikymmentä esinekuvaa
+ * 7.9.2026 OMAAN erähakemistoonsa eikä havainnekuvien viereen, joten
+ * osoite ei ole johdettavissa kuvajuuresta: tiedostonimi kantaa
+ * kuvaputken oman tunnuksen (ihmisen-matka-esine-<tunnus>-r20260907).
+ * Erähakemisto on osa toimitusta — uusi erä saa uuden juuren eikä
+ * ylikirjoita vanhaa, joten julkaistu peliversio näyttää aina sen
+ * kuvan, joka sille tarkistettiin.
+ */
+export const IHMISEN_MATKA_ESINEJUURI = 'https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907';
+
+/**
+ * Löytökuvien yhteinen lähderivi. Kuvat ovat lähdeperustaisia
+ * kuvituksia eivätkä museovalokuvia, ja se sanotaan pelaajalle
+ * suoraan. Alkuosa "Matkakirjan havainnekuva" on talon oma sanamuoto
+ * (js/havainnekuva.js HAVAINNEKUVA_RE), joka tekee rivistä
+ * napautettavan selitteen — ilman sitä selite jäisi saamatta.
+ * Kuvakohtaiset viitteet ovat esineen `viitteet`-kentässä
+ * (kuvaputken toimituksen `sources`, ei näytetä pelissä).
+ */
+const ESINEEN_LAHDE = 'Matkakirjan havainnekuva: lähdeperustainen kuvitus, ei museovalokuva.';
 
 /** Matkalaukun selite: mitä linssi on. */
 export const IHMISEN_MATKA_ESITTELY = 'Ihmisen matka Afrikasta koko maapallolle: '
@@ -186,9 +216,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/jebel-irhoud.jpg`,
-      selite: 'Irhoudin kallo: kasvot jo nykyihmisen, aivokoppa vielä pitkulainen.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-jebel-irhoud-r20260907.jpg`,
+      selite: 'Kallon kasvo-osa, Jebel Irhoud',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://doi.org/10.1038/nature22336'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Jebel Irhoud"',
@@ -227,9 +258,13 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/omo-kibish.jpg`,
-      selite: 'Omo I:n kallonpalat: korkea otsa ja pyöreä takaraivo, jo nykyihmisen muoto.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-omo-kibish-r20260907.jpg`,
+      selite: 'Kallon fragmentit, Omo Kibish',
+      lahde: ESINEEN_LAHDE,
+      viitteet: [
+        'https://doi.org/10.1038/s41586-021-04275-8',
+        'https://humanorigins.si.edu/evidence/human-fossils/fossils/omo-i',
+      ],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Omo remains"',
@@ -268,9 +303,13 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/pinnacle-point.jpg`,
-      selite: 'Simpukankuoria ja jauhettua okraa luolan 13B alimmista kerroksista.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-pinnacle-point-r20260907.jpg`,
+      selite: 'Simpukankuoret ja kivityökalut, Pinnacle Point',
+      lahde: ESINEEN_LAHDE,
+      viitteet: [
+        'https://doi.org/10.1038/nature06204',
+        'https://doi.org/10.1038/nature11660',
+      ],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Pinnacle Point"',
@@ -310,9 +349,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/skhul-qafzeh.jpg`,
-      selite: 'Okralla värjätty simpukankuori Qafzehin hautakerroksesta.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-skhul-qafzeh-r20260907.jpg`,
+      selite: 'Sarvi ja okra, Qafzeh',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://doi.org/10.1086/377162'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Skhul and Qafzeh hominins" ja "Skhul Cave"',
@@ -351,9 +391,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/al-wusta.jpg`,
-      selite: 'Al Wustan sormiluu: yksi keskijäsen, koko todiste ihmisestä Arabiassa.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-al-wusta-r20260907.jpg`,
+      selite: 'AW-1-välinivel, Al Wusta',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://www.nature.com/articles/s41559-018-0518-2'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Arabian Peninsula" ja "Nafud desert"',
@@ -391,9 +432,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/blombos.jpg`,
-      selite: 'Ristikkokuvioinen okrapala ja reiällisiä kotilonkuoria Blomboksen kerroksista.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-blombos-r20260907.jpg`,
+      selite: 'Kaiverrettu okra ja simpukkahelmet, Blombos',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://doi.org/10.1126/science.1067575'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Blombos Cave"',
@@ -432,9 +474,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/lida-ajer.jpg`,
-      selite: 'Kaksi hammasta museon laatikosta — sata vuotta väärin nimettyinä.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-lida-ajer-r20260907.jpg`,
+      selite: 'Hampaat, Lida Ajer',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://doi.org/10.1038/nature23452'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "List of first human settlements"',
@@ -473,9 +516,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/madjedbebe.jpg`,
-      selite: 'Hiottu kirveenterä ja jauhinkivi Madjedbeben alimmasta asutuskerroksesta.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-madjedbebe-r20260907.jpg`,
+      selite: 'Hiottu kivikirves ja okra, Madjedbebe',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://doi.org/10.1038/s41598-022-15174-x'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Madjedbebe"',
@@ -515,9 +559,13 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/denisova.jpg`,
-      selite: 'Luuneula, jonka silmä on porattu kivikärjellä — maailman vanhin tunnettu.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-denisova-r20260907.jpg`,
+      selite: 'Denisova 3:n kaksi sormiluufragmenttia ja erillinen vihreä rannerengas, Denisovan luola',
+      lahde: ESINEEN_LAHDE,
+      viitteet: [
+        'https://pmc.ncbi.nlm.nih.gov/articles/PMC6726440/',
+        'https://archaeology.nsc.ru/en/publications/jr-aeae-en/08-34-2/annot-02/',
+      ],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Denisova Cave" ja "Denisovan"',
@@ -556,9 +604,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/bacho-kiro.jpg`,
-      selite: 'Rei\'itetty karhunhammas kerroksesta 11 — Euroopan vanhin tunnettu koru.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-bacho-kiro-r20260907.jpg`,
+      selite: 'Karhunhammasriipukset, Bacho Kiro',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://doi.org/10.1038/s41586-020-2259-z'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Bacho Kiro Cave"',
@@ -597,9 +646,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/lake-mungo.jpg`,
-      selite: 'Punaista okraa ja hiekkatörmän kerrokset, joista Mungon löydöt paljastuivat.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-lake-mungo-r20260907.jpg`,
+      selite: 'Tuhka, okra ja simpukat, Lake Mungo',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://www.dcceew.gov.au/parks-heritage/heritage/places/world/willandra'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Lake Mungo remains"',
@@ -637,9 +687,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/tianyuan.jpg`,
-      selite: 'Tianyuanin miehen sääriluu ja leukaluu — 34 palaa yhdestä ihmisestä.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-tianyuan-r20260907.jpg`,
+      selite: 'Reisiluu, Tianyuan',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://pmc.ncbi.nlm.nih.gov/articles/PMC3568306/'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Tianyuan man"',
@@ -678,9 +729,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/niah.jpg`,
-      selite: 'Niahin "syvä kallo": yläleuka, kaksi poskihammasta ja kallonpohjan pala.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-niah-r20260907.jpg`,
+      selite: 'Deep Skullin säilyneet kallon osat, Niah',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://humanorigins.si.edu/evidence/human-fossils/fossils/niah-cave'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Niah National Park"',
@@ -719,9 +771,13 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/chauvet.jpg`,
-      selite: 'Hevospaneelin hiilipiirros, jossa neljä päätä nousee peräkkäin kalliosta.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-chauvet-r20260907.jpg`,
+      selite: 'Todellinen Panel of the Horses ympäröivine eläinhahmoineen, Chauvet',
+      lahde: ESINEEN_LAHDE,
+      viitteet: [
+        'https://archeologie.culture.gouv.fr/chauvet/en/panel-horses',
+        'https://archeologie.culture.gouv.fr/chauvet/en/media/view/2986',
+      ],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Chauvet Cave"',
@@ -759,9 +815,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/yana.jpg`,
-      selite: 'Villisarvikuonon sarvesta veistetty keihäänvarsi, jonka routa työnsi esiin.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-yana-r20260907.jpg`,
+      selite: 'Luusta ja norsunluusta tehdyt työkalut, Yana',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://doi.org/10.1080/00438243.2015.1030508'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Yana Rhinoceros Horn Site"',
@@ -800,9 +857,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/white-sands.jpg`,
-      selite: 'Paljaan jalan jälki kipsihiekassa: kantapää, jalkaholvi ja varpaat.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-white-sands-r20260907.jpg`,
+      selite: 'Fossiloitunut jalanjälki, White Sands',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://www.nps.gov/whsa/learn/nature/fossilized-footprints.htm'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "White Sands footprints"',
@@ -843,9 +901,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/beringia.jpg`,
-      selite: 'Mammuttiaron ruohoa ja luuta hiekassa — sillasta ei jäänyt muuta.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-beringia-r20260907.jpg`,
+      selite: 'Norsunluuaihio ja kivikärki, Beringia',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://doi.org/10.1017/aaq.2021.63'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Beringia"',
@@ -885,9 +944,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/monte-verde.jpg`,
-      selite: 'Turpeessa säilynyt puutappi ja kasvikuidusta punottu naru.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-monte-verde-r20260907.jpg`,
+      selite: 'Puuesine ja solmittu kuitunaru, Monte Verde',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://doi.org/10.1126/science.1127835'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Monte Verde"',
@@ -926,9 +986,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/lapita.jpg`,
-      selite: 'Lapita-astian pala, jonka reunaan on leimattu rivi hammastettuja kuvioita.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-lapita-r20260907.jpg`,
+      selite: 'Hammastettu ruukunpala, Lapita',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://lapita.ihp.sinica.edu.tw/introduction.php'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Nukuleka" ja "Lapita culture"',
@@ -968,9 +1029,10 @@ export const IHMISEN_MATKA = [
       lahde: 'Matkakirjan havainnekuva',
     },
     esine: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/esine/aotearoa.jpg`,
-      selite: 'Yksiosainen kalastusviehe ja kivikirves Wairau Barin haudoista.',
-      lahde: 'Matkakirjan havainnekuva',
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-aotearoa-r20260907.jpg`,
+      selite: 'Moa-luu ja luinen kalakoukku, Aotearoa',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://www.nma.gov.au/explore/features/cook_forster/objects/fishhook_matau_oz328'],
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Wairau Bar"',

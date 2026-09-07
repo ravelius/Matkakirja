@@ -39,8 +39,12 @@ import {
 import {
   LINSSI, PYSAKIT, IHMISEN_MATKAN_LAHIKUVA, ihmisenMatkanPysakit, ESITYKSEN_KUVAT,
 } from '../js/linssit/ihmisen-matka.js';
-import { IHMISEN_MATKA_KUVAJUURI } from '../js/linssit/ihmisen-matka-data.js';
+import {
+  IHMISEN_MATKA_KUVAJUURI, IHMISEN_MATKA_ESINEJUURI,
+} from '../js/linssit/ihmisen-matka-data.js';
 import { LINSSI as KEKSINTOLINSSI } from '../js/linssit/keksinnot.js';
+import { tiedeliitteenKuvat, onTiedeliitteenSivu } from '../js/tiedeliite.js';
+import { HAVAINNEKUVA_RE } from '../js/havainnekuva.js';
 import {
   kaarenPuheet, luennanOsoite, luennanPuhe, luennanTeksti, luennanTiedosto,
 } from '../js/linssipuhe.js';
@@ -672,8 +676,9 @@ test('linssi ja sen aineisto ovat service workerin SHELL-listalla', () => {
  * hiljaa uudelleen:
  *
  *   1. Kortissa luki pysäkin nimikirjaimet ("EI", "SY"), koska
- *      löytökuvia ei ole vielä ämpärissä. Nyt kortti putoaa pysäkin
- *      havainnekuvaan.
+ *      löytökuvia ei ollut vielä ämpärissä. Kuvaputki toimitti ne
+ *      7.9.2026, mutta varareitti jää: kortti putoaa pysäkin
+ *      havainnekuvaan, jos yksikin löytökuva pettää.
  *   2. Jokainen kuva haettiin ensin kansiosta `pieni/`, jota tälle
  *      kaarelle ei ole — pelkkiä 404:iä.
  *   3. Luennat: yksi lyhyt lause pysäkkiä kohti, tiedostonimi pysäkin
@@ -682,13 +687,47 @@ test('linssi ja sen aineisto ovat service workerin SHELL-listalla', () => {
 
 test('kortin kuva putoaa löydöstä havainnekuvaan', () => {
   for (const t of PYSAKIT) {
-    assert.ok(t.kuva?.osoite.includes('/esine/'), `${t.tunnus}: kortissa ei ole löytökuvaa`);
+    assert.ok(t.kuva?.osoite.startsWith(`${IHMISEN_MATKA_ESINEJUURI}/`),
+      `${t.tunnus}: kortissa ei ole löytökuvaa`);
     assert.equal(t.kuva.vara, t.ilmio.osoite, `${t.tunnus}: varakuva ei ole havainnekuva`);
   }
   // Muunnos on datan puolella; moottori vain käyttää kenttää.
   assert.match(MOOTTORI, /vara: kuvatieto\.vara \?\? null/);
   // Rajaus keskeltä: vaakakuvan turva-alue on keskimmäiset 60 %.
   assert.match(CSS, /img\.varakuva \{ object-position: center center; \}/);
+});
+
+/*
+ * MISSÄ LÖYTÖKUVA NÄKYY. Tiedeliitteen sivu on sama sekä pysäkiltä
+ * avattuna että lopun "Katso löydöt" -galleriasta, ja se lajittelee
+ * kuvat kahteen ryhmään (js/tiedeliite.js tiedeliitteenKuvat):
+ * `kuva`-kenttä menee leipätekstin viereen ja `ilmio` sen alle lehden
+ * kuvaksi. Tässä kaaressa kortin kuva on LÖYTÖ, joten löytökuva päätyy
+ * palstan yläkulmaan ja havainnekuva sen alle — sitä ei tarvinnut
+ * rakentaa erikseen, mutta se on helppo rikkoa vaihtamalla kenttien
+ * järjestys ihmisenMatkanPysakit-muunnoksessa. Siksi tämä vartio.
+ */
+test('Tiedeliite näyttää löytökuvan leipätekstin vieressä ja havainnekuvan alla', () => {
+  for (const t of PYSAKIT) {
+    assert.ok(onTiedeliitteenSivu(t), `${t.tunnus}: pysäkiltä puuttuu Tiedeliitteen sivu`);
+    const { kasvot, ilmiot } = tiedeliitteenKuvat(t);
+    assert.deepEqual(kasvot.map((k) => k.osoite), [t.esine.osoite],
+      `${t.tunnus}: löytökuva ei ole palstan kuvana`);
+    assert.deepEqual(ilmiot.map((k) => k.osoite), [t.kuva.vara],
+      `${t.tunnus}: havainnekuva ei ole lehden kuvana`);
+    // Kuvateksti ja lähderivi tulevat kuvaoliosta sellaisenaan.
+    assert.equal(kasvot[0].selite, t.esine.selite);
+    assert.equal(kasvot[0].lahde, t.esine.lahde);
+    /*
+     * Lähderivin alkuosan on pysyttävä talon sanamuodossa: se on ainoa
+     * asia, joka tekee rivistä napautettavan havainnekuvaselitteen
+     * (js/havainnekuva.js merkitseHavainnekuva).
+     */
+    assert.match(t.esine.lahde, HAVAINNEKUVA_RE,
+      `${t.tunnus}: löytökuvan lähderivi ei avaa havainnekuvaselitettä`);
+    assert.match(t.esine.lahde, /ei museovalokuva/,
+      `${t.tunnus}: lähderivi ei kerro, ettei kuva ole museovalokuva`);
+  }
 });
 
 test('kaari kertoo, ettei sen kuvista ole pieniä versioita', () => {
