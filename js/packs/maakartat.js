@@ -12959,6 +12959,250 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Katedraali', lat: -3.1352, lon: -60.0255 },
     ],
   },
+  /*
+   * SÃO PAULO (7.9.2026). Rajaus on 2,4 × 2,7 kilometriä Luzin
+   * puistosta Largo de São Franciscoon — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n saopaulo-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * jesuiittojen lähetyskoulu, Santosin rata, väkiluvun kasvu ja
+   * nykyinen suurkaupunki; historiasivu kertoo katedraalista,
+   * siirtokunnan köyhyydestä, Avenida Paulistasta sekä modernismin
+   * viikosta ja Martinellin pilvenpiirtäjästä; siirtolaissivu
+   * majatalosta, italialaisista, Liberdadesta ja Rua 25 de Marçosta;
+   * matkaopas Mercadãosta ja Ibirapuerasta. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Pátio do
+   * Colégio, Praça da Sén katedraali, Theatro Municipal, Martinellin
+   * talo ja Mercado Municipal mahtuisivat kaikki ruutuun (kaksi
+   * ensimmäistä ovat sen itäreunassa), mutta ne ovat lehden omien
+   * juttujen aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. Edifício Itália on 144
+   * metriä Copanista eli 200 metrin säännön alle; Largo de São
+   * Franciscon kirkko ja luostari on 47 metriä oikeustieteellisestä
+   * tiedekunnasta, ja tiedekunta valittiin niistä kahdesta; Estação
+   * da Luz jäi pois, koska lehden rata-noston kuvateksti kertoo jo
+   * aseman vaiheet. Pinacoteca on aseman naapurissa ja kertoo eri
+   * tarinan.
+   */
+  saopaulo: {
+    polku: 'assets/kartat/saopaulo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -23.5300, etela: -23.5545, lansi: -46.6490, ita: -46.6255 },
+    esittely: 'Kartta kattaa São Paulon vanhan ytimen kukkulan '
+      + 'harjalla: yläreunassa on Luzin puisto asemineen ja '
+      + 'museoineen, keskellä Anhangabaún laakso, jonka yli Viaduto '
+      + 'do Chá kaartaa, ja alareunassa Largo de São Francisco. '
+      + 'Kaupungin ensimmäiset korttelit ovat kartan oikeassa '
+      + 'alanurkassa kahden joenuoman välissä. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Christchurchissa. Koordinaatit
+       * en-Wikipedian coordinates-rajapinnasta 7.9.2026. Pienin väli
+       * on 393 metriä (Viaduto do Chá – oikeustieteellinen
+       * tiedekunta), toiseksi pienin 400 metriä (mustien
+       * veljeskunnan kirkko – Viaduto do Chá).
+       */
+      { nimi: 'Sala São Paulo', lat: -23.53416667, lon: -46.63972222 },
+      { nimi: 'Pinacoteca', lat: -23.5344, lon: -46.6339 },
+      { nimi: 'Mustien veljeskunnan kirkko', lat: -23.54305556, lon: -46.63805556 },
+      { nimi: 'São Benton luostari', lat: -23.54361111, lon: -46.63388889 },
+      { nimi: 'Edifício Copan', lat: -23.54661667, lon: -46.644375 },
+      { nimi: 'Viaduto do Chá', lat: -23.546647, lon: -46.6378 },
+      { nimi: 'Solar da Marquesa de Santos', lat: -23.54856, lon: -46.63214 },
+      { nimi: 'Oikeustieteellinen tiedekunta', lat: -23.5501, lon: -46.637 },
+    ],
+  },
+  /*
+   * SALVADOR (7.9.2026). Rajaus on 2,4 × 2,9 kilometriä
+   * Kauppakamarin talolta Campo Grandelle — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n salvador-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kaupungin nimi, kaksikerroksinen kaupunki, Kaikkien pyhien lahti
+   * ja Barran majakka; historiasivu kertoo Pelourinhosta,
+   * orjasatamasta, malêjen kapinasta ja Lacerdan hissistä; Musta
+   * Rooma -sivu candomblésta, capoeirasta, Bonfimin pesujuhlasta ja
+   * karnevaalista; ruokasivu acarajésta ja vanhoista toreista.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS: Lacerdan
+   * hissi, katedraali, Mercado Modelo ja Largo do Pelourinho ovat
+   * kaikki ruudussa, mutta ne ovat lehden omien juttujen aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. São Franciscon kirkko
+   * ja luostari — kaupungin kuuluisin — EI OLE KARTALLA, koska
+   * en-Wikipedian artikkelilla ei ole koordinaattia (haku 7.9.2026),
+   * eikä koordinaatteja arvata; sama koski Rosário dos Pretosia ja
+   * Conceição da Praiaa. Praça Rio Branco 35 on 15 metriä Sobrado
+   * Azulejadosta ja São Pedro dos Clérigos 188 metriä Jorge Amadon
+   * talosta eli 200 metrin säännön alle.
+   *
+   * ANGLIKAANINEN KAPPELI PURETTIIN 1975, ja piste merkitsee sen
+   * paikan Campo Granden laidalla. Kohde on kartalla samalla
+   * perusteella kuin Wellingtonin Bolton Streetin hautausmaa, josta
+   * moottoritie vei valtaosan: paikka on yhä olemassa ja kertoo
+   * asian, jota mikään säilynyt talo ei kerro.
+   */
+  salvador: {
+    polku: 'assets/kartat/salvador-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -12.9668, etela: -12.9932, lansi: -38.5252, ita: -38.5028 },
+    esittely: 'Kartta näyttää Salvadorin kärjen, jossa kaupunki on '
+      + 'kahdessa kerroksessa: vasemmassa reunassa on Kaikkien pyhien '
+      + 'lahti ja sen rannassa Alakaupungin satamakortteli, ja siitä '
+      + 'oikealle nousee jyrkänteen päällä Yläkaupungin vanha '
+      + 'ruutukaava kirkkoineen. Alaosassa kadut suoristuvat '
+      + 'Campo Granden puistoaukiolle. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * 7.9.2026. Pienin väli on 294 metriä (Kauppakamarin talo –
+       * Jorge Amadon talo), toiseksi pienin 301 metriä (Jorge Amadon
+       * talo – São Miguelin kirkko).
+       */
+      { nimi: 'Kauppakamarin talo', lat: -12.97027778, lon: -38.51083333 },
+      { nimi: 'Jorge Amadon talo', lat: -12.97150722, lon: -38.50842788 },
+      { nimi: 'Sobrado Azulejado', lat: -12.973086, lon: -38.513235 },
+      { nimi: 'São Miguelin kirkko', lat: -12.97414, lon: -38.50779 },
+      { nimi: 'Mourarian Santo Antônio', lat: -12.980625, lon: -38.51068611 },
+      { nimi: 'Solar do Unhão', lat: -12.9826, lon: -38.5206 },
+      { nimi: 'Vila Velhan teatteri', lat: -12.98556, lon: -38.52176 },
+      { nimi: 'Anglikaanisen kappelin paikka', lat: -12.9897305, lon: -38.5220999 },
+    ],
+  },
+  /*
+   * CARACAS (7.9.2026). Rajaus on 2,8 × 2,1 kilometriä eli Toronton
+   * kokoluokkaa — perustelu ja itäreunan valinta ovat
+   * tools/piirra-kaupunkikartta.mjs:n caracas-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Guaicaipuro, Ávila meren ja laakson välissä, vuoden 1812 järistys
+   * ja Bolívarin arvonimi; historiasivu kertoo Plaza Bolívarista,
+   * Capitoliosta, Panteón Nacionalista ja Guzmán Blancosta;
+   * luontosivu Ávilan kansallispuistosta, Angelin putouksesta,
+   * Catatumbon salamoinnista ja öljystä; musiikkisivu El Sistemasta,
+   * Simón Bolívar -orkesterista, Aula Magnasta ja joropasta.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Plaza
+   * Bolívar, Capitolio, Panteón Nacional ja katedraali mahtuisivat
+   * kaikki ruutuun — kolme ensimmäistä ovat historiasivun nostojen
+   * aihe ja katedraali noston K3 aihe. Samasta syystä kartalla ei ole
+   * Ciudad Universitariaa eikä Bolívarin syntymätaloa: edellinen on
+   * noston M3, jälkimmäinen noston K4 aihe.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN MUISTA SYISTÄ: Palacio de las
+   * Academias on lehden noston H4 leipätekstissä omana asianaan
+   * (yliopiston muutto 1876 ja uusgoottilainen julkisivu), ja
+   * Iglesia de San Francisco on sen naapurina vain 30 metrin päässä
+   * eli reilusti 200 metrin säännön alle.
+   *
+   * SISÄLTÖLINJAUS ON SAMA KUIN LEHDESSÄ: ei nykypolitiikkaa.
+   * Miraflores, kansalliskokous ja keskuspankki jäivät siksi pois,
+   * vaikka niillä on omat artikkelinsa ja koordinaattinsa. Keltainen
+   * talo on mukana rakennuksena, jonka oma tarina päättyy 1912.
+   */
+  caracas: {
+    polku: 'assets/kartat/caracas-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 10.5145, etela: 10.4955, lansi: -66.9210, ita: -66.8955 },
+    esittely: 'Kartan alue kattaa vanhan kaupungin ruutukaavan ja sen '
+      + 'itäpuolelle 1900-luvulla kasvaneen museo- ja tornikaupungin. '
+      + 'Vasemmalla ovat siirtomaa-ajan korttelit kirkkoineen, '
+      + 'oikeassa yläkulmassa Los Caobosin puisto ja sen alapuolella '
+      + 'Parque Centralin kortteli, ja oikeassa alakulmassa kaartaa '
+      + 'moottoritien eritasoliittymä. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta ja
+       * geosearchista 7.9.2026. Pienin väli on 202 metriä
+       * (kaupunginteatteri – Santa Teresan basilika), toiseksi
+       * pienin 213 metriä (ensimmäisten kirjainten talo –
+       * keltainen talo).
+       */
+      { nimi: 'Quinta de Anauco', lat: 10.51194444, lon: -66.89972222 },
+      { nimi: 'Las Mercedesin kirkko', lat: 10.5105, lon: -66.91415 },
+      { nimi: 'Ensimmäisten kirjainten talo', lat: 10.50805556, lon: -66.91388889 },
+      { nimi: 'Keltainen talo', lat: 10.50656944, lon: -66.91511944 },
+      { nimi: 'Kaupunginteatteri', lat: 10.50207, lon: -66.9174 },
+      { nimi: 'Santa Teresan basilika', lat: 10.50175, lon: -66.91558 },
+      { nimi: 'Kansallinen taidegalleria', lat: 10.50055556, lon: -66.9025 },
+      { nimi: 'Parque Centralin tornit', lat: 10.49830556, lon: -66.90130556 },
+    ],
+  },
+  /*
+   * BERGEN (7.9.2026). Rajaus on 2,1 × 1,8 kilometriä, ja se on
+   * leveämpi kuin kohteet vaatisivat: länsireuna on vedetty
+   * Nordnesin kärjen yli, jotta Vågen ylipäänsä täyttyy vedellä.
+   * Perustelu ja koeajot ovat tools/piirra-kaupunkikartta.mjs:n
+   * bergen-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Bryggenin varastot, Håkonshallen, kaupungin laajeneminen 1876 ja
+   * Bryggenin riimulöytö; historiasivu kertoo hansakonttorista,
+   * sen etuoikeuksista, suurpaloista ja Bergenhusin linnoituksesta
+   * ja tuomiokirkosta; musiikkisivu Ole Bullista, Det Norske
+   * Theaterista, Griegistä ja Peer Gyntistä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * VIISI KOHDETTA JÄTETTIIN POIS, VAIKKA NE MAHTUISIVAT RUUTUUN.
+   * Bryggen ja Bergenhus näkyvät kuvassa rakennuksina, mutta ne
+   * ovat nostojen K1, K2 ja H4 aihe. Mariakirken ja Johanneksen
+   * kirkko ovat lehden omien kuvien aihe (kansikuva ja avauskuva
+   * kumpikin faktateksteineen), ja Fløibanen on matkaoppaan jakson
+   * aihe. Bryggens Museum ja hansamuseo jäivät pois, koska ne
+   * kertovat samaa asiaa kuin nostot K1, K4 ja H1.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: rautatieasema
+   * on 81 metriä kaupunginkirjastosta ja Nonneseterin luostarin
+   * rauniot 44 metriä asemasta. Christi Krybben koulu — Pohjoismaiden
+   * vanhin yhä toimiva alakoulurakennus — jätettiin pois toisesta
+   * syystä: en-Wikipedian artikkelissa on vain yksi kappale, eikä
+   * siitä saa kolmen kappaleen juttua ilman keksimistä.
+   *
+   * VUODEN 1814 VAALIKIRKOT: Nykirken, Korskirken ja Pyhän Yrjänän
+   * kirkko olivat kaikki kolme vaalikirkkoja, mutta yksikään juttu
+   * ei kerro siitä. Vaalikirkko on lehden noston H4 aihe
+   * (tuomiokirkko), eikä kohdekartta toista sitä kolmeen kertaan.
+   */
+  bergen: {
+    polku: 'assets/kartat/bergen-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 60.4010, etela: 60.3850, lansi: 5.2990, ita: 5.3375 },
+    esittely: 'Kartta näyttää Vågenin lahden ja sen ympärille '
+      + 'kiertyvän vanhan Bergenin. Vasemmalla työntyy veteen '
+      + 'Nordnesin kapea niemi, lahden itärannalla erottuvat '
+      + 'Bryggenin laiturit, lahden pohjukassa on tori, oikealla '
+      + 'nousevat Fløyenin rinteen kadut ja oikealla alhaalla on '
+      + 'Lille Lungegårdsvannetin monikulmainen lampi. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta ja
+       * geosearchista 7.9.2026. Pienin väli on 216 metriä (Pyhän
+       * Yrjänän kirkko – kaupunginkirjasto), toiseksi pienin 247
+       * metriä (Nykirken – Fredriksbergin linnake).
+       */
+      { nimi: 'Nykirken', lat: 60.39708899, lon: 5.31336781 },
+      { nimi: 'Fredriksbergin linnake', lat: 60.3964, lon: 5.3091 },
+      { nimi: 'Munkelivin luostari', lat: 60.395, lon: 5.315 },
+      { nimi: 'Korskirken', lat: 60.39488615, lon: 5.32774794 },
+      { nimi: 'Pyhän Yrjänän kirkko', lat: 60.39175567, lon: 5.33271164 },
+      { nimi: 'Permanenten', lat: 60.39062694, lon: 5.32414694 },
+      { nimi: 'Kaupunginkirjasto', lat: 60.38986389, lon: 5.33184444 },
+      { nimi: 'Yliopistomuseo', lat: 60.38762222, lon: 5.32158056 },
+    ],
+  },
 };
 
 /*

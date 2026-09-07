@@ -5,3 +5,14 @@ Lue ensin agentin-yhteiset-saannot.md samasta kansiosta ja noudata sitä. Läht�
 TEHTÄVÄ: KOHDEKARTAT ja nähtävyysjutut lehtikaupungeille, joilta ne puuttuvat. MALLI: Cairns ja Panamá (v1627) — js/packs/maakartat.js KAUPUNKIKARTAT.cairns/.panama (8 kohdetta, lat/lon, rajaus), js/packs/nahtavyysjutut.js (8 juttua kuvineen per kaupunki), tools/piirra-kaupunkikartta.mjs (rajauslohko + assets/kartat/<kaupunki>-keskusta.png), docs/moduulit/kaupunkilehti.md:n kohdekarttaosuus. KAUPUNKIKARTAT-lisäys ankkuroidaan ' * Lambertin tasapinta' -kommenttia EDELTÄVÄÄN };:ään. Sääntö: kohdekartan kohteet EIVÄT toista lehden omia juttuja (New Yorkin sääntö) — lue ensin kunkin kaupungin lehti js/packs/kulttuuri-kategoriat.js:stä ja faktapohja docs/mantereet-tyoaineisto/faktapohja-<kaupunki>.md, ja valitse kartalle muut kohteet. Koordinaatit en-Wikipedian coordinates-propista tai geosearchista (NODE_USE_ENV_PROXY=1), vähimmäisväli 200 m, tiivis rajaus (kokeile tools/piirra-kaupunkikartta.mjs ja katso png). Nähtävyysjuttujen kuvat Commonsista lisenssi ja tekijä tarkistettuina (≥ 1200 px, katsottu, ei kasvoja/vesileimoja; kuvaton juttu on parempi kuin huono kuva), enintään 2 rinnakkaista hakua; parvessa on monta agenttia: 429 → 45 s.
 
 Portit yhteisten sääntöjen mukaan + node tools/tarkista-karttapisteet.mjs <kaupunki> jokaiselle. Yksi commit, ei pushia; ensimmäinen rivi ≤ 60 merkkiä; lopussa Co-Authored-By ja Claude-Session -rivit. Raportoi SHA, kohteet per kaupunki ja kuvaputkelle tilattavat miniatyyrit (kohde — mitä kuvan pitää esittää).
+
+## Alueet (päätoimittajan päätös 7.9.2026)
+
+Alueille (kapadokia, siinai, rubalkhali, islanti, lappi, kreeta, sisilia,
+alpit, kamtsatka, sahalin, borneo, sumatra) EI tehdä kohdekarttaa
+pääkaupungista: kohdekartta on kaupungin keskustan kävelykartta, ja
+alueen sisältö on jo karttanostoissa (maastokohteet, eläintäyt,
+skandaalit) sekä maalehdessä. Jos alue saa joskus oman kaupunkilehden
+kaupunkitunnuksella (esim. Palermo Sisilialle), kohdekartta tehdään
+sille kaupungille.
+

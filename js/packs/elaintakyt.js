@@ -166,12 +166,15 @@ const ELAINTAKY_KUVAJUURI = 'https://media.matkakirja.app/kohtaamiset/kuvajono/'
  * juuresta kokonaisena `url`-kenttään: pelkkä tunnus veisi
  * js/media.js assetOsoitteen kautta väärään kansioon.
  *
- * TOIMITUKSESTA JÄI KAKSI KUVAA KYTKEMÄTTÄ: Fidžin (elain-fji-
- * fidzinleguaani-r20260907-v3) ja Salomonsaarten (elain-slb-
- * ducorpsinkakadu-r20260907-v1) kuville ei ole tässä taulussa
- * tietuetta lainkaan — FJI:llä ja SLB:llä ei ole eläintäkyä. Kuva ei
- * ole tietue, eikä integroija kirjoita täkytekstiä itse, joten ne
- * odottavat Fablen päätöstä (raportoitu 7.9.2026).
+ * TOIMITUKSEN KAKSI VIIMEISTÄ KUVAA KYTKETTIIN 7.9.2026 ILLALLA.
+ * Fidžin (elain-fji-fidzinleguaani-r20260907-v3) ja Salomonsaarten
+ * (elain-slb-ducorpsinkakadu-r20260907-v1) kuvat jäivät aamulla ilman
+ * tietuetta, koska FJI:llä ja SLB:llä ei ollut eläintäkyä lainkaan —
+ * eikä sitä voinut kirjoittaa, koska laudan maa-alue ei kanna merkkiä
+ * kummassakaan maassa. Fablen päätös samana iltana avasi lukon
+ * (poikkeus tests/elaintakyt.test.mjs:ssä, perustelu siellä ja
+ * docs/moduulit/karttanostot-kattavuus.md:ssä), ja tietueet ovat nyt
+ * tämän tiedoston lopussa erässä M19.
  */
 const ELAINTAKY_KUVAJUURI_0709 = 'https://media.matkakirja.app/elaimet/20260907/';
 
@@ -2312,6 +2315,106 @@ export const ELAINTAKYT = {
     // Caracasista (vähimmäisetäisyys 35).
     lon: -68.5,
     lat: 7.5,
+  },
+
+  /* ================================================================
+   * ERÄ M19 (7.9.2026): FJI JA SLB — KAKSI MAATA, JOTKA LAUTA JÄTTI
+   * PIIRTÄMÄTTÄ.
+   *
+   * Nämä olivat kuvaputken 7.9. toimituksen viimeiset kytkemättä
+   * jääneet kuvat, ja este oli laudassa eikä lähteissä. Este mitattiin
+   * 0,02 asteen ruudukolla ennen kuin siitä puhuttiin:
+   *
+   *  - SALOMONSAARIA EI PIIRRETÄ MAANA LAINKAAN. Maan yhdentoista
+   *    countryShapes-renkaan sisään osuu 739 ruudukkopistettä, ja
+   *    `isOnLand` (js/mapart.js, map.outlines) on JOKAISESSA epätosi.
+   *    Lähin rantaviivan piste Guadalcanalista on ~282 lautayksikön
+   *    päässä (Uusi-Guinea). Honiaran etäisyys ei ollut ongelma.
+   *  - FIDŽISTÄ PIIRRETÄÄN VAIN VITI LEVU. Vanua Levu ja Kadavu ovat
+   *    countryShapes-renkaissa mutta eivät rantaviivassa, ja Viti
+   *    Levun kaukaisin piste on 33,6 yksikköä Suvasta eli ALLE
+   *    vartion 35:n. Lau-saaret (x ≈ 11 874) ovat kokonaan maan
+   *    monikulmion ulkopuolella, joka päättyy x 11 833,3:een
+   *    (= 180° E).
+   *
+   * RATKAISU ON PALLO, EI LATISTETTU LAUTA (Fablen päätös 7.9.2026,
+   * vaihtoehto 2). Laudan `map.outlines` on tyylitelty piirros, josta
+   * pienet saaret puuttuvat, mutta pallon vektorirantaviiva
+   * (js/pallovektorit.js, v1649 alkaen) piirtää saman geometrian
+   * Natural Earthin 1:10m-aineistosta ja tuntee sekä Lau-saaret että
+   * Salomonsaaret. Merkki pannaan siis eläimen TODELLISEEN
+   * maantieteelliseen paikkaan, ja laudan vanha piirros saa
+   * dokumentoidun poikkeuksen samalla mallilla kuin Islanti
+   * (tests/elaintakyt.test.mjs, perustelu myös
+   * docs/moduulit/karttanostot-kattavuus.md).
+   *
+   * POIKKEUS KOSKEE VAIN LAUDAN PIIRROSTA, EI KAUPUNKISÄDETTÄ. Kumpikin
+   * piste on yli 35 lautayksikön päässä jokaisesta kaupunkimerkistä
+   * omin voimin, ja SLB on lisäksi oman maansa monikulmion sisällä —
+   * siltä osin vartiota ei kierretty lainkaan.
+   *
+   * VANUATU JÄÄ YHÄ ILMAN (erä M18): sielläkin este on sama, mutta
+   * lajia (kookoskrapu) ei ole vielä tilattu kuvaputkelta.
+   * ============================================================== */
+  FJI: {
+    elain: 'nauhaleguaani',
+    otsikko: 'Lisko, joka kopioi taustansa kuvion puolessa minuutissa',
+    teksti: 'Nauhaleguaani on puissa elävä lisko, joka on kotoperäinen Fidžin itäisille Lau-saarille — se on eri laji kuin luoteisten saarten kuivissa metsissä elävä kruunuleguaani, vaikka lajit ovat lähisukulaisia. Levinneisyys ulottuu Vanua Balavusta pohjoisessa Fulagaan ja Ogeaan etelässä, ja lajia tavataan ainakin yhdellätoista saarella. Koiraan smaragdinvihreää pohjaa kiertää kaksi tai kolme valkoista tai vaaleansinistä, kahden sentin levyistä nauhaa; kuonosta hännänpäähän eläin on kuusikymmentä senttimetriä ja painaa enintään kaksisataa grammaa, ja harja jää puoleen senttiin. Iho on valoherkkä, ja lisko sovittaa värinsä taustaansa: vankeudessa pidetyt yksilöt ovat ottaneet häkkinsä verkkokannen kuvion pintaansa jopa puolessa minuutissa. Päivät kuluvat ruokaa etsien, paistatellen ja reviiriä vartioiden, ja yöksi eläin vetäytyy latvustoon. Tongaan laji vietiin kolmesataa vuotta sitten.',
+    lahde: 'en-Wikipedia "Brachylophus fasciatus", johdanto sekä osiot '
+      + '"Distribution and habitat", "Description", "Behavior" ja '
+      + '"Taxonomy and etymology", ja en-Wikipedia "Fiji crested iguana", '
+      + 'johdanto (kruunuleguaanin levinneisyys). Tarkistettu 7.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-fji-fidzinleguaani-r20260907-v3.jpg`,
+        kuvateksti: 'Fidžinleguaani lepää oksalla Fidžin Lau-saarilla.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: IUCN SSC '
+          + 'Iguana Specialist Group — Iguana Species',
+        lahdeUrl: 'https://www.iucn-isg.org/species/iguana-species/',
+      },
+    ],
+    // Piste on Lakeba Lau-saarilla (en-Wikipedia "Lakeba", artikkelin
+    // koordinaatit), 102,9 lautayksikköä Suvasta (vähimmäisetäisyys
+    // 35). Lau on maan monikulmion ulkopuolella eikä laudan
+    // rantaviivassa — ks. erän otsikkokommentti ja testin poikkeus.
+    //
+    // MERKKI NÄKYY MAAILMANKARTALLA, EI FIDŽIN MAALEHDEN KARTALLA.
+    // FOKUS_POHJAT.FJI-rajaus päättyy x 11 853,33:een ja tämä piste on
+    // x 11 874,0 — koko Lau on rajauksen ulkopuolella, kuten
+    // js/packs/maastokohteet-fji.js:n otsikkokommentti jo totesi.
+    // Eläintäky on maailmankartan merkki (ks. tiedoston alku), joten
+    // se toimii, mutta Fidžin lehden kartalta se puuttuu. Rajauksen
+    // levennys olisi eri työ: se uusisi myös lehden pohjakuvan
+    // (FJI.webp). Vaihtoehtoa ei ollut — lajia ei ole Lau-saarten
+    // ulkopuolella.
+    lon: -178.78,
+    lat: -18.22,
+  },
+  SLB: {
+    elain: 'ducorpsinkakadu',
+    otsikko: 'Kakadu, jonka töyhtö nousee purjeeksi',
+    teksti: 'Ducorpsinkakadu on Salomonsaarten saariston kotoperäinen kakadu, jota tavataan yleisenä lähes koko saaristossa — ainoastaan eteläisestä Makirasta se puuttuu. Lintu viihtyy alavissa sademetsissä, toisen polven metsissä, raivatuilla mailla ja puutarhoissa. Se on noin kolmenkymmenen sentin mittainen ja lähes kokonaan valkoinen, silmää kiertää sininen rengas ja nokka on vaalea kuten muillakin oman alasukunsa kakaduilla. Töyhtö lepää tavallisesti litteänä päätä vasten, mutta nostettuna se muistuttaa purjetta. Koko asettuu kahden sukulaisen väliin: lintu on tanimbarinkakadua suurempi mutta valkotöyhtökakadua pienempi. Pesä on puunkolossa, munia on yleensä kaksi ja ne ovat valkoisia; hautominen kestää noin 25 vuorokautta, ja poikaset lähtevät pesästä noin 62 vuorokautta kuoriutumisesta. Luonnossa pesintäaika on tavallisesti heinä–syyskuu. Kanta on arviolta satatuhatta lintua, ja laji on luokiteltu elinvoimaiseksi.',
+    lahde: 'en-Wikipedia "Solomons corella", johdanto sekä osiot "Description", '
+      + '"Distribution & population" ja "Breeding". Tarkistettu 7.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-slb-ducorpsinkakadu-r20260907-v1.jpg`,
+        kuvateksti: 'Ducorpsinkakadut jakavat siemenkodan Guadalcanalin alavassa '
+          + 'sademetsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Cornell '
+          + 'BirdNet — Cacatua ducorpsii; Avibase — Cacatua ducorpsii',
+        lahdeUrl: 'https://birdnet.cornell.edu/taxonomy/species/Cacatua%20ducorpsii',
+      },
+    ],
+    // Piste on Malaitan pohjoiskärjessä, 42,0 lautayksikköä Honiarasta
+    // (vähimmäisetäisyys 35) ja maan monikulmion sisällä.
+    // Guadalcanal ei kelvannut: koko saaren kaukaisin piste on 34,1
+    // yksikköä Honiarasta. Saaren keskiosa (en-Wikipedia "Malaita",
+    // artikkelin koordinaatit 160,95 / −9,02) ei kelvannut nimiön
+    // takia: skandaali "Kwaio 1927" on 3,5 yksikön päässä siitä, ja
+    // sääntö N3 kaatoi ladonnan (tools/tarkista-nimiolimitys.mjs).
+    lon: 160.63,
+    lat: -8.38,
   },
 };
 

@@ -50992,4 +50992,1478 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * SÃO PAULON KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.saopaulo, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Sala São Paulo", "Pinacoteca do Estado de São
+   * Paulo", "Church of Our Lady of the Rosary of Black Men (São
+   * Paulo)", "Mosteiro de São Bento (São Paulo)", "Edifício Copan",
+   * "Viaduto do Chá", "Solar da Marquesa de Santos" ja "Law School,
+   * University of São Paulo").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * aiheet ovat jesuiittojen lähetyskoulu, Santosin rata, väkiluvun
+   * kasvu, Praça da Sén katedraali, siirtokunnan köyhyys, Avenida
+   * Paulista, modernismin viikko ja Martinelli, siirtolaismajatalo,
+   * italialaiset, Liberdade, Rua 25 de Março, Mercadão ja
+   * Ibirapuera. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Sala São
+   * Paulon jutussa EI kerrota kahvin kuljetuksesta Santosiin muuten
+   * kuin yhdellä lauseella siitä, kenen rahoilla asema rakennettiin:
+   * rata on lehden noston aihe. Pinacotecan jutussa naapurin
+   * Estação da Luzia ei käsitellä, koska lehden rata-noston
+   * kuvateksti kertoo jo aseman vaiheet.
+   *
+   * KUVAT: kaikki kahdeksan tarkistettu Commonsin rajapinnasta
+   * 7.9.2026 (lisenssi ja tekijä extmetadatasta), katsottu silmin 960
+   * px esikatseluna ja kaikki vähintään 3 000 px leveitä. Yksikään
+   * tiedosto ei ole sama kuin kaupunkilehden saopaulo-lohkossa
+   * (kulttuuri-kategoriat.js) eikä southamerica-valokuvat.js:ssä.
+   * Kaksi ehdokasta hylättiin: Rosário-kirkon terävin kuva kantoi
+   * kuvaajan vesileimaa, ja Pinacotecan laajin julkisivukuva oli
+   * täynnä tunnistettavia kasvoja museon kahvilassa.
+   */
+  saopaulo: {
+    'Sala São Paulo': {
+      aika: '1999',
+      teksti: 'Konserttisali asuu rautatieasemassa. Júlio Prestesin '
+          + 'asema rakennettiin 1926–1938 Sorocabanan radan '
+          + 'pääkonttoriksi ja päätepysäkiksi; radan olivat '
+          + 'perustaneet kahviparonit viedäkseen satonsa osavaltion '
+          + 'lounaisosasta ja Paranásta Santosin satamaan. '
+          + 'Arkkitehti Christiano Stockler das Neves piirsi '
+          + 'eklektisen talon, jonka tyyliä on kuvattu '
+          + 'uusklassiseksi Ludvig XVI:ksi, ja otti mallia New '
+          + 'Yorkin vanhasta Pennsylvania-asemasta, joka on sittemmin '
+          + 'purettu. Suuren hallin läpi kulki työmaan ajan pieni '
+          + 'rata, jota pitkin Euroopasta tuodut rakennusaineet '
+          + 'saatiin sisälle.'
+          + '\n\n'
+          + 'Sitten juna hävisi kilpailun. Maanteiden ja linja-'
+          + 'autojen jälkeen kaukoliikenne loppui, ja 1980-luvulta '
+          + 'lähtien radalla ajoi vain lähijunayhtiö CPTM. Vuonna '
+          + '1995 kuvernööri Mário Covas näki hallissa jotain muuta: '
+          + 'osavaltion sinfoniaorkesterilla OSESPilla ei ollut '
+          + 'vakituista kotia, ja halli oli mitoiltaan kuin '
+          + '1800-luvun konserttisali. Remontti alkoi marraskuussa '
+          + '1997, ja sali avattiin 9. heinäkuuta 1999. Paikkoja on '
+          + '1 498.'
+          + '\n\n'
+          + 'Salin muoto on kenkälaatikko kuten Bostonissa, Wienissä '
+          + 'ja Amsterdamissa, ja katto liikkuu: viisitoista 7,5 '
+          + 'tonnin paneelia riippuu 25 metrin korkeudessa '
+          + 'kahdenkymmenen vaijerikelan varassa, ja niitä '
+          + 'säätämällä salin tilavuus muuttuu 12 000 '
+          + 'kuutiometristä 28 000:een. Junat kulkevat yhä seinän '
+          + 'takana, joten lattia on viidentoista sentin kelluva '
+          + 'laatta neopreenin päällä ja laitureille johtavat '
+          + 'käytävät on suljettu paksulla lasilla. Vanha veturi '
+          + 'korvattiin työmaalla 150 tonnin nosturilla, joka oli '
+          + 'ainoa keino nostaa kattopalkit paikoilleen.',
+      kuvat: [
+        {
+          tiedosto: 'Sala São Paulo 2023.jpg',
+          selite: 'Aseman suuri halli konserttisalina: puinen säätökatto '
+            + 'riippuu vaijereiden varassa vanhojen pylväiden yläpuolella.',
+          lahde: 'Boaventuravinicius, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Pinacoteca: {
+      aika: '1905',
+      teksti: 'Talo oli alun perin käsityökoulu. Liceu de Artes e '
+          + 'Ofícios perustettiin 1873, sai 1896 tontin Luzin '
+          + 'puiston laidalta ja alkoi rakentaa 1897. Ramos de '
+          + 'Azevedo ja hänen pääavustajansa Domiciano Rossi '
+          + 'piirsivät kolmikerroksisen talon italialaisen '
+          + 'eklektismin oppien mukaan, kaksi sisäpihaa ilmanvaihtoa '
+          + 'ja valoa varten. Rakennusaineet tuotiin kaukaa: '
+          + 'riianmäntyä ja ranskalaista keramiikkaa. Talo avattiin '
+          + 'osittain 1900, mutta sitä ei koskaan saatu valmiiksi — '
+          + 'julkisivun paljaat tiilet ja puuttuva kupoli ovat yhä '
+          + 'näkyvissä.'
+          + '\n\n'
+          + 'Museo perustettiin 1905 osavaltion päätöksellä, ja se on '
+          + 'kaupungin vanhin taidemuseo. Ensimmäinen kokoelma '
+          + 'koottiin kahdestakymmenestä Museu Paulistasta '
+          + 'siirretystä teoksesta ja kuudesta ostetusta työstä, '
+          + 'joiden tekijöitä olivat muun muassa Almeida Júnior, '
+          + 'Pedro Alexandrino ja Antônio Parreiras. Nyt kokoelmassa '
+          + 'on yli kaksitoistatuhatta teosta, painopisteenä '
+          + 'brasilialainen maalaustaide 1800- ja 1900-luvuilta; '
+          + 'lisäksi on Brasiliana-kokoelma ulkomaisten taiteilijoiden '
+          + 'Brasilia-aiheista ja Nemirovskyn kokoelma modernismia.'
+          + '\n\n'
+          + 'Nykyisen ilmeensä museo sai 1993–1998, kun Paulo Mendes '
+          + 'da Rocha johti muutostyön, joka teki talosta '
+          + 'kansainvälisiin näyttelyihin kelpaavan. Museolla on nyt '
+          + 'kolme taloa: tämä, Pinacoteca Estação vanhassa '
+          + 'DOPS-rakennuksessa — samassa, jossa toimii diktatuurin '
+          + 'vastarintaa muistava Memorial da Resistência — ja '
+          + 'vuodesta 2023 Pina Contemporânea Luzin puistossa. '
+          + 'Päärakennus suojeltiin 1982 osana Luzin '
+          + 'vuosisadanvaihteen rakennusryhmää.',
+      kuvat: [
+        {
+          tiedosto: 'Pinacoteca do Estado de São Paulo (3400107451).jpg',
+          selite: 'Julkisivun paljaat tiilet kertovat, ettei taloa koskaan '
+            + 'saatu valmiiksi; nimikirjaimet lisättiin vasta museoaikana.',
+          lahde: 'Rodrigo Soldon, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mustien veljeskunnan kirkko': {
+      aika: '1906',
+      teksti: 'Mustien veljeskunnat syntyivät orjuuden aikana '
+          + 'yhdessäolon, avunannon ja vastarinnan muodoksi. '
+          + 'Ruusukon Neitsyen veljeskunta anoi Portugalin '
+          + 'kuninkaalta Juhana V:ltä lupaa omaan kirkkoon 1721. '
+          + 'Vastausta ei ole tallella, mutta rahankeruu alkoi: '
+          + 'erakko Domingo de Melo Tavares kiersi 1725 Minas '
+          + 'Geraisin keräämässä almuja. Kaupunginvaltuusto lahjoitti '
+          + 'tontin 10. heinäkuuta 1728, ja kirkko valmistui 1737. '
+          + 'Sitä ennen orjat, joita ei päästetty valkoisten '
+          + 'kirkkoihin, olivat kokoontuneet pieneen kappeliin '
+          + 'Anhangabaú-joen rannalla.'
+          + '\n\n'
+          + 'Kirkossa katolinen ja bantulainen perinne sekoittuivat. '
+          + 'Pyhää Benedictusta kutsuttiin nimellä Lingongo, pyhää '
+          + 'Antoniusta nimellä Vereque ja Murheellista Neitsyttä '
+          + 'nimellä Sinhá Samba. Juhliin kuului kuninkaan ja '
+          + 'kuningattaren valinta, congada-kulkue sekä batuque- ja '
+          + 'sambarytmit. Veljeskunta oli myös turvaverkko: se auttoi '
+          + 'orjia, toisinaan pakoon asti, ja osallistui '
+          + 'orjuudenvastaiseen toimintaan.'
+          + '\n\n'
+          + 'Vanha kirkko oli nykyisellä Antônio Pradon aukiolla, ja '
+          + '1903 kaupunki päätti lunastaa sen aukion levennyksen '
+          + 'tieltä. Korvaus oli 250 contoa réisiä ja tontti Largo do '
+          + 'Paiçandulta. Uutta kirkkoa alettiin rakentaa 24. '
+          + 'heinäkuuta 1904; tontti oli soinen, koska sen läpi '
+          + 'juoksi puroja. Katto saatiin valmiiksi tammikuussa 1905 '
+          + 'ja koko kirkko 15. huhtikuuta 1906. Kuusi päivää '
+          + 'myöhemmin pyhimyskuvat kannettiin uuteen taloon '
+          + 'kulkueessa, jota johti Carlos Cruzin soittokunta ja jota '
+          + 'tervehdittiin 21 laukauksella. Kirkon vieressä seisoo '
+          + 'Júlio Guerran pronssiveistos Mãe Preta vuodelta 1955, ja '
+          + 'sen graniittijalustalle jätetään yhä kukkia ja kynttilöitä.',
+      kuvat: [
+        {
+          tiedosto: 'Igreja Nossa Senhora do Rosário dos Homens Pretos 01.jpg',
+          selite: 'Keltainen kirkko Largo do Paiçandulla; se rakennettiin '
+            + 'tähän 1904–1906, kun vanha kirkko purettiin aukion tieltä.',
+          lahde: 'Phsartori, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'São Benton luostari': {
+      aika: '1598',
+      teksti: 'Luostari perustettiin 14. heinäkuuta 1598. '
+          + 'Ylikapteeni Jorge Correia lahjoitti kaksi maalohkoa '
+          + 'Anhangabaún ja Tamanduateín jokien väliltä, ja perustaja '
+          + 'oli munkki Mauro Teixeira, José de Anchietan oppilas. '
+          + 'Valtuusto vahvisti lahjakirjan 15. huhtikuuta 1600, ja '
+          + 'rakennukset valmistuivat 1634. Suojeluspyhimys vaihtui '
+          + 'kahdesti: ensin Montserratin Neitsyeksi ja 1720 '
+          + 'Taivaaseen otetuksi Neitsyeksi.'
+          + '\n\n'
+          + 'Luostari joutui kerran valtakunnanpolitiikan '
+          + 'näyttämöksi. Kun Iberian unioni päättyi ja Juhana IV '
+          + 'kruunattiin 1641 Portugalin kuninkaaksi, osa São Paulon '
+          + 'espanjalaisperäisistä asukkaista halusi estää uuden '
+          + 'kuninkaan tunnustamisen ja tarjosi Amador Buenolle '
+          + '"São Paulon kuninkaan" arvoa. Bueno kieltäytyi ja pakeni '
+          + 'luostariin kansanjoukkoa; munkkien avulla tilanne '
+          + 'rauhoittui ja Juhana IV tunnustettiin. Vuonna 1650 '
+          + 'bandeirante Fernão Dias Pais, "smaragdinmetsästäjä", '
+          + 'kustansi korjauksen ja sai vastineeksi hautapaikan '
+          + 'kirkosta; hänen jäännöksensä lepäävät yhä pääkirkkosalissa.'
+          + '\n\n'
+          + '1800-luvulla keisarikunnan laki kielsi noviisien '
+          + 'ottamisen, ja yhteisö oli kuolla sukupuuttoon. '
+          + 'Saksalainen apotti Miguel Kruse käänsi suunnan, perusti '
+          + '1903 oppikoulun ja 1908 filosofisen korkeakoulun ja '
+          + 'purki siirtomaa-ajan kirkon. Nykyinen '
+          + 'uusromaaninen basilika rakennettiin 1910–1922 '
+          + 'münchenilaisen Richard Berndlin piirustusten mukaan, ja '
+          + 'sisustuksen suunnitteli hollantilainen benediktiini '
+          + 'Adalbert Gresnicht Beuronin taidekoulun opeilla. '
+          + 'Kirkkosalin kaksitoista apostolia veisti 1919–1922 '
+          + 'belgialainen '
+          + 'Adrien van Emelen. Luostarissa asuu noin 45 munkkia, '
+          + 'jotka laulavat päivittäiset rukoushetket gregoriaanisesti.',
+      kuvat: [
+        {
+          tiedosto: 'São Bento Monastery, São Paulo downtown, Brazil.jpg',
+          selite: 'Pääalttari ja kuori: Adalbert Gresnichtin Beuron-koulun '
+            + 'koristelu peittää holvit kattoon asti.',
+          lahde: 'Wilfredor, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Edifício Copan': {
+      aika: '1966',
+      teksti: 'Copan on Oscar Niemeyerin São Paulon toimiston työ, '
+          + 'ja sen rakennesuunnittelija oli insinööri Joaquim '
+          + 'Cardozo. Talo suunniteltiin kaupungin 400-'
+          + 'vuotisjuhlaan, mutta työ alkoi vasta 1952 ja valmistui '
+          + '1966; matkan varrella suunnitelmaa muutettiin Carlos '
+          + 'Lemosin avustuksella. Niemeyer vastasi itse '
+          + 'aaltoilevasta julkisivusta, ja ajatus oli talo, jossa '
+          + 'asuisi ihmisiä kaikista yhteiskuntaluokista. '
+          + 'Alkuperäisessä suunnitelmassa oli kaksi rakennusta, '
+          + 'toinen hotelli, mutta vain asuintalo tehtiin. Nimi on '
+          + 'lyhenne rakennuttajasta Companhia Pan-Americana de '
+          + 'Hotéis e Turismo.'
+          + '\n\n'
+          + 'Mittakaava on kaupungin omaa luokkaa. Talo on 115 '
+          + 'metriä korkea, 32-kerroksinen ja pinta-alaltaan 120 000 '
+          + 'neliömetriä kuudessa lohkossa; siinä on 1 160 asuntoa '
+          + 'yksiöistä kolmen makuuhuoneen koteihin, noin '
+          + 'kaksituhatta asukasta, kaksikymmentä hissiä ja '
+          + 'katutasossa 72 liikettä. Asukkaita on niin paljon, että '
+          + 'posti antoi talolle oman postinumeronsa. Runko on maan '
+          + 'suurin teräsbetonirakenne.'
+          + '\n\n'
+          + 'Kaikkea suunnitelmasta ei saatu pidettyä. Niemeyer '
+          + 'piirsi talon ulkopuolelle puiston, toisen puiston '
+          + 'ensimmäiseen kerrokseen ja kattoterassin; ulkopuisto on '
+          + 'nykyään pankin talo ja kaksi muuta ovat suljettuina. '
+          + 'Vuodesta 2014 koko rakennus on ollut läpikuultavan '
+          + 'sinimustan verhon peitossa, jotta julkisivun irtoavat '
+          + 'mosaiikkilaatat eivät putoaisi jalankulkijoiden päälle. '
+          + 'Laattoja on 72 miljoonaa.',
+      kuvat: [
+        {
+          tiedosto: 'Edifício Copan (3407218439).jpg',
+          selite: 'Niemeyerin aaltoileva julkisivu alhaalta katsottuna: '
+            + 'vaakasuorat aurinkosuojat kiertävät koko talon.',
+          lahde: 'Rodrigo Soldon, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Viaduto do Chá': {
+      aika: '1892',
+      teksti: 'Anhangabaún laakso jakoi kaupungin kahtia. '
+          + 'Keskusta loppui Rua Direitaan, ja vastapäätä nousi '
+          + 'Morro do Chá, teeviljelmän mukaan nimetty kukkula, '
+          + 'jonne pääsi vain U-kirjaimen muotoisella '
+          + 'raitiovaunukierroksella tai laskeutumalla jyrkästi '
+          + 'Lorenan sillalle ja nousemalla toista rinnettä ylös. '
+          + 'Ranskalainen siirtolainen Jules Martin — sama mies, joka '
+          + 'toi kaupunkiin ensimmäisen kaasumoottorin ja piirsi '
+          + 'provinssin ensimmäisen kartan — esitti 1877 sillan '
+          + 'laakson yli.'
+          + '\n\n'
+          + 'Työ alkoi 30. huhtikuuta 1888 ja pysähtyi kuukaudessa. '
+          + 'Tatuín paroni Francisco Xavier Pais de Barros vei asian '
+          + 'oikeuteen, koska hänen vaimonsa talo oli määrä purkaa '
+          + 'sillan tieltä; sillan kannattajat kävivät talon kimppuun '
+          + 'hakkuineen pakottaakseen omistajan muuttamaan. Kanne '
+          + 'hävittiin toukokuussa 1889, ja rakentaminen jatkui. '
+          + 'Valmis silta oli 240 metriä pitkä, siitä 180 metriä '
+          + 'Saksasta tuotua rautaa, puinen kansi ja 14 metriä leveä. '
+          + 'Se avattiin 6. marraskuuta 1892 jalankulkijoille ja '
+          + 'hevosraitiovaunuille. Ylitys maksoi 60 réisiä eli kolme '
+          + 'vinténiä, mistä tuli lempinimi Kolmen vinténin silta; '
+          + 'maksu poistui 1896, kun kaupunki lunasti sillan.'
+          + '\n\n'
+          + 'Siltaa vahvistettiin 1902 sähköraitiovaunuja varten, ja '
+          + 'laakso muutettiin puistoksi 1910. 1930-luvulla silta oli '
+          + 'käynyt liian kapeaksi, ja viereen rakennettiin Elisário '
+          + 'Bahianan piirtämä kaksi kertaa leveämpi '
+          + 'teräsbetonikaari, joka avattiin 23. helmikuuta 1938; '
+          + 'vanha rautasilta purettiin saman vuoden huhtikuusta '
+          + 'alkaen. Joki vietiin myöhemmin maan alle ja laaksoon '
+          + 'tehtiin tie ja tunneli. Nykyään silta on kaupungintalona '
+          + 'toimivan Matarazzo-rakennuksen vieressä, ja se on '
+          + 'televisiohaastattelujen vakiotausta.',
+      kuvat: [
+        {
+          tiedosto: 'Viaduto do Chá, São Paulo, Brazil.jpg',
+          selite: 'Vuoden 1938 betonikaari Anhangabaún laakson yli; '
+            + 'vasemmalla kaupungintalona toimiva Matarazzo-rakennus.',
+          lahde: 'Wilfredor, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Solar da Marquesa de Santos': {
+      aika: '1834',
+      teksti: 'Talo on savesta poljettu ja 1700-luvun '
+          + 'jälkipuoliskolta. Asiakirjoissa mainitaan 1739–1754 '
+          + 'neljä taloa Rua do Carmon varrella, ja niistä kaksi '
+          + 'ilmeisesti yhdistettiin yhdeksi kartanoksi. Prikaatikenraali '
+          + 'José Joaquim Pinto de Morais Leme sai talon 1802 velkojen '
+          + 'maksuksi.'
+          + '\n\n'
+          + 'Nimensä talo sai Domitila de Castrolta, Santosin '
+          + 'markiisittarelta, joka osti sen prikaatikenraalin '
+          + 'perijättäreltä yhdellätoista contolla ja neljälläsadalla '
+          + 'tuhannella réisillä palattuaan Rio de Janeirosta ja '
+          + 'suhteensa Pedro I:een päätyttyä. Hän asui talossa '
+          + '1834–1867 ja muutti sitä useaan otteeseen. Tanssiaiset '
+          + 'ja illanvietot tekivät siitä São Paulon '
+          + 'ylhäisimpiä osoitteita, ja sitä alettiin kutsua nimellä '
+          + 'Palacete do Carmo. Markiisittaren kuoltua 1867 talo '
+          + 'siirtyi hänen pojalleen.'
+          + '\n\n'
+          + 'Vuonna 1880 talo huutokaupattiin hiippakunnalle, joka '
+          + 'teki siitä piispanpalatsin ja antoi kadunpuoleiselle '
+          + 'julkisivulle sen uusklassisen ilmeen. Vuosina 1909–1967 '
+          + 'talossa oli kaasuyhtiön konttori, joka avasi seiniin '
+          + 'näyteikkunoita ja rakensi lisäsiipiä. Kaupunki lunasti '
+          + 'talon, se suojeltiin 15. kesäkuuta 1971, ja vuoden 1991 '
+          + 'entistämisessä tehtiin epätavallinen valinta: '
+          + '1700-luvun savi- ja risuseinät jätettiin näkyviin sen '
+          + 'sijaan, että talo olisi palautettu yhteen ainoaan '
+          + 'aikakauteen. Nykyään siinä toimii kaupunginmuseo.',
+      kuvat: [
+        {
+          tiedosto: 'Fachada do Solar da Marquesa de Santos 07.jpg',
+          selite: 'Kartanon katujulkisivu valurautaparvekkeineen sai '
+            + 'uusklassisen ilmeensä piispanpalatsin aikana.',
+          lahde: 'DéboraGLima, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Oikeustieteellinen tiedekunta': {
+      aika: '1827',
+      teksti: 'Keisari Pedro I perusti 11. elokuuta 1827 Brasiliaan '
+          + 'kaksi oikeustieteellistä korkeakoulua: toisen Olindaan '
+          + '(myöhemmin Recifeen) ja toisen São Pauloon Largo de São '
+          + 'Franciscolle. São Paulon opetus alkoi ensin, joten se on '
+          + 'maan vanhin. Koulu perustettiin muutama vuosi '
+          + 'itsenäistymisen jälkeen, ja se oli keisarikunnan '
+          + 'hallinnolle välttämätön: suurin osa maata johtaneista '
+          + 'virkamiehistä kävi täällä.'
+          + '\n\n'
+          + 'Ensimmäinen tila oli fransiskaanien luostarirakennus, '
+          + 'joka on rakennettu uudelleen useita kertoja, viimeksi '
+          + '1934. Opiskelijoina ovat olleet muiden muassa runoilijat '
+          + 'Castro Alves, Álvares de Azevedo ja Fagundes Varela, '
+          + 'juristi ja poliitikko Ruy Barbosa sekä kirjailija '
+          + 'Monteiro Lobato. Talon edessä seisoo Álvares de Azevedon '
+          + 'patsas, jonka jalustassa lukee "Foi poeta, sonhou e amou '
+          + 'na vida" — hän oli runoilija, uneksi ja rakasti '
+          + 'elämässään.'
+          + '\n\n'
+          + 'Pihalla on hautakivi. Saksalainen professori Julius '
+          + 'Frank kuoli 1841, ja koska hän oli protestantti, häntä '
+          + 'ei voitu haudata mihinkään São Paulon katoliseen '
+          + 'hautausmaahan; opiskelijat hautasivat opettajansa '
+          + 'koulun sisäpihalle. Tiedekunta liitettiin 1934 São Paulon '
+          + 'yliopistoon. Se ottaa vuosittain 460 uutta opiskelijaa '
+          + '10 000–15 000 hakijasta, ja sen kasvatteja on ollut '
+          + 'kolmetoista Brasilian presidenttiä.',
+      kuvat: [
+        {
+          tiedosto: 'Faculdade de Direito da Universidade de São Paulo 01.jpg',
+          selite: 'Vuoden 1934 julkisivu Largo de São Franciscolla; edessä '
+            + 'seisoo runoilija Álvares de Azevedon patsas.',
+          lahde: 'Sturm, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * SALVADORIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.salvador, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Palace of the Commercial Association of Bahia",
+   * "Fundação Casa de Jorge Amado", "Sobrado Azulejado", "Church of
+   * Saint Michael (Salvador)", "Church of Santo Antônio da
+   * Mouraria", "Museum of Modern Art of Bahia", "Lina Bo Bardi",
+   * "Vila Velha Theater" ja "Anglican Chapel of Salvador").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * aiheet ovat kaupungin nimi, kaksikerroksinen kaupunki, Kaikkien
+   * pyhien lahti, Barran majakka, Pelourinho, orjasatama, malêjen
+   * kapina, Lacerdan hissi, candomblé, capoeira, Bonfimin pesujuhla,
+   * karnevaali, acarajé ja vanhat torit. Yksikään kartan kohteista
+   * ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Jorge Amadon
+   * talon jutussa Pelourinhon aukiota ei kuvata, vaikka talo seisoo
+   * sen laidalla: aukio on lehden historiasivun oma nosto. Solar do
+   * Unhãon jutussa Kaikkien pyhien lahdesta kerrotaan vain se, että
+   * kartano seisoo sen rannassa — lahti on lehden luontonoston aihe,
+   * ja sen kuvatekstissä näkyy tämä sama kartano.
+   *
+   * KUVAT: kuusi kahdeksasta tarkistettu Commonsin rajapinnasta
+   * 7.9.2026 (lisenssi ja tekijä extmetadatasta) ja katsottu silmin
+   * 960 px esikatseluna; kaikki ovat vähintään 3 000 px leveitä
+   * eivätkä ne ole samoja tiedostoja kuin kaupunkilehden
+   * salvador-lohkossa tai southamerica-valokuvat.js:ssä.
+   *
+   * KAKSI JUTTUA JÄI TAHALLAAN KUVATTA. Jorge Amadon talosta
+   * Commonsissa on vain kuvia TALOSTA ULOS — Pelourinhon aukiolle,
+   * joka on lehden oma nosto — tai katunäkymiä, joissa etualalla on
+   * tunnistettavat kasvot. Anglikaaninen kappeli purettiin 1975,
+   * eikä sen paikasta ole kuvaa; molemmat on tilattu kuvaputkelta
+   * miniatyyreinä, ja kuvaton juttu on parempi kuin väärä kuva.
+   */
+  salvador: {
+    'Kauppakamarin talo': {
+      aika: '1817',
+      teksti: 'Talo seisoo linnoituksen raunioilla. São Fernandon '
+          + 'linnake purettiin 1814–1816, ja sen paikalle nousi '
+          + 'Bahian kauppakamarin palatsi, joka vihittiin 28. '
+          + 'tammikuuta 1817. Rakentamisen kustansi Bahian entinen '
+          + 'kuvernööri Marcos de Noronha e Brito, Arcosin '
+          + 'kahdeksas kreivi, ja hän valitsi myös tontin; '
+          + 'piirustukset teki portugalilainen arkkitehti ja '
+          + 'kersanttimajuri Cosme Damião da Cunha Fidié. Vanhan '
+          + 'linnakkeen rakenteita on yhä nykyisen talon sisällä.'
+          + '\n\n'
+          + 'Rakennus on Salvadorin päänäytteitä uusklassismista, ja '
+          + 'sillä on kaksi julkisivua. Riachuelon aukiolle päin '
+          + 'katsovassa on neljä marmoriporrasta ja neljä '
+          + 'kreikkalaisista muistomerkeistä otettua pylvästä, '
+          + 'Comércion aukiolle katsovassa kaksi porrasta eikä '
+          + 'yhtään pylvästä. Molemmissa on Brasilian keisarikunnan '
+          + 'vaakuna, joka korvasi itsenäistymisen jälkeen '
+          + 'Portugalin, Brasilian ja Algarven yhdistyneen '
+          + 'kuningaskunnan vaakunan. Kaksi marmoriovea kantavat '
+          + 'kirjoituksia Juhana VI:n muistoksi.'
+          + '\n\n'
+          + 'Kauppakamari rakennutti myös aukion talonsa eteen. '
+          + 'Riachuelon aukio tehtiin 1866 mereltä vallatulle '
+          + 'täytemaalle, ja koska vierailijat saapuivat kaupunkiin '
+          + 'juuri sitä kautta, merenpuoleisesta julkisivusta tuli '
+          + '1867 päänäyttämö ja pääsisäänkäynti. Alakerrassa on '
+          + 'auditorio, vanhan linnakkeen esiin kaivetut perustukset '
+          + 'ja selli, joka toimi aikanaan väliaikaisena vankilana; '
+          + 'yläkerrassa parkettilattiainen ja kristallikruunuilla '
+          + 'valaistu suuri sali, kirjasto ja taidekokoelma, johon '
+          + 'kuuluu Candido Portinarin maalaus. Bahian '
+          + 'kulttuuriperintölaitos suojeli talon 1938.',
+      kuvat: [
+        {
+          tiedosto: 'AssociaçaoComercialBahia.jpg',
+          selite: 'Riachuelon aukion puoleinen julkisivu: neljä pylvästä, '
+            + 'marmoriportaat ja kaakeloitu porrasholvi.',
+          lahde: 'mathplourde, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jorge Amadon talo': {
+      aika: '1987',
+      teksti: 'Kysymys kuului, kenelle kirjailijan paperit '
+          + 'kuuluvat. Vuonna 1982 Jorge Amado täytti 70 vuotta ja '
+          + 'oli kirjoittanut viisikymmentä vuotta, ja monet '
+          + 'laitokset Brasiliassa ja ulkomailla painostivat häntä '
+          + 'lahjoittamaan kokoelmansa. Hänen vaimonsa, kirjailija '
+          + 'Zélia Gattai, vastusti: kokoelma kuului Bahian '
+          + 'ihmisille ja sen oli jäätävä Bahiaan.'
+          + '\n\n'
+          + 'Kaksi vuotta myöhemmin kirjailija Myriam Fraga otti '
+          + 'asian uudelleen esiin, ja Bahian liittovaltionyliopisto '
+          + 'ryhtyi luetteloimaan papereita, joita oli siihen asti '
+          + 'säilytetty Amadon kotona Rio Vermelhon '
+          + 'kaupunginosassa. Ennen vuotta 1950 syntyneistä '
+          + 'asiakirjoista suuri osa oli jo mennyttä: osa tuhoutui '
+          + 'Estado Novon vainoissa, osa hajosi maanpakovuosina, '
+          + 'kun Getúlio Vargas ajoi Amadon maasta hänen '
+          + 'kommunistipuolueen jäsenyytensä takia. Osavaltio ja '
+          + 'osavaltion pankki lahjoittivat kaksi suojeltua taloa '
+          + 'kokoelman kodiksi.'
+          + '\n\n'
+          + 'Säätiö perustettiin 1986 ja avattiin 7. maaliskuuta '
+          + '1987 päivän kestäneellä juhlalla. São Benton luostarin '
+          + 'apotti siunasi talon katolisin menoin, babalorixá Luís '
+          + 'da Muriçoca puhdisti sen suitsukkeilla ja pyhillä '
+          + 'lehdillä, ja iltapäivällä vietettiin padê, joka aloittaa '
+          + 'candomblén velvoitukset. Illalla lavalla olivat muun '
+          + 'muassa João Gilberto, Dorival Caymmi, Gilberto Gil, '
+          + 'Caetano Veloso, Gal Costa, Maria Bethânia ja Olodum, ja '
+          + 'väkeä oli yli kaksikymmentätuhatta. Amado sanoi '
+          + 'katselleensa juhlan alkua ikkunasta: loppuun asti hän ei '
+          + 'jaksanut, koska sydämellä on rajansa.',
+      lahde: 'Wikipedia',
+    },
+    'Sobrado Azulejado': {
+      aika: '1800-luku',
+      teksti: 'Talo on kauttaaltaan kaakelin peitossa. 1800-luvun '
+          + 'lopulla Comércion kaupunginosaan Cayrún aukion laidalle '
+          + 'rakennettiin nelikerroksinen tiilinen liiketalo '
+          + 'Salvadorin sataman kauppaa varten, ja sen julkisivu '
+          + 'verhoiltiin kokonaan azulejolla eli tinalasitetulla '
+          + 'keramiikkalaatalla. Kaikki laatat tehtiin Portugalissa. '
+          + 'Keramiikantutkija Udo Knoff kutsui taloa Bahian '
+          + 'kaakeloiduimmaksi rakennukseksi: siinä on 20 ovea ja 70 '
+          + 'ikkunaa, ja jokainen ikkuna on kehystetty laatoilla.'
+          + '\n\n'
+          + 'Laatat ovat sinivalkoisia ja kahta tyyppiä. '
+          + 'Ikkunanpielten laatat on tehty negatiivimaalauksen '
+          + 'tekniikalla, joka syntyi Belgiassa 1600-luvulla, ja ne '
+          + 'ovat neljäntoista neliösenttimetrin kokoisia. Suurimman '
+          + 'osan julkisivusta peittävät kolmentoista neliösenttimetrin '
+          + 'a renda -laatat, joiden symmetrinen kuvio muistuttaa '
+          + 'Coimbran tuotantoa. Kokonaan azulejolla verhottuja '
+          + 'taloja on sekä Portugalissa että Brasiliassa, kirkoissa '
+          + 'ja asuintaloissa.'
+          + '\n\n'
+          + 'Talossa toimi 1930-luvulta lähtien Salvadorin '
+          + 'kaupunkisuunnitteluvirasto, joka muutti pois 1949. '
+          + 'Kansallinen perintölaitos IPHAN suojeli talon 1969, ja '
+          + '1970–1973 se tuettiin: kaakelijulkisivu säilytettiin, '
+          + 'mutta sisus uusittiin betonilaatoilla. Sen jälkeen talo '
+          + 'on rapistunut, ja 2017 katosta romahti kuusikymmentä '
+          + 'prosenttia. Vuonna 2015 esitettiin, että talo ja kuusi '
+          + 'naapuria lunastettaisiin ja purettaisiin hotellitornin '
+          + 'tieltä; sovinnossa julkisivu olisi jäänyt pystyyn, ja '
+          + 'hanke jäi oikeudenkäyntien takia auki.',
+      kuvat: [
+        {
+          tiedosto: 'Sobrado Azulejado Salvador 2018-0229.jpg',
+          selite: 'Sinivalkoinen kaakelijulkisivu ylhäältä nähtynä; oikealla '
+            + 'naapuritalo, josta on jäljellä vain seinät.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'São Miguelin kirkko': {
+      aika: '1732',
+      teksti: 'Kirkon rakennutti yksi mies. Francisco Gomes do '
+          + 'Rego, pyhän Franciscuksen kolmannen sääntökunnan jäsen, '
+          + 'lahjoitti tontin, ja rakentaminen alkoi 1725 '
+          + 'rukoushuoneena. Talo valmistui kirkoksi 1732. Regon '
+          + 'kuoltua 1745 kirkko, sen viereinen talo ja 33 muuta '
+          + 'taloa siirtyivät kolmannelle sääntökunnalle. Regon '
+          + 'hautakivi on kuorin lattiassa, ja siinä lukee, että '
+          + 'Francisco, suuri syntinen ja tämän kappelin arvoton '
+          + 'perustaja, pyytää veljiltä armoa.'
+          + '\n\n'
+          + 'Kirkko seisoo Rua Frei Vicenten varrella, mukulakivikadulla, '
+          + 'joka yhdistää vanhankaupungin ja Baixa dos Sapateiroksen, '
+          + '1800-luvun talojen keskellä. Julkisivussa on kolmiopääty, '
+          + 'valkoiset pilasterit ja kivestä veistetty barokkiportaali; '
+          + 'kellotornissa on jäljellä yksi kello. Portaalin yläpuolella '
+          + 'on Lissabonissa 1780–1790 tehty laattataulu, 120 laattaa '
+          + 'kymmenen korkuisena ja kahdentoista levyisenä rivistönä. '
+          + 'Se on monivärinen — sinistä, vihreää, keltaista ja '
+          + 'purppuraa — ja esittää sääntökunnan tunnusta rokokoo'
+          + 'köynnösten keskellä.'
+          + '\n\n'
+          + 'Sisällä kirkkosalilla ja kuorilla on tynnyriholvit, '
+          + 'joiden alkuperäiset maalaukset ovat kadonneet; katto on '
+          + 'nyt yksinkertaisesti keltainen. Alttarikaide on hienosti '
+          + 'veistettyä jakarandaa kukka-aiheineen ja muistuttaa '
+          + 'pienoiskoossa São Franciscon ja Carmelin kolmannen '
+          + 'sääntökunnan kaiteita. Pääalttarin alkuperäinen '
+          + 'pyhimyskuva vaihdettiin 1854 ristiinnaulitun Kristuksen '
+          + 'kuvaan. IPHAN suojeli kirkon 1938. Se on suljettu '
+          + 'yleisöltä.',
+      kuvat: [
+        {
+          tiedosto: 'Igreja de São Miguel Salvador 2019-1018.jpg',
+          selite: 'Kirkkosali kuoriin päin: jakarandakaide, 1854 vaihdettu '
+            + 'ristiinnaulitun kuva ja perustajan hautakivi lattiassa.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mourarian Santo Antônio': {
+      aika: '1726',
+      teksti: 'Kappeli rakennettiin luostarin rauhan vuoksi. '
+          + 'Kaupunkilaiset käyttivät Desterron luostarin kirkkoa '
+          + 'häihin ja kastejuhliin, mikä häiritsi noviiseja, joten '
+          + 'kuvernööri Vasco Fernandes César de Meneses määräsi '
+          + 'rakennettavaksi oman temppelin. Työ alkoi 29. lokakuuta '
+          + '1724 keskellä sotilasaluetta ja valmistui 12. kesäkuuta '
+          + '1726. Siitä tuli tunnettu sotilaiden kappelina.'
+          + '\n\n'
+          + 'Hoitajat vaihtuivat sitä mukaa kuin veljeskunnat '
+          + 'kuolivat. Kolmannen sääntökunnan veljeskunta perustettiin '
+          + '18. tammikuuta 1727, ja 15. helmikuuta 1849 hallinnon '
+          + 'otti sotilaiden pyhän Antoniuksen veljeskunta. '
+          + 'Kulkutaudit ja Paraguayn sota veivät niin monta jäsentä, '
+          + 'että se lakkasi 1879. Vuonna 1894 vastuu siirtyi '
+          + 'Pyhän Vincent de Paulin seuralle, joka muutti '
+          + 'päämajansa kappeliin marraskuussa 1895.'
+          + '\n\n'
+          + 'Vuosina 1900–1905 kappeli laajennettiin kirkoksi: '
+          + 'kirkkosaliin tehtiin kaksi sivualttaria ja '
+          + 'uusklassistiset puiset alttarikaapit, ja kattoon '
+          + 'maalattiin 1,1 x 4 metrin barokkinen illuusiomaalaus, '
+          + 'jossa pyhä Antonius saa Neitsyeltä Jeesus-lapsen. '
+          + 'Kirkkosalin seinät on verhottu 1,9 metrin korkeuteen '
+          + '1700-luvun portugalilaisilla laatoilla, joissa on '
+          + 'raamatunkohtauksia, ja lattia on italialaista marmoria. '
+          + 'Toinen kerros rakennettiin 1909–1926. Kirkon neljästä '
+          + 'kellosta vanhin on vuodelta 1757. IPHAN suojeli kirkon '
+          + '17. kesäkuuta 1938.',
+      kuvat: [
+        {
+          tiedosto: 'Igreja De Santo Antônio Da Mouraria Salvador 2019-1408.jpg',
+          selite: 'Sotilaiden kappelin julkisivu aaltopäätyineen; vasemmalla '
+            + 'kellotorni, keskellä oculus ja pyhimyksen niche.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Solar do Unhão': {
+      aika: '1963',
+      teksti: 'Kartano on saanut nimensä 1600-luvun '
+          + 'ylioikeuden tuomarilta Pedro Unhão Castelo Brancolta, ja '
+          + 'sen tilalla toimi sokerimylly lahden rannassa. Vuonna '
+          + '1959 Bahian kuvernööri kutsui italialaissyntyisen '
+          + 'arkkitehdin Lina Bo Bardin johtamaan koillisen '
+          + 'Brasilian uutta taidemuseota, ja tehtäväksi tuli tehdä '
+          + 'vanhasta myllystä museo. Työ kesti vuoteen 1963.'
+          + '\n\n'
+          + 'Bo Bardi jätti siirtomaa-ajan ulkoasun koskematta ja '
+          + 'rakensi sisälle uuden portaikon, jonka pelkistetty '
+          + 'geometria asettuu vanhan puun ja kiven rinnalle. Hänen '
+          + 'sääntönsä oli entistää niin, ettei tulos ole '
+          + 'kaipuuta menneeseen mutta ei myöskään sivuuta paikkaa. '
+          + 'Museon piti näyttää koillisen oma käsityö ja sen '
+          + 'käytännöllinen kauneus, ja talossa pidettiin alusta '
+          + 'asti kursseja: Bo Bardin mukaan museo ei saa olla '
+          + 'menneisyyden mausoleumi vaan tiedon työpaikka.'
+          + '\n\n'
+          + 'Bahian modernin taiteen museo oli perustettu 1960 ja '
+          + 'toimi aluksi Castro Alves -teatterin lämpiössä; se '
+          + 'muutti Unhãoon 1963. Kokoelmassa on maalauksia, '
+          + 'veistoksia, valokuvia ja piirustuksia muun muassa '
+          + 'Tarsila do Amaralilta, Portinarilta, Di Cavalcantilta, '
+          + 'Rubem Valentimilta, Pancettilta, Carybélta ja Mário '
+          + 'Cravo Netolta. Talossa on kahdeksan näyttelysalia, '
+          + 'teatteri, kirjasto, konservointitilat ja työpaja, jossa '
+          + 'opetetaan maalausta, grafiikkaa, keramiikkaa, '
+          + 'piirustusta, käsintehtyä paperia ja veistoa.',
+      kuvat: [
+        {
+          tiedosto: 'Museu de Arte Moderna da Bahia Solar do Unhão Escada Helicoidal 2021-8567 01.jpg',
+          selite: 'Lina Bo Bardin portaikko lähikuvassa: askelmat on liitetty '
+            + 'vanhan myllyn puuhun ilman nauloja tai betonia.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vila Velhan teatteri': {
+      aika: '1964',
+      teksti: 'Teatteri rakennettiin 1964 Avenida Seten varrelle, '
+          + '1800-luvun uusklassisen Passeio Públicon länsilaidalle. '
+          + 'Sen takana oli Teatro dos Novos, Bahian ensimmäinen '
+          + 'ammattilaisryhmä 1950-luvulta, jota johti Bahian '
+          + 'liittovaltionyliopiston opettaja João Augusto de '
+          + 'Azevedo. Pysyvää näyttämöä ajoi joukko ryhmästä '
+          + 'irtautuneita opiskelijoita — Echio Reis, Sônia Robatto, '
+          + 'Carlos Petrovich, Othon Bastos, Thereza Sá ja Carmem '
+          + 'Bittencourt — ja osavaltio antoi tontin 1961.'
+          + '\n\n'
+          + 'Avajaisnäytöksessä Nós, Por Exemplo esiintyivät Caetano '
+          + 'Veloso, Gilberto Gil, Tom Zé, Gal Costa ja Maria '
+          + 'Bethânia. Talosta tuli 1960-luvun tropicália-'
+          + 'vastakulttuurin keskus ja sotilasdiktatuurin (1964–1985) '
+          + 'aikaisen kulttuurisen vastarinnan näyttämö, ja '
+          + '1970-luvulla siellä järjestettiin mielenilmauksia. '
+          + 'Arkkitehti Silvio Robatton piirtämä modernistinen talo '
+          + 'on tarkoituksella jyrkässä ristiriidassa Passeio '
+          + 'Públicon uusklassisten rakennusten kanssa.'
+          + '\n\n'
+          + 'João Auguston kuoltua 1979 teatteri hiipui. Elvytys '
+          + 'alkoi 1994 voittoa tavoittelemattoman Sol Movimento da '
+          + 'Cenan johdolla, ja talo peruskorjattiin 1998. '
+          + 'Päänäyttämön katsomo muuttaa muotoaan esityksen mukaan '
+          + 'ja vetää 350 katsojaa; lisäksi on yhdeksänkymmenen '
+          + 'hengen kabareenäyttämö ja kaksi harjoitussalia. Talossa '
+          + 'ovat asuneet muun muassa afrobrasilialainen Bando de '
+          + 'Teatro Olodum, tanssiryhmä Viladança ja kuoro Vilavox.',
+      kuvat: [
+        {
+          tiedosto: 'Teatro Vila Velha Salvador Bahia 2018-0131.jpg',
+          selite: 'Modernistinen betonitalo Passeio Públicon puiden keskellä, '
+            + 'kaukana aukion uusklassisista julkisivuista.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Anglikaanisen kappelin paikka': {
+      aika: '1853',
+      teksti: 'Anglikaanisuus tuli Brasiliaan Portugalin hovin '
+          + 'mukana. Portugali ja Britannia sopivat 1810 kauppa- ja '
+          + 'merenkulkusopimuksessa, että anglikaanisia kappeleita '
+          + 'saa rakentaa kahdella ehdolla: ne eivät saa näyttää '
+          + 'temppeleiltä eivätkä käännyttää brasilialaisia. '
+          + 'Salvadorin pappisvirka perustettiin 1815, ja jumalan'
+          + 'palvelukset pidettiin aluksi yksityiskodeissa. Vuonna '
+          + '1811 kuvernööri Marcos de Noronha e Brito antoi luvan '
+          + 'brittiläiselle hautausmaalle Barran rinteeseen, ja sen '
+          + 'yhteyteen tuli kappeli hautajaisia varten.'
+          + '\n\n'
+          + 'Itsenäistymisen jälkeen pappi Edward Parker osti tontin '
+          + 'Campo Granden aukion läheltä, ja Pyhän Yrjön seura '
+          + 'avasi kappelin lokakuussa 1853. Britit kutsuivat sitä '
+          + 'nimellä Christ Church. Se rakennettiin klassisin '
+          + 'muodoin, ja siitä tuli Brasilian toiseksi suurin '
+          + 'ei-katolinen kirkko. Niin kauan kuin katolisuus oli '
+          + 'valtionuskonto, muiden kirkoilla ei saanut olla '
+          + 'torneja eikä kelloja; vasta tasavallan julistuksen '
+          + 'jälkeen anglikaanit saivat pitää jumalanpalveluksia '
+          + 'portugaliksi. Samaan aikaan kaupunki viimeisteli Campo '
+          + 'Granden puistoaukiota, ja britit pelasivat sillä krikettiä.'
+          + '\n\n'
+          + 'Kappelia ei ole enää. Vuonna 1975, kun tonttien hinnat '
+          + 'Campo Granden ympärillä nousivat, rakennusliike sopi '
+          + 'Pyhän Yrjön seuran kanssa vaihdosta: seura sai uuden '
+          + 'kirkon Pituban kaupunginosaan, ja kappeli purettiin '
+          + 'Britânia Mansion -asuintalon tieltä. Seurakunta siirsi '
+          + 'päämajansa 2010 Bonfimiin, ja Pyhän Yrjön seura erosi '
+          + 'kirkosta; sille jäi tehtäväksi brittiläisen hautausmaan '
+          + 'ylläpito. Kartan piste merkitsee siis paikkaa eikä taloa.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * CARACASIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.caracas, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Quinta de Anauco", "Our Lady of Mercy Church,
+   * Caracas", "Casa de Las Primeras Letras", "Yellow House
+   * (Venezuela)", "Teatro Municipal of Caracas", "Basilica of
+   * St. Teresa", "National Art Gallery (Caracas)" ja "Parque Central
+   * Complex").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Guaicaipuro, Ávila, vuoden 1812 järistys, Bolívarin
+   * arvonimi, Plaza Bolívar, Capitolio, Panteón Nacional, Guzmán
+   * Blanco, Ávilan kansallispuisto, Angelin putous, Catatumbo, öljy,
+   * El Sistema, Simón Bolívar -orkesteri, Aula Magna ja joropa.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * EI NYKYPOLITIIKKAA — sama linjaus kuin lehdessä. Guzmán Blanco
+   * esiintyy kolmessa jutussa rakennuttajana, koska hän rakennutti
+   * puolet vanhasta keskustasta, mutta hänen oma tarinansa on lehden
+   * noston H4 aihe eikä sitä kerrota tässä uudelleen. Kansallisen
+   * taidegallerian vuoden 2009 uuden talon vihkijää ei mainita, ja
+   * Keltaisen talon juttu päättyy vuoteen 1912.
+   *
+   * YKSI LÄHDEVARAUS ON KIRJATTAVA. Santa Teresan basilikan
+   * perustamiskertomus (Guzmán Blanco, arkkitehti Juan Hurtado
+   * Manrique, työt 1877–1881, vihkiminen 28.10.1881 ja nimi
+   * presidentin vaimon mukaan) on en-Wikipedian artikkelissa
+   * merkitty {{Citation needed}} -merkinnällä. Se EI ole sama asia
+   * kuin {{failed verification}}, jonka takia Bergenin lehdestä
+   * jätettiin aikanaan Liszt-kohtaus pois: kukaan ei ole tarkistanut
+   * ja kumonnut väitettä, sitä ei vain ole lähteistetty. Juttu
+   * nojaa siksi painopisteeltään artikkelin lähteistettyihin osiin
+   * (rakennuksen kaksoiskirkkomuoto, Nasarealaisen kunnioitus ja
+   * vuoden 1952 onnettomuus), ja perustamisvuodet kerrotaan
+   * lyhyesti.
+   *
+   * TALON 1500-LUVUN VUOSILUKUA EI KERROTA. Artikkeli "Casa de Las
+   * Primeras Letras" sanoo talon valmistuneen 1538, "kun Diego de
+   * Losada mittasi Caracasin" — mutta Losada perusti kaupungin
+   * vasta 1567, ja lehden oma kaanon (kulttuuri-kategoriat.js,
+   * caracas) nojaa jälkimmäiseen. Ristiriitainen luku on jätetty
+   * pois, ja juttu alkaa siitä, mikä on riidatonta: kaksi taloa
+   * yhdistettiin yhdeksi, kun naapurien lapset menivät naimisiin.
+   *
+   * KUVAT: ks. kunkin jutun kuvat-kenttä. Yksikään tiedosto ei ole
+   * sama kuin kaupunkilehden caracas-lohkossa
+   * (kulttuuri-kategoriat.js) eikä southamerica-valokuvat.js:ssä.
+   */
+  caracas: {
+    'Quinta de Anauco': {
+      aika: '1797',
+      teksti: 'Juan Javier Mijares de Solórzano y Pacheco osti '
+          + 'joulukuussa 1796 maapalan sadallakahdellakymmenelläviidellä '
+          + 'pesolla juuri tätä tarkoitusta varten, ja talo valmistui '
+          + 'seuraavana vuonna. Sitä kutsuttiin aluksi yksinkertaisesti '
+          + 'Solórzanon taloksi. Se kesti vuoden 1812 maanjäristyksen ja '
+          + 'pysyi rakentajan pojan omistuksessa vuoteen 1821, jolloin '
+          + 'poika pakeni äitinsä kanssa Curaçaolle tasavaltalaisarmeijan '
+          + 'voitettua Carabobon taistelun.'
+        + '\n\n'
+        + 'Talo siirtyi valtiolle. Se vuokrattiin 1825 Pedro '
+          + 'Zarazalle, joka kuoli seitsemän päivää myöhemmin, ja sen '
+          + 'jälkeen Francisco Rodríguez del Toro e Ibarralle, '
+          + 'neljännelle Toron markiisille ja itsenäisyyssodan '
+          + 'divisioonankenraalille. Simón Bolívar yöpyi markiisin luona '
+          + 'heinäkuussa 1827 ja neuvoi tätä ostamaan talon. Kauppa '
+          + 'tehtiin saman vuoden joulukuussa 3 250 pesolla, ja vasta '
+          + 'silloin talo sai nimen Quinta de Anauco. Markiisi maalautti '
+          + 'seiniin seinämaalaukset ja asui siellä kuolemaansa 1851 '
+          + 'asti; testamentissa alakerta ja puoli puutarhaa menivät '
+          + 'veljelle ja siskolle, yläkerta ja toinen puoli '
+          + 'sisarentyttärille.'
+        + '\n\n'
+        + 'Omistaja vaihtui useasti, kunnes Domingo Eraso osti talon '
+          + '1860 viidellätuhannella pesolla. Eraso-suku piti sen '
+          + 'vuoteen 1958, jolloin se lahjoitti talon valtiolle yhdellä '
+          + 'ehdolla: siinä pitää toimia siirtomaataiteen museo. Museo '
+          + 'oli perustettu 1942, mutta sen oma talo oli tuhoutunut '
+          + '1953. Kunnostettu Quinta avautui museona 12. lokakuuta '
+          + '1961, ja tammikuussa 1978 se julistettiin kansalliseksi '
+          + 'historialliseksi muistomerkiksi.',
+      kuvat: [
+        {
+          tiedosto: 'Quinta de Anauco (2).jpg',
+          selite: 'Siirtomaa-ajan salissa seisoo puinen arkkienkeli Mikael, ja '
+            + 'seinien yläreunaa kiertää maalattu koristenauha.',
+          lahde: 'Guillermo Ramos Flamerich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Las Mercedesin kirkko': {
+      aika: '1614',
+      teksti: 'Seurakunnan alku on vuodessa 1614, jolloin joukko '
+          + 'siirtomaa-ajan Caracasin vapaita mulatteja keräsi rahat ja '
+          + 'rakensi paikalle pienen puisen kappelin. Maanjäristys '
+          + 'kaatoi sen 1641, ja se rakennettiin uudelleen; vuoden 1766 '
+          + 'järistys kaatoi seuraavan, ja sen tilalle noussut '
+          + 'rakennus vaurioitui pahoin vuoden 1812 järistyksessä. '
+          + 'Kirkon takana oli pieni seurakunnan hautausmaa, johon '
+          + 'hautaaminen lopetettiin 1825.'
+        + '\n\n'
+        + 'Nykyinen kirkko on vuoden 1857 perusteellisen '
+          + 'jälleenrakennuksen tulos. Siinä säilytettiin vanha '
+          + 'kolmilaivainen pohjakaava ja kolme kadulle avautuvaa '
+          + 'sisäänkäyntiä, mutta asu muuttui korostetun '
+          + 'uusklassiseksi: sileät seinäpinnat, pilasterit ja '
+          + 'keskiportaalia kehystävä palkisto. Vuoden 1900 '
+          + 'maanjäristyksestä tuli vain pieniä vaurioita.'
+        + '\n\n'
+        + 'Kirkon itäpuolelle Guzmán Blancon hallinto kaavoitti '
+          + 'Plaza Falcónin, nykyisen Plaza de Las Mercedesin, ja '
+          + 'pystytti sinne patsaat insinööri Agustín Aveledolle ja '
+          + 'marsalkka Juan Crisóstomo Falcónille. Kirkko julistettiin '
+          + 'kansalliseksi historialliseksi muistomerkiksi 2. elokuuta '
+          + '1960. Nimi viittaa Armon Neitsyeeseen, jonka kunnioitusta '
+          + 'mercedaariveljestö levitti.',
+      kuvat: [
+        {
+          tiedosto: 'Nuestra Señora de Las Mercedes.JPG',
+          selite: 'Uusklassinen julkisivu, kolme katuovea ja kaksi hopeanhohtoista '
+            + 'kupolitornia vuoden 1857 jälleenrakennuksesta.',
+          lahde: 'AlexisCarmona, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ensimmäisten kirjainten talo': {
+      aika: '1790-luku',
+      teksti: 'Talo on kahden vierekkäisen asuintalon, numeroiden 29 ja '
+          + '31, yhteensulautuma: asukkaiden lapset menivät keskenään '
+          + 'naimisiin, ja seinä avattiin. Simón Rodríguez sai '
+          + 'opettajanpätevyytensä 1791 ja alkoi pitää talossa koulua. '
+          + 'Tilat olivat ahtaat ja varat vähissä — vuonna 1793 '
+          + 'Rodríguezin luokassa oli 114 oppilasta, ja poissaolot '
+          + 'olivat vaikea ongelma. Yksi noista oppilaista oli '
+          + 'Simón Bolívar.'
+        + '\n\n'
+        + 'Koulu oli ensimmäinen monista, joita Rodríguez yritti '
+          + 'pyörittää omien periaatteidensa mukaan: lapsen pitää saada '
+          + 'kysellä, koulun pitää opettaa myös työtaitoja, opetuksen '
+          + 'pitää olla kaikille yhteistä ja kasvattaa yhteisöllisiä '
+          + 'eikä itsekkäitä arvoja. Samaa hän yritti myöhemmin '
+          + 'Bogotássa ja Chuquisacassa. Venezuelasta hän pakeni 1797 '
+          + 'Gualin ja Españan epäonnistuneen salaliiton jälkeen.'
+        + '\n\n'
+        + 'Rodríguezin jälkeen talossa toimi 1880-luvulla Santa Marían '
+          + 'koulu, jota johti José Martí. Sen jälkeen tuli '
+          + 'pari omistajaa lisää, ja talo rapistui. Caracasin '
+          + 'Libertadorin kunta kunnosti sen 2010 itsenäisyyden '
+          + 'kaksisatavuotisjuhlien yhteydessä, ja museo avattiin 2012. '
+          + 'Siellä on hologrammiesityksiä Rodríguezista ja '
+          + 'Bolívarista, aikakauden pukuja ja esineitä sekä pala '
+          + 'alkuperäistä seinää ja lattiaa; yksi vanha lasimaalaus on '
+          + 'sekin säilynyt.',
+      kuvat: [
+        {
+          tiedosto: 'Casa de las Primeras Letras Simón Rodríguez.jpg',
+          selite: 'Matala vaaleanpunainen siirtomaatalo, jonka keskiovi on '
+            + 'merkitty numerolla 29 — talon toinen puolisko.',
+          lahde: 'JoseGre12, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Keltainen talo': {
+      aika: '1874',
+      teksti: 'Kuvernööri Juan de Pimentelin noin vuonna 1578 '
+          + 'piirtämässä Caracasin kartassa tontilla on vaatimaton '
+          + 'savi- ja pystypuurakenteinen talo. Vuonna 1689 '
+          + 'kaupunginvaltuusto osti osan tontista Antonio de Tovarin '
+          + 'perillisiltä uutta vankilaa varten, ja vankila avattiin '
+          + '1696. Eteläosa siirtyi valtuustolle 1704 maanvaihdossa, ja '
+          + 'sille valmistui joulukuussa 1750 valtuuston oma talo.'
+        + '\n\n'
+        + 'Juuri sen parvekkeelta kaniikki José Cortés de Madariaga '
+          + 'antoi 19. huhtikuuta 1810 caracasilaisille merkin, jolla '
+          + 'kenraalikapteeni Vicente Emparán julistettiin syrjäytetyksi '
+          + '— Venezuelan itsenäistymisen ensimmäinen askel. Vuoden '
+          + '1812 maanjäristys jätti talon raunioiksi vuosikymmeniksi, '
+          + 'ja korjaus kesti neljä vuotta. Vuonna 1841 kongressi '
+          + 'hyväksyi molempien rakennusten myynnin kunnalta valtiolle '
+          + 'hallituksen käyttöön, ja José Antonio Páezin '
+          + 'presidenttikaudella talo vihittiin 1842.'
+        + '\n\n'
+        + 'Nykyisen asunsa talo sai 1874, kun se muutettiin '
+          + 'hallituspalatsiksi arkkitehti Juan Hurtado Manriquen '
+          + 'johdolla. Toukokuun 4. päivän lakiin 1877 kirjattiin, että '
+          + 'talo on tasavallan presidentin asunto, ja ensimmäisenä '
+          + 'sinne muutti Francisco Linares Alcántara. Talo maalattiin '
+          + 'keltaiseksi liberaalipuolueen värillä, ja virallisissa '
+          + 'papereissa sitä alettiin kutsua Keltaiseksi taloksi. '
+          + 'Vuoden 1900 San Narcison maanjäristyksessä presidentti '
+          + 'Cipriano Castro hyppäsi parvekkeelta kadulle sateenvarjo '
+          + 'kädessä ja mursi nilkkansa; siitä alkoi ajatus '
+          + 'järistyskestävästä asunnosta, ja presidentti muutti 1904 '
+          + 'Mirafloresiin. Vuodesta 1912 talossa on ollut ulkoministeriö.',
+      kuvat: [
+        {
+          tiedosto: 'Salón Bolívar - Casa Amarilla.jpg',
+          selite: 'Bolívar-sali vie koko toisen kerroksen etusivun; katossa on '
+            + 'tummaa kasettityötä ja seinällä kokovartalomuotokuva.',
+          lahde: 'Venlur, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaupunginteatteri: {
+      aika: '1881',
+      teksti: 'Teatteri avattiin 4. tammikuuta 1881 Errico Petrellan '
+          + 'oopperalla Jone, ja avajaiset piti presidentti Guzmán '
+          + 'Blanco. Talo nimettiin aluksi presidentin mukaan. Se on '
+          + 'yhä yksi Etelä-Amerikan vanhimmista oopperataloista.'
+        + '\n\n'
+        + 'Suunnittelija oli ranskalainen arkkitehti Esteban Ricard, '
+          + 'joka lähti Venezuelasta ennen kuin työ oli valmis; sen vei '
+          + 'loppuun venezuelalainen insinööri Jesús Muñoz Tébar. '
+          + 'Rakennuksen kantava rautarakenne tuotiin '
+          + 'Isosta-Britanniasta, koska maassa ei siihen aikaan '
+          + 'valmistettu rakennusrautaa lainkaan.'
+        + '\n\n'
+        + 'Vuonna 1896 presidentti Joaquín Crespo pystytti teatterin '
+          + 'eteen kenraali José Tadeo Monagasin patsaan eleenä '
+          + 'poliittisen yksimielisyyden puolesta. Taloa muutettiin '
+          + '1949, kun Caracasin keskustaa rakennettiin uusiksi. Jone '
+          + 'palasi ohjelmistoon teatterin satavuotisjuhlassa 1981, '
+          + 'nimiroolissa argentiinalainen sopraano Adelaida Negri. '
+          + 'Kaupungin pääoopperatalo se ei enää ole — sen tehtävän otti '
+          + '1980-luvulla Teresa Carreñon kulttuurikeskus — mutta '
+          + 'oopperaa esitetään yhä, ja talossa on kotinaan Caracasin '
+          + 'kaupungin sinfoniaorkesteri.',
+      kuvat: [
+        {
+          tiedosto: 'Teatro Municipal de Caracas.jpg',
+          selite: 'Kolme kullattua parvekekerrosta kiertävät katsomon, ja katosta '
+            + 'riippuu kristallikruunu.',
+          lahde: 'EneasMx, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Santa Teresan basilika': {
+      aika: '1881',
+      teksti: 'Basilika on kaksi uusklassista kirkkoa, jotka on '
+          + 'liitetty yhteen kupolilla. Kupolin alla on pääalttari, ja '
+          + 'rakennuksella on kaksi julkisivua eri suuntiin: läntinen '
+          + 'on omistettu pyhälle Annalle ja itäinen pyhälle Teresalle. '
+          + 'Osoite on La Palman ja Santa Teresan kulma vanhassa '
+          + 'keskustassa.'
+        + '\n\n'
+        + 'Talo nousi San Felipe Nerin kirkon paikalle. Presidentti '
+          + 'Guzmán Blanco määräsi vanhan kirkon purettavaksi ja tilasi '
+          + '1870 arkkitehti Juan Hurtado Manriquelta samalle tontille '
+          + 'monumentaalisen uuden. Työt tehtiin 1877–1881, ja kirkko '
+          + 'vihittiin 28. lokakuuta 1881 Santa Teresan kirkkona '
+          + 'presidentin vaimon Ana Teresan mukaan.'
+        + '\n\n'
+        + 'Basilika on Nasarealaisen kuvan tärkein kunnioituspaikka, ja '
+          + 'pääsiäisenä väkeä tulee paljon. Juuri siitä syntyi '
+          + 'kaupungin pahin kirkko-onnettomuus: 9. huhtikuuta 1952 '
+          + 'joku huusi täydessä kirkossa "tulipalo", ja viisikymmentä '
+          + 'ihmistä kuoli tungoksessa jalkoihin. Neljäkymmentä '
+          + 'ihmistä pidätettiin tapauksen johdosta. Rakennus '
+          + 'julistettiin kansalliseksi historialliseksi kohteeksi '
+          + '9. joulukuuta 1959.',
+      kuvat: [
+        {
+          tiedosto: 'Basilica of Santa Teresa.jpg',
+          selite: 'Päätykolmion päällä seisoo pyhimyspatsas, ja sen takana '
+            + 'kohoaa kupoli — kaksoiskirkon itäinen puoli.',
+          lahde: 'Carlos E. Perez S.L, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen taidegalleria': {
+      aika: '1976',
+      teksti: 'Galleria avattiin toukokuussa 1976, ja vuoteen 2009 asti '
+          + 'se asui uusklassisessa talossa Los Caobosin puiston '
+          + 'laidalla. Taloa ei ollut rakennettu sille: Carlos Raúl '
+          + 'Villanueva suunnitteli sen 1935 kuvataidemuseota varten. '
+          + 'Julkisivussa on Francisco Narváezin reliefit — Narváez oli '
+          + 'Venezuelan ensimmäinen modernistinen kuvanveistäjä.'
+        + '\n\n'
+        + 'Vuonna 2009 galleria muutti Carlos Gómez de Llerenan '
+          + 'suunnittelemaan uuteen taloon, joka on Venezuelan suurin '
+          + 'museorakennus, ja kuvataidemuseo sai vanhan talonsa '
+          + 'takaisin. Kokoelmassa on yli neljätuhatta teosta '
+          + 'yhdessätoista salissa, jotka on järjestetty renkaaksi.'
+        + '\n\n'
+        + 'Kokoelma kattaa viisi vuosisataa: esikolumbiaanisia '
+          + 'esineitä, siirtomaa-ajan maalauksia, veistoksia ja '
+          + 'nykytaidetta kineettiseen taiteeseen asti. Maalauksia on '
+          + 'yli neljältäkymmeneltä venezuelalaiselta taiteilijalta, '
+          + 'muiden muassa Armando Reverónilta, Carlos Cruz-Diezilta ja '
+          + 'Jesús Sotolta, ja mukana on myös Camille Pissarro, joka '
+          + 'vietti nuorena aikaa Venezuelassa. Kokoelman tunnetuin '
+          + 'teos on Arturo Michelenan vuoden 1896 maalaus Miranda en '
+          + 'La Carraca, jossa Francisco de Miranda istuu vankina '
+          + 'Cádizissa.',
+      kuvat: [
+        {
+          tiedosto: 'Galeria de Arte Nacional, em Caracas 23.JPG',
+          selite: 'Salien renkaassa marmoriveistos osoittaa ulos kuvasta, ja '
+            + 'seinillä on maalauksia siirtomaa-ajalta nykypäivään.',
+          lahde: 'Béria Lima de Rodríguez, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Parque Centralin tornit': {
+      aika: '1979',
+      teksti: 'Vuonna 1969 insinööri Enrique Delfino Arriens esitti '
+          + 'suunnitelman kokonaisesta kaupunginosasta Lecunan ja '
+          + 'Bolívarin puistokatujen väliin El Conden alueelle. Työt '
+          + 'alkoivat 1970: kahdeksan asuintornia, joista jokaisessa on '
+          + '317 asuntoa ja jotka nousevat 127 metriin ja '
+          + 'neljäänkymmeneenneljään kerrokseen. Ne valmistuivat 1972.'
+        + '\n\n'
+        + 'Kaksi toimistotornia rakennettiin 1970–1983. Läntinen '
+          + 'avattiin 1979 ja itäinen 1983, kummankin katto on 225 '
+          + 'metrissä ja kerroksia on 64. Suunnittelijat olivat Henrique '
+          + 'Siso Maury ja Daniel Fernández-Shaw. Vuodesta 1979 vuoteen '
+          + '2003 ne olivat Latinalaisen Amerikan korkeimmat '
+          + 'pilvenpiirtäjät, kunnes Mexico Cityn Torre Mayor ohitti ne.'
+        + '\n\n'
+        + 'Vähän ennen puoltayötä 17. lokakuuta 2004 itäisessä tornissa '
+          + 'syttyi tulipalo, joka levisi 34. kerroksesta 50. '
+          + 'kerrokseen. Automaattinen sammutusjärjestelmä ja '
+          + 'nousujohdot eivät toimineet, sisällä sammuttaminen '
+          + 'jouduttiin keskeyttämään turvallisuussyistä, kaksi '
+          + 'teräksistä välipohjaa romahti osittain, ja palo sammui '
+          + 'itsestään vasta 19. lokakuuta aamuyöllä. Korjauksen '
+          + 'yhteydessä torniin nostettiin kolmenkymmenen metrin '
+          + 'antenni, joka esittää Simón Bolívarin miekkaa. Sen kanssa '
+          + 'itäinen torni yltää 255 metriin ja on nyt läntistä korkeampi.',
+      kuvat: [
+        {
+          tiedosto: 'El centro de Caracas, las torres de Parque Central.jpg',
+          selite: 'Toimistotornin huipussa erottuu antenni, ja sen vieressä '
+            + 'nousevat 1970-luvun asuintornit iltapilvien alla.',
+          lahde: 'QuinteroP, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * BERGENIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.bergen, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Nykirken", "Fredriksberg Fortress", "Munkeliv
+   * Abbey", "Holy Cross Church, Bergen", "St George's Church,
+   * Bergen", "Gerhard Armauer Hansen", "Permanenten", "Bergen Public
+   * Library" ja "University Museum of Bergen").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Bryggenin varastot, Håkonshallen, kaupungin laajeneminen
+   * 1876, Bryggenin riimut, hansakonttori ja sen etuoikeudet,
+   * suurpalot, Bergenhus ja tuomiokirkko, Ole Bull, Det Norske
+   * Theater, Grieg ja Peer Gynt. Yksikään kartan kohteista ei ole
+   * niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. (1) Vuoden
+   * 1814 vaalikirkot: Nykirken, Korskirken ja Pyhän Yrjänän kirkko
+   * olivat kaikki kolme vaalikirkkoja, mutta se on lehden noston H4
+   * aihe (tuomiokirkko), eikä sitä toisteta kolmessa jutussa.
+   * (2) Toinen maailmansota: lehden poisjätöistä on kirjattu, ettei
+   * miehitystä eikä vuoden 1944 räjähdystä käsitellä, ja sama
+   * linjaus pätee tässä — Nykirkenin juttu kertoo tornin
+   * valmistumisesta 1950-luvulla mainitsematta sotaa. (3) Buekorps:
+   * Fredriksbergin linnaketta vuokraa nykyään Nordnæs Bataillon,
+   * mutta buekorps on matkaoppaan oma jakso, joten sitä ei kerrota
+   * uudelleen.
+   *
+   * PALOT MAINITAAN VAIN KOHTEEN OMANA ARPENA. Lehden nosto H3 on
+   * Bergenin suurpaloista. Korskirkenin ja Nykirkenin jutuissa
+   * palovuodet ovat luettelona siksi, että ne selittävät miksi
+   * rakennukset ovat sen näköisiä kuin ovat — kaupungin
+   * palohistoriaa ei kerrota niissä uudelleen.
+   *
+   * KUVAT: ks. kunkin jutun kuvat-kenttä. Yksikään tiedosto ei ole
+   * sama kuin kaupunkilehden bergen-lohkossa
+   * (kulttuuri-kategoriat.js) eikä europe-valokuvat.js:ssä.
+   */
+  bergen: {
+    Nykirken: {
+      aika: '1621',
+      teksti: 'Tämä osa Bergeniä kuului alun perin tuomiokirkon '
+          + 'seurakuntaan, mutta vuoden 1608 kuninkaallinen asetus '
+          + 'perusti Strandenille oman seurakunnan ja antoi asukkaille '
+          + 'luvan rakentaa kirkon omalla kustannuksellaan. Vuoteen '
+          + '1618 mennessä rahat oli kerätty ja tontti hankittu. '
+          + 'Kirkko nousi arkkipiispan asuintalon raunioille — '
+          + '1300-luvun kivitalon, joka oli palanut — ja piispa Nils '
+          + 'Paaske vihki sen 18. syyskuuta 1621 Pyhän Kolminaisuuden '
+          + 'kirkoksi. Koska Bergenissä oli jo useita satoja vuosia '
+          + 'vanhoja kirkkoja, tätä alettiin kutsua uudeksi kirkoksi, '
+          + 'ja lempinimi jäi.'
+        + '\n\n'
+        + 'Nimi osoittautui osuvaksi. Ensimmäinen kirkko seisoi kaksi '
+          + 'vuotta ja paloi alkuvuodesta 1623; se rakennettiin heti '
+          + 'samanlaisena uudelleen. Vuonna 1643 kirkkosalia '
+          + 'laajennettiin, 1660 tuli taas palo, ja korjaus valmistui '
+          + '1670 uuden poikkisiiven kanssa. Heinäkuun 23. ja 24. '
+          + 'päivänä 1756 suuri palo vei kaiken muun paitsi '
+          + 'kivimuurit.'
+        + '\n\n'
+        + 'Uusi kirkko rakennettiin 1758–1763 Johan Joachim '
+          + 'Reichbornin piirustusten mukaan niin, että vuoden 1670 '
+          + 'siipi jäi osaksi uutta taloa. Peruskivi laskettiin 7. '
+          + 'heinäkuuta 1758, muurit olivat pystyssä 3. lokakuuta '
+          + '1759, mansardikatto valmistui 1760, ja kirkko vihittiin '
+          + '23. marraskuuta 1763. Hinta oli 53 322 riikintaaleria. '
+          + 'Vuoden 1800 palon jälkeen suurin osa muureista kelpasi '
+          + 'yhä, ja kirkko vihittiin uudelleen 25. marraskuuta 1801; '
+          + 'nykyinen torninhuippu nousi vasta 1950-luvun '
+          + 'kunnostuksessa, ja vasta silloin toteutui Reichbornin '
+          + 'oma 1760-luvun piirustus. Kirkossa on 750 istumapaikkaa, '
+          + 'enimmäkseen korkeaselkäisissä penkkiaitioissa, ja '
+          + 'kastetilaisuudessa katosta lasketaan taljalla alas suuri '
+          + 'puinen enkeli, joka kantaa kädessään kastemaljaa. Talo '
+          + 'on nykyään erikoistunut lastenkirkoksi, ja sisustusta '
+          + 'ovat koristelleet paikalliset lapset.',
+      kuvat: [
+        {
+          tiedosto: 'Nykirken in Bergen.JPG',
+          selite: 'Vihreä torninhuippu nousee Vågenin rannalta; kirkon takana '
+            + 'kohoaa metsäinen vuori.',
+          lahde: 'Pudelek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fredriksbergin linnake': {
+      aika: '1667',
+      teksti: 'Linnake seisoo Nordnesin niemen korkeimmalla kohdalla, '
+          + 'ja sen länsipuolella putoaa jyrkkä kallioseinä suoraan '
+          + 'mereen. Työn aloitti hollantilainen insinööri, '
+          + 'kenraalimajuri Henrik Ruse. Suunnitelmassa oli maan '
+          + 'puolella kolme bastionia ja yksi puolibastioni ja '
+          + 'kallion puolella pelkkä muuri. Linnake rakennettiin '
+          + '1666–1667 Vågenin meritaistelun jälkeen ja pitkälti sen '
+          + 'takia, ja se nimettiin kuningas Fredrik III:n mukaan.'
+        + '\n\n'
+        + 'Rakentaminen pysähtyi ja varustukset rapistuivat. Vasta '
+          + 'kun Christian V:n poika Christian Gyldenløve tarkasti '
+          + 'Bergenin 1695, työt käynnistyivät uudelleen, ja 1706 '
+          + 'linnake oli valmis — yksinkertaisempana kuin '
+          + 'alkuperäisessä suunnitelmassa. Katten-bastioni oli '
+          + 'noussut jo 1666 sinne, missä nykyään on Nordnesin '
+          + 'puisto, ja lavettitalot rakennettiin sotilasvarastoiksi '
+          + '1810 ja 1843.'
+        + '\n\n'
+        + 'Lavettitalojen edusta oli teloituspaikka. Viimeisenä '
+          + 'siellä teloitettiin ruotsalainen rahanväärentäjä Jacob '
+          + 'Wallin vuonna 1876. Linnakkeella oli myös toinen, '
+          + 'rauhallisempi virka: se toimi palovartioasemana vuodesta '
+          + '1667 ja varsinaisena paloasemana 1905–1926. Vanhojen '
+          + 'varustusten päälle ja ympärille rakennettiin 1888–1898 '
+          + 'Nordnesin puisto.',
+      kuvat: [
+        {
+          tiedosto: 'Johan Christian Dahl - Fredriksberg Fortifications on Nordnes in Bergen - NG.M.00426-038 - National Museum of Art, Architecture and Design.jpg',
+          selite: 'Johan Christian Dahlin öljyluonnoksessa linnake istuu '
+            + 'Nordnesin kalliokärjessä ja vesi kiertää sen kolmelta '
+            + 'puolelta.',
+          lahde: 'Johan Christian Dahl, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Munkelivin luostari': {
+      aika: 'n. 1110',
+      teksti: 'Kuningas Øystein I perusti benediktiiniluostarin noin '
+          + 'vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka '
+          + 'valittiin tarkoituksella: Nordnesin korkein kohta hallitsi '
+          + 'juuri perustettua kaupunkia, ja luostarin oli määrä '
+          + 'vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, '
+          + 'rikkaimpia ja parhaiten dokumentoituja luostareita. '
+          + 'Maan päällä siitä ei näy nykyään mitään.'
+        + '\n\n'
+        + 'Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun '
+          + 'puolivälin musta surma käänsi suunnan. Vuonna 1393 '
+          + 'rakennukset kärsivät pahoin, kun luostarin kimppuun '
+          + 'kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla '
+          + 'sen otti paavin luvalla haltuunsa birgittalaisjärjestö, '
+          + 'ja siitä tuli kaksoisluostari, jossa asui sekä munkkeja '
+          + 'että nunnia. Vuonna 1455 luostari vaurioitui tulipalossa, '
+          + 'kun hansakauppiaat hyökkäsivät sinne takaa-ajaessaan '
+          + 'kuninkaanlinnan päällikköä Olav Nilssonia, joka oli '
+          + 'paennut luostariin turvaan; hyökkäyksessä kuolivat sekä '
+          + 'Nilsson että Bergenin piispa Leif Thor Olafsson. '
+          + '1460-luvulla asukkaat joutuivat siirtymään Oslon '
+          + 'Hovedøyan luostariin, sisterssiläiset rakensivat talot '
+          + 'uudelleen, ja birgittalaiset palasivat 1480.'
+        + '\n\n'
+        + 'Uskonpuhdistuksessa luostari lakkautettiin. Bergenin '
+          + 'piispa otti sen asunnokseen ja käytti luostarikirkkoa '
+          + 'tuomiokirkkonaan, mutta koko rakennusryhmä paloi 1536. '
+          + 'Kirkko oli ollut noin 32 metriä pitkä ja 11 leveä, ja '
+          + '1200-luvulla siihen oli lisätty länsitorni. Kaivauksissa '
+          + '1857 ja 1860 löytyi hienosti veistettyjä rakennusosia, '
+          + 'muun muassa Nicolay Nicolaysenin löytämä kuningas '
+          + 'Øystein I:n marmoripää, jota pidetään vanhimpana '
+          + 'tunnettuna norjalaisen muotokuvana. Muureja oli tuolloin '
+          + 'vielä pystyssä noin 2,4 metrin korkeuteen, mutta ne '
+          + 'purettiin kaivausten jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Munkeliv.jpg',
+          selite: 'Munkelivin oma keskiaikainen omaisuusluettelo '
+            + '(käsikirjoitus GKS 1347 4to) — luostarista ei ole jäljellä '
+            + 'muuta näkyvää.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Korskirken: {
+      aika: 'n. 1150',
+      teksti: 'Ensimmäinen kirkko rakennettiin paikalle noin vuonna '
+          + '1150, ja se mainitaan ensi kerran Sverren saagassa 1185. '
+          + 'Silloin kirkko seisoi Vågenin rannalla ja merkitsi '
+          + 'todennäköisesti Bergenin asutuksen eteläistä rajaa. Nimi '
+          + 'ei viittaa ristin muotoiseen pohjakaavaan vaan Pyhään '
+          + 'Ristiin: Korskirken oli yksi harvoista Norjan kirkoista, '
+          + 'joilla oli hallussaan pala Kristuksen ristiä. '
+          + 'Uskonpuhdistuksessa Tanskan kuningas vei sen, kuten muutkin '
+          + 'pyhäinjäännökset ympäri maata.'
+        + '\n\n'
+        + 'Kirkko vaurioitui paloissa 1198, 1248, 1413, 1582, 1623, '
+          + '1640 ja 1702. Alun perin siinä oli kaksi tornia, mutta '
+          + 'toinen tuhoutui vuoden 1582 palossa eikä sitä rakennettu '
+          + 'uudelleen. Pohjakaava oli suora suorakaide, ja ristin '
+          + 'muotonsa kirkko sai vasta kun poikkilaivat lisättiin '
+          + 'noin 1615–1623. Istumapaikkoja on noin kuusisataa.'
+        + '\n\n'
+        + 'Korskirken oli oman seurakuntansa kirkko vuodesta 1320 '
+          + 'vuoteen 2002, jolloin useat Bergenin keskustan '
+          + 'seurakunnat yhdistettiin. Sen jälkeen se ei ole ollut '
+          + 'tavallinen seurakuntakirkko: se luovutettiin Kirkens '
+          + 'Bymisjonille, ja nykyään se on "avoin kirkko", jossa on '
+          + 'joka päivä väkeä vastassa. Sisään voi tulla hiljaisuuden '
+          + 'takia, sytyttämään kynttilän, juttelemaan, '
+          + 'jumalanpalvelukseen tai kuuntelemaan musiikkia, ja työstä '
+          + 'iso osa on sosiaalityötä ympäröivässä korttelistossa.',
+      kuvat: [
+        {
+          tiedosto: 'Bergen Korskirken 01.jpg',
+          selite: 'Fløyenin rinteeltä nähtynä Korskirkenin kivitorni nousee '
+            + 'vanhan kaupungin kattojen keskeltä.',
+          lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Yrjänän kirkko': {
+      aika: '1706',
+      teksti: 'Bergenin spitaalisairaala mainitaan asiakirjoissa jo '
+          + '1411, ja sitä pitivät silloin Nonneseterin luostarin '
+          + 'nunnat. Sairaalan kappeli palveli aluksi vain potilaita, '
+          + 'mutta siitä tuli lopulta oma seurakuntansa Årstadin '
+          + 'puolelle, ja sen papit hoitivat myös läheisen '
+          + 'kaupunginvankilan, vaivaistalon ja leskikodin. Kirkko '
+          + 'paloi sairaalan mukana 1640 ja uudelleen vuoden 1702 '
+          + 'suurpalossa; nykyinen vihreä puinen ristikirkko on '
+          + 'rakennettu sen jälkeen myöhäisbarokin tapaan, ja '
+          + 'nykyasunsa se sai vuosien 1789–90 muutostöissä. '
+          + 'Istumapaikkoja on 125.'
+        + '\n\n'
+        + 'Lääkäri Gerhard Henrik Armauer Hansen palasi Bergeniin '
+          + '1868 tutkimaan spitaalia Lungegårdin sairaalaan alan '
+          + 'tunnetun asiantuntijan Daniel Cornelius Danielssenin '
+          + 'rinnalle. Tautia pidettiin silloin perinnöllisenä tai '
+          + 'huonon ilman aiheuttamana. Hansen päätteli '
+          + 'väestötutkimuksistaan, että kyse on tarttuvasta taudista, '
+          + 'jolla on yksi tietty aiheuttaja, ja kävi 1870–71 Bonnissa '
+          + 'ja Wienissä oppimassa menetelmät, joilla asian voisi '
+          + 'todistaa. Vuonna 1873 hän ilmoitti löytäneensä uudella ja '
+          + 'entistä paremmalla mikroskoopilla jokaisen potilaan '
+          + 'kudoksesta saman sauvamaisen olion. Bakteereiksi hän ei '
+          + 'niitä nimittänyt, eikä hän saanut juuri tukea.'
+        + '\n\n'
+        + 'Väitettä heikensi se, ettei Hansen onnistunut kasvattamaan '
+          + 'oliota viljelmässä eikä osoittamaan sitä tartuttavaksi. '
+          + 'Hän myös yritti tartuttaa erästä potilasta tämän '
+          + 'suostumusta kysymättä; vahinkoa ei syntynyt, mutta asia '
+          + 'meni oikeuteen, hän menetti sairaalanvirkansa, ja tapaus '
+          + 'oli osaltaan tuomassa tietoisen suostumuksen norjalaiseen '
+          + 'lääketieteelliseen tutkimukseen. Hansen jatkoi maan '
+          + 'spitaalilääkärinä, ja hänen ajamansa vuosien 1877 ja 1885 '
+          + 'spitaalilait käänsivät taudin laskuun: tunnettuja '
+          + 'tapauksia oli 1 800 vuonna 1875 ja enää 575 vuonna 1901. '
+          + 'Koko sairaala-alue on ollut yleisölle avoinna '
+          + 'spitaalimuseona vuodesta 1970, ja kirkko on yhä vihitty '
+          + 'ja käytössä: siellä pidetään kahdesti kuussa '
+          + 'englanninkielinen jumalanpalvelus.',
+      kuvat: [
+        {
+          tiedosto: 'St. Jørgens hospital, Bergen....jpg',
+          selite: 'Sairaalan puurakennukset ja kirkon torni sateen jälkeen; '
+            + 'koko piha on nykyään spitaalimuseo.',
+          lahde: 'Thomasg74, Wikimedia Commons (CC BY-SA 3.0 NO)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Permanenten: {
+      aika: '1887',
+      teksti: 'Länsi-Norjan taideteollisuusmuseo perustettiin 1887 '
+          + 'Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän '
+          + 'näyttelytalon — Henry Bucherin suunnitteleman '
+          + 'uusrenessanssitalon — ja juuri siitä tulee koko museon '
+          + 'lempinimi Permanenten. Talo syttyi palamaan Bergenin '
+          + 'suurpalossa 1916, mutta se saatiin pelastettua. '
+          + 'Kokoelmien ydin on vanha länsinorjalainen hopea, '
+          + 'huonekalut, lasi, posliini ja tekstiili; avajaisiin '
+          + 'kauppias Christian Sundt lahjoitti suuren erän esineitä. '
+          + 'Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin '
+          + 'taidegalleria ja pohjakerroksessa kalastusmuseo.'
+        + '\n\n'
+        + 'Talon kuuluisin kokoelma on kiinalainen, ja se on Johan '
+          + 'Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui '
+          + 'Kiinassa kahdestakymmenestäkahdesta ikävuodestaan '
+          + 'kuolemaansa 1935 asti. Vuonna 2010 murtovarkaat tulivat '
+          + 'lasikaton läpi, laskeutuivat köysillä alas ja veivät '
+          + 'kokoelmasta 56 esinettä, muun muassa maljakoita ja '
+          + 'keisarillisia sinettejä. Hälyttimet eivät soineet '
+          + 'kertaakaan. Tammikuussa 2013 vietiin 22 esinettä lisää: '
+          + 'valvontakamerat tallensivat kaksi nuorta miestä '
+          + 'otsalamppuineen ja sorkkarautoineen, ja koko keikka kesti '
+          + 'muutaman minuutin. Kuusi miestä pidätettiin, mutta he '
+          + 'osoittautuivat juoksupojiksi.'
+        + '\n\n'
+        + 'Vuonna 2013 museossa kävi kiinalainen miljardööri Huang '
+          + 'Nubo katsomassa marmoripylväitä, jotka olivat aikanaan '
+          + 'peräisin Pekingin Vanhasta kesäpalatsista. Hän itki ja '
+          + 'sanoi museonjohtajalle, ettei pylväillä ole mitään '
+          + 'tekemistä Norjassa. Myöhemmin hän lahjoitti museolle 1,6 '
+          + 'miljoonaa dollaria, ja pian sen jälkeen seitsemän '
+          + 'pylvästä lähetettiin pysyvänä lainana Pekingin '
+          + 'yliopistoon. Huangin mukaan palautuksella ja '
+          + 'lahjoituksella ei ollut mitään yhteyttä.',
+      kuvat: [
+        {
+          tiedosto: 'Vestlandske kunstindustrimuseum.jpg',
+          selite: 'Henry Bucherin 1896 valmistunut uusrenessanssitalo '
+            + 'kaupunginpuiston nurmen takana.',
+          lahde: 'Yair Haklai, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaupunginkirjasto: {
+      aika: '1872',
+      teksti: 'Keskiajalla Bergen ja Trondheim olivat Norjan '
+          + 'kirjallisuuden keskuksia, ja kirjat olivat luostareissa '
+          + 'ja kirkoissa. Bergenin Mariakirkenillä oli suuri '
+          + 'kirjakokoelma, joka oli avoinna kaikille, ja kun kirkkoherra '
+          + 'David Schønfeldt lahjoitti sille 1766 ison erän kirjoja ja '
+          + 'rahaa, kokoelmalle voitiin rakentaa oma talo. Se oli auki '
+          + 'kaksi tuntia päivässä, ja siitä nykyinen kirjasto '
+          + 'polveutuu. Kirkon kokoelma luovutettiin kaupunginkirjastolle '
+          + '1876, ja siellä se säilyi runsaan vuosisadan ennen '
+          + 'siirtoaan yliopiston kirjastoon.'
+        + '\n\n'
+        + 'Vuonna 1869 yliopistonkirjastonhoitaja Paul Botten-Hansen '
+          + 'pani myyntiin oman kokoelmansa, kaksitoistatuhatta '
+          + 'nidettä. Sitä varten perustettiin yhdistys, joka osti '
+          + 'kokoelman 1871 ja tarjosi sitä Bergenin kaupungille '
+          + 'yhdellä ehdolla: kaupungin on maksettava kirjaston '
+          + 'pyörittäminen. Ensimmäinen kirjasto avautui '
+          + 'Torgallmenningenin varrella entisessä panimossa. Tila kävi '
+          + 'pian ahtaaksi, ja kirjasto muutti Vågenin rannalle '
+          + 'lihahalliin.'
+        + '\n\n'
+        + 'Vuonna 1910 kirjastonjohtajaksi tuli Arne Kildal, joka '
+          + 'jatkoi työtä oman talon puolesta. Arkkitehtikilpailun oli '
+          + 'voittanut jo 1906 Olaf Nordhagen, ja hänen '
+          + 'uusromaaninen talonsa valmistui 1917. Bergenin '
+          + 'kaupunginkirjasto on Norjan toiseksi suurin yleinen '
+          + 'kirjasto: päätalon lisäksi sillä on yhdeksän sivukirjastoa, '
+          + 'ja se hoitaa kirjastopalvelun kaupungin kahdessa '
+          + 'vankilassa.',
+      kuvat: [
+        {
+          tiedosto: 'Bergen offentlige bibliotek ved Lille Lungegårdsvannet.jpg',
+          selite: 'Olaf Nordhagenin harmaa kivitalo heijastuu Lille '
+            + 'Lungegårdsvannetin jäätyneeseen pintaan.',
+          lahde: 'Odd Roar Aalborg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Yliopistomuseo: {
+      aika: '1825',
+      teksti: 'Museon perusti 1825 Wilhelm Frimann Koren Christie, '
+          + 'joka oli tuolloin suurkäräjien puhemies. Tarkoitus oli '
+          + 'kerätä suuret kulttuuri- ja luonnonhistorian kokoelmat, ja '
+          + 'museosta tuli koko kaupungin tieteellisen työn perusta. '
+          + 'Talo oli Norjan ensimmäinen varta vasten museoksi '
+          + 'rakennettu rakennus. Alkuvuosina kokoelmiin kuului myös '
+          + 'taidetta, muun muassa useita Johan Christian Dahlin '
+          + 'maalauksia, sekä kulttuuriesineitä ja käsityötä.'
+        + '\n\n'
+        + 'Vuonna 1831 museo muutti Seminarium Fredericianumin '
+          + 'talosta katedraalikoulun läheltä uuteen rakennukseen '
+          + 'Lille Lungegårdsvannetin lounaispuolelle. Nykyisen '
+          + 'luonnonhistoriallisen talon suunnitteli Johan Henrik '
+          + 'Nebelong, se valmistui 1865, ja museo muutti sinne 1866. '
+          + 'Siivet lisättiin 1898, kasvitieteellinen puutarha '
+          + 'istutettiin 1897–1899, ja kulttuurihistorian osasto sai '
+          + 'oman talonsa 1927.'
+        + '\n\n'
+        + 'Museon tutkimustyö kasvoi 1800-luvun lopulta lähtien niin, '
+          + 'että se johti suoraan Bergenin yliopiston perustamiseen '
+          + '1946. Museo jakautuu yhä luonnonhistorian ja '
+          + 'kulttuurihistorian kokoelmiin, ja sen hoidossa ovat '
+          + 'luonnonhistoriallista taloa ympäröivä museopuutarha — '
+          + 'entinen kasvitieteellinen puutarha — sekä kaupungin '
+          + 'arboretum.',
+      kuvat: [
+        {
+          tiedosto: 'Bergen-University-modf.jpg',
+          selite: 'Vuoden 1865 museotalon edessä seisoo perustajan Wilhelm '
+            + 'Frimann Koren Christien patsas ja sen juurella kivileijona.',
+          lahde: 'Floflo, muokannut Aqwis, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

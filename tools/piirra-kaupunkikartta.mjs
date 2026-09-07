@@ -566,40 +566,6 @@ const KAUPUNGIT = {
       pohjoinen: 37.3945, etela: 37.3745, lansi: -6.0137, ita: -5.9784,
     },
   },
-  bergen: {
-    // Vågen-lahti keskellä kuvaa: Bryggen sen itärannalla, Bergenhusin
-    // linnoitus pohjoisessa niemen kärjessä, kalatori lahden pohjukassa
-    // ja Lille Lungegårdsvannetin nelikulmainen lampi kaakossa.
-    // Fløibanen lähtee kalatorin takaa itään.
-    //
-    // meri: true, koska Vågen on vuonon haara ja OSM:ssä pelkkää
-    // rantaviivaa — sama tilanne kuin Marseillessa ja Oslossa. Ilman
-    // täyttöä lahti jäisi paperin väriseksi, ja juuri se lahti on
-    // Bergenin kartan tunnistettava muoto.
-    // Vaakarajaus samasta syystä kuin Sevillassa: leveys on mitoitettu
-    // korkeudesta niin, että kuvasuhde asettuu muiden joukkoon.
-    //
-    // RAJAUSTA EI OLE VIELÄ KATSOTTU SILMIN, koska kuvaa ei 29.8.2026
-    // saatu piirrettyä lainkaan: Overpass kaatui kolmella peräkkäisellä
-    // ajolla (30 uusintayritystä: 500, 502, aikakatkaisuja ja katkenneita
-    // yhteyksiä), kun Sevilla meni läpi samoilta palvelimilta samaan
-    // aikaan. Rajaus on siis laskettu ja kohteet tarkistettu sen sisään
-    // (faktapohja-bergen.md, jakso 4, kohteet 1–8), mutta ensimmäinen
-    // onnistunut ajo on yhä katsomatta — KATSO KUVA ennen kuin lisäät
-    // rivin js/packs/maakartat.js:ään, kuten tämän tiedoston
-    // alkukommentti vaatii.
-    // Eteläreuna 60,3865: faktapohjan kohde 8 (yliopisto, Muséplass,
-    // 60,38809) jäi tiukemman reunan 60,3893 ulkopuolelle, ja kaupungin
-    // keskipiste 60,38944 osui käytännössä reunaviivalle. Nyt
-    // faktapohjan kohteet 1–8 ovat kaikki kuvassa; Troldhaugen ja
-    // Lysøen jäävät tarkoituksella pois, koska ne ovat 7,8 ja 19,5 km
-    // etelässä (docs/mantereet-tyoaineisto/faktapohja-bergen.md,
-    // jakso 4, sama suositus).
-    rajat: {
-      pohjoinen: 60.4018, etela: 60.3865, lansi: 5.3013, ita: 5.3447,
-    },
-    meri: true,
-  },
   tampere: {
     /*
      * Kannas kahden järven välissä: Näsijärvi työntyy kuvan
@@ -3825,6 +3791,68 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -12.4565, etela: -12.4705, lansi: 130.8337, ita: 130.8480 },
     meri: true,
   },
+  saopaulo: {
+    /*
+     * VANHA YDIN LUZISTA LARGO DE SÃO FRANCISCOON (7.9.2026). Ruutu
+     * on 2,4 × 2,7 kilometriä eli Christchurchin ja Dubrovnikin
+     * kokoluokkaa. Syy tiiviyteen on sama kuin Christchurchissa:
+     * São Paulon 1800-luvun kaupunki mahtui kahden joenuoman,
+     * Anhangabaún ja Tamanduateín, väliin, ja kaikki kahdeksan
+     * kohdetta ovat siinä kolmion muotoisessa ytimessä.
+     *
+     * LAAJEMPI RUUTU KOKEILTIIN JA HYLÄTTIIN. Avenida Paulista on
+     * kaksi kilometriä kaakossa ja Ibirapuera viisi etelässä, joten
+     * ne kattava rajaus olisi yli seitsemän kilometriä leveä — ja
+     * molemmat ovat kaupunkilehden omien juttujen aihe, joten
+     * kartalla ei ole niissä yhtään kohdetta. Levennys olisi siis
+     * ostettu pelkällä katupuurolla.
+     *
+     * POHJOISREUNA -23,5300 ON LUZIN PUISTON MUKAAN. Pinacoteca ja
+     * Sala São Paulo ovat kartan pohjoisin pari, ja ne jäisivät
+     * tiukemmassa ruudussa kuvan reunaan; puiston mukaan vedetty
+     * reuna jättää niiden ympärille nurmea.
+     *
+     * ITÄREUNA -46,6255 ON VEDETTY KAHDEN VANHAN KORTTELIN YLI.
+     * Idässä ovat Pátio do Colégio ja Praça da Sé eli kaupungin
+     * syntypaikka, eikä kummallakaan ole kartalla pistettä (molemmat
+     * ovat lehden juttuja). Reuna on silti vedetty niiden yli, jotta
+     * lukija näkee, missä kaupunki alkoi — se on kuvan sisältöä,
+     * ei kohdeluetteloa.
+     *
+     * meri: ei. São Paulo on 760 metrin korkeudessa ylängöllä
+     * seitsemänkymmenen kilometrin päässä merestä, ja molemmat
+     * keskustan joet ovat OSM:ssä tavallisia vesiväyliä
+     * (Anhangabaú kulkee lisäksi kannen alla).
+     */
+    rajat: { pohjoinen: -23.5300, etela: -23.5545, lansi: -46.6490, ita: -46.6255 },
+  },
+  salvador: {
+    /*
+     * NIEMEN KÄRKI KAUPPAKAMARILTA CAMPO GRANDELLE (7.9.2026). Ruutu
+     * on 2,4 × 2,9 kilometriä. Salvador on rakennettu kahteen
+     * kerrokseen 85 metrin jyrkänteen molemmin puolin, ja ruutu on
+     * valittu niin, että molemmat kerrokset näkyvät: vasemmalla
+     * lahden ranta ja Alakaupungin satamakortteli, oikealla
+     * Yläkaupungin ruutukaava.
+     *
+     * ETELÄREUNA -12,9932 ON ANGLIKAANISEN KAPPELIN PAIKAN MUKAAN.
+     * Ilman sitä ruutu loppuisi Vila Velhan teatteriin ja olisi 2,4
+     * kilometriä korkea; nyt mukaan tulee Campo Granden puistoaukio,
+     * joka on kuvan selvin maamerkki eteläosassa.
+     *
+     * POHJOISREUNA -12,9668 ON KAUPPAKAMARIN TALON MUKAAN eikä
+     * kauempana: pohjoisessa ovat Bonfimin kirkko (5 km) ja
+     * Itapagipen niemi, ja Bonfim on kaupunkilehden pesujuhlanoston
+     * aihe, joten kartalla ei ole siellä kohteita.
+     *
+     * meri: true. Kaikkien pyhien lahti on OSM:ssä rantaviivaa
+     * (natural=coastline) eikä vesimonikulmio, joten ilman lippua
+     * kuvan vasen kolmannes olisi paperin värinen — sama syy kuin
+     * Wellingtonissa.
+     */
+    rajat: { pohjoinen: -12.9668, etela: -12.9932, lansi: -38.5252, ita: -38.5028 },
+    meri: true,
+  },
   suva: {
     /*
      * SIIRTOMAA-AJAN HALLINTOKORTTELI NIEMEN KÄRJESSÄ (6.9.2026).
@@ -4797,6 +4825,86 @@ const KAUPUNGIT = {
      * 1 500 kilometriä itään.
      */
     rajat: { pohjoinen: -3.0780, etela: -3.1450, lansi: -60.0473, ita: -59.9802 },
+  },
+  caracas: {
+    /*
+     * VANHA KAUPUNKI JA MUSEOKAUPUNKI SAMASSA RUUDUSSA (7.9.2026).
+     * Ruutu on 2,8 × 2,1 kilometriä eli Toronton ja Halifaxin
+     * kokoluokkaa. Caracasin laakso on paljon leveämpi kuin ruutu,
+     * mutta kartan kahdeksan kohdetta jakautuvat kahteen rypääseen —
+     * siirtomaa-ajan ruutukaavaan lännessä ja 1900-luvun museo- ja
+     * tornikaupunkiin idässä — ja rajaus on juuri niin leveä, että
+     * molemmat mahtuvat.
+     *
+     * ITÄREUNA -66,8955 ON QUINTA DE ANAUCON MUKAAN. Kauempana idässä
+     * ovat Plaza Venezuela ja Ciudad Universitaria, mutta jälkimmäinen
+     * on kaupunkilehden noston M3 aihe eikä kartan kohde, ja
+     * ensimmäisen mukaan ottaminen olisi levittänyt ruudun neljään
+     * kilometriin ilman yhtään uutta kohdetta.
+     *
+     * LÄNSIREUNA -66,9210 ON VEDETTY KAUPUNGINTEATTERIN OHI, ei
+     * tiukasti siihen. Syy on lehden mittakaavajana vasemmassa
+     * alakulmassa (ui.js): tiukemmalla rajauksella teatterin
+     * numeroympyrä istui 11 %:n kohdalle ja liian lähelle janaa,
+     * kuten Dunedinissa aikanaan Speight'sin panimo. Nyt teatteri on
+     * 14 %:n kohdalla.
+     *
+     * ETELÄREUNA 10,4955 PYSÄHTYY ENNEN GUAIREJOKEA, ja se on
+     * mitattu päätös eikä unohdus. Eteläreunaa kokeiltiin 10,4925
+     * asti, jotta joki näkyisi: joki ei tullut kuvaan lainkaan
+     * (OSM:ssä se on tässä kohtaa moottoritien alle jäävä ohut
+     * vesiväylä), ja alalaitaan jäi puolen kilometrin tyhjä nauha.
+     * Nykyinen reuna päättää kuvan Autopista Francisco Fajardon
+     * eritasoliittymään, joka on ruudun ainoa iso vino muoto.
+     *
+     * Ei meri-lippua: Karibianmeri on viidentoista kilometrin päässä
+     * Ávilan takana, eikä rajauksessa ole yhtään rantaviivaa.
+     */
+    rajat: { pohjoinen: 10.5145, etela: 10.4955, lansi: -66.9210, ita: -66.8955 },
+  },
+  bergen: {
+    /*
+     * VÅGENIN LAHTI JA SEN YMPÄRYS (7.9.2026). Ruutu on 2,1 × 1,8
+     * kilometriä. Bergenin vanha keskusta on kirjaimellisesti lahden
+     * ympärillä: Nordnesin niemi lännessä, tori pohjukassa ja
+     * Fløyenin rinne idässä, ja kaikki kahdeksan kohdetta ovat
+     * enintään kilometrin päässä lahden pohjukasta.
+     *
+     * TÄMÄ LOHKO KORVAA 29.8.2026 LASKETUN BERGENIN RAJAUKSEN
+     * (60,4018 / 60,3865 / 5,3013 / 5,3447). Sitä ei koskaan saatu
+     * piirretyksi — Overpass kaatui kolmella peräkkäisellä ajolla —
+     * eikä siis myöskään katsotuksi silmin, ja se oli mitoitettu
+     * lehden faktapohjan kohteille eikä kohdekartan omille. Nyt kuva
+     * on piirretty ja katsottu.
+     *
+     * RAJAUS ON LEVEÄMPI KUIN KOHTEET VAATISIVAT, ja syy on
+     * työkalun oma tunnettu puute (ks. merenTaytto-kommentti): jos
+     * rantaviiva poistuu laatikosta yhdestä reunasta ja palaa
+     * samaan reunaan, väliin jäävä vesi jää täyttämättä. Ensimmäinen
+     * yritys (pohjoinen 60,3990, länsi 5,3050) teki juuri niin —
+     * Nordnesin kärki jäi länsireunan taakse, ja koko Vågen piirtyi
+     * paperin värisenä maana. Vesitarkistin näytti sen mustaa
+     * valkoisella: lahden keskipiste luki "maa". Länsireuna 5,2990
+     * ottaa niemen kärjen mukaan, jolloin rannikko sulkeutuu
+     * laatikon sisällä ja lahti täyttyy. Sama koe tehtiin myös
+     * meri: 'maa' -asetuksella, ja se käänsi maan ja veden päikseen;
+     * meri: true on oikea.
+     *
+     * POHJOISREUNA 60,4010 ON VÅGENIN SUUN MUKAAN. Bergenhusin
+     * linnoitus jää sen yläpuolelle, mutta Bryggenin laiturit
+     * näkyvät kuvassa rakennuksina. Kumpikaan ei ole kartan kohde:
+     * ne ovat kaupunkilehden nostojen K1, K2 ja H4 aihe.
+     *
+     * ITÄREUNA 5,3375 ON PYHÄN YRJÄNÄN KIRKON MUKAAN ja eteläreuna
+     * 60,3850 yliopistomuseon. Etelämpänä ovat Nygårdsparken ja
+     * Møhlenpris, jotka ovat lehden noston K3 aihe.
+     *
+     * meri: true. Vågen ja Byfjorden ovat OSM:ssä rantaviivaa
+     * (natural=coastline) eivätkä vesimonikulmioita, joten ilman
+     * lippua kuvan koko keskiosa olisi paperin värinen.
+     */
+    rajat: { pohjoinen: 60.4010, etela: 60.3850, lansi: 5.2990, ita: 5.3375 },
+    meri: true,
   },
 };
 
