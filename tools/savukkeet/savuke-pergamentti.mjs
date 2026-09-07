@@ -32,8 +32,20 @@
  *      RIVILLÄ vähintään 15/255 (kajo myötäilee reunaa). Vanhassa
  *      versiossa lovien pohjalla oli puhdasta mustaa.
  *   5. Kajo VAIMENEE ulospäin: 3 px:n päässä kirkkaampi kuin 24 px:n
- *      päässä — hehku on hehku, ei kehys.
- *   6. Ei sivuvirheitä.
+ *      päässä — hehku on hehku, ei kehys. Ja se on KEVYT: keskimäärin
+ *      alle 45/255 reunan vieressä (omistaja 7.9.2026 ilta:
+ *      *"ylä- ja alareuna on, kuin paperi olisi tulessa"* — silloin
+ *      lukema oli 58).
+ *   6. YLÄ- JA ALAREUNA OVAT RAUHALLISET. Mitataan MASKISTA
+ *      ERISTETTYNÄ (valkoinen laatta mustaa vasten, ei paperia eikä
+ *      lyhtyjä): vaakareunojen aaltoilun on oltava korkeintaan puolet
+ *      sivujen aaltoilusta, ja sivujen on pysyttävä revittyinä
+ *      (omistaja: *"Sivut ovat ihan ok"*). Sama mittaus antaa
+ *      repeämän SYVIMMÄN puraisun osuutena paperin leveydestä.
+ *   7. TEKSTI EI OLE REUNASSA: pehmuste miinus syvin puraisu on joka
+ *      reunalla vähintään 1,6 rem, ja Käynnistä-napin alle jää sama
+ *      tila (*"ei saa olla leikannut noin lähelle tekstiä"*).
+ *   8. Ei sivuvirheitä.
  *
  * Kuvakaappaus (jos kuvakansio annetaan): `pergamentti-<näkymä>.png`.
  */
@@ -44,6 +56,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { maskiKuva, siemenNimesta } from '../../js/pergamentti.js';
 
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -165,6 +178,70 @@ function reunaRivilla(kuva, y, alkuX, loppuX) {
 
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 
+/* ---------- 1. MASKI ERISTETTYNÄ ----------
+ * Valkoinen suorakaide mustaa vasten, maski päällä, ei muuta. Näin
+ * repeämän muoto mitataan ILMAN paperin tekstuuria, kellastumaa ja
+ * lyhtyjä — pelinäkymässä ne peittävät reunan alleen niin, ettei
+ * pikselihaku erota repeämää sisäreunan varjon rinteestä.
+ *
+ * MITÄ MITATAAN: kunkin reunan syvyys eli kuinka monta pikseliä
+ * elementin suorasta reunasta paperi alkaa. Ylä- ja alareunan pitää
+ * aaltoilla SELVÄSTI vähemmän kuin sivujen (omistaja 7.9.2026 ilta:
+ * *"Sivut ovat ihan ok, mutta ylä- ja alareuna on, kuin paperi olisi
+ * tulessa, eli saa liikkua rauhallisemmin."*), ja syvin puraisu
+ * kertoo, paljonko pehmustetta laatikko tarvitsee.
+ */
+const MASKI_W = 600;
+const MASKI_H = 450;
+const MASKI_M = 60;
+const maskiSivu = await (await selain.newContext({
+  viewport: { width: MASKI_W + 2 * MASKI_M, height: MASKI_H + 2 * MASKI_M },
+})).newPage();
+const maskiUrl = maskiKuva(siemenNimesta('Ihmisen matka'), MASKI_W / MASKI_H);
+await maskiSivu.setContent('<body style="margin:0;background:#000">'
+  + `<div style="position:absolute;left:${MASKI_M}px;top:${MASKI_M}px;`
+  + `width:${MASKI_W}px;height:${MASKI_H}px;background:#fff;`
+  + `-webkit-mask-image:url('${maskiUrl}');mask-image:url('${maskiUrl}');`
+  + '-webkit-mask-size:100% 100%;mask-size:100% 100%;'
+  + "-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat\"></div></body>");
+await maskiSivu.waitForTimeout(400);
+const maskiKuvake = lueP(await maskiSivu.screenshot());
+const RAJA = 128;
+const syvyys = { yla: [], ala: [], vasen: [], oikea: [] };
+for (let x = Math.round(MASKI_M + MASKI_W * 0.15); x < MASKI_M + MASKI_W * 0.85; x += 1) {
+  let y = MASKI_M - 30;
+  while (y < MASKI_M + 140 && maskiKuvake.kirkkaus(x, y) < RAJA) y += 1;
+  syvyys.yla.push(y - MASKI_M);
+  let y2 = MASKI_M + MASKI_H + 30;
+  while (y2 > MASKI_M + MASKI_H - 140 && maskiKuvake.kirkkaus(x, y2) < RAJA) y2 -= 1;
+  syvyys.ala.push(MASKI_M + MASKI_H - y2);
+}
+for (let y = Math.round(MASKI_M + MASKI_H * 0.15); y < MASKI_M + MASKI_H * 0.85; y += 1) {
+  let x = MASKI_M - 30;
+  while (x < MASKI_M + 140 && maskiKuvake.kirkkaus(x, y) < RAJA) x += 1;
+  syvyys.vasen.push(x - MASKI_M);
+  let x2 = MASKI_M + MASKI_W + 30;
+  while (x2 > MASKI_M + MASKI_W - 140 && maskiKuvake.kirkkaus(x2, y) < RAJA) x2 -= 1;
+  syvyys.oikea.push(MASKI_M + MASKI_W - x2);
+}
+const p2p = (a) => Math.max(...a) - Math.min(...a);
+const vaaka = Math.max(p2p(syvyys.yla), p2p(syvyys.ala));
+const sivut = Math.max(p2p(syvyys.vasen), p2p(syvyys.oikea));
+const syvin = Math.max(...Object.values(syvyys).map((a) => Math.max(...a)));
+/** Syvin puraisu osuutena paperin LEVEYDESTÄ — sama luku joka koossa. */
+const syomaOsuus = syvin / MASKI_W;
+tieto('maskin reunasyvyydet (600 × 450 px)', Object.entries(syvyys)
+  .map(([k, a]) => `${k} ${Math.min(...a)}–${Math.max(...a)}`).join(', '));
+vaadi('ylä- ja alareuna aaltoilevat sivuja rauhallisemmin',
+  vaaka * 2 <= sivut && vaaka >= 1,
+  `vaaka ${vaaka} px, sivut ${sivut} px — omistaja pyysi vaakareunalle noin kolmasosaa`);
+vaadi('sivut ovat yhä revityt (omistaja: "sivut ovat ihan ok")', sivut >= 6,
+  `sivujen vaihtelu ${sivut} px`);
+vaadi('repeämä pysyy maskin marginaalissa eikä yllä syvälle paperiin',
+  syvin <= 0.06 * MASKI_W, `syvin puraisu ${syvin} px (${(syomaOsuus * 100).toFixed(1)} % leveydestä)`);
+await maskiSivu.context().close();
+
+/* ---------- 2. AVAUSLAATIKKO PELISSÄ ---------- */
 const peli = new Game({
   players: [{ name: 'Fogg', color: '#c9a227', start: 'ateena' }],
   pack: packById('maailmankartta'),
@@ -235,19 +312,29 @@ for (const nakyma of NAKYMAT) {
   /* Kaappaus laatikon ympäriltä laitepikseleinä (CDP: ei fonttiodotusta). */
   const laatikko = await sivu.evaluate(() => {
     const r = document.querySelector('.aikajana-avaus-laatikko').getBoundingClientRect();
-    return { x: r.x, y: r.y, width: r.width, height: r.height };
+    const otsikko = document.querySelector('.aikajana-avaus-otsikko')?.getBoundingClientRect();
+    const nappi = document.querySelector('.aikajana-avaus-nappi')?.getBoundingClientRect();
+    const cs = getComputedStyle(document.querySelector('.aikajana-avaus-laatikko'));
+    return {
+      x: r.x, y: r.y, width: r.width, height: r.height,
+      pehmuste: [cs.paddingTop, cs.paddingRight, cs.paddingBottom, cs.paddingLeft].map(parseFloat),
+      otsikkoVali: otsikko ? otsikko.top - r.top : 0,
+      nappiVali: nappi ? r.bottom - nappi.bottom : 0,
+      rem: parseFloat(getComputedStyle(document.documentElement).fontSize) || 16,
+    };
   });
   const reuna = 46;
   // Kapealla ruudulla laatikon vasemmalle puolelle ei mahdu koko
   // marginaalia: leikkaus alkaa nollasta, ja reunan odotettu paikka
   // lasketaan TODELLISESTA leikkauskohdasta.
   const leikkausX = Math.max(0, laatikko.x - reuna);
+  const leikkausY = Math.max(0, laatikko.y - reuna);
   const cdp = await ctx.newCDPSession(sivu);
   const { data } = await cdp.send('Page.captureScreenshot', {
     format: 'png',
     clip: {
       x: leikkausX,
-      y: Math.max(0, laatikko.y - reuna),
+      y: leikkausY,
       width: laatikko.width + 2 * reuna,
       height: laatikko.height + 2 * reuna,
       scale: nakyma.dpr,
@@ -346,10 +433,49 @@ for (const nakyma of NAKYMAT) {
   const kaukoKa = keskiarvo(kauko);
   tieto(n('kajo reunan ulkopuolella'), `3 px: ka ${lahiKa.toFixed(1)} min ${lahiMin.toFixed(1)} | `
     + `24 px: ka ${kaukoKa.toFixed(1)} min ${Math.min(...kauko).toFixed(1)}`);
-  vaadi(n('reunan ulkopuolella ei ole mustaa rakoa (kajo myötäilee reunaa)'), lahiMin >= 15,
-    `himmein kohta 3 px reunan ulkopuolella oli ${lahiMin.toFixed(1)} (raja 15)`);
-  vaadi(n('kajo vaimenee ulospäin'), lahiKa > kaukoKa + 3,
-    `${lahiKa.toFixed(1)} vs ${kaukoKa.toFixed(1)}`);
+  vaadi(n('reunan ulkopuolella ei ole mustaa rakoa (kajo myötäilee reunaa)'), lahiMin >= 8,
+    `himmein kohta 3 px reunan ulkopuolella oli ${lahiMin.toFixed(1)} (raja 8)`);
+  /*
+   * ALARAJA vartioi mustaa rakoa, YLÄRAJA liekkiä. Omistajan
+   * hylkäämässä versiossa (7.9.2026 ilta, *"kuin paperi olisi
+   * tulessa"*) tämä lukema oli 58; vanhassa monikulmiossa 0,0.
+   */
+  vaadi(n('kajo on kevyt eikä liekki'), lahiKa <= 45 && lahiKa > kaukoKa + 3,
+    `3 px ${lahiKa.toFixed(1)} (katto 45), 24 px ${kaukoKa.toFixed(1)}`);
+
+  /*
+   * TEKSTI EI SAA OLLA REUNASSA (omistaja 7.9.2026 ilta: *"ei saa olla
+   * leikannut noin lähelle tekstiä"*).
+   *
+   * Tätä EI mitata pikseleistä. Kokeiltiin ja hylättiin: jyrkimmän
+   * kirkkausmuutoksen haku pystysuunnassa löytää paperin SISÄREUNAN
+   * kellastuman rinteen (inset-varjo, säde 20–86 px) eikä repeämää,
+   * koska repeämän kohdalla kontrasti on pieni — ulkona himmeä kajo,
+   * sisällä tumma reunavyö. Sen sijaan kaksi mitattua lukua kerrotaan
+   * keskenään: repeämän syvyys mitataan MASKISTA ERISTETTYNÄ (osio
+   * yllä, `syomaOsuus` = syvin puraisu jaettuna paperin leveydellä) ja
+   * pehmuste luetaan DOMista. Erotus on se vapaa tila, jonka omistaja
+   * pyysi — ja se pätee sellaisenaan myös leveämmällä paperilla, koska
+   * kumpikin luku on osuus laatikon leveydestä.
+   */
+  const vara = 1.6 * laatikko.rem;
+  const syoma = syomaOsuus * laatikko.width;
+  const vapaa = {
+    yla: laatikko.pehmuste[0] - syoma,
+    oikea: laatikko.pehmuste[1] - syoma,
+    ala: laatikko.pehmuste[2] - syoma,
+    vasen: laatikko.pehmuste[3] - syoma,
+  };
+  tieto(n('vapaa tila repeämän ja tekstin välissä'), `ylä ${vapaa.yla.toFixed(1)} `
+    + `oikea ${vapaa.oikea.toFixed(1)} ala ${vapaa.ala.toFixed(1)} vasen ${vapaa.vasen.toFixed(1)} px `
+    + `(repeämä syö ${syoma.toFixed(1)} px, vaadittu vara ${vara.toFixed(1)} px)`);
+  vaadi(n('repeämä ei ylety tekstiin: vapaata tilaa joka reunalla'),
+    Math.min(...Object.values(vapaa)) >= vara,
+    JSON.stringify(Object.fromEntries(Object.entries(vapaa).map(([k, v]) => [k, Math.round(v)]))));
+
+  // Käynnistä-nappi ei kosketa alareunaa: sen alle jää koko alapehmuste.
+  vaadi(n('Käynnistä-nappi ei kosketa alareunaa'), laatikko.nappiVali >= vara + syoma,
+    `napin alla ${laatikko.nappiVali.toFixed(1)} px, vaadittu ${(vara + syoma).toFixed(1)} px`);
 
   vaadi(n('ei sivuvirheitä'), virheet.length === 0, virheet.join(' | ').slice(0, 300));
   await ctx.close();

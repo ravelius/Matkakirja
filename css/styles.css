@@ -25218,10 +25218,12 @@ body.maatiedot-tila .pallolauta-nappula { display: none; }
   background-repeat: no-repeat;
   background-position: center;
   /*
-   * Lyhtyjen syke: --lyhty-ulko 0,155…0,38 → peittävyys 0,29…0,57.
-   * Omistajan sanat ovat "kevyt hehku": kajo saa myötäillä reunaa,
-   * ei polttaa paperia. Ensimmäinen mittaus (0,28 + 2,2 ×) luki
-   * kuvakaappauksessa liekkinä, ei valona.
+   * Lyhtyjen syke: --lyhty-ulko 0,155…0,38 → peittävyys 0,17…0,31.
+   * Omistajan sanat ovat "kevyt hehku", ja toisella kierroksella
+   * (7.9.2026 ilta) *"kuin paperi olisi tulessa"*. Kaksi mittausta
+   * ennen tätä: 0,28 + 2,2 × luki liekkinä, 0,14 + 1,15 × yhä
+   * kärventymänä. Kajo on nyt lyhdyn valo paperilla — se myötäilee
+   * reunaa, mutta sitä pitää katsoa nähdäkseen.
    */
-  opacity: calc(0.14 + 1.15 * var(--lyhty-ulko, 0.26));
+  opacity: calc(0.08 + 0.6 * var(--lyhty-ulko, 0.26));
 }

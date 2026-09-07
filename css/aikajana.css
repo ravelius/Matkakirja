@@ -225,7 +225,30 @@
   z-index: 1;
   box-sizing: border-box;
   width: 100%;
-  padding: 1.9rem 2.1rem 1.8rem;
+  /*
+   * PEHMUSTE = VAPAA TILA + MASKIN SYÖMÄ VYÖHYKE (omistaja 7.9.2026
+   * ilta: *"ei saa olla leikannut noin lähelle tekstiä"*).
+   *
+   * Repeämä syö elementin reunasta osuuden, joka on aina sama murto-osa
+   * laatikon LEVEYDESTÄ — maski venytetään sivusuhteen mukaan, joten
+   * yksi maskiyksikkö on yhtä monta pikseliä kummallakin akselilla
+   * (js/pergamentti.js MITTASUHTEET). Siksi pehmusteen toinen osa on
+   * PROSENTTI: CSS laskee kaikki pehmusteprosentit laatikon leveydestä,
+   * jolloin sama sääntö pitää niin kapealla puhelinlaatikolla kuin
+   * leveällä kuvapaperilla — pehmustetta ei tarvitse säätää käsin, kun
+   * paperi kasvaa.
+   *
+   * Ensimmäinen osa on se vapaa tila, jonka omistaja pyysi: 2,4 rem
+   * ylhäällä ja alhaalla, 2 rem sivuilla. Muuttujina, jotta laatikon
+   * muunnelma (esim. leveämpi kuvapaperi) voi kasvattaa vapaata tilaa
+   * KOSKEMATTA prosenttiosaan — sen poistaminen toisi tekstin takaisin
+   * repeämän kylkeen.
+   */
+  --avaus-pehmuste-y: 2.4rem;
+  --avaus-pehmuste-x: 2rem;
+  padding:
+    calc(var(--avaus-pehmuste-y) + 4.4%)
+    calc(var(--avaus-pehmuste-x) + 5.6%);
   background-color: #d9c69c;
   /*
    * PAPERI ON KUVAPUTKEN BITTIKARTTA, TEKSTI LADOTAAN TÄSSÄ (omistaja
@@ -255,24 +278,30 @@
    * saman reunan mutta kaksi kaarta eivät ole identtisiä.
    *
    * Kellastunut reunavyö kolmena kerroksena. Säteet ovat suuremmat
-   * kuin clip-path-aikana: inset-varjo piirtyy elementin SUORAAN
-   * reunaan, josta maski syö ulomman ~3 %, joten kapea vyö olisi
-   * jäänyt maskin alle. Nyt vyö yltää repeämän sisäpuolelle asti.
+   * kuin clip-path-aikana (inset-varjo piirtyy elementin SUORAAN
+   * reunaan, josta maski syö ulomman osan), mutta PEITTÄVYYS on
+   * palautettu lähelle entistä: omistaja 7.9.2026 ilta luki tumman
+   * vyön ja oranssin kajon yhdessä kärventymänä (*"kuin paperi olisi
+   * tulessa"*). Vyö on nyt vanhan arkin kellastuma, ei nokea.
    */
   box-shadow:
-    inset 0 0 22px rgba(74, 46, 12, 0.55),
-    inset 0 0 46px rgba(86, 56, 18, 0.34),
-    inset 0 0 92px rgba(58, 36, 10, 0.28);
+    inset 0 0 20px rgba(74, 46, 12, 0.38),
+    inset 0 0 44px rgba(86, 56, 18, 0.22),
+    inset 0 0 86px rgba(58, 36, 10, 0.17);
   color: #2b2116;
   font-family: var(--font-luku);
   text-align: center;
   overflow: hidden;
 }
 /*
- * Isompi paperi kestää väljemmän sisennyksen: repaleinen reuna (ks.
- * clip-path yllä) pysyy kaukana tekstistä myös leveämmällä arkilla.
+ * Isompi paperi kestää väljemmän vapaan tilan. Vain muuttujat, ei
+ * padding-lyhennettä: prosenttiosa (maskin syömä repeämävyöhyke) on
+ * osa laatikon leveyttä ja pysyy mukana sellaisenaan.
  */
-.aikajana-avaus-laatikko.on-kuva { padding: 2.1rem 2.5rem 1.9rem; }
+.aikajana-avaus-laatikko.on-kuva {
+  --avaus-pehmuste-y: 2.6rem;
+  --avaus-pehmuste-x: 2.2rem;
+}
 .aikajana-avaus-laatikko > * { position: relative; z-index: 2; }
 /*
  * LÄISKÄT JA KELLASTUMAT (::before, paikallaan). Kulmat ovat
@@ -1719,9 +1748,27 @@
    * jäisivät kummatkin liian kapeiksi, ja kuva ylhäällä on se, mikä
    * pysäyttää katseen ennen lukemista. Paperi saa lähes koko ruudun
    * leveyden kuten ennenkin.
+   *
+   * KAPEALLA RUUDULLA VAPAA TILA ON PIENEMPI, REPEÄMÄN VARA EI.
+   * Pehmusteen prosenttiosa (maskin syömä vyöhyke) jää ennalleen —
+   * se on murto-osa laatikon leveydestä ja siis jo valmiiksi
+   * pienempi. Vain vapaata tilaa kavennetaan, koska 300 px:n
+   * paperilla työpöydän mitat veivät tekstipalstasta viidenneksen ja
+   * kasvattivat laatikon ruudun yli (mitattu 390 × 844: 885 px > 844).
+   * Repeämän ja tekstin väliin jää silti reilut 1,7 rem joka reunalla
+   * (savuke-pergamentti mittaa sen; ehdoton alaraja on 1,6 rem).
+   * Kuvallinen laatikko säätää vain muuttujia, ei padding-lyhennettä —
+   * muuten prosenttiosa katoaisi ja teksti palaisi repeämän viereen.
    */
   .aikajana-avaus-kehys.on-kuva { width: 92%; }
-  .aikajana-avaus-laatikko.on-kuva { padding: 1.5rem 1.4rem 1.4rem; }
+  .aikajana-avaus-laatikko {
+    --avaus-pehmuste-y: 1.75rem;
+    --avaus-pehmuste-x: 1.4rem;
+  }
+  .aikajana-avaus-laatikko.on-kuva {
+    --avaus-pehmuste-y: 1.5rem;
+    --avaus-pehmuste-x: 1.4rem;
+  }
   .aikajana-avaus-sisus { grid-template-columns: 1fr; gap: 0.95rem; }
   .aikajana-avaus-kuva { order: -1; }
 }
