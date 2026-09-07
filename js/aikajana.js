@@ -2414,6 +2414,13 @@ class Aikajana {
     this.alustaNappi = null;
     this.muisti = null;
     this.muistiLukittu = false;
+    /*
+     * AIKASELAIN (Raamattu LINSSIEN AIKASELAIN ALAREUNAAN, 7.9.2026):
+     * yhteinen aikanauha ruudun alareunassa. Pinta on
+     * js/linssit/aikaselain.js eikä tiedä kaaresta mitään; kytkentä
+     * kertomusesitykseen on tässä (rakennaAikaselain).
+     */
+    this.aikaselain = null;
   }
 
   /* ---------- rakentaminen ---------- */
@@ -2646,6 +2653,64 @@ class Aikajana {
      */
     ui.nostokortti?.pura?.();
     ui.nostokortti = luoNostokortti({ ajo: this, ui, linssi: this.linssi });
+    this.rakennaAikaselain();
+  }
+
+  /**
+   * AIKASELAIN RUUDUN ALAREUNAAN (Raamattu "LINSSIEN AIKASELAIN
+   * ALAREUNAAN", omistaja 7.9.2026 klo 20.55, sanatarkasti: *"Onko alas
+   * mahdollista tehdä yksinkertaista aikaselainta, mikä olisi täynnä
+   * pystyviivoja ja valittu aika olisi pidempi viiva? Siitä olisi nopea
+   * sormella valita aikapiste ja kelata esityksen eri vaiheita ja
+   * projisoida levinneisyyttä maapallolla."*).
+   *
+   * Nauha korvaa kertomuskaarella jaksojen selaamisen kokonaan: viivat
+   * ovat kaanonin jaksot järjestyksessä, veto esikatselee hetken (kello
+   * ja vanat seuraavat sormea, kertoja vaikenee) ja irrotus valitsee
+   * jakson. Tauko, ↺ ja ✕ jäävät palkkiin.
+   *
+   * MODUULI EI TIEDÄ KAARESTA MITÄÄN (js/linssit/aikaselain.js) — se saa
+   * pisteet ja kaksi takaisinkutsua, ja tämä metodi on ainoa paikka,
+   * jossa nauha ja kertomusesitys kohtaavat. Sama nauha kelpaa siksi
+   * tuleville linsseille; KEKSINTÖLINSSI (pysäkkiajo) EI SAA SITÄ vielä,
+   * koska sen alalaidassa on esinerivi ja loppulappu, joiden mitat ja
+   * savukkeet on tehty ilman nauhaa (docs/moduulit/ihmisen-matka-vanat.md
+   * luku 15).
+   */
+  rakennaAikaselain() {
+    const kertomus = this.kaari.kertomus ?? [];
+    if (!kertomus.length || !this.juuri) return false;
+    const nimet = new Map(this.tapahtumat.map((t) => [t.tunnus, t.otsikko]));
+    this.aikaselain = luoAikaselain({
+      pisteet: kertomus.map((j) => ({
+        id: j.id,
+        otsikko: nimet.get(j.kohde) ?? j.alue ?? j.id,
+        vuosia: j.vuosia,
+      })),
+      nykyinen: kertomus[0]?.id ?? null,
+      nimi: `${this.kaari.otsikko ?? 'Aikajana'}: aikaselain`,
+      teksti: (vuosia) => this.selaimenVuositeksti(vuosia),
+      reducedMotion: this.reducedMotion,
+      onEsikatselu: (id, osuus) => this.esitys?.esikatsele?.(osuus),
+      onValinta: (id) => this.esitys?.valitse?.(id),
+    });
+    if (!this.aikaselain) return false;
+    this.juuri.appendChild(this.aikaselain.el);
+    document.body.classList.add('aikaselain-auki');
+    return true;
+  }
+
+  /**
+   * Vuosiluku aikaselaimen viivan päälle SAMASSA MUODOSSA KUIN KELLOSSA
+   * ("50 000 v. sitten", loppupäässä "n. 1250 jaa."). Muoto tulee kellon
+   * asteikosta eikä koodista, jotta nauha ja kello eivät voi eriytyä.
+   */
+  selaimenVuositeksti(vuosia) {
+    const arvo = Math.max(0, Number(vuosia) || 0);
+    const teksti = this.asteikko.teksti?.(arvo);
+    if (teksti) return teksti;
+    const luku = String(Math.round(arvo)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+    return this.asteikko.yksikko ? `${luku} ${this.asteikko.yksikko}` : luku;
   }
 
   /**
@@ -5408,6 +5473,11 @@ class Aikajana {
     this.ui.nostokortti?.pura?.();
     this.ui.nostokortti = null;
     this.virtanapit = null;
+    // Aikaselain on juuren lapsi, mutta sen kuuntelijat ja body-luokka
+    // ovat sen omia: purku on moduulin oma (js/linssit/aikaselain.js).
+    this.aikaselain?.pura?.();
+    this.aikaselain = null;
+    document.body.classList.remove('aikaselain-auki');
     document.body.classList.remove('aikajana-palkki-auki');
     document.body.style.removeProperty('--aikajana-palkki-korkeus');
     /*
@@ -5527,6 +5597,7 @@ import { suljeElaintaky } from './elaintaky.js';
 import { suljeSyvennys } from './syvennys.js';
 import { luoTutkimusvaihe, luoVirtanapit, lataaTutkimuksenTyyli } from './linssit/ihmisen-matka-tutkimus.js';
 import { luoNostokortti, lyhytAjoitus } from './linssit/ihmisen-matka-kortti.js';
+import { luoAikaselain } from './linssit/aikaselain.js';
 import { lueMuisti, tallennaMuisti, tyhjennaMuisti } from './linssit/ihmisen-matka-muisti.js';
 
 /**

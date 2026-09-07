@@ -145,7 +145,15 @@ test('karusellin ja havainnekuvan kehys, liuku ja reduced motion CSS:ssä', () =
   assert.ok(kesto >= 400 && kesto <= 600, `liu'un kesto ${kesto} ms ei ole 400–600 ms`);
   assert.match(raita, /cubic-bezier/);
   // Reduced motion: ei liukua eikä kuvatekstin häivytystä.
-  const hiljainen = CSS.match(/@media \(prefers-reduced-motion: reduce\) \{[\s\S]*?\n\}/g).at(-1);
+  /*
+   * OIKEA LOHKO ETSITÄÄN SISÄLLÖSTÄ, EI JÄRJESTYKSESTÄ. Aiemmin tästä
+   * otettiin tiedoston VIIMEINEN prefers-reduced-motion-lohko, ja
+   * mittaus rikkoutui heti kun css/aikajana.css sai uuden osion perään
+   * (aikaselain 7.9.2026) — vika oli mittauksessa, ei karusellissa.
+   */
+  const hiljainen = CSS.match(/@media \(prefers-reduced-motion: reduce\) \{[\s\S]*?\n\}/g)
+    .find((lohko) => lohko.includes('.tiedeliite-karuselli-raita'));
+  assert.ok(hiljainen, 'karusellin reduced-motion-lohkoa ei löydy tyyleistä');
   assert.match(hiljainen, /\.tiedeliite-karuselli-raita/);
   assert.match(hiljainen, /\.tiedeliite-karuselli-teksti\.vaihtui \{ animation: none; \}/);
   // Kapea ruutu: nuolet mahtuvat kuvan laidoille.

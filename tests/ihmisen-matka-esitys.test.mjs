@@ -291,6 +291,27 @@ test('esityksen pinnat ovat olemassa: pimeä, teksti, kuva ja koukku', () => {
   assert.match(OHJAAJA, /ajo\.ui\?\.aloitaTutkimusvaihe\?\.\(\);/);
 });
 
+test('aikaselain seuraa esitystä ja ohjaa sitä (7.9.2026)', () => {
+  /*
+   * Raamattu "LINSSIEN AIKASELAIN ALAREUNAAN": alareunan nauha korvaa
+   * jaksojen selaamisen. Ohjaaja antaa sille kaksi asiaa — valitun
+   * viivan (aseta jakson vaihtuessa) ja kaksi takaisinkutsua
+   * (esikatsele, valitse). Nauhan oma pinta on js/linssit/aikaselain.js
+   * ja sen testit tests/aikaselain.test.mjs.
+   */
+  assert.match(OHJAAJA, /ajo\.aikaselain\?\.aseta\?\.\(jakso\.id\);/,
+    'nauhan valinta ei seuraa jakson vaihtumista');
+  assert.match(OHJAAJA, /\n    esikatsele,\n    valitse,/,
+    'ohjaaja ei tarjoa nauhalle esikatselua eikä valintaa');
+  // Veto vaientaa kertojan; kello ja vanat seuraavat sormea ilman pitoa.
+  assert.match(OHJAAJA, /const kelaaKello = \(vuosia\) => \{/);
+  assert.match(OHJAAJA, /vanat\?\.\(\)\?\.paivita\?\.\(arvo, \{ pito: false \}\)/,
+    'kelaus ei päivitä vanoja suoraan (tutkimusvaiheessa silmukka ei lue kelloa)');
+  // Tauko/Jatka, ↺ ja ✕ jäävät palkkiin: nauha ei korvaa niitä.
+  assert.match(CSS, /\.aikajana\.kertomus \.aikajana-alusta \{/);
+  assert.match(CSS, /\.aikajana\.kertomus \.aikajana-sulje \{/);
+});
+
 test('loppunäkymä asemoidaan erikseen, ei jätetä kesken jääneen ajon varaan', () => {
   /*
    * Viimeisen jakson kamera-ajo mitoitetaan VARAKESTOSTA (tekstin

@@ -305,6 +305,37 @@ export function jaksonTahti(kertomus, i) {
   return { alku: perus, loppu: Number.isFinite(loppu) ? loppu : perus };
 }
 
+/**
+ * AIKASELAIMEN KELATTU LUKEMA nauhan jatkuvasta osuudesta (0…1).
+ *
+ * PUHDAS FUNKTIO (tests/aikaselain.test.mjs). Nauhan viivat ovat
+ * jaksojärjestyksessä tasavälein (js/linssit/aikaselain.js), joten
+ * osuus 0 on ensimmäinen jakso ja 1 viimeinen; viivojen VÄLISSÄ lukema
+ * interpoloidaan GEOMETRISESTI, samalla kaavalla kuin kellon oma
+ * asteikko (js/aikajana.js vuosiaSittenLukema) — muuten sormi hyppäisi
+ * 300 000:sta 240 000:een lineaarisesti ja kello näyttäisi eri lukua
+ * kuin sama kohta esityksen kuluessa. Nolla tai negatiivinen pää
+ * (viimeinen jakso on 0) menee suoraan, koska logaritmi ei kestä sitä.
+ *
+ * @param {Array<{vuosia:number}>} kertomus kaanonin jaksot
+ * @param {number} osuus 0…1
+ * @returns {number} vuosia sitten
+ */
+export function kelauksenLukema(kertomus, osuus) {
+  const n = kertomus?.length ?? 0;
+  if (!n) return 0;
+  const t = Math.max(0, Math.min(1, Number(osuus) || 0)) * (n - 1);
+  const i = Math.min(n - 2, Math.floor(t));
+  if (i < 0) return Number(kertomus[0]?.vuosia) || 0;
+  const f = Math.max(0, Math.min(1, t - i));
+  const a = Number(kertomus[i]?.vuosia);
+  const b = Number(kertomus[i + 1]?.vuosia);
+  if (!Number.isFinite(a)) return 0;
+  if (!Number.isFinite(b)) return a;
+  if (!(a > 0) || !(b > 0)) return a + (b - a) * f;
+  return a * ((b / a) ** f);
+}
+
 /** Pehmennys kelaukselle: hidas lähtö, hidas pysähdys (ei ylitystä). */
 export function kelauksenPehmennys(t) {
   const x = Math.max(0, Math.min(1, t));
@@ -380,6 +411,15 @@ export function luoEsitys({ ajo }) {
     karjet: [],
     /** Jatkettiinko muistista (ei pimeää, ei avausta). */
     muistista: false,
+    /*
+     * AIKASELAIMEN VETO KESKEN (js/linssit/aikaselain.js). Null, kun
+     * sormi ei ole nauhalla; vedon ajaksi tähän jää tieto siitä, oliko
+     * pelaaja itse tauolla — irrotus jatkaa esitystä vain, jos ei ollut
+     * (Raamattu LINSSIEN AIKASELAIN ALAREUNAAN).
+     */
+    selaus: null,
+    /** Mittari savukkeelle: montako kertaa nauhasta on valittu jakso. */
+    selauksia: 0,
   };
 
   /* ---------------------------------------------------------- pinnat */
@@ -530,6 +570,28 @@ export function luoEsitys({ ajo }) {
     ajo.naytaVuosi(paikka, reduced);
   };
 
+  /**
+   * KELLO JA VANAT KELATTUUN HETKEEN (aikaselaimen veto). Ero
+   * `kirjoitaKello`-funktioon on kaksi:
+   *
+   *   1. PITOA EI KASVATETA (`tila.pitoMin`): kelaus taaksepäin on
+   *      pelaajan oma ele, ja pidon pohja asetetaan vasta valinnassa.
+   *   2. VANAT PÄIVITETÄÄN SUORAAN. Esityksen aikana virtojen oma
+   *      silmukka lukisi kellon 80 ms:n välein, mutta TUTKIMUSVAIHEESSA
+   *      se ei lue sitä lainkaan (js/aikajana-virrat.js silmukka: lukema
+   *      on siellä vakio 0) — ilman suoraa kutsua nauha ei kelaisi
+   *      levinneisyyttä lopussa mihinkään. Sama kutsu antaa esityksen
+   *      aikana vasteen heti sormen liikkeeseen.
+   */
+  const kelaaKello = (vuosia) => {
+    const arvo = Math.max(0, Number(vuosia) || 0);
+    tila.vuosia = arvo;
+    const paikka = ajo.asteikko.paikka?.(arvo) ?? arvo;
+    ajo.tila = { ...ajo.tila, vuosi: paikka };
+    ajo.naytaVuosi(paikka, reduced);
+    ajo.virrat?.vanat?.()?.paivita?.(arvo, { pito: false });
+  };
+
   /* ------------------------------------------------------------ luenta */
 
   const aloitaLuenta = (jakso, { alkukohta = 0 } = {}) => {
@@ -644,6 +706,10 @@ export function luoEsitys({ ajo }) {
       suljeKuva();
       if (jakso.alue) ajaAlueeseen(jakso.alue, jakso.vaihe === 'valot' ? 0 : kesto);
     }
+    // Aikaselaimen valittu viiva seuraa esitystä (Raamattu LINSSIEN
+    // AIKASELAIN ALAREUNAAN: "vuosiluku … voisi toistua pienellä sen
+    // korkeamman viivan päällä").
+    ajo.aikaselain?.aseta?.(jakso.id);
     // Muisti seuraa jaksoa: sulku tai virkistys jatkaa tästä jaksosta.
     ajo.tallennaMuisti?.();
   };
@@ -732,6 +798,8 @@ export function luoEsitys({ ajo }) {
      * "ajo, joka ei liikuta mitään, on turha").
      */
     const viimeinen = kertomus[tila.i];
+    // Nauhan valinta jää loppuun; tutkimusvaiheessa siitä jatketaan.
+    if (viimeinen?.id) ajo.aikaselain?.aseta?.(viimeinen.id);
     if (kamera && viimeinen?.alue) ajaAlueeseen(viimeinen.alue, reduced ? 0 : LOPUN_ASETUS_MS);
     suljeKuva();
     tekstirivi.classList.remove('esilla');
@@ -746,6 +814,75 @@ export function luoEsitys({ ajo }) {
     // Koukku viimeisenä: tutkimusvaihe on toisen moduulin työtä, ja se
     // saa ottaa ruudun haltuunsa vasta kun esitys on siivonnut jälkensä.
     ajo.ui?.aloitaTutkimusvaihe?.();
+  }
+
+  /* ---------------------------------------------------------- aikaselain */
+
+  /**
+   * NAUHAN VETO (esikatselu). Esitys menee HILJAA tauolle — kertoja
+   * vaikenee, silmukka pysähtyy — ja kello sekä vanat seuraavat sormea.
+   * Nappien tekstiin ei kosketa: veto ei ole Tauko-napin painallus, ja
+   * irrotus joko jatkaa esitystä tai jättää sen tauolle sen mukaan,
+   * kummassa tilassa pelaaja oli (Raamattu LINSSIEN AIKASELAIN
+   * ALAREUNAAN: *"irrotus jatkaa esitystä siitä"*).
+   *
+   * Pito katkaistaan vedon ajaksi: pito on yksisuuntainen maksimi
+   * (luku 12.5), eikä taaksepäin kelattu kartta saa jäädä näyttämään
+   * Amerikkoja Afrikan jakson kohdalla.
+   *
+   * @param {number} osuus nauhan jatkuva sijainti 0…1
+   */
+  function esikatsele(osuus) {
+    if (tila.purettu) return false;
+    if (!tila.selaus) {
+      tila.selaus = { oliTauolla: !tila.kaynnissa };
+      if (tila.kaynnissa) seis();
+      tila.tauolla = true;
+      try { tila.aani?.pause(); } catch { /* soitin oli jo purettu */ }
+      ajo.virrat?.asetaPito?.(false);
+    }
+    kelaaKello(kelauksenLukema(kertomus, osuus));
+    return true;
+  }
+
+  /**
+   * NAUHAN VALINTA (sormi irtosi tai napautus). Esitys jatkaa valitusta
+   * jaksosta SEN ALUSTA — luenta alkaa, kamera ajaa ja kello lähtee
+   * jakson lukemasta. Tutkimusvaiheessa (esityksen jälkeen) sama
+   * valinta on pelkkä kelaus: kello ja vanat siirtyvät hetkeen, kertoja
+   * on vaiti.
+   */
+  function valitse(id) {
+    if (tila.purettu) return false;
+    const i = kertomus.findIndex((j) => j.id === id);
+    if (i < 0) return false;
+    const selaus = tila.selaus;
+    tila.selaus = null;
+    tila.selauksia += 1;
+    const vuosia = Number(kertomus[i]?.vuosia) || 0;
+    // Pidon pohja alkaa valitusta hetkestä (ks. esikatsele).
+    tila.pitoMin = vuosia;
+    ajo.virrat?.asetaPito?.(true);
+    ajo.aikaselain?.aseta?.(kertomus[i].id);
+    if (tila.paattynyt) {
+      tila.i = i;
+      kelaaKello(vuosia);
+      ajo.virrat?.vanat?.()?.paivita?.(vuosia, { pito: true });
+      ajo.tallennaMuisti?.();
+      return true;
+    }
+    suljeKuva();
+    aloitaJakso(i);
+    if (selaus?.oliTauolla) {
+      // Pelaaja oli itse tauolla: jakso vaihtuu, mutta esitys ei lähde.
+      seis();
+      tila.tauolla = true;
+      try { tila.aani?.pause(); } catch { /* soitin oli jo purettu */ }
+      ajo.saadaMusiikki?.(false);
+      if (ajo.taukoNappi) ajo.taukoNappi.textContent = 'Jatka';
+      ajo.juuri?.classList.add('tauolla');
+    } else kaynnista();
+    return true;
   }
 
   /* ------------------------------------------------------------- muisti */
@@ -808,6 +945,13 @@ export function luoEsitys({ ajo }) {
       kaynnista();
       return true;
     },
+    /**
+     * AIKASELAIN (js/linssit/aikaselain.js) kutsuu näitä kahta: veto
+     * esikatselee hetken, irrotus valitsee jakson. Moottori välittää
+     * kutsut sellaisenaan (js/aikajana.js rakennaAikaselain).
+     */
+    esikatsele,
+    valitse,
     /** Yläpalkin yksi nappi. */
     taukoTaiJatka() {
       if (tila.paattynyt) return;
@@ -869,6 +1013,9 @@ export function luoEsitys({ ajo }) {
       pitoMin: Number.isFinite(tila.pitoMin) ? Math.round(tila.pitoMin) : null,
       karjet: tila.karjet,
       muistista: tila.muistista,
+      /** Aikaselaimen veto kesken (kertoja vaiti, kello sormen alla). */
+      selaus: Boolean(tila.selaus),
+      selauksia: tila.selauksia,
     }),
   };
 }
