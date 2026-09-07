@@ -40,6 +40,24 @@
 const MITTARI_AVAIN = 'matkakirja-mittari';
 /** Kehysaikojen liukuva ikkuna (ms). */
 const KEHYSIKKUNA_MS = 2000;
+/*
+ * PISIN KEHYS VIIMEISEN SEKUNNIN AIKANA — ja pudotusten määrä
+ * (omistaja 7.9.2026, sanatarkasti): *"mittari kyllä näyttää pysyvän
+ * 55-60 fps tasossa. voiko se muuton 55 ja 60 välillä kuitenkin näkyä
+ * tökkimisenä?"*
+ *
+ * VOI, JA JUURI SITÄ SE ON. 55 fps ei ole 8 % hitaampi kuva vaan viisi
+ * PUDOTETTUA kehystä sekunnissa: neljä kehystä 16,7 ms:n välein ja
+ * sitten yksi 33 ms:n nykäys. Keskiarvo ei siis kerro tökkimisestä
+ * mitään — se kertoo vain, ettei tökkimistä ole liikaa. Mittarin oikea
+ * luku on PISIN KEHYS ja pudotusten LUKUMÄÄRÄ, ja kumpikin luetaan
+ * SEKUNNIN ikkunasta: kahden sekunnin maksimi jää roikkumaan ruutuun
+ * senkin jälkeen, kun nykäys on ohi, eikä lukija näe, mikä ele sen
+ * aiheutti.
+ */
+const KEHYSIKKUNA_LYHYT_MS = 1000;
+/** Kehys, joka on tätä pidempi, on 60 Hz:n ruudulla pudotettu kehys. */
+const PUDOTUSRAJA_MS = 17;
 /** Pitkien tehtävien ikkuna (ms). */
 const TUKOSIKKUNA_MS = 5000;
 /** Kuinka usein tekstit kirjoitetaan (ms). */
@@ -187,19 +205,21 @@ export function kaynnistaKarttamittari(ui) {
    * Kulku on nuorimmasta vanhimpaan, joten ensimmäinen ikkunan
    * ulkopuolinen merkintä päättää silmukan.
    */
-  const ikkunasta = (kestot, ajat, paa, maara, nyt, ikkuna) => {
+  const ikkunasta = (kestot, ajat, paa, maara, nyt, ikkuna, raja = Infinity) => {
     const koko = kestot.length;
     let n = 0;
     let summa = 0;
     let suurin = 0;
+    let yli = 0;
     for (let i = 0; i < maara; i += 1) {
       const kohta = ((paa - 1 - i) % koko + koko) % koko;
       if (nyt - ajat[kohta] > ikkuna) break;
       n += 1;
       summa += kestot[kohta];
       if (kestot[kohta] > suurin) suurin = kestot[kohta];
+      if (kestot[kohta] > raja) yli += 1;
     }
-    return { maara: n, summa, suurin };
+    return { maara: n, summa, suurin, yli };
   };
 
   /**
@@ -269,6 +289,9 @@ export function kaynnistaKarttamittari(ui) {
     const k = ikkunasta(kehysvalit, kehysajat, kehyspaa, kehysmaara, nyt, KEHYSIKKUNA_MS);
     const keski = k.maara ? k.summa / k.maara : NaN;
     const fps = k.maara && keski > 0 ? 1000 / keski : NaN;
+    // Sekunnin ikkuna: pisin kehys ja pudotukset (ks. PISIN KEHYS yllä).
+    const s = ikkunasta(kehysvalit, kehysajat, kehyspaa, kehysmaara, nyt,
+      KEHYSIKKUNA_LYHYT_MS, PUDOTUSRAJA_MS);
     const t = ikkunasta(tukoskestot, tukosajat, tukospaa, tukosmaara, nyt, TUKOSIKKUNA_MS);
     const lava = lavanTila();
     const svgSolmut = ui.svg ? ui.svg.getElementsByTagName('*').length : 0;
@@ -282,6 +305,7 @@ export function kaynnistaKarttamittari(ui) {
     laatikko.textContent = [
       'MITTARI',
       `kehys     ${luku(keski)} ms · max ${luku(k.suurin)} ms · ${luku(fps)} fps`,
+      `pisin/1s  ${luku(s.suurin)} ms · pudotuksia ${s.yli} / ${s.maara} (> ${PUDOTUSRAJA_MS} ms)`,
       tukosrivi,
       `lava      ${lava.leveys}×${lava.korkeus} px · ${lava.tila}`,
       `lauta     ${lava.lautaLeveys || '–'}×${lava.lautaKorkeus || '–'} px`,
@@ -299,6 +323,7 @@ export function kaynnistaKarttamittari(ui) {
       viimeKonsoli = nyt;
       console.log(
         `[mittari] kehys ka ${luku(keski)} max ${luku(k.suurin)} fps ${luku(fps)}`
+        + ` | pisin1s ${luku(s.suurin)} pudotuksia ${s.yli}/${s.maara}`
         + ` | tukokset ${tukostuki ?? `${t.maara} pisin ${luku(t.suurin)}`}`
         + ` | lava ${lava.leveys}x${lava.korkeus} ${lava.tila.replace(' ', '-')}`
         + ` | lauta ${lava.lautaLeveys}x${lava.lautaKorkeus}`

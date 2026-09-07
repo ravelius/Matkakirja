@@ -3775,3 +3775,246 @@ ei ole laudan dataa: sen paikan valitsee ajonaikainen ruutuladonta
 pinoista. Pallon laput vs. kaupunkinimet mitataan siksi savukkeella eikä
 työkalulla; työkalun oma vastuu (poltettu nimiö vs. poltettu nimiö)
 pysyy ennallaan.
+
+
+## 15. Kehystahti — pisin kehys, ei keskiarvo (Opus 7.9.2026)
+
+**Omistaja 7.9.2026, sanatarkasti:**
+
+> "kartta pyörii nyt jo todella hyvin, mutta jos vertaa google earthiin,
+> niin vielä tulee vähän tökkimistä eli ei niin sulavaa ruudun
+> päivitystä, vaikka välillä on sujuvaa. löytyykö jostain vielä
+> optimoitavaa tai jotain mikä kuluttaa laskentatehoa? mittari kyllä
+> näyttää pysyvän 55-60 fps tasossa. voiko se muuton 55 ja 60 välillä
+> kuitenkin näkyä tökkimisenä?"
+
+**Vastaus kysymykseen on kyllä, ja se on koko luvun lähtökohta.** 60 Hz:n
+ruudulla 55 fps ei ole 8 % hitaampi kuva vaan **viisi pudotettua kehystä
+sekunnissa**: neljä kehystä 16,7 ms:n välein ja sitten yksi 33 ms:n
+nykäys. Silmä ei lue keskiarvoa vaan epätasaisuutta, joten mittarin
+oikea luku ei ole fps vaan **pisin kehys** ja **pudotusten lukumäärä**.
+Fablen linjaus (Raamattu, PALLON SULAVUUS) on sama: tavoite on pisimmän
+kehyksen pituus alle 17 ms, ei keskiarvo.
+
+### 15.1 Mittari ja sen kalibrointi
+
+`tools/savukkeet/savuke-pallo-kehystahti.mjs` (uusi). Kaksi asiaa
+erottaa sen aiemmista mittareista:
+
+**1. Kamera liikkuu kehysaskelin, ei kellosta.** Kontin Chromium piirtää
+SwiftShaderilla (ANGLE Vulkan, ohjelmistorasteroija), ja mitattuna
+7.9.2026 pallo vie kokonaisen kehyksen **150 ms** (360 × 240) …
+**1 130 ms** (1 600 × 900 dpr 1) — myös joutilaana. Kellosta ajettu
+6 sekunnin panorointi tekisi siis yhdellä kehyksellä satojen
+millisekuntien loikan, jolloin laattakerroksen ennakkoalue paisuisi
+eikä mitattu työ vastaisi laitteen kehystä lainkaan. Mittari siirtää
+kameraa joka piirretyllä kehyksellä täsmälleen sen verran kuin se
+siirtyisi laitteella 60 Hz:ssä (0,0505° panoroinnin askelta kohti).
+Jokainen mitattu kehys on siis laitteen kehys; vain seinäkelloaika
+venyy.
+
+**2. Vartio lukee JS-työtä, ei kehysväliä.** Kehysväliä ei voi tässä
+ympäristössä mitata: kiinteä 17 ms:n raja antaisi aina 100 % ja
+mediaaniin suhteutettu raja aina 0 %. Mittari erittelee sen sijaan
+kehyksen sen osan, joka on **pelin omaa pääsäikeen työtä**:
+laattakerroksen päivitys + kirjaston laattamoottori (`updatePov`) +
+tekstuurien vienti (`initTexture`) + three.js:n piirtokutsu. Rasterointi
+jää ulkopuolelle, ja juuri se on ainoa osa, joka on kontissa
+epärealistinen — laitteella sen tekee näytönohjain. **Raja 17 ms on siis
+laitteen 60 Hz:n kehysbudjetti sellaisenaan.** Lisäksi mitta on pahin
+tapaus: kontin kehysväli on satoja millisekunteja, joten kerroksen oma
+100 ms:n harvennus ei ehdi väliin ja jokainen mitattu kehys tekee täyden
+päivityksen.
+
+**3. Koneen kuorma jaetaan pois.** Konttia jakaa moni ajo. Mitattuna
+sama koodi antoi kuormitetulla koneella kehysmediaanin 1 200 ms ja
+rauhallisella 750 ms, ja samassa suhteessa venyivät JS-ajat. Mittari
+ajaa siksi ensin kiinteän laskusilmukan viidesti, ottaa parhaan ajan
+koneen nopeudeksi ja kertoo JS-ajat suhteella *rauhallinen / mitattu*.
+Ilman tätä vartio kaatuisi naapurin ajoon eikä pelin koodiin.
+
+**4. Jakso ajetaan kahdesti ja vartio lukee paremman ajon.** Yksittäinen
+kehys voi keskeytyä naapurin ajoon: mitattu samalla koodilla peräkkäin
+`renderer.render` mediaani 3 ms mutta pisin 76 ms, `updatePov` mediaani
+0 ms mutta pisin 40 ms. Yksittäiset piikit eivät siis mittaa peliä.
+Kaikki toistot jäävät JSON-raporttiin.
+
+**5. Panorointi kulkee aina uuteen maastoon.** Lämmitysajo koko matkan
+yli teki mittauksesta arpapeliä: LRU:n muistikatto (24 näkymätöntä
+valmista laattaa) on pienempi kuin matkan laattamäärä, joten osa ehti
+purkautua ja osa ei — kaksi peräkkäistä ajoa antoi 27 tekstuurin
+vientiä ja 0. Nyt kamera lähtee levänneestä Ateenasta ja jokainen
+toisto jatkaa siitä, mihin edellinen jäi.
+
+Vartion rajat: yli 17 ms:n JS-kehyksiä panoroinnissa enintään **3 %**
+(zoomissa 10 %: tason vaihto on oikeaa työtä), ja kaksi kuormasta
+riippumatonta **rakenteellista** rajaa (pohjan päivityksiä enintään
+0,7 × kehykset, tekstuurien vientejä enintään yksi kehystä kohti).
+
+### 15.2 Mitattu ENNEN ja JÄLKEEN
+
+Sama savuke, sama kone, sama tallenne, peräkkäin ajettuna 7.9.2026
+(puhelin 390 × 844 dpr 2, 46 laitekehystä panorointia ja 31 zoomia,
+kaksi toistoa kummastakin, taulukossa parempi toisto). Laattatyö oli
+sama molemmissa: **7 tekstuurin vientiä** kummassakin ajossa.
+
+| mitta (panorointi) | ENNEN | JÄLKEEN |
+| --- | --- | --- |
+| JS/kehys p50 | 4,5 ms | **1,6 ms** |
+| JS/kehys p95 | 14,8 ms | **4,4 ms** |
+| JS/kehys pisin | 32,6 ms | **10,4 ms** |
+| **yli 17 ms:n kehyksiä** | **6,5 %** (3 / 46) | **0 %** (0 / 46) |
+| raskaimman kehyksen erittely | moottori **26,3** · piirto 7,9 · laatat 0,3 | piirto 12,5 · laatat 7,4 · moottori **0** |
+| `updatePov` p95 / max (raaka) | 2,6 / **26,0 ms** | 0,4 / **1,3 ms** |
+| pohja päivitettiin | joka kutsulla (89 / 46 kehystä) | **15 / 46 kehystä** |
+
+| mitta (zoom) | ENNEN | JÄLKEEN |
+| --- | --- | --- |
+| JS/kehys p50 | 3,5 ms | **1,5 ms** |
+| JS/kehys p95 | 11,8 ms | **3,6 ms** |
+| JS/kehys pisin | 159,9 ms | **4,2 ms** |
+| yli 17 ms:n kehyksiä | 6,5 % | **0 %** |
+
+JÄLKEEN-ajo tehtiin vieläpä KUORMITETUMMALLA koneella (laskusilmukka
+6,5 ms vastaan 3,6 ms), joten ero on todellista suurempi, ei pienempi.
+
+Ensimmäinen mittaus (41 kehystä, ennen yhtään korjausta) antoi saman
+kuvan syyllisistä: JS/kehys pisin 20,0 ms, ja siitä **17,0 ms oli
+kirjaston laattamoottoria** — yksin koko 60 Hz:n kehysbudjetti.
+`updatePov` ajettiin 79 kertaa 41 kehyksellä (kaksi kertaa kehyksessä),
+mediaani 0,4 ms mutta pisin 12,2 ms. `initTexture` maksoi 3,0 ms (p50)
+ja 6,7 ms (max), ja niitä sai viedä kaksi samassa kehyksessä. Chromen
+jäljestä (`--jalki`, 4 s panorointia) näkyi lisäksi
+**V8.GC_MC_BACKGROUND_MARKING 845 ms, pisin 87 ms** — roskaa syntyi
+niin paljon, että päämerkintä kävi taustalla lähes koko ajon.
+
+### 15.3 Neljä juurisyytä ja niiden korjaukset
+
+**1. Kirjaston oma laattamoottori ajettiin kahdesti joka kehyksessä.**
+Mitattu: 79 `updatePov`-kutsua 41 kehyksellä; mediaani 0,4 ms mutta
+pisin 12,2 ms, ja raskaimmassa kehyksessä kutsut veivät yhteensä 17 ms
+— **yksin koko 60 Hz:n kehysbudjetin**. Juuri tämä on omistajan näkemä
+nykäys: keskiarvo pysyy 55–60 fps:ssä, mutta joka kymmenes kehys putoaa.
+
+Kun laattakerros on päällä, kirjaston moottori ei enää ole kartta vaan
+**karkea pohja**: taso on naulattu `POHJAN_TASO_MAX`:iin (5), yksi
+laatta kattaa 11,25°, ja kerros piirtää sen päälle terävän kuvan. Pohja
+ei siis kaipaa uutta luettelointia 60 kertaa sekunnissa. `js/pallo.js`
+(`kytkeLaatunosto`, "POHJA PÄIVITTYY HARVEMMIN KUIN RUUTU") ohittaa
+kirjaston kutsun, ellei jokin kolmesta ehdosta täyty: (a) laattakerros
+ei ole käytössä, (b) kamera on siirtynyt vähintään
+`POHJAN_ASKEL_OSUUS` (0,06) omasta etäisyydestään — suhdeluku eikä
+asteita, koska sama luku kelpaa joka korkeudella — tai (c) kerros ei
+peitä koko näkyvää aluetta, mutta silloinkin enintään `POHJAN_VALI_MS`
+(100 ms) välein. `lepoon` ajaa moottorin aina pysähdyksen jälkeen, joten
+**levossa pohja on täsmälleen sama kuin ennen**. Perääntyminen:
+`?pohjanharvennus=0`.
+
+**2. Kaksi tekstuuria kehystä kohti.** Mitattu `initTexture`: 3,0 ms
+(p50), 6,7 ms (max). Kaksi peräkkäin samassa kehyksessä on pahimmillaan
+13 ms 16,7 ms:n budjetista — se yksin pudottaa kehyksen.
+`LAATTAKERROS_TEKSTUUREJA_PER_KEHYS` on nyt **1**. Se on 60 Hz:llä yhä
+60 laattaa sekunnissa eli enemmän kuin `LAATTAKERROS_RINNAKKAIN` (6)
+ehtii ladata, joten jono ei kasva.
+
+**3. Päivitys tuotti roskaa 10 kertaa sekunnissa.** Kerroksen
+`suorita` kokosi mittarinsa kahdeksalla erillisellä `filter`/`reduce`-
+kierroksella ja kahdella taulukkokopiolla kaikista tietueista, laski
+laatan lat/lon-suorakaiteen (`laatanAlue`) uudestaan jokaiselle
+ehdokkaalle kahdesti, ja rakensi ennakon ehdokaslistan kahtena
+välitaulukkona ennen kuin katto edes katsoi sitä. Lisäksi `js/pallo.js`
+kutsui kerroksen `mittarit()`ia **joka piirretyllä kehyksellä** pelkän
+kahden kentän takia — ja `mittarit()` kopioi koko taulun *ja*
+pyydettyjen osoitteiden joukon taulukoksi, satoja merkkijonoja. Nyt:
+mittarit yhdellä kierroksella ilman varauksia, `laatanAlue` muistiin
+(katto 4 096, sitten tyhjennys), ennakon suodatus ja katto samassa
+silmukassa, ja varauksettomat lukijat `tila()`, `syy()`, `peittaa()`.
+
+**4. Laattojen valmistelu oli näkymätöntä aikaa.** Kangas, `drawImage`,
+verkon puskurit ja materiaali ovat pääsäikeen työtä, joka osuu siihen
+kehykseen, jossa haku sattuu valmistumaan — eikä se näy missään
+kehyskoukussa. Kerros mittaa sen nyt itse (`mittarit.valmisteluMs`),
+ja savuke raportoi sen: **42,8 ms / 23 laattaa, pisin 9,1 ms**.
+
+### 15.4 Kokeiltu ja HYLÄTTY: bittikartta suoraan tekstuuriksi
+
+Pyramidin ranta-, viiva- ja nostotasot ovat harvoja, joten valtaosalla
+laatoista on vain pohjakerros. Kokeiltiin viedä sellainen laatta
+`new Texture(bittikartta)`:na ilman kangasta ja `drawImage`ia — yksi
+pääsäikeen pikselikopio pois. **Tulos oli päinvastainen:**
+`initTexture` kallistui 3,0 → **5,1 ms** (p50) ja pahin vienti 6,7 →
+**64,2 ms**. Syy on pystykäännöksessä: three.js:n tekstuurin oletus on
+`flipY = true`, ja kun lähde on bittikartta, kääntö tehdään pikseli
+pikseliltä keskusmuistissa; kangas taas elää jo näytönohjaimessa
+(kiihdytetty 2D-konteksti), joten sama kääntö on yksi GPU-kopio. Kangas
+siis MAKSAA yhden drawImagen ja SÄÄSTÄÄ koko viennin. Bittikartan
+lukuasetukset (`imageOrientation: 'none'`, `colorSpaceConversion:
+'none'`) jäivät; `premultiplyAlpha` jätettiin selaimen oletukseksi,
+koska kangas säilyttää pikselit esikerrottuina ja 'none' pakottaisi
+muunnoksen juuri `drawImage`n kohdalla.
+
+### 15.5 Tutkittu ja todettu syyttömäksi
+
+- **Nimet ja CSS2D-elementit.** Ladonta (`js/pallolauta/nimet.js`
+  `lado`) ajetaan vain levossa: `pyydaLadonta` on ajastin
+  (`LADONNAN_LEPOVIIVE_MS`), joka nollautuu jokaisesta ohjainten
+  `change`-tapahtumasta, eikä `getBoundingClientRect` kulje kehyksessä
+  lainkaan. Mitattu Ateenan lähikuvassa: **5 CSS2D-elementtiä**. Ei
+  layout-thrashia, ei mitään korjattavaa.
+- **Kaksi rAF-silmukkaa.** Ei ole. Mittarin `renderer.render` -kääre
+  laski panoroinnissa **41 kutsua 41 kehyksellä** — tasan yksi piirto
+  kehystä kohti. Pelin omat rAF-silmukat (kamera-ajo, liuku, häive,
+  avauslento) muuttavat vain tilaa; piirron tekee Globe.gl:n oma
+  silmukka, ja se pysäytetään jo nyt (`pauseAnimation`), kun kuori on
+  piilossa, lehti auki tai sivu taustalla (`js/pallolauta/lauta.js`
+  `tahdistaLepo`).
+- **Levon harventaminen.** Harkittiin ja jätettiin tekemättä: silmukan
+  pysäyttäminen levossa vaatisi herätyksen jokaisesta muutoslähteestä
+  (kamera-ajo, laatan häive, linssin kalvo, nappulan siirto, nostot,
+  koon muutos), ja yksikin unohdettu lähde jäädyttäisi laudan. Se olisi
+  paljon pahempi vika kuin lämmin näytönohjain, eikä se korjaa
+  omistajan oiretta, joka on nykäys **liikkeen aikana**.
+- **Pikselisuhde ja kuvan pehmennys liikkeessä.** Harkittiin dynaamista
+  pikselisuhdetta (2 levossa, 1,5 vedon aikana) ja jätettiin tekemättä.
+  Perustelu on omistajan oma seisova linjaus: liikkeen aikainen tarkkuus
+  ei saa pudota (Raamattu, "PALAUTE v1642:STA, LIIKKEEN AIKAINEN
+  TARKKUUS"; luku 10.3 "pikselisuhde kerran asennuksessa … kuvan
+  tarkkuus ei saa vaihtua liikkeessä"). Lisäksi mittaus osoittaa syyn
+  olevan muualla: mittari näyttää 55–60 fps eli näytönohjain pysyy
+  perässä, ja pudotukset tulevat yksittäisistä JS-piikeistä. Jos
+  omistaja myöhemmin haluaa vaihtaa terävyyttä sulavuuteen, vipu on
+  `LAATU_PIKSELISUHDE_LEPO` (nyt 3) — se on yhden luvun päätös, ja tämä
+  luku on sen paikka.
+- **Antialias, varjot ja valot.** Varjot ovat jo pois
+  (`shadowMap.enabled = false`); valoja on kaksi (AmbientLight,
+  DirectionalLight) ja ne ovat kirjaston omat, laattojen sävy riippuu
+  niistä (ks. luku 4.3 napakannet). Antialias on kirjaston oletus
+  (päällä) ja se pehmentää juuri vektoriviivat (rantaviiva, rajat), eli
+  sen sammuttaminen olisi sama laadun pudotus, jonka omistaja on kahdesti
+  torjunut. Ei koskettu.
+
+### 15.6 Muut vartiot ennen ja jälkeen
+
+`savuke-pallolauta` ajettiin sekä muutoksitta että muutoksilla:
+**41 / 43 ennen, 42 / 43 jälkeen**. Jäljelle jäävä FAIL (vartio 6,
+kamera-ajo osuu Sofiaan — dy 68,5 px) on sama molemmissa eli tätä erää
+vanhempi vika, ja sen viereen osui kummassakin ajossa yksi satunnainen
+FAIL (toisessa ajossa linssin pyramidipyynnöt, toisessa Sofian
+aarrepisteen elementti), joka ei toistunut uusintaajossa.
+`node --test tests/*.test.mjs` 2 072 läpi, 0 kaatunutta;
+`tarkista-niputus` ja `tarkista-savukkeet` puhtaat.
+
+### 15.7 Mittari näyttää nyt oikean luvun
+
+`js/karttamittari.js` (`?mittari=1` tai ratasvalikko) sai uuden rivin:
+
+```
+kehys     16,7 ms · max 33,4 ms · 59,9 fps
+pisin/1s  33,4 ms · pudotuksia 3 / 59 (> 17 ms)
+```
+
+Pisin kehys ja pudotusten määrä luetaan **sekunnin** ikkunasta, ei
+kahden: kahden sekunnin maksimi jää roikkumaan ruutuun senkin jälkeen,
+kun nykäys on ohi, eikä lukija näe, mikä ele sen aiheutti. Sama rivi
+menee konsoliin (Safarin etäkonsoli, iOS-kuori). Mittari on yhä
+kokonaan kehittäjän kytkimen takana eikä maksa mitään, kun se on pois.
