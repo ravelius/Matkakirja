@@ -168,6 +168,22 @@
  */
 .aikajana-avaus-hehku { z-index: 0; }
 /*
+ * SUUREMPI PAPERI, KUN LAATIKOSSA ON KUVA (omistaja 7.9.2026 ilta,
+ * sanatarkasti: *"samalla voisi tehdä suuremmaksi tuon Itse paperin,
+ * missä tuo teksti on, jotta se kuvakin mahtuu paremmin."*).
+ *
+ * MUUTOS ON RAJATTU LUOKKAAN eikä koske pelkkätekstistä laatikkoa:
+ * `.on-kuva` tulee vain kaarelle, jonka datassa on `esittely.kuva`
+ * (js/aikajana.js avaaAvausjakso). Keksinnöt-kaaren avaus pysyy siis
+ * täsmälleen entisenä yhden palstan paperina min(31rem, 88%), vaikka
+ * kaaret jakavat tämän tiedoston.
+ *
+ * Korkeus tulee sisällöstä: paperi ei saa kiinteää korkeutta, vaan
+ * ruudukko ladotaan ja paperi kasvaa sen mukaan. Sisääntuloliuku
+ * (opacity + translateY + scale) on ennallaan yllä.
+ */
+.aikajana-avaus-kehys.on-kuva { width: min(52rem, 92%); }
+/*
  * PAPERI VALOKEILASSA (omistaja 4.9.2026: *"saadaanko aloitustekstipopup
  * muutettua bittikartaksi ja saadaanko sen päälle tehtyä kumpaankin
  * yläreunaan kuin liekit jotka lepattavat hieman. ei tehdä ensimmäiseen
@@ -248,6 +264,11 @@
   text-align: center;
   overflow: hidden;
 }
+/*
+ * Isompi paperi kestää väljemmän sisennyksen: repaleinen reuna (ks.
+ * clip-path yllä) pysyy kaukana tekstistä myös leveämmällä arkilla.
+ */
+.aikajana-avaus-laatikko.on-kuva { padding: 2.1rem 2.5rem 1.9rem; }
 .aikajana-avaus-laatikko > * { position: relative; z-index: 2; }
 /*
  * LÄISKÄT JA KELLASTUMAT (::before, paikallaan). Kulmat ovat
@@ -402,6 +423,68 @@
   font-weight: 600;
   color: #3a2812;
 }
+/*
+ * TEKSTI JA KUVA VIERI VIERESSÄ (omistaja 7.9.2026 ilta). Ruudukko on
+ * OMA KERROKSENSA paperin sisällä eikä paperi itse, jotta
+ * Käynnistä-nappi jää sen ALLE keskelle — nappi on laatikon suora
+ * lapsi ja perii sen `text-align: center`-tasauksen.
+ *
+ * Palstat ovat lievästi epäsymmetriset (1,15 : 1): teksti on
+ * anfangillinen leipäteksti ja tarvitsee rivinsä, kuva on maisema ja
+ * kestää kapeamman palstan. `minmax(0, …)` estää pitkää sanaa
+ * työntämästä palstaa yli.
+ *
+ * PALSTAT TASATAAN KESKELTÄ eikä ylälaidasta. Teksti on nyt kaksi
+ * lausetta (omistajan lyhennys 7.9.2026) ja jää selvästi kuvaa
+ * matalammaksi; ylätasauksella paperin vasempaan alanurkkaan jäi
+ * mitattuna kahdeksankymmentä pikseliä tyhjää (savuke-ihmisen-avaus,
+ * iPad 834 × 1100). Keskitasaus jakaa väljyyden tekstin ylä- ja
+ * alapuolelle, jolloin lohko lukee yhtenä ladelmana.
+ */
+.aikajana-avaus-sisus {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  margin: 0 0 1.15rem;
+}
+/* Kuvaton tila (kuva jäi lataamatta): teksti saa koko paperin. */
+.aikajana-avaus-sisus > .aikajana-avaus-teksti:only-child { grid-column: 1 / -1; }
+/* Ruudukossa tekstin oma alamarginaali on turha — väli tulee gapista. */
+.aikajana-avaus-sisus > .aikajana-avaus-teksti { margin-bottom: 0; }
+/*
+ * KUVA ON VALOKUVA PAPERIN PÄÄLLÄ: kapea kerman värinen paspartuu,
+ * tumma hiusviiva ja pehmeä varjo. Sävy on lämmin ja hieman vaimeampi
+ * kuin alkuperäinen, jotta kuva istuu pergamentille eikä loista siitä
+ * irti — lyhtyjen valo yltää sen päälle kuten muuhunkin paperiin.
+ */
+.aikajana-avaus-kuva {
+  margin: 0;
+  text-align: left;
+}
+.aikajana-avaus-kuva img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border: 1px solid rgba(62, 40, 14, 0.75);
+  padding: 4px;
+  background: rgba(255, 250, 236, 0.42);
+  box-shadow: 0 3px 12px rgba(28, 16, 4, 0.42);
+  filter: sepia(0.16) saturate(0.94) brightness(0.98);
+}
+/* Kuvateksti pienenä: nimi ja ajoitus omalla rivillään, lähde sen alla. */
+.aikajana-avaus-kuvateksti {
+  display: block;
+  margin: 0.45rem 0 0;
+  font-family: var(--font-luku);
+  font-size: 0.76rem;
+  line-height: 1.35;
+  color: #4a3620;
+}
+.aikajana-avaus-kuvanimi { display: block; font-style: italic; }
+.aikajana-avaus-kuvalahde { display: block; font-size: 0.7rem; opacity: 0.78; }
+
 /*
  * KÄYNNISTÄ ON TÄYTETTY MUSTENAPPI (omistaja 6.9.2026 keskipäivä,
  * sanatarkasti: *"Nappi saisi olla näkyvämpi."*). Aiemmin nappi oli
@@ -1494,6 +1577,17 @@
   .aikajana-ilmio { top: 3.6rem; right: 0; --aikajana-paneeli-leveys: 100%; border-radius: 0; border-left: 0; border-right: 0; }
   .aikajana-ilmio-selite { font-size: 0.82rem; }
   .aikajana-nappi { padding: 0.2rem 0.42rem; font-size: 0.68rem; }
+  /*
+   * AVAUSLAATIKKO PUHELIMESSA: yksi palsta ja KUVA TEKSTIN YLÄPUOLELLE
+   * (omistaja 7.9.2026 ilta). Pystyruudulla vierekkäiset palstat
+   * jäisivät kummatkin liian kapeiksi, ja kuva ylhäällä on se, mikä
+   * pysäyttää katseen ennen lukemista. Paperi saa lähes koko ruudun
+   * leveyden kuten ennenkin.
+   */
+  .aikajana-avaus-kehys.on-kuva { width: 92%; }
+  .aikajana-avaus-laatikko.on-kuva { padding: 1.5rem 1.4rem 1.4rem; }
+  .aikajana-avaus-sisus { grid-template-columns: 1fr; gap: 0.95rem; }
+  .aikajana-avaus-kuva { order: -1; }
 }
 
 /* Tabletti pystyssä: paneeli kaksi kolmasosaa leveydestä, hieman oikealle (omistaja 4.9.2026). */

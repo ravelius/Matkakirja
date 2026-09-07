@@ -439,14 +439,26 @@ test('kaari pyytää virrat, ei tummennusta eikä reittiviivaa; tekstit on kirjo
   assert.equal(k.virrat.virrat, IHMISEN_MATKA_VIRRAT);
   assert.equal(k.virrat.maamaski, MAAMASKI);
   assert.ok(k.virrat.retki && k.virrat.vanha && k.virrat.peitto);
-  // Virrat vanoina (Fable 7.9.2026): avausteksti ja loppusanat puhuvat vanasta ja
-  // pääreitistä, eivät valoista eivätkä koko mantereen värjäytymisestä.
+  /*
+   * Virrat vanoina (Fable 7.9.2026): tekstit puhuvat vanasta ja
+   * pääreitistä, eivät valoista eivätkä koko mantereen
+   * värjäytymisestä.
+   *
+   * KARTAN LUKUOHJE ASUU NYT LOPPUSANOISSA, EI AVAUKSESSA (omistaja
+   * 7.9.2026 ilta: avaustekstistä poistettiin kaikki maapallo-lauseen
+   * jälkeen — vanat, värit, harmaa väestö ja löytöjen laskenta).
+   * Avaus on lupaus, loppusanat ovat yhteenveto; pelaaja näkee vanat
+   * ja värit kartalta siinä välissä. Avaustekstin oma vartija on
+   * tests/ihmisen-matka.test.mjs.
+   */
   const data = lue('../js/linssit/ihmisen-matka-data.js');
   assert.ok(!/TODO \(Fable/.test(data), 'tekstien TODO on tehty');
-  assert.match(k.esittely.teksti, /Kartalle piirtyy yksi vana — todennäköinen pääreitti/);
-  assert.match(k.esittely.teksti, /Harmaa on vanha väestö/);
-  assert.match(k.esittely.teksti, /Löytöpaikat ovat todisteita, eivät reitti/);
+  assert.ok(k.esittely.teksti.endsWith('toisella puolella maapalloa.'),
+    'avausteksti ei pääty omistajan lauseeseen');
+  assert.ok(!/vana|Harmaa|Löytöpaikat/.test(k.esittely.teksti),
+    'avausteksti selittää yhä karttaa — poistettu 7.9.2026');
   assert.match(k.loppusanat.teksti, /^Vanat ulottuvat nyt/);
+  assert.match(k.loppusanat.teksti, /pisteet merkitsevät kaksikymmentä paikkaa/);
   assert.match(k.loppusanat.teksti, /Reitti on todennäköinen, ei todistettu/);
   assert.ok(!/valo/i.test(k.esittely.teksti) && !/valo/i.test(k.loppusanat.teksti), 'tekstit eivät enää puhu valoista');
 });

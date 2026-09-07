@@ -1429,7 +1429,19 @@ test('avausjakson esittely tulee datasta eikä koodista', () => {
   // Moottori lukee kentän eikä kirjoita omia sanojaan laatikkoon.
   assert.match(MOOTTORI, /const esittely = this\.kaari\.esittely \?\? \{\};/);
   assert.match(MOOTTORI, /esittely\.otsikko \?\? this\.kaari\.otsikko/);
-  assert.match(MOOTTORI, /if \(esittely\.teksti\) laatikko\.appendChild/);
+  assert.match(MOOTTORI, /if \(esittely\.teksti\) sisus\.appendChild/);
+  /*
+   * KUVATON KAARI SAA ENTISEN LAATIKON (omistaja 7.9.2026 ilta, kuva
+   * rinnalle vain Ihmisen matkalle). `sisus` on paperi itse, kun
+   * `esittely.kuva` puuttuu, joten keksintökaaren DOM ei muutu — eikä
+   * `.on-kuva`-luokkaa tule, jolloin myös leveys ja sisennys pysyvät.
+   */
+  assert.equal(esittely.kuva, undefined, 'keksintökaarella ei ole avauskuvaa');
+  assert.match(MOOTTORI, /const sisus = kuvasolmu \? solmu\('div', 'aikajana-avaus-sisus'\) : laatikko;/);
+  assert.match(MOOTTORI, /if \(kuvasolmu\) \{ kehys\.classList\.add\('on-kuva'\); laatikko\.classList\.add\('on-kuva'\); \}/);
+  // Leveämpi paperi ja kaksipalstainen ladelma ovat luokan takana.
+  assert.match(AIKAJANA_CSS, /\.aikajana-avaus-kehys \{[\s\S]*?width: min\(31rem, 88%\);/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-avaus-kehys\.on-kuva \{ width: min\(52rem, 92%\); \}/);
 });
 
 /*

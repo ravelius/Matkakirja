@@ -181,6 +181,7 @@ import { avaaTiedeliite, suljeTiedeliite } from './tiedeliite.js';
 import { sytytaLyhdyt } from './lyhty.js';
 import { repaleinenPaperi, siemenNimesta } from './pergamentti.js';
 import { rajausTyyli } from './isoisan-valokuvat.js';
+import { taytaLahderivi } from './tekijakortti.js';
 import {
   aloitaSiirtymamusiikki, himmennaSiirtymamusiikki, lopetaSiirtymamusiikki,
   LINSSIN_HILJENNYS,
@@ -3257,6 +3258,34 @@ class Aikajana {
   }
 
   /**
+   * Avauslaatikon kuva: havainnekuva ja sen alla pieni kuvateksti sekä
+   * lähderivi. Lähderivi kulkee talon apurin kautta (taytaLahderivi),
+   * joten "Matkakirjan havainnekuva" saa saman napautettavan selitteen
+   * kuin muuallakin pelissä — kopiota ei tehdä tänne.
+   *
+   * Kuva ladataan `asetaKuva`-apurilla, joka osaa peilin uusinnan; jos
+   * kuva ei tule, koko kuvalohko poistuu ja teksti saa paperin
+   * itselleen (ruudukko on `1fr` ilman toista lasta).
+   */
+  avauksenKuva(tiedot) {
+    const kehys = solmu('figure', 'aikajana-avaus-kuva');
+    const kuva = solmu('img');
+    kuva.alt = tiedot.kuvateksti ?? '';
+    kuva.decoding = 'async';
+    asetaKuva(kuva, tiedot.osoite, tiedot.vara ?? null, () => kehys.remove());
+    kehys.appendChild(kuva);
+    const selite = solmu('figcaption', 'aikajana-avaus-kuvateksti');
+    if (tiedot.kuvateksti) selite.appendChild(solmu('span', 'aikajana-avaus-kuvanimi', tiedot.kuvateksti));
+    if (tiedot.lahde) {
+      const lahde = solmu('span', 'aikajana-avaus-kuvalahde');
+      taytaLahderivi(lahde, tiedot.lahde, tiedot);
+      selite.appendChild(lahde);
+    }
+    if (selite.childNodes.length) kehys.appendChild(selite);
+    return kehys;
+  }
+
+  /**
    * Musta peite kartta-alueen päälle ja sen keskelle kaaren esittely.
    * Teksti tulee DATASTA (linssin `aikajana.esittely`), ei koodista:
    * omistaja hioo sanat kaarikohtaisesti.
@@ -3307,7 +3336,29 @@ class Aikajana {
      */
     this.sammutaLyhdyt = sytytaLyhdyt(laatikko, { reducedMotion: this.reducedMotion, valokohde: kehys });
     laatikko.appendChild(solmu('h2', 'aikajana-avaus-otsikko', otsikko));
-    if (esittely.teksti) laatikko.appendChild(solmu('p', 'aikajana-avaus-teksti', esittely.teksti));
+    /*
+     * KUVA TEKSTIN RINNALLE (omistaja 7.9.2026 ilta, sanatarkasti:
+     * *"tuohon tekstin rinnalle voisi nostaa jonkun hienon kuvan, mitä
+     * jo on generoitu tuohon tuota linssiä varten, ja samalla voisi
+     * tehdä suuremmaksi tuon Itse paperin, missä tuo teksti on, jotta
+     * se kuvakin mahtuu paremmin."*).
+     *
+     * KENTTÄ ON VALINNAINEN JA MUUTOS ON RAJATTU LUOKALLA. Kaari, jolla
+     * ei ole `esittely.kuva`-kenttää, saa täsmälleen entisen laatikon:
+     * otsikko, teksti ja nappi suoraan paperiin, leveys min(31rem, 88%).
+     * Kuvallinen kaari saa `.on-kuva`-luokan kehykseen ja paperiin, ja
+     * vasta se avaa leveämmän paperin ja kaksipalstaisen ladelman
+     * (css/aikajana.css). Näin Keksinnöt-kaaren avaus ei liiku, vaikka
+     * molemmat jakavat saman tyylitiedoston.
+     *
+     * Teksti ja kuva menevät omaan `sisus`-ruudukkoonsa, jotta
+     * Käynnistä-nappi jää sen ALLE keskelle eikä palstan jatkeeksi.
+     */
+    const kuvasolmu = esittely.kuva?.osoite ? this.avauksenKuva(esittely.kuva) : null;
+    if (kuvasolmu) { kehys.classList.add('on-kuva'); laatikko.classList.add('on-kuva'); }
+    const sisus = kuvasolmu ? solmu('div', 'aikajana-avaus-sisus') : laatikko;
+    if (esittely.teksti) sisus.appendChild(solmu('p', 'aikajana-avaus-teksti', esittely.teksti));
+    if (kuvasolmu) { sisus.appendChild(kuvasolmu); laatikko.appendChild(sisus); }
     this.avausNappi = solmu('button', 'aikajana-avaus-nappi', 'Käynnistä');
     this.avausNappi.type = 'button';
     this.avausNappi.addEventListener('click', () => this.aloitaAjo());
