@@ -2020,9 +2020,13 @@ ei vain säädetty pienemmäksi.
 | sama, zoom p50 / p95 / pisin | 1,8 / 5,6 / 6,2 ms | 2,2 / 4,2 / 5,6 ms |
 | LINSSIN kehysväli kaista näkyvissä (puhelin 390 × 844, tutkimusvaihe) p50 / p90 / pisin | 1 233 / 1 417 / 2 367 ms | 1 217 / 1 400 / 2 267 ms |
 
-Savuke ei avaa linssiä lainkaan (se panoroi Ateenan yllä), joten sen
-ennen/jälkeen mittaa samaa koodipolkua: ero on kontin kohinaa, ja
-molemmat menivät vartion läpi. Linssin oma kehysväli ei huonontunut —
+Savuke ei avaa linssiä lainkaan (se panoroi Ateenan yllä, eikä
+`js/aikajana.js` — ja siten `js/aikajana-vanat.js` — edes lataudu:
+js/ui.js tuo moottorin dynaamisesti vasta linssistä), joten sen
+ennen/jälkeen mittaa samaa koodipolkua. Ero on kontin kohinaa: neljästä
+ajosta samalla koodilla yksi antoi panoroinnissa 4,3 % (vartio kaatui,
+raja 3 %), muut 2,2 %, 0 % ja 0 %, ja pisin JS-kehys vaihteli 7,7 ms:n
+ja 28,7 ms:n välillä. Linssin oma kehysväli ei huonontunut —
 omistussääntö ei lisää työtä, se vain hylkää fragmentin aiemmin.
 
 Portit jälkeen: `node --test tests/*.test.mjs` 2 192 läpi / 0 kaatunutta
