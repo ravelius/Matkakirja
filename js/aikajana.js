@@ -794,6 +794,38 @@ const PANEELIN_HAIVYTYS_MS = 700;
  * yhdestä paikasta, eikä kesken jäänyt häivytys voi jäädä päälle.
  */
 export const PANEELIN_ENNAKKOHAIVYTYS_MS = 600;
+/*
+ * ── LAPPU VÄISTYY KARTAN KOSKETUKSESTA ─────────────────────────────
+ *
+ * Omistaja 7.9.2026 ilta (Ihmisen matkan "Matka päättyy" -kortti),
+ * sanatarkasti: *"Tuo lappu saisi hävitä, kun pelaaja alkaa tutkimaan
+ * karttaa, tai se saisi vain rullautua ylös piiloon ja otetaan pois
+ * tuo suljen nappi siitä ja siirretään se kartan oikeaan yläkulmaan,
+ * mistä tämän linssin voi sitten sulkea milloin vain."*
+ *
+ * Kolme päätöstä, jotka tämä tiedosto toteuttaa:
+ *   1. LAPPU RULLAUTUU YLÖS, EI KATOA. Yksikin kosketus karttaan
+ *      (pallon pointerdown, veto tai rullan zoomi) kääntää paneelin
+ *      luokkaan `piilossa`: se kutistuu yläreunaansa (transform-origin
+ *      top) ja häipyy 300 ms:ssa. Sama lappu palaa kahvasta.
+ *      Kosketukseksi ei lasketa linssin omia osia — palkki, kahva,
+ *      karuselli ja lappu itse ovat `.aikajana`-juuren sisällä, ja
+ *      niiden tapahtumat ohitetaan (paneelin raahaus ja nipistys
+ *      säilyvät ennallaan).
+ *   2. KAHVA JÄÄ OTSIKKORIVIIN. Nappi kertoo lapun nimen ja ▾-merkin
+ *      ("Matka päättyy ▾"); se on olemassa vain lapun ollessa
+ *      piilossa. Sama koskee KAIKKIA linssin lappuja — loppusanoja ja
+ *      matkan varren kortteja — koska ne ovat sama paneeli.
+ *   3. SULJE-NAPPI POIS LAPUSTA. Linssin sulkeva ✕ on kartan oikeassa
+ *      yläkulmassa koko ajon (`.aikajana-sulje`), ei enää otsikko-
+ *      rivissä; loppusanoihin jää pelkkä "Katso löydöt".
+ *
+ * Kesto (300 ms molempiin suuntiin) asuu KOKONAAN css:ssä
+ * (`--aikajana-lappu-kesto`), koska js ei odota liukua eikä ajasta
+ * mitään sen mukaan — luokka vaihdetaan, selain hoitaa loput.
+ * Prefers-reduced-motionissa liuku on pois (Raamattu: kaikki liike
+ * animoidaan pehmeästi, paitsi kun pelaaja on sen kieltänyt).
+ */
 /** Raahaus alkaa vasta tämän liikkeen jälkeen; sitä lyhyempi on napautus. */
 export const PANEELIN_RAAHAUSKYNNYS = 6;
 /**
@@ -2292,6 +2324,14 @@ class Aikajana {
     /** Lyhtyjen sammutin (js/lyhty.js), kun avauslaatikko on ruudulla. */
     this.sammutaLyhdyt = null;
     /*
+     * LAPUN TILA (ks. LAPPU VÄISTYY KARTAN KOSKETUKSESTA): `lappuPiilossa`
+     * kertoo, onko paneeli rullattu ylös, ja `lapunNimi` sen, mikä lappu
+     * kahvasta palaa ("Matka päättyy", pysäkin otsikko).
+     */
+    this.lappuPiilossa = false;
+    this.lapunNimi = null;
+    this.irrotaKartanKosketus = null;
+    /*
      * VÄLINÄYTÖKSEN TILA. `valinaytos` on laatikon juuri sen ollessa
      * ruudulla, `valinaytosNahty` estää saman hengähdystauon toistumisen
      * samalla ajolla (Alusta nollaa sen).
@@ -2374,13 +2414,42 @@ class Aikajana {
     this.taukoNappi = solmu('button', 'aikajana-nappi', 'Tauko');
     this.taukoNappi.type = 'button';
     this.taukoNappi.addEventListener('click', () => this.taukoTaiJatka());
-    const sulje = solmu('button', 'aikajana-nappi aikajana-sulje', '✕');
-    sulje.type = 'button';
-    sulje.setAttribute('aria-label', 'Sulje');
-    sulje.title = 'Sulje';
-    sulje.addEventListener('click', () => ui.pysaytaAikajana?.());
-    ohjaimet.append(this.taukoNappi, sulje);
+    /*
+     * LAPUN KAHVA (ks. LAPPU VÄISTYY KARTAN KOSKETUKSESTA): näkyy vain
+     * kun lappu on rullattu ylös, ja tuo sen takaisin. Teksti on lapun
+     * oma nimi ja ▾ — "Matka päättyy ▾" — jotta pelaaja tietää, mikä
+     * kartan alta palaa.
+     */
+    this.lappuKahva = solmu('button', 'aikajana-nappi aikajana-kahva');
+    this.lappuKahva.type = 'button';
+    this.lappuKahva.hidden = true;
+    /*
+     * NIMI JA NUOLI OMINA SOLMUINAAN, koska kapea ruutu pudottaa NIMEN
+     * eikä nuolta (css .aikajana-kahva-nimi): 390 px:llä kello vie 170
+     * px ja Jatka 50 px, eikä "Matka päättyy ▾" mahdu niiden viereen
+     * ilman että palkki työntyy kulman ✕:n alle (mitattu 7.9.2026).
+     * Nimi säilyy silloin napin aria-labelissa ja title-vihjeessä.
+     */
+    this.lappuKahvaNimi = solmu('span', 'aikajana-kahva-nimi');
+    const kahvanNuoli = solmu('span', 'aikajana-kahva-nuoli', '▾');
+    kahvanNuoli.setAttribute('aria-hidden', 'true');
+    this.lappuKahva.append(this.lappuKahvaNimi, kahvanNuoli);
+    this.lappuKahva.addEventListener('click', () => this.naytaLappu());
+    ohjaimet.append(this.lappuKahva, this.taukoNappi);
     ylarivi.append(otsikot, this.kello, ohjaimet);
+    /*
+     * SULKEVA ✕ KARTAN OIKEAAN YLÄKULMAAN (omistaja 7.9.2026 ilta).
+     * Nappi on juuren suora lapsi eikä otsikkorivin osa: se pysyy
+     * samassa kulmassa koko ajon riippumatta siitä, mitä palkissa
+     * lukee tai kuinka leveäksi otsikko venyy, ja siitä linssin voi
+     * sulkea milloin vain. Osumapinta on 44 px (kosketusohje), tyyli
+     * sama kuin ennen (`.aikajana-nappi.aikajana-sulje`).
+     */
+    this.suljeNappi = solmu('button', 'aikajana-nappi aikajana-sulje', '✕');
+    this.suljeNappi.type = 'button';
+    this.suljeNappi.setAttribute('aria-label', 'Sulje');
+    this.suljeNappi.title = 'Sulje';
+    this.suljeNappi.addEventListener('click', () => ui.pysaytaAikajana?.());
 
     // 4. Ilmiöpaneeli
     this.paneeli = solmu('div', 'aikajana-ilmio');
@@ -2413,7 +2482,7 @@ class Aikajana {
       this.kortit.push(kortti);
     });
 
-    this.juuri.append(ylarivi, this.paneeli, this.nauha);
+    this.juuri.append(ylarivi, this.suljeNappi, this.paneeli, this.nauha);
     koti.appendChild(this.juuri);
     document.body.classList.add('aikajana-paalla');
 
@@ -2428,6 +2497,7 @@ class Aikajana {
     globalThis.addEventListener?.('resize', this.koonMuutos);
     this.nappainkuuntelija = (e) => this.nappain(e);
     document.addEventListener?.('keydown', this.nappainkuuntelija);
+    this.kytkeKartanKosketus();
 
     // 2. Valot kartalle
     this.rakennaValot();
@@ -3120,6 +3190,77 @@ class Aikajana {
     this.paneeli.classList.add('haipyy');
   }
 
+  /* ---------- lappu ja kartan kosketus (ks. LAPPU VÄISTYY …) ---------- */
+
+  /**
+   * KARTAN KOSKETUS RULLAA LAPUN YLÖS. Kuuntelijat ovat kartta-
+   * ruudussa (`ui.mapPane`) KAAPPAUSVAIHEESSA, koska pallon oma
+   * ohjaus kutsuu `stopPropagation`-metodia vedon alkaessa eikä
+   * kuplivaa tapahtumaa tulisi lainkaan. Kartaksi lasketaan kaikki,
+   * mikä EI ole linssin omaa kalustoa: `.aikajana`-juuren sisältä
+   * tulevat tapahtumat (palkki, kahva, lappu itse, karuselli, avaus-
+   * peite) ohitetaan, jottei lapun raahaus tai kortin napautus
+   * piilottaisi lappua omalla kosketuksellaan.
+   *
+   * `pointerdown` kattaa napautuksen, vedon ja nipistyksen alun;
+   * `wheel` kattaa hiiren rullan zoomin. Kumpikin on passiivinen
+   * tarkkailija: mitään ei estetä eikä kuluteta, pallo saa saman
+   * tapahtuman kuin ennenkin.
+   */
+  kytkeKartanKosketus() {
+    const pane = this.ui.mapPane;
+    if (!pane) return;
+    const kartalla = (e) => {
+      const kohde = e.target;
+      if (!this.juuri?.isConnected) return false;
+      return !(kohde instanceof Node) || !this.juuri.contains(kohde);
+    };
+    this.kartanKosketus = (e) => { if (kartalla(e)) this.piilotaLappu(); };
+    pane.addEventListener('pointerdown', this.kartanKosketus, { capture: true, passive: true });
+    pane.addEventListener('wheel', this.kartanKosketus, { capture: true, passive: true });
+    this.irrotaKartanKosketus = () => {
+      pane.removeEventListener('pointerdown', this.kartanKosketus, { capture: true });
+      pane.removeEventListener('wheel', this.kartanKosketus, { capture: true });
+    };
+  }
+
+  /**
+   * Lappu rullalle: paneeli kutistuu yläreunaansa ja häipyy, ja
+   * otsikkoriviin ilmestyy kahva, josta sen saa takaisin. Tyhjä tai
+   * jo piilossa oleva lappu ei tee mitään — eikä avausjakso, jonka
+   * aikana paneelissa ei ole vielä sisältöä.
+   */
+  piilotaLappu() {
+    if (!this.paneeli || this.paneeli.hidden || this.lappuPiilossa) return;
+    this.lappuPiilossa = true;
+    this.paneeli.classList.add('piilossa');
+    this.paivitaLapunKahva();
+  }
+
+  /** Lappu takaisin kahvasta: rullaus auki ja kahva pois palkista. */
+  naytaLappu() {
+    if (!this.paneeli || !this.lappuPiilossa) return;
+    this.lappuPiilossa = false;
+    this.paneeli.classList.remove('piilossa');
+    this.paivitaLapunKahva();
+  }
+
+  /**
+   * Kahvan teksti ja näkyvyys yhdestä paikasta. Nimi tulee siitä
+   * lapusta, joka paneelissa viimeksi oli (`lapunNimi`): matkan
+   * varrella pysäkin otsikko, lopussa "Matka päättyy". Jos nimeä ei
+   * ole, kahvassa lukee kaaren oma otsikko — kahva ei koskaan jää
+   * tyhjäksi napiksi.
+   */
+  paivitaLapunKahva() {
+    if (!this.lappuKahva) return;
+    const nimi = this.lapunNimi || this.kaari.otsikko || 'Kortti';
+    this.lappuKahvaNimi.textContent = nimi;
+    this.lappuKahva.title = `Näytä ${nimi}`;
+    this.lappuKahva.setAttribute('aria-label', `Näytä ${nimi}`);
+    this.lappuKahva.hidden = !this.lappuPiilossa;
+  }
+
   /**
    * TERÄVÄ TILA KOKO AJON AJAN (omistaja 5.9.2026: *"pidä kokoajan
    * terävä tila päällä"*). Pyyntö menee js/pallo.js:n laatunostolle ja
@@ -3574,6 +3715,11 @@ class Aikajana {
     // Korkeuslukko pois: tyhjä paneeli ei saa jäädä vanhaan mittaansa.
     this.paneelinKorkeusMerkki = (this.paneelinKorkeusMerkki ?? 0) + 1;
     this.paneeli.style.height = '';
+    // Rullattu lappu aukeaa alustuksessa: uusi ajo alkaa puhtaalta.
+    this.lappuPiilossa = false;
+    this.lapunNimi = null;
+    this.paneeli.classList.remove('piilossa');
+    this.paivitaLapunKahva();
     this.juuri.classList.remove('lopussa');
     this.paikkarivi.textContent = this.jakso;
     this.asettele();
@@ -3770,6 +3916,9 @@ class Aikajana {
         vuosi: this.loppu,
         ajoitus: loppu.ajoitus ?? this.jakso,
       });
+      // Loppusanat näytetään aina: jos pelaaja oli rullannut lapun ylös
+      // kesken esityksen, se aukeaa tähän (ks. LAPPU VÄISTYY …).
+      this.naytaLappu();
       /*
        * LOPPUSANAT ÄÄNEEN (Fablen ohje 6.9.2026), jos kaari on ne
        * äänittänyt (`loppupuhe`, js/linssipuhe.js LOPUN_RUNKO).
@@ -3799,10 +3948,11 @@ class Aikajana {
    *
    * Nappirivi tulee vain kaarelle, jonka esitys ohitti löytöpaikkoja:
    * keksinnöillä jokainen pysäkki nähtiin matkalla, eikä loppusanoihin
-   * ilmesty mitään uutta. Napit ovat arkkikirjaston kahta roolia
-   * (Raamattu, "Arkkikirjasto: pop-upien yhteinen kieli"): kullattu
-   * päänappi vie eteenpäin galleriaan, kehystetty paperinappi sulkee
-   * linssin. Galleria on Tiedeliite, joka on jo täsmälleen tämä —
+   * ilmesty mitään uutta. Nappi on arkkikirjaston päärooli (Raamattu,
+   * "Arkkikirjasto: pop-upien yhteinen kieli"): kullattu päänappi vie
+   * eteenpäin galleriaan. SULKEVAA PAPERINAPPIA EI ENÄÄ OLE (omistaja
+   * 7.9.2026 ilta) — linssin sulkee kartan oikean yläkulman ✕, joka on
+   * paikallaan koko ajon. Galleria on Tiedeliite, joka on jo tämä —
    * kortti kerrallaan selattava lehti, jonka sisällys merkitsee
    * esityksessä nähdyt.
    */
@@ -3814,10 +3964,13 @@ class Aikajana {
     const katso = solmu('button', 'aikajana-loppunappi primary', 'Katso löydöt');
     katso.type = 'button';
     katso.addEventListener('click', () => this.avaaLoydot());
-    const sulje = solmu('button', 'aikajana-loppunappi', 'Sulje');
-    sulje.type = 'button';
-    sulje.addEventListener('click', () => this.ui.pysaytaAikajana?.());
-    napit.append(katso, sulje);
+    /*
+     * VAIN YKSI NAPPI (omistaja 7.9.2026 ilta: *"otetaan pois tuo
+     * suljen nappi siitä ja siirretään se kartan oikeaan yläkulmaan"*).
+     * Linssin sulkeva ✕ on nyt kartan kulmassa koko ajon, joten lapussa
+     * on pelkkä eteenpäin vievä päänappi.
+     */
+    napit.append(katso);
     (sivu.querySelector('.aikajana-ilmio-teksti') ?? sivu).appendChild(napit);
   }
 
@@ -4365,6 +4518,14 @@ class Aikajana {
    */
   vaihdaPaneeli(t) {
     const sivu = solmu('div', 'aikajana-ilmio-sivu');
+    /*
+     * KAHVA TIETÄÄ, MIKÄ LAPPU ON PIILOSSA. Nimi päivittyy jokaisen
+     * sivun myötä myös rullattuna: pelaaja voi tutkia karttaa koko
+     * esityksen ajan, ja palkin kahva kertoo silti, mikä kortti kartan
+     * takana odottaa (ks. LAPPU VÄISTYY KARTAN KOSKETUKSESTA).
+     */
+    this.lapunNimi = t.otsikko ?? t.henkilo ?? this.lapunNimi;
+    this.paivitaLapunKahva();
     /*
      * PELKKÄ KUVA (omistaja 3.9.2026: *"havainnekuvan alta voisi poistaa
      * kaiken ja jättää pelkän kuvan"*). Otsikko, keksijä ja selite ovat
@@ -4940,6 +5101,9 @@ class Aikajana {
     this.koonMuutos = null;
     if (this.nappainkuuntelija) document.removeEventListener?.('keydown', this.nappainkuuntelija);
     this.nappainkuuntelija = null;
+    this.irrotaKartanKosketus?.();
+    this.irrotaKartanKosketus = null;
+    this.kartanKosketus = null;
     this.juuri?.remove();
     this.valokerros?.remove();
     /*

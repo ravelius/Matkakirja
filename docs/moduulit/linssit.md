@@ -1510,3 +1510,71 @@ Nyt lukemat ovat 3 px:n päässä keskimäärin ~50/255 ja 24 px:n päässä
 mittaus osoitti, ettei tasavälistä sahalaitaa erota pikselitasolla, kun
 poikkeama on kummassakin noin 14 px — muodon alkuperää vartioi sen
 sijaan maskikuvan sisältö (kaksi turbulenssia ja pehmennys).
+
+## Lappu väistyy kartan kosketuksesta (omistaja 7.9.2026 ilta, v1672)
+
+Omistaja 7.9.2026 ilta (Ihmisen matkan "Matka päättyy" -kortti,
+sanatarkasti): *"Tuo lappu saisi hävitä, kun pelaaja alkaa tutkimaan
+karttaa, tai se saisi vain rullautua ylös piiloon ja otetaan pois tuo
+suljen nappi siitä ja siirretään se kartan oikeaan yläkulmaan, mistä
+tämän linssin voi sitten sulkea milloin vain."*
+
+Kolme muutosta, kaikki aikajanamoottorissa (js/aikajana.js,
+css/aikajana.css) ja siksi voimassa JOKAISESSA aikajanalinssissä —
+Ihmisen matkan loppulapussa, sen matkan varren korteissa ja
+keksintölinssin havainnekuvissa, koska ne ovat sama paneeli
+(`.aikajana-ilmio`).
+
+- **Lappu rullautuu ylös piiloon.** `kytkeKartanKosketus` kuuntelee
+  kartta-alueen (`ui.mapPane`) `pointerdown`- ja `wheel`-tapahtumia
+  **kaappausvaiheessa ja passiivisina**: pallon oma ohjaus kuluttaa
+  vedon alun, joten kuplivaa tapahtumaa ei tulisi lainkaan, eikä
+  tarkkailija saa estää tai kuluttaa mitään. Kartaksi lasketaan kaikki,
+  mikä ei ole `.aikajana`-juuren sisällä, joten lapun oma raahaus ja
+  nipistys, karusellin kortit ja palkin napit eivät piilota lappua.
+  Piilotus on luokka `piilossa`, joka kutistaa paneelin `scaleY(0.02)`
+  yläreunansa ympäri ja häivyttää sen 300 ms:ssa
+  (`--aikajana-lappu-kesto`; prefers-reduced-motionissa 0,01 s).
+  KORKEUTTA EI KOSKETA: `height` on js:n hallussa (vaihdaPaneeli
+  lukitsee sen ristihäivytyksen ajaksi), ja `max-height`-liuku olisi
+  taistellut samasta arvosta. Pelaajan raahaama siirto
+  (`--aikajana-paneeli-dx/-dy`) kirjoitetaan piilotusluokkaan uudestaan,
+  joten lappu rullautuu siitä kohtaa, johon se jätettiin.
+- **Kahva jää otsikkoriviin.** `.aikajana-kahva` on olemassa vain lapun
+  ollessa piilossa, ja siinä lukee lapun nimi ja ▾ ("Matka päättyy ▾").
+  Nimi ja nuoli ovat omat solmunsa, koska kapealla ruudulla nimi jää
+  pois ja jäljelle jää ▾ (nimi on `aria-label`- ja `title`-tiedossa).
+  Nimi (`lapunNimi`) päivittyy jokaisen paneelisivun myötä myös
+  rullattuna, joten pelaaja näkee palkista, mikä kortti kartan takana
+  odottaa. Napautus (`naytaLappu`) avaa lapun samalla liu'ulla.
+  Loppusanat avaavat lapun aina (`lopeta`), ja Alusta nollaa tilan.
+- **Sulje-nappi pois lapusta, ✕ kartan oikeaan yläkulmaan.**
+  `lisaaLoppunapit` tekee enää yhden napin ("Katso löydöt").
+  Sulkeva ✕ (`.aikajana-sulje`) on nyt linssin juuren suora lapsi
+  eikä otsikkorivin ohjain: `position: absolute; top: 0.6rem; right:
+  1.25rem`, osumapinta 44 × 44 px, tyyli entinen. Tauko/Jatka jää
+  palkkiin. Kartta-alueen oikeassa yläkulmassa ei ole linssin aikana
+  muuta näkyvää eikä painettavaa: karttaselitteen nappi on siellä,
+  mutta linssin ajan `opacity: 0; pointer-events: none`
+  (css/styles.css `body.aikajana-paalla`), ja maakyltti elää vain
+  maaselaimessa (js/ui.js `paivitaMaaPilleri`). Savuke mittaa
+  päällekkäisyyden joka ajolla ja ohittaa vain näkymättömät.
+- **Kapea ruutu (alle 600 px).** Kulma varataan napille: palkin
+  keskitys lasketaan ✕:n vasemmalle puolelle jäävästä tilasta
+  (`left: calc(50% - 1.8rem)`, `max-width: calc(100% - 4.8rem)`).
+  Pelkkä `max-width` ei riitä, koska flex-kohde ei kutistu
+  sisältömittansa alle: kahva sai `min-width: 0` (mitattu savukkeella
+  390 px:llä — ilman sitä "Matka päättyy ▾" työnsi palkin ✕:n päälle),
+  ja kahvan ajaksi paikkarivi väistyy
+  (`.aikajana-ylarivi:has(.aikajana-kahva:not([hidden]))`).
+
+**Vartijat.** `tests/aikajana.test.mjs` ("lappu rullautuu ylös kartan
+kosketuksesta ja palaa otsikkorivin kahvasta": kuuntelijat kaappaus-
+vaiheessa, purku irrottaa ne, luokat, kahvan teksti, ✕:n paikka ja
+44 px) ja uusi selainsavuke
+`tools/savukkeet/savuke-linssin-lappu.mjs` (Ihmisen matka loppuun asti
+kahdessa näkymässä, 834 × 1100 ja 390 × 844: loppulappu näkyviin →
+pallon veto piilottaa → kahva palauttaa → rulla piilottaa → ✕ kulmassa
+ilman päällekkäisyyttä sulkee linssin). `savuke-aikajana --linssi
+ihmisen-matka` päivitettiin samalla: nappirivillä on vain "Katso
+löydöt", ja linssi suljetaan kulman ✕:stä.

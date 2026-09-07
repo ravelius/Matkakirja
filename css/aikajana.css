@@ -51,6 +51,10 @@
    * 76 %, joten kortti lähtee liikkeelle näkyvästi ja pysähtyy pehmeästi.
    */
   --aikajana-kesto: 0.6s;
+  /* Lapun rullaus ylös piiloon ja takaisin (ks. LAPPU RULLAUTUU YLÖS
+     PIILOON) — lyhyempi kuin kuvien ristihäivytys: väistyminen ei saa
+     jäädä kartan ja pelaajan väliin. */
+  --aikajana-lappu-kesto: 300ms;
   --aikajana-kaari: cubic-bezier(0.45, 0.03, 0.22, 1);
   --aikajana-kortti-w: clamp(84px, 13vw, 132px);
 }
@@ -831,7 +835,12 @@
  * palkin sisältökorkeuteen (`align-self: stretch` kumoaa ylärivin
  * `align-items: center` -keskityksen) ja napit sen sisällä.
  */
-.aikajana-ohjaimet { display: flex; align-self: stretch; align-items: stretch; gap: 0.3rem; }
+/*
+ * `min-width: 0` on turvaverkko kapealle ruudulle: ilman sitä ohjainrivi
+ * ei kutistu sisältönsä alle, ja lapun kahva työnsi 390 px:llä Jatka-napin
+ * kulman ✕:n alle vaikka palkilla oli max-width (mitattu 7.9.2026).
+ */
+.aikajana-ohjaimet { display: flex; align-self: stretch; align-items: stretch; gap: 0.3rem; min-width: 0; }
 .aikajana-nappi {
   font-family: var(--font-type);
   font-size: 0.74rem;
@@ -846,7 +855,67 @@
 }
 .aikajana-nappi:hover { background: rgba(217, 161, 59, 0.22); }
 .aikajana-nappi:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.aikajana-sulje { border-style: dashed; padding-inline: 0.55rem; font-size: 0.9em; line-height: 1; }
+/*
+ * SULKEVA ✕ KARTAN OIKEASSA YLÄKULMASSA (omistaja 7.9.2026 ilta,
+ * sanatarkasti: *"otetaan pois tuo suljen nappi siitä ja siirretään se
+ * kartan oikeaan yläkulmaan, mistä tämän linssin voi sitten sulkea
+ * milloin vain"*). Nappi ei ole enää otsikkorivin osa vaan linssin
+ * juuren (`.aikajana`, inset 0 kartta-alueessa) suora lapsi, joten se
+ * pysyy samassa kulmassa vaikka palkki venyisi tai kutistuisi.
+ *
+ * PAIKKA: sama pystyvara kuin ylärivillä (0,6rem) ja sama sivuvara
+ * kuin palkin vasemmalla laidalla (1,25rem) — kulma näyttää samalta
+ * kuin vastakkainen. Kartta-alueen oikeassa yläkulmassa ei ole muuta
+ * linssin aikana (maakyltti elää vain maaselaimessa, js/ui.js
+ * paivitaMaaPilleri; pöllö on alanurkassa), joten mikään ei mene
+ * päällekkäin — tarkistettu kuvakaappauksella 390 × 844 ja 834 × 1100.
+ *
+ * KOSKETUSALA 44 px molempiin suuntiin (talon kosketusohje). Merkki
+ * pysyy pienenä, ala kasvaa napin omilla mitoilla; tyyli (katkoviiva-
+ * reunus, kullan sävy) on entinen.
+ */
+.aikajana-sulje {
+  position: absolute;
+  top: 0.6rem;
+  right: 1.25rem;
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border-style: dashed;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+/*
+ * LAPUN KAHVA otsikkorivissä (ks. js/aikajana.js LAPPU VÄISTYY KARTAN
+ * KOSKETUKSESTA): näkyy vain kun lappu on rullattu ylös. Nimi voi olla
+ * pitkä ("Wairau Bar, Uusi-Seelanti"), joten se katkaistaan kolmeen
+ * pisteeseen eikä palkki veny sen takia; kapealla ruudulla nimi jää
+ * kokonaan pois ja jäljelle jää ▾ (nimi on aria-labelissa).
+ */
+.aikajana-kahva {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  max-width: 11rem;
+  /*
+   * KAHVA ANTAA PERIKSI ENNEN KUIN PALKKI VUOTAA KULMAN NAPIN ALLE.
+   * Flex-kohde ei kutistu sisältönsä alle ilman `min-width: 0`, ja
+   * nowrap-teksti tekee sisältömitasta koko nimen levyisen: ilman tätä
+   * "Matka päättyy ▾" työnsi 390 px:n palkin ✕:n päälle, vaikka
+   * palkilla oli max-width (mitattu savukkeella 7.9.2026).
+   */
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.aikajana-kahva[hidden] { display: none; }
+.aikajana-kahva-nimi { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.aikajana-kahva-nuoli { flex: 0 0 auto; }
 
 /* ==================== ILMIÖPANEELI ==================== */
 
@@ -863,6 +932,9 @@
   right: 0.6rem;
   /* Raahattu siirto (js kytkeRaahaus); kahvana koko paneeli. */
   transform: translate(var(--aikajana-paneeli-dx, 0px), var(--aikajana-paneeli-dy, 0px));
+  /* Yläreuna on kiintopiste: rullaus ylös piiloon kutistuu siihen
+     (ks. LAPPU RULLAUTUU YLÖS PIILOON) myös auettuaan takaisin. */
+  transform-origin: top center;
   cursor: grab;
   touch-action: none;
   user-select: none;
@@ -915,9 +987,48 @@
   transition:
     height var(--aikajana-kesto) var(--aikajana-kaari),
     width 180ms var(--aikajana-kaari),
+    transform var(--aikajana-lappu-kesto, 300ms) var(--aikajana-kaari),
+    visibility 0s,
     opacity var(--aikajana-ennakkohaivytys, 600ms) ease;
 }
 .aikajana-ilmio.raahataan, .aikajana-ilmio.nipistetaan { transition: none; }
+/*
+ * ── LAPPU RULLAUTUU YLÖS PIILOON ───────────────────────────────────
+ *
+ * Omistaja 7.9.2026 ilta, sanatarkasti: *"Tuo lappu saisi hävitä, kun
+ * pelaaja alkaa tutkimaan karttaa, tai se saisi vain rullautua ylös
+ * piiloon"*. Luokan panee js/aikajana.js (piilotaLappu) kartan
+ * ensimmäisestä kosketuksesta — pallon pointerdown, veto tai rullan
+ * zoomi — ja poistaa otsikkorivin kahva (naytaLappu).
+ *
+ * KUTISTUS EIKÄ KORKEUSLIUKU: paneelin `height` on js:n hallussa
+ * (vaihdaPaneeli lukitsee sen ristihäivytyksen ajaksi), joten
+ * `max-height`-liuku olisi taistellut samasta arvosta. `scaleY`
+ * yläreunan ympäri kääntää lapun rullalle otsikkorivin alle
+ * koskematta korkeuslukkoon, ja koska paneeli on `position: absolute`,
+ * kutistunut laatikko ei jätä ruutuun rakoa.
+ *
+ * SIIRTO SÄILYY: pelaajan raahaama paikka on samassa transformissa
+ * (--aikajana-paneeli-dx/-dy), joten se kirjoitetaan tähän uudestaan —
+ * lappu rullautuu siitä kohtaa, johon pelaaja sen jätti.
+ *
+ * `visibility: hidden` vasta liu'un jälkeen: piilossa oleva lappu ei
+ * ota kosketuksia eikä sen napit ("Katso löydöt") ole sarkaimella
+ * saavutettavissa, mutta liuku ehtii näkyä kokonaan.
+ */
+.aikajana-ilmio.piilossa {
+  transform:
+    translate(var(--aikajana-paneeli-dx, 0px), var(--aikajana-paneeli-dy, 0px))
+    scaleY(0.02);
+  transform-origin: top center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    transform var(--aikajana-lappu-kesto, 300ms) var(--aikajana-kaari),
+    opacity calc(var(--aikajana-lappu-kesto, 300ms) * 0.75) ease,
+    visibility 0s linear var(--aikajana-lappu-kesto, 300ms);
+}
 /*
  * HAVAINNEKUVA HÄIPYY, KUN KARTAN ANIMAATIO ALKAA (omistaja 5.9.2026
  * klo 00.45, sanatarkasti: *"havainnekuvan pitää häipyä kun kartan
@@ -1564,13 +1675,38 @@
      ennen (omistaja 5.9.2026: vasen laita on työpöydän asia).
      Mitattu 390 x 844: vasempaan laitaan siirretty palkki työntyisi
      oikeasta reunasta yli. */
+  /*
+   * KULMA VARATAAN ✕:LLE (omistaja 7.9.2026 ilta). Palkki pysyy
+   * keskellä kuten ennen, mutta keskitys lasketaan siitä tilasta, joka
+   * jää sulkevan napin VASEMMALLE puolelle: ilman tätä 390 px:n
+   * ruudulla lähes ruudunlevyinen palkki työntyisi kulman napin alle.
+   * Varaus on 4,8rem = napin 44 px + reunavarat kummallakin puolella.
+   */
   .aikajana-ylarivi {
     gap: 0.4rem;
     padding: 0.15rem 0.4rem;
-    left: 50%;
+    left: calc(50% - 1.8rem);
     transform: translateX(-50%);
-    max-width: calc(100% - 1.2rem);
+    max-width: calc(100% - 4.8rem);
   }
+  .aikajana-sulje { right: 0.6rem; }
+  /*
+   * KAPEALLA RUUDULLA KAHVA ON PELKKÄ ▾. Mitattu 390 × 844: kello vie
+   * 170 px ja Jatka 50 px, joten nimelle jäisi noin 60 px eli "Mat…▾"
+   * — luettavaa siitä ei tule, mutta se työntäisi palkin kulman ✕:n
+   * alle. Nimi jää `aria-label`- ja `title`-tietoon, ja pelaaja tietää
+   * muutenkin, minkä lapun hän juuri työnsi syrjään.
+   */
+  .aikajana-kahva { max-width: none; min-width: 2.6rem; justify-content: center; }
+  .aikajana-kahva-nimi { display: none; }
+  /*
+   * KAHVAN AJAN PALKISSA ON VAIN OLENNAINEN. Kun lappu on rullattu
+   * ylös, kapean ruudun palkkiin tulee kolmas kohde (kahva) eikä
+   * kello, Loppu ja kahva mahdu kelloriville yhdessä paikkarivin
+   * kanssa — paikkarivi kutistui muutenkin muotoon "300 00…". Se
+   * väistyy kahvan ajaksi ja palaa heti kun lappu on taas esillä.
+   */
+  .aikajana-ylarivi:has(.aikajana-kahva:not([hidden])) .aikajana-otsikot { display: none; }
   .aikajana-otsikko { display: none; }
   .aikajana-paikka { max-width: 7rem; font-size: 0.78rem; }
   /* Puhelin pystyssä: paneeli reunasta reunaan (omistaja 4.9.2026). */
@@ -1596,7 +1732,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .aikajana { --aikajana-kesto: 0.01s; }
+  /* Lapun rullaus ylös ja takaisin ilman liukua (ks. LAPPU RULLAUTUU
+     YLÖS PIILOON): lappu vaihtaa tilaa kerralla. */
+  .aikajana { --aikajana-kesto: 0.01s; --aikajana-lappu-kesto: 0.01s; }
   /* Rullaus vaihtaa merkin ilman liikettä (rullaaVuosi: heti). */
   .vuosi-merkki, .aikajana-valo-sisus, .aikajana-tummennus-pinta, .aikajana-reika, .aikajana-valo-kajo, .aikajana-vinjetti { transition: none; }
   /* Värivirtojen kuvakehys poksahtaa ilman liikettä (js/aikajana-virrat.js). */
