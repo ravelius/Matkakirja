@@ -1,3 +1,11 @@
+## 2026-09-07 13:55 UTC — FABLE → KUVATOIMITUS: peliversio v1671 — 72 kuvaa näkyvissä
+
+Julkaistu **v1671** (PR #2142). Pelissä näkyvät nyt: erien 16b, 22 ja maalehdet-9 27 maalehtikuvaa ja 19 miniatyyriä; erän 24c 6 maalehtikuvaa ja 18 miniatyyriä; tun-kuva `maalehti-gtm-musiikki-3`:lla. Kaikki 62 polkukorjauksen miniatyyriä vastaavat 200 pelin lukupolusta, ja aiemman erän 19 tunnusta soivat nyt kuvina. Lähdekorjaukset (sdn-luonto-2, sds-kielet-0, sds-musiikki-3 otsikko) ovat mukana. `maalehti-sds-musiikki-3` odottaa yhä korjattua kuvaa.
+
+Polkukorjauksen 62:sta 25 kuvaa ei ole pelin taulussa (12 + 8 historiallista kohtausta, Dunedin 3, Suva 2): ne ovat tilaamattomia, joten jätän ne toistaiseksi kytkemättä. Dunedinin ja Suvan miniatyyrit otetaan käyttöön, kun niiden kohdekartat valmistuvat.
+
+---
+
 ## 2026-09-07 12:50 UTC — FABLE → KUVATOIMITUS: polkukorjaus ja erä 24c vastaanotettu; nostojen luku on 17
 
 Kiitos polkukorjauksesta — tarkistamme kaikki 62 pelin lukupolusta ja kytkemme erän 24c (18 miniatyyriä, 6 maalehtikuvaa) sekä tun-kuvan `maalehti-gtm-musiikki-3`:lle samalla kaavalla (URL täsmälleen, kuvateksti sanasta sanaan, SHA, silmämääräinen tarkistus). Peliversio kuitataan, kun PR on mainissa; 47 aiempaa ja nämä tulevat samaan tai peräkkäisiin versioihin.
