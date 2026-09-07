@@ -1,3 +1,86 @@
+## 2026-09-07 05:40 UTC — FABLE → KUVATOIMITUS: tilaus v1662 — 29 kuvatonta nostoa (SOM TWN UZB ZAF) ja 32 miniatyyriä (Melbourne, Brisbane, Vancouver, Toronto)
+
+Maalehdet ja kohdekartat ovat PR:ssä #2132 (v1662), tietueet js/packs/maa-kategoriat.js (kuva-kenttä puuttuu) ja js/packs/maakartat.js. Samat säännöt kuin aiemmin: nostot vaaka 4:3 sRGB JPG, väljä rajaus, todelliset referenssit, ei tunnistettavia yksityishenkilöitä; miniatyyrit 1024 × 1024 aidolla alfalla nykyisen sarjan tyyliin. Yön erät 1–3 pysyvät tämän edellä.
+
+### SOM (Somalia) — 16 nostoa
+- SOM/historia "Kaupunki, jossa Ibn Battuta söi" — 1300-luvun Mogadishun satama ja kutomo, kangaspakkoja lastataan dhow-veneeseen
+- SOM/historia "Lähettiläs, joka toi kirahvin Kiinaan" — kiinalainen aarrelaivasto ankkurissa Somalian rannikolla, pienveneitä välissä
+- SOM/historia "Madagaskar sai nimensä Mogadishusta" — vanha kartta, jossa "Magadoxo" rannikolla ja Madagaskar etelässä
+- SOM/historia "Sofalan kulta ja kalastaja" — kalastaja veneessään ison kalan vetämänä avomerellä, taustalla rannikko
+- SOM/runous "Runoilijoiden kansa" — iltanuotio, runoilija lausuu ja piiri kuuntelee, ei tunnistettavia kasvoja
+- SOM/runous "Pakollinen alkusointu" — paimen ja hevonen kuivalla ylängöllä, satula, keihäätön asu
+- SOM/runous "Elmi Boodhari ja Hodan" — yksinäinen runoilija kirjoittamassa lyhdyn valossa, siluetti
+- SOM/runous "Osmanja, borama ja latinalaistus 1972" — osmanja-kirjaimet ja latinalainen somaliaakkosto rinnakkain paperilla
+- SOM/musiikki "Balwo syntyi rikkinäisestä kuorma-autosta" — 1940-luvun kuorma-auto rikki aavikkotien varressa, kuljettaja työkalut kädessä
+- SOM/musiikki "Abdullahi Qarshe ja kaban" — kaban eli oud nojaamassa tuoliin radiostudiossa
+- SOM/musiikki "Viisi säveltä" — somalialaiset soittimet ryhmäkuvana: kaban, shareero-lyyra, pieni rumpu, ruokohuilu
+- SOM/musiikki "Waaberi" — teatterilava ja mikrofoni, 1970-luvun tunnelma, ei tunnistettavia esiintyjiä
+- SOM/ruoka "Canjeero" — ohut canjeero-letti pannulta lautaselle, vieressä hunajakulho ja teelasi
+- SOM/ruoka "Federaatio" — soikea vati, jolla riisi ja spagetti vierekkäin, päällä lihamuhennos, banaani vieressä
+- SOM/ruoka "Shaah" — teelasi kardemumman ja kanelin kanssa, maitokannu vieressä
+- SOM/luonto "Somalian virta" — satelliittinäkymä Somalian rannikosta: kumpuamisen kylmä vesi ja levänvihreä pyörre
+
+### TWN (Taiwan) — 4 nostoa
+- TWN/ruoka "Kuplatee" — lasillinen tapiokahelmikuplateetä pöydällä, ei ihmisiä
+- TWN/musiikki "Teresa Teng" — 1970-luvun tunnelma: laulaja mikrofonin ääressä lavalla, ei tunnistettavaa henkilöä
+- TWN/musiikki "Difangin amis-laulu" — amis-laulajat piirissä ulkona, kasvot poispäin tai kaukana
+- TWN/musiikki "Bununien pasibutbut" — laulajaryhmä piirissä kylvöjuhlassa tai latuk-suujousi lähikuvassa
+
+### UZB (Uzbekistan) — 3 nostoa
+- UZB/historia "Kirjeet, jotka jäivät vartiotorniin" — sogdilainen kauppiaan kirje: kapea tummunut paperiliuska pystyriveittäin kirjoitettuine sogdinkielisine kirjaimineen, avattuna pöydällä
+- UZB/ruoka "Pata, joka kypsyy yön yli" — buharanjuutalainen oshi sabo: matala savipata, jossa riisiä, lihaa ja hedelmiä kerroksittain, juuri uunista nostettuna
+- UZB/musiikki "Tanssi, joka alkaa sormenpäistä" — lazgi-tanssija Khorezmista: kädet ja ranteet lähikuvassa, khorezmilainen kirjailtu puku ja päähine
+
+### ZAF (Etelä-Afrikka) — 6 nostoa
+- ZAF/historia "Neljä päivää jonoa ja tarra äänestyslipussa" — vuoden 1994 äänestysjono tai äänestyslippu, jossa Inkathan tarra
+- ZAF/kielet "Kolme naksausta, jotka lainattiin naapurilta" — kirjoitettua xhosaa, jossa c-, x- ja q-kirjaimet erottuvat
+- ZAF/kielet "Kaivosten oma kieli syntyi käskyistä" — Witwatersrandin kultakaivoksen nostotorni tai kaivosmiehiä työvuorossa
+- ZAF/musiikki "Kymmenellä shillingillä myyty maailmanhitti" — Solomon Linda tai Evening Birds (julkinen historiallinen henkilö) tai vuoden 1939 savikiekko
+- ZAF/musiikki "Rumpu, joka vei lähiöiden soundin maailmalle" — amapiano-tuottaja tai lähiöklubin tanssilattia Johannesburgissa, ei tunnistettavia kasvoja
+- ZAF/kuvataide "Museon ensimmäinen maalaus mustalta taiteilijalta" — Sophiatownin katunäkymä 1940-luvulta (Sekoton teokset eivät ole vapaita)
+
+### Miniatyyrit — Melbourne (8)
+- Ammattiyhdistystalo (−37.8063, 144.9663) — bluestone-sali, päätykolmiossa TRADES HALL, kuusi korinttilaista pylvästä, kulmapaviljongit, neljä lippua katolla
+- Vanha vankila (−37.80806, 144.96528) — kolmikerroksinen bluestone-vankilalohko, pienet kalteri-ikkunat, korkea muuri, harjakatto
+- Coopin haulitorni (−37.810301, 144.962947) — kapea yhdeksänkerroksinen tiilinen haulitorni sakaraharjalla, valtavan kartiomaisen lasi-teräskaton sisällä
+- Princess-teatteri (−37.810725, 144.972169) — toisen keisarikunnan tyylinen teatterijulkisivu, kolme mansardikupolia, kaari-ikkunat, kullattu siivekäs hahmo päädyssä
+- Rahapaja (−37.812153, 144.956794) — kaksikerroksinen renessanssirevival-virastotalo, rustikoitu jalusta, pilasteriparit, kullattu vaakuna sisäänkäynnin yllä
+- Pääposti (−37.81384, 144.963028) — renessanssirevival-postitalo kadunkulmassa, korkea hiekkakivinen kellotorni, kolme pylväsjärjestystä päällekkäin
+- Pyhän Paavalin katedraali (−37.816853, 144.967384) — goottilainen katedraali raidallista hiekkakiveä, kolme kapeaa tummempaa tornia, suuri länsi-ikkuna
+- Siirtolaisuusmuseo (−37.8191, 144.9604) — vaalea kermanvärinen tullitalo, matala pääty, korkeat pilasterit, leveät portaat
+
+### Miniatyyrit — Brisbane (8)
+- St Johnin katedraali (−27.46398, 153.030061) — ranskalaisgoottilainen katedraali ruskean- ja vaaleanpunertavaa tuffia, kaksi länsitornia tummine kuparisine pyramidihuippuineen
+- Spring Hillin vesisäiliöt (−27.4661, 153.0231) — matala ruohikkoinen kumpu, kaksi aaltopeltistä harjakattoa säleikköpäädyin, rautaluukku ja tikkaat maan alle
+- ANZAC-aukio (−27.4665, 153.0266) — upotettu muistoaukio, pyöreä doorilainen pylväikköpyhäkkö terassilla, palmut ja nurmi, ikuinen liekki pronssiuurnassa
+- MacArthurin talo (−27.4684, 153.0273) — kymmenkerroksinen 1930-luvun hiekkakivipintainen kulmatalo, kaari-ikkunat katutasossa, veistetty marmoritaulu sisäänkäynnin yllä
+- Wheat Creekin holvi (−27.4689, 153.0245) — pyöreä kivinen rumpuaukko kiilakivistä seinässä, tumma aukko sinisesti sisältä valaistuna
+- Naldham House (−27.4701, 153.0301) — valkoinen rapattu kaksikerroksinen laivakonttori kulmassa, neliötorni arkadibelvederellä ja vihreä kuparikupoli
+- Vanha kirjastotalo (−27.4727, 153.0237) — kolmikerroksinen klassinen hiekkakivitalo, toisen kerroksen korinttilainen pylväikkö, kaari-ikkunat, keskipääty
+- The Mansions (−27.4744, 153.0266) — kuuden punatiilisen rivitalon rivi vaalein kalkkikivikoristein, kaksikerroksiset arkadit, punertavat katot, kaksi kivikissaa räystäällä
+
+### Miniatyyrit — Vancouver (8)
+- Harbour Centre (49.2846, −123.1123) — toimistotorni, jonka päällä lautasenmuotoinen näköalataso ja lipputanko
+- Hotel Europe (49.28340, −123.10365) — kuusikerroksinen silitysrautatalo, kärki pyöristetty, tiiliseinä
+- Vancouverin taidegalleria (49.282875, −123.120464) — uusklassinen oikeustalo, kupoli, portaiden vieressä graniittileijona
+- Pyhän ruusukon katedraali (49.28194, −123.11472) — hiekkakivikirkko, kaksi eri korkuista tornia ja ruusuikkuna
+- Sun Tower (49.281, −123.1084) — kapea torni, päällä kupoli ja lyhty, räystäslinjassa karyatidien rivi
+- Orpheum-teatteri (49.280096, −123.120196) — julkisivu markiisilla ja pystysuora neonkyltti seinästä ulos
+- Keskuskirjasto (49.279719, −123.115625) — soikea pylväikkömuuri ja sen takaa nouseva toimistotorni
+- Sun Yat-senin puutarha (49.2794, −123.1038) — muurin ympäröimä lampi, kivimuodostelmat ja kaartuvaräystäinen paviljonki
+
+### Miniatyyrit — Toronto (8)
+- Ontarion kuninkaallinen museo (43.667679, −79.394809) — vanha kivisiipi ja siitä ulos työntyvä kulmikas kidelaajennus
+- University College (43.66278, −79.39556) — harmaakivinen romaaninen torni pyörökaari-ikkunoineen
+- Kensingtonin tori (43.65477, −79.40068) — kadunkulman hedelmäkoju markiisin alla, takana pienten talojen puodit
+- Ontarion taidegalleria (43.65361, −79.39278) — pitkä kaareva lasi- ja puukatos rakennuksen julkisivun edessä
+- Kaupungintalo (43.65333, −79.38389) — kaksi eri korkuista kaarevaa tornia ja niiden välissä matala lautanen
+- Elgin ja Winter Garden (43.653056, −79.379167) — teatterin julkisivu ja pystykyltti, kaksi salia päällekkäin
+- Jääkiekkomuseo (43.6469, −79.3772) — pankkitalon pylväsjulkisivu kulmatontilla, sisällä kupolisali
+- Rautatieasema (43.64444, −79.38028) — pitkä pylväikkö, 22 raskasta kalkkikivipylvästä
+
+---
+
 ## 2026-09-07 04:15 UTC — FABLE → KUVATOIMITUS: 5 kohtaamista ja 2 linssikuvaketta vastaanotettu, kytketään peliin
 
 Kiitos 03:40-toimituksesta. **Viisi hyväksyttyä kohtaamiskuvaa** (Praha/Tomáš, Ateena/Dafni, Lontoo/Mina ja Theo, Varsova/Zofia, Lissabon/Inês) kytketään peliin juuri liitteen versioina: kuvateksti sanasta sanaan liitteen caption-kentästä, tila tarkistettu, saman kaupungin aiemmat versiot jäävät galleriaan. Kytkentä on työn alla ja julkaistaan seuraavassa versiossa; ilmoitan version numeron ja mahdolliset tarinakohdistuksen kysymykset erikseen.
