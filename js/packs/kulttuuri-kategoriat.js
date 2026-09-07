@@ -81189,6 +81189,868 @@ export const KULTTUURI_KATEGORIAT = {
     },
   ],
   /*
+   * DILI (Opus 7.9.2026) — Oseanian laudan kaupunkilehti, maa TLS.
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-dili.md ja sen
+   * tarkistus tarkistus-dili.md (tuomio "kelpaa korjausten jälkeen").
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026:
+   * "Dili", "Casa Europa", "Government Palace, Dili", "Port of Dili",
+   * "Tetun language", "Battle of Timor", "Motael Church", "Immaculate
+   * Conception Cathedral, Dili", "Municipal Market of Dili", "Banco
+   * Nacional Ultramarino building, Dili", "National Archives of
+   * Timor-Leste".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei uusia kysymyksiä.
+   * Saapumisteksti (oceania-saapumiset.js) ja valokuvataulu
+   * (oceania-valokuvat.js) olivat jo olemassa eikä niihin koskettu.
+   *
+   * SIVUJA ON KAKSI kuten Cairnsissa (kaupunki + teemasivu).
+   * Teemasivun id on vakioaihe 'luonto': kaupunkisivu on
+   * historiapainotteinen, ja aineisto kantoi toisen teeman, joka
+   * selittää koko kaupungin — Dili on puristettu kapealle
+   * rantatasangolle vuorten ja meren väliin.
+   *
+   * EI NYKYPOLITIIKKAA EIKÄ NYKYVÄKIVALTAA (Fablen linjaus 7.9.2026,
+   * Myanmar-linja). Indonesian miehityksen väkivalta, Santa Cruzin
+   * verilöyly 1991, vuoden 1999 kriisi, vuoden 2006 kriisi, nykyiset
+   * puolueet ja nykyiset johtajat on jätetty kokonaan pois, vaikka
+   * lähdeartikkelit käsittelevät niitä laajasti. Miehitys ja
+   * itsenäistyminen esiintyvät vain päivämäärinä siellä, missä
+   * rakennuksen vaiheet edellyttävät sitä. Toinen maailmansota
+   * kerrotaan tapahtumana kuten Cairnsissa ja Darwinissa: se on
+   * kahdeksankymmenen vuoden takaista historiaa. Pilarin 1 kannalta
+   * paras aines on timorilainen toimijuus: Motaelin kuningaskunnan
+   * maa ja johtaja kaupungin perustamisessa (K1) sekä Tetun Prasa,
+   * paikallinen kieli, josta tuli koko maan yleiskieli (K4).
+   *
+   * TARKISTUKSEN KAIKKI KORJAUKSET ON TEHTY:
+   *  - K2 EI SANO vuotta 1866. "Casa Europa" antaa vain suhteellisen
+   *    ajan: rakentaminen alkoi 1871, "five years after a fire had
+   *    destroyed the fortress". Vuosiluku olisi faktapohjan oma
+   *    vähennyslasku (sama oppi kuin Cairnsin 1 450 asukasta).
+   *  - Sadekauden rajat ilman päivämäärän tarkkuutta: artikkelin oma
+   *    kommentti sanoo, että toinen lähde antaa joulukuu–toukokuu.
+   *  - Suojelualueiden pinta-aloja EI anneta lainkaan: artikkeli
+   *    kirjoittaa ne kilometreinä eikä neliökilometreinä, mikä on
+   *    ilmeinen yksikkövirhe, jonka oikeaa arvoa ei voi päätellä.
+   *  - Tetumin puhujaluku on "noin 370 000": lähde käyttää merkintää
+   *    sigfig|374,000|2, joka renderöityy pyöristettynä.
+   *  - Väestöluku 324 269 on KUNNAN luku, ei kaupungin, ja se
+   *    sanotaan niin.
+   *
+   * SÄÄRIVEJÄ EI OLE (tehtävänannon poikkeama 2, Fable 7.9.2026):
+   * Open-Meteon hakua ei tehty lainkaan, eikä lukuja keksitä
+   * (Samarkand-malli v965). Oppaan sääjakso nojaa en-Wikipedian
+   * sääruutuun ja sanoo sen ääneen: luvut ovat lentoaseman asemalta,
+   * normaalikaudelta 1991-2020.
+   */
+  dili: [
+    {
+      id: 'kaupunki',
+      nimi: 'Dili',
+      johdanto: 'Dili oli isoisän matkan aikaan yli satavuotias '
+        + 'pääkaupunki ja silti rakennustyömaa: tulipalo oli syönyt '
+        + 'linnoituksen ja suuren osan kaupungista, ja uutta nousi '
+        + 'ruutukaavaan kuivatun suon päälle.',
+      nostot: [
+        {
+          otsikko: 'Pääkaupunki perustettiin vieraan kuninkaan maalle',
+          teksti: 'Vuonna 1769 Portugalin Timorin kuvernööri António '
+            + 'José Teles de Meneses siirsi hallinnon ja 1 200 ihmistä '
+            + 'saaren itäosaan. Aikomus oli asettua kauemmas itään '
+            + 'Vemasseen, mutta edullisen maaston takia asutus '
+            + 'perustettiin Diliin. Paikka kuului Motaelin '
+            + 'kuningaskuntaan, jonka johtaja oli portugalilaisten '
+            + 'ystävä: kuvernööri otti haltuunsa paikalla olleen '
+            + 'linnoitetun rakennuksen ja alkoi hänen avullaan rakentaa '
+            + 'uutta asutusta. Ympäristö oli vuorilta tulevien jokien '
+            + 'ruokkimaa kosteikkoa ja sopi riisinviljelyyn, ja '
+            + 'rannikkokaupungin ja soiden väliin rakennettiin muuri. '
+            + 'Asutus jakautui alusta asti kolmeen: yksi osa oli '
+            + 'pääosin portugalilainen, toinen mestitsien ja muista '
+            + 'Portugalin siirtomaista tulleiden — siitä tuli Bidau — '
+            + 'ja kolmas joukoille, jotka olivat kotoisin '
+            + 'kuningaskunnasta, jonka arvellaan olleen Floresilla.',
+          wiki: 'Dili',
+        },
+        {
+          otsikko: 'Vuosi 1873: kaupunki nousi uudelleen tuhkasta',
+          teksti: 'Kuvernööri José Maria Marques saapui 1834 ja '
+            + 'rakensi asutuksen uudelleen ruutukaavaan. Kaupunki levisi '
+            + 'rantaa pitkin ja etelään, kun vanhan kaupungin ja '
+            + 'Lahanen välinen kosteikko kanavoitiin ja kuivattiin, ja '
+            + 'tie vietiin Lahaneen ja Dareen. Uusi kaupunki keskittyi '
+            + 'satamaansa: sen ympärille tulivat kauppatilat, kirkko, '
+            + 'sotilas- ja hallintorakennukset, kuvernöörin asunto sekä '
+            + 'Motaelin kuningaskunnan edustajan ja Manatuton '
+            + 'kuningattaren asunnot — mutta vain kirkko ja '
+            + 'valtiovarainhoitajan talo olivat kivestä. Sitten paloi. '
+            + 'Tulipalo tuhosi linnoituksen ja suuren osan kaupungista, '
+            + 'ja viisi vuotta myöhemmin, 1871, sen raunioille alettiin '
+            + 'rakentaa uutta jalkaväkikasarmia. Vuoden 1870 merikartta '
+            + 'Plano do Porto e Cidade de Dilly osoittaa, että sataman '
+            + 'mittaus oli valmis: ankkuripaikkaa suojasi toisella '
+            + 'puolen majakka ja toisella Carqueton linnake. Kuvernöörin '
+            + 'uusi palatsi rakennettiin 1874–1881 ja uusi kirkko 1877. '
+            + 'Isoisän vuonna kaupunki oli siis kokonaan telineissä.',
+          wiki: 'Dili',
+        },
+        {
+          otsikko: 'Puolueeton satama kahden sotajoukon välissä',
+          teksti: 'Portugali ja sen siirtomaat pysyivät toisessa '
+            + 'maailmansodassa puolueettomina, mutta liittoutuneet '
+            + 'pitivät Itä-Timoria mahdollisena japanilaisten kohteena. '
+            + 'Kun Tyynenmeren sota alkoi, australialaisia ja '
+            + 'hollantilaisia joukkoja lähetettiin Diliin Portugalin '
+            + 'vastalauseista huolimatta, ja 400 miehen osasto miehitti '
+            + 'Portugalin Timorin 17. joulukuuta 1941. Kuvernööri '
+            + 'julisti itsensä vangiksi säilyttääkseen puolueettomuuden '
+            + 'näön. Japanilaiset nousivat maihin Dilissä 19.–20. '
+            + 'helmikuuta 1942. Australialainen komppania vetäytyi '
+            + 'vuorille ja teki sieltä iskuja timorilaisten oppaiden, '
+            + 'kantajien ja vuoriponien avulla. Kun Japani antautui '
+            + 'syyskuussa 1945, Dilin keskusta oli molempien osapuolten '
+            + 'pommitusten jäljiltä raunioina. Yksi talo säilyi juuri '
+            + 'siksi, että siinä oli japanilaisten esikunta: entinen '
+            + 'kasarmi, jota nykyään kutsutaan nimellä Casa Europa.',
+          wiki: 'Battle of Timor',
+        },
+        {
+          otsikko: 'Torin tetum lähti tästä kaupungista',
+          teksti: 'Tetum levisi Timorin keski- ja itäosiin '
+            + 'kontaktikielenä jo 1400-luvulla mahtavan Wehalin '
+            + 'kuningaskunnan aikana. Portugalilaiset asettuivat '
+            + 'aluksi saaren länsiosaan, jossa puhuttiin dawania, ja '
+            + 'vasta kun pääkaupunki siirtyi 1769 Diliin, he alkoivat '
+            + 'edistää tetumia siirtomaansa yhteisenä kielenä. Timor '
+            + 'oli yksi harvoista Portugalin siirtomaista, joissa '
+            + 'yleiskieleksi tuli paikallinen kieli eikä portugalin '
+            + 'muunnos, ja syy oli hallintotavassa: portugalilaiset '
+            + 'hallitsivat epäsuorasti paikallisten kuninkaiden kautta. '
+            + 'Dilissä syntyi oma muotonsa, Tetun Prasa eli torin tetum '
+            + '— nimi tulee portugalin torista, praça. Se on '
+            + 'kieliopiltaan yksinkertaisempi ja täynnä portugalilaisia '
+            + 'lainasanoja, ja Ethnologue luokittelee sen tetumpohjaiseksi '
+            + 'kreoliksi. Vuonna 2004 sillä oli maassa noin 50 000 '
+            + 'äidinkielistä ja noin 370 000 toisen kielen puhujaa, ja '
+            + 'samana vuonna se sai vakioidun oikeinkirjoituksen. '
+            + 'Kaupungissa kadunnimet ovat yhä portugaliksi ja '
+            + 'opastekyltit tetumiksi.',
+          wiki: 'Tetum language',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Dili on pieni pääkaupunki kapealla rantatasangolla: '
+          + 'hallintokortteli, vanha kaupunki ja satama mahtuvat '
+          + 'kilometrin nauhalle, ja niiden takana vuoret nousevat '
+          + 'melkein pystyyn. Kaupungin ilme on kolmikielinen — '
+          + 'kadunnimet portugaliksi, opasteet tetumiksi, kauppojen '
+          + 'kyltit sekaisin molempia ja kiinaa. Vuodenaikoja on kaksi, '
+          + 'ja ne ovat jyrkät: sadekausi ja kuiva kausi, joiden '
+          + 'sademäärät eroavat kolmikymmenkertaisesti.',
+        artikkeli: {
+          nimi: 'Matkailijan Dili',
+          taitto: 'opas',
+          teksti: 'Maan ainoa kansainvälinen lentokenttä, maan ainoa '
+            + 'iso satama ja maan yliopistot ovat kaikki samassa '
+            + 'kaupungissa — Diliin ei tulla ohi kulkiessa, vaan '
+            + 'Diliin tullaan ensin.',
+          nosto: 'Lentokentän kiitotiellä ei ole valoja, joten kone ei '
+            + 'voi laskeutua pimeällä: koko maan lentoliikenne kulkee '
+            + 'kuudesta kuuteen. Kiitotietä rajoittavat toisella puolen '
+            + 'meri ja toisella Comoro-joki.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Presidente Nicolau Lobato -lentoasema on maan '
+                + 'ainoa toimiva kansainvälinen lentokenttä, ja sieltä '
+                + 'on säännölliset lennot Darwiniin, Denpasariin ja '
+                + 'Singaporeen. Kiitotie on 1 850 metriä pitkä ja 30 '
+                + 'metriä leveä, kahdeksan metriä merenpinnan '
+                + 'yläpuolella; vuonna 2014 kentän kautta kulki 198 080 '
+                + 'matkustajaa. Kaupungissa liikutaan mikroleteilla — '
+                + 'kymmenen hengen pikkubusseilla, joilla ei ole '
+                + 'aikatauluja eikä juuri pysäkkejä ja joissa matka '
+                + 'maksaa neljänneksen dollarin — tai ilmastoiduilla '
+                + 'sinisillä takseilla, joiden kuljettajien odotetaan '
+                + 'puhuvan tetumia ja englantia.',
+            },
+            {
+              otsikko: 'Vanha kaupunki ja satama',
+              teksti: 'Kaupungin vanha kortteli on nykyisen Dilin '
+                + 'itäpuoliskossa, ja tärkeimmät hallintorakennukset '
+                + 'ovat sataman ympärillä. Keskusta eli Bairro Central '
+                + 'on kaupungin kivirakenteisin osa, ja siellä on '
+                + 'eniten portugalilaisajan arkkitehtuuria; '
+                + 'siirtomaa-ajan taloja on tiheimmin Motaelin, '
+                + 'Gricenforin ja Bidau Leciderén kaupunginosissa vanhan '
+                + 'kaupungin pääkadun varrella. Hallintoytimen itäpuolella '
+                + 'on vanha kiinalaiskortteli, jossa on yhä kiinalaisen '
+                + 'rakennustavan taloja. Satama itse on muuttunut: '
+                + 'konttiliikenne siirtyi syyskuussa 2022 Tibar Bayn '
+                + 'satamaan, ja vanha laituri palvelee nyt kotimaan '
+                + 'matkustajalaivoja ja risteilijöitä.',
+            },
+            {
+              otsikko: 'Torit ja lautat',
+              teksti: 'Kaupungin ensimmäinen julkinen torihalli '
+                + 'avattiin 1960-luvulla, ja se oli yksi kolmesta '
+                + 'itsenäisyyttä edeltäneestä torista; nykyiset suuret '
+                + 'torit ovat Taibesissa, Becorassa ja Comorossa. '
+                + 'Satamasta lähtee lautta Atauron saarelle kerran '
+                + 'viikossa ja Oecussen eksklaaviin kahdesti viikossa. '
+                + 'Lautat purkavat matkustajat ja ajoneuvot luiskalle '
+                + 'eivätkä varsinaiseen laituriin, ja juuri ne ovat '
+                + 'monelle maan kolkalle ainoa yhteys muuhun maahan.',
+            },
+            {
+              otsikko: 'Vettä ja sähköä',
+              teksti: 'Dili oli maan ensimmäinen paikka, jossa sähköä '
+                + 'sai ympäri vuorokauden. Vesi on toinen asia: vuonna '
+                + '2015 alle kolmasosalla dililäisistä oli jatkuva '
+                + 'vedenjakelu, ja 2018 vettä oli saatavilla '
+                + 'keskimäärin neljästä kahdeksaan tuntia. Veden '
+                + 'keittämistä suositellaan. Sadekausi tuo oman '
+                + 'ongelmansa: viemäriverkko ei riitä, ojat tukkeutuvat '
+                + 'ja tulvia tulee joka vuosi muutamassa talossa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Dili-artikkelin '
+                + 'sääruudusta (lentoaseman asema, normaalikausi '
+                + '1991–2020); lehdellä ei ole omaa vuosigraafia, koska '
+                + 'säärivejä ei tähän erään tehty. Ilmasto on '
+                + 'trooppinen savanni-ilmasto ja vuodessa on kaksi '
+                + 'vuodenaikaa: sadekausi marraskuusta huhtikuuhun ja '
+                + 'kuiva kausi toukokuusta lokakuuhun. Ero on jyrkkä. '
+                + 'Tammikuussa sataa keskimäärin 175 millimetriä ja '
+                + 'sadepäiviä on neljätoista; syyskuussa sataa viisi '
+                + 'millimetriä ja sadepäiviä on yksi. Lämpötila ei '
+                + 'juuri liiku vuoden mittaan: ylin keskilämpötila on '
+                + 'kuukaudesta riippuen 30,7–32,7 astetta ja alin '
+                + '21,1–24,2 astetta. Vuorokauden sisäinen vaihtelu on '
+                + 'suurempi kuin vuodenaikojen välinen.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Vanha kortteli',
+                tahdet: 3,
+                selite: 'Portugalilaisajan julkisivut Motaelin, '
+                  + 'Gricenforin ja Bidau Leciderén kaupunginosissa '
+                  + 'vanhan pääkadun varrella.',
+              },
+              {
+                mita: 'Sataman rantabulevardi',
+                tahdet: 3,
+                selite: 'Hallintorakennukset ja laituri samalla '
+                  + 'rannalla, josta kaupunki lähti kasvamaan 1769.',
+              },
+              {
+                mita: 'Tasitolun kosteikko',
+                tahdet: 2,
+                selite: 'Suojeltu järvi- ja rannikkoalue kaupungin '
+                  + 'länsilaidalla, BirdLifen tärkeä lintualue.',
+              },
+              {
+                mita: 'Vanha torihalli',
+                tahdet: 2,
+                selite: '1960-luvun ristinmuotoinen halli, jonka '
+                  + 'portaalissa lukee yhä Mercado Municipal de Dili.',
+              },
+              {
+                mita: 'Atauron lautta',
+                tahdet: 2,
+                selite: 'Kerran viikossa satamasta pohjoiseen; matka '
+                  + 'kestää pari tuntia.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Vesi, sähkö ja lentokentän
+             * aukioloaika ovat käytännön asioita, jotka muuttavat
+             * matkasuunnitelmaa; luvut ovat samat kuin jaksoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Lentokenttä sulkeutuu pimeällä',
+                teksti: 'Kiitotiellä ei ole valoja, joten kone ei '
+                  + 'laskeudu illalla. Jatkoyhteydet kannattaa laskea '
+                  + 'aamupäivän lentojen varaan.',
+              },
+              {
+                otsikko: 'Vesi keitetään',
+                teksti: 'Vedenjakelu on ajoittaista ja laatu '
+                  + 'vaihtelee; vuonna 2018 vettä tuli keskimäärin '
+                  + 'neljästä kahdeksaan tuntia vuorokaudessa.',
+              },
+              {
+                otsikko: 'Kaksi vuodenaikaa, ei muuta',
+                teksti: 'Sadekausi marraskuusta huhtikuuhun tuo '
+                  + 'tammikuussa 175 millimetriä; syyskuussa sataa '
+                  + 'viisi. Tulvia tulee sadekaudella joka vuosi.',
+              },
+              {
+                otsikko: 'Bussilla ei ole aikataulua',
+                teksti: 'Mikrolet pysähtyy siellä, missä sille '
+                  + 'viittaa, eikä reittiä lue kyljessä numeroa '
+                  + 'lukuun ottamatta.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Vuorten ja meren välissä',
+      johdanto: 'Dili on rakennettu kaistaleelle, joka loppuu '
+        + 'yhdeksässä kilometrissä: sen jälkeen maa nousee '
+        + 'yhdeksänsataan metriin. Kaupunki on siis puristuksissa, ja '
+        + 'kaikki muu seuraa siitä.',
+      tehtava: {
+        kysymys: 'Kuinka suuri osa Dilin kaupunkialueesta on '
+          + 'riittävän tasaista rakentamiseen?',
+        vaihtoehdot: [
+          'noin kolmasosa',
+          'noin kaksi kolmasosaa',
+          'lähes kaikki',
+          'alle kymmenesosa',
+        ],
+        oikea: 0,
+        fakta: 'Kaupunkimaisten sucojen yhteispinta-ala on 17 862 '
+          + 'hehtaaria, mutta vain noin 37 prosenttia eli 6 698 '
+          + 'hehtaaria on niin tasaista, että sille voi rakentaa. '
+          + 'Loput ovat rinnettä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tasainen maa loppuu yhdeksässä kilometrissä',
+          teksti: 'Dili on Timorin pohjoisrannikolla pienellä '
+            + 'tasaisen maan alueella, jota vuoret ympäröivät. '
+            + 'Kaupungin ydin on alle sadan metrin korkeudessa. '
+            + 'Kaupunkialue ulottuu neljään hallintopostiin — Cristo '
+            + 'Rei, Dom Aleixo, Nain Feto ja Vera Cruz — ja niiden '
+            + 'kahdeksantoista kaupunkimaisen sucon yhteispinta-ala on '
+            + '17 862 hehtaaria. Siitä vain noin 37 prosenttia eli '
+            + '6 698 hehtaaria on riittävän tasaista rakentamiseen, ja '
+            + 'vuoteen 2014 mennessä siitä oli rakennettu neljännes. '
+            + 'Comoro-joki virtaa kaupungin länsiosan läpi, ja sen '
+            + 'valuma-alue ulottuu yhdeksän kilometrin päähän '
+            + 'sisämaahan, missä vuoret ovat jo yhdeksänsataa metriä '
+            + 'korkeita. Joen yli vie koko kaupungissa kaksi '
+            + 'ajoneuvosiltaa.',
+          wiki: 'Dili',
+        },
+        {
+          otsikko: 'Kolmekymmentäkertainen ero kahden kuukauden välillä',
+          teksti: 'Dilin ilmasto on trooppinen savanni-ilmasto. '
+            + 'Sadekausi kestää marraskuusta huhtikuuhun ja kuiva '
+            + 'kausi toukokuusta lokakuuhun. Vuosien 2005–2013 '
+            + 'mittausten mukaan sateisin kuukausi oli joulukuu '
+            + 'keskimäärin 170 millimetrillä ja kuivin elokuu 5,3 '
+            + 'millimetrillä; vuosikeskiarvo oli 902 millimetriä, ja '
+            + 'vuosien välinen vaihtelu on suurta. Lämpötila sen sijaan '
+            + 'pysyy paikallaan: keskilämpötilat ovat 26–28 astetta ja '
+            + 'vuorokauden sisäinen vaihtelu 10,8–13,8 astetta, eli '
+            + 'yöllä noin kaksikymmentä ja päivällä yli '
+            + 'kolmekymmentäkolme. Vuoteen 2013 mennessä kaupungin '
+            + 'korkein mitattu lämpötila oli 36 astetta marraskuussa '
+            + '2011 ja matalin 14 astetta elokuussa 2013.',
+          wiki: 'Dili',
+        },
+        {
+          otsikko: 'Kolme suojelualuetta kaupungin sisällä',
+          teksti: 'Dilin alueella on kolme suojeltua luonnon '
+            + 'monimuotoisuuden aluetta. Cristo Rein suojelualue on '
+            + 'vuoristossa, joka erottaa keskustan Heran '
+            + 'kaupunginosasta idässä. Tasitolu on kaupungin '
+            + 'länsilaidalla Liquiçán kunnan rajan tuntumassa ja '
+            + 'kattaa sekä maata että rannikkovesiä; sitä kehitetään '
+            + 'virkistysalueeksi ja pyhänä pidetyksi paikaksi. Behau '
+            + 'kattaa suuren osan itäisen Dilin edustan merestä sekä '
+            + 'rannikkoa Herassa ja siitä itään, ja se on '
+            + 'ehdotuksista uusin — hallitus harkitsee sen '
+            + 'korvaamista pienemmillä alueilla. BirdLife '
+            + 'International on määrittänyt Cristo Rein alueen ja '
+            + 'Tasitolun tärkeiksi lintualueiksi. Rakentaminen näille '
+            + 'alueille on mahdollista valtion luvalla.',
+          wiki: 'Dili',
+        },
+        {
+          otsikko: 'Meriruoho ruokkii dugongit',
+          teksti: 'Dilin ympäristö tuottaa luontaisesti kuivaa '
+            + 'lehtimetsää. Rannikon mangrovelajeihin kuuluu '
+            + 'silmälläpidettävä Ceriops decandra. Rannan edustan '
+            + 'meriruohoniityt elättävät dugongeja ja merikilpikonnia, '
+            + 'ja kauempana avovesillä liikkuu delfiinejä ja valaita. '
+            + 'Kaupungin oma kasvu näkyy näissä luvuissa: vuosina '
+            + '1990–2014 Dilin ympärillä olevan tasaisen maan '
+            + 'maatalouskäytön arvioidaan vähentyneen noin '
+            + 'neljäkymmentä prosenttia, ja kosteikot ovat kaventuneet '
+            + 'edelleen, kun niitä on kuivattu ja rakennettu.',
+          wiki: 'Dili',
+        },
+      ],
+    },
+  ],
+  /*
+   * ALICE SPRINGS (Opus 7.9.2026) — Oseanian laudan kaupunkilehti,
+   * maa AUS. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-alicesprings.md ja sen tarkistus
+   * tarkistus-alicesprings.md (tuomio "kelpaa korjausten jälkeen").
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026:
+   * "Alice Springs", "Adelaide House (Alice Springs)", "Alfred
+   * Traeger", "Royal Flying Doctor Service", "Alice Springs School of
+   * the Air", "Australian feral camel", "Albert Namatjira",
+   * "Hermannsburg School", "Papunya Tula", "Araluen Cultural
+   * Precinct".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti ja valokuvataulu olivat jo olemassa eikä niihin
+   * koskettu.
+   *
+   * SIVUJA ON KAKSI. Teemasivun id on vakioaihe 'kuvataide', ja
+   * perustelu on aineistossa: Keski-Australia on kahden
+   * kansainvälisesti merkittävän taideliikkeen koti (Hermannsburgin
+   * akvarellikoulu ja Papunya Tulan länsiaavikon liike), ja molempien
+   * kauppa- ja näyttelykeskus on Alice Springs. AUS-maalehden
+   * alkuperäiskansa-osasto ei käsittele taidetta lainkaan.
+   *
+   * PILARI 1: arrernte-kansa ja paikan oma nimi Mparntwe tulevat
+   * ensimmäisenä nostona ennen siirtomaanimiä, ja kansa kuvataan
+   * nykypäivän toimijana (vuoden 2000 maaoikeuspäätös, Lhere Artepe).
+   * Teemasivun neljästä nostosta kolme kertoo aboriginaalitaiteesta
+   * taiteilijoiden omilla nimillä.
+   *
+   * PILARI 4: syrjivät käytännöt sanotaan mutta niillä ei mässäillä.
+   * Helmikuun 1934 kielto käyttää Adelaide Housea on K4:ssä yhtenä
+   * virkkeenä. Stuart Town Gaolin erotellut sellit ja vuosien
+   * 1928–1964 kaupunkirajojen päivärajoitus ovat kohdekartan omissa
+   * jutuissa (nahtavyysjutut.js). Vanhan vankilan (1938–1996)
+   * vangitsemislukuja ei käsitellä lainkaan: kartan piste on naisten
+   * museo, ei vankila.
+   *
+   * EI NYKYPOLITIIKKAA: Pine Gap ja artikkelin Crime-osio on jätetty
+   * kokonaan pois.
+   *
+   * TARKISTUKSEN KAIKKI KORJAUKSET ON TEHTY:
+   *  - Stuart Town Gaol on 1907, ei 1909. "Alice Springs" sanoo 1909
+   *    sivulauseessa, kohteen oma artikkeli 1907 katuosoitteen ja
+   *    rakentajan kanssa — tarkempi lähde voittaa (Panamá-oppi).
+   *  - Adelaide Housen radiokoetta EI sanota maailman ensimmäiseksi:
+   *    väite on vain yhdessä artikkelissa ilman omaa lähdettä, ja
+   *    Traegerin oma artikkeli ei nimeä paikkaa.
+   *  - Asukaslukua ei anneta lainkaan: infobox sanoo 25 912 (2021) ja
+   *    leipäteksti 34 783 (2025), eikä ero selity. Käytetään
+   *    artikkelin omaa suhdelukua "noin kymmenesosa
+   *    Pohjoisterritorion väestöstä".
+   *  - Villikamelien miljoonaluku on aikaleimattu vuoteen 2008.
+   *  - Hermannsburgin etäisyys on "runsaat sata kilometriä", koska
+   *    kaksi artikkelia antavat 125 ja 126 kilometriä.
+   *
+   * SÄÄRIVEJÄ EI OLE (tehtävänannon poikkeama 2). Oppaan sääjakso
+   * nojaa en-Wikipedian sääruutuun ja sanoo sen ääneen: luvut ovat
+   * Alice Springs Airportin asemalta, normaalikaudelta 1991-2020.
+   */
+  alicesprings: [
+    {
+      id: 'kaupunki',
+      nimi: 'Alice Springs',
+      johdanto: 'Isoisän matkan aikaan täällä oli vuoden vanha '
+        + 'lennätinasema, jolla oli tulevan kaupungin nimi. Kaupunki '
+        + 'itse tuli myöhemmin, sai väärän nimen ja piti sitä '
+        + 'neljäkymmentäviisi vuotta.',
+      nostot: [
+        {
+          otsikko: 'Mparntwe oli täällä ensin',
+          teksti: 'Arrernte-kansa on Alice Springsin ja sitä '
+            + 'ympäröivien MacDonnell-vuorten perinteinen omistaja, ja '
+            + 'se on asunut alueella ainakin kolmekymmentätuhatta '
+            + 'vuotta. Taajaman alueen perinteinen nimi on Mparntwe, '
+            + 'vedenottopaikka, ja se viittaa Atherreyurreen, '
+            + 'Todd-joen vesikuoppaan vanhan lennätinaseman kohdalla. '
+            + 'Mparntwe kattaa suurimman osan taajamasta; eteläosalla '
+            + 'on nimi Irlpme ja itäosalla Antulye. Arrernten kieltä on '
+            + 'kirjoitettu monella tavalla — Aranda, Arrarnta, Arunta — '
+            + 'ja siinä on viisi murretta. Arrernten omien kertomusten '
+            + 'mukaan maiseman muovasivat yeperenye-, ntyarlke- ja '
+            + 'utnerrengatye-toukat sekä akngwelye eli villikoirat, ja '
+            + 'perinteisesti tärkeitä paikkoja ovat muun muassa '
+            + 'Anthwerrke, Ntaripe ja Alhekulyele. Toukokuussa 2000 '
+            + 'liittovaltion tuomioistuin tunnusti arrernte-kansan '
+            + 'kaupungin perinteisiksi omistajiksi ja alkuperäisen '
+            + 'maanomistusoikeuden haltijoiksi ei-yksinomaisin '
+            + 'oikeuksin. Se oli Australian ensimmäinen onnistunut '
+            + 'kaupunkialueen maaoikeusvaade, ja sen oikeushenkilö on '
+            + 'Lhere Artepe Aboriginal Corporation.',
+          wiki: 'Alice Springs',
+        },
+        {
+          otsikko: 'Vuosi 1873: asema, jolla oli kaupungin nimi',
+          teksti: 'John McDouall Stuart johti 1861–62 retkikunnan '
+            + 'Keski-Australian halki myöhemmän Alice Springsin '
+            + 'länsipuolelta ja avasi reitin mantereen etelästä '
+            + 'pohjoiseen. Kymmenen vuotta myöhemmin tarvittiin '
+            + 'asutus, kun yleislennätinlinjalle rakennettiin '
+            + 'toistinasema; linja valmistui 1872 ja seurasi Stuartin '
+            + 'reittiä. Asema sijoitettiin sen vesikuopan viereen, jota '
+            + 'pidettiin pysyvänä muuten kuivassa Todd-joessa. W. W. '
+            + 'Mills nimesi paikan Alice Springsiksi Etelä-Australian '
+            + 'lennätinylitarkastajan sir Charles Toddin vaimon Alicen '
+            + 'mukaan, ja Todd-joki sekä sen sivujoki Charles-joki '
+            + 'nimettiin sir Charlesin mukaan. Läheinen asutus sai '
+            + 'sen sijaan nimen Stuart, ja se nimettiin uudelleen Alice '
+            + 'Springsiksi vasta 31. elokuuta 1933. Merkittävä '
+            + 'eurooppalainen asutus alkoi vasta, kun Arltungasta '
+            + 'löytyi kultaa 1887 sadan kilometrin päästä idästä. '
+            + 'Kaupungin ensimmäinen kunnollinen rakennus, Stuart Town '
+            + 'Gaol, valmistui 1907, ja eurooppalaisia asukkaita oli '
+            + 'silloin alle kaksikymmentä.',
+          wiki: 'Alice Springs',
+        },
+        {
+          otsikko: 'Kamelit tulivat ennen rataa ja jäivät sen jälkeen',
+          teksti: 'Sisämaan kuljetukset hoidettiin brittiaikana '
+            + 'kamelikaravaaneilla, joita ajoivat Brittiläisen Intian '
+            + 'luoteisen rajaseudun pataani-heimoista tulleet '
+            + 'siirtolaiset; paikallisesti heitä kutsuttiin '
+            + 'afgaaneiksi, ja heidän tukikohtansa oli Hergott Springs, '
+            + 'nykyinen Marree. Moni kameliajaja muutti Alice '
+            + 'Springsiin 1929, kun rata vihdoin ylsi kaupunkiin. He '
+            + 'asuivat sillä korttelilla, jolla kaupunginvaltuusto nyt '
+            + 'on, ja kuljettivat tavaraa radan päästä pohjoisen '
+            + 'karjatiloille ja asutuksille. Kamelit jäivät maahan, kun '
+            + 'auto tuli: vuonna 2008 villiintyneitä yksikyttyräisiä '
+            + 'kameleja arvioitiin olevan yli miljoona, ja kanta voi '
+            + 'kaksinkertaistua kahdeksassa tai kymmenessä vuodessa. '
+            + 'Pohjoisterritoriossa ne ovat keskittyneet '
+            + 'Simpsoninaavikolle sekä Keskiketjujen, Suuren '
+            + 'hiekka-aavikon ja Tanamin aavikon alueelle. Nykyisen '
+            + 'rautatieaseman aulassa on Gabriel Sterkin veistos '
+            + 'kameliajajien muistoksi.',
+          wiki: 'Alice Springs',
+        },
+        {
+          otsikko: 'Poljettu radio, lentävä lääkäri ja koulu ilmassa',
+          teksti: 'Pastori John Flynn suunnitteli ja rakennutti '
+            + 'Adelaide Housen, Keski-Australian ensimmäisen sairaalan. '
+            + 'Varainkeruu alkoi 1918, rakennustyöt 1920 kivimuurari '
+            + 'Jack Williamsin urakkana, työ pysähtyi 1923 rahan '
+            + 'loputtua ja jatkui 1925, ja talo avattiin 24. kesäkuuta '
+            + '1926 yhdeksäntenä Australian sisämaalähetyksen '
+            + 'neljästätoista hoitopaikasta. Flynn suunnitteli siihen '
+            + 'kellarin, josta viileä ilma nousi kanavia pitkin ylös — '
+            + 'periaate oli lainattu Coolgardie-kaapista. Helmikuussa '
+            + '1934 hallitus kielsi alkuperäiskansojen käytön '
+            + 'Adelaide Housessa ja rakennutti Todd-joen itärannalle '
+            + 'peltisen hoitomajan. Insinööri Alfred Traeger kehitti '
+            + 'Flynnin kanssa 1920-luvulta alkaen poljettavan radion: '
+            + 'polkimilla pyöritetty generaattori antoi virran '
+            + 'laatikkoon rakennetulle lähetin-vastaanottimelle. '
+            + 'Ensimmäiset polkulaitteet otettiin käyttöön '
+            + 'Queenslandissa 1929, ja 1933 Traeger keksi niille '
+            + 'morsekirjoituskoneen. Lentävän lääkärin palvelu '
+            + 'käynnistyi Cloncurryssä 15. toukokuuta 1928, ja '
+            + 'ensimmäisenä vuonna se lensi noin kaksikymmentätuhatta '
+            + 'mailia viidelläkymmenellä lennolla — maailman '
+            + 'ensimmäinen kattava ilma-ambulanssi. Radioverkosta '
+            + 'kasvoi lopulta koulu: kouluntarkastaja Adelaide Miethke '
+            + 'sai idean 1944, Flynnin luvan kokeiluun 1950, ja '
+            + 'maailman ensimmäinen School of the Air avattiin Alice '
+            + 'Springsissä 8. kesäkuuta 1951. Aluksi oli kolme puolen '
+            + 'tunnin oppituntia viikossa eikä lainkaan paluuyhteyttä.',
+          wiki: 'Royal Flying Doctor Service',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Alice Springs on suunnilleen mantereen '
+          + 'maantieteellisessä keskipisteessä: merelle on noin '
+          + 'kaksitoistasataa kilometriä joka suuntaan, ja lähimmät '
+          + 'suuret kaupungit Adelaide ja Darwin ovat kumpikin noin '
+          + 'puolentoista tuhannen kilometrin päässä. Kaupunki on '
+          + 'rakennettu tavallisesti kuivan Todd-joen molemmin puolin '
+          + 'MacDonnell-vuorten pohjoispuolelle, ja se on '
+          + 'palvelukeskus alueelle, joka on Suomea suurempi. Keskusta '
+          + 'on kävelymitassa: koko perintökortteli mahtuu '
+          + 'kahdensadan metrin ympyrään.',
+        artikkeli: {
+          nimi: 'Matkailijan Alice Springs',
+          taitto: 'opas',
+          teksti: 'Kaupunki, johon tullaan vuorten takia ja josta '
+            + 'lähdetään aavikolle: vaellusreitti länteen, aavikko '
+            + 'kaakkoon ja juna kumpaankin suuntaan pitkin mannerta.',
+          nosto: 'Alice Springs on Adelaide–Darwin-radan puolivälissä. '
+            + 'Rata tuli kaupunkiin 1929 ja pysähtyi siihen 75 '
+            + 'vuodeksi: vasta helmikuussa 2004 ensimmäinen '
+            + 'matkustajajuna ajoi Adelaidesta Darwiniin asti.',
+          jaksot: [
+            {
+              otsikko: 'Perille',
+              teksti: 'Kaupunki on lähes yhtä kaukana Adelaidesta '
+                + '(1 532 kilometriä) ja Darwinista (1 499 '
+                + 'kilometriä), ja lähimmälle merelle on noin '
+                + 'kaksitoistasataa kilometriä. Nykyinen rautatieasema '
+                + 'avattiin 9. lokakuuta 1980, kun uusi normaaliraiteinen '
+                + 'rata tuli Tarcoolasta, ja se oli radan pääteasema '
+                + 'siihen asti kunnes linja jatkettiin Darwiniin '
+                + 'helmikuussa 2004. Asemaa palvelee nykyään '
+                + 'matkailujuna Ghan, joka kulkee tavallisesti kerran '
+                + 'viikossa kumpaankin suuntaan.',
+            },
+            {
+              otsikko: 'Keskustassa',
+              teksti: 'Kaupungin keskipiste on Todd Mall, kävelykatu, '
+                + 'jonka varrella on useita aboriginaalitaiteen '
+                + 'gallerioita ja jossa pidetään kahden viikon välein '
+                + 'Todd Mall Markets. Helmikuussa 2024 kadun varteen '
+                + 'avattiin AIATSIS Central Australian tieto- ja '
+                + 'näyttelykeskus. Kaupungissa on paljon vanhoja '
+                + 'rakennuksia — lennätinasema, vanha oikeustalo ja '
+                + 'Residency, Hartley Streetin koulu ja Todd Mallin '
+                + 'keskellä seisova Adelaide House — ja niiden läpi '
+                + 'kulkee opastettu kaupunkireitti nimeltä Flynn '
+                + 'Trail.',
+            },
+            {
+              otsikko: 'Vuorille ja aavikolle',
+              teksti: 'MacDonnell-vuoret jatkuvat kaupungista sekä '
+                + 'itään että länteen, ja niissä on vaellusreittejä ja '
+                + 'uimapaikkoja: Ormiston Gorge, Redbank Gorge ja Glen '
+                + 'Helen Gorge. Läntisiä MacDonnelleja seuraa 223 '
+                + 'kilometrin Larapinta Trail. Kaupungista kaakkoon '
+                + 'alkaa Simpsoninaavikko, yksi Australian suurista '
+                + 'erämaista, jossa on suuria punaisia dyynejä ja '
+                + 'kalliomuodostumia kuten Chambers Pillar ja Rainbow '
+                + 'Valley. Kaupungissa itsessään on aavikkopuisto ja '
+                + 'Olive Pinkin kasvitieteellinen puutarha, joka on '
+                + 'erikoistunut kuivan alueen kasveihin.',
+            },
+            {
+              otsikko: 'Juhlat, joita ei ole muualla',
+              teksti: 'Aavikkoelämä on synnyttänyt kaupunkiin omia '
+                + 'tapahtumia: Camel Cup eli kamelinajot, '
+                + 'Henley-on-Todd -soutukilpailu kuivassa joenuomassa, '
+                + 'Bangtail muster, pipofestivaali ja Finke Desert '
+                + 'Race, joka on 460 kilometrin edestakainen ajo Alice '
+                + 'Springsistä Aputulan yhteisöön ja takaisin. '
+                + 'Vuodesta 2016 kaupungissa on järjestetty myös '
+                + 'valofestivaali Parrtjima.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Alice Springs '
+                + '-artikkelin sääruudusta (Alice Springs Airport, '
+                + 'normaalikausi 1991–2020); lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säärivejä ei tähän erään tehty. '
+                + 'Ilmasto on subtrooppinen kuuma aavikkoilmasto. '
+                + 'Kesällä ylin keskilämpötila on 35,6 astetta ja '
+                + 'talvella alin 5,1 astetta, ja pakkasöitä on '
+                + 'keskimäärin 12,4 vuodessa: kaupunki on 545 metrin '
+                + 'korkeudessa, mikä viilentää talviyöt. Kuukausien '
+                + 'ylimmät keskilämpötilat vaihtelevat heinäkuun 20,7 '
+                + 'asteesta tammikuun 37,1 asteeseen. Sade on '
+                + 'epäsäännöllistä: vuonna 2001 satoi 741 millimetriä '
+                + 'ja 2002 vain 198. Ennätyspakkanen −7,5 astetta '
+                + 'mitattiin 17. heinäkuuta 1976, ja se on samalla '
+                + 'koko Pohjoisterritorion mittausennätys.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Todd Mall',
+                tahdet: 3,
+                selite: 'Kävelykatu gallerioineen ja kahden viikon '
+                  + 'välein pidettävine toreineen.',
+              },
+              {
+                mita: 'Läntiset MacDonnell-vuoret',
+                tahdet: 3,
+                selite: 'Rotkoja ja uimapaikkoja; 223 kilometrin '
+                  + 'Larapinta Trail seuraa harjannetta.',
+              },
+              {
+                mita: 'Araluenin kulttuurikortteli',
+                tahdet: 3,
+                selite: 'Neljä galleriaa, Namatjira-sali, '
+                  + 'Keski-Australian museo ja ilmailumuseo samalla '
+                  + 'tontilla.',
+              },
+              {
+                mita: 'Lennätinasema',
+                tahdet: 2,
+                selite: 'Vuoden 1872 toistinasema kivitaloineen '
+                  + 'kolme kilometriä keskustasta pohjoiseen.',
+              },
+              {
+                mita: 'Olive Pinkin puutarha',
+                tahdet: 2,
+                selite: 'Kuudentoista hehtaarin kuivan alueen '
+                  + 'kasvitieteellinen puutarha joen mutkassa.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: aavikkokaupungin todelliset varaukset —
+             * lämpötilaerot, etäisyydet ja se, että joessa ei ole
+             * vettä. Luvut ovat samat kuin jaksossa 5.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Kesä ja talvi ovat eri planeetoilta',
+                teksti: 'Kesän ylin keskilämpötila on 35,6 astetta ja '
+                  + 'talven alin 5,1; pakkasöitä on keskimäärin 12,4 '
+                  + 'vuodessa.',
+              },
+              {
+                otsikko: 'Joessa ei yleensä ole vettä',
+                teksti: 'Todd-joki on tavallisesti kuiva uoma. Sen '
+                  + 'takia kaupungissa soudetaan kerran vuodessa '
+                  + 'pohjattomilla veneillä juosten.',
+              },
+              {
+                otsikko: 'Sade tulee tai ei tule',
+                teksti: 'Vuonna 2001 satoi 741 millimetriä ja 2002 '
+                  + 'vain 198. Suurin vuorokausisade 204,8 '
+                  + 'millimetriä mitattiin 31. maaliskuuta 1988.',
+              },
+              {
+                otsikko: 'Etäisyydet ovat todellisia',
+                teksti: 'Lähimmät suuret kaupungit ovat noin '
+                  + 'puolentoista tuhannen kilometrin päässä ja meri '
+                  + 'noin kahdentoistasadan.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Aavikon maalarit',
+      johdanto: 'Keski-Australiasta on lähtenyt kaksi taideliikettä, '
+        + 'jotka muuttivat sen, miltä Australia näyttää itselleen: '
+        + 'Hermannsburgin akvarellit ja Papunyan pistemaalaukset. '
+        + 'Molempien näyteikkuna on Alice Springs.',
+      tehtava: {
+        kysymys: 'Mistä Papunya Tulan taiteilijat saivat osuuskuntansa '
+          + 'nimen?',
+        vaihtoehdot: [
+          'lähellä olevasta kukkulasta',
+          'ensimmäisen maalauksen nimestä',
+          'perustajansa sukunimestä',
+          'käytetystä maalilajista',
+        ],
+        oikea: 0,
+        fakta: 'Nimen jälkiosa tula tulee pienestä kukkulasta '
+          + 'Papunyan lähellä. Kukkula on hunajamuurahaisen unipaikka, '
+          + 'eli nimi kertoo maasta eikä ihmisistä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Akvarelli, joka teki maalarista kotinimen',
+          teksti: 'Albert Namatjira (1902–1959) oli '
+            + 'länsiarrernte-maalari MacDonnell-vuorilta. Hän syntyi ja '
+            + 'kasvoi Hermannsburgin luterilaisella lähetysasemalla '
+            + 'runsaat sata kilometriä Alice Springsistä länteen. Hän '
+            + 'kiinnostui taiteesta varhain mutta alkoi maalata '
+            + 'tosissaan vasta 1934 Rex Battarbeen ohjauksessa; kun '
+            + 'Battarbee palasi 1936 maalaamaan seudun maisemaa, '
+            + 'Namatjira toimi hänen kameliajajanaan ja oppaanaan. '
+            + 'Hänen akvarellinsa poikkesivat perinteisen '
+            + 'aboriginaalitaiteen symboleista, ja niiden jäljennöksiä '
+            + 'ripustettiin koteihin ympäri Australiaa. Ensimmäinen '
+            + 'yksityisnäyttely oli Melbournessa 1938. Vuonna 1956 '
+            + 'William Dargien muotokuva Namatjirasta voitti '
+            + 'Archibald-palkinnon ensimmäisenä aboriginaalia '
+            + 'esittävänä työnä, ja 1957 Namatjira oli ensimmäinen '
+            + 'tiedossa oleva Pohjoisterritorion aboriginaali, joka '
+            + 'vapautettiin holhouksesta ja sai täydet '
+            + 'kansalaisoikeudet.',
+          wiki: 'Albert Namatjira',
+        },
+        {
+          otsikko: 'Hermannsburgin koulu maalasi oman maansa',
+          teksti: 'Hermannsburgin koulu on taideliike, joka alkoi '
+            + 'Hermannsburgin lähetysasemalla 1930-luvulla. Aseman '
+            + 'perustivat saksalaiset luterilaiset lähetystyöntekijät '
+            + '1877, ja länsiarrernte-kansa on asunut alueella tuhansia '
+            + 'vuosia. Liikkeelle ovat tyypillisiä pehmeäsävyiset '
+            + 'akvarellit siitä maisemasta, jota siirtolaiset kutsuivat '
+            + 'Läntisiksi MacDonnell-vuoriksi. Aiemmin '
+            + 'länsiarrernte-kansa oli käyttänyt kuvaa vain '
+            + 'seremoniallisesti, oman maansa ja unienaikojensa '
+            + 'topografisena tulkintana symboleilla. Aavegumipuu on '
+            + 'töissä keskeinen ja se on länsiarrernte-mytologiassa '
+            + 'pyhä; Otto Pareroultjan parhaissa töissä puut on '
+            + 'maalattu esi-isinä, joilla on vartaloa muistuttavat '
+            + 'rungot ja käsivarsia muistuttavat oksat. Rex Battarbee '
+            + 'perusti 1941 Aranda Art Groupin, joka hoiti '
+            + 'tarvikkeiden jakelun ja taiteilijoiden liikeasiat. '
+            + 'Liike hiipui 1970-luvun lopulla, mutta Wenten Rubuntja '
+            + 'maalasi 1990-luvulle asti. Nykyään Hermannsburg '
+            + 'tunnetaan myös savenvalajistaan.',
+          wiki: 'Hermannsburg School',
+        },
+        {
+          otsikko: 'Koulun seinämaalaus, josta tuli liike',
+          teksti: '1960-luvun lopulla hallitus siirsi useita '
+            + 'länsiaavikon ryhmiä Papunyaan, 240 kilometriä Alice '
+            + 'Springsistä luoteeseen: pintupeja, luritjoja, '
+            + 'warlpireja, arrernteja ja anmatyerreja. Vuonna 1971 '
+            + 'yhteisön koulunopettaja Geoffrey Bardon kannusti lapsia '
+            + 'maalaamaan seinämaalauksen perinteisellä keho- ja '
+            + 'hiekkaseremoniataiteen tyylillä. Vuotta myöhemmin, '
+            + '1972, perustettiin osuuskunta Papunya Tula, jonka '
+            + 'nimen jälkiosa tulee pienestä kukkulasta Papunyan '
+            + 'lähellä — hunajamuurahaisen unipaikasta. Ryhmä '
+            + 'tunnetaan länsiaavikon taideliikkeestä eli '
+            + 'pistemaalauksesta, ja sen katsotaan tuoneen nykyisen '
+            + 'aboriginaalitaiteen maailman tietoisuuteen. Useimmat '
+            + 'taiteilijat eivät olleet koskaan maalanneet '
+            + 'länsimaiseen tapaan akryylillä kovalle pinnalle. Kun '
+            + 'työt tulivat julkisiksi, yhteisö arvosteli sitä, että '
+            + 'liikaa pyhää tuli näkyviin, ja taiteilijat poistivat tai '
+            + 'muuttivat merkkejä; juuri silloin tiheästä pisteytyksestä '
+            + 'tuli tapa peittää se, mitä ei ollut tarkoitettu '
+            + 'ulkopuolisille. Ensimmäiset naiset tulivat mukaan '
+            + '1980-luvun lopulla ja yleisemmin vasta 1994. Yhtiö '
+            + 'toimii nykyään Alice Springsistä käsin, ja sen '
+            + 'taiteilijat tulevat jopa seitsemänsadan kilometrin '
+            + 'päästä lännestä.',
+          wiki: 'Papunya Tula',
+        },
+        {
+          otsikko: 'Näyteikkuna on pääkadulla ja kortteli joen takana',
+          teksti: 'Keski-Australiasta ovat kotoisin monet '
+            + 'aboriginaalitaiteen tunnetuimmista nimistä: Emily '
+            + 'Kngwarreye, Minnie Pwerle, Clifford Possum '
+            + 'Tjapaltjarri, Albert Namatjira ja Wenten Rubuntja. '
+            + 'Kauppa käydään Todd Mallin gallerioissa, mutta kokoelmat '
+            + 'ovat Araluenin kulttuurikorttelissa: siellä on neljä '
+            + 'galleriaa, joista yksi on Albert Namatjira -galleria, '
+            + 'noin viidensadan hengen teatteri, Keski-Australian museo '
+            + 'ja sen Strehlow-tutkimuskeskus, Keski-Australian '
+            + 'ilmailumuseo, Kookaburra-muistomerkki, '
+            + 'Yeperenye-veistos ja aboriginaalien pyhiä paikkoja. '
+            + 'Taidekeskuksen etuikkuna on paikallisesti tehty suuri '
+            + 'lasimaalaus, jonka Wenten Rubuntja suunnitteli '
+            + 'maalauksestaan Arrernte Country (1987). Vuosittain '
+            + 'korttelissa pidetään Keski-Australian suurin '
+            + 'alkuperäiskansojen taidetapahtuma Desert Mob. Kauppa on '
+            + 'myös rahaa: Clifford Possum Tjapaltjarrin maalaus teki '
+            + '2007 aboriginaalitaiteen huutokauppaennätyksen 1,03 '
+            + 'miljoonalla punnalla, yli kaksinkertaisesti edelliseen '
+            + 'ennätykseen verrattuna.',
+          wiki: 'Araluen Cultural Precinct',
+        },
+      ],
+    },
+  ],
+  /*
    * PANAMÁ (Opus 6.9.2026, paketti O9) — P-Amerikan laudan
    * kaupunkilehti, joka palvelee myös E-Amerikan lautaa. Fablen
    * päätös 24.8.2026 (spec-mantereet.md): kaupunki-id 'panama' on

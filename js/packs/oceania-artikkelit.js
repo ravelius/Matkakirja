@@ -1083,4 +1083,129 @@ export const OCEANIA_ARTIKKELIT = {
       + 'maakuopassa kuumilla kivillä, ja illan kava juodaan yhteisessä '
       + 'nakamalissa, jonka ovessa ei ole lukkoa.',
   },
+  /* DILI (Opus 7.9.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain dili); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-dili.md ja
+   * tarkistus-dili.md. Avain on kaupungin wiki-nimi
+   * (js/packs/oceania.js: 'Dili'). Väitteet on luettu en-Wikipedian
+   * raakateksteistä 7.9.2026 ("Dili", "Casa Europa", "Port of Dili",
+   * "Tetun language").
+   *
+   * EI NYKYPOLITIIKKAA EIKÄ NYKYVÄKIVALTAA (Myanmar-linja):
+   * miehitysajan väkivalta, Santa Cruz 1991 sekä vuosien 1999 ja
+   * 2006 kriisit on jätetty pois. Miehitys ja itsenäistyminen
+   * esiintyvät vain päivämäärinä.
+   *
+   * VUOSILUKUA 1866 EI KÄYTETÄ (tarkistus-dili.md, kohta A): lähde
+   * antaa vain suhteellisen ajan "viisi vuotta ennen vuotta 1871".
+   * Maan intro ('Itä-Timor') kertoo santelipuusta ja Oecussesta,
+   * joten niitä ei toisteta täällä. */
+  Dili: {
+    intro: 'Dili on Itä-Timorin pääkaupunki ja suurin kaupunki '
+      + 'Timorin saaren pohjoisrannikolla. Se on rakennettu pienelle '
+      + 'tasaisen maan alueelle, jota vuoret ympäröivät, ja se on '
+      + 'ollut maan talouden keskus ja pääsatama siitä asti, kun '
+      + 'siitä tehtiin Portugalin Timorin pääkaupunki 1769.'
+      + '\n\n'
+      + 'Kuvernööri António José Teles de Meneses siirsi silloin '
+      + 'hallinnon ja 1 200 ihmistä itään. Paikka kuului Motaelin '
+      + 'kuningaskuntaan, jonka johtaja oli portugalilaisten ystävä, '
+      + 'ja ympärillä oli riisinviljelyyn sopivaa kosteikkoa. '
+      + 'Kaupunki rakennettiin uudelleen ruutukaavaan 1830-luvulta '
+      + 'alkaen, ja isoisän matkan aikaan se oli **rakennustyömaa**: '
+      + 'tulipalo oli tuhonnut linnoituksen, ja sen raunioille '
+      + 'nostettiin uutta kasarmia vuodesta 1871.'
+      + '\n\n'
+      + 'Nykyään Dili on nuoren maan pääkaupunki. Väestö on '
+      + 'poikkeuksellisen nuorta ja kasvaa muuttajista: joka muusta '
+      + 'kunnasta muutetaan pois, ja Diliin muutetaan. Kaupungin oma '
+      + 'kieli on tetum, ja sen Dilissä syntynyt muoto **Tetun Prasa '
+      + 'eli torin tetum** on koko maan yleiskieli.',
+    teksti: 'Dili sijaitsee Timorin pohjoisrannikolla kapealla '
+      + 'rantatasangolla. Kaupungin ydin on alle sadan metrin '
+      + 'korkeudessa, ja vain noin 37 prosenttia kaupunkialueesta on '
+      + 'riittävän tasaista rakentamiseen. Comoro-joki virtaa '
+      + 'länsiosan läpi, ja sen valuma-alue ulottuu yhdeksän '
+      + 'kilometrin päähän sisämaahan, missä vuoret ovat jo '
+      + 'yhdeksänsataa metriä korkeita.'
+      + '\n\n'
+      + 'Paikalla on ollut satama ainakin vuodesta 1726. Vuonna 1769 '
+      + 'siitä tuli Portugalin Timorin pääkaupunki, ja kuvernööri '
+      + 'José Maria Marques rakensi asutuksen uudelleen ruutukaavaan '
+      + '1834 alkaen, kun vanhan kaupungin ja Lahanen välinen '
+      + 'kosteikko kuivattiin. Toisessa maailmansodassa kaupunki '
+      + 'joutui kahden sotajoukon väliin, ja syyskuuhun 1945 mennessä '
+      + 'sen keskusta oli raunioina. Portugalin hallinto päättyi '
+      + '1975, ja maa itsenäistyi lopullisesti 2002.'
+      + '\n\n'
+      + 'Ilmasto on trooppinen savanni-ilmasto, jossa on kaksi '
+      + 'vuodenaikaa: sadekausi marraskuusta huhtikuuhun ja kuiva '
+      + 'kausi toukokuusta lokakuuhun. Kaupungissa on maan ainoa '
+      + 'toimiva kansainvälinen lentokenttä ja maan yliopistot, ja '
+      + 'kolme neljäsosaa maan yliopisto-opiskelijoista opiskelee '
+      + 'täällä.',
+  },
+  /* ALICE SPRINGS (Opus 7.9.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain alicesprings); pohjana
+   * faktapohja-alicesprings.md ja tarkistus-alicesprings.md. Avain
+   * on kaupungin wiki-nimi (js/packs/oceania.js: 'Alice Springs').
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026
+   * ("Alice Springs", "Alice Springs railway station").
+   *
+   * PILARI 1: arrernte-kansa ja paikan oma nimi Mparntwe tulevat
+   * ennen siirtomaanimiä, ja kansa näytetään nykypäivän toimijana
+   * (vuoden 2000 maaoikeuspäätös).
+   *
+   * ASUKASLUKUA EI ANNETA (tarkistus-alicesprings.md, kohta B):
+   * infobox ja leipäteksti ovat 34 prosentin päässä toisistaan.
+   * Stuart Town Gaol on 1907 eikä 1909 (kohta A). AUS-maalehden
+   * lennätinnosto kertoo linjan rakentamisen, joten sitä ei toisteta
+   * täällä. */
+  'Alice Springs': {
+    intro: 'Alice Springs on kaupunki Pohjoisterritoriossa '
+      + 'suunnilleen Australian maantieteellisessä keskipisteessä, '
+      + 'lähes yhtä kaukana Adelaidesta ja Darwinista. Seudun '
+      + 'alkuperäiset asukkaat, **arrernte-kansa**, ovat asuneet '
+      + 'Keski-Australian aavikolla kymmeniätuhansia vuosia, ja '
+      + 'taajaman alueen perinteinen nimi on Mparntwe eli '
+      + 'vedenottopaikka.'
+      + '\n\n'
+      + 'Isoisän matkan aikaan kaupunkia ei ollut. Yleislennätinlinja '
+      + 'Adelaidesta Darwiniin oli valmistunut 1872, ja sen '
+      + 'toistinasema oli pystytetty tavallisesti kuivan Todd-joen '
+      + 'vesikuopan viereen. W. W. Mills nimesi paikan Alice '
+      + 'Springsiksi lennätinylitarkastajan sir Charles Toddin vaimon '
+      + 'mukaan — mutta viereinen asutus sai nimen Stuart, ja **se '
+      + 'nimettiin uudelleen Alice Springsiksi vasta 31. elokuuta '
+      + '1933**.'
+      + '\n\n'
+      + 'Kaupunki kasvoi vasta radan myötä 1929. Nykyään se on seudun '
+      + 'palvelukeskus ja matkailukaupunki, jossa asuu noin '
+      + 'kymmenesosa koko Pohjoisterritorion väestöstä, ja se on '
+      + 'Keski-Australian aboriginaalitaiteen kauppa- ja '
+      + 'näyttelykeskus.',
+    teksti: 'Alice Springs on 545 metrin korkeudessa '
+      + 'MacDonnell-vuorten pohjoispuolella, tavallisesti kuivan '
+      + 'Todd-joen molemmin puolin. Ympäröivä seutu tunnetaan nimellä '
+      + 'Keski-Australia tai Punainen keskusta, ja se on kuivaa '
+      + 'aavikkoa. Merelle on noin kaksitoistasataa kilometriä ja '
+      + 'lähimpiin suuriin kaupunkeihin noin puolitoista tuhatta.'
+      + '\n\n'
+      + 'Merkittävä eurooppalainen asutus alkoi vasta, kun '
+      + 'Arltungasta löytyi kultaa 1887. Kaupungin ensimmäinen '
+      + 'kunnollinen rakennus, Stuart Town Gaol, valmistui 1907, '
+      + 'jolloin eurooppalaisia asukkaita oli alle kaksikymmentä. '
+      + 'Keski-Australian ensimmäinen sairaala Adelaide House avattiin '
+      + '1926, rata tuli 1929, ja maailman ensimmäinen radiokoulu '
+      + 'School of the Air aloitti täältä 1951. Toukokuussa 2000 '
+      + 'liittovaltion tuomioistuin tunnusti arrernte-kansan '
+      + 'kaupungin perinteisiksi omistajiksi — se oli Australian '
+      + 'ensimmäinen onnistunut kaupunkialueen maaoikeusvaade.'
+      + '\n\n'
+      + 'Kaupunki palvelee aluetta, joka on Suomea suurempi. Se on '
+      + 'Adelaide–Darwin-radan puolivälissä, ja sitä palvelee '
+      + 'matkailujuna Ghan. Ilmasto on subtrooppinen kuuma '
+      + 'aavikkoilmasto: kesän ylin keskilämpötila on 35,6 astetta ja '
+      + 'talvella pakkasöitä on keskimäärin kaksitoista vuodessa.',
+  },
 };

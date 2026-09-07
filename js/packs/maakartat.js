@@ -14441,6 +14441,130 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Gidan Makaman museo', lat: 11.988802, lon: 8.521058 },
     ],
   },
+  /*
+   * DILI (7.9.2026). Rajaus on 1,9 × 1,4 kilometriä vanhan kaupungin
+   * ja sataman ympärillä — perustelu, meri-lippu ja pudotetut
+   * kohteet ovat tools/piirra-kaupunkikartta.mjs:n dili-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat kaupungin
+   * perustaminen Motaelin kuningaskunnan maalle 1769, vuoden 1873
+   * jälleenrakennus ruutukaavaan, toinen maailmansota ja Tetun Prasa;
+   * teemasivu kertoo maastosta, ilmastosta, suojelualueista ja
+   * merenelävistä. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe. Lähimpänä ovat satama ja hallituspalatsi, joita
+   * lehti sivuaa: satama esiintyy K2:ssa kaupungin keskipisteenä ja
+   * oppaassa lauttalaiturina, ja kartan juttu kertoo sen sijaan
+   * ankkuripaikan historiasta ja vuoden 1964 laiturista.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-dili.md, kohta E): Casa Europa on 178 metrin päässä
+   * hallituspalatsista, vastarintamuseo 182 metrin päässä samasta ja
+   * Liceu Dr. Francisco Machado 112 metrin päässä BNU-pankkitalosta.
+   * Casa Europa on lisäksi lehden noston K3 aihe.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN SISÄLTÖSYISTÄ: Palácio das Cinzas on
+   * kokonaan presidentin virkatoimitilojen tarina eli nykypolitiikkaa,
+   * ja Toko Layn artikkeli on lähes kokonaan vuoden 1975
+   * joukkosurman silminnäkijäkertomus (Myanmar-linja, pilari 4).
+   *
+   * CRISTO REI EI OLE KARTALLA. Se on kuusi kilometriä itään
+   * rajauksen ulkopuolella ja lisäksi jo pelin karttanosto
+   * (js/packs/maastokohteet-tls.js, kohde cristo-rei).
+   */
+  dili: {
+    polku: 'assets/kartat/dili-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -8.5495, etela: -8.5625, lansi: 125.5655, ita: 125.5825 },
+    esittely: 'Kartan alue on Dilin vanha kaupunki ja hallintokortteli '
+      + 'Dilin lahden rannalla. Pohjoisessa on satama, jonka ympärille '
+      + 'kaupunki rakennettiin uudelleen 1830-luvulla, idässä '
+      + 'hallituspalatsi ja kansallisstadion, lännessä Motaelin '
+      + 'vanha kaupunginosa ja tuomiokirkko, etelässä torihalli ja '
+      + 'kansallisarkisto. Yläreunassa aukeaa Ombain salmi. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Cairnsissa ja Dunedinissa. Koordinaatit en-Wikipedian
+       * geosearch-rajapinnasta 7.9.2026, ja kaikki välit on mitattu
+       * uudelleen: pienin on 285 metriä (hallituspalatsi–BNU-pankkitalo).
+       */
+      { nimi: 'Motaelin kirkko', lat: -8.550833, lon: 125.570556 },
+      /*
+       * SATAMAN PISTE ON SIIRRETTY LAITURIN JUUREEN.
+       * En-Wikipedian koordinaatti −8,551667/125,576389 osuu laiturin
+       * päähän eli veteen, ja tools/tarkista-karttapisteet.mjs
+       * hylkäsi sen (vain sillat ja majakat saavat olla vedellä —
+       * Lontoon silmän ja Venetsian Arsenaalin oppi). Piste on
+       * siirretty rantaviivalle laiturialueen juureen, 250 metriä
+       * lounaaseen. Kaikki välit on mitattu uudelleen siirron
+       * jälkeen: lähin on BNU-pankkitalo 211 metrin päässä eli yhä
+       * yli kahdensadan metrin.
+       */
+      { nimi: 'Dilin satama', lat: -8.5537, lon: 125.5745 },
+      { nimi: 'Hallituspalatsi', lat: -8.554310, lon: 125.578600 },
+      { nimi: 'BNU-pankkitalo', lat: -8.554811, lon: 125.576053 },
+      { nimi: 'Kansallisstadion', lat: -8.558056, lon: 125.580556 },
+      { nimi: 'Tuomiokirkko', lat: -8.558333, lon: 125.567500 },
+      { nimi: 'Kansallisarkisto', lat: -8.559444, lon: 125.573889 },
+      { nimi: 'Kaupungin torihalli', lat: -8.560110, lon: 125.579060 },
+    ],
+  },
+  /*
+   * ALICE SPRINGS (7.9.2026). Rajaus on 1,7 × 1,8 kilometriä
+   * ANZAC Hilliltä Olive Pinkin puutarhaan — perustelu ja pudotetut
+   * kohteet ovat tools/piirra-kaupunkikartta.mjs:n
+   * alicesprings-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Mparntwe
+   * ja arrernte-kansa, vuoden 1873 lennätinasema ja kaupungin
+   * nimenvaihto, afgaanikameliajajat sekä Flynn, poljettu radio ja
+   * School of the Air; teemasivu kertoo Namatjirasta, Hermannsburgin
+   * koulusta, Papunya Tulasta ja Araluenin korttelista. Yksikään
+   * kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KESKUSTA ON POIKKEUKSELLISEN TIIVIS, ja se on mitattu eikä
+   * arvattu (tarkistus-alicesprings.md, kohta F): The Residency on 88
+   * metrin, Griffiths House 127 metrin, Hartley Streetin koulu 159
+   * metrin, Adelaide House 174 metrin ja Stuart Arms Hotel 189 metrin
+   * päässä Stuart Town Gaolista, ja Griffiths House ja koulu ovat 58
+   * metrin päässä toisistaan. Koko perintökortteli mahtuu siis
+   * kahdensadan metrin ympyrään, ja siitä otettiin kartalle kolme
+   * pistettä. Adelaide House on lisäksi lehden noston K4 aihe ja
+   * Todd Mall (137 m Pioneer-teatterista) teemasivun aihe.
+   *
+   * LENNÄTINASEMA ON KOLME KILOMETRIÄ POHJOISEEN eikä siis mahdu
+   * rajaukseen. Se on myös jo kolmen muun pelin osan aihe:
+   * saapumisteksti, matkakirjan valokuvataulun ennen–nyt-pari ja
+   * AUS-maalehden lennätinnosto.
+   */
+  alicesprings: {
+    polku: 'assets/kartat/alicesprings-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -23.6925, etela: -23.7085, lansi: 133.8705, ita: 133.8875 },
+    esittely: 'Kartan alue on Alice Springsin keskusta tavallisesti '
+      + 'kuivan Todd-joen länsipuolella. Pohjoisessa kohoaa ANZAC '
+      + 'Hill, keskellä on kaupungin ruutukaava vanhoine taloineen, '
+      + 'lännessä radan varsi ja etelässä joen mutka, jossa ovat '
+      + 'vanha vankila ja kasvitieteellinen puutarha. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+       * ja kaikki välit on mitattu uudelleen: pienin on 271 metriä
+       * (Pioneer-teatteri–kaupunginkirjasto).
+       */
+      { nimi: 'ANZAC Hill', lat: -23.694730, lon: 133.882110 },
+      { nimi: 'Totem-teatteri', lat: -23.694852, lon: 133.885016 },
+      { nimi: 'Rautatieasema', lat: -23.697417, lon: 133.873389 },
+      { nimi: 'Stuart Town Gaol', lat: -23.698470, lon: 133.881290 },
+      { nimi: 'Pioneer-teatteri', lat: -23.699357, lon: 133.883917 },
+      { nimi: 'Kaupunginkirjasto', lat: -23.701667, lon: 133.883056 },
+      { nimi: 'Australian naisten museo', lat: -23.704100, lon: 133.876900 },
+      { nimi: 'Olive Pinkin puutarha', lat: -23.706400, lon: 133.884900 },
+    ],
+  },
 };
 
 /*

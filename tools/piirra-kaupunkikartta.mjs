@@ -3791,6 +3791,82 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -12.4565, etela: -12.4705, lansi: 130.8337, ita: 130.8480 },
     meri: true,
   },
+  dili: {
+    /*
+     * VANHA KAUPUNKI SATAMAN YMPÄRILLÄ (7.9.2026). Ruutu on
+     * 1,9 × 1,4 kilometriä eli Darwinin luokkaa. Se riittää, koska
+     * Dilin koko hallinto- ja perintökortteli on kilometrin levyisellä
+     * nauhalla sataman ja etelän kukkuloiden välissä: kartan kahdeksan
+     * kohdetta mahtuvat 1,3 kilometrin kaareen tuomiokirkolta
+     * kansallisstadionille.
+     *
+     * POHJOISREUNA -8,5495 ON MEREN PUOLELLA. Se on tarkoituksellista:
+     * Dili on rakennettu kapealle rantatasangolle, ja ruudun yläreunan
+     * pitää olla vettä, jotta lukija näkee kaupungin selkä vuoriin ja
+     * kasvot lahdelle päin.
+     *
+     * ETELÄREUNA -8,5625 ON TORIHALLIN MUKAAN. Kauempana etelässä
+     * maasto nousee heti Lahanen suuntaan, ja siellä olevat kohteet
+     * (Palácio das Cinzas, Balide Comarca) on jätetty pois
+     * sisältösyistä — nykypolitiikkaa ja miehitysajan väkivallan
+     * muistopaikkoja ei käsitellä.
+     *
+     * CRISTO REI EI MAHDU EIKÄ SITÄ YRITETTY OTTAA MUKAAN: patsas on
+     * kuusi kilometriä itään Fatucaman niemellä, ja se on jo pelin
+     * karttanosto (js/packs/maastokohteet-tls.js, kohde cristo-rei).
+     *
+     * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+     * (tarkistus-dili.md, kohta E): Casa Europa on 178 metriä
+     * hallituspalatsista, vastarintamuseo 182 metriä samasta ja Liceu
+     * Dr. Francisco Machado 112 metriä BNU-pankkitalosta.
+     *
+     * meri: true. Dilin lahti on OSM:ssä rantaviivaa
+     * (natural=coastline) eikä vesimonikulmio, joten ilman lippua
+     * kartan koko pohjoisreuna olisi paperin värinen — sama syy kuin
+     * Darwinissa ja Honiarassa.
+     */
+    rajat: { pohjoinen: -8.5495, etela: -8.5625, lansi: 125.5655, ita: 125.5825 },
+    meri: true,
+  },
+  alicesprings: {
+    /*
+     * TODD-JOEN VARSI ANZAC HILLILTÄ OLIVE PINKIIN (7.9.2026). Ruutu on
+     * 1,7 × 1,8 kilometriä eli pelin tiiviimpiä, Darwinin ja Dilin
+     * luokkaa. Tiiviys ei ole valinta vaan mitattu lähdetilanne:
+     * Alice Springsin koko perintökortteli mahtuu kahdensadan metrin
+     * ympyrään (tarkistus-alicesprings.md, kohta F), ja laajempi ruutu
+     * olisi pelkkää esikaupunkia ilman yhtään kohdetta.
+     *
+     * POHJOISREUNA -23,6925 ON ANZAC HILLIN MUKAAN ja eteläreuna
+     * -23,7085 Olive Pinkin kasvitieteellisen puutarhan mukaan. Näiden
+     * väliin jää koko kaupunki: kukkula pohjoisessa, ruutukaava
+     * keskellä ja puutarha etelässä Todd-joen mutkassa.
+     *
+     * LÄNSIREUNA 133,8705 ON RAUTATIEASEMAN MUKAAN. Asema on kartan
+     * ainoa kohde joen länsipuolella, ja juuri siksi se otettiin
+     * mukaan: rata on se, mikä teki Stuartin kylästä kaupungin 1929,
+     * ja lukijan pitää nähdä, kummalla puolella jokea se kulkee.
+     *
+     * LENNÄTINASEMA JÄTETTIIN POIS, vaikka se on kaupungin
+     * kuuluisin rakennus. Se on kolme kilometriä pohjoiseen eli
+     * kaukana rajauksesta, ja se on jo kolmen muun pelin osan aihe:
+     * saapumisteksti (oceania-saapumiset.js), matkakirjan
+     * valokuvataulun ennen–nyt-pari (oceania-valokuvat.js) ja
+     * AUS-maalehden lennätinnosto (maa-kategoriat.js).
+     *
+     * VIISI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: The Residency
+     * 88 m, Griffiths House 127 m, Hartley Street School 159 m,
+     * Adelaide House 174 m ja Stuart Arms Hotel 189 m Stuart Town
+     * Gaolista. Adelaide House on lisäksi kaupunkilehden noston K4
+     * aihe, ja Todd Mall (137 m Pioneer-teatterista) on teemasivun
+     * aihe.
+     *
+     * meri: ei. Alice Springs on 545 metrin korkeudessa mantereen
+     * keskellä, ja Todd-joki on OSM:ssä tavallinen vesiväylä — ja
+     * lisäksi useimmiten kuiva.
+     */
+    rajat: { pohjoinen: -23.6925, etela: -23.7085, lansi: 133.8705, ita: 133.8875 },
+  },
   saopaulo: {
     /*
      * VANHA YDIN LUZISTA LARGO DE SÃO FRANCISCOON (7.9.2026). Ruutu

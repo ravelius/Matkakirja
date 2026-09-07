@@ -57974,4 +57974,537 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * DILI (Opus 7.9.2026). Kahdeksan juttua vastaavat kohdekartan
+   * kahdeksaa pistettä (maakartat.js: KAUPUNKIKARTAT.dili), ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Motael Church", "Port of Dili", "Government Palace,
+   * Dili", "Banco Nacional Ultramarino building, Dili", "National
+   * Stadium (Timor-Leste)", "Immaculate Conception Cathedral, Dili",
+   * "National Archives of Timor-Leste" ja "Municipal Market of
+   * Dili").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat kaupungin perustaminen 1769, vuoden 1873 jälleenrakennus,
+   * toinen maailmansota ja Tetun Prasa; teemasivu kertoo maastosta ja
+   * luonnosta. Lähimpänä ovat satama ja hallituspalatsi, joita lehti
+   * sivuaa yhdellä virkkeellä — jutut kertovat ankkuripaikan
+   * historiasta, vuoden 1964 laiturista ja kolmen eri palatsin
+   * sarjasta, joita opas ei käsittele.
+   *
+   * EI NYKYPOLITIIKKAA EIKÄ NYKYVÄKIVALTAA (Myanmar-linja). Kaikkien
+   * kahdeksan rakennuksen artikkelissa on vuoden 1999 tuhot ja usein
+   * miehitysajan tapahtumia; niitä ei toisteta. Palatsin jutusta on
+   * jätetty pois vuoden 1975 itsenäisyysjulistus ja invaasio,
+   * stadionin jutusta pakolaisleirit 1999 ja 2006, arkiston jutusta
+   * kaikki muu kuin arkiston oma toiminta. Vuosiluvut esiintyvät
+   * siellä, missä rakennuksen vaiheet edellyttävät.
+   *
+   * LÄHDERISTIRIITA, JOKA ON KIRJOITETTU AUKI: kansallisstadionin
+   * kapasiteetti on "National Stadium (Timor-Leste)" -artikkelin
+   * mukaan 5 000 ja "Dili"-artikkelin mukaan noin 9 000. Juttu antaa
+   * molemmat luvut ja sanoo, mistä ero todennäköisesti tulee
+   * (katsomot vs. nurmivallit) — se ei valitse puolta.
+   */
+  dili: {
+    'Motaelin kirkko': {
+      aika: '1955',
+      teksti: 'Santo António de Motaelin kirkko on Itä-Timorin vanhin '
+          + 'katolinen kirkko. Portugalilaisaikana Motael oli Dilin '
+          + 'portugalilaisen elämän keskus, ja ensimmäinen kirkko '
+          + 'rakennettiin tälle paikalle noin vuonna 1800. Maan '
+          + 'lahjoitti Mota-a inin liurai eli paikallinen kuningas — '
+          + 'kaupungin vanhin kirkko seisoo siis maalla, jonka '
+          + 'timorilainen hallitsija antoi.'
+          + '\n\n'
+          + 'Kirkkoa alettiin rakentaa uudelleen noin vuonna 1901. '
+          + 'Valmistumisvuotta ei tiedetä, mutta valmiista kirkosta on '
+          + 'merkintöjä vuodelta 1937; siinä ei silloin vielä ollut '
+          + 'kellotornia eikä pylväskuistia, jotka rakennuksella nyt '
+          + 'on. Japanilaiset ilmaiskut vaurioittivat kirkkoa osittain '
+          + 'toisen maailmansodan aikana, ja nykyinen rakennus on '
+          + 'vuodelta 1955.'
+          + '\n\n'
+          + 'Kirkko on omistettu Padovan Antoniukselle, joka '
+          + 'portugaliksi tunnetaan Lissabonin Antoniuksena. Se on '
+          + 'yli viidensadan portaan mittaisen ristintien päässä. '
+          + 'Ennen kuin kaupunkiin rakennettiin tuomiokirkko, Motaelin '
+          + 'kirkko toimi Dilin prokatedraalina.',
+      lahde: 'Wikipedia',
+    },
+    'Dilin satama': {
+      aika: '1726',
+      teksti: 'Dilin satama on pieni, avoin ja luonnollinen: '
+          + 'merenpohja on hiekkaa, mutta siinä on niin paljon '
+          + 'riuttoja, että käytettävissä oleva syväys vaihtelee '
+          + 'huomattavasti paikasta toiseen. Sataman reunaa kiertävä '
+          + 'luonnonriutta suojaa sitä sadekauden pahimmilta säiltä, '
+          + 'ja sisääntulo kulkee kapeaa väylää kahden erillisen '
+          + 'riutan välistä — ne näkyvät laskuvedellä ja on merkitty '
+          + 'poijuin.'
+          + '\n\n'
+          + 'Paikalla on ollut satama ainakin vuodesta 1726, jolloin '
+          + 'se oli jo portugalilaisten pysähdyspaikka. Skotlantilainen '
+          + 'John Crawfurd kirjoitti 1820, että Dilissä kävi vuosittain '
+          + 'kymmenestä kahteentoista englantilaista laivaa '
+          + 'täydentämässä varastojaan sinä aikana, kun britit '
+          + 'miehittivät Molukkeja 1810–1814. Sataman '
+          + 'satamalaitteet pysyivät silti vähäisinä pitkälle '
+          + '1900-luvulle: ennen vuotta 1964, jolloin ensimmäinen '
+          + 'kunnollinen laituri valmistui, lasti purettiin ja '
+          + 'lastattiin proomuilla.'
+          + '\n\n'
+          + '1800-luvun eurooppalaiset kävijät kirjoittivat satamasta '
+          + 'kitkerästi. Anna Forbes totesi 1880-luvulla, ettei kukaan '
+          + 'matkusta Diliin vapaaehtoisesti, koska sen maine '
+          + 'saariston epäterveellisimpänä satamana ei ole '
+          + 'ansaitsematon — kaupunkia ympäröivät silloin suot ja '
+          + 'liejutasangot. Nykyään satama on toisenlainen: '
+          + 'konttiliikenne siirtyi 30. syyskuuta 2022 Tibar Bayn '
+          + 'satamaan, ja vanha laituri palvelee kotimaan '
+          + 'matkustajalaivoja ja risteilijöitä.',
+      lahde: 'Wikipedia',
+    },
+    'Hallituspalatsi': {
+      aika: '1953–1969',
+      teksti: 'Dilissä on ollut kolme hallintopalatsia peräkkäin, ja '
+          + 'ne kertovat kaupungin kasvun. Ensimmäinen rakennettiin '
+          + '1874–1881 siirtomaakuvernöörin virka-asunnoksi: pitkä '
+          + 'yksikerroksinen talo, jonka julkisivussa oli pylväikkö. '
+          + 'Se lakkasi olemasta virka-asunto jo 1886, kun uusi '
+          + 'asunto, Lahanen palatsi, valmistui vuorille kaupungin '
+          + 'eteläpuolelle.'
+          + '\n\n'
+          + '1940-luvulla siirtomaan virastot olivat hajallaan '
+          + 'kolmessa talossa. Vanhassa palatsissa olivat hallituksen '
+          + 'sihteeristö, kuvernöörin työhuone, siviilihallinnon '
+          + 'johto ja sotilasosasto. Palvelurakennus, hyvin suuri talo '
+          + 'vuosilta 1882–1886, piti sisällään yleiset työt ja '
+          + 'postin. Kolmas, vaatimaton yksikerroksinen varainhoidon '
+          + 'talo vuodelta 1890, oli rakennettu sotilastarvikkeiden '
+          + 'varastoksi mutta toimi vuoteen 1909 asti väliaikaisena '
+          + 'sairaalana.'
+          + '\n\n'
+          + 'Nykyinen palatsi rakennettiin näiden tilalle 1950-luvun '
+          + 'alun ja 1960-luvun lopun välillä. Se on kolme '
+          + 'kaksikerroksista rakennusta, jotka yhdistää yksi '
+          + 'pylväskäytävä, ja ne valmistuivat eri aikoina vuosien '
+          + '1953 ja 1969 välillä. Talo seisoo Largo Infante Dom '
+          + 'Henriquen aukiolla aivan rannassa, ja paikka määriteltiin '
+          + 'jo vuoden 1951 kaavassa.',
+      lahde: 'Wikipedia',
+    },
+    'BNU-pankkitalo': {
+      aika: '1966–1968',
+      teksti: 'Banco Nacional Ultramarino perustettiin 1864 ja avasi '
+          + 'konttorin Dilissä 1912. Tavallisten pankkipalvelujen '
+          + 'lisäksi se hoiti Portugalin Timorin rahan: ensin patacan '
+          + 'ja myöhemmin escudon. Pankki oli myös siirtomaan suuri '
+          + 'sijoittaja, ja sen Dilin konttori toimi pitkään sen oman '
+          + 'sijoituskohteen pääkonttorissa — kunnes japanilaiset '
+          + 'tuhosivat talon toisessa maailmansodassa.'
+          + '\n\n'
+          + 'Oman talonsa pankki sai vasta 1960-luvun lopussa. '
+          + 'Fernando Schiappa de Camposin suunnittelema modernistinen '
+          + 'rakennus tehtiin 1966–1968, ja se on Dilissä '
+          + 'poikkeuksellinen: sillä on vain yksi aikalainen, ACAIT:n '
+          + 'talo. Molemmat olivat irtiotto siitä uusklassisesta '
+          + 'siirtomaatyylistä, jolla edustusrakennukset oli siihen '
+          + 'asti tehty.'
+          + '\n\n'
+          + 'Talo on ilmastoa varten suunniteltu. Katto on tasainen '
+          + 'terassi, ja rakennus seisoo pilareilla niin, että '
+          + 'pohjakerros kelluu maan yläpuolella. Etujulkisivu on '
+          + 'betoniritilä, joka suojaa ikkunoita suoralta '
+          + 'auringolta, ja itä–länsi-suuntaus jäähdyttää taloa: '
+          + 'vallitsevat tuulet käyvät mereltä pohjoisesta, ja aukot '
+          + 'pohjoiseen ja etelään pitävät auringon poissa idästä ja '
+          + 'lännestä.',
+      lahde: 'Wikipedia',
+    },
+    'Kansallisstadion': {
+      aika: '2015',
+      teksti: 'Itä-Timorin kansallisstadion tunnetaan myös nimellä '
+          + 'Dilin kaupunginstadion, ja portugaliksi molemmat nimet '
+          + 'ovat käytössä: Estádio Nacional de Timor-Leste ja Estádio '
+          + 'Municipal de Díli. Se on monikäyttöstadion, mutta '
+          + 'käytännössä sillä pelataan jalkapalloa, joka on maan '
+          + 'suosituin urheilulaji.'
+          + '\n\n'
+          + 'Katsomoja on kaksi, yksi kummallakin sivulla, ja muille '
+          + 'katsojille on nurmivallit. Kapasiteetista lähteet ovat '
+          + 'eri mieltä: stadionin oma artikkeli sanoo 5 000 ja '
+          + 'kaupungin artikkeli noin 9 000. Ero selittyy '
+          + 'todennäköisesti sillä, lasketaanko vallit mukaan, mutta '
+          + 'kumpikaan lähde ei sano sitä ääneen, joten tässä '
+          + 'annetaan molemmat luvut.'
+          + '\n\n'
+          + 'Vuodesta 2004 stadionilla on pelattu maan sarjojen '
+          + 'finaalit. Kenttä ja katsomot kunnostettiin kahdessa '
+          + 'erässä 2010-luvulla, ensin 2011 alkaneessa ja sitten '
+          + '2016 alkaneessa hankkeessa. 12. maaliskuuta 2015 '
+          + 'stadionilla pelattiin Itä-Timorin maajoukkueen '
+          + 'ensimmäinen kansainvälinen kotiottelu: vastassa oli '
+          + 'Mongolia, ja Itä-Timor voitti 4–1.',
+      lahde: 'Wikipedia',
+    },
+    'Tuomiokirkko': {
+      aika: '1988',
+      teksti: 'Tahrattoman sikiämisen tuomiokirkko on Dilin '
+          + 'arkkihiippakunnan pääkirkko. Sen suunnittelu alkoi 1984, '
+          + 'ja rakentaminen rahoitettiin noin 235 000 Yhdysvaltain '
+          + 'dollarilla. Kirkko seisoo kymmenentuhannen neliömetrin '
+          + 'tontilla, itse rakennus on 1 800 neliömetriä ja siihen '
+          + 'mahtuu kaksituhatta ihmistä.'
+          + '\n\n'
+          + 'Kirkko vihittiin käyttöön 2. marraskuuta 1988, ja sitä '
+          + 'pidettiin tuolloin Kaakkois-Aasian suurimpana '
+          + 'katedraalina. Vihkiäisissä oli läsnä Dilin apostolinen '
+          + 'hallintomies, piispa Carlos Filipe Ximenes Belo. '
+          + 'Lokakuussa 1989 kirkon siunasi paavi Johannes Paavali II '
+          + 'vieraillessaan saarella.'
+          + '\n\n'
+          + 'Ennen tuomiokirkkoa Dilin prokatedraalina toimi Motaelin '
+          + 'Santo Antóniolle omistettu kirkko kaupungin länsipäässä. '
+          + 'Kun uusi katedraali valmistui, hiippakunnan pääkirkko '
+          + 'siirtyi tänne. Huhtikuussa 2002, kolme viikkoa ennen '
+          + 'maan itsenäistymistä, kirkkoon kokoontui noin '
+          + 'kaksituhatta ihmistä ottamaan vastaan Portugalista '
+          + 'tuodun Fátiman Neitsyt Marian patsaan; Fátiman Maria on '
+          + 'Itä-Timorin suojeluspyhimys.',
+      lahde: 'Wikipedia',
+    },
+    'Kansallisarkisto': {
+      aika: '1999',
+      teksti: 'Dilin arkistoilla on onneton historia: kaupungin '
+          + 'arkistot ovat tuhoutuneet neljä kertaa — 1779, 1890, 1975 '
+          + 'ja 1999. Juuri siksi kaupungin oma menneisyys on '
+          + 'monelta osin kadonnut, ja juuri siksi kansallisarkisto on '
+          + 'olemassa.'
+          + '\n\n'
+          + 'Nykyinen arkisto perustettiin 1999 kolmen kansainvälisen '
+          + 'työntekijän voimin. Heinäkuussa 2000 palkattiin '
+          + 'ensimmäiset paikalliset työntekijät keräämään aineistoa, '
+          + 'ja samana vuonna perustettiin toimisto sisäisen hallinnon '
+          + 'osastolle. Vuonna 2001 kaksi työntekijää kävi puolen '
+          + 'vuoden koulutuksen Lissabonin historiallisessa arkistossa, '
+          + 'ja saman vuoden aikana arkisto korotettiin '
+          + 'kansalliseksi osastoksi.'
+          + '\n\n'
+          + 'Rakennuksen arkisto sai 2004, ja se oli aiemmin ollut '
+          + 'kansainvälisten rauhanturvaajien käytössä; talon '
+          + 'muutostyöt kestivät vuoteen 2007. Vuonna 2018 arkistossa '
+          + 'työskenteli 56 ihmistä. Tehtäviin kuuluu historiallisesti '
+          + 'tärkeiden asiakirjojen etsiminen ja entistäminen, niiden '
+          + 'säilytys, arkistotyön standardien kehittäminen sekä '
+          + 'aineiston avaaminen tutkijoille ja yleisölle.',
+      lahde: 'Wikipedia',
+    },
+    'Kaupungin torihalli': {
+      aika: '1960-luku',
+      teksti: 'Dilin vanha kaupungin torihalli, Mercado Municipal de '
+          + 'Díli, oli ensimmäinen kolmesta julkisesta torista, jotka '
+          + 'kaupunkiin rakennettiin ennen itsenäistymistä. Se '
+          + 'avattiin 1960-luvulla, ja sen sisällä käytiin kauppaa '
+          + 'lähes kaikilla paikallisilla tuotteilla. Rakennuksen '
+          + 'ympärillä oli laaja ulkotoriksi käytetty alue, jolla kävi '
+          + 'sunnuntaisin väkeä koko Dilin ulkopuolelta.'
+          + '\n\n'
+          + 'Tontti on noin hehtaarin kokoinen, ja sen keskellä on '
+          + 'ristinmuotoinen kaksikerroksinen talo. Neljä siipeä '
+          + 'jättävät väliinsä neljä puolipatiota, joista kukin '
+          + 'liittyy omaan ulkotorialueeseensa; siipien '
+          + 'risteyskohdassa oli jakelutila. Harjakattoa kruunaavat '
+          + 'siipien mittaiset kattolyhdyt, ja julkisivujen edessä '
+          + 'kulkevat kapeat kuistit. Kolme kattokerrosta — kuisti, '
+          + 'lape ja lyhty — ovat hyvin yksinkertaisia mutta tekevät '
+          + 'sisätilasta juuri torille sopivan.'
+          + '\n\n'
+          + 'Pääsisäänkäynti on itäsiiven päässä ja avautuu tontin '
+          + 'leveimmälle kohdalle. Se on puoliympyräportaali, jonka '
+          + 'yllä on kolmiopääty ja pyöristetty huippu, ja sen '
+          + 'kummallakin puolella pienempi portaali. Portaalin yllä '
+          + 'lukee Mercado Municipal de Dili, ja tekstin ja '
+          + 'räystäslistan välissä on Portugalin vaakunan '
+          + 'armillaaripallo ja kilpi. Rakennus on nykyään kunnostettu '
+          + 'kongressikeskukseksi.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * ALICE SPRINGS (Opus 7.9.2026). Kahdeksan juttua vastaavat
+   * kohdekartan kahdeksaa pistettä (maakartat.js:
+   * KAUPUNKIKARTAT.alicesprings), ja jokainen väite on luettu
+   * en-Wikipedian raakatekstistä 7.9.2026 (artikkelit "ANZAC Hill",
+   * "Totem Theatre", "Alice Springs railway station", "Stuart Town
+   * Gaol", "Pioneer Theatre", "Alice Springs Public Library",
+   * "Women's Museum of Australia", "Her Majesty's Gaol and Labour
+   * Prison, Alice Springs" ja "Olive Pink Botanic Garden").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Mparntwe, vuoden 1873 lennätinasema ja nimenvaihto,
+   * kameliajajat sekä Flynn ja radiokoulu; teemasivu kertoo
+   * Namatjirasta, Hermannsburgista, Papunya Tulasta ja Araluenista.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * PILARI 4: kolme syrjivää käytäntöä sanotaan yhdellä virkkeellä
+   * eikä niillä mässäillä. Stuart Town Gaolin erotellut sellit ovat
+   * vankilan omassa jutussa, vuosien 1928–1964 kaupunkirajojen
+   * päivärajoitus Pioneer-teatterin jutussa (koska se on juuri se
+   * syy, miksi elokuvateatteri oli sen ajan aboriginaaleille tärkeä),
+   * ja naisten museon jutussa kerrotaan, että talo oli vankila
+   * 1938–1996 — mutta vankilan vangitsemisluvut ja nuorisovangit on
+   * jätetty kokonaan pois. Kartan piste on museo, ei vankila.
+   */
+  alicesprings: {
+    'ANZAC Hill': {
+      aika: '1934',
+      teksti: 'ANZAC Hill on 608 metrin korkuinen kukkula keskellä '
+          + 'Alice Springsiä, ja se on arrernte-kansan maalla. Sen '
+          + 'arrernte-nimestä on kirjattu kaksi muotoa, '
+          + 'Untyeyetwelye ja Atnelkentyarliweke; edellinen on '
+          + 'peräisin paikallisen aboriginaaliradion aineistosta ja '
+          + 'jälkimmäinen David Brooksin kirjasta A town like '
+          + 'Mparntwe (2003).'
+          + '\n\n'
+          + 'Eurooppalainen nimi tulee muistomerkistä, joka on ollut '
+          + 'kukkulan laella vuodesta 1933. Pastori Harry Griffiths '
+          + 'suunnitteli muistomerkin samana vuonna, ja se '
+          + 'paljastettiin Anzac-päivänä 1934. Griffithsin ja hänen '
+          + 'vaimonsa tuhkat sijoitettiin muistomerkille 2. kesäkuuta '
+          + '1987.'
+          + '\n\n'
+          + 'Toisen maailmansodan aikana kukkulan ympäristö oli '
+          + 'armeijan käytössä, ja sen juurella oli suuria leirejä. '
+          + 'Kukkulalle nousee portaat, ja laelta näkyy kaupungin '
+          + 'ruutukaava, Todd-joen uoma ja MacDonnell-vuorten '
+          + 'Heavitree Gap eteläreunassa.',
+      lahde: 'Wikipedia',
+    },
+    'Totem-teatteri': {
+      aika: '1945',
+      teksti: 'Totem-teatterin kaksi päärakennusta ovat Sidney '
+          + 'Williams -halleja, jotka Australian armeija pystytti '
+          + 'vuonna 1945. Sota toi Alice Springsiin poikkeuksellisen '
+          + 'määrän sotilaita ja siviilityövoimaa, ja sen mukana '
+          + 'kaupunki sai parannuksia, jotka jäivät: Stuart Highwayn '
+          + 'päällystyksen, vanhan lennätinlinjan kunnostuksen niin '
+          + 'että kaukopuhelut tulivat mahdollisiksi, ja ensimmäistä '
+          + 'kertaa juoksevan veden koteihin.'
+          + '\n\n'
+          + 'Sodan jälkeen armeijan omaisuus inventoitiin ja pantiin '
+          + 'myyntiin. Sidney Williams -hallit olivat erityisen '
+          + 'haluttuja, ja useimmat siirrettiin muualle tai '
+          + 'muutettiin asunnoiksi ja liiketiloiksi; ne on sittemmin '
+          + 'lähes kaikki purettu. Totem-teatterin rakennukset jäivät '
+          + 'paikoilleen ja näyttävät olleen enimmäkseen tyhjillään, '
+          + 'kunnes Alice Springs Theatre Group vuokrasi ne 1963 ja '
+          + 'avasi maaliskuussa 1964 Totem Club House Theatren.'
+          + '\n\n'
+          + 'Molempia rakennuksia on muutettu käyttöä varten, mutta '
+          + 'niissä on yhä suurin osa alkuperäisistä osista. Talo '
+          + 'merkittiin Pohjoisterritorion suojelurekisteriin 18. '
+          + 'tammikuuta 2006. Nykyään teatterissa esitetään vuosittain '
+          + 'musikaali sekä näytelmiä, komediailtoja, lausuntaa ja '
+          + 'elävää musiikkia, ja se on yksi Alice Desert Festivalin '
+          + 'päänäyttämöistä.',
+      lahde: 'Wikipedia',
+    },
+    'Rautatieasema': {
+      aika: '1929',
+      teksti: 'Ensimmäinen rautatieasema avattiin Railway Terracella '
+          + '2. elokuuta 1929, kun 1 067 millimetrin kapearaiteinen '
+          + 'rata jatkettiin Oodnadattasta pohjoiseen. Ensimmäiset '
+          + 'yksitoista kuukautta asema oli nimeltään Stuart, sama '
+          + 'kuin viereinen taajama. Koko Australiassa paikka '
+          + 'kuitenkin tunnettiin nimellä Alice Springs, joka oli '
+          + 'kolme ja puoli kilometriä pohjoisempana olevan '
+          + 'lennätinaseman nimi, ja Commonwealth Railways ilmoitti '
+          + 'nimenmuutoksesta 8. heinäkuuta 1930 juuri sillä '
+          + 'perusteella. Asema vaihtoi siis nimensä kolme vuotta '
+          + 'ennen kaupunkia.'
+          + '\n\n'
+          + 'Puinen asemarakennus korvattiin, kun uusi 1 435 '
+          + 'millimetrin normaaliraiteinen rata avattiin Tarcoolasta '
+          + '9. lokakuuta 1980. Se oli radan pääteasema siihen asti, '
+          + 'kunnes linja jatkettiin Darwiniin helmikuussa 2004. '
+          + 'Adelaidelainen arkkitehti Guy Maron suunnitteli talon, ja '
+          + 'se sai 2015 Pohjoisterritorion kestävän arkkitehtuurin '
+          + 'palkinnon — 35 vuotta valmistumisensa jälkeen.'
+          + '\n\n'
+          + 'Nykyisen aseman aulassa on kuvanveistäjä Gabriel Sterkin '
+          + 'muistomerkki afgaanikameliajajille, jotka kuljettivat '
+          + 'tarvikkeet Keski-Australiaan ennen radan rakentamista. '
+          + 'Asemaa palvelee matkailujuna Ghan, joka kulkee '
+          + 'tavallisesti kerran viikossa kumpaankin suuntaan.',
+      lahde: 'Wikipedia',
+    },
+    'Stuart Town Gaol': {
+      aika: '1907',
+      teksti: 'Parson Streetin varrella oleva Stuart Town Gaol '
+          + 'rakennettiin 1907. Se on kaupungin varhaisimpia pysyviä '
+          + 'rakennuksia ja sen ensimmäinen hallintorakennus, ja '
+          + 'kivimuurari Jack Williams teki sen paikallisista '
+          + 'aineksista yksinkertaisen suunnitelman mukaan. Vuosiluku '
+          + 'kannattaa panna merkille: kaupungin oma Wikipedia-'
+          + 'artikkeli sanoo 1909, mutta rakennuksen oma artikkeli '
+          + 'antaa 1907 katuosoitteen ja rakentajan kanssa.'
+          + '\n\n'
+          + 'Ennen vankilaa vangit vietiin vuosina 1863–1910 pääosin '
+          + 'Port Augustaan, 1 200 kilometrin päähän etelään, jossa '
+          + 'heidät tuomittiin ja vangittiin. Talossa oli hyvin pieni '
+          + 'selli valkoisille vangeille, joilla oli puiset lavitsat, '
+          + 'ja suuri selli aboriginaalivangeille; takana oli '
+          + 'kattamaton ulkoilupiha ja sen poikki muuri. Suuren '
+          + 'sellin lattiaan on valettu rautarenkaita. Monille '
+          + 'aboriginaalivangeille vankila oli ensimmäinen kosketus '
+          + 'eurooppalaisiin, ja vankilan kirjoista näkyy suora '
+          + 'yhteys kuivuuskausien ja karjavarkaussyytteiden välillä.'
+          + '\n\n'
+          + 'Ensimmäinen vartija oli poliisi Robert Stott, joka oli '
+          + 'käytännössä koko kaupungin hallinnollinen johtaja; hän '
+          + 'asui vankilan vieressä ja piti talojen välissä suurta '
+          + 'kaalimaata. Vankila oli käytössä 1938 asti, jolloin se '
+          + 'oli ylitäysi ja — mikä painoi aikanaan enemmän — sen '
+          + 'sijainti aivan kaupungin keskellä katsottiin '
+          + 'sopimattomaksi. 1970-luvulla talo oli purku-uhan alla, '
+          + 'mutta National Trust pelasti sen, ja 1985 se merkittiin '
+          + 'kansallisen perinnön rekisteriin.',
+      lahde: 'Wikipedia',
+    },
+    'Pioneer-teatteri': {
+      aika: '1942',
+      teksti: 'Leslie Kenna, jota kaikki kutsuivat Snowksi, saapui '
+          + 'Alice Springsiin vuoden 1936 jälkipuoliskolla mukanaan '
+          + 'elokuvakalusto ja tonni nitraattifilmiä. Vuonna 1942 hän '
+          + 'rakensi Parsons Streetille oman teatterinsa. Siinä ei '
+          + 'ollut kattoa: kaupungissa ei ollut ilmastointia, ja '
+          + 'katoton sali ja kansituolit pitivät katsojat viileinä. '
+          + 'Talvella, kun lämpötila menee pakkasen puolelle, väki toi '
+          + 'mukanaan huopia, kuumavesipulloja ja termospullollisen '
+          + 'kahvia.'
+          + '\n\n'
+          + 'Elokuvat olivat kaupungin seuraelämän kannalta '
+          + 'poikkeuksellisen tärkeitä, ja syy oli karu: vuosina '
+          + '1928–1964 aboriginaalit saivat olla kaupungin rajojen '
+          + 'sisällä päiväsaikaan vain lääkäriin mennäkseen ja '
+          + 'iltaisin vain elokuvissa. Ulkoilmasaliin kulkeutui '
+          + 'säännöllisesti koiria kaupungin laidan leireistä '
+          + 'omistajiensa mukana, ja ne pitivät oman esityksensä.'
+          + '\n\n'
+          + 'Vuonna 1955 salissa nähtiin Jedda-elokuvan Alice '
+          + 'Springsin ensi-ilta; pääosassa oli paikallinen tyttö Rose '
+          + 'Kgarla Kunoth, ja suuri osa elokuvasta oli kuvattu '
+          + 'Keski-Australiassa. Vuoden 1956 A Town Like Alice '
+          + '-elokuvan pusikkoensi-illassa hermannsburgilaiset '
+          + 'arrernte-miehet lauloivat väliajalla arrernten kielellä; '
+          + 'paikalla olivat muun muassa näyttelijä Peter Finch ja '
+          + 'kirjailija Nevil Shute. Ilta tuotti lähes tuhat puntaa, '
+          + 'ja Kenna lahjoitti koko summan lentävän lääkärin '
+          + 'palvelulle. Teatteri suljettiin 1984.',
+      lahde: 'Wikipedia',
+    },
+    'Kaupunginkirjasto': {
+      aika: '1953',
+      teksti: 'Alice Springsin kaupunginkirjaston virallinen nimi on '
+          + 'Nevil Shute Memorial Library, mutta nimeä ei juuri '
+          + 'käytetä. Se sai sen, kun nykyinen talo avattiin 19. '
+          + 'lokakuuta 1980: kirjailijan romaani A Town Like Alice ja '
+          + 'siitä tehty elokuva olivat tehneet kaupungin tunnetuksi. '
+          + 'Nimi oli kiistanalainen jo avajaisissa eikä ole '
+          + 'koskaan vakiintunut puhekieleen.'
+          + '\n\n'
+          + 'Kirjastoja on kaupungissa ollut alusta asti pieninä. '
+          + '1930-luvulla maaseudun naisjärjestö piti omaa pientä '
+          + 'kokoelmaansa, jonka Pohjoisterritorion hallitus otti '
+          + 'haltuunsa 1938; vuoteen 1940 mennessä kirjoja oli 760. '
+          + 'Sota katkaisi toiminnan, ja sen jälkeen Australian '
+          + 'kansalliskirjasto rahoitti kaupungin ensimmäisen '
+          + 'varsinaisen yleisen kirjaston vanhaan Gum Tree Cafén '
+          + 'taloon. Ensimmäinen kirjastonhoitaja Joy Cuskey saapui '
+          + '28. elokuuta 1953 kolmentuhannen kirjan kanssa, jotka hän '
+          + 'oli kuljettanut Darwinista paloautolla.'
+          + '\n\n'
+          + 'Kirjastossa käy nykyään yli 120 000 kävijää vuodessa, ja '
+          + 'sillä on kaksi lainaamatonta erikoiskokoelmaa. Alice '
+          + 'Springs Collection kerää Keski-Australian historiaa, '
+          + 'tiedettä ja kulttuuria; sitä säilytettiin aluksi '
+          + 'lukitussa huoneessa, mutta 1995 kirjastoon rakennettiin '
+          + 'sitä varten oma lukusali. Kokoelmaan kuuluu myös yli '
+          + 'kuusituhatta valokuvaa ja Centralian Advocate -lehden '
+          + 'vuosikerrat 1947–2015. Ulkoseinässä on muraali, jonka '
+          + 'Billy Tjampijinpa Kenda suunnitteli ja maalasi Bindi '
+          + 'Mwerre Anthurre Artists -ryhmän kanssa vuonna 2020.',
+      lahde: 'Wikipedia',
+    },
+    'Australian naisten museo': {
+      aika: '1993',
+      teksti: 'Australian naisten museo, aiemmalta nimeltään National '
+          + 'Pioneer Women’s Hall of Fame, kertoo naisten '
+          + 'paikasta Australian historiassa. Sen perusti 1993 Molly '
+          + 'Clark Old Andadon karjatilalta. Vuoteen 2001 mennessä '
+          + 'ensimmäiset tilat kävivät ahtaiksi, ja museolle '
+          + 'tarjottiin uudeksi paikaksi suojeltua vanhaa vankilaa '
+          + 'kaupungin perintökorttelissa.'
+          + '\n\n'
+          + 'Museo avattiin uudessa paikassaan 2007, ja avaajana oli '
+          + 'naisasioista vastaava ministeri Marion Scrymgour, '
+          + 'ensimmäinen Pohjoisterritorion parlamenttiin valittu '
+          + 'alkuperäiskansaan kuuluva nainen. Nimi muutettiin '
+          + 'Australian naisten museoksi 2019, ja seuraavana vuonna '
+          + 'aloitettiin piha-alueen kunnostus ja uusien näyttelyiden '
+          + 'suunnittelu.'
+          + '\n\n'
+          + 'Pysyviä näyttelyitä ovat muun muassa Ordinary Women / '
+          + 'Extraordinary Lives, joka esittelee alallaan '
+          + 'ensimmäisinä olleita naisia, sisämaan naisten elämästä '
+          + 'kertova Women at the Heart, työn arvoa käsittelevä '
+          + 'What’s Work Worth ja lentäjänaisille omistettu '
+          + 'Aviatrix Tapestry. Kokoelman tunnetuin esine on suuri '
+          + 'nimikirjoitustilkkutäkki. Talo itse on Her Majesty’s '
+          + 'Gaol and Labour Prison, joka toimi vankilana vuosina '
+          + '1938–1996 ja sai suojelustatuksen 1993. Museon patroneja '
+          + 'ovat entinen kenraalikuvernööri Quentin Bryce ja Gaby '
+          + 'Kennard, ensimmäinen australialainen nainen, joka lensi '
+          + 'yksin maapallon ympäri.',
+      lahde: 'Wikipedia',
+    },
+    'Olive Pinkin puutarha': {
+      aika: '1956',
+      teksti: 'Olive Pinkin kasvitieteellinen puutarha on '
+          + 'kuudentoista hehtaarin alue Todd-joen itäpuolella '
+          + 'kaupungin keskustan eteläreunassa, ja se on '
+          + 'erikoistunut Keski-Australian kuivan alueen kasveihin. '
+          + 'Alue määrättiin 1956 Australian kuivien alueiden '
+          + 'kasvistoreserviksi sen jälkeen, kun sen perustaja ja '
+          + 'ensimmäinen kunniakuraattori Olive Muriel Pink oli '
+          + 'lobannut asiaa sitkeästi.'
+          + '\n\n'
+          + 'Ennen vuotta 1956 maa oli ollut käyttämätöntä ja siellä '
+          + 'olivat laiduntaneet villivuohet, kanit ja karja, niin '
+          + 'että tulvatasangon kasvillisuus oli muuttunut '
+          + 'perusteellisesti eikä puita tai pensaita ollut jäljellä. '
+          + 'Pink ja hänen warlpiri-avustajansa käyttivät seuraavat '
+          + 'kaksi vuosikymmentä kuivuutta ja lähes olematonta '
+          + 'rahoitusta vastaan taistellen: he istuttivat '
+          + 'keskiaustralialaisia puita ja pensaita sekä majan '
+          + 'ympärille kaktuksia ja puutarhakukkia, jotka kestivät '
+          + 'ankarat kesät.'
+          + '\n\n'
+          + 'Pinkin kuoltua 1975 Pohjoisterritorion hallitus otti '
+          + 'alueen hoitoonsa ja alkoi toteuttaa hänen ajatustaan '
+          + 'julkisesta paikasta, jossa kotimaista kasvistoa voi '
+          + 'katsella. Seuraavan vuosikymmenen aikana rakennettiin '
+          + 'polkuverkosto ja vierailukeskus, istutettiin mulgaa ja '
+          + 'punaeukalyptuksia ja tehtiin vesiaihe sekä '
+          + 'hiekkadyynielinympäristö. Puutarha avattiin yleisölle '
+          + '1985 nimellä Olive Pink Flora Reserve ja sai nykyisen '
+          + 'nimensä 1996. Se merkittiin kansallisen perinnön '
+          + 'rekisteriin 30. toukokuuta 1995 nimenomaan siksi, että '
+          + 'sillä on vahva side Pinkiin — antropologiin, '
+          + 'aboriginaalien oikeuksien puolustajaan, taiteilijaan ja '
+          + 'puutarhurivisionääriin.',
+      lahde: 'Wikipedia',
+    },
+  },
 };
