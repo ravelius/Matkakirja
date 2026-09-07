@@ -132,13 +132,20 @@
 /*
  * KEHYS — LAATIKON ULKOPUOLINEN KAJO (omistaja 6.9.2026 keskipäivä).
  *
- * Laatikko itse on leikattu repaleiseksi paperiksi (clip-path), ja
- * clip-path leikkaa myös elementin oman box-shadow'n. Siksi lämmin
- * hehku mustaan piirretään erilliseen leikkaamattomaan kehykseen.
- * Kajon voimakkuus tulee lyhtyjen keskikirkkaudesta (js/lyhty.js
- * laatikonValo → --lyhty-ulko), joten pimeässä ruudussa laatikko on
- * ainoa valonlähde ja se sykkii liekkien tahdissa. Muuttujilla on
- * oletusarvot: ilman skriptiä paperi näyttää samalta, vain paikallaan.
+ * Kehys on paperin ja sen kajokerroksen yhteinen vanhempi. Kajo EI ole
+ * enää kehyksen box-shadow: omistajan havainto 7.9.2026 illalla oli,
+ * että suorakulmainen varjo ei myötäile repaleista reunaa ja lovien
+ * pohjalla näkyy mustaa. Nyt hehku on oma kerroksensa
+ * (.aikajana-avaus-hehku), joka saa paperin OMAN muodon sumennettuna
+ * (js/pergamentti.js, css/styles.css "PERGAMENTIN REPALEINEN REUNA").
+ * Kajon voimakkuus tulee edelleen lyhtyjen keskikirkkaudesta
+ * (js/lyhty.js laatikonValo → --lyhty-ulko), joten pimeässä ruudussa
+ * laatikko on ainoa valonlähde ja se sykkii liekkien tahdissa.
+ * Muuttujilla on oletusarvot: ilman skriptiä paperi näyttää samalta,
+ * vain paikallaan.
+ *
+ * Musta pudotusvarjo poistui samalla: peite alla on puhdas #000, joten
+ * musta varjo mustaa vasten ei piirtänyt mitään.
  *
  * Sisääntuloliuku on täällä eikä paperissa, jotta kajo ja paperi
  * saapuvat yhtenä kappaleena.
@@ -149,14 +156,17 @@
   position: relative;
   z-index: 1;
   width: min(31rem, 88%);
-  box-shadow:
-    0 18px 52px rgba(0, 0, 0, 0.78),
-    0 0 42px rgba(255, 170, 76, var(--lyhty-ulko)),
-    0 0 110px rgba(255, 138, 44, calc(var(--lyhty-ulko) * 0.42));
   opacity: 0;
   transform: translateY(10px) scale(0.97);
   transition: opacity 420ms ease, transform 420ms cubic-bezier(0.45, 0.03, 0.22, 1);
 }
+/*
+ * KAJOKERROS: paperin muoto lämpimänä ja sumennettuna, paperin ALLA.
+ * Muoto ja peittävyys tulevat yhteisestä osasta (.pergamentti-hehku);
+ * täällä vain paikka pinossa. Kuva on staattinen — liikkuva osa on
+ * pelkkä opacity, jonka lyhtyjen syke kirjoittaa kehykseen.
+ */
+.aikajana-avaus-hehku { z-index: 0; }
 /*
  * PAPERI VALOKEILASSA (omistaja 4.9.2026: *"saadaanko aloitustekstipopup
  * muutettua bittikartaksi ja saadaanko sen päälle tehtyä kumpaankin
@@ -172,9 +182,11 @@
  * tasaisena beigenä laattana. Nyt elävyys tulee kolmesta kerroksesta,
  * eikä yhtään kuvatiedostoa lisätty:
  *
- *   1. REUNAT ovat repaleiset: clip-path-monikulmio, jonka joka
- *      reunalla on kahdeksan epätasaista pistettä (poikkeama noin
- *      1,5 % mitasta). Käsin revitty arkki ei ole suora.
+ *   1. REUNAT ovat repaleiset: SVG-maski, jonka reunaa rikkoo kaksi
+ *      turbulenssikerrosta (js/pergamentti.js). Entinen
+ *      clip-path-monikulmio poistui 7.9.2026 illalla — omistaja luki
+ *      sen tasavälisen sahalaidan geometriseksi kuvioksi eikä
+ *      repeämäksi. Käsin revitty arkki ei ole suora EIKÄ tasavälinen.
  *   2. TEKSTUURI on kaksi SVG-kohinaa (feTurbulence, data-URI): hieno
  *      kuitu (baseFrequency 1,1) ja karkea pilvimäinen kellastuma
  *      (baseFrequency 0,012–0,02, neljä oktaavia). Kumpikin
@@ -216,22 +228,21 @@
   background-repeat: repeat, no-repeat, no-repeat, no-repeat;
   background-blend-mode: multiply, multiply, normal, normal;
   /*
-   * REPALEINEN REUNA. Monikulmio kulkee myötäpäivään yläreunasta;
-   * poikkeamat ovat noin 1,5 % laatikon mitasta, eli 500 px leveällä
-   * paperilla 7–8 px. Sisennys (padding) on niin suuri, ettei
-   * repeämä yllä tekstiin.
+   * REPALEINEN REUNA tulee yhteisestä osasta: js/pergamentti.js antaa
+   * luokan .pergamentti-repale ja SVG-maskin (--pergamentti-maski),
+   * jonka reunaa rikkoo kaksi turbulenssikerrosta ja pehmentää pieni
+   * sumennus. Siemen on kaaren otsikko, joten sama kaari saa aina
+   * saman reunan mutta kaksi kaarta eivät ole identtisiä.
+   *
+   * Kellastunut reunavyö kolmena kerroksena. Säteet ovat suuremmat
+   * kuin clip-path-aikana: inset-varjo piirtyy elementin SUORAAN
+   * reunaan, josta maski syö ulomman ~3 %, joten kapea vyö olisi
+   * jäänyt maskin alle. Nyt vyö yltää repeämän sisäpuolelle asti.
    */
-  clip-path: polygon(
-    0.7% 1.3%, 12% 0.2%, 23% 1.7%, 35% 0.4%, 47% 1.5%, 58% 0.3%, 70% 1.6%, 82% 0.5%, 92% 1.8%, 99.4% 0.6%,
-    99.1% 12%, 100% 26%, 98.7% 40%, 99.8% 55%, 98.8% 70%, 99.9% 84%, 99.3% 98.4%,
-    88% 99.6%, 76% 98.3%, 64% 99.7%, 52% 98.4%, 40% 99.6%, 28% 98.5%, 16% 99.8%, 5% 98.6%, 0.6% 99.2%,
-    1.2% 86%, 0.1% 72%, 1.5% 58%, 0.2% 43%, 1.4% 29%, 0.3% 15%
-  );
-  /* Kellastunut reunavyö kolmena kerroksena: repeämä on tummin. */
   box-shadow:
-    inset 0 0 10px rgba(74, 46, 12, 0.55),
-    inset 0 0 26px rgba(86, 56, 18, 0.34),
-    inset 0 0 62px rgba(58, 36, 10, 0.28);
+    inset 0 0 22px rgba(74, 46, 12, 0.55),
+    inset 0 0 46px rgba(86, 56, 18, 0.34),
+    inset 0 0 92px rgba(58, 36, 10, 0.28);
   color: #2b2116;
   font-family: var(--font-luku);
   text-align: center;

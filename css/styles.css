@@ -25118,3 +25118,64 @@ body.maatiedot-tila .pallolauta-nappula { display: none; }
   .kt-rivit.kt-avautuu { animation: none; }
   .kt-rivi { transition: none; }
 }
+
+/* ===========================================================================
+   PERGAMENTIN REPALEINEN REUNA — yhteinen osa (js/pergamentti.js)
+   ---------------------------------------------------------------------------
+   Omistaja 7.9.2026 ilta (iPad, Ihmisen matkan avauslaatikko),
+   sanatarkasti: *"Paperin rosoiset reunat ovat aivan liian geometrisiä
+   ja niiden takaa näkyy täysin mustaa, vaikka paperin ympärillä on
+   sitten kevyt hehku. Saisiko sen paperin ääriviivan tehtyä
+   luonnollisemmin? Tämä on kuitenkin monessa paikkaa toistuva osa,
+   niin voi tehdä huolella."*
+
+   Vanha reuna oli clip-path-monikulmio (kahdeksan tasavälistä pistettä
+   per reuna) ja kajo suorakulmainen box-shadow leikkaamattomassa
+   kehyksessä — lovien pohjalla näkyi mustaa. Nyt kumpikin tulee
+   SAMASTA SVG-muodosta, jonka js/pergamentti.js laskee siemenestä:
+
+     .pergamentti-repale  paperi maskataan repaleiseksi
+                          (--pergamentti-maski)
+     .pergamentti-hehku   sisarelementti paperin ALLA, sama muoto
+                          lämpimänä ja sumennettuna
+                          (--pergamentti-hehkukuva)
+
+   Kumpikin kuva venytetään elementin kokoon (100% 100%). Hehkukerros
+   on `inset: -15%` eli 1,3-kertainen, ja hehkukuvan viewBox on samoin
+   1,3-kertainen — venytys on siis AKSELEITTAIN sama kummallakin ja
+   muodot osuvat päällekkäin laatikon koosta riippumatta.
+
+   Kajon voimakkuus tulee lyhtyjen keskikirkkaudesta (js/lyhty.js
+   laatikonValo → --lyhty-ulko): syke muuttaa VAIN opacityä, kuvat ovat
+   staattisia. Ei CSS-suodattimia (sumennus on leivottu kuvaan) —
+   iOS-kuoressa filter on mitatusti jäänyt piirtymättä, SVG kuvana ei.
+   prefers-reduced-motion ei vaikuta: reuna ei liiku.
+   =========================================================================== */
+.pergamentti-repale {
+  -webkit-mask-image: var(--pergamentti-maski, none);
+  mask-image: var(--pergamentti-maski, none);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+.pergamentti-hehku {
+  position: absolute;
+  /* Sama kasvu kuin js/pergamentti.js HEHKU_KASVU (0,15). */
+  inset: -15%;
+  z-index: 0;
+  pointer-events: none;
+  background-image: var(--pergamentti-hehkukuva, none);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /*
+   * Lyhtyjen syke: --lyhty-ulko 0,155…0,38 → peittävyys 0,29…0,57.
+   * Omistajan sanat ovat "kevyt hehku": kajo saa myötäillä reunaa,
+   * ei polttaa paperia. Ensimmäinen mittaus (0,28 + 2,2 ×) luki
+   * kuvakaappauksessa liekkinä, ei valona.
+   */
+  opacity: calc(0.14 + 1.15 * var(--lyhty-ulko, 0.26));
+}

@@ -1527,10 +1527,15 @@ test('Käynnistä-nappi on täytetty eikä läpinäkyvä kehys', () => {
  */
 test('avauslaatikon paperi on repaleinen ja tekstuuriltaan monikerroksinen', () => {
   const avaus = AIKAJANA_CSS.match(/\.aikajana-avaus-laatikko \{[\s\S]*?\n\}/)[0];
-  // 1. Repaleinen reuna: monikulmio, ei suorakaide eikä pyöristys.
-  const monikulmio = avaus.match(/clip-path: polygon\(([\s\S]*?)\);/)[1];
-  assert.ok(monikulmio.split(',').length >= 24, 'reunassa on liian vähän pisteitä ollakseen repaleinen');
+  /*
+   * 1. Repaleinen reuna tulee YHTEISESTÄ OSASTA (js/pergamentti.js),
+   * ei enää clip-path-monikulmiosta — omistaja 7.9.2026 ilta:
+   * *"Paperin rosoiset reunat ovat aivan liian geometrisiä"*.
+   * Tasavälinen kahdeksan pisteen sahalaita luki kuviona.
+   */
+  assert.ok(!/clip-path:/.test(avaus), 'clip-path-monikulmio korvattiin SVG-maskilla');
   assert.ok(!avaus.includes('border-radius'), 'repaleinen paperi ei ole pyöristetty suorakaide');
+  assert.match(MOOTTORI, /repaleinenPaperi\(laatikko, \{ siemen: siemenNimesta\(otsikko\), hehku \}\);/);
   // 2. Kaksi kohinakerrosta (hieno kuitu ja karkea kellastuma), multiply.
   assert.equal((avaus.match(/feTurbulence/g) ?? []).length, 2, 'kohinaa pitää olla kaksi eri karkeutta');
   assert.match(avaus, /background-blend-mode: multiply, multiply, normal, normal;/);
@@ -1540,8 +1545,38 @@ test('avauslaatikon paperi on repaleinen ja tekstuuriltaan monikerroksinen', () 
   assert.ok((laiskat.match(/radial-gradient/g) ?? []).length >= 6, 'läiskiä on liian vähän');
   assert.match(laiskat, /mix-blend-mode: multiply;/);
   assert.match(laiskat, /z-index: 0;/);
-  // Kellastunut reunavyö useampana inset-kerroksena.
-  assert.ok((avaus.match(/inset 0 0 \d+px/g) ?? []).length >= 3, 'reunavyö tarvitsee useamman kerroksen');
+  // Kellastunut reunavyö useampana inset-kerroksena. Säteet ovat
+  // maskin marginaalia suuremmat, jottei vyö jää maskin alle.
+  const vyot = [...avaus.matchAll(/inset 0 0 (\d+)px/g)].map((m) => Number(m[1]));
+  assert.ok(vyot.length >= 3, 'reunavyö tarvitsee useamman kerroksen');
+  assert.ok(Math.min(...vyot) >= 20, 'kapein reunavyö jäisi repeämän maskin alle');
+});
+
+/*
+ * KAJO MYÖTÄILEE REUNAA (omistaja 7.9.2026 ilta): hehku ei ole enää
+ * kehyksen suorakulmainen box-shadow vaan oma kerroksensa, joka saa
+ * paperin OMAN muodon sumennettuna. Ilman tätä lovien pohjalla näkyi
+ * puhdasta mustaa. Pikselimittaus: tools/savukkeet/savuke-pergamentti.mjs.
+ */
+test('avauslaatikon kajo saa saman repaleisen muodon kuin paperi', () => {
+  const kehys = AIKAJANA_CSS.match(/\.aikajana-avaus-kehys \{[\s\S]*?\n\}/)[0];
+  assert.ok(!kehys.includes('box-shadow'), 'suorakulmainen kajo poistui kehykseltä');
+  assert.match(AIKAJANA_CSS, /\.aikajana-avaus-hehku \{ z-index: 0; \}/);
+  // Kerros luodaan paperin SISARENA ja saa saman siemenen.
+  assert.match(MOOTTORI, /const hehku = solmu\('div', 'aikajana-avaus-hehku'\);/);
+  assert.match(MOOTTORI, /kehys\.append\(hehku, laatikko\);/);
+  // Yhteinen osa: maski ja hehkukuva samasta siemenestä, ei CSS-suodatinta.
+  const yhteinen = STYLES.match(/\.pergamentti-repale \{[\s\S]*?\n\}/)[0];
+  assert.match(yhteinen, /mask-image: var\(--pergamentti-maski, none\);/);
+  assert.match(yhteinen, /-webkit-mask-image: var\(--pergamentti-maski, none\);/);
+  assert.match(yhteinen, /mask-size: 100% 100%;/);
+  const hehku = STYLES.match(/\.pergamentti-hehku \{[\s\S]*?\n\}/)[0];
+  assert.match(hehku, /inset: -15%;/);
+  assert.match(hehku, /background-image: var\(--pergamentti-hehkukuva, none\);/);
+  // Syke tulee lyhdyistä ja koskee VAIN peittävyyttä (kuva on staattinen).
+  assert.match(hehku, /opacity: calc\(0\.14 \+ 1\.15 \* var\(--lyhty-ulko, 0\.26\)\);/);
+  assert.ok(!hehku.includes('filter:'), 'sumennus on leivottu kuvaan, ei CSS-suodattimeen');
+  assert.ok(!hehku.includes('animation'), 'maski ja kajo ovat staattisia');
 });
 
 /*
@@ -1556,18 +1591,19 @@ test('laatikon varjo ja ulkokajo hengittävät lyhtyjen tahdissa', () => {
   assert.match(varjo, /z-index: 1;/);
   // Alakulmat tummuvat omilla gradienteillaan.
   assert.ok((varjo.match(/at \d+% 100%/g) ?? []).length === 2, 'kumpikin alakulma tarvitsee oman varjon');
-  /*
-   * Ulkokajo asuu KEHYKSESSÄ eikä paperissa: clip-path leikkaisi
-   * elementin oman box-shadow'n pois.
-   */
   const kehys = AIKAJANA_CSS.match(/\.aikajana-avaus-kehys \{[\s\S]*?\n\}/)[0];
   assert.match(kehys, /--lyhty-varjo: 0\.25;/);
   assert.match(kehys, /--lyhty-ulko: 0\.26;/);
-  assert.match(kehys, /box-shadow:[\s\S]*?rgba\(255, 170, 76, var\(--lyhty-ulko\)\)/);
+  /*
+   * Ulkokajo asuu omassa KERROKSESSAAN (.pergamentti-hehku), joka saa
+   * paperin muodon — ei kehyksen suorakulmaisessa box-shadow'ssa.
+   * Muuttuja on sama, joten syke on sama.
+   */
+  assert.match(STYLES, /\.pergamentti-hehku \{[\s\S]*?var\(--lyhty-ulko, 0\.26\)/);
   // Sisääntuloliuku siirtyi kehykselle, jotta kajo ja paperi saapuvat yhdessä.
   assert.match(AIKAJANA_CSS, /\.aikajana-avaus\.laatikko-nakyy \.aikajana-avaus-kehys \{ opacity: 1; transform: none; \}/);
   assert.match(MOOTTORI, /const kehys = solmu\('div', 'aikajana-avaus-kehys'\);/);
-  assert.match(MOOTTORI, /kehys\.appendChild\(laatikko\);/);
+  assert.match(MOOTTORI, /kehys\.append\(hehku, laatikko\);/);
 });
 
 test('tummennus on aiempaa syvempi: kartta erottuu juuri ja juuri', () => {

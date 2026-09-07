@@ -155,6 +155,9 @@ const SHELL = [
   './js/linssipuhe.js',
   './js/tiedeliite.js',
   './js/lyhty.js',
+  // Pergamentin repaleinen reuna (yhteinen osa, 7.9.2026): js/aikajana.js
+  // tuo tämän, joten se seuraa samaa polkua offline-käyttöön.
+  './js/pergamentti.js',
   './js/pallo.js',
   // Laattakerroksen puhtaat apurit (erä E0, 6.9.2026): js/pallo.js tuo
   // ne staattisesti, joten ne kulkevat samaa polkua offline-käyttöön.

@@ -179,6 +179,7 @@ import { isoympyranPiste, kulmaAsteina } from './pallolauta/reitit.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { avaaTiedeliite, suljeTiedeliite } from './tiedeliite.js';
 import { sytytaLyhdyt } from './lyhty.js';
+import { repaleinenPaperi, siemenNimesta } from './pergamentti.js';
 import { rajausTyyli } from './isoisan-valokuvat.js';
 import {
   aloitaSiirtymamusiikki, himmennaSiirtymamusiikki, lopetaSiirtymamusiikki,
@@ -3280,21 +3281,29 @@ class Aikajana {
     this.avausPeite = solmu('div', 'aikajana-avaus-peite');
     this.avausPeite.setAttribute('aria-hidden', 'true');
     /*
-     * KEHYS ON LAATIKON ULKOPUOLINEN KAJO. Laatikko itse on leikattu
-     * repaleiseksi paperiksi (clip-path), ja clip-path leikkaa myös
-     * elementin oman box-shadow'n — siksi lämmin hehku mustaan
-     * piirretään erilliseen kehykseen, joka ei ole leikattu.
+     * KEHYS ON PAPERIN JA SEN KAJON YHTEINEN VANHEMPI. Paperin reuna on
+     * repaleinen SVG-maski ja kajo SAMA MUOTO sumennettuna omassa
+     * kerroksessaan paperin alla (js/pergamentti.js) — omistaja
+     * 7.9.2026 ilta: *"rosoiset reunat ovat aivan liian geometrisiä ja
+     * niiden takaa näkyy täysin mustaa"*. Ennen tätä kajo oli kehyksen
+     * suorakulmainen box-shadow, joka ei myötäillyt lovia.
+     *
+     * SIEMEN on kaaren otsikko: sama kaari saa aina saman reunan,
+     * mutta kaksi eri kaarta eivät ole identtisiä arkkeja.
      */
     const kehys = solmu('div', 'aikajana-avaus-kehys');
+    const hehku = solmu('div', 'aikajana-avaus-hehku');
+    hehku.setAttribute('aria-hidden', 'true');
     const laatikko = solmu('div', 'aikajana-avaus-laatikko');
-    kehys.appendChild(laatikko);
+    kehys.append(hehku, laatikko);
     /*
      * LYHDYT YLÄKULMISSA (omistaja 4.9.2026: *"valot loimuamaan kuin
      * valo tulisi padasta ... alueelliset valovaihtelut liekin lailla
      * paperin päällä"*): js/lyhty.js ohjaa kahta valoa kehys kerrallaan;
      * sammutin kutsutaan, kun laatikko väistyy (aloitaAjo, puraAvaus).
      * `valokohde` on KEHYS: sinne kirjoitetaan laatikkotason varjo- ja
-     * ulkokajoarvot, jotka periytyvät myös leikatulle laatikolle.
+     * ulkokajoarvot, jotka periytyvät sekä maskatulle paperille että
+     * kajokerrokselle (.aikajana-avaus-hehku opacity).
      */
     this.sammutaLyhdyt = sytytaLyhdyt(laatikko, { reducedMotion: this.reducedMotion, valokohde: kehys });
     laatikko.appendChild(solmu('h2', 'aikajana-avaus-otsikko', otsikko));
@@ -3320,6 +3329,13 @@ class Aikajana {
     // Pakotettu asettelu, jotta selain näkee alkuasennon (opacity 0)
     // omana tilanaan eikä hyppää suoraan mustaan.
     void this.avaus.getBoundingClientRect();
+    /*
+     * REPALEINEN REUNA VASTA ASETTELUN JÄLKEEN: js/pergamentti.js mittaa
+     * laatikon sivusuhteen, jotta maskin venytys on kummallakin
+     * akselilla sama — muuten puhelimen korkea laatikko saisi sileät
+     * pystyreunat ja rypistyneet vaakareunat.
+     */
+    repaleinenPaperi(laatikko, { siemen: siemenNimesta(otsikko), hehku });
     this.avaus.classList.add('musta');
     /*
      * TAUSTA VALMIIKSI PIMEÄSSÄ. Kamera-ajo lähtee vasta kun ruutu on
