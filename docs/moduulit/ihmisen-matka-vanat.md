@@ -1646,7 +1646,10 @@ ollut kaksi totuutta. Kapealla palkilla (≤ 1000 px) nimet lyhenevät
 ("Pää", "Eur.", …); puhelimella (≤ 600 px) legenda ei mahdu palkkiin
 lainkaan (mitattu 390 px: kello 185 px + Jatka + ↺ + ✕ jättivät
 legendalle 50 px eli kaksi pilkkua viidestä), joten napit näytetään
-vasta tutkimusvaiheessa omalla rivillään palkin alla.
+vasta tutkimusvaiheessa omalla rivillään palkin alla. Puhelimella myös
+linssin nimi väistyy kellon tieltä — sama vanha sääntö kuin muillakin
+kaarilla (`css/aikajana.css` kapean ruudun media) — ja palkissa ovat
+kello, Tauko/Jatka, ↺ ja ✕.
 
 ### 13.3 Miksi napautus ei mennyt perille
 
@@ -1722,6 +1725,11 @@ yksisuuntainen maksimi. Ilman muistiin talletettua `pitoMin`-lukemaa
 Euroopan haarassa jatkava esitys olisi piirtänyt Amerikat tyhjiksi.
 Jatko kytkee pidon päälle ja piirtää vanat pohjaan asti ennen kuin
 kello lähtee taas käyntiin.
+
+**Mustaa alkua ei muisteta.** Jos pelaaja sulkee linssin heti
+avausjakson pimeässä, hän ei ole vielä ollut missään, eikä jatko ilman
+mustaa saisi syödä juuri sitä hetkeä, joka kaarelle kuuluu (omistaja:
+*"Ensimmäinen avaus kuten nyt"*). Vanha muisti jää silloin koskematta.
 
 Kirjoitushetket: jakson vaihtuessa, kortin ja virran vaihtuessa sekä
 **purussa ennen kortin sulkua** — sulun oma tallennus kirjoittaisi

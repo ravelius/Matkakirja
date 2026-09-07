@@ -311,6 +311,9 @@ test('muisti tarkistetaan puhtaasti: vaihe, jakso, kamera, kortti ja virta', () 
   assert.match(aikajana, /pura\(\) \{\n    this\.pysayta\(\);[\s\S]{0,400}this\.tallennaMuisti\(\);\n    this\.muistiLukittu = true;/);
   assert.match(aikajana, /const muisti = this\.esitys \? this\.lueLinssimuisti\(\) : null;\n\s*if \(muisti\) \{\n\s*this\.jatkaMuistista\(muisti\);\n\s*return true;\n\s*\}\n\s*this\.avaaAvausjakso\(\);/);
   assert.match(aikajana, /aloitaAlusta\(\) \{[\s\S]{0,300}tyhjennaMuisti\(this\.linssi\.tunnus\);/);
+  // Musta alku ei ole muistettava paikka: ensimmäinen avaus on aina
+  // avausjakso, vaikka pelaaja sulkisi linssin heti pimeässä.
+  assert.match(aikajana, /tallennaMuisti\(\) \{[\s\S]{0,900}if \(e\.pimea\) return false;/);
   // Tutkimusvaihe palauttaa virran ilman kameran kääntöä ja kortin.
   assert.match(MODUULI, /valitseVana\(virta, \{ kamera: false \}\)/);
   assert.match(MODUULI, /if \(muisti\?\.kortti && kortti && kortti\.auki\(\) !== muisti\.kortti\) kortti\.avaa\(muisti\.kortti\);/);

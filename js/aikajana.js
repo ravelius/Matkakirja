@@ -2658,6 +2658,14 @@ class Aikajana {
     if (!this.kaari.kertomus?.length || this.muistiLukittu || !this.esitys) return false;
     const e = this.esitys.tila();
     if (e.indeksi < 0 && !e.paattynyt) return false;
+    /*
+     * MUSTA ALKU EI OLE MUISTETTAVA PAIKKA (omistaja: *"Ensimmäinen
+     * avaus kuten nyt"*). Jos pelaaja sulkee linssin heti avausjakson
+     * pimeässä, hän ei ole vielä ollut missään — ja jatko ilman mustaa
+     * söisi juuri sen hetken, joka kaarelle kuuluu. Vanha muisti jää
+     * silloin koskematta.
+     */
+    if (e.pimea) return false;
     const pov = this.ui.pallonInstanssi?.pointOfView?.() ?? null;
     const kortti = this.ui.nostokortti?.auki?.() ?? null;
     const t = this.ui.tutkimusvaihe?.tila?.() ?? null;
