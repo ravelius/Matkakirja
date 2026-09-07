@@ -86050,4 +86050,858 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TANGERIN KAUPUNKILEHTI (Opus 7.9.2026). Kansi + teemasivu,
+   * faktapohja docs/mantereet-tyoaineisto/faktapohja-tanger.md ja
+   * sen erillinen tarkistus tarkistus-tanger.md. Jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit
+   * "Tangier", "Tangier International Zone", "Ibn Battuta",
+   * "Mohamed Choukri", "Hassan I of Morocco", "Strait of
+   * Gibraltar").
+   *
+   * KULTTUURIVISA ON KANNELLA. africa-kulttuuri.js:n tanger-visa
+   * kysyy, kuka maalari työskenteli täällä talvina 1912–1913, joten
+   * kansisivun neljäs nosto on Matisse — teemasivun minitehtävä
+   * kysyy tarkoituksella aivan muuta (Ibn Battutan lähtöikää).
+   *
+   * KOHDEKARTTA EI TOISTA NÄITÄ JUTTUJA. Kartan kahdeksan kohdetta
+   * (maakartat.js: KAUPUNKIKARTAT.tanger) ovat rakennuksia ja
+   * paikkoja, joista lehti ei kerro: Amerikan lähetystön talon
+   * lahjoitus 1821 kerrotaan vain kartan jutussa, ja Pyhän
+   * Andreaksen kirkon jutusta on TARKOITUKSELLA jätetty pois
+   * Matissen maalaus, joka on kansisivun oma aihe.
+   *
+   * MAALEHTI MAR (maa-kategoriat.js) kertoo jo Idris I:stä,
+   * al-Qarawiyyinista, kolmen kuninkaan taistelusta, arganista,
+   * Fèsin parkitsemosta, zellijistä, al-Alasta ja atlaksensetristä.
+   * Yksikään näistä nostoista ei mene niiden päälle.
+   */
+  tanger: [
+    {
+      id: 'kaupunki',
+      nimi: 'Tanger',
+      johdanto: 'Tanger seisoo Afrikan luoteiskulmassa kahden meren rajalla: '
+        + 'kaupungin edustalla Atlantti kohtaa Välimeren. Salmi on '
+        + 'kapeimmillaan 14,2 kilometriä, ja siksi tämä satama on aina '
+        + 'ollut portti — ja kaikkien haluama.',
+      /*
+       * KANSIKUVAT ovat laajoja yleiskuvia kaupungin eri puolilta
+       * (omistajan linjaus 21.8.2026): lahti ja valkoinen rinne
+       * mereltä, medinan katot kasbahilta ja rantaviiva. Ne jäävät
+       * pikkuriviltä piiloon, koska ennenNyt-pari korvaa rivin
+       * (js/lehti.js piirraLehtiKuvat), mutta suurennoksessa ne
+       * selataan läpi.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: Tangerille ei ole generoitu herokuvia, joten
+       * karusellissa on kolme aitoa Commons-valokuvaa (vertaa
+       * Halifaxiin ja Denveriin) — kaikki laajoja yleiskuvia.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      /*
+       * ENNEN–NYT: molemmat kuvat ovat js/packs/africa-valokuvat.js:n
+       * tanger-lohkosta, jossa ne on jo tarkistettu Commonsista.
+       * Tiedostonimi, vuosi ja lisenssi kopioitu sellaisenaan; selite
+       * kirjoitettu uudestaan yhdeksi virkkeeksi kuten
+       * docs/moduulit/kaupunkilehti.md käskee. Vanha vedos on
+       * harmaasävynä (vuosi ennen 1960).
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Le marché du Grand Soko à Tanger - btv1b532075360.jpg',
+          vuosi: '1900-luvun alku',
+          lahde: 'Agence Rol, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Panorama Tanger Bay Tangier Marokko.jpg',
+          lahde: 'Herbert wie, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Tingi, suon kaupunki',
+          teksti: 'Tanger perustettiin foinikialaiseksi siirtokunnaksi '
+            + 'mahdollisesti jo 1000-luvulla eKr. ja lähes varmasti '
+            + '700-luvulla eKr. Vanha berberinimi Tingi liittyy sanaan '
+            + 'tingis, suo. Kreikkalaiset selittivät nimen toisin: heidän '
+            + 'mukaansa Tinjis, titaani Atlaksen tytär, sai Herakleen '
+            + 'kanssa pojan Syfaksin, joka perusti sataman ja nimesi sen '
+            + 'äitinsä muistoksi. Karthagolaiset tekivät paikasta tärkeän '
+            + 'sataman 400-luvulla eKr., ja foinikialaiset tavat pitivät '
+            + 'pintansa pitkään: roomalaisajan rahoissa on etupuolella '
+            + 'Augustus latinaksi ja kääntöpuolella kanaanilainen jumala '
+            + 'Baal. Claudiuksen aikana Tingiksestä tuli roomalainen '
+            + 'siirtokunta ja Mauretania Tingitanan pääkaupunki.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Tangier',
+        },
+        {
+          otsikko: 'Myötäjäisiksi annettu kaupunki',
+          teksti: 'Portugalilaiset epäonnistuivat kolmesti ja ottivat Tangerin '
+            + 'lopulta ilman taistelua 28. elokuuta 1471, kun varuskunta '
+            + 'pakeni. Kahdensadan vuoden kuluttua kaupunki vaihtoi taas '
+            + 'omistajaa ilman laukaustakaan: se luovutettiin 1661 '
+            + 'Englannin Kaarle II:lle osana Katariina Braganzalaisen '
+            + 'myötäjäisiä, ja englantilaiset ottivat sen haltuunsa '
+            + 'tammikuussa 1662. Kaarle kutsui saalistaan kruunun '
+            + 'korvaamattomaksi jalokiveksi. Satamaan rakennettiin '
+            + 'aallonmurtaja, joka ylsi 1436 jalkaan ja maksoi 340 000 '
+            + 'puntaa. Moulay Ismailin piiritys 1678–1680 ei murtanut '
+            + 'kaupunkia, mutta parlamentti kyllästyi laskuun: lähtevät '
+            + 'joukot räjäyttivät sataman, ja Marokko sai kaupungin 7. '
+            + 'helmikuuta 1684.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Tangier',
+        },
+        {
+          otsikko: '1873: koko Marokon lähetystöt',
+          teksti: 'Isoisän matkavuonna Tanger oli pieni kaupunki isolla '
+            + 'tehtävällä. 1700-luvulta lähtien se toimi Marokon '
+            + 'diplomaattisena pääkaupunkina, ja 1870-luvulla täällä '
+            + 'olivat kaikkien vieraiden valtojen lähetystöt ja konsulit — '
+            + 'ja silti ulkomaisia asukkaita oli vain noin nelisensataa '
+            + 'runsaan kahdenkymmenentuhannen joukossa. Ranska oli '
+            + 'pommittanut kaupunkia 6. elokuuta 1844, ja englantilaiset '
+            + 'insinöörit korjasivat vauriot myöhemmin. Italialainen '
+            + 'vallankumouksellinen Giuseppe Garibaldi asui täällä '
+            + 'maanpaossa vuodesta 1849. Sulttaaniksi julistettiin 16. '
+            + 'syyskuuta 1873 Hassan I, joka hallitsi kuolemaansa asti '
+            + '1894.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Tangier',
+        },
+        {
+          otsikko: 'Matisse ja Tangerin valo',
+          teksti: 'Eugène Delacroix tuli Marokkoon 1832 kreivi de Mornayn '
+            + 'seurueessa ja palasi luonnoksiinsa loppuiäkseen; noin '
+            + 'kahdeksankymmentä öljyvärityötä avasi eurooppalaisille '
+            + 'pohjoisafrikkalaisen valon. Cézannen mukaan se meni silmään '
+            + 'kuin lasillinen viiniä kurkkuun ja humallutti heti. Perässä '
+            + 'tuli Henri Matisse, joka majoittui aina Grand Hôtel Villa '
+            + 'de Franceen ja työskenteli kaupungissa talvina 1912–1913. '
+            + 'Hän kirjoitti löytäneensä Marokosta täsmälleen ne maisemat, '
+            + 'jotka Delacroix oli maalannut. Hotellin ikkunasta syntyi '
+            + 'sininen La Fenêtre à Tanger.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Tangier',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+        kappale: 'Tanger on Tanger-Tetouan-Al Hoceiman alueen pääkaupunki ja '
+          + 'Marokon toiseksi tärkein teollisuuskeskus Casablancan '
+          + 'jälkeen. Kaupunki on kasvanut nopeasti: vuonna 2014 asukkaita '
+          + 'oli noin 850 000, kun heitä 32 vuotta aiemmin oli 250 000. '
+          + 'Vanha kaupunki eli medina nousee satamasta rinnettä ylös, ja '
+          + 'sen laella on kasbah; uudempi keskusta levittäytyy muurien '
+          + 'ulkopuolelle. Maasto kohoaa lahdelta vähitellen, joten '
+          + 'kaupunki muistuttaa mereen katsovaa amfiteatteria.',
+        artikkeli: {
+          nimi: 'Matkailijan Tanger',
+          taitto: 'opas',
+          teksti: 'Kaupunki, johon tullaan mereltä: salmen yli pääsee '
+            + 'nopeimmillaan 35 minuutissa, ja laiturilta on medinan '
+            + 'portille kävelymatka.',
+          nosto: 'Tanger antoi nimen mandariinille. Hedelmää kasvatettiin '
+            + 'medinan eteläpuolisissa tarhoissa, mutta vientiä ei juuri '
+            + 'syntynyt: jo vuonna 1900 oma kulutus ylitti sadon, ja '
+            + 'mandariineja jouduttiin tuomaan Tetouanista. Massatuotanto '
+            + 'alkoi lopulta aivan muualla, Floridassa.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Tanger-Villen asemalta lähtevät radat etelään Rabatiin, '
+                + 'Casablancaan ja Marrakechiin sekä itään Fèsiin ja '
+                + 'Oujdaan. Marraskuussa 2018 vihittiin Afrikan '
+                + 'ensimmäinen suurnopeusrata Kenitraan, ja Casablancaan '
+                + 'pääsee nyt kahdessa tunnissa kymmenessä minuutissa. Ibn '
+                + 'Batoutan lentoasema on viidentoista kilometrin päässä '
+                + 'lounaassa. Lauttoja kulkee päivittäin Tanger-Villestä '
+                + 'Espanjan Tarifaan ja uudesta Tanger-Medin satamasta '
+                + 'Algecirasiin; kahdesti viikossa lähtee lautta myös '
+                + 'Gibraltariin. Rahtiliikenne on siirtynyt Tanger-Mediin '
+                + 'neljänkymmenen kilometrin päähän, joten vanha satama on '
+                + 'jäänyt matkustajille.',
+              tiedosto: 'PUUTTUU',
+              lahde: 'PUUTTUU',
+            },
+            {
+              otsikko: 'Kaksi soccoa ja muuri',
+              teksti: 'Medinaa ympäröi yhä osa vanhaa kivimuuria, joka oli '
+                + 'aikoinaan yli kahden tuhannen jaardin mittainen; suurin '
+                + 'osa on portugalilaisajalta, ja sitä on korjattu monta '
+                + 'kertaa. Kolme suurta bastionia olivat Irlantilaistorni, '
+                + 'York Castle ja Bordj al-Salam. Muurin ulkopuolella on '
+                + 'Grand Socco, virallisesti Place du 9 Avril 1947, lähes '
+                + 'pyöreä aukio, joka erottaa medinan uudemmasta '
+                + 'keskustasta; keskellä on marmorinen suihkulähde, '
+                + 'ympärillä palmuja ja penkkejä, ja yhdeltä laidalta '
+                + 'kaariportti johtaa Mendoubian puutarhaan. Muurin '
+                + 'sisällä oleva pieni Petit Socco on medinan alaosan '
+                + 'aukio.',
+              tiedosto: 'PUUTTUU',
+              lahde: 'PUUTTUU',
+            },
+            {
+              otsikko: 'Rannikko lännessä',
+              teksti: 'Keskustasta noin kahdenkymmenen kilometrin päässä '
+                + 'lännessä on Cap Spartel, jonka majakka valmistui '
+                + '1860-luvulla — se paloi siis jo isoisän aikaan. Saman '
+                + 'niemen kupeessa ovat Herkuleen luolat, joissa sankarin '
+                + 'kerrottiin levänneen urakoidensa välissä; ne olivat '
+                + 'matkailijoiden kohde jo antiikissa, kuten Antaioksen '
+                + 'väitetty hauta. Kaupungin oma tasanko Marshan levittyy '
+                + 'meren yllä keskustasta länteen, ja sen reunalta näkee '
+                + 'salmen yli Espanjaan. Itäisellä kukkulalla on Cap '
+                + 'Malabata, jota on vuosikymmeniä ehdotettu salmen '
+                + 'ylittävän yhteyden päätepisteeksi.',
+              tiedosto: 'PUUTTUU',
+              lahde: 'PUUTTUU',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Vieraalle kaadetaan Marokossa lähes aina lasillinen '
+                + 'makeaa minttuteetä, ja tee kaadetaan korkealta niin '
+                + 'että pintaan nousee vaahto. Tangerin oma hedelmä on '
+                + 'mandariini, joka sai kaupungilta englanninkielisen '
+                + 'nimensä tangerine. Ruoka tulee mereltä ja lähiseudun '
+                + 'viljapelloilta: maatalous on täällä pääosin '
+                + 'viljanviljelyä. Medinan käsityö keskittyy nahkaan, puu- '
+                + 'ja hopeatöihin, perinneasuihin ja marokkolaisiin '
+                + 'tohveleihin, ja tinkiminen kuuluu kauppaan. Rannan '
+                + 'kahvilat ja klubit ovat 2010-luvun kunnostusten jälkeen '
+                + 'uusia.',
+              tiedosto: 'PUUTTUU',
+              lahde: 'PUUTTUU',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Tanger-artikkelin '
+                + 'sääruudusta, jonka mittausasema on lentoasema ja jakso '
+                + '1961–1990. Ilmasto on välimerellinen, mutta avoimen '
+                + 'sijaintinsa takia Tangeriin sataa enemmän kuin '
+                + 'useimpiin Pohjois-Afrikan ja lähialueen Espanjan '
+                + 'kohtiin: vettä tulee 736 millimetriä ja 88 sadepäivää '
+                + 'vuodessa, ja lähes kaikki siitä talvella — joulukuussa '
+                + '129 millimetriä, heinäkuussa kaksi. Kesät ovat kuumia '
+                + 'ja aurinkoisia, ja aurinkoa paistaa lähes 2 961 tuntia '
+                + 'vuodessa. Vuoden keskilämpö on 17,7 astetta. Halla on '
+                + 'harvinaista; pakkasennätys −4,2 astetta mitattiin '
+                + 'tammikuussa 2005.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kasbah medinan laella',
+                tahdet: 3,
+                selite: 'Kaupungin korkein kohta, jolta näkee sekä medinan '
+                  + 'katot että Gibraltarinsalmen.',
+              },
+              {
+                mita: 'Grand Socco',
+                tahdet: 3,
+                selite: 'Aukio, joka erottaa vanhan kaupungin uudesta; '
+                  + 'virallinen nimi on Place du 9 Avril 1947.',
+              },
+              {
+                mita: 'Cap Spartel',
+                tahdet: 2,
+                selite: 'Niemi ja 1860-luvun majakka siinä, missä Atlantti '
+                  + 'kääntyy Välimereksi.',
+              },
+              {
+                mita: 'Herkuleen luolat',
+                tahdet: 2,
+                selite: 'Meren puoleinen luola, jota antiikin matkailijat '
+                  + 'kävivät katsomassa jo kaksituhatta vuotta sitten.',
+              },
+              {
+                mita: 'Lautta Tarifaan',
+                tahdet: 2,
+                selite: 'Salmen ylitys toiseen maanosaan; kapeimmillaan väli '
+                  + 'on 14,2 kilometriä.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Talvi on sadekausi',
+                teksti: 'Vettä tulee vuodessa 736 millimetriä ja lähes kaikki '
+                  + 'lokakuun ja maaliskuun välillä; joulukuussa sataa '
+                  + 'keskimäärin kahtenatoista päivänä.',
+              },
+              {
+                otsikko: 'Medinassa eksyy',
+                teksti: 'Kujat mutkittelevat rinnettä ylös eivätkä noudata '
+                  + 'ruutukaavaa — se on osa kaupunkia, ei vika.',
+              },
+              {
+                otsikko: 'Moskeijat eivät ole avoimia',
+                teksti: 'Marokossa moskeijoihin ei pääse ei-muslimina, joten '
+                  + 'suurmoskeijasta näkee vain portin ja minareetin.',
+              },
+              {
+                otsikko: 'Rahtisatama on muualla',
+                teksti: 'Tanger Med on neljänkymmenen kilometrin päässä, joten '
+                  + 'sinne saapuva matkustaja tarvitsee vielä kyydin '
+                  + 'keskustaan.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjoitettu Tanger',
+      johdanto: 'Tangerista on kirjoitettu enemmän kuin useimmista saman '
+        + 'kokoisista kaupungeista. Täältä lähti keskiajan suurin '
+        + 'matkakirjailija, ja tänne muutti 1900-luvulla kokonainen '
+        + 'kirjailijoiden siirtokunta.',
+      tehtava: {
+        kysymys: 'Minkä ikäisenä Ibn Battuta lähti Tangerista ensimmäiselle '
+          + 'matkalleen?',
+        vaihtoehdot: [
+          '20-vuotiaana',
+          '12-vuotiaana',
+          '35-vuotiaana',
+          '50-vuotiaana',
+        ],
+        oikea: 0,
+        fakta: 'Ibn Battuta syntyi Tangerissa 1304 ja lähti kotoa '
+          + 'kaksikymmenvuotiaana pyhiinvaellukselle Mekkaan. Matka venyi '
+          + 'kolmenkymmenen vuoden mittaiseksi ja vei hänet kolmelle '
+          + 'mantereelle.',
+      },
+      nostot: [
+        {
+          otsikko: 'Hajjille lähtenyt poika',
+          teksti: 'Ibn Battuta syntyi Tangerissa 24. helmikuuta 1304 ja lähti '
+            + 'kotoa kaksikymmenvuotiaana pyhiinvaellukselle. '
+            + 'Kolmenkymmenen vuoden aikana 1325–1354 hän kiersi suuren '
+            + 'osan Afrikkaa, Aasiaa ja Iberian niemimaata ja kulki '
+            + 'arvioiden mukaan noin 117 000 kilometriä — enemmän kuin '
+            + 'yksikään esimoderni matkaaja. Zheng He teki noin 50 000 ja '
+            + 'Marco Polo noin 24 000 kilometriä. Elämänsä lopulla Ibn '
+            + 'Battuta saneli matkoistaan kirjan, joka tunnetaan nimellä '
+            + 'Rihla; kirjoittajaksi ryhtyi Ibn Juzayy, oppinut, jonka hän '
+            + 'oli tavannut Granadassa.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Ibn Battuta',
+        },
+        {
+          otsikko: 'Kaupunki, jota hallitsi moni maa yhtä aikaa',
+          teksti: 'Pariisissa allekirjoitettiin 18. joulukuuta 1923 sopimus, '
+            + 'joka asetti Tangerin Ranskan, Espanjan ja Britannian '
+            + 'yhteishallintoon; Italia sai oman asemansa vuoden 1928 '
+            + 'pöytäkirjalla. Kansainvälinen vyöhyke oli 373 '
+            + 'neliökilometriä, ja 1930-luvun puolivälissä siellä asui '
+            + 'noin 50 000 ihmistä: 30 000 muslimia, 12 000 juutalaista ja '
+            + 'runsaat 8 000 eurooppalaista. Talouslait olivat hyvin '
+            + 'vapaat, joten kaupungista tuli veroparatiisi keskellä '
+            + 'kieltojen Eurooppaa. Vyöhyke lakkautettiin, ja Tanger '
+            + 'liittyi muuhun Marokkoon 1956.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Tangier International Zone',
+        },
+        {
+          otsikko: 'Bowles, Choukri ja käännetty leipä',
+          teksti: 'Paul Bowles asui ja kirjoitti Tangerissa yli puoli '
+            + 'vuosisataa, ja hänen ympärilleen syntyi kirjailijapiiri, '
+            + 'johon kuuluivat muun muassa Jean Genet, Mohammed Mrabet, '
+            + 'Larbi Layachi ja Ahmed Yacoubi. Piirin tunnetuin '
+            + 'marokkolainen oli Mohamed Choukri, Pohjois-Afrikan '
+            + 'luetuimpia ja kiistellyimpiä kirjailijoita. Hänen '
+            + 'omaelämäkerrallinen teoksensa For Bread Alone kirjoitettiin '
+            + 'klassisella arabialla, ja englanninnos syntyi tiiviissä '
+            + 'yhteistyössä Bowlesin kanssa, joka teki käännöksen ja '
+            + 'kirjoitti esipuheen. Tennessee Williams kutsui kirjaa '
+            + 'järkyttäväksi todistukseksi ihmisen epätoivosta.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Mohamed Choukri',
+        },
+        {
+          otsikko: 'Interzone',
+          teksti: 'Kansainvälisen vyöhykkeen aikaan kaupungissa kävivät tai '
+            + 'asuivat myös George Orwell, Tennessee Williams, Allen '
+            + 'Ginsberg, Jack Kerouac, maalari Brion Gysin ja Rolling '
+            + 'Stones. William S. Burroughs asui Tangerissa neljä vuotta '
+            + 'ja kirjoitti siellä Alastoman lounaan, jonka '
+            + 'tapahtumapaikan nimi Interzone viittaa suoraan kaupunkiin. '
+            + 'Kolmen uskonnon ja monen kielen rinnakkaiselo teki paikasta '
+            + 'turvasataman hyvin erilaisille pakolaisille: '
+            + 'espanjalaisille kummastakin leiristä, natsi-Saksaa '
+            + 'paenneille juutalaisille ja marokkolaisille '
+            + 'toisinajattelijoille.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Tangier',
+        },
+      ],
+    },
+  ],
+  /*
+   * MARRAKECHIN KAUPUNKILEHTI (Opus 7.9.2026). Kansi + teemasivu,
+   * faktapohja docs/mantereet-tyoaineisto/faktapohja-marrakech.md
+   * ja erillinen tarkistus tarkistus-marrakech.md. Väitteet luettu
+   * en-Wikipedian raakatekstistä 7.9.2026 ("Marrakesh", "Jemaa
+   * el-Fnaa", "Kutubiyya Mosque", "Menara Gardens", "Agdal
+   * Gardens", "Majorelle Garden", "Mouassine Fountain").
+   *
+   * KAKSI RISTIRIITAA ON KIRJOITETTU AUKI LUKIJALLE, kuten resepti
+   * käskee: perustamisvuosi (1062 / 1070 / 1078) kansisivun
+   * ensimmäisessä nostossa ja El Badin valmistuminen kohdekartan
+   * jutussa. Muurien korkeus (lähteessä 19 jalkaa) on jätetty pois
+   * yksikköepäilyn takia — perustelu tarkistus-marrakech.md kohta C.
+   *
+   * KULTTUURIVISA ON KANNELLA: africa-kulttuuri.js kysyy Jemaa
+   * el-Fnan tarinankertojista, joten kansisivun neljäs nosto kertoo
+   * aukiosta. Minitehtävä kysyy Menaran perustamisvuotta, jota ei
+   * kysytä missään visassa (myös africa-questions.js:n viisi
+   * lautakysymystä tarkistettu: maa, Jemaa el-Fna, Atlas, punainen
+   * kaupunki, gnawa).
+   *
+   * KOHDEKARTTA EI TOISTA NÄITÄ JUTTUJA: Jemaa el-Fna, Koutoubia,
+   * Menara ja Agdal ovat lehden nostoja eivätkä kartan kohteita.
+   */
+  marrakech: [
+    {
+      id: 'kaupunki',
+      nimi: 'Marrakech',
+      johdanto: 'Marrakech on punaisesta savesta muurattu karavaanikaupunki '
+        + 'Korkean Atlaksen juurella. Se antoi nimensä koko maalle: '
+        + 'keskiajalta 1900-luvulle Marokkoa kutsuttiin Marrakechin '
+        + 'kuningaskunnaksi.',
+      /*
+       * KANSIKUVAT ovat laajoja yleiskuvia kaupungin eri puolilta
+       * (omistajan linjaus 21.8.2026): medinan katot ja minareetti,
+       * muurit ulkoa ja kaupunki Atlaksen edessä. Pikkurivillä ne
+       * jäävät ennenNyt-parin taakse, mutta suurennoksessa koko
+       * sarja selataan läpi.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: Marrakechille ei ole generoitu herokuvia,
+       * joten karusellissa on kolme aitoa Commons-valokuvaa (vertaa
+       * Halifaxiin ja Denveriin) — kaikki laajoja yleiskuvia.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      /*
+       * ENNEN–NYT: molemmat kuvat ovat js/packs/africa-valokuvat.js:n
+       * marrakech-lohkosta, jossa ne on jo tarkistettu. Tiedostonimi,
+       * vuosi ja lisenssi kopioitu sellaisenaan; selite kirjoitettu
+       * uudestaan yhdeksi virkkeeksi. Sama torni molemmissa — juuri
+       * siksi pari toimii.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Marrakech Minaret depuis la rue animée - sap04 10l01821 p.jpg',
+          vuosi: 'noin 1924',
+          lahde: 'Lucien Roy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kutubiyya Mosque, Marrakesh, Morocco, 20250124 1834 7027.jpg',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki, joka antoi nimen maalle',
+          teksti: 'Marrakechin perusti almoravidipäällikkö Abu Bakr ibn Umar, '
+            + 'mutta vuodesta ei ole yksimielisyyttä: Ibn Abi Zar ja Ibn '
+            + 'Khaldun sanovat 1062, al-Idrisi 1078, ja '
+            + 'nykyhistorioitsijat käyttävät useimmiten vuotta 1070. '
+            + 'Almoravidien valtakunta ulottui Senegalin reunalta Espanjan '
+            + 'keskiosiin, ja uusi pääkaupunki kasvoi nopeasti Maghrebin '
+            + 'ja Saharan eteläpuolisen Afrikan kauppapaikaksi. Nimi teki '
+            + 'saman matkan kuin karavaanit: keskiajalta 1900-luvun alkuun '
+            + 'koko maata kutsuttiin Marrakechin kuningaskunnaksi, ja '
+            + 'siitä tulevat Marokon eurooppalaiset nimet. Persiaksi ja '
+            + 'urduksi maa on yhä Marrakesh.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Marrakesh',
+        },
+        {
+          otsikko: 'Punainen muuri ja Koutoubia',
+          teksti: 'Almoravidit muurittivat kaupungin 1100-luvulla, ja muuri '
+            + 'kiertää medinaa yhä noin yhdeksäntoista kilometriä. Se on '
+            + 'tehty paikallisesta oranssinpunaisesta savesta ja kalkista '
+            + '— siitä kaupungin lisänimi punainen kaupunki — ja siinä on '
+            + 'kaksikymmentä porttia ja kaksisataa tornia. Almohadit '
+            + 'valtasivat kaupungin 1147 usean kuukauden piirityksen '
+            + 'jälkeen, ja Abd al-Mu\'min perusti samana vuonna Koutoubian '
+            + 'moskeijan. Sen minareetti on maasta huipun koristeeseen '
+            + 'noin 77 metriä ja yhä kaupungin korkein rakennus; se '
+            + 'vaikutti todennäköisesti Sevillan Giraldaan ja Rabatin '
+            + 'Hassanin torniin.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Kutubiyya Mosque',
+        },
+        {
+          otsikko: 'Seitsemän pyhimystä ja portti, joka aukesi 1867',
+          teksti: 'Marrakech tunnetaan Marokon seitsemän suojeluspyhimyksen '
+            + 'kaupunkina. Kun sufilaisuus oli suosionsa huipulla '
+            + '1600-luvun lopulla, oppinut Abu Ali al-Hassan al-Yusi '
+            + 'perusti sulttaanin pyynnöstä pyhimysjuhlan, ja tunnettujen '
+            + 'hahmojen hautoja siirrettiin kaupunkiin pyhiinvaeltajia '
+            + 'varten. Seitsemän päivän kierros kulkee haudalta toiselle '
+            + 'määrätyssä järjestyksessä, ja se päättyy Abu al-Qasim '
+            + 'al-Suhaylin luo. Ulkopuolisille kaupunki oli pitkään '
+            + 'suljettu: vuoteen 1867 asti eurooppalainen kristitty '
+            + 'tarvitsi sulttaanin erityisluvan päästäkseen sisään. '
+            + 'Isoisän matkavuonna 1873 portti oli siis ollut auki vasta '
+            + 'muutaman vuoden.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Marrakesh',
+        },
+        {
+          otsikko: 'Jemaa el-Fna, raunioituneen moskeijan aukio',
+          teksti: 'Kaupungin sydän syntyi almoravidilinnoituksen itäpuolisena '
+            + 'markkinatilana, ja hallitsija saattoi istua palatsin portin '
+            + 'edessä jakamassa oikeutta. Nimen selittää toinen rakennus: '
+            + 'saadilaissulttaani Ahmad al-Mansur aloitti aukiolle suuren '
+            + 'perjantaimoskeijan, mutta työ keskeytyi, rakennus '
+            + 'rappeutui, ja aukiosta tuli raunioituneen moskeijan paikka. '
+            + 'Päivällä siellä myydään appelsiinimehua ja vettä '
+            + 'nahkasäkeistä; illalla tulevat tanssijat, taikurit, '
+            + 'tarinankertojat ja kymmenet ruokakojut. Unesco julisti '
+            + 'aukion 2001 suulliseksi kulttuuriperinnöksi — itse asiassa '
+            + 'koko ohjelman idea syntyi huolesta juuri tämän aukion '
+            + 'puolesta.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Jemaa el-Fnaa',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+        kappale: 'Marrakech on Marokon suurimpia kaupunkeja ja maan tunnetuin '
+          + 'matkakohde: kävijöitä on yli kaksi miljoonaa vuodessa ja '
+          + 'hotelleja yli neljäsataa. Kaupunki on Tensiftin laaksossa, ja '
+          + 'Korkea Atlas kohoaa etelässä yli kolmen kilometrin '
+          + 'korkeuteen. Vanhakaupunki eli medina on Unescon '
+          + 'maailmanperintökohde vuodesta 1985; sen väestöosuus on '
+          + 'kuitenkin laskenut, sillä vuonna 1984 medinassa asui noin '
+          + 'puolet kaupunkilaisista ja 2004 enää viidennes. Uudempi '
+          + 'Gueliz muurien ulkopuolella syntyi protektoraatin aikana.',
+        artikkeli: {
+          nimi: 'Matkailijan Marrakech',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jota kannattaa katsoa muurin sisältä: medinan '
+            + 'kujat, sukit ja aukio ovat kaikki kävelymatkan päässä '
+            + 'toisistaan.',
+          nosto: 'Riad on marokkolainen kaupunkitalo, jonka malli on '
+            + 'roomalaisessa huvilassa: korkeiden muurien sisällä on '
+            + 'puutarhapiha, jonka ympärille huoneet aukeavat. Rakenne '
+            + 'antaa yksityisyyttä ja pitää talon viileänä. Vanhimmat '
+            + 'dokumentoidut riadit ovat saadilaisajalta, ja moni niistä '
+            + 'toimii nykyään pienenä hotellina.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Marrakech on Marokon rataverkon eteläinen pää: junat '
+                + 'tulevat Casablancan kautta pohjoisesta, ja Tangerista '
+                + 'asti pääsee samalla verkolla. Lentoasema on aivan '
+                + 'kaupungin lounaispuolella. Medinan sisällä liikutaan '
+                + 'jalan, koska kujat ovat kapeita ja mutkittelevia; '
+                + 'muurien ulkopuolella Guelizin suoraviivaiset kadut ovat '
+                + 'protektoraatin ajan suunnittelua. Majoitus on usein '
+                + 'riadissa keskellä medinaa: ovi kadulle on vaatimaton, '
+                + 'ja koko talo kääntyy sisäänpäin puutarhapihalle.',
+              tiedosto: 'PUUTTUU',
+              lahde: 'PUUTTUU',
+            },
+            {
+              otsikko: 'Sukit ja käsityö',
+              teksti: 'Marrakechissa on Marokon suurin perinteinen markkina. '
+                + 'Sukeja on kahdeksantoista ja ne työllistävät yli '
+                + 'neljäkymmentätuhatta ihmistä; historiallinen jako '
+                + 'tavaralajeittain — nahka, matot, metalli, keramiikka — '
+                + 'näkyy yhä, vaikka rajat ovat sekoittuneet. Tinkiminen '
+                + 'kuuluu asiaan. Koutoubian lähellä on Ensemble '
+                + 'Artisanal, valtion ylläpitämä käsityökeskus, jonka '
+                + 'takaosassa nuoret oppipojat opettelevat ammatteja. '
+                + 'Medinan katuruoka on kuulua, ja Mechoui-kuja tunnetaan '
+                + 'hitaasti paahdetusta lampaastaan.',
+              tiedosto: 'PUUTTUU',
+              lahde: 'PUUTTUU',
+            },
+            {
+              otsikko: 'Puutarhat ja palatsit',
+              teksti: 'Kaupungin vanhimmat puutarhat ovat Menara lännessä ja '
+                + 'Agdal etelässä, molemmat suurten vesialtaiden '
+                + 'ympärillä. Majorellen puutarha on ollut yleisölle '
+                + 'avoinna vuodesta 1947, ja sen tummansinisessä talossa '
+                + 'toimii nykyään berberimuseo. Palatseista tunnetuimmat '
+                + 'ovat El Badi ja Bahia; kolmas, kuninkaan virallinen '
+                + 'residenssi, on yhä käytössä eikä avoinna. Vuonna 1925 '
+                + 'rakennettu La Mamounia yhdistää art decon ja '
+                + 'marokkolaisen tyylin — Winston Churchill maalasi sen '
+                + 'puutarhassa.',
+              tiedosto: 'PUUTTUU',
+              lahde: 'PUUTTUU',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Kaupungin oma ruoka on tanjia marrakshia, jota '
+                + 'kutsutaan hellästi tuhkan tyttäreksi: naudanlihaa, '
+                + 'mausteita ja smeniä eli marokkolaista kirkastettua '
+                + 'voita kypsennetään hitaasti keraamisessa ruukussa '
+                + 'kuumassa tuhkassa. Tajine on toinen pata, jossa liha '
+                + 'tai kala hautuu höyryssä oliivien, säilötyn sitruunan '
+                + 'ja mausteiden kanssa. Ympärillä kasvaa sitruuna-, '
+                + 'appelsiini- ja oliivilehtoja, joten keittiö on '
+                + 'runsaasti maustettu mutta ei tulinen. Jälkiruoaksi on '
+                + 'seesamileivos chebakia, ja teetä kaadetaan kaarevasta '
+                + 'nokasta pieniin laseihin.',
+              tiedosto: 'PUUTTUU',
+              lahde: 'PUUTTUU',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Marrakech-artikkelin '
+                + 'sääruudusta. Ilmasto on kuuma puoliaava: kesät ovat '
+                + 'pitkiä, kuumia ja kuivia, talvet lyhyitä ja leutoja. '
+                + 'Vuoden keskilämpö on 20,6 astetta, heinäkuun keskiylin '
+                + '37,7 ja tammikuun 19,1. Ääriarvot kertovat loput: '
+                + 'kuumin mitattu lukema on 49,6 astetta heinäkuussa ja '
+                + 'kylmin 3,6 pakkasastetta tammikuussa. Sadetta tulee '
+                + 'vain 221 millimetriä ja 29 sadepäivää vuodessa, ja '
+                + 'sekin painottuu talveen. Kevät ja syksy ovat siis '
+                + 'kävelijän kuukaudet; heinä-elokuussa keskipäivä on '
+                + 'sisätilojen aikaa.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Jemaa el-Fna illalla',
+                tahdet: 3,
+                selite: 'Aukio muuttuu auringonlaskun jälkeen ruokakojujen ja '
+                  + 'esiintyjien kentäksi.',
+              },
+              {
+                mita: 'Koutoubian minareetti',
+                tahdet: 3,
+                selite: 'Kaupungin korkein rakennus ja sen kiintopiste '
+                  + 'kaikkialta medinasta.',
+              },
+              {
+                mita: 'Saadilaisten haudat',
+                tahdet: 3,
+                selite: 'Marmoria ja setripuuta 1500-luvun lopun '
+                  + 'kuninkaallisessa nekropolissa.',
+              },
+              {
+                mita: 'Bahian palatsi',
+                tahdet: 2,
+                selite: 'Noin 150 huonetta yhdessä tasossa, maalattuja '
+                  + 'puukattoja ja riad-puutarhoja.',
+              },
+              {
+                mita: 'Menaran puutarhat',
+                tahdet: 2,
+                selite: 'Vuoden 1157 vesiallas oliivilehtojen keskellä, '
+                  + 'taustalla Atlaksen lumi.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5 ja
+             * teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Kesä on todella kuuma',
+                teksti: 'Heinäkuun keskiylin on 37,7 astetta ja ennätyslukema '
+                  + '49,6 — keskipäivä kannattaa viettää varjossa.',
+              },
+              {
+                otsikko: 'Vettä on vähän',
+                teksti: 'Sadetta tulee 221 millimetriä vuodessa, ja pohjaveden '
+                  + 'pinta on laskenut vuodesta 2002 keskimäärin 0,9 '
+                  + 'metriä vuodessa.',
+              },
+              {
+                otsikko: 'Osa kohteista on ollut korjauksessa',
+                teksti: 'Syyskuun 2023 maanjäristys vaurioitti useita '
+                  + 'monumentteja, ja niitä on avattu uudelleen korjausten '
+                  + 'valmistuessa.',
+              },
+              {
+                otsikko: 'Moskeijat eivät ole avoimia',
+                teksti: 'Marokossa moskeijoihin ei pääse ei-muslimina, joten '
+                  + 'Koutoubiasta näkee vain minareetin ja puutarhat.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Vesi, vuoret ja puutarhat',
+      johdanto: 'Marrakech on kuivalla tasangolla, ja silti se on aina ollut '
+        + 'vihreä. Selitys on maan alla: almoravidien kaivamat tunnelit '
+        + 'toivat vuorten vedet kaupunkiin.',
+      tehtava: {
+        kysymys: 'Minä vuonna Menaran puutarhat perustettiin?',
+        vaihtoehdot: [
+          '1157',
+          '1357',
+          '1557',
+          '1857',
+        ],
+        oikea: 0,
+        fakta: 'Almohadihallitsija Abd al-Mu\'min perusti Menaran puutarhat '
+          + '1157, kymmenen vuotta sen jälkeen kun almohadit olivat '
+          + 'vallanneet kaupungin. Altaan reunalla seisova paviljonki on '
+          + 'paljon myöhempi, 1800-luvulta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Khettara — kaupunki, joka joi maan alta',
+          teksti: 'Almoravidiemiiri Ali ibn Yusuf laajensi kaupungin '
+            + 'vesihuoltoa 1100-luvulla järjestelmällä, jota kutsutaan '
+            + 'nimellä khettara. Se on maanalainen kuivatustunneli, joka '
+            + 'tuo pohjaveden pintaan ja jakaa sen kaupunkiin ja '
+            + 'pelloille. Rakenne on yksinkertainen ja työläs: rivi '
+            + 'pystykuiluja kaivetaan maahan, ja niiden pohjat yhdistetään '
+            + 'loivasti viettävällä tunnelilla. Kun tunneli on valmis, '
+            + 'kuilut jäävät tuuletusaukoiksi ja huoltoreiteiksi. Vesi '
+            + 'johdettiin sisternoihin, moskeijoiden pesuhuoneisiin, '
+            + 'hammameihin ja katujen suihkulähteisiin, joita medinassa on '
+            + 'neljäkymmentäviisi.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Marrakesh',
+        },
+        {
+          otsikko: 'Kaksi puutarhaa altaan ympärillä',
+          teksti: 'Kaupungin vanhimmat puutarhat eivät ole kukkapenkkejä vaan '
+            + 'vesivarastoja. Menaran puutarhat perusti Abd al-Mu\'min '
+            + '1157: keskellä on suuri allas, sen ympärillä hedelmätarhoja '
+            + 'ja oliivilehtoja, ja altaan reunalla 1800-luvun paviljonki. '
+            + 'Aluetta on noin 96 hehtaaria. Agdalin puutarhat aloitettiin '
+            + 'Abu Ya\'qub Yusufin aikana 1163–1184, ja ne ovat nykyään '
+            + 'noin 340 hehtaaria savimuurien kehän sisällä; siellä on '
+            + 'useita altaita ja palatsirakennuksia. Molempien altaat '
+            + 'täytettiin khettaroilla, jotka toivat veden Atlaksen '
+            + 'juurelta.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Menara Gardens',
+        },
+        {
+          otsikko: 'Maalarin sininen puutarha',
+          teksti: 'Majorellen puutarha oli maisemamaalari Jacques Majorellen '
+            + 'koti, ja se on ollut yleisölle avoinna vuodesta 1947. '
+            + 'Kokoelmassa on kasveja viideltä mantereelta: kaktuksia, '
+            + 'palmuja ja bambua. Puutarhan tummansininen talo toimi ensin '
+            + 'islamilaisen taiteen museona ja siitä tuli 2011 '
+            + 'berberimuseo, jossa on esineistöä amazigh-kulttuurista eri '
+            + 'puolilta Marokkoa. Muotisuunnittelija Yves Saint Laurent '
+            + 'osti ja kunnosti kiinteistön, ja puutarhaan on pystytetty '
+            + 'muistokivi hänelle. Koutoubian omissa puutarhoissa kasvaa '
+            + 'appelsiini- ja palmupuita, ja niissä viihtyvät '
+            + 'kattohaikarat.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Majorelle Garden',
+        },
+        {
+          otsikko: 'Kuuma tasanko vuorten varjossa',
+          teksti: 'Ilmasto on kuuma puoliaava: heinäkuun keskiylin on 37,7 '
+            + 'astetta ja kuumin mitattu lukema 49,6, kun taas tammikuussa '
+            + 'on mitattu 3,6 pakkasastetta. Sadetta tulee vain 221 '
+            + 'millimetriä ja 29 päivänä vuodessa. Silti seutu ei ole '
+            + 'aavikkoa: maantieteilijä Barrows huomautti, että kosteus '
+            + 'liikkuu täällä maan alla eikä pintavesinä, ja että sijainti '
+            + 'Atlaksen pohjoispuolella erottaa Marrakechin '
+            + 'aavikkokaupungeista. Vuoriston keskikorkeus on yli kolme '
+            + 'kilometriä, ja se on pääosin jurakauden kalkkikiveä. '
+            + 'Pohjaveden pinta on laskenut vuodesta 2002 keskimäärin 0,9 '
+            + 'metriä vuodessa.',
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+          wiki: 'Marrakesh',
+        },
+      ],
+    },
+  ],
 };

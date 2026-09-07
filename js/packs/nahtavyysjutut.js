@@ -52466,4 +52466,546 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * TANGERIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.tanger, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Mendoub's Residence", "Café Hafa", "Kasbah
+   * Palace, Tangier", "Hotel Continental (Tangier)", "Grand Mosque
+   * of Tangier", "St Andrew's Church, Tangier", "American
+   * Legation, Tangier" ja "Gran Teatro Cervantes").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat antiikin Tingis, Englannin Tanger 1661–1684, vuoden
+   * 1873 diplomaattikunta, Matisse, Ibn Battuta, kansainvälinen
+   * vyöhyke, Bowles ja Choukri sekä Burroughsin Interzone.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Pyhän
+   * Andreaksen kirkon jutussa EI kerrota Matissen maalauksesta,
+   * vaikka en-Wikipedia mainitsee, että vuoden 1913 "Landscape
+   * Viewed from a Window" esittää juuri tätä kirkkoa: maalaus on
+   * kansisivun noston aihe. Café Hafan jutussa EI mainita
+   * Bowlesia eikä Burroughsia, jotka ovat teemasivun aihe.
+   * Suurmoskeijan jutussa englantilaisten lähtö 1684 mainitaan vain
+   * siltä osin kuin se selittää rakennuksen paluun moskeijaksi.
+   */
+  tanger: {
+    'Mendoubin residenssi': {
+      aika: '1929',
+      teksti: 'Kansainvälisen vyöhykkeen aikaan Tangerissa oli kaksi valtaa. '
+        + 'Siirtomaavallat nimittivät hallintomiehen, ja sulttaanilla oli '
+        + 'oma henkilökohtainen edustajansa, jota vuodesta 1923 kutsuttiin '
+        + 'mendoubiksi. Mendoubin toimisto oli entisessä Saksan '
+        + 'konsulaatissa Grand Soccon laidalla, mutta asunnokseen mendoub '
+        + 'Mohammed Tazi rakennutti 1929 tämän talon Marshanin tasangolle.'
+        + '\n\n'
+        + 'Vuonna 1970 kiinteistön osti amerikkalainen lehtikustantaja '
+        + 'Malcolm Forbes ja teki siitä museon. Kokoelmassa oli 115 000 '
+        + 'tinasotilasta, joilla oli lavastettu historian taisteluita '
+        + 'valoineen ja äänineen, ja puutarhassa kuusisataa figuuria '
+        + 'esitti kolmen kuninkaan taistelua. Museo suljettiin '
+        + '1990-luvulla, ja 60 000 esinettä huutokaupattiin joulukuussa '
+        + '1997; myynti tuotti yhteensä 700 000 dollaria.'
+        + '\n\n'
+        + 'Forbesin kuoltua perikunta myi kiinteistön Marokon valtiolle, '
+        + 'joka käyttää sitä virallisten vieraiden residenssinä. Talo ei '
+        + 'ole enää yleisölle avoin, joten kymmenen eekkerin puutarhan ja '
+        + 'sen näkymän salmelle näkee vain portilta. Elokuvan ystäville '
+        + 'paikka on tuttu: se oli pahiksen tukikohtana vuoden 1987 James '
+        + 'Bond -elokuvassa The Living Daylights.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Café Hafa': {
+      aika: '1921',
+      teksti: 'Café Hafa avattiin 1921 kallionreunalle Tangerin lahden '
+        + 'yläpuolelle, eikä se ole sen koommin juuri muuttunut. Sisustus '
+        + 'on alkuperäinen ja terassit laskeutuvat rinnettä useassa '
+        + 'tasossa, niin että jokaiselta pöydältä näkee '
+        + 'Gibraltarinsalmelle. Selkeällä säällä horisontissa erottuu '
+        + 'Espanjan Tarifa.'
+        + '\n\n'
+        + 'Kahvila on Marshanin tasangon reunalla, samalla ylängöllä jonka '
+        + 'mukaan kaupunginosa on nimetty. Paikka ei ole nähtävyys '
+        + 'rakennuksena vaan tapana: minttuteetä juodaan hitaasti, laivat '
+        + 'kulkevat salmen poikki, ja kahden mantereen väli näyttää '
+        + 'lyhyemmältä kuin kartalla.'
+        + '\n\n'
+        + 'Vierailijoiden lista on pitkä ja kirjava. Kahvilassa ovat '
+        + 'istuneet muun muassa Beatles ja Rolling Stones sekä '
+        + 'espanjalainen kirjailija Juan Goytisolo. Laulaja-lauluntekijä '
+        + 'Luis Eduardo Aute omisti paikalle kappaleen "Hafa Café" '
+        + 'levyllään Slowly.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kasbahin palatsi': {
+      aika: '1700-luku',
+      teksti: 'Kasbahin korkeimmalla kohdalla seisoo Dar al-Makhzen, '
+        + 'kuvernöörin ja vierailevan sulttaanin palatsi. Sen rakennutti '
+        + '1700-luvun alussa Moulay Ismailin aikana pasha Ahmad ben Ali '
+        + 'al-Rifi, ja perustuksina ovat englantilaisten Upper Castlen '
+        + 'rauniot — talo seisoo siis kirjaimellisesti edellisen vallan '
+        + 'päällä. Sulttaani Hassan I yöpyi täällä 1889.'
+        + '\n\n'
+        + 'Rakennus kiertyy kahden sisäpihan ympärille. Katot ovat puuta, '
+        + 'suihkulähteet marmoria ja seinät arabeskia; pääpihan pylväiden '
+        + 'hienot marmorikapiteelit tuotiin todennäköisesti Italiasta '
+        + 'rakennusaikaan. Palatsin kylkeen kuuluivat aikoinaan '
+        + 'valtionkassa ja vankilat, jotka avautuivat kasbahin '
+        + 'mechouar-aukiolle.'
+        + '\n\n'
+        + 'Museoksi talo muutettiin jo 1922, ja vuoden 2016 '
+        + 'peruskorjauksen jälkeen se on Välimeren kulttuurien museo. '
+        + 'Entisessä keittiössä toimii antiikin museo, jossa on löytöjä '
+        + 'Lixuksesta, Cottasta ja Volubiliksesta sekä luonnollisen '
+        + 'kokoinen karthagolainen hauta. Nykytaiteen tila avattiin '
+        + 'loppuvuodesta 2021 vanhaan vankilaan, joka oli ollut käytössä '
+        + '1970-luvun alkuun asti.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hotelli Continental': {
+      aika: '1870',
+      teksti: 'Hotelli Continental rakennettiin 1870 medinan itäreunalle '
+        + 'sataman yläpuolelle, ja se on kaupungin vanhimpia yhä toimivia '
+        + 'hotelleja. Perustajina oli Ben Dahanin suku, vanha '
+        + 'tangerilainen juutalaisperhe. Osasta huoneita näkyy suoraan '
+        + 'laiturille, mikä oli talon koko liikeidea: matkustaja astui '
+        + 'laivasta ja käveli ylös.'
+        + '\n\n'
+        + '1800-luvun vieraskirjan kellastuneilla sivuilla on nimiä, jotka '
+        + 'kertovat kaupungin asemasta: maalari Edgar Degas ja nuori '
+        + 'Winston Churchill kävivät täällä, ja myöhemmin beat-runoilijat.'
+        + '\n\n'
+        + 'Talo on ollut myös kuvauspaikka: Bernardo Bertolucci kuvasi '
+        + 'siellä osan elokuvastaan Suojaava taivas. Sisäänkäynti on '
+        + 'medinan kujalta, eikä julkisivu paljasta paljon — kuten '
+        + 'useimmissa vanhoissa taloissa, kaikki kääntyy sisäänpäin.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tangerin suurmoskeija': {
+      aika: '1818',
+      teksti: 'Paikalla uskotaan olleen ensin roomalainen Herkuleen temppeli '
+        + 'ja sen jälkeen 400-luvun kirkko. Perjantaimoskeija perustettiin '
+        + 'marinidien aikaan, mutta portugalilaiset muuttivat sen '
+        + 'katedraaliksi vallattuaan kaupungin 1471. Kun englantilaiset '
+        + 'lähtivät 1684, Moulay Ismail käski uuden kuvernöörin muuttaa '
+        + 'rakennuksen takaisin moskeijaksi.'
+        + '\n\n'
+        + 'Tulos oli karu, ja matkustavat oppineet moittivat sen '
+        + 'puutteita. Sulttaani Moulay Slimane järkyttyi rakennuksen '
+        + 'kunnosta nähdessään sen 1815 ja määräsi sen rakennettavaksi '
+        + 'kokonaan uudelleen; työhön haettiin käsityöläisiä muualta, ja '
+        + 'se valmistui 1817–18. Nykyinen muoto on tuosta työstä: '
+        + 'nelikulmainen minareetti vihrein laatoin ja pääportti, jonka '
+        + 'geometrinen koristelu ja puinen katos ovat Moulay Slimanen '
+        + 'ajalta.'
+        + '\n\n'
+        + 'Moskeija oli myös kaupungin hallinnollinen keskus. Kadun '
+        + 'toisella puolella asui qadi eli tuomari, jonka talossa '
+        + 'oikeusjutut käsiteltiin, ja hänen naapurinaan ajanmäärittäjä '
+        + 'muwaqqit, jonka talosta johti ilmasilta minareettiin. Lähellä '
+        + 'olivat vesisäiliö, mielisairaita hoitanut maristan ja huone, '
+        + 'jossa pestiin vainajat — Tangerissa usein kaukaa tulleita. '
+        + 'Moskeija on yhä käytössä eikä avoin ei-muslimeille.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Andreaksen kirkko': {
+      aika: '1894',
+      teksti: 'Sulttaani Hassan I lahjoitti 1880 maapalan Tangerin '
+        + 'brittiyhteisölle anglikaanista kirkkoa varten. Ensimmäinen '
+        + 'kirkko kävi pian ahtaaksi, ja tilalle rakennettiin 1894 uusi '
+        + 'rakennus, joka vihittiin 1905 Pyhän Andreaksen kirkoksi.'
+        + '\n\n'
+        + 'Talo on rakennettu maurilaiseen tyyliin: sisällä yhdistyvät '
+        + 'monet vaikutteet, ja kellotorni on muotoiltu minareetiksi. '
+        + 'Tornin juurella on hautausmaa, joka kertoo kansainvälisen '
+        + 'kaupungin väestä yhtä paljon kuin kirkko itse.'
+        + '\n\n'
+        + 'Seinillä on muistolaattoja. Yksi niistä on Emily Keenelle '
+        + '(1849–1944), Wazzanin sherifalle, joka toi kolerarokotteen '
+        + 'Marokkoon; hänen hautansa on Marshanissa suvun omalla '
+        + 'hautapaikalla. Hautausmaalla lepäävät muun muassa toimittaja ja '
+        + 'diplomaatti Walter Burton Harris sekä Sir Harry MacLean, joka '
+        + 'komensi Marokon armeijaa.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Amerikan lähetystö': {
+      aika: '1821',
+      teksti: 'Marokko tunnusti Yhdysvaltain itsenäisyyden ensimmäisenä maana '
+        + 'maailmassa: sulttaani Mohammed ben Abdallah antoi julistuksensa '
+        + '20. joulukuuta 1777. Vuosikymmeniä myöhemmin, 17. toukokuuta '
+        + '1821, sulttaani lahjoitti Yhdysvalloille medinasta talon '
+        + 'diplomaattista edustustoa varten.'
+        + '\n\n'
+        + 'Talosta tuli Yhdysvaltain ensimmäinen ulkomailla omistama '
+        + 'julkinen kiinteistö, ja se palveli lähetystönä ja konsulaattina '
+        + '140 vuotta — pidempään kuin mikään muu yhdysvaltalainen '
+        + 'rakennus ulkomailla. Toisen maailmansodan aikana talossa toimi '
+        + 'tiedustelun päämaja. Kun Marokon diplomaattinen pääkaupunki '
+        + 'siirtyi 1956 Rabatiin, rakennus jäi tyhjilleen ja rapistui.'
+        + '\n\n'
+        + 'Vuonna 1976 joukko amerikkalaisia perusti yhdistyksen talon '
+        + 'pelastamiseksi. Nykyään siellä toimii museo, tutkimuskirjasto '
+        + 'ja kulttuurikeskus, jonka ohjelmaan kuuluu arabian '
+        + 'lukutaitokursseja medinan naisille. Rakennus on ainoa '
+        + 'Yhdysvaltain kansallinen historiallinen maamerkki ulkomailla; '
+        + 'se listattiin historiallisten paikkojen rekisteriin 1981 ja sai '
+        + 'maamerkin aseman seuraavana vuonna.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gran Teatro Cervantes': {
+      aika: '1913',
+      teksti: 'Kansainvälistyvässä Tangerissa espanjalaisyhteisö halusi oman '
+        + 'teatterin. Peruskivi laskettiin juhlallisessa seremoniassa 2. '
+        + 'huhtikuuta 1911, ja talo valmistui ja vihittiin 1913. Se '
+        + 'nimettiin Miguel de Cervantesin mukaan.'
+        + '\n\n'
+        + 'Rakennustyötä johtivat Esperanza Orellana ja hänen miehensä '
+        + 'Manuel Peña, ja omistajana oli Antonio Gallego. Katsomoon '
+        + 'mahtuu 1400 ihmistä — mittakaava kertoo, kuinka suureksi '
+        + 'kaupungin tulevaisuus tuolloin arvioitiin.'
+        + '\n\n'
+        + 'Teatteri kuuluu samaan vuosikymmeneen kuin muu muurien '
+        + 'ulkopuolelle noussut uusi kaupunki. Samoihin vuosiin osuvat '
+        + 'saksalaisliikemiehen rakennuttama Renschhausenin talo noin 1913 '
+        + 'ja syrjäytetyn sulttaani Abdelhafidin palatsi 1914; rautatie '
+        + 'Fèsiin rakennettiin 1919–1927. Espanjalaisia oli kaupungin '
+        + 'eurooppalaisista suurin ryhmä, noin kolme neljäsosaa, ja '
+        + 'useimmat heistä olivat käsityöläisiä ja työläisiä.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * MARRAKECHIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.marrakech.
+   * Väitteet luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Ben Youssef Madrasa", "Dar el Bacha", "Mouassine
+   * Fountain", "Dar Si Said", "Bahia Palace", "El Badi Palace",
+   * "Saadian Tombs" ja "Bab Agnaou").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat perustaminen ja nimi, muuri ja Koutoubia, seitsemän
+   * pyhimystä ja vuoden 1867 avautuminen, Jemaa el-Fna, khettara,
+   * Menara ja Agdal, Majorelle sekä ilmasto.
+   *
+   * KAKSI VELJESTEN PALATSIA JAKAVAT TARINAN: suvun historia
+   * kerrotaan vain Bahian jutussa, ja Dar Si Saidin juttu keskittyy
+   * taloon ja sen nykyiseen museoon. El Badin jutussa palatsin
+   * valmistumisvuoden ristiriita kirjoitetaan auki lukijalle
+   * (al-Ifranin 1593 vastaan vuoden 1585 pohjapiirros).
+   */
+  marrakech: {
+    'Ben Youssefin medresa': {
+      aika: '1565',
+      teksti: 'Medresa on islamilainen korkeakoulu, jossa opetettiin lakia, '
+        + 'oikeusoppia ja Koraanin lukutapoja. Marrakechin ensimmäisen '
+        + 'tälle paikalle perusti al-Ifranin mukaan marinidisulttaani Abu '
+        + 'al-Hasan 1300-luvulla; nykyisen rakennuksen tilasi '
+        + 'saadilaissulttaani Abdallah al-Ghalib, ja sen '
+        + 'valmistumisvuodeksi 1564–65 on kirjattu piirtokirjoitus. Nimi '
+        + 'tulee viereisestä Ben Youssefin moskeijasta.'
+        + '\n\n'
+        + 'Valmistuessaan se oli koko Maghrebin suurin medresa: 130 '
+        + 'opiskelijahuonetta ja tilaa jopa kahdeksallesadalle oppilaalle. '
+        + 'Pohja on lähes neliö, noin 40 kertaa 43 metriä. Kadulta tullaan '
+        + 'kapeaa käytävää eteiseen ja vasta sieltä sisäpihalle — tilan '
+        + 'aukeaminen yllättäen on tarkoituksellinen osa rakennusta. Pihan '
+        + 'keskellä on matala peiliallas ja kaakkoispäässä rukoussali, '
+        + 'jonka mihrab on erityisen rikkaasti stukattu.'
+        + '\n\n'
+        + 'Pesuhuoneessa neljä marmoripylvästä kannattaa kaaria ja '
+        + 'muqarnas-kupolia. Juuri siellä ranskalainen taidetarkastaja '
+        + 'Jean Gallotti pani 1921 merkille cordobalaisen 1000-luvun '
+        + 'marmorialtaan, joka oli päätynyt kouluun kiertoteitse. Koulu '
+        + 'suljettiin 1960 ja avattiin historiallisena kohteena 1982; '
+        + 'viimeisin kunnostus kesti marraskuusta 2018 huhtikuuhun 2022.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dar el Bacha': {
+      aika: '1910',
+      teksti: 'Dar el Bacha tarkoittaa pashan taloa. Se rakennettiin 1910, ja '
+        + 'siitä tuli T\'hami El Glaouin residenssi, kun sulttaani Moulay '
+        + 'Youssef nimitti hänet 1912 Marrakechin pashaksi. Glaoui oli '
+        + 'vuosien ajan Marokon etelän vaikutusvaltaisin poliittinen hahmo '
+        + 'Ranskan vallan aikana, ja talo rakennettiin näyttäväksi juuri '
+        + 'vieraiden vakuuttamista varten.'
+        + '\n\n'
+        + 'Rakennus on riad-arkkitehtuurin oppikirjaesimerkki: '
+        + 'suorakaiteinen sisäpiha, jonka puutarha on jaettu neljään '
+        + 'osaan, keskellä suihkulähteitä ja appelsiinipuita, ja joka '
+        + 'sivulla pylväikön takana sali. Kokonaisuuteen kuuluivat hammam, '
+        + 'palvelutilat ja perheen oma puoli. Zellij-mosaiikki, '
+        + 'kaiverrettu stukko sekä maalatut setripuiset ovet ja katot ovat '
+        + 'säilyneet. Talo oli myös ensimmäisiä Marrakechin palatseja, '
+        + 'joiden ulkojulkisivu koristeltiin näyttävästi.'
+        + '\n\n'
+        + 'Marokon kansallinen museosäätiö kunnosti talon, ja Mohammed VI '
+        + 'vihki sen 9. heinäkuuta 2017 Musée des Confluences -museoksi. '
+        + 'Näyttelyt vaihtuvat ja käsittelevät Marokon kulttuurin eri '
+        + 'puolia; yhdessä niistä oli esillä esineitä kaikkien kolmen '
+        + 'yksijumalaisen uskonnon pyhistä paikoista. Talo vaurioitui '
+        + 'syyskuun 2023 maanjäristyksessä ja suljettiin korjausten '
+        + 'ajaksi.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mouassinen suihkulähde': {
+      aika: '1570',
+      teksti: 'Vedenanto on islamilaisessa maailmassa kunnioitetuimpia almuja, '
+        + 'ja siksi Marrakechin suihkulähteet eivät ole pelkkiä hanoja '
+        + 'vaan rakennuksia. Mouassinen lähde kuuluu moskeijan '
+        + 'kokonaisuuteen, jonka saadilaissulttaani Abdallah al-Ghalib '
+        + 'rakennutti vuosien 1562–63 ja 1572–73 välillä; samaan '
+        + 'kokonaisuuteen kuuluivat moskeija, kirjasto, pesuhuone, hammam '
+        + 'ja koraanikoulu.'
+        + '\n\n'
+        + 'Lähde on medinan suurimpia. Sen vieressä on kolme kaarta, '
+        + 'joiden takana olivat eläinten juottokaukalot: suuri allas oli '
+        + 'ihmisille ja kaukalot erityisesti aaseille, joilla tavara kulki '
+        + 'kujilla. Neljä kaarta vievät yhdessä 18,1 metriä pitkän ja 4,7 '
+        + 'metriä leveän tilan. Setripuinen kaari ja siitä ulkoneva katos '
+        + 'on koristeltu maalatuin ja taltatuin kasviaihein.'
+        + '\n\n'
+        + 'Sisällä vaakapalkin yläpuolella on leveä stukkofriisi, jonka '
+        + 'kahdeksansakaraista tähtikuviota kutsutaan nimellä "Mtemmen '
+        + 'maa\'kous". Sen molemmin puolin kapeammissa friiseissä toistuu '
+        + 'ylistys "kunnia Jumalalle". Palkkiin oli maalattu runosäe, joka '
+        + 'on sittemmin kadonnut; se tunnetaan vain vanhasta valokuvasta '
+        + 'ja piirroksesta. Medinassa on kaikkiaan 45 juomavesilähdettä, '
+        + 'ja niiden koko kertoo korttelin koosta.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dar Si Said': {
+      aika: '1900',
+      teksti: 'Dar Si Said rakennettiin 1894–1900 aivan Bahian palatsin '
+        + 'pohjoispuolelle. Rakennuttaja Si Sa\'id ibn Musa oli veljensä '
+        + 'Ba Ahmadin sotaministeri, ja koristeaiheet ovat samat kuin '
+        + 'veljen palatsissa — mutta talo on rakennettu useaan kerrokseen '
+        + 'ja sen pohja on aivan toisenlainen. Ylimmässä kerroksessa on '
+        + 'suuri vastaanottosali, ja pihalla riad-puutarha, jonka keskellä '
+        + 'seisoo maalatusta puusta tehty paviljonki.'
+        + '\n\n'
+        + 'Protektoraatin aikana vuoden 1914 jälkeen talo toimi '
+        + 'Marrakechin aluejohdon toimipaikkana, ja noin 1930 siitä '
+        + 'tehtiin marokkolaisen taiteen ja puutyön museo. Vuonna 1957, '
+        + 'itsenäistymisen jälkeen, rakennus jaettiin museon ja '
+        + 'käsityöviraston kesken.'
+        + '\n\n'
+        + 'Kunnostuksen jälkeen museo avattiin 2018 uudella nimellä: se on '
+        + 'nyt kansallinen kudonnan ja mattojen museo, ja kokoelma '
+        + 'painottuu maan eteläosien töihin. Talon vanhaan kokoelmaan '
+        + 'kuului myös andalusialainen marmoriallas, joka valmistettiin '
+        + 'Madinat al-Zahrassa vuosina 1002–1007 — se on palautettu Ben '
+        + 'Youssefin medresaan, josta se aikoinaan löytyi. Museo '
+        + 'vaurioitui syyskuun 2023 maanjäristyksessä.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bahian palatsi': {
+      aika: '1900',
+      teksti: 'Bahian palatsi syntyi kahdessa osassa ja kahden sukupolven '
+        + 'aikana. Ensimmäisen osan rakennutti 1860-luvulla Si Musa, '
+        + 'sulttaani Muhammad ibn Abd al-Rahmanin suurvisiiri; suuren '
+        + 'riad-puutarhan sivuhuoneissa on piirtokirjoitus, joka ajoittaa '
+        + 'ne vuosiin 1866–67. Si Musa polveutui makhzenia eli '
+        + 'kuninkaallista hallintoa palvelleesta orjasuvusta, joka nousi '
+        + 'maan korkeimpiin virkoihin.'
+        + '\n\n'
+        + 'Poika Ba Ahmed varmisti 1894 nuoren Abdelazizin nousun '
+        + 'valtaistuimelle ja sai palkaksi suurvisiirin viran. Koska '
+        + 'sulttaani oli vasta kuusitoistavuotias, Ba Ahmed hallitsi '
+        + 'käytännössä Marokkoa kuolemaansa asti 1900 — ja laajensi '
+        + 'palatsia koko sen ajan, pala palalta sitä mukaa kuin maata '
+        + 'vapautui ostettavaksi. Marmoripäällysteinen suuri piha on '
+        + 'vuosilta 1896–97. Arkkitehti oli safilainen Muhammad ibn Makki '
+        + 'al-Misfiwi.'
+        + '\n\n'
+        + 'Lopputuloksena on epäsäännöllinen noin 150 huoneen kokonaisuus, '
+        + 'jossa huoneet kiertyvät useiden sisäpihojen ja puutarhojen '
+        + 'ympärille. Kuuluisimpia ovat maalatut puukatot, veistetty '
+        + 'stukko ja zellij-laatoitus. Nimi al-Bahia tarkoittaa loistavaa '
+        + 'ja oli kuulemma Ba Ahmedin lempivaimon nimi. Koko palatsi '
+        + 'rakennettiin yhteen tasoon, mahdollisesti siksi että kookkaan '
+        + 'rakennuttajan oli vaikea kulkea portaissa.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'El Badin palatsi': {
+      aika: '1578',
+      teksti: 'El Badi tarkoittaa verratonta, ja se on yksi Jumalan '
+        + 'yhdeksästäkymmenestäyhdeksästä nimestä. Sulttaani Ahmad '
+        + 'al-Mansur tilasi palatsin muutama kuukausi valtaannousunsa '
+        + 'jälkeen 1578, ja rahat tulivat todennäköisesti Portugalin '
+        + 'maksamista lunnaista sekä sokerikaupasta, jossa Marokko oli '
+        + 'tuolloin merkittävä viejä. Palatsi ei ollut asunto vaan '
+        + 'vastaanottotila, jossa vaikutettiin Espanjan, Englannin ja '
+        + 'osmanien lähettiläisiin.'
+        + '\n\n'
+        + 'Rakennusaineet haettiin kaukaa: marmoripylväät Italiasta sekä '
+        + 'kalkki ja kipsi Timbuktusta. Työväkeä tuotiin useilta '
+        + 'seuduilta, Euroopasta asti, ja työmaan viereen syntyi oma '
+        + 'markkinapaikka. Al-Mansur järjesti työläisilleen jopa '
+        + 'lastenhoitoa, jottei työ keskeytyisi. Valmistumisvuodesta on '
+        + 'kaksi käsitystä: kronikoitsija al-Ifrani sanoo työn kestäneen '
+        + 'viisitoista vuotta vuoteen 1593, mutta vuoden 1585 '
+        + 'portugalilaisessa pohjapiirroksessa palatsi näkyy jo valmiina — '
+        + 'ja marmoria ostettiin vielä 1602.'
+        + '\n\n'
+        + 'Al-Mansurin kuoltua 1603 palatsi jäi hoitamatta. Moulay Ismail '
+        + 'määräsi sen purettavaksi, ja materiaalit siirrettiin hänen '
+        + 'uuteen pääkaupunkiinsa Meknèsiin; purku eteni vähitellen, ja '
+        + 'saadilaisia rakennusosia on löydetty ympäri Marokkoa. '
+        + 'Raunioista tuli laidun ja pöllöjen tyyssija. Nykyään alue on '
+        + 'näyttelytila, ja siellä on esillä Koutoubian moskeijan '
+        + '1100-luvun almoravidiminbar eli saarnatuoli.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Saadilaisten haudat': {
+      aika: '1603',
+      teksti: 'Kasbahin moskeijan eteläseinän takana on puutarha, jossa on '
+        + 'haudattu saadilaissuvun hallitsijoita. Paikka on ollut '
+        + 'hautausmaa jo almohadien aikaan, ja marinidisulttaani Abu '
+        + 'al-Hasan haudattiin tänne väliaikaisesti 1351 kuoltuaan '
+        + 'maanpaossa Korkeassa Atlaksessa; hänen marmorinen hautakivensä '
+        + 'on yhä yhdessä kammiossa, vaikka ruumis siirrettiin muutamaa '
+        + 'kuukautta myöhemmin Chellahiin.'
+        + '\n\n'
+        + 'Itäinen mausoleumi rakennettiin ensin: Abdallah al-Ghalib '
+        + 'pystytti sen vuosien 1557 ja 1574 välillä isänsä Muhammad '
+        + 'al-Shaykhin muistoksi. Kokonaisuus sai nykyisen laajuutensa '
+        + 'Ahmad al-Mansurin aikana. Tärkeimmät haudat on merkitty '
+        + 'hienosti kaiverretuin marmorilaatoin, muut on peitetty '
+        + 'värikkäällä zellijillä. Al-Mansurin oman kammion setripuinen '
+        + 'katto lepää kahdentoista carraranmarmorisen pylvään varassa.'
+        + '\n\n'
+        + 'Aikanaan nekropoli eristettiin ympäröivistä kaduista ja '
+        + 'unohtui. Marokon muinaismuistoviranomainen "löysi" sen '
+        + 'uudelleen 1917 ja aloitti tarkan ennallistuksen, jossa '
+        + 'puuttuvat koristeet tehtiin säilyneiden osien mallin mukaan; '
+        + 'samalla paikka avattiin ensi kertaa yleisölle. Monet '
+        + 'taidehistorioitsijat pitävät hautoja saadilaisajan '
+        + 'marokkolaisen rakennustaiteen huippuna.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bab Agnaou': {
+      aika: '1190',
+      teksti: 'Bab Agnaou oli kuninkaallisen kasbahin pääportti, ja sen '
+        + 'rakennutti almohadikalifi Ya\'qub al-Mansur; portti valmistui '
+        + 'noin 1188–1190. Kasbah on medinan eteläosassa, ja saman muurin '
+        + 'sisällä ovat Kasbahin moskeija, saadilaisten haudat, El Badin '
+        + 'palatsi ja kuninkaan nykyinen residenssi. Portti on '
+        + 'kaupunginmuurin sisäpuolella, joten sen tehtävä oli '
+        + 'ensisijaisesti näyttävyys.'
+        + '\n\n'
+        + 'Alun perin porttia reunusti kaksi bastionitornia, ja käytävä '
+        + 'kääntyi holvatussa eteisessä yhdeksänkymmentä astetta — sama '
+        + 'ratkaisu kuin Rabatin Bab er-Rouahissa. Tornit ja eteinen ovat '
+        + 'kadonneet, ja kaariaukko on muurattu osittain umpeen '
+        + 'pienemmäksi tiilikaareksi todennäköisesti Sidi Muhammad ibn '
+        + 'Abdallahin aikana. Julkisivun hiekkakivi louhittiin luultavasti '
+        + 'Guelizin alueelta.'
+        + '\n\n'
+        + 'Kiveen kaiverrettu koristelu on säilynyt almohadien ajalta: '
+        + 'kaarta kiertävät vuorottelevat puolikaaret, kulmissa on '
+        + 'kasviaiheita ja kummankin keskellä kaiverrettu simpukka, ja '
+        + 'kaiken kehyksenä kulkee Koraanin al-Hijr-suuran katkelmia '
+        + 'lehväkufilaisin kirjaimin. Nimen alkuperä on epäselvä: "agnaou" '
+        + 'on todennäköisesti berberiä, ja sille on kirjattu useita '
+        + 'merkityksiä. Kivi on kärsinyt laastin liukoisista suoloista ja '
+        + 'ilmansaasteista.',
+      kuvat: [
+        {
+          tiedosto: 'PUUTTUU',
+          lahde: 'PUUTTUU',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

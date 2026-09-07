@@ -88,12 +88,40 @@ export const OMAT_ARTIKKELIT = {
       + 'kalliopiirrokset kertovat, miten tässä maassa on aina osattu '
       + 'elää hiekan ehdoilla.',
   },
+  /*
+   * TEKSTIREMONTTI 7.9.2026 (Raamattu, "TEKSTIEN PAINOPISTE" ja
+   * docs/aasia-tyoaineisto/lehtityo-resepti.md): intro EI OLE enää
+   * kahden lauseen nosto vaan lehden ETUSIVUN LEIPÄTEKSTI — 7–10
+   * virkettä kolmessa kappaleessa ('\n\n') ja kaksi maltillista
+   * **lihavointia**. Renderöijä (piirraLeipateksti) tekee kappaleet
+   * ja boldit, joten tänne ei kirjoiteta HTML:ää. Faktat ovat
+   * docs/mantereet-tyoaineisto/faktapohja-tanger.md:stä ja lehden
+   * omista jo tarkistetuista teksteistä (kulttuuri-kategoriat.js:n
+   * tanger-lohko); alla oleva artikkeli-kenttä on ennallaan.
+   */
   Tanger: {
-    intro: 'Tanger vartioi Gibraltarinsalmea Afrikan luoteiskulmassa: '
-      + 'Eurooppaan on merta vain neljätoista kilometriä, ja kaupungin '
-      + 'edustalla Atlantti ja Välimeri kohtaavat. Portti kahden meren '
-      + 'ja kahden mantereen välissä on tehnyt siitä satamakaupungin, '
-      + 'jota kaikki ovat aina halunneet.',
+    intro: 'Tanger seisoo Afrikan luoteiskulmassa siinä, missä '
+      + 'Atlantti kohtaa Välimeren. Salmi on kapeimmillaan 14,2 '
+      + 'kilometriä, ja lautta ylittää sen nopeimmillaan 35 '
+      + 'minuutissa — Eurooppa on siis toisella puolella vettä mutta '
+      + 'toisessa maanosassa. Kaupunki on rakennettu kahden kukkulan '
+      + 'väliin lahdelle, joka oli pitkään Marokon rannikon paras '
+      + 'luonnonsatama, ja maasto nousee siitä ylös kuin katsomo.'
+      + '\n\n'
+      + 'Satamasta on aina taisteltu. Foinikialaiset perustivat '
+      + 'Tingiksen, roomalaiset tekivät siitä provinssinsa '
+      + 'pääkaupungin, ja myöhemmin kaupunkia hallitsivat vuorollaan '
+      + 'portugalilaiset ja englantilaiset, joille se tuli '
+      + 'kuninkaallisina myötäjäisinä. **Vuosina 1923–1956 Tanger oli '
+      + 'kansainvälinen vyöhyke**, jota hallitsi monta maata yhdessä: '
+      + 'veroparatiisi ja turvasatama, jossa asui rinnakkain '
+      + 'muslimeja, juutalaisia ja kristittyjä.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 täällä olivat koko Marokon '
+      + 'lähetystöt, vaikka kaupungissa asui vain parikymmentä tuhatta '
+      + 'ihmistä. **Nykyään Tanger on Marokon toiseksi tärkein '
+      + 'teollisuuskeskus**, ja sen medina, minttutee ja rannan '
+      + 'kahvilat vetävät matkustajia molemmilta mantereilta.',
     artikkeli: 'Tanger on satamakaupunki Marokon pohjoisrannikolla, '
       + 'Gibraltarinsalmen suulla. Espanjan rannikko näkyy selkeällä '
       + 'säällä paljain silmin: merta on välissä vain reilut kymmenen '
@@ -243,11 +271,36 @@ export const OMAT_ARTIKKELIT = {
       + 'Niili, rauhallisena kuin ei olisi huomannut rannoilleen '
       + 'kasvanutta jättiläistä.',
   },
+  /*
+   * TEKSTIREMONTTI 7.9.2026, sama peruste kuin Tangerissa yllä:
+   * intro on nyt etusivun leipäteksti (7–10 virkettä, kolme
+   * kappaletta, kaksi lihavointia). Faktat
+   * docs/mantereet-tyoaineisto/faktapohja-marrakech.md:stä;
+   * artikkeli-kenttä on ennallaan.
+   */
   Marrakech: {
-    intro: 'Marrakech on punaisista savimuureistaan tunnettu '
-      + 'karavaanikaupunki Atlasvuorten juurella. Sen suurtorilla '
-      + 'tarinankertojat, käärmeenlumoajat ja ruokakojut ovat pitäneet '
-      + 'iltansa vuosisatojen ajan.',
+    intro: 'Marrakech on punaisesta savesta muurattu kaupunki Korkean '
+      + 'Atlaksen juurella, palmulehtojen keskellä. Almoravidit '
+      + 'perustivat sen noin vuonna 1070 karavaanireittien '
+      + 'solmukohtaan, ja siitä kasvoi Maghrebin ja Saharan '
+      + 'eteläpuolisen Afrikan kauppapaikka. **Koko maata kutsuttiin '
+      + 'pitkään Marrakechin kuningaskunnaksi** — siitä tulevat '
+      + 'Marokon eurooppalaiset nimet.'
+      + '\n\n'
+      + 'Medinaa kiertää yhdeksäntoista kilometriä muuria, jossa on '
+      + 'kaksikymmentä porttia ja kaksisataa tornia; sen '
+      + 'oranssinpunainen savi on antanut kaupungille lisänimen '
+      + 'punainen kaupunki. Muurin sisällä kohoaa Koutoubian moskeijan '
+      + '77-metrinen minareetti, kaupungin korkein rakennus ja kaikkien '
+      + 'suunnistuspiste. Sen juurella on Jemaa el-Fna, aukio, joka '
+      + 'muuttuu joka ilta ruokakojujen ja tarinankertojien '
+      + 'näyttämöksi.'
+      + '\n\n'
+      + 'Kuiva tasanko on aina ollut vihreä maanalaisten '
+      + 'khettara-tunnelien ansiosta, jotka toivat vuorten vedet '
+      + 'puutarhoihin. **Unesco otti vanhankaupungin '
+      + 'maailmanperintöluetteloon 1985**, ja aukion suullinen perinne '
+      + 'sai oman suojelunsa 2001.',
     artikkeli: 'Marrakech on kaupunki Marokon sisämaassa, palmulehtojen '
       + 'keskellä Atlasvuorten juurella. Kirkkaalla säällä vuorten '
       + 'lumihuiput näkyvät basaarin katoilta — lunta ja aavikkoa '

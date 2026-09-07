@@ -4906,6 +4906,62 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 60.4010, etela: 60.3850, lansi: 5.2990, ita: 5.3375 },
     meri: true,
   },
+  tanger: {
+    /*
+     * MEDINA, KASBAH JA MARSHAN (7.9.2026). Ruutu on 2,2 × 1,6
+     * kilometriä ja kattaa koko sen alueen, jolle Tangerin kahdeksan
+     * kohdetta jakautuvat: idässä satama ja medina, keskellä kasbah,
+     * lännessä Marshanin tasanko ja etelässä muurien ulkopuolinen
+     * uusi keskusta.
+     *
+     * RUUTU ON VAAKA, KOSKA KAUPUNKI ON. Tanger kiertää lahtea
+     * länsi–itä-suunnassa kahden kukkulan välissä, ja Marshanin
+     * kohteet (Café Hafa, Mendoubin residenssi) ovat kilometrin
+     * lännessä medinasta. Pystyruutu pudottaisi ne pois.
+     *
+     * CAP SPARTEL JA HERKULEEN LUOLAT JÄÄVÄT POIS. Ne ovat 14–15
+     * kilometriä lännessä; niiden mukaan ottaminen tekisi ruudusta
+     * kymmenen kilometriä leveän ja puristaisi medinan kohteet
+     * yhteen nurkkaan. Molemmat mainitaan matkaoppaan jaksossa 3.
+     *
+     * meri: true. Tangerin lahti on OSM:ssä rantaviivaa
+     * (natural=coastline), joten ilman lippua kuvan koillisnurkka
+     * jäisi paperin väriseksi. Rantaviiva tulee ruutuun idästä ja
+     * poistuu pohjoisesta, joten täyttö on Halifaxin tapaan
+     * rantanauha eikä umpinainen merialue.
+     */
+    rajat: { pohjoinen: 35.7940, etela: 35.7800, lansi: -5.8280, ita: -5.8040 },
+    meri: true,
+  },
+  marrakech: {
+    /*
+     * MEDINA BEN YOUSSEFISTA KASBAHIIN (7.9.2026). Ruutu on
+     * 1,7 × 2,3 kilometriä eli pelin tiiviimpiä, Christchurchin ja
+     * Ankaran kokoluokkaa. Se riittää: Marrakechin kahdeksan
+     * kohdetta ovat kaikki muurien sisällä pohjois–etelä-akselilla
+     * Ben Youssefin medresasta kasbahin porttiin.
+     *
+     * RUUTU ON PYSTY, KOSKA MEDINAN KOHDEAKSELI ON. Medresa on
+     * pohjoisessa (31,6319) ja Bab Agnaou etelässä (31,6175);
+     * leveämpi rajaus toisi mukaan vain Guelizin uudet korttelit
+     * lännessä ja palmulehdot idässä, joissa ei ole kohteita.
+     *
+     * MENARA JA AGDAL JÄÄVÄT POIS. Menaran puutarhat ovat kolme
+     * kilometriä lännessä ja Agdal etelässä kasbahin takana;
+     * molemmat ovat sitä paitsi kaupunkilehden teemasivun omien
+     * nostojen aihe eivätkä siksi voi olla kartan kohteita (New
+     * Yorkin sääntö). Sama koskee Jemaa el-Fnaa ja Koutoubiaa, jotka
+     * ovat ruudussa mutta lehden nostojen aihe.
+     *
+     * Ei meri-lippua eikä palveluteitä: Marrakech on kuivalla
+     * tasangolla, ja medinan kujat ovat OSM:ssä tavallisia
+     * jalankulku- ja asuinkatuja. Jalkakäytävät otetaan mukaan,
+     * koska muuten sukien kujaverkko jää kuvasta lähes kokonaan
+     * pois.
+     */
+    rajat: { pohjoinen: 31.6350, etela: 31.6145, lansi: -7.9965, ita: -7.9785 },
+    jalkakaydat: true,
+  },
 };
 
 /*
