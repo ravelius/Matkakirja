@@ -1010,4 +1010,142 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'vuotta myöhemmin yli miljoona, kun luku- ja kirjoitustaidon '
       + 'vaatimus poistui ja naiset saivat äänen.',
   },
+  /*
+   * SALTA (Opus 7.9.2026, Fablen parvi). Avain on 'Salta', koska
+   * js/packs/maailmankartta.js antaa kaupungille wiki-nimeksi
+   * 'Salta' — ui.js hakee introa kentällä `city.wiki ?? city.name`.
+   * Sama erä kuin lehden tekstit (js/packs/kulttuuri-kategoriat.js,
+   * avain salta): väitteet on luettu en- ja es-Wikipedian
+   * raakateksteistä 7.9.2026, lähdeaineistona
+   * docs/mantereet-tyoaineisto/faktapohja-salta.md ja sen
+   * riippumaton tarkistus tarkistus-salta.md, joka voittaa
+   * ristiriidassa.
+   *
+   * VUODEN 1873 KULMA: isoisän matkavuonna Salta oli köyhä
+   * muulikaupunki. Itsenäisyyssota jätti sen taloudellisesti
+   * raunioihin, ja toipuminen alkoi vasta 1890-luvulla rautatien ja
+   * siirtolaisten myötä. Katedraalin pysähdyksissä olleet
+   * rakennustyöt käynnistettiin uudelleen juuri 1873, ja kaupungin
+   * virallinen lämpötilasarja alkaa samasta vuodesta.
+   */
+  Salta: {
+    intro: 'Salta on Argentiinan luoteisosan keskus, kaupunki '
+      + '1 200 metrin korkeudessa Lerman laaksossa Andien '
+      + 'itärinteen ja Yungas-vuoristosademetsän reunalla. '
+      + 'Asukkaita on 627 704 vuoden 2022 laskennan mukaan, ja se '
+      + 'on maan seitsemänneksi suurin kaupunki.'
+      + '\n\n'
+      + 'Espanjalainen Hernando de Lerma perusti sen 16. huhtikuuta '
+      + '1582 varakuninkaan käskystä, ja tarkoitus sanottiin '
+      + 'suoraan: **kaupungin piti olla etappi Liman ja Buenos '
+      + 'Airesin välillä**. Siirtomaa-aikana se eli Potosín '
+      + 'hopeakaupungin huoltajana, ja 1783 siitä tuli koko '
+      + 'luoteisen hallintoalueen pääkaupunki. Itsenäisyyssodassa '
+      + 'Salta oli rintamakaupunki: Manuel Belgrano voitti täällä '
+      + 'helmikuussa 1813, ja Martín Miguel de Güemesin '
+      + 'gaucho-ratsujoukot pitivät pohjoisen rajan sissisodalla '
+      + 'kuusi vuotta.'
+      + '\n\n'
+      + 'Sota jätti kaupungin köyhäksi, ja taantuma kesti suuren '
+      + 'osan 1800-lukua. **Isoisän matkavuonna 1873 Saltassa ei '
+      + 'ollut rautatietä eikä juuri teollisuutta — tavara kulki '
+      + 'muulien selässä, kuten kolmesataa vuotta aiemmin.** Rautatie '
+      + 'ja sen mukana espanjalaiset, italialaiset ja arabisiirtolaiset '
+      + 'tulivat vasta 1890-luvulla. Juuri siksi keskusta säilyi: '
+      + 'kuvernöörin määräys velvoitti pitämään julkisivut ennallaan, '
+      + 'ja siitä kaupunki sai lempinimensä La Linda, kaunis.',
+    teksti: 'Salta on Argentiinan luoteisnurkassa, Lerman laaksossa '
+      + '1 200 metrin korkeudessa. Idässä kohoaa Cerro San Bernardo, '
+      + 'jonka huippu on 1 472 metriä ja jonka rinteillä kasvaa '
+      + 'Yungas-vuoristosademetsää. Keskusta on yhä se yhdeksän '
+      + 'kertaa viiden korttelin ruudukko, joka mitattiin 1582 '
+      + 'Tineon suon ja Sauce-joen väliin.'
+      + '\n\n'
+      + 'Kaupunki perustettiin tien varteen, ja tie määräsi sen '
+      + 'kohtalon. Kun Potosín hopea ehtyi ja itsenäisyyssota '
+      + 'päättyi, tie menetti merkityksensä eikä Saltaan tullut '
+      + 'mitään tilalle. Vasta 1890-luvun rautatie ja siirtolaiset '
+      + 'toivat elämän takaisin. Kaupunkikuva säilyi köyhyyden ja '
+      + 'määräysten yhteisvaikutuksesta niin hyvin, että sitä '
+      + 'sanotaan Argentiinan parhaiten säilyneeksi '
+      + 'siirtomaakeskustaksi — vaikka moni sen rakennuksista on '
+      + 'itse asiassa 1900-luvun alun uuskolonialismia.'
+      + '\n\n'
+      + 'Nykyään elanto tulee matkailusta, hallinnosta ja '
+      + 'maataloudesta. Pääaukion laidalla on neljä museota, '
+      + 'niistä tunnetuin korkean vuoriston arkeologian museo. '
+      + 'Balcarce-kadulla soitetaan joka ilta pohjoisen omaa '
+      + 'kansanmusiikkia, ja syyskuun puolivälissä Milagro-kulkue '
+      + 'kokoaa kaupunkiin enemmän ihmisiä kuin siellä asuu.',
+  },
+  /*
+   * ANTOFAGASTA (Opus 7.9.2026, Fablen parvi). Avain on
+   * 'Antofagasta' (js/packs/maailmankartta.js: "wiki":"Antofagasta").
+   * Sama erä kuin lehden tekstit (kulttuuri-kategoriat.js, avain
+   * antofagasta); lähdeaineisto faktapohja-antofagasta.md ja sen
+   * riippumaton tarkistus tarkistus-antofagasta.md.
+   *
+   * VUODEN 1873 KULMA: isoisän matkavuonna Antofagasta oli viiden
+   * vuoden ikäinen Bolivian satamakaupunki, ja juuri 27.11.1873
+   * allekirjoitettiin salpietariyhtiön ja Bolivian sopimus, jota
+   * Bolivian kongressi ei vahvistanut. Riita siitä johti kuusi
+   * vuotta myöhemmin sotaan ja kaupungin siirtymiseen Chilelle.
+   *
+   * TYYNENMEREN SOTA kerrotaan tapahtumina ja sopimuksina, ei
+   * taisteluina, ja nykyistä merikiistaa ei mainita
+   * (tarkistus-antofagasta.md, kohta F). SAMA KYMMENEN SENTIN VERO
+   * on jo mainittu tämän tiedoston Bolivia-merkinnässä maan
+   * näkökulmasta; tämä teksti kertoo saman asian kaupungin
+   * näkökulmasta eikä toista maan tekstin muita väitteitä.
+   */
+  Antofagasta: {
+    intro: 'Antofagasta on Pohjois-Chilen satamakaupunki noin 1 100 '
+      + 'kilometriä Santiagosta pohjoiseen, kapea nauha Tyynenmeren '
+      + 'ja rannikkovuoriston välissä keskellä Atacaman aavikkoa. '
+      + 'Asukkaita on 401 096 vuoden 2024 laskennan mukaan, ja se on '
+      + 'Chilen viidenneksi suurin kaupunki.'
+      + '\n\n'
+      + '**Kaupungilla ei ole perustamiskirjaa.** Se syntyi siitä, '
+      + 'että aavikosta löytyi salpietaria: copiapólainen '
+      + 'malminetsijä Juan López asettui rannalle 1866, ja samana '
+      + 'vuonna José Santos Ossa ja Francisco Puelma saivat Bolivian '
+      + 'hallitukselta luvan salpietarimaihin. Asutus tunnustettiin '
+      + 'lailliseksi vasta maanjäristyksen jälkeen 1868, ja se '
+      + 'perustettiin virallisesti nimellä La Chimba. Bolivian '
+      + 'satamana kaupunki kasvoi nopeasti: siellä oli chileläistä '
+      + 'työvoimaa, englantilaista pääomaa ja bolivialainen laki.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 tehtiin sopimus, joka muutti '
+      + 'kaiken: chileläinen salpietariyhtiö sai Bolivian '
+      + 'hallitukselta viidentoista vuoden verovapauden, mutta '
+      + 'Bolivian kongressi ei vahvistanut sopimusta. **Riita siitä '
+      + 'johti vuoden 1879 valtaukseen ja Tyynenmeren sotaan, ja '
+      + 'vuoden 1904 rauhansopimus teki Antofagastasta lopullisesti '
+      + 'Chilen kaupungin.** Salpietarin tilalle tuli kupari, ja '
+      + '2010-luvulta alkaen satamasta on viety myös litiumia.',
+    teksti: 'Antofagasta on Atacaman aavikon rannikolla, Kauriin '
+      + 'kääntöpiirin eteläpuolella. Kaupunki on pitkä ja kapea, '
+      + 'koska rannikkovuoristo alkaa heti talojen takaa; '
+      + 'keskikorkeus on neljäkymmentä metriä, mutta kunta on '
+      + 'pinta-alaltaan Chilen kolmanneksi suurin. Rannikko on '
+      + 'kallioinen eikä luonnonrantoja käytännössä ole.'
+      + '\n\n'
+      + 'Kaupunki eli sata vuotta salpietarista. Aavikolle syntyi '
+      + 'satoja jalostuslaitoksia, rannalle laitureita ja niiden '
+      + 'väliin rautatie, jonka Antofagastan ja Bolivian rautatieyhtiö '
+      + 'perusti 1888. Kaupunkiin muutti väkeä Chilen pohjoisosista, '
+      + 'Euroopasta — erityisesti Espanjasta, Kroatiasta, Englannista '
+      + 'ja Kreikasta — sekä Kiinasta ja arabimaista, ja jälki näkyy '
+      + 'yhä kadunnimissä ja Colónin aukion muistomerkeissä. Kun '
+      + 'typen teollinen sidonta teki luonnonsalpietarista '
+      + 'kannattamatonta, aavikolle jäi aavekaupunkeja.'
+      + '\n\n'
+      + 'Nykyään alue tuottaa 54 prosenttia Chilen kuparista, ja '
+      + 'kaupunki on kaivosteollisuuden palvelukeskus, jolla on maan '
+      + 'korkein bruttokansantuote asukasta kohti. Sadetta tulee '
+      + 'alle kymmenesosamillimetri vuodessa — vähemmän kuin missään '
+      + 'muualla maailmassa — mutta aamuisin rannikko on '
+      + 'camanchaca-sumun peitossa, ja juuri siitä sumusta on '
+      + 'kerätty vettä verkoilla aavikon kyliin.',
+  },
 };

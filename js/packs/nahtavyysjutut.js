@@ -54730,4 +54730,565 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * SALTA (Opus 7.9.2026, Fablen parvi). Kahdeksan kohdetta
+   * kohdekartalta (js/packs/maakartat.js, KAUPUNKIKARTAT.salta).
+   *
+   * LÄHDEKIELI. Vain katedraalilla ja MAAM-museolla on oma
+   * englanninkielinen artikkeli; kuudella muulla ei ole. Niiden
+   * lähde on siksi es-Wikipedia, ja lähderivi kertoo kieliversion,
+   * koska lukijan on voitava löytää lähde
+   * (tarkistus-salta.md, kohta 0; ennakkotapaus guatemala).
+   * Luetut artikkelit raakatekstinä 7.9.2026: "Museo de Bellas Artes
+   * de Salta", "Iglesia de la Merced (Salta)", "Museo de Arqueología
+   * de Alta Montaña de Salta", "Catedral de Salta", "Cabildo de
+   * Salta", "Basílica y convento de San Francisco (Salta)",
+   * "Convento de San Bernardo (Salta)", "Monumento a Güemes" (es)
+   * sekä "Museum of High Altitude Archaeology", "Children of
+   * Llullaillaco", "Salta Cathedral", "Martín Miguel de Güemes"
+   * (en).
+   *
+   * YKSIKÄÄN JUTTU EI TOISTA LEHDEN NOSTOJA. Lehti kertoo
+   * perustamisesta 1582, Milagro-hartaudesta, vuodesta 1873,
+   * kaupunkikuvasta, Cerro San Bernardosta ja musiikista; nämä
+   * kahdeksan kertovat kukin oman rakennuksensa historian.
+   *
+   * KOLME TARKISTUKSEN RATKAISUA NÄKYY TÄSSÄ:
+   *  - cabildon loppuvuodesta ei anneta yhtä lukua (lähde sanoo
+   *    sekä 1888 että "1880 + yhdeksän vuotta");
+   *  - monumenttivuodeksi sanotaan vain 1941, koska asetuksen 95687
+   *    päivämäärä eroaa kohteittain (14. kesäkuuta vai 14. heinäkuuta);
+   *  - kuvataidemuseon avausvuotta ei anneta lainkaan (luokitusrivit
+   *    sanovat sekä 1930 että 2008, leipäteksti ei kumpaakaan).
+   *
+   * LLULLAILLACON LAPSET: kuolintapaa ei kuvailla, ja
+   * alkuperäiskansajärjestöjen arvostelu kerrotaan samassa jutussa
+   * (tarkistus-salta.md, kohta G).
+   */
+  salta: {
+    'Saltan kuvataidemuseo': {
+      aika: '1900-luvun alku',
+      teksti: 'Belgrano-kadun varrella seisoo ranskalaistyylinen '
+          + 'kartano, joka rakennettiin 1900-luvun alussa Félix '
+          + 'Usandivarasin perheelle. Se on entisöity, laajennettu ja '
+          + 'sovitettu museoksi: yli tuhat neliömetriä, kaksi '
+          + 'kerrosta ja yksitoista salia.'
+        + '\n\n'
+        + 'Kokoelma on maakunnan oma. Yläkerrassa on '
+          + 'esikolumbiaanisen taiteen sali ja toinen 1800-luvun '
+          + 'muotokuvataiteelle. Seitsemännen salin vasemmalla '
+          + 'puolella on 1600- ja 1700-luvun kirkkotaidetta, oikealla '
+          + '1800-luvun eurooppalaista maalausta, ja vasemmassa '
+          + 'siivessä 1900-luvun alun argentiinalaisia maalareita. '
+          + 'Kierros päättyy 1960-luvun saltalaismestareihin.'
+        + '\n\n'
+        + 'Museon perustamisvuosi on erikoisen epäselvä: '
+          + 'espanjankielisen Wikipedian luokitusrivit antavat sille '
+          + 'kaksi avausvuotta, 1930 ja 2008, eikä artikkelin oma '
+          + 'teksti sano kumpaakaan. Todennäköisesti kyse on '
+          + 'perustamisesta ja uudelleenavaamisesta remontin jälkeen, '
+          + 'mutta lähde ei sano sitä ääneen — eikä tämä juttu '
+          + 'siksi valitse kumpaakaan.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'La Merced -kirkko': {
+      aika: '1907—1914',
+      teksti: 'Mercedaariveljestön isä Antonio de Escobar kiersi '
+          + 'Saltan katuja vuonna 1602 keräämässä almuja veljestön '
+          + 'perustamiseen. Muutamaa vuotta myöhemmin nykyisen '
+          + 'Caseros-kadun varteen rakennettiin kirkko Euroopasta '
+          + 'tuodulle Mercedes-neitsyen jäljennökselle.'
+        + '\n\n'
+        + 'Itsenäistymisen jälkeen mercedaarit lähtivät ja '
+          + 'seurakuntaa hoitivat redemptoristit. 1900-luvun alussa '
+          + 'vanha temppeli oli lähes raunioina, ja se purettiin; '
+          + 'tontille tuli ensin pappisseminaari, sitten kansallinen '
+          + 'koulu ja nykyään yksityinen koulu. Veljestö osti uuden '
+          + 'tontin samalta kadulta ja aloitti 1907 nykyisen kirkon '
+          + 'rakentamisen. Se valmistui 1914 ja vihittiin monsignore '
+          + 'Piedrabuenan siunauksella.'
+        + '\n\n'
+        + 'Kirkon virallinen nimi on Nuestra Señora de la Merced y '
+          + 'San Bautista. Sen sisällä säilytetään Saltan taistelun '
+          + 'ristiä — helmikuussa 1813 käydyn taistelun muistoesine, '
+          + 'joka on vanhempi kuin talo, jossa se on.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Korkean vuoriston arkeologian museo': {
+      aika: '2004',
+      teksti: 'MAAM eli Museo de Arqueología de Alta Montaña '
+          + 'perustettiin yhtä löytöä varten. Arkeologit Johan '
+          + 'Reinhard ja María Constanza Ceruti löysivät 16. '
+          + 'maaliskuuta 1999 retkikuntansa kanssa kolmen inkalapsen '
+          + 'haudan lähes 6 700 metrin korkeudesta Llullaillacon '
+          + 'tulivuoren huipulta. Lapset kuolivat vuosien 1462 ja '
+          + '1507 välillä capacocha-menossa, ja heidät haudattiin '
+          + 'puolentoista metrin syvyyteen kulta-, hopea- ja '
+          + 'simpukkakuvioiden, kudonnaisten ja keramiikan kanssa.'
+        + '\n\n'
+        + 'Vuoren kylmyys ja aavikon kuivuus säilyttivät '
+          + 'pehmytkudokset, hiukset ja sisäelimet, ja siksi museo '
+          + 'rakennettiin kylmäsäilytyksen ympärille. Ruumiit ovat '
+          + 'kapseleissa, joissa happipitoisuutta on alennettu, '
+          + 'lämpötila pidetään vakaana kahdessakymmenessä '
+          + 'pakkasasteessa ja valo suodatetaan sekä ultravioletista '
+          + 'että infrapunasta. Museo avattiin 2004, mutta se sai '
+          + 'näyttelyjärjestelmän valmiiksi vasta 2007. Maakunnan '
+          + 'hallitus perusti sen, ja rakennus on 1800-luvun '
+          + 'puolivälin talo, jonka julkisivu on uusgoottilainen ja '
+          + 'selvästi viktoriaaninen.'
+        + '\n\n'
+        + 'Löytö julistettiin 20. kesäkuuta 2001 kansalliseksi '
+          + 'historialliseksi omaisuudeksi. Museo on siitä huolimatta '
+          + 'saanut perustamisestaan asti arvostelua paikallisilta '
+          + 'alkuperäiskansajärjestöiltä, jotka pitävät lasten '
+          + 'siirtoa vuorelta ja asettamista näytteille ilman '
+          + 'kuulemista häpäisynä ja alkuperäiskansojen oikeuksien '
+          + 'loukkauksena. Kiista ei ole ratkennut.',
+      lahde: 'Wikipedia',
+    },
+    'Saltan katedraali': {
+      aika: '1858—1882',
+      teksti: 'Vuoden 1844 maanjäristys jätti Saltan vanhan '
+          + 'pääkirkon huonoon kuntoon, ja 1856 suunnittelu '
+          + 'tilattiin ranskalais-amerikkalaiselta insinööriltä '
+          + 'Felipe Bertrésiltä. Hän kuoli Saltassa samana vuonna '
+          + 'eikä ehtinyt aloittaa. Työt alkoivat 1858 piispa José '
+          + 'Eusebio Colombresin aloitteesta, ja niitä tehtiin '
+          + 'kaksikymmentä vuotta.'
+        + '\n\n'
+        + 'Isoisän matkavuonna 1873 työmaa oli ollut pitkään '
+          + 'pysähdyksissä, ja juuri silloin se käynnistettiin '
+          + 'uudelleen: urakoitsijaksi otettiin arkkitehtiveljesten '
+          + 'Nicolás ja Agustín Cánepan yritys. Rakennuttajan ja '
+          + 'urakoitsijan erimielisyydet ehdittiin sopia — kupoli '
+          + 'vuoti ja sisätilan suunnitelmaa muutettiin niin, että '
+          + 'urkuparvi tuli sisäänkäynnin päälle eikä alttarin taakse '
+          + '— ja temppeli siunattiin 1878. Julkisivua, torneja ja '
+          + 'atriumia ei silloin vielä ollut; ne valmistuivat 1882. '
+          + 'Julkisivun tekijästä kiisteltiin pitkään, kunnes '
+          + 'arkistolöytö osoitti sen arkkitehti Noé Macchin työksi: '
+          + 'saltalaislehti La Reforma kertoi 28. kesäkuuta 1879, '
+          + 'että julkisivu urakoitiin 29 000 pesolla Riguettille '
+          + 'Maquin piirustusten mukaan.'
+        + '\n\n'
+        + 'Katedraali on Milagro-hartauden pyhäkkö, ja siellä on '
+          + 'Panteón de las Glorias del Norte, pohjoisen kunnian '
+          + 'hautakammio, jossa lepäävät Martín Miguel de Güemesin '
+          + 'jäännökset. Rakennus on ollut kansallinen historiallinen '
+          + 'monumentti vuodesta 1941.',
+      lahde: 'Wikipedia',
+    },
+    'Saltan cabildo': {
+      aika: '1780-luku',
+      teksti: 'Cabildo oli siirtomaakaupungin raatihuone, ja Saltan '
+          + 'cabildo on niistä Argentiinan täydellisimmin säilynyt. '
+          + 'Paikalla on ollut viranomaisten talo 1620-luvulta '
+          + 'alkaen; kapteeni Diego Vélez de Alcocer rakensi sen '
+          + 'uudelleen 1676. Nykyisen rakennuksen työt alkoivat noin '
+          + '1780 miliisieverstin Antonio de Figueroa y Mendozan '
+          + 'johdolla, ja torni nousi vasta vuosia myöhemmin.'
+        + '\n\n'
+        + 'Täällä Manuel Belgrano nimitti helmikuussa 1813 käydyn '
+          + 'Saltan taistelun jälkeen Eustoquio Díaz Vélezin '
+          + 'maakunnan sotilaskuvernööriksi, ja tämä ripusti '
+          + 'Argentiinan lipun ensimmäistä kertaa cabildon '
+          + 'parvekkeelle. Talo palveli poliisia ja hallintoa '
+          + '1880-luvulle asti; lähteet antavat loppuvuodeksi sekä '
+          + '1888 että "1880 ja yhdeksän vuotta myöhemmin", eikä '
+          + 'kumpikaan ole varmempi. Sitten se myytiin julkisella '
+          + 'huutokaupalla yksityisille, ja siinä asuttiin, myytiin '
+          + 'tavaraa ja pidettiin hotellia. Osa purettiin: '
+          + 'kapitulisali, kolme alakerran holvikaarta ja neljä '
+          + 'yläkerran kaarta katosivat.'
+        + '\n\n'
+        + 'Arkkitehti Mario Buschiazzo palautti rakennuksen 1945; '
+          + 'sama mies työskenteli Buenos Airesin cabildon ja '
+          + 'Tucumánin itsenäisyystalon parissa. Nykyään talossa on '
+          + 'kaksi museota: pohjoisen historiallinen museo '
+          + 'alakerrassa ja siirtomaa- ja kuvataidemuseo yläkerrassa. '
+          + 'Kansallinen historiallinen monumentti 9. tammikuuta '
+          + '1937.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'San Franciscon basilika': {
+      aika: '1870-luku',
+      teksti: 'Tontti varattiin fransiskaaneille jo vuoden 1582 '
+          + 'perustamiskirjassa. Ensimmäinen kirkko valmistui 1625 ja '
+          + 'oli niin hataraa tekoa, että toinen rakennettiin 1674; '
+          + 'sekin paloi 1700-luvun puolivälissä. Nykyinen temppeli '
+          + 'nousi heti sen jälkeen sevillalaisen fray Vicente '
+          + 'Muñozin johdolla — saman miehen, joka teki Buenos '
+          + 'Airesin San Franciscon ja Córdoban katedraalin kupolin.'
+        + '\n\n'
+        + 'Työtä keskeyttivät kaksi paloa, 1761 ja 1772, '
+          + 'rakennusvirheet, Muñozin kuolema ja itsenäisyyssodan '
+          + 'jälkeinen köyhyys. Vasta kun isä Isidoro Fernández '
+          + 'palasi 1857 Roomasta neljäntoista veljen kanssa, työ '
+          + 'saatiin vauhtiin; luostarin viimeisteli Ugolino '
+          + 'Cingolari kahdeksan vuotta myöhemmin. Luis Giorgi vihki '
+          + 'kirkon uudelleen 1870 ja uuden julkisivun 1872 — mutta '
+          + 'julkisivu jouduttiin rakentamaan uudelleen '
+          + 'rakennusvirheiden takia.'
+        + '\n\n'
+        + 'Isoisän matkavuonna 1873 tornia ei siis vielä ollut. '
+          + 'Sveitsiläinen Francisco Righetti aloitti kellotornin '
+          + 'vasta 1877 saksalaisen insinöörin José Enrique Teodoro '
+          + 'Rauchin piirustusten mukaan, ja siitä tuli 54 metriä '
+          + 'korkea — Etelä-Amerikan korkein kellotorni. Kirkkoon on '
+          + 'haudattu muun muassa Argentiinan laivaston perustaja '
+          + 'Francisco de Gurruchaga ja Güemesin äiti María '
+          + 'Magdalena de Goyechea y la Corte. Monumentti vuodesta '
+          + '1941, basilica minor 1992.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'San Bernardon luostari': {
+      aika: '1600-luku',
+      teksti: 'Tämä on kaupungin vanhimpia rakennuksia. Se '
+          + 'pystytettiin 1500-luvun lopulla tai 1600-luvun alussa; '
+          + 'Gómez de los Ríos ja kuvernööri Alonso de la Rivera '
+          + 'mainitsevat sen 1626. Alun perin se oli San Bernardon '
+          + 'erakkomaja — pyhimys oli kaupungin ensimmäinen suojelija '
+          + '— ja 1586 sen viereen nousi sairaala nimeltä San Andrés.'
+        + '\n\n'
+        + 'Vuoden 1692 maanjäristys, sama joka synnytti '
+          + 'Milagro-hartauden, tuhosi rakennuksen. Uusi valmistui '
+          + 'hitaasti ja saatiin käyttökuntoon vasta 1726. Sairaala '
+          + 'sulki ovensa useaan kertaan ja avasi ne uudelleen 1787 '
+          + 'ja 20. elokuuta 1805, jolloin se annettiin '
+          + 'betlehemiläisveljien hoitoon. Vähitellen sairaala '
+          + 'menetti merkityksensä, ja pappi Isidoro Fernández toi '
+          + '1846 Chilestä paljasjalkaisia karmeliittanunnia '
+          + 'perustamaan tänne uuden luostarin.'
+        + '\n\n'
+        + 'Kadulle päin katsoo kohteen kuuluisin osa: ovi, joka on '
+          + 'veistetty käsin algarrobo-puusta vuonna 1762. Sen '
+          + 'pielissä on pylväät, jotka kannattavat kaksoiskaaren '
+          + 'muotoista kamanaa, ja keskellä on lehtiaihe ja Kristuksen '
+          + 'nimikirjaimet. Kylkeen on kaiverrettu "Don Pedro '
+          + 'Balentín de la Cámara, año 1762". Ovi tuli talosta, ja '
+          + 'se asennettiin luostarin uuteen sisäänkäyntiin 1847, kun '
+          + 'vanha sairaalanovi kapelin vieressä muurattiin umpeen. '
+          + 'Monumentti vuodesta 1941.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Güemesin muistomerkki': {
+      aika: '1920—1931',
+      teksti: 'Kaksikymmentäviisimetrinen muistomerkki seisoo Paseo '
+          + 'Güemesin päässä Cerro San Bernardon juurella. Paikka on '
+          + 'valittu tarkasti: siinä kenraali Martín Miguel de Güemes '
+          + 'putosi ensimmäisen kerran hevosensa selästä '
+          + 'ratsastaessaan luodista haavoittuneena kohti Cañada de '
+          + 'la Horquetaa, jossa hän kuoli muutamaa päivää myöhemmin '
+          + 'kesäkuussa 1821.'
+        + '\n\n'
+        + 'Güemes palasi Saltaan 1815 ja järjesti pohjoisen '
+          + 'puolustuksen gaucho-ratsumiehistä, jotka opetettiin '
+          + 'sissitaktiikkaan. Kuninkaanmielinen kenraali Joaquín de '
+          + 'la Pezuela kirjoitti Perun varakuninkaalle, että '
+          + 'Güemesin väki kävi "melkein rankaisematta hidasta mutta '
+          + 'väsyttävää ja vahingollista sotaa". Vuonna 1817 '
+          + 'espanjalainen sotamarsalkka de la Serna marssi Saltaan '
+          + 'suuren joukon kanssa ja saapui kaupunkiin '
+          + 'huhtikuussa — mutta väestö ei antautunut, ja joukot '
+          + 'vetäytyivät pohjoiseen.'
+        + '\n\n'
+        + 'Kuvanveistäjä Víctor Juan Garino teki suunnitelman 1920, '
+          + 'mutta rahat loppuivat. Työ aloitettiin samana vuonna '
+          + 'valtion rakennushallinnon valvonnassa: yleisjohto oli '
+          + 'arkkitehti Andrés Iñigolla, taiteellinen johto René '
+          + 'Villeminot\'lla ja Alberto Milillolla, ja pronssiosat '
+          + 'sovitti armeijan asevarikko. Muistomerkki on ladottu yli '
+          + '75 kilon lohkareista, jotka louhittiin samasta vuoresta, '
+          + 'jonka juurella se seisoo, ja se vihittiin 20. helmikuuta '
+          + '1931. Sen takaa alkavat kiviportaat huipulle.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+  },
+  /*
+   * ANTOFAGASTA (Opus 7.9.2026, Fablen parvi). Kahdeksan kohdetta
+   * kohdekartalta (js/packs/maakartat.js, KAUPUNKIKARTAT.antofagasta).
+   *
+   * LÄHDEKIELI. Vain katedraalilla on oma englanninkielinen
+   * artikkeli; seitsemällä muulla ei ole. Niiden lähde on siksi
+   * es-Wikipedia, ja lähderivi kertoo kieliversion, koska lukijan on
+   * voitava löytää lähde (tarkistus-antofagasta.md, kohta 0;
+   * ennakkotapaus guatemala). Luetut artikkelit raakatekstinä
+   * 7.9.2026: "Muelle Salitrero Compañía Melbourne Clark", "Muelle
+   * Miraflores", "Museo de Antofagasta", "Barrio Histórico de
+   * Antofagasta", "Edificio del Banco Mercantil de Bolivia", "Plaza
+   * Colón (Antofagasta)", "Casa Gibbs", "Teatro Municipal de
+   * Antofagasta", "Catedral de Antofagasta", "Casa Giménez" (es)
+   * sekä "St. Joseph's Cathedral, Antofagasta" ja "Antofagasta" (en).
+   *
+   * YKSIKÄÄN JUTTU EI TOISTA LEHDEN NOSTOJA. Lehti kertoo kaupungin
+   * synnystä, nimestä, vuodesta 1873, maan vaihdosta ja Huanchacan
+   * hopeasulatosta sekä teemasivulla sumusta ja aavikosta.
+   * ERITYISESTI: vuoden 1879 maihinnousu on lehden noston aihe, ja
+   * se tapahtui juuri tällä laiturilla — siksi laiturin juttu kertoo
+   * rakenteen, omistajat ja kunnostuksen eikä sotaa.
+   *
+   * KOLME TARKISTUKSEN RATKAISUA NÄKYY TÄSSÄ:
+   *  - Melbourne Clark -yhtiön perustamisvuosi on Casa Gibbs
+   *    -artikkelin 1869 (es-Antofagasta sanoo 1868);
+   *  - kellotornin vuosi on 17.9.1911 ja Big Ben -väite kumotaan
+   *    ääneen (en-Wikipedia sanoo 1912 ja "replicating Big Ben");
+   *  - vuoden 1906 työtaistelun uhrilukua ei kerrota aukion jutussa.
+   */
+  antofagasta: {
+    'Salpietarilaituri': {
+      aika: '1872—1880',
+      teksti: 'Melbourne Clark -yhtiö aloitti 1872 kaupungin '
+          + 'ensimmäisen lastauslaiturin rakentamisen. Salpietari oli '
+          + 'saatava aavikolta laivoihin, ja siihen asti se oli '
+          + 'kannettu rantaan. Laituri valmistui 1880, ja se '
+          + 'rakennettiin teräskiskoista sekä oregoninmännystä ja '
+          + 'amerikanvalkotammesta, kaikki betonilla sidottuna: 198 '
+          + 'metriä pitkä, 15,8 metriä leveä ja vain 2,63 metriä '
+          + 'merenpinnan yläpuolella.'
+        + '\n\n'
+        + 'Suurille aluksille laituri ei ollut tarkoitettu — lasti '
+          + 'vietiin niille pienveneillä — mutta liikenteen kasvaessa '
+          + 'siitä tuli myös matkustajalaituri. Omistaja vaihtui '
+          + 'kuudesti: 1885 Bolivian Huanchaca-yhtiölle, 1888 '
+          + 'Antofagastan ja Bolivian rautatieyhtiölle, 1962 valtion '
+          + 'kehitysyhtiölle ja siitä eteenpäin yksityisille. '
+          + 'Kansalliseksi historialliseksi monumentiksi se '
+          + 'julistettiin 12. heinäkuuta 1978.'
+        + '\n\n'
+        + 'Meri söi laituria koko ajan. Vuoden 2002 tutkimuksessa 95 '
+          + 'prosenttia perustan teräskiskoista oli syöpynyt ja kansi '
+          + 'oli puoliksi lahonnut; sortumavaaran takia laituri '
+          + 'suljettiin 28. joulukuuta 2000. Kunnostus alkoi '
+          + 'toukokuussa 2013, ja 2 036 neliömetrin kävelypaikka '
+          + 'avattiin yleisölle 21. toukokuuta 2015. Yhdessä '
+          + 'kolmesataa metriä pohjoisempana olevan Miraflores-'
+          + 'laiturin kanssa — se rakennettiin 1881 Nitrate Agencies '
+          + '-yhtiölle ja on nykyään purjehdusseuran hallussa — se on '
+          + 'ainoa salpietariajan laituri, joka Antofagastaan on '
+          + 'jäänyt.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Antofagastan museo': {
+      aika: '1867',
+      teksti: 'Aluemuseon rakennus on matkustanut enemmän kuin moni '
+          + 'museovieras. Valparaísolainen Wetmare & Cía. suunnitteli '
+          + 'ja rakensi sen 1867 kolmellatuhannella pesolla, ja jo '
+          + '1869 se purettiin, lastattiin laivaan ja pystytettiin '
+          + 'uudelleen Mejillonesiin, jossa se toimi Chilen '
+          + 'intendentuurina vuoden 1866 rajasopimuksen nojalla.'
+        + '\n\n'
+        + 'Kun Antofagastan bolivialainen tullitalo paloi 1885, '
+          + 'Chilen valtio siirsi rakennuksen kolmannen kerran: 1888 '
+          + 'se pystytettiin palaneen tullitalon paikalle. Tullina se '
+          + 'toimi vuoteen 1966. Talo on kaksikerroksinen ja '
+          + 'U-pohjainen, oregoninmäntyä, ja siinä on kattamaton '
+          + 'etukäytävä ja kaksihaarainen ulkoportaikko toiseen '
+          + 'kerrokseen, jota kiertää parveke. Katolla oli aikoinaan '
+          + 'tähystystorni, mutta se purettiin 1940 huonokuntoisena. '
+          + 'Kansallinen historiallinen monumentti 20. lokakuuta 1972.'
+        + '\n\n'
+        + 'Museo itse syntyi 1964 Universidad del Norten '
+          + 'aluehistoriallisena museona, ja yliopisto hoiti sitä '
+          + 'kaksikymmentä vuotta. Nykyinen museo avattiin 14. '
+          + 'joulukuuta 1984. Kokoelmassa on noin kymmenentuhatta '
+          + 'esinettä: rannikon esihistoriallisen kulttuurin '
+          + 'arkeologiaa, asiakirjoja ja mineraaleja. Näyttely on '
+          + 'kahdessatoista salissa, ja laboratoriot ja kokoelmavarasto '
+          + 'ovat viereisessä vuoden 1910 meripäällikkötalossa.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Bolivian kauppapankin talo': {
+      aika: '1913',
+      teksti: 'Kun Antofagasta oli ollut Chilen kaupunki jo yli '
+          + 'kolmekymmentä vuotta, Bolivian raha palasi sinne '
+          + 'omalla talollaan. Rakennuksen kustansi 1913 bolivialainen '
+          + 'kaivosyrittäjä Simón I. Patiño, jota aikanaan sanottiin '
+          + 'tinakuninkaaksi, ja sen tarkoitus oli suojata Bolivian '
+          + 'yrittäjien pääomaa Tyynenmeren rannalla.'
+        + '\n\n'
+        + 'Talo on viktoriaanista tyyliä: julkisivussa vuorottelevat '
+          + 'räystäslistat ja pilasterit, ikkunat ovat symmetrisiä ja '
+          + 'keskellä on kaksikerroksinen erkkeri. Molemmissa '
+          + 'kulmissa on kupoli. Kupolien linjaus ei ole '
+          + 'koristeellinen vaan merenkulullinen: ne osoittivat '
+          + 'aikanaan laivoille turvallisen suunnan rannikon '
+          + 'matalikon ja vaarallisen tyrskyn ohi, ja apuna oli '
+          + 'kaupungin itälaidan Cerro El Ancla.'
+        + '\n\n'
+        + 'Pankkina talo ei kestänyt kauan. Sen jälkeen se oli osa '
+          + 'suurta Hotel Belmontia ja sitten vuosia suljettuna. '
+          + 'Historiallisen ja arkkitehtonisen arvonsa takia se '
+          + 'julistettiin 1991 monumentiksi yhdessä naapuritalonsa '
+          + 'kanssa, ja vuodesta 2003 siinä on toiminut '
+          + 'rikostutkintapoliisin alueyksikkö. Entisöinti valmistui '
+          + '2007: alkuperäistä pintaa kunnostettiin 1 070 '
+          + 'neliömetriä ja uutta rakennettiin 1 797.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Colónin aukio': {
+      aika: '1869—1911',
+      teksti: 'Vuoden 1869 asemakaavassa tämä kortteli oli jo '
+          + 'merkitty aukioksi, mutta paikalla oli vain joutomaata, '
+          + 'josta työntyi esiin kalliokohoumia; laidoilla seisoivat '
+          + 'seurakuntakirkko, poliisikasarmi vankiloineen ja kunnan '
+          + 'koulu. Vuonna 1873, kun Cobijan prefektin oli määrä '
+          + 'saapua käymään, kunnanhallitus antoi vangeille '
+          + 'tehtäväksi poistaa kalliot ja tasoittaa maan. '
+          + 'Naapureiden avustuksilla syntyi keskuspuutarha, jota '
+          + 'kasteltiin 1874 asennetulla pumpulla, ja 1875 '
+          + 'Valparaíson intendentti Francisco Echaurren lahjoitti '
+          + '35 puuta ja suihkulähteen. Aidan ja neljä pyöröporttia '
+          + 'tarvittiin, jotta eläimet eivät söisi puutarhaa.'
+        + '\n\n'
+        + 'Aukio kantoi vuosina 1880—1892 nimeä Plaza Emilio '
+          + 'Sotomayor; vanha nimi palautettiin Amerikan löytämisen '
+          + 'neljäntenä satavuotisjuhlana. Kolme muistomerkkiä ovat '
+          + 'kaikki ulkomaisten siirtokuntien lahjoja Chilen '
+          + 'tasavallan satavuotisjuhlaan. Kroatialaisten '
+          + 'soittolavakioski vihittiin 26. maaliskuuta 1911, ja sen '
+          + 'kyljessä on muistolaatta José Papicille. Espanjalaisten '
+          + 'veistosryhmässä on ylhäällä kaksi naishahmoa, Espanja ja '
+          + 'Amerikka, ja alhaalla kondori Chilen vaakunan kanssa ja '
+          + 'leijona Espanjan vaakunan kanssa; arkkitehti oli Jaime '
+          + 'Pedreny.'
+        + '\n\n'
+        + 'Kolmas on brittiläisen siirtokunnan kellotorni, joka '
+          + 'vihittiin 17. syyskuuta 1911. Kellon osat kokosi '
+          + 'Raymundo Allende, rautatieyhtiön työntekijä. Tornia '
+          + 'sanotaan yleisesti Big Benin jäljennökseksi — jopa '
+          + 'englanninkielinen Wikipedia sanoo niin — mutta '
+          + 'yhtäläisyys on vain äänessä. Materiaalia oli tilattu '
+          + 'paljon korkeampaan torniin, mutta ajan lait kielsivät '
+          + 'mitään rakennusta ylittämästä kaupungin katedraalia, '
+          + 'joten ylijäänyt aines käytettiin toiseen taloon '
+          + 'Washington-kadulla.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Gibbsin talo': {
+      aika: '1915',
+      teksti: 'Talon nimi ei ole rakentajan vaan yhtiön. Vuonna 1868 '
+          + 'José Santos Ossa ja Francisco Puelma neuvottelivat '
+          + 'englantilaisen William Gibbs & Co:n kanssa puolet '
+          + 'salpietarialueistaan brittiläiselle pääomalle, ja siirto '
+          + 'tehtiin Valparaísossa 1. maaliskuuta 1869. Kaksi '
+          + 'viikkoa myöhemmin, 19. maaliskuuta 1869, syntyi '
+          + 'Melbourne Clark & Co., jonka osakkaita olivat Puelma, '
+          + 'Ossa, George Smith, Melbourne Clark, Agustín Edwards ja '
+          + 'William Gibbs. Syyskuussa Bolivia jatkoi yhtiön '
+          + 'toimilupaa viidellätoista vuodella, ja 1872 yhtiö sai '
+          + 'oikeuden rakentaa rautatien Antofagastasta Salinasiin — '
+          + 'silloin siitä tuli Compañía de Salitres y Ferrocarril de '
+          + 'Antofagasta.'
+        + '\n\n'
+        + 'Itse talo rakennettiin 1915, eikä sen rakentamisesta '
+          + 'tiedetä sen enempää. Se on eklektinen: tyyliä on lainattu '
+          + 'sieltä täältä, kuten Antofagastan varakkaissa taloissa '
+          + 'siihen aikaan oli tapana. Osoite on Manuel Baquedano '
+          + '108, Balmaceda-kadun ajoratojen ja rautatien välissä.'
+        + '\n\n'
+        + 'Talon ympärillä on Plaza del Salitre, salpietariaukio, '
+          + 'jolla seisoo Caterina Osorion ja Mario Calderónin veistos '
+          + 'El Aguador, vedenkantaja. Viereen valmistui 29. elokuuta '
+          + '2008 Luis Núñezin muraali, joka esittää rautatieasemaa '
+          + 'ja Antofagastan historian merkkihenkilöitä: toimittaja '
+          + 'Lenka Franulicin, taidemaalari Chela Liran, lääkäri ja '
+          + 'runoilija Antonio Rendicin, runoilija Andrés Sabellan ja '
+          + 'salpietarin löytäjän José Santos Ossan.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Kaupunginteatteri': {
+      aika: '1966—1981',
+      teksti: 'Colónin aukion koilliskulmaan piti tulla paljon '
+          + 'suurempi talo. Vuoden 1963 kansallisen kilpailun voitti '
+          + 'viiden arkkitehdin ryhmä — Vicente Bruna, Iván Godoy, '
+          + 'Alberto Sartori, Sergio Seguel ja Germán Wijnant — ja '
+          + 'suunnitelmassa oli 1 500 hengen teatteri, 500 hengen '
+          + 'kamariteatteri, kaupungintalo, kirjasto ja taidesali '
+          + 'kahdentoistatuhannen neliömetrin tontilla.'
+        + '\n\n'
+        + 'Työt alkoivat 1966, mutta rahat loppuivat ja hanke '
+          + 'keskeytyi 1970-luvun alussa vuosiksi. Rakentaminen '
+          + 'jatkui 1975, ja teatteri vihittiin 11. syyskuuta 1981 '
+          + 'siinä muodossa, jossa se yhä on: kaksi suorakaiteista '
+          + 'teräsbetonirakennetta ja niiden välissä puolikovera '
+          + 'keskusosa, jota kiertävät L:n muotoiset parvekkeet. '
+          + 'Ensimmäiset 899 istuinta hankittiin yleisellä '
+          + 'keräyksellä, jonka pani alulle paikallinen sanomalehti; '
+          + 'nykyään salissa on 867 paikkaa.'
+        + '\n\n'
+        + 'Talo on Antofagastan sinfoniaorkesterin koti. Orkesteri '
+          + 'perustettiin 2. marraskuuta 1962 Rafael Ramosin '
+          + 'johdolla, ja siinä soittaa yli kuusikymmentä muusikkoa. '
+          + 'Julkisivun yläosaan maalasi Luis Núñez San Martín '
+          + 'nelihenkisen ryhmänsä kanssa yli 1 200 neliömetrin '
+          + 'muraalin, joka esittää seudun alkuperäiskansojen kasvoja '
+          + 'sekä salpietarin nousun ja tuhon; työ kesti viisi '
+          + 'kuukautta ja valmistui 24. huhtikuuta 2014.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Antofagastan katedraali': {
+      aika: '1907—1917',
+      teksti: 'Antofagastan katedraali on palanut kahdesti ennen '
+          + 'kuin se rakennettiin kiveen. Ensimmäinen versio nousi '
+          + '1872 karkeista laakeripuulaudoista, ja kellotapulina oli '
+          + 'neljästä viiteen metriä korkea tolppa, jossa riippui '
+          + 'kaksi pientä kelloa ja teräskolmio. Se paloi joulukuussa '
+          + '1880.'
+        + '\n\n'
+        + 'Tilalle tuli puinen rakennus, jonka katto oli '
+          + 'puolikupoli ja josta nousi korkea torni. 1880-luvun '
+          + 'loppupuoliskolla se korvattiin koristeellisemmalla '
+          + 'suunnitelmalla — ja sekin paloi, 15. marraskuuta 1906. '
+          + 'Peruskivi nykyiselle kirkolle laskettiin täsmälleen '
+          + 'vuosi palon jälkeen, 15. marraskuuta 1907.'
+        + '\n\n'
+        + 'Uusgoottilaisen rakennuksen teki arkkitehti Emilio '
+          + 'Doyère; symbolinen vihkiäinen pidettiin 1914, mutta '
+          + 'talo valmistui vasta 17. syyskuuta 1917. Se on omistettu '
+          + 'Pyhälle Joosefille, työläisten suojeluspyhimykselle, ja '
+          + 'siitä tunnetuimmat ovat lasimaalaukset ja alttari. '
+          + 'Heinäkuun 1995 maanjäristyksen jälkeen rakennus '
+          + 'kunnostettiin perusteellisesti vuosina 1998—1999. Juuri '
+          + 'tämä katedraali oli se, jota kaupungin lait kielsivät '
+          + 'muita rakennuksia ylittämästä — ja siksi aukion '
+          + 'kellotornista tuli matalampi kuin oli tarkoitus.',
+      lahde: 'Wikipedia',
+    },
+    'Giménezin talo': {
+      aika: '1923—1924',
+      teksti: 'Espanjalaiset kauppiaat Ismael Giménez ja Enrique '
+          + 'Longueira avasivat 1915 yhdessä tekstiilikaupan nimeltä '
+          + 'La Camelia. Kun yhtiö purkautui Longueiran palatessa '
+          + 'kotimaahansa, Giménez päätti rakentaa oman liikkeensä '
+          + 'Matta- ja Baquedano-katujen kulmassa olleelle '
+          + 'joutomaalle. Hän matkusti vaimonsa María del Vallen '
+          + 'kanssa Sevillaan, näki siellä arkkitehti José Espiau y '
+          + 'Muñozin Ciudad de Londres -rakennuksen ja päätti, että '
+          + 'hänen omansa tulisi olemaan samanlainen mutta suurempi '
+          + 'ja koristeellisempi.'
+        + '\n\n'
+        + 'Giménez tilasi piirustukset Espiau y Muñozilta ja toi '
+          + 'Chileen sekä ne että rakennusmateriaaleja. Työn teki '
+          + 'katalonialainen arkkitehti Jaime Pedreny, ja se alkoi '
+          + '19. toukokuuta 1923. Materiaaleina oli ruotsalaista '
+          + 'sementtiä, sevillalaisia kuvioituja laattoja, taottuja '
+          + 'ritilöitä, eurooppalaista lasia ja chileläistä puuta. '
+          + 'Talosta tuli Pohjois-Chilen ensimmäinen rakennus, jossa '
+          + 'oli hissi. Tyyli on uusmauriainen eli neomudéjar.'
+        + '\n\n'
+        + 'Almacenes Giménez avattiin joulukuussa 1924: alimmat '
+          + 'neljä kerrosta olivat kauppaa — myymälä ja suutari, '
+          + 'ompelimo, räätäli ja lelukauppa, tukkumyynti — ja viides '
+          + 'kerros oli perheen asunto, jonka seinille iquiquelainen '
+          + 'Sixto Rojas Acosta maalasi sevillalaisia maisemia. '
+          + 'Salpietarikauden loppu ja lama veivät kaupan konkurssiin, '
+          + 'mutta se avattiin uudelleen ja toimi 1980-luvulle asti. '
+          + 'Talo on todennäköisesti sevillalaisarkkitehdin ainoa työ '
+          + 'Latinalaisessa Amerikassa — hänen tuotantonsa '
+          + 'näyttelyluettelossa vuodelta 1984 se oli merkitty '
+          + 'kadonneeksi teokseksi.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+  },
 };
