@@ -28,9 +28,20 @@ matkaopas kulkee laukussa koko maan ajan, vain kansilehti vaihtuu.
 - **Kaupungin kansi:** `KULTTUURI_KATEGORIAT[cityId]`, yksi aihe
   (id `kaupunki`, nimi = kaupungin nimi) ja 3–5 paikallista nostoa:
   maamerkit, paikallinen elämä, visan aihe.
-- **Yhdistäminen** (js/ui.js rakennaSivut): kaupungin aiheet ensin,
-  sitten litteä "Elämää" jos omia ei ole, sitten maan aiheet. Sama
-  aihe-id kaupungilla voittaa maan version.
+- **Yhdistäminen** (js/lehti.js rakennaSivut): kaupunkilehti saa
+  kaupungin aiheet — ensin kansi, sitten litteä "Elämää" jos omia ei
+  ole — ja maalehti oman listansa maan aiheista. **Listat ovat
+  erilliset (v350, omistajan päätös 8.8.2026: "erotetaan kaupunki ja
+  maa lehti toisistaan"), joten sama aihe-id kaupungilla ei enää
+  piilota maan sivua:** maalehti saa oman historia-aiheensa, vaikka
+  kaupungilla olisi omansa. Tämä dokumentti sanoi vuoteen 2026 asti
+  päinvastaista, ja HKG, MMR ja NPL jättivät maan historia-aiheen
+  kirjoittamatta vanhan säännön takia (6.9.2026) — samaa sisältöä ei
+  silti kannata kirjoittaa kahteen kertaan, vaan maan sivun pitää
+  kertoa eri asia kuin kaupungin (ks. Lontoon jako v349).
+  Poikkeus, joka yhä lainataan: "Menovinkit" ja "Maa numeroina"
+  näkyvät molemmissa lehdissä, ja niiden sisältö asuu maapaketissa
+  yhtenä kappaleena.
 - **Järjestys monistukseen:** maat sen mukaan, montako kaupunkia ne
   kattavat ja mihin lennetään ensin — Italia ✅, Egypti ✅ (Kairo,
   v297: ensimmäinen monistus todisti reseptin — pelkkää dataa, ei

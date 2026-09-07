@@ -3,6 +3,21 @@
  *
  *   node tools/tee-korkeuspalat.mjs [--lahde ncei|erddap] [--ulos <kansio>]
  *        [--valimuisti <kansio>] [--palat N40E000,N30E020] [--koeajo]
+ *        [--nouda] [--osa k/n] [--kokoa n]
+ *
+ * RINNAKKAISUUS (omistaja 7.9.2026: kaikki ytimet käyttöön). Pala ei
+ * riipu naapuristaan, ja työstä lähes kaikki on gzip −9 eli puhdasta
+ * yhden ytimen laskentaa, joten palat jaetaan kaistoihin:
+ *
+ *   --nouda      hakee ja purkaa VAIN lähdeaineiston välimuistiin.
+ *                Ajetaan kerran ennen kaistoja, jottei jokainen kaista
+ *                lataisi samaa 322 Mt:n zipiä.
+ *   --osa k/n    pilkkoo vain oman kaistansa palat ja kirjoittaa niistä
+ *                oman luettelonsa (luettelo-osa-k-n.json), EI luettelo.json:ia.
+ *   --kokoa n    ei pilko mitään: lukee n kaistan luettelot, tarkistaa
+ *                että jokainen pala on levyllä ja kirjoittaa niistä
+ *                yhden luettelo.json:in samassa järjestyksessä kuin
+ *                peräkkäinen ajo (palat lounaasta koilliseen).
  *
  * === MIKSI TÄMÄ ON OLEMASSA =========================================
  *
@@ -82,7 +97,7 @@
 import { spawnSync } from 'node:child_process';
 import {
   closeSync, createReadStream, createWriteStream, existsSync, mkdirSync,
-  openSync, readSync, statSync, writeFileSync,
+  openSync, readFileSync, readSync, statSync, writeFileSync,
 } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
@@ -380,6 +395,32 @@ function valitsin(nimi, oletus) {
  */
 export const KOEAJON_PALAT = ['N40E000', 'N30E020', 'S30W070'];
 
+/** Kaistan oman luettelon nimi: kokoava ajo lukee nämä järjestyksessä. */
+const osanLuettelo = (k, n) => `luettelo-osa-${k}-${n}.json`;
+
+/**
+ * Aineiston oma sisällysluettelo.
+ *
+ * LUETTELO ON OSA AINEISTOA EIKÄ RAPORTTI. Peli lukee siitä ruudun
+ * koon, palan mitat ja sen, MITKÄ palat ämpärissä ovat — ilman sitä
+ * jokainen puuttuva pala olisi 404, joka näyttää verkkovirheeltä.
+ * Lähde ja lisenssi kulkevat mukana samasta syystä kuin
+ * 3′-aineistossa: aineiston pitää kantaa alkuperänsä itse.
+ */
+function kirjoitaLuettelo(polku, lahde, palat) {
+  writeFileSync(polku, `${JSON.stringify({
+    tunnus: PALAN_TUNNUS,
+    ruutu: PALAN_RUUTU,
+    asteita: PALAN_ASTEITA,
+    leveys: PALAN_SOLUJA,
+    korkeus: PALAN_SOLUJA,
+    lahde: lahde === 'ncei' ? NCEI_ZIP : ERDDAP,
+    ...LAHTEET,
+    tehty: new Date().toISOString().slice(0, 10),
+    palat,
+  }, null, 1)}\n`);
+}
+
 async function main() {
   const lahde = String(valitsin('lahde', 'ncei'));
   if (lahde !== 'ncei' && lahde !== 'erddap') {
@@ -403,6 +444,69 @@ async function main() {
     }
     palat = palat.filter((p) => setti.has(p.nimi));
     if (palat.length !== setti.size) throw new Error('osa pyydetyistä paloista ei ole maailmassa');
+  }
+
+  /* --kokoa n: kaistojen luettelot yhdeksi, ei yhtään palaa. */
+  const kokoa = valitsin('kokoa', null);
+  if (kokoa) {
+    const n = Number(kokoa);
+    if (!Number.isInteger(n) || n < 1) throw new Error('--kokoa <kaistojen määrä>');
+    mkdirSync(ulos, { recursive: true });
+    const yhdessa = [];
+    for (let k = 0; k < n; k += 1) {
+      const polku = join(ulos, osanLuettelo(k, n));
+      if (!existsSync(polku)) throw new Error(`kaistan ${k} luettelo puuttuu: ${polku}`);
+      yhdessa.push(...JSON.parse(readFileSync(polku, 'utf8')).palat);
+    }
+    /*
+     * Kaistat ovat yhtenäisiä siivuja samasta järjestyksestä, joten
+     * peräkkäin luettuina ne ovat täsmälleen sama järjestys kuin
+     * peräkkäisajossa. Tarkistetaan silti, ettei pala ole kahdesti
+     * eikä tiedosto puutu levyltä — vaiettu vajaa luettelo väittäisi
+     * pelille, ettei palaa ole olemassa.
+     */
+    const nimet = new Set();
+    for (const p of yhdessa) {
+      if (nimet.has(p.nimi)) throw new Error(`pala ${p.nimi} on kahdessa kaistassa`);
+      nimet.add(p.nimi);
+      if (!existsSync(join(ulos, `${p.nimi}.bin.gz`))) {
+        throw new Error(`luettelossa on pala ${p.nimi}, jota ei ole levyllä`);
+      }
+    }
+    if (nimet.size !== palat.length) {
+      throw new Error(`kaistoilla on ${nimet.size} palaa, odotettiin ${palat.length}`);
+    }
+    kirjoitaLuettelo(join(ulos, 'luettelo.json'), lahde, yhdessa);
+    kerro(`luettelo.json koottu ${n} kaistasta: ${yhdessa.length} palaa\n`);
+    return;
+  }
+
+  /* --nouda: vain lähdeaineisto välimuistiin, ennen kaistoja. */
+  if (valitsin('nouda', false)) {
+    if (lahde !== 'ncei') throw new Error('--nouda koskee vain ncei-lähdettä');
+    const bin = await nceiBinaari(valimuisti, kerro);
+    kerro(`aineisto valmiina: ${bin}\n`);
+    return;
+  }
+
+  /*
+   * --osa k/n: yhtenäinen siivu palalistasta. Siivu eikä joka n:s pala,
+   * jotta kaistan luettelot voi liittää peräkkäin samaan järjestykseen
+   * kuin peräkkäisajossa.
+   */
+  let osa = null;
+  const osaLippu = valitsin('osa', null);
+  if (typeof osaLippu === 'string') {
+    const m = /^(\d+)\/(\d+)$/.exec(osaLippu);
+    if (!m) throw new Error('--osa on muotoa k/n, esim. 0/8');
+    const k = Number(m[1]);
+    const n = Number(m[2]);
+    if (n < 1 || k >= n) throw new Error(`--osa ${osaLippu}: k < n ja n >= 1`);
+    osa = { k, n };
+    const alku = Math.floor((k * palat.length) / n);
+    const loppu = Math.floor(((k + 1) * palat.length) / n);
+    palat = palat.slice(alku, loppu);
+    kerro(`kaista ${k + 1}/${n}: palat ${alku}…${loppu - 1}\n`);
   }
 
   kerro(`aineisto: ${LAHTEET.aineisto}\nlisenssi: ${LAHTEET.lisenssi}\n\n`);
@@ -448,23 +552,12 @@ async function main() {
   if (fd !== null) closeSync(fd);
 
   /*
-   * LUETTELO ON OSA AINEISTOA EIKÄ RAPORTTI. Peli lukee siitä ruudun
-   * koon, palan mitat ja sen, MITKÄ palat ämpärissä ovat — ilman sitä
-   * jokainen puuttuva pala olisi 404, joka näyttää verkkovirheeltä.
-   * Lähde ja lisenssi kulkevat mukana samasta syystä kuin
-   * 3′-aineistossa: aineiston pitää kantaa alkuperänsä itse.
+   * Kaista kirjoittaa OMAN luettelonsa: yhteinen luettelo.json syntyy
+   * vasta --kokoa-ajossa, koska kaistan luettelo väittäisi ämpärissä,
+   * ettei muita paloja ole olemassa.
    */
-  writeFileSync(join(ulos, 'luettelo.json'), `${JSON.stringify({
-    tunnus: PALAN_TUNNUS,
-    ruutu: PALAN_RUUTU,
-    asteita: PALAN_ASTEITA,
-    leveys: PALAN_SOLUJA,
-    korkeus: PALAN_SOLUJA,
-    lahde: lahde === 'ncei' ? NCEI_ZIP : ERDDAP,
-    ...LAHTEET,
-    tehty: new Date().toISOString().slice(0, 10),
-    palat: luettelo,
-  }, null, 1)}\n`);
+  kirjoitaLuettelo(join(ulos, osa ? osanLuettelo(osa.k, osa.n) : 'luettelo.json'),
+    lahde, luettelo);
 
   const sekuntia = (Date.now() - t0) / 1000;
   kerro(`\npaloja   ${luettelo.length}\n`);

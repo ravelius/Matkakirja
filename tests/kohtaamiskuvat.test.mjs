@@ -74,8 +74,10 @@ test('vain tarkistettu aktiivinen kuva päätyy peliin, muut jäävät galleriaa
       assert.notEqual(peliin?.id, kuva.id, `${kuva.id}: tila ${kuva.tila} ei saa näkyä pelissä`);
     }
   }
-  // Kaupunki ilman kuvaa jää kuvattomaksi eikä kaadu.
-  assert.equal(kohtaamiskuvaKohteelle('ateena'), null);
+  // Kaupunki ilman kuvaa jää kuvattomaksi eikä kaadu. Esimerkki vaihtui
+  // 7.9.2026 Ateenasta Edinburghiin, koska Ateena sai kuvaputkesta
+  // hyväksytyn kohtaamiskuvan; Edinburghin ainoa rivi on arkistossa.
+  assert.equal(kohtaamiskuvaKohteelle('edinburgh'), null);
   assert.equal(kohtaamiskuvaKohteelle(undefined), null);
 });
 

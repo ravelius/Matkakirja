@@ -19,6 +19,17 @@
  *                  keskilämmön ympärille. Kentät ovat VALINNAISIA:
  *                  ilman niitä graafi piirtyy ilman kaistaa.
  *   sade[12]  — kuukauden sademäärä mm
+ *   lahde     — VALINNAINEN { nimi, kausi }, kun rivi EI ole
+ *                  Open-Meteon ERA5-arkistosta jaksolta 1991–2020.
+ *                  Vuosigraafin lähderivi (js/saa.js vuosiSaaSelite)
+ *                  kirjoittaa kentän sellaisenaan; ilman kenttää se
+ *                  kirjoittaa oletuksen "Open-Meteo (ERA5),
+ *                  1991–2020". Kenttä lisättiin 7.9.2026, kun
+ *                  neljätoista riviä oli jouduttu laskemaan
+ *                  en-Wikipedian ilmastotaulukoista (ks. alempana) ja
+ *                  graafi väitti niistäkin Open-Meteota.
+ *                  tests/lehdet.test.mjs vartioi, ettei kenttä katoa
+ *                  näiltä riveiltä eikä ole vajaa.
  *   luonnehdinta — VALINNAINEN 2–3 lauseen kuvaus vuodenkierrosta
  *                  (omistajan toive 17.8.2026). Se näkyy vuosigraafin
  *                  alla lehden vuosiennustekortissa. Väitteet nousevat
@@ -31,7 +42,8 @@
  * ennusteen varateksti toimivat myös ilman verkkoa (lentokoneessa).
  * Ne on laskettu Open-Meteon arkistosta (ERA5) jaksolta 1991–2020 —
  * sama jakso kuin virallisissa ilmastonormaaleissa. Lähderivi
- * graafissa: "Open-Meteo (ERA5), 1991–2020".
+ * graafissa: "Open-Meteo (ERA5), 1991–2020" — paitsi riveillä, joilla
+ * on oma lahde-kenttä.
  *
  * Uusi lehtikaupunki tarvitsee vain oman rivinsä tähän — koodia ei
  * tarvitse muuttaa. Ilman riviä lehti näkyy ilman säätä.
@@ -2337,6 +2349,12 @@ export const SAATIEDOT = {
    * keskiarvo. Lähde ja normaalikausi on merkitty jokaisen rivin
    * kohdalle erikseen, koska ne EIVÄT ole Open-Meteota eivätkä aina
    * samaa 1991–2020-jaksoa kuin muu paketti — ks. myös loppuraportti.
+   *
+   * 7.9.2026: pelkkä kommentti ei riittänyt, koska graafin lähderivi
+   * luki näillekin "Open-Meteo (ERA5), 1991–2020". Jokaisella
+   * neljällätoista rivillä on nyt myös koneluettava lahde-kenttä,
+   * jonka js/saa.js vuosiSaaSelite kirjoittaa graafin alle
+   * sellaisenaan.
    */
   // Lähde: en-Wikipedia "Dunedin", Climate-osio, Weather box
   // "Dunedin (1991–2020 normals)", luettu 6.9.2026 — ei Open-Meteo
@@ -2347,6 +2365,7 @@ export const SAATIEDOT = {
     ylin: [19, 19, 18, 15, 13, 11, 10, 11, 13, 15, 16, 18],
     alin: [12, 12, 10, 8, 6, 4, 3, 4, 6, 7, 9, 10],
     sade: [71, 70, 54, 61, 64, 59, 52, 55, 47, 60, 63, 71],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
     luonnehdinta: 'Dunedinin vuodenkierto on maltillinen: tammikuun '
       + 'keskilämpö on 15,2 astetta ja heinäkuun 6,7 astetta, joten ero '
       + 'kesän ja talven välillä jää alle kymmeneen asteeseen. Sade '
@@ -2366,6 +2385,7 @@ export const SAATIEDOT = {
     ylin: [31, 32, 31, 30, 29, 28, 27, 27, 28, 29, 30, 31],
     alin: [25, 25, 25, 24, 23, 22, 21, 21, 22, 23, 23, 24],
     sade: [343, 276, 340, 335, 233, 156, 136, 144, 188, 248, 247, 344],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
     luonnehdinta: 'Suvan lämpötila pysyy ympäri vuoden trooppisen '
       + 'tasaisena: kylmimpänä heinä-elokuussa keskilämpö on 24,2 '
       + 'astetta ja lämpimimpänä helmikuussa 28,1 astetta. Sadetta '
@@ -2384,6 +2404,7 @@ export const SAATIEDOT = {
     ylin: [31, 31, 29, 26, 23, 20, 20, 22, 23, 25, 28, 30],
     alin: [21, 21, 20, 17, 14, 11, 10, 12, 13, 16, 17, 19],
     sade: [121, 111, 103, 114, 113, 130, 164, 120, 148, 153, 106, 116],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
     luonnehdinta: 'Porto Alegressa on selvä eteläisen pallonpuoliskon '
       + 'vuodenkierto: tammikuun keskilämpö on 25 astetta ja '
       + 'heinäkuun 14,1 astetta. Sadetta riittää joka kuukausi '
@@ -2401,6 +2422,7 @@ export const SAATIEDOT = {
     ylin: [34, 33, 32, 29, 25, 24, 22, 26, 28, 30, 31, 33],
     alin: [23, 23, 22, 19, 16, 14, 14, 15, 17, 20, 20, 22],
     sade: [133, 146, 131, 152, 134, 71, 48, 39, 79, 158, 195, 177],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
     luonnehdinta: 'Asunciónin kesä on kuuma: tammikuun keskilämpö on '
       + '28 astetta, kun heinäkuussa jäädään 17,1 asteeseen. '
       + 'Sademäärä vaihtelee voimakkaasti kuukaudesta toiseen, '
@@ -2417,6 +2439,7 @@ export const SAATIEDOT = {
     ylin: [32, 32, 31, 30, 28, 27, 26, 27, 29, 30, 31, 32],
     alin: [24, 24, 23, 22, 20, 19, 17, 17, 19, 21, 23, 24],
     sade: [389, 476, 367, 178, 81, 43, 36, 27, 28, 63, 85, 186],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
     luonnehdinta: 'Cairnsin lämpötila pysyy ympäri vuoden trooppisen '
       + 'tasaisena, 21,7–27,9 asteen välillä. Sademäärässä ero on '
       + 'sitäkin jyrkempi: helmikuussa satelee 476 millimetriä, '
@@ -2433,6 +2456,7 @@ export const SAATIEDOT = {
     ylin: [32, 33, 33, 33, 32, 32, 32, 32, 31, 31, 31, 32],
     alin: [21, 22, 22, 23, 23, 23, 23, 23, 22, 22, 22, 22],
     sade: [24, 12, 14, 71, 222, 242, 190, 221, 268, 311, 259, 125],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
     luonnehdinta: 'Panaman keskilämpö pysyy ympäri vuoden lähes '
       + 'muuttumattomana, 26,6–28 asteen välissä. Sademäärä sen '
       + 'sijaan vaihtelee jyrkästi: helmikuussa kertyy vain 12 '
@@ -2450,6 +2474,7 @@ export const SAATIEDOT = {
     ylin: [32, 32, 31, 32, 32, 31, 31, 31, 32, 32, 32, 32],
     alin: [24, 23, 23, 23, 23, 22, 22, 22, 22, 22, 23, 23],
     sade: [239, 290, 285, 190, 112, 86, 100, 95, 90, 118, 145, 211],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
     luonnehdinta: 'Honiarassa lämpötila pysyy käytännössä '
       + 'muuttumattomana ympäri vuoden: kuukausien keskilämpöjen ero '
       + 'on vain yksi aste, elokuun 26,6:sta tammikuun 27,6:een. '
@@ -2467,6 +2492,7 @@ export const SAATIEDOT = {
     ylin: [31, 31, 31, 30, 29, 27, 26, 27, 28, 29, 29, 31],
     alin: [23, 23, 23, 22, 20, 20, 18, 18, 18, 20, 21, 22],
     sade: [316, 274, 321, 255, 210, 180, 94, 87, 87, 134, 192, 187],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1961–1990' },
     luonnehdinta: 'Port Vilan keskilämpö pysyttelee 22–26,5 asteen '
       + 'välissä ympäri vuoden. Sadetta kertyy eniten alkuvuodesta, '
       + 'maaliskuussa 321 millimetriä, ja vähiten elo-syyskuussa, 87 '
@@ -2483,6 +2509,7 @@ export const SAATIEDOT = {
     ylin: [9, 9, 14, 18, 23, 30, 33, 32, 28, 20, 13, 9],
     alin: [-6, -6, -1, 2, 8, 13, 17, 16, 10, 3, -2, -6],
     sade: [11, 15, 29, 50, 67, 44, 48, 46, 30, 29, 20, 12],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
     luonnehdinta: 'Denverissä vuodenaikojen ero on suuri: '
       + 'joulu-helmikuun keskilämpö pysyy pari astetta plussan '
       + 'puolella (1,1–1,9 astetta), kun heinäkuussa noustaan 24,8 '
@@ -2501,6 +2528,7 @@ export const SAATIEDOT = {
     ylin: [18, 20, 23, 26, 30, 33, 34, 34, 32, 28, 23, 19],
     alin: [8, 10, 13, 17, 21, 24, 25, 25, 23, 18, 12, 9],
     sade: [104, 72, 83, 104, 138, 155, 117, 138, 146, 147, 99, 110],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
     luonnehdinta: 'Houstonin kesä on kuuma ja kostea: elokuun '
       + 'keskilämpö on 29,5 astetta ja sadetta kertyy silloinkin 138 '
       + 'millimetriä. Sadetta riittää itse asiassa joka kuukausi '
@@ -2520,6 +2548,7 @@ export const SAATIEDOT = {
     ylin: [25, 26, 27, 29, 30, 32, 33, 33, 32, 30, 27, 26],
     alin: [16, 17, 19, 21, 23, 25, 25, 25, 25, 23, 20, 18],
     sade: [46, 55, 62, 85, 161, 267, 187, 243, 260, 194, 90, 62],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
     luonnehdinta: 'Miamin talvi on lauha ja kuiva: tammikuun '
       + 'keskilämpö on 20,3 astetta ja sadetta kertyy vain 46 '
       + 'millimetriä. Kesä on sekä kuuma että sateinen — elokuun '
@@ -2538,6 +2567,7 @@ export const SAATIEDOT = {
     ylin: [0, 0, 4, 9, 14, 20, 23, 23, 19, 13, 8, 3],
     alin: [-8, -7, -4, 1, 6, 11, 14, 15, 12, 6, 2, -4],
     sade: [140, 110, 133, 118, 119, 112, 110, 96, 109, 124, 151, 145],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1981–2010' },
     luonnehdinta: 'Halifaxissa talvi on pakkasella: tammikuun '
       + 'keskilämpö on -4,1 astetta, kun elokuussa noustaan 19,1 '
       + 'asteeseen. Sadetta sataa joka kuukausi 96–151 millimetriä '
@@ -2554,6 +2584,7 @@ export const SAATIEDOT = {
     ylin: [29, 28, 26, 24, 21, 18, 18, 18, 20, 22, 24, 26],
     alin: [17, 17, 15, 12, 10, 8, 7, 8, 9, 12, 13, 16],
     sade: [9, 10, 13, 40, 61, 92, 85, 72, 44, 28, 25, 13],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
     luonnehdinta: 'Kapkaupungin sadekausi osuu talveen: tammikuussa '
       + 'sadetta on vain 9 millimetriä, kun kesäkuussa sitä kertyy '
       + '92. Lämpötila taas on huipussaan tammikuussa, 23,1 astetta, '
@@ -2571,6 +2602,7 @@ export const SAATIEDOT = {
     ylin: [27, 27, 28, 26, 25, 24, 24, 24, 26, 27, 25, 26],
     alin: [14, 14, 15, 15, 15, 13, 12, 13, 13, 14, 15, 15],
     sade: [58, 36, 75, 130, 109, 29, 11, 19, 17, 50, 131, 85],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
     luonnehdinta: 'Nairobin lämpötila pysyy ympäri vuoden '
       + 'maltillisena, 17,7–21,6 asteen välillä, vaikka kaupunki on '
       + 'lähellä päiväntasaajaa. Sadetta kertyy selvästi eniten '

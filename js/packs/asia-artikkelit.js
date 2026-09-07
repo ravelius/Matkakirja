@@ -2864,8 +2864,12 @@ export const ASIA_ARTIKKELIT = {
       + 'valtioksi. Virallisia kieliä on neljä — englanti, malaiji, '
       + 'mandariinikiina ja tamili — ja ilmasto on trooppinen '
       + 'sademetsäilmasto ilman selviä vuodenaikoja.',
+    // Pinta-ala yhtenäistetty 7.9.2026 kaupunkilehden kanssa: aiempi
+    // "noin 730" oli vanhentunut. en-Wikipedian Singapore-artikkelin
+    // tietolaatikko sanoo 744,3 km² (luettu 7.9.2026), ja
+    // kulttuuri-kategoriat.js:n singapore-lohko käyttää samaa lukua.
     teksti: 'Singapore on Malakan niemimaan eteläkärjessä, aivan '
-      + 'päiväntasaajan tuntumassa. Pinta-alaa on noin 730 '
+      + 'päiväntasaajan tuntumassa. Pinta-alaa on 744 '
       + 'neliökilometriä, ja se kasvaa yhä: merta täytetään maalla. '
       + 'Ilma on lämmintä ja kosteaa ympäri vuoden, ja sadetta tulee '
       + 'joka kuukausi.'
@@ -3380,10 +3384,18 @@ export const ASIA_ARTIKKELIT = {
   },
   /*
    * MYANMAR — maa-avain (countryShapes.MMR.wiki = 'Myanmar'), ei
-   * kaupunki. Vain intro-kenttä: maalehden maaosasto nojaa tähän
-   * introon yksin, sama malli kuin Kenialla ja Egyptillä. Faktat
-   * en-Wikipedian artikkelista "Myanmar" (johdanto sekä osiot
-   * "History" ja "Geography"), tarkistettu 6.9.2026.
+   * kaupunki. Maalehden maaosasto nojaa intro-kenttään yksin, sama
+   * malli kuin Kenialla ja Egyptillä. Faktat en-Wikipedian
+   * artikkelista "Myanmar" (johdanto sekä osiot "History" ja
+   * "Geography"), tarkistettu 6.9.2026.
+   *
+   * TEKSTI-KENTTÄ lisättiin 7.9.2026 (päätoimittajan yhtenäistys:
+   * AFG, KAZ ja NPL kirjoittivat sen jo, MMR ja LKA jäivät testin
+   * poikkeuslistalle). Se on "Lue lisää" -paneelin artikkeli
+   * (js/ui.js lukee artikkeli ?? teksti), eikä maalehti käytä sitä
+   * mihinkään. Väitteet ovat saman artikkelin lisäksi maalehden
+   * faktapohjasta docs/mantereet-tyoaineisto/faktapohja-myanmar.md
+   * (tiikki: "Teak"; Indawgyi: "Indawgyi Lake"; lahpet: "Lahpet").
    */
   Myanmar: {
     intro: 'Myanmar on Kaakkois-Aasian mantereen suurin maa, ja sen '
@@ -3405,12 +3417,42 @@ export const ASIA_ARTIKKELIT = {
       + 'vain kupista vaan syödään hapatettuna lehtenä, ja '
       + 'kansallissoitin on harppu, jollaista ei muualla Aasiassa enää '
       + 'soiteta.',
+    teksti: 'Myanmar on Kaakkois-Aasian mantereen suurin maa. Sen halki '
+      + 'virtaa pohjoisesta etelään Iravadi, lähes 2 170 kilometriä '
+      + 'pitkä joki, jonka laaksossa asuu suurin osa väestöstä. '
+      + 'Pohjoisessa kohoaa Hkakabo Razi 5 881 metriin, etelässä on '
+      + 'rantaviivaa 1 930 kilometriä Bengalinlahden ja '
+      + 'Andamaninmeren äärellä.'
+      + '\n\n'
+      + 'Maan keskeltä kulkee etelästä pohjoiseen Sagaingin siirros, ja '
+      + 'siksi Myanmar on yksi maailman järistysherkimmistä maista. '
+      + 'Metsissä kasvaa lähes puolet maailman luonnonvaraisesta '
+      + 'tiikistä: puun oma öljy tekee siitä niin kestävän, ettei sitä '
+      + 'tarvitse ulkonakaan lakata. Kachinin osavaltiossa on Indawgyi, '
+      + 'suurin kokonaan Myanmarissa sijaitseva järvi, noin 13 '
+      + 'kilometriä leveä ja 24 pitkä.'
+      + '\n\n'
+      + 'Ensimmäiset kaupunkivaltiot perusti pyu-kansa, ja 1050-luvulla '
+      + 'Paganin kuningaskunta yhdisti Iravadin laakson ensimmäistä '
+      + 'kertaa. Konbaung-dynastia menetti maansa kolmessa sodassa '
+      + 'briteille, ja koko Burma liitettiin siirtomaaksi 1. tammikuuta '
+      + '1886; itsenäisyys tuli 4. tammikuuta 1948. Kansallinen herkku '
+      + 'on lahpet, hapatettu teelehti, jota syötiin ennen sovinnon '
+      + 'merkiksi kiistan ratkettua.',
   },
   'Sri Lanka': {
     // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
     // LKA) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
     // Kenialla. Colombon kaupunkilehti kertoo satamakaupungista, tämä
     // koko saaresta.
+    //
+    // TEKSTI-KENTTÄ lisättiin 7.9.2026 (sama yhtenäistys kuin
+    // Myanmarilla): se on "Lue lisää" -paneelin artikkeli, eikä
+    // maalehti käytä sitä. Lajiluvut ja Sinharaja ovat maalehden
+    // faktapohjasta docs/mantereet-tyoaineisto/faktapohja-srilanka.md
+    // (en-Wikipedia "Sri Lanka", osio "Flora and fauna", ja "Sinharaja
+    // Forest Reserve"), norsujen kokoontuminen artikkelista "Minneriya
+    // National Park".
     intro: 'Sri Lanka on Intian valtameren saari, jota on kutsuttu '
       + 'monella nimellä: kreikkalaisille se oli Taprobane, arabi- ja '
       + 'persialaiskauppiaille Sarandib — siitä tuli englannin sana '
@@ -3429,6 +3471,28 @@ export const ASIA_ARTIKKELIT = {
       + '— samalla sävelellä. Pinta-alaansa nähden saarella on Aasian '
       + 'rikkain lajisto: yli neljännes kukkakasveista kasvaa '
       + 'luonnonvaraisena vain täällä.',
+    teksti: 'Sri Lanka on Intian valtameren saari Intian niemimaan '
+      + 'kaakkoispuolella. Keskellä kohoaa ylänkö, jonka ympärillä '
+      + 'kiertää tasanko: lounaassa sataa runsaasti, pohjoisessa ja '
+      + 'idässä on kuiva vyöhyke. Sinne kuninkaat rakennuttivat '
+      + 'tekojärviä, ja kuivan kauden lopulla elokuusta lokakuuhun '
+      + 'norsut kokoontuvat niiden ruohottuneille pohjille syömään.'
+      + '\n\n'
+      + 'Pinta-alaansa nähden saarella on Aasian rikkain lajisto. '
+      + 'Kotoperäisiä ovat 27 prosenttia sen 3 210 kukkakasvista ja 22 '
+      + 'prosenttia nisäkkäistä, ja maa-alasta on suojeltu 26,5 '
+      + 'prosenttia — enemmän kuin muualla Aasiassa. Lounaassa on '
+      + 'Sinharaja, saaren viimeinen koskematon sademetsä, jonka 360 '
+      + 'neliökilometrissä elää lähes jokainen saaren kotoperäinen '
+      + 'lintulaji.'
+      + '\n\n'
+      + 'Munkit ovat pitäneet kuninkaista kronikkaa yli kahden '
+      + 'vuosituhannen ajan, ja buddhalainen pali-kaanoni kirjoitettiin '
+      + 'täällä ensimmäisen kerran palmunlehdille. Virallisia kieliä on '
+      + 'kaksi, sinhala ja tamili, ja kansallislaulu on virallinen '
+      + 'molemmilla — samalla sävelellä. Keskiylängön viileydessä '
+      + 'kasvavat tee ja aito kaneli, jota maailma sai pitkään vain '
+      + 'tältä saarelta.',
   },
   Nepal: {
     // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT

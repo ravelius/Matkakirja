@@ -981,19 +981,26 @@ export const UUTISLAHTEET = {
   /*
    * KNR eli Kalaallit Nunaata Radioa on Grönlannin yleisradio ja
    * en-Wikipedian "Music of Greenland" -artikkelin mukaan maan tärkein
-   * mediatalo. Testattu 6.9.2026: syötteessä 25 juttua, tuorein saman
-   * päivän aamulta, ja artikkelisivun ensimmäisestä <article>-lohkosta
-   * jäsentyy kuusi yli 60 merkin kappaletta sekä og:image.
+   * mediatalo. Tanskankielinen osasto testattiin 6.9.2026 (syötteessä
+   * 25 juttua, artikkelisivulla kuusi yli 60 merkin kappaletta ja
+   * og:image); pelissä on nyt grönlanninkielinen osasto, ks. alla.
    *
-   * KIELI ON TANSKA, VAIKKA GRÖNLANNINKIELINEN SYÖTE ON OLEMASSA. Sama
-   * talo julkaisee molemmilla kielillä, ja osoite https://knr.gl/kl/rss
-   * antaa 25 juttua kalaallisutiksi ja läpäisee artikkelisivutestin yhtä
-   * hyvin. Kieli-kenttä on kuitenkin MyMemory-käännöksen lähdekieli,
-   * eikä MyMemory tunne kalaallisutia: langpair=kl|fi palauttaa tyhjän
-   * käännöksen, jolloin lehden Käännä-nappi ei tuottaisi koskaan mitään.
-   * Tanskankielinen syöte antaa saman grönlantilaisen uutisen
-   * käännettävässä muodossa. Jos MyMemory joskus lisää kalaallisutin,
-   * tämä rivi vaihdetaan osoitteeseen /kl/rss ja kieleksi kl.
+   * KIELI ON GRÖNLANTI (päätoimittajan päätös 7.9.2026). Sama talo
+   * julkaisee sekä kalaallisutiksi että tanskaksi, ja lehden linja on
+   * paikalliskieli ensin — Grönlannissa se on kalaallisut, ei
+   * siirtomaahallinnon tanska. Syöte /kl/rss testattiin 7.9.2026:
+   * 25 juttua, tuorein edelliseltä päivältä, ja artikkelisivun
+   * ensimmäisestä <article>-lohkosta jäsentyy yhdeksän yli 60 merkin
+   * kappaletta sekä og:image.
+   *
+   * HINTA ON KÄÄNNÖS: kieli-kenttä on MyMemory-käännöksen lähdekieli,
+   * eikä MyMemory tunne kalaallisutia — langpair=kl|fi vastaa
+   * translatedText: null. Lehti kestää sen siististi (js/uutiset.js
+   * kaannaSuomeksi palauttaa null, jolloin otsikkoriville ei tule
+   * suomennosta eikä Käännä-nappi vaihda mitään), ja alkukielinen
+   * uutinen näkyy ennallaan. Aiemmin tässä oli tanskankielinen
+   * /da/rss juuri käännöksen takia. Jos MyMemory joskus lisää
+   * kalaallisutin, tämä rivi toimii sellaisenaan.
    *
    * Testattu ja hylätty: Sermitsiaq.AG (sermitsiaq.ag), maan toinen
    * valtakunnallinen lehti — sivustolta ei löydy RSS-syötettä lainkaan
@@ -1004,8 +1011,8 @@ export const UUTISLAHTEET = {
    */
   GRL: {
     nimi: 'KNR',
-    kieli: 'da',
-    syote: 'https://knr.gl/da/rss',
+    kieli: 'kl',
+    syote: 'https://knr.gl/kl/rss',
   },
   /*
    * Correio da Kianda on angolalainen portugalinkielinen

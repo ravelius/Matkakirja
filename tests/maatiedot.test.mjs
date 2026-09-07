@@ -50,10 +50,17 @@ const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
   // Grönlanti ja Saint Helena eivät ole Maailmanpankin suvereenien
   // valtioiden aineistossa, Hongkong on rajattu sekä Maailmanpankin
   // maalistalta että V-Demin 172 valtion joukosta (maalehdet 6.9.2026):
-  // sijaluvut eivät ole vertailukelpoisia, joten rivit odottavat
-  // päätöstä vertailujoukosta. Itä-Timor ja Vanuatu odottavat
-  // tervehdystä: tetumille ja bislamalle ei ole en-Wiktionary-katetta.
-  'GRL', 'SHN', 'HKG', 'TLS', 'VUT',
+  // sijaluvut eivät ole vertailukelpoisia.
+  // EI SUVEREENI, EI VERTAILUKELPOISTA SIJALUKUA (Fable 7.9.2026) —
+  // nämä kolme jäävät listalle pysyvästi, eikä niitä yritetä uudelleen.
+  'GRL', 'SHN', 'HKG',
+  // Vanuatu odottaa yhä tervehdystä. Päätoimittaja salli 7.9.2026
+  // tervehdyksen en-Wikipedian kieliartikkelista, kun Wiktionarysta ei
+  // löydy — Itä-Timor sai sillä rivinsä ("Bondia", Tetun language) —
+  // mutta artikkelissa "Bislama" ei ole tervehdystä lainkaan, eikä
+  // arvattu sana kelpaa. Muut kolme lukua ovat valmiina raportissa,
+  // joten rivi syntyy heti, kun tervehdykselle löytyy lähde.
+  'VUT',
 ]);
 
 const SIJA = /^\d+\.\/\d+$/;

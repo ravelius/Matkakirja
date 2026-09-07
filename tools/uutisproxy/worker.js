@@ -155,8 +155,9 @@ const SALLITUT = [
   'https://almarsad.co/',
   // Grönlannin uutislähde (maalehti 6.9.2026): KNR:n syöte ja
   // artikkelisivut ovat samalla isäntänimellä ilman www-etuliitettä,
-  // ja sama etuliite kattaa sekä tanskan- että grönlanninkielisen
-  // osaston (/da/… ja /kl/…).
+  // ja sama etuliite kattaa sekä grönlannin- että tanskankielisen
+  // osaston (/kl/… ja /da/…). Taulussa on 7.9.2026 alkaen
+  // grönlanninkielinen /kl/rss.
   'https://knr.gl/',
   // Angolan uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
   // samalla isäntänimellä, ilman www-etuliitettä.

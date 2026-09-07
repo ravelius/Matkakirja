@@ -14,6 +14,26 @@
 # osoite on
 # https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/julisteet/korkeus/1min/
 #
+# === AJO ON MACILLA JA KAIKILLA YTIMILLÄ ============================
+#
+# Raamattu, MAC GITHUBIN AJOKONEENA (omistaja 6.9.2026 ilta) ja
+# tarkennus 7.9.2026 aamu, sanatarkasti: *"No Tee loputkin macilla
+# sitten"*. Ajokone valitaan syötteellä (oletus mac, vara actions).
+# Palat jaetaan KAISTOIHIN ytimien mukaan: pala ei riipu naapuristaan,
+# ja lähes kaikki työ on gzip −9 eli yhden ytimen laskentaa. Lähde
+# noudetaan KERRAN ennen kaistoja (--nouda), jottei jokainen kaista
+# lataisi samaa 322 Mt:n zipiä, ja luettelo kootaan kaistojen omista
+# luetteloista (--kokoa) vasta lopuksi.
+#
+# Mitattu Actionsissa 1.9.2026 (4 vCPU, peräkkäin, run 33559583302):
+# pilkkominen 107 s, vienti 77 s, koko ajo 3 min 14 s. Kaistoitus ja
+# rinnakkainen vienti pudottavat kummankin murto-osaan Macilla.
+#
+# Palan tavut EIVÄT riipu kaistojen määrästä eikä luettelon järjestys
+# muutu (kaista on yhtenäinen siivu samasta listasta) — todennettu
+# kontissa 7.9.2026 kolmen palan otoksella: samat .bin.gz-tiivisteet ja
+# sama luettelo.json peräkkäin ja kolmena kaistana.
+#
 # === NOAA:N TAVOITETTAVUUS ON TÄMÄN AJON AINOA RISKI ================
 #
 # Laattapyramidin ensimmäinen CI-koeajo kaatui siihen, ettei NOAA:n
@@ -26,6 +46,8 @@
 # kolme palaa kertoo minuutissa vastaako lähde, ennen kuin kukaan
 # odottaa 322 Mt:n latausta ja 648 palaa. Jos kumpikaan lähde ei vastaa
 # ajokoneelta, se kirjataan — aineistoa EI kierretä committoimalla.
+# (Mac-ajo on tässä myös varatie: omistajan verkosta NOAA vastaa,
+# vaikkei se vastaisi GitHubin ajokoneelle.)
 #
 # Salaisuudet ovat tämän repon Actions-asetuksissa eivätkä koskaan
 # täällä:
@@ -36,6 +58,15 @@ name: Vie korkeuspalat R2:een
 on:
   workflow_dispatch:
     inputs:
+      ajokone:
+        description: 'Missä ajetaan (mac = omistajan Mac Studio kaikilla ytimillä)'
+        type: choice
+        default: 'mac'
+        options: ['mac', 'actions']
+      kaistoja:
+        description: 'Rinnakkaisia kaistoja (0 = ytimien mukaan; 1 = peräkkäin)'
+        type: string
+        default: '0'
       lahde:
         description: 'Mistä ETOPO1 1′ noudetaan'
         type: choice
@@ -61,7 +92,10 @@ concurrency:
 
 jobs:
   vie:
-    runs-on: ubuntu-latest
+    # Self-hosted-kone on omistajan oma (repo on julkinen): Mac-ajon saa
+    # käynnistää vain omistaja. Sama ehto kuin polta-macilla.yml:ssä.
+    if: inputs.ajokone != 'mac' || github.actor == github.repository_owner
+    runs-on: ${{ fromJSON(inputs.ajokone == 'mac' && '["self-hosted","macOS"]' || '["ubuntu-latest"]') }}
     # Täysajo lataa 322 Mt, purkaa 466 Mt ja kirjoittaa 648 palaa.
     # Koeajo on minuutteja; katto on täysajoa varten.
     timeout-minutes: 180
@@ -77,8 +111,15 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
+        if: inputs.ajokone != 'mac'
         with:
           node-version: '22'
+
+      # Macilla node@22 ja awscli tulevat koneelta; skripti tarkistaa ne
+      # ja kertoo ytimien määrän (YTIMET). Chromiumia ei tarvita.
+      - name: Mac-ajokoneen valmistelu
+        if: inputs.ajokone == 'mac'
+        run: tools/mac-ajovalmis.sh
 
       # Puuttuva salaisuus tulee muuten vastaan vasta aws-clin virheenä
       # "Invalid endpoint: https://.r2.cloudflarestorage.com", josta ei
@@ -117,13 +158,45 @@ jobs:
           fi
           echo "Kokeillaan: $osoite"
           if ! otsikot=$(curl -fsSI --max-time 120 "$osoite"); then
-            echo "::error::NOAA:n lähde $LAHDE ei vastaa GitHubin ajokoneelta."
+            echo "::error::NOAA:n lähde $LAHDE ei vastaa tältä ajokoneelta."
             echo "Kirjaa tämä raporttiin — aineistoa EI committoida repoon."
             exit 1
           fi
           echo "NOAA vastaa: $(printf '%s\n' "$otsikot" | sed -n 1p)"
 
-      - name: Pilko palat
+      # Kaistoja on ytimien verran: pilkkoja on puhdasta laskentaa
+      # (gzip −9) eikä se odota mitään, joten ylimääräinen rinnakkaisuus
+      # ei auta muttei haittaakaan.
+      - name: Kaistojen määrä
+        env:
+          KOEAJO: ${{ inputs.koeajo }}
+          PALAT: ${{ inputs.palat }}
+        run: |
+          set -euo pipefail
+          pyydetty="${{ inputs.kaistoja }}"
+          if [ "${pyydetty:-0}" -gt 0 ] 2>/dev/null; then
+            kaistoja="$pyydetty"
+          else
+            ytimet="${YTIMET:-}"
+            if [ -z "$ytimet" ]; then ytimet="$(nproc 2>/dev/null || echo 4)"; fi
+            kaistoja="$ytimet"
+          fi
+          # Kaistoja ei koskaan enempää kuin paloja: tyhjä kaista olisi
+          # oma prosessinsa ja oma luettelonsa ilman yhtään palaa.
+          if [ -n "$PALAT" ]; then paloja="$(printf '%s' "$PALAT" | tr ',' '\n' | grep -c '[^ ]')"
+          elif [ "$KOEAJO" = "true" ]; then paloja=3
+          else paloja=648; fi
+          [ "$kaistoja" -le "$paloja" ] || kaistoja="$paloja"
+          echo "KAISTOJA=$kaistoja" >> "$GITHUB_ENV"
+          echo "Kaistoja: $kaistoja (paloja $paloja, ytimiä ${YTIMET:-tuntematon})"
+
+      # Zip ladataan ja puretaan KERRAN. Ilman tätä jokainen kaista
+      # aloittaisi omalla 322 Mt:n latauksellaan samaan välimuistiin.
+      - name: Nouda lähdeaineisto kerran
+        if: inputs.lahde == 'ncei'
+        run: node tools/tee-korkeuspalat.mjs --lahde ncei --nouda
+
+      - name: Pilko palat kaistoina
         env:
           LAHDE: ${{ inputs.lahde }}
           KOEAJO: ${{ inputs.koeajo }}
@@ -134,12 +207,31 @@ jobs:
           if [ -n "$PALAT" ]; then rajaus="--palat $PALAT"
           elif [ "$KOEAJO" = "true" ]; then rajaus="--koeajo"; fi
           echo "Rajaus: ${rajaus:-koko maailma}"
-          # shellcheck disable=SC2086
-          node tools/tee-korkeuspalat.mjs --lahde "$LAHDE" --ulos korkeus/1min $rajaus
+          rm -rf korkeus/1min lokit
+          mkdir -p lokit
+          pidit=()
+          for k in $(seq 0 $((KAISTOJA - 1))); do
+            # shellcheck disable=SC2086
+            node tools/tee-korkeuspalat.mjs --lahde "$LAHDE" --ulos korkeus/1min \
+              $rajaus --osa "$k/${KAISTOJA}" > "lokit/kaista-$k.log" 2>&1 &
+            pidit+=($!)
+          done
+          # Taustaprosessin kaatuminen ei näy `set -e`:lle, joten
+          # jokaisen kaistan paluuarvo katsotaan erikseen.
+          tila=0
+          for p in "${pidit[@]}"; do wait "$p" || tila=1; done
+          for l in lokit/*.log; do
+            echo "::group::$l"; tail -n 20 "$l"; echo "::endgroup::"
+          done
+          if [ "$tila" -ne 0 ]; then echo "::error::kaista kaatui"; exit 1; fi
+          # Luettelo kaistojen omista luetteloista: sama järjestys kuin
+          # peräkkäisajossa, ja tarkistaa että jokainen pala on levyllä.
+          node tools/tee-korkeuspalat.mjs --lahde "$LAHDE" --ulos korkeus/1min \
+            $rajaus --kokoa "$KAISTOJA"
           # EI `ls | head` pipefail-tilassa: head sulkee putken ennen kuin
           # ls on kirjoittanut 648 riviä, ls saa SIGPIPEn ja koko vaihe
-          # kaatuu (tayasajo 1.9.2026 21:07 UTC: palat valmiit, vienti
-          # jai tekematta "Broken pipe" -virheeseen). find rajaa itse.
+          # kaatuu (täysajo 1.9.2026 21:07 UTC: palat valmiit, vienti
+          # jäi tekemättä "Broken pipe" -virheeseen). find rajaa itse.
           find korkeus/1min -name '*.bin.gz' | sort | sed -n '1,20p'
           echo "paloja levylla: $(find korkeus/1min -name '*.bin.gz' | wc -l)"
           du -sh korkeus/1min
@@ -147,12 +239,20 @@ jobs:
       # `cp --recursive` eikä `sync`: palat ovat muuttumatonta
       # lähtöaineistoa, ja osittainen ajo (koeajo, yksittäiset palat) ei
       # saa poistaa ämpäristä sitä, mitä se ei tällä kertaa tuottanut.
+      # `--include '*.bin.gz'` jättää myös kaistojen omat luettelot
+      # (luettelo-osa-k-n.json) ämpärin ulkopuolelle: ne ovat ajon
+      # työtiedostoja eivätkä aineistoa.
       - name: Vie ämpäriin
         env:
           KOEAJO: ${{ inputs.koeajo }}
           PALAT: ${{ inputs.palat }}
         run: |
           set -euo pipefail
+          # Rinnakkainen vienti omaan asetustiedostoon: koneen omaa
+          # ~/.aws-asetusta ei muuteta (Mac on omistajan työkone).
+          export AWS_CONFIG_FILE="$PWD/.aws-vienti.conf"
+          aws configure set default.s3.max_concurrent_requests 32
+          aws configure set default.s3.max_queue_size 10000
           aws s3 cp --recursive korkeus/1min \
             "s3://${{ secrets.R2_BUCKET }}/julisteet/korkeus/1min" \
             --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
@@ -171,5 +271,14 @@ jobs:
           else
             echo "Osittainen ajo: luettelo.json jätettiin ämpärissä ennalleen."
           fi
-          echo "Viety $(ls korkeus/1min/*.bin.gz | wc -l) palaa."
+          echo "Viety $(find korkeus/1min -name '*.bin.gz' | wc -l) palaa."
           echo "Julkinen juuri: https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/julisteet/korkeus/1min/"
+
+      - name: Lokit talteen
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: korkeuspalat-lokit-${{ github.run_id }}
+          path: lokit/
+          if-no-files-found: ignore
+          retention-days: 14

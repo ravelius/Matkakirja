@@ -14,6 +14,13 @@
 # collaborators", jottei ulkopuolinen PR pääse self-hosted-koneelle.
 # Työnkulkuun ei koskaan lisätä pull_request- tai push-laukaisua.
 #
+# Jokainen poltto jaetaan shardeihin kaikille ytimille; vienti
+# rinnakkain (Raamattu KAIKKI YTIMET JA LOPUTKIN MACILLE, omistaja
+# 7.9.2026). Se koskee myös pallon Mercator-sarjaa: se ajettiin
+# 7.9.2026 uusintapoltossa yhtenä prosessina ja söi kolme tuntia
+# seitsemästä ja puolesta — nyt se on shardattu kuten pyramidi
+# (tools/polta-paikallisesti.sh --pallo-osia, oletus ytimet × 3).
+#
 # Mac-runnerilla pitää olla: node 22 polussa (Homebrew node@22),
 # awscli, Playwright-Chromium (skripti asentaa puuttuvan). Työkansio
 # on runnerin _work-hakemistossa; pyramidi-poltto/ jää sinne ajojen
@@ -25,7 +32,7 @@ on:
   workflow_dispatch:
     inputs:
       sarjat:
-        description: 'z8 (olemassa oleviin versioihin) | kaikki (uusi versio z0–z8) | z0-z7'
+        description: 'z8 (olemassa oleviin versioihin) | kaikki (uusi versio z0–z8) | z0-z7 | pallo (vain pallon Mercator-sarja, ei pyramidia)'
         required: true
         default: 'z8'
       versio:
@@ -33,7 +40,7 @@ on:
         required: false
         default: ''
       lisaargumentit:
-        description: 'Muut polta-paikallisesti.sh:n valitsimet sellaisenaan, esim. "--ilman-rantaviivaa --rantaversio 2026-09-07a --viivaversio 2026-09-07a --nostoversio 2026-09-07a --pallo --pallotunniste d --siivoa"'
+        description: 'Muut polta-paikallisesti.sh:n valitsimet sellaisenaan, esim. "--ilman-rantaviivaa --rantaversio 2026-09-07a --viivaversio 2026-09-07a --nostoversio 2026-09-07a --pallo --pallotunniste d --siivoa" (sarjat=pallo tarvitsee vain "--pallotunniste d --siivoa"; --pallo-osia N ohittaa oletuksen ytimet × 3)'
         required: false
         default: ''
       koe:

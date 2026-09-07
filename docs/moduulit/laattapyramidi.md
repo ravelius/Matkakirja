@@ -2338,6 +2338,8 @@ Erot ovat vain siinä, mikä on koneen ja mikä pilven asia:
 | Natural Earth | oma job → artefakti | `<ulos>/ne-data` (nouto kerran) |
 | 1′-korkeuspalat | shardi kopioi omansa `aws s3 cp`:llä | kaikki 612 palaa kerran julkisesta osoitteesta, `--korkeuspalat` kaikille |
 | uusinta | job uudelleen | `--vain <shardi>`, valmiit ohitetaan |
+| pallon Mercator-sarja | oma työnkulku, yksi prosessi | `--pallo-osia` shardia samalla `xargs -P`:llä |
+| vienti ämpäriin | jobin lopussa | shardikohtaisesti polton rinnalla, 32 yhtaikaista pyyntöä |
 
 ### Vaatimukset
 
@@ -2518,6 +2520,100 @@ tools/polta-paikallisesti.sh --sarjat z8 --nostoversio 2026-09-07a \
   --pallo --pallotunniste d
 # → js/pallo.js: PALLO_LAATTATUNNISTE = 'd'
 ```
+
+### Pallon sarja shardeihin ja vienti rinnakkain (7.9.2026)
+
+Omistajan kysymys uusintapolton jälkeen (run 34054242743, 7,5 h):
+*"Miksi vain yksi ydin?"*. Ajo jakautui näin:
+
+| vaihe | kesto | miksi |
+| --- | --- | --- |
+| pyramidi z0–z8, kaikki kerrokset | ~3 h | shardattu, kaikki ytimet |
+| pallon Mercator-sarja, 87 381 laattaa | ~3 h | **yksi prosessi** |
+| loppuvienti (~170 000 tiedostoa) | 55 min | yksi `aws s3 sync`, CLI:n oletus 10 yhtaikaista pyyntöä |
+
+Linjaus on siksi: **jokainen poltto jaetaan shardeihin kaikille
+ytimille; vienti rinnakkain** (Raamattu KAIKKI YTIMET JA LOPUTKIN
+MACILLE). Skripti **kieltäytyy** ajamasta pallon sarjaa yhtenä
+prosessina monen ytimen koneella.
+
+**Jako on sarakekaista, ei siivu laattaluettelosta.**
+`tools/tee-pallolaatat.mjs --osa i/n` antaa osalle i jokaiselta
+Mercator-tasolta n:nnen siivun sarakkeita (`kaistanRajat`), täsmälleen
+kuten pyramidin z7- ja z8-shardit jakavat arkin. Syy on mitattu: työ ei
+ole piirtoa vaan **lähdelaattojen noutoa** — kontissa 256 laattaa vei
+119 s seinäaikaa mutta vain 11,9 s prosessoriaikaa. Rivijärjestyksessä
+yksi Z8-rivi kiertää koko maailman ja koskee jokaista z7-saraketta
+(338), jolloin lähdelaattojen välimuisti (160 laattaa) ei riitä ja
+seuraava rivi noutaa samat laatat uudestaan. Kaistassa rivi koskee vain
+kouraa sarakkeita, ne pysyvät välimuistissa rivien yli, ja mitattu
+noutosuhde oli **0,71 lähdelaattaa laattaa kohti** (kaista Z8 x127).
+
+Osat ovat pistevieraat ja kattavat sarjan tasan, joten **n osaa tuottaa
+täsmälleen samat laatat kuin yksi ajo**: todennettu 7.9.2026 tavu
+tavulta tasoille 0–3 (85 laattaa, neljä shardia vs. yksi prosessi,
+`md5sum` täsmää jokaisesta). tests/pallo.test.mjs vartioi kattavuutta
+koneellisesti.
+
+Osien määrä (`--pallo-osia`, oletus ytimet × 3) on kompromissi: kapea
+kaista tasaa kuormaa, leveä noutaa vähemmän samoja lähdelaattoja kahteen
+kertaan — kaistan reunalla oleva z7-laatta osuu kahteen kaistaan, ja
+kapeimmillaan kaista on alle yhden z7-sarakkeen levyinen.
+
+**Rantavalinta luetaan luettelosta, ei tämän ajon lipuista.** Jos
+ämpärin `pyramidi.json`issa on rantataso, pohja on poltettu ilman
+rantaviivaa, ja pallon sarja kootaan `--ilman-rantaa` — vektoriviiva
+(`js/pallovektorit.js`) on silloin ainoa rantaviiva pallolla.
+`--pallon-ranta` palauttaa poltetun viivan, jos vektorikerrosta ei ole
+julkaistu. Shardi lukee saman valinnan luetteloajon `laatat.json`ista,
+joten yksittäisen osan uusinta ei voi koota eri sarjaa kuin muut.
+
+**Noutotahti ratkaisee keston.** Ämpäri vastasi 429:llä, kun kaksi
+tahdittamatonta ajoa haki lähdelaattoja (4.9.2026), ja
+`NOUTOVALI_OLETUS` 40 ms (25 noutoa/s) on se tahti, jolla kolmen tunnin
+ajo meni läpi ilman yhtään 429:ää. Rinnakkaiset osat pitävät
+yhteistahdin maltillisena: kukin tahdittaa itsensä `YHTEISTAHTI_MS`
+(15 ms) × rinnakkaiset prosessit, eli yhteensä noin **66 noutoa
+sekunnissa**. Polttoskripti laskee arvon rinnakkaisten PROSESSIEN
+määrästä (`--noutovali`), koska osia on ytimiä enemmän. Jos lokiin
+ilmestyy `HTTP 429`, arvoa nostetaan; jos ämpäri kestää enemmän, sitä
+lasketaan (`--noutovali 120` 24 prosessilla ≈ 200 noutoa/s).
+
+**Vienti.** `aws_viritys` nostaa CLI:n rinnakkaisuuden
+(`max_concurrent_requests = 32`, `max_queue_size = 10000`) sekä
+ympäristömuuttujina että omaan konfiguraatiotiedostoon
+(`$ULOS/aws-asetukset.conf`) — koneen omaan `~/.aws/config`iin ei
+kosketa. Jokainen `aws s3` -kutsu saa `--cli-connect-timeout`, jottei
+jumittunut yhteys pysäytä shardia. Jokainen shardi vie oman osansa heti
+valmistuttuaan, joten vienti kulkee polton rinnalla eikä sen perässä;
+pallon shardi käyttää `cp --recursive`-komentoa eikä `sync`iä, koska
+osan avaimet ovat sen omat eikä kohteen listaus (87 381 avainta) tuota
+mitään. Luettelo (`laatat.json`) viedään vasta viimeisenä, koska peli
+koettaa sen olemassaoloa ennen laattojen käyttöä.
+
+**Arvio uudesta kestosta** (24 ydintä, oletusasetukset): laskenta on
+noin 67 ydinminuuttia eli alle kolme minuuttia jaettuna, ja noutotahti
+asettaa lattian noin 20–30 minuuttiin — **kolmesta tunnista noin
+puoleen tuntiin**, ja vienti sisältyy siihen. Ensimmäinen oikea ajo
+kertoo tarkan luvun; lokeissa on shardikohtainen `laattaa, s`.
+
+```bash
+# Pelkkä pallon sarja uudestaan (pyramidi on jo ämpärissä):
+tools/polta-paikallisesti.sh --vain-pallo --pallotunniste f --siivoa
+# Sama työnkulusta: sarjat = pallo, lisäargumentit "--pallotunniste f --siivoa"
+
+# Yksi kaatunut pallon shardi (sama --pallo-osia kuin ajossa):
+tools/polta-paikallisesti.sh --vain pallo-017 --pallo-osia 72 \
+  --pallotunniste f
+
+# Shardilista ilman ajoa:
+tools/polta-paikallisesti.sh --vain-pallo --pallotunniste f --lista
+```
+
+Valmis osa jättää jälkeensä `lokit/pallo-NNN.valmis`-merkin ja ohitetaan
+seuraavalla ajolla (`--uudestaan` ajaa nekin); kaatuneen osan loki
+`lokit/pallo-NNN.log` näkyy työnkulun *Kaatuneiden shardien lokit*
+-askeleessa samalla säännöllä kuin pyramidin shardit.
 
 ### Rantaviiva omalla tasollaan (`--ilman-rantaviivaa`)
 

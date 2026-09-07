@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1660';
+const CACHE = 'matkakirja-2026-08-09.1661';
 const SHELL = [
   './',
   './index.html',
@@ -557,6 +557,10 @@ const SHELL = [
   './assets/varusteet/varuste-vertailu.jpg',
   './assets/varusteet/varuste-maatiedot.jpg',
   './assets/varusteet/varuste-radio.jpg',
+  // Keksinnöt ja Ihmisen matka saivat omat kuvakkeensa 7.9.2026; ilman
+  // näitä matkalaukun ruutu putoaisi viivakuvakkeeseen juuri offlinessa.
+  './assets/varusteet/varuste-keksinnot.jpg',
+  './assets/varusteet/varuste-ihmisen-matka.jpg',
   /*
    * ÄÄNTEN YDINSETTI — ainoat äänitiedostot, jotka esiladataan.
    *
