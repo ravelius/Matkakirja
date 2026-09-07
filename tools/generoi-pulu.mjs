@@ -102,10 +102,12 @@ import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { LIVIAN_AVAUS, MANNERIVIHJE, livianPaljastus } from '../js/livia.js';
 import {
-  LIVIAN_AANIJUURI, LIVIAN_AANITETTY_PALJASTUS, LIVIAN_KAUPUNKILAHTEET,
-  livianAanitykset,
+  LIVIAN_AVAUS, LIVIAN_LEHTIVINKKI, MANNERIVIHJE, livianPaljastus,
+} from '../js/livia.js';
+import {
+  LIVIAN_AANIJUURI, LIVIAN_AANITETTY_PALJASTUS, LIVIAN_AANITETYT,
+  LIVIAN_KAUPUNKILAHTEET, livianAanitykset, livianTiiviste,
 } from '../js/liviapuhe.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
 import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
@@ -268,22 +270,30 @@ export const TAGIT = {
     kohdat: [['Ateenasta', '[brightly]']],
   },
   'avaus-5': { alku: '[reassuring]', kohdat: [['Minä olen vain', '[modestly]']] },
+  /*
+   * UUSI RYTMI ATEENASSA (omistaja 7.9.2026). Kolme kuplaa: hätääntynyt
+   * ilmoitus tuurauksesta, lämmin tervetulotoivotus ja luennan jälkeen
+   * tuleva reipas ohje. Tagit ovat v3:a varten (v2 ei niitä lähetä) ja
+   * noudattavat PULU PUHUU -ohjetta: elävä ja nopea, ei kaikua alussa —
+   * kaiku on kokonaan pois (js/liviapuhe.js LIVIAN_KAIKU).
+   */
   'paljastus-1': {
     alku: '[squawks]',
-    kohdat: [
-      ['Sähke pöllöltä', '[breathless]'],
-      ['Ja sitten', '[quickly]'],
-      ['Minä tuuraan', '[sighs]'],
-    ],
+    kohdat: [['Pöllö on matkoilla', '[breathless]'], ['tuuraan häntä', '[reassuring]']],
   },
   'paljastus-2': {
-    alku: '[reassuring]',
-    kohdat: [['Melkein joka ikisen', '[mutters]'], ['Tämän loppu', '[quickly]']],
+    alku: '[warmly]',
+    kohdat: [['Kuunnellaan', '[curious]']],
+  },
+  'paljastus-3': {
+    alku: '[brightly]',
+    kohdat: [['jos meinaat', '[quickly]']],
   },
   'mannerivihje-1': {
     alku: '[casually]',
     kohdat: [['kerää rahaa', '[helpfully]']],
   },
+  'lehtivinkki-1': { alku: '[helpfully]', kohdat: [['aarrekysymys', '[excited]']] },
 };
 
 /** Tagi pois tekstistä: `[excited] Hei` → `Hei`. */
@@ -355,6 +365,24 @@ export function kaupunginRepliikit(kaupunkiId) {
 }
 
 /**
+ * ONKO ÄMPÄRISSÄ TÄMÄN TEKSTIN ÄÄNITE?
+ *
+ * Peli vaikenee, jos repliikin teksti ei vastaa js/liviapuhe.js:n
+ * taulua LIVIAN_AANITETYT (vanha äänite ei saa sanoa eri asiaa kuin
+ * kupla). Sama vertailu tässä kertoo ajolle, mikä on uutta ja mikä
+ * muuttunutta — ilman ämpärin listausta.
+ *
+ * @returns {'uusi'|'muuttunut'|'ajan tasalla'|'ei vartioitu'}
+ */
+export function aanitteenTila(rivi) {
+  // Kaupunkilähteitä taulu ei vartioi (ks. js/liviapuhe.js).
+  if (LIVIAN_KAUPUNKILAHTEET[rivi.lahde]) return 'ei vartioitu';
+  const vanha = LIVIAN_AANITETYT[rivi.avain];
+  if (!vanha) return 'uusi';
+  return vanha === livianTiiviste(rivi.teksti) ? 'ajan tasalla' : 'muuttunut';
+}
+
+/**
  * KAIKKI ÄÄNITETTÄVÄT REPLIIKIT. Tekstit tulevat js/livia.js:stä
  * (kaanoni) ja kaupunkien pakkauksista, nimet js/liviapuhe.js:stä
  * (sama funktio kuin pelissä). Paljastus ladotaan äänitetylle
@@ -375,12 +403,15 @@ export function repliikit() {
     avaus: LIVIAN_AVAUS,
     paljastus: livianPaljastus(LIVIAN_AANITETTY_PALJASTUS),
     mannerivihje: [MANNERIVIHJE],
+    lehtivinkki: [LIVIAN_LEHTIVINKKI],
     ...kaupungit,
   }).map((rivi) => ({
     ...rivi,
     puhe: TAGIT_KAYTOSSA ? puhemuoto(rivi.teksti, TAGIT[rivi.avain]) : rivi.teksti,
     arvioSekunteina: Number((rivi.merkit / MERKKIA_SEKUNNISSA).toFixed(1)),
     kuplaSekunteina: nakyvaAika(rivi, vakiot),
+    tiiviste: livianTiiviste(rivi.teksti),
+    tila: aanitteenTila(rivi),
   }));
 }
 
@@ -412,6 +443,10 @@ export function kokoaManifesti(rivit, kestot = new Map()) {
       teksti: rivi.teksti,
       merkit: rivi.merkit,
       kuplaSekunteina: rivi.kuplaSekunteina ?? null,
+      // Tekstin tiiviste: sama tunniste kuin js/liviapuhe.js:n
+      // taulussa LIVIAN_AANITETYT, jolla peli tunnistaa vanhentuneen
+      // äänitteen ja vaikenee sen sijaan että soittaisi väärää tekstiä.
+      tiiviste: rivi.tiiviste ?? null,
       tiedosto: rivi.nimi,
       kaiku: rivi.kaikuNimi,
       saapuu: rivi.saapuu,
@@ -476,6 +511,22 @@ export function tulkitseArgumentit(argumentit) {
     }
   }
   return liput;
+}
+
+/**
+ * VALMIS TAULU LIITETTÄVÄKSI js/liviapuhe.js:ään.
+ *
+ * Ajon jälkeen ämpärissä on uusi teksti, mutta peli tietää siitä vasta
+ * kun LIVIAN_AANITETYT päivitetään. Työkalu ei kirjoita pelin
+ * lähdekoodia puolestasi — se tulostaa rivit, jotka taulun tilalle
+ * liitetään.
+ */
+export function tauluksi(rivit) {
+  const vartioidut = rivit.filter((rivi) => rivi.tila !== 'ei vartioitu');
+  const sisus = vartioidut
+    .map((rivi) => `  '${rivi.avain}': '${rivi.tiiviste}',`).join('\n');
+  return 'js/liviapuhe.js LIVIAN_AANITETYT (päivitä ajon jälkeen):\n'
+    + `export const LIVIAN_AANITETYT = {\n${sisus}\n};`;
 }
 
 /** Valitut repliikit ja tuntemattomat avaimet erikseen. */
@@ -845,16 +896,30 @@ async function main() {
       console.log(`  teksti (${tyo.merkit} merkkiä, puhe ~${tyo.arvioSekunteina} s, `
         + `kupla ${tyo.kuplaSekunteina} s): "${tyo.teksti}"`);
       console.log(`  mallille: "${tyo.puhe}"`);
+      console.log(`  tiiviste ${tyo.tiiviste} — ${tyo.tila.toUpperCase()}`);
       if (tyo.arvioSekunteina > tyo.kuplaSekunteina) {
         console.log('  PITKÄ: ääni jatkuisi vielä kun seuraava kupla tulee — lyhennä '
           + `repliikkiä noin ${Math.ceil(tyo.merkit - tyo.kuplaSekunteina * MERKKIA_SEKUNNISSA)} `
           + 'merkkiä (tai nopeuta tempoa).');
       }
     }
+    const ajettavat = tyot.filter((tyo) => tyo.tila === 'uusi' || tyo.tila === 'muuttunut');
     console.log(`\nKuiva ajo valmis: ${tyot.length} repliikkiä, `
       + `${new Set(tyot.map((t) => t.nimi)).size} eri tiedostonimeä. `
       + 'Merkintä PITKÄ tarkoittaa, että kupla vaihtuu ennen kuin ääni loppuu — '
       + 'kaupunkirepliikeillä (pinoutuva puheenvuoro) mitta on osien lukuaikojen summa.');
+    if (ajettavat.length) {
+      console.log('\nAJOA ODOTTAVAT (peli on näissä hiljaa siihen asti):');
+      for (const tyo of ajettavat) {
+        console.log(`  ${tyo.avain.padEnd(16)} ${tyo.tila.toUpperCase().padEnd(10)} `
+          + `~${tyo.arvioSekunteina} s  "${tyo.teksti}"`);
+      }
+      console.log(`  aja: node tools/generoi-pulu.mjs --aani <voice_id> --pakota `
+        + `--repliikit ${ajettavat.map((tyo) => tyo.avain).join(',')}`);
+    } else {
+      console.log('\nKaikki vartioidut repliikit ovat ajan tasalla.');
+    }
+    console.log(`\n${tauluksi(tyot)}`);
     process.exit(0);
   }
 
@@ -978,6 +1043,14 @@ async function main() {
     console.log('KUUNTELE äänet ennen kuin ne jäävät peliin: pulun pitää kuulostaa '
       + 'käheältä ja nopealta, ja saapumisrepliikin kaiun pitää häipyä pois '
       + 'ennen kuin lause loppuu.');
+    /*
+     * TAULU PÄIVITETTÄVÄKSI. Ämpärissä on nyt uusi teksti, mutta peli
+     * vaikenee siitä niin kauan kuin js/liviapuhe.js:n LIVIAN_AANITETYT
+     * kertoo vanhan tiivisteen. Työkalu ei kirjoita pelin lähdekoodia
+     * puolestasi — se antaa rivit, jotka liitetään taulun tilalle.
+     */
+    console.log('');
+    console.log(tauluksi(kaikki));
   }
   process.exit(virheita ? 1 : 0);
 }

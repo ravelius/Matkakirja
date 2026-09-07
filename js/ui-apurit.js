@@ -450,6 +450,27 @@ export function maahanMuoto(nimi) {
   return `${sana}${viim}n`;
 }
 
+/**
+ * "Klikkaa X:ää" -muoto kaupungin nimestä: yksikön partitiivi.
+ *
+ * Tarvitaan pulun ohjekuplaan (js/livia.js livianPaljastus: *"Kantsuu
+ * klikata Ateenaa kartalta"*, omistaja 7.9.2026). Sääntö on sama
+ * kolmijako kuin koulukieliopissa: yksi vokaali saa pelkän a/ä:n
+ * (Ateena → Ateenaa), pitkä vokaali tai diftongi vaatii t:n
+ * (Lontoo → Lontoota) ja konsonanttiloppuinen nimi sidevokaalin
+ * (Wien → Wieniä) — sama sidevokaali kuin inessiivissä yllä.
+ */
+export function paikkaaMuoto(nimi) {
+  const sana = String(nimi ?? '').trim();
+  if (!sana) return '';
+  const paate = takavokaalinen(sana) ? 'a' : 'ä';
+  const viim = sana.slice(-1).toLowerCase();
+  const toka = sana.slice(-2, -1).toLowerCase();
+  if (!VOKAALIT.includes(viim)) return `${sana}i${paate}`;
+  if (viim === toka || DIFTONGIT.has(`${toka}${viim}`)) return `${sana}t${paate}`;
+  return `${sana}${paate}`;
+}
+
 /** "Tehtävä X:ssä" -muoto kaupungin nimestä: inessiivi tai poikkeus. */
 export function paikassaMuoto(nimi) {
   const sana = String(nimi ?? '').trim();
@@ -1960,37 +1981,15 @@ export function palloKevennetty() {
 }
 
 /*
- * PÖLLÖN LEHTIVINKKI (kevyt kulku -kokeilu, omistaja 24.8.2026, ilta).
- *
- * Raamatun KEVYT KULKU -KOKEILU: kun kaupunkilehti aukeaa, pöllö
- * vinkkaa lyhyesti minitehtävästä, ja *"vinkissä ruksi 'älä näytä
- * jatkossa'"*. Ruksi on lukijan asetus eikä pelitilanteen osa — sama
- * kaava kuin kehittäjätilalla ja fokusmoodilla yllä: oma avain,
- * try/catch ja ei riviäkään pelitallennuksessa.
- *
- * OLETUS ON NÄYTETÄÄN: puuttuva avain tarkoittaa, ettei ruksia ole
- * koskaan painettu. Piilotus kirjoittaa arvon '1', ja mikä tahansa muu
- * arvo palauttaa oletuksen — vanha tai kelvoton arvo ei jätä vinkkiä
- * puolitilaan.
+ * LEHTIVINKIN RUKSI ON POISTETTU (omistaja 7.9.2026, Raamattu PULUN
+ * UUSI RYTMI ATEENASSA): lehden avautuessa pulu sanoo vinkkinsä VAIN
+ * ENSIMMÄISELLÄ kerralla koskaan, joten "Älä näytä jatkossa" -ruksia
+ * ei enää ole eikä sen laiteavainta (matkakirja-lehtivinkki-pois)
+ * kirjoiteta tai lueta missään. Kertaluontoisuuden lippu asuu nyt
+ * Livian omien kertalippujen seurassa (js/livia.js
+ * LIVIA_LEHTIVINKKI_TALLE). Vanha avain jää selainten muistiin
+ * kuolleena — sitä ei tarvitse siivota, koska mikään ei kysy sitä.
  */
-const LEHTIVINKKI_AVAIN = 'matkakirja-lehtivinkki-pois';
-
-export function lehtivinkkiPiilotettu() {
-  try {
-    return localStorage.getItem(LEHTIVINKKI_AVAIN) === '1';
-  } catch {
-    return false; // yksityinen selaus: vinkki näytetään
-  }
-}
-
-export function piilotaLehtivinkki(piiloon) {
-  try {
-    if (piiloon) localStorage.setItem(LEHTIVINKKI_AVAIN, '1');
-    else localStorage.removeItem(LEHTIVINKKI_AVAIN);
-  } catch {
-    /* yksityinen selaus: valinta jää vain tälle istunnolle */
-  }
-}
 
 // Tiivistelmät ja kuvat haetaan kerran per artikkeli: sama kuva näkyy
 // sekä saapumiskortissa että Lue lisää -dialogissa ilman uutta hakua.

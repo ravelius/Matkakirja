@@ -30,7 +30,8 @@ Omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti:
 | `js/fokusvirta.js` | Ateenan ja Sofian kuplat: mistä ääni lähtee |
 | `tools/generoi-pulu.mjs` | ääniehdokkaat, generointi, kaiku, manifesti, vienti |
 | `.github/workflows/generoi-pulu.yml` | ajo (avain on vain secretissä) |
-| `tests/livia-aani.test.mjs` | nimet, kaiku, manifestin muoto, kytkentä peliin |
+| `tests/livia-aani.test.mjs` | nimet, kaiku, tiivisteet, manifestin muoto, kytkentä peliin |
+| `tools/savukkeet/savuke-pulu-ateena.mjs` | selainsavuke: Ateenan rytmi ja lehtivinkki |
 
 ## Ääni
 
@@ -92,6 +93,43 @@ katkaise kuittausta kesken.
 Tagitaulua ei näille lähteille ole eikä vaadita: v2-malli ei lähetä
 tageja lainkaan.
 
+## Ateenan rytmi ja lehtivinkki (omistaja 7.9.2026)
+
+Raamattu, PULUN UUSI RYTMI ATEENASSA. Ensimmäinen saapuminen koskaan
+kulkee kolmessa osassa (`js/livia.js livianPaljastus`, kolme repliikkiä):
+
+1. kaksi kuplaa ENNEN isoisän luentaa (tuuraus + tervetulotoivotus),
+2. isoisän luenta — pulu on hiljaa; luenta on lykätty kuplien taakse
+   (`js/ui.js asetaMerkinnanLuenta` portti `luennanLykkays`, jonka
+   `aloitaLykattyLuenta` laskee),
+3. kolmas kupla vasta luennan päätyttyä (`js/luenta.js luennanLoppuun`;
+   ilman luentaa yhden kuplan vähimmäislukuaika).
+
+Kaupungin nimi taipuu apureista: `maahanMuoto` ("Ateenaan") ja uusi
+`paikkaaMuoto` ("Ateenaa", `js/ui-apurit.js`). Ilman nimeä toivotus on
+"Tervetuloa." ja ohje puhuu "kaupungista".
+
+Lehtivinkki on oma lähteensä (`lehtivinkki`, yksi repliikki
+`LIVIAN_LEHTIVINKKI`). Se sanotaan VAIN ENSIMMÄISELLÄ kerralla koskaan
+— laitelippu `matkakirja-livia-lehtivinkki` + istuntolippu, sama kaava
+kuin paljastuksella — eikä siinä ole enää "Älä näytä jatkossa"
+-ruksia (vanha avain `matkakirja-lehtivinkki-pois` on poistettu).
+
+## Vanhentunut äänite on hiljainen
+
+Tiedostonimi johdetaan lähteestä ja indeksistä, joten repliikin tekstin
+muuttuminen EI muuta nimeä: ämpärin vanha äänite sanoisi eri asian kuin
+kupla, eikä mikään kaatuisi. Siksi `js/liviapuhe.js` pitää taulua
+`LIVIAN_AANITETYT` (avain → generoidun tekstin tiiviste,
+`livianTiiviste`, FNV-1a). Kun kuplan teksti ei vastaa taulua, äänite
+jätetään soittamatta.
+
+Taulu kattaa `js/livia.js`:n lähteet (avaus, paljastus, mannerivihje,
+lehtivinkki); kaupunkilähteet kulkevat ilman tekstiä eikä niitä
+vartioida. Kuiva ajo merkitsee jokaisen repliikin **UUSI**,
+**MUUTTUNUT** tai **AJAN TASALLA** ja tulostaa lopuksi valmiin taulun
+liitettäväksi — päivitä se ajon jälkeen, muuten peli pysyy hiljaa.
+
 ## Kaiku
 
 Saapumisrepliikit (`js/liviapuhe.js LIVIAN_SAAPUMISREPLIIKIT`) ovat
@@ -151,8 +189,10 @@ Nykytila ja ehdotukset (päätoimittaja päättää; kaanonia ei muuteta tääll
 | avaus-3 | 119 | 8,5 | 6,9 | "Valitse rauhassa mistä aloitat — vaikka se maanosa, joka kutkuttaa eniten." (74) |
 | avaus-4 | 120 | 8,6 | 7,0 | "Anteeksi valikoima: pöllö on tarkistanut vasta yhden reitin. Ateenasta se alkaa." (80) |
 | avaus-5 | 92 | 6,6 | 5,3 | "Perillä sinua odottaa Viisas Pöllö. Minä olen vain viestinviejä." (64) |
-| paljastus-1 | 168 | 12,0 | 8,2 | "Kaak. Sähke pöllöltä: \"Tervetuloa Kreikkaan.\" Pöllö on juuttunut matkoilleen. Minä tuuraan." (91) |
-| paljastus-2 | 210 | 15,0 | 8,2 | jaa kahdeksi kuplaksi: "Ei hätää. Olen kantanut sen sähkeet vuosia ja lukenut joka ikisen. Melkein joka ikisen." (87) + "Tämän loppu kuuluu: ratkaise tehtävä Ateenassa. Napauta kaupungin kultaista merkkiä." (84) |
+| paljastus-1 | 72 | 5,1 | 5,6 | uusittu 7.9.2026, mahtuu kuplaan |
+| paljastus-2 | 77 | 5,5 | 6,0 | uusittu 7.9.2026, mahtuu kuplaan |
+| paljastus-3 | 61 | 4,4 | 4,8 | uusi 7.9.2026, mahtuu kuplaan |
+| lehtivinkki-1 | 27 | 1,9 | 3,2 | uusi 7.9.2026, mahtuu kuplaan |
 | mannerivihje-1 | 143 | 10,2 | 8,2 | "Kuule — jos tämä maa alkaa tuntua pitkältä, kerää rahaa lentoon. Isosta kaupungista pääsee toiselle mantereelle." (112, viimeinen kupla → saa puhua loppuun) |
 
 Nyrkkisääntö: **enintään noin 85 merkkiä** repliikkiä kohti (≈6 s).

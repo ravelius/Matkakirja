@@ -83,8 +83,8 @@
  */
 
 import {
-  fokusmoodiPaalla, html, jaaKappaleiksi, jaaPuheenvuoroksi, lehtivinkkiPiilotettu,
-  linssiEstaa, nielaiseSulkevaNapautus, piilotaLehtivinkki, polloNimilappu,
+  fokusmoodiPaalla, html, jaaKappaleiksi, jaaPuheenvuoroksi,
+  linssiEstaa, nielaiseSulkevaNapautus, polloNimilappu,
 } from './ui-apurit.js';
 import {
   asetaTehtavakuittaus, fokusAarreAvattu, fokusAarreVastattu,
@@ -105,7 +105,10 @@ import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 // Rekisteri myös kokonaisena: sähketehtävän sisältöhakemisto kerää
 // maan kaupunkien virroista täkyjen ja nostojen otsikot.
 import { FOKUSVIRRAT, fokusvirtaKaupungille } from './packs/fokusvirrat.js';
-import { livianKuplanLukuaika, livianPaljastusKesken } from './livia.js';
+import {
+  LIVIAN_LEHTIVINKIN_SANA, LIVIAN_LEHTIVINKKI, livianKuplanLukuaika,
+  livianLehtivinkkiOdottaa, livianPaljastusKesken, merkitseLehtivinkkiNahdyksi,
+} from './livia.js';
 /*
  * PULUN ÄÄNI ATEENASSA JA SOFIASSA (Raamattu: PULUN ÄÄNI VAIN ATEENA
  * JA SOFIA ENSIN). Kupla tulee ensin, ääni seuraa sitä — sama sopimus
@@ -113,7 +116,9 @@ import { livianKuplanLukuaika, livianPaljastusKesken } from './livia.js';
  * hiljaisia ilman ehtoja kutsupaikoissa: livianKaupunkiIndeksi
  * palauttaa niille null.
  */
-import { livianKaupunkiAanitetty, soitaLivianKaupunkiAani } from './liviapuhe.js';
+import {
+  livianKaupunkiAanitetty, soitaLivianAani, soitaLivianKaupunkiAani,
+} from './liviapuhe.js';
 import { luennanLoppuun } from './luenta.js';
 import { natiiviVastaus } from './natiivi.js';
 // Sähketehtävän vapaa vastaus lainaa pöllöltä kaksi asiaa: odotusrivin
@@ -3157,49 +3162,41 @@ export function avaaFokusKohtaaminen(ui, city) {
   return true;
 }
 
-/* ---------- pöllön vinkki lehden avautuessa ---------- */
+/* ---------- pulun vinkki lehden avautuessa ---------- */
 
 /**
- * MAHDOLLISIMMAN LYHYT VINKKI (Raamattu, KEVYT KULKU -KOKEILU: *"kun
- * kaupunkilehti AUKEAA, pöllö vinkkaa MAHDOLLISIMMAN LYHYESTI
- * minitehtävästä (vinkissä ruksi 'älä näytä jatkossa')"*).
+ * MAHDOLLISIMMAN LYHYT VINKKI — JA VAIN KERRAN (omistaja 7.9.2026,
+ * Raamattu PULUN UUSI RYTMI ATEENASSA: lehden avautuessa pulu sanoo
+ * *"Etsi lehdestä aarrekysymys."* — vain ENSIMMÄISELLÄ kerralla
+ * koskaan, ei enää missään kaupungissa sen jälkeen).
  *
- * Yksi lause, ei otsikkoa, ei jatkonappia: kupla katoaa napautuksesta
- * kuten pöllön kuplat aina. Ruksi kirjoittaa laitteen oman muistiavaimen
- * (js/ui-apurit.js lehtivinkkiPiilotettu) — sama try/catch-kaava kuin
- * kehittäjätilalla ja fokusmoodilla, eikä riviäkään pelitallennukseen:
- * tämä on lukijan asetus, ei pelitilanne.
+ * Yksi lause, ei otsikkoa, ei jatkonappia, EI RUKSIA: kupla katoaa
+ * napautuksesta kuten pöllön kuplat aina. Vanha "Älä näytä jatkossa"
+ * -ruksi (Raamatun KEVYT KULKU -KOKEILU, 24.8.2026) poistui samalla
+ * päätöksellä — kertaluontoinen opastus ei tarvitse asetusta.
+ * Kertalippu on Livian omien lippujen seurassa (js/livia.js
+ * livianLehtivinkkiOdottaa: laitelippu + istuntolippu).
  *
- * SANAMUOTO ON OMISTAJAN (26.8.2026) — ohjaava kehotus voittaa tässä
- * pöllön kuivan toteavuuden, koska kyse on opastuksesta eikä
- * repliikistä. Silminnäkijäheittoa EI ole tässä: sen kiintiö (kerran
- * per maa) menee aarrekuittauksiin, jotka ovat isompia hetkiä.
+ * TEKSTI ON KAANONIA JA ASUU js/livia.js:SSÄ. Se on pulun repliikki
+ * kuten avaus ja paljastus, se luetaan pulun äänellä (js/liviapuhe.js
+ * soitaLivianAani) ja tools/generoi-pulu.mjs äänittää sen samasta
+ * lähteestä — tämä moduuli on vain sen pinta.
  */
-const LEHTIVINKKI_TEKSTI = 'Etsi minitehtävä lehdestä ja ratkaise se, '
-  + 'niin saat vinkin aarteen paikasta kartalla.';
 /* Kupla tulee vasta hengähdyksen jälkeen (omistaja 26.8.2026). */
 const LEHTIVINKKI_VIIVE_MS = 1400;
-/* Vinkin avainsana: kynä ympyröi sen (ilmepaketti, omistaja 5.9.2026). */
-const LEHTIVINKIN_SANA = 'minitehtävä';
-
-/** Vinkki näkyy kerran per saapuminen; avain on sama kuin virralla. */
-function vinkkiAvain(ui, city) {
-  return `${ui.game.pack.id}:${city.id}`;
-}
 
 /**
  * YHDEN LAUSEEN KUPLA PÖLLÖNAPISTA — kevyen kulun oma pikkupinta.
  *
- * Sama kupla palvelee kahta hetkeä: lehden avautuessa näytettävää
- * vinkkiä (`ruksi: true`, "Älä näytä jatkossa") ja tehtävän ratkettua
- * tulevaa kuittausta (`ruksi: false`). Kuittaus on kertaluontoinen
- * palaute pelaajan omasta teosta, joten sitä ei saa vaientaa asetuksella
- * — muuten palkinto jäisi kertomatta juuri niiltä, jotka ruksin joskus
- * painoivat.
+ * Sama kupla palvelee kahta hetkeä: lehden avautuessa sanottavaa
+ * vinkkiä ja tehtävän ratkettua tulevaa kuittausta. Kummassakaan ei
+ * ole enää ruksia eikä asetusta (omistaja 7.9.2026): vinkki sanotaan
+ * kerran koskaan ja kuittaus on kertaluontoinen palaute pelaajan
+ * omasta teosta.
  *
  * @returns {boolean} näkyikö kupla
  */
-function naytaPolloKupla(ui, teksti, { ruksi: ruksillinen = false } = {}) {
+function naytaPolloKupla(ui, teksti) {
   const nappi = polloNappi();
   // Ilman kelluvaa pöllöä kuplalla ei ole kärkeä eikä paikkaa; teksti
   // jää silloin väliin — se on vihje, ei pelin portti.
@@ -3212,7 +3209,6 @@ function naytaPolloKupla(ui, teksti, { ruksi: ruksillinen = false } = {}) {
   kupla.setAttribute('role', 'note');
   kupla.setAttribute('aria-label', 'Livia vinkkaa');
   kupla.addEventListener('pointerdown', (tapahtuma) => {
-    if (tapahtuma.target?.closest?.('label, input')) return;
     // Sama nielu kuin ison kuplan sulussa: napautus loppuu vinkkiin
     // eikä valu kartalle sen alta.
     nielaiseSulkevaNapautus(tapahtuma);
@@ -3222,17 +3218,6 @@ function naytaPolloKupla(ui, teksti, { ruksi: ruksillinen = false } = {}) {
 
   const sisalto = html('div', 'fokusvirta-sisalto');
   sisalto.appendChild(html('p', 'fokusvirta-vinkkiteksti', teksti));
-  if (ruksillinen) {
-    const rivi = html('label', 'fokusvirta-vinkkiruksi');
-    const ruksi = document.createElement('input');
-    ruksi.type = 'checkbox';
-    ruksi.addEventListener('change', () => {
-      piilotaLehtivinkki(ruksi.checked);
-      if (ruksi.checked) suljeFokusvirta(ui);
-    });
-    rivi.append(ruksi, html('span', '', 'Älä näytä jatkossa'));
-    sisalto.appendChild(rivi);
-  }
   kupla.appendChild(sisalto);
   koti.appendChild(kupla);
   ui.fokusvirtaKortti = kupla;
@@ -3250,27 +3235,35 @@ function naytaPolloKupla(ui, teksti, { ruksi: ruksillinen = false } = {}) {
   return true;
 }
 
+/**
+ * VINKKI KERRAN KOSKAAN (omistaja 7.9.2026).
+ *
+ * Portit järjestyksessä: kevyt kulku päällä, lehdessä on sisältöä,
+ * aarre on vielä löytymättä — ja vasta sitten kertalippu. Lippua ei
+ * kuluteta ennen kuin kupla oikeasti näkyy: pöllönappi voi olla
+ * piilossa, ja silloin vinkki kuuluu yhä ensi kerralle.
+ */
 export function fokusvirtaLehtivinkki(ui, city) {
   if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return false;
   if (!city || !fokusvirtaSisalto(ui, city)) return false;
   // Aarre jo löytynyt: lehti on vapaata tutkintaa eikä vinkattavaa ole.
   if (!fokusvirtaLukitseeLehden(ui, city)) return false;
-  if (lehtivinkkiPiilotettu()) return false;
-  ui.fokusvinkkiNaytetty ??= new Set();
-  const avain = vinkkiAvain(ui, city);
-  if (ui.fokusvinkkiNaytetty.has(avain)) return false;
+  if (!livianLehtivinkkiOdottaa()) return false;
   if (!polloNappi()) return false;
-  ui.fokusvinkkiNaytetty.add(avain);
   clearTimeout(ui.fokusvinkkiAjastin);
   ui.fokusvinkkiAjastin = setTimeout(() => {
     // Pöllö on voinut kadota (lehti kiinni, näkymä vaihtui) —
-    // myöhästynyt kupla ilman kärkeä jää silloin näyttämättä.
-    if (!ui.dead && polloNappi()) {
-      naytaPolloKupla(ui, LEHTIVINKKI_TEKSTI, { ruksi: true });
-      // Avainsana kynällä ympyröitynä (js/ilme.js); ilman kirjastoa pelkkä lause.
-      korostaSana(ui.fokusvirtaKortti?.querySelector('.fokusvirta-vinkkiteksti'),
-        LEHTIVINKIN_SANA, { tyyppi: 'circle', kesto: 700, tayte: [2, 4] });
-    }
+    // myöhästynyt kupla ilman kärkeä jää silloin näyttämättä, eikä
+    // kertalippu kulu.
+    if (ui.dead || !polloNappi()) return;
+    if (!naytaPolloKupla(ui, LIVIAN_LEHTIVINKKI)) return;
+    merkitseLehtivinkkiNahdyksi();
+    // Avainsana kynällä ympyröitynä (js/ilme.js); ilman kirjastoa pelkkä lause.
+    korostaSana(ui.fokusvirtaKortti?.querySelector('.fokusvirta-vinkkiteksti'),
+      LIVIAN_LEHTIVINKIN_SANA, { tyyppi: 'circle', kesto: 700, tayte: [2, 4] });
+    // Vinkki on pulun repliikki kuten muutkin: sama soitin, sama
+    // kytkin, ja puuttuva tai vanhentunut äänite on hiljainen.
+    soitaLivianAani(ui, 'lehtivinkki', 0, { teksti: LIVIAN_LEHTIVINKKI });
   }, LEHTIVINKKI_VIIVE_MS);
   return true;
 }

@@ -264,9 +264,10 @@ let solmutKirjastoilla = 0;
 if (AMPARI_TOIMII) {
   const { ctx, sivu, tila } = await avaaSivu({ kirjastot: true });
   const v = await vinkki(sivu);
-  vaadi('vinkki: kupla ja omistajan lause ennallaan', v.kupla && v.teksti.startsWith('Etsi minitehtävä lehdestä'), JSON.stringify(v));
+  vaadi('vinkki: kupla ja omistajan lause ennallaan',
+    v.kupla && v.teksti === 'Etsi lehdestä aarrekysymys.', JSON.stringify(v));
   vaadi('vinkki: avainsana on rough-notation-elementti (kynällä ympyröity)',
-    v.sana === 'minitehtävä' && v.korostettu && v.annotaatio && v.annotaatioita === 1, JSON.stringify(v));
+    v.sana === 'aarrekysymys' && v.korostettu && v.annotaatio && v.annotaatioita === 1, JSON.stringify(v));
   await kuva(sivu, 'vinkki');
   const s = await sahke(sivu);
   vaadi('sähke: kysymysrivi saa kynän alleviivauksen (rough-notation)',
@@ -311,7 +312,7 @@ if (AMPARI_TOIMII) {
   const { ctx, sivu, tila } = await avaaSivu({ kirjastot: false });
   const v = await vinkki(sivu);
   vaadi('ilman kirjastoja: vinkki on pelkkä lause (ei annotaatiota)',
-    v.kupla && v.teksti.startsWith('Etsi minitehtävä lehdestä') && !v.korostettu && v.annotaatioita === 0, JSON.stringify(v));
+    v.kupla && v.teksti === 'Etsi lehdestä aarrekysymys.' && !v.korostettu && v.annotaatioita === 0, JSON.stringify(v));
   const s = await sahke(sivu);
   vaadi('ilman kirjastoja: sähkeen kysymysrivi on CSS-korostettu kuten ennen',
     s.kortti && s.rivi && !s.korostettu && s.annotaatioita === 0, JSON.stringify(s));

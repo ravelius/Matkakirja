@@ -16,22 +16,25 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
-import { LIVIAN_AVAUS, MANNERIVIHJE, livianPaljastus } from '../js/livia.js';
 import {
-  LIVIAN_AANIJUURI, LIVIAN_AANILAHTEET, LIVIAN_AANITETTY_PALJASTUS,
-  LIVIAN_KAIKU, LIVIAN_KAUPUNKILAHTEET, LIVIAN_SAAPUMISREPLIIKIT, livianAaniNimi,
+  LIVIAN_AVAUS, LIVIAN_LEHTIVINKKI, MANNERIVIHJE, livianPaljastus,
+} from '../js/livia.js';
+import {
+  LIVIAN_AANIJUURI, LIVIAN_AANILAHTEET, LIVIAN_AANITETTY_PALJASTUS, LIVIAN_AANITETYT,
+  LIVIAN_KAIKU, LIVIAN_KAUPUNKILAHTEET, LIVIAN_SAAPUMISREPLIIKIT, livianAaniAjanTasalla,
+  livianAaniNimi,
   livianAaniOsoite, livianAanitykset, livianKaupunkiAanitetty, LIVIAN_KAUPUNKIAANET_KAYTOSSA,
-  livianKaupunkiIndeksi, livianSaapumisrepliikki, livianSoitettava,
+  livianKaupunkiIndeksi, livianSaapumisrepliikki, livianSoitettava, livianTiiviste,
 } from '../js/liviapuhe.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
 import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
 import {
-  TAGIT, ampariKansio, ilmanTageja, kaupunginRepliikit, kokoaManifesti,
-  puhemuoto, repliikit, valitseRepliikit,
+  TAGIT, aanitteenTila, ampariKansio, ilmanTageja, kaupunginRepliikit, kokoaManifesti,
+  puhemuoto, repliikit, tauluksi, valitseRepliikit,
 } from '../tools/generoi-pulu.mjs';
 
 /** Ne lähteet, joiden tekstit tulevat js/livia.js:stä (tagitaulu koskee vain näitä). */
-const LIVIA_LAHTEET = ['avaus', 'paljastus', 'mannerivihje'];
+const LIVIA_LAHTEET = ['avaus', 'paljastus', 'mannerivihje', 'lehtivinkki'];
 /** Kaupunkirepliikkejä yhteensä (Ateena 1 + Sofia 7). */
 const KAUPUNKIREPLIIKKEJA = Object.values(LIVIAN_KAUPUNKILAHTEET)
   .reduce((summa, kentat) => summa + kentat.length, 0);
@@ -42,8 +45,9 @@ const lue = (polku) => readFileSync(new URL(polku, import.meta.url), 'utf8');
 
 test('jokaisella repliikillä on oma tiedostonimi', () => {
   const rivit = repliikit();
-  // Viisi avausta, kaksi paljastusta, yksi mannerivihje + kaupungit.
-  assert.equal(rivit.length, LIVIAN_AVAUS.length + 2 + 1 + KAUPUNKIREPLIIKKEJA);
+  // Viisi avausta, KOLME paljastusta (uusi rytmi 7.9.2026), yksi
+  // mannerivihje, yksi lehtivinkki + kaupungit.
+  assert.equal(rivit.length, LIVIAN_AVAUS.length + 3 + 1 + 1 + KAUPUNKIREPLIIKKEJA);
   const lahteet = LIVIAN_AANILAHTEET.join('|');
   for (const rivi of rivit) {
     assert.match(rivi.nimi, new RegExp(`^livia-(${lahteet})-\\d+\\.mp3$`),
@@ -65,8 +69,9 @@ test('nimi johdetaan lähteestä ja indeksistä samalla funktiolla', () => {
   assert.equal(livianAaniNimi('kupla', 0), null);
   assert.equal(livianAaniNimi('avaus', -1), null);
   assert.equal(livianAaniNimi('avaus', 1.5), null);
+  assert.equal(livianAaniNimi('lehtivinkki', 0), 'livia-lehtivinkki-1.mp3');
   assert.deepEqual(LIVIAN_AANILAHTEET,
-    ['avaus', 'paljastus', 'mannerivihje', 'ateena', 'sofia']);
+    ['avaus', 'paljastus', 'mannerivihje', 'lehtivinkki', 'ateena', 'sofia']);
 });
 
 /* ---------- kaupunkikohtaiset lähteet (Ateena ja Sofia ensin) ---------- */
@@ -161,6 +166,57 @@ test('työkalu tuntee saapumisrepliikit, mutta peli soittaa aina kuivan', () => 
   assert.equal(livianAaniOsoite('sofia', 6), `${LIVIAN_AANIJUURI}livia-sofia-7.mp3`);
 });
 
+/* ---------- vanhentunut äänite on hiljainen ---------- */
+
+/*
+ * MIKSI TÄMÄ TESTI ON: tiedostonimi ei kerro tekstiä, joten muuttunut
+ * repliikki soisi ämpärin vanhalla äänitteellä ja sanoisi eri asian
+ * kuin kupla. Mikään ei kaadu — siksi portti tarvitsee vartijan.
+ */
+test('tiiviste erottaa tekstit ja vaientaa vanhentuneen äänitteen', () => {
+  assert.equal(livianTiiviste('Etsi lehdestä aarrekysymys.'),
+    livianTiiviste('  Etsi lehdestä aarrekysymys.  '), 'reunavälit eivät saa muuttaa tiivistettä');
+  assert.notEqual(livianTiiviste('Etsi lehdestä aarrekysymys.'),
+    livianTiiviste('Etsi lehdestä aarrekysymys'));
+  assert.match(livianTiiviste('mikä tahansa'), /^[0-9a-f]{8}$/);
+  // Ilman tekstiä portti ei vaienna: kaupunkilähteet kulkevat niin.
+  assert.equal(livianAaniAjanTasalla('sofia', 0), true);
+  // Ajan tasalla oleva repliikki soi, muuttunut ei.
+  assert.equal(livianAaniAjanTasalla('avaus', 0, LIVIAN_AVAUS[0]), true);
+  assert.equal(livianAaniAjanTasalla('avaus', 0, `${LIVIAN_AVAUS[0]} Kaak.`), false);
+  // Tuntematon avain (uusi repliikki, jota ei ole vielä generoitu).
+  assert.equal(livianAaniAjanTasalla('lehtivinkki', 0, LIVIAN_LEHTIVINKKI), false);
+});
+
+test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
+  const rivit = repliikit();
+  const tila = (avain) => rivit.find((rivi) => rivi.avain === avain).tila;
+  // 7.9.2026: paljastus kirjoitettiin uusiksi ja lehtivinkki on uusi.
+  assert.equal(tila('avaus-1'), 'ajan tasalla');
+  assert.equal(tila('paljastus-1'), 'muuttunut');
+  assert.equal(tila('paljastus-3'), 'uusi');
+  assert.equal(tila('lehtivinkki-1'), 'uusi');
+  assert.equal(tila('sofia-1'), 'ei vartioitu');
+  for (const rivi of rivit) assert.equal(rivi.tila, aanitteenTila(rivi));
+  // Peli vaikenee juuri niissä, jotka odottavat ajoa.
+  for (const rivi of rivit) {
+    if (rivi.tila === 'ei vartioitu') continue;
+    assert.equal(livianAaniAjanTasalla(rivi.lahde, rivi.indeksi, rivi.teksti),
+      rivi.tila === 'ajan tasalla', `${rivi.avain}: portti ja tila eri mieltä`);
+  }
+  // Työkalu tulostaa valmiin taulun liitettäväksi.
+  const taulu = tauluksi(rivit);
+  assert.match(taulu, /export const LIVIAN_AANITETYT = \{/);
+  assert.match(taulu, /'lehtivinkki-1': '[0-9a-f]{8}',/);
+  assert.doesNotMatch(taulu, /'sofia-1'/);
+  // Taulussa on rivi jokaiselle vartioidulle repliikille — myös
+  // vanhentuneille, koska ämpärissä on yhä niiden vanha äänite.
+  for (const avain of Object.keys(LIVIAN_AANITETYT)) {
+    assert.ok(rivit.some((rivi) => rivi.avain === avain),
+      `LIVIAN_AANITETYT: ${avain} ei ole yhdenkään repliikin avain`);
+  }
+});
+
 /* ---------- tagit ---------- */
 
 /*
@@ -216,6 +272,7 @@ test('manifestin muoto on täysi ja kestot tulevat ajosta', () => {
       assert.ok(rivi[kentta], `manifestin rivistä ${rivi.avain} puuttuu ${kentta}`);
     }
     assert.equal(typeof rivi.merkit, 'number');
+    assert.match(rivi.tiiviste, /^[0-9a-f]{8}$/);
     assert.equal(typeof rivi.saapuu, 'boolean');
     assert.equal(rivi.saapuu, Boolean(rivi.kaiku));
   }
@@ -246,10 +303,11 @@ test('paljastus äänitetään sillä variantilla, jonka peli soittaa', () => {
   const teksti = livianPaljastus(LIVIAN_AANITETTY_PALJASTUS);
   const rivit = repliikit().filter((rivi) => rivi.lahde === 'paljastus');
   assert.deepEqual(rivit.map((rivi) => rivi.teksti), teksti);
+  assert.equal(rivit.length, 3, 'uusi rytmi on kolme kuplaa');
   // Aloitusreitti on kaanonissa Ateena (LIVIAN_AVAUS: "Ateenasta se
-  // alkaa"), joten äänitetty variantti on Kreikka/Ateena.
-  assert.equal(LIVIAN_AANITETTY_PALJASTUS.maahan, 'Kreikkaan');
-  assert.equal(LIVIAN_AANITETTY_PALJASTUS.paikassa, 'Ateenassa');
+  // alkaa"), joten äänitetty variantti on Ateenaan/Ateenaa.
+  assert.equal(LIVIAN_AANITETTY_PALJASTUS.paikkaan, 'Ateenaan');
+  assert.equal(LIVIAN_AANITETTY_PALJASTUS.paikkaa, 'Ateenaa');
   const livia = lue('../js/liviapuhe.js');
   assert.match(livia, /lahde === 'paljastus'/,
     'muu maa kuin äänitetty jää hiljaiseksi (soitaLivianAani)');
@@ -258,13 +316,13 @@ test('paljastus äänitetään sillä variantilla, jonka peli soittaa', () => {
 test('js/livia.js soittaa jokaisen kuplan äänen', () => {
   const livia = lue('../js/livia.js');
   assert.match(livia, /import \{ soitaLivianAani, pysaytaLivianAani \} from '\.\/liviapuhe\.js';/);
-  assert.match(livia, /soitaLivianAani\(ui, 'avaus', i\);/);
-  assert.match(livia, /soitaLivianAani\(ui, 'paljastus', i, variantti\);/);
-  assert.match(livia, /soitaLivianAani\(ui, 'mannerivihje', 0\);/);
+  assert.match(livia, /soitaLivianAani\(ui, 'avaus', i, \{ teksti \}\);/);
+  assert.match(livia, /soitaLivianAani\(ui, 'paljastus', i, \{ \.\.\.variantti, teksti \}\);/);
+  assert.match(livia, /soitaLivianAani\(ui, 'mannerivihje', 0, \{ teksti: MANNERIVIHJE \}\);/);
   // Kupla ensin, ääni sen jälkeen: äänen soitto on kuplan
   // onnistumisen jälkeisellä polulla.
   assert.ok(livia.indexOf('const nakyi = polloAvauskupla')
-    < livia.indexOf("soitaLivianAani(ui, 'avaus', i)"));
+    < livia.indexOf("soitaLivianAani(ui, 'avaus', i"));
   // Viimeinen repliikki saa puhua loppuun: itsestään päättyvä sarja ei
   // vaienna ääntä, keskeytys vaientaa.
   assert.match(livia, /lopetaAvaus\(\{ vaienna: false \}\);/);
@@ -281,7 +339,7 @@ test('mannerivihje ja avaus käyttävät samoja repliikkejä kuin äänitteet', 
 test('js/fokusvirta.js soittaa Ateenan ja Sofian repliikit', () => {
   const virta = lue('../js/fokusvirta.js');
   assert.match(virta,
-    /import \{ livianKaupunkiAanitetty, soitaLivianKaupunkiAani \} from '\.\/liviapuhe\.js';/);
+    /livianKaupunkiAanitetty, soitaLivianAani, soitaLivianKaupunkiAani,\n\} from '\.\/liviapuhe\.js';/);
   // Jokaiselle Sofian äänitetylle kentälle on kutsu — kupla ja ääni
   // eivät saa eriytyä.
   for (const kentta of ['vinkki', 'linkkiSaate', 'oikein', 'paluu']) {
@@ -304,7 +362,7 @@ test('js/fokusvirta.js soittaa Ateenan ja Sofian repliikit', () => {
    * perusrytmillä — sama sääntö kuin avauksessa.
    */
   assert.match(virta, /function livianPuherytmi\(kaupunkiId, kentta\) \{[\s\S]{0,200}livianKuplanLukuaika/);
-  assert.match(virta, /import \{ livianKuplanLukuaika, livianPaljastusKesken \} from '\.\/livia\.js';/);
+  assert.match(virta, /livianKuplanLukuaika,\n  livianLehtivinkkiOdottaa, livianPaljastusKesken, merkitseLehtivinkkiNahdyksi,\n\} from '\.\/livia\.js';/);
   // Sähkelento odottaa kuittauksen puheen loppuun ennen paluukuplaa.
   assert.match(virta, /const lento = livianKaupunkiAanitetty\(city\.id, 'oikein'\)/);
   const pollo = lue('../js/pollo.js');
