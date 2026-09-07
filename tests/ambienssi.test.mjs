@@ -520,21 +520,54 @@ test('avauksen ääni: portissa odottava maisema nousee suoraan avauksen tasoon'
     `noston pitää olla tavallista tasoa kovempi: ${nostettu} ≤ ${tavallinen}`);
 });
 
-test('avauksen ääni ei ohita väistöä: kertojan alla molemmat yhä väistyvät', async () => {
+/*
+ * OMISTAJAN VIKA 7.9.2026 ILLALLA (v1671): *"Lentoterminaalin ääni ei
+ * kuulu etusivulla, vaikka pitäisi."* Avauksen nostot kerrottiin
+ * väistön PÄÄLLE, ja avauksen ainoa puhuja on avaustekstin kertoja —
+ * joten nosto (1,45) hukkui kertojan väistöön (0,25) heti 2,85
+ * sekunnin kohdalla ja terminaali jäi koko luennan ajaksi 64 %
+ * kalibroidun tasonsa alle. Kertoja on osa avausta, ei keskeytys.
+ */
+test('avauksen aikana kertoja EI väistä terminaalia — luenta tulee sen päälle', async () => {
   const s = await pystyta({ ctxTila: 'running' });
   await soitaEtusivu(s);
   const maisema = s.maisemat().pop();
   const musa = musiikki(s);
+  const tavallinen = maisema.kuuluu;
   s.virta.aloitaAvauksenAani();
   ajaRuudut();
   const avaus = { maisema: maisema.kuuluu, musa: musa.kuuluu };
   s.virta.puheAlkoi();
   ajaRuudut();
-  assert.ok(maisema.kuuluu < avaus.maisema, 'kertoja väistää nostettuakin maisemaa');
+  assert.ok(Math.abs(maisema.kuuluu - avaus.maisema) < 1e-6,
+    `terminaali pysyy avauksen tasossa kertojan alla: ${maisema.kuuluu} ≠ ${avaus.maisema}`);
+  assert.ok(maisema.kuuluu > tavallinen,
+    `terminaalin pitää luennan aikana olla YLI tavallisen tasonsa: ${maisema.kuuluu} ≤ ${tavallinen}`);
+  // Musiikkiin väistö kertyy yhä: siellä molemmat osoittavat alaspäin.
   assert.ok(musa.kuuluu < avaus.musa, 'kertoja väistää myös hiljennettyä musiikkia');
   s.virta.puheLoppui();
   ajaRuudut();
-  assert.ok(Math.abs(maisema.kuuluu - avaus.maisema) < 1e-6, 'väistö purkautuu avauksen tasoon');
   assert.ok(Math.abs(musa.kuuluu - avaus.musa) < 1e-6, 'musiikki palaa avauksen tasoon');
   s.virta.nollaaPuhujat();
+});
+
+test('avauksen aikana lukunäkymän hiljennys väistää terminaalia yhä', async () => {
+  /*
+   * Pöllö tai lehti kesken avauksen on PELAAJAN OMA keskeytys eikä osa
+   * avausta: silloin terminaali madaltuu kuten aina.
+   */
+  const s = await pystyta({ ctxTila: 'running' });
+  await soitaEtusivu(s);
+  const maisema = s.maisemat().pop();
+  s.virta.aloitaAvauksenAani();
+  ajaRuudut();
+  const avaus = maisema.kuuluu;
+  s.virta.hiljennaAmbienssi('pollo');
+  ajaRuudut();
+  assert.ok(maisema.kuuluu < avaus,
+    `lukunäkymän pitää madaltaa nostettuakin terminaalia: ${maisema.kuuluu} ≥ ${avaus}`);
+  s.virta.palautaAmbienssi('pollo');
+  ajaRuudut();
+  assert.ok(Math.abs(maisema.kuuluu - avaus) < 1e-6, 'hiljennys purkautuu avauksen tasoon');
+  s.virta.nollaaHiljennykset();
 });

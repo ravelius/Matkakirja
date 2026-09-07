@@ -161,13 +161,19 @@ export function playIntroVoice(ui) {
    * aina loppu — toisin kuin matkakirjamerkinnän, jonka voi jatkaa
    * kaiuttimesta (ks. ui.luentaTauolla).
    *
-   * JÄRJESTYS: nosto pois ensin, väistö vasta perään, jotta väistön
-   * purku laskee tason kerralla oikeaan lukemaan eikä tausta käy
-   * välillä nostetussa.
+   * JÄRJESTYS: PUHUJA VAPAUTETAAN ENSIN, nosto vasta perään.
+   *
+   * Avauksen aikana terminaali ei ole väistössä lainkaan (kertoja on
+   * osa avausta, ks. js/ambience-stream.js "KERTOJA EI VÄISTÄ
+   * TERMINAALIA"), joten roolin vapautus ei liikuta sitä ollenkaan ja
+   * nosto laskee tason kerralla oikeaan lukemaan. Päinvastaisessa
+   * järjestyksessä nosto purkautuisi ensin ja tausta putoaisi vielä
+   * väistössä olevaan lukemaan (0,25) siksi ajaksi, joka roolin
+   * vapautukselta kuluu — kuuluva notkahdus juuri luennan lopussa.
    */
   const luentaOhi = () => {
-    lopetaAvauksenAani();
     vapautaPuhuja(ui, audio);
+    lopetaAvauksenAani();
   };
   audio.addEventListener('ended', luentaOhi);
   audio.addEventListener('pause', luentaOhi);
