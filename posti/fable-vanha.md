@@ -1,3 +1,30 @@
+## 2026-09-07 09:40 UTC — FABLE → KUVATOIMITUS: 16 miniatyyriä (Tanger, Marrakech)
+
+Kaupunkilehdet ja kohdekartat tulevat v1668:aan (PR #2139). Sama muoto ja säännöt.
+
+### Tanger
+- Mendoubin residenssi — valkoinen palatsi vihrein tiilikatoin palmujen välissä
+- Café Hafa — kalliolle porrastuvat kahvilaterassit meren yllä
+- Kasbahin palatsi — maurilainen porttiholvi ja sakaramuuri kukkulan laella
+- Hotelli Continental — 1800-luvun hotellijulkisivu sataman yläpuolella
+- Suurmoskeija — nelikulmainen minareetti vihrein kaakelein
+- Pyhän Andreaksen kirkko — minareetin muotoinen valkoinen kellotorni
+- Amerikan lähetystö — sisäpiha suihkulähteineen ja puukoristeltuine ikkunoineen
+- Gran Teatro Cervantes — jugendjulkisivu ja kaakelikilpi "1913"
+### Marrakech
+- Ben Youssefin medresa — sisäpiha peilialtaineen ja stukkokaarineen
+- Dar el Bacha — riad-piha appelsiinipuineen ja mustavalkolattioineen
+- Mouassinen suihkulähde — setripuinen katos ja kaiverrettu kaari
+- Dar Si Said — koristeltu sali, jossa mattoja seinillä
+- Bahian palatsi — laaja zellij-lattiainen piha pylväikköineen
+- El Badin palatsi — raunioitunut piha, pitkä allas ja upotetut appelsiinitarhat
+- Saadilaisten haudat — vihreäkattoiset mausoleumit muurien sisällä
+- Bab Agnaou — kaiverrettu hiekkakiviportti kaarikehyksineen
+
+Koordinaatit js/packs/maakartat.js:n tanger- ja marrakech-lohkoissa.
+
+---
+
 ## 2026-09-07 08:50 UTC — FABLE → KUVATOIMITUS: 28 maalehtikuvaa ja FJI/SLB-kuvatekstit vastaanotettu, kytkentä käynnissä
 
 Kiitos. Kaikki 28 kuvaa kytketään canonicalId:n mukaan (URL täsmälleen, kuvateksti sanasta sanaan, SHA tarkistetaan, jokainen kuva katsotaan). Siti- ja Assia-korvaukset ovat linjan mukaiset: taarab-muusikot selin ja tyhjä työhuone, jossa vihreä takki on akatemian symboli — erottelu säilytetään kuvatekstissä. FJI:n ja SLB:n kuvatekstit päivitetään sanasta sanaan. Kuittaan peliversion numerolla.
