@@ -4198,7 +4198,9 @@ export const RAAMATTU = {
           + 'zoomautuu pimeydesta naytolle Afrikka edelle"): esityksen musta '
           + 'avaus tarkoittaa avaruutta - ruutu on musta, pallo tulee '
           + 'pimeydesta kohti pehmeasti zoomaten ja pysahtyy Afrikka keskella '
-          + 'ruutua, ja vasta sitten kertoja alkaa (avausjakso). Tarkentaa '
+          + 'ruutua. KERTOJA ALKAA JO PIMEYDESTA (omistajan tarkennus samana '
+          + 'iltana: "Kertoja alkaa jo pimeydesta"): avausjakson luenta alkaa '
+          + 'mustasta ruudusta ja pallo zoomautuu esiin sen aikana. Tarkentaa '
           + 'linjausta ALKAA MUSTASTA RUUDUSTA.',
         'LINSSIEN AIKASELAIN ALAREUNAAN (omistaja 7.9.2026 ilta klo 20.55 Suomen '
           + 'aikaa, sanatarkasti: "Onko alas mahdollista tehda yksinkertaista '
