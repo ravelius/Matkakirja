@@ -43770,4 +43770,701 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * MELBOURNEN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.melbourne, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Victorian Trades Hall", "Old Melbourne Gaol",
+   * "Coop's Shot Tower", "Shot tower", "Princess Theatre
+   * (Melbourne)", "Melbourne Mint", "General Post Office,
+   * Melbourne", "St Paul's Cathedral, Melbourne" ja "Immigration
+   * Museum, Melbourne").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat Yarran nimi, kultaryntäys, raitiovaunu, kiinalainen
+   * kortteli, Hoddlen ruudukko, Queen Victoria Market, räjäytetty
+   * koski, kaupungin perustaminen, parlamenttitalon puuttuva kupoli,
+   * vanha valtiovarainrakennus, Wurundjerin maa, taidekokoelman
+   * alkuvuodet yleisessä kirjastossa, von Guérard, Buvelot, Beruk,
+   * kasvitieteellinen puutarha, Guilfoyle, puistokehä ja seitsemän
+   * vuodenaikaa. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Pääpostin
+   * jutussa EI kerrota Elizabeth Streetin tulvista sen enempää kuin
+   * yhdellä sivulauseella, koska räjäytetty koski ja joen
+   * suoristaminen ovat lehden matkaoppaan oma jakso. Rahapajan
+   * jutussa kulta esiintyy vain punnittuna metallina, ei
+   * kultaryntäyksen tarinana (lehden nosto H2). Katedraalin jutussa
+   * ruudukon vinous mainitaan vain siltä osin kuin se käänsi kirkon
+   * pois idästä — ruudukon mitat ovat matkaoppaan jakso 2.
+   *
+   * YLEINEN KIRJASTO EI OLE KARTALLA, vaikka se on ruudun sisällä ja
+   * ilmeinen kohde: lehden nosto "Kokoelma ilman omaa taloa" kertoo
+   * juuri sen talon eteläsiivestä ja lukusalista. Sama koskee
+   * kaupungintaloa, joka on 197 metriä katedraalista eli 200 metrin
+   * säännön alle.
+   */
+  melbourne: {
+    Ammattiyhdistystalo: {
+      aika: '1859',
+      teksti: 'Ammattiyhdistysten talokomitea perustettiin 1856, ja '
+          + 'pääministeri John O\'Shanassy myönsi sille tontin Lygonin '
+          + 'ja Victorian katujen kulmasta. Ensimmäinen talo oli puuta '
+          + 'ja sen katto galvanoitua peltiä. Vuosina 1874–1925 talo '
+          + 'rakennettiin uudelleen ja laajennettiin Joseph Reedin '
+          + 'piirustusten mukaan — saman arkkitehdin, joka suunnitteli '
+          + 'kaupungintalon. Rakennus on yksi maailman vanhimmista '
+          + 'ammattiyhdistystaloista.'
+          + '\n\n'
+          + 'Talon vastapäätä kadun toisella puolella on '
+          + 'kahdeksantuntisen työpäivän muistomerkki. Se pystytettiin '
+          + 'niiden victorialaisten työntekijöiden kunniaksi, jotka '
+          + 'saavuttivat 1856 maailman ensimmäisen kahdeksantuntisen '
+          + 'työpäivän. Isoisän matkan aikaan 1873 vaatimus oli '
+          + 'Euroopassa vielä kaukainen; täällä se oli ollut voimassa '
+          + 'jo seitsemäntoista vuotta.'
+          + '\n\n'
+          + 'Talosta tuli myös järjestöjen syntysija: sekä Victorian '
+          + 'työväenpuolue että Australian ammattiliittojen keskusjärjestö '
+          + 'perustettiin täällä. Katolla liehuu neljä lippua — '
+          + 'Australian lippu, Eureka-lippu, aboriginaalien lippu ja '
+          + 'punainen lippu. Vuonna 1931 talosta lähetettiin '
+          + 'radiokanava 3KZ:n ohjelmaa.',
+      kuvat: [
+        {
+          tiedosto: 'Melbourne Trades Hall entrance.jpg',
+          selite: 'Pylväikön päädyssä lukee TRADES HALL, ja katolla liehuu '
+            + 'neljä lippua — Australian, Eurekan, aboriginaalien ja '
+            + 'punainen.',
+          lahde: 'Tirin, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha vankila': {
+      aika: '1845–1924',
+      teksti: 'Vankila oli Port Phillipin ensimmäinen pysyvä vankila. '
+          + 'Vartijaksi nimitettiin 1. tammikuuta 1838 George Wintle '
+          + 'sadan punnan vuosipalkalla, ja paikkaa kutsuttiin '
+          + 'kansanomaisesti Wintlen hotelliksi. Kun kultaa löytyi 1851 '
+          + 'ja väkeä tulvi siirtokuntaan, järjestyksen ylläpito kävi '
+          + 'vaikeaksi: uusi siipi rakennettiin 1852–1854, tällä kertaa '
+          + 'basaltista eikä hiekkakivestä. Malli oli brittiläisen '
+          + 'vankila-insinöörin Joshua Jebbin ja erityisesti Lontoon '
+          + 'Pentonvillen mallivankilan. Muuri valmistui 1864, ja '
+          + 'kokonaisuus täytti yhden korttelin.'
+          + '\n\n'
+          + 'Aikakauden vankilaoppi uskoi hiljaisuuteen. Vakavista '
+          + 'rikoksista tuomitut aloittivat pohjakerroksesta '
+          + 'eristyksessä, eivätkä he saaneet puhua toisilleen; sääntöä '
+          + 'valvottiin pellavakankaisella naamiolla, joka puettiin '
+          + 'päähän aina sellin ulkopuolella. Päivä kulki kellojen '
+          + 'mukaan. Sääntöjä noudattanut vanki siirtyi toiseen '
+          + 'kerrokseen ja pääsi töihin pihalle, ja kolmannen kerroksen '
+          + 'yhteisselleissä asuivat luotetut, rangaistuksensa lopussa '
+          + 'olevat ja velalliset.'
+          + '\n\n'
+          + 'Vankilassa teloitettiin 133 ihmistä. Ensimmäiset '
+          + 'Port Phillipissä hirtetyt olivat 1842 kaksi tasmanialaista '
+          + 'aboriginaalia, Tunnerminnerwait ja Maulboyheenner; '
+          + 'ensimmäinen Victoriassa teloitettu nainen oli Elizabeth '
+          + 'Scott 11. marraskuuta 1863 ja viimeinen teloitettu Angus '
+          + 'Murray 1924, samana vuonna kun vankila suljettiin. '
+          + 'Tunnetuin teloitetuista oli maantierosvo Ned Kelly. Osa '
+          + 'rakennuksista liitettiin myöhemmin RMIT-yliopistoon ja '
+          + 'loput museoksi.',
+      kuvat: [
+        {
+          tiedosto: 'Old Melbourne Gaol aerial 1922 (cropped).jpg',
+          selite: 'Ilmakuva vuodelta 1922: vankila täyttää kokonaisen '
+            + 'korttelin, ja oikealla erottuu ulkoilupihojen tähtikuvio.',
+          lahde: 'Sir Raymond Garrett, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Coopin haulitorni': {
+      aika: '1889',
+      teksti: 'Haulitorni on kone, joka näyttää talolta. Lyijy '
+          + 'sulatetaan tornin huipulla ja pudotetaan kupariseulan '
+          + 'läpi: pisara vetäytyy pintajännityksen vuoksi palloksi ja '
+          + 'jähmettyy pudotessaan, ja pohjalla vesiallas ottaa hauli '
+          + 'kiinni. Menetelmän keksi bristolilainen William Watts, '
+          + 'joka patentoi sen 1782. Haulin suurin koko riippuu tornin '
+          + 'korkeudesta, koska isompi pallo tarvitsee pidemmän matkan '
+          + 'jähmettyäkseen.'
+          + '\n\n'
+          + 'Coopin torni valmistui 1889. Se on 50 metriä korkea, '
+          + 'yhdeksän kerrosta, ja huipulle nousee 327 porrasta. Tornia '
+          + 'piti pyörittämässä Coopin perhe, jolla oli toinenkin '
+          + 'haulitorni Clifton Hillissä. Haulia valmistui kuusi tonnia '
+          + 'viikossa aina vuoteen 1961, jolloin kysyntä hiipui.'
+          + '\n\n'
+          + 'Torni oli määrä purkaa, mutta se säästettiin 1973. Vuonna '
+          + '1991 sen ympärille rakennettiin Melbourne Centralin '
+          + 'kauppakeskus niin, että tiilitorni jäi seisomaan '
+          + '84-metrisen kartiomaisen lasikaton alle. Tornin sisällä on '
+          + 'nykyään pieni museo.',
+      kuvat: [
+        {
+          tiedosto: 'Melbourne Central abseiling shot tower.jpg',
+          selite: 'Tiilitorni seisoo kokonaisena kartiomaisen lasikaton alla; '
+            + 'köysilaskijat antavat mittakaavan.',
+          lahde: 'Stephen Bain, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Princess-teatteri': {
+      aika: '1886',
+      teksti: 'Paikan viihdehistoria alkaa kultaryntäysvuodesta 1854, '
+          + 'jolloin irlantilais-amerikkalainen yrittäjä Tom Mooney '
+          + 'rakensi tähän ladon näköisen Astleyn amfiteatterin: '
+          + 'keskellä oli ratsastusmanessi ja toisessa päässä näyttämö. '
+          + 'Nimi lainattiin Lontoon Westminster-sillan Astleylta. Talo '
+          + 'kunnostettiin 1857 Princess\'s Theatre and Opera Houseksi. '
+          + 'Nykyinen rakennus on kolmas, ja siksi tontti on Manner-'
+          + 'Australian vanhin yhä toimiva viihdepaikka.'
+          + '\n\n'
+          + 'Vuonna 1885 teatteri siirtyi kolmen miehen yhtymälle, ja '
+          + 'rapistunut talo purettiin. Uuden suunnitteli arkkitehti '
+          + 'William Pitt, ja se valmistui 1886 viidenkymmenentuhannen '
+          + 'punnan hinnalla. Avajaisissa 18. joulukuuta 1886 esitettiin '
+          + 'Gilbertin ja Sullivanin Mikado. Talossa oli aikansa '
+          + 'uusinta sähköistä näyttämövalaistusta ja Australian '
+          + 'ensimmäinen liukuva katto: lämpiminä iltoina se vedettiin '
+          + 'auki, ja katsomo muuttui ulkoilmateatteriksi.'
+          + '\n\n'
+          + 'Talon tunnetuin tarina on 3. maaliskuuta 1888. Baritoni '
+          + 'Frederick Baker, taiteilijanimeltään Federici, lauloi '
+          + 'Mefistofelesta Gounod’n Faustissa. Esitys päättyy siihen, '
+          + 'että Mefistofeles vajoaa lavaluukusta alas; laskun aikana '
+          + 'Federici sai sydänkohtauksen ja kuoli lähes heti. Hän ei '
+          + 'palannut kumartamaan, mutta kun seurueelle kerrottiin '
+          + 'tapahtuneesta, muut sanoivat hänen olleen lavalla heidän '
+          + 'kanssaan. Parvekkeen kolmannen rivin paikka pidettiin '
+          + 'vuosikausia tyhjänä hänen muistokseen.',
+      kuvat: [
+        {
+          tiedosto: 'Princess Theatre, Melbourne, Australia.jpg',
+          selite: 'William Pittin 1886 valmistunut julkisivu Spring Streetin '
+            + 'varrella; päätykolmion päällä on kullattu enkelihahmo.',
+          lahde: 'Mat Connolley, Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Rahapaja: {
+      aika: '1872',
+      teksti: 'Rahapaja avattiin Williamin ja La Troben katujen '
+          + 'kulmassa 12. kesäkuuta 1872 — vuosi ennen isoisän matkaa — '
+          + 'Britannian kuninkaallisen rahapajan haaraosastona. Se '
+          + 'toimi kuninkaallisena Melbournen rahapajana vuoteen 1968. '
+          + 'Päärakennuksessa olivat hallinto-osasto ja oikeassa '
+          + 'siivessä varamestarin, hänen perheensä ja palvelusväkensä '
+          + 'asunnot; molemmilla porteilla oli oma vartijarakennus, ja '
+          + 'takana sijaitsivat pitoisuusmääritys- ja sulattotilat.'
+          + '\n\n'
+          + 'Talo on hillittyä uusrenessanssia ja pidetään yhtenä '
+          + 'Australian hienoimmista 1800-luvun virastorakennuksista. '
+          + 'Sen suunnitteli julkisten töiden viraston arkkitehti '
+          + 'J. J. Clark. Julkisivun on sanottu nojaavan renessanssin '
+          + 'palatseihin, muun muassa Rooman Palazzo Vidoni-'
+          + 'Caffarellin paripilasterijärjestelyyn vuodelta 1515.'
+          + '\n\n'
+          + 'Rahapaja löi kultapuntia 1872–1931 ja puolipuntia '
+          + 'ajoittain 1873–1915, ja vuodesta 1916 alkaen se löi '
+          + 'liittovaltion hopeisia kolmen ja kuuden pennyn, shillingin '
+          + 'ja floriinin kolikoita. Etuportin värikkään vaakunan '
+          + 'veisti 1900-luvun puolivälissä melbournelainen puunveistäjä '
+          + 'Walter Langcake. Se on sovitettu kuningatar Victorian '
+          + 'vaakunasta siirtomaahaaralle: kilvenkantajilla ei ole '
+          + 'kruunuja, ja yksisarvisen tilalla on harjakas hevonen.',
+      kuvat: [
+        {
+          tiedosto: 'Melbourne Mint corner.jpg',
+          selite: 'Williamin ja La Troben katujen kulmaus: hillittyä '
+            + 'uusrenessanssia, ja sisäänkäynnin yllä loistaa kullattu '
+            + 'vaakuna.',
+          lahde: 'Rohanstorey, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Pääposti: {
+      aika: '1867',
+      teksti: 'Melbournen ensimmäinen postitoimipaikka perustettiin '
+          + '13. huhtikuuta 1837, ja pysyvä talo nousi nykyiselle '
+          + 'tontille 1841. Uudesta pääpostista järjestettiin '
+          + 'suunnittelukilpailu 1858, ja voittajat julkistettiin '
+          + '7. toukokuuta: ulkoasun ensimmäinen palkinto meni '
+          + 'toimistolle Crouch and Wilson ja sisätilojen Edward '
+          + 'Rumseylle. Rakennustyö kesti 1860–1867, ja se keskeytettiin '
+          + 'ennen kuin Elizabeth Streetin siiven pohjoispuolisko, '
+          + 'keskiosan mansardi ja tornin kattoa oli tehty.'
+          + '\n\n'
+          + 'Kaksikymmentä vuotta myöhemmin talo oli käynyt ahtaaksi. '
+          + 'A. E. Johnson suunnitteli kolmannen kerroksen, ullakon ja '
+          + 'korkeamman, koristeellisemman kellotornin, jonka hiekkakivi '
+          + 'tuotiin tällä kertaa Grampians-vuorilta; työn valvoi Peter '
+          + 'Kerr, ja se valmistui 1887. Talo on tarkkaa '
+          + 'uusrenessanssia, jossa kerrokset erottuvat pylväsjärjestyksestä: '
+          + 'alimpana toscanalaiset, keskellä joonialaiset ja ylinnä '
+          + 'korinttilaiset pylväät.'
+          + '\n\n'
+          + 'Vuonna 1913 lajitteluhalli päätettiin muuttaa yleisölle '
+          + 'avoimeksi postisaliksi, ja työhön palkattiin arkkitehti '
+          + 'Walter Burley Griffin — Canberran asemakaavan tekijä. '
+          + 'Suunnitelmaa muokkasi myöhemmin John Smith Murdoch, ja sali '
+          + 'valmistui 1919. Portaista tuli kaupungin tapaamispaikka ja '
+          + 'uudenvuoden juhlapaikka. Postitoiminta muutti pois 2001, '
+          + 'ja pian sen jälkeen tulipalo vaurioitti postisalia '
+          + 'pahoin 10. syyskuuta 2001.',
+      kuvat: [
+        {
+          tiedosto: 'Melbourne GPO@0.5x.jpg',
+          selite: 'Kellotorni sai nykyisen korkeutensa 1887. Kerrokset '
+            + 'erottuvat pylväsjärjestyksestä: toscanalainen, joonialainen '
+            + 'ja korinttilainen päällekkäin.',
+          lahde: 'PeterMLawrence, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Paavalin katedraali': {
+      aika: '1891',
+      teksti: 'Tontilla pidettiin Melbournen ensimmäinen julkinen '
+          + 'kristillinen jumalanpalvelus 1835. Kortteli oli silloin '
+          + 'hallituksen varausmaata kaukana silloisesta keskustasta ja '
+          + 'toimi viljatorina. Vuoteen 1848 mennessä paikka oli '
+          + 'ensimmäisen Princes-sillan vieressä, ja näkyvä tontti '
+          + 'luovutettiin anglikaaniselle kirkolle. Basalttinen '
+          + 'Pyhän Paavalin kirkko vihittiin 1852.'
+          + '\n\n'
+          + 'Kaupungin kasvaessa hiippakunta päätti rakentaa tilalle '
+          + 'katedraalin, ja työ annettiin englantilaiselle '
+          + 'uusgotiikan mestarille William Butterfieldille. Jotta '
+          + 'kirkko mahtuisi korttelille, se käännettiin ruutukaavan '
+          + 'mukaisesti pohjois–eteläsuuntaan eikä perinteiseen itään. '
+          + 'Peruskivi laskettiin 1880, mutta Butterfield riitaantui '
+          + 'melbournelaisten kanssa ja erosi 1884; työn saattoi '
+          + 'loppuun paikallinen Joseph Reed. Katedraali vihittiin '
+          + '22. tammikuuta 1891 ilman torninhuippuja.'
+          + '\n\n'
+          + 'Huiput rakennettiin vasta 1926–1932 eri suunnitelman '
+          + 'mukaan, ja niiden valmistumisesta pidettiin '
+          + 'kiitosjumalanpalvelus 30. huhtikuuta 1933. Katedraalin '
+          + 'kiviaines on Barrabool Hillsin hiekkakiveä ja Waurn '
+          + 'Pondsin kalkkikiveä, mikä antaa sille lämpimän värin; '
+          + 'huiput ovat sydneyläistä hiekkakiveä ja neljäkymmentä '
+          + 'vuotta nuorempia, joten ne ovat selvästi tummemmat kuin '
+          + 'muu talo. Vuosina 2002–2009 huiput korjattiin '
+          + 'kahdeksantoista miljoonan Australian dollarin '
+          + 'keräysvaroilla.',
+      kuvat: [
+        {
+          tiedosto: 'St. Paul\'s Cathedral Tower.jpg',
+          selite: 'Huiput ovat sydneyläistä hiekkakiveä ja neljäkymmentä '
+            + 'vuotta muuta taloa nuorempia — siksi ne ovat selvästi '
+            + 'tummemmat.',
+          lahde: 'Donaldytong, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Siirtolaisuusmuseo: {
+      aika: '1873–1876',
+      teksti: 'Talo ei ole alun perin museo vaan tullikamari. '
+          + 'Ensimmäinen tullikamari tällä paikalla joen vanhan sataman '
+          + 'vieressä oli teltta; se korvattiin 1841 kaksikerroksisella '
+          + 'basalttitalolla. Kultavuosien vaurastuminen 1850-luvulla '
+          + 'vaati komeampaa: Peter Kerrin suunnitelmassa oli portaiden '
+          + 'päällä mahtava pylväikkö, ja työ aloitettiin 1856–1858, '
+          + 'mutta sitä ei koskaan viety loppuun sellaisenaan.'
+          + '\n\n'
+          + 'Loppuosa rakennettiin 1873–1876 — juuri isoisän matkan '
+          + 'vuosina — yksinkertaisemmalla uusrenessanssijulkisivulla, '
+          + 'jonka piirsivät Kerr sekä julkisten töiden viraston '
+          + 'J. J. Clark ja A. E. Johnson. Tullivirkailijat muuttivat '
+          + 'pois 1965, minkä jälkeen talossa pitivät toimistoaan '
+          + 'liittovaltion kansanedustajat.'
+          + '\n\n'
+          + 'Talo oli tyhjillään 1990-luvun alusta, kunnes siihen '
+          + 'päätettiin perustaa siirtolaisuuden museo. Daryl Jacksonin '
+          + 'suunnittelemassa korjauksessa rakennus entisöitiin ja sen '
+          + 'taakse tuli pieniä laajennuksia. Museo avattiin 1998, ja '
+          + 'se kertoo Melbournen ja Victorian siirtolaisuuden '
+          + 'historiaa siinä talossa, jonka läpi tavarat ja tullit '
+          + 'aikanaan kulkivat.',
+      kuvat: [
+        {
+          tiedosto: 'Old Customs House Melbourne.jpg',
+          selite: 'Tullikamarin uusrenessanssijulkisivu valmistui 1873–1876; '
+            + 'nyt otsassa lukee museon nimi.',
+          lahde: 'Kensarlance, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * BRISBANEN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.brisbane, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "St John's Cathedral (Brisbane)", "Spring Hill
+   * Reservoirs", "ANZAC Square, Brisbane", "MacArthur Chambers",
+   * "Wheat Creek Culvert", "Naldham House", "Old State Library
+   * Building, Brisbane" ja "The Mansions, Brisbane").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat siirtolan muutto Redcliffestä, Meanjinin ja Brisbanen
+   * nimet, pääkaupungin talot, turrbal ja jagera tänään, vanha
+   * tuulimylly, parlamenttitalo, pääposti, vuoden 1893 tulva,
+   * kasvitieteellinen puutarha, Maiwar-joki, Kangaroo Pointin
+   * kalliot, Mount Coot-tha, Story-silta, tullikamari, Queen Street
+   * ja Expo 88. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Wheat Creekin
+   * jutussa EI kerrota siirtolan muutosta Redcliffestä, vaikka puron
+   * vesi oli muuton syy: muutto on lehden noston H1 aihe, ja juttu
+   * pysyy purossa ja viemärissä. Naldham Housen jutussa satama
+   * esiintyy vain rannikkolaivayhtiön konttorina — satama väentuojana
+   * on matkaoppaan jakso 4.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN POIS AIHESYISTÄ. Kaupungintalo,
+   * valtiovarainrakennus, muonavarasto, vanha tuulimylly ja
+   * parlamenttitalo ovat kaikki kartan ruudussa, ja jokainen on
+   * lehden oman jutun aihe (New Yorkin sääntö). Vesisäiliöiden
+   * jutussa tuulimylly mainitaan vain paikanmerkkinä.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Regent-teatteri
+   * on 162 metriä MacArthurin talosta ja Brisbanen synagoga 126
+   * metriä The Mansionsista.
+   */
+  brisbane: {
+    'St Johnin katedraali': {
+      aika: '1906–2009',
+      teksti: 'Brisbanen katedraalihanke lähti liikkeelle 1887 '
+          + 'kuningatar Victorian hallitsijajuhlan kunniaksi. '
+          + 'Piispa William Webber tilasi piirustukset englantilaiselta '
+          + 'John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. '
+          + 'Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon '
+          + 'rakentaminen yhdellä kertaa osoittautui mahdottomaksi. '
+          + 'Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan '
+          + 'aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen '
+          + 'pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 '
+          + 'länsipääty sekä kolme tornia.'
+          + '\n\n'
+          + 'Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian '
+          + 'dollaria, ja työtä johti Peter Dare, Englannin Exeterin '
+          + 'katedraalin kivenhakkaajamestari. Kupariset länsihuiput '
+          + 'nostettiin paikoilleen 1. maaliskuuta 2008, ja valmis '
+          + 'katedraali vihittiin uudelleen 29. lokakuuta 2009 — '
+          + 'sata kahdeksan vuotta peruskiven laskemisesta. Kirkko on '
+          + 'Australiassa ainutlaatuinen siinä, että se saatiin valmiiksi '
+          + 'papiston, kivenhakkaajien ja arkkitehtien yhteistyönä '
+          + 'lähes sadan vuoden aikana, kuten keskiajan katedraalit.'
+          + '\n\n'
+          + 'Ulkoseinät ovat ruskeaa, vaaleanpunaista ja sinipunervaa '
+          + 'brisbanentuffia Windsorin louhoksesta, perustusten ja '
+          + 'pilarien jalustojen graniitti ja basaltti Victoriasta ja '
+          + 'ikkunanpielien hiekkakivi Pyrmontista Uudesta '
+          + 'Etelä-Walesista. Kivestä holvattu sisätila kaikuu viisi '
+          + 'sekuntia, mikä tekee urkumusiikista poikkeuksellisen '
+          + 'soivaa; urut ovat Australian suurimmat katedraaliurut.',
+      kuvat: [
+        {
+          tiedosto: 'St John\'s Cathedral, Brisbane, Queensland, 2020.jpg',
+          selite: 'Kupariset länsihuiput nostettiin paikoilleen 2008 ja ovat '
+            + 'siksi tummat; niiden alla on 1900-luvun alun tuffikivi.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Spring Hillin vesisäiliöt': {
+      aika: '1871 ja 1882',
+      teksti: 'Nurmen alla vanhan tuulimyllyn takana on kaksi '
+          + 'punatiilistä vesisäiliötä. Ensimmäinen rakennettiin 1871 '
+          + 'ja toinen yksitoista vuotta myöhemmin muutaman metrin '
+          + 'päähän siitä. Molemmat on upotettu maahan ja tuettu '
+          + 'sisältä holvikaarilla ja pilareilla, koska tiili joutuu '
+          + 'kestämään maan painetta ulkoapäin. Spring Hill valittiin '
+          + 'siksi, että kukkula on korkeammalla kuin lähes koko '
+          + 'nykyinen keskusta: vesi tuli Enoggeran padolta pelkän '
+          + 'painovoiman avulla.'
+          + '\n\n'
+          + 'Sitä ennen kaupunki eli luonnonvesien, kaivojen, '
+          + 'sadevesisäiliöiden ja vedenkantajien varassa. Insinööri '
+          + 'Joseph Brady rakensi 1863–1866 Enoggeran padolta '
+          + 'ensimmäisen painovoimaisen vesijohtoverkon, joka oli '
+          + 'samalla Queenslandin ensimmäinen kunnallistekninen urakka. '
+          + 'Pormestari Thomas Blacket Stephens ehdotti säiliötä '
+          + 'Windmill Hillille jo 1862, mutta raha viivytti sitä '
+          + 'vuoteen 1871 — jolloin paine oli jo käynyt riittämättömäksi '
+          + 'väkiluvun kasvun takia. Toinen, suurempi säiliö rakennettiin '
+          + '1882 erityisesti South Brisbanen ja Kangaroo Pointin '
+          + 'korkeita osia varten.'
+          + '\n\n'
+          + 'Säiliöt ovat Queenslandin ensimmäiset maahan upotetut, ja '
+          + 'ainoat tiedossa olevat, jotka on muurattu tiilestä '
+          + 'holvikaarin eikä valettu betonista. Ne palvelivat '
+          + 'kaupunkia lähes vuosisadan ajan, kunnes päävesijohto '
+          + 'suljettiin 3. syyskuuta 1962: pieni tilavuus ja matala '
+          + 'sijainti eivät enää riittäneet tornitaloille. '
+          + 'Vuonna 2014 tyhjennettyjen ja kolme vuotta siivottujen '
+          + 'säiliöiden hämärässä kaikuvassa tilassa esitettiin '
+          + 'oopperaa, ja liput myytiin loppuun.',
+      kuvat: [
+        {
+          tiedosto: 'Spring Hill Reservoirs interior, Brisbane.jpg',
+          selite: 'Sisällä tiiliholvit jakavat säiliön osastoihin — juuri ne '
+            + 'pitävät maan paineen ulkopuolella.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'ANZAC-aukio': {
+      aika: '1930',
+      teksti: 'Ensimmäinen maailmansota verotti Australiaa raskaasti. '
+          + 'Noin viiden miljoonan asukkaan maasta kaatui 60 000 '
+          + 'sotilasta ja haavoittui 152 000; tappio-osuus 68,5 '
+          + 'prosenttia oli liittoutuneiden korkein. Ajatus suuresta '
+          + 'muistopuistosta keskelle kaupunkia esitettiin jo 1916. '
+          + 'Alkuperäinen suunnitelma varasi koko korttelin Annin, '
+          + 'Edwardin, Adelaiden ja Creekin katujen välissä, mutta '
+          + 'neuvottelut kutistivat alueen; 1928 valtio ja liittovaltio '
+          + 'luovuttivat maat ja lupasivat rakentaa reunoille yhtenäisen '
+          + 'suunnitelman mukaiset talot.'
+          + '\n\n'
+          + 'Muistokappelin suunnittelukilpailun voittivat 1928 '
+          + 'sydneyläiset arkkitehdit Buchanan ja Cowper. Queenslandin '
+          + 'kuvernööri sir John Goodwin vihki aukion ja kappelin '
+          + 'aselepopäivänä 11. marraskuuta 1930, ja samana päivänä '
+          + 'sytytettiin pronssimaljassa palava ikuinen liekki. '
+          + 'Ulkoseinä on omistettu niille 60 000 queenslandilaiselle, '
+          + 'jotka palvelivat ensimmäisessä maailmansodassa. Aukio '
+          + 'muistaa kaikkia queenslandilaisia, ei vain Brisbanen '
+          + 'asukkaita.'
+          + '\n\n'
+          + 'Queenslandin naisten muistomerkki paljastettiin 1932. Se '
+          + 'oli Brisbanen naisklubin hanke ja rahoitettiin '
+          + 'yleisökeräyksellä, ja sen suunnitteli ja veisti Daphne '
+          + 'Mayo. Vuosien mittaan aukiolle on tullut muistomerkkejä '
+          + 'muistakin sodista: buurisodasta, toisesta maailmansodasta, '
+          + 'Koreasta, Borneosta, Uudesta-Guineasta ja Vietnamista. '
+          + 'Toukokuussa 2022 pystytettiin pronssinen muistomerkki '
+          + 'aboriginaali- ja Torresinsalmen saarelaissotilaille; sen '
+          + 'suunnitteli wakka wakka -taiteilija John Smith Gumbula '
+          + 'yhdessä kuvanveistäjä Liam Hardyn kanssa.',
+      kuvat: [
+        {
+          tiedosto: 'ANZAC Square, Brisbane in February 2020.jpg',
+          selite: 'Aukio muistokappelin portailta katsottuna: keskellä on '
+            + 'buurisodan ratsastajapatsas ja reunoilla 1930-luvun '
+            + 'yhtenäiset talot.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'MacArthurin talo': {
+      aika: '1934',
+      teksti: 'Talo rakennettiin 1931–1934 vakuutusyhtiö AMP:n '
+          + 'Queenslandin pääkonttoriksi, ja se korvasi kaksi aiempaa '
+          + 'AMP:n taloa samalla tontilla. Ajoitus kertoo yhtiön '
+          + 'vahvuudesta: konttori nousi 1930-luvun laman pahimpina '
+          + 'vuosina. Suunnittelijoina olivat Francis Richard Hall ja '
+          + 'Harold M. Cook, rakentajana Brisbanen mestarirakentaja '
+          + 'George A. Stronach, ja hinta oli noin 255 000 puntaa. '
+          + 'Jalustan graniitti testautettiin Queenslandin yliopistolla '
+          + 'ennen rakentamista, ja teräsrunko koottiin pulteilla eikä '
+          + 'niiteillä — vuoden 1932 Brisbanessa se oli uutta.'
+          + '\n\n'
+          + 'Pääsisäänkäynnin yläpuolisen kuvaelman veisti sydneyläinen '
+          + 'Fred Gowan sisilialaisesta marmorista. Se kuvittaa yhtiön '
+          + 'tunnuslausetta ”Amicus certus in re incerta”, varma '
+          + 'ystävä epävarmassa asiassa: keskellä seisoo nainen '
+          + 'runsaudensarvi vierellään ja voitonpalmu kädessään, '
+          + 'toisella puolella istuu nainen lapsineen ja toisella mies. '
+          + 'Kun AMP muutti pois 1978, kuvaelma jäi — toisin kuin '
+          + 'yhtiön muissa taloissa, joista se yleensä irrotettiin.'
+          + '\n\n'
+          + 'Keskeisen sijaintinsa ja teräsbetonikattonsa vuoksi talo '
+          + 'otettiin toisessa maailmansodassa liittoutuneiden '
+          + 'lounaisen Tyynenmeren alueen esikunnaksi. Vuokralaiset '
+          + 'evakuoitiin sotilaskäskyllä 21. heinäkuuta 1942, ja talo '
+          + 'palautui heille vasta 14. kesäkuuta 1945. Ylipäällikkö '
+          + 'kenraali Douglas MacArthur otti käyttöönsä johtokunnan '
+          + 'salin ja hänen esikuntansa loput talosta. Nimi vaihdettiin '
+          + 'MacArthur Chambersiksi 1979.',
+      kuvat: [
+        {
+          tiedosto: 'MacArthur Chambers, Brisbane, Queensland, 2021.jpg',
+          selite: 'Helidonin hiekkakivellä verhoiltu kulmatalo Queenin ja '
+            + 'Edwardin katujen risteyksessä.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Wheat Creekin holvi': {
+      aika: '1861',
+      teksti: 'Keskustan alla virtaa puro. Wheat Creek eli Big Creek '
+          + 'sai alkunsa nykyisen Brisbane Grammar Schoolin tienoilta, '
+          + 'kulki Roma Streetin ratapihan kohdalta lammikkona Georgen '
+          + 'ja Roman katujen väliin, jatkoi vinosti Adelaiden ja '
+          + 'Albertin katujen risteyksen poikki ja laski jokeen '
+          + 'nykyisen Creek Streetin päässä. Kadun nimi on ainoa asia, '
+          + 'joka purosta näkyy kartalla — mutta uoman pohja erottuu '
+          + 'yhä Adelaide Streetin huoltokujilla.'
+          + '\n\n'
+          + 'Vuonna 1859 perustettu kaupunki oli harjanteita ja soita, '
+          + 'joita ei saanut kuivatuksi, ja korkea nousuvesi teki '
+          + 'maasta sateella kulkukelvotonta. Viemäröinti oli siis uuden '
+          + 'kunnanvaltuuston kiireellisimpiä töitä. Ratkaisu oli '
+          + 'munanmuotoinen viemäri, jonka John Phillips oli kehittänyt '
+          + '1840-luvulla: kapea pohja pitää virtauksen nopeana, jolloin '
+          + 'viemäri ei liety umpeen niin kuin leveäpohjainen laatikko-'
+          + 'viemäri. Brisbanen ensimmäinen viemäri rakennettiin 1860 '
+          + 'kivestä Albert Streetille.'
+          + '\n\n'
+          + 'Wheat Creekin holvi tilattiin 24. tammikuuta 1861 '
+          + 'kaupungingeodeetti Christopher Porterin piirustusten '
+          + 'mukaan, ja H. C. Loven tarjous 830 puntaa hyväksyttiin '
+          + '4. helmikuuta. Holvi sulki puron kadun alle. Siihen '
+          + 'liitettiin maaliskuussa 1877 valmistunut munanmuotoinen '
+          + 'tiiliviemäri, joka kulkee Adelaide Streetiä Albertilta '
+          + 'Creek Streetille ja on yhä käytössä. Holvi itse palveli '
+          + 'vuoteen 2008; pätkä siitä on säilytetty näytillä '
+          + 'King George Squaren bussiasemalla.',
+      kuvat: [
+        {
+          tiedosto: 'Wheat Creek Culvert.JPG',
+          selite: 'Pätkä vuoden 1861 holvia on nostettu näytille King George '
+            + 'Squaren bussiaseman seinälle.',
+          lahde: 'Reubot, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Naldham House': {
+      aika: '1864 ja 1889',
+      teksti: 'Australasian Steam Navigation Company osti tontin joen '
+          + 'rannasta maaliskuussa 1852, mutta ensimmäinen laituri '
+          + 'valmistui vasta 1859 ja toinen Eagle Streetin lähelle '
+          + '1861. Vuonna 1864 tontille nousi kaksikerroksinen '
+          + 'konttori, jossa istui yhtiön brisbanelainen asiamies Henry '
+          + 'O\'Reilly. Vuonna 1877 konttori korotettiin asiamiehestä '
+          + 'sivukonttoriksi, ja rakennusta jatkettiin Felix Streetin '
+          + 'kulmaan.'
+          + '\n\n'
+          + '1880-luvun puolivälissä yhtiö sulautettiin useiden muiden '
+          + 'kanssa Australasian United Steam Navigation Companyksi, '
+          + 'josta tuli Queenslandin ja Australian merenkulun mahti. '
+          + 'Elokuussa 1888 arkkitehdit McCredie Bros & Chambers '
+          + 'pyysivät tarjouksia laajennuksesta, ja työn sai J. R. '
+          + 'Locke Sydneyn Redfernistä. Yhdentoistatuhannen punnan '
+          + 'urakassa ylin kerros purettiin, tilalle tuli kaksi uutta, '
+          + 'pohjoispäähän torni ja kupoli, Mary Streetin puolelle '
+          + 'parveke ja taloon uudet sisäänkäynnit.'
+          + '\n\n'
+          + 'Talo palveli laivayhtiön konttorina lähes vuosisadan. '
+          + 'Nykyinen nimi ei ole suvun eikä paikan nimi vaan '
+          + 'lennätinosoite: kun MacDonald Hamilton & Co ryhtyi 1914 '
+          + 'yhtiön asiamieheksi, se otti käyttöön telex-osoitteen, '
+          + 'joka koostuu firman nimen keskimmäisistä kirjaimista — '
+          + 'MacDoNALD ja HAMilton, siis Naldham. Nimi jäi taloon.',
+      kuvat: [
+        {
+          tiedosto: 'Naldham House, Brisbane 2024.jpg',
+          selite: 'Pohjoispään torni ja kupoli tulivat 1888–1889 laajennuksessa, '
+            + 'ja vuosiluku on yhä julkisivussa.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha kirjastotalo': {
+      aika: '1876–1879',
+      teksti: 'Kolmikerroksinen William Streetin puoleinen osa '
+          + 'rakennettiin 1876–1879 Queenslandin museon ensimmäiseksi '
+          + 'varta vasten suunnitelluksi taloksi. Museo oli perustettu '
+          + '1855, ja se oli siihen asti asunut lainatiloissa. '
+          + 'Piirustukset teki 1876 George Curtis Walker. Klassinen, '
+          + '1500-luvun italialaisiin taloihin nojaava tyyli ja tontti '
+          + 'aivan kaupungin eteläisen sisääntulon vieressä kertovat '
+          + 'siitä, kuinka tärkeänä museota pidettiin Brisbanen '
+          + 'tieteellisessä ja sivistyselämässä.'
+          + '\n\n'
+          + 'Talo osoittautui heti liian pieneksi. Alapuolinen maa '
+          + 'tasattiin 1881 ja kellaria laajennettiin, ja jo 1884 '
+          + 'hallitus varasi rahaa uuteen museorakennukseen — mutta '
+          + 'lama pakotti museon pysymään ahtaissa tiloissa vuoteen '
+          + '1899, jolloin se muutti Gregory Terracen entiseen '
+          + 'näyttelyhalliin.'
+          + '\n\n'
+          + 'Tyhjä talo muutettiin 1 900 punnan urakalla vuonna 1896 '
+          + 'perustetun maksuttoman yleisen kirjaston tiloiksi, ja '
+          + 'kirjasto avautui huhtikuussa 1902. Nimi muuttui '
+          + 'Queenslandin osavaltionkirjastoksi 1971. Vuodesta 1931 '
+          + 'talossa asui myös John Oxley -kirjasto, Queenslandin '
+          + 'historian tutkimusaineiston pääkokoelma. Osavaltion '
+          + 'satavuotisjuhlan hankkeena taloa laajennettiin 1958–1959 '
+          + 'nelikerroksisella siivellä, jossa on näyttelyhalli ja '
+          + 'joen puolella lukusaleja. Kirjasto muutti 1988 South '
+          + 'Bankille.',
+      kuvat: [
+        {
+          tiedosto: 'Old State Library of Queensland Building, 2021.jpg',
+          selite: 'William Streetin puoleinen julkisivu vuosilta 1876–1879: '
+            + 'klassinen pylväikkö kertoo, kuinka tärkeänä museota '
+            + 'pidettiin.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'The Mansions': {
+      aika: '1889',
+      teksti: 'Kuuden rivitalon rivi George Streetin harjanteella on '
+          + 'kolmen queenslandilaisen poliitikon sijoitus: pääministeri '
+          + 'Boyd Dunlop Morehead, valtiovarainministeri William '
+          + 'Pattison ja Clermontin edustaja John Stevenson ostivat '
+          + 'tontin elokuussa 1888. He palkkasivat arkkitehti George '
+          + 'Henry Male Addisonin, ja RE Burton rakensi rivin 11 700 '
+          + 'punnalla vuonna 1889. Talo on punatiiltä, jonka vaaleat '
+          + 'yksityiskohdat ovat Uudesta-Seelannista tuotua Oamarun '
+          + 'kalkkikiveä — samaa kiveä kuin George Streetin puoleisen '
+          + 'räystäslistan päällä istuvat kaksi kivistä kissaa.'
+          + '\n\n'
+          + 'Rivitalot olivat siirtomaa-ajan Queenslandissa harvinaisia, '
+          + 'sillä vuoden 1885 laki kielsi liian pienet tontit: '
+          + 'vähimmäiskoko oli kuusitoista neliöruutua ja kadunpuoleinen '
+          + 'leveys yhdeksän metriä, mikä käytännössä lopetti '
+          + 'rivitalojen rakentamisen muuten kuin vuokrasijoituksena. '
+          + 'Kaari oli suunniteltu ilmastoon: syvät holvikäytävät '
+          + 'antavat varjon estämättä tuuletusta.'
+          + '\n\n'
+          + 'Sijoitus ajoittui huonosti. Rakennusala romahti 1891, '
+          + 'vuokrat ja maan arvo painuivat pohjaan 1893–1894, ja '
+          + 'kaikki kolme sijoittajaa kärsivät raskaat tappiot. '
+          + 'Talon merkittävin asukas tuli silti juuri laman kynnyksellä: '
+          + 'joulukuussa 1891 tänne avasi vastaanottonsa tohtori Lilian '
+          + 'Cooper, Queenslandin ensimmäinen naislääkäri ja Australian '
+          + 'ensimmäinen naiskirurgi. Hän asui talossa vielä useita '
+          + 'vuosia vuoden 1893 tulvien jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'The Mansions, Brisbane, Jan 2020.jpg',
+          selite: 'Punatiiltä ja Oamarun kalkkikiveä, ja molemmilla katusivuilla '
+            + 'kahden kerroksen syvä holvikäytävä — varjoa ilman, että '
+            + 'tuuletus katkeaa.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

@@ -11733,6 +11733,123 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Muistosilta', lat: -43.5331, lon: 172.6334 },
     ],
   },
+  /*
+   * MELBOURNE (7.9.2026). Rajaus on 1,9 × 1,8 kilometriä eli koko
+   * Hoddlen ruudukko ja vähän yli — perustelu ja Yarran yli vedetty
+   * eteläreuna ovat tools/piirra-kaupunkikartta.mjs:n
+   * melbourne-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Yarran
+   * nimi, kultaryntäys, raitiovaunu ja kiinalainen kortteli;
+   * matkaopas kertoo Southern Crossista, ruudukon mitoista, Queen
+   * Victoria Marketista ja räjäytetystä koskesta; historiasivu
+   * kaupungin perustamisesta, parlamenttitalosta, vanhasta
+   * valtiovarainrakennuksesta ja Wurundjerin maasta; taidesivu
+   * taidekokoelman alkuvuosista, von Guérardista, Buvelot'sta ja
+   * Berukista; luontosivu kasvitieteellisestä puutarhasta,
+   * Guilfoylesta, puistokehästä ja seitsemästä vuodenajasta.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Flinders
+   * Streetin asema, kuninkaallinen näyttelyrakennus ja Melbourne
+   * Cricket Ground ovat kaikki lehden omien juttujen aihe;
+   * ensimmäinen on 300 metrin päässä katedraalista ja mahtuisi
+   * ruutuun vaivatta. Samasta syystä kartalla ei ole yleistä
+   * kirjastoa: sen eteläsiipi ja lukusali ovat noston "Kokoelma
+   * ilman omaa taloa" aihe.
+   *
+   * KAUPUNGINTALO PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: se on 197 metriä
+   * Pyhän Paavalin katedraalista. Molemmat ovat Swanston Streetin
+   * varrella, ja katedraali valittiin, koska sen tontilla on
+   * vanhempi tarina.
+   */
+  melbourne: {
+    polku: 'assets/kartat/melbourne-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -37.8040, etela: -37.8215, lansi: 144.9540, ita: 144.9745 },
+    esittely: 'Kartta näyttää koko sen ruutukaavan, jonka Robert '
+      + 'Hoddle merkitsi maastoon vuonna 1837. Kadut kulkevat joen '
+      + 'suuntaisesti eivätkä ilmansuuntien mukaan, ja siksi ruudukko '
+      + 'on kuvassa vinossa. Alareunassa mutkittelee Yarra, '
+      + 'vasemmalla alkaa Flagstaff Gardensin nurmi ja oikeassa '
+      + 'yläkulmassa näkyy Carlton Gardensin tähtikuvio. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Christchurchissa. Koordinaatit
+       * en-Wikipedian coordinates-rajapinnasta 7.9.2026. Pienin väli
+       * on 214 metriä (ammattiyhdistystalo – vanha vankila),
+       * toiseksi pienin 261 metriä (katedraali – siirtolaisuusmuseo).
+       */
+      { nimi: 'Ammattiyhdistystalo', lat: -37.8063, lon: 144.9663 },
+      { nimi: 'Vanha vankila', lat: -37.80805556, lon: 144.96527778 },
+      { nimi: 'Coopin haulitorni', lat: -37.810301, lon: 144.962947 },
+      { nimi: 'Princess-teatteri', lat: -37.810725, lon: 144.972169 },
+      { nimi: 'Rahapaja', lat: -37.812153, lon: 144.956794 },
+      { nimi: 'Pääposti', lat: -37.81384, lon: 144.963028 },
+      { nimi: 'Pyhän Paavalin katedraali', lat: -37.816853, lon: 144.967384 },
+      { nimi: 'Siirtolaisuusmuseo', lat: -37.8191, lon: 144.9604 },
+    ],
+  },
+  /*
+   * BRISBANE (7.9.2026). Rajaus on 1,5 × 1,4 kilometriä ja se on
+   * valittu joen eikä katujen mukaan — perustelu ja Kangaroo
+   * Pointille ulottuva itäreuna ovat tools/piirra-kaupunkikartta.mjs:n
+   * brisbane-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * siirtolan muutto Redcliffestä, Meanjinin ja Brisbanen nimet,
+   * pääkaupungin ensimmäiset talot ja turrbal ja jagera tänään;
+   * matkaopas kertoo lentokentästä, kaupungin rakenteesta,
+   * tolppatalosta ja satamasta; historiasivu vanhasta
+   * tuulimyllystä, parlamenttitalosta, pääpostista ja vuoden 1893
+   * tulvasta; luontosivu kasvitieteellisestä puutarhasta,
+   * Maiwar-joesta, Kangaroo Pointin kallioista ja Mount Coot-thasta;
+   * kaupunkikuvasivu Story-sillasta, tullikamarista, Queen Streetin
+   * kävelykadusta ja Expo 88:sta. Yksikään kartan kohteista ei ole
+   * niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA ON RUUDUN SISÄLLÄ MUTTA EI KARTALLA.
+   * Kaupungintalo, valtiovarainrakennus, muonavarasto, vanha
+   * tuulimylly ja parlamenttitalo mahtuisivat kaikki mukaan, mutta
+   * ne ovat lehden omien juttujen aihe (New Yorkin sääntö). Ne
+   * antavat kuitenkin kartalle sen tutut kortteliaukot.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Regent-teatteri
+   * on 162 metriä MacArthurin talosta ja Brisbanen synagoga 126
+   * metriä The Mansionsista. Kumpikin olisi ollut hyvä juttu, ja
+   * kumpikin jäi naapurinsa alle.
+   */
+  brisbane: {
+    polku: 'assets/kartat/brisbane-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -27.4625, etela: -27.4760, lansi: 153.0190, ita: 153.0335 },
+    esittely: 'Brisbanen keskusta istuu jyrkässä joenmutkassa, ja '
+      + 'kartta ottaa mutkan kokonaan: joki kiertää ruutukaavan '
+      + 'vasemmalta, alhaalta ja oikealta, ja niemi jää kolmelta '
+      + 'sivulta veden ympäröimäksi. Yläkulmassa nousee Spring '
+      + 'Hillin rinne, oikeassa reunassa on Kangaroo Pointin ranta '
+      + 'ja alhaalla vasemmalla South Bank. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * 7.9.2026. Pienin väli on 222 metriä (ANZAC-aukio –
+       * MacArthurin talo), toiseksi pienin 281 metriä (MacArthurin
+       * talo – Wheat Creekin holvi).
+       */
+      { nimi: 'St Johnin katedraali', lat: -27.46398, lon: 153.030061 },
+      { nimi: 'Spring Hillin vesisäiliöt', lat: -27.4661, lon: 153.0231 },
+      { nimi: 'ANZAC-aukio', lat: -27.4665, lon: 153.0266 },
+      { nimi: 'MacArthurin talo', lat: -27.4684, lon: 153.0273 },
+      { nimi: 'Wheat Creekin holvi', lat: -27.4689, lon: 153.0245 },
+      { nimi: 'Naldham House', lat: -27.4701, lon: 153.0301 },
+      { nimi: 'Vanha kirjastotalo', lat: -27.4727, lon: 153.0237 },
+      { nimi: 'The Mansions', lat: -27.4744, lon: 153.0266 },
+    ],
+  },
 };
 
 /*
