@@ -7,6 +7,7 @@ import { Game } from './game.js';
 import { UI } from './ui.js';
 import {
   VANHA_KARTTA_KAYTOSSA,
+  asennaValikonSulkuvartija,
   asetaKehittajaMaailma, asetaKehittajaTila, asetaLautaValinta,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, lautaValinta,
   laatuAinaPaalla, asetaLaatuAina,
@@ -779,6 +780,15 @@ document.addEventListener('keydown', (event) => {
   if (event.key !== 'Escape') return;
   suljeValikko();
 });
+
+/*
+ * VALIKON SULKU EI AVAA KOHDETTA KARTALTA (omistaja 7.9.2026, iPad).
+ * Yhteinen vartija kaikille kartan päällä kelluville valikoille —
+ * hampurilainen ja kehittäjän ratas — js/ui-apurit.js:ssä: kartalle
+ * osuva napautus sulkee auki olevan valikon ja nielaistaan, jolloin
+ * sama napautus ei enää valu laudan osumatestiin.
+ */
+asennaValikonSulkuvartija();
 
 // Napsautusääni kaikille napeille; vastausvaihtoehdoilla on omat äänensä.
 document.addEventListener('pointerdown', (event) => {

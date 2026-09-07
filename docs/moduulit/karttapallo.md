@@ -3481,3 +3481,70 @@ zoomilla noin 30 css-px. Raamattu sanoo pallon merkeistä "koko on
 ruutuvakio"; kaupunkipiste on ainoa, joka ei sitä ole. Korjaus on säteen
 sitominen kameran korkeuteen (ja pisteiden uudelleenasetus zoomin
 muuttuessa) — oma eränsä.
+
+## 13. Valikon sulku ei avaa kohdetta (7.9.2026)
+
+Omistajan iPad-havainto, sanatarkasti: *"jos hampurilainen tai joku muu
+valikko on auki ja käyttäjä klikkaa mitä tahansa kohtaa kartalla, niin
+silloin vain se Valikko pitäisi sulkeutua, mutta mikään kohde ei saisi
+avautua kartalla samalla klikkauksella."*
+
+### 12.1 Juurisyy
+
+Valikot sulkeutuvat **pointerdownista** (js/main.js: dokumentin
+kuuntelijat `.valikko-kotelo`n ja `.kehittaja-valikko-kotelo`n
+ulkopuolisille napautuksille), mutta laudan osumatesti ajetaan vasta
+**clickissä** (globe.gl `onGlobeClick` / `onPointClick`, tasokartalla
+`.map-pane`n click). Yksi napautus siis sekä sulki valikon että avasi
+kohteen sen alta. Sama vika kuin pöllön kuplassa 27.8.2026 — iOS
+syntetisoi clickin touchendistä, ja Chromiumin kosketus tekee saman.
+
+### 12.2 Yksi yhteinen vartija
+
+js/ui-apurit.js (samassa tiedostossa kuin `nielaiseSulkevaNapautus`,
+jota se käyttää):
+
+| Vienti | Tehtävä |
+| --- | --- |
+| `VALIKKOKERROKSET` | kartan päällä kelluvat valikot `{ valikko, nappi }`-pareina |
+| `KARTAN_ALUE` | `.map-pane` — mikä lasketaan "kohdaksi kartalla" |
+| `avoimetValikot(doc)` / `onkoValikkoAuki(doc)` | mitkä ovat juuri nyt auki |
+| `suljeAvoimetValikot(doc)` | sulkee kaikki (hidden + aria-expanded), palauttaa `true` jos jokin oli auki |
+| `asennaValikonSulkuvartija({ doc })` | asentaa vartijan; kutsutaan kerran js/main.js:stä |
+| `valikkoSulkeutuiNapautuksesta()` | kertakäyttöinen lippu laudan osumatestille |
+
+Vartija on **dokumentin kaappausvaiheen pointerdown**, joten se ehtii
+ennen valikoiden omia kuplavaiheen sulkukuuntelijoita ja ennen laudan
+kuuntelijoita. Kun napautus osuu `.map-pane`en ja jokin valikko on auki:
+valikot suljetaan, lippu nousee ja `nielaiseSulkevaNapautus` syö saman
+napautuksen clickin kaappausvaiheessa — yksikään kartan kuuntelija ei
+näe sitä. Sama nielu hoitaa myös tasokartan `pane`-click-polun
+(js/kartta.js), joka on dokumentin alapuolella puussa; erillistä
+korjausta vanhalle laudalle ei siis tarvita (`VANHA_KARTTA_KAYTOSSA`
+on nyt false, ks. luku 11).
+
+`js/pallolauta/lauta.js` kysyy lipun **ennen osumatestiä** — sekä
+`napautaPintaan`in alussa että `onPointClick`issä — samalla kaavalla
+kuin `korttiOliAuki`. Se on toinen lukko sen varalta, että nielu ei
+jostain syystä ehdi.
+
+### 12.3 Rajaukset
+
+- **Veto panoroi yhä.** Lippu nollataan jokaisella kartalle osuvalla
+  pointerdownilla, joten panorointi ei jätä sitä roikkumaan: vain
+  napautus (tap/click) nielaistaan.
+- **Napit kartan päällä ovat komentoja** (`a, button, input, select,
+  textarea, label, [role="button"]`) — maalehtinappi, maapilleri, noppa,
+  kelluvien korttien painikkeet. Niiden napautus menee perille myös
+  valikon ollessa auki; valikko sulkeutuu silti omaa reittiään. Sama
+  rajaus kuin pöllön kuplan `omaHallinta`ssa.
+- **Kartoitetut valikot** ovat `#paavalikko` (hampurilainen — sen
+  sisällä myös äänirivit, lautakytkimet ja työhuoneen napit) ja
+  `#kehittaja-valikko` (ratas). Muut eivät tarvitse vartijaa:
+  `#nahtavyys-valikko` ja `#linssi-valikko` asuvat modaalin dialogin
+  sisällä, jolloin kartta ei ota napautuksia lainkaan; pöllön ja pulun
+  kuplat nielaisevat sulkevan napautuksensa itse (js/pollo.js
+  `sidoKuplanNapautus`); musiikkivalitsin on Tilannelehden sivu.
+
+Savuke: `tools/savukkeet/savuke-valikon-sulku.mjs` (hampurilainen ja
+ratasvalikko: ensimmäinen napautus vain sulkee, toinen avaa kohteen).
