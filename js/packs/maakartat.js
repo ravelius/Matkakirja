@@ -12831,6 +12831,134 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vuoden 1909 näyttelypalatsi', lat: -0.2310, lon: -78.5123 },
     ],
   },
+  /*
+   * PORT MORESBY (7.9.2026). Rajaus on 7,5 × 7,4 kilometriä eli
+   * paketin väljimpiä — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * portmoresby-lohkossa: kaupunki jakautuu kolmeen osaan, jotka ovat
+   * kuuden ja seitsemän kilometrin päässä toisistaan, ja vanhassa
+   * keskustassa on en-Wikipedian koordinaattirajapinnassa vain yksi
+   * kelvollinen kohde.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat sataman
+   * nimi 1873, motut ja koitat, Hanuabada ja pääkaupungiksi tulo;
+   * matkaopas kertoo Jacksonsin lentoasemasta, kaupungin kolmesta
+   * osasta, Kokin torista ja sadevarjosta; historiasivu Basiliskista,
+   * lähetysseuran neljästä opettajasta, tulematta jääneestä
+   * kultaryntäyksestä ja kahdesti nostetusta lipusta; hirisivu
+   * lakatoi-purjehduksista; taidesivu kansallismuseosta ja
+   * palautetuista esineistä. Yksikään kartan kahdeksasta kohteesta ei
+   * ole niiden aihe.
+   *
+   * KANSALLISMUSEO JÄTETTIIN TARKOITUKSELLA POIS, vaikka se on
+   * kolmensadan metrin päässä parlamenttitalosta ja mahtuisi ruutuun
+   * vaivatta: sille on lehden taidesivulla neljä nostoa. Samasta
+   * syystä kartalla ei ole Kokin toria eikä Hanuabadaa.
+   *
+   * PARLAMENTTITALO JA KANSALLISKIRJASTO OVAT KARTALLA, vaikka
+   * matkaoppaan jakso "Alueen rakenne" mainitsee ne nimeltä. Maininta
+   * on luettelo siitä, mitä Waiganissa on ("siellä ovat parlamentti,
+   * kansallismuseo ja kansalliskirjasto"); kummankaan tarinaa lehti ei
+   * kerro, ja New Yorkin sääntö koskee lehden juttujen aiheita, ei
+   * jokaista siinä esiintyvää nimeä. Museon kohdalla raja ylittyisi,
+   * ja siksi museo jäi pois.
+   *
+   * BISININ URHEILUPUISTO ON KARTALLA VAIN KERRAN. Puiston neljästä
+   * kentästä PMRL Stadium ja PNG Football Stadium ovat 93 metrin
+   * päässä toisistaan eli 200 metrin säännön alla; kartalle valittiin
+   * Amini Park, koska se on krikettiliiton kotikenttä ja ainoa, jonka
+   * tarina ei ole toisen kentän tarina.
+   */
+  portmoresby: {
+    polku: 'assets/kartat/portmoresby-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -9.4235, etela: -9.4905, lansi: 147.1429, ita: 147.2109 },
+    esittely: 'Kartan alue kattaa kaupungin kaikki kolme osaa. '
+      + 'Vasemmassa alanurkassa on Townin niemi, vanha keskusta, jonka '
+      + 'toisella puolella on Fairfax Harbourin satamavesi ja toisella '
+      + 'Papuanlahti; keskellä ovat kuivat kukkulat, joiden yli päätiet '
+      + 'kaartavat; oikealla on Boroko ja oikeassa ylänurkassa Waigani, '
+      + 'itsenäistymisen jälkeen rakennettu hallintokaupunki. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Halifaxissa ja Wellingtonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta ja geosearchista 7.9.2026. Pienin
+       * väli on 472 metriä (parlamenttitalo – kansalliskirjasto),
+       * toiseksi pienin 762 metriä (St Josephin koulu – Amini Park).
+       */
+      { nimi: 'Parlamenttitalo', lat: -9.42805556, lon: 147.19166667 },
+      { nimi: 'Kansalliskirjasto', lat: -9.43222, lon: 147.19083 },
+      { nimi: 'Sir John Guisen stadion', lat: -9.44089, lon: 147.18535 },
+      { nimi: 'Hoholan moskeija', lat: -9.4585, lon: 147.17725 },
+      { nimi: 'Sir Hubert Murrayn stadion', lat: -9.46632, lon: 147.15667 },
+      { nimi: 'St Josephin koulu', lat: -9.46694, lon: 147.20417 },
+      { nimi: 'Amini Park', lat: -9.47333333, lon: 147.20166667 },
+      { nimi: 'Pyhän Marian katedraali', lat: -9.48081, lon: 147.14963 },
+    ],
+  },
+  /*
+   * MANAUS (7.9.2026). Rajaus on 7,5 × 7,4 kilometriä — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n manaus-lohkossa: vanha keskusta
+   * on tiivis, mutta kaksi kohdetta on viisi ja puoli kilometriä
+   * pohjoisessa ja yksi viisi kilometriä idässä, eikä keskustasta saa
+   * kahdeksaa kohdetta sen jälkeen kun lehden omat aiheet on karsittu.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat kaupungin
+   * kolme nimeä, vetten kohtaaminen, kaupunki ennen kumibuumia ja
+   * vapaakauppa-alue; matkaopas kertoo jokiliikenteestä, Mindú-puistosta,
+   * armeijan eläintarhasta, Palácio Rio Negrosta ja Ponta Negrasta;
+   * kumibuumisivu oopperatalosta, sähköstä, tullitalosta ja Wickhamin
+   * siemenistä; alkuperäiskansasivu alueen kansoista, Ajuricabasta,
+   * barésta ja kabanaosta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe.
+   *
+   * OOPPERATALO JA TULLITALO OVAT RUUDUN SISÄLLÄ MUTTA EIVÄT KARTALLA.
+   * Teatro Amazonas olisi kartan keskeisin kohde, ja se on lehden
+   * kumibuumisivun ensimmäinen nosto; tullitalo on saman sivun kolmas
+   * ja Palácio Rio Negro matkaoppaan neljäs jakso. New Yorkin sääntö
+   * pitää ne kaikki pois kartalta.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. Amadeu Teixeiran halli
+   * on 245 metriä Amazonas-areenasta eli sääntöjen mukaan kelpaisi,
+   * mutta kaksi urheilupaikkaa vierekkäin olisi kartalla sama piste
+   * kahdesti. Rakentamaton yksiraiteinen rata (-3,1260 / -60,0207) on
+   * en-Wikipedian koordinaattirajapinnassa, ja sen tarina olisi ollut
+   * kartan kiinnostavin — mutta kohde on suunnitellun linjan piste
+   * eikä paikka, ja numeroympyrä olisi seissyt tyhjän kadun päällä.
+   * Manausin Brasilia-temppeli ja Rio Negron silta ovat kahdeksan ja
+   * kuuden kilometrin päässä lännessä ruudun ulkopuolella.
+   */
+  manaus: {
+    polku: 'assets/kartat/manaus-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -3.078, etela: -3.145, lansi: -60.0473, ita: -59.9802 },
+    esittely: 'Kartta ulottuu Rio Negron rannasta pohjoiseen. '
+      + 'Vasemmassa alanurkassa on joki ja siitä kaupunkiin työntyvä '
+      + 'kapea lahti; sen yläpuolella on vanhan keskustan tiivis '
+      + 'ruutukaava, ja siitä nousee suoraan ylös se valtaväylä, jonka '
+      + 'varrelle kaupunki kasvoi 1900-luvulla. Oikealle levittäytyvät '
+      + 'uudemmat kaupunginosat, ja ylhäällä on Floresin urheilu- ja '
+      + 'hallintokortteli. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta ja
+       * geosearchista 7.9.2026. Pienin väli on 259 metriä
+       * (osavaltion kirjasto – katedraali), toiseksi pienin 416
+       * metriä (instituutti – katedraali).
+       */
+      { nimi: 'Amazonas-areena', lat: -3.08305556, lon: -60.02805556 },
+      { nimi: 'Osavaltion parlamentti', lat: -3.08361111, lon: -60.02194444 },
+      { nimi: 'Amazonin tutkimuslaitos', lat: -3.09577, lon: -59.98975 },
+      { nimi: 'Colinan stadion', lat: -3.12194444, lon: -60.03777778 },
+      { nimi: 'Beit Yaacovin synagoga', lat: -3.12598, lon: -60.02592 },
+      { nimi: 'Maantieteen ja historian instituutti', lat: -3.13361, lon: -60.02889 },
+      { nimi: 'Osavaltion kirjasto', lat: -3.13433333, lon: -60.02333333 },
+      { nimi: 'Katedraali', lat: -3.1352, lon: -60.0255 },
+    ],
+  },
 };
 
 /*

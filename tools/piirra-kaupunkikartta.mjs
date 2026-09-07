@@ -4710,6 +4710,94 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: -0.2120, etela: -0.2340, lansi: -78.5230, ita: -78.5045 },
   },
+  portmoresby: {
+    /*
+     * KOLME KAUPUNGINOSAA YHDESSÄ RUUDUSSA (7.9.2026). Ruutu on
+     * 7,5 × 7,4 kilometriä eli paketin väljimpiä — Christchurchin
+     * 2,4 kilometrin vastakohta. Rajaus on iso tahallaan, koska Port
+     * Moresby on hajallaan tahallaan: kaupunkilehden oma matkaopas
+     * sanoo sen ääneen (*"Kaupunki jakautuu kolmeen osaan"*), ja nuo
+     * kolme — Town sataman äärellä, Boroko välissä ja Waigani
+     * hallintokaupunkina — ovat kuuden ja seitsemän kilometrin
+     * päässä toisistaan.
+     *
+     * TIIVIS TOWN-RUUTU KOKEILTIIN JA HYLÄTTIIN. Vanhassa keskustassa
+     * on en-Wikipedian koordinaattirajapinnassa vain yksi kelvollinen
+     * kohde (katedraali) sen jälkeen, kun lehden omat aiheet on
+     * karsittu pois; kaikki muut seitsemän ovat pohjoisessa tai
+     * idässä. Kahden kilometrin ruutu olisi ollut kaunis ja tyhjä.
+     *
+     * POHJOISREUNA -9,4235 ON PARLAMENTTITALON MUKAAN ja eteläreuna
+     * -9,4905 kulkee Ela Beachin ja Kila Kilan rannan alapuolelta.
+     * Väliin jää koko se nauha, jota pitkin kaupunki kasvoi
+     * satamasta sisämaahan.
+     *
+     * RUUTU ON NELIÖ TAHALLAAN, samasta syystä kuin Varanasissa:
+     * kohteet ovat 5,9 × 6,0 kilometrin ryhmä, ja reunat vedettiin
+     * niin, että kuvasuhde on 1,00. Länsireuna 147,1429 ei ole
+     * hukkaan heitetty — se ottaa mukaan Fairfax Harbourin, ja ilman
+     * satamaa kartalta ei näkisi, minkä ympärille kaupunki
+     * rakennettiin.
+     *
+     * NELJÄ KOHDETTA JÄTETTIIN POIS AIHESYISTÄ, eivät rajauksen
+     * takia. Kansallismuseo ja -galleria (-9,4256 / 147,1901), Kokin
+     * tori, Hanuabada ja Jacksonsin lentoasema ovat kaikki
+     * kaupunkilehden omien nostojen aihe, eikä kohdekartta toista
+     * lehden juttuja (New Yorkin sääntö). Museo on kolmensadan
+     * metrin päässä parlamenttitalosta ja mahtuisi ruutuun vaivatta.
+     *
+     * BISININ URHEILUPUISTO ON KARTALLA VAIN KERRAN. PMRL Stadium ja
+     * PNG Football Stadium ovat 93 metrin päässä toisistaan saman
+     * puiston sisällä, ja puiston neljästä kentästä kartalle valittiin
+     * Amini Park: se on maan krikettiliiton kotikenttä ja ainoa, jonka
+     * tarina ei ole toisen kentän tarina.
+     *
+     * meri: true. Fairfax Harbour ja Papuanlahti ovat OSM:ssä
+     * rantaviivaa (natural=coastline) eivätkä vesimonikulmioita,
+     * joten ilman lippua kuvan lounaisnurkka olisi paperin värinen.
+     */
+    rajat: { pohjoinen: -9.4235, etela: -9.4905, lansi: 147.1429, ita: 147.2109 },
+    meri: true,
+  },
+  manaus: {
+    /*
+     * KESKUSTASTA FLORESIIN JA PETRÓPOLISIIN (7.9.2026). Ruutu on
+     * 7,5 × 7,4 kilometriä eli Port Moresbyn kokoluokkaa. Manausin
+     * vanha keskusta on tiivis — neljä kohdetta mahtuisi puolentoista
+     * kilometrin ruutuun — mutta jalkapallostadion ja osavaltion
+     * parlamentti ovat viisi ja puoli kilometriä pohjoisessa
+     * Floresissa ja Amazonin tutkimuslaitos viisi kilometriä idässä
+     * Petrópolisissa. Ilman niitä kohteita ei olisi kahdeksaa:
+     * en-Wikipedian koordinaattirajapinta tuntee keskustasta vain
+     * viisi kelvollista kohdetta, kun lehden omat aiheet on karsittu.
+     *
+     * RUUTU ON NELIÖ TAHALLAAN (Varanasin ratkaisu). Kohteet ovat
+     * 5,3 × 5,8 kilometrin ryhmä, ja reunat vedettiin niin, että
+     * kuvasuhde on 1,00.
+     *
+     * ETELÄREUNA -3,1450 PYSÄHTYY RIO NEGROON. Joki näkyy kuvan
+     * lounaisnurkassa ja sen Educandosin lahti työntyy kuvaan asti;
+     * ilman jokea Manausin sijainti jäisi arvoitukseksi. Syvemmälle
+     * veteen ei mennä, koska siellä ei ole yhtään kohdetta.
+     *
+     * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN POIS AIHESYISTÄ. Teatro
+     * Amazonas (-3,1303 / -60,0233), tullitalo, Palácio Rio Negro
+     * (-3,1351 / -60,0168) ja armeijan eläintarha ovat kaikki
+     * kaupunkilehden omien nostojen aihe (New Yorkin sääntö).
+     * Kolme ensimmäistä ovat tämän ruudun sisällä, ja oopperatalo
+     * olisi kartan keskeisin kohde jos sen saisi ottaa.
+     *
+     * AMADEU TEIXEIRAN HALLI PUDOTETTIIN 245 METRIN PÄÄSTÄ
+     * Amazonas-areenasta. Se ylittäisi 200 metrin säännön, mutta
+     * kaksi urheiluhallia vierekkäin olisi kartalla sama piste
+     * kahdesti; en-Wikipedian artikkeli siitä on lisäksi yhden
+     * kappaleen tynkä.
+     *
+     * meri: ei. Rio Negro on OSM:ssä vesimonikulmio, ja meri on
+     * 1 500 kilometriä itään.
+     */
+    rajat: { pohjoinen: -3.0780, etela: -3.1450, lansi: -60.0473, ita: -59.9802 },
+  },
 };
 
 /*

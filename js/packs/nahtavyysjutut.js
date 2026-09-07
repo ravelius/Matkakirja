@@ -50475,4 +50475,472 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * PORT MORESBYN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.portmoresby, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "National Parliament House, Port Moresby", "National
+   * Parliament of Papua New Guinea", "National Library of Papua New
+   * Guinea", "Sir John Guise Stadium", "Hohola Mosque", "Islam in
+   * Papua New Guinea", "Sir Hubert Murray Stadium", "St Joseph's
+   * International Catholic College", "Amini Park", "Bisini Parade
+   * Sports Complex", "St. Mary's Cathedral, Port Moresby" ja
+   * "Archdiocese of Port Moresby").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat sataman nimi 1873, motut ja koitat, Hanuabada, pääkaupungiksi
+   * tulo, Jacksonsin lentoasema, kaupungin kolme osaa, Kokin tori,
+   * sadevarjo, HMS Basilisk, lähetysseuran neljä opettajaa, tulematta
+   * jäänyt kultaryntäys, kahdesti nostettu lippu, hiri-purjehdukset ja
+   * kansallismuseo. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Parlamenttitalon
+   * jutussa EI kerrota itsenäistymisestä 1975 — se on lehden
+   * historiasivun noston "Lippu joka nostettiin kahdesti" aihe — vaan
+   * talosta, joka rakennettiin yhdeksän vuotta myöhemmin.
+   * Kansalliskirjaston jutussa ei kerrota Waiganin synnystä, joka on
+   * matkaoppaan jakson "Alueen rakenne" aihe.
+   */
+  portmoresby: {
+    Parlamenttitalo: {
+      aika: '1984',
+      teksti: 'Maan lainsäätäjä sai oman talon vasta yhdeksän vuotta '
+          + 'itsenäistymisen jälkeen. Papuan ja Uuden-Guinean '
+          + 'edustajakokous istui vuosina 1964–1975 vanhassa '
+          + 'keskustassa talossa, joka oli sitä ennen ollut sairaala. '
+          + 'Uusi parlamenttitalo nousi Waiganiin, ja Walesin prinssi '
+          + 'Charles avasi sen 8. elokuuta 1984.'
+          + '\n\n'
+          + 'Talon tyylilajiksi on merkitty melanesialainen — se on '
+          + 'harvinaista, sillä siirtomaavallan jälkeen rakennetut '
+          + 'parlamenttitalot noudattavat useimmiten Westminsterin '
+          + 'omaa arkkitehtuuria. Naapurissa ovat korkeimman oikeuden '
+          + 'rakennukset. Sisällä istuu yksikamarinen parlamentti, '
+          + 'jossa on 118 jäsentä: yhdeksänkymmentäkuusi avointa '
+          + 'vaalipiiriä ja kaksikymmentäkaksi maakuntavaalipiiriä.'
+          + '\n\n'
+          + 'Vanha talo purettiin, ja sen paikalle on kaavailtu '
+          + 'poliittisen historian museota ja kirjastoa. Vuonna 2025 '
+          + 'Australian hallitus tarjoutui rahoittamaan taloon uuden '
+          + 'ministerisiiven Papua-Uuden-Guinean viisikymmenvuotisen '
+          + 'itsenäisyyden kunniaksi.',
+      lahde: 'Wikipedia',
+    },
+    Kansalliskirjasto: {
+      aika: '1978',
+      teksti: 'Papua-Uuden-Guinean kansalliskirjasto perustettiin '
+          + '1978, kolme vuotta itsenäistymisen jälkeen. Se ei ollut '
+          + 'maan oma hanke vaan Australian lahja: kirjasto '
+          + 'perustettiin sanoin "lahjana Papua-Uuden-Guinean '
+          + 'hallitukselle ja kansalle", ja tehtäväksi annettiin '
+          + '"auttaa kokoamaan kansallisesti merkittävien aineistojen '
+          + 'kokoelma".'
+          + '\n\n'
+          + 'Kokoelmassa on noin 56 000 nimikettä. Se ei ole pelkkä '
+          + 'kirjavarasto: mukana on kirjojen lisäksi elokuvia ja '
+          + 'videokuvaa sekä karttoja, merikarttoja, valokuvia ja '
+          + 'mikrofilmiä. Maassa, jossa puhutaan noin 840 kieltä ja '
+          + 'jossa suurin osa perinteestä on siirtynyt suullisesti, '
+          + 'juuri kuva- ja ääniaineisto on kansallisen kokoelman '
+          + 'ydintä.'
+          + '\n\n'
+          + 'Talo on Waiganissa parlamenttitalon lähinaapurissa. '
+          + 'Kirjasto on siis kaupungin muihin kohteisiin nähden '
+          + 'nuori: se on rakennettu samaan aikaan kuin koko '
+          + 'hallintokaupunginosa sen ympärillä.',
+      lahde: 'Wikipedia',
+    },
+    'Sir John Guisen stadion': {
+      aika: '1991',
+      teksti: 'Stadion avattiin 1991 Etelä-Tyynenmeren kisoja varten, '
+          + 'ja se nimettiin Sir John Guisen mukaan — hän oli '
+          + 'Papua-Uuden-Guinean ensimmäinen kenraalikuvernööri. '
+          + 'Katsomoon mahtui alun perin noin viisituhatta katsojaa. '
+          + 'Stadion on osa laajempaa urheilupuistoa, jossa on lisäksi '
+          + 'sisähalli, beachvolley- ja maahockeykenttä sekä '
+          + 'uimahalli.'
+          + '\n\n'
+          + 'Kun Papua-Uusi-Guinea valittiin 27. syyskuuta 2009 vuoden '
+          + '2015 Tyynenmeren kisojen isännäksi, tämä stadion valittiin '
+          + 'kisojen pääareenaksi. Remontissa vanha katsomo '
+          + 'kunnostettiin ja laajennettiin, ja paikkaluku nousi '
+          + 'viidestätuhannesta viiteentoistatuhanteen. Taloon tuli '
+          + 'pelaajatilat, toimistot, pukuhuoneet, mediakeskus ja '
+          + 'lääkintäpisteet, ja kentälle televisiokelpoinen valaistus, '
+          + 'kuulutusjärjestelmä, tulostaulu ja kansainvälisen '
+          + 'yleisurheiluliiton hyväksymä juoksurata.'
+          + '\n\n'
+          + 'Uusi stadion koeponnistettiin 12. kesäkuuta 2015 rugby '
+          + 'league -ottelulla, jossa PNG Hunters kohtasi Souths Logan '
+          + 'Magpiesin. Samana kesänä siellä pidettiin kisojen '
+          + 'avajaiset ja päättäjäiset. Sen jälkeen stadionilla on '
+          + 'pelattu vuoden 2016 Oseanian mestaruusturnauksen kaikki '
+          + 'ottelut — turnauksen, joka oli samalla karsinta vuoden '
+          + '2018 jalkapallon MM-kisoihin — ja osa saman vuoden alle '
+          + '20-vuotiaiden naisten MM-kisoista.',
+      lahde: 'Wikipedia',
+    },
+    'Hoholan moskeija': {
+      aika: '2007',
+      teksti: 'Hoholan moskeija on Papua-Uuden-Guinean ensimmäinen '
+          + 'moskeija. Hanke alkoi 2001, kun valtio lahjoitti tontin '
+          + 'paikalliselle islamilaiselle yhteisölle; rakennustyöt '
+          + 'alkoivat 2004 ja talo valmistui 2007. Suuri osa '
+          + 'rahoituksesta tuli Malesiasta ja Saudi-Arabiasta. '
+          + 'Moskeija on sunnalainen.'
+          + '\n\n'
+          + 'Islam on maassa pieni vähemmistö. Seuraajia oli vuonna '
+          + '2021 noin kymmenentuhatta, ja he ovat keskittyneet Port '
+          + 'Moresbyyn ja ylängön kyliin. Valtaosa maan muslimeista on '
+          + 'papualaisia itse eikä maahanmuuttajia. 1970-luvulla '
+          + 'muslimeja arvioitiin olevan vain sata kaksikymmentä, '
+          + 'lähinnä afrikkalaisia ja eteläaasialaisia siirtotyöläisiä; '
+          + 'valtio tunnusti islamin virallisesti 1982, ja ensimmäinen '
+          + 'islamilainen keskus perustettiin 1988.'
+          + '\n\n'
+          + 'Vuonna 2018 Malesian pääministeri Mahathir Mohamad kävi '
+          + 'moskeijassa APEC-kokouksen jälkeen. Kontakti islamiin on '
+          + 'alueella paljon vanhempi kuin moskeija: muslimikauppiaita '
+          + 'liikkui Uuden-Guinean rannikoilla 1500-luvulta '
+          + '1800-luvulle, ja raudan työstön taito tuli saarelle '
+          + '1500-luvun puolivälissä Molukeilta.',
+      lahde: 'Wikipedia',
+    },
+    'Sir Hubert Murrayn stadion': {
+      aika: '1969',
+      teksti: 'Stadion rakennettiin vuoden 1969 Etelä-Tyynenmeren '
+          + 'kisoja varten Konedobuun täytemaalle, joka oli sitä ennen '
+          + 'ollut mangroverantaa. Siellä juostiin kisojen '
+          + 'yleisurheilu ja pidettiin avajaiset ja päättäjäiset. Nimi '
+          + 'tulee Sir Hubert Murraysta, siirtomaan entisestä '
+          + 'varakuvernööristä. Katsomoon mahtui noin viisitoistatuhatta '
+          + 'katsojaa, ja kisojen jälkeen kentällä pelattiin '
+          + 'australialaista jalkapalloa ja jalkapalloa sekä juostiin '
+          + 'koulujen kisoja.'
+          + '\n\n'
+          + 'Vuoden 2003 lopulla alkoi kolmivaiheinen uudistus, jonka '
+          + 'hinnaksi arvioitiin 120 miljoonaa kinaa ja jonka piti '
+          + 'nostaa paikkaluku 25 000:een. Suunnitelmissa oli '
+          + 'FIFA-kelpoinen luonnonnurmikenttä ja kuusikerroksinen '
+          + 'pääkatsomo, jossa olisi kahdeksan ravintolaa ja kuntosali; '
+          + 'kuntosalilla oli tarkoitus järjestää vuoden 2015 '
+          + 'Tyynenmeren kisojen painonnosto.'
+          + '\n\n'
+          + 'Niin ei käynyt. Stadion ei valmistunut kisoihin, jotka '
+          + 'siirtyivät Sir John Guisen stadionille, ja työmaa seisoi '
+          + 'vuosia. Suorakaiteen muotoiseksi muutettu kenttä avattiin '
+          + 'lopulta 2022 — lähes kaksi vuosikymmentä aloituksen '
+          + 'jälkeen. Nyt siellä pelaa rugby league -joukkue Port '
+          + 'Moresby Vipers, ja vuonna 2023 katsomoon mahtui '
+          + 'kaksikymmentätuhatta.',
+      lahde: 'Wikipedia',
+    },
+    'St Josephin koulu': {
+      aika: '1917',
+      teksti: 'Koulu perustettiin 1917 Port Moresbyn eurooppalaisten '
+          + 'perheiden lapsille, ja se aloitti viidellätoista '
+          + 'oppilaalla Pyhän Sydämen Neitsyt Marian tyttärien '
+          + 'luostarissa Pyhän Marian katedraalin takana. Ensimmäinen '
+          + 'johtaja oli sisar Mary Carthage. Koulu on maan '
+          + 'vanhimpia.'
+          + '\n\n'
+          + 'Sota sulki koulun vuosiksi 1941–1946. Sen jälkeen '
+          + 'oppilasmäärä kasvoi tasaisesti, ja 1950-luvun lopulla '
+          + 'tilat kävivät ahtaiksi. Samaan aikaan väki lisääntyi '
+          + 'Borokossa, jossa katolista koulua ei ollut, joten koulu '
+          + 'päätettiin siirtää sinne. Muutto tehtiin luokka '
+          + 'kerrallaan ja se kesti vuosia: ensimmäinen luokka siirtyi '
+          + '1957 Borokon seurakuntasaliin, ja sisaret opettivat '
+          + 'salissa niin kauan kuin uutta koulua rakennettiin.'
+          + '\n\n'
+          + 'Nykyinen nimi tuli 2004, kun kouluun perustettiin '
+          + 'lukioluokat. Ensimmäiset kymmenennen luokan oppilaat '
+          + 'suorittivat päättötodistuksen 2007 ja ensimmäiset '
+          + 'kahdennentoista luokan oppilaat ylioppilastodistuksen '
+          + '2009 — kummassakin sekä Papua-Uuden-Guinean että Uuden '
+          + 'Etelä-Walesin tutkinnon. Opetusta annetaan esikoulusta '
+          + 'kahdenteentoista luokkaan.',
+      lahde: 'Wikipedia',
+    },
+    'Amini Park': {
+      aika: '1956',
+      teksti: 'Amini Park on Papua-Uuden-Guinean tärkein '
+          + 'krikettikenttä ja maan krikettiliiton kotipaikka. Kenttä '
+          + 'perustettiin 1956, ja se sai nimensä 1983 Aminin perheen '
+          + 'mukaan: perheen jäseniä on pelannut maajoukkueessa sekä '
+          + 'krikettiä että muita lajeja, ja sekä miesten että naisten '
+          + 'maajoukkue pelaa täällä kotiottelunsa.'
+          + '\n\n'
+          + 'Kentällä on pelattu Australiaa, Länsi-Intiaa ja Victorian '
+          + 'osavaltiota vastaan, ja naisten maajoukkue pelasi täällä '
+          + 'Japania vastaan kolmen ottelun sarjan syyskuussa 2006. '
+          + 'Kansainvälisen tason ottelut alkoivat vasta 2010-luvulla: '
+          + 'ensimmäinen List A -ottelu pelattiin toukokuussa 2016, '
+          + 'kun Papua-Uusi-Guinea voitti Kenian, ja ensimmäinen '
+          + 'first-class-ottelu lokakuussa 2016, kun se voitti '
+          + 'Namibian. Maaliskuussa 2019 täällä pelattiin '
+          + 'Itä-Aasian ja Tyynenmeren alueen T20-karsinnan '
+          + 'loppuottelut.'
+          + '\n\n'
+          + 'Kenttä on osa Bisini Paraden urheilupuistoa, jota '
+          + 'rajaavat neljä katua ja jossa on lisäksi kansallinen '
+          + 'jalkapallostadion, Rita Flynnin verkkopallokeskus ja '
+          + 'Bava Parkin rugbykenttä. Koko puisto uudistettiin vuoden '
+          + '2015 Tyynenmeren kisoja varten, ja Amini Park sai '
+          + 'vuosina 2020–2021 uuden nurmisyöttöalueen ja '
+          + 'harjoituskeskuksen.',
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Marian katedraali': {
+      aika: '1889 alkaen',
+      teksti: 'Pyhän Marian katedraali on Port Moresbyn '
+          + 'arkkihiippakunnan pääkirkko ja omistettu Neitsyt '
+          + 'Marialle. Ulkoseinät ovat vaaleansiniset, ja '
+          + 'pääsisäänkäynnin toisella puolen kohoaa valkoinen torni.'
+          + '\n\n'
+          + 'Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut '
+          + 'kolmesti. Se perustettiin 10. toukokuuta 1889 '
+          + 'Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen '
+          + 'Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; '
+          + 'arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. '
+          + 'Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 '
+          + 'katolista eli 29 prosenttia väestöstä.'
+          + '\n\n'
+          + 'Paavi Johannes Paavali II vieraili katedraalissa '
+          + 'toukokuussa 1984 ja palasi hiippakuntaan tammikuussa '
+          + '1995. Paavi Franciscus vieraili Port Moresbyssä 4.–6. '
+          + 'syyskuuta 2024.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * MANAUSIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.manaus, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Arena da Amazônia", "Legislative Assembly of
+   * Amazonas", "National Institute of Amazonian Research", "Estádio
+   * Ismael Benigno", "Beit Yaacov/Rabi Meyr Synagogue", "Geographic
+   * and Historic Institute of Amazonas", "Amazonas Public Library" ja
+   * "Metropolitan Cathedral of Our Lady of the Conception, Manaus").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat kaupungin kolme nimeä, vetten kohtaaminen, kaupunki ennen
+   * kumibuumia, vapaakauppa-alue, jokiliikenne, Mindú-puisto, armeijan
+   * eläintarha, Palácio Rio Negro, oopperatalo, sähkö, tullitalo,
+   * Wickhamin siemenet, alueen alkuperäiskansat, Ajuricaba, baré ja
+   * kabanaokapina. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Synagogan
+   * jutussa kumibuumi mainitaan vain siltä osin kuin se toi juutalaiset
+   * kauppiaat jokivarteen — buumin oma tarina on lehden omalla
+   * sivullaan. Osavaltion kirjaston jutussa ei kerrota kumin hinnan
+   * romahduksesta muuten kuin syynä sille, ettei kirjasto voinut ostaa
+   * uusia kirjoja.
+   */
+  manaus: {
+    'Amazonas-areena': {
+      aika: '2014',
+      teksti: 'Areena rakennettiin vuosina 2010–2014 jalkapallon '
+          + 'MM-kisoja varten vanhan Vivaldão-stadionin paikalle. '
+          + 'Istumapaikkoja on 42 924, mutta kisojen aikana suurin '
+          + 'sallittu yleisömäärä oli 40 549. Rakentamisesta maksoi '
+          + 'osavaltio neljänneksen ja Brasilian kehityspankki loput.'
+          + '\n\n'
+          + 'Suunnittelija oli saksalainen arkkitehtitoimisto Gerkan, '
+          + 'Marg and Partners, ja metallinen ulkokuori on tehty '
+          + 'muistuttamaan alueen olkikoreja. Päiväntasaajan '
+          + 'läheisyyden takia talo on rakennettu viilentämään itse '
+          + 'itseään: ulkopinta on valkoinen ja heijastava, katsomon '
+          + 'päällä on runsaasti varjoa ja julkisivussa paljon '
+          + 'tuuletusaukkoja. Sadevesi kerätään talteen, ja yli 95 '
+          + 'prosenttia vanhan stadionin purkuaineksesta käytettiin '
+          + 'uudelleen.'
+          + '\n\n'
+          + 'Stadion avattiin 9. maaliskuuta 2014, ja kisoissa siellä '
+          + 'pelattiin neljä ottelua. Englannin valmentaja Roy Hodgson '
+          + 'oli arvostellut paikkaa etukäteen kuumuuden takia, ja '
+          + 'Englanti hävisi täällä avausottelunsa Italialle 1–2. '
+          + 'Manausin neljässä ottelussa tehtiin keskimäärin 3,5 '
+          + 'maalia, koko turnauksessa 2,7. Stadionia on arvosteltu '
+          + 'liian suureksi kaupungille, jonka omat sarjaottelut '
+          + 'vetävät vähän väkeä: kisojen jälkeen käyttö on ollut '
+          + 'harvaa, muutamia ammattilaisotteluita, uskonnollisia '
+          + 'tilaisuuksia ja yksi Guns N’ Rosesin konsertti. '
+          + 'Vuoden 2016 olympialaisten jalkapalloa täällä silti '
+          + 'pelattiin.',
+      lahde: 'Wikipedia',
+    },
+    'Osavaltion parlamentti': {
+      aika: '1852',
+      teksti: 'Amazonasin osavaltion lakia säätävä kokous on kaupungin '
+          + 'vanhimpia laitoksia, vaikka sen talo on uusi. Kokous '
+          + 'perustettiin 1852 provinssin lainsäädäntökokoukseksi, ja '
+          + 'se on yksikamarinen: siihen valitaan suhteellisella '
+          + 'vaalitavalla kaksikymmentäneljä edustajaa.'
+          + '\n\n'
+          + 'Kokous on istunut neljässä eri talossa. Nykyinen päämaja '
+          + 'avattiin 28. heinäkuuta 2006, ja se on kartan pohjoisin '
+          + 'kohde yhdessä jalkapalloareenan kanssa — kaupunki kasvoi '
+          + '1900-luvun jälkipuoliskolla vanhasta keskustasta '
+          + 'pohjoiseen, ja hallinto seurasi perässä.',
+      lahde: 'Wikipedia',
+    },
+    'Amazonin tutkimuslaitos': {
+      aika: '1952',
+      teksti: 'Amazonin tutkimuslaitos on julkinen tutkimus- ja '
+          + 'opetuslaitos, joka perustettiin 1952 lisäämään tieteen '
+          + 'tietoa Brasilian Amazonista. Se on yksi harvoista '
+          + 'paikoista, joissa sademetsää tutkitaan sademetsän '
+          + 'keskeltä eikä kaukaa.'
+          + '\n\n'
+          + 'Tutkimus koskee etenkin trooppisen metsän hoitoa, '
+          + 'ekologiaa, molekyyliekologiaa, eläin- ja kasvitiedettä '
+          + 'sekä trooppista maataloutta ja kalankasvatusta. '
+          + 'Laitoksella on merkittävät selkärankaisten, '
+          + 'selkärangattomien ja putkilokasvien tutkimuskokoelmat, ja '
+          + 'se julkaisee omaa tieteellistä aikakauslehteä nimeltä '
+          + 'Acta Amazônica.'
+          + '\n\n'
+          + 'Laitos ei ole pelkkä tutkimusasema vaan myös korkeakoulu: '
+          + 'se antaa jatko-opetusta muun muassa kosteiden tropiikin '
+          + 'maatalouden alalla maisteri- ja tohtoritasolla. Osoite on '
+          + 'Avenida André Araújo Petrópolisin kaupunginosassa, viisi '
+          + 'kilometriä vanhasta keskustasta itään.',
+      lahde: 'Wikipedia',
+    },
+    'Colinan stadion': {
+      aika: '1961',
+      teksti: 'Estádio Ismael Benigno, jota kutsutaan yleisesti '
+          + 'Colinan stadioniksi, valmistui 1961. Se on São Raimundo '
+          + '-seuran oma stadion, ja siihen mahtuu 10 400 katsojaa. '
+          + 'Nimi tulee Ismael Benignosta, joka johti seuraa 1950- ja '
+          + '1960-luvuilla ja osti tontin, jolle stadion rakennettiin '
+          + '— stadion on siis nimetty ostajansa eikä pelaajan mukaan.'
+          + '\n\n'
+          + 'Avausottelu pelattiin 19. helmikuuta 1961, ja se meni '
+          + 'kotijoukkueelta pahasti pieleen: Recifen Sport voitti São '
+          + 'Raimundon 8–1, ja ensimmäisen maalin stadionin historiassa '
+          + 'teki vieraiden Mário. Valot vihittiin käyttöön 18. '
+          + 'helmikuuta 1967 ottelussa, jonka Nacional voitti 3–1.'
+          + '\n\n'
+          + 'Yleisöennätys on 16 000 ja se on 4. elokuuta 2000: '
+          + 'stadion avattiin silloin uudelleen remontin jälkeen, ja '
+          + 'São Raimundo voitti Surinamen maajoukkueen 5–0.',
+      lahde: 'Wikipedia',
+    },
+    'Beit Yaacovin synagoga': {
+      aika: '1962',
+      teksti: 'Amazonin juutalaisyhteisö on vanha ja sen synagoga '
+          + 'nuori. Manausin seurakunta syntyi kahdesta aiemmasta, '
+          + 'joiden juuret ovat 1920-luvulla; nykyinen talo valmistui '
+          + '1962, kun seurakunnat yhdistyivät. Se on yksi Pohjois-'
+          + 'Brasilian suurimmista ja vaikutusvaltaisimmista '
+          + 'amazonianjuutalaisten seurakunnista.'
+          + '\n\n'
+          + 'Yhteisö tuli jokea pitkin kaupan mukana. Marokon '
+          + 'juutalaiset alkoivat 1800-luvun alussa muuttaa Brasiliaan, '
+          + 'ja moni päätyi Amazonille: he perustivat kauppaverkostoja, '
+          + 'jotka ulottuivat Belémistä ja Manausista jokivarren '
+          + 'takamaille asti, ja toimivat välikäsinä kumin tuottajien '
+          + 'ja vientisatamien välillä. Manaus on tässä poikkeus, sillä '
+          + 'sinne saapuivat ensin elsassilaiset juutalaiset '
+          + 'Ranskan–Preussin sodan 1870–1871 jälkeen — he eivät '
+          + 'halunneet jäädä Saksan alaisuuteen.'
+          + '\n\n'
+          + 'Yhteisö järjestäytyi vasta myöhään. Belémissä oli kaksi '
+          + 'synagogaa ja hautausmaa jo 1820-luvulla, mutta Manausissa '
+          + 'ensimmäinen synagoga vihittiin 1925, hautausmaa 1928 ja '
+          + 'yhteisön liitto 1929. Sitten tulivat heprealainen koulu '
+          + '1973, yhteisötalo 1976 ja rituaalikylpy 2012. Vuoden 1967 '
+          + 'vapaakauppa-alue toi kaupunkiin uuden aallon, '
+          + 'aškenasijuutalaisia muualta Brasiliasta. Nykyään '
+          + 'Manausissa arvioidaan olevan noin kahdeksansataa '
+          + 'juutalaista.',
+      lahde: 'Wikipedia',
+    },
+    'Maantieteen ja historian instituutti': {
+      aika: '1917',
+      teksti: 'Amazonasin maantieteellis-historiallinen instituutti on '
+          + 'arkistoja säilyttävä ja tutkiva kulttuurilaitos, joka '
+          + 'tunnetaan myös nimellä Bernardo Ramosin talo. Sen '
+          + 'perustaminen alkoi 11. maaliskuuta 1917 kokouksesta, '
+          + 'jossa valittiin toimikunta laatimaan säännöt; kuvernööri '
+          + 'Pedro de Alcântara Bacellar allekirjoitti ne saman kevään '
+          + 'asetuksilla. Ensimmäiseksi puheenjohtajaksi tuli Bernardo '
+          + 'Ramos.'
+          + '\n\n'
+          + 'Perustamissääntöjen mukaan instituutti sai tutkia hyvin '
+          + 'laajaa alaa: historiaa, antropologiaa, filosofiaa, '
+          + 'tähtitiedettä, kasvitiedettä, aluerajoja, geologiaa, '
+          + 'maataloutta, kauppaa ja merenkulkua. Se oli tiiviisti '
+          + 'kiinni osavaltion hallinnossa, ja sen kertoma historia '
+          + 'oli käytännössä virallinen versio — mutta samalla se '
+          + 'täytti aukkoa, sillä Amazonista ei juuri kirjoitettu '
+          + 'muualla.'
+          + '\n\n'
+          + 'Instituutti on asunut perustamisestaan asti samassa '
+          + 'kaksikerroksisessa talossa Frei José dos Inocentesin '
+          + 'kadulla vanhassa keskustassa. Kokoelmassa on '
+          + 'oikeudellisia asiakirjoja, pamfletteja, aikakauslehtiä ja '
+          + 'sanomalehtiä provinssin ajoilta ja Brasilian ensimmäisen '
+          + 'tasavallan alkuvuosilta; valtaosa siitä on luetteloitu ja '
+          + 'säilötty. Osavaltion suojeluneuvosto määräsi talon '
+          + 'suojelluksi 1980.',
+      lahde: 'Wikipedia',
+    },
+    'Osavaltion kirjasto': {
+      aika: '1871',
+      teksti: 'Amazonasin osavaltion kirjasto on osavaltion vanhin '
+          + 'yleinen kirjasto ja kokoelmaltaan sen suurin. Se '
+          + 'perustettiin 19. maaliskuuta 1871, ja alku oli vaatimaton: '
+          + 'lukusali lukion tiloissa ja 1 200 nidettä. Kirjasto '
+          + 'muutti 1883 emäkirkon tiloihin ja 1887 Dom Pedro II '
+          + '-kouluun, sai 1895 vuokratalon Guilherme Moreiran kadulta '
+          + 'ja lakkautettiin kaksi vuotta myöhemmin kokonaan.'
+          + '\n\n'
+          + 'Nykyinen talo Barroso-kadun ja Sete de Setembron '
+          + 'kulmassa rakennettiin uusklassiseen tyyliin ja vihittiin '
+          + '5. lokakuuta 1910. Portaat ja pylväät tulivat Skotlannista '
+          + 'sekä marmorikatto, kristallikruunut ja laatoitettu '
+          + 'kattoikkuna Englannista. Alkuvuosina kävijät olivat '
+          + 'kaupungin sivistyneistöä: opettajia, lakimiehiä, '
+          + 'lääkäreitä, tuomareita, pappeja ja kauppiaita. Kun kumin '
+          + 'hinta romahti, kirjasto ei enää pystynyt uusimaan '
+          + 'kokoelmaansa.'
+          + '\n\n'
+          + 'Aamuyöllä 22. elokuuta 1945 tulipalo tuhosi kirjaston '
+          + 'omaisuuden. Pelastui kuusikymmentä kirjaa, jotka sattuivat '
+          + 'olemaan näyttelyssä talon ulkopuolella. Kuvernööri Álvaro '
+          + 'Botelho Maia avasi talon uudelleen 45 000 niteen '
+          + 'kokoelmalla, josta hän lahjoitti itse 2 500 ja loput tuli '
+          + 'lahjoituksina. Toisessa kerroksessa on yli 30 000 '
+          + 'sanomalehteä vuodesta 1886 alkaen sekä sarjakuvakokoelma '
+          + 'ja tietokonesali. Talo suojeltiin kansallisesti 12. '
+          + 'huhtikuuta 1988, ja se peruskorjattiin 2013.',
+      lahde: 'Wikipedia',
+    },
+    Katedraali: {
+      aika: '1878',
+      teksti: 'Manausin katedraali on kaupungin emäkirkko. Sen tarina '
+          + 'alkaa karmeliittalähetystyöntekijöistä, jotka rakensivat '
+          + 'paikalle Neitsyt Marian kirkon 1695. Provinssin '
+          + 'presidentti Manoel da Gama Lobo D’Almada rakennutti '
+          + 'sen uudestaan ja laajensi sitä, mutta tuo talo tuhoutui '
+          + 'tulipalossa 1850.'
+          + '\n\n'
+          + 'Nykyinen kirkko on kreikkalaistyylinen, ja suuri osa '
+          + 'rakennusaineesta tuotiin Euroopasta ja etenkin '
+          + 'Portugalista. Kuusi kelloa valettiin portugalilaisessa '
+          + 'valimossa, ja kappeli, kastekappeli ja kolme alttaria '
+          + 'ovat lissabonilaista kalkkikiveä. Laatat tulivat '
+          + 'lähempää: Nova Rainhasta, joka on nykyään Parintins.'
+          + '\n\n'
+          + 'Kirkko vihittiin virallisesti 1878. Amazonasin hiippakunta '
+          + 'perustettiin vasta 1892, ja kirkko korotettiin '
+          + 'katedraaliksi 1946 — se oli siis emäkirkko lähes '
+          + 'seitsemänkymmentä vuotta ennen kuin sai katedraalin '
+          + 'arvon.',
+      lahde: 'Wikipedia',
+    },
+  },
 };
