@@ -4251,6 +4251,15 @@ export const RAAMATTU = {
           + 'pehmeasti) koko Afrikkaan, kertoja vastaa, ja vasta sitten kamera '
           + 'laskeutuu Marokkoon ja tarina jatkuu. Sama dramaturgia sopii '
           + 'muihinkin linsseihin: kysymys pimeassa, vastaus valossa.',
+        'PAPERIN REUNA: VAAKAREUNAT RAUHALLISIKSI, EI TULTA, TEKSTILLE TILAA '
+          + '(omistaja 7.9.2026 ilta, ensimmaiseen toteutukseen, sanatarkasti: '
+          + '"tuo nayttaa ihan kamalalta, tuo paperi tuolla tavalla. Sivut ovat '
+          + 'ihan ok, mutta yla- ja alareuna on, kuin paperi olisi tulessa, eli saa '
+          + 'liikkua rauhallisemmin ja toiseksi ei saa olla leikannut noin lahelle '
+          + 'tekstia."): yla- ja alareunan repale on matala ja hidas aaltoilu '
+          + '(amplitudi kolmasosa sivuista), hehku himmea ja pergamentin savyinen '
+          + '(ei oranssi liekki), sisareuna ei karventynyt; tekstin ja napin '
+          + 'ymparilla vahintaan 2,4 rem pehmuste maskin syoman alueen lisaksi.',
         'LINSSIEN AIDOT AANIMAISEMAT (omistaja 7.9.2026 ilta, sanatarkasti: "olisi '
           + 'todella makeaa, jos saataisiin myos joitain aaniefekteja, siis aitoja, '
           + 'jossain nauhoitettuja, missa voisi olla eri paikkojen aanimaisemaa. '
