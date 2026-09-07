@@ -4240,6 +4240,17 @@ export const RAAMATTU = {
           + 'Beringia - Chile), sitten AIKAHYPPY takaisin Aasiaan ja Euroopan '
           + 'haara (Bulgaria, Chauvet), lopuksi meri (Tonga, Uusi-Seelanti). '
           + 'Omistaja tarkistaa tekstin ennen toteutusta.',
+        'IHMISEN MATKA ALKAA MUSTASTA RUUDUSTA (omistaja 7.9.2026 ilta, '
+          + 'sanatarkasti: "Koko juttu voisi alkaa jopa mustasta ruudusta, missa '
+          + 'kuuluisi vain kertojan aani ja kysymys, etta tiedatko mista ihmiset '
+          + 'lahtivat liikkeelle ylipaataan. Ja sitten voisi syttya valot ja '
+          + 'ruudulla nakya Afrikka kokonaisuudessaan. Ja kertoja jatkaisi, niin '
+          + 'Afrikasta. Ja sitten zoomattaisiin vasta ensimmaiseen kohteeseen ja '
+          + 'tarina jatkuisi."): Kaynnista-napin jalkeen ruutu on musta, vain '
+          + 'kertojan aani ja kysymys; valot syttyvat (pallo haipyy esiin '
+          + 'pehmeasti) koko Afrikkaan, kertoja vastaa, ja vasta sitten kamera '
+          + 'laskeutuu Marokkoon ja tarina jatkuu. Sama dramaturgia sopii '
+          + 'muihinkin linsseihin: kysymys pimeassa, vastaus valossa.',
         'LINSSIEN AIDOT AANIMAISEMAT (omistaja 7.9.2026 ilta, sanatarkasti: "olisi '
           + 'todella makeaa, jos saataisiin myos joitain aaniefekteja, siis aitoja, '
           + 'jossain nauhoitettuja, missa voisi olla eri paikkojen aanimaisemaa. '
