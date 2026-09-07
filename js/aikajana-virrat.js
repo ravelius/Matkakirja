@@ -562,6 +562,10 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
       vanat,
       kotipesat,
       virrat: aineisto.virrat,
+      // Kaistan leveydet ja alueet (IHMISEN_MATKA_VANAT.kaista, luku 14).
+      kaista: aineisto.vanat?.kaista ?? {},
+      // Mallin kulkumaski: kärki on rannikkoa, jos malli käveli sen ruudussa.
+      maamaski: aineisto.maamaski ?? null,
       reduced,
     });
   };
