@@ -23,6 +23,12 @@
  *   2. AITO NAPAUTUS ESITYKSEN AIKANA: kartan lampun napautus
  *      RUUTUKOORDINAATILLA (page.mouse, ei elementin dispatch) avaa
  *      noston kortin ja panee esityksen tauolle; sulku jatkaa.
+ *   2b. AIKASELAIN (7.9.2026, Raamattu LINSSIEN AIKASELAIN ALAREUNAAN):
+ *      alareunan nauhalla on 22 viivaa tasavälein, aalto valitun
+ *      ympärillä ja vuosiluku sen päällä; AITO VETO ruutukoordinaateilla
+ *      kelaa kellon ja vaientaa kertojan, ja irrotus vaihtaa jakson ja
+ *      jatkaa esitystä siitä. Tutkimusvaiheessa (5a) sama valinta on
+ *      pelkkä kelaus ilman kertojaa.
  *   3. MUISTI, ESITYS: ✕ ja uusi avaus jatkavat samasta jaksosta —
  *      ei mustaa peitettä, ei Käynnistä-nappia.
  *   4. MUISTI, TUTKIMUS: kun sulku tapahtui tutkimusvaiheessa, uusi
@@ -41,8 +47,9 @@
  *  11. Ei sivuvirheitä.
  *
  * KUVAKAAPPAUKSET: palkki esityksen aikana, kortti esityksen päällä,
- * tutkimusvaihe, löytöpaikan kortti, lisänoston kortti, Tiedeliitteen
- * sisällys, vana valittuna.
+ * aikaselain vedossa, tutkimusvaihe, aikaselain tutkimusvaiheessa,
+ * löytöpaikan kortti, lisänoston kortti, Tiedeliitteen sisällys, vana
+ * valittuna.
  */
 import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -315,6 +322,106 @@ for (const nakyma of ['tabletti', 'puhelin']) {
   vaadi(nimessa('kortin sulku jatkaa esitystä'), jatkui?.tauolla === false && jatkui?.kaynnissa === true,
     JSON.stringify(jatkui));
 
+  /* --- 2b. AIKASELAIN: veto kelaa, irrotus jatkaa -------------------- */
+  /*
+   * Raamattu "LINSSIEN AIKASELAIN ALAREUNAAN" (omistaja 7.9.2026 klo
+   * 20.55). Veto tehdään AIDOILLA RUUTUKOORDINAATEILLA (page.mouse) eikä
+   * elementin dispatchilla: nauhan koko idea on yksi kosketuspinta, joka
+   * ottaa osoittimen kiinni (setPointerCapture) eikä päästä palloa
+   * panoroimaan altaan — sitä ei voi todistaa muuten kuin sormella.
+   * Yksikkötestit näkevät asettelun ja aallon (tests/aikaselain.test.mjs),
+   * mutta eivät sitä, kelaako kello ja vaihtuuko jakso.
+   */
+  const nauhanMitat = await s.evaluate(() => {
+    const nauha = document.querySelector('.aikaselain');
+    if (!nauha) return null;
+    const r = nauha.getBoundingClientRect();
+    const viivat = [...nauha.querySelectorAll('.aikaselain-viiva')]
+      .map((v) => v.getBoundingClientRect());
+    const teksti = document.querySelector('.aikajana-kertomusteksti')?.getBoundingClientRect() ?? null;
+    return {
+      x: Math.round(r.left),
+      y: Math.round(r.top),
+      w: Math.round(r.width),
+      h: Math.round(r.height),
+      pohjassa: Math.round(window.innerHeight - r.bottom),
+      viivoja: viivat.length,
+      vali: viivat.length > 1 ? Math.round((viivat[1].left - viivat[0].left) * 10) / 10 : null,
+      korkein: Math.round(Math.max(...viivat.map((v) => v.height))),
+      matalin: Math.round(Math.min(...viivat.map((v) => v.height))),
+      vuosi: nauha.querySelector('.aikaselain-vuosi')?.textContent ?? null,
+      // Kertojan teksti ei saa jäädä nauhan alle.
+      tekstiPaallekkain: teksti ? teksti.bottom > r.top : null,
+      leveysOsuus: Math.round((r.width / window.innerWidth) * 100),
+    };
+  });
+  /*
+   * VIIVAT MAHTUVAT SORMELLE. Puhelimella (390 px) 22 viivaa on noin
+   * 15 px:n välein; tabletilla väljemmin. Alaraja 12 px on omistajan
+   * mitta tehtävänannossa.
+   */
+  vaadi(nimessa('aikaselain: nauha alalaidassa, 22 viivaa tasavälein, aalto valitun ympärillä'),
+    Boolean(nauhanMitat) && nauhanMitat.viivoja === 22 && nauhanMitat.vali >= 12
+      && nauhanMitat.leveysOsuus >= 90 && nauhanMitat.pohjassa <= 20
+      && nauhanMitat.korkein >= nauhanMitat.matalin * 2
+      && /v\. sitten|jaa\.|eKr\./.test(nauhanMitat.vuosi ?? '')
+      && nauhanMitat.tekstiPaallekkain === false,
+    JSON.stringify(nauhanMitat));
+
+  const vetoLahto = await s.evaluate(() => {
+    const r = document.querySelector('.aikaselain').getBoundingClientRect();
+    return {
+      y: Math.round(r.top + r.height * 0.62),
+      alku: Math.round(r.left + r.width * 0.12),
+      loppu: Math.round(r.left + r.width * 0.62),
+      jakso: window.matkakirja.ui.aikajana?.esitys?.tila?.().jakso ?? null,
+      vuosia: window.matkakirja.ui.aikajana?.esitys?.tila?.().vuosia ?? null,
+    };
+  });
+  await s.mouse.move(vetoLahto.alku, vetoLahto.y);
+  await s.mouse.down();
+  await s.mouse.move(vetoLahto.alku + 30, vetoLahto.y, { steps: 4 });
+  await s.mouse.move(vetoLahto.loppu, vetoLahto.y, { steps: 12 });
+  await s.waitForTimeout(700);
+  const vedossa = await s.evaluate(() => ({
+    esitys: window.matkakirja.ui.aikajana?.esitys?.tila?.() ?? null,
+    selain: window.matkakirja.ui.aikajana?.aikaselain?.tila?.() ?? null,
+    // Vanat seuraavat sormea: kärkien määrä kertoo, mihin asti on piirretty.
+    vuosi: document.querySelector('.aikaselain-vuosi')?.textContent ?? null,
+  }));
+  await s.screenshot({ path: kuva('aikaselain-vedossa') });
+  vaadi(nimessa('aikaselain: veto kelaa kellon ja vaientaa kertojan'),
+    vedossa.esitys?.selaus === true && vedossa.esitys?.kaynnissa === false
+      && vedossa.selain?.vedossa === true && vedossa.selain?.esikatselu
+      && vedossa.esitys?.vuosia < vetoLahto.vuosia,
+    JSON.stringify({
+      ennen: { jakso: vetoLahto.jakso, vuosia: vetoLahto.vuosia },
+      nyt: {
+        jakso: vedossa.esitys?.jakso,
+        vuosia: vedossa.esitys?.vuosia,
+        selaus: vedossa.esitys?.selaus,
+        kaynnissa: vedossa.esitys?.kaynnissa,
+      },
+      selain: vedossa.selain,
+    }));
+
+  await s.mouse.up();
+  await s.waitForTimeout(1600);
+  const irrotus = await s.evaluate(() => ({
+    esitys: window.matkakirja.ui.aikajana?.esitys?.tila?.() ?? null,
+    selain: window.matkakirja.ui.aikajana?.aikaselain?.tila?.() ?? null,
+  }));
+  vaadi(nimessa('aikaselain: irrotus vaihtaa jakson ja esitys jatkaa siitä'),
+    irrotus.esitys?.selaus === false && irrotus.esitys?.kaynnissa === true
+      && irrotus.esitys?.jakso === vedossa.selain?.esikatselu
+      && irrotus.selain?.valittu === irrotus.esitys?.jakso,
+    JSON.stringify({
+      jakso: irrotus.esitys?.jakso,
+      odotettu: vedossa.selain?.esikatselu,
+      kaynnissa: irrotus.esitys?.kaynnissa,
+      valittu: irrotus.selain?.valittu,
+    }));
+
   /* --- 3. MUISTI, ESITYS: sulku ja uusi avaus ------------------------ */
   const jaksoEnnen = jatkui?.jakso ?? null;
   await s.evaluate(async () => {
@@ -396,6 +503,48 @@ for (const nakyma of ['tabletti', 'puhelin']) {
 
   await rauhoitu(s, 12);
   await s.screenshot({ path: kuva('vaihe') });
+
+  /* --- 5a. AIKASELAIN TUTKIMUSVAIHEESSA: kelaus ilman kertojaa ------- */
+  /*
+   * Raamattu "LINSSIEN AIKASELAIN ALAREUNAAN": *"nopea sormella valita
+   * aikapiste ja kelata esityksen eri vaiheita ja projisoida
+   * levinneisyyttä maapallolla"*. Esityksen jälkeen sama nauha on
+   * pelkkä kelaus: kello ja vanat siirtyvät hetkeen, kertoja on vaiti
+   * eikä esitys lähde uudestaan käyntiin. HUOM: virtamoduulin oma
+   * silmukka ei enää lue kelloa tutkimusvaiheessa (lukema on siellä
+   * vakio 0), joten tämä väite todistaa nimenomaan sen suoran
+   * vanat().paivita-kutsun, joka esityksessä olisi turha.
+   */
+  const kelausTutkimuksessa = await s.evaluate(() => {
+    const { ui } = window.matkakirja;
+    const nauha = document.querySelector('.aikaselain');
+    if (!nauha) return { virhe: 'nauhaa ei ole tutkimusvaiheessa' };
+    const ennen = ui.aikajana?.esitys?.tila?.() ?? null;
+    return { ennenVuosia: ennen?.vuosia ?? null, ennenJakso: ennen?.jakso ?? null };
+  });
+  const nauhanKeski = await s.evaluate(() => {
+    const r = document.querySelector('.aikaselain')?.getBoundingClientRect();
+    return r ? { x: Math.round(r.left + r.width * 0.32), y: Math.round(r.top + r.height * 0.62) } : null;
+  });
+  if (nauhanKeski) await s.mouse.click(nauhanKeski.x, nauhanKeski.y);
+  await s.waitForTimeout(900);
+  const kelattu = await s.evaluate(() => ({
+    esitys: window.matkakirja.ui.aikajana?.esitys?.tila?.() ?? null,
+    selain: window.matkakirja.ui.aikajana?.aikaselain?.tila?.() ?? null,
+    kello: (document.querySelector('.aikajana-kello')?.textContent ?? '').replace(/\s+/g, ' '),
+  }));
+  vaadi(nimessa('aikaselain tutkimusvaiheessa: valinta kelaa kellon, kertoja pysyy vaiti'),
+    Boolean(nauhanKeski) && kelattu.esitys?.paattynyt === true
+      && kelattu.esitys?.kaynnissa === false
+      && kelattu.esitys?.vuosia > (kelausTutkimuksessa.ennenVuosia ?? 0)
+      && kelattu.selain?.valittu === kelattu.esitys?.jakso,
+    JSON.stringify({ ennen: kelausTutkimuksessa, nyt: {
+      jakso: kelattu.esitys?.jakso,
+      vuosia: kelattu.esitys?.vuosia,
+      kaynnissa: kelattu.esitys?.kaynnissa,
+      valittu: kelattu.selain?.valittu,
+    } }));
+  await s.screenshot({ path: kuva('aikaselain-tutkimus') });
 
   /* --- 5b. AITO NAPAUTUS: hehku tutkimusvaiheessa -------------------- */
   /*

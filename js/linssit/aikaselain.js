@@ -199,7 +199,14 @@ export function luoAikaselain({
       viivat[k].classList.toggle('valittu', k === i);
     }
     const piste = lista[i];
-    vuosilaatikko.style.setProperty('left', `${viivanPaikka(i, lista.length)}%`);
+    /*
+     * VUOSILUKU EI SAA VALUA RUUDUN ULKOPUOLELLE. Ensimmäinen viiva on
+     * 22 pisteen nauhalla 2,3 %:n kohdalla, ja keskitetty "300 000 v.
+     * sitten" jäisi puoliksi laidan taakse. Paikka menee siksi
+     * MUUTTUJANA css:lle, joka rajaa sen laidoista (clamp) — mitta on
+     * siellä, missä kirjasinkoko on.
+     */
+    vuosilaatikko.style.setProperty('--paikka', `${viivanPaikka(i, lista.length)}%`);
     vuosilaatikko.textContent = piste ? teksti(piste.vuosia) : '';
     el.setAttribute('aria-valuenow', String(i + 1));
     el.setAttribute('aria-valuetext', `${piste?.otsikko ?? piste?.id ?? ''}: ${vuosilaatikko.textContent}`);

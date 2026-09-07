@@ -203,7 +203,7 @@ test('nauha rakentaa yhden viivan jokaiselle pisteelle ja vuosilaatikon', () => 
   assert.equal(vuosi.className, 'aikaselain-vuosi');
   // Oletusmuoto on tuhaterottimellinen luku; kutsuja antaa kellon muodon.
   assert.equal(vuosi.textContent, '300\u00a0000', 'tuhaterotin on katkeamaton välilyönti (talon tapa)');
-  assert.equal(vuosi.style.getPropertyValue('left'), '10%');
+  assert.equal(vuosi.style.getPropertyValue('--paikka'), '10%');
 });
 
 test('nauha kelpaa kaarelle, jolla ei ole pisteitä, palauttamalla nullin', () => {
@@ -238,7 +238,7 @@ test('nauha piirtää aallon valitun ympärille', () => {
   assert.ok(viivat[2].classList.contains('valittu'));
   assert.ok(!viivat[1].classList.contains('valittu'));
   // Vuosiluku siirtyy valitun viivan päälle.
-  assert.equal(selain.el.childNodes[1].style.getPropertyValue('left'), '50%');
+  assert.equal(selain.el.childNodes[1].style.getPropertyValue('--paikka'), '50%');
 });
 
 /* ==================== 3. veto ja napautus ==================== */
@@ -299,7 +299,7 @@ test('esitys ei nykäise nauhaa kesken vedon (aseta odottaa irrotusta)', () => {
   selain.el.laukaise('pointerdown', { clientX: 450 });
   selain.aseta('b');
   assert.equal(selain.tila().esikatselu, 'e', 'esikatselu pysyy sormen alla');
-  assert.equal(selain.el.childNodes[1].style.getPropertyValue('left'), '90%');
+  assert.equal(selain.el.childNodes[1].style.getPropertyValue('--paikka'), '90%');
   selain.el.laukaise('pointercancel', { clientX: 450 });
 });
 
