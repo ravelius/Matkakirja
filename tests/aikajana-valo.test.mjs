@@ -422,9 +422,10 @@ test('vuosipalkki on vasemmassa laidassa marginaalimuuttujalla, puhelimella kesk
   assert.match(ylarivi, /left: var\(--aikajana-ylarivi-marginaali\);/);
   assert.ok(!/transform: translateX\(-50%\)/.test(ylarivi), 'palkki keskitetään yhä');
   assert.match(ylarivi, /top: 0\.6rem;/, 'pystysijainti muuttui');
-  // Kapealla ruudulla (mitattu 390 x 844) palkki palaa keskelle.
+  // Kapealla ruudulla (mitattu 390 x 844) palkki palaa keskelle — keskitys
+  // lasketaan ✕:n vasemmalle jäävästä tilasta (7.9.2026, sulku kulmassa).
   const puhelin = CSS.match(/@media \(max-width: 640px\) \{[\s\S]*?\n\}\n/)[0];
-  assert.match(puhelin, /\.aikajana-ylarivi \{[\s\S]*?left: 50%;[\s\S]*?transform: translateX\(-50%\);/);
+  assert.match(puhelin, /\.aikajana-ylarivi \{[\s\S]*?left: calc\(50% - 1\.8rem\);[\s\S]*?transform: translateX\(-50%\);/);
 });
 
 /* ══════════════════════════════════════════════════════════════════

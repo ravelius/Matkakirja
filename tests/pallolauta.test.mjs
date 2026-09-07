@@ -33,7 +33,11 @@ const {
   korkeusLeveydesta, leveysKorkeudesta, PALLO_KORKEUS_MAX, PALLO_KORKEUS_MIN,
   PALLOLAUDAN_SAAPUMISLEVEYS,
 } = kamera;
-const { PALLOLAUDAN_KERROKSET, kaupunkipisteenVari } = await import('../js/pallolauta/lauta.js');
+const {
+  PALLOLAUDAN_KERROKSET, KAUPUNKIPISTEEN_HALKAISIJA_PX, PISTEEN_SADE_MAX, PISTEEN_SKAALA,
+  kaupunkipisteenSade, kaupunkipisteenVari,
+} = await import('../js/pallolauta/lauta.js');
+const { PALLO_FOV } = await import('../js/pallolauta/kamera.js');
 const { Game } = await import('../js/game.js');
 const { packById } = await import('../js/pack.js');
 const { PALLO_SUKELLUSLEVEYS } = await import('../js/pallo.js');
@@ -362,7 +366,14 @@ test('vaihe 2: siirto haarautuu laudan mukaan kuljettajalle, koreografia pysyy y
   // Reitit: yksi sääntö (matkareittienValinta), kaksi piirtäjää.
   assert.match(ui, /^  matkareittienValinta\(\) \{/m);
   assert.match(ui, /if \(this\.kartta\.lepotila\) \{ this\.pallolauta\?\.paivita\(\); return; \}/);
-  assert.match(lue('../js/pallolauta/reitit.js'), /pointAlong\(reitti\.poly, i \/ askelia\)/, 'helmet eivät ole samalla kaavalla kuin pixelOf');
+  // Helmet samalla kaavalla kuin pixelOf, mutta reitin KORJATULTA
+  // polylta (kaupungin oma pallopiste siirtää polyn päät) — sama
+  // viiva, jota nappula kulkee (js/pallolauta/siirto.js hypynKohta).
+  const reititLahde = lue('../js/pallolauta/reitit.js');
+  assert.match(reititLahde, /const poly = korjattuPoly\(reitti\);/);
+  assert.match(reititLahde, /pointAlong\(poly, i \/ askelia\)/, 'helmet eivät ole samalla kaavalla kuin pixelOf');
+  assert.match(lue('../js/pallolauta/siirto.js'), /pointAlong\(lauta\.reitit\.poly\(h\.reitti\), h\.ta \+ \(h\.tb - h\.ta\) \* e\)/,
+    'nappula ei kulje samaa korjattua polya kuin helmet');
   assert.match(lue('../js/pallolauta/lauta.js'), /const valinta = lento \? lento\.valinta : ui\.matkareittienValinta\(\);/);
   // Kehäriippuvuus poistui: pallolauta ei tuo ui.js:ää; koreografian
   // luvut tulevat kummallekin laudalle samasta moduulista.
@@ -922,4 +933,73 @@ test('avauslento: kone on heti lentosuunnassa — käännöksen kesto on nolla',
   assert.match(siirto, /aseta: \(pos, kaari = null\) => \{/);
   assert.match(avaus, /kuljettaja\.aseta\(lahtoPos, lentokaari\(\)\);/);
   assert.match(avaus, /piirraJalki\(lennonVaihe\(0\)\);/);
+});
+
+/* ================================================================== *
+ * Kaupunkipiste on ruudun vakio (omistaja 7.9.2026: iso musta ympyrä
+ * Tampereen kohdalla) — docs/moduulit/karttapallo.md luku 12.3
+ * ================================================================== */
+
+test('kaupunkipisteen ruutuhalkaisija on sama joka zoomilla ja joka ruudulla', () => {
+  // Kirjaston mitta: yksi pointRadius-yksikkö on 2π·R/360 pallon yksikköä.
+  const ruudulla = (korkeus, ruutuPx) => {
+    const sade = kaupunkipisteenSade(korkeus, ruutuPx);
+    const yksikot = 2 * sade * PISTEEN_SKAALA;
+    // Kamera on pinnasta R·korkeus yksikön päässä ja näkee siinä
+    // 2·R·korkeus·tan(fov/2) yksikköä ruudun korkeudella.
+    const pxPerYksikko = ruutuPx / (2 * 100 * korkeus * Math.tan((PALLO_FOV / 2) * (Math.PI / 180)));
+    return yksikot * pxPerYksikko;
+  };
+  for (const ruutuPx of [844, 1180, 826]) {
+    for (const korkeus of [0.04, 0.08, 0.35, 1.2, 2.5]) {
+      const px = ruudulla(korkeus, ruutuPx);
+      assert.ok(Math.abs(px - KAUPUNKIPISTEEN_HALKAISIJA_PX) < 0.01,
+        `korkeus ${korkeus}, ruutu ${ruutuPx}: ${px.toFixed(2)} px`);
+    }
+  }
+  // Vanha karttavakio 0,03 antoi puhelimella 2,7 px korkeudella 0,35 ja
+  // 13,7 px lähimmällä zoomilla — juuri se, mistä vika tuli.
+  assert.ok(Math.abs(kaupunkipisteenSade(0.35, 844, { halkaisijaPx: 2.7 }) - 0.03) < 0.0005);
+  // Kelvottomat luvut eivät päädy kirjastolle, eikä katto ylity.
+  assert.equal(kaupunkipisteenSade(0, 844), 0);
+  assert.equal(kaupunkipisteenSade(0.35, 0), 0);
+  assert.equal(kaupunkipisteenSade(1e9, 844), PISTEEN_SADE_MAX);
+});
+
+test('kaupunkipisteen koko seuraa kameraa ilman uutta pistedataa', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  // Luenta antaa kameran mukaisen säteen (ei enää karttavakiota).
+  assert.match(lauta, /return pisteenSade\(\);/);
+  assert.doesNotMatch(lauta, /KAUPUNKIPISTEEN_SADE/);
+  // Zoomin muuttuessa skaala kirjoitetaan olioon: ei pointsData-kutsua,
+  // joten 261 pistettä ei synny uudestaan eikä siirtymä nykäise.
+  assert.match(lauta, /const tahdistaPisteidenKoko = \(\) => \{/);
+  assert.match(lauta, /const skaala = sade \* PISTEEN_SKAALA;/);
+  assert.match(lauta, /ohjaimet\.addEventListener\('change', tahdistaPisteidenKoko\);/);
+  assert.match(lauta, /ohjaimet\.removeEventListener\('change', tahdistaPisteidenKoko\);/);
+  // Ruudun koko on osa vakiota, joten koon muutos päivittää säteen.
+  assert.match(lauta, /tahdistaZoomirajat\(\);\n\s*\/\/ Ruudun korkeus on osa kaupunkipisteen ruutuvakiota\.\n\s*tahdistaPisteidenKoko\(\);/);
+  // Askelhelmi ja aihevalo ovat yhä kartan mittoja: vain kaupunkipiste skaalataan.
+  assert.match(lauta, /if \(d\.laji === 'helmi' \|\| d\.laji === 'valo'\) continue;/);
+});
+
+test('kaupungin oma pallopiste kulkee kaikkiin merkkeihin yhdestä paikasta', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  // Asteet: oma piste ensin, lauta vasta sitten.
+  assert.match(lauta, /const oma = omatPisteet\.get\(laudanPisteenAvain\(kohta\.x, kohta\.y\)\);\n\s*if \(oma\) return \{ lat: oma\.lat, lon: oma\.lon \};/);
+  assert.match(lauta, /const \{ pisteet: laudanOmatPisteet, siirtymat \} = pallonOmatPisteet\(pack\);/);
+  // Purku palauttaa moduulin tilan: seuraava lauta ei peri edellisen pisteitä.
+  assert.match(lauta, /if \(omatPisteet === laudanOmatPisteet\) omatPisteet = new Map\(\);/);
+  // Reittikerros saa siirtymät, jotta viivan pää päätyy samaan pisteeseen.
+  assert.match(lauta, /luoReitit\(\{\n\s*pallo, ui, siirtyma, asteet: pallonAsteet, siirtymat,\n\s*\}\)/);
+  // Nappulan kuljettaja lukee siirtymät laudalta.
+  assert.match(lauta, /^\s*siirtymat,$/m);
+  const siirto = lue('../js/pallolauta/siirto.js');
+  assert.match(siirto, /const d = lauta\.siirtymat\?\.get\(pos\.city\);/);
+  assert.match(siirto, /return pointAlong\(lauta\.reitit\.poly\(reitti\), pos\.idx \/ reitti\.steps\);/);
+  // Lentokaari lukee asteet kaupunkioliosta, joten se osuu samaan pisteeseen.
+  const reitit = lue('../js/pallolauta/reitit.js');
+  assert.match(reitit, /const alku = asteet\(a\);\n\s*const loppu = asteet\(b\);/);
+  // Poly korjataan kaarenpituuden mukaan: pää tarkalleen, väli pehmeästi.
+  assert.match(reitit, /const t = yhteensa > 0 \? kertyma \/ yhteensa : Math\.min\(1, i\);/);
 });

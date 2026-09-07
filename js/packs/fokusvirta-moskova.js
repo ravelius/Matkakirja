@@ -253,15 +253,34 @@ export const FOKUSVIRTA_MOSKOVA = {
      *       en-artikkeli lisää, että hän halusi tehdä sen mahdollisimman
      *       huomaamattomasti eikä pitänyt kiitoksista.
      */
-    maadoitus: 'Kääk. Se neljän tunnin päivällinen ei ollut pelkkää '
-      + 'syömistä — sellaisissa taloissa istui väkeä, joka teki rahansa '
-      + 'kankaalla ja pellavalla ja käytti ne sitten johonkin ihan '
-      + 'muuhun. Yksi heistä, Pavel Tretjakov, oli ostellut tauluja '
-      + 'vuodesta 1856 ja avannut kokoelmansa yleisölle jo 1867, eli '
-      + 'kuusi vuotta ennen isoisäsi käyntiä. Vuonna 1892 hän antoi koko '
-      + 'kokoelman kaupungille ja yritti tehdä senkin mahdollisimman '
-      + 'huomaamattomasti, koska kiitosten kuunteleminen oli hänestä '
-      + 'kiusallista. Mut kaupunki sai museon, ja se on siellä yhä.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Moskova, heinäkuussa 1873. Kuuntele kelloja, niitä on monta.',
+    huudahdus: {
+      kohta: 'kesti neljä tuntia',
+      teksti: 'Neljä tuntia!',
+    },
+    kommentti: [
+      'Sellaisissa taloissa istui väkeä kuin Tretjakov, joka osti tauluja ja antoi ne kaupungille.',
+      'Pää ja sydän vaihtoivat paikkaa: pääkaupunki palasi tänne 1918. Kellot soivat yhä.',
+    ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      *
@@ -273,11 +292,6 @@ export const FOKUSVIRTA_MOSKOVA = {
      * valita karusellin ensimmäistä, koska toinen vastaa repliikkiä
      * sanasta sanaan.
      */
-    teksti: 'Se pää ja sydän -sanonta piti pintansa: puoli vuosisataa '
-      + 'isoisäsi käynnin jälkeen pääkaupunki muutti takaisin Moskovaan, '
-      + 'ja sydän sai pään tehtävät.. Kellot soivat edelleen, samovaarit '
-      + 'höyryävät edelleen, ja se rengasrakenne näkyy nykyään '
-      + 'metrokartassa asti. Muurien luo sitten.',
     kuva: {
       ampari: 'herokoe/hero-moskova-keskipaiva.png',
       /*

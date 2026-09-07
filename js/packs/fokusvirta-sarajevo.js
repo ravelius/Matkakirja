@@ -252,15 +252,34 @@ export const FOKUSVIRTA_SARAJEVO = {
      * Loppu myöntää isoisälle sen osan, joka piti paikkansa — kaanonin
      * sääntö 3 kevyempänä muotona (varsinainen myönnytys on Ateenassa).
      */
-    maadoitus: 'Kaunis lause. Mut postinkantajan kannalta se näytti vähän '
-      + 'toiselta: monta uskoa tarkoitti montaa kalenteria, montaa pyhien '
-      + 'sarjaa ja ikuista laskemista siitä, minä päivänä mikäkin luukku on '
-      + 'auki. Meikäläiset valitti siitä ääneen. Herätä sai silti minkä '
-      + 'kellon mukaan halus — se osa piti kyl paikkansa.',
-    teksti: 'Joen varrella on nykyään talo nimeltä Inat kuća — Uhman '
-      + 'talo. Kun keisarin virkamiehet halusivat sen tontin, omistaja '
-      + 'purki talonsa ja kokosi sen uudestaan joen toiselle puolelle, '
-      + 'lauta laudalta. Minä ihailen sitä miestä ammatikseni.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Sarajevo. Kirkas ilta, vuoret lähellä. Isoisä seisoi sillalla ja kuunteli.',
+    huudahdus: {
+      kohta: 'joen, joka ei kuulu kenellekään',
+      teksti: 'Kääk, neljä.',
+    },
+    kommentti: [
+      'Kaunis lause. Mut postinkantajalle monta uskoa tarkoitti montaa kalenteria.',
+      'Ikuista laskemista, minä päivänä mikäkin luukku on auki. Herätä sai silti kun halus.',
+    ],
     /*
      * Commons 25.8.2026: 5184×3456, CC BY 2.0, Fred Romero, kuvattu
      * 20.8.2019, kategoria Inat kuća; tiedoston oma kuvaus kertoo saman

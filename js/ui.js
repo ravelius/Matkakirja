@@ -26,7 +26,8 @@ import { stampBoard } from './passport.js';
 // UI:n puhtaat apurit, ikonit ja alkuanimaation kehysmatematiikka
 // (siirretty tästä tiedostosta 17.8.2026, remontin M2).
 import {
-  AARRELAATAT, EVENT_SOUND, JALJEN_PYYHKAISY, TOAST_MS, LINSSI_EI_IKONI, MERKKI_SEIS,
+  AARRELAATAT, ETUSIVUN_KOHTEET, ETUSIVUN_NAKYVAT, EVENT_SOUND, JALJEN_PYYHKAISY,
+  TOAST_MS, LINSSI_EI_IKONI, MERKKI_SEIS,
   MERKKI_SOITA, REVEAL_SUB, VIIVA_IKONIT, aarreIkoni, aarrekuvanOsoitteet,
   alkuKehykset, arvoHuudahdus, ekaLause, esilataaKuvat, html, jaaKappaleiksi,
   jaljenKehykset, kierraKehykset, kuvitukseton, lahdemerkinta, liuskaIkoniSvg,
@@ -167,12 +168,15 @@ import {
 import { avaaTietajagalleria } from './tietajagalleria.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
+// Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
+import { livianKorostetutKaupungit } from './liviapuhe.js';
 // Fokusmoodin annosteluvirta (js/fokusvirta.js). Kytkentä on kaksi
 // kutsua: saapumisen laukaisin renderissä ja lehtilukko openArrivalissa.
 import {
   fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
   fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
   fokusvirtaLehtivinkki, fokusvirtaSisalto,
+  fokusvirtaAlustus, fokusvirtaAlustusOdottaa, fokusvirtaUusiKulku,
   fokusvirtaSaapumiskupla, nollaaFokuskuvat,
 } from './fokusvirta.js';
 
@@ -531,41 +535,18 @@ const LENNON_NIELU_MS = 500;
 // Lähtökaupunki: matka alkaa aina Lontoosta (Raamattu, "Pelin kulku").
 const ALOITUSLENNON_LAHTO = 'lontoo';
 /*
- * ETUSIVUN VALITTAVAT KOHTEET (omistajan tilaus 25.8.2026).
- *
- * Aloituskartalla on vain ne kaupungit, joilla on valmis fokusmoodin
- * sisältö: matkan ensimmäinen kohde on kokonaisen maan avaus, eikä
- * puolivalmiiseen kohteeseen saa päästä lentämään. PISTEITÄ LISÄTÄÄN
- * SITÄ MUKAA KUN MAITA VALMISTUU FOKUSJÄRJESTELMÄLLE — lisäys on tähän
- * joukkoon, ei laudan dataan (js/packs/maailma.js pysyy täytenä
- * maailmankarttana, jota myös katselutila käyttää).
- *
- * Sofia on jo pelissä mutta EI ole aloituskohde: sinne kävellään
- * Ateenasta, kuten tarina menee.
+ * Se yksi kohde, jonka lauta ja taide esilämmitetään avaustekstin
+ * aikana (esilammitaAvaus): tarinan ensimmäinen reitti. Muut kohteet
+ * ovat yhtä valittavia, mutta ilman etumatkaa.
  */
-const ETUSIVUN_KOHTEET = new Set(['ateena']);
+const ESILAMMITETTAVA_KOHDE = 'ateena';
 /*
- * MITKÄ KAUPUNGIT NÄKYVÄT ALOITUSKARTALLA LAINKAAN (omistajan
- * pelitestipalaute v1119: *"piilota toistaiseksi KAIKKI muut
- * kaupungit paitsi Ateena — Tanger, Moskova, Kairo, Kapkaupunki,
- * Peking, Mumbai ym. pois näkyvistä (nimet, ympyrät, konesymbolit;
- * Lontoo lähtöpisteenä saa jäädä)"*).
- *
- * Valintakartalla oli neljätoista kaupunkia nimineen, laattoineen ja
- * lentokonemerkkeineen, mutta VALITTAVIA on tasan yksi
- * (ETUSIVUN_KOHTEET). Kolmetoista muuta lupasivat matkan, jota ei ole
- * vielä olemassa.
- *
- * NÄKYVYYS, EI DATA. Lauta pysyy täytenä maailmankarttana
- * (js/packs/maailma.js) — myös katselutilaa (?lauta=) varten, jossa
- * tämä piilotus ei ole voimassa. Kaupunki palaa kartalle lisäämällä
- * sen tunnuksen tähän joukkoon, samaan tapaan kuin ETUSIVUN_KOHTEET
- * kasvaa maiden valmistuessa.
- *
- * Lontoo on mukana lähtöpisteenä: siitä matka alkaa, ja sen kultainen
- * rengas on koko kartan ainoa kiintopiste.
+ * ETUSIVUN VALITTAVAT KOHTEET JA NÄKYVÄT KAUPUNGIT asuvat
+ * js/ui-apurit.js:ssä (ETUSIVUN_KOHTEET, ETUSIVUN_NAKYVAT): myös Livian
+ * avausesittely lukee kohteiden määrän, eikä js/livia.js voi tuoda
+ * tätä tiedostoa. Joukko on puhdasta dataa — mitkä kaupungit ovat
+ * lähtövalinnassa valittavia ja mitkä näkyvät kartalla lainkaan.
  */
-const ETUSIVUN_NAKYVAT = new Set(['lontoo', ...ETUSIVUN_KOHTEET]);
 /*
  * ALOITUSSIIRTYMÄN PERGAMENTTIARKKI (omistajan tilaus 25.8.2026).
  *
@@ -6991,6 +6972,8 @@ export class UI {
      * se on nyt poissa, myös kehittäjätilassa. Laatan luokka on siis
      * pelkkä `city`/`city-start` joka tilassa.
      */
+    // Tarkistuskehän lista kerran, ei kaupunkia kohti (ks. alempaa).
+    const tarkistettavat = livianKorostetutKaupungit();
     for (const c of board.cities) {
       const wobble = `rotate(${vary(`city:rot:${c.id}`, 12).toFixed(1)} ${c.x} ${c.y})`;
       /*
@@ -7062,6 +7045,28 @@ export class UI {
           'text-anchor': 'middle',
           ...tunnus, ...fokus,
         }, cities).textContent = '✈';
+      }
+      /*
+       * TARKISTUSKEHÄ (omistajan tilaus 7.9.2026, väliaikainen): kaupunki,
+       * jonka uusi pulukulku on kirjoitettu JA äänitetty, saa kultaisen
+       * kehän — omistaja löytää tarkistettavat kohteet yhdellä
+       * silmäyksellä. Kehä on PELKKÄ VIIVA laatan päällä (pointer-events
+       * none, css .city-tarkistus): se ei muuta pisteen kokoa eikä
+       * yhtäkään osumapintaa, joten kaupunkilehti- ja nosto-osumatestit
+       * pysyvät ennallaan. Päätoimittaja kääntää LIVIAN_KOROSTUS_KAYTOSSA
+       * falseksi, kun kaupungit on käyty läpi.
+       */
+      if (tarkistettavat.has(c.id)) {
+        const tr = base + 5.2;
+        el('ellipse', {
+          cx: c.x,
+          cy: c.y,
+          rx: tr + vary(`tarkistus:rx:${c.id}`, 0.7),
+          ry: tr + vary(`tarkistus:ry:${c.id}`, 0.7),
+          transform: wobble,
+          class: 'city-tarkistus',
+          ...tunnus, ...fokus,
+        }, cities);
       }
       /*
        * PAIKANNIMI KUULUU LAATTAAN, EI ELÄVÄÄN KERROKSEEN
@@ -7551,9 +7556,12 @@ export class UI {
    *
    * Lähtöpisteen valinnassa kartalla oli neljätoista kaupunkia
    * nimineen, laattoineen ja lentokonemerkkeineen, vaikka valittavia
-   * oli tasan yksi. Kaikki muut paitsi Lontoo ja aloituskohteet
-   * piilotetaan — nimi, laatta, rantarengas, porttikehä ja
-   * konemerkki, eli kaupungin koko piirros.
+   * oli v1119:ssä tasan yksi. Kaikki muut paitsi Lontoo ja
+   * aloituskohteet piilotetaan — nimi, laatta, rantarengas,
+   * porttikehä ja konemerkki, eli kaupungin koko piirros. Kun
+   * valittavat palasivat 7.9.2026, joukko kasvoi niiden mukana
+   * (ETUSIVUN_NAKYVAT), joten sääntö on ennallaan vaikka piilotettavia
+   * on nyt vähemmän.
    *
    * PIILOTUS ON LUOKKA JA VAIN NÄKYVYYTTÄ. Laudan data pysyy
    * koskemattomana, ja katselutila (?lauta=) näyttää laudan yhä
@@ -9883,10 +9891,12 @@ export class UI {
     /*
      * LÄHTÖPISTEEN VALINTA — ETUSIVUN VALINTAKARTTA.
      *
-     * Kohdepisteitä on tasan yksi (ks. ETUSIVUN_KOHTEET): Ateena.
-     * Pisteitä lisätään sitä mukaa kun maita valmistuu
-     * fokusjärjestelmälle. Sofia on jo pelissä, mutta se EI ole
-     * aloituskohde — sinne kävellään Ateenasta.
+     * Kohdepisteitä on niin monta kuin ETUSIVUN_KOHTEET-joukossa on
+     * kaupunkeja — 7.9.2026 alkaen neljätoista (omistajan koe: kaikki
+     * entiset kohdekaupungit takaisin). Silmukka on aina ollut
+     * monikohteinen, joten tässä ei ole vaihetta yhden ja monen
+     * välillä. Sofia on jo pelissä, mutta se EI ole aloituskohde —
+     * sinne kävellään Ateenasta.
      *
      * PISTEET ILMESTYVÄT VASTA LÄHIKUVASSA (omistajan tilaus
      * 25.8.2026). Etusivulla kartan päällä on avauspalsta, ja kartta
@@ -11620,11 +11630,27 @@ export class UI {
   esilammitaAvaus() {
     if (this.esilammitys || this.dead || this.katselu) return;
     if (this.game.phase !== 'pickstart') return;
-    // Kohde tiedetään ennalta vain jos valittavia on tasan yksi
-    // (ETUSIVUN_KOHTEET). Useammalla esilämmitys jää tekemättä eikä
-    // mikään muutu — se on etumatka, ei ehto.
-    if (ETUSIVUN_KOHTEET.size !== 1) return;
-    const [kohdeId] = [...ETUSIVUN_KOHTEET];
+    /*
+     * MIKÄ KOHDE ESILÄMMITETÄÄN, KUN VALITTAVIA ON MONTA
+     * (7.9.2026)? Yksi ja vain yksi: ATEENA. Esilämmitys nostaa
+     * kohdemaan laudan muistiin ja piirtää sen taiteen valmiiksi
+     * (enterWorld + esilammitaTaide) — kolmelletoista kohteelle se
+     * olisi neljätoista lautaa ja neljätoista taidepohjaa
+     * avaustekstin alla, eli juuri se töksähdys, jonka esilämmitys
+     * on tarkoitettu poistamaan. Ateena on tarinan oma ensimmäinen
+     * reitti (Livian avaus, Aarnin luettelo), joten se on myös
+     * todennäköisin valinta; muut kohteet lentävät ilman etumatkaa,
+     * täsmälleen kuten ennen tätä optimointia.
+     *
+     * Talletus on kohdekohtainen (esilammitys.kohde), ja doPickStart
+     * käyttää talletettua repliikkiä vain jos kohde täsmää — muille
+     * kaupungeille arvonta tehdään siellä kuten ennenkin, joten
+     * rng-järjestys pysyy oikeana kaikilla kolmellatoista.
+     */
+    const kohdeId = ETUSIVUN_KOHTEET.has(ESILAMMITETTAVA_KOHDE)
+      ? ESILAMMITETTAVA_KOHDE
+      : (ETUSIVUN_KOHTEET.size === 1 ? [...ETUSIVUN_KOHTEET][0] : null);
+    if (!kohdeId) return;
     const kohde = this.game.board.cityById.get(kohdeId);
     const portti = (kohde?.links ?? [])[0];
     if (!kohde || !portti) return;
@@ -12429,7 +12455,14 @@ export class UI {
          * fokusvirrat antavat kuvansa yhä itse, eikä niiden kortti
          * muutu.
          */
-        if (merkinta.kuva) {
+        /*
+         * UUDESSA KULUSSA EI KUVAA (omistaja 7.9.2026, Raamattu
+         * KAUPUNGIN KULKU: EI KUVIA, PULU - LUENTA - PULU): kaupungin,
+         * jonka pulutekstit on kirjoitettu uusiksi, matkakirjakortti on
+         * pelkkää tekstiä — kuvat kuuluvat kaupunkilehteen. Vanhan
+         * pakkauksen `matkakirja.kuva` jää dataan koskematta.
+         */
+        if (merkinta.kuva && !fokusvirtaUusiKulku(this, virtaKaupunki)) {
           this.naytaFactValokuva(virtaKaupunki.id, virtaKaupunki.name, merkinta.kuva);
         } else {
           this.naytaFactValokuva(null);
@@ -12457,12 +12490,30 @@ export class UI {
         } else {
           this.factKuuntele.hidden = true;
         }
+        /*
+         * PULUN ALUSTUS ENNEN ISOISÄN LUENTAA (omistaja 7.9.2026).
+         * Uuden kulun kaupungissa luenta EI ala tässä piirrossa vaan jää
+         * odottamaan alustuskuplaa; lippu on nostettava ENNEN
+         * asetaMerkinnanLuenta-kutsua, koska luenta lähtee juuri siitä.
+         * Kuplasarja päästää sen liikkeelle (js/fokusvirta.js
+         * fokusvirtaSaapumiskupla → aloitaLykattyLuenta) — myös silloin,
+         * kun kupla ei jostain syystä tule.
+         */
+        if (fokusvirtaAlustusOdottaa(this, virtaKaupunki)) this.luennanLykkays = true;
         // Kertoja lukee koko merkinnän tai ei mitään ('lyhyt' poistettu
         // 3.9.2026, ks. js/aani-ehdokkaat.js kertojaTila).
         this.asetaMerkinnanLuenta(virtaAanite ? () => {
           if (kertojaTila() === 'ei') stopDiaryVoice(this);
           else playDiaryVoice(this, virtaAanite, { viive: 1000 });
         } : null);
+        /*
+         * ALUSTUS HETI, EI KIRJOITUSKONEEN LOPUSTA. Lykätty luenta
+         * odottaa alustuskuplaa, ja kirjoituskone kirjoittaa merkinnän
+         * kymmenessä sekunnissa — jos alustus odottaisi sitä, isoisä
+         * alkaisi puhua vasta luetun tekstin päälle. Kommentti tulee yhä
+         * kirjoituskoneen lopusta (fokusvirtaMerkintaLuettu).
+         */
+        fokusvirtaAlustus(this, virtaKaupunki);
         return;
       }
       if (virtaKaupunki && fokusvirtaLukitseeLehden(this, virtaKaupunki)) {

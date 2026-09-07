@@ -144,13 +144,34 @@ export const FOKUSVIRTA_WIEN = {
      * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kääk", "Mut"),
      * keskellä sanat auki.
      */
-    maadoitus: 'Kääk. Hattu kädessä kupolin alla, ja kahdeksan päivää '
-      + 'myöhemmin itkeviä miehiä kadulla — kyllä minä ymmärrän, ettei '
-      + 'sellaista unohda. Sitten minä katson vuosilukua: siitä '
-      + 'toukokuusta on yli sataviisikymmentä vuotta, ja koko kupoli '
-      + 'paloi jo 1937. Raha kaatui silloin Wienissä, sitten '
-      + 'Berliinissä ja syksyllä New Yorkissa asti. Ei se kenenkään '
-      + 'itkua pienennä. Mut kyllä sen kestää lukea.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Wien. Sadekuuroja, ilmanpuntari laskee. Maailmannäyttely on juuri avattu.',
+    huudahdus: {
+      kohta: 'pörssi kaatui',
+      teksti: 'Kääk.',
+    },
+    kommentti: [
+      'Hattu kädessä kupolin alla, ja kahdeksan päivää myöhemmin itkeviä miehiä kadulla.',
+      'Kupoli paloi 1937. Raha kaatui Wienissä, sitten Berliinissä ja New Yorkissa asti.',
+    ],
     /*
      * Huomio viittaa herokuvan kohteeseen (valtionooppera). Faktat
      * ovat lehden oman avauskuvan selitteestä (js/packs/
@@ -159,11 +180,6 @@ export const FOKUSVIRTA_WIEN = {
      * 2 — sama fakta kuin maadoituksessa, sanottuna toisesta suunnasta
      * (mitä jäi jäljelle).
      */
-    teksti: 'Sitä kupolia ei ole enää olemassa, se paloi 1937. '
-      + 'Ringstrassen talot sen sijaan seisovat yhä: tuo oopperatalo '
-      + 'tuolla avattiin 1869, neljä vuotta ennen isoisäsi käyntiä, ja '
-      + 'sen lavalla on esiinnytty melkein joka ilta siitä asti. Katso '
-      + 'ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-wien-state-opera.jpg',
       selite: 'Valtionooppera avasi 1869 Ringstrassen loistorakennusten '

@@ -14,7 +14,7 @@
  * tummennus on ruutukalvo (`.pallolauta-kalvo`), ja kello, karuselli ja
  * ilmiöpaneeli asuvat karttaruudussa pallon päällä. Tasokartta EI herää:
  * svg#board pysyy tyhjänä ja ui.kartta.lepotila totena koko ajon.
- * Lopuksi aikajanan Sulje purkaa pallolinssin (ui.pallolinssi null,
+ * Lopuksi aikajanan kulman ✕ purkaa pallolinssin (ui.pallolinssi null,
  * aikajana-merkkejä 0, ruutukalvo poissa) ja pallo jää lautana näkyviin.
  * Ennen aaltoa 2A tämä savuke odotti linssikartan kuorta; se vartio on
  * korvattu näillä (5.9.2026).
@@ -46,7 +46,7 @@
  *   4. Kellon napautus pysäyttää; toinen jatkaa.
  *   5. Kaaren lopussa kaikki valot palavat ja loppusanat näkyvät.
  *   6. Nykyisen kortin napautus avaa nähtävyysdialogin jutulla.
- *   7. Sulje purkaa kaiken: ei kelloa, ei valoja, ei body-luokkaa
+ *   7. Sulku purkaa kaiken: ei kelloa, ei valoja, ei body-luokkaa
  *      (pallolla purku on siirtymän mittainen, joten sitä odotetaan).
  *   8. Ei sivuvirheitä.
  *
@@ -76,7 +76,10 @@
  *        pisteitä neljätoista.
  *   V.6  Loppusanojen "Katso löydöt" avaa Tiedeliitteen, jonka
  *        sisällyksessä on 20 riviä ja niistä 6 merkittyä (◈).
- *   V.7  "Sulje" purkaa kaiken kuten keksintökaarella.
+ *   V.7  Kartan oikean yläkulman ✕ (.aikajana-sulje) purkaa kaiken
+ *        kuten keksintökaarella. Lapun oma Sulje-nappi poistui
+ *        7.9.2026 (omistaja); lapun rullaus ja kulman ✕ ovat oman
+ *        savukkeensa vartiossa (savuke-linssin-lappu.mjs).
  *
  * KUVAKAAPPAUKSET (KAAPPAUKSET-kansio): hetkiltä 300 / 88 / 50 / 20 /
  * 15 ka, loppu koko pallon näkymässä, loppusanat ja galleria. Kello
@@ -507,8 +510,14 @@ async function ajaIhmisenMatka() {
       `suurin sekuntisuhde ${loppu.suurinSuhde}, raaka kehyssuhde ${loppu.suurinRaaka},`
         + ` kehysväli (mediaani) ${loppu.kehysvali} ms, näytteitä ${loppu.naytteita}`
         + ` / sekunteja ${loppu.sekunteja}`);
-    vaadi(nimessa('loppusanoissa nappirivi Katso löydöt / Sulje'),
-      loppu.napit.length === 2 && loppu.napit[0] === 'Katso löydöt' && loppu.napit[1] === 'Sulje',
+    /*
+     * LOPPUSANOISSA VAIN "KATSO LÖYDÖT" (omistaja 7.9.2026 ilta):
+     * sulkeva nappi siirtyi lapusta kartan oikeaan yläkulmaan, joten
+     * nappirivillä on yksi nappi. Lapun rullaus ja kulman ✕ ovat oman
+     * savukkeensa vartiossa (savuke-linssin-lappu.mjs).
+     */
+    vaadi(nimessa('loppusanoissa vain "Katso löydöt" — ei Sulje-nappia'),
+      loppu.napit.length === 1 && loppu.napit[0] === 'Katso löydöt',
       JSON.stringify(loppu.napit));
     console.log(`INFO  ${nakyma}: esitys ${kestoS} s nopeutetulla tahdilla (${ilmanTaukoja} s ilman kuvataukoja),`
       + ` kehysväli ${loppu.kehysvali} ms, paikkarivi "${loppu.paikkarivi}"`);
@@ -554,13 +563,17 @@ async function ajaIhmisenMatka() {
         && galleria.rivit === 20 && galleria.merkittyja === 6,
       JSON.stringify(galleria));
 
-    /* V.7 Sulje purkaa kaiken (pallolla purku on siirtymän mittainen). */
+    /*
+     * V.7 Kartan oikean yläkulman ✕ purkaa kaiken (pallolla purku on
+     * siirtymän mittainen). Nappi on `.aikajana-sulje` eikä enää lapun
+     * nappirivissä (omistaja 7.9.2026 ilta).
+     */
     const sulku = await s.evaluate(async () => {
       const { ui } = window.matkakirja;
       document.querySelector('.tiedeliite-kortti .fokusnosto-kortti-sulje')?.click();
       await new Promise((r) => setTimeout(r, 700));
-      const napit = [...document.querySelectorAll('.aikajana-loppunappi')];
-      napit.find((n) => n.textContent === 'Sulje')?.click();
+      const sulkija = document.querySelector('.aikajana-sulje');
+      sulkija?.click();
       const merkit = () => (ui.pallonInstanssi?.htmlElementsData?.() ?? [])
         .filter((d) => String(d.avain ?? '').startsWith('aikajana:')).length;
       for (let i = 0; i < 80; i += 1) {
@@ -569,7 +582,7 @@ async function ajaIhmisenMatka() {
       }
       const kuori = document.querySelector('.pallo-kuori.pallolauta');
       return {
-        suljeLoytyi: napit.some((n) => n.textContent === 'Sulje'),
+        suljeLoytyi: Boolean(sulkija),
         kello: document.querySelectorAll('.aikajana-kello').length,
         valot: document.querySelectorAll('.aikajana-valo').length,
         luokka: document.body.classList.contains('aikajana-paalla'),
@@ -581,7 +594,7 @@ async function ajaIhmisenMatka() {
         kuoriNakyy: Boolean(kuori) && !kuori.hidden && getComputedStyle(kuori).opacity === '1',
       };
     });
-    vaadi(nimessa('Sulje purkaa kaiken: kello, valot, pallolinssi ja ruutukalvo pois, pallo jää näkyviin'),
+    vaadi(nimessa('kulman ✕ purkaa kaiken: kello, valot, pallolinssi ja ruutukalvo pois, pallo jää näkyviin'),
       sulku.suljeLoytyi && sulku.kello === 0 && sulku.valot === 0 && !sulku.luokka && !sulku.aikajana
         && sulku.pallolinssi === null && sulku.palloMerkkeja === 0 && sulku.ruutukalvo === 0
         && sulku.tiedeliite === 0 && sulku.kuoriNakyy,

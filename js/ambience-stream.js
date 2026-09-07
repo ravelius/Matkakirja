@@ -192,11 +192,12 @@ const SILMUKKA_RISTI_MS = 2600;
 let nykyinen = null; // { audio, cityId, url, tavoite, vaimennus }
 
 /**
- * Soiva taso: kohdevoimakkuus kerrottuna mahdollisella väistöllä — ja
- * avauksen aikana etusivun omalla nostolla (ks. AVAUKSEN ÄÄNI).
+ * Soiva taso: kohdevoimakkuus kerrottuna sillä kertoimella, joka juuri
+ * nyt on voimassa — tavallisesti väistö, avauksen aikana etusivulla
+ * avauksen oma sekoitus (ks. AVAUKSEN ÄÄNI ja avauksenMaisemanKerroin).
  */
 const taso = (oma) => (oma
-  ? oma.tavoite * (oma.vaimennus ?? 1) * kehittajanKerroin('tausta') * avauksenMaisemaKerroin(oma)
+  ? oma.tavoite * avauksenMaisemanKerroin(oma) * kehittajanKerroin('tausta')
   : 0);
 
 // Kehittäjän säädin (js/kehittajan-voimat.js) muuttaa soivan maiseman
@@ -1399,9 +1400,31 @@ export function nollaaHiljennykset() {
  * TÄMÄ EI OLE VÄISTÖ VAAN AVAUKSEN OMA SEKOITUS. Väistö (puhe,
  * ääninäyte, lukunäkymä) painaa KAIKKEA samalla kertoimella; tässä
  * kaksi raitaa liikkuu ERI SUUNTIIN, ja juuri se ero tekee vaikutelman
- * "peli alkaa". Siksi omat kertoimensa eikä pyydettyVaisto — ja siksi
- * ne kerrotaan tasoon sisään (taso, pohjaMusiikinTaso), jolloin väistö
- * ja kehittäjän säädin toimivat avauksen aikana täsmälleen kuten ennen.
+ * "peli alkaa". Siksi omat kertoimensa eikä pyydettyVaisto.
+ *
+ * KERTOJA EI VÄISTÄ TERMINAALIA (omistajan vika 7.9.2026 illalla,
+ * v1671: *"Lentoterminaalin ääni ei kuulu etusivulla, vaikka
+ * pitäisi."*). Ensimmäinen toteutus kertoi avauksen nostot väistön
+ * PÄÄLLE, ja avauksen ainoa puhuja on avaustekstin kertoja itse.
+ * MITATTU (Chromium, oikeat äänitteet, tools/savukkeet/
+ * savuke-etusivun-aani.mjs): terminaali nousee lukemaan 0,1728, pitää
+ * sen noin sekunnin ja putoaa luennan alkaessa (2,85 s painalluksesta)
+ * lukemaan 0,1728 × 0,25 = 0,0432 — 64 % ALLE oman kalibroidun
+ * tasonsa (0,1192) — ja jää sinne koko 18 sekunnin luennan ajaksi.
+ * Painalluksesta kuului siis lyhyt aalto ja sen jälkeen ei mitään:
+ * juuri se, mistä omistaja kirjoitti.
+ *
+ * Vika oli laskukaavassa eikä säädössä. Tilauksessa luenta lähtee
+ * käyntiin SEN PÄÄLLE, mikä on jo "voimakkaasti mukana" — kertoja on
+ * osa avausta eikä keskeytys, jonka alta terminaalin pitäisi väistyä.
+ * Siksi avauksen sekoitus KORVAA väistön etusivun maisemalla sen ajan
+ * kun se on voimassa, eikä kerry sen päälle. Musiikkiin kertyminen jää
+ * ennalleen: siellä molemmat osoittavat samaan suuntaan (tilaus haluaa
+ * musiikin hiljenevän, ja kertojan alla vielä hieman lisää).
+ *
+ * LUKUNÄKYMÄ VÄISTÄÄ YHÄ. Jos pelaaja avaa pöllön tai lehden kesken
+ * avauksen, hiljennys (VAISTO_HILJENNYS) pätee terminaaliinkin — se on
+ * pelaajan oma keskeytys eikä osa avausta.
  *
  * MIKSI 0,6 JA 1,45. Musiikki laskee −4,4 dB (0,019 → 0,0114): askel
  * kuuluu selvästi, mutta raita jää soimaan — tilauksessa musiikki
@@ -1431,13 +1454,24 @@ let avausKaynnissa = false;
 const avauksenMusiikkiKerroin = () => (avausKaynnissa ? AVAUKSEN_MUSIIKKI : 1);
 
 /**
- * Maiseman kerroin avauksen ajan (ks. taso). Vain etusivu: nosto koskee
- * terminaalia eikä mitään muuta paikkaa, joten avauksen aikana alkava
- * lento tai kaupunki soi omalla kalibroidulla tasollaan silloinkin, kun
- * lippu ehtii jäädä hetkeksi päälle.
+ * Maiseman kerroin: tavallisesti voimassa oleva väistö, avauksen aikana
+ * etusivulla avauksen oma nosto SEN TILALLA (ks. yllä "KERTOJA EI
+ * VÄISTÄ TERMINAALIA").
+ *
+ * Vain etusivu: nosto koskee terminaalia eikä mitään muuta paikkaa,
+ * joten avauksen aikana alkava lento tai kaupunki soi omalla
+ * kalibroidulla tasollaan ja väistyy kertojan alta kuten ennenkin —
+ * silloinkin, kun lippu ehtii jäädä hetkeksi päälle.
+ *
+ * Lukunäkymän hiljennys on ainoa väistö, joka pätee myös nostettuun
+ * terminaaliin, ja se luetaan syistä eikä soittimen `vaimennus`-
+ * kentästä: kenttä sisältää myös kertojan väistön, joka on juuri se,
+ * mitä tässä ei saa ottaa mukaan.
  */
-const avauksenMaisemaKerroin = (oma) => (avausKaynnissa && oma?.cityId === 'etusivu'
-  ? AVAUKSEN_MAISEMA : 1);
+const avauksenMaisemanKerroin = (oma) => {
+  if (!(avausKaynnissa && oma?.cityId === 'etusivu')) return oma?.vaimennus ?? 1;
+  return AVAUKSEN_MAISEMA * (hiljennykset.size ? VAISTO_HILJENNYS : 1);
+};
 
 /** Ajaa avauksen sekoituksen soiviin raitoihin yhdellä yhteisellä liu'ulla. */
 function ajaAvauksenAani(kesto) {

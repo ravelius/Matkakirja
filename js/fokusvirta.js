@@ -110,14 +110,19 @@ import {
   livianLehtivinkkiOdottaa, livianPaljastusKesken, merkitseLehtivinkkiNahdyksi,
 } from './livia.js';
 /*
- * PULUN ÄÄNI ATEENASSA JA SOFIASSA (Raamattu: PULUN ÄÄNI VAIN ATEENA
- * JA SOFIA ENSIN). Kupla tulee ensin, ääni seuraa sitä — sama sopimus
- * kuin avauksessa (js/livia.js naytaRepliikki). Muut kaupungit ovat
- * hiljaisia ilman ehtoja kutsupaikoissa: livianKaupunkiIndeksi
- * palauttaa niille null.
+ * PULUN ÄÄNI EUROOPAN KAUPUNGEISSA (Raamattu: VAIN EUROOPPA TYÖN ALLA).
+ * Kupla tulee ensin, ääni seuraa sitä — sama sopimus kuin avauksessa
+ * (js/livia.js naytaRepliikki). Muut kaupungit ovat hiljaisia ilman
+ * ehtoja kutsupaikoissa: livianKaupunkiIndeksi palauttaa niille null.
+ *
+ * YKSI KUPLA = YKSI ÄÄNITIEDOSTO (omistaja 7.9.2026): pakkauksen kenttä
+ * voi olla taulukko, jonka jokainen alkio on oma kupla ja oma äänite.
+ * livianKentanKuplat normalisoi kummankin muodon samaksi listaksi.
  */
 import {
-  livianKaupunkiAanitetty, soitaLivianAani, soitaLivianKaupunkiAani,
+  livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu, livianKuplanAika,
+  livianKuplanAjastin, livianKuplat,
+  soitaLivianAani, soitaLivianKaupunkiAani,
 } from './liviapuhe.js';
 import { luennanLoppuun } from './luenta.js';
 import { natiiviVastaus } from './natiivi.js';
@@ -699,6 +704,13 @@ const SAAPUMISKUPLAN_PALJASTUSKATTO_MS = 90_000;
  * mittaan. Kuplat pinoutuvat eivätkä korvaa toisiaan, joten koko
  * repliikki jää ruudulle siksi aikaa kun se puhutaan.
  *
+ * KUPLA ODOTTAA PUHEEN LOPPUUN (7.9.2026). Lukuaika on arvio tekstin
+ * pituudesta, ja osa generoiduista repliikeistä puhuu sitä pidempään.
+ * Siksi rytmi kysyy myös SOIVALTA ÄÄNITTEELTÄ sen todellisen keston
+ * (js/liviapuhe.js livianKuplanAika): kupla vaihtuu vasta kun puhe on
+ * ohi. Soittimen antaa js/pollo.js ajastaPuheenvuoro `aani`-
+ * takaisinkutsun paluuarvona.
+ *
  * Kaupunki, jota ei ole äänitetty, saa tyhjän asetusolion — rytmi
  * pysyy ennallaan eikä kutsupaikkaan tarvita ehtoa.
  *
@@ -708,7 +720,280 @@ const SAAPUMISKUPLAN_PALJASTUSKATTO_MS = 90_000;
  */
 function livianPuherytmi(kaupunkiId, kentta) {
   return livianKaupunkiAanitetty(kaupunkiId, kentta)
-    ? { viive: livianKuplanLukuaika } : {};
+    ? { viive: (teksti, aani) => livianKuplanAika(livianKuplanLukuaika(teksti), aani) } : {};
+}
+
+/**
+ * PUHEENVUORON OSAT JA NIIDEN ÄÄNET (omistaja 7.9.2026).
+ *
+ * Kaksi muotoa, yksi kutsupaikka. Kun kenttä on KIRJOITETTU KUPLIKSI
+ * (taulukko, tai jokin LIVIAN_KUPLAKENTAT-kentistä), jokainen alkio on
+ * oma kupla ja oma äänitiedosto — osat tulevat sellaisinaan ja jokainen
+ * soittaa oman äänensä. Kun kenttä on yhä yksi pitkä merkkijono (esim.
+ * Ateenan maadoitus), jako virkkeisiin on entinen (jaaPuheenvuoroksi) ja
+ * koko kenttä on yksi äänite, joka soi ensimmäisen osan kohdalla.
+ *
+ * @param {object} ui pelin käyttöliittymä
+ * @param {string} kaupunkiId kaupungin tunnus
+ * @param {string} kentta pakkauksen kentän nimi ('' = ei äänitetty)
+ * @param {string[]} kuplat kentän kuplat (livianKentanKuplat)
+ * @returns {{osat:string[], aani:(i:number, teksti:string) => void}}
+ */
+function livianOsatJaAani(ui, kaupunkiId, kentta, kuplat) {
+  if (!livianKenttaPinoutuu(kentta, kuplat.length)) {
+    return {
+      osat: kuplat,
+      aani: (i, teksti) => soitaLivianKaupunkiAani(ui, kaupunkiId, kentta,
+        { kupla: i, teksti }),
+    };
+  }
+  const teksti = kuplat[0] ?? '';
+  return {
+    osat: jaaPuheenvuoroksi(teksti),
+    // Paluuarvo on soitin: js/pollo.js antaa sen rytmille, joka odottaa
+    // puheen loppuun (livianPuherytmi).
+    aani: (i) => (i === 0
+      ? soitaLivianKaupunkiAani(ui, kaupunkiId, kentta, { teksti })
+      : null),
+  };
+}
+
+/**
+ * KUPLASARJAN NÄKYVÄ AIKA: osien lukuaikojen summa.
+ *
+ * Kuplat eivät korvaa toisiaan vaan seuraavat toisiaan omalla
+ * lukuajallaan (js/pollo.js ajastaPuheenvuoro), joten koko repliikin
+ * mitta on niiden summa. Sitä tarvitaan siellä, missä jokin muu odottaa
+ * puheen loppuun (sähkelento ja aarteen paljastus).
+ */
+function livianSarjanKesto(kuplat) {
+  return kuplat.reduce((summa, teksti) => summa + livianKuplanLukuaika(teksti), 0);
+}
+
+/* ============ KAUPUNGIN KULKU: PULU — LUENTA — PULU ================
+ *
+ * Raamattu, KAUPUNGIN KULKU: EI KUVIA, PULU - LUENTA - PULU (omistaja
+ * 7.9.2026). Saapuminen on kolme hetkeä, ja kaikki kolme lukee
+ * pakkauksen `pollo`-lohkosta:
+ *
+ *   1. ALUSTUS (`pollo.alustus`) — yksi kupla ENNEN isoisän luentaa.
+ *      Luenta on lykätty (js/ui.js asetaMerkinnanLuenta,
+ *      luennanLykkays) ja päästetään liikkeelle vasta alustuksen
+ *      lukuajan jälkeen, täsmälleen kuten Ateenan paljastussarjassa
+ *      (js/livia.js odotaLuenta) — sitä sarjaa ei muuteta.
+ *   2. HUUDAHDUS (`pollo.huudahdus`) — enintään yksi lyhyt välihuuto
+ *      LUENNAN AIKANA siinä kohdassa, jonka `kohta` nimeää.
+ *   3. KOMMENTTI (`pollo.kommentti`) — 1-2 kuplaa luennan jälkeen.
+ *
+ * VARAPOLKU: kaupunki, jota ei ole vielä kirjoitettu uusiksi, käyttää
+ * yhä `pollo.maadoitus`-kenttää, ja se piirtyy kommenttina eli
+ * luennan jälkeen kuten ennenkin. Kulku ei siis vaadi kaikkien
+ * kaupunkien uudelleenkirjoitusta yhdellä kertaa.
+ */
+
+/** Kaupungin uuden kulun kentät yhtenä oliona (tyhjät listat, jos ei ole). */
+function kulunKuplat(ui, city) {
+  const data = fokusvirtaSisalto(ui, city);
+  const kommentti = livianKentanKuplat(data, 'kommentti');
+  const maadoitus = livianKentanKuplat(data, 'maadoitus');
+  return {
+    alustus: livianKentanKuplat(data, 'alustus'),
+    huudahdus: data?.pollo?.huudahdus ?? null,
+    // Uusi kenttä voittaa; vanha maadoitus on varapolku samassa paikassa.
+    jalkeen: kommentti.length ? kommentti : maadoitus,
+    jalkeenKentta: kommentti.length ? 'kommentti' : (maadoitus.length ? 'maadoitus' : ''),
+  };
+}
+
+/**
+ * ONKO TÄSSÄ KAUPUNGISSA UUSI KULKU? (js/ui.js renderFact.)
+ *
+ * Uuden kulun kaupungissa matkakirjakortille EI piirretä kuvaa
+ * (omistaja 7.9.2026: kuvat kuuluvat kaupunkilehteen), vaikka
+ * pakkauksessa olisi vanha `matkakirja.kuva`.
+ */
+export function fokusvirtaUusiKulku(ui, city) {
+  if (FOKUSVIRTA_KORTIT || !city) return false;
+  const kuplat = kulunKuplat(ui, city);
+  return kuplat.alustus.length > 0 || kuplat.jalkeenKentta === 'kommentti';
+}
+
+/**
+ * ODOTTAAKO ISOISÄN LUENTA PULUN ALUSTUSTA? (js/ui.js renderFact.)
+ *
+ * Kutsutaan ENNEN kuin luenta pannaan käyntiin: tosi arvo nostaa
+ * `ui.luennanLykkays`-lipun, jolloin asetaMerkinnanLuenta rekisteröi
+ * luennan mutta ei aloita sitä. Alustuksen kupla päästää sen
+ * liikkeelle (aloitaLykattyLuenta) — ja jos kuplaa ei jostain syystä
+ * tule, sama vapautus tehdään joka tapauksessa, jottei luenta jää
+ * odottamaan kuplaa, jota ei tule.
+ *
+ * @returns {boolean} lykätäänkö luentaa
+ */
+export function fokusvirtaAlustusOdottaa(ui, city) {
+  if (FOKUSVIRTA_KORTIT || !city || !ui?.game?.pack) return false;
+  if (SAAPUMISKUPLA_VAITI.has(city.id)) return false;
+  if (ui.alustusNaytetty?.has(`${ui.game.pack.id}:${city.id}`)) return false;
+  return kulunKuplat(ui, city).alustus.length > 0;
+}
+
+/**
+ * ALUSTUS RUUDULLE JA LUENTA LIIKKEELLE (js/ui.js renderFact).
+ *
+ * Kutsutaan HETI merkinnän piirron jälkeen — ei kirjoituskoneen
+ * lopusta. Kirjoituskone kirjoittaa merkinnän noin 50 ms merkiltä eli
+ * pitkän merkinnän yli kymmenessä sekunnissa, ja jos luenta odottaisi
+ * sitä, isoisä alkaisi puhua vasta kun teksti on jo luettu. Kulku on
+ * siis: alustus heti, luenta alustuksen lukuajan jälkeen, huudahdus
+ * luennan sisällä — ja kommentti tulee omaa tietään kirjoituskoneen
+ * lopusta (fokusvirtaSaapumiskupla) luennan päätyttyä.
+ *
+ * @returns {boolean} sanottiinko alustus tässä saapumisessa
+ */
+export function fokusvirtaAlustus(ui, city) {
+  if (!fokusvirtaAlustusOdottaa(ui, city)) return false;
+  const avain = `${ui.game.pack.id}:${city.id}`;
+  ui.alustusNaytetty ??= new Set();
+  ui.alustusNaytetty.add(avain);
+  const kulku = kulunKuplat(ui, city);
+  const merkinta = fokusvirtaSisalto(ui, city)?.matkakirja?.teksti ?? '';
+  /*
+   * ENSISAAPUMISEN TUURAUSPALJASTUS VOITTAA (js/livia.js): se esittelee
+   * kaupungin itse, joten alustus jää siltä käynniltä pois — mutta
+   * lykätty luenta on silti päästettävä liikkeelle, muuten se jäisi
+   * odottamaan kuplaa, jota ei tule.
+   */
+  if (livianPaljastusKesken(ui)) {
+    ui.aloitaLykattyLuenta?.();
+    return false;
+  }
+  clearTimeout(ui.alustuksenAjastin);
+  const { osat, aani } = livianOsatJaAani(ui, city.id, 'alustus', kulku.alustus);
+  const nakyi = polloPuheenvuoro(osat, {
+    jatkuuko: () => !ui.dead && ui.game?.cityOf?.()?.id === city.id,
+    aani,
+    ...livianPuherytmi(city.id, 'alustus'),
+  });
+  if (!nakyi) {
+    // Kupla ei mahtunut ruudulle: luenta ei saa jäädä odottamaan sitä.
+    ui.aloitaLykattyLuenta?.();
+    return false;
+  }
+  /*
+   * LUENTA ODOTTAA ALUSTUKSEN PUHEEN LOPPUUN (7.9.2026). Sarjan kesto
+   * on kuplien lukuaikojen summa, mutta viimeinen äänite voi olla omaa
+   * lukuaikaansa pidempi — silloin isoisä aloittaisi pulun lauseen
+   * päälle. Ajastin kysyy siksi vielä soivalta äänitteeltä
+   * (ui.liviaAani, luettuna vasta laukaisuhetkellä), onko puhetta
+   * jäljellä. Ilman ääntä tahti on tasan entinen.
+   */
+  ui.alustuksenAjastin = livianKuplanAjastin(
+    livianSarjanKesto(kulku.alustus), () => ui.liviaAani,
+    () => {
+      if (ui.dead) return;
+      ui.aloitaLykattyLuenta?.();
+      ajastaHuudahdus(ui, city, kulku.huudahdus, merkinta);
+    },
+    (id) => { ui.alustuksenAjastin = id; },
+  );
+  return true;
+}
+
+/** Huudahduskuplan elinaika: se on välihuuto, ei repliikki. */
+const HUUDAHDUS_NAKYY_MS = 2000;
+/** Huudahdus soi kertojan päälle hiljempaa eikä kertoja väisty. */
+const HUUDAHDUKSEN_VAIMENNUS = 0.7;
+/** Kirjoituskoneen tahti matkakirjakortilla (js/ui.js TYPE_MS). */
+const KIRJOITUSKONE_MS = 50;
+/** Kuinka kauan luennan metatietoja odotetaan ennen varapolkua. */
+const HUUDAHDUKSEN_VARAODOTUS_MS = 1200;
+
+/**
+ * VÄLIHUUTO KESKELLÄ LUENTAA.
+ *
+ * Ajoitus tulee ENSISIJAISESTI luennan äänitteestä: kohdan merkkipaikka
+ * suhteessa tekstin pituuteen kertoo, kuinka pitkälle kertoja on
+ * ehtinyt. Ilman äänitettä (mykistys, kertojatila 'ei') varapolku on
+ * kirjoituskoneen eteneminen, joka on saman tekstin sama osuus.
+ *
+ * Kupla on pieni ja häipyy itsestään kahdessa sekunnissa, ja ääni soi
+ * kertojan PÄÄLLE hiljempaa ilman kertojan väistöä — välihuuto ei saa
+ * katkaista isoisää.
+ */
+function ajastaHuudahdus(ui, city, huudahdus, merkinta) {
+  const kupla = livianKuplat(huudahdus)[0];
+  const kohta = String(huudahdus?.kohta ?? '');
+  const teksti = String(merkinta ?? '');
+  if (!kupla || !kohta || !teksti) return;
+  const paikka = teksti.indexOf(kohta);
+  if (paikka < 0) return;
+  const osuus = paikka / teksti.length;
+  const nayta = () => {
+    if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return;
+    if (!naytaPolloKupla(ui, kupla, { luokka: 'fokusvirta-huudahdus' })) return;
+    soitaLivianKaupunkiAani(ui, city.id, 'huudahdus', {
+      teksti: kupla,
+      vaimennus: HUUDAHDUKSEN_VAIMENNUS,
+      vaista: false,
+    });
+    clearTimeout(ui.huudahdusPoisAjastin);
+    ui.huudahdusPoisAjastin = setTimeout(() => {
+      if (!ui.dead) suljeFokusvirta(ui);
+    }, HUUDAHDUS_NAKYY_MS);
+  };
+  let ajastettu = false;
+  const ajasta = (kestoMs) => {
+    if (ajastettu) return;
+    ajastettu = true;
+    clearTimeout(ui.huudahdusAjastin);
+    ui.huudahdusAjastin = setTimeout(nayta, Math.max(0, kestoMs * osuus));
+  };
+  const audio = ui.diaryVoice;
+  const kesto = () => (Number.isFinite(audio?.duration) && audio.duration > 0
+    ? audio.duration * 1000 : 0);
+  if (kesto()) { ajasta(kesto()); return; }
+  // Kesto tiedetään vasta metatiedoista.
+  audio?.addEventListener('loadedmetadata', () => {
+    if (ui.diaryVoice === audio && kesto()) ajasta(kesto());
+  }, { once: true });
+  /*
+   * VARAPOLKU: KIRJOITUSKONEEN ETENEMINEN. Metatiedot voivat jäädä
+   * tulematta (mykistys, kertojatila 'ei', verkko poikki, puuttuva
+   * äänite), eikä välihuuto saa silloin jäädä kokonaan pois — se on osa
+   * kulkua, ei äänen lisuke. Sama osuus tekstistä, eri kello.
+   */
+  ui.huudahdusVaraAjastin = setTimeout(
+    () => ajasta(teksti.length * KIRJOITUSKONE_MS),
+    HUUDAHDUKSEN_VARAODOTUS_MS,
+  );
+}
+
+/**
+ * KORTILLA OLEVAN REPLIIKIN ÄÄNI KUPLA KERRALLAAN.
+ *
+ * Sähkeen kuittaus (`oikein`) piirtyy KORTILLE eikä kuplapinoon, mutta
+ * teksti on silti Livian puhetta ja jaettu kupliksi — jokainen niistä
+ * on oma äänitiedostonsa. Kortti ei anna rytmiä, joten se otetaan
+ * kuplan lukuajasta: seuraava äänite alkaa, kun edellisen kuplan
+ * lukuaika on kulunut.
+ */
+function soitaLivianKaupunkiSarja(ui, kaupunkiId, kentta, kuplat, i = 0) {
+  const teksti = kuplat[i];
+  if (!teksti) return;
+  const aani = soitaLivianKaupunkiAani(ui, kaupunkiId, kentta, { kupla: i, teksti });
+  if (i + 1 >= kuplat.length) return;
+  clearTimeout(ui.livianKorttiSarja);
+  // KUPLA ODOTTAA PUHEEN LOPPUUN: lukuaikaansa pidempi äänite venyttää
+  // ajastinta (js/liviapuhe.js livianKuplanAjastin), joten seuraava
+  // repliikki ei häivytä edellistä kesken lauseen.
+  ui.livianKorttiSarja = livianKuplanAjastin(
+    livianKuplanLukuaika(teksti), aani,
+    () => {
+      if (ui.dead) return;
+      soitaLivianKaupunkiSarja(ui, kaupunkiId, kentta, kuplat, i + 1);
+    },
+    (id) => { ui.livianKorttiSarja = id; },
+  );
 }
 
 /**
@@ -751,15 +1036,17 @@ export function fokusvirtaSaapumiskupla(ui, city) {
    * tarpeeton: paljastus tulee ensin, ja kommentti odottaa sen
    * päättymistä (odotaPaljastus alla) ja tulee samaan pinoon.
    */
-  const maadoitus = fokusvirtaSisalto(ui, city)?.pollo?.maadoitus ?? null;
+  const kulku = kulunKuplat(ui, city);
   /*
-   * Korttivirrassa maadoitus on jo pöllökortin ensimmäinen kappale
-   * (piirraPollo) — kupla toistaisi sen sanasta sanaan. Saapumisrepliikki
-   * ei ole millään kortilla, joten se tulee kuplaan kummallakin virralla.
+   * Korttivirrassa pöllön puhe on jo kortilla (piirraPollo) — kupla
+   * toistaisi sen sanasta sanaan. Saapumisrepliikki ei ole millään
+   * kortilla, joten se tulee kuplaan kummallakin virralla.
    */
-  if (FOKUSVIRTA_KORTIT && maadoitus) return false;
-  const teksti = maadoitus ?? LIVIAN_SAAPUMISET[city.id] ?? '';
-  if (!teksti) return false;
+  if (FOKUSVIRTA_KORTIT && kulku.jalkeen.length) return false;
+  const kentta = kulku.jalkeenKentta;
+  const kuplat = kulku.jalkeen.length
+    ? kulku.jalkeen : livianKuplat(LIVIAN_SAAPUMISET[city.id]);
+  if (!kuplat.length) return false;
   const avain = `${ui.game.pack.id}:${city.id}`;
   ui.saapumiskuplaNaytetty ??= new Set();
   if (ui.saapumiskuplaNaytetty.has(avain)) return false;
@@ -802,27 +1089,43 @@ export function fokusvirtaSaapumiskupla(ui, city) {
        * kuule tämän kaupungin puheenvuoron loppua.
        */
       /*
-       * ÄÄNI VAIN MAADOITUKSESTA. Kaupunkien omia saapumisrepliikkejä
-       * (LIVIAN_SAAPUMISET) ei ole äänitetty, ja äänitettyjä
-       * maadoituksia on toistaiseksi kaksi (Ateena ja Sofia) — muualla
-       * kupla toimii ilman ääntä täsmälleen kuten ennen.
+       * ÄÄNI VAIN PAKKAUKSEN KENTÄSTÄ. Kaupunkien omia
+       * saapumisrepliikkejä (LIVIAN_SAAPUMISET) ei ole äänitetty —
+       * niissä kupla toimii ilman ääntä täsmälleen kuten ennen.
+       *
+       * Kupla ensin, ääni sen jälkeen (js/livia.js naytaRepliikki):
+       * `aani` kutsutaan jokaisen osan ilmestyttyä (js/pollo.js
+       * naytaPuheenvuoro), koska jokainen kupla on oma äänitiedostonsa.
        */
-      const kentta = maadoitus ? 'maadoitus' : '';
-      const nakyi = polloPuheenvuoro(jaaPuheenvuoroksi(teksti), {
+      if (!kuplat.length) return;
+      const { osat, aani } = livianOsatJaAani(ui, city.id, kentta, kuplat);
+      polloPuheenvuoro(osat, {
         jatkuuko: () => !ui.dead && ui.game?.cityOf?.()?.id === city.id,
+        aani,
         ...livianPuherytmi(city.id, kentta),
       });
-      // Kupla ensin, ääni sen jälkeen — sama järjestys kuin avauksessa
-      // (js/livia.js naytaRepliikki).
-      if (nakyi) soitaLivianKaupunkiAani(ui, city.id, kentta);
     }), SAAPUMISKUPLAN_TAUKO_MS);
   };
-  const luenta = luennanLoppuun(ui);
-  if (luenta) {
-    void luenta.then(() => { if (!ui.dead) nayta(); });
-    return true;
-  }
-  nayta();
+  /*
+   * KOMMENTTI VASTA LUENNAN JÄLKEEN. Ilman luentaa (mykistys,
+   * kertojatila 'ei', puuttuva äänite) kupla tulee heti tauon jälkeen.
+   */
+  const kommenttiLuennanJalkeen = () => {
+    const luenta = luennanLoppuun(ui);
+    if (luenta) {
+      void luenta.then(() => { if (!ui.dead) nayta(); });
+      return;
+    }
+    nayta();
+  };
+
+  /*
+   * ALUSTUS ON JO SANOTTU (fokusvirtaAlustus, kutsuttu renderFactista):
+   * tämä kutsu tulee kirjoituskoneen lopusta ja hoitaa vain luennan
+   * JÄLKEISEN kommentin. Ilman luentaa kommentti tulee heti tauon
+   * jälkeen kuten ennenkin.
+   */
+  kommenttiLuennanJalkeen();
   return true;
 }
 
@@ -1691,8 +1994,8 @@ function piirraPollo(ui, city, data, kohde) {
    * täsmälleen kuten ennenkin. Kappalejako syntyy tyhjästä rivistä
    * (ui-apurit.js jaaKappaleiksi).
    */
-  const puhe = [data.pollo.maadoitus, data.pollo.teksti]
-    .filter(Boolean).join('\n\n');
+  const puhe = [...livianKuplat(data.pollo.maadoitus), ...livianKuplat(data.pollo.teksti)]
+    .join('\n\n');
   piirraTeksti(kohde, puhe);
   piirraNapit(kohde, [nappi('Jatka', 'primary', () => {
     sfx.play('paper');
@@ -2300,7 +2603,9 @@ function sahkeAvain(ui, city) {
  * ohilyönnistä, eikä sama saate saa toistua joka kerta.
  */
 function sahkeSaateKuplaan(ui, city, avain, teksti, kentta) {
-  if (!teksti) return false;
+  // Kenttä voi olla yksi merkkijono tai kuplien taulukko (7.9.2026).
+  const kuplat = livianKuplat(teksti);
+  if (!kuplat.length) return false;
   ui.sahkeSaateSanottu ??= new Set();
   if (ui.sahkeSaateSanottu.has(avain)) return false;
   ui.sahkeSaateSanottu.add(avain);
@@ -2312,13 +2617,14 @@ function sahkeSaateKuplaan(ui, city, avain, teksti, kentta) {
   clearTimeout(ui.sahkeSaateAjastin);
   ui.sahkeSaateAjastin = setTimeout(() => {
     if (ui.dead) return;
-    const nakyi = polloPuheenvuoro(jaaPuheenvuoroksi(teksti), {
-      jatkuuko: () => !ui.dead,
-      ...livianPuherytmi(city?.id, kentta),
-    });
+    const { osat, aani } = livianOsatJaAani(ui, city?.id, kentta, kuplat);
     // Sofian sähkevaiheet on äänitetty (js/liviapuhe.js
     // LIVIAN_KAUPUNKILAHTEET); muut kaupungit vaikenevat itsestään.
-    if (nakyi) soitaLivianKaupunkiAani(ui, city?.id, kentta);
+    polloPuheenvuoro(osat, {
+      jatkuuko: () => !ui.dead,
+      aani,
+      ...livianPuherytmi(city?.id, kentta),
+    });
   }, SAHKE_SAATE_VIIVE_MS);
   return true;
 }
@@ -2427,11 +2733,13 @@ function piirraSahkePullat(ui, city, data, kohde) {
       // Vinkki tulee KUPLAAN eikä kortille: se on Livian puhetta, ja
       // kuplasta se jää myös chat-historiaan (js/pollo.js).
       jalkeen: () => {
-        const nakyi = polloPuheenvuoro(jaaPuheenvuoroksi(tehtava.vinkki), {
+        const kuplat = livianKuplat(tehtava.vinkki);
+        const { osat, aani } = livianOsatJaAani(ui, city.id, 'vinkki', kuplat);
+        polloPuheenvuoro(osat, {
           jatkuuko: () => !ui.dead,
+          aani,
           ...livianPuherytmi(city.id, 'vinkki'),
         });
-        if (nakyi) soitaLivianKaupunkiAani(ui, city.id, 'vinkki');
       },
     });
   }
@@ -2462,12 +2770,14 @@ function piirraSahkePullat(ui, city, data, kohde) {
     osta: () => ui.game.actionPullaOstos(avain, SAHKE_PULLA_LINKKI_HINTA,
       'sai suoran linkin sähkeen vastaukseen'),
     jalkeen: () => {
-      if (tehtava.linkkiSaate) {
-        const nakyi = polloPuheenvuoro(jaaPuheenvuoroksi(tehtava.linkkiSaate), {
+      const saate = livianKuplat(tehtava.linkkiSaate);
+      if (saate.length) {
+        const { osat, aani } = livianOsatJaAani(ui, city.id, 'linkkiSaate', saate);
+        polloPuheenvuoro(osat, {
           jatkuuko: () => !ui.dead,
+          aani,
           ...livianPuherytmi(city.id, 'linkkiSaate'),
         });
-        if (nakyi) soitaLivianKaupunkiAani(ui, city.id, 'linkkiSaate');
       }
       linkkiNappi();
     },
@@ -2970,15 +3280,20 @@ function sahkeOsui(ui, city, data) {
      * esittää kynällä raapustettuna huomautuksena. Sinistä mustetta
      * käytetään vain siellä, missä puhuu pelkkä Livia.
      */
-    piirraTeksti(sisalto, [tehtava.oikein, tehtava.fakta].filter(Boolean).join('\n\n'));
+    const kuittaus = livianKuplat(tehtava.oikein);
+    piirraTeksti(sisalto, [...kuittaus, tehtava.fakta].filter(Boolean).join('\n\n'));
     /*
      * KUITTAUS ON LIVIAN REPLIIKKI, VAIKKA SE ON KORTILLA. Äänite
      * kattaa vain `oikein`-osan (js/liviapuhe.js
      * LIVIAN_KAUPUNKILAHTEET); faktakappale on kertojan asiaa eikä
      * sitä lueta pulun äänellä. Kortti piirtyy oikeasta vastauksesta
      * kerran, joten ääni ei toistu.
+     *
+     * KUPLAT PERÄKKÄIN (7.9.2026): kuittaus on jaettu kupliksi, ja
+     * jokainen on oma äänitiedostonsa — kortilla ne ovat kappaleita,
+     * äänessä peräkkäisiä repliikkejä (soitaLivianKaupunkiSarja).
      */
-    soitaLivianKaupunkiAani(ui, city.id, 'oikein');
+    soitaLivianKaupunkiSarja(ui, city.id, 'oikein', kuittaus);
     piirraNapit(sisalto, [nappi(tehtava.lento ?? 'Anna Livian mennä', 'primary', () => {
       sfx.play('paper');
       suljeFokusvirta(ui);
@@ -3000,8 +3315,9 @@ function aloitaSahkelento(ui, city, data) {
    * livianKuplanLukuaika) — mutta lento ei koskaan lyhene siitä, mitä
    * se oli. Äänettömissä kaupungeissa tahti on entinen.
    */
+  const kuittaus = livianKuplat(data.sahketehtava?.oikein);
   const lento = livianKaupunkiAanitetty(city.id, 'oikein')
-    ? Math.max(SAHKE_LENTO_MS, livianKuplanLukuaika(data.sahketehtava?.oikein ?? ''))
+    ? Math.max(SAHKE_LENTO_MS, livianSarjanKesto(kuittaus))
     : SAHKE_LENTO_MS;
   ui.sahkeLentoAjastin = setTimeout(() => {
     if (ui.dead) return;
@@ -3010,14 +3326,23 @@ function aloitaSahkelento(ui, city, data) {
     if (ui.game?.cityOf?.()?.id !== city.id) return;
     if (!ui.game.tokens?.has(city.id)) return;
     const tehtava = data.sahketehtava ?? {};
-    const nakyi = naytaPolloKupla(ui, tehtava.paluu ?? 'Perillä oltiin. Pöllö kertoi paikan.');
+    const kuplat = livianKuplat(tehtava.paluu);
     // Ainoa kaupunkirepliikki, jossa Livia palaa lennolta ja aloittaa
     // jo ilmasta. Ääni on silti kuiva: kaiku otettiin pois pulun
     // alusta omistajan päätöksellä 6.9.2026 ilta (js/liviapuhe.js
     // LIVIAN_KAIKU).
-    if (nakyi) soitaLivianKaupunkiAani(ui, city.id, 'paluu');
+    polloKuplasarja(ui, city, 'paluu',
+      kuplat.length ? kuplat : ['Perillä oltiin. Pöllö kertoi paikan.']);
+    /*
+     * AARRE ODOTTAA KOKO SARJAN. Paluu on 7.9.2026 alkaen kaksi kuplaa,
+     * ja ne tulevat samaan paikkaan peräkkäin (polloKuplasarja). Aarre
+     * paljastuu vasta viimeisen kuplan päälle, joten odotukseen lisätään
+     * niiden edeltäjien lukuajat — yhden kuplan kaupungeissa tahti on
+     * entinen.
+     */
     clearTimeout(ui.sahkeAarreAjastin);
-    ui.sahkeAarreAjastin = setTimeout(() => paljastaSahkeAarre(ui, city, data), SAHKE_PALUU_MS);
+    ui.sahkeAarreAjastin = setTimeout(() => paljastaSahkeAarre(ui, city, data),
+      SAHKE_PALUU_MS + livianSarjanKesto(kuplat.slice(0, -1)));
   }, lento);
 }
 
@@ -3196,7 +3521,7 @@ const LEHTIVINKKI_VIIVE_MS = 1400;
  *
  * @returns {boolean} näkyikö kupla
  */
-function naytaPolloKupla(ui, teksti) {
+function naytaPolloKupla(ui, teksti, { luokka = '' } = {}) {
   const nappi = polloNappi();
   // Ilman kelluvaa pöllöä kuplalla ei ole kärkeä eikä paikkaa; teksti
   // jää silloin väliin — se on vihje, ei pelin portti.
@@ -3205,7 +3530,7 @@ function naytaPolloKupla(ui, teksti) {
   suljeFokusvirta(ui);
 
   const koti = nappi.parentNode ?? document.body;
-  const kupla = html('div', 'fokusvirta-kupla fokusvirta-vinkki');
+  const kupla = html('div', `fokusvirta-kupla fokusvirta-vinkki${luokka ? ` ${luokka}` : ''}`);
   kupla.setAttribute('role', 'note');
   kupla.setAttribute('aria-label', 'Livia vinkkaa');
   kupla.addEventListener('pointerdown', (tapahtuma) => {
@@ -3232,6 +3557,38 @@ function naytaPolloKupla(ui, teksti) {
   ui.fokusvirtaAsemointi = asemoi;
   globalThis.addEventListener?.('resize', asemoi);
   globalThis.addEventListener?.('orientationchange', asemoi);
+  return true;
+}
+
+/**
+ * SAMA KUPLAPAIKKA, MONTA KUPLAA PERÄKKÄIN (omistaja 7.9.2026).
+ *
+ * Virran oma kupla (.fokusvirta-vinkki) on YKSI solmu: uusi kupla
+ * korvaa edellisen samassa kohdassa. Kun repliikki on jaettu kupliksi
+ * (esim. Sofian `paluu`), ne tulevat siis peräkkäin samaan paikkaan
+ * kuplan lukuajan välein — ja jokainen soittaa oman äänitiedostonsa.
+ *
+ * @returns {boolean} näkyikö ensimmäinen kupla
+ */
+function polloKuplasarja(ui, city, kentta, kuplat, i = 0) {
+  const teksti = kuplat[i];
+  if (!teksti) return false;
+  if (!naytaPolloKupla(ui, teksti)) return false;
+  const aani = soitaLivianKaupunkiAani(ui, city?.id, kentta, { kupla: i, teksti });
+  if (i + 1 < kuplat.length) {
+    clearTimeout(ui.polloKuplasarjaAjastin);
+    // KUPLA ODOTTAA PUHEEN LOPPUUN (js/liviapuhe.js livianKuplanAjastin).
+    ui.polloKuplasarjaAjastin = livianKuplanAjastin(
+      livianKuplanLukuaika(teksti), aani,
+      () => {
+        // Pelaaja on voinut lähteä kaupungista: sarjan loppu kuuluu vain
+        // siihen käyntiin, jossa se alkoi.
+        if (ui.dead || ui.game?.cityOf?.()?.id !== city?.id) return;
+        polloKuplasarja(ui, city, kentta, kuplat, i + 1);
+      },
+      (id) => { ui.polloKuplasarjaAjastin = id; },
+    );
+  }
   return true;
 }
 

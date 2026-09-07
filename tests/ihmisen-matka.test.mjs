@@ -38,9 +38,10 @@ import {
 } from '../js/aikajana.js';
 import {
   LINSSI, PYSAKIT, IHMISEN_MATKAN_LAHIKUVA, ihmisenMatkanPysakit, ESITYKSEN_KUVAT,
+  AVAUKSEN_KUVA_TUNNUS, avauksenKuva,
 } from '../js/linssit/ihmisen-matka.js';
 import {
-  IHMISEN_MATKA_KUVAJUURI, IHMISEN_MATKA_ESINEJUURI,
+  IHMISEN_MATKA_KUVAJUURI, IHMISEN_MATKA_ESINEJUURI, IHMISEN_MATKA_ALOITUS,
 } from '../js/linssit/ihmisen-matka-data.js';
 import { LINSSI as KEKSINTOLINSSI } from '../js/linssit/keksinnot.js';
 import { tiedeliitteenKuvat, onTiedeliitteenSivu } from '../js/tiedeliite.js';
@@ -122,6 +123,69 @@ test('kaari pyytää moottorilta juuri ne kolme yleistystä', () => {
   assert.match(k.luentajuuri, /ihmisen-matka\/puhe$/);
   // Alue on koko maapallo (kamera peräytyy siihen kaaren lopussa).
   assert.equal(k.alue.w, 12000);
+});
+
+/*
+ * AVAUSTEKSTI LYHYEKSI, KUVA RINNALLE (omistaja 7.9.2026 ilta,
+ * sanatarkasti: *"Tästä aloitustekstistä voi poistaa kaiken tekstin
+ * lauseen, joka loppuu: 'Tuhat sukupolvea myöhemmin oltiin toisella
+ * puolella maapalloa', niin sen jälkeen koko lopputeksti pois. Mutta
+ * tuohon tekstin rinnalle voisi nostaa jonkun hienon kuvan, mitä jo on
+ * generoitu tuohon tuota linssiä varten"*).
+ *
+ * MIKSI TÄMÄ VARTIOIDAAN. Avaustekstiä on kirjoitettu uusiksi kolmesti
+ * kolmessa vuorokaudessa (valot → värivirrat → vanat), ja joka kerta
+ * loppuun on kasvanut kartan lukuohje. Sääntö on nyt: teksti PÄÄTTYY
+ * maapallo-lauseeseen, eikä siinä enää selitetä värejä, harmaata
+ * väestöä eikä löytöpaikkojen lukumäärää — ne pelaaja näkee kartalta.
+ *
+ * LUENTA ON SIDOTTU TÄHÄN TEKSTIIN. Ämpärin esittely.mp3 on leikattu
+ * (ei generoitu uudelleen) päättymään samaan lauseeseen; jos teksti
+ * kasvaa, luenta ei enää vastaa sitä.
+ */
+test('avausteksti päättyy maapallo-lauseeseen eikä selitä karttaa', () => {
+  assert.ok(IHMISEN_MATKA_ALOITUS.endsWith(
+    'ja tuhat sukupolvea myöhemmin oltiin toisella puolella maapalloa.'),
+  `avausteksti ei pääty omistajan lauseeseen: ...${IHMISEN_MATKA_ALOITUS.slice(-70)}`);
+  // Kaksi lausetta, ei enempää: piste vain lauseiden lopussa.
+  assert.equal(IHMISEN_MATKA_ALOITUS.split('. ').length, 2, 'avaustekstissä on kaksi lausetta');
+  for (const kielletty of [/vana/i, /haara/i, /Harmaa/, /neandertal/i, /Löytöpaikat/, /neljätoista/]) {
+    assert.ok(!kielletty.test(IHMISEN_MATKA_ALOITUS),
+      `avausteksti selittää yhä karttaa (${kielletty}) — poistettu 7.9.2026`);
+  }
+  assert.equal(LINSSI.aikajana.esittely.teksti, IHMISEN_MATKA_ALOITUS);
+});
+
+test('avauslaatikossa on kuva tekstin rinnalla, eikä se ole esityksen kuvia', () => {
+  const kuva = LINSSI.aikajana.esittely.kuva;
+  assert.ok(kuva?.osoite, 'avauslaatikon kuva puuttuu');
+  assert.ok(kuva.osoite.startsWith(`${IHMISEN_MATKA_KUVAJUURI}/`),
+    'avauskuva ei ole kaaren omasta kuvajuuresta — kuvaa ei generoida uutta');
+  assert.ok(kuva.kuvateksti, 'kuvateksti puuttuu (näytetään pienenä kuvan alla)');
+  assert.match(kuva.lahde, HAVAINNEKUVA_RE, 'lähderivi kertoo, että kuva on havainnekuva');
+  // Kuva tulee AINEISTOSTA tunnuksella: osoitetta ei kirjoiteta käsin.
+  assert.deepEqual(avauksenKuva(), kuva);
+  const pysakki = PYSAKIT.find((t) => t.tunnus === AVAUKSEN_KUVA_TUNNUS);
+  assert.ok(pysakki, `avauskuvan tunnusta ${AVAUKSEN_KUVA_TUNNUS} ei ole aineistossa`);
+  // PYSAKIT on moottorin muodossa: havainnekuva on `ilmio`, ei `kuva`.
+  assert.equal(kuva.osoite, pysakki.ilmio.osoite);
+  /*
+   * EI ESITYKSEN KUUDESTA KUVASTA: avaus ei saa paljastaa kuvaa, jonka
+   * pelaaja näkee kohta uudestaan matkan varrella.
+   */
+  assert.ok(!ESITYKSEN_KUVAT.includes(AVAUKSEN_KUVA_TUNNUS),
+    'avauskuva on yksi esityksen kuudesta — valitse galleriaan jäävistä');
+  // Tuntematon tunnus ei kaada avausta vaan jättää laatikon kuvattomaksi.
+  assert.equal(avauksenKuva(PYSAKIT, 'ei-tallaista'), null);
+});
+
+/*
+ * KEKSINTÖKAAREN AVAUS EI MUUTU (omistajan rajaus: muutos koskee vain
+ * Ihmisen matkaa). Kentän puuttuminen on koko rajaus — moottori lukee
+ * `esittely.kuva` ja jättää ilman sitä laatikon ennalleen.
+ */
+test('keksintökaaren avauslaatikko pysyy kuvattomana', () => {
+  assert.equal(KEKSINTOLINSSI.aikajana.esittely.kuva, undefined);
 });
 
 test('pysäkit käännetään moottorin kentiksi: esine korttiin, kuva paneeliin', () => {

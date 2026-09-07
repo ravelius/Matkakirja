@@ -129,6 +129,19 @@ function laatikoksi(arvo, otsikko) {
 }
 
 /**
+ * Avausjakson laatikko: kaaren alkusanat ja niiden rinnalle nostettu
+ * havainnekuva. Kuva liitetään vasta tässä, jotta aineistotiedosto
+ * pysyy tarinatekstien puolella eikä tiedä laatikon asettelusta.
+ */
+function avauslaatikko() {
+  const laatikko = laatikoksi(data.IHMISEN_MATKA_ALOITUS, 'Ihmisen matka')
+    ?? laatikoksi(data.IHMISEN_MATKA_ESITTELY, 'Ihmisen matka');
+  if (!laatikko) return null;
+  const kuva = avauksenKuva();
+  return kuva ? { ...laatikko, kuva } : laatikko;
+}
+
+/**
  * KUUSI KUVAA ESITYKSESSÄ, NELJÄTOISTA GALLERIASSA (omistaja 6.9.2026
  * ilta, sanatarkasti: *"lopuksi voitaisiin näyttää tai animaatioiden
  * aikana muutama valokuva. Mutta sitten kun esitys ohi, pelaaja voisi
@@ -150,6 +163,43 @@ function laatikoksi(arvo, otsikko) {
 export const ESITYKSEN_KUVAT = [
   'jebel-irhoud', 'al-wusta', 'denisova', 'beringia', 'monte-verde', 'aotearoa',
 ];
+
+/**
+ * AVAUSLAATIKON KUVA (omistaja 7.9.2026 ilta, sanatarkasti: *"tuohon
+ * tekstin rinnalle voisi nostaa jonkun hienon kuvan, mitä jo on
+ * generoitu tuohon tuota linssiä varten, ja samalla voisi tehdä
+ * suuremmaksi tuon Itse paperin, missä tuo teksti on, jotta se kuvakin
+ * mahtuu paremmin."*; Raamattu › "IHMISEN MATKAN AVAUSTEKSTI
+ * LYHYEKSI, KUVA RINNALLE").
+ *
+ * KUVAA EI GENEROIDA UUTTA eikä sen osoitetta kirjoiteta tähän käsin:
+ * kuva otetaan AINEISTOSTA tunnuksella, joten kuvaputken uusi erä
+ * (osoite, kuvateksti, lähderivi) seuraa mukana yhdessä paikassa.
+ *
+ * MIKSI WHITE SANDS. Avausteksti päättyy nyt lauseeseen *"jokainen
+ * sukupolvi siirtyi vain vähän kauemmas kuin edellinen, ja tuhat
+ * sukupolvea myöhemmin oltiin toisella puolella maapalloa"*, ja
+ * White Sandsin havainnekuva on tasan se lause kuvana: kaksi kulkijaa
+ * selin katsojaan, jalanjäljet jatkuvat eteenpäin märkään savikkoon,
+ * takana vuoret ja yksi mammutti — ja paikka ON maapallon toinen
+ * puoli (New Mexico). Kuva on leveä maisema, siinä ei ole kasvoja
+ * eikä luita, ja se ei ole esityksen kuudesta kuvasta
+ * (ESITYKSEN_KUVAT) — avaus ei siis paljasta mitään, minkä pelaaja
+ * näkee kohta uudestaan, vaan tämä on yksi galleriaan jäävistä
+ * neljästätoista.
+ */
+export const AVAUKSEN_KUVA_TUNNUS = 'white-sands';
+
+/**
+ * Avauslaatikon kuva aineistosta. Palauttaa moottorin odottaman
+ * kuvatiedon (`osoite`, `kuvateksti`, `lahde`) tai nullin, jos
+ * tunnusta ei löydy — puuttuva kuva jättää laatikon entiselleen eikä
+ * kaada avausta.
+ */
+export function avauksenKuva(tapahtumat = AINEISTO, tunnus = AVAUKSEN_KUVA_TUNNUS) {
+  const pysakki = (tapahtumat ?? []).find((t) => t.tunnus === tunnus);
+  return pysakki?.kuva?.osoite ? { ...pysakki.kuva } : null;
+}
 
 /**
  * PYSÄKIT MOOTTORIN MUOTOON. Puhdas funktio: sama kuvaus pelissä ja
@@ -244,8 +294,14 @@ export const LINSSI = {
      * keksintökaaren luennat (js/linssipuhe.js LINSSILUENTA_JUURI).
      */
     luentajuuri: `${data.IHMISEN_MATKA_KUVAJUURI ?? ''}/puhe`,
-    esittely: laatikoksi(data.IHMISEN_MATKA_ALOITUS, 'Ihmisen matka')
-      ?? laatikoksi(data.IHMISEN_MATKA_ESITTELY, 'Ihmisen matka'),
+    /*
+     * AVAUSLAATIKKO: lyhyt teksti ja sen RINNALLA kuva (omistaja
+     * 7.9.2026 ilta). `kuva` on moottorille valinnainen kenttä —
+     * keksintökaarella sitä ei ole, ja sen laatikko pysyy siksi
+     * ennallaan yhden palstan paperina (js/aikajana.js avaaAvausjakso,
+     * css/aikajana.css `.on-kuva`).
+     */
+    esittely: avauslaatikko(),
     // Kello alkaa ja päättyy asteikon mukaan; alue on koko maapallo.
     alue: MAAILMA,
     /*

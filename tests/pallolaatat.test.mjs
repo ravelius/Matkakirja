@@ -278,7 +278,14 @@ test('pohja vapautetaan omaan syvimpään tasoonsa, jos kerros ei piirrä', () =
   }
   const pallo = lue('../js/pallo.js');
   // Vapautus on kertakäyttöinen ja purkaa kerroksen kokonaan.
-  assert.match(pallo, /if \(m\.tila === 'nakyy' \|\| !POHJAN_VAPAUTUS_SYYT\.has\(m\.syy\)\) return;/);
+  /*
+   * TILA JA SYY LUETAAN ILMAN VARAUSTA (kehystahti 7.9.2026): tämä
+   * ajetaan joka piirretyllä kehyksellä, ja `mittarit()` kopioi koko
+   * taulun JA pyydettyjen osoitteiden joukon taulukoksi — satoja
+   * merkkijonoja roskaksi 60 kertaa sekunnissa.
+   */
+  assert.match(pallo, /if \(kerros\.tila\(\) === 'nakyy' \|\| !POHJAN_VAPAUTUS_SYYT\.has\(kerros\.syy\(\)\)\) return;/);
+  assert.ok(!/const m = kerros\.mittarit\(\)/.test(pallo), 'vapautus ei kopioi mittaritaulua joka kehyksellä');
   assert.match(pallo, /kerrosKaytossa = false;\n\s*kerros\.pura\(\);/);
   // Kahva jää lepokerrokset-karttaan: savukkeet lukevat siitä yhä
   // kerroksen omat pyramidipyynnöt (savuke-pallolauta vartio 2).
@@ -295,8 +302,10 @@ test('pohja vapautetaan omaan syvimpään tasoonsa, jos kerros ei piirrä', () =
 test('kerros pitää juuri nähdyt laatat jonossa ja lataa liikesuuntaan ennakolta', () => {
   const laatat = lue('../js/pallolaatat.js');
   // 1. Jono kootaan näkyvistä JA pidetyistä (ennen: vain `t.nakyva`).
+  //    Lippu `t.jonossa` korvasi erillisen Setin (kehystahti 7.9.2026):
+  //    mittarit luetaan samalla kierroksella eikä uutta joukkoa varata.
   assert.match(laatat,
-    /if \(\(t\.nakyva \|\| t\.pito\) && t\.tila === 'ladataan' && !t\.aloitettu\) jono\.push\(t\);/);
+    /t\.jonossa = \(t\.nakyva \|\| t\.pito\) && t\.tila === 'ladataan' && !t\.aloitettu;\n\s*if \(t\.jonossa\) jono\.push\(t\);/);
   // 2. Näkyvät ladataan silti ensin.
   assert.match(laatat, /jono\.sort\(\(a, b\) => \(a\.nakyva \? 0 : 1\) - \(b\.nakyva \? 0 : 1\) \|\| a\.etaisyys - b\.etaisyys\);/);
   // 3. Valmis laatta menee sceneen, jos se on yhä alueella (ei vain näkyvissä).
@@ -358,7 +367,16 @@ test('vakiot: renderOrder karkeista hienoihin, syvyyssiirto laattojen edelle, ki
   assert.equal(LAATTAKERROS_SYVYYSSIIRTO, -8);
   assert.equal(LAATTAKERROS_LAATTAKATTO_NAKYVA, 48);
   assert.equal(LAATTAKERROS_RINNAKKAIN, 6);
-  assert.equal(LAATTAKERROS_TEKSTUUREJA_PER_KEHYS, 2);
+  /*
+   * YKSI TEKSTUURI KEHYSTÄ KOHTI (kehystahti 7.9.2026). Mitattu
+   * `renderer.initTexture` 3,0 ms (p50) / 6,7 ms (max): kaksi peräkkäin
+   * samassa kehyksessä on pahimmillaan 13 ms 16,7 ms:n budjetista.
+   * Yksi vienti kehyksessä on 60 Hz:llä yhä 60 laattaa sekunnissa eli
+   * enemmän kuin LAATTAKERROS_RINNAKKAIN ehtii ladata.
+   */
+  assert.equal(LAATTAKERROS_TEKSTUUREJA_PER_KEHYS, 1);
+  assert.ok(LAATTAKERROS_TEKSTUUREJA_PER_KEHYS * 60 > LAATTAKERROS_RINNAKKAIN,
+    'vienti ei saa jäädä latauksen pullonkaulaksi');
   assert.equal(LAATTAKERROS_NAYTTEITA, 9);
   assert.equal(LAATTAKERROS_HAIVE_MS, 260);
   assert.equal(LAATTAKERROS_PAIVITYSVALI_LIIKE_MS, 100);
@@ -422,11 +440,27 @@ test('kerros: laatan materiaali, verkko ja osoitteet ovat suunnitelman mukaiset'
   assert.match(laatat, /verkko\.userData\.laattakerros = \{ z: t\.z, sarake: t\.sarake, rivi: t\.rivi \};/);
   // Kerros on täsmälleen pinnan säteellä: ei suurennosta, ei hyppyä.
   assert.match(laatat, /pallo\.getGlobeRadius\(\) \* LEPOKERROS_KOROTUS/);
-  // Kuvat bittikarttana, vara Image + decode; kangas OffscreenCanvas jos on.
-  assert.match(laatat, /ikkuna\.createImageBitmap\(await vastaus\.blob\(\)\)/);
+  /*
+   * Kuvat bittikarttana, vara Image + decode; kangas OffscreenCanvas jos on.
+   * BITTIKARTAN ASETUKSET (kehystahti 7.9.2026): premultiplyAlpha 'none'
+   * on sama arvo kuin three.js:n tekstuurin oletus, joten ajuri ei muunna
+   * pikseleitä vientihetkellä; orientaatio ja väriavaruus ohitetaan, koska
+   * laatoissa ei ole EXIFiä ja ne ovat jo sRGB:tä.
+   */
+  assert.match(laatat, /const BITTIKARTTA_ASETUKSET = \{ imageOrientation: 'none', colorSpaceConversion: 'none' \};/);
+  assert.match(laatat, /ikkuna\.createImageBitmap\(blob, BITTIKARTTA_ASETUKSET\)/);
   assert.match(laatat, /kuva\.decode \? kuva\.decode\(\)/);
   assert.match(laatat, /new ikkuna\.OffscreenCanvas\(w, h\)/);
-  // Tekstuuri viedään näytönohjaimelle jonosta, enintään kaksi kehyksessä.
+  /*
+   * TEKSTUURIN LÄHDE ON KANGAS, EI BITTIKARTTA (mitattu ja hylätty
+   * 7.9.2026, ks. js/pallolaatat.js): suora `new Texture(bittikartta)`
+   * kallisti viennin 3,0 → 5,1 ms (p50) ja 6,7 → 64,2 ms (max), koska
+   * three.js:n `flipY` kääntää bittikartan keskusmuistissa mutta
+   * kankaan yhdellä GPU-kopiolla.
+   */
+  assert.match(laatat, /const tekstuuri = new luokat\.Texture\(kangas\);/);
+  assert.ok(!/new luokat\.Texture\(lahde\)/.test(laatat), 'bittikarttaa ei viedä suoraan tekstuuriksi');
+  // Tekstuuri viedään näytönohjaimelle jonosta, enintään LAATTAKERROS_TEKSTUUREJA_PER_KEHYS.
   assert.match(laatat, /while \(vientijono\.length && n < LAATTAKERROS_TEKSTUUREJA_PER_KEHYS\)/);
   assert.match(laatat, /renderer\?\.initTexture\?\.\(t\.tekstuuri\);/);
   // Ulos-häive VAIN karkeamman valmiin peiton päältä (v1641:n oppi).

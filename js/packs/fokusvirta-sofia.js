@@ -178,9 +178,16 @@ const SAHKE_SOFIA = {
    * SAATE SITOO TEHTÄVÄN AARREMERKINTÄÄN kertomatta merkintää:
    * isoisä punnitsi lapiota ja lähti, pöllö osti lapion.
    */
-  johdanto: 'No. Pöllö istuu kuopassa eikä kerro löytöään ennen '
-    + 'tunnussanaa. Vastaa kaksi aukkoa: kartan kohde Bulgarian '
-    + 'luettelosta ja vuosiluku. Molemmat lukevat kartan kohteissa.',
+  /*
+   * KUPLINA, EI YHTENÄ SEINÄNÄ (omistajan hyväksymä teksti 7.9.2026,
+   * Fablen ehdotus): jokainen alkio on OMA KUPLA ja oma äänitiedosto
+   * (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET). Sanamuotoja ei muotoilla
+   * uusiksi — ne ovat omistajan hyväksymää kaanonia sellaisinaan.
+   */
+  johdanto: [
+    'Pöllö istuu kuopassa eikä kerro löytöään ennen tunnussanaa.',
+    'Vastaa kaksi aukkoa: kartan kohde Bulgariasta ja vuosiluku.',
+  ],
 
   hakemistoMaa: 'BGR',
 
@@ -231,10 +238,10 @@ const SAHKE_SOFIA = {
    * PULLA VINKIKSI). Vinkki kertoo MISTÄ vastaus löytyy — se ei sano
    * kohteen nimeä eikä vuosilukua, joten ostajakin kaivaa itse.
    */
-  vinkki: 'Kuuntele nyt. Se kulta ei ole Sofiassa vaan meren rannalla. '
-    + 'Katso Mustanmeren puolelta kaupunki, jonka kohde puhuu maailman '
-    + 'vanhimmasta kullasta. Vuosiluku lukee samassa kortissa, sillon '
-    + 'seitkytluvulla.',
+  vinkki: [
+    'Se kulta ei ole Sofiassa vaan Mustanmeren rannalla.',
+    'Katso rannikkokaupungin kortti. Vuosiluku on siinä, seitkytluvulla.',
+  ],
 
   /*
    * PUOLIKAS PULLA = SUORA LINKKI (omistaja 3.9.2026). Livia ei kerro
@@ -247,11 +254,14 @@ const SAHKE_SOFIA = {
   vastauslinkki: { tyyppi: 'kohde', maa: 'BGR', kohde: 'varna' },
 
   vastaussahke: 'PÖLLÖLLE STOP\nTUNNUSSANA TÄSMÄÄ STOP\nLIVIA TULEE STOP',
-  // Lyhennetty toistamiseen 6.9.2026 ilta: puhe (n. 13 s) katkesi
-  // sähkelennon paluukuplaan; noin 140 merkkiä mahtuu lentoon.
-  oikein: 'Se on se. Yli kolmetuhatta kultaesinettä yhdestä hautausmaasta, '
-    + 'ennen kuin kukaan osasi kirjoittaa. Minä vien tämän pöllölle. Palaan '
-    + 'kyllä.',
+  // Lyhennetty ja jaettu kahteen kuplaan 7.9.2026 (omistajan hyväksymä
+  // teksti): kumpikin kupla on oma äänitiedostonsa, ja sähkelento
+  // odottaa niiden yhteenlasketun lukuajan (js/fokusvirta.js
+  // aloitaSahkelento).
+  oikein: [
+    'Se on se. Yli kolmetuhatta kultaesinettä, ennen kuin kukaan osasi kirjoittaa.',
+    'Minä vien tämän pöllölle. Palaan kyllä.',
+  ],
   fakta: 'Varnan nekropoli löytyi 1974, ja siitä on kaivettu esiin yli '
     + '3 000 kultaesinettä. Löytö on ajoitettu vuosille 4600–4200 eaa., '
     + 'eli se on maailman vanhin tunnettu kulta-aarre.',
@@ -261,9 +271,10 @@ const SAHKE_SOFIA = {
   odotus: 'Livia on matkalla. Se palaa kun se palaa — sillä välin sinä '
     + 'saat tehdä mitä huvittaa.',
 
-  paluu: 'Perillä oltiin. Pöllö oli kuopan pohjalla mullassa ja sanoi, '
-    + 'että lapio oli hyvä sijoitus. Sitten se kertoi paikan: se on tässä, '
-    + 'jalkojesi alla. Katso alas.',
+  paluu: [
+    'Perillä oltiin. Pöllö oli kuopan pohjalla mullassa: lapio oli hyvä sijoitus.',
+    'Sitten se kertoi paikan: se on tässä, jalkojesi alla. Katso alas.',
+  ],
 };
 
 export const FOKUSVIRTA_SOFIA = {
@@ -366,15 +377,34 @@ export const FOKUSVIRTA_SOFIA = {
      * "Kääk", "hurja juttu", 1873, "sataviisikymmentä vuotta" auki ja
      * "Mut kyllä sen kestää lukea" lopussa.
      */
-    maadoitus: 'Kääk. No johan oli hurja juttu — luin sen kahdesti. '
-      + 'Sitten minä katsoin vuosilukua: helmikuu 1873, siitä on yli '
-      + 'sataviisikymmentä vuotta, ja kuolemantuomioita jaettiin silloin '
-      + 'melkein joka maassa. Ei se juttua pienennä. Mut kyllä sen kestää '
-      + 'lukea.',
-    teksti: 'Hirttopaikalla seisoo nyt kolmentoista metrin '
-      + 'graniittipatsas, ja sitä hautaa etsitään vieläkin. Etsintöjä on '
-      + 'jatkunut sataviisikymmentä vuotta — se kynttilä ikkunalla oli '
-      + 'lähempänä totuutta kuin yksikään lapio.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Sofia. Helteistä, tomu ei laskeudu. Isoisä kirjoitti täällä miehestä, jota ei nimetä.',
+    huudahdus: {
+      kohta: 'joka hirtettiin täällä helmikuussa',
+      teksti: 'Kääk.',
+    },
+    kommentti: [
+      'Kääk. Hurja juttu, luin sen kahdesti.',
+      'Helmikuu 1873, siitä on yli sataviisikymmentä vuotta. Ei se juttua pienennä.',
+    ],
     /*
      * Commons 25.8.2026: 1000×667, CC BY-SA 3.0, Edal Anton Lefterov,
      * kuvattu 30.4.2011, kuvaus "Vasil Levski Boulevard with Monument to

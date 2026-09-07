@@ -47,6 +47,26 @@ export const KOHDEMERKIN_HALO_LAAJIN = 1.42;
 /** Rako halon ja nimen väliin (px). */
 export const KOHDEMERKIN_NIMI_RAKO_PX = 8;
 /*
+ * HUOMIORENGAS VALITTAVAN KAUPUNGIN YMPÄRILLE (omistaja 7.9.2026
+ * iltapäivä, sanatarkasti: *"Ja valittavien kohdekaupunkien
+ * huomioympyrää voisi hieman tehostaa."*).
+ *
+ * Lähtövalinnan kohde on eri asia kuin nopanheiton kohde: nopanheitossa
+ * pelaaja etsii vaihtoehtoja lähikuvasta, lähtövalinnassa hän etsii
+ * yhtä NELJÄSTÄTOISTA kaupungista koko maapallolta (js/ui-apurit.js
+ * ETUSIVUN_KOHTEET) — merkin pitää löytyä silmänräpäyksessä myös
+ * pallon reunalta. Siksi valittava saa oman renkaansa merkin
+ * ympärille: kohdemerkin halo on 24 px:n merkin päällä 17 px:n
+ * säteinen, tämä on 27 — selvästi merkkiä laajempi mutta yhä yhden
+ * kaupungin kokoinen, ei maanosan.
+ *
+ * KOKO ON RUUDUN MITTA, ei laudan: merkki on CSS2D-elementti, joten
+ * rengas on yhtä iso kaukaa ja läheltä, kuten kohdemerkki itsekin.
+ * Sykkeen (2,6 s) ja kultaisen värin omistaa css/styles.css
+ * (.pallolauta-huomio, --kulta) — täällä on vain mitta.
+ */
+export const KOHDEMERKIN_HUOMIO_PX = 54;
+/*
  * MERKKI ON PINNALLA, EI PINNAN YLLÄ (omistajan vikailmoitus 7.9.2026,
  * iPad, sanatarkasti: *"nyt kun kartta on pallona, niin kohdepisteet ja
  * pelaajan nappula ei pysy paikallaan, kun karttaa vierittää, vaan ne
@@ -109,6 +129,10 @@ export function nappulaElementti(ui, luokka = 'pallolauta-nappula', aktiivinen =
  * Nopanheiton kohteen merkki: halo, piste ja nimi samoilla luokilla kuin
  * tasokartan fokusKohdeMerkki. `kohde.city` on kaupunki tai null
  * (askelpiste reitin varrella).
+ *
+ * `kohde.huomio` (lähtövalinnan valittava kaupunki) lisää merkin
+ * ympärille hitaasti sykkivän kultarenkaan ja nostaa nimen sen
+ * yläpuolelle — ks. KOHDEMERKIN_HUOMIO_PX.
  */
 export function kohdeElementti(kohde) {
   const el = document.createElement('div');
@@ -116,10 +140,14 @@ export function kohdeElementti(kohde) {
   el.dataset.kohde = kohde.key;
   const px = kohde.city ? KOHDEMERKIN_PX : KOHDEMERKIN_PISTE_PX;
   const r = px / 2;
+  const huomio = kohde.huomio === true;
+  // Nimi jää aina ylimmän kehän yläpuolelle: halon laajin aste tai
+  // huomiorenkaan säde, kumpi on suurempi.
+  const nimenSade = Math.max(r * KOHDEMERKIN_HALO_LAAJIN, huomio ? KOHDEMERKIN_HUOMIO_PX / 2 : 0);
   // Nimi mahtuu leveyssuunnassa: svg on merkkiä leveämpi, keskipiste
   // origossa, jotta translate(-50%, -50%) osuu pallon pisteeseen.
   const w = 160;
-  const h = 2 * (r * KOHDEMERKIN_HALO_LAAJIN + KOHDEMERKIN_NIMI_RAKO_PX + KOHDEMERKIN_NIMI_PX + 4);
+  const h = 2 * (nimenSade + KOHDEMERKIN_NIMI_RAKO_PX + KOHDEMERKIN_NIMI_PX + 4);
   const svg = document.createElementNS(SVG, 'svg');
   svg.setAttribute('viewBox', `${-w / 2} ${-h / 2} ${w} ${h}`);
   svg.setAttribute('width', String(w));
@@ -135,14 +163,19 @@ export function kohdeElementti(kohde) {
     svg.appendChild(c);
     return c;
   };
-  // Halo ENSIN, jotta se jää pisteen alle (sama järjestys kuin kartalla).
+  // Huomiorengas ja halo ENNEN pistettä, jotta ne jäävät sen alle
+  // (sama järjestys kuin kartalla).
+  if (huomio) {
+    const rengas = ympyra('pallolauta-huomio');
+    rengas.setAttribute('r', String(KOHDEMERKIN_HUOMIO_PX / 2));
+  }
   ympyra(kohde.city ? 'target-halo fokus' : 'target-halo fokus far');
   ympyra(kohde.city ? 'target-piste' : 'target-piste far');
   if (kohde.city) {
     const nimi = document.createElementNS(SVG, 'text');
     nimi.setAttribute('x', '0');
     // Nimi HALON yläpuolelle, ei renkaan (ks. paivitaFokusKohdeMitat).
-    nimi.setAttribute('y', String(-(r * KOHDEMERKIN_HALO_LAAJIN + KOHDEMERKIN_NIMI_RAKO_PX)));
+    nimi.setAttribute('y', String(-(nimenSade + KOHDEMERKIN_NIMI_RAKO_PX)));
     nimi.setAttribute('class', 'target-nimi');
     nimi.setAttribute('text-anchor', 'middle');
     nimi.setAttribute('font-size', String(KOHDEMERKIN_NIMI_PX));
@@ -275,7 +308,8 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null }) {
       const a = asteet(k);
       if (!a) continue;
       lista.push({
-        avain: `kohde:${k.key}`, laji: 'kohde', key: k.key, city: k.city ?? null, x: k.x, y: k.y, lat: a.lat, lng: a.lon,
+        avain: `kohde:${k.key}`, laji: 'kohde', key: k.key, city: k.city ?? null,
+        huomio: k.huomio === true, x: k.x, y: k.y, lat: a.lat, lng: a.lon,
       });
     }
     if (nappula) {

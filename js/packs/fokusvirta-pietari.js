@@ -251,13 +251,34 @@ export const FOKUSVIRTA_PIETARI = {
      * vuotta. (3) Noin 25 kilometrin suojapato valmistui kokonaan vasta
      * vuonna 2011.
      */
-    maadoitus: 'Kääk. Suoran käskeminen onnistui, veden käskeminen ei: '
-      + 'marraskuussa 1824 vesi nousi täällä yli neljä metriä normaalin '
-      + 'yläpuolelle, ja kaupunki eli tulvien varassa lähes kolmesataa '
-      + 'vuotta. Kahdenkymmenenviiden kilometrin suojapato valmistui '
-      + 'kokonaan vasta 2011 — isoisäsi käynnistä siihen meni vielä sata '
-      + 'neljäkymmentä vuotta. Kadut ovat yhä suorat, mut kuivia ne ovat '
-      + 'olleet vasta vähän aikaa.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Pietari, kesäkuussa 1873. Aurinko ei laske, ja rantakadulla kävellään keskiyöllä.',
+    huudahdus: {
+      kohta: 'suo totteli',
+      teksti: 'Vesi ei.',
+    },
+    kommentti: [
+      'Suoran käskeminen onnistui, veden ei: 1824 vesi nousi yli neljä metriä.',
+      'Suojapato valmistui vasta 2011. Kadut ovat suorat, kuivia ne ovat olleet vähän aikaa.',
+    ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      *
@@ -266,12 +287,6 @@ export const FOKUSVIRTA_PIETARI = {
      * Talvipalatsi (js/packs/kulttuuri-kategoriat.js, pietari/
      * avauskuvat) — kuva ja teksti osuvat siis samaan rakennukseen.
      */
-    teksti: 'Ne valoisat kesäyöt ovat edelleen kaupungin juhla-aikaa, ja '
-      + 'siltojen nousua kerääntyy katsomaan väkeä kuin ilotulitusta.. '
-      + 'Se palatsin taidekokoelma on nykyään yksi maailman suurimmista '
-      + 'museoista — ja sen kellareissa asuu kissoja ihan virallisissa '
-      + 'viroissa.. minkä takia, se selviää sulle perillä. Rantakadulle '
-      + 'siis, vaikka kello olisi mitä.',
     kuva: {
       ampari: 'herokoe/hero-pietari-aamu.png',
       /* Selite on lehden oman avauskuvan selite sellaisenaan; yksikään

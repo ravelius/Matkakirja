@@ -1615,4 +1615,77 @@ export const MINIATYYRIT = {
     Taidegalleria: 'christchurch-taidegalleria',
     'Canterburyn museo': 'christchurch-canterburyn-museo',
   },
+  portoalegre: {
+    // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-24d-20260907.json).
+    // Tiedosto on pelin lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png;
+    // osoite tarkistettu 200.
+    'Joaquim Felizardon museo': 'portoalegre-joaquim-felizardon-museo',
+  },
+  asuncion: {
+    // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-24d-20260907.json).
+    // Tiedosto on pelin lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png;
+    // osoite tarkistettu 200.
+    Kaupunginteatteri: 'asuncion-kaupunginteatteri',
+    'Ateneo Paraguayo': 'asuncion-ateneo-paraguayo',
+  },
+  honiara: {
+    // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-24d-20260907.json).
+    // Tiedosto on pelin lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png;
+    // osoite tarkistettu 200.
+    //
+    // KAKSI TUNNUSTA EI OLE NIMEN SLUG. Kuvaputki toimitti museon
+    // nimellä honiara-kansallismuseo (ei -salomonsaarten-kansallismuseo)
+    // ja katedraalin nimellä honiara-holy-cross-katedraali (ei
+    // -holy-crossin-katedraali). Tunnus on ämpärin tiedostonimi, ja
+    // kuva on ämpärissä VAIN näillä nimillä — slugia noudattava tunnus
+    // pudottaisi merkin täpläksi. Nimi on silti kartan kohteen nimi,
+    // joten kytkentä ja tests/miniatyyrit.test.mjs pysyvät ehjinä.
+    'Salomonsaarten kansallismuseo': 'honiara-kansallismuseo',
+    'Point Cruz': 'honiara-point-cruz',
+    'Holy Crossin katedraali': 'honiara-holy-cross-katedraali',
+    'Guadalcanalin muistomerkki': 'honiara-guadalcanalin-muistomerkki',
+    // Parlamenttitalo tuli erässä 16e (posti/kuvatoimitus-16e-20260907.json):
+    // erässä 24d se oli vielä uusittavana, koska rakennus oli piirtynyt
+    // vajaana. Nyt kartion muotoinen kokonainen kattorakenne on lähdekuvan
+    // mukainen.
+    Parlamenttitalo: 'honiara-parlamenttitalo',
+  },
+  portvila: {
+    // Kuvaputken toimitus 7.9.2026: neljä kohdetta erästä 16e
+    // (posti/kuvatoimitus-16e-20260907.json) ja parlamenttitalo erästä 20f
+    // (posti/kuvatoimitus-20f-20260907.json). Tiedostot ovat pelin
+    // lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png; osoitteet
+    // tarkistettu 200 ja sha256 toimitusta vasten.
+    'Kormanin stadion': 'portvila-kormanin-stadion',
+    'Pyhän sydämen katedraali': 'portvila-pyhan-sydamen-katedraali',
+    'Independence Park': 'portvila-independence-park',
+    'Vanuatun kulttuurikeskus': 'portvila-vanuatun-kulttuurikeskus',
+    'Vanuatun parlamenttitalo': 'portvila-vanuatun-parlamenttitalo',
+  },
+  houston: {
+    // Kuvaputken toimitus 7.9.2026: Julia Idesonin kirjastotalo ja Hermann
+    // Park erästä 16e, Market Squaren puisto erästä 20f. Tiedostot ovat
+    // pelin lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png.
+    //
+    // YKSI TUNNUS EI OLE NIMEN SLUG. Kuvaputki toimitti kirjastotalon
+    // nimellä houston-julia-idesonin-kirjasto (ei -kirjastotalo). Tunnus on
+    // ämpärin tiedostonimi ja kuva on ämpärissä VAIN tällä nimellä, joten
+    // slugia noudattava tunnus pudottaisi merkin varatäpläksi. Nimi on
+    // silti kartan kohteen nimi, joten tests/miniatyyrit.test.mjs pitää.
+    'Julia Idesonin kirjastotalo': 'houston-julia-idesonin-kirjasto',
+    'Hermann Park': 'houston-hermann-park',
+    'Market Squaren puisto': 'houston-market-squaren-puisto',
+  },
+  denver: {
+    // Kuvaputken toimitus 7.9.2026, erä 20f
+    // (posti/kuvatoimitus-20f-20260907.json). Tiedostot ovat pelin
+    // lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png.
+    //
+    // YKSI TUNNUS EI OLE NIMEN SLUG: Daniels & Fisherin torni on ämpärissä
+    // nimellä denver-daniels-fisher-torni (ei -daniels-fisherin-torni).
+    // Sama syy kuin Houstonissa — tunnus on tiedostonimi.
+    'Coors Field': 'denver-coors-field',
+    'Daniels & Fisherin torni': 'denver-daniels-fisher-torni',
+    Katedraalibasilika: 'denver-katedraalibasilika',
+  },
 };

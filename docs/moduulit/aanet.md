@@ -328,7 +328,7 @@ eteneminen) ja `js/luenta.js`:ssä (luennan loppu).
 | 1300 ms | sekoitus on paikallaan (`AVAUKSEN_LIUKU_MS`) |
 | ~1800 ms | portissa odottanut äänimaisema on täydessä nousussaan (`HAIVYTYS_MS`) |
 | 2850 ms | kirjoituskone alkaa paikkarivistä (`js/ui.js` `AVAUS_KERTOMUS_MS`) |
-| ~4000 ms | kertojan luenta alkaa, kun paikkarivi on naputettu |
+| ~4000 ms | kertojan luenta alkaa, kun paikkarivi on naputettu — **terminaali jää sen alla nostoonsa** (ks. alempi luku) |
 
 **Miksi juuri nämä luvut.** Musiikki laskee −4,4 dB (0,019 → 0,0114):
 askel kuuluu, mutta raita jää soimaan — tilauksessa musiikki hiljenee
@@ -351,10 +351,38 @@ musiikkia, eivätkä avauksen kutsut tee mitään; kertojan ollessa pois
 luentaa ei tule, ja nosto purkautuu vasta pelaajan edetessä. Kumpikin
 on normaali tila, ei virhe.
 
-**Vartijat.** `tests/ambienssi.test.mjs` (tasot tynkäselaimessa, myös
-väistön kanssa) ja `tools/savukkeet/savuke-etusivun-aani.mjs` (oikea
-Chromium: musiikki laskee, maisema nousee, liuku ei ole hyppy, luenta
-alkaa vasta ≥ 2850 ms päästä, ja luennan jälkeen tasot palaavat).
+### Kertoja ei väistä terminaalia (omistajan vika 7.9.2026 illalla)
+
+Omistaja v1671:stä, sanatarkasti: *"Lentoterminaalin ääni ei kuulu
+etusivulla, vaikka pitäisi."*
+
+Ensimmäinen toteutus kertoi avauksen nostot **väistön päälle**, ja
+avauksen ainoa puhuja on avaustekstin kertoja itse. Mitattuna
+(Chromium, oikeat äänitteet) terminaali nousi lukemaan 0,1728, piti sen
+noin sekunnin ja putosi luennan alkaessa (2,85 s painalluksesta)
+lukemaan 0,1728 × 0,25 = **0,0432 — 64 % alle oman kalibroidun tasonsa
+(0,1192)** — ja jäi sinne koko 18 sekunnin luennan ajaksi. Painalluksesta
+kuului siis lyhyt aalto ja sen jälkeen ei mitään.
+
+Vika oli laskukaavassa eikä säädössä: tilauksessa luenta lähtee käyntiin
+**sen päälle**, mikä on jo "voimakkaasti mukana". Kertoja on osa avausta
+eikä keskeytys. Siksi avauksen sekoitus **korvaa** väistön etusivun
+maisemalla sen ajan kun se on voimassa (`avauksenMaisemanKerroin`), eikä
+kerry sen päälle. Musiikkiin väistö kertyy yhä: siellä molemmat
+osoittavat samaan suuntaan. Lukunäkymän hiljennys (pöllö, lehti, linssi)
+madaltaa nostettuakin terminaalia — se on pelaajan oma keskeytys.
+
+Luennan lopun **järjestys kääntyi** samalla (`js/luenta.js`): puhujan
+rooli vapautetaan ensin ja nosto puretaan vasta perään, jolloin taso
+laskee kerralla oikeaan lukemaan eikä käy välillä väistössä.
+
+**Vartijat.** `tests/ambienssi.test.mjs` (tasot tynkäselaimessa: kertoja
+ei väistä terminaalia, lukunäkymä väistää) ja
+`tools/savukkeet/savuke-etusivun-aani.mjs` (oikea Chromium: musiikki
+laskee, maisema nousee, liuku ei ole hyppy, luenta alkaa vasta ≥ 2850 ms
+päästä, **terminaalin nauha etenee ja taso pysyy yli tavallisen koko
+luennan ajan**, luennan jälkeen tasot palaavat, ja sama ajo jatkaa
+Ateenaan varmistamaan että **avauslennon kabiini soi**).
 
 Sivutuote samasta savukkeesta: avaustekstin luenta ei koskaan lähetä
 `ended`-tapahtumaa, koska `pehmeaLoppu` pysäyttää sen juuri ennen

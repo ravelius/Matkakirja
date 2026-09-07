@@ -248,11 +248,34 @@ export const FOKUSVIRTA_KRAKOVA = {
      * auki, ja `teksti` kääntää katseen kangashalliin ja torille.
      * Peräkkäin luettuna teksti on sanasta sanaan Fablen kaanonteksti.
      */
-    maadoitus: 'Se torvi soi edelleen joka tunti, neljään ilmansuuntaan, ja '
-      + 'sävelmä katkeaa edelleen samalla tavalla — syyn saat selvittää '
-      + 'itse, ja huomaat että tarinoita on yhä useampi kuin yksi..',
-    teksti: 'Kangashallissa myydään nykyään meripihkaa ja matkamuistoja, mut '
-      + 'halli on sama. Torille siis.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Krakova, kesäkuussa 1873. Kuuntele tarkkaan, täällä soi torvi.',
+    huudahdus: {
+      kohta: 'kolme eri tarinaa',
+      teksti: 'Neljäs on minulla.',
+    },
+    kommentti: [
+      'Se torvi soi yhä joka tunti neljään ilmansuuntaan, ja sävelmä katkeaa samalla tavalla.',
+      'Syyn saat selvittää itse. Tarinoita on yhä useampi kuin yksi.',
+    ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-
      * kategoriat.js, krakova/avauskuvat, generoitu heroerä 15):

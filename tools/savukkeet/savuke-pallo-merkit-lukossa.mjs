@@ -29,10 +29,13 @@
  *   3. NOPANHEITON KOHTEET samalla ehdolla — omistaja nimesi ne
  *      erikseen. Kohteet syntyvät oikeasta heitosta, eivät kuvitteesta.
  *
- *   RAPORTIN TIETOJA (ei ehtoja): kaupunkipisteen (pointsData,
- *   korkeus 0,003) oma säteittäinen siirtymä, joka jää tästä
- *   korjauksesta jäljelle, ja kaupunkipisteen ruutuhalkaisija —
- *   molemmat luvun 12 jatkotyötä.
+ *   4. KAUPUNKIPISTE ON RUUDUN VAKIO. Pisteen levyn ruutuhalkaisija on
+ *      sama ± 1 px korkeudella 0,35 ja lähimmällä zoomilla (luku 12.3:
+ *      `pointRadius` on astemitta, joten piste kasvoi lähennettäessä
+ *      iPadin ruudulla noin 30 pikseliin).
+ *
+ *   RAPORTIN TIETOJA (ei ehtoja): kaupunkipisteen (pointsData) oma
+ *   säteittäinen siirtymä, joka jää tästä korjauksesta jäljelle.
  *
  * ÄMPÄRI KULKEE NODEN KAUTTA (CLAUDE.md: NODE_USE_ENV_PROXY=1): kontin
  * selain ei osaa välityspalvelinta, Noden fetch osaa. Ilman ämpäriä
@@ -303,6 +306,80 @@ if (auki) {
   });
   tieto('kaupunkipisteen jäljelle jäävä siirtymä ruudulla (px, korkeus '
     + `${jaannos.korkeus.toFixed(3)})`, `${jaannos.suurin} (${jaannos.pisteita} pistettä)`);
+
+  /*
+   * ── 4. KAUPUNKIPISTE ON RUUDUN VAKIO ──────────────────────────────
+   *
+   * Omistajan kuvassa Tampereen kohdalla oli iso musta ympyrä:
+   * `pointRadius` on Globe.gl:n ASTEMITTA, joten piste kasvoi
+   * lähennettäessä (puhelimella 2,7 px korkeudella 0,35 ja 13,7 px
+   * lähimmällä zoomilla, iPadilla noin 30 px). Raamattu sanoo pallon
+   * merkeistä, että koko on ruutuvakio.
+   *
+   * MITTA ON PISTEEN OMA GEOMETRIA, EI KAAVA. Levy (PISTE ON LEVY) on
+   * lieriön kansi paikallisessa z = −1:ssä, säde 1 ennen skaalausta,
+   * joten sen keskipiste ja reuna projisoidaan kameralla ruudulle ja
+   * niiden etäisyys on säde pikseleinä. Mitataan ruudun keskimmäisin
+   * piste, jotta perspektiivi ei venytä lukua.
+   */
+  const halkaisija = (korkeus) => sivu.evaluate(async (h) => {
+    const l = window.matkakirja.ui.pallolauta;
+    const p = l.pallo;
+    const { kotelo } = l;
+    const pov = p.pointOfView();
+    /*
+     * KAMERA AJETAAN PELIN OMALLA TAVALLA (lauta.kamera.ajaKamera), ei
+     * suoralla pointOfView-kirjoituksella: lauta nukkuu levossa
+     * (pauseAnimation), ja kirjaston ohjaimet lähettävät `change`-
+     * tapahtuman vasta omassa silmukassaan. Peli herättää laudan
+     * jokaisessa ajossa ja eleessä, ja juuri se on se polku, jonka
+     * varassa kaupunkipisteen koko ja nimien ladonta ovat.
+     * `korkeus: 0` painuu laudan omaan alarajaan (korkeusMin), eli
+     * lähimpään zoomiin, jonka laatat sallivat tällä laitteella.
+     */
+    await l.kamera.ajaKamera(
+      { lat: pov.lat, lng: pov.lng, korkeus: h ?? 0 },
+      { kesto: 600 },
+    );
+    await new Promise((v) => { setTimeout(v, 900); });
+    const cam = p.camera();
+    const kx = kotelo.clientWidth / 2;
+    const ky = kotelo.clientHeight / 2;
+    let paras = null;
+    for (const d of p.pointsData()) {
+      if (d.laji === 'helmi' || d.laji === 'valo') continue;
+      const o = d.__threeObjPoint;
+      if (!o) continue;
+      const r = p.getScreenCoords(d.lat, d.lon, 0);
+      if (!r || !Number.isFinite(r.x)) continue;
+      const etaisyys = Math.hypot(r.x - kx, r.y - ky);
+      if (!paras || etaisyys < paras.etaisyys) paras = { o, etaisyys, id: d.id };
+    }
+    if (!paras) return null;
+    const Vektori = paras.o.position.constructor;
+    const ruudulle = (v) => {
+      const c = v.project(cam);
+      return { x: ((c.x + 1) / 2) * kotelo.clientWidth, y: ((1 - c.y) / 2) * kotelo.clientHeight };
+    };
+    const keski = ruudulle(paras.o.localToWorld(new Vektori(0, 0, -1)));
+    const reuna = ruudulle(paras.o.localToWorld(new Vektori(1, 0, -1)));
+    return {
+      id: paras.id,
+      korkeus: p.pointOfView().altitude,
+      halkaisija: Number((2 * Math.hypot(reuna.x - keski.x, reuna.y - keski.y)).toFixed(2)),
+    };
+  }, korkeus);
+
+  const kaukana = await halkaisija(0.35);
+  const lahella = await halkaisija(null);
+  const ero = kaukana && lahella ? Math.abs(kaukana.halkaisija - lahella.halkaisija) : Infinity;
+  vaadi('4. kaupunkipisteen ruutuhalkaisija on sama kaukana ja lähellä (± 1 px)',
+    Boolean(kaukana && lahella) && ero <= 1,
+    JSON.stringify({ kaukana, lahella, ero: Number(ero.toFixed(2)) }));
+  tieto('kaupunkipisteen ruutuhalkaisija', kaukana && lahella
+    ? `${kaukana.halkaisija} px (korkeus ${kaukana.korkeus.toFixed(3)}), `
+      + `${lahella.halkaisija} px (korkeus ${lahella.korkeus.toFixed(3)})`
+    : 'ei mitattu');
   tieto('sivun virheet', virheet.length ? virheet.join(' | ') : 'ei yhtään');
 }
 

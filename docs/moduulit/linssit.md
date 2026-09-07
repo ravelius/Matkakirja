@@ -1424,3 +1424,157 @@ väliajon kytkennät, `reitinKuvio` ja päivämääräraja, ja uusi vartija
 ajaa oikean pysäkkivälin läpi ja laskee rullien vaihdot),
 `tests/aikajanamerkit.test.mjs` (naksahdus lukee askelta, ei näytettyä
 lukemaa).
+
+---
+
+## Pergamentin repaleinen reuna — yhteinen osa (omistaja 7.9.2026 ilta, v1671)
+
+Omistaja iPadilla, Ihmisen matkan avauslaatikko, sanatarkasti:
+
+> *"Paperin rosoiset reunat ovat aivan liian geometrisiä ja niiden
+> takaa näkyy täysin mustaa, vaikka paperin ympärillä on sitten kevyt
+> hehku. Saisiko sen paperin ääriviivan tehtyä luonnollisemmin? Tämä on
+> kuitenkin monessa paikkaa toistuva osa, niin voi tehdä huolella."*
+
+**Kaksi vikaa, yksi juuri.** Reuna oli `clip-path`-monikulmio, jossa oli
+kahdeksan pistettä reunaa kohti **tasavälein** — silmä lukee sen
+kuviona, ei repeämänä. Ja koska `clip-path` leikkaa myös elementin oman
+varjon, kajo jouduttiin piirtämään leikkaamattoman KEHYKSEN
+suorakulmaisena `box-shadow`'na: jokaisen loven pohjalla, leikatun
+paperin ja suorakulmaisen hehkun välissä, näkyi puhdasta mustaa.
+
+**Ratkaisu: `js/pergamentti.js` + `css/styles.css` osio "PERGAMENTIN
+REPALEINEN REUNA".** Sama siemen tuottaa KAKSI kuvaa, joilla on sama
+ääriviiva:
+
+```js
+repaleinenPaperi(laatikko, { siemen: siemenNimesta(otsikko), hehku });
+```
+
+1. **Maski** (`--pergamentti-maski`, luokka `.pergamentti-repale`):
+   valkoinen arkki, jonka reunaa rikkoo kaksi `feTurbulence` +
+   `feDisplacementMap` -paria — karkea aalto (baseFrequency 0,022,
+   2 oktaavia, scale 12) antaa pitkän epäsäännöllisen mutkan ja hieno
+   kohina (0,075, 3 oktaavia, scale 4,5) kuidun. `feGaussianBlur 0,8`
+   pehmentää leikkauksen, jottei reuna ole veitsellä leikattu.
+   Pohjapolun kulmat ovat viistetyt (arvottu 7–19 yksikköä), joten ne
+   kuluvat enemmän kuin suorat sivut.
+2. **Kajo** (`--pergamentti-hehkukuva`, luokka `.pergamentti-hehku`):
+   SAMA polku ja samat siemenet lämpimänä täyttönä, kahdesti
+   sumennettuna (σ 9 ja 18) SVG:n sisällä. Kerros asuu paperin ALLA
+   sisarelementtinä ja on `inset: -15%`. Kajo on siis paperin oman
+   muodon sumennus — se myötäilee jokaista lovea, eikä mustaa rakoa jää.
+
+**Sumennus on leivottu KUVAAN eikä CSS-suodattimeen.** Sama mittaus kuin
+paperin kohinakerroksissa (`css/aikajana.css` AVAUSJAKSO, 4.9.2026):
+iOS-kuoressa `filter: blur(...)` ja `backdrop-filter` jäivät
+piirtymättä, mutta SVG-suodatin taustakuvana on piirtynyt joka
+kuoressa. Kuvat lasketaan kerran; lyhtyjen syke muuttaa VAIN
+kajokerroksen `opacity`-arvoa (`--lyhty-ulko`, `js/lyhty.js`
+`laatikonValo`). `prefers-reduced-motion` ei vaikuta — reuna ei liiku.
+
+**Sivusuhde mitataan.** Kumpikin kuva venytetään elementin kokoon
+(`100% 100%`), joten viewBoxin korkeus lasketaan laatikon omasta
+sivusuhteesta (leveys aina 400 yksikköä, korkeus 400 / suhde). Ilman
+tätä puhelimen korkea laatikko sai sileät pystyreunat ja rypistyneet
+vaakareunat. `repaleinenPaperi` mittaa suhteen elementistä, joten kutsu
+tehdään VASTA kun laatikko on asettunut (`js/aikajana.js`
+`avaaAvausjakso`, pakotetun asettelun jälkeen). Kajokuvan viewBox on
+1,3-kertainen ja polku sen keskellä, jolloin kerros ja paperi saavat
+akseleittain saman venytyksen ja muodot osuvat päällekkäin laatikon
+koosta riippumatta.
+
+**Käytössä.** Aikajanan avauslaatikko (`.aikajana-avaus-laatikko` ja
+sen kajokerros `.aikajana-avaus-hehku`) — sama koodi kaikilla
+aikajanalinsseillä, siemen kaaren otsikosta, joten Ihmisen matka ja
+keksinnöt saavat eri arkin mutta sama kaari aina saman. Paperin
+kellastunut reunavyö (`inset`-varjot) kasvatettiin 10/26/62 → **22/46/92
+px**, koska `inset`-varjo piirtyy elementin suoraan reunaan ja maski syö
+siitä ulomman noin 3 %. Muut pergamenttipinnat eivät käytä tätä:
+kaupunki- ja maalehden arkki on omistajan päätöksellä 5.8.2026 **suora
+leikattu reuna** (`css/styles.css` sanomalehtipohja), ja `.isoisa-rajattu`
+on valokuvan `inset`-rajaus, ei paperin reuna.
+
+**Vartijat.** `tests/pergamentti.test.mjs` (siemenen vakaus, polun
+mahtuminen marginaaliin, maskin ja kajon yhteinen ääriviiva, sivusuhteen
+mitat, ei CSS-suodatinta), `tests/aikajana.test.mjs` ("avauslaatikon
+kajo saa saman repaleisen muodon kuin paperi") ja
+`tools/savukkeet/savuke-pergamentti.mjs`, joka lukee kuvakaappauksen
+pikselit itse (oma pieni PNG-purku). Vanhaa monikulmiota vasten ajettuna
+se antaa **6/16**, ja ratkaiseva mittari on kajo: vanhassa versiossa
+kirkkaus 3 px reunan ulkopuolella oli **0,0** (juuri se musta rako,
+jonka omistaja näki) ja kajo oli 24 px:n päässä kirkkaampi kuin reunan
+vieressä — suorakulmainen `box-shadow` alkoi vasta lovien ulkopuolelta.
+Nyt lukemat ovat 3 px:n päässä keskimäärin ~50/255 ja 24 px:n päässä
+~20/255. Reunan JAKSOLLISUUS raportoidaan mutta siitä ei väitetä:
+mittaus osoitti, ettei tasavälistä sahalaitaa erota pikselitasolla, kun
+poikkeama on kummassakin noin 14 px — muodon alkuperää vartioi sen
+sijaan maskikuvan sisältö (kaksi turbulenssia ja pehmennys).
+
+## Lappu väistyy kartan kosketuksesta (omistaja 7.9.2026 ilta, v1672)
+
+Omistaja 7.9.2026 ilta (Ihmisen matkan "Matka päättyy" -kortti,
+sanatarkasti): *"Tuo lappu saisi hävitä, kun pelaaja alkaa tutkimaan
+karttaa, tai se saisi vain rullautua ylös piiloon ja otetaan pois tuo
+suljen nappi siitä ja siirretään se kartan oikeaan yläkulmaan, mistä
+tämän linssin voi sitten sulkea milloin vain."*
+
+Kolme muutosta, kaikki aikajanamoottorissa (js/aikajana.js,
+css/aikajana.css) ja siksi voimassa JOKAISESSA aikajanalinssissä —
+Ihmisen matkan loppulapussa, sen matkan varren korteissa ja
+keksintölinssin havainnekuvissa, koska ne ovat sama paneeli
+(`.aikajana-ilmio`).
+
+- **Lappu rullautuu ylös piiloon.** `kytkeKartanKosketus` kuuntelee
+  kartta-alueen (`ui.mapPane`) `pointerdown`- ja `wheel`-tapahtumia
+  **kaappausvaiheessa ja passiivisina**: pallon oma ohjaus kuluttaa
+  vedon alun, joten kuplivaa tapahtumaa ei tulisi lainkaan, eikä
+  tarkkailija saa estää tai kuluttaa mitään. Kartaksi lasketaan kaikki,
+  mikä ei ole `.aikajana`-juuren sisällä, joten lapun oma raahaus ja
+  nipistys, karusellin kortit ja palkin napit eivät piilota lappua.
+  Piilotus on luokka `piilossa`, joka kutistaa paneelin `scaleY(0.02)`
+  yläreunansa ympäri ja häivyttää sen 300 ms:ssa
+  (`--aikajana-lappu-kesto`; prefers-reduced-motionissa 0,01 s).
+  KORKEUTTA EI KOSKETA: `height` on js:n hallussa (vaihdaPaneeli
+  lukitsee sen ristihäivytyksen ajaksi), ja `max-height`-liuku olisi
+  taistellut samasta arvosta. Pelaajan raahaama siirto
+  (`--aikajana-paneeli-dx/-dy`) kirjoitetaan piilotusluokkaan uudestaan,
+  joten lappu rullautuu siitä kohtaa, johon se jätettiin.
+- **Kahva jää otsikkoriviin.** `.aikajana-kahva` on olemassa vain lapun
+  ollessa piilossa, ja siinä lukee lapun nimi ja ▾ ("Matka päättyy ▾").
+  Nimi ja nuoli ovat omat solmunsa, koska kapealla ruudulla nimi jää
+  pois ja jäljelle jää ▾ (nimi on `aria-label`- ja `title`-tiedossa).
+  Nimi (`lapunNimi`) päivittyy jokaisen paneelisivun myötä myös
+  rullattuna, joten pelaaja näkee palkista, mikä kortti kartan takana
+  odottaa. Napautus (`naytaLappu`) avaa lapun samalla liu'ulla.
+  Loppusanat avaavat lapun aina (`lopeta`), ja Alusta nollaa tilan.
+- **Sulje-nappi pois lapusta, ✕ kartan oikeaan yläkulmaan.**
+  `lisaaLoppunapit` tekee enää yhden napin ("Katso löydöt").
+  Sulkeva ✕ (`.aikajana-sulje`) on nyt linssin juuren suora lapsi
+  eikä otsikkorivin ohjain: `position: absolute; top: 0.6rem; right:
+  1.25rem`, osumapinta 44 × 44 px, tyyli entinen. Tauko/Jatka jää
+  palkkiin. Kartta-alueen oikeassa yläkulmassa ei ole linssin aikana
+  muuta näkyvää eikä painettavaa: karttaselitteen nappi on siellä,
+  mutta linssin ajan `opacity: 0; pointer-events: none`
+  (css/styles.css `body.aikajana-paalla`), ja maakyltti elää vain
+  maaselaimessa (js/ui.js `paivitaMaaPilleri`). Savuke mittaa
+  päällekkäisyyden joka ajolla ja ohittaa vain näkymättömät.
+- **Kapea ruutu (alle 600 px).** Kulma varataan napille: palkin
+  keskitys lasketaan ✕:n vasemmalle puolelle jäävästä tilasta
+  (`left: calc(50% - 1.8rem)`, `max-width: calc(100% - 4.8rem)`).
+  Pelkkä `max-width` ei riitä, koska flex-kohde ei kutistu
+  sisältömittansa alle: kahva sai `min-width: 0` (mitattu savukkeella
+  390 px:llä — ilman sitä "Matka päättyy ▾" työnsi palkin ✕:n päälle),
+  ja kahvan ajaksi paikkarivi väistyy
+  (`.aikajana-ylarivi:has(.aikajana-kahva:not([hidden]))`).
+
+**Vartijat.** `tests/aikajana.test.mjs` ("lappu rullautuu ylös kartan
+kosketuksesta ja palaa otsikkorivin kahvasta": kuuntelijat kaappaus-
+vaiheessa, purku irrottaa ne, luokat, kahvan teksti, ✕:n paikka ja
+44 px) ja uusi selainsavuke
+`tools/savukkeet/savuke-linssin-lappu.mjs` (Ihmisen matka loppuun asti
+kahdessa näkymässä, 834 × 1100 ja 390 × 844: loppulappu näkyviin →
+pallon veto piilottaa → kahva palauttaa → rulla piilottaa → ✕ kulmassa
+ilman päällekkäisyyttä sulkee linssin). `savuke-aikajana --linssi
+ihmisen-matka` päivitettiin samalla: nappirivillä on vain "Katso
+löydöt", ja linssi suljetaan kulman ✕:stä.

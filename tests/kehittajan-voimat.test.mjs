@@ -34,7 +34,15 @@ test('plus ja miinus liikuttavat askelen ja kuuntelija kuulee muutoksen', () => 
 });
 
 test('ambienssi ja siirtymämusiikki kertovat tasonsa kehittäjän kertoimella', () => {
-  assert.match(lue('../js/ambience-stream.js'), /oma\.tavoite \* \(oma\.vaimennus \?\? 1\) \* kehittajanKerroin\('tausta'\)/);
+  /*
+   * Väistö luetaan nyt avauksenMaisemanKerroin-funktiosta (7.9.2026:
+   * avauksen aikana kertoja ei väistä terminaalia), joten kaava on
+   * tavoite × kerroin × kehittäjän säädin — ja se sama funktio
+   * palauttaa tavallisessa tilassa `oma.vaimennus`:n sellaisenaan.
+   */
+  const virta = lue('../js/ambience-stream.js');
+  assert.match(virta, /oma\.tavoite \* avauksenMaisemanKerroin\(oma\) \* kehittajanKerroin\('tausta'\)/);
+  assert.match(virta, /avauksenMaisemanKerroin = \(oma\) =>[\s\S]{0,200}oma\?\.vaimennus \?\? 1/);
   assert.match(lue('../js/siirtymamusiikki.js'), /raidanTaso = [\s\S]{0,160}kehittajanKerroin\('musiikki'\)/);
   const html = lue('../index.html');
   assert.match(html, /kehittaja-saadin" data-laji="tausta"/);

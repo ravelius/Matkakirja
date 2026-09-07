@@ -59,7 +59,9 @@ test('sarja pysähtyy luennan ajaksi ja jatkaa vasta sen loputtua', () => {
   // ja NAPAUTUS kulkee samaa tietä, ei ohi luennan.
   assert.match(LIVIA, /const jatka = i === LIVIAN_LUENNAN_PAIKKA - 1\s*\n\s*\? \(\) => odotaLuenta\(ui, cityId, seuraava\)\s*\n\s*: seuraava;/);
   assert.match(LIVIA, /polloSaapumiskupla\(teksti, \{ kuittaus: jatka \}\)/);
-  assert.match(LIVIA, /paljastusAjastin = setTimeout\(jatka, lukuaika\(teksti\)\);/);
+  // KUPLA ODOTTAA PUHEEN LOPPUUN (7.9.2026): ajastin on lukuaika TAI
+  // äänitteen mitta, kumpi on pidempi (js/liviapuhe.js).
+  assert.match(LIVIA, /paljastusAjastin = livianKuplanAjastin\(\s*\n\s*lukuaika\(teksti\), aani, jatka, \(id\) => \{ paljastusAjastin = id; \},\s*\n\s*\);/);
   // Odotus kuuntelee luennan loppua; ilman luentaa varaviive.
   assert.match(LIVIA, /function odotaLuenta\(ui, cityId, jatka\) \{[\s\S]{0,700}const luenta = luennanLoppuun\(ui\);[\s\S]{0,200}setTimeout\(jatka, LUENNAN_VARAVIIVE\)/);
   // Kupla, joka ei mahtunut ruudulle, ei saa jättää luentaa jumiin.

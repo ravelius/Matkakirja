@@ -193,12 +193,35 @@ export const FOKUSVIRTA_VILNA = {
      * ole muutettu — peräkkäin luettuna teksti on sanasta sanaan Fablen
      * kaanonteksti.
      */
-    maadoitus: 'Vilnan vanhakaupunki on nykyään maailmanperintöä juuri '
-      + 'niiden kirkkojen takia, ja kieliä kuulee kaduilla edelleen monta.. '
-      + 'Se metsä joka suuntaan pitää myös yhä paikkansa — Liettua on '
-      + 'Euroopan metsäisimpiä maita.',
-    teksti: 'Katedraali seisoo paikallaan, ja sen alla on jotain mistä '
-      + 'isoisäsi ei tiennyt puoliakaan. Mennään katsomaan.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Vilna, kesäkuussa 1873. Isoisä laski kirkkoja ja kieliä, ja molempia riitti.',
+    huudahdus: {
+      kohta: 'metsää joka suuntaan',
+      teksti: 'Vieläkin.',
+    },
+    kommentti: [
+      'Vanhakaupunki on nyt maailmanperintöä juuri niiden kirkkojen takia.',
+      'Ja se metsä joka suuntaan pitää yhä paikkansa.',
+      'Katedraalin alla on jotain, mistä isoisäsi ei tiennyt. Se on lehdessä.',
+    ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-
      * kategoriat.js, vilna/avauskuvat, heroerä 31): Gediminaan torni

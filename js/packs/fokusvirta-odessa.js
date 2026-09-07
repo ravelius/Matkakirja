@@ -290,23 +290,38 @@ export const FOKUSVIRTA_ODESSA = {
      * EI SPOILERIA: perustajan nimeä eikä syntymäkaupunkia ei sanota,
      * koska juuri se on sivun 3 JULISTE-tehtävän kysymys (DERIBAS_VISA).
      */
-    maadoitus: 'Hei että. Ne kielet eivät ole kadonneet minnekään, ne ovat '
-      + 'vaan siirtyneet katukilpiin: kaupungin kartalla on yhä Kreikan '
-      + 'tori ja Ranskan bulevardi, ja vilkkain kävelykatu kantaa '
-      + 'perustajansa nimeä. Väkeä muutti tänne aikoinaan kymmenistä '
-      + 'maista, ja jokainen jätti jälkeensä osoitteen. Isoisäsi kuuli ne '
-      + 'kielet työssä, sinä luet ne kilvistä. Ja siitä palaneesta talosta '
-      + 'sinun kannattaa kuulla tarkemmin.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Odessa, elokuussa 1873. Satamassa puhutaan montaa kieltä, isoisä ymmärsi rahan.',
+    huudahdus: {
+      kohta: 'vain meren',
+      teksti: 'Kääk, hieno.',
+    },
+    kommentti: [
+      'Ne kielet siirtyivät katukilpiin: kartalla on yhä Kreikan tori ja Ranskan bulevardi.',
+      'Ooppera rakennettiin uusiksi viisitoista vuotta myöhemmin. Portaat kuuluisiksi eri syystä.',
+    ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. Kaksi
      * pistettä ensimmäisen virkkeen lopussa on kaanonin oma kirjoitusasu.
      */
-    teksti: 'Isoisäsi osui suoraan kaupungin haavaan — se palanut ooppera '
-      + 'rakennettiin uusiksi vasta parikymmentä vuotta myöhemmin, ja '
-      + 'uudesta tuli niin komea että sitä käydään katsomassa vaikkei '
-      + 'menisi näytökseen.. Ne portaat ovat nykyään maailmankuuluja, '
-      + 'tosin eri syystä kuin hän arvasi — sen tarinan kuulet kohta. '
-      + 'Satamaan ensin.',
     /*
      * PÖLLÖN KUVA ON KAUPUNKILEHDEN HEROKUVA (omistajan linjaus): tämä
      * on Odessan avauskarusellin kolmas generoitu hero

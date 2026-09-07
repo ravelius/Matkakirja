@@ -21,8 +21,19 @@
  *  4. Musiikki ei vaikene: se hiljenee "hieman", ei pois.
  *  5. KERTOJAN LUENTA ALKAA VASTA VIIVEEN JÄLKEEN (js/ui.js
  *     AVAUS_KERTOMUS_MS 2850 ms) eli vasta äänimaiseman noustua.
- *  6. Luennan päätyttyä sekoitus palaa pelin tavalliseen käytäntöön.
- *  7. Taustaäänten ollessa pois avauksen kutsut eivät tee eivätkä
+ *  6. TERMINAALI SOI KOKO LUENNAN AJAN — nauha etenee ja taso pysyy
+ *     yli tavallisen. Tämä on omistajan vika 7.9.2026 illalla
+ *     (*"Lentoterminaalin ääni ei kuulu etusivulla, vaikka
+ *     pitäisi."*): avauksen nosto kerrottiin ennen kertojan väistön
+ *     PÄÄLLE, ja koska avauksen ainoa puhuja on avaustekstin kertoja
+ *     itse, nosto hukkui väistöön 2,85 sekunnin kohdalla ja
+ *     terminaali jäi loppuluennan ajaksi 64 % oman tasonsa alle.
+ *  7. Luennan päätyttyä sekoitus palaa pelin tavalliseen käytäntöön.
+ *  8. AVAUSLENNON KABIINI SOI. Sama ajo jatkaa kartalle ja lähtee
+ *     Ateenaan: matkustamon äänimaisema ('lentomatka') on soiva ja
+ *     kuuluva, eikä avauksen lippu jää nostamaan sitä (nosto koskee
+ *     vain etusivua).
+ *  9. Taustaäänten ollessa pois avauksen kutsut eivät tee eivätkä
  *     riko mitään (äänivalikon asetuksia kunnioitetaan).
  *
  *   node tools/savukkeet/savuke-etusivun-aani.mjs
@@ -119,8 +130,28 @@ window.__tasot = () => ({
   musa: window.__taso(window.__soitin(/musa-/)?.el),
   maisema: window.__taso(window.__maisema()?.el),
   maisemaSoi: window.__maisema()?.el?.paused === false,
+  maisemaNauha: window.__maisema()?.el?.currentTime ?? null,
   musaSoi: window.__soitin(/musa-/)?.el?.paused === false,
 });
+/*
+ * Uusin äänimaisema (etusivun terminaali ennen lähtöä, matkustamo
+ * lennon aikana). Maisemasoittimia syntyy lisää paikan vaihtuessa,
+ * joten kabiini haetaan listan lopusta eikä alusta.
+ */
+window.__uusinMaisema = () => {
+  const kelpaa = window.__aanet.filter((t) => {
+    const src = String(t.el.currentSrc || t.el.src || '');
+    return src && !/musa-|intro-puhe|puhe-|efekti-|data:/.test(src);
+  });
+  return kelpaa[kelpaa.length - 1] ?? null;
+};
+window.__kabiini = () => {
+  const t = window.__uusinMaisema();
+  return t ? {
+    soi: t.el.paused === false, nauha: t.el.currentTime,
+    taso: window.__taso(t.el), src: String(t.el.currentSrc || t.el.src).slice(-40),
+  } : null;
+};
 `;
 
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
@@ -167,7 +198,26 @@ await sivu.evaluate(() => window.matkakirja?.ui?.syncAmbience?.());
 // Pohjavireen oma nousu on 4 s (POHJA_NOUSU_MS) — odotetaan se loppuun.
 await sivu.waitForTimeout(5200);
 
-const ennen = await sivu.evaluate(() => window.__tasot());
+/*
+ * LÄHTÖTASO LUETAAN VASTA KUN SE ON PAIKALLAAN. Portin ääniviihjeen
+ * napautus voi olla se ele, jolla soitin vihdoin pääsee alkuun, ja
+ * silloin nousu jatkuu vielä kiinteän odotuksen jälkeen. Kesken
+ * nousua luettu lähtötaso teki vertailuista arpaa (mitattu 7.9.2026:
+ * musiikki 0,0408 nousun keskeltä, paikallaan 0,0684), joten
+ * odotetaan kaksi peräkkäistä samaa näytettä.
+ */
+const vakiintunut = async () => {
+  let edellinen = await sivu.evaluate(() => window.__tasot());
+  for (let i = 0; i < 25; i += 1) {
+    await sivu.waitForTimeout(400);
+    const nyt = await sivu.evaluate(() => window.__tasot());
+    if (Math.abs(nyt.musa - edellinen.musa) < 1e-6
+      && Math.abs(nyt.maisema - edellinen.maisema) < 1e-6) return nyt;
+    edellinen = nyt;
+  }
+  return edellinen;
+};
+const ennen = await vakiintunut();
 vaadi('ennen painallusta musiikki soi', ennen.musaSoi === true && ennen.musa > 0,
   JSON.stringify(ennen));
 vaadi('ennen painallusta terminaalin äänimaisema soi',
@@ -217,6 +267,37 @@ vaadi('LUENTA ALKAA VASTA VIIVEEN JÄLKEEN (≥ 2850 ms painalluksesta)',
 vaadi('luenta alkaa vasta äänimaiseman nousun jälkeen (nousu mitattu 1,6 s kohdalla)',
   luenta !== null && luenta.alkoi > 1600, JSON.stringify(luenta));
 
+// --- TERMINAALI SOI KOKO LUENNAN AJAN ----------------------------------------
+/*
+ * OMISTAJAN VIKA 7.9.2026 ILLALLA: *"Lentoterminaalin ääni ei kuulu
+ * etusivulla, vaikka pitäisi."* Avauksen nosto (1,45) kerrottiin
+ * kertojan väistön (0,25) päälle, ja avauksen ainoa puhuja on
+ * avaustekstin kertoja itse — joten nosto hukkui heti luennan
+ * alkaessa ja terminaali putosi 64 % kalibroidun tasonsa alle koko
+ * loppuluennan ajaksi (mitattu Chromiumilla: 0,1728 → 0,0432, kun
+ * tavallinen taso on 0,1192).
+ *
+ * Näyte otetaan vasta kun luentaa on takana 800 ms: väistön liuku on
+ * 650 ms, joten siihen mennessä mahdollinen pudotus on jo tapahtunut.
+ */
+await sivu.waitForFunction(() => {
+  const t = window.__aanet.find(
+    (a) => /intro-puhe/.test(String(a.el.currentSrc || a.el.src || '')),
+  );
+  return !!t && t.el.currentTime >= 0.8;
+}, null, { timeout: 20000 }).catch(() => null);
+const luennanAikana = await sivu.evaluate(() => window.__tasot());
+await sivu.waitForTimeout(300);
+const luennanAikana2 = await sivu.evaluate(() => window.__tasot());
+
+vaadi('TERMINAALIN NAUHA ETENEE luennan aikana',
+  luennanAikana.maisemaSoi === true
+    && luennanAikana2.maisemaNauha > luennanAikana.maisemaNauha,
+  JSON.stringify({ luennanAikana, luennanAikana2 }));
+vaadi('TERMINAALI PYSYY AVAUKSEN TASOSSA myös kertojan alla',
+  luennanAikana.maisema > ennen.maisema,
+  JSON.stringify({ ennen: ennen.maisema, luennanAikana: luennanAikana.maisema }));
+
 // --- LUENNAN JÄLKEEN SEKOITUS PALAA ------------------------------------------
 /*
  * Mockattu luenta kestää 2 s, ja sen päätyttyä purkautuu sekä puheen
@@ -235,6 +316,35 @@ vaadi('luennan jälkeen musiikki palaa entiseen tasoonsa', lahella(jalkeen.musa,
   JSON.stringify({ ennen: ennen.musa, jalkeen: jalkeen.musa }));
 vaadi('luennan jälkeen maisema palaa entiseen tasoonsa', lahella(jalkeen.maisema, ennen.maisema),
   JSON.stringify({ ennen: ennen.maisema, jalkeen: jalkeen.maisema }));
+
+// --- AVAUSLENNON KABIINI SOI -------------------------------------------------
+/*
+ * Sama ajo jatkaa kartalle ja lähtee Ateenaan. Matkustamon äänimaisema
+ * ('lentomatka') on avauksen toinen ääni, ja tämä vartioi että se
+ * SOI — nauha etenee ja taso on kuuluva. Avauksen nosto koskee vain
+ * etusivua, joten kabiini soi omalla kalibroidulla tasollaan
+ * (LENNON_VOIMA) silloinkin, jos lippu ehtii jäädä hetkeksi päälle.
+ */
+await sivu.evaluate(() => { window.matkakirja.ui.aloitaKartalta(); });
+await sivu.waitForTimeout(1500);
+await sivu.evaluate(() => {
+  const ui = window.matkakirja.ui;
+  ui.doPickStart(window.matkakirja.game.board.cityById.get('ateena'));
+});
+const kabiini = await sivu.waitForFunction(() => {
+  if (!document.body.classList.contains('flight-active')
+    && !window.matkakirja.ui.lennonAmbienssi) return null;
+  const k = window.__kabiini();
+  return k && k.soi && k.nauha > 0 ? k : null;
+}, null, { timeout: 30000 }).then((k) => k.jsonValue()).catch(() => null);
+await sivu.waitForTimeout(600);
+const kabiini2 = await sivu.evaluate(() => window.__kabiini());
+
+vaadi('AVAUSLENNON KABIINI SOI', kabiini !== null, 'matkustamon ääntä ei alkanut');
+vaadi('kabiinin nauha etenee', kabiini !== null && kabiini2.nauha > kabiini.nauha,
+  JSON.stringify({ kabiini, kabiini2 }));
+vaadi('kabiini on kuuluvalla tasolla', kabiini !== null && kabiini2.taso > 0.02,
+  JSON.stringify(kabiini2));
 
 // --- ÄÄNIVALIKON ASETUKSIA KUNNIOITETAAN -------------------------------------
 /*
@@ -268,10 +378,12 @@ vaadi('sivu ei kaatunut ajon aikana', virheet.length === 0, virheet.join(' | ').
 // Mitatut tasot näkyviin: sekoituksen hienosäätö on kuulokokeen nuppi,
 // ja seuraava säätäjä näkee tästä, mistä mihin luvut liikkuivat.
 console.log('\nmitatut tasot (musiikki / maisema):');
-for (const [nimi, t] of [['ennen', ennen], ['kesken', kesken], ['avaus', avaus], ['jälkeen', jalkeen]]) {
+for (const [nimi, t] of [['ennen', ennen], ['kesken', kesken], ['avaus', avaus],
+  ['luenta', luennanAikana], ['jälkeen', jalkeen]]) {
   console.log(`  ${nimi.padEnd(7)} ${t.musa.toFixed(4)} / ${t.maisema.toFixed(4)}`);
 }
 if (luenta) console.log(`  luenta alkoi ${Math.round(luenta.alkoi)} ms painalluksesta`);
+if (kabiini2) console.log(`  kabiini ${kabiini2.taso.toFixed(4)} (${kabiini2.src})`);
 
 await selain.close();
 palvelin.close();

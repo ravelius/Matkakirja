@@ -1040,6 +1040,69 @@ kuvissa:
    alueesta neljä viidesosaa on Tyyntämerta. Puhelimella sama hetki
    on parempi (vana näkyy vasemmassa yläkulmassa).
 
+## 7b. Avauslaatikko: teksti lyhyeksi, kuva rinnalle (V6, 7.9.2026 ilta)
+
+Omistaja sanatarkasti: *"Tästä aloitustekstistä voi poistaa kaiken
+tekstin lauseen, joka loppuu: 'Tuhat sukupolvea myöhemmin oltiin
+toisella puolella maapalloa', niin sen jälkeen koko lopputeksti pois.
+Mutta tuohon tekstin rinnalle voisi nostaa jonkun hienon kuvan, mitä jo
+on generoitu tuohon tuota linssiä varten, ja samalla voisi tehdä
+suuremmaksi tuon Itse paperin, missä tuo teksti on, jotta se kuvakin
+mahtuu paremmin. Luennasta onneksi riittää, kun otetaan sen viimeinen
+lause pois, mikä on jo generoitu. Eli sitä ei tarvitse generoida
+uudestaan."* (Raamattu › "IHMISEN MATKAN AVAUSTEKSTI LYHYEKSI, KUVA
+RINNALLE".)
+
+**Teksti.** `IHMISEN_MATKA_ALOITUS` päättyy nyt lauseeseen *"…ja tuhat
+sukupolvea myöhemmin oltiin toisella puolella maapalloa."* Kolme
+poistettua lausetta (vanat ja värit, harmaa väestö, löytöpaikkojen
+laskenta) kertoivat sanoin sen, minkä pelaaja näkee kartalta heti
+Käynnistä-napin jälkeen. Sama tieto tulee yhä loppusanoista ja
+galleriasta; poistetut lauseet ovat sanatarkasti data-tiedoston
+kommentissa. Vartijat: `tests/ihmisen-matka.test.mjs` (teksti päättyy
+oikeaan lauseeseen, ei sanoja *vana / Harmaa / Löytöpaikat*) ja
+`tests/aikajana-virrat.test.mjs` (kartan lukuohje asuu loppusanoissa).
+
+**Kuva.** `esittely.kuva` on uusi VALINNAINEN kaaren kenttä; moottori
+(`js/aikajana.js avaaAvausjakso`) lukee sen ja lisää `.on-kuva`-luokan
+kehykseen ja paperiin. Ilman kenttää laatikko on entinen — siksi
+keksintökaaren avaus ei liikkunut lainkaan. Kuva otetaan AINEISTOSTA
+tunnuksella (`avauksenKuva`, `AVAUKSEN_KUVA_TUNNUS = 'white-sands'`),
+ei käsin kirjoitetulla osoitteella. White Sands valittiin, koska se ON
+avaustekstin viimeinen lause kuvana (kaksi kulkijaa selin, jalanjäljet
+jatkuvat eteenpäin, paikka on maapallon toinen puoli), siinä ei ole
+kasvoja eikä luita, eikä se ole esityksen kuudesta kuvasta
+(`ESITYKSEN_KUVAT`) — avaus ei siis paljasta mitään, minkä pelaaja näkee
+kohta uudestaan.
+
+**Paperi.** `.aikajana-avaus-kehys.on-kuva` on `min(52rem, 92%)` (ennen
+`min(31rem, 88%)`), korkeus sisällön mukaan. Teksti ja kuva ovat
+ruudukossa (`.aikajana-avaus-sisus`, palstat 1,15 : 1, tasaus keskeltä),
+Käynnistä-nappi ruudukon alla keskellä. Puhelimessa (`max-width: 640px`)
+yksi palsta ja kuva tekstin yläpuolella. Sisääntuloliuku ennallaan.
+
+**Luenta leikattiin, ei generoitu uudelleen.** Ämpärin
+`aikajana/ihmisen-matka/puhe/esittely.mp3` (5.9.2026, 25,36 s) luki
+kaaren ENSIMMÄISTÄ avaustekstiä, jonka kaksi ensimmäistä lausetta ovat
+sanasta sanaan nykyiset. Leikkauskohta todennettiin kuuntelematta:
+`silencedetect` löysi puheen loppuvan 17,79 s:iin, ja sitä seuraava
+1,72 s:n tauko on tiedoston pisin sisäinen tauko (sanoja lauseissa
+1–2 on 32/46 eli 69,6 %, aikaa 17,79/25,36 eli 70,1 % — puolen
+prosenttiyksikön osuma). Leikkaus `afade=t=out:st=17.80:d=0.15` ja
+`-t 17.95`, uudelleenkoodaus 128 kb/s 44,1 kHz mono; taso pysyi
+−17,2 → −17,3 LUFS (työkalun tavoite −17 ±1,5). Uusi kesto 18,00 s.
+
+| Mitta | Ennen | Jälkeen |
+| --- | --- | --- |
+| esittely.mp3 kesto | 25,36 s | 18,00 s |
+| koko | 406 300 t | 288 434 t |
+| integroitu taso | −17,2 LUFS | −17,3 LUFS |
+| avaustekstin merkkejä | 626 | 232 |
+| paperin leveys (834 × 1100) | 496 px | 718 px |
+
+Savuke `tools/savukkeet/savuke-ihmisen-avaus.mjs` (iPad 834 × 1100 ja
+iPhone 390 × 844) mittaa asettelun: 16/16 läpi.
+
 ## 8. Mitä jää auki toteutukseen
 
 - Kaistan pehmeä reuna: Line2 ei häivytä reunaansa; kaksi päällekkäistä

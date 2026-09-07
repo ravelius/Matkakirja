@@ -62,10 +62,11 @@
  *   E9  LÄHTÖKAUPUNGIN VALINTA PALLOLLA (aalto 3A): "Valitse
  *       aloituskaupunki" avaa pallolaudan valintatilaan — tasokartta
  *       PYSYY lepotilassa ja svg#board tyhjänä, valittavat kaupungit
- *       ovat pallon kohdemerkkejä (karttanimi vain Lontoolla — Ateenan
- *       nimi tulee sen omasta merkistä), pallo pyörii hitaasti täydessä
- *       terävyydessä, ja kohdemerkin napautus käynnistää pelin ja
- *       vapauttaa laatupakotuksen. Aalto 1D jätti tähän kartan
+ *       ovat pallon kohdemerkkejä (kaikki ETUSIVUN_KOHTEET 7.9.2026
+ *       alkaen, karttanimi vain Lontoolla — Ateenan nimi tulee sen
+ *       omasta merkistä, ja jokaisella on huomiorengas), pallo PYSYY
+ *       PAIKALLAAN täydessä terävyydessä, ja kohdemerkin napautus
+ *       käynnistää pelin ja vapauttaa laatupakotuksen. Aalto 1D jätti tähän kartan
  *       herätyksen; tämä vartio pitää huolen ettei se palaa.
  *
  * LIPPU ON POISKYTKIN (aalto 1D, omistaja 5.9.2026: *"Käännä kaikki
@@ -101,6 +102,10 @@ const {
   kiekonSade, koneenYlin, pallonSovitus, reitinPisteet, teeReitti, videostaRuudulle,
 } = await import(`${JUURI}js/etusivupallo.js`);
 const { packById } = await import(`${JUURI}js/pack.js`);
+// Lähtövalinnan kohteiden määrä pelin omasta joukosta: luettelo elää
+// omistajan päätöksillä eikä sitä kirjoiteta savukkeeseen käsin.
+const { ETUSIVUN_KOHTEET } = await import(`${JUURI}js/ui-apurit.js`);
+const KOHTEITA = ETUSIVUN_KOHTEET.size;
 
 const TYYPIT = {
   '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
@@ -676,7 +681,9 @@ if (koevideo) {
 
   const valinta = await sivu.evaluate(() => {
     const { ui } = window.matkakirja;
-    const kohde = document.querySelector('.pallolauta-kohde');
+    // Ateena nimeltä: kohteita on kolmetoista eikä DOM-järjestys ole
+    // vartion asia (E9c ja E9d koskevat tarinan ensimmäistä reittiä).
+    const kohde = document.querySelector('.pallolauta-kohde[data-kohde="aloitus:ateena"]');
     const r = kohde?.getBoundingClientRect();
     // Kuplapino ei saa peittää valittavaa kaupunkia (omistaja 29.8.2026).
     const kuplat = [...document.querySelectorAll('.pollo-vihje, .pollo-kuplapino-kehys')]
@@ -693,6 +700,7 @@ if (koevideo) {
       nimet: [...document.querySelectorAll('.pallolauta-nimi')].map((e) => e.dataset.kaupunki).sort(),
       kohdenimet: [...document.querySelectorAll('.pallolauta-kohde .target-nimi')]
         .map((e) => e.textContent),
+      huomiorenkaita: document.querySelectorAll('.pallolauta-kohde .pallolauta-huomio').length,
       peitossa,
       piste: r ? { x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2) } : null,
     };
@@ -707,39 +715,63 @@ if (koevideo) {
    * kohdemerkin oma tumma lappu. Merkin nimi voittaa, joten
    * karttanimikerros latoo valinnassa enää Lontoon.
    */
+  /*
+   * KAIKKI KOHTEET (omistaja 7.9.2026: *"nostetaan kokeeksi kaikki
+   * kohdekaupungit takaisin mitä aiemmin oli käytössä"*; illalla Los
+   * Angeles vaihtui San Franciscoksi ja Istanbul lisättiin — määrä
+   * luetaan pelin omasta joukosta eikä kirjoiteta tähän).
+   * Karttanimi on yhä VAIN Lontoolla: valittavat saavat nimensä omasta
+   * merkistään (js/pallolauta/lauta.js aloitusNimet), joten kahta
+   * nimeä ei tule päällekkäin. Kaikki kolmetoista merkkiä ovat DOMissa
+   * — osa pallon takapuolella, ja ne pelaaja hakee kääntämällä.
+   */
   vaadi('E9b valittavat ovat pallon kohdemerkkejä, karttanimi vain Lontoolla',
-    valinta.kohteet.length === 1 && valinta.kohteet[0].startsWith('aloitus:')
-    && valinta.nimet.join(',') === 'lontoo' && valinta.kohdenimet.join(',') === 'Ateena',
+    valinta.kohteet.length === KOHTEITA && valinta.kohteet.every((k) => k.startsWith('aloitus:'))
+    && valinta.nimet.join(',') === 'lontoo' && valinta.kohdenimet.includes('Ateena'),
     `kohteet ${JSON.stringify(valinta.kohteet)}, nimet ${JSON.stringify(valinta.nimet)}, `
     + `kohdenimet ${JSON.stringify(valinta.kohdenimet)}`);
+  vaadi('E9b2 jokaisella valittavalla on huomiorengas',
+    valinta.huomiorenkaita === valinta.kohteet.length,
+    `renkaita ${valinta.huomiorenkaita} / kohteita ${valinta.kohteet.length}`);
   vaadi('E9c kuplat eivät peitä valittavaa kaupunkia', !valinta.peitossa,
     `kohdemerkki ${JSON.stringify(valinta.piste)} jäi kuplapinon alle`);
   if (KUVAKANSIO) {
     await sivu.screenshot({ path: join(KUVAKANSIO, 'etusivupallo-valinta.png'), scale: 'css' });
   }
   /*
-   * E9e PALLO PYÖRII HITAASTI TÄYDESSÄ TERÄVYYDESSÄ (omistaja 5.9.2026
-   * klo 00.30: *"karttapallo saisi pyöriä hitaast täydessä
-   * terävyydessä"*). Kulmanopeus luetaan seinäkellosta, joten
-   * ohjelmistorasteroijan hitaat kehykset EIVÄT näy suuntana: mitataan
-   * vain, että kierto etenee itään ja että laatupakotus on päällä.
+   * E9e PALLO PYSYY PAIKALLAAN TÄYDESSÄ TERÄVYYDESSÄ (omistaja
+   * 7.9.2026 iltapäivä: *"Kartta voisi sittenkin pysyä ihan paikallaan
+   * tässä, kun pelaaja valitsee, minne hän haluaa lentää."* — kumoaa
+   * 5.9.2026 lisätyn hitaan pyörinnän). Mitataan kolme sekuntia: kuvan
+   * ei pidä liikkua yhtään, ja terävän tilan pakotus on silti päällä.
+   * Rajaus on kiinteä (js/pallolauta/lauta.js ALOITUSVALINNAN_LAT),
+   * joten myös katselupiste raportoidaan.
    */
   const pyorintaA = await sivu.evaluate(async () => {
     const { pallonLaatuPakotettu } = await import('/js/pallo.js');
+    const pov = window.matkakirja.ui.pallolauta.pallo.pointOfView();
     return {
-      lng: window.matkakirja.ui.pallolauta.pallo.pointOfView().lng,
+      lng: pov.lng,
+      lat: pov.lat,
+      altitude: pov.altitude,
       pyorii: window.matkakirja.ui.pallolauta.aloitusvalinnanPyorinta(),
       laatu: pallonLaatuPakotettu(),
     };
   });
   await sivu.waitForTimeout(3000);
-  const pyorintaB = await sivu.evaluate(() => ({
-    lng: window.matkakirja.ui.pallolauta.pallo.pointOfView().lng,
-  }));
-  vaadi('E9e pallo pyörii itään ja terävä tila on pakotettuna',
-    pyorintaA.pyorii === true && pyorintaA.laatu === true && pyorintaB.lng > pyorintaA.lng,
+  const pyorintaB = await sivu.evaluate(() => {
+    const pov = window.matkakirja.ui.pallolauta.pallo.pointOfView();
+    return { lng: pov.lng, lat: pov.lat, altitude: pov.altitude };
+  });
+  tieto('valintanäkymän kamera', `lat ${pyorintaA.lat.toFixed(1)}, `
+    + `lng ${pyorintaA.lng.toFixed(1)}, altitude ${pyorintaA.altitude.toFixed(3)}`);
+  vaadi('E9e pallo pysyy paikallaan ja terävä tila on pakotettuna',
+    pyorintaA.pyorii === false && pyorintaA.laatu === true
+    && Math.abs(pyorintaB.lng - pyorintaA.lng) < 0.01
+    && Math.abs(pyorintaB.lat - pyorintaA.lat) < 0.01,
     `pyorii ${pyorintaA.pyorii}, laatu ${pyorintaA.laatu}, `
-    + `lng ${pyorintaA.lng.toFixed(2)} → ${pyorintaB.lng.toFixed(2)}`);
+    + `lng ${pyorintaA.lng.toFixed(2)} → ${pyorintaB.lng.toFixed(2)}, `
+    + `lat ${pyorintaA.lat.toFixed(2)} → ${pyorintaB.lat.toFixed(2)}`);
   if (valinta.piste) await sivu.mouse.click(valinta.piste.x, valinta.piste.y);
   const alkoi = await sivu.waitForFunction(() => window.matkakirja.ui.game.phase !== 'pickstart',
     null, { timeout: 30000 }).then(() => true).catch(() => false);
@@ -756,7 +788,7 @@ if (koevideo) {
   vaadi('E9d kohdemerkin napautus käynnistää pelin ilman tasokarttaa',
     alkoi && jalkeen.lepotila === true && jalkeen.laudanOsia === 0,
     `vaihe ${jalkeen.vaihe}, lepotila ${jalkeen.lepotila}, laudan osia ${jalkeen.laudanOsia}`);
-  vaadi('E9f valinta lopettaa pyörinnän ja vapauttaa laatupakotuksen',
+  vaadi('E9f valinta vapauttaa laatupakotuksen',
     jalkeen.pyorii === false && jalkeen.laatu === false,
     `pyorii ${jalkeen.pyorii}, laatu ${jalkeen.laatu}`);
   await ctx.close();

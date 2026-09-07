@@ -195,7 +195,10 @@ test('poltetut nostot luetaan pallon omasta luettelosta, jonka laattatyökalu ki
   assert.match(nostot, /maanKohdemerkit\(pack, iso, pohja, onPoltettu\)/);
   assert.match(nostot, /naapurienPoltetutMerkit\(ui, nakyva, onPoltettu\)/);
   // Elävä nosto: sama merkki ja nimiö kuin kartalla, poltettu vain osuma.
-  assert.match(nostot, /piirraNostosymKartalle\(g, d\.kategoria, d\.nimioNakyy \? d\.nimi : '', d\.symLaji, d\.puoli \?\? 'oikea'\);/);
+  // Piirto asuu sisäasettelussa (asetteleNosto), koska sovittelu voi
+  // vaihtaa kyljen ja piilottaa lapun kesken elinkaaren (luku 14).
+  assert.match(nostot, /piirraNostosymKartalle\(g, d\.kategoria, nimio, d\.symLaji, puoli\);/);
+  assert.match(nostot, /export function asetteleNosto\(el, d\)/);
   assert.match(nostot, /osumat = \[\.\.\.naytetaan, \.\.\.nakyvat\.filter\(\(r\) => r\.poltettu\)\];/);
   // Kohtaamispiste samalla tuikkeella (css/fokusvirta.css).
   assert.match(nostot, /fokuspisteKuvio\(g\);/);

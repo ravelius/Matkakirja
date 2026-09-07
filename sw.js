@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1671';
+const CACHE = 'matkakirja-2026-08-09.1672';
 const SHELL = [
   './',
   './index.html',
@@ -119,6 +119,7 @@ const SHELL = [
   './js/uutiset.js',
   './js/packs/maailmankartta.js',
   './js/packs/maailmankartta-maasto.js',
+  './js/packs/maailmankartta-pallopisteet.js',
   './js/packs/maailmankartta-nimet.js',
   './js/packs/maasto-vedet.js',
   './js/packs/maasto-korkeus.js',
@@ -154,6 +155,9 @@ const SHELL = [
   './js/linssipuhe.js',
   './js/tiedeliite.js',
   './js/lyhty.js',
+  // Pergamentin repaleinen reuna (yhteinen osa, 7.9.2026): js/aikajana.js
+  // tuo tämän, joten se seuraa samaa polkua offline-käyttöön.
+  './js/pergamentti.js',
   './js/pallo.js',
   // Laattakerroksen puhtaat apurit (erä E0, 6.9.2026): js/pallo.js tuo
   // ne staattisesti, joten ne kulkevat samaa polkua offline-käyttöön.
@@ -176,6 +180,7 @@ const SHELL = [
   './js/pallolauta/nostot.js',
   './js/pallolauta/reitit.js',
   './js/pallolauta/siirto.js',
+  './js/pallolauta/sovittelu.js',
   './css/aikajana.css',
   // Etusivun esirenderöity pallo (pallolauta vaihe 5a, 5.9.2026):
   // tuodaan dynaamisesti kuten pallo.js, mutta kuuluu SHELLiin
@@ -192,6 +197,7 @@ const SHELL = [
   './js/linssit/keksinnot.js',
   './js/linssit/ihmisen-matka.js',
   './js/linssit/ihmisen-matka-data.js',
+  './js/linssit/ihmisen-matka-kertomus.js',
   // Ihmisen matka värivirtoina (6.9.2026): virtojen aineisto ja maamaski
   // tulevat linssin mukana; piirto ja laskenta seuraavat js/aikajana.js:ää.
   './js/linssit/ihmisen-matka-virrat.js',

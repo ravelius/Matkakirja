@@ -252,22 +252,35 @@ export const FOKUSVIRTA_VARSOVA = {
      * PAINOPISTE REUNOILLA): lyhentymät ovat vain alussa ("Kääk") ja
      * lopussa ("mut"), keskellä sanat ovat auki. Ei huutomerkkejä.
      */
-    maadoitus: 'Kääk. Isoisäsi kuuli kaksi kieltä, ja kahta elämää tässä '
-      + 'kaupungissa eletään yhä — mutta raja ei kulje enää virastojen '
-      + 'ovissa vaan joessa. Hänen matkavuonnaan Veikselin yli mentiin '
-      + 'Kierbedźin siltaa pitkin: 474 metriä ristikkoa ja Varsovan '
-      + 'ensimmäinen teräksinen jokisilta, avattu marraskuussa 1864. Sen '
-      + 'itäpäässä on Praga, joka sai kaupunkioikeutensa 1648 ja liitettiin '
-      + 'Varsovaan vasta 1700-luvun lopulla, ja siellä seisoo yhä sotaa '
-      + 'edeltäviä kadunvarsitaloja — mut sinne pitää osata mennä erikseen.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Varsova, syyskuussa 1873. Kaduilla puhutaan puolaa, virastoissa venäjää.',
+    huudahdus: {
+      kohta: 'sisar toi kotiin salaa',
+      teksti: 'Salaa. Hyvä sisar.',
+    },
+    kommentti: [
+      'Sen pianistin nimen arvaat itsekin. Sydän on yhä muurattuna kirkon pylvääseen.',
+      'Vanhakaupunki tuhoutui sodassa ja rakennettiin uusiksi niin tarkasti, että se on perintöä.',
+    ],
     /* KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. */
-    teksti: 'Sen pianistin nimen arvaat varmaan itsekin — ja hänen '
-      + 'sydämensä on tänäkin päivänä muurattuna varsovalaisen kirkon '
-      + 'pylvääseen.. Vanhakaupunki jonka isoisäsi näki tuhoutui sodassa '
-      + 'lähes kokonaan, ja rakennettiin uudelleen niin tarkasti, että se '
-      + 'pääsi maailmanperintölistalle jälleenrakennuksena — miten se '
-      + 'onnistui, sen jäljille pääset kohta. Värit ovat taas kirkkaat. '
-      + 'Torille.',
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/
      * kulttuuri-kategoriat.js, varsova/avauskuvat, heroerä 31):

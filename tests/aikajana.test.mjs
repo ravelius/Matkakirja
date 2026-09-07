@@ -230,13 +230,19 @@ test('loppusanoissa on galleriaan vievä nappirivi vain hiljaisten pysäkkien ka
   const napit = metodi('lisaaLoppunapit');
   assert.match(napit, /if \(!this\.tapahtumat\.some\(\(t\) => t\.hiljainen\)\) return;/);
   assert.match(napit, /'aikajana-loppunappi primary', 'Katso löydöt'/);
-  assert.match(napit, /'aikajana-loppunappi', 'Sulje'/);
-  assert.match(napit, /this\.ui\.pysaytaAikajana\?\.\(\)/);
+  /*
+   * SULJE-NAPPI POISTUI LAPUSTA (omistaja 7.9.2026 ilta): linssin
+   * sulkee kartan oikean yläkulman ✕, ja loppusanoihin jää pelkkä
+   * "Katso löydöt". Vartio on kielto — jos nappi palaa, testi kaatuu.
+   */
+  assert.ok(!/'aikajana-loppunappi', 'Sulje'/.test(napit), 'lapussa ei saa olla Sulje-nappia');
+  assert.ok(!napit.includes('pysaytaAikajana'), 'lappu ei sulje linssiä');
+  assert.match(napit, /napit\.append\(katso\);/);
   assert.match(metodi('avaaLoydot'), /avaaTiedeliite\(this\.ui, this\.tapahtumat, 0, \{/);
   assert.ok(metodi('lopeta').includes('this.lisaaLoppunapit();'), 'loppusanat eivät saa nappirivia');
   // Lopun laskuri tulee kaarelta: keksinnöillä yhä "valoa".
   assert.match(MOOTTORI, /\$\{this\.valot\.filter\(Boolean\)\.length\} \$\{this\.kaari\.laskuri \?\? 'valoa'\}/);
-  // Arkkikirjaston kaksi roolia: kullattu päänappi ja paperinappi.
+  // Arkkikirjaston päärooli: kullattu päänappi.
   assert.match(AIKAJANA_CSS, /\.aikajana-loppu-napit \{[\s\S]{0,300}display: flex;/);
   assert.match(AIKAJANA_CSS, /\.aikajana-loppunappi\.primary \{[\s\S]{0,300}linear-gradient/);
   assert.match(AIKAJANA_CSS, /\.aikajana-loppunappi \{[\s\S]{0,400}min-height: 44px;/);
@@ -244,6 +250,84 @@ test('loppusanoissa on galleriaan vievä nappirivi vain hiljaisten pysäkkien ka
   assert.match(TIEDELIITE, /const merkitaanEsitys = tapahtumat\.some\(\(t\) => t\?\.hiljainen !== undefined\);/);
   assert.match(TIEDELIITE, /if \(merkitaanEsitys && !t\.hiljainen\) \{[\s\S]{0,300}'◈'/);
   assert.match(TIEDELIITE, /näytettiin esityksessä/);
+});
+
+/*
+ * LAPPU VÄISTYY KARTAN KOSKETUKSESTA (omistaja 7.9.2026 ilta,
+ * sanatarkasti: *"Tuo lappu saisi hävitä, kun pelaaja alkaa tutkimaan
+ * karttaa, tai se saisi vain rullautua ylös piiloon ja otetaan pois
+ * tuo suljen nappi siitä ja siirretään se kartan oikeaan yläkulmaan,
+ * mistä tämän linssin voi sitten sulkea milloin vain."*)
+ *
+ * Kolme vartiota: kuuntelijat ovat kartassa eivätkä lapussa, kahva
+ * tuo lapun takaisin, ja ✕ on juuren lapsi kartan kulmassa.
+ */
+test('lappu rullautuu ylös kartan kosketuksesta ja palaa otsikkorivin kahvasta', () => {
+  const kosketus = metodi('kytkeKartanKosketus');
+  // Kuuntelijat kartta-alueessa KAAPPAUSVAIHEESSA (pallon oma ohjaus
+  // syö kuplivan tapahtuman) ja passiivisina: mitään ei estetä.
+  assert.match(kosketus, /const pane = this\.ui\.mapPane;/);
+  assert.match(kosketus, /pane\.addEventListener\('pointerdown', this\.kartanKosketus, \{ capture: true, passive: true \}\);/);
+  assert.match(kosketus, /pane\.addEventListener\('wheel', this\.kartanKosketus, \{ capture: true, passive: true \}\);/);
+  // Linssin oma kalusto ei ole karttaa: lapun raahaus ei piilota lappua.
+  assert.match(kosketus, /!this\.juuri\.contains\(kohde\)/);
+  // Purku irrottaa kuuntelijat (vuoto kartta-alueeseen olisi hiljainen).
+  assert.match(PURA, /this\.irrotaKartanKosketus\?\.\(\);/);
+  // Rullaus on luokka, ei tyylin kirjoitus: korkeuslukko jää js:lle.
+  assert.match(metodi('piilotaLappu'), /this\.paneeli\.classList\.add\('piilossa'\);/);
+  assert.match(metodi('naytaLappu'), /this\.paneeli\.classList\.remove\('piilossa'\);/);
+  // Kahva näkyy vain piilossa ollessa ja kertoo lapun nimen + ▾.
+  // Nimi ja nuoli ovat omat solmunsa: kapea ruutu pudottaa nimen
+  // (css .aikajana-kahva-nimi), ja nimi jää aria-labeliin.
+  const kahva = metodi('paivitaLapunKahva');
+  assert.match(kahva, /this\.lappuKahvaNimi\.textContent = nimi;/);
+  assert.match(kahva, /this\.lappuKahva\.setAttribute\('aria-label', `Näytä \$\{nimi\}`\);/);
+  assert.match(kahva, /this\.lappuKahva\.hidden = !this\.lappuPiilossa;/);
+  const rakenna = metodi('rakenna');
+  assert.match(rakenna, /this\.lappuKahva\.addEventListener\('click', \(\) => this\.naytaLappu\(\)\);/);
+  assert.match(rakenna, /this\.lappuKahva\.hidden = true;/);
+  assert.match(rakenna, /const kahvanNuoli = solmu\('span', 'aikajana-kahva-nuoli', '▾'\);/);
+  assert.match(rakenna, /this\.lappuKahva\.append\(this\.lappuKahvaNimi, kahvanNuoli\);/);
+  // Nimi seuraa lappua myös rullattuna (kortti vaihtuu esityksen aikana).
+  assert.match(metodi('vaihdaPaneeli'), /this\.lapunNimi = t\.otsikko \?\? t\.henkilo \?\? this\.lapunNimi;/);
+  // Loppusanat aukeavat aina, ja alustus palauttaa lapun esiin.
+  assert.match(metodi('lopeta'), /this\.naytaLappu\(\);/);
+  assert.match(metodi('alusta'), /this\.paneeli\.classList\.remove\('piilossa'\);/);
+  // ✕ ei ole enää otsikkorivin ohjaimissa vaan juuren lapsi kulmassa.
+  assert.match(rakenna, /ohjaimet\.append\(this\.lappuKahva, this\.taukoNappi\);/);
+  assert.match(rakenna, /this\.juuri\.append\(ylarivi, this\.suljeNappi, this\.paneeli, this\.nauha\);/);
+  // Css: rullaus kutistaa yläreunaansa, ei korkeutta (js omistaa height).
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio\.piilossa \{[\s\S]{0,400}scaleY\(0\.02\)/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio\.piilossa \{[\s\S]{0,600}visibility: hidden;/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-ilmio \{[\s\S]{0,900}transform-origin: top center;/);
+  assert.match(AIKAJANA_CSS, /--aikajana-lappu-kesto: 300ms;/);
+  // Reduced motion: sama vaihdos ilman liukua.
+  assert.match(AIKAJANA_CSS, /--aikajana-kesto: 0\.01s; --aikajana-lappu-kesto: 0\.01s;/);
+  // ✕ kartan oikeassa yläkulmassa, 44 px kosketusala.
+  assert.match(AIKAJANA_CSS, /\.aikajana-sulje \{[\s\S]{0,400}position: absolute;/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-sulje \{[\s\S]{0,400}right: 1\.25rem;/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-sulje \{[\s\S]{0,400}min-width: 44px;[\s\S]{0,60}min-height: 44px;/);
+  /*
+   * KAPEA RUUTU: palkki on keskellä (omistajan päätös 5.9.2026), mutta
+   * keskitys lasketaan kulman napin vasemmalle puolelle jäävästä
+   * tilasta — muuten lähes ruudunlevyinen palkki työntyisi 390 px:llä
+   * ✕:n alle. Varaus 4,8rem = nappi 44 px + reunavarat.
+   */
+  assert.match(AIKAJANA_CSS, /\.aikajana-ylarivi \{[\s\S]{0,200}left: calc\(50% - 1\.8rem\);[\s\S]{0,120}max-width: calc\(100% - 4\.8rem\);/);
+  /*
+   * KAHVA KUTISTUU ENNEN KUIN PALKKI VUOTAA: flex-kohde ei anna
+   * periksi sisältömittansa alle ilman `min-width: 0`, ja ilman sitä
+   * "Matka päättyy ▾" työnsi 390 px:llä palkin ✕:n päälle (mitattu
+   * savukkeella 7.9.2026, `osuu: ["aikajana-nappi"]`).
+   */
+  assert.match(AIKAJANA_CSS, /\.aikajana-kahva \{[\s\S]{0,600}min-width: 0;/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-kahva-nimi \{[\s\S]{0,160}text-overflow: ellipsis;/);
+  // Sama turvaverkko ohjainriville: se on kahvan vanhempi flex-kohde.
+  assert.match(AIKAJANA_CSS, /\.aikajana-ohjaimet \{[\s\S]{0,160}min-width: 0;/);
+  // Kapealla ruudulla paikkarivi väistyy kahvan ajaksi ja kahvasta jää ▾.
+  assert.match(AIKAJANA_CSS, /\.aikajana-ylarivi:has\(\.aikajana-kahva:not\(\[hidden\]\)\) \.aikajana-otsikot \{ display: none; \}/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-kahva \{ max-width: none; min-width: 2\.6rem; justify-content: center; \}/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-kahva-nimi \{ display: none; \}/);
 });
 
 test('viimeisen tapahtuman jälkeen askel ilmoittaa lopun', () => {
@@ -1429,7 +1513,19 @@ test('avausjakson esittely tulee datasta eikä koodista', () => {
   // Moottori lukee kentän eikä kirjoita omia sanojaan laatikkoon.
   assert.match(MOOTTORI, /const esittely = this\.kaari\.esittely \?\? \{\};/);
   assert.match(MOOTTORI, /esittely\.otsikko \?\? this\.kaari\.otsikko/);
-  assert.match(MOOTTORI, /if \(esittely\.teksti\) laatikko\.appendChild/);
+  assert.match(MOOTTORI, /if \(esittely\.teksti\) sisus\.appendChild/);
+  /*
+   * KUVATON KAARI SAA ENTISEN LAATIKON (omistaja 7.9.2026 ilta, kuva
+   * rinnalle vain Ihmisen matkalle). `sisus` on paperi itse, kun
+   * `esittely.kuva` puuttuu, joten keksintökaaren DOM ei muutu — eikä
+   * `.on-kuva`-luokkaa tule, jolloin myös leveys ja sisennys pysyvät.
+   */
+  assert.equal(esittely.kuva, undefined, 'keksintökaarella ei ole avauskuvaa');
+  assert.match(MOOTTORI, /const sisus = kuvasolmu \? solmu\('div', 'aikajana-avaus-sisus'\) : laatikko;/);
+  assert.match(MOOTTORI, /if \(kuvasolmu\) \{ kehys\.classList\.add\('on-kuva'\); laatikko\.classList\.add\('on-kuva'\); \}/);
+  // Leveämpi paperi ja kaksipalstainen ladelma ovat luokan takana.
+  assert.match(AIKAJANA_CSS, /\.aikajana-avaus-kehys \{[\s\S]*?width: min\(31rem, 88%\);/);
+  assert.match(AIKAJANA_CSS, /\.aikajana-avaus-kehys\.on-kuva \{ width: min\(52rem, 92%\); \}/);
 });
 
 /*
@@ -1527,10 +1623,15 @@ test('Käynnistä-nappi on täytetty eikä läpinäkyvä kehys', () => {
  */
 test('avauslaatikon paperi on repaleinen ja tekstuuriltaan monikerroksinen', () => {
   const avaus = AIKAJANA_CSS.match(/\.aikajana-avaus-laatikko \{[\s\S]*?\n\}/)[0];
-  // 1. Repaleinen reuna: monikulmio, ei suorakaide eikä pyöristys.
-  const monikulmio = avaus.match(/clip-path: polygon\(([\s\S]*?)\);/)[1];
-  assert.ok(monikulmio.split(',').length >= 24, 'reunassa on liian vähän pisteitä ollakseen repaleinen');
+  /*
+   * 1. Repaleinen reuna tulee YHTEISESTÄ OSASTA (js/pergamentti.js),
+   * ei enää clip-path-monikulmiosta — omistaja 7.9.2026 ilta:
+   * *"Paperin rosoiset reunat ovat aivan liian geometrisiä"*.
+   * Tasavälinen kahdeksan pisteen sahalaita luki kuviona.
+   */
+  assert.ok(!/clip-path:/.test(avaus), 'clip-path-monikulmio korvattiin SVG-maskilla');
   assert.ok(!avaus.includes('border-radius'), 'repaleinen paperi ei ole pyöristetty suorakaide');
+  assert.match(MOOTTORI, /repaleinenPaperi\(laatikko, \{ siemen: siemenNimesta\(otsikko\), hehku \}\);/);
   // 2. Kaksi kohinakerrosta (hieno kuitu ja karkea kellastuma), multiply.
   assert.equal((avaus.match(/feTurbulence/g) ?? []).length, 2, 'kohinaa pitää olla kaksi eri karkeutta');
   assert.match(avaus, /background-blend-mode: multiply, multiply, normal, normal;/);
@@ -1540,8 +1641,38 @@ test('avauslaatikon paperi on repaleinen ja tekstuuriltaan monikerroksinen', () 
   assert.ok((laiskat.match(/radial-gradient/g) ?? []).length >= 6, 'läiskiä on liian vähän');
   assert.match(laiskat, /mix-blend-mode: multiply;/);
   assert.match(laiskat, /z-index: 0;/);
-  // Kellastunut reunavyö useampana inset-kerroksena.
-  assert.ok((avaus.match(/inset 0 0 \d+px/g) ?? []).length >= 3, 'reunavyö tarvitsee useamman kerroksen');
+  // Kellastunut reunavyö useampana inset-kerroksena. Säteet ovat
+  // maskin marginaalia suuremmat, jottei vyö jää maskin alle.
+  const vyot = [...avaus.matchAll(/inset 0 0 (\d+)px/g)].map((m) => Number(m[1]));
+  assert.ok(vyot.length >= 3, 'reunavyö tarvitsee useamman kerroksen');
+  assert.ok(Math.min(...vyot) >= 20, 'kapein reunavyö jäisi repeämän maskin alle');
+});
+
+/*
+ * KAJO MYÖTÄILEE REUNAA (omistaja 7.9.2026 ilta): hehku ei ole enää
+ * kehyksen suorakulmainen box-shadow vaan oma kerroksensa, joka saa
+ * paperin OMAN muodon sumennettuna. Ilman tätä lovien pohjalla näkyi
+ * puhdasta mustaa. Pikselimittaus: tools/savukkeet/savuke-pergamentti.mjs.
+ */
+test('avauslaatikon kajo saa saman repaleisen muodon kuin paperi', () => {
+  const kehys = AIKAJANA_CSS.match(/\.aikajana-avaus-kehys \{[\s\S]*?\n\}/)[0];
+  assert.ok(!kehys.includes('box-shadow'), 'suorakulmainen kajo poistui kehykseltä');
+  assert.match(AIKAJANA_CSS, /\.aikajana-avaus-hehku \{ z-index: 0; \}/);
+  // Kerros luodaan paperin SISARENA ja saa saman siemenen.
+  assert.match(MOOTTORI, /const hehku = solmu\('div', 'aikajana-avaus-hehku'\);/);
+  assert.match(MOOTTORI, /kehys\.append\(hehku, laatikko\);/);
+  // Yhteinen osa: maski ja hehkukuva samasta siemenestä, ei CSS-suodatinta.
+  const yhteinen = STYLES.match(/\.pergamentti-repale \{[\s\S]*?\n\}/)[0];
+  assert.match(yhteinen, /mask-image: var\(--pergamentti-maski, none\);/);
+  assert.match(yhteinen, /-webkit-mask-image: var\(--pergamentti-maski, none\);/);
+  assert.match(yhteinen, /mask-size: 100% 100%;/);
+  const hehku = STYLES.match(/\.pergamentti-hehku \{[\s\S]*?\n\}/)[0];
+  assert.match(hehku, /inset: -15%;/);
+  assert.match(hehku, /background-image: var\(--pergamentti-hehkukuva, none\);/);
+  // Syke tulee lyhdyistä ja koskee VAIN peittävyyttä (kuva on staattinen).
+  assert.match(hehku, /opacity: calc\(0\.14 \+ 1\.15 \* var\(--lyhty-ulko, 0\.26\)\);/);
+  assert.ok(!hehku.includes('filter:'), 'sumennus on leivottu kuvaan, ei CSS-suodattimeen');
+  assert.ok(!hehku.includes('animation'), 'maski ja kajo ovat staattisia');
 });
 
 /*
@@ -1556,18 +1687,19 @@ test('laatikon varjo ja ulkokajo hengittävät lyhtyjen tahdissa', () => {
   assert.match(varjo, /z-index: 1;/);
   // Alakulmat tummuvat omilla gradienteillaan.
   assert.ok((varjo.match(/at \d+% 100%/g) ?? []).length === 2, 'kumpikin alakulma tarvitsee oman varjon');
-  /*
-   * Ulkokajo asuu KEHYKSESSÄ eikä paperissa: clip-path leikkaisi
-   * elementin oman box-shadow'n pois.
-   */
   const kehys = AIKAJANA_CSS.match(/\.aikajana-avaus-kehys \{[\s\S]*?\n\}/)[0];
   assert.match(kehys, /--lyhty-varjo: 0\.25;/);
   assert.match(kehys, /--lyhty-ulko: 0\.26;/);
-  assert.match(kehys, /box-shadow:[\s\S]*?rgba\(255, 170, 76, var\(--lyhty-ulko\)\)/);
+  /*
+   * Ulkokajo asuu omassa KERROKSESSAAN (.pergamentti-hehku), joka saa
+   * paperin muodon — ei kehyksen suorakulmaisessa box-shadow'ssa.
+   * Muuttuja on sama, joten syke on sama.
+   */
+  assert.match(STYLES, /\.pergamentti-hehku \{[\s\S]*?var\(--lyhty-ulko, 0\.26\)/);
   // Sisääntuloliuku siirtyi kehykselle, jotta kajo ja paperi saapuvat yhdessä.
   assert.match(AIKAJANA_CSS, /\.aikajana-avaus\.laatikko-nakyy \.aikajana-avaus-kehys \{ opacity: 1; transform: none; \}/);
   assert.match(MOOTTORI, /const kehys = solmu\('div', 'aikajana-avaus-kehys'\);/);
-  assert.match(MOOTTORI, /kehys\.appendChild\(laatikko\);/);
+  assert.match(MOOTTORI, /kehys\.append\(hehku, laatikko\);/);
 });
 
 test('tummennus on aiempaa syvempi: kartta erottuu juuri ja juuri', () => {
@@ -1720,7 +1852,7 @@ test('välinäytös on tekstiä kartan päällä, ei korttia; Jatka hehkuu yläp
 test('yksi Tauko/Jatka-nappi ja (x): välinäytöksessä nappi on Jatka, kuvakierto paneelissa', () => {
   const rakenna = metodi('rakenna');
   assert.match(rakenna, /solmu\('button', 'aikajana-nappi aikajana-sulje', '✕'\)/);
-  assert.match(rakenna, /sulje\.setAttribute\('aria-label', 'Sulje'\)/);
+  assert.match(rakenna, /this\.suljeNappi\.setAttribute\('aria-label', 'Sulje'\)/);
   assert.ok(!rakenna.includes("'Alusta'"), 'Alusta-nappi poistui palkista (omistaja 4.9.2026)');
   assert.match(metodi('taukoTaiJatka'), /if \(this\.valinaytos\) \{ this\.jatkaValinaytoksesta\(\); return; \}/);
   assert.match(metodi('jatka'), /if \(this\.valinaytos\) this\.suljeValinaytos\(\);/);

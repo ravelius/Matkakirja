@@ -179,11 +179,35 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false, omaKam
     return pallo.getScreenCoords(a.lat, a.lon, korkeus);
   };
 
+  /*
+   * PELIN PAIKKA → SE LAUDAN KOHTA, JOSSA PALLO PIIRTÄÄ SEN.
+   *
+   * Kaupungilla voi olla oma pallopiste (js/packs/
+   * maailmankartta-pallopisteet.js), ja reitin poly on korjattu päistään
+   * sen mukaan (js/pallolauta/reitit.js korjattuPoly). Nappulan on
+   * kuljettava SAMAA viivaa kuin askelhelmet ja pysähdyttävä samaan
+   * pisteeseen kuin kaupungin oma piste — muuten siirto päättyisi
+   * nytkähdykseen. Siksi kaikki tämän moduulin paikat luetaan tästä
+   * yhdestä paikasta eikä suoraan `pixelOf`illa.
+   */
+  const laudanKohta = (pos) => {
+    const perus = pixelOf(board, pos);
+    if (pos.type === 'city') {
+      const d = lauta.siirtymat?.get(pos.city);
+      return d ? { x: perus.x + d.dx, y: perus.y + d.dy } : perus;
+    }
+    const reitti = board.edgeById.get(pos.edge);
+    if (!reitti?.poly?.length) return perus;
+    return pointAlong(lauta.reitit.poly(reitti), pos.idx / reitti.steps);
+  };
+
   /** Laudan kohta hypyn osuudella e: reitin polya pitkin tai suoraan. */
   const hypynKohta = (h, e) => {
-    if (h.reitti) return pointAlong(h.reitti.poly, h.ta + (h.tb - h.ta) * e);
-    const a = pixelOf(board, h.a);
-    const b = pixelOf(board, h.b);
+    if (h.reitti) {
+      return pointAlong(lauta.reitit.poly(h.reitti), h.ta + (h.tb - h.ta) * e);
+    }
+    const a = laudanKohta(h.a);
+    const b = laudanKohta(h.b);
     return { x: a.x + (b.x - a.x) * e, y: a.y + (b.y - a.y) * e };
   };
 
@@ -206,7 +230,7 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false, omaKam
         valmis();
       }
     } else if (ankkuri) {
-      p = ruutu(pixelOf(board, ankkuri));
+      p = ruutu(laudanKohta(ankkuri));
     }
     if (!p) return;
     el.style.transform = `translate(${(p.x - NAPPULAN_LEVEYS_PX / 2).toFixed(2)}px, ${(p.y - NAPPULAN_KORKEUS_PX).toFixed(2)}px)`;
@@ -289,7 +313,7 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false, omaKam
         valmis();
       }
     } else if (ankkuri) {
-      piste = ruutu(pixelOf(board, ankkuri));
+      piste = ruutu(laudanKohta(ankkuri));
     }
     if (!piste) return;
     const kulma = koneenKulma(koneenKaari, koneenOsuus);
@@ -389,8 +413,8 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false, omaKam
         return;
       }
       const reitti = yhteinenReitti(board, a, b);
-      const pa = ruutu(pixelOf(board, a));
-      const pb = ruutu(pixelOf(board, b));
+      const pa = ruutu(laudanKohta(a));
+      const pb = ruutu(laudanKohta(b));
       const matka = pa && pb ? Math.hypot(pb.x - pa.x, pb.y - pa.y) : 0;
       hyppy = {
         a,

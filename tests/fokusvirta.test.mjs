@@ -43,6 +43,9 @@ import { SAHKE_VASTAUKSET } from '../tools/pollo/rajat.js';
 import '../js/fokuskohteet.js';
 import { EUROPE_SAAPUMISET } from '../js/packs/europe-saapumiset.js';
 import { FOKUSVIRRAT, fokusvirtaKaupungille } from '../js/packs/fokusvirrat.js';
+// Livian kentät voivat olla kuplien taulukoita (7.9.2026): sama
+// normalisointi kuin pelissä ja generointityökalussa.
+import { livianKuplat } from '../js/liviapuhe.js';
 import { FOKUSKOHTEET_GRC, fokuskohteet } from '../js/packs/fokuskohteet-grc.js';
 import { Game } from '../js/game.js';
 import { packById } from '../js/pack.js';
@@ -282,23 +285,69 @@ test('kaupungin virta poimii kohteet tunnuksilla eikä kaadu kirjoitusvirheeseen
  * OIKEAKSI — juuri se sääntö estää hahmoa muuttumasta
  * besserwisseriksi.
  */
-test('jokaisella fokuskaupungilla on Livian maadoitus isoisän merkintään', () => {
+test('jokaisella fokuskaupungilla on Livian puheenvuoro isoisän merkintään', () => {
   const kaupungit = Object.keys(FOKUSVIRRAT);
   assert.ok(kaupungit.length >= 6, 'fokuskaupunkeja pitäisi olla vähintään kuusi');
   for (const [kaupunki, virta] of Object.entries(FOKUSVIRRAT)) {
-    const maadoitus = virta.pollo?.maadoitus;
-    assert.ok(typeof maadoitus === 'string' && maadoitus.length > 120,
-      `${kaupunki}: Livian maadoitus puuttuu tai on liian lyhyt`);
-    assert.notEqual(maadoitus, virta.pollo?.teksti,
-      `${kaupunki}: maadoitus ei saa olla sama teksti kuin vaiheen huomio`);
-    // Huutomerkkejä Livia ei käytä (tools/pollo/worker.js KARAKTÄÄRI).
-    assert.ok(!maadoitus.includes('!'), `${kaupunki}: Livia ei käytä huutomerkkejä`);
+    /*
+     * KAKSI MUOTOA (omistaja 7.9.2026, Raamattu KAUPUNGIN KULKU): uuden
+     * kulun kaupungissa luennan jälkeinen puheenvuoro on `kommentti`
+     * (kirjoitettu kupliksi), vanhassa se on yhä `maadoitus` yhtenä
+     * merkkijonona. livianKuplat normalisoi kummankin (js/liviapuhe.js).
+     */
+    const kommentti = livianKuplat(virta.pollo?.kommentti);
+    const kuplat = kommentti.length ? kommentti : livianKuplat(virta.pollo?.maadoitus);
+    const puhe = kuplat.join(' ');
+    assert.ok(kuplat.length >= 1 && puhe.length > 60,
+      `${kaupunki}: Livian puheenvuoro puuttuu tai on liian lyhyt`);
+    assert.notEqual(puhe, livianKuplat(virta.pollo?.teksti).join(' '),
+      `${kaupunki}: puheenvuoro ei saa olla sama teksti kuin vaiheen huomio`);
+    // Kupla on puheen mittainen: enintään noin 85 merkkiä (Raamattu,
+    // KAUPUNGIN KULKU). Vanha yhden merkkijonon maadoitus on pidempi,
+    // koska peli pilkkoo sen ruudulla itse.
+    for (const kupla of kommentti) {
+      assert.ok(kupla.length <= 95, `${kaupunki}: kupla on liian pitkä luettavaksi ääneen`);
+    }
+    if (!kommentti.length) {
+      // Huutomerkkejä Livia ei käytä vanhassa maadoituksessa
+      // (tools/pollo/worker.js KARAKTÄÄRI). Uuden kulun välihuudot ovat
+      // omistajan sanatarkkoja tekstejä, joissa huutomerkki on sallittu.
+      assert.ok(!puhe.includes('!'), `${kaupunki}: Livia ei käytä huutomerkkejä`);
+    }
   }
 });
 
-test('vähintään yhdessä maadoituksessa isoisä osoittautuu oikeaksi', () => {
+/*
+ * UUDEN KULUN KAUPUNGIT: alustus ennen luentaa, yksi välihuuto luennan
+ * aikana ja kommentti sen jälkeen (Raamattu, KAUPUNGIN KULKU).
+ * Huudahduksen `kohta` on ajoituksen ankkuri, ja sen on esiinnyttävä
+ * matkakirjan tekstissä TASAN KERRAN — muuten välihuuto tulisi väärään
+ * kohtaan tai ei lainkaan, eikä mikään kaatuisi.
+ */
+test('uuden kulun huudahdus osuu matkakirjan tekstiin tasan kerran', () => {
+  let uusia = 0;
+  for (const [kaupunki, virta] of Object.entries(FOKUSVIRRAT)) {
+    const huudahdus = virta.pollo?.huudahdus;
+    if (!huudahdus) continue;
+    uusia += 1;
+    assert.ok(livianKuplat(virta.pollo?.alustus).length === 1,
+      `${kaupunki}: alustus on tasan yksi kupla`);
+    const teksti = virta.matkakirja?.teksti ?? '';
+    assert.ok(huudahdus.kohta, `${kaupunki}: huudahduksen kohta puuttuu`);
+    assert.equal(teksti.split(huudahdus.kohta).length - 1, 1,
+      `${kaupunki}: huudahduksen kohta "${huudahdus.kohta}" ei löydy tasan kerran`);
+    assert.ok(livianKuplat(huudahdus)[0].length <= 30,
+      `${kaupunki}: välihuuto on liian pitkä`);
+  }
+  assert.ok(uusia >= 18, `uuden kulun kaupunkeja pitäisi olla 18, on ${uusia}`);
+});
+
+test('vähintään yhdessä puheenvuorossa isoisä osoittautuu oikeaksi', () => {
   const myonnytys = Object.values(FOKUSVIRRAT)
-    .map((virta) => virta.pollo?.maadoitus ?? '')
+    .map((virta) => [
+      ...livianKuplat(virta.pollo?.kommentti),
+      ...livianKuplat(virta.pollo?.maadoitus),
+    ].join(' '))
     .filter((teksti) => /myönnä|osui|piti paikkansa|oli oikeassa/i.test(teksti));
   assert.ok(myonnytys.length >= 1,
     'ainakin yhdessä kaupungissa Livian on myönnettävä isoisän olleen oikeassa');
@@ -484,9 +533,11 @@ test('sähkepilottien molemmat aukot ovat ratkaistavissa', () => {
   for (const [cityId, virta] of pilotit) {
     const tehtava = virta.sahketehtava;
     assert.ok(tehtava.sahke.includes('STOP'), `${cityId}: sähke ei ole sähketyylinen`);
-    assert.ok(tehtava.johdanto?.length > 80, `${cityId}: Livian saate puuttuu`);
-    assert.ok(tehtava.vinkki?.length > 20, `${cityId}: lähdevinkki puuttuu`);
-    assert.ok(tehtava.paluu?.length > 20, `${cityId}: paluukupla puuttuu`);
+    // Kenttä voi olla kuplien taulukko (7.9.2026): mitta on niiden summa.
+    const pituus = (kentta) => livianKuplat(kentta).join(' ').length;
+    assert.ok(pituus(tehtava.johdanto) > 80, `${cityId}: Livian saate puuttuu`);
+    assert.ok(pituus(tehtava.vinkki) > 20, `${cityId}: lähdevinkki puuttuu`);
+    assert.ok(pituus(tehtava.paluu) > 20, `${cityId}: paluukupla puuttuu`);
     assert.equal(tehtava.aukot.length, 2, `${cityId}: lomakkeessa on oltava kaksi aukkoa`);
 
     const hakemisto = sisaltohakemisto(uiTynka(game), tehtava.hakemistoMaa);

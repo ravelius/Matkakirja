@@ -145,8 +145,9 @@ export function asetaLaatikonValo(el, v) {
  * Luo kaksi `.aikajana-lyhty`-elementtiä (vasen, oikea) kajo- ja
  * ydin-kerroksineen laatikon alkuun (sisällön alle, z-index CSS:ssä).
  * `valokohde` saa laatikkotason varjo- ja ulkokajoarvot: se on
- * avausjaksossa laatikon KEHYS, koska laatikko itse on leikattu
- * repaleiseksi (clip-path) eikä sen ulkopuolinen kajo näkyisi.
+ * avausjaksossa laatikon KEHYS, jotta arvot yltävät sekä maskatulle
+ * paperille että sen alla olevalle kajokerrokselle
+ * (js/pergamentti.js, .pergamentti-hehku).
  * `reducedMotion`: yksi tasainen kehys, ei silmukkaa. Silmukka
  * pysähtyy sammuttimesta tai kun laatikko irtoaa dokumentista.
  */

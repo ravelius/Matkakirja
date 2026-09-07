@@ -158,18 +158,57 @@ export const IHMISEN_MATKA_ESITTELY = 'Ihmisen matka Afrikasta koko maapallolle:
  * pelaajalle suoraan, ja lopussa muistutetaan, ettei reitti ole
  * todistettu.
  */
-/** Kaaren alkusanat (avausjakso ennen käynnistystä). */
+/**
+ * Kaaren alkusanat (avausjakso ennen käynnistystä).
+ *
+ * KAKSI LAUSETTA, EI ENEMPÄÄ (omistaja 7.9.2026 ilta, sanatarkasti:
+ * *"Tästä aloitustekstistä voi poistaa kaiken tekstin lauseen, joka
+ * loppuu: 'Tuhat sukupolvea myöhemmin oltiin toisella puolella
+ * maapalloa', niin sen jälkeen koko lopputeksti pois. Mutta tuohon
+ * tekstin rinnalle voisi nostaa jonkun hienon kuvan, mitä jo on
+ * generoitu tuohon tuota linssiä varten"*; Raamattu › "IHMISEN MATKAN
+ * AVAUSTEKSTI LYHYEKSI, KUVA RINNALLE").
+ *
+ * POISTETUT KOLME LAUSETTA olivat kartan lukuohje ja esityksen
+ * sisällysluettelo:
+ *
+ *   1. *"Kartalle piirtyy yksi vana — todennäköinen pääreitti
+ *      Afrikasta Arabian ja Keski-Aasian kautta Siperiaan, Beringin
+ *      maasiltaa Alaskaan ja rannikkoa pitkin Chileen — ja sen
+ *      rinnalle ohuemmat: sininen Eurooppaan, meripihka Intian
+ *      rantoja Australiaan, ruusu saarelta saarelle
+ *      Tyynellämerellä."*
+ *   2. *"Harmaa on vanha väestö, neandertalilaiset ja
+ *      denisovalaiset, joka väistyy tulijoiden tieltä."*
+ *   3. *"Löytöpaikat ovat todisteita, eivät reitti: kuusi niistä näet
+ *      matkalla, loput neljätoista voit katsoa esityksen jälkeen."*
+ *
+ * MIKSI: ne kaikki kertoivat sanoin sen, minkä pelaaja näkee kartalta
+ * heti Käynnistä-napin jälkeen — värit, harmaan väestön ja löytöjen
+ * laskennan. Avauslaatikko on lupaus eikä legenda, ja kolme lausetta
+ * teki siitä lukuläksyn ennen kuin mitään on vielä tapahtunut. Sama
+ * tieto tulee yhä pelaajalle: värit ja vanat kartalta, harmaa kalvo
+ * omana kerroksenaan, löytöjen luku loppusanoista
+ * (IHMISEN_MATKA_LOPPU) ja galleriasta ("Katso löydöt").
+ *
+ * TEKSTIN RINNALLA ON KUVA (js/linssit/ihmisen-matka.js avauksenKuva):
+ * yksi kaaren jo generoiduista havainnekuvista, joten lyhentyminen ei
+ * jätä laatikkoa tyhjäksi vaan vaihtaa selityksen näkymään.
+ *
+ * LUENTA ON LEIKATTU SAMAAN KOHTAAN, EI GENEROITU UUDESTAAN (omistaja:
+ * *"Luennasta onneksi riittää, kun otetaan sen viimeinen lause pois,
+ * mikä on jo generoitu. Eli sitä ei tarvitse generoida uudestaan."*).
+ * Ämpärin aikajana/ihmisen-matka/puhe/esittely.mp3 luki kaaren
+ * ENSIMMÄISTÄ avaustekstiä, jonka kaksi ensimmäistä lausetta ovat
+ * sanasta sanaan nämä; kolmas lause leikattiin ffmpegillä pois
+ * (25,4 s → 18,0 s, häivytys 150 ms). Jos tätä tekstiä muutetaan,
+ * luenta on generoitava uudelleen:
+ * `node tools/generoi-linssiluennat.mjs --linssi ihmisen-matka --pysakit esittely`.
+ */
 export const IHMISEN_MATKA_ALOITUS = 'Tulet seuraavaksi näkemään, miten yksi laji '
   + 'levisi yhdestä maanosasta kaikkiin. Kukaan ei suunnitellut matkaa: jokainen '
   + 'sukupolvi siirtyi vain vähän kauemmas kuin edellinen, ja tuhat sukupolvea '
-  + 'myöhemmin oltiin toisella puolella maapalloa. Kartalle piirtyy yksi vana — '
-  + 'todennäköinen pääreitti Afrikasta Arabian ja Keski-Aasian kautta Siperiaan, '
-  + 'Beringin maasiltaa Alaskaan ja rannikkoa pitkin Chileen — ja sen rinnalle '
-  + 'ohuemmat: sininen Eurooppaan, meripihka Intian rantoja Australiaan, ruusu '
-  + 'saarelta saarelle Tyynellämerellä. Harmaa on vanha väestö, neandertalilaiset '
-  + 'ja denisovalaiset, joka väistyy tulijoiden tieltä. Löytöpaikat ovat todisteita, '
-  + 'eivät reitti: kuusi niistä näet matkalla, loput neljätoista voit katsoa '
-  + 'esityksen jälkeen.';
+  + 'myöhemmin oltiin toisella puolella maapalloa.';
 
 /** Loppusanat, kun vanat ulottuvat koko maailmaan. */
 export const IHMISEN_MATKA_LOPPU = 'Vanat ulottuvat nyt Marokon kukkulalta '

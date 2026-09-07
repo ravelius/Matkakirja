@@ -1375,6 +1375,31 @@ body.fokuszoom-paalla .fokusvirta-kortti {
 
 .fokusvirta-vinkkiruksi input { margin: 0; }
 
+/* ---------- pulun välihuuto keskellä luentaa ---------- */
+
+/*
+ * HUUDAHDUS ON PIENI JA LYHYT (omistaja 7.9.2026, Raamattu KAUPUNGIN
+ * KULKU): yksi tai kaksi sanaa kertojan päälle, ja kupla häipyy
+ * itsestään kahdessa sekunnissa (js/fokusvirta.js HUUDAHDUS_NAKYY_MS).
+ * Siksi se on kapeampi, kevyempi ja hieman kallellaan — se ei ole
+ * repliikki vaan välihuuto.
+ */
+.fokusvirta-kupla.fokusvirta-huudahdus {
+  max-width: min(11rem, 60vw);
+  padding: 0.45rem 0.7rem;
+  transform: rotate(-1.5deg);
+}
+
+.fokusvirta-huudahdus .fokusvirta-vinkkiteksti {
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokusvirta-kupla.fokusvirta-huudahdus { transform: none; }
+}
+
 /* ---------- nimetyn tehtävän vihjerivi ---------- */
 
 /*

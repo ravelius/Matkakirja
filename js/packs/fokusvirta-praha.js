@@ -165,15 +165,34 @@ export const FOKUSVIRTA_PRAHA = {
      * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kääk", "Mut"),
      * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
      */
-    maadoitus: 'Kääk. Kello, joka näyttää auringon ja kuun mutta ei '
-      + 'kiirettä — sellaisen kellon minä hyväksyn. Sen vanhin osa on '
-      + 'vuodelta 1410, ja se on maailman vanhin yhä käyvä astronominen '
-      + 'kello; kuunkiertoa pyörittää pelkkä painovoima ja ruuvikierre, '
-      + 'ja se erehtyy noin päivän viidessä vuodessa. Isoisäsi jäi '
-      + 'katsomaan, ja siinä hän teki oikein. Minä hain sillä välin '
-      + 'torilta chlebíčekin, joka on paksu viipale leipää ja sen päällä '
-      + 'perunasalaattia, kinkkua ja suolakurkkua. Mut makeaa siinä ei '
-      + 'ollut grammaakaan, ja sen minä muistan.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Praha. Kirkasta, yöllä ensimmäinen halla. Isoisä myöhästyi täällä kyydistä.',
+    huudahdus: {
+      kohta: 'enkä kadu',
+      teksti: 'Samat sanat.',
+    },
+    kommentti: [
+      'Kello, joka näyttää auringon ja kuun mutta ei kiirettä. Sellaisen minä hyväksyn.',
+      'Vanhin osa on vuodelta 1410, ja se erehtyy päivän viidessä vuodessa.',
+    ],
     /*
      * Huomio viittaa herokuvan kohteeseen (Kaarlensilta ja linna).
      * Faktat ovat lehden oman avauskuvan selitteestä (js/packs/
@@ -182,12 +201,6 @@ export const FOKUSVIRTA_PRAHA = {
      * kiinteä ylitys 1840-luvulle asti. Loppu osoittaa linnanmäelle ja
      * pohjustaa oppitunnin ilman että ratkaisee mitään.
      */
-    teksti: 'Tuo silta on ollut paikallaan kauemmin kuin mikään muu '
-      + 'joen ylitys tässä kaupungissa: peruskivi laskettiin 1357, ja '
-      + 'aina 1840-luvulle asti se oli Vltavan ainoa kiinteä ylitys — '
-      + 'siis myös isoisäsi ainoa. Ja tuolla ylhäällä, sillan päässä '
-      + 'kohoavalla linnanmäellä, on se sali, josta hän kirjoitti. Katso '
-      + 'ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-praha-kaarlensilta-linna.jpg',
       selite: 'Kaarlensillan peruskivi laskettiin vuonna 1357 ja silta '

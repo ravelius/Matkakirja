@@ -570,8 +570,16 @@ export const LAATTAKERROS_LAATTAKATTO_MUISTI = 24;
 export const LAATTAKERROS_LAATTAKATTO_TAVUT = 96 * 1048576;
 /** Rinnakkaisia laattalatauksia enintään. */
 export const LAATTAKERROS_RINNAKKAIN = 6;
-/** Tekstuureja näytönohjaimelle kehystä kohti (vienti ei saa ryöpytä). */
-export const LAATTAKERROS_TEKSTUUREJA_PER_KEHYS = 2;
+/*
+ * TEKSTUUREJA YKSI KEHYSTÄ KOHTI, EI KAHTA (mitattu 7.9.2026,
+ * savuke-pallo-kehystahti). Yksi `renderer.initTexture` maksoi
+ * mittausympäristössä 3,0 ms (p50) ja 6,7 ms (max) — kaksi peräkkäin
+ * samassa kehyksessä on siis pahimmillaan 13 ms 16,7 ms:n budjetista,
+ * ja se yksin pudottaa kehyksen. Yksi vienti kehystä kohti on 60 Hz:n
+ * ruudulla yhä 60 laattaa sekunnissa, eli enemmän kuin
+ * LAATTAKERROS_RINNAKKAIN (6) ehtii ladata: jono ei kasva tästä.
+ */
+export const LAATTAKERROS_TEKSTUUREJA_PER_KEHYS = 1;
 /** Häive sisään ja ulos (ms). Reduced motion: 0. */
 export const LAATTAKERROS_HAIVE_MS = 260;
 /** Kerros päivittyy liikkeessä enintään 10 kertaa sekunnissa. */
@@ -846,6 +854,13 @@ export function luoLaattakerros({
     luettelo: false,
     /** Lepokerroksen kenttä; kerros ei kokoa yhtä kangasta (savukkeiden tuloste). */
     kangas: null,
+    /*
+     * LAATAN VALMISTELU (kangas, drawImage, verkko, materiaali) on
+     * pääsäikeen työtä, joka osuu satunnaiseen kehykseen — se ei näy
+     * missään kehyskoukussa, joten se mitataan tässä
+     * (savuke-pallo-kehystahti lukee nämä).
+     */
+    valmisteluMs: 0, valmisteluja: 0, valmisteluMax: 0,
   };
   const pyydetyt = new Set();
   /** avain 'z/sarake/rivi' → tietue. */
@@ -893,7 +908,20 @@ export function luoLaattakerros({
    * Laatan kuva: createImageBitmap (dekoodaus pääsäikeen ulkopuolella).
    * Vara on tavallinen Image + decode(), jos selain ei tunne bittikarttaa
    * tai haku kaatuu. CORS on pakko: kangas menee WebGL-tekstuuriksi.
+   *
+   * BITTIKARTAN ASETUKSET (7.9.2026) ovat pääsäikeen työtä pois:
+   * `imageOrientation: 'none'` ohittaa EXIF-tarkistuksen (laatoissa ei
+   * ole EXIFiä) ja `colorSpaceConversion: 'none'` värimuunnoksen —
+   * laatat ovat jo sRGB:tä, ja sama väriavaruus luetaan kirjaston
+   * omasta laattamateriaalista alla.
+   *
+   * `premultiplyAlpha` JÄTETÄÄN SELAIMEN OLETUKSEKSI: bittikartta
+   * piirretään 2D-kankaalle, joka säilyttää pikselit esikerrottuina,
+   * joten 'none' pakottaisi muunnoksen juuri drawImagen kohdalla.
+   * Laatat ovat läpinäkymättömiä, joten valinta ei näy kuvassa —
+   * vain työn paikassa.
    */
+  const BITTIKARTTA_ASETUKSET = { imageOrientation: 'none', colorSpaceConversion: 'none' };
   const haeKuva = async (url, merkki = null) => {
     pyydetyt.add(url);
     mittarit.pyyntoja += 1;
@@ -901,7 +929,16 @@ export function luoLaattakerros({
       try {
         const vastaus = await ikkuna.fetch(url, { mode: 'cors', credentials: 'omit', signal: merkki ?? undefined });
         if (!vastaus.ok) return null;
-        return await ikkuna.createImageBitmap(await vastaus.blob());
+        const blob = await vastaus.blob();
+        try {
+          return await ikkuna.createImageBitmap(blob, BITTIKARTTA_ASETUKSET);
+        } catch (syy) {
+          // Katkaistu haku ei mene varapolulle (ks. alla); vanha selain,
+          // joka ei tunne asetuksia, saa saman kuvan ilman niitä.
+          if (merkki?.aborted) return null;
+          void syy;
+        }
+        return await ikkuna.createImageBitmap(blob);
       } catch { /* vara alla */ }
     }
     // Katkaistu lataus (laatta purettiin kesken haun) ei mene varapolulle:
@@ -995,7 +1032,27 @@ export function luoLaattakerros({
    * kourallinen.
    */
   const rivimuisti = new Map();
+  /*
+   * ALUEMUISTI (7.9.2026): laatan lat/lon-suorakaide ei muutu koskaan,
+   * mutta `laatanAlue` ajettiin joka päivityksellä jokaiselle
+   * ehdokkaalle KAHDESTI (näkyvien suodatus ja ennakon suodatus) — ja
+   * jokainen kutsu varasi uuden olion. Sadan ehdokkaan näkymässä se on
+   * 200 oliota 100 ms:n välein. Muisti on rajattu: kun se paisuu yli
+   * katon, se tyhjennetään kokonaan (laatat ovat halpoja laskea
+   * uudestaan, muistivuoto ei ole).
+   */
+  const aluemuisti = new Map();
+  const ALUEMUISTIN_KATTO = 4096;
   const laatanAlue = (tasoOlio, sarake, rivi) => {
+    const muistiavain = `${tasoOlio.z}/${sarake}/${rivi}`;
+    const muistissa = aluemuisti.get(muistiavain);
+    if (muistissa) return muistissa;
+    const laskettu = laskeLaatanAlue(tasoOlio, sarake, rivi);
+    if (aluemuisti.size >= ALUEMUISTIN_KATTO) aluemuisti.clear();
+    aluemuisti.set(muistiavain, laskettu);
+    return laskettu;
+  };
+  const laskeLaatanAlue = (tasoOlio, sarake, rivi) => {
     const { arkki, projektio } = pyramidi;
     const koko = laattaKoko();
     const ppu = tasoOlio.pikseliaPerYksikko;
@@ -1037,9 +1094,34 @@ export function luoLaattakerros({
     t.katkaisin = null;
     if (purettu || !laatat.has(t.avain)) { for (const k of kuvat) k?.close?.(); return; }
     if (!kuvat.some(Boolean)) { t.tila = 'virhe'; return; }
+    /*
+     * KANGAS ON MITATUSTI NOPEAMPI TEKSTUURILÄHDE KUIN BITTIKARTTA
+     * (kokeiltu ja hylätty 7.9.2026). Kokeilussa yhden kerroksen laatta
+     * — ja niitä on valtaosa, koska ranta-, viiva- ja nostotasot ovat
+     * harvoja — vietiin `new Texture(bittikartta)`:na suoraan ilman
+     * kangasta ja `drawImage`ia. Ajatus oli säästää yksi pääsäikeen
+     * pikselikopio. TULOS OLI PÄINVASTAINEN: `renderer.initTexture`
+     * kallistui 3,0 → 5,1 ms (p50) ja pahin vienti 6,7 → 64,2 ms
+     * (savuke-pallo-kehystahti, 390 × 844 dpr 2).
+     *
+     * SYY ON PYSTYKÄÄNNÖSSÄ. three.js:n tekstuurin oletus on
+     * `flipY = true`, ja kun lähde on bittikartta, kääntö tehdään
+     * pikseli pikseliltä keskusmuistissa. Kangas taas elää jo
+     * näytönohjaimessa (kiihdytetty 2D-konteksti), joten sama kääntö on
+     * yksi GPU-kopio. Kangas siis MAKSAA yhden drawImagen ja SÄÄSTÄÄ
+     * koko viennin.
+     */
+    /*
+     * VALMISTELUN HINTA MITATAAN (7.9.2026). Tästä eteenpäin kaikki on
+     * PÄÄSÄIKEEN työtä — kangas, drawImage, verkon puskurit, materiaali
+     * — ja se osuu siihen kehykseen, jossa laatan haku sattuu
+     * valmistumaan. Se ei näy missään kehyskoukussa, joten ilman tätä
+     * mittaria se olisi savukkeelle näkymätöntä aikaa.
+     */
+    const valmisteluAlkoi = aika();
     const kangas = luoKangas(kartta.leveys, kartta.korkeus);
     const ctx = kangas?.getContext?.('2d');
-    if (!ctx) { t.tila = 'virhe'; return; }
+    if (!ctx) { for (const k of kuvat) k?.close?.(); t.tila = 'virhe'; return; }
     for (const kuva of kuvat) {
       if (!kuva) continue;
       ctx.drawImage(kuva, 0, 0, kartta.leveys, kartta.korkeus);
@@ -1089,6 +1171,10 @@ export function luoLaattakerros({
     t.silmat = [nx, ny];
     t.tavut = Math.round(kartta.leveys * kartta.korkeus * 4 * (webgl2 ? 4 / 3 : 1));
     t.tila = 'valmis';
+    const valmisteluKesti = aika() - valmisteluAlkoi;
+    mittarit.valmisteluMs += valmisteluKesti;
+    mittarit.valmisteluja += 1;
+    if (valmisteluKesti > mittarit.valmisteluMax) mittarit.valmisteluMax = valmisteluKesti;
     vientijono.push(t);
     ajaVienti();
   };
@@ -1101,6 +1187,7 @@ export function luoLaattakerros({
     jono.sort((a, b) => (a.nakyva ? 0 : 1) - (b.nakyva ? 0 : 1) || a.etaisyys - b.etaisyys);
     while (ladattavia < LAATTAKERROS_RINNAKKAIN && jono.length) {
       const t = jono.shift();
+      t.jonossa = false;
       if (!laatat.has(t.avain) || t.tila !== 'ladataan' || t.aloitettu) continue;
       t.aloitettu = true;
       ladattavia += 1;
@@ -1285,7 +1372,7 @@ export function luoLaattakerros({
         t = {
           avain, z: valittu.z, sarake: l.sarake, rivi: l.rivi, alue: null, tila: 'ladataan',
           verkko: null, materiaali: null, tekstuuri: null, kaytetty: nyt, tavut: 0,
-          nakyva, scenessa: false, viety: false, aloitettu: false, haipyy: false,
+          nakyva, scenessa: false, viety: false, aloitettu: false, haipyy: false, jonossa: false,
           katkaisin: null, etaisyys: 0, sukupolvi, pito: true, ennakko: !nakyva,
         };
         laatat.set(avain, t);
@@ -1356,11 +1443,20 @@ export function luoLaattakerros({
         taso: valittu, laatta: koko, arkki: pyramidi.arkki,
         projektio: pyramidi.projektio, alue: laaja, laudanY,
       });
-      const ehdokkaat = (ennakkoKartta?.laatat ?? [])
-        .filter((l) => !nakyvat.has(`${valittu.z}/${l.sarake}/${l.rivi}`))
-        .filter((l) => laattakerroksenNakyvissa(laatanAlue(valittu, l.sarake, l.rivi), pov));
-      for (const l of ehdokkaat) {
+      /*
+       * ENNAKON EHDOKKAAT YHDELLÄ KIERROKSELLA JA KATTO HETI (7.9.2026).
+       * Ennen tästä lähti kaksi `filter`-kierrosta, jotka rakensivat
+       * välitaulukot KAIKISTA laajennetun alueen laatoista ennen kuin
+       * katto (LAATTAKERROS_LAATTAKATTO_ENNAKKO) edes katsoi niitä.
+       * Laajennus on enintään kolminkertainen kumpaankin suuntaan, eli
+       * yhdeksänkertainen laattamäärä: 24 näkyvästä tulee yli 200
+       * ehdokasta, joista katto ottaa 96. Nyt sama kierros tekee
+       * suodatuksen ja lisäyksen ja pysähtyy kattoon.
+       */
+      for (const l of ennakkoKartta?.laatat ?? []) {
         if (ennakko.size >= LAATTAKERROS_LAATTAKATTO_ENNAKKO) break;
+        if (nakyvat.has(`${valittu.z}/${l.sarake}/${l.rivi}`)) continue;
+        if (!laattakerroksenNakyvissa(laatanAlue(valittu, l.sarake, l.rivi), pov)) continue;
         const t = varmista(l, false);
         t.ennakko = true;
         ennakko.add(t.avain);
@@ -1419,27 +1515,60 @@ export function luoLaattakerros({
      */
     jono.length = 0;
     for (const t of laatat.values()) {
-      if ((t.nakyva || t.pito) && t.tila === 'ladataan' && !t.aloitettu) jono.push(t);
+      // `jonossa` on tietueen oma lippu eikä erillinen Set: mittarit
+      // luetaan samalla kierroksella kuin kaikki muukin (ks. alla).
+      t.jonossa = (t.nakyva || t.pito) && t.tila === 'ladataan' && !t.aloitettu;
+      if (t.jonossa) jono.push(t);
     }
 
-    const jonossa = new Set(jono.map((t) => t.avain));
-    const tietueet = [...laatat.values()];
-    const nakyvatTietueet = tietueet.filter((t) => t.nakyva);
-    mittarit.jumissa = tietueet
-      .filter((t) => t.tila === 'ladataan' && !t.aloitettu && !jonossa.has(t.avain)).length;
+    /*
+     * MITTARIT YHDELLÄ KIERROKSELLA (7.9.2026). Ennen tästä lähti
+     * kahdeksan erillistä `filter`/`reduce`-kierrosta ja kaksi taulukko-
+     * kopiota kaikista tietueista — kymmenen sadan alkion varausta
+     * JOKAISELLA päivityksellä, eli 100 kertaa sekunnissa liikkeessä.
+     * Kehysaikaa se ei yksinään syönyt paljon, mutta roskaa kyllä, ja
+     * roskienkeruun tauko on juuri se 30 ms:n nykäys, jota mitataan
+     * (jäljessä V8.GC_MC_BACKGROUND_MARKING 845 ms / 4 s). Sama tulos,
+     * yksi kierros, ei yhtään varausta.
+     */
+    let jumissa = 0;
+    let laattojaN = 0;
+    let valmiitaN = 0;
+    let hapyviaN = 0;
+    let scenessaN = 0;
+    let nakyviaScenessa = 0;
+    let nakyviaTaysin = 0;
+    let pidettyjaN = 0;
+    let tavuja = 0;
+    for (const t of laatat.values()) {
+      laattojaN += 1;
+      tavuja += t.tavut ?? 0;
+      if (t.tila === 'valmis') valmiitaN += 1;
+      if (t.tila === 'ladataan' && !t.aloitettu && !t.jonossa) jumissa += 1;
+      if (t.scenessa) {
+        scenessaN += 1;
+        const tayte = t.materiaali ? t.materiaali.opacity : 0;
+        if (tayte < 1) hapyviaN += 1;
+        if (t.nakyva) {
+          nakyviaScenessa += 1;
+          if (t.materiaali && tayte >= 1) nakyviaTaysin += 1;
+        }
+      }
+      if (t.pito && !t.nakyva) pidettyjaN += 1;
+    }
+    mittarit.jumissa = jumissa;
     mittarit.nakyvia = nakyvat.size;
-    mittarit.nakyviaScenessa = nakyvatTietueet.filter((t) => t.scenessa).length;
-    mittarit.nakyviaTaysin = nakyvatTietueet
-      .filter((t) => t.scenessa && t.materiaali && t.materiaali.opacity >= 1).length;
+    mittarit.nakyviaScenessa = nakyviaScenessa;
+    mittarit.nakyviaTaysin = nakyviaTaysin;
     mittarit.ennakkoja = ennakko.size;
-    mittarit.pidettyja = tietueet.filter((t) => t.pito && !t.nakyva).length;
+    mittarit.pidettyja = pidettyjaN;
     mittarit.tila = 'nakyy';
     mittarit.taso = valittu.z;
-    mittarit.laattoja = tietueet.length;
-    mittarit.valmiita = tietueet.filter((t) => t.tila === 'valmis').length;
-    mittarit.hapyvia = tietueet.filter((t) => t.scenessa && t.materiaali && t.materiaali.opacity < 1).length;
-    mittarit.scenessa = tietueet.filter((t) => t.scenessa).length;
-    mittarit.kaytetytTavut = tietueet.reduce((s, t) => s + (t.tavut ?? 0), 0);
+    mittarit.laattoja = laattojaN;
+    mittarit.valmiita = valmiitaN;
+    mittarit.hapyvia = hapyviaN;
+    mittarit.scenessa = scenessaN;
+    mittarit.kaytetytTavut = tavuja;
     mittarit.pyydettyja = pyydetyt.size;
     mittarit.paivityksia += 1;
     mittarit.syy = '';
@@ -1467,6 +1596,20 @@ export function luoLaattakerros({
     /** Lepokerroksen rajapinta: kerros päivittyy, se ei kokoa eikä piiloudu. */
     levossa: () => paivita(null, false),
     piilota: () => false,
+    /*
+     * TILA JA SYY ILMAN VARAUSTA (7.9.2026). `mittarit()` kopioi koko
+     * mittaritaulun JA pyydettyjen osoitteiden joukon taulukoksi —
+     * satoja merkkijonoja. js/pallo.js kutsui sitä `vapautaPohja`ssa
+     * JOKA PIIRRETYLLÄ KEHYKSELLÄ pelkän kahden kentän takia, eli
+     * roskaa 60 kertaa sekunnissa. Nämä kaksi lukevat saman tiedon
+     * varaamatta mitään; `mittarit()` jää savukkeille ja raporteille.
+     */
+    tila: () => mittarit.tila,
+    syy: () => mittarit.syy,
+    /** Valmistelun hinta (ms, kpl, pisin) savukkeelle — ei varausta. */
+    valmistelu: () => [mittarit.valmisteluMs, mittarit.valmisteluja, mittarit.valmisteluMax],
+    /** Peittääkö kerros koko näkyvän alueen juuri nyt (pohjan tarve)? */
+    peittaa: () => mittarit.nakyvia > 0 && mittarit.nakyviaScenessa >= mittarit.nakyvia,
     mittarit: () => ({ ...mittarit, pyydetyt: [...pyydetyt], nakyvissa: mittarit.scenessa > 0 }),
     pura: () => {
       purettu = true;
@@ -1476,6 +1619,8 @@ export function luoLaattakerros({
       vientijono.length = 0;
       jono.length = 0;
       povHistoria.length = 0;
+      aluemuisti.clear();
+      rivimuisti.clear();
       for (const t of [...laatat.values()]) poista(t);
       laatat.clear();
       mittarit.tila = 'purettu';

@@ -53,6 +53,7 @@ import { karttavaloVari, karttavalotLue } from '../karttavalot.js';
 import { nostoladontaTiiviste } from '../nostoladonta.js';
 import { pallonNostoOnPoltettu } from '../pallo.js';
 import { PALLOLAUDAN_LEVEYS } from './kamera.js';
+import { sovitteleLaput } from './sovittelu.js';
 
 /** Eläviä nostoja pallolla enintään kerrallaan (karttapallo.md luku 6). */
 export const NOSTOJEN_KATTO = 40;
@@ -74,21 +75,53 @@ export function nostoElementti(d) {
   const el = document.createElement('div');
   el.className = `pallolauta-nosto pallolauta-nosto-${d.perhe}`;
   el.dataset.nosto = d.id;
-  el.dataset.nimio = d.nimioNakyy ? d.nimi : '';
   el.dataset.aihe = d.aihe ?? '';
-  if (d.lunastettu) el.classList.add('lunastettu');
   const svg = document.createElementNS(SVG, 'svg');
   svg.setAttribute('width', '1');
   svg.setAttribute('height', '1');
   svg.setAttribute('aria-hidden', 'true');
   const g = document.createElementNS(SVG, 'g');
-  g.setAttribute('transform', `scale(${NOSTON_MITTA.toFixed(4)})`);
+  g.setAttribute('class', 'pallolauta-nosto-siirto');
   svg.appendChild(g);
   el.appendChild(svg);
-  piirraNostosymKartalle(g, d.kategoria, d.nimioNakyy ? d.nimi : '', d.symLaji, d.puoli ?? 'oikea');
+  asetteleNosto(el, d);
   el.setAttribute('role', 'img');
   el.setAttribute('aria-label', d.nimi || d.id);
   return el;
+}
+
+/**
+ * Noston sisäasettelu: mittakaava, sovittelun pieni siirto ja se kylki,
+ * jolla nimiö piirretään (js/pallolauta/sovittelu.js).
+ *
+ * SIIRTO ON CSS-MUUNNOS, EI transform-MÄÄRE: `.pallolauta-nosto-siirto`
+ * animoi muunnoksen 200 ms:ssä (css/styles.css), joten väistö liukuu
+ * eikä hypi — sama ratkaisu kuin nimen siirtymällä
+ * (js/pallolauta/nimet.js .pallolauta-nimi-siirto). Reduced motion
+ * poistaa siirtymän samasta säännöstä.
+ *
+ * RASTERI PIIRRETÄÄN VAIN KUN RESEPTI MUUTTUU. piirraNostosymKartalle
+ * LISÄÄ ryhmään uuden <image>-solmun eikä tyhjennä sitä, joten ryhmä on
+ * tyhjennettävä ensin — ja koska kyljen vaihto on rasterille vain uusi
+ * välimuistiavain (kylki on avaimessa), uusi kuva saapuu osumassa jo
+ * samalla mikrotehtävällä.
+ */
+export function asetteleNosto(el, d) {
+  const g = el.querySelector('.pallolauta-nosto-siirto');
+  if (!g) return;
+  const dx = d.dx ?? 0;
+  const dy = d.dy ?? 0;
+  g.style.transform = `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${NOSTON_MITTA.toFixed(4)})`;
+  const nimio = d.nimioNakyy && d.nimi ? d.nimi : '';
+  const puoli = d.puoli ?? 'oikea';
+  const resepti = `${d.kategoria ?? ''}|${d.symLaji ?? ''}|${puoli}|${nimio}`;
+  if (g.dataset.resepti !== resepti) {
+    g.dataset.resepti = resepti;
+    g.replaceChildren();
+    piirraNostosymKartalle(g, d.kategoria, nimio, d.symLaji, puoli);
+  }
+  el.dataset.nimio = nimio;
+  el.classList.toggle('lunastettu', Boolean(d.lunastettu));
 }
 
 /** Kohtaamispisteen elementti: sama tuike kuin kartalla (css/fokusvirta.css). */
@@ -115,19 +148,24 @@ export function pisteElementti(d) {
  * ruutu ja nimiön kaista kirjaston asemoinnista (nostosymNimioAsemointi)
  * merkin mitassa.
  */
-export function nostonLaatikko(p, d) {
+export function nostonLaatikko(p, d, {
+  kylki = null, dx = 0, dy = 0, nimio = null,
+} = {}) {
   const r = NOSTOSYM_MINI_RUUTU * NOSTON_MITTA;
+  const x = p.x + dx;
+  const y = p.y + dy;
   const laatikko = {
-    x0: p.x - r, y0: p.y - r, x1: p.x + r, y1: p.y + r,
+    x0: x - r, y0: y - r, x1: x + r, y1: y + r,
   };
-  if (!d.nimioNakyy || !d.nimi) return laatikko;
+  const nakyy = nimio === null ? Boolean(d.nimioNakyy) : Boolean(nimio);
+  if (!nakyy || !d.nimi) return laatikko;
   const { leveys } = nostosymNimioMitta(d.nimi, d.symLaji);
-  const a = nostosymNimioAsemointi(d.puoli ?? 'oikea', leveys);
+  const a = nostosymNimioAsemointi(kylki ?? d.puoli ?? 'oikea', leveys);
   return {
-    x0: Math.min(laatikko.x0, p.x + a.x1 * NOSTON_MITTA),
-    y0: Math.min(laatikko.y0, p.y + a.y1 * NOSTON_MITTA),
-    x1: Math.max(laatikko.x1, p.x + a.x2 * NOSTON_MITTA),
-    y1: Math.max(laatikko.y1, p.y + a.y2 * NOSTON_MITTA),
+    x0: Math.min(laatikko.x0, x + a.x1 * NOSTON_MITTA),
+    y0: Math.min(laatikko.y0, y + a.y1 * NOSTON_MITTA),
+    x1: Math.max(laatikko.x1, x + a.x2 * NOSTON_MITTA),
+    y1: Math.max(laatikko.y1, y + a.y2 * NOSTON_MITTA),
   };
 }
 
@@ -144,6 +182,12 @@ export function luoNostot({
   let laatikot = [];
   let laskurit = new Map();
   let valot = [];
+  let lappuja = []; // elävät nimiölaput sovittelua varten ({ r, datum })
+  let datumit = []; // viimeksi asetetut nostodatumit (sovittelu päivittää)
+  let sovittelu = {
+    siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0, lappuja: 0,
+  };
+  let laskeLaatikot = () => { laatikot = []; };
   const varit = new Map();
 
   /** Aiheen väri CSS-muuttujasta pistekerroksen väriksi (rgba). */
@@ -309,7 +353,7 @@ export function luoNostot({
     const elavat = nakyvat.filter((r) => !r.poltettu)
       .sort((a, b) => ((a.perhe === 'piste') - (b.perhe === 'piste')) * -1 || (a.etaisyys - b.etaisyys));
     const naytetaan = elavat.slice(0, Math.max(0, katto));
-    merkit.aseta('nostot', naytetaan.map((r) => ({
+    datumit = naytetaan.map((r) => ({
       avain: r.avain,
       laji: r.perhe === 'piste' ? 'piste' : 'nosto',
       id: r.id,
@@ -322,12 +366,46 @@ export function luoNostot({
       kategoria: r.kategoria ?? null,
       symLaji: r.symLaji ?? null,
       puoli: r.puoli ?? 'oikea',
+      dx: 0,
+      dy: 0,
       aihe: r.aihe ?? null,
       lunastettu: Boolean(r.lunastettu),
       elementti: r.perhe === 'piste' ? pisteElementti : nostoElementti,
-    })));
+      asettele: r.perhe === 'piste' ? undefined : asetteleNosto,
+    }));
+    merkit.aseta('nostot', datumit);
     osumat = [...naytetaan, ...nakyvat.filter((r) => r.poltettu)];
-    laatikot = naytetaan.filter((r) => r.perhe !== 'piste').map((r) => nostonLaatikko(r.p, r));
+    /*
+     * KIINTEÄ MUSTE ON NIMILADONNAN VARAUS, LIIKKUVA EI (Raamattu,
+     * KAUPUNGIN NIMI NOSTOJEN PAALLA). Nimi väistää vain sitä, mikä ei
+     * voi väistää itse: POLTETUN noston koko musteen (ikoni + laattaan
+     * paistettu nimiö) ja elävän noston IKONIN, joka on kiinni omassa
+     * karttapisteessään. Elävän noston LAPPU ei ole varaus — se on
+     * sovittelun liikkuva osapuoli, ja se väistää nimen jälkeenpäin
+     * (sovittele). Ennen tätä järjestys oli päinvastainen: lappu varasi
+     * paikkansa ja NIMI putosi, mikä on juuri se, mitä omistaja ei
+     * halunnut.
+     */
+    lappuja = [];
+    const ikonit = [];
+    naytetaan.forEach((r, i) => {
+      if (r.perhe === 'piste') return;
+      ikonit.push({ r, datum: datumit[i] });
+      if (r.nimioNakyy && r.nimi) lappuja.push({ r, datum: datumit[i] });
+    });
+    const ikonilaatikko = ({ r, datum }) => nostonLaatikko(r.p, r, {
+      dx: datum.dx, dy: datum.dy, nimio: false,
+    });
+    laskeLaatikot = () => {
+      laatikot = [
+        ...ikonit.map(ikonilaatikko),
+        ...nakyvat.filter((r) => r.poltettu).map((r) => nostonLaatikko(r.p, r)),
+      ];
+    };
+    laskeLaatikot();
+    sovittelu = {
+      siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0, lappuja: lappuja.length,
+    };
     laskurit = new Map();
     for (const o of osumat) if (o.aihe) laskurit.set(o.aihe, (laskurit.get(o.aihe) ?? 0) + 1);
     paivitaValot();
@@ -338,12 +416,82 @@ export function luoNostot({
     return { maara: naytetaan.length, laatikot, osumia: osumat.length };
   };
 
+  /**
+   * NOSTOJEN LAPUT VÄISTÄVÄT KAUPUNGIN NIMEÄ (js/pallolauta/sovittelu.js).
+   * Ajetaan `paivita`n ja nimiladonnan JÄLKEEN samassa levossa: nimet
+   * ovat silloin kiinteitä laatikoita, joita lappu ei saa peittää.
+   *
+   * `nimet` on ladottujen kaupunkinimien ruutulaatikot
+   * (js/pallolauta/nimet.js laatikot). Mitat lasketaan kaavasta
+   * (nostonLaatikko) eikä ruudulta, joten sovittelu ei koske DOMiin
+   * ennen kuin jokin lappu oikeasti liikkuu — ei layout-thrashia.
+   */
+  const sovittele = ({ nimet = [] } = {}) => {
+    if (!lappuja.length) return sovittelu;
+    const tulos = sovitteleLaput({
+      laput: lappuja.map(({ r, datum }) => ({
+        avain: datum.avain,
+        kylki: datum.puoli,
+        laatikko: (kylki, dx, dy, nimio) => nostonLaatikko(r.p, r, {
+          kylki, dx, dy, nimio,
+        }),
+      })),
+      esteet: nimet,
+    });
+    let muuttui = false;
+    for (const { r, datum } of lappuja) {
+      const a = tulos.asennot.get(datum.avain);
+      if (!a) continue;
+      if (datum.puoli === a.kylki && datum.dx === a.dx && datum.dy === a.dy
+        && datum.nimioNakyy === a.nimio) continue;
+      datum.puoli = a.kylki;
+      datum.dx = a.dx;
+      datum.dy = a.dy;
+      datum.nimioNakyy = a.nimio;
+      muuttui = true;
+    }
+    // Siirtynyt ikoni on myös siirtynyt varaus (js/pallolauta/lauta.js
+    // lukee laatikot myös sovittelun jälkeen).
+    if (muuttui) { laskeLaatikot(); merkit.aseta('nostot', datumit); }
+    sovittelu = {
+      siirretty: tulos.siirretty,
+      kylkiVaihtui: tulos.kylkiVaihtui,
+      piilotettu: tulos.piilotettu,
+      jaljella: tulos.jaljella,
+      lappuja: lappuja.length,
+    };
+    return sovittelu;
+  };
+
   return {
     paivita,
+    sovittele,
     paivitaValot,
     /** Napautettavat merkit ruudulla ({ avain, id, lat, lng, nimi, avaa, perhe, poltettu }). */
     osumat: () => osumat,
+    /** Kiinteän musteen laatikot nimiladonnan varauksiksi (ks. paivita). */
     laatikot: () => laatikot,
+    /** Viimeisimmän sovittelun luvut (savukkeet ja vartijat). */
+    sovittelunTulos: () => sovittelu,
+    /**
+     * Elävien nostojen NIMILAPPUJEN laatikot sovittelun jälkeen —
+     * mitat kaavasta, samasta kuin sovittelu käytti (savukkeet ja
+     * vartijat mittaavat tästä, eivät ruudulta: elementin oma svg on
+     * 1 x 1 px ja ylivuotava, joten getBoundingClientRect ei kerro
+     * lapusta mitään).
+     */
+    lappuLaatikot: () => lappuja
+      .filter(({ datum }) => datum.nimioNakyy && datum.nimi)
+      .map(({ r, datum }) => ({
+        id: datum.id,
+        nimi: datum.nimi,
+        puoli: datum.puoli,
+        dx: datum.dx,
+        dy: datum.dy,
+        ...nostonLaatikko(r.p, r, {
+          kylki: datum.puoli, dx: datum.dx, dy: datum.dy, nimio: true,
+        }),
+      })),
     valot: () => valot,
     /** Kappaleet aiheittain selitevalikolle (js/karttavalot.js). */
     laskurit: () => laskurit,

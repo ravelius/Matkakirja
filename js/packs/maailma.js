@@ -140,7 +140,9 @@ const WORLD_CITIES = [
     ] },
   {
     id: 'newyork', name: 'New York', x: 359, y: 293.2, start: true, airport: true,
-    la: 'end', lx: -16, ly: 5,
+    // Nimi kaupungin YLÄPUOLELLE 7.9.2026: San Francisco tuli laudalle
+    // rannikolle, ja alapuolinen nimilappu peitti sen pisteen.
+    la: 'end', lx: -16, ly: -19,
     /*
      * Koko maailma ensin, kuten muillakin porteilla.
      *
@@ -157,7 +159,9 @@ const WORLD_CITIES = [
   },
 
   {
-    id: 'kairo', name: 'Kairo', x: 772.5, y: 322.1, airport: true, la: 'start', lx: 16, ly: 5,
+    // Nimi alemmas 7.9.2026: Istanbul tuli laudalle, ja Kairon nimilappu
+    // osui sen aarrelaatan päälle.
+    id: 'kairo', name: 'Kairo', x: 772.5, y: 322.1, airport: true, la: 'start', lx: 16, ly: 19,
     // Kairosta laskeudutaan tarkemmille laudoille.
     links: [
       { pack: 'maailmankartta', city: 'kairo', label: 'Koko maailma' },
@@ -219,10 +223,53 @@ const WORLD_CITIES = [
     ],
   },
   {
+    /*
+     * SAN FRANCISCO (omistajan päätös 7.9.2026): lähtövalinnan
+     * kohdekaupunki Los Angelesin tilalle (js/ui-apurit.js
+     * ETUSIVUN_KOHTEET). Los Angeles jää laudalle mutta ei ole enää
+     * valittava — Kalifornian portti on nyt Kultaportin kaupunki.
+     *
+     * KOORDINAATIT: 37,775° N, −122,419° W stereografisella
+     * pallonpuoliskoprojektiolla (tools/hemispheres.mjs, Amerikkojen
+     * ympyrä lon0 −110°, cx 290, cy 400, r 270) antaa 264,1 / 306,7;
+     * piste siirrettiin yhden yksikön verran rannikolta maalle
+     * (265,1 / 305,7), koska laudan tyylitelty rantaviiva kulkee
+     * kaupungin kohdalla hieman sisämaassa. Muut kaupungit tällä
+     * laudalla on muunnettu vanhasta lieriölaudasta, joten ne
+     * poikkeavat samasta kaavasta 2–13 yksikköä — ero on
+     * silmämääräisesti olematon 1150 × 800:n laudalla.
+     */
+    id: 'sanfrancisco', name: 'San Francisco', x: 265.1, y: 305.7, airport: true, la: 'end', lx: -16, ly: 5,
+    links: [
+      { pack: 'maailmankartta', city: 'sanfrancisco', label: 'Koko maailma' },
+    ],
+  },
+  {
+    /*
+     * ISTANBUL (omistajan päätös 7.9.2026): uusi lähtövalinnan kohde
+     * (js/ui-apurit.js ETUSIVUN_KOHTEET). Bosporin kaupunki on
+     * Euroopan ja Lähi-idän sauma, ja sen sisältö on valmiina
+     * (js/fokusvirta-istanbul.js, europe- ja middleeast-pakat).
+     *
+     * KOORDINAATIT: 41,013° N, 28,955° E stereografisella
+     * pallonpuoliskoprojektiolla (tools/hemispheres.mjs, Afro-Euraasian
+     * ympyrä lon0 70°, cx 862, cy 400, r 270) antaa 776,7 / 287,1;
+     * piste on yhden yksikön etelämpänä (288,1), koska Bosporin
+     * kohdalla tyylitelty rantaviiva jättää tarkan pisteen veteen.
+     * Ateena on tästä 21 yksikön päässä — laudan mittakaavassa noin
+     * 500 km, eli oikein (ks. minCityDistance alempana).
+     */
+    id: 'istanbul', name: 'Istanbul', x: 776.7, y: 288.1, airport: true, la: 'start', lx: 20, ly: 12,
+    links: [
+      { pack: 'maailmankartta', city: 'istanbul', label: 'Koko maailma' },
+    ],
+  },
+  {
     id: 'ateena', name: 'Ateena', x: 757.8, y: 279.4, airport: true,
     // Nimi alapuolelle: Moskova on nyt Ateenasta koilliseen ja lähempänä
-    // kuin lieriöprojektiossa.
-    la: 'middle', lx: 0, ly: 26,
+    // kuin lieriöprojektiossa. Lappu siirtyi 16 yksikköä länteen
+    // 7.9.2026, kun Istanbul tuli laudalle Ateenan koilliskulmaan.
+    la: 'middle', lx: -16, ly: 26,
     // Etelä-Euroopan portti: Eurooppaan pääsee myös Välimeren suunnasta.
     links: [
       { pack: 'maailmankartta', city: 'ateena', label: 'Koko maailma' },
@@ -246,6 +293,15 @@ const WORLD_EDGES = [
   // Maareitit: Siperian rata ja Amerikan mannerrata.
   { a: 'moskova', b: 'peking', steps: 7, via: [[845, 258.9], [899, 270.9], [931.6, 279]] },
   { a: 'losangeles', b: 'newyork', steps: 5, via: [[313.3, 312.3], [339.5, 293.7]] },
+  /*
+   * Uudet kohdekaupungit laudalle 7.9.2026 (Istanbul, San Francisco):
+   * kumpikin tarvitsee varsinaisen reitin, sillä laudan yhtenäisyys
+   * lasketaan `edges`-listasta eikä lentoyhteyksistä. Molemmat ovat
+   * maareittejä lyhyen matkan päähän naapurista — rannikkorata
+   * Kaliforniassa ja Traakian maantie Ateenasta Bosporille.
+   */
+  { a: 'sanfrancisco', b: 'losangeles', steps: 2 },
+  { a: 'ateena', b: 'istanbul', steps: 2 },
 
   // Valtamerten laivareitit
   { a: 'lontoo', b: 'newyork', steps: 5, type: 'sea', via: [[443.9, 213.6], [412.1, 259]] },
@@ -312,6 +368,13 @@ const WORLD_AIR_ROUTES = [
   { a: 'rio', b: 'kapkaupunki' },
   { a: 'tanger', b: 'newyork' },
   { a: 'tanger', b: 'kapkaupunki' },
+  // Istanbul ja San Francisco (omistajan päätös 7.9.2026): uudet
+  // lähtövalinnan kohteet tarvitsevat lentoyhteyden naapureihinsa,
+  // jottei kumpikaan jää laudalla saarekkeeksi.
+  { a: 'ateena', b: 'istanbul' },
+  { a: 'istanbul', b: 'moskova' },
+  { a: 'sanfrancisco', b: 'tokio' },
+  { a: 'sanfrancisco', b: 'newyork' },
 ];
 
 export const MAAILMA = {
@@ -339,9 +402,22 @@ export const MAAILMA = {
   airRoutes: WORLD_AIR_ROUTES,
   // Tokio ja Singapore ovat koristesaarilla.
   islands: ['tokio', 'singapore'],
-  // Oikeassa mittakaavassa Välimeren rannat ovat aidosti lähekkäin:
-  // Ateena ja Kairo mahtuvat molemmat, kun raja on tavallista pienempi.
-  minCityDistance: 45,
+  /*
+   * Oikeassa mittakaavassa Välimeren rannat ovat aidosti lähekkäin:
+   * Ateena ja Kairo mahtuvat molemmat, kun raja on tavallista pienempi.
+   *
+   * 45 → 20 (7.9.2026, Istanbul ja San Francisco lähtövalinnan
+   * kohteiksi). Laudan mittakaava on Ateena–Kairo 45 yksikköä eli noin
+   * 1 100 km; Istanbul on Ateenasta 500 km ja San Francisco Los
+   * Angelesista 550 km, joten oikeilla paikoillaan ne ovat 21 ja 27
+   * yksikön päässä naapuristaan. Raja ei siis voi olla 45 ilman että
+   * kaupunki siirretään väärään paikkaan. Nimien ja laattojen
+   * ruuhkaa vartioi oma testinsä ("kaupunkien nimet eivät mene
+   * päällekkäin"), joka on tämän laudan todellinen visuaalinen ehto —
+   * eikä laudalla pelata: se on aloitusnäytön kartta, ja lähtövalinta
+   * tehdään nykyään pallolta.
+   */
+  minCityDistance: 20,
 
   tokens: {
     // Aloitusnäytön lauta: mantereen aarre jää yleisnimelle, koska
@@ -362,8 +438,12 @@ export const MAAILMA = {
         kuva: 'assets/aarteet/aarre-maailma-star.jpg',
       },
     }),
-    // 14 kaupunkia: laattoja on oltava täsmälleen yhtä monta.
-    counts: { star: 1, mannerAarre: 1, isoAarre: 4, pieniAarre: 8 },
+    // 16 kaupunkia: laattoja on oltava täsmälleen yhtä monta
+    // (js/game.js enterWorld heittää, jos määrät eivät täsmää). Luku
+    // nousi 14:stä 7.9.2026, kun Istanbul ja San Francisco tulivat
+    // laudalle lähtövalinnan kohteiksi; lisäys meni pieniin aarteisiin,
+    // koska tällä laudalla ei pelata eikä jako näy pelaajalle.
+    counts: { star: 1, mannerAarre: 1, isoAarre: 5, pieniAarre: 9 },
   },
 
   questions: MAAILMA_QUESTIONS,

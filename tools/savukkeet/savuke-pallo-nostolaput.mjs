@@ -1,0 +1,290 @@
+/*
+ * Savuke: NOSTOJEN LAPUT VÄISTÄVÄT KAUPUNGIN NIMEÄ.
+ *
+ * Omistajan vikailmoitus 7.9.2026 (kuvakaappaus Bukarestista,
+ * sanatarkasti): *"kaupungin nimi menee nostojen päälle"*. Kuvassa
+ * kaupunkipiste on keskellä, nimi BUKAREST harvennettuna sen alla ja
+ * nostot molemmin puolin — ja oikean noston lappu makasi nimen päällä.
+ *
+ * Fablen linjaus (Raamattu, KAUPUNGIN NIMI NOSTOJEN PAALLA): pallolla
+ * kaupungin nimi ja nostojen nimilaput eivät saa mennä päällekkäin.
+ * Kaupungin nimi on ensisijainen; laput väistävät (vaihtoehtoinen
+ * kylki → pieni siirto → lappu piiloon). Toteutus:
+ * js/pallolauta/sovittelu.js, kutsu js/pallolauta/lauta.js ladoLevossa.
+ *
+ * ── VARTIOT ───────────────────────────────────────────────────────
+ *
+ *   1. LAPPU EI OLE NIMEN PÄÄLLÄ. Yksikään elävän noston nimilappu ei
+ *      leikkaa yhdenkään kaupunkinimen laatikkoa neljässä tiheässä
+ *      paikassa (Bukarest, Ateena, Helsinki, Istanbul).
+ *   2. NIMI EI OLE LIIKKUMATTOMAN MUSTEEN PÄÄLLÄ. Poltettu nosto ja
+ *      elävän noston ikoni eivät voi väistää, joten ne ovat nimen
+ *      varauksia — yksikään nimi ei leikkaa niitä.
+ *   3. NIMET EIVÄT KADONNEET SOVITTELUUN. Jokaisessa näkymässä on
+ *      nimiä — väistön hinta ei saa olla mykkä kartta.
+ *   4. LAPPU LIUKUU, EI HYPPÄÄ. Sovittelun siirto kirjoitetaan
+ *      `.pallolauta-nosto-siirto`-ryhmän CSS-muunnokseen, ja ryhmällä
+ *      on 200 ms:n transform-siirtymä.
+ *
+ *   RAPORTIN TIETOJA: kuinka moni lappu vaihtoi kyljen, kuinka moni
+ *   siirtyi ja kuinka moni jäi ilman nimeä kussakin näkymässä.
+ *
+ * MITTA TULEE KAAVASTA, EI RUUDULTA. Merkin oma <svg> on 1 x 1 px ja
+ * ylivuotava, joten getBoundingClientRect ei kerro lapusta mitään;
+ * kerros antaa laatikkonsa itse (nostot.lappuLaatikot, nostot.laatikot,
+ * nimet.laatikot) samasta kaavasta, jolla sovittelu ne laski.
+ *
+ * ÄMPÄRI KULKEE NODEN KAUTTA (CLAUDE.md: NODE_USE_ENV_PROXY=1).
+ *
+ * Aja:  NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-pallo-nostolaput.mjs [kuvakansio]
+ */
+import http from 'node:http';
+import { readFileSync, existsSync, mkdirSync } from 'node:fs';
+import { extname, join } from 'node:path';
+
+import { Game } from '../../js/game.js';
+import { packById } from '../../js/pack.js';
+
+const paketti = await import('playwright')
+  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+const chromium = paketti.chromium ?? paketti.default?.chromium;
+
+const JUURI = new URL('../..', import.meta.url).pathname;
+const KUVAKANSIO = process.argv[2] ?? null;
+if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
+
+/** Näkymät: omistajan Bukarest ja kolme muuta tiheää paikkaa. */
+const NAKYMAT = [
+  { nimi: 'Bukarest', lat: 44.43, lng: 26.10 },
+  { nimi: 'Ateena', lat: 37.98, lng: 23.73 },
+  { nimi: 'Helsinki', lat: 60.17, lng: 24.94 },
+  { nimi: 'Istanbul', lat: 41.01, lng: 28.98 },
+];
+/** Korkeudet, joilla jokainen näkymä mitataan (lähikuva ja maan mitta). */
+const KORKEUDET = [0.05, 0.12];
+
+const TYYPIT = {
+  '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
+  '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg',
+  '.geojson': 'application/json',
+};
+const palvelin = http.createServer((req, res) => {
+  const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
+  if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
+  res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
+  res.end(readFileSync(polku));
+});
+await new Promise((ok) => palvelin.listen(0, ok));
+const osoite = `http://localhost:${palvelin.address().port}/`;
+
+let lapi = 0;
+let kaikki = 0;
+const vaadi = (nimi, ehto, lisa = '') => {
+  kaikki += 1;
+  if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
+};
+const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
+
+const AMPARI = 'https://media.matkakirja.app/';
+const valimuisti = new Map();
+async function ampariHaku(url) {
+  if (valimuisti.has(url)) return valimuisti.get(url);
+  const lupaus = fetch(url).then(async (v) => (v.ok
+    ? { status: 200, body: Buffer.from(await v.arrayBuffer()), tyyppi: v.headers.get('content-type') }
+    : { status: v.status, body: Buffer.alloc(0), tyyppi: 'text/plain' }))
+    .catch(() => null);
+  valimuisti.set(url, lupaus);
+  return lupaus;
+}
+const kirjasto = await ampariHaku(`${AMPARI}vendor/globe.gl-2.46.2.min.js`);
+if (kirjasto?.status !== 200) {
+  console.log('OHITUS  ämpäri ei vastaa — palloa ei voi avata; savuke ohitetaan');
+  palvelin.close();
+  process.exit(0);
+}
+
+/* Tallenne: Fogg Bukarestissa (omistajan näkymä), aarre löydetty. */
+const peli = new Game({
+  players: [{ name: 'Fogg', color: '#c9a227', start: 'bukarest' }],
+  pack: packById('maailmankartta'),
+  seed: 5,
+});
+peli.phase = 'action';
+peli.tokens.delete('bukarest');
+const tallenne = JSON.stringify(peli.toJSON());
+
+const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const ctx = await selain.newContext({
+  viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, serviceWorkers: 'block',
+});
+await ctx.addInitScript((data) => {
+  try {
+    localStorage.setItem('matkakirja-save-v1', data);
+    localStorage.removeItem('matkakirja-lauta');
+    localStorage.setItem('matkakirja-kehittaja', '1');
+  } catch { /* yksityinen tila */ }
+}, tallenne);
+const sivu = await ctx.newPage();
+const virheet = [];
+sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
+await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
+await sivu.route(/wikimedia\.org/, (r) => r.abort());
+await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
+  const v = await ampariHaku(route.request().url());
+  if (!v || v.status !== 200) { route.abort(); return; }
+  route.fulfill({
+    status: 200,
+    contentType: v.tyyppi ?? 'application/octet-stream',
+    body: v.body,
+    headers: { 'access-control-allow-origin': '*' },
+  });
+});
+await sivu.goto(`${osoite}?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: 90000 });
+const auki = await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 60000 })
+  .then(() => true).catch(() => false);
+vaadi('pallolauta aukesi', auki, virheet.join(' | '));
+
+if (auki) {
+  await sivu.waitForTimeout(3500);
+
+  /** Yksi näkymä: kamera paikalleen, ladonta heti, laatikot talteen. */
+  const mittaa = (nakyma, korkeus) => sivu.evaluate(async ({ lat, lng, alt }) => {
+    const l = window.matkakirja.ui.pallolauta;
+    l.pallo.pointOfView({ lat, lng, altitude: alt }, 0);
+    await new Promise((v) => setTimeout(v, 1600));
+    l.ladoHeti();
+    await new Promise((v) => setTimeout(v, 400));
+    const limittyy = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
+    const nimet = l.nimet.laatikot();
+    const laput = l.nostot.lappuLaatikot();
+    const kiinteat = l.nostot.laatikot();
+    const lappuNimi = [];
+    for (const lappu of laput) {
+      for (const n of nimet) if (limittyy(lappu, n)) lappuNimi.push(lappu.nimi || lappu.id);
+    }
+    const nimiKiintea = [];
+    for (const n of nimet) {
+      for (const k of kiinteat) if (limittyy(n, k)) nimiKiintea.push(`${n.x0.toFixed(0)},${n.y0.toFixed(0)}`);
+    }
+    // Piirtyikö sovittelun asento myös elementtiin (muunnos ja kylki)?
+    let elementitTasmaa = true;
+    for (const d of l.pallo.htmlElementsData()) {
+      if (d.laji !== 'nosto' || !d.el?.isConnected || d.poistuu) continue;
+      const g = d.el.querySelector('.pallolauta-nosto-siirto');
+      if (!g) { elementitTasmaa = false; continue; }
+      // Selain normalisoi muunnoksen tekstin (0.00px -> 0px), joten
+      // luvut luetaan eikä merkkijonoa verrata.
+      const luvut = /translate\((-?[\d.]+)px,\s*(-?[\d.]+)px\)/.exec(g.style.transform || '');
+      if (!luvut || Math.abs(Number(luvut[1]) - (d.dx ?? 0)) > 0.01
+        || Math.abs(Number(luvut[2]) - (d.dy ?? 0)) > 0.01) elementitTasmaa = false;
+      const kuva = g.querySelector('.nostosym-rasteri');
+      if (kuva && d.nimioNakyy && d.nimi && kuva.dataset.puoli !== d.puoli) elementitTasmaa = false;
+    }
+    /*
+     * PAKOTETTU VÄISTÖ: kaupungin nimen laatikko asetetaan lapun
+     * ULKOPÄÄHÄN ja sovittelu ajetaan uudelleen. Oikeassa näkymässä
+     * törmäyksiä on harvoin (laattaladonta on jo hyvä), joten ilman
+     * pakotusta vartio ei todistaisi väistöstä mitään.
+     *
+     * ESTE ON LAPUN PÄÄ, EI KOKO LAATIKKO. Lapun laatikko on ikonin ja
+     * nimiön YHDISTE, joten koko laatikon kokoinen este peittäisi myös
+     * ikonin ruudun — ja koska ikoni on joka kyljellä samassa kohdassa,
+     * yksikään vaihtoehto ei kelpaisi ja sovittelu menisi suoraan
+     * piilotukseen. Nimen laatikko on oikeasti nimiön mittainen, joten
+     * este on lapun uloin kolmannes sillä kyljellä, jolla nimiö on.
+     *
+     * Väistön jälkeen yksikään NÄKYVÄ lappu ei saa enää olla esteen
+     * päällä — piiloon mennyt lappu ei ole enää näkyvä lappu.
+     */
+    // Todellisen näkymän luvut TALTEEN ennen pakotusta: pakotettu ajo
+    // kirjoittaa saman mittarin yli.
+    const sovitteluTodellinen = l.nostot.sovittelunTulos();
+    const ennen = l.nostot.lappuLaatikot();
+    const pakoteEsteet = ennen.map((r) => {
+      const w = (r.x1 - r.x0) * 0.3;
+      const h = (r.y1 - r.y0) * 0.3;
+      if (r.puoli === 'vasen') return { x0: r.x0, x1: r.x0 + w, y0: r.y0, y1: r.y1 };
+      if (r.puoli === 'yla') return { x0: r.x0, x1: r.x1, y0: r.y0, y1: r.y0 + h };
+      if (r.puoli === 'ala') return { x0: r.x0, x1: r.x1, y0: r.y1 - h, y1: r.y1 };
+      return { x0: r.x1 - w, x1: r.x1, y0: r.y0, y1: r.y1 };
+    });
+    let pakoteLimityksia = 0;
+    let pakoteTulos = { siirretty: 0, piilotettu: 0, kylkiVaihtui: 0 };
+    if (pakoteEsteet.length) {
+      pakoteTulos = l.nostot.sovittele({ nimet: pakoteEsteet });
+      for (const r of l.nostot.lappuLaatikot()) {
+        for (const e of pakoteEsteet) if (limittyy(r, e)) pakoteLimityksia += 1;
+      }
+    }
+    const g0 = document.querySelector('.pallolauta-nosto-siirto');
+    return {
+      pakotettuja: pakoteEsteet.length,
+      pakoteLimityksia,
+      pakoteTulos,
+      nimia: nimet.length,
+      lappuja: laput.length,
+      kiinteita: kiinteat.length,
+      lappuNimi,
+      nimiKiintea,
+      elementitTasmaa,
+      sovittelu: sovitteluTodellinen,
+      siirtyma: g0 ? getComputedStyle(g0).transitionDuration : null,
+    };
+  }, { lat: nakyma.lat, lng: nakyma.lng, alt: korkeus });
+
+  let lappuNimiYht = 0;
+  let nimiKiinteaYht = 0;
+  let nimettomia = 0;
+  let tasmaa = true;
+  let siirtyma = null;
+  let pakotettuja = 0;
+  let pakoteLimityksia = 0;
+  let pakoteKasitellyt = 0;
+  for (const nakyma of NAKYMAT) {
+    for (const korkeus of KORKEUDET) {
+      // eslint-disable-next-line no-await-in-loop
+      const m = await mittaa(nakyma, korkeus);
+      lappuNimiYht += m.lappuNimi.length;
+      nimiKiinteaYht += m.nimiKiintea.length;
+      if (!(m.nimia > 0)) nimettomia += 1;
+      if (!m.elementitTasmaa) tasmaa = false;
+      pakotettuja += m.pakotettuja;
+      pakoteLimityksia += m.pakoteLimityksia;
+      pakoteKasitellyt += m.pakoteTulos.siirretty + m.pakoteTulos.piilotettu;
+      siirtyma = m.siirtyma ?? siirtyma;
+      tieto(`${nakyma.nimi} (korkeus ${korkeus})`,
+        `nimiä ${m.nimia}, lappuja ${m.lappuja}, kiinteää mustetta ${m.kiinteita}, `
+        + `kylki vaihtui ${m.sovittelu.kylkiVaihtui}, siirtoja ${m.sovittelu.siirretty}, `
+        + `lappu piilossa ${m.sovittelu.piilotettu}, limityksiä ${m.lappuNimi.length}`);
+      if (m.pakotettuja) {
+        tieto(`  pakotettu väistö ${nakyma.nimi}`,
+          `${m.pakotettuja} lappua: kylki ${m.pakoteTulos.kylkiVaihtui}, `
+          + `siirto ${m.pakoteTulos.siirretty - m.pakoteTulos.kylkiVaihtui}, `
+          + `piiloon ${m.pakoteTulos.piilotettu}`);
+      }
+      if (m.lappuNimi.length) tieto(`  limittyvät laput ${nakyma.nimi}`, m.lappuNimi.join(', '));
+      if (KUVAKANSIO && korkeus === KORKEUDET[0]) {
+        // eslint-disable-next-line no-await-in-loop
+        await sivu.screenshot({ path: join(KUVAKANSIO, `pallo-nostolaput-${nakyma.nimi.toLowerCase()}.png`) });
+      }
+    }
+  }
+  vaadi('1. yksikään nostolappu ei leikkaa kaupungin nimen laatikkoa',
+    lappuNimiYht === 0, `limityksiä ${lappuNimiYht}`);
+  vaadi('2. yksikään kaupunkinimi ei leikkaa liikkumatonta mustetta (poltettu nosto, elävän ikoni)',
+    nimiKiinteaYht === 0, `limityksiä ${nimiKiinteaYht}`);
+  vaadi('3. jokaisessa näkymässä on nimiä (väistön hinta ei ole mykkä kartta)',
+    nimettomia === 0, `nimettömiä näkymiä ${nimettomia}`);
+  vaadi('4. sovittelun asento on myös elementissä (muunnos ja kylki) ja lappu liukuu 200 ms',
+    tasmaa && siirtyma === '0.2s', `tasmaa=${tasmaa} siirtyma=${siirtyma}`);
+  vaadi('5. pakotettu väistö toimii: este lapun päähän, eikä näkyvä lappu jää sen alle',
+    pakotettuja > 0 && pakoteLimityksia === 0 && pakoteKasitellyt === pakotettuja,
+    `pakotettuja ${pakotettuja}, käsiteltyjä ${pakoteKasitellyt}, limityksiä ${pakoteLimityksia}`);
+  tieto('sivun virheet', virheet.length ? virheet.join(' | ') : 'ei yhtään');
+}
+
+await selain.close();
+palvelin.close();
+console.log(`\n${lapi}/${kaikki} vartiota läpi`);
+process.exit(lapi === kaikki ? 0 : 1);

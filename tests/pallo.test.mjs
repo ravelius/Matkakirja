@@ -6,6 +6,8 @@ import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdet
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { LINSSI as PALLOLINSSI } from '../js/linssit/pallo.js';
 import { PERUSLINSSIT, omistetut } from '../js/linssit/omistus.js';
+import { pallonOmatPisteet, laudanPisteenAvain } from '../js/pallo.js';
+import { PALLON_KAUPUNKIPISTEET } from '../js/packs/maailmankartta-pallopisteet.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from '../js/fokusmitat.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 import { arkinPikseli, pinnoitteenAvain, pinnoitteenMitat, PINNOITE } from '../tools/tee-pallotekstuuri.mjs';
@@ -931,4 +933,76 @@ test('vika v1664: pallon takapuolen merkki ei ota napautusta', () => {
   assert.equal(pisteEdessa(kamera, piste(36 - horisontti - 0.5, 140)), false);
   assert.equal(pisteEdessa(null, piste(0, 0)), false);
   assert.equal(pisteEdessa(kamera, null), false);
+});
+
+/* ================================================================== *
+ * Kaupungin oma piste pallolla (omistaja 7.9.2026: Helsinki liian
+ * kaukana rannikosta) — js/packs/maailmankartta-pallopisteet.js
+ * ================================================================== */
+
+test('kaupungin oma pallopiste voittaa laudan pisteen, ja siirtymä palaa siihen bitilleen', () => {
+  const helsinki = MAAILMANKARTTA.cities.find((c) => c.id === 'helsinki');
+  // Kenttä on pakan kaupunkirivillä, ei erillisessä taulussa ajon aikana.
+  assert.deepEqual(helsinki.pallo, { lat: 60.171, lon: 24.938 });
+  // Laudan x/y EI muutu: reitit, via-pisteet ja minCityDistance nojaavat siihen.
+  assert.ok(Math.abs(helsinki.x - 6661.1) < 1e-9 && Math.abs(helsinki.y - 901.8) < 1e-9);
+
+  const { pisteet, siirtymat } = pallonOmatPisteet(MAAILMANKARTTA);
+  assert.equal(pisteet.size, Object.keys(PALLON_KAUPUNKIPISTEET).length);
+  assert.equal(siirtymat.size, pisteet.size);
+
+  const oma = pisteet.get(laudanPisteenAvain(helsinki.x, helsinki.y));
+  assert.ok(Math.abs(oma.lat - 60.171) < 1e-6 && Math.abs(oma.lon - 24.938) < 1e-6, JSON.stringify(oma));
+  // Laudan oma piste on 34,7 km pohjoisempana — juuri omistajan vika.
+  const laudalla = laudaltaAsteiksi('maailmankartta', helsinki.x, helsinki.y);
+  assert.ok(laudalla.lat - oma.lat > 0.29, `laudan Helsinki ${laudalla.lat}`);
+
+  /*
+   * SIIRTYMÄ JA PISTE OVAT SAMA ASIA. Reitin poly korjataan siirtymällä
+   * (js/pallolauta/reitit.js korjattuPoly) ja levossa seisova nappula
+   * lukee pisteen — jos nämä eroaisivat, siirto päättyisi nytkähdykseen.
+   */
+  const d = siirtymat.get('helsinki');
+  const paassa = laudaltaAsteiksi('maailmankartta', helsinki.x + d.dx, helsinki.y + d.dy);
+  assert.ok(Math.abs(paassa.lat - oma.lat) < 1e-12 && Math.abs(paassa.lon - oma.lon) < 1e-12);
+
+  // Sama kaupunki tulee pallolle omalla pisteellään.
+  const kaupunki = pallonKaupungit(MAAILMANKARTTA).find((k) => k.id === 'helsinki');
+  assert.ok(Math.abs(kaupunki.lat - 60.171) < 1e-6 && Math.abs(kaupunki.lon - 24.938) < 1e-6);
+  // Laudan x/y kulkee mukana kameraa varten kuten ennenkin.
+  assert.ok(kaupunki.x === helsinki.x && kaupunki.y === helsinki.y);
+});
+
+test('pallopisteitä on vain asutuksille, ja jokainen on laudan lähellä', () => {
+  const nimet = new Map(MAAILMANKARTTA.cities.map((c) => [c.id, c]));
+  // ALUEITA EI SIIRRETÄ: niiden Wikidata-koordinaatti on alueen
+  // keskipiste eikä se kohta, jota lauta tarkoittaa (luku 12.2).
+  for (const alue of ['borneo', 'kamtsatka', 'ahaggar', 'namib', 'nullarbor', 'sahara',
+    'viktoria', 'tanganjika', 'tshadjarvi', 'galapagos', 'falkland', 'bali', 'sthelena',
+    'hawaii', 'sierraleone', 'siinai', 'uluru', 'mountrushmore', 'sepik', 'milfordsound',
+    'kappalmas', 'bahrelghazal', 'viktorianputoukset', 'bananal', 'mosambik', 'orjarannikko']) {
+    assert.ok(!PALLON_KAUPUNKIPISTEET[alue], `alue ${alue} ei saa omaa pallopistettä`);
+  }
+  for (const [id, p] of Object.entries(PALLON_KAUPUNKIPISTEET)) {
+    const c = nimet.get(id);
+    assert.ok(c, `tuntematon kaupunki ${id}`);
+    assert.ok(Number.isFinite(p.lat) && Number.isFinite(p.lon)
+      && Math.abs(p.lat) <= 90 && Math.abs(p.lon) <= 180, id);
+    // Kolme desimaalia = noin 100 m; tarkempi luku olisi valheellista tarkkuutta.
+    assert.ok(Math.abs(p.lat * 1000 - Math.round(p.lat * 1000)) < 1e-9
+      && Math.abs(p.lon * 1000 - Math.round(p.lon * 1000)) < 1e-9, `${id} ei ole kolmessa desimaalissa`);
+    /*
+     * SIIRTO ON KORJAUS, EI UUSI PAIKKA: jos piste karkaisi yli 500 km
+     * laudan omasta, kyse olisi väärästä wiki-sivusta eikä käsin
+     * sommitellun pisteen epätarkkuudesta.
+     */
+    const laudalla = laudaltaAsteiksi('maailmankartta', c.x, c.y);
+    const rad = Math.PI / 180;
+    const dLat = (p.lat - laudalla.lat) * rad;
+    const dLon = (p.lon - laudalla.lon) * rad;
+    const h = Math.sin(dLat / 2) ** 2
+      + Math.cos(laudalla.lat * rad) * Math.cos(p.lat * rad) * Math.sin(dLon / 2) ** 2;
+    const km = 2 * 6371 * Math.asin(Math.min(1, Math.sqrt(h)));
+    assert.ok(km < 500, `${id} siirtyisi ${km.toFixed(0)} km`);
+  }
 });

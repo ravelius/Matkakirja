@@ -226,12 +226,34 @@ export const FOKUSVIRTA_KIOVA = {
      * järjestystä ei ole muutettu: peräkkäin luettuna teksti on sanasta
      * sanaan Fablen kaanonteksti.
      */
-    maadoitus: 'Ne käytävät ovat edelleen olemassa ja niissä kävellään '
-      + 'edelleen kynttilä kädessä — sähkövaloa sinne ei ole viety '
-      + 'tänäkään päivänä..',
-    teksti: 'Ja se musta antelias maa on sama josta tämä maa tunnetaan '
-      + 'nykyäänkin: Ukrainan mustamulta ruokkii ison osan maailmaa. '
-      + 'Hunajaa myydään yhä toreilla. Mennään törmälle.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Kiova, toukokuussa 1873. Kaupunki on kahdessa kerroksessa, ja isoisä kävi molemmissa.',
+    huudahdus: {
+      kohta: 'kynttilä kädessä',
+      teksti: 'Pimeää.',
+    },
+    kommentti: [
+      'Ne käytävät ovat yhä olemassa, ja niissä kävellään yhä kynttilä kädessä.',
+      'Ja se musta antelias maa ruokkii yhä ison osan maailmaa. Hunajaa myydään toreilla.',
+    ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/
      * kulttuuri-kategoriat.js, kiova/avauskuvat): luolaluostari. Juuri

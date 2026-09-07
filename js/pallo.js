@@ -448,10 +448,82 @@ export function pallonLaatoissaOnNostoja() {
 export const PALLO_SUKELLUSLEVEYS = 620;
 export const PALLO_LAUTA = 'maailmankartta';
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KAUPUNGIN OMA PISTE PALLOLLA (omistaja 7.9.2026: *"Helsinki näyttää,
+ * että se on aivan liian kaukana rannikosta."*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Laudan projektio ja sen kalibrointi ovat oikein (mitattu, luku 12.2
+ * docs/moduulit/karttapallo.md), mutta kaupungin oma x/y on käsin
+ * sommiteltu: Helsinki istuu laudalla 34,7 km liian pohjoisessa ja
+ * seisoo pallolla Suomenlahden rantaviivan sisäpuolella. Laudan x/y ei
+ * silti muutu — se on reittien pituus, via-pisteet, merireitin ranta ja
+ * minCityDistance — vaan kaupunki saa oman `pallo`-kenttänsä
+ * ({ lat, lon }, js/packs/maailmankartta-pallopisteet.js), jota VAIN
+ * pallo lukee.
+ *
+ * KAKSI HAKEMISTOA, JOTTA SIIRTO ON YKSI ASIA KAIKILLE MERKEILLE:
+ *
+ *   pisteet    laudan piste "x|y" → { lat, lon }. Kaikki merkit, jotka
+ *              kysyvät asteita laudan kohdasta (kaupunkipiste, nimi,
+ *              nappula levossa, kohdekortin ankkuri, lentokaaren päät),
+ *              osuvat tähän ilman että kutsupaikka tietää siirrosta.
+ *   siirtymat  kaupungin id → { dx, dy } LAUDAN yksikköinä. Reitin poly
+ *              korjataan tällä päistään (js/pallolauta/reitit.js), jotta
+ *              viiva päättyy siirrettyyn pisteeseen ja nappula kulkee
+ *              samaa viivaa — ilman loppunytkähdystä.
+ *
+ * `pisteet`-arvo lasketaan KORJATUSTA LAUDAN PISTEESTÄ takaisin
+ * asteiksi (eikä suoraan taulun luvusta), jotta reitin pää ja levossa
+ * seisova nappula antavat bitilleen saman asteluvun.
+ */
+
+/** Laudan pisteen avain hakemistossa (x ja y ovat aineiston lukuja). */
+export function laudanPisteenAvain(x, y) {
+  return `${x}|${y}`;
+}
+
+const TYHJAT_PISTEET = { pisteet: new Map(), siirtymat: new Map() };
+const omatPisteetMuisti = new WeakMap();
+
+/** Pakan omat pallopisteet: { pisteet, siirtymat }. Laskettu kerran per pakka. */
+export function pallonOmatPisteet(pack) {
+  if (!pack) return TYHJAT_PISTEET;
+  const muistissa = omatPisteetMuisti.get(pack);
+  if (muistissa) return muistissa;
+  const pisteet = new Map();
+  const siirtymat = new Map();
+  // Kiertävällä laudalla sauman yli laskettu siirtymä olisi lähes koko
+  // kartan levyinen: se kierretään lyhimpään suuntaan.
+  const leveys = pack.map?.kiertava ? (pack.map?.width ?? 0) : 0;
+  for (const c of pack.cities ?? []) {
+    const oma = c.pallo;
+    if (!oma || !Number.isFinite(oma.lat) || !Number.isFinite(oma.lon)) continue;
+    const laudalla = projisoiLaudalle(PALLO_LAUTA, oma.lon, oma.lat);
+    if (!laudalla) continue;
+    let dx = laudalla.x - c.x;
+    if (leveys > 0) {
+      while (dx > leveys / 2) dx -= leveys;
+      while (dx < -leveys / 2) dx += leveys;
+    }
+    const dy = laudalla.y - c.y;
+    const asteet = laudaltaAsteiksi(PALLO_LAUTA, c.x + dx, c.y + dy);
+    if (!asteet) continue;
+    siirtymat.set(c.id, { dx, dy });
+    pisteet.set(laudanPisteenAvain(c.x, c.y), { lat: asteet.lat, lon: asteet.lon });
+  }
+  const tulos = { pisteet, siirtymat };
+  omatPisteetMuisti.set(pack, tulos);
+  return tulos;
+}
+
 /** Kaupungit pallolle: lauta → asteet, käyntitieto ja aloituskaupungit mukana. */
 export function pallonKaupungit(pack, kaydyt = new Set()) {
+  const { pisteet } = pallonOmatPisteet(pack);
   return (pack?.cities ?? []).map((c) => {
-    const p = laudaltaAsteiksi(PALLO_LAUTA, c.x, c.y);
+    const p = pisteet.get(laudanPisteenAvain(c.x, c.y))
+      ?? laudaltaAsteiksi(PALLO_LAUTA, c.x, c.y);
     if (!p) return null;
     return { id: c.id, n: c.name, lat: p.lat, lon: p.lon, x: c.x, y: c.y, alku: Boolean(c.start), kayty: kaydyt.has(c.id) };
   }).filter(Boolean);
@@ -494,6 +566,49 @@ export function lataaPallokirjasto(doc = document) {
  * katto on luettelon oma syvin taso kuten ennen.
  */
 export const POHJAN_TASO_MAX = 5;
+/*
+ * POHJAN HARVENNUS (kehystahti, 7.9.2026). Kuinka suuren osan omasta
+ * etäisyydestään kameran on siirryttävä, ennen kuin kirjaston oma
+ * laattamoottori luetteloi pohjan uudestaan. Suhdeluku eikä asteita,
+ * koska sama luku kelpaa joka korkeudella: |Δp| / |p| on suoraan
+ * kameran kulkema kulma radiaaneina (sivusuunta) tai korkeuden
+ * suhteellinen muutos (zoom). 0,06 ≈ 3,4°:n kaari korkeudella 0,35,
+ * eli noin kolmasosa näkymästä — pohja (z5, laatta 11,25°) ei ehdi
+ * siinä ajassa vanhentua. Perustelu ja mittaus: kytkeLaatunosto,
+ * "POHJA PÄIVITTYY HARVEMMIN KUIN RUUTU".
+ */
+export const POHJAN_ASKEL_OSUUS = 0.06;
+/**
+ * Tiheimmin, kuinka usein pohja päivitetään, kun laattakerros ei vielä
+ * peitä koko näkyvää aluetta (ms). Sama tahti kuin kerroksen omalla
+ * päivityksellä (LAATTAKERROS_PAIVITYSVALI_LIIKE_MS): pohja ei voi olla
+ * kerrosta tuoreempi, joten tiheämpi tahti olisi pelkkää työtä.
+ */
+export const POHJAN_VALI_MS = 100;
+
+/**
+ * Kameran suhteellinen siirtymä: |a − b| jaettuna b:n etäisyydellä
+ * origosta. Puhdas funktio (tests/pallo.test.mjs): Infinity, jos
+ * vertailukohtaa ei ole tai se on origossa — silloin päivitetään aina.
+ */
+export function kameranSiirtyma(a, b) {
+  if (!a || !b) return Infinity;
+  const r = Math.hypot(b.x, b.y, b.z);
+  if (!(r > 0)) return Infinity;
+  const matka = Math.hypot(a.x - b.x, a.y - b.y, a.z - b.z);
+  return Number.isFinite(matka) ? matka / r : Infinity;
+}
+
+/** Onko pohjan harvennus päällä? `?pohjanharvennus=0` sammuttaa. */
+export function pohjanHarvennusPaalla(ikkuna = globalThis) {
+  try {
+    const arvo = new URLSearchParams(ikkuna.location?.search ?? '').get('pohjanharvennus');
+    if (arvo === null) return true;
+    return !(arvo === '0' || arvo === 'ei' || arvo === 'pois');
+  } catch {
+    return true;
+  }
+}
 /**
  * Syyt, joiden takia pohja vapautetaan takaisin omaan syvimpään
  * tasoonsa (kytkeLaatunosto vapautaPohja): kerros ei näillä koskaan ala
@@ -969,8 +1084,9 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
    */
   const vapautaPohja = () => {
     if (!kerrosKaytossa) return;
-    const m = kerros.mittarit();
-    if (m.tila === 'nakyy' || !POHJAN_VAPAUTUS_SYYT.has(m.syy)) return;
+    // Kaksi kenttää ilman varausta: mittarit() kopioi koko taulun ja
+    // pyydettyjen osoitteiden joukon, ja tämä ajetaan joka kehyksellä.
+    if (kerros.tila() === 'nakyy' || !POHJAN_VAPAUTUS_SYYT.has(kerros.syy())) return;
     kerrosKaytossa = false;
     kerros.pura();
     // KAHVA JÄÄ PAIKALLEEN (lepokerrokset): savukkeet ja mittarit lukevat
@@ -1005,6 +1121,62 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
       const t = ikkuna.setTimeout(() => { ajastimet.delete(t); if (lepo) teroita(); }, viive);
       ajastimet.add(t);
     }
+  };
+
+  /*
+   * ======== POHJA PÄIVITTYY HARVEMMIN KUIN RUUTU ====================
+   *
+   * OMISTAJA 7.9.2026 (sanatarkasti): *"kartta pyörii nyt jo todella
+   * hyvin, mutta jos vertaa google earthiin, niin vielä tulee vähän
+   * tökkimistä … mittari kyllä näyttää pysyvän 55-60 fps tasossa"*.
+   *
+   * MITATTU (savuke-pallo-kehystahti, 7.9.2026, 390 × 844 dpr 2,
+   * 41 laitekehystä): kirjaston OMA laattamoottori (`updatePov`) ajettiin
+   * 79 kertaa eli KAKSI KERTAA JOKAISESSA KEHYKSESSÄ, ja vaikka
+   * mediaanikutsu oli 0,4 ms, pisin oli 12,2 ms ja raskaimmassa
+   * kehyksessä kutsut veivät yhteensä 17 ms — yksin koko 60 Hz:n
+   * kehysbudjetin. Juuri se on omistajan näkemä nykäys: keskiarvo
+   * pysyy 55–60 fps:ssä, mutta joka kymmenes kehys putoaa.
+   *
+   * MIKSI POHJAN EI TARVITSE PÄIVITTYÄ JOKA KEHYS. Kun laattakerros on
+   * päällä, kirjaston moottori ei enää ole kartta vaan KARKEA POHJA:
+   * sen taso on naulattu POHJAN_TASO_MAX:iin (5), yksi laatta kattaa
+   * 11,25°, ja kerros piirtää sen päälle terävän kuvan. Pohja tarvitaan
+   * vain siellä, missä kerros ei vielä peitä. Se ei siis kaipaa uutta
+   * luettelointia 60 kertaa sekunnissa vaan silloin, kun kamera on
+   * oikeasti siirtynyt murto-osan näkymästään.
+   *
+   * KOLME EHTOA, JOTKA OHITTAVAT HARVENNUKSEN — pohja päivitetään aina,
+   * jos (1) laattakerros ei ole käytössä (silloin moottori ON kartta),
+   * (2) kamera on siirtynyt vähintään POHJAN_ASKEL_OSUUS:n verran omasta
+   * etäisyydestään, tai (3) kerros ei peitä koko näkyvää aluetta — mutta
+   * silloinkin enintään POHJAN_VALI_MS:n välein, koska juuri
+   * latauksen aikana ehto olisi voimassa joka kehyksellä ja koko
+   * harvennus jäisi tekemättä. Lisäksi `lepoon` ajaa moottorin aina
+   * pysähdyksen jälkeen, joten LEVOSSA POHJA ON TÄSMÄLLEEN SAMA kuin
+   * ennen tätä muutosta.
+   *
+   * EI VAIKUTA KUVAAN: pohja on kerroksen alla, se säilyttää jo
+   * ladatut laattansa, ja z5:n laatta kattaa 11,25° eli enemmän kuin
+   * koko näkymä pelin lähikuvassa. Perääntyminen on
+   * `?pohjanharvennus=0`. Laskuri `moottori.pohjapaivityksia` kertoo
+   * savukkeelle, montako kertaa pohja oikeasti päivitettiin.
+   */
+  const pohjanPaikka = { x: NaN, y: NaN, z: NaN };
+  const pohjanHarvennus = pohjanHarvennusPaalla(ikkuna);
+  let pohjanHetki = -Infinity;
+  moottori.pohjapaivityksia = 0;
+  const pohjaPaivitetaan = (kam, nyt) => {
+    if (!kerrosKaytossa || !pohjanHarvennus) return true;
+    if (kameranSiirtyma(kam.position, pohjanPaikka) >= POHJAN_ASKEL_OSUUS) return true;
+    return !kerros.peittaa() && nyt - pohjanHetki >= POHJAN_VALI_MS;
+  };
+  const merkitsePohja = (kam, nyt) => {
+    pohjanPaikka.x = kam.position.x;
+    pohjanPaikka.y = kam.position.y;
+    pohjanPaikka.z = kam.position.z;
+    pohjanHetki = nyt;
+    moottori.pohjapaivityksia += 1;
   };
 
   let liikeAlku = 0;
@@ -1045,6 +1217,11 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     // (kytkePallonKehys), jotta se ja vektorikerros lukevat saman
     // kameran samasta kehyksestä — updatePov tulee pointermoven sisältä.
     // Sieltä ajetaan myös vapautaPohja (ks. POHJA VAPAUTETAAN yllä).
+    if (kam?.position) {
+      const nyt = ikkuna.performance?.now?.() ?? Date.now();
+      if (!pohjaPaivitetaan(kam, nyt)) return undefined;
+      merkitsePohja(kam, nyt);
+    }
     return alkuperainen.call(this, kam);
   };
   asetaTila(false);

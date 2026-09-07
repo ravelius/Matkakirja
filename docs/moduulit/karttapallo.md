@@ -3393,7 +3393,7 @@ puhelimen laidalla ~6 px — nappulan (32 px) alle jäävä piste (12 px)
 pysyy yhä peitossa, mutta koko pino olisi laskettava pinnalle yhdessä,
 jotta myös piste lukittuisi. Se on oma eränsä, ei tämän.
 
-### 12.2 Helsinki sisämaassa: laudan piste, ei kalibrointi (mitattu, ei korjattu)
+### 12.2 Helsinki sisämaassa: laudan piste, ei kalibrointi (mitattu; korjaus 12.4)
 
 Uusi työkalu `tools/tarkista-laudan-pisteet.mjs` laskee jokaiselle laudan
 kaupungille pallosijainnin laudan omalla projektiolla
@@ -3467,7 +3467,7 @@ todellinen `lat`/`lon` ja lukea se PALLOLLA (`pallonKaupungit`,
 korjaantuu. Sekin on aineistoerä ja vaatii saman ihmisen silmällä
 tehdyn listan. Päätös kuuluu päätoimittajalle ja omistajalle.
 
-### 12.3 Tampereen iso musta ympyrä (mitattu, ei korjattu)
+### 12.3 Tampereen iso musta ympyrä (mitattu; korjaus 12.5)
 
 Omistajan kuvakaappauksessa Tampereen kohdalla on iso musta ympyrä.
 Se on kaupunkipiste: `KAUPUNKIPISTEEN_SADE` 0,03 on Globe.gl:n
@@ -3482,6 +3482,121 @@ ruutuvakio"; kaupunkipiste on ainoa, joka ei sitä ole. Korjaus on säteen
 sitominen kameran korkeuteen (ja pisteiden uudelleenasetus zoomin
 muuttuessa) — oma eränsä.
 
+### 12.4 Kaupungin oma piste pallolla (korjattu 7.9.2026)
+
+Päätoimittajan päätös 12.2:n mittauksen jälkeen: **laudan x/y ei muutu**
+— se on reittien pituus (`steps`), välipisteet (`via`), merireitin ranta
+ja `minCityDistance` — vaan kaupunki saa **oman pallokoordinaattinsa**,
+jota vain pallo lukee. Kenttä on pakan kaupunkirivillä
+(`pallo: { lat, lon }`), ja sen taulu perusteluineen on
+`js/packs/maailmankartta-pallopisteet.js`. Tasokartta, reitinhaku,
+tallennus ja `?lauta=kartta` näkevät laudan ennallaan.
+
+**Ketju kestää uudelleengeneroinnin.** `js/packs/maailmankartta.js` on
+koneen kirjoittama, joten kenttää ei kirjoitettu riveille käsin: pakka
+tuo taulun ja liittää sen kaupunkeihin (`pallonPisteella`), ja
+`tools/tee-maailmankartta.mjs` kirjoittaa saman rivin ulos. Kommentit ja
+lähdeviitteet asuvat taulussa, jota kone ei koskaan ylikirjoita.
+
+**Ketkä siirrettiin.** `tools/tarkista-laudan-pisteet.mjs` lippusi 118
+kaupunkia yli 15 km:n. Laji ratkaistiin pakan riviltä (nimi, wiki-otsikko)
+ja Wikidatan `P31`:stä: siirrettiin 93 ASUTUSTA, jätettiin 23 ALUETTA
+(Borneo, Kamtšatkan niemimaa, Ahaggar, Namib, Nullarbor, Victoria-järvi,
+Tanganjikajärvi, Tšadjärvi, Sepik, Galápagos, Falkland, Bali, Saint
+Helena, Bananal, Havaiji, Sierra Leone, Siinai, Uluru, Mount Rushmore,
+Victorian putoukset, Milford Sound, Kap Palmas, Bahr el Ghazal) ja
+kaksi EPÄSELVÄÄ: `mosambik` (laudan nimi on alue "Mosambik", wiki-sivu
+kaupunki "Mosambikin saari", laudan piste on Beiran rannikolla — 823 km)
+ja `orjarannikko` (laudan nimi on rannikkoalue, wiki-sivu kaupunki
+"Ouidah" — 292 km). Kummankin ratkaisu on tarinan asia, ei koneen.
+Koordinaatti on Wikidatan `P625` kolmeen desimaaliin (~100 m);
+Karthago saa Tunisin viereisten raunioiden pisteen (36,887 N 10,315 I).
+
+Mittaus siirron jälkeen (sama työkalu, joka nyt lukee `pallo`-kentän):
+mediaani putosi **17,3 km → 1,4 km**, ja yli 15 km:n listalle jäi tasan
+ne 25 riviä, jotka jätettiin tarkoituksella.
+
+**Sama koordinaatti koskee kaikkia kaupungin merkkejä.** Siirto on YKSI
+asia (`js/pallo.js pallonOmatPisteet`), joka antaa kaksi hakemistoa:
+
+| hakemisto | avain → arvo | kuka lukee |
+| --- | --- | --- |
+| `pisteet` | laudan piste `"x\|y"` → `{ lat, lon }` | `pallonAsteet` — kaupunkipiste, nimi, nappula levossa, kohdekortin ankkuri, lentokaaren päät, nopan lähtöpiste |
+| `siirtymat` | kaupungin id → `{ dx, dy }` laudan yksikköinä | reitin polyn korjaus, nappulan kuljettaja |
+
+**Reittiviiva päättyy siirrettyyn pisteeseen — ilman nytkähdystä.**
+Pelkän päätepisteen siirto olisi rikkonut säännön KAIKKI LIIKE
+ANIMOIDAAN: nappula olisi kulkenut vanhaa viivaa ja hypännyt viimeisellä
+kehyksellä siirron verran (Helsingissä 35 km, lähikuvassa kymmeniä
+pikseleitä). Siksi korjaus levitetään koko polylle: jokainen polyn piste
+siirtyy päiden siirtymien painotettuna summana, painona osuus
+KAARENPITUUDESTA — sama parametrisointi kuin `pointAlong`illa, joten
+askelhelmet, nappula ja viiva kulkevat täsmälleen samaa korjattua
+viivaa, ja päissä paino on 1 ja 0. `pisteet`-taulun asteluku lasketaan
+korjatusta laudan pisteestä takaisin asteiksi, jolloin reitin pää ja
+levossa seisova nappula antavat bitilleen saman luvun
+(`tests/pallo.test.mjs`).
+
+Vartiot: `tests/pallo.test.mjs` (kenttä pakan rivillä, laudan x/y
+ennallaan, siirtymä ja piste sama asia, alueet eivät saa kenttää, siirto
+alle 500 km), `tests/pallolauta.test.mjs` (siirto kulkee reiteille ja
+kuljettajalle yhdestä paikasta), `tools/tarkista-laudan-pisteet.mjs`.
+
+### 12.5 Kaupunkipiste on ruudun vakio (korjattu 7.9.2026)
+
+12.3:n mittauksen korjaus: säde lasketaan kameran korkeudesta niin, että
+RUUTUHALKAISIJA on sama kaikilla korkeuksilla ja kaikilla laitteilla.
+Kaava johdetaan suoraan perspektiivistä (`js/pallolauta/lauta.js
+kaupunkipisteenSade`); pallon säde supistuu pois:
+
+> säde = halkaisija · korkeus · tan(fov/2) · (180/π) / ruudun korkeus
+
+Valittu halkaisija on **7 css-px**: vanhan puhelinhaarukan (2,7…13,7 px)
+sisällä, viidesosa nappulasta (32 px), joten nappula peittää pisteen
+kuten ennenkin — eikä se voi enää kasvaa iPadin 30 pikseliin.
+
+**Kirjasto lukee `pointRadius`-luennan vain datan päivittyessä**, joten
+zoomatessa säde kirjoitetaan suoraan olion skaalaan
+(`tahdistaPisteidenKoko`): kuuntelija ohjainten `change`-tapahtumassa,
+ruudun koon muuttuessa (`mitoita`) ja levon ladonnassa (`ladoLevossa`)
+— viimeinen on varasana sille, että kirjaston oma 250 ms:n siirtymä
+ehtii kirjoittaa skaalan vielä kerran zoomin jälkeen. Kirjoitus tehdään
+aina, herätys vain muutoksesta. Luku on sama, jonka luentakin antaisi: Globe.gl 2.46
+skaalaa pisteen `min(30, r) · 2π · R / 360`:llä (`PISTEEN_SKAALA`,
+luettu kirjaston lähteestä). Uutta pistedataa ei aseteta, joten 261
+pistettä ei synny uudestaan eikä 250 ms:n siirtymä laahaa zoomin
+perässä. Askelhelmi ja aihevalo ovat yhä KARTAN mittoja: helmi merkitsee
+reitin askelta maastossa, ja reitti itse on kartan mitta.
+
+**Korkeutta EI voi laskea pinnalle, ja syy on mitattu.** 12.1:n
+`MERKIN_KORKEUS = 0` koski CSS2D-merkkejä; kaupunkipiste on mesh, ja
+sitä sitoo kaksi lattiaa:
+
+1. **Kirjaston lattia.** Globe.gl asettaa pisteen korkeuden
+   `scale.z = max(alt · R, 0,1)`, joten `pointAltitude` alle 0,001 ei
+   muuta mitään — levy on aina vähintään 0,1 yksikköä pinnasta.
+2. **Lepokerroksen lattia.** Lepokerros on täsmälleen pinnan säteellä ja
+   järjestyy syvyyssiirrolla, joka on korkeusrajalla 0,034 yksikköä
+   (`js/pallo.js` LEPOKERROS, vartio `tests/pallolepokerros.test.mjs`).
+   Jokaisen merkin on oltava sen yläpuolella selvällä marginaalilla —
+   vartio vaatii nelinkertaisen eli yli 0,136 yksikköä.
+
+Kaupunkipisteen alla on lisäksi aihevalo (0,15) ja sen yli piirtyvät
+reitin varjo (0,18) ja viiva (0,2), joiden pää osuu samaan kohtaan.
+Pisteen 0,003 (0,3 yksikköä) on siis jo lähellä pienintä toimivaa
+arvoa, ja koko pinon laskeminen alemmas ostaisi 3,3 %:n säteittäisestä
+siirtymästä vain kolmanneksen — hinnalla, joka on lepokerroksen
+z-taistelu. **Korkeus jää 0,003:een, ja jäljelle jäävä siirtymä (3,3 %
+säteittäisestä etäisyydestä, puhelimen laidalla ~6 px) on lepokerroksen
+sulavuuden hinta.** Savuke raportoi luvun joka ajolla.
+
+Vartiot: `tests/pallolauta.test.mjs` (kaava on ruutuvakio kolmella
+ruudun korkeudella ja viidellä zoomilla; koko seuraa kameraa ilman uutta
+pistedataa) ja `tools/savukkeet/savuke-pallo-merkit-lukossa.mjs` vartio 4
+(pisteen levyn ruutuhalkaisija ± 1 px korkeudella 0,35 ja lähimmällä
+zoomilla, mitattuna pisteen omasta geometriasta eikä kaavasta).
+
+
 ## 13. Valikon sulku ei avaa kohdetta (7.9.2026)
 
 Omistajan iPad-havainto, sanatarkasti: *"jos hampurilainen tai joku muu
@@ -3489,7 +3604,7 @@ valikko on auki ja käyttäjä klikkaa mitä tahansa kohtaa kartalla, niin
 silloin vain se Valikko pitäisi sulkeutua, mutta mikään kohde ei saisi
 avautua kartalla samalla klikkauksella."*
 
-### 12.1 Juurisyy
+### 13.1 Juurisyy
 
 Valikot sulkeutuvat **pointerdownista** (js/main.js: dokumentin
 kuuntelijat `.valikko-kotelo`n ja `.kehittaja-valikko-kotelo`n
@@ -3499,7 +3614,7 @@ ulkopuolisille napautuksille), mutta laudan osumatesti ajetaan vasta
 kohteen sen alta. Sama vika kuin pöllön kuplassa 27.8.2026 — iOS
 syntetisoi clickin touchendistä, ja Chromiumin kosketus tekee saman.
 
-### 12.2 Yksi yhteinen vartija
+### 13.2 Yksi yhteinen vartija
 
 js/ui-apurit.js (samassa tiedostossa kuin `nielaiseSulkevaNapautus`,
 jota se käyttää):
@@ -3528,7 +3643,7 @@ on nyt false, ks. luku 11).
 kuin `korttiOliAuki`. Se on toinen lukko sen varalta, että nielu ei
 jostain syystä ehdi.
 
-### 12.3 Rajaukset
+### 13.3 Rajaukset
 
 - **Veto panoroi yhä.** Lippu nollataan jokaisella kartalle osuvalla
   pointerdownilla, joten panorointi ei jätä sitä roikkumaan: vain
@@ -3548,3 +3663,597 @@ jostain syystä ehdi.
 
 Savuke: `tools/savukkeet/savuke-valikon-sulku.mjs` (hampurilainen ja
 ratasvalikko: ensimmäinen napautus vain sulkee, toinen avaa kohteen).
+
+## 14. Kaupungin nimi nostojen päällä (7.9.2026)
+
+Omistajan vikailmoitus 7.9.2026 (kuvakaappaus Bukarestista,
+sanatarkasti): *"kaupungin nimi menee nostojen päälle"*. Kuvassa
+kaupunkipiste on keskellä, nimi BUKAREST pienenä harvennettuna sen alla
+ja kaksi nostoa molemmin puolin — ja oikean noston lappu makasi nimen
+päällä.
+
+Fablen linjaus (Raamattu, KAUPUNGIN NIMI NOSTOJEN PAALLA): pallolla
+kaupungin nimi ja nostojen nimilaput eivät saa mennä päällekkäin.
+**Kaupungin nimi on ensisijainen; nostojen laput väistävät.**
+
+### 14.1 Juurisyy: väärä osapuoli väisti
+
+Ladonta ajettiin levossa tässä järjestyksessä: nostot ensin, ja niiden
+laatikot menivät nimiladonnan varauksiksi (`ladoLevossa` →
+`nostot.paivita` → `nimet.lado({ varaukset })`). Siitä seurasi kaksi
+vikaa, jotka näyttivät samalta:
+
+1. **Poltettu muste ei varannut mitään.** Varauksiin meni vain ELÄVIEN
+   nostojen laatikot (`naytetaan`), koska ne ovat kerroksen omia
+   elementtejä. Poltettu nosto on laatan kuvassa eikä listalla — joten
+   nimi ei tiennyt siitä mitään ja laskeutui suoraan sen päälle. Tämä
+   on omistajan Bukarest: mitattuna A/B-ajossa (savuke, vanha
+   varaussääntö rinnalla) Bukarestin nimi limittyi poltetun musteen
+   kanssa korkeuksilla 0,05 ja 0,12 — ja vain Bukarestissa neljästä
+   mitatusta kaupungista.
+2. **Elävä lappu ajoi nimen pois.** Kun lappu oli varaus, nimi ei
+   voinut mennä sen päälle — se PUTOSI. Sääntö oli siis päinvastainen
+   kuin linjaus: liikkuva muste voitti kiinteän.
+
+### 14.2 Sääntö: liikkumaton muste varaa, liikkuva väistää
+
+`ladoLevossa` on nyt kolme vaihetta samassa levossa:
+
+1. **Nostot** valitsevat kerrokseen mahtuvat merkit ja antavat
+   **KIINTEÄN musteensa** laatikot: poltetun noston koko muste (ikoni +
+   laattaan paistettu nimiö) ja elävän noston **ikoni**. Elävän noston
+   **lappu ei ole varaus**.
+2. **Nimet** ladotaan (`js/pallolauta/nimet.js`) niin, että ne väistävät
+   vain sitä, mikä ei voi väistää itse.
+3. **Nostojen laput sovitellaan** (`nostot.sovittele`) nyt kiinteiden
+   nimilaatikoiden ympärille. Nimikerros antaa laatikkonsa luku-API:na
+   (`nimet.laatikot()`) eikä tiedä sovittelusta mitään.
+
+### 14.3 Päätössarja (js/pallolauta/sovittelu.js)
+
+Sovittelu on omassa moduulissaan, koska sama päätös koskee kahta
+kerrosta, jotka eivät saa tuntea toisiaan. Järjestys on Fablen linjaus:
+
+| Porras | Mitä kokeillaan | Miksi |
+| --- | --- | --- |
+| 0 | **oma kylki** ilman siirtoa | laattaladonta on käsin hiottua (`ladoMaanTynka`) — sitä kunnioitetaan aina kun se ei törmää |
+| 1 | **kolme muuta kylkeä** (`NOSTOSYM_NIMIO_KYLJET`: oikea, vasen, ylä, ala) | kylki on kirjaston oma käsite; rasterin välimuistiavaimessa on kylki, joten vaihto ei maksa uutta mittausta |
+| 2 | **pieni siirto** 6 px: kolme suuntaa kylkeä kohti (kohtisuoraan ±, sitten ulos) eli 12 asentoa | kohtisuora on se, joka irrottaa vaakalapun vaakanimen kaistasta; kaistan suuntaan työntäminen ei irrota mistään |
+| 3 | **lappu piiloon, ikoni jää** | nosto ei katoa kartalta, se menettää nimensä kunnes zoomi tekee tilaa |
+
+Järjestys lappujen kesken on **lähin kaupunkia ensin**: ahtain paikka
+saa ensimmäisenä valita. Väistänyt lappu lisätään esteisiin (kaksi
+lappua ei työnny päällekkäin); **paikallaan pysynyt ei ole este**, koska
+lappujen keskinäisen järjestyksen on jo ratkaissut laattaladonta
+(`tools/tarkista-nimiolimitys.mjs` vartioi sitä) — sovittelu ei ala
+sekoittaa käsin hiottua työtä ilman pyyntöä.
+
+**Siirto liikuttaa koko merkkiä, ei pelkkää lappua.** Ikoni ja nimiö
+ovat yhtä rasteria (`piirraNostosymKartalle`), joten lappua ei voi
+irrottaa ikonistaan. Kuusi pikseliä on kaukana napautuksen 44 px:n
+säteestä, joten **osuma ei siirry**: `lat`/`lng` pysyy, siirto on vain
+kuvassa. Sama myönnytys kuin kohtaamispisteellä (`fokuspisteenSiirto`).
+
+### 14.4 Suorituskyky: ei mittausta ruudulta, ei joka kehyksessä
+
+Sovittelu ajetaan **vain levossa**, samassa ajastintehtävässä kuin
+nimiladonta (`LADONNAN_LEPOVIIVE_MS`) — ei joka kehyksessä eikä joka
+toisessa. Kehysbudjetti on siis nolla: liikkeessä lappu seuraa
+pistettään CSS2D:n mukana kuten nimikin (luku 7), ja koko päätössarja
+ajetaan vasta kun kamera pysähtyy. Kehyksen sisään sijoitettu mittaus
+olisi juuri sitä layout-thrashia, jota tässä vältetään.
+
+Kaikki laatikot lasketaan **kaavasta** (`nostonLaatikko` →
+`nostosymNimioAsemointi`, `nostosymNimioMitta`), ei ruudulta. Merkin
+oma `<svg>` on 1 × 1 px ja ylivuotava, joten `getBoundingClientRect`ista
+ei olisi apua edes jos sitä haluaisi. DOMiin kirjoitetaan vain, jos
+jokin asento oikeasti muuttui (`asetteleNosto` vertaa reseptiä), ja
+rasteri paistetaan uudestaan vain kyljen tai nimiön vaihtuessa.
+
+Siirto animoidaan: `.pallolauta-nosto-siirto` saa 200 ms:n
+`transform`-siirtymän (`css/styles.css`), ja `prefers-reduced-motion`
+poistaa sen samasta säännöstä kuin nimen siirtymän. Kyljen vaihto on
+rasterin vaihto eikä liike.
+
+### 14.5 Vartijat
+
+- `tools/savukkeet/savuke-pallo-nostolaput.mjs` — Bukarest, Ateena,
+  Helsinki ja Istanbul, kaksi korkeutta kumpikin: yksikään lappu ei
+  leikkaa kaupunkinimen laatikkoa, yksikään nimi ei leikkaa
+  liikkumatonta mustetta, jokaisessa näkymässä on nimiä, sovittelun
+  asento on myös elementissä ja siirtymä on 200 ms. Lisäksi
+  **pakotettu väistö**: este asetetaan lapun päähän ja väistön jälkeen
+  yksikään näkyvä lappu ei jää sen alle.
+- `tests/pallosovittelu.test.mjs` — päätössarjan jokainen porras
+  erikseen, järjestys (ahtain ensin), väistäneen lapun esteeksi
+  muuttuminen ja se, että lauta sovittelee vasta nimien jälkeen.
+
+**Staattinen portti ei ole mahdollinen.** `tools/tarkista-nimiolimitys.mjs`
+lukee poltettavaa ladontaa laudan yksiköissä, mutta pallon kaupunkinimi
+ei ole laudan dataa: sen paikan valitsee ajonaikainen ruutuladonta
+(`ladoRuutunimet`) kameran projektiosta, nimibudjetista ja pelimerkkien
+pinoista. Pallon laput vs. kaupunkinimet mitataan siksi savukkeella eikä
+työkalulla; työkalun oma vastuu (poltettu nimiö vs. poltettu nimiö)
+pysyy ennallaan.
+
+
+## 15. Kehystahti — pisin kehys, ei keskiarvo (Opus 7.9.2026)
+
+**Omistaja 7.9.2026, sanatarkasti:**
+
+> "kartta pyörii nyt jo todella hyvin, mutta jos vertaa google earthiin,
+> niin vielä tulee vähän tökkimistä eli ei niin sulavaa ruudun
+> päivitystä, vaikka välillä on sujuvaa. löytyykö jostain vielä
+> optimoitavaa tai jotain mikä kuluttaa laskentatehoa? mittari kyllä
+> näyttää pysyvän 55-60 fps tasossa. voiko se muuton 55 ja 60 välillä
+> kuitenkin näkyä tökkimisenä?"
+
+**Vastaus kysymykseen on kyllä, ja se on koko luvun lähtökohta.** 60 Hz:n
+ruudulla 55 fps ei ole 8 % hitaampi kuva vaan **viisi pudotettua kehystä
+sekunnissa**: neljä kehystä 16,7 ms:n välein ja sitten yksi 33 ms:n
+nykäys. Silmä ei lue keskiarvoa vaan epätasaisuutta, joten mittarin
+oikea luku ei ole fps vaan **pisin kehys** ja **pudotusten lukumäärä**.
+Fablen linjaus (Raamattu, PALLON SULAVUUS) on sama: tavoite on pisimmän
+kehyksen pituus alle 17 ms, ei keskiarvo.
+
+### 15.1 Mittari ja sen kalibrointi
+
+`tools/savukkeet/savuke-pallo-kehystahti.mjs` (uusi). Kaksi asiaa
+erottaa sen aiemmista mittareista:
+
+**1. Kamera liikkuu kehysaskelin, ei kellosta.** Kontin Chromium piirtää
+SwiftShaderilla (ANGLE Vulkan, ohjelmistorasteroija), ja mitattuna
+7.9.2026 pallo vie kokonaisen kehyksen **150 ms** (360 × 240) …
+**1 130 ms** (1 600 × 900 dpr 1) — myös joutilaana. Kellosta ajettu
+6 sekunnin panorointi tekisi siis yhdellä kehyksellä satojen
+millisekuntien loikan, jolloin laattakerroksen ennakkoalue paisuisi
+eikä mitattu työ vastaisi laitteen kehystä lainkaan. Mittari siirtää
+kameraa joka piirretyllä kehyksellä täsmälleen sen verran kuin se
+siirtyisi laitteella 60 Hz:ssä (0,0505° panoroinnin askelta kohti).
+Jokainen mitattu kehys on siis laitteen kehys; vain seinäkelloaika
+venyy.
+
+**2. Vartio lukee JS-työtä, ei kehysväliä.** Kehysväliä ei voi tässä
+ympäristössä mitata: kiinteä 17 ms:n raja antaisi aina 100 % ja
+mediaaniin suhteutettu raja aina 0 %. Mittari erittelee sen sijaan
+kehyksen sen osan, joka on **pelin omaa pääsäikeen työtä**:
+laattakerroksen päivitys + kirjaston laattamoottori (`updatePov`) +
+tekstuurien vienti (`initTexture`) + three.js:n piirtokutsu. Rasterointi
+jää ulkopuolelle, ja juuri se on ainoa osa, joka on kontissa
+epärealistinen — laitteella sen tekee näytönohjain. **Raja 17 ms on siis
+laitteen 60 Hz:n kehysbudjetti sellaisenaan.** Lisäksi mitta on pahin
+tapaus: kontin kehysväli on satoja millisekunteja, joten kerroksen oma
+100 ms:n harvennus ei ehdi väliin ja jokainen mitattu kehys tekee täyden
+päivityksen.
+
+**3. Koneen kuorma jaetaan pois.** Konttia jakaa moni ajo. Mitattuna
+sama koodi antoi kuormitetulla koneella kehysmediaanin 1 200 ms ja
+rauhallisella 750 ms, ja samassa suhteessa venyivät JS-ajat. Mittari
+ajaa siksi ensin kiinteän laskusilmukan viidesti, ottaa parhaan ajan
+koneen nopeudeksi ja kertoo JS-ajat suhteella *rauhallinen / mitattu*.
+Ilman tätä vartio kaatuisi naapurin ajoon eikä pelin koodiin.
+
+**4. Jakso ajetaan kahdesti ja vartio lukee paremman ajon.** Yksittäinen
+kehys voi keskeytyä naapurin ajoon: mitattu samalla koodilla peräkkäin
+`renderer.render` mediaani 3 ms mutta pisin 76 ms, `updatePov` mediaani
+0 ms mutta pisin 40 ms. Yksittäiset piikit eivät siis mittaa peliä.
+Kaikki toistot jäävät JSON-raporttiin.
+
+**5. Panorointi kulkee aina uuteen maastoon.** Lämmitysajo koko matkan
+yli teki mittauksesta arpapeliä: LRU:n muistikatto (24 näkymätöntä
+valmista laattaa) on pienempi kuin matkan laattamäärä, joten osa ehti
+purkautua ja osa ei — kaksi peräkkäistä ajoa antoi 27 tekstuurin
+vientiä ja 0. Nyt kamera lähtee levänneestä Ateenasta ja jokainen
+toisto jatkaa siitä, mihin edellinen jäi.
+
+Vartion rajat: yli 17 ms:n JS-kehyksiä panoroinnissa enintään **3 %**
+(zoomissa 10 %: tason vaihto on oikeaa työtä), ja kaksi kuormasta
+riippumatonta **rakenteellista** rajaa (pohjan päivityksiä enintään
+0,7 × kehykset, tekstuurien vientejä enintään yksi kehystä kohti).
+
+### 15.2 Mitattu ENNEN ja JÄLKEEN
+
+Sama savuke, sama kone, sama tallenne, peräkkäin ajettuna 7.9.2026
+(puhelin 390 × 844 dpr 2, 46 laitekehystä panorointia ja 31 zoomia,
+kaksi toistoa kummastakin, taulukossa parempi toisto). Laattatyö oli
+sama molemmissa: **7 tekstuurin vientiä** kummassakin ajossa.
+
+| mitta (panorointi) | ENNEN | JÄLKEEN |
+| --- | --- | --- |
+| JS/kehys p50 | 4,5 ms | **1,6 ms** |
+| JS/kehys p95 | 14,8 ms | **4,4 ms** |
+| JS/kehys pisin | 32,6 ms | **10,4 ms** |
+| **yli 17 ms:n kehyksiä** | **6,5 %** (3 / 46) | **0 %** (0 / 46) |
+| raskaimman kehyksen erittely | moottori **26,3** · piirto 7,9 · laatat 0,3 | piirto 12,5 · laatat 7,4 · moottori **0** |
+| `updatePov` p95 / max (raaka) | 2,6 / **26,0 ms** | 0,4 / **1,3 ms** |
+| pohja päivitettiin | joka kutsulla (89 / 46 kehystä) | **15 / 46 kehystä** |
+
+| mitta (zoom) | ENNEN | JÄLKEEN |
+| --- | --- | --- |
+| JS/kehys p50 | 3,5 ms | **1,5 ms** |
+| JS/kehys p95 | 11,8 ms | **3,6 ms** |
+| JS/kehys pisin | 159,9 ms | **4,2 ms** |
+| yli 17 ms:n kehyksiä | 6,5 % | **0 %** |
+
+JÄLKEEN-ajo tehtiin vieläpä KUORMITETUMMALLA koneella (laskusilmukka
+6,5 ms vastaan 3,6 ms), joten ero on todellista suurempi, ei pienempi.
+
+Ensimmäinen mittaus (41 kehystä, ennen yhtään korjausta) antoi saman
+kuvan syyllisistä: JS/kehys pisin 20,0 ms, ja siitä **17,0 ms oli
+kirjaston laattamoottoria** — yksin koko 60 Hz:n kehysbudjetti.
+`updatePov` ajettiin 79 kertaa 41 kehyksellä (kaksi kertaa kehyksessä),
+mediaani 0,4 ms mutta pisin 12,2 ms. `initTexture` maksoi 3,0 ms (p50)
+ja 6,7 ms (max), ja niitä sai viedä kaksi samassa kehyksessä. Chromen
+jäljestä (`--jalki`, 4 s panorointia) näkyi lisäksi
+**V8.GC_MC_BACKGROUND_MARKING 845 ms, pisin 87 ms** — roskaa syntyi
+niin paljon, että päämerkintä kävi taustalla lähes koko ajon.
+
+### 15.3 Neljä juurisyytä ja niiden korjaukset
+
+**1. Kirjaston oma laattamoottori ajettiin kahdesti joka kehyksessä.**
+Mitattu: 79 `updatePov`-kutsua 41 kehyksellä; mediaani 0,4 ms mutta
+pisin 12,2 ms, ja raskaimmassa kehyksessä kutsut veivät yhteensä 17 ms
+— **yksin koko 60 Hz:n kehysbudjetin**. Juuri tämä on omistajan näkemä
+nykäys: keskiarvo pysyy 55–60 fps:ssä, mutta joka kymmenes kehys putoaa.
+
+Kun laattakerros on päällä, kirjaston moottori ei enää ole kartta vaan
+**karkea pohja**: taso on naulattu `POHJAN_TASO_MAX`:iin (5), yksi
+laatta kattaa 11,25°, ja kerros piirtää sen päälle terävän kuvan. Pohja
+ei siis kaipaa uutta luettelointia 60 kertaa sekunnissa. `js/pallo.js`
+(`kytkeLaatunosto`, "POHJA PÄIVITTYY HARVEMMIN KUIN RUUTU") ohittaa
+kirjaston kutsun, ellei jokin kolmesta ehdosta täyty: (a) laattakerros
+ei ole käytössä, (b) kamera on siirtynyt vähintään
+`POHJAN_ASKEL_OSUUS` (0,06) omasta etäisyydestään — suhdeluku eikä
+asteita, koska sama luku kelpaa joka korkeudella — tai (c) kerros ei
+peitä koko näkyvää aluetta, mutta silloinkin enintään `POHJAN_VALI_MS`
+(100 ms) välein. `lepoon` ajaa moottorin aina pysähdyksen jälkeen, joten
+**levossa pohja on täsmälleen sama kuin ennen**. Perääntyminen:
+`?pohjanharvennus=0`.
+
+**2. Kaksi tekstuuria kehystä kohti.** Mitattu `initTexture`: 3,0 ms
+(p50), 6,7 ms (max). Kaksi peräkkäin samassa kehyksessä on pahimmillaan
+13 ms 16,7 ms:n budjetista — se yksin pudottaa kehyksen.
+`LAATTAKERROS_TEKSTUUREJA_PER_KEHYS` on nyt **1**. Se on 60 Hz:llä yhä
+60 laattaa sekunnissa eli enemmän kuin `LAATTAKERROS_RINNAKKAIN` (6)
+ehtii ladata, joten jono ei kasva.
+
+**3. Päivitys tuotti roskaa 10 kertaa sekunnissa.** Kerroksen
+`suorita` kokosi mittarinsa kahdeksalla erillisellä `filter`/`reduce`-
+kierroksella ja kahdella taulukkokopiolla kaikista tietueista, laski
+laatan lat/lon-suorakaiteen (`laatanAlue`) uudestaan jokaiselle
+ehdokkaalle kahdesti, ja rakensi ennakon ehdokaslistan kahtena
+välitaulukkona ennen kuin katto edes katsoi sitä. Lisäksi `js/pallo.js`
+kutsui kerroksen `mittarit()`ia **joka piirretyllä kehyksellä** pelkän
+kahden kentän takia — ja `mittarit()` kopioi koko taulun *ja*
+pyydettyjen osoitteiden joukon taulukoksi, satoja merkkijonoja. Nyt:
+mittarit yhdellä kierroksella ilman varauksia, `laatanAlue` muistiin
+(katto 4 096, sitten tyhjennys), ennakon suodatus ja katto samassa
+silmukassa, ja varauksettomat lukijat `tila()`, `syy()`, `peittaa()`.
+
+**4. Laattojen valmistelu oli näkymätöntä aikaa.** Kangas, `drawImage`,
+verkon puskurit ja materiaali ovat pääsäikeen työtä, joka osuu siihen
+kehykseen, jossa haku sattuu valmistumaan — eikä se näy missään
+kehyskoukussa. Kerros mittaa sen nyt itse (`mittarit.valmisteluMs`),
+ja savuke raportoi sen: **42,8 ms / 23 laattaa, pisin 9,1 ms**.
+
+### 15.4 Kokeiltu ja HYLÄTTY: bittikartta suoraan tekstuuriksi
+
+Pyramidin ranta-, viiva- ja nostotasot ovat harvoja, joten valtaosalla
+laatoista on vain pohjakerros. Kokeiltiin viedä sellainen laatta
+`new Texture(bittikartta)`:na ilman kangasta ja `drawImage`ia — yksi
+pääsäikeen pikselikopio pois. **Tulos oli päinvastainen:**
+`initTexture` kallistui 3,0 → **5,1 ms** (p50) ja pahin vienti 6,7 →
+**64,2 ms**. Syy on pystykäännöksessä: three.js:n tekstuurin oletus on
+`flipY = true`, ja kun lähde on bittikartta, kääntö tehdään pikseli
+pikseliltä keskusmuistissa; kangas taas elää jo näytönohjaimessa
+(kiihdytetty 2D-konteksti), joten sama kääntö on yksi GPU-kopio. Kangas
+siis MAKSAA yhden drawImagen ja SÄÄSTÄÄ koko viennin. Bittikartan
+lukuasetukset (`imageOrientation: 'none'`, `colorSpaceConversion:
+'none'`) jäivät; `premultiplyAlpha` jätettiin selaimen oletukseksi,
+koska kangas säilyttää pikselit esikerrottuina ja 'none' pakottaisi
+muunnoksen juuri `drawImage`n kohdalla.
+
+### 15.5 Tutkittu ja todettu syyttömäksi
+
+- **Nimet ja CSS2D-elementit.** Ladonta (`js/pallolauta/nimet.js`
+  `lado`) ajetaan vain levossa: `pyydaLadonta` on ajastin
+  (`LADONNAN_LEPOVIIVE_MS`), joka nollautuu jokaisesta ohjainten
+  `change`-tapahtumasta, eikä `getBoundingClientRect` kulje kehyksessä
+  lainkaan. Mitattu Ateenan lähikuvassa: **5 CSS2D-elementtiä**. Ei
+  layout-thrashia, ei mitään korjattavaa.
+- **Kaksi rAF-silmukkaa.** Ei ole. Mittarin `renderer.render` -kääre
+  laski panoroinnissa **41 kutsua 41 kehyksellä** — tasan yksi piirto
+  kehystä kohti. Pelin omat rAF-silmukat (kamera-ajo, liuku, häive,
+  avauslento) muuttavat vain tilaa; piirron tekee Globe.gl:n oma
+  silmukka, ja se pysäytetään jo nyt (`pauseAnimation`), kun kuori on
+  piilossa, lehti auki tai sivu taustalla (`js/pallolauta/lauta.js`
+  `tahdistaLepo`).
+- **Levon harventaminen.** Harkittiin ja jätettiin tekemättä: silmukan
+  pysäyttäminen levossa vaatisi herätyksen jokaisesta muutoslähteestä
+  (kamera-ajo, laatan häive, linssin kalvo, nappulan siirto, nostot,
+  koon muutos), ja yksikin unohdettu lähde jäädyttäisi laudan. Se olisi
+  paljon pahempi vika kuin lämmin näytönohjain, eikä se korjaa
+  omistajan oiretta, joka on nykäys **liikkeen aikana**.
+- **Pikselisuhde ja kuvan pehmennys liikkeessä.** Harkittiin dynaamista
+  pikselisuhdetta (2 levossa, 1,5 vedon aikana) ja jätettiin tekemättä.
+  Perustelu on omistajan oma seisova linjaus: liikkeen aikainen tarkkuus
+  ei saa pudota (Raamattu, "PALAUTE v1642:STA, LIIKKEEN AIKAINEN
+  TARKKUUS"; luku 10.3 "pikselisuhde kerran asennuksessa … kuvan
+  tarkkuus ei saa vaihtua liikkeessä"). Lisäksi mittaus osoittaa syyn
+  olevan muualla: mittari näyttää 55–60 fps eli näytönohjain pysyy
+  perässä, ja pudotukset tulevat yksittäisistä JS-piikeistä. Jos
+  omistaja myöhemmin haluaa vaihtaa terävyyttä sulavuuteen, vipu on
+  `LAATU_PIKSELISUHDE_LEPO` (nyt 3) — se on yhden luvun päätös, ja tämä
+  luku on sen paikka.
+- **Antialias, varjot ja valot.** Varjot ovat jo pois
+  (`shadowMap.enabled = false`); valoja on kaksi (AmbientLight,
+  DirectionalLight) ja ne ovat kirjaston omat, laattojen sävy riippuu
+  niistä (ks. luku 4.3 napakannet). Antialias on kirjaston oletus
+  (päällä) ja se pehmentää juuri vektoriviivat (rantaviiva, rajat), eli
+  sen sammuttaminen olisi sama laadun pudotus, jonka omistaja on kahdesti
+  torjunut. Ei koskettu.
+
+### 15.6 Muut vartiot ennen ja jälkeen
+
+`savuke-pallolauta` ajettiin sekä muutoksitta että muutoksilla:
+**41 / 43 ennen, 42 / 43 jälkeen**. Jäljelle jäävä FAIL (vartio 6,
+kamera-ajo osuu Sofiaan — dy 68,5 px) on sama molemmissa eli tätä erää
+vanhempi vika, ja sen viereen osui kummassakin ajossa yksi satunnainen
+FAIL (toisessa ajossa linssin pyramidipyynnöt, toisessa Sofian
+aarrepisteen elementti), joka ei toistunut uusintaajossa.
+`node --test tests/*.test.mjs` 2 072 läpi, 0 kaatunutta;
+`tarkista-niputus` ja `tarkista-savukkeet` puhtaat.
+
+### 15.7 Mittari näyttää nyt oikean luvun
+
+`js/karttamittari.js` (`?mittari=1` tai ratasvalikko) sai uuden rivin:
+
+```
+kehys     16,7 ms · max 33,4 ms · 59,9 fps
+pisin/1s  33,4 ms · pudotuksia 3 / 59 (> 17 ms)
+```
+
+Pisin kehys ja pudotusten määrä luetaan **sekunnin** ikkunasta, ei
+kahden: kahden sekunnin maksimi jää roikkumaan ruutuun senkin jälkeen,
+kun nykäys on ohi, eikä lukija näe, mikä ele sen aiheutti. Sama rivi
+menee konsoliin (Safarin etäkonsoli, iOS-kuori). Mittari on yhä
+kokonaan kehittäjän kytkimen takana eikä maksa mitään, kun se on pois.
+
+## 16. Aloitusvalinta: pallo paikallaan, kohteet takaisin (7.9.2026)
+
+Omistaja työpöytäselaimesta 7.9.2026 iltapäivällä, sanatarkasti:
+
+> Kartta voisi sittenkin pysyä ihan paikallaan tässä, kun pelaaja
+> valitsee, minne hän haluaa lentää. Kartan zoomaustason voisikin
+> muuttaa tällaiseksi, mikä nyt näkyy kuvassa. Ja valittavien
+> kohdekaupunkien huomioympyrää voisi hieman tehostaa. ja nostetaan
+> kokeeksi kaikki kohdekaupungit takaisin mitä aiemmin oli käytössä.
+
+Neljä muutosta samaan näkymään (Raamattu, "ALOITUSVALINTA: PALLO
+PAIKALLAAN, KAIKKI KOHTEET TAKAISIN KOKEEKSI").
+
+### 16.1 Pallo ei pyöri itsestään
+
+5.9.2026 lisätty hidas pyörintä (0,16 °/s itään, oma rAF-silmukka
+kolmella pysäyttimellä) on **poistettu kokonaan** — silmukka,
+vakiot ja pysäyttimet. Valinta on lukutilanne: neljästätoista
+kaupungista pitää löytää yksi, ja liikkuva kuva pakottaa katseen
+seuraamaan sen sijaan että antaisi lukea. Liike myös veisi kohteita
+pois kuvasta odottavalta pelaajalta.
+
+Pelaajan oma panorointi ja nipistys ovat ennallaan (kirjaston
+OrbitControls, `js/pallo.js asennaPallonEleet`) — vain automaattinen
+liike on poissa, ja juuri sitä neljätoista kohdetta vaativat:
+takapuolen kaupungit haetaan kääntämällä. Terävän tilan pakotus
+(`pakotaPallonLaatu`) jäi: valintakuva katsotaan täydessä terävyydessä
+liikkui se tai ei. `lauta.aloitusvalinnanPyorinta()` jäi rajapintaan ja
+vastaa aina `false` — se on savukkeen vartio siltä varalta, että
+automaattinen liike joskus palaa vahingossa.
+
+### 16.2 Rajaus on KIINTEÄ näkymä, ei laatikkosovitus
+
+Aalto 3A sovitti kameran Lontoon ja valittavien yhteiseen laatikkoon
+(`ALOITUSVALINNAN_MARGINAALI`, kuplavarat pikseleinä). Se toimi, kun
+valittavia oli yksi: laatikko oli Lontoo–Ateena eli Eurooppa. Kun
+kohteita on neljätoista, sama laatikko olisi koko maapallo — ja rajaus
+karkaisi juuri siitä kuvasta, jonka omistaja pyysi. Laatikkosovitus,
+marginaali ja kuplavarat poistettiin.
+
+Uusi näkymä on kaksi lukua (`js/pallolauta/lauta.js`):
+
+| Vakio | Arvo | Mitä se on |
+| --- | --- | --- |
+| `ALOITUSVALINNAN_LAT` / `_LON` | 30° N, 17° E | omistajan kuvan keskiö: Välimeren ja Saharan raja |
+| `ALOITUSVALINNAN_PALLON_OSUUS` | 0,55 | pallon SÄDE osuutena ruudun korkeudesta |
+| `ALOITUSVALINNAN_ANKKURIT` | `['lontoo', 'ateena']` | pisteet, joiden on mahduttava kuvaan |
+| `ALOITUSVALINNAN_ANKKURIVARA` | 0,78 | osuus ruudun puolikkaasta, jonka sisään ankkurin on osuttava |
+
+`aloitusvalinnanKorkeus({ leveysPx, korkeusPx, ankkurit })` laskee
+Globe.gl:n `altitude`n kahdesta ehdosta, joista **kauimmainen voittaa**:
+
+1. **Pallon koko.** Silhuetin kulmasäde on `atan(2 · osuus ·
+   tan(fov/2))` ruudun puolikkaina, ja pallon geometriasta etäisyys =
+   `1 / sin(kulmasäde)`. Fov on PYSTYSUUNNAN kulma, joten sama korkeus
+   antaa saman pallon koron kaikilla kuvasuhteilla — puhelimella pallo
+   silloin vuotaa sivureunojen yli, mikä on juuri se, mitä omistaja
+   puhelimelta pyysi (*"pallon leveys täyttää ruudun"*).
+2. **Ankkurit.** Piste `(e, n, u)` (itä–pohjoinen–ylös tähtäyspisteen
+   kehyksessä) osuu ruudulla kohtaan `(e, n) / ((d − u) · tan(fov/2))`
+   ruudun puolikkaina, joten ehdoista `|x| ≤ vara · (W/H)` ja
+   `|y| ≤ vara` seuraa suoraan `d ≥ u + |e| / (varaX · tan)` ja
+   `d ≥ u + |n| / (vara · tan)`. Analyyttinen, ei hakua.
+
+**Mitatut luvut** (Node, tests/aloitus-pallolla.test.mjs; sijainti
+ruudun puolikkaina keskipisteestä, y ylös):
+
+| Ruutu | altitude | pallon säde | Lontoo | Ateena |
+| --- | --- | --- | --- | --- |
+| 2000 × 1125 | 1,191 | 619 px (0,55 H) | −0,31 / +0,63 | +0,16 / +0,25 |
+| 1400 × 900 | 1,191 | 495 px | −0,31 / +0,63 | +0,16 / +0,25 |
+| 390 × 844 (puhelin) | 1,191 | 464 px | −0,31 / +0,63 | +0,16 / +0,25 |
+| 834 × 1194 (iPad) | 1,191 | 657 px | −0,31 / +0,63 | +0,16 / +0,25 |
+| 300 × 900 (kapea) | 1,418 | 438 px | −0,26 / +0,52 | +0,14 / +0,21 |
+
+Ankkuriehto ei siis sido tavallisilla ruuduilla: pallon koko ratkaisee,
+ja ankkurit ovat turvaverkko kuvasuhteille alle ~0,34. Kuvassa ovat
+Eurooppa, Afrikka ja Lähi-itä, Atlantti vasemmassa reunassa, Lontoo
+ylhäällä vasemmalla keskeltä ja Ateena keskellä oikealla — mitattu
+Chromiumilla 1400 × 900 (savuke-aloitusvalinta-13 `--kuvat`).
+
+Kuplavaraa ei enää tarvita: Lontoo ja Ateena ovat molemmat ruudun
+yläpuoliskossa, kaukana Livian kuplapinosta oikeassa alanurkassa.
+Kamera-ajo on yhä laudan oma (`kamera.ajaKamera`, pehmeä), ja
+`avaaPallolauta` kutsuu sitä `kotiin`-ajon sijasta.
+
+### 16.3 Huomiorengas valittaville
+
+Lähtövalinnan kohde on eri asia kuin nopanheiton kohde: nopanheitossa
+pelaaja etsii vaihtoehtoja lähikuvasta, lähtövalinnassa neljäätoista
+kaupunkia koko maapallolta. Valittava saa siksi kohdemerkin lisäksi
+oman renkaansa (`js/pallolauta/merkit.js KOHDEMERKIN_HUOMIO_PX` = 54 px
+eli säde 27, kun kohdemerkin halo on 24 px:n merkin päällä 17):
+
+- **Ruutuvakio koko.** Merkki on CSS2D-elementti, joten rengas on yhtä
+  iso kaukaa ja läheltä.
+- **Hidas syke.** Jakso 2,6 s (omistajan haarukka 2–3 s), ja syke on
+  kahdessa ominaisuudessa yhtä aikaa — säde (`transform: scale` 1 →
+  1,16) ja peittävyys (0,92 → 0,42) — jotta liike lukee hengityksenä
+  eikä välähdyksenä. Rengas ei koskaan katoa: kohteen on löydyttävä
+  myös sykkeen alalaidassa.
+- **Kultainen.** `stroke: var(--kulta, #eab84e)`, viiva ruudun mitassa
+  (`non-scaling-stroke`), pelkkä muunnos ja peitto — ei suodinta (sama
+  iOS-sääntö kuin kartan muillakin merkeillä).
+- **Liikeherkkyys:** ei sykettä, vaan pysyvä kultakehä (`scale(1,08)`,
+  peitto 0,85) — sama tinkiminen kuin `.target-halossa`.
+
+Lippu kulkee datumissa: `aloitusKohteet` merkitsee `huomio: true`,
+merkkikerros kantaa sen (`huomio: k.huomio === true`) ja
+`kohdeElementti` piirtää renkaan. Nimi nousee ylimmän kehän yläpuolelle
+(`nimenSade`), joten se ei jää renkaan päälle.
+
+### 16.4 Neljätoista kohdetta ja Livian kupla
+
+`ETUSIVUN_KOHTEET` ja `ETUSIVUN_NAKYVAT` siirtyivät `js/ui.js`:stä
+**`js/ui-apurit.js`**:ään, koska myös Livian avausesittely tarvitsee
+kohteiden määrän eikä `js/livia.js` voi tuoda `js/ui.js`:ää
+(kehätuonti). Joukot ovat puhdasta dataa, eivät pelitilaa.
+
+Kohteet palasivat ensin kolmentoista sarjana (iltapäivä), ja samana
+iltana omistaja teki niihin kaksi muutosta: **Los Angeles vaihtui San
+Franciscoksi ja Istanbul lisättiin**. Lopullinen luettelo on
+neljätoista: ateena, newyork, kairo, rio, mumbai, peking, sydney,
+moskova, tokio, singapore, kapkaupunki, sanfrancisco, tanger,
+istanbul. Se **kumoaa v1119:n piilotuksen** aloituskartalla, ja näkyvät
+kaupungit palasivat valittavien mukana (valittava kaupunki, jota ei
+näy, olisi pahempi kuin kaupunki, jota ei voi valita).
+
+**Kaksi uutta kaupunkia aloitusnäytön laudalle.** Kohde tarvitsee
+kaupungin KAHDELLA laudalla: pelin omalla aloitusnäytön laudalla
+(`js/packs/maailma.js`, josta `doPickStart` lukee portin) ja pallon
+laudalla (`js/packs/maailmankartta.js`, josta merkin paikka tulee).
+Maailmankartalla molemmat olivat jo; aloitusnäytön laudalta puuttuivat.
+Ne lisättiin samalla kaavalla kuin muut lentokenttäkaupungit
+(`airport: true`, portti maailmankartalle, `la/lx/ly` nimilapulle), ja
+x/y laskettiin todellisesta lat/lonista laudan omalla
+stereografisella pallonpuoliskoprojektiolla (`tools/hemispheres.mjs`):
+
+| Kaupunki | lat / lon | kaava antaa | laudalla |
+| --- | --- | --- | --- |
+| Istanbul | 41,013° N, 28,955° E | 776,7 / 287,1 | 776,7 / **288,1** |
+| San Francisco | 37,775° N, −122,419° W | 264,1 / 306,7 | **265,1 / 305,7** |
+
+Yhden yksikön siirto on rantaviivan takia: laudan tyylitelty rannikko
+jättää tarkan pisteen veteen (`isOnLand`, tests/rules.test.mjs
+*"kaupungit ovat mantereella"*). Muut tämän laudan kaupungit on
+aikanaan muunnettu vanhasta lieriölaudasta, joten ne poikkeavat samasta
+kaavasta 2–13 yksikköä — ero on 1150 × 800:n laudalla olematon, eikä
+lautaa edes piirretä lähtövalinnassa (pallo on lauta).
+
+Kolme muuta asiaa laudalla piti sovittaa:
+
+- **Reitit.** Laudan yhtenäisyys lasketaan `edges`-listasta eikä
+  lentoyhteyksistä, joten kumpikin sai maareitin naapuriinsa
+  (San Francisco–Los Angeles, Ateena–Istanbul) sekä lentoyhteydet
+  (`airRoutes`: Ateena–Istanbul, Istanbul–Moskova, San Francisco–Tokio,
+  San Francisco–New York).
+- **Laatat.** `tokens.counts` 14 → 16 (`isoAarre` 4 → 5, `pieniAarre`
+  8 → 9): `js/game.js enterWorld` heittää, jos laattoja ja kaupunkeja
+  ei ole yhtä monta.
+- **`minCityDistance` 45 → 20.** Laudan mittakaavassa Ateena–Kairo on
+  45 yksikköä eli noin 1 100 km. Istanbul on Ateenasta 500 km ja
+  San Francisco Los Angelesista 550 km, joten oikeilla paikoillaan ne
+  ovat 21 ja 27 yksikön päässä naapuristaan — raja ei voi olla 45 ilman
+  että kaupunki siirretään väärään paikkaan. Nimien ja laattojen
+  ruuhkaa vartioi oma testinsä, joka on tämän laudan todellinen
+  visuaalinen ehto; sen vuoksi kolme nimilappua siirtyi (New York
+  ylös, Kairo alas, Ateena 16 yksikköä länteen).
+
+**Los Angeles jää laudalle** mutta ei ole enää valittava eikä näy
+lähtövalinnassa (`ETUSIVUN_NAKYVAT` seuraa kohteita).
+
+**Kysymykset ja tiedot.** Laudan eheyssääntö vaatii jokaiselle
+kaupungille viisi visakysymystä ja kaksi tiesitkö-tietoa, joista
+toinen isoisän äänellä (tests/rules.test.mjs). Ne kirjoitettiin
+molemmille (js/packs/maailma-questions.js). Tämän laudan kysymyksiä ei
+kysytä pelissä — lähtövalinnasta lennetään heti maailmankartalle —
+mutta **isoisän merkinnät ovat Opuksen käsialaa ja päätoimittajan
+tarkistettava kaanonia vasten** (docs/roolitus.md).
+
+Sisältö on molemmilla valmiina: Istanbulilla `js/packs/fokusvirta-
+istanbul.js` sekä europe- ja middleeast-pakat, San Franciscolla
+northamerica-pakka.
+
+Kaksi paikkaa oletti yhtä kohdetta:
+
+- **Esilämmitys** (`ui.esilammitaAvaus`) latasi kohdemaan laudan ja
+  taiteen valmiiksi avaustekstin aikana, ja se oli ehdollistettu
+  `ETUSIVUN_KOHTEET.size !== 1` -portilla. Nyt esilämmitetään **yksi ja
+  vain yksi kohde: Ateena** (`ESILAMMITETTAVA_KOHDE`). Neljälletoista
+  kohteelle se olisi neljätoista lautaa ja neljätoista taidepohjaa
+  avaustekstin alla — juuri se töksähdys, jonka esilämmitys on
+  tarkoitettu poistamaan. Ateena on tarinan ensimmäinen reitti ja siten
+  todennäköisin valinta; muut lentävät ilman etumatkaa kuten ennen
+  optimointia. Rng-järjestys säilyy: talletus on kohdekohtainen
+  (`esilammitys.kohde === city.id`), ja muille kaupungeille repliikki
+  arvotaan `doPickStart`issa.
+- **`drawTargets`** (tasokartan valintarenkaat) oli jo monikohteinen
+  silmukka; vain kommentti puhui yhdestä kohteesta.
+
+**Livian avauskupla 4** — *"Ai niin, ja anteeksi valikoima: pöllö on
+tarkistanut vasta yhden reitin. Ateenasta se alkaa."* — on
+beta-rajoitus tarinan sisällä, ja se alkoi valehdella neljäntoista
+renkaan äärellä. Teksti **jää kaanoniin** (`LIVIAN_AVAUS`, oma
+äänitteensä), mutta näyttö on ehdollinen: `livianAvausSarja(kohteita =
+ETUSIVUN_KOHTEET.size)` suodattaa kuplan pois, kun kohteita on enemmän
+kuin yksi. **Ääni seuraa näyttöä:** äänitteen tiedostonimi tulee
+repliikin KAANONISESTA järjestysnumerosta, joten sarja kuljettaa
+indeksin mukanaan (`soitaLivianAani(ui, 'avaus', rivi.indeksi)`) — ilman
+sitä ohitetun kuplan äänite soisi seuraavan kuplan kohdalla.
+
+### 16.5 Omistajan ehto: jokaiseen pääsee, ja saapuminen toimii
+
+v1119 piilotti kohteet siksi, että osa niistä lupasi matkan, jota ei
+ollut. Ehto on nyt koneellinen:
+**`tools/savukkeet/savuke-aloitusvalinta-13.mjs`** ajaa jokaisen
+kohteen omassa selainkontekstissaan tyhjästä muistista —
+aloitusportti, "Valitse aloituskaupunki", merkin napautus — ja mittaa
+viisi asiaa: merkki ja huomiorengas, lento loppuun asti, matkaaja
+perillä oikeassa kaupungissa, kaupungin napautus avaa lehden, eikä
+sivulla ole yhtään `pageerroria`. Tulos on taulukko kaupungeittain.
+
+```
+NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-aloitusvalinta-13.mjs
+NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-aloitusvalinta-13.mjs --kohde tokio
+```
+
+Merkin saa olla pallon takapuolella: kohteet eivät mahdu yhteen
+näkymään, ja takapuolen kaupungit haetaan palloa kääntämällä. Savuke
+raportoi, montako merkkiä on kuvassa etupuolella. Tiedoston nimessä on
+13, koska kohteita oli niin monta ensimmäisellä kierroksella; joukko
+luetaan aina `ETUSIVUN_KOHTEET`-vakiosta.
+
+Vartijat: tests/aloitus-pallolla.test.mjs (rajauksen luvut Nodessa,
+pyörinnän poisto, huomiorenkaan mitta ja syke, kohteiden luettelo,
+Livian sarja), tests/livia-aani.test.mjs (äänite kaanonin numerolla),
+savuke-etusivupallo E9b/E9b2/E9e/E9f (kaikki merkit, rengas
+jokaisella, pallo paikallaan) ja savuke-aloitusvalinta-13.
