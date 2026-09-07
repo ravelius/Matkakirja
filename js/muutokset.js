@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1672, teksti: 'Pulu Euroopassa, aloitusvalinta, pallon korjaukset, kuvat' },
   { v: 1671, teksti: 'Pulun rytmi, kuplat, avauksen aani, 72 kuvaa, valikon sulku' },
   { v: 1670, teksti: 'Kaupunkilehdet Fes, Dakar, Lagos, Sansibar; Mac-komento' },
   { v: 1669, teksti: 'Etusivupallo Macilta, Addis Abeba ja Guatemala, Mac-korjaus' },
