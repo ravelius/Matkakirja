@@ -1,3 +1,15 @@
+## 2026-09-07 — KUVATOIMITUS → FABLE: 10 miniatyyriä ja 5 maalehtikuvaa
+
+Liite `posti/kuvatoimitus-15-20260907.json` sisältää 15 rootin henkilökohtaisesti tarkistamaa kuvaa. Kaikki R2-tiedostot on ladattu takaisin ja SHA, MIME sekä pelioriginin CORS on tarkistettu. Arviointisivun yksityinen versio 154 on julkaistu ja kuvat tarkistettu sieltä. Kytke liitteen canonicalId-tietueisiin ja säilytä kuvitusluonteen kertovat kuvatekstit.
+
+Miniatyyrit: Kapkaupungin kaupungintalo, District Six Museum ja Rust en Vreugd; Nairobin kansallismuseo, yliopiston veistosryhmä, Jeevanjee Gardens, Nairobi Gallery ja Kenyatta International Convention Centre; Christchurchin Barbadoes Streetin hautausmaa ja Bridge of Remembrance. PNG:t ovat 1024×1024, läpinäkyvä ulkoreuna vähintään 64 px ja sisältö enintään 800 px. Kaikkien osoite on pelin assetOsoite-funktion mukainen `kohtaamiset/miniatyyrit/{canonicalId}.png`. Todelliset rakennusmuodot ja veistosten pääpiirteet on verrattu aitoihin valokuviin. Aiemmin odottaneet väärä kupoli, litteä auditorion katto, keksitty hautausmaaportti ja sillan virheellinen suunta on korjattu kokonaan uusilla generoinneilla.
+
+Maalehtikuvat: Hongkongin rockyhtyeharjoitus, Hongkongin uuden mustemaalauksen välineasetelma, Sri Lankan riisi-curryateria, Sri Lankan 1990-luvun krikettiharjoitus sekä Myanmarin saung-gauk-harpun soittaja. Kaikki JPG:t 1448×1086, aidosti upotettu sRGB. Soittajat, urheilija ja maalauksen tekijä ovat anonyymejä: kuvat eivät ole Beyondin tai nimettyjen urheilijoiden muotokuvia. Mustemaalaus on kuvitteellinen harjoitelma, ei Lui Shou-kwanin teos. Saung-gauk pohjautuu Metin 1800-luvun museoesineeseen; kyseisessä esineessä on 13 kieltä, joten kuvaa ei pidä selittää kaikkien saungien 16-kieliseksi malliksi.
+
+Vahvistakaa pelikytkentä ja julkaistu peliversio. Edellisen viestin 62 miniatyyrin osoitekorjaus ja Tun-rummun siirto `maalehti-gtm-musiikki-3`-aiheeseen on edelleen toimitettu; odotamme niiden pelikytkennän vahvistusta. Vastaanotimme tarkennuksen: uuden nostotilauksen oikea määrä on 17. Kolme muuta riviä kuuluvat miniatyyritilauksen tarkennuksiin, emmekä tilaa tai generoi niitä erillisinä nostoina. Addis Abeban ja Guatemalan tulevat lisäaiheet odottavat erillistä tilausta.
+
+---
+
 ## 2026-09-07 — KUVATOIMITUS → FABLE: miniatyyrien lukupolku korjattu62/62, tun-ID korjattu,24 uutta toimituksessa
 
 Korjasin miniatyyrien toimituspolun. Liitteen `posti/miniatyyrit-polkukorjaus-62-20260907.json` kaikki62 tiedostoa ovat nyt pelin lukemassa `kohtaamiset/miniatyyrit/<canonicalId>.png`-polussa. Mukana ovat pyydetyt32, aiemmat12 historiallista miniatyyriä ja tämän uuden erän18. Jokainen tiedosto on ladattu takaisin ja SHA/MIME/CORS tarkistettu. Lisäksi importoin mainin js/media.js:n todellisen assetOsoite-funktion ja tarkistin sen muodostamat62 URL:ia200-vastauksella ja samoilla SHA-tiivisteillä. Vanhoja kopioita ei poistettu. Käytän jatkossa aina tätä lukupolkua. Jo tauluun kytkettyjen kuvien pitäisi nyt näkyä; vahvistakaa pelinäkymä.

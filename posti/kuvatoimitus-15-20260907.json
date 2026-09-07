@@ -1,0 +1,385 @@
+{
+  "createdAt": "2026-09-07T09:24:23.720924+00:00",
+  "message": "10 miniatyyriä ja 5 maalehtikuvaa, root- ja lähdetarkistettu.",
+  "items": [
+    {
+      "id": "maalehti-hkg-musiikki-3-r20260907-v3",
+      "canonicalId": "maalehti-hkg-musiikki-3",
+      "fileName": "maalehti-hkg-musiikki-3-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kuviteltu 1980-luvun lopun hongkongilainen rockyhtye harjoittelee väljässä studiossa; jäsenet ovat anonyymejä eikä kuva esitä Beyondin oikeita kasvoja.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-hkg-musiikki-3-r20260907-v3.jpg",
+      "sha256": "d6db93be4cd38f2f42721d368b8cdaa38f449e80893cd19632c63d3093d134c6",
+      "bytes": 615984,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Entirely new camera-like historical editorial photo, landscape 3:2 native composition designed for a later central 4:3 crop. Show an anonymous four-person late-1980s Hong Kong rock rehearsal, all backs to camera or faces hidden in deep side shadow: singer-guitarist, guitarist, bassist, seated drummer. Every head, shoe, guitar/bass headstock, amplifier, drum and cymbal stand fully visible. The entire ensemble and all instruments together occupy AT MOST the central 50% of the image width and 55% of its height, with a very wide empty rehearsal-room environment and at least 25% visual breathing room on all native edges. Period acoustic panels, cables and small cassette deck. No Beyond likenesses, readable posters, brands or text. Explicit illustrative reconstruction, not a real Beyond rehearsal. Sharp photoreal 1990-era film, warm tungsten, no artificial blurred border or vignette.\n",
+      "sources": [
+        "https://www.hketosin.gov.hk/assets/events/2019/apr/Speech_20190418.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Whole principal subjects visible, clean sharp native environment, no artificial padding; source-context check pending. Root read primary HongKong government speech establishing Beyond context; anonymous rehearsal is illustrative. Does not claim Swahili lyrics as a complete-language song."
+    },
+    {
+      "id": "maalehti-lka-ruoka-0-r20260907-v3",
+      "canonicalId": "maalehti-lka-ruoka-0",
+      "fileName": "maalehti-lka-ruoka-0-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Sri Lankan riisi-curryateria banaanilehdellä: riisiä, useita curryja ja lisukkeita sekä papadum.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-lka-ruoka-0-r20260907-v3.jpg",
+      "sha256": "ac2b5b95b8a6855c7927c78f1d865fe2ffbb81a83ffa8083d6c7e0cee5807c45",
+      "bytes": 1008124,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Entirely new sharp overhead editorial food photograph, landscape 3:2 native composition designed for later central 4:3 crop. A complete Sri Lankan rice-and-curry arrangement sits small and centered on a large woven mat: whole banana leaf, rice mound, seven complete small bowls of dhal, eggplant, green banana, fish curry, coconut sambol, mallum and pickle, plus one whole papadum. The entire leaf, every bowl, spoon and food item together occupy AT MOST the central 50% of image width and 55% of height, leaving at least 25% real sharp woven-mat breathing room on all native edges. Nothing clipped. No hands, people, text or props. Natural daylight, crisp authentic textures everywhere, no artificial blurred border or vignette.\n",
+      "sources": [
+        "https://www.srilanka.travel/culinary-tourism/food-range.php"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Whole principal subjects visible, clean sharp native environment, no artificial padding; source-context check pending. Root read official Sri Lanka Tourism rice-and-curry description, lines61–64: curries, sambol and papadum match photographed-style illustration. Exact bowl selection not a canonical standard meal."
+    },
+    {
+      "id": "maalehti-lka-urheilu-0-r20260907-v3",
+      "canonicalId": "maalehti-lka-urheilu-0",
+      "fileName": "maalehti-lka-urheilu-0-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kuviteltu 1990-luvun sri lankalainen yhden päivän krikettiharjoitus: anonyymi lyöjä värillisissä aikakauden henkisissä varusteissa valmistautuu hyökkäävään avaamiseen.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-lka-urheilu-0-r20260907-v3.jpg",
+      "sha256": "15e9c974f778370b12cdd45ec77d6f7bf8863c1aa52f84f49cf54e77e766ac3c",
+      "bytes": 520949,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Entirely new camera-like 1990s sports editorial photograph, landscape 3:2 native composition designed for later central 4:3 crop. Show a distant anonymous Sri Lankan cricket batsman in a clearly illustrative 1996-era one-day practice scene, wearing a period-appropriate colored blue uniform with restrained yellow accents and an unbranded dark helmet; do not claim exact match-day kit and do not resemble any named player. Face hidden by helmet grill and side angle. Entire helmet, body, both shoes, complete wooden bat including tip, stumps and crease all visible. Player, bat and stumps together occupy AT MOST the central 48% of width and 55% of height, leaving at least 25% real field/stadium space on every native edge; bat tip far from top. Sharp photoreal 1990s press film, no text, logos, blurred border or vignette.\n",
+      "sources": [
+        "https://www.icc-cricket.com/tournaments/cricketworldcup/news/injury-hit-sri-lanka-turn-to-resilience-after-challenging-world-cup-2023-build-up"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Whole principal subjects visible, clean sharp native environment, no artificial padding; source-context check pending. Root read ICC lines26–39:1996opening partnership and first15over attacking tactic confirmed. Candidate is anonymous practice setup with period-inspired coloured kit, not an exact named-player match photo."
+    },
+    {
+      "id": "maalehti-hkg-kuvataide-1-r20260907-v4",
+      "canonicalId": "maalehti-hkg-kuvataide-1",
+      "fileName": "maalehti-hkg-kuvataide-1-r20260907-v4.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Hongkongin uuden mustemaalauksen innoittama kuvitteellinen maisemaharjoitelma, mustekivi ja siveltimet. Harjoitelma ei ole nimetyn taiteilijan teos.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-hkg-kuvataide-1-r20260907-v4.jpg",
+      "sha256": "a92e8492277e217799c5e44904185cd437fde527b67315ba0bfb1c9e04480714",
+      "bytes": 863743,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 4:3 top-down camera-like editorial still life on a broad warm wooden studio table. Center one entire rice-paper sheet bearing a clearly fictional, original Hong Kong New Ink-inspired abstract landscape in black, grey and one restrained rust-red accent; it must not copy or claim to be any Lui Shou-kwan artwork. Place one compact black inkstone immediately beside the paper's right edge and two complete brushes close below the paper, so paper, inkstone and brushes form one compact group occupying no more than the central 45–50% of the native frame. Leave at least 25% genuine sharp uninterrupted tabletop on all four sides of the whole group. Entire paper and every tool fully visible; no seals, calligraphy, letters, signatures, readable text, people, border, padding, blurred extension or copied background. Crisp natural overhead light and tangible paper, stone and wood textures.\n",
+      "sources": [
+        "https://hk.art.museum/Exhibition_publication/Pamphlet_when_form_matters.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Whole sheet, inkstone and two brushes fit compact central group with generous sharp native tabletop on every edge. Original invented ink exercise, not attributed to Lui Shou-kwan. Root read museum exhibition catalogue page 1 account of New Ink context. "
+    },
+    {
+      "id": "maalehti-mmr-musiikki-1-r20260907-v2",
+      "canonicalId": "maalehti-mmr-musiikki-1",
+      "fileName": "maalehti-mmr-musiikki-1-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Anonyymi burmalainen muusikko soittaa saung-gauk-harppua. Kuvitus pohjautuu 1800-luvun museoesineen rakenteeseen.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-mmr-musiikki-1-r20260907-v2.jpg",
+      "sha256": "4747a30089a64b138729e8ac95d18655eea52883e2288c5997534bc3de187bda",
+      "bytes": 527225,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 4:3 museum-informed documentary photograph of an anonymous Burmese musician seated on a mat, face turned away, playing a saung-gauk whose physical form follows the attached Metropolitan Museum object photograph. The complete harp must be visible: low boat-shaped gold-lacquered body with deerskin belly, four short support legs, one naturally curved arched neck ending in a small leaf-like tip, red tuning cords, and exactly 13 clearly separable strings as on this specific 19th-century Met instrument—not 16 or 30. Keep player, both hands, and entire instrument within the central 55–60% of the frame, leaving at least 20% genuine sharp room and mat around all edges. No clipped neck, tassels, body, hands, or feet. No text, logo, border, blur padding, copied background, or named face. Crisp camera-like realism, warm natural interior light.\n",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/502040"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "PASS: root viewed actual Met 502040 object and read museum description. Complete bowed neck, leaf tip, low boat body, red tuning cords and silk string group retained; anonymous musician fully visible with wide margins. Caption must say museum-inspired illustration, not facsimile or named person. "
+    },
+    {
+      "id": "kapkaupunki-kaupungintalo",
+      "canonicalId": "kapkaupunki-kaupungintalo",
+      "fileName": "kapkaupunki-kaupungintalo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Kapkaupungin kaupungintalo kellotorneineen miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kapkaupunki-kaupungintalo.png",
+      "sha256": "6b2d801abb2d8cd8e4e0446cea20475e882d77afe653e032bc00571a9423a1b8",
+      "bytes": 988191,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new isolated Matkakirja M3 miniature using the attached actual Cape Town City Hall photograph as the controlling reference. Depict the broad honey-coloured Edwardian sandstone facade with long symmetrical wings, central triple-arched entrance, balcony, six giant Corinthian columns and richly carved triangular pediment. Correct the clock tower literally from the photo: square clock stage with the real circular clock dial; above it a compact SQUARE-BASED STEPPED FOUR-SLOPE HIPPED ROOF made of crisp straight planar facets and angular roof breaks, with a small square lantern and tiny finial. The roof must look angular and pyramidal/hipped, not rounded: absolutely no onion dome, bulbous cupola, hemisphere, octagonal dome or curved copper cap. Preserve the visible corner pinnacles and upper openings. Entire building within an 800px box on 1024 square with at least 64px transparent outer margin. Restrained warm sepia ink and light golden watercolor, crisp factual architecture. No people, cars, signs, sky, background plate, beige paper, glow or halo. Perfectly flat pure #00FF00 background for technical alpha extraction.\n",
+      "sources": [
+        "https://zamaniproject.org/assets/images/img-0614-medium-768x1024.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "PASS: square-based angular stepped hipped clock crown now follows actual front photograph; facade five oculi and three entry arches preserved."
+    },
+    {
+      "id": "kapkaupunki-district-six-museo",
+      "canonicalId": "kapkaupunki-district-six-museo",
+      "fileName": "kapkaupunki-district-six-museo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "District Six Museumin historiallinen julkisivu miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kapkaupunki-district-six-museo.png",
+      "sha256": "69d299e70324369b5953a66644ce3523cd46e129305c4ca0c13f5ffb28700151",
+      "bytes": 938906,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Entirely new M3 miniature from both actual District Six Museum photos. Copy the real FRONT OPENING LAYOUT literally. At the upper front there must be THREE VISIBLE GLAZED WINDOWS: one tall narrow central round-topped stained-glass window, plus one tall narrow rectangular glazed window to its left and one tall narrow rectangular glazed window to its right. All three must contain visibly dark glass panes; the side two must NOT be blank stucco panels, blind niches, banners or signs. Keep the real stepped softly rounded parapet, scroll plaster, cornice, two ground-floor arched wooden doors separated by a broad central wall panel, and the long left side with repeated tall arched window bays and thin red roof strip. No text, banners, palms, people, cars, generic triangular gable, tower or steeple. Warm sepia ink and pale grey watercolor. Entire object within 800px on 1024 square, >=64 transparent margin. Flat pure #00FF00 chroma background, no paper mat, glow or halo.\n",
+      "sources": [
+        "https://gdafricadosul.b-cdn.net/wp-content/uploads/2020/11/district-six-museum-cidade-do-cabo.jpg",
+        "https://images.squarespace-cdn.com/content/v1/648b7b30922aef7d9d690373/1761650497298-BGYB2E7I16VGO8FH1SAN/Z63_0345.JPG"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "PASS: additional straight-on source shows curved three-part decorative pediment with tall central rounded window, lower side recesses/windows and two doors. v5 retains these defining features; small ornamentation simplified."
+    },
+    {
+      "id": "kapkaupunki-rust-en-vreugd",
+      "canonicalId": "kapkaupunki-rust-en-vreugd",
+      "fileName": "kapkaupunki-rust-en-vreugd.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Kapkaupungin Rust en Vreugd -talon julkisivu miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kapkaupunki-rust-en-vreugd.png",
+      "sha256": "d7fa2461d1bd735a5ef935532a7df71ea781e83b0d4b31b60e9ee0400f1055d9",
+      "bytes": 1442359,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 architectural miniature using the supplied actual Iziko photograph as the controlling reference. Depict the real Rust en Vreugd front exactly as a compact salmon-pink rectangular Cape townhouse with only TWO main floors above one raised open basement level: basement with three dark arched openings and side stair, first main floor with four tall white columns supporting a shallow balcony and ornate dark central rococo door, second main floor with three principal window bays and continuous white balcony rail, then a flat white cornice/parapet. Do not add a third main floor, gable, pitched roof, tower, dormer or fantasy Cape Dutch silhouette. Include only a tiny restrained formal garden strip. Fine warm sepia ink and restrained watercolor, crisp facade detail. No people, text, logos, letters or numbers. Complete building centered with every part inside 76% of 1024 canvas. Perfectly flat pure #00FF00 background, no gradient, halo, glow, scenery, ground plate or shadow rectangle.",
+      "sources": [
+        "https://www.iziko.org.za/wp-content/uploads/2022/02/IMG_20211221_082605-scaled-1.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Compared actual Iziko photograph with final: two main floors over raised base, four columns, full balcony and flat cornice retained. Minor miniature simplification."
+    },
+    {
+      "id": "nairobi-kenian-kansallismuseo",
+      "canonicalId": "nairobi-kenian-kansallismuseo",
+      "fileName": "nairobi-kenian-kansallismuseo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Nairobin kansallismuseon pääsisäänkäynti ja siipi miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/nairobi-kenian-kansallismuseo.png",
+      "sha256": "7bcb60c0ba329f08750bc57b418b72f5f7cd52d30e5c7dcc3083873eca691270",
+      "bytes": 645191,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 architectural miniature using the supplied actual Nairobi National Museum photograph as the controlling reference. Render the real broad low Museum Hill frontage: long pale beige stone main block under a shallow red tile roof, a narrow clerestory band of small square windows directly beneath the eaves, recessed entrance with exactly FOUR slender stone columns, broad steps, one shallow blind round arch niche on each side, and the attached lower white wing leading to the short square tower at right with a red hipped roof and narrow vertical slots. Preserve the low horizontal mass and true tower shape; do not invent a tall tower, dome, portico pediment, extra columns or extra floors. Fine warm ink and restrained watercolor. No palms obscuring the facade, people, flags, text, logos, letters or numbers. Whole building centered inside 76% of 1024 canvas. Perfect flat pure #00FF00 background, no gradient, halo, glow, scenery, ground plate or shadow rectangle.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/Special:Redirect/file/Exterior_of_Nairobi_National_Museum%2C_Kenya_%281%29.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual front comparison confirms four columns, clerestory windows, long low wing and short square tower."
+    },
+    {
+      "id": "nairobi-yliopisto",
+      "canonicalId": "nairobi-yliopisto",
+      "fileName": "nairobi-yliopisto.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Nairobin yliopiston abstraktin veistosryhmän innoittama miniatyyri.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/nairobi-yliopisto.png",
+      "sha256": "1bf6c9316c31d3e8256a74f170402a51eb06d4afde9d77d2ae3281ccf2ceef78",
+      "bytes": 774603,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 sculptural miniature using the supplied actual University of Nairobi fountain photograph as the controlling reference. Reproduce the real abstract stone fountain group rather than an animal: at left a thick grey looping pierced stone mass with two large rounded holes and a long crescent blade rising leftward; at center/right a separate very tall narrow reddish-brown curved blade arching inward with a hollow slit near its upper section; at far right a small dark rounded stone form. Set all three in one shallow oval water basin. Preserve their exact relative heights, holes, curves and spacing. Absolutely no giraffe, animal body, neck, legs, head, figurative statue or invented relief. Fine sepia ink and restrained watercolor, crisp stone texture. No people, campus buildings, text, logos, letters or numbers. Entire sculpture and basin centered inside 76% of 1024 canvas. Perfect flat pure #00FF00 background, no gradient, halo, glow, scenery, base plate or shadow rectangle.",
+      "sources": [
+        "https://cdn.standardmedia.co.ke/images/wysiwyg/images/o0Ryrf7qSemjIWLvziKUJaGpsYsVAVyJtIrtDC9f.png"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual sculpture comparison: perforated curved grey mass, separate taller curving slab, small pierced stone; no literal giraffe."
+    },
+    {
+      "id": "nairobi-jeevanjeen-puutarha",
+      "canonicalId": "nairobi-jeevanjeen-puutarha",
+      "fileName": "nairobi-jeevanjeen-puutarha.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Jeevanjee Gardensin patsaan ja jalustan innoittama miniatyyri.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/nairobi-jeevanjeen-puutarha.png",
+      "sha256": "8a09f7773aee5f8603d6acfec7650d3495eb9e9d658c2329839296d5adcd32e8",
+      "bytes": 614194,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a single 1024×1024 M3 miniature strictly from the attached actual Jeevanjee Gardens statue photo. Critical pose: viewer-left hand holds the walking stick vertically down; viewer-right forearm lies diagonally ACROSS his torso, with that hand resting flat against the opposite upper chest/shoulder under the shawl. The crossed arm is held close to the body, elbow lowered. It must NOT point outward, reach forward, wave, or enter a pocket. Preserve close cap, broad shawl wrapped diagonally around both shoulders/chest, long knee-length tunic, straight legs, square red-brick/pale-stone pedestal and a small fragment of the low angular enclosure. Bronze-brown statue. No plaque writing, text, logos, letters, numbers, or other people. Finely drawn ink with restrained watercolor. Whole compact composition within 800×800 pixels centered with clear padding. Pure #00FF00 background, no green tint/spill on subject, no distant shadow.",
+      "sources": [
+        "https://www.kenyans.co.ke/files/styles/article_inner/public/images/media/People%20rest%20at%20Jeevanjee%20Gardens%20in%20Nairobi.jpg.webp?itok=XGZs5k-F"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual pose comparison: cane on viewer left and forearm across chest under shawl; hat, tunic and pedestal retained."
+    },
+    {
+      "id": "nairobi-gallery",
+      "canonicalId": "nairobi-gallery",
+      "fileName": "nairobi-gallery.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Nairobi Galleryn historiallinen julkisivu miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/nairobi-gallery.png",
+      "sha256": "f3cfd91ad106fda572f06f437b07f3e1bc92311a9363bdac6c269c0b0b3ef818",
+      "bytes": 973231,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a single 1024×1024 M3 travel-game miniature of the Nairobi Gallery, grounded strictly in the attached actual front photograph. Preserve the real low one-storey dark-grey natural-stone facade: central projecting portico with exactly four pale columns, a broad curved/arched pediment, flat balustraded parapet and small urn finials; shallow side wings with real arched niches and circular windows. The central crest area must be a plain undecorated stone cartouche: absolutely no coat of arms, animals, emblem, logo, writing, date, letters, numbers, signs or banners anywhere. Do not add any dome, cupola, tower, upper storey or fantasy roof. Finely drawn ink and restrained watercolor, compact complete landmark centered, architecture entirely within an 800×800 pixel box with at least 112 pixels empty around every side. Pure solid #00FF00 chroma green background, no green reflections or tint, no distant shadow.",
+      "sources": [
+        "https://museums.or.ke/wp-content/uploads/2024/02/nairobi-gallery.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual official facade compared; root viewed corrected dark and light composites. Local metal-fence despill removed green tips, vegetation preserved."
+    },
+    {
+      "id": "nairobi-kenyattan-kongressikeskus",
+      "canonicalId": "nairobi-kenyattan-kongressikeskus",
+      "fileName": "nairobi-kenyattan-kongressikeskus.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Kenyatta International Convention Centren tornin, auditorion ja jalustan miniatyyri.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/nairobi-kenyattan-kongressikeskus.png",
+      "sha256": "d50f3585a73f97da277c594a3f6540cd272918d96953445483fc4458bc23706d",
+      "bytes": 1046385,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a single 1024×1024 M3 travel-game miniature of the actual Kenyatta International Convention Centre, strictly grounded in both attached photographs. Preserve the tall cylindrical terracotta tower with many repeated horizontal balcony bands and broad dark saucer crown. Beside it, reproduce the auditorium roof's defining TWO-SLOPE profile exactly: a tall steep narrow upper cone from the apex down to a clear break/eave line, then a distinctly shallower, much wider flaring lower skirt projecting outward. The upper cone and lower skirt must read as two different angles, never one straight low tent roof. Beneath the flared skirt, show the real heavy inverted/angled concrete supports and tiered podium. Keep the auditorium lower than the tower and their true relative proportions. No flags, signs, text, logos, letters, numbers, skyline, people or fantasy additions. Finely drawn ink with restrained terracotta, charcoal and warm concrete watercolor. Entire complex within 800×800 pixels, centered with clear padding. Pure solid #00FF00 chroma green background, no green reflection or tint, no distant shadow.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Auditorium_-_Kenyatta_International_Conference_Center.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Fresh full generation compared with actual auditorium photograph: steep upper cone, visible slope break, flared lower roof, heavy angled supports and tiered podium. Dark and light composites personally viewed by root."
+    },
+    {
+      "id": "christchurch-barbadoes-streetin-hautausmaa",
+      "canonicalId": "christchurch-barbadoes-streetin-hautausmaa",
+      "fileName": "christchurch-barbadoes-streetin-hautausmaa.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Barbadoes Streetin hautausmaan vanhojen hautojen ja kasvillisuuden miniatyyrikatkelma.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/christchurch-barbadoes-streetin-hautausmaa.png",
+      "sha256": "120dfc6c141357f2e335e9c3f7b50d7bdb8db0d920d99670d3803121f63415f6",
+      "bytes": 1086961,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a single 1024×1024 M3 travel-game miniature grounded strictly in the attached actual photograph of Barbadoes Street Cemetery, Christchurch. Depict a compact irregular patch of the real old cemetery: mixed weathered Victorian headstones of varied modest shapes and heights, one stone cross, shallow waterlogged rectangular grave plots, wet grass, low scrub and one cabbage tree cluster at the back right. Do not invent an entrance gate, gateposts, fence, chapel, mausoleum, grand monument, readable epitaphs, text, letters, numbers, logos, or people. Preserve the damp, aged character and the actual scale relationships. Finely drawn ink with restrained moss-green, grey, ochre and muted brown watercolor. Entire cemetery vignette within 800×800 pixels, centered with generous padding. Pure solid #00FF00 chroma background, no green reflection/tint on stones, no distant shadow.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/Special:Redirect/file/Barbadoes%20Street%20Cemetery%2C%20Christchurch%2C%20New%20Zealand%2005.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual cemetery photograph compared: weathered headstones, wet grave plots, cross and cabbage tree; invented gate removed."
+    },
+    {
+      "id": "christchurch-muistosilta",
+      "canonicalId": "christchurch-muistosilta",
+      "fileName": "christchurch-muistosilta.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Christchurchin Bridge of Remembrance muistokaarineen ja Avonjoen ylittävine siltoineen miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/christchurch-muistosilta.png",
+      "sha256": "00701509ade66cc5153ed4d3c8c6dc0ab911f60735d1db746137b970044d2503",
+      "bytes": 1099133,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a single 1024×1024 M3 travel-game miniature of Christchurch's Bridge of Remembrance, strictly grounded in BOTH attached actual photos: the frontal memorial-arch photo and the whole side view showing its physical relationship to the Avon River bridge. Show a three-quarter view: the tall pale-stone memorial gateway at the near end of a low single-span stone road bridge that extends away from and through the gateway across the river. The river arch belongs to the bridge deck BEHIND/through the gateway; never place a separate transverse bridge arch or visible pool directly across the gateway's front opening. Preserve the central tall round memorial opening, two smaller side openings, reclining lions, low parapets, and one shallow segmental river span. Omit all inscriptions, battle names, dates, emblems, flags, lamps with lettering, logos, letters and numbers. Finely drawn ink with restrained pale-stone, grey-blue and muted green watercolor. Compact complete structure within 800×800 pixels, centered with generous padding. Pure solid #00FF00 chroma background, no green spill, no distant shadow.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Christchurch_Avon_River_Bridge_of_Remembrance_2016_DSCN7485.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual whole-bridge side photograph compared: arch sits at one end of bridge across Avon, new image preserves bridge direction and attached river instead of separate crossing geometry."
+    }
+  ],
+  "reviewPublished": true,
+  "reviewVersion": 154,
+  "gameIntegrationClaimed": false
+}
