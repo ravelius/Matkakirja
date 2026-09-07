@@ -185,6 +185,28 @@ Kaksi lisäsääntöä:
 - Sama tehokeino ei saa toistua vierekkäisissä kaupungeissa: kaksi
   "opas sanoi" -tekstiä peräkkäin syö molemmat.
 
+## Kohtaamishenkilöt (kaanon 7.9.2026)
+
+Jokaisen kaupungin aarrekohtaamisessa on YKSI nimetty nykyhetken
+paikallinen (js/tyohuone-kehitys-data.js KAARI_PAKETIT). Omistaja
+valitsee henkilön kuvaputken arviointisivulla, ja kaari kirjoitetaan
+valitun kuvan mukaan — henkilö lukitaan vasta kuvavalinnalla.
+Henkilöä koskevat kolme kiellettyä odotusta (isoisan-raamattu.md):
+hän ei tunnista Horatiota, ei odota perillistä eikä kanna perittyä
+lupausta; hän lukee vanhaa kirjaa oman ammattitaitonsa ja
+uteliaisuutensa varassa, ja löytö on aina kaupungin kätkö.
+
+Omistajan palautteesta 7.9.2026 vaihdetut henkilöt: Tallinna opas
+Leena (Raatihuoneentori, vanhankaupungin päivät), Tromssa
+venemekaanikko Sigrid (satamaverstas keskiyön auringossa), Medina
+punoja Safa (paja kaupungin ulkopuolella — Horatio ei astu
+kaupunkiin), Kiova näyttelymestari Danylo (Kultaisen portin museo;
+1873 portti oli raunio, ei kupolia), Lappi poronhoitaja Reetta
+(talvinen metsä päivänvalossa) ja Nikosia seripainotaiteilija Marios
+(Chrysaliniotissan käsityöpiha; henkilö vahvistetaan omistajan
+kuvavalinnalla, vaihtoehtona Elena). Vanhat henkilöt (Eve, Kjell,
+Omar, Taras, Aslak, Andreas) poistuivat kaanonista.
+
 ## Avoinna (mietitään yhdessä)
 
 - Kohtaamiset: saisiko rosvo tai lentokenttävirkailija oman repliikin
