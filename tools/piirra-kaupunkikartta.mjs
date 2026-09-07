@@ -3799,6 +3799,87 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -30.0195, etela: -30.0465, lansi: -51.2405, ita: -51.2095 },
     meri: true,
   },
+  montevideo: {
+    /*
+     * NIEMI JA 18 DE JULIO (7.9.2026). Ruutu on 3,1 × 1,7 kilometriä
+     * ja se on tarkoituksella leveä: Montevideon vanhakaupunki on
+     * kapean niemen kärjessä ja koko muu keskusta jatkuu siitä yhtenä
+     * nauhana itään 18 de Julio -kadun suuntaisesti. Ruudun länsipää
+     * on Ciudad Viejan kärki, itäpää kaupungintalo.
+     *
+     * KUVASUHDE 1,9 ON PELIN LEVEIN, JA SE MITATTIIN ENNEN VALINTAA.
+     * Kartaston aiempi ääripää oli Sarajevo (1,99) ja Praha (1,96),
+     * joten ruutu pysyy sarjan sisällä. Neliömäisempi rajaus olisi
+     * vaatinut joko kaupungintalon pudottamista (jolloin kartalta
+     * katoaisi koko Centro) tai eteläreunan venyttämistä Río de la
+     * Platan ylle, eli puolet kuvasta olisi ollut vettä.
+     *
+     * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA (New Yorkin sääntö).
+     * Lehden aiheet ovat Cabildo ja Plaza Matriz, katedraali, Ciudad
+     * Vieja, satama, rambla, Palacio Salvo, Teatro Solís, Barrio Sur
+     * ja Estadio Centenario. Yksikään kartan kahdeksasta kohteesta ei
+     * ole niiden aihe, ja siksi ruudun tunnetuimmat talot puuttuvat
+     * kartalta tarkoituksella.
+     *
+     * CIUDAD VIEJAAN MAHTUU VAIN KOLME KOHDETTA. Kortteli on niin
+     * tiivis, että 200 metrin sääntö karsii: Palacio Taranco on 188
+     * metriä MAPI-museosta, Hospital Maciel 176 metriä ja Correo
+     * Uruguayo 162 metriä pörssistä. Niistä kartalle otettiin MAPI,
+     * pörssi ja Torres Garcían museo, jotka ovat 380–433 metrin
+     * välein.
+     *
+     * PALACIO LEGISLATIVO JA ANTEL-TORNI JÄIVÄT POIS. Ne ovat 1,6 ja
+     * 1,7 kilometriä pohjoiseen Aguadan takana; niiden mukaan
+     * ottaminen olisi kasvattanut ruudun korkeutta kilometrillä ja
+     * jättänyt keskelle pelkkää satamarataa ilman kohteita.
+     *
+     * meri: true. Montevideon lahti pohjoisessa ja Río de la Plata
+     * etelässä ovat OSM:ssä rantaviivaa (natural=coastline) eivätkä
+     * vesimonikulmioita, joten ilman lippua kuvan molemmat reunat
+     * olisivat paperin värisiä.
+     */
+    rajat: { pohjoinen: -34.8955, etela: -34.9130, lansi: -56.2200, ita: -56.1800 },
+    meri: true,
+  },
+  valparaiso: {
+    /*
+     * EL PLAN JA SEN YLLE NOUSEVAT RINTEET (7.9.2026). Ruutu on
+     * 2,8 × 1,7 kilometriä. Valparaíso on rakennettu kapealle
+     * tasangolle ja sitä ympäröiville kukkuloille, ja juuri se näkyy
+     * tässä rajauksessa: vasemmassa yläkulmassa on satama ja Plaza
+     * Sotomayor, keskellä nousevat Cerro Alegren ja Cerro
+     * Concepciónin rinteet, ja oikealla jatkuu El Almendralin
+     * ruutukaava kohti katolista yliopistoa.
+     *
+     * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA (New Yorkin sääntö).
+     * Lehden aiheet ovat ascensorit, muraalit ja Museo a Cielo
+     * Abierto, satama ja Panaman kanava, Iglesia de la Matriz,
+     * British Arch ja brittiyhteisö, vuoden 1906 maanjäristys,
+     * El Mercurio, La Sebastiana, Paseo Gervasoni ja Santiago
+     * Severínin kirjasto. Yksikään kartan kohteista ei ole niiden
+     * aihe. Siksi kartalla ei ole yhtään ascensoria, vaikka niitä on
+     * ruudussa neljä.
+     *
+     * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: pörssitalo on
+     * 116 metriä Baburizzan palatsista, oikeustalo 151 metriä Plaza
+     * Sotomayorista ja Cementerio N:o 1 vain 77 metriä
+     * toisinajattelijoiden hautausmaasta. Tiukin hyväksytty väli on
+     * Plaza Sotomayorin ja Baburizzan 215 metriä, ja se tarkistettiin
+     * tools/tarkista-karttapisteet.mjs:llä numeroympyröiden
+     * päällekkäisyyden varalta.
+     *
+     * CERRO BARÓN JA POLANCON HISSI JÄIVÄT ULKOPUOLELLE. Ne ovat
+     * 1,9 ja 2,1 kilometriä idässä; ruutu olisi venynyt 4,5
+     * kilometriä leveäksi, ja Polanco on sitä paitsi ascensor eli
+     * lehden oman noston aihe.
+     *
+     * meri: true. Tyynenmeren ranta kulkee ruudun yläreunassa
+     * rantaviivana, ja ilman lippua sataman kohta jäisi paperin
+     * väriseksi.
+     */
+    rajat: { pohjoinen: -33.0355, etela: -33.0505, lansi: -71.6320, ita: -71.6020 },
+    meri: true,
+  },
   asuncion: {
     /*
      * ASUNCIÓNIN VANHA KESKUSTA JA LAHDEN RANTA (6.9.2026). Ruutu on

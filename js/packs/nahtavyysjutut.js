@@ -46130,4 +46130,724 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * MONTEVIDEON KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.montevideo, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "General Artigas railway station", "Sodre National
+   * Auditorium", "City Hall of Montevideo", "Edificio Lapido", "Museo
+   * Torres García", "Joaquín Torres-García", "Estévez Palace", "Bolsa
+   * de Valores de Montevideo" ja "Museum of Pre-Columbian and
+   * Indigenous Art").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden aiheet
+   * ovat niemen perustaminen, luonnonsatama, isoisän matkavuoden
+   * tekniikka, rambla, Cabildo ja Plaza Matriz, katedraali, Ciudad
+   * Viejan muurit, brittimiehitys, Guerra Granden saarto, Teatro
+   * Solís, candombe ja Barrio Sur, Palacio Salvo, karnevaali ja
+   * Estadio Centenario. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Keskusaseman
+   * jutussa EI kerrota ensimmäisestä rautatiestä Las Piedrasiin,
+   * koska se on lehden noston K3 aihe, ja kaupungintalon jutussa
+   * Palacio Salvo mainitaan vain korkeusvertailun takia — Salvon oma
+   * tarina on lehden musiikkisivulla.
+   *
+   * KAKSI LUKUA ON MERKITTY LÄHTEEN MUKAAN EPÄTARKAKSI. Pörssin
+   * vuosivaihdolta puuttuu artikkelista valuutta, ja se sanotaan
+   * jutussa ääneen; samoin Torres Garcían museon kävijämäärä on
+   * artikkelin oma luku ilman vuosilukua.
+   *
+   * YKSI ARTIKKELIN VÄITE JÄTETTIIN KIRJOITTAMATTA, KOSKA KUVA
+   * SANOO MUUTA. Kaupungintalon artikkeli sanoo, että valmiista
+   * talosta jäi pois tiiliverhous; Commonsin valokuvissa torni on
+   * selvästi tiiltä. Väitettä ei siis toisteta kummallakaan tavalla.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 7.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 640 px
+   * esikatseluna. Pörssille ei otettu kuvaa: Commonsin ainoa oikea
+   * kuva on 960 px leveä eli alle rajan, ja hakutulosten "Bvmt
+   * headquarters" on Tunisin pörssi. Aseman ensimmäinen ehdokas
+   * hylättiin, koska julkisivun töhryissä oli hakaristi.
+   */
+  montevideo: {
+    Keskusasema: {
+      aika: '1897',
+      teksti: 'Vanha Montevideon asema paloi 1891, ja Central '
+          + 'Uruguay Railway aloitti uuden rakentamisen sen jälkeen. '
+          + 'Peruskivi laskettiin 27. elokuuta 1893, ja asema avattiin '
+          + 'matkustajille 15. heinäkuuta 1897. Sen suunnitteli '
+          + 'italialainen insinööri ja arkkitehti Luigi Andreoni, ja '
+          + 'se nousi Aguadan kaupunginosaan hieman vanhankaupungin '
+          + 'ulkopuolelle.'
+          + '\n\n'
+          + 'Asema kasvoi vielä valmistumisensa jälkeen. Vuonna 1912 '
+          + 'sen raiteet yhdistettiin satamaterminaaliin, kun sataman '
+          + 'työt olivat valmistuneet, ja bulevardin puolella merta '
+          + 'täytettiin maaksi niin, että raiteet ulottuivat lähes '
+          + 'Guatemala-kadulle asti. Rio Negro -kadun lipunmyynti '
+          + 'siirrettiin suureen keskushalliin. Valtio antoi asemalle '
+          + '1955 nimen José Artigasin keskusasema ja 1974 kenraali '
+          + 'Artigasin keskusasema; halli uudistettiin 1977, ja '
+          + 'rakennus julistettiin kansalliseksi historialliseksi '
+          + 'monumentiksi 1975.'
+          + '\n\n'
+          + 'Matkustajaliikenne loppui 1988. Sen jälkeen hallissa '
+          + 'pidettiin näyttelyitä ja konsertteja — esiintyjinä olivat '
+          + 'muiden muassa Duran Duran ja Iron Maiden — ja toimistot '
+          + 'sekä tavararatapiha jatkoivat toimintaansa. Uusi pieni '
+          + 'asema rakennettiin 500 metriä pohjoisemmaksi 1999 '
+          + 'alkaen, ja kun se viivästysten jälkeen avattiin 2003, '
+          + 'vanha asema jäi tyhjilleen. Sitä ei ole unohdettu: '
+          + 'matkustajaryhmä on ajanut aseman elvyttämistä vuodesta '
+          + '1998 ja luovutti 2009 viranomaisille lähes 7 000 '
+          + 'nimeä, 12. helmikuuta 2007 asema kytkettiin takaisin '
+          + 'rataverkkoon poistamalla betonitulppa ja asentamalla 20 '
+          + 'metriä kiskoa, ja 19. syyskuuta 2019 — seitsemäntoista '
+          + 'vuotta viimeisen junan jälkeen — asemalle ajettiin '
+          + 'jälleen juna rautatieläisten päivän kunniaksi.',
+      kuvat: [
+        {
+          tiedosto: 'J34 590 Montevideo, Estación central General Artigas.jpg',
+          selite: 'Tyhjilleen jäänyt asema kadun kulmasta: kaksikerroksinen '
+            + 'juhlava julkisivu, holvikäytävä ja pitkä laituriseinä '
+            + 'jatkuvat vasemmalle.',
+          lahde: 'Falk2, Wikimedia Commons (CC BY-SA 3.0 de)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sodren auditorio': {
+      aika: '1971',
+      teksti: 'Talo on ollut kaupungin näyttämö kahdesti. Sen '
+          + 'paikalla seisoi Urquizan teatteri, joka syttyi tuleen '
+          + '18. syyskuuta 1971. Palaneeseen runkoon rakennettiin '
+          + 'sittemmin Sodren kansallinen auditorio, joka on nimetty '
+          + 'juristin, ministerin ja Sodren eli valtion yleisradio- ja '
+          + 'esitystoiminnan palvelun johtajan Adela Retan '
+          + '(1921–2001) mukaan. Kulttuuriperinnön kansallinen '
+          + 'toimikunta julisti talon Uruguayn historialliseksi '
+          + 'monumentiksi 29. elokuuta 2019.'
+          + '\n\n'
+          + 'Auditorio on keskustan vanhassa kulmassa Andesin ja '
+          + 'Mercedesin katujen risteyksessä, ja sen ala on noin '
+          + '25 000 neliömetriä. Saleja on kaksi. Eduardo Fabini '
+          + '-salissa on noin 2 000 paikkaa, ja se on tarkoitettu '
+          + 'oopperalle, sinfoniakonserteille ja baletille: '
+          + 'orkesterisyvennykseen mahtuu yli sata soittajaa kolmessa '
+          + 'moduulissa, jotka nousevat ja laskevat automatiikalla. '
+          + 'Näyttämö on maan suurin, vapaata korkeutta 27 metriä ja '
+          + 'säädettävä aukko enimmillään 15,5 metriä leveä ja 12 '
+          + 'metriä syvä. Hugo Balzo -salissa on noin 280 paikkaa; se '
+          + 'suunniteltiin kamarimusiikille ja palvelee nyt '
+          + 'monitoimitilana pienen mittakaavan esityksille.'
+          + '\n\n'
+          + 'Talossa on lisäksi amfiteatteri, näyttelytiloja, '
+          + 'harjoitussaleja ja työpajoja sekä ääni- ja '
+          + 'kuvatallennustilat, jotka palvelevat kaikkia saleja. '
+          + 'Uruguayn kansallisbaletti on täällä kotonaan.',
+      kuvat: [
+        {
+          tiedosto: 'Auditorio Nacional del Sodre doctora Adela Reta.jpg',
+          selite: 'Auditorion lasinen kulma Andesin ja Mercedesin katujen '
+            + 'risteyksessä; sisäänkäynnin yllä on näytön mainos illan '
+            + 'esityksestä.',
+          lahde: 'Estudiante1969, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaupungintalo: {
+      aika: '1941',
+      teksti: '1930-luvulla julistettiin kilpailu talosta, johon '
+          + 'saataisiin Montevideon silloiset toimeenpano- ja '
+          + 'lainsäädäntöelimet, johtokunta ja edustajakokous — '
+          + 'perustuslakiuudistukset muuttivat noita elimiä '
+          + 'myöhemmin. Tontiksi annettiin vanhan englantilaisen '
+          + 'hautausmaan maa, jonka valtio oli hankkinut vuosia '
+          + 'aiemmin aikoen rakentaa siihen talon hallitukselle ja '
+          + 'oikeuslaitokselle. Suunnittelijaksi valittiin '
+          + 'uruguaylainen arkkitehti Mauricio Cravotto.'
+          + '\n\n'
+          + 'Rakentaminen alkoi 1935, ja talo vihittiin 16. heinäkuuta '
+          + '1941. Valmis rakennus ei vastaa Cravotton vuoden 1929 '
+          + 'mallia: päätorni oli piirretty 114-metriseksi, jolloin '
+          + 'siitä olisi tullut kaupungin korkein rakennus, mutta '
+          + 'rahan puutteessa se nousi vain 78 metriin ja jäi toiseksi '
+          + 'Palacio Salvon jälkeen. '
+          + 'Sivusiivet, maanalainen halli ja autotalli rakennettiin '
+          + 'vasta myöhemmin. Talo näyttää silti mahtavammalta kuin '
+          + 'mittansa, sillä 18 de Julio -katu kulkee tässä kohtaa '
+          + 'pitkän harjanteen laella.'
+          + '\n\n'
+          + 'Pääsisäänkäynnin edessä seisoo pronssinen jäljennös '
+          + 'Michelangelon Daavidista ja aulan oikealla puolella '
+          + 'Samothraken Niken kopio; atriumissa on taide- ja '
+          + 'käsityönäyttelyitä. Länsisiivessä toimii taidehistorian '
+          + 'museo, ja talossa on kaupungin valokuvakeskus, jonka '
+          + 'arkistosta yleisö voi tilata kopioita. Takasivun '
+          + 'ulkohissi vie 22. kerroksen näköalatasanteelle. Talon '
+          + 'edusaukio on vilkas kohtaamispaikka: siellä katsotaan '
+          + 'Uruguayn maajoukkueen ottelut vastapäisen rakennuksen '
+          + 'suurelta näytöltä.',
+      kuvat: [
+        {
+          tiedosto: 'Intendencia Palacio Municipal.JPG',
+          selite: 'Kaupungintalon torni iltavalossa; alarivissä näkyy matalan '
+            + 'siiven pylväikkö 18 de Julion puolella.',
+          lahde: 'Ypsilon from Finland, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lapidon talo': {
+      aika: '1933',
+      teksti: 'Arkkitehti Juan Aubriot suunnitteli Lapidon talon, '
+          + 'joka valmistui 1933 18 de Julio -kadun varteen keskelle '
+          + 'kaupunkia. Neljätoistakerroksista taloa '
+          + 'pidetään edustavana esimerkkinä Uruguayn 1900-luvun alun '
+          + 'arkkitehtuurin uudistumisesta, jota kansainväliset '
+          + 'virtaukset ohjasivat, ja se merkittiin kansalliseksi '
+          + 'kulttuuriperintökohteeksi 1989.'
+          + '\n\n'
+          + 'Talossa toimi 1960-luvulle asti La Tribuna Popular '
+          + '-sanomalehden päätoimitus. Siviili- ja sotilashallinnon '
+          + 'diktatuurin aikana 1973–1985 samoissa tiloissa '
+          + 'valmistettiin opposition maanalaisia julkaisuja. Nykyään '
+          + 'talo on asuin- ja toimistokäytössä, ja katutasossa on '
+          + 'liiketiloja.',
+      kuvat: [
+        {
+          tiedosto: '2016 Montevideo Palacio de la Tribuna Popular Edificio Lapido.jpg',
+          selite: 'Neljätoista kerrosta kaarevia parvekkeita nousee kadun '
+            + 'kulmasta; ylimpänä on pyöreä torniosa.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Torres Garcían museo': {
+      aika: '1949',
+      teksti: 'Museon perusti Manolita Piña Torres, taidemaalari '
+          + 'Joaquín Torres Garcían leski, miehensä kuoltua 1949. Hän '
+          + 'perusti myös García Torres -säätiön, joka pitää '
+          + 'järjestyksessä maalaukset, piirustukset, alkuperäiset '
+          + 'kirjoitukset, arkistot, esineet ja taiteilijan '
+          + 'suunnittelemat huonekalut sekä häntä koskevat valokuvat, '
+          + 'lehdet ja julkaisut. Museo on Ciudad Viejassa, ja sen '
+          + 'seinillä on epätavallisia muotokuvia historian '
+          + 'henkilöistä sekä kubistisia maalauksia.'
+          + '\n\n'
+          + 'Taiteilija itse syntyi Montevideossa 28. heinäkuuta 1874 '
+          + 'ja vietti lapsuutensa isänsä sekatavarakaupassa vanhalla '
+          + 'Vaunutorilla, jonne tuotiin Eurooppaan vietävät raaka-'
+          + 'aineet. Perhe muutti 1891 Espanjaan, ja Torres García '
+          + 'asui aikuisikänsä pääosin siellä, Yhdysvalloissa, '
+          + 'Italiassa ja Ranskassa. Pariisissa hän perusti Cercle et '
+          + 'Carré -ryhmän, Euroopan ensimmäisen abstraktin taiteen '
+          + 'ryhmän, johon kuuluivat muiden muassa Piet Mondrian ja '
+          + 'Vasili Kandinsky. Montevideoon hän palasi huhtikuussa '
+          + '1934, neljänkymmenenkolmen vuoden jälkeen, piti '
+          + 'kaupungissa yli viisisataa luentoa kuudessa vuodessa ja '
+          + 'perusti Taller Torres-Garcían, työpajan, joka oli '
+          + 'periaatteiltaan Bauhausin sukua.'
+          + '\n\n'
+          + 'Museossa on seitsemän kerrosta: kolme alinta ovat '
+          + 'näyttelytilaa ja ylemmät opetusta ja taidepajoja varten. '
+          + 'Pohjakerroksessa toimii kirjasto ja kellarissa teatteri. '
+          + 'Artikkelin mukaan kävijöitä on yli 85 000 vuodessa, '
+          + 'mutta vuosilukua sille ei kerrota; osa heistä tulee '
+          + 'opastuksille ja työpajoihin, joita museo järjestää '
+          + 'taideopiskelijoille ja koululaisille.',
+      kuvat: [
+        {
+          tiedosto: '2016 Montevideo museo Torres García.jpg',
+          selite: 'Museon kapea julkisivu Ciudad Viejan kadulla: kolme '
+            + 'erkkeririviä ja pystykyltit, joissa lukee museon nimi.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Estévez-palatsi': {
+      aika: '1874',
+      teksti: 'Argentiinalainen yrittäjä ja sijoittaja Francisco '
+          + 'Estévez tilasi talon 1873 ranskalaissyntyiseltä '
+          + 'insinöörikapteenilta Édouard Manuel de Castelilta. '
+          + 'Palatsi valmistui toukokuussa 1874 asuintaloksi '
+          + 'korttelille, joka oli aiemmin ollut muurikaupungin '
+          + 'ulkoraja. Sääntö vaati, että Plaza Independencian '
+          + 'ympärillä julkisivun on oltava doorilainen, ja niin siitä '
+          + 'tuli. Estévez ja hänen vaimonsa Matilde Nin Reyes '
+          + 'asuivat toisessa kerroksessa, ja katutason siipi '
+          + 'vuokrattiin Italian konsulaatille ja liikkeille.'
+          + '\n\n'
+          + 'Estévezin konkurssin jälkeen talo siirtyi Banco de '
+          + 'Londres y Río de la Platalle, ja valtio osti sen pankilta '
+          + '1878 hintaan 130 000 Uruguayn pesoa. Presidentti Lorenzo Latorre teki palatsista '
+          + 'hallituksen istuinpaikan, ja muutostyöt johti insinööri '
+          + 'Alberto Capurro: hän säilytti pylväsportikon, lisäsi '
+          + 'julkisivuun kansallisvaakunalla varustetun '
+          + 'päätykolmion, muotoili pääparvekkeen uudelleen, levensi '
+          + 'sisäänkäynnin ja portaat, suurensi vastaanottosalit ja '
+          + 'poisti alkuperäiset kattolyhdyt. Uudistettu talo '
+          + 'vihittiin 25. toukokuuta 1880 presidentti Francisco '
+          + 'Antonino Vidalin toimesta.'
+          + '\n\n'
+          + 'Palatsi oli maan hallituksen istuin 1880–1985. '
+          + '1950-luvulla se muutettiin kollegiaalisen '
+          + 'hallitusneuvoston tarpeisiin, ja 1985 demokratian '
+          + 'palattua presidentti Julio María Sanguinetti siirsi '
+          + 'hallituksen Vapauden taloon, entiseen puolustusministeriön '
+          + 'päämajaan. Sisätilat uudistettiin 1987–1989 arkkitehti '
+          + 'Enrique Benechin ja taiteilija Manuel Espínola Gómezin '
+          + 'johdolla. Talo on ollut kansallinen historiallinen '
+          + 'monumentti vuodesta 1975, ja siihen avattiin 1999 museo, '
+          + 'joka esittelee presidentti-instituution esineistöä. '
+          + 'Nykyään palatsi on toimeenpanovallan seremoniallinen '
+          + 'päämaja: valtiolliset tilaisuudet pidetään täällä, kun '
+          + 'presidentin työhuone on viereisessä tornissa.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio Estévez 3.jpg',
+          selite: 'Doorilainen pylväsrivi ja päätykolmio vaakunoineen Plaza '
+            + 'Independencian laidalla; edessä on tyhjä kivetty aukio.',
+          lahde: 'Santi2903, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Montevideon pörssi': {
+      aika: '1867',
+      teksti: 'Pörssi syntyi 1867, kun kaupunkiin perustettiin '
+          + 'Montevideon pörssiyhdistys. Tarkoitus oli yksinkertainen: '
+          + 'kaupankäynnille tarvittiin kiinteä paikka ja kiinteä '
+          + 'kellonaika, jossa päivän liiketoimet hoidettiin. Samaan '
+          + 'aikaan syntyi kaksi muuta elintä — Chambre Syndicale, '
+          + 'joka edusti kaupan etuja, ja välittäjien sisäinen '
+          + 'komissio, joka sääteli molempien toimintaa.'
+          + '\n\n'
+          + 'Komissiosta tuli 1921 voittoa tavoittelematon yhdistys, '
+          + 'joka toimi sekä kaupankäyntipaikkana että välittäjien '
+          + 'kiltana, ja 1952 se otti nimekseen pörssin. '
+          + 'Arvopaperimarkkina erotettiin pörssistä 1997, ja 2004 '
+          + 'laitos sai nykyisen nimensä. Kaupankäynti eli '
+          + 'vuosisadan mukana: 1900-luvun ensimmäisellä '
+          + 'vuosikymmenellä se kasvoi voimakkaasti, vuosien 1929 ja '
+          + '1933 välillä lama painoi sen alas, 1934–1947 kasvua toi '
+          + 'yksityinen pääoma, ja 1950–1970 toiminta kutistui, kun '
+          + 'raha siirtyi lyhyisiin pankkilainoihin ja valtion '
+          + 'papereihin.'
+          + '\n\n'
+          + 'Uruguayn 1800-luvun lopun ja 1900-luvun alun yrityksistä '
+          + 'moni aloitti hakemalla pääomansa markkinoilta: lähes '
+          + 'viisikymmentä kotimaista yhtiötä listasi osakkeensa '
+          + 'pörssiin. Nykyään pörssiä valvoo Uruguayn keskuspankki, '
+          + 'ja välittäjän on oltava pörssin jäsen ja täytettävä lain '
+          + 'vaatimukset; erikoisjäseniä voivat olla pankit, '
+          + 'rahastoyhtiöt, eläkelaitokset ja vakuutusyhtiöt. Pörssiä '
+          + 'johtaa seitsenhenkinen komitea, ja sen rinnalla toimivat '
+          + 'tarkastuskomissio ja eettinen tuomioistuin. Artikkeli '
+          + 'sanoo vuosivaihdoksi lähes kolme miljardia mutta ei '
+          + 'kerro, missä valuutassa.',
+      lahde: 'Wikipedia',
+    },
+    'Alkuperäiskansojen taiteen museo': {
+      aika: '1888',
+      teksti: 'Talo ei ollut alun perin museo. Emilio Reus suunnitteli '
+          + 'sen 1800-luvun lopulla kahden saksalaisen arkkitehdin '
+          + 'kanssa vesihoitolaitokseksi, ja rakennus valmistui 1888. '
+          + 'Myöhemmin siinä toimi puolustusministeriön päämaja, ja '
+          + 'jossain vaiheessa talo jäi tyhjilleen. Kansalliseksi '
+          + 'historialliseksi monumentiksi se julistettiin 1986, '
+          + 'kunnostettiin 2004 ja sai silloin nykyisen tehtävänsä.'
+          + '\n\n'
+          + 'Museo on etnografinen ja keskittyy Latinalaisen Amerikan '
+          + 'eri osien alkuperäiskansoihin. Kokoelmassa on yli 700 '
+          + 'etnografista tai arkeologista esinettä: tekstiilejä, '
+          + 'perinteisiä soittimia, keramiikkaa ja taidetta. '
+          + 'Pääpaino on Uruguayn alkuperäiskansoissa, mutta esillä '
+          + 'ovat myös Mesoamerikka eli Meksiko ja Guatemala, '
+          + 'välialue eli Kolumbia ja Ecuador cuasmal-, capulí- ja '
+          + 'tuncahuán-kulttuureineen, Andien alue eli Peru ja '
+          + 'läntinen Bolivia sekä Etelä-Andit eli Chile ja pieni osa '
+          + 'Argentiinaa. Omat osastonsa ovat Amazonin ja Plata-'
+          + 'altaan kansoilla. Vuonna 2013 kokoelma liitettiin Google '
+          + 'Arts & Culture -palveluun.',
+      kuvat: [
+        {
+          tiedosto: 'Museo de Arte Precolombino e Indígena.jpg',
+          selite: 'Vesihoitolaitokseksi rakennettu talo kadun kulmasta; '
+            + 'julkisivun kaariholvien yllä riippuu museon punainen '
+            + 'banneri.',
+          lahde: 'Museo MAPI, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * VALPARAÍSON KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.valparaiso, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Sotomayor Square", "Palacio Baburizza", "St. Paul's
+   * Cathedral, Valparaíso", "University of Valparaíso", "Pontifical
+   * Catholic University of Valparaíso", "Dissidents Cemetery",
+   * "St. James Cathedral, Valparaíso" ja "Sacred Hearts Church
+   * (Valparaíso)").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden aiheet
+   * ovat Kap Hornin pysähdyspaikka, ascensorit, muraalit ja Unesco,
+   * Panaman kanava, Alimapu ja Iglesia de la Matriz, brittiyhteisö ja
+   * British Arch, tekniikan ensimmäiset, vuoden 1906 järistys,
+   * El Mercurio, Neruda, Paseo Gervasoni, Santiago Severínin
+   * kirjasto, kongressitalo ja sähköbussit. Yksikään kartan
+   * kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Plaza
+   * Sotomayorin jutussa EI kerrota laivaston päämajasta, vaikka se on
+   * aukion suurin rakennus: se on lehden matkaoppaan kuva-aihe ja
+   * kongressijakson taustaa. Anglikaanisen katedraalin jutussa ei
+   * kerrota brittikauppahuoneista (lehden nosto H2), vaan
+   * uskonnonvapauden rajoituksesta. Katolisen yliopiston jutussa
+   * kongressitalo mainitaan vain paikan osoitteena.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 7.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 640 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * valparaiso-lohkossa (kulttuuri-kategoriat.js). Valparaíson
+   * yliopisto jäi ilman kuvaa: Commonsin kuvat sen taloista ovat
+   * tavallisia toimistojulkisivuja, jotka eivät kerro jutun asiaa —
+   * kuvaton juttu on parempi kuin huono kuva.
+   */
+  valparaiso: {
+    'Plaza Sotomayor': {
+      aika: '1886',
+      teksti: 'Aukio on rakennettu mereltä vallatulle maalle, ja sen '
+          + 'nimi on vaihtunut monta kertaa: ensin Plaza de la Aduana '
+          + 'eli tulliaukio, sitten Plaza del Palacio ja Plaza '
+          + 'Intendencia, ja lopulta Rafael Sotomayorin mukaan Plaza '
+          + 'Sotomayor. Alun perin paikalla oli esplanadi, jonka läpi '
+          + 'San Agustínin rotkon likavesi valui hitaasti mereen. '
+          + 'Kesäkuun 10. päivänä 1825 myrsky katkaisi fregatti '
+          + 'Valdivian ankkuriköydet ja ajoi aluksen tähän rantaan; '
+          + 'viranomaiset täyttivät hylyn hiekalla ja käyttivät sitä '
+          + 'kaupungin ensimmäisen matkustajalaiturin perustana. '
+          + 'Varsinaista laituria alettiin rakentaa 1831, ja sen '
+          + 'jäänteet ovat nähtävissä aukion alle tehdyssä museossa.'
+          + '\n\n'
+          + 'Aukion ympärille kertyi 1800-luvun mittaan koko kaupungin '
+          + 'julkinen elämä. Vuonna 1855 tänne perustettiin Chilen '
+          + 'ensimmäinen pankki, Banco de Depósitos y Descuentos de '
+          + 'Valparaíso. Kolme vuotta myöhemmin arkkitehti Juan Berg '
+          + 'rakensi puusta ja Guayaquilin ruo’osta kauppapörssin '
+          + 'talon, joka avattiin 6. toukokuuta 1858 presidentti '
+          + 'Manuel Monttin läsnä ollessa. Kun Espanjan laivasto '
+          + 'pommitti Valparaísoa 1866 Chinchasaarten sodassa, '
+          + 'pörssitaloa yritettiin polttaa, mutta se säilyi ja '
+          + 'korjattiin. Vuonna 1868 valmistuivat ensimmäinen '
+          + 'postitalo ja palokunnan talo, ja aukiosta tuli lopullisesti '
+          + 'kaupungin siviilikeskus. Ensimmäinen veistos pystytettiin '
+          + '12. huhtikuuta 1873: se muistaa skotlantilaista '
+          + 'merenkulkijaa lordi Thomas Cochranea.'
+          + '\n\n'
+          + 'Vuonna 1885 pörssitalo purettiin, jotta tilalle mahtui '
+          + 'muistomerkki Iquiquen ja Punta Gruesan taisteluissa '
+          + 'kaatuneille chileläisille merimiehille sekä krypta, jossa '
+          + 'lepäävät Arturo Prat ja hänen miehensä. Muistomerkki '
+          + 'vihittiin 21. toukokuuta 1886, ja se on yhä aukion '
+          + 'keskipiste. Aukio ja sitä reunustavat rakennukset '
+          + 'julistettiin Zona Típicaksi 23. tammikuuta 1979. Vuonna '
+          + '2000 aukio uudistettiin arkkitehti Harken Jensenin '
+          + 'johdolla: alle rakennettiin pysäköintihalli ja '
+          + 'kaivauslöytöjen museo, ja 2004 aukio jatkettiin Pratin '
+          + 'laiturille kävelyreitiksi. Laiturilla on jäljennös '
+          + 'Santiaguillosta, ensimmäisestä espanjalaisaluksesta, joka '
+          + 'rantautui tähän lahteen.',
+      kuvat: [
+        {
+          tiedosto: 'Monumento a los héroes de Iquique, Valparaíso, Chile1.jpg',
+          selite: 'Arturo Pratin muistomerkki aukion keskellä; taustalla '
+            + 'kohoavat kaksi samanlaista tornitaloa, jotka muodostavat '
+            + 'portin satamaan.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Baburizzan palatsi': {
+      aika: '1916',
+      teksti: 'Palatsin rakennuttivat 1916 Zanellit, yksi kaupungin '
+          + 'merkittävimmistä suvuista, ja piirustukset tekivät '
+          + 'italialaiset arkkitehdit. Vuonna 1925 talon osti '
+          + 'kroatialaissyntyinen Pascual Baburizza, '
+          + 'salpietarikaivoksiin sijoittanut liikemies, joka kokosi '
+          + 'Chilessä suuren omaisuuden ja käytti siitä huomattavan '
+          + 'osan hyväntekeväisyyteen.'
+          + '\n\n'
+          + 'Vuonna 1971 kaupunki osti palatsin museoksi ja '
+          + 'kuvataidekouluksi, ja 1976 se julistettiin historialliseksi '
+          + 'monumentiksi. Kokoelma on karttunut suureksi osaksi '
+          + 'Baburizzan omista testamenttilahjoituksista; sen '
+          + 'tärkeimpiä nimiä ovat Mauricio Rugendas, Alfredo '
+          + 'Valenzuela Puelma, Alfredo Helsby ja Carlos Hermosilla '
+          + 'Álvarez. Museo suljettiin korjaustöiden ajaksi 1997 ja '
+          + 'avattiin uudelleen vasta 2011.'
+          + '\n\n'
+          + 'Rakennus on art nouveau -henkinen huvila, jonka '
+          + 'tunnistaa puutyöstä, takoraudasta ja keskellä kohoavasta '
+          + 'tornista. Tyyli on eklektinen: parvekkeet, erkkerit, '
+          + 'terassit ja ullakkokerrokset jakavat massan osiin, ja '
+          + 'koristeina on torneja ja pylväitä. Sisällä huomion vie '
+          + 'kuparilla päällystetty veistetty puuovi, ja ruokasalissa '
+          + 'on marmorinen renessanssityylinen takka, jota koristavat '
+          + 'kohomedaljongit ja punokset; sen yläpuolella on '
+          + '1700-luvun pellavakudos.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio Baburizza -fRF 15.1.jpg',
+          selite: 'Valkoinen art nouveau -huvila rinteessä: kupolitorni, '
+            + 'erkkerit ja koristeltu räystäslinja.',
+          lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Anglikaaninen katedraali': {
+      aika: '1858',
+      teksti: 'Seurakunta alkoi 1837 kotikirkkona, jossa jumalanpalveluksia '
+          + 'pitivät ohi kulkevat anglikaanipapit. Chilen laki rajoitti '
+          + 'vuoteen 1865 asti kaikkia muita uskontoja kuin katolista, '
+          + 'mutta 1857 anglikaanit saivat luvan rakentaa kirkon Cerro '
+          + 'Concepciónille. Varainkeruuta johti Britannian konsuli '
+          + 'William Rouse.'
+          + '\n\n'
+          + 'Lupa tuli ehdoilla, jotka näkyvät talossa yhä. Kirkkoon ei '
+          + 'saanut tulla tornia eikä huippua, joka olisi paljastanut '
+          + 'sen kirkoksi, eivätkä ovet saaneet olla suurempia kuin '
+          + 'lähikatolisten kirkkojen ovet — siksi seurakunta kulki '
+          + 'sisään sivuovesta. Suunnittelija oli englantilainen '
+          + 'arkkitehti ja insinööri William Henry Lloyd, joka oli '
+          + 'Chilessä rakentamassa Santiagon ja Valparaíson välistä '
+          + 'rataa. Vuoden 1906 maanjäristyksen jälkeen kirkon korjasi '
+          + 'Carlos Federico Claussen.'
+          + '\n\n'
+          + 'Ulkoa rakennus on yhä vaatimaton, mutta sisällä avautuu '
+          + 'yksi pitkä kirkkosali, jota valaisevat suippokaari-'
+          + 'ikkunat ja jonka kattoa kannattavat näkyvät puiset '
+          + 'kattotuolit; nykyinen asu on vuodelta 1883. Puolikorkea '
+          + 'puinen ristikkoaita erottaa salin kuorista. Vuonna 1903 '
+          + 'kirkkoon hankittiin paineilmalla ja vedellä toimiva urku '
+          + 'kuningatar Victorian muistoksi, ja lasimaalaukset '
+          + 'tuotiin Britanniasta. Kaksi laattaa muistaa '
+          + 'ensimmäisessä maailmansodassa kaatuneita brittitaustaisia '
+          + 'valparaísolaisia. Kirkko on ollut kansallinen monumentti '
+          + '19. heinäkuuta 1979 alkaen ja kuuluu Unescon '
+          + 'maailmanperintöalueeseen; 19. maaliskuuta 2016 siitä tuli '
+          + 'Chilen ensimmäinen anglikaaninen katedraali. Vuodesta '
+          + '1995 siellä on soitettu joka sunnuntai-iltapäivä '
+          + 'urkukonsertti — "Música en las alturas" on maan ainoa '
+          + 'säännöllinen urkukonserttisarja, ja se aloitettiin '
+          + 'kertomaan kirkon korjaustarpeesta.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia Anglicana de San Pablo.JPG',
+          selite: 'Valkoinen kirkko ilman tornia ja huippua, vihreä '
+            + 'harjakatto ja matala aita kadun kulmassa.',
+          lahde: 'Hemorag, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Valparaíson yliopisto': {
+      aika: '1981',
+      teksti: 'Valparaíso oli 1800-luvulla San Franciscon eteläpuolen '
+          + 'suurin Tyynenmeren satama ja siksi liike-elämän keskus, '
+          + 'ja korkein opetus alkoi täällä kaupan tarpeista. '
+          + 'Muodollinen oikeustieteen opetus alkoi 1878, ja vuoteen '
+          + '1911 mennessä siitä oli kasvanut Chilen ensimmäinen '
+          + 'alueellinen oikeustieteellinen korkeakoulu osana Chilen '
+          + 'yliopistoa.'
+          + '\n\n'
+          + 'Kaupunkiin syntyi 1920- ja 1930-luvuilla kaksi yksityistä '
+          + 'yliopistoa, joista tulivat Federico Santa Marían '
+          + 'teknillinen yliopisto ja katolinen yliopisto, samalla kun '
+          + 'valtion korkeakouluopetus koottiin Chilen yliopiston '
+          + 'alaisuuteen. Vuonna 1972 kaupungin julkinen '
+          + 'yliopisto-opetus järjestettiin Chilen yliopiston '
+          + 'toimipisteeksi, ja 12. helmikuuta 1981 se sai nykyisen '
+          + 'nimensä ja itsenäisen asemansa. Alueellisten '
+          + 'valtionyliopistojen perustaminen oli osa sotilashallinnon '
+          + 'talousuudistuksia, jotka jatkuivat vuoteen 1990. '
+          + 'Opetusinstituutti ei siirtynyt mukana: siitä kasvoi '
+          + 'Playa Anchan yliopisto.'
+          + '\n\n'
+          + 'Valparaísoa sanotaan Chilen opiskelijakaupungiksi, ja '
+          + 'perinteisiä yliopistoja on neljä. Valparaíson yliopisto '
+          + 'eroaa muista siinä, ettei sillä ole yhtä kampusta: sen '
+          + 'tiedekunnat ja korkeakoulut muodostavat '
+          + 'yliopistokorttelin, joka kulkee koko keskustan tasangon '
+          + 'pituudelta — eteläpäässä on Playa Anchan pääkampus ja '
+          + 'pohjoispäässä katolisen yliopiston päärakennus. Yliopisto '
+          + 'on yksi kuudestatoista Chilen valtionyliopistojen '
+          + 'konsortion jäsenestä ja yksi 25 rehtorineuvoston '
+          + '"perinteisestä" yliopistosta.',
+      lahde: 'Wikipedia',
+    },
+    'Katolinen yliopisto': {
+      aika: '1928',
+      teksti: 'Yliopisto perustettiin maaliskuussa 1928 Isabel Caces '
+          + 'de Brownin runsaan lahjoituksen turvin. Sitäkin vanhempi '
+          + 'on oikeustieteellinen tiedekunta: pyhien sydänten isät '
+          + 'perustivat sen 1894 itsenäiseksi korkeakouluksi, ja se '
+          + 'liitettiin myöhemmin yliopistoon, koska molemmat olivat '
+          + 'katolisen kirkon yksiköitä. Ensimmäiset tutkinnot olivat '
+          + 'sähkötekniikka, rakentaminen, kemia, kaivostoiminta, '
+          + 'liikkeenjohto, konetekniikka, koristetaiteet ja '
+          + 'kauppamerenkulku.'
+          + '\n\n'
+          + 'Casa Central on keskustassa muutaman korttelin päässä '
+          + 'kongressitalosta, metrosta ja merestä, ja juuri se on '
+          + 'kaupunkiyliopiston ongelma: alkuperäisellä paikalla ei '
+          + 'ole tilaa kasvaa. Osa yksiköistä on siksi hajallaan '
+          + 'Valparaísossa, Viña del Marissa, Quilpuéssa ja '
+          + 'Quillotassa. Opiskelijoita on noin 18 000. Paavillisen '
+          + 'arvonimen myönsi Johannes Paavali II, ja se julkistettiin '
+          + 'lukuvuoden 2003 avajaisissa; suurkansleri on Valparaíson '
+          + 'piispa, mutta yliopistoa johtaa opettajakunnan valitsema '
+          + 'rehtori.'
+          + '\n\n'
+          + 'Yliopiston tunnetuin sivutuote on arkkitehtuurin '
+          + 'korkeakoulu, "Valparaíson koulu". Se rakensi muutama '
+          + 'kilometri kaupungista pohjoiseen kokeellisen Avoimen '
+          + 'kaupungin, jossa opettajat opettavat ja asuvat taloissa, '
+          + 'jotka he ja opiskelijat ovat itse suunnitelleet ja '
+          + 'rakentaneet. Laitoksia on muitakin, ja ne ovat '
+          + 'yliopistoksi epätavallisia: televisioasema, joka on '
+          + 'lähettänyt vuodesta 1957 ja oli maan ensimmäinen, '
+          + 'radioasema, kustantamo, kirjolohifarmi Los Andesin '
+          + 'lähellä ja kuuden neliökilometrin koetila Quillotassa, '
+          + 'jossa kasvatetaan avokadoja ja sitrushedelmiä.',
+      kuvat: [
+        {
+          tiedosto: 'Casa Central PUCV, Valparaíso 20230903 03.jpg',
+          selite: 'Casa Centralin pitkä koristeltu julkisivu palmujen '
+            + 'reunustaman Avenida Brasilin varrella.',
+          lahde: 'Carlos Figueroa Rojas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Toisinajattelijoiden hautausmaa': {
+      aika: '1825',
+      teksti: 'Hautausmaa on Panteón-kukkulalla Cementerio N:o 1:n '
+          + 'vastapäätä, vanhan kaupunginvankilan vieressä — vankilassa '
+          + 'toimii nykyään kulttuurikeskus. Se perustettiin 1825 '
+          + 'brittiläisten ja muiden eurooppalaisten asukkaiden '
+          + 'haudoiksi: heidän protestanttinen uskonsa poikkesi '
+          + 'valtionuskonnosta, joka oli roomalaiskatolinen.'
+          + '\n\n'
+          + '1800-luvun alussa Valparaísoon muuttaneita ei-katolisia ei '
+          + 'saanut haudata katolisiin hautausmaihin. Heidät haudattiin '
+          + 'Playa Anchan kukkulalle tai heitettiin mereen. Vuonna '
+          + '1823 Britannian konsuli George Seymour osti pormestari '
+          + 'Robert Simpsonin avulla maata vankilan vierestä juuri '
+          + 'tätä varten: hautausmaaksi niille, joita kutsuttiin '
+          + 'toisinajattelijoiksi. Alue jakautuu kahdeksaan osaan, ja '
+          + 'hautoja on lähes 800. Useimmat vainajat ovat '
+          + 'brittiläistä, saksalaista tai yhdysvaltalaista '
+          + 'syntyperää.'
+          + '\n\n'
+          + 'Vastapäisessä Cementerio N:o 1:ssä on muistomerkki '
+          + 'yhdysvaltalaisille merimiehille, jotka kuolivat vuoden '
+          + '1814 Valparaíson taistelussa, kun brittialukset Cherub ja '
+          + 'Phoebe valtasivat USS Essexin. Toinen muistomerkki on '
+          + 'pastori David Trumbullille, kaupungin presbyteerikirkon '
+          + 'perustajalle. Vuoteen 1883 asti tänne haudattiin myös '
+          + 'muualla, esimerkiksi Santiagossa ja La Serenassa, '
+          + 'kuolleita ei-katolisia; sinä vuonna uskontoon perustuva '
+          + 'syrjintä kunnallisilla hautausmailla lakkautettiin. '
+          + 'Vuosien 1906 ja 2010 maanjäristykset vaurioittivat '
+          + 'hautausmaata, ja vuoden 2011 kunnostuksessa siihen tehtiin '
+          + 'uusi muistopaikka, Siirtolaisen aukio.',
+      kuvat: [
+        {
+          tiedosto: 'Cementerio de Disidentes - Valparaíso - 2011.jpg',
+          selite: 'Hautakiviä rinteessä: kelttiläinen risti, uurnapylväs ja '
+            + 'saksankielisiä kirjoituksia, taustalla kukkulan talot.',
+          lahde: 'Carlos yo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Valparaíson katedraali': {
+      aika: '1950',
+      teksti: 'Valparaíson hiippakunnan katedraali seisoo '
+          + 'El Almendralin kaupunginosassa Plaza de la Victorian '
+          + 'itälaidalla. Uusgoottilainen kirkko rakennettiin '
+          + 'vuosina 1910–1950 tontille, jonka Juana Ross Edwards '
+          + 'lahjoitti, ja se korjattiin vuosien 1971 ja 1985 '
+          + 'maanjäristysten jälkeen.'
+          + '\n\n'
+          + 'Katedraali toimii myös Pyhän Hengen seurakunnan '
+          + 'seurakuntakirkkona. Seurakunnan aiempi kirkko oli samalla '
+          + 'aukiolla mutta toisella tontilla, ja siellä vihittiin '
+          + 'aikoinaan avioliittoon kapteeni Arturo Prat ja Carmela '
+          + 'Carvajal — sama Prat, jonka krypta on Plaza Sotomayorin '
+          + 'muistomerkin alla.',
+      kuvat: [
+        {
+          tiedosto: 'Catedral en plaza victoria.jpg',
+          selite: 'Uusgoottilainen julkisivu ruusuikkunoineen ja kolmine '
+            + 'kaariovineen; oikealla kohoaa kellotorni.',
+          lahde: 'Dhcarlos2010, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhien sydänten kirkko': {
+      aika: '1874',
+      teksti: 'Laiva Sylphide saapui Bordeaux’sta Valparaísoon '
+          + '13. toukokuuta 1834, ja sen matkustajina oli neljä '
+          + 'Jeesuksen ja Marian pyhien sydänten sääntökunnan pappia, '
+          + 'joiden määränpää oli Gambiersaaret Ranskan Polynesiassa. '
+          + 'Heistä Chrysostome Liausu jäi kaupunkiin ja perusti '
+          + 'sääntökunnan ensimmäisen yhteisön eteläamerikkalaiseen '
+          + 'satamaan. Vuonna 1837 kaupungin cabildo antoi hänelle '
+          + 'luvan perustaa koulun — itsenäisen Chilen ensimmäisen '
+          + 'yksityiskoulun. Koulu muutti 1840 Independencia-kadulle '
+          + 'nykyiselle paikalleen, jota laajennettiin ostamalla '
+          + 'viereisiä tontteja, ja sinne rakennettiin kappeli.'
+          + '\n\n'
+          + 'Vuoden 1860 lopulla isä Oliver määräsi rakennettavaksi '
+          + 'uuden kirkon, jonka suunnittelivat arkkitehdit Lucien '
+          + 'Hénault ja Arturo Mecking. Peruskivi laskettiin '
+          + '3. toukokuuta 1868, ja loppuvaiheen 1870–1872 hoiti '
+          + 'arkkitehti Juan Eduardo Fehrman. Kirkko vihittiin '
+          + '6. helmikuuta 1874, vaikka torni oli yhä kesken.'
+          + '\n\n'
+          + 'Kirkko ja sen viereinen koulu ovat samaa tyyliä ja '
+          + 'vievät kokonaisen korttelinsivun Independencia-kadulla '
+          + 'Freiren ja Rodríguezin katujen välissä. Julkisivu on '
+          + 'romaanis-uusgoottilainen ja sisätila goottilainen. '
+          + 'Sisällä on Cristo Tradicional -veistos, jonka teki '
+          + 'ecuadorilainen taiteilija vieraillessaan sääntökuntaan '
+          + 'kuuluneen poikansa luona. Vuoden 2010 maanjäristys '
+          + 'vaurioitti kirkkoa pahoin: halkeilleet seinät korjattiin, '
+          + 'sisäpinnat maalattiin ja julkisivut kunnostettiin noin '
+          + 'vuoden työllä, jonka kustannuksista puolet rahoitti '
+          + 'kulttuurin ja taiteen kansallisneuvoston '
+          + 'restaurointiohjelma. Kirkko on ollut Chilen kansallinen '
+          + 'monumentti vuodesta 2003.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de los Sagrados Corazones, Valparaíso 20230901 02.jpg',
+          selite: 'Kirkon korkea torni kellotauluineen ja suippokärkineen; '
+            + 'vasemmalla jatkuu saman korttelin koulurakennus.',
+          lahde: 'Carlos Figueroa Rojas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

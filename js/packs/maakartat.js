@@ -12115,6 +12115,120 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Eastern Columbia', lat: 34.0428, lon: -118.2555 },
     ],
   },
+  /*
+   * MONTEVIDEO (7.9.2026). Rajaus on 3,7 × 1,9 kilometriä Ciudad
+   * Viejan niemenkärjestä kaupungintalolle — perustelu ja kuvasuhteen
+   * mittaus ovat tools/piirra-kaupunkikartta.mjs:n montevideo-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat niemen
+   * perustaminen, luonnonsatama, isoisän matkavuoden tekniikka ja
+   * rambla; historiasivu kertoo Cabildosta, katedraalista, Ciudad
+   * Viejan muureista, brittimiehityksestä ja Teatro Solísista;
+   * musiikkisivu candombesta, Barrio Surista, Palacio Salvosta ja
+   * karnevaalista, ja matkaopas Estadio Centenariosta. Yksikään
+   * kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KUUSI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Cabildo,
+   * katedraali, Teatro Solís, Palacio Salvo, Mercado del Puerto ja
+   * Puerta de la Ciudadela ovat kaikki ruudussa (faktapohja-
+   * montevideo.md, osio 4 antaa niille koordinaatit), mutta ne ovat
+   * lehden omien juttujen aihe. Samasta syystä kartalla ei ole
+   * satamaa eikä Estadio Centenarioa — jälkimmäinen on sitä paitsi
+   * 4,7 kilometriä idässä.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Palacio Taranco
+   * on 188 metriä MAPI-museosta, Hospital Maciel 176 metriä ja Correo
+   * Uruguayo 162 metriä pörssistä. Ne mainitaan matkaoppaassa.
+   */
+  montevideo: {
+    polku: 'assets/kartat/montevideo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -34.8955, etela: -34.9130, lansi: -56.2200, ita: -56.1800 },
+    esittely: 'Kartan vasemmassa reunassa on Ciudad Viejan niemi, jolla '
+      + 'vesi kaartaa kolmelta sivulta: pohjoisessa sataman laiturit, '
+      + 'etelässä Río de la Plata. Niemeltä lähtee itään yksi '
+      + 'yhtenäinen ruutukaava, ja sen keskellä kulkee suorana 18 de '
+      + 'Julio -katu kaupungintalolle asti. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Halifaxissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 238 metriä
+       * (Torres Garcían museo – Estévez-palatsi), toiseksi pienin 329
+       * metriä (Estévez-palatsi – Sodren auditorio).
+       */
+      { nimi: 'Keskusasema', lat: -34.90027778, lon: -56.19444444 },
+      { nimi: 'Sodren auditorio', lat: -34.9042, lon: -56.1987 },
+      { nimi: 'Kaupungintalo', lat: -34.90555556, lon: -56.18416667 },
+      { nimi: 'Lapidon talo', lat: -34.90638889, lon: -56.19583333 },
+      { nimi: 'Torres Garcían museo', lat: -34.9065, lon: -56.20138889 },
+      { nimi: 'Estévez-palatsi', lat: -34.90711111, lon: -56.19938889 },
+      { nimi: 'Montevideon pörssi', lat: -34.90714722, lon: -56.20612778 },
+      { nimi: 'Alkuperäiskansojen taiteen museo', lat: -34.907525, lon: -56.21027778 },
+    ],
+  },
+  /*
+   * VALPARAÍSO (7.9.2026). Rajaus on 2,8 × 1,7 kilometriä: satama ja
+   * el plan yläreunassa, kukkuloiden mutkittelevat kadut alareunassa
+   * — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * valparaiso-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Kap
+   * Hornin pysähdyspaikka, ascensorit, muraalit ja Unesco-status sekä
+   * Panaman kanava; historiasivu kertoo Alimapusta ja Iglesia de la
+   * Matrizista, brittiyhteisöstä ja British Archista, tekniikan
+   * ensimmäisistä ja vuoden 1906 järistyksestä; kirjallisuussivu
+   * El Mercuriosta, La Sebastianasta, Paseo Gervasonista ja Santiago
+   * Severínin kirjastosta, ja matkaopas kongressitalosta ja
+   * sähköbusseista. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KARTALLA EI OLE YHTÄÄN ASCENSORIA, vaikka ruudussa on neljä
+   * (Concepción, Reina Victoria, El Peral, Cordillera). Hissit ovat
+   * lehden oman noston K2 aihe, ja sama koskee Polancon hissiä ruudun
+   * ulkopuolella.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: pörssitalo on
+   * 116 metriä Baburizzan palatsista, oikeustalo 151 metriä Plaza
+   * Sotomayorista ja Cementerio N:o 1 vain 77 metriä
+   * toisinajattelijoiden hautausmaasta.
+   *
+   * NELJÄ KOHDETTA KAHDEKSASTA ON USKONNON HISTORIAA, ja se on
+   * tietoinen valinta eikä sattuma: satamakaupungissa, jossa laki
+   * salli vuoteen 1865 vain katolisen uskon, anglikaanien ikkunaton
+   * kirkko, toisinajattelijoiden hautausmaa, ranskalaisen
+   * sääntökunnan koulukirkko ja vasta 1950 valmistunut katolinen
+   * katedraali kertovat yhdessä yhden tarinan.
+   */
+  valparaiso: {
+    polku: 'assets/kartat/valparaiso-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -33.0355, etela: -33.0505, lansi: -71.6320, ita: -71.6020 },
+    esittely: 'Kartan yläreunaa täyttää lahti, jonka ympäri kaupunki '
+      + 'kaartuu. Rannan ja kukkuloiden väliin jää kapea tasanko, el '
+      + 'plan, jossa kadut kulkevat suorina riveinä; heti sen '
+      + 'eteläpuolella katuverkko alkaa mutkitella rinteitä ylös. '
+      + 'Vasemmassa yläkulmassa on satama ja oikeassa reunassa '
+      + 'El Almendralin kaupunginosa. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 215 metriä (Plaza Sotomayor – Baburizzan
+       * palatsi), toiseksi pienin 266 metriä (Baburizzan palatsi –
+       * anglikaaninen katedraali).
+       */
+      { nimi: 'Plaza Sotomayor', lat: -33.03846667, lon: -71.62876667 },
+      { nimi: 'Baburizzan palatsi', lat: -33.0404, lon: -71.6289 },
+      { nimi: 'Anglikaaninen katedraali', lat: -33.04234, lon: -71.62723 },
+      { nimi: 'Valparaíson yliopisto', lat: -33.04388889, lon: -71.6175 },
+      { nimi: 'Katolinen yliopisto', lat: -33.04472222, lon: -71.60555556 },
+      { nimi: 'Toisinajattelijoiden hautausmaa', lat: -33.04526111, lon: -71.62503889 },
+      { nimi: 'Valparaíson katedraali', lat: -33.0462, lon: -71.619 },
+      { nimi: 'Pyhien sydänten kirkko', lat: -33.0484, lon: -71.6155 },
+    ],
+  },
 };
 
 /*
