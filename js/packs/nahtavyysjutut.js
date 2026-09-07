@@ -51814,6 +51814,14 @@ export const NAHTAVYYSJUTUT = {
           + '1953. Kunnostettu Quinta avautui museona 12. lokakuuta '
           + '1961, ja tammikuussa 1978 se julistettiin kansalliseksi '
           + 'historialliseksi muistomerkiksi.',
+      kuvat: [
+        {
+          tiedosto: 'Quinta de Anauco (2).jpg',
+          selite: 'Siirtomaa-ajan salissa seisoo puinen arkkienkeli Mikael, ja '
+            + 'seinien yläreunaa kiertää maalattu koristenauha.',
+          lahde: 'Guillermo Ramos Flamerich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Las Mercedesin kirkko': {
@@ -51842,6 +51850,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kansalliseksi historialliseksi muistomerkiksi 2. elokuuta '
           + '1960. Nimi viittaa Armon Neitsyeeseen, jonka kunnioitusta '
           + 'mercedaariveljestö levitti.',
+      kuvat: [
+        {
+          tiedosto: 'Nuestra Señora de Las Mercedes.JPG',
+          selite: 'Uusklassinen julkisivu, kolme katuovea ja kaksi hopeanhohtoista '
+            + 'kupolitornia vuoden 1857 jälleenrakennuksesta.',
+          lahde: 'AlexisCarmona, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Ensimmäisten kirjainten talo': {
@@ -51872,6 +51888,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Bolívarista, aikakauden pukuja ja esineitä sekä pala '
           + 'alkuperäistä seinää ja lattiaa; yksi vanha lasimaalaus on '
           + 'sekin säilynyt.',
+      kuvat: [
+        {
+          tiedosto: 'Casa de las Primeras Letras Simón Rodríguez.jpg',
+          selite: 'Matala vaaleanpunainen siirtomaatalo, jonka keskiovi on '
+            + 'merkitty numerolla 29 — talon toinen puolisko.',
+          lahde: 'JoseGre12, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Keltainen talo': {
@@ -51906,6 +51930,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kädessä ja mursi nilkkansa; siitä alkoi ajatus '
           + 'järistyskestävästä asunnosta, ja presidentti muutti 1904 '
           + 'Mirafloresiin. Vuodesta 1912 talossa on ollut ulkoministeriö.',
+      kuvat: [
+        {
+          tiedosto: 'Salón Bolívar - Casa Amarilla.jpg',
+          selite: 'Bolívar-sali vie koko toisen kerroksen etusivun; katossa on '
+            + 'tummaa kasettityötä ja seinällä kokovartalomuotokuva.',
+          lahde: 'Venlur, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Kaupunginteatteri: {
@@ -51932,6 +51964,14 @@ export const NAHTAVYYSJUTUT = {
           + '1980-luvulla Teresa Carreñon kulttuurikeskus — mutta '
           + 'oopperaa esitetään yhä, ja talossa on kotinaan Caracasin '
           + 'kaupungin sinfoniaorkesteri.',
+      kuvat: [
+        {
+          tiedosto: 'Teatro Municipal de Caracas.jpg',
+          selite: 'Kolme kullattua parvekekerrosta kiertävät katsomon, ja katosta '
+            + 'riippuu kristallikruunu.',
+          lahde: 'EneasMx, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Santa Teresan basilika': {
@@ -51958,6 +51998,14 @@ export const NAHTAVYYSJUTUT = {
           + 'ihmistä pidätettiin tapauksen johdosta. Rakennus '
           + 'julistettiin kansalliseksi historialliseksi kohteeksi '
           + '9. joulukuuta 1959.',
+      kuvat: [
+        {
+          tiedosto: 'Basilica of Santa Teresa.jpg',
+          selite: 'Päätykolmion päällä seisoo pyhimyspatsas, ja sen takana '
+            + 'kohoaa kupoli — kaksoiskirkon itäinen puoli.',
+          lahde: 'Carlos E. Perez S.L, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Kansallinen taidegalleria': {
@@ -51985,6 +52033,14 @@ export const NAHTAVYYSJUTUT = {
           + 'teos on Arturo Michelenan vuoden 1896 maalaus Miranda en '
           + 'La Carraca, jossa Francisco de Miranda istuu vankina '
           + 'Cádizissa.',
+      kuvat: [
+        {
+          tiedosto: 'Galeria de Arte Nacional, em Caracas 23.JPG',
+          selite: 'Salien renkaassa marmoriveistos osoittaa ulos kuvasta, ja '
+            + 'seinillä on maalauksia siirtomaa-ajalta nykypäivään.',
+          lahde: 'Béria Lima de Rodríguez, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Parque Centralin tornit': {
@@ -52013,6 +52069,14 @@ export const NAHTAVYYSJUTUT = {
           + 'yhteydessä torniin nostettiin kolmenkymmenen metrin '
           + 'antenni, joka esittää Simón Bolívarin miekkaa. Sen kanssa '
           + 'itäinen torni yltää 255 metriin ja on nyt läntistä korkeampi.',
+      kuvat: [
+        {
+          tiedosto: 'El centro de Caracas, las torres de Parque Central.jpg',
+          selite: 'Toimistotornin huipussa erottuu antenni, ja sen vieressä '
+            + 'nousevat 1970-luvun asuintornit iltapilvien alla.',
+          lahde: 'QuinteroP, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },
@@ -52093,6 +52157,14 @@ export const NAHTAVYYSJUTUT = {
           + 'puinen enkeli, joka kantaa kädessään kastemaljaa. Talo '
           + 'on nykyään erikoistunut lastenkirkoksi, ja sisustusta '
           + 'ovat koristelleet paikalliset lapset.',
+      kuvat: [
+        {
+          tiedosto: 'Nykirken in Bergen.JPG',
+          selite: 'Vihreä torninhuippu nousee Vågenin rannalta; kirkon takana '
+            + 'kohoaa metsäinen vuori.',
+          lahde: 'Pudelek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Fredriksbergin linnake': {
@@ -52122,6 +52194,15 @@ export const NAHTAVYYSJUTUT = {
           + '1667 ja varsinaisena paloasemana 1905–1926. Vanhojen '
           + 'varustusten päälle ja ympärille rakennettiin 1888–1898 '
           + 'Nordnesin puisto.',
+      kuvat: [
+        {
+          tiedosto: 'Johan Christian Dahl - Fredriksberg Fortifications on Nordnes in Bergen - NG.M.00426-038 - National Museum of Art, Architecture and Design.jpg',
+          selite: 'Johan Christian Dahlin öljyluonnoksessa linnake istuu '
+            + 'Nordnesin kalliokärjessä ja vesi kiertää sen kolmelta '
+            + 'puolelta.',
+          lahde: 'Johan Christian Dahl, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Munkelivin luostari': {
@@ -52160,6 +52241,15 @@ export const NAHTAVYYSJUTUT = {
           + 'tunnettuna norjalaisen muotokuvana. Muureja oli tuolloin '
           + 'vielä pystyssä noin 2,4 metrin korkeuteen, mutta ne '
           + 'purettiin kaivausten jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'Munkeliv.jpg',
+          selite: 'Munkelivin oma keskiaikainen omaisuusluettelo '
+            + '(käsikirjoitus GKS 1347 4to) — luostarista ei ole jäljellä '
+            + 'muuta näkyvää.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Korskirken: {
@@ -52190,6 +52280,14 @@ export const NAHTAVYYSJUTUT = {
           + 'takia, sytyttämään kynttilän, juttelemaan, '
           + 'jumalanpalvelukseen tai kuuntelemaan musiikkia, ja työstä '
           + 'iso osa on sosiaalityötä ympäröivässä korttelistossa.',
+      kuvat: [
+        {
+          tiedosto: 'Bergen Korskirken 01.jpg',
+          selite: 'Fløyenin rinteeltä nähtynä Korskirkenin kivitorni nousee '
+            + 'vanhan kaupungin kattojen keskeltä.',
+          lahde: 'Ad Meskens, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Pyhän Yrjänän kirkko': {
@@ -52233,6 +52331,14 @@ export const NAHTAVYYSJUTUT = {
           + 'spitaalimuseona vuodesta 1970, ja kirkko on yhä vihitty '
           + 'ja käytössä: siellä pidetään kahdesti kuussa '
           + 'englanninkielinen jumalanpalvelus.',
+      kuvat: [
+        {
+          tiedosto: 'St. Jørgens hospital, Bergen....jpg',
+          selite: 'Sairaalan puurakennukset ja kirkon torni sateen jälkeen; '
+            + 'koko piha on nykyään spitaalimuseo.',
+          lahde: 'Thomasg74, Wikimedia Commons (CC BY-SA 3.0 NO)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Permanenten: {
@@ -52271,6 +52377,14 @@ export const NAHTAVYYSJUTUT = {
           + 'pylvästä lähetettiin pysyvänä lainana Pekingin '
           + 'yliopistoon. Huangin mukaan palautuksella ja '
           + 'lahjoituksella ei ollut mitään yhteyttä.',
+      kuvat: [
+        {
+          tiedosto: 'Vestlandske kunstindustrimuseum.jpg',
+          selite: 'Henry Bucherin 1896 valmistunut uusrenessanssitalo '
+            + 'kaupunginpuiston nurmen takana.',
+          lahde: 'Yair Haklai, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Kaupunginkirjasto: {
@@ -52304,6 +52418,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kirjasto: päätalon lisäksi sillä on yhdeksän sivukirjastoa, '
           + 'ja se hoitaa kirjastopalvelun kaupungin kahdessa '
           + 'vankilassa.',
+      kuvat: [
+        {
+          tiedosto: 'Bergen offentlige bibliotek ved Lille Lungegårdsvannet.jpg',
+          selite: 'Olaf Nordhagenin harmaa kivitalo heijastuu Lille '
+            + 'Lungegårdsvannetin jäätyneeseen pintaan.',
+          lahde: 'Odd Roar Aalborg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Yliopistomuseo: {
@@ -52333,6 +52455,14 @@ export const NAHTAVYYSJUTUT = {
           + 'luonnonhistoriallista taloa ympäröivä museopuutarha — '
           + 'entinen kasvitieteellinen puutarha — sekä kaupungin '
           + 'arboretum.',
+      kuvat: [
+        {
+          tiedosto: 'Bergen-University-modf.jpg',
+          selite: 'Vuoden 1865 museotalon edessä seisoo perustajan Wilhelm '
+            + 'Frimann Koren Christien patsas ja sen juurella kivileijona.',
+          lahde: 'Floflo, muokannut Aqwis, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },

@@ -13116,9 +13116,10 @@ export const KAUPUNKIKARTAT = {
     esittely: 'Kartan alue kattaa vanhan kaupungin ruutukaavan ja sen '
       + 'itäpuolelle 1900-luvulla kasvaneen museo- ja tornikaupungin. '
       + 'Vasemmalla ovat siirtomaa-ajan korttelit kirkkoineen, '
-      + 'oikealla puistot ja Parque Centralin kaksoistornit, ja '
-      + 'alareunassa kulkee Guairejoki laakson pohjalla. Kartan '
-      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+      + 'oikeassa yläkulmassa Los Caobosin puisto ja sen alapuolella '
+      + 'Parque Centralin kortteli, ja oikeassa alakulmassa kaartaa '
+      + 'moottoritien eritasoliittymä. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
     kohteet: [
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
@@ -13139,9 +13140,11 @@ export const KAUPUNKIKARTAT = {
     ],
   },
   /*
-   * BERGEN (7.9.2026). Rajaus on 1,8 × 1,6 kilometriä eli pelin
-   * tiiviimpiä, Christchurchin ja Melbournen kokoluokkaa —
-   * perustelu on tools/piirra-kaupunkikartta.mjs:n bergen-lohkossa.
+   * BERGEN (7.9.2026). Rajaus on 2,1 × 1,8 kilometriä, ja se on
+   * leveämpi kuin kohteet vaatisivat: länsireuna on vedetty
+   * Nordnesin kärjen yli, jotta Vågen ylipäänsä täyttyy vedellä.
+   * Perustelu ja koeajot ovat tools/piirra-kaupunkikartta.mjs:n
+   * bergen-lohkossa.
    *
    * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
    * Bryggenin varastot, Håkonshallen, kaupungin laajeneminen 1876 ja
@@ -13151,12 +13154,13 @@ export const KAUPUNKIKARTAT = {
    * Theaterista, Griegistä ja Peer Gyntistä. Yksikään kartan
    * kahdeksasta kohteesta ei ole niiden aihe.
    *
-   * KOLME KOHDETTA JÄTETTIIN POIS, VAIKKA NE MAHTUISIVAT RUUTUUN.
-   * Mariakirken ja Johanneksen kirkko ovat lehden omien kuvien aihe
-   * (kansikuva ja avauskuva kumpikin faktateksteineen), ja
-   * Fløibanen on matkaoppaan jakson aihe. Bryggens Museum ja
-   * hansamuseo jäivät pois, koska ne kertovat samaa asiaa kuin
-   * nostot K1, K4 ja H1.
+   * VIISI KOHDETTA JÄTETTIIN POIS, VAIKKA NE MAHTUISIVAT RUUTUUN.
+   * Bryggen ja Bergenhus näkyvät kuvassa rakennuksina, mutta ne
+   * ovat nostojen K1, K2 ja H4 aihe. Mariakirken ja Johanneksen
+   * kirkko ovat lehden omien kuvien aihe (kansikuva ja avauskuva
+   * kumpikin faktateksteineen), ja Fløibanen on matkaoppaan jakson
+   * aihe. Bryggens Museum ja hansamuseo jäivät pois, koska ne
+   * kertovat samaa asiaa kuin nostot K1, K4 ja H1.
    *
    * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: rautatieasema
    * on 81 metriä kaupunginkirjastosta ja Nonneseterin luostarin
@@ -13173,12 +13177,13 @@ export const KAUPUNKIKARTAT = {
   bergen: {
     polku: 'assets/kartat/bergen-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    rajat: { pohjoinen: 60.3990, etela: 60.3850, lansi: 5.3050, ita: 5.3375 },
+    rajat: { pohjoinen: 60.4010, etela: 60.3850, lansi: 5.2990, ita: 5.3375 },
     esittely: 'Kartta näyttää Vågenin lahden ja sen ympärille '
-      + 'kiertyvän vanhan Bergenin. Vasemmalla työntyy mereen '
-      + 'Nordnesin niemi, lahden pohjukassa on tori, oikealla '
-      + 'nousevat Fløyenin rinteen kadut ja alareunassa levittäytyy '
-      + 'Lille Lungegårdsvannetin lampi puistoineen. Kartan '
+      + 'kiertyvän vanhan Bergenin. Vasemmalla työntyy veteen '
+      + 'Nordnesin kapea niemi, lahden itärannalla erottuvat '
+      + 'Bryggenin laiturit, lahden pohjukassa on tori, oikealla '
+      + 'nousevat Fløyenin rinteen kadut ja oikealla alhaalla on '
+      + 'Lille Lungegårdsvannetin monikulmainen lampi. Kartan '
       + 'kohteista pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /*
