@@ -1,0 +1,509 @@
+{
+  "createdAt": "2026-09-07T10:39:43.654745+00:00",
+  "message": "15 maalehtikuvaa ja5 miniatyyriä, root- ja lähdetarkistettu.",
+  "items": [
+    {
+      "id": "maalehti-lbr-kirjallisuus-0-r20260907-v2",
+      "canonicalId": "maalehti-lbr-kirjallisuus-0",
+      "fileName": "maalehti-lbr-kirjallisuus-0-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Vai-tavukirjoituksen opetus 1830-luvun Liberian innoittamassa kuvituksessa. Paperin merkit ovat tulkinnallisia.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-lbr-kirjallisuus-0-r20260907-v2.jpg",
+      "sha256": "fb1d1a4177abf8800fd5af780cb5dbbd4052feb91429075667d572554befc78c",
+      "bytes": 587694,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset: 4:3 country-feature game photograph. Create an entirely new camera-realistic 1830s Liberian village writing lesson about the invention of the Vai syllabary. An anonymous teacher demonstrates a locally developed syllabary with a reed pen on modest palm-leaf and paper practice sheets while exactly three anonymous learners observe. Treat every mark as tiny non-legible writing texture, never as a claimed facsimile or readable transcription. CRITICAL DISTANT FRAMING: camera far back; all four complete people from head through feet, the entire low table including every leg, all hands and every sheet form a compact group only in the middle 50 percent of the image. Leave at least 22 percent genuine floor, wall and shaded village space on the left, right, above and below; no body or object may enter the outer 18 percent. Natural shaded daylight, plausible simple West African clothing and materials, crisp documentary photography. No identifiable named person, no modern objects, no Latin headline, no large fake glyphs, no logo, no watermark, no cropped body, hand, table or sheet.\n",
+      "sources": [
+        "https://africa.si.edu/exhibitions/inscribing-meaning-writing-and-graphic-systems-africa-art"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed final whole group/table/stools with wide margins. Read Smithsonian Vai and Mande Syllabaries passage via indexed full text: invented around1832 and syllabic function. Image symbols are not an authentic transcription."
+    },
+    {
+      "id": "maalehti-lbr-kirjallisuus-2-r20260907-v4",
+      "canonicalId": "maalehti-lbr-kirjallisuus-2",
+      "fileName": "maalehti-lbr-kirjallisuus-2-r20260907-v4.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Liberia Collegen alkuvaiheiden opetusta havainnollistava luokkahuone.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-lbr-kirjallisuus-2-r20260907-v4.jpg",
+      "sha256": "6efd126dca7d915c48c0aea33c2be515131d9658b6473094d3ba09a336fbad0d",
+      "bytes": 481958,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset: 4:3 country-feature game photograph. Create an entirely new camera-realistic 1880s Liberia College classics classroom evoking Edward Wilmot Blyden's teaching without depicting Blyden or any named real person. Show an empty sunlit classroom immediately after a lesson: one complete wooden lectern, one complete lecturer chair placed beside the lectern, one modest complete student desk, a chalkboard with only faint unreadable traces, several open classical books with no legible text, and a globe. CRITICAL DISTANT FRAMING: camera far back; the full furniture group occupies only the middle 45 to 50 percent of the image. Every chair and desk leg, lectern base, globe stand and book is fully visible and at least 20 percent from all four image edges. Leave broad uninterrupted floor foreground and generous wall and side space. Historically plausible materials, natural tropical daylight, sharp camera realism. No foreground chair, no furniture near an edge, no portrait, no modern item, no readable Greek or Latin quotation, no logo or watermark.\n",
+      "sources": [
+        "https://libraries.udmercy.edu/digital_collections/baa/Blyden_26043spe.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed final: whole lectern/chair/table/books/globe with ample native floor. Read Blyden1862 original inaugural address p0and4: college inauguration and language/science instruction. Room/furniture illustrative, no authentic classroom claim."
+    },
+    {
+      "id": "maalehti-kaz-musiikki-3-r20260907-v3",
+      "canonicalId": "maalehti-kaz-musiikki-3",
+      "fileName": "maalehti-kaz-musiikki-3-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kaksi akynia kohtaa aitys-kilpalaulannassa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-kaz-musiikki-3-r20260907-v3.jpg",
+      "sha256": "06c9924a7bed9fc608c91ba9222491e97fa05d32acb0bc5a0fe9afc3764ebf30",
+      "bytes": 346201,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: cultural-scene. Asset: 4:3 country-feature game photograph. Create an entirely new wide camera-realistic aitys performance in a spacious modest Kazakh cultural hall, grounded in the supplied Kazakhstan museum dombra photograph and UNESCO aitys documentation. Exactly two anonymous akyn singer-poets sit facing one another. Each performer holds one complete authentic traditional dombra with exactly TWO thin separate strings and exactly TWO tuning pegs clearly visible; both instruments have a long narrow neck, pear-shaped wooden body and small central sound hole matching the museum reference. No guitar headstock, no extra pegs, no extra strings, no decorative cords mistaken for strings. A compact row of six audience members sits well behind them. CRITICAL DISTANT FRAMING: the entire gathering, every head and foot, both complete dombra bodies and headstocks, all chairs and hands occupy only the middle 50 percent of the image, at least 20 percent from every edge. Leave broad empty wooden floor below and blank wall above and on both sides. Lively natural improvisation, warm hall light, sharp documentary photography. No named people, foreground spectators, text, logo, watermark or cropping.\n",
+      "sources": [
+        "https://ich.unesco.org/en/RL/aitysh-aitys-art-of-improvisation-00997"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed final and actual museum dombra; whole seven people/chairs, compact instruments with two-peg heads and two fine strings, ample floor. Read UNESCO definition: seated opposing improvising akyns with dombra and audience topics. Generic event, no named performers."
+    },
+    {
+      "id": "maalehti-kaz-historia-2-r20260907-v2",
+      "canonicalId": "maalehti-kaz-historia-2",
+      "fileName": "maalehti-kaz-historia-2-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kuvitteellinen karavaani 1400-luvun kazakkien muuttoliikkeen yhteydessä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-kaz-historia-2-r20260907-v2.jpg",
+      "sha256": "266da29d40d38d9a51bcf915a2d1a78402ef6b26f019dbb2d9292ff56ea50c54",
+      "bytes": 489704,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja country feature, wide 4:3 historical reconstruction. An exceptionally wide, distant view of a 15th-century nomadic migration across the Kazakh steppe associated with followers of Kerei and Janibek moving toward Moghulistan. Place the entire caravan strictly inside the central 50 percent of the frame: a compact line of mounted families, pack horses, and two complete ox carts carrying collapsed felt-yurt frames and rolled felt, plus a small distant temporary camp. Leave at least 18 percent completely open steppe at both left and right edges, at least 15 percent clear foreground below every hoof and wheel, and generous open sky above every head, rider, load, and yurt pole. No animal, cart, person, pole, or camp element may touch or approach an edge. Historically plausible Central Asian clothing and tack; no standardized modern flag, no firearms, no battle. Anonymous people at medium and far distance with varied natural poses. Sharp camera-like photorealism in cool dawn light, realistic documentary reconstruction, no painterly softness. No readable text, logos, border, or watermark.\n",
+      "sources": [
+        "https://e-history.kz/storage/upload/library_en_files/iblock/51a/51ac59cc71b0d4c44a3adfedf7eaeb15.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root re-viewed final caravan: complete people, wagons and horses, broad steppe. Root read Abusseitova source p33 on Kerey and Janibek migrating to Moghulistan1459-60. Anonymous historical interpretation, not a documented portrait or exact route."
+    },
+    {
+      "id": "maalehti-kaz-musiikki-2-r20260907-v1",
+      "canonicalId": "maalehti-kaz-musiikki-2",
+      "fileName": "maalehti-kaz-musiikki-2-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Nimetön dombra-soittaja jurtan edessä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-kaz-musiikki-2-r20260907-v1.jpg",
+      "sha256": "c197a59898048b43c0fa70f7482ef8112b9fc30fe122b37623bc2bf12f70c9a3",
+      "bytes": 538221,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja country feature, wide 4:3 editorial reconstruction. An anonymous 19th-century Kazakh küy musician seated outside a felt yurt on open steppe, playing a traditional two-string dombra across the lap. The musician is not a portrait of Kurmangazy; show a fictional older player in three-quarter profile with a natural visible face, period-plausible chapan and hat. Complete yurt, seated body, hands and entire dombra including headstock visible. Warm low sunlight, sharp camera-like realism. Story group occupies only the middle 60–65 percent with generous sky, ground and side margins. No prison imagery, readable text, logos or watermark.\n",
+      "sources": [
+        "https://e-museum.kz/en/exhibit/68db59698958e0562-en/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual museum dombra and final whole musician, two-string/two-peg instrument and yurt. Museum object text confirms two pegs. Anonymous music illustration, not an authentic Kurmangazy portrait or prison event."
+    },
+    {
+      "id": "maalehti-afg-historia-3-r20260907-v1",
+      "canonicalId": "maalehti-afg-historia-3",
+      "fileName": "maalehti-afg-historia-3-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kamelinkuljettajia Australian sisämaassa kuvaava historiallinen rekonstruktio.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-afg-historia-3-r20260907-v1.jpg",
+      "sha256": "19ddff08a83a3ccc69212e41ea4f241633c8dd07c24630b2831f919c3f31cac9",
+      "bytes": 539172,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja country feature, wide 4:3 documentary reconstruction. Late-19th-century Australian red interior: a compact camel caravan led by anonymous South and Central Asian cameleers, reflecting the historically diverse men collectively called “Afghans.” Three complete pack camels carry period-correct wool bales and supplies using rope, leather and wooden saddles; two complete handlers walk alongside in practical period clothing. A line of wooden Overland Telegraph poles recedes in the distant background. Sharp camera-like photorealism in dry golden light, natural red earth and sparse scrub, no romantic fantasy styling. Keep every camel, handler, wool bale and pole top within the middle 65 percent; leave at least 15 percent clear red ground below all feet and generous sky and side margins. No train, modern road, flag, text, logos or watermark.\n",
+      "sources": [
+        "https://www.naa.gov.au/students-and-teachers/student-research-portal/learning-resource-themes/science-and-technology/communication/last-camel-train-used-deliver-mail-outback-australia"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read National Archives account of camel mail transport and diverse origins of people collectively called Afghan cameleers. Root final review: complete three loaded camels, drivers and telegraph setting with broad native ground. Illustrative scene, not archive photograph facsimile."
+    },
+    {
+      "id": "maalehti-afg-kirjallisuus-2-r20260907-v2",
+      "canonicalId": "maalehti-afg-kirjallisuus-2",
+      "fileName": "maalehti-afg-kirjallisuus-2-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Naiset jakavat landay-runoutta kuvitteellisessa kotipiirin kokoontumisessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-afg-kirjallisuus-2-r20260907-v2.jpg",
+      "sha256": "8c565182544db350c63ca11649346c0c731898cead86079cd1e33b25ce3279c0",
+      "bytes": 591131,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: cultural-scene. Asset type: Matkakirja country feature, very wide 4:3 documentary photograph. Five anonymous adult Pashtun women sit in a close loose circle on cushions in the center of a spacious plain home interior; one sings a short landay couplet and the others listen naturally. Their faces may be visible; no named person is portrayed. Pull the camera far back: the complete group, every head, hand, seated body, cushion and a small tea tray must fit strictly inside the middle 55 percent, at least 18 percent away from every edge. Leave broad empty rug below their feet and knees, blank wall above, and clear unused floor/wall on both sides. Everyday modest regional clothing with realistic fabrics and varied natural expressions. Sharp camera-like realism in gentle window light. No written poem, readable text, cropped person, logos or watermark.\n",
+      "sources": [
+        "https://pulitzercenter.org/stories/poetry-afghanistans-women"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual Pulitzer reporting photograph and final whole group with cushions/tea and ample floor. Read first-person poetry reporting and Poetry Foundation landay definition, two-line22-syllable anonymous oral form. No named woman or authentic quoted poem claimed."
+    },
+    {
+      "id": "maalehti-lbr-musiikki-2-r20260907-v1",
+      "canonicalId": "maalehti-lbr-musiikki-2",
+      "fileName": "maalehti-lbr-musiikki-2-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kuvitus nimettömän liberialaisen laulajan 1970-luvun teatteriharjoituksesta.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-lbr-musiikki-2-r20260907-v1.jpg",
+      "sha256": "23145dd13b79458bf2417691aa941914f79c1e3d2820b4b8f2ccb50ec597de87",
+      "bytes": 533137,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset: 4:3 country-feature game photograph. Create an entirely new, camera-realistic late-1970s concert rehearsal inspired by a Liberian woman singer's international career. Show an anonymous Black Liberian woman singer in three-quarter rear view at a microphone on a modest warm-lit stage, with a small anonymous band and empty theatre seats beyond. She must not resemble Miatta Fahnbulleh or any named real person. Entire singer, microphone stand, two musicians and instruments fit within the middle 65% of the frame, with at least 15% clear margin on every edge and visible floor below feet. Crisp natural photographic detail, plausible 1970s clothing and equipment. No text, album covers, logos, flags, watermark, cropped bodies or instruments.\n",
+      "sources": [
+        "https://miattafahnbulleh.wordpress.com/bio/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read artist own biography and viewed final singer/band rehearsal. Complete principal singer and microphone, warm stage light; band secondary. Anonymous illustrative performer, not Miatta Fahnbulleh portrait. Album date not asserted by image."
+    },
+    {
+      "id": "maalehti-lbr-kirjallisuus-3-r20260907-v2",
+      "canonicalId": "maalehti-lbr-kirjallisuus-3",
+      "fileName": "maalehti-lbr-kirjallisuus-3-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Liberialaista torikeskustelua ja kaupankäynnin puhekieltä havainnollistava kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-lbr-kirjallisuus-3-r20260907-v2.jpg",
+      "sha256": "a6c0ac631d243ccb176b288ecc6cb94ec5ef826b978f34ad4543542dfc5ad703",
+      "bytes": 618019,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset: 4:3 country-feature game photograph. Create an entirely new contemporary Monrovia market conversation illustrating Kolokwa as a primarily spoken language. Show four anonymous Liberian adults in a lively, friendly face-to-face exchange beside a small produce stall; gestures and expressions convey spoken storytelling, with no written language displayed. Entire people from head to foot, complete stall, baskets and produce fit within the middle 50% of the frame, leaving at least 22% clear margin on every edge and visible ground below feet. Sharp natural camera realism, warm daylight, varied poses and visible anonymous faces. No signs, books, captions, speech bubbles, readable text, logos, watermark, cropped bodies or baskets.\n",
+      "sources": [
+        "https://www.trade.gov/country-commercial-guides/liberia-selling-factors-techniques"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read US Trade guide confirming widespread colloquial English in commerce. Final whole four-person market group/stall and native margins pass. Unsupported zero-books title excluded from caption; propose revised title to Fable."
+    },
+    {
+      "id": "maalehti-mli-historia-1-r20260907-v1",
+      "canonicalId": "maalehti-mli-historia-1",
+      "fileName": "maalehti-mli-historia-1-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Mandenin suullista peruskirjaperinnettä havainnollistava kuvitteellinen kokoontuminen.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-mli-historia-1-r20260907-v1.jpg",
+      "sha256": "f6b5004b105380997a1f5ccede0d9cac2221475c972980a81c4f0233d2fd8769",
+      "bytes": 672309,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset: 4:3 educational game photograph. Entirely new wide camera-realistic illustration of the early-thirteenth-century oral proclamation of the Manden Charter at the open Kurukan Fuga clearing after a major victory. A compact semicircle of anonymous elders and community representatives listens to one standing jeli who speaks from memory; include women visibly among the council. No written charter, scroll, tablets, flags, crowns or named-person portrait. Camera very far back: the complete council, every head and foot and all garments occupy only the middle 55 percent, with at least 18 percent authentic savanna ground, sky and trees on every edge. Natural daylight, historically plausible West African woven clothing and materials, sharp documentary realism. No readable text, logo, watermark or cropped figure.\n",
+      "sources": [
+        "https://ich.unesco.org/en/RL/manden-charter-proclaimed-in-kurukan-fuga-00290"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read UNESCO early13th-century oral charter/assembly account. Final distant complete elder and listening circle, generous open clearing. Illustrative gathering, no exact documented event or verbatim charter reproduction."
+    },
+    {
+      "id": "maalehti-mli-kuvataide-2-r20260907-v1",
+      "canonicalId": "maalehti-mli-kuvataide-2",
+      "fileName": "maalehti-mli-kuvataide-2-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Bamakon 1950-luvun muotokuvastudioiden innoittama kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-mli-kuvataide-2-r20260907-v1.jpg",
+      "sha256": "3b299ca0c90604afd6c8818f91c069a667a07c5def827a7ba2ee4cbbc0537295",
+      "bytes": 534737,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset: 4:3 educational game photograph. Entirely new camera-realistic late-1950s Bamako commercial portrait-studio scene inspired by documented Seydou Keïta studio practice without depicting Keïta or recreating a known photograph. An anonymous elegantly dressed client chooses a pose beside a patterned textile backdrop while an anonymous photographer, seen small from behind, adjusts a period large-format camera; modest props and folded patterned cloth nearby. Black-and-white photographic look with crisp tonal detail. Camera far back: complete client, photographer, camera tripod, backdrop stand and props occupy only the middle 55 percent, with at least 18 percent courtyard/floor/wall margin on all sides. No named likeness, modern camera, readable text, logo, watermark or cropped object.\n",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/508077"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read Met collection studio context and educator guide courtyard/daylight/printed-backdrop account. Final complete anonymous rear-facing photographer/client/camera/tripod and printed cloth, native floor. Not a Seydou Keita portrait or reproduction of an existing work."
+    },
+    {
+      "id": "maalehti-mli-urheilu-2-r20260907-v1",
+      "canonicalId": "maalehti-mli-urheilu-2",
+      "fileName": "maalehti-mli-urheilu-2-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Malin nuorten jalkapallomenestyksen innoittama kuvitteellinen joukkuekuva.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-mli-urheilu-2-r20260907-v1.jpg",
+      "sha256": "7885d6b692f7e247a52cce2f12473bef196170a69f5fa59e3aac16d52e73b0e8",
+      "bytes": 642666,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset: 4:3 educational game photograph. Entirely new wide contemporary sports photograph evoking Mali's strong under-17 football tradition without depicting a real match, named player, exact national kit or trademark. A complete anonymous youth team of eleven celebrates a hard-earned tournament result with coaches well behind them on a grass pitch; faces natural and varied. Camera very far back: every full body, foot, ball and the compact team group occupy only the middle 55 percent, with at least 18 percent grass, stadium and sky on every edge. Sharp press-camera realism, energetic but believable, no cropped limbs, readable sponsor, logo, trophy text or watermark.\n",
+      "sources": [
+        "https://www.fifa.com/es/tournaments/mens/u20worldcup/chile-2025/articles/finales-torneos-fifa-en-chile?searchOverlay=1"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read FIFA result identifying Nigeria-Mali2015 U17 final and verified FIFA final video metadata. Final complete anonymous youth squad, ball and expressive celebration. Not exact final photograph, actual team member likeness or match venue reconstruction."
+    },
+    {
+      "id": "maalehti-mng-musiikki-1-r20260907-v1",
+      "canonicalId": "maalehti-mng-musiikki-1",
+      "fileName": "maalehti-mng-musiikki-1-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Nimetön khöömei-laulaja Mongolian jokimaisemassa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-mng-musiikki-1-r20260907-v1.jpg",
+      "sha256": "55962cf1b842458f7d1f1cb33b8d8e43a508912560cf3c3b464f5a349e87ceaa",
+      "bytes": 684780,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: cultural-scene. Asset: 4:3 educational game photograph. Entirely new wide natural photograph of one anonymous Mongolian khöömei throat singer practicing beside a river in an open mountain valley, reflecting the tradition's documented connection with nature and overtone singing. The singer stands calmly with one hand lightly indicating breath control; no invented diagram, visible sound waves or written labels. Camera very far back: the complete singer occupies only the central 25 percent and the meaningful landscape the frame, with at least 20 percent sky, riverbank and meadow around the person and feet clearly visible. Sharp camera realism, natural daylight and wind, no named likeness, instrument, text, logo or watermark.\n",
+      "sources": [
+        "https://ich.unesco.org/en/RL/mongolian-traditional-art-of-khoomei-00396"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read UNESCO two simultaneous sounds, Altai/western Mongolia, nature imitation and performance contexts. Final whole expressive singer by river/mountains, broad native environment. Anonymous illustration."
+    },
+    {
+      "id": "maalehti-mng-musiikki-2-r20260907-v1",
+      "canonicalId": "maalehti-mng-musiikki-2",
+      "fileName": "maalehti-mng-musiikki-2-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Nimetön urtiin duu -laulaja avoimella arolla.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-mng-musiikki-2-r20260907-v1.jpg",
+      "sha256": "cb9acd325cb46f9bc402426d9f7749d77133b90db241153a338e0ba3ac96fab0",
+      "bytes": 519341,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: cultural-scene. Asset: 4:3 educational game photograph. Entirely new wide natural photograph of an anonymous Mongolian urtiin duu long-song singer performing unaccompanied in an open western grassland valley, a documented regional practice. The complete singer wears plausible traditional clothing and holds a sustained ornamented note with a natural relaxed posture; no instrument, visible notation, stage or invented named performance. Camera extremely far back: person occupies only the middle 25 percent, with expansive grassland, distant mountains and sky and at least 20 percent clear space on all edges. Sharp documentary camera realism, no named likeness, text, logo, watermark or cropped body.\n",
+      "sources": [
+        "https://ich.unesco.org/en/RL/urtiin-duu-traditional-folk-long-song-00115"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read UNESCO long song ornamentation, wide vocal range and pastoral contexts. Final complete singer in broad grassland. Solo image does not assert that the genre is always unaccompanied."
+    },
+    {
+      "id": "maalehti-lka-musiikki-3-r20260907-v2",
+      "canonicalId": "maalehti-lka-musiikki-3",
+      "fileName": "maalehti-lka-musiikki-3-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Sri Lankan kansallislaulun harjoittelua havainnollistava nimetön kuoro ja suljettu, tekstitön musiikkikansio.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-lka-musiikki-3-r20260907-v2.jpg",
+      "sha256": "4564f2e591e4f0aacd35669cbea1a82396120ee79f6375d89c6474b6f97025b6",
+      "bytes": 468551,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new sharp 4:3 editorial still life about Sri Lanka's national anthem without reproducing fake lyrics, music or a supposed authentic anthem book. On a broad dark wooden rehearsal table, place one CLOSED plain clothbound music folder with no title or emblem, a pair of complete reading glasses, one complete wooden conductor's baton, and a small portable radio; in the distant soft but natural background, three anonymous school choir members stand fully visible from behind in a simple rehearsal room. No open pages, musical notation, Sinhala/Tamil script, readable text, flag, portrait, logo or watermark. The entire compact tabletop group and all three distant figures occupy only central 50–55 percent of frame, with at least 20 percent sharp tabletop/wall/floor margin on every edge. No blur padding or copied extension; only natural optical depth. Warm camera-like documentary light. Caption identifies an illustrative anthem rehearsal context, not an authentic score or historical performance.\n",
+      "sources": [
+        "https://www.gov.lk/index.php/sri-lanka/country-overview"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed final closed blank folder, complete glasses/baton/radio and rear-facing anonymous choir with usable space. Root read government national anthem account. No authentic score, lyrics or historical performance claimed."
+    },
+    {
+      "id": "portvila-vanuatun-parlamenttitalo",
+      "canonicalId": "portvila-vanuatun-parlamenttitalo",
+      "fileName": "portvila-vanuatun-parlamenttitalo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Parliament of Vanuatu — julkisivuminiatyyri.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/portvila-vanuatun-parlamenttitalo.png",
+      "sha256": "a4751d1375a21562006094a648c311040617bc44a1a8deb325365a3c92891f2d",
+      "bytes": 349672,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use the attached real photograph only as a binding architecture reference. Create a completely new 1024x1024 M3 finely drawn ink and restrained watercolor game-map miniature of the Parliament of Vanuatu. Show the complete broad low building: dominant solid white steep triangular central entrance gable on white round columns, dark recessed doorway, darker thatched triangular plane behind it, and long low red corrugated-roof wings across both sides. Whole building uncropped, centered, content within 800x800. Background must be one perfectly flat uniform pure chroma green #00FF00 with no texture, gradient, checkerboard, shadows or green reflections. No text, letters, numbers, logos, signs, people, cars, flags, watermark, open brown pavilion, tower or fantasy roof.\n",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Vanuatu_Parliament,_Port_Vila_-_Flickr_-_PhillipC.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed actual reference photograph and final black/white composites. Corrected real facade/roof/tower silhouette and structural tiers now match reference at miniature scale; no visible green spill. This is a selected facade, not a complete whole-building model."
+    },
+    {
+      "id": "denver-coors-field",
+      "canonicalId": "denver-coors-field",
+      "fileName": "denver-coors-field.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Coors Field — julkisivuminiatyyri.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/denver-coors-field.png",
+      "sha256": "06135fbc8639f8916f92a8844fabe20f44f2836c1b0a593f013165c1fb2068d9",
+      "bytes": 839332,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use the attached real photograph only as binding architecture reference. Create a completely new 1024x1024 M3 finely drawn ink and restrained watercolor miniature of Coors Field. Show the complete broad rounded red-brick stadium entrance, repetitive tall dark window bays, tan bands and steel bowl behind. Preserve the actual central top: a round clock in a rectangular brick tongue capped only by a shallow dark semicircular open hood. No pagoda, pyramid, pointed tower, cupola or invented roof. Omit source lettering. Whole structure uncropped, centered, within 800x800. Background must be perfectly flat uniform pure #00FF00 with no gradient, texture, checkerboard, shadow or green reflection. No text, letters, numbers, logos, signs, people, vehicles, flags or watermark.\n",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Coors_Field_exterior_2022.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed actual reference photograph and final black/white composites. Corrected real facade/roof/tower silhouette and structural tiers now match reference at miniature scale; no visible green spill. This is a selected facade, not a complete whole-building model."
+    },
+    {
+      "id": "denver-daniels-fisher-torni",
+      "canonicalId": "denver-daniels-fisher-torni",
+      "fileName": "denver-daniels-fisher-torni.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Daniels & Fisher Tower — julkisivuminiatyyri.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/denver-daniels-fisher-torni.png",
+      "sha256": "cefc2a8df67d167bf0f06b235748e5008663316f0c52b14bc3f7b034ae8d0347",
+      "bytes": 274996,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use the attached real photograph as binding structure reference. Create a completely new 1024x1024 M3 finely drawn ink and restrained watercolor miniature of the complete Daniels & Fisher Tower. Exact order bottom-up: long slender buff-brick shaft with regular narrow windows; projecting cornice; OPEN four-arched bell gallery; projecting cornice; square CLOCK STAGE ABOVE the open gallery; tapered pyramidal roof; small open round lantern; thin finial. Clock must never be below or inside gallery. Isolated entire tower, uncropped, within 800x800. Background perfectly flat uniform pure #00FF00, no gradient, checkerboard, texture, shadow or green reflection. No adjacent buildings, text, letters, numbers, logos, people, flags or watermark.\n",
+      "sources": [
+        "https://www.loc.gov/pictures/resource/highsm.48763/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed actual reference photograph and final black/white composites. Corrected real facade/roof/tower silhouette and structural tiers now match reference at miniature scale; no visible green spill. This is a selected facade, not a complete whole-building model."
+    },
+    {
+      "id": "denver-katedraalibasilika",
+      "canonicalId": "denver-katedraalibasilika",
+      "fileName": "denver-katedraalibasilika.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Cathedral Basilica of the Immaculate Conception — julkisivuminiatyyri.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/denver-katedraalibasilika.png",
+      "sha256": "67075d8cc0c427bd4be64a27daeaa4d46caf75840fdf1ed68fcb99f48c39a806",
+      "bytes": 890317,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use the attached real photograph as binding architecture reference. Create a completely new 1024x1024 M3 finely drawn ink and restrained watercolor miniature of Denver's Cathedral Basilica of the Immaculate Conception. Complete pale white-gray Gothic west front: twin square towers with paired open bell arches, each rising into tall WHITE LACY OPENWORK STONE PINNACLE SPIRES edged with crockets; central rose window; three pointed portals; lower side/nave volume. Spires must be pale pierced stone lace, never green copper or solid cones. Whole cathedral uncropped within 800x800. Background perfectly flat uniform pure #00FF00, no gradient, checkerboard, texture, shadow or green reflection. No text, letters, numbers, logos, people, signs or watermark.\n",
+      "sources": [
+        "https://www.uncovercolorado.com/best-churches-in-denver-co/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed actual reference photograph and final black/white composites. Corrected real facade/roof/tower silhouette and structural tiers now match reference at miniature scale; no visible green spill. This is a selected facade, not a complete whole-building model."
+    },
+    {
+      "id": "houston-market-squaren-puisto",
+      "canonicalId": "houston-market-squaren-puisto",
+      "fileName": "houston-market-squaren-puisto.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Market Square Park miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/houston-market-squaren-puisto.png",
+      "sha256": "7856939b9f054a967f9850bb7fbee5053e669ea00b92827dbc6e3573a77f1a58",
+      "bytes": 894432,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1024×1024 M3 miniature strictly from the attached actual photograph of Market Square Park, Houston. Center the park's defining Points of View sculpture: a slender dark steel trunk made of stacked open rings, branching near the top into an irregular radial crown of many long pointed bronze-brown leaf/blade forms, with two small curved silver lamp arms below. Place it on its real low square fountain/plinth with a restrained patch of lawn, one mature live-oak canopy to the right and a short flat grey trellis canopy to the left. Omit all surrounding hotel and office buildings, cars, people, street signs and readable writing. Do not invent a gazebo, historic brick city block, clock tower or bandstand. No text, logos, letters or numbers. Fine ink and restrained bronze, green and grey watercolor, complete centered silhouette within 800×800, pure #00FF00 background without green tint or distant shadow.\n",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Market_Square_Park_Houston.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root previously compared actual sculpture/trellis/oak reference and personally inspected new full-resolution black/white composites. Prior neon-green key remnants in metal pole/openings removed by local technical despill, preserved silhouette and alpha."
+    }
+  ],
+  "reviewPublished": true,
+  "reviewVersion": 157,
+  "gameIntegrationClaimed": false
+}

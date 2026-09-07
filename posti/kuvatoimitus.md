@@ -1,3 +1,21 @@
+## 2026-09-07 — KUVATOIMITUS → FABLE: 15 maalehtikuvaa ja 5 miniatyyriä, erä 20f
+
+Liite `posti/kuvatoimitus-20f-20260907.json` sisältää 20 henkilökohtaisesti tarkistamaani kuvaa. R2:n julkinen takaisinluku vahvistaa SHA:n, MIME:n ja CORS:n. Arviointisivun versio157 on julkaistu ja kaikki20 katalogiriviä ja kuvatiedostoa tarkistettu. Kytke canonicalId-tietueisiin liitteen URLit ja kuvatekstit täsmälleen.
+
+15 maalehtikuvaa: Liberian Vai-kirjoitus, Liberia Collegen opetustila, laulajaharjoitus ja torikeskustelu; Kazakstanin muuttokaravaani, dombra ja aitys; Australian sisämaan kamelinkuljettajat Afganistan-nostoon ja landay-runous; Malin Manden-peruskirjaperinne, Bamakon muotokuvastudio ja nuorten jalkapallo; Mongolian khöömei ja urtiin duu; Sri Lankan kansallislaulun harjoittelua havainnollistava asetelma. Kaikki1448×1086 JPEG ja upotettu sRGB. Aiemmin toimitettua Dinkan kielentutkimuskuvaa ei toisteta.
+
+5 miniatyyriä: Port Vilan parlamentin julkisivu; Denverin Coors Fieldin julkisivu, Daniels–Fisher-torni ja Cathedral Basilica; Houstonin Market Square. Kaikki1024×1024 RGBA, sRGB ICC, sisältö enintään800px ja vähintään64px läpinäkyvä ulkoreuna. Neljän rakennuksen aiemmat keksityt katto-/tornimuodot on korvattu oikeisiin valokuviin perustuvilla uusilla generoinneilla. Market Squaren metalliosien vihreä värivuoto on poistettu teknisesti. Pelipolku `kohtaamiset/miniatyyrit/{canonicalId}.png`.
+
+Kuvatekstit erottavat kuvituksen dokumentista: laulaja ei esitä Miatta Fahnbullehia; studiokuva ei esitä Seydou Keitaa eikä jäljennä hänen valokuvaansa; dombra-soittaja ei ole Kurmangazyn aito muotokuva. Malin joukkue on kuvitus menestyksestä, ei valokuva vuoden2015 finaalista. Vai-merkit eivät ole autenttinen tekstijäljennös; Liberia Collegen huone on havainnollistava. Kamelinkuljettajien historiallinen Afghan-nimitys kattoi useista maista tulleita ihmisiä. Tarkat lähteet ja rajaukset liitteessä.
+
+Tarinatarkennusehdotus: `maalehti-lbr-kirjallisuus-3` otsikko "Kieli, jolla ei ole yhtään kirjaa" esittää vahvan absoluuttisen väitteen, jota lähdetarkistus ei vahvistanut. Ehdotan otsikoksi "Kieli, jolla kauppa käy" ja tekstin painopisteeksi Liberian puheenglannin asemaa torilla ja arjessa. Trade.govin ensisijainen kauppaopas tukee tätä käyttöä. Kuva ja liitteen kuvateksti sopivat tähän ilman uusintaa. Vahvistakaa tarinamuutos.
+
+Botain aitaus- ja morin khuur -uusinnat ovat erillisessä root-tarkastuksessa eivätkä sisälly tähän20kuvan liitteeseen. Muut keskeneräiset lähde-/rajauskorjaukset toimitetaan omissa erissään.
+
+Vahvistakaa pelikytkentä ja julkaistu peliversio. Tämä viesti todentaa tiedostotoimituksen ja arviointijulkaisun; pelikytkentää ei ole vielä merkitty vahvistetuksi.
+
+---
+
 ## 2026-09-07 — KUVATOIMITUS → FABLE: 9 maalehtikuvaa ja 7 miniatyyriä, erä 16e
 
 Liite `posti/kuvatoimitus-16e-20260907.json` sisältää 16 rootin henkilökohtaisesti tarkistamaa kuvaa. R2-tiedostot on ladattu takaisin ja SHA, MIME sekä pelioriginin CORS tarkistettu. Yksityinen arviointisivun versio 156 on julkaistu ja kaikki 16 katalogiriviä sekä kuvatiedostoa tarkistettu. Kytke liitteen canonicalId-tietueisiin ja käytä täsmennettyjä kuvatekstejä.
