@@ -28,6 +28,28 @@
  * SYMBOLIN päällä on sallittu vain väistön oma "SYMBOLI EI JÄÄ ILMAN
  * NIMEÄ" -tinkiminen (js/fokuskohteet.js), ja se luetellaan erikseen
  * tiedoksi.
+ *
+ * ── MITÄ TÄMÄ PORTTI EI VOI VARTIOIDA: PALLON KAUPUNKINIMET ────────
+ *
+ * Omistajan 7.9.2026 ilmoittama vika (*"kaupungin nimi menee nostojen
+ * päälle"*, Bukarest) on samaa sukua mutta EI ole tämän portin
+ * ulottuvilla, ja se on tietoinen rajaus eikä unohdus.
+ *
+ * Poltettu nimiö on laudan dataa: paikka, kylki ja mitta tulevat
+ * samasta laskennasta, jolla laatta poltettiin — siksi limitys on
+ * laskettavissa Nodessa. PALLON KAUPUNKINIMI EI OLE LAUDAN DATAA. Sen
+ * paikan valitsee ajonaikainen ruutuladonta (js/karttanimet.js
+ * ladoRuutunimet) ruutupikseleissä kameran projektiosta, nimibudjetista
+ * (katto 40), pelimerkkien pinoista ja siitä, mitkä kaupungit ovat
+ * juuri sillä hetkellä näkyvissä. Sama kaupunki saa eri paikan eri
+ * korkeudella ja eri panoroinnilla, joten laudan yksiköissä ei ole
+ * mitään, mitä vertailla.
+ *
+ * Pallon sovittelu (js/pallolauta/sovittelu.js: kaupungin nimi
+ * kiinteä, nostojen laput väistävät) mitataan siksi selaimessa:
+ *   tools/savukkeet/savuke-pallo-nostolaput.mjs   (neljä kaupunkia)
+ *   tests/pallosovittelu.test.mjs                 (päätössarja)
+ * ja se on kuvattu docs/moduulit/karttapallo.md luvussa 14.
  */
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 import { keraaNostot } from './fokuskartta/nostot.mjs';

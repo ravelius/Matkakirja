@@ -3663,3 +3663,115 @@ jostain syystä ehdi.
 
 Savuke: `tools/savukkeet/savuke-valikon-sulku.mjs` (hampurilainen ja
 ratasvalikko: ensimmäinen napautus vain sulkee, toinen avaa kohteen).
+
+## 14. Kaupungin nimi nostojen päällä (7.9.2026)
+
+Omistajan vikailmoitus 7.9.2026 (kuvakaappaus Bukarestista,
+sanatarkasti): *"kaupungin nimi menee nostojen päälle"*. Kuvassa
+kaupunkipiste on keskellä, nimi BUKAREST pienenä harvennettuna sen alla
+ja kaksi nostoa molemmin puolin — ja oikean noston lappu makasi nimen
+päällä.
+
+Fablen linjaus (Raamattu, KAUPUNGIN NIMI NOSTOJEN PAALLA): pallolla
+kaupungin nimi ja nostojen nimilaput eivät saa mennä päällekkäin.
+**Kaupungin nimi on ensisijainen; nostojen laput väistävät.**
+
+### 14.1 Juurisyy: väärä osapuoli väisti
+
+Ladonta ajettiin levossa tässä järjestyksessä: nostot ensin, ja niiden
+laatikot menivät nimiladonnan varauksiksi (`ladoLevossa` →
+`nostot.paivita` → `nimet.lado({ varaukset })`). Siitä seurasi kaksi
+vikaa, jotka näyttivät samalta:
+
+1. **Poltettu muste ei varannut mitään.** Varauksiin meni vain ELÄVIEN
+   nostojen laatikot (`naytetaan`), koska ne ovat kerroksen omia
+   elementtejä. Poltettu nosto on laatan kuvassa eikä listalla — joten
+   nimi ei tiennyt siitä mitään ja laskeutui suoraan sen päälle. Tämä
+   on omistajan Bukarest: mitattuna A/B-ajossa (savuke, vanha
+   varaussääntö rinnalla) Bukarestin nimi limittyi poltetun musteen
+   kanssa korkeuksilla 0,05 ja 0,12 — ja vain Bukarestissa neljästä
+   mitatusta kaupungista.
+2. **Elävä lappu ajoi nimen pois.** Kun lappu oli varaus, nimi ei
+   voinut mennä sen päälle — se PUTOSI. Sääntö oli siis päinvastainen
+   kuin linjaus: liikkuva muste voitti kiinteän.
+
+### 14.2 Sääntö: liikkumaton muste varaa, liikkuva väistää
+
+`ladoLevossa` on nyt kolme vaihetta samassa levossa:
+
+1. **Nostot** valitsevat kerrokseen mahtuvat merkit ja antavat
+   **KIINTEÄN musteensa** laatikot: poltetun noston koko muste (ikoni +
+   laattaan paistettu nimiö) ja elävän noston **ikoni**. Elävän noston
+   **lappu ei ole varaus**.
+2. **Nimet** ladotaan (`js/pallolauta/nimet.js`) niin, että ne väistävät
+   vain sitä, mikä ei voi väistää itse.
+3. **Nostojen laput sovitellaan** (`nostot.sovittele`) nyt kiinteiden
+   nimilaatikoiden ympärille. Nimikerros antaa laatikkonsa luku-API:na
+   (`nimet.laatikot()`) eikä tiedä sovittelusta mitään.
+
+### 14.3 Päätössarja (js/pallolauta/sovittelu.js)
+
+Sovittelu on omassa moduulissaan, koska sama päätös koskee kahta
+kerrosta, jotka eivät saa tuntea toisiaan. Järjestys on Fablen linjaus:
+
+| Porras | Mitä kokeillaan | Miksi |
+| --- | --- | --- |
+| 0 | **oma kylki** ilman siirtoa | laattaladonta on käsin hiottua (`ladoMaanTynka`) — sitä kunnioitetaan aina kun se ei törmää |
+| 1 | **kolme muuta kylkeä** (`NOSTOSYM_NIMIO_KYLJET`: oikea, vasen, ylä, ala) | kylki on kirjaston oma käsite; rasterin välimuistiavaimessa on kylki, joten vaihto ei maksa uutta mittausta |
+| 2 | **pieni siirto** 6 px: kolme suuntaa kylkeä kohti (kohtisuoraan ±, sitten ulos) eli 12 asentoa | kohtisuora on se, joka irrottaa vaakalapun vaakanimen kaistasta; kaistan suuntaan työntäminen ei irrota mistään |
+| 3 | **lappu piiloon, ikoni jää** | nosto ei katoa kartalta, se menettää nimensä kunnes zoomi tekee tilaa |
+
+Järjestys lappujen kesken on **lähin kaupunkia ensin**: ahtain paikka
+saa ensimmäisenä valita. Väistänyt lappu lisätään esteisiin (kaksi
+lappua ei työnny päällekkäin); **paikallaan pysynyt ei ole este**, koska
+lappujen keskinäisen järjestyksen on jo ratkaissut laattaladonta
+(`tools/tarkista-nimiolimitys.mjs` vartioi sitä) — sovittelu ei ala
+sekoittaa käsin hiottua työtä ilman pyyntöä.
+
+**Siirto liikuttaa koko merkkiä, ei pelkkää lappua.** Ikoni ja nimiö
+ovat yhtä rasteria (`piirraNostosymKartalle`), joten lappua ei voi
+irrottaa ikonistaan. Kuusi pikseliä on kaukana napautuksen 44 px:n
+säteestä, joten **osuma ei siirry**: `lat`/`lng` pysyy, siirto on vain
+kuvassa. Sama myönnytys kuin kohtaamispisteellä (`fokuspisteenSiirto`).
+
+### 14.4 Suorituskyky: ei mittausta ruudulta, ei joka kehyksessä
+
+Sovittelu ajetaan **vain levossa**, samassa ajastintehtävässä kuin
+nimiladonta (`LADONNAN_LEPOVIIVE_MS`) — ei joka kehyksessä eikä joka
+toisessa. Kehysbudjetti on siis nolla: liikkeessä lappu seuraa
+pistettään CSS2D:n mukana kuten nimikin (luku 7), ja koko päätössarja
+ajetaan vasta kun kamera pysähtyy. Kehyksen sisään sijoitettu mittaus
+olisi juuri sitä layout-thrashia, jota tässä vältetään.
+
+Kaikki laatikot lasketaan **kaavasta** (`nostonLaatikko` →
+`nostosymNimioAsemointi`, `nostosymNimioMitta`), ei ruudulta. Merkin
+oma `<svg>` on 1 × 1 px ja ylivuotava, joten `getBoundingClientRect`ista
+ei olisi apua edes jos sitä haluaisi. DOMiin kirjoitetaan vain, jos
+jokin asento oikeasti muuttui (`asetteleNosto` vertaa reseptiä), ja
+rasteri paistetaan uudestaan vain kyljen tai nimiön vaihtuessa.
+
+Siirto animoidaan: `.pallolauta-nosto-siirto` saa 200 ms:n
+`transform`-siirtymän (`css/styles.css`), ja `prefers-reduced-motion`
+poistaa sen samasta säännöstä kuin nimen siirtymän. Kyljen vaihto on
+rasterin vaihto eikä liike.
+
+### 14.5 Vartijat
+
+- `tools/savukkeet/savuke-pallo-nostolaput.mjs` — Bukarest, Ateena,
+  Helsinki ja Istanbul, kaksi korkeutta kumpikin: yksikään lappu ei
+  leikkaa kaupunkinimen laatikkoa, yksikään nimi ei leikkaa
+  liikkumatonta mustetta, jokaisessa näkymässä on nimiä, sovittelun
+  asento on myös elementissä ja siirtymä on 200 ms. Lisäksi
+  **pakotettu väistö**: este asetetaan lapun päähän ja väistön jälkeen
+  yksikään näkyvä lappu ei jää sen alle.
+- `tests/pallosovittelu.test.mjs` — päätössarjan jokainen porras
+  erikseen, järjestys (ahtain ensin), väistäneen lapun esteeksi
+  muuttuminen ja se, että lauta sovittelee vasta nimien jälkeen.
+
+**Staattinen portti ei ole mahdollinen.** `tools/tarkista-nimiolimitys.mjs`
+lukee poltettavaa ladontaa laudan yksiköissä, mutta pallon kaupunkinimi
+ei ole laudan dataa: sen paikan valitsee ajonaikainen ruutuladonta
+(`ladoRuutunimet`) kameran projektiosta, nimibudjetista ja pelimerkkien
+pinoista. Pallon laput vs. kaupunkinimet mitataan siksi savukkeella eikä
+työkalulla; työkalun oma vastuu (poltettu nimiö vs. poltettu nimiö)
+pysyy ennallaan.

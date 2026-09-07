@@ -101,6 +101,7 @@ export function luoNimet({
 }) {
   let kaupungit = null; // [{ c, lat, lng }] laudan ladontatietue + asteet
   let nimetyt = new Set();
+  let laatikot = [];
   let tulos = { nimia: 0, pudotettu: 0, ehdokkaita: 0 };
 
   /*
@@ -178,6 +179,7 @@ export function luoNimet({
       };
     });
     nimetyt = new Set(datumit.map((d) => d.id));
+    laatikot = datumit.map((d) => d.laatikko).filter(Boolean);
     merkit.aseta('nimet', datumit);
     tulos = { nimia: datumit.length, pudotettu: ladottu.pudotettu, ehdokkaita: ehdokkaat.length };
     return tulos;
@@ -185,6 +187,13 @@ export function luoNimet({
 
   return {
     lado,
+    /**
+     * LUKU-API: ladottujen nimien ruutulaatikot kotelon pikseleinä.
+     * Nostojen sovittelu (js/pallolauta/sovittelu.js) lukee nämä
+     * KIINTEINÄ esteinä — kaupungin nimi on ensisijainen, lappu
+     * väistää. Ladonta itse ei lue tätä eikä muutu tästä.
+     */
+    laatikot: () => laatikot,
     /** Nimettyjen kaupunkien tunnukset (piste vain nimen kanssa). */
     nimetyt: () => nimetyt,
     nimetty: (id) => nimetyt.has(id),

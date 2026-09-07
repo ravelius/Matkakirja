@@ -177,6 +177,7 @@ const SHELL = [
   './js/pallolauta/nostot.js',
   './js/pallolauta/reitit.js',
   './js/pallolauta/siirto.js',
+  './js/pallolauta/sovittelu.js',
   './css/aikajana.css',
   // Etusivun esirenderöity pallo (pallolauta vaihe 5a, 5.9.2026):
   // tuodaan dynaamisesti kuten pallo.js, mutta kuuluu SHELLiin

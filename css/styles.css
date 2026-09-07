@@ -24863,6 +24863,15 @@ svg.rough-annotation { pointer-events: none; }
 .pallolauta-nosto svg,
 .pallolauta-piste svg { display: block; overflow: visible; }
 .pallolauta-nimi-siirto { transition: transform 250ms ease-in-out; }
+/*
+ * NOSTON LAPPU VÄISTÄÄ KAUPUNGIN NIMEÄ PEHMEÄSTI (Raamattu, KAUPUNGIN
+ * NIMI NOSTOJEN PAALLA; js/pallolauta/sovittelu.js). Sovittelun pieni
+ * siirto kirjoitetaan tähän ryhmään CSS-muunnoksena, joten se liukuu
+ * 200 ms:ssä eikä hyppää — kyljen vaihto on rasterin vaihto eikä liike.
+ * Ryhmässä on myös merkin mittakaava, joten transform-origin on sama
+ * kuin transform-määreellä (SVG:n oletus 0 0).
+ */
+.pallolauta-nosto-siirto { transition: transform 200ms ease-in-out; }
 /* Nimen muste ja kirjasin tulevat .karttanimi-luokasta (tasokartan sama
    sääntö); svg:n sisällä teksti asettuu keskilinjaan kuten kartalla. */
 .pallolauta-nimi text { dominant-baseline: middle; }
@@ -24931,7 +24940,8 @@ body.maatiedot-tila .pallolauta-nappula { display: none; }
 .pallolauta-nosto.lunastettu.pallolauta-poistuu { opacity: 0; }
 @media (prefers-reduced-motion: reduce) {
   .pallolauta-merkki { transition: none; animation: none; }
-  .pallolauta-nimi-siirto { transition: none; }
+  .pallolauta-nimi-siirto,
+  .pallolauta-nosto-siirto { transition: none; }
 }
 
 /* ==========================================================================

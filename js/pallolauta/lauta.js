@@ -1314,9 +1314,20 @@ export async function avaaPallolauta(ui) {
   /* ---- ladonta levossa ---------------------------------------------- */
   let lepoAjastin = 0;
   /**
-   * Nostot ensin (niiden laatikot ovat nimien varauksia), nimet sitten
-   * budjetilla, joka jää pelin merkkien ja nostojen jälkeen; lopuksi
-   * pisteet nimettyjen mukaan ja auki oleva kortti ankkurinsa perään.
+   * KOLME VAIHETTA YHDESSÄ LEVOSSA (Raamattu, KAUPUNGIN NIMI NOSTOJEN
+   * PAALLA; docs/moduulit/karttapallo.md luku 14):
+   *
+   *   1. NOSTOT valitsevat, ketkä mahtuvat kerrokseen, ja antavat
+   *      KIINTEÄN musteensa laatikot — poltettu muste ja elävien
+   *      nostojen ikonit. Elävän noston LAPPU ei ole varaus.
+   *   2. NIMET ladotaan budjetilla, joka jää pelin merkkien ja nostojen
+   *      jälkeen. Nimi väistää vain sitä, mikä ei voi väistää itse.
+   *   3. NOSTOJEN LAPUT SOVITELLAAN nyt kiinteiden nimilaatikoiden
+   *      ympärille (kylki → pieni siirto → lappu piiloon). Kaupungin
+   *      nimi on ensisijainen eikä liiku enää tässä vaiheessa.
+   *
+   * Lopuksi pisteet nimettyjen mukaan ja auki oleva kortti ankkurinsa
+   * perään.
    */
   const ladoLevossa = () => {
     lepoAjastin = 0;
@@ -1342,12 +1353,13 @@ export async function avaaPallolauta(ui) {
       katto,
       vain,
     });
+    const sovittelu = nostot.sovittele({ nimet: nimet.laatikot() });
     paivitaPisteet();
     // Ladonta ajetaan levossa, siirtymän jo mentyä: viimeinen sana
     // kaupunkipisteen koosta on tässä (ks. tahdistaPisteidenKoko).
     tahdistaPisteidenKoko();
     if (ui.fokuskohdeAuki?.ankkuri) asemoiFokuskohde(ui);
-    return { nostot: nostoTulos, nimet: nimiTulos };
+    return { nostot: nostoTulos, nimet: nimiTulos, sovittelu };
   };
   const pyydaLadonta = () => {
     clearTimeout(lepoAjastin);
