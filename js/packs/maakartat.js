@@ -12598,6 +12598,130 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vizcaínas-koulu', lat: 19.428433, lon: -99.140711 },
     ],
   },
+  /*
+   * HOBART (7.9.2026). Rajaus on 1,8 × 1,8 kilometriä eli pelin
+   * tiiviimpiä: Hobartin vanha ruutukaava mahtuu kokonaan Campbell
+   * Streetin vankilalta Anglesean kasarmille, ja perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n hobart-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * siirtokunnan siirto Sullivans Coveen, valaanpyynnin satama,
+   * palawa-kansan jatkuvuus ja Kellyn portaat; historiasivu kertoo
+   * Mustasta linjasta, Theatre Royalista, Cascaden panimosta ja Port
+   * Arthurista, luontosivu kunanyista, valaista, Etelämanner-portista
+   * ja Hobart Rivuletin vesinokkaeläimistä, nykytaidesivu MONAsta,
+   * Dark Mofosta, Salamanca Arts Centrestä ja Sidney Nolanin
+   * Käärmeestä. Yksikään kartan kahdeksasta kohteesta ei ole niiden
+   * aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ. Kaupungintalo on
+   * 105 metriä Tasmanian museosta ja merimuseo 84 metriä
+   * kaupungintalosta; kolmesta naapurista kartalle jäi museo, koska
+   * sen tarina alkaa 1846 ja kantaa mukanaan sekä vanhan
+   * muonavaraston että tullitalon. Ingle Hall (53 m kaupungintalosta)
+   * ja vanhan kuvernöörintalon paikka (56 m) putosivat samasta syystä.
+   *
+   * PARLAMENTTITALON KOORDINAATIT LUETTIIN ARTIKKELISTA "Parliament of
+   * Tasmania", koska rakennuksen omassa artikkelissa "Parliament
+   * House, Hobart" ei ole coordinates-lohkoa (haku 7.9.2026). Sama
+   * talo, sama piste; juttu on kirjoitettu rakennuksen artikkelista.
+   *
+   * KAKSI KATEDRAALIA ON TARKOITUKSELLINEN PARI eikä toistoa: St Mary
+   * on katolinen ja purettiin kerran kokonaan rakennusvirheiden takia,
+   * St David on anglikaaninen ja rakentui 1868–1936. Molemmat ovat
+   * Henry Hunterin ja George Frederick Bodleyn kaupunkia, ja
+   * jälkimmäinen antaa kartan länsireunalle ainoan kohteen.
+   */
+  hobart: {
+    polku: 'assets/kartat/hobart-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -42.8750, etela: -42.8910, lansi: 147.3165, ita: 147.3385 },
+    esittely: 'Kartta näyttää Hobartin vanhan ruutukaavan sellaisena '
+      + 'kuin se piirrettiin rinteeseen: kadut laskevat lännen mäiltä '
+      + 'itään satamaan, ja oikeassa reunassa avautuu Sullivans Coven '
+      + 'poukama. Yläreunassa on Queens Domainin nurmi, alareunassa '
+      + 'Battery Pointin niemi. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Christchurchissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 245 metriä
+       * (St Davidin katedraali – parlamenttitalo), toiseksi pienin
+       * 259 metriä (Campbell Streetin vankila – synagoga).
+       */
+      { nimi: 'Campbell Streetin vankila', lat: -42.8774, lon: 147.3270 },
+      { nimi: 'Sotamuistomerkki', lat: -42.8775, lon: 147.33611111 },
+      { nimi: 'Hobartin synagoga', lat: -42.879628, lon: 147.327939 },
+      { nimi: 'St Maryn katedraali', lat: -42.88111, lon: 147.31926 },
+      { nimi: 'Tasmanian museo', lat: -42.8819, lon: 147.3319 },
+      { nimi: 'St Davidin katedraali', lat: -42.8835, lon: 147.3285 },
+      { nimi: 'Parlamenttitalo', lat: -42.88527778, lon: 147.33027778 },
+      { nimi: 'Anglesean kasarmi', lat: -42.888745, lon: 147.325496 },
+    ],
+  },
+  /*
+   * DARWIN (7.9.2026). Rajaus on 1,6 × 1,6 kilometriä ja kattaa koko
+   * sen törmän, jolle keskusta mahtuu — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n darwin-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Palmerstonin nimenvaihto, yleislennätin, larrakia-kansa, neljä
+   * jälleenrakennusta, Mindil Beachin markkinat, vuoden 1918 kapina,
+   * vuoden 1942 pommitus, hirmumyrsky Tracy, Pine Creekin rata,
+   * Government House, sademäärä, suolavesikrokotiilit, kasvitieteel-
+   * linen puutarha, Charles Darwinin kansallispuisto, Fannie Bayn
+   * vankila, MAGNT, katutaidefestivaali ja Christ Church -katedraali.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * FORT HILL JÄTETTIIN POIS, vaikka se olisi ruudun paras itäkohde:
+   * lehden nosto K4 kantaa jo kuvan "Fort Hill 1870.jpg" ja
+   * wiki-otsikon "Fort Hill (Darwin)", eli kartta toistaisi lehden
+   * oman linkin. Samasta syystä pois jäivät vanhan kaupungintalon
+   * rauniot (lehden nosto K4:n kuva) ja Government House (nosto H4).
+   *
+   * BROWN'S MART PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: se on 182 metriä
+   * Star-teatterista, ja parista jäi teatteri, koska sen tarina
+   * (Jeddan ensi-ilta 1955 ja parven jako) ei ole missään muualla
+   * pelissä. Supreme Court on 167 metriä Brown's Martista ja 126
+   * metriä parlamenttitalosta, joten State Squarelta mahtui kartalle
+   * vain yksi talo. Esplanadin kolmikosta (Lyons Cottage, Lameroon
+   * ranta, Hotel Darwin) mahtui kaksi: Lyons Cottage on 144 metriä
+   * rannasta ja 194 metriä Hotel Darwinista.
+   *
+   * PARLAMENTTITALO ON LEHDESSÄ VAIN KUVANA (matkailijan sivun
+   * kuvituskuva), ei jutun aiheena, joten se saa olla kartalla —
+   * Wellingtonin sääntö: sama kohde saa esiintyä molemmissa, sama
+   * tiedosto ei.
+   */
+  darwin: {
+    polku: 'assets/kartat/darwin-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -12.4565, etela: -12.4705, lansi: 130.8337, ita: 130.8480 },
+    esittely: 'Kartta kattaa Darwinin niemen kärjen: vasemmalla ja '
+      + 'ylhäällä on avomeri, oikealla Darwin Harbour ja niiden '
+      + 'välissä kapea törmä, jolle koko keskusta mahtuu. Vasenta '
+      + 'reunaa kulkee Esplanadin puistokaista, keskellä on Smith '
+      + 'Streetin ruutukaava ja alhaalla State Squaren hallintokortteli. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 216 metriä (Hotel Darwin – parlamenttitalo),
+       * toiseksi pienin 237 metriä (Meren tähden katedraali –
+       * Bicentennial-puisto).
+       */
+      { nimi: 'Meren tähden katedraali', lat: -12.45913, lon: 130.838199 },
+      { nimi: 'Bicentennial-puisto', lat: -12.460945, lon: 130.837061 },
+      { nimi: 'Vic-hotelli', lat: -12.46199444, lon: 130.84261944 },
+      { nimi: 'Star-teatteri', lat: -12.46409, lon: 130.84306 },
+      { nimi: 'Lameroon ranta', lat: -12.4652, lon: 130.8386 },
+      { nimi: 'Hotel Darwin', lat: -12.465814, lon: 130.840987 },
+      { nimi: 'Parlamenttitalo', lat: -12.46666667, lon: 130.84277778 },
+      { nimi: 'Mutamaja', lat: -12.46776, lon: 130.844704 },
+    ],
+  },
 };
 
 /*

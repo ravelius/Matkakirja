@@ -49109,4 +49109,553 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * HOBARTIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026). Kartta on
+   * js/packs/maakartat.js: KAUPUNKIKARTAT.hobart, ja jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit "Campbell
+   * Street Gaol", "Hobart Cenotaph", "Hobart Synagogue", "St Mary's
+   * Cathedral, Hobart", "Tasmanian Museum and Art Gallery", "St
+   * David's Cathedral, Hobart", "Parliament House, Hobart" ja
+   * "Anglesea Barracks").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Sullivans Coven siirtokunta, valaanpyynti, palawa-kansa,
+   * Kellyn portaat, Musta linja, Theatre Royal, Cascaden panimo, Port
+   * Arthur, kunanyi, valaat, Etelämanner-portti, Hobart Rivulet, MONA,
+   * Dark Mofo, Salamanca Arts Centre ja Sidney Nolanin Käärme.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Campbell
+   * Streetin vankilan jutussa EI kerrota Theatre Royalista, vaikka
+   * teatteri seisoo samalla kadulla — se on lehden noston H2 aihe.
+   * Vankilan jutussa ei myöskään kerrota Port Arthurista (lehden nosto
+   * H4) eikä vankikuljetusten lopettamisesta muuten kuin vuosilukuna,
+   * ja parlamenttitalon jutussa Salamanca Placen louhos mainitaan vain
+   * kivien lähteenä — makasiinit ovat lehden nostojen K4 ja T3 aihe.
+   *
+   * PARLAMENTTITALON KOORDINAATIT ovat artikkelista "Parliament of
+   * Tasmania" (rakennuksen omassa artikkelissa ei ole
+   * coordinates-lohkoa), mutta juttu on kirjoitettu rakennuksen
+   * artikkelista. Perustelu on maakartat.js:n hobart-lohkossa.
+   */
+  hobart: {
+    'Campbell Streetin vankila': {
+      aika: '1821',
+      teksti: 'Vankila alkoi vuonna 1821 vankityönä rakennettuna '
+          + 'Hobart Townin vankikasarmina, johon mahtui 640 miestä. '
+          + 'Vankeja saapui tuhansittain joka vuosi, ja kasarmi '
+          + 'osoittautui liian pieneksi lähes heti: sitä laajennettiin '
+          + 'seuraavan vuosikymmenen ajan vaiheittain, kunnes se veti '
+          + 'yli 1 200 miestä. Tilaa otettiin joka tuumasta, myös '
+          + 'kattoonteloista. Vuodesta 1846 laitos toimi vähitellen '
+          + 'siviilivankilana, ja kun vankikuljetukset päättyivät '
+          + '1853, siitä tuli Hobartin vankila Murray Streetin vanhan '
+          + 'ja rakenteiltaan pettäneen talon tilalle.'
+          + '\n\n'
+          + 'Campbell Street oli yksi Tasmanian kolmesta vankilasta, '
+          + 'joissa kuolemantuomiot pantiin täytäntöön. Vuosina '
+          + '1857–1946 täällä teloitettiin 32 ihmistä, joukossa yksi '
+          + 'nainen; vuoden 1946 teloitus jäi Tasmanian viimeiseksi. '
+          + 'Selleihin ei koskaan asennettu käymälöitä, vain '
+          + 'sankoja. Vuosisadan alkupuoliskolla laitosta tutkittiin '
+          + 'kuudesti, ja joka kerta päädyttiin samaan: se pitäisi '
+          + 'uudistaa. Vuoden 1916 töissä talo liitettiin viemäriin '
+          + 'mutta sellit eivät, ja kaasuvalot vaihdettiin sähköön.'
+          + '\n\n'
+          + 'Vangit siirrettiin uuteen Risdonin vankilaan marraskuusta '
+          + '1960 alkaen, ja Campbell Street suljettiin 1963. Kaikki '
+          + 'muut rakennukset purettiin paitsi oikeussalit, jotka '
+          + 'toimivat tuomioistuimena vuoteen 1983. Jäljellä on '
+          + 'John Lee Archerin johdolla suunniteltu ryhmä Campbell- ja '
+          + 'Brisbane-katujen kulmassa: vuosina 1831–1833 '
+          + 'eristysselien päälle rakennettu kirkko, joka muutettiin '
+          + '1850-luvun lopulla vankilankappeliksi ja oikeussaleiksi. '
+          + 'Hirsipuu kunnostettiin 1980-luvulla alkuperäisin osin. '
+          + 'Muusta vankilasta on jäljellä vain pätkiä hiekkakivimuuria '
+          + 'kadun varressa.',
+      lahde: 'Wikipedia',
+    },
+    Sotamuistomerkki: {
+      aika: '1925',
+      teksti: 'Tasmanian tärkein sotamuistomerkki seisoo Queens '
+          + 'Domainin kumpareella, josta näkyy sekä kaupunki että '
+          + 'Derwent. Paikalla oli vuosina 1838–1923 Queens Battery '
+          + '-patteri, ja sijainti valittiin nimenomaan sen '
+          + 'näkyvyyden ja oman sotilashistorian takia. Muistomerkki '
+          + 'on art déco -tulkinta egyptiläisestä obeliskista: '
+          + 'sinikivinen porrastettu jalusta, harmaasta graniitista '
+          + 'tehty kapeneva vartalo ja pyramidin muotoinen huippu. '
+          + 'Huipun alla on joka sivulla punaisesta läpikuultamattomasta '
+          + 'lasista tehty risti, jota valaistaan takaa lakkaamatta.'
+          + '\n\n'
+          + 'Suunnittelukilpailu pidettiin 1923, ja sen voitti '
+          + 'hobartilainen toimisto Hutchinson and Walker. '
+          + 'Alkuperäinen ehdotus oli 65 jalkaa korkea, mutta '
+          + 'korkeutta nostettiin 75 jalkaan eli 23 metriin, jotta '
+          + 'huipulle mahtuisi risti. Anzac-päivänä 1925 kesken '
+          + 'rakennustöiden vartalon perustaan muurattiin umpisinkkinen '
+          + 'lipas, jossa on 522 ensimmäisessä maailmansodassa '
+          + 'kaatuneen tasmanialaisen nimet. Muistomerkki paljastettiin '
+          + '13. joulukuuta 1925. Itse kivessä ei ole nimiä, vain '
+          + '"Lest We Forget" ja vuosiluvut 1914–1919 — jälkimmäinen '
+          + 'viittaa Versaillesin rauhaan eikä aselepoon.'
+          + '\n\n'
+          + 'Muistomerkkiä vanhempi on sen alapuolella kulkeva '
+          + 'Soldiers Memorial Avenue. Puukuja ehdotettiin loppuvuonna '
+          + '1917, ja ensimmäiset puut vihittiin 3. elokuuta 1918 '
+          + 'kahdeksan–kymmenentuhannen ihmisen edessä, vaikka '
+          + 'Hobartissa asui tuolloin vain 29 000. Ensimmäisessä '
+          + 'vaiheessa istutettiin lähes 390 setriä ja helmikuussa '
+          + '1919 vielä 110. Sinkkiset nimikilvet katosivat aikanaan '
+          + 'lähes kokonaan, mutta vuodesta 2002 alkaneessa '
+          + 'kunnostuksessa puiden juurelle on tuotu yli 480 '
+          + 'pronssitaulua, joissa on nimi, joukko-osasto, kuolinpaikka '
+          + 'ja siviiliammatti.',
+      lahde: 'Wikipedia',
+    },
+    'Hobartin synagoga': {
+      aika: '1845',
+      teksti: 'Argyle Streetin synagoga vihittiin 4. heinäkuuta 1845, '
+          + 'ja se on Australian vanhin synagogarakennus. Tyyli on '
+          + 'harvinainen: egyptiläinen kertaustyyli, jota tunnistaa '
+          + 'ikkunoiden puolisuunnikkaan muodosta ja pylväiden '
+          + 'lootuskapiteeleista. Piirustukset teki hobartilainen '
+          + 'arkkitehti James Thomson, skotlantilainen vanki, joka oli '
+          + 'saanut armahduksen 1829. Tontti oli osa entisen vangin '
+          + 'Judah Solomonin puutarhaa.'
+          + '\n\n'
+          + 'Salissa on 150 istumapaikkaa, ja takaosassa on kovat '
+          + 'penkit juutalaisille vangeille, jotka marssitettiin '
+          + 'alkuaikoina jumalanpalvelukseen aseellisen vartion '
+          + 'saattamina. Uskotaan, ettei maailmassa ole toista '
+          + 'juutalaista rukoushuonetta, jossa olisi vangeille varatut '
+          + 'paikat. Rakennus on Tasmanian rakennusperintörekisterissä.'
+          + '\n\n'
+          + 'Egyptiläistä kertaustyyliä käytettiin 1800-luvun alussa '
+          + 'muutamissa synagogissa ja kirkoissa, mutta säilyneitä on '
+          + 'vähän: Nashvillen ja New Yorkin presbyteerikirkot, '
+          + 'Canterburyn vanha synagoga ja Launcestonin synagoga. '
+          + 'Hobartin seurakunta kävi pohjalukemissa 1970-luvun alussa, '
+          + 'kun väestönlaskenta löysi kaupungista alle sata '
+          + 'juutalaista; vuoden 2021 laskennassa Tasmaniassa oli 376. '
+          + 'Talossa pidetään sekä ortodoksisia että liberaaleja '
+          + 'jumalanpalveluksia.',
+      lahde: 'Wikipedia',
+    },
+    'St Maryn katedraali': {
+      aika: '1866',
+      teksti: 'Katolisen arkkihiippakunnan pääkirkon juuret ovat '
+          + 'vuodessa 1822, jolloin Tasmanian ensimmäinen vakinainen '
+          + 'pappi Philip Conolly rakensi nykyisen paikan lähelle '
+          + 'väliaikaisen puukappelin. Varsinaisen katedraalin '
+          + 'peruskivi laskettiin 1860. Piirustukset teki William '
+          + 'Wardell, Augustus Puginin oppilas, ja kirkko vihittiin '
+          + '1866 uusgoottilaisena.'
+          + '\n\n'
+          + 'Rakennusvirheet aiheuttivat rakenteellisia ongelmia, ja '
+          + 'katedraali purettiin lopulta lähes kokonaan. Se '
+          + 'rakennettiin uudelleen Wardellin alkuperäisiin '
+          + 'suunnitelmiin pohjautuvan uuden piirustuksen mukaan, ja '
+          + 'työstä vastasi hobartilainen Henry Hunter — sama '
+          + 'arkkitehti, joka oli voittanut Tasmanian museon '
+          + 'suunnittelukilpailun. Hunter laski uuden peruskiven 1878.'
+          + '\n\n'
+          + 'Kirkossa on normannikautinen kastemalja, jonka '
+          + 'koristeaiheiden on arvioitu edustavan siirtymäkauden '
+          + 'työtä noin vuosilta 1170–1200. Lasimaalauksista '
+          + 'huomattavin on Hardmanin verstaan vuoden 1869 ikkuna, '
+          + 'jonka viisi kapeaa kenttää kertovat evankeliumien '
+          + 'kohtauksia. Urut rakensi 1893 Fincham & Hobday Queens '
+          + 'Domainilla 1894 pidettyä teollisuuden, tieteen ja taiteen '
+          + 'suurnäyttelyä varten, jossa ne voittivat ensimmäisen '
+          + 'palkinnon; kirkkoon ne asennettiin kesäkuussa 1895.',
+      lahde: 'Wikipedia',
+    },
+    'Tasmanian museo': {
+      aika: '1848',
+      teksti: 'Museon perusti 1846 Tasmanian kuninkaallinen seura, '
+          + 'Englannin ulkopuolen vanhin kuninkaallinen seura, ja '
+          + 'virallisesti se syntyi 1848. Aiempia yrityksiä oli ollut '
+          + 'kolme, ja pisimmälle pääsi käsityöläisten opisto, joka '
+          + 'sai 1838 hallitukselta luvan rakentaa museohuoneen '
+          + 'tullitaloon. Tullitalo otettiin myöhemmin lakiasäätävän '
+          + 'neuvoston käyttöön ja siitä tuli parlamenttitalo — '
+          + 'kuninkaallinen seura perusti museon parlamentin '
+          + 'valiokuntahuoneessa, mahdollisesti samassa huoneessa.'
+          + '\n\n'
+          + 'Kokoelma muutti 1852 Harrington Streetille, jossa salin '
+          + 'vuokra oli 60 puntaa vuodessa. Vuonna 1854 kävijöitä oli '
+          + 'ensi kerran yli tuhat, ja 1855 Lady Franklinin museo myi '
+          + 'kalusteensa ja kokoelmansa seuralle. Vuonna 1861 '
+          + 'osavaltion rahoitus vihdoin järjestyi, ja seuran '
+          + 'arkkitehtuurikilpailun voitti Henry Hunter. Talo valmistui '
+          + '1862, mutta rahat olivat riittäneet vain seiniin: sisustus '
+          + 'kustannettiin taidenäyttelyllä, joka järjestettiin '
+          + 'nimenomaan sitä varten.'
+          + '\n\n'
+          + 'Vuonna 1885 museo siirtyi kuninkaalliselta seuralta '
+          + 'osavaltion asettamalle hallitukselle, joka sai 500 punnan '
+          + 'vuosiavustuksen; siihen asti laitoksen virallinen nimi oli '
+          + 'ollut Kuninkaallisen seuran museo. Museo on sittemmin '
+          + 'levinnyt koko korttelin rakennuksiin, joihin kuuluvat '
+          + 'vuoden 1810 muonavarasto ja Davey Streetin puoleinen '
+          + 'vuoden 1902 tullitalo. Kasvitieteellisen puutarhan ja '
+          + 'museon hallitukset erotettiin toisistaan 1952 eduskunnan '
+          + 'lailla, ja silloin talo sai nykyisen nimensä. Kävijöitä on '
+          + 'nykyisin 400 000 vuodessa.',
+      lahde: 'Wikipedia',
+    },
+    'St Davidin katedraali': {
+      aika: '1874',
+      teksti: 'Hobart julistettiin kaupungiksi 1842, ja silloin '
+          + 'olemassa olevasta St Davidin kirkosta tuli katedraali. '
+          + 'Ensimmäiseksi Tasmanian piispaksi nimitettiin Francis '
+          + 'Russell Nixon. Uuden katedraalin peruskiven laski '
+          + 'tammikuussa 1868 kuningatar Viktorian poika prinssi '
+          + 'Alfred, Edinburghin herttua, ja rakennustyö jatkui siitä '
+          + 'vuoteen 1936. Piirustukset teki englantilainen arkkitehti '
+          + 'George Frederick Bodley uusgoottilaiseen tyyliin, ja '
+          + 'kirkko vihittiin 1874.'
+          + '\n\n'
+          + 'Talo seisoo Macquarie- ja Murray-katujen kulmassa ja '
+          + 'muodostaa yhden neljänneksen siitä, mitä pidetään '
+          + 'Australian parhaana yhtenäisenä georgiaanisena '
+          + 'katunäkymänä. Tunnusomaisia ovat holvikäytävällinen '
+          + 'sisäänkäynti suurine länsi-ikkunoineen, tukipilarein '
+          + 'vahvistetut tornit ja Oatlandsin kivestä muurattu '
+          + 'neliötorni. Sisällä riippuu lippuja siltä ajalta, kun '
+          + 'Tasmania lakkasi olemasta vankisiirtola.'
+          + '\n\n'
+          + 'Urut ovat peräisin vanhasta katedraalista: lontoolaisen '
+          + 'Bishop & Starrin kaksisormioinen soitin, joka laajennettiin '
+          + '1916 kolmisormioiseksi, rakennettiin uudelleen 1958 ja '
+          + 'kunnostettiin 1999–2005. Tornissa on kymmenen kellon '
+          + 'sarja, jonka suurin painaa noin 1 100 kiloa; useimmat '
+          + 'valettiin 1935 John Taylor & Co:n pajassa, ja niitä '
+          + 'soitetaan täyden kierron tekniikalla. Salissa on 650 '
+          + 'istumapaikkaa, ja se on Hobartin käytetyimpiä '
+          + 'konserttitiloja.',
+      lahde: 'Wikipedia',
+    },
+    Parlamenttitalo: {
+      aika: '1840',
+      teksti: 'Tasmanian parlamenttitaloa ei rakennettu parlamentille '
+          + 'vaan tullille. John Lee Archer piirsi sen 1830 '
+          + 'siirtomaa-ajan georgiaaniseen tyyliin. Tontti oli ollut '
+          + 'ensin tori ja 1820-luvulla puutavarapiha, ja se varattiin '
+          + '1832 tullitalolle, koska se oli lähellä Sullivans Coven '
+          + 'laitureita — talo oli silloin nykyistä lähempänä '
+          + 'vesirajaa. Hunajankeltainen hiekkakivi louhittiin '
+          + '1832–1840 Queens Domainilta ja Salamanca Placelta, ja '
+          + 'lohkareita varten rakennettiin pieni rautatie. Työ alkoi '
+          + '5. tammikuuta 1835 enimmäkseen vankityönä, ja tullin väki '
+          + 'muutti sisään 1. syyskuuta 1840.'
+          + '\n\n'
+          + 'Vuonna 1825 perustettu lakiasäätävä neuvosto kokoontui '
+          + 'aluksi vanhan kuvernöörintalon viereisessä huoneessa. '
+          + 'Tullitalon tilava Pitkä sali oli parempi, ja siellä '
+          + 'pidettiin ensimmäinen kokous 19. kesäkuuta 1841. Vuoden '
+          + '1854 perustuslakilaki toi kaksikamarisen parlamentin, '
+          + 'kuningatar Viktoria vahvisti sen 1855, ja uuden '
+          + 'parlamentin ensimmäisiä tekoja 1856 oli vaihtaa siirtokunnan '
+          + 'nimi Van Diemenin maasta Tasmaniaksi. Ensimmäiset '
+          + 'istunnot pidettiin 2. joulukuuta 1856: edustajainhuone '
+          + 'Pitkässä salissa ja lakiasäätävä neuvosto talon toiseen '
+          + 'päähän tehdyssä uudessa salissa.'
+          + '\n\n'
+          + 'Tulli muutti pois vasta 1904 Davey Streetille, ja talo jäi '
+          + 'yksin parlamentille. Vuosina 1938–1940 edustajainhuoneelle '
+          + 'rakennettiin oma sali, ja Pitkästä salista tuli jäsenten '
+          + 'lukusali 82 istuntovuoden jälkeen; uusi sali avattiin 14. '
+          + 'toukokuuta 1940. Yhdistyneen kuningaskunnan kuninkaallinen '
+          + 'vaakuna toistuu talon lasimaalauksissa ja kaiverruksissa. '
+          + 'Tasmania käytti kuninkaallista vaakunaa virallisissa '
+          + 'asiakirjoissaan vuoteen 1953 asti, vaikka se oli ottanut '
+          + 'oman vaakunansa jo 1919.',
+      lahde: 'Wikipedia',
+    },
+    'Anglesean kasarmi': {
+      aika: '1814',
+      teksti: 'Paikan valitsi joulukuussa 1811 Uuden Etelä-Walesin '
+          + 'kuvernööri Lachlan Macquarie, ja ensimmäisten '
+          + 'rakennusten työ alkoi 1814. Anglesea on Australian '
+          + 'armeijan vanhin yhä käytössä oleva kasarmi, ja se vietti '
+          + 'kaksisataavuotisjuhlaansa joulukuussa 2011. Nimi tulee '
+          + 'Henry Pagetista, Anglesean ensimmäisestä markiisista, '
+          + 'joka istui asehallituksessa; kasarmin kirjoitusasu '
+          + 'poikkeaa markiisin arvonimestä yhdellä kirjaimella.'
+          + '\n\n'
+          + 'Kasarmi on nykyään koko Tasmanian puolustusvoimien '
+          + 'hallinnollinen keskus. Sen alueella toimivat muun muassa '
+          + 'Royal Tasmania Regimentin 12./40. pataljoonan esikunta, '
+          + 'Adelaiden yliopistorykmentin Tasmanian komppania, '
+          + 'Australian armeijan Tasmanian soittokunta, ilmavoimien 29. '
+          + 'laivue, laivaston Tasmanian esikunta ja useita '
+          + 'kadettiyksiköitä. Alueen vanhassa vankilassa on Tasmanian '
+          + 'armeijamuseo.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * DARWININ KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026). Kartta on
+   * js/packs/maakartat.js: KAUPUNKIKARTAT.darwin, ja jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit "St
+   * Mary's Star of the Sea Cathedral, Darwin", "Bicentennial Park
+   * (Darwin)", "Victoria Hotel, Darwin", "Star Theatre, Darwin",
+   * "Lameroo Beach", "Hotel Darwin", "Parliament House, Darwin" ja
+   * "Mud Hut (Knight's Folly)").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Palmerstonin nimenvaihto, yleislennätin, larrakia-kansa,
+   * neljä jälleenrakennusta, Mindil Beachin markkinat, vuoden 1918
+   * kapina, vuoden 1942 pommitus, hirmumyrsky Tracy, Pine Creekin
+   * rata, Government House, sademäärä, krokotiilit, kasvitieteellinen
+   * puutarha, Charles Darwinin kansallispuisto, Fannie Bayn vankila,
+   * MAGNT, katutaidefestivaali ja Christ Church -katedraali. Yksikään
+   * kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Vic-hotellin
+   * jutussa EI kerrota vuoden 1915 valtion hotellihaltuunotosta eikä
+   * vuoden 1918 kapinasta, vaikka hotelli oli molempien näyttämö —
+   * kapina on lehden matkailijasivun oma nosto. Parlamenttitalon
+   * jutussa vanhan postitalon kohtalo mainitaan vain tontin
+   * historiana, koska pommitusaamu on lehden nosto H1. Lameroon rannan
+   * jutussa larrakia-kansasta kerrotaan vain paikannimen verran
+   * (nosto K3).
+   *
+   * HOTEL DARWININ AVAJAISVUOSI 1940 ON LUETTU ARTIKKELIN OMISTA
+   * LÄHDEVIITTEISTÄ (Northern Standard 9.7.1940 -avajaisliite ja The
+   * West Australian 10.7.1940 "DARWIN LUXURY HOTEL OPENED"), koska
+   * leipäteksti kertoo vain avajaiset ja purkamisen 1999. Tämä on
+   * kirjattu tähän, jotta lukija tietää, mistä luku on peräisin.
+   */
+  darwin: {
+    'Meren tähden katedraali': {
+      aika: '1962',
+      teksti: 'Darwinin hiippakunnan piispankirkko on kaupungin '
+          + 'katolisen seurakuntaelämän keskus. Sen edeltäjä, '
+          + 'ensimmäinen St Maryn kirkko, toimi toisen maailmansodan '
+          + 'aikana kaupunkiin sijoitettujen australialaisten '
+          + 'joukkojen sotilaspappien tukikohtana. Sodan jälkeen '
+          + 'seurakunta oli kasvanut niin, että tarvittiin isompi talo.'
+          + '\n\n'
+          + 'Kirkon piirsi brisbanelainen arkkitehti Ian Ferrier, joka '
+          + 'työskenteli tuolloin toimistossa Donoghue Cusick & '
+          + 'Edwards; toimisto vei työn loppuun hänen lähdettyään '
+          + '1957. Ensimmäinen kivi louhittiin Rum Junglesta eli '
+          + 'territorion ensimmäisen uraanikaivoksen paikalta, ja '
+          + 'piispa O\'Loughlin siunasi sen 13. heinäkuuta 1958. '
+          + 'Rakennustyötä johti Carl Johansson vuoteen 1962, jolloin '
+          + 'hänen tilalleen tuli John D\'Arcy. Kirkko siunattiin ja '
+          + 'avattiin jumalanpalveluskäyttöön 19. elokuuta 1962 ja '
+          + 'vihittiin kymmenen vuotta myöhemmin, 20. elokuuta 1972.',
+      lahde: 'Wikipedia',
+    },
+    'Bicentennial-puisto': {
+      teksti: 'Puisto on Darwinin rantatörmän vihreä kaistale: se '
+          + 'kulkee koko keskustan rantaviivan pituudelta '
+          + 'parlamenttitalolta Doctors Gullyyn, ja sen reunalta '
+          + 'katsotaan alas Darwin Harbouriin.'
+          + '\n\n'
+          + 'Puistossa on kolme muistomerkkiä kaupungin pommituksissa '
+          + 'kuolleille: Darwinin sotamuistomerkki, joka pystytettiin '
+          + '1921 ja siirrettiin nykyiselle paikalleen 1992, '
+          + 'siviiliuhrien muistomerkki ja upotetun USS Pearyn '
+          + 'muistomerkki.'
+          + '\n\n'
+          + 'Samat nurmikot ovat myös kaupungin juhlapaikka. Täällä '
+          + 'kokoontuvat vappumarssi, Darwinin festivaali ja Greek '
+          + 'Glenti, jossa kaupungin kreikkalainen yhteisö juhlii '
+          + 'kulttuuriaan ja ruokaansa.',
+      lahde: 'Wikipedia',
+    },
+    'Vic-hotelli': {
+      aika: '1890',
+      teksti: 'Hotellin rakennutti Ellen Ryan, yksi territorion '
+          + 'varakkaimmista naisista, joka omisti maata ja useita '
+          + 'kaivosvaltauksia. Vuonna 1888 hän haki lupaviranomaisilta '
+          + 'lupaa arvokkaalle hotellille Smith Streetin numeroon 27 '
+          + 'keskellä kaupunkia, joka tunnettiin silloin '
+          + 'Palmerstonina. H. C. Debross rakensi talon 4 000 punnalla, '
+          + 'ja siitä tuli Darwinin ensimmäinen kivirakennus: '
+          + 'kaksikerroksinen, paikallista monivärista porselaniittia, '
+          + 'julkisivussa päätykolmio ja kuistit. Ovet avattiin 8. '
+          + 'syyskuuta 1890. Nimi vaihtui kahdesti: ensin Royal Hotel, '
+          + 'muutamaa päivää myöhemmin North Australian Hotel ja 1896 '
+          + 'Victoria Hotel.'
+          + '\n\n'
+          + 'Talo menetti kattonsa kolmesti alle sadassa vuodessa. '
+          + 'Ensimmäinen kerta oli 6. tammikuuta 1897, kun "suureksi '
+          + 'hirmumyrskyksi" kutsuttu myrsky tappoi 28 ihmistä ja '
+          + 'upotti satamaan 19 alusta, koko helmenkalastuslaivueen '
+          + 'mukaan lukien; hotelli oli niitä harvoja taloja, joiden '
+          + 'rakenteet kestivät. Toinen kerta oli maaliskuussa 1937 ja '
+          + 'kolmas jouluna 1974. Joka kerta katto rakennettiin '
+          + 'uudelleen.'
+          + '\n\n'
+          + 'Vuonna 1908 hotellissa yöpyivät Henry Dutton ja Murray '
+          + 'Aunger, ensimmäiset autoilijat, jotka ylittivät mantereen '
+          + 'Adelaidesta Darwiniin. Joulukuussa 1919 taloon majoittui '
+          + 'Ross ja Keith Smithin joukko eli Englannista Australiaan '
+          + 'lennetyn kilpalennon lentäjiä, ja 1920- ja 1930-lukujen '
+          + 'lentäjien nimikirjoituksia on säilytetty muuratussa '
+          + 'seinänpätkässä. Vuosina 1946–1965 hotelli oli Lim-perheen '
+          + 'omistuksessa ja tunnettu krokotiilinmetsästäjien, '
+          + 'puhvelinampujien ja malminetsijöiden kapakkana. Vic '
+          + 'suljettiin lokakuussa 2014.',
+      lahde: 'Wikipedia',
+    },
+    'Star-teatteri': {
+      aika: '1929',
+      teksti: 'Star oli Darwinin ensimmäinen varta vasten rakennettu '
+          + 'elokuvateatteri, ja sen rakensi 1920-luvulla '
+          + 'darwinilaisen Harold Snellin yhtiö Snell and Gordon. Sali '
+          + 'oli osittain ulkoilmateatteri: katto ulottui vain '
+          + 'takarivien ja parven yli, ja Snell oli käynyt '
+          + 'opiskelemassa kattorakennetta Englannissa. Näyttämö oli '
+          + 'pyörien päällä, jotta sen sai siirtää nyrkkeilyotteluiden '
+          + 'tieltä, ja lattia valettiin betonista rullaluistelua ja '
+          + 'tansseja varten. Paikkoja oli 860. Talo avattiin 14. '
+          + 'syyskuuta 1929 elokuvalla The Cat and the Canary.'
+          + '\n\n'
+          + 'Sali oli jaettu. Parvi kuului kaupungin hienostolle, ja '
+          + 'työväki ja aboriginaalit istuivat alakerrassa; '
+          + 'aboriginaalit tarvitsivat lisäksi suojeluviranomaisen '
+          + 'luvan rikkoa öinen ulkonaliikkumiskielto päästäkseen '
+          + 'näytökseen lainkaan. Parvipaikka maksoi kaksi shillinkiä '
+          + 'kuusi penniä, alakerta shillingin.'
+          + '\n\n'
+          + 'Australialaisen Jedda-elokuvan maailmanensi-ilta '
+          + 'pidettiin täällä 3. tammikuuta 1955. Teatterinjohtaja Tom '
+          + 'Harris koristeli salin pandanuksella, ruohomatoilla ja '
+          + 'esineillä, ja Smith Streetille kerääntyi väkeä katsomaan '
+          + 'pääosien esittäjiä Ngarla Kunothia ja Robert Tudawalia. '
+          + 'Heille oli varattu paikat parvelta territorion '
+          + 'hallintopäällikön seurasta, mutta Tudawali istuutui '
+          + 'alakertaan. Osa kutsutuista aboriginaaleista meloi '
+          + 'paikalle Bathurstinsaarelta asti. Tracy tuhosi teatterin '
+          + '1974 eikä sitä avattu enää uudelleen: talosta tuli pieni '
+          + 'kauppakuja Star Village, jonka sisäänkäynnin luona '
+          + 'alkuperäinen projektori on yhä esillä.',
+      lahde: 'Wikipedia',
+    },
+    'Lameroon ranta': {
+      aika: '1922',
+      teksti: 'Esplanadin alla oleva pieni ranta on saanut nimensä '
+          + 'väännöksenä läheisen paikan larrakiankielisestä nimestä '
+          + 'Damoe-Ra, joka tarkoittaa silmää tai lähdettä.'
+          + '\n\n'
+          + 'Rannalle rakennettiin kaupungin toiset merikylpylät. '
+          + 'Ensimmäiset olivat olleet Fort Hillin luona vuodesta 1880, '
+          + 'ja hirmumyrsky vaurioitti ne. Uimisen suosio Lameroossa '
+          + 'teki paikasta ilmeisen valinnan, ja kylpylät avasi 14. '
+          + 'toukokuuta 1922 pormestari J. F. Burton. Rakennustyö '
+          + 'maksoi 2 000 puntaa, mitä pidettiin aikanaan valtavana '
+          + 'summana. Kylpylä oli Darwinin ainoa uima-allas 1900-luvun '
+          + 'alkupuoliskolla — ensimmäinen yksityinen allas rakennettiin '
+          + 'kaupunkiin vasta 1955. Rantaa kutsuttiin "pieneksi '
+          + 'Manlyksi", ja haita ja krokotiileja nähtiin usein, mutta '
+          + 'se ei vähentänyt suosiota.'
+          + '\n\n'
+          + 'Vuosina 1969–1974 rannalla asui jopa 400 telttailijaa, ja '
+          + 'lehdistö kuvasi heitä hipeiksi ja riesaksi. Helmikuussa '
+          + '1974 poliisi ajoi noin kaksikymmentä leiriytyjää pois ja '
+          + 'kaupungin tarkastajat polttivat kolmetoista puumajaa. '
+          + 'Saman vuoden joulun myrsky tuhosi sekä kylpylät että '
+          + 'leirin, ja jälleenrakennuksen yhteydessä kaupunki kielsi '
+          + 'telttailun rannoillaan myrskyaallon vaaran takia.',
+      lahde: 'Wikipedia',
+    },
+    'Hotel Darwin': {
+      aika: '1940',
+      teksti: 'Esplanadin hotelli tunnettiin lempinimellä "Grand Old '
+          + 'Duchess". Sen piirsi D. K. Turner toimistosta Stephenson '
+          + 'and Turner, ja se rakennettiin vanhan Club Hotelin '
+          + 'paikalle 50 000 – 85 000 punnan hinnalla. Avajaisiin '
+          + 'heinäkuussa 1940 tuli kaksisataa vierasta, ja tilaisuutta '
+          + 'johti territorion hallintopäällikkö Charles Aubrey '
+          + 'Abbott. Hänen vaimonsa Hilda Abbott avasi ovet '
+          + 'kultaisella avaimella, joka on nykyään esillä Darwinin '
+          + 'puolustusta esittelevässä näyttelyssä. Kutsuluettelosta '
+          + 'nousi riita: useat kaupungin vaikutusvaltaiset henkilöt '
+          + 'jäivät ilman kutsua, ja lehdistö piti asiaa vakavana.'
+          + '\n\n'
+          + 'Talossa oli piano-baari nimeltä Pickled Parrot ja '
+          + 'hienostoravintola Green Room. Vuonna 1947 kommunistinen '
+          + 'puolue keräsi yli kolmesataa nimeä vetoomukseen, jolla '
+          + 'hotelli olisi muutettu yhteisön hotelliksi; tarjouskilpailun '
+          + 'voittivat kuitenkin Paspalis ja Stanley Thomas Laurance. '
+          + 'Seuraavana vuonna Laurance sai syytteen hinnaston '
+          + 'puuttumisesta, ja ravintoloitsija lopetti oluen '
+          + 'myymisen oikeudenkäynnin ajaksi — jaksoa on kutsuttu '
+          + 'hotellin "oluettomiksi, ilottomiksi päiviksi".'
+          + '\n\n'
+          + 'Hotelli kesti sekä pommitukset että hirmumyrsky Tracyn, '
+          + 'mutta ei 1990-lukua. Omistajat ilmoittivat 9. syyskuuta '
+          + '1999 purkavansa talon kahden rakenteiden kuntoa koskevan '
+          + 'raportin jälkeen. Kansallinen rakennusperintöjärjestö '
+          + 'vaati ministeriä puuttumaan asiaan, ja korkeimman '
+          + 'oikeuden kieltohakemus kaatui 10. syyskuuta; purkaminen '
+          + 'alkoi lähes välittömästi päätöksen jälkeen, ja aamuun 11. '
+          + 'syyskuuta mennessä talo oli poissa. Moni piti tapahtunutta '
+          + 'ilkivaltana. Alkuperäisen tontin takana toimiva baari '
+          + 'kantaa nykyään nimeä Hotel Darwin.',
+      lahde: 'Wikipedia',
+    },
+    Parlamenttitalo: {
+      aika: '1994',
+      teksti: 'Pohjoisterritorion parlamenttitalo on Australian '
+          + 'nuorin parlamenttirakennus. Se seisoo State Squarella, '
+          + 'joka on samalla territorion hallinnon ja oikeuslaitoksen '
+          + 'keskus. Tontilla on pitkä virkahistoria: siinä oli ennen '
+          + 'Palmerstonin postitalo, ja kun paikka rakennettiin 1955 '
+          + 'uudelleen, siihen sijoitettiin vuonna 1948 perustettu '
+          + 'lakiasäätävä neuvosto, joka oli siihen asti kokoontunut '
+          + 'kaupungin väliaikaisissa tiloissa.'
+          + '\n\n'
+          + 'Vuonna 1988 territorion hallitus ilmoitti State Squaren '
+          + 'rakentamisesta: aukiolle tulisivat sekä uusi '
+          + 'parlamenttitalo että korkein oikeus. Vanhat rakennukset '
+          + 'purettiin 1990, ja siitä vuoden 1994 loppuun '
+          + 'lakiasäätävä kokous istui väliaikaisesti viereisessä Chan '
+          + '-talossa. Talon suunnittelivat arkkitehdit Steven Ehrlich '
+          + 'ja Peter Doig, tyyli on postmodernismia, ja koko State '
+          + 'Squaren hanke maksoi noin 170 miljoonaa dollaria. '
+          + 'Maaliskuussa 1991 nosturi kaatui työmaalla ja kaksi '
+          + 'työntekijää kuoli; heidän muistolleen on omistettu '
+          + 'puhemiehen puutarhan suihkulähde.'
+          + '\n\n'
+          + 'Rakennus avattiin virallisesti 18. elokuuta 1994. Se on '
+          + 'suunniteltu kestämään hirmumyrskyjä ja trooppista '
+          + 'aurinkoa: päivänvarjoksi kutsuttu kattorakenne ja '
+          + 'julkisivun säleiköt hajottavat noin 80 prosenttia '
+          + 'suorasta auringonvalosta. Istuntosalin väri on vihreä ja '
+          + 'seinillä on eukalyptusaiheita — sama vihreys kuin '
+          + 'Australian edustajainhuoneessa, joka puolestaan muistuttaa '
+          + 'Britannian alahuoneen kirkkaampaa vihreää. Talossa toimii '
+          + 'myös Pohjoisterritorion kirjasto, ja se sai 2023 '
+          + 'territorion pitkäikäisen arkkitehtuurin palkinnon.',
+      lahde: 'Wikipedia',
+    },
+    Mutamaja: {
+      aika: '1883',
+      teksti: 'Rinteessä Hughes Avenuen ja Kitchener Driven välissä '
+          + 'seisoi talo, jota kutsuttiin Mutamajaksi. Virallinen nimi '
+          + 'oli Aspendale, ja pilkkanimi kuului Knightin hulluus. '
+          + 'Sen rakensi 1883 arkkitehti John George Knight, joka '
+          + 'toimi 1890–1892 Pohjoisterritorion hallintomiehenä. Talo '
+          + 'oli kaksikerroksinen ja vain yhden huoneen levyinen, ja '
+          + 'sen ympäri kiersivät leveät kuistit. Seinät muurattiin '
+          + 'tiilistä, joita lähde kutsuu egyptiläisiksi.'
+          + '\n\n'
+          + 'Ivanimestä huolimatta talosta on tullut trooppisen '
+          + 'rakentamisen kekseliäisyyden vertauskuva. Se paloi '
+          + 'uudenvuodenaattona 1933 tyhjillään ollessaan — asukkaat '
+          + 'olivat lomamatkalla. Tutkinnassa ei saatu selville '
+          + 'varmaa syytä, mutta lopulta syy pantiin sähkövalojen '
+          + 'puutteellisen kunnon niskoille. Paikalla on nykyään '
+          + 'jäljellä vain betoniportaat ja opastaulu.',
+      lahde: 'Wikipedia',
+    },
+  },
 };
