@@ -194,7 +194,8 @@ const TAVOITE_LUFS = -17;
 const LUFS_TOLERANSSI = 1.5;
 const HAIVYTYS_S = 0.03;
 const HANNAN_PADDING_S = 0.15;
-const KESTO_MIN_S = 1.0;
+// Huudahdukset ("Kääk.", "Vesi ei.") ovat alle sekunnin (7.9.2026).
+const KESTO_MIN_S = 0.3;
 /** Pisin repliikki on kuplan lukuajan mittainen; yli menee jauhamiseksi. */
 const KESTO_MAX_S = 20.0;
 
@@ -947,9 +948,31 @@ function viimeistele(lahde, kohde, tyokansio, tempo) {
     '-af', `loudnorm=I=${TAVOITE_LUFS}:TP=-2:LRA=11:print_format=json`,
     '-f', 'null', '-',
   ]).loki;
-  const mitattu = tulkitseLoudnorm(mittausLoki);
+  let mitattu = tulkitseLoudnorm(mittausLoki);
+  /*
+   * LYHYT HUUDAHDUS (7.9.2026 ajo: "Kääk." kaatoi ajon). EBU R128:n
+   * integroitu taso tarvitsee vähintään 400 ms:n lohkon; alle sekunnin
+   * huudahdus leikattuna antaa input_i = -inf. Mitataan silloin
+   * hiljaisuudella jatkettu kopio (apad) — täyte ei muuta integroitua
+   * tasoa gatingin takia — ja jos sekään ei anna lukua, käytetään
+   * huippua: korjaus vie todellisen huipun -3 dBTP:hen.
+   */
   if (!mitattu) {
-    throw new Error(`loudnormin mittaus ei tuottanut lukua:\n${mittausLoki.slice(-800)}`);
+    const jatkettuLoki = aja('ffmpeg', [
+      '-hide_banner', '-v', 'info', '-i', wav,
+      '-af', `apad=whole_dur=2,loudnorm=I=${TAVOITE_LUFS}:TP=-2:LRA=11:print_format=json`,
+      '-f', 'null', '-',
+    ]).loki;
+    mitattu = tulkitseLoudnorm(jatkettuLoki);
+    if (mitattu) console.log('   HUOM: lyhyt äänite, taso mitattu hiljaisuudella jatkettuna');
+  }
+  if (!mitattu) {
+    const huippu = Number((/"input_tp"\s*:\s*"([^"]+)"/.exec(mittausLoki) || [])[1]);
+    if (!Number.isFinite(huippu)) {
+      throw new Error(`loudnormin mittaus ei tuottanut lukua:\n${mittausLoki.slice(-800)}`);
+    }
+    mitattu = { taso: TAVOITE_LUFS - (-3 - huippu), huippu, kirjo: 0 };
+    console.log(`   HUOM: tasoa ei voitu mitata, korjaus huipun mukaan (${huippu.toFixed(1)} dBTP → -3)`);
   }
   const korjaus = TAVOITE_LUFS - mitattu.taso;
   aja('ffmpeg', [
@@ -982,7 +1005,9 @@ function tarkista(kohde) {
     virheet.push(`kesto ${pituus.toFixed(2)} s ei ole välillä ${KESTO_MIN_S}–${KESTO_MAX_S} s`);
   }
   if (taso === null) {
-    virheet.push('tasoa ei saatu mitattua (ebur128)');
+    // Alle sekunnin huudahduksesta ebur128 ei anna integroitua tasoa;
+    // taso on jo korjattu huipun mukaan (viimeistele), joten se ei ole virhe.
+    if (pituus >= 1.0) virheet.push('tasoa ei saatu mitattua (ebur128)');
   } else if (Math.abs(taso - TAVOITE_LUFS) > LUFS_TOLERANSSI) {
     virheet.push(`taso ${taso.toFixed(1)} LUFS, tavoite ${TAVOITE_LUFS} (±${LUFS_TOLERANSSI})`);
   }
