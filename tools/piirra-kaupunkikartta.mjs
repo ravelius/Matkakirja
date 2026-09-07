@@ -5072,6 +5072,95 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -6.1575, etela: -6.1665, lansi: 39.1855, ita: 39.2000 },
     meri: true,
   },
+  fes: {
+    /*
+     * MEDINA BAB BOU JELOUDISTA MARINIDIEN KUKKULALLE (7.9.2026).
+     * Ruutu on 1,75 × 1,78 kilometriä eli pelin tiiviimpiä,
+     * Vancouverin ja Christchurchin kokoluokkaa. Lännessä ovat Bab
+     * Bou Jeloud, Dar Batha ja Bou Inanian medresa, keskellä Fes
+     * el-Balin kujaverkko funduqeineen ja medresoineen, pohjoisessa
+     * marinidien hautojen kukkula.
+     *
+     * ENSIMMÄINEN RAJAUS OLI 3,1 × 2,4 KILOMETRIÄ JA VÄÄRÄ. Silloin
+     * medina jäi kuvan oikeaan laitaan ja vasemman puolen täytti
+     * Fes Jdidin ja hautausmaiden avoin maa. Ruutu tiivistettiin
+     * kohteiden ympärille: kahdeksan kohdetta mahtuvat 1,05 × 1,03
+     * kilometrin alalle, ja reunoille jää joka suuntaan yli 300
+     * metriä.
+     *
+     * TIIVIS RUUTU ON MYÖS SE, MIKÄ TEKEE NUMEROYMPYRÖISTÄ
+     * LUETTAVAT. Medinan kohteet ovat lähellä toisiaan — zawiya ja
+     * al-Attarinen medresa ovat 98 metrin päässä toisistaan ja
+     * funduq zawiyasta 114 metrin — eli reilusti alle sen 200
+     * metrin, joka väljemmissä kaupungeissa on ollut alaraja.
+     * Tässä mittakaavassa (1,09 m/px) ne ovat silti 90 ja 105
+     * pikselin päässä eivätkä ympyrät mene päällekkäin;
+     * tarkista-karttapisteet.mjs vahvistaa sen.
+     *
+     * KUJAT VAATIVAT SEKÄ jalkakaydat: true ETTÄ palvelutiet: true,
+     * ja se on MITATTU eikä arvattu. Ensimmäinen ajo tehtiin pelkällä
+     * palvelutiet-lipulla, ja tulos oli 961 elementtiä: kuvaan piirtyi
+     * medinan MUURI ja sen ulkopuoliset valtatiet, mutta muurien
+     * sisäpuoli jäi tyhjäksi paperiksi. Syy on se, mikä tekee tästä
+     * kaupungista kuuluisan — Fes el-Bali on yksi maailman suurimmista
+     * autottomista kaupunkialueista (en-Wikipedia, "Fez, Morocco",
+     * johdanto), joten sen kujat eivät ole OSM:ssä katuja vaan
+     * footway- ja service-teitä. Sama ratkaisu kuin Teheranin
+     * katetussa basaarissa ja Petran poluilla.
+     *
+     * FES JDID JA MELLAH JÄÄVÄT RUUDUN ULKOPUOLELLE. Kuninkaanpalatsi
+     * on 1,2 kilometriä lounaaseen, ja sen mukaan ottaminen
+     * kaksinkertaistaisi ruudun ja hukuttaisi medinan kujat. Fes
+     * Jdidin perustaminen 1276 kerrotaan lehden nostossa, joten
+     * kohdekartta ei menetä juttua.
+     *
+     * CHOUARAN NAHKURIALTAAT EIVÄT OLE NUMEROITU KOHDE, vaikka ne
+     * ovat ruudussa. Ne ovat Marokon MAALEHDEN nosto ("Altaat, joissa
+     * väri on kasvia", maa-kategoriat.js MAR) ja niiden kuva on jo
+     * africa-valokuvat.js:ssä — kohdekartta ei toista lehden eikä
+     * maalehden juttuja.
+     *
+     * AL-QARAWIYYIN EI OLE NUMEROITU KOHDE samasta syystä: se on
+     * maalehden nosto ("Yliopisto, jonka perusti kauppiaan tytär").
+     * Moskeija näkyy kartalla rakennuksena Saffarinin aukion
+     * pohjoispuolella.
+     *
+     * Ei meri-lippua: Fès on sisämaassa, ja Fèsjoki on OSM:ssä
+     * tavallinen vesiväylä, joka kulkee osin katettuna.
+     */
+    rajat: { pohjoinen: 34.0730, etela: 34.0570, lansi: -4.9880, ita: -4.9690 },
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
+  dakar: {
+    /*
+     * PLATEAUSTA YLIOPISTOLLE (7.9.2026). Ruutu on 5,1 × 4,3
+     * kilometriä ja kattaa niemen kärjen: etelässä Pasteur-instituutti
+     * ja katedraali, keskellä Plateaun ruutukaava ja rautatieasema,
+     * pohjoisessa Médinan suurmoskeija, Soumbédiounen ranta ja
+     * Cheikh Anta Diop -yliopiston kampus.
+     *
+     * meri: true. Dakar on kolmelta suunnalta meren ympäröimä
+     * (en-Wikipedia, "Dakar", Geography), ja Atlantti on OSM:ssä
+     * rantaviivaa — ilman lippua ruudun kolme reunaa jäisivät
+     * paperin värisiksi.
+     *
+     * GORÉE JÄÄ RUUDUN ULKOPUOLELLE, ja se on päätös. Saari on
+     * kahden kilometrin päässä satamasta itään, ja se on jo
+     * karttanosto (maastokohteet-sen.js, goreen-saari) — kohdekartta
+     * ei toista karttanostoja. Ruudun itäreuna pysähtyy siksi
+     * satamaan.
+     *
+     * MAMELLESIN MAJAKKA JA RENESSANSSIMONUMENTTI EIVÄT OLE
+     * NUMEROITUJA KOHTEITA. Ne ovat kuuden kilometrin päässä
+     * luoteeseen Ouakamissa, ja ne ovat lehden noston D4 koko aihe.
+     *
+     * MUSTIEN SIVILISAATIOIDEN MUSEO on ruudussa mutta ei numeroitu:
+     * se on lehden teemasivun nosto T4.
+     */
+    rajat: { pohjoinen: 14.6905, etela: 14.6520, lansi: -17.4720, ita: -17.4245 },
+    meri: true,
+  },
 };
 
 /*

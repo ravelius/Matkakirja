@@ -381,29 +381,147 @@ export const OMAT_ARTIKKELIT = {
       + 'erityisinä päivinä. Ruuhkassa paikalliset toteavat: täällä ei '
       + 'kysytä montako kilometriä, vaan montako tuntia.',
   },
+  /*
+   * DAKAR (Opus 7.9.2026, paketti O9) — merkintä kirjoitettu
+   * kokonaan uusiksi kaupunkilehden yhteydessä. Vanha intro oli
+   * neljä virkettä; uusi tekstilinjaus (Raamattu, omistaja
+   * 20.8.2026) vaatii 7–10 virkettä. Vanha artikkeli nojasi
+   * Youssou N'Douriin, thiéboudienneen ja car rapide -busseihin;
+   * kaksi ensimmäistä ovat Senegalin MAALEHDEN aiheita ja
+   * kolmannella ei ole katetta en-Wikipedian Dakar-artikkelissa.
+   * Uusi teksti kertoo kaupungin oman tarinan: lebu-kylät, Ndakaaru
+   * Goréen vastapäätä, Lebu-tasavalta, maapähkinäsatama ja
+   * hallintokaupunki.
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-dakar.md ja sen
+   * riippumaton tarkistus tarkistus-dakar.md. Väitteet luettu
+   * en-Wikipedian raakateksteistä 7.9.2026: "Dakar", "Lebu people",
+   * "Four Communes", "Cap-Vert".
+   */
   Dakar: {
-    intro: 'Dakar seisoo Afrikan läntisimmällä niemellä keskellä '
-      + 'Atlantin tuulia. Senegalin pääkaupunki on värikäs satama- ja '
-      + 'musiikkikaupunki, jonka edustalla Goréen saari muistuttaa '
-      + 'raskaasta historiasta.',
-    artikkeli: 'Dakar on Senegalin pääkaupunki Kap Verden niemellä, '
-      + 'mantereen läntisimmässä kärjessä. Kolmelta suunnalta kaupunkia '
-      + 'ympäröi meri, ja Atlantin tuuli käy aina.'
-      + '\n\n== Niemen kaupunki ==\n'
-      + 'Dakar kasvoi 1800-luvulla satamakaupungiksi ja oli aikanaan '
-      + 'koko Ranskan Länsi-Afrikan pääkaupunki, jonka kautta hallinto '
-      + 'ja kauppa kulkivat. Sen edustalla on pieni Goréen saari, jonka '
-      + 'kautta orjakauppa kulki vuosisatojen ajan — nykyään saari on '
-      + 'Unescon maailmanperintökohde ja hiljainen muistopaikka.'
-      + '\n\n== Terangan maa ==\n'
-      + 'Senegalilaiset kutsuvat maataan terangan, vieraanvaraisuuden, '
-      + 'maaksi, ja Dakarissa sen huomaa: vieras istutetaan '
-      + 'ruokavadin ääreen, ja thiéboudienne — kala-riisipata — syödään '
-      + 'yhdessä isolta vadilta. Iltaisin kaupungissa jyskyttävät '
-      + 'sabar-rummut ja soi mbalax, jonka tunnetuin ääni Youssou '
-      + 'N\'Dour on kotoisin juuri täältä. Värikkäät car rapide '
-      + '-pikkubussit kiitävät kaduilla kuin maalatut arkut täynnä '
-      + 'elämää.',
+    intro: 'Dakar seisoo Cap-Vertin niemellä **Manner-Afrikan '
+      + 'läntisimmässä kärjessä**, ja meri on siellä kolmella '
+      + 'puolella. Niemen asuttivat viimeistään 1400-luvulla '
+      + 'lebut, wolofien kalastajaryhmä, ja heidän vanhat kylänsä '
+      + 'Ouakam, Ngor, Yoff ja Hann ovat yhä omia kaupunginosiaan. '
+      + 'Itse kaupunki alkoi 1600-luvulla kylästä nimeltä Ndakaaru, '
+      + 'joka perustettiin Goréen saarta vastapäätä toimittamaan '
+      + 'eurooppalaiselle kauppa-asemalle ruokaa ja juomavettä.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Dakar oli yhä pieni satamapaikka: '
+      + 'ranskalaiset olivat perustaneet sinne sotilaspostin 1857, ja '
+      + 'vuotta aiemmin, **1872**, Gorée ja sen mukana Dakar oli '
+      + 'tunnustettu Ranskan kunnaksi. Omaksi kunnakseen Dakar '
+      + 'irrotettiin vasta 1887, ja Ranskan Länsi-Afrikan '
+      + 'pääkaupungiksi se nousi 1902.'
+      + '\n\n'
+      + 'Nykyään Dakarin departementissa asuu yli 1,2 miljoonaa ja '
+      + 'koko metropolialueella noin neljä miljoonaa ihmistä. '
+      + 'Kaupunki on Länsi-Afrikan rahoituskeskus ja **taiteen '
+      + 'pääkaupunki**: täällä pidettiin 1966 ensimmäinen mustan '
+      + 'taiteen maailmanfestivaali, ja Dak\'Art on mantereen '
+      + 'pitkäikäisin suuri taidetapahtuma.',
+    artikkeli: 'Dakar on Senegalin pääkaupunki Cap-Vertin niemellä, '
+      + 'Manner-Afrikan läntisimmässä kärjessä. Merituuli käy siellä '
+      + 'ympäri vuoden, ja se pitää kaupungin selvästi viileämpänä '
+      + 'kuin sisämaan Sahelin kaupungit.'
+      + '\n\n== Niemen oma kansa ==\n'
+      + 'Cap-Vertin asuttivat lebut, wolofien vesiviljelyyn '
+      + 'erikoistunut ryhmä, viimeistään 1400-luvulla. Yoffin '
+      + 'perustamisen perinteinen vuosi on 1430. Kun Cayorin '
+      + 'marabuutit nousivat kapinaan hallitsijaansa vastaan, lebut '
+      + 'vetäytyivät niemelle, rakensivat lateriittilohkareista '
+      + 'muurin Yoffista Hanniin ja torjuivat hyökkäyksen. Syntyi '
+      + 'oma valtio, jota ranskalaiset kutsuivat Lebu-tasavallaksi '
+      + 'ja jonka pääkaupunki oli Ndakaaru. Senegalin valtio '
+      + 'tunnustaa Ndakaarun serignen yhä lebujen perinteiseksi '
+      + 'auktoriteetiksi.'
+      + '\n\n== Maapähkinöistä pääkaupungiksi ==\n'
+      + 'Kun orjakauppa loppui Ranskan alueilla 1848, sen tilalle '
+      + 'nousi maapähkinä. Pieni Goréen saari kävi sadalle laivalle '
+      + 'ahtaaksi, ja kauppa siirtyi mantereelle. Rata Saint-Louis\'hin '
+      + 'valmistui 1885, ja 1902 Dakarista tuli Ranskan Länsi-Afrikan '
+      + 'pääkaupunki. Siirtomaakautensa huipulla se oli yksi '
+      + 'imperiumin suurkaupungeista, ja satamaan tuli myllyjä, '
+      + 'panimoita ja säilyketehtaita.'
+      + '\n\n== Kaksi kukkulaa ja taiteen kaupunki ==\n'
+      + 'Ouakamin kaksoiskukkulat ovat kaupungin ainoa korkea maasto. '
+      + 'Toisella seisoo vuonna 1864 valmistunut Mamellesin majakka, '
+      + 'jonka valo kantaa 31 meripeninkulmaa, toisella Afrikan '
+      + 'korkein patsas. Keskustassa taas on museoita ja '
+      + 'biennaali: Dak\'Art on koko mantereen pitkäikäisin suuri '
+      + 'taidetapahtuma, ja Mustien sivilisaatioiden museo avattiin '
+      + '2018.',
+  },
+  /*
+   * FÈS (Opus 7.9.2026, paketti O9) — uusi merkintä. Avain on
+   * city.wiki eli 'Fès' (js/packs/africa.js).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-fes.md ja sen
+   * riippumaton tarkistus tarkistus-fes.md. Väitteet luettu
+   * en-Wikipedian raakateksteistä 7.9.2026: "Fez, Morocco",
+   * "Fes el Bali", "Fes Jdid", "Fez (hat)".
+   *
+   * RAJAUS: Marokon maalehti on jo tehty, ja se on ottanut
+   * al-Qarawiyyinin, Chouaran nahkurialtaat, Dar al-Maganan
+   * vesikellon ja zellijin. Niitä ei toisteta tässä.
+   *
+   * TARKISTUKSEN RATKAISU A: lähteet nimeävät joen rannat kolmella
+   * eri tavalla (kaakkois-, oikea- ja itäranta), joten teksti ei
+   * nimeä ilmansuuntia lainkaan.
+   */
+  Fès: {
+    intro: 'Fès on Pohjois-Marokon sisämaan kaupunki Atlasvuorten '
+      + 'luoteispuolella, kukkuloiden ympäröimänä ja Fèsjoen '
+      + 'varrella. Se alkoi **kahtena erillisenä kaupunkina joen '
+      + 'kahdella rannalla**: Idris I perusti oman kaupunkinsa 789 '
+      + 'ja hänen poikansa Idris II toisen 809. Kaupungit riitelivät '
+      + 'ja linnoittivat kumpikin oman rantansa, ja almoravidien '
+      + 'Yusuf ibn Tashfin yhdisti ne yhdeksi kaupungiksi vasta '
+      + '1069–1070.'
+      + '\n\n'
+      + 'Marinidien aikana 1200–1400-luvuilla Fès oli kulta-ajassaan '
+      + 'ja pääkaupunki: seitsemän medresaa rakennettiin vuosina '
+      + '1271–1357, ja 1276 perustettiin hallintokaupunki Fes Jdid. '
+      + 'Isoisän matkavuonna 1873 valtaan nousi Moulay Hassan I, joka '
+      + 'teki viimeisen suuren muutoksen kaupunkikuvaan ennen '
+      + '1900-lukua: hän yhdisti kaksi vanhaa kaupunkia '
+      + 'muurikäytävällä ja rakennutti sen sisään puutarhoja ja '
+      + 'kesäpalatseja.'
+      + '\n\n'
+      + 'Vanhakaupunki merkittiin **maailmanperintöluetteloon 1981** '
+      + 'Marokon ensimmäisenä kohteena. Fes el-Bali on arabimaailman '
+      + 'vanhin yhtäjaksoisesti asuttu muurikaupunki ja yksi maailman '
+      + 'suurimmista autottomista kaupunkialueista. Fèsiä kutsutaan '
+      + 'lännen Mekaksi ja Afrikan Ateenaksi.',
+    artikkeli: 'Fès on Marokon henkinen ja kulttuurinen sydän, '
+      + 'kaupunki jonka kujilla ei kulje autoja. Vanhakaupunki '
+      + 'jakautuu kahteen muurialueeseen, vanhempaan Fes el-Baliin ja '
+      + '1276 perustettuun Fes Jdidiin.'
+      + '\n\n== Kaksi kaupunkia, yksi joki ==\n'
+      + 'Idris I perusti kaupunkinsa 789 ja Idris II toisen '
+      + 'vastarannalle 809. Väestö oli aluksi berberejä ja satoja '
+      + 'Kairouanista tulleita arabeja; 817–818 Córdobasta '
+      + 'karkotetut andalusialaisperheet muuttivat toiselle puolelle. '
+      + 'Kaupunginosat saivat nimensä tulijoiden mukaan. Kaksi '
+      + 'riitelevää emiiriveljestä linnoittivat 1050-luvun lopulla '
+      + 'kumpikin oman rantansa, ja heidän nimensä elävät yhä '
+      + 'kaupungin kahdessa portissa.'
+      + '\n\n== Vesi ja kujat ==\n'
+      + 'Suuren osan kaupungin vesijärjestelmästä rakennutti '
+      + 'hallitsija, joka istui vallassa 1037–1049 — ja se on '
+      + 'pääosin säilynyt tähän päivään. Fèsjoki jakautuu pieniin '
+      + 'kanaviin, jotka tuovat veden vanhaankaupunkiin. Kujat ovat '
+      + 'kapeammat kuin vaunun akseliväli, ja siksi kaikki kannetaan '
+      + 'yhä aasin selässä.'
+      + '\n\n== Kirjoja ja hattuja ==\n'
+      + 'Afrikan mantereen ensimmäinen painettu kirja tehtiin '
+      + 'Fèsissä 1516: Lissabonista paenneet Samuel ben Isaac '
+      + 'Nedivot ja hänen poikansa painoivat hepreaksi viisitoista '
+      + 'kappaletta. Arabialainen kirjapaino tuli kaupunkiin 1865 ja '
+      + 'toimi 1940-luvulle. Kaupungin mukaan on nimetty myös '
+      + 'fetsihattu — vaikka siitä, kuka sen ensimmäisenä teki, '
+      + 'lähteet ovat eri mieltä.',
   },
   Timbuktu: {
     intro: 'Timbuktu oli aavikon reunan kulta- ja kirjakaupunki, jonka '

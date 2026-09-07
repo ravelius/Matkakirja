@@ -13605,6 +13605,127 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Sansibarin valtionyliopisto', lat: -6.165833, lon: 39.191667 },
     ],
   },
+  /*
+   * FÈSIN MEDINA (Opus 7.9.2026, paketti O9). Ruutu on 1,75 × 1,78
+   * kilometriä ja kattaa Fes el-Balin muurit: lännessä Bab Bou
+   * Jeloud ja Dar Batha, keskellä kujaverkko medresoineen ja
+   * funduqeineen, pohjoisessa marinidien hautojen kukkula.
+   * Piirtoperustelut ja rajauksen historia
+   * tools/piirra-kaupunkikartta.mjs:n fes-lohkossa (kartta vaati
+   * sekä jalkakaydat- että palvelutiet-lipun, koska medinan kujat
+   * ovat OSM:ssä footway- ja service-teitä).
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö).
+   * Lehden nostot kertovat kahden kaupungin synnystä, Hassan I:n
+   * muurikäytävästä 1873, autottomasta medinasta ja fetsihatusta;
+   * teemasivu kertoo kirjapainosta ja kirjoituksesta. Kartan
+   * kahdeksan kohdetta ovat rakennuksia, joista lehti ei kerro.
+   *
+   * KAKSI KOHDETTA ON TARKOITUKSELLA JÄTETTY POIS, vaikka ne ovat
+   * ruudussa ja ovat kaupungin tunnetuimpia: Chouaran
+   * nahkurialtaat ja al-Qarawiyyinin moskeija-yliopisto. Molemmat
+   * ovat MAROKON MAALEHDEN nostoja (maa-kategoriat.js MAR:
+   * "Altaat, joissa väri on kasvia" ja "Yliopisto, jonka perusti
+   * kauppiaan tytär"), eikä kohdekartta toista maalehden juttuja
+   * enempää kuin kaupunkilehdenkään. Sama koskee Dar al-Maganan
+   * vesikelloa Bou Inanian medresaa vastapäätä ("Kello, jota
+   * kukaan ei enää osaa korjata") — medresan juttu ei mainitse
+   * kelloa lainkaan.
+   *
+   * WIKI-KENTTIÄ EI OLE YHDELLÄKÄÄN. Suomenkielisiä artikkeleita ei
+   * ole näistä kohteista, joten ne ovat pelkkiä merkkejä — se on
+   * sallittua (vrt. Kairon torni ja Egyptin museo).
+   */
+  fes: {
+    polku: 'assets/kartat/fes-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 34.073, etela: 34.057, lansi: -4.988, ita: -4.969 },
+    esittely: 'Fèsin vanhakaupunki Fes el-Bali on arabimaailman vanhin '
+      + 'yhtäjaksoisesti asuttu muurikaupunki ja yksi maailman '
+      + 'suurimmista autottomista kaupunkialueista. Kujat ovat '
+      + 'kapeammat kuin vaunun akseliväli, joten tavara kulkee yhä '
+      + 'aasin selässä. Muurien sisällä on medresoja, karavaaniserajeja '
+      + 'ja pyhäkköjä 1200-luvulta 1700-luvulle, ja pohjoisen kukkulalla '
+      + 'seisovat marinidisulttaanien haudat. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään ja lopuksi
+       * pohjoiseen kukkulalle. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026.
+       *
+       * VÄLIT OVAT PELIN PIENIMPIÄ ja se on tässä oikein: medina on
+       * niin tiheä, ettei 200 metrin väljyyteen pääse ilman että
+       * puolet kohteista putoaa pois. Kolme pienintä väliä ovat
+       * zawiya – al-Attarinen medresa 98 m, Bab Bou Jeloud – Bou
+       * Inanian medresa 107 m ja Nejjarinen funduq – zawiya 114 m.
+       * Ruutu on siksi tiivistetty 1,75 kilometrin levyiseksi
+       * (1,09 m/px), jolloin nuo välit ovat 89, 98 ja 104 pikseliä
+       * eivätkä numeroympyrät mene päällekkäin;
+       * tarkista-karttapisteet.mjs vahvistaa sen.
+       */
+      { nimi: 'Bab Bou Jeloud', lat: 34.06167, lon: -4.98389 },
+      { nimi: 'Dar Batha', lat: 34.0605, lon: -4.9828 },
+      { nimi: 'Bou Inanian medresa', lat: 34.06194, lon: -4.98278 },
+      { nimi: 'Nejjarinen funduq', lat: 34.06476, lon: -4.97595 },
+      { nimi: 'Moulay Idris II:n zawiya', lat: 34.06485, lon: -4.97472 },
+      { nimi: 'Al-Attarinen medresa', lat: 34.06508, lon: -4.97369 },
+      { nimi: 'Saffarinin medresa', lat: 34.06415, lon: -4.97257 },
+      { nimi: 'Marinidien haudat', lat: 34.06977, lon: -4.97924 },
+    ],
+  },
+  /*
+   * DAKARIN NIEMENKÄRKI (Opus 7.9.2026, paketti O9). Ruutu on
+   * 5,1 × 4,3 kilometriä: etelässä Pasteur-instituutti ja
+   * katedraali, keskellä Plateaun ruutukaava ja rautatieasema,
+   * pohjoisessa Médinan suurmoskeija, Soumbédiounen ranta ja
+   * yliopiston kampus. Perustelut piirra-kaupunkikartta.mjs:n
+   * dakar-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA EIVÄTKÄ KARTTANOSTOJA.
+   * Lehden nostot kertovat lebu-kylistä, Lebu-tasavallasta, vuoden
+   * 1873 maapähkinäsatamasta ja kahdesta kukkulasta; teemasivu
+   * kertoo taiteesta. Gorée on jo karttanosto
+   * (maastokohteet-sen.js) eikä siksi ole kartalla.
+   *
+   * KOLME EHDOKASTA HYLÄTTIIN LÄHTEEN PUUTTEESSA: Kermelin
+   * kauppahalli, Sandagan tori ja presidentinpalatsi omana
+   * kohteenaan. Yhdelläkään ei ole en-Wikipedian artikkelia, eikä
+   * nähtävyysjuttua kirjoiteta ilman katetta. Presidentinpalatsi
+   * mainitaan Riippumattomuuden aukion jutussa, jolla on kate
+   * ("Dakar" › Notable sites: rakennettu 1907).
+   */
+  dakar: {
+    polku: 'assets/kartat/dakar-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 14.6905, etela: 14.652, lansi: -17.472, ita: -17.4245 },
+    esittely: 'Dakar on rakennettu Cap-Vertin niemelle, Manner-Afrikan '
+      + 'läntisimpään kärkeen, ja meri on kartan kolmella reunalla. '
+      + 'Eteläkärki on Plateau, siirtomaa-ajan hallintokaupunginosa, '
+      + 'jossa ovat ministeriöt, katedraali ja museot. Pohjoisempana '
+      + 'alkaa Médina, joka perustettiin 1914 ja on nykyään kaupungin '
+      + 'tihein kaupunginosa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi etelästä pohjoiseen.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * (katedraali, suurmoskeija, yliopisto) ja Nominatimista
+       * (muut) 7.9.2026. Pienin väli on 210 metriä (Théodore Monod
+       * -museo – katedraali, jotka ovat saman korttelin
+       * vastakkaisilla puolilla), toiseksi pienin 750 metriä
+       * (katedraali – Riippumattomuuden aukio).
+       */
+      { nimi: 'Pasteur-instituutti', lat: 14.65618, lon: -17.43503 },
+      { nimi: 'Théodore Monod -museo', lat: 14.66367, lon: -17.43828 },
+      { nimi: 'Dakarin katedraali', lat: 14.66545, lon: -17.43761 },
+      { nimi: 'Riippumattomuuden aukio', lat: 14.66953, lon: -17.43206 },
+      { nimi: 'Dakarin rautatieasema', lat: 14.67646, lon: -17.43368 },
+      { nimi: 'Suuri moskeija', lat: 14.67821, lon: -17.44246 },
+      { nimi: 'Soumbédiounen käsityökylä', lat: 14.67685, lon: -17.45781 },
+      { nimi: 'Cheikh Anta Diop -yliopisto', lat: 14.68694, lon: -17.46333 },
+    ],
+  },
 };
 
 /*
