@@ -62,6 +62,24 @@
  * Kyproksella rajaus on olemassa, joten vartio pätee ja jokainen piste
  * on tarkistettu sitä vasten. Vartiota ei ole muutettu.
  */
+/*
+ * ── ERÄ M20, 7.9.2026: KAHDEKSAS KOHDE MAHTUI SITTENKIN ─────────────
+ *
+ * Erä M6 kirjasi Kyprokselle vajeen kohteita −1 ja perusteli sen
+ * saaren koolla. Vaje mitattiin nyt uudelleen ehdokas kerrallaan
+ * (tools/tarkista-nimiolimitys.mjs CYP), ja yksi ehdokas mahtui:
+ * Apostolos Andreas Karpasin niemen kärjessä. Muut kaatuivat mittaan:
+ *   Soli (32,811 / 35,14)        → 1 nimiö–nimiö-limitys
+ *   Machairas (33,1909 / 34,9406) → 2 limitystä
+ *   Kyrenian linna (33,3222 / 35,3414) → 7,1 lautayksikköä Nikosiasta
+ *     eli kaupunkikaton (8) alla; merkki ei tulisi pääkartalle
+ *   Bellapais (33,3547 / 35,3066) 5,7 ja Buffavento (33,4103 /
+ *     35,2875) 5,3 → sama kaupunkikatto
+ *   Akamas 1,3 ja Marion 4,8 lautayksikköä maan eläintäystä
+ *   (kyproksenpöllönen), Enkomi 0,9 Pediaíosista, Stavrovouni 4,6
+ *   Khirokitiasta, Idalion 5,7 Nikosiasta.
+ * Tamassoksen jälkeen Kyproksen kohdetavoite (8) on täynnä.
+ */
 export const MAASTOKOHTEET_CYP = [
   {
     id: 'olympos',
@@ -318,6 +336,42 @@ export const MAASTOKOHTEET_CYP = [
       + 'kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivi'
       + 'jyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.',
     lahde: 'en-Wikipedia "Cape Greco", johdanto-osa (tarkistettu 6.9.2026).',
+  },
+  /* ================================================================
+   * ERÄ M20, 7.9.2026 — KAHDEKSAS KOHDE.
+   * ============================================================== */
+  {
+    id: 'apostolosandreas',
+    nimi: 'Apostolos Andreas',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Mistä luostarin lähde kertomuksen mukaan syntyi?',
+      'Kuka neuvotteli täällä antautumisestaan?',
+    ],
+    korostukset: ['Karpasin niemi|Karpasin niemellä'],
+    nappi: 'Luostari saaren kaukaisimmassa kärjessä',
+    // 34.5738 E / 35.6593 N — en-Wikipedia "Apostolos Andreas Monastery".
+    // Lähin pelikaupunki Nikosia 44,7 lautayksikköä; lähin muu merkki
+    // Pediaíos 28,7.
+    laudat: {
+      maailmankartta: { x: 6985.8, y: 1970.5 },
+      europe: { x: 875, y: 955.8 },
+    },
+    teksti: 'Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen '
+      + 'koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on '
+      + 'Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen '
+      + 'Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva '
+      + 'joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus '
+      + 'ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; '
+      + 'rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi '
+      + 'palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta '
+      + 'tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä '
+      + 'käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. '
+      + 'Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. '
+      + 'Sekä kreikkalais- että turkkilaiskyproslaiset pitävät paikkaa pyhänä, ja luostarin '
+      + 'korjaustyö on rahoitettu yhdessä.',
+    lahde: 'en-Wikipedia "Apostolos Andreas Monastery", johdanto-osa sekä osiot "History" ja '
+      + '"Restoration" (tarkistettu 7.9.2026).',
   },
 ];
 

@@ -60,6 +60,35 @@
  *
  * KUVATON ERÄ. Faktat en-Wikipedian raakatekstistä 6.9.2026.
  */
+/*
+ * ── ERÄ M20, 7.9.2026: VAJE MITATTIIN UUDELLEEN, EIKÄ SE PIENENTYNYT ─
+ *
+ * Kuudetta kohdetta kokeiltiin uudelleen tools/tarkista-nimiolimitys.mjs
+ * -mitalla, ja tulos on sama kuin erässä M16: seitsemän merkkiä
+ * (viisi kohdetta + kaksi skandaalia) on saaren yläraja. Vaje pysyy
+ * lukemassa kohteita −5, maastoa −1.
+ *
+ * ELÄINTÄKYN ESTE ON NYT ERI KUIN M16:SSA, ja se on syytä kirjata
+ * tarkasti. M16 kirjasi syyksi sen, ettei piste osu laudan
+ * MAA-ALUEELLE (js/mapart.js isOnLand). Se pitää yhä paikkansa —
+ * maan monikulmion sisään osuu 347 ruudukkopistettä (0,005°), ja
+ * isOnLand on niissä kaikissa epätosi — mutta se este on 7.9.2026
+ * alkaen ratkaistavissa: Fidži, Salomonsaaret ja Vanuatu saivat
+ * samasta syystä dokumentoidun poikkeuksen (tests/elaintakyt.test.mjs
+ * MAATESTIN_POIKKEUS). Kaupunkisäde ei myöskään ole este: KAIKKI 347
+ * pistettä ovat yli 35 lautayksikön päässä jokaisesta kaupunkimerkistä
+ * (kaukaisin 85,5), koska laudan St. Helena -laatta on tyylitellyllä
+ * paikalla saaren koillispuolella.
+ *
+ * ESTE ON NIMIÖLIMITYS. Kahdeksas merkki ei mahdu saarelle: neljällä
+ * eri koepisteellä (−5,66/−15,94, −5,72/−15,99, −5,65/−16,01,
+ * −5,79/−15,93) työkalu antoi 1–2 nimiö–nimiö-limitystä, ja pari oli
+ * aina sama — täky ja jokin olemassa olevista merkeistä
+ * (Longwood House, Plantation House tai Lentoasema). Saaren tikkuri
+ * (wirebird) siis mahtuisi kaikkiin muihin vartioihin mutta ei
+ * ladontaan, ja vaje jää. Ratkaisu olisi pudottaa jokin nykyinen
+ * merkki sen tieltä — se on sisältöpäätös eikä integroijan tehtävä.
+ */
 export const MAASTOKOHTEET_SHN = [
   /* ─────────────────────────── KOHTEET (3) ─────────────────────── */
   {

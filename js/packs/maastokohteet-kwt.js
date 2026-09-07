@@ -299,5 +299,125 @@ export const MAASTOKOHTEET_KWT = [
       + 'Sadekaudella se vihertää — Umm al Maradim on Kuwaitin sateisin paikka.',
     lahde: 'en-Wikipedia "Umm al Maradim Island", johdanto-osa (tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * ERÄ M20, 7.9.2026 — KOLME KOHDETTA LISÄÄ.
+   *
+   * Erän M6 vaje oli kohteita −3, ja syyksi kirjattiin maan pieni koko.
+   * Vaje on nyt mitattu uudelleen merkki kerrallaan, ja kolme kohdetta
+   * mahtui: kaksi maan uloimmalle saarelle ja yksi läntiselle
+   * aavikkorajalle, jossa lehden ikkunassa oli vielä tilaa.
+   * `node tools/tarkista-nimiolimitys.mjs KWT` sanoo yhä
+   * "NIMIÖ NIMIÖN PÄÄLLÄ: 0". Kaikki kolme ovat lehden rajauksen
+   * (x 7364,41…7467,75, y 2155,37…2255,83) sisällä ja yli
+   * kahdenkymmenen lautayksikön päässä Kuwait Citystä — raja
+   * KAUPUNGIN_KOHDALLA_SADE on 7 ja kaupunkikaton säde 8.
+   *
+   * TYYPPI EI OLE YHDELLÄKÄÄN MAASTOA. Maastokiintiö (3) oli jo
+   * ylitäysi neljällä merkillä, ja vaje oli nimenomaan kohteissa,
+   * joten Warbah on kortiltaan rajakiistan ja sopimusten tarina eikä
+   * saarikortti — samalla tavalla kuin Failaka on tässä pakissa jo
+   * historia eikä saari.
+   *
+   * WADI AL-BATININ PISTE ON SIIRRETTY POHJOISEEN, ja syy on nimiö.
+   * Artikkelin oma koordinaatti (46,555 / 29,101) on 6,0 lautayksikön
+   * päässä maan eläintäystä (hietakissa), ja tools/tarkista-nimiolimitys.mjs
+   * kaatoi ladonnan nimiö nimiön päälle. Piste on siirretty saman
+   * uoman pohjoisemmalle jaksolle Kuwaitin länsirajalle, jolloin väli
+   * on 21,1 yksikköä ja työkalu sanoo taas nollaa. Uoma on satojen
+   * kilometrien pituinen, joten siirto pysyy kohteen sisällä.
+   * ============================================================== */
+  {
+    id: 'warbah',
+    nimi: 'Warbah',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Miksi saarta on vaadittu Kuwaitilta niin monta kertaa?',
+      'Kuka saarella asuu?',
+    ],
+    korostukset: ['rajasopimus|rajasopimuksen'],
+    nappi: 'Saari, jota kolme kertaa pyydettiin',
+    // 48.06667 E / 30.0 N — en-Wikipedia "Warbah Island".
+    // Lähin pelikaupunki Kuwait City 24,8 lautayksikköä.
+    laudat: {
+      maailmankartta: { x: 7435.6, y: 2180.9 },
+      // Euroopan laudan kaavan ulkopuolella: rivi jätetään pois.
+    },
+    teksti: 'Warbah on Kuwaitille kuuluva saari Persianlahden pohjukassa lähellä Eufratin '
+      + 'suuta. Se on noin sata metriä Kuwaitin mantereesta itään, puolitoista kilometriä '
+      + 'Bubiyanista pohjoiseen ja kilometrin Irakin mantereesta etelään; pituutta on '
+      + 'viisitoista kilometriä, leveyttä viisi ja pinta-alaa 37 neliökilometriä. Saari '
+      + 'kirjattiin Kuwaitin alueeksi jo heinäkuussa 1913 osmanien ja Britannian '
+      + 'sopimusluonnoksessa, jota ei koskaan ratifioitu maailmansodan syttymisen takia. '
+      + 'Vuonna 1951 Irak tarjoutui hyväksymään rajasopimuksen sillä ehdolla, että Warbah '
+      + 'luovutettaisiin sille; Kuwait kieltäytyi, ja tarjous vedettiin pois 1953. Vuonna '
+      + '1956 britit ehdottivat saaren vaihtamista irakilaiseen vedensaantiin, ja siitäkin '
+      + 'Kuwait kieltäytyi. Marraskuussa 1994 Irak hyväksyi muodollisesti YK:n merkitsemän '
+      + 'rajan, mikä päätti vaatimukset. Saarella ei ole vakituisia asukkaita — vain '
+      + 'rannikkovartioston asema nimeltä M-1.',
+    lahde: 'en-Wikipedia "Warbah Island", johdanto-osa sekä osiot "Geography" ja "History" '
+      + '(tarkistettu 7.9.2026).',
+  },
+  {
+    id: 'qaruh',
+    nimi: 'Qaruh',
+    // Pieni ulkosaari ei ole tässä pakissa maastomerkki vaan kohde:
+    // tyyppi 'muu' + symboli 'luonto', kuten Kubbar ja Umm al Maradim.
+    symboli: 'luonto',
+    tyyppi: 'muu',
+    kysymykset: [
+      'Mistä saaren nimi tulee?',
+      'Kuinka kaukana se on mantereesta?',
+    ],
+    korostukset: ['qar|qar-sanasta'],
+    nappi: 'Yhdeksästä saaresta pienin',
+    // 48.77639 E / 28.8175 N — en-Wikipedia "Qaruh Island".
+    // Lähin pelikaupunki Kuwait City 28,9 lautayksikköä.
+    laudat: {
+      maailmankartta: { x: 7459.2, y: 2223.9 },
+      // Euroopan laudan kaavan ulkopuolella: rivi jätetään pois.
+    },
+    teksti: 'Qaruh on Kuwaitin yhdeksästä saaresta pienin ja kauimpana mantereesta: '
+      + 'matkaa rannikolle on 37,5 kilometriä itään ja Umm al Maradimille seitsemäntoista '
+      + 'kilometriä lounaaseen. Saari on noin 275 metriä pitkä ja leveimmillään 175 metriä, '
+      + 'eli pinta-alaa on noin kolme ja puoli hehtaaria. Nimi tulee arabian qar-sanasta, '
+      + 'joka tarkoittaa alueen runsaita öljykerrostumia. Saarella on majakka. Tammikuun '
+      + '21. päivänä 1991 Qaruh oli ensimmäinen Kuwaitin maaperän osa, joka vapautui '
+      + 'Persianlahden sodassa.',
+    lahde: 'en-Wikipedia "Qaruh Island", johdanto-osa (tarkistettu 7.9.2026).',
+  },
+  {
+    id: 'wadialbatin',
+    nimi: 'Wadi al-Batin',
+    // Uoma on kuiva suurimman osan vuodesta, ja kortti kertoo rajan ja
+    // asutuksen tarinan — tyyppi on siksi historia eikä maastoa.
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mistä vuodesta uoma on ollut Kuwaitin ja Irakin raja?',
+      'Mitä uoman Kuwaitin puolelta on löydetty?',
+    ],
+    korostukset: ['Al-Dibdibah|Al-Dibdibahin'],
+    nappi: 'Kuiva uoma, joka on raja',
+    // Piste on uoman pohjoisemmalla jaksolla Kuwaitin länsirajalla
+    // (46,9 / 29,75). Artikkelin oma koordinaatti 46,555 / 29,101 on
+    // 6,0 lautayksikön päässä maan eläintäystä, ja nimiölimitys kaatui
+    // siihen; tällä pisteellä väli on 21,1 ja työkalu sanoo nollaa.
+    // Lähin pelikaupunki Kuwait City 43,1 lautayksikköä.
+    laudat: {
+      maailmankartta: { x: 7396.7, y: 2190 },
+      // Euroopan laudan kaavan ulkopuolella: rivi jätetään pois.
+    },
+    teksti: 'Wadi al-Batin on ajoittainen joki, joka virtaa Saudi-Arabian, Irakin ja Kuwaitin '
+      + 'alueella. Se on Wadi al-Rummahin alin ja viimeinen jakso ja kulkee 45 mailin matkan '
+      + 'koillisesta lounaaseen Al-Dibdibahin tasangon halki. Vuodesta 1913 uomaa on pidetty '
+      + 'Kuwaitin ja Irakin rajana. Sen nykyään toimimaton alluviaaliviuhka ulottuu '
+      + 'Hafar al-Batinista koilliseen ja peittää osia Kuwaitista ja Lounais-Irakista; sama '
+      + 'viuhka on saattanut synnyttää Al-Dibdibahin soratasangon. Uoman mutkassa on kohta '
+      + 'nimeltä ʿAuǧat al-Bāṭin, jossa Saudi-Arabian, Irakin ja Kuwaitin rajat kohtaavat. '
+      + 'Uoman Kuwaitin puolelta on löydetty sekä neoliittisia että varhaisen ja myöhäisen '
+      + 'islamilaisen ajan asuinpaikkoja — ja suurin osa nyky-Kuwaitista on yhä '
+      + 'arkeologisesti tutkimatta.',
+    lahde: 'en-Wikipedia "Wadi al-Batin", johdanto-osa ja osio "Description" '
+      + '(tarkistettu 7.9.2026).',
+  },
 ];
 
