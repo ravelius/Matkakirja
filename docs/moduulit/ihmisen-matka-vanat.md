@@ -1825,3 +1825,21 @@ rivit.
   läpi, mukana väite KÄRKI KUVASSA.
 - `node tools/tarkista-niputus.mjs`, `node tools/tarkista-savukkeet.mjs`,
   `node tools/tarkista-kaksoisavaimet.mjs`.
+
+MITATTU 7.9.2026 (kontti, ohjelmisto-WebGL):
+
+- `node --test tests/*.test.mjs`: 2 197 läpi, 0 kaatunutta, 13 ohitettua.
+- `savuke-ihmisen-tutkimus`: **36/36** kummassakin näkymässä. Palkki
+  57 px (834 × 1100) ja 53 px (390 × 844), yläpalkki 0 px ja piilossa,
+  kartta 1 079/1 100 ja 828/844 px, karuselli `display: none`, kartalla
+  40 hehkua viidessä sävyssä. Aito koordinaattinapautus avasi kortin
+  sekä lampusta esityksen aikana että hehkusta tutkimusvaiheessa;
+  Tiedeliitteen sisällys 20 riviä, 20 väripilkkua, yksi palsta, ei
+  yhtään riviä laatikon ulkopuolella.
+- `savuke-ihmisen-esitys`: **14/14**. Kärki kuvassa 11 jaksossa, osuus
+  0,88; loppunäkymä 3 355 lautayksikköä; 22 jaksoa läpi, neljä pulun
+  kuplaa, koukku kerran.
+- `savuke-aikajana` (keksinnöt, regressio): **13/13** — pysäkkiajo,
+  karuselli ja Tiedeliite ennallaan.
+- Kertomuskuvan napautus ruutukoordinaatilla (390 × 844) avasi noston
+  kortin ("Okra ja helmet").
