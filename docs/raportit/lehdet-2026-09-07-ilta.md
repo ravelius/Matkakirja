@@ -106,7 +106,7 @@ Recognition). Portit: fail 0, karttapisteet ok. Poiminnassa lisäyskonfliktit
 5 tiedostossa liitetty liita-lisays.py:llä.
 
 ### Checkpointit (poimittu haaraan; loppuraportit ja kuvat täydennetään, jos agentit ehtivät)
-- Iqaluit + Santa Fe: ei vielä committia (agentti aloitti myöhään)
+- Iqaluit + Santa Fe: wip Iqaluitin tekstit ec5ce08 (Santa Fe ja kuvat kesken)
 Kaikki kolme poimittu haaraan lisäyskonfliktit liittäen; portit fail 0,
 karttapisteet ok kaikille kuudelle kaupungille. Näiden lehdet ovat siis
 pelissä TEKSTEINÄ ja kohdekarttoina; kuvat, kuvalähteet ja
