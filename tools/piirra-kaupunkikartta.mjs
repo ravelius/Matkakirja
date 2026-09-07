@@ -3758,6 +3758,73 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 19.4450, etela: 19.4250, lansi: -99.1475, ita: -99.1265 },
   },
+  hobart: {
+    /*
+     * VANHA RUUTUKAAVA RINTEEN JA SATAMAN VÄLISSÄ (7.9.2026). Ruutu on
+     * 1,8 × 1,8 kilometriä eli Christchurchin ja Dubrovnikin
+     * kokoluokkaa, selvästi tiiviimpi kuin Wellingtonin 3,3 km. Syy
+     * on kaupungin muodossa: Hobartin siirtomaa-ajan keskusta on
+     * kapea kaistale kunanyin rinteen ja Sullivans Coven välissä, ja
+     * kaikki kahdeksan kohdetta mahtuvat siihen Campbell Streetin
+     * vankilalta (-42,8774) Anglesean kasarmille (-42,8887).
+     *
+     * ITÄREUNA 147,3385 ON VEDETTY SULLIVANS COVEN YLI, jotta ruutuun
+     * tulee sataman kaari ja Queens Domainin kumpare, jolla
+     * sotamuistomerkki seisoo. Ilman niitä rajaus olisi 1,4 km leveä
+     * ja kaikki kohteet olisivat samassa katunauhassa.
+     *
+     * LÄNSIREUNA 147,3165 ON ST MARYN KATEDRAALIN MUKAAN. Rinne
+     * jatkuu siitä vielä ylöspäin West Hobartiin, mutta kunanyi
+     * (147,237) on kymmenen kilometriä lännessä ja kaupunkilehden
+     * noston L1 aihe, joten rinnettä ei ollut syytä ottaa
+     * leveämmältä.
+     *
+     * BATTERY POINT JA CASCADEN PANIMO JÄÄVÄT POIS. Kellyn portaat
+     * (lehden nosto K4) ja Salamanca Placen makasiinit (nostot K4 ja
+     * T3) ovat aivan eteläreunan ulkopuolella, ja Cascaden panimo
+     * (nosto H3) on 2,5 kilometriä lounaassa. Cascades Female Factory
+     * olisi ollut kartan paras yksittäinen kohde, mutta se on 2,5 km
+     * lännessä ja venyttäisi ruudun kaksinkertaiseksi.
+     *
+     * meri: true. Derwentin suisto on OSM:ssä rantaviivaa
+     * (natural=coastline) eikä vesimonikulmio, joten ilman lippua
+     * kuvan oikea reuna olisi paperin värinen.
+     */
+    rajat: { pohjoinen: -42.8750, etela: -42.8910, lansi: 147.3165, ita: 147.3385 },
+    meri: true,
+  },
+  darwin: {
+    /*
+     * NIEMEN KÄRKI KAHDEN VEDEN VÄLISSÄ (7.9.2026). Ruutu on
+     * 1,6 × 1,6 kilometriä eli pelin tiiviimpiä, ja se riittää:
+     * Darwinin keskusta on matalan törmän päällä niemen kärjessä,
+     * eikä yksikään kartan kohteista ole kilometriä kauempana Smith
+     * Streetin ruutukaavasta.
+     *
+     * LÄNSIREUNA 130,8337 ON MEREN PUOLELLA ja itäreuna 130,8480
+     * Darwin Harbourin puolella, eli ruutu näyttää koko kannaksen
+     * kapeuden. Se on kartan tärkein yksittäinen asia: kaupunki on
+     * rakennettu kaistaleelle, jonka yli kävelee vartissa.
+     *
+     * ETELÄREUNA 12,4705 ON MUTAMAJAN MUKAAN. Kauempana etelässä
+     * ovat Fort Hill, Stokes Hillin laituri ja Waterfrontin
+     * satamakortteli; Fort Hill on kaupunkilehden noston K1 aihe eikä
+     * siis kartan kohde, eikä laiturialue tuo ruutuun mitään, mitä
+     * sataman ranta ei jo näytä.
+     *
+     * MINDIL BEACH, KASVITIETEELLINEN PUUTARHA JA FANNIE BAYN
+     * VANKILA JÄÄVÄT POIS. Kaikki kolme ovat 2–3 kilometriä
+     * pohjoisessa ja kaikki kolme ovat kaupunkilehden omien nostojen
+     * aihe (opas, L3, T1), joten ruutua ei ollut syytä venyttää
+     * niiden takia.
+     *
+     * meri: true. Sekä avomeri että Darwin Harbour ovat OSM:ssä
+     * rantaviivaa, joten ilman lippua kuvan molemmat reunat olisivat
+     * paperin värisiä ja niemi katoaisi.
+     */
+    rajat: { pohjoinen: -12.4565, etela: -12.4705, lansi: 130.8337, ita: 130.8480 },
+    meri: true,
+  },
   suva: {
     /*
      * SIIRTOMAA-AJAN HALLINTOKORTTELI NIEMEN KÄRJESSÄ (6.9.2026).

@@ -49137,6 +49137,24 @@ export const NAHTAVYYSJUTUT = {
    * Tasmania" (rakennuksen omassa artikkelissa ei ole
    * coordinates-lohkoa), mutta juttu on kirjoitettu rakennuksen
    * artikkelista. Perustelu on maakartat.js:n hobart-lohkossa.
+   *
+   * KUVAT: kaikki kahdeksan tarkistettu Commonsin rajapinnasta
+   * 7.9.2026 (lisenssi, tekijä ja Restrictions extmetadatasta) ja
+   * katsottu silmin 760 pikselin esikatseluna. Yksikään tiedosto ei
+   * esiinny muualla repossa (grep js-puusta) eikä siis myöskään
+   * kaupunkilehden hobart-lohkossa — sama kohde saa esiintyä
+   * molemmissa, tiedosto ei.
+   *
+   * KUVAHYLKÄYKSET SYINEEN. Tunnistettavia kasvoja etualalla:
+   * "Hobart-Tasmania-Australia04.JPG" (nurmella istuva seurue
+   * parlamenttitalon edessä) ja "Hobart TasMuseum&Surrounds 004 TMAG
+   * 2020.jpg" (lapsia sisäpihalla). Mainos kuvassa: "St Mary's
+   * Cathedral, Hobart 1.jpg" (pakettiauton kylkeen teipattu
+   * yritysbanneri telineiden edessä) — samasta kohteesta valittiin
+   * saman kuvaajan kuva 2. Aihe ei vastannut käyttöä: "Tasmania
+   * Parliament House.JPG" ja "Lascar Parliament House (Hobart)" ovat
+   * molemmat iltakuvia, ja niistä valittiin jälkimmäinen, koska
+   * ensimmäisessä talo on lähes musta.
    */
   hobart: {
     'Campbell Streetin vankila': {
@@ -49173,6 +49191,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Hirsipuu kunnostettiin 1980-luvulla alkuperäisin osin. '
           + 'Muusta vankilasta on jäljellä vain pätkiä hiekkakivimuuria '
           + 'kadun varressa.',
+      kuvat: [
+        {
+          tiedosto: 'Penitentiary Chapel Hobart 20171119-006.jpg',
+          selite: 'Vankilan kappeli rakennettiin 1831–1833 eristysselien '
+            + 'päälle, ja 1850-luvun lopulla siitä tehtiin oikeussalit.',
+          lahde: 'Gary Houston, Wikimedia Commons (CC0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Sotamuistomerkki: {
@@ -49211,6 +49237,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kunnostuksessa puiden juurelle on tuotu yli 480 '
           + 'pronssitaulua, joissa on nimi, joukko-osasto, kuolinpaikka '
           + 'ja siviiliammatti.',
+      kuvat: [
+        {
+          tiedosto: 'Hobart Cenotaph, April 2021.jpg',
+          selite: 'Obeliskin huipun alla palaa joka sivulla takaa valaistu '
+            + 'punainen lasiristi.',
+          lahde: 'Thomas & Olivia Williams, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Hobartin synagoga': {
@@ -49240,6 +49274,14 @@ export const NAHTAVYYSJUTUT = {
           + 'juutalaista; vuoden 2021 laskennassa Tasmaniassa oli 376. '
           + 'Talossa pidetään sekä ortodoksisia että liberaaleja '
           + 'jumalanpalveluksia.',
+      kuvat: [
+        {
+          tiedosto: 'Hobart Synagogue3.jpg',
+          selite: 'Sisäänkäynnin pylväiden lootuskapiteelit ovat egyptiläisen '
+            + 'kertaustyylin tunnusmerkki.',
+          lahde: 'CutOffTies, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'St Maryn katedraali': {
@@ -49269,6 +49311,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Domainilla 1894 pidettyä teollisuuden, tieteen ja taiteen '
           + 'suurnäyttelyä varten, jossa ne voittivat ensimmäisen '
           + 'palkinnon; kirkkoon ne asennettiin kesäkuussa 1895.',
+      kuvat: [
+        {
+          tiedosto: 'St Mary\'s Cathedral, Hobart 2.jpg',
+          selite: 'Katedraali purettiin rakennusvirheiden takia ja muurattiin '
+            + 'uudelleen vuodesta 1878 alkaen.',
+          lahde: 'Mx. Granger, Wikimedia Commons (CC0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Tasmanian museo': {
@@ -49303,6 +49353,14 @@ export const NAHTAVYYSJUTUT = {
           + 'museon hallitukset erotettiin toisistaan 1952 eduskunnan '
           + 'lailla, ja silloin talo sai nykyisen nimensä. Kävijöitä on '
           + 'nykyisin 400 000 vuodessa.',
+      kuvat: [
+        {
+          tiedosto: 'Commissariat Store Hobart 20171119-025.jpg',
+          selite: 'Vuoden 1810 muonavarasto on museon korttelin vanhin '
+            + 'rakennus.',
+          lahde: 'Gary Houston, Wikimedia Commons (CC0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'St Davidin katedraali': {
@@ -49335,6 +49393,14 @@ export const NAHTAVYYSJUTUT = {
           + 'soitetaan täyden kierron tekniikalla. Salissa on 650 '
           + 'istumapaikkaa, ja se on Hobartin käytetyimpiä '
           + 'konserttitiloja.',
+      kuvat: [
+        {
+          tiedosto: 'Hobart St David\'s Cathedral - panoramio.jpg',
+          selite: 'Neliötorni on muurattu Oatlandsin kivestä, ja siinä on '
+            + 'kymmenen kellon sarja.',
+          lahde: 'Annette Teng, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Parlamenttitalo: {
@@ -49372,6 +49438,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Tasmania käytti kuninkaallista vaakunaa virallisissa '
           + 'asiakirjoissaan vuoteen 1953 asti, vaikka se oli ottanut '
           + 'oman vaakunansa jo 1919.',
+      kuvat: [
+        {
+          tiedosto: 'Lascar Parliament House (Hobart) (4551936219).jpg',
+          selite: 'Talo rakennettiin 1835–1840 tullitaloksi, ja parlamentti '
+            + 'muutti siihen 1841.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Anglesean kasarmi': {
@@ -49393,6 +49467,14 @@ export const NAHTAVYYSJUTUT = {
           + 'laivue, laivaston Tasmanian esikunta ja useita '
           + 'kadettiyksiköitä. Alueen vanhassa vankilassa on Tasmanian '
           + 'armeijamuseo.',
+      kuvat: [
+        {
+          tiedosto: 'Soldiers Barracks Anglesea Barracks.JPG',
+          selite: 'Kasarmi on ollut käytössä vuodesta 1814 eli pidempään kuin '
+            + 'yksikään toinen Australian armeijan kasarmi.',
+          lahde: 'Nick-D, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },
@@ -49428,6 +49510,35 @@ export const NAHTAVYYSJUTUT = {
    * West Australian 10.7.1940 "DARWIN LUXURY HOTEL OPENED"), koska
    * leipäteksti kertoo vain avajaiset ja purkamisen 1999. Tämä on
    * kirjattu tähän, jotta lukija tietää, mistä luku on peräisin.
+   *
+   * BICENTENNIAL-PUISTON JUTUSSA EI OLE aika-kenttää. Puiston
+   * artikkeli ei anna perustamisvuotta, eikä nimen ilmeistä
+   * yhteyttä vuoden 1988 kaksisataavuotisjuhlaan sanota siinä
+   * ääneen — arvattua vuosilukua ei panna peliin.
+   *
+   * KAKSI JUTTUA ON KUVATON, ja se on valinta eikä puute.
+   * Star-teatterista ei ole Commonsissa yhtään kuvaa (haut
+   * "Star Theatre Darwin cinema" ja "Star Village Smith Street
+   * Darwin" 7.9.2026 palauttivat vain samannimisiä teattereita
+   * muualta maailmasta), ja Mutamajasta on jäljellä vain
+   * betoniportaat, joista ei ole kuvaa. Molemmat on kirjattu
+   * kuvaputken miniatyyritilaukseen.
+   *
+   * KUVAT: kuusi tarkistettu Commonsin rajapinnasta 7.9.2026
+   * (lisenssi, tekijä ja Restrictions extmetadatasta) ja katsottu
+   * silmin 760 pikselin esikatseluna. Yksikään tiedosto ei esiinny
+   * muualla repossa; erityisesti parlamenttitalon kuva EI ole sama
+   * kuin kaupunkilehden matkailijasivun kuvituskuva
+   * "Northern Territory Legislative Assembly, Darwin, 2021, 01.jpg".
+   *
+   * KUVAHYLKÄYKSET SYINEEN. Tunnistettavia kasvoja: "Darwin's
+   * Victoria Hotel in May 2011.jpg" (ostoskadulla ihmisiä
+   * keskietäisyydellä) ja koko Bicentennial-puiston
+   * muistomerkkisarja, jonka ainoat osumat olivat Yhdysvaltain
+   * puolustusministeriön kuvia nimetyistä poliitikoista seppeleen
+   * laskussa. Mainos kuvassa: "Parliament House, Darwin, 2023
+   * (01).jpg" (rakennusliikkeen aitabanneri etualalla). Väärä
+   * kohde: "Hotel Victoria - November 2010.jpg" ei ole Darwinissa.
    */
   darwin: {
     'Meren tähden katedraali': {
@@ -49449,6 +49560,14 @@ export const NAHTAVYYSJUTUT = {
           + 'hänen tilalleen tuli John D\'Arcy. Kirkko siunattiin ja '
           + 'avattiin jumalanpalveluskäyttöön 19. elokuuta 1962 ja '
           + 'vihittiin kymmenen vuotta myöhemmin, 20. elokuuta 1972.',
+      kuvat: [
+        {
+          tiedosto: 'St Mary\'s Star of the Sea Cathedral, Darwin.jpg',
+          selite: 'Kirkon ensimmäinen kivi louhittiin Rum Junglesta, '
+            + 'territorion ensimmäisen uraanikaivoksen paikalta.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Bicentennial-puisto': {
@@ -49467,6 +49586,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kokoontuvat vappumarssi, Darwinin festivaali ja Greek '
           + 'Glenti, jossa kaupungin kreikkalainen yhteisö juhlii '
           + 'kulttuuriaan ja ruokaansa.',
+      kuvat: [
+        {
+          tiedosto: 'Bicentennial Park - Darwin.jpg',
+          selite: 'Puisto kulkee Esplanadin törmää pitkin parlamenttitalolta '
+            + 'Doctors Gullyyn.',
+          lahde: 'kenhodge13, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Vic-hotelli': {
@@ -49503,6 +49630,14 @@ export const NAHTAVYYSJUTUT = {
           + 'omistuksessa ja tunnettu krokotiilinmetsästäjien, '
           + 'puhvelinampujien ja malminetsijöiden kapakkana. Vic '
           + 'suljettiin lokakuussa 2014.',
+      kuvat: [
+        {
+          tiedosto: 'Victoria Hotel Smith St Darwin 1960.jpg',
+          selite: 'Hotelli avattiin 1890 Darwinin ensimmäisenä kivitalona; '
+            + 'kuva on vuodelta 1960.',
+          lahde: 'Travellights, Wikimedia Commons (CC0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Star-teatteri': {
@@ -49564,6 +49699,13 @@ export const NAHTAVYYSJUTUT = {
           + 'Saman vuoden joulun myrsky tuhosi sekä kylpylät että '
           + 'leirin, ja jälleenrakennuksen yhteydessä kaupunki kielsi '
           + 'telttailun rannoillaan myrskyaallon vaaran takia.',
+      kuvat: [
+        {
+          tiedosto: 'Lameroo Beach, below Bicenntenial Park, Darwin, Australia 03.jpg',
+          selite: 'Rannalla toimivat 1922–1974 kaupungin ainoat merikylpylät.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Hotel Darwin': {
@@ -49600,6 +49742,14 @@ export const NAHTAVYYSJUTUT = {
           + 'syyskuuta mennessä talo oli poissa. Moni piti tapahtunutta '
           + 'ilkivaltana. Alkuperäisen tontin takana toimiva baari '
           + 'kantaa nykyään nimeä Hotel Darwin.',
+      kuvat: [
+        {
+          tiedosto: 'Hotel Darwin Hot and Cold Bar 1959.jpg',
+          selite: 'Hotelli purettiin 1999; kuvassa sen Hot & Cold -baari '
+            + 'vuonna 1959.',
+          lahde: 'kenhodge13, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Parlamenttitalo: {
@@ -49635,6 +49785,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Britannian alahuoneen kirkkaampaa vihreää. Talossa toimii '
           + 'myös Pohjoisterritorion kirjasto, ja se sai 2023 '
           + 'territorion pitkäikäisen arkkitehtuurin palkinnon.',
+      kuvat: [
+        {
+          tiedosto: 'Darwin (AU), Parliament House -- 2019 -- 4343.jpg',
+          selite: 'Talo avattiin 1994, ja se on Australian nuorin '
+            + 'parlamenttirakennus.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Mutamaja: {

@@ -12614,12 +12614,13 @@ export const KAUPUNKIKARTAT = {
    * Käärmeestä. Yksikään kartan kahdeksasta kohteesta ei ole niiden
    * aihe.
    *
-   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ. Kaupungintalo on
-   * 105 metriä Tasmanian museosta ja merimuseo 84 metriä
-   * kaupungintalosta; kolmesta naapurista kartalle jäi museo, koska
-   * sen tarina alkaa 1846 ja kantaa mukanaan sekä vanhan
-   * muonavaraston että tullitalon. Ingle Hall (53 m kaupungintalosta)
-   * ja vanhan kuvernöörintalon paikka (56 m) putosivat samasta syystä.
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ. Macquarie- ja
+   * Argyle-katujen kulmassa seisoo viisi kohdetta sadan metrin
+   * säteellä: kaupungintalo on 105 metriä Tasmanian museosta,
+   * merimuseo 84 metriä kaupungintalosta, Ingle Hall 53 metriä ja
+   * vanhan kuvernöörintalon paikka 56 metriä samasta. Kartalle jäi
+   * museo, koska sen tarina alkaa 1846 ja kantaa mukanaan sekä vuoden
+   * 1810 muonavaraston että vuoden 1902 tullitalon.
    *
    * PARLAMENTTITALON KOORDINAATIT LUETTIIN ARTIKKELISTA "Parliament of
    * Tasmania", koska rakennuksen omassa artikkelissa "Parliament
