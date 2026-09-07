@@ -52515,8 +52515,10 @@ export const NAHTAVYYSJUTUT = {
         + 'Bond -elokuvassa The Living Daylights.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Morocco Tangier Mendoub Palace.jpg',
+          selite: 'Mendoubin residenssin valkoinen julkisivu vihreine '
+            + 'tiilikattoineen Marshanin kadun varrella.',
+          lahde: 'Boubloub, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -52543,8 +52545,10 @@ export const NAHTAVYYSJUTUT = {
         + 'levyllään Slowly.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Café Hafa, Tangier (48169).jpg',
+          selite: 'Café Hafan terassit laskeutuvat portaittain kalliolta merta '
+            + 'kohti.',
+          lahde: 'Ideophagous, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -52574,8 +52578,10 @@ export const NAHTAVYYSJUTUT = {
         + '1970-luvun alkuun asti.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Kasbah Tanger.Morocco - panoramio.jpg',
+          selite: 'Kasbahin palatsin portti avautuu kujan päässä; talossa '
+            + 'toimii nykyään museo.',
+          lahde: 'Hiroki Ogawa, Wikimedia Commons (CC BY 3.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -52599,8 +52605,10 @@ export const NAHTAVYYSJUTUT = {
         + 'useimmissa vanhoissa taloissa, kaikki kääntyy sisäänpäin.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Hotel Continental, Tánger, Marruecos, 2015-12-11, DD 25.JPG',
+          selite: 'Hotelli Continental seisoo medinan reunalla suoraan sataman '
+            + 'yläpuolella.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -52632,8 +52640,10 @@ export const NAHTAVYYSJUTUT = {
         + 'Moskeija on yhä käytössä eikä avoin ei-muslimeille.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Grand Mosque of Tangier minaret.jpg',
+          selite: 'Suurmoskeijan nelikulmainen minareetti on koristeltu '
+            + 'vihreillä laatoilla ja valkoisella stukolla.',
+          lahde: 'Robert Prazeres, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -52658,8 +52668,10 @@ export const NAHTAVYYSJUTUT = {
         + 'komensi Marokon armeijaa.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Saint Andrew church Tangier.jpg',
+          selite: 'Pyhän Andreaksen kirkon kellotorni on muotoiltu '
+            + 'minareetiksi, ja salossa liehuu Pyhän Yrjön lippu.',
+          lahde: 'Cosmo45, Wikimedia Commons (CC BY 2.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -52688,8 +52700,10 @@ export const NAHTAVYYSJUTUT = {
         + 'maamerkin aseman seuraavana vuonna.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Museo del Antiguo Legado Estadounidense, Tánger, Marruecos, 2015-12-11, DD 44-46 HDR.JPG',
+          selite: 'Lähetystön sisäpihalla on suihkulähde, appelsiinipuita ja '
+            + 'seinällä Yhdysvaltain vaakuna.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -52715,8 +52729,10 @@ export const NAHTAVYYSJUTUT = {
         + 'useimmat heistä olivat käsityöläisiä ja työläisiä.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Gran Teatro Cervantes, Tánger, Marruecos, 2015-12-11, DD 50.JPG',
+          selite: 'Teatterin julkisivun kaakelikilpi kertoo nimen ja vuoden '
+            + '1913; ovet ovat kiinni ja rappaus lohkeillut.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -52768,8 +52784,10 @@ export const NAHTAVYYSJUTUT = {
         + 'viimeisin kunnostus kesti marraskuusta 2018 huhtikuuhun 2022.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Ben Jusufova medresa, Marrákeš, 2025 (01).jpg',
+          selite: 'Medresan punainen ulkoseinä ja lyhdyt kujalla; kyltti '
+            + 'osoittaa sisäänkäynnille.',
+          lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -52801,8 +52819,10 @@ export const NAHTAVYYSJUTUT = {
         + 'ajaksi.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Dar al Bacha Marrakesh DSCF8623.jpg',
+          selite: 'Dar el Bachan sisäpihalla kasvaa appelsiinipuita '
+            + 'suihkulähteen ympärillä.',
+          lahde: 'R Prazeres, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -52833,8 +52853,10 @@ export const NAHTAVYYSJUTUT = {
         + 'ja niiden koko kertoo korttelin koosta.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Mouassine Fountain 0922.jpg',
+          selite: 'Suihkulähteen setripuinen katos ja sen alla kaiverretut '
+            + 'stukkofriisit.',
+          lahde: 'C messier, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -52864,8 +52886,10 @@ export const NAHTAVYYSJUTUT = {
         + 'vaurioitui syyskuun 2023 maanjäristyksessä.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Dar Si Said 1465.jpg',
+          selite: 'Dar Si Saidin koristeltu sali, jossa mattoja on ripustettu '
+            + 'näytteille.',
+          lahde: 'C messier, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -52898,8 +52922,10 @@ export const NAHTAVYYSJUTUT = {
         + 'rakennuttajan oli vaikea kulkea portaissa.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Bahia Palace large court.jpg',
+          selite: 'Bahian marmorilla ja zellij-laatoilla päällystetty suuri '
+            + 'piha pylväikköineen.',
+          lahde: 'Val Traveler, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -52934,8 +52960,10 @@ export const NAHTAVYYSJUTUT = {
         + '1100-luvun almoravidiminbar eli saarnatuoli.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Badi Palace DSCF6501.jpg',
+          selite: 'El Badin raunioitunut pihamaa: pitkä vesiallas, upotetut '
+            + 'appelsiinitarhat ja yksi jäljellä oleva paviljonki.',
+          lahde: 'R Prazeres, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -52967,8 +52995,10 @@ export const NAHTAVYYSJUTUT = {
         + 'marokkolaisen rakennustaiteen huippuna.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Innenhof der Saadier-Gräber, Marrakesch - panoramio.jpg',
+          selite: 'Saadilaisten hautojen puutarha savimuurien sisällä: vihreät '
+            + 'tiilikatot, palmuja ja bougainvillea.',
+          lahde: 'Martin Furtschegger, Wikimedia Commons (CC BY 3.0)',
         },
       ],
       lahde: 'Wikipedia',
@@ -53001,8 +53031,10 @@ export const NAHTAVYYSJUTUT = {
         + 'ilmansaasteista.',
       kuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Bab Agnaou, Marrakesh, Morocco, 20250125 1255 7242.jpg',
+          selite: 'Bab Agnaou kaupunginmuurin sisäpuolella; portin ohi kulkee '
+            + 'mopoliikenne.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
         },
       ],
       lahde: 'Wikipedia',

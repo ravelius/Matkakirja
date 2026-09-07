@@ -4932,6 +4932,8 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 35.7940, etela: 35.7800, lansi: -5.8280, ita: -5.8040 },
     meri: true,
+    jalkakaydat: true,
+    palvelutiet: true,
   },
   marrakech: {
     /*
@@ -4961,6 +4963,7 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 31.6350, etela: 31.6145, lansi: -7.9965, ita: -7.9785 },
     jalkakaydat: true,
+    palvelutiet: true,
   },
 };
 

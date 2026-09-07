@@ -183,3 +183,31 @@ Jemaa el-Fna, Atlasvuoret, punainen kaupunki, gnawa. **Minitehtävä
 ei saa kysyä mistään näistä.** Ehdotus: Menaran puutarhojen
 perustamisvuosi tai khettaran toimintaperiaate — kumpikin vastaus on
 teemasivun omalla sivulla, eikä kumpaakaan kysytä missään visassa.
+
+## J. KUVIEN SILMÄTARKISTUS (7.9.2026, kirjoituksen jälkeen)
+
+Jokainen ehdokas ladattiin 640 px esikatseluna ja katsottiin.
+**Hylätyt ja syy:**
+
+| Tiedosto | Syy |
+| --- | --- |
+| `Marrakesh railway station 01.jpg` | tunnistettavat kasvot etualalla |
+| `Marrakesh railway station 03.jpg` | KFC-logo hallitsee kuvaa (mainoskuva) |
+| `Bahia Palace 006.jpg` | pelkkä stukkoyksityiskohta, ei kerro palatsista |
+| `Bahia Palace 01.jpg` | sama vika |
+| `Badi, palác, Marrákeš, 2025 (01).jpg` | kapea kuja, palatsin rauniot eivät näy |
+| `Grabmäler der Saadier 03.jpg` | kuvassa on vain ruusupensas |
+| `Ben Jusufova medresa … (02).jpg` | vastavaloinen kuja, rakennus ei erotu |
+| `Gueliz, Marrakesh, Morocco - panoramio.jpg` | geneerinen ostoskatu, ei tunnettu kohta |
+| `Almoravid dinar 1138 631905.jpg` | vain 325 px leveä |
+| `Pavilion of the Menara Gardens.jpg` vs. `Marrakesh Menara Garden Pavilion seen from across the basin.jpg` | **sama valokuva kahtena tiedostona** — vain CC0-versio otettiin |
+
+**Yksi merkintä selitetään kuvatekstissä:** vuoden 1860 kaiverruksen
+alalaidassa on painokuvan oma signeeraus (kansisivun nosto 3).
+
+**Aihetoisto, joka hyväksyttiin:** Jemaa el-Fna esiintyy kahdesti eri
+tiedostoina (kansikuva hämärässä, nosto pimeällä) ja Bab Agnaou
+kahdesti (avauskuva ja kohdekartan juttu). Ennakkotapaus on Lontoon
+Tower Bridge (docs/moduulit/kaupunkilehti.md). Yksikään tiedostonimi
+ei toistu kaupungin sisällä — tarkistettu koneellisesti (56 kuvaa,
+56 uniikkia nimeä).

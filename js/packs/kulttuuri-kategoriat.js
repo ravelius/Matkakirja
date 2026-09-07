@@ -86094,16 +86094,22 @@ export const KULTTUURI_KATEGORIAT = {
        */
       kansikuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Place de la Kasbah Tanger Marokko.jpg',
+          selite: 'Kasbahin aukio medinan laella: sakaramuuri erottaa vanhan '
+            + 'linnoitusalueen valkoisista taloista.',
+          lahde: 'Herbert wie, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Cabo Espartel, Marruecos, 2015-12-11, DD 03.JPG',
+          selite: 'Cap Spartelin kalliorannikko kaupungin länsipuolella, jossa '
+            + 'Atlantti kääntyy kohti salmea.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'BEACH FRONT TANGER MOROCCO APRIL 2013 (8734493621).jpg',
+          selite: 'Kaupungin oma hiekkaranta kaartuu lahden ympäri kohti '
+            + 'itäisen kukkulan rinteitä.',
+          lahde: 'calflier001, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
       /*
@@ -86113,16 +86119,22 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Cape Spartel lighthouse panorama.jpg',
+          selite: 'Cap Spartelin majakka seisoo niemen laella, ja sen alta '
+            + 'aukeaa Atlantti horisonttiin asti.',
+          lahde: 'Geertchaos, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Tangier (31631320361).jpg',
+          selite: 'Grand Soccon marmorinen suihkulähde ja palmut erottavat '
+            + 'medinan uudemmasta keskustasta.',
+          lahde: 'Aleksandr Zykov from Russia, Wikimedia Commons (CC BY-SA 2.0)',
         },
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Achakkar, Tanger, Morocco - panoramio (1).jpg',
+          selite: 'Achakkarin ranta kaupungin länsipuolella avautuu suoraan '
+            + 'Atlantille.',
+          lahde: 'logopop, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
       /*
@@ -86137,10 +86149,14 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Le marché du Grand Soko à Tanger - btv1b532075360.jpg',
           vuosi: '1900-luvun alku',
+          selite: 'Grand Socco täyttyi markkinapäivänä kameleista, muuleista '
+            + 'ja kauppiaista 1900-luvun alussa.',
           lahde: 'Agence Rol, Wikimedia Commons (PD)',
         },
         {
           tiedosto: 'Panorama Tanger Bay Tangier Marokko.jpg',
+          selite: 'Sama lahti nykyään: valkoinen kaupunki kiipeää yhä '
+            + 'rinnettä, mutta rantaan on kasvanut moderni satama.',
           lahde: 'Herbert wie, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
@@ -86159,8 +86175,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Augustus latinaksi ja kääntöpuolella kanaanilainen jumala '
             + 'Baal. Claudiuksen aikana Tingiksestä tuli roomalainen '
             + 'siirtokunta ja Mauretania Tingitanan pääkaupunki.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Cuevas de Hércules, Cabo Espartel, Marruecos, 2015-12-11, DD 22-24 HDR.JPG',
+          selite: 'Herkuleen luolan seinät ja katto ovat täynnä puolikaaren '
+            + 'muotoisia jälkiä, joita myllynkivien louhinta on jättänyt.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Tangier',
         },
         {
@@ -86178,8 +86196,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupunkia, mutta parlamentti kyllästyi laskuun: lähtevät '
             + 'joukot räjäyttivät sataman, ja Marokko sai kaupungin 7. '
             + 'helmikuuta 1684.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Planta de Tanger, Leonardo de Ferrari, 1655.jpg',
+          selite: 'Vuoden 1655 pohjapiirros näyttää portugalilaisen Tangerin '
+            + 'bastionit ja lahden laivoineen kuusi vuotta ennen '
+            + 'luovutusta Englannille.',
+          lahde: 'Leonardo de Ferrari, Wikimedia Commons (PD)',
           wiki: 'Tangier',
         },
         {
@@ -86196,8 +86217,12 @@ export const KULTTUURI_KATEGORIAT = {
             + 'maanpaossa vuodesta 1849. Sulttaaniksi julistettiin 16. '
             + 'syyskuuta 1873 Hassan I, joka hallitsi kuolemaansa asti '
             + '1894.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Tanger, le marché devant la légation allemande - btv1b53207533n.jpg',
+          selite: 'Kamelit odottavat markkinapäivänä Saksan lähetystön edessä; '
+            + 'lasilevyn yläreunassa näkyy kuvaajan oma merkintä.',
+          lahde: 'Du Taillis, Jean (1873-1932). Photographe présumé Agence '
+            + 'Rol. Agence photographique (commanditaire), Wikimedia '
+            + 'Commons (PD)',
           wiki: 'Tangier',
         },
         {
@@ -86212,15 +86237,20 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Hän kirjoitti löytäneensä Marokosta täsmälleen ne maisemat, '
             + 'jotka Delacroix oli maalannut. Hotellin ikkunasta syntyi '
             + 'sininen La Fenêtre à Tanger.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Henri Matisse, 1912-13, Le café Maure (Arab Coffeehouse), oil on canvas, 176 x 210 cm, Hermitage Museum.jpg',
+          selite: 'Matissen Le café Maure vuosilta 1912–1913 kuvaa '
+            + 'tangerilaista kahvilaa, jossa kaikki istuvat maassa '
+            + 'kultakalamaljan ympärillä.',
+          lahde: 'Henri Matisse, Wikimedia Commons (PD)',
           wiki: 'Tangier',
         },
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Bab Kasbah, Tangier.jpg',
+          selite: 'Kasbahin portin hevosenkenkäkaari kehystää alas laskeutuvan '
+            + 'kadun.',
+          lahde: 'David Jones, Wikimedia Commons (CC BY 2.0)',
         },
         kappale: 'Tanger on Tanger-Tetouan-Al Hoceiman alueen pääkaupunki ja '
           + 'Marokon toiseksi tärkein teollisuuskeskus Casablancan '
@@ -86256,8 +86286,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Gibraltariin. Rahtiliikenne on siirtynyt Tanger-Mediin '
                 + 'neljänkymmenen kilometrin päähän, joten vanha satama on '
                 + 'jäänyt matkustajille.',
-              tiedosto: 'PUUTTUU',
-              lahde: 'PUUTTUU',
+              kuva: {
+                tiedosto: 'Al Boraq RGV2N2 at Tanger Ville.jpg',
+                selite: 'Al Boraq -suurnopeusjuna odottaa lähtöä Tanger-Villen '
+                  + 'laiturilla.',
+                lahde: 'NicholasNCE, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
               otsikko: 'Kaksi soccoa ja muuri',
@@ -86273,8 +86307,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kaariportti johtaa Mendoubian puutarhaan. Muurin '
                 + 'sisällä oleva pieni Petit Socco on medinan alaosan '
                 + 'aukio.',
-              tiedosto: 'PUUTTUU',
-              lahde: 'PUUTTUU',
+              kuva: {
+                tiedosto: 'Tangier - Grand Socco - 20200906181845.jpg',
+                selite: 'Grand Soccon nurmikko, suihkulähde ja palmut illan '
+                  + 'valossa.',
+                lahde: 'Shbbkr, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
               otsikko: 'Rannikko lännessä',
@@ -86289,8 +86327,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'salmen yli Espanjaan. Itäisellä kukkulalla on Cap '
                 + 'Malabata, jota on vuosikymmeniä ehdotettu salmen '
                 + 'ylittävän yhteyden päätepisteeksi.',
-              tiedosto: 'PUUTTUU',
-              lahde: 'PUUTTUU',
             },
             {
               otsikko: 'Mitä täällä syödään',
@@ -86305,8 +86341,11 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tohveleihin, ja tinkiminen kuuluu kauppaan. Rannan '
                 + 'kahvilat ja klubit ovat 2010-luvun kunnostusten jälkeen '
                 + 'uusia.',
-              tiedosto: 'PUUTTUU',
-              lahde: 'PUUTTUU',
+              kuva: {
+                tiedosto: 'Moroccan cups of tea with ment.jpg',
+                selite: 'Kaksi lasillista minttuteetä mosaiikkipöydällä meren yllä.',
+                lahde: 'Mouhcine Boudanes, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
               otsikko: 'Milloin kannattaa tulla',
@@ -86425,8 +86464,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Battuta saneli matkoistaan kirjan, joka tunnetaan nimellä '
             + 'Rihla; kirjoittajaksi ryhtyi Ibn Juzayy, oppinut, jonka hän '
             + 'oli tavannut Granadassa.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Inside Ibn Battuta\'s Tomb - Tangier.jpg',
+          selite: 'Ibn Battutan haudaksi kutsuttu kenotafi on medinassa '
+            + 'rautaristikon takana valkoisen liinan alla.',
+          lahde: 'Anass Sedrati, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ibn Battuta',
         },
         {
@@ -86441,8 +86482,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vapaat, joten kaupungista tuli veroparatiisi keskellä '
             + 'kieltojen Eurooppaa. Vyöhyke lakkautettiin, ja Tanger '
             + 'liittyi muuhun Marokkoon 1956.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'ETH-BIB-Sicht auf Tanger-Nordafrikaflug 1932-LBS MH02-13-0452.tif',
+          selite: 'Ilmakuva vuodelta 1932 näyttää kansainvälisen vyöhykkeen '
+            + 'Tangerin: medina, aallonmurtaja ja höyrylaiva lahdella.',
+          lahde: 'Walter Mittelholzer, Wikimedia Commons (PD)',
           wiki: 'Tangier International Zone',
         },
         {
@@ -86458,8 +86501,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yhteistyössä Bowlesin kanssa, joka teki käännöksen ja '
             + 'kirjoitti esipuheen. Tennessee Williams kutsui kirjaa '
             + 'järkyttäväksi todistukseksi ihmisen epätoivosta.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Straatbeeld in Tanger, Bestanddeelnr 252-1809.jpg',
+          selite: 'Katunäkymä 1950-luvulta: aasit kantavat kuormia koristellun '
+            + 'portin edessä.',
+          lahde: 'Willem van de Poll, Wikimedia Commons (CC0)',
           wiki: 'Mohamed Choukri',
         },
         {
@@ -86475,8 +86520,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'espanjalaisille kummastakin leiristä, natsi-Saksaa '
             + 'paenneille juutalaisille ja marokkolaisille '
             + 'toisinajattelijoille.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'CAFE NAVIGANTES MEDINA OLD TANGER MOROCCO APRIL 2013 (8696952768).jpg',
+          selite: 'Medinan kahvila sataman yläpuolella, siniseksi maalatun '
+            + 'talon kulmassa.',
+          lahde: 'calflier001, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Tangier',
         },
       ],
@@ -86523,16 +86570,23 @@ export const KULTTUURI_KATEGORIAT = {
        */
       kansikuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Medina walls of Marrakech (7346169328).jpg',
+          selite: 'Medinan punainen savimuuri kiertää vanhankaupungin, ja '
+            + 'palmurivin takana kohoaa minareetti.',
+          lahde: 'Jorge Láscar from Australia, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'A17 - Marrakech, Kasbah.jpg',
+          selite: 'Kasbahin muurilta näkyy medinan kattojen yli, ja muurin '
+            + 'harjalla pesii kattohaikaroita.',
+          lahde: 'Misa.stefanovic.07, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: '2026 (365 Challenge) - Day 187 - Jemaa el-fnaa square with evening market, Marrakech, Morocco 2010 - Flickr - ambabheg.jpg',
+          selite: 'Jemaa el-Fna täyttyy illan tullen ruokakojuista, joiden '
+            + 'valot heijastuvat savuun.',
+          lahde: 'Forbes Johnston from Winchester, UK, Wikimedia Commons (CC '
+            + 'BY 4.0)',
         },
       ],
       /*
@@ -86542,16 +86596,21 @@ export const KULTTUURI_KATEGORIAT = {
        */
       avauskuvat: [
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Marrakesh walls DSCF8292.jpg',
+          selite: 'Muurin ulkopuolella kulkee puistokäytävä, ja tornien '
+            + 'seinissä näkyvät rakennustelineiden reiät.',
+          lahde: 'R Prazeres, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Marrakech (47075469664).jpg',
+          selite: 'Bab Agnaou on kaiverrettu hiekkakiveen, ja portin '
+            + 'yläreunassa on kattohaikaroiden pesiä.',
+          lahde: 'prilfish from Vienna, Austria, Wikimedia Commons (CC BY 2.0)',
         },
         {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Blue, green and pink.jpg',
+          selite: 'Majorellen puutarhan lampi lumpeineen ja bougainvilleoineen.',
+          lahde: 'Fati Zara Kh, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       /*
@@ -86565,10 +86624,14 @@ export const KULTTUURI_KATEGORIAT = {
         {
           tiedosto: 'Marrakech Minaret depuis la rue animée - sap04 10l01821 p.jpg',
           vuosi: 'noin 1924',
+          selite: 'Vilkas katu ja sen päässä Koutoubian minareetti noin vuonna '
+            + '1924.',
           lahde: 'Lucien Roy, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           tiedosto: 'Kutubiyya Mosque, Marrakesh, Morocco, 20250124 1834 7027.jpg',
+          selite: 'Sama torni nykyään: sen yli ei saa rakentaa, joten se '
+            + 'hallitsee kaupunkia kuten ennenkin.',
           lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
         },
       ],
@@ -86586,8 +86649,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'koko maata kutsuttiin Marrakechin kuningaskunnaksi, ja '
             + 'siitä tulevat Marokon eurooppalaiset nimet. Persiaksi ja '
             + 'urduksi maa on yhä Marrakesh.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Almoravid gold dinar coin from Seville, Spain, 1116 British Museum.jpg',
+          selite: 'Almoravidien kultadinaari vuodelta 1116 on lyöty Sevillassa '
+            + 'ja kiinnitetty museovitriiniin neljällä nastalla.',
+          lahde: 'PHGCOM, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Marrakesh',
         },
         {
@@ -86603,8 +86668,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'noin 77 metriä ja yhä kaupungin korkein rakennus; se '
             + 'vaikutti todennäköisesti Sevillan Giraldaan ja Rabatin '
             + 'Hassanin torniin.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Blick von den Koutoubia-Gärten auf Moschee und Minarett, Marrakesch - panoramio.jpg',
+          selite: 'Koutoubian moskeija ja sen minareetti nähtynä viereisistä '
+            + 'puutarhoista.',
+          lahde: 'Martin Furtschegger, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Kutubiyya Mosque',
         },
         {
@@ -86621,8 +86688,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tarvitsi sulttaanin erityisluvan päästäkseen sisään. '
             + 'Isoisän matkavuonna 1873 portti oli siis ollut auki vasta '
             + 'muutaman vuoden.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Le Tour du monde-01-p213.jpg',
+          selite: 'Vuoden 1860 kaiverruksessa muuri, minareetti ja Atlaksen '
+            + 'lumihuiput näkyvät samassa näkymässä; alalaidassa on '
+            + 'painokuvan oma signeeraus.',
+          lahde: 'Évremond de Bérard, Wikimedia Commons (PD)',
           wiki: 'Marrakesh',
         },
         {
@@ -86639,15 +86709,19 @@ export const KULTTUURI_KATEGORIAT = {
             + 'aukion 2001 suulliseksi kulttuuriperinnöksi — itse asiassa '
             + 'koko ohjelman idea syntyi huolesta juuri tämän aukion '
             + 'puolesta.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Marrakech, Morocco (5422838166) (6).jpg',
+          selite: 'Jemaa el-Fna pimeän tultua: kojujen valot, savu ja '
+            + 'taustalla valaistu Koutoubia.',
+          lahde: 'YoTuT from United States, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Jemaa el-Fnaa',
         },
       ],
       matkailijalle: {
         kuva: {
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Oriental hanging lanterns. Souk Haddadine, Marrakech Medina, Morocco.jpg',
+          selite: 'Rei\'itetyt messinkilyhdyt palavat riveissä Souk Haddadinen '
+            + 'työpajassa.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
         },
         kappale: 'Marrakech on Marokon suurimpia kaupunkeja ja maan tunnetuin '
           + 'matkakohde: kävijöitä on yli kaksi miljoonaa vuodessa ja '
@@ -86682,8 +86756,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'protektoraatin ajan suunnittelua. Majoitus on usein '
                 + 'riadissa keskellä medinaa: ovi kadulle on vaatimaton, '
                 + 'ja koko talo kääntyy sisäänpäin puutarhapihalle.',
-              tiedosto: 'PUUTTUU',
-              lahde: 'PUUTTUU',
+              kuva: {
+                tiedosto: 'Marrakesh railway station 05.jpg',
+                selite: 'Aseman halli avautuu kaarevan koristeristikon läpi '
+                  + 'asemanaukiolle.',
+                lahde: 'Stolbovsky, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
               otsikko: 'Sukit ja käsityö',
@@ -86697,8 +86775,13 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'takaosassa nuoret oppipojat opettelevat ammatteja. '
                 + 'Medinan katuruoka on kuulua, ja Mechoui-kuja tunnetaan '
                 + 'hitaasti paahdetusta lampaastaan.',
-              tiedosto: 'PUUTTUU',
-              lahde: 'PUUTTUU',
+              kuva: {
+                tiedosto: 'The souk slowly awakes... (17022704653).jpg',
+                selite: 'Katetun sukin katosta lankeaa valojuovia kujalle, '
+                  + 'jonka varrella riippuu kankaita.',
+                lahde: 'Benh LIEU SONG from Torcy, France, Wikimedia Commons '
+                  + '(CC BY-SA 2.0)',
+              },
             },
             {
               otsikko: 'Puutarhat ja palatsit',
@@ -86712,8 +86795,6 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'rakennettu La Mamounia yhdistää art decon ja '
                 + 'marokkolaisen tyylin — Winston Churchill maalasi sen '
                 + 'puutarhassa.',
-              tiedosto: 'PUUTTUU',
-              lahde: 'PUUTTUU',
             },
             {
               otsikko: 'Mitä täällä syödään',
@@ -86728,8 +86809,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'runsaasti maustettu mutta ei tulinen. Jälkiruoaksi on '
                 + 'seesamileivos chebakia, ja teetä kaadetaan kaarevasta '
                 + 'nokasta pieniin laseihin.',
-              tiedosto: 'PUUTTUU',
-              lahde: 'PUUTTUU',
+              kuva: {
+                tiedosto: 'Tangia in Marrakech 02.jpg',
+                selite: 'Käsi nostaa savista tanjia-ruukkua, jonka suu on '
+                  + 'sidottu paperilla.',
+                lahde: 'Adam Harangozó, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
               otsikko: 'Milloin kannattaa tulla',
@@ -86817,8 +86902,9 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'luonto',
       nimi: 'Vesi, vuoret ja puutarhat',
       johdanto: 'Marrakech on kuivalla tasangolla, ja silti se on aina ollut '
-        + 'vihreä. Selitys on maan alla: almoravidien kaivamat tunnelit '
-        + 'toivat vuorten vedet kaupunkiin.',
+        + 'vihreä kaupunki. Selitys on maan alla: almoravidien kaivamat '
+        + 'tunnelit toivat Atlaksen sulamisvedet puutarhoihin ja '
+        + 'kadunkulmien suihkulähteisiin.',
       tehtava: {
         kysymys: 'Minä vuonna Menaran puutarhat perustettiin?',
         vaihtoehdot: [
@@ -86847,8 +86933,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'johdettiin sisternoihin, moskeijoiden pesuhuoneisiin, '
             + 'hammameihin ja katujen suihkulähteisiin, joita medinassa on '
             + 'neljäkymmentäviisi.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Tafilalt Khettara.jpg',
+          selite: 'Khettaran pystykuilu Tafilaltin tasangolla; puinen '
+            + 'nostoteline seisoo yhä kuilun päällä.',
+          lahde: 'Sebastian Lapostol, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Marrakesh',
         },
         {
@@ -86863,8 +86951,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'useita altaita ja palatsirakennuksia. Molempien altaat '
             + 'täytettiin khettaroilla, jotka toivat veden Atlaksen '
             + 'juurelta.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Pavilion of the Menara Gardens.jpg',
+          selite: 'Menaran paviljonki heijastuu suureen vesialtaaseen, jonka '
+            + 'takana kasvaa oliivilehtoja.',
+          lahde: 'Mustang Joe, Wikimedia Commons (CC0)',
           wiki: 'Menara Gardens',
         },
         {
@@ -86880,8 +86970,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muistokivi hänelle. Koutoubian omissa puutarhoissa kasvaa '
             + 'appelsiini- ja palmupuita, ja niissä viihtyvät '
             + 'kattohaikarat.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'Blue villa in Majorelle garden (2845770484).jpg',
+          selite: 'Majorellen tummansininen huvila seisoo kaktusten keskellä; '
+            + 'talossa toimii berberimuseo.',
+          lahde: 'mwanasimba from La Réunion, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Majorelle Garden',
         },
         {
@@ -86897,8 +86989,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kilometriä, ja se on pääosin jurakauden kalkkikiveä. '
             + 'Pohjaveden pinta on laskenut vuodesta 2002 keskimäärin 0,9 '
             + 'metriä vuodessa.',
-          tiedosto: 'PUUTTUU',
-          lahde: 'PUUTTUU',
+          tiedosto: 'AtlasMfromOurika.JPG',
+          selite: 'Korkean Atlaksen lumihuiput kohoavat oliivilehtojen takaa '
+            + 'Ourikan laaksossa.',
+          lahde: 'Tonkie, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Marrakesh',
         },
       ],

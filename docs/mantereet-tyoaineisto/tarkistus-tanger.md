@@ -154,3 +154,34 @@ asema 1923–1956, Tanger Med) ja `js/packs/africa-questions.js`
 `tanger` — **minitehtävä ei saa kysyä kansainvälisen vyöhykkeen
 vuosista 1923–1956 eikä salmesta.** Ehdotus: Ibn Battutan lähtöikä,
 jonka vastaus on teemasivun ensimmäisessä nostossa.
+
+## J. KUVIEN SILMÄTARKISTUS (7.9.2026, kirjoituksen jälkeen)
+
+Jokainen ehdokas ladattiin 640 px esikatseluna ja katsottiin.
+**Hylätyt ja syy:**
+
+| Tiedosto | Syy |
+| --- | --- |
+| `Kasbah de Tánger 21.jpg` | väkijoukko, kasvot luettavissa |
+| `Medina de Tánger.jpg` | väkijoukko, kasvot luettavissa |
+| `Kasbah, Tánger, Marruecos, 2015-12-11, DD 27.JPG` | pysäköidyt autot ja hiekkakasa hallitsevat kuvaa |
+| `Musée de la Casbah.jpg` | tunnistettavat kasvot oikeassa alakulmassa, autot |
+| `Café Hafa, Tangier (11935).jpg` | kuvassa on vain merta, ei kahvilaa |
+| `Night Panorama Tangier Marokko.jpg` | pysäköintialue hallitsee yökuvaa |
+| `BEACHFRONT TANGER ... (8699167839).jpg` | tumma esine kuvan alareunassa |
+| `Tangier - Grand Socco - 20200906181817.jpg` | poliisiauto ja mopot etualalla |
+| `ETH-BIB-Tanger, Panorama vom Palais Aharrar I. …` | lyhtylevyssä on käsinkirjoitettu tekstipalkki (lisätty merkintä) |
+| `Bateau de croisière au Port de Tanger Ville.jpg` | risteilyalus peittää kaupungin |
+| `Henri Matisse … La Fenêtre à Tanger … Pushkin Museum.jpg` | vain 488 px leveä |
+| `Handmade oil painting … Ibn Battuta … Benett..jpg` | vain 498 px leveä |
+| `Tangier Zone txu-oclc-6949452-ni30-1.jpg` | vain 949 px leveä |
+| `Morocco Tangier Court.jpg` | ilmeetön 1930-luvun julkisivu ja autorivi |
+
+**Kaksi merkintää selitetään kuvatekstissä** (reseptin poikkeus):
+Agence Rolin lasilevyn yläreunan oma merkintä (kansisivun nosto 3).
+
+**Aihetoisto, joka hyväksyttiin:** Cap Spartel esiintyy kahdesti eri
+tiedostoina (kansikuvassa rannikkona, avauskuvassa majakkana), ja
+Grand Socco kahdesti (avauskuva ja matkaoppaan jakso 2). Yksikään
+tiedostonimi ei toistu kaupungin sisällä — tarkistettu koneellisesti
+(56 kuvaa, 56 uniikkia nimeä).
