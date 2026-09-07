@@ -96196,13 +96196,14 @@ export const KULTTUURI_KATEGORIAT = {
    * reunapalkit), "Kumasi Adum.jpg" ja "Adum inside.jpg"
    * (etualan täyttää auto).
    *
-   * EI AVAUSKUVIA EIKÄ ENNEN JA NYT -PARIA, ja se on valinta.
-   * Kumasista ei ole Commonsissa kuutta sääntöjen mukaista laajaa
-   * yleiskuvaa: kaupunki on matala ja vehreä, eikä siitä ole
-   * siluettikuvaa. Kolme kansikuvaa löytyi, ja loput ehdokkaat
-   * kaatuivat mainoksiin tai autoihin (ks. hylkäykset). Ennen ja nyt
-   * -pariin ei löytynyt paria, joka olisi sama paikka kahtena
-   * aikana: valokuvataulun vanha puoli (africa-valokuvat.js,
+   * AVAUSKUVIA ON YKSI EIKÄ KOLME, EIKÄ ENNEN JA NYT -PARIA OLE
+   * LAINKAAN, ja se on valinta. Kumasista ei ole Commonsissa kuutta
+   * sääntöjen mukaista laajaa yleiskuvaa: kaupunki on matala ja
+   * vehreä, eikä siitä ole siluettikuvaa. Kolme kansikuvaa ja yksi
+   * avauskuva löytyi, ja loput ehdokkaat kaatuivat mainoksiin tai
+   * autoihin (ks. hylkäykset); karuselli näyttää yhden kuvan ilman
+   * nuolia (js/lehti.js piirraLehtiKuvat). Ennen ja nyt -pariin ei
+   * löytynyt paria, joka olisi sama paikka kahtena aikana: valokuvataulun vanha puoli (africa-valokuvat.js,
    * "Kumasi 28-03-1900 sx.jpg") on rasteroitu kirjapainokuva vuoden
    * 1900 kokouksesta eikä paikkakuva, ja sen uusi puoli
    * ("Modern market hall of Kejetia market.jpg") on täynnä
@@ -96243,6 +96244,15 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vehreänä, ja punainen tie halkaisee sen kulmasta '
             + 'kulmaan.',
           lahde: 'Max Froumentin, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: "Kumasi Kejetia on the left and Adehyeman stores on the right, as I've said earlier there isn't anything you can't find here to buy. In between is the busiest road from Suame roundabout entering Kejetia.jpg",
+          selite: 'Sillalta katsottuna Kejetiaan johtava katu on '
+            + 'täynnä pikkubusseja, takseja ja kolmipyöriä '
+            + 'kaupparivien välissä.',
+          lahde: 'AsamoahEl, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
       nostot: [
