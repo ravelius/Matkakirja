@@ -14899,6 +14899,62 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Hirsikoulu', lat: 62.45194, lon: -114.37667 },
     ],
   },
+  /*
+   * IQALUIT (7.9.2026). Rajaus on 6,5 × 4,0 kilometriä ja kattaa
+   * KOKO kaupungin — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * iqaluit-lohkossa: Nunavutin pääkaupungin koko tieverkko ulottuu
+   * Sylvia Grinnellin puistosta Apexiin, eikä sieltä johda tietä
+   * minnekään muualle.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kalapaikan nimi ja dorset–thule-menneisyys, Frobisherin
+   * arvoton malmi 1576–1578, Charles Francis Hallin matka 1861 ja
+   * inuiittien perimätieto sekä kaupungin tie sotilastukikohdasta
+   * Nunavutin pääkaupungiksi; teemasivu kertoo vuorovedestä,
+   * puurajasta, ilmastosta ja jäästä kulkuväylänä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * LENTOASEMA ON KARTALLA, VAIKKA LEHTI KERTOO VUODEN 1942
+   * TUKIKOHDASTA. Nosto K4 kertoo kaupungin synnyn ja nimen —
+   * kartan juttu kertoo nykyisestä lentoasemasta (terminaali 2018,
+   * kiitotie 2 623 m, polaarireittien varalentokenttä). Sama
+   * mittakaavaero kuin Houstonissa maalehden ja jutun välillä.
+   *
+   * NUNAVUT ARCTIC COLLEGE JÄTETTIIN POIS, koska en-Wikipedian
+   * koordinaatti (63,72761 / −68,44456) osoittaa Apexin suuntaan
+   * eikä keskustan Nunatta-kampukselle; epävarmaa pistettä ei
+   * merkitä kartalle (tarkistus-iqaluit.md, kohta G).
+   *
+   * QAUMMAARVIIT JA KATANNILIK JÄÄVÄT POIS AIHESYISTÄ: ne ovat
+   * teemasivun noston L4 aihe ja lisäksi lahden toisella puolella.
+   */
+  iqaluit: {
+    polku: 'assets/kartat/iqaluit-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 63.7610, etela: 63.7250, lansi: -68.5720, ita: -68.4390 },
+    esittely: 'Kartalla näkyy koko Iqaluit. Vasemmalla laskee Sylvia '
+      + 'Grinnellin joki, keskellä on kaupunki Koojesse Inletin '
+      + 'pohjukassa, ja oikeassa alakulmassa erottuu Apexin niemi. '
+      + 'Tiet loppuvat kuvan reunoihin, koska niitä ei ole enempää. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi luoteesta kaakkoon.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta ja
+       * artikkelien tietolaatikoiden coord-merkinnöistä 7.9.2026.
+       * Kaikki välit on mitattu uudelleen: pienin on 207 metriä
+       * (Inuksuk-lukio – Astro Hill), seuraavat 230 ja 276 metriä.
+       */
+      { nimi: 'Iqaluitin lentoasema', lat: 63.75667, lon: -68.55611 },
+      { nimi: 'Sylvia Grinnellin puisto', lat: 63.74861, lon: -68.56389 },
+      { nimi: 'Nunavutin parlamenttitalo', lat: 63.75028, lon: -68.52306 },
+      { nimi: 'Inuksuk-lukio', lat: 63.74917, lon: -68.51389 },
+      { nimi: 'Pyhän Juudaksen katedraali', lat: 63.7475, lon: -68.51667 },
+      { nimi: 'Astro Hill', lat: 63.74778, lon: -68.51111 },
+      { nimi: 'Nunatta Sunakkutaangit -museo', lat: 63.7435, lon: -68.5138 },
+      { nimi: 'Apex eli Niaqunngut', lat: 63.73, lon: -68.44583 },
+    ],
+  },
 };
 
 /*

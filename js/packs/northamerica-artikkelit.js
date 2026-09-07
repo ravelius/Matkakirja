@@ -1401,4 +1401,52 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'aikavyöhykkeensä, joka on puoli tuntia muuta Atlantin '
       + 'Kanadaa edellä.',
   },
+  // IQALUIT (7.9.2026): faktat ovat samasta erästä kuin lehden tekstit
+  // (js/packs/kulttuuri-kategoriat.js, avain iqaluit) ja tarkistettu
+  // en-Wikipedian raakateksteistä 7.9.2026 ("Iqaluit", "Frobisher Bay",
+  // "Nunavut"). Sisältölinjaus on spec-mantereet.md:n P-Amerikka-kohta:
+  // arktinen arki ja inuiittikulttuuri asukkaiden silmin,
+  // ilmastonmuutos neutraalina luonnontieteellisenä tosiasiana.
+  Iqaluit: {
+    intro: 'Iqaluit on Nunavutin pääkaupunki Baffininsaaren '
+      + 'kaakkoiskulmassa, Frobisherinlahden pohjukassa. Se on Kanadan '
+      + 'pohjoisin kaupunki ja väkiluvultaan sen pienin pääkaupunki: '
+      + 'vuoden 2021 laskennassa asukkaita oli 7 429. Nimi on '
+      + 'inuktitutia ja tarkoittaa **paikkaa, jossa on paljon kalaa** — '
+      + 'inuiitit ja heidän edeltäjänsä ovat kalastaneet täällä '
+      + 'tuhansia vuosia.'
+      + '\n\n'
+      + 'Kaupunkia ei silti ollut ennen vuotta 1942, jolloin '
+      + 'Yhdysvallat rakensi rannalle lentotukikohdan ja paikka sai '
+      + 'nimen Frobisher Bay. Tutkalinjan rakentaminen 1950-luvulla '
+      + 'toi lisää väkeä, ja hallinto seurasi perässä. **1. tammikuuta '
+      + '1987 nimi vaihdettiin takaisin Iqaluitiksi**, ja 1999 '
+      + 'kaupungista tuli vastaperustetun Nunavutin pääkaupunki.'
+      + '\n\n'
+      + 'Iqaluit on ainoa Kanadan pääkaupunki, jota ei yhdistä muihin '
+      + 'asutuksiin maantie: sinne pääsee lentäen ja jääolojen '
+      + 'salliessa veneellä. Enemmistökieltä ei ole, ja kylteissä lukee '
+      + 'sama asia englanniksi ja inuktitutin tavumerkein. Kaupungin '
+      + 'edessä vuorovesi liikuttaa merta seitsemästä yhteentoista '
+      + 'metriä vuorokaudessa.',
+    teksti: 'Iqaluit on Everett Mountainsin rinteillä Koojesse Inletin '
+      + 'pohjukassa, 63 astetta päiväntasaajasta pohjoiseen mutta '
+      + 'selvästi napapiirin eteläpuolella. Kylmä merivirta pitää kesät '
+      + 'viileinä, joten puuraja kulkee täällä poikkeuksellisen '
+      + 'etelässä.'
+      + '\n\n'
+      + 'Eurooppalaisille lahti oli pitkään väärin ymmärretty. Martin '
+      + 'Frobisher piti sitä 1576 Luoteisväylän salmena ja vei kotiin '
+      + 'satoja tonneja kiveä, jonka luultiin olevan kultamalmia; se '
+      + 'osoittautui arvottomaksi. Vasta 1861 amerikkalainen Charles '
+      + 'Francis Hall totesi inuiittien avustuksella, että kyseessä on '
+      + 'umpilahti.'
+      + '\n\n'
+      + 'Nykyään kaupunki on territorion hallinnon, koulutuksen ja '
+      + 'lentoliikenteen keskus. Parlamenttitalossa hallitaan ilman '
+      + 'puolueita konsensuksella, iglun muotoinen katedraali on '
+      + 'kaupungin maamerkki, ja Sylvia Grinnellin puisto alkaa '
+      + 'kilometrin päässä keskustasta. Ilmasto lämpenee mitattavasti: '
+      + 'vuoden keskilämpötila oli 1979 −9,0 astetta ja 2023 −6,8.',
+  },
 };

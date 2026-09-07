@@ -60248,4 +60248,233 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * IQALUIT (7.9.2026). Kahdeksan kohdetta, samat kuin
+   * js/packs/maakartat.js:n KAUPUNKIKARTAT.iqaluit-lohkossa ja samassa
+   * järjestyksessä (luoteesta kaakkoon). Kaikki tiedot en-Wikipedian
+   * raakateksteistä 7.9.2026; tarkistusraportti on
+   * docs/mantereet-tyoaineisto/tarkistus-iqaluit.md.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö). Lehden
+   * nostot ovat kalapaikan nimi, Frobisherin arvoton malmi, Charles
+   * Francis Hallin matka 1861 ja kaupungin tie tukikohdasta
+   * pääkaupungiksi; teemasivu kertoo vuorovedestä, puurajasta,
+   * ilmastosta ja jäästä kulkuväylänä. Lentoaseman juttu kertoo
+   * NYKYISESTÄ lentoasemasta, ei vuoden 1942 tukikohdasta, joka on
+   * noston K4 aihe.
+   *
+   * NIERIÄN SÄILYKETEHDAS on lehden nostossa K1 (se selittää nimen),
+   * eikä sitä toisteta Apexin jutussa.
+   */
+  iqaluit: {
+    'Iqaluitin lentoasema': {
+      aika: '2018',
+      teksti: 'Iqaluitin lentoasema on kaupungin ainoa ympärivuotinen '
+          + 'yhteys muuhun maailmaan. Kiitotie 16/34 on asfalttia ja '
+          + '2 623 metriä pitkä, mikä riittää useimmille nykyaikaisille '
+          + 'suihkukoneille, ja kenttä on 34 metriä merenpinnan '
+          + 'yläpuolella. Uusi, vanhaa suurempi matkustajaterminaali '
+          + 'valmistui vanhan pohjoispuolelle vuonna 2018.'
+          + '\n\n'
+          + 'Canadian North lentää Iqaluitiin Ottawasta, Yellowknifesta '
+          + 'ja useista Nunavutin yhteisöistä. Paikalliset yhtiöt Air '
+          + 'Nunavut, Canadian Helicopters, Nunasi Helicopters ja '
+          + 'Unaalik Aviation hoitavat tilauslennot, ja Air Nunavut ja '
+          + 'Keewatin Air lääkärikuljetukset. Kenttä on virallinen '
+          + 'saapumislentoasema, mutta rajaviranomainen käsittelee vain '
+          + 'yleisilmailukoneita, joissa on enintään viisitoista '
+          + 'matkustajaa.'
+          + '\n\n'
+          + 'Sijainti tekee kentästä muutakin kuin paikallisen. Se on '
+          + 'napareittien varalaskupaikka, ja siellä testataan uusia '
+          + 'koneita pakkasessa — Airbus A380 kävi helmikuussa 2006. '
+          + 'Kiitotie oli pitkään yhteinen Kanadan ilmavoimien kanssa, '
+          + 'ja parakit ja hävittäjähallit on pidetty kunnossa. Vuonna '
+          + '2019 matkustajia oli noin 172 000.',
+      lahde: 'Wikipedia',
+    },
+    'Sylvia Grinnellin puisto': {
+      aika: '1861',
+      teksti: 'Puisto alkaa kilometrin päässä kaupungista länteen, ja '
+          + 'keskustasta sinne kävelee puolessa tunnissa. Inuktitutiksi '
+          + 'se on Iqaluit Kuunga eli Iqaluitin joki. Maisema syntyi '
+          + 'jäätiköitymisessä noin 7 100 vuotta sitten, ja joki laskee '
+          + 'Sylvia Grinnellin järvestä Peterhead Inletiin. Putousten '
+          + 'yläpuolella on näköalatasanne 55 metrin korkeudessa.'
+          + '\n\n'
+          + 'Nimi on tuontitavaraa. Amerikkalainen Charles Francis Hall '
+          + 'nimesi seudun paikkoja rahoittajiensa mukaan, ja järvi ja '
+          + 'joki saivat nimen hänen ystävänsä ja tukijansa Henry '
+          + 'Grinnellin tyttären Sylvian mukaan. Joesta nostettu nieriä '
+          + 'on se kala, josta koko kaupungin nimi kertoo; kaupallinen '
+          + 'nieriänkalastus joessa kiellettiin 1965, ja muu kuin '
+          + 'inuiitti tarvitsee kalastukseen luvan.'
+          + '\n\n'
+          + 'Puistossa on dorset-kulttuurin ja thule-kansan '
+          + 'muinaisjäännöksiä: kivilatomuksia ja thule-raunioita. '
+          + 'Karibu on tärkein eläin ja yhä osa inuiittien ruokavaliota, '
+          + 'ja alueella nähdään myös naali, jänis ja jääkarhu. Kesällä '
+          + 'lintulajeja on noin neljäkymmentä, muun muassa tunturihaukka, '
+          + 'kiiruna ja pulmunen. Yleisimpiä kasveja on '
+          + 'sinirikko, Nunavutin virallinen kukka.',
+      lahde: 'Wikipedia',
+    },
+    'Nunavutin parlamenttitalo': {
+      aika: '1999',
+      teksti: 'Rakennus 926 Federal Roadin varrella on kolmikerroksinen '
+          + 'lasi- ja puutalo, jonka sisällä on kaksikerroksinen '
+          + 'istuntosali. Montrealilainen Arcop suunnitteli sen, ja '
+          + 'ensimmäinen luonnos esiteltiin yleisölle joulukuussa 1997. '
+          + 'Rakennustyöt alkoivat toukokuussa 1998 ja valmistuivat '
+          + 'syyskuussa 1999; talo vihittiin 19. lokakuuta 1999, ja se '
+          + 'maksoi kaksitoista miljoonaa Kanadan dollaria.'
+          + '\n\n'
+          + 'Iqaluitin arkkitehtuuri on muuten korostetun '
+          + 'toiminnallista, ja parlamenttitalo on siitä poikkeus: sen '
+          + 'värikäs sisustus on koristeltu parhaalla inuiittitaiteella. '
+          + 'Muotokieli nojaa inuktitutin käsitteeseen qaggiq, '
+          + 'kokoontumispaikka. Aula avautuu kaksikerroksiseksi '
+          + 'valoholviksi, valtiopäiväsauva säilytetään istuntosalin '
+          + 'ulkopuolella, ja kirjasto on kolmannessa kerroksessa.'
+          + '\n\n'
+          + 'Talossa hallitaan toisin kuin muualla Kanadassa. Nunavut '
+          + 'toimii konsensushallinnolla, eikä territoriossa ole '
+          + 'puolueita lainkaan: kaksi viikkoa vaalien jälkeen '
+          + 'kaksikymmentäkaksi valittua jäsentä kokoontuvat '
+          + 'johtajafoorumiin valitsemaan hallituksen. Istuntojen '
+          + 'pöytäkirja julkaistaan sekä inuktitutin tavumerkein että '
+          + 'englanniksi. Ennen talon valmistumista edustajat '
+          + 'kokoontuivat Inuksuk-lukion liikuntasalissa.',
+      lahde: 'Wikipedia',
+    },
+    'Inuksuk-lukio': {
+      aika: '1971',
+      teksti: 'Kaupungin yläpuolella harjanteella seisoo sinivalkoinen '
+          + 'Inuksuk High School. Rakennus koostuu neljästä yhteen '
+          + 'liitetystä neliönmuotoisesta osasta, jotka muodostavat '
+          + 'ilmasta katsottuna apilanlehden. Seinäpaneelit on mitoitettu '
+          + 'kestämään sadan mailin tuntinopeutta eli noin 160 '
+          + 'kilometriä tunnissa — sellaisia tuulia täällä ajoittain on.'
+          + '\n\n'
+          + 'Koulussa opiskellaan luokat 9–12 sekä inuktitutiksi että '
+          + 'englanniksi, ja oppilaita on noin 410. Ensimmäinen rehtori '
+          + 'oli Don King, ja urheilujoukkueet kulkevat nimellä Iqaluit '
+          + 'Huskies. Vuosina ennen parlamenttitalon valmistumista koulun '
+          + 'liikuntasali toimi Nunavutin edustajakokouksen '
+          + 'istuntosalina.'
+          + '\n\n'
+          + 'Nimi ei ole koristetta. Inuksuk on ihmisen latoma kivimerkki, '
+          + 'jollaisia inuiitit ja muut arktisen alueen kansat ovat '
+          + 'pystyttäneet tuntureille vuosituhansia: se on merkinnyt '
+          + 'reittiä, kalapaikkaa, ruokakätköä tai leiripaikkaa siellä, '
+          + 'missä maastossa ei ole muita kiintopisteitä. Inuksuk on myös '
+          + 'Nunavutin lipun tunnus.',
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Juudaksen katedraali': {
+      aika: '2012',
+      teksti: 'Virallisesti se on Pyhien Simonin ja Juudaksen katedraali, '
+          + 'mutta kaupungissa sitä sanotaan iglukatedraaliksi: valkoinen '
+          + 'rakennus on iglun muotoinen. Se on arktisen hiippakunnan '
+          + 'piispanistuin, ja hiippakunta kattaa Luoteisterritoriot, '
+          + 'Nunavutin ja Pohjois-Quebecin Nunavikin — pinta-alaltaan '
+          + 'maailman suurin anglikaaninen hiippakunta. Jumalanpalvelukset '
+          + 'pidetään englanniksi ja inuktitutiksi.'
+          + '\n\n'
+          + 'Ensimmäisen katedraalin suunnitteli Ronald Thom 1970, ja '
+          + 'paikalliset vapaaehtoiset rakensivat sen 1972. Koristeet '
+          + 'olivat inuiittikäsityötä: seinävaatteita, punottuja '
+          + 'kolehtikoreja, kahdesta sarvivalaan syöksyhampaasta tehty '
+          + 'risti ja vuolukivinen kastemalja, jonka kuningatar '
+          + 'Elisabet II vihki käyttöön vieraillessaan kaupungissa. '
+          + 'Alttarin rakensivat seurakuntalaiset perinteisen kirvesmiehen '
+          + 'Markoosie Peterin ohjauksessa, ja se tehtiin inuiittireen '
+          + 'muotoiseksi.'
+          + '\n\n'
+          + 'Tuhopoltto vaurioitti rakennusta pahoin 5. marraskuuta 2005, '
+          + 'ja se purettiin 1. kesäkuuta 2006. Uusi, samanmuotoinen '
+          + 'katedraali avattiin 3. kesäkuuta 2012. Se rakennettiin '
+          + 'palonkestävin palkein, ja vanhasta talosta siirrettiin '
+          + 'sisään sarvivalaanhampainen alttariristi ja kuningattaren '
+          + 'vuoden 1970 peruskivenmuurauksessa lahjoittama hopeamalja. '
+          + 'Rakentamisen velat oli maksettu vuoteen 2017 mennessä.',
+      lahde: 'Wikipedia',
+    },
+    'Astro Hill': {
+      aika: '1976',
+      teksti: 'Astro Hill on neljän rakennuksen ryhmä kukkulalla '
+          + 'Frobisherinlahden yllä, ja siinä ovat kaupungin suurimmat ja '
+          + 'korkeimmat talot. Kokonaisuuteen kuuluvat W. G. Brownin '
+          + 'talo, hotelli Frobisher Inn ja kaksi asuintornia: '
+          + 'kuusikerroksinen Nanurjuk ja kahdeksankerroksinen '
+          + 'Tukturjuk. Kahdeksan kerrosta on Iqaluitin ennätys.'
+          + '\n\n'
+          + 'Talot ovat sekakäytössä. Liiketilaa on noin tuhat '
+          + 'neliömetriä, ja vuokralaisina ovat muun muassa CBC Northin '
+          + 'radiostudiot, Astro-elokuvateatteri, kongressitila, '
+          + 'kuntosali, lähikauppa ja kolme ravintolaa; hotellissa on 95 '
+          + 'huonetta. W. G. Brownin talossa hoidetaan Nunavutin '
+          + 'hallinnon palveluita, kuten oikeusrekistereitä ja '
+          + 'toimeentulotukea.'
+          + '\n\n'
+          + 'Astro Hill Terrace rakennettiin 1976 katsomaan lahdelle, ja '
+          + 'Frobisher Inn oli silloin kaksikerroksinen kokonaisuus, '
+          + 'jossa oli myös kauppoja; se peruskorjattiin 2004. Viereen '
+          + 'on noussut Creekside Village, jossa on 144 rivitalo- ja '
+          + 'kerrostaloasuntoa. Vuonna 2012 halkeamat sulkivat '
+          + 'kaupungin uimahallin.',
+      lahde: 'Wikipedia',
+    },
+    'Nunatta Sunakkutaangit -museo': {
+      aika: '1969',
+      teksti: 'Nunatta Sunakkutaangit on Nunavutin historian ja '
+          + 'inuiittikulttuurin museo. Sen perusti 1969 kaksi Kanadan '
+          + 'intiaaniasiain viraston työntekijää, ja kokoelmissa on '
+          + 'runsaasti inuiittien ja arktisen alueen esineistöä.'
+          + '\n\n'
+          + 'Talo itse on osa kokoelmaa. Museo asuu entisessä Hudson\'s '
+          + 'Bay Companyn rakennuksessa, joka siirrettiin telaketjujen '
+          + 'päällä alkuperäiseltä paikaltaan Apexin rannalta Iqaluitiin '
+          + 'ja kunnostettiin ja laajennettiin museoksi. Ulkoseinät ovat '
+          + 'yhä yhtiön tunnusvärit, punainen ja valkoinen.'
+          + '\n\n'
+          + 'Museon aihe on elävä taidemuoto. Inuiittitaide tunnetaan '
+          + 'maailmalla vuolukivi-, luu- ja sarviveistoksista sekä '
+          + '1950-luvulta alkaen tehdyistä grafiikanlehdistä, ja '
+          + 'Iqaluitissa sitä näkee muuallakin kuin museossa: '
+          + 'parlamenttitalon sisustus on koottu saman perinteen '
+          + 'parhaimmistosta.',
+      lahde: 'Wikipedia',
+    },
+    'Apex eli Niaqunngut': {
+      aika: '1949',
+      teksti: 'Apex, inuktitutiksi Niaqunngut, on pieni yhteisö viiden '
+          + 'kilometrin päässä Iqaluitin keskustasta kaakkoon. Se on '
+          + 'niemellä, joka erottaa Koojesse Inletin Tarr Inletistä, ja '
+          + 'sinne pääsee siltaa tai pengertietä pitkin. Yhteisöä '
+          + 'reunustavat puro, kuujuusi, ja putous, kugluktuk. Asukkaita '
+          + 'on noin kuudenkymmenen perheen verran, ja paikalla ovat '
+          + 'kirkko, Nanookin alakoulu, naisten turvakoti ja majatalo.'
+          + '\n\n'
+          + 'Apex sai alkunsa 1949, kun Hudson\'s Bay Company siirsi '
+          + 'eteläisen Baffinin toimintansa Ward Inletistä Apexin '
+          + 'rannalle uuden lentokentän liepeille. 1950-luvulla siellä '
+          + 'oli hallintorakennuksia, inuiittien asuntoja, yleinen '
+          + 'pesula ja saunarakennus sekä koko Baffinin alueen '
+          + 'ensimmäinen terveysasema. Alkuperäiset perheet — Michael, '
+          + 'Alainga, Peter, Joamie, Onalik ja Timotee — rakensivat '
+          + 'talonsa itse valmispaketeista.'
+          + '\n\n'
+          + 'Apexilla on paikkansa kaupungin historiassa siksikin, että '
+          + 'se oli se paikka, jossa suurin osa inuiiteista asui silloin '
+          + 'kun Iqaluit oli sotilasalue eikä sinne päässyt kukaan, joka '
+          + 'ei ollut tukikohdan töissä. Terveysaseman edessä puron '
+          + 'penkalla seisoo Iqaluitin vanhimpien seuran Pairijait '
+          + 'Tigumivikin pystyttämä muistomerkki niille inuiiteille, '
+          + 'jotka lähtivät etelään tuberkuloosihoitoon eivätkä '
+          + 'palanneet. Kivessä on pieniä reikiä: niihin voi jättää '
+          + 'viestin poismenneelle.',
+      lahde: 'Wikipedia',
+    },
+  },
 };

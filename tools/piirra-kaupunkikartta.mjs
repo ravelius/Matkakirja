@@ -5850,6 +5850,50 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 62.4740, etela: 62.4470, lansi: -114.3920, ita: -114.3390 },
     meri: true,
   },
+  iqaluit: {
+    /*
+     * KOKO KAUPUNKI YHDESSÄ RUUDUSSA (7.9.2026). Ruutu on noin
+     * 6,5 × 4,0 kilometriä, ja se on tarkoituksella koko Iqaluitin
+     * levyinen eikä pelkkä ydinkeskusta: kaupungin KOKO tieverkko
+     * ulottuu vain Sylvia Grinnellin puistosta lännessä Apexiin
+     * kaakossa (en-Wikipedia "Iqaluit", Transportation), eikä
+     * Nunavutin pääkaupungista johda tietä minnekään muualle. Tuo
+     * kahden pisteen väli ON kartan sisältö.
+     *
+     * KESKUSTA ON PIENI JA PISTEET OVAT TIHEÄSSÄ. Viisi kahdeksasta
+     * kohteesta (parlamenttitalo, Inuksuk-lukio, katedraali, Astro
+     * Hill, museo) mahtuu 800 metrin ruutuun, ja pienin väli on 207
+     * metriä (Inuksuk-lukio – Astro Hill). Kuva on siksi katsottava
+     * silmin ja pisteet vielä erikseen
+     * (tools/tarkista-karttapisteet.mjs iqaluit).
+     *
+     * EI meri-lippua, ja se on koeajettu päätös eikä unohdus.
+     * Koojesse Inlet ja Frobisherinlahti ovat OSM:ssä pelkkää
+     * rantaviivaa, joten kaikki kolme vaihtoehtoa kokeiltiin
+     * 7.9.2026 ja kuvat katsottiin:
+     *
+     *   meri: true  — täyttö valitsi väärän puolen ja maalasi
+     *     KAUPUNGIN veden väriseksi ja lahden paperiksi.
+     *     tools/tarkista-karttapisteet.mjs ilmoitti kuusi pistettä
+     *     kahdeksasta vedessä oleviksi.
+     *   meri: 'maa' — pisteet menivät maalle, mutta lahti jäi
+     *     paperin väriseksi eikä erottunut maasta lainkaan.
+     *   ei lippua   — rantaviiva piirtyy pelin omana rantanauhana
+     *     (#b99a68, sama kartankieli kuin pääkartan .sea-echo).
+     *     Nauha piirtää Koojesse Inletin, lahden rannan ja Apexin
+     *     niemen selvästi, ja pisteet ovat maalla.
+     *
+     * Kolmas voitti. Rannikkokaupunki ilman merentäyttöä on
+     * poikkeus, joten se on kirjattu tähän eikä jätetty arvattavaksi.
+     *
+     * LENTOKENTTÄ ON RUUDUSSA MUKANA, koska sen kiitotie on
+     * kaupungin suurin yksittäinen rakenne ja koska ilman sitä
+     * pohjoisreuna jäisi tyhjäksi. Qaummaarviit ja Katannilik jäävät
+     * ulkopuolelle: ne ovat teemasivun noston L4 aihe ja lisäksi
+     * lahden toisella puolella.
+     */
+    rajat: { pohjoinen: 63.7610, etela: 63.7250, lansi: -68.5720, ita: -68.4390 },
+  },
 };
 
 /*

@@ -100698,4 +100698,373 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * IQALUIT (7.9.2026). Faktapohja ja tarkistus:
+   * docs/mantereet-tyoaineisto/faktapohja-iqaluit.md ja
+   * tarkistus-iqaluit.md. Kaikki väitteet en-Wikipedian
+   * raakateksteistä 7.9.2026.
+   *
+   * SISÄLTÖLINJAUKSET (spec-mantereet.md, P-Amerikka): inuiitit ovat
+   * eläviä toimijoita eivätkä museokohde — Nakasuk, Ipirvik ja
+   * Taqulittuq nimetään, ja perimätieto on se, joka ratkaisee
+   * eurooppalaisen karttakiistan. Ilmastonmuutos todetaan
+   * neutraalisti luonnontieteellisenä tosiasiana ilman politiikkaa.
+   * Frobisherin kaappaukset ja Hallin kuolinsyykiista kerrotaan
+   * tapahtumina yhdellä virkkeellä ilman yksityiskohtia.
+   *
+   * MITÄ TÄSSÄ EI OLE JA MIKSI. Baffininsaaren nimihistoria on
+   * karttanostossa (maastokohteet-can.js), jääkarhu CAN-eläintäyssä
+   * (elaintakyt.js) ja sisäoppilaitoshistoria Kanadan maalehdessä
+   * (maa-kategoriat.js CAN) — lehti ei toista niitä. Kohdekartan
+   * kahdeksan kohdetta ovat omia juttujaan (nahtavyysjutut.js) eikä
+   * yksikään niistä ole näiden nostojen aihe.
+   *
+   * EI ENNEN JA NYT -PARIA. Matkakirjan valokuvataulussa
+   * (northamerica-valokuvat.js, iqaluit) on pelkkiä nykykuvia
+   * 2010–2025, eikä muuta voi ollakaan: paikalla ei ollut kaupunkia
+   * ennen vuotta 1942. Vanhan puolen ehdokas olisi 1940–50-luvun
+   * tukikohtakuva, mutta sen pitäisi täyttää samat säännöt (≥ 1200 px,
+   * PD/CC) — kirjattu kuvatyön tehtäväksi. Lehti taittuu ilman paria
+   * kuten Lagos, Dubai, Doha, Salalah ja Astana.
+   */
+  iqaluit: [
+    {
+      id: 'kaupunki',
+      nimi: 'Iqaluit',
+      johdanto: 'Iqaluit on Kanadan pohjoisin kaupunki ja sen pienin '
+        + 'pääkaupunki: reilut seitsemäntuhatta asukasta puurajan '
+        + 'pohjoispuolella, ilman tietä tai rataa muualle. Isoisän '
+        + 'matkavuonna 1873 rannalla ei ollut kaupunkia lainkaan — '
+        + 'vain kalapaikka, jonka nimi kertoo miksi.',
+      nostot: [
+        {
+          otsikko: 'Paikka, jossa on paljon kalaa',
+          teksti: 'Ennen kuin täällä oli kaupunkia, täällä oli '
+            + 'kalapaikka. Inuiitit ja heidän edeltäjänsä — '
+            + 'dorset-kulttuurin paleoeskimot ja thule-kansa — ovat '
+            + 'kalastaneet Koojesse Inletin pohjukassa tuhansia '
+            + 'vuosia, ja siitä tulee nimi: inuktitutin ᐃᖃᓗᐃᑦ, '
+            + 'Iqaluit, tarkoittaa paikkaa, jossa on paljon kalaa. '
+            + 'Kala on nieriä, joka nousee Sylvia Grinnellin jokeen. '
+            + 'Nimi oli vähällä menettää katteensa 1900-luvulla, kun '
+            + 'Apexin pieni säilyketehdas kalasti kannan lähes '
+            + 'tyhjiin; vasta noin 2008 joessa nähtiin merkkejä siitä, '
+            + 'että kanta on palaamassa. Kaupunkilaiset ovat '
+            + 'iqalummiut.',
+          wiki: 'Iqaluit',
+        },
+        {
+          otsikko: 'Musta kivi, joka ei ollut kultaa',
+          teksti: 'Martin Frobisher purjehti 1576 etsimään '
+            + 'Luoteisväylää ja luuli löytäneensä sen: hän kääntyi '
+            + 'lännelle ylös lahtea ja nimesi sen Frobisherin '
+            + 'salmeksi. Mukaan tarttui myös musta kivi. Lontoossa '
+            + 'kolme koetusmestaria totesi sen arvottomaksi, mutta '
+            + 'italialainen alkemisti Giovanni Battista Agnello väitti '
+            + 'löytäneensä siitä kultaa — ja kysyttäessä, miksi muut '
+            + 'eivät löytäneet, vastasi että luontoa pitää osata '
+            + 'imarrella. Seuraava matka toi kotiin noin 200 tonnia '
+            + '"malmia", ja Dartfordiin rakennettiin sitä varten oma '
+            + 'sulatto. Viiden vuoden jälkeen kivi todettiin '
+            + 'hornblendeksi ja käytettiin tienpohjaksi. Yhtiö meni '
+            + 'konkurssiin.',
+          wiki: 'Martin Frobisher',
+        },
+        {
+          otsikko: 'Vuosi 1873: lahti, joka ei ollutkaan salmi',
+          teksti: 'Kaksisataa kahdeksankymmentä vuotta Frobisherin '
+            + 'jälkeen amerikkalainen Charles Francis Hall talvehti '
+            + 'valaanpyytäjän mukana Baffininsaarella. Paikalliset '
+            + 'inuiitit kertoivat hänelle, missä Frobisherin '
+            + 'kaivosyrityksen jäännökset olivat — tieto oli kulkenut '
+            + 'suullisena perimätietona koko sen ajan. Oppaikseen Hall '
+            + 'sai aviopari Ipirvikin ja Taqulittuqin, ja 1861 hänestä '
+            + 'tuli ensimmäinen ei-alkuperäinen ihminen, joka tajusi, '
+            + 'ettei Frobisherin salmi ole salmi vaan umpilahti. '
+            + 'Kartta korjattiin. Hall itse kuoli marraskuussa 1871 '
+            + 'Grönlannissa oudoissa oloissa, joten isoisän '
+            + 'matkavuonna kartta oli kaksi vuotta vanha ja sen '
+            + 'tekijä kaksi vuotta kuollut.',
+          wiki: 'Charles Francis Hall',
+        },
+        {
+          otsikko: 'Nimi, joka otettiin takaisin',
+          teksti: 'Kaupunki syntyi sodasta. Yhdysvallat rakensi 1942 '
+            + 'rannalle lentotukikohdan, jonka paikan valitsi '
+            + 'inuiittiopas Nakasuk — kaupungin ensimmäinen vakituinen '
+            + 'asukas. Viranomaiset nimesivät paikan lahden mukaan '
+            + 'Frobisher Bayksi. 1950-luvulla tutkalinjan rakentaminen '
+            + 'toi satoja työläisiä, ja inuiitteja muutti perässä työn '
+            + 'ja lääkärinhoidon takia: 1957 kaupungin 1 200 '
+            + 'asukkaasta 489 oli inuiitteja. Ensimmäiset '
+            + 'paikallisvaalit pidettiin 1964, ensimmäinen '
+            + 'pormestarinvaali 1979. Ja 1. tammikuuta 1987 nimi '
+            + 'vaihdettiin takaisin siksi, jota asukkaat olivat aina '
+            + 'käyttäneet. Nunavutin pääkaupunki Iqaluitista tuli '
+            + '1999 ja virallisesti kaupunki 19. huhtikuuta 2001.',
+          wiki: 'Iqaluit',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Iqaluit on Nunavutin pääkaupunki ja koko territorion '
+          + 'ainoa varsinainen kaupunki. Vuoden 2021 väestönlaskennassa '
+          + 'asukkaita oli 7 429, mikä tekee siitä väkiluvultaan Kanadan '
+          + 'pienimmän pääkaupungin. Se on myös ainoa Kanadan pääkaupunki, '
+          + 'jota ei yhdistä muihin asutuksiin maantie: kaupunkiin '
+          + 'pääsee lentäen ja jääolojen salliessa veneellä, ja kaikki '
+          + 'tavara tulee samaa reittiä. Se näkyy hinnoissa. '
+          + 'Enemmistökieltä ei ole: vuonna 2021 äidinkielenään '
+          + 'englantia puhui 49,1 prosenttia, inuktitutia 30,0 ja '
+          + 'ranskaa 5,9 — mutta englantia osaa 97,2 ja inuktitutia '
+          + '53,1 prosenttia asukkaista. Inuktitutia kirjoitetaan '
+          + 'omilla tavumerkeillä, jotka näkyvät kylteissä englannin '
+          + 'rinnalla. Osoitteet ilmoitetaan rakennusnumeroin: '
+          + 'kadunnimiä alettiin kehittää vasta noin 2003, eikä '
+          + 'katunumeroita ole annettu lainkaan.',
+        artikkeli: {
+          nimi: 'Matkailijan Iqaluit',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa ei ole liikennevaloja eikä '
+            + 'katuosoitteita, jossa vuorovesi liikuttaa merta '
+            + 'kymmenen metriä ja jossa koko tieverkko mahtuu yhteen '
+            + 'kuvaan.',
+          nosto: 'Iqaluit on ainoa Kanadan pääkaupunki ilman '
+            + 'liikennevaloja. Tilapäisiä on asennettu, ja niistä '
+            + 'syntyi aikanaan oma kohunsa. Risteykset hoituvat '
+            + 'stop-merkeillä, ja ruuhkaa kutsutaan paikallisesti '
+            + 'nimellä "the rush minute".',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Iqaluitiin ei tulla maitse. Lentoasemalla on '
+                + '2 623 metrin kiitotie ja vuonna 2018 valmistunut '
+                + 'uusi terminaali, ja Canadian North lentää sinne '
+                + 'Ottawasta, Yellowknifesta ja Nunavutin yhteisöistä. '
+                + 'Meritse pääsee vain osan vuotta; syvämerisatama '
+                + 'avattiin heinäkuussa 2023 viiden vuoden '
+                + 'rakentamisen jälkeen. Kaupungin sisällä on taksit, '
+                + 'ja maaliskuussa 2026 aloitti Iqaluit Transit '
+                + 'yhdellä bussireitillä arkisin ja lauantaisin; '
+                + 'perusmaksu on viisi dollaria. Aiempi kaupungin '
+                + 'bussiliikenne lakkautettiin vähäisen käytön takia. '
+                + 'Isot tiet ovat asfalttia, pienet soraa, ja '
+                + 'risteyksissä on stop-merkit.',
+            },
+            {
+              otsikko: 'Millaista täällä on',
+              teksti: 'Arkkitehtuuri on ensin toiminnallista: '
+                + 'materiaalikustannukset alas, lämpö sisään, ilmasto '
+                + 'kestettäväksi. Kirjo ulottuu 1950-luvun '
+                + 'tutkalinjaparakeista 1970-luvun valkoiseen '
+                + 'lasikuitulohkoon — Nakasukin koulu, kunnantalo ja '
+                + 'jäähalli — ja teräsbetonitorneihin kukkulalla. '
+                + 'Uudemmat talot ovat värikkäämpiä ja lähempänä '
+                + 'etelän tapaa. Kaupungissa on kaksi kaupunginosaa, '
+                + 'jotka kannattaa erottaa: keskusta Koojesse Inletin '
+                + 'pohjukassa ja Apex viiden kilometrin päässä '
+                + 'kaakossa omalla niemellään. Kaupungin ainoat tiet '
+                + 'yhdistävät ne ja päättyvät sitten.',
+            },
+            {
+              otsikko: 'Juhlat ja äänet',
+              teksti: 'Kevätjuhla Toonik Tyme järjestetään '
+                + 'vapaaehtoisvoimin kuten monessa muussakin Nunavutin '
+                + 'yhteisössä, ja siinä yhdistyvät perinteiset '
+                + 'inuiittilajit ja uudemmat tapahtumat. Alianait '
+                + 'Music and Arts Festival kestää viikon ja alkaa joka '
+                + 'vuosi 21. kesäkuuta; se on tuonut kaupunkiin sekä '
+                + 'kanadalaisia että ulkomaisia esiintyjiä. Kuultavin '
+                + 'perinne on katajjaq eli kurkkulaulu: kaksi naista '
+                + 'seisoo vastakkain aivan lähekkäin, toinen aloittaa '
+                + 'lyhyen rytmikuvion ja toinen täyttää välit, ja '
+                + 'ensimmäisenä hengästyvä tai nauramaan purskahtava '
+                + 'häviää. Etelä-Baffinilla laji tunnetaan myös '
+                + 'nimellä piqqusiraarniq.',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Ruoka on kallista, koska se tulee kaukaa: '
+                + 'vuotuinen laivakuljetus tuo suuren osan kerralla ja '
+                + 'loput lennätetään. Paikallista on nieriä, se sama '
+                + 'kala, josta kaupungin nimi kertoo; kaupallinen '
+                + 'nieriänkalastus Sylvia Grinnellin joessa '
+                + 'kiellettiin 1965, ja muu kuin inuiitti tarvitsee '
+                + 'kalastukseen luvan. Karibu on puiston tärkein eläin '
+                + 'ja merkittävä osa sekä perinteistä että nykyistä '
+                + 'inuiittien ruokavaliota. Keskustassa on kauppoja ja '
+                + 'noutoravintoloita, joiden kyltit lukevat saman '
+                + 'asian englanniksi ja inuktitutin tavumerkein.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian '
+                + 'Iqaluit-artikkelin Climate-osiosta; lehdellä ei ole '
+                + 'omaa vuosigraafia, koska säänormaaleja ei haettu '
+                + 'tässä erässä. Ilmasto on tundrailmastoa, ja '
+                + 'kuukauden keskilämpötila on pakkasen puolella '
+                + 'kahdeksana kuukautena vuodessa. Sadetta ja lunta '
+                + 'kertyy vuodessa hieman yli 400 millimetriä, ja '
+                + 'sateisin vuodenaika on kesä. Alin mitattu lämpötila '
+                + 'on −45,6 astetta (10.2.1967) ja ylin 26,8 astetta '
+                + '(21.7.2008). Kesäkuun 21. päivä on Alianaitin '
+                + 'aloituspäivä, ja silloin valoa riittää. Talvella '
+                + 'Qaummaarviitiin ja Katannilikiin pääsee vain '
+                + 'moottorikelkalla, koiravaljakolla tai jalan.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Iglukatedraali',
+                tahdet: 3,
+                selite: 'Pyhän Juudaksen katedraali on rakennettu '
+                  + 'iglun muotoon; nykyinen talo avattiin 2012.',
+              },
+              {
+                mita: 'Nunavutin parlamenttitalo',
+                tahdet: 3,
+                selite: 'Värikäs sisustus ja parasta inuiittitaidetta '
+                  + 'talossa, jossa hallitaan ilman puolueita.',
+              },
+              {
+                mita: 'Sylvia Grinnellin puisto',
+                tahdet: 3,
+                selite: 'Kilometri keskustasta länteen: joki, '
+                  + 'putoukset ja thule-kansan kivilatomukset.',
+              },
+              {
+                mita: 'Nunatta Sunakkutaangit -museo',
+                tahdet: 2,
+                selite: 'Inuiittitaidetta ja arktista esineistöä '
+                  + 'entisessä Hudson\'s Bay Companyn talossa.',
+              },
+              {
+                mita: 'Apex eli Niaqunngut',
+                tahdet: 2,
+                selite: 'Viisi kilometriä kaakkoon: vanhat '
+                  + 'kauppahuoneen talot ja tuberkuloosimuistomerkki.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksoissa ja
+             * teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Hinnat ovat pohjoisen hinnat',
+                teksti: 'Kaupunkiin ei johda tietä eikä rataa, ja '
+                  + 'laivayhteys toimii vain osan vuotta — kaikki '
+                  + 'muu lennätetään, ja se näkyy kaupan hyllyssä.',
+              },
+              {
+                otsikko: 'Osoite on rakennusnumero',
+                teksti: 'Kadunnimiä alettiin kehittää vasta noin '
+                  + '2003 eikä katunumeroita ole annettu; paikat '
+                  + 'kerrotaan rakennusnumerolla tai maamerkillä.',
+              },
+              {
+                otsikko: 'Vuorovesi on kymmenen metriä',
+                teksti: 'Frobisherinlahden suppilomuoto nostaa ja '
+                  + 'laskee vettä 7–11 metriä vuorokaudessa, joten '
+                  + 'ranta ei ole sama paikka aamulla ja illalla.',
+              },
+              {
+                otsikko: 'Kaksi kieltä joka kyltissä',
+                teksti: 'Inuktitut on Nunavutin virallisia kieliä ja '
+                  + 'sitä kirjoitetaan omilla tavumerkeillään; '
+                  + 'englanti riittää asiointiin.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Tundra ja vuorovesi',
+      johdanto: 'Kaupungin edessä nousee ja laskee joka päivä '
+        + 'seitsemästä yhteentoista metriä vettä, ja takana alkaa '
+        + 'tundra, jolla korkein pensas yltää nilkkaan. Sää tekee '
+        + 'täällä sen, mitä kartta ei kerro.',
+      tehtava: {
+        kysymys: 'Kuinka paljon vuorovesi nostaa ja laskee vettä '
+          + 'Iqaluitissa vuorokaudessa?',
+        vaihtoehdot: [
+          'Noin puoli metriä',
+          'Noin kaksi metriä',
+          'Seitsemästä yhteentoista metriä',
+          'Vuorovettä ei ole lainkaan',
+        ],
+        oikea: 2,
+        fakta: 'Syy on lahden muoto: Frobisherinlahti kapenee '
+          + 'suppiloksi 40 kilometristä noin 20 kilometriin, ja sama '
+          + 'vesimäärä puristuu yhä kapeampaan uomaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Suppilo, joka nostaa meren',
+          teksti: 'Frobisherinlahti on Davisinsalmen poukama '
+            + 'Baffininsaaren kaakkoiskulmassa: noin 230 kilometriä '
+            + 'pitkä ja suullaan 40 kilometriä leveä, mutta perukkaa '
+            + 'kohti se kapenee noin kahteenkymmeneen. Muotoa '
+            + 'reunustavat kaksi niemimaata, Hall Peninsula '
+            + 'koillisessa ja Meta Incognita Peninsula lounaassa, ja '
+            + 'juuri se suppilo saa vuoroveden nousemaan ja laskemaan '
+            + 'Iqaluitissa 7–11 metriä vuorokaudessa. Altaan kaivoi '
+            + 'jääkauden purkautumisjäätikkö, ja meri tulvi siihen '
+            + 'myöhemmin. Rannat ovat korkeaa kalliota: koillisessa '
+            + 'noin 330 metriä, lounaassa kaksi kertaa niin paljon.',
+          wiki: 'Frobisher Bay',
+        },
+        {
+          otsikko: 'Puu, joka kasvaa pitkin maata',
+          teksti: 'Iqaluit on puurajan pohjoispuolella, vaikka se on '
+            + 'selvästi napapiirin eteläpuolella. Syy on meressä: '
+            + 'kylmä Baffin Island Current pitää kesät niin viileinä, '
+            + 'että puuraja kulkee Kanadan itäosassa yhtä etelässä '
+            + 'kuin Pohjois-Labradorissa — talvet sen sijaan ovat '
+            + 'suunnilleen samanlaisia kuin Yellowknifessa. Puita '
+            + 'kaupungissa on silti muutama: etelään kääntyneitä '
+            + 'tuotuja mustakuusia, joita lumikinos suojaa talvella. '
+            + 'Pensaista tavallisin on arktinen paju, joka voi olla '
+            + 'lähes kahdeksan metriä pitkä ja viisitoista senttiä '
+            + 'korkea. Se kasvaa siihen suuntaan, johon kannattaa.',
+          wiki: 'Salix arctica',
+        },
+        {
+          otsikko: 'Mittarit, jotka liikkuvat',
+          teksti: 'Sadetta ja lunta kertyy vuodessa hieman yli 400 '
+            + 'millimetriä, mikä on paljon enemmän kuin useimmilla '
+            + 'arktisen saariston paikoilla, ja sateisin vuodenaika on '
+            + 'kesä. Golfvirran puolella samalla leveysasteella on '
+            + 'toinen maailma: Trondheimin vuoden keskilämpötila on '
+            + '15,2 astetta leudompi. Ennätykset ovat −45,6 astetta '
+            + '(10. helmikuuta 1967) ja 26,8 astetta (21. heinäkuuta '
+            + '2008). Keskiarvo liikkuu: 1979 vuoden keskilämpötila '
+            + 'oli −9,0 astetta ja 2023 −6,8. Mittausjakson '
+            + 'ensimmäisellä puoliskolla keskiarvoa kylmempiä vuosia '
+            + 'oli neljätoista, jälkimmäisellä kolme.',
+          wiki: 'Iqaluit',
+        },
+        {
+          otsikko: 'Jää on tie',
+          teksti: 'Kaupungin oma tieverkko ulottuu Apexista Sylvia '
+            + 'Grinnellin puistoon ja loppuu siihen. Muualle mennään '
+            + 'talvella jäätä pitkin: kokeneet paikalliset ylittävät '
+            + 'Hudsoninsalmen mantereelta jalan, koiravaljakolla tai '
+            + 'moottorikelkalla, yli sata kilometriä. Autoja on yhä '
+            + 'enemmän, ja niistä syntyy ruuhkia, joita sanotaan '
+            + '"kiireminuutiksi" — silti moottorikelkka on '
+            + 'suositumpi, koska auton rahtaaminen maksaa ja tie '
+            + 'kuluttaa sen. Läheiseen Qaummaarviitin puistoon, jossa '
+            + 'on yhdentoista turvetalon jäänteet, pääsee talvella '
+            + 'vain kelkalla, valjakolla tai jalan ja kesällä '
+            + 'veneellä.',
+          wiki: 'Iqaluit',
+        },
+      ],
+    },
+  ],
 };
