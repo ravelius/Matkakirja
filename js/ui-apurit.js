@@ -1762,7 +1762,14 @@ export function linssiEstaaChatin(doc = (typeof document === 'undefined' ? null 
      * silloin. Luokan asettaa js/linssit/ihmisen-matka-tutkimus.js ja
      * purkaa sen purku.
      */
-    && !doc?.body?.classList?.contains('aikajana-tutkimus-auki');
+    && !doc?.body?.classList?.contains('aikajana-tutkimus-auki')
+    /*
+     * NOSTON KORTTI ON MYÖS KESKUSTELUN PAIKKA (Raamattu YKSI NOSTOMALLI,
+     * 7.9.2026): kortti aukeaa jo esityksen aikana lampusta tai kuvasta,
+     * ja sen valmiit kysymykset menevät chattiin. Luokan asettaa
+     * js/linssit/ihmisen-matka-kortti.js kortin auetessa ja purkaa sulku.
+     */
+    && !doc?.body?.classList?.contains('aikajana-nostokortti-auki');
 }
 
 /*

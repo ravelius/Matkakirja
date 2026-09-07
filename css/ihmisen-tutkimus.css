@@ -1,13 +1,16 @@
 /*
- * IHMISEN MATKA — TUTKIMUSVAIHEEN TYYLIT
- * (js/linssit/ihmisen-matka-tutkimus.js; omistaja 7.9.2026 ilta,
- * Raamattu "IHMISEN MATKA: KAARI HYVAKSYTTY, TUTKIMUSVAIHE, VIISI
- * NAPPIA, PULUN VALIHUOMIOT").
+ * IHMISEN MATKA — TUTKIMUSVAIHEEN, PALKIN NAPPIEN JA NOSTOKORTIN TYYLIT
+ * (js/linssit/ihmisen-matka-tutkimus.js, js/linssit/ihmisen-matka-kortti.js;
+ * omistaja 7.9.2026 ilta, Raamattu "IHMISEN MATKA: KAARI HYVAKSYTTY,
+ * TUTKIMUSVAIHE, VIISI NAPPIA, PULUN VALIHUOMIOT" ja "IHMISEN MATKA:
+ * YKSI PALKKI, EI KARUSELLIA, KAIKKIIN NOSTOIHIN KUVA, LINSSI MUISTAA
+ * PAIKKANSA").
  *
  * OMA TIEDOSTO EIKÄ css/aikajana.css: esitys ja tutkimusvaihe
  * kirjoitettiin rinnakkain, ja yhteinen tiedosto olisi ollut yksi
- * jatkuva ristiriita. Moduuli lataa tämän itse (lataaTyyli), kuten
- * js/fokusnosto.js ja js/sahke.js omansa.
+ * jatkuva ristiriita. Moottori lataa tämän linssin auetessa
+ * (lataaTutkimuksenTyyli), koska palkin viisi nappia tarvitaan jo
+ * esityksen aikana legendana.
  *
  * VÄRIT OVAT AIKAJANAN VÄREJÄ. Linssin oma asu on tummaa lakkapuuta
  * kultareunoin (css/aikajana.css .aikajana), ja muuttujat luetaan
@@ -30,21 +33,18 @@
   --tutkimus-reuna: var(--aikajana-reuna, rgba(217, 161, 59, 0.38));
   --tutkimus-varjo: var(--aikajana-varjo, 0 8px 26px rgba(0, 0, 0, 0.55));
   --tutkimus-kulta: 212, 175, 90;
-  /* Karusellin mitattu korkeus (js asetaLapunKorkeus). */
-  --tutkimus-nauha: 0px;
 }
 
 /* ==================== VIISI NAPPIA ==================== */
 
 /*
- * NAPIT KARTAN YLÄREUNAAN, AIKAJANAN YLÄRIVIN ALLE.
- *
- * MITATTU EIKÄ ARVATTU (Chromium 834 × 1100, 7.9.2026): aikajanan oma
- * ylärivi (kello, otsikko, Jatka, ✕) on 565 px leveä ja 43 px korkea
- * ruudun vasemmassa laidassa 0,6 rem ylhäältä. Keskitetty nappirivi
- * SAMALLA korkeudella menisi sen päälle sekä tabletilla (434 px rivi
- * alkaisi x = 200) että työpöydällä — siksi rivi on aina ylärivin
- * ALAPUOLELLA. Sulkeva ✕ pysyy näkyvissä ja napattavissa.
+ * NAPIT ASUVAT LINSSIN PALKISSA (Raamattu YKSI PALKKI): moottori
+ * rakentaa rivin otsikkoriviin (css/aikajana.css .aikajana.kertomus
+ * .aikajana-ylarivi) kellon ja ohjainten väliin. Esityksen aikana rivi
+ * on LEGENDA (`.legenda`: himmeä, ilman toimintoa), tutkimusvaiheessa
+ * napit heräävät. Irrallinen rivi (ilman palkkia) on varapolku
+ * kaarelle, jolla ei ole kertomusta — se asettuu otsikkorivin alle
+ * kuten ennen (mitattu 834 × 1100: ylärivi 565 px leveä).
  */
 .ihmisen-vananapit {
   position: absolute;
@@ -61,12 +61,29 @@
   pointer-events: auto;
   max-width: calc(100% - 1.2rem);
 }
+/* Palkissa: ei omaa kehystä, keskitetty kellon ja ohjainten väliin. */
+.aikajana.kertomus .ihmisen-vananapit {
+  position: static;
+  transform: none;
+  margin: 0 auto;
+  padding: 0;
+  gap: 0.15rem;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  max-width: none;
+  min-width: 0;
+  flex: 0 1 auto;
+  align-self: center;
+  overflow: hidden;
+}
 
 .ihmisen-vananappi {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
   padding: 0.28rem 0.55rem;
+  min-height: 0;
   border-radius: 8px;
   border: 1px solid transparent;
   background: transparent;
@@ -76,7 +93,7 @@
   line-height: 1.1;
   white-space: nowrap;
   cursor: pointer;
-  transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease, opacity 300ms ease;
 }
 .ihmisen-vananappi:hover { background: rgba(var(--vana-savy, 212, 175, 90), 0.16); }
 .ihmisen-vananappi.valittu {
@@ -88,6 +105,16 @@
   outline: 2px solid rgba(var(--tutkimus-kulta), 0.9);
   outline-offset: 2px;
 }
+/* LEGENDA esityksen aikana: värit luettavissa, nappi ei tee mitään. */
+.ihmisen-vananapit.legenda .ihmisen-vananappi,
+.ihmisen-vananappi:disabled {
+  opacity: 0.62;
+  cursor: default;
+  color: #e9dcc0;
+  background: transparent;
+}
+/* Pimeässä (musta ruutu) legenda väistyy sulkunapin tieltä. */
+.aikajana.esitys-pimea .ihmisen-vananapit { opacity: 0; pointer-events: none; transition: opacity 500ms ease; }
 
 /* Vanan väri pilkkuna nimen edessä: nappi kertoo sävynsä ilman tekstiä. */
 .ihmisen-vananappi-pilkku {
@@ -103,14 +130,13 @@
 /* ==================== PERGAMENTTILAPPU ==================== */
 
 /*
- * VANAN SUMMAAVA TEKSTI ruudun alareunaan, karusellin yläpuolelle.
- * Karusellin korkeus mitataan ajossa (--tutkimus-nauha), koska se
- * lasketaan kortin leveydestä eikä ole vakio.
+ * VANAN SUMMAAVA TEKSTI ruudun alareunaan. Karusellia ei enää ole
+ * (Raamattu EI KARUSELLIA), joten lappu istuu suoraan alalaitaan.
  */
 .ihmisen-vanalappu {
   position: absolute;
   left: 50%;
-  bottom: calc(var(--tutkimus-nauha) + 1rem);
+  bottom: 1rem;
   transform: translate(-50%, 12px);
   width: min(34rem, calc(100% - 2rem));
   padding: 0.7rem 0.95rem 0.8rem;
@@ -190,23 +216,36 @@
 
 /* ==================== NOSTON KORTTI ==================== */
 
+/*
+ * YKSI NOSTOMALLI (js/linssit/ihmisen-matka-kortti.js): sama kortti
+ * löytöpaikalle ja lisänostolle, esityksessä ja tutkimusvaiheessa.
+ * Kortti on kartta-alueen suora lapsi (ei linssin juuren), joten se
+ * elää aikajanan (z 7) ja tutkimuskerroksen (z 8) päällä ja alkaa
+ * palkin alta (--aikajana-palkki-korkeus on bodyssa).
+ */
 .ihmisen-nostokortti {
   position: absolute;
   left: 1.1rem;
-  top: 7.6rem;
-  width: min(23rem, calc(100% - 2.2rem));
-  max-height: calc(100% - 8.6rem - var(--tutkimus-nauha));
+  top: calc(var(--aikajana-palkki-korkeus, 3.4rem) + 0.7rem);
+  z-index: 9;
+  width: min(24rem, calc(100% - 2.2rem));
+  max-height: calc(100% - var(--aikajana-palkki-korkeus, 3.4rem) - 1.6rem);
   overflow-y: auto;
   padding: 0.85rem 1rem 1rem;
   border-radius: 12px;
-  border: 1px solid var(--tutkimus-reuna);
-  background: var(--tutkimus-paperi);
-  box-shadow: var(--tutkimus-varjo);
+  border: 1px solid var(--aikajana-reuna, rgba(217, 161, 59, 0.38));
+  background: var(--aikajana-paperi, #201a14);
+  box-shadow: var(--aikajana-varjo, 0 8px 26px rgba(0, 0, 0, 0.55));
+  color: #f1e6d0;
+  font-family: var(--font-luku);
   pointer-events: auto;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 260ms ease, transform 260ms ease;
   -webkit-overflow-scrolling: touch;
+  --nosto-savy: 212, 175, 90;
+  --tutkimus-reuna: var(--aikajana-reuna, rgba(217, 161, 59, 0.38));
+  --tutkimus-kulta: 212, 175, 90;
 }
 .ihmisen-nostokortti.esilla { opacity: 1; transform: translateY(0); }
 
@@ -214,8 +253,10 @@
   position: absolute;
   top: 0.35rem;
   right: 0.4rem;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  min-height: 0;
+  padding: 0;
   border-radius: 50%;
   border: 1px solid var(--tutkimus-reuna);
   background: rgba(0, 0, 0, 0.25);
@@ -225,38 +266,107 @@
   cursor: pointer;
 }
 .ihmisen-nostokortti-ajoitus {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   font-family: var(--font-type);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #c9a15a;
-  padding-right: 1.8rem;
+  padding-right: 2rem;
+}
+/* Vanan väripilkku ajoituksen edessä: sama kieli kuin palkin napeilla. */
+.ihmisen-nostokortti-pilkku {
+  flex: none;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: rgb(var(--nosto-savy));
+  box-shadow: 0 0 6px rgba(var(--nosto-savy), 0.7);
 }
 .ihmisen-nostokortti-otsikko {
   margin: 0.15rem 0 0.1rem;
   font-family: var(--font-type);
   font-size: 1.05rem;
   line-height: 1.2;
-  padding-right: 1.8rem;
+  padding-right: 2rem;
 }
 .ihmisen-nostokortti-paikka {
   font-size: 0.78rem;
   color: #b9a888;
   margin-bottom: 0.5rem;
 }
+
+/* --- kuva-alue: aina vähintään yksi kehys --- */
+
 .ihmisen-nostokortti-kuvat {
   display: flex;
-  gap: 0.4rem;
-  margin: 0.35rem 0 0.6rem;
+  gap: 0.45rem;
+  margin: 0.4rem 0 0.65rem;
 }
-.ihmisen-nostokortti-kuva {
+.ihmisen-nostokortti-kuvakehys {
   flex: 1 1 0;
   min-width: 0;
-  max-height: 7.5rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+/* Esine (pystykuva) saa kapeamman osuuden kuin havainnekuva. */
+.ihmisen-nostokortti-kuvakehys.esine { flex: 0 1 38%; }
+.ihmisen-nostokortti-kuva {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
   border-radius: 6px;
   border: 1px solid var(--tutkimus-reuna);
+  background: rgba(0, 0, 0, 0.2);
 }
+.ihmisen-nostokortti-kuvakehys.esine .ihmisen-nostokortti-kuva { aspect-ratio: 1 / 1; }
+.ihmisen-nostokortti-kuvateksti {
+  font-size: 0.66rem;
+  line-height: 1.25;
+  color: #9b8b6e;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*
+ * VARAPAIKKA (kuva 404 — kuvaputken erä on tulossa): vanan sävyinen
+ * kehys, pilkku ja ajoitus. Ei tekstilaattaa nimikirjaimin.
+ */
+.ihmisen-nostokortti-varakuva {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px dashed rgba(var(--nosto-savy), 0.6);
+  background:
+    radial-gradient(ellipse at 50% 60%, rgba(var(--nosto-savy), 0.22), rgba(var(--nosto-savy), 0.05) 70%),
+    rgba(0, 0, 0, 0.25);
+}
+.ihmisen-nostokortti-kuvakehys.esine .ihmisen-nostokortti-varakuva { aspect-ratio: 1 / 1; }
+.ihmisen-nostokortti-varakuva-pilkku {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: rgb(var(--nosto-savy));
+  box-shadow: 0 0 10px rgba(var(--nosto-savy), 0.8);
+}
+.ihmisen-nostokortti-varakuva-ajoitus {
+  font-family: var(--font-type);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: rgba(241, 230, 208, 0.8);
+}
+
 .ihmisen-nostokortti-teksti {
   margin: 0 0 0.5rem;
   font-size: 0.9rem;
@@ -267,6 +377,25 @@
   color: #9b8b6e;
   margin-bottom: 0.6rem;
 }
+
+/* --- Lue lisää: Tiedeliitteen juttu (löytöpaikat) --- */
+
+.ihmisen-nostokortti-lue {
+  display: inline-block;
+  margin: 0 0 0.7rem;
+  padding: 0.4rem 0.9rem;
+  min-height: 0;
+  border-radius: 8px;
+  border: 1px solid rgba(var(--tutkimus-kulta), 0.75);
+  background: rgba(var(--tutkimus-kulta), 0.18);
+  color: #fff3d8;
+  font-family: var(--font-type);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background 200ms ease;
+}
+.ihmisen-nostokortti-lue:hover { background: rgba(var(--tutkimus-kulta), 0.32); }
 
 /* --- valmiit kysymykset pululle --- */
 
@@ -288,6 +417,7 @@
 .ihmisen-nostokysymys {
   text-align: left;
   padding: 0.4rem 0.55rem;
+  min-height: 0;
   border-radius: 8px;
   border: 1px solid var(--tutkimus-reuna);
   background: rgba(var(--tutkimus-kulta), 0.08);
@@ -303,15 +433,75 @@
 .ihmisen-nostokysymys.lahetetty { opacity: 0.5; cursor: default; }
 .ihmisen-nostokysymys.ei-lahtenyt { border-color: rgba(180, 90, 60, 0.7); }
 
+/*
+ * KAPEAHKO PALKKI (≤ 1000 px, myös iPad pystyssä 834 px): nimet
+ * lyhenevät ("Pää", "Eur.", …), koska kello (240 px), nimi, Tauko, ↺
+ * ja ✕ vievät palkista jo yli puolet — mitattu 834 × 1100: täydet
+ * nimet leikkautuivat "Am":ään. Lyhyt nimi on DOMissa valmiina.
+ */
+@media (max-width: 1000px) {
+  .aikajana.kertomus .ihmisen-vananappi-nimi { display: none; }
+  .aikajana.kertomus .ihmisen-vananappi-lyhyt { display: inline; }
+  .aikajana.kertomus .ihmisen-vananappi { padding: 0.25rem 0.4rem; }
+}
+
 /* ==================== PUHELIN ==================== */
 
 /*
- * NAPIT YHDELLE RIVILLE LYHENNETTYINÄ (omistaja 7.9.2026). Rivi
- * laskeutuu aikajanan ylärivin alle koko ruudun leveydelle, nimet
- * lyhenevät ja napit jakavat tilan tasan.
+ * PALKISSA VAIN PILKUT (390 px: kello 170 px, Tauko, ↺ ja ✕ vievät
+ * loput). Tutkimusvaiheessa napit tarvitsevat kosketusalan, joten
+ * rivi LASKEUTUU PALKIN ALLE koko leveydelle nimet lyhennettyinä —
+ * omistajan aiempi puhelinsääntö (napit yhdelle riville) säilyy.
  */
+@media (max-width: 600px) {
+  /*
+   * ESITYKSEN AIKANA LEGENDA EI MAHDU (mitattu 390 × 844: kello 185 px,
+   * Tauko, ↺ ja ✕ jättivät legendalle 50 px eli kaksi pilkkua viidestä
+   * — harhaanjohtavampi kuin ei mitään). Puhelimella värit näytetään
+   * vasta tutkimusvaiheessa omalla rivillään palkin alla.
+   */
+  .aikajana.kertomus .ihmisen-vananapit { display: none; }
+  .aikajana.kertomus.tutkimusvaihe .ihmisen-vananapit { display: flex; }
+  .aikajana.kertomus.tutkimusvaihe .ihmisen-vananapit {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0.25rem;
+    gap: 0.2rem;
+    border-bottom: 1px solid var(--tutkimus-reuna);
+    background: linear-gradient(180deg, #2e2116, #201a14);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    overflow: visible;
+  }
+  .aikajana.kertomus.tutkimusvaihe .ihmisen-vananappi {
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: center;
+    padding: 0.4rem 0.15rem;
+    font-size: 0.72rem;
+    gap: 0.22rem;
+  }
+  .aikajana.kertomus.tutkimusvaihe .ihmisen-vananappi-lyhyt { display: inline; }
+  .ihmisen-nostokortti {
+    left: 0.5rem;
+    right: 0.5rem;
+    width: auto;
+    /* Nappirivin (2,4 rem) alta tutkimusvaiheessa. */
+    top: calc(var(--aikajana-palkki-korkeus, 3.4rem) + 3rem);
+    max-height: calc(100% - var(--aikajana-palkki-korkeus, 3.4rem) - 4rem);
+  }
+  .ihmisen-vanalappu {
+    width: calc(100% - 1rem);
+    bottom: 0.6rem;
+    padding: 0.55rem 0.7rem 0.6rem;
+  }
+  .ihmisen-vanalappu-teksti { font-size: 0.84rem; }
+}
+/* Irrallinen nappirivi (kaari ilman palkkia) puhelimella, kuten ennen. */
 @media (max-width: 700px) {
-  .ihmisen-vananapit {
+  .aikajana:not(.kertomus) .ihmisen-vananapit {
     top: 3.5rem;
     left: 0.5rem;
     right: 0.5rem;
@@ -320,7 +510,7 @@
     gap: 0.2rem;
     padding: 0.25rem;
   }
-  .ihmisen-vananappi {
+  .aikajana:not(.kertomus) .ihmisen-vananappi {
     flex: 1 1 0;
     min-width: 0;
     justify-content: center;
@@ -328,22 +518,9 @@
     font-size: 0.72rem;
     gap: 0.22rem;
   }
-  .ihmisen-vananappi-nimi { display: none; }
-  .ihmisen-vananappi-lyhyt { display: inline; }
+  .aikajana:not(.kertomus) .ihmisen-vananappi-nimi { display: none; }
+  .aikajana:not(.kertomus) .ihmisen-vananappi-lyhyt { display: inline; }
   .ihmisen-vananappi-pilkku { width: 0.5rem; height: 0.5rem; }
-  .ihmisen-nostokortti {
-    left: 0.5rem;
-    right: 0.5rem;
-    width: auto;
-    top: 7rem;
-    max-height: calc(100% - 8rem - var(--tutkimus-nauha));
-  }
-  .ihmisen-vanalappu {
-    width: calc(100% - 1rem);
-    bottom: calc(var(--tutkimus-nauha) + 0.6rem);
-    padding: 0.55rem 0.7rem 0.6rem;
-  }
-  .ihmisen-vanalappu-teksti { font-size: 0.84rem; }
 }
 
 /* Liikkeen vähennys: syke seisoo, laput vaihtavat vain peittävyyden. */

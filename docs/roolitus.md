@@ -1,3 +1,10 @@
+# !!! AGENTIT VAIN OPUS JA SONNET — FABLE-MALLIA EI KOSKAAN AGENTTINA !!!
+
+Omistajan sitova sääntö (1.9. ja 7.9.2026): jokainen ali-agentti, parvi ja
+workflow ajetaan Opuksella (koodi, sisältö) tai Sonnetilla (lukeva työ,
+tarkistukset). Ei poikkeuksia vaikeaankaan ongelmaan. Parvina saa ajaa.
+Fablemax-agenttityyppi on poistettu 7.9.2026.
+
 # Roolitus: kolme sessiota, yksi peli
 
 *(Päätetty omistajan kanssa 8.8.2026. Roolit on sidottu NIMIIN ja
@@ -27,19 +34,18 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
   speksattuna, valmiin mallin kanssa. Pienemmille malleille menee
   monistustyö, ei muodon hakeminen.
 
-- **Fablemax — syvätason agentti vaativimpiin pulmiin** (kirjattu
-  19.8.2026; määritys .claude/agents/fablemax.md). Fable kutsuu sen,
-  kun tehtävä vaatii max-tason ajattelua: arkkitehtuuri- ja
-  moduulisuunnitelmat, isot refaktoroinnit, dokumenttiremontit,
-  vaativat katselmoinnit ja sitkeät juurisyybugit (esim. kartan
-  tilabugin kierrokset). Rutiinityö menee tavallisille agenteille —
-  Fablemax on kallein työkalu, ja sitä käytetään vain kun halvempi
-  ei riitä. Aina isolation: worktree, kuten muutkin agentit.
-- **Agenttien mallivalinta (omistaja 26.8.2026):** tavalliset
+- **Fablemax — POISTETTU 7.9.2026.** Fable-mallin agenttityyppi
+  (.claude/agents/fablemax.md, 19.8.2026) on poistettu omistajan
+  säännöllä "agentteina saa käyttää vain opusta ja sonnettia". Vaativa
+  työ (arkkitehtuuri, isot refaktoroinnit, dokumenttiremontit) jaetaan
+  Opus-agenteille, tarvittaessa parvena, tarkasti rajattuina erinä.
+- **Agenttien mallivalinta (omistaja 26.8.2026, tiukennus 7.9.2026):**
   agentit ajetaan AINA Opus- (koodi, sisältö) tai Sonnet-mallilla
-  (lukeva työ, tarkistukset). Fable-mallia saa käyttää agenttina
-  vain todella vaikeaan pulmaan korkealla effort-tasolla
-  (= Fablemax-tapaukset).
+  (lukeva työ, tarkistukset). Fable-mallia EI käytetä agenttina
+  lainkaan (omistaja 7.9.2026: "agentteina saa käyttää vain opusta ja
+  sonnettia. Mutta voit niitä ajaa parvina") — myös Fablemax-tyyppinen
+  vaativa työ jaetaan Opus-agenteille, tarvittaessa parvena. Raamattu:
+  AGENTIT VAIN OPUS JA SONNET.
 
 ## Opus — toimitus: lehdet ja koodi
 

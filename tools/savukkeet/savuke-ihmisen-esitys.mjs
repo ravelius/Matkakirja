@@ -39,6 +39,8 @@
  *   7. PULU: välihuomiot sanotaan (neljä kuplaa) eikä esitys pysähdy.
  *   8. LOPPU: kamera koko pallossa, esinerivi palaa ja
  *      ui.aloitaTutkimusvaihe on kutsuttu tasan kerran.
+ *   8b. KÄRKI KUVASSA: kulkevan vanan kärki pysyy ruudulla jokaisessa
+ *      jaksossa (Raamattu ETELA-AFRIKASSA KAMERA ULOS).
  *   9. Sulje purkaa kaiken: ei kelloa, ei peitettä, ei body-luokkaa.
  *  10. Ei sivuvirheitä.
  *
@@ -212,19 +214,83 @@ await s.evaluate(() => {
   // vain laskee, kutsutaanko se — ja tasan kerran.
   window.__tutkimus = 0;
   ui.aloitaTutkimusvaihe = () => { window.__tutkimus += 1; };
+  /*
+   * KÄRKI EI SAA POISTUA KUVASTA (Raamattu "IHMISEN MATKA:
+   * ETELA-AFRIKASSA KAMERA ULOS, VANA EI SAA HUKKUA", omistaja
+   * 7.9.2026 klo 18.15: *"kartta voisi zoomautua ulospäin, jotta ei
+   * hukattaisi sitä viivaa, jossa oltiin menossa niin pahasti"*).
+   *
+   * Kärki lasketaan SELKÄRANGAN kärkilistasta (vana 0) sillä
+   * lukemalla, johon kello on syvimmillään ehtinyt (`pitoMin`):
+   * pito pitää piirretyn pituuden, joten kärki on siinä eikä
+   * nykyisessä lukemassa. Ruudulla-olo mitataan pallon omalla
+   * projektiolla ja etupuolen testillä (js/pallolauta/lauta.js
+   * pisteEdessa) — takapuolen piste projisoituu ruudulle, muttei näy.
+   *
+   * RINTAMALLA-lippu erottaa ne näytteet, joissa vana KASVAA
+   * (kello on syvimmässä lukemassaan). Kelauksen jälkeen (aikahyppy)
+   * selkärangan kärki on Chilessä eikä ole enää rintama — silloin
+   * kameran ei kuulukaan pitää sitä kuvassa (ks. jaksonRajaus).
+   */
+  const pisteet = ui.aikajana?.virrat?.vanat?.()?.pisteet?.() ?? [];
+  window.__selkaranka = pisteet[0]?.pisteet ?? [];
+  window.__karki = (nyt) => {
+    const p = window.__selkaranka;
+    // Ei vielä alkanut — eikä enää kasva: perillä oleva selkäranka on
+    // vanhaa väestöä, ja Tyynenmeren jaksoissa rintama on toisessa
+    // vanassa (meri, uusi-seelanti). Kummassakin päässä kärki on null.
+    if (!p.length || nyt >= p[0][2] || nyt <= p[p.length - 1][2]) return null;
+    const kierra = (v) => ((v + 540) % 360) - 180;
+    for (let i = 1; i < p.length; i += 1) {
+      if (p[i][2] <= nyt) {
+        const a = p[i - 1];
+        const b = p[i];
+        const f = (a[2] - b[2]) ? (a[2] - nyt) / (a[2] - b[2]) : 0;
+        return { lat: a[0] + (b[0] - a[0]) * f, lng: kierra(a[1] + kierra(b[1] - a[1]) * f) };
+      }
+    }
+    return { lat: p[p.length - 1][0], lng: p[p.length - 1][1] };
+  };
+  window.__ruudulla = (piste) => {
+    const pallo = ui.pallonInstanssi;
+    if (!pallo || !piste) return null;
+    const k = pallo.getCoords(piste.lat, piste.lng, 0);
+    const kamera = pallo.camera()?.position;
+    const edessa = kamera
+      && (kamera.x - k.x) * k.x + (kamera.y - k.y) * k.y + (kamera.z - k.z) * k.z > 0;
+    if (!edessa) return false;
+    const r = pallo.getScreenCoords(piste.lat, piste.lng, 0);
+    // Reunavara: kärki ei riitä olla juuri ja juuri ruudun laidassa.
+    const vara = 24;
+    return r.x > vara && r.x < window.innerWidth - vara
+      && r.y > vara && r.y < window.innerHeight - vara;
+  };
   window.__nayte = [];
   window.__poiminta = setInterval(() => {
     const ajo = window.matkakirja.ui.aikajana;
     const t = ajo?.esitys?.tila?.();
     if (!t) return;
     const kuvake = document.querySelector('.aikajana-kertomuskuva');
+    const pito = Number.isFinite(t.pitoMin) ? t.pitoMin : t.vuosia;
+    const karki = window.__karki(pito);
     window.__nayte.push({
       ...t,
       aika: Math.round(performance.now()),
       kuvaLeveys: kuvake ? Math.round(kuvake.getBoundingClientRect().width) : 0,
       alue: ui.nakyvaAlue ? Math.round(ui.nakyvaAlue().w) : null,
+      karki,
+      karkiRuudulla: window.__ruudulla(karki),
+      /*
+       * Rintama = kello on syvimmässä lukemassaan (vana kasvaa nyt).
+       * Hyppyjakso ei ole rintamaa vaikka kello seisoisi pohjassaan
+       * kelauksen ensimmäisillä kehyksillä: kamera on jo matkalla
+       * Keski-Aasiaan, ja Chilen kärki on tarkoituksella takana.
+       */
+      rintamalla: karki ? (t.vuosia <= pito + 1 && t.vaihe !== 'hyppy') : false,
     });
-  }, 200);
+    // Tiheämpi otos kuin kerran viidessäsadassa: kelaus kestää 2,4 s,
+    // ja kontissa ajastin nälkiintyy pallon piirron alle.
+  }, 120);
 });
 
 /* -------------------------------------------------------- 2. pimeä alku */
@@ -468,6 +534,21 @@ try {
       await new Promise((r) => setTimeout(r, 200));
     }
     clearInterval(window.__poiminta);
+    /*
+     * LOPPUNÄKYMÄ MITATAAN VASTA KUN LIUKU ON PERILLÄ (mittausvirhe,
+     * korjattu 7.9.2026): `paata` merkitsee esityksen päättyneeksi
+     * ENNEN kuin ajaa loppurajauksen (LOPUN_ASETUS_MS 1,2 s), joten
+     * silmukan heti lukema leveys oli kesken liu'un — mitattu 2 254
+     * yksikköä, vaikka perillä ollaan yli 3 000:ssa. Odotetaan, että
+     * kaksi peräkkäistä lukemaa ovat samat.
+     */
+    let edellinen = -1;
+    for (let i = 0; i < 40; i += 1) {
+      const nyt = Math.round(ui.nakyvaAlue().w);
+      if (nyt === edellinen) break;
+      edellinen = nyt;
+      await new Promise((r) => setTimeout(r, 250));
+    }
     // Esinerivin peittävyys on mittarina mukana (ks. LOPPU-väite).
     const nauha = document.querySelector('.aikajana-nauha');
     const peitto = () => (nauha ? Number(getComputedStyle(nauha).opacity) : null);
@@ -519,16 +600,25 @@ try {
    *   4. Kaari alkaa 300 000:sta ja päättyy nykyaikaan.
    *
    * "Lukema kasvaa näytteestä toiseen" EI ole väite: kelaus kestää
-   * 2,4 s ja näytteitä otetaan 200 ms:n välein ajastimella, joka
-   * kontissa nälkiintyy pallon piirron alle — ramppi voi jäädä
-   * kokonaan otosten väliin (mitattuna 7.9.2026: kummatkin näytteet
-   * olivat jo perillä, 49 949 ja 49 724).
+   * 2,4 s ja näytteitä otetaan ajastimella, joka kontissa nälkiintyy
+   * pallon piirron alle — ramppi voi jäädä kokonaan otosten väliin
+   * (mitattuna 7.9.2026: kummatkin näytteet olivat jo perillä,
+   * 49 949 ja 49 724).
+   *
+   * KELAUKSEN PERILLE PÄÄSY LUETAAN KAHDESTA LÄHTEESTÄ (7.9.2026):
+   * joko hyppyjakson omasta näytteestä (>= 45 000) TAI seuraavan
+   * jakson lähtölukemasta (Eurooppa alkaa kaanonin mukaan 45 000:sta,
+   * eikä sinne pääse muuten kuin kelaamalla — ennen hyppyä kello oli
+   * 14 500:ssa). Kuormitetussa kontissa jälkimmäinen on usein ainoa
+   * näyte: rAF piirtää siellä noin kehyksen sekunnissa, joten koko
+   * 2,4 sekunnin ramppi voi jäädä kahden kehyksen väliin.
    */
   vaadi('KELLO: lukema etenee 300 000:sta nollaan ja kelaa aikahypyssä taaksepäin',
     alkuLukema > 200000 && (loppu.tila?.vuosia ?? 1e9) < 2000
       && chile.at(-1) === 14500
-      && hypyt.length > 0 && Math.min(...hypyt) >= 14500 && Math.max(...hypyt) >= 45000
+      && hypyt.length > 0 && Math.min(...hypyt) >= 14500 && Math.max(...hypyt) > 14500
       && eurooppa.length > 0 && Math.max(...eurooppa) >= 40000
+      && (Math.max(...hypyt) >= 45000 || Math.max(...eurooppa) >= 45000)
       && hyppyhetki.osui,
     JSON.stringify({
       alku: alkuLukema,
@@ -563,6 +653,60 @@ try {
       nauha: loppu.nauhaNakyy,
       tutkimus: loppu.tutkimus,
     }));
+  /*
+   * KÄRKI KUVASSA JOKAISESSA JAKSOSSA. Väite koskee niitä näytteitä,
+   * joissa vana KASVAA (rintamalla): kelauksen jälkeen piirretty osuus
+   * on vanhaa väestöä eikä rintamaa, eikä kameran kuulu seurata sitä.
+   * Jaksokohtainen ehto on tiukempi kuin kokonaisosuus: yhdenkin
+   * jakson hukkuva kärki (Etelä-Afrikan alkujaksot ennen korjausta)
+   * kaataa väitteen, vaikka muut jaksot olisivat kunnossa.
+   */
+  const rintama = nayte.filter((n) => n.rintamalla && n.karki);
+  const jaksoittain = new Map();
+  for (const n of rintama) {
+    if (!jaksoittain.has(n.jakso)) jaksoittain.set(n.jakso, []);
+    jaksoittain.get(n.jakso).push(n);
+  }
+  /*
+   * VÄITE ON "EI HUKU KOKO JAKSOKSI", EI "JOKAISESSA NÄYTTEESSÄ".
+   *
+   * MITATTU (kontti 7.9.2026): otos on harva — 120 ms:n ajastin
+   * nälkiintyy ohjelmisto-WebGL:n alle noin yhteen näytteeseen
+   * kolmessa sekunnissa, joten jaksoa kohti tulee vain 2–4
+   * rintamanäytettä. Kamera liukuu jakson alussa uuteen rajaukseen
+   * 1–2 sekuntia, ja sellaisella otoksella myös jakson VIIMEINEN
+   * näyte osuu usein keskelle liukua (intian-rannat 1/3, chile 2/3).
+   * Väite on siksi: jokaisessa jaksossa kärki on kuvassa ainakin
+   * kerran — juuri se, mikä oli rikki ennen korjausta, jolloin kärki
+   * oli 50–65° päässä kohteesta eikä osunut kuvaan KERTAAKAAN koko
+   * jakson aikana (ranta, arabia, denisova). Kokonaisosuus on toinen
+   * vahti sen varalta, että kärki vilahtaisi kuvassa vain hetken.
+   */
+  const hukkuneet = [...jaksoittain.entries()]
+    .map(([jakso, otos]) => {
+      const ruudulla = otos.filter((n) => n.karkiRuudulla).length;
+      const vika = otos.at(-1);
+      return {
+        jakso,
+        otos: otos.length,
+        ruudulla,
+        viimeinen: vika.karkiRuudulla === true,
+        // Diagnostiikka: mitä kärkiä kameran rajaus otti mukaan.
+        karjet: vika.karjet?.length ?? 0,
+        karki: vika.karki ? [Math.round(vika.karki.lat), Math.round(vika.karki.lng)] : null,
+      };
+    })
+    .filter((r) => r.ruudulla === 0);
+  const osuus = rintama.length ? rintama.filter((n) => n.karkiRuudulla).length / rintama.length : 0;
+  vaadi('KÄRKI KUVASSA: kulkevan vanan kärki pysyy ruudulla jokaisessa jaksossa',
+    rintama.length >= 20 && jaksoittain.size >= 8 && hukkuneet.length === 0 && osuus >= 0.6,
+    JSON.stringify({
+      naytteita: rintama.length,
+      jaksoja: jaksoittain.size,
+      osuus: Number(osuus.toFixed(2)),
+      hukkuneet: hukkuneet.slice(0, 5),
+    }));
+
   /* ------------------------------------------------------- 9. purku */
 
   await s.evaluate(() => document.querySelector('.aikajana-sulje')?.click());

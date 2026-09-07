@@ -91,6 +91,9 @@ import { projisoiLaudalle } from '../fokusmitat.js';
 import { kertomuksenRunko, kertomuksenVarakesto, soitaLinssiluenta } from '../linssipuhe.js';
 import { soitaLivianLinssiAani } from '../liviapuhe.js';
 import { polloLinssikupla } from '../pollo.js';
+import { karkiHetkella } from '../aikajana-vanat.js';
+import { kulmaEro } from './ihmisen-matka-kortti.js';
+import { rajauksenLeveys, vananRajaus } from './ihmisen-matka-tutkimus.js';
 
 /** Lauta, jonka koordinaatistoon nimetyt alueet projisoidaan. */
 const LAUTA = 'maailmankartta';
@@ -160,6 +163,97 @@ export const KAMERAN_OSUUS = 0.85;
 export const KUVAN_POISTUMA_MS = 420;
 /** Loppunäkymän varmistava liuku, jos viimeinen ajo jäi kesken (ks. paata). */
 export const LOPUN_ASETUS_MS = 1200;
+
+/*
+ * KÄRKI EI SAA POISTUA KUVASTA (Raamattu IHMISEN MATKA: ETELA-AFRIKASSA
+ * KAMERA ULOS, VANA EI SAA HUKKUA; omistaja 7.9.2026 klo 18.15,
+ * sanatarkasti: *"siinä tarinan alkupaikkeella, kun käydään
+ * Etelä-Afrikan kohdalla, niin kartta voisi zoomautua ulospäin, jotta
+ * ei hukattaisi sitä viivaa, jossa oltiin menossa niin pahasti"*).
+ *
+ * MITATTU (kontti, 7.9.2026, vanojen kärjet jaksoittain): 'ranta'-
+ * jaksossa (164 000 → 75 000) kamera oli Pinnacle Pointissa (34° E),
+ * mutta selkärangan kärki kulki Etiopiasta (12° N, 43° I) Arabiaan
+ * (24° N, 58° I) — 50–65° päässä kohteesta, siis kokonaan kuvan
+ * ulkopuolella 1 200 yksikön (n. 36°) lähikuvassa. Sama toistui
+ * 'arabia'-jaksossa (kärki Keski-Aasiaan) ja 'denisova'-jaksossa
+ * (kärki Beringiaan).
+ *
+ * SÄÄNTÖ (jaksonRajaus): kohteellisen jakson kamera rajataan
+ * laatikkoon, jossa ovat KOHDE ja jakson aikana LIIKKUVIEN vanojen
+ * kärkipolut (viisi näytettä jakson kellovälillä). Vain UUTTA piirtävä
+ * osuus lasketaan — pito (kello käy kaanonissa kahdesti taaksepäin)
+ * pitää jo piirretyn paikallaan, eikä sen "kärki" ole rintama. Kun
+ * jakso ei piirrä mitään uutta (kello palaa taaksepäin: 'blombos'),
+ * mukaan otetaan nykyinen rintama, jotta se ei katoa kuvasta.
+ *
+ * KAKSI ETÄISYYSKATTOA, koska koko maailma ei ole yksi näyttämö:
+ * selkäranka (kertomuksen päälinja) otetaan mukaan KARJEN_ETAISYYS_MAX_AST
+ * asti (65° Pinnacle Point → Arabia mahtuu), sivuhaara vain
+ * HAARAN_ETAISYYS_MAX_AST asti — Euroopan haaran kärki Lissabonissa ei
+ * saa vetää Denisovan jakson kameraa puolen pallon näkymään, kun
+ * Eurooppa kerrotaan vasta aikahypyn jälkeen. Rajaus ei koskaan mene
+ * lähikuvaa (ESITYKSEN_LAHIKUVA) tiukemmaksi.
+ */
+export const KARJEN_ETAISYYS_MAX_AST = 80;
+export const HAARAN_ETAISYYS_MAX_AST = 45;
+/** Kärjen on liikuttava vähintään tämän verran, jotta vana on "kulkeva". */
+export const KARJEN_LIIKE_MIN_AST = 2;
+/** Rajauksen marginaali (osuus sivusta kummallakin laidalla). */
+export const KARJEN_VARA = 0.14;
+/** Näytteitä kärkipolulta jakson kellovälillä. */
+const KARJEN_NAYTTEET = [0, 0.25, 0.5, 0.75, 1];
+
+/**
+ * Jakson kameran rajaus: kohde ja liikkuvien vanojen kärkipolut.
+ *
+ * PUHDAS FUNKTIO (tests/ihmisen-matka-esitys.test.mjs).
+ *
+ * @param {object} asetukset
+ * @param {{lat:number, lon:number}} asetukset.kohde jakson kohde
+ * @param {Array<{pisteet: Array<[number, number, number]>}>} asetukset.vanat
+ *   vanojen kärkilistat (ensimmäinen on selkäranka), [lat, lon, vuosia]
+ * @param {number} asetukset.alku jakson kello alussa (vuosia sitten)
+ * @param {number} asetukset.loppu jakson kello lopussa
+ * @param {number} [asetukset.pitoMin] pienin kellolukema tähän asti (pito)
+ * @returns {{ rajaus: object|null, karjet: Array<[number, number]> }}
+ */
+export function jaksonRajaus({
+  kohde, vanat = [], alku, loppu, pitoMin = Infinity,
+  selkaMaxAst = KARJEN_ETAISYYS_MAX_AST, haaraMaxAst = HAARAN_ETAISYYS_MAX_AST,
+  liikeMinAst = KARJEN_LIIKE_MIN_AST,
+}) {
+  if (!Number.isFinite(kohde?.lat) || !Number.isFinite(kohde?.lon)) return { rajaus: null, karjet: [] };
+  const pisteet = [[kohde.lat, kohde.lon]];
+  const karjet = [];
+  // Uutta piirtävä kelloväli: pito pitää jo piirretyn, joten alku ei
+  // voi olla pitoMin:iä vanhempi; taaksepäin kulkeva jakso kutistuu
+  // yhteen hetkeen (nykyinen rintama).
+  const hi = Math.min(Number(alku), Number.isFinite(pitoMin) ? pitoMin : Infinity);
+  const lo = Math.min(Number(loppu), hi);
+  if (!Number.isFinite(hi) || !Number.isFinite(lo)) return { rajaus: vananRajaus(pisteet), karjet };
+  const naytteet = hi === lo ? [hi] : KARJEN_NAYTTEET.map((f) => hi + (lo - hi) * f);
+  vanat.forEach((vana, k) => {
+    const p = vana?.pisteet;
+    if (!p?.length) return;
+    const eka = p[0][2];
+    const vika = p[p.length - 1][2];
+    // Vana on käynnissä välillä: alkanut ennen ikkunan loppua eikä
+    // valmis ennen sen alkua.
+    if (!(vika < hi && eka > lo)) return;
+    const kohdat = naytteet.map((t) => karkiHetkella(p, t)).filter(Boolean);
+    if (!kohdat.length) return;
+    const liike = kulmaEro(kohdat[0].lat, kohdat[0].lng, kohdat[kohdat.length - 1].lat, kohdat[kohdat.length - 1].lng);
+    if (hi !== lo && liike < liikeMinAst) return;
+    const katto = k === 0 ? selkaMaxAst : haaraMaxAst;
+    if (kohdat.some((c) => kulmaEro(kohde.lat, kohde.lon, c.lat, c.lng) > katto)) return;
+    for (const c of kohdat) {
+      pisteet.push([c.lat, c.lng]);
+      karjet.push([c.lat, c.lng]);
+    }
+  });
+  return { rajaus: vananRajaus(pisteet), karjet };
+}
 
 /**
  * Nimetyn alueen kameralaatikko laudan yksiköissä.
@@ -280,6 +374,12 @@ export function luoEsitys({ ajo }) {
     pulujaSanottu: 0,
     koukkuKutsuttu: false,
     vuosia: Number(kertomus[0]?.vuosia) || 0,
+    /** Pienin kellolukema tähän asti: pidon pohja (ks. PITO ja jaksonRajaus). */
+    pitoMin: Infinity,
+    /** Jakson kameraan otetut kärjet [lat, lng] (savukkeen mittari). */
+    karjet: [],
+    /** Jatkettiinko muistista (ei pimeää, ei avausta). */
+    muistista: false,
   };
 
   /* ---------------------------------------------------------- pinnat */
@@ -292,12 +392,14 @@ export function luoEsitys({ ajo }) {
   const tekstilaatikko = solmu('p', 'aikajana-kertomusteksti-sisus');
   tekstirivi.appendChild(tekstilaatikko);
 
-  const asennaPinnat = () => {
+  const asennaPinnat = ({ pimea = true } = {}) => {
     const juuri = ajo.juuri;
     if (!juuri) return;
     // Peite ensimmäiseksi lapseksi: kaikki muu on sen päällä DOM-
     // järjestyksessä, ja luokka `esitys-pimea` piilottaa ne erikseen.
-    juuri.prepend(peite);
+    // Muistista jatkettaessa peitettä ei panna lainkaan: läpinäkyvänäkin
+    // se ottaisi napautukset (pointer-events: auto) kartan edestä.
+    if (pimea) juuri.prepend(peite);
     juuri.appendChild(tekstirivi);
     juuri.classList.add('esitys-kaynnissa');
   };
@@ -313,16 +415,40 @@ export function luoEsitys({ ajo }) {
     return k.ajaKamera({ bbox, marginaali: 0.04 }, { kesto: reduced ? 0 : kesto });
   };
 
-  const ajaKohteeseen = (tunnus, kesto) => {
+  const kuvasuhde = () => {
+    const kotelo = ajo.lauta?.kotelo ?? ajo.ui?.mapPane ?? null;
+    const w = kotelo?.clientWidth ?? 0;
+    const h = kotelo?.clientHeight ?? 0;
+    return w > 0 && h > 0 ? w / h : 1;
+  };
+
+  /**
+   * Kamera kohteeseen NIIN, ETTÄ KULKEVA VANA PYSYY KUVASSA (Raamattu
+   * ETELA-AFRIKASSA KAMERA ULOS, VANA EI SAA HUKKUA): rajaus on kohde +
+   * jakson aikana liikkuvien vanojen kärkipolut (jaksonRajaus), eikä
+   * koskaan lähikuvaa tiukempi. Ilman vanoja (tasokartta, laskenta
+   * kesken) rajaus on pelkkä kohde eli entinen lähikuva.
+   */
+  const ajaKohteeseen = (tunnus, kesto, { alku = null, loppu = null } = {}) => {
     const k = kamera();
     const i = pysakit.get(tunnus);
     const t = ajo.tapahtumat[i];
     if (!k?.ajaKamera || !t || !Number.isFinite(t.lat) || !Number.isFinite(t.lon)) {
       return Promise.resolve(false);
     }
+    const vanat = ajo.virrat?.vanat?.()?.pisteet?.() ?? [];
+    const { rajaus, karjet } = jaksonRajaus({
+      kohde: t,
+      vanat,
+      alku: Number.isFinite(alku) ? alku : tila.vuosia,
+      loppu: Number.isFinite(loppu) ? loppu : tila.vuosia,
+      pitoMin: tila.pitoMin,
+    });
+    tila.karjet = karjet;
+    const leveys = Math.max(ESITYKSEN_LAHIKUVA, rajauksenLeveys(rajaus, kuvasuhde(), KARJEN_VARA) ?? 0);
     return k.ajaKamera(
       {
-        x: t.x, y: t.y, lat: t.lat, lng: t.lon, leveys: ESITYKSEN_LAHIKUVA,
+        lat: rajaus?.lat ?? t.lat, lng: rajaus?.lon ?? t.lon, leveys,
       },
       { kesto: reduced ? 0 : kesto },
     );
@@ -353,8 +479,22 @@ export function luoEsitys({ ajo }) {
     const osoite = t?.ilmio?.osoite ?? t?.kuva?.osoite ?? null;
     if (!g || !osoite) return;
     const kehys = solmu('div', 'aikajana-kertomuskuva');
-    kehys.setAttribute('aria-hidden', 'true');
     kehys.style.setProperty('--kertomuskuva-leveys', `${Math.round(KUVAN_OSUUS * 100)}vw`);
+    /*
+     * KUVA ON NAPAUTETTAVA (omistaja 7.9.2026: *"myöskään ei niistä
+     * valokuvista tapahdu mitään"*). Kehys on lampun CSS2D-elementin
+     * lapsi, ja koko merkkikerros on pointer-events: none — napautus
+     * meni pallon pintaan, ja siellä lähin merkki (44 px) oli harvoin
+     * tämä lamppu, koska kuva on 1,4 rem sivussa ja 22 % ruudun
+     * levyinen. Kehys ottaa siksi napautuksen ITSE (css pointer-events:
+     * auto) ja avaa saman kortin kuin lamppu ja hehku.
+     */
+    kehys.setAttribute('role', 'button');
+    kehys.setAttribute('aria-label', `${t.otsikko ?? ''}: avaa nosto`);
+    kehys.addEventListener('click', (e) => {
+      e.stopPropagation();
+      ajo.ui?.nostokortti?.avaa?.(tunnus);
+    });
     const img = new Image();
     img.alt = '';
     img.decoding = 'async';
@@ -384,6 +524,7 @@ export function luoEsitys({ ajo }) {
   const kirjoitaKello = (vuosia) => {
     const arvo = Math.max(0, vuosia);
     tila.vuosia = arvo;
+    tila.pitoMin = Math.min(tila.pitoMin, arvo);
     const paikka = ajo.asteikko.paikka?.(arvo) ?? arvo;
     ajo.tila = { ...ajo.tila, vuosi: paikka };
     ajo.naytaVuosi(paikka, reduced);
@@ -391,13 +532,29 @@ export function luoEsitys({ ajo }) {
 
   /* ------------------------------------------------------------ luenta */
 
-  const aloitaLuenta = (jakso) => {
+  const aloitaLuenta = (jakso, { alkukohta = 0 } = {}) => {
     const runko = kertomuksenRunko(jakso, etuliite);
     tila.aani = runko
       ? soitaLinssiluenta(ajo.ui, null, { runko, juuri: ajo.luentajuuri, viive: 0 })
       : null;
     const aani = tila.aani;
     if (!aani) return;
+    /*
+     * JATKO KESKELTÄ JAKSOA (muisti): äänite kelataan samaan kohtaan
+     * kuin kello, heti kun sen kesto tiedetään. Kelaus ennen
+     * metatietoja ei ole luotettava kaikissa selaimissa.
+     */
+    if (alkukohta > 0) {
+      const kelaa = () => {
+        if (tila.aani !== aani || tila.purettu) return;
+        const kesto = Number(aani.duration);
+        if (Number.isFinite(kesto) && kesto > 0 && alkukohta / 1000 < kesto - 0.5) {
+          try { aani.currentTime = alkukohta / 1000; } catch { /* ei kelattavissa */ }
+        }
+      };
+      aani.addEventListener('loadedmetadata', kelaa, { once: true });
+      if (Number.isFinite(aani.duration) && aani.duration > 0) kelaa();
+    }
     /*
      * KESTO ÄÄNITTEESTÄ HETI KUN SE TIEDETÄÄN. Varakesto on jo
      * käytössä, joten metatietojen viive ei pysäytä mitään: jakson
@@ -431,13 +588,14 @@ export function luoEsitys({ ajo }) {
 
   /* ------------------------------------------------------------- jakso */
 
-  const aloitaJakso = (i) => {
+  const aloitaJakso = (i, { kulunut = 0 } = {}) => {
     const jakso = kertomus[i];
     if (!jakso) { paata(); return; }
     tila.i = i;
     // Jakson oma lähtöhetki: kulunut mitataan seinäkellosta (ks. tila).
-    tila.alkuHetki = performance.now();
-    tila.kulunut = 0;
+    // Muistista jatkettaessa jakso alkaa keskeltä (kulunut > 0).
+    tila.alkuHetki = performance.now() - kulunut;
+    tila.kulunut = kulunut;
     tila.puluSanottu = false;
     tila.jaksoja += 1;
     tila.luenta = kertomuksenVarakesto(jakso);
@@ -448,12 +606,15 @@ export function luoEsitys({ ajo }) {
     tekstirivi.classList.toggle('esilla', Boolean(jakso.teksti));
 
     if (jakso.vaihe === 'valot') sytytaValot();
-    if (jakso.vaihe === 'hyppy') tila.kelauksenAlku = tila.vuosia;
+    // Kelaus lähtee nykyisestä lukemasta; keskeltä jatkettaessa
+    // (muisti) kelaus on jo tehty ja kello jatkaa jakson lukemasta.
+    if (jakso.vaihe === 'hyppy') tila.kelauksenAlku = kulunut >= KELAUKSEN_MS ? null : tila.vuosia;
 
+    const tahti = jaksonTahti(kertomus, i);
     // Kello jakson alkuun heti (kelaus lähtee omasta lukemastaan).
-    if (jakso.vaihe !== 'hyppy') kirjoitaKello(jaksonTahti(kertomus, i).alku);
+    if (jakso.vaihe !== 'hyppy' || tila.kelauksenAlku === null) kirjoitaKello(tahti.alku);
 
-    aloitaLuenta(jakso);
+    aloitaLuenta(jakso, { alkukohta: kulunut });
 
     /*
      * KAMERAN KESTO LASKETAAN VARAKESTOSTA eikä äänitteestä: ajo on
@@ -477,11 +638,14 @@ export function luoEsitys({ ajo }) {
     if (jakso.kohde) {
       sytytaKohde(jakso.kohde);
       naytaKuva(jakso.kohde);
-      ajaKohteeseen(jakso.kohde, kesto);
+      ajaKohteeseen(jakso.kohde, kesto, { alku: tahti.alku, loppu: tahti.loppu });
     } else {
+      tila.karjet = [];
       suljeKuva();
       if (jakso.alue) ajaAlueeseen(jakso.alue, jakso.vaihe === 'valot' ? 0 : kesto);
     }
+    // Muisti seuraa jaksoa: sulku tai virkistys jatkaa tästä jaksosta.
+    ajo.tallennaMuisti?.();
   };
 
   /**
@@ -554,7 +718,7 @@ export function luoEsitys({ ajo }) {
 
   /* ------------------------------------------------------------ loppu */
 
-  function paata() {
+  function paata({ kamera = true } = {}) {
     if (tila.paattynyt) return;
     tila.paattynyt = true;
     seis();
@@ -568,7 +732,7 @@ export function luoEsitys({ ajo }) {
      * "ajo, joka ei liikuta mitään, on turha").
      */
     const viimeinen = kertomus[tila.i];
-    if (viimeinen?.alue) ajaAlueeseen(viimeinen.alue, reduced ? 0 : LOPUN_ASETUS_MS);
+    if (kamera && viimeinen?.alue) ajaAlueeseen(viimeinen.alue, reduced ? 0 : LOPUN_ASETUS_MS);
     suljeKuva();
     tekstirivi.classList.remove('esilla');
     // Esinerivi ja ohjaimet takaisin pelaajalle ennen koukkua: kartta
@@ -584,12 +748,52 @@ export function luoEsitys({ ajo }) {
     ajo.ui?.aloitaTutkimusvaihe?.();
   }
 
+  /* ------------------------------------------------------------- muisti */
+
+  /**
+   * JATKO MUISTISTA (Raamattu LINSSI MUISTAA PAIKKANSA). Ei pimeää eikä
+   * avausta: valot ovat päällä, musiikki nousee, pito kytketään ja sen
+   * POHJA piirretään ensin (vanat siihen asti, mihin kello oli
+   * pisimmillään ehtinyt — muuten Amerikat olisivat tyhjät, jos jatko
+   * on Euroopan haarassa). Kamera on moottorin muistista jo paikallaan.
+   * Tutkimusvaihe jatkuu suoraan koukkuun ilman kamera-ajoa.
+   */
+  function jatkaMuistista(muisti) {
+    tila.muistista = true;
+    asennaPinnat({ pimea: false });
+    ajo.virrat?.asetaPito?.(true);
+    ajo.aloitaMusiikki?.(true);
+    if (Number.isFinite(muisti.pitoMin)) {
+      tila.pitoMin = muisti.pitoMin;
+      ajo.virrat?.vanat?.()?.paivita?.(muisti.pitoMin, { pito: true });
+    }
+    if (muisti.vaihe === 'tutkimus') {
+      tila.i = kertomus.length - 1;
+      tila.jaksoja = kertomus.length;
+      kirjoitaKello(0);
+      paata({ kamera: false });
+      return true;
+    }
+    const i = kertomus.findIndex((j) => j.id === muisti.jakso);
+    if (i < 0) return false;
+    // Jakson kesto tarkentuu äänitteestä; kulunut ei saa ylittää varakestoa.
+    const kulunut = Math.max(0, Math.min(Number(muisti.kulunut) || 0, kertomuksenVarakesto(kertomus[i]) - 200));
+    aloitaJakso(i, { kulunut });
+    kaynnista();
+    return true;
+  }
+
   /* ------------------------------------------------------------ julkinen */
 
   return {
-    /** Käynnistä-napista: musta ruutu, avausluenta, ei vielä musiikkia. */
-    aloita() {
+    /**
+     * Käynnistä-napista: musta ruutu, avausluenta, ei vielä musiikkia.
+     * `muisti` (js/linssit/ihmisen-matka-muisti.js) jatkaa suoraan
+     * siitä, mihin pelaaja jäi — ilman pimeää, ilman avausta.
+     */
+    aloita({ muisti = null } = {}) {
       if (tila.purettu || tila.i >= 0) return false;
+      if (muisti) return jatkaMuistista(muisti);
       asennaPinnat();
       ajo.juuri?.classList.add('esitys-pimea');
       // Peite on musta HETI: avauslaatikon oma peite häipyy sen päältä,
@@ -662,6 +866,9 @@ export function luoEsitys({ ajo }) {
       kesto: Math.round(tila.kesto),
       luenta: Math.round(tila.luenta),
       kulunut: Math.round(tila.kulunut),
+      pitoMin: Number.isFinite(tila.pitoMin) ? Math.round(tila.pitoMin) : null,
+      karjet: tila.karjet,
+      muistista: tila.muistista,
     }),
   };
 }

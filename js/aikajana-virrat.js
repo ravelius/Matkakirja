@@ -957,6 +957,14 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
      * taaksepäin — ks. tila.pito.
      */
     asetaPito: (paalla) => { tila.pito = Boolean(paalla); },
+    /**
+     * VANAMODUULIN KAHVA ILMAN TUTKIMUSTILAA (js/linssit/ihmisen-matka-
+     * kortti.js sävytys, js/linssit/ihmisen-matka-esitys.js kamera):
+     * kärkilistat ja pidon pohja tarvitaan jo esityksen aikana, eikä
+     * `tutkimus()` sovi siihen — se lopettaisi kameran seurannan
+     * pysyvästi. Null, kunnes laskenta on valmis.
+     */
+    vanat: () => tila.vanat ?? null,
     /** Seuraaminen heti takaisin (savukkeet ja kuvakaappaukset). */
     jatkaSeuranta: () => { tila.keskeytettyAsti = 0; tila.pov = null; },
     /**

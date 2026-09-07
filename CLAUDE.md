@@ -1,3 +1,10 @@
+# !!! AGENTIT VAIN OPUS JA SONNET — FABLE-MALLIA EI KOSKAAN AGENTTINA !!!
+
+Omistajan sitova sääntö (1.9. ja 7.9.2026): jokainen ali-agentti, parvi ja
+workflow ajetaan Opuksella tai Sonnetilla. Ei poikkeuksia, ei kysymällä.
+Parvina saa ajaa. Fablemax-agenttityyppi on poistettu. Sama sääntö on
+Raamatun ja docs/roolitus.md:n ensimmäisellä rivillä.
+
 # Matkakirja ja unohdettu aarre
 
 Suomenkielinen seikkailupeli, jossa samalla oppii (kohderyhmä

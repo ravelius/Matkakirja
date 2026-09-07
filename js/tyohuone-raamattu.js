@@ -1,4 +1,8 @@
 /*
+ * !!! AGENTIT VAIN OPUS JA SONNET. FABLE-MALLIA EI KOSKAAN AGENTTINA !!!
+ * (omistaja 1.9.2026 ja 7.9.2026 — sitova, ensimmäinen sääntö;
+ * parvina saa ajaa. Fablemax-agenttityyppi poistettu 7.9.2026.)
+ *
  * RAAMATTU — koko pelin idea yhdessä tiedostossa. Vain Fable
  * kirjoittaa. Ristiriidassa hyväksytty osio voittaa muut dokumentit.
  * Lähdekaanon: docs/tarina.md ja docs/isoisan-raamattu.md.
@@ -8,7 +12,9 @@
 
 export const RAAMATTU = {
   paivitetty: '1.9.2026',
-  johdanto: 'Koko pelin idea yhdessä dokumentissa — tämän lukeminen '
+  johdanto: 'ENSIMMÄINEN SÄÄNTÖ: AGENTIT VAIN OPUS JA SONNET, FABLE-MALLIA EI '
+    + 'KOSKAAN AGENTTINA (omistaja 1.9. ja 7.9.2026; parvina saa ajaa). '
+    + 'Koko pelin idea yhdessä dokumentissa — tämän lukeminen '
     + 'riittää pelin kehittämiseen. Käydään läpi omistajan kanssa osio '
     + 'kerrallaan; valmis Raamattu laukaisee kaikkien '
     + 'matkakirjatekstien uudistuksen. ILMAISU: äärimmäisen lyhyt ja '
@@ -18,6 +24,18 @@ export const RAAMATTU = {
       otsikko: 'Ydinajatus ja kohderyhmä',
       tila: 'hyväksytty 11.8.2026',
       kohdat: [
+        '!!! AGENTIT VAIN OPUS JA SONNET — FABLE-MALLIA EI KOSKAAN AGENTTINA, '
+          + 'EI EDES VAIKEAAN ONGELMAAN, EI KYSYMÄLLÄKÄÄN !!! (omistaja '
+          + '7.9.2026 ilta, sanatarkasti: "Onhan sinulla ohjeena selvä, että '
+          + 'agentteina saa käyttää vain opusta ja sonnettia. Mutta voit niitä '
+          + 'ajaa parvina." ja "Tämä on todella tärkeä sääntö ja jostain '
+          + 'syystä se aina lipeää pois siitä."): jokainen ali-agentti, parvi '
+          + 'ja workflow-ajo ajetaan Opuksella (koodi, sisältö) tai Sonnetilla '
+          + '(lukeva työ, tarkistukset). Vaativakin työ jaetaan Opus-parvelle. '
+          + 'Fablemax-agenttityyppi on poistettu reposta 7.9.2026. Sama sääntö '
+          + 'on CLAUDE.md:n ja docs/roolitus.md:n ensimmäisellä rivillä. '
+          + 'Kumoaa 1.9.2026 kohdan poikkeuksen "todella vaikeaan ongelmaan '
+          + 'kysyen".',
         'LAATU ON AINA TÄRKEIN PRIORITEETTI. Laatu voittaa vauhdin, '
           + 'määrän ja kustannuksen. Vähemmän ja viimeisteltyä.',
         'AGENTTIAJOISSA KORKEINTAAN OPUS (omistaja 1.9.2026, '
@@ -4163,6 +4181,17 @@ export const RAAMATTU = {
           + 'faktat (Denisovan luola: denisovalaiset, neandertalilaiset ja '
           + 'niiden yhteinen lapsi, ajoitus n. 50 000-200 000 v) tarkistaa '
           + 'Fable.',
+        'AGENTIT VAIN OPUS JA SONNET, PARVINA SAA AJAA (omistaja 7.9.2026 ilta '
+          + 'klo 19.05 Suomen aikaa, sanatarkasti: "Onhan sinulla ohjeena selva, '
+          + 'etta agentteina saa kayttaa vain opusta ja sonnettia. Mutta voit '
+          + 'niita ajaa parvina."): Fable ei kaynnista Fable-mallin agentteja '
+          + '(fablemax-tyyppi mukaan lukien) - vaativakin tyo jaetaan Opus- ja '
+          + 'Sonnet-agenteille, tarvittaessa rinnakkaisena parvena '
+          + '(kustannuskurin rajat: selvarajaiset erat, enintaan ~8 rinnakkain). '
+          + 'Kumoaa roolituksen 26.8.2026 poikkeuksen "Fable-mallia saa kayttaa '
+          + 'agenttina vain todella vaikeaan pulmaan". Kaksi 7.9. illalla '
+          + 'kaynnistettya Fable-agenttia (linssinakyma, vanat) pysaytettiin ja '
+          + 'tyo jatkettiin Opuksella niiden valitallennuksista.',
         'IHMISEN MATKA: ETELA-AFRIKASSA KAMERA ULOS, VANA EI SAA HUKKUA '
           + '(omistaja 7.9.2026 ilta klo 18.15 Suomen aikaa, sanatarkasti: "siina '
           + 'tarinan alkupaikkeella, kun kaydaan Etela-Afrikan kohdalla, niin '
