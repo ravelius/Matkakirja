@@ -1,0 +1,877 @@
+{
+  "createdAt": "2026-09-07T08:53:37.355660+00:00",
+  "category": "miniatyyrit",
+  "gameResolverVerified": true,
+  "count": 62,
+  "oldCopiesPreserved": true,
+  "items": [
+    {
+      "canonicalId": "istanbul-konstantinopoli-1453",
+      "fileName": "istanbul-konstantinopoli-1453.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/istanbul-konstantinopoli-1453.png",
+      "sha256": "66fbea7bae43b794d05016f8503f5e7e2d4b369ef88f5aafb3c3220c163c971d",
+      "bytes": 971161,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "helsinki-suomi-heraa-1899",
+      "fileName": "helsinki-suomi-heraa-1899.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/helsinki-suomi-heraa-1899.png",
+      "sha256": "3a05fac75ec7aeaf5e507730a3628e4daba6217350590f4ecb97765b4d6432e6",
+      "bytes": 868271,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "ateena-louis-1896",
+      "fileName": "ateena-louis-1896.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/ateena-louis-1896.png",
+      "sha256": "52c0be9ee0a71a9be4217449694a1ddc83f7381993116be2bede6fdaac6fc703",
+      "bytes": 658694,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "pariisi-curie-1898",
+      "fileName": "pariisi-curie-1898.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/pariisi-curie-1898.png",
+      "sha256": "8cd8d55e014bf0fefdb7ff63ee20ef98bad208e8c74cc90310d299a628c24da2",
+      "bytes": 973331,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "pariisi-lavoisier-1780",
+      "fileName": "pariisi-lavoisier-1780.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/pariisi-lavoisier-1780.png",
+      "sha256": "f1aa25563276f230d13a21c86eb32cddd79618b6bd1059f3874d8d2495f1c3fa",
+      "bytes": 1166681,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "pariisi-pasteur-1862",
+      "fileName": "pariisi-pasteur-1862.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/pariisi-pasteur-1862.png",
+      "sha256": "80e5e931dfd49a03808a782b8d79805690ebdc41ec831ccb52b5567532aa47e0",
+      "bytes": 623145,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "pariisi-torni-1888",
+      "fileName": "pariisi-torni-1888.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/pariisi-torni-1888.png",
+      "sha256": "c18cc6eb496c540c6eeaadc46df0b85aeca78b68e2934cf93826ed320fd67841",
+      "bytes": 1131031,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "pariisi-lumiere-1895",
+      "fileName": "pariisi-lumiere-1895.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/pariisi-lumiere-1895.png",
+      "sha256": "4d88fe3721e3345c34b753ac1dfaaa662265daa0f9eec7df42109693f18ef9d8",
+      "bytes": 1030622,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "wien-yhdeksas-1824",
+      "fileName": "wien-yhdeksas-1824.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wien-yhdeksas-1824.png",
+      "sha256": "3542e1ba9f9fbd5ca0d81b04a36ce423b161ccdd807d88eb8b0bd123890facb0",
+      "bytes": 933272,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "wien-figaro-1786",
+      "fileName": "wien-figaro-1786.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wien-figaro-1786.png",
+      "sha256": "8bd845d109043bd28d0c5b308d202deff7e8576bd55496d345eccc29f3a088f7",
+      "bytes": 873411,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "lontoo-faraday-1831",
+      "fileName": "lontoo-faraday-1831.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lontoo-faraday-1831.png",
+      "sha256": "eacf62894613c570cf744dc08af1922cd5a12ad6932296fdb6748c795f1a3bcc",
+      "bytes": 852003,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "lontoo-fleming-1928",
+      "fileName": "lontoo-fleming-1928.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lontoo-fleming-1928.png",
+      "sha256": "e001c2eed13d807bde11f56ea38ad8c610cf9a9a4c5d55420e3f99e1b4c5ddc9",
+      "bytes": 872462,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "dunedin-otagon-museo",
+      "fileName": "dunedin-otagon-museo.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/dunedin-otagon-museo.png",
+      "sha256": "c905c197bed266a1cc35374534520e1478f0ac125081d0a2c92b3441ba7fb7d9",
+      "bytes": 851840,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "suva-pyhan-sydamen-katedraali",
+      "fileName": "suva-pyhan-sydamen-katedraali.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/suva-pyhan-sydamen-katedraali.png",
+      "sha256": "e9ec627117e546b292c2b0fb345d518a056f97a37d0ac93754b85179125306a4",
+      "bytes": 1038578,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "dunedin-queens-gardens",
+      "fileName": "dunedin-queens-gardens.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/dunedin-queens-gardens.png",
+      "sha256": "1da7a3e74340ea86cb34504b1103f3c1d1569e7a729b5a6de56b0f67aa08bf5a",
+      "bytes": 743225,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "dunedin-otago-boys-high-school",
+      "fileName": "dunedin-otago-boys-high-school.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/dunedin-otago-boys-high-school.png",
+      "sha256": "72e5d1bdc6f62ace6aa37f4ebe5f31c6cc0a785bc4779332efb810ef0747a0bb",
+      "bytes": 981112,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "suva-hallintorakennukset",
+      "fileName": "suva-hallintorakennukset.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/suva-hallintorakennukset.png",
+      "sha256": "2b6187f5d6763f6c8ef7c8493e6fee282a3530d21696608ea87f5db8c9ac9a08",
+      "bytes": 852539,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "pariisi-bastilji-1789",
+      "fileName": "pariisi-bastilji-1789.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/pariisi-bastilji-1789.png",
+      "sha256": "91e2556be8a82b7f57dc81b59706f2bfe905112f15f5d7197687b681228e87f5",
+      "bytes": 1269911,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "lontoo-tunneli-1827",
+      "fileName": "lontoo-tunneli-1827.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lontoo-tunneli-1827.png",
+      "sha256": "be609bb95ef70262854b25588a95aa10907178548b6a5739a0436f58ab4d9e2f",
+      "bytes": 1151820,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "lontoo-palo-1666",
+      "fileName": "lontoo-palo-1666.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lontoo-palo-1666.png",
+      "sha256": "20fab57fb22307e88c9dc31e0f9d80077e83877e24406d263cdb57afcc86966a",
+      "bytes": 965697,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "lontoo-globe-1599",
+      "fileName": "lontoo-globe-1599.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/lontoo-globe-1599.png",
+      "sha256": "4a12629eb16da2b933b0baad38097821136949fe96798ada1cd0054e3d6e29a0",
+      "bytes": 1010064,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "berliini-muuri-1961",
+      "fileName": "berliini-muuri-1961.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/berliini-muuri-1961.png",
+      "sha256": "797e788c2232ab2b71bf5446b10277832bfb46a0658815b58b15ff156348af2b",
+      "bytes": 1290550,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "rooma-sikstus-1510",
+      "fileName": "rooma-sikstus-1510.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/rooma-sikstus-1510.png",
+      "sha256": "441459fe0a99a334a20f810199d638cbb2c1166d9a83cd28e5efdaedded06db8",
+      "bytes": 960892,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "pietari-janissaari-1703",
+      "fileName": "pietari-janissaari-1703.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/pietari-janissaari-1703.png",
+      "sha256": "6a9bdab57c0c71187d9eff993d845babd5bb1f958f817813c588c45826b8067a",
+      "bytes": 1188374,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "newyork-brooklyn-1883",
+      "fileName": "newyork-brooklyn-1883.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/newyork-brooklyn-1883.png",
+      "sha256": "f8a4badeb8b7d313441beee3beb3078fa82751a32ca7f1486984b9f65eea4bc5",
+      "bytes": 1252459,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "halifax-pyhan-paavalin-kirkko",
+      "fileName": "halifax-pyhan-paavalin-kirkko.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/halifax-pyhan-paavalin-kirkko.png",
+      "sha256": "20d051b979f2d6372e746bcdc4aedacd81c100f0857777e55c23e49263e45810",
+      "bytes": 664814,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "miami-olympia-teatteri",
+      "fileName": "miami-olympia-teatteri.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/miami-olympia-teatteri.png",
+      "sha256": "da698b38b5d2f6966ceb1a652058479eab7ec9eee9b92fb7f45f987b0182c3b8",
+      "bytes": 1284360,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "miami-wynwoodin-muraalikorttelit",
+      "fileName": "miami-wynwoodin-muraalikorttelit.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/miami-wynwoodin-muraalikorttelit.png",
+      "sha256": "e3a3fc520714518572937fae798ce57b7537d82c693d4ad29aadb0e1729c0940",
+      "bytes": 916024,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "miami-perezin-taidemuseo",
+      "fileName": "miami-perezin-taidemuseo.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/miami-perezin-taidemuseo.png",
+      "sha256": "7b40fde61b4d625871bc8449155cb82ee72a196a36e13957300400e41d34b13f",
+      "bytes": 784606,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "miami-vapaudentorni",
+      "fileName": "miami-vapaudentorni.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/miami-vapaudentorni.png",
+      "sha256": "d1758be84f34c81f8253d1d85d29b6418355e5ad899ce1458738851368cafebc",
+      "bytes": 602691,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "pietari-mendelejev-1869",
+      "fileName": "pietari-mendelejev-1869.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/pietari-mendelejev-1869.png",
+      "sha256": "734abf1fb254c3bb865cb113483cb8381e8ef06f91c76607a3471f89a45341be",
+      "bytes": 684874,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "halifax-julkinen-puutarha",
+      "fileName": "halifax-julkinen-puutarha.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/halifax-julkinen-puutarha.png",
+      "sha256": "1254c86513f58ccb8e25125412ddda3a07870772d71149b7c38fc297b7d649cf",
+      "bytes": 1031476,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "halifax-vanha-hautausmaa",
+      "fileName": "halifax-vanha-hautausmaa.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/halifax-vanha-hautausmaa.png",
+      "sha256": "b4b4d5533c985080d1afa1c6d17edc59653ab68c280f6810ca027c61283fe782",
+      "bytes": 1201087,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "halifax-pier-21",
+      "fileName": "halifax-pier-21.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/halifax-pier-21.png",
+      "sha256": "9b1be5212876a3e14ae37be563df791e445054f3d33f894b06a05d7083392fee",
+      "bytes": 529850,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "halifax-point-pleasant-park",
+      "fileName": "halifax-point-pleasant-park.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/halifax-point-pleasant-park.png",
+      "sha256": "d096cf155f3c1bf7d34efc1f2b6cb8d69db274135ac61b8e560619b56d97b662",
+      "bytes": 1026887,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "kapkaupunki-hyvantoivonlinnoitus",
+      "fileName": "kapkaupunki-hyvantoivonlinnoitus.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kapkaupunki-hyvantoivonlinnoitus.png",
+      "sha256": "5e9b96b91efd5578038efdbfe3e48f47bc670a8baed9b81c6957dec92bde877b",
+      "bytes": 820377,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "nairobi-arboretum",
+      "fileName": "nairobi-arboretum.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/nairobi-arboretum.png",
+      "sha256": "97068ab1277726af92140a6ac35b17a1d04e6e3eb1d42d8db45432dff5d708c6",
+      "bytes": 1618416,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "nairobi-kenian-kansallisarkisto",
+      "fileName": "nairobi-kenian-kansallisarkisto.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/nairobi-kenian-kansallisarkisto.png",
+      "sha256": "a120972a70b49cb96e06e064e8770b826fa95a2ec5dc4eceed7f7f30c44f4b77",
+      "bytes": 822961,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "nairobi-rautatiemuseo",
+      "fileName": "nairobi-rautatiemuseo.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/nairobi-rautatiemuseo.png",
+      "sha256": "c1c91d130ffe788c98493fe44bfdc8b24f7a3b3d3fa628f95fb38d9689664ed9",
+      "bytes": 1052629,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "halifax-atlantin-merimuseo",
+      "fileName": "halifax-atlantin-merimuseo.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/halifax-atlantin-merimuseo.png",
+      "sha256": "a96084b49724ba9bda03fa541544dac0fd8873a151cd3698381bc2109c6bf6b7",
+      "bytes": 662146,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "miami-bayfront-park",
+      "fileName": "miami-bayfront-park.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/miami-bayfront-park.png",
+      "sha256": "b554e514280187705f8c7cb9e1425bb0b00adb29b52ebf0528e7d7df3c147c81",
+      "bytes": 459949,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "halifax-vanha-kellotorni",
+      "fileName": "halifax-vanha-kellotorni.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/halifax-vanha-kellotorni.png",
+      "sha256": "3d085ab300a70753abddb0187169dd7f21c887248ff01ba79da0c0ce6d29d5a1",
+      "bytes": 756890,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "miami-esittavan-taiteen-keskus",
+      "fileName": "miami-esittavan-taiteen-keskus.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/miami-esittavan-taiteen-keskus.png",
+      "sha256": "9e6579ddc175d42446655260a252232590902a61f918d95b70c91cc3e48d339f",
+      "bytes": 561747,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "miami-lyric-teatteri",
+      "fileName": "miami-lyric-teatteri.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/miami-lyric-teatteri.png",
+      "sha256": "739a53805c98c0351d065cf4fc252f246aebc3ae76e0667cdc238dc03e2c6203",
+      "bytes": 705588,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "kapkaupunki-va-waterfront",
+      "fileName": "kapkaupunki-va-waterfront.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kapkaupunki-va-waterfront.png",
+      "sha256": "84c5fecc6a61244efcfc25571b3592636746891f96f64f9521aafc088ac958a8",
+      "bytes": 759914,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "kapkaupunki-greenmarket-square",
+      "fileName": "kapkaupunki-greenmarket-square.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kapkaupunki-greenmarket-square.png",
+      "sha256": "dea76d2bb21676a7305c9a85c278add8d30ed64e43d8557501c0c97325950021",
+      "bytes": 1085069,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "kapkaupunki-iziko-slave-lodge",
+      "fileName": "kapkaupunki-iziko-slave-lodge.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kapkaupunki-iziko-slave-lodge.png",
+      "sha256": "8cf39a16044890a37aaf65d1fbd0b5a868f61e64aab6057d4a3f3ed4bdff4920",
+      "bytes": 340327,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "kapkaupunki-iziko-etela-afrikan-museo",
+      "fileName": "kapkaupunki-iziko-etela-afrikan-museo.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kapkaupunki-iziko-etela-afrikan-museo.png",
+      "sha256": "933c22f58fa2247c5205d5cb47ac0d1cbfcb7ecc6afa4062a9639de25c1e652d",
+      "bytes": 635127,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "wellington-rautatieasema",
+      "fileName": "wellington-rautatieasema.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-rautatieasema.png",
+      "sha256": "bd01a27e248b2fb6480482030d4f2f88adccf5381382dfad3a48c09427b44a72",
+      "bytes": 699896,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "wellington-bolton-streetin-hautausmaa",
+      "fileName": "wellington-bolton-streetin-hautausmaa.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-bolton-streetin-hautausmaa.png",
+      "sha256": "53d8b492e49b4a161305edda22314113955a4d53e0992d4e144b36197b0e1523",
+      "bytes": 1623238,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "wellington-wellingtonin-museo",
+      "fileName": "wellington-wellingtonin-museo.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-wellingtonin-museo.png",
+      "sha256": "8e8aaa073cabb8990f170cfd8845bb154a2a1edae5b9c04cc474ab4dc15c1188",
+      "bytes": 1506627,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "wellington-circa-teatteri",
+      "fileName": "wellington-circa-teatteri.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-circa-teatteri.png",
+      "sha256": "0a32f689643125b1edf8bc81d1be0af9ac3055e1cc3c9c1f2bd3e73961d0e3e7",
+      "bytes": 1217531,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "wellington-oriental-bay",
+      "fileName": "wellington-oriental-bay.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-oriental-bay.png",
+      "sha256": "e2c0aa5879e877d41dd1af1091193752bf793be223cfa899b53da85c021204a4",
+      "bytes": 955077,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "wellington-embassy-teatteri",
+      "fileName": "wellington-embassy-teatteri.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-embassy-teatteri.png",
+      "sha256": "372938b3492195bdc12b0c371f7f093b7d6d33649f9b794f3ee8fb3d2f682d6e",
+      "bytes": 990980,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "wellington-nairn-streetin-mokki",
+      "fileName": "wellington-nairn-streetin-mokki.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-nairn-streetin-mokki.png",
+      "sha256": "10d1245362154bbc09cb165a4ab00f5c5c949a2990f2da8beffa738c7c61bf8b",
+      "bytes": 1169635,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "wellington-basin-reserve",
+      "fileName": "wellington-basin-reserve.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-basin-reserve.png",
+      "sha256": "1a1a616d7c1664beedb660d5f06a29a29e9216d0d1bb0bf998addd73ebddead0",
+      "bytes": 1029516,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "christchurch-victorian-kellotorni",
+      "fileName": "christchurch-victorian-kellotorni.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/christchurch-victorian-kellotorni.png",
+      "sha256": "9446f8a0dd9121dc6588b1101f623d7fef7ea6c634301f6672165f8c6194f530",
+      "bytes": 351726,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "christchurch-kaupungintalo",
+      "fileName": "christchurch-kaupungintalo.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/christchurch-kaupungintalo.png",
+      "sha256": "1656b6295c34e4db7d42a697fa8583fc8b1f470cfa45b3684b5688db5c982938",
+      "bytes": 1093853,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "christchurch-provinssineuvoston-talo",
+      "fileName": "christchurch-provinssineuvoston-talo.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/christchurch-provinssineuvoston-talo.png",
+      "sha256": "53a8d448be02092b73177534e1dbaa4f3ab653431d276458ecad9944c4738eaf",
+      "bytes": 1511917,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "christchurch-new-regent-street",
+      "fileName": "christchurch-new-regent-street.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/christchurch-new-regent-street.png",
+      "sha256": "032d4dcc53117fd551d1bafdb376be47b455bb7437fc91590531a91118f8a181",
+      "bytes": 1044055,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "christchurch-taidegalleria",
+      "fileName": "christchurch-taidegalleria.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/christchurch-taidegalleria.png",
+      "sha256": "703819550cf55d019a0c49b5f157d2fe077713127343b5aa163e2e904b482f72",
+      "bytes": 652217,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    },
+    {
+      "canonicalId": "christchurch-canterburyn-museo",
+      "fileName": "christchurch-canterburyn-museo.png",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/christchurch-canterburyn-museo.png",
+      "sha256": "d483eb7ca3641738e7dabff40b931918148eaf3196f0675600de4ae1774dd063",
+      "bytes": 973328,
+      "format": "PNG",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "hasAlpha": true,
+      "publicGetVerified": true
+    }
+  ]
+}

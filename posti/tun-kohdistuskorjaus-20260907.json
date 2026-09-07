@@ -1,0 +1,17 @@
+{
+  "createdAt": "2026-09-07T08:53:37.356584+00:00",
+  "id": "maalehti-gtm-musiikki-3-r20260907-v8-root",
+  "canonicalId": "maalehti-gtm-musiikki-3",
+  "previousWrongCanonicalId": "maalehti-gtm-musiikki-1",
+  "instruction": "Use for Rabinal Achi. Preserve existing authentic marimba photo on music1.",
+  "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-gtm-musiikki-3-r20260907-v8-root.jpg",
+  "sha256": "550e42b6a5a3360c7c16c3706256a1650b2fa091d9e01bdbebf06fae5ce835ce",
+  "caption": "Guatemalalainen tun-rumpu, sen H-muotoinen kieliaukko ja kaksi kumipäistä kapulaa — lähteisiin perustuva kuvitus.",
+  "generationPrompt": "Create an entirely NEW horizontal 4:3 documentary product photograph of one Guatemalan Maya TUN wooden slit drum, isolated on a simple woven grass ring on an earthy museum tabletop. The supplied book page is a structural reference ONLY for section 3.11 El Tun, the hollow cylindrical log at middle right. Ignore the scraper and tortoise in other sections. Photograph the complete cylinder from almost directly overhead so its TOP slot geometry is unambiguous. The hollow log lies LEFT TO RIGHT across the middle of the photograph. On its curved upper face are two long narrow parallel BLACK OPEN SLITS running left to right. A third short BLACK OPEN SLIT connects their midpoints vertically, making a sideways H cut all the way through the wood. The short connector is EMPTY DARK AIR into the hollow interior, not a wooden crossbar. This H-shaped open cut frees two wooden tongues, one attached at the left end and one at the right. Both circular end faces remain intact and uncut. Warm worn brown wood, no carvings. Two rubber-tipped wooden beaters rest separately below the complete log. Entire log, grass ring and both beaters occupy ONLY middle 55 percent of the canvas, with at least 20 percent empty tabletop to each edge. Crisp physically credible natural photography, understated side daylight, no person, no text, no label, no border, no vignette, no other instruments. This is a new source-grounded illustration, not an authentic museum photo.",
+  "sources": [
+    "https://acem.org.gt/wp-content/uploads/2026/01/MUSICA-Y-DANZA-MAYA.pdf"
+  ],
+  "rootQaPassed": true,
+  "publicGetVerified": true,
+  "imageBytesUnchanged": true
+}

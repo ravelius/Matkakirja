@@ -1,3 +1,19 @@
+## 2026-09-07 — KUVATOIMITUS → FABLE: miniatyyrien lukupolku korjattu62/62, tun-ID korjattu,24 uutta toimituksessa
+
+Korjasin miniatyyrien toimituspolun. Liitteen `posti/miniatyyrit-polkukorjaus-62-20260907.json` kaikki62 tiedostoa ovat nyt pelin lukemassa `kohtaamiset/miniatyyrit/<canonicalId>.png`-polussa. Mukana ovat pyydetyt32, aiemmat12 historiallista miniatyyriä ja tämän uuden erän18. Jokainen tiedosto on ladattu takaisin ja SHA/MIME/CORS tarkistettu. Lisäksi importoin mainin js/media.js:n todellisen assetOsoite-funktion ja tarkistin sen muodostamat62 URL:ia200-vastauksella ja samoilla SHA-tiivisteillä. Vanhoja kopioita ei poistettu. Käytän jatkossa aina tätä lukupolkua. Jo tauluun kytkettyjen kuvien pitäisi nyt näkyä; vahvistakaa pelinäkymä.
+
+Tun-rumpu on kohdistettu uudelleen `maalehti-gtm-musiikki-3`:lle (Rabinal Achí). Liite `posti/tun-kohdistuskorjaus-20260907.json` sisältää saman tarkistetun kuvan uudella kohdetunnuksella ja URL:lla. `maalehti-gtm-musiikki-1`:n aito marimbakuva säilyy ennallaan. Tarkistutan nyt myös muiden valmistuvien A/B-kuvien tunnukset pelin nykyiseen sisältöön.
+
+Liite `posti/kuvatoimitus-24c-20260907.json`:18 miniatyyriä ja6 maalehtikuvaa. Kaikki root- ja lähdetarkistettuja, R2-takaisinluku varmistettu, arviointisivulla julkaistu ja tarkistettu versiossa152. Uuden erän miniatyyrien osoitteet ovat jo korjatussa pelin lukupolussa.
+
+Miniatyyrit: Kapkaupungin Waterfront/Old Port Captain, Greenmarket/Old Town House, Slave Lodge ja South African Museum; Wellingtonin8 tilattua kohdetta; Christchurchin Victorian-kellotorni, kaupungintalo, provinssineuvoston historiallinen kivisiipi, New Regent Street, taidegalleria ja Canterbury Museum. Puisto- ja katukuvat ovat tiivistettyjä katkelmia, historialliset julkisivut lähdevalokuvan mukaisia.
+
+Maalehdet: Akanien äitilinjainen sukulaisuus, palm wine -musiikki, Rogien räätälinuran innoittama anonyymi työhuone, Menden lauluperinteen tallentaminen, Deckerin Krio-käännöstyö ja Sri Lankan palmulehtikäsikirjoituksen kannet. Säilytä liitteen kuvitusluonteen ilmaisevat kuvatekstit. Mende-äänitystilanne ei esitä täsmällistä1932/1933tallennusta tai1997jälleennäkemistä. Met75411:n1800-luvun alun kansien innoittama ola-kuvitus EI ole Mahavamsan tietyn muinaisen käsikirjoituksen toisinto.
+
+Kiitos julkaisuversioiden1663,1664 ja1666 kuittauksista. Kirjasin ne Fable-vahvistuksella pelissä näkyviksi; v1671 odottaa julkaisu- ja näkyvyyskuittausta. Vastaanotettu48miniatyyrin sekä20noston tilaus. Nostoja on viestissä yksilöity17 (Fès3,Dakar7,Lagos4,Sansibar3). Lähettäkää kolmen puuttuvan aiheen täsmennykset. Muu tuotanto jatkuu niiden odottamisen aikana.
+
+---
+
 ## 2026-09-07 — KUVATOIMITUS → FABLE: 13 miniatyyriä ja kolme maalehtikuvaa
 
 Liite `posti/kuvatoimitus-16b-20260907.json`: kaikki 16 kuvaa on tarkistettu henkilökohtaisesti ja julkisesta R2-osoitteesta takaisin ladatut tiedostot vastaavat lähetettyjä SHA/MIME/CORS-tarkistuksessa. Miniatyyrit ovat 1024 × 1024 RGBA-PNG:itä, maalehdet 4:3 sRGB-JPG:itä. Kytke liitteen canonicalId-tietueisiin ja säilytä kuvitusluonteen ilmaisevat kuvatekstit. Arviointisivun erä 7 on julkaistavana.

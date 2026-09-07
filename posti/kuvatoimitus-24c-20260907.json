@@ -1,0 +1,614 @@
+{
+  "createdAt": "2026-09-07T08:45:26.529174+00:00",
+  "message": "18 miniatyyriä ja kuusi maalehtikuvaa, root- ja lähdetarkistettu.",
+  "items": [
+    {
+      "id": "maalehti-gha-tavat-3-r20260907-v2",
+      "canonicalId": "maalehti-gha-tavat-3",
+      "fileName": "maalehti-gha-tavat-3-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Akanien äitilinjaisen sukulaisuuden innoittama kuvitus kolmen sukupolven naisista perhe-esineen äärellä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-gha-tavat-3-r20260907-v2.jpg",
+      "sha256": "34b523156a709af372bde58943776af147563dad7ab085f7d52fd558d60af3cc",
+      "bytes": 545359,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja country feature, wide 4:3 editorial cultural illustration. Inside a contemporary Akan family home in Ghana, three generations of women share a quiet inheritance moment: a grandmother seated at center passes a small old carved wooden family stool to her adult daughter, while a teenage granddaughter sits beside them watching and touching her mother's shoulder. They are anonymous fictional people with natural visible faces and relaxed poses. This is a symbolic illustration of matrilineal abusua inheritance, not a genealogical chart and not a literal ritual claim. Camera-like natural realism, soft daylight, respectful domestic details. All three complete seated figures and the stool occupy only the middle 60–65 percent, with generous room around heads, hands, feet and furniture. No diagram, text, logos or watermark.\n",
+      "sources": [
+        "https://elias.unix.fas.harvard.edu/languages/twi/beginning/1/akan-family-system"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Harvard Twi teaching unit, lines35–40, explains mother-line clan membership and extended kinship. Family with keepsake is symbolic, not a universal legal succession diagram or documented royal-stool ceremony."
+    },
+    {
+      "id": "maalehti-sle-musiikki-0-r20260907-v1",
+      "canonicalId": "maalehti-sle-musiikki-0",
+      "fileName": "maalehti-sle-musiikki-0-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Sierra Leonen palm wine -musiikin innoittama kuvitus yhteisestä soittohetkestä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-musiikki-0-r20260907-v1.jpg",
+      "sha256": "14e61e10f861c8d5f1d6f2bad8d0454c5d52a9e49a5de49cc83ae932356cb9e0",
+      "bytes": 521263,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja country feature, 4:3 editorial photograph. A fictional anonymous 1950s maringa dance band performing in a modest Freetown social hall in Sierra Leone: acoustic guitar, trumpet and mandolin clearly visible, small hand percussion, period clothing and wooden chairs. Musicians seen broadly from behind or in non-identifiable side silhouette; do not depict a named real band. Sharp camera-like period realism, warm practical light, complete instruments and bodies. Ensemble occupies the central 60–65 percent with generous breathing room on every edge. No modern equipment, no readable text, no logos, no watermark.\n",
+      "sources": [
+        "https://realworldrecords.com/releases/dead-men-dont-smoke-marijuana/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Artist record-label liner notes with Rogie interview establish communal palm-wine music and acoustic guitar/percussion; anonymous bar gathering illustrative."
+    },
+    {
+      "id": "maalehti-sle-musiikki-1-r20260907-v1",
+      "canonicalId": "maalehti-sle-musiikki-1",
+      "fileName": "maalehti-sle-musiikki-1-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "S. E. Rogien räätälinuran ja musiikin yhteyden innoittama kuvitus anonyymistä räätälistä työhuoneessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-musiikki-1-r20260907-v1.jpg",
+      "sha256": "a47e36a2e91453a28f4f49fe47e873ef80f0123573c29c1cf7d6b3a0c0dd802b",
+      "bytes": 521739,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja country feature, 4:3 editorial photograph. An anonymous early-20th-century Sierra Leone palm-wine guitarist seated outdoors after work, playing an acoustic guitar beside a treadle sewing machine and folded tailoring cloth. Show the musician from behind and at medium distance so the face is not identifiable. West African coastal courtyard, natural late-afternoon light, historically plausible materials, sharp camera realism. Guitar, sewing machine and complete seated figure occupy the central 60–65 percent with generous clean margin on all edges. No readable text, no logo, no watermark.\n",
+      "sources": [
+        "https://www.mississippirecords.net/news-11"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Record-label interview with son Rogee Rogers confirms successful tailoring business before musical career; exact room, machine and anonymous back-facing figure illustrative."
+    },
+    {
+      "id": "maalehti-sle-musiikki-3-r20260907-v2",
+      "canonicalId": "maalehti-sle-musiikki-3",
+      "fileName": "maalehti-sle-musiikki-3-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Menden lauluperinteen tallentamisen innoittama kuvitus anonyymistä lauluryhmästä ja äänityslaitteista.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-musiikki-3-r20260907-v2.jpg",
+      "sha256": "96e1ddb3c26d0d9b7aeebb3226589bebf726c60d7f5c4a3c6ac55c3e4977feb0",
+      "bytes": 688407,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja country feature, wide 4:3 documentary reconstruction. A mid-20th-century ethnomusicology field-recording session in a Mende village in Sierra Leone. A complete portable reel-to-reel tape recorder sits on a low wooden table in the middle foreground, with the entire recorder, case, cable and table visible. Leave a broad strip of bare ground equal to 15 percent of image height below the recorder. A microphone stands behind it, and a small circle of anonymous singers farther back performs a funeral song with varied natural poses and some non-identifiable faces visible. Respectful quiet atmosphere, period-plausible equipment, sharp camera realism. All essential objects and people stay inside the middle 65 percent. No burial body, graphic grief, readable text, logos or watermark.\n",
+      "sources": [
+        "https://www.si.edu/object/wa-ka-quilt%3Aacm_2014.0009.0001"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Smithsonian indexed collection text recounts1932Dawley recording and1997Moran/Jabati reunion. Generated anonymous group and reel-recorder scene is general illustration, NOT1932recording or a portrait of named singers. Direct page fetch failed; indexed museum record read."
+    },
+    {
+      "id": "maalehti-sle-kirjallisuus-2-r20260907-v2",
+      "canonicalId": "maalehti-sle-kirjallisuus-2",
+      "fileName": "maalehti-sle-kirjallisuus-2-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Thomas Deckerin Krio-käännöstyön innoittama kuvitus anonyymistä kääntäjästä työpöytänsä ääressä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-kirjallisuus-2-r20260907-v2.jpg",
+      "sha256": "73711af0adbb263a809c5ed0af8091a7d4dddda0046b575bdff5519df13b896d",
+      "bytes": 465217,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja country feature, very wide 4:3 documentary reconstruction. Freetown in 1964: an anonymous Krio translator seen from behind at medium distance, working at a complete wooden desk. At the center are a small closed English Shakespeare volume with no readable title, loose handwritten translation draft pages with marks deliberately too small and indistinct to read, a fountain pen and a period typewriter. The scene evokes Thomas Decker’s Krio adaptation of Julius Caesar without depicting Decker’s face and without inventing any Krio quotation, book cover or street sign. Mid-century room with louvered window, modest shelves and natural tropical daylight. Sharp camera-like photorealism. Keep the complete person, desk, books, every page and typewriter inside the middle 60 percent, with at least 15 percent clear floor below, wall above and empty space on both sides. No readable text, modern electronics, logos or watermark.\n",
+      "sources": [
+        "https://www.africabib.org/rec.php?RID=321686586"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Journal abstract by Tcho Mbaimba Caulker2009 confirms Decker1964Krio translation Juliohs Siza. Anonymous translator and blank/unreadable books, not a likeness or facsimile."
+    },
+    {
+      "id": "maalehti-lka-historia-1-r20260907-v2",
+      "canonicalId": "maalehti-lka-historia-1",
+      "fileName": "maalehti-lka-historia-1-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Sri Lankan 1800-luvun alun maalattujen palmulehtikäsikirjoituksen kansien innoittama esinekuvitus. Kuva ei ole Mahavamsan tietyn käsikirjoituksen toisinto.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-lka-historia-1-r20260907-v2.jpg",
+      "sha256": "4f4e2df4cf33029150fa9ca5d5dbd01c67ccb190e209a617b9cc6152240d41a7",
+      "bytes": 416143,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": {
+        "path": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/production-resume-20260907/root-b-corrections-sol/prompts/maalehti-lka-historia-1-v2.prompt.txt",
+        "sha256": "8bb09831758d56b570862ba6f89a2241bb230c23d390e6c40748f6916f36e759",
+        "text": "Create an entirely new sharp camera-like 4:3 museum-study photograph using the attached Metropolitan Museum reference only for the real physical morphology of Sri Lankan ola palm-leaf manuscript covers. On a dark conservation table, show the complete long narrow manuscript assembly centered within the middle 60–65%: both separate painted wooden covers fully visible, with a modest stack of long narrow punched palm leaves between them and a thin binding cord. Preserve the reference's extremely elongated low rectangular proportions, red-orange painted covers, repeated small devotional figures and central cord; all ends, corners, leaves and both covers must be safely inside the frame with at least 15% empty table on every side. Do not reproduce the Met cover imagery exactly. Do not add readable dates, chronicle passages, pseudo-Sinhala letters, labels, captions, seals or accession numbers. This is an illustrative ola-book still life grounded in the Met object's shape, not a claim that the pictured leaves are the Mahavamsa or an authentic museum photograph. Photorealistic conservation photography, crisp wood and palm fibers, restrained warm sepia light, landscape 4:3.\n"
+      },
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/75411"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Native palm-leaf covers complete with12% horizontal margin; potentially deliverable after actual Met photo comparison. No blur padding. Root now compared Met75411 actual painted wooden covers: form/material/ratio/cord match. Newly exported unpadded native1448x1086 sRGB JPG. Illustrated palm-leaf manuscript, NOT a facsimile of Mahavamsa."
+    },
+    {
+      "id": "kapkaupunki-va-waterfront",
+      "canonicalId": "kapkaupunki-va-waterfront",
+      "fileName": "kapkaupunki-va-waterfront.png",
+      "categoryId": "miniatyyrit",
+      "caption": "V&A Waterfrontin Old Port Captain Buildingin ja laiturin innoittama miniatyyri.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kapkaupunki-va-waterfront.png",
+      "sha256": "84c5fecc6a61244efcfc25571b3592636746891f96f64f9521aafc088ac958a8",
+      "bytes": 759914,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new isolated miniature using the attached actual V&A Waterfront photograph as controlling reference. Show the complete real Old Port Captain's Building as a broad three-level pale blue-grey Victorian harbour block: the open ground-floor shop/arcade level must be present below two full upper window storeys; white quoins and window trim; two large curved end gables with oval windows; long corrugated gabled roof. Include a compact but recognizable waterfront context at its feet: timber quay, railings, a short strip of water and two small adjacent warehouse silhouettes, all secondary and fully contained. Preserve the building's true long horizontal proportions and do not omit the lowest floor. Style: Matkakirja M3 restrained warm sepia ink linework with light watercolor, crisp factual architectural detail. Entire subject centered and complete within an 800px bounding box on a 1024x1024 square, at least 64px clean margin at every edge. No people, cars, signs, labels, readable text, sky, mountains, background plate, beige paper rectangle, glow or halo. Render on perfectly flat pure #00FF00 chroma green for technical alpha extraction.\n",
+      "sources": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/8d/Old_Port_Captain%27s_Building.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "PASS: actual Old Port Captain photo matches three full levels, twin front gables and quay; secondary warehouse context illustrative."
+    },
+    {
+      "id": "kapkaupunki-greenmarket-square",
+      "canonicalId": "kapkaupunki-greenmarket-square",
+      "fileName": "kapkaupunki-greenmarket-square.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Greenmarket Squaren Old Town House miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kapkaupunki-greenmarket-square.png",
+      "sha256": "dea76d2bb21676a7305c9a85c278add8d30ed64e43d8557501c0c97325950021",
+      "bytes": 1085069,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new isolated miniature using the attached actual Old Town House photograph as controlling reference. Depict the real symmetrical pale yellow two-storey facade with white trim: exactly three large round entrance arches across the center at ground level, one lower rectangular window/door bay outside them on each side, a central balustraded balcony, exactly four tall dark sash windows above, a flat horizontal parapet/cornice, and a small square open bell cupola centered above with shallow domed cap. No triangular pediment, no hipped roof, no fourth arch. Add only a compact cobblestone fan and one small old green pump. Style: Matkakirja M3 restrained warm sepia ink linework with light watercolor, crisp factual architectural detail. Entire subject centered and complete within an 800px bounding box on a 1024x1024 square, at least 64px clean margin at every edge. No people, cars, signs, labels, readable text, sky, mountains, background plate, beige paper rectangle, glow or halo. Render on perfectly flat pure #00FF00 chroma green for technical alpha extraction.\n",
+      "sources": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/0b/Old_Town_House%2C_Greenmarket_Square%2C_Cape_Town.JPG"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "PASS: actual Old Town House matches central arcade and upper windows, flat parapet, open bell cupola."
+    },
+    {
+      "id": "kapkaupunki-iziko-slave-lodge",
+      "canonicalId": "kapkaupunki-iziko-slave-lodge",
+      "fileName": "kapkaupunki-iziko-slave-lodge.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Kapkaupungin Iziko Slave Lodgen julkisivu miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kapkaupunki-iziko-slave-lodge.png",
+      "sha256": "8cf39a16044890a37aaf65d1fbd0b5a868f61e64aab6057d4a3f3ed4bdff4920",
+      "bytes": 340327,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new isolated miniature using the attached actual Iziko Slave Lodge photograph as controlling reference. Depict the real very long low two-storey cream facade with a completely flat parapet and long straight roofline. At center, retain the slightly raised semicircular parapet panel, the large round fanlight above the doorway, small triangular door hood, and paired tall white pilasters; repeat evenly spaced tall dark shuttered windows across both long wings. No curved Cape Dutch gable, no visible pitched or hipped roof, no tower, no statue. Show the whole long facade and its true low horizontal proportions. Style: Matkakirja M3 restrained warm sepia ink linework with light watercolor, crisp factual architectural detail. Entire subject centered and complete within an 800px bounding box on a 1024x1024 square, at least 64px clean margin at every edge. No people, cars, signs, labels, readable text, sky, mountains, background plate, beige paper rectangle, glow or halo. Render on perfectly flat pure #00FF00 chroma green for technical alpha extraction.\n",
+      "sources": [
+        "https://image.arrivalguides.com/x/10/b4283bd5296153087d16d3e849505f7e.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "PASS: actual two-storey facade, flat parapet, central rounded pediment and fanlight match."
+    },
+    {
+      "id": "kapkaupunki-iziko-etela-afrikan-museo",
+      "canonicalId": "kapkaupunki-iziko-etela-afrikan-museo",
+      "fileName": "kapkaupunki-iziko-etela-afrikan-museo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Iziko South African Museumin julkisivu miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kapkaupunki-iziko-etela-afrikan-museo.png",
+      "sha256": "933c22f58fa2247c5205d5cb47ac0d1cbfcb7ecc6afa4062a9639de25c1e652d",
+      "bytes": 635127,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new isolated miniature using the attached actual Iziko South African Museum photograph as controlling reference. Depict the real broad symmetrical pale cream two-storey museum with a dark steep slate hipped roof, long low wings, three central round-arched entrance doors reached by wide steps, white pilasters/string courses, tall arched upper windows, and the exact small stepped central roof gable with three narrow round-topped openings and a low decorative crest. Preserve the reference's window shapes, low wing proportions and roofline. No grand triangular pediment, dome, tower or invented facade. Style: Matkakirja M3 restrained warm sepia ink linework with light watercolor, crisp factual architectural detail. Entire subject centered and complete within an 800px bounding box on a 1024x1024 square, at least 64px clean margin at every edge. No people, cars, signs, labels, readable text, sky, mountains, background plate, beige paper rectangle, glow or halo. Render on perfectly flat pure #00FF00 chroma green for technical alpha extraction.\n",
+      "sources": [
+        "https://www.hlimg.com/images/things2do/738X538/ttd_1518504600m2.JPG"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "PASS: actual three upper rectangular windows, three lower arches and three attic arches match."
+    },
+    {
+      "id": "wellington-rautatieasema",
+      "canonicalId": "wellington-rautatieasema",
+      "fileName": "wellington-rautatieasema.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Wellingtonin rautatieaseman julkisivu miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-rautatieasema.png",
+      "sha256": "bd01a27e248b2fb6480482030d4f2f88adccf5381382dfad3a48c09427b44a72",
+      "bytes": 699896,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 miniature using the supplied actual photograph as the controlling visual reference. Depict broad symmetrical 1937 red-brown brick station, long three-storey wings, pale stone horizontal bands, monumental central entrance with eight giant Doric columns and low rectangular parapet carrying a small round clock; flat/shallow tiled roofs; preserve the wide low civic massing. Preserve photographed floor count, roofline, footprint, facade rhythm and defining openings; do not substitute a generic landmark or invent towers, domes, spires, extra storeys or fantasy wings. Style: finely drawn warm black/sepia ink with restrained transparent watercolor washes, crisp architectural detail, compact complete subject centered in the middle 60 percent. No people, cars, sky, broad scenery, logos, letters, words, numbers, labels or readable inscriptions. All subject parts must remain fully inside 76 percent of canvas width and height. Render on one perfectly flat uniform pure chroma green #00FF00 background with no gradient, texture, vignette, glow, halo, checkerboard, green reflected light, ground plate or shadow rectangle. Square 1024x1024.",
+      "sources": [
+        "https://eyeofthefish.org/wp-content/uploads/2021/07/Station-1.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual front photograph matches eight giant columns, wide red-brick facade and low clock parapet; facade excerpt simplified."
+    },
+    {
+      "id": "wellington-bolton-streetin-hautausmaa",
+      "canonicalId": "wellington-bolton-streetin-hautausmaa",
+      "fileName": "wellington-bolton-streetin-hautausmaa.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Bolton Streetin hautausmaan muistomerkin ja kasvillisuuden innoittama miniatyyrikatkelma.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-bolton-streetin-hautausmaa.png",
+      "sha256": "53d8b492e49b4a161305edda22314113955a4d53e0992d4e144b36197b0e1523",
+      "bytes": 1623238,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 miniature using the supplied actual photograph as the controlling visual reference. Depict a compact leafy sloping Victorian cemetery vignette: several genuinely varied old stone headstones and one iron-railed family grave beneath dense trees, following the supplied photograph; no motorway, bridge, modern buildings or readable inscriptions. Preserve photographed floor count, roofline, footprint, facade rhythm and defining openings; do not substitute a generic landmark or invent towers, domes, spires, extra storeys or fantasy wings. Style: finely drawn warm black/sepia ink with restrained transparent watercolor washes, crisp architectural detail, compact complete subject centered in the middle 60 percent. No people, cars, sky, broad scenery, logos, letters, words, numbers, labels or readable inscriptions. All subject parts must remain fully inside 76 percent of canvas width and height. Render on one perfectly flat uniform pure chroma green #00FF00 background with no gradient, texture, vignette, glow, halo, checkerboard, green reflected light, ground plate or shadow rectangle. Square 1024x1024.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/Special:Redirect/file/Bolton%20St%20Cemetery%20Wellington.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual paired fluted memorial columns, iron fence and wooded graves match; surrounding stones are illustrative."
+    },
+    {
+      "id": "wellington-wellingtonin-museo",
+      "canonicalId": "wellington-wellingtonin-museo",
+      "fileName": "wellington-wellingtonin-museo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Wellington Museumin vanha Bond Store miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-wellingtonin-museo.png",
+      "sha256": "8e8aaa073cabb8990f170cfd8845bb154a2a1edae5b9c04cc474ab4dc15c1188",
+      "bytes": 1506627,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 miniature using the supplied actual photograph as the controlling visual reference. Depict the real 1892 Bond Store: compact three-storey pale blue-grey rendered corner warehouse, regular tall sash-window bays, red-orange arched central doorway, steep grey mansard roof with repeated front dormers; no modern tower behind. Preserve photographed floor count, roofline, footprint, facade rhythm and defining openings; do not substitute a generic landmark or invent towers, domes, spires, extra storeys or fantasy wings. Style: finely drawn warm black/sepia ink with restrained transparent watercolor washes, crisp architectural detail, compact complete subject centered in the middle 60 percent. No people, cars, sky, broad scenery, logos, letters, words, numbers, labels or readable inscriptions. All subject parts must remain fully inside 76 percent of canvas width and height. Render on one perfectly flat uniform pure chroma green #00FF00 background with no gradient, texture, vignette, glow, halo, checkerboard, green reflected light, ground plate or shadow rectangle. Square 1024x1024.",
+      "sources": [
+        "https://wellingtonnz.bynder.com/transform/00f3ddb6-0096-4262-970c-7bd583017aaf/Wellington-Museum-01?io=transform%3Afill%2Cwidth%3A1500%2Cheight%3A1500&quality=80"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual two main storeys plus dormered metal mansard roof, pale blue facade and red arched entry match."
+    },
+    {
+      "id": "wellington-circa-teatteri",
+      "canonicalId": "wellington-circa-teatteri",
+      "fileName": "wellington-circa-teatteri.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Wellingtonin Circa-teatterin julkisivu miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-circa-teatteri.png",
+      "sha256": "0a32f689643125b1edf8bc81d1be0af9ac3055e1cc3c9c1f2bd3e73961d0e3e7",
+      "bytes": 1217531,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 miniature using the supplied actual photograph as the controlling visual reference. Depict the preserved Westport Chambers facade: modest broad two-storey black-and-white frontage, five upper sash windows separated by white rusticated pilasters, two curved broken pediments at the top corners, central white arched canopy and small red door; no invented auditorium tower. Preserve photographed floor count, roofline, footprint, facade rhythm and defining openings; do not substitute a generic landmark or invent towers, domes, spires, extra storeys or fantasy wings. Style: finely drawn warm black/sepia ink with restrained transparent watercolor washes, crisp architectural detail, compact complete subject centered in the middle 60 percent. No people, cars, sky, broad scenery, logos, letters, words, numbers, labels or readable inscriptions. All subject parts must remain fully inside 76 percent of canvas width and height. Render on one perfectly flat uniform pure chroma green #00FF00 background with no gradient, texture, vignette, glow, halo, checkerboard, green reflected light, ground plate or shadow rectangle. Square 1024x1024.",
+      "sources": [
+        "https://www.omegarentalcars.com/assets/Blog-Images/Circa-Theatre-1.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual five-bay two-storey facade matches paired end pediments, white quoins, central red door and arched canopy."
+    },
+    {
+      "id": "wellington-oriental-bay",
+      "canonicalId": "wellington-oriental-bay",
+      "fileName": "wellington-oriental-bay.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Wellingtonin Oriental Bayn rannan ja suihkulähteen innoittama miniatyyrikatkelma.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-oriental-bay.png",
+      "sha256": "e2c0aa5879e877d41dd1af1091193752bf793be223cfa899b53da85c021204a4",
+      "bytes": 955077,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 miniature using the supplied actual photograph as the controlling visual reference. Depict a compact Oriental Bay waterfront emblem based on the photograph: the Carter Fountain as a tall clean white water jet rising from its small low circular harbour platform, a short crescent of sandy beach and three Norfolk pines behind; no skyline wall or text. Preserve photographed floor count, roofline, footprint, facade rhythm and defining openings; do not substitute a generic landmark or invent towers, domes, spires, extra storeys or fantasy wings. Style: finely drawn warm black/sepia ink with restrained transparent watercolor washes, crisp architectural detail, compact complete subject centered in the middle 60 percent. No people, cars, sky, broad scenery, logos, letters, words, numbers, labels or readable inscriptions. All subject parts must remain fully inside 76 percent of canvas width and height. Render on one perfectly flat uniform pure chroma green #00FF00 background with no gradient, texture, vignette, glow, halo, checkerboard, green reflected light, ground plate or shadow rectangle. Square 1024x1024.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/Special:Redirect/file/Carter%20Fountain%20in%20Oriental%20Bay.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual bay and offshore fountain silhouette match, hillside scene compressed into an illustrative excerpt. Despill result clean on dark."
+    },
+    {
+      "id": "wellington-embassy-teatteri",
+      "canonicalId": "wellington-embassy-teatteri",
+      "fileName": "wellington-embassy-teatteri.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Wellingtonin Embassy-teatteri miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-embassy-teatteri.png",
+      "sha256": "372938b3492195bdc12b0c371f7f093b7d6d33649f9b794f3ee8fb3d2f682d6e",
+      "bytes": 990980,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 miniature using the supplied actual photograph as the controlling visual reference. Depict the real 1924 corner cinema: broad cream three-storey Art Deco facade wrapping left around the corner, flat stepped parapets, central raised rectangular facade with small circular medallions, strong vertical window bays and a long low entrance canopy; omit billboards and lettering. Preserve photographed floor count, roofline, footprint, facade rhythm and defining openings; do not substitute a generic landmark or invent towers, domes, spires, extra storeys or fantasy wings. Style: finely drawn warm black/sepia ink with restrained transparent watercolor washes, crisp architectural detail, compact complete subject centered in the middle 60 percent. No people, cars, sky, broad scenery, logos, letters, words, numbers, labels or readable inscriptions. All subject parts must remain fully inside 76 percent of canvas width and height. Render on one perfectly flat uniform pure chroma green #00FF00 background with no gradient, texture, vignette, glow, halo, checkerboard, green reflected light, ground plate or shadow rectangle. Square 1024x1024.",
+      "sources": [
+        "https://upload.wikimedia.org/wikipedia/commons/5/53/Embassytheatredayjex.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual low facade with six round upper ornaments, high blank auditorium volume and red entrance canopy match."
+    },
+    {
+      "id": "wellington-nairn-streetin-mokki",
+      "canonicalId": "wellington-nairn-streetin-mokki",
+      "fileName": "wellington-nairn-streetin-mokki.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Wellingtonin Nairn Street Cottage puutarhoineen miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-nairn-streetin-mokki.png",
+      "sha256": "10d1245362154bbc09cb165a4ab00f5c5c949a2990f2da8beffa738c7c61bf8b",
+      "bytes": 1169635,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 miniature using the supplied actual photograph as the controlling visual reference. Depict the real compact 1858 cream horizontal-weatherboard cottage: broad front veranda with thin timber posts, centered dark red door, one sash window each side, steep dark shingle hipped roof with two matching front dormers and one brick chimney; a short white picket fence and restrained garden. Preserve photographed floor count, roofline, footprint, facade rhythm and defining openings; do not substitute a generic landmark or invent towers, domes, spires, extra storeys or fantasy wings. Style: finely drawn warm black/sepia ink with restrained transparent watercolor washes, crisp architectural detail, compact complete subject centered in the middle 60 percent. No people, cars, sky, broad scenery, logos, letters, words, numbers, labels or readable inscriptions. All subject parts must remain fully inside 76 percent of canvas width and height. Render on one perfectly flat uniform pure chroma green #00FF00 background with no gradient, texture, vignette, glow, halo, checkerboard, green reflected light, ground plate or shadow rectangle. Square 1024x1024.",
+      "sources": [
+        "https://wellingtonnz.bynder.com/transform/f2a4aae9-4c5f-467d-8cee-554d1dbb6d5c/Nairn-Street-Cottage-07?io=transform%3Afill%2Cwidth%3A1500%2Cheight%3A1500"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual twin dormers, hipped shingle roof, red porch roof, doorway and picket fence match."
+    },
+    {
+      "id": "wellington-basin-reserve",
+      "canonicalId": "wellington-basin-reserve",
+      "fileName": "wellington-basin-reserve.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Basin Reserven historiallisen katsomon miniatyyri.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/wellington-basin-reserve.png",
+      "sha256": "1a1a616d7c1664beedb660d5f06a29a29e9216d0d1bb0bf998addd73ebddead0",
+      "bytes": 1029516,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 miniature using the supplied actual photograph as the controlling visual reference. Depict a compact complete cricket-ground emblem dominated by the real old wooden pavilion: low cream ground level with repeated round arches, blue trim and white picket railing, red brick seating tiers, blue-railed upper veranda under one huge shallow dark cantilever roof; include a small curved oval of green field. Preserve photographed floor count, roofline, footprint, facade rhythm and defining openings; do not substitute a generic landmark or invent towers, domes, spires, extra storeys or fantasy wings. Style: finely drawn warm black/sepia ink with restrained transparent watercolor washes, crisp architectural detail, compact complete subject centered in the middle 60 percent. No people, cars, sky, broad scenery, logos, letters, words, numbers, labels or readable inscriptions. All subject parts must remain fully inside 76 percent of canvas width and height. Render on one perfectly flat uniform pure chroma green #00FF00 background with no gradient, texture, vignette, glow, halo, checkerboard, green reflected light, ground plate or shadow rectangle. Square 1024x1024.",
+      "sources": [
+        "https://hnzptlistonlineproduction.azurewebsites.net/list/image/1339b_lg.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual broad projecting grandstand roof, three front steel supports, tiered seating, stairs and arched lower facade match; lawn excerpt illustrative."
+    },
+    {
+      "id": "christchurch-victorian-kellotorni",
+      "canonicalId": "christchurch-victorian-kellotorni",
+      "fileName": "christchurch-victorian-kellotorni.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Christchurchin Victorian Clock Tower miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/christchurch-victorian-kellotorni.png",
+      "sha256": "9446f8a0dd9121dc6588b1101f623d7fef7ea6c634301f6672165f8c6194f530",
+      "bytes": 351726,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 miniature using the supplied actual photograph as the controlling visual reference. Depict the real freestanding Victoria Clock Tower: square dark volcanic-stone base with pale limestone quoins and a single pointed Gothic arch passage, above it an open delicate dark ironwork stage with four round clock faces and colored checkerboard glass panels, crowned by a narrow ornate iron spire; no church nave. Preserve photographed floor count, roofline, footprint, facade rhythm and defining openings; do not substitute a generic landmark or invent towers, domes, spires, extra storeys or fantasy wings. Style: finely drawn warm black/sepia ink with restrained transparent watercolor washes, crisp architectural detail, compact complete subject centered in the middle 60 percent. No people, cars, sky, broad scenery, logos, letters, words, numbers, labels or readable inscriptions. All subject parts must remain fully inside 76 percent of canvas width and height. Render on one perfectly flat uniform pure chroma green #00FF00 background with no gradient, texture, vignette, glow, halo, checkerboard, green reflected light, ground plate or shadow rectangle. Square 1024x1024.",
+      "sources": [
+        "https://openchch.nz/wp-content/uploads/2025/02/victoria_street_clock_tower_exterior_1.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Tower stone arch, stained glass and iron spire match actual photo, but saturated green residue is visible in upper iron ornaments; technical despill and repeat dark/light inspection required. Root applied upper-metal-only excess-green suppression, then personally viewed dark and light final: PASS."
+    },
+    {
+      "id": "christchurch-kaupungintalo",
+      "canonicalId": "christchurch-kaupungintalo",
+      "fileName": "christchurch-kaupungintalo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Christchurchin kaupungintalon ja suihkulähteen innoittama miniatyyrikatkelma.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/christchurch-kaupungintalo.png",
+      "sha256": "1656b6295c34e4db7d42a697fa8583fc8b1f470cfa45b3684b5688db5c982938",
+      "bytes": 1093853,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 miniature using the supplied actual photograph as the controlling visual reference. Depict the real Warren and Mahoney modernist Christchurch Town Hall river frontage: broad low brutalist concrete mass, large upper concert-hall volume with copper-brown faceted roof, long glass wall screened by many close vertical dark fins, heavy concrete cantilever, lower glazed foyer and one circular dandelion fountain beside a narrow strip of Avon water. Preserve photographed floor count, roofline, footprint, facade rhythm and defining openings; do not substitute a generic landmark or invent towers, domes, spires, extra storeys or fantasy wings. Style: finely drawn warm black/sepia ink with restrained transparent watercolor washes, crisp architectural detail, compact complete subject centered in the middle 60 percent. No people, cars, sky, broad scenery, logos, letters, words, numbers, labels or readable inscriptions. All subject parts must remain fully inside 76 percent of canvas width and height. Render on one perfectly flat uniform pure chroma green #00FF00 background with no gradient, texture, vignette, glow, halo, checkerboard, green reflected light, ground plate or shadow rectangle. Square 1024x1024.",
+      "sources": [
+        "https://images.myguide-cdn.com/christchurch/companies/christchurch-town-hall/large/christchurch-town-hall-1204962.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual modern copper roof, vertical fins, cantilevered facade and dandelion fountain match; river excerpt simplified."
+    },
+    {
+      "id": "christchurch-provinssineuvoston-talo",
+      "canonicalId": "christchurch-provinssineuvoston-talo",
+      "fileName": "christchurch-provinssineuvoston-talo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Canterburyn provinssineuvoston historiallisen kivisiiven julkisivu miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/christchurch-provinssineuvoston-talo.png",
+      "sha256": "53a8d448be02092b73177534e1dbaa4f3ab653431d276458ecad9944c4738eaf",
+      "bytes": 1511917,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 miniature using the supplied actual photograph as the controlling visual reference. Depict the photographed Canterbury Provincial Council Gothic building: dark grey basalt walls with pale limestone trim, steep long slate roof, tall end gable, grouped pointed-arch windows, small pointed doorway, two robust polygonal chimneys and an open two-bay stone balcony; no castle towers. Preserve photographed floor count, roofline, footprint, facade rhythm and defining openings; do not substitute a generic landmark or invent towers, domes, spires, extra storeys or fantasy wings. Style: finely drawn warm black/sepia ink with restrained transparent watercolor washes, crisp architectural detail, compact complete subject centered in the middle 60 percent. No people, cars, sky, broad scenery, logos, letters, words, numbers, labels or readable inscriptions. All subject parts must remain fully inside 76 percent of canvas width and height. Render on one perfectly flat uniform pure chroma green #00FF00 background with no gradient, texture, vignette, glow, halo, checkerboard, green reflected light, ground plate or shadow rectangle. Square 1024x1024.",
+      "sources": [
+        "https://upload.wikimedia.org/wikipedia/commons/4/4f/CanterburyProvincialCouncilBuildings1_gobeirne.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual photographed historical stone wing has correct steep slate roof, large chimney stacks, loggia, pointed openings and projecting right oriel. Caption should identify historical facade view."
+    },
+    {
+      "id": "christchurch-new-regent-street",
+      "canonicalId": "christchurch-new-regent-street",
+      "fileName": "christchurch-new-regent-street.png",
+      "categoryId": "miniatyyrit",
+      "caption": "New Regent Streetin julkisivujen ja historiallisen raitiovaunun innoittama miniatyyrikatkelma.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/christchurch-new-regent-street.png",
+      "sha256": "032d4dcc53117fd551d1bafdb376be47b455bb7437fc91590531a91118f8a181",
+      "bytes": 1044055,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 miniature using the supplied actual photograph as the controlling visual reference. Depict a compact complete New Regent Street scene: two facing rows of continuous two-storey Spanish Mission shop facades in restrained mint, pale yellow and powder blue, repeated curved parapets, arched upper windows and small black balconies, with one vintage red-and-cream tram centered on tracks; all signs blank. Preserve photographed floor count, roofline, footprint, facade rhythm and defining openings; do not substitute a generic landmark or invent towers, domes, spires, extra storeys or fantasy wings. Style: finely drawn warm black/sepia ink with restrained transparent watercolor washes, crisp architectural detail, compact complete subject centered in the middle 60 percent. No people, cars, sky, broad scenery, logos, letters, words, numbers, labels or readable inscriptions. All subject parts must remain fully inside 76 percent of canvas width and height. Render on one perfectly flat uniform pure chroma green #00FF00 background with no gradient, texture, vignette, glow, halo, checkerboard, green reflected light, ground plate or shadow rectangle. Square 1024x1024.",
+      "sources": [
+        "https://www.newzealand.com.au/assets/uploads/images/Canterbury/Christchurch/Operators/Christchurch-Attractions/Tram/tram-new-regent-street-pastel-shops-christchurch.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual pastel Spanish Mission facades, tiled storefront details, overhead wires and heritage tram match the photographed street excerpt."
+    },
+    {
+      "id": "christchurch-taidegalleria",
+      "canonicalId": "christchurch-taidegalleria",
+      "fileName": "christchurch-taidegalleria.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Christchurch Art Galleryn lasijulkisivu ja veistokselliset rakenteet miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/christchurch-taidegalleria.png",
+      "sha256": "703819550cf55d019a0c49b5f157d2fe077713127343b5aa163e2e904b482f72",
+      "bytes": 652217,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 miniature using the supplied actual photograph as the controlling visual reference. Depict the real Te Puna o Waiwhetu art gallery: broad low two-storey sweeping convex glass curtain-wall facade with continuous horizontal metal bands, low white entrance canopy, a lower glass left wing, and three very tall slender leaning silver mast sculptures arching above the plaza; no boxy office tower. Preserve photographed floor count, roofline, footprint, facade rhythm and defining openings; do not substitute a generic landmark or invent towers, domes, spires, extra storeys or fantasy wings. Style: finely drawn warm black/sepia ink with restrained transparent watercolor washes, crisp architectural detail, compact complete subject centered in the middle 60 percent. No people, cars, sky, broad scenery, logos, letters, words, numbers, labels or readable inscriptions. All subject parts must remain fully inside 76 percent of canvas width and height. Render on one perfectly flat uniform pure chroma green #00FF00 background with no gradient, texture, vignette, glow, halo, checkerboard, green reflected light, ground plate or shadow rectangle. Square 1024x1024.",
+      "sources": [
+        "https://christchurchartgallery.org.nz/media/cache/27/55/275588b1533339e70b8cf45437a95edf.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual curved glass facade, canopy and curved sculpture supports match; slight saturated green residue in thin metal sculpture requires technical cleanup. Root applied upper-metal-only excess-green suppression, then personally viewed dark and light final: PASS."
+    },
+    {
+      "id": "christchurch-canterburyn-museo",
+      "canonicalId": "christchurch-canterburyn-museo",
+      "fileName": "christchurch-canterburyn-museo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Canterbury Museumin historiallinen julkisivu miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/christchurch-canterburyn-museo.png",
+      "sha256": "d483eb7ca3641738e7dabff40b931918148eaf3196f0675600de4ae1774dd063",
+      "bytes": 973328,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new Matkakirja M3 miniature using the supplied actual photograph as the controlling visual reference. Depict the real Canterbury Museum Rolleston Avenue facade: long low dark-grey basalt Gothic building with pale limestone pointed window surrounds, repeated steep gables, a square central tower capped by a very steep truncated slate pyramidal roof, and the small columned garden gateway at far left; omit posters, statue and lettering. Preserve photographed floor count, roofline, footprint, facade rhythm and defining openings; do not substitute a generic landmark or invent towers, domes, spires, extra storeys or fantasy wings. Style: finely drawn warm black/sepia ink with restrained transparent watercolor washes, crisp architectural detail, compact complete subject centered in the middle 60 percent. No people, cars, sky, broad scenery, logos, letters, words, numbers, labels or readable inscriptions. All subject parts must remain fully inside 76 percent of canvas width and height. Render on one perfectly flat uniform pure chroma green #00FF00 background with no gradient, texture, vignette, glow, halo, checkerboard, green reflected light, ground plate or shadow rectangle. Square 1024x1024.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/Special:Redirect/file/Canterbury%20Museum%2C%20Christchurch%20-%20Joy%20of%20Museums%20-%20External%202.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual facade, five pointed bays, steep curved tower roof and circular left window match; green residue in top iron ornament requires technical despill. Root applied upper-metal-only excess-green suppression, then personally viewed dark and light final: PASS."
+    }
+  ],
+  "reviewPublished": true,
+  "gameIntegrationClaimed": false,
+  "reviewVersion": 152,
+  "reviewUrl": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site"
+}
