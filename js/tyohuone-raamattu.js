@@ -4163,6 +4163,14 @@ export const RAAMATTU = {
           + 'faktat (Denisovan luola: denisovalaiset, neandertalilaiset ja '
           + 'niiden yhteinen lapsi, ajoitus n. 50 000-200 000 v) tarkistaa '
           + 'Fable.',
+        'IHMISEN MATKA: ETELA-AFRIKASSA KAMERA ULOS, VANA EI SAA HUKKUA '
+          + '(omistaja 7.9.2026 ilta klo 18.15 Suomen aikaa, sanatarkasti: "siina '
+          + 'tarinan alkupaikkeella, kun kaydaan Etela-Afrikan kohdalla, niin '
+          + 'kartta voisi zoomautua ulospain, jotta ei hukattaisi sita viivaa, '
+          + 'jossa oltiin menossa niin pahasti"): esityksen alkujaksoissa '
+          + '(ranta, blombos) kamera pysyy niin kaukana, etta kulkeva vana ja '
+          + 'sen karki nakyvat koko ajan; kameran saanto (vanat.md 3.2) '
+          + 'tasmennetaan: karki ei saa poistua kuvasta lahennettaessa.',
         'IHMISEN MATKA: VANAT RANNIKKOA MAALAAVINA KAISTOINA, EI VIIVA JA HALO '
           + '(omistaja 7.9.2026 ilta klo 18.05 Suomen aikaa, sanatarkasti: '
           + '"Tarkista myos ne viivat, jotka leviavat kartalla. Niiden tavallaan '
