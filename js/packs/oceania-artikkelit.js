@@ -1048,4 +1048,39 @@ export const OCEANIA_ARTIKKELIT = {
       + 'kieli tetumin rinnalla, ja sen tärkein vientikasvi on '
       + 'ylängöillä kasvava kahvi.',
   },
+  /* Vanuatun maaintro kirjoitettiin 6.9.2026 maalehden
+   * (MAA_KATEGORIAT.VUT) yhteydessä samasta en-Wikipedian aineistosta
+   * kuin lehti. Vain intro-kenttä, kuten Fidžillä ja
+   * Salomonsaarilla — maalehden maaosasto nojaa tähän introon yksin.
+   * Avain on maan nimi js/packs/oceania-countries.js:ssä. Port Vilan
+   * kaupunkilehden aiheet (Franceville, kondominio, bislama,
+   * kulttuurikeskus) on jätetty pois, koska ne ovat kaupunkilehden
+   * nostoja. */
+  Vanuatu: {
+    intro: 'Vanuatu on vulkaanista alkuperää oleva saariketju '
+      + 'Melanesiassa, 1 750 kilometriä Pohjois-Australiasta itään ja '
+      + 'Fidžistä länteen. Ensimmäiset asukkaat saapuivat noin '
+      + '3 000 vuotta sitten, ja he olivat lapita-kulttuurin väkeä: '
+      + 'Efaten Teoumasta on kaivettu Tyynenmeren vanhin tunnettu '
+      + 'hautausmaa, jonka vainajilta oli irrotettu kallo ja tilalle '
+      + 'asetettu kartiokotilorenkaita. **Maailman tihein kielikartta '
+      + 'on täällä: alle 300 000 asukasta ja 138 alkuperäistä kieltä, '
+      + 'keskimäärin vajaat kaksituhatta puhujaa kutakin kohti.**'
+      + '\n\n'
+      + 'Ensimmäisenä eurooppalaisena saarille tuli 1606 portugalilainen '
+      + 'Pedro Fernandes de Queirós Espanjan kruunun palveluksessa; hän '
+      + 'luuli löytäneensä eteläisen mantereen ja nimesi suurimman '
+      + 'saaren Espíritu Santoksi. Isoisän matkavuonna 1873 saarilla ei '
+      + 'ole hallintoa: Britannia ja Ranska sopivat yhteishallinnosta '
+      + 'vasta 1887 ja kondominiosta 1906. Nimi Vanuatu valittiin vasta '
+      + 'itsenäistymisen alla helmikuussa 1980 — vanua tarkoittaa maata '
+      + 'tai kotia ja tu seisomista.'
+      + '\n\n'
+      + 'Kulttuuri on tehty katoavista aineista ja kestävistä merkeistä: '
+      + 'hiekkapiirros syntyy yhtenä viivana yhdellä sormella, Ambrymin '
+      + 'lohkorummut nostetaan pystyyn kylän aukiolle, ja namelen lehti '
+      + 'maahan pistettynä kertoo, että paikka on tabu. Ruoka kypsyy '
+      + 'maakuopassa kuumilla kivillä, ja illan kava juodaan yhteisessä '
+      + 'nakamalissa, jonka ovessa ei ole lukkoa.',
+  },
 };

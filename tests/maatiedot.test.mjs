@@ -47,6 +47,16 @@ import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
  * Lista saa vain lyhentyä.
  */
 const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
+  'VUT',
+  'VEN',
+  'URY',
+  'SLB',
+  'PRY',
+  'PNG',
+  'PAN',
+  'NIC',
+  'GTM',
+  'FJI',
   'TLS',
   // Grönlanti ja Saint Helena eivät ole Maailmanpankin suvereenien
   // valtioiden aineistossa, Hongkong on rajattu sekä Maailmanpankin

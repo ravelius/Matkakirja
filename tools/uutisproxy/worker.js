@@ -175,6 +175,10 @@ const SALLITUT = [
   // (/rss/), koska /rss ohjaa 301:llä eikä worker seuraa
   // uudelleenohjauksia.
   'https://www.alwihdainfo.com/',
+  // Vanuatun uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä. Syöte on BLOX-julkaisujärjestelmän
+  // hakuosoite (search/?f=rss), koska /rss/ ja /feed/ vastaavat 404:llä.
+  'https://www.dailypost.vu/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

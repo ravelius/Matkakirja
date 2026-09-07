@@ -1111,4 +1111,29 @@ export const UUTISLAHTEET = {
     kieli: 'fr',
     syote: 'https://www.alwihdainfo.com/rss/',
   },
+  /*
+   * Vanuatu Daily Post on maan johtava sanomalehti Port Vilassa.
+   * Testattu 6.9.2026: osastohaun RSS-osoite antaa viisikymmentä
+   * juttua, ja artikkelisivun [itemprop="articleBody"]-lohkosta
+   * jäsentyy kuusitoista yli 60 merkin kappaletta sekä og:image.
+   *
+   * SYÖTE ON HAKUOSOITE eikä /feed/-polku: dailypost.vu pyörii BLOX-
+   * julkaisujärjestelmällä, jossa RSS syntyy hakuparametreista
+   * (f=rss). Osoitteet /rss/ ja /feed/ vastaavat 404:llä.
+   *
+   * KIELI ON ENGLANTI, koska bislamankielistä syötettä ei ole:
+   * osastohaku c=bislama palauttaa validin RSS:n, jossa on nolla
+   * juttua.
+   *
+   * Testattu ja hylätty: VBTC eli maan yleisradio (vbtc.vu/feed/,
+   * 403 Sucurin palomuurista), Vanuatu Independent (301-uudelleen-
+   * ohjaus, jota worker ei seuraa) sekä Loop Vanuatu,
+   * vanuatudaily.news ja vanuatustandard.com, joihin yhteys ei
+   * auennut lainkaan.
+   */
+  VUT: {
+    nimi: 'Vanuatu Daily Post',
+    kieli: 'en',
+    syote: 'https://www.dailypost.vu/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc',
+  },
 };

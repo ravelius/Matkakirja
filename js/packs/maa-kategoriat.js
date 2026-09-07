@@ -50280,4 +50280,396 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * VANUATU (VUT) — Oseanian laudan neljäs maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-vanuatu.md; kaikki
+   * väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026:
+   * "Vanuatu", "Teouma", "Coconut crab", "Vanuatu megapode",
+   * "Megapode", "Cycas seemannii", "Vanuatu flying fox", "Laplap",
+   * "Kava", "Nakamal", "Economy of Vanuatu", "Slit drum", "Culture of
+   * Vanuatu", "Sand drawing", "Avoiuli", "Flag of Vanuatu",
+   * "Languages of Vanuatu", "Meiolania" ja "Kuwae".
+   *
+   * RAJAUS ON POIKKEUKSELLISEN TIUKKA, koska Port Vilan
+   * kaupunkilehdellä (KULTTUURI_KATEGORIAT.portvila) on OMA
+   * historia-aihesivunsa. Se kertoo jo Teouman hautausmaan löytymisen
+   * 2004, Roi Matan, Queirósin 1606 ja Nueva Jerusalénin, Bougainvillen
+   * ja Cookin nimet, kulttuurikeskuksen ja sandroing-perinteen
+   * perusteet — ja sen kansisivu Francevillen, kondominion ja
+   * bislaman. Kartan nostot (maastokohteet-vut.js) kattavat Yasurin,
+   * Tabwemasanan, Korallimeren, nagolin, Ambrymin tulivuoren,
+   * Malakulan, Gauan, Torresin saaret, Ambaen, Epin ja Futunan;
+   * skandaalit.js Coolidgen 1942 sekä Erromangon santelipuu- ja
+   * työvoimakaupan.
+   *
+   * MAALEHTI EI TOISTA YHTÄKÄÄN NÄISTÄ. Siksi täällä ei ole Queirósia,
+   * ei Roi Mataa, ei tulivuoria omana aiheenaan eikä hiekkapiirroksen
+   * perusesittelyä. Teouma esiintyy vain siltä osin kuin kaupunkilehti
+   * ei siitä puhu: mitä kaivauksesta on saatu irti laboratoriossa
+   * (muinais-DNA 2016) ja mitä ihmisluiden seasta löytyi (405
+   * kilpikonnan luuta). Hiekkapiirros esiintyy vain kirjaimiston
+   * lähtökohtana ja nykytaiteen aiheena. Kaksi kuvaa, jotka Port Vila
+   * jo käyttää (PortVilaLapita.jpg ja Sand drawing, Vanuatu.jpg), on
+   * jätetty tästä pois tarkoituksella.
+   *
+   * EI NYKYPOLITIIKKAA (M3:n Myanmar-linja): 1990-luvulta alkanut
+   * hallitusten vaihtuvuus, veroparatiisi- ja passikeskustelu sekä
+   * John Frum- ja Prinssi Philip -liikkeet on jätetty pois.
+   * Itsenäistyminen kerrotaan nimen ja äänestyksen kautta ilman
+   * osapuolikehystä. Kava kuvataan seremoniallisena juomana; kaikki
+   * artikkelin terveys- ja farmakologiaosiot on jätetty pois.
+   *
+   * TUNNUSLUVUT PUUTTUVAT VIELÄ: VUT on lisätty
+   * tests/maatiedot.test.mjs:n VIELA_ILMAN_TUNNUSLUKUJA-listalle,
+   * kunnes oceania-maatiedot.js saa rivin.
+   */
+  VUT: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Vanuatun 1800- ja 1900-luku on kertomus siitä, miten saaret '
+          + 'vedettiin maailmantalouteen ensin puuvillan ja sitten kookoksen '
+          + 'perässä — ja miten ne lopulta antoivat itselleen nimen.',
+      nostot: [
+        {
+          otsikko: 'Puuvilla, joka vaihtui kookokseen',
+          aika: '1865–1906',
+          tiedosto: 'Coconut plantation (29203169861).jpg',
+          teksti: 'Ensimmäinen eurooppalainen istuttaja oli Henry Ross Lewin, joka '
+              + 'aloitti puuvillan viljelyn Tannalla 1865 ja hylkäsi tilansa '
+              + 'myöhemmin. Kun Yhdysvaltain sisällissodan päättyminen romahdutti '
+              + 'puuvillan maailmanmarkkinahinnan, istuttajat vaihtoivat kahviin, '
+              + 'kaakaoon, banaaniin ja kaikkein menestyksekkäimmin kookokseen. '
+              + 'Aluksi tulijat olivat brittiläisiä Australiasta, mutta ilman oman '
+              + 'hallituksensa tukea heidän tilansa menestyivät kehnosti. '
+              + 'Irlantilaissyntyinen John Higginson perusti 1882 ranskalaismielisen '
+              + 'yhtiön, joka käänsi asetelman, ja Ranskan valtio otti sen haltuunsa '
+              + '1894. Vuonna 1906 ranskalaisia asukkaita oli 401 ja brittejä 228.',
+          selite: 'Kookosviljelmä Vanuatussa. Rivit istutettiin kauppaa varten: '
+            + 'kopra eli kuivattu kookosliha on yhä maan tärkein vientikasvi.',
+          lahde: 'Simon_sees from Australia, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Kuusituhatta vietnamilaista viljelmillä',
+          aika: '1920–1963',
+          teksti: 'Kun istutusten työvoimaa haettiin 1920- ja 1930-luvuilla, sitä '
+              + 'tuotiin Vietnamista, joka kuului silloin Ranskan Indokiinaan. '
+              + 'Vuoteen 1929 mennessä Uusilla Hebrideillä oli noin 6 000 '
+              + 'vietnamilaista sopimustyöläistä. Levottomuudet alkoivat '
+              + '1940-luvulla: työolot olivat huonot, ja saarille tulleet '
+              + 'liittoutuneiden sotilaat suhtautuivat työläisiin selvästi '
+              + 'ymmärtäväisemmin kuin istuttajat, mikä muutti käsitystä siitä, mikä '
+              + 'oli mahdollista. Suurin osa palautettiin Vietnamiin kahdessa '
+              + 'erässä, 1946 ja 1963. Pieni vietnamilaisyhteisö on Vanuatussa yhä.',
+        },
+        {
+          otsikko: 'Viisikymmentätuhatta amerikkalaista neljänkymmenentuhannen keskellä',
+          aika: '1942–1945',
+          teksti: 'Toukokuusta 1942 alkaen Yhdysvallat siirsi joukkoja Uusille '
+              + 'Hebrideille, ja Efatelle ja Espiritu Santolle nousi kiitoteitä, '
+              + 'teitä ja tukikohtia. Huipussaan saarilla oli noin 50 000 '
+              + 'amerikkalaista — enemmän kuin niiden noin 40 000 asukasta. '
+              + 'Ni-vanuatulaisista koottiin parinsadan miehen puolustusjoukko ja '
+              + 'tuhansia rakennustöihin Vanuatu Labor Corpsiin. Tulijoiden '
+              + 'epämuodollisuus, vauraus ja se, että afroamerikkalaiset sotilaat '
+              + 'palvelivat edes jossain määrin tasa-arvoisina, mursi '
+              + 'siirtomaaylemmyyden perustaa. Sota-ajan saaret ovat James '
+              + 'Michenerin romaanin Tales of the South Pacific miljöö.',
+        },
+        {
+          otsikko: 'Maa, joka nimesi itsensä',
+          aika: '1980',
+          tiedosto: 'Happy Independence, Vanuatu! (Imagicity 378).jpg',
+          teksti: 'Saaristolla ei ollut koskaan ollut yhtä omaa nimeä — ulkopuoliset '
+              + 'olivat antaneet sille kaikki, joita kartat käyttivät. '
+              + 'Itsenäisyyttä ajanut puolue otti 1977 nimen Vanua\'aku, meidän '
+              + 'maamme. Helmikuussa 1980 edustajakokous äänesti 26 äänellä 2 vastaan '
+              + 'nimestä Vanuatu: vanua tarkoittaa monessa austronesialaisessa '
+              + 'kielessä maata tai kotia ja tu seisomista. Muotoilu on luettu '
+              + 'tongoalaisen Tom Tipolomatan ansioksi, ja kansallissymbolien '
+              + 'alakomitea piti Vanua\'akua liian puoluesidonnaisena. Pääministeri '
+              + 'Walter Linin mukaan nimi kertoo maasta, joka on seissyt yksin ja '
+              + 'seisoo yksin jatkossakin.',
+          selite: 'Itsenäisyyspäivän seremonia nurmikentällä: rivistöt, kaiuttimet '
+            + 'ja katsojat lehtikattoisten katosten alla.',
+          lahde: 'Graham Crumb, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Vanuatussa on paljon merta ja vähän maaeläimiä. Ne, jotka tänne '
+          + 'pääsivät, ovat tulleet kaukaa — ja muutama viimeisin ajautui rantaan '
+          + 'myrskyn mukana.',
+      nostot: [
+        {
+          otsikko: 'Krapu, joka kiipeää palmuun ja pudottaa pähkinän',
+          tiedosto: 'Coconut Crab - Birgus latro 5 (4090676981).jpg',
+          teksti: 'Kookoskrapu on maailman suurin maalla elävä niveljalkainen: '
+              + 'painoa jopa 4,1 kiloa ja jalkaväliä yli metri. Se on erakkorapu, '
+              + 'mutta vain nuoret kantavat kotiloa; aikuisen takaruumis kovettuu '
+              + 'kitiinillä ja kalkilla, eikä se enää kestä pitkää oleskelua veden '
+              + 'alla. Hajuaisti on kehittynyt samaan suuntaan kuin hyönteisillä, ja '
+              + 'tuntosarvia heilutellaan ilmassa aivan kuin niillä. Kookos avataan '
+              + 'repimällä kuitu auki juuri kolmen idätysreiän kohdalta ja hakkaamalla '
+              + 'saksilla, kunnes kuori pettää; siihen voi mennä päiviä. Vanuatussa '
+              + 'saaliille on säädetty vähimmäiskoko.',
+          selite: 'Kookoskrapu Diego Garcian saarella Intian valtamerellä. Laji elää '
+            + 'samanlaisena Vanuatussa; hyviä lähikuvia on eniten sen levinneisyyden '
+            + 'länsipäästä.',
+          lahde: 'Drew Avery, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Lintu, joka ei haudo munaansa',
+          tiedosto: 'Megapodius layardi - Euan Moore - 610334799.jpeg',
+          teksti: 'Vanuatun megapodi elää vain tässä maassa, alankometsissä, ja sen '
+              + 'kaksi tyyppiyksilöä kerättiin Efatelta heinä- ja syyskuussa 1877. '
+              + 'Megapodit eivät haudo munia ruumiinlämmöllä vaan hautaavat ne: osa '
+              + 'suvun linnuista kasaa mätänevästä kasvimassasta kekoja, joiden '
+              + 'lämpöä koiras säätää lisäämällä ja poistamalla lehtiä, osa käyttää '
+              + 'maan omaa lämpöä ja osa auringon kuumentamaa hiekkaa. Muna on '
+              + 'poikkeuksellisen keltuaisvaltainen, ja poikanen kuoriutuu kypsempänä '
+              + 'kuin yksikään toinen lintu: silmät auki, siipisulat valmiina ja '
+              + 'juoksukykyisenä samana päivänä.',
+          selite: 'Vanuatun megapodi puun oksalla. Lintu on tummasävyinen ja '
+            + 'punaposkinen ja liikkuu enimmäkseen metsänpohjalla.',
+          lahde: 'Euan Moore, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Kasvi, joka on samalla kieltomerkki',
+          teksti: 'Namele on käpypalmu, jota kasvaa Efatella, Fidžillä, Tongassa ja '
+              + 'Uudessa-Kaledoniassa. Vanuatussa se ei ole pelkkä kasvi vaan merkki: '
+              + 'maahan tai puuhun pistetty namelen lehti kertoo, että paikka on '
+              + 'tabu. Kaksi lehteä on maan lipussa ja vaakunassa, ja niitä '
+              + 'kannetaan riipuksena sianhampaan kanssa; lipun kielessä ne ovat '
+              + 'rauhan merkki. Yhdessä nanggaria-kasvin kanssa namele antoi nimen '
+              + 'Nagriamel-liikkeelle, joka syntyi Espiritu Santolla 1966 '
+              + 'vastustamaan sitä, että yhteisiä kastom-maita raivattiin '
+              + 'karjatiloiksi.',
+        },
+        {
+          otsikko: 'Neljä krokotiilia, jotka tulivat myrskyn mukana',
+          tiedosto: 'Renard volant du Vanuatu.jpg',
+          teksti: 'Trooppisista metsistä huolimatta Vanuatun maalajisto on niukka, ja '
+              + 'juuri se kertoo, miten vaikea saarille on päästä. Kotoperäisiä '
+              + 'matelijoita on kahdeksan lajia, lepakoita yksitoista ja niistä kolme '
+              + 'ei elä missään muualla, maa- ja vesilintuja 61 lajia — mutta '
+              + 'merinilviäisiä yli 4 000. Oma lentävä koira pölyttää ja levittää '
+              + 'puiden siemeniä ja on siksi metsän uudistaja. Mangroveissa elää '
+              + 'kolme tai neljä aikuista suistokrokotiilia ilman lisääntyvää kantaa: '
+              + 'niiden arvellaan ajautuneen pohjoisille saarille syklonien mukana '
+              + 'Salomonsaarilta ja Uudesta-Guineasta.',
+          selite: 'Vanuatun lentävä koira roikkuu kukkivassa puussa. Se elää mesillä, '
+            + 'siitepölyllä ja hedelmillä, ja siksi se on samalla pölyttäjä.',
+          lahde: 'ANGKOR, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Lähes jokainen perhe kasvattaa ruokansa itse, ruoka kypsyy kuumilla '
+          + 'kivillä eikä paistinpannulla, ja illan tärkein juoma nautitaan yhteisessä '
+          + 'talossa, jonka ovessa ei ole lukkoa.',
+      nostot: [
+        {
+          otsikko: 'Kansallisruoka, jolla on eri nimi joka saarella',
+          teksti: 'Laplap tehdään raastamalla leipäpuuta, banaania, taaroa tai '
+              + 'jamssia tahnaksi, joka kääritään banaaninlehtiin ja kypsennetään '
+              + 'maanalaisessa kiviuunissa tuoreen kookoskerman kanssa; mukaan voi '
+              + 'tulla sianlihaa, nautaa, kanaa tai lentävää koiraa. Nimi on bislamaa '
+              + 'ja tulee parista pohjoisen saaren kielestä — Dorigissa lablab, '
+              + 'Numessa labalam. Useimmilla maan omilla kielillä ruoalla on aivan '
+              + 'toinen sana: Motassa loko, Ragassa loḡo, Hiwissä tegōv, Mwotlapissa '
+              + 'na-tgop, Arakissa ureeje. Yksi ruoka, toistasataa nimeä.',
+        },
+        {
+          otsikko: 'Juoma, joka kesytettiin täällä',
+          tiedosto: 'Kava-powder-from-vanuatu-ready-to-mix-with-water.jpg',
+          teksti: 'Kava on pippurikasvi, jonka juuresta valmistetaan Tyynenmeren '
+              + 'seremoniallinen juoma. Kaikki pensaat ovat steriilejä klooneja: '
+              + 'kasvi kesytettiin Pohjois-Vanuatussa noin 3 000 vuotta sitten '
+              + 'villistä Piper wichmaniista valikoimalla, ja lapitalaiset veivät sen '
+              + 'mukanaan itään — Uudessa-Seelannissa asti se ei enää kasva. Vanuatu '
+              + 'jakaa lajikkeet jaloihin ja tudei- eli kahden päivän kaviin, ja vain '
+              + 'jaloja saa viedä maasta, vähintään viisivuotiaina ja luomuna. '
+              + 'Tunnetuimmat ovat Pentecostin borogu, Ambaen melomelo ja Espiritu '
+              + 'Santon palarasul.',
+          selite: 'Kuivattua ja jauhettua kavan juurta kourallinen. Vanuatussa '
+            + 'käytetään yleensä tuoretta juurta; jauhe on se muoto, jossa kava '
+            + 'kulkee maasta ulos.',
+          lahde: 'Ib0ga, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Talo, jonka ovessa ei ole lukkoa',
+          teksti: 'Nakamal on kokoontumispaikka, jollainen on jokaisessa '
+              + 'merkittävässä yhteisössä, mutta muoto vaihtelee alueittain. '
+              + 'Pohjoisessa ja keskiosissa se on koko yhteisön päällikön johdolla '
+              + 'rakentama iso talo, jossa naimattomat miehet ja miesvieraat voivat '
+              + 'nukkua. Useimmista puuttuu lukittava ovi — merkki siitä, että '
+              + 'jokainen ystävällinen vieras on tervetullut — mutta sisäänkäynnillä '
+              + 'voi olla matala este eläinten varalta. Edessä on tasoitettu aukio '
+              + 'nasara, jolla tanssitaan. Etelässä nakamal voi olla banjaanipuun '
+              + 'alle raivattu katos, ja kaupungissa kavaa myyvän nakamalin '
+              + 'tunnistaa oven yläpuolelle sytytetystä värillisestä lampusta.',
+        },
+        {
+          otsikko: 'Kolmesataaseitsemänkymmentäneljätuhatta tonnia kookosta',
+          aika: '2018',
+          teksti: 'Noin 80 prosenttia väestöstä elää maasta, omavaraisviljelystä '
+              + 'pieniin tiloihin. Kopra eli kuivattu kookosliha on selvästi tärkein '
+              + 'vientikasvi ja kattaa yli kolmanneksen viennistä; perässä tulevat '
+              + 'puutavara, naudanliha ja kaakao, ja kavan juuriuutteesta on tullut '
+              + 'oma vientiartikkelinsa. Kopra, kaakao, kava ja naudanliha ovat '
+              + 'yhdessä yli 60 prosenttia viennin arvosta. Vuonna 2018 maa tuotti '
+              + '374 000 tonnia kookosta, 53 000 tonnia juureksia ja mukuloita, '
+              + '16 000 tonnia banaania ja 13 000 tonnia vihanneksia. Ruokapula on '
+              + 'harvinaista, koska melkein jokaisella perheellä on oma puutarha.',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Vanuatun kuvataide on tehty katoavista aineista ja pystyyn '
+          + 'nostetuista rungoista — ja hiekkaan piirretyistä kuvioista on kasvanut '
+          + 'sekä oma kirjaimisto että maan tunnetuin nykytaide.',
+      nostot: [
+        {
+          otsikko: 'Rummut, jotka nostettiin pystyyn',
+          tiedosto: 'Atingting Kon 001.JPG',
+          teksti: 'Lohkorumpu ei ole oikea rumpu, sillä siinä ei ole kalvoa: koko '
+              + 'kappale värähtelee, kun raon reunaan lyödään mailalla. Vanuatussa '
+              + 'soitin koverretaan yhdestä isosta rungosta. Useimmilla saarilla '
+              + 'rumpu makaa vaakasuorassa maassa, mutta keskisillä saarilla ja ennen '
+              + 'kaikkea Ambrymilla ne pystytetään seisomaan ja ulkopintaan '
+              + 'veistetään henkiä esittäviä kasvoja. Ambrymin kielellä soitin on '
+              + 'atingting kon. Vaikka pystyt rummut ovat perinne vain yhdellä '
+              + 'saarella, niistä on tullut koko maan tunnus. Soitin säesti ennen '
+              + 'muuta tansseja, harvemmin viestejä.',
+          selite: 'Pystyyn nostettuja lohkorumpuja museon näyttelyssä. Ne ovat '
+            + 'Ambrymin Fanlan kylästä, ja silmiin maalatut kierteet esittävät '
+            + 'aamutähteä.',
+          lahde: 'Gryffindor, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kirjaimisto, jonka sana piirretään yhdellä vedolla',
+          teksti: 'Pentecostin saarella toimiva Turaga-liike kirjoittaa omalla '
+              + 'kirjaimistollaan. Päällikkö Viraleo Boborenvanua kehitti sen '
+              + 'neljäntoista vuoden aikana perinteisten hiekkapiirrosten kuvioista, '
+              + 'ja nimi avoiuli tulee ragan sanoista avoi, puhua jostakin, ja uli, '
+              + 'piirtää. Sana on tarkoitus muodostaa yhdellä vedolla. Rivit '
+              + 'kirjoitetaan vuorotellen kumpaankin suuntaan kuin auraa '
+              + 'käännettäessä, ja isot kirjaimet piirretään ristikehyksen ympärille. '
+              + 'Merkistössä on kirjainten ja numeroiden lisäksi omat merkkinsä '
+              + 'sioille, värjätyille matoille ja livatu-rahalle.',
+        },
+        {
+          otsikko: 'Kuvio, joka päätyi mainoksiin',
+          teksti: 'Vanuatun kulttuurikeskus on kirjannut, että hiekkapiirroksen '
+              + 'erikoistekniikat hallitsevia on enää harvassa ja että kuvioita '
+              + 'käytetään nykyään enimmäkseen mainonnan ja matkailun grafiikkana, '
+              + 'jolloin alkuperäinen merkitys hämärtyy. Keskus käynnisti Save Sand '
+              + 'Drawings -komitean kanssa kansallisen suojeluohjelman, ja '
+              + 'kansallista hiekkapiirrosfestivaalia on vietetty vuodesta 2004. '
+              + 'Kuvioiden tarkka geometria on houkutellut myös tutkijoita, jotka '
+              + 'vertaavat niitä Intian kolameihin ja japanilaisiin kivipuutarhoihin. '
+              + 'Maan tunnetuin nykytaiteilija Aloi Pilioko teki Port Vilan '
+              + 'postitalon värikkään reliefin.',
+        },
+        {
+          otsikko: 'Lippu, jonka lehdykät laskettiin parlamentin mukaan',
+          aika: '1980',
+          teksti: 'Lippu otettiin käyttöön 18. helmikuuta 1980. Värit tulevat '
+              + 'itsenäisyyttä ajaneen puolueen lipusta, jonka paikallinen taiteilija '
+              + 'Kalontas Malon suunnitteli 1977: vihreä on saarten rehevyys, '
+              + 'punainen ihmisiä yhdistävä veri ja musta melanesialainen '
+              + 'ni-vanuatulainen väestö. Pääministeri Walter Lini pyysi keltaisen ja '
+              + 'mustan reunaviivan, jotta musta erottuisi. Keltainen Y on saariketju '
+              + 'kartalla. Mustan kentän tunnus on sianhammas, vaurauden ja perinteen '
+              + 'merkki; sitä ympäröivissä namelen lehdissä on 39 lehdykkää, yhtä '
+              + 'monta kuin ensimmäisessä parlamentissa oli jäseniä.',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Vanuatun lipun mustassa kentässä oleva tunnus esittää?',
+        vaihtoehdot: [
+          'Kookospähkinää',
+          'Sianhammasta',
+          'Kanootin keulaa',
+          'Tulivuoren kraatteria',
+        ],
+        oikea: 1,
+        fakta: 'Sianhammas on Vanuatussa vaurauden ja perinteen merkki, ja sitä '
+            + 'kannetaan riipuksena kahden namele-lehden kanssa.',
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Pieni maa, isoja mittauksia: kolmen naisen luista luettiin tropiikin '
+          + 'ensimmäinen muinais-DNA, kielikartta on maailman tihein ja merenpohjasta '
+          + 'etsitään kadonnutta maata.',
+      nostot: [
+        {
+          otsikko: 'Kolme naista, joiden perimä osoitti Taiwaniin',
+          aika: '2016',
+          teksti: 'Efaten Teouman hautausmaan vainajilta oli irrotettu kallo sen '
+              + 'jälkeen kun hampaiden kiinnityssiteet olivat maatuneet, ja tilalle '
+              + 'oli asetettu kartiokotilosta hiottuja renkaita. Vuonna 2016 kolmen '
+              + 'vainajan ohimoluusta saatiin talteen DNA — ensimmäisen kerran '
+              + 'tropiikissa, jossa kuumuus ja kosteus hajottavat perimän nopeasti. '
+              + 'Kaikki kolme olivat naisia ja samaa äitilinjaa. Lähimmät nykyiset '
+              + 'vastineet löytyivät Taiwanin amien ja atayalien sekä '
+              + 'Pohjois-Filippiinien kankanaeyn joukosta, kun taas yhtäläisyys '
+              + 'nykyisiin papualaisiin oli vähäinen.',
+        },
+        {
+          otsikko: 'Sata kolmekymmentäkahdeksan kieltä, alle kolmesataatuhatta ihmistä',
+          teksti: 'Vanuatussa on maailman tihein kielikartta asukasta kohti: alle '
+              + '300 000 ihmistä ja 138 alkuperäistä kieltä, jotka kaikki kuuluvat '
+              + 'austronesialaisen kielikunnan oseaniseen haaraan. Puhujia on '
+              + 'keskimäärin noin 1 760 kieltä kohti, ja historiallinen pohjalukema '
+              + 'oli 565. Espiritu Santolla ja Malakulalla puhutaan kummallakin noin '
+              + 'kahtakymmentäneljää kieltä. Syitä on monta: muuttoaaltoja tuli '
+              + 'peräkkäin, yhteisöt olivat pieniä ja omavaraisia, mikään ryhmä ei '
+              + 'noussut hallitsemaan toisia, ja maasto esti liikkumisen. Vain '
+              + 'Papua-Uusi-Guinea tulee lähelle.',
+        },
+        {
+          otsikko: 'Sarvipäinen kilpikonna, joka katosi kolmessasadassa vuodessa',
+          aika: 'n. 900 eaa.',
+          tiedosto: 'Meiolania AMNH.jpg',
+          teksti: 'Teouman kaivauksista nousi ihmisluiden lisäksi 405 kilpikonnan '
+              + 'luuta, ajoitukseltaan vuosien 940 ja 810 eaa. väliltä. Eläin sai '
+              + 'nimen Meiolania damelipi kaivauksissa työskennelleen Willie '
+              + 'Damelipin mukaan, ja se oli arviolta 1,35 metriä pitkä '
+              + 'maakilpikonna. Nimen edessä on kysymysmerkki, koska löydöstä '
+              + 'puuttuvat juuri ne osat, jotka varmistaisivat suvun: kallo, sarvet '
+              + 'ja pyrstörenkaat. Se sopii tutkijoiden arvioon, jonka mukaan eläimet '
+              + 'syötiin — jäljellä ovat lihaisat raajanluut, ja niissä näkyy '
+              + 'viiltoja, palamista ja murtumia.',
+          selite: 'Meiolania-suvun kilpikonnan luuranko museon vitriinissä: sarvipää '
+            + 'ja renkaista koottu pyrstö. Juuri nämä osat puuttuvat Vanuatun '
+            + 'löydöstä.',
+          lahde: 'Jonathan Chen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kadonnut maa, jota etsitään merenpohjasta ja jäästä',
+          aika: '1400-luku',
+          teksti: 'Tongoan perinne kertoo Kuwaesta, maasta, jonka tulivuorenpurkaus '
+              + 'tuhosi ja joka yhdisti Tongoan ja Tongarikin. Ti Tongoa Liseiriki '
+              + 'pakeni rantaa pitkin ja palasi ensimmäisenä asuttamaan saarta; hänen '
+              + 'luidensa kollageeni on ajoitettu vuoteen 1475 ± 85, ja pyroklastisten '
+              + 'virtojen tappamien puunrunkojen iät osuvat vuosiin 1410–1450. '
+              + 'Merenpohjasta mitattiin 1994 Tongoan ja Epin väliltä 6 × 12 '
+              + 'kilometrin kaldeera, mutta perinne sijoittaa kadonneen maan Tongoan '
+              + 'eteläpuolelle, eikä sieltä ole löytynyt kaldeeraa. Kiista purkauksen '
+              + 'koosta ja paikasta on yhä auki.',
+        },
+      ],
+    },
+  ],
 };

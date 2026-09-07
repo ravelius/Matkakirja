@@ -270,6 +270,18 @@
 > js/packs/uutislahteet.js:n TCD-kommenttiin. Julkaisu Git-
 > integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Vanuatu):** sallittuihin lisättiin
+> www.dailypost.vu (maalehti VUT, testattu 6.9.2026: syötteessä
+> viisikymmentä juttua, artikkelisivun `[itemprop="articleBody"]`-
+> lohkosta jäsentyy kuusitoista yli 60 merkin kappaletta ja
+> `og:image` löytyy). Syöteosoite on BLOX-julkaisujärjestelmän
+> hakuosoite `search/?f=rss&t=article&c=news&…`, koska `/rss/` ja
+> `/feed/` vastaavat 404:llä. Bislamankielistä syötettä ei ole:
+> osastohaku `c=bislama` antaa nolla juttua. Hylätyt lähteet (VBTC,
+> Vanuatu Independent, Loop Vanuatu) on lueteltu
+> js/packs/uutislahteet.js:n VUT-kommentissa. Julkaisu Git-
+> integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,
