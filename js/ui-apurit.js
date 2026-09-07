@@ -863,6 +863,101 @@ export function valikkoSulkeutuiNapautuksesta() {
   return oli;
 }
 
+/*
+ * ── KOSKETUS EI SAA JÄÄDÄ ROIKKUMAAN ────────────────────────────────
+ *
+ * (Omistajan iPad-havainto 7.9.2026 ilta, sanatarkasti: *"Kartan
+ * pyörittämisessä on joku bugi, koska näyttää ihan kuin yksi sormi
+ * olisi koko ajan painettuna. jos koitan yhdellä sormella vierittää,
+ * niin kartta zoomautuukin sisään ja ulos, eikä vierity."*)
+ *
+ * Karttapallon ohjain (three.js OrbitControls) pitää omaa sormilistaa.
+ * Yksi sormi kiertää, kaksi nipistää — joten yksi UNOHTUNUT sormi
+ * tekee jokaisesta seuraavasta yhden sormen vedosta nipistyksen.
+ * Sormi unohtuu, jos sen pointerup tai pointercancel ei tule perille:
+ * kirjasto kuuntelee peruutuksen VAIN kankaaltaan, ja päälliskerros
+ * (kupla, valikko, linssin paneeli, aikajanan merkki) voi kadota
+ * kesken kosketuksen niin, että loppu jää tulematta.
+ *
+ * Tämä on kerrosten yhteinen ilmoitus: "kosketukset ovat nyt ohi".
+ * Pallo kuuntelee sitä (js/pallo.js asennaPallonEleet) ja nollaa
+ * sormilistansa. Apuri asuu ui-apureissa, koska sama vuoto koskee
+ * jokaista kelluvaa kerrosta — eikä yksikään niistä saa joutua
+ * tuntemaan palloa. Yhteys on siis tapahtuma, ei tuonti.
+ *
+ * `paitsi` on se sormi, joka on YHÄ pohjassa: valikon sulku tapahtuu
+ * pointerdownissa, ja sama sormi jatkaa usein panorointiin — sitä ei
+ * saa unohtaa samalla, kun kadonneet unohdetaan.
+ */
+export const KOSKETUKSEN_VAPAUTUS = 'matkakirja:vapauta-kosketus';
+
+/**
+ * Ilmoittaa, että kesken jäänyt kosketus on ohi.
+ *
+ * @param {object} [asetukset]
+ * @param {?number} [asetukset.paitsi] pointerId, joka on yhä pohjassa.
+ * @param {Document} [asetukset.doc]
+ */
+export function vapautaKosketus({
+  paitsi = null,
+  doc = typeof document === 'undefined' ? null : document,
+} = {}) {
+  if (typeof doc?.dispatchEvent !== 'function' || typeof CustomEvent !== 'function') return false;
+  doc.dispatchEvent(new CustomEvent(KOSKETUKSEN_VAPAUTUS, { detail: { paitsi } }));
+  return true;
+}
+
+/**
+ * Nollaa three.js:n OrbitControlsin sormilistan.
+ *
+ * KIRJASTO EI TARJOA NOLLAUSTA: `dispose()` purkaisi koko ohjaimen
+ * (kuuntelijat pois, pallo lakkaisi tottelemasta), ja sormilista
+ * `_pointers` on kirjaston yksityinen kenttä. Kolmesta vaihtoehdosta
+ * valittiin kenttien suora nollaus:
+ *
+ *  1. `dispatchEvent(new PointerEvent('pointercancel', { pointerId }))`
+ *     kankaalle — kirjasto ajaisi oman `_onPointerUp`-polkunsa, mutta
+ *     se kutsuu viimeisellä sormella `releasePointerCapture(id)`:tä,
+ *     joka HEITTÄÄ, kun osoitin ei ole enää elossa (juuri se tilanne,
+ *     jota tässä siivotaan). Poikkeus kuuntelijasta ei kaada peliä,
+ *     mutta se näkyy sivun virheenä ja savukkeet lukevat ne.
+ *  2. `controls.dispose()` — liikaa: ohjain ei enää palaisi.
+ *  3. Kenttien nollaus — sama lopputila kuin kirjaston omalla
+ *     "viimeinen sormi nousi" -haaralla: lista ja paikat tyhjiksi,
+ *     tila NONE (−1) ja dokumentin liike-/nostokuuntelijat pois
+ *     (kirjasto lisää ne vasta, kun lista on tyhjä ja sormi laskeutuu).
+ *
+ * Varapolku on silti 1: jos kirjaston versio ei tunne `_pointers`-
+ * kenttää, unohtuneille sormille lähetetään pointercancel try/catchissa.
+ *
+ * @param {?object} ohjaimet pallo.controls()
+ * @param {Iterable<number>} [idt] tiedossa olevat pointerId:t (varapolku)
+ * @returns {boolean} oliko listassa jotain nollattavaa
+ */
+export function nollaaKosketusOhjaimet(ohjaimet, idt = []) {
+  if (!ohjaimet) return false;
+  const lista = ohjaimet._pointers;
+  if (Array.isArray(lista)) {
+    const oli = lista.length > 0;
+    lista.length = 0;
+    const paikat = ohjaimet._pointerPositions;
+    if (paikat) for (const avain of Object.keys(paikat)) delete paikat[avain];
+    ohjaimet.state = -1; // STATE.NONE
+    const doc = ohjaimet.domElement?.ownerDocument ?? null;
+    if (doc && ohjaimet._onPointerMove) doc.removeEventListener('pointermove', ohjaimet._onPointerMove);
+    if (doc && ohjaimet._onPointerUp) doc.removeEventListener('pointerup', ohjaimet._onPointerUp);
+    return oli;
+  }
+  let nollattiin = false;
+  for (const id of idt) {
+    try {
+      ohjaimet.domElement?.dispatchEvent?.(new PointerEvent('pointercancel', { pointerId: id, bubbles: true }));
+      nollattiin = true;
+    } catch { /* vanha selain ilman PointerEvent-rakentajaa */ }
+  }
+  return nollattiin;
+}
+
 /**
  * Asentaa vartijan: kartalle osuva napautus valikon ollessa auki sulkee
  * valikon eikä välity kartalle.
@@ -888,7 +983,12 @@ export function asennaValikonSulkuvartija({
     if (!kohde.closest(KARTAN_ALUE)) return;
     if (kohde.closest(OMA_HALLINTA)) return;
     valikkoSulkiNapautuksen = suljeAvoimetValikot(doc);
-    if (valikkoSulkiNapautuksen) nielaiseSulkevaNapautus(tapahtuma, { doc });
+    if (valikkoSulkiNapautuksen) {
+      nielaiseSulkevaNapautus(tapahtuma, { doc });
+      // Valikko katosi kesken kosketuksen: pallo unohtaa muut sormet,
+      // mutta EI tätä — sama sormi jatkaa usein panorointiin.
+      vapautaKosketus({ paitsi: tapahtuma.pointerId ?? null, doc });
+    }
   };
   doc.addEventListener('pointerdown', vahti, true);
   return () => doc.removeEventListener('pointerdown', vahti, true);

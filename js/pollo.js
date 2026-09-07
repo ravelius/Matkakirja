@@ -62,6 +62,7 @@ import { asetaKuva } from './media.js';
 // pöllöä (tools/build-standalone.mjs MODULES).
 import {
   jaaKappaleiksi, linssiEstaa, linssiEstaaChatin, nielaiseSulkevaNapautus, polloNimilappu, sanamaara,
+  vapautaKosketus,
 } from './ui-apurit.js';
 import { POLLON_LINKKIKATTO, etsiAnkkuri, haeKatkelmat, rakennaIndeksi } from './pollo-haku.js';
 import {
@@ -3190,6 +3191,13 @@ class Pollo {
       alku = null;
       if (dx > KUPLAN_NAPAUTUSSADE_PX || dy > KUPLAN_NAPAUTUSSADE_PX) return;
       nielaiseSulkevaNapautus(tapahtuma, { doc: this.doc });
+      /*
+       * KUPLA KATOAA KESKEN KOSKETUKSEN (roikkuva kosketus, v1671):
+       * kupla poistuu tästä napautuksesta, ja kartan alle jäänyt
+       * sormi jäisi pallon ohjaimen listaan. Tämä sormi (pointerId)
+       * on juuri nousemassa, joten se säästetään — muut unohdetaan.
+       */
+      vapautaKosketus({ paitsi: tapahtuma.pointerId ?? null, doc: this.doc });
       /*
        * KUITTAUS OTETAAN TALTEEN ENNEN MITÄÄN MUUTA. Napautus vie
        * kuplasarjan seuraavaan repliikkiin (js/livia.js), mutta

@@ -157,7 +157,7 @@ import {
   ESITTELYN_RUNKO, LOPUN_RUNKO, pysaytaLinssiluenta, soitaLinssiluenta, valinaytoksenRunko,
 } from './linssipuhe.js';
 import { pysaytaLukija } from './lukija.js';
-import { esilataaKuvat } from './ui-apurit.js';
+import { esilataaKuvat, vapautaKosketus } from './ui-apurit.js';
 // Terävä tila pakotettuna ajon ajaksi (ks. pakotaLaatu). Moduuli on
 // kevyt: se tuo vain fokusmitat ja ui-apurit, ei Globe.gl:ää.
 import { pakotaPallonLaatu } from './pallo.js';
@@ -5099,6 +5099,14 @@ class Aikajana {
     this.ui.tutkimusvaihe?.pura?.();
     this.ui.tutkimusvaihe = null;
     this.ui.aloitaTutkimusvaihe = null;
+    /*
+     * LINSSIN KERROKSET KATOAVAT (roikkuva kosketus, v1671): paneeli,
+     * lamput ja loppulappu ovat pallon päällä, ja niiltä alkanut
+     * kosketus jäisi pallon ohjaimen listaan roikkumaan — seuraava
+     * yksi sormi luettaisiin nipistykseksi. Ilmoitus kerroksen
+     * katoamisesta (js/ui-apurit.js) nollaa sormet.
+     */
+    vapautaKosketus();
     // Sulkeminen kesken avauksen: peite, laatikko ja ajastimet pois.
     this.puraAvaus();
     // Sama kesken välinäytöksen: laatikko, ajastin ja kuplat pois.

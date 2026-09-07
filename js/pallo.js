@@ -43,7 +43,9 @@ import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 import {
   haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
 } from './laattapyramidi.js';
-import { laattakerrosPaalla, laatuAinaPaalla } from './ui-apurit.js';
+import {
+  KOSKETUKSEN_VAPAUTUS, laattakerrosPaalla, laatuAinaPaalla, nollaaKosketusOhjaimet,
+} from './ui-apurit.js';
 /*
  * Laattakerros ja sen puhtaat apurit (erät E0 ja E1, suunnitelma
  * docs/moduulit/pallon-liike-taydella-tarkkuudella.md luvut 4 ja 6)
@@ -2012,18 +2014,84 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
    * hylätään, kunnes kaikki sormet ovat irronneet ja hetki kulunut
    * (kirjaston oma click tulee pointerupin jälkeen).
    */
-  const sormet = { alhaalla: 0, nipistys: false };
-  kotelo.addEventListener('pointerdown', () => {
-    ohjaimet.autoRotate = false;
-    sormet.alhaalla += 1;
-    if (sormet.alhaalla > 1) sormet.nipistys = true;
-  });
-  const irrota = () => {
-    sormet.alhaalla = Math.max(0, sormet.alhaalla - 1);
-    if (sormet.alhaalla === 0 && sormet.nipistys) setTimeout(() => { sormet.nipistys = false; }, 350);
+  /*
+   * ROIKKUVA KOSKETUS NOLLATAAN (vika v1671, omistaja 7.9.2026 ilta,
+   * iPad: *"näyttää ihan kuin yksi sormi olisi koko ajan painettuna.
+   * jos koitan yhdellä sormella vierittää, niin kartta zoomautuukin
+   * sisään ja ulos, eikä vierity."*). Sormia ei enää lasketa
+   * lukumääränä vaan pidetään pointerId:t joukossa, ja kirjanpito
+   * hoidetaan DOKUMENTISTA kaappausvaiheessa:
+   *
+   *  - ALAS dokumentista (kotelon sisään osuvat): kaappausvaihe ehtii
+   *    ENNEN kirjaston omaa pointerdownia kankaalla, joten kesken
+   *    jäänyt sormi ehditään nollata ohjaimista ennen kuin kirjasto
+   *    laskee uuden sormen kakkoseksi (= nipistys).
+   *  - YLÖS ja PERUUTUS dokumentista: kotelosta luettuna loppu jää
+   *    tulematta aina, kun sormi irtoaa kotelon ulkopuolella tai
+   *    päälliskerros katoaa alta — juuri se jätti sormen roikkumaan.
+   *  - Sivu taustalle, ikkuna pois fokuksesta, kerroksen ilmoitus
+   *    (js/ui-apurit.js vapautaKosketus): kaikki sormet unohdetaan.
+   *
+   * Nollaus koskee myös kirjaston omaa listaa (nollaaKosketusOhjaimet):
+   * pelkkä oma laskuri ei riitä, koska zoomin tekee OrbitControls.
+   */
+  const sormet = { alhaalla: 0, nipistys: false, idt: new Set() };
+  ui.pallonSormet = sormet; // mittausta varten (savukkeet)
+  const paivitaLuku = () => { sormet.alhaalla = sormet.idt.size; };
+  /*
+   * SIIVOUS VASTA KIRJASTON JÄLKEEN. Kirjaston oma nostokäsittelijä
+   * istuu DOKUMENTISSA kuplavaiheessa, ja tämä vahti kaappausvaiheessa
+   * — jos lista nollattaisiin heti, kirjaston oma "viimeinen sormi
+   * nousi" -haara jäisi ajamatta joka kerta (kaappauksen vapautus,
+   * end-tapahtuma). Ajastin 0 ms päästää koko tapahtuman läpi ensin, ja
+   * nollaus tehdään vain, jos listaan JÄI jotain.
+   */
+  const siivoaKunTyhja = () => setTimeout(() => {
+    if (sormet.idt.size === 0) nollaaKosketusOhjaimet(ohjaimet, sormet.idt);
+  }, 0);
+  /** Kaikki kirjatut sormet pois; kirjaston lista nollataan samalla. */
+  const unohdaSormet = (paitsi = null) => {
+    for (const id of [...sormet.idt]) { if (id !== paitsi) sormet.idt.delete(id); }
+    paivitaLuku();
+    if (sormet.idt.size === 0) siivoaKunTyhja();
   };
-  kotelo.addEventListener('pointerup', irrota);
-  kotelo.addEventListener('pointercancel', irrota);
+  const sormiAlas = (e) => {
+    if (!kotelo.contains(e.target)) return;
+    // Ensimmäinen sormi: pallon pitää olla levossa. Jos kirjastolle on
+    // jäänyt sormi roikkumaan, se siivotaan TÄSSÄ ja HETI — muuten
+    // kirjasto lukee tämän sormen toiseksi ja alkaa nipistää (dolly).
+    // Kaappausvaihe takaa, että ehdimme ennen kirjaston pointerdownia.
+    if (sormet.idt.size === 0) nollaaKosketusOhjaimet(ohjaimet, sormet.idt);
+    ohjaimet.autoRotate = false;
+    sormet.idt.add(e.pointerId);
+    paivitaLuku();
+    if (sormet.alhaalla > 1) sormet.nipistys = true;
+  };
+  const irrota = (e) => {
+    if (!sormet.idt.delete(e.pointerId)) return;
+    paivitaLuku();
+    if (sormet.alhaalla === 0 && sormet.nipistys) setTimeout(() => { sormet.nipistys = false; }, 350);
+    if (sormet.alhaalla === 0) siivoaKunTyhja();
+  };
+  const doc = kotelo.ownerDocument ?? document;
+  const ikkuna = doc.defaultView ?? globalThis;
+  /** Kuuntelija + sen purku samalla rivillä (purku kuoren mukana). */
+  const purut = [];
+  const kuuntele = (kohde, laji, fn, valinnat) => {
+    kohde?.addEventListener?.(laji, fn, valinnat);
+    purut.push(() => kohde?.removeEventListener?.(laji, fn, valinnat));
+  };
+  const puraSormivahti = () => { for (const pura of purut.splice(0)) pura(); };
+  const kaikkiIrti = () => unohdaSormet(null);
+  const kerrosKatosi = (e) => unohdaSormet(e?.detail?.paitsi ?? null);
+  const taustalle = () => { if (doc.visibilityState === 'hidden') kaikkiIrti(); };
+  kuuntele(doc, 'pointerdown', sormiAlas, true);
+  kuuntele(doc, 'pointerup', irrota, true);
+  kuuntele(doc, 'pointercancel', irrota, true);
+  kuuntele(doc, KOSKETUKSEN_VAPAUTUS, kerrosKatosi);
+  kuuntele(doc, 'visibilitychange', taustalle);
+  kuuntele(ikkuna, 'blur', kaikkiIrti);
+  kuuntele(ikkuna, 'pagehide', kaikkiIrti);
   /*
    * SORMI PYSYY KARTAN KOHDASSA (omistajan havainto 4.9.2026 ilta:
    * "sormella liikutus ei ole synkassa kartan kanssa. Eli pallo liikkuu
@@ -2132,8 +2200,16 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     }
     vauhti.aika = aika;
   });
+  /*
+   * IRROTUS LUETAAN DOKUMENTISTA (roikkuva kosketus, v1671): kotelosta
+   * luettuna liuku jäi lähtemättä aina, kun sormi nousi kotelon
+   * ulkopuolella — ja tartunta jäi voimaan. Liuku lähtee vasta, kun
+   * VIIMEINEN sormi on noussut (nipistyksen ensimmäinen irtoava sormi
+   * ei ole heitto).
+   */
   const paasta = () => {
     tartunta = null;
+    if (sormet.alhaalla > 0) return;
     const seisahtunut = performance.now() - vauhti.aika > 150; // sormi pysähtyi ennen irrotusta
     if (!ui.reducedMotion && !seisahtunut && Math.hypot(vauhti.lat, vauhti.lng) > VAUHTI_KYNNYS) {
       pysaytaLiuku();
@@ -2141,8 +2217,8 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     }
     vauhti.aika = 0;
   };
-  kotelo.addEventListener('pointerup', paasta);
-  kotelo.addEventListener('pointercancel', paasta);
+  kuuntele(doc, 'pointerup', paasta);
+  kuuntele(doc, 'pointercancel', paasta);
   /*
    * KAKSI SORMEA PANOROI, CMD ZOOMAA (omistaja 5.9.2026 klo 21; kaava ja
    * perustelu: rullanAskel yllä). Käsittelijä on KAAPPAUSVAIHEESSA:
@@ -2205,7 +2281,7 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
       rulla.raf = requestAnimationFrame(rullanLiuku);
     }
   }, { capture: true, passive: false });
-  return { sormet, pura: () => { pysaytaLiuku(); pysaytaRulla(); } };
+  return { sormet, pura: () => { pysaytaLiuku(); pysaytaRulla(); puraSormivahti(); } };
 }
 
 /** Sulkee pallon, jos se on auki. */

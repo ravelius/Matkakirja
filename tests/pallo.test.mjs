@@ -96,7 +96,14 @@ test('pallon kaupungit tulevat laudalta ja napautus sukeltaa napautettuun kohtaa
   // merkitsee eleen nipistykseksi, ja napautus hylätään sen ajaksi.
   assert.match(pallo, /if \(sormet\.nipistys\) return;/);
   assert.match(pallo, /if \(sormet\.alhaalla > 1\) sormet\.nipistys = true;/);
-  assert.match(pallo, /addEventListener\('pointercancel', irrota\)/);
+  // ROIKKUVA KOSKETUS (v1671): nosto ja peruutus luetaan DOKUMENTISTA
+  // kaappausvaiheessa, ja sormet ovat pointerId-joukko — kotelosta
+  // luettuna loppu jäi tulematta, kun sormi nousi kotelon ulkopuolella
+  // tai päälliskerros katosi alta (karttapallo.md luku 17).
+  assert.match(pallo, /kuuntele\(doc, 'pointercancel', irrota, true\)/);
+  assert.match(pallo, /kuuntele\(doc, 'pointerup', irrota, true\)/);
+  assert.match(pallo, /kuuntele\(doc, 'pointerdown', sormiAlas, true\)/);
+  assert.match(pallo, /nollaaKosketusOhjaimet\(ohjaimet, sormet\.idt\)/);
   // Sormi pysyy kartan kohdassa: kiertonopeus lasketaan korkeudesta joka muutoksessa.
   assert.match(pallo, /ohjaimet\.rotateSpeed = korkeus \* Math\.tan\(\(kamera\.fov \/ 2\) \* \(Math\.PI \/ 180\)\) \/ Math\.PI;/);
   assert.match(pallo, /ohjaimet\.addEventListener\('change', tahdistaVeto\)/);
@@ -709,8 +716,13 @@ test('rulla: kaappausvaiheessa, cmd/ctrl zoomaa, muuten panorointi ja pehmeä li
   assert.ok(PANOROINNIN_LEVEYSRAJA > NAPAKANNEN_LEVEYS && PANOROINNIN_LEVEYSRAJA <= 89);
   assert.match(ele, /-PANOROINNIN_LEVEYSRAJA, Math\.min\(PANOROINNIN_LEVEYSRAJA/);
   // Kosketuslaitteet ennallaan: sormet kulkevat pointer-tapahtumina.
-  for (const nimi of ['pointerdown', 'pointermove', 'pointerup', 'pointercancel']) {
+  // Alas ja liike luetaan kotelosta, nosto ja peruutus dokumentista
+  // kaappausvaiheessa (roikkuva kosketus, karttapallo.md luku 17).
+  for (const nimi of ['pointerdown', 'pointermove']) {
     assert.ok(ele.includes(`addEventListener('${nimi}'`), `${nimi} katosi sormieleistä`);
+  }
+  for (const nimi of ['pointerdown', 'pointerup', 'pointercancel']) {
+    assert.ok(ele.includes(`kuuntele(doc, '${nimi}'`), `${nimi} katosi dokumentin sormivahdista`);
   }
   // Kamera-ajon keskeytys kuuntelee wheeliä samassa vaiheessa, muuten
   // stopPropagation veisi tapahtuman siltä (kuplinta ei enää tule).

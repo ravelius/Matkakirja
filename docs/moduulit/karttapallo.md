@@ -4257,3 +4257,182 @@ pyörinnän poisto, huomiorenkaan mitta ja syke, kohteiden luettelo,
 Livian sarja), tests/livia-aani.test.mjs (äänite kaanonin numerolla),
 savuke-etusivupallo E9b/E9b2/E9e/E9f (kaikki merkit, rengas
 jokaisella, pallo paikallaan) ja savuke-aloitusvalinta-13.
+## 17. Roikkuva kosketus — yksi sormi panoroi aina (7.9.2026)
+
+Omistajan iPad-havainto Ihmisen matka -linssin lopussa, sanatarkasti:
+*"Kartan pyörittämisessä on joku bugi, koska näyttää ihan kuin yksi
+sormi olisi koko ajan painettuna. jos koitan yhdellä sormella
+vierittää, niin kartta zoomautuukin sisään ja ulos, eikä vierity."*
+
+### 17.1 Juurisyy: kirjaston sormilistaan jää sormi, eikä se poistu itsestään
+
+Pallon ohjain on three.js:n **OrbitControls** (Globe.gl luo sen
+kankaalle: `new OrbitControls(camera, renderer.domElement)`). Se pitää
+yksityistä sormilistaa `_pointers` ja paikkoja `_pointerPositions`.
+Pallolla `enableRotate` on **false** (yhden sormen kierto tehdään itse,
+ks. luku 5), joten listan pituus ratkaisee kaiken:
+
+| `_pointers.length` | Mitä kirjasto tekee |
+| --- | --- |
+| 1 | `TOUCH.ROTATE` → pois käytöstä → ei mitään |
+| 2 | `TOUCH.DOLLY_PAN` → **zoom** (etäisyys sormien välillä) |
+
+Kirjaston oma kirjanpito on **epäsymmetrinen**, ja siinä on vika:
+
+- `pointerdown` luetaan **kankaalta**. Kun lista on tyhjä, kirjasto
+  kaappaa osoittimen ja lisää `pointermove`- ja `pointerup`-kuuntelijat
+  **dokumenttiin**.
+- `pointercancel` luetaan **vain kankaalta**.
+- `pointerup` vie listasta yhden. Vasta kun lista TYHJENEE, kirjasto
+  irrottaa dokumentin kuuntelijat ja palauttaa tilan (`STATE.NONE`).
+
+Jos yhden sormen loppu (`pointerup` tai `pointercancel`) ei tule
+perille — iOS:n WebKit nielaisee sen, kun se ottaa eleen itselleen, tai
+kun kosketuksen kohde-elementti (kupla, valikko, linssin paneeli tai
+lamppu) katoaa kesken kosketuksen — päädytään **imukuoppaan**:
+
+1. Kaksi sormea pallolla: lista `[A, B]`, dokumentin kuuntelijat kiinni.
+2. B:n loppu katoaa. A nousee → lista `[B]` → **pituus 1, ei 0** →
+   kirjasto ei irrota dokumentin kuuntelijoita eikä palauta tilaa.
+   Tila jää arvoon `TOUCH_DOLLY_PAN`.
+3. Seuraava YKSI sormi on kirjastolle **kakkonen**: lista `[B, C]` →
+   dolly. Koska roikkuvan B:n paikka ei liiku, sormien etäisyys muuttuu
+   suoraan sormen liikkeen mukana → **pallo zoomaa sisään ja ulos**.
+4. C:n nousu vie listan takaisin pituuteen 1. Tila ei parane koskaan
+   ilman uutta palloa: vika jää päälle koko istunnoksi.
+
+**Mitattu** (Chromium 834 × 1100, hasTouch, CDP:n oikeat kosketukset,
+7.9.2026; sivun tila asetetaan kohdan 2 mukaiseksi ja tehdään 150 px:n
+YHDEN sormen veto):
+
+| | Δ pituusaste | Δ korkeus |
+| --- | --- | --- |
+| terve pallo | −1,688° | 0,00000 |
+| roikkuva sormi listassa | −0,422° | **−0,12641** (0,169 → 0,042) |
+| korjattu | −1,688° | 0,00000 |
+
+Eli veto käänsi palloa enää neljäsosan siitä, mitä pitäisi, ja korkeus
+putosi neljäsosaan (pallo hyppäsi nelinkertaiseen lähikuvaan) —
+täsmälleen se, mitä omistaja kuvasi. Toiseen suuntaan vedettäessä
+sama liike zoomaa ulos: siitä *"sisään ja ulos"*.
+
+**Miksi elettä ei saatu toistettua kontissa.** Ele-sarjat, joilla
+kadonnutta loppua yritettiin tuottaa Chromiumilla — nipistys, peruutus
+(`touchCancel`) kesken vedon, veto kotelon ulkopuolelle, napautus
+kuplaan kesken vedon — päättyivät kaikki siistiin `pointerup`-pariin, ja
+`_pointers` tyhjeni oikein. Chromiumin *implicit pointer capture* pitää
+kosketuksen kohteen paikallaan, vaikka elementti katoaisi. Vika elää
+iPadin WebKitissä. Siksi vartio (17.5) mittaa **seurauksen**: pallo
+asetetaan siihen tilaan, jonka kadonnut loppu jättää, ja korjauksen on
+selvittävä siitä.
+
+### 17.2 Korjaus: pallon oma sormivahti lukee dokumentista
+
+`js/pallo.js` `asennaPallonEleet` piti ennen pelkkää **lukumäärää**
+(`sormet.alhaalla`) ja luki sen kotelosta. Nyt:
+
+| Ennen | Nyt |
+| --- | --- |
+| `sormet.alhaalla` (luku) | `sormet.idt` (pointerId-joukko), `alhaalla` = sen koko |
+| `kotelo` pointerdown/up/cancel | **dokumentti, kaappausvaihe** (alas suodatetaan `kotelo.contains`illa) |
+| — | `nollaaKosketusOhjaimet` tyhjentää kirjaston listan |
+| — | tausta (`visibilitychange`), fokus (`blur`), `pagehide`, kerroksen ilmoitus |
+
+Kaksi kohtaa ratkaisee:
+
+1. **Ensimmäinen sormi siivoaa HETI.** Kun `sormet.idt` on tyhjä ja
+   sormi laskeutuu koteloon, kirjaston listan on oltava tyhjä; jos ei
+   ole, se nollataan siinä samassa. Kuuntelija on dokumentin
+   kaappausvaiheessa, joten se ehtii **ennen** kirjaston omaa
+   pointerdownia kankaalla — muuten kirjasto olisi jo lukenut sormen
+   kakkoseksi. Tämä on varsinainen parannuskeino: mistä tahansa
+   roikkuva sormi tuleekin, seuraava ele alkaa puhtaalta pöydältä.
+2. **Nosto ja peruutus luetaan dokumentista.** Kotelosta luettuna loppu
+   jäi tulematta joka kerta, kun sormi nousi kotelon ulkopuolella tai
+   päälliskerros katosi alta. Sama korjaus vei myös vanhan pikkuvian:
+   irrotuksen liuku (`paasta`) jäi ennen lähtemättä, jos sormi nousi
+   kotelon ulkopuolella, ja se lähtee nyt vasta VIIMEISEN sormen
+   noustessa (nipistyksen ensimmäinen irtoava sormi ei ole heitto).
+
+Siivous noston jälkeen tehdään **0 ms:n ajastimella**: kirjaston oma
+nostokäsittelijä istuu dokumentissa kuplavaiheessa, ja jos lista
+nollattaisiin heti kaappausvaiheessa, kirjaston oma "viimeinen sormi
+nousi" -haara (kaappauksen vapautus, `end`-tapahtuma) jäisi ajamatta
+joka kerta. Ajastin päästää tapahtuman läpi ensin, ja nollaus tehdään
+vain, jos listaan JÄI jotain.
+
+### 17.3 Turvaverkko: kerros ilmoittaa katoamisestaan
+
+`js/ui-apurit.js`:
+
+| Vienti | Tehtävä |
+| --- | --- |
+| `KOSKETUKSEN_VAPAUTUS` | dokumentin tapahtuma `matkakirja:vapauta-kosketus` |
+| `vapautaKosketus({ paitsi, doc })` | kerros ilmoittaa: kosketukset ovat ohi |
+| `nollaaKosketusOhjaimet(ohjaimet, idt)` | OrbitControlsin listan nollaus |
+
+Yhteys on **tapahtuma eikä tuonti**: sama vuoto koskee jokaista
+kelluvaa kerrosta, eikä yksikään niistä saa joutua tuntemaan palloa.
+`paitsi` on se sormi, joka on YHÄ pohjassa — valikko sulkeutuu
+pointerdownissa, ja sama sormi jatkaa usein panorointiin, joten sitä ei
+saa unohtaa samalla kun kadonneet unohdetaan.
+
+Kutsujat tänään:
+
+- **js/ui-apurit.js `asennaValikonSulkuvartija`** — valikko katoaa
+  pointerdownissa (luku 13); `paitsi` = tämän napautuksen sormi.
+- **js/pollo.js `sidoKuplanNapautus`** — kupla katoaa sulkevasta
+  napautuksesta; `paitsi` = juuri nouseva sormi.
+- **js/aikajana.js `pura`** — linssin paneeli, lamput ja loppulappu
+  katoavat kerralla; ei `paitsi`, koska koko näkymä päättyy.
+
+Uusi kelluva kerros, joka katoaa kesken kosketuksen, kutsuu samaa
+apuria. Se on halpa: ilman palloa (yksikkötestit, työhuoneen
+esikatselu) se ei tee mitään.
+
+### 17.4 Miksi kenttien nollaus eikä `dispose` tai `pointercancel`
+
+Kirjasto ei tarjoa sormilistan nollausta. Kolme vaihtoehtoa punnittiin:
+
+1. **`dispatchEvent(new PointerEvent('pointercancel', { pointerId }))`
+   kankaalle.** Kirjasto ajaisi oman polkunsa, mutta se kutsuu
+   viimeisellä sormella `releasePointerCapture(id)`:tä, joka **heittää**,
+   kun osoitin ei ole enää elossa — juuri se tilanne, jota siivotaan.
+   Poikkeus kuuntelijassa ei kaada peliä, mutta se näkyy sivun
+   virheenä, ja savukkeet lukevat ne. Jää **varapoluksi** sille
+   tapaukselle, ettei kirjaston versio tunne `_pointers`-kenttää.
+2. **`controls.dispose()`** — liikaa: se purkaa koko ohjaimen
+   kuuntelijoineen, eikä pallo tottelisi enää.
+3. **Kenttien nollaus** (valittu): `_pointers` tyhjäksi,
+   `_pointerPositions` tyhjäksi, `state = -1` (`STATE.NONE`) ja
+   dokumentin liike-/nostokuuntelijat pois. Lopputila on täsmälleen
+   sama kuin kirjaston omalla "viimeinen sormi nousi" -haaralla, joten
+   seuraava sormi kulkee kirjastossa normaalia "ensimmäinen sormi"
+   -polkua.
+
+### 17.5 Vartiot ja sivuhavainto
+
+**Savuke** `tools/savukkeet/savuke-pallo-kosketus.mjs` (iPadin mitat
+834 × 1100, `hasTouch`, CDP:n `Input.dispatchTouchEvent`):
+
+1. yhden sormen veto panoroi (suunta muuttuu, korkeus ei);
+2. **roikkuva sormi** istutetaan kirjaston listaan 17.1:n kohdan 2
+   mukaisesti → seuraava yhden sormen veto panoroi silti, ja lista on
+   vedon jälkeen tyhjä;
+3. pulun kupla suljetaan **kesken** pallolla olevaa vetoa → veto
+   jatkuu katkeamatta (tämä vartioi `paitsi`-säännön) ja seuraava veto
+   panoroi;
+4. Ihmisen matka ajetaan loppuun, loppusanojen **Sulje** kosketetaan →
+   veto panoroi;
+5. kahden sormen nipistys zoomaa yhä.
+
+**Yksikkötesti** `tests/roikkuva-kosketus.test.mjs` vartioi nollaimen
+lopputilan, kerroksen ilmoituksen ja pallon sormivahdin kytkennät ilman
+selainta; `tests/pallo.test.mjs` vartioi, että nosto ja peruutus
+luetaan dokumentin kaappausvaiheesta.
+
+**Sivuhavainto Fablelle (ei korjattu tässä):** pulun kuplapino
+(`.pollo-kuplapino-kehys`, z-index 40) jää pallolaudalla pallon kuoren
+alle — kuplan keskeltä `elementFromPoint` antaa kankaan, ei kuplaa.
+Napautus kuplaan ei siis mene perille pallolaudalla. Savuke ajaa
+napautuksen kuplan omaan elementtiin ja kirjaa havainnon INFO-rivinä.
