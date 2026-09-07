@@ -105,6 +105,17 @@ Incursión en Política); (3) Chile tunnusti selkʼnamit 5.9.2023 ("Selkʼnam pe
 Recognition). Portit: fail 0, karttapisteet ok. Poiminnassa lisäyskonfliktit
 5 tiedostossa liitetty liita-lisays.py:llä.
 
+### Checkpointit (tekstit ilman kuvia; kuvacommitit poimitaan, jos agentit ehtivät)
+- Monterrey + Mérida: tekstit c8fe151 (agentin worktree; kuvahaku kesken)
+- Winnipeg + St. John's: tekstit 49eb6ad (kuvahaku kesken)
+- Kumasi + Kano: tekstit e9c9d3a (kuvahaku kesken)
+Kaikki kolme poimittu haaraan lisäyskonfliktit liittäen; portit fail 0,
+karttapisteet ok kaikille kuudelle kaupungille. Näiden lehdet ovat siis
+pelissä TEKSTEINÄ ja kohdekarttoina; kuvat, kuvalähteet ja
+pistokoeväitteet täydennetään agenttien loppuraporteista, jos ne ehtivät
+(muuten päätoimittaja teettää kuvahaun erikseen: kansikuvat 3, avauskuvat 3,
+ennen–nyt-pari, nostojen kuvat, nähtävyysjuttujen kuvat).
+
 ## Kuvaputken tilaukset (kuvattomat nostot ja miniatyyrit)
 
 **MOZ, kuvattomat nostot (8):**
