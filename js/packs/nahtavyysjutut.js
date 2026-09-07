@@ -58859,6 +58859,14 @@ export const NAHTAVYYSJUTUT = {
           + 'vaihdettiin noin puolet kattopalkeista. Palkkipuu on '
           + 'nykyään tuotava Ghanasta, koska alkuperäiset puulajit '
           + 'ovat kadonneet seudulta.',
+      kuvat: [
+        {
+          tiedosto: 'Djinguereber Mosque.jpg',
+          selite: 'Minareetti näkyy portinaukosta: savipinnasta '
+            + 'työntyvät puupalkit ovat rappaajien pysyvät telineet.',
+          lahde: 'Dr. Ondřej Havelka (cestovatel), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Gordon Laingin talo': {
@@ -58962,6 +58970,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kosmologiapainotuksesta: savi, muta ja kivi korostavat '
           + 'maanläheisyyttä ja yhteyttä esivanhempiin, joiden ruumiit '
           + 'lepäävät rakennuksen sisällä.',
+      kuvat: [
+        {
+          tiedosto: 'ASC Leiden - van Achterberg Collection - 05 - 37 - La mosquée de Sidi Yahya - Tombouctou, Mali - Novembre-décembre 1993.jpg',
+          selite: 'Moskeijan savipinnasta työntyvät palkinpäät, ja '
+            + 'matalalla pihamuurilla on rivi savisia vesiruukkuja.',
+          lahde: 'Angeline A. van Achterberg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'al-Wangarin kirjasto': {
@@ -59192,6 +59208,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Amanuelin ikkunoissa. Harjakatto ja suoraviivaiset '
           + 'listat taas viittaavat syyrialaiseen vaikutukseen. '
           + 'Kirkko kuuluu Jordan-puron pohjoiseen ryhmään.',
+      kuvat: [
+        {
+          tiedosto: 'Bete Maryam 01.jpg',
+          selite: 'Punaisesta kalliosta louhitun kirkon seinässä on '
+            + 'ristinmuotoisia ikkuna-aukkoja ja kolme ikkunariviä.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Biete Medhane Alem': {
@@ -59220,6 +59244,14 @@ export const NAHTAVYYSJUTUT = {
           + 'hänen mukaansa todennäköisimmin juuri tämä — tai '
           + 'kuudentoista kilometrin päässä oleva Gannata Maryam, '
           + 'jossa on samanlainen pilarikäytävä.',
+      kuvat: [
+        {
+          tiedosto: 'Lalibela, chiesa di bete medhane alem, esterno 08,0.jpg',
+          selite: 'Kirkkoa kiertää pilarikäytävä, ja sen yllä on '
+            + 'vuoden 2008 suojakatos teräsjalkoineen.',
+          lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Biete Gabriel-Rufael': {
@@ -59327,6 +59359,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kesti vuosisatoja sen valtakunnan jälkeen, jossa se '
           + 'syntyi. Koptilaisia vaikutteita näkyy koristeissa, mutta '
           + 'runko on paikallinen.',
+      kuvat: [
+        {
+          tiedosto: 'Lalibela, chiesa di bete amanuel, esterno 01,0.jpg',
+          selite: 'Julkisivun vaakakerrokset ja ulkonevat palkinpäät '
+            + 'ovat kiveen veistetty jäljitelmä puurakennuksesta.',
+          lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },

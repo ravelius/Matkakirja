@@ -494,8 +494,8 @@ siitä kerrotaan lehden teemasivulla. *Asheton Maryamin luostari* ja
 *Na'akuto La'ab* — ei en-Wikipedia-artikkelia. *Lalibela Cultural
 Center* ja *Lalibela Ethnographic Museum* (Overpass) — ei katetta.
 
-**Rajaus:** pohjoinen 12.0370, etelä 12.0275, länsi 39.0355, itä
-39.0480 → noin **1,36 × 1,06 km**. Rajaus on pelin tiiviimpiä ja se
+**Rajaus:** pohjoinen 12.0365, etelä 12.0285, länsi 39.0385, itä
+39.0483 → noin **1,07 × 0,89 km**. Rajaus on pelin tiiviimpiä ja se
 on pakko: kohteet ovat 29–200 metrin päässä toisistaan, ja
 väljemmässä ruudussa numeroympyrät menisivät päällekkäin (sama
 ratkaisu kuin Fesissä v1670, jossa tiivein väli oli 98 metriä).

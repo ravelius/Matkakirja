@@ -5684,7 +5684,11 @@ const KAUPUNGIT = {
   lalibela: {
     /*
      * KALLIOKIRKKOJEN KAKSI KAIVANTORYHMÄÄ (7.9.2026). Ruutu on
-     * 1,36 × 1,06 kilometriä. Lännessä on erillinen Biete Giyorgis
+     * 1,07 × 0,89 kilometriä. ENSIMMÄINEN RAJAUS OLI 1,36 × 1,06
+     * KILOMETRIÄ JA VÄÄRÄ: kirkot jäivät kuvan oikeaan laitaan ja
+     * vasemman kolmanneksen täytti tyhjä rinne, jolla ei ole OSM:ssä
+     * yhtään tietä. Ruutu siirrettiin kolmesataa metriä itään ja
+     * tiivistettiin. Lännessä on erillinen Biete Giyorgis
      * omassa ristinmuotoisessa kuilussaan, keskellä pohjoinen ryhmä
      * (Golgotha Mikael, Maryam, Medhane Alem) ja idässä eteläinen
      * ryhmä (Gabriel-Rufael, Lehem, Abba Libanos, Amanuel).
@@ -5699,7 +5703,7 @@ const KAUPUNGIT = {
      * kaivantoryhmään, joten tiiviimpää ei ole olemassakaan.
      *
      * KAUPUNKI ON MUKANA RUUDUSSA, EI VAIN KIRKOT. Rajaus ulottuu
-     * kirkkojen ympärille joka suuntaan 180–290 metriä, jotta
+     * kirkkojen ympärille joka suuntaan 190–300 metriä, jotta
      * Lalibelan omat kadut ja rinteet näkyvät kirkkojen ympärillä —
      * muuten kartta olisi pelkkä kahdeksan ympyrän rykelmä tyhjällä
      * paperilla.
@@ -5721,7 +5725,7 @@ const KAUPUNGIT = {
      * ajoituskiistan ja Yemrehana Krestosin. Kohdekartta kertoo
      * kunkin kirkon oman tarinan.
      */
-    rajat: { pohjoinen: 12.0370, etela: 12.0275, lansi: 39.0355, ita: 39.0480 },
+    rajat: { pohjoinen: 12.0365, etela: 12.0285, lansi: 39.0385, ita: 39.0483 },
     jalkakaydat: true,
     palvelutiet: true,
   },

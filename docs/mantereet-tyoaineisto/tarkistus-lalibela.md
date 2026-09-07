@@ -220,8 +220,13 @@ kahdeksan mahtuvat 0,28 × 0,48 kilometrin alalle.
 
 **Arvio:** Lalibela on pelin tiivein kohdekartta, ja se on kaupungin
 totuus eikä kartan vika — yksitoista kirkkoa on louhittu saman
-kalliopaljastuman kahteen kaivantoryhmään. Rajaus on siksi 1,36 km
-leveä, mikä on Fesin (1,75 km) ja Vancouverin luokkaa.
+kalliopaljastuman kahteen kaivantoryhmään. Rajaus on siksi 1,07 km
+leveä, mikä on Fesin (1,75 km) ja Vancouverin luokkaa. ENSIMMÄINEN
+RAJAUS (1,36 × 1,06 km) OLI VÄÄRÄ: kirkot jäivät kuvan oikeaan
+laitaan ja vasemman kolmanneksen täytti tyhjä rinne, jolla ei ole
+OSM:ssä yhtään tietä. Ruutu siirrettiin kolmesataa metriä itään ja
+tiivistettiin; suurin numeroympyröiden peitto laski 55 %:sta 43
+%:iin.
 `tools/tarkista-karttapisteet.mjs` mittaa peittoasteen; sen oma
 doktriini sanoo, että päällekkäisyys on tavallista eikä vika ja
 vasta yli 0,6:n peitto on syy harkita kohteen vaihtoa.

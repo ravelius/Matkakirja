@@ -14633,7 +14633,7 @@ export const KAUPUNKIKARTAT = {
   },
   /*
    * LALIBELAN KALLIOKIRKOT (Opus 7.9.2026, paketti O9). Ruutu on
-   * 1,36 x 1,06 kilometriä: lännessä erillinen Biete Giyorgis,
+   * 1,07 x 0,89 kilometriä: lännessä erillinen Biete Giyorgis,
    * keskellä pohjoinen kaivantoryhmä ja idässä eteläinen ryhmä.
    * Perustelut piirra-kaupunkikartta.mjs:n lalibela-lohkossa.
    *
@@ -14655,7 +14655,7 @@ export const KAUPUNKIKARTAT = {
   lalibela: {
     polku: 'assets/kartat/lalibela-keskusta.png',
     lahde: '© OpenStreetMap-tekijät (ODbL)',
-    rajat: { pohjoinen: 12.037, etela: 12.0275, lansi: 39.0355, ita: 39.048 },
+    rajat: { pohjoinen: 12.0365, etela: 12.0285, lansi: 39.0385, ita: 39.0483 },
     esittely: 'Lalibelan yksitoista kirkkoa on louhittu kalliosta '
       + 'ylhäältä alaspäin, ja niiden väliin on hakattu kaivannot ja '
       + 'tunnelit. Kirkot jakautuvat kolmeen: viisi Jordan-puron '

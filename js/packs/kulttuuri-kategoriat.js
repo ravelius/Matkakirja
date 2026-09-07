@@ -97771,6 +97771,40 @@ export const KULTTUURI_KATEGORIAT = {
    *    seremonia "29.3.2007").
    *
    * SÄÄRIVIÄ EI OLE: sen tekee erillinen agentti tässä erässä.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi, tekijä
+   * ja koko extmetadatasta) ja jokainen katsottiin silmin 900 px
+   * esikatseluna. TIMBUKTUN KUVATILANNE ON POIKKEUKSELLISEN HUONO, ja
+   * se on mitattu eikä arvattu:
+   *  - upyernozin koko Timbuktu-sarja ("Sankore Mosque in Timbuktu",
+   *    "Djinguereber Mosque, Timbuktu", "CEDRHAB, Timbuktu") on
+   *    HYLÄTTY, koska jokaisessa on kameran polttama oranssi
+   *    päiväysleima kuvan päällä ("10 16 04"). Sääntö kieltää minkä
+   *    tahansa kuvan päälle lisätyn merkinnän. Sama sarja on
+   *    africa-valokuvat.js:ssä vanhan käytännön mukaisena — sitä ei
+   *    muuteta tässä erässä.
+   *  - "Gordon Laing House.jpg", "Bet Golgotha", "ASC Leiden 05-41
+   *    Sankorén portti" ja "Bet Abba Libanos": HYLÄTTY, etualalla
+   *    tunnistettavat kasvot.
+   *  - "Tombouctou-Mosquée de Sidi-Yahya (AOF).jpg": HYLÄTTY,
+   *    siirtomaa-ajan postikortti, jonka päälle on painettu
+   *    julkaisijan teksti ja Fortier-signeeraus, ja jossa on
+   *    poseeraavia tunnistettavia ihmisiä.
+   *  - "Timbuktu, 1906.png": HYLÄTTY lehdestä, koska se on vain
+   *    403 px leveä. Se jää africa-valokuvat.js:ään, jossa raja on
+   *    toinen.
+   *
+   * EI ENNEN–NYT-PARIA. Valokuvataulun vanha puoli on liian pieni
+   * (403 px) ja sen uusi puoli kantaa päiväysleiman, eikä
+   * korvaavaa paria löytynyt: Fortier'n vuosien 1905–06 postikortit
+   * ovat 1 000–1 078 px ja kantavat painettua tekstiä. Sama ratkaisu
+   * kuin Lagosissa v1670. Kuvatilaus on kirjattu raporttiin.
+   *
+   * EI KANSI- EIKÄ AVAUSKUVIA. Commonsista ei löytynyt yhtään
+   * kuvasäännöt täyttävää laajaa yleiskuvaa Timbuktusta: kaupungin
+   * siluettikuvat ovat joko upyernozin päiväysleimaisia, alle
+   * 1 200 px:n arkistokuvia tai satelliittikuvia, joiden päälle on
+   * painettu tekstiä. Kuvatilaus on kirjattu raporttiin.
    */
   timbuktu: [
     {
@@ -97834,6 +97868,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vallasta varjomaisesti. Ranska liitti kaupungin '
             + 'itseensä vasta 15. joulukuuta 1893. Ristiriita ei ole '
             + 'lähteiden virhe vaan sen ajan kuva.',
+          tiedosto: 'Barth 1858 Timbuktu from terrace.jpg',
+          selite: 'Kaupunki kattoterassilta 1850-luvulla Heinrich '
+            + 'Barthin luonnoksen mukaan: matalia savitaloja niin '
+            + 'kauas kuin näkee, ja takana Sankorén minareetti.',
+          lahde: 'Martin Bernatz, Wikimedia Commons (PD)',
           wiki: 'Timbuktu',
         },
         {
@@ -97854,6 +97893,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA (omistajan linjaus 16.8.2026): yksi aihe,
+         * joka on paikan oma erikoisuus, ja maltillinen pysty
+         * (1899 × 2529 px eli 0,75). Sankorén pyramidiminareetti ei
+         * voi olla mistään muualta. Oikea yläkulma on tyhjää taivasta,
+         * joten Matkaopas-nauha ei peitä aihetta.
+         */
+        kuva: {
+          tiedosto: 'Sankore Madrasah.jpg',
+          selite: 'Sankorén minareetti nousee savimuurin takaa, ja '
+            + 'siitä työntyvät puupalkit ovat rappaajien telineet.',
+          lahde: 'Dr. Ondřej Havelka (cestovatel), Wikimedia Commons (CC BY-SA 4.0)',
+        },
         kappale: 'Timbuktu on Tombouctoun hallintoalueen pääkaupunki '
           + 'Malin pohjoisosassa, Saharan eteläreunalla. Kaupungin '
           + 'vanhaosa on savirakennusten ja hiekkakatujen aluetta, '
@@ -98084,6 +98136,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'käsikirjoitusta; kirjastoja itseään on kuudenkymmenen '
             + 'paikkeilla, ja osa niistä on vain hyllyrivi tai '
             + 'kirja-arkku.',
+          tiedosto: 'Timbuktu Manuscript (48522180467).jpg',
+          selite: 'Sitomaton käsikirjoitus puhdistetaan pehmeällä '
+            + 'harjalla arkki kerrallaan.',
+          lahde: 'Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Timbuktu Manuscripts',
         },
         {
@@ -98181,6 +98237,27 @@ export const KULTTUURI_KATEGORIAT = {
    *    toisteta; ajoitus kerrotaan perinteisenä ja kiistanalaisena.
    *
    * SÄÄRIVIÄ EI OLE: sen tekee erillinen agentti tässä erässä.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi, tekijä
+   * ja koko extmetadatasta) ja jokainen katsottiin silmin 900 px
+   * esikatseluna. HYLÄTYT: "Biete Gabriel-Rufael.jpg" (kuvan alalaidassa
+   * valokuvaajan oma vesileima sähköpostiosoitteineen),
+   * "Bet Abba Libanos (5499043130).jpg" ja "Bet Golgotha
+   * (5497902954).jpg" (etualalla tunnistettavat kasvot),
+   * "Lalibela Cross.jpg" (koko kuvan täyttävä tunnistettava henkilö),
+   * "Lalibela 5 (28424647771).jpg" (mainoskyltti pääosassa),
+   * "Biete Lehem.jpg" (kohde jää varjoon rakennustelineiden alle,
+   * ei luettava pienenä), "GCT 1892.jpg" (ei liity aiheeseen).
+   *
+   * EI ENNEN–NYT-PARIA. africa-valokuvat.js:n lalibela-merkinnässä on
+   * vain yksi kuva (nykyinen Bete Giyorgis), eikä Commonsista
+   * löytynyt Lalibelasta yhtään kuvasäännöt täyttävää vanhaa vedosta:
+   * kirkot valokuvattiin ensi kerran laajasti vasta 1900-luvun
+   * puolivälissä, eivätkä ne kuvat ole vapaita. Sama ratkaisu kuin
+   * Lagosissa v1670. Kuvatilaus on kirjattu raporttiin.
+   *
+   * AVAUSKUVIA EI OLE (kansikuvia kaksi kolmesta): ks. kansikuvien
+   * lohkokommentti.
    */
   lalibela: [
     {
@@ -98189,6 +98266,29 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Ylängön kaupunki 2 500 metrin korkeudessa, jonka '
         + 'kirkkoja ei muurattu vaan louhittiin kalliosta alaspäin. '
         + 'Vanha nimi oli Roha; nykyisen se sai kuninkaalta.',
+      /*
+       * KANSIKUVAT ovat omistajan 21.8.2026 linjauksen mukaisia
+       * laajoja yleiskuvia: maamerkki ympäristössään ja kaupungin
+       * siluetti rinteessä. KOLMATTA EI OLE: Commonsista ei
+       * löytynyt kolmatta kuvasäännöt täyttävää yleiskuvaa
+       * Lalibelasta — kaupungin katukuvassa on mainoskylttejä ja
+       * tunnistettavia kasvoja, ja kirkkokuvat ovat lähikuvia.
+       * Kuvatilaus on kirjattu raporttiin.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Lalibela, san giorgio, esterno 24.jpg',
+          selite: 'Pyhän Yrjön kirkko seisoo omassa kuilussaan, ja '
+            + 'kalliota kiertävät portaat laskeutuvat sen pohjalle.',
+          lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Ethiopie-0694.JPG',
+          selite: 'Kaupunki levittäytyy rinteelle: olkikattoisia '
+            + 'pyöreitä taloja, peltiä ja terasseja harjanteen alla.',
+          lahde: 'BluesyPete, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Mehiläiset, jotka tunnustivat kuninkaan',
@@ -98256,10 +98356,34 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Molemmat kuuluvat maailmanperintökohteen alueeseen, ja '
             + 'niiden säilyminen on osa samaa suojelutyötä kuin '
             + 'kirkkojen.',
+          tiedosto: 'Lalibela-Maisons.jpg',
+          selite: 'Kaksikerroksisen tukulin ulkoseinää pitkin nousevat '
+            + 'kiviportaat ylemmän kerroksen ovelle.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Lalibela',
         },
       ],
       matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA (omistajan linjaus 16.8.2026): yksi aihe,
+         * paikan oma erikoisuus, maltillinen pysty (3648 × 5472 px eli
+         * 0,67). Kalliosta louhittu pilaririvi ei voi olla mistään
+         * muualta.
+         *
+         * AIHETOISTO ON TIETOINEN JA KIRJATTU: sama kirkko (Biete
+         * Medhane Alem) on myös kohdekartan nähtävyysjutussa, mutta
+         * ERI TIEDOSTOLLA ja eri kuvakulmasta — juttukuva on koko
+         * kirkko kaivannossaan, tämä on pilaririvi alhaalta. Kuvassa
+         * näkyvä teräskatos on vuoden 2008 suojarakenne, ja lehti
+         * kertoo siitä oppaan jaksossa "Kirkkoalueella", jottei
+         * lukija jää ihmettelemään sitä.
+         */
+        kuva: {
+          tiedosto: 'Lalibela, chiesa di bete medhane alem, esterno 16.jpg',
+          selite: 'Kirkon pilarit on jätetty seisomaan siihen '
+            + 'kallioon, jonka ympäriltä kaikki muu on louhittu pois.',
+          lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
+        },
         kappale: 'Lalibela on pieni kaupunki Etiopian ylängöllä '
           + 'Amharan alueella, Lastan piirissä ja Pohjois-Wollon '
           + 'vyöhykkeellä. Asukkaita oli vuoden 2007 laskennassa '
@@ -98513,6 +98637,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tunnetuista muinaisista etiopialaisista kirkoista '
             + 'koristeellisimpana, ja sen keskilaivan seinämaalauksia '
             + 'Etiopian vanhimpina säilyneinä.',
+          tiedosto: 'Yemerehne kristos, esterno, 01.jpg',
+          selite: 'Kirkko seisoo luolan sisällä, ja sen seinät ovat '
+            + 'vuorottelevia valkoisen kiven ja tumman puun kerroksia.',
+          lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Yemrehana Krestos Church',
         },
       ],
