@@ -119,6 +119,7 @@ const SHELL = [
   './js/uutiset.js',
   './js/packs/maailmankartta.js',
   './js/packs/maailmankartta-maasto.js',
+  './js/packs/maailmankartta-pallopisteet.js',
   './js/packs/maailmankartta-nimet.js',
   './js/packs/maasto-vedet.js',
   './js/packs/maasto-korkeus.js',

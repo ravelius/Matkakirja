@@ -416,6 +416,7 @@ const MODULES = [
   // Sama syy kuin edellä: maailmankartta.js lukee MAAILMANKARTAN_MAASTOn
   // moduulitasolla, joten maasto on niputettava ensin.
   'js/packs/maailmankartta-maasto.js',
+  'js/packs/maailmankartta-pallopisteet.js',
   'js/packs/maailmankartta.js',
   'js/packs/maailmankartta-nimet.js',
   'js/packs/vuori-valokuvat.js',

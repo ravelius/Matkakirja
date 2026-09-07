@@ -281,7 +281,11 @@ test('nappula seisoo Lontoossa PALLON koordinaateissa myös lähtövalinnassa', 
   // Aloitusnäytön lauta on eri projektiossa: ilman tätä apuria nappula
   // päätyi Tyynellemerelle (mitattu Chromiumilla).
   assert.match(lauta, /const pallonKohta = \(pos\) => \{/);
-  assert.match(lauta, /if \(ui\.game\.pack\?\.id === pack\?\.id\) return ui\.game\.board \? pixelOf\(ui\.game\.board, pos\) : null;/);
+  // Pelin oma lauta: paikka luetaan laudalta (reitillä korjatulta
+  // polylta, kaupungissa pixelOfilla); muu lauta: kaupunki tunnuksella.
+  assert.match(lauta, /if \(ui\.game\.pack\?\.id === pack\?\.id\) \{/);
+  assert.match(lauta, /const \{ board \} = ui\.game;\n\s*if \(!board\) return null;/);
+  assert.match(lauta, /return pixelOf\(board, pos\);/);
   assert.match(lauta, /const c = packKaupunki\.get\(pos\.city\);/);
   assert.match(lauta, /const kohta = pallonKohta\(pos\);/);
 });

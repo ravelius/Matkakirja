@@ -61,7 +61,12 @@ export const MATKAREITIN_PAKSUUS_PX = 2.5;
 export const MATKAREITIN_VARJON_PAKSUUS_PX = 4;
 /** Katkoviivan jakso asteina (viiva + väli); tasokartalla 8 px. */
 export const MATKAREITIN_KATKO_AST = 0.16;
-/** Askelhelmen säde (Globe.gl pointRadius-yksikköä, vrt. KAUPUNKIPISTEEN_SADE 0,03). */
+/*
+ * Askelhelmen säde (Globe.gl pointRadius-yksikköä). Helmi on yhä
+ * KARTTAVAKIO: se merkitsee reitin askelta maastossa, ja reitti itse
+ * on kartan mitta. Kaupunkipiste sen sijaan on ruudun vakio
+ * (js/pallolauta/lauta.js KAUPUNKIPISTEEN_HALKAISIJA_PX).
+ */
 export const REITTIHELMEN_SADE = 0.014;
 /** Helmen korkeus: kaupunkipisteiden (0,003) alla, viivan (0,002) päällä. */
 export const REITTIHELMEN_KORKEUS = 0.0025;
@@ -175,10 +180,14 @@ export function lentokaarenKohta(kaari, e, pohja = 0) {
 
 /**
  * Reittikerros pallolle. `asteet(kohta)` kääntää laudan (x, y) asteiksi
- * ({ lat, lon }); `ui` antaa laudan ja lentoKaaren.
+ * ({ lat, lon }); `ui` antaa laudan ja lentoKaaren; `siirtymat` on
+ * kaupunkien omien pallopisteiden siirtymä laudan yksikköinä
+ * (js/pallo.js pallonOmatPisteet) — ks. REITIN PÄÄ SIIRTYY KAUPUNGIN
+ * MUKANA alempana.
  */
-export function luoReitit({ pallo, ui, siirtyma, asteet }) {
+export function luoReitit({ pallo, ui, siirtyma, asteet, siirtymat = null }) {
   const reittiMuisti = new Map(); // edge id → { pisteet, pituusAst, helmet, datum }
+  const polyMuisti = new Map(); // edge id → korjattu poly
   const kaariMuisti = new Map(); // "a>b" → datum
   /*
    * YKSI VIIVAKERROS, MONTA OSAA (karttapallo.md luku 10.1). Globe.gl:llä
@@ -231,14 +240,64 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
     .arcDashAnimateTime((d) => (d.elava ? LENTOKAAREN_ELO_MS : 0))
     .arcsTransitionDuration(siirtyma);
 
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * REITIN PÄÄ SIIRTYY KAUPUNGIN MUKANA
+   * ══════════════════════════════════════════════════════════════
+   *
+   * Kaupungilla voi olla oma pallopiste (js/packs/
+   * maailmankartta-pallopisteet.js), joka on kymmeniä kilometrejä
+   * laudan omasta pisteestä. Päätoimittajan päätös 7.9.2026: sama
+   * koordinaatti koskee KAIKKIA kaupungin merkkejä — myös reittiviivan
+   * päätä.
+   *
+   * KORJAUS LEVITETÄÄN KOKO POLYLLE, EI VAIN PÄÄHÄN. Jos vain viimeinen
+   * piste siirrettäisiin, nappula kulkisi vanhaa viivaa ja nytkähtäisi
+   * viimeisellä kehyksellä siirron verran (Raamattu: KAIKKI LIIKE
+   * ANIMOIDAAN PEHMEÄSTI). Siksi jokainen polyn piste siirtyy päiden
+   * siirtymien painotettuna summana, painona osuus KAARENPITUUDESTA —
+   * sama parametrisointi kuin `pointAlong`illa, joten askelhelmet ja
+   * nappula kulkevat täsmälleen samaa korjattua viivaa. Päissä paino on
+   * 1 ja 0, joten viiva päättyy tarkalleen siirrettyyn pisteeseen.
+   */
+  const korjattuPoly = (reitti) => {
+    const muistissa = polyMuisti.get(reitti.id);
+    if (muistissa) return muistissa;
+    const poly = reitti.poly ?? [];
+    const a = siirtymat?.get(reitti.a) ?? null;
+    const b = siirtymat?.get(reitti.b) ?? null;
+    if ((!a && !b) || poly.length < 2) {
+      polyMuisti.set(reitti.id, poly);
+      return poly;
+    }
+    const pituudet = [];
+    let yhteensa = 0;
+    for (let i = 1; i < poly.length; i += 1) {
+      const d = Math.hypot(poly[i][0] - poly[i - 1][0], poly[i][1] - poly[i - 1][1]);
+      pituudet.push(d);
+      yhteensa += d;
+    }
+    let kertyma = 0;
+    const korjattu = poly.map(([x, y], i) => {
+      if (i) kertyma += pituudet[i - 1];
+      const t = yhteensa > 0 ? kertyma / yhteensa : Math.min(1, i);
+      const dx = (a ? a.dx * (1 - t) : 0) + (b ? b.dx * t : 0);
+      const dy = (a ? a.dy * (1 - t) : 0) + (b ? b.dy * t : 0);
+      return [x + dx, y + dy];
+    });
+    polyMuisti.set(reitti.id, korjattu);
+    return korjattu;
+  };
+
   /** Reitin poly asteiksi, pituus ja helmet — kerran per reitti. */
   const reitinMuisti = (reitti) => {
     let m = reittiMuisti.get(reitti.id);
     if (m) return m;
+    const poly = korjattuPoly(reitti);
     const pisteet = [];
     let pituusAst = 0;
     let edellinen = null;
-    for (const [x, y] of reitti.poly ?? []) {
+    for (const [x, y] of poly) {
       const a = asteet({ x, y });
       if (!a) continue;
       const p = { lat: a.lat, lng: a.lon };
@@ -254,7 +313,7 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
     const askelia = Math.max(1, Math.round(reitti.steps ?? 1));
     const helmia = [];
     for (let i = 1; i < askelia; i += 1) {
-      const kohta = pointAlong(reitti.poly, i / askelia);
+      const kohta = pointAlong(poly, i / askelia);
       const a = asteet(kohta);
       if (a) helmia.push({ laji: 'helmi', id: `${reitti.id}#${i}`, lat: a.lat, lon: a.lon });
     }
@@ -421,6 +480,13 @@ export function luoReitit({ pallo, ui, siirtyma, asteet }) {
     aseta,
     jalki,
     helmet: () => helmet,
+    /**
+     * Reitin poly siinä muodossa, jossa PALLO sen piirtää: päät
+     * kaupunkien omissa pallopisteissä (ks. REITIN PÄÄ SIIRTYY
+     * KAUPUNGIN MUKANA). Nappulan kuljettaja (js/pallolauta/siirto.js)
+     * kulkee samaa viivaa kuin askelhelmet.
+     */
+    poly: korjattuPoly,
     /** Lentokaaren geometria koneelle: { alku, loppu, kulma, korkeus }. */
     lentokaari: (a, b) => {
       const d = kaari(a, b, false);

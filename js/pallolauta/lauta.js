@@ -65,18 +65,21 @@
 import {
   LAATU_LEPOVIIVE_MS, PALLO_LAATTATASO_MAX, PALLO_LAUTA, asennaPallonEleet, esilataaPallolaatat,
   laatatSaatavilla, laattatasoMax, lataaPallokirjasto, pakotaPallonLaatu,
-  pallonKaupungit, pallonLepokerros, pallonNostoOnPoltettu, rakennaPallo, webglTuettu,
+  laudanPisteenAvain, pallonKaupungit, pallonLepokerros, pallonNostoOnPoltettu,
+  pallonOmatPisteet, rakennaPallo, webglTuettu,
 } from '../pallo.js';
 import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
 import { asemoiFokuskohde } from '../fokuskohteet.js';
 import { laudaltaAsteiksi } from '../fokusmitat.js';
 import { packById } from '../pack.js';
-import { pixelOf, posKey } from '../rules.js';
+import { pixelOf, pointAlong, posKey } from '../rules.js';
 import {
   PALLON_TURVATILAN_UNOHDUS_MS, kehittajaMaailmaPaalla, kehittajaTilaPaalla,
   nollaaPallonKaatumiset, palloKaatui, valikkoSulkeutuiNapautuksesta,
 } from '../ui-apurit.js';
-import { PALLOKAMERAN_AJO_MS, PALLO_KORKEUS_MAX, luoPallokamera } from './kamera.js';
+import {
+  PALLOKAMERAN_AJO_MS, PALLO_FOV, PALLO_KORKEUS_MAX, luoPallokamera,
+} from './kamera.js';
 import { MERKIN_KORKEUS, luoMerkit } from './merkit.js';
 import { NIMIEN_KATTO, luoNimet } from './nimet.js';
 import {
@@ -104,14 +107,64 @@ import { liukuPehmennys, luoAloituslennonKohtaus } from './avaus.js';
  * linssiä ei ole päällä.
  */
 export const PALLOLAUDAN_KERROKSET = ['pointsData', 'htmlElementsData', 'pathsData', 'arcsData', 'polygonsData'];
-/**
- * Kaupunkipisteen säde Globe.gl:n pointRadius-yksiköissä — karttavakio,
- * kasvaa lähennettäessä. Suunnitelma sanoi 0,12°, mutta kirjaston
- * yksikkö on mitatusti isompi kuin aste: 0,12 piirtyi saapumisnäkymässä
- * (leveys 240) ~50 px:n täplänä, 0,03 on ~12 px eli kartan
- * kaupunkipisteen kokoa (savuke-pallolauta, kaappaus pallolauta-sofia).
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KAUPUNKIPISTE ON RUUDUN VAKIO, EI KARTAN (omistaja 7.9.2026, iPad:
+ * Tampereen kohdalla iso musta ympyrä)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Globe.gl:n `pointRadius` on ASTEMITTA: kirjasto skaalaa pisteen
+ * `säde × 2π · R / 360` yksiköksi pallon pinnalle (mitattu kirjaston
+ * lähteestä, ks. PISTEEN_SKAALA), joten piste kasvaa ruudulla kääntäen
+ * verrannollisena kameran korkeuteen. Vanha vakio 0,03 oli puhelimella
+ * 2,7 px tavallisessa pelinäkymässä (korkeus 0,35) mutta 13,7 px
+ * lähimmällä zoomilla ja iPadin korkeammalla ruudulla noin 30 px —
+ * sama piste oli eri kokoinen joka laitteella ja joka zoomilla.
+ * Raamattu sanoo pallon merkeistä, että koko on ruutuvakio;
+ * kaupunkipiste oli ainoa, joka ei sitä ollut.
+ *
+ * KORJAUS: säde lasketaan kameran korkeudesta niin, että RUUTUHALKAISIJA
+ * on sama kaikilla korkeuksilla ja kaikilla laitteilla
+ * (kaupunkipisteenSade). Luku 7 px on valittu näin: se on vanhan
+ * puhelinhaarukan (2,7…13,7 px) sisällä, viidesosa nappulasta (32 px),
+ * joten nappula peittää pisteen kuten ennenkin, ja lähikuvassa
+ * suunnilleen askelhelmen kokoinen — eikä se voi enää kasvaa iPadin
+ * 30 pikseliin.
  */
-export const KAUPUNKIPISTEEN_SADE = 0.03;
+export const KAUPUNKIPISTEEN_HALKAISIJA_PX = 7;
+/**
+ * Kirjaston pistemitta: `pointRadius` → olion skaala pallon yksiköissä.
+ * Globe.gl 2.46: `scale.x = scale.y = min(30, r) · 2π · R / 360`, missä
+ * R = 100 (kirjaston GLOBE_RADIUS). Sama luku molemmissa suunnissa:
+ * pointRadius-luennassa ja suorassa skaalauksessa zoomin muuttuessa.
+ */
+export const PISTEEN_SKAALA = (2 * Math.PI * 100) / 360;
+/** Kirjaston oma katto pisteen säteelle (min(30, r)). */
+export const PISTEEN_SADE_MAX = 30;
+
+/**
+ * Kaupunkipisteen säde (Globe.gl:n pointRadius-yksikköä), joka antaa
+ * halutun RUUTUHALKAISIJAN annetulla kameran korkeudella.
+ *
+ * Kamera on pinnasta `R · korkeus` yksikön päässä ja näkee siinä
+ * kohdassa `2 · R · korkeus · tan(fov/2)` yksikköä ruudun korkeudella,
+ * joten yksi yksikkö on `H / (2 · R · korkeus · tan(fov/2))` pikseliä.
+ * Piste on `2 · säde · 2π · R / 360` yksikköä leveä, ja näiden tulo on
+ * haluttu halkaisija — R supistuu pois:
+ *
+ *   säde = halkaisija · korkeus · tan(fov/2) · (180 / π) / H
+ *
+ * Tarkistus vanhaan mittaukseen: 7 px, korkeus 0,35, H 844 → 0,0776,
+ * ja vanha 0,03 vastaa samalla kaavalla 2,7 px:ää (luku 12.3).
+ */
+export function kaupunkipisteenSade(korkeus, ruudunKorkeusPx, {
+  halkaisijaPx = KAUPUNKIPISTEEN_HALKAISIJA_PX, fov = PALLO_FOV,
+} = {}) {
+  if (!(korkeus > 0) || !(ruudunKorkeusPx > 0)) return 0;
+  const sade = (halkaisijaPx * korkeus * Math.tan((fov / 2) * (Math.PI / 180)) * (180 / Math.PI))
+    / ruudunKorkeusPx;
+  return Math.min(PISTEEN_SADE_MAX, sade);
+}
 /*
  * PISTE ON LEVY, EI TAPPI (omistaja 6.9.2026 ilta, iPhone, sanatarkasti:
  * *"piste venyy kun karttaa panoroi"*). Globe.gl piirtää pointsDatan
@@ -339,9 +392,22 @@ export function luoPisteidenLitistaja() {
   };
 }
 
+/*
+ * KAUPUNGIN OMA PISTE ON LAUDAN EDELLÄ. Hakemisto (js/pallo.js
+ * pallonOmatPisteet) täytetään laudan avautuessa ja tyhjennetään
+ * purussa: se on laudan tilaa, ei moduulin, mutta `pallonAsteet` on
+ * yhden argumentin funktio, jonka jokainen kerros saa `asteet`-nimellä
+ * (merkit, nimet, nostot, reitit) — pakan pujottaminen niiden läpi vain
+ * tämän vuoksi olisi sama tieto kuudessa paikassa. Tyhjä hakemisto
+ * palauttaa käytöksen ennalleen.
+ */
+let omatPisteet = new Map();
+
 /** Laudan kohta (x, y) asteiksi ({ lat, lon }) — yksi totuus on lauta. */
 export function pallonAsteet(kohta) {
   if (!kohta || !Number.isFinite(kohta.x) || !Number.isFinite(kohta.y)) return null;
+  const oma = omatPisteet.get(laudanPisteenAvain(kohta.x, kohta.y));
+  if (oma) return { lat: oma.lat, lon: oma.lon };
   return laudaltaAsteiksi(PALLO_LAUTA, kohta.x, kohta.y);
 }
 
@@ -616,10 +682,19 @@ export async function avaaPallolauta(ui) {
   const pack = ui.game.pack?.id === PALLO_LAUTA ? ui.game.pack : packById(PALLO_LAUTA);
   /** Laudan kaupunki tunnuksella (lähtövalinnan kohteet, ks. aloitusKohteet). */
   const packKaupunki = new Map((pack?.cities ?? []).map((c) => [c.id, c]));
+  /*
+   * KAUPUNKIEN OMAT PALLOPISTEET käyttöön koko laudan ajaksi (ks.
+   * pallonAsteet yllä). `siirtymat` menee reittikerrokselle, joka
+   * korjaa polyn päät samaan pisteeseen.
+   */
+  const { pisteet: laudanOmatPisteet, siirtymat } = pallonOmatPisteet(pack);
+  omatPisteet = laudanOmatPisteet;
   const merkit = luoMerkit({
     pallo, ui, siirtyma, asteet: pallonAsteet, kotelo,
   });
-  const reitit = luoReitit({ pallo, ui, siirtyma, asteet: pallonAsteet });
+  const reitit = luoReitit({
+    pallo, ui, siirtyma, asteet: pallonAsteet, siirtymat,
+  });
   /*
    * VEKTORIVIIVAT LAATTOJEN PÄÄLLE (Raamattu "VEKTORIT SAMALLA",
    * suunnitelma docs/moduulit/pallon-vektoriviivat.md luku 4):
@@ -928,7 +1003,19 @@ export async function avaaPallolauta(ui) {
    */
   const pallonKohta = (pos) => {
     if (!pos) return null;
-    if (ui.game.pack?.id === pack?.id) return ui.game.board ? pixelOf(ui.game.board, pos) : null;
+    if (ui.game.pack?.id === pack?.id) {
+      /*
+       * REITILLÄ LEPÄÄVÄ PAIKKA LUETAAN KORJATULTA POLYLTA (kaupungin
+       * oma pallopiste, js/pallolauta/reitit.js korjattuPoly), jotta
+       * levossa seisova nappula on samalla viivalla, jota pitkin se
+       * juuri kulki. Kaupungin oman pisteen hoitaa pallonAsteet.
+       */
+      const { board } = ui.game;
+      if (!board) return null;
+      const reitti = pos.type === 'edge' ? board.edgeById.get(pos.edge) : null;
+      if (reitti?.poly?.length) return pointAlong(reitit.poly(reitti), pos.idx / reitti.steps);
+      return pixelOf(board, pos);
+    }
     if (pos.type !== 'city') return null;
     const c = packKaupunki.get(pos.city);
     return c ? { x: c.x, y: c.y } : null;
@@ -1122,6 +1209,44 @@ export async function avaaPallolauta(ui) {
     else napautaNosto(voittaja.o);
   };
 
+  /*
+   * KAUPUNKIPISTEEN KOKO SEURAA KAMERAA (ks. KAUPUNKIPISTE ON RUUDUN
+   * VAKIO yllä). Kirjasto lukee `pointRadius`-luennan vain datan
+   * päivittyessä, joten zoomin muuttuessa säde kirjoitetaan suoraan
+   * olion skaalaan — sama luku kuin luenta antaisi (PISTEEN_SKAALA), ei
+   * uutta pistedataa eikä siirtymää, jolloin koko pysyy paikallaan
+   * pehmeästi läpi zoomin.
+   */
+  let asetettuSade = 0;
+  const pisteenSade = () => {
+    asetettuSade = kaupunkipisteenSade(
+      pallo.pointOfView()?.altitude ?? PALLO_KORKEUS_MAX, kotelo.clientHeight,
+    );
+    return asetettuSade;
+  };
+  const tahdistaPisteidenKoko = () => {
+    const edellinen = asetettuSade;
+    const sade = pisteenSade();
+    if (!sade) return;
+    /*
+     * KIRJOITETAAN AINA, HERÄTETÄÄN VAIN MUUTOKSESTA. Kirjaston oma
+     * siirtymä (pointsTransitionDuration) kirjoittaa uuden pisteen
+     * skaalan kehys kerrallaan 250 ms:n ajan siitä säteestä, joka luvun
+     * hetkellä oli voimassa; jos zoomi osuu siihen ikkunaan, tämä
+     * kirjoitus jäisi sen alle. Ehdoton kirjoitus jokaisella
+     * kamera-tapahtumalla ja ladonnalla korjaa senkin.
+     */
+    const skaala = sade * PISTEEN_SKAALA;
+    for (const d of pallo.pointsData()) {
+      if (d.laji === 'helmi' || d.laji === 'valo') continue;
+      const o = d.__threeObjPoint;
+      if (!o) continue;
+      o.scale.x = skaala;
+      o.scale.y = skaala;
+    }
+    if (Math.abs(sade - edellinen) >= 1e-6) heraa();
+  };
+
   const litistaja = luoPisteidenLitistaja();
   pallo
     .pointsData([])
@@ -1142,7 +1267,9 @@ export async function avaaPallolauta(ui) {
       litistaja.litista(d);
       if (d.laji === 'helmi') return REITTIHELMEN_SADE;
       if (d.laji === 'valo') return VALON_SADE;
-      return KAUPUNKIPISTEEN_SADE;
+      // Kaupunkipiste on ruudun vakio: säde luetaan kameran korkeudesta
+      // (tahdistaPisteidenKoko pitää sen samana zoomin muuttuessa).
+      return pisteenSade();
     })
     .pointResolution(16)
     .pointsMerge(false)
@@ -1216,6 +1343,9 @@ export async function avaaPallolauta(ui) {
       vain,
     });
     paivitaPisteet();
+    // Ladonta ajetaan levossa, siirtymän jo mentyä: viimeinen sana
+    // kaupunkipisteen koosta on tässä (ks. tahdistaPisteidenKoko).
+    tahdistaPisteidenKoko();
     if (ui.fokuskohdeAuki?.ankkuri) asemoiFokuskohde(ui);
     return { nostot: nostoTulos, nimet: nimiTulos };
   };
@@ -1226,6 +1356,8 @@ export async function avaaPallolauta(ui) {
   // Kamera liikkui (ele, ajo, liuku): ladonta vasta levossa.
   const ohjaimet = pallo.controls();
   ohjaimet.addEventListener('change', pyydaLadonta);
+  // Zoomi muuttaa kaupunkipisteen säteen heti, ei vasta levossa.
+  ohjaimet.addEventListener('change', tahdistaPisteidenKoko);
   // Aihevalot: selitteen väripallo vaihtaa bodyn luokan.
   let valoAvain = '';
   const valovahti = new MutationObserver(() => {
@@ -1251,10 +1383,17 @@ export async function avaaPallolauta(ui) {
     // Lähtövalinnassa kohteita ovat valittavat aloituskaupungit (aalto 3A).
     if (game.phase === 'pickstart') return aloitusKohteet();
     if (game.phase !== 'move' || game.player?.isBot || ui.katselu) return [];
+    /*
+     * KOHDE ON SAMASSA PISTEESSÄ KUIN ASKELHELMI JA NAPPULA: paikka
+     * luetaan pallonKohdalla, joka lukee reitin korjatun polyn ja
+     * kaupungin oman pallopisteen (js/pallo.js pallonOmatPisteet).
+     * Suoralla pixelOfilla kohderengas jäisi vanhaan viivaan.
+     */
     return (game.moveOptions?.() ?? []).map((opt) => {
-      const { x, y } = pixelOf(game.board, opt.pos);
-      return { key: opt.key, x, y, city: opt.city ?? null };
-    });
+      const kohta = pallonKohta(opt.pos);
+      if (!kohta) return null;
+      return { key: opt.key, x: kohta.x, y: kohta.y, city: opt.city ?? null };
+    }).filter(Boolean);
   };
 
   /**
@@ -1352,6 +1491,8 @@ export async function avaaPallolauta(ui) {
     pallo.width(kotelo.clientWidth).height(kotelo.clientHeight);
     // Ruudun leveys on osa laattojen tarkkuusrajaa (vaihe 5c).
     tahdistaZoomirajat();
+    // Ruudun korkeus on osa kaupunkipisteen ruutuvakiota.
+    tahdistaPisteidenKoko();
     pyydaLadonta();
   };
   const kokovahti = new ResizeObserver(mitoita);
@@ -1368,6 +1509,12 @@ export async function avaaPallolauta(ui) {
     nostot,
     heraa,
     asteet: pallonAsteet,
+    /**
+     * Kaupunkien omien pallopisteiden siirtymä laudan yksikköinä
+     * (js/pallo.js pallonOmatPisteet): nappulan kuljettaja lukee tästä,
+     * mihin kaupunki pallolla oikeasti asettuu.
+     */
+    siirtymat,
     paivita,
     ruutupiste,
     ruudulla,
@@ -1437,6 +1584,9 @@ export async function avaaPallolauta(ui) {
       }
       document.removeEventListener('pointerdown', korttivahti, true);
       ohjaimet.removeEventListener('change', pyydaLadonta);
+      ohjaimet.removeEventListener('change', tahdistaPisteidenKoko);
+      // Omat pallopisteet ovat tämän laudan tilaa (ks. pallonAsteet).
+      if (omatPisteet === laudanOmatPisteet) omatPisteet = new Map();
       valovahti.disconnect();
       if (ui.karttavaloLaskuri) delete ui.karttavaloLaskuri;
       kokovahti.disconnect();

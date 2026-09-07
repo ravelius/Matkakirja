@@ -3393,7 +3393,7 @@ puhelimen laidalla ~6 px — nappulan (32 px) alle jäävä piste (12 px)
 pysyy yhä peitossa, mutta koko pino olisi laskettava pinnalle yhdessä,
 jotta myös piste lukittuisi. Se on oma eränsä, ei tämän.
 
-### 12.2 Helsinki sisämaassa: laudan piste, ei kalibrointi (mitattu, ei korjattu)
+### 12.2 Helsinki sisämaassa: laudan piste, ei kalibrointi (mitattu; korjaus 12.4)
 
 Uusi työkalu `tools/tarkista-laudan-pisteet.mjs` laskee jokaiselle laudan
 kaupungille pallosijainnin laudan omalla projektiolla
@@ -3467,7 +3467,7 @@ todellinen `lat`/`lon` ja lukea se PALLOLLA (`pallonKaupungit`,
 korjaantuu. Sekin on aineistoerä ja vaatii saman ihmisen silmällä
 tehdyn listan. Päätös kuuluu päätoimittajalle ja omistajalle.
 
-### 12.3 Tampereen iso musta ympyrä (mitattu, ei korjattu)
+### 12.3 Tampereen iso musta ympyrä (mitattu; korjaus 12.5)
 
 Omistajan kuvakaappauksessa Tampereen kohdalla on iso musta ympyrä.
 Se on kaupunkipiste: `KAUPUNKIPISTEEN_SADE` 0,03 on Globe.gl:n
@@ -3482,6 +3482,121 @@ ruutuvakio"; kaupunkipiste on ainoa, joka ei sitä ole. Korjaus on säteen
 sitominen kameran korkeuteen (ja pisteiden uudelleenasetus zoomin
 muuttuessa) — oma eränsä.
 
+### 12.4 Kaupungin oma piste pallolla (korjattu 7.9.2026)
+
+Päätoimittajan päätös 12.2:n mittauksen jälkeen: **laudan x/y ei muutu**
+— se on reittien pituus (`steps`), välipisteet (`via`), merireitin ranta
+ja `minCityDistance` — vaan kaupunki saa **oman pallokoordinaattinsa**,
+jota vain pallo lukee. Kenttä on pakan kaupunkirivillä
+(`pallo: { lat, lon }`), ja sen taulu perusteluineen on
+`js/packs/maailmankartta-pallopisteet.js`. Tasokartta, reitinhaku,
+tallennus ja `?lauta=kartta` näkevät laudan ennallaan.
+
+**Ketju kestää uudelleengeneroinnin.** `js/packs/maailmankartta.js` on
+koneen kirjoittama, joten kenttää ei kirjoitettu riveille käsin: pakka
+tuo taulun ja liittää sen kaupunkeihin (`pallonPisteella`), ja
+`tools/tee-maailmankartta.mjs` kirjoittaa saman rivin ulos. Kommentit ja
+lähdeviitteet asuvat taulussa, jota kone ei koskaan ylikirjoita.
+
+**Ketkä siirrettiin.** `tools/tarkista-laudan-pisteet.mjs` lippusi 118
+kaupunkia yli 15 km:n. Laji ratkaistiin pakan riviltä (nimi, wiki-otsikko)
+ja Wikidatan `P31`:stä: siirrettiin 93 ASUTUSTA, jätettiin 23 ALUETTA
+(Borneo, Kamtšatkan niemimaa, Ahaggar, Namib, Nullarbor, Victoria-järvi,
+Tanganjikajärvi, Tšadjärvi, Sepik, Galápagos, Falkland, Bali, Saint
+Helena, Bananal, Havaiji, Sierra Leone, Siinai, Uluru, Mount Rushmore,
+Victorian putoukset, Milford Sound, Kap Palmas, Bahr el Ghazal) ja
+kaksi EPÄSELVÄÄ: `mosambik` (laudan nimi on alue "Mosambik", wiki-sivu
+kaupunki "Mosambikin saari", laudan piste on Beiran rannikolla — 823 km)
+ja `orjarannikko` (laudan nimi on rannikkoalue, wiki-sivu kaupunki
+"Ouidah" — 292 km). Kummankin ratkaisu on tarinan asia, ei koneen.
+Koordinaatti on Wikidatan `P625` kolmeen desimaaliin (~100 m);
+Karthago saa Tunisin viereisten raunioiden pisteen (36,887 N 10,315 I).
+
+Mittaus siirron jälkeen (sama työkalu, joka nyt lukee `pallo`-kentän):
+mediaani putosi **17,3 km → 1,4 km**, ja yli 15 km:n listalle jäi tasan
+ne 25 riviä, jotka jätettiin tarkoituksella.
+
+**Sama koordinaatti koskee kaikkia kaupungin merkkejä.** Siirto on YKSI
+asia (`js/pallo.js pallonOmatPisteet`), joka antaa kaksi hakemistoa:
+
+| hakemisto | avain → arvo | kuka lukee |
+| --- | --- | --- |
+| `pisteet` | laudan piste `"x\|y"` → `{ lat, lon }` | `pallonAsteet` — kaupunkipiste, nimi, nappula levossa, kohdekortin ankkuri, lentokaaren päät, nopan lähtöpiste |
+| `siirtymat` | kaupungin id → `{ dx, dy }` laudan yksikköinä | reitin polyn korjaus, nappulan kuljettaja |
+
+**Reittiviiva päättyy siirrettyyn pisteeseen — ilman nytkähdystä.**
+Pelkän päätepisteen siirto olisi rikkonut säännön KAIKKI LIIKE
+ANIMOIDAAN: nappula olisi kulkenut vanhaa viivaa ja hypännyt viimeisellä
+kehyksellä siirron verran (Helsingissä 35 km, lähikuvassa kymmeniä
+pikseleitä). Siksi korjaus levitetään koko polylle: jokainen polyn piste
+siirtyy päiden siirtymien painotettuna summana, painona osuus
+KAARENPITUUDESTA — sama parametrisointi kuin `pointAlong`illa, joten
+askelhelmet, nappula ja viiva kulkevat täsmälleen samaa korjattua
+viivaa, ja päissä paino on 1 ja 0. `pisteet`-taulun asteluku lasketaan
+korjatusta laudan pisteestä takaisin asteiksi, jolloin reitin pää ja
+levossa seisova nappula antavat bitilleen saman luvun
+(`tests/pallo.test.mjs`).
+
+Vartiot: `tests/pallo.test.mjs` (kenttä pakan rivillä, laudan x/y
+ennallaan, siirtymä ja piste sama asia, alueet eivät saa kenttää, siirto
+alle 500 km), `tests/pallolauta.test.mjs` (siirto kulkee reiteille ja
+kuljettajalle yhdestä paikasta), `tools/tarkista-laudan-pisteet.mjs`.
+
+### 12.5 Kaupunkipiste on ruudun vakio (korjattu 7.9.2026)
+
+12.3:n mittauksen korjaus: säde lasketaan kameran korkeudesta niin, että
+RUUTUHALKAISIJA on sama kaikilla korkeuksilla ja kaikilla laitteilla.
+Kaava johdetaan suoraan perspektiivistä (`js/pallolauta/lauta.js
+kaupunkipisteenSade`); pallon säde supistuu pois:
+
+> säde = halkaisija · korkeus · tan(fov/2) · (180/π) / ruudun korkeus
+
+Valittu halkaisija on **7 css-px**: vanhan puhelinhaarukan (2,7…13,7 px)
+sisällä, viidesosa nappulasta (32 px), joten nappula peittää pisteen
+kuten ennenkin — eikä se voi enää kasvaa iPadin 30 pikseliin.
+
+**Kirjasto lukee `pointRadius`-luennan vain datan päivittyessä**, joten
+zoomatessa säde kirjoitetaan suoraan olion skaalaan
+(`tahdistaPisteidenKoko`): kuuntelija ohjainten `change`-tapahtumassa,
+ruudun koon muuttuessa (`mitoita`) ja levon ladonnassa (`ladoLevossa`)
+— viimeinen on varasana sille, että kirjaston oma 250 ms:n siirtymä
+ehtii kirjoittaa skaalan vielä kerran zoomin jälkeen. Kirjoitus tehdään
+aina, herätys vain muutoksesta. Luku on sama, jonka luentakin antaisi: Globe.gl 2.46
+skaalaa pisteen `min(30, r) · 2π · R / 360`:llä (`PISTEEN_SKAALA`,
+luettu kirjaston lähteestä). Uutta pistedataa ei aseteta, joten 261
+pistettä ei synny uudestaan eikä 250 ms:n siirtymä laahaa zoomin
+perässä. Askelhelmi ja aihevalo ovat yhä KARTAN mittoja: helmi merkitsee
+reitin askelta maastossa, ja reitti itse on kartan mitta.
+
+**Korkeutta EI voi laskea pinnalle, ja syy on mitattu.** 12.1:n
+`MERKIN_KORKEUS = 0` koski CSS2D-merkkejä; kaupunkipiste on mesh, ja
+sitä sitoo kaksi lattiaa:
+
+1. **Kirjaston lattia.** Globe.gl asettaa pisteen korkeuden
+   `scale.z = max(alt · R, 0,1)`, joten `pointAltitude` alle 0,001 ei
+   muuta mitään — levy on aina vähintään 0,1 yksikköä pinnasta.
+2. **Lepokerroksen lattia.** Lepokerros on täsmälleen pinnan säteellä ja
+   järjestyy syvyyssiirrolla, joka on korkeusrajalla 0,034 yksikköä
+   (`js/pallo.js` LEPOKERROS, vartio `tests/pallolepokerros.test.mjs`).
+   Jokaisen merkin on oltava sen yläpuolella selvällä marginaalilla —
+   vartio vaatii nelinkertaisen eli yli 0,136 yksikköä.
+
+Kaupunkipisteen alla on lisäksi aihevalo (0,15) ja sen yli piirtyvät
+reitin varjo (0,18) ja viiva (0,2), joiden pää osuu samaan kohtaan.
+Pisteen 0,003 (0,3 yksikköä) on siis jo lähellä pienintä toimivaa
+arvoa, ja koko pinon laskeminen alemmas ostaisi 3,3 %:n säteittäisestä
+siirtymästä vain kolmanneksen — hinnalla, joka on lepokerroksen
+z-taistelu. **Korkeus jää 0,003:een, ja jäljelle jäävä siirtymä (3,3 %
+säteittäisestä etäisyydestä, puhelimen laidalla ~6 px) on lepokerroksen
+sulavuuden hinta.** Savuke raportoi luvun joka ajolla.
+
+Vartiot: `tests/pallolauta.test.mjs` (kaava on ruutuvakio kolmella
+ruudun korkeudella ja viidellä zoomilla; koko seuraa kameraa ilman uutta
+pistedataa) ja `tools/savukkeet/savuke-pallo-merkit-lukossa.mjs` vartio 4
+(pisteen levyn ruutuhalkaisija ± 1 px korkeudella 0,35 ja lähimmällä
+zoomilla, mitattuna pisteen omasta geometriasta eikä kaavasta).
+
+
 ## 13. Valikon sulku ei avaa kohdetta (7.9.2026)
 
 Omistajan iPad-havainto, sanatarkasti: *"jos hampurilainen tai joku muu
@@ -3489,7 +3604,7 @@ valikko on auki ja käyttäjä klikkaa mitä tahansa kohtaa kartalla, niin
 silloin vain se Valikko pitäisi sulkeutua, mutta mikään kohde ei saisi
 avautua kartalla samalla klikkauksella."*
 
-### 12.1 Juurisyy
+### 13.1 Juurisyy
 
 Valikot sulkeutuvat **pointerdownista** (js/main.js: dokumentin
 kuuntelijat `.valikko-kotelo`n ja `.kehittaja-valikko-kotelo`n
@@ -3499,7 +3614,7 @@ ulkopuolisille napautuksille), mutta laudan osumatesti ajetaan vasta
 kohteen sen alta. Sama vika kuin pöllön kuplassa 27.8.2026 — iOS
 syntetisoi clickin touchendistä, ja Chromiumin kosketus tekee saman.
 
-### 12.2 Yksi yhteinen vartija
+### 13.2 Yksi yhteinen vartija
 
 js/ui-apurit.js (samassa tiedostossa kuin `nielaiseSulkevaNapautus`,
 jota se käyttää):
@@ -3528,7 +3643,7 @@ on nyt false, ks. luku 11).
 kuin `korttiOliAuki`. Se on toinen lukko sen varalta, että nielu ei
 jostain syystä ehdi.
 
-### 12.3 Rajaukset
+### 13.3 Rajaukset
 
 - **Veto panoroi yhä.** Lippu nollataan jokaisella kartalle osuvalla
   pointerdownilla, joten panorointi ei jätä sitä roikkumaan: vain

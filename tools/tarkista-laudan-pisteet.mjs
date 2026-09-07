@@ -14,6 +14,14 @@
  * koordinaattiin (kaupungin oma `wiki`-kenttä → fi-Wikipedian artikkeli
  * → wdt:P625). Vastaus on kilometrejä isoympyrää pitkin.
  *
+ * KAUPUNGILLA VOI OLLA OMA PALLOPISTE (`pallo`-kenttä, taulu
+ * js/packs/maailmankartta-pallopisteet.js). Silloin mittaus lukee sitä,
+ * koska pallokin lukee sitä — kentän saanut kaupunki osuu siis nollaan.
+ * Yli rajan jäävät ovat sen jälkeen ALUEITA (Borneo, Kamtšatka,
+ * Ahaggar, järvet, aavikot…), joiden Wikidata-koordinaatti on alueen
+ * keskipiste eikä se kohta, jota lauta tarkoittaa: työkalu on LIPPU
+ * IHMISELLE, ei tuomio.
+ *
  * Käyttö:
  *   NODE_USE_ENV_PROXY=1 node tools/tarkista-laudan-pisteet.mjs
  *   NODE_USE_ENV_PROXY=1 node tools/tarkista-laudan-pisteet.mjs --raja 25
@@ -192,7 +200,15 @@ async function main() {
   const raportti = [];
   for (const pack of kaikki) {
     for (const c of pack.cities) {
-      const laudalla = laudaltaAsteiksi(pack.id, c.x, c.y);
+      /*
+       * KAUPUNGIN OMA PALLOPISTE VOITTAA (js/packs/
+       * maailmankartta-pallopisteet.js): pallo lukee `pallo`-kenttää
+       * eikä laudan x/y:tä, joten mittauskin lukee sitä. Ilman kenttää
+       * kaupunki mitataan laudan omasta pisteestä kuten ennen.
+       */
+      const laudalla = c.pallo && Number.isFinite(c.pallo.lat) && Number.isFinite(c.pallo.lon)
+        ? { lat: c.pallo.lat, lon: c.pallo.lon }
+        : laudaltaAsteiksi(pack.id, c.x, c.y);
       const oikea = c.wiki ? paikat.get(c.wiki) : null;
       raportti.push({
         lauta: pack.id,
@@ -201,6 +217,7 @@ async function main() {
         wiki: c.wiki ?? null,
         x: c.x,
         y: c.y,
+        oma: c.pallo ? { lat: c.pallo.lat, lon: c.pallo.lon } : null,
         laudalla,
         oikea,
         km: laudalla && oikea ? etaisyysKm(laudalla, oikea) : null,

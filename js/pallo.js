@@ -448,10 +448,82 @@ export function pallonLaatoissaOnNostoja() {
 export const PALLO_SUKELLUSLEVEYS = 620;
 export const PALLO_LAUTA = 'maailmankartta';
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KAUPUNGIN OMA PISTE PALLOLLA (omistaja 7.9.2026: *"Helsinki näyttää,
+ * että se on aivan liian kaukana rannikosta."*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Laudan projektio ja sen kalibrointi ovat oikein (mitattu, luku 12.2
+ * docs/moduulit/karttapallo.md), mutta kaupungin oma x/y on käsin
+ * sommiteltu: Helsinki istuu laudalla 34,7 km liian pohjoisessa ja
+ * seisoo pallolla Suomenlahden rantaviivan sisäpuolella. Laudan x/y ei
+ * silti muutu — se on reittien pituus, via-pisteet, merireitin ranta ja
+ * minCityDistance — vaan kaupunki saa oman `pallo`-kenttänsä
+ * ({ lat, lon }, js/packs/maailmankartta-pallopisteet.js), jota VAIN
+ * pallo lukee.
+ *
+ * KAKSI HAKEMISTOA, JOTTA SIIRTO ON YKSI ASIA KAIKILLE MERKEILLE:
+ *
+ *   pisteet    laudan piste "x|y" → { lat, lon }. Kaikki merkit, jotka
+ *              kysyvät asteita laudan kohdasta (kaupunkipiste, nimi,
+ *              nappula levossa, kohdekortin ankkuri, lentokaaren päät),
+ *              osuvat tähän ilman että kutsupaikka tietää siirrosta.
+ *   siirtymat  kaupungin id → { dx, dy } LAUDAN yksikköinä. Reitin poly
+ *              korjataan tällä päistään (js/pallolauta/reitit.js), jotta
+ *              viiva päättyy siirrettyyn pisteeseen ja nappula kulkee
+ *              samaa viivaa — ilman loppunytkähdystä.
+ *
+ * `pisteet`-arvo lasketaan KORJATUSTA LAUDAN PISTEESTÄ takaisin
+ * asteiksi (eikä suoraan taulun luvusta), jotta reitin pää ja levossa
+ * seisova nappula antavat bitilleen saman asteluvun.
+ */
+
+/** Laudan pisteen avain hakemistossa (x ja y ovat aineiston lukuja). */
+export function laudanPisteenAvain(x, y) {
+  return `${x}|${y}`;
+}
+
+const TYHJAT_PISTEET = { pisteet: new Map(), siirtymat: new Map() };
+const omatPisteetMuisti = new WeakMap();
+
+/** Pakan omat pallopisteet: { pisteet, siirtymat }. Laskettu kerran per pakka. */
+export function pallonOmatPisteet(pack) {
+  if (!pack) return TYHJAT_PISTEET;
+  const muistissa = omatPisteetMuisti.get(pack);
+  if (muistissa) return muistissa;
+  const pisteet = new Map();
+  const siirtymat = new Map();
+  // Kiertävällä laudalla sauman yli laskettu siirtymä olisi lähes koko
+  // kartan levyinen: se kierretään lyhimpään suuntaan.
+  const leveys = pack.map?.kiertava ? (pack.map?.width ?? 0) : 0;
+  for (const c of pack.cities ?? []) {
+    const oma = c.pallo;
+    if (!oma || !Number.isFinite(oma.lat) || !Number.isFinite(oma.lon)) continue;
+    const laudalla = projisoiLaudalle(PALLO_LAUTA, oma.lon, oma.lat);
+    if (!laudalla) continue;
+    let dx = laudalla.x - c.x;
+    if (leveys > 0) {
+      while (dx > leveys / 2) dx -= leveys;
+      while (dx < -leveys / 2) dx += leveys;
+    }
+    const dy = laudalla.y - c.y;
+    const asteet = laudaltaAsteiksi(PALLO_LAUTA, c.x + dx, c.y + dy);
+    if (!asteet) continue;
+    siirtymat.set(c.id, { dx, dy });
+    pisteet.set(laudanPisteenAvain(c.x, c.y), { lat: asteet.lat, lon: asteet.lon });
+  }
+  const tulos = { pisteet, siirtymat };
+  omatPisteetMuisti.set(pack, tulos);
+  return tulos;
+}
+
 /** Kaupungit pallolle: lauta → asteet, käyntitieto ja aloituskaupungit mukana. */
 export function pallonKaupungit(pack, kaydyt = new Set()) {
+  const { pisteet } = pallonOmatPisteet(pack);
   return (pack?.cities ?? []).map((c) => {
-    const p = laudaltaAsteiksi(PALLO_LAUTA, c.x, c.y);
+    const p = pisteet.get(laudanPisteenAvain(c.x, c.y))
+      ?? laudaltaAsteiksi(PALLO_LAUTA, c.x, c.y);
     if (!p) return null;
     return { id: c.id, n: c.name, lat: p.lat, lon: p.lon, x: c.x, y: c.y, alku: Boolean(c.start), kayty: kaydyt.has(c.id) };
   }).filter(Boolean);
