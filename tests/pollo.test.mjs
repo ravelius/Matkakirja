@@ -2260,14 +2260,48 @@ test('kartan kosketus, Escape ja nuoli ylös ohjaavat kuplanäkymää', () => {
 
 test('supistettu pino ei häivytä ainoaa kuplaansa, ja katto liukuu', () => {
   const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
-  // Häivytys kuuluu vain laajennettuun pinoon: supistettuna ruudulla on
-  // yksi kupla, ja häivytys söisi sen ensimmäisen rivin.
+  // Häivytys kuuluu laajennetun pinon ylivuotoon…
   assert.match(css, /\.pollo-kuplapino-yli \.pollo-kuplapino\.pollo-kuplapino-laaja \{/);
-  // Korkeuden liuku on se "pehmeästi animoiden", jota omistaja pyysi.
-  assert.match(css, /transition: max-height 300ms var\(--liike-pehmea\);/);
+  // …ja supistetussa pinossa VAIN kurkistuksen mittaan (edellisen
+  // kuplan alaosa). Ainoa kupla ei saa häivytystä: luokan asettaa
+  // js/pollo.js vasta kun pinossa on edellinen kupla.
+  assert.match(css, /\.pollo-kuplapino\.pollo-kuplapino-kurkistus \{\s*--kuplapino-haive: 2\.2rem;/);
+  // Korkeuden liuku on se "pehmeästi animoiden", jota omistaja pyysi —
+  // ja häivytyksen mitta liukuu sen rinnalla (rekisteröity muuttuja).
+  assert.match(css, /transition: max-height 300ms var\(--liike-pehmea\),/);
+  assert.match(css, /--kuplapino-haive 300ms var\(--liike-pehmea\);/);
+  assert.match(css, /@property --kuplapino-haive \{[^}]*syntax: '<length>';/);
+  // Maski on aina paikallaan (mittana muuttuja), jotta se voi liukua;
+  // iOS-Safari tarvitsee prefiksin.
+  assert.match(css, /-webkit-mask-image: linear-gradient\(to bottom, transparent 0, #000 var\(--kuplapino-haive\)\);/);
+  // Häipyvä sliveri ei ota napautusta vastaan.
+  assert.match(
+    css,
+    /\.pollo-kuplapino:not\(\.pollo-kuplapino-laaja\) \.pollo-vihje:not\(:last-child\) \{\s*pointer-events: none;/,
+  );
   // Puhelimen katto on enintään 45 % ruudusta (omistajan linjaus).
   const kapea = css.match(/\.pollo-kuplapino \{ max-height: min\((\d+)vh, [\d.]+rem\); \}/);
   assert.ok(kapea && Number(kapea[1]) <= 45, `puhelimen katto ${kapea?.[1]}vh`);
+});
+
+/*
+ * KURKISTUS ON MITTA, EI ARVAUS (omistaja 7.9.2026 ilta: *"kuplan
+ * alaosa näkyy ja sitten se feidautuu läpinäkyväksi"*). Supistetun
+ * pinon katto lasketaan js:ssä, joten vartioidaan että lisäys on
+ * sidottu kuplien määrään: yksi kupla → ei lisäystä eikä häivytystä.
+ */
+test('supistetun pinon katto jättää edellisen kuplan alaosan näkyviin', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  const kurkistus = lahde.match(/const PINON_KURKISTUS_REM = ([\d.]+);/);
+  assert.ok(kurkistus, 'kurkistuksen mittaa ei löydy');
+  // Noin 1–1,5 tekstiriviä (rivi ≈ 1.24 rem) ja kuplien väli.
+  assert.ok(Number(kurkistus[1]) >= 1.6 && Number(kurkistus[1]) <= 3,
+    `kurkistus ${kurkistus[1]}rem — ei noin puoltatoista riviä`);
+  // Lisäys vain kun edellinen kupla on olemassa.
+  assert.match(lahde, /kuplat\.length > 1 \? PINON_KURKISTUS_REM \* this\.remPikseleina\(\) : 0/);
+  assert.match(lahde, /korkeus \+ pehmuste \+ kurkistus/);
+  // …ja häivytys kulkee katon mukana samasta ehdosta.
+  assert.match(lahde, /classList\.toggle\('pollo-kuplapino-kurkistus', kurkistaa\)/);
 });
 
 test('tervehdys on lyhyt ja sen ydin lihavoidaan', () => {

@@ -15,7 +15,9 @@
  *
  * VARTIOT (puhelinkoko 390 × 844):
  *   1. Kaksi peräkkäistä kuplaa: molemmat ovat pinossa, mutta ruudulla
- *      näkyy vain viimeisin (pinon näkyvä korkeus = yhden kuplan mitta).
+ *      näkyy vain viimeisin — ja sen yläpuolella edellisen kuplan
+ *      ALAOSA noin 2.2 rem:n verran, yläreunasta häivyttäen (omistaja
+ *      7.9.2026 ilta). Yhden kuplan pinossa ei lisäkorkeutta.
  *   2. Rullaus kuplan päällä laajentaa: näkyvä korkeus kasvaa, useampi
  *      kupla näkyy, eikä katto ylitä 45 % ruudun korkeudesta.
  *   3. Kartan kosketus (pointerdown kartalla) supistaa takaisin yhteen.
@@ -108,13 +110,21 @@ const lueP1no = () => sivu.evaluate(() => {
   if (!pino) return null;
   const laatikko = pino.getBoundingClientRect();
   const kuplat = [...pino.children];
-  // "Näkyy" = kuplasta on ainakin puolet pinon näkyvän alueen sisällä.
+  /*
+   * "Näkyy" = kupla on KOKONAAN pinon näkyvän alueen sisällä. Mitta on
+   * tiukka tarkoituksella (7.9.2026 ilta): supistetussa pinossa
+   * edellisestä kuplasta pilkottaa alaosa, joten "puolet näkyvissä"
+   * -mitalla kaksi kuplaa laskisi kahdeksi näkyväksi vaikka omistajan
+   * sääntö on yhä "ruudulla on vain viimeisin kupla, ja sen yllä siivu".
+   */
   const nakyvia = kuplat.filter((k) => {
     const r = k.getBoundingClientRect();
-    const yla = Math.max(r.top, laatikko.top);
-    const ala = Math.min(r.bottom, laatikko.bottom);
-    return ala - yla > r.height / 2;
+    return r.top >= laatikko.top - 1 && r.bottom <= laatikko.bottom + 1;
   }).length;
+  // Kurkistus: edellisen kuplan alaosa pinon näkyvän alueen sisällä.
+  const edellinen = kuplat.at(-2) ?? null;
+  const e = edellinen?.getBoundingClientRect() ?? null;
+  const tyyli = getComputedStyle(pino);
   return {
     piilossa: Boolean(kehys?.hidden),
     kuplia: kuplat.length,
@@ -122,8 +132,22 @@ const lueP1no = () => sivu.evaluate(() => {
     korkeus: Math.round(laatikko.height),
     laaja: Boolean(pino.classList.contains('pollo-kuplapino-laaja')),
     viimeisenKorkeus: Math.round(kuplat.at(-1)?.getBoundingClientRect().height ?? 0),
+    kurkistus: pino.classList.contains('pollo-kuplapino-kurkistus'),
+    haive: tyyli.getPropertyValue('--kuplapino-haive').trim(),
+    maski: (tyyli.maskImage || tyyli.webkitMaskImage || 'none'),
+    rem: parseFloat(getComputedStyle(document.documentElement).fontSize) || 16,
+    // Edellisestä kuplasta näkyvä siivu: alareuna pinon sisällä,
+    // yläreuna sen ulkopuolella (siis vain alaosa pilkottaa).
+    edellisenSiivu: e ? Math.round(Math.min(e.bottom, laatikko.bottom) - laatikko.top) : 0,
+    edellisenYlaOhi: e ? e.top < laatikko.top - 1 : false,
   };
 });
+
+/** Häivytyksen mitta pikseleinä (rekisteröity muuttuja antaa px:n). */
+const haivePx = (arvo, rem) => {
+  const osa = String(arvo).trim().match(/^([\d.]+)(px|rem)$/);
+  return osa ? Number(osa[1]) * (osa[2] === 'rem' ? rem : 1) : 0;
+};
 
 /** Kupla pinoon pelin omalla kutsulla (js/pollo.js naytaSaapumiskupla). */
 const puhu = async (teksti) => {
@@ -137,16 +161,54 @@ const KUPLA_2 = 'Ja sitten: torilla myytiin jäätä, jota oli kannettu vuorilta
   + 'Sitä minä en olisi uskonut.';
 
 await puhu(KUPLA_1);
+
+/*
+ * 0. YKSI KUPLA: ei kurkistusta eikä häivytystä (omistaja 7.9.2026
+ * ilta — ainoan kuplan yläreunaa ei syödä).
+ */
+const yksin = await lueP1no();
+tieto('pino yhdellä kuplalla', JSON.stringify(yksin));
+vaadi('yhden kuplan pinossa ei ole lisäkorkeutta',
+  Boolean(yksin) && yksin.kuplia === 1
+  && Math.abs(yksin.korkeus - yksin.viimeisenKorkeus) <= 26, JSON.stringify(yksin));
+vaadi('yhden kuplan pinoa ei häivytetä',
+  yksin?.kurkistus === false && haivePx(yksin?.haive, yksin?.rem ?? 16) === 0,
+  `${yksin?.kurkistus} / ${yksin?.haive}`);
+
 await puhu(KUPLA_2);
 
 const supistettu = await lueP1no();
 tieto('pino supistettuna', JSON.stringify(supistettu));
 vaadi('molemmat kuplat ovat pinossa', supistettu?.kuplia === 2, JSON.stringify(supistettu));
-vaadi('ruudulla näkyy vain viimeisin kupla', supistettu?.nakyvia === 1,
+vaadi('ruudulla näkyy kokonaan vain viimeisin kupla', supistettu?.nakyvia === 1,
   JSON.stringify(supistettu));
-vaadi('pinon korkeus on yhden kuplan mitta',
-  Boolean(supistettu) && Math.abs(supistettu.korkeus - supistettu.viimeisenKorkeus) <= 26,
+/*
+ * KURKISTUS (omistaja 7.9.2026 ilta): *"pulun kuplassa saisi
+ * yläpuolella näkyä vähän sitä aiempaa kuplaa … kuplan alaosa näkyy ja
+ * sitten se feidautuu läpinäkyväksi."* Katto on viimeisin kupla + noin
+ * 2.2 rem (js/pollo.js PINON_KURKISTUS_REM), edellisen kuplan alaosa
+ * jää pinon sisään ja yläreunan maski häivyttää sen.
+ */
+const kurkistusPx = (supistettu?.rem ?? 16) * 2.2;
+vaadi('pinon korkeus on viimeisin kupla + kurkistus',
+  Boolean(supistettu)
+  && Math.abs(supistettu.korkeus - (supistettu.viimeisenKorkeus + kurkistusPx)) <= 26,
+  `${supistettu?.korkeus} vs ${supistettu?.viimeisenKorkeus} + ${Math.round(kurkistusPx)}`);
+vaadi('edellisen kuplan alaosa näkyy pinon sisällä',
+  Boolean(supistettu) && supistettu.edellisenSiivu > 8
+  && supistettu.edellisenSiivu < supistettu.viimeisenKorkeus
+  && supistettu.edellisenYlaOhi,
   JSON.stringify(supistettu));
+vaadi('pinon yläreunan häivytys on päällä',
+  supistettu?.kurkistus === true
+  && haivePx(supistettu?.haive, supistettu?.rem ?? 16) > 8
+  && /linear-gradient/.test(supistettu?.maski ?? ''),
+  `${supistettu?.kurkistus} / ${supistettu?.haive} / ${supistettu?.maski}`);
+vaadi('häipyvä sliveri ei ota napautusta vastaan',
+  await sivu.evaluate(() => {
+    const kupla = [...document.querySelectorAll('.pollo-kuplapino > *')].at(-2);
+    return kupla ? getComputedStyle(kupla).pointerEvents === 'none' : false;
+  }), 'edellinen kupla on napautettavissa supistetussa pinossa');
 if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, '1-supistettu.png') });
 
 /* 2. Rullaus kuplan päällä laajentaa näkymän. */
@@ -180,8 +242,18 @@ await sivu.waitForTimeout(700);
 const uudelleen = await lueP1no();
 tieto('pino kartan vedon jälkeen', JSON.stringify(uudelleen));
 vaadi('kartan liike supistaa pinon', uudelleen?.laaja === false, JSON.stringify(uudelleen));
-vaadi('supistuttuaan näkyy taas vain viimeisin', uudelleen?.nakyvia === 1,
+vaadi('supistuttuaan näkyy kokonaan taas vain viimeisin', uudelleen?.nakyvia === 1,
   JSON.stringify(uudelleen));
+/*
+ * Supistuksen jälkeen pohja on POHJA: liu'un aikana pino pidetään
+ * pohjassa (js/pollo.js pidaPinoPohjassa), joten ruudulle jää uusin
+ * kupla ja sen yllä edellisen ALAOSA — ei koko edellistä kuplaa.
+ */
+vaadi('supistuttuaan edellinen kupla pilkottaa taas',
+  uudelleen?.kurkistus === true && uudelleen.edellisenSiivu > 8
+  && uudelleen.edellisenYlaOhi
+  && uudelleen.edellisenSiivu <= supistettu.edellisenSiivu + 2
+  && haivePx(uudelleen?.haive, uudelleen?.rem ?? 16) > 8, JSON.stringify(uudelleen));
 
 /* 4. Chat: lyhyt tervehdys lihavoidulla ytimellä ja kupla-viestit. */
 await sivu.evaluate(() => document.querySelector('.pollo-nappi')?.click());

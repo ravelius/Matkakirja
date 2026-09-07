@@ -843,6 +843,21 @@ const KELLUVAN_NAPIN_VARAPAIKKA = { reuna: 18, koko: 46, pohja: 85 };
 const PINON_LAAJENNUS_MS = 300;
 
 /**
+ * EDELLISEN KUPLAN KURKISTUS (omistaja 7.9.2026 ilta, sanatarkasti:
+ * *"pulun kuplassa saisi yläpuolella näkyä vähän sitä aiempaa kuplaa.
+ * Nyt se jää kokonaan peittoon. Se voisi näkyä niin, että kuplan alaosa
+ * näkyy ja sitten se feidautuu läpinäkyväksi."*).
+ *
+ * Supistetun pinon katto ei ole enää tasan viimeisimmän kuplan mitta
+ * vaan sen mitta + tämä: 2.2 rem eli kuplien väli (0.5 rem) ja noin
+ * puolitoista tekstiriviä (rivi ≈ 1.24 rem) edellisen kuplan alaosaa.
+ * Yläreuna häivytetään saman mitan matkalta läpinäkyväksi
+ * (css --kuplapino-haive), joten sliveri hiipuu ylöspäin eikä näytä
+ * katkaistulta. Yhden kuplan pinossa lisäystä ei tehdä lainkaan.
+ */
+const PINON_KURKISTUS_REM = 2.2;
+
+/**
  * Kuinka monta lokin vanhaa puheenvuoroa laajennettu pino hakee
  * näkyviin kuplien yläpuolelle. Kymmenen riviä kantaa noin neljä
  * kuplaa, ja loppumaton historia on chatissa (ks. lataaLokiVirtaan).
@@ -2673,9 +2688,20 @@ class Pollo {
     this.pinoKehys?.classList.toggle('pollo-kuplapino-laaja', this.pinoLaaja);
     this.pinoKehys?.setAttribute('aria-expanded', this.pinoLaaja ? 'true' : 'false');
     if (ilman) pino.classList.add('pollo-kuplapino-hyppy');
+    /*
+     * EDELLINEN KUPLA PILKOTTAA (omistaja 7.9.2026 ilta): supistetun
+     * pinon katto on viimeisin kupla + PINON_KURKISTUS_REM, jolloin
+     * edellisen kuplan alaosa jää näkyviin sen yläpuolelle. Luokka
+     * kertoo css:lle, että yläreuna häivytetään saman mitan matkalta
+     * (css .pollo-kuplapino-kurkistus). Yhden kuplan pinossa lisäystä
+     * eikä häivytystä ole — muuten häivytys söisi ainoan kuplan
+     * ensimmäisen rivin.
+     */
+    let kurkistaa = false;
     if (this.pinoLaaja) pino.style.maxHeight = '';
     else {
-      const viimeinen = this.pinonKuplat().at(-1) ?? null;
+      const kuplat = this.pinonKuplat();
+      const viimeinen = kuplat.at(-1) ?? null;
       if (!viimeinen) pino.style.maxHeight = '';
       else {
         const ikkuna = this.doc.defaultView ?? (typeof window === 'undefined' ? null : window);
@@ -2683,11 +2709,27 @@ class Pollo {
         const pehmuste = (parseFloat(tyyli?.paddingTop ?? '') || 0)
           + (parseFloat(tyyli?.paddingBottom ?? '') || 0);
         const korkeus = viimeinen.getBoundingClientRect?.().height ?? 0;
-        if (korkeus > 0) pino.style.maxHeight = `${Math.ceil(korkeus + pehmuste)}px`;
+        const kurkistus = kuplat.length > 1 ? PINON_KURKISTUS_REM * this.remPikseleina() : 0;
+        if (korkeus > 0) {
+          kurkistaa = kurkistus > 0;
+          pino.style.maxHeight = `${Math.ceil(korkeus + pehmuste + kurkistus)}px`;
+        }
       }
     }
+    pino.classList.toggle('pollo-kuplapino-kurkistus', kurkistaa);
     // Supistettuna näkyy VIIMEISIN: pohjaan vieritys on koko sääntö.
     pino.scrollTop = pino.scrollHeight;
+    /*
+     * POHJA PYSYY POHJANA MYÖS LIU'UN AIKANA (korjaus 7.9.2026 ilta).
+     * Yllä oleva vieritys tehdään ENNEN kuin katto on ehtinyt kutistua:
+     * selain rajaa scrollTopin sen hetkiseen (yhä laajaan) clientHeightiin,
+     * ja kun katto lopulta pienenee, pino jää yläreunaansa — supistus
+     * jätti ruudulle VANHIMMAN kuplan uusimman sijaan. Kurkistus teki
+     * virheen näkyväksi: siivun piti olla edellisen kuplan alalaita,
+     * mutta ruudulla oli koko edellinen kupla. Siksi pohja pidetään
+     * pohjassa jokaisessa kehyksessä liu'un loppuun asti.
+     */
+    if (!ilman && !this.pinoLaaja) this.pidaPinoPohjassa();
     this.paivitaYlivuoto();
     /*
      * Ylivuoto mitataan uudelleen, kun korkeuden liuku on ohi: kesken
@@ -2698,6 +2740,8 @@ class Pollo {
     clearTimeout(this.pinonKorkeusAjastin);
     this.pinonKorkeusAjastin = setTimeout(() => {
       this.pinonKorkeusAjastin = null;
+      // Varmistin ympäristöille joissa rAF:ää ei ole (ks. pidaPinoPohjassa).
+      if (!this.pinoLaaja) pino.scrollTop = pino.scrollHeight;
       this.paivitaYlivuoto();
     }, PINON_LAAJENNUS_MS + 60);
     if (ilman) {
@@ -2709,6 +2753,34 @@ class Pollo {
         doc.defaultView.requestAnimationFrame(jatka);
       } else setTimeout(jatka, 0);
     }
+  }
+
+  /**
+   * Pino pohjassa liu'un loppuun asti: joka kehyksessä uudestaan, koska
+   * kutistuva katto siirtää vierityksen ylärajaa vasta sitä mukaa kuin
+   * korkeus muuttuu. Laajennuksessa tätä ei tehdä — silloin pelaaja on
+   * juuri kelaamassa, eikä pinoa saa napata hänen käsistään.
+   *
+   * @param {number} [kesto] kuinka pitkään pohjaa pidetään (ms).
+   */
+  pidaPinoPohjassa(kesto = PINON_LAAJENNUS_MS + 60) {
+    const pino = this.pino;
+    const ikkuna = this.doc.defaultView ?? (typeof window === 'undefined' ? null : window);
+    if (!pino || typeof ikkuna?.requestAnimationFrame !== 'function') return;
+    this.pinonPohjaanSaakka = Date.now() + kesto;
+    if (this.pinonPohjaKaynnissa) return;
+    this.pinonPohjaKaynnissa = true;
+    const askel = () => {
+      if (!this.pino || this.pinoLaaja) { this.pinonPohjaKaynnissa = false; return; }
+      this.pino.scrollTop = this.pino.scrollHeight;
+      if (Date.now() >= (this.pinonPohjaanSaakka ?? 0)) {
+        this.pinonPohjaKaynnissa = false;
+        this.paivitaYlivuoto();
+        return;
+      }
+      ikkuna.requestAnimationFrame(askel);
+    };
+    ikkuna.requestAnimationFrame(askel);
   }
 
   /**
@@ -2767,6 +2839,18 @@ class Pollo {
     kupla.polloKuittaus = null;
     this.sidoKuplanNapautus(kupla);
     return kupla;
+  }
+
+  /**
+   * Yksi rem pikseleinä: juuren fonttikoko, oletus 16. Pinon katto on
+   * inline-pikseleitä (siirtymä tarvitsee molempiin päihin saman
+   * yksikön), joten rem-mitat on käännettävä täällä.
+   */
+  remPikseleina() {
+    const ikkuna = this.doc.defaultView ?? (typeof window === 'undefined' ? null : window);
+    const juuri = this.doc.documentElement ?? null;
+    const koko = juuri ? parseFloat(ikkuna?.getComputedStyle?.(juuri)?.fontSize ?? '') : NaN;
+    return koko > 0 ? koko : 16;
   }
 
   /** Liikeherkkyys: pelaaja on pyytänyt vähemmän liikettä. */
@@ -2944,6 +3028,8 @@ class Pollo {
       this.pinoLaaja = false;
       this.pinonHistoriaLisatty = false;
       this.pino?.style?.removeProperty?.('max-height');
+      // Kurkistus kuuluu pinoon jossa on kuplia: tyhjä ei häivytä mitään.
+      this.pino?.classList?.remove?.('pollo-kuplapino-kurkistus');
     }
     this.paivitaYlivuoto();
   }

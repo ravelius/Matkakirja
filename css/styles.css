@@ -20077,6 +20077,16 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
 
 .pollo-kuplapino-kehys[hidden] { display: none; }
 
+/*
+ * Häivytyksen pituus omana rekisteröitynä muuttujanaan, jotta selain
+ * osaa liu'uttaa sitä (pelkkä --muuttuja ei ole animoitava).
+ */
+@property --kuplapino-haive {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 0px;
+}
+
 .pollo-kuplapino {
   display: flex;
   flex-direction: column;
@@ -20114,7 +20124,21 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
    * poistuu ja tämä sääntö on taas voimassa. Kumpikin pää on
    * pikselimitta, joten siirtymä osaa liu'uttaa niiden välillä.
    */
-  transition: max-height 300ms var(--liike-pehmea);
+  transition: max-height 300ms var(--liike-pehmea),
+              --kuplapino-haive 300ms var(--liike-pehmea);
+  /*
+   * YLÄREUNAN HÄIVYTYS ON AINA PAIKALLAAN, VAIN MITTA VAIHTUU
+   * (omistaja 7.9.2026 ilta: *"kuplan alaosa näkyy ja sitten se
+   * feidautuu läpinäkyväksi"*). Maskia ei voi liu'uttaa arvosta `none`
+   * gradienttiin, joten gradientti on aina päällä ja häivytyksen
+   * pituus on muuttuja: 0 px on umpinainen maski eli sama kuin ei
+   * maskia lainkaan. Muuttuja on rekisteröity (@property, ks. yllä),
+   * joten selain osaa liu'uttaa senkin — vanhassa iOS-Safarissa
+   * (< 16.4) rekisteröintiä ei ole, ja häivytys vain vaihtuu suoraan.
+   */
+  --kuplapino-haive: 0px;
+  mask-image: linear-gradient(to bottom, transparent 0, #000 var(--kuplapino-haive));
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 var(--kuplapino-haive));
   overflow-y: auto;
   overscroll-behavior: contain;
   /* Kärki ja varjo mahtuvat: leikkaava overflow söisi ne muuten. */
@@ -20140,16 +20164,36 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
  * CSS ei osaa kysyä onko sisältöä enemmän kuin tilaa.
  */
 .pollo-kuplapino-yli .pollo-kuplapino.pollo-kuplapino-laaja {
-  mask-image: linear-gradient(to bottom, transparent 0, #000 2.6rem);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 2.6rem);
+  --kuplapino-haive: 2.6rem;
 }
 
 /*
- * SUPISTETTUNA EI HÄIVYTETÄ (7.9.2026): ruudulla on silloin vain
- * viimeisin kupla, ja yläreunan häivytys söisi sen ensimmäisen rivin.
- * Kelattavaa on silti — laajennus paljastaa sen (js/pollo.js
- * laajennaPino).
+ * EDELLISEN KUPLAN ALAOSA PILKOTTAA (omistaja 7.9.2026 ilta:
+ * *"pulun kuplassa saisi yläpuolella näkyä vähän sitä aiempaa kuplaa.
+ * Nyt se jää kokonaan peittoon. Se voisi näkyä niin, että kuplan alaosa
+ * näkyy ja sitten se feidautuu läpinäkyväksi."*).
+ *
+ * Supistetun pinon katto on viimeisin kupla + 2.2 rem (js/pollo.js
+ * PINON_KURKISTUS_REM), ja tämä häivyttää saman 2.2 rem:n yläreunasta:
+ * sliverin alalaita on täysi ja ylälaita läpinäkyvä. Luokan asettaa
+ * paivitaPinonKorkeus vain kun pinossa on edellinen kupla — yksin
+ * jäävä kupla ei häivyty lainkaan.
  */
+.pollo-kuplapino.pollo-kuplapino-kurkistus {
+  --kuplapino-haive: 2.2rem;
+}
+
+/*
+ * HÄIPYVÄ SLIVERI EI OTA NAPAUTUSTA VASTAAN (7.9.2026 ilta). Supistetun
+ * pinon vanhat kuplat ovat puoliksi leikattuja ja puoliksi
+ * läpinäkyviä; napautus niihin avaisi chatin vahingossa. Ele menee
+ * pinolle itselleen, joka ei tee mitään eikä myöskään päästä sitä
+ * kartalle asti (kehys on "sisäpuolta", ks. js/pollo.js
+ * seuraaSulkemista). Laajennettuna kaikki kuplat ovat taas napautettavia.
+ */
+.pollo-kuplapino:not(.pollo-kuplapino-laaja) .pollo-vihje:not(:last-child) {
+  pointer-events: none;
+}
 
 /*
  * ENSIMMÄINEN ASETUS JA LIIKEHERKKYYS ILMAN LIUKUA: js/pollo.js lisää
@@ -20280,7 +20324,7 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
 @media (prefers-reduced-motion: reduce) {
   .pollo-vihje { animation: none; }
   .pollo-kuplapino-kehys { transition: none; }
-  /* Korkeuden liuku on liikettä siinä missä muukin. */
+  /* Korkeuden ja häivytyksen liuku on liikettä siinä missä muukin. */
   .pollo-kuplapino { transition: none; }
 
   .pollo-kuplapino .pollo-vihje {

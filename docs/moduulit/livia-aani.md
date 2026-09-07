@@ -304,6 +304,7 @@ kosketa; kyse on pelkästä näkymästä.
 | Kelauksen tunnistus (rulla, sormen veto, nuoli ylös, Escape) | `js/pollo.js varmistaPino` |
 | Supistus kartan vedosta (dokumentin `pointerdown`) | `js/pollo.js seuraaSulkemista` |
 | Korkeuden liuku, häivytys ja puhelimen katto | `css/styles.css .pollo-kuplapino` |
+| Kurkistus edelliseen kuplaan (`PINON_KURKISTUS_REM`, `pidaPinoPohjassa`) | `js/pollo.js`, `css .pollo-kuplapino-kurkistus` |
 | Laitteen loki (`matkakirja-livia-loki`, katto 400) | `js/pollo.js lueLivianLoki`, `kirjaaLivianLokiin` |
 | Lokin lataus chattiin ja kuplaviestien asu | `js/pollo.js lataaLokiVirtaan`, `css .pollo-kuplaviesti` |
 | Selainvartiot | `tools/savukkeet/savuke-pulun-kuplat.mjs` |
@@ -333,3 +334,28 @@ Muistettavaa:
 - **Laajennus hakee lokista aiemmat kuplat** kartan päälle
   (`taytaPinoHistorialla`, enintään kuusi). Ne ovat lajia `historia`:
   kartan kosketus ei poista niitä, napautus avaa chatin.
+- **Edellisestä kuplasta pilkottaa alaosa** (omistaja 7.9.2026 ilta:
+  *"pulun kuplassa saisi yläpuolella näkyä vähän sitä aiempaa kuplaa.
+  Nyt se jää kokonaan peittoon. Se voisi näkyä niin, että kuplan alaosa
+  näkyy ja sitten se feidautuu läpinäkyväksi."*). Supistetun pinon
+  katto on viimeisin kupla + `PINON_KURKISTUS_REM` (2.2 rem = kuplien
+  väli ja noin puolitoista tekstiriviä), ja yläreuna häivytetään saman
+  mitan matkalta. Häivytys on maski, jota ei voi liu'uttaa arvosta
+  `none` gradienttiin, joten gradientti on AINA päällä ja sen pituus on
+  rekisteröity muuttuja `--kuplapino-haive` (0 px = umpinainen maski).
+  Rekisteröinti (`@property`) puuttuu vanhasta iOS-Safarista (< 16.4):
+  siellä maski toimii mutta ei liu'u. Yhden kuplan pinossa ei ole
+  lisäkorkeutta eikä häivytystä — häivytys söisi ainoan kuplan
+  ensimmäisen rivin. "Edellinen" on aina pinon toiseksi viimeinen
+  elementti, joten laajennuksesta jäänyt historiakupla kelpaa siksi
+  vasta kun se on pinossa.
+- **Häipyvä siivu ei ota napautusta vastaan** (`pointer-events: none`
+  supistetun pinon ei-viimeisille kuplille): puoliksi leikattu kupla
+  avaisi chatin vahingossa. Ele osuu pinoon itseensä, joka ei tee
+  mitään eikä päästä sitä kartallekaan (kehys on "sisäpuolta").
+- **Supistuksen aikana pino pidetään pohjassa joka kehyksessä**
+  (`pidaPinoPohjassa`). Kertavieritys pohjaan tehdään ennen kuin katto
+  on ehtinyt kutistua, jolloin selain rajaa `scrollTopin` vielä laajaan
+  `clientHeightiin` — ja supistuttuaan ruudulle jäi VANHIN kupla
+  uusimman sijaan. Kurkistus teki vian näkyväksi. Laajennuksessa
+  pohjaan ei pakoteta: silloin pelaaja on itse kelaamassa.
