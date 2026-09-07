@@ -12229,6 +12229,131 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Pyhien sydänten kirkko', lat: -33.0484, lon: -71.6155 },
     ],
   },
+  /*
+   * NEW ORLEANS (7.9.2026). Rajaus on 2,2 × 3,2 kilometriä Tremésta
+   * Lafayette Squarelle — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * neworleans-lohkossa: Ranskan Kortteli yksin olisi liian kapea
+   * ruutu, ja liikekeskustan reuna tuo mukaan sen puolen kaupunkia,
+   * jota lehti ei näytä.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat joen
+   * puolikuun mutka, Louisianan kauppa, merenpinnan alapuolinen
+   * kaupunki, Katrina, espanjalainen tiili ja Pontalba-talot,
+   * höyrylaiva, vapaiden värillisten yhteisö, kuvernööri Pinchback,
+   * Congo Square, jazzin synty, Black Masking Indianit ja karnevaalin
+   * värit; matkaopas kertoo raitiovaunusta, beignet-munkeista Ranskan
+   * Korttelin torin laidalla, Tremésta ja Garden Districtistä sekä
+   * Superdomesta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe.
+   *
+   * KUUSI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS: Jackson
+   * Square, St. Louis -katedraali, Cabildo, Congo Square,
+   * Preservation Hall ja Superdome mahtuisivat kaikki ruutuun
+   * (faktapohja-neworleans.md, osio 4 antaa niille koordinaatit),
+   * mutta ne ovat lehden omien nostojen aihe. Samasta syystä kartalla
+   * ei ole Ranskan Korttelin toria: Café du Monde sen laidalla on
+   * matkaoppaan ruokajakson aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. Beauregard-Keyesin talo
+   * on 61 metriä Gallier Housesta eli 200 metrin säännön alle.
+   * Lafayette Square jätettiin pois aihesyistä eikä etäisyyden takia
+   * (244 metriä): se on Gallier Hallin oma aukio ja siten saman
+   * kohteen tausta. Vanha ursuliiniluostari, Mississippin laakson
+   * vanhin rakennus, jäi pois kolmannesta syystä: sen en-Wikipedian
+   * artikkelilla ei ole coordinates-arvoa (haku 7.9.2026), eikä
+   * koordinaattia arvata.
+   */
+  neworleans: {
+    polku: 'assets/kartat/neworleans-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 29.9685, etela: 29.9400, lansi: -90.0775, ita: -90.0545 },
+    esittely: 'Ruutu on pysty, ja Mississippi kaartaa sen oikeassa '
+      + 'reunassa penkereen takana. Yläosassa ovat Ranskan Korttelin '
+      + 'ja Tremén tiheät korttelit, keskeltä kulkee vinosti alas '
+      + 'oikealle leveä Canal Street, ja alaosassa liikekeskustan '
+      + 'korttelit kasvavat suuremmiksi. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Halifaxissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 348 metriä
+       * (vanha rahapaja – Gallier House), toiseksi pienin 460 metriä
+       * (Saenger-teatteri – puuvillapörssi).
+       */
+      { nimi: 'St. Augustinen kirkko', lat: 29.9652, lon: -90.0662 },
+      { nimi: 'Vanha rahapaja', lat: 29.96138889, lon: -90.05777778 },
+      { nimi: 'Gallier House', lat: 29.96132222, lon: -90.06139167 },
+      { nimi: 'Hermann-Griman talo', lat: 29.957125, lon: -90.06773056 },
+      { nimi: 'Saenger-teatteri', lat: 29.95579722, lon: -90.07284444 },
+      { nimi: 'Puuvillapörssi', lat: 29.95188611, lon: -90.07130278 },
+      { nimi: 'Tullitalo', lat: 29.95177222, lon: -90.06623056 },
+      { nimi: 'Gallier Hall', lat: 29.94632222, lon: -90.07139167 },
+    ],
+  },
+  /*
+   * BOGOTÁ (7.9.2026). Rajaus on 2,2 × 3,3 kilometriä
+   * Keskushautausmaalta Casa de Nariñolle — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n bogota-lohkossa: kaupungin
+   * vanha ydin on kapea nauha Itäkukkuloiden juurella, ja ruutu
+   * seuraa sitä pohjois–eteläsuunnassa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat kaupungin
+   * kolme nimeä, korkeus, ciclovía, eristys, Chorro de Quevedo, Plaza
+   * de Bolívar patsaineen ja katedraaleineen, Kansallismuseo, La
+   * Lechuga, muiscat, kultalautta, Guatavita ja nykyiset
+   * muisca-neuvostot; matkaopas kertoo TransMileniosta, ajiacosta ja
+   * Zipaquirán suolakatedraalista. Yksikään kartan kohteista ei ole
+   * niiden aihe.
+   *
+   * KOLME KOHDETTA JÄTETTIIN POIS LEHDEN TAKIA. Museo del Oro,
+   * Kansallismuseo ja Monserrate mahtuisivat ruutuun tai sen
+   * laitaan (faktapohja-bogota.md, osio 4), mutta ne ovat lehden
+   * omien nostojen ja kansikuvien aihe. Sama koskee Torre Colpatriaa:
+   * se on lehden avauskuvan aihe, ja siksi se ei ole kartan kohde,
+   * vaikka torni näkyy kuvassa keskellä ruutua.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN ETÄISYYDEN TAKIA: Luis Ángel Arangon
+   * kirjasto on 81 metriä Museo Boterosta, San Bartolomén koulu 214
+   * metriä oikeuspalatsista ja planetaario 225 metriä nykytaiteen
+   * museosta. Kaksi jälkimmäistä ylittävät 200 metrin rajan niukasti,
+   * mutta niin niukasti että numeroympyrät menisivät päällekkäin
+   * tämän kokoisessa ruudussa.
+   *
+   * SANTAMARÍAN AREENA (344 metriä nykytaiteen museosta) jäi pois
+   * lähdesyystä: sen en-Wikipedian artikkeli on tynkä, jossa on
+   * katsomon koko ja kaksi päätöstä härkätaisteluista, eikä siitä
+   * kirjoita juttua sortumatta arvailuun.
+   */
+  bogota: {
+    polku: 'assets/kartat/bogota-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 4.6195, etela: 4.5895, lansi: -74.0815, ita: -74.0620 },
+    esittely: 'Kartta seuraa vanhan Bogotán nauhaa Itäkukkuloiden '
+      + 'juurella: oikeassa reunassa rinteen vihreä alkaa ja '
+      + 'katuverkko loppuu kuin viivaimella vedettynä, keskellä '
+      + 'kulkevat pitkät pohjois–eteläsuuntaiset valtakadut ja '
+      + 'yläreunassa ne yhtyvät moottoritieksi. Alaosan tiheä '
+      + 'korttelikudos on La Candelarian siirtomaakaavaa. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 363 metriä (oikeuspalatsi – Museo Botero),
+       * toiseksi pienin 462 metriä (Hotel Tequendama – nykytaiteen
+       * museo).
+       */
+      { nimi: 'Keskushautausmaa', lat: 4.61638889, lon: -74.07527778 },
+      { nimi: 'Hotel Tequendama', lat: 4.61277778, lon: -74.07277778 },
+      { nimi: 'Nykytaiteen museo', lat: 4.61027778, lon: -74.06944444 },
+      { nimi: 'Andesin yliopisto', lat: 4.601613, lon: -74.065173 },
+      { nimi: 'Oikeuspalatsi', lat: 4.5989, lon: -74.0756 },
+      { nimi: 'Museo Botero', lat: 4.59665, lon: -74.07323 },
+      { nimi: 'Externadon yliopisto', lat: 4.595803, lon: -74.06836 },
+      { nimi: 'Casa de Nariño', lat: 4.59555556, lon: -74.0775 },
+    ],
+  },
 };
 
 /*

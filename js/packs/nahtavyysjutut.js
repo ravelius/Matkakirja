@@ -46850,4 +46850,632 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * NEW ORLEANSIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.neworleans, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "St. Augustine Church (New Orleans)", "New Orleans
+   * Mint", "Gallier House", "James Gallier Jr.", "Hermann–Grima
+   * House", "Saenger Theatre (New Orleans)", "New Orleans Cotton
+   * Exchange", "United States Custom House (New Orleans)" ja
+   * "Gallier Hall").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat joen mutka, Louisianan kauppa, merenpinnan alapuolinen
+   * kaupunki, Katrina, espanjalainen tiili ja Pontalba-talot,
+   * höyrylaiva, vapaiden värillisten yhteisö, kuvernööri Pinchback,
+   * Congo Square, jazzin synty, Black Masking Indianit ja karnevaalin
+   * värit. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. St. Augustinen
+   * jutussa EI kerrota Congo Squaren rumpupiiristä, vaikka aukio on
+   * kolmen korttelin päässä: se on lehden noston M1 aihe. Gallier
+   * Hallin jutussa karnevaali mainitaan vain kulkuereittinä — Rexin
+   * värit ja Zulun kookospähkinät ovat lehden noston M4 aihe. Vanhan
+   * rahapajan jutussa ei kerrota Ranskan Korttelin paloista, vaikka
+   * rahapaja seisoo vanhan linnoituksen paikalla: palot ovat lehden
+   * historiasivun ensimmäinen nosto.
+   *
+   * KAKSI KOHDETTA KANTAA SAMAA SUKUNIMEÄ, ja se on tarkoituksellista
+   * eikä virhe: Gallier Hallin piirsi isä James Gallier Sr. ja
+   * Gallier Housen poika James Gallier Jr. omaksi kodikseen. Jutut
+   * kertovat sen molemmissa, koska kartalla kohteet ovat 1,9
+   * kilometrin päässä toisistaan eikä lukija näe niitä yhtä aikaa.
+   */
+  neworleans: {
+    'St. Augustinen kirkko': {
+      aika: '1842',
+      teksti: 'Kirkon perustivat vapaat värilliset. He järjestäytyivät '
+          + '1830-luvulla ja saivat piispa Antoine Blancilta luvan '
+          + 'rakentaa oman kirkon; ursuliinisisaret lahjoittivat tontin '
+          + 'ehdolla, että kirkko nimetään heidän suojeluspyhänsä '
+          + 'Augustinuksen mukaan. Tontti oli osa Claude Tremén vanhaa '
+          + 'plantaasia, ja kirkon piirsi ranskalainen arkkitehti '
+          + 'J. N. B. de Pouilly. Kirkko vihittiin 9. lokakuuta 1842, '
+          + 'ja sitä pidetään Yhdysvaltain vanhimpana mustana '
+          + 'katolisena seurakuntana.'
+        + '\n\n'
+        + 'Vihkiäisiä edelsi tapaus, jota kutsutaan penkkisodaksi. '
+          + 'Penkeistä maksettiin siihen aikaan vuokraa, ja kun vapaat '
+          + 'värilliset alkoivat ostaa penkkejä perheilleen, seudun '
+          + 'valkoiset ryhtyivät ostamaan niitä enemmän. Vapaat '
+          + 'värilliset voittivat kilpailun ostamalla kolme penkkiä '
+          + 'jokaista valkoisten ostamaa kohti — ja ostivat lisäksi '
+          + 'molempien sivulaivojen kaikki penkit, jotka he antoivat '
+          + 'orjuutettujen käyttöön. Tuloksena oli maan kirjavin '
+          + 'seurakunta: keskellä rivi vapaita värillisiä, toinen rivi '
+          + 'valkoisia ja sivulaivoissa orjuutetut.'
+        + '\n\n'
+        + 'Puutarhassa on Tuntemattoman orjan hauta, risti, joka on '
+          + 'tehty raskaista ketjuista. Muistomerkin suunnitelleet '
+          + 'seurakuntalaiset valitsivat sille juuri tämän paikan, '
+          + 'koska siinä seisoi Tremén plantaasin päärakennus. '
+          + 'Kirkossa on yhä alkuperäiset 1800-luvun penkit, '
+          + 'vaaleanpunaisesta italialaisesta marmorista tehty alttari ja '
+          + 'kymmenen ranskalaista lasimaalausta sekä kolme kelloa, '
+          + 'jotka valettiin 1883 seuraavan vuoden '
+          + 'puuvillanäyttelyä varten ja jotka seurakunta osti 1894. '
+          + 'Seurakuntalaisia ovat olleet muun muassa Homer Plessy ja '
+          + 'klarinetisti Sidney Bechet. Katrinan jälkeen hiippakunta '
+          + 'päätti sulkea kirkon, mutta seurakuntalaiset '
+          + 'linnoittautuivat pappilaan kahdeksi viikoksi, ja maaliskuussa '
+          + '2009 sulkemispäätös peruttiin.',
+      lahde: 'Wikipedia',
+    },
+    'Vanha rahapaja': {
+      aika: '1838–1909',
+      teksti: 'Rahapaja toimi kahdessa jaksossa, 1838–1861 ja '
+          + '1879–1909, ja löi niiden aikana yli 427 miljoonaa kulta- '
+          + 'ja hopearahaa, nimellisarvoltaan yli 307 miljoonaa '
+          + 'dollaria. Kongressi perusti 1835 kolme haararahapajaa; '
+          + 'Charlotte ja Dahlonega olivat kultakenttien vieressä, '
+          + 'mutta New Orleans valittiin sataman takia: 1800-luvun '
+          + 'alkupuolella kaupungin kautta kulki enemmän ulkomaankauppaa '
+          + 'kuin minkään muun yhdysvaltalaiskaupungin, ja Meksikon '
+          + 'kultaa saapui satamaan joka vuosi suuria määriä. Talon '
+          + 'piirsi William Strickland, '
+          + 'saman miehen käsialaa ovat maan neljän ensimmäisen '
+          + 'rahapajan rakennukset. Ensimmäiset rahat, kolmekymmentä '
+          + 'kymmensenttistä, lyötiin 7. toukokuuta 1838.'
+        + '\n\n'
+        + 'Sisällissota katkaisi työn. Louisiana erosi unionista '
+          + '26. tammikuuta 1861, ja konfederaatio jatkoi lyöntiä '
+          + 'talossa muutaman viikon: sen osuus vuoden 1861 New '
+          + 'Orleansin puolen dollarin kolikoista oli 962 633 '
+          + 'kappaletta, ja omalla kääntöpuolen leimasimellaan se löi '
+          + 'oman puolen dollarinsa, joista tunnetaan nykyään neljä '
+          + 'kappaletta. Yksi niistä oli aikanaan Jefferson Davisin '
+          + 'omistuksessa. Huhtikuussa 1862 amiraali Farragutin '
+          + 'merijalkaväki nosti unionin lipun rahapajan katolle, ja '
+          + 'höyrylaivapelurina tunnettu William Mumford repi sen alas '
+          + 'ja jakoi palat muistoiksi. Kenraali Benjamin Butler '
+          + 'hirtätti hänet talon seinästä ulkonevaan lipputankoon '
+          + '7. kesäkuuta 1862. Yksitoista vuotta myöhemmin, 1873, '
+          + 'kaupungissa käynyt Edward King mainitsi tapauksen '
+          + 'kuvatessaan rakennusta.'
+        + '\n\n'
+        + 'Viimeinen raha lyötiin 1909, ja rahapaja lakkautettiin '
+          + 'muodollisesti 1911. Sen jälkeen talo oli jalometallien '
+          + 'pitoisuutta mittaava tarkastuslaitos, 1932–1943 '
+          + 'liittovaltion vankila ja sitten rannikkovartioston '
+          + 'varasto; kylmän sodan aikana '
+          + 'sitä pidettiin kaupungin parhaana säteilysuojana. '
+          + 'Louisianan osavaltio sai rakennuksen 1965, ja vuodesta '
+          + '1981 se on ollut osavaltion museo. Katrina vaurioitti '
+          + 'taloa, ja korjaustöiden jälkeen museo avattiin uudelleen '
+          + 'lokakuussa 2007. Nykyään siellä on New Orleansin '
+          + 'jazzmuseo soittimineen ja kolmannessa kerroksessa '
+          + 'Louisianan historiakeskus. Talo on vanhin säilynyt '
+          + 'rakennus, joka on toiminut Yhdysvaltain rahapajana.',
+      lahde: 'Wikipedia',
+    },
+    'Gallier House': {
+      aika: '1857–1860',
+      teksti: 'Talo on arkkitehdin oma koti. James Gallier Jr. '
+          + '(1827–1868) aloitti sen rakentamisen Royal Streetille '
+          + '1857 ja muutti sisään vaimonsa ja lastensa kanssa 1860. '
+          + 'Isä oli luovuttanut toimistonsa pojalleen 1849, ja '
+          + 'nuoremman Gallierin toimisto piirsi kaupunkiin muun '
+          + 'muassa Ranskalaisen oopperatalon 1859 — se paloi 1919. '
+          + 'Gallier Jr. kuoli neljänkymmenen vuoden iässä kotonaan, '
+          + 'eikä kuolintodistukseen merkitty syytä.'
+        + '\n\n'
+        + 'Rakennus yhdistää tyylejä: julkisivun stukki on '
+          + 'italialaisvaikutteinen ja suojaa pehmeää paikallista '
+          + 'tiiltä tuulelta ja vedeltä, mutta pääsisäänkäynti on '
+          + 'klassinen. Suurin osa Ranskan Korttelin valuraudasta '
+          + 'tilattiin kuvastosta, mutta tämän talon portin Gallier '
+          + 'suunnitteli itse juuri tähän paikkaan. Pihalla on '
+          + 'puutarha, vaunutie ja orjien asuintilat, ja sisätilat on '
+          + 'palautettu 1850-luvun asuun. Talo nimettiin kansalliseksi '
+          + 'maamerkiksi 1974.'
+        + '\n\n'
+        + 'Taloa hoitaa Woman\'s Exchange, joka osti sen Tulanen '
+          + 'yliopistolta 1996 ja ylläpitää myös Hermann-Griman taloa '
+          + 'kolmen korttelin päässä. Kuvausryhmät ovat löytäneet '
+          + 'paikan monta kertaa: talo esiintyy vuoden 2022 '
+          + 'Interview with the Vampire -sarjan ensimmäisellä '
+          + 'tuotantokaudella vampyyrien kotina, ja sen julkisivu '
+          + 'esitti American Horror Story: Covenin avausjaksossa '
+          + 'kaupungin pahamaineisinta kartanoa.',
+      lahde: 'Wikipedia',
+    },
+    'Hermann-Griman talo': {
+      aika: '1831',
+      teksti: 'Talo on Ranskan Korttelin varhaisimpia esimerkkejä '
+          + 'amerikkalaisesta arkkitehtuurista. Samuel Hermann osti '
+          + 'tontin St. Louis Streetiltä 1831 ja palkkasi rakentajaksi '
+          + 'William Brandin, joka piirsi federal- eli '
+          + 'yrjöläistyylisen talon — tyyli oli 1800-luvun alun New '
+          + 'Orleansissa harvinainen. Julkisivu on symmetrinen ja '
+          + 'keskellä kulkee leveä halli, mutta Brand lisäsi '
+          + 'ilmastoon sopivat parvekkeet ja gallerian: sisällä ei ole '
+          + 'käytäviä lainkaan, vaan huoneesta toiseen kuljetaan '
+          + 'parvekkeiden kautta. Pihalla on Korttelin ainoa säilynyt '
+          + 'hevostalli ja 1830-luvun avotulikeittiö.'
+        + '\n\n'
+        + 'Talossa on asunut kaksi sukua. Samuel Hermann syntyi 1777 '
+          + 'Rödelheimissa Saksassa, muutti Louisianaan 1804 ja teki '
+          + 'työtä plantaasinomistajien ja kauppiaiden välittäjänä; '
+          + 'kun Englannin puuvillamarkkina romahti 1837 ja laukaisi '
+          + 'maailmanlaajuisen rahakriisin, hänen omaisuutensa suli ja '
+          + 'talo myytiin. Ostaja oli maltalaissyntyisen isän poika '
+          + 'Felix Grima, juristi, joka muutti taloon 1844 vaimonsa, '
+          + 'naimattoman sisarensa ja leskiäitinsä kanssa. Suku asui '
+          + 'talossa vuoteen 1921, ja museon kokoelmissa on yli '
+          + 'kaksituhatta perheelle kuulunutta kirjaa.'
+        + '\n\n'
+        + 'Christian Woman\'s Exchange osti kiinteistön 1920-luvulla '
+          + 'ja piti siinä täysihoitolaa yksinäisille naisille '
+          + 'vuoteen 1975, jolloin talo kunnostettiin ja avattiin '
+          + 'museona. Restaurointi tehtiin arkeologisten tutkimusten, '
+          + 'rakennussopimuksen ja perukirjojen perusteella, ja noin '
+          + 'puolet esineistöstä on jäljitettävissä talon omiin '
+          + 'sukuihin. Talo nimettiin kansalliseksi maamerkiksi 1974.',
+      lahde: 'Wikipedia',
+    },
+    'Saenger-teatteri': {
+      aika: '1927',
+      teksti: 'Teatteri avattiin 4. helmikuuta 1927. Salissa oli '
+          + 'neljätuhatta paikkaa, rakentaminen kesti kolme vuotta ja '
+          + 'maksoi 2,5 miljoonaa dollaria, ja avajaiset keräsivät '
+          + 'tuhannet ihmiset kulkueeseen Canal Streetille. Kallein '
+          + 'lippu maksoi 65 senttiä, ja samalla lipulla näki '
+          + 'mykkäelokuvan ja näytelmän sekä kuuli talon oman '
+          + 'orkesterin. Saenger oli veljesten Julian ja Abe Saengerin '
+          + 'teatteriketjun lippulaiva, ja se on niitä harvoja ketjun '
+          + 'elokuvapalatseja, jotka ovat yhä pystyssä.'
+        + '\n\n'
+        + 'Arkkitehti Emile Weil suunnitteli sisätilan '
+          + 'atmosfääriteatteriksi, joka jäljittelee italialaista '
+          + 'barokkipihaa. Kattoon asennettiin 150 lamppua '
+          + 'tähtikuvioiden muotoon, ja erikoistehostekoneet '
+          + 'heijastivat sisälle liikkuvia pilviä sekä auringon nousun '
+          + 'ja laskun. Julian Saenger myi teatterin 1929 kymmenellä '
+          + 'miljoonalla dollarilla Paramount Publixille, joka '
+          + 'muutti sen 1933 pelkkien äänielokuvien taloksi. Vuonna '
+          + '1964 saliin muurattiin väliseinä parven eteen ja yhdestä '
+          + 'teatterista tehtiin kaksi.'
+        + '\n\n'
+        + 'Ensimmäinen palautus tehtiin 1980, jolloin paikkoja oli '
+          + 'enää 2 736 ja avajaisissa esiintyi Johnny Carson. '
+          + 'Katrinan tulvavesi nousi näyttämön tasosta noin jalan '
+          + 'verran ylöspäin ja täytti kellarin ja permannon; talon '
+          + 'Robert Morton -urut vaurioituivat, mutta henkilökunta oli '
+          + 'ehtinyt irrottaa mainoskilven akryylilevyt myrskyn '
+          + 'lentäviksi kappaleiksi. Kunnostus maksoi lopulta 53 miljoonaa '
+          + 'dollaria: tähtikatto uusittiin led-valoilla, näyttämöä '
+          + 'laajennettiin 40 prosentilla ja alkuperäinen värisävy '
+          + 'haettiin esiin maalikerrosten alta. Teatteri avattiin '
+          + '27. syyskuuta 2013.',
+      lahde: 'Wikipedia',
+    },
+    'Puuvillapörssi': {
+      aika: '1871–1964',
+      teksti: 'Pörssin perustivat puuvillanvälittäjät 1871, kun '
+          + 'kolmasosa koko Yhdysvaltain puuvillasadosta kulki New '
+          + 'Orleansin kautta. New Yorkin puuvillapörssi oli avattu '
+          + 'vuotta aiemmin, ja New Orleansin kauppiaat pelkäsivät '
+          + 'hinnanmuodostuksen siirtyvän pohjoiseen ostajien eduksi. '
+          + 'Oma pörssi avasi ovensa 20. helmikuuta 1871 Gravier- ja '
+          + 'Carondelet-katujen kulmassa. Sen tehtävä oli tuoda '
+          + 'järjestystä arvaamattomaan hinnoitteluun: se keräsi '
+          + 'tiedot markkinatilanteesta yhteen paikkaan, sopi '
+          + 'puuvillan laatuluokista ja hoiti maksut ostajan ja '
+          + 'myyjän välillä.'
+        + '\n\n'
+        + 'Pörssin todellinen keksintö oli tiedonkeruu. Sihteerinä '
+          + 'pitkään toiminut eversti Henry G. Hester kokosi '
+          + 'raportteja markkinoista ja lähetti ne lennättimellä, '
+          + 'mikä oli tuolloin uutta, ja toi taloon myös '
+          + 'futuurikaupan. Menetelmät tehosivat niin, että New '
+          + 'Orleans nousi takaisin maailman tärkeimmäksi puuvillan '
+          + 'käteismarkkinaksi ja futuurikaupassa vain Liverpoolin ja '
+          + 'New Yorkin taakse.'
+        + '\n\n'
+        + 'Talo vaihtui matkan varrella, mutta katukulma ei. '
+          + 'Vuokrahuoneiden ja pienen oman talon jälkeen pörssi '
+          + 'rakensi 1881 komean toisen keisarikunnan tyylisen '
+          + 'rakennuksen, joka tunnettiin ylellisistä sisätiloistaan; '
+          + 'kun se todettiin 1916 vaaralliseksi, tilalle nousi '
+          + 'vaatimattomampi renessanssipalatsia muistuttava talo '
+          + 'arkkitehtitoimisto Favrot & Livaudais\'lta. Pörssi '
+          + 'lopetti 1964. Vuonna 1873 kaupungissa äitinsä sukua '
+          + 'tapaamassa käynyt Edgar Degas maalasi täällä '
+          + 'puuvillakonttorin, jota usein luullaan pörssiksi — '
+          + 'todellisuudessa maalauksen sali oli erään välittäjän '
+          + 'konttori viereisessä Factors\' Row -korttelissa.',
+      lahde: 'Wikipedia',
+    },
+    Tullitalo: {
+      aika: '1848–1881',
+      teksti: 'Tullitalon rakentaminen kesti 33 vuotta. Työ alkoi '
+          + '1848 Alexander Thompson Woodin piirustusten mukaan, mutta '
+          + 'Wood vaihdettiin jo 1850, ja häntä seurasi kahdeksan '
+          + 'arkkitehtia, joista jokainen muutti suunnitelmaa. Talo '
+          + 'täyttää kokonaisen puolisuunnikkaan muotoisen korttelin, '
+          + 'ja sen tiilirunko on verhoiltu harmaalla graniitilla '
+          + 'Quincystä Massachusettsista. Julkisivujen paksut pylväät '
+          + 'ovat egyptiläistyyliset, ja alakerran seinissä on '
+          + 'kaksikymmentäneljä tyhjää syvennystä: niihin oli '
+          + 'tarkoitus asettaa kuuluisien amerikkalaisten patsaat, '
+          + 'mutta suunnitelmaa yksinkertaistettiin eikä patsaita '
+          + 'koskaan tehty.'
+        + '\n\n'
+        + 'Talon keskellä on Marmorisali, yksi maan varhaisimmista ja '
+          + 'hienoimmista kreikkalaisen uusklassismin sisätiloista. '
+          + 'Sen korinttilaisten pylväiden kapiteeleissa toistuvat '
+          + 'kaksi päätä: Merkurius, kaupan ja rajojen jumala, sekä '
+          + 'Luna, jonka otsalla oleva puolikuu viittaa kaupungin '
+          + 'paikkaan joen puolikuun muotoisessa mutkassa. Salin '
+          + 'yläpuolella on kupumainen kattoikkuna, ja North Peters '
+          + 'Streetin puoleisen oven yllä ovat kaupungin perustajan '
+          + 'Bienvillen ja kenraali Andrew Jacksonin hahmot sekä '
+          + 'Louisianan pelikaani.'
+        + '\n\n'
+        + 'Talo otettiin käyttöön vaiheittain. Tullilaitos muutti '
+          + 'ensimmäiseen kerrokseen 1856 ja posti marraskuussa 1860. '
+          + 'Sota keskeytti rakentamisen: talossa olivat ensin '
+          + 'konfederaation joukot ja vuodesta 1862 unionin armeija, '
+          + 'joka piti siellä vangittuja konfederaatiosotilaita — '
+          + 'kerrotaan, että enimmillään kaksituhatta miestä yhtä '
+          + 'aikaa. Työ jatkui 1871 ja valmistui 1881. Posti ja '
+          + 'tuomioistuimet muuttivat 1916 uuteen taloon Lafayette '
+          + 'Squarelle, ja vuosina 2008–2023 talossa toimi '
+          + 'hyönteismuseo. Tulli on paikallaan yhä.',
+      lahde: 'Wikipedia',
+    },
+    'Gallier Hall': {
+      aika: '1845–1853',
+      teksti: 'Kaupungintaloksi rakennettu Gallier Hall on '
+          + 'ennen sisällissotaa valmistuneista rakennuksista '
+          + 'kaupungin merkittävimpiä. Sen suunnitteli James Gallier '
+          + 'Sr., saman suvun arkkitehti, jonka poika rakensi itselleen '
+          + 'Gallier Housen Ranskan Kortteliin. Työ alkoi '
+          + '1845, ja talo vihittiin 10. toukokuuta 1853. Kolme '
+          + 'kerrosta korkea marmorirakennus on puhdasta kreikkalaista '
+          + 'uusklassismia: julkisivun edessä on kaksi riviä uurrettuja '
+          + 'joonialaisia pylväitä.'
+        + '\n\n'
+        + 'Talo toimi kaupungintalona runsaat sata vuotta, ja sen '
+          + 'saleissa käytiin läpi sisällissodan, jälleenrakennuskauden '
+          + 'ja kuvernööri Huey Longin ajan käänteet. Kaupungin '
+          + 'hallinto muutti 1950-luvulla uuteen keskukseen Duncan '
+          + 'Plazalle, mutta vanha talo säilytti asemansa juhlien '
+          + 'paikkana: pormestarit vannovat virkavalansa täällä, ja '
+          + 'erityisen arvostettujen kaupunkilaisten arkku asetetaan '
+          + 'näytteille sen saliin.'
+        + '\n\n'
+        + 'Karnevaalin aikaan talon edusta on kaupungin katsotuin '
+          + 'paikka. St. Charles Avenuen reittiä kulkevat kulkueet '
+          + 'pysähtyvät sen kohdalla, katsomot julkisivun edessä on '
+          + 'varattu karnevaaliseurojen hoveille ja marssiorkesterit '
+          + 'esittävät siinä oman ohjelmansa. Muun vuoden talo on '
+          + 'kokous- ja juhlatila, ja siinä toimii Ty Tracy -teatteri, '
+          + 'joka on nimetty kaupungin liikuntaviraston pitkäaikaisen '
+          + 'taiteellisen johtajan mukaan.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * BOGOTÁN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026). Kartta on
+   * js/packs/maakartat.js: KAUPUNKIKARTAT.bogota, ja jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit "Central
+   * Cemetery of Bogotá", "Julio Garavito Armero", "Hotel Tequendama",
+   * "Bogotá Museum of Modern Art", "Rogelio Salmona", "University of
+   * the Andes (Colombia)", "Palace of Justice of Colombia", "Palace of
+   * Justice siege", "Museo Botero", "Universidad Externado de
+   * Colombia" ja "Casa de Nariño").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat kaupungin kolme nimeä, korkeus, ciclovía, eristys, Chorro de
+   * Quevedo, Plaza de Bolívar, Kansallismuseo, La Lechuga, muiscat,
+   * kultalautta, Guatavita ja nykyiset muisca-neuvostot. Yksikään
+   * kartan kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Museo Boteron
+   * jutussa EI kerrota naapurissa olevasta Museo del Orosta eikä
+   * kultalautasta, vaikka museot ovat saman Banco de la Repúblican
+   * korttelia: ne ovat lehden nostojen M2 ja M3 aihe. Hotel
+   * Tequendaman jutussa muiscat mainitaan vain hotellin nimen
+   * alkuperänä — kansan oma tarina on lehden muisca-sivulla.
+   *
+   * KAKSI JUTTUA VIITTAA SAMAAN TAITEILIJAAN ERI SUUNNASTA:
+   * Keskushautausmaan mausoleumeja veisti Pietro Tenerani, joka teki
+   * myös lehden nostossa H1 mainitun Bolívar-patsaan, ja Rogelio
+   * Salmonan Torres del Parque seisoo nykytaiteen museon vieressä.
+   * Kumpikaan ei toista lehden juttua, mutta lukija tunnistaa nimen.
+   */
+  bogota: {
+    Keskushautausmaa: {
+      aika: '1836',
+      teksti: 'Hautausmaa avattiin 1836, ja siitä tuli maan '
+          + 'kansallinen muistopaikka: sen presidenttien ja '
+          + 'presidentinrouvien paviljonkiin on haudattu parikymmentä '
+          + 'valtionpäämiestä, ensimmäisenä Kolumbian ensimmäinen '
+          + 'perustuslaillinen presidentti Francisco de Paula '
+          + 'Santander. Mausoleumeja veistivät muun muassa italialaiset '
+          + 'Pietro Tenerani ja Sighinolfi. Alue julistettiin '
+          + 'kansallismonumentiksi 1984.'
+        + '\n\n'
+        + 'Muut haudat kertovat maan historian toisella tavalla. '
+          + 'Täällä lepäävät kaupungin perustaja Gonzalo Jiménez de '
+          + 'Quesada, runoilijat José Asunción Silva ja Rafael Pombo, '
+          + 'kansallislaulun säveltänyt Oreste Sindici, '
+          + 'Bavaria-panimon perustaja Leo Siegfried Kopp sekä neljä '
+          + 'presidenttiehdokasta: Luis Carlos Galán, Jaime '
+          + 'Pardo Leal, Carlos Pizarro ja Álvaro Gómez Hurtado.'
+        + '\n\n'
+        + 'Yksi haudoista on pyhiinvaelluskohde. Astronomi Julio '
+          + 'Garavito Armero (1865–1920) oli lapsinero, joka valmistui '
+          + 'matemaatikoksi ja rakennusinsinööriksi ja johti vuodesta '
+          + '1892 maan kansallista tähtitornia; hän laski Bogotán '
+          + 'leveyspiirin, tutki vuosien 1901–1910 pyrstötähtiä ja '
+          + 'vuoden 1916 auringonpimennyksen. Kuun kääntöpuolella on '
+          + 'hänen mukaansa nimetty kraatteri, ja hänen kasvonsa olivat '
+          + '20 000 peson setelissä, jonka toisella puolella oli Kuu ja '
+          + 'toisella Maa Kuusta katsottuna. Setelin ja sen sinisen '
+          + 'värin takia syntyi kansanusko, että sinisten kynttilöiden '
+          + 'ja sinisten kukkien vieminen Garavidon haudalle tuo '
+          + 'vaurautta.',
+      lahde: 'Wikipedia',
+    },
+    'Hotel Tequendama': {
+      aika: '1953',
+      teksti: 'Hotelli rakennettiin 1950–51 osaksi kymmenennen '
+          + 'valtakadun levennystä, ja se vihittiin 17. toukokuuta 1953 '
+          + 'juhlaillallisella, jolla oli läsnä tasavallan presidentti '
+          + 'Roberto Urdaneta Arbeláez. Suunnittelijoina olivat '
+          + 'yhdysvaltalaiset Holabird & Root ja John Burgee sekä '
+          + 'kolumbialainen Cuéllar Serrano Gómez. Talo oli '
+          + '1950-luvulla kaupungin korkein uudisrakennus ja Centro '
+          + 'Internacional Tequendaman ensimmäinen rakennus — se '
+          + 'aloitti kokonaisen kaupunginosan.'
+        + '\n\n'
+        + 'Tontilla on ollut ennen hotellia neljä muuta laitosta: '
+          + 'San Diegon luostari, sotakorkeakoulu, kadettikoulu ja '
+          + 'puolustusministeriö. Vuosina 1967–1970 hotelliin '
+          + 'rakennettiin samassa tyylissä laajennus, joka '
+          + 'kaksinkertaisti sen koon, siirsi pääsisäänkäynnin '
+          + 'kymmenennelle '
+          + 'valtakadulle ja teki pohjasta T-kirjaimen. Yli '
+          + 'viisikymmentä vuotta taloa hoiti InterContinental-ketju, '
+          + 'ja 2007 nimeksi tuli Crowne Plaza Tequendama. Rakennus on '
+          + 'kaupungin kansallismonumentti, ja 2025 se peruskorjattiin '
+          + 'ja jaettiin kahdeksi hotelliksi.'
+        + '\n\n'
+        + 'Nimi on vanhempi kuin talo ja vanhempi kuin kaupunki. '
+          + 'Tequendama tulee muiscojen chibcha-kielestä ja tarkoittaa '
+          + 'suunnilleen "se, joka syöksee alaspäin" — sama sana on '
+          + 'annettu Bogotá-joen suurelle putoukselle ylätasangon '
+          + 'reunalla. Hotellin aulassa on muiscojen jumalia esittävä '
+          + 'seinämaalaus.',
+      lahde: 'Wikipedia',
+    },
+    'Nykytaiteen museo': {
+      aika: '1963',
+      teksti: 'Museo avattiin yleisölle 1963, ja sen perusti '
+          + 'taidekriitikko Marta Traba. Se on maan tärkeimpiä '
+          + 'kulttuurilaitoksia, ja vuodesta 1969 vuoteen 2016 sitä '
+          + 'johti Gloria Zea. Nykyinen nimi lyhennetään MAMBO, ja '
+          + 'talo on keskellä kaupunkia Itäkukkuloiden juurella.'
+        + '\n\n'
+        + 'Rakennuksen suunnitteli Rogelio Salmona 1985. Neljä '
+          + 'kerrosta yhdistää keskusportaikko, joka tekee talosta '
+          + 'kivien ja portaiden labyrintin; tilaa on 5 000 '
+          + 'neliömetriä, ja sisällä ovat veistospiha, kirjasto, '
+          + 'auditorio, elokuvasali ja ravintola. Ulkoasu on Salmonan '
+          + 'omaa: paljasta tiiltä, ramppeja ja käytäviä, '
+          + 'epätavallisia sisään- ja uloskäyntejä sekä suurten '
+          + 'ikkunoiden ja kattoikkunoiden tuoma luonnonvalo '
+          + 'keinovalon rinnalla.'
+        + '\n\n'
+        + 'Salmona (1929–2007) syntyi Pariisissa ja muutti lapsena '
+          + 'Bogotáan. Le Corbusier kutsui hänet 1947 työhön '
+          + 'ateljeeseensa, ja kun Bogotazon levottomuudet katkaisivat '
+          + 'opinnot 1948, hän lähti Pariisiin ja työskenteli noin '
+          + 'vuosikymmenen piirtäjänä Marseillen asuintalon, Notre '
+          + 'Dame du Hautin ja Chandigarhin hankkeissa. Espanjassa '
+          + 'häneen teki vaikutuksen Granadan islamilainen tiilityö, '
+          + 'ja arkkitehdiksi hän valmistui Andesin yliopistosta 1962. '
+          + 'Ensimmäinen suuri työ oli museon naapurissa oleva Torres '
+          + 'del Parque (1964–70), jota moni pitää hänen '
+          + 'pääteoksenaan ja jossa hän asui loppuelämänsä; 2003 hän '
+          + 'sai Alvar Aalto -mitalin.',
+      lahde: 'Wikipedia',
+    },
+    'Andesin yliopisto': {
+      aika: '1948',
+      teksti: 'Yliopiston perusti 1948 joukko kolumbialaisia '
+          + 'älymystön edustajia Mario Laserna Pinzónin johdolla, ja '
+          + 'se oli maan ensimmäinen yliopisto, joka perustettiin '
+          + 'tunnustuksettomana: riippumattomaksi sekä puolueista '
+          + 'että kirkosta. Perustamisen taustalla oli maan '
+          + 'teollistuminen ja koulutetun työvoiman puute — '
+          + 'opetusministeri Germán Arciniegas kertoi kongressille '
+          + '1946, että maasta puuttuu insinöörejä, arkkitehteja, '
+          + 'lääkäreitä, agronomeja ja jopa juristeja riittävästi. Kun '
+          + 'Jorge Eliécer Gaitán murhattiin 9. huhtikuuta 1948, '
+          + 'perustajat pitivät sitä parhaana perusteluna yliopiston '
+          + 'perustamiselle.'
+        + '\n\n'
+        + 'Opetus alkoi 29. maaliskuuta 1949 kahdeksankymmenellä '
+          + 'opiskelijalla. Malli otettiin yhdysvaltalaisesta '
+          + 'yliopistosta: talossa oli oma Colegio de Estudios '
+          + 'Superiores, joka opetti humanistisia aineita, espanjaa, '
+          + 'englantia ja Kolumbian maantiedettä ja historiaa kaikille '
+          + 'aloille. Jo toisena vuonna 110 opiskelupaikkaa haki noin '
+          + '400 nuorta. Valtio myönsi yliopiston aseman 1964.'
+        + '\n\n'
+        + 'Vuonna 1950 alkoi vaihto-ohjelma, jossa opiskelija '
+          + 'luki viisi lukukautta kotona ja siirtyi sitten '
+          + 'yhdysvaltalaiseen yliopistoon suorittamaan tutkintonsa '
+          + 'loppuun; mukana olivat Illinois, Pittsburgh, MIT, '
+          + 'Vanderbilt ja Texas, ja lukukausimaksut maksoivat '
+          + 'kolumbialaiset yritykset kuten Avianca ja Paz del Ríon '
+          + 'terästehdas, Rockefeller-säätiö sekä yksityiset '
+          + 'lahjoittajat. Yliopiston luentosarjoissa kävivät muun '
+          + 'muassa John von Neumann, Arnold J. Toynbee, Hideki Yukawa '
+          + 'ja Thornton Wilder. Naisten osasto perustettiin 1953, '
+          + 'mutta sen ohjelmat eivät vielä antaneet ammattitutkintoa.',
+      lahde: 'Wikipedia',
+    },
+    Oikeuspalatsi: {
+      aika: '1985',
+      teksti: 'Oikeuspalatseja on ollut kolme. Ensimmäinen oli Pablo '
+          + 'de la Cruzin piirtämä uusklassinen talo, joka toimi '
+          + '1920-luvulta alkaen Calle 11:n ja Carrera 6:n kulmassa; se '
+          + 'tuhoutui tulipalossa 9. huhtikuuta 1948 mellakoissa, jotka '
+          + 'tunnetaan nimellä Bogotazo. Toisen '
+          + 'suunnitteli Roberto Londoño 1960-luvulla, ja se nousi '
+          + 'Plaza de Bolívarin pohjoislaidalle vastapäätä kongressin '
+          + 'taloa, korttelin päähän presidentinlinnasta.'
+        + '\n\n'
+        + 'Tuo toinen talo tuhoutui 6. marraskuuta 1985. M-19-liikkeen '
+          + 'sissiosasto valtasi rakennuksen ja otti panttivangeiksi '
+          + 'noin 350 ihmistä, joukossa korkeimman oikeuden tuomareita, '
+          + 'virkamiehiä ja vierailijoita; ryhmä aikoi järjestää '
+          + 'oikeudenkäynnin presidentti Belisario Betancuria vastaan. '
+          + 'Armeija aloitti hyökkäyksen muutamaa tuntia myöhemmin. '
+          + 'Piiritys kesti 28 tuntia ja vaati 101 ihmisen hengen, '
+          + 'muun muassa yhdentoista korkeimman oikeuden '
+          + 'kahdestakymmenestäviidestä tuomarista. Osa talosta elävänä '
+          + 'poistuneista katosi turvallisuusjoukkojen käsiin, ja '
+          + 'katoamisista on tuomittu useita upseereita; viimeiset '
+          + 'tunnistetut jäännökset löytyivät vasta 2015 ja 2017.'
+        + '\n\n'
+        + 'Kolmas palatsi rakennettiin samalle paikalle saman '
+          + 'arkkitehdin piirustusten mukaan, ja vuodesta 2004 siinä '
+          + 'ovat toimineet korkein oikeus, perustuslakituomioistuin, '
+          + 'valtionneuvosto ja ylin tuomarineuvosto. Sisäänkäynnillä '
+          + 'on ainoa vanhasta talosta säilynyt osa: laatta, johon on '
+          + 'kaiverrettu kenraali Santanderin lause "kolumbialaiset, '
+          + 'aseet ovat antaneet teille itsenäisyyden, lait antavat '
+          + 'teille vapauden". Talo on nimetty Alfonso Reyes '
+          + 'Echandían mukaan — hän oli korkeimman oikeuden '
+          + 'presidentti ja kuoli piirityksessä.',
+      lahde: 'Wikipedia',
+    },
+    'Museo Botero': {
+      aika: '2000',
+      teksti: 'Museo syntyi yhdestä lahjoituksesta. Fernando Botero '
+          + 'oli kerännyt taidetta 1960-luvun lopulta alkaen, ensin '
+          + 'esikolumbiaanista ja siirtomaa-ajan taidetta, myöhemmin '
+          + 'nykytaidetta, ja kokoelma oli hajallaan hänen kodeissaan '
+          + 'New Yorkissa, Pariisissa, Monte Carlossa ja '
+          + 'Pietrasantassa. Hän harkitsi ensin lahjoittavansa sen '
+          + 'Medellínin Antioquian museolle, mutta päätöksenteko '
+          + 'siellä oli hidasta, ja niin hän otti vastaan Bogotán '
+          + 'pormestarin Enrique Peñalosan ehdotuksen. Vuonna 2000 '
+          + 'Botero lahjoitti 208 teosta keskuspankille: 123 omaansa '
+          + 'ja 85 muiden taiteilijoiden työtä.'
+        + '\n\n'
+        + 'Kokoelmaa varten pankki osti La Candelariasta '
+          + 'siirtomaa-ajan talon, jonka Botero itse sovitti museoksi. '
+          + 'Ovet avautuivat 1. marraskuuta 2000, eikä pääsymaksua '
+          + 'ole. Muiden taiteilijoiden osuudessa on töitä muun muassa '
+          + 'Picassolta, Monet\'lta, Matisselta, Chagallilta, '
+          + 'Dalílta, Mirólta, Braquelta ja Sonia Delaunaylta. '
+          + 'Boteron omista teoksista tunnetuin on hänen versionsa '
+          + 'Mona Lisasta, ja mukana on myös osa hänen ensimmäisestä '
+          + 'väkivaltaa käsittelevästä sarjastaan. Kävijöitä on yli '
+          + 'puoli miljoonaa vuodessa ja koululaisia kaksituhatta '
+          + 'kuukaudessa.'
+        + '\n\n'
+        + 'Kulttuuriministeriö julisti 2012 koko lahjoitetun '
+          + 'kokoelman kansallisesti merkittäväksi kulttuuriomaisuudeksi, '
+          + 'jota ei saa hajottaa. Kun Botero kuoli, hänen arkkunsa oli '
+          + 'hautajaisten ajan näytteillä juuri tämän museon '
+          + 'sisäpihalla.',
+      lahde: 'Wikipedia',
+    },
+    'Externadon yliopisto': {
+      aika: '1886',
+      teksti: 'Yliopiston perusti 15. helmikuuta 1886 juristi ja '
+          + 'kasvattaja Nicolás Pinzón Warlosten vastaukseksi '
+          + 'koulutuksen rajoituksiin, joita La Regeneración eli '
+          + 'konservatiivien hallintokausi asetti. Pinzón sai avukseen '
+          + 'radikaaliliberaalin liikkeen professoreita ja muita '
+          + 'aikansa ajattelijoita. Nimi Externado viittasi kouluun, joka '
+          + 'ei ollut sisäoppilaitos eikä kirkon.'
+        + '\n\n'
+        + 'Täyden yliopiston aseman laitos sai 1958. Nykyään siellä '
+          + 'opiskelee yli 13 000 opiskelijaa, ja opetusaloja ovat '
+          + 'muun muassa oikeustiede, taloustiede, journalismi, '
+          + 'antropologia, sosiaalityö, filosofia ja historia sekä '
+          + 'kulttuuriperinnön ala museologiasta arkeologiaan ja '
+          + 'konservointiin. Opetuskieli on pääosin espanja. Unesco '
+          + 'perusti yliopistoon 2005 oppituolin, jonka alana ovat '
+          + 'ihmisoikeudet, väkivalta, julkinen politiikka ja '
+          + 'hallinto.'
+        + '\n\n'
+        + 'Kolumbian korkeakoulujen akkreditointineuvosto myönsi '
+          + 'yliopistolle korkean laadun tunnustuksen kahdeksaksi '
+          + 'vuodeksi, ja saman tunnustuksen ovat saaneet erikseen '
+          + 'muun muassa oikeustieteen, taloustieteen, journalismin ja '
+          + 'kirjanpidon ohjelmat. Talosta on valmistunut suuri osa '
+          + 'maan juristikuntaa: alumneihin kuuluvat presidentti '
+          + 'Gustavo Petro, Bogotán pormestarina toiminut Claudia '
+          + 'López, oikeusministeri Rodrigo Lara ja toimittaja Daniel '
+          + 'Coronell.',
+      lahde: 'Wikipedia',
+    },
+    'Casa de Nariño': {
+      aika: '1908',
+      teksti: 'Presidentinlinna seisoo talon paikalla, jossa syntyi '
+          + 'itsenäisyystaistelun johtohahmo Antonio Nariño '
+          + '9. huhtikuuta 1765. Hänen isänsä Vicente Nariño oli '
+          + 'ostanut talon 1754 hinnalla 5 200 patacónia, ja perhe '
+          + 'asui siinä noin kolmekymmentä vuotta. Presidentti Rafael '
+          + 'Núñez osti talon valtiolle 1885 tehdäkseen siitä '
+          + 'presidentinlinnan, koska se oli kaunis, historiallinen ja '
+          + 'lähellä kongressin taloa. Presidentit asuivat siinä '
+          + 'vuoteen 1892, minkä jälkeen talossa toimivat sotaministeriö, '
+          + 'kansallisarkisto ja Kansallisen yliopiston matematiikan '
+          + 'tiedekunta.'
+        + '\n\n'
+        + 'Nykyinen palatsi on vuodelta 1908. Kenraali Rafael Reyes '
+          + 'palkkasi 1906 ranskalaisen arkkitehdin Gastón Lelargen, '
+          + 'joka oli aikanaan ollut Charles Garnier\'n oppilas, sekä '
+          + 'kolumbialaisen Julián Lombanan. He purkivat osan vanhasta '
+          + 'talosta, laajensivat tonttia, jakoivat sisätilat '
+          + 'kahteen kerrokseen ja verhosivat julkisivun veistettyyn '
+          + 'kiveen; koristetyöt teki sveitsiläinen kuvanveistäjä '
+          + 'Luigi Ramelli. Rakennus luovutettiin hallitukselle '
+          + '20. heinäkuuta 1908. Presidentti Eduardo Santosin aikana '
+          + 'taloon rakennettiin kolmas kerros ja kattoterassi '
+          + 'helikopterikenttineen.'
+        + '\n\n'
+        + 'Puutarhassa on kaupungin tähtitorni, joka on paljon '
+          + 'palatsia vanhempi: sen rakensi 1802–03 kapusiinimunkki ja '
+          + 'arkkitehti Domingo de Petrés. Presidentin virasto ehti '
+          + 'siirtyä talosta pois 1954, mutta 1970-luvun '
+          + 'peruskorjauksen jälkeen se palasi, ja nykyään talo on '
+          + 'sekä presidentin virka-asunto että toimipaikka. '
+          + 'Nimestä käytetään kahta muotoa: vanhempi on Palacio de '
+          + 'Nariño, mutta Washingtonin esikuvan mukaan yhä useammin '
+          + 'sanotaan Casa de Nariño.',
+      lahde: 'Wikipedia',
+    },
+  },
 };

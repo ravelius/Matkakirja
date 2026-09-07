@@ -3573,6 +3573,69 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 34.0610, etela: 34.0385, lansi: -118.2595, ita: -118.2350 },
   },
+  neworleans: {
+    /*
+     * TREMÉSTA LAFAYETTE SQUARELLE (7.9.2026). Ruutu on 2,2 × 3,2
+     * kilometriä eli pelin tiiviimpiä, Christchurchin ja Dubrovnikin
+     * kokoluokkaa. Se riittää: New Orleansin vanha kaupunki on
+     * Ranskan Kortteli, kolmentoista korttelin mittainen suorakaide
+     * joen mutkan sisäkaarteessa, ja kartan kahdeksan kohdetta
+     * mahtuvat siihen ja sen kahteen naapuriin — Treméhen
+     * pohjoisessa ja liikekeskustaan lounaassa.
+     *
+     * RUUTU ON PYSTY, KOSKA KOHTEET OVAT PYSTYSSÄ. Ranskan Kortteli,
+     * Canal Street ja liikekeskusta ovat peräkkäin lounaaseen
+     * laskeutuvassa nauhassa: pohjoisin kohde on St. Augustinen
+     * kirkko (29,9652) ja eteläisin Gallier Hall (29,9463), eli
+     * leveyseroa on 2,1 kilometriä mutta pituuseroa vain 1,3.
+     * Neliöruutu toisi mukaan järven suunnan tyhjää esikaupunkia.
+     *
+     * ETELÄREUNA 29,9400 ON MITOITETTU MITTAKAAVAJANAN MUKAAN.
+     * Gallier Hall on kartan lounaisnurkassa, ja lehti piirtää
+     * janan juuri sinne (ui.js). Kööpenhaminan Tivolin opetus on
+     * tässä sovellettu etukäteen: reunaa laskettiin, kunnes
+     * tools/tarkista-karttapisteet.mjs lakkasi raportoimasta
+     * numeroympyrän ja janan päällekkäisyyttä.
+     *
+     * GARDEN DISTRICT, SUPERDOME JA LOWER NINTH WARD JÄÄVÄT POIS.
+     * Ne ovat 1,9–5,0 kilometrin päässä (faktapohja-neworleans.md,
+     * osio 4) ja kaikki kolme kaupunkilehden omien juttujen aihe,
+     * joten niitä ei oteta ruutuun eikä kainalokartaksi.
+     *
+     * meri: ei. Mississippi on OSM:ssä tavallinen vesimonikulmio
+     * (natural=water), ja se piirtyy ilman lippua.
+     */
+    rajat: { pohjoinen: 29.9685, etela: 29.9400, lansi: -90.0775, ita: -90.0545 },
+  },
+  bogota: {
+    /*
+     * VANHAN BOGOTÁN NAUHA ITÄKUKKULOIDEN JUURELLA (7.9.2026). Ruutu
+     * on 2,2 × 3,3 kilometriä. Miljoonakaupungista näkyy siis vain
+     * vanha ydin, kapea kaistale vuorten juurella: kartan kahdeksan
+     * kohdetta mahtuvat Keskushautausmaalta (4,6164) Casa de
+     * Nariñolle (4,5956) eli 2,3 kilometrin nauhaan.
+     *
+     * ITÄREUNA 74,0620 ON KUKKULOIDEN RAJA. Sen takana katuverkko
+     * loppuu kuin veitsellä leikaten ja alkaa Cerros Orientalesin
+     * suojelualue; leveämpi ruutu olisi oikealta puoliksi tyhjä.
+     * Andesin yliopisto (74,0652) on ruudun itäisin kohde, ja se on
+     * juuri rinteen juurella.
+     *
+     * LÄNSIREUNA 74,0815 ON CASA DE NARIÑON MUKAAN. Sen takana alkaa
+     * 1900-luvun liikekeskusta, jonka kohteet ovat kaupunkilehden
+     * omia (Museo del Oro, Torre Colpatria) tai kilometrien päässä
+     * (Parque Simón Bolívar 6,9 km luoteeseen).
+     *
+     * MONSERRATE JÄÄ POIS KAHDESTA SYYSTÄ. Se on lehden kansikuvan
+     * ja matkaoppaan aihe, ja se on runsaat 600 metriä ruudun
+     * itäpuolella vuoren laella — kohta, jossa kartalla ei ole
+     * katuverkkoa lainkaan.
+     *
+     * meri: ei. Bogotá on ylätasangolla vuorten keskellä, eikä
+     * ruudussa ole avovettä.
+     */
+    rajat: { pohjoinen: 4.6195, etela: 4.5895, lansi: -74.0815, ita: -74.0620 },
+  },
   suva: {
     /*
      * SIIRTOMAA-AJAN HALLINTOKORTTELI NIEMEN KÄRJESSÄ (6.9.2026).
