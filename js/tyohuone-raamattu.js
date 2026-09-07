@@ -4192,6 +4192,14 @@ export const RAAMATTU = {
           + 'agenttina vain todella vaikeaan pulmaan". Kaksi 7.9. illalla '
           + 'kaynnistettya Fable-agenttia (linssinakyma, vanat) pysaytettiin ja '
           + 'tyo jatkettiin Opuksella niiden valitallennuksista.',
+        'IHMISEN MATKA: MUSTA ALKU ON AVARUUS, PALLO ZOOMAUTUU PIMEYDESTA '
+          + 'AFRIKKA EDELLA (omistaja 7.9.2026 ilta klo 21.35 Suomen aikaa, '
+          + 'sanatarkasti: "Linssissa se musta alku onkin avaruus ja maapallo '
+          + 'zoomautuu pimeydesta naytolle Afrikka edelle"): esityksen musta '
+          + 'avaus tarkoittaa avaruutta - ruutu on musta, pallo tulee '
+          + 'pimeydesta kohti pehmeasti zoomaten ja pysahtyy Afrikka keskella '
+          + 'ruutua, ja vasta sitten kertoja alkaa (avausjakso). Tarkentaa '
+          + 'linjausta ALKAA MUSTASTA RUUDUSTA.',
         'LINSSIEN AIKASELAIN ALAREUNAAN (omistaja 7.9.2026 ilta klo 20.55 Suomen '
           + 'aikaa, sanatarkasti: "Onko alas mahdollista tehda yksinkertaista '
           + 'aika selainta, mika olisi taynna pysty viivoja ja valittu aika olisi '
