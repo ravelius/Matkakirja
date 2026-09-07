@@ -21,14 +21,16 @@ ohjeilla; kysymykset AskUserQuestion-kortteina; ajat Suomen aikaa
 rutiini on poistettu — luo uusi (tunneittain; fetch claude/postilaatikko,
 lue posti/kuvatoimitus.md kärjestä, vastaa posti/fable-vanha.md:n
 kärkeen, poimi valmiit agenttityöt ja julkaise, ei salaisuuksia eikä
-sähköpostia). Lupasäännöt: .claude/settings.json sallii nyt git, node,
+sähköpostia). Viimeksi käsitelty postilaatikon commit: 7c7aafcf
+(kuittaus 08813a18 lähetetty: v1672+v1673, erät 19g/19h kytketty,
+kaanonkysymykset luvattu seuraavan session ensimmäiseksi työksi). Lupasäännöt: .claude/settings.json sallii nyt git, node,
 python3, tools-skriptit ja curl ilman luokitinta. Mac-runner: Aja komento
 Macilla -työnkulku (aja-macilla.yml) ajaa yksittäisen komennon omistajan
 Macilla; pitkät renderöinnit muilla Mac-työnkuluilla.
 
 ## 1. Tila
 
-- **main = v1672** (PR #2143) tai uudempi — tarkista `git log origin/main`.
+- **main = v1673** (PR #2144) tai uudempi — tarkista `git log origin/main`.
   Illan julkaisut: v1669 etusivupallo Macilta + Addis Abeba/Guatemala +
   Mac-korjaus; v1670 Fes, Dakar, Lagos, Sansibar + Aja komento Macilla +
   lupasäännöt; v1671 pulun Ateena-rytmi, kuplat ja chat, avauksen ääni,
@@ -38,7 +40,15 @@ Macilla; pitkät renderöinnit muilla Mac-työnkuluilla.
   koordinaatit (93 kaupunkia rantaviivalle), kaupunkipiste ruutuvakio,
   nostolaput väistävät nimeä, rantaviivat pehmeät, kehystahti tasainen,
   terminaali soi, kuplapino kurkistaa, pergamentin reuna, Ihmisen matkan
-  avausteksti + kuva, loppulappu rullautuu ja sulku ylänurkkaan, 60 kuvaa.
+  avausteksti + kuva, loppulappu rullautuu ja sulku ylänurkkaan, 60 kuvaa;
+  v1673 Ihmisen matka yhtenä kaarena (esitys pimeästä alusta, 21 jaksoa,
+  aikahyppy, pulun välihuomiot; kuvat sivuosassa) + tutkimusvaihe (40
+  hehkuvaa nostoa, kortti ja kysymykset pululle, viisi vanan nappia),
+  roikkuva kosketus korjattu (yksi sormi panoroi aina), noston teksti
+  klikattava, äänimaisema irti musiikista (äänivalikossa kolme riviä:
+  Kertoja, Musiikki, Äänimaisema), nappulan jalka pisteessä, pergamentin
+  ylä- ja alareuna rauhalliset, kuvaerät 19g/19h (38 kuvaa), sessio 2:n
+  lehdet Nuuk, Anchorage, Salta, Antofagasta ja 9 pienen maan nostot.
 - **Pulun Eurooppa**: 18 kaupunkia valmiina ja generoituna (Dr. Von,
   85 repliikkiä); omistaja käy kuuntelemassa ja antaa palautteen;
   korostus (js/liviapuhe.js LIVIAN_KOROSTUS_KAYTOSSA) kytketään pois
@@ -53,8 +63,13 @@ Macilla; pitkät renderöinnit muilla Mac-työnkuluilla.
   pakota kyllä; tiivisteet LIVIAN_AANITETYT-tauluun manifestista).
 - **Ihmisen matka**: kertomus kaanonissa js/linssit/ihmisen-matka-
   kertomus.js (21 jaksoa + pulun välihuomiot + KEKSINNOT_PULUN_HUOMIOT).
-  Toteutus (esitys pimeästä alusta, tutkimusvaihe viidellä napilla,
-  äänimaisemat) on joko v1673:ssa tai poimittavana — ks. kohta 2.
+  Toteutus (esitys, tutkimusvaihe, äänimaisemasoitin) on v1673:ssa;
+  ohjaaja js/linssit/ihmisen-matka-esitys.js, tutkimusvaihe
+  js/linssit/ihmisen-matka-tutkimus.js, dokumentti
+  docs/moduulit/ihmisen-matka-vanat.md luvut 11–12. Pulu on esityksessä
+  MYKKÄ, kunnes välihuomiot on generoitu ja tiivisteet lisätty
+  LIVIAN_AANITETYT-tauluun; kertojan äänet puuttuvat (fallback
+  tekstiajoitus 14 mrk/s). Omistaja ei ole vielä katsonut esitystä.
   Kertojan äänet generoidaan generoi-linssiluennat.yml:llä
   (`--linssi ihmisen-matka --kertomus`, kun työkalu tukee) ja pulun
   välihuomiot generoi-pulu.yml:llä; Freesound-äänimaisemat aanihaku.yml
@@ -65,17 +80,26 @@ Macilla; pitkät renderöinnit muilla Mac-työnkuluilla.
   MOZ maalehti; lisää pareja jonossa). Poimi haara erissä ja julkaise;
   raportti docs/raportit/lehdet-2026-09-07-ilta.md kertoo kuvatilaukset.
 
-## 2. Poimittavaa (worktreet katoavat resetissä)
+## 2. Poimittavaa
 
-Jos jokin näistä EI ole mainissa, se on aloitettava alusta (ohjeet
-Raamatussa): paperin vaakareunojen rauhoitus (PAPERIN REUNA 2), roikkuva
-kosketus pallolla (VIKA v1671 zoom yhdellä sormella), Ihmisen matkan
-esitys yhtenä kaarena, tutkimusvaihe + viisi nappia, viat v1672 (noston
-teksti klikattavaksi, äänimaisema irti musiikista, nappulan jalka
-pisteessä), kuvaerät 19g/19h, sessio 2:n lehdet.
+Ei mitään: kaikki illan agenttityöt ovat v1673:ssa, worktreet siivottu.
+Toisen session haara claude/lehdet-2026-09-07-ilta voi tuoda lisää
+lehtiä — poimi erissä.
 
 ## 3. Seuraavat tehtävät
 
+0. **ENSIN — kuvaputken kaanonkysymykset** (posti/kuvatoimitus.md
+   7.9. klo 13:32 ja 13:58 UTC, liitteet posti/kohtaamiset-palaute-3-
+   20260907-1327.json ja posti/kohtaamiset-henkilovaihdot-3-20260907-
+   1353.json): kuusi kohtaamisen henkilövaihtoa omistajan palautteesta
+   (Tallinna Eve→Leena, Tromssa Kjell→Sigrid, Medina Omar→Safa, Kiova
+   Taras→Danylo, Lappi Aslak→Reetta, Nikosia →Marios). Lue ehdotukset
+   docs/tarina.md:tä ja docs/isoisan-raamattu.md:tä vasten, päätä
+   kaanon (omistajan palaute on määräävä; Fable kirjoittaa
+   kaanonmuutokset tarina.md:hen), vastaa posti/fable-vanha.md:n
+   kärkeen ja toteuta hyväksytyt vaihdot kohtaamistiedostoihin
+   Opus-agentilla. Kuvahahmot lukitaan vasta omistajan kuvavalinnan
+   jälkeen.
 1. Pulun Euroopan seuraava erä (yllä) ja Keksintölinssin pulun
    välihuomiot (tekstit kaanonissa, toteutus samalla mekanismilla kuin
    Ihmisen matkan välihuomiot).
