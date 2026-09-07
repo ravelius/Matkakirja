@@ -87056,6 +87056,31 @@ export const KULTTUURI_KATEGORIAT = {
    * (africa-valokuvat.js, addisabeba), jossa se on jo tarkistettu —
    * vanha puoli on kruunajaisvuoden 1930 kulkue ja uusi sama kaupunki
    * nykyään. Selitteet on kirjoitettu uudestaan yhdeksi virkkeeksi.
+   *
+   * KUVAT haettiin Commonsin API:sta haku- ja kategoriahauilla
+   * (Addis Ababa; Views of Addis Ababa; Diego Delson 2024-01-19 -sarja;
+   * Addis Ababa Light Rail; St George Cathedral; Hager Fikir Theatre;
+   * Taitu Hotel; Ethiopian coffee ceremony; injera), lisenssi ja
+   * tekijä luettiin extmetadatasta 7.9.2026, ja jokainen valittu kuva
+   * katsottiin silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Ethiopian coffee ceremony - Addis Ababa.jpg"
+   * (valmistajan kasvot luettavissa), "Menelik II School Addis
+   * Abeba.jpg" (koululaisia etualalla), "Addis Ababa from the air.jpg"
+   * (lentokoneen siipi ja ikkunan kehys hallitsevat kuvaa),
+   * "Addis from the Sheraton (24942042370).jpg" (betonimuuri keskellä
+   * näkymää), "Catedral de la Santísima Trinidad — exterior - 1.jpg"
+   * (rakennustelineet ja suojaverkko), "- exterior - 9.jpg"
+   * (poliittinen muistolaatta), "Cathédrale Saint Georges Addis
+   * Abeba1.jpg" (väkijoukko etualalla) ja "Addis Ababa
+   * (24057199882).jpg" (postilokerikko, ei kaupunkinäkymää).
+   *
+   * AIHETOISTO, joka on tarkoituksellinen ja kirjattu: Merkato näkyy
+   * kahdessa kuvassa mutta eri tiedostoina ja eri aiheena — nostossa
+   * R3 tori kadun suunnassa keskustan siluettia vasten ja oppaan
+   * jaksossa 3 sama tori ylhäältä säkkeineen ja peltikattoineen.
+   * KUVATTOMAT: etnologinen museo, Menelik II:n koulu ja
+   * Abrehot-kirjasto jäivät ilman valokuvaa (ks. raportti) — niille
+   * tilataan kuvaputkelta piirros.
    */
   addisabeba: [
     {
@@ -87064,6 +87089,80 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Isoisän matkavuonna 1873 tässä laaksossa kohisivat '
         + 'vain kuumat lähteet. Kaupunki perustettiin vasta 1886, ja '
         + 'se on nyt Afrikan korkeimmalla sijaitseva pääkaupunki.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa eri puolilta: panoraama Entoton
+       * rinteeltä, keskustan siluetti ja eukalyptusmetsän reuna.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Vista de Adís Abeba desde el monte Entoto, Etiopía, 2024-01-19, DD 07.jpg',
+          selite: 'Entoton rinteeltä koko kaupunki levittäytyy '
+            + 'laaksoon usvan läpi.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Addis Ababa skyline.jpg',
+          selite: 'Keskustan tornit ja nosturit vuorten edessä '
+            + 'keskellä päivää.',
+          lahde: 'Simfan34, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Addis Ababa (16113465829).jpg',
+          selite: 'Eukalyptusmetsän reuna päättyy kaupunkiin, joka '
+            + 'jatkuu horisonttiin asti.',
+          lahde: 'Laika ac from UK, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Addis Abeballe ei ole generoitu herokuvia, joten
+       * karusellissa on kolme aitoa valokuvaa (vertaa Nairobiin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Addis Abeba from mount Entoto.jpg',
+          selite: 'Entoton metsän takaa kaupunki täyttää koko laakson '
+            + 'vuorten väliin.',
+          lahde: 'EyobedK, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Vista de Adís Abeba desde el monte Entoto, Etiopía, 2024-01-19, DD 09.jpg',
+          selite: 'Vilkas pääkatu ja sen ympärille kasvaneet korttelit '
+            + 'ylhäältä nähtyinä.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Addis Ababa (16314616596).jpg',
+          selite: 'Tornitaloja nousee puutarhojen ja matalien '
+            + 'kattojen keskeltä.',
+          lahde: 'Laika ac from UK, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: pari on kopioitu africa-valokuvat.js:n
+       * addisabeba-lohkosta, jossa se on jo tarkistettu. Vanha vedos on
+       * alle 1200 px (1037 px), mutta se on repossa jo käytössä oleva
+       * tarkistettu pari eikä uusi kuvavalinta — reseptin ohje on
+       * kopioida pari sellaisenaan. Tekijätieto on tarkistettu
+       * uudelleen Commonsin extmetadatasta 7.9.2026.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'British delegation Addis Abeba.jpg',
+          vuosi: '1930',
+          selite: 'Brittiläinen valtuuskunta Haile Selassien '
+            + 'kruunajaisissa 1930, kun kaupunki oli 44-vuotias.',
+          lahde: 'British government official photograph (Crown Copyright), 1930, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'AddisView.jpg',
+          selite: 'Sama kaupunki nykyään: tornitaloja Sheger-puiston '
+            + 'takana.',
+          lahde: 'DaneyWiki, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Finfinne ja uusi kukka',
@@ -87079,6 +87178,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'paikallisilta oromoheimoilta maat takavarikoitiin ja '
             + 'monet joutuivat siirtymään. Menelik rakensi palatsinsa '
             + '1887, ja pääkaupunki kaupungista tuli 1889.',
+          tiedosto: 'Palacio de Menelik II, Adís Abeba, Etiopía, 2024-01-19, DD 03.jpg',
+          selite: 'Menelik II:n palatsi Entoton rinteellä on savesta '
+            + 'ja oljesta rakennettu talo eukalyptusten keskellä.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Addis Ababa',
         },
         {
@@ -87094,6 +87197,10 @@ export const KULTTUURI_KATEGORIAT = {
             + '1 300 hehtaarin luonnonpuisto 2 600–3 100 metrissä; '
             + 'sen pohjoisreuna on Sinisen Niilin ja Awashin '
             + 'vedenjakaja, ja huipulla seisoo observatorio.',
+          tiedosto: 'Addis Ababa from Mountain Etoto.jpg',
+          selite: 'Eukalyptukset reunustavat Entoton tietä, ja niiden '
+            + 'takaa avautuu koko kaupunki.',
+          lahde: 'Pegel05, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mount Entoto',
         },
         {
@@ -87109,6 +87216,10 @@ export const KULTTUURI_KATEGORIAT = {
             + '2017. Kaupungin sisällä kulkee vuodesta 2015 '
             + 'pikaraitiotie, ensimmäinen Saharan eteläpuolisessa '
             + 'Afrikassa: kaksi linjaa, 31,6 kilometriä, 39 asemaa.',
+          tiedosto: 'Addis Ababa Light Rail vehicle, March 2015.jpg',
+          selite: 'Vihervalkoinen raitiovaunu odottaa asemalla '
+            + 'itä–länsi-linjalla.',
+          lahde: 'Turtlewong, Wikimedia Commons (CC0)',
           wiki: 'Ethio-Djibouti Railways',
         },
         {
@@ -87125,12 +87236,28 @@ export const KULTTUURI_KATEGORIAT = {
             + '1969 ja toi mukanaan vibrafonin, congat ja uuden '
             + 'soundin. Vuodesta 1998 Éthiopiques-sarja on kantanut '
             + 'levytykset takaisin maailmalle.',
+          tiedosto: 'Ethiopian National Theater 2.jpg',
+          selite: 'Kansallisteatterin julkisivu, jonka takana '
+            + 'Nalbandian sävelsi ensimmäiset sekoitukset.',
+          lahde: 'Lenege, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ethio-jazz',
           musiikki: 'https://music.apple.com/fi/artist/mulatu-astatke/76533627',
           musiikkiNimi: 'Mulatu Astatke Apple Musicissa',
         },
       ],
       matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA (docs/tyolista-opukselle.md): yksi aihe,
+         * joka täyttää ruudun, paikan oma erikoisuus, rauhallinen
+         * tausta. Pysty 3294 x 4716 eli suhde 0,70 — reseptin
+         * maltillinen pysty (0,60–0,85).
+         */
+        kuva: {
+          tiedosto: 'African Union Conference Centre building.jpg',
+          selite: 'Afrikan unionin kokouskeskuksen kupoli nousee '
+            + 'suihkulähteiden takaa iltavalossa.',
+          lahde: 'Andrew Moore, Wikimedia Commons (CC BY-SA 2.0)',
+        },
         kappale: 'Addis Abeba on Etiopian pääkaupunki 2 355 metrin '
           + 'korkeudessa, neljänneksi korkein pääkaupunki maailmassa '
           + 'ja Afrikan korkein. Kaupunki on Etiopian ylängöllä Suuren '
@@ -87171,6 +87298,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'oranssista kioskista; pohjois–etelä-linjan vaunut '
                 + 'ovat sinivalkoisia ja itä–länsi-linjan '
                 + 'vihreävalkoisia. Kehätien rakentaminen alkoi 1998.',
+              kuva: {
+                tiedosto: 'Antigua estación de ferrocarril de Yibuti, Adís Abeba, Etiopía, 2024-01-19, DD 35.jpg',
+                selite: 'Vanhan Djiboutin-radan aseman julkisivussa '
+                  + 'lukee yhä Chemin de Fer Djibouto-Éthiopien.',
+                lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
               otsikko: 'Museokukkulalta Piazzaan',
@@ -87184,6 +87317,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'täyttyy syyskuun lopussa Meskel-juhlan väestä. '
                 + 'Kansallisteatteri perustettiin 1955, ja Hager '
                 + 'Fikir -teatteri Piazzassa on sitäkin vanhempi.',
+              kuva: {
+                tiedosto: 'Monumento del León de Judá, Adís Abeba, Etiopía, 2024-01-19, DD 34.jpg',
+                selite: 'Juudan leijona seisoo kruunattuna kivijalustan '
+                  + 'päällä keskellä liikennettä.',
+                lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
               otsikko: 'Mitä täällä syödään',
@@ -87197,6 +87336,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tutuimpia; loput torista on tukkukauppaa '
                 + 'romumetallista kodinkoneisiin. Piazzan kahviloissa '
                 + 'juodaan italialaisen miehityksen jättämä macchiato.',
+              kuva: {
+                tiedosto: 'Addis Mercato, Adís Abeba, Etiopía, 2024-01-19, DD 31.jpg',
+                selite: 'Merkaton kadut täyttyvät säkeistä, '
+                  + 'aurinkovarjoista ja peltikatoista.',
+                lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
               otsikko: 'Afrikan kokouspaikka',
@@ -87302,8 +87447,9 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'ruoka',
       nimi: 'Kahvin pääkaupunki',
       johdanto: 'Kahvipensas on kotoisin näiltä ylängöiltä, ja '
-        + 'Addis Abebassa kahvin juominen kestää tunnin. Sama tori, '
-        + 'joka myy pavut, on Afrikan suurin.',
+        + 'Addis Abebassa kahvin juominen kestää tunnin: pavut '
+        + 'paahdetaan vieraiden edessä. Sama tori, joka myy pavut, on '
+        + 'Afrikan suurin ulkoilmatori.',
       tehtava: {
         kysymys: 'Mistä Addis Abeban Merkato sai alkunsa?',
         vaihtoehdot: [
@@ -87332,6 +87478,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'suitsuke. Kahvin kanssa tarjotaan popcornia tai '
             + 'paahdettua ohraa eli koloa, ja lattialle levitetään '
             + 'tuoretta ruohoa.',
+          tiedosto: 'Ethiopian coffee ceremony jebena and finjan.jpg',
+          selite: 'Seremonian välineet rivissä: jebena-pannuja, '
+            + 'pieniä kuppeja ja punottu mesob-kori.',
+          lahde: 'Miraethiopia, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Ethiopian cuisine',
         },
         {
@@ -87347,6 +87497,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'spiraalina ulkoa sisäänpäin, kansi päälle, kaksi tai '
             + 'kolme minuuttia — eikä sitä käännetä. Höyry tekee '
             + 'pintaan kuplat, joita sanotaan silmiksi.',
+          tiedosto: 'Ethiopian fasting platter.jpg',
+          selite: 'Paastoateria katettuna injeran päälle: kasvispatoja '
+            + 'renkaassa ja rullattuja leipiä reunalla.',
+          lahde: 'Jbinthecity, Wikimedia Commons (CC0)',
           wiki: 'Injera',
         },
         {
@@ -87362,6 +87516,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tavaralajien mukaan osastoihin, joita kutsutaan '
             + 'nimellä terra: yhdessä myydään huonekaluja, toisessa '
             + 'kodinkoneita, kolmannessa kierrätettyä romumetallia.',
+          tiedosto: 'Addis Mercato, Adís Abeba, Etiopía, 2024-01-19, DD 26.jpg',
+          selite: 'Tori jatkuu katua pitkin niin pitkälle kuin näkee, '
+            + 'ja takana nousevat keskustan tornit.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Addis Mercato',
         },
         {
@@ -87377,6 +87535,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'päässä Raguelin kirkko, jonka keisarinna Menen '
             + 'rakennutti vapautuksen jälkeen — niiden läheisyyttä '
             + 'pidetään vertauskuvana pitkästä rinnakkaiselosta.',
+          tiedosto: 'Nice building in Piazza (24820704419).jpg',
+          selite: 'Piazzan kulmatalo italialaisine kaarineen '
+            + 'aamuauringossa.',
+          lahde: 'Francisco Anzola from United States, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Addis Ababa',
         },
       ],
@@ -87447,6 +87609,34 @@ export const KULTTUURI_KATEGORIAT = {
    * (northamerica-valokuvat.js, guatemala), jossa se on jo
    * tarkistettu — vanha puoli on Plaza de Armas 1915 ja uusi saman
    * aukion laidalla seisova kansallispalatsi 2022.
+   *
+   * KUVAT haettiin Commonsin API:sta haku- ja kategoriahauilla
+   * (Guatemala City skyline; Kaminaljuyu; Palacio Nacional de la
+   * Cultura; Mapa en Relieve; Centro Cultural Miguel Ángel Asturias;
+   * Museo Popol Vuh; Cerrito del Carmen; Palacio de Correos; Iglesia
+   * Santo Domingo; Instituto Nacional Central), lisenssi ja tekijä
+   * luettiin extmetadatasta 7.9.2026, ja jokainen valittu kuva
+   * katsottiin silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Parque Central, Plaza de la Constitución (Guatemala
+   * City).jpg" ja "Santo Domingo Church in Guatemala City, 2024.
+   * 01.jpg" (tunnistettavia ihmisiä, myös lapsia, etualalla),
+   * "Hospitalsanjuandedios2016.jpeg" (piikkilanka-aita ja parkkipaikka
+   * peittävät rakennuksen), "Iglesia de Santo Domingo, Ciudad de
+   * Guatemala, 2024. 03.jpg" (kehystetty maalaus, ei rakennusta),
+   * "LaRecoleccionGuatemalaCity2015 04.jpeg" (verinen
+   * kulkueveistos — ei ikäryhmälle), "Iglesia de Santo Domingo,
+   * Ciudad de Guatemala, 1924.jpg" (pelkkä tekstilaatta) ja
+   * "Catedral Metroplitana.jpg" (moottoripyörärivi vie puolet kuvasta;
+   * tilalle Panchogtin kuva samasta kirkosta).
+   *
+   * AIHETOISTO, joka on tarkoituksellinen ja kirjattu: Carmenin
+   * kukkula näkyy kahdessa kuvassa mutta eri tiedostoina ja eri
+   * aiheena — oppaan jaksossa 2 vuoden 1725 risti ja
+   * nähtävyysjutussa erakkomajan seinä kukkulan laella.
+   * KUVATTOMAT: kansalliskirjasto ja San Juan de Diosin sairaala
+   * jäivät ilman valokuvaa, samoin nostot G3 (vyöhykkeet) ja K2
+   * (Carlos Mérida) — muraaleista ei löytynyt vapaata kuvaa (ks.
+   * raportti).
    */
   guatemala: [
     {
@@ -87456,6 +87646,79 @@ export const KULTTUURI_KATEGORIAT = {
         + 'edellistä pääkaupunkia jätettiin mutavyöryn ja järistysten '
         + 'takia. Tämänkin alla maa liikkuu — ja sen alla on '
         + 'mayakaupunki.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin. Ne ovat kolme laajaa yleiskuvaa: katedraali ja
+       * historiallinen keskusta ilmasta, vyöhykkeiden 1 ja 4 näkymä
+       * sekä tornit tulivuorten edessä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Catedral Metropolitana - Guatemala City - Air View.jpg',
+          selite: 'Katedraali ja vanhan keskustan korttelit '
+            + 'aamuvalossa ylhäältä nähtyinä.',
+          lahde: 'Toby Argüelles, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Guatemala City - Cityscape - Skyline - Zone 1 & 4.jpg',
+          selite: 'Vyöhykkeiden 1 ja 4 korttelit levittäytyvät '
+            + 'vuorten juurelle.',
+          lahde: 'Rene Hernandez, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Air View of Guatemala City in 2015.jpg',
+          selite: 'Tornitalojen takaa kohoaa tulivuoren huippu '
+            + 'pilvien lomasta.',
+          lahde: 'Laber Zende, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: laajoja yleiskuvia kansikuvakaavan mukaan.
+       * Guatemala Citylle ei ole generoitu herokuvia, joten kaikki
+       * kolme ovat aitoja valokuvia.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Guatemala City - Cityscape - Skyline - High Rises in a green city.jpg',
+          selite: 'Tornitalot nousevat puiden seasta rinteeltä '
+            + 'toiselle koko laakson mitalta.',
+          lahde: 'Rene Hernandez, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Guatemala City - Cityscape - Skyline - Zone 15.jpg',
+          selite: 'Puiden keskeltä nousevat asuintornit vyöhykkeen 15 '
+            + 'rinteillä.',
+          lahde: 'Rene Hernandez, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Guatemala City - Cityscape - Skyline Zone 4.jpg',
+          selite: 'Vyöhykkeen 4 korttelit ovat tiivistä sekoitusta '
+            + 'toimistotorneja ja matalia taloja.',
+          lahde: 'Rene Hernandez, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: pari on kopioitu northamerica-valokuvat.js:n
+       * guatemala-lohkosta, jossa se on jo tarkistettu — vanha puoli
+       * on Plaza de Armas 1915 ja uusi saman aukion laidalla seisova
+       * kansallispalatsi. Tekijätiedot tarkistettu uudelleen
+       * Commonsin extmetadatasta 7.9.2026.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Guatemala, Plaza De Armas LCCN2014706038.tif',
+          vuosi: '1915',
+          selite: 'Plaza de Armas vuonna 1915 lasinegatiivilta '
+            + 'kuvattuna.',
+          lahde: 'Bain News Service, publisher, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Palacion Nacional de Guatemala 12.jpg',
+          selite: 'Saman aukion laidalla seisoo nykyään vihreä '
+            + 'kansallispalatsi.',
+          lahde: 'Simon Burchell, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kaminaljuyú, kaupunki kaupungin alla',
@@ -87470,6 +87733,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kuolleiden kukkulaksi että esi-isien kummuiksi. '
             + 'Rakennusaine oli kovetettu adobe, joka kestää huonommin '
             + 'kuin alankojen kalkkikivi — siksi jäljet ovat matalia.',
+          tiedosto: 'Kaminaljuyu 12.jpg',
+          selite: 'Kunnostamattomat kummut nousevat nurmen alta '
+            + 'arkeologisessa puistossa.',
+          lahde: 'Simon Burchell, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Kaminaljuyu',
         },
         {
@@ -87486,6 +87753,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'sen juhlapäivä on 15. elokuuta. Katedraali muutti '
             + 'perässä 1779; uusi rakennettiin 1782–1815 ja valmistui '
             + '1871.',
+          tiedosto: 'Catedral de Ciudad de Guatemala.JPG',
+          selite: 'Metropoliitankatedraalin kellotornit ja siniset '
+            + 'kupolit pääaukion laidalla.',
+          lahde: 'Panchogt, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Guatemala City',
         },
         {
@@ -87517,10 +87788,25 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupungin koillisosaan avautui noin sadan metrin '
             + 'syvyinen pystyseinäinen kuoppa, jossa kuoli viisi '
             + 'ihmistä; geologit kutsuvat ilmiötä pseudokarstiksi.',
+          tiedosto: 'Guatemala City - Cityscape - Skyline, Mountains & Volcanoes.jpg',
+          selite: 'Kaupungin eteläpuolella kohoaa tulivuoriketju, '
+            + 'jonka takana on Tyynenmeren alanko.',
+          lahde: 'Rene Hernandez, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Guatemala City',
         },
       ],
       matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA: yksi aihe, joka täyttää ruudun.
+         * Postipalatsin holvikaari 12. kadun yllä on kaupungin oma
+         * erikoisuus, ja pysty 3312 x 4416 on suhteeltaan 0,75.
+         */
+        kuva: {
+          tiedosto: 'Palacio de Correos Guatemala (3746538892).jpg',
+          selite: 'Postipalatsin holvikaari kaartaa 12. kadun yli '
+            + 'kahden rakennussiiven välissä.',
+          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+        },
         kappale: 'Guatemala City on Guatemalan pääkaupunki ja '
           + 'Väli-Amerikan suurin kaupunki, noin 1 500 metrin '
           + 'korkeudessa Ermitan laaksossa vuorten välissä. Korkeus '
@@ -87574,6 +87860,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Cerrito del Carmen, kaupunkia vanhempi '
                 + 'erakkomaja. Kaikki mahtuvat parin kilometrin '
                 + 'kävelylle.',
+              kuva: {
+                tiedosto: 'Cerrito del Carmen 02.JPG',
+                selite: 'Vuoden 1725 kivinen risti seisoo Carmenin '
+                  + 'kukkulalla vanhan keskustan yläpuolella.',
+                lahde: 'Arielaasturias, Wikimedia Commons (CC BY-SA 3.0)',
+              },
             },
             {
               otsikko: 'Museokaupunki',
@@ -87588,6 +87880,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'vyöhykkeellä 11 Miraflores-museo Kaminaljuyún '
                 + 'löydöistä. Kansallisteatteri seisoo omalla '
                 + 'kukkulallaan Centro Cívicon laidalla.',
+              kuva: {
+                tiedosto: 'Courtyard of Museo Nacional de Arqueología y Etnología de Guatemala in Guatemala City.jpg',
+                selite: 'Arkeologian ja etnologian kansallismuseon '
+                  + 'pihalla kivipatsaat kiertävät suihkulähdettä.',
+                lahde: 'jjmusgrove, Wikimedia Commons (CC BY 2.0)',
+              },
             },
             {
               otsikko: 'Mitä täällä syödään',
@@ -87616,6 +87914,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'marraskuusta huhtikuuhun. Suhteellinen kosteus on '
                 + 'aamulla 82 ja illalla 58 prosenttia. Kaupunki on '
                 + 'ajoittain tuulinen, mikä viilentää entisestään.',
+              kuva: {
+                tiedosto: 'Guatemala City - Cityscape - Skyline - Downtown.jpg',
+                selite: 'Sadekauden jälkeinen aamu-usva kelluu '
+                  + 'keskustan yllä.',
+                lahde: 'Rene Hernandez, Wikimedia Commons (CC BY-SA 2.0)',
+              },
             },
           ],
           matkailu: {
@@ -87692,8 +87996,9 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'kuvataide',
       nimi: 'Kaupungin omat kokoelmat',
       johdanto: 'Guatemala City on tehnyt taiteestaan julkista: koko '
-        + 'maa on rakennettu pienoiskoossa puistoon, ja mosaiikit '
-        + 'peittävät kokonaisia julkisivuja.',
+        + 'maa on rakennettu pienoiskoossa puistoon, mosaiikit '
+        + 'peittävät kokonaisia julkisivuja ja kansallisteatteri on '
+        + 'jaguaarin muotoinen.',
       tehtava: {
         kysymys: 'Minkä eläimen muotoiseksi Efraín Recinos suunnitteli '
           + 'Guatemala Cityn kansallisteatterin?',
@@ -87722,6 +88027,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lyijyä ja sillat terästä, ja valtamerten kohdalla on '
             + 'hohkakiveä. Maanalainen kuudenkymmenen kuutiometrin '
             + 'säiliö syöttää joet ja järvet yhä.',
+          tiedosto: 'Mapa en Relieve de Guatemala.jpg',
+          selite: 'Kartan vuoret kohoavat jyrkkinä, ja jokaisen '
+            + 'paikan nimi on merkitty pienellä kyltillä.',
+          lahde: 'Rene Hernandez, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Relief map of Guatemala',
         },
         {
@@ -87752,6 +88061,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'muralisti ja kuvanveistäjä; hänen isänsä opetti hänet '
             + 'lukemaan kotona, ja seitsemänvuotiaana hän soitti jo '
             + 'marimbaa, viulua ja mandoliinia.',
+          tiedosto: 'Centro Cultural Miguel Ángel Asturias.jpg',
+          selite: 'Valkoinen kulttuurikeskus kaartuu kukkulan päällä '
+            + 'kuin makaava eläin.',
+          lahde: 'Ministerio de Cultura y Deportes Guatemala, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Centro Cultural Miguel Ángel Asturias',
         },
         {
@@ -87767,6 +88080,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'alkunsa 1975, kun Jorge Castillo palkkasi arkeologian '
             + 'opiskelijan luetteloimaan sen; Castillon kuoltua 1977 '
             + 'kokoelma lahjoitettiin yliopistolle.',
+          tiedosto: 'Plato Blom 1.jpg',
+          selite: 'Blom-lautasen maalauksessa hahmot ja käärmeet '
+            + 'kiertävät keskellä olevaa jumalhahmoa.',
+          lahde: 'Omar David Sandoval Sida, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Museo Popol Vuh',
         },
       ],

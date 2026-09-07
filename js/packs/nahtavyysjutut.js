@@ -53098,6 +53098,14 @@ export const NAHTAVYYSJUTUT = {
           + '3,3 miljoonaa vuotta vanha fossiili, joka löydettiin '
           + 'vuosien 2000 ja 2004 välillä. Muualla talossa on '
           + 'etiopialaista taidetta, muun muassa Afewerk Teklen töitä.',
+      kuvat: [
+        {
+          tiedosto: 'Restos de Lucy (Australopithecus afarensis), museo nacional de Etiopía, Adís Abeba, Etiopía, 2024-01-19, DD 23.jpg',
+          selite: 'Lucyn luut on aseteltu vitriiniin siihen '
+            + 'järjestykseen, jossa ne olivat elävässä ruumiissa.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Hager Fikir -teatteri': {
@@ -53123,6 +53131,14 @@ export const NAHTAVYYSJUTUT = {
           + 'näytelmiä että Shakespearea, Schilleriä, Ibseniä ja '
           + 'Molièrea, ja pyhinä salissa on näytetty myös elokuvia. '
           + 'Se on yhä yksi Etiopian vanhimmista teattereista.',
+      kuvat: [
+        {
+          tiedosto: 'HagerFikirTheatre.jpg',
+          selite: 'Teatterin julkisivua kiertää sakarareunus, ja '
+            + 'sisäänkäynnin molemmin puolin on lasimaalauksia.',
+          lahde: 'Steffen Wurzel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Pyhän Yrjön katedraali': {
@@ -53149,6 +53165,14 @@ export const NAHTAVYYSJUTUT = {
           + 'leijonan harjasta. Italialaishallinto sytytti rakennuksen '
           + 'tuleen 1937, ja Haile Selassie kunnosti sen vapautuksen '
           + 'jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'St. George Cathedral, Addis Ababa.jpg',
+          selite: 'Kahdeksankulmainen kivikirkko hopeisen kupolin '
+            + 'alla aukion laidalla.',
+          lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Menelik II:n koulu': {
@@ -53205,6 +53229,14 @@ export const NAHTAVYYSJUTUT = {
           + 'tulipalo vaurioitti rakennusta pahoin, mutta se on '
           + 'kunnostettu lähelle entistä asuaan, ja ravintolassa '
           + 'soitetaan jazzia joka ilta.',
+      kuvat: [
+        {
+          tiedosto: 'Ethiopia IMG 4514 (28144290099).jpg',
+          selite: 'Hotellin puiset portaat nousevat kaariaukon '
+            + 'kehystämään saliin, jonka seinillä on maalauksia.',
+          lahde: 'Ninara from Helsinki, Finland, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Kolminaisuuden katedraali': {
@@ -53229,6 +53261,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Asfaw, patriarkat Abuna Tekle Haymanot ja Abune Paulos '
           + 'sekä brittiläinen etiopiantutkija ja suffragetti Sylvia '
           + 'Pankhurst, joka omisti elämänsä loppuvuodet Etiopialle.',
+      kuvat: [
+        {
+          tiedosto: 'Catedral de la Santísima Trinidad (Adís Abeba) - exterior - 6.jpg',
+          selite: 'Marmorinen hautakivi kirkon puutarhassa kantaa '
+            + 'Sylvia ja Richard Pankhurstin nimet ja vuosiluvut.',
+          lahde: 'ProtoplasmaKid, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Abrehot-kirjasto': {
@@ -53305,6 +53345,14 @@ export const NAHTAVYYSJUTUT = {
           + 'pääsiäisviikkoon. Fransiskaanit hoitivat kirkkoa maaliskuun '
           + '2016 alkuun asti; sen jälkeen se on kuulunut '
           + 'arkkihiippakunnalle.',
+      kuvat: [
+        {
+          tiedosto: 'LaRecoleccionGuatemalaCity2015 01.jpeg',
+          selite: 'Keltavalkoinen kirkko kellotorneineen ja sen '
+            + 'edessä muistokivi vanhalle sotakoululle.',
+          lahde: 'Nerdoguate, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Cerrito del Carmen': {
@@ -53333,6 +53381,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Rakennus on kunnostettu sekä vuosien 1917 että 1976 '
           + 'järistysten jälkeen, ja se on julistettu kansalliseksi '
           + 'kulttuuriperinnöksi.',
+      kuvat: [
+        {
+          tiedosto: 'Cerrito del Carmen.JPG',
+          selite: 'Erakkomajan valkoinen seinä ja sen edessä oleva '
+            + 'kivinen risti kukkulan laella.',
+          lahde: 'Arielaasturias, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     Kansallispalatsi: {
@@ -53358,6 +53414,14 @@ export const NAHTAVYYSJUTUT = {
           + 'vihittiin 10. marraskuuta 1943. Rakennus kesti helmikuun '
           + '4. päivän 1976 järistyksen, joka oli voimakkuudeltaan '
           + '7,5 ja tuhosi kaupungista suuren osan.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio Nacional de la Cultura.jpg',
+          selite: 'Palatsin vihertävä kivijulkisivu kaartuvine '
+            + 'parvekkeineen ja vaakunoineen.',
+          lahde: 'K21edgo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Kansalliskirjasto: {
@@ -53431,6 +53495,14 @@ export const NAHTAVYYSJUTUT = {
           + 'säähavainnot ja lahjoitti matkoiltaan täytettyjä eläimiä '
           + 'koulun luonnontieteelliseen museoon. Koulu on yhä '
           + 'toiminnassa historiallisessa keskustassa.',
+      kuvat: [
+        {
+          tiedosto: 'Institutocentralparavarones1910.jpg',
+          selite: 'Koulun pitkä julkisivu ja kellotorni vuonna 1910; '
+            + 'kadulla kulkee raitiovaunu.',
+          lahde: 'Unknown author, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Santo Domingon kirkko': {
@@ -53457,6 +53529,14 @@ export const NAHTAVYYSJUTUT = {
           + 'järistyksen jälkeen, joka tuhosi luostarin viimeisenkin '
           + 'säilyneen osan. Raunioihin sijoitettiin lopulta '
           + 'antropologian ja historian instituutti.',
+      kuvat: [
+        {
+          tiedosto: 'Santo Domingo Church in Guatemala City, 2024. 11.jpg',
+          selite: 'Basilikan vaaleanpunainen julkisivu, jonka '
+            + 'harjalla seisoo kolme kivipatsasta.',
+          lahde: 'Nerdoguate, Wikimedia Commons (CC0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     Postipalatsi: {
@@ -53478,6 +53558,14 @@ export const NAHTAVYYSJUTUT = {
           + '1981 ja kansalliseksi kulttuuriperinnöksi elokuussa 1998. '
           + 'Talossa toimii yhä maan posti, ja siellä on posti-, '
           + 'lennätin- ja filateliamuseo.',
+      kuvat: [
+        {
+          tiedosto: 'PalacioCorreosGuatemala2015 01.jpeg',
+          selite: 'Postipalatsin sisäpiha kaarikäytävineen, '
+            + 'pylväineen ja rautakaiteineen.',
+          lahde: 'Nerdoguate, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
   },
