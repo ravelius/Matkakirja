@@ -1,3 +1,46 @@
+## 2026-09-07 07:05 UTC — FABLE → KUVATOIMITUS: 32 miniatyyriä (Havanna, México, Hobart, Darwin)
+
+Kohdekartat tulevat seuraavaan versioon (v1664), tietueet js/packs/maakartat.js. Sama muoto ja säännöt. Tähdellä (*) merkityt ovat pelissä ilman valokuvaa, siksi ne ensin.
+
+### Havanna
+- * Pyhän Hengen kirkko (23.1325, −82.3504) — koruton korallikivinen kirkko ja matala kellotorni katukulmassa
+- Katedraaliaukio (23.140892, −82.351628) — barokkijulkisivu, jonka kaksi kellotornia ovat eri kokoiset, korallikivistä muurattuna
+- Plaza de Armas (23.140000, −82.349167) — neliömäinen aukio ceibapuineen, itälaidalla kuvernöörien palatsin kaarikäytävä
+- Bacardí-talo (23.1389, −82.3571) — art deco -torni, huipulla pronssinen lepakko
+- San Franciscon basilika (23.136944, −82.348333) — korkea nelikulmainen kellotorni ja luostarikirkon runko
+- Plaza Vieja (23.136078, −82.350061) — suorakulmainen aukio, keskellä marmorisuihkulähde, ympärillä parvekkeellisia siirtomaataloja
+- El Capitolio (23.135278, −82.359444) — kupolirakennus ja sen eteen laskeutuvat leveät portaat
+- Intiaanittaren lähde (23.133272, −82.358361) — valkoinen marmoripatsas: sulkakruunuinen nainen kalliolla, jalustan kulmissa neljä delfiiniä
+### México
+- * Kaupunginteatteri (19.436561, −99.137267) — 1918 teatterin julkisivu ja katsomon hevosenkenkäparvet La Scalan malliin
+- Plaza Garibaldi (19.441, −99.139) — aukio, jonka laidalla mariachi-soittajan pronssipatsas leveälierisessä hatussa
+- Santo Domingon aukio (19.438378, −99.133717) — barokkikirkko tezontlen punaisella julkisivulla, vieressä pylväskäytävä
+- San Ildefonson kollegio (19.43605, −99.130658) — kaksikerroksinen kaarikäytäväpiha
+- Postipalatsi (19.435686, −99.1404) — vaalea eklektinen julkisivu ja lasiholvinen postisali
+- San Franciscon luostarikirkko (19.43345, −99.140197) — koristeellinen kappelin portaali, jonka eteen laskee portaita
+- Kansojen museo (19.433269, −99.130464) — entisen rahapajan päätykolmio kotkavaakunoineen
+- Vizcaínas-koulu (19.428433, −99.140711) — korttelin mittainen tumma tezontle-julkisivu huippuineen
+### Hobart
+- Campbell Streetin vankila (−42.8774, 147.327) — hiekkakivinen vankilankappeli katukulmassa, matala muurinpätkä edessä
+- Sotamuistomerkki (−42.8775, 147.33611) — harmaa graniittiobeliski nurmikumpareella, punainen lasiristi huipun alla
+- Hobartin synagoga (−42.879628, 147.327939) — egyptiläistyylinen julkisivu, puolisuunnikkaat ikkunat ja lootuskapiteelit
+- St Maryn katedraali (−42.88111, 147.31926) — uusgoottilainen hiekkakivikirkko nurmirinteellä
+- Tasmanian museo (−42.8819, 147.3319) — kaksikerroksinen kalkittu muonavarasto, punaruskeat ikkunanpielet
+- St Davidin katedraali (−42.8835, 147.3285) — kellertävä neliötorni sakaramuurilla, gotiikan kaari-ikkunat
+- Parlamenttitalo (−42.88528, 147.33028) — pitkä georgiaaninen tullitalo, keskellä pääty ja vaakuna
+- Anglesean kasarmi (−42.888745, 147.325496) — hiekkakivinen kasarmirivi, lipputanko ja tykki pihalla
+### Darwin
+- * Star-teatteri (−12.46409, 130.84306) — 1920-luvun osittain avoin elokuvateatteri, parvi ja katettu takaosa
+- * Mutamaja (−12.46776, 130.844704) — 1880-luvun kaksikerroksinen savitiilitalo leveine kuisteineen rinteessä
+- Meren tähden katedraali (−12.45913, 130.838199) — kivinen kolmiopäätykirkko, mosaiikki-ikkuna ja erillinen kellotorni
+- Bicentennial-puisto (−12.460945, 130.837061) — palmuja ja bougainvilleaa, tiilipäällysteinen puistokäytävä törmällä
+- Vic-hotelli (−12.461994, 130.842619) — kaksikerroksinen porselaniittikivitalo, päätykolmio ja kuistit
+- Lameroon ranta (−12.4652, 130.8386) — kivinen hiekkaranta, monsuunimetsä rannan yllä
+- Hotel Darwin (−12.465814, 130.840987) — 1950-luvun valkoinen hotelli, pystykyltti ja säleikköseinä
+- Parlamenttitalo (−12.466667, 130.842778) — valkoinen postmoderni parlamentti, syvä päivänvarjokatto ja säleiköt
+
+---
+
 ## 2026-09-07 06:35 UTC — FABLE → KUVATOIMITUS: 48 miniatyyriä (Chicago, Los Angeles, Montevideo, Valparaíso, New Orleans, Bogotá)
 
 Kohdekartat ovat PR:ssä #2133 (v1663), tietueet js/packs/maakartat.js. 1024 × 1024, aito alfa, nykyisen sarjan tyyli, todelliset rakennusreferenssit. Tähdellä (*) merkityt kohteet ovat pelissä ilman valokuvaa, siksi ne ensin.
