@@ -59,7 +59,17 @@ import {
  * halvin malli — pöllö vastaa lyhyesti, joten isompaa ei tarvita.
  */
 const MALLI_OLETUS = 'claude-haiku-4-5-20251001';
-const MAX_TOKENS = 700;
+/*
+ * VASTAUS EI SAA JÄÄDÄ KESKEN (omistaja 7.9.2026 ilta, kuvakaappaus
+ * Delfoin Pythia-vastauksesta: "Pulun vastaus jäi kesken" — teksti
+ * loppui sanaan "Papit tulkitsivat"). Raja nostettiin 700 → 900, ja
+ * striimiajossa max_tokens-pysähdys laukaisee YHDEN jatkokutsun
+ * (jatkaKeskenJaanyt), joka pyytää mallia lopettamaan ajatuksen
+ * muutamassa virkkeessä; jatko liitetään samaan kuplaan.
+ */
+const MAX_TOKENS = 900;
+/** Jatkokutsun sanaraja: loppu muutamassa virkkeessä, ei uutta esitelmää. */
+const JATKON_MAX_TOKENS = 350;
 const RAJAPINTA = 'https://api.anthropic.com/v1/messages';
 const RAJAPINNAN_VERSIO = '2023-06-01';
 
@@ -1224,6 +1234,34 @@ function striimiPala(rivi) {
  * virheellä, pelaajalle voidaan yhä lähettää tavallinen JSON-virhe eikä
  * puolityhjä striimi.
  */
+/**
+ * KESKEN JÄÄNEEN VASTAUKSEN JATKO. Kun malli pysähtyi sanarajaan
+ * (stop_reason max_tokens), kysytään kerran uudestaan samalla
+ * keskustelulla niin, että tähänastinen teksti on mallin oma edellinen
+ * vuoro ja pyyntö on lopettaa ajatus lyhyesti. Palauttaa jatkotekstin
+ * (tyhjä, jos kutsu epäonnistuu — silloin näytetään se mikä ehti tulla).
+ * Jatkoon ei liitetä JATKOT-lohkoa uudestaan, jos raaka jo sisältää sen.
+ */
+async function jatkaKeskenJaanyt(env, { jarjestelma, viestit }, raaka) {
+  if (!raaka.trim()) return '';
+  try {
+    const { teksti } = await kysyMallitiedot(env, {
+      jarjestelma,
+      viestit: [
+        ...viestit,
+        { role: 'assistant', content: raaka },
+        { role: 'user', content: 'Vastauksesi katkesi kesken lauseen. Jatka täsmälleen '
+          + 'siitä, mihin jäit, älä toista jo sanottua, ja lopeta ajatus enintään '
+          + 'kolmessa virkkeessä.' },
+      ],
+      maxTokens: JATKON_MAX_TOKENS,
+    });
+    return teksti ? (raaka.endsWith(' ') || /^[,.;:!?]/.test(teksti) ? teksti : ` ${teksti}`) : '';
+  } catch {
+    return '';
+  }
+}
+
 async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
   const ylavirta = await kutsuRajapintaa(env, {
     jarjestelma, viestit, maxTokens, striimi: true,
@@ -1270,6 +1308,15 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
             stop = pala.stop;
           }
           i = jono.indexOf('\n');
+        }
+      }
+      // Sanarajaan pysähtynyt vastaus saa yhden jatkon samaan kuplaan.
+      if (stop === 'max_tokens') {
+        const jatko = await jatkaKeskenJaanyt(env, { jarjestelma, viestit }, raaka);
+        if (jatko) {
+          raaka += jatko;
+          const nakyva = suodatin.lisaa(jatko);
+          if (nakyva) await laheta('pala', { teksti: nakyva });
         }
       }
       // Viimeinen pidätetty rivi mukaan, sitten koko vastaus kerralla.
