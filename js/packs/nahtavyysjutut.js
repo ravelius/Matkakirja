@@ -48327,6 +48327,34 @@ export const NAHTAVYYSJUTUT = {
    * jälkeen — päätös on lehden noston L4 aihe. Plaza de Armasin
    * jutussa ei mainita aukion pohjoislaidan Real Fuerzaa, joka on
    * noston H1 aihe.
+   *
+   * KUVAT: seitsemän juttua kahdeksasta sai kuvan, ja jokainen on
+   * tarkistettu Commonsin rajapinnasta 7.9.2026 (lisenssi ja tekijä
+   * extmetadatasta) ja katsottu silmin 640 px esikatseluna. Yksikään
+   * tiedosto ei ole sama kuin kaupunkilehden havanna-lohkossa
+   * (kulttuuri-kategoriat.js) — sama kohde saa esiintyä molemmissa,
+   * tiedosto ei.
+   *
+   * PYHÄN HENGEN KIRKKO JÄI ILMAN KUVAA. Commonsissa on siitä vain
+   * neljä tiedostoa, joista kolme on alle 1 000 pikseliä ja neljäs on
+   * pohjapiirros. Kuvaton juttu on parempi kuin huono kuva; kohde on
+   * raportin miniatyyritilauksessa.
+   *
+   * KUVAHYLKÄYKSET (syyt): "Catedral de La Habana ... Agosto de 2016
+   * 08" — etualalla rivi turisteja kasvot näkyvissä; "SaintFrancis-
+   * Havana.JPG" ja "Basilica Menor de San Francisco de Asis in Havana
+   * 2016" — alareuna täynnä ihmisiä lähietäisyydellä; "La Iglesia-
+   * Convento de San Francisco se eleva ante nosotros - panoramio" —
+   * kuvaajan vesileima "dan 2010 copyright"; "Cuba plaza-de-armas
+   * PiXi.jpg" — orkesteri poseeraa kameralle ja kuvassa on
+   * kuvaajamerkintä; "Cuba L'Habana palazzo del governatore" —
+   * tekijätietoa ei ole rajapinnassa.
+   *
+   * KUVAPOIKKEUS: kahdessa vanhassa painotuotteessa on niiden OMA
+   * litera, joka selitetään kuvatekstissä — Plaza de Armasin
+   * postikortin otsikkorivi ja vuoden 1928 työmaakuvan alle painettu
+   * julkisten töiden viraston kuvateksti. Sama poikkeus kuin
+   * kaupunkilehden 1671 kuparipiirroksessa ja 1896 lehtikuvassa.
    */
   havanna: {
     Katedraaliaukio: {
@@ -48365,6 +48393,14 @@ export const NAHTAVYYSJUTUT = {
           + 'freskoa italialaiselta Giuseppe Perovanilta, ja kirkossa '
           + 'on vuonna 1632 Sevillassa veistetty pyhän Kristoforoksen '
           + 'kuva, kaupungin suojeluspyhimys.',
+      kuvat: [
+        {
+          tiedosto: 'Plaza de la Catedral, Habana.jpg',
+          selite: 'Katedraalin epäsymmetriset kellotornit ja aukiota '
+            + 'reunustavat kaarikäytävät.',
+          lahde: 'Bgabel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Plaza de Armas': {
@@ -48403,6 +48439,14 @@ export const NAHTAVYYSJUTUT = {
           + 'ensimmäiselle messulle. Sen sisäseinät maalasi '
           + 'ranskalainen Jean Baptiste Vermay, San Alejandron '
           + 'taideakatemian perustaja ja ensimmäinen johtaja.',
+      kuvat: [
+        {
+          tiedosto: 'Habana - Plaza de Armas y Ayuntamiento 03.jpg',
+          selite: 'Aukio ja kuvernöörien palatsin kaarikäytävä 1900-luvun alun '
+            + 'postikortissa; kortin oma teksti on painettu kuvaan.',
+          lahde: 'Edicion Jordi, Havanna, Wikimedia Commons (public domain)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Bacardí-talo': {
@@ -48440,6 +48484,14 @@ export const NAHTAVYYSJUTUT = {
           + 'marmori- ja graniittisisustus on tallella. Sitä pidetään '
           + 'yhtenä Latinalaisen Amerikan hienoimmista art deco '
           + '-rakennuksista.',
+      kuvat: [
+        {
+          tiedosto: 'Havana Art Deco (8954145059).jpg',
+          selite: 'Tornin huipulla oleva pronssilepakko on yhtiön tunnus; '
+            + 'taustalla näkyy satama.',
+          lahde: 'Sandra Cohen-Rose ja Colin Rose, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'San Franciscon basilika': {
@@ -48474,6 +48526,13 @@ export const NAHTAVYYSJUTUT = {
           + 'veistämä luonnollisen kokoinen pronssipatsas José María '
           + 'López Lledínistä, jota kaupunki kutsui Pariisin '
           + 'ritariksi; hänet on haudattu kirkon sisään.',
+      kuvat: [
+        {
+          tiedosto: 'La havane couvent san francisco de assis nef.JPG',
+          selite: 'Kirkkosali, jossa ei enää pidetä messuja vaan konsertteja.',
+          lahde: 'Velvet, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Plaza Vieja': {
@@ -48505,6 +48564,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Aukio ja sen ympäristö ovat samalla yksi vanhankaupungin '
           + 'seitsemästä kaupunginosasta, ja siinä asuu noin 17 400 '
           + 'ihmistä.',
+      kuvat: [
+        {
+          tiedosto: 'Old Square, Havana.jpg',
+          selite: 'Aukio ylhäältä: keskellä suihkulähde, ympärillä '
+            + 'kaarikäytäviä ja parvekkeita kolmelta vuosisadalta.',
+          lahde: 'Brian Snelson, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'El Capitolio': {
@@ -48546,6 +48613,14 @@ export const NAHTAVYYSJUTUT = {
           + '2. kesäkuuta 1947. Kaupunginhistorioitsija Eusebio Leal '
           + 'julisti entistämisen päättyneeksi 30. elokuuta 2019, kun '
           + 'kupoli paljastettiin.',
+      kuvat: [
+        {
+          tiedosto: 'Photo of The Statue of The Republic in Dec. 2019.jpg',
+          selite: 'Kupolin alla seisova Tasavallan patsas on kullattu ja '
+            + 'painaa 49 tonnia.',
+          lahde: 'Wekezolin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Intiaanittaren lähde': {
@@ -48582,6 +48657,14 @@ export const NAHTAVYYSJUTUT = {
           + 'muuttui Veljeyden aukioksi, veistos käännettiin vielä 90 '
           + 'astetta uutta Capitoliota kohti. Nyt se katsoo suoraan '
           + 'pohjoiseen, joten kasvot ovat aina varjossa.',
+      kuvat: [
+        {
+          tiedosto: 'Fuente de la India (Havana).jpg',
+          selite: 'Lähdettä käännetään paikoilleen toukokuussa 1928; kuvan '
+            + 'alalaidassa on julkisten töiden viraston oma kuvateksti.',
+          lahde: 'Secretaría de Obras Públicas, Wikimedia Commons (public domain)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Pyhän Hengen kirkko': {
@@ -48643,6 +48726,21 @@ export const NAHTAVYYSJUTUT = {
    * PALACIO DE BELLAS ARTES JÄTETTIIN POIS SAMASTA SYYSTÄ. Se on
    * lehden vajoamisnostossa nimeltä mainittu esimerkki, joten kartalla
    * se on rakennus muiden joukossa eikä numeroitu kohde.
+   *
+   * KUVAT: kuusi juttua kahdeksasta sai kuvan, ja jokainen on
+   * tarkistettu Commonsin rajapinnasta 7.9.2026 (lisenssi ja tekijä
+   * extmetadatasta) ja katsottu silmin 640 px esikatseluna. Yksikään
+   * tiedosto ei ole sama kuin kaupunkilehden mexico-lohkossa
+   * (kulttuuri-kategoriat.js).
+   *
+   * KAUPUNGINTEATTERI JÄI ILMAN KUVAA. Ainoa Commonsin kuva
+   * teatterista on 768 × 1024 pikseliä eli alle vaaditun 1 200:n, eikä
+   * omaa kategoriaa ole. Kohde on raportin miniatyyritilauksessa.
+   *
+   * PLAZA GARIBALDIN KUVAKSI VALITTIIN MUISTOMERKKI EIKÄ SALÓN
+   * TENAMPA. Tenampan sisäkuvat ovat teknisesti hyviä, mutta niissä on
+   * kymmeniä tunnistettavia kasvoja ja anniskelutiskin tuotemerkkejä;
+   * mariachi-muistomerkki kertoo saman asian ilman kumpaakaan.
    */
   mexico: {
     'Plaza Garibaldi': {
@@ -48675,6 +48773,14 @@ export const NAHTAVYYSJUTUT = {
           + 'soittajista asettuu riviin Eje Centralin varteen '
           + 'kysymään keikkoja ohiajavilta. Kaupunki nimesi alueen '
           + 'vuonna 2011 taikakortteliksi eli Barrio Mágicoksi.',
+      kuvat: [
+        {
+          tiedosto: 'MONUMENTO AL MARIACHI EN LA PLAZA GARIBALDI.jpg',
+          selite: 'Aukion mariachi-muistomerkki: pronssinen soittaja hattuineen '
+            + 'ja kitaroineen.',
+          lahde: 'JEDIKNIGHT1970, Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Santo Domingon aukio': {
@@ -48713,6 +48819,14 @@ export const NAHTAVYYSJUTUT = {
           + 'tai neuvonantaja tekee. Aukion keskellä olevassa '
           + 'suihkulähteessä seisoo Meksikon itsenäisyyssodan '
           + 'sankarittaren Josefa Ortiz de Domínguezin patsas.',
+      kuvat: [
+        {
+          tiedosto: 'Plaza de Santo Domingo 1880-1900.tif',
+          selite: 'Aukio 1800-luvun lopulla: kirkko perällä, vasemmalla '
+            + 'kirjurien pylväskäytävä ja edessä härkävankkureita.',
+          lahde: 'Abel Briquet, Wikimedia Commons (public domain)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Kaupunginteatteri: {
@@ -48789,6 +48903,13 @@ export const NAHTAVYYSJUTUT = {
           + 'Diego Riveran ja muiden seinämaalauksia. Koulu suljettiin '
           + '1978, ja rakennus avattiin 1992 uudelleen museona ja '
           + 'kulttuurikeskuksena.',
+      kuvat: [
+        {
+          tiedosto: 'Patio Principal del Colegio de San Ildefonso.JPG',
+          selite: 'Pääpiha, jota kiertää kaksi kerrosta kaarikäytävää.',
+          lahde: 'Patricia Alzuarte Díaz, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Postipalatsi: {
@@ -48827,6 +48948,14 @@ export const NAHTAVYYSJUTUT = {
           + 'koristelua ja ylikuormittivat teräsrungon, ja vuoden 1985 '
           + 'maanjäristys vaurioitti taloa pahoin. Entistäminen '
           + '1990-luvulla palautti sen alkuperäiseen asuunsa.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio Postal, México D.F., México, 2013-10-16, DD 66.JPG',
+          selite: 'Postisali lasiholvin alla; messinki ja marmori tuotiin '
+            + 'Euroopasta.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'San Franciscon luostarikirkko': {
@@ -48867,6 +48996,14 @@ export const NAHTAVYYSJUTUT = {
           + 'ja entinen De Profundis -sali leipomo; ne ovat jäljellä '
           + 'siksi, että purkaminen olisi tullut kalliimmaksi kuin '
           + 'seisottaminen.',
+      kuvat: [
+        {
+          tiedosto: 'FacadeSanFranDF.JPG',
+          selite: 'Balvaneran kappelin julkisivu vuodelta 1766; atriumista '
+            + 'laskee portaita alas kirkkoon.',
+          lahde: 'Thelmadatter, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Kansojen museo': {
@@ -48907,6 +49044,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kulttuurien museona — ainoana lajissaan Latinalaisessa '
           + 'Amerikassa. Siinä on kuusitoista pysyvää salia ja yli '
           + '12 000 esinettä.',
+      kuvat: [
+        {
+          tiedosto: 'Museo Nacional de las Culturas.JPG',
+          selite: 'Entisen rahapajan päätykolmio ja museon nimi kiveen '
+            + 'hakattuna.',
+          lahde: 'Betoqa, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Vizcaínas-koulu': {
@@ -48953,6 +49098,14 @@ export const NAHTAVYYSJUTUT = {
           + 'ja Aldaco-kadun kivipalkeissa näkyvät aallot kertovat '
           + 'sen, mutta silti sitä pidetään kaupungin parhaiten '
           + 'säilyneenä barokkirakennuksena.',
+      kuvat: [
+        {
+          tiedosto: 'VizcainasMexico.JPG',
+          selite: 'Korttelin mittainen tezontle-julkisivu, jonka pilastereita '
+            + 'kruunaavat huiput.',
+          lahde: 'AlejandroLinaresGarcia, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },
