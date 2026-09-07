@@ -157,6 +157,24 @@
  */
 const ELAINTAKY_KUVAJUURI = 'https://media.matkakirja.app/kohtaamiset/kuvajono/';
 
+/**
+ * Kuvajonon toinen juuri: 7.9.2026 toimitettu eläinkuvaerä.
+ *
+ * Toimitus posti/kuvatoimitus-valmiit-29-20260907.json vei kuvat
+ * ämpärin polkuun `elaimet/20260907/` eikä 5.9. käytettyyn
+ * `kohtaamiset/kuvajono/`-polkuun. Osoite kirjoitetaan siksi tästä
+ * juuresta kokonaisena `url`-kenttään: pelkkä tunnus veisi
+ * js/media.js assetOsoitteen kautta väärään kansioon.
+ *
+ * TOIMITUKSESTA JÄI KAKSI KUVAA KYTKEMÄTTÄ: Fidžin (elain-fji-
+ * fidzinleguaani-r20260907-v3) ja Salomonsaarten (elain-slb-
+ * ducorpsinkakadu-r20260907-v1) kuville ei ole tässä taulussa
+ * tietuetta lainkaan — FJI:llä ja SLB:llä ei ole eläintäkyä. Kuva ei
+ * ole tietue, eikä integroija kirjoita täkytekstiä itse, joten ne
+ * odottavat Fablen päätöstä (raportoitu 7.9.2026).
+ */
+const ELAINTAKY_KUVAJUURI_0709 = 'https://media.matkakirja.app/elaimet/20260907/';
+
 /** Maatunnus → eläintäky. Avaimet ovat laudan countryShapes-tunnuksia. */
 export const ELAINTAKYT = {
   FIN: {
@@ -1150,14 +1168,13 @@ export const ELAINTAKYT = {
    * Erän M1 viidestä maasta ARG, BRA ja CHL olivat jo tässä taulussa
    * (5.9.2026 kuvaputken erä), joten uusia tulee kaksi: BOL ja COL.
    *
-   * NÄMÄ KAKSI OVAT KUVATTOMIA, ja se on tietoinen tila eikä unohdus.
-   * Erä M1 on kuvaton kauttaaltaan (ks. js/packs/maastokohteet-arg.js),
-   * eikä integroija generoi kuvia itse: kuvaputki tekee ne Fablen
-   * tilauksesta. Kortti kestää kuvattomuuden — js/elaintaky.js latoo
-   * tekstin ja lähteen ilman kuvakehystä, ja js/packs/elaintakyt.js
-   * elaintakynKuvat palauttaa tyhjän listan (tests/elaintakyt.test.mjs:
-   * "kuvaton tietue ei keksi tiedostoa"). Kun kuvat valmistuvat, ne
-   * lisätään `kuvat`-listana muiden tapaan.
+   * KUVAT TULIVAT 7.9.2026 (toimitus posti/kuvatoimitus-valmiit-29-
+   * 20260907.json): molemmat ovat nyt `kuvat`-listassa, ja osoite tulee
+   * ELAINTAKY_KUVAJUURI_0709:sta. Kortti kesti kuvattomuuden siihen
+   * asti — js/elaintaky.js latoo tekstin ja lähteen ilman kuvakehystä,
+   * ja elaintakynKuvat palauttaa tyhjän listan (tests/elaintakyt.test.mjs:
+   * "kuvaton tietue ei keksi tiedostoa"). Integroija ei generoi kuvia
+   * itse: kuvaputki tekee ne Fablen tilauksesta.
    *
    * PAIKAT on tarkistettu samoilla ehdoilla kuin muutkin: piste on
    * maalla, oman maansa monikulmion sisällä, vähintään 35 yksikön
@@ -1180,6 +1197,15 @@ export const ELAINTAKYT = {
       + 'kansallisaarteeksi.',
     lahde: 'en-Wikipedia "Bolivian river dolphin", johdanto-osa sekä osiot '
       + '"Taxonomy" ja "Description". Tarkistettu 6.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-bol-boliviandelfiini-r20260907-v2.jpg`,
+        kuvateksti: 'Boliviandelfiini nousee pintaan Mamoréjoen vesistössä Boliviassa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: WWF — '
+          + 'Amazon, key species for conservation',
+        lahdeUrl: 'https://wwf.panda.org/knowledge_hub/where_we_work/amazon/species/key_species_for_conservation/',
+      },
+    ],
     /*
      * Piste on Beninin savannin ja Mamorén jokitasangon puolivälissä:
      * lajin elinalue on Ylä-Madeiran vesistö, ja merkin on oltava maalla
@@ -1205,6 +1231,17 @@ export const ELAINTAKYT = {
     lahde: 'en-Wikipedia "Golden poison frog", johdanto-osa sekä osiot '
       + '"Distribution and habitat", "Toxicity" ja "Use by humans". '
       + 'Tarkistettu 6.9.2026.',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-col-kultamyrkkysammakko-r20260907-v1.jpg`,
+        kuvateksti: 'Kultamyrkkysammakko lepää märällä lehdellä Kolumbian Tyynenmeren '
+          + 'rannikon sademetsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: AMNH '
+          + 'Amphibian Species of the World — Phyllobates terribilis; WCS '
+          + 'Colombia — Poison Dart Frogs of Colombia',
+        lahdeUrl: 'https://amphibiansoftheworld.amnh.org/Amphibia/Anura/Dendrobatoidea/Dendrobatidae/Dendrobatinae/Phyllobates/Phyllobates-terribilis',
+      },
+    ],
     // Piste on Chocón sademetsässä lajin elinalueella, irti rannikosta:
     // rannikkokaistale on maailmankartan muodossa jo merta.
     lon: -76.8,
@@ -1219,18 +1256,26 @@ export const ELAINTAKYT = {
    * luonnoksia lähteineen — Fable tarkistaa ja kirjoittaa lopulliset
    * sanamuodot, kuten Euroopan ulkopuolisessa erässä 5.9.2026.
    *
-   * KUVA ON VIELÄ TILAAMATTA. `kuva`-kentässä on kuvaputken oma tunnus
-   * ilman kansiota, joten se osoittaa ämpäriin (js/media.js
-   * assetOsoite): kun kuvaputki tekee kuvan, se ilmestyy kortille
-   * ilman koodimuutosta, ja siihen asti kortti on kuvaton (404 ei
-   * kaada mitään, js/elaintaky.js hakee kuvan vasta avatessa).
+   * KUVAT TULIVAT 7.9.2026 (toimitus posti/kuvatoimitus-valmiit-29-
+   * 20260907.json). Ne asuvat ämpärin polussa `elaimet/20260907/`, joten
+   * pelkkä tunnus ei löytäisi niitä (js/media.js assetOsoite veisi
+   * kansioon `elaimet/<tunnus>.jpg`): osoite kirjoitetaan kokonaisena
+   * ELAINTAKY_KUVAJUURI_0709:sta.
    */
   GRL: {
     elain: 'gronlanninkoira',
     otsikko: 'Tuhat vuotta valjaissa',
     teksti: 'Grönlanninkoira eli Kalaallit Qimmiat on suuri husky-tyyppinen rekikoira, jonka thulelaiset toivat Siperiasta Pohjois-Amerikkaan noin tuhat vuotta sitten. Rodun puhtautta varjellaan tarkasti: napapiirin pohjoispuolisessa Länsi-Grönlannissa ja koko Itä-Grönlannissa on kiellettyä tuoda maahan mitään muualta tullutta koiraa, ja vuodesta 2017 jokainen koira on mikrosirutettu ja kirjattu rekisteriin. Kanta pienenee silti: vuonna 2016 koiria oli noin 15 000 ja 2021 enää 12 000. Roald Amundsen käytti grönlanninkoiria retkellään etelänavalle.',
     lahde: 'en-Wikipedia "Greenland Dog", johdanto-osa ja osio "History". Tarkistettu 6.9.2026.',
-    kuva: 'elain-grl',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-grl-gronlanninkoira-r20260907-v2.jpg`,
+        kuvateksti: 'Grönlanninkoira pysähtyy valjaissa Itä-Grönlannin hangella.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: FCI '
+          + 'Standard No. 274 — Greenland Dog',
+        lahdeUrl: 'https://www.fci.be/Nomenclature/Standards/274g05-en.pdf',
+      },
+    ],
     /*
      * Piste on Itä-Grönlannin sisämaassa: rannikko on maailmankartan
      * karkeassa muodossa paikoin merta, ja lähin kaupunkimerkki (Nuuk)
@@ -1245,7 +1290,15 @@ export const ELAINTAKYT = {
     teksti: 'Ketsaali on Guatemalan kansalliseläin: se on maan lipussa ja vaakunassa, ja maan rahayksikkö on nimetty sen mukaan. Koiraan viheriöivät pyrstösulat ovat pidemmät kuin lintu itse, ja naaras on vaatimattomampi. Laji pesii lahoihin puihin tai tikkojen tekemiin koloihin, ja emot hautovat vuorotellen: koiras päivällä, naaras yöllä. Ketsaali elää sumumetsissä ja vaeltaa vuodenaikojen mukaan rinteiltä latvustoon. Se on luokiteltu silmälläpidettäväksi, ja suurin uhka on elinympäristön häviäminen — Sierra de las Minasin vuoristossa ovat Mesoamerikan laajimmat sumumetsät, ja suuri osa siitä on ollut biosfäärialuetta vuodesta 1990.',
     lahde: 'en-Wikipedia "Resplendent quetzal", johdanto-osa, ja "Sierra de las Minas", '
       + 'johdanto-osa ja osio "Biosphere reserve". Tarkistettu 6.9.2026.',
-    kuva: 'elain-gtm',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-gtm-ketsaali-r20260907-v2.jpg`,
+        kuvateksti: 'Ketsaali lentää avokadon kanssa Sierra de las Minasin sumumetsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Birds of '
+          + 'the World — Resplendent Quetzal',
+        lahdeUrl: 'https://birdsoftheworld.org/bow/species/resque1/cur/introduction',
+      },
+    ],
     // Piste on Sierra de las Minasin sumumetsävyöhykkeellä, 40,9
     // lautayksikköä Guatemala Citystä (vähimmäisetäisyys 35).
     lon: -89.3,
@@ -1257,7 +1310,15 @@ export const ELAINTAKYT = {
     teksti: 'Turkoosikulmamotmot tunnetaan Nicaraguassa nimellä guardabarranco, rotkojen vartija; El Salvadorissa se on torogoz ja Jukatanin mayakielissä pájaro reloj, kellolintu. Nimi tulee pyrstöstä: kaksi pitkää sulkaa päättyy mailanmuotoisiin lippuihin, ja lintu heiluttaa niitä puolelta toiselle kuin kellon heiluria. Heilutus ei ole koristelua vaan viesti pedolle: näen sinut, älä vaivaudu. Toisin kuin useimmilla linnuilla, koreat pyrstösulat ovat molemmilla sukupuolilla. Motmot kaivaa pesäkolonsa tunnelina hiekkatörmään tai kalkkikiven halkeamaan, ja mayat pitivät sitä manalan vartijana, koska se pesi cenotejen reunoilla.',
     lahde: 'en-Wikipedia "Turquoise-browed motmot", johdanto-osa sekä osiot "Behavior" ja '
       + '"Cultural relevance". Tarkistettu 6.9.2026.',
-    kuva: 'elain-nic',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-nic-turkoosikulmamotmot-r20260907-v2.jpg`,
+        kuvateksti: 'Turkoosikulmamotmot tarkkailee kovakuoriaista Nicaraguan metsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Birds of '
+          + 'the World — Turquoise-browed Motmot',
+        lahdeUrl: 'https://birdsoftheworld.org/bow/species/tubmot1/cur/introduction',
+      },
+    ],
     // Piste on Río San Juanin metsäseudulla järven itäpuolella, 61,3
     // lautayksikköä Managuasta (vähimmäisetäisyys 35).
     lon: -84.6,
@@ -1281,18 +1342,24 @@ export const ELAINTAKYT = {
    * sammakkoeläin, jonka Chek Lap Kokin populaatio siirrettiin talteen
    * 1992 ennen lentoaseman rakentamista.
    *
-   * KUVA TULEE KUVAPUTKELTA. Erä on kuvaton, joten `kuva`-kenttään on
-   * kirjoitettu pelkkä ämpäritunnus (js/media.js assetOsoite:
-   * `kohtaamiset/elaimet/<tunnus>.jpg`). Kun kuvaputki toimittaa
-   * kuvan, tiedostoa ei tarvitse lisätä repoon eikä tähän tauluun
-   * kirjoittaa riviäkään lisää.
+   * KUVAT TULIVAT 7.9.2026 (toimitus posti/kuvatoimitus-valmiit-29-
+   * 20260907.json) ja ovat `kuvat`-listassa valmiina osoitteina
+   * (ELAINTAKY_KUVAJUURI_0709). Repoon ei tullut tavuakaan kuvadataa.
    */
   IDN: {
     elain: 'babirusa',
     otsikko: 'Torahampaat oman kuononsa läpi',
     teksti: 'Babirusat eli hirvisiat ovat sikojen heimoon kuuluva suku, jota tavataan vain Sulawesin, Togianin, Sulan ja Burun saarilla Indonesiassa. Uroksen ylemmät kulmahampaat kasvavat pystysuoraan leukaluun haarakkeesta, puhkaisevat kuonon ihon ja kaartuvat taaksepäin kohti otsaa — alahampaatkin kasvavat ylöspäin. Naaraalla kulmahampaat ovat kituliaat tai puuttuvat kokonaan. Vielä 2002 asti kaikkia pidettiin yhtenä lajina, mutta suku jaettiin silloin useaksi: burunbabirusa elää Burulla ja Sulalla, tunnetuin laji on pohjoissulawesinbabirusa. Kaikki lajit ovat kansainvälisen luonnonsuojeluliiton mukaan uhanalaisia.',
     lahde: 'en-Wikipedia "Babirusa", johdanto ja osio "Description". Tarkistettu 6.9.2026.',
-    kuva: 'elain-idn',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-idn-babirusa-r20260907-v1.jpg`,
+        kuvateksti: 'Babirusa etsii pudonneita hedelmiä Sulawesin sademetsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: IUCN Red '
+          + 'List — Babyrousa celebensis',
+        lahdeUrl: 'https://www.iucnredlist.org/species/136446/44142964',
+      },
+    ],
     lon: 120.2,
     lat: -1.5,
   },
@@ -1302,7 +1369,15 @@ export const ELAINTAKYT = {
     teksti: 'Sri Lankan leopardi on saarella elävä leopardin alalaji, jonka kuvaili 1956 srilankalainen eläintieteilijä Paulus Edward Pieris Deraniyagala. Turkki on kellanruskea tai ruosteenkeltainen, ja täplät ovat tiheässä ruusukkeina. Koska leopardi on saaren huippupeto eikä sillä ole kilpailijaa, alalaji on kehittynyt kookkaaksi: yksitoista mitattua urosta painoi keskimäärin 56 kiloa ja suurin 77. Lajia tavataan kaikissa saaren elinympäristöissä aavikkovyöhykkeeltä sademetsään, ja keskiylängöllä se on kirjattu myös teeviljelmiltä, männiköistä ja kotipuutarhoista. Vuodesta 2020 se on ollut vaarantunut: aikuisia yksilöitä arvioidaan olevan alle 800.',
     lahde: 'en-Wikipedia "Sri Lankan leopard", johdanto sekä osiot "Characteristics" '
       + 'ja "Distribution and habitat". Tarkistettu 6.9.2026.',
-    kuva: 'elain-lka',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-lka-srilankanleopardi-r20260907-v2.jpg`,
+        kuvateksti: 'Sri Lankan leopardi kohtaa makakin Yalan kuivametsän oksilla.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: IUCN SSC '
+          + 'Cat Specialist Group — Sri Lankan leopard',
+        lahdeUrl: 'https://www.catsg.org/index.php?id=91',
+      },
+    ],
     lon: 81.4,
     lat: 6.4,
   },
@@ -1312,7 +1387,15 @@ export const ELAINTAKYT = {
     teksti: 'Myanmarinsurkkunenäapina löydettiin vuonna 2010 Kachinin osavaltion koillisosasta Gaoligongin vuorilta, ja se kuvailtiin uudeksi lajiksi 2011 turkkinsa, partansa ja häntänsä perusteella. Lisujen kielellä sen nimi on mey nwoah ja law waw -kansan kielellä myuk na tok te; molemmat tarkoittavat apinaa, jonka kasvot ovat ylöspäin. Nykerönenän ympärillä on niin vähän lihaa, että sateen kerrotaan saavan eläimen aivastelemaan — seudun ihmisten mukaan se istuu sateella pää painuksissa kasvot polvien välissä. Löytöretkikuntaa johtivat sveitsiläinen kädellistutkija Thomas Geissmann ja Ngwe Lwin, ja laji on äärimmäisen uhanalainen.',
     lahde: 'en-Wikipedia "Myanmar snub-nosed monkey", johdanto ja osio '
       + '"Discovery and taxonomy". Tarkistettu 6.9.2026.',
-    kuva: 'elain-mmr',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-mmr-surkkunenaapina-r20260907-v2.jpg`,
+        kuvateksti: 'Surkkunenäapina suojaa poikastaan sateelta Kachinin vuorimetsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Fauna & '
+          + 'Flora — Myanmar snub-nosed monkey',
+        lahdeUrl: 'https://www.fauna-flora.org/species/myanmar-snub-nosed-monkey/',
+      },
+    ],
     lon: 97.8,
     lat: 26.3,
   },
@@ -1332,10 +1415,9 @@ export const ELAINTAKYT = {
    * kaita, jossa goliattisammakko elää, on 26–36 yksikön päässä
    * Kamerun-laatasta, joten täky on vyöhykkeen pohjoispäässä.
    *
-   * KUVA TULEE KUVAPUTKELTA. Erä on kuvaton, joten `kuva`-kentässä on
-   * pelkkä ämpäritunnus (js/media.js assetOsoite:
-   * `kohtaamiset/elaimet/<tunnus>.jpg`). Kun kuvaputki toimittaa kuvan,
-   * se ilmestyy kortille ilman koodimuutosta.
+   * KUVAT TULIVAT 7.9.2026 (toimitus posti/kuvatoimitus-valmiit-29-
+   * 20260907.json) ja ovat `kuvat`-listassa valmiina osoitteina
+   * (ELAINTAKY_KUVAJUURI_0709).
    */
   DZA: {
     elain: 'fennekki',
@@ -1343,7 +1425,15 @@ export const ELAINTAKYT = {
     teksti: 'Fennekki on Pohjois-Afrikan aavikoiden pikkukettu ja maailman pienin koiraeläin: naaras painaa 1–1,9 kiloa ja on rungoltaan 34,5–39,5 senttiä pitkä. Sen tuntomerkki ovat suhteettoman suuret korvat, jotka ovat koiraeläinten suurimmat suhteessa ruumiiseen — ne haihduttavat lämpöä ja kuulevat saaliin liikkeet hiekan alta. Turkki on hiekan värinen, se heijastaa päivällä auringon ja pitää yöllä lämpimänä, ja käpälien anturat ovat tiheän karvan peitossa, jotta kuumalla hiekalla voi kävellä. Munuaiset ovat suuret ja tiiviit ja säästävät vettä kuivina aikoina. Fennekit kaivavat perheittäin hiekkaan koloja, jotka voivat olla 120 neliömetrin laajuisia ja joiden käytävät yhtyvät naapuriperheiden koloihin. Ravinto on hyönteisiä, pikkunisäkkäitä ja lintuja; poikasia saalistaa aavikkohuuhkaja, ja aikuisiakin sakaalit ja tarhahyeenat.',
     lahde: 'en-Wikipedia "Fennec fox", johdanto sekä osiot "Characteristics" ja '
       + '"Distribution and habitat". Tarkistettu 6.9.2026.',
-    kuva: 'elain-dza',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-dza-fennekki-r20260907-v1.jpg`,
+        kuvateksti: 'Fennekki kaivaa kovakuoriaista Algerian Saharan dyynillä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Animal '
+          + 'Diversity Web — Vulpes zerda',
+        lahdeUrl: 'https://animaldiversity.org/accounts/Vulpes_zerda/',
+      },
+    ],
     // Piste on Saharan hiekkatasangolla Keski-Algeriassa, 219,3
     // lautayksikköä Sahara-laatasta (vähimmäisetäisyys 35).
     lon: 2.0,
@@ -1355,7 +1445,16 @@ export const ELAINTAKYT = {
     teksti: 'Jättiläisseeprantilooppi on vain Angolan keskiylängöllä elävä seeprantiloopin alalaji, jonka kuvaili 1916 brittiläinen eläintieteilijä Oldfield Thomas. Nimen lisäosa variani muistaa Frank Variania, Benguelan rataa rakentanutta insinööriä, joka toi eläimen tieteen tietoon. Nimi jättiläinen viittaa sonnin sarviin, jotka ovat kaikista seeprantiloopeista pisimmät: usein yli 129 senttiä ja pisimmillään mitattuna 165. Aikuinen sonni on kiiltävän musta ja painaa noin 240 kiloa, lehmät jäävät ruskeiksi kuten vasat. Laji katosi sisällissodan vuosiksi ja löydettiin uudelleen, mutta kaikki kuvatut yksilöt olivat naaraita; 2009 sonni paikannettiin ulostenäytteiden DNA:n avulla Luandon luonnonpuistosta ja siirrettiin helikopterilla Cangandalan aitaukseen. Kanta on äärimmäisen uhanalainen: vuonna 2026 yksilöitä arvioidaan olevan noin 310 kahdeksassa laumassa.',
     lahde: 'en-Wikipedia "Giant sable antelope", johdanto sekä osiot "Taxonomy", "Discovery", '
       + '"Description" ja "Distribution and habitat". Tarkistettu 6.9.2026.',
-    kuva: 'elain-ago',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-ago-jattilaisseeprantilooppi-r20260907-v2.jpg`,
+        kuvateksti: 'Jättiläisseeprantiloopin sonni kulkee Angolan miombo-metsän valoisalla '
+          + 'aukiolla.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: IUCN SSC '
+          + 'Antelope Specialist Group; AWF — sable antelope',
+        lahdeUrl: 'https://www.iucn.org/our-union/commissions/group/iucn-ssc-antelope-specialist-group',
+      },
+    ],
     // Piste on Luandon luonnonpuiston seudulla Kwanzan ja Luandon
     // välissä, 60,4 lautayksikköä Angola-laatasta (vähimmäisetäisyys 35).
     lon: 17.5,
@@ -1367,7 +1466,16 @@ export const ELAINTAKYT = {
     teksti: 'Goliattisammakko on maailman suurin sammakko: ruumis voi olla 32 senttiä ja paino 3,3 kiloa, ja jalat ojennettuina pisimmät yksilöt ylittävät 80 senttiä. Levinneisyys on hyvin kapea — vain Kamerunin ja Päiväntasaajan Guinean rannikon suuntainen tiheä sademetsäkaita, jossa se elää koskien ja putousten äärellä Sanagan, Kienken, Ntemin ja Mbían vesistöissä. Sillä ei ole ääntä vahvistavaa kurkkupussia, joten se ei kutsu puolisoa kurnuttamalla. Sen sijaan se rakentaa: koiras raivaa jokialtaan puhtaaksi, patoaa vanhan lammikon tai kaivaa uuden, metrin levyisen ja kymmenen sentin syvyisen kuopan sorapenkkaan ja siirtää siinä sivussa isojakin kiviä. Naaras vartioi pesää öisin, ja toukkavaihe kestää 85–95 päivää. Juuri pesänrakennus saattaa selittää lajin koon: raskaita kiviä siirtää parhaiten iso sammakko.',
     lahde: 'en-Wikipedia "Goliath frog", johdanto sekä osiot "Description", "Habitat and '
       + 'distribution" ja "Reproduction". Tarkistettu 6.9.2026.',
-    kuva: 'elain-cmr',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-cmr-goliattisammakko-r20260907-v4.jpg`,
+        kuvateksti: 'Goliattisammakko lepää virtaavan veden hiomalla kivellä Kamerunin '
+          + 'sademetsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: '
+          + 'AmphibiaWeb — Conraua goliath; EDGE of Existence — Goliath frog',
+        lahdeUrl: 'https://amphibiaweb.org/species/5075',
+      },
+    ],
     // Piste on rannikon suuntaisessa metsävyöhykkeessä Sanagan ja
     // Ntemin altaiden välissä, 36,5 lautayksikköä Kamerun-laatasta
     // (vähimmäisetäisyys 35).
@@ -1380,7 +1488,16 @@ export const ELAINTAKYT = {
     teksti: 'Bonobo on ihmisapinoista pienin ja yhdessä simpanssin kanssa ihmisen lähin nykyinen sukulainen. Sitä tavataan vain Kongon demokraattisen tasavallan alueella, noin 500 000 neliökilometrin laikulla Kongo-joen eteläpuolella. Juuri joki teki lajin: kun Kongo muotoutui 1,5–2 miljoonaa vuotta sitten, huono uimari jäi sen eteläpuolelle ja erkani simpanssin esivanhemmista, jotka jäivät pohjoispuolelle. Bonobo on hoikempi kuin simpanssi — kapeat hartiat, ohut kaula, pitkät sääret, mustat kasvot, vaaleanpunaiset huulet ja päälaella jakaukselle asettuva pitkä karva. Ravinto on enimmäkseen hedelmiä. Laumat ovat epätavallisia ihmisapinoiden joukossa siinä, että naaraat pitävät niissä valtaa: yhteen liittoutuneet naaraat voivat olla koiraiden vertaisia tai näitä vahvempia. Villissä luonnossa lajia on tutkittu vähän, koska bonobo on arka ja seutu levoton.',
     lahde: 'en-Wikipedia "Bonobo", johdanto sekä osiot "Description" ja "Behavior and '
       + 'ecology". Tarkistettu 6.9.2026.',
-    kuva: 'elain-cod',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-cod-bonobo-r20260907-v2.jpg`,
+        kuvateksti: 'Bonoboemo seuraa poikastaan Kongon demokraattisen tasavallan '
+          + 'sademetsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: IUCN — '
+          + 'apes; WWF — bonobo',
+        lahdeUrl: 'https://www.iucn.org/our-work/topic/species/our-work/apes',
+      },
+    ],
     // Piste on Kongo-joen eteläpuolisessa sademetsässä Salongan
     // pohjoispuolella, 288,2 lautayksikköä Kongo-laatasta
     // (vähimmäisetäisyys 35).
@@ -1393,7 +1510,15 @@ export const ELAINTAKYT = {
     teksti: 'Kenkänokka on kookas pitkäjalkainen kahlaaja, joka on saanut nimensä valtavasta kengänmuotoisesta nokastaan. Se muistuttaa haikaraa ja luokiteltiin pitkään sellaiseksi, mutta geenit siirsivät sen pelikaanien ja haikaroiden sukulaiseksi; lähin sukulainen on vasarapää. Lintu on 110–140 senttiä korkea, siipiväli on 230–260 senttiä ja paino 4–7 kiloa. Nokka on vaaleanpunainen, harmaakirjava ja koukkupäinen, ja sen selkäharja on kolmanneksi pisin nykylinnuista pelikaanien ja suurten haikaroiden jälkeen. Jalat ovat pitkät ja jalkaterät poikkeuksellisen suuret — keskivarvas on 17–18 senttiä — mikä auttaa lintua seisomaan kelluvan kasvillisuuden päällä saalista väijyessään. Aikuisen höyhenpuku on siniharmaa, poikasen ruskeampi. Laji elää Itä-Afrikan suurilla soilla Etelä-Sudanista Sambiaan, ja englantilainen John Gould kuvasi sen 1850 Valkoiselta Niililtä tuodusta nahasta.',
     lahde: 'en-Wikipedia "Shoebill", johdanto sekä osiot "Taxonomy" ja "Description". '
       + 'Tarkistettu 6.9.2026.',
-    kuva: 'elain-sds',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-sds-kenkanokka-r20260907-v3.jpg`,
+        kuvateksti: 'Kenkänokka pitää kalaa nokassaan Suddin papyrussuolla Etelä-Sudanissa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: BirdLife '
+          + 'International — shoebill; BirdLife Data Zone — Balaeniceps rex',
+        lahdeUrl: 'https://www.birdlife.org/birds/shoebill/',
+      },
+    ],
     // Piste on Suddin kosteikossa Valkoisen Niilin varrella, 113,7
     // lautayksikköä Bahr el Ghazal -laatasta (vähimmäisetäisyys 35).
     lon: 30.4,
@@ -1415,9 +1540,9 @@ export const ELAINTAKYT = {
    * joka katosi Singaporesta 1800-luvulla ja palasi Pulau Ubinille
    * 1990-luvulla.
    *
-   * KUVA TULEE KUVAPUTKELTA. Erä on kuvaton, joten `kuva`-kenttään on
-   * kirjoitettu pelkkä ämpäritunnus (js/media.js assetOsoite:
-   * `kohtaamiset/elaimet/<tunnus>.jpg`).
+   * KUVAT TULIVAT 7.9.2026 (toimitus posti/kuvatoimitus-valmiit-29-
+   * 20260907.json) ja ovat `kuvat`-listassa valmiina osoitteina
+   * (ELAINTAKY_KUVAJUURI_0709).
    */
   THA: {
     elain: 'kimalaislepakko',
@@ -1425,7 +1550,15 @@ export const ELAINTAKYT = {
     teksti: 'Kittin sikanokkalepakko eli kimalaislepakko on ainoa elossa oleva laji heimossaan, ja se elää Länsi-Thaimaan ja Kaakkois-Myanmarin kalkkikiviluolissa jokien varsilla. Ruumis on 29–33 millimetriä pitkä ja paino noin kaksi grammaa: se on maailman pienin lepakko ja ruumiinpituudeltaan pienimpiä nisäkkäitä — kilpailija on etruskipäästäinen, joka voi olla kevyempi mutta on selvästi pidempi. Kuono on turvonnut ja sian kärsää muistuttava, siivet ovat suuret ja pitkäkärkiset, joten eläin osaa leijua paikallaan. Yhdessä luolassa on keskimäärin sata yksilöä, ja parvi lentää saalistamaan vain lyhyen ajan illalla ja aamunkoitteessa. Thaimaassa laji tunnetaan vain Kanchanaburin Sai Yokin piiristä.',
     lahde: 'en-Wikipedia "Kitti\'s hog-nosed bat", johdanto sekä osiot "Description", '
       + '"Taxonomy" ja "Range and habitat". Tarkistettu 6.9.2026.',
-    kuva: 'elain-tha',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-tha-kimalaislepakko-r20260907-v2.jpg`,
+        kuvateksti: 'Kimalaislepakko lentää kalkkikiviluolan suulla Länsi-Thaimaassa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: EDGE of '
+          + 'Existence — bumblebee bat',
+        lahdeUrl: 'https://www.edgeofexistence.org/blog/how-to-watch-bumblebee-bats-harmlessly/',
+      },
+    ],
     // Piste on Sai Yokin kalkkikivialueella Khwae Noin latvoilla, 60,2
     // lautayksikköä Bangkokista (vähimmäisetäisyys 35).
     lon: 98.8,
@@ -1437,7 +1570,16 @@ export const ELAINTAKYT = {
     teksti: 'Saola on Annamin vuoriston sademetsissä Vietnamissa ja Laosissa elävä nautaeläin, joka kuvailtiin tieteelle vasta 1993, kun Vietnamin metsätalousministeriön ja WWF:n yhteinen retkikunta löysi jäänteitä Vũ Quangin kansallispuistosta. Nimi tulee Vietnamin tai-kielestä ja tarkoittaa rukin pylvään sarvea: molemmilla sukupuolilla on pari lähes yhdensuuntaisia, pitkiä sarvia. Turkki on suklaanruskea, kasvoissa, kurkussa ja kaulan sivuilla on valkoisia laikkuja ja selässä musta juova. Laosin hmongit kutsuvat sitä nimellä saht-supahp, kohtelias eläin, koska se liikkuu metsässä äänettömästi. Viimeisin havainto on liiketunnistimella varustetun kameran kuva Keski-Vietnamin metsästä vuodelta 2013, ja laji on äärimmäisen uhanalainen.',
     lahde: 'en-Wikipedia "Saola", johdanto sekä osiot "Etymology" ja '
       + '"Description". Tarkistettu 6.9.2026.',
-    kuva: 'elain-vnm',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-vnm-saola-r20260907-v2.jpg`,
+        kuvateksti: 'Saolaemo ja vasa ylittävät hiljaisen puron Annamin vuoriston '
+          + 'sademetsässä Vietnamissa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: WWF — '
+          + 'saola; IUCN — saola',
+        lahdeUrl: 'https://www.worldwildlife.org/species/saola',
+      },
+    ],
     // Piste on Vũ Quangin seudulla Annamin vuoristossa, 92,8
     // lautayksikköä Hanoista (vähimmäisetäisyys 35).
     lon: 105.4,
@@ -1450,7 +1592,15 @@ export const ELAINTAKYT = {
     lahde: 'en-Wikipedia "Timor sparrow", johdanto sekä osiot "Description", '
       + '"Distribution and habitat" ja "Relationships with humans". '
       + 'Tarkistettu 6.9.2026.',
-    kuva: 'elain-tls',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-tls-timorinpeippo-r20260907-v1.jpg`,
+        kuvateksti: 'Timorinpeipot ruokailevat kuivassa ruohostossa Timor-Lestessä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: BirdLife '
+          + 'Data Zone — Timor sparrow (Padda fuscata); eBird — Timor Sparrow',
+        lahdeUrl: 'https://datazone.birdlife.org/species/factsheet/timor-sparrow-padda-fuscata',
+      },
+    ],
     // Piste on Itä-Timorin itäosan alavilla mailla, 47,4 lautayksikköä
     // Dilistä (vähimmäisetäisyys 35). Matebianin nimiö oli lännempänä
     // päällekkäin (tools/tarkista-nimiolimitys.mjs).
@@ -1465,10 +1615,9 @@ export const ELAINTAKYT = {
    * mitattu eikä arvattu: merkin on oltava vähintään 35 lautayksikön
    * päässä jokaisesta kaupunkimerkistä (tests/elaintakyt.test.mjs), ja
    * koko Qatarin maa-alueen kaukaisin piste Dohasta on 31,8 yksikköä.
-   * Sama tilanne kuin Hongkongissa erässä M3. Kaikki neljä ovat
-   * KUVATTOMIA: `kuva`-kentässä on kuvaputken ämpäritunnus ilman
-   * kansiota, ja kun kuva syntyy, se ilmestyy kortille ilman
-   * koodimuutosta.
+   * Sama tilanne kuin Hongkongissa erässä M3. Kaikilla neljällä on kuva
+   * 7.9.2026 toimituksesta (posti/kuvatoimitus-valmiit-29-20260907.json)
+   * `kuvat`-listassa valmiina osoitteena (ELAINTAKY_KUVAJUURI_0709).
    *
    * Saudi-Arabialla on jo arabianoryksi, joten sitä ei toisteta (N3).
    * ================================================================ */
@@ -1487,7 +1636,17 @@ export const ELAINTAKYT = {
     lahde: 'en-Wikipedia "Cyprus scops owl", johdanto sekä osiot "Taxonomy and systematics", '
       + '"Distribution and habitat" ja "Breeding", ja en-Wikipedia "Akamas", osio "Biology '
       + 'and ecology". Tarkistettu 6.9.2026.',
-    kuva: 'elain-cyp',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-cyp-kyproksenpollonen-r20260907-v1.jpg`,
+        kuvateksti: 'Kyproksenpöllönen kurkistaa vanhan männyn kolosta Kyproksen '
+          + 'vuoristometsässä.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: BirdLife '
+          + 'Data Zone — Cyprus scops owl (Otus cyprius); eBird — Cyprus '
+          + 'Scops-Owl',
+        lahdeUrl: 'https://datazone.birdlife.org/species/factsheet/cyprus-scops-owl-otus-cyprius',
+      },
+    ],
     lon: 32.29,
     lat: 35.06,
   },
@@ -1497,7 +1656,15 @@ export const ELAINTAKYT = {
     teksti: 'Arabianleopardi (Panthera pardus nimr) on leopardin alalajeista pienin, ja se kuvailtiin tieteelle 1830. Vielä 1970-luvun lopulla se eli laajalti Arabian niemimaan karuilla kukkuloilla ja vuorilla, mutta kanta on nyt pahasti pirstoutunut ja pienenee yhä. Vuonna 2008 arvioitiin, että jäljellä on 45–200 yksilöä kolmena erillisenä osakantana Länsi-Saudi-Arabiassa, Omanissa ja Jemenissä; vuoden 2023 arvio on 100–120 yksilöä Omanissa ja Jemenissä, joista 70–84 aikuista, ja Saudi-Arabiasta laji on mahdollisesti hävinnyt kokonaan. Yksi viimeisistä turvapaikoista on Dhofarin Jabal Samhanin luonnonsuojelualue, 4 500 neliökilometriä vuoristoa ilman vakinaista asutusta. Alueella arvioidaan elävän noin kaksikymmentä arabianleopardia.',
     lahde: 'en-Wikipedia "Arabian leopard", johdanto, ja en-Wikipedia "Jabal Samhan Nature '
       + 'Reserve", johdanto. Tarkistettu 6.9.2026.',
-    kuva: 'elain-omn',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-omn-arabianleopardi-r20260907-v2.jpg`,
+        kuvateksti: 'Arabianleopardi juo kallioaltaasta Dhofarin vuoristossa Omanissa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: IUCN — '
+          + 'Arabian leopard conservation strategy',
+        lahdeUrl: 'https://www.iucn.org/news/species/202301/arabian-leopard-conservation-strategy',
+      },
+    ],
     lon: 55.0,
     lat: 17.3,
   },
@@ -1507,7 +1674,16 @@ export const ELAINTAKYT = {
     teksti: 'Arabiantahri (Arabitragus jayakari) on tahreista pienin: tanakka vuorivuohi, jonka sarvet kaartuvat taaksepäin sekä uroksilla että naarailla. Turkki on pitkä ja punaruskea, ja selkää pitkin kulkee tumma juova; vanhimmilla uroksilla kuono ja silmäjuovat tummuvat mustiksi ja harja kasvaa pitkäksi. Kaviot ovat kuin kumia, jotta ne pitävät jyrkillä kalliorinteillä. Laji elää Hajarin vuorten rinteillä Omanissa ja Arabiemiirikunnissa aina 1 800 metriin asti sekä Jebel Hafeetin seudulla. Toisin kuin muut tahrit se ei muodosta laumoja vaan kulkee yksin tai pienenä perheenä. Kesällä sen on juotava kahden tai kolmen päivän välein, ja siksi se laskeutuu wadeihin — juuri silloin se on salametsästäjän ulottuvilla. Oldfield Thomas kuvasi lajin 1894, ja vuonna 2018 villikannaksi arvioitiin noin 2 450 yksilöä.',
     lahde: 'en-Wikipedia "Arabian tahr", johdanto sekä osiot "Description", "Habitat and '
       + 'range", "Behaviour and ecology" ja "Threats". Tarkistettu 6.9.2026.',
-    kuva: 'elain-are',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-are-arabiantahri-r20260907-v2.jpg`,
+        kuvateksti: 'Kaksi arabiantahria liikkuu Hajarvuorten jyrkällä rinteellä '
+          + 'Arabiemiirikunnissa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: IUCN SSC '
+          + 'Caprinae Specialist Group; EAD — Arabian tahr',
+        lahdeUrl: 'https://www.iucn.org/our-union/commissions/group/iucn-ssc-caprinae-specialist-group',
+      },
+    ],
     lon: 56.25,
     lat: 25.4,
   },
@@ -1517,7 +1693,15 @@ export const ELAINTAKYT = {
     teksti: 'Hietakissa (Felis margarita) on pieni villikissa, joka elää hiekka- ja kiviaavikoilla kaukana vesipaikoista. Turkki on hiekanvärinen tai vaaleanharmaa, joten eläin katoaa maastoon. Ruumis on 39–52 senttiä ja häntä 23–31 senttiä. Korvat ovat vain 5–7 senttiä ja ne istuvat matalalla pään sivuilla — siitä on hyötyä, kun saalis liikkuu hiekan alla. Käpälänpohjia peittää pitkä karva, joka eristää anturat aavikon kuumuudelta ja kylmyydeltä. Päivät kissa lepää maanalaisessa pesässä ja metsästää öisin, jolloin se kulkee keskimäärin 5,4 kilometriä pieniä jyrsijöitä ja lintuja etsien; se tappaa ja syö myös myrkkykäärmeitä. Keväällä naaras synnyttää kaksi tai kolme poikasta. Laji kuvailtiin tieteelle 1858 Algerian Saharasta, ja se kuuluu Kuwaitin noin kahdenkymmenenkahdeksan nisäkäslajin joukkoon.',
     lahde: 'en-Wikipedia "Sand cat", johdanto, ja en-Wikipedia "Wildlife of Kuwait", osio '
       + '"Fauna". Tarkistettu 6.9.2026.',
-    kuva: 'elain-kwt',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-kwt-hietakissa-r20260907-v1.jpg`,
+        kuvateksti: 'Hietakissa on valppaana Kuwaitin aavikkohiekalla.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: '
+          + 'Smithsonian National Zoo — sand cat; IUCN SSC Cat Specialist Group',
+        lahdeUrl: 'https://nationalzoo.si.edu/animals/sand-cat',
+      },
+    ],
     lon: 46.7,
     lat: 29.2,
   },
@@ -1525,9 +1709,10 @@ export const ELAINTAKYT = {
    * MAAILMAN ERÄ M9, LÄHI-ITÄ 2 (6.9.2026). Omistaja 6.9.2026: *"Jatka
    * kartta nostojen tekoa koko maailmaan."* Neljä uutta eläintäkyä
    * (IRN, JOR, IRQ, EGY); Saudi-Arabialla oli jo arabianoryksi.
-   * Kuvattomia: `kuva`-kentässä on kuvaputken ämpäritunnus ilman
-   * kansiota, ja kun kuva valmistuu, se ilmestyy kortille ilman
-   * koodimuutosta. Jokainen piste on maan rajojen sisällä, maalla ja
+   * Kuvat tulivat 7.9.2026 (posti/kuvatoimitus-valmiit-29-20260907.json)
+   * ja ovat `kuvat`-listassa valmiina osoitteina
+   * (ELAINTAKY_KUVAJUURI_0709). Jokainen piste on maan rajojen sisällä,
+   * maalla ja
    * vähintään 35 lautayksikön päässä jokaisesta kaupunkimerkistä
    * (tests/elaintakyt.test.mjs); etäisyys on kirjattu pisteen viereen.
    * Egyptin fennekki olisi toistanut Algerian eläintäyn ja Jordanian
@@ -1540,7 +1725,15 @@ export const ELAINTAKYT = {
     teksti: 'Persianonageri on Iranissa elävä aasianvillaasin alalaji, ja se on luokiteltu äärimmäisen uhanalaiseksi: villinä niitä on enintään noin kuusisataa. Eläin on 2–2,5 metriä pitkä ja 200–260 kiloa painava, ja sen turkki on hiekanpunainen, selässä ruskea juova ja sen molemmin puolin ohuet valkoiset raidat, jotka sulautuvat takaruumiin valkoiseen läiskään. Persiaksi laji tunnetaan nimellä gur, joka tarkoittaa seepraa, ja sana onageri tulee kreikan villiaasia tarkoittavasta sanasta onagros. Aasianvillaasi oli aikoinaan yleinen Lähi-idästä Kiinaan, mutta 1800-luvulta lähtien kanta on romahtanut muutamaan tuhanteen. Persianonageri viihtyy vuoristoaroilla, puoliaavikoilla ja aavikkotasangoilla, ja sen suurin kanta elää Khar Turanin kansallispuistossa. Suurimmat uhat ovat salametsästys lihan ja nahan takia, kilpailu karjan kanssa sekä kuivuus.',
     lahde: 'en-Wikipedia "Persian onager", johdanto sekä osiot "Description", "Taxonomy and '
       + 'history", "Habitat and distribution" ja "Threats". Tarkistettu 6.9.2026.',
-    kuva: 'elain-irn',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-irn-persianonageri-r20260907-v1.jpg`,
+        kuvateksti: 'Persianonagerit leikkivät Khar Turanin aroylängöllä Iranissa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: IUCN SSC '
+          + 'Equid Specialist Group; Smithsonian National Zoo — Persian onager',
+        lahdeUrl: 'https://www.iucn.org/our-union/commissions/group/iucn-ssc-equid-specialist-group',
+      },
+    ],
     // Piste on Khar Turanin aroylängöllä, 140,8 lautayksikköä
     // Teheranista (vähimmäisetäisyys 35).
     lon: 55.6,
@@ -1552,7 +1745,15 @@ export const ELAINTAKYT = {
     teksti: 'Nubiantorvikauris on aavikoilla elävä vuohilaji, jota tavataan Pohjois- ja Koillis-Afrikan sekä Lähi-idän vuoristoseuduilla. Sitä pidettiin pitkään alppikauriin alalajina, mutta nykyään se luetaan omaksi lajikseen; Frédéric Cuvier kuvasi sen tieteelle 1825 nimellä "Ylä-Egyptin villivuohi". Se on torvikauriista pienin, säkäkorkeus 65–75 senttimetriä, ja koiraat ovat selvästi naaraita suurempia: koiras painaa 52–75 ja naaras 25–33 kiloa. Villikanta on arviolta 4 500 aikuista yksilöä, ja laji on luokiteltu vaarantuneeksi. Jordaniassa se oli lähellä hävitä kokonaan, mutta maa on palauttanut kannan tarhakasvatuksella ja istutuksilla: yksilöitä on 480–600, ja vahvimmat kannat elävät Danan, Wadi Mujibin ja Wadi Rumin suojelualueilla. Suurin uhka on metsästys. Kauris on ollut Lähi-idän taiteen aihe tuhansia vuosia — kalliopiirroksissa sitä ajavat koirat ja jousimiehet.',
     lahde: 'en-Wikipedia "Nubian ibex", johdanto sekä osiot "Classification", "Description", '
       + '"Distribution", "Conservation and population status by country" ja "Cultural significance". Tarkistettu 6.9.2026.',
-    kuva: 'elain-jor',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-jor-nubiantorvikauris-r20260907-v2.jpg`,
+        kuvateksti: 'Nubiantorvikauris vartioi laumaansa Mujibin rotkon yllä Jordaniassa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: IUCN SSC '
+          + 'Caprinae Specialist Group; RSCN — Mujib Biosphere Reserve',
+        lahdeUrl: 'https://www.iucn.org/our-union/commissions/group/iucn-ssc-caprinae-specialist-group',
+      },
+    ],
     // Piste on Mujibin ylängöllä Kuolleenmeren itäpuolella, 40,5
     // lautayksikköä Petrasta (vähimmäisetäisyys 35).
     lon: 35.75,
@@ -1564,7 +1765,17 @@ export const ELAINTAKYT = {
     teksti: 'Basranruokokerttunen on kerttusiin kuuluva pikkulintu, joka pesii lähes yksinomaan Tigriin ja Eufratin jokijärjestelmässä: Lounais-Iranissa, Itä- ja Etelä-Irakissa sekä Kuwaitissa, ja viime aikoina se on levittäytynyt myös Israelin kosteikoille. Se pesii laajoissa papyrus- ja ruovikoissa ja viihtyy matalan makean tai murtoveden äärellä tiheässä ruovikossa. Lajin erottaa helposti sekoittuvasta rastaskerttusesta pienemmästä koosta, valkoisemmasta alapuolesta ja kapeammasta, pidemmästä ja terävämmästä nokasta; ääni on karhea chaar, syvempi kuin rytikerttusen. Lintu on muuttaja ja talvehtii Itä-Afrikassa, Euroopassa se on hyvin harvinainen harhailija. Kun Mesopotamian suot kuivattiin 1980- ja 1990-luvuilla ja lajin oma elinympäristö tuhoutui lähes kokonaan, siitä tuli erittäin uhanalainen.',
     lahde: 'en-Wikipedia "Basra reed warbler", johdanto ja seuraavat kappaleet. Tarkistettu '
       + '6.9.2026.',
-    kuva: 'elain-irq',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-irq-basranruokokerttunen-r20260907-v1.jpg`,
+        kuvateksti: 'Basranruokokerttunen kuljettaa pesäainesta Mesopotamian soiden '
+          + 'ruovikossa Irakissa.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: BirdLife '
+          + 'Data Zone — Basra reed warbler (Acrocephalus griseldis); eBird — '
+          + 'Basra Reed Warbler',
+        lahdeUrl: 'https://datazone.birdlife.org/species/factsheet/basra-reed-warbler-acrocephalus-griseldis',
+      },
+    ],
     // Piste on Mesopotamian soilla Eufratin ja Tigriin välissä, 71,6
     // lautayksikköä Kuwaitista (vähimmäisetäisyys 35).
     lon: 47.0,
@@ -1576,7 +1787,17 @@ export const ELAINTAKYT = {
     teksti: 'Egyptinmangusti on mangustilaji, jota elää Afrikan ruohostoilla ja pensaikoissa sekä Välimeren ympärillä Pohjois-Afrikassa, Lähi-idässä ja Iberian niemimaalla. Karkea turkki on harmaasta punaruskeaan ja pilkullinen ruskeasta ja keltaisesta, kuono on terävä ja korvat pienet; solakka ruumis on 48–60 senttimetriä ja mustakärkinen häntä 33–54, paino 1,7–4 kiloa. Hampaita on 35–40, ja lihaa leikkaavat petohampaat ovat pitkälle kehittyneet. Laji ei elä aavikolla vaan soilla ja kosteikoilla purojen, jokien ja järvien lähellä sekä rannikoilla. Se hyökkää myrkkykäärmeiden kimppuun ja kestää muun muassa aavikkokobran ja sarvikyyn myrkkyä. Muinaisessa Egyptissä eläin tunnettiin hyvin: Saqqarasta Anubiksen katakombeista on kaivettu neljä muumioitua egyptinmangustia, Beni Hasanin hautamaalauksessa mangusti kulkee talutushihnassa, ja jumalatar Mafdet, joka suojeli ihmisiä käärmeen ja skorpionin myrkyltä, yhdistettiin siihen.',
     lahde: 'en-Wikipedia "Egyptian mongoose", johdanto sekä osiot "Characteristics", '
       + '"Distribution and habitat", "Behaviour and ecology" ja "In culture". Tarkistettu 6.9.2026.',
-    kuva: 'elain-egy',
+    kuvat: [
+      {
+        url: `${ELAINTAKY_KUVAJUURI_0709}elain-egy-egyptinmangusti-r20260907-v2.jpg`,
+        kuvateksti: 'Egyptinmangustiemo johdattaa poikasiaan Niilin suiston kosteikon '
+          + 'reunalla.',
+        lahde: 'Tekoälyllä tuotettu havainnekuva. Laji- ja ympäristöviitteet: Animal '
+          + 'Diversity Web — Herpestes ichneumon; Mammal Diversity Database — '
+          + 'taxon 1005960',
+        lahdeUrl: 'https://animaldiversity.org/accounts/Herpestes_ichneumon/',
+      },
+    ],
     // Piste on Niilin suistossa, 44,1 lautayksikköä Kairosta
     // (vähimmäisetäisyys 35).
     lon: 31.3,
