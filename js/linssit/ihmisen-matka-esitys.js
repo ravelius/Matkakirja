@@ -158,6 +158,8 @@ export const KAMERAN_KATTO_MS = 9000;
 export const KAMERAN_OSUUS = 0.85;
 /** Kuvan häivytys (css .aikajana-kertomuskuva). */
 export const KUVAN_POISTUMA_MS = 420;
+/** Loppunäkymän varmistava liuku, jos viimeinen ajo jäi kesken (ks. paata). */
+export const LOPUN_ASETUS_MS = 1200;
 
 /**
  * Nimetyn alueen kameralaatikko laudan yksiköissä.
@@ -456,10 +458,17 @@ export function luoEsitys({ ajo }) {
     /*
      * KAMERAN KESTO LASKETAAN VARAKESTOSTA eikä äänitteestä: ajo on
      * lähdettävä samalla hetkellä kuin luenta, ja äänitteen metatiedot
-     * saapuvat vasta hetkeä myöhemmin. Jos jakso osoittautuu lyhyemmäksi
-     * kuin arvio, ajo jää kesken ja seuraava lähtee siitä, mihin kamera
-     * ehti (js/pallolauta/kamera.js aloittaa aina nykyisestä näkymästä)
-     * — liike on silti jatkuvaa, eikä kamera nykäise.
+     * saapuvat vasta hetkeä myöhemmin.
+     *
+     * AJO VOI JÄÄDÄ KESKEN, JA SE ON SALLITTUA. Varakesto on tekstin
+     * mitta (14 merkkiä/s) ja äänite usein lyhyempi: lopun jaksolla
+     * arvio oli 10,4 s ja ajo 8,9 s, mutta äänitteen mukaan jakso
+     * kesti 5,6 s. Keskellä kaarta se ei haittaa — seuraava ajo lähtee
+     * siitä, mihin kamera ehti (js/pallolauta/kamera.js aloittaa aina
+     * nykyisestä näkymästä), ja liike pysyy jatkuvana. VIIMEISELLÄ
+     * jaksolla haittasi: loppunäkymä jäi puolitiehen (mitattu
+     * savukkeella 7.9.2026: 2 698 lautayksikköä odotetun 3 546
+     * sijaan), ja siksi `paata` asemoi lopun erikseen.
      */
     const kesto = Math.max(
       KAMERAN_POHJA_MS,
@@ -549,6 +558,17 @@ export function luoEsitys({ ajo }) {
     if (tila.paattynyt) return;
     tila.paattynyt = true;
     seis();
+    /*
+     * LOPPUNÄKYMÄ ON VARMISTETTU, EI TOIVOTTU. Viimeisen jakson
+     * kamera-ajo on voinut jäädä kesken (jakso lyheni äänitteen
+     * mukaan, kehysväli venyi, ele keskeytti), ja silloin esitys
+     * päättyisi puolittaiseen zoomiin. Sama rajaus ajetaan siksi
+     * uudestaan lyhyellä liu'ulla: jos kamera on jo perillä, laudan
+     * oma ajo huomaa sen eikä liikuta mitään (js/pallolauta/kamera.js
+     * "ajo, joka ei liikuta mitään, on turha").
+     */
+    const viimeinen = kertomus[tila.i];
+    if (viimeinen?.alue) ajaAlueeseen(viimeinen.alue, reduced ? 0 : LOPUN_ASETUS_MS);
     suljeKuva();
     tekstirivi.classList.remove('esilla');
     // Esinerivi ja ohjaimet takaisin pelaajalle ennen koukkua: kartta
@@ -628,7 +648,14 @@ export function luoEsitys({ ajo }) {
       paattynyt: tila.paattynyt,
       pimea: Boolean(ajo.juuri?.classList.contains('esitys-pimea')),
       kuvia: tila.kuviaNaytetty,
-      kuvaEsilla: Boolean(tila.kuva?.isConnected),
+      /*
+       * ESILLÄ, EI VAIN LIITETTY. Kehys syntyy nollakoossa
+       * (scale 0,6) ja saa `esilla`-luokan vasta seuraavassa
+       * kehyksessä; ilman tätä eroa mittaaja voi osua siihen yhteen
+       * kehykseen, jossa kuva on jo DOMissa mutta vielä kutistettuna
+       * (savuke mittasi 110 px odotetun 183 px:n sijaan).
+       */
+      kuvaEsilla: Boolean(tila.kuva?.isConnected && tila.kuva.classList.contains('esilla')),
       kuvatKaytossa: kuvat,
       puluja: tila.pulujaSanottu,
       koukku: tila.koukkuKutsuttu,

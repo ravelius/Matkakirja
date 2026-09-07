@@ -1541,6 +1541,31 @@ siirry pysäkkiin.
 CSS-liu'ut poissa (peite, teksti, kuva, esinerivi) ja kello asetetaan
 `heti`. Esitys kulkee silti jakso jaksolta samassa tahdissa.
 
+### 12.11 Mitä yhdistäminen tutkimusvaiheeseen paljasti (7.9.2026)
+
+Kun esitys ja tutkimusvaihe olivat samassa puussa, `savuke-ihmisen-esitys`
+antoi 9/13. Kaikki neljä kaatumista tutkittiin erikseen; **yksikään ei
+ollut kuorman aiheuttama eikä tutkimusvaiheen vika**, ja kaksi oli
+oikeaa vikaa esityksessä:
+
+| Kaatunut väite | Syy | Korjaus |
+| --- | --- | --- |
+| TAUKO (`nappi: "▾"`) | MITTAUSVIRHE. Ohjainrivin ensimmäinen `.aikajana-nappi` on nyt LAPUN KAHVA ("Matka päättyy ▾"), ei Tauko-nappi. | Savuke lukee tekstin `ajo.taukoNappi`-kentästä. |
+| KUVA (110 px, 13,2 %) | MITTAUSVIRHE. Kehys syntyy `scale(0,6)`-kokoisena ja saa `esilla`-luokan vasta seuraavassa kehyksessä; 110 = 0,6 × 183. | `tila().kuvaEsilla` tarkoittaa nyt "poksahdus alkanut", ja savuke odottaa mitan asettumista. |
+| KELLO (`hyppyMin: 14500`) | MITTAUSVIRHE. Kelaus LÄHTEE 14 500:sta, joten se on kelvollinen näyte; väite vaati aidosti suurempaa. | Alaraja on `>= 14500`; varsinainen väite on `max >= 45000`. |
+| LOPPU (`leveys: 2698`) | **OIKEA VIKA.** Viimeisen jakson kamera-ajo mitoitetaan VARAKESTOSTA (tekstin pituus, 10,4 s → ajo 8,9 s), mutta äänitteen mukaan jakso kesti 5,6 s: kamera oli yhä matkalla koko palloon, kun esitys päättyi. | `paata` ajaa saman rajauksen uudestaan 1,2 s liu'ulla ENNEN tutkimusvaiheen koukkua. |
+
+Neljäs oli piilossa niin kauan kuin savuke katsoi vain omaa ajoaan: se
+näkyy vasta, kun esityksen loppunäkymä on tutkimusvaiheen LÄHTÖNÄKYMÄ.
+Tutkimusvaihe ei liikuta kameraa käynnistyessään (se tekee sen vasta
+vanan napista, `kaannaVanaan`), joten se peri puolittaisen zoomin
+sellaisenaan.
+
+Sivutuote: `.aikajana.esitys-pimea .aikajana-ohjaimet { z-index: 2 }`
+poistui. Se nosti sulkunapin mustan peitteen päälle silloin, kun ✕ oli
+ohjainrivin osa; nyt ✕ on juuren suora lapsi omalla pinollaan
+(`.aikajana-sulje`, z-index 8) eikä tarvitse apua.
+
 ### 12.10 Portit
 
 - `node --test tests/*.test.mjs` — mukana

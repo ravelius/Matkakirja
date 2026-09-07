@@ -37,7 +37,7 @@ import { IHMISEN_MATKA } from '../js/linssit/ihmisen-matka-data.js';
 import { LINSSI } from '../js/linssit/ihmisen-matka.js';
 import {
   ESITYKSEN_ALUEET, ESITYKSEN_LAHIKUVA, IHMISEN_MATKA_KUVAT_ESITYKSESSA, KUVAN_OSUUS,
-  alueenLaatikko, jaksonTahti, kelauksenPehmennys,
+  LOPUN_ASETUS_MS, alueenLaatikko, jaksonTahti, kelauksenPehmennys,
 } from '../js/linssit/ihmisen-matka-esitys.js';
 import { valitseKertomus, kokoaKertomusManifesti } from '../tools/generoi-linssiluennat.mjs';
 
@@ -288,6 +288,41 @@ test('esityksen pinnat ovat olemassa: pimeä, teksti, kuva ja koukku', () => {
   assert.ok(ESITYKSEN_LAHIKUVA > 560 && ESITYKSEN_LAHIKUVA < 4000);
   // Tutkimusvaiheen koukku on ohjaajan viimeinen teko.
   assert.match(OHJAAJA, /ajo\.ui\?\.aloitaTutkimusvaihe\?\.\(\);/);
+});
+
+test('loppunäkymä asemoidaan erikseen, ei jätetä kesken jääneen ajon varaan', () => {
+  /*
+   * Viimeisen jakson kamera-ajo mitoitetaan VARAKESTOSTA (tekstin
+   * pituudesta), ja äänite on usein lyhyempi: ajo oli 8,9 s ja jakso
+   * 5,6 s, jolloin esitys päättyi puolittaiseen zoomiin (savuke mittasi
+   * 2 698 lautayksikköä odotetun 3 546 sijaan). `paata` ajaa saman
+   * rajauksen uudestaan lyhyellä liu'ulla ENNEN tutkimusvaiheen
+   * koukkua, joten loppunäkymä on aina koko pallo.
+   */
+  assert.ok(LOPUN_ASETUS_MS > 0 && LOPUN_ASETUS_MS <= 2000, `${LOPUN_ASETUS_MS} ms`);
+  const paata = OHJAAJA.match(/function paata\(\) \{[\s\S]*?\n  \}/)[0];
+  assert.match(paata, /const viimeinen = kertomus\[tila\.i\];/);
+  assert.match(paata, /if \(viimeinen\?\.alue\) ajaAlueeseen\(viimeinen\.alue, reduced \? 0 : LOPUN_ASETUS_MS\);/);
+  // Asemointi on ENNEN koukkua: tutkimusvaihe saa ottaa kameran omiin
+  // käsiinsä ja sen ajo syrjäyttää tämän (js/pallolauta/kamera.js).
+  assert.ok(paata.indexOf('ajaAlueeseen') < paata.indexOf('aloitaTutkimusvaihe'),
+    'loppunäkymä on asemoitava ennen tutkimusvaiheen koukkua');
+  // Kaanonin viimeisellä jaksolla on alue, jota tämä käyttää.
+  assert.equal(IHMISEN_MATKA_KERTOMUS.at(-1).alue, 'maailma');
+});
+
+test('kuva on "esillä" vasta kun poksahdus on alkanut', () => {
+  /*
+   * Kehys syntyy scale(0,6)-kokoisena ja saa `esilla`-luokan vasta
+   * seuraavassa kehyksessä. Jos tila() kertoisi pelkästä DOMissa
+   * olosta, mittaaja voisi osua siihen yhteen kehykseen, jossa kuva on
+   * vielä kutistettuna — savuke mittasi 110 px odotetun 183 px:n
+   * sijaan (110 = 0,6 × 183).
+   */
+  assert.match(OHJAAJA,
+    /kuvaEsilla: Boolean\(tila\.kuva\?\.isConnected && tila\.kuva\.classList\.contains\('esilla'\)\)/);
+  assert.match(CSS, /\.aikajana-kertomuskuva \{[\s\S]{0,600}scale\(0\.6\)/);
+  assert.match(CSS, /\.aikajana-kertomuskuva\.esilla \{[^}]*scale\(1\)/);
 });
 
 test('esitys ei aja pysäkkikelloa eikä anna virtojen ohjata kameraa', () => {

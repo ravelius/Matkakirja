@@ -1855,9 +1855,12 @@
 }
 
 /*
- * PIMEÄSSÄ VAIN SULKUNAPPI. Kello, otsikot, esinerivi ja Tauko/Jatka
- * väistyvät mustan alle; sulkunappi nousee peitteen päälle omalla
- * pinollaan, jotta linssistä pääsee ulos myös pimeässä.
+ * PIMEÄSSÄ VAIN SULKUNAPPI. Kello, otsikot, esinerivi, lapun kahva ja
+ * Tauko/Jatka väistyvät mustan alle. Sulkunappi jää: se on juuren suora
+ * lapsi omalla pinollaan (css .aikajana-sulje, z-index 8), joten se on
+ * peitteen päällä ilman että tässä tarvitsee nostaa mitään — ohjainrivi
+ * sai aiemmin oman z-indexin juuri sitä varten, ja se poistui, kun ✕
+ * siirtyi kartan oikeaan yläkulmaan (7.9.2026).
  */
 .aikajana.esitys-pimea .aikajana-otsikot,
 .aikajana.esitys-pimea .aikajana-kello,
@@ -1868,10 +1871,6 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 500ms ease;
-}
-.aikajana.esitys-pimea .aikajana-ohjaimet {
-  position: relative;
-  z-index: 2;
 }
 /*
  * PALKKI KUTISTUU SULKUNAPIN YMPÄRILLE. Ilman tätä pimeään jäisi

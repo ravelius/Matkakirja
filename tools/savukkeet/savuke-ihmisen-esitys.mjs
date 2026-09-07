@@ -275,7 +275,14 @@ const tauolla = await s.evaluate(() => {
   const { ui } = window.matkakirja;
   ui.aikajana.esitys.tauko();
   const t = ui.aikajana.esitys.tila();
-  return { ...t, nappi: document.querySelector('.aikajana-nappi')?.textContent ?? null };
+  /*
+   * NAPIN TEKSTI LUETAAN AJOLTA, EI ENSIMMÄISELTÄ .aikajana-napilta.
+   * Ohjainrivin ensimmäinen nappi on 7.9.2026 alkaen LAPUN KAHVA
+   * ("Matka päättyy ▾", js/aikajana.js lappuKahva), joten valitsin
+   * palautti "▾" eikä "Jatka" — savuke luuli Tauon rikkoutuneen,
+   * vaikka rikki oli mittaus.
+   */
+  return { ...t, nappi: ui.aikajana?.taukoNappi?.textContent ?? null };
 });
 await s.screenshot({ path: kuva('1-pimea') });
 const jatkui = await s.evaluate(async () => {
@@ -403,13 +410,27 @@ const jatkaEsitys = () => s.evaluate(() => window.matkakirja.ui.aikajana?.esitys
 
 /* 5. KUVA: löytökuva kohteen vieressä. */
 const kuvahetki = await odotaJaPysayta('kuvaEsilla', true);
-const kuvamitat = await s.evaluate(() => {
-  const el = document.querySelector('.aikajana-kertomuskuva');
-  const laatikko = el?.getBoundingClientRect();
-  return {
-    leveys: laatikko ? Math.round(laatikko.width) : 0,
-    osuus: laatikko ? Number((laatikko.width / window.innerWidth).toFixed(3)) : 0,
+/*
+ * MITTA VASTA KUN POKSAHDUS ON PERILLÄ. Kehys tulee esiin
+ * scale(0,6) → scale(1) -siirtymällä (0,5 s), joten liikkeen aikana
+ * mitattu leveys on mitä tahansa väliltä 110–183 px. Odotetaan, että
+ * kaksi peräkkäistä mittausta ovat samat.
+ */
+const kuvamitat = await s.evaluate(async () => {
+  const lue = () => {
+    const el = document.querySelector('.aikajana-kertomuskuva');
+    const laatikko = el?.getBoundingClientRect();
+    return laatikko ? Math.round(laatikko.width) : 0;
   };
+  let edellinen = -1;
+  for (let i = 0; i < 40; i += 1) {
+    const nyt = lue();
+    if (nyt > 0 && nyt === edellinen) break;
+    edellinen = nyt;
+    await new Promise((r) => setTimeout(r, 150));
+  }
+  const leveys = lue();
+  return { leveys, osuus: Number((leveys / window.innerWidth).toFixed(3)) };
 });
 if (kuvahetki.osui) await s.screenshot({ path: kuva('3-kuva-kohteen-vieressa') });
 await jatkaEsitys();
@@ -491,7 +512,9 @@ try {
    * voi luvata osuvan otokseen — eikä tarvitse. Väitteet ovat:
    *   1. Chilen jakso PYSYY lukemassaan 14 500 (ei kelaa itse).
    *   2. Hyppyjaksossa lukema on käynyt kelauksen PERILLÄ (≥ 45 000)
-   *      eikä koskaan palannut Chilen lukemaan.
+   *      eikä koskaan alittanut kelauksen LÄHTÖÄ (14 500). Lähtöluku
+   *      itse on kelvollinen näyte: jakson ensimmäisellä kehyksellä
+   *      kello on vielä siinä, mistä kelaus alkaa.
    *   3. Euroopan jakso jatkaa kelauksen perältä (≥ 40 000).
    *   4. Kaari alkaa 300 000:sta ja päättyy nykyaikaan.
    *
@@ -504,7 +527,7 @@ try {
   vaadi('KELLO: lukema etenee 300 000:sta nollaan ja kelaa aikahypyssä taaksepäin',
     alkuLukema > 200000 && (loppu.tila?.vuosia ?? 1e9) < 2000
       && chile.at(-1) === 14500
-      && hypyt.length > 0 && Math.min(...hypyt) > 14500 && Math.max(...hypyt) >= 45000
+      && hypyt.length > 0 && Math.min(...hypyt) >= 14500 && Math.max(...hypyt) >= 45000
       && eurooppa.length > 0 && Math.max(...eurooppa) >= 40000
       && hyppyhetki.osui,
     JSON.stringify({
