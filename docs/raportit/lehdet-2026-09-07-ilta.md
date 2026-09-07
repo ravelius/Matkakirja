@@ -107,7 +107,6 @@ Recognition). Portit: fail 0, karttapisteet ok. Poiminnassa lisäyskonfliktit
 
 ### Checkpointit (poimittu haaraan; loppuraportit ja kuvat täydennetään, jos agentit ehtivät)
 - Timbuktu + Lalibela: wip-tekstit 97c8052 (tekstit jatkuvat, kuvat tekemättä)
-- Townsville + Iquitos: wip a9d62d0 + tekstit 9bd523e (kuvahaku alkaa)
 - Whitehorse + Yellowknife: wip 7c31c9f + tekstit 8ac5ecc (kuvahaku alkaa)
 - Iqaluit + Santa Fe: ei vielä committia (agentti aloitti myöhään)
 Kaikki kolme poimittu haaraan lisäyskonfliktit liittäen; portit fail 0,
@@ -179,6 +178,22 @@ rautatiekisko La Mejoradaan 1.4.1870 (es-Wikipedia "Parque de La Mejorada");
 Yucatán", History). Portit: fail 0, karttapisteet ok. HUOM: agentti muutti myös
 northamerica-saapumiset.js:ää (saapumisteksti) — päätoimittaja tarkistaa, että
 muutos on 1873-kehyksen mukainen eikä matkakirjatekstiä.
+
+### Kaupunkilehdet Townsville + Iquitos — a9d62d0 + 9bd523e (tekstit), 511ffa9 (kuvat) — OSITTAIN KUVITETTU
+Tiedostot: faktapohja-/tarkistus-townsville.md ja -iquitos.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, oceania-artikkelit.js, southamerica-artikkelit.js,
+piirra-kaupunkikartta.mjs, assets/kartat/townsville-keskusta.png, iquitos-keskusta.png.
+Townsville: kansi (Burdekinin tulva 1864, James Morrill, 1873 viiden kultakentän
+satama ilman rautatietä, Japanin konsulaatti 1896, Eddie Mabo), teemasivu luonto
+"Kuiva tropiikki". Iquitos: kansi (kaupunki ilman tietä, jesuiitat ja nimi, 1873
+laivastosatama, rautatalo, kumi), teemasivu luonto "Joki, joka nousee ja laskee".
+Kuvia 17 (kansi-, avaus- ja ennen–nyt-kuvat; Iquitosin avauskaruselli 2 kuvaa);
+kaikki 18 nostoa ja 16 nähtävyysjuttua kuvattomia (Commons 429). Pistokokeet:
+(1) Townsvillen rata Charters Towersiin valmistui 12/1882 (en-Wikipedia
+"Townsville", Transport; "Charters Towers", History); (2) Cook nimesi Magnetical
+Islandin 1770 kompassihäiriön takia ("Magnetic Island", History); (3) Amazon
+Iquitosissa korkeimmillaan toukokuussa, alimmillaan lokakuussa, 9–12 m
+("Iquitos", Climate). Portit: fail 0, karttapisteet ok.
 
 ## Kuvaputken tilaukset (kuvattomat nostot ja miniatyyrit)
 
@@ -360,6 +375,26 @@ puisto ja kaari — valkoinen kaari kadun yli; San Cristóbalin kirkko —
 kivijulkisivu, simpukankuoren muotoinen kaari; Santa Isabelin ermita — matala
 keltainen kappeli, edessä puisto.
 
+**Townsville ja Iquitos:** kaikki 18 nostoa ja 16 juttua kuvattomia. Tärkeimmät:
+Iquitosin kolmas avauskuva — laaja yleiskuva keskustasta ilman kasvoja; Belén —
+paalutaloja ja asuinlauttoja korkean veden aikaan; Castle Hill — vaaleanpunainen
+graniittilaki ja Pyhimys-tikku-ukko kalliopinnalla.
+**Townsville, miniatyyrit (8):** Queens Gardens — trooppinen puutarha, hoop-mäntyjä
+ja mangopuita; Tobruk Memorial Baths — 50 m ulkoallas rannan vieressä; Vanha
+tullitalo — kolonnadillinen romaaninen kaksikerroksinen talo; St James
+-katedraali — punatiilinen katedraali kukkulalla, matala keskitorni; Tropiikin
+museo — matala moderni museo, edessä hylkyankkuri; Vanha postitalo —
+sementtirapattu renessanssitalo, kulmassa hoikka kellotorni; School of Arts —
+1890-luvun kuisti- ja teatterirakennus; Great Northern Hotel — kaksikerroksinen
+tiili- ja puuhotelli, isot parvekkeet.
+**Iquitos, miniatyyrit (8):** Casa Morey — kumiparonin talo, takorautaristikot;
+Kuvataidekoulu — matala koulu, amazonialainen muraali; Mercado Central —
+esivalmisteinen rautahalli, myyntipöytärivit; Iquitosin katedraali —
+uusgoottilainen kirkko ja 20 m kellotorni; Hotel Palace — art nouveau
+-kulmatorni, kaakeloitu julkisivu; Malecón Tarapacá — betonoitu rantakatu
+balustradeineen; Casa Strassberger — osittain raunioitunut kumikauden talo;
+Plaza 28 de Julio — väljä aukio, obeliski.
+
 ## Päätöstä vaativat asiat
 
 - **MAATESTIN_POIKKEUS laajeni VUT:iin** (tests/elaintakyt.test.mjs; sama kuin
@@ -410,6 +445,9 @@ keltainen kappeli, edessä puisto.
 - Monterrey/Mérida: Monterreyn ennen–nyt (1791 kartta vai ei paria); Méridan
   San Juanin kaari sivuaa kansinostoa 2 (eri näkökulma); Macroplazan sijaluku
   ja kastisodan uhriluku kirjoitettu auki ristiriitoineen.
+- Townsville/Iquitos: nostojen ja juttujen kuvitus (34 kohdetta) kokonaan
+  tekemättä — uusi Commons-haku rauhallisena hetkenä tai kuvaputki. Viereinen:
+  Oseanian ja Etelä-Amerikan introt eivät ole intron mittatestin piirissä.
 
 ## Keskeneräiset
 
