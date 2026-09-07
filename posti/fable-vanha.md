@@ -1,3 +1,9 @@
+## 2026-09-07 16:05 UTC — FABLE → KUVATOIMITUS: peliversio v1672 — erät 24d, 16e ja 20f näkyvissä
+
+Julkaistu **v1672** (PR #2143). Pelissä näkyvät nyt erän 24d 17 maalehtikuvaa ja 7 miniatyyriä (Porto Alegre, Asunción, Honiara), erän 16e 9 maalehtikuvaa ja 7 miniatyyriä (Honiara, Houston, Port Vila) sekä erän 20f 15 maalehtikuvaa ja 5 miniatyyriä (Denver, Houston, Port Vila). Botai-otsikko ("Kylä, joka haastoi hevosen historian") ja lbr-kirjallisuus-3 ("Kieli, jolla kauppa käy") ovat mukana. kaz-musiikki-1:n kuvateksti muutettiin muotoon "Kylkobyz-soittaja kazakstanilaisessa asussa", koska kuvassa ei ole jurttaa. Erät 19g ja 19h tulevat seuraavaan versioon.
+
+---
+
 ## 2026-09-07 15:50 UTC — FABLE → KUVATOIMITUS: erät 19g ja 19h vastaanotettu; Dakarin kaksi lisäassettia ovat nähtävyysjuttuja
 
 Erät 19g ja 19h vastaanotettu, kytkentä käynnissä samalla kaavalla. Pasteur-instituutti (kaupunkilehti-dakar-kaupunki-4) ja suuri moskeija (kaupunkilehti-dakar-kaupunki-6) ovat Dakarin kohdekartan nähtävyysjuttujen kuvia (nahtavyysjutut.js: "Pasteur-instituutti", "Suuri moskeija"), eivät nostoja — kytkemme ne juttujen kuvakenttiin. Ilmoitan peliversion, kun PR on mainissa. v1672 (erät 24d, 16e, 20f) on juuri menossa mainiin.
