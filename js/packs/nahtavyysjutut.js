@@ -46657,14 +46657,6 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Hemorag, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
-      kuvat: [
-        {
-          tiedosto: 'St-john-the-baptist-cathedral-newfoundland.jpg',
-          selite: 'Harmaakivinen uusgoottilainen kirkko syksyisten puiden '
-            + 'takana; torninhuippu puuttuu yhä.',
-          lahde: 'Anne Beaumont, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-      ],
       lahde: 'Wikipedia',
     },
     'Valparaíson yliopisto': {
@@ -57212,6 +57204,14 @@ export const NAHTAVYYSJUTUT = {
           + 'julkisivun taakse rakennettiin uusi, pienempi kirkko — '
           + 'joten portti ja seinät ovat yhä vuodelta 1906 ja '
           + 'kirkkosali sen takana puoli vuosisataa nuorempi.',
+      kuvat: [
+        {
+          tiedosto: 'St Boniface Cathedral facade front (3707979349).jpg',
+          selite: 'Vuoden 1906 julkisivu seisoo yksin: ruusuikkunan '
+            + 'aukosta näkyy taivas, ja uusi kirkko on sen takana.',
+          lahde: 'Beatnik Photos, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Union Station': {
@@ -57286,6 +57286,14 @@ export const NAHTAVYYSJUTUT = {
           + 'joten patsas matkusti ruumassa kaksi kertaa Välimeren ja '
           + 'viisi kertaa Atlantin yli ennen kuin se nostettiin '
           + 'paikalleen marraskuussa 1919.',
+      kuvat: [
+        {
+          tiedosto: 'Manitoba Legislature December 2023.jpg',
+          selite: 'Joulukuun hämärässä kupolin päällä erottuu kullattu '
+            + 'juoksija, ja etualalla palavat puiston pallolyhdyt.',
+          lahde: 'Reid Campbell, Wikimedia Commons (CC0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },
@@ -57544,6 +57552,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kultamitalin. Alttarilla on John Hoganin 1854 carraran '
           + 'marmorista veistämä Kuollut Kristus — kolmesta '
           + 'samanlaisesta veistoksesta ainoa Irlannin ulkopuolella.',
+      kuvat: [
+        {
+          tiedosto: 'St John\'s Basilica.jpg',
+          selite: 'Basilikan harmaa kalkkikivijulkisivu ja kaksi tornia, '
+            + 'joista toisessa on kello.',
+          lahde: 'Nilfanion, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Anglikaaninen katedraali': {
@@ -57579,6 +57595,14 @@ export const NAHTAVYYSJUTUT = {
           + 'todenneet 150 jalan tornin mahdolliseksi, mutta '
           + 'kustannusarvio oli kolme miljoonaa dollaria, eikä '
           + 'seurakunnalla ole aikeita rakentaa sitä.',
+      kuvat: [
+        {
+          tiedosto: 'St-john-the-baptist-cathedral-newfoundland.jpg',
+          selite: 'Harmaakivinen uusgoottilainen kirkko syksyisten puiden '
+            + 'takana; torninhuippu puuttuu yhä.',
+          lahde: 'Anne Beaumont, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Water Street': {

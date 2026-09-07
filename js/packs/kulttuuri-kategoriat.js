@@ -95650,6 +95650,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'on 236, ja tiheimmin asuttu on Osborne Village. '
                 + 'Pörssikortteli keskustan pohjoispäässä on '
                 + 'kansallinen historiallinen kohde.',
+              kuva: {
+                tiedosto: 'Winnipeg Skywalk and Manitoba Hydro Building.jpg',
+                selite: 'Lasitettu kävelysilta ylittää kadun keskustassa, '
+                  + 'ja sen takana kohoaa sähköyhtiön torni.',
+                lahde: 'Interlaker, Wikimedia Commons (CC0)',
+              },
             },
             {
               otsikko: 'Puistot ja näyttämöt',
@@ -96339,6 +96345,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hankkeen vastustuksen takia. Saari on puolitoista tuntia '
             + 'Keski-Kanadaa edellä ja puoli tuntia jäljessä '
             + 'Saint-Pierreä.',
+          tiedosto: 'Newfoundland time-zone sign.jpg',
+          selite: 'Tienvarsikyltti Labradorissa käskee siirtämään kelloa '
+            + 'puoli tuntia eteenpäin ja näyttää kartalla, mistä raja '
+            + 'kulkee.',
+          lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Newfoundland Time Zone',
         },
       ],
