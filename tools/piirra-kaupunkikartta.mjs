@@ -4860,6 +4860,73 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: -3.0780, etela: -3.1450, lansi: -60.0473, ita: -59.9802 },
   },
+  caracas: {
+    /*
+     * VANHA KAUPUNKI JA MUSEOKAUPUNKI SAMASSA RUUDUSSA (7.9.2026).
+     * Ruutu on 2,8 × 2,1 kilometriä eli Toronton ja Halifaxin
+     * kokoluokkaa. Caracasin laakso on paljon leveämpi kuin ruutu,
+     * mutta kartan kahdeksan kohdetta jakautuvat kahteen rypääseen —
+     * siirtomaa-ajan ruutukaavaan lännessä ja 1900-luvun museo- ja
+     * tornikaupunkiin idässä — ja rajaus on juuri niin leveä, että
+     * molemmat mahtuvat.
+     *
+     * ITÄREUNA -66,8955 ON QUINTA DE ANAUCON MUKAAN. Kauempana idässä
+     * ovat Plaza Venezuela ja Ciudad Universitaria, mutta jälkimmäinen
+     * on kaupunkilehden noston M3 aihe eikä kartan kohde, ja
+     * ensimmäisen mukaan ottaminen olisi levittänyt ruudun neljään
+     * kilometriin ilman yhtään uutta kohdetta.
+     *
+     * LÄNSIREUNA -66,9210 ON VEDETTY KAUPUNGINTEATTERIN OHI, ei
+     * tiukasti siihen. Syy on lehden mittakaavajana vasemmassa
+     * alakulmassa (ui.js): tiukemmalla rajauksella teatterin
+     * numeroympyrä istui 11 %:n kohdalle ja liian lähelle janaa,
+     * kuten Dunedinissa aikanaan Speight'sin panimo. Nyt teatteri on
+     * 14 %:n kohdalla.
+     *
+     * ETELÄREUNA 10,4955 ON VEDETTY GUAIREJOEN YLI. Joki kulkee
+     * laakson pohjalla poikittain ruudun alalaidassa, ja se on
+     * kartan ainoa iso vesipinta sekä ainoa asia, joka kertoo
+     * katsojalle laakson suunnan. Etelärannalle ei mennä, koska
+     * siellä ei ole yhtään tämän kartan kohdetta.
+     *
+     * Ei meri-lippua: Karibianmeri on viidentoista kilometrin päässä
+     * Ávilan takana, ja Guaire on OSM:ssä tavallinen vesiväylä.
+     */
+    rajat: { pohjoinen: 10.5145, etela: 10.4955, lansi: -66.9210, ita: -66.8955 },
+  },
+  bergen: {
+    /*
+     * VÅGENIN LAHTI JA SEN YMPÄRYS (7.9.2026). Ruutu on 1,8 × 1,6
+     * kilometriä eli pelin tiiviimpiä, Christchurchin ja Melbournen
+     * kokoluokkaa. Bergenin vanha keskusta on kirjaimellisesti
+     * lahden ympärillä: Nordnesin niemi lännessä, tori pohjukassa ja
+     * Fløyenin rinne idässä, ja kaikki kahdeksan kohdetta ovat
+     * enintään kilometrin päässä lahden pohjukasta.
+     *
+     * POHJOISREUNA 60,3990 KATKAISEE VÅGENIN TAHALLAAN. Bergenhusin
+     * linnoitus ja Håkonshallen ovat vasta 60,4006 kohdalla eli
+     * ruudun ulkopuolella, ja se on tarkoituksellista: ne ovat
+     * kaupunkilehden nostojen K2 ja H4 aihe. Bryggen jää ruudun
+     * sisään rakennuksina, koska sen ohi ei pääse, mutta se ei ole
+     * kartan kohde.
+     *
+     * LÄNSIREUNA 5,3050 ON FREDRIKSBERGIN MUKAAN ja itäreuna 5,3375
+     * Pyhän Yrjänän kirkon mukaan. Nordnesin niemi jatkuu länteen
+     * vielä puoli kilometriä akvaarioon asti, mutta siellä ei ole
+     * yhtään kartan kohdetta, ja niemen kärki olisi vienyt ruudusta
+     * neljänneksen pelkkään veteen.
+     *
+     * ETELÄREUNA 60,3850 ON YLIOPISTOMUSEON MUKAAN. Sen eteläpuolella
+     * ovat Nygårdsparken ja Møhlenpris, jotka ovat lehden noston K3
+     * aihe.
+     *
+     * meri: true. Vågen ja Byfjorden ovat OSM:ssä rantaviivaa
+     * (natural=coastline) eivätkä vesimonikulmioita, joten ilman
+     * lippua kuvan koko keskiosa olisi paperin värinen.
+     */
+    rajat: { pohjoinen: 60.3990, etela: 60.3850, lansi: 5.3050, ita: 5.3375 },
+    meri: true,
+  },
 };
 
 /*

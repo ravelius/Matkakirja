@@ -13077,6 +13077,127 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Anglikaanisen kappelin paikka', lat: -12.9897305, lon: -38.5220999 },
     ],
   },
+  /*
+   * CARACAS (7.9.2026). Rajaus on 2,8 × 2,1 kilometriä eli Toronton
+   * kokoluokkaa — perustelu ja itäreunan valinta ovat
+   * tools/piirra-kaupunkikartta.mjs:n caracas-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Guaicaipuro, Ávila meren ja laakson välissä, vuoden 1812 järistys
+   * ja Bolívarin arvonimi; historiasivu kertoo Plaza Bolívarista,
+   * Capitoliosta, Panteón Nacionalista ja Guzmán Blancosta;
+   * luontosivu Ávilan kansallispuistosta, Angelin putouksesta,
+   * Catatumbon salamoinnista ja öljystä; musiikkisivu El Sistemasta,
+   * Simón Bolívar -orkesterista, Aula Magnasta ja joropasta.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Plaza
+   * Bolívar, Capitolio, Panteón Nacional ja katedraali mahtuisivat
+   * kaikki ruutuun — kolme ensimmäistä ovat historiasivun nostojen
+   * aihe ja katedraali noston K3 aihe. Samasta syystä kartalla ei ole
+   * Ciudad Universitariaa eikä Bolívarin syntymätaloa: edellinen on
+   * noston M3, jälkimmäinen noston K4 aihe.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN MUISTA SYISTÄ: Palacio de las
+   * Academias on lehden noston H4 leipätekstissä omana asianaan
+   * (yliopiston muutto 1876 ja uusgoottilainen julkisivu), ja
+   * Iglesia de San Francisco on sen naapurina vain 30 metrin päässä
+   * eli reilusti 200 metrin säännön alle.
+   *
+   * SISÄLTÖLINJAUS ON SAMA KUIN LEHDESSÄ: ei nykypolitiikkaa.
+   * Miraflores, kansalliskokous ja keskuspankki jäivät siksi pois,
+   * vaikka niillä on omat artikkelinsa ja koordinaattinsa. Keltainen
+   * talo on mukana rakennuksena, jonka oma tarina päättyy 1912.
+   */
+  caracas: {
+    polku: 'assets/kartat/caracas-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 10.5145, etela: 10.4955, lansi: -66.9210, ita: -66.8955 },
+    esittely: 'Kartan alue kattaa vanhan kaupungin ruutukaavan ja sen '
+      + 'itäpuolelle 1900-luvulla kasvaneen museo- ja tornikaupungin. '
+      + 'Vasemmalla ovat siirtomaa-ajan korttelit kirkkoineen, '
+      + 'oikealla puistot ja Parque Centralin kaksoistornit, ja '
+      + 'alareunassa kulkee Guairejoki laakson pohjalla. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta ja
+       * geosearchista 7.9.2026. Pienin väli on 202 metriä
+       * (kaupunginteatteri – Santa Teresan basilika), toiseksi
+       * pienin 213 metriä (ensimmäisten kirjainten talo –
+       * keltainen talo).
+       */
+      { nimi: 'Quinta de Anauco', lat: 10.51194444, lon: -66.89972222 },
+      { nimi: 'Las Mercedesin kirkko', lat: 10.5105, lon: -66.91415 },
+      { nimi: 'Ensimmäisten kirjainten talo', lat: 10.50805556, lon: -66.91388889 },
+      { nimi: 'Keltainen talo', lat: 10.50656944, lon: -66.91511944 },
+      { nimi: 'Kaupunginteatteri', lat: 10.50207, lon: -66.9174 },
+      { nimi: 'Santa Teresan basilika', lat: 10.50175, lon: -66.91558 },
+      { nimi: 'Kansallinen taidegalleria', lat: 10.50055556, lon: -66.9025 },
+      { nimi: 'Parque Centralin tornit', lat: 10.49830556, lon: -66.90130556 },
+    ],
+  },
+  /*
+   * BERGEN (7.9.2026). Rajaus on 1,8 × 1,6 kilometriä eli pelin
+   * tiiviimpiä, Christchurchin ja Melbournen kokoluokkaa —
+   * perustelu on tools/piirra-kaupunkikartta.mjs:n bergen-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Bryggenin varastot, Håkonshallen, kaupungin laajeneminen 1876 ja
+   * Bryggenin riimulöytö; historiasivu kertoo hansakonttorista,
+   * sen etuoikeuksista, suurpaloista ja Bergenhusin linnoituksesta
+   * ja tuomiokirkosta; musiikkisivu Ole Bullista, Det Norske
+   * Theaterista, Griegistä ja Peer Gyntistä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME KOHDETTA JÄTETTIIN POIS, VAIKKA NE MAHTUISIVAT RUUTUUN.
+   * Mariakirken ja Johanneksen kirkko ovat lehden omien kuvien aihe
+   * (kansikuva ja avauskuva kumpikin faktateksteineen), ja
+   * Fløibanen on matkaoppaan jakson aihe. Bryggens Museum ja
+   * hansamuseo jäivät pois, koska ne kertovat samaa asiaa kuin
+   * nostot K1, K4 ja H1.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: rautatieasema
+   * on 81 metriä kaupunginkirjastosta ja Nonneseterin luostarin
+   * rauniot 44 metriä asemasta. Christi Krybben koulu — Pohjoismaiden
+   * vanhin yhä toimiva alakoulurakennus — jätettiin pois toisesta
+   * syystä: en-Wikipedian artikkelissa on vain yksi kappale, eikä
+   * siitä saa kolmen kappaleen juttua ilman keksimistä.
+   *
+   * VUODEN 1814 VAALIKIRKOT: Nykirken, Korskirken ja Pyhän Yrjänän
+   * kirkko olivat kaikki kolme vaalikirkkoja, mutta yksikään juttu
+   * ei kerro siitä. Vaalikirkko on lehden noston H4 aihe
+   * (tuomiokirkko), eikä kohdekartta toista sitä kolmeen kertaan.
+   */
+  bergen: {
+    polku: 'assets/kartat/bergen-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 60.3990, etela: 60.3850, lansi: 5.3050, ita: 5.3375 },
+    esittely: 'Kartta näyttää Vågenin lahden ja sen ympärille '
+      + 'kiertyvän vanhan Bergenin. Vasemmalla työntyy mereen '
+      + 'Nordnesin niemi, lahden pohjukassa on tori, oikealla '
+      + 'nousevat Fløyenin rinteen kadut ja alareunassa levittäytyy '
+      + 'Lille Lungegårdsvannetin lampi puistoineen. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta ja
+       * geosearchista 7.9.2026. Pienin väli on 216 metriä (Pyhän
+       * Yrjänän kirkko – kaupunginkirjasto), toiseksi pienin 247
+       * metriä (Nykirken – Fredriksbergin linnake).
+       */
+      { nimi: 'Nykirken', lat: 60.39708899, lon: 5.31336781 },
+      { nimi: 'Fredriksbergin linnake', lat: 60.3964, lon: 5.3091 },
+      { nimi: 'Munkelivin luostari', lat: 60.395, lon: 5.315 },
+      { nimi: 'Korskirken', lat: 60.39488615, lon: 5.32774794 },
+      { nimi: 'Pyhän Yrjänän kirkko', lat: 60.39175567, lon: 5.33271164 },
+      { nimi: 'Permanenten', lat: 60.39062694, lon: 5.32414694 },
+      { nimi: 'Kaupunginkirjasto', lat: 60.38986389, lon: 5.33184444 },
+      { nimi: 'Yliopistomuseo', lat: 60.38762222, lon: 5.32158056 },
+    ],
+  },
 };
 
 /*

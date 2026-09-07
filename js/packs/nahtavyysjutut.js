@@ -51732,4 +51732,608 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * CARACASIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.caracas, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Quinta de Anauco", "Our Lady of Mercy Church,
+   * Caracas", "Casa de Las Primeras Letras", "Yellow House
+   * (Venezuela)", "Teatro Municipal of Caracas", "Basilica of
+   * St. Teresa", "National Art Gallery (Caracas)" ja "Parque Central
+   * Complex").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Guaicaipuro, Ávila, vuoden 1812 järistys, Bolívarin
+   * arvonimi, Plaza Bolívar, Capitolio, Panteón Nacional, Guzmán
+   * Blanco, Ávilan kansallispuisto, Angelin putous, Catatumbo, öljy,
+   * El Sistema, Simón Bolívar -orkesteri, Aula Magna ja joropa.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * EI NYKYPOLITIIKKAA — sama linjaus kuin lehdessä. Guzmán Blanco
+   * esiintyy kolmessa jutussa rakennuttajana, koska hän rakennutti
+   * puolet vanhasta keskustasta, mutta hänen oma tarinansa on lehden
+   * noston H4 aihe eikä sitä kerrota tässä uudelleen. Kansallisen
+   * taidegallerian vuoden 2009 uuden talon vihkijää ei mainita, ja
+   * Keltaisen talon juttu päättyy vuoteen 1912.
+   *
+   * YKSI LÄHDEVARAUS ON KIRJATTAVA. Santa Teresan basilikan
+   * perustamiskertomus (Guzmán Blanco, arkkitehti Juan Hurtado
+   * Manrique, työt 1877–1881, vihkiminen 28.10.1881 ja nimi
+   * presidentin vaimon mukaan) on en-Wikipedian artikkelissa
+   * merkitty {{Citation needed}} -merkinnällä. Se EI ole sama asia
+   * kuin {{failed verification}}, jonka takia Bergenin lehdestä
+   * jätettiin aikanaan Liszt-kohtaus pois: kukaan ei ole tarkistanut
+   * ja kumonnut väitettä, sitä ei vain ole lähteistetty. Juttu
+   * nojaa siksi painopisteeltään artikkelin lähteistettyihin osiin
+   * (rakennuksen kaksoiskirkkomuoto, Nasarealaisen kunnioitus ja
+   * vuoden 1952 onnettomuus), ja perustamisvuodet kerrotaan
+   * lyhyesti.
+   *
+   * TALON 1500-LUVUN VUOSILUKUA EI KERROTA. Artikkeli "Casa de Las
+   * Primeras Letras" sanoo talon valmistuneen 1538, "kun Diego de
+   * Losada mittasi Caracasin" — mutta Losada perusti kaupungin
+   * vasta 1567, ja lehden oma kaanon (kulttuuri-kategoriat.js,
+   * caracas) nojaa jälkimmäiseen. Ristiriitainen luku on jätetty
+   * pois, ja juttu alkaa siitä, mikä on riidatonta: kaksi taloa
+   * yhdistettiin yhdeksi, kun naapurien lapset menivät naimisiin.
+   *
+   * KUVAT: ks. kunkin jutun kuvat-kenttä. Yksikään tiedosto ei ole
+   * sama kuin kaupunkilehden caracas-lohkossa
+   * (kulttuuri-kategoriat.js) eikä southamerica-valokuvat.js:ssä.
+   */
+  caracas: {
+    'Quinta de Anauco': {
+      aika: '1797',
+      teksti: 'Juan Javier Mijares de Solórzano y Pacheco osti '
+          + 'joulukuussa 1796 maapalan sadallakahdellakymmenelläviidellä '
+          + 'pesolla juuri tätä tarkoitusta varten, ja talo valmistui '
+          + 'seuraavana vuonna. Sitä kutsuttiin aluksi yksinkertaisesti '
+          + 'Solórzanon taloksi. Se kesti vuoden 1812 maanjäristyksen ja '
+          + 'pysyi rakentajan pojan omistuksessa vuoteen 1821, jolloin '
+          + 'poika pakeni äitinsä kanssa Curaçaolle tasavaltalaisarmeijan '
+          + 'voitettua Carabobon taistelun.'
+        + '\n\n'
+        + 'Talo siirtyi valtiolle. Se vuokrattiin 1825 Pedro '
+          + 'Zarazalle, joka kuoli seitsemän päivää myöhemmin, ja sen '
+          + 'jälkeen Francisco Rodríguez del Toro e Ibarralle, '
+          + 'neljännelle Toron markiisille ja itsenäisyyssodan '
+          + 'divisioonankenraalille. Simón Bolívar yöpyi markiisin luona '
+          + 'heinäkuussa 1827 ja neuvoi tätä ostamaan talon. Kauppa '
+          + 'tehtiin saman vuoden joulukuussa 3 250 pesolla, ja vasta '
+          + 'silloin talo sai nimen Quinta de Anauco. Markiisi maalautti '
+          + 'seiniin seinämaalaukset ja asui siellä kuolemaansa 1851 '
+          + 'asti; testamentissa alakerta ja puoli puutarhaa menivät '
+          + 'veljelle ja siskolle, yläkerta ja toinen puoli '
+          + 'sisarentyttärille.'
+        + '\n\n'
+        + 'Omistaja vaihtui useasti, kunnes Domingo Eraso osti talon '
+          + '1860 viidellätuhannella pesolla. Eraso-suku piti sen '
+          + 'vuoteen 1958, jolloin se lahjoitti talon valtiolle yhdellä '
+          + 'ehdolla: siinä pitää toimia siirtomaataiteen museo. Museo '
+          + 'oli perustettu 1942, mutta sen oma talo oli tuhoutunut '
+          + '1953. Kunnostettu Quinta avautui museona 12. lokakuuta '
+          + '1961, ja tammikuussa 1978 se julistettiin kansalliseksi '
+          + 'historialliseksi muistomerkiksi.',
+      lahde: 'Wikipedia',
+    },
+    'Las Mercedesin kirkko': {
+      aika: '1614',
+      teksti: 'Seurakunnan alku on vuodessa 1614, jolloin joukko '
+          + 'siirtomaa-ajan Caracasin vapaita mulatteja keräsi rahat ja '
+          + 'rakensi paikalle pienen puisen kappelin. Maanjäristys '
+          + 'kaatoi sen 1641, ja se rakennettiin uudelleen; vuoden 1766 '
+          + 'järistys kaatoi seuraavan, ja sen tilalle noussut '
+          + 'rakennus vaurioitui pahoin vuoden 1812 järistyksessä. '
+          + 'Kirkon takana oli pieni seurakunnan hautausmaa, johon '
+          + 'hautaaminen lopetettiin 1825.'
+        + '\n\n'
+        + 'Nykyinen kirkko on vuoden 1857 perusteellisen '
+          + 'jälleenrakennuksen tulos. Siinä säilytettiin vanha '
+          + 'kolmilaivainen pohjakaava ja kolme kadulle avautuvaa '
+          + 'sisäänkäyntiä, mutta asu muuttui korostetun '
+          + 'uusklassiseksi: sileät seinäpinnat, pilasterit ja '
+          + 'keskiportaalia kehystävä palkisto. Vuoden 1900 '
+          + 'maanjäristyksestä tuli vain pieniä vaurioita.'
+        + '\n\n'
+        + 'Kirkon itäpuolelle Guzmán Blancon hallinto kaavoitti '
+          + 'Plaza Falcónin, nykyisen Plaza de Las Mercedesin, ja '
+          + 'pystytti sinne patsaat insinööri Agustín Aveledolle ja '
+          + 'marsalkka Juan Crisóstomo Falcónille. Kirkko julistettiin '
+          + 'kansalliseksi historialliseksi muistomerkiksi 2. elokuuta '
+          + '1960. Nimi viittaa Armon Neitsyeeseen, jonka kunnioitusta '
+          + 'mercedaariveljestö levitti.',
+      lahde: 'Wikipedia',
+    },
+    'Ensimmäisten kirjainten talo': {
+      aika: '1790-luku',
+      teksti: 'Talo on kahden vierekkäisen asuintalon, numeroiden 29 ja '
+          + '31, yhteensulautuma: asukkaiden lapset menivät keskenään '
+          + 'naimisiin, ja seinä avattiin. Simón Rodríguez sai '
+          + 'opettajanpätevyytensä 1791 ja alkoi pitää talossa koulua. '
+          + 'Tilat olivat ahtaat ja varat vähissä — vuonna 1793 '
+          + 'Rodríguezin luokassa oli 114 oppilasta, ja poissaolot '
+          + 'olivat vaikea ongelma. Yksi noista oppilaista oli '
+          + 'Simón Bolívar.'
+        + '\n\n'
+        + 'Koulu oli ensimmäinen monista, joita Rodríguez yritti '
+          + 'pyörittää omien periaatteidensa mukaan: lapsen pitää saada '
+          + 'kysellä, koulun pitää opettaa myös työtaitoja, opetuksen '
+          + 'pitää olla kaikille yhteistä ja kasvattaa yhteisöllisiä '
+          + 'eikä itsekkäitä arvoja. Samaa hän yritti myöhemmin '
+          + 'Bogotássa ja Chuquisacassa. Venezuelasta hän pakeni 1797 '
+          + 'Gualin ja Españan epäonnistuneen salaliiton jälkeen.'
+        + '\n\n'
+        + 'Rodríguezin jälkeen talossa toimi 1880-luvulla Santa Marían '
+          + 'koulu, jota johti José Martí. Sen jälkeen tuli '
+          + 'pari omistajaa lisää, ja talo rapistui. Caracasin '
+          + 'Libertadorin kunta kunnosti sen 2010 itsenäisyyden '
+          + 'kaksisatavuotisjuhlien yhteydessä, ja museo avattiin 2012. '
+          + 'Siellä on hologrammiesityksiä Rodríguezista ja '
+          + 'Bolívarista, aikakauden pukuja ja esineitä sekä pala '
+          + 'alkuperäistä seinää ja lattiaa; yksi vanha lasimaalaus on '
+          + 'sekin säilynyt.',
+      lahde: 'Wikipedia',
+    },
+    'Keltainen talo': {
+      aika: '1874',
+      teksti: 'Kuvernööri Juan de Pimentelin noin vuonna 1578 '
+          + 'piirtämässä Caracasin kartassa tontilla on vaatimaton '
+          + 'savi- ja pystypuurakenteinen talo. Vuonna 1689 '
+          + 'kaupunginvaltuusto osti osan tontista Antonio de Tovarin '
+          + 'perillisiltä uutta vankilaa varten, ja vankila avattiin '
+          + '1696. Eteläosa siirtyi valtuustolle 1704 maanvaihdossa, ja '
+          + 'sille valmistui joulukuussa 1750 valtuuston oma talo.'
+        + '\n\n'
+        + 'Juuri sen parvekkeelta kaniikki José Cortés de Madariaga '
+          + 'antoi 19. huhtikuuta 1810 caracasilaisille merkin, jolla '
+          + 'kenraalikapteeni Vicente Emparán julistettiin syrjäytetyksi '
+          + '— Venezuelan itsenäistymisen ensimmäinen askel. Vuoden '
+          + '1812 maanjäristys jätti talon raunioiksi vuosikymmeniksi, '
+          + 'ja korjaus kesti neljä vuotta. Vuonna 1841 kongressi '
+          + 'hyväksyi molempien rakennusten myynnin kunnalta valtiolle '
+          + 'hallituksen käyttöön, ja José Antonio Páezin '
+          + 'presidenttikaudella talo vihittiin 1842.'
+        + '\n\n'
+        + 'Nykyisen asunsa talo sai 1874, kun se muutettiin '
+          + 'hallituspalatsiksi arkkitehti Juan Hurtado Manriquen '
+          + 'johdolla. Toukokuun 4. päivän lakiin 1877 kirjattiin, että '
+          + 'talo on tasavallan presidentin asunto, ja ensimmäisenä '
+          + 'sinne muutti Francisco Linares Alcántara. Talo maalattiin '
+          + 'keltaiseksi liberaalipuolueen värillä, ja virallisissa '
+          + 'papereissa sitä alettiin kutsua Keltaiseksi taloksi. '
+          + 'Vuoden 1900 San Narcison maanjäristyksessä presidentti '
+          + 'Cipriano Castro hyppäsi parvekkeelta kadulle sateenvarjo '
+          + 'kädessä ja mursi nilkkansa; siitä alkoi ajatus '
+          + 'järistyskestävästä asunnosta, ja presidentti muutti 1904 '
+          + 'Mirafloresiin. Vuodesta 1912 talossa on ollut ulkoministeriö.',
+      lahde: 'Wikipedia',
+    },
+    Kaupunginteatteri: {
+      aika: '1881',
+      teksti: 'Teatteri avattiin 4. tammikuuta 1881 Errico Petrellan '
+          + 'oopperalla Jone, ja avajaiset piti presidentti Guzmán '
+          + 'Blanco. Talo nimettiin aluksi presidentin mukaan. Se on '
+          + 'yhä yksi Etelä-Amerikan vanhimmista oopperataloista.'
+        + '\n\n'
+        + 'Suunnittelija oli ranskalainen arkkitehti Esteban Ricard, '
+          + 'joka lähti Venezuelasta ennen kuin työ oli valmis; sen vei '
+          + 'loppuun venezuelalainen insinööri Jesús Muñoz Tébar. '
+          + 'Rakennuksen kantava rautarakenne tuotiin '
+          + 'Isosta-Britanniasta, koska maassa ei siihen aikaan '
+          + 'valmistettu rakennusrautaa lainkaan.'
+        + '\n\n'
+        + 'Vuonna 1896 presidentti Joaquín Crespo pystytti teatterin '
+          + 'eteen kenraali José Tadeo Monagasin patsaan eleenä '
+          + 'poliittisen yksimielisyyden puolesta. Taloa muutettiin '
+          + '1949, kun Caracasin keskustaa rakennettiin uusiksi. Jone '
+          + 'palasi ohjelmistoon teatterin satavuotisjuhlassa 1981, '
+          + 'nimiroolissa argentiinalainen sopraano Adelaida Negri. '
+          + 'Kaupungin pääoopperatalo se ei enää ole — sen tehtävän otti '
+          + '1980-luvulla Teresa Carreñon kulttuurikeskus — mutta '
+          + 'oopperaa esitetään yhä, ja talossa on kotinaan Caracasin '
+          + 'kaupungin sinfoniaorkesteri.',
+      lahde: 'Wikipedia',
+    },
+    'Santa Teresan basilika': {
+      aika: '1881',
+      teksti: 'Basilika on kaksi uusklassista kirkkoa, jotka on '
+          + 'liitetty yhteen kupolilla. Kupolin alla on pääalttari, ja '
+          + 'rakennuksella on kaksi julkisivua eri suuntiin: läntinen '
+          + 'on omistettu pyhälle Annalle ja itäinen pyhälle Teresalle. '
+          + 'Osoite on La Palman ja Santa Teresan kulma vanhassa '
+          + 'keskustassa.'
+        + '\n\n'
+        + 'Talo nousi San Felipe Nerin kirkon paikalle. Presidentti '
+          + 'Guzmán Blanco määräsi vanhan kirkon purettavaksi ja tilasi '
+          + '1870 arkkitehti Juan Hurtado Manriquelta samalle tontille '
+          + 'monumentaalisen uuden. Työt tehtiin 1877–1881, ja kirkko '
+          + 'vihittiin 28. lokakuuta 1881 Santa Teresan kirkkona '
+          + 'presidentin vaimon Ana Teresan mukaan.'
+        + '\n\n'
+        + 'Basilika on Nasarealaisen kuvan tärkein kunnioituspaikka, ja '
+          + 'pääsiäisenä väkeä tulee paljon. Juuri siitä syntyi '
+          + 'kaupungin pahin kirkko-onnettomuus: 9. huhtikuuta 1952 '
+          + 'joku huusi täydessä kirkossa "tulipalo", ja viisikymmentä '
+          + 'ihmistä kuoli tungoksessa jalkoihin. Neljäkymmentä '
+          + 'ihmistä pidätettiin tapauksen johdosta. Rakennus '
+          + 'julistettiin kansalliseksi historialliseksi kohteeksi '
+          + '9. joulukuuta 1959.',
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen taidegalleria': {
+      aika: '1976',
+      teksti: 'Galleria avattiin toukokuussa 1976, ja vuoteen 2009 asti '
+          + 'se asui uusklassisessa talossa Los Caobosin puiston '
+          + 'laidalla. Taloa ei ollut rakennettu sille: Carlos Raúl '
+          + 'Villanueva suunnitteli sen 1935 kuvataidemuseota varten. '
+          + 'Julkisivussa on Francisco Narváezin reliefit — Narváez oli '
+          + 'Venezuelan ensimmäinen modernistinen kuvanveistäjä.'
+        + '\n\n'
+        + 'Vuonna 2009 galleria muutti Carlos Gómez de Llerenan '
+          + 'suunnittelemaan uuteen taloon, joka on Venezuelan suurin '
+          + 'museorakennus, ja kuvataidemuseo sai vanhan talonsa '
+          + 'takaisin. Kokoelmassa on yli neljätuhatta teosta '
+          + 'yhdessätoista salissa, jotka on järjestetty renkaaksi.'
+        + '\n\n'
+        + 'Kokoelma kattaa viisi vuosisataa: esikolumbiaanisia '
+          + 'esineitä, siirtomaa-ajan maalauksia, veistoksia ja '
+          + 'nykytaidetta kineettiseen taiteeseen asti. Maalauksia on '
+          + 'yli neljältäkymmeneltä venezuelalaiselta taiteilijalta, '
+          + 'muiden muassa Armando Reverónilta, Carlos Cruz-Diezilta ja '
+          + 'Jesús Sotolta, ja mukana on myös Camille Pissarro, joka '
+          + 'vietti nuorena aikaa Venezuelassa. Kokoelman tunnetuin '
+          + 'teos on Arturo Michelenan vuoden 1896 maalaus Miranda en '
+          + 'La Carraca, jossa Francisco de Miranda istuu vankina '
+          + 'Cádizissa.',
+      lahde: 'Wikipedia',
+    },
+    'Parque Centralin tornit': {
+      aika: '1979',
+      teksti: 'Vuonna 1969 insinööri Enrique Delfino Arriens esitti '
+          + 'suunnitelman kokonaisesta kaupunginosasta Lecunan ja '
+          + 'Bolívarin puistokatujen väliin El Conden alueelle. Työt '
+          + 'alkoivat 1970: kahdeksan asuintornia, joista jokaisessa on '
+          + '317 asuntoa ja jotka nousevat 127 metriin ja '
+          + 'neljäänkymmeneenneljään kerrokseen. Ne valmistuivat 1972.'
+        + '\n\n'
+        + 'Kaksi toimistotornia rakennettiin 1970–1983. Läntinen '
+          + 'avattiin 1979 ja itäinen 1983, kummankin katto on 225 '
+          + 'metrissä ja kerroksia on 64. Suunnittelijat olivat Henrique '
+          + 'Siso Maury ja Daniel Fernández-Shaw. Vuodesta 1979 vuoteen '
+          + '2003 ne olivat Latinalaisen Amerikan korkeimmat '
+          + 'pilvenpiirtäjät, kunnes Mexico Cityn Torre Mayor ohitti ne.'
+        + '\n\n'
+        + 'Vähän ennen puoltayötä 17. lokakuuta 2004 itäisessä tornissa '
+          + 'syttyi tulipalo, joka levisi 34. kerroksesta 50. '
+          + 'kerrokseen. Automaattinen sammutusjärjestelmä ja '
+          + 'nousujohdot eivät toimineet, sisällä sammuttaminen '
+          + 'jouduttiin keskeyttämään turvallisuussyistä, kaksi '
+          + 'teräksistä välipohjaa romahti osittain, ja palo sammui '
+          + 'itsestään vasta 19. lokakuuta aamuyöllä. Korjauksen '
+          + 'yhteydessä torniin nostettiin kolmenkymmenen metrin '
+          + 'antenni, joka esittää Simón Bolívarin miekkaa. Sen kanssa '
+          + 'itäinen torni yltää 255 metriin ja on nyt läntistä korkeampi.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * BERGENIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.bergen, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Nykirken", "Fredriksberg Fortress", "Munkeliv
+   * Abbey", "Holy Cross Church, Bergen", "St George's Church,
+   * Bergen", "Gerhard Armauer Hansen", "Permanenten", "Bergen Public
+   * Library" ja "University Museum of Bergen").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Bryggenin varastot, Håkonshallen, kaupungin laajeneminen
+   * 1876, Bryggenin riimut, hansakonttori ja sen etuoikeudet,
+   * suurpalot, Bergenhus ja tuomiokirkko, Ole Bull, Det Norske
+   * Theater, Grieg ja Peer Gynt. Yksikään kartan kohteista ei ole
+   * niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. (1) Vuoden
+   * 1814 vaalikirkot: Nykirken, Korskirken ja Pyhän Yrjänän kirkko
+   * olivat kaikki kolme vaalikirkkoja, mutta se on lehden noston H4
+   * aihe (tuomiokirkko), eikä sitä toisteta kolmessa jutussa.
+   * (2) Toinen maailmansota: lehden poisjätöistä on kirjattu, ettei
+   * miehitystä eikä vuoden 1944 räjähdystä käsitellä, ja sama
+   * linjaus pätee tässä — Nykirkenin juttu kertoo tornin
+   * valmistumisesta 1950-luvulla mainitsematta sotaa. (3) Buekorps:
+   * Fredriksbergin linnaketta vuokraa nykyään Nordnæs Bataillon,
+   * mutta buekorps on matkaoppaan oma jakso, joten sitä ei kerrota
+   * uudelleen.
+   *
+   * PALOT MAINITAAN VAIN KOHTEEN OMANA ARPENA. Lehden nosto H3 on
+   * Bergenin suurpaloista. Korskirkenin ja Nykirkenin jutuissa
+   * palovuodet ovat luettelona siksi, että ne selittävät miksi
+   * rakennukset ovat sen näköisiä kuin ovat — kaupungin
+   * palohistoriaa ei kerrota niissä uudelleen.
+   *
+   * KUVAT: ks. kunkin jutun kuvat-kenttä. Yksikään tiedosto ei ole
+   * sama kuin kaupunkilehden bergen-lohkossa
+   * (kulttuuri-kategoriat.js) eikä europe-valokuvat.js:ssä.
+   */
+  bergen: {
+    Nykirken: {
+      aika: '1621',
+      teksti: 'Tämä osa Bergeniä kuului alun perin tuomiokirkon '
+          + 'seurakuntaan, mutta vuoden 1608 kuninkaallinen asetus '
+          + 'perusti Strandenille oman seurakunnan ja antoi asukkaille '
+          + 'luvan rakentaa kirkon omalla kustannuksellaan. Vuoteen '
+          + '1618 mennessä rahat oli kerätty ja tontti hankittu. '
+          + 'Kirkko nousi arkkipiispan asuintalon raunioille — '
+          + '1300-luvun kivitalon, joka oli palanut — ja piispa Nils '
+          + 'Paaske vihki sen 18. syyskuuta 1621 Pyhän Kolminaisuuden '
+          + 'kirkoksi. Koska Bergenissä oli jo useita satoja vuosia '
+          + 'vanhoja kirkkoja, tätä alettiin kutsua uudeksi kirkoksi, '
+          + 'ja lempinimi jäi.'
+        + '\n\n'
+        + 'Nimi osoittautui osuvaksi. Ensimmäinen kirkko seisoi kaksi '
+          + 'vuotta ja paloi alkuvuodesta 1623; se rakennettiin heti '
+          + 'samanlaisena uudelleen. Vuonna 1643 kirkkosalia '
+          + 'laajennettiin, 1660 tuli taas palo, ja korjaus valmistui '
+          + '1670 uuden poikkisiiven kanssa. Heinäkuun 23. ja 24. '
+          + 'päivänä 1756 suuri palo vei kaiken muun paitsi '
+          + 'kivimuurit.'
+        + '\n\n'
+        + 'Uusi kirkko rakennettiin 1758–1763 Johan Joachim '
+          + 'Reichbornin piirustusten mukaan niin, että vuoden 1670 '
+          + 'siipi jäi osaksi uutta taloa. Peruskivi laskettiin 7. '
+          + 'heinäkuuta 1758, muurit olivat pystyssä 3. lokakuuta '
+          + '1759, mansardikatto valmistui 1760, ja kirkko vihittiin '
+          + '23. marraskuuta 1763. Hinta oli 53 322 riikintaaleria. '
+          + 'Vuoden 1800 palon jälkeen suurin osa muureista kelpasi '
+          + 'yhä, ja kirkko vihittiin uudelleen 25. marraskuuta 1801; '
+          + 'nykyinen torninhuippu nousi vasta 1950-luvun '
+          + 'kunnostuksessa, ja vasta silloin toteutui Reichbornin '
+          + 'oma 1760-luvun piirustus. Kirkossa on 750 istumapaikkaa, '
+          + 'enimmäkseen korkeaselkäisissä penkkiaitioissa, ja '
+          + 'kastetilaisuudessa katosta lasketaan taljalla alas suuri '
+          + 'puinen enkeli, joka kantaa kädessään kastemaljaa. Talo '
+          + 'on nykyään erikoistunut lastenkirkoksi, ja sisustusta '
+          + 'ovat koristelleet paikalliset lapset.',
+      lahde: 'Wikipedia',
+    },
+    'Fredriksbergin linnake': {
+      aika: '1667',
+      teksti: 'Linnake seisoo Nordnesin niemen korkeimmalla kohdalla, '
+          + 'ja sen länsipuolella putoaa jyrkkä kallioseinä suoraan '
+          + 'mereen. Työn aloitti hollantilainen insinööri, '
+          + 'kenraalimajuri Henrik Ruse. Suunnitelmassa oli maan '
+          + 'puolella kolme bastionia ja yksi puolibastioni ja '
+          + 'kallion puolella pelkkä muuri. Linnake rakennettiin '
+          + '1666–1667 Vågenin meritaistelun jälkeen ja pitkälti sen '
+          + 'takia, ja se nimettiin kuningas Fredrik III:n mukaan.'
+        + '\n\n'
+        + 'Rakentaminen pysähtyi ja varustukset rapistuivat. Vasta '
+          + 'kun Christian V:n poika Christian Gyldenløve tarkasti '
+          + 'Bergenin 1695, työt käynnistyivät uudelleen, ja 1706 '
+          + 'linnake oli valmis — yksinkertaisempana kuin '
+          + 'alkuperäisessä suunnitelmassa. Katten-bastioni oli '
+          + 'noussut jo 1666 sinne, missä nykyään on Nordnesin '
+          + 'puisto, ja lavettitalot rakennettiin sotilasvarastoiksi '
+          + '1810 ja 1843.'
+        + '\n\n'
+        + 'Lavettitalojen edusta oli teloituspaikka. Viimeisenä '
+          + 'siellä teloitettiin ruotsalainen rahanväärentäjä Jacob '
+          + 'Wallin vuonna 1876. Linnakkeella oli myös toinen, '
+          + 'rauhallisempi virka: se toimi palovartioasemana vuodesta '
+          + '1667 ja varsinaisena paloasemana 1905–1926. Vanhojen '
+          + 'varustusten päälle ja ympärille rakennettiin 1888–1898 '
+          + 'Nordnesin puisto.',
+      lahde: 'Wikipedia',
+    },
+    'Munkelivin luostari': {
+      aika: 'n. 1110',
+      teksti: 'Kuningas Øystein I perusti benediktiiniluostarin noin '
+          + 'vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka '
+          + 'valittiin tarkoituksella: Nordnesin korkein kohta hallitsi '
+          + 'juuri perustettua kaupunkia, ja luostarin oli määrä '
+          + 'vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, '
+          + 'rikkaimpia ja parhaiten dokumentoituja luostareita. '
+          + 'Maan päällä siitä ei näy nykyään mitään.'
+        + '\n\n'
+        + 'Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun '
+          + 'puolivälin musta surma käänsi suunnan. Vuonna 1393 '
+          + 'rakennukset kärsivät pahoin, kun luostarin kimppuun '
+          + 'kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla '
+          + 'sen otti paavin luvalla haltuunsa birgittalaisjärjestö, '
+          + 'ja siitä tuli kaksoisluostari, jossa asui sekä munkkeja '
+          + 'että nunnia. Vuonna 1455 luostari vaurioitui tulipalossa, '
+          + 'kun hansakauppiaat hyökkäsivät sinne takaa-ajaessaan '
+          + 'kuninkaanlinnan päällikköä Olav Nilssonia, joka oli '
+          + 'paennut luostariin turvaan; hyökkäyksessä kuolivat sekä '
+          + 'Nilsson että Bergenin piispa Leif Thor Olafsson. '
+          + '1460-luvulla asukkaat joutuivat siirtymään Oslon '
+          + 'Hovedøyan luostariin, sisterssiläiset rakensivat talot '
+          + 'uudelleen, ja birgittalaiset palasivat 1480.'
+        + '\n\n'
+        + 'Uskonpuhdistuksessa luostari lakkautettiin. Bergenin '
+          + 'piispa otti sen asunnokseen ja käytti luostarikirkkoa '
+          + 'tuomiokirkkonaan, mutta koko rakennusryhmä paloi 1536. '
+          + 'Kirkko oli ollut noin 32 metriä pitkä ja 11 leveä, ja '
+          + '1200-luvulla siihen oli lisätty länsitorni. Kaivauksissa '
+          + '1857 ja 1860 löytyi hienosti veistettyjä rakennusosia, '
+          + 'muun muassa Nicolay Nicolaysenin löytämä kuningas '
+          + 'Øystein I:n marmoripää, jota pidetään vanhimpana '
+          + 'tunnettuna norjalaisen muotokuvana. Muureja oli tuolloin '
+          + 'vielä pystyssä noin 2,4 metrin korkeuteen, mutta ne '
+          + 'purettiin kaivausten jälkeen.',
+      lahde: 'Wikipedia',
+    },
+    Korskirken: {
+      aika: 'n. 1150',
+      teksti: 'Ensimmäinen kirkko rakennettiin paikalle noin vuonna '
+          + '1150, ja se mainitaan ensi kerran Sverren saagassa 1185. '
+          + 'Silloin kirkko seisoi Vågenin rannalla ja merkitsi '
+          + 'todennäköisesti Bergenin asutuksen eteläistä rajaa. Nimi '
+          + 'ei viittaa ristin muotoiseen pohjakaavaan vaan Pyhään '
+          + 'Ristiin: Korskirken oli yksi harvoista Norjan kirkoista, '
+          + 'joilla oli hallussaan pala Kristuksen ristiä. '
+          + 'Uskonpuhdistuksessa Tanskan kuningas vei sen, kuten muutkin '
+          + 'pyhäinjäännökset ympäri maata.'
+        + '\n\n'
+        + 'Kirkko vaurioitui paloissa 1198, 1248, 1413, 1582, 1623, '
+          + '1640 ja 1702. Alun perin siinä oli kaksi tornia, mutta '
+          + 'toinen tuhoutui vuoden 1582 palossa eikä sitä rakennettu '
+          + 'uudelleen. Pohjakaava oli suora suorakaide, ja ristin '
+          + 'muotonsa kirkko sai vasta kun poikkilaivat lisättiin '
+          + 'noin 1615–1623. Istumapaikkoja on noin kuusisataa.'
+        + '\n\n'
+        + 'Korskirken oli oman seurakuntansa kirkko vuodesta 1320 '
+          + 'vuoteen 2002, jolloin useat Bergenin keskustan '
+          + 'seurakunnat yhdistettiin. Sen jälkeen se ei ole ollut '
+          + 'tavallinen seurakuntakirkko: se luovutettiin Kirkens '
+          + 'Bymisjonille, ja nykyään se on "avoin kirkko", jossa on '
+          + 'joka päivä väkeä vastassa. Sisään voi tulla hiljaisuuden '
+          + 'takia, sytyttämään kynttilän, juttelemaan, '
+          + 'jumalanpalvelukseen tai kuuntelemaan musiikkia, ja työstä '
+          + 'iso osa on sosiaalityötä ympäröivässä korttelistossa.',
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Yrjänän kirkko': {
+      aika: '1706',
+      teksti: 'Bergenin spitaalisairaala mainitaan asiakirjoissa jo '
+          + '1411, ja sitä pitivät silloin Nonneseterin luostarin '
+          + 'nunnat. Sairaalan kappeli palveli aluksi vain potilaita, '
+          + 'mutta siitä tuli lopulta oma seurakuntansa Årstadin '
+          + 'puolelle, ja sen papit hoitivat myös läheisen '
+          + 'kaupunginvankilan, vaivaistalon ja leskikodin. Kirkko '
+          + 'paloi sairaalan mukana 1640 ja uudelleen vuoden 1702 '
+          + 'suurpalossa; nykyinen vihreä puinen ristikirkko on '
+          + 'rakennettu sen jälkeen myöhäisbarokin tapaan, ja '
+          + 'nykyasunsa se sai vuosien 1789–90 muutostöissä. '
+          + 'Istumapaikkoja on 125.'
+        + '\n\n'
+        + 'Lääkäri Gerhard Henrik Armauer Hansen palasi Bergeniin '
+          + '1868 tutkimaan spitaalia Lungegårdin sairaalaan alan '
+          + 'tunnetun asiantuntijan Daniel Cornelius Danielssenin '
+          + 'rinnalle. Tautia pidettiin silloin perinnöllisenä tai '
+          + 'huonon ilman aiheuttamana. Hansen päätteli '
+          + 'väestötutkimuksistaan, että kyse on tarttuvasta taudista, '
+          + 'jolla on yksi tietty aiheuttaja, ja kävi 1870–71 Bonnissa '
+          + 'ja Wienissä oppimassa menetelmät, joilla asian voisi '
+          + 'todistaa. Vuonna 1873 hän ilmoitti löytäneensä uudella ja '
+          + 'entistä paremmalla mikroskoopilla jokaisen potilaan '
+          + 'kudoksesta saman sauvamaisen olion. Bakteereiksi hän ei '
+          + 'niitä nimittänyt, eikä hän saanut juuri tukea.'
+        + '\n\n'
+        + 'Väitettä heikensi se, ettei Hansen onnistunut kasvattamaan '
+          + 'oliota viljelmässä eikä osoittamaan sitä tartuttavaksi. '
+          + 'Hän myös yritti tartuttaa erästä potilasta tämän '
+          + 'suostumusta kysymättä; vahinkoa ei syntynyt, mutta asia '
+          + 'meni oikeuteen, hän menetti sairaalanvirkansa, ja tapaus '
+          + 'oli osaltaan tuomassa tietoisen suostumuksen norjalaiseen '
+          + 'lääketieteelliseen tutkimukseen. Hansen jatkoi maan '
+          + 'spitaalilääkärinä, ja hänen ajamansa vuosien 1877 ja 1885 '
+          + 'spitaalilait käänsivät taudin laskuun: tunnettuja '
+          + 'tapauksia oli 1 800 vuonna 1875 ja enää 575 vuonna 1901. '
+          + 'Koko sairaala-alue on ollut yleisölle avoinna '
+          + 'spitaalimuseona vuodesta 1970, ja kirkko on yhä vihitty '
+          + 'ja käytössä: siellä pidetään kahdesti kuussa '
+          + 'englanninkielinen jumalanpalvelus.',
+      lahde: 'Wikipedia',
+    },
+    Permanenten: {
+      aika: '1887',
+      teksti: 'Länsi-Norjan taideteollisuusmuseo perustettiin 1887 '
+          + 'Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän '
+          + 'näyttelytalon — Henry Bucherin suunnitteleman '
+          + 'uusrenessanssitalon — ja juuri siitä tulee koko museon '
+          + 'lempinimi Permanenten. Talo syttyi palamaan Bergenin '
+          + 'suurpalossa 1916, mutta se saatiin pelastettua. '
+          + 'Kokoelmien ydin on vanha länsinorjalainen hopea, '
+          + 'huonekalut, lasi, posliini ja tekstiili; avajaisiin '
+          + 'kauppias Christian Sundt lahjoitti suuren erän esineitä. '
+          + 'Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin '
+          + 'taidegalleria ja pohjakerroksessa kalastusmuseo.'
+        + '\n\n'
+        + 'Talon kuuluisin kokoelma on kiinalainen, ja se on Johan '
+          + 'Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui '
+          + 'Kiinassa kahdestakymmenestäkahdesta ikävuodestaan '
+          + 'kuolemaansa 1935 asti. Vuonna 2010 murtovarkaat tulivat '
+          + 'lasikaton läpi, laskeutuivat köysillä alas ja veivät '
+          + 'kokoelmasta 56 esinettä, muun muassa maljakoita ja '
+          + 'keisarillisia sinettejä. Hälyttimet eivät soineet '
+          + 'kertaakaan. Tammikuussa 2013 vietiin 22 esinettä lisää: '
+          + 'valvontakamerat tallensivat kaksi nuorta miestä '
+          + 'otsalamppuineen ja sorkkarautoineen, ja koko keikka kesti '
+          + 'muutaman minuutin. Kuusi miestä pidätettiin, mutta he '
+          + 'osoittautuivat juoksupojiksi.'
+        + '\n\n'
+        + 'Vuonna 2013 museossa kävi kiinalainen miljardööri Huang '
+          + 'Nubo katsomassa marmoripylväitä, jotka olivat aikanaan '
+          + 'peräisin Pekingin Vanhasta kesäpalatsista. Hän itki ja '
+          + 'sanoi museonjohtajalle, ettei pylväillä ole mitään '
+          + 'tekemistä Norjassa. Myöhemmin hän lahjoitti museolle 1,6 '
+          + 'miljoonaa dollaria, ja pian sen jälkeen seitsemän '
+          + 'pylvästä lähetettiin pysyvänä lainana Pekingin '
+          + 'yliopistoon. Huangin mukaan palautuksella ja '
+          + 'lahjoituksella ei ollut mitään yhteyttä.',
+      lahde: 'Wikipedia',
+    },
+    Kaupunginkirjasto: {
+      aika: '1872',
+      teksti: 'Keskiajalla Bergen ja Trondheim olivat Norjan '
+          + 'kirjallisuuden keskuksia, ja kirjat olivat luostareissa '
+          + 'ja kirkoissa. Bergenin Mariakirkenillä oli suuri '
+          + 'kirjakokoelma, joka oli avoinna kaikille, ja kun kirkkoherra '
+          + 'David Schønfeldt lahjoitti sille 1766 ison erän kirjoja ja '
+          + 'rahaa, kokoelmalle voitiin rakentaa oma talo. Se oli auki '
+          + 'kaksi tuntia päivässä, ja siitä nykyinen kirjasto '
+          + 'polveutuu. Kirkon kokoelma luovutettiin kaupunginkirjastolle '
+          + '1876, ja siellä se säilyi runsaan vuosisadan ennen '
+          + 'siirtoaan yliopiston kirjastoon.'
+        + '\n\n'
+        + 'Vuonna 1869 yliopistonkirjastonhoitaja Paul Botten-Hansen '
+          + 'pani myyntiin oman kokoelmansa, kaksitoistatuhatta '
+          + 'nidettä. Sitä varten perustettiin yhdistys, joka osti '
+          + 'kokoelman 1871 ja tarjosi sitä Bergenin kaupungille '
+          + 'yhdellä ehdolla: kaupungin on maksettava kirjaston '
+          + 'pyörittäminen. Ensimmäinen kirjasto avautui '
+          + 'Torgallmenningenin varrella entisessä panimossa. Tila kävi '
+          + 'pian ahtaaksi, ja kirjasto muutti Vågenin rannalle '
+          + 'lihahalliin.'
+        + '\n\n'
+        + 'Vuonna 1910 kirjastonjohtajaksi tuli Arne Kildal, joka '
+          + 'jatkoi työtä oman talon puolesta. Arkkitehtikilpailun oli '
+          + 'voittanut jo 1906 Olaf Nordhagen, ja hänen '
+          + 'uusromaaninen talonsa valmistui 1917. Bergenin '
+          + 'kaupunginkirjasto on Norjan toiseksi suurin yleinen '
+          + 'kirjasto: päätalon lisäksi sillä on yhdeksän sivukirjastoa, '
+          + 'ja se hoitaa kirjastopalvelun kaupungin kahdessa '
+          + 'vankilassa.',
+      lahde: 'Wikipedia',
+    },
+    Yliopistomuseo: {
+      aika: '1825',
+      teksti: 'Museon perusti 1825 Wilhelm Frimann Koren Christie, '
+          + 'joka oli tuolloin suurkäräjien puhemies. Tarkoitus oli '
+          + 'kerätä suuret kulttuuri- ja luonnonhistorian kokoelmat, ja '
+          + 'museosta tuli koko kaupungin tieteellisen työn perusta. '
+          + 'Talo oli Norjan ensimmäinen varta vasten museoksi '
+          + 'rakennettu rakennus. Alkuvuosina kokoelmiin kuului myös '
+          + 'taidetta, muun muassa useita Johan Christian Dahlin '
+          + 'maalauksia, sekä kulttuuriesineitä ja käsityötä.'
+        + '\n\n'
+        + 'Vuonna 1831 museo muutti Seminarium Fredericianumin '
+          + 'talosta katedraalikoulun läheltä uuteen rakennukseen '
+          + 'Lille Lungegårdsvannetin lounaispuolelle. Nykyisen '
+          + 'luonnonhistoriallisen talon suunnitteli Johan Henrik '
+          + 'Nebelong, se valmistui 1865, ja museo muutti sinne 1866. '
+          + 'Siivet lisättiin 1898, kasvitieteellinen puutarha '
+          + 'istutettiin 1897–1899, ja kulttuurihistorian osasto sai '
+          + 'oman talonsa 1927.'
+        + '\n\n'
+        + 'Museon tutkimustyö kasvoi 1800-luvun lopulta lähtien niin, '
+          + 'että se johti suoraan Bergenin yliopiston perustamiseen '
+          + '1946. Museo jakautuu yhä luonnonhistorian ja '
+          + 'kulttuurihistorian kokoelmiin, ja sen hoidossa ovat '
+          + 'luonnonhistoriallista taloa ympäröivä museopuutarha — '
+          + 'entinen kasvitieteellinen puutarha — sekä kaupungin '
+          + 'arboretum.',
+      lahde: 'Wikipedia',
+    },
+  },
 };
