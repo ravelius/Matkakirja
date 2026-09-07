@@ -106,7 +106,6 @@ Recognition). Portit: fail 0, karttapisteet ok. Poiminnassa lisäyskonfliktit
 5 tiedostossa liitetty liita-lisays.py:llä.
 
 ### Checkpointit (poimittu haaraan; loppuraportit ja kuvat täydennetään, jos agentit ehtivät)
-- Whitehorse + Yellowknife: wip 7c31c9f + tekstit 8ac5ecc (kuvahaku alkaa)
 - Iqaluit + Santa Fe: ei vielä committia (agentti aloitti myöhään)
 Kaikki kolme poimittu haaraan lisäyskonfliktit liittäen; portit fail 0,
 karttapisteet ok kaikille kuudelle kaupungille. Näiden lehdet ovat siis
@@ -209,6 +208,20 @@ linjaus. Pistokokeet: (1) Sankoré rakennettiin uudelleen Kaaban mitoilla
 18.8.1826, 38 päivää; laatta 1903 ("Alexander Gordon Laing", Trip to
 Timbuktu); (3) Lalibelan risti n. 60 cm / 7 kg, varastettiin 1997, Belgiaan
 1999, palautettiin 2001 ("Lalibela Cross"). Portit: fail 0, karttapisteet ok.
+
+### Kaupunkilehdet Whitehorse + Yellowknife — 7c31c9f + 8ac5ecc (tekstit), c35b4f4 (kuvat) — OSITTAIN KUVITETTU
+Tiedostot: faktapohja-/tarkistus-whitehorse.md ja -yellowknife.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, piirra-kaupunkikartta.mjs, assets/kartat/whitehorse-
+keskusta.png, yellowknife-keskusta.png. Whitehorse: kansi (Kwanlin Dün, 1873 ja
+kulta, Miles Canyon, White Pass -rata, Robert Service), teemasivu "Laakso, sää ja
+tie". Yellowknife: kansi (Sǫǫ̀mbak'è, 1873 Old Fort Providence, kaksi kansaa,
+Con Mine, timantit ja Giant Minen arseeni), teemasivu "Järvi, jää ja kesäyö".
+Kuvia 14 (kansi/avaus/nostoja; Commons 429). Whitehorse ilman ennen–nyt-paria.
+Pistokokeet: (1) Whitehorse on Kanadan kuivin kaupunki (en-Wikipedia
+"Whitehorse", Climate); (2) Yukonin kuninkuuslohella pisin makean veden
+vaellus, yli 3 000 km ("Chinook salmon", Range); (3) valtikassa mursunnorsunluuta
+ja Franklinin retkikunnan alusten puuta ("Northwest Territories Legislative
+Building", Chamber). Portit: fail 0, karttapisteet ok.
 
 ## Kuvaputken tilaukset (kuvattomat nostot ja miniatyyrit)
 
@@ -436,6 +449,31 @@ kaarikäytävä kaivannon reunalla; Biete Lehem — pieni kallioon hakattu kammi
 Biete Abba Libanos — vuoreen kiinni jäänyt julkisivu portaineen; Biete Amanuel —
 vapaasti seisova monoliitti, vaakapalkkikerrokset.
 
+**Whitehorse, kuvattomat:** ennen–nyt-pari — vanha vedos 1898–1910 rannasta ilman
+kehystä ja studioleimaa; avauskuvat 2 — yleiskuva keskustasta joen yli, laakso
+vuorineen; etusivukuva (pysty) — SS Klondike tai Miles Canyon; nostot 1873
+(kausileiri joen varrella), kosket (Miles Canyonin basalttikanjoni), rautatie
+(kapearaiteinen juna), Robert Service (1900-luvun alun pankkikonttori),
+kalaporras, ilmasto, Yukon Quest (valjakon lähtö), kolme vuorta; 7 juttua
+(kaikki paitsi SS Klondike).
+**Whitehorse, miniatyyrit (8):** MacBride-museo — hirsikattoinen museo
+rantatörmällä; Kristuksen katedraali — pieni valkoinen anglikaaninen kirkko
+tornineen; Yukonin parlamenttitalo — matala valkoinen teräsverhoiltu
+virastotalo; SS Klondike — valkoinen siipiratasalus kuivalla maalla; Yukonin
+liikennemuseo — tolpan päässä pyörivä hopeinen DC-3; Whitehorsen lentoasema —
+pieni pohjoinen terminaali; Beringia-keskus — mammutti lumisessa
+jääkausimaisemassa; Riverdale — matalia taloja joen itärannalla vuoren juurella.
+**Yellowknife, kuvattomat:** etusivukuva (pysty) — revontulikuva ilman
+vesileimaa; avauskuva 3 — kesäinen yleiskuva Frame Laken tai Old Townin yli;
+kaikki 10 nostoa paitsi asuntolaivat; kaikki 8 juttua.
+**Yellowknife, miniatyyrit (8):** Bank of Toronton hirsimökki — pieni hirsitalo,
+jossa toimi pankki; Back Bayn hautausmaa — vanhoja puuristejä kallioisella
+rannalla; Wildcat Cafe — hirsinen kahvilamökki; Weaver & Devoren kauppa —
+vanha hirsinen sekatavarakauppa; Ragged Ass Road — päällystämätön katu ja
+käsintehty kyltti; Luoteisterritorioiden parlamenttitalo — pyöreä sali
+kattoikkunoineen; Prince of Walesin pohjoinen perintökeskus — museo järven
+rannalla; Hirsikoulu — pieni yhden huoneen hirsikoulu.
+
 ## Päätöstä vaativat asiat
 
 - **MAATESTIN_POIKKEUS laajeni VUT:iin** (tests/elaintakyt.test.mjs; sama kuin
@@ -493,6 +531,10 @@ vapaasti seisova monoliitti, vaakapalkkikerrokset.
   omistajan linjaus; Ali Farka Touré on MLI-maalehden aihe, ei siirretty;
   africa-valokuvat.js:n timbuktu-pari ei täytä nykyisiä kuvasääntöjä (403 px /
   päiväysleima).
+- Whitehorse/Yellowknife: Whitehorse ilman ennen–nyt-paria (hyväksy tai tilaa
+  vanha vedos); Radium Kingin lähderivi valokuvataulun muodossa (Commons:
+  "Unknown author"). Viereinen: piirra-kaupunkikartta.mjs jättää ison svg:n
+  assets/kartat/-kansioon (gitignoressa).
 
 ## Keskeneräiset
 
