@@ -1,3 +1,19 @@
+## 2026-09-07 — KUVATOIMITUS → FABLE: 9 maalehtikuvaa ja 7 miniatyyriä, erä 16e
+
+Liite `posti/kuvatoimitus-16e-20260907.json` sisältää 16 rootin henkilökohtaisesti tarkistamaa kuvaa. R2-tiedostot on ladattu takaisin ja SHA, MIME sekä pelioriginin CORS tarkistettu. Yksityinen arviointisivun versio 156 on julkaistu ja kaikki 16 katalogiriviä sekä kuvatiedostoa tarkistettu. Kytke liitteen canonicalId-tietueisiin ja käytä täsmennettyjä kuvatekstejä.
+
+Miniatyyrit: Honiaran parlamentti (nyt kokonainen lähdekuvan mukainen rakennus); Port Vilan Korman Stadium, Sacred Heart Cathedral, Independence Parkin paviljonki ja Vanuatu Cultural Centre; Houstonin Julia Ideson Library ja Hermann Parkin ratsastajamuistomerkki. Kaikki 1024×1024 RGBA, upotettu sRGB, sisältö enintään 800px ja tyhjä läpinäkyvä reuna vähintään 64px. Oikea pelipolku on `kohtaamiset/miniatyyrit/{canonicalId}.png`. Hermann Parkin vanhan alkuperäisgeneroinnin tarkkaa promptia ei löytynyt: generationPrompt on siksi tyhjä, eikä sitä ole keksitty jälkikäteen.
+
+Maalehtikuvat: Sierra Leonen afrikkalainen riisi ja bubu; Afganistanin rubab-yhtye; Kazakstanin kylkobyz; Myanmarin Albion-tyyppinen kirjapaja ja pat waing; Sudanin Hamed el-Nilin zikr ja Sanganebin majakka; Etelä-Sudanin varhainen Juba. Kaikki JPEG 1448×1086 ja upotettu sRGB. Soittimet/rakennukset on verrattu aitoihin valokuviin; reunoilla on todellista kuva-alaa häivytystä varten.
+
+Kuvatekstien rajaukset: rubab-yhtye on ajoittamaton harjoitus, ei 1950-luvun Radio Kabul (kuvassa nykyisiä mikrofoneja). Albion-museoesinettä käytettiin vain koneen rakenteen mallina: emme väitä Australian museokappaleen olleen Burmassa. Juba on 1900-luvun alkupuolen havainneympäristö, ei täsmälleen 1927–1929 ajoitettu valokuva eikä kielen syntyhetki. Sanganebin laiturit ja majakka perustuvat todelliseen ilmakuvaan. Pat waing soitetaan käsin; osa 21 rummusta jää luonnollisesti kehän ja soittajan taakse. Tarkemmat lähdemuistiinpanot JSONin sourceQa-kentässä.
+
+Kiitos erän 24d vastaanottokuittauksesta ja Botai-tarinakorjauksen hyväksymisestä. Botain aitausuusinta on yhä tuotannossa, eikä sitä toimiteta tässä. Denverin/Houstonin muista miniatyyreistä löytyneet rakennusmuotovirheet uusitaan ennen toimitusta.
+
+Vahvistakaa pelikytkentä ja julkaistu peliversio. Tämä on kuvatiedostojen ja arviointisivun vahvistettu toimitus; pelikytkentää ei merkitä valmiiksi ennen kuittausta.
+
+---
+
 ## 2026-09-07 — KUVATOIMITUS → FABLE: 17 maalehtikuvaa ja7 miniatyyriä, erä24d
 
 Liite `posti/kuvatoimitus-24d-20260907.json` sisältää24 rootin henkilökohtaisesti tarkistamaa kuvaa. R2-tiedostot on ladattu takaisin ja SHA, MIME sekä pelioriginin CORS tarkistettu. Arviointisivun yksityinen versio155 on julkaistu; kaikki24 tiedostoa ja niiden katalogirivit on tarkistettu. Kytke liitteen canonicalId-tietueisiin ja käytä mukaan kirjoitettuja kuvatekstejä.

@@ -1,0 +1,410 @@
+{
+  "createdAt": "2026-09-07T10:17:49.636361+00:00",
+  "message": "9 maalehtikuvaa ja7 miniatyyriä, root- ja lähdetarkistettu.",
+  "items": [
+    {
+      "id": "maalehti-sle-ruoka-0-r20260907-v5",
+      "canonicalId": "maalehti-sle-ruoka-0",
+      "fileName": "maalehti-sle-ruoka-0-r20260907-v5.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Afrikkalaisen riisin sadonkorjuuta Sierra Leonessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-ruoka-0-r20260907-v5.jpg",
+      "sha256": "00ce0bcf6abbf34029df870aaf86519dd67b6d7c6faf448fb325f1de82c6a3f0",
+      "bytes": 901171,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset: 4:3 educational game image. Create an entirely new wide, distant documentary-style photograph in a Sierra Leone rice field, using the supplied actual Oryza glaberrima photo only as botanical reference. A small central group harvests African rice; show full rice plants from ground/base through every leaf and panicle plus a complete woven harvest basket. CRITICAL COMPOSITION: camera very far back; the entire meaningful group occupies only the middle 50–55% of frame width and height, with at least 20% real field/sky space above, below, left and right. Do not let any leaf, basket, hand, head or foot approach an edge. Landscape 4:3-safe, sharp natural camera realism, authentic field depth, no text, logos or watermark.\n",
+      "sources": [
+        "https://www.africarice.org/post/birthplace-of-african-rice-domestication-identified-in-mali"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "African rice harvest illustration in Sierra Leone. Root personally viewed actual Oryza glaberrima field photo and final JPEG; panicles, whole basket and workers consistent; wide natural margins. Domestication source concerns Mali; no claim image shows that event."
+    },
+    {
+      "id": "maalehti-afg-musiikki-3-r20260907-v4",
+      "canonicalId": "maalehti-afg-musiikki-3",
+      "fileName": "maalehti-afg-musiikki-3-r20260907-v4.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Rubab-yhtyeen harjoitus Afganistanissa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-afg-musiikki-3-r20260907-v4.jpg",
+      "sha256": "a6b9a6f0ae86f966392f7e5fb862ed99245f8f6dabeb276f5c36133fbef71f1a",
+      "bytes": 312275,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset: 4:3 educational game image. Entirely new wide, distant photograph. One anonymous seated Afghan musician plays ONE authentic Afghan rubab whose morphology strictly matches the supplied Metropolitan Museum object: short neck, skin-covered rounded body, distinctive carved pegbox and multiple side tuning pegs. Do not show any other lute or string instrument; two companions may use only tabla and harmonium. The complete rubab, player, companions, rug and all microphone stands/bases must fit within the middle 50% of the image. Camera extremely far back, at least 20% empty real stage wall above and at least 25% uninterrupted floor foreground below every foot and stand base; at least 18% side margins. No object near any frame edge. Sharp camera realism, natural anonymous faces, no text/logo/watermark.\n",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/504148"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed Met rubab object photo and final JPEG: short skin-covered body, ensemble and whole people with wide floor margins. Modern microphones: caption deliberately undated, not a 1950 Radio Kabul reconstruction."
+    },
+    {
+      "id": "maalehti-kaz-musiikki-1-r20260907-v6",
+      "canonicalId": "maalehti-kaz-musiikki-1",
+      "fileName": "maalehti-kaz-musiikki-1-r20260907-v6.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kylkobyz-soittaja kazakstanilaisessa jurtassa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-kaz-musiikki-1-r20260907-v6.jpg",
+      "sha256": "1197261fe3053bfd1e6d1d808c7ba25282a568a663b4efa24b7e74843920dbca",
+      "bytes": 366249,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset: 4:3 educational game image. Create an entirely new wide, distant photograph of an anonymous Kazakh musician playing a traditional kyl-kobyz, using the supplied Kazakhstan museum object photograph as strict morphology reference. The kyl-kobyz has exactly TWO very thin, taut, separate strings like fine instrument strings, exactly TWO tuning pegs, a skin-covered lower resonator, and a bow. Absolutely no braids, ropes, carrying straps, ribbons, thick bundles, extra strings or extra pegs. Show complete musician, complete bow and complete instrument. CRITICAL COMPOSITION: whole group only middle 50–55% of frame; at least 20% real room/ground space on all four edges, broad floor below feet and instrument, nothing near frame. Sharp camera realism, no named-person likeness, no text/logo/watermark.\n",
+      "sources": [
+        "https://e-museum.kz/en/exhibit/68da7d521c08a8b73-en/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed actual museum kobyz and final JPEG: double bucket body, skin belly, two fine strings and two pegs, full bow/player/feet, ample real floor."
+    },
+    {
+      "id": "maalehti-sle-musiikki-2-r20260907-v3",
+      "canonicalId": "maalehti-sle-musiikki-2",
+      "fileName": "maalehti-sle-musiikki-2-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Bubu-muusikoiden iltaesitys Sierra Leonessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-musiikki-2-r20260907-v3.jpg",
+      "sha256": "eaaf43f8dd1f61e106f01525133212d7722be72e22d21486979f5ad7c53d1393",
+      "bytes": 410074,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset: 4:3 educational game image. Create an entirely new wider night documentary-style photograph of an anonymous Sierra Leone bubu music group, using the supplied field-report photograph as strict scale and instrument reference. Six complete musicians play short thin straight bamboo pipes held near the mouth; the pipes are ordinary arm-length or shorter, never giant tubes, never bent metal plumbing. Include a modest improvised percussion part. CRITICAL COMPOSITION: camera farther back; every full body from head through both feet and every instrument occupies only middle 50–55% of frame; at least 20% authentic ground/night setting on all four edges, especially clear ground beneath every foot. Sharp natural camera realism, lively varied poses and visible anonymous faces, no text/logo/watermark.\n",
+      "sources": [
+        "https://www.afropop.org/articles/photo-essay-bubu-witchcraft-and-pop-music-in-sierra-leone"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed actual Afropop field reporting photographs and final JPEG. Short cane pipes, whole six musicians and generous ground margins; anonymous illustrative bubu performance."
+    },
+    {
+      "id": "maalehti-mmr-kirjallisuus-3-r20260907-v4",
+      "canonicalId": "maalehti-mmr-kirjallisuus-3",
+      "fileName": "maalehti-mmr-kirjallisuus-3-r20260907-v4.jpg",
+      "categoryId": "maalehdet",
+      "caption": "1900-luvun alun burmalaisen kirjapajan rekonstruktio Albion-tyyppisine käsipainokoneineen.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-mmr-kirjallisuus-3-r20260907-v4.jpg",
+      "sha256": "a01c58f52b1620a4c95f5eafc9b265c5095d7959847a2dbe8ecfb98477456088",
+      "bytes": 523184,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new sharp camera-like 4:3 early-1900s Burmese workshop reconstruction using the supplied Museums Victoria 1859 Hopkinson & Cope Albion press as the controlling mechanical reference. Show exactly one complete iron table-model Albion hand press: two tall parallel uprights, broad crown crosspiece and top spring housing, central toggle/platen, one short hand lever at upper right, flat sliding bed with complete open tympan, rounce crank under the bed, and four simple iron legs. No flywheel, screw, treadle, cylinder, hybrid parts or extra machinery. Only two anonymous Burmese workers, both full-body and behind the press, faces turned away; one holds a single blank sheet. NO side table, foreground stack, cabinet or prop outside the compact group. Wide room view: press, every lever/bed/leg, both workers and blank sheet together occupy no more than central 50–55 percent of frame. Leave at least 22 percent empty sharp floor/wall at both sides, 18 percent wall above machine, 22 percent floor below its feet. Nothing touches any edge. Warm natural window light, crisp documentary photography, no readable text, watermark, illustration, blur padding. Source-inspired reconstruction; do not claim the Australian specimen was used in Burma.\n",
+      "sources": [
+        "https://collections.museumsvictoria.com.au/items/367721"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual Museums Victoria Albion press photo and final JPEG. Crown/uprights/toggle/lever/sliding bed/rounce/four legs match, complete press and two people. Bottom clearance about11%, not agent claimed>15%. Illustrative early-1900s Burma workshop; not a claim this museum specimen was used there."
+    },
+    {
+      "id": "maalehti-sdn-musiikki-3-r20260907-v4",
+      "canonicalId": "maalehti-sdn-musiikki-3",
+      "fileName": "maalehti-sdn-musiikki-3-r20260907-v4.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Sufilainen zikr-piiri Hamed el-Nilin hautarakennusta mukailevassa Omdurmanin rekonstruktiossa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-musiikki-3-r20260907-v4.jpg",
+      "sha256": "f765cacaddd553223872c82c9de9b2d8348be87195ba6a32cd3c43e14ab2648e",
+      "bytes": 580248,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new sharp camera-like 4:3 documentary reconstruction from the supplied actual Hamed el-Nil cemetery reference. Preserve its real compact turquoise-green shrine with white trim, dark arches and steep tapering reddish-brown conical roof, low cemetery walls and sandy graveyard; no river, bridge, bulbous dome or grand mosque. Show a SMALL loose circle of only 18 anonymous Sufi worshippers, all full-body and distant, gathered around the shrine. Crucial wide framing: the complete shrine plus every person must form one compact subject group occupying no more than the central 50 percent of canvas width and 55 percent of height. Leave at least 22 percent empty sharp sandy cemetery at left and right, 20 percent sky above roof, and 20 percent foreground sand below every foot. No person or garment near any edge. Faces tiny/non-identifiable. A few patched colorful Sufi garments among mostly white jalabiyas. Warm Friday late-afternoon light; crisp photo realism; illustrative gathering, no text/watermark/blur padding.\n",
+      "sources": [
+        "https://photos.wikimapia.org/p/00/04/66/50/81_big.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed Hamed el-Nil actual photo and final JPEG: green-white arches and tapering reddish roof match, full compact gathering with usable cemetery margins. Generic ritual illustration."
+    },
+    {
+      "id": "maalehti-sdn-luonto-1-r20260907-v3",
+      "canonicalId": "maalehti-sdn-luonto-1",
+      "fileName": "maalehti-sdn-luonto-1-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Sanganebin majakka, laiturit ja epäsäännöllinen koralliriutta lähdepohjaisessa ilmakuvassa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-luonto-1-r20260907-v3.jpg",
+      "sha256": "c96ae1742e06b924674c13b1fb238118518d402224018a6dab628a2eacfcf995",
+      "bytes": 819432,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: Matkakirja country-feature natural-history photograph. Create an entirely new sharp camera-like 4:3 oblique aerial photograph using the supplied real aerial photograph of Sanganeb lighthouse as the controlling geographic and architectural reference. Show the actual isolated Sanganeb reef platform in Sudan's Red Sea: a tall cylindrical tan masonry lighthouse with white lantern gallery rising from an irregular compact polygonal service platform, two long narrow straight piers extending in different directions, shallow turquoise water mottled by irregular dark coral patches immediately around it, then deep dark-blue open sea. Do not depict a perfect circular tropical island, sandy palm island, lagoon ring, coastal city or generic atoll. Keep the whole lighthouse, service platform, both complete piers and surrounding reef patch within the central 60–65 percent; at least 18 percent uninterrupted sea around every edge. No boats cut by edges, no people, text, labels, watermark, illustration, vignette or blur padding. Bright clear daylight, realistic drone/aerial photography, crisp coral and water detail. This is a source-grounded aerial illustration, not a claim of the exact flight/date.\n",
+      "sources": [
+        "https://whc.unesco.org/en/list/262"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed actual aerial and final JPEG, and read UNESCO site description. Cylindrical lighthouse, polygon platform, two complete piers and irregular reef match. Complete sea margins."
+    },
+    {
+      "id": "maalehti-sds-kielet-1-r20260907-v4",
+      "canonicalId": "maalehti-sds-kielet-1",
+      "fileName": "maalehti-sds-kielet-1-r20260907-v4.jpg",
+      "categoryId": "maalehdet",
+      "caption": "1900-luvun alkupuolen Juban kaupunkiympäristöä ja kielikontaktia havainnollistava rekonstruktio.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-kielet-1-r20260907-v4.jpg",
+      "sha256": "e6aeba6d84a0f77c8d2373314945dbc2eedb33f250ecfc7a041accaa8bfded4d",
+      "bytes": 648529,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new sharp camera-like 4:3 early-colorized historical reconstruction using the supplied actual 1927-era Juba administrative-center photograph as the controlling architecture reference. Show a compact portion of Juba around 1927–1929: one complete low single-storey masonry building with long shaded colonnaded veranda and corrugated hipped roof, broad unpaved road, sparse planted traffic circle and shrubs. Only six distant anonymous African clerks, traders and porters converse near the CENTER veranda, all full-body, faces tiny/non-identifiable. No Europeans, soldiers, flags, readable signs, monument lettering, 1800s claim, cars, modern skyline or paved road. Crucial wide framing: building and all six people occupy only central 50–55 percent; at least 22 percent empty road/vegetation on left and right, 20 percent sky above roof, 22 percent road below feet. Nothing near or clipped by any edge. Crisp real scene, no blur padding, illustration texture, text or watermark. Captioned only as an illustrative early-20th-century Juba language-contact environment, not a documented creation moment.\n",
+      "sources": [
+        "https://jubainthemaking.com/fr/to-the-juba-wharf/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed archive Mudeeria photo and final JPEG and read Juba in the Making wharf chapter. Low colonnaded hipped-roof building and whole distant people match. Archive image is not independently dated1927–29; use broad early20th-century caption. Source says site chosen1927, construction1928 and government offices moved1930."
+    },
+    {
+      "id": "maalehti-mmr-musiikki-2-r20260907-v8",
+      "canonicalId": "maalehti-mmr-musiikki-2",
+      "fileName": "maalehti-mmr-musiikki-2-r20260907-v8.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Pat waing -soiton harjoitus Myanmarissa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-mmr-musiikki-2-r20260907-v8.jpg",
+      "sha256": "03fe8b2e4a801123c2d16cc71b6c97570a31ea8568cf2a20eed7e678710f12aa",
+      "bytes": 608111,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Generate a NEW horizontal 4:3 photorealistic documentary photograph. This must be an EXTREME WIDE ESTABLISHING SHOT from eight metres away, 24mm lens, with the spacious wooden rehearsal hall occupying most of the image. Three people and a pat waing instrument form a small compact island in the centre: their combined width is only 55 percent of the image; the circular instrument alone is only 35 percent of image width. All three people are seated close together, the two listeners immediately behind the musician at his shoulders, NOT spread out beside the drum circle. Leave at least 22 percent of actual hall on left and right and 25 percent empty real wooden floor beneath the complete instrument. Leave ample roof and open hall above. Use the attached real Burmese pat waing photograph ONLY to guide physical construction and bare-hand playing, not its framing. An anonymous adult Burmese drummer sits inside the traditional gilded carved circular frame, playing two heads with open bare hands and fingers; never sticks or mallets. It contains 21 graded vertically suspended wooden drums with red suspension cords. Seated audience eye level, front view, not overhead: the near carved panels naturally block part of the inside, and the drummer occludes the rear drums, exactly as in a normal audience photograph. Keep the recognizable gold openwork, red suspension cords, correct oval wooden drums and fingertip playing. Close behind him an older teacher and a boy exchange an amused delighted look during the lesson. Natural beautiful side daylight, deep but readable warm wood and gold, authentic human expressions, detailed but photographic materials. EVERY foot, person and entire carved frame is visible with real breathing room. No visible readable writing, text, logos, portraits on wall, borders, vignette, fake padding or blurred extensions. Prioritize the small central group and a truly distant camera: do not auto-zoom to fill the image.\n",
+      "sources": [
+        "https://folkways.si.edu/news-and-press/unesco-collection-week-58-lyric-epic-and-everyday-life-in-myanmar-and-ethiopia",
+        "https://folkways.si.edu/myanmar-music-by-the-hsaing-waing-orchestra-the-burmese-harp/world/music/album/smithsonian"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root compared actual performance photograph. Complete gilded openwork/red suspension/graded vertical drums; bare-hand playing and listener interaction. Main group now compact with >20%real margins. Natural seated audience view hides some drums; total21 is source-defined, not claimed independently countable in image. Root personally inspected final1448x1086 ICC JPEG after export; visual pass. Smithsonian Folkways primary text confirms21 drums played with bare hands; obscured drums in image not independently counted."
+    },
+    {
+      "id": "honiara-parlamenttitalo",
+      "canonicalId": "honiara-parlamenttitalo",
+      "fileName": "honiara-parlamenttitalo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "National Parliament of Solomon Islands miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/honiara-parlamenttitalo.png",
+      "sha256": "aef4ccf92934294c281cdcfcf1bd67b73ab908db43c5c2422bc419a02b0aeb2a",
+      "bytes": 409189,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1024×1024 M3 miniature strictly from the attached actual whole-building photograph of the Solomon Islands National Parliament in Honiara. Show the COMPLETE building with no cropped vertical cut edges: the full broad circular modernist chamber, its entire low grey conical roof sweeping continuously to both left and right eaves, the short ribbed cylindrical roof vent and thin antenna. Under the roof show the full continuous dark horizontal glazing band and the complete curved concrete lower wall with its entrance. Include the attached low rectangular concrete wing on the left. Both outer building edges and the entire roof circumference must resolve naturally into a complete isolated silhouette. Remove crest, signs and writing. No text, logos, letters, numbers, people, cars, wires or background vegetation. Fine ink and restrained grey watercolor, centered complete silhouette within 800×800, pure #00FF00 background without green tint or distant shadow.\n",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:SI_Houses_of_Parliament.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual whole building and final black/white. Complete broad conical roof, vent ring, antenna and low curved facade with right annex; prior clipped silhouette corrected."
+    },
+    {
+      "id": "portvila-kormanin-stadion",
+      "canonicalId": "portvila-kormanin-stadion",
+      "fileName": "portvila-kormanin-stadion.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Korman Stadium miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/portvila-kormanin-stadion.png",
+      "sha256": "60881403fd2b3d25b92c18e5b5e12858d5b792d3859db07e3636e681322192a8",
+      "bytes": 471770,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1024×1024 M3 miniature strictly from the attached actual photograph of Korman Stadium grandstand in Port Vila. Show only the complete modest grandstand: a wide low bank of turquoise stepped seats split by pale stairs and one central tunnel, under one very broad almost-flat pale metal cantilever roof with a thin dark underside and shallow single-pitch profile. Include the open thin supporting posts and narrow grass strip. Do not add an oval field, beige rectangular backdrop, floodlights, hills, pitched roof, signs, text, logos, letters, numbers or people. Fine ink and restrained turquoise, pale grey and cream watercolor, complete centered silhouette within 800×800, pure #00FF00 background without green tint or distant shadow.\n",
+      "sources": [
+        "https://www.europlan-online.de/korman-stadium/verein/31887"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual grandstand and final black/white: wide thin cantilever roof, turquoise stepped seating, central tunnel and stairs match."
+    },
+    {
+      "id": "portvila-pyhan-sydamen-katedraali",
+      "canonicalId": "portvila-pyhan-sydamen-katedraali",
+      "fileName": "portvila-pyhan-sydamen-katedraali.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Sacred Heart Cathedral miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/portvila-pyhan-sydamen-katedraali.png",
+      "sha256": "8044576655054f83e18d1f1863ed5568398f594ebc2fa3c8dd9256061086a944",
+      "bytes": 584164,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1024×1024 M3 miniature strictly from the attached actual exterior photograph of Sacred Heart Cathedral, Port Vila. Preserve the real long asymmetrical modernist church: one enormous single-pitch triangular roof plane sloping from a very high left-front peak all the way down to the long low right end, edged by thick plain white fascia. Under it reproduce the dark brown structural frame and tall plain white rectangular wall panels, with the broad white cross-shaped facade panel and small dark cross-shaped window near the high left-front end. Include the low flat projecting entrance canopy at front-left. Do not make a symmetrical A-frame chapel, central staircase, detached bell tower, narrow needle roof or decorative stained glass. Remove sign and people. No text, logos, letters or numbers. Fine ink and restrained white, charcoal and brown watercolor, complete within 800×800, pure #00FF00 background without green tint or distant shadow.\n",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Port-Vila_cath_Sacre_Coeur.JPG"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual church and final black/white: asymmetric tall roof, white cross panel, long low facade and canopy match."
+    },
+    {
+      "id": "portvila-independence-park",
+      "canonicalId": "portvila-independence-park",
+      "fileName": "portvila-independence-park.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Independence Park miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/portvila-independence-park.png",
+      "sha256": "8efdcf4380754d9878696988a1fa3433dc037c00d6d4ff252a292f936e134a8e",
+      "bytes": 610735,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1024×1024 M3 miniature strictly from the attached actual photograph of the covered grandstand/pavilion at Independence Park, Port Vila. Show the real open symmetrical steel structure viewed from front: a tall central triangular gable roof carried by red trusses, lower shallow side roofs on both sides carried by dark blue-grey posts, and orange-red stepped concrete seating extending across the full width with a narrow black central stair. It is an open pavilion, not a circular sports field, villa, clubhouse or house. Include only a narrow grass strip. Omit all signs, writing, people, flags and background trees. No text, logos, letters or numbers. Fine ink and restrained red, blue-grey and cream watercolor, complete centered silhouette within 800×800, pure #00FF00 background without green tint or distant shadow.\n",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Port_Vila_-_Independence_Park_-_panoramio_(1).jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual pavilion and final black/white: red trusses, blue posts, orange stepped seating and central stairs match."
+    },
+    {
+      "id": "portvila-vanuatun-kulttuurikeskus",
+      "canonicalId": "portvila-vanuatun-kulttuurikeskus",
+      "fileName": "portvila-vanuatun-kulttuurikeskus.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Vanuatu Cultural Centre miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/portvila-vanuatun-kulttuurikeskus.png",
+      "sha256": "8860cd000ff7a46ad42fc0c9870863ad52988a870dc5627c1c590ca7435fbf8a",
+      "bytes": 1038117,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1024×1024 M3 miniature strictly from the attached actual photograph of the Vanuatu Cultural Centre / National Museum in Port Vila. Preserve the real unusual massing: a steep enormous rust-red triangular A-frame roof with very broad white eaves and short pale roof poles projecting beyond the edges; a continuous triangular strip of dark glass windows below the roof on both visible sides; and in front a separate low sweeping conical thatched canopy wrapping around a compact curved white entrance wall, carried by a few dark carved timber posts. Include restrained coral-stone side walls. Remove the readable museum sign and all writing. Do not invent a freestanding traditional hut, carved totem, symmetrical temple facade, multiple thatched cottages or tropical tree. No text, logos, letters, numbers or people. Fine ink and restrained rust, cream, charcoal and straw watercolor, complete centered silhouette within 800×800, pure #00FF00 background without green tint or distant shadow.\n",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/Category:Buildings_in_Port_Vila"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual museum entrance and final black/white: tall glazed triangular gable above low thatched entrance with stone walls match."
+    },
+    {
+      "id": "houston-julia-idesonin-kirjasto",
+      "canonicalId": "houston-julia-idesonin-kirjasto",
+      "fileName": "houston-julia-idesonin-kirjasto.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Julia Ideson Building miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/houston-julia-idesonin-kirjasto.png",
+      "sha256": "135a54c32e8e803704fb35406ac6c70a2a43c444dc00a3d73c9f1652e8f81a19",
+      "bytes": 1512294,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1024×1024 M3 miniature strictly from the attached actual front photograph of Houston's Julia Ideson Building. Preserve the real broad symmetrical pale cream limestone Spanish Renaissance facade: a flat rectangular three-storey mass, low ornate open cresting along the roofline, a full top row of nine repeated round-arched windows, and the central shallow projecting bay with one large upper round arch, carved surround, and a single dark rectangular entrance below. Side bays have plain rectangular windows. Do not use red brick, clay-tile roofs, corner bell towers, church gables or a narrow villa footprint. Remove all lettering. No text, logos, letters, numbers, people or street furniture. Fine ink and restrained pale limestone watercolor, complete centered facade within 800×800, pure #00FF00 background without green tint or distant shadow.\n",
+      "sources": [
+        "https://www.visithoustontexas.com/things-to-do/arts-and-culture/historic-sites/haunted-places/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual library facade and final black/white: broad pale Renaissance facade, cresting, repeated arched upper windows and central portal match; former invented red-brick villa replaced."
+    },
+    {
+      "id": "houston-hermann-park",
+      "canonicalId": "houston-hermann-park",
+      "fileName": "houston-hermann-park.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Hermann Park / Sam Houston Monument miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/houston-hermann-park.png",
+      "sha256": "57d6cca32f540269b057b04eddcbb95cd2f6cc7538f9c3f11c566366bdc2d144",
+      "bytes": 1326773,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:SamHoustonStatueMemorialHermann.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual equestrian memorial and final black/white: complete rider/horse and arched stone pedestal match at miniature scale. Historical exact generation prompt unavailable; not reconstructed or falsely marked recorded."
+    }
+  ],
+  "reviewPublished": true,
+  "reviewVersion": 156,
+  "gameIntegrationClaimed": false
+}
