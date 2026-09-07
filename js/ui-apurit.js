@@ -1651,7 +1651,18 @@ export function linssiEstaa(doc = (typeof document === 'undefined' ? null : docu
  * avaaValinaytos ja purkaa suljeValinaytos.
  */
 export function linssiEstaaChatin(doc = (typeof document === 'undefined' ? null : document)) {
-  return linssiEstaa(doc) && !doc?.body?.classList?.contains('aikajana-valinaytos-auki');
+  return linssiEstaa(doc)
+    && !doc?.body?.classList?.contains('aikajana-valinaytos-auki')
+    /*
+     * TUTKIMUSVAIHE ON KESKUSTELUN VAIHE (omistaja 7.9.2026 ilta:
+     * *"pulu voisi räkäistä, että kysy vain sitten minulta lisää, jos
+     * löydät jonkun mielenkiintoisen kohdan"*). Esityksen jälkeen
+     * kello seisoo, kartta on pelaajan ja nostojen kysymysnapit
+     * lähettävät suoraan chattiin — portti ei saa olla kiinni juuri
+     * silloin. Luokan asettaa js/linssit/ihmisen-matka-tutkimus.js ja
+     * purkaa sen purku.
+     */
+    && !doc?.body?.classList?.contains('aikajana-tutkimus-auki');
 }
 
 /*

@@ -867,7 +867,14 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     // Kehysväli sekunteina; katto sekunti, jottei paluu taustalta hyppää.
     const dt = Math.min(1, Math.max(0, (nyt - (tila.viimeKehys || nyt)) / 1000));
     tila.viimeKehys = nyt;
-    const vuosia = lukema();
+    /*
+     * TUTKIMUSVAIHEESSA KELLO EI ENÄÄ OHJAA VANOJA (omistaja 7.9.2026:
+     * *"kun esitys on ohi, niin sen jälkeen pelaaja voisi klikkailla
+     * kartalla niitä nostokohtia"*): lukema on 0 eli koko kartta
+     * piirrettynä, ja koska luku ei enää muutu, silmukka ei tee
+     * päivityksiä — kartta jää pelaajan käsiin sellaisenaan.
+     */
+    const vuosia = tila.tutkimus ? 0 : lukema();
     // Hidas laite: väli venyy maalauksen keston mukaan, jottei
     // maalaus syö koko kehysaikaa (mitattu kontin ohjelmisto-WebGL:llä).
     const vali = reduced
@@ -939,6 +946,22 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     valmis,
     /** Seuraaminen heti takaisin (savukkeet ja kuvakaappaukset). */
     jatkaSeuranta: () => { tila.keskeytettyAsti = 0; tila.pov = null; },
+    /**
+     * TUTKIMUSVAIHE (js/linssit/ihmisen-matka-tutkimus.js): esitys on
+     * ohi ja kartta jää pelaajalle. Kaikki vanat piirretään loppuun
+     * (`paivita(0)`), kalvot saavat lopun peiton, ja KAMERAN SEURANTA
+     * LOPPUU pysyvästi — tästä eteenpäin pallo on pelaajan sormien ja
+     * viiden napin käsissä, eikä virtamoduuli aja niiden päälle.
+     * Palauttaa vanamoduulin kahvan (korostus ja kärkilistat).
+     */
+    tutkimus: () => {
+      tila.tutkimus = true;
+      tila.keskeytettyAsti = Infinity;
+      tila.pov = null;
+      tila.vanat?.paivita(0);
+      paivitaKalvojenPeitto(0);
+      return tila.vanat ?? null;
+    },
     /** Mittareita savukkeille: onko kenttä laskettu, kangas ja kohde. */
     tila: () => ({
       valmis: Boolean(vanatKaytossa ? tila.kentat : tila.tarkka),

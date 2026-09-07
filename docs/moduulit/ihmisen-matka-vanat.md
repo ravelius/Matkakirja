@@ -1165,3 +1165,160 @@ Kansio `scratchpad/vanat/` (Fablen session scratchpad
   polylinjan päätevirran väri (selkäranka vihreänä Afrikasta asti);
   tuotannossa jokainen kärki kantaa oman virtansa sävyn.
 - `hae-wiki.mjs` — en-Wikipedian raakatekstit (`wiki-*.txt`).
+
+## 11. Tutkimusvaihe (toteutettu 7.9.2026)
+
+*(Omistajan linjaus 7.9.2026 ilta, Raamattu "IHMISEN MATKA: KAARI
+HYVAKSYTTY, TUTKIMUSVAIHE, VIISI NAPPIA, PULUN VALIHUOMIOT". Toteutus:
+`js/linssit/ihmisen-matka-tutkimus.js`, `css/ihmisen-tutkimus.css`,
+aineisto `js/linssit/ihmisen-matka-data.js` ja
+`js/linssit/ihmisen-matka-virrat.js`. Todennus:
+`tests/ihmisen-matka-tutkimus.test.mjs` ja
+`tools/savukkeet/savuke-ihmisen-tutkimus.mjs`.)*
+
+> *"Kun esitys on ohi, niin sen jälkeen pelaaja voisi klikkailla
+> kartalla niitä nostokohtia, ja niitä saa olla todella paljon … kartassa
+> voisi olla ylhäällä viisi nappia, joista jokainen vastaisi sitten niitä
+> eri alueita, ja jolloin kartta automaattisesti pyörähtäisi niin, että
+> koko se alue näkyy ja se valittu väri hehkuu kaikkia muita värejä vielä
+> voimakkaammin … niissä nostoissa olisi tietenkin myös jo valmiiksi
+> generoituja muutamia kysymyksiä, mitä painamalla pulu voisi sitten
+> selittää lisää."*
+
+### 11.1 Raja esitykseen: yksi kutsu
+
+Kertomusmoottori päättää esityksen ja kutsuu `ui.aloitaTutkimusvaihe?.()`.
+Kytkentä on `js/aikajana.js`:ssä (`kaynnistaAikajana` asettaa kentän,
+ajon `pura()` purkaa sen), koska ajo-olio — kello, lauta, virrat,
+karuselli — on sen moduulin. Kutsu on turvallinen millä tahansa
+kaarella: ilman lautaa tai virtoja se palauttaa epätoden eikä mitään
+muutu (keksintökaari, tasokartta).
+
+Kutsun jälkeen kolme asiaa tapahtuu kerran:
+
+1. `ajo.pysayta()` — kello seisoo.
+2. `ajo.virrat.tutkimus()` — vanat piirretään loppuun (`paivita(0)`),
+   kalvot saavat lopun peiton ja **kameran seuranta loppuu pysyvästi**
+   (`keskeytettyAsti = Infinity`). Silmukka lukee tämän jälkeen aina
+   nollaa, joten se ei enää tee työtä.
+3. `lauta.heraa()` — nukkuva pallo ei rakentaisi merkkien elementtejä.
+   Mitattu savukkeessa: ilman herätystä 40 datumia listalla, 0
+   elementtiä ruudulla.
+
+Kamera on tästä eteenpäin pelaajan ja viiden napin käsissä, ja ajot
+menevät laudan omaa rajapintaa (`ui.kamera().ajaKamera`). Kaksi kameraa
+samalla pallolla olisi kaksi totuutta.
+
+### 11.2 Nostot: 20 + 20
+
+Kartalla hehkuu **40 nostoa**: kaaren kaikki kaksikymmentä löytöpaikkaa
+(myös esityksestä pois jääneet `lake-mungo`, `tianyuan`, `niah`) ja
+kaksikymmentä lisänostoa taulussa `IHMISEN_MATKA_LISANOSTOT`:
+
+| tunnus | ajoitus | virta | tunnus | ajoitus | virta |
+| --- | --- | --- | --- | --- | --- |
+| toba | 74 ka | päävirta | malta-poika | 24 ka | siperia |
+| sunda | jääkaudet | päävirta | lascaux | 17 ka | eurooppa |
+| sahul | 65–10 ka | päävirta | bluefish | 24 ka (kiistelty) | amerikat |
+| wallacea | aina | päävirta | paisley | 14,3 ka | amerikat |
+| flores | 100–50 ka | päävirta | clovis | 13 ka | amerikat |
+| sulawesi-taide | 51–44 ka | päävirta | doggerland | 10–8,2 ka | eurooppa |
+| ust-ishim | 45 ka | siperia | teouma | 3 ka | tyynimeri |
+| kostenki | 40–30 ka | eurooppa | saqqaq | 4,5 ka | amerikat |
+| sungir | 34 ka | eurooppa | madagaskar | 1,5–1 ka | tyynimeri |
+| dolni-vestonice | 29 ka | eurooppa | rapa-nui | 800 v | tyynimeri |
+
+Lisänosto EI ole pysäkki: pysäkki on esityksen mitta (kellon askel,
+vanan päätepiste, `ESITYKSEN_KUVAT`), ja neljäkymmentä pysäkkiä muuttaisi
+koko kaaren tahdin. Siksi lisänostolla on vain se, mitä kortti tarvitsee:
+otsikko, ajoitus, `vuosiaSitten`, lat/lon, 2–3 lauseen teksti, virta,
+lähde (en-Wikipedia) ja kysymykset. **Kuvia ei ole** — kuvatilaukset
+menevät kuvaputkelle erikseen (luku 11.6).
+
+Hehku on ruutuvakiokokoinen CSS2D-merkki laudan linssiapurin omassa
+osassa `ihmisen-tutkimus` (ei `aikajana`, jottei ajon purku veisi niitä
+kesken): 5 px kultainen ydin ja sen ympärillä 2,6 s:n sykkivä kajo,
+kumpikin **vanan sävyyn** värjättynä (`--nosto-savy`). Löytöpaikoilla
+sävy haetaan kartalta — lähin vanan kärki ratkaisee, ja kärkikohtainen
+`virrat` kertoo värin, koska selkäranka vaihtaa väriä matkalla.
+Napautus kulkee laudan omaa polkua (`lahinLinssimerkki` → `napautus`),
+joten linssin merkki voittaa kaupungit ja nostot kuten aikajanan lamppu.
+
+### 11.3 Kortti ja kysymykset pululle
+
+Kortissa on ajoitus, otsikko, paikka, kuvat (löytöpaikalla havainnekuva
+ja esine), teksti, lähde ja sen alla 2–3 **valmista kysymystä**.
+Löytöpaikan korttiteksti on `loyto` eikä `juttu`: koko juttu (kaksi
+kappaletta) kuuluu Tiedeliitteeseen, ja `loyto` kertoo juuri sen, mitä
+pelaaja tässä kysyy — kuka löysi, mistä ja milloin.
+
+Kysymykset ovat datassa (`IHMISEN_MATKA_KYSYMYKSET` → `pysakki.kysymykset`
+ja lisänostojen oma `kysymykset`), kolme per löytöpaikka: yksi
+MENETELMÄSTÄ ("Miten tämä ajoitettiin?"), yksi ARJESTA ("Mitä täällä
+syötiin?") ja yksi MIKSI-kysymys ("Miksi juuri tänne?").
+
+Napautus lähettää kysymyksen chattiin `polloKysy`-reittiä eli
+täsmälleen samaa polkua kuin pelaajan itse kirjoittama kysymys.
+Konteksti kulkee mukana `ui.fokuskohdeAuki`-kentässä (sama kenttä kuin
+kartan kohdetietoruudulla, `js/pollo.js avoinKohdetietoruutu`), joten
+noston teksti ja lähde menevät pöllölle ilman että pöllö tarvitsee
+riviäkään tästä moduulista. Chatin portti aukeaa body-luokalla
+`aikajana-tutkimus-auki` (`js/ui-apurit.js linssiEstaaChatin`) — sama
+poikkeus kuin välinäytöksellä.
+
+**Pulun repliikki ei tule täältä.** *"Kartta on sinun. Kysy vain, jos
+löydät jotain kiinnostavaa."* on kaanonia
+(`js/linssit/ihmisen-matka-kertomus.js`, jakson `loppu` pulu-kenttä), ja
+sen soittaa kertomusmoottori. Testi vartioi, ettei tutkimusvaihe toista
+sitä eikä avaa omaa kuplaa.
+
+### 11.4 Viisi nappia
+
+Napit ovat viisi virtaa (`IHMISEN_MATKA_VIRRAT`) nimineen ja väripilkkuineen.
+Napautus tekee kolme asiaa:
+
+- **Kamera** kääntyy niin että koko vana näkyy. Rajaus lasketaan valitun
+  virran KAIKISTA kärjistä (kärkikohtainen `virrat`, joten "siperia" on
+  selkärangan Siperia-osuus eikä koko selkäranka), ja pituusasteet
+  puretaan jonoksi ±360° ennen laatikkoa — muuten Tyynenmeren nappi
+  (Taiwan 121° I … Rapa Nui 109° L) kääntäisi pallon Afrikkaan.
+  Leveys on 12 % marginaalilla ja korkeusehto muunnetaan leveydeksi
+  kuvasuhteella (sama kaava kuin `js/pallolauta/kamera.js` bbox-haarassa);
+  ajon kesto 1,5 s laudan omalla pehmennyksellä.
+- **Korostus** `js/aikajana-vanat.js korosta(virta)`: valittu vana saa
+  peiton 1,0 ja 1,3-kertaisen viivan, muut 0,35-kertaisen peiton
+  (kaista samoin). Muutos on pelkkää materiaalia, joten kellon
+  päivitykset saavat yhä ajaa sen alla.
+- **Pergamenttilappu** ruudun alareunaan: vanan nimi ja `yhteenveto`
+  (2–4 lausetta, kirjoitettu `ihmisen-matka-virrat.js`:ään värin ja
+  nimen viereen). Lapun `bottom` lasketaan karusellin MITATUSTA
+  korkeudesta (`--tutkimus-nauha`), koska nauhan korkeus tulee kortin
+  leveydestä eikä ole vakio.
+
+Toinen napautus samaan nappiin palauttaa kaikki: korostus pois, lappu
+piiloon, kamera jää siihen mihin pelaaja sen jätti.
+
+Nappirivi on **aina aikajanan ylärivin alapuolella** (4 rem). Mitattu
+834 × 1100: ylärivi on 565 px leveä, joten keskitetty 435 px:n nappirivi
+samalla korkeudella menisi sen päälle myös työpöydällä. Puhelimella
+(≤ 700 px) rivi levittäytyy koko leveydelle ja nimet lyhenevät
+(Pää / Eur. / Sib. / Am. / Tyyni) — molemmat nimet ovat DOMissa ja css
+valitsee.
+
+### 11.5 Muu kartan tila
+
+- **Esinerivi** (karuselli) palaa näkyviin tutkimusvaiheessa ja sen
+  edellinen tila palautetaan purussa.
+- **Linssin sulku (✕)** toimii kuten ennen: `ui.pysaytaAikajana` →
+  `ajo.pura()` → tutkimusvaiheen purku (merkit, kerros, body-luokka,
+  korostus) ennen ajon omaa purkua. Savuke tarkistaa, ettei pallolle jää
+  yhtään `tutkimus:`-merkkiä.
+
+### 11.6 Kuvatilaukset (auki)
+
+Kahdellakymmenellä lisänostolla ei ole kuvaa. Kortti toimii ilman, mutta
+kuva olisi luonteva jatko — tilaus kuvaputkelle silloin kun omistaja
+haluaa: Toba, Sunda, Sahul, Wallacea, Flores, Sulawesin luolataide,
+Ust'-Ishim, Kostenki, Sungir, Dolní Věstonice, Mal'tan poika, Lascaux,
+Bluefish, Paisley, Clovis, Doggerland, Teouma, Saqqaq, Madagaskar,
+Rapa Nui. Repoon ei viedä kuvia; ne kuuluvat ämpäriin kuten muutkin.

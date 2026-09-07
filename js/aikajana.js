@@ -5088,6 +5088,17 @@ class Aikajana {
 
   pura() {
     this.pysayta();
+    /*
+     * TUTKIMUSVAIHE PURKAUTUU AJON MUKANA. Koukku on TÄSSÄ eikä
+     * moduulin pysaytaAikajana-funktiossa: "Sulje", Esc ja linssinappi
+     * menevät js/ui.js:n oman pysaytaAikajanan kautta, joka kutsuu
+     * pura():a suoraan (sama oppi kuin kuplajonon purulla alla).
+     * Tutkimusvaiheen merkit ovat oma laudan osansa, jota tämän purku
+     * ei muuten veisi (js/linssit/ihmisen-matka-tutkimus.js).
+     */
+    this.ui.tutkimusvaihe?.pura?.();
+    this.ui.tutkimusvaihe = null;
+    this.ui.aloitaTutkimusvaihe = null;
     // Sulkeminen kesken avauksen: peite, laatikko ja ajastimet pois.
     this.puraAvaus();
     // Sama kesken välinäytöksen: laatikko, ajastin ja kuplat pois.
@@ -5195,6 +5206,7 @@ import { suljeFokuskohde } from './fokuskohteet.js';
 import { suljeNostonKortti } from './fokusnosto.js';
 import { suljeElaintaky } from './elaintaky.js';
 import { suljeSyvennys } from './syvennys.js';
+import { luoTutkimusvaihe } from './linssit/ihmisen-matka-tutkimus.js';
 
 /**
  * Kartan päällä kelluvat kortit pois linssin tieltä.
@@ -5229,6 +5241,29 @@ export function kaynnistaAikajana(ui, linssi) {
   pysaytaAikajana(ui);
   const ajo = new Aikajana(ui, linssi);
   if (!ajo.kaynnista()) return false;
+  /*
+   * TUTKIMUSVAIHE ODOTTAA KUTSUA (omistaja 7.9.2026 ilta, Raamattu
+   * "IHMISEN MATKA: KAARI HYVAKSYTTY, TUTKIMUSVAIHE, VIISI NAPPIA":
+   * *"kun esitys on ohi, niin sen jälkeen pelaaja voisi klikkailla
+   * kartalla niitä nostokohtia"*).
+   *
+   * Kertomusmoottori kutsuu esityksen päätteeksi
+   * `ui.aloitaTutkimusvaihe?.()`, ja siitä eteenpäin kartta on
+   * pelaajan (js/linssit/ihmisen-matka-tutkimus.js). Kytkentä on
+   * TÄSSÄ eikä linssissä kahdesta syystä: ajo-olio on tämän moduulin
+   * (kello, lauta, virrat, karuselli), ja purku kuuluu samaan
+   * paikkaan kuin ajon purku — linssin sulkeva ✕ vie kummankin.
+   *
+   * Kutsu on turvallinen millä tahansa kaarella: tutkimusvaihe
+   * palauttaa null, jos lautaa, virtoja tai vanoja ei ole
+   * (keksintökaari, tasokartta), eikä mikään muutu.
+   */
+  ui.aloitaTutkimusvaihe = () => {
+    if (ui.aikajana !== ajo || !ajo.juuri?.isConnected) return false;
+    if (ui.tutkimusvaihe) return true;
+    ui.tutkimusvaihe = luoTutkimusvaihe({ ajo, ui, linssi });
+    return Boolean(ui.tutkimusvaihe);
+  };
   ui.aikajana = ajo;
   // Vasta kun ajo on pystyssä: bodyn luokka on paikallaan, joten
   // portti pitää eivätkä juuri suljetut kortit avaudu takaisin.

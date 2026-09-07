@@ -559,6 +559,52 @@ export function luoVanat({
     return true;
   }
 
+  /**
+   * VANAN KOROSTUS (tutkimusvaihe, omistaja 7.9.2026: *"se valittu väri
+   * hehkuu kaikkia muita värejä vielä voimakkaammin kartan pinnassa"*).
+   *
+   * Valinta on VIRTA (viisi nappia = viisi virtaa), ei yksittäinen vana:
+   * selkäranka kulkee kolmen virran läpi, ja kärkikohtainen `virrat`
+   * kertoo, kuuluuko vana valittuun väriin. Vana kuuluu valintaan, jos
+   * yksikin sen kärki on valitun virran väriä.
+   *
+   * Muutos on PELKKÄÄ MATERIAALIA — peittävyys ja viivan leveys — eikä
+   * kosketa geometriaan, katkoon eikä kärkiväreihin, joten `paivita`
+   * saa yhä ajaa kellon mukana korostuksen alla. `null` palauttaa
+   * kaikki lähtöarvoihinsa.
+   *
+   * @param {string|null} virta valitun virran tunnus tai null.
+   * @param {{ vaimea?: number, hehku?: number }} asetukset
+   */
+  function korosta(virta = null, { vaimea = 0.35, hehku = 1.3 } = {}) {
+    if (purettu) return false;
+    for (const o of oliot) {
+      if (o.kotipesa) {
+        if (o.mat) o.mat.opacity = virta && virta !== 'paavirta' ? KAISTAN_PEITTO * 2 * vaimea : KAISTAN_PEITTO * 2;
+        continue;
+      }
+      const omat = o.virrat?.length ? new Set(o.virrat) : new Set([o.virta]);
+      const valittu = !virta || omat.has(virta);
+      const paksuus = o.paksuus ?? o.mat.linewidth;
+      o.paksuus = paksuus;
+      o.mat.opacity = virta ? (valittu ? 1 : VANAN_PEITTO * vaimea) : VANAN_PEITTO;
+      o.mat.linewidth = virta && valittu ? paksuus * hehku : paksuus;
+      o.kaistaMat.opacity = virta && !valittu ? KAISTAN_PEITTO * vaimea : KAISTAN_PEITTO;
+    }
+    return true;
+  }
+
+  /**
+   * Vanojen kärkilistat ulos (tutkimusvaihe: napin rajaus ja nostojen
+   * sävytys). Kopio kentistä, ei olioita: kutsuja ei pääse käsiksi
+   * three.js-materiaaleihin.
+   */
+  function pisteet() {
+    return oliot.filter((o) => !o.kotipesa).map((o) => ({
+      tunnus: o.tunnus, virta: o.virta, virrat: o.virrat ?? null, pisteet: o.pisteet,
+    }));
+  }
+
   /** Selkärangan kärki kameralle (ensimmäinen vana on selkäranka). */
   function karki(nyt, { ennakko = VANAN_ENNAKKO } = {}) {
     const selka = oliot.find((o) => !o.kotipesa);
@@ -587,6 +633,8 @@ export function luoVanat({
     valmis,
     paivita,
     karki,
+    korosta,
+    pisteet,
     pura,
     /** Mittarit savukkeelle: vanoja, kärkiä, kaistoja, kaistan leveys. */
     tila: () => ({ ...mittarit, purettu }),
