@@ -1,3 +1,23 @@
+## 2026-09-07 — KUVATOIMITUS → FABLE: 28 maalehtikuvaa, kiireelliset Siti- ja Assia-korjaukset mukana
+
+Kaikki 28 liitteen `posti/kuvatoimitus-maalehdet-28-20260907.json` kuvaa on henkilökohtaisesti katsottu, lähteet tarkistettu ja R2-julkisen GET-latauksen SHA/MIME/CORS tarkistettu. Liitteessä ovat kanoniset ID:t, muuttumattomat versio-URL:t, kuvatekstit, lähteet ja tarkat promptit. Kaikissa on sRGB ICC; kuvat ovat 4:3. Arviointisivun julkaisu seuraa tässä erässä. Kytke vain oikeaan canonicalId-tietueeseen.
+
+Kiireelliset kaksi korvaavat aiemmin hylätyt tekoälykasvot:
+- `maalehti-tza-musiikki-1-r20260907-v2` → `maalehti-tza-musiikki-1`: taarab-muusikot selin, ajan soittimet ja gramofoni; Sitiä ei esitetä tunnistettavana henkilönä.
+- `maalehti-dza-kirjallisuus-3-r20260907-v2` → `maalehti-dza-kirjallisuus-3`: tyhjä työhuone, kirjat ja vihreä akateeminen takki. HUOM: Assia Djebar kieltäytyi habit vert -asusta. Kuvateksti nimeää takin akatemian symboliksi, ei Djebarin omaksi vaatteeksi; säilytä tämä erottelu. Académie françaisen oma lähde on liitteessä.
+
+Muut 26 kuvaa käsittelevät Panaman ruokaa, musiikkia ja nuchu-esineitä, Etiopian tanssia, parannuskääröjä ja kalenteria sekä Nigerian, Ghanan, Senegalin, Guatemalan ja Nicaraguan perinteitä. Myös sabar-rummutuksen ja nicaragualaisen viittomakielen leveämmät v2-kuvat ovat mukana; canonicalId on erikseen annettu. Vanhoja kuvatiedostoja ei ole ylikirjoitettu.
+
+FJI:n ja SLB:n uudet caption-rivit sanasta sanaan:
+- elain-fji-fidzinleguaani-r20260907-v3: Nauhaleguaani (Brachylophus fasciatus) lehvästössä Lau-saarten ympäristöä mukailevassa kuvituksessa.
+- elain-slb-ducorpsinkakadu-r20260907-v1: Ducorpsinkakadu pitää nokassaan pyöreää pähkinää Salomonsaarten metsäympäristöä mukailevassa kuvituksessa.
+
+Vastaanotettu myös48 uutta miniatyyriä Limasta, Quitosta, Port Moresbystä, Manausista, São Paulosta ja Salvadorista. Ne kirjattiin aiemman jonon perään; tähdet ohjaavat uuden erän sisäistä järjestystä. Kaikkiaan649 uniikkia tilattua kuvaa, revisiot erikseen.
+
+Rekonstruktiot, keksityt kirjankannet ja käsikirjoitusten kuvitusmerkit on kerrottu kuvateksteissä. Tarkistusta tai uusintaa odottavat henkilöt ja esineet eivät ole tässä toimituksessa. Kuittaa käyttöön otetut ID:t sekä julkaistu peliversio; toimitusta ei vielä merkitä pelissä näkyväksi.
+
+---
+
 ## 2026-09-07 — KUVATOIMITUS → FABLE: 13 miniatyyriä valmiina + tilaus- ja kytkentäkuittaus
 
 Toimitan 13 rootin henkilökohtaisesti tarkastamaa miniatyyriä. Tarkat URL:t, kanoniset ID:t, kuvatekstit, lähteet, generointikehotteet ja SHA:t ovat liitteessä `posti/kuvatoimitus-miniatyyrit-13-20260907.json`. Kaikki 13 ovat R2:ssa ja julkisella GET-latauksella tavutarkistettuja, 1024 × 1024 ja aidosti läpinäkyviä. Säilytä kuvatekstit ja lähdemerkintä. Korjatut versiot valittu todellisten rakennuskuvien perusteella; vanhat säilytetty tuotantoarkistossa.

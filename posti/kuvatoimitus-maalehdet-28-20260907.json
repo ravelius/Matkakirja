@@ -1,0 +1,842 @@
+{
+  "createdAt": "2026-09-07T06:28:53.838165+00:00",
+  "message": "28 root-tarkastettua maalehtikuvaa, mukana kaksi kiireellistä toimituksellista korjausta.",
+  "items": [
+    {
+      "id": "maalehti-pan-ruoka-3",
+      "canonicalId": "maalehti-pan-ruoka-3",
+      "fileName": "maalehti-pan-ruoka-3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Panamalaista cevicheä valmistetaan limetin ja yrttien kanssa toritiskillä — lähteisiin perustuva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-pan-ruoka-3.jpg",
+      "sha256": "0b6e9bae9a597a3df8fa0b832e2ad848aa964c5411b3879313a118296ebe7359",
+      "bytes": 354315,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a 1536x1024 landscape editorial documentary image for a Finnish travel journal. Photographic realism, natural light, tactile detail, restrained color, no text, no logos, no border. Loose composition: keep all essential people, objects, instruments and limbs within the central 75 percent, with calm contextual space on every edge for a later 20 percent fade. A freshly prepared Panamanian ceviche de corvina in a simple glass bowl: small cubes of white corvina visibly cured in lime, finely chopped onion and cilantro, beside fresh limes on a modest Panama market counter; a cook’s hands finishing the dish. Food-documentary close scene, appetizing but authentic, not a luxury restaurant plate.",
+      "sources": [
+        "https://coiba.org.pa/wp-content/uploads/2024/02/Estacion-Coiba-AIP-Fishery-and-conservation-implications-of-molecular-characterization-and-traceability-of-ceviche-samples-from-Pacific-Panama.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Complete main bowl, fish and citrus; Pacific Panama ceviche research documents local preparation and species context. Generated scene does not identify fish species from visible chunks."
+    },
+    {
+      "id": "maalehti-pan-musiikki-0",
+      "canonicalId": "maalehti-pan-musiikki-0",
+      "fileName": "maalehti-pan-musiikki-0.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Tamborito-ryhmä soittaa caja-, pujador- ja repicador-rumpuja kyläpihan tanssissa — lähteisiin perustuva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-pan-musiikki-0.jpg",
+      "sha256": "e502702e974a4060abd93ef7d54041c1ff81f39920d9908a7c0f69b707b82851",
+      "bytes": 445235,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1536x1024 landscape documentary photograph designed for a safe later 4:3 center crop. A Panamanian tamborito ensemble in a shaded village courtyard with exactly the traditional three percussion instruments clearly distinguished: one short cylindrical double-headed caja drum positioned horizontally and struck with two sticks; one taller upright pujador hand drum for the low pulse; one taller upright repicador hand drum for the higher improvising voice. A singer-dancer responds to the rhythm. Authentic Panamanian clothing, believable hands and drum construction. Every person, foot and complete drum must fit within central 55%, at least 22% calm courtyard on all edges. No guitar, accordion, modern drum kit, extra drums, cropped body, text or logo.",
+      "sources": [
+        "https://portal.diaadia.com.pa/archivo/06262008/etc02_print.html",
+        "https://sicultura.micultura.gob.pa/manifestaciones-culturales/tecnicas-de-confeccion-de-tambores-congos-de-colon"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root verified caja horizontal and two upright drums; contemporary DiaaDia account names pujador, repicador and caja; whole main musicians/instruments."
+    },
+    {
+      "id": "maalehti-pan-musiikki-2",
+      "canonicalId": "maalehti-pan-musiikki-2",
+      "fileName": "maalehti-pan-musiikki-2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Congo-perinteen tanssijat ja rumpalit esiintyvät Portobelon karibialaisessa rantaympäristössä — lähteisiin perustuva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-pan-musiikki-2.jpg",
+      "sha256": "01e76d89866e57f4a4430891014021713a55f03f21617d6616063fae090f6883",
+      "bytes": 453633,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Completely new wide Portobelo Congo-tradition documentary scene with complete drummer and three dancers, all limbs/instrument fade-safe.",
+      "sources": [
+        "https://sicultura.micultura.gob.pa/manifestaciones-culturales/festival-de-la-pollera-congo-y-de-mascaras-de-diablos-congos"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "New v2: complete multi-colour Congo dancers and drummer in coastal Portobelo-inspired setting. Ministry registry confirms colourful floral polleras and dance with drums. Not an exact documented festival instance."
+    },
+    {
+      "id": "maalehti-pan-musiikki-3",
+      "canonicalId": "maalehti-pan-musiikki-3",
+      "fileName": "maalehti-pan-musiikki-3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Música típica -yhtye soittaa haitaria ja lyömäsoittimia Panaman maaseudun yhteisöjuhlassa — lähteisiin perustuva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-pan-musiikki-3.jpg",
+      "sha256": "958cf7ee922433e1ed4bb4ac46df72e25fdc731a6ecda9eda45f9a4cfacd32a8",
+      "bytes": 665641,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1536x1024 landscape documentary photograph designed for a safe later 4:3 center crop. A Panamanian música típica popular ensemble performing at a rural community gathering, with a diatonic button accordion central and accurate, percussion and dancing listeners. The two foreground dancers must be shown head-to-toe with both feet fully visible and generous ground below; every musician, instrument, hand and foot within the central 55%, at least 22% calm environment at every edge. Natural candid emotion and believable instruments, Panama setting. No cropped body, text, logo, border or stage spectacle.",
+      "sources": [
+        "https://sertv.gob.pa/produccion-nacional/fiesta-de-acordeones/",
+        "https://academic.oup.com/book/36157/chapter-abstract/314431948"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Whole accordion-led típica ensemble and feet; SERTV accordion festival source read by root."
+    },
+    {
+      "id": "maalehti-pan-kasityot-3",
+      "canonicalId": "maalehti-pan-kasityot-3",
+      "fileName": "maalehti-pan-kasityot-3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Guna-käsityöläinen avaa nyytin, jossa on käsin veistettyjä nuchukana-puuhahmoja — lähteisiin perustuva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-pan-kasityot-3.jpg",
+      "sha256": "3581bec5ca2676d0b854829346b1d45f4ba30faf3d48f96c1e22837bc16f019b",
+      "bytes": 505868,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Completely new Guna nuchukana still life using root-supplied Maxwell Museum real object photograph as referenced image; three slender elongated restrained carvings.",
+      "sources": [
+        "https://maxwellmuseum.unm.edu/maxwell-at-home/objects/object-monday-guna-nuchu"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "New v2 slender nuchu figures compared personally against actual Maxwell Museum figure photograph; illustrated Guna craft practice, not copies of one catalogued object."
+    },
+    {
+      "id": "maalehti-eth-musiikki-3",
+      "canonicalId": "maalehti-eth-musiikki-3",
+      "fileName": "maalehti-eth-musiikki-3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Eskista-tanssijat liikuttavat hartioita, rintakehää, päätä ja niskaa rummun rytmissä — lähteisiin perustuva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-eth-musiikki-3.jpg",
+      "sha256": "bc96dba185ac735b5ced725f8ffaec37a0a6861b7db1e462ad2a924af4b6ac07",
+      "bytes": 435262,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a 1536x1024 landscape editorial documentary image for a Finnish travel journal. Photographic realism, natural light, tactile detail, restrained color, no text, no logos, no border. Loose composition: keep all essential people, objects, instruments and limbs within the central 75 percent, with calm contextual space on every edge for a later 20 percent fade. A lively but natural documentary photograph of Ethiopian dancers performing eskista in a communal indoor gathering: feet nearly planted while shoulders, chest, head and neck drive rapid rhythmic movement, drummer visible, expressions focused and joyful. Authentic Ethiopian clothing without theatrical stereotype; motion conveyed with slight natural blur but faces clear.",
+      "sources": [
+        "https://www.tandfonline.com/doi/abs/10.1080/01472526.2011.615231",
+        "https://cap.ucla.edu/sites/default/files/2023-09/ethiocolor.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Shoulder/neck/chest movement and whole principal dancers; UCLA Ethiocolor programme read by root describes eskista and instruments."
+    },
+    {
+      "id": "maalehti-eth-kirjat-2",
+      "canonicalId": "maalehti-eth-kirjat-2",
+      "fileName": "maalehti-eth-kirjat-2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Däbtära valmistaa parannuskääröä pöydän ääressä etiopialaista käsikirjoitusperinnettä mukailevassa kuvituksessa — lähteisiin perustuva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-eth-kirjat-2.jpg",
+      "sha256": "9f1ebcec7c061328eebdc477cab834ed35b83221c6bfd0a593c0776e10323297",
+      "bytes": 442920,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Create an entirely new landscape 4:3 documentary-style photograph for a cultural game article about Ethiopian healing scrolls. A mature Ethiopian däbtära in a simple white cotton shawl sits quietly at a low wooden writing table in a modest plaster-walled room. The key subject is ONE slender parchment healing scroll lying HORIZONTALLY ACROSS THE TABLE: about 18 cm wide, with only a 70 cm middle section unrolled and BOTH ENDS curled into small visible parchment rolls. The left and right paper rolls are clearly inside the frame and resting on the table, not held vertically. The visible parchment bears fine red-and-black handwritten Ge'ez-like lines and one simple traditional protective angel motif; at this natural viewing distance the letters are too small to read. The man is making a small careful ink mark with a reed pen, other hand gently resting beside the scroll. A tiny ceramic ink cup near the hand. Photograph from several steps back, three-quarter side view. The complete table, scroll rolls, pen, hands and the man's full head occupy only the central two thirds; broad calm wall and floor margins for later transparent edge fade. Beautiful quiet window light, believable skin texture and old parchment, natural contrast and lens detail. No enormous hanging scroll, no upright wall scroll, no floor-length parchment, no cropped object, no modern objects, no printed labels, no watermark, no painterly or CGI finish.\n",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/307601",
+        "https://www.metmuseum.org/essays/ethiopian-healing-scrolls"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root v5 entire person/scroll/worktable visible. Met essay read: däbtära, parchment, red/black ink and talismanic figures; generated marks not an authenticated Ge’ez prayer."
+    },
+    {
+      "id": "maalehti-eth-kirjat-3",
+      "canonicalId": "maalehti-eth-kirjat-3",
+      "fileName": "maalehti-eth-kirjat-3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Etiopian kalenterin kaksitoista 30 päivän kuukautta ja lyhyt kolmastoista kuukausi havainnollistuvat symbolisessa asetelmassa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-eth-kirjat-3.jpg",
+      "sha256": "7f7cd0fee59148b939905d5bb6517c69692f093b4e28a1fdc17e232714afe17e",
+      "bytes": 389918,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1536x1024 landscape documentary still life designed for safe later 4:3 center crop. Show a real Ethiopian calendar manuscript page from a respectful viewing distance on a wooden table, with its traditional Ge’ez calendar grid and illumination visible as a coherent page but too small for invented legible text. A small separate set of five counting stones beside the page subtly represents the short Pagume month; do not create rows or groups for all months. Warm September new-year dawn through a distant doorway. Keep manuscript, stones and all edges of the book within central 55%, broad empty table and room around it. No 13 or 14 stick groups, no modern printed calendar, no readable fake writing, no cropped book, no text overlay or border.",
+      "sources": [
+        "https://www.unito.it/sites/default/files/2026-06/destinazione_erasmus_2026_etiopia.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed symbol arrangement; University of Turin guide gives12x30 plus5/6days. Five stones illustrate a common year, not everyyear; not an actual calendar artifact."
+    },
+    {
+      "id": "maalehti-tza-musiikki-1-r20260907-v2",
+      "canonicalId": "maalehti-tza-musiikki-1",
+      "fileName": "maalehti-tza-musiikki-1-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "1920-luvun taarab-yhtye soittaa Stone Townin sisäpihalla gramofonin vieressä. Gramofoni kuuluu ajan kuuntelukulttuuriin; kuva ei väitä sen tallentavan tätä esitystä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-tza-musiikki-1-r20260907-v2.jpg",
+      "sha256": "2d4ebf807605c589476472858f8079c2f9d1726d3986d05f862a21c3b34e46cf",
+      "bytes": 624853,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja country feature, 4:3 landscape historical photograph. Zanzibar in the 1920s: a taarab ensemble performing in a shaded Stone Town courtyard beside an early acoustic gramophone. Show the musicians only from behind or at distant side angles so no identifiable or invented face is visible. Include a seated qanun player, oud, violin, frame drum and small percussion; the gramophone is simply present beside the performance and is not claimed to record it. Entire ensemble and all complete instruments occupy the central 55–60 percent with generous clear space at every edge. Warm coastal morning light, crisp period camera realism, historically plausible Swahili clothing and architecture. No named person, no visible face, no recording microphone, no readable text, no labels, no logos, no watermark, no illustration.\n",
+      "sources": [
+        {
+          "url": "https://eprints.soas.ac.uk/29683/1/10752655.pdf",
+          "claimRead": "SOAS-tutkimus kertoo Sansibarin taarab-klubeista sekä Mbarukin ja Siti binti Saadin 1920-luvulla perustamasta taarab-ryhmästä; se taustoittaa aikakauden ja paikan.",
+          "visualEvidence": "Tutkimustekstiä käytettiin historiallisen miljöön ja 1920-luvun yhtyetoiminnan varmentamiseen; sivu ei ole valokuva juuri tästä lavastetusta ryhmästä."
+        },
+        {
+          "url": "https://archivi.cini.it/musicacomparata/detail/IT-IMC-SN0002-000350/taarab-1-the-music-of-zanzibar.html?lang=en",
+          "claimRead": "Fondazione Giorgio Cinin arkistotietue luettelee Sansibarin taarab-yhtyeen soittimiksi kanunin, viulun, udin ja daf-kehärummun.",
+          "visualEvidence": "Kuvassa näkyvät kanun, viulu, ud ja kehärumpu tunnistettavina; esitys on lähteisiin perustuva rekonstruktio, ei dokumenttikuva."
+        },
+        {
+          "url": "https://journal.ru.ac.za/index.php/africanmusic/article/download/1722/839/841",
+          "claimRead": "International Library of African Music -julkaisun arvio kuvaa Gramophone Companyn 1928 ja Columbian 1930 tallenteita sekä Siti binti Saadin miesmuusikoista koostunutta yhtyettä.",
+          "visualEvidence": "Gramofoni toimii aikakauden äänilevykulttuurin symbolina. Sitä ei esitetä mikrofonina tai tämän esityksen tallennuslaitteena."
+        }
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": null
+    },
+    {
+      "id": "maalehti-dza-kirjallisuus-3-r20260907-v2",
+      "canonicalId": "maalehti-dza-kirjallisuus-3",
+      "fileName": "maalehti-dza-kirjallisuus-3-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Tyhjä kirjailijan työpöytä, käsikirjoitus ja kirjat viittaavat Assia Djebarin ranskan- ja arabiankieliseen kulttuuripiiriin. Vihreä akateemikon takki on Académie française -jäsenyyden symboli, ei Djebarin omaksi väitetty vaate.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-dza-kirjallisuus-3-r20260907-v2.jpg",
+      "sha256": "625db02119fe272d0340874381e42040210802ed2624a8311bc5ce27ddf982a2",
+      "bytes": 483250,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: product-mockup. Asset type: Matkakirja country feature, 4:3 landscape editorial still life. An empty writer's desk evoking Algerian novelist Assia Djebar without depicting any person: an open handwritten manuscript with lines rendered as non-readable ink texture, several closed French- and Arabic-language books with their spines turned away or completely blank, a fountain pen, reading glasses, and an Académie française habit vert jacket draped fully over the back of an empty wooden chair, its green cloth and restrained gold-embroidered olive-leaf trim clearly visible. North African and Parisian literary atmosphere, warm window light, sharp camera-like material texture. The entire desk, chair and complete jacket occupy the central 55–60 percent with generous space at every edge. No human, no face, no portrait, no readable book titles, no letters or fake text, no logos, no watermark, no illustration.\n",
+      "sources": [
+        {
+          "url": "https://www.academie-francaise.fr/les-immortels/assia-djebar",
+          "claimRead": "Académie française kertoo Assia Djebarin olleen Algerian Cherchellissä syntynyt kirjailija, kirjoittaneen ranskaksi ja tulleen valituksi tuolille 5 vuonna 2005.",
+          "visualEvidence": "Tyhjä pöytä, käsikirjoitus ja ranska/arabiakirjat ovat symbolinen kirjallinen asetelma; mikään esine ei väitä olevansa Djebarin oma."
+        },
+        {
+          "url": "https://www.academie-francaise.fr/sites/academie-francaise.fr/files/23_02_2025_dossier_les_femmes_a_lacademie2.pdf",
+          "claimRead": "Académie française toteaa nimenomaisesti, että Assia Djebar kieltäytyi käyttämästä habit vert -asua.",
+          "visualEvidence": "Kuvan vihreä akateemikon takki on vain instituution jäsenyyden toimituksellinen symboli. Se on tietoinen poikkeama eikä sitä saa kuvatekstissä tunnistaa Djebarin omaksi puvuksi."
+        },
+        {
+          "url": "https://catalogue.bnf.fr/ark%3A/12148/cb46747389f",
+          "claimRead": "BnF:n tietue dokumentoi Assia Djebariin liittyvän keskeneräisen käsikirjoituksen tutkimusjulkaisun ja Les larmes d’Augustin -tekstin facsimilen.",
+          "visualEvidence": "Avoimen käsikirjoituksen teksti on tarkoituksella lukukelvotonta mustejälkeä eikä jäljittele todellista käsikirjoitusta."
+        }
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": null
+    },
+    {
+      "id": "maalehti-nga-historia-2",
+      "canonicalId": "maalehti-nga-historia-2",
+      "fileName": "maalehti-nga-historia-2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Pieni käsikirjoitus, kirjoitustarvikkeet ja päähine Nigerian ajami-perinnettä mukailevassa asetelmassa. Kirjoitus on kuvitusta.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nga-historia-2.jpg",
+      "sha256": "09bafd67088b2d83c8f0e60271fdb2108ae4a6fa4e3e9d8c14f3d74d170d101a",
+      "bytes": 463766,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Wide 4:3 overhead museum still life of a small open nineteenth-century Hausa Ajami manuscript associated with Nana Asma’u, one woven northern Nigerian cap and one reed pen, all arranged as a compact group occupying only the central 55 percent of a large plain indigo cloth. Every page corner, cap edge and pen tip at least 18 percent from frame edges. Warm sharp camera photograph, manuscript writing small and not asserted as a facsimile, no watermark or CGI.\n",
+      "sources": [
+        "https://www.si.edu/object/some-areas-location-classification-and-cataloguing-arabic-and-ajami-manuscripts-nigeria-sokoto-kano:siris_sil_748365"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-nga-historia-2",
+        "topic": "Nigerian Hausa Ajami manuscripts",
+        "url": "https://www.si.edu/object/some-areas-location-classification-and-cataloguing-arabic-and-ajami-manuscripts-nigeria-sokoto-kano:siris_sil_748365",
+        "readClaim": "Smithsonian Libraries catalogues a 2002 study of Arabic and Ajami manuscripts in Sokoto, Kano, Zaria and Ibadan, Nigeria.",
+        "imageMatch": "The generated still life contains a small manuscript as requested; the source record supports Nigerian Ajami manuscript context but does not authenticate the generated page layout or the adjacent hat.",
+        "limitations": "Catalog record, not a digitized manuscript-object photograph. The hat must remain an ordinary woven hat in the caption; it is not verified as a malfa."
+      }
+    },
+    {
+      "id": "maalehti-nga-musiikki-2",
+      "canonicalId": "maalehti-nga-musiikki-2",
+      "fileName": "maalehti-nga-musiikki-2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Laaja 1980-luvun juju-yhtye kitaroineen ja lyömäsoittimineen tummalla konserttilavalla — lähteisiin perustuva kuvitus, muusikot ovat kuvitteellisia.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nga-musiikki-2.jpg",
+      "sha256": "5ca5ab4ee277769d88737150aeb0391dc7fc23c85e43ef60e216ba6ad4b5cbde",
+      "bytes": 315814,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Very wide 4:3 archival concert photograph of King Sunny Ade-style 1980s Nigerian juju ensemble, the entire band and every complete guitar inside the middle 55 percent of the frame, with abundant empty dark stage on left and right and empty air above. Full instruments never cut by edges. Warm analog concert film, no readable logos, watermark, illustration or CGI.\n",
+      "sources": [
+        "https://www.grammy.com/artists/king-sunny-ade/54/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-nga-musiikki-2",
+        "topic": "King Sunny Ade Grammy nomination",
+        "url": "https://www.grammy.com/artists/king-sunny-ade/54/",
+        "readClaim": "The Recording Academy lists King Sunny Ade's Synchro System as a nominee at the 26th Annual Grammy Awards in 1984 and records two career nominations.",
+        "imageMatch": "The generated 1980s-style juju ensemble visually represents the musical setting; the page confirms the artist and nomination, not the exact anonymous stage composition or instruments shown.",
+        "limitations": "The official page has an artist portrait rather than a period full-band reference. Candidate is an illustration, not documentary evidence of the nominated performance."
+      }
+    },
+    {
+      "id": "maalehti-nga-kirjallisuus-0",
+      "canonicalId": "maalehti-nga-kirjallisuus-0",
+      "fileName": "maalehti-nga-kirjallisuus-0.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Amos Tutuolan The Palm-Wine Drinkard -romaanin yliluonnollisen matkan innoittama kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nga-kirjallisuus-0.jpg",
+      "sha256": "defb04bc65e934f7162ce4d32c9c59e38e721b13afe86cf2cba2dbeac5de48d5",
+      "bytes": 543256,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Wide 4:3 cinematic photographic illustration inspired by Amos Tutuola's 1952 novel The Palm-Wine Drinkard: a small solitary Yoruba traveler in simple mid-century clothing enters a dense uncanny palm forest, following the faint lantern of his dead palm-wine tapster; gourds hang from a palm and shadows suggest impossible forest spirits without showing monsters clearly. Dreamlike practical set photography, emotionally curious rather than horror, figures small and central with 20 percent margins. No book cover, text, colonial caricature, watermark, drawn illustration or CGI.\n",
+      "sources": [
+        "https://search.worldcat.org/title/The-palm-wine-drinkard-and-his-dead-palm-wine-tapster-in-the-Deads%27-Town/oclc/3654167"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-nga-kirjallisuus-0",
+        "topic": "The Palm-Wine Drinkard",
+        "url": "https://search.worldcat.org/title/The-palm-wine-drinkard-and-his-dead-palm-wine-tapster-in-the-Deads%27-Town/oclc/3654167",
+        "readClaim": "WorldCat identifies Amos Tutuola as author, Faber and Faber as publisher, and 1952 as publication year; its summary describes the drinkard's search for his dead palm-wine tapster through a supernatural land of the dead and connects the work with Yoruba folktales.",
+        "imageMatch": "The generated palm-grove fantasy is consistent with the supernatural quest atmosphere, but no single invented forest scene can be claimed as a documented scene or original illustration from the book.",
+        "limitations": "WorldCat supplies bibliographic data, summary and a cover thumbnail. It does not verify the generated landscape, figures or props. Caption must call it a source-grounded imaginative scene."
+      }
+    },
+    {
+      "id": "maalehti-nga-kirjallisuus-3",
+      "canonicalId": "maalehti-nga-kirjallisuus-3",
+      "fileName": "maalehti-nga-kirjallisuus-3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Onitshan torikirjallisuutta mukaileva pöytä kuvitteellisine vihkokansineen ja painokoneineen — kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nga-kirjallisuus-3.jpg",
+      "sha256": "9f54789ea9ef618c9295d35093793d19c3839bcc634b2e4db3542d80c100e148",
+      "bytes": 537964,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Wide 4:3 documentary still life of 1950s Onitsha market literature: compact tabletop group of small pamphlets and a complete hand press, camera pulled far back so the full press including its long lever and all book edges occupy only central 55 percent, abundant bare tabletop around every side. Covers use abstract unreadable marks, sharp camera realism, no watermark or CGI.\n",
+      "sources": [
+        "https://www.loc.gov/aba/publications/Archived-LCSH34/C.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-nga-kirjallisuus-3",
+        "topic": "Onitsha market literature",
+        "url": "https://www.loc.gov/aba/publications/Archived-LCSH34/C.pdf",
+        "readClaim": "The Library of Congress Subject Headings explicitly treats Onitsha market literature as Nigerian market literature and a form of Nigerian chapbooks.",
+        "imageMatch": "The generated market table with inexpensive fictional pamphlets and a period printing press is compatible with chapbook production, but the source has no photographs and does not prove the candidate's invented covers, press model or stall arrangement.",
+        "limitations": "This is an authoritative terminology source, not an illustrated production-history source. Caption must say fictional pamphlet covers and a printing press, not identify a specific real title or a hand press."
+      }
+    },
+    {
+      "id": "maalehti-gha-historia-0",
+      "canonicalId": "maalehti-gha-historia-0",
+      "fileName": "maalehti-gha-historia-0.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kamelikaravaani muinaisen Ghanan valtakunnan kulta- ja suolakaupan piirissä — historiallinen kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-gha-historia-0.jpg",
+      "sha256": "49477abf15f104cff3dcfd1d647fe407c596791b72b5c84f9d3c70e94b2f000d",
+      "bytes": 878988,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Wide 4:3 historically grounded cinematic documentary reconstruction of a medieval Sahel caravan trading town evoking the old Ghana Empire: mud-brick compounds and market court, pack camels arriving with salt slabs while traders weigh small gold dust packets on a balance. Dry savanna edge rather than dunes, no modern borders or map, no European architecture. People and camels small within central 60 percent, 20 percent breathing room, warm camera-like realism, no battle, text, watermark, illustration or CGI.\n",
+      "sources": [
+        "https://www.metmuseum.org/de/exhibitions/sahel-art-empire-sahara/inside-the-exhibition"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-gha-historia-0",
+        "topic": "Ancient Ghana and trans-Saharan caravan trade",
+        "url": "https://www.metmuseum.org/de/exhibitions/sahel-art-empire-sahara/inside-the-exhibition",
+        "readClaim": "The Metropolitan Museum states that ancient Ghana controlled access to Bambuk gold producers, allied with Berber/Sanhaja suppliers of salt, taxed gold-for-salt exchange, and had rounded mud royal structures plus a stone-mosque merchant district at Kumbi Saleh. It also states that Sahara crossings used camel caravans and took about two months.",
+        "imageMatch": "The generated Sahel caravan-city reconstruction uses camels, gold/salt trade props and earthen architecture consistent with the article's description; it is not an image of modern Ghana and not an authenticated reconstruction of a specific Kumbi Saleh street.",
+        "limitations": "The current article images contextualize Sahel empires and objects but do not provide an exact photographic view of eleventh-century Kumbi Saleh. Candidate must be labelled historical reconstruction."
+      }
+    },
+    {
+      "id": "maalehti-gha-musiikki-0",
+      "canonicalId": "maalehti-gha-musiikki-0",
+      "fileName": "maalehti-gha-musiikki-0.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Varhaisen ghanalaisen highlife-tanssiorkesterin esiintyminen 1920-luvun hengessä — historiallinen kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-gha-musiikki-0.jpg",
+      "sha256": "28787cb2a7fc3c348aea51d2c6013bbec410d7179e6cc7c5ff6d3d618bc1bf45",
+      "bytes": 446743,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Wide 4:3 sharp 1920s archival-style photograph of an early coastal Ghanaian highlife dance orchestra performing in an Accra social club: seated African musicians with violin, brass horn, acoustic guitar, banjo, small drums and upright bass, couples dancing in the background. Formal period suits and dresses, no modern microphones or electric instruments. Faces small in central 60 percent, 20 percent edge margins, authentic monochrome grain, no text, watermark, illustration or CGI.\n",
+      "sources": [
+        "https://www.si.edu/object/siris_sil_1090467"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-gha-musiikki-0",
+        "topic": "Early Ghanaian highlife",
+        "url": "https://www.si.edu/object/siris_sil_1090467",
+        "readClaim": "Smithsonian Libraries describes John Collins's Highlife Giants as covering West African dance-band pioneers from the 1920s onward and says highlife blended European and African-American styles with traditional African patterns, shaping national identity in Ghana and Nigeria.",
+        "imageMatch": "The generated 1920s Accra club orchestra is a plausible period reconstruction of the dance-band context, but the catalog page does not verify the specific anonymous musicians, venue, exact horn lineup or clothing.",
+        "limitations": "Bibliographic catalog page with a book-cover image, not a primary period band photograph. Candidate remains a historical illustration; no named band or documented performance should be asserted."
+      }
+    },
+    {
+      "id": "maalehti-gha-musiikki-1",
+      "canonicalId": "maalehti-gha-musiikki-1",
+      "fileName": "maalehti-gha-musiikki-1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "1950-luvun ghanalainen highlife-tanssiorkesteri soittimineen — historiallinen kuvitus, muusikot ovat kuvitteellisia.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-gha-musiikki-1.jpg",
+      "sha256": "2ae330d425e29f94635da496971dc7c4cfa50aec8487ee3d67dfd31e2155ef14",
+      "bytes": 437582,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Very wide 4:3 faded 1950s archival color photograph of a Ghanaian highlife dance orchestra on an Accra stage, camera pulled back so every musician and the complete guitar neck, brass instruments, upright bass and drum kit occupy only central 55 percent. At least 18 percent empty stage margin left and right and air above heads, no instrument cut by frame, no readable logo, watermark or CGI.\n",
+      "sources": [
+        "https://www.si.edu/object/siris_sil_1090467"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-gha-musiikki-1",
+        "topic": "E. T. Mensah orchestra",
+        "url": "https://www.si.edu/object/siris_sil_1090467",
+        "readClaim": "Smithsonian Libraries' record for John Collins's Highlife Giants identifies E. T. Mensah among West African dance-band pioneers covered from the 1920s onward and describes highlife as a blend of European and African-American styles with African patterns.",
+        "imageMatch": "The generated 1950s horn-led dance orchestra is compatible with a highlife dance-band setting.",
+        "limitations": "The catalog page is a book record, not an inspected period photograph of Mensah's Tempos. It does not authenticate the anonymous musicians, exact horn lineup, venue or Armstrong connection shown or implied; caption must remain a highlife-era reconstruction rather than a documented E. T. Mensah performance."
+      }
+    },
+    {
+      "id": "maalehti-gha-musiikki-3",
+      "canonicalId": "maalehti-gha-musiikki-3",
+      "fileName": "maalehti-gha-musiikki-3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Azonton arkityötä mukailevan liikekielen innoittama tanssiasento — kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-gha-musiikki-3.jpg",
+      "sha256": "d4d984e5c3d785c44e5ac3aa37b13563bca551f612a1304be9a4568871eb1d13",
+      "bytes": 296178,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Wide 4:3 high-contrast photographic silhouette of a Ghanaian highlife dancer demonstrating a playful everyday-work gesture: one arm gently smoothing an imaginary cloth while the other holds an imaginary steering wheel, knees bent in rhythmic motion. Single full body against warm backlit club haze, no identifiable face, feet and head safely within central 60 percent and 20 percent clear margins. Camera-like analog photograph, no costume fantasy, props, text, watermark, illustration or CGI.\n",
+      "sources": [
+        "https://www.cambridge.org/core/journals/dance-research-journal/article/invented-dances-or-how-nigerian-musicians-sculpt-the-body-politic/0688090BEA1A07D979DDAE1D4712B935/share/7c644c8e97b24d6f6cf1250f038c3766b22b677c"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-gha-musiikki-3",
+        "topic": "Azonto",
+        "url": "https://www.cambridge.org/core/journals/dance-research-journal/article/invented-dances-or-how-nigerian-musicians-sculpt-the-body-politic/0688090BEA1A07D979DDAE1D4712B935/share/7c644c8e97b24d6f6cf1250f038c3766b22b677c",
+        "readClaim": "The peer-reviewed Dance Research Journal article identifies Azonto with Fuse ODG and Tiffany in Ghana, places it among post-1999 viral West African social dances, and discusses its cool, self-assured Accra-associated ethos and the relation of popular dance to everyday urban life.",
+        "imageMatch": "The generated anonymous silhouette using work-like gestures can illustrate Azonto's everyday urban vocabulary without claiming one codified step.",
+        "limitations": "The article does not provide a frame-by-frame authoritative pose guide and does not verify the image's specific ironing or driving gesture. Caption must describe an Azonto-inspired everyday-work gesture, not name a definitive canonical move."
+      }
+    },
+    {
+      "id": "maalehti-gha-tavat-0",
+      "canonicalId": "maalehti-gha-tavat-0",
+      "fileName": "maalehti-gha-tavat-0.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Ghanalaisen kahdeksannen päivän nimeämisjuhlan perhepiiriä mukaileva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-gha-tavat-0.jpg",
+      "sha256": "981cbe4d21f1e8ecde0a0d56baab43998bcda53c99ba226b4933f4c9611062f7",
+      "bytes": 594753,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Wide 4:3 intimate documentary photograph of a Ghanaian Akan outdooring and naming ceremony on a baby's eighth day. A grandmother seated in a shaded family courtyard gently presents the fully clothed infant while parents and elders gather around; a small calabash of water rests nearby. Respectful contemporary traditional dress, warm morning light, emotional family attention. All heads and infant inside central 60 percent with 20 percent edge room. No baptismal church setting, posed studio look, text, watermark, illustration or CGI.\n",
+      "sources": [
+        "https://ugspace.ug.edu.gh/bitstreams/5b8374d5-1ac4-4acc-9f19-5df00ce4d842/download"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-gha-tavat-0",
+        "topic": "Ghanaian eighth-day naming ceremony",
+        "url": "https://ugspace.ug.edu.gh/bitstreams/5b8374d5-1ac4-4acc-9f19-5df00ce4d842/download",
+        "readClaim": "A University of Ghana study states that a baby is normally not called by name before the eighth day, describes naming as initiation into society, and notes gifts from friends and relatives; it also explains that urban families may shift the event to a weekend.",
+        "imageMatch": "The generated family naming gathering is consistent with an eighth-day social ceremony.",
+        "limitations": "The study passage concerns Ewe naming practice and variation; it does not validate every prop, garment or family arrangement in the generated scene. Do not present one staged composition as universal Ghanaian practice or infer a day-name solely from visible objects."
+      }
+    },
+    {
+      "id": "maalehti-gha-tavat-2",
+      "canonicalId": "maalehti-gha-tavat-2",
+      "fileName": "maalehti-gha-tavat-2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Odwira-juhlan aluksi raivattavaa esi-isien polkua mukaileva kuvitus Akropongin perinteestä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-gha-tavat-2.jpg",
+      "sha256": "939f12ef86c87b92301684d610ede63721a35d97711e4553c172f3b4daff95a4",
+      "bytes": 1026668,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Wide 4:3 sharp documentary landscape photograph of the ceremonial path to Amanprobi at Akropong, Ghana, freshly cleared through lush Akuapem vegetation before the Odwira festival. The narrow reddish-earth footpath curves between cut grasses and tropical trees toward a quiet historic settlement edge; subtle bundles of cut herbs and branches show recent ritual preparation. No people, stools, shrine fantasy, signs, text or modern vehicles. Subject within central 60 percent, about 20 percent calm edge room, natural humid morning light, camera-like realism, no illustration or CGI.\n",
+      "sources": [
+        "https://ugspace.ug.edu.gh/bitstreams/74666bb3-de89-45cf-a2f0-cd5ca074454d/download"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-gha-tavat-2",
+        "topic": "Akropong Odwira cleared path",
+        "url": "https://ugspace.ug.edu.gh/bitstreams/74666bb3-de89-45cf-a2f0-cd5ca074454d/download",
+        "readClaim": "A University of Ghana study says Odwira lasts one week and that Monday is set aside to clear the path to the royal mausoleum so ancestors expected at the celebration can travel home safely.",
+        "imageMatch": "The generated empty cleared ceremonial path near Akropong directly illustrates the documented Monday action while appropriately omitting people.",
+        "limitations": "The source text does not provide an exact photograph or fixed visual design of the path. Vegetation, surface and route in the generated image are illustrative; caption should say Odwira's path-clearing ritual rather than identify a photographed real location."
+      }
+    },
+    {
+      "id": "maalehti-sen-elokuva-2",
+      "canonicalId": "maalehti-sen-elokuva-2",
+      "fileName": "maalehti-sen-elokuva-2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Touki Boukin tunnusomaisen, sarvilla koristellun moottoripyörän innoittama kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-elokuva-2.jpg",
+      "sha256": "70a7aebabd322ba6770a401870a67421fcdbe48f7d9b3ccd1aa86f9745e4cdb6",
+      "bytes": 561751,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Wide 4:3 cinematic color photograph of horn-adorned motorcycle parked on a dry Dakar road, visual atmosphere recalling Touki Bouki without copying a film frame or showing actors. Historically and materially accurate to the named country and subject. Keep every principal object, face, head and hand inside the central 60 percent with about 20 percent quiet margin on all edges. No readable text, logos, watermark, fantasy costume, painterly illustration or CGI.\n",
+      "sources": [
+        "https://www.criterion.com/current/posts/2988-touki-bouki-mamb-ty-and-modernity"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-sen-elokuva-2",
+        "topic": "Touki Bouki motorcycle",
+        "url": "https://www.criterion.com/current/posts/2988-touki-bouki-mamb-ty-and-modernity",
+        "readClaim": "Criterion's essay states that Mory rides through Dakar on a motorcycle decorated at the front with a steer's skull and long horns and at the back with a Dogon cross, using it in the film's treatment of Senegalese modernity.",
+        "imageMatch": "The generated horned motorcycle matches the source's defining front decoration and urban Dakar association.",
+        "limitations": "It is a source-grounded illustration, not a frame from the film. The exact motorcycle make, paint, street and rear Dogon cross must not be asserted unless visibly and separately verified."
+      }
+    },
+    {
+      "id": "maalehti-sen-luonto-3",
+      "canonicalId": "maalehti-sen-luonto-3",
+      "fileName": "maalehti-sen-luonto-3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Nuorten puiden istutusta Senegalin Sahel-alueen ennallistamistyön hengessä — kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-luonto-3.jpg",
+      "sha256": "6425ffcfdaac92440c59a2535d4b378e083b6a15695f56a113ae1773e0875a02",
+      "bytes": 655232,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Wide 4:3 sharp camera-like documentary photograph of long young tree planting line across Senegalese Sahel, mixed native saplings with guards and water basins, tiny workers in distance. Historically and materially accurate to the named country and subject. Keep every principal object, face, head and hand inside the central 60 percent with about 20 percent quiet margin on all edges. No readable text, logos, watermark, fantasy costume, painterly illustration or CGI.\n",
+      "sources": [
+        "https://www.fao.org/forestry-fao/39589-030d397647356ac306caf4a04bb83d88f.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-sen-luonto-3",
+        "topic": "Great Green Wall planting in Senegal/Sahel",
+        "url": "https://www.fao.org/forestry-fao/39589-030d397647356ac306caf4a04bb83d88f.pdf",
+        "readClaim": "FAO's Great Green Wall results document states that planting 11 million native trees contributed to restoration of 27,000 hectares of degraded land in Senegal.",
+        "imageMatch": "The generated young-tree planting row in a dry Sahel landscape illustrates Senegalese restoration activity.",
+        "limitations": "The source does not support a literal continuous wall and does not identify the candidate's exact location, species, spacing or date. Caption should describe a source-grounded illustration of restoration planting, not a photographed named plantation."
+      }
+    },
+    {
+      "id": "maalehti-gtm-tekstiilit-0",
+      "canonicalId": "maalehti-gtm-tekstiilit-0",
+      "fileName": "maalehti-gtm-tekstiilit-0.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kutoja käyttää guatemalalaista maya-selkävyökangaspuiden rakennetta mukailevaa kudontavälinettä — kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-gtm-tekstiilit-0.jpg",
+      "sha256": "ccbbff78c33b2499a46676eebe3d953af26d90111acf25ae8f1023a0e7f660cd",
+      "bytes": 778736,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Wide 4:3 sharp camera-like documentary photograph of Guatemalan Maya backstrap weaver seen from behind, warp tensioned from her waist belt to a tree, full loom geometry visible. Historically and materially accurate to the named country and subject. Keep every principal object, face, head and hand inside the central 60 percent with about 20 percent quiet margin on all edges. No readable text, logos, watermark, fantasy costume, painterly illustration or CGI.\n",
+      "sources": [
+        "https://www.si.edu/object/backstrap-loom-unfinished-weaving%3ANMAI_156423"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-gtm-tekstiilit-0",
+        "topic": "Guatemalan Maya backstrap loom",
+        "url": "https://www.si.edu/object/backstrap-loom-unfinished-weaving%3ANMAI_156423",
+        "readClaim": "Smithsonian NMAI catalogues a K'iche' Maya backstrap loom with unfinished weaving from Chichicastenango, Guatemala, collected in 1925-26, made of wood, bamboo, cotton yarn, hide and jute cord; the object photographs show the compact bars, warp and unfinished cloth.",
+        "imageMatch": "The generated rear-view weaver with warp running from a body strap to a fixed support follows the functional form and portable bar construction visible in the object record.",
+        "limitations": "The catalogued loom is displayed without a weaver and does not verify the generated person's clothing, posture, tree attachment or textile pattern. Candidate is a contemporary process illustration, not a photograph of NMAI_156423 in use."
+      }
+    },
+    {
+      "id": "maalehti-gtm-musiikki-0",
+      "canonicalId": "maalehti-gtm-musiikki-0",
+      "fileName": "maalehti-gtm-musiikki-0.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Perinteinen guatemalalainen marimba kurpitsaresonaattoreineen — museoesineeseen perustuva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-gtm-musiikki-0.jpg",
+      "sha256": "c5028de5e87ef69ee1e2892d6297eec7b7a68cfc408ae19a3671f2ba5d9710b8",
+      "bytes": 674194,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Wide 4:3 sharp camera-like documentary photograph of historic Guatemalan marimba with rows of wooden bars and gourd resonators suspended beneath, cathedral fiesta courtyard context. Historically and materially accurate to the named country and subject. Keep every principal object, face, head and hand inside the central 60 percent with about 20 percent quiet margin on all edges. No readable text, logos, watermark, fantasy costume, painterly illustration or CGI.\n",
+      "sources": [
+        "https://music.si.edu/object-day/gourd-marimba"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-gtm-musiikki-0",
+        "topic": "Traditional Guatemalan gourd marimba",
+        "url": "https://music.si.edu/object-day/gourd-marimba",
+        "readClaim": "Smithsonian Music identifies NMNH 15248 as a mid-19th-century marimba de tecomate from Tactic, Guatemala, made of wood, gourds, twine, native fibre and beeswax; its object image shows one gourd resonator suspended beneath each graded wooden bar.",
+        "imageMatch": "The generated traditional marimba's row of wooden bars with individual natural gourd resonators corresponds to the inspected museum object's defining structure.",
+        "limitations": "The source object does not verify the candidate's room, supporting frame, mallets, exact number of bars or any claimed first cathedral performance. Caption should identify a traditional tecomate-resonator marimba as an object-based illustration, not a documented historic performance."
+      }
+    },
+    {
+      "id": "maalehti-nic-historia-1",
+      "canonicalId": "maalehti-nic-historia-1",
+      "fileName": "maalehti-nic-historia-1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Suur-Nicoyan alueen moniväristä, eläinaiheista kolmijalkakeramiikkaa mukaileva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nic-historia-1.jpg",
+      "sha256": "ea1686bd71d19da0c88d0f881c5dc290341502ffccd4e43cfb64c99a29b43912",
+      "bytes": 308101,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Wide 4:3 sharp camera-like documentary photograph of one verified-style pre-Columbian Chorotega polychrome ceramic effigy vessel from Nicaragua, museum portrait with scale-free neutral background. Historically and materially accurate to the named country and subject. Keep every principal object, face, head and hand inside the central 60 percent with about 20 percent quiet margin on all edges. No readable text, logos, watermark, fantasy costume, painterly illustration or CGI.\n",
+      "sources": [
+        "https://repository.si.edu/server/api/core/bitstreams/fb2ec995-9284-4cee-aa1d-2415d95f70f3/content"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-nic-historia-1",
+        "topic": "Nicoyan effigy tripod pottery",
+        "url": "https://repository.si.edu/server/api/core/bitstreams/fb2ec995-9284-4cee-aa1d-2415d95f70f3/content",
+        "readClaim": "Smithsonian Bureau of American Ethnology survey states that Nicoya Polychrome occurs in southwestern Nicaragua and northwestern Costa Rica; common forms include tripod bowls with animal-head legs and modeled animal effigies, with polychrome designs outlined in black.",
+        "imageMatch": "The candidate's polychrome effigy tripod pot broadly matches the regional form and modeled-animal vocabulary.",
+        "limitations": "The study covers a family of wares rather than the exact generated specimen. Do not claim the invented pot is a real catalogued object or specifically Nicaraguan without an accession-level findspot.",
+        "decision": "caption correction; retain only as a regional source-grounded illustration"
+      }
+    },
+    {
+      "id": "maalehti-nic-musiikki-2",
+      "canonicalId": "maalehti-nic-musiikki-2",
+      "fileName": "maalehti-nic-musiikki-2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Palo de Mayo -juhla Nicaraguan Karibian rannikolla — perinteeseen perustuva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nic-musiikki-2.jpg",
+      "sha256": "da3e8198fe24aa051561bc910b3cc621477e778207d4960fdefbc96f182cafd3",
+      "bytes": 590404,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Wide 4:3 sharp camera-like documentary photograph of Palo de Mayo maypole in Bluefields, Nicaragua, tall pole covered in many bright ribbons in a Caribbean neighborhood square, no dancers. Historically and materially accurate to the named country and subject. Keep every principal object, face, head and hand inside the central 60 percent with about 20 percent quiet margin on all edges. No readable text, logos, watermark, fantasy costume, painterly illustration or CGI.\n",
+      "sources": [
+        "https://www.inc.gob.ni/origen-e-historia-del-palo-de-mayo/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-nic-musiikki-2",
+        "topic": "Palo de Mayo",
+        "url": "https://www.inc.gob.ni/origen-e-historia-del-palo-de-mayo/",
+        "readClaim": "Nicaragua's Institute of Culture publishes historian Johnny Hodgson's account of Bluefields seasonal festivities and Palo de Mayo history; the associated institutional images show Caribbean-coast street celebration, groups, bright clothing and ribboned festival decoration.",
+        "imageMatch": "The candidate's ribbon-decorated Maypole and celebratory group fit the festival's communal visual context.",
+        "limitations": "The article does not authenticate every costume, step or pole arrangement in the generated image. Do not describe a specific historic performance or fixed choreography.",
+        "decision": "candidate may proceed as contemporary illustration; root visual review still required"
+      }
+    },
+    {
+      "id": "maalehti-sen-musiikki-3-r20260907-v2",
+      "canonicalId": "maalehti-sen-musiikki-3",
+      "fileName": "maalehti-sen-musiikki-3-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kolme sabar-rumpalia soittaa pitkiä tappikiristeisiä rumpuja käsin ja kepillä senegalilaisessa kyläjuhlassa — lähteisiin perustuva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-musiikki-3-r20260907-v2.jpg",
+      "sha256": "8fcac2efdd781ddf7d94127f1b770ab84388b96a921b1e9e030bc87631582b21",
+      "bytes": 852545,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja country-feature image, 4:3 landscape. A Senegalese sabar drum ensemble at an outdoor community celebration, photographed from a wide three-quarter angle. Show three real sabar-family drums based on the inspected Wolof sabar museum reference: each has a long narrow tapered carved wooden shell, a single goatskin head, braided tension cords anchored by prominent wooden tuning pegs around the upper shell. Two seated drummers play each drum with one bare hand and one short slender stick, the characteristic sabar technique. The whole group and every complete drum occupy only the central 55–60 percent, with generous clear space at every edge. Warm late-afternoon natural light, sharp camera-like documentary texture, real Senegalese setting and clothing. No djembe, no goblet-shaped drum, no two-headed talking drum, no cropped sticks or hands, no readable text, no logos, no watermark, no illustration.\n",
+      "sources": [
+        "https://musicaparaver.org/instrumentos/sabar"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-sen-musiikki-3-v2",
+        "topic": "Wolof sabar",
+        "url": "https://musicaparaver.org/instrumentos/sabar",
+        "readClaim": "The collection page and inspected object photograph show a 1975-80 Wolof sabar: tall narrow wooden shell, single skin head, cord tension and projecting wooden pegs; the object measures 79 by 36 cm.",
+        "imageMatch": "V2 shows three complete tall peg-tensioned single-headed drums played with one hand and one stick; no djembe goblet profile.",
+        "limitations": "The performance scene is generated and the source is an object page, not documentation of this ensemble.",
+        "decision": "root visual PASS already reported"
+      }
+    },
+    {
+      "id": "maalehti-nic-historia-3-r20260907-v2",
+      "canonicalId": "maalehti-nic-historia-3",
+      "fileName": "maalehti-nic-historia-3-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kaksi nicaragualaista nuorta keskustelee viittomakielellä koulun aurinkoisella pihalla — lähteisiin perustuva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nic-historia-3-r20260907-v2.jpg",
+      "sha256": "aabdaec7d6b2e070833c5d1866d982e9723274db3204c8e11856316423c7d2f8",
+      "bytes": 530921,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja country feature, 4:3 landscape documentary photograph. Two Nicaraguan young adults using Nicaraguan Sign Language together in a sunlit school courtyard, shown in a relaxed mid-distance full upper-body composition. Both people face each other and sign naturally with expressive hands; both complete heads, hair, elbows and hands stay within the central 55 percent, leaving abundant calm space above their hair and around all sides. Warm natural light, candid educational atmosphere, sharp camera realism. No posed close-up, no cropped hair or fingers, no readable school text, no logos, no watermark, no illustration.\n",
+      "sources": [
+        "https://gupress.gallaudet.edu/Books/T/The-Emergence-of-the-Deaf-Community-in-Nicaragua"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": {
+        "id": "maalehti-nic-historia-3-v2",
+        "topic": "Nicaraguan Sign Language community",
+        "url": "https://gupress.gallaudet.edu/Books/T/The-Emergence-of-the-Deaf-Community-in-Nicaragua",
+        "readClaim": "Gallaudet University Press describes Laura Polich's archival, school and community research showing that standardized Nicaraguan Sign Language emerged through a regularly meeting community over years, with major adolescent participation.",
+        "imageMatch": "V2 shows two young Nicaraguans signing in a school courtyard with complete hands, heads and generous margins.",
+        "limitations": "The pair are generated and no claim is made that their visible handshapes form a verified utterance or depict named historical participants.",
+        "decision": "root visual PASS already reported"
+      }
+    }
+  ],
+  "reviewPublished": false,
+  "gameIntegrationClaimed": false
+}
