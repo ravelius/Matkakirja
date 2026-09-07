@@ -105,8 +105,12 @@ Incursión en Política); (3) Chile tunnusti selkʼnamit 5.9.2023 ("Selkʼnam pe
 Recognition). Portit: fail 0, karttapisteet ok. Poiminnassa lisäyskonfliktit
 5 tiedostossa liitetty liita-lisays.py:llä.
 
-### Checkpointit (tekstit ilman kuvia; kuvacommitit poimitaan, jos agentit ehtivät)
-- Monterrey + Mérida: tekstit c8fe151 (agentin worktree; kuvahaku kesken)
+### Checkpointit (poimittu haaraan; loppuraportit ja kuvat täydennetään, jos agentit ehtivät)
+- Monterrey + Mérida: tekstit c8fe151, kuvat osa 1 ad3f78e (kuvahaku jatkuu)
+- Timbuktu + Lalibela: wip-tekstit 97c8052 (tekstit jatkuvat, kuvat tekemättä)
+- Townsville + Iquitos: wip a9d62d0 + tekstit 9bd523e (kuvahaku alkaa)
+- Whitehorse + Yellowknife: wip 7c31c9f + tekstit 8ac5ecc (kuvahaku alkaa)
+- Iqaluit + Santa Fe: ei vielä committia (agentti aloitti myöhään)
 Kaikki kolme poimittu haaraan lisäyskonfliktit liittäen; portit fail 0,
 karttapisteet ok kaikille kuudelle kaupungille. Näiden lehdet ovat siis
 pelissä TEKSTEINÄ ja kohdekarttoina; kuvat, kuvalähteet ja
