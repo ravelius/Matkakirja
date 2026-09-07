@@ -305,67 +305,6 @@ await s.evaluate(() => {
 /* -------------------------------------------------------- 2. pimeä alku */
 
 await s.evaluate(() => document.querySelector('.aikajana-avaus-nappi')?.click());
-
-/* --------------------------------------------- 2a. avaruus: pallo kaukana */
-/*
- * Raamattu "IHMISEN MATKA: MUSTA ALKU ON AVARUUS, PALLO ZOOMAUTUU
- * PIMEYDESTA AFRIKKA EDELLA" (omistaja 7.9.2026 ilta: *"Ja se pimeys on
- * avaruus"*, *"Kertoja alkaa jo pimeydestä"*). Yksikkötestit näkevät
- * pisteiden asettelun ja avauksen rakenteen (tests/tahdet.test.mjs),
- * mutta eivät sitä, ONKO PALLO OIKEASTI KAUKANA ja alkaako kertoja jo
- * pimeydestä. Mitataan kolme asiaa heti napin jälkeen:
- *   1. korkeus on laudan oman katon (2,5) takana eli pallo on pieni,
- *   2. tähtiä on näyttämöllä ja musta pohja on pallon ALLA,
- *   3. avausjakson luenta on jo käynnissä (kulunut > 0) — kertoja ei
- *      odota, että pallo olisi perillä.
- */
-const avaruus = await s.evaluate(() => {
-  const { ui } = window.matkakirja;
-  const t = ui.aikajana?.esitys?.tila?.() ?? null;
-  const pov = ui.pallonInstanssi?.pointOfView?.() ?? null;
-  const levy = document.querySelector('.aikajana-avaruus');
-  const peite = document.querySelector('.aikajana-esitys-peite');
-  return {
-    jakso: t?.jakso ?? null,
-    kaynnissa: t?.kaynnissa ?? null,
-    kulunut: t?.kulunut ?? null,
-    avaruus: t?.avaruus ?? null,
-    tahdet: t?.tahdet ?? null,
-    korkeus: pov ? Math.round(pov.altitude * 1000) / 1000 : null,
-    lat: pov ? Math.round(pov.lat * 10) / 10 : null,
-    lng: pov ? Math.round(pov.lng * 10) / 10 : null,
-    // Musta pohja on KARTTARUUDUN ensimmäinen lapsi eli pallon alla.
-    mustaEnsin: levy ? levy.parentElement?.firstElementChild === levy : null,
-    mustaPeitto: levy ? Number(getComputedStyle(levy).opacity) : null,
-    // Harso pallon päällä: kaukainen Maa on tumma.
-    harso: peite ? Number(getComputedStyle(peite).opacity) : null,
-  };
-});
-await s.screenshot({ path: kuva('0-avaruus') });
-const avaruusMyohemmin = await s.evaluate(() => {
-  const { ui } = window.matkakirja;
-  const pov = ui.pallonInstanssi?.pointOfView?.() ?? null;
-  const t = ui.aikajana?.esitys?.tila?.() ?? null;
-  return {
-    korkeus: pov ? Math.round(pov.altitude * 1000) / 1000 : null,
-    lat: pov ? Math.round(pov.lat * 10) / 10 : null,
-    lng: pov ? Math.round(pov.lng * 10) / 10 : null,
-    tahdet: t?.tahdet ?? null,
-    jakso: t?.jakso ?? null,
-  };
-});
-vaadi('AVARUUS: pallo tulee kaukaa tähtien keskeltä, kertoja puhuu jo',
-  avaruus.korkeus > 2.5 && avaruus.avaruus === true
-    && avaruus.mustaEnsin === true && avaruus.mustaPeitto === 1
-    && (avaruus.tahdet?.pisteita ?? 0) > 1000
-    && avaruus.harso > 0 && avaruus.harso <= 0.6
-    && avaruus.jakso === 'avaus' && avaruus.kaynnissa === true
-    // Pallo on lähempänä myöhemmin: zoomi kulkee sisäänpäin.
-    && avaruusMyohemmin.korkeus < avaruus.korkeus
-    // Afrikka on keskellä koko ajan (kaanonin 'afrikka'-rajauksen keskus).
-    && Math.abs(avaruus.lat) < 8 && Math.abs(avaruus.lng - 17) < 8,
-  JSON.stringify({ avaruus, myohemmin: avaruusMyohemmin }));
-
 // Liu'ut (peite 500 ms, käyttöliittymän väistö 500 ms) ehtivät loppuun
 // hyvin ennen avausjakson kolmen sekunnin luentaa.
 await s.waitForTimeout(1800);
@@ -396,6 +335,36 @@ const pimea = await s.evaluate(() => {
     nauhaOlemassa: Boolean(document.querySelector('.aikaselain')),
     nauhaNakyy: tyyli(document.querySelector('.aikaselain')),
     nauhanViivoja: document.querySelectorAll('.aikaselain-viiva').length,
+    /*
+     * AVARUUS SAMASSA MITTAUKSESSA (Raamattu MUSTA ALKU ON AVARUUS).
+     * OMANA `evaluate`-KUTSUNAAN TÄMÄ EI TOIMI (mitattu 7.9.2026):
+     * kontissa pallo piirtyy noin kehyksen sekunnissa, ja kahden
+     * peräkkäisen kutsun väliin ehtii sekunteja — avausjakso (mockatun
+     * äänitteen kolme sekuntia) oli jo ohi, ja väite mittasi
+     * 'afrikka'-jaksoa. Yksi kierros, kaikki luvut samalta hetkeltä.
+     */
+    korkeus: (() => {
+      const pov = window.matkakirja.ui.pallonInstanssi?.pointOfView?.();
+      return pov ? Math.round(pov.altitude * 1000) / 1000 : null;
+    })(),
+    lat: (() => {
+      const pov = window.matkakirja.ui.pallonInstanssi?.pointOfView?.();
+      return pov ? Math.round(pov.lat * 10) / 10 : null;
+    })(),
+    lng: (() => {
+      const pov = window.matkakirja.ui.pallonInstanssi?.pointOfView?.();
+      return pov ? Math.round(pov.lng * 10) / 10 : null;
+    })(),
+    avaruusKesken: window.matkakirja.ui.aikajana?.esitys?.tila?.().avaruus ?? null,
+    tahdet: window.matkakirja.ui.aikajana?.esitys?.tila?.().tahdet ?? null,
+    kaynnissa: window.matkakirja.ui.aikajana?.esitys?.tila?.().kaynnissa ?? null,
+    // Musta pohja on KARTTARUUDUN ensimmäinen lapsi eli pallon alla.
+    mustaEnsin: (() => {
+      const levy = document.querySelector('.aikajana-avaruus');
+      return levy ? levy.parentElement?.firstElementChild === levy : null;
+    })(),
+    // Harso pallon päällä: kaukainen Maa on tumma.
+    harso: tyyli(peite),
     jakso: window.matkakirja.ui.aikajana?.esitys?.tila()?.jakso ?? null,
     // Diagnostiikka: kummassa juuressa kello on ja onko tyyli ladattu.
     kelloJuuressa: Boolean(juuri && kello && juuri.contains(kello)),
@@ -435,7 +404,46 @@ const tauolla = await s.evaluate(() => {
    */
   return { ...t, nappi: ui.aikajana?.taukoNappi?.textContent ?? null };
 });
+await s.screenshot({ path: kuva('0-avaruus') });
 await s.screenshot({ path: kuva('1-pimea') });
+/*
+ * ZOOMI KULKEE SISÄÄNPÄIN. Kamera-ajo ei ole esityksen silmukassa vaan
+ * laudan omassa (js/pallolauta/kamera.js), joten se jatkuu tauonkin
+ * aikana: kahden kuvakaappauksen jälkeen pallo on varmasti lähempänä.
+ */
+const avaruusMyohemmin = await s.evaluate(() => {
+  const pov = window.matkakirja.ui.pallonInstanssi?.pointOfView?.() ?? null;
+  return { korkeus: pov ? Math.round(pov.altitude * 1000) / 1000 : null };
+});
+/*
+ * AVARUUS (Raamattu "IHMISEN MATKA: MUSTA ALKU ON AVARUUS, PALLO
+ * ZOOMAUTUU PIMEYDESTA AFRIKKA EDELLA", omistaja 7.9.2026 ilta: *"Ja se
+ * pimeys on avaruus"*, *"Kertoja alkaa jo pimeydestä"*). Luvut tulevat
+ * PIMEÄN mittauksesta (yksi kierros, sama hetki); vain zoomin suunta
+ * luetaan myöhemmin, koska kamera-ajo jatkuu tauonkin aikana.
+ */
+vaadi('AVARUUS: pallo tulee kaukaa tähtien keskeltä, kertoja puhuu jo',
+  pimea.korkeus > 2.5 && pimea.avaruusKesken === true
+    && pimea.mustaEnsin === true
+    && (pimea.tahdet?.pisteita ?? 0) > 1000
+    && pimea.harso > 0 && pimea.harso <= 0.6
+    && pimea.jakso === 'avaus' && pimea.kaynnissa === true
+    // Pallo on lähempänä myöhemmin: zoomi kulkee sisäänpäin.
+    && avaruusMyohemmin.korkeus < pimea.korkeus
+    // Afrikka on keskellä (kaanonin 'afrikka'-rajauksen keskus).
+    && Math.abs(pimea.lat) < 8 && Math.abs(pimea.lng - 17) < 8,
+  JSON.stringify({
+    korkeus: pimea.korkeus,
+    myohemmin: avaruusMyohemmin.korkeus,
+    lat: pimea.lat,
+    lng: pimea.lng,
+    jakso: pimea.jakso,
+    kaynnissa: pimea.kaynnissa,
+    avaruus: pimea.avaruusKesken,
+    mustaEnsin: pimea.mustaEnsin,
+    harso: pimea.harso,
+    tahdet: pimea.tahdet,
+  }));
 const jatkui = await s.evaluate(async () => {
   const { ui } = window.matkakirja;
   const ennen = ui.aikajana.esitys.tila();
