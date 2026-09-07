@@ -459,7 +459,7 @@ Suleiman, hämmästyvä Elias):
 | Kohde | Sävel | Kohtaamisteema (odotuksen syy) | Beat | Aisti / 1873 |
 |---|---|---|---|---|
 | Mekka | lämpö/hengähdys | oppaan suvun perintökysymys | hiljainen | kahvin tuoksu satamassa |
-| Medina | lämpö | vieraanvaraisuuden vastalahja kaivolla | tuore | leirisavun tuoksu |
+| Medina | lämpö | kesken jäänyt punos — kommellus palmujen varjossa (henkilövaihto 7.9.2026: punoja Safa, kaivo ja Omar poistuivat omistajan palautteesta) | tuore (rauhallinen) | leirisavun ja taatelien tuoksu |
 | Jerusalem | kunnioitus/arvoitus | vartija EI tiedä miksi piirtää — hämmästyy itse | vartijan salaisuus | — |
 | Petra | ihmetys | isoisä katsoi kalliota, ei uurnaa | tuore | — |
 | Aden | arvoitus | kysymys jätetty perässä tuleville | tuore | 1873: hiilisatama (jo tekstissä) |
@@ -499,7 +499,7 @@ epäuskoinen Zahra, hämmästyvä Dariush):
 | Ankara | arvoitus | sinetöity paali; noutamisen ehto | ajaton (merimiehen solmu ylängöllä) | villan lanoliini |
 | Izmir | huumori/lämpö | oikea hinta on vastaus | tuore | viikunan maku |
 | Kapadokia | jännitys | käytävä pelasti suvun — valoa pidetään omasta syystä | **VANHA** (lyhty ennen isoisää) | — |
-| Nikosia | arvoitus | talletus jota ei voinut torjua | ajaton | — |
+| Nikosia | arvoitus | piirros kahteen suuntaan — kirjan kääntynyt sivu (henkilövaihto 7.9.2026: seripainotaiteilija Marios, harkko ja Andreas poistuivat; saapuminen ei enää sano bastionien lukua) | ajaton | — |
 | Tabriz | arvoitus | keskeneräinen matto (teeman 2/2 Lissabonin kanssa) | esine muualla | basaarin mausteet |
 | Teheran | ihmetys | mestarien tapa: himmeä pala muistaa | ajaton | 1873: šaahi paraikaa Euroopassa |
 | Isfahan | ihmetys/lämpö | holvin laulu ja vartijan oma salaisuus | tuore | — |

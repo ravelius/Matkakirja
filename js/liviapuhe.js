@@ -508,6 +508,13 @@ export const LIVIAN_AANITETYT = {
   'vilna-3': 'b5b7ea25',
   'vilna-4': '1bfc8e0c',
   'vilna-5': 'ba380765',
+  // Ihmisen matkan neljä välihuomiota generoitu 7.9.2026 illalla
+  // (generoi-pulu, ääni Dr. Von, pakota; omistaja: "laita ihmislinssin
+  // puheet generoitumaan"). Tiivisteet ajon manifestista.
+  'ihmisen-matka-1': '019b7159',
+  'ihmisen-matka-2': '45dafd6e',
+  'ihmisen-matka-3': '77366164',
+  'ihmisen-matka-4': 'dbfd92fe',
   'sofia-2': '3eae9de7',
   'wien-2': '3eae9de7',
 };

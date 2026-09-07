@@ -111,6 +111,18 @@ on:
         type: choice
         default: 'ei'
         options: ['ei', 'kyllä']
+      kertomus:
+        description: >-
+          "kyllä" generoi KERTOMUSJAKSOT pysäkkien sijaan (työkalun
+          --kertomus; vain kaarilla, joilla on aikajana.kertomus — nyt
+          ihmisen-matka, 22 jaksoa kansioon aikajana/ihmisen-matka/puhe/
+          ihmisen-matka-kertomus-<jakso>.mp3 ja kertomus-manifesti.json).
+          Tällöin pysakit-lista valitsee jaksot TUNNUKSELLA (esim.
+          "avaus,denisova"). "ei" = pysäkit kuten ennen.
+        required: true
+        type: choice
+        default: 'ei'
+        options: ['ei', 'kyllä']
 
 permissions:
   contents: read
@@ -189,12 +201,16 @@ jobs:
         env:
           PYSAKIT: ${{ inputs.pysakit }}
           LINSSI: ${{ inputs.linssi }}
+          KERTOMUS: ${{ inputs.kertomus }}
         run: |
           set -euo pipefail
+          # Tyhjä muuttuja katoaa lainausmerkittömänä argumenttilistasta;
+          # "kyllä" tuo --kertomus-lipun mukaan.
+          LIPPU=""; [ "$KERTOMUS" = "kyllä" ] && LIPPU="--kertomus"
           if [ -n "$PYSAKIT" ]; then
-            node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" --kuiva --pysakit $PYSAKIT
+            node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" $LIPPU --kuiva --pysakit $PYSAKIT
           else
-            node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" --kuiva
+            node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" $LIPPU --kuiva
           fi
 
       - name: Generoi luennat ja vie ämpäriin
@@ -204,20 +220,22 @@ jobs:
           PYSAKIT: ${{ inputs.pysakit }}
           PAKOTA: ${{ inputs.pakota }}
           LINSSI: ${{ inputs.linssi }}
+          KERTOMUS: ${{ inputs.kertomus }}
         run: |
           set -euo pipefail
+          LIPPU=""; [ "$KERTOMUS" = "kyllä" ] && LIPPU="--kertomus"
           if [ -n "$PYSAKIT" ]; then
             if [ "$PAKOTA" = "kyllä" ]; then
-              node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" --pakota --pysakit $PYSAKIT
+              node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" $LIPPU --pakota --pysakit $PYSAKIT
             else
-              node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" --pysakit $PYSAKIT
+              node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" $LIPPU --pysakit $PYSAKIT
             fi
           else
             if [ "$PAKOTA" = "kyllä" ]; then
               echo "pakota vaatii pysakit-listan — koko kaarta ei uusita vahingossa." >&2
               exit 1
             fi
-            node tools/generoi-linssiluennat.mjs --linssi "$LINSSI"
+            node tools/generoi-linssiluennat.mjs --linssi "$LINSSI" $LIPPU
           fi
 
       # Vartija sille, mitä tämä ajo lupaa: repoon ei jää mitään.
