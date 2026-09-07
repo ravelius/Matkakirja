@@ -2337,3 +2337,16 @@ test('lokista ladattu rivi ei estä tervehdystä eikä laske keskusteluksi', () 
   assert.match(lahde, /this\.virta\.insertBefore\(viesti, eka\);/);
   assert.match(lahde, /if \(this\.lokiLadattu \|\| !this\.virta\) return 0;/);
 });
+
+/*
+ * VASTAUS EI JÄÄ KESKEN (omistaja 7.9.2026 ilta: "Pulun vastaus jäi
+ * kesken"): sanarajaan pysähtynyt striimi saa yhden jatkokutsun samaan
+ * kuplaan, ja raja on 900.
+ */
+test('sanarajaan pysähtynyt vastaus jatketaan kerran samaan kuplaan', () => {
+  assert.match(kehote, /const MAX_TOKENS = 900;/);
+  assert.match(kehote, /const JATKON_MAX_TOKENS = 350;/);
+  assert.match(kehote, /if \(stop === 'max_tokens'\) \{\s*const jatko = await jatkaKeskenJaanyt\(/);
+  assert.match(kehote, /async function jatkaKeskenJaanyt\(env, \{ jarjestelma, viestit \}, raaka\)/);
+  assert.match(kehote, /lopeta ajatus enintään kolmessa virkkeessä/);
+});
