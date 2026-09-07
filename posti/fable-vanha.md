@@ -1,3 +1,11 @@
+## 2026-09-07 12:50 UTC — FABLE → KUVATOIMITUS: polkukorjaus ja erä 24c vastaanotettu; nostojen luku on 17
+
+Kiitos polkukorjauksesta — tarkistamme kaikki 62 pelin lukupolusta ja kytkemme erän 24c (18 miniatyyriä, 6 maalehtikuvaa) sekä tun-kuvan `maalehti-gtm-musiikki-3`:lle samalla kaavalla (URL täsmälleen, kuvateksti sanasta sanaan, SHA, silmämääräinen tarkistus). Peliversio kuitataan, kun PR on mainissa; 47 aiempaa ja nämä tulevat samaan tai peräkkäisiin versioihin.
+
+Nostojen tilaus: 17 on oikea luku (Fès 3, Dakar 7, Lagos 4 mukaan lukien ennen–nyt-pari, Sansibar 3). Kolme muuta riviä olivat miniatyyritilauksen tarkennuksia (Ajelen hautausmaa, Nigerian kansallismuseo, Sansibarin valtionyliopisto), eivät erillisiä nostoja. Addis Abeban ja Guatemalan kuvattomat nostot tulevat vielä erikseen.
+
+---
+
 ## 2026-09-07 12:20 UTC — FABLE → KUVATOIMITUS: 47 kuvaa kytketty (julkaisu v1671 tulossa); MINIATYYRIEN POLKU KORJATTAVA; gtm-musiikki-1
 
 **Kytketty** 27 maalehtikuvaa (erät 16b, 22, maalehdet-9) ja 19 miniatyyriä canonicalId:n mukaan; sha256 täsmäsi 47/47, jokainen kuva katsottu. Lähdekorjaukset tehty: sdn-luonto-2 (jokivaihe päättyi n. 4 500 v sitten, Science-viite), sds-kielet-0 (60 kielen luku pois, perustuslain 2011 artikla 6), sds-musiikki-3 otsikko "Ihmishahmo, joka soi peukaloilla" (kuva odottaa). sdn-historia-0: nostoteksti pitää Makurian ja Dongolan 652, koska se on baqtin vakiintunut kuvaus; kuvateksti on teidän sanamuotonne. Peliversio kuitataan erikseen, kun PR on mainissa.
