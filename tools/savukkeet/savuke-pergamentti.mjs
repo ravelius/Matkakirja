@@ -190,56 +190,85 @@ const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromiu
  * *"Sivut ovat ihan ok, mutta ylä- ja alareuna on, kuin paperi olisi
  * tulessa, eli saa liikkua rauhallisemmin."*), ja syvin puraisu
  * kertoo, paljonko pehmustetta laatikko tarvitsee.
+ *
+ * KAKSI SIVUSUHDETTA. Maski venytetään laatikon muotoon, joten syömän
+ * osuus leveydestä ei ole aivan sama leveällä kuvapaperilla kuin
+ * korkealla puhelinlaatikolla (mitattu 7.9.2026: 3,6 % ja 4,5 %).
+ * Pehmusteen riittävyys lasketaan SYVEMMÄSTÄ, jottei arvio ole
+ * kummassakaan päässä liian toiveikas.
  */
-const MASKI_W = 600;
-const MASKI_H = 450;
 const MASKI_M = 60;
-const maskiSivu = await (await selain.newContext({
-  viewport: { width: MASKI_W + 2 * MASKI_M, height: MASKI_H + 2 * MASKI_M },
-})).newPage();
-const maskiUrl = maskiKuva(siemenNimesta('Ihmisen matka'), MASKI_W / MASKI_H);
-await maskiSivu.setContent('<body style="margin:0;background:#000">'
-  + `<div style="position:absolute;left:${MASKI_M}px;top:${MASKI_M}px;`
-  + `width:${MASKI_W}px;height:${MASKI_H}px;background:#fff;`
-  + `-webkit-mask-image:url('${maskiUrl}');mask-image:url('${maskiUrl}');`
-  + '-webkit-mask-size:100% 100%;mask-size:100% 100%;'
-  + "-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat\"></div></body>");
-await maskiSivu.waitForTimeout(400);
-const maskiKuvake = lueP(await maskiSivu.screenshot());
 const RAJA = 128;
-const syvyys = { yla: [], ala: [], vasen: [], oikea: [] };
-for (let x = Math.round(MASKI_M + MASKI_W * 0.15); x < MASKI_M + MASKI_W * 0.85; x += 1) {
-  let y = MASKI_M - 30;
-  while (y < MASKI_M + 140 && maskiKuvake.kirkkaus(x, y) < RAJA) y += 1;
-  syvyys.yla.push(y - MASKI_M);
-  let y2 = MASKI_M + MASKI_H + 30;
-  while (y2 > MASKI_M + MASKI_H - 140 && maskiKuvake.kirkkaus(x, y2) < RAJA) y2 -= 1;
-  syvyys.ala.push(MASKI_M + MASKI_H - y2);
-}
-for (let y = Math.round(MASKI_M + MASKI_H * 0.15); y < MASKI_M + MASKI_H * 0.85; y += 1) {
-  let x = MASKI_M - 30;
-  while (x < MASKI_M + 140 && maskiKuvake.kirkkaus(x, y) < RAJA) x += 1;
-  syvyys.vasen.push(x - MASKI_M);
-  let x2 = MASKI_M + MASKI_W + 30;
-  while (x2 > MASKI_M + MASKI_W - 140 && maskiKuvake.kirkkaus(x2, y) < RAJA) x2 -= 1;
-  syvyys.oikea.push(MASKI_M + MASKI_W - x2);
-}
 const p2p = (a) => Math.max(...a) - Math.min(...a);
-const vaaka = Math.max(p2p(syvyys.yla), p2p(syvyys.ala));
-const sivut = Math.max(p2p(syvyys.vasen), p2p(syvyys.oikea));
-const syvin = Math.max(...Object.values(syvyys).map((a) => Math.max(...a)));
-/** Syvin puraisu osuutena paperin LEVEYDESTÄ — sama luku joka koossa. */
-const syomaOsuus = syvin / MASKI_W;
-tieto('maskin reunasyvyydet (600 × 450 px)', Object.entries(syvyys)
-  .map(([k, a]) => `${k} ${Math.min(...a)}–${Math.max(...a)}`).join(', '));
+
+async function mittaaMaski(leveys, korkeus) {
+  const konteksti = await selain.newContext({
+    viewport: { width: leveys + 2 * MASKI_M, height: korkeus + 2 * MASKI_M },
+  });
+  const sivu = await konteksti.newPage();
+  const url = maskiKuva(siemenNimesta('Ihmisen matka'), leveys / korkeus);
+  await sivu.setContent('<body style="margin:0;background:#000">'
+    + `<div style="position:absolute;left:${MASKI_M}px;top:${MASKI_M}px;`
+    + `width:${leveys}px;height:${korkeus}px;background:#fff;`
+    + `-webkit-mask-image:url('${url}');mask-image:url('${url}');`
+    + '-webkit-mask-size:100% 100%;mask-size:100% 100%;'
+    + '-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat"></div></body>');
+  await sivu.waitForTimeout(400);
+  const kuva = lueP(await sivu.screenshot());
+  const syvyys = { yla: [], ala: [], vasen: [], oikea: [] };
+  const katto = Math.round(0.12 * leveys);
+  for (let x = Math.round(MASKI_M + leveys * 0.15); x < MASKI_M + leveys * 0.85; x += 1) {
+    let y = MASKI_M - 30;
+    while (y < MASKI_M + katto && kuva.kirkkaus(x, y) < RAJA) y += 1;
+    syvyys.yla.push(y - MASKI_M);
+    let y2 = MASKI_M + korkeus + 30;
+    while (y2 > MASKI_M + korkeus - katto && kuva.kirkkaus(x, y2) < RAJA) y2 -= 1;
+    syvyys.ala.push(MASKI_M + korkeus - y2);
+  }
+  for (let y = Math.round(MASKI_M + korkeus * 0.15); y < MASKI_M + korkeus * 0.85; y += 1) {
+    let x = MASKI_M - 30;
+    while (x < MASKI_M + katto && kuva.kirkkaus(x, y) < RAJA) x += 1;
+    syvyys.vasen.push(x - MASKI_M);
+    let x2 = MASKI_M + leveys + 30;
+    while (x2 > MASKI_M + leveys - katto && kuva.kirkkaus(x2, y) < RAJA) x2 -= 1;
+    syvyys.oikea.push(MASKI_M + leveys - x2);
+  }
+  await konteksti.close();
+  const syvin = Math.max(...Object.values(syvyys).map((a) => Math.max(...a)));
+  return {
+    syvyys,
+    vaaka: Math.max(p2p(syvyys.yla), p2p(syvyys.ala)),
+    sivut: Math.max(p2p(syvyys.vasen), p2p(syvyys.oikea)),
+    syvin,
+    osuus: syvin / leveys,
+  };
+}
+
+/* Leveä kuvapaperi (iPad, .on-kuva) ja korkea puhelinlaatikko. */
+const leveaMaski = await mittaaMaski(720, 470);
+const korkeaMaski = await mittaaMaski(320, 600);
+for (const [nimi, m] of [['leveä 720 × 470', leveaMaski], ['korkea 320 × 600', korkeaMaski]]) {
+  tieto(`maskin reunasyvyydet (${nimi})`, `${Object.entries(m.syvyys)
+    .map(([k, a]) => `${k} ${Math.min(...a)}–${Math.max(...a)}`).join(', ')} `
+    + `| vaaka ${m.vaaka} px, sivut ${m.sivut} px, syvin ${m.syvin} px (${(m.osuus * 100).toFixed(1)} %)`);
+}
+/** Syvin puraisu osuutena paperin LEVEYDESTÄ, varmemmasta päästä. */
+const syomaOsuus = Math.max(leveaMaski.osuus, korkeaMaski.osuus);
 vaadi('ylä- ja alareuna aaltoilevat sivuja rauhallisemmin',
-  vaaka * 2 <= sivut && vaaka >= 1,
-  `vaaka ${vaaka} px, sivut ${sivut} px — omistaja pyysi vaakareunalle noin kolmasosaa`);
-vaadi('sivut ovat yhä revityt (omistaja: "sivut ovat ihan ok")', sivut >= 6,
-  `sivujen vaihtelu ${sivut} px`);
+  leveaMaski.vaaka * 2 <= leveaMaski.sivut && korkeaMaski.vaaka * 2 <= korkeaMaski.sivut,
+  `leveä ${leveaMaski.vaaka}/${leveaMaski.sivut}, korkea ${korkeaMaski.vaaka}/${korkeaMaski.sivut} px`);
+/*
+ * SIVUT PYSYVÄT REVITTYINÄ MYÖS ISOLLA PAPERILLA (omistaja: *"sivut
+ * ovat ihan ok"*). Tämä vartioi juuri sen epäilyn, joka nousi
+ * yhdistämisen jälkeen: syökö kuvapaperin leveys sivureunan repeämän?
+ * Ei syö — purema kasvaa leveyden mukana, koska maskiyksikkö on
+ * murto-osa leveydestä.
+ */
+vaadi('sivut ovat yhä revityt kummallakin sivusuhteella',
+  leveaMaski.sivut >= 8 && korkeaMaski.sivut >= 5,
+  `leveä ${leveaMaski.sivut} px, korkea ${korkeaMaski.sivut} px`);
 vaadi('repeämä pysyy maskin marginaalissa eikä yllä syvälle paperiin',
-  syvin <= 0.06 * MASKI_W, `syvin puraisu ${syvin} px (${(syomaOsuus * 100).toFixed(1)} % leveydestä)`);
-await maskiSivu.context().close();
+  syomaOsuus <= 0.06, `syvin puraisu ${(syomaOsuus * 100).toFixed(1)} % leveydestä`);
 
 /* ---------- 2. AVAUSLAATIKKO PELISSÄ ---------- */
 const peli = new Game({
@@ -354,15 +383,25 @@ for (const nakyma of NAKYMAT) {
   // reunan jyrkkyys erotu enää kajon liu'usta.
   const yLoppu = Math.round(kuva.h * 0.6);
   /*
-   * Etsintäikkuna on TIUKKA: reunan odotettu paikka tunnetaan
-   * leikkauskohdasta, ja ±30 px riittää repeämälle. Ilman rajausta
-   * haku eksyy alarivien varjossa kuvan laitaan (karttaruudun oma
-   * reunaviiva), jonka nousu on loivan paperireunan nousua jyrkempi.
+   * Etsintäikkuna on EPÄSYMMETRINEN JA LEVEYTEEN SIDOTTU, aivan kuten
+   * pystysuunnassa alempana. Repeämä syö vain SISÄÄNPÄIN, ja syömä on
+   * osuus laatikon LEVEYDESTÄ (js/pergamentti.js MITTASUHTEET) — leveä
+   * paperi puree siis syvemmältä pikseleinä.
+   *
+   * KIINTEÄ ±30 px OLI VIKA (mitattu 7.9.2026 illalla Fablen haarasta,
+   * jossa kuvapaperi on min(52rem, 92%) eli iPadilla 718 px). Silloin
+   * sivureunan purema on 26–46 laitepikseliä, ikkuna katkaisi sen
+   * kolmeenkymmeneen, ja savuke raportoi sivun vaihteluksi 4 px vaikka
+   * maski antaa 10–14 px. Vika oli mittarissa, ei paperissa.
+   *
+   * Ulospäin riittää 12 px — enempää ei saa antaa, tai haku tarttuu
+   * karttaruudun omaan reunaviivaan.
    */
+  const syomaKatto = Math.round(0.075 * laatikko.width * nakyma.dpr);
   const odotettu = Math.round((laatikko.x - leikkausX) * nakyma.dpr);
   const profiili = [];
   for (let y = yAlku; y < yLoppu; y += 1) {
-    const osuma = reunaRivilla(kuva, y, Math.max(0, odotettu - 30), odotettu + 30);
+    const osuma = reunaRivilla(kuva, y, Math.max(0, odotettu - 12), odotettu + syomaKatto);
     if (osuma) profiili.push({ y, x: osuma.x });
   }
   const xt = profiili.map((r) => r.x);
@@ -438,10 +477,17 @@ for (const nakyma of NAKYMAT) {
   /*
    * ALARAJA vartioi mustaa rakoa, YLÄRAJA liekkiä. Omistajan
    * hylkäämässä versiossa (7.9.2026 ilta, *"kuin paperi olisi
-   * tulessa"*) tämä lukema oli 58; vanhassa monikulmiossa 0,0.
+   * tulessa"*) tämä lukema oli 58 kapealla paperilla; vanhassa
+   * monikulmiossa 0,0.
+   *
+   * KATTO ON 52 EIKÄ 45: kajon säde on maskiyksikköinä ja skaalautuu
+   * siis paperin mukana, joten kiinteän 3 px:n etäisyydellä LEVEÄ
+   * kuvapaperi mittaa kirkkaammin kuin kapea (mitattu 7.9.2026:
+   * 718 px leveä paperi 43, 300 px leveä 29). Katto on karkea vartio
+   * liekkiä vastaan, ei hieno säädin.
    */
-  vaadi(n('kajo on kevyt eikä liekki'), lahiKa <= 45 && lahiKa > kaukoKa + 3,
-    `3 px ${lahiKa.toFixed(1)} (katto 45), 24 px ${kaukoKa.toFixed(1)}`);
+  vaadi(n('kajo on kevyt eikä liekki'), lahiKa <= 52 && lahiKa > kaukoKa + 3,
+    `3 px ${lahiKa.toFixed(1)} (katto 52), 24 px ${kaukoKa.toFixed(1)}`);
 
   /*
    * TEKSTI EI SAA OLLA REUNASSA (omistaja 7.9.2026 ilta: *"ei saa olla

@@ -1765,9 +1765,17 @@
     --avaus-pehmuste-y: 1.75rem;
     --avaus-pehmuste-x: 1.4rem;
   }
+  /*
+   * Kuvapaperi on kapealla ruudulla YHTÄ PALSTAA ja siis korkea, ja
+   * korkealla laatikolla repeämä puree suhteessa syvimmältä (mitattu
+   * 7.9.2026: 4,4 % leveydestä, kun leveällä paperilla 3,8 %). Vapaa
+   * tila nostettiin siksi 1,5 / 1,4 → 1,7 / 1,55 rem, jotta teksti ja
+   * Käynnistä-nappi pysyvät omistajan pyytämän 1,6 rem:n päässä
+   * repeämästä myös täällä (savuke-pergamentti mittaa välin).
+   */
   .aikajana-avaus-laatikko.on-kuva {
-    --avaus-pehmuste-y: 1.5rem;
-    --avaus-pehmuste-x: 1.4rem;
+    --avaus-pehmuste-y: 1.7rem;
+    --avaus-pehmuste-x: 1.55rem;
   }
   .aikajana-avaus-sisus { grid-template-columns: 1fr; gap: 0.95rem; }
   .aikajana-avaus-kuva { order: -1; }

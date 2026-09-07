@@ -1637,10 +1637,30 @@ muunnelma tarvitsee oman pehmusteensa, se kasvattaa VAIN muuttujia; koko
 Kapealla ruudulla (max-width 640px) vapaa tila on 1,9 / 1,5 rem, koska
 työpöydän mitat kasvattivat puhelinlaatikon ruudun yli.
 
+**Isompi kuvapaperi ei syö sivureunan repeämää (mitattu 7.9.2026).**
+Kun tämä yhdistettiin `.on-kuva`-paperiin (min(52rem, 92%) eli iPadilla
+718 px), savuke raportoi sivureunan vaihteluksi 4 px. **Vika oli
+mittarissa, ei paperissa**: reunanhaun ikkuna oli kiinteä ±30
+laitepikseliä, ja koska repeämän purema on osuus laatikon leveydestä,
+718 px:n paperilla se on 26–46 px — ikkuna katkaisi mittauksen. Maski
+eristettynä mitattuna sivujen vaihtelu on **16 px** (720 × 470) ja
+7 px (320 × 600), eli purema kasvaa leveyden mukana kuten pitääkin.
+Vaakasuunnan ikkuna sidottiin leveyteen samalla kaavalla kuin
+pystysuunnan (`0,075 × leveys × dpr`), ja korjattu mittaus antaa iPadilla
+21 px.
+
+Kuvapaperin muunnelma asettaa **vain pehmustemuuttujat**: työpöydällä
+2,6 / 2,2 rem ja kapealla ruudulla 1,7 / 1,55 rem. Kapean ruudun luvut
+ovat suuremmat kuin tekstipaperilla, koska kuvapaperi on siellä yhtä
+palstaa ja siis korkea, ja korkealla laatikolla repeämä puree suhteessa
+syvimmältä (4,4 % leveydestä, kun leveällä paperilla 3,8 %). Savuke
+laskee pehmusteen riittävyyden **syvemmästä** näistä kahdesta.
+
 **Vartijat.** `savuke-pergamentti` mittaa nyt myös **maskin eristettynä**
-(valkoinen laatta mustaa vasten): vaakareunojen aaltoilu on korkeintaan
-puolet sivujen aaltoilusta, sivut pysyvät revittyinä, ja syvin puraisu
-on alle 6 % paperin leveydestä. Tekstin väli mitataan kertomalla tämä
+(valkoinen laatta mustaa vasten) KAHDELLA sivusuhteella — leveä
+kuvapaperi ja korkea puhelinlaatikko: vaakareunojen aaltoilu on
+korkeintaan puolet sivujen aaltoilusta kummallakin, sivut pysyvät
+revittyinä, ja syvin puraisu on alle 6 % paperin leveydestä. Tekstin väli mitataan kertomalla tämä
 syvyys laatikon leveydellä ja vähentämällä se DOMista luetusta
 pehmusteesta — pikselihaku ei siihen kelpaa, koska repeämän kohdalla
 kontrasti on pieni (ulkona himmeä kajo, sisällä tumma reunavyö) ja
