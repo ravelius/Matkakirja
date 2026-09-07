@@ -63,6 +63,33 @@
 # Skripti vertaa uuden luettelon ämpärin luetteloon ja kaatuu ennen
 # vientiä, jos ero on muualla kuin z8:ssa.
 #
+# === PALLON SARJA SHARDEIHIN =======================================
+#
+# Jokainen poltto jaetaan shardeihin kaikille ytimille; vienti
+# rinnakkain (Raamattu KAIKKI YTIMET JA LOPUTKIN MACILLE, omistaja
+# 7.9.2026).
+#
+# Mitattu uusintapoltossa 7.9.2026 (run 34054242743, 7,5 h): pyramidi
+# noin 3 h rinnakkaisina shardeina, pallon Mercator-sarja
+# (tee-pallolaatat, 87 381 laattaa) noin 3 h YHDELLÄ ytimellä ja lopun
+# vienti 55 min. Kumpikaan jälkimmäinen ei ollut työn määrän vika:
+#
+#   - Pallon sarja ajettiin yhtenä prosessina. Nyt se jaetaan
+#     `--pallo-osia` shardiin (tee-pallolaatat `--osa i/n`), jotka
+#     ajetaan samalla xargs-rinnakkaisuudella kuin pyramidin shardit:
+#     oma kansio, oma loki (lokit/pallo-NNN.log), oma vienti heti
+#     valmistuttua ja `.valmis`-merkki, jonka perusteella valmis osa
+#     ohitetaan uusinnassa. Yhden prosessin ajo on KIELLETTY monen
+#     ytimen koneella (ks. PALLO_OSIA alempana): juuri se söi
+#     seitsemästä ja puolesta tunnista kolme.
+#   - Vienti ajettiin CLI:n oletuksella (10 yhtaikaista pyyntöä).
+#     Nyt `aws_viritys` nostaa sen (max_concurrent_requests), jokainen
+#     kutsu saa `--cli-connect-timeout`, ja koska jokainen shardi vie
+#     omansa, vienti kulkee polton rinnalla eikä sen perässä.
+#
+# Pelkän pallon voi polttaa uudestaan ilman pyramidia:
+# `--vain-pallo` (työnkulussa `--sarjat pallo`).
+#
 # === AVAIMET =======================================================
 #
 # R2:n avaimet luetaan VAIN ympäristöstä (AWS_ACCESS_KEY_ID,
@@ -120,6 +147,14 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
                              (oletus --ilman-rantaviivaa-tilassa: ei —
                              pallolla rantaviiva on vektorina,
                              js/pallovektorit.js)
+  --vain-pallo               polta VAIN pallon sarja (ei pyramidia eikä
+                             luetteloa); sama kuin --sarjat pallo
+  --pallo-osia N             pallon sarjan shardeja (oletus: ytimet × 3;
+                             yksi osa on kielletty monen ytimen koneella)
+  --pallo-tasot 0-8          pallon Mercator-tasot (oletus 0-8)
+  --noutovali MS             pallon shardin noutotahti ms (oletus:
+                             15 × rinnakkaiset prosessit; nosta, jos
+                             lokissa on HTTP 429)
   --ei-luetteloa             älä koota äläkä vie pyramidi.jsonia
   --pakota-luettelo          vie luettelo, vaikka se eroaisi ämpärin
                              luettelosta muutenkin kuin z8:n osalta
@@ -153,7 +188,10 @@ KORKEUS=1
 YTIMET=""
 ULOS="$JUURI/pyramidi-poltto"
 KOE=0; VAIN=""; VIE=1; SIIVOA=0; UUDESTAAN=0; PALLO=0; PALLOTUNNISTE=""
-PALLON_RANTA=0
+PALLON_RANTA=0; VAIN_PALLO=0; PALLO_OSIA=""; PALLO_TASOT="0-8"; NOUTOVALI=""
+# Yhteysaikakatkaisu jokaiselle aws-kutsulle: jumittunut yhteys kaatuu
+# nopeasti ja CLI yrittää uudestaan sen sijaan, että shardi jäisi roikkumaan.
+AWS_YHTEYSAIKA="${AWS_YHTEYSAIKA:-30}"
 LUETTELO=1; PAKOTA_LUETTELO=0; LISTA=0; LAPSI=0
 
 while [ $# -gt 0 ]; do
@@ -178,6 +216,10 @@ while [ $# -gt 0 ]; do
     --pallo) PALLO=1; shift ;;
     --pallotunniste) PALLOTUNNISTE="$2"; shift 2 ;;
     --pallon-ranta) PALLON_RANTA=1; shift ;;
+    --vain-pallo) VAIN_PALLO=1; PALLO=1; shift ;;
+    --pallo-osia) PALLO_OSIA="$2"; shift 2 ;;
+    --pallo-tasot) PALLO_TASOT="$2"; shift 2 ;;
+    --noutovali) NOUTOVALI="$2"; shift 2 ;;
     --ei-luetteloa) LUETTELO=0; shift ;;
     --pakota-luettelo) PAKOTA_LUETTELO=1; shift ;;
     --lista) LISTA=1; shift ;;
@@ -189,6 +231,18 @@ done
 
 [ "$KOE" -eq 1 ] && VIE=0
 case "$KORKEUS" in 1|3) ;; *) echo "VIRHE: --korkeus on 1 tai 3" >&2; exit 2 ;; esac
+
+# `--sarjat pallo` on työnkulun tie samaan kuin --vain-pallo: pyramidi on
+# jo ämpärissä ja vain pallon Mercator-sarja poltetaan uudestaan.
+if [ "$SARJAT" = "pallo" ]; then VAIN_PALLO=1; PALLO=1; fi
+
+PALLO_MIN="${PALLO_TASOT%%-*}"; PALLO_MAX="${PALLO_TASOT##*-}"
+for luku in "$PALLO_MIN" "$PALLO_MAX"; do
+  case "$luku" in
+    ''|*[!0-9]*) echo "VIRHE: --pallo-tasot on muotoa min-max, esim. 0-8" >&2; exit 2 ;;
+  esac
+done
+[ "$PALLO_MIN" -le "$PALLO_MAX" ] || { echo "VIRHE: --pallo-tasot $PALLO_TASOT" >&2; exit 2; }
 
 # RANTATON POHJA ON KOKO PYRAMIDIN UUSINTAPOLTTO.
 #
@@ -229,16 +283,36 @@ ytimia () {
 }
 [ -n "$YTIMET" ] || YTIMET="$(ytimia)"
 
+# PALLON SARJAA EI AJETA YHDELLÄ YTIMELLÄ (omistaja 7.9.2026: "Miksi vain
+# yksi ydin?"). Osia on oletuksena kolme kertaa ytimet, jotta kuorma
+# tasaantuu: pallon laatat ovat eri hintaisia (napojen täytelaatta on
+# nopea, mantereen reunalaatta hidas), ja xargs antaa vapautuvalle
+# ytimelle aina seuraavan osan.
+[ -n "$PALLO_OSIA" ] || PALLO_OSIA=$((YTIMET * 3))
+case "$PALLO_OSIA" in
+  ''|*[!0-9]*) echo "VIRHE: --pallo-osia on kokonaisluku" >&2; exit 2 ;;
+esac
+if [ "$PALLO_OSIA" -lt 2 ] && [ "$YTIMET" -gt 1 ]; then
+  echo "VIRHE: pallon sarjaa ei ajeta yhtenä prosessina $YTIMET ytimen koneella." >&2
+  echo "Se maksoi 7.9.2026 uusintapoltossa kolme tuntia. Anna --pallo-osia N" >&2
+  echo "(oletus ytimet × 3) tai --ytimet 1, jos yksi ydin on tarkoitus." >&2
+  exit 2
+fi
+
 vaadi () {
   command -v "$1" >/dev/null 2>&1 || {
     echo "VIRHE: $1 puuttuu polusta. $2" >&2; exit 1; }
 }
 
-esitarkistus () {
+tarkista_node () {
   vaadi node "Asenna: brew install node (vähintään 22)."
   local v
   v="$(node -p 'process.versions.node.split(".")[0]')"
   [ "$v" -ge 22 ] || { echo "VIRHE: node $v — pyramidi vaatii vähintään 22." >&2; exit 1; }
+}
+
+esitarkistus () {
+  tarkista_node
   vaadi curl "Kuuluu macOSiin."
 
   # Riippuvuudet: sama kuin työnkulussa (npm install + Playwrightin
@@ -516,12 +590,33 @@ aja_shardi () {
 # TÄSMÄLLEEN TYÖNKULUN KOMENTO JA POLUT: laatat ovat muuttumattomia
 # (versio on polussa), joten ne saavat ikuisen välimuistin. Nosto- ja
 # viivataso menevät OMAN versionsa alipolkuun.
+#
+# VIENTI RINNAKKAIN (7.9.2026). `aws s3 sync` vie oletuksena kymmenen
+# yhtaikaista pyyntöä, ja 170 000 pientä tiedostoa kesti sillä 55 min.
+# Asetus annetaan kahdella tavalla, koska CLI:n versiot lukevat sen eri
+# paikoista: ympäristömuuttujina JA omaan konfiguraatiotiedostoon (sama
+# kuin `aws configure set default.s3.max_concurrent_requests 32`).
+# Koneen omaan ~/.aws/configiin ei kosketa — jos ympäristössä on jo
+# AWS_PROFILE tai AWS_CONFIG_FILE, sitä kunnioitetaan sellaisenaan.
+aws_viritys () {
+  export AWS_MAX_CONCURRENT_REQUESTS="${AWS_MAX_CONCURRENT_REQUESTS:-32}"
+  export AWS_MAX_QUEUE_SIZE="${AWS_MAX_QUEUE_SIZE:-10000}"
+  [ -z "${AWS_PROFILE:-}" ] || return 0
+  [ -z "${AWS_CONFIG_FILE:-}" ] || return 0
+  local asetukset="$ULOS/aws-asetukset.conf"
+  mkdir -p "$ULOS"
+  printf '[default]\ns3 =\n  max_concurrent_requests = %s\n  max_queue_size = %s\n' \
+    "$AWS_MAX_CONCURRENT_REQUESTS" "$AWS_MAX_QUEUE_SIZE" > "$asetukset"
+  export AWS_CONFIG_FILE="$asetukset"
+}
+
 vaadi_avaimet () {
   [ -n "${AMPARI:-}" ] || { echo "VIRHE: AMPARI puuttuu ympäristöstä." >&2; exit 1; }
   [ -n "${PAATE:-}" ] || { echo "VIRHE: PAATE puuttuu ympäristöstä." >&2; exit 1; }
   [ -n "${AWS_ACCESS_KEY_ID:-}" ] && [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] \
     || { echo "VIRHE: AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY puuttuu ympäristöstä." >&2; exit 1; }
   vaadi aws "Asenna: brew install awscli."
+  aws_viritys
 }
 
 vie_shardi () {
@@ -534,6 +629,7 @@ vie_shardi () {
       --exclude '*' --include '*.webp' \
       --content-type image/webp \
       --cache-control 'public, max-age=31536000, immutable' \
+      --cli-connect-timeout "$AWS_YHTEYSAIKA" \
       --no-progress >/dev/null
   done
   if [ -d "$kansio/nostot" ]; then
@@ -542,6 +638,7 @@ vie_shardi () {
       --exclude '*' --include '*.webp' \
       --content-type image/webp \
       --cache-control 'public, max-age=31536000, immutable' \
+      --cli-connect-timeout "$AWS_YHTEYSAIKA" \
       --no-progress >/dev/null
   fi
   if [ -d "$kansio/viivat" ]; then
@@ -550,6 +647,7 @@ vie_shardi () {
       --exclude '*' --include '*.webp' \
       --content-type image/webp \
       --cache-control 'public, max-age=31536000, immutable' \
+      --cli-connect-timeout "$AWS_YHTEYSAIKA" \
       --no-progress >/dev/null
   fi
   if [ -d "$kansio/ranta" ]; then
@@ -558,6 +656,7 @@ vie_shardi () {
       --exclude '*' --include '*.webp' \
       --content-type image/webp \
       --cache-control 'public, max-age=31536000, immutable' \
+      --cli-connect-timeout "$AWS_YHTEYSAIKA" \
       --no-progress >/dev/null
   fi
   echo "$nimi viety ämpäriin."
@@ -663,6 +762,7 @@ vie_luettelo () {
     --endpoint-url "$PAATE" \
     --content-type application/json \
     --cache-control 'public, max-age=300' \
+    --cli-connect-timeout "$AWS_YHTEYSAIKA" \
     --no-progress
   echo "· luettelo viety: versio $VERSIO, tasot z0…z8"
 }
@@ -676,8 +776,90 @@ vie_luettelo () {
 # sarjaa ei tarvitse polttaa uudestaan. Uusi pohjaversio muuttaa, ja
 # silloin tämä vaihe on pakollinen — ja js/pallo.js:n PALLO_LAATTAVERSIO
 # on vaihdettava julkaisussa.
+#
+# SHARDIEN NIMET. Sama muoto kuin pyramidilla (pallo-001…), jotta
+# työnkulun "Kaatuneiden shardien lokit" -askel ja `.valmis`-ohitus
+# toimivat niille sellaisenaan.
+pallon_shardit () {
+  local i=1
+  while [ "$i" -le "$PALLO_OSIA" ]; do
+    printf 'pallo-%03d\n' "$i"
+    i=$((i + 1))
+  done
+}
+
+# PALLON SHARDIN VIENTI ON `cp --recursive` EIKÄ `sync`: osat ovat
+# pistevieraat, joten jokainen shardi kirjoittaa vain omat avaimensa
+# eikä kohteen listaus (87 381 avainta shardia kohti) tuottaisi mitään.
+vie_pallo_shardi () {
+  local kansio="$1" ampariKansio="$2"
+  # Tyhjä osa (osia enemmän kuin laattoja) ei ole virhe.
+  [ -n "$(find "$kansio" -name '*.jpg' -print -quit)" ] || return 0
+  aws s3 cp "$kansio" "s3://$AMPARI/$ampariKansio" --recursive \
+    --endpoint-url "$PAATE" --exclude '*' --include '*.jpg' \
+    --content-type image/jpeg \
+    --cache-control 'public, max-age=31536000, immutable' \
+    --cli-connect-timeout "$AWS_YHTEYSAIKA" \
+    --no-progress >/dev/null
+}
+
+# YKSI PALLON SHARDI: laskee osansa omaan kansioonsa, vie sen ja
+# merkitsee itsensä valmiiksi. Ämpärin kansio ja rantavalinta luetaan
+# luetteloajon jäljistä ($ULOS/pallolaatat), jotta shardin voi ajaa
+# uudestaan yksinään (`--vain pallo-007`).
+aja_pallo_shardi () {
+  local nimi="$1"
+  local i="${nimi#pallo-}"
+  case "$i" in ''|*[!0-9]*) echo "VIRHE: tuntematon shardi $nimi" >&2; return 2 ;; esac
+  i=$((10#$i))
+  [ "$i" -ge 1 ] && [ "$i" -le "$PALLO_OSIA" ] || {
+    echo "VIRHE: $nimi ei ole osa 1…$PALLO_OSIA (anna sama --pallo-osia)" >&2; return 2; }
+  local luettelokansio="$ULOS/pallolaatat"
+  [ -s "$luettelokansio/kansio.txt" ] || {
+    echo "VIRHE: $luettelokansio/kansio.txt puuttuu — aja ensin --vain-pallo," >&2
+    echo "joka kokoaa luettelon ja kertoo ämpärin kansion." >&2; return 1; }
+  local ampariKansio rantalippu=""
+  ampariKansio="$(cat "$luettelokansio/kansio.txt")"
+  # RANTAVALINTA LUETTELOSTA: shardin on koottava täsmälleen se sarja,
+  # jonka luettelo lupaa (laatat.json `ranta`: null = rantaviivaa ei ole
+  # laatoissa, koska pallo piirtää sen vektorina).
+  if [ -s "$luettelokansio/laatat.json" ]; then
+    rantalippu="$(node -e 'const j = JSON.parse(require("node:fs").readFileSync(process.argv[1], "utf8")); process.stdout.write(j.ranta ? "" : "--ilman-rantaa");' "$luettelokansio/laatat.json")"
+  fi
+  local kansio="$ULOS/$nimi"
+  local loki="$ULOS/lokit/$nimi.log"
+  mkdir -p "$kansio" "$ULOS/lokit"
+  # Yksin ajettu shardi (`--vain pallo-007`) on yksi prosessi: sille
+  # kelpaa yhden ajon todistetusti turvallinen tahti.
+  local vali="${NOUTOVALI:-40}"
+  local alkoi
+  alkoi="$(date +%s)"
+  # shellcheck disable=SC2086
+  if (cd "$JUURI" && node tools/tee-pallolaatat.mjs \
+        --min "$PALLO_MIN" --max "$PALLO_MAX" --nostot $rantalippu \
+        --tunniste "$PALLOTUNNISTE" --osa "$i/$PALLO_OSIA" \
+        --noutovali "$vali" --ulos "$kansio") >"$loki" 2>&1; then
+    local kesto laattoja
+    kesto=$(( $(date +%s) - alkoi ))
+    laattoja="$(find "$kansio" -name '*.jpg' | wc -l | tr -d ' ')"
+    echo "$nimi valmis: $laattoja laattaa, ${kesto} s"
+    if [ "$VIE" -eq 1 ]; then
+      if ! vie_pallo_shardi "$kansio" "$ampariKansio"; then
+        echo "VIRHE: shardin $nimi vienti epäonnistui" >&2
+        return 1
+      fi
+      if [ "$SIIVOA" -eq 1 ]; then rm -rf "$kansio"; fi
+    fi
+    printf '%s %s\n' "$laattoja" "$kesto" > "$ULOS/lokit/$nimi.valmis"
+    return 0
+  fi
+  echo "VIRHE shardissa $nimi — loki $loki" >&2
+  tail -5 "$loki" >&2 || true
+  return 1
+}
+
 polta_pallo () {
-  vaadi_avaimet
+  if [ "$VIE" -eq 1 ]; then vaadi_avaimet; fi
   [ -n "$PALLOTUNNISTE" ] || {
     echo "VIRHE: --pallo vaatii --pallotunniste <kirjain>. Pallon laatat ovat" >&2
     echo "vuoden välimuistissa, joten samaan kansioon ei kirjoiteta eri" >&2
@@ -685,26 +867,88 @@ polta_pallo () {
     exit 2
   }
   (cd "$JUURI" && npm install --no-save --no-fund --no-audit sharp)
-  local kansio rantalippu=""
+  local rantalippu=""
   # PALLOLLA RANTAVIIVA ON VEKTORI (js/pallovektorit.js), joten sarjaan ei
   # polteta rantatasoa: poltettu muste jäisi vektorin alle venytettynä
   # usvana ja levossa viiva näkyisi kahtena. `--pallon-ranta` palauttaa
   # sen, jos vektorikerros ei vielä ole julkaistu.
-  if [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && [ "$PALLON_RANTA" -eq 0 ]; then
+  #
+  # PÄÄTÖS ON RANTATASON OLEMASSAOLO, ei tämän ajon lippu: rantataso
+  # luettelossa tarkoittaa, että pohja on poltettu ILMAN rantaviivaa
+  # (uusintapoltto 7.9.2026). Silloin sama valinta kuuluu myös
+  # pelkkään pallon polttoon (`--vain-pallo`) ja z8:n lisäykseen —
+  # muuten sarja saisi rantaviivan, jonka vektorikerros piirtää
+  # toistamiseen. Ilman rantatasoa (vanha pohja) lippu ei tee mitään.
+  if [ "$PALLON_RANTA" -eq 0 ] && [ -n "$RANTAVERSIO" ]; then
     rantalippu="--ilman-rantaa"
   fi
+
+  # 1. LUETTELO ENSIN, VIENTI VIIMEISENÄ. Luettelo kuvaa koko sarjan,
+  #    joten shardit eivät kirjoita sitä (tee-pallolaatat `--osa`);
+  #    kansio.txt kertoo vientipolun jo nyt, mutta laatat.json viedään
+  #    vasta, kun kaikki osat ovat ämpärissä — peli koettaa sen
+  #    olemassaoloa ennen laattojen käyttöä.
+  local luettelokansio="$ULOS/pallolaatat"
+  mkdir -p "$luettelokansio"
   # shellcheck disable=SC2086
-  (cd "$JUURI" && node tools/tee-pallolaatat.mjs --min 0 --max 8 --nostot $rantalippu \
-    --tunniste "$PALLOTUNNISTE" --ulos "$ULOS/pallolaatat")
-  kansio="$(cat "$ULOS/pallolaatat/kansio.txt")"
-  aws s3 sync "$ULOS/pallolaatat" "s3://$AMPARI/$kansio" \
-    --endpoint-url "$PAATE" --exclude '*' --include '*.jpg' \
-    --content-type image/jpeg --cache-control 'public, max-age=31536000, immutable' \
-    --no-progress
-  aws s3 cp "$ULOS/pallolaatat/laatat.json" "s3://$AMPARI/${kansio}laatat.json" \
-    --endpoint-url "$PAATE" --content-type application/json \
-    --cache-control 'public, max-age=3600' --no-progress
-  echo "· pallon sarja viety: $kansio"
+  (cd "$JUURI" && node tools/tee-pallolaatat.mjs --vain-luettelo \
+    --min "$PALLO_MIN" --max "$PALLO_MAX" --nostot $rantalippu \
+    --tunniste "$PALLOTUNNISTE" --ulos "$luettelokansio")
+  local kansio
+  kansio="$(cat "$luettelokansio/kansio.txt")"
+
+  # 2. SHARDIT RINNAKKAIN, sama xargs-logiikka kuin pyramidilla.
+  local rinnakkain="$YTIMET"
+  if [ "$rinnakkain" -gt "$PALLO_OSIA" ]; then rinnakkain="$PALLO_OSIA"; fi
+  # NOUTOTAHTI RINNAKKAISUUDEN MUKAAN (tee-pallolaatat YHTEISTAHTI_MS):
+  # 15 ms × rinnakkaiset prosessit on yhteensä noin 66 noutoa sekunnissa.
+  # Osia on ytimiä enemmän, joten kerroin on PROSESSIEN eikä osien määrä.
+  [ -n "$NOUTOVALI" ] || NOUTOVALI=$((15 * rinnakkain))
+  local lista="$ULOS/lokit/pallo-ajossa.txt"
+  : > "$lista"
+  local nimi
+  for nimi in $(pallon_shardit); do
+    if [ "$UUDESTAAN" -eq 0 ] && [ -f "$ULOS/lokit/$nimi.valmis" ]; then
+      echo "· ohitetaan valmis shardi $nimi"
+      continue
+    fi
+    echo "$nimi" >> "$lista"
+  done
+  local maara
+  maara="$(wc -l < "$lista" | tr -d ' ')"
+  echo "· pallon sarja $kansio (tasot $PALLO_MIN–$PALLO_MAX)"
+  echo "· pallon shardeja ajossa $maara / $PALLO_OSIA (rinnakkain $rinnakkain,"
+  echo "  noutovali $NOUTOVALI ms, ranta ${rantalippu:-mukaan})"
+  local alkoi virhe=0
+  alkoi="$(date +%s)"
+  xargs -P "$rinnakkain" -I{} "$ITSE" --lapsi --vain {} \
+    --pallotunniste "$PALLOTUNNISTE" --pallo-osia "$PALLO_OSIA" \
+    --pallo-tasot "$PALLO_MIN-$PALLO_MAX" --noutovali "$NOUTOVALI" \
+    --ulos "$ULOS" \
+    $( [ "$VIE" -eq 1 ] || echo --ei-vie ) \
+    $( [ "$SIIVOA" -eq 1 ] && echo --siivoa ) \
+    < "$lista" || virhe=1
+  local kesto
+  kesto=$(( $(date +%s) - alkoi ))
+  echo "· pallon laatat: ${kesto} s ($(awk -v k="$kesto" 'BEGIN { printf "%.1f", k / 3600 }') h)"
+  if [ "$virhe" -ne 0 ]; then
+    echo "VIRHE: yksi tai useampi pallon shardi kaatui. Kesken jääneet:" >&2
+    while read -r nimi2; do
+      [ -f "$ULOS/lokit/$nimi2.valmis" ] || echo "  $nimi2 (loki $ULOS/lokit/$nimi2.log)" >&2
+    done < "$lista"
+    echo "Aja uudestaan: tools/polta-paikallisesti.sh --vain-pallo" >&2
+    echo "  --pallotunniste $PALLOTUNNISTE --pallo-osia $PALLO_OSIA" >&2
+    return 1
+  fi
+
+  # 3. LUETTELO VIIMEISENÄ.
+  if [ "$VIE" -eq 1 ]; then
+    aws s3 cp "$luettelokansio/laatat.json" "s3://$AMPARI/${kansio}laatat.json" \
+      --endpoint-url "$PAATE" --content-type application/json \
+      --cache-control 'public, max-age=3600' \
+      --cli-connect-timeout "$AWS_YHTEYSAIKA" --no-progress
+    echo "· pallon sarja viety: $kansio"
+  fi
   echo "  MUISTA: js/pallo.js PALLO_LAATTAVERSIO ja PALLO_LAATTATUNNISTE"
   echo "  osoittamaan tähän kansioon, jos ne eivät jo osoita."
 }
@@ -729,7 +973,7 @@ PIIRIT="${PIIRIT:-$A_PIIRIT}"
 # version alle ei kirjoiteta eri sisältöä (laatat ovat vuoden
 # välimuistissa). Ja koska pohjan versio vaihtuu, pallon sarja on
 # poltettava samasta versiosta tai lepokerros sammuu.
-if [ "$ILMAN_RANTAVIIVAA" -eq 1 ]; then
+if [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && [ "$VAIN_PALLO" -eq 0 ]; then
   [ "$VERSIO" != "$A_VERSIO" ] || {
     echo "VIRHE: --versio $VERSIO on ämpärin nykyinen versio. Rannaton pohja" >&2
     echo "tarvitsee oman polkunsa; anna uusi --versio." >&2
@@ -758,18 +1002,35 @@ if [ "$ILMAN_RANTAVIIVAA" -eq 1 ]; then
 fi
 
 if [ "$LISTA" -eq 1 ]; then
-  shardit | awk -F'|' '{ printf "%-14s %s\n", $1, $2 }'
+  # --vain-pallo ei polta yhtään pyramidin shardia, joten niitä ei listata.
+  if [ "$VAIN_PALLO" -eq 0 ]; then
+    shardit | awk -F'|' '{ printf "%-14s %s\n", $1, $2 }'
+  fi
+  if [ "$PALLO" -eq 1 ]; then
+    pallon_shardit | awk -v n="$PALLO_OSIA" -v a="$PALLO_MIN" -v b="$PALLO_MAX" \
+      '{ printf "%-14s pallon Mercator-sarja z%s-%s, osa %d/%s\n", $1, a, b, NR, n }'
+  fi
   exit 0
 fi
 
 # Lapsiprosessi (xargs) ajaa yhden shardin ilman esitarkistuksia.
 if [ "$LAPSI" -eq 1 ] && [ -n "$VAIN" ]; then
-  aja_shardi "$VAIN"
+  case "$VAIN" in
+    pallo-*) aja_pallo_shardi "$VAIN" ;;
+    *) aja_shardi "$VAIN" ;;
+  esac
   exit $?
 fi
 
 [ "$VIE" -eq 1 ] && vaadi_avaimet
-esitarkistus
+# PALLON SARJA EI TARVITSE SELAINTA EIKÄ AINEISTOA: se lukee valmiit
+# laatat ämpäristä ja piirtää sharpilla. Esitarkistus (Natural Earth,
+# Chromium, korkeuspalat) ajetaan vain, kun pyramidia poltetaan.
+if [ "$VAIN_PALLO" -eq 1 ] || [ "${VAIN#pallo-}" != "$VAIN" ]; then
+  tarkista_node
+else
+  esitarkistus
+fi
 
 echo "Paikallinen poltto — sarjat $SARJAT, ytimiä $YTIMET"
 echo "  pohja   $VERSIO   viivat $VIIVAVERSIO   nostot $NOSTOVERSIO"
@@ -785,8 +1046,22 @@ export NODE_USE_ENV_PROXY="${NODE_USE_ENV_PROXY:-1}"
 
 # ------------------------------------------------------------ yksi shardi
 if [ -n "$VAIN" ]; then
-  aja_shardi "$VAIN"
+  case "$VAIN" in
+    pallo-*) aja_pallo_shardi "$VAIN" ;;
+    *) aja_shardi "$VAIN" ;;
+  esac
   exit $?
+fi
+
+# --------------------------------------------------------- pelkkä pallo
+#
+# `--vain-pallo` (tai `--sarjat pallo`): pyramidi on jo ämpärissä, ja
+# vain pallon Mercator-sarja poltetaan uudestaan — esimerkiksi kun sarja
+# kaatui kesken tai kun sen piirto muuttuu (uusi --pallotunniste).
+if [ "$VAIN_PALLO" -eq 1 ]; then
+  polta_pallo
+  echo "Valmis."
+  exit 0
 fi
 
 # ------------------------------------------------------------------ koe
@@ -881,6 +1156,6 @@ if [ "$LUETTELO" -eq 1 ]; then
   [ "$VIE" -eq 1 ] && vie_luettelo
 fi
 
-[ "$PALLO" -eq 1 ] && polta_pallo
+if [ "$PALLO" -eq 1 ]; then polta_pallo; fi
 
 echo "Valmis."

@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { pallonKaupungit, sukelluskohta, pallonLaatta, laatatSaatavilla, PALLO_KIRJASTO, PALLO_TEKSTUURI, PALLO_TEKSTUURIVERSIO, PALLO_TEKSTUURITASO, PALLO_LAATAT, PALLO_LAATTAVERSIO, PALLO_LAATTAKANSIO, laattatasoMax, PALLO_LAATTATASO_MAX, PALLO_SUKELLUSLEVEYS, laattakynnykset, lepokerroin, LAATU_TERAVYYS, LAATU_TERAVYYS_KAUKO, LAATU_KAUKORAJA, laatuTeravyys, napakerroin, NAPAKERROIN_MIN, NAPAKANNEN_LEVEYS, NAPAKANNEN_HAIVEPEITTO, NAPAKANSI_POHJOINEN, NAPAKANSI_ETELA, asennaNapakannet, kolmiulotteinen, LAATU_LEPOVIIVE_MS, LAATU_LIIKEVIIVE_MS, LAATU_PIKSELISUHDE_LEPO, LAATU_PIKSELISUHDE_LIIKE } from '../js/pallo.js';
-import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdetaso, laattojenKansio, LAATTA, tayteRivilla, nostaReuna, JAA_RAJA, JAA_SAVY, MERI_SAVY } from '../tools/tee-pallolaatat.mjs';
+import { laatanReunat, rivinLeveysaste, julisteenLeveysvali, tasonLaatat, lahdetaso, laattojenKansio, LAATTA, tayteRivilla, nostaReuna, JAA_RAJA, JAA_SAVY, MERI_SAVY, tyolista, osanLaatat, kaistanRajat, lueOsa, NOUTOVALI_OLETUS, YHTEISTAHTI_MS } from '../tools/tee-pallolaatat.mjs';
 import { LINSSIT } from '../js/linssit/rekisteri.js';
 import { LINSSI as PALLOLINSSI } from '../js/linssit/pallo.js';
 import { PERUSLINSSIT, omistetut } from '../js/linssit/omistus.js';
@@ -725,4 +725,92 @@ test('napakerroin: navan lähellä karkeampi taso samalla terävyydellä (omista
   assert.match(pallo, /Math\.abs\(lat - kynnysLat\) >= NAPAKERROIN_ASKEL\n\s*\|\| laatuTeravyys\(nakyma\?\.altitude\) !== kynnysTeravyys\) asetaTila\(lepo\);/);
   assert.match(pallo, /const lepoon = \(\) => \{\n\s*lepoAjastin = 0;\n\s*if \(!kamera\) return;\n\s*asetaTila\(true\);/,
     'lepo laskee kynnykset aina uudestaan — hypyn jälkeen ne ovat väärät');
+});
+
+/*
+ * PALLON SARJA SHARDEIHIN (7.9.2026, omistaja: "Miksi vain yksi ydin?").
+ *
+ * Uusintapoltossa (run 34054242743) pallon Mercator-sarja ajettiin
+ * yhtenä prosessina ja söi kolme tuntia seitsemästä ja puolesta, vaikka
+ * pyramidi ajettiin samaan aikaan kaikilla ytimillä. Sarja on nyt
+ * jaettu sarakekaistoihin (`--osa i/n`), ja tämä koe vartioi kolmea
+ * asiaa, joista jokainen rikkoutuisi HILJAA — puuttuvana laattana, jota
+ * kukaan ei huomaa ennen kuin pallolla on reikä:
+ *
+ *   1. Kaistat kattavat sarjan TASAN. Yksikin väliin jäävä sarake on
+ *      404 pallon pinnalla, ja päällekkäisyys on turhaa työtä.
+ *   2. Jako on sarakekaista eikä siivu laattaluettelosta: rivijärjestys
+ *      kiertäisi koko maailman ja pudottaisi lähdelaatat välimuistista
+ *      (mitattu 7.9.2026: 0,87 noutoa laattaa kohti, työ on noutoa eikä
+ *      laskentaa).
+ *   3. Polttoskripti ajaa osat rinnakkain ja kieltäytyy yhdestä
+ *      prosessista monen ytimen koneella.
+ */
+test('pallon sarja shardeihin: kaistat kattavat sarjan tasan', () => {
+  // Kaista tasolla, jolla on 338 saraketta (pyramidin z8).
+  const rajat = (n) => Array.from({ length: n }, (_, k) => kaistanRajat(338, k + 1, n));
+  for (const n of [1, 3, 12, 72]) {
+    const r = rajat(n);
+    assert.equal(r[0][0], 0);
+    assert.equal(r[n - 1][1], 338, `kaistat eivät kata tasoa (n=${n})`);
+    for (let k = 1; k < n; k += 1) assert.equal(r[k][0], r[k - 1][1], 'kaistojen välissä rako');
+    const leveydet = r.map(([a, b]) => b - a);
+    assert.ok(Math.max(...leveydet) - Math.min(...leveydet) <= 1, 'kaistat eri levyisiä');
+  }
+  // Osia enemmän kuin sarakkeita: viimeiset kaistat ovat tyhjiä, eivät virhe.
+  assert.deepEqual(kaistanRajat(2, 3, 4), [2, 2]);
+
+  // Koko sarja: n osaa = yksi ajo, laatta laatalta.
+  const kaikki = tyolista(0, 6).map((t) => t.join('/'));
+  for (const n of [2, 5, 12]) {
+    const nahty = new Set();
+    for (let i = 1; i <= n; i += 1) {
+      for (const t of osanLaatat(0, 6, null, { i, n })) {
+        const avain = t.join('/');
+        assert.ok(!nahty.has(avain), `laatta ${avain} kahdessa osassa (n=${n})`);
+        nahty.add(avain);
+      }
+    }
+    assert.equal(nahty.size, kaikki.length, `osat eivät kata sarjaa (n=${n})`);
+    for (const avain of kaikki) assert.ok(nahty.has(avain), `laatta ${avain} puuttuu (n=${n})`);
+  }
+  // Osa saa jokaiselta tasolta oman sarakekaistansa — ei siivua rivijonosta.
+  const osa = osanLaatat(6, 6, null, { i: 2, n: 4 });
+  const [x0, x1] = kaistanRajat(64, 2, 4);
+  assert.ok(osa.every(([, X]) => X >= x0 && X < x1), 'osan laatat eivät ole sen kaistassa');
+  assert.equal(osa.length, (x1 - x0) * 64);
+  assert.deepEqual(lueOsa('3/12'), { i: 3, n: 12 });
+  assert.throws(() => lueOsa('13/12'), /1 ≤ i ≤ n/);
+  assert.throws(() => lueOsa('kaikki'), /muoto i\/n/);
+  // Rinnakkaisten osien yhteistahti on maltillinen mutta yhtä ajoa nopeampi.
+  assert.ok(YHTEISTAHTI_MS > 0 && YHTEISTAHTI_MS < NOUTOVALI_OLETUS,
+    'yhteistahti ei saa olla yhden ajon tahtia hitaampi eikä tahditusta saa poistaa');
+});
+
+test('pallon poltto: osat rinnakkain, vienti rinnakkain, ei yhtä prosessia', () => {
+  const laatat = lue('../tools/tee-pallolaatat.mjs');
+  assert.match(laatat, /--osa i\/n/, 'shardivalitsin puuttuu ohjeesta');
+  assert.match(laatat, /osanLaatat\(min, max, alue, osa\)/);
+  // Shardi ei kirjoita koko sarjan luetteloa.
+  assert.match(laatat, /if \(!osa\) \{\s+kirjoitaLuettelo\(/);
+
+  const poltto = lue('../tools/polta-paikallisesti.sh');
+  assert.match(poltto, /--osa "\$i\/\$PALLO_OSIA"/, 'pallon shardi ei saa osaansa');
+  assert.match(poltto, /xargs -P "\$rinnakkain" -I\{\} "\$ITSE" --lapsi --vain \{\}/,
+    'pallon osia ei ajeta rinnakkain samalla xargs-logiikalla kuin pyramidia');
+  assert.match(poltto, /PALLO_OSIA=\$\(\(YTIMET \* 3\)\)/, 'oletus ei ole ytimet × 3');
+  assert.match(poltto, /pallon sarjaa ei ajeta yhtenä prosessina/,
+    'skripti ei kieltäydy yhden prosessin ajosta (omistaja 7.9.2026)');
+  assert.match(poltto, /lokit\/\$nimi\.valmis/, 'valmista osaa ei ohiteta uusinnassa');
+  // Vienti: rinnakkaisuus ja aikakatkaisu jokaiseen kutsuun.
+  assert.match(poltto, /max_concurrent_requests/, 'viennin rinnakkaisuutta ei nosteta');
+  const kutsuja = (poltto.match(/aws s3 (sync|cp)/g) ?? []).length;
+  const katkaisuja = (poltto.match(/--cli-connect-timeout/g) ?? []).length;
+  assert.equal(katkaisuja, kutsuja, 'jokainen aws-kutsu tarvitsee --cli-connect-timeout');
+  // Pelkkä pallo ilman pyramidia (myös työnkulun sarjat-syötteestä).
+  assert.match(poltto, /--vain-pallo\) VAIN_PALLO=1; PALLO=1/);
+  assert.match(poltto, /if \[ "\$SARJAT" = "pallo" \]; then VAIN_PALLO=1; PALLO=1; fi/);
+  const wf = lue('../.github/workflows/polta-macilla.yml');
+  assert.match(wf, /Jokainen poltto jaetaan shardeihin kaikille ytimille/);
+  assert.match(wf, /pallo \(vain pallon Mercator-sarja/, 'sarjat-syötteestä puuttuu pallo');
 });

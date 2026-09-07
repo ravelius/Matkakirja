@@ -4,6 +4,42 @@
  *   node tools/tee-pallolaatat.mjs [--kuiva] [--min 0] [--max 7] [--nostot]
  *        [--ilman-rantaa]
  *        [--ulos pallolaatat-ulos] [--alue lon0,lat0,lon1,lat1] [--tunniste b]
+ *        [--osa i/n] [--noutovali ms]
+ *
+ * SHARDIT (--osa i/n, 7.9.2026). Sarja on 87 381 laattaa tasoille 0–8, ja
+ * yhtenä prosessina se kesti Mac Studiolla noin kolme tuntia YHDELLÄ
+ * ytimellä, vaikka pyramidin poltto samassa skriptissä käyttää kaikki
+ * (tools/polta-paikallisesti.sh). Laatta ei riipu naapuristaan, joten
+ * sarja jaetaan osiin, jotka lasketaan rinnakkaisina prosesseina omiin
+ * kansioihinsa. Osat ovat pistevieraat ja kattavat sarjan tasan
+ * (osanLaatat), joten n osaa tuottaa täsmälleen samat laatat kuin yksi
+ * ajo — mitattu 7.9.2026 tavu tavulta tasoille 0–3.
+ *
+ * JAKO ON SARAKEKAISTA, KUTEN PYRAMIDILLA. Osa i saa jokaiselta tasolta
+ * n:nnen siivun sarakkeita (kaistanRajat), ei n:nnettä siivua
+ * laattaluettelosta. Syy on mitattu: työ ei ole prosessorityötä vaan
+ * lähdelaattojen noutoa (kontissa 256 laattaa = 119 s seinäaikaa mutta
+ * vain 11,9 s prosessoriaikaa). Rivijärjestyksessä yksi Z8-rivi kiertää
+ * koko maailman ja koskee jokaista z7-saraketta (338) — enemmän kuin
+ * VALIMUISTI (160) — joten seuraava rivi noutaa samat lähdelaatat
+ * uudestaan. Kaistassa yksi rivi koskee vain kouraa sarakkeita, ne
+ * pysyvät välimuistissa rivien yli, ja jokainen kaistan lähdelaatta
+ * noudetaan kerran: mitattu kaista Z8 x127 nouti 256 laatalle 182
+ * lähdelaattaa (0,71 per laatta) eli täsmälleen ne z7-laatat, jotka
+ * osuvat kaistaan.
+ *
+ * NOUTOTAHTI. Ämpäri vastasi 429:llä, kun kaksi rinnakkaista ajoa haki
+ * lähdelaattoja ilman tahditusta (4.9.2026); NOUTOVALI_OLETUS 40 ms on
+ * se tahti, jolla kolmen tunnin ajo meni läpi ilman yhtään 429:ää.
+ * Rinnakkaisten osien yhteistahti pidetään maltillisena: `--osa i/n`
+ * olettaa kaikkien n osan ajavan yhtä aikaa ja tahdittaa itsensä
+ * YHTEISTAHTI_MS × n:ään, eli yhteensä 2,6-kertaiseen yhden ajon
+ * tahtiin. Polttoskripti antaa `--noutovali`-arvon rinnakkaisten
+ * PROSESSIEN (ei osien) määrästä, koska osia on ytimiä enemmän. Jos
+ * lokiin ilmestyy "HTTP 429", nosta arvoa.
+ *
+ * `--osa`-ajo EI kirjoita laatat.json/kansio.txt-luetteloa: luettelo
+ * kuvaa koko sarjan, ja se kootaan kerran `--vain-luettelo`-ajolla.
  *
  * --tunniste liittää ämpärin kansion nimeen loppuliitteen (esim.
  * 2026-09-03a-nostot-b): laatat ovat selaimessa vuoden välimuistissa,
@@ -219,11 +255,26 @@ async function noudaJson(url) {
  * tahditetaan vähintään NOUTOVALI ms:n välein, ja 429/5xx odotetaan
  * kasvavalla viiveellä (Retry-After kunnioitetaan) enintään 60 s.
  */
-const NOUTOVALI_MS = 40;
+export const NOUTOVALI_OLETUS = 40;
+/**
+ * Rinnakkaisen osan tahti millisekunteina KERROTTUNA rinnakkaisten
+ * prosessien määrällä: 15 ms × n on yhteensä noin 66 noutoa sekunnissa
+ * eli 2,6-kertainen yhden ajon tahti (NOUTOVALI_OLETUS 40 ms = 25/s).
+ * Varovainen tarkoituksella: 4.9.2026 429-havainto syntyi kahdesta
+ * tahdittamattomasta ajosta, joiden yhteistahti oli arviolta 100–200
+ * pyyntöä sekunnissa.
+ */
+export const YHTEISTAHTI_MS = 15;
+let noutovaliMs = NOUTOVALI_OLETUS;
+/** Noutotahti millisekunteina (shardiajossa hitaampi, ks. tiedoston alku). */
+export function asetaNoutovali(ms) {
+  if (!Number.isFinite(ms) || ms < 0) throw new Error(`--noutovali: ei-negatiivinen luku (${ms})`);
+  noutovaliMs = ms;
+}
 let edellinenNouto = 0;
 async function tahdita() {
   const nyt = Date.now();
-  const odota = edellinenNouto + NOUTOVALI_MS - nyt;
+  const odota = edellinenNouto + noutovaliMs - nyt;
   if (odota > 0) await new Promise((r) => setTimeout(r, odota));
   edellinenNouto = Date.now();
 }
@@ -571,6 +622,57 @@ export function tasonLaatat(Z, alue = null) {
   return ulos;
 }
 
+/**
+ * Koko ajon työlista: [Z, X, Y] tasoilta min…max samassa järjestyksessä
+ * kuin yksi ajo ne laskee (taso kerrallaan, tasonLaatat-järjestys).
+ */
+export function tyolista(min, max, alue = null) {
+  const ulos = [];
+  for (let Z = min; Z <= max; Z += 1) for (const [X, Y] of tasonLaatat(Z, alue)) ulos.push([Z, X, Y]);
+  return ulos;
+}
+
+/**
+ * Osan i/n sarakekaista [x0, x1) tasolla, jolla on `sarakkeita`
+ * saraketta: peräkkäiset, pistevieraat ja yhdessä koko taso.
+ * Jakojäännös jaetaan ensimmäisille osille, joten kaistat eroavat
+ * leveydeltään enintään yhdellä sarakkeella. Kun osia on enemmän kuin
+ * sarakkeita (matalat tasot), viimeiset kaistat ovat tyhjiä.
+ */
+export function kaistanRajat(sarakkeita, i, n) {
+  const koko = Math.floor(sarakkeita / n);
+  const yli = sarakkeita % n;
+  const x0 = (i - 1) * koko + Math.min(i - 1, yli);
+  return [x0, x0 + koko + (i - 1 < yli ? 1 : 0)];
+}
+
+/**
+ * Osan i/n laatat: jokaiselta tasolta oman sarakekaistansa laatat
+ * samassa järjestyksessä kuin yksi ajo ne laskisi. Ilman osaa (null)
+ * koko työlista.
+ */
+export function osanLaatat(min, max, alue = null, osa = null) {
+  if (!osa) return tyolista(min, max, alue);
+  const ulos = [];
+  for (let Z = min; Z <= max; Z += 1) {
+    const [x0, x1] = kaistanRajat(2 ** Z, osa.i, osa.n);
+    if (x0 >= x1) continue;
+    for (const [X, Y] of tasonLaatat(Z, alue)) if (X >= x0 && X < x1) ulos.push([Z, X, Y]);
+  }
+  return ulos;
+}
+
+/** `--osa i/n` → { i, n }; null, jos lippua ei annettu. */
+export function lueOsa(teksti) {
+  if (!teksti) return null;
+  const osat = /^(\d+)\/(\d+)$/.exec(String(teksti).replace(/\s+/g, ''));
+  if (!osat) throw new Error(`--osa: muoto i/n, esim. 3/12 (${teksti})`);
+  const i = Number(osat[1]);
+  const n = Number(osat[2]);
+  if (n < 1 || i < 1 || i > n) throw new Error(`--osa ${teksti}: 1 ≤ i ≤ n`);
+  return { i, n };
+}
+
 async function paa() {
   const argv = process.argv.slice(2);
   const lippu = (nimi) => { const i = argv.indexOf(nimi); return i >= 0 ? argv[i + 1] : null; };
@@ -589,16 +691,35 @@ async function paa() {
   const ranta = !argv.includes('--ilman-rantaa');
   const tunniste = lippu('--tunniste') ?? '';
   if (!/^[a-z0-9]*$/.test(tunniste)) throw new Error(`--tunniste: vain a–z ja 0–9 (${tunniste})`);
+  const osa = lueOsa(lippu('--osa'));
+  // Rinnakkaisten osien yhteistahti (ks. tiedoston alku, NOUTOTAHTI).
+  // TYHJÄ ARVO ON SAMA KUIN PUUTTUVA: `--noutovali ""` (skriptin muuttuja
+  // asettamatta) tarkoitti Number('') = 0 eli tahditusta ei olisi
+  // lainkaan — juuri se tila, josta ämpäri vastasi 429:llä.
+  const noutovaliArg = lippu('--noutovali');
+  const noutovali = noutovaliArg
+    ? Number(noutovaliArg)
+    : (osa ? YHTEISTAHTI_MS * osa.n : NOUTOVALI_OLETUS);
+  asetaNoutovali(noutovali);
 
   const luettelo = await noudaJson(LUETTELO);
   const kansio = laattojenKansio(luettelo.versio, nostot, tunniste);
-  let yhteensa = 0;
-  for (let Z = min; Z <= max; Z += 1) yhteensa += tasonLaatat(Z, alue).length;
+  const lista = osanLaatat(min, max, alue, osa);
+  const yhteensa = lista.length;
   console.log(`pyramidi ${luettelo.versio}, viivat ${luettelo.viivataso?.versio ?? '-'}, `
     + `ranta ${ranta ? (luettelo.rantataso?.versio ?? '-') : 'ei'}, `
     + `nostot ${nostot ? (luettelo.nostotaso?.versio ?? '-') : 'ei'}, `
     + `Mercator-tasot ${min}–${max} (lähteet z${lahdetaso(min)}–z${lahdetaso(max)}), `
     + `${yhteensa} laattaa → ${kansio}`);
+  if (osa) {
+    const kaistat = [];
+    for (let Z = min; Z <= max; Z += 1) {
+      const [x0, x1] = kaistanRajat(2 ** Z, osa.i, osa.n);
+      if (x0 < x1) kaistat.push(`Z${Z} x${x0}–${x1 - 1}`);
+    }
+    console.log(`osa ${osa.i}/${osa.n}: sarakekaistat ${kaistat.join(', ') || '(tyhjä)'}, `
+      + `noutovali ${noutovali} ms`);
+  }
   if (kuiva) { console.log('Kuiva ajo: ei nouda laattoja eikä kirjoita.'); return; }
 
   /*
@@ -621,24 +742,30 @@ async function paa() {
   const lukija = teeLukija(luettelo, sharp, { nostot, ranta });
   mkdirSync(ulos, { recursive: true });
   let tehty = 0;
-  const alku = Date.now();
-  for (let Z = min; Z <= max; Z += 1) {
-    for (const [X, Y] of tasonLaatat(Z, alue)) {
-      const rgb = await laskeLaatta(luettelo, lukija, Z, X, Y);
-      const jpg = await sharp(rgb, { raw: { width: LAATTA, height: LAATTA, channels: 3 } }).jpeg({ quality: LAATU }).toBuffer();
-      mkdirSync(join(ulos, String(Z), String(X)), { recursive: true });
-      writeFileSync(join(ulos, String(Z), String(X), `${Y}.jpg`), jpg);
-      tehty += 1;
-      if (tehty % 500 === 0 || tehty === yhteensa) {
-        const s = Math.round((Date.now() - alku) / 1000);
-        console.log(`${tehty}/${yhteensa} laattaa (${s} s, lähdelaattoja noudettu ${lukija.tilasto.noudettu}, puuttui ${lukija.tilasto.puuttui})`);
-      }
+  const alkuAika = Date.now();
+  for (const [Z, X, Y] of lista) {
+    const rgb = await laskeLaatta(luettelo, lukija, Z, X, Y); // eslint-disable-line no-await-in-loop
+    const jpg = await sharp(rgb, { raw: { width: LAATTA, height: LAATTA, channels: 3 } }).jpeg({ quality: LAATU }).toBuffer(); // eslint-disable-line no-await-in-loop
+    mkdirSync(join(ulos, String(Z), String(X)), { recursive: true });
+    writeFileSync(join(ulos, String(Z), String(X), `${Y}.jpg`), jpg);
+    tehty += 1;
+    if (tehty % 500 === 0 || tehty === yhteensa) {
+      const s = Math.round((Date.now() - alkuAika) / 1000);
+      console.log(`${tehty}/${yhteensa} laattaa (${s} s, lähdelaattoja noudettu ${lukija.tilasto.noudettu}, puuttui ${lukija.tilasto.puuttui})`);
     }
   }
-  kirjoitaLuettelo(ulos, luettelo, {
-    min, max, nostot, ranta, tunniste, kansio,
-  });
-  console.log(`kirjoitettu ${tehty} laattaa kansioon ${ulos}; ämpärin kansio: ${kansio}`);
+  /*
+   * OSA EI OMISTA LUETTELOA. laatat.json kuvaa koko sarjan (tasot
+   * min–max), joten shardi ei saa kirjoittaa sitä omasta osuudestaan:
+   * polttoskripti kokoaa sen kerran `--vain-luettelo`-ajolla ja vie
+   * viimeisenä, kun kaikki osat ovat ämpärissä.
+   */
+  if (!osa) {
+    kirjoitaLuettelo(ulos, luettelo, {
+      min, max, nostot, ranta, tunniste, kansio,
+    });
+  }
+  console.log(`kirjoitettu ${tehty} laattaa kansioon ${ulos}${osa ? ` (osa ${osa.i}/${osa.n}, ei luetteloa)` : ''}; ämpärin kansio: ${kansio}`);
 }
 
 /** Kansion luettelo (laatat.json) ja kansio.txt työnkulun vientiä varten. */
