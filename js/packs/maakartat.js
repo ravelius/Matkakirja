@@ -13203,6 +13203,203 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Yliopistomuseo', lat: 60.38762222, lon: 5.32158056 },
     ],
   },
+  /*
+   * TANGER (7.9.2026). Rajaus on 2,2 × 1,6 kilometriä Marshanin
+   * tasangolta sataman suulle — perustelu ja ruudun vaakasuunta
+   * ovat tools/piirra-kaupunkikartta.mjs:n tanger-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * antiikin Tingis, Englannin Tanger 1661–1684, vuoden 1873
+   * diplomaattikunta ja Matisse; teemasivu kertoo Ibn Battutasta,
+   * kansainvälisestä vyöhykkeestä, Bowlesista ja Choukrista sekä
+   * Burroughsin Interzonesta. Yksikään kartan kahdeksasta
+   * kohteesta ei ole niiden aihe. Lähimpänä on Amerikan lähetystö,
+   * jonka talon sulttaani lahjoitti 1821 — lehden 1873-nosto
+   * kertoo diplomaattikunnasta lukuina eikä mainitse taloa.
+   *
+   * VIISI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-tanger.md, kohta E): Petit Socco on 158 metriä
+   * Amerikan lähetystöstä, Immaculate Conceptionin kirkko 156
+   * metriä, Beit Yehudan synagoga 68 metriä Petit Soccosta,
+   * kasbahin moskeija 66 metriä kasbahin palatsista ja
+   * Abdelhafidin palatsi 167 metriä Pyhän Andreaksen kirkosta.
+   * Petit Socco ja medinan muuri mainitaan matkaoppaan jaksossa 2.
+   *
+   * CAP SPARTEL, HERKULEEN LUOLAT JA TANGER MED JÄÄVÄT POIS: ne
+   * ovat 14–40 kilometrin päässä eivätkä mahdu ruutuun. Kaikki
+   * kolme ovat matkaoppaassa.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 7.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin.
+   * Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * tanger-lohkossa (kulttuuri-kategoriat.js) eikä
+   * africa-valokuvat.js:n tanger-lohkossa.
+   */
+  tanger: {
+    polku: 'assets/kartat/tanger-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 35.794,
+      etela: 35.78,
+      lansi: -5.828,
+      ita: -5.804,
+    },
+    esittely: 'Kartan alue kattaa Tangerin vanhan ytimen: oikeassa yläkulmassa '
+      + 'on satama, sen vasemmalla puolella medina, joka nousee rinnettä '
+      + 'kasbahiin, ja vasemmalla Marshanin tasanko meren yllä. '
+      + 'Alareunassa alkavat muurien ulkopuoliset uuden keskustan suorat '
+      + 'kadut. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        /*
+         * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+         * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+         * ja kaikki välit on mitattu uudelleen: pienin on 207 metriä
+         * (suurmoskeija – Amerikan lähetystö), toiseksi pienin 216
+         * metriä (hotelli Continental – suurmoskeija).
+         */
+        nimi: 'Mendoubin residenssi',
+        lat: 35.791386,
+        lon: -5.824858,
+      },
+      {
+        nimi: 'Café Hafa',
+        lat: 35.7915,
+        lon: -5.8218,
+      },
+      {
+        nimi: 'Kasbahin palatsi',
+        lat: 35.788611,
+        lon: -5.812778,
+      },
+      {
+        nimi: 'Hotelli Continental',
+        lat: 35.7875,
+        lon: -5.809444,
+      },
+      {
+        nimi: 'Tangerin suurmoskeija',
+        lat: 35.785556,
+        lon: -5.809444,
+      },
+      {
+        nimi: 'Pyhän Andreaksen kirkko',
+        lat: 35.784722,
+        lon: -5.823056,
+      },
+      {
+        nimi: 'Amerikan lähetystö',
+        lat: 35.78398,
+        lon: -5.81068,
+      },
+      {
+        nimi: 'Gran Teatro Cervantes',
+        lat: 35.782,
+        lon: -5.8107,
+      },
+    ],
+  },
+  /*
+   * MARRAKECH (7.9.2026). Rajaus on 1,7 × 2,3 kilometriä Ben
+   * Youssefin medresasta kasbahin porttiin — perustelu ja ruudun
+   * pystysuunta ovat tools/piirra-kaupunkikartta.mjs:n
+   * marrakech-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kaupungin perustaminen ja nimi, punainen muuri ja Koutoubia,
+   * seitsemän pyhimystä ja vuoden 1867 avautuminen sekä Jemaa
+   * el-Fna; teemasivu kertoo khettarasta, Menarasta, Agdalista,
+   * Majorellesta ja ilmastosta. Yksikään kartan kahdeksasta
+   * kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Jemaa
+   * el-Fna ja Koutoubian moskeija ovat ruudussa ja niillä on
+   * koordinaatit, mutta ne ovat lehden omien nostojen aihe. Menara
+   * ja Agdal ovat teemasivun aihe ja lisäksi ruudun ulkopuolella.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-marrakech.md, kohta F): Ben Youssefin moskeija on
+   * 54 metriä medresasta, Marrakechin museo 96 metriä ja
+   * Almoravidien qubba 107 metriä — koko kortteli on yhtä
+   * rakennusryhmää, josta otetaan vain medresa. Mellahin Slat
+   * al-Azaman synagoga on 165 metriä Bahian palatsista.
+   *
+   * PIENIN VÄLI ON 190 METRIÄ (Saadilaisten haudat – Bab Agnaou)
+   * eli alle Halifaxin 200 metrin nyrkkisäännön. Poikkeus on
+   * harkittu: tämä ruutu on pinta-alaltaan noin kuudesosa
+   * Halifaxin ruudusta, joten sama metrimäärä on kuvassa yli kaksi
+   * kertaa niin monta pikseliä. Numeroympyrät on katsottu
+   * valmiista kuvasta silmin.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 7.9.2026 ja
+   * katsottu silmin. Yksikään tiedosto ei ole sama kuin
+   * kaupunkilehden marrakech-lohkossa eikä africa-valokuvat.js:n
+   * marrakech-lohkossa.
+   */
+  marrakech: {
+    polku: 'assets/kartat/marrakech-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 31.635,
+      etela: 31.6145,
+      lansi: -7.9965,
+      ita: -7.9785,
+    },
+    esittely: 'Kartan alue on Marrakechin medina: yläreunassa Ben Youssefin '
+      + 'kortteli, keskellä sukien kujaverkko ja Jemaa el-Fnan aukio, '
+      + 'alareunassa kasbah muureineen. Ruudun vasemmalla laidalla erottuu '
+      + 'medinan muuri ja sen takana suorat uudet kadut. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        /*
+         * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+         * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+         * ja välit on mitattu uudelleen: pienin 190 metriä
+         * (Saadilaisten haudat – Bab Agnaou), toiseksi pienin 244
+         * metriä (Bahian palatsi – Dar Si Said).
+         */
+        nimi: 'Ben Youssefin medresa',
+        lat: 31.631944,
+        lon: -7.986194,
+      },
+      {
+        nimi: 'Dar el Bacha',
+        lat: 31.631573,
+        lon: -7.992403,
+      },
+      {
+        nimi: 'Mouassinen suihkulähde',
+        lat: 31.63,
+        lon: -7.989444,
+      },
+      {
+        nimi: 'Dar Si Said',
+        lat: 31.623333,
+        lon: -7.983806,
+      },
+      {
+        nimi: 'Bahian palatsi',
+        lat: 31.621592,
+        lon: -7.982231,
+      },
+      {
+        nimi: 'El Badin palatsi',
+        lat: 31.6183,
+        lon: -7.9858,
+      },
+      {
+        nimi: 'Saadilaisten haudat',
+        lat: 31.6173,
+        lon: -7.988702,
+      },
+      {
+        nimi: 'Bab Agnaou',
+        lat: 31.6175,
+        lon: -7.9907,
+      },
+    ],
+  },
 };
 
 /*

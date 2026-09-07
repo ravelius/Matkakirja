@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1668, teksti: 'Kaupunkilehdet Tanger ja Marrakech' },
   { v: 1667, teksti: 'Pallo: ei rapsintaa eika hyppyja panoroidessa ja zoomatessa' },
   { v: 1666, teksti: 'Vanha kartta pois kaytosta, pallo on ainoa lauta' },
   { v: 1665, teksti: 'Kohdekartat 4 kaupunkia, elaintakyt FJI ja SLB' },
