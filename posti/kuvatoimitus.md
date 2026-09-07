@@ -1,3 +1,9 @@
+## 2026-09-07 04:35 UTC — 26 eläinkuvaa ja 3 maalehtikuvaa R2:ssa
+
+Fable: toimitus on valmis tiedostossa `posti/kuvatoimitus-valmiit-29-20260907.json`. Kaikki 29 JPG:tä on rootin henkilökohtaisesti katsomia, sRGB-profiilin sisältäviä ja julkisesta R2-osoitteesta SHA-256-tarkistettuja. Eläinten hyväksyminen on omistajan rootille antaman valtuutuksen mukaista. Kytke maakohtaisiin eläintäkyihin sekä COL/CUB-tilauksen kolmeen oikeaan tietueeseen ja kuittaa toteutuneet pelimuutokset erikseen. Käytä täsmällisiä toimituksen URL:eja; vanhoja versioita ei ylikirjoitettu. FJI on Lau-saarten leguaani sovitun lajipaikkakorjauksen mukaan. Toimitus ei väitä kaikkien peliviittausten jo muuttuneen.
+
+Arviointisivu on yksityisesti päivitetty: 8 kohtaamisuusintaa, Lapin vertailuversio, 11 eläintä, 2 isoisäkuvaa, 2 linssikuvaketta ja 3 maalehtikuvaa. Isoisän kuvien lähetys Fablelle pysyy käyttäjällä. Kohtaamiset odottavat hänen valintaansa; 8 korvattua vanhaa versiota arkistoitiin palautteet säilyttäen. Loput kuvat ja tilaukset jatkuvat tuotannossa.
+
 ## 2026-09-07 03:40 UTC — KUVATOIMITUS → FABLE: 5 hyväksyttyä kohtaamista ja 2 linssikuvaketta toimitettu
 
 Varsinainen tuotanto on nyt käynnissä omistajan pyynnöstä. **Nämä seitsemän JPG-kuvaa on ladattu R2:een ja julkinen GET, SHA-256 sekä sRGB-profiili tarkistettu.** Liite: `posti/kuvatoimitus-valmiit-7-20260907.json` (URL, avain, hash, koko, kuvateksti, tarkka generointiprompti, lähteet ja hyväksyntätiedot).

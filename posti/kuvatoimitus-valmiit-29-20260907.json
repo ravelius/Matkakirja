@@ -1,0 +1,725 @@
+{
+  "createdAt": "2026-09-07T04:32:44.903504+00:00",
+  "message": "26 root-approved animal images and 3 root-reviewed country features delivered to R2; Fable checks canonical matching and integrates. All are generated illustrations, not documentary originals.",
+  "items": [
+    {
+      "id": "elain-bol-boliviandelfiini-r20260907-v2",
+      "canonicalCountryCode": "BOL",
+      "kind": "root-approved-animal",
+      "caption": "Boliviandelfiini nousee pintaan Mamoréjoen vesistössä Boliviassa.",
+      "scientificName": "Inia boliviensis",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-bol-boliviandelfiini-r20260907-v2.jpg",
+      "targetKey": "elaimet/20260907/elain-bol-boliviandelfiini-r20260907-v2.jpg",
+      "sha256": "6a348e793593c1d9500e5af896199cd4504e972bfa0c87f82bcbd2fcb2c7cef9",
+      "bytes": 445337,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:24:43.415Z",
+      "sources": [
+        "https://wwf.panda.org/knowledge_hub/where_we_work/amazon/species/key_species_for_conservation/"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-col-kultamyrkkysammakko-r20260907-v1",
+      "canonicalCountryCode": "COL",
+      "kind": "root-approved-animal",
+      "caption": "Kultamyrkkysammakko lepää märällä lehdellä Kolumbian Tyynenmeren rannikon sademetsässä.",
+      "scientificName": "Phyllobates terribilis",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-col-kultamyrkkysammakko-r20260907-v1.jpg",
+      "targetKey": "elaimet/20260907/elain-col-kultamyrkkysammakko-r20260907-v1.jpg",
+      "sha256": "58752d2b204b0575f2cd44fc7fb2f807e5095a212f7a784d48da54ad862fd45e",
+      "bytes": 546664,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:24:45.227Z",
+      "sources": [
+        "https://amphibiansoftheworld.amnh.org/Amphibia/Anura/Dendrobatoidea/Dendrobatidae/Dendrobatinae/Phyllobates/Phyllobates-terribilis",
+        "https://colombia.wcs.org/en-us/WCS-VISUAL/Photo-Gallery/Poison-Dart-Frogs-of-Colombia.aspx"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-fji-fidzinleguaani-r20260907-v3",
+      "canonicalCountryCode": "FJI",
+      "kind": "root-approved-animal",
+      "caption": "Fidžinleguaani lepää oksalla Fidžin Lau-saarilla.",
+      "scientificName": "Brachylophus fasciatus",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-fji-fidzinleguaani-r20260907-v3.jpg",
+      "targetKey": "elaimet/20260907/elain-fji-fidzinleguaani-r20260907-v3.jpg",
+      "sha256": "5ad21ea375eb1afe66c19f494ca59f6da53d18165250a42dbe3618f60b6ad55a",
+      "bytes": 395321,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:24:47.106Z",
+      "sources": [
+        "https://www.iucn-isg.org/species/iguana-species/",
+        "https://www.iucn-isg.org/wp-content/uploads/2013/04/Newsletter_112.pdf",
+        "https://pubs.usgs.gov/publication/70000002"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-slb-ducorpsinkakadu-r20260907-v1",
+      "canonicalCountryCode": "SLB",
+      "kind": "root-approved-animal",
+      "caption": "Ducorpsinkakadut jakavat siemenkodan Guadalcanalin alavassa sademetsässä.",
+      "scientificName": "Cacatua ducorpsii",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-slb-ducorpsinkakadu-r20260907-v1.jpg",
+      "targetKey": "elaimet/20260907/elain-slb-ducorpsinkakadu-r20260907-v1.jpg",
+      "sha256": "31ee1058e770133035ac270234714f536c77fd9212e954c316ee3a473a97d719",
+      "bytes": 448305,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:24:49.069Z",
+      "sources": [
+        "https://birdnet.cornell.edu/taxonomy/species/Cacatua%20ducorpsii",
+        "https://avibase.bsc-eoc.org/species.jsp?avibaseid=D238FDA1E324B26D&lang=EN"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-grl-gronlanninkoira-r20260907-v2",
+      "canonicalCountryCode": "GRL",
+      "kind": "root-approved-animal",
+      "caption": "Grönlanninkoira pysähtyy valjaissa Itä-Grönlannin hangella.",
+      "scientificName": "Canis lupus familiaris",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-grl-gronlanninkoira-r20260907-v2.jpg",
+      "targetKey": "elaimet/20260907/elain-grl-gronlanninkoira-r20260907-v2.jpg",
+      "sha256": "420c7b481e9eaafe471e2a621f4d519d451086227baef6041d294ea3f54b6375",
+      "bytes": 313826,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:24:50.817Z",
+      "sources": [
+        "https://www.fci.be/Nomenclature/Standards/274g05-en.pdf"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-gtm-ketsaali-r20260907-v2",
+      "canonicalCountryCode": "GTM",
+      "kind": "root-approved-animal",
+      "caption": "Ketsaali lentää avokadon kanssa Sierra de las Minasin sumumetsässä.",
+      "scientificName": "Pharomachrus mocinno",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-gtm-ketsaali-r20260907-v2.jpg",
+      "targetKey": "elaimet/20260907/elain-gtm-ketsaali-r20260907-v2.jpg",
+      "sha256": "4f5d4896f39aa05cea8a82e29c448b46174dcf5ad2344c0567e91cf636342c69",
+      "bytes": 613965,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:24:52.477Z",
+      "sources": [
+        "https://birdsoftheworld.org/bow/species/resque1/cur/introduction"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-nic-turkoosikulmamotmot-r20260907-v2",
+      "canonicalCountryCode": "NIC",
+      "kind": "root-approved-animal",
+      "caption": "Turkoosikulmamotmot tarkkailee kovakuoriaista Nicaraguan metsässä.",
+      "scientificName": "Eumomota superciliosa",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-nic-turkoosikulmamotmot-r20260907-v2.jpg",
+      "targetKey": "elaimet/20260907/elain-nic-turkoosikulmamotmot-r20260907-v2.jpg",
+      "sha256": "832fa9688842fe226da825aa3836ac11b565c99d34dbcb782414738f5378f91f",
+      "bytes": 462815,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:24:54.126Z",
+      "sources": [
+        "https://birdsoftheworld.org/bow/species/tubmot1/cur/introduction"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-idn-babirusa-r20260907-v1",
+      "canonicalCountryCode": "IDN",
+      "kind": "root-approved-animal",
+      "caption": "Babirusa etsii pudonneita hedelmiä Sulawesin sademetsässä.",
+      "scientificName": "Babyrousa celebensis",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-idn-babirusa-r20260907-v1.jpg",
+      "targetKey": "elaimet/20260907/elain-idn-babirusa-r20260907-v1.jpg",
+      "sha256": "4fca5fd209a3f4132f1c8b0618dda40f1342828d556918ad5d3d2274c6c5339c",
+      "bytes": 549685,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:24:56.425Z",
+      "sources": [
+        "https://www.iucnredlist.org/species/136446/44142964"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-lka-srilankanleopardi-r20260907-v2",
+      "canonicalCountryCode": "LKA",
+      "kind": "root-approved-animal",
+      "caption": "Sri Lankan leopardi kohtaa makakin Yalan kuivametsän oksilla.",
+      "scientificName": "Panthera pardus kotiya",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-lka-srilankanleopardi-r20260907-v2.jpg",
+      "targetKey": "elaimet/20260907/elain-lka-srilankanleopardi-r20260907-v2.jpg",
+      "sha256": "7a23350937a01aa7cbb669f13c23e89ed40cd88873ed93d27d3cb052aaa85471",
+      "bytes": 930882,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:24:58.152Z",
+      "sources": [
+        "https://www.catsg.org/index.php?id=91"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-mmr-surkkunenaapina-r20260907-v2",
+      "canonicalCountryCode": "MMR",
+      "kind": "root-approved-animal",
+      "caption": "Surkkunenäapina suojaa poikastaan sateelta Kachinin vuorimetsässä.",
+      "scientificName": "Rhinopithecus strykeri",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-mmr-surkkunenaapina-r20260907-v2.jpg",
+      "targetKey": "elaimet/20260907/elain-mmr-surkkunenaapina-r20260907-v2.jpg",
+      "sha256": "002ca05cdd56b6a9427523b87570a32a9016333cdba597d63e39f428be1c4c8d",
+      "bytes": 539440,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:24:59.896Z",
+      "sources": [
+        "https://www.fauna-flora.org/species/myanmar-snub-nosed-monkey/"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-dza-fennekki-r20260907-v1",
+      "canonicalCountryCode": "DZA",
+      "kind": "root-approved-animal",
+      "caption": "Fennekki kaivaa kovakuoriaista Algerian Saharan dyynillä.",
+      "scientificName": "Vulpes zerda",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-dza-fennekki-r20260907-v1.jpg",
+      "targetKey": "elaimet/20260907/elain-dza-fennekki-r20260907-v1.jpg",
+      "sha256": "ba786a232198904e7a7edc097a709a5b6e652e5e331ae7f9091c9011d21085af",
+      "bytes": 454192,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:01.692Z",
+      "sources": [
+        "https://animaldiversity.org/accounts/Vulpes_zerda/"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-ago-jattilaisseeprantilooppi-r20260907-v2",
+      "canonicalCountryCode": "AGO",
+      "kind": "root-approved-animal",
+      "caption": "Jättiläisseeprantiloopin sonni kulkee Angolan miombo-metsän valoisalla aukiolla.",
+      "scientificName": "Hippotragus niger variani",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-ago-jattilaisseeprantilooppi-r20260907-v2.jpg",
+      "targetKey": "elaimet/20260907/elain-ago-jattilaisseeprantilooppi-r20260907-v2.jpg",
+      "sha256": "5fb42a02a78a342026785b85ae66aef3b3a44a8798dac8039fbedc813185ad7b",
+      "bytes": 689795,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:03.488Z",
+      "sources": [
+        "https://www.iucn.org/our-union/commissions/group/iucn-ssc-antelope-specialist-group",
+        "https://www.awf.org/wildlife-conservation/sable-antelope"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-cmr-goliattisammakko-r20260907-v4",
+      "canonicalCountryCode": "CMR",
+      "kind": "root-approved-animal",
+      "caption": "Goliattisammakko lepää virtaavan veden hiomalla kivellä Kamerunin sademetsässä.",
+      "scientificName": "Conraua goliath",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-cmr-goliattisammakko-r20260907-v4.jpg",
+      "targetKey": "elaimet/20260907/elain-cmr-goliattisammakko-r20260907-v4.jpg",
+      "sha256": "abd41ad6e7186b44e539b3c5159818a882babd1c37fb3dab2a217b66e06c6d1f",
+      "bytes": 745619,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:05.206Z",
+      "sources": [
+        "https://amphibiaweb.org/species/5075",
+        "https://www.edgeofexistence.org/species/goliath-frog/"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-cod-bonobo-r20260907-v2",
+      "canonicalCountryCode": "COD",
+      "kind": "root-approved-animal",
+      "caption": "Bonoboemo seuraa poikastaan Kongon demokraattisen tasavallan sademetsässä.",
+      "scientificName": "Pan paniscus",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-cod-bonobo-r20260907-v2.jpg",
+      "targetKey": "elaimet/20260907/elain-cod-bonobo-r20260907-v2.jpg",
+      "sha256": "0eda2423f3947f49b3cb322b5dc466f0a96bece65ca17a96ef463a690ebb6a23",
+      "bytes": 566251,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:07.100Z",
+      "sources": [
+        "https://www.iucn.org/our-work/topic/species/our-work/apes",
+        "https://www.worldwildlife.org/species/bonobo"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-sds-kenkanokka-r20260907-v3",
+      "canonicalCountryCode": "SDS",
+      "kind": "root-approved-animal",
+      "caption": "Kenkänokka pitää kalaa nokassaan Suddin papyrussuolla Etelä-Sudanissa.",
+      "scientificName": "Balaeniceps rex",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-sds-kenkanokka-r20260907-v3.jpg",
+      "targetKey": "elaimet/20260907/elain-sds-kenkanokka-r20260907-v3.jpg",
+      "sha256": "383f40f01c702c9cee713f0b05cf4c1d4fa2ee3c56e8446f40fbb9fbe467415c",
+      "bytes": 724265,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:08.836Z",
+      "sources": [
+        "https://www.birdlife.org/birds/shoebill/",
+        "https://datazone.birdlife.org/species/factsheet/shoebill-balaeniceps-rex"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-tha-kimalaislepakko-r20260907-v2",
+      "canonicalCountryCode": "THA",
+      "kind": "root-approved-animal",
+      "caption": "Kimalaislepakko lentää kalkkikiviluolan suulla Länsi-Thaimaassa.",
+      "scientificName": "Craseonycteris thonglongyai",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-tha-kimalaislepakko-r20260907-v2.jpg",
+      "targetKey": "elaimet/20260907/elain-tha-kimalaislepakko-r20260907-v2.jpg",
+      "sha256": "ca3f826c8856b39304b8d8882adf68a8ade33a5bcb8e30ceabbf2310ef1c30fc",
+      "bytes": 408228,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:10.639Z",
+      "sources": [
+        "https://www.edgeofexistence.org/blog/how-to-watch-bumblebee-bats-harmlessly/",
+        "https://www.edgeofexistence.org/blog/new-edge-fellow-2/"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-vnm-saola-r20260907-v2",
+      "canonicalCountryCode": "VNM",
+      "kind": "root-approved-animal",
+      "caption": "Saolaemo ja vasa ylittävät hiljaisen puron Annamin vuoriston sademetsässä Vietnamissa.",
+      "scientificName": "Pseudoryx nghetinhensis",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-vnm-saola-r20260907-v2.jpg",
+      "targetKey": "elaimet/20260907/elain-vnm-saola-r20260907-v2.jpg",
+      "sha256": "57fda0586b56f7abd54cc07ddb1b84ad96a3fe873d943426ab33046f52a13715",
+      "bytes": 764193,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:12.339Z",
+      "sources": [
+        "https://www.worldwildlife.org/species/saola",
+        "https://www.iucn.org/our-work/topic/species/our-work/saola"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-tls-timorinpeippo-r20260907-v1",
+      "canonicalCountryCode": "TLS",
+      "kind": "root-approved-animal",
+      "caption": "Timorinpeipot ruokailevat kuivassa ruohostossa Timor-Lestessä.",
+      "scientificName": "Padda fuscata",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-tls-timorinpeippo-r20260907-v1.jpg",
+      "targetKey": "elaimet/20260907/elain-tls-timorinpeippo-r20260907-v1.jpg",
+      "sha256": "6712f983dcb3b503d6d9d00be1c09f639f6b8fd2d7e2edd448146d19036001d9",
+      "bytes": 350218,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:14.413Z",
+      "sources": [
+        "https://datazone.birdlife.org/species/factsheet/timor-sparrow-padda-fuscata",
+        "https://ebird.org/species/timspar1"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-cyp-kyproksenpollonen-r20260907-v1",
+      "canonicalCountryCode": "CYP",
+      "kind": "root-approved-animal",
+      "caption": "Kyproksenpöllönen kurkistaa vanhan männyn kolosta Kyproksen vuoristometsässä.",
+      "scientificName": "Otus cyprius",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-cyp-kyproksenpollonen-r20260907-v1.jpg",
+      "targetKey": "elaimet/20260907/elain-cyp-kyproksenpollonen-r20260907-v1.jpg",
+      "sha256": "852edbc5013626fd546309b08df6acc1917f5796f5553a2376f632d8b612812e",
+      "bytes": 554936,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:16.059Z",
+      "sources": [
+        "https://datazone.birdlife.org/species/factsheet/cyprus-scops-owl-otus-cyprius",
+        "https://ebird.org/species/cypsco1"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-omn-arabianleopardi-r20260907-v2",
+      "canonicalCountryCode": "OMN",
+      "kind": "root-approved-animal",
+      "caption": "Arabianleopardi juo kallioaltaasta Dhofarin vuoristossa Omanissa.",
+      "scientificName": "Panthera pardus nimr",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-omn-arabianleopardi-r20260907-v2.jpg",
+      "targetKey": "elaimet/20260907/elain-omn-arabianleopardi-r20260907-v2.jpg",
+      "sha256": "9541e21210713dac4e52c726debd2cf8ec5fddfed0bcee1a8f073d683d123343",
+      "bytes": 843908,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:17.741Z",
+      "sources": [
+        "https://www.iucn.org/news/species/202301/arabian-leopard-conservation-strategy",
+        "https://www.oman.om/docs/default-source/default-document-library/arabian-leopard-strategy.pdf"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-are-arabiantahri-r20260907-v2",
+      "canonicalCountryCode": "ARE",
+      "kind": "root-approved-animal",
+      "caption": "Kaksi arabiantahria liikkuu Hajarvuorten jyrkällä rinteellä Arabiemiirikunnissa.",
+      "scientificName": "Arabitragus jayakari",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-are-arabiantahri-r20260907-v2.jpg",
+      "targetKey": "elaimet/20260907/elain-are-arabiantahri-r20260907-v2.jpg",
+      "sha256": "989b110996d933c7a13837c60a37528e89e25348fd539e8b20847ba1b68138cd",
+      "bytes": 1013298,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:19.577Z",
+      "sources": [
+        "https://www.iucn.org/our-union/commissions/group/iucn-ssc-caprinae-specialist-group",
+        "https://www.ead.gov.ae/en/Discover-Our-Biodiversity/Mammals/Arabian-Tahr"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-kwt-hietakissa-r20260907-v1",
+      "canonicalCountryCode": "KWT",
+      "kind": "root-approved-animal",
+      "caption": "Hietakissa on valppaana Kuwaitin aavikkohiekalla.",
+      "scientificName": "Felis margarita",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-kwt-hietakissa-r20260907-v1.jpg",
+      "targetKey": "elaimet/20260907/elain-kwt-hietakissa-r20260907-v1.jpg",
+      "sha256": "859f5e4c054569f5df7330afeae756704d2a264fd6076ffe15a29a94a98b8a74",
+      "bytes": 473479,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:21.280Z",
+      "sources": [
+        "https://nationalzoo.si.edu/animals/sand-cat",
+        "https://www.iucn.org/our-union/commissions/group/iucn-ssc-cat-specialist-group"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-irn-persianonageri-r20260907-v1",
+      "canonicalCountryCode": "IRN",
+      "kind": "root-approved-animal",
+      "caption": "Persianonagerit leikkivät Khar Turanin aroylängöllä Iranissa.",
+      "scientificName": "Equus hemionus onager",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-irn-persianonageri-r20260907-v1.jpg",
+      "targetKey": "elaimet/20260907/elain-irn-persianonageri-r20260907-v1.jpg",
+      "sha256": "411bdf56896ae9db1c2a3a33d1eadbfadc0a0a77db16a7e398b89cd41ffd49c1",
+      "bytes": 555615,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:22.924Z",
+      "sources": [
+        "https://www.iucn.org/our-union/commissions/group/iucn-ssc-equid-specialist-group",
+        "https://nationalzoo.si.edu/animals/persian-onager"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-jor-nubiantorvikauris-r20260907-v2",
+      "canonicalCountryCode": "JOR",
+      "kind": "root-approved-animal",
+      "caption": "Nubiantorvikauris vartioi laumaansa Mujibin rotkon yllä Jordaniassa.",
+      "scientificName": "Capra nubiana",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-jor-nubiantorvikauris-r20260907-v2.jpg",
+      "targetKey": "elaimet/20260907/elain-jor-nubiantorvikauris-r20260907-v2.jpg",
+      "sha256": "139a67322142c7198f9d40caa94be0e20542a5aa8e7213e7ad9cb930ac980616",
+      "bytes": 754129,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:24.785Z",
+      "sources": [
+        "https://www.iucn.org/our-union/commissions/group/iucn-ssc-caprinae-specialist-group",
+        "https://www.rscn.org.jo/content/mujib-biosphere-reserve"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-irq-basranruokokerttunen-r20260907-v1",
+      "canonicalCountryCode": "IRQ",
+      "kind": "root-approved-animal",
+      "caption": "Basranruokokerttunen kuljettaa pesäainesta Mesopotamian soiden ruovikossa Irakissa.",
+      "scientificName": "Acrocephalus griseldis",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-irq-basranruokokerttunen-r20260907-v1.jpg",
+      "targetKey": "elaimet/20260907/elain-irq-basranruokokerttunen-r20260907-v1.jpg",
+      "sha256": "3aa03cbffe506b6d5273a9d9121a6c1dcb1d131f5d42f081f635855060e08cc6",
+      "bytes": 509225,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:26.581Z",
+      "sources": [
+        "https://datazone.birdlife.org/species/factsheet/basra-reed-warbler-acrocephalus-griseldis",
+        "https://ebird.org/species/barwar2"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "elain-egy-egyptinmangusti-r20260907-v2",
+      "canonicalCountryCode": "EGY",
+      "kind": "root-approved-animal",
+      "caption": "Egyptinmangustiemo johdattaa poikasiaan Niilin suiston kosteikon reunalla.",
+      "scientificName": "Herpestes ichneumon",
+      "publicUrl": "https://media.matkakirja.app/elaimet/20260907/elain-egy-egyptinmangusti-r20260907-v2.jpg",
+      "targetKey": "elaimet/20260907/elain-egy-egyptinmangusti-r20260907-v2.jpg",
+      "sha256": "d6248c2f6e3ae02adc1c96fb9d54a4bc83464e7d5bc4b51e57ae7c5db39c7e73",
+      "bytes": 521376,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:25:28.298Z",
+      "sources": [
+        "https://animaldiversity.org/accounts/Herpestes_ichneumon/",
+        "https://www.mammaldiversity.org/taxon/1005960/"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "col-cumbia-soittimet",
+      "canonicalCountryCode": null,
+      "kind": "root-reviewed-country-feature",
+      "caption": "Cumbian kolme rumpua ja gaita-huilut Karibian rannikon puutalon kuistilla.",
+      "scientificName": null,
+      "publicUrl": "https://media.matkakirja.app/maalehdet/20260907/col-cumbia-soittimet.jpg",
+      "targetKey": "maalehdet/20260907/col-cumbia-soittimet.jpg",
+      "sha256": "2777095a6dbc1f604ace00f9a0b24f18be4480eaf59b9e4a975d74e44bcd0e17",
+      "bytes": 390533,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:27:08.023Z",
+      "sources": [
+        "https://patrimonio.mincultura.gov.co/salvaguardiapci/Lista-Representativa/Documents/Plan%20Especial%20de%20Salvagurdia%20Cumbia%20%281%29%20%281%29.pdf",
+        "https://www.carnegiehall.org/Education/Programs/Musical-Explorers/Digital/Program-Twelve/Gregorio/Lesson-1"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "col-marimba-de-chonta",
+      "canonicalCountryCode": null,
+      "kind": "root-reviewed-country-feature",
+      "caption": "Chonta-palmusta ja guadua-bambusta rakennettu marimba Kolumbian Tyynenmeren rannikon kuistilla.",
+      "scientificName": null,
+      "publicUrl": "https://media.matkakirja.app/maalehdet/20260907/col-marimba-de-chonta.jpg",
+      "targetKey": "maalehdet/20260907/col-marimba-de-chonta.jpg",
+      "sha256": "ca43b297263f5f6a66842f0912b7aabbeb18c8ddb997f85ba7fa61f0c7073734",
+      "bytes": 471871,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:27:09.658Z",
+      "sources": [
+        "https://ich.unesco.org/en/RL/marimba-music-traditional-chants-and-dances-from-the-colombia-south-pacific-region-and-esmeraldas-province-of-ecuador-01099",
+        "https://colecciones.banrepcultural.org/en/document/marimba-tipo-de-objeto-fisico/63a069025d96b8790f2669f6"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    },
+    {
+      "id": "cub-sierra-maestra-cafetalit",
+      "canonicalCountryCode": null,
+      "kind": "root-reviewed-country-feature",
+      "caption": "La Isabelican kiviholvien edessä levittäytyvät vanhan cafetalin terassoidut kahvinkuivauskentät.",
+      "scientificName": null,
+      "publicUrl": "https://media.matkakirja.app/maalehdet/20260907/cub-sierra-maestra-cafetalit.jpg",
+      "targetKey": "maalehdet/20260907/cub-sierra-maestra-cafetalit.jpg",
+      "sha256": "dba9309a9b94f8aa46c1eac499d1e8d28243972a0a28dc6a9e868d227e1e326a",
+      "bytes": 624292,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB IEC61966-2.1",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T04:27:11.538Z",
+      "sources": [
+        "https://whc.unesco.org/en/list/1008/"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "gameIntegrated": false
+    }
+  ],
+  "reviewSite": "https://matkakirja-kohtaamiskuvat.sravelius.chatgpt.site",
+  "grandfatherHandoff": "No grandfather media in this handoff: user owns that delivery as agreed."
+}
