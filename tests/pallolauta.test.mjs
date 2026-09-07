@@ -37,6 +37,7 @@ const { PALLOLAUDAN_KERROKSET, kaupunkipisteenVari } = await import('../js/pallo
 const { Game } = await import('../js/game.js');
 const { packById } = await import('../js/pack.js');
 const { PALLO_SUKELLUSLEVEYS } = await import('../js/pallo.js');
+const { MERKIN_KORKEUS } = await import('../js/pallolauta/merkit.js');
 
 /*
  * VÄLIAIKAISESTI POIS -VARTIO (omistaja 7.9.2026 aamu, sanatarkasti:
@@ -204,6 +205,34 @@ test('pallolla vain pelin merkit: sallitut kerrokset lueteltu, kartan kerrokset 
   // Render-silmukka lepää lehden takana ja piilossa.
   assert.match(lauta, /pallo\.pauseAnimation\?\.\(\)/);
   assert.match(lauta, /attributeFilter: \['open'\]/);
+});
+
+test('merkit ovat pinnalla: CSS2D-korkeus on nolla, eikä ruutupaikkaa lasketa muualla', () => {
+  /*
+   * MERKIT LUKITTU KAMERAAN (omistajan vikailmoitus 7.9.2026, iPad:
+   * *"kohdepisteet ja pelaajan nappula ei pysy paikallaan, kun karttaa
+   * vierittää"*). Kohotettu CSS2D-merkki projisoituu ruudun
+   * keskipisteestä ULOSPÄIN, ja siirtymä kasvaa etäisyyden mukana —
+   * siitä heiluminen. Nolla on ainoa korkeus, jolla merkki osuu
+   * täsmälleen sen pinnan pisteeseen, jonka päällä laatat ja rantaviiva
+   * ovat (js/pallovektorit.js VEKTORIT_KORKEUS = 0).
+   */
+  assert.equal(MERKIN_KORKEUS, 0, 'merkin korkeus ei ole nolla — merkit heiluvat panoroitaessa');
+  const merkit = lue('../js/pallolauta/merkit.js');
+  assert.match(merkit, /\.htmlAltitude\(MERKIN_KORKEUS\)/);
+  /*
+   * YKSI KORKEUS, EI KOPIOITA. Nappulan ja kohteiden ruutupaikka
+   * lasketaan kolmessa paikassa (kortin ankkuri, liikkuva nappula,
+   * lentokaari) — jokaisen on luettava sama vakio, tai merkki ja sen
+   * ankkuri erkanevat seuraavassa säädössä.
+   */
+  assert.match(lue('../js/pallolauta/lauta.js'), /getScreenCoords\(lat, lng, MERKIN_KORKEUS\)/);
+  const siirto = lue('../js/pallolauta/siirto.js');
+  assert.match(siirto, /const ruutu = \(kohta, korkeus = MERKIN_KORKEUS\) =>/);
+  for (const tiedosto of ['../js/pallolauta/merkit.js', '../js/pallolauta/siirto.js']) {
+    assert.ok(!/getScreenCoords\([^)]*0\.00\d/.test(lue(tiedosto)),
+      `${tiedosto}: merkin korkeus kovakoodattuna — vakio on MERKIN_KORKEUS`);
+  }
 });
 
 test('tasokartta pois tieltä yhdestä portista; kamera kulkee delegaatin kautta', () => {

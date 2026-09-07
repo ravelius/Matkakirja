@@ -46,8 +46,41 @@ export const KOHDEMERKIN_NIMI_PX = 13;
 export const KOHDEMERKIN_HALO_LAAJIN = 1.42;
 /** Rako halon ja nimen väliin (px). */
 export const KOHDEMERKIN_NIMI_RAKO_PX = 8;
-/** Merkkien korkeus pallon pinnasta: kaupunkipisteiden (0,003) yllä. */
-export const MERKIN_KORKEUS = 0.004;
+/*
+ * MERKKI ON PINNALLA, EI PINNAN YLLÄ (omistajan vikailmoitus 7.9.2026,
+ * iPad, sanatarkasti: *"nyt kun kartta on pallona, niin kohdepisteet ja
+ * pelaajan nappula ei pysy paikallaan, kun karttaa vierittää, vaan ne
+ * heiluvat vähän eri suuntiin, riippuen mihin päin vierittää. Pystyisikö
+ * ne lukitsemaan? Paikalleen."*)
+ *
+ * JUURISYY ON PERSPEKTIIVI, EI VIIVE. Merkki oli 0,004 × säde eli 0,4
+ * yksikköä pinnan YLÄPUOLELLA. Kohotettu piste ei projisoidu samaan
+ * ruutupikseliin kuin sen alla oleva pinnan piste: se työntyy ruudun
+ * keskipisteestä ULOSPÄIN kertoimella, joka riippuu vain kameran
+ * korkeudesta — likimain (1 + h / (R · korkeus)). Ruudun keskellä ero on
+ * nolla ja laidalla suurimmillaan, joten kun karttaa panoroi, merkki
+ * liukuu laattojen päällä sitä mukaa kuin sen paikka ruudulla muuttuu —
+ * ja suunta vaihtuu vierityssuunnan mukana. Laatat, rantaviiva
+ * (js/pallovektorit.js VEKTORIT_KORKEUS = 0) ja pallon oma pinta ovat
+ * korkeudella 0, joten ne eivät liiku: liikkui vain merkki.
+ *
+ * Mitattu Chromiumilla 7.9.2026 (390 × 844 dpr 2, Ateena, korkeus 0,08,
+ * 12 × 0,02° panorointia itään): CSS2D-elementin ruutupaikka on tasan
+ * `getScreenCoords(lat, lng, 0,004)`, ja sen ero pinnan pisteestä kasvoi
+ * 0,16 px:stä 1,95 px:iin, kun merkki siirtyi 11 → 44 px ruudun
+ * keskipisteestä. Kerroin on 4,4 % säteittäisestä etäisyydestä: puhelimen
+ * laidalla (195 px) 8,6 px ja iPadin laidalla (~400 px) 18 px — juuri se
+ * "heiluminen", jonka omistaja näki.
+ *
+ * KORKEUS EI OSTA MITÄÄN CSS2D-KERROKSELLE. Merkit ovat DOM-elementtejä
+ * kankaan päällä, eivät kolmiulotteisia olioita: niillä ei ole
+ * syvyystestiä, joten nostatus ei voi nostaa niitä minkään edelle.
+ * Kaupunkipisteet (pointsData, 0,003) ovat oikeita meshejä ja
+ * tarvitsevat nostatuksensa piirtojärjestykseen — ne jäävät ennalleen,
+ * ja niiden oma 3,3 %:n säteittäinen siirtymä on kirjattu
+ * docs/moduulit/karttapallo.md luvun 12 jatkotyöksi.
+ */
+export const MERKIN_KORKEUS = 0;
 
 const SVG = 'http://www.w3.org/2000/svg';
 

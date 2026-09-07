@@ -3325,3 +3325,159 @@ on noin 0,5 kaistaa.
   ruudun koko pallolaudan korkeusalueella (0,1…2,5), joten horisonttia ei
   edes näy. Korjauksen jälkeen ruudun reunimmainen pikseli on 1,0–1,6×
   keskipikseliä herkempi.
+
+## 12. Merkit lukittu kameraan, ja missä laudan pisteet oikeasti ovat (7.9.2026)
+
+Omistajan vikailmoitus 7.9.2026 (iPad, sanatarkasti):
+
+> "Helsinki näyttää, että se on aivan liian kaukana rannikosta. Ja nyt
+> kun kartta on pallona, niin kohdepisteet ja pelaajan nappula ei pysy
+> paikallaan, kun karttaa vierittää, vaan ne heiluvat vähän eri suuntiin,
+> riippuen mihin päin vierittää. Pystyisikö ne lukitsemaan? Paikalleen."
+
+Kaksi eri vikaa, eri juurisyillä. Toinen on korjattu tässä, toinen on
+mitattu ja kirjattu — sen korjaus on laudan aineistoa eikä koodia.
+
+### 12.1 Heiluminen: merkki oli pinnan YLÄPUOLELLA (korjattu)
+
+`MERKIN_KORKEUS` (js/pallolauta/merkit.js) oli 0,004 × säde eli 0,4
+yksikköä pinnasta. Perspektiivissä kohotettu piste ei projisoidu samaan
+ruutupikseliin kuin sen alla oleva pinnan piste: se työntyy ruudun
+keskipisteestä ULOSPÄIN kertoimella, joka on likimain
+`1 + h / (R · korkeus)`. Keskellä ero on nolla, laidalla suurin — ja kun
+karttaa panoroi, merkki liukuu laattojen päällä sitä mukaa kuin sen
+paikka ruudulla muuttuu. Suunta vaihtuu vierityssuunnan mukana, koska
+siirtymä osoittaa aina ruudun keskipisteestä poispäin.
+
+Laatat (js/pallolaatat.js), rantaviiva (js/pallovektorit.js
+`VEKTORIT_KORKEUS = 0`) ja pallon oma pinta ovat korkeudella 0 — ne eivät
+liikkuneet. Liikkui vain merkki.
+
+Mitattu Chromiumilla 7.9.2026 (390 × 844 dpr 2, Ateena, korkeus 0,08,
+12 × 0,02° panorointia itään). CSS2D-elementin ruutupaikka on tasan
+`getScreenCoords(lat, lng, 0,004)`, ja sen ero pinnan pisteestä:
+
+| merkin etäisyys ruudun keskipisteestä | ero pinnan pisteeseen |
+| --- | --- |
+| 11 px | 0,16 px |
+| 22 px | 0,49 px |
+| 33 px | 1,14 px |
+| 44 px | 1,95 px |
+
+Kerroin on **4,4 % säteittäisestä etäisyydestä**: puhelimen laidalla
+(195 px) 8,6 px ja iPadin laidalla (~400 px) 18 px.
+
+**Korjaus: `MERKIN_KORKEUS = 0`.** Nostatus ei osta CSS2D-kerrokselle
+mitään — merkit ovat DOM-elementtejä kankaan päällä, eivät
+kolmiulotteisia olioita, eikä niillä ole syvyystestiä, jonka edelle
+korkeus voisi nostaa. Nolla on ainoa korkeus, jolla merkki osuu
+täsmälleen siihen pinnan pisteeseen, jonka päällä kartta on. Sama vakio
+kulkee kolmeen paikkaan, joissa merkin ruutupaikka lasketaan: kortin
+ankkuri (js/pallolauta/lauta.js), liikkuva nappula ja lentokone
+(js/pallolauta/siirto.js `ruutu`) ja lentokaaren pohja
+(`lentokaarenKohta`). Lentokaaren huippu on 0,5, joten 0,004:n pudotus
+pohjasta ei näy.
+
+Vartiot: `tests/pallolauta.test.mjs` ("merkit ovat pinnalla") vaatii
+vakion nollaksi ja kieltää kovakoodatut kopiot;
+`tools/savukkeet/savuke-pallo-merkit-lukossa.mjs` vetää palloa 200 px
+itään ja länteen lähikuvassa ja vaatii, että JOKAISEN CSS2D-merkin
+ruutupaikka on `getScreenCoords(lat, lng, 0)` ±1 px joka kehyksessä —
+erikseen myös nopanheiton kohteille oikeasta heitosta.
+
+**Jäljelle jää kaupunkipiste.** Kaupunkien pisteet ovat `pointsData`
+korkeudella 0,003, ja ne ovat oikeita meshejä: nostatus on niiden
+piirtojärjestys suhteessa reittiviivoihin (varjo 0,0018, viiva 0,002,
+askelhelmi 0,0025). Niiden oma säteittäinen siirtymä on 3,3 % eli
+puhelimen laidalla ~6 px — nappulan (32 px) alle jäävä piste (12 px)
+pysyy yhä peitossa, mutta koko pino olisi laskettava pinnalle yhdessä,
+jotta myös piste lukittuisi. Se on oma eränsä, ei tämän.
+
+### 12.2 Helsinki sisämaassa: laudan piste, ei kalibrointi (mitattu, ei korjattu)
+
+Uusi työkalu `tools/tarkista-laudan-pisteet.mjs` laskee jokaiselle laudan
+kaupungille pallosijainnin laudan omalla projektiolla
+(js/fokusmitat.js `laudaltaAsteiksi`) ja vertaa sitä Wikidatan
+koordinaattiin (kaupungin `wiki`-kenttä → fi-Wikipedian artikkeli →
+`wdt:P625`). Vastaus on kilometrejä isoympyrää pitkin. Välimuisti on
+pakollinen, ja työkalu toimii ilman verkkoa, kun välimuisti on täysi
+(`--offline`).
+
+**Pallon lauta on aina maailmankartta** (js/pallo.js `PALLO_LAUTA`) —
+Suomen laudalla ei ole pallolla osaa eikä arpaa, eikä sillä ole riviä
+`FOKUS_LAUTAPROJEKTIOT`-taulussa. Vikailmoituksen Helsinki on siis
+maailmankartan Helsinki.
+
+**KALIBROINTI ON OIKEIN.** 228 mitatun kaupungin jäännösten mediaani on
++0,008° leveyttä ja −0,002° pituutta — nolla kummassakin. Millerin
+lieriö, laudan leveys 12000 = 360°, nollakohta −175° ja pohjoisreuna 76°
+ovat siis kohdallaan; jos kalibrointi olisi vinossa, jäännöksillä olisi
+yhteinen suunta. Niillä ei ole.
+
+**VIRHE ON KAUPUNKIKOHTAINEN JA PERITTY.** Maailmankartan kaupungit
+koottiin `tools/vanha-maailma.mjs`:llä: Aasia, Amerikat ja Oseania saivat
+todelliset lon/lat-koordinaatit (`tools/mapdata/*.json`), mutta Eurooppa,
+Afrikka ja Lähi-itä KÄÄNNETTIIN takaisin oman lautansa käsin piirretystä
+x/y:stä (`KAANTEISET`). Käännös itsessään on tarkka; käsin sommiteltu
+lautapiste ei. Euroopan laudalla Helsinki on `x 688, y 303`, ja laudan
+oma kaava lukee siitä 60,479° N — todellinen on 60,171° N. Ero on
+**34,7 km pohjoiseen**, ja juuri sen verran nappula seisoo Suomenlahden
+rantaviivan sisäpuolella omistajan kuvassa.
+
+Mittaus koko laudalle (raja 15 km):
+
+| luku | arvo |
+| --- | --- |
+| mitattu (kaupungilla on Wikidatan koordinaatti) | 228 / 261 |
+| ilman koordinaattia (ohjaussivu tai sivulla ei ole P625:tä) | 33 |
+| mediaani | 17,3 km |
+| yläneljännes | 75,2 km |
+| yli 15 km | 118 |
+| suurin | 823 km (`mosambik`) |
+
+Suurimmat luvut EIVÄT kaikki ole virheitä: osa laudan pisteistä on
+alueita, joiden Wikidata-koordinaatti on alueen keskipiste eikä se kohta,
+jota lauta tarkoittaa (`borneo` 416 km, `kamtsatka` 452 km, `ahaggar`
+281 km, `sahara`, `namib`, `nullarbor`…). Työkalu on siksi LIPPU
+IHMISELLE, ei tuomio — sama linja kuin `tools/tarkista-karttapisteet.mjs`.
+Selviä kaupunkivirheitä on silti paljon: `kanton` 473 km, `nairobi`
+419 km, `lagos` 412 km, `marrakech` 283 km, `varanasi` 258 km, `riika`
+236 km, `kioto` 188 km, `tallinna` 185 km, `kapkaupunki` 119 km,
+`budapest` 79 km, `helsinki` 34,7 km.
+
+**EI KORJATTU TÄSSÄ, JA SYY ON KIRJATTAVA.** Korjaus koskisi noin sataa
+kaupunkia ja on laudan AINEISTOA, ei koodia. Kolme estettä:
+
+1. Kaupungin x/y ei ole vain piirroskohta: se on reittien pituus
+   (`steps`), välipisteet (`via`), merireitin ranta
+   (`tools/satamat-rannalle.mjs`) ja vähimmäisväli (`minCityDistance`
+   60). Sadan kaupungin siirto on pelin geometrian muutos, joka ajetaan
+   koko ketjun läpi ja katsotaan silmällä.
+2. Aluepisteitä (Borneo, Kamtšatka, Sahara…) ei saa siirtää Wikidatan
+   keskipisteeseen. Kone ei erota niitä luotettavasti kaupungeista
+   (kokeiltu `P31/P279* → Q486972`: Marseille ja Tromssa jäivät
+   luokittelematta), joten lista on käytävä läpi ihmisen silmällä.
+3. 33 kaupungin `wiki`-kenttä on ohjaussivu tai sivu ilman
+   koordinaattia — ne on korjattava ensin, tai ne jäävät mittauksen
+   ulkopuolelle.
+
+Vaihtoehto, joka EI koske pelin geometriaan: antaa kaupungille erillinen
+todellinen `lat`/`lon` ja lukea se PALLOLLA (`pallonKaupungit`,
+`pallonAsteet`), jolloin lauta pysyy sellaisenaan ja vain pallon kuva
+korjaantuu. Sekin on aineistoerä ja vaatii saman ihmisen silmällä
+tehdyn listan. Päätös kuuluu päätoimittajalle ja omistajalle.
+
+### 12.3 Tampereen iso musta ympyrä (mitattu, ei korjattu)
+
+Omistajan kuvakaappauksessa Tampereen kohdalla on iso musta ympyrä.
+Se on kaupunkipiste: `KAUPUNKIPISTEEN_SADE` 0,03 on Globe.gl:n
+astemitta, siis MAAILMAN vakio eikä ruudun vakio. Kirjasto skaalaa
+pisteen `säde × 2π · R / 360` = 0,0524 yksikköä, halkaisija 0,105, ja
+ruutuhalkaisija on likimain `H / (2 · R · korkeus · tan(fov/2))` × 0,105
+— eli **kääntäen verrannollinen kameran korkeuteen**. Puhelimella
+(844 px) se on 2,7 px tavallisessa pelinäkymässä (korkeus 0,35) mutta
+13,7 px lähimmällä zoomilla, ja iPadin korkeammalla ruudulla lähimmällä
+zoomilla noin 30 css-px. Raamattu sanoo pallon merkeistä "koko on
+ruutuvakio"; kaupunkipiste on ainoa, joka ei sitä ole. Korjaus on säteen
+sitominen kameran korkeuteen (ja pisteiden uudelleenasetus zoomin
+muuttuessa) — oma eränsä.
