@@ -4200,8 +4200,12 @@ export const RAAMATTU = {
           + 'pimeydesta kohti pehmeasti zoomaten ja pysahtyy Afrikka keskella '
           + 'ruutua. KERTOJA ALKAA JO PIMEYDESTA (omistajan tarkennus samana '
           + 'iltana: "Kertoja alkaa jo pimeydesta"): avausjakson luenta alkaa '
-          + 'mustasta ruudusta ja pallo zoomautuu esiin sen aikana. Tarkentaa '
-          + 'linjausta ALKAA MUSTASTA RUUDUSTA.',
+          + 'mustasta ruudusta ja pallo zoomautuu esiin sen aikana. JA SE PIMEYS '
+          + 'ON AVARUUS (omistaja samana iltana: "Ja se pimeys on avaruus"): '
+          + 'tausta ei ole pelkka musta ruutu vaan avaruus - harva, hiljainen '
+          + 'tahtitaivas, ja pallo tulee esiin kuin Maa avaruudesta katsottuna '
+          + '(tumma puoli, valon reuna), kunnes se tayttaa ruudun Afrikka '
+          + 'keskella. Tarkentaa linjausta ALKAA MUSTASTA RUUDUSTA.',
         'LINSSIEN AIKASELAIN ALAREUNAAN (omistaja 7.9.2026 ilta klo 20.55 Suomen '
           + 'aikaa, sanatarkasti: "Onko alas mahdollista tehda yksinkertaista '
           + 'aika selainta, mika olisi taynna pysty viivoja ja valittu aika olisi '
