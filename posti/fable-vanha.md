@@ -1,3 +1,13 @@
+## 2026-09-07 16:35 UTC — FABLE → KUVATOIMITUS: peliversio v1674 (sessio 2:n lehdet) + tilaus 18 kaupungin nostot ja miniatyyrit
+
+**v1674** (PR #2145) on mainissa: kaupunkilehdet Punta Arenas, Santa Cruz, Kumasi, Kano, Winnipeg, St. John's, Monterrey, Mérida, Townsville, Iquitos, Timbuktu, Lalibela, Whitehorse, Yellowknife, Dili, Alice Springs, Iqaluit ja Santa Fe; maalehti MOZ; karttanostot QAT KWT CYP FJI SLB SGP + VUT.
+
+**TILAUS (kiireellinen, sama muoto ja säännöt kuin 16:30 UTC:n tilauksessa; koordinaatit js/packs/maakartat.js):** kuvattomat nostot ja 8 miniatyyriä kullekin kaupungille: Punta Arenas, Santa Cruz (BOL), Dili, Alice Springs, Kumasi, Kano, Winnipeg, St. John's, Monterrey, Mérida, Townsville, Iquitos, Timbuktu, Lalibela, Whitehorse, Yellowknife (= 16 × 8 = 128 miniatyyriä + nostot). Täsmälliset aiheet kohde kohdelta ovat mainin tiedostossa docs/raportit/lehdet-2026-09-07-ilta.md, osio "Kuvaputken tilaukset" kohdasta **Punta Arenas** alkaen (MOZ, Salta, Antofagasta, Nuuk ja Anchorage tilattiin jo 16:30 UTC). Etusivukuvat (PYSTY 0,60–0,85, ei kasvoja) kiireellisimpinä: Whitehorse (SS Klondike tai Miles Canyon), Yellowknife (revontulet ilman vesileimaa), Dili, Alice Springs, Iqaluit (matkaopas pysty), Santa Fe — sekä edelleen Nuuk ja Anchorage. Dilin, Alice Springsin, Santa Fen ja Iqaluitin kuvitus on KOKONAAN kuvaputken varassa (Commons vastasi 429 koko illan); niiden nostojen ja juttujen aiheet ovat lehtien lohkokommenteissa (js/packs/kulttuuri-kategoriat.js, js/packs/nahtavyysjutut.js). Malangatanan ja Sadimban töitä EI tilata (tekijänoikeus). Ei tunnistettavia kasvoja; miniatyyrit PNG 1024 × 1024 syvättyinä, pelipolku kohtaamiset/miniatyyrit/{canonicalId}.png.
+
+Kohtaamisten kuusi henkilövaihtoa (Leena, Sigrid, Safa, Danylo, Reetta, Marios) tulevat peliin seuraavassa versiossa; kuvat saa generoida.
+
+---
+
 ## 2026-09-07 15:20 UTC — FABLE → KUVATOIMITUS: Nikosia vahvistettu — Marios
 
 Omistaja vastasi: "Vaihda toinen henkilö" tarkoitti uutta päähenkilöä. Nikosian kohtaamishenkilö on seripainotaiteilija Marios teidän kuvauksellanne (tiukka, arvioiva katse); Elena-linja päättyy. Kaari kirjoitetaan Marioksella; kuvan saa generoida.
