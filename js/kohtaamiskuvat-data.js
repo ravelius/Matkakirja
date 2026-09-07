@@ -99,6 +99,12 @@ export const kohtaamiskuvat = [
     hahmo: 'Inês',
     tiedosto: 'kasvo-lissabon-ines-laattapaja.jpg',
     tila: 'tarkistettu',
+    /*
+     * POIS KORTILTA 7.9.2026: saman kohtaamisen uusi hyväksytty versio
+     * (lissabon-ines-round2-r20260905-v1) tuli kuvaputkesta, ja kortille
+     * mahtuu kaupungista vain yksi. Hyväksytty kuva jää galleriaan.
+     */
+    aktiivinen: false,
     alt: 'Inês nappaa liukuvan savilaatan kuivaustelineestä lissabonilaisessa keramiikkapajassa.',
     kuvateksti: 'Inês oli pelastamassa kuivaustelineestä liukuvaa laattaa, kun pelaaja ilmestyi kysymyksineen. Säikähdys muuttui heti pidätellyksi nauruksi.',
     hetki: 'Matala kolmiomainen asento, käsissä vielä pehmeä laatta ja taustalla moderni uuni tekevät keskeytyksestä uskottavan.',
@@ -527,6 +533,86 @@ export const kohtaamiskuvat = [
     kuvateksti: 'Lucia kääntyy kesken naamioiden järjestämisen. Ikkunasta siivilöityvä aurinko osuu hänen häkeltyneeseen katseeseensa.',
     hetki: 'Matkaajan yllättävä kysymys keskeyttää työn. Aurinko valaisee kasvot ja käsivarren; kissa jatkaa uniaan.',
     vihje: 'Naamiopaja ja ikkunan valo kertovat Venetsiasta; tilauskirjan sisältöä ei näytetä.',
+  },
+  /*
+   * KUVAPUTKEN TOIMITUS 7.9.2026 03:40 UTC (posti/kuvatoimitus-valmiit-7-
+   * 20260907.json): omistajan arviointisivullaan hyväksymät viisi round2-
+   * kuvaa. Kuvatekstit ja altit ovat toimituksen caption-kentästä sanasta
+   * sanaan; hetki ja vihje on kirjoitettu kuvasta katsoen. Jokaisen
+   * tiedoston sha256 on tarkistettu latauksessa toimitusta vastaan.
+   *
+   * Saman kaupungin aiemmat hyväksytyt kuvat jäävät galleriaan mutta
+   * pudotettiin kortilta (`aktiivinen: false`), koska kaupungista
+   * valitaan peliin yksi.
+   */
+  {
+    id: 'praha-tomas-round2-r20260905-v1',
+    kaupunki: 'Praha',
+    maa: 'Tšekki',
+    hahmo: 'Tomáš',
+    tiedosto: 'praha-tomas-round2-r20260905-v1.jpg',
+    tila: 'tarkistettu',
+    alt: 'Pitkä Tomáš pysähtyy kultakehys käsissään. Ikkunasta siivilöityvä aurinko osuu hänen valkoisiin hiuksiinsa ja uurteiseen otsaansa, kun matkaajan kysymys saa hänet kumartumaan lähemmäs.',
+    kuvateksti: 'Pitkä Tomáš pysähtyy kultakehys käsissään. Ikkunasta siivilöityvä aurinko osuu hänen valkoisiin hiuksiinsa ja uurteiseen otsaansa, kun matkaajan kysymys saa hänet kumartumaan lähemmäs.',
+    hetki: 'Tyhjä kultakehys nojaa hänen rintaansa vasten, molemmat kädet pitävät listoista, ja parkettisalin taulut jäävät hämärään taakse.',
+    vihje: 'Vanhan gallerian korkea sali ja ikkunan valo kertovat Prahasta; kehyksen sisällä ei näy mitään eikä kysymyksen vastausta paljasteta.',
+  },
+  {
+    id: 'ateena-dafni-round2-r20260905-v1',
+    kaupunki: 'Ateena',
+    maa: 'Kreikka',
+    hahmo: 'Dafni',
+    tiedosto: 'ateena-dafni-round2-r20260905-v1.jpg',
+    tila: 'tarkistettu',
+    alt: 'Dafni on lähdössä työmaalta, kun aarrekysymys pysäyttää hänet. Viimeinen valo osuu kasvoihin ja työkalulaatikkoon; tutkiva katse jää odottamaan matkaajan selitystä.',
+    kuvateksti: 'Dafni on lähdössä työmaalta, kun aarrekysymys pysäyttää hänet. Viimeinen valo osuu kasvoihin ja työkalulaatikkoon; tutkiva katse jää odottamaan matkaajan selitystä.',
+    hetki: 'Työkalulaatikon kansi on jo kiinni ja molemmat kädet lepäävät sen päällä, kun Dafni kääntyy olkansa yli päivän viimeisessä valossa.',
+    vihje: 'Restauroinnin telineet, pylväät ja maahan lasketut marmorilohkareet kertovat työmaasta; vanhoja mittamerkintöjä tai vastausta ei näytetä.',
+  },
+  {
+    id: 'lontoo-mina-theo-round2-r20260905-v1',
+    kaupunki: 'Lontoo',
+    maa: 'Englanti',
+    hahmo: 'Mina ja Theo',
+    tiedosto: 'lontoo-mina-theo-round2-r20260905-v1.jpg',
+    tila: 'tarkistettu',
+    /*
+     * EI VIELÄ KORTILLE (Opus 7.9.2026): kuva on omistajan hyväksymä,
+     * mutta Lontoon tarinakaaren kohtaamisessa puhuu muotialan opiskelija
+     * Leila, ei kaksi arkkitehtiopiskelijaa. Kortilla näkyisi eri ihminen
+     * kuin se, joka kysymyksen esittää, ja tests/kohtaamiskuvat.test.mjs
+     * kaataisi kytkennän. Kuva jää galleriaan, kunnes Fable päättää,
+     * kirjoitetaanko kaari Minalle ja Theolle vai tilataanko Leilan kuva.
+     */
+    aktiivinen: false,
+    alt: 'Mina ja Theo pysähtyvät rinnakkain St Helen’s Squarella. Lasijulkisivusta heijastuva aurinko osuu kasvoihin: Mina näyttää tyrmistyneeltä, Theo arvioi matkaajaa pidätellen hymyä.',
+    kuvateksti: 'Mina ja Theo pysähtyvät rinnakkain St Helen’s Squarella. Lasijulkisivusta heijastuva aurinko osuu kasvoihin: Mina näyttää tyrmistyneeltä, Theo arvioi matkaajaa pidätellen hymyä.',
+    hetki: 'Molemmat ovat pysähtyneet keskelle aukiota; Minalla on rullalle kääritty piirustus kädessä ja Theon kädet ovat takin taskuissa.',
+    vihje: 'Teräsristikko, lasiseinä ja ohi kiiruhtavat kulkijat kertovat Cityn aukiosta; kylttejä, katunimiä tai vastausta ei näytetä.',
+  },
+  {
+    id: 'varsova-zofia-round2-r20260905-v1',
+    kaupunki: 'Varsova',
+    maa: 'Puola',
+    hahmo: 'Zofia',
+    tiedosto: 'varsova-zofia-round2-r20260905-v1.jpg',
+    tila: 'tarkistettu',
+    alt: 'Zofia vetää raskaan tilikirjan tiskille ja pysähtyy kuullessaan matkaajan kysymyksen. Hänen terävä katseensa jää epäuskon ja pidätetyn huvittuneisuuden välille.',
+    kuvateksti: 'Zofia vetää raskaan tilikirjan tiskille ja pysähtyy kuullessaan matkaajan kysymyksen. Hänen terävä katseensa jää epäuskon ja pidätetyn huvittuneisuuden välille.',
+    hetki: 'Toinen käsi lepää tummanvihreän tilikirjan kannella, toinen nostaa käärepaperin kulmaa, ja punainen kissa seuraa liikettä tiskin päästä.',
+    vihje: 'Antikvariaatin hyllyt, käärepaperinippu ja ikkunan viileä valo kertovat puodista; kirjojen nimiä tai eränumeroa ei näytetä.',
+  },
+  {
+    id: 'lissabon-ines-round2-r20260905-v1',
+    kaupunki: 'Lissabon',
+    maa: 'Portugali',
+    hahmo: 'Inês',
+    tiedosto: 'lissabon-ines-round2-r20260905-v1.jpg',
+    tila: 'tarkistettu',
+    alt: 'Inês nostaa kuivaustelineestä sinivalkoista laattaa. Ikkunasta siivilöityvä aurinko osuu hänen kasvoihinsa, kun hän katsoo matkaajaa lämpimän epäuskoisesti.',
+    kuvateksti: 'Inês nostaa kuivaustelineestä sinivalkoista laattaa. Ikkunasta siivilöityvä aurinko osuu hänen kasvoihinsa, kun hän katsoo matkaajaa lämpimän epäuskoisesti.',
+    hetki: 'Inês on polvillaan telineen vieressä ja työntää laattaa hyllylle molemmin käsin, kun lehtien varjot kirjovat lattian ja käsivarren.',
+    vihje: 'Sinivalkoinen azulejo-laatta ja pajan uuni kertovat Lissabonin laattaperinteestä; laatan kuvion merkitystä tai vastausta ei selitetä.',
   },
 ];
 
