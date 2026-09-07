@@ -11,33 +11,33 @@
  *   valittu väri hehkuu kaikkia muita värejä vielä voimakkaammin …
  *   niissä nostoissa olisi tietenkin myös jo valmiiksi generoituja
  *   muutamia kysymyksiä, mitä painamalla pulu voisi sitten selittää
- *   lisää."*)
+ *   lisää."*
  *
- * Kertomusmoottori (js/linssit/ihmisen-matka.js) päättää esityksen ja
- * kutsuu `ui.aloitaTutkimusvaihe?.()` (js/aikajana.js). Tästä
- * eteenpäin kello ei kulje, kamera ei seuraa ketään ja kartta on
+ * ja "IHMISEN MATKA: YKSI PALKKI, EI KARUSELLIA, KAIKKIIN NOSTOIHIN
+ * KUVA, LINSSI MUISTAA PAIKKANSA" (7.9.2026 klo 17.40): viisi nappia
+ * asuvat linssin YHDESSÄ PALKISSA Matkakirjan yläpalkin tilalla,
+ * alareunan karuselli on poissa, ja vaihe palaa sulun jälkeen siihen,
+ * mihin pelaaja jäi.)
+ *
+ * Kertomusmoottori (js/linssit/ihmisen-matka-esitys.js) päättää
+ * esityksen ja kutsuu `ui.aloitaTutkimusvaihe?.()` (js/aikajana.js).
+ * Tästä eteenpäin kello ei kulje, kamera ei seuraa ketään ja kartta on
  * pelaajan oma:
  *
  *   1. NOSTOT   Kaikki kaaren 20 löytöpaikkaa — myös esityksestä pois
  *               jääneet — sekä 20 lisänostoa (Toba, Sunda, Sahul,
  *               Flores, Ust'-Ishim, Sungir, Lascaux, Clovis, Rapa Nui …)
  *               hehkuvat kartalla pieninä sykkivinä pisteinä, kukin
- *               oman vanansa väriin sävytettynä. Napautus avaa kortin.
- *   2. NAPIT    Viisi nappia = viisi virtaa. Napautus kääntää pallon
- *               niin että koko vana näkyy, korostaa sen ja avaa
- *               summaavan tekstin pergamenttilapussa; toinen napautus
- *               samaan nappiin palauttaa kaikki.
- *   3. PULU     Kortin alla 2–3 valmista kysymystä. Napautus lähettää
- *               kysymyksen pulun chattiin, ja noston teksti ja lähde
- *               kulkevat mukana kontekstina.
- *
- * ── MIKSI OMA TIEDOSTO ────────────────────────────────────────────
- *
- * Esitys ja tutkimusvaihe tehtiin rinnakkain kahdessa työssä. Raja on
- * `ui.aloitaTutkimusvaihe()`: sitä ennen kaikki on kertomusmoottorin,
- * sen jälkeen kaikki on tämän moduulin. Siksi tämä ei kirjoita
- * riviäkään esityksen kulkuun eikä lue kertomuksen jaksoja — ainoa
- * side on se yksi kutsu ja moottorin ajo-olio (kello, lauta, virrat).
+ *               oman vanansa väriin sävytettynä. Napautus avaa KORTIN
+ *               (js/linssit/ihmisen-matka-kortti.js) — saman, jonka
+ *               esitys avaa lampusta ja kuvasta.
+ *   2. NAPIT    Viisi nappia = viisi virtaa, linssin palkissa. Esityksen
+ *               aikana ne ovat legenda (himmeät, ilman toimintoa); tässä
+ *               ne heräävät: napautus kääntää pallon niin että koko vana
+ *               näkyy, korostaa sen ja avaa summaavan tekstin
+ *               pergamenttilapussa; toinen napautus samaan nappiin
+ *               palauttaa kaikki.
+ *   3. PULU     Kortin alla 2–3 valmista kysymystä (kortin moduuli).
  *
  * ── MIKSI EI OMAA KELLOA EIKÄ OMAA KAMERAA ────────────────────────
  *
@@ -57,11 +57,26 @@
  * Chatin portti sen sijaan avataan: body-luokka `aikajana-tutkimus-auki`
  * päästää pelaajan keskustelemaan pulun kanssa linssin päällä
  * (js/ui-apurit.js linssiEstaaChatin).
+ *
+ * ── MUISTI ────────────────────────────────────────────────────────
+ *
+ * Moottori antaa `ajo.muisti`-kentässä sulun yli tallennetun tilan
+ * (js/linssit/ihmisen-matka-muisti.js). Jos siinä on valittu virta tai
+ * avoin kortti, ne palautetaan tässä ILMAN kameran kääntöä — kamera on
+ * jo muistista paikallaan, ja napin oma ajo veisi sen muualle.
  */
 
 import * as data from './ihmisen-matka-data.js';
 import { IHMISEN_MATKA_VIRRAT } from './ihmisen-matka-virrat.js';
-import { polloKysy } from '../pollo.js';
+import {
+  heksaRgb, kierraLon, kokoaNostot, luoNostokortti, nostonKonteksti, nostonVirta,
+} from './ihmisen-matka-kortti.js';
+
+/* Nostojen kokoaminen ja sävytys asuvat kortin moduulissa; testit ja
+   savukkeet lukevat ne yhä tästä. */
+export {
+  heksaRgb, kierraLon, kokoaNostot, nostonKonteksti, nostonVirta,
+};
 
 /** Laudan linssiapurin osa: oma, jottei aikajanan purku vie näitä. */
 export const TUTKIMUKSEN_OSA = 'ihmisen-tutkimus';
@@ -109,7 +124,7 @@ const TYYLIN_TUNNUS = 'ihmisen-tutkimus-tyyli';
  * yhden tiedoston versiossa peruslinkkiä ei ole — silloin tyylit ovat
  * jo sivun <style>-lohkossa eikä mitään haeta.
  */
-function lataaTyyli() {
+export function lataaTutkimuksenTyyli() {
   if (typeof document === 'undefined') return;
   if (document.getElementById(TYYLIN_TUNNUS)) return;
   const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
@@ -128,14 +143,6 @@ function solmu(tag, luokka, teksti) {
   if (luokka) e.className = luokka;
   if (teksti != null) e.textContent = teksti;
   return e;
-}
-
-/** Pituusaste [-180, 180]. */
-export function kierraLon(lon) {
-  let v = lon;
-  while (v > 180) v -= 360;
-  while (v < -180) v += 360;
-  return v;
 }
 
 /**
@@ -196,121 +203,64 @@ export function rajauksenLeveys(rajaus, kuvasuhde = 1, vara = RAJAUKSEN_VARA) {
   return Math.max(RAJAUS_MIN, Math.min(RAJAUS_MAX, Math.max(leveys, korkeus)));
 }
 
-/** Heksaväri → "r, g, b" css-muuttujaan (sävytys ja hehku). */
-export function heksaRgb(heksa, oletus = '212, 175, 90') {
-  const m = /^#?([0-9a-f]{6})$/i.exec(String(heksa ?? '').trim());
-  if (!m) return oletus;
-  const n = parseInt(m[1], 16);
-  return `${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}`;
-}
-
-/** Isoympyräetäisyys asteina (noston sävytys lähimmästä vanasta). */
-function kulmaEro(aLat, aLon, bLat, bLon) {
-  const RAD = Math.PI / 180;
-  const f1 = aLat * RAD;
-  const f2 = bLat * RAD;
-  let dl = kierraLon(bLon - aLon) * RAD;
-  if (!Number.isFinite(dl)) dl = 0;
-  const k = Math.sin(f1) * Math.sin(f2) + Math.cos(f1) * Math.cos(f2) * Math.cos(dl);
-  return Math.acos(Math.max(-1, Math.min(1, k))) / RAD;
-}
+/* ==================== VIISI NAPPIA ==================== */
 
 /**
- * Noston virta: datan oma kenttä, tai lähin vanan kärki.
+ * Viisi nappia = viisi virtaa (väripilkku + nimi).
  *
- * Löytöpaikoilla (kaaren 20 pysäkkiä) kenttää ei ole — ne ovat
- * todisteita, eivät virran osia — joten sävy haetaan kartalta: mihin
- * vanaan piste on lähinnä, sen väriin se hehkuu. Kärkikohtainen
- * `virrat` ratkaisee, koska selkäranka vaihtaa väriä matkalla.
+ * YKSI TEHDAS KAHDELLE KÄYTÖLLE (Raamattu YKSI PALKKI): moottori
+ * rakentaa napit linssin palkkiin jo linssin auetessa LEGENDANA
+ * (himmeät, ilman toimintoa — esityksen aikana pelaaja lukee niistä
+ * vain värit), ja tutkimusvaihe kytkee samoihin nappeihin toiminnon
+ * (`kytke`). Kaksi nappiriviä samasta asiasta olisi kaksi totuutta.
+ *
+ * @param {Array<{tunnus:string, nimi:string, vari?:{rintama?:string}}>} virrat
+ * @param {{ legenda?: boolean }} asetukset
+ * @returns {{ el: Element, napit: Array<{el:Element,tunnus:string}>,
+ *   kytke: (fn: (virta: object) => void) => void, aseta: (tunnus: string|null) => void,
+ *   legenda: (paalla: boolean) => void }}
  */
-export function nostonVirta(nosto, vanat = []) {
-  if (nosto?.virta) return nosto.virta;
-  let paras = null;
-  let parasEro = Infinity;
-  for (const vana of vanat) {
-    const pisteet = vana?.pisteet ?? [];
-    for (let k = 0; k < pisteet.length; k += 1) {
-      const [lat, lon] = pisteet[k];
-      const ero = kulmaEro(nosto.lat, nosto.lon, lat, lon);
-      if (ero < parasEro) {
-        parasEro = ero;
-        paras = vana.virrat?.[k] ?? vana.virta;
-      }
+export function luoVirtanapit(virrat = [], { legenda = false } = {}) {
+  const el = solmu('div', 'ihmisen-vananapit');
+  el.setAttribute('role', 'group');
+  el.setAttribute('aria-label', 'Vanat');
+  const napit = [];
+  let toiminto = null;
+  for (const virta of virrat) {
+    const nappi = solmu('button', 'ihmisen-vananappi');
+    nappi.type = 'button';
+    nappi.setAttribute('aria-pressed', 'false');
+    nappi.title = virta.nimi;
+    nappi.dataset.virta = virta.tunnus;
+    nappi.style.setProperty('--vana-savy', heksaRgb(virta.vari?.rintama));
+    nappi.appendChild(solmu('span', 'ihmisen-vananappi-pilkku'));
+    nappi.appendChild(solmu('span', 'ihmisen-vananappi-nimi', virta.nimi));
+    // Puhelimella nimet lyhenevät yhdelle riville (css vaihtaa spanit).
+    nappi.appendChild(solmu('span', 'ihmisen-vananappi-lyhyt', LYHYET[virta.tunnus] ?? virta.nimi));
+    nappi.addEventListener('click', () => { if (toiminto) toiminto(virta); });
+    el.appendChild(nappi);
+    napit.push({ el: nappi, tunnus: virta.tunnus });
+  }
+  const asetaLegenda = (paalla) => {
+    el.classList.toggle('legenda', Boolean(paalla));
+    for (const { el: n } of napit) {
+      n.disabled = Boolean(paalla);
+      n.setAttribute('aria-disabled', paalla ? 'true' : 'false');
     }
-  }
-  return paras;
-}
-
-/**
- * Tutkimusvaiheen nostot yhtenä listana: kaaren löytöpaikat ensin,
- * lisänostot perään.
- *
- * LÖYTÖPAIKAN KORTTITEKSTI ON `loyto` eikä `juttu`: kortti on kartan
- * päällä kelluva lappu, ja koko juttu (kaksi kappaletta) kuuluu
- * Tiedeliitteeseen. `loyto` kertoo juuri sen, mitä pelaaja tässä
- * kysyy — kuka löysi, mistä ja milloin. Selite on varana.
- *
- * @param {object[]} tapahtumat moottorin pysäkit (ihmisenMatkanPysakit)
- * @param {object[]} lisat IHMISEN_MATKA_LISANOSTOT
- */
-export function kokoaNostot(tapahtumat = [], lisat = []) {
-  const nostot = [];
-  for (const t of tapahtumat) {
-    if (!Number.isFinite(t?.lat) || !Number.isFinite(t?.lon)) continue;
-    nostot.push({
-      tunnus: t.tunnus,
-      laji: 'loytopaikka',
-      otsikko: t.otsikko,
-      paikka: t.paikka ?? null,
-      maa: t.maa ?? null,
-      ajoitus: t.ajoitus,
-      vuosiaSitten: t.vuosiaSitten,
-      lat: t.lat,
-      lon: t.lon,
-      teksti: t.loyto ?? t.selite ?? '',
-      // ihmisenMatkanPysakit siirsi havainnekuvan `ilmio`-kenttään ja
-      // löytökuvan `kuva`-kenttään; alkuperäinen `esine` on tallella.
-      kuva: t.ilmio?.osoite ?? null,
-      esine: t.esine?.osoite ?? null,
-      esineSelite: t.esine?.selite ?? null,
-      lahde: t.lahde ?? null,
-      virta: null,
-      kysymykset: t.kysymykset ?? [],
-    });
-  }
-  for (const l of lisat) {
-    if (!Number.isFinite(l?.lat) || !Number.isFinite(l?.lon)) continue;
-    nostot.push({
-      tunnus: l.tunnus,
-      laji: 'lisanosto',
-      otsikko: l.otsikko,
-      paikka: null,
-      maa: null,
-      ajoitus: l.ajoitus,
-      vuosiaSitten: l.vuosiaSitten,
-      lat: l.lat,
-      lon: l.lon,
-      teksti: l.teksti ?? '',
-      kuva: null,
-      esine: null,
-      esineSelite: null,
-      lahde: l.lahde ?? null,
-      virta: l.virta ?? null,
-      kysymykset: l.kysymykset ?? [],
-    });
-  }
-  return nostot;
-}
-
-/** Kysymyksen konteksti pululle: noston teksti ja lähde. */
-export function nostonKonteksti(nosto) {
-  const osat = [nosto.otsikko, nosto.ajoitus].filter(Boolean).join(', ');
-  const lahde = nosto.lahde ? ` (Lähde: ${nosto.lahde}.)` : '';
-  const paikka = nosto.paikka ? `${nosto.paikka}${nosto.maa ? `, ${nosto.maa}` : ''}. ` : '';
+  };
+  asetaLegenda(legenda);
   return {
-    nimi: `${nosto.otsikko}${nosto.ajoitus ? ` — ${nosto.ajoitus}` : ''}`,
-    tyyppi: 'Ihmisen matka -linssin nosto',
-    teksti: `${osat}. ${paikka}${nosto.teksti}${lahde}`,
+    el,
+    napit,
+    kytke: (fn) => { toiminto = fn; asetaLegenda(!fn); },
+    aseta: (valittu) => {
+      for (const { el: n, tunnus } of napit) {
+        const paalla = tunnus === valittu;
+        n.classList.toggle('valittu', paalla);
+        n.setAttribute('aria-pressed', paalla ? 'true' : 'false');
+      }
+    },
+    legenda: asetaLegenda,
   };
 }
 
@@ -332,40 +282,34 @@ export function luoTutkimusvaihe({ ajo, ui, linssi }) {
   // linssiapurin merkkejä, joten siellä esitys päättyy kuten ennen.
   if (!lauta?.linssit || !koti) return null;
 
-  lataaTyyli();
+  lataaTutkimuksenTyyli();
 
   /* --- 1. Kello seis, vanat loppuun, kameran seuranta pois ---------- */
   ajo.pysayta?.();
   const vanat = ajo.virrat?.tutkimus?.() ?? null;
   const vananPisteet = vanat?.pisteet?.() ?? [];
 
-  /*
-   * ESINERIVI TAKAISIN NÄKYVIIN (tehtävänanto kohta 4). Karuselli on
-   * moottorin oma nauha; esitys on voinut häivyttää sen luokalla
-   * `tyhja` tai piilottaa koko juuren. Tutkimusvaiheessa se palaa —
-   * löydöt ovat juuri sitä, mitä pelaaja nyt selaa.
-   */
-  const nauha = ajo.nauha ?? null;
-  const nauhanTila = nauha ? { tyhja: nauha.classList.contains('tyhja'), hidden: nauha.hidden } : null;
-  if (nauha) {
-    nauha.classList.remove('tyhja');
-    nauha.hidden = false;
-  }
   ajo.juuri?.classList.add('tutkimusvaihe');
   document.body.classList.add('aikajana-tutkimus-auki');
 
-  /* --- 2. Nostot kartalle ------------------------------------------ */
-  const nostot = kokoaNostot(ajo.tapahtumat ?? [], data.IHMISEN_MATKA_LISANOSTOT ?? []);
+  /* --- 2. Kortti: moottorin oma tai tarvittaessa oma ---------------- */
+  let omaKortti = null;
+  let kortti = ui.nostokortti ?? null;
+  if (!kortti) {
+    omaKortti = luoNostokortti({ ajo, ui, linssi, koti });
+    kortti = omaKortti;
+  }
+  const nostot = kortti?.nostot ?? kokoaNostot(ajo.tapahtumat ?? [], data.IHMISEN_MATKA_LISANOSTOT ?? []);
   const varit = new Map(IHMISEN_MATKA_VIRRAT.map((v) => [v.tunnus, v.vari]));
   const merkit = new Map();
-  let auki = null;
 
+  /* --- 3. Nostot kartalle ------------------------------------------ */
   const merkinElementti = (nosto) => {
     let el = merkit.get(nosto.tunnus);
     if (el) return el;
     el = solmu('div', 'ihmisen-nosto');
     el.setAttribute('aria-hidden', 'true');
-    const virta = nostonVirta(nosto, vananPisteet);
+    const virta = kortti?.virta?.(nosto.tunnus) ?? nostonVirta(nosto, vananPisteet);
     const vari = varit.get(virta)?.rintama ?? null;
     // Kulta on pohja, vanan sävy sekoittuu siihen: piste kertoo
     // yhdellä silmäyksellä, mihin virtaan kohta kuuluu.
@@ -381,7 +325,7 @@ export function luoTutkimusvaihe({ ajo, ui, linssi }) {
     lat: nosto.lat,
     lng: nosto.lon,
     elementti: () => merkinElementti(nosto),
-    napautus: () => avaaKortti(nosto),
+    napautus: () => kortti?.avaa(nosto.tunnus),
   }));
   const merkkikahva = lauta.linssit.merkit(TUTKIMUKSEN_OSA, datumit);
   /*
@@ -393,29 +337,35 @@ export function luoTutkimusvaihe({ ajo, ui, linssi }) {
    */
   lauta.heraa?.();
 
-  /* --- 3. Kerros: napit, kortti ja pergamenttilappu ----------------- */
+  /* --- 4. Kerros: pergamenttilappu (ja napit, jos palkkia ei ole) --- */
   const juuri = solmu('div', 'ihmisen-tutkimus');
   juuri.setAttribute('role', 'region');
   juuri.setAttribute('aria-label', `${linssi?.nimi ?? 'Ihmisen matka'}: tutkimusvaihe`);
 
-  const napit = solmu('div', 'ihmisen-vananapit');
-  napit.setAttribute('role', 'group');
-  napit.setAttribute('aria-label', 'Vanat');
   const lappu = solmu('div', 'ihmisen-vanalappu');
   lappu.hidden = true;
   const lapunOtsikko = solmu('h3', 'ihmisen-vanalappu-otsikko');
   const lapunTeksti = solmu('p', 'ihmisen-vanalappu-teksti');
   lappu.append(lapunOtsikko, lapunTeksti);
-  const kortti = solmu('div', 'ihmisen-nostokortti');
-  kortti.hidden = true;
-  kortti.setAttribute('role', 'dialog');
-  kortti.setAttribute('aria-label', 'Nosto');
-  juuri.append(napit, lappu, kortti);
+  juuri.append(lappu);
   koti.appendChild(juuri);
 
-  /* --- 4. Viisi nappia --------------------------------------------- */
+  /*
+   * NAPIT OVAT PALKISSA (Raamattu YKSI PALKKI): moottori rakensi ne
+   * linssin palkkiin legendana (`ajo.virtanapit`), ja tässä ne saavat
+   * toiminnon. Ilman palkkia (kaari ilman kertomusta) rivi tehdään
+   * omaan kerrokseen kuten ennen.
+   */
+  let virtanapit = ajo.virtanapit ?? null;
+  let omatNapit = false;
+  if (!virtanapit) {
+    virtanapit = luoVirtanapit(IHMISEN_MATKA_VIRRAT);
+    juuri.prepend(virtanapit.el);
+    omatNapit = true;
+  }
+
+  /* --- 5. Viisi nappia --------------------------------------------- */
   let valittu = null;
-  const nappilista = [];
 
   /** Vanan kaikki kärjet, jotka kuuluvat valittuun virtaan. */
   const virranPisteet = (tunnus) => {
@@ -445,18 +395,15 @@ export function luoTutkimusvaihe({ ajo, ui, linssi }) {
     return true;
   };
 
-  const valitseVana = (virta) => {
+  const valitseVana = (virta, { kamera = true } = {}) => {
     const uusi = valittu === virta.tunnus ? null : virta.tunnus;
     valittu = uusi;
     vanat?.korosta?.(uusi);
-    for (const { el, tunnus } of nappilista) {
-      const paalla = tunnus === uusi;
-      el.classList.toggle('valittu', paalla);
-      el.setAttribute('aria-pressed', paalla ? 'true' : 'false');
-    }
+    virtanapit.aseta(uusi);
     if (!uusi) {
       lappu.hidden = true;
       lappu.classList.remove('esilla');
+      ajo.tallennaMuisti?.();
       return;
     }
     lapunOtsikko.textContent = virta.nimi;
@@ -465,160 +412,53 @@ export function luoTutkimusvaihe({ ajo, ui, linssi }) {
     // Pakotettu asettelu, jotta liuku lähtee alkuasennosta.
     void lappu.getBoundingClientRect();
     lappu.classList.add('esilla');
-    asetaLapunKorkeus();
-    kaannaVanaan(uusi);
+    if (kamera) kaannaVanaan(uusi);
+    ajo.tallennaMuisti?.();
   };
+  virtanapit.kytke(valitseVana);
 
-  for (const virta of IHMISEN_MATKA_VIRRAT) {
-    const nappi = solmu('button', 'ihmisen-vananappi');
-    nappi.type = 'button';
-    nappi.setAttribute('aria-pressed', 'false');
-    nappi.title = virta.nimi;
-    nappi.style.setProperty('--vana-savy', heksaRgb(virta.vari?.rintama));
-    nappi.appendChild(solmu('span', 'ihmisen-vananappi-pilkku'));
-    nappi.appendChild(solmu('span', 'ihmisen-vananappi-nimi', virta.nimi));
-    // Puhelimella nimet lyhenevät yhdelle riville (css vaihtaa spanit).
-    nappi.appendChild(solmu('span', 'ihmisen-vananappi-lyhyt', LYHYET[virta.tunnus] ?? virta.nimi));
-    nappi.addEventListener('click', () => valitseVana(virta));
-    napit.appendChild(nappi);
-    nappilista.push({ el: nappi, tunnus: virta.tunnus });
+  /* --- 6. Muisti: valittu virta ja avoin kortti sulun takaa --------- */
+  const muisti = ajo.muisti?.vaihe === 'tutkimus' ? ajo.muisti : null;
+  if (muisti?.virta) {
+    const virta = IHMISEN_MATKA_VIRRAT.find((v) => v.tunnus === muisti.virta);
+    // Kamera on jo muistista paikallaan: napin ajo ei saa viedä sitä.
+    if (virta) valitseVana(virta, { kamera: false });
   }
+  if (muisti?.kortti && kortti && kortti.auki() !== muisti.kortti) kortti.avaa(muisti.kortti);
 
-  /*
-   * LAPPU ASETTUU KARUSELLIN PÄÄLLE MITATTUUN KORKEUTEEN. Nauhan
-   * korkeus tulee kortin leveydestä (css laskee sen muuttujista), joten
-   * kiinteä `bottom` osuisi väärin kaikilla muilla ruuduilla kuin
-   * sillä, jolla se kirjoitettiin.
-   */
-  function asetaLapunKorkeus() {
-    const korkeus = nauha?.isConnected ? nauha.getBoundingClientRect().height : 0;
-    juuri.style.setProperty('--tutkimus-nauha', `${Math.round(korkeus)}px`);
-  }
-  asetaLapunKorkeus();
-
-  /* --- 5. Noston kortti kysymyksineen ------------------------------- */
   /** Mittarit savukkeelle ja testeille. */
-  const tila = { nostoja: nostot.length, kysymyksia: 0, alku: Date.now() };
-
-  function suljeKortti() {
-    auki = null;
-    kortti.hidden = true;
-    kortti.classList.remove('esilla');
-    kortti.replaceChildren();
-    if (ui.fokuskohdeAuki?.linssinosto) ui.fokuskohdeAuki = null;
-  }
-
-  function avaaKortti(nosto) {
-    if (auki === nosto.tunnus) { suljeKortti(); return; }
-    auki = nosto.tunnus;
-    kortti.replaceChildren();
-
-    const sulje = solmu('button', 'ihmisen-nostokortti-sulje', '✕');
-    sulje.type = 'button';
-    sulje.setAttribute('aria-label', 'Sulje nosto');
-    sulje.addEventListener('click', suljeKortti);
-    kortti.appendChild(sulje);
-
-    kortti.appendChild(solmu('div', 'ihmisen-nostokortti-ajoitus', nosto.ajoitus ?? ''));
-    kortti.appendChild(solmu('h2', 'ihmisen-nostokortti-otsikko', nosto.otsikko ?? ''));
-    if (nosto.paikka) {
-      kortti.appendChild(solmu('div', 'ihmisen-nostokortti-paikka',
-        nosto.maa ? `${nosto.paikka} — ${nosto.maa}` : nosto.paikka));
-    }
-    if (nosto.kuva || nosto.esine) {
-      const kuvat = solmu('div', 'ihmisen-nostokortti-kuvat');
-      for (const [osoite, selite] of [[nosto.kuva, nosto.otsikko], [nosto.esine, nosto.esineSelite]]) {
-        if (!osoite) continue;
-        const kuva = document.createElement('img');
-        kuva.className = 'ihmisen-nostokortti-kuva';
-        kuva.loading = 'lazy';
-        kuva.decoding = 'async';
-        kuva.src = osoite;
-        kuva.alt = selite ?? '';
-        // Puuttuva kuva ei jätä tyhjää laatikkoa kortin keskelle.
-        kuva.addEventListener('error', () => kuva.remove());
-        kuvat.appendChild(kuva);
-      }
-      if (kuvat.childElementCount) kortti.appendChild(kuvat);
-    }
-    kortti.appendChild(solmu('p', 'ihmisen-nostokortti-teksti', nosto.teksti ?? ''));
-    if (nosto.lahde) kortti.appendChild(solmu('div', 'ihmisen-nostokortti-lahde', nosto.lahde));
-
-    const kysymykset = (nosto.kysymykset ?? []).filter(Boolean).slice(0, 3);
-    if (kysymykset.length) {
-      const ryhma = solmu('div', 'ihmisen-nostokortti-kysymykset');
-      ryhma.appendChild(solmu('div', 'ihmisen-nostokortti-kysyotsikko', 'Kysy pululta'));
-      for (const kysymys of kysymykset) {
-        const nappi = solmu('button', 'ihmisen-nostokysymys', kysymys);
-        nappi.type = 'button';
-        nappi.addEventListener('click', () => kysyPululta(nosto, kysymys, nappi));
-        ryhma.appendChild(nappi);
-      }
-      kortti.appendChild(ryhma);
-    }
-
-    kortti.hidden = false;
-    void kortti.getBoundingClientRect();
-    kortti.classList.add('esilla');
-    kortti.scrollTop = 0;
-    /*
-     * KONTEKSTI PULULLE (js/pollo.js avoinKohdetietoruutu): sama kenttä
-     * kuin kartan kohdetietoruudulla, joten noston teksti ja lähde
-     * kulkevat kysymyksen mukana ilman että pöllö tarvitsee tiedon
-     * tästä moduulista. `linssinosto` erottaa oman merkintämme
-     * fokuskohteen omasta, jottei purku vie väärää korttia.
-     */
-    ui.fokuskohdeAuki = { kohde: nostonKonteksti(nosto), popup: kortti, linssinosto: true };
-  }
-
-  /** Valmis kysymys chattiin. Epäonnistuminen näkyy napissa, ei konsolissa. */
-  function kysyPululta(nosto, kysymys, nappi) {
-    ui.fokuskohdeAuki = { kohde: nostonKonteksti(nosto), popup: kortti, linssinosto: true };
-    const lahti = polloKysy(kysymys);
-    nappi.classList.add(lahti ? 'lahetetty' : 'ei-lahtenyt');
-    nappi.disabled = lahti;
-    tila.kysymyksia += lahti ? 1 : 0;
-  }
-
-  /* --- 6. Ikkunan koko ja purku ------------------------------------- */
-  const koonMuutos = () => {
-    if (!juuri.isConnected) return;
-    asetaLapunKorkeus();
-  };
-  globalThis.addEventListener?.('resize', koonMuutos);
+  const tila = { nostoja: nostot.length, alku: Date.now() };
 
   return {
     /** Savukkeet ja testit: mitä vaiheessa on. */
     tila: () => ({
       ...tila,
+      kysymyksia: kortti?.tila?.().kysymyksia ?? 0,
       valittu,
-      auki,
+      auki: kortti?.auki?.() ?? null,
       merkkeja: datumit.length,
       vanoja: vananPisteet.length,
+      palkissa: !omatNapit,
     }),
     /** Vain testejä ja savukkeita varten: napin painallus ohjelmallisesti. */
     valitse: (tunnus) => {
       const virta = IHMISEN_MATKA_VIRRAT.find((v) => v.tunnus === tunnus);
       if (virta) valitseVana(virta);
     },
-    avaa: (tunnus) => {
-      const nosto = nostot.find((n) => n.tunnus === tunnus);
-      if (nosto) avaaKortti(nosto);
-    },
+    avaa: (tunnus) => kortti?.avaa(tunnus),
     pura: () => {
-      globalThis.removeEventListener?.('resize', koonMuutos);
-      suljeKortti();
+      kortti?.sulje?.();
+      omaKortti?.pura?.();
       vanat?.korosta?.(null);
+      virtanapit.aseta(null);
+      // Palkin napit palaavat legendaksi; omat napit lähtevät kerroksen mukana.
+      if (!omatNapit) virtanapit.kytke(null);
       merkkikahva?.pura?.();
       lauta.linssit.pura(TUTKIMUKSEN_OSA);
       merkit.clear();
       juuri.remove();
       ajo.juuri?.classList.remove('tutkimusvaihe');
       document.body.classList.remove('aikajana-tutkimus-auki');
-      if (nauha && nauhanTila) {
-        nauha.classList.toggle('tyhja', nauhanTila.tyhja);
-        nauha.hidden = nauhanTila.hidden;
-      }
     },
   };
 }

@@ -12,8 +12,17 @@
  *      kääntää palloa Afrikkaan.
  *   4. Pulun repliikkiä ei toisteta: se on kertomuksen kaanonia.
  *
- * Selaimen puoli (hehku, napit, kortti, kysymys chattiin) on
- * savukkeessa tools/savukkeet/savuke-ihmisen-tutkimus.mjs.
+ * ja "IHMISEN MATKA: YKSI PALKKI, EI KARUSELLIA, KAIKKIIN NOSTOIHIN
+ * KUVA, LINSSI MUISTAA PAIKKANSA" (7.9.2026 klo 17.40):
+ *
+ *   5. Yksi nostomalli: löytöpaikalla ja lisänostolla sama kortti, ja
+ *      jokaisella nostolla vähintään yksi kuva (tai sen varapaikka).
+ *   6. Yksi palkki: Matkakirjan yläpalkki piiloon, palkissa nimi,
+ *      kello, viisi virtaa ja ✕; karusellia ei ole.
+ *   7. Muisti: sulun yli tallennettu tila tarkistetaan puhtaasti.
+ *
+ * Selaimen puoli (hehku, napit, kortti, kysymys chattiin, palkki,
+ * muisti) on savukkeessa tools/savukkeet/savuke-ihmisen-tutkimus.mjs.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -27,10 +36,18 @@ import { PYSAKIT } from '../js/linssit/ihmisen-matka.js';
 import {
   kokoaNostot, nostonVirta, nostonKonteksti, vananRajaus, rajauksenLeveys, heksaRgb, kierraLon,
 } from '../js/linssit/ihmisen-matka-tutkimus.js';
+import { lyhytAjoitus, nostokuvanOsoite, NOSTOKUVAN_JUURI } from '../js/linssit/ihmisen-matka-kortti.js';
+import {
+  kelvollinenMuisti, muistinAvain, MUISTIN_VERSIO, MUISTIN_IKA_MAX_MS,
+} from '../js/linssit/ihmisen-matka-muisti.js';
 
 const lue = (polku) => readFileSync(new URL(polku, import.meta.url), 'utf8');
 const CSS = lue('../css/ihmisen-tutkimus.css');
+const AIKAJANA_CSS = lue('../css/aikajana.css');
 const MODUULI = lue('../js/linssit/ihmisen-matka-tutkimus.js');
+const KORTTI = lue('../js/linssit/ihmisen-matka-kortti.js');
+/** Lähdekoodi ilman kommentteja (proosa ei laukaise sanavartioita). */
+const koodi = (teksti) => teksti.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/[^\n]*/g, '');
 const VIRTATUNNUKSET = new Set(IHMISEN_MATKA_VIRRAT.map((v) => v.tunnus));
 
 /* ==================== aineisto ==================== */
@@ -112,12 +129,30 @@ test('kartalle tulee vähintään kolmekymmentä nostoa', () => {
   const jebel = nostot.find((n) => n.tunnus === 'jebel-irhoud');
   assert.ok(jebel.kuva?.includes('jebel-irhoud'), 'havainnekuva puuttuu kortilta');
   assert.ok(jebel.esine?.includes('jebel-irhoud'), 'esinekuva puuttuu kortilta');
-  // Lisänostoille ei ole kuvia (kuvatilaukset erikseen) — eikä saa olla
-  // rikkinäisiä osoitteita.
+  // Löytöpaikalla on Tiedeliitteen juttu ("Lue lisää") ja sivun indeksi.
+  assert.equal(jebel.juttu, true);
+  assert.equal(PYSAKIT[jebel.indeksi].tunnus, 'jebel-irhoud');
+  /*
+   * KAIKISSA NOSTOISSA VÄHINTÄÄN YKSI KUVA (omistaja 7.9.2026):
+   * lisänoston kuvituskuva haetaan ämpäristä polusta
+   * aikajana/ihmisen-matka/nosto/<tunnus>.jpg (kuvaputken erä tulossa;
+   * kortti näyttää varapaikan, kunnes kuva on perillä). Esinettä ei ole.
+   */
+  assert.match(NOSTOKUVAN_JUURI, /\/aikajana\/ihmisen-matka\/nosto$/);
   for (const n of nostot.filter((x) => x.laji === 'lisanosto')) {
-    assert.equal(n.kuva, null);
+    assert.equal(n.kuva, nostokuvanOsoite(n.tunnus));
+    assert.match(n.kuva, /^https:\/\/media\.matkakirja\.app\/aikajana\/ihmisen-matka\/nosto\/[a-z0-9-]+\.jpg$/);
     assert.equal(n.esine, null);
+    assert.equal(n.juttu, false);
+    // Aito kuva on valinnainen kenttä kummallakin lajilla — ei pakko.
+    assert.ok(n.kuvaAito === null || typeof n.kuvaAito === 'string');
   }
+});
+
+test('lyhyt ajoitus sisällykseen ja varakuvaan', () => {
+  assert.equal(lyhytAjoitus({ vuosiaSitten: 230000 }), '230\u00a0000\u00a0v.');
+  assert.equal(lyhytAjoitus({ vuosiaSitten: 800 }), '800\u00a0v.');
+  assert.equal(lyhytAjoitus({ ajoitus: 'jääkausien aikana' }), 'jääkausien aikana');
 });
 
 test('kysymyksen konteksti kantaa noston tekstin ja lähteen', () => {
@@ -183,18 +218,93 @@ test('tyylit kattavat hehkun, napit, lapun ja kortin', () => {
   for (const luokka of [
     '.ihmisen-tutkimus', '.ihmisen-vananapit', '.ihmisen-vananappi',
     '.ihmisen-vanalappu', '.ihmisen-nosto', '.ihmisen-nostokortti',
-    '.ihmisen-nostokysymys',
+    '.ihmisen-nostokysymys', '.ihmisen-nostokortti-varakuva', '.ihmisen-nostokortti-lue',
+    '.ihmisen-nostokortti-kuvakehys',
   ]) {
     assert.ok(CSS.includes(luokka), `css:stä puuttuu ${luokka}`);
   }
   // Kerros ei saa napata napautuksia kartalta.
   assert.match(CSS, /\.ihmisen-tutkimus\s*\{[^}]*pointer-events:\s*none/,
     'tutkimuskerros nappaisi kartan napautukset');
-  // Puhelimella napit yhdelle riville lyhennettyinä.
-  assert.match(CSS, /@media \(max-width: 700px\)/);
-  assert.match(CSS, /\.ihmisen-vananappi-nimi \{ display: none; \}/);
+  // Puhelimella napit yhdelle riville lyhennettyinä (palkin alla).
+  assert.match(CSS, /@media \(max-width: 600px\)/);
+  assert.match(CSS, /\.aikajana\.kertomus\.tutkimusvaihe \.ihmisen-vananappi-lyhyt \{ display: inline; \}/);
+  // Legenda esityksen aikana: himmeä, ei toimintoa.
+  assert.match(CSS, /\.ihmisen-vananapit\.legenda \.ihmisen-vananappi/);
+  // Varapaikka ei ole nimikirjainlaatta: vanan sävy ja ajoitus.
+  assert.match(CSS, /\.ihmisen-nostokortti-varakuva-ajoitus/);
+  assert.ok(!/monogrammi/.test(CSS) && !/nimikirjai/.test(koodi(KORTTI)),
+    'varapaikka ei saa olla nimikirjainlaatta');
   // Syke seisoo, jos liikettä on vähennetty.
   assert.match(CSS, /prefers-reduced-motion/);
+});
+
+/* ==================== yksi palkki, ei karusellia ==================== */
+
+test('kertomuskaari saa yhden palkin yläpalkin tilalle eikä karusellia', () => {
+  const aikajana = lue('../js/aikajana.js');
+  // Palkki rakennetaan vain kertomuskaarelle (keksinnöt ennallaan).
+  assert.match(aikajana, /if \(this\.kaari\.kertomus\?\.length\) this\.rakennaPalkki\(ylarivi, ohjaimet\);/);
+  const palkki = aikajana.match(/rakennaPalkki\(ylarivi, ohjaimet\) \{[\s\S]*?\n  \}/)[0];
+  assert.match(palkki, /this\.juuri\.classList\.add\('kertomus'\);/);
+  assert.match(palkki, /luoVirtanapit\(virrat, \{ legenda: true \}\)/);
+  // ✕ siirtyy palkkiin, Aloita alusta sen viereen.
+  assert.match(palkki, /ohjaimet\.append\(this\.alustaNappi, this\.suljeNappi\);/);
+  // Yläpalkin korkeus mitataan ennen piilotusta ja annetaan muuttujana.
+  assert.match(palkki, /document\.querySelector\('\.topbar'\)/);
+  assert.match(palkki, /--aikajana-palkki-korkeus/);
+  assert.match(palkki, /document\.body\.classList\.add\('aikajana-palkki-auki'\);/);
+  // Purku palauttaa yläpalkin.
+  assert.match(aikajana, /document\.body\.classList\.remove\('aikajana-palkki-auki'\);/);
+  // CSS: yläpalkki piiloon, palkki yläpalkin korkuinen, karuselli pois.
+  assert.match(AIKAJANA_CSS, /body\.aikajana-palkki-auki \.topbar \{ display: none; \}/);
+  assert.match(AIKAJANA_CSS, /\.aikajana\.kertomus \.aikajana-ylarivi \{[\s\S]{0,400}height: var\(--aikajana-palkki-korkeus, 3\.4rem\);/);
+  assert.match(AIKAJANA_CSS, /\.aikajana\.kertomus \.aikajana-nauha \{ display: none; \}/);
+  assert.match(AIKAJANA_CSS, /\.aikajana\.kertomus \.aikajana-sulje \{\n\s*position: static;/);
+  // Tutkimusvaihe ei enää käsittele nauhaa lainkaan.
+  assert.ok(!/nauha/.test(koodi(MODUULI)), 'tutkimusvaihe viittaa yhä karuselliin');
+  assert.ok(!/--tutkimus-nauha/.test(CSS), 'lapun korkeus laskettiin karusellista');
+});
+
+/* ==================== muisti ==================== */
+
+test('muisti tarkistetaan puhtaasti: vaihe, jakso, kamera, kortti ja virta', () => {
+  assert.equal(muistinAvain('ihmisen-matka'), 'matkakirja-linssimuisti-ihmisen-matka');
+  const nyt = 1_800_000_000_000;
+  const ehdot = { jaksot: ['avaus', 'ranta'], nostot: ['toba', 'jebel-irhoud'], virrat: ['siperia'], nyt };
+  const hyva = kelvollinenMuisti({
+    versio: MUISTIN_VERSIO, vaihe: 'esitys', jakso: 'ranta', kulunut: 4200, pitoMin: 164000,
+    kamera: { lat: -30, lng: 22, altitude: 0.8 }, kortti: 'toba', virta: 'siperia', aika: nyt - 1000,
+  }, ehdot);
+  assert.deepEqual(hyva, {
+    versio: MUISTIN_VERSIO, vaihe: 'esitys', jakso: 'ranta', kulunut: 4200, pitoMin: 164000,
+    kamera: { lat: -30, lng: 22, altitude: 0.8 }, kortti: 'toba', virta: 'siperia', aika: nyt - 1000,
+  });
+  // Tuntematon jakso ei kelpaa esitykseen; tutkimusvaihe kelpaa ilman jaksoa.
+  assert.equal(kelvollinenMuisti({ versio: MUISTIN_VERSIO, vaihe: 'esitys', jakso: 'x', aika: nyt }, ehdot), null);
+  const tutkimus = kelvollinenMuisti({
+    versio: MUISTIN_VERSIO, vaihe: 'tutkimus', kortti: 'ei-ole', virta: 'siperia', aika: nyt,
+  }, ehdot);
+  assert.equal(tutkimus.vaihe, 'tutkimus');
+  assert.equal(tutkimus.kortti, null, 'tuntematon kortti pudotetaan');
+  assert.equal(tutkimus.virta, 'siperia');
+  assert.equal(tutkimus.kamera, null);
+  // Vanha versio, vanhentunut ja rikkinäinen ohitetaan.
+  assert.equal(kelvollinenMuisti({ versio: MUISTIN_VERSIO + 1, vaihe: 'tutkimus', aika: nyt }, ehdot), null);
+  assert.equal(kelvollinenMuisti({
+    versio: MUISTIN_VERSIO, vaihe: 'tutkimus', aika: nyt - MUISTIN_IKA_MAX_MS - 1,
+  }, ehdot), null);
+  assert.equal(kelvollinenMuisti('roska', ehdot), null);
+  assert.equal(kelvollinenMuisti(null, ehdot), null);
+  // Moottori: tallennus purussa ennen kortin sulkua, jatko ilman avausta,
+  // Aloita alusta tyhjentää.
+  const aikajana = lue('../js/aikajana.js');
+  assert.match(aikajana, /pura\(\) \{\n    this\.pysayta\(\);[\s\S]{0,400}this\.tallennaMuisti\(\);\n    this\.muistiLukittu = true;/);
+  assert.match(aikajana, /const muisti = this\.esitys \? this\.lueLinssimuisti\(\) : null;\n\s*if \(muisti\) \{\n\s*this\.jatkaMuistista\(muisti\);\n\s*return true;\n\s*\}\n\s*this\.avaaAvausjakso\(\);/);
+  assert.match(aikajana, /aloitaAlusta\(\) \{[\s\S]{0,300}tyhjennaMuisti\(this\.linssi\.tunnus\);/);
+  // Tutkimusvaihe palauttaa virran ilman kameran kääntöä ja kortin.
+  assert.match(MODUULI, /valitseVana\(virta, \{ kamera: false \}\)/);
+  assert.match(MODUULI, /if \(muisti\?\.kortti && kortti && kortti\.auki\(\) !== muisti\.kortti\) kortti\.avaa\(muisti\.kortti\);/);
 });
 
 test('pulun repliikkiä ei toisteta tutkimusvaiheessa', () => {
@@ -214,11 +324,22 @@ test('tutkimusvaihe kytketään aikajanan avaukseen ja sulkuun', () => {
   // kulkevat js/ui.js:n pysaytaAikajanan kautta, joka kutsuu pura():a
   // suoraan — moduulin omaan pysaytaAikajanaan jätetty koukku ei
   // laukeaisi pelissä kertaakaan (sama oppi kuin kuplajonolla).
-  assert.match(aikajana, /pura\(\) \{\n    this\.pysayta\(\);[\s\S]{0,700}this\.ui\.tutkimusvaihe\?\.pura\?\.\(\);/,
+  assert.match(aikajana, /pura\(\) \{\n    this\.pysayta\(\);[\s\S]{0,1400}this\.ui\.tutkimusvaihe\?\.pura\?\.\(\);/,
     'tutkimusvaihe ei purkaudu linssin sulkeutuessa');
   // Chatin portti aukeaa tutkimusvaiheessa (kysymysnapit).
   const apurit = lue('../js/ui-apurit.js');
   assert.match(apurit, /aikajana-tutkimus-auki/);
+  // Nostokortti purkautuu samassa ja chatin portti tuntee sen.
+  assert.match(aikajana, /this\.ui\.nostokortti\?\.pura\?\.\(\);/);
+  assert.match(apurit, /aikajana-nostokortti-auki/);
+  // Hehku ja lamppu avaavat saman kortin.
+  assert.match(MODUULI, /napautus: \(\) => kortti\?\.avaa\(nosto\.tunnus\),/);
+  // Tiedeliite avataan kortista moottorin kautta sisällys yhtenä listana.
+  assert.match(KORTTI, /ajo\.avaaNostonJuttu\(nosto\.indeksi\)/);
+  assert.match(aikajana, /avaaNostonJuttu\(i\) \{[\s\S]{0,600}sisallys: \{\n\s*lista: true,/);
+  const tiedeliite = lue('../js/tiedeliite.js');
+  assert.match(tiedeliite, /if \(sisallysAsetus\?\.lista\) sisallys\.classList\.add\('lista'\);/);
+  assert.match(AIKAJANA_CSS, /\.tiedeliite-sisallys\.lista \{ column-count: 1;/);
   // Merkit ovat oma laudan osansa, jottei aikajanan purku vie niitä.
   assert.match(MODUULI, /TUTKIMUKSEN_OSA = 'ihmisen-tutkimus'/);
 });

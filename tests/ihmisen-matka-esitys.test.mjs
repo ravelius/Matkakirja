@@ -38,6 +38,7 @@ import { LINSSI } from '../js/linssit/ihmisen-matka.js';
 import {
   ESITYKSEN_ALUEET, ESITYKSEN_LAHIKUVA, IHMISEN_MATKA_KUVAT_ESITYKSESSA, KUVAN_OSUUS,
   LOPUN_ASETUS_MS, alueenLaatikko, jaksonTahti, kelauksenPehmennys,
+  jaksonRajaus, KARJEN_ETAISYYS_MAX_AST, HAARAN_ETAISYYS_MAX_AST, KARJEN_LIIKE_MIN_AST,
 } from '../js/linssit/ihmisen-matka-esitys.js';
 import { valitseKertomus, kokoaKertomusManifesti } from '../tools/generoi-linssiluennat.mjs';
 
@@ -300,9 +301,11 @@ test('loppunäkymä asemoidaan erikseen, ei jätetä kesken jääneen ajon varaa
    * koukkua, joten loppunäkymä on aina koko pallo.
    */
   assert.ok(LOPUN_ASETUS_MS > 0 && LOPUN_ASETUS_MS <= 2000, `${LOPUN_ASETUS_MS} ms`);
-  const paata = OHJAAJA.match(/function paata\(\) \{[\s\S]*?\n  \}/)[0];
+  const paata = OHJAAJA.match(/function paata\(\{ kamera = true \} = \{\}\) \{[\s\S]*?\n  \}/)[0];
   assert.match(paata, /const viimeinen = kertomus\[tila\.i\];/);
-  assert.match(paata, /if \(viimeinen\?\.alue\) ajaAlueeseen\(viimeinen\.alue, reduced \? 0 : LOPUN_ASETUS_MS\);/);
+  // `kamera: false` on muistista jatkettu tutkimusvaihe: kamera on jo
+  // muistin paikassa, eikä loppunäkymä saa ajaa sen päälle.
+  assert.match(paata, /if \(kamera && viimeinen\?\.alue\) ajaAlueeseen\(viimeinen\.alue, reduced \? 0 : LOPUN_ASETUS_MS\);/);
   // Asemointi on ENNEN koukkua: tutkimusvaihe saa ottaa kameran omiin
   // käsiinsä ja sen ajo syrjäyttää tämän (js/pallolauta/kamera.js).
   assert.ok(paata.indexOf('ajaAlueeseen') < paata.indexOf('aloitaTutkimusvaihe'),
@@ -331,4 +334,104 @@ test('esitys ei aja pysäkkikelloa eikä anna virtojen ohjata kameraa', () => {
   assert.match(OHJAAJA, /ajo\.tila = \{ \.\.\.ajo\.tila, vuosi: paikka \};/);
   const virrat = readFileSync(new URL('../js/aikajana-virrat.js', import.meta.url), 'utf8');
   assert.match(virrat, /ajo\.tila\.i >= 0/);
+});
+
+/* ==================== KÄRKI EI SAA POISTUA KUVASTA ==================== */
+
+/*
+ * Raamattu "IHMISEN MATKA: ETELA-AFRIKASSA KAMERA ULOS, VANA EI SAA
+ * HUKKUA" (omistaja 7.9.2026 klo 18.15). Vanat tässä ovat MITATTUJA
+ * (kontti 7.9.2026, ajo.virrat.tutkimus().pisteet()): selkäranka kulkee
+ * Omosta (4,8° N, 35,8° I, 233 000) Chileen (14 131), ja 'ranta'-jaksossa
+ * (164 000 → 75 000) sen kärki on Etiopiassa → Arabiassa, kun kamera
+ * katsoo Pinnacle Pointia (−34,2°, 22,1°).
+ */
+const SELKARANKA = {
+  tunnus: 'selkaranka',
+  pisteet: [
+    [4.8, 35.8, 233000], [12, 43, 164000], [13, 44, 110000], [24, 58, 75000],
+    [47, 80, 70000], [52, 85, 50000], [66, -176, 32000], [65, -168, 22000],
+    [-16, -74, 14500], [-41.7, -73.2, 14131],
+  ],
+};
+const EUROOPPA = {
+  tunnus: 'eurooppa',
+  pisteet: [[31.8, -8.7, 300000], [34, 6, 240000], [31, 30, 164000], [36, 36, 50000], [39, -9, 41227]],
+};
+const PINNACLE = { lat: -34.2, lon: 22.1 };
+
+test('kärkisääntö: ranta-jaksossa selkärangan kärki tulee kameraan Pinnacle Pointin kanssa', () => {
+  const { rajaus, karjet } = jaksonRajaus({
+    kohde: PINNACLE, vanat: [SELKARANKA, EUROOPPA], alku: 164000, loppu: 75000, pitoMin: 164000,
+  });
+  assert.ok(karjet.length >= 5, `kärkiä ${karjet.length}`);
+  // Laatikko ulottuu Kapista Arabiaan: yli 50° korkea.
+  assert.ok(rajaus.korkeusAst > 50, `korkeus ${rajaus.korkeusAst}`);
+  assert.ok(rajaus.lat > -34.2 && rajaus.lat < 24, `keskipiste ${rajaus.lat}`);
+  // Euroopan haara (Egypti, liike 0°) ei ole "kulkeva": se ei laajenna laatikkoa.
+  assert.ok(!karjet.some(([lat, lon]) => Math.abs(lat - 31) < 0.5 && Math.abs(lon - 30) < 0.5),
+    'liikkumaton haara otettiin mukaan');
+});
+
+test('kärkisääntö: ilman kulkevaa vanaa rajaus on pelkkä kohde (entinen lähikuva)', () => {
+  const { rajaus, karjet } = jaksonRajaus({ kohde: PINNACLE, vanat: [], alku: 164000, loppu: 75000 });
+  assert.equal(karjet.length, 0);
+  assert.equal(rajaus.leveysAst, 0);
+  assert.equal(rajaus.lat, PINNACLE.lat);
+  assert.deepEqual(jaksonRajaus({ kohde: null, vanat: [SELKARANKA], alku: 1, loppu: 0 }), { rajaus: null, karjet: [] });
+});
+
+test('kärkisääntö: taaksepäin kulkeva jakso pitää nykyisen rintaman kuvassa', () => {
+  // Blombos: kello 75 000 → 110 000, pito on jo 75 000:ssa. Uutta ei
+  // piirry, mutta rintama (Arabia, 24° N 58° I) pysyy kuvassa.
+  const { karjet } = jaksonRajaus({
+    kohde: { lat: -34.4, lon: 21.2 }, vanat: [SELKARANKA], alku: 75000, loppu: 110000, pitoMin: 75000,
+  });
+  assert.equal(karjet.length, 1);
+  assert.ok(Math.abs(karjet[0][0] - 24) < 0.5 && Math.abs(karjet[0][1] - 58) < 0.5, JSON.stringify(karjet));
+});
+
+test('kärkisääntö: jo piirretty osuus ei ole rintama, ja toinen näyttämö jää pois', () => {
+  // Chauvet (36 000 → 3 000) aikahypyn jälkeen: pito on 14 131:ssä, joten
+  // selkärangan toinen kierros Siperiasta Chileen ei ole uutta —
+  // eikä se saa vetää kameraa Ranskasta puolen pallon näkymään.
+  const chauvet = { lat: 44.4, lon: 4.4 };
+  const { karjet } = jaksonRajaus({ kohde: chauvet, vanat: [SELKARANKA], alku: 36000, loppu: 3000, pitoMin: 14131 });
+  assert.equal(karjet.length, 0, JSON.stringify(karjet));
+  // Denisova (50 000 → 32 000): selkäranka Altailta Beringiaan on 60°
+  // päässä ja tulee mukaan; Euroopan haara Lissabonissa on yli 45°
+  // päässä eikä tule (haaran katto).
+  const denisova = { lat: 51.4, lon: 84.7 };
+  const d = jaksonRajaus({ kohde: denisova, vanat: [SELKARANKA, EUROOPPA], alku: 50000, loppu: 32000, pitoMin: 50000 });
+  assert.ok(d.karjet.some(([, lon]) => lon < -170), 'selkärangan kärki Beringiassa puuttuu');
+  assert.ok(!d.karjet.some(([lat, lon]) => lat < 41 && lon < 0), 'Euroopan haara vetäisi kameran Lissaboniin');
+  assert.ok(KARJEN_ETAISYYS_MAX_AST > HAARAN_ETAISYYS_MAX_AST);
+  assert.ok(KARJEN_LIIKE_MIN_AST > 0 && KARJEN_LIIKE_MIN_AST < 10);
+});
+
+test('kohteen kamera-ajo käyttää kärkisääntöä eikä alita lähikuvaa', () => {
+  const ajo = OHJAAJA.match(/const ajaKohteeseen = \(tunnus, kesto, \{ alku = null, loppu = null \} = \{\}\) => \{[\s\S]*?\n  \};/)[0];
+  assert.match(ajo, /jaksonRajaus\(\{/);
+  assert.match(ajo, /Math\.max\(ESITYKSEN_LAHIKUVA, rajauksenLeveys\(rajaus, kuvasuhde\(\), KARJEN_VARA\)/);
+  // Jakso antaa kellovälinsä ajolle (alku → loppu), ei pelkkää kohdetta.
+  assert.match(OHJAAJA, /ajaKohteeseen\(jakso\.kohde, kesto, \{ alku: tahti\.alku, loppu: tahti\.loppu \}\);/);
+  // Mittari savukkeelle: jakson kärjet.
+  assert.match(OHJAAJA, /karjet: tila\.karjet,/);
+});
+
+/* ==================== KUVA JA LAMPPU AVAAVAT KORTIN, MUISTI ==================== */
+
+test('kartan kuva ja lamppu avaavat noston kortin; esitys jatkuu muistista', () => {
+  // Kuva ottaa napautuksen itse (merkkikerros on pointer-events: none).
+  assert.match(OHJAAJA, /kehys\.addEventListener\('click', \(e\) => \{\n\s*e\.stopPropagation\(\);\n\s*ajo\.ui\?\.nostokortti\?\.avaa\?\.\(tunnus\);/);
+  assert.match(CSS, /\.aikajana-kertomuskuva\.esilla \{ pointer-events: auto; cursor: pointer; \}/);
+  // Lamppu: kertomuskaarella napautus avaa kortin eikä palaa tyhjänä.
+  assert.match(MOOTTORI, /napautaValoa\(i\) \{[\s\S]{0,400}if \(this\.esitys\) \{\n\s*const t = this\.tapahtumat\[i\];\n\s*if \(t\?\.tunnus\) this\.ui\.nostokortti\?\.avaa\?\.\(t\.tunnus\);/);
+  // Muisti: aloita({ muisti }) jatkaa ilman pimeää ja avausta.
+  assert.match(OHJAAJA, /aloita\(\{ muisti = null \} = \{\}\) \{[\s\S]{0,200}if \(muisti\) return jatkaMuistista\(muisti\);/);
+  assert.match(OHJAAJA, /asennaPinnat\(\{ pimea: false \}\);/);
+  // Pidon pohja piirretään ennen jatkoa.
+  assert.match(OHJAAJA, /ajo\.virrat\?\.vanat\?\.\(\)\?\.paivita\?\.\(muisti\.pitoMin, \{ pito: true \}\);/);
+  // Jakson vaihto kirjoittaa muistin.
+  assert.match(OHJAAJA, /ajo\.tallennaMuisti\?\.\(\);/);
 });

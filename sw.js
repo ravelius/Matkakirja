@@ -212,6 +212,10 @@ const SHELL = [
   './js/linssit/ihmisen-matka-esitys.js',
   './js/linssit/ihmisen-matka-aanimaisema.js',
   './js/linssit/ihmisen-matka-tutkimus.js',
+  // Yksi nostomalli ja muisti (7.9.2026 ilta): kortti, jonka lamppu,
+  // kuva ja hehku avaavat, sekä sulun yli tallennettu tila.
+  './js/linssit/ihmisen-matka-kortti.js',
+  './js/linssit/ihmisen-matka-muisti.js',
   './css/ihmisen-tutkimus.css',
   './js/aikajana-virrat.js',
   './js/aikajana-vanat.js',

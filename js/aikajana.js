@@ -2405,6 +2405,15 @@ class Aikajana {
      * ja `tila.i` jää arvoon −1.
      */
     this.esitys = null;
+    /*
+     * YKSI PALKKI JA MUISTI (kertomuskaari, 7.9.2026): viisi virtaa
+     * palkissa (luoVirtanapit), Aloita alusta -nappi, sulun yli
+     * tallennettu tila (`muisti`) ja sen lukko purun ajaksi.
+     */
+    this.virtanapit = null;
+    this.alustaNappi = null;
+    this.muisti = null;
+    this.muistiLukittu = false;
   }
 
   /* ---------- rakentaminen ---------- */
@@ -2544,6 +2553,8 @@ class Aikajana {
     });
 
     this.juuri.append(ylarivi, this.suljeNappi, this.paneeli, this.nauha);
+    // Kertomuskaari saa YHDEN PALKIN Matkakirjan yläpalkin tilalle.
+    if (this.kaari.kertomus?.length) this.rakennaPalkki(ylarivi, ohjaimet);
     koti.appendChild(this.juuri);
     document.body.classList.add('aikajana-paalla');
 
@@ -2565,6 +2576,170 @@ class Aikajana {
     this.asettele();
     this.naytaVuosi(this.alku, true);
     return true;
+  }
+
+  /**
+   * YKSI PALKKI LINSSIN AJAKSI (omistaja 7.9.2026 ilta, Raamattu
+   * "IHMISEN MATKA: YKSI PALKKI, EI KARUSELLIA, KAIKKIIN NOSTOIHIN KUVA,
+   * LINSSI MUISTAA PAIKKANSA", sanatarkasti: *"Myös yläreunan kaksi
+   * palkkia, eli vuosiluvut ja sitten tuo viiden värin jako, niin ne
+   * kaikki saisi mahduttaa yhteen palkkiin, jotta kartalla jää
+   * mahdollisimman paljon tilaa. Itse asiassa voitaisiin linssin ajaksi
+   * korvata koko tuo matkakirjan yläpalkki … Ja hampurilaisvalikon
+   * voisi vain korvata X-kirjaimella, millä linssin saa suljettua."*).
+   *
+   * Otsikkorivi (`.aikajana-ylarivi`) muuttuu palkiksi: vasemmalla
+   * linssin nimi ja kello, keskellä viisi virtaa (legendana esityksen
+   * ajan, nappeina tutkimusvaiheessa — js/linssit/ihmisen-matka-
+   * tutkimus.js luoVirtanapit), oikealla Tauko, Aloita alusta ja ✕.
+   * Matkakirjan oma yläpalkki piilotetaan body-luokalla, ja palkki saa
+   * SEN MITATUN korkeuden (--aikajana-palkki-korkeus), jotta kartta ei
+   * hyppää ja palkki istuu samaan paikkaan.
+   *
+   * VAIN KERTOMUSKAARELLE (Fablemaxin rajaus 7.9.2026): keksintölinssin
+   * pysäkkiajo (kello, kahva, ilmiöpaneeli, karuselli) on mitoitettu
+   * omaan otsikkoriviinsä ja savukkeisiinsa, eikä linjaus koskenut sitä.
+   *
+   * LAMPPU AVAA KORTIN (napautaValoa; omistaja 7.9.2026: *"jos klikkaa
+   * valopalloa kartalla, niin tällä hetkellä ei tapahdu mitään"*).
+   * Juurisyy: lamppu ja tutkimusvaiheen hehku ovat samassa pisteessä,
+   * ja laudan osumatestissä (js/pallolauta/lauta.js lahinLinssimerkki,
+   * tiukka "lähempi voittaa") lamppu voitti ensimmäisenä rekisteröitynä
+   * osana — ja sen napautus palasi kertomuskaarella tyhjänä. Nyt
+   * lamppu, kuva ja hehku avaavat saman kortin; esityksen aikana kortti
+   * pysäyttää esityksen tauolle ja jatko tulee sulusta.
+   */
+  rakennaPalkki(ylarivi, ohjaimet) {
+    const { ui } = this;
+    this.juuri.classList.add('kertomus');
+    ylarivi.classList.add('aikajana-palkki');
+    // Palkin tyylit (viisi nappia, kortti) tulevat tutkimusvaiheen
+    // tiedostosta, ja ne tarvitaan jo linssin auetessa.
+    lataaTutkimuksenTyyli();
+    const virrat = this.kaari.virrat?.virrat ?? [];
+    this.virtanapit = virrat.length ? luoVirtanapit(virrat, { legenda: true }) : null;
+    if (this.virtanapit) ylarivi.insertBefore(this.virtanapit.el, ohjaimet);
+    /*
+     * ALOITA ALUSTA (omistaja: *"Hän voisi tietenkin halutessaan
+     * käynnistää koko linssin alusta"*): tyhjentää muistin ja
+     * käynnistää linssin uudestaan avausjaksosta.
+     */
+    this.alustaNappi = solmu('button', 'aikajana-nappi aikajana-alusta', '↺');
+    this.alustaNappi.type = 'button';
+    this.alustaNappi.title = 'Aloita alusta';
+    this.alustaNappi.setAttribute('aria-label', 'Aloita alusta');
+    this.alustaNappi.addEventListener('click', () => this.aloitaAlusta());
+    ohjaimet.append(this.alustaNappi, this.suljeNappi);
+    /*
+     * YLÄPALKIN KORKEUS MITATAAN ENNEN PIILOTUSTA. Body-luokka
+     * piilottaa Matkakirjan yläpalkin (css/aikajana.css), ja kartta-
+     * alue kasvaa sen verran; linssin palkki on saman korkuinen, joten
+     * ruudulla vaihtuu vain palkin sisältö.
+     */
+    const topbar = document.querySelector('.topbar');
+    const korkeus = topbar?.getBoundingClientRect?.().height ?? 0;
+    if (korkeus > 0) document.body.style.setProperty('--aikajana-palkki-korkeus', `${Math.round(korkeus)}px`);
+    document.body.classList.add('aikajana-palkki-auki');
+    /*
+     * NOSTOKORTTI koko linssin ajaksi (js/linssit/ihmisen-matka-kortti.js):
+     * lamppu, kuva ja tutkimusvaiheen hehku avaavat kaikki saman kortin.
+     */
+    ui.nostokortti?.pura?.();
+    ui.nostokortti = luoNostokortti({ ajo: this, ui, linssi: this.linssi });
+  }
+
+  /**
+   * MUISTI (js/linssit/ihmisen-matka-muisti.js): esityksen vaihe,
+   * pidon pohja, kamera, avoin kortti ja valittu virta. Kirjoitetaan
+   * jakson vaihtuessa, kortin ja virran vaihtuessa sekä purussa — vasta
+   * kun esitys on käynnistetty (avaus kesken ei ole muistettava tila).
+   */
+  tallennaMuisti() {
+    if (!this.kaari.kertomus?.length || this.muistiLukittu || !this.esitys) return false;
+    const e = this.esitys.tila();
+    if (e.indeksi < 0 && !e.paattynyt) return false;
+    const pov = this.ui.pallonInstanssi?.pointOfView?.() ?? null;
+    const kortti = this.ui.nostokortti?.auki?.() ?? null;
+    const t = this.ui.tutkimusvaihe?.tila?.() ?? null;
+    return tallennaMuisti(this.linssi.tunnus, {
+      vaihe: e.paattynyt || this.ui.tutkimusvaihe ? 'tutkimus' : 'esitys',
+      jakso: e.jakso,
+      kulunut: e.kulunut,
+      pitoMin: e.pitoMin,
+      kamera: pov && Number.isFinite(pov.lat) ? { lat: pov.lat, lng: pov.lng, altitude: pov.altitude } : null,
+      kortti,
+      virta: t?.valittu ?? null,
+    });
+  }
+
+  /** Luettu ja tarkistettu muisti, tai null (ensimmäinen avaus). */
+  lueLinssimuisti() {
+    if (!this.kaari.kertomus?.length || !this.pallolla) return null;
+    const nostot = this.ui.nostokortti?.nostot?.map((n) => n.tunnus) ?? null;
+    return lueMuisti(this.linssi.tunnus, {
+      jaksot: this.kaari.kertomus.map((j) => j.id),
+      nostot,
+      virrat: (this.kaari.virrat?.virrat ?? []).map((v) => v.tunnus),
+    });
+  }
+
+  /**
+   * JATKO MUISTISTA: ei avausjaksoa, ei mustaa. Linssin juuri esiin,
+   * kamera muistin paikkaan ilman liikettä ja esitys (tai tutkimusvaihe)
+   * käyntiin siitä, mihin pelaaja jäi. Odotetaan värivirtojen laskennan
+   * valmistumista kuten Käynnistä-nappikin (odotaVirtoja) — vanat
+   * piirretään pidon pohjaan asti vasta sitten.
+   */
+  jatkaMuistista(muisti) {
+    this.muisti = muisti;
+    this.avausKesken = false;
+    this.naytaLinssi();
+    const virrat = this.virrat;
+    const jatka = () => {
+      if (!this.juuri?.isConnected || this.virrat !== virrat || !this.esitys) return;
+      if (muisti.kamera) {
+        this.kamera()?.ajaKamera?.(
+          { lat: muisti.kamera.lat, lng: muisti.kamera.lng, korkeus: muisti.kamera.altitude },
+          { kesto: 0 },
+        );
+      }
+      this.esitys.aloita({ muisti });
+    };
+    // Aina lupauksen kautta: kutsuja (kaynnistaAikajana) asettaa
+    // tutkimusvaiheen koukun vasta tämän metodin jälkeen.
+    (virrat?.valmis ?? Promise.resolve()).then(jatka);
+  }
+
+  /** Aloita alusta: muisti pois ja linssi uudestaan avausjaksosta. */
+  aloitaAlusta() {
+    this.muistiLukittu = true;
+    tyhjennaMuisti(this.linssi.tunnus);
+    const tunnus = this.linssi.tunnus;
+    // UI:n oma käynnistys purkaa tämän ajon ja aloittaa uuden samalla linssillä.
+    void this.ui.kaynnistaAikajana?.(tunnus);
+  }
+
+  /**
+   * TIEDELIITE KORTISTA ("Lue lisää"; Raamattu kohta 6): sama lehti kuin
+   * keksijän sivu, mutta sisällys on YKSI aikajärjestyksen lista vanan
+   * väripilkuin ja lyhyin ajoituksin — kaksipalstainen sisällys meni
+   * päällekkäin pitkillä ajoituksilla. Ei `kunVaihtuu`-koukkua: kortti
+   * jää auki alle, eikä ilmiöpaneelia näytetä kertomuskaarella.
+   */
+  avaaNostonJuttu(i) {
+    const t = this.tapahtumat[i];
+    if (!t) return false;
+    const auki = avaaTiedeliite(this.ui, this.tapahtumat, i, {
+      lahdeVara: this.linssi.lahde?.aineisto ?? 'Wikipedia',
+      kunSuljetaan: () => this.palautaJutunJalkeen(),
+      sisallys: {
+        lista: true,
+        ajoitus: (x) => lyhytAjoitus(x),
+        pilkku: (x) => this.ui.nostokortti?.vari?.(x.tunnus) ?? null,
+      },
+    });
+    if (auki) this.vaimennaJutunAjaksi();
+    return Boolean(auki);
   }
 
   rakennaValot() {
@@ -3450,6 +3625,16 @@ class Aikajana {
     if (this.kaari.kertomus?.length) this.esitys = luoEsitys({ ajo: this });
     else this.aloitaMusiikki(false);
     this.vapautaKamera(true);
+    /*
+     * LINSSI MUISTAA PAIKKANSA (Raamattu, 7.9.2026): jos edellinen sulku
+     * jätti muistin, esitys tai tutkimusvaihe jatkuu siitä ilman
+     * avausjaksoa. Ensimmäinen avaus (ei muistia) kulkee kuten ennen.
+     */
+    const muisti = this.esitys ? this.lueLinssimuisti() : null;
+    if (muisti) {
+      this.jatkaMuistista(muisti);
+      return true;
+    }
     this.avaaAvausjakso();
     return true;
   }
@@ -5059,9 +5244,13 @@ class Aikajana {
 
   /** Lampun napautus: nykyinen pysäkki vain pysäyttää, muu siirtyy siihen. */
   napautaValoa(i) {
-    // Esityksen aikana lamppu on kertojan sivuhuomautus eikä pysäkki:
-    // napautus ei saa katkaista virtaa (Raamattu: EI PYSAKKEJA).
-    if (this.esitys) return;
+    // Kertomuskaarella lamppu avaa noston kortin (ks. rakennaPalkki:
+    // lamppu voitti hehkun osumatestissä ja palasi tyhjänä, 7.9.2026).
+    if (this.esitys) {
+      const t = this.tapahtumat[i];
+      if (t?.tunnus) this.ui.nostokortti?.avaa?.(t.tunnus);
+      return;
+    }
     if (!this.tapahtumat[i]) return;
     if (i === this.tila.i) { this.pysayta(); return; }
     this.siirry(i);
@@ -5185,6 +5374,13 @@ class Aikajana {
 
   pura() {
     this.pysayta();
+    /*
+     * MUISTI TALTEEN ENNEN PURKUA ja lukkoon: kortin ja tutkimusvaiheen
+     * purku sulkevat kortin, ja sulun oma tallennus kirjoittaisi muuten
+     * "ei avointa korttia" juuri tallennetun tilan päälle.
+     */
+    this.tallennaMuisti();
+    this.muistiLukittu = true;
     // Kertomusesitys ensin: sen silmukka, peite ja kuva pois ennen
     // kuin lamput ja kerrokset katoavat sen alta.
     this.esitys?.pura();
@@ -5200,6 +5396,12 @@ class Aikajana {
     this.ui.tutkimusvaihe?.pura?.();
     this.ui.tutkimusvaihe = null;
     this.ui.aloitaTutkimusvaihe = null;
+    // Nostokortti ja yksi palkki (kertomuskaari): yläpalkki palaa.
+    this.ui.nostokortti?.pura?.();
+    this.ui.nostokortti = null;
+    this.virtanapit = null;
+    document.body.classList.remove('aikajana-palkki-auki');
+    document.body.style.removeProperty('--aikajana-palkki-korkeus');
     /*
      * LINSSIN KERROKSET KATOAVAT (roikkuva kosketus, v1671): paneeli,
      * lamput ja loppulappu ovat pallon päällä, ja niiltä alkanut
@@ -5315,7 +5517,9 @@ import { suljeFokuskohde } from './fokuskohteet.js';
 import { suljeNostonKortti } from './fokusnosto.js';
 import { suljeElaintaky } from './elaintaky.js';
 import { suljeSyvennys } from './syvennys.js';
-import { luoTutkimusvaihe } from './linssit/ihmisen-matka-tutkimus.js';
+import { luoTutkimusvaihe, luoVirtanapit, lataaTutkimuksenTyyli } from './linssit/ihmisen-matka-tutkimus.js';
+import { luoNostokortti, lyhytAjoitus } from './linssit/ihmisen-matka-kortti.js';
+import { lueMuisti, tallennaMuisti, tyhjennaMuisti } from './linssit/ihmisen-matka-muisti.js';
 
 /**
  * Kartan päällä kelluvat kortit pois linssin tieltä.

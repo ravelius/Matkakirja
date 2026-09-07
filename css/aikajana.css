@@ -1967,6 +1967,15 @@
   border-radius: 1px;
 }
 .aikajana-kertomuskuva.esilla { transform: translate(1.4rem, -50%) scale(1); opacity: 1; }
+/*
+ * KUVA OTTAA NAPAUTUKSEN ITSE (omistaja 7.9.2026: *"myöskään ei niistä
+ * valokuvista tapahdu mitään"*). Merkkikerros on pointer-events: none
+ * (js/pallolauta/merkit.js), joten kuvan napautus valui pallon pintaan
+ * ja sieltä 44 px:n osumatestiin, johon 22 % ruudun levyinen kuva ei
+ * osu. Esillä oleva kehys ottaa napautuksen ja avaa noston kortin
+ * (js/linssit/ihmisen-matka-esitys.js naytaKuva). Häipyvä kehys ei.
+ */
+.aikajana-kertomuskuva.esilla { pointer-events: auto; cursor: pointer; }
 
 /*
  * PULUN VÄLIHUOMIO ON VÄLIHUUTO, EI REPLIIKKI (sama sääntö ja sama asu
@@ -2386,6 +2395,25 @@
   color: #6b4d1c;
 }
 .tiedeliite-sisallysnimi { min-width: 0; }
+/*
+ * SISÄLLYS YHTENÄ LISTANA (Ihmisen matka, 7.9.2026): yksi palsta
+ * aikajärjestyksessä, rivillä vanan väripilkku, lyhyt ajoitus
+ * ("230 000 v.") ja otsikko. Kaksipalstainen levy meni pitkillä
+ * ajoituksilla päällekkäin; lyhyt ajoitus tulee kaarelta
+ * (js/tiedeliite.js sisallys-asetus), palsta tästä.
+ */
+.tiedeliite-sisallys.lista { column-count: 1; max-height: min(70vh, 30rem); }
+.tiedeliite-sisallys.lista .tiedeliite-sisallysrivi { align-items: center; padding: 0.3rem 0.45rem; }
+.tiedeliite-sisallys.lista .tiedeliite-sisallysvuosi { min-width: 5.2rem; white-space: nowrap; }
+.tiedeliite-sisallys.lista .tiedeliite-sisallysnimi { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tiedeliite-sisallyspilkku {
+  flex: none;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--pilkku, #9a7a2a);
+  box-shadow: 0 0 0 1px rgba(70, 51, 31, 0.35);
+}
 
 /* ALANAPIT: edellinen ja seuraava keksijä. Nimi katkeaa kolmella
    pisteellä, jotta napit pysyvät yhdellä rivillä kapeallakin ruudulla. */
@@ -2587,3 +2615,109 @@ body.aikajana-paalla .pallolauta-piste,
 body.aikajana-paalla .pallolauta-kohde,
 body.aikajana-paalla .pallolauta-vesinimi,
 body.aikajana-paalla .pallolauta-nappula { display: none; }
+
+/* ===========================================================================
+   YKSI PALKKI LINSSIN AJAKSI — kertomuskaari (Ihmisen matka)
+   ---------------------------------------------------------------------------
+   Raamattu "IHMISEN MATKA: YKSI PALKKI, EI KARUSELLIA, KAIKKIIN NOSTOIHIN
+   KUVA, LINSSI MUISTAA PAIKKANSA" (omistaja 7.9.2026 klo 17.40,
+   sanatarkasti: *"voitaisiin linssin ajaksi korvata koko tuo matkakirjan
+   yläpalkki, missä on matkakirjan logo ja muut asetukset, niin siirretään
+   vuosilukunäyttö sen päälle, koska niitä ei tarvita linssin aikana. Ja
+   hampurilaisvalikon voisi vain korvata X-kirjaimella"*).
+
+   Moottori (js/aikajana.js rakennaPalkki) antaa juurelle luokan
+   `kertomus`, otsikkoriville luokan `aikajana-palkki`, piilottaa
+   Matkakirjan yläpalkin body-luokalla ja mittaa sen korkeuden muuttujaan
+   --aikajana-palkki-korkeus (body). Palkki on siis täsmälleen yläpalkin
+   kokoinen ja paikalla; kartta-alue kasvaa yläpalkin verran.
+
+     vasemmalla  linssin nimi (otsikko) ja kello
+     keskellä    viisi virtaa (css/ihmisen-tutkimus.css .ihmisen-vananapit)
+     oikealla    Tauko/Jatka, Aloita alusta (↺) ja ✕
+
+   Keksintölinssi (pysäkkiajo) ei saa luokkaa eikä muutu.
+   =========================================================================== */
+
+/*
+ * EI display: none. Sovellus on ruudukko (css/styles.css .app:
+ * grid-template-rows: auto minmax(0, 1fr)), ja jos yläpalkki katoaa
+ * ruudukosta, kartta-alue putoaa riville 1 ja saa auto-korkeuden —
+ * mitattu 7.9.2026: kartta kutistui neliöksi (834 × 814, 390 × 375).
+ * Yläpalkki jää ruudukkoon nollan korkuisena ja näkymättömänä.
+ */
+body.aikajana-palkki-auki .topbar {
+  visibility: hidden;
+  height: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.aikajana.kertomus .aikajana-ylarivi {
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: none;
+  transform: none;
+  height: var(--aikajana-palkki-korkeus, 3.4rem);
+  box-sizing: border-box;
+  padding: 0 0.5rem 0 0.9rem;
+  gap: 0.6rem;
+  border-radius: 0;
+  border-width: 0 0 1px;
+  border-color: var(--line, rgba(217, 161, 59, 0.38));
+  /* Sama ruskea kuin Matkakirjan yläpalkilla (css/styles.css .topbar). */
+  background: linear-gradient(180deg, #3a2a1c, #251b12);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+/* Nimi ja kello: paikkarivi ("300 000 vuotta sitten – n. 1300 jaa.")
+   väistyy — vuosiluku on kellossa, ja tila on kartan. */
+.aikajana.kertomus .aikajana-paikka { display: none; }
+.aikajana.kertomus .aikajana-otsikko { color: #d9a13b; }
+.aikajana.kertomus .aikajana-otsikot { flex: 0 0 auto; }
+.aikajana.kertomus .aikajana-kello { flex: 0 0 auto; }
+.aikajana.kertomus .aikajana-ohjaimet {
+  margin-left: auto;
+  align-self: center;
+  align-items: center;
+  gap: 0.35rem;
+  flex: 0 0 auto;
+}
+/* ✕ on palkin oikea laita, ei enää kartan kulmassa erikseen. */
+.aikajana.kertomus .aikajana-sulje {
+  position: static;
+  min-width: 40px;
+  min-height: 40px;
+}
+.aikajana.kertomus .aikajana-alusta {
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+/* Pimeässä palkista jää vain ✕ (ks. .aikajana.esitys-pimea yllä). */
+.aikajana.kertomus.esitys-pimea .aikajana-ylarivi { background: none; box-shadow: none; }
+.aikajana.kertomus.esitys-pimea .aikajana-alusta { opacity: 0; pointer-events: none; }
+
+/*
+ * ALAREUNAN KARUSELLI POIS (omistaja: *"Tuon alareunan kuvakallerian voi
+ * ottaa pois, se sekoittaa ja vie liikaa tilaa"*): kertomuskaarella
+ * esinerivi ei ole olemassa lainkaan — ei esityksessä eikä
+ * tutkimusvaiheessa. Kuvat ovat noston kortissa.
+ */
+.aikajana.kertomus .aikajana-nauha { display: none; }
+/* Kertojan teksti laskeutuu alalaitaan, kun nauhaa ei ole. */
+.aikajana.kertomus .aikajana-kertomusteksti { bottom: 1.4rem; }
+/* Ilmiöpaneeli (jos joku sen avaa) alkaa palkin alta. */
+.aikajana.kertomus .aikajana-ilmio { top: calc(var(--aikajana-palkki-korkeus, 3.4rem) + 0.6rem); }
+
+@media (max-width: 600px) {
+  .aikajana.kertomus .aikajana-ylarivi { padding: 0 0.35rem 0 0.5rem; gap: 0.35rem; }
+  .aikajana.kertomus .aikajana-ohjaimet { gap: 0.2rem; }
+  .aikajana.kertomus .aikajana-sulje { min-width: 36px; min-height: 36px; }
+  .aikajana.kertomus .aikajana-alusta { min-width: 28px; min-height: 28px; }
+}

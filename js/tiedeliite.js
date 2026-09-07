@@ -517,7 +517,7 @@ function piirraTiedeliitteenSivu(ui, sailio, t, lahdeVara) {
  * @param {() => void} [asetukset.kunSuljetaan] kortti suljettiin
  */
 export function avaaTiedeliite(ui, tapahtumat, i, {
-  lahdeVara = null, kunVaihtuu = null, kunSuljetaan = null,
+  lahdeVara = null, kunVaihtuu = null, kunSuljetaan = null, sisallys: sisallysAsetus = null,
 } = {}) {
   if (typeof document === 'undefined') return null;
   if (!onTiedeliitteenSivu(tapahtumat?.[i])) return null;
@@ -551,6 +551,16 @@ export function avaaTiedeliite(ui, tapahtumat, i, {
   kortti.appendChild(hampurilainen);
 
   const sisallys = html('nav', 'tiedeliite-sisallys');
+  /*
+   * SISÄLLYS YHTENÄ LISTANA (omistaja 7.9.2026 ilta, Raamattu "IHMISEN
+   * MATKA: YKSI PALKKI …" kohta 6): kaksipalstainen levy meni Ihmisen
+   * matkassa riveillään päällekkäin, koska ajoitukset ovat pitkiä
+   * ("vähintään noin 230 000 vuotta sitten"). Kaari voi pyytää YHDEN
+   * palstan aikajärjestyksen listan, jossa rivillä on vanan väripilkku,
+   * lyhyt ajoitus ja otsikko: `sisallys: { lista, ajoitus(t), pilkku(t) }`.
+   * Ilman asetusta (keksinnöt) levy on kirjaimelleen entinen.
+   */
+  if (sisallysAsetus?.lista) sisallys.classList.add('lista');
   sisallys.hidden = true;
   sisallys.setAttribute('aria-label', 'Keksijät');
   kortti.appendChild(sisallys);
@@ -610,8 +620,15 @@ export function avaaTiedeliite(ui, tapahtumat, i, {
       if (!onTiedeliitteenSivu(t)) return;
       const rivi = html('button', `tiedeliite-sisallysrivi${j === nykyinen ? ' nykyinen' : ''}`);
       rivi.type = 'button';
+      const vari = sisallysAsetus?.pilkku?.(t) ?? null;
+      if (vari) {
+        const pilkku = html('span', 'tiedeliite-sisallyspilkku');
+        pilkku.style.setProperty('--pilkku', vari);
+        pilkku.setAttribute('aria-hidden', 'true');
+        rivi.appendChild(pilkku);
+      }
       rivi.append(
-        html('span', 'tiedeliite-sisallysvuosi', String(ajoitus(t))),
+        html('span', 'tiedeliite-sisallysvuosi', String(sisallysAsetus?.ajoitus?.(t) ?? ajoitus(t))),
         html('span', 'tiedeliite-sisallysnimi', t.henkilo ?? t.otsikko),
       );
       if (merkitaanEsitys && !t.hiljainen) {
