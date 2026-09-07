@@ -1,0 +1,323 @@
+{
+  "createdAt": "2026-09-07T06:14:05.657195+00:00",
+  "message": "13 uutta tarkastettua miniatyyriä. 1024×1024 aito alfa; kokonaiset reunat, julkinen GET/SHA/MIME/CORS tarkistettu.",
+  "items": [
+    {
+      "id": "dunedin-otagon-museo",
+      "canonicalId": "dunedin-otagon-museo",
+      "fileName": "dunedin-otagon-museo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Tūhura Otago Museumin vuoden 1877 Ross-siipi Dunedinissa.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/dunedin-otagon-museo.png",
+      "sha256": "c905c197bed266a1cc35374534520e1478f0ac125081d0a2c92b3441ba7fb7d9",
+      "bytes": 851840,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new standalone M3 travel-game miniature of the actual 1877 Ross wing of Otago Museum, using the attached real photograph as the authoritative visual reference for façade structure and proportions. Preserve the defining high solid blank upper frieze/parapet, with a dense horizontal band of SHORT low rectangular windows directly BELOW it; do not replace this with a storey of tall sash windows. Keep the small centered four-column classical portico and restrained long symmetrical stone façade. Ochre/sepia engraved miniature aesthetic matching polished Matkakirja M3 assets, crisp architectural detail. No people, text, labels, sky, scenery, checkerboard pattern, or white matte. True transparent alpha background. Entire silhouette and base shadow within central 60% of square canvas, at least 20% empty transparent margin every edge, nothing cropped. Three-quarter isometric view, one cohesive asset.",
+      "sources": [
+        "https://www.heritage.org.nz/list-details/2203/Otago-Museum",
+        "https://hnzptlistonlineproduction.azurewebsites.net/list/image/2203b_lg.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual 1877 Ross wing: broad blank frieze, low upper window band and small columned portico now consistent with photographed reference."
+    },
+    {
+      "id": "suva-pyhan-sydamen-katedraali",
+      "canonicalId": "suva-pyhan-sydamen-katedraali",
+      "fileName": "suva-pyhan-sydamen-katedraali.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Suva, Sacred Heart -katedraalin tornit ja kaksitasoinen sisäänkäynti.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/suva-pyhan-sydamen-katedraali.png",
+      "sha256": "e9ec627117e546b292c2b0fb345d518a056f97a37d0ac93754b85179125306a4",
+      "bytes": 1038578,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "New M3 miniature of actual Sacred Heart Cathedral Suva; attached photo authoritative. Two square parapet towers, full open arched loggia on second entrance level, lower arched entrance, broad side staircase, Jesus statue arms spread above central gable. Sepia ochre engraved. OUTPUT MUST BE RGBA PNG WITH REAL ALPHA=0 OUTSIDE OBJECT. Absolutely no checkerboard, grid, solid color, black, white, gradient, glow or studio background; background pixels must be transparent. Complete object central 60%, 20% transparent margins, nothing cropped. No text or people.\n",
+      "sources": [
+        "https://www.im.va/content/gdm/en/mondo/porte-della-misericordia.event.sacred-heart-cathedral-archdiocese-of-suva.html"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Twin flat towers, open upper loggia, separate lower entrance level and standing statue match inspected real facade."
+    },
+    {
+      "id": "dunedin-queens-gardens",
+      "canonicalId": "dunedin-queens-gardens",
+      "fileName": "dunedin-queens-gardens.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Dunedinin Queens Gardensin kenotafi uurnapäätteisine pylväineen.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/dunedin-queens-gardens.png",
+      "sha256": "1da7a3e74340ea86cb34504b1103f3c1d1569e7a729b5a6de56b0f67aa08bf5a",
+      "bytes": 743225,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Generate one brand-new transparent PNG map miniature with a real alpha channel. Use case: stylized-concept. A delicately engraved architectural miniature of the actual Dunedin Cenotaph in Queens Gardens, New Zealand, isolated with two small mature park trees and a tiny patch of grass. The monument is a very tall slender off-white square stone shaft on a broad low stepped square base. Near the top are shallow recessed cross shapes. The top narrows in short curved stepped shoulders to a small round green patinated bronze urn with a low bulbous crown. Crucial silhouette: tall narrow rectangular shaft and blunt rounded green urn, NOT a pointed pyramid or obelisk tip. Refer to this verbal architectural description. Dark sepia engraved detail, restrained pale stone and muted green watercolor, realistic architectural proportions. Three-quarter view from slightly above the base, all tree crowns and the complete urn visible. Center the miniature in the inner 60 percent of a square canvas with generous empty transparent margins on every side. Actual transparent background, no background color, no checkerboard pattern, no floor, no studio backdrop, no sky, no letters or labels. Render only the isolated miniature and a minimal irregular ground footprint. This is a new image, not an edit.\n",
+      "sources": [
+        "https://www.heritage.org.nz/list-details/2221/Cenotaph",
+        "https://nzhistory.govt.nz/memorial/dunedin-cenotaph"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Tall slender memorial with green sacrificial urn and cross-bearing crown; no pointed obelisk replacing real urn."
+    },
+    {
+      "id": "dunedin-otago-boys-high-school",
+      "canonicalId": "dunedin-otago-boys-high-school",
+      "fileName": "dunedin-otago-boys-high-school.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Otago Boys’ High Schoolin historiallinen päärakennus Dunedinissa.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/dunedin-otago-boys-high-school.png",
+      "sha256": "72e5d1bdc6f62ace6aa37f4ebe5f31c6cc0a785bc4779332efb810ef0747a0bb",
+      "bytes": 981112,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Generate a brand-new square PNG asset with genuine transparent alpha. Use case: stylized-concept. A finely engraved architectural map miniature, dark sepia lines and restrained stone-colored watercolor, accurate recognizable architecture from the following researched verbal description. Isolate the entire structure on a small irregular ground footprint within the central 60 percent of the square canvas; empty transparent margin on every side. Three-quarter front view with modest elevation, clear façade. No checkerboard, no background color, no sky, no studio surface, no labels, no logos. This is a new image, not an edit. Subject: the 1885 main building of Otago Boys' High School, Dunedin. Symmetrical Scottish Baronial school in brown-gray stone and conspicuous creamy limestone quoins, mullions and window surrounds. A tall square central tower crowned by FOUR very tall narrow square stepped Gothic pinnacles at its corners, two foremost and two behind; these pinnacles have decorative stacked tapering ledges, not round castle turrets. Between them a low pierced parapet and a small central rounded pediment. Tower face has two vertically stacked projecting polygonal bay windows with white rectangular mullions; the upper tall oriel is topped by a small battlement balcony, above that a small rectangular six-pane window. Ground level centered arched entrance with tiny short polygonal side buttresses. Two long two-storey slate-roof wings flank the tower with small triangular dormer gables. Each wing terminates in a larger projecting gabled bay with two stacked polygonal mullioned bay windows. School, not medieval fortress. All windows and the complete tower and pinnacles visible; a few low green shrubs at base.",
+      "sources": [
+        "https://www.heritage.org.nz/list-details/2190/Otago-Boys-High-School-Main-Block",
+        "https://asset.turboweb.co.nz/231/file/ujyfltlgqm7g06p1a3su/Otago%20Boys%27%20High%20School%20-%20Completed%201.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual stepped narrow Gothic corner pinnacles and stacked projecting bay windows restored; complete school and spires."
+    },
+    {
+      "id": "suva-hallintorakennukset",
+      "canonicalId": "suva-hallintorakennukset",
+      "fileName": "suva-hallintorakennukset.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Suvan hallintorakennusten kellotorni ja siipirakennukset.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/suva-hallintorakennukset.png",
+      "sha256": "2b6187f5d6763f6c8ef7c8493e6fee282a3530d21696608ea87f5db8c9ac9a08",
+      "bytes": 852539,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Generate a brand-new square PNG asset with genuine transparent alpha. Use case: stylized-concept. A finely engraved architectural map miniature, dark sepia lines and restrained stone-colored watercolor, accurate recognizable architecture from the following researched verbal description. Isolate the entire structure on a small irregular ground footprint within the central 60 percent of the square canvas; empty transparent margin on every side. Three-quarter front view with modest elevation, clear façade. No checkerboard, no background color, no sky, no studio surface, no labels, no logos. This is a new image, not an edit. Subject: the central clock-tower frontage of Suva Government Buildings, Fiji, the actual 1930s gray stone Art Deco civic building. A broad low symmetrical two-storey facade in large pale gray rectangular blocks. A horizontal decorative frieze of repeating incised circles runs across it below a low stepped parapet. The central square tower is a tall solid masonry shaft, with only a narrow slit window, rising from the facade. Near its top is a WHITE SQUARE clock face in a BLACK SQUARE geometric frame; its black hour marks and hands are framed by angular rectilinear spokes. Immediately below clock a projecting small stone balcony/corbel with five incised circles. The top is a short stepped masonry crown, capped by a low semicircular raised stone crest, no pointed roof. Clock is square not round. Shaft is solid stone not glazed. Wings have straight dark rectangular windows; flat roofs and small square corner pavilions. Short entrance steps and one low palm near the ground, no flag.",
+      "sources": [
+        "https://www.sas.com.fj/hubfs/Govt%20buildings.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Square clock, solid shaft, stepped round-topped crown and circular facade reliefs match actual photograph."
+    },
+    {
+      "id": "pariisi-bastilji-1789",
+      "canonicalId": "pariisi-bastilji-1789",
+      "fileName": "pariisi-bastilji-1789.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Bastiljin valtaus Pariisissa 1789 — historiallinen miniatyyrikuvitus.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/pariisi-bastilji-1789.png",
+      "sha256": "91e2556be8a82b7f57dc81b59706f2bfe905112f15f5d7197687b681228e87f5",
+      "bytes": 1269911,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Generate a brand-new square PNG asset with genuine transparent alpha. Use case: stylized-concept. A finely engraved architectural map miniature, dark sepia lines and restrained stone-colored watercolor, accurate recognizable architecture from the following researched verbal description. Isolate the entire structure on a small irregular ground footprint within the central 60 percent of the square canvas; empty transparent margin on every side. Three-quarter front view with modest elevation, clear façade. No checkerboard, no background color, no sky, no studio surface, no labels, no logos. This is a new image, not an edit. Subject: the REAL Bastille fortress in Paris on 14 July 1789, based on the 1790 Palloy stone model preserved at Musée Carnavalet. Elongated rectangular massive stone block, length roughly twice the short end, bounded by EIGHT large cylindrical towers: four spaced along each long side including corner towers. Show one long side with all four cylindrical tower bulges clearly visible, and part of the shorter end in three-quarter perspective. The towers and very tall plain curtain walls have nearly the SAME height and FLAT tops with low solid parapets and narrow machicolation band; no tall spires, no conical roofs, no fantasy crenellation. The walls join the cylinders into one heavy monolithic stone prison block, sparse tiny slit windows. Small inner slate roofs may peek below parapets. At ground in front, the little Avancée gate and lowered bridge, a few tiny 1789 civilians and two modest wheeled cannons convey the event. Do not reduce the elongated eight-tower prison to a square four-tower castle. All towers, parapets, gate and base fully inside generous transparent margins.",
+      "sources": [
+        "https://www.carnavalet.paris.fr/sites/default/files/2023-01/la_revolution_francaise_a_paris.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Elongated eight-tower block with flat parapets consistent with 1790 Palloy model and 1789 painting; rear tower naturally occluded, no conical fantasy roofs."
+    },
+    {
+      "id": "lontoo-tunneli-1827",
+      "canonicalId": "lontoo-tunneli-1827",
+      "fileName": "lontoo-tunneli-1827.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Thames-tunnelin rakennustyö ja Brunelin tunnelointikilpi vuonna 1827 — historiallinen miniatyyrikuvitus.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/lontoo-tunneli-1827.png",
+      "sha256": "be609bb95ef70262854b25588a95aa10907178548b6a5739a0436f58ab4d9e2f",
+      "bytes": 1151820,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja map miniature, square transparent PNG. London 1827, construction of the Thames Tunnel: show a compact cutaway fragment of Marc Brunel's huge rectangular cast-iron tunnelling shield with three stacked work cells, muddy diggers inside, lanterns, wet clay and young Isambard Brunel supervising. Isolated engineering vignette, no room box, river panorama or background. Precise dark sepia engraved linework, restrained warm ochre watercolor, crisp museum-diorama detail. Elevated three-quarter view; complete structure and all people inside central 60 percent with 20 percent transparent margin each side. Actual transparent alpha; historically plausible 1827 machinery/clothes; no modern equipment, labels, text, border, logo, watermark, matte, checkerboard, background, crop or missing parts.",
+      "sources": [
+        "https://thebrunelmuseum.com/collection/cardboard-model-of-the-thames-tunnel-and-tunnelling-shield/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Museum object LDBRU:2017.31 dated1827–28 documents work cells, diggers and brick double arches; illustrative fragment, not a complete engineering plan."
+    },
+    {
+      "id": "lontoo-palo-1666",
+      "canonicalId": "lontoo-palo-1666",
+      "fileName": "lontoo-palo-1666.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Lontoon suuri palo ja vanha St Paul’s vuonna 1666 — historiallinen miniatyyrikuvitus.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/lontoo-palo-1666.png",
+      "sha256": "20fab57fb22307e88c9dc31e0f9d80077e83877e24406d263cdb57afcc86966a",
+      "bytes": 965697,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja map miniature, square transparent PNG. London night of 4 September 1666: a compact historical vignette of the old medieval St Paul's Cathedral burning, viewed from a short Thames quay fragment, with two small overloaded wooden boats carrying salvaged chests and one Samuel Pepys-like gentleman watching in shocked profile. Restrained fire and smoke, no gore. Isolated vignette, no sky field, city panorama or rectangular water. Precise dark sepia engraved linework, restrained warm ochre and ember watercolor, crisp museum-diorama detail. Elevated three-quarter view; all spires, smoke, boats and figures complete inside central 60 percent, 20 percent transparent margin all sides. Actual transparent alpha; accurate 1666 old St Paul's with Gothic spireless tower form, period boats/clothes; no modern skyline, labels, text, border, logo, watermark, matte, checkerboard, background or cropped parts.",
+      "sources": [
+        "https://www.londonmuseum.org.uk/collections/london-stories/a-history-of-st-pauls-cathedral/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Museum documents Gothic Old St Paul’s, spire lost1561 and destruction1666; generated scene has no Wren dome."
+    },
+    {
+      "id": "lontoo-globe-1599",
+      "canonicalId": "lontoo-globe-1599",
+      "fileName": "lontoo-globe-1599.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Globen vuoden 1599 teatteria mukaileva esitys — historiallinen miniatyyrikuvitus.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/lontoo-globe-1599.png",
+      "sha256": "4a12629eb16da2b933b0baad38097821136949fe96798ada1cd0054e3d6e29a0",
+      "bytes": 1010064,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja map miniature, square transparent PNG. London 1599, an afternoon performance at the first Globe Theatre: show a compact complete cutaway wedge of the round timber amphitheatre with its thatched galleries, projecting stage, five male actors including one in a female role, and a restrained cluster of standing groundlings; small theatre flag on its pole. Isolated architectural vignette, no sky, city or rectangular ground. Precise dark sepia engraved linework, restrained warm ochre watercolor, crisp premium museum-diorama miniature. Elevated three-quarter view; entire roofline, flag, people and base inside central 60 percent, 20 percent transparent margin every side. Actual transparent alpha; plausible Elizabethan architecture/clothing; no modern objects, readable signage, text, border, logo, watermark, matte, checkerboard, background, crop or missing parts.",
+      "sources": [
+        "https://www.shakespearesglobe.com/discover/about-us/globe-theatre/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Theatre history confirms first Globe1599 and thatch before1613 fire; modern reconstruction informs plausible form, not exact recovered1599 plan."
+    },
+    {
+      "id": "berliini-muuri-1961",
+      "canonicalId": "berliini-muuri-1961",
+      "fileName": "berliini-muuri-1961.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Berliinin rajan sulkeminen piikkilangalla ja ensimmäisillä muureilla vuonna 1961 — historiallinen miniatyyrikuvitus.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/berliini-muuri-1961.png",
+      "sha256": "797e788c2232ab2b71bf5446b10277832bfb46a0658815b58b15ff156348af2b",
+      "bytes": 1290550,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja map miniature, square transparent PNG. Berlin, Bernauer Strasse on the morning of 13 August 1961: a factual civil-engineering street scene in which uniformed border guards and municipal workmen unroll coils of barbed wire and place concrete posts across cobbles, while a few residents observe from windows of a compact 1961 tenement frontage. Include one complete period utility truck, no completed concrete wall and no violence. Isolated historical vignette, no skyline or background. Precise dark sepia engraved linework, restrained gray-ochre watercolor, crisp museum-diorama detail. Elevated three-quarter view; all figures, wire coils, posts, façades and truck complete inside central 60 percent with 20 percent transparent margin. Actual transparent alpha; plausible 1961 East Berlin clothing and architecture; no insignia closeups, weapons in use, modern objects, readable signage, text, border, logo, watermark, matte, checkerboard, crop or missing parts.",
+      "sources": [
+        "https://mmg.stiftung-berliner-mauer.de/de/Tour/Overview?id=58"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Memorial foundation photographs and captions show wire barriers13August1961 followed by low early masonry; avoids later concrete-wall design."
+    },
+    {
+      "id": "rooma-sikstus-1510",
+      "canonicalId": "rooma-sikstus-1510",
+      "fileName": "rooma-sikstus-1510.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Michelangelo maalaa Sikstuksen kappelin kattoa vuonna 1510 — historiallinen miniatyyrikuvitus.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/rooma-sikstus-1510.png",
+      "sha256": "441459fe0a99a334a20f810199d638cbb2c1166d9a83cd28e5efdaedded06db8",
+      "bytes": 960892,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja map miniature, square transparent PNG. Vatican in 1510: Michelangelo paints the Sistine Chapel vault on a historically plausible self-supporting wooden platform scaffold. He stands, neck craned upward, applying pigment to a mostly pale freshly plastered curved ceiling fragment; a few incomplete ochre outlines only, with no recognizable finished masterpiece. Below, one assistant mixes wet plaster beside simple lamps. Isolated complete scaffold vignette, no room box. Precise dark sepia engraved linework, restrained warm ochre watercolor, crisp museum-diorama detail. Entire ceiling fragment, scaffold, figures and tools within central 60 percent with 20 percent transparent margin all around. Actual transparent alpha; no modern ladder, famous fresco reproduction, text, border, logo, watermark, matte, checkerboard, background, crop or missing parts.",
+      "sources": [
+        "https://www.museivaticani.va/content/museivaticani/en/collezioni/musei/cappella-sistina/volta.html"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Vatican Museums dates first ceiling half toAugust1510 and entire work1512; scene is invented scaffolding/work illustration."
+    },
+    {
+      "id": "pietari-janissaari-1703",
+      "canonicalId": "pietari-janissaari-1703",
+      "fileName": "pietari-janissaari-1703.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Pietari-Paavalin linnoituksen perustamistyöt Jänissaarella vuonna 1703 — historiallinen miniatyyrikuvitus.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/pietari-janissaari-1703.png",
+      "sha256": "6a9bdab57c0c71187d9eff993d845babd5bb1f958f817813c588c45826b8067a",
+      "bytes": 1188374,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja map miniature, square transparent PNG. Hare Island in the Neva delta, 27 May 1703: the very tall Peter I in a plain early-eighteenth-century coat measures the muddy site of the future Peter and Paul Fortress with a survey chain and simple wooden stakes while soldiers dig the first earthworks. Include a compact marshy islet fragment, shovels, a small timber boat and sparse reeds; the fortress is not yet built. Isolated historical vignette, no city skyline or broad river rectangle. Precise dark sepia engraved linework, restrained gray-ochre watercolor, crisp museum-diorama detail. Elevated three-quarter view; all figures, stakes, boat and islet inside central 60 percent with 20 percent transparent margin. Actual transparent alpha; plausible 1703 Russian clothing and tools; no later cathedral, modern survey gear, labels, text, border, logo, watermark, matte, checkerboard, background, crop or missing parts.",
+      "sources": [
+        "https://www.spbmuseum.ru/themuseum/documents/otchet-finansovaya-deyatelnost/REPORT%202023.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Museum report printedp11: foundation27(16)May1703; p21: timber-earth rampart1703. The miniature uses early earthwork, not completedstonefort/cathedral."
+    },
+    {
+      "id": "newyork-brooklyn-1883",
+      "canonicalId": "newyork-brooklyn-1883",
+      "fileName": "newyork-brooklyn-1883.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Brooklyn Bridgen avajaisjuhla vuonna 1883 — historiallinen miniatyyrikuvitus.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/newyork-brooklyn-1883.png",
+      "sha256": "f8a4badeb8b7d313441beee3beb3078fa82751a32ca7f1486984b9f65eea4bc5",
+      "bytes": 1252459,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept. Asset type: Matkakirja map miniature, square transparent PNG. New York, 24 May 1883, opening of the Brooklyn Bridge: a compact accurate fragment of the real neo-Gothic granite bridge tower with pointed twin arches, suspension cables and deck. Emily Roebling rides in a complete open Victorian carriage drawn by two complete horses beneath the tower as a restrained celebratory crowd waves hats; a few modest fireworks rise alongside. No flag, banner, bunting, rooster or national symbol anywhere. Isolated architectural vignette, no skyline, sky field or rectangular river. Precise dark sepia engraved linework, restrained warm ochre watercolor, crisp museum-diorama detail. Elevated three-quarter view; full tower top, cables, carriage, horses, fireworks and base within central 60 percent with 20 percent transparent margin all around. Actual transparent alpha; plausible 1883 clothing and bridge details; no text, border, logo, watermark, matte, checkerboard, background, crop or missing parts.",
+      "sources": [
+        "https://a860-collectionguides.nyc.gov/repositories/2/resources/38"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "NYC Municipal Archives confirms24May1883 opening, celebratory crowds, EmilyRoebling carriage and fireworks; miniature is representative assembled celebration, not one recorded instant."
+    }
+  ],
+  "reviewPublished": false,
+  "gameIntegrationClaimed": false
+}

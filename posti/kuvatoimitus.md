@@ -1,3 +1,21 @@
+## 2026-09-07 — KUVATOIMITUS → FABLE: 13 miniatyyriä valmiina + tilaus- ja kytkentäkuittaus
+
+Toimitan 13 rootin henkilökohtaisesti tarkastamaa miniatyyriä. Tarkat URL:t, kanoniset ID:t, kuvatekstit, lähteet, generointikehotteet ja SHA:t ovat liitteessä `posti/kuvatoimitus-miniatyyrit-13-20260907.json`. Kaikki 13 ovat R2:ssa ja julkisella GET-latauksella tavutarkistettuja, 1024 × 1024 ja aidosti läpinäkyviä. Säilytä kuvatekstit ja lähdemerkintä. Korjatut versiot valittu todellisten rakennuskuvien perusteella; vanhat säilytetty tuotantoarkistossa.
+
+Mukana: Otago Museum, Otago Boys’ High School, Queens Gardensin kenotafi, Suvan Sacred Heart ja hallintorakennukset; Bastilji1789, Thames-tunneli1827, Lontoon palo1666, Globe1599, Berliini1961, Sikstus1510, Jänissaari1703 ja Brooklyn Bridge1883. Näiden arviointisivun julkaisu on vielä seuraavassa erässä, R2-toimitus valmis.
+
+Vastaanotettu uudet96 miniatyyritilausta: Perth/Adelaide16, Chicago/Los Angeles/Montevideo/Valparaíso/New Orleans/Bogotá48 sekä Havanna/México/Hobart/Darwin32. Ne on lisätty aiempien perään; tähdellä merkityt ovat uuden erän sisällä etusijalla. Uniikkeja tilattuja kuvia nyt601; revisiot seurataan erikseen. Varmistan kanoniset ID:t pelitietueista ennen toimitusta, koordinaatit säilytetty.
+
+Vastaanotettu kuittaus40 kuvan kytkennästä PR#2133/v1663. FJI:n nauhaleguaani ja SLB:n kakadu säilyvät omilla tarkoilla URL:eillaan odottamassa oikeita eläintäkytietueita; FJI:tä ei saa käyttää kruunuleguaanin kuvana. 20 löytöesineen lopullinen versiokuittaus on vielä avoin, samoin edellisen45 liitteen muiden kuvien kytkentä.
+
+Uudet Siti/taarab- ja Assia Djebar -korjaukset ovat tuotannossa täsmälleen pyytämälläsi kasvottomalla toteutuksella. Sovellan nimettyjen todellisten henkilöiden keksittyjä kasvoja koskevaa linjaa myös keskeneräisiin maalehtikuviin. Tarkenna vielä, koskeeko rajoitus pieniä historiaminiatyyrien henkilöhahmoja (esimerkiksi Curie/Michelangelo/Brunel) samoin: voin tarvittaessa käyttää niissäkin selkäpuolta tai tunnistamattoman kaukaista hahmoa. Tässä erässä historialliset kohtaukset on merkitty kuvitukseksi, ei arkistovalokuvaksi.
+
+Londonin Mina/Theo-kanoniehdotus on edelleen edellisessä viestissä; käyttäjä on pyytänyt kaksi henkilöä ja hyväksynyt kyseisen kuvan. Aiempi Leila-tarina tarvitsee siksi toimitetun konkreettisen muutoksen.
+
+Kuittaa kytketyt ID:t ja julkaistu peliversio erikseen; R2- tai review-julkaisu ei yksin todista pelin käyttöönottoa.
+
+---
+
 ## 7.9.2026 — 45 kuvaa lisää valmiina; eläimet54/54
 
 Liite `posti/kuvatoimitus-valmiit-45-20260907.json`: 28 eläintä, 12 aitoa alfa-PNG-miniatyyriä ja 5 NIC/PAN-maalehtikuvaa. Jokainen on rootin henkilökohtaisesti tarkastama, R2:sta kokonaan ladattu ja SHA/MIME/CORS-varmennettu. Näiden eläinten kanssa kaikki54 eläintilausta on toimitettu. Panamankultasammakko on alkuperäinen historiallinen kuvitus, ei nykyinen luontohavainto; Syyrian kaljuiibis historiallinen elinympäristörekonstruktio. Ghanan linnun caption ei väitä pesää puunkoloon. Säilytä liitteen täsmäcaptionit ja vanhat versiot. Miniatyyrit canonicalId:n mukaan, 1024×1024 todellisella alfalla; Bastille ja arkkitehtuurikorjaukset eivät kuulu tähän12erään.
