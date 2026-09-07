@@ -96,15 +96,18 @@ jobs:
             exit 1
           fi
 
+      # NODE tulee Mac-valmistelusta (tools/mac-ajovalmis.sh kiinnittää
+      # node@22:n); Actionsissa muuttujaa ei ole ja polun node kelpaa.
       - name: Kuiva ajo (luettelo ja kohdeavain)
-        run: node tools/tee-pallotekstuuri.mjs --kuiva --taso "${{ inputs.taso }}"
+        run: |
+          "${NODE:-node}" tools/tee-pallotekstuuri.mjs --kuiva --taso "${{ inputs.taso }}"
 
       - name: Asenna sharp ja laske pinnoite
         if: inputs.kuiva != 'kylla'
         run: |
           set -euo pipefail
           npm install --no-save --no-fund --no-audit sharp
-          node tools/tee-pallotekstuuri.mjs --taso "${{ inputs.taso }}" --ulos pallotekstuuri-ulos/tekstuuri.jpg
+          "${NODE:-node}" tools/tee-pallotekstuuri.mjs --taso "${{ inputs.taso }}" --ulos pallotekstuuri-ulos/tekstuuri.jpg
 
       - name: Vie pinnoite ämpäriin
         if: inputs.kuiva != 'kylla'

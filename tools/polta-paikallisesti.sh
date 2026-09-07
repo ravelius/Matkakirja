@@ -203,6 +203,9 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
   --pallo-osia N             pallon sarjan shardeja (oletus: ytimet × 3;
                              yksi osa on kielletty monen ytimen koneella)
   --pallo-tasot 0-8          pallon Mercator-tasot (oletus 0-8)
+  --korvaa                   kirjoita pallon kansioon, jossa on jo valmis
+                             laatat.json (oletuksena ajo kieltäytyy —
+                             laatat ovat vuoden välimuistissa)
   --noutovali MS             pallon shardin noutotahti ms (oletus:
                              15 × rinnakkaiset prosessit; nosta, jos
                              lokissa on HTTP 429)
@@ -246,6 +249,8 @@ YTIMET=""
 ULOS="$JUURI/pyramidi-poltto"
 KOE=0; VAIN=""; VIE=1; SIIVOA=0; UUDESTAAN=0; PALLO=0; PALLOTUNNISTE=""
 PALLON_RANTA=0; VAIN_PALLO=0; PALLO_OSIA=""; PALLO_TASOT="0-8"; NOUTOVALI=""
+# Ylikirjoitussuoja pallon sarjalle (ks. polta_pallo).
+KORVAA=0
 # Yhteysaikakatkaisu jokaiselle aws-kutsulle: jumittunut yhteys kaatuu
 # nopeasti ja CLI yrittää uudestaan sen sijaan, että shardi jäisi roikkumaan.
 AWS_YHTEYSAIKA="${AWS_YHTEYSAIKA:-30}"
@@ -283,6 +288,7 @@ while [ $# -gt 0 ]; do
     --vain-pallo) VAIN_PALLO=1; PALLO=1; shift ;;
     --pallo-osia) PALLO_OSIA="$2"; shift 2 ;;
     --pallo-tasot) PALLO_TASOT="$2"; shift 2 ;;
+    --korvaa) KORVAA=1; shift ;;
     --noutovali) NOUTOVALI="$2"; shift 2 ;;
     --ei-luetteloa) LUETTELO=0; shift ;;
     --pakota-luettelo) PAKOTA_LUETTELO=1; shift ;;
@@ -1237,6 +1243,28 @@ polta_pallo () {
     --tunniste "$PALLOTUNNISTE" --ulos "$luettelokansio")
   local kansio
   kansio="$(cat "$luettelokansio/kansio.txt")"
+
+  # 1b. YLIKIRJOITUSSUOJA (sama kaava kuin tools/tee-etusivupallo.mjs).
+  #     Pallon laatat ovat vuoden välimuistissa, joten valmiiseen
+  #     kansioon ei kirjoiteta eri sisältöä: selaimet ja välipalvelimet
+  #     jakaisivat vanhaa ja uutta sekaisin. Kansio on VARATTU, kun sen
+  #     laatat.json on ämpärissä — luettelo viedään viimeisenä, joten
+  #     kesken jäänyt ajo ei lukitse kansiota eikä suoja estä jatkamista.
+  #     Verkkovika ei kaada polttoa, vain varoittaa.
+  if [ "$VIE" -eq 1 ] && [ "$KORVAA" -eq 0 ]; then
+    local koodi
+    koodi="$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 \
+      "https://media.matkakirja.app/${kansio}laatat.json" 2>/dev/null || echo 000)"
+    case "$koodi" in
+      200)
+        echo "VIRHE: $kansio on jo ämpärissä (laatat.json)." >&2
+        echo "Anna uusi --pallotunniste (tai uusi --versio) tai --korvaa," >&2
+        echo "jos vanha sarja saa hävitä." >&2
+        exit 2 ;;
+      404|403) ;;
+      *) echo "::warning::pallon ylikirjoitussuojaa ei voitu tarkistaa (HTTP $koodi)" ;;
+    esac
+  fi
 
   # 2. SHARDIT RINNAKKAIN, sama xargs-logiikka kuin pyramidilla.
   local rinnakkain="$YTIMET"

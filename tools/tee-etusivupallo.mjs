@@ -5,6 +5,7 @@
  *        [--kuva 800] [--sumennus 6] [--taso 5] [--kehykset N]
  *        [--ulos kansio] [--ffmpeg polku] [--ei-videota] [--sauma]
  *        [--osa k/n] [--kokoa] [--odotus 60000]
+ *        [--versio 2026-09-07a] [--korvaa]
  *
  * OMISTAJAN TILAUS 5.9.2026, sanatarkasti: *"etusivun kartan voi pitää
  * aluksi vielä vanhassa mutta sitten kun ehditään tehdä uusi, niin
@@ -96,6 +97,7 @@ const {
   kameranNakyma, koneenTila, pallonPiste, reitinPisteet, teeReitti,
 } = await import('../js/etusivupallo.js');
 const { PALLO_LAATAT, PALLO_KIRJASTO, laattakynnykset } = await import('../js/pallo.js');
+const { PEILI_JUURI } = await import('../js/media.js');
 const { packById } = await import('../js/pack.js');
 
 const argv = process.argv.slice(2);
@@ -148,6 +150,20 @@ const ODOTUS = Number(arvo('odotus', '60000'));
 const ESILAMMITYS_ODOTUS = Math.max(ODOTUS, 8000);
 const OSA = arvo('osa', '');
 const KOKOA = lippu('kokoa');
+/*
+ * VERSIO = KANSIO ÄMPÄRISSÄ. Oletus tulee js/etusivupallo.js:n
+ * ETUSIVUPALLO_VERSIO-vakiosta, jotta peli ja poltto ovat samaa mieltä
+ * ilman erillistä syötettä; `--versio` on tarpeen silloin, kun uusi
+ * sarja poltetaan ENNEN kuin vakio päivitetään (peli hylkää väärän
+ * version luettelotarkistuksessa, joten kesken jäänyt poltto ei näy
+ * pelissä). Työnkulun yhteenveto muistuttaa vakion päivittämisestä.
+ */
+const VERSIO = arvo('versio', '') || ETUSIVUPALLO_VERSIO;
+if (!/^\d{4}-\d{2}-\d{2}[a-z]?$/.test(VERSIO)) {
+  throw new Error(`--versio ${VERSIO}: muoto on VVVV-KK-PP[kirjain], esim. 2026-09-07a`);
+}
+/** Sallii kirjoituksen kansioon, jossa on jo valmis etusivu.json. */
+const KORVAA = lippu('korvaa');
 const OSAT = OSA ? (() => {
   const m = /^(\d+)\/(\d+)$/.exec(OSA);
   if (!m) throw new Error('--osa on muotoa k/n, esim. 0/8');
@@ -183,10 +199,10 @@ if (Math.abs(KIERTO - KIERROKSEN_ASTEET) > 1e-6) {
 /** Julisteen (pysäytyskuvan) hetki: puolimatkassa, jolloin viivaa on jo kertynyt. */
 const JULISTE_AIKA = Math.min(KESTO, reitti.jaksot[5]?.alku ?? KESTO / 2);
 
-const AVAIN = `julisteet/etusivu/${ETUSIVUPALLO_VERSIO}/`;
+const AVAIN = `julisteet/etusivu/${VERSIO}/`;
 
 const luettelo = {
-  versio: ETUSIVUPALLO_VERSIO,
+  versio: VERSIO,
   tehty: new Date().toISOString(),
   kesto: Number(KESTO.toFixed(4)),
   fps: Number(TAAJUUS.toFixed(6)),
@@ -218,12 +234,51 @@ const luettelo = {
   tiedostot: ETUSIVUPALLO_TIEDOSTOT,
 };
 
-console.log(`Etusivun pallo ${ETUSIVUPALLO_VERSIO}: ${KEHYKSIA} kehystä @ `
+console.log(`Etusivun pallo ${VERSIO}: ${KEHYKSIA} kehystä @ `
   + `${TAAJUUS.toFixed(3)} fps = ${KESTO.toFixed(2)} s (kierto ${KIERTO.toFixed(2)}°), `
   + `lava ${LAVA}px → kuva ${KUVA}px, sumennus ${SUMENNUS}px, laattataso ${TASO}`);
 console.log(`Reitti: ${reitti.pisteet.map((p) => p.nimi).join(' → ')} `
   + `(+ ${LOPPU_PITO_S} s pysähdys Lontoossa)`);
 console.log(`Ämpärin polku: ${AVAIN}`);
+if (VERSIO !== ETUSIVUPALLO_VERSIO) {
+  console.log(`HUOM: js/etusivupallo.js ETUSIVUPALLO_VERSIO on `
+    + `'${ETUSIVUPALLO_VERSIO}'. Kun tämä ajo on ämpärissä, päivitä se: `
+    + `ETUSIVUPALLO_VERSIO = '${VERSIO}'`);
+}
+
+/*
+ * YLIKIRJOITUSSUOJA. Videot ja juliste ovat vuoden välimuistissa
+ * (immutable), joten valmiiseen kansioon ei saa kirjoittaa eri
+ * sisältöä: selaimet ja välipalvelimet jakaisivat vanhaa ja uutta
+ * sekaisin, eikä pelin versiotarkistus huomaisi mitään. Kansio on
+ * "varattu", kun sen etusivu.json on ämpärissä — luettelo viedään
+ * VIIMEISENÄ, joten kesken jäänyt ajo ei lukitse kansiota.
+ *
+ * Koe tehdään HEADilla julkisen peilin kautta; saman voi tarkistaa
+ * käsin: aws s3 ls "s3://$R2_BUCKET/<avain>etusivu.json" --endpoint-url …
+ * Verkkovika EI kaada ajoa (vain varoitus): poltto on kalliimpi
+ * menettää kuin suoja on arvokas hetkellisessä katkossa.
+ */
+async function onkoLuetteloAmparissa(avain) {
+  const url = `${PEILI_JUURI}${avain}etusivu.json`;
+  try {
+    const v = await fetch(url, { method: 'HEAD', cache: 'no-store' });
+    if (v.status === 200) return true;
+    if (v.status === 404 || v.status === 403) return false;
+    console.log(`::warning::${url} vastasi ${v.status} — suojaa ei voitu tarkistaa`);
+    return false;
+  } catch (e) {
+    console.log(`::warning::ämpäriä ei tavoitettu (${e?.message ?? e}) — `
+      + 'ylikirjoitussuojaa ei voitu tarkistaa');
+    return false;
+  }
+}
+
+if (!KORVAA && !OSAT && await onkoLuetteloAmparissa(AVAIN)) {
+  throw new Error(`versio ${VERSIO} on jo ämpärissä (${AVAIN}etusivu.json) — `
+    + 'anna uusi --versio (esim. huomisen päivä + kirjain) tai --korvaa, '
+    + 'jos vanha sisältö saa hävitä');
+}
 
 if (KUIVA) {
   console.log(JSON.stringify(luettelo, null, 1));

@@ -8,9 +8,16 @@ name: Tee etusivun pallo
 # pallolaatoilla sumennetun kuvasarjan, pakkaa sen kahdeksi videoksi
 # (VP9/WebM ja H.264/MP4) sekä yhdeksi pysäytyskuvaksi, ja vie ne
 # ämpäriin polkuun julisteet/etusivu/<versio>/ luettelon (etusivu.json)
-# kanssa. VERSIO LUETAAN js/etusivupallo.js:n ETUSIVUPALLO_VERSIO-vakiosta:
-# työkalu kirjoittaa polun tiedostoon avain.txt, jonka vientivaihe lukee —
-# tässä tiedostossa ei siis ole versionumeroa lainkaan.
+# kanssa. VERSIO LUETAAN js/etusivupallo.js:n ETUSIVUPALLO_VERSIO-vakiosta,
+# ellei syötettä `versio` anneta: työkalu kirjoittaa polun tiedostoon
+# avain.txt, jonka vientivaihe lukee — tässä tiedostossa ei siis ole
+# versionumeroa lainkaan.
+#
+# VALMIISEEN KANSIOON EI KIRJOITETA. Videot ovat vuoden välimuistissa
+# (immutable), joten työkalu kieltäytyy, jos kohdekansion etusivu.json on
+# jo ämpärissä — silloin annetaan uusi `versio` (ja päivitetään vakio,
+# ks. yhteenveto) tai pakotetaan syötteellä `korvaa`. Koe tehdään heti
+# kuivassa ajossa, ennen kuin yhtään kehystä on poltettu.
 #
 # KIERROS ON 360° (omistaja 5.9.2026 ilta: "animaatio pitää mennä koko
 # maapallon ympäri niin että se voi loopata"): kehykset jaetaan tasan
@@ -85,6 +92,17 @@ on:
         required: false
         type: string
         default: '5'
+      versio:
+        description: 'Kansio ämpärissä (tyhjä = js/etusivupallo.js ETUSIVUPALLO_VERSIO; uusi sarja esim. 2026-09-07a)'
+        required: false
+        type: string
+        default: ''
+      korvaa:
+        description: 'Kirjoita kansioon, jossa on jo valmis etusivu.json (hävittää vanhan sisällön)'
+        required: false
+        type: choice
+        default: 'ei'
+        options: ['ei', 'kylla']
       kuiva:
         description: 'Kuiva ajo: laske reitti ja luettelo, älä renderöi äläkä vie'
         required: true
@@ -115,6 +133,10 @@ jobs:
       AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
       R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
       R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      # Syötteet lippuina ympäristön kautta (ei suoraan run-lohkoihin):
+      # tyhjä merkkijono katoaa komennolta, ja työkalu tarkistaa muodon.
+      VERSIOLIPPU: ${{ inputs.versio != '' && format('--versio {0}', inputs.versio) || '' }}
+      KORVAALIPPU: ${{ inputs.korvaa == 'kylla' && '--korvaa' || '' }}
 
     steps:
       - uses: actions/checkout@v4
@@ -144,8 +166,15 @@ jobs:
             exit 1
           fi
 
+      # NODE tulee Mac-valmistelusta (tools/mac-ajovalmis.sh kiinnittää
+      # node@22:n); Actionsissa muuttujaa ei ole ja polun node kelpaa.
+      # Tämä askel on myös ylikirjoitussuojan koe: se ajetaan aina.
       - name: Kuiva ajo (reitti, kesto ja kohdeavain)
-        run: node tools/tee-etusivupallo.mjs --kuiva --fps "${{ inputs.fps }}"
+        run: |
+          set -euo pipefail
+          # shellcheck disable=SC2086
+          "${NODE:-node}" tools/tee-etusivupallo.mjs --kuiva \
+            --fps "${{ inputs.fps }}" $VERSIOLIPPU $KORVAALIPPU
 
       - name: Asenna Chromium ja varmista ffmpeg (Actions)
         if: inputs.kuiva != 'kylla' && inputs.ajokone != 'mac'
@@ -189,11 +218,13 @@ jobs:
           mkdir -p etusivupallo-ulos/lokit
           pidit=()
           for k in $(seq 0 $((KAISTOJA - 1))); do
-            node tools/tee-etusivupallo.mjs \
+            # shellcheck disable=SC2086
+            "${NODE:-node}" tools/tee-etusivupallo.mjs \
               --osa "$k/${KAISTOJA}" \
               --fps "${{ inputs.fps }}" --lava "${{ inputs.lava }}" \
               --kuva "${{ inputs.kuva }}" --sumennus "${{ inputs.sumennus }}" \
               --taso "${{ inputs.taso }}" --ulos etusivupallo-ulos \
+              $VERSIOLIPPU $KORVAALIPPU \
               > "etusivupallo-ulos/lokit/kaista-$k.log" 2>&1 &
             pidit+=($!)
           done
@@ -223,10 +254,12 @@ jobs:
         if: inputs.kuiva != 'kylla'
         run: |
           set -euo pipefail
-          node tools/tee-etusivupallo.mjs --kokoa \
+          # shellcheck disable=SC2086
+          "${NODE:-node}" tools/tee-etusivupallo.mjs --kokoa \
             --fps "${{ inputs.fps }}" --lava "${{ inputs.lava }}" \
             --kuva "${{ inputs.kuva }}" --sumennus "${{ inputs.sumennus }}" \
-            --taso "${{ inputs.taso }}" --ulos etusivupallo-ulos
+            --taso "${{ inputs.taso }}" --ulos etusivupallo-ulos \
+            $VERSIOLIPPU $KORVAALIPPU
 
       - name: Vie ämpäriin
         if: inputs.kuiva != 'kylla'
@@ -263,12 +296,22 @@ jobs:
         if: inputs.kuiva != 'kylla'
         run: |
           set -euo pipefail
+          # Versio luetaan työkalun kirjoittamasta avaimesta, ei syötteestä:
+          # tyhjä syöte tarkoittaa vakion versiota, ja muistutuksessa on
+          # oltava se versio, joka oikeasti vietiin.
+          avain="$(cat etusivupallo-ulos/avain.txt)"
+          versio="$(basename "$avain")"
           {
             echo '### Etusivun pallo'
             echo ''
             echo "- ajokone: ${{ inputs.ajokone }}, kaistoja: ${KAISTOJA:-1}"
+            echo "- ämpärin kansio: \`$avain\`"
             ls -l etusivupallo-ulos/pallo.webm etusivupallo-ulos/pallo.mp4 \
               etusivupallo-ulos/juliste.jpg | awk '{print "- " $9 ": " int($5/1024) " kt"}'
+            echo ''
+            # PELI EI NÄE UUTTA SARJAA ENNEN TÄTÄ: js/etusivupallo.js
+            # hylkää luettelon, jonka versio ei ole vakion versio.
+            echo "**Muista:** päivitä js/etusivupallo.js ETUSIVUPALLO_VERSIO = '$versio'"
             echo ''
             echo 'Näkyy pallolaudalla oletuksena; poiskytkin: vipu "etusivupallo" tai ?etusivupallo=0'
           } >> "$GITHUB_STEP_SUMMARY"
