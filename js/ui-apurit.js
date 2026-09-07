@@ -1577,6 +1577,34 @@ export function asetaKehittajaMaailma(paalla) {
  */
 export const LAUTA_OLETUS = 'pallo';
 const LAUTA_AVAIN = 'matkakirja-lauta';
+
+/*
+ * === VANHA KARTTA POIS KÄYTÖSTÄ, VÄLIAIKAISESTI ====================
+ * === (omistaja 7.9.2026 aamu) ======================================
+ *
+ * Sanatarkasti: *"Voisiko vanhan kartan ottaa pelistä ainakin
+ * väliaikaisesti kokonaan pois, eli että se ei lataisi sitä millään
+ * lailla, eikä se olisi myöskään kytkettävissä päälle?"*
+ *
+ * TÄSMENTÄÄ aiempaa linjausta VANHA KARTTA JAA VIVUN TAAKSE: koodi
+ * (js/kartta.js, js/kartta-lataus.js, linssikartta) JÄÄ REPOON, mutta
+ * peli ei enää lataa sitä eikä sitä voi kytkeä päälle. Tämä yksi vakio
+ * on ainoa portti: kun omistaja haluaa vanhan kartan takaisin, se
+ * käännetään todeksi ja `LAUDAT` saa taas arvon 'kartta' — ei muita
+ * koodimuutoksia.
+ *
+ * MITÄ TÄMÄ SULKEE:
+ *   1. `?lauta=kartta` ja laitteen muistettu 'kartta' ohitetaan
+ *      (LAUDAT tuntee vain pallon) — lautaValinta palauttaa aina
+ *      'pallo';
+ *   2. päävalikon Pelilauta-rivit ja ratasvalikon pallolauta-vipu ovat
+ *      piilossa (index.html, js/main.js);
+ *   3. tasokartan moduuli ei lataudu millään polulla
+ *      (js/kartta-lataus.js lataaTasokartta, js/ui.js varmistaKartta);
+ *   4. pallon turvatila ja varapolku EIVÄT enää pudota tasokartalle
+ *      vaan avaavat pallon kevennettynä (ks. PALLON KEVENNYS alempana).
+ */
+export const VANHA_KARTTA_KAYTOSSA = false;
 /*
  * PALLON TURVATILAN LASKURI (vaihe 6): pallolaudan turvatila laskee
  * peräkkäiset kaatumiset ja pudottaa pelin tasokartalle, kun niitä on
@@ -1588,9 +1616,16 @@ const LAUTA_AVAIN = 'matkakirja-lauta';
  * luetteloon, niin nollaus seuraa mukana.
  */
 const PALLON_KAATUMISAVAIMET = ['matkakirja-pallo-kaatumiset'];
-const LAUDAT = new Set(['pallo', 'kartta']);
+/*
+ * KELPAAVAT LAUDAT. 7.9.2026 alkaen tässä on VAIN pallo: vanha kartta on
+ * väliaikaisesti pois käytöstä (VANHA_KARTTA_KAYTOSSA yllä), joten
+ * `?lauta=kartta` ja laitteelle jäänyt vanha muistiarvo ohitetaan kuten
+ * mikä tahansa tuntematon arvo — ne eivät siis voi kytkeä tasokarttaa
+ * päälle. Paluu: lisää 'kartta' takaisin, kun vakio kääntyy todeksi.
+ */
+const LAUDAT = VANHA_KARTTA_KAYTOSSA ? new Set(['pallo', 'kartta']) : new Set(['pallo']);
 
-/** Laudan valinta: 'pallo' tai 'kartta'. */
+/** Laudan valinta: aina 'pallo', kunnes vanha kartta palaa käyttöön. */
 export function lautaValinta() {
   if (lautaMuisti !== null) return lautaMuisti;
   let valinta = null;
@@ -1702,8 +1737,18 @@ export function asetaEtusivupallo(paalla, win = globalThis) {
  * docs/moduulit/karttapallo.md luku 6: WKWebView'n sisältöprosessi voi
  * kaatua WebGL-kontekstin, laattojen ja pelin DOM:in yhteispainosta, ja
  * kaatuminen näkyy pelaajalle logosilmukkana. Jos pallo kaatuu KAHDESTI
- * PERÄKKÄIN samalla laitteella, seuraava käynnistys avaa tasokartan ja
- * kertoo sen yhdellä rivillä — peli ei jää kaatumaan uudestaan.
+ * PERÄKKÄIN samalla laitteella, seuraava käynnistys avaa pallon
+ * KEVENNETTYNÄ ja kertoo sen yhdellä rivillä — peli ei jää kaatumaan
+ * uudestaan.
+ *
+ * TURVATILA EI ENÄÄ AVAA TASOKARTTAA (omistaja 7.9.2026, ks.
+ * VANHA KARTTA POIS KÄYTÖSTÄ yllä). Ennen turvatila pudotti pelin
+ * vanhalle tasokartalle; nyt vanhaa karttaa ei ole olemassa pelaajalle,
+ * joten turvatila kytkee pallon raskaimman osan (laattakerroksen,
+ * js/pallolaatat.js) pois tältä istunnolta — sama perääntymistie kuin
+ * `?laattakerros=0`, mutta automaattisesti. Jos pallo kaatuu vielä
+ * kevennettynäkin, pelaaja saa selkeän virheilmoituksen (js/ui.js
+ * pallolautaVarapolku) — ei vanhaa karttaa.
  *
  * "PERÄKKÄIN" = laskuri nollautuu, kun pallo on pysynyt pystyssä
  * TURVATILAN_UNOHDUS_MS ajan (js/pallolauta/lauta.js): yksi ohimenevä
@@ -1757,9 +1802,36 @@ export function nollaaPallonKaatumiset(muisti = null) {
   }
 }
 
-/** Onko pallo suljettu tältä laitteelta kahden kaatumisen takia? */
+/**
+ * Onko pallo turvatilassa eli avataanko se KEVENNETTYNÄ tällä
+ * laitteella? (Ennen 7.9.2026 tämä tarkoitti "pallo suljettu, tasokartta
+ * tilalle"; vanha kartta on nyt pois käytöstä eikä turvatila enää
+ * vaihda lautaa — ks. VANHA KARTTA POIS KÄYTÖSTÄ.)
+ */
 export function palloTurvatilassa(muisti = null) {
   return pallonKaatumiset(muisti) >= PALLON_TURVATILAN_RAJA;
+}
+
+/*
+ * === PALLON KEVENNYS (turvatila ja varapolku, 7.9.2026) =============
+ *
+ * Kevennys on ISTUNNON lippu, ei laitteen asetus: se ei kirjoita mitään
+ * localStorageen eikä jää päälle seuraavaan käynnistykseen, joten yksi
+ * kaatuminen ei sido palloa kevyeen tilaan ikuisesti. Lipun kytkee
+ * js/ui.js (turvatila avauksessa, varapolku kaatumisen jälkeen), ja
+ * ainoa lukija on `laattakerrosPaalla` alempana — kevennys = pallon
+ * raskain kerros (js/pallolaatat.js) pois, muu pallo ennallaan.
+ */
+let palloKevennysPaalla = false;
+
+/** Kytkee pallon kevennyksen tälle istunnolle (ei muistiin). */
+export function asetaPalloKevennys(paalla) {
+  palloKevennysPaalla = Boolean(paalla);
+}
+
+/** Onko pallo kevennettynä tässä istunnossa? */
+export function palloKevennetty() {
+  return palloKevennysPaalla;
 }
 
 /*
@@ -1912,8 +1984,15 @@ export function laattakerrosMuistissa(win = globalThis) {
   return null;
 }
 
-/** Onko pallon laattakerros päällä? (URL › muisti › oletus) */
+/** Onko pallon laattakerros päällä? (kevennys › URL › muisti › oletus) */
 export function laattakerrosPaalla(win = globalThis, oletus = true) {
+  /*
+   * KEVENNYS VOITTAA KAIKEN (7.9.2026): kun pallo on kaatunut, sen
+   * raskain kerros jää pois vaikka URL tai muisti pyytäisi sitä —
+   * turvatilan koko idea on, ettei seuraava yritys kaadu samalla
+   * painolla. Vanha kartta ei ole enää vaihtoehto (VANHA_KARTTA_KAYTOSSA).
+   */
+  if (palloKevennysPaalla) return false;
   const osoitteesta = laattakerrosOsoitteesta(win);
   if (osoitteesta !== null) return osoitteesta;
   const muistettu = laattakerrosMuistissa(win);

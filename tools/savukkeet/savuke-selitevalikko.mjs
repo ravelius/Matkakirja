@@ -57,6 +57,13 @@ import { KARTTAVALO_AIHEET } from '../../js/karttavalot.js';
 import { NOSTOSYM_PAAKATEGORIAT } from '../../js/fokusnosto-symbolit.js';
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));

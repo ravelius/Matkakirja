@@ -36,6 +36,7 @@
  * toimii siellä kuten ennenkin (savuke-dist).
  */
 import { pyramidinArkki } from './laattapyramidi.js';
+import { VANHA_KARTTA_KAYTOSSA } from './ui-apurit.js';
 
 /*
  * Kuinka paljon pergamenttia jatketaan kartan alle avaustekstiä varten.
@@ -538,6 +539,20 @@ function niputettu() {
  *   MAASTO_TEKSTIT_MALLI: object, MAASTON_VARJOSTUS: object}>}
  */
 export function lataaTasokartta() {
+  /*
+   * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026, sanatarkasti: *"eli
+   * että se ei lataisi sitä millään lailla"*). Tämä on tasokartan AINOA
+   * latausportti, joten yksi ehto tässä riittää: js/kartta.js ja sen
+   * omat aineistopakat (maasto-tekstit, -malli, maailmankartta-varjostus)
+   * jäävät hakematta kaikilla poluilla — linssikartta, varapolku,
+   * turvatila ja vanha `?lauta=kartta` mukaan lukien. Kutsuja saa saman
+   * hylkäyksen kuin verkottomassa latauksessa ja jää nukkuvaan
+   * sijaisolioon; js/ui.js varmistaKartta ei edes tule tänne asti.
+   * Paluu: VANHA_KARTTA_KAYTOSSA todeksi (js/ui-apurit.js).
+   */
+  if (!VANHA_KARTTA_KAYTOSSA) {
+    return Promise.reject(new Error('Vanha tasokartta on pois käytöstä (omistaja 7.9.2026).'));
+  }
   if (osat) return Promise.resolve(osat);
   lupaus ??= tuoOsat().then((tulos) => {
     osat = tulos;

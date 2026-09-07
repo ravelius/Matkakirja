@@ -3097,3 +3097,98 @@ puuttuvat") eivät kelpaa siihen. Kerroksen KAHVA jää paikalleen
 (`lepokerrokset`), vaikka kerros puretaan: savukkeet lukevat siitä yhä
 kerroksen omat pyramidipyynnöt (savuke-pallolauta vartio 2 vähentää ne
 tasokartan pyynnöistä) ja mittarien tilan `purettu`.
+
+
+## 11. Vanha kartta pois käytöstä — väliaikaisesti (7.9.2026)
+
+**Omistaja 7.9.2026 aamu, sanatarkasti:** *"Voisiko vanhan kartan ottaa
+pelistä ainakin väliaikaisesti kokonaan pois, eli että se ei lataisi sitä
+millään lailla, eikä se olisi myöskään kytkettävissä päälle?"*
+
+Tämä on luvun 10 ("Kaikki pallolle") viimeinen askel — mutta
+**väliaikaisena ja ilman poistoa**: koodi jää repoon, ja paluu on yhden
+vakion kääntäminen.
+
+### 11.1 Yksi vakio, ei hajautettuja ehtoja
+
+`js/ui-apurit.js`:
+
+```js
+export const VANHA_KARTTA_KAYTOSSA = false;
+```
+
+Kaikki muu lukee tätä. Kun vakio kääntyy todeksi, vanha kartta palaa
+sellaisena kuin se v1664:ssä oli — yksikään portti ei ole poistanut
+koodia, vain sulkenut sen.
+
+### 11.2 Mitä vakio sulkee
+
+| Portti | Paikka | Vaikutus |
+| --- | --- | --- |
+| Kelpaavat laudat | `js/ui-apurit.js` `LAUDAT` | `?lauta=kartta` ja laitteelle jäänyt muistiarvo `kartta` ohitetaan kuten tuntematon arvo → `lautaValinta()` on aina `pallo` |
+| Latausportti | `js/kartta-lataus.js` `lataaTasokartta` | Palauttaa hylätyn lupauksen: `js/kartta.js`, `maasto-tekstit`, `maasto-tekstit-malli` ja `maailmankartta-varjostus` jäävät hakematta kaikilla poluilla |
+| Olion vaihto | `js/ui.js` `varmistaKartta` | Palaa heti; `ui.kartta` jää nukkuvaksi sijaiseksi (`NukkuvaKartta`), eikä konsoliin tule varoitusta joka kutsusta |
+| Mount | `js/ui.js` `mount` | `kartta.lepotila = true` kaikilla poluilla — myös kun etusivun pallo on kytketty pois (`?etusivupallo=0`); ylälohkoon jää silloin pergamentti ja julisteotsikko |
+| Linssikartta | `js/ui.js` `avaaLinssikartta` | Palauttaa `false`. Haara oli jo kuollut koodia (kaikilla käytössä olevilla linsseillä on `pallolle`), mutta portti pitää sen kuolleena myös uusille linsseille |
+| Lähtövalinta | `js/ui.js` `aloitaKartalta` / `aloitaTasokartalta` | Valinta avautuu aina pallolla; tasokartan haaraan ei mennä |
+| Turvatila | `js/ui.js` `pallolautaHalutaan` | Kaksi kaatumista → pallo **kevennettynä**, ei tasokarttaa (11.3) |
+| Varapolku | `js/ui.js` `pallolautaVarapolku` | Kaatunut pallo yritetään kevennettynä; toisesta kaatumisesta selkeä virheilmoitus (11.3) |
+| Kytkimet | `index.html`, `js/main.js` | Päävalikon Pelilauta-osio ja ratasvalikon `pallolauta`-vipu piilotetaan; rivejä ei rakenneta |
+| Esilataus | `sw.js` SHELL | Neljä tasokartan moduulia pois esilatauksesta (11.4) |
+
+### 11.3 Turvatila ja varapolku ilman vanhaa karttaa
+
+Kaatumislaskuri (`matkakirja-pallo-kaatumiset`, raja 2, unohdus 20 s) on
+ennallaan; **seuraus** muuttui. Ennen turvatila pudotti pelin
+tasokartalle. Nyt:
+
+1. **Turvatila** (kaksi kaatumista tällä laitteella) → `asetaPalloKevennys(true)`
+   ja rivi *"Karttapallo kaatui aiemmin — avataan kevennettynä."*
+2. **Kevennys** on istunnon lippu, ei laitteen asetus: se ei kirjoita
+   mitään `localStorageen`. Ainoa lukija on `laattakerrosPaalla`, joka
+   palauttaa kevennyksessä `false` **ennen URL:ää ja muistia** — pallon
+   raskain kerros (`js/pallolaatat.js`) jää pois, muu pallo ennallaan.
+   Sama perääntymistie kuin `?laattakerros=0`, mutta automaattisesti.
+3. **Varapolku** (`pallolautaVarapolku`) kaatuu kahdessa askeleessa:
+   ensimmäinen kaatuminen istunnossa → kevennys päälle ja rivi
+   *"Karttapallo kaatui — avataan kevennettynä."*; kevennettynäkin
+   kaatunut → `pallolautaEpaonnistui` ja virherivi *"Karttapalloa ei
+   saatu auki tällä laitteella. Kokeile ladata sivu uudelleen."*
+   Laitteen valintaa ei kirjoiteta kummassakaan askeleessa.
+
+Ratasvalikon *pallon turvatila* -nappi nollaa laskurin kuten ennen ja
+lataa sivun, jolloin pallo saa uuden yrityksen täydellä laadulla.
+
+### 11.4 Palvelutyöntekijä: neljä moduulia pois esilatauksesta
+
+Laiskoitus (luku 5b) siirsi latauksen ajankohtaa, mutta
+palvelutyöntekijä haki moduulit silti SHELLissä joka asennuksessa.
+Nyt SHELListä poistuivat `js/kartta.js`, `js/packs/maasto-tekstit.js`,
+`js/packs/maasto-tekstit-malli.js` ja `js/packs/maailmankartta-varjostus.js`;
+portti `js/kartta-lataus.js` jää, koska `js/ui.js` tuo sen staattisesti.
+Poikkeus on kirjattu `tests/sw.test.mjs`:n `VANHA_KARTTA_POIS`-listaan,
+joka myös vartioi, ettei moduuli ole molemmilla listoilla.
+
+**Pyramidi ei ole tasokartan omaisuutta.** Pallon laattakerros lukee
+saman pyramidin luetteloa ja rantatasoa (`js/pallolaatat.js`), joten
+`js/laattapyramidi.js`, pyramidin aineisto ja palvelutyöntekijän
+laattakori jäävät ennalleen. Palvelutyöntekijän oma laattaesilataus
+koskee vain pallon laattoja (`/julisteet/pallo/laatat/`).
+
+### 11.5 Linssit — kaikki toimivat pallolla
+
+Käytössä olevista linsseistä jokaisella on `pallolle`-toteutus
+(`ihmisen-matka`, `keksinnot`, `radio`, `topografia`, `vertailu`,
+`maatiedot`, `vesistot`), joten yksikään ei tarvitse linssikarttaa.
+Laukun `pallo`-linssi oli jo suodatettu pois pallolaudalla
+(`nakyvatLinssit`). Uusi linssi ilman `pallolle`-toteutusta ei enää
+ilmesty tasokartalle vaan jää piirtämättä — se on tarkoitus: linssi
+kirjoitetaan pallolle.
+
+### 11.6 Savukkeet
+
+`?lauta=kartta`-osoitetta ajavat savukkeet on siirretty **dokumentoituun
+ohitukseen**: ne tulostavat yhden `OHITUS`-rivin ja päättyvät koodilla 0.
+Perustelu, lista ja paluuohje: `tools/savukkeet/vanha-kartta-ohitus.mjs`
+ja `tools/savukkeet/README.md`. Poikkeukset (uudet vartiot, `--lauta`-vipu
+pallolle) on lueteltu README:ssä.

@@ -23,6 +23,22 @@ import {
 } from '../../js/nostoladonta.js';
 import { packById } from '../../js/pack.js';
 
+/*
+ * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä mittari ajaa
+ * ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+ * tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+ *
+ * OHITUS VAIN OMANA AJONA. Tämä tiedosto on myös KIRJASTO
+ * (savuke-syvazoomi.mjs tuo `mittaaSyvaZoomi`- ja `tiivista`-apurit),
+ * joten process.exit moduulitasolla tappaisi myös tuojansa. Ehto on
+ * siksi "olenko minä se tiedosto, joka nodelle annettiin".
+ */
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+if (process.argv[1] && import.meta.url.endsWith(process.argv[1].split('/').pop())) {
+  ohitaVanhanKartanSavuke(import.meta.url);
+}
+
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;

@@ -80,10 +80,28 @@ test('etusivun pallovideo puretaan samassa piirrossa kuin valinta alkaa', () => 
     'renderIntro ei saa avata pallovideota enää valintatilassa');
 });
 
-test('pallon varapolku antaa lähtövalinnan takaisin kartalle', () => {
+/*
+ * VÄLIAIKAISESTI POIS -VARTIO (omistaja 7.9.2026, sanatarkasti: *"Voisiko
+ * vanhan kartan ottaa pelistä ainakin väliaikaisesti kokonaan pois, eli
+ * että se ei lataisi sitä millään lailla, eikä se olisi myöskään
+ * kytkettävissä päälle?"*). Ennen tämä testi vaati, että kaatunut pallo
+ * antaa lähtövalinnan tasokartalle. Nyt vanhaa karttaa ei ole olemassa
+ * pelaajalle, joten varapolku on kaksiaskelinen: pallo uudelleen
+ * kevennettynä, ja vasta toisesta kaatumisesta selkeä virheilmoitus.
+ * Testiä EI poistettu, vaan se vartioi uutta sääntöä — ja nimenomaan
+ * sitä, ettei tasokartalle enää mennä.
+ */
+test('pallon varapolku yrittää palloa kevennettynä eikä avaa vanhaa karttaa', () => {
   const varapolku = ui.match(/ {2}pallolautaVarapolku\(\) \{[\s\S]*?\n {2}\}\n/)[0];
-  assert.match(varapolku, /this\.pallolautaEpaonnistui = true;/);
-  assert.match(varapolku, /if \(this\.game\.phase === 'pickstart' && this\.aloitusvalintaPallolla\) \{\n\s*this\.aloitusvalintaPallolla = false;\n\s*void this\.aloitaTasokartalta\(\);/);
+  assert.match(varapolku, /if \(!palloKevennetty\(\)\) \{\n\s*asetaPalloKevennys\(true\);/,
+    'ensimmäinen kaatuminen: pallo uudelleen kevennettynä');
+  assert.match(varapolku, /this\.pallolautaEpaonnistui = true;/,
+    'toinen kaatuminen: lauta jää avaamatta');
+  assert.doesNotMatch(varapolku, /aloitaTasokartalta|kartta\.heraa/,
+    'varapolku ei saa herättää tasokarttaa (vanha kartta pois käytöstä)');
+  // Lähtövalinta pysyy pallolla myös epäonnistumisen jälkeen.
+  const aloita = ui.match(/ {2}aloitaKartalta\(\) \{[\s\S]*?\n {2}\}\n/)[0];
+  assert.match(aloita, /if \(!VANHA_KARTTA_KAYTOSSA\) \{ this\.aloitaPallolta\(\); return; \}/);
 });
 
 /* ================================================================== *

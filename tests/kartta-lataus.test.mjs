@@ -142,10 +142,28 @@ test('portti muistaa lupauksen ja tuntee yhden tiedoston version', () => {
   // Nipussa moduulit ovat samassa näkyvyysalueessa: dynaaminen tuonti
   // kaatuisi, joten portti lukee ne suoraan (ks. tools/build-standalone.mjs).
   assert.match(LATAUS, /function niputettu\(\) \{[\s\S]*?try \{[\s\S]*?Kartta,/);
+  /*
+   * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): portin ENSIMMÄINEN
+   * rivi on lipun tarkistus, joten yksikään dynaaminen tuonti ei lähde —
+   * ei linssikartasta, ei varapolusta, ei vanhasta ?lauta=kartta-vivusta.
+   */
+  const portti = LATAUS.match(/export function lataaTasokartta\(\) \{[\s\S]*?\n\}\n/)[0];
+  assert.match(portti, /if \(!VANHA_KARTTA_KAYTOSSA\) \{\n\s*return Promise\.reject\(/,
+    'portti ei saa ladata tasokarttaa, kun vanha kartta on pois käytöstä');
+  assert.match(LATAUS, /import \{ VANHA_KARTTA_KAYTOSSA \} from '\.\/ui-apurit\.js';/);
+  const apurit = lue('js/ui-apurit.js');
+  assert.match(apurit, /export const VANHA_KARTTA_KAYTOSSA = false;/,
+    'yksi vakio ratkaisee: paluu käyttöön on tämän kääntäminen todeksi');
 });
 
 test('js/ui.js vaihtaa sijaisen oikeaan karttaan yhdestä paikasta', () => {
   assert.match(UI, /this\.kartta = new NukkuvaKartta\(this\);/);
+  /*
+   * VÄLIAIKAISESTI POIS (omistaja 7.9.2026): vaihdon EDESSÄ on nyt yksi
+   * portti, joka estää latauksen kokonaan. Vaihdon koneisto jää
+   * paikalleen paluuta varten, ja sitä vartioidaan alla entiseen tapaan.
+   */
+  assert.match(UI, /async varmistaKartta\(\) \{[\s\S]*?if \(!VANHA_KARTTA_KAYTOSSA\) return this\.kartta;/);
   assert.match(UI, /async varmistaKartta\(\) \{[\s\S]*?await lataaTasokartta\(\)/);
   assert.match(UI, /this\.kartta = new osat\.Kartta\(this\);/);
   // Eleet asennetaan vaihdon yhteydessä (mount ehti kutsua tynkää).
@@ -166,10 +184,26 @@ test('aineistopakat luetaan portista, ei moduulin näkyvyysalueesta', () => {
   assert.match(UI, /tasokartanOsat\(\)\?\.MAASTON_VARJOSTUS \?\? null/);
 });
 
-test('laiskoitetut moduulit pysyvät SHELLissä ja nipussa', () => {
+/*
+ * VÄLIAIKAISESTI POIS -VARTIO (omistaja 7.9.2026, sanatarkasti: *"eli
+ * että se ei lataisi sitä millään lailla"*). Ennen tämä testi vaati, että
+ * laiskoitetut moduulit PYSYVÄT SHELLissä, koska laiskoitus vain siirsi
+ * latauksen ajankohtaa. Nyt tasokartta on kokonaan pois käytöstä, joten
+ * sen omat moduulit EIVÄT saa olla SHELLissä: palvelutyöntekijä hakisi
+ * ne joka asennuksessa, vaikka peli ei koskaan pyydä niitä. Portti itse
+ * (js/kartta-lataus.js) jää SHELLiin — sen tuo js/ui.js staattisesti.
+ *
+ * NIPUTUS ON ERI ASIA: yhden tiedoston versio kokoaa kaikki moduulit
+ * samaan tiedostoon eikä hae mitään verkosta, joten tasokartan koodi jää
+ * sinne kuolleena koodina lipun (VANHA_KARTTA_KAYTOSSA) taakse — juuri
+ * niin kuin omistaja pyysi, "koodi jää repoon".
+ */
+test('tasokartan moduulit eivät ole SHELLissä; portti ja niputus ennallaan', () => {
   const sw = lue('sw.js');
-  for (const polku of [...LAISKAT, 'js/kartta-lataus.js']) {
-    assert.ok(sw.includes(`'./${polku}'`), `${polku} puuttuu sw.js:n SHELListä — offline hajoaa`);
+  assert.ok(sw.includes("'./js/kartta-lataus.js'"), 'portti kuuluu yhä SHELLiin');
+  for (const polku of LAISKAT) {
+    assert.ok(!sw.includes(`'./${polku}'`),
+      `${polku} on yhä sw.js:n SHELLissä — vanhan kartan esilataus jatkuisi`);
   }
   const kokooja = lue('tools/build-standalone.mjs');
   const lista = kokooja.match(/const MODULES = \[([\s\S]*?)\n\];/)[1];

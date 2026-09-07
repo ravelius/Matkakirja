@@ -178,7 +178,9 @@ async function avaaSivu({
     } catch { /* yksityinen tila */ }
   }, data);
   const sivu = await ctx.newPage();
-  const pyynnot = { pyramidi: 0, pallolaatat: 0, kirjasto: 0, virheet: [] };
+  const pyynnot = {
+    pyramidi: 0, pallolaatat: 0, kirjasto: 0, tasokartta: 0, virheet: [],
+  };
   // Sivun virheet raporttiin: hiljainen kaatuminen näkyisi vain
   // "pallo ei avautunut" -rivinä.
   sivu.on('pageerror', (e) => pyynnot.virheet.push(String(e.message ?? e)));
@@ -188,6 +190,15 @@ async function avaaSivu({
     if (url.includes('julisteet/pyramidi')) pyynnot.pyramidi += 1;
     if (url.includes('julisteet/pallo/laatat')) pyynnot.pallolaatat += 1;
     if (url.includes('vendor/globe.gl')) pyynnot.kirjasto += 1;
+    /*
+     * VANHA KARTTA POIS KÄYTÖSTÄ (7.9.2026): tasokartan moduuli ja sen
+     * omat aineistopakat tulivat aina yhdestä portista (js/kartta-lataus.js
+     * lataaTasokartta). Yksikin pyyntö tähän joukkoon tarkoittaa, että
+     * portti vuotaa.
+     */
+    if (/\/js\/kartta\.js|maasto-tekstit|maailmankartta-varjostus/.test(url)) {
+      pyynnot.tasokartta += 1;
+    }
   });
   await sivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
   await sivu.route(/wikimedia\.org/, (route) => route.abort());
@@ -1020,20 +1031,33 @@ if (AMPARI_TOIMII) {
   }
 }
 
-/* ================= TASOKARTTA ENNALLAAN ================= */
+/* ============ VANHA KARTTA POIS KÄYTÖSTÄ (7.9.2026) ============ *
+ *
+ * Omistaja 7.9.2026 aamu, sanatarkasti: *"Voisiko vanhan kartan ottaa
+ * pelistä ainakin väliaikaisesti kokonaan pois, eli että se ei lataisi
+ * sitä millään lailla, eikä se olisi myöskään kytkettävissä päälle?"*
+ *
+ * Ennen tässä oli vartio "tasokartta: ?lauta=kartta piirtää laudan eikä
+ * avaa palloa". Nyt parametri on tuntematon arvo: lauta pysyy pallona,
+ * svg#board tyhjänä eikä js/kartta.js:ää haeta lainkaan. Vartio jäi
+ * paikalleen KÄÄNTEISENÄ — se on tämän erän tärkein savuke-vartio.
+ */
 {
   const { ctx, sivu, pyynnot } = await avaaSivu({ lauta: 'kartta', ampari: AMPARI_TOIMII });
-  await sivu.waitForTimeout(3000);
+  await sivu.waitForTimeout(4000);
   const tila = await sivu.evaluate(() => ({
     svgLapsia: document.querySelectorAll('#board *').length,
-    pallo: Boolean(document.querySelector('.pallo-kuori.pallolauta')),
     lepotila: window.matkakirja.ui.kartta.lepotila,
-    pallolauta: Boolean(window.matkakirja.ui.pallolauta),
+    sijainen: window.matkakirja.ui.kartta.sijainen,
+    lautaValikonRiveja: document.querySelectorAll('#lauta-valikko button').length,
+    vipuPiilossa: document.getElementById('kehittaja-pallolauta-btn')?.hidden ?? null,
   }));
-  vaadi('tasokartta: ?lauta=kartta piirtää laudan eikä avaa palloa',
-    tila.svgLapsia > 100 && !tila.pallo && tila.lepotila === false && !tila.pallolauta, JSON.stringify(tila));
-  if (AMPARI_TOIMII) vaadi('tasokartta: laattapyramidi pyydetään kuten ennen', pyynnot.pyramidi > 0, `${pyynnot.pyramidi} pyyntöä`);
-  vaadi('tasokartta: kirjastoa ei ladata', pyynnot.kirjasto === 0, `${pyynnot.kirjasto}`);
+  vaadi('?lauta=kartta EI enää vaihda lautaa: svg#board tyhjä, kartta nukkuva sijainen',
+    tila.svgLapsia === 0 && tila.lepotila === true && tila.sijainen === true, JSON.stringify(tila));
+  vaadi('tasokartan moduulia ei haeta millään polulla', pyynnot.tasokartta === 0,
+    `${pyynnot.tasokartta} pyyntöä js/kartta.js:ään tai sen aineistopakkoihin`);
+  vaadi('kytkimet piilossa: ratasvalikon vipu ja päävalikon Pelilauta-rivit',
+    tila.vipuPiilossa === true && tila.lautaValikonRiveja === 0, JSON.stringify(tila));
   if (pyynnot.virheet.length) tieto('sivun virheet', pyynnot.virheet.slice(0, 5).join(' | '));
   await ctx.close();
 }
@@ -1041,20 +1065,40 @@ if (AMPARI_TOIMII) {
 /* ================= VARAPOLKU ================= */
 {
   const { ctx, sivu, pyynnot } = await avaaSivu({ lauta: 'pallo', ampari: false });
-  // Kirjasto ei lataudu → kartta herää. Odotetaan kunnes svg#board täyttyy.
-  const heraa = await sivu.waitForFunction(() => document.querySelectorAll('#board *').length > 100, null, { timeout: 30000 })
+  /*
+   * VANHA KARTTA POIS KÄYTÖSTÄ (7.9.2026): kirjaston puuttuminen ei enää
+   * herätä tasokarttaa, joten svg#boardia ei kannata odottaa. Odotetaan
+   * sen sijaan pelaajalle näytettävää RIVIÄ — ja NAPATAAN SE TALTEEN
+   * heti, koska rivi häviää itsestään muutamassa sekunnissa (TOAST_MS).
+   */
+  const rivit = [];
+  const kerraa = () => sivu.evaluate(
+    () => [...document.querySelectorAll('.event-toast')].map((t) => t.textContent),
+  ).then((r) => rivit.push(...r)).catch(() => {});
+  const kello = setInterval(kerraa, 500);
+  const heraa = await sivu.waitForFunction(() => document.querySelectorAll('#board *').length > 100, null, { timeout: 15000 })
     .then(() => true).catch(() => false);
+  clearInterval(kello);
+  await kerraa();
   const tila = await sivu.evaluate(() => ({
     lepotila: window.matkakirja.ui.kartta.lepotila,
+    sijainen: window.matkakirja.ui.kartta.sijainen,
+    svgLapsia: document.querySelectorAll('#board *').length,
     pallolauta: Boolean(window.matkakirja.ui.pallolauta),
-    kuori: Boolean(document.querySelector('.pallo-kuori.pallolauta')),
     avain: localStorage.getItem('matkakirja-lauta'),
-    ilmoitus: [...document.querySelectorAll('.event-toast')].some((t) => /pelataan kartalla/.test(t.textContent)),
   }));
-  vaadi('varapolku: ilman kirjastoa peli putoaa tasokartalle tälle istunnolle',
-    heraa && tila.lepotila === false && !tila.pallolauta && !tila.kuori, JSON.stringify(tila));
-  vaadi('varapolku: laitteen valintaa ei kirjoiteta (avain pysyy poissa) ja pelaaja saa yhden rivin',
-    tila.avain === null && tila.ilmoitus, JSON.stringify(tila));
+  tila.rivit = [...new Set(rivit)].join(' | ');
+  /*
+   * VANHA KARTTA POIS KÄYTÖSTÄ (7.9.2026): ennen tämä vartioi, että
+   * kirjastoton käynnistys putoaa TASOKARTALLE. Nyt varapolku yrittää
+   * palloa kevennettynä ja kertoo sen rivillä; toisesta kaatumisesta
+   * tulee selkeä virheilmoitus. Tasokartta ei herää kummassakaan.
+   */
+  vaadi('varapolku: ilman kirjastoa tasokartta EI herää (jää nukkuvaksi sijaiseksi)',
+    !heraa && tila.lepotila === true && tila.sijainen === true && tila.svgLapsia === 0,
+    JSON.stringify(tila));
+  vaadi('varapolku: laitteen valintaa ei kirjoiteta ja pelaaja saa rivin pallosta',
+    tila.avain === null && /kevennettynä|ei saatu auki/.test(tila.rivit), JSON.stringify(tila));
   if (pyynnot.virheet.length) tieto('sivun virheet', pyynnot.virheet.slice(0, 5).join(' | '));
   await ctx.close();
 }
