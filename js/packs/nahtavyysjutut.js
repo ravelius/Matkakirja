@@ -53628,6 +53628,14 @@ export const NAHTAVYYSJUTUT = {
           + 'sisäpihalle. Talossa on lisäksi toimistosiipi, '
           + 'käsikirjasto, islamilainen keskus ja ylimmän imaamin '
           + 'asunto.',
+      kuvat: [
+        {
+          tiedosto: 'LAGOS CENTRAL MOSQUE.jpg',
+          selite: 'Moskeijan kaarikäytävä ja kaksi minareettia kohoavat '
+            + 'suoraan torikadun päivänvarjojen yläpuolelle.',
+          lahde: 'Sir Demo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Tinubun aukio': {
@@ -53655,6 +53663,14 @@ export const NAHTAVYYSJUTUT = {
           + 'ensimmäinen esitti Stephen Goldblattin kuvia vuoden 1970 '
           + 'elokuvakuvauksista, jotka löytyivät Berliinistä lähes '
           + 'viisikymmentä vuotta myöhemmin.',
+      kuvat: [
+        {
+          tiedosto: 'Stutues of orishas in Tinubu square, Lagos.jpg',
+          selite: 'Aukion pronssiveistokset nähtynä pyöreän aukon läpi; '
+            + 'taustalla kohoavat keskustan tornit.',
+          lahde: 'Omoeko Media, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Ajelen hautausmaa': {
@@ -53710,6 +53726,15 @@ export const NAHTAVYYSJUTUT = {
           + 'jalkiolla. Soittimessa on kaksi julkisivua, yksi alttaria '
           + 'ja toinen oikeaa sivulaivaa kohti, ja lisäksi oma osansa '
           + 'pääoven yläpuolisella parvella.',
+      kuvat: [
+        {
+          tiedosto: 'Cathedral Church of Christ, Marina 20025.jpg',
+          selite: 'Katedraali ylhäältä: kellotorni, jyrkät harjakatot ja '
+            + 'valkoiset kaarilistat erottuvat keskustan korttelien '
+            + 'keskellä.',
+          lahde: 'PHOTOMORA, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     "King's College": {
@@ -53739,6 +53764,14 @@ export const NAHTAVYYSJUTUT = {
           + '-koulusta, joiden tarkoitus on tuoda yhteen eri seuduilta '
           + 'ja taustoista tulevia oppilaita. Vanhemmat luokat ovat '
           + 'yhä saaren pääkampuksella, nuoremmat Victoria Islandilla.',
+      kuvat: [
+        {
+          tiedosto: 'King\'s college Lagos.jpg',
+          selite: 'Koulun valkopylväinen päärakennus sateen jälkeen, ja sen '
+            + 'edessä on sininen portti.',
+          lahde: 'Comradeayobami, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Vapauden puisto': {
@@ -53769,6 +53802,14 @@ export const NAHTAVYYSJUTUT = {
           + 'siirtomaa-ajasta, ja lava täyttyy iltaisin. Nigerian '
           + 'ensimmäinen skeittipuisto avattiin puiston sisään '
           + 'maaliskuussa 2024.',
+      kuvat: [
+        {
+          tiedosto: 'Images of Freedom Park 73.jpg',
+          selite: 'Puiston lampi kiertää vanhan vankilan perustuksia, ja '
+            + 'suuret puut varjostavat koko pihan.',
+          lahde: 'ReoMartins, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Tafawa Balewan aukio': {
@@ -53795,6 +53836,14 @@ export const NAHTAVYYSJUTUT = {
           + 'rakennus. Aukion krikettikenttä on Nigerian kriketin '
           + 'perinteinen koti; betonipinta vaihdettiin kymmenen '
           + 'kaistaleen nurmeen, ja työ valmistui tammikuussa 2022.',
+      kuvat: [
+        {
+          tiedosto: 'Tafawa Balewa Square Onikan Lagos - 2024.jpg',
+          selite: 'Aukion laaja betonikenttä katsojakatoksineen ilmasta; '
+            + 'vasemmalla näkyy krikettikenttä ja takana laguuni.',
+          lahde: 'Isaacayodele32, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Nigerian kansallismuseo': {
@@ -53884,6 +53933,14 @@ export const NAHTAVYYSJUTUT = {
           + '1970- ja 1980-luvuilla; Aga Khanin kulttuurirahasto sai '
           + '1990 luvan kunnostaa sen, ja työ valmistui huhtikuussa '
           + '1994. Nykyään siellä on pieni Sansibarin historian museo.',
+      kuvat: [
+        {
+          tiedosto: 'The old dispensary in Stone Town.jpg',
+          selite: 'Vaaleanvihreiksi maalatut veistetyt parvekkeet kiertävät '
+            + 'koko julkisivun kolmessa kerroksessa.',
+          lahde: 'Luganosamwel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Sulttaanin palatsi': {
@@ -53908,6 +53965,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Hänen osastollaan on kirjoituksia, vaatteita ja '
           + 'arkitavaroita. Museo on siis paikka, jossa kaupungin '
           + 'kuuluisin karkulainen palasi kotiin vitriinin taakse.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio del Sultán, Stone Town, Zanzíbar, Tanzania, 2024-05-31, DD 24.jpg',
+          selite: 'Palatsin valkoiset muurit ja hammasreunus iltavalossa '
+            + 'rantakadun varrella.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Darajanin tori': {
@@ -53930,6 +53995,14 @@ export const NAHTAVYYSJUTUT = {
           + 'vaatteisiin. Tori on myös liikenteen solmu — se on toinen '
           + 'saaren kahdesta daladala-pääasemasta, ja sieltä lähtevät '
           + 'bussit pohjoiseen ja koilliseen.',
+      kuvat: [
+        {
+          tiedosto: 'Stone Town, Zanzibar (7) (28488101244).jpg',
+          selite: 'Kypsiä banaaniterttuja riippuu torikojun katosta '
+            + 'köysissä ja varsissa.',
+          lahde: 'Richard Mortel from Riyadh, Saudi Arabia, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Hamamnin kylpylä': {
@@ -53953,6 +54026,14 @@ export const NAHTAVYYSJUTUT = {
           + 'CHAM-yhdistyksen vapaaehtoiset kunnostivat sen 2006. '
           + 'Kaikkiin osiin ei pääse: osa tiloista, muun muassa '
           + 'entinen ravintola, on muutettu asunnoiksi.',
+      kuvat: [
+        {
+          tiedosto: 'Hamamni Baths Zanzibar 06.jpg',
+          selite: 'Kylpylän tynnyriholvit näkyvät katolta harmaina '
+            + 'kaarina, ja niissä on rivi valoaukkoja.',
+          lahde: 'Nassima Chahboun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Pyhän Joosefin katedraali': {
@@ -53979,6 +54060,14 @@ export const NAHTAVYYSJUTUT = {
           + 'korkea palmu, joka näkyy lähes kaikissa vanhoissa kuvissa '
           + 'kirkosta; se kaadettiin joskus 2000-luvulla. Kirkko on '
           + 'yhä paikallisen katolisen seurakunnan käytössä.',
+      kuvat: [
+        {
+          tiedosto: 'St Joseph Cathedral stone town 1.jpg',
+          selite: 'Kaksi tornia nousee kapean kujan yli, ja niiden '
+            + 'välissä erottuu julkisivun pyöreä ikkuna.',
+          lahde: 'Ronyyz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Tippu Tipin talo': {
@@ -54003,6 +54092,14 @@ export const NAHTAVYYSJUTUT = {
           + 'suorin muistutus, joka kaupungissa on jäljellä. Se on '
           + 'noin viidentoista tai kahdenkymmenenviiden minuutin '
           + 'kävelymatkan päässä vanhalta linnakkeelta.',
+      kuvat: [
+        {
+          tiedosto: 'Tippu Tipp House.jpg',
+          selite: 'Talon veistetty ovi messinkinastoineen ja sen vieressä '
+            + 'maailmanperintökohteen kivilaatta.',
+          lahde: 'Ronyyz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Michenzanin korttelit': {
@@ -54028,6 +54125,14 @@ export const NAHTAVYYSJUTUT = {
           + 'on asentanut oman pumppunsa — ne eivät ole talojen '
           + 'alkuperäisen tyylin mukaisia. Osa asunnoista kunnostettiin '
           + 'ja maalattiin uudelleen 2010.',
+      kuvat: [
+        {
+          tiedosto: 'Wohnungsbau der DDR in Stone Town.jpg',
+          selite: 'Kaksi pitkää elementtitaloa seisoo leveän kadun '
+            + 'molemmin puolin, ja välissä kulkee daladaloja.',
+          lahde: 'Sigrun lingel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Sansibarin valtionyliopisto': {

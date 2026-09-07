@@ -88150,6 +88150,28 @@ export const KULTTUURI_KATEGORIAT = {
    * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ: säänormaalit ovat oman agentin
    * työlistalla. Oppaan sääjakso nojaa siksi en-Wikipedian
    * Climate-osioon ja sanoo sen ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Iga Idunganran (1).jpg" ja "(3).jpg" (kuvissa on
+   * Iga Idunganran Healthcare Centre, ei oban palatsi),
+   * "Shitta Bey Mosque, Lagos Island, Lagos.jpg" (etualalla
+   * tunnistettavia kasvoja), "Life in Makoko.jpg" (kaksi lasta
+   * tunnistettavina lähikuvassa), "2014 Tinubu Square Lagos Nigeria
+   * 14640600637.jpg" (kuvan alaosan täyttää TINUBU SQUARE -kyltti),
+   * "National Museum Lagos,.jpg" ja "National Museum-Yoruba Hut.jpg"
+   * (edellisessä nurmikko vie kaksi kolmasosaa, jälkimmäinen on
+   * palanut puhki), "Bridging Worlds - Ocean Serenity Meets Urban
+   * Pulse.jpg" (vinossa, kuvattu liikkuvasta autosta),
+   * "The old CMS bookshop.jpg" (etualalla rakennusjätekasa).
+   *
+   * KOLME NOSTOA JÄÄ KUVATTOMAKSI, ja se on tarkoituksellista:
+   * aworien perustamistarulle, Beninin sotaleirille ja vuoden 1861
+   * luovutussopimukselle ei ole Commonsissa kuvaa, joka täyttäisi
+   * säännöt (1200 px, PD/CC BY/CC BY-SA, sisältö vastaa selitettä).
+   * Kuvaton on parempi kuin tarkistamaton — nämä kolme on kirjattu
+   * kuvaputken tilaukseksi Fablelle.
    */
   lagos: [
     {
@@ -88159,6 +88181,64 @@ export const KULTTUURI_KATEGORIAT = {
         + 'kalastajakylästä tuli Beninin sotaleiri, siitä orjasatama '
         + 'ja lopulta Britannian siirtomaa. Isoisän matkavuonna 1873 '
         + 'kaupunkia hallittiin Kultarannikolta asti.',
+      /*
+       * EI ENNEN JA NYT -PARIA. Matkakirjan valokuvataulun vanha
+       * puoli (africa-valokuvat.js, lagos: 'Lagos, 1929.jpg') on
+       * Commonsissa vain 607 × 382 pikseliä ja OGL v1.0 -lisenssillä,
+       * eli se ei täytä kaupunkilehden kuvasääntöjä (vähintään
+       * 1200 px, lisenssi PD/CC0/CC BY/CC BY-SA). Korvaajaa etsittiin
+       * hauilla "Category:History of Lagos" ja "Lagos Nigeria 1900
+       * photograph marina" 7.9.2026 — yhtään kelvollista vanhaa
+       * vedosta ei löytynyt. Lehti taittuu siis ilman paria kuten
+       * Dubai, Doha, Salalah ja Astana; kansikuvien pikkurivi näkyy
+       * normaalisti. Kirjattu Fablelle kuvaputken tilaukseksi.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Lagos Island Nigeria.jpg',
+          selite: 'Ilmasta katsottuna liikekeskusta täyttää saaren ja '
+            + 'sataman väylä kaartaa sen oikealla puolella.',
+          lahde: 'Subomi07, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'LAGOS ISLAND 1.jpg',
+          selite: 'Keskusmoskeijan minareetit nousevat torikatosten '
+            + 'yli, ja niiden takana alkaa tornien rivi.',
+          lahde: 'Sir Demo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'LAGOS ISLAND 3.jpg',
+          selite: 'Saaren pohjoisrannalta katsoen laguunin yli kulkee '
+            + 'kaksi siltaa peräkkäin.',
+          lahde: 'Sir Demo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Lagosille ei ole generoitu herokuvia, joten
+       * karusellissa on kolme aitoa valokuvaa (vertaa Nairobiin ja
+       * Denveriin): aamu, vihreä saari ja laguuni.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Lagos skyline.jpg',
+          selite: 'Aamuvarhaisella Marina on tyhjä — ainoa hetki '
+            + 'vuorokaudessa, jolloin kadulla on tilaa.',
+          lahde: 'Clara Sanchiz, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Ikoyi, Lagos, Nigeria.jpg',
+          selite: 'Ikoyin puiden takaa avautuu salmi, sen takana '
+            + 'Victoria Island ja horisontissa Atlantti.',
+          lahde: 'Reginald Bassey, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Panorama of 3mb.jpg',
+          selite: 'Kolmas mannersilta piirtyy ohueksi viivaksi '
+            + 'laguunin poikki pilvisenä päivänä.',
+          lahde: 'Solasly, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Savilautanen, joka upposi laguuniin',
@@ -88225,6 +88305,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Costa; se vihittiin 4. heinäkuuta 1894, ja samassa '
             + 'tilaisuudessa Shitta sai osmanien sulttaanilta '
             + 'Bey-arvonimen.',
+          tiedosto: 'Shitta Bey Mosque.jpg',
+          selite: 'Shitta-Beyn moskeijan päätykolmio on koristeltu '
+            + 'brasilialaiseen tapaan laatoilla ja kaarilla.',
+          lahde: 'Beendy234, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Saro people',
         },
         {
@@ -88242,10 +88326,21 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Laba punainen, Oniko keltainen, Ologede vihreä ja Agere '
             + 'violetti. Viikkoa ennen juhlaa Adimu tulee kadulle '
             + 'sauvan kanssa.',
+          tiedosto: 'The Eyo Masquerade 04.jpg',
+          selite: 'Kolme Eyo-hahmoa taivasta vasten: valkoinen kaapu '
+            + 'peittää kantajansa kokonaan, ja hattu kertoo ryhmän.',
+          lahde: 'Yemi festus, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Eyo festival',
         },
       ],
       matkailijalle: {
+        kuva: {
+          tiedosto: 'An old Brazilian building at Tinubu square, Lagos.jpg',
+          selite: 'Keltaiset danfo-pikkubussit odottavat vanhan '
+            + 'brasilialaistyylisen talon edessä, ja torin '
+            + 'päivänvarjot alkavat heti niiden takaa.',
+          lahde: 'Omoeko Media, Wikimedia Commons (CC BY-SA 4.0)',
+        },
         kappale: 'Lagos on Nigerian suurin kaupunki ja Afrikan '
           + 'väkirikkaimpia. Se jakautuu kahteen: saareen, jolla ovat '
           + 'liikekeskusta ja vanhin kaupunki, ja mantereeseen, jolla '
@@ -88465,6 +88560,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'toisinto itsestään: Lagos tarkoittaa portugaliksi '
             + 'järviä, joten Lagosin laguuni on kaksi kertaa sama '
             + 'sana.',
+          tiedosto: 'Lagos Lagoon - Brothers at Dusk.jpg',
+          selite: 'Kalastaja heittää verkkonsa kaarelle laguunilla, ja '
+            + 'toinen odottaa veneen perässä illan valossa.',
+          lahde: 'Obii Okongwu, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Lagos Lagoon',
         },
         {
@@ -88481,6 +88580,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lukua on vaikea vahvistaa, koska aluetta ei laskettu '
             + 'vuoden 2007 väestönlaskennassa. Makokoa kutsutaan '
             + 'joskus Afrikan Venetsiaksi.',
+          tiedosto: 'View of Makoko.jpg',
+          selite: 'Paalujen varaan rakennettu kylä ja kymmenet '
+            + 'kanootit levittäytyvät laguunin yli iltavalossa.',
+          lahde: 'Oritsetsemaye Jemide, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Makoko',
         },
         {
@@ -88498,6 +88601,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Oworonshokista ja päättyy Adeniji Adelen liittymään '
             + 'saarella; matkalta näkyvät laguuni, yliopiston ranta, '
             + 'kansallisteatteri ja Makoko.',
+          tiedosto: 'Third-mainland-bridge-lagos.jpg',
+          selite: 'Sillan alta katsottuna pilaririvi jatkuu '
+            + 'horisonttiin, ja alla kulkee yksinäinen kanootti.',
+          lahde: 'S.aderogba, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Third Mainland Bridge',
         },
         {
@@ -88532,6 +88639,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ruohostossa metsäantilooppeja. Suurin osa nisäkkäistä '
             + 'on yöeläimiä, joten päiväkävelijä näkee useammin '
             + 'lintuja kuin karvaa.',
+          tiedosto: 'The Bridge in Lekki convention center.jpg',
+          selite: 'Köysistä ja teräsritilästä tehty latvuskävelysilta '
+            + 'jatkuu puiden latvojen tasalla eteenpäin.',
+          lahde: 'Obiazi Emefile, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Lekki Conservation Centre',
         },
       ],
@@ -88603,6 +88714,25 @@ export const KULTTUURI_KATEGORIAT = {
    * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ: säänormaalit ovat oman agentin
    * työlistalla. Oppaan sääjakso nojaa siksi en-Wikipedian
    * Climate-osioon ja sanoo sen ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Darajani Market.jpg" (etualalla iso tunnistettava
+   * kasvokuva), "WomenWorking SeaweedZanzibar 4.jpg" (sama syy;
+   * tilalle valittiin saman kuvaajan väljempi kuva 2),
+   * "House of slave trader Tipu Tip ... (1).jpg" (pelkkä
+   * muistolaatta), "Scooters in Public Square.jpg" (seinillä
+   * vaalijulisteita — ei nykypolitiikkaa lehteen),
+   * "Zanzibar 2012 06 04 4529 ... .jpg" (graffiti ja roskat
+   * hallitsevat), "2024-06-16 134142087 Stonetown Zanzibar.jpg"
+   * (muovipulloastia).
+   *
+   * KOLME NOSTOA JÄÄ KUVATTOMAKSI: Shanganin arkeologialle, Omanin
+   * sulttaanien pääkaupungille ja Changuun vankilasaarelle ei
+   * löytynyt sääntöjen mukaista kuvaa. Kilpikonnista, dhow'sta ja
+   * merilevästä on kuva, joten teemasivun kolme muuta nostoa
+   * kantavat sivun. Kuvattomat on kirjattu kuvaputken tilaukseksi.
    */
   sansibar: [
     {
@@ -88612,6 +88742,74 @@ export const KULTTUURI_KATEGORIAT = {
         + 'kauppapaikaksi ja Omanin sulttaanien pääkaupungiksi. '
         + 'Isoisän matkavuonna 1873 täällä suljettiin orjatori — ja '
         + 'samana jouluna laskettiin sen paikalle kirkon peruskivi.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa: niemi ilmasta, kattojen panoraama
+       * rantakadun yltä ja lauttaranta.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Zanzibar StoneTown.png',
+          selite: 'Kivikaupungin niemi työntyy mereen, ja sen takana '
+            + 'jatkuu Ngʼambon tiheä korttelimatto.',
+          lahde: 'Wegmann, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Panorama from Rooftop Lounge of Hotel Kiponda - Stone Town - Zanzibar - Tanzania (8830564454).jpg',
+          selite: 'Katolta katsottuna vanhankaupungin peltikatot '
+            + 'jatkuvat kaarien takana laidasta laitaan.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Zanzibar City. Big Tree beach and Ferry terminal.jpg',
+          selite: 'Taksiveneet odottavat rannassa, ja niiden takana '
+            + 'on Dar es Salaamin lautta.',
+          lahde: 'Наумов Андрей, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Sansibarille ei ole generoitu herokuvia, joten
+       * karusellissa on kolme aitoa valokuvaa: aukio, laskuveden ranta
+       * ja torikatu.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Panorama from Plaza - Stone Town - Zanzibar - Tanzania (8841027867).jpg',
+          selite: 'Aukion ympärillä seisovat parvekkeelliset talot, '
+            + 'ja niiden edessä kasvaa rivi puita.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'The Crack.jpg',
+          selite: 'Laskuvesi paljastaa rannan, ja väki liikkuu '
+            + 'kuiville jääneiden veneiden keskellä myrskypilvien alla.',
+          lahde: 'Yann Macherez, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Darajani.jpg',
+          selite: 'Torikadun päivänvarjot jatkuvat kortteliin asti, ja '
+            + 'taustalla kohoavat vanhankaupungin parvekkeet.',
+          lahde: 'Ronyyz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Panorama van de haven van Zanzibar Panorama of Zanzibar (titel op object) Zanzibar (titel op object), RP-F-F00999-DD.jpg',
+          vuosi: 'noin 1900',
+          selite: 'Sansibarin satama noin vuonna 1900: purjealukset '
+            + 'seisovat redillä ja kivikaupunki nousee suoraan '
+            + 'rantaviivasta.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Harbour at the picturesque Stone Town.jpg',
+          selite: 'Sama satama nykyään: purjeet ovat harvinaistuneet, '
+            + 'mutta rantaviiva on tunnistettavasti entinen.',
+          lahde: 'Dr. Ondřej Havelka (cestovatel), Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Shangani, kylä joka muuttui kiveksi',
@@ -88661,6 +88859,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirkon peruskivi. Kirkko avattiin jouluna 1879, ja '
             + 'alttarin sanotaan olevan täsmälleen siinä, missä torin '
             + 'ruoskimispaalu oli.',
+          tiedosto: 'Altar of Anglican Cathedral - Built on Site of Whipping Post in Old Slave Market - Stone Town - Zanzibar - Tanzania (8841409997).jpg',
+          selite: 'Kirkon alttari seisoo kaariholvin alla siinä '
+            + 'kohdassa, jossa torin ruoskimispaalu sanotaan olleen.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Christ Church, Zanzibar',
         },
         {
@@ -88678,6 +88880,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'saksalaisen kauppiaan kanssa. Hänen muistelmansa '
             + 'ilmestyivät 1886 ja ovat ensimmäinen tunnettu '
             + 'arabinaisen omaelämäkerta.',
+          tiedosto: 'Portrait of Emily Ruete in Omani dress Or. 27.135 D 1 - recto.tiff',
+          vuosi: '1800-luku',
+          selite: 'Sayyida Salme omanilaisessa asussa: koruja '
+            + 'otsalta nilkkoihin, ja jalkineet on riisuttu lattialle.',
+          lahde: 'Plate, H.F., Wikimedia Commons (CC BY 4.0)',
           wiki: 'Emily Ruete',
         },
         {
@@ -88694,10 +88901,20 @@ export const KULTTUURI_KATEGORIAT = {
             + 'täyttyy lähes joka ilta. Linnake on Sansibarin '
             + 'elokuvajuhlan päänäyttämö: juhla perustettiin 1997, ja '
             + 'sen palkinnot ovat Kultainen ja Hopeinen dhow.',
+          tiedosto: 'Old Fort in Zanzibar.jpg',
+          selite: 'Linnakkeen pyöreä bastioni ja hammasreunus '
+            + 'kohoavat kadun päässä korallikivestä.',
+          lahde: 'Eric Kilby, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Old Fort of Zanzibar',
         },
       ],
       matkailijalle: {
+        kuva: {
+          tiedosto: 'Stone Town, Zanzibar (10) (29109157085).jpg',
+          selite: 'Kirjottuja kofia-lakkeja pinossa torilla: jokaisessa '
+            + 'on oma kuvionsa ja väriyhdistelmänsä.',
+          lahde: 'Richard Mortel from Riyadh, Saudi Arabia, Wikimedia Commons (CC BY 2.0)',
+        },
         kappale: 'Sansibar on saariryhmä Intian valtameressä '
           + 'Manner-Tansanian rannikolla, ja sen pääsaari on Unguja. '
           + 'Sansibarin kaupunki on saaren länsirannikolla pienellä '
@@ -88936,6 +89153,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Sanan itsensä uskotaan tulevan swahilin sanasta daw, '
             + 'alus. Vuoden 1873 kirjassaan kapteeni G. L. Sulivan '
             + 'erotteli neljä eri rannikkodhow-tyyppiä.',
+          tiedosto: 'Zanzibar 2012 06 05 4427 (7592143670).jpg',
+          selite: 'Dhow kulkee täysissä purjeissa: kolmiopurje on '
+            + 'kiinnitetty pitkään vinoon raakapuuhun.',
+          lahde: 'Harvey Barrison from Massapequa, NY, USA, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Dhow',
         },
         {
@@ -88969,6 +89190,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nuorta ja yhdeksänkymmentä poikasta. Laji on '
             + 'kansainvälisen luonnonsuojeluliiton punaisella listalla '
             + 'vaarantuneena.',
+          tiedosto: 'Tortuga gigante de Aldabra (Aldabrachelys gigantea), isla Changuu, Tanzania, 2024-05-31, DD 10.jpg',
+          selite: 'Aldabranjättiläiskilpikonna kävelee saaren '
+            + 'punaisella mullalla kaula kokonaan ojennettuna.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Changuu',
         },
         {
@@ -88986,6 +89211,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'merkittävästi, ja se yhdessä sademallien muutosten '
             + 'kanssa saa sadon mätänemään tai tuhoutumaan korjuun '
             + 'aikana.',
+          tiedosto: 'WomenWorking SeaweedZanzibar 2.jpg',
+          selite: 'Kaksi naista sitoo levän taimia köysiin '
+            + 'polvisyvyisessä vedessä; kepit merkitsevät rivit.',
+          lahde: 'Rachel Clara Reed, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Zanzibar',
         },
       ],
