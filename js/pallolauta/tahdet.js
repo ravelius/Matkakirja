@@ -202,7 +202,15 @@ export function luoTahtitaivas(pallo, { reducedMotion = false, ikkuna = globalTh
       if (purettu) return;
       purettu = true;
       oliot.length = 0;
-      try { pallo.particlesData([]); } catch { /* kerros oli jo poissa */ }
+      /*
+       * VAIN OMA TAIVAS PURETAAN. Häivytys päättyy ajastimella
+       * (js/linssit/ihmisen-matka-esitys.js suljeAvaruus), ja "Aloita
+       * alusta" voi ehtiä väliin: silloin kerroksessa on jo UUDEN ajon
+       * taivas, eikä vanhan ajastimen kuulu tyhjentää sitä.
+       */
+      try {
+        if (pallo.particlesData() === joukot) pallo.particlesData([]);
+      } catch { /* kerros oli jo poissa */ }
     },
   };
 }

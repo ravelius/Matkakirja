@@ -107,7 +107,12 @@ function koepallo({ pisteita = null } = {}) {
     'particlesData', 'particlesList', 'particleLat', 'particleLng', 'particleAltitude',
     'particlesSize', 'particlesSizeAttenuation', 'particlesColor',
   ]) {
-    pallo[nimi] = (arvo) => { kutsut[nimi] = arvo; return pallo; };
+    // Ilman argumenttia poimija palauttaa nykyisen arvon (globe.gl).
+    pallo[nimi] = (arvo) => {
+      if (arvo === undefined) return kutsut[nimi];
+      kutsut[nimi] = arvo;
+      return pallo;
+    };
   }
   // Kirjasto rakentaa Points-oliot heti: testissä ne ovat valmiina.
   for (const maara of pisteita ?? TAHTIKERROKSET.map((k) => k.maara)) {
@@ -140,6 +145,20 @@ test('kerros saa joukot poimijoineen ja purku tyhjentää sen', () => {
   assert.equal(t.pisteita, TAHTIKERROKSET.reduce((n, k) => n + k.maara, 0));
   taivas.pura();
   assert.deepEqual(kutsut.particlesData, [], 'purku ei tyhjentänyt kerrosta');
+});
+
+test('vanha taivas ei tyhjennä uuden ajon kerrosta', () => {
+  /*
+   * Häivytys päättyy ajastimella, ja "Aloita alusta" voi ehtiä väliin:
+   * vanhan ajon `pura` löytäisi kerroksesta UUDEN taivaan ja pyyhkisi
+   * sen. Purku tarkistaa siksi, että kerroksessa on yhä sen oma joukko.
+   */
+  const { pallo, kutsut } = koepallo();
+  const vanha = luoTahtitaivas(pallo, { ikkuna: {} });
+  const uudet = [{ tunnus: 'uusi', pisteet: [], koko: 1, vari: '#fff' }];
+  pallo.particlesData(uudet);
+  vanha.pura();
+  assert.equal(kutsut.particlesData, uudet, 'vanha purku pyyhki uuden taivaan');
 });
 
 test('materiaali on additiivinen, läpinäkyvä eikä kirjoita syvyyttä', () => {
