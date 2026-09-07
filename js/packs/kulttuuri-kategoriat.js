@@ -91471,4 +91471,760 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * NUUK (Opus 7.9.2026, paketti O9) — Pohjois-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-nuuk.md ja sen riippumaton tarkistus tarkistus-nuuk.md
+   * (tuomio "kelpaa, kun kohtien A–G ratkaisut tehdään"; kaikki
+   * ratkaisut on tehty, ks. alla). Väitteet on luettu en-Wikipedian
+   * raakateksteistä 7.9.2026: "Nuuk", "Old Nuuk", "Hans Egede House",
+   * "Nuuk Cathedral", "Greenland National Museum", "Qilakitsoq",
+   * "Kalaaliaraq Market", "Inatsisartut", "Katuaq", "Nuuk Art Museum",
+   * "Public and National Library of Greenland", "University of
+   * Greenland", "Isua Greenstone Belt", "Ameralik Span", "Blok P",
+   * "Greenland ice sheet".
+   *
+   * RAJAUS MAALEHTEEN JA KARTTANOSTOIHIN NÄHDEN: Grönlannin maalehti
+   * (maa-kategoriat.js GRL) on jo tehty, samoin karttanostot
+   * (maastokohteet-grl.js, skandaalit.js GRL, elaintakyt.js).
+   * TÄSSÄ LEHDESSÄ EI SIIS KÄSITELLÄ: Cantinon karttaa, Hans Egeden
+   * vuoden 1721 matkaa ja kielenoppimista, Atuagagdliutit-lehteä,
+   * Knud Rasmussenia, sarvivalasta, grönlanninhaita, maan ainoaa
+   * metsää, suaasatia, kiviakia, Aron Kangeqilaista, Ammassalikin
+   * puukarttoja, lipun äänestystä, rumpulaulua, kalattuutia, Sumea
+   * eikä grönlanninkoiraa. Egedestä kerrotaan vain se, mitä vuoden
+   * 1728 siirto vaatii.
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * northamerica-saapumiset.js:n nuuk-merkintään EI koskettu.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'tiede' (AIHE_IKONIT, js/ui-apurit.js).
+   *
+   * TARKISTUKSEN RATKAISUT:
+   *  - A: Hans Egeden talon vuosi on lähteissä eri (1721 / 1728).
+   *    Talo on kohdekartan juttu, ja siellä ero sanotaan ääneen.
+   *  - C: Katuaqin salien koot ovat lähteissä eri; käytetään
+   *    rakennuksen omaa artikkelia (508 ja 80).
+   *  - D: Andy Warhol -väitettä EI käytetä (ei katetta museon omassa
+   *    artikkelissa).
+   *  - E: Ilimmarfikin vuotta ei esitetä varmana ja opiskelijamäärä
+   *    jätetään luvutta — kolme lähdettä antavat kolme lukua.
+   *  - F: Isuan stromatoliittien kiista kirjoitetaan auki.
+   *  - J: nykypolitiikka jätetään pois; Inatsisartutista kerrotaan
+   *    vain instituutio.
+   *
+   * MINITEHTÄVÄ kysyy Isuan kivien ikää eikä toista laudan visan
+   * viittä kysymystä (northamerica-questions.js nuuk: pääkaupunki,
+   * jäätikön osuus, sijainti, Grönlannin asema, jäänäytteet).
+   *
+   * SÄÄRIVIÄ EI OLE: se ei kuulu tähän erään.
+   */
+  nuuk: [
+    {
+      id: 'kaupunki',
+      nimi: 'Nuuk',
+      johdanto: 'Nuuk on maailman pohjoisin pääkaupunki ja yksi sen '
+        + 'pienimmistä. Isoisän matkavuonna 1873 tässä oli kaksi '
+        + 'kylää vierekkäin, ja ne eivät olleet tekemisissä keskenään.',
+      nostot: [
+        {
+          otsikko: 'Niemi, jolla on ollut neljä asukasta',
+          teksti: 'Nuuk tarkoittaa grönlanniksi niemeä, ja niemi on '
+            + 'ollut asuttu neljä vuosituhatta — mutta ei yhtäjaksoisesti '
+            + 'samojen ihmisten toimesta. Ensimmäisinä tulivat '
+            + 'Saqqaq-kulttuurin paleoeskimot noin 2200 eaa., ja he '
+            + 'asuivat nykyisin hylätyn Qoornoqin ympäristössä. Heidän '
+            + 'jälkeensä seutua asutti pitkään dorset-kulttuuri Kangeqin '
+            + 'saarella, mutta se katosi Nuukin piiristä ennen vuotta '
+            + '1000. Sitten tulivat norjalaiset, jotka asuivat täällä '
+            + 'noin vuodesta 1000 siihen asti, kun heidän asutuksensa '
+            + 'katosi 1400-luvulla syistä, joita ei tiedetä. Nykyinen '
+            + 'kaupunki on neljäs alku samalla kalliolla.',
+          wiki: 'Nuuk',
+        },
+        {
+          otsikko: 'Siirtokunta, joka muutti saarelta mantereelle',
+          teksti: 'Kaupunki syntyi 1728, kun kuninkaallinen kuvernööri '
+            + 'Claus Paarss siirsi Hans Egeden Toivon siirtokunnan '
+            + 'Kangeqin saarelta mantereelle inuiittiasutuksen Nûkin '
+            + 'kohdalle. Uusi linnake nimettiin Godthaabiksi, hyväksi '
+            + 'toivoksi. Alku oli karu: Paarssin siirtolaiset olivat '
+            + 'kapinoineita sotilaita ja tuomittuja, ja ensimmäisen '
+            + 'vuoden aikana useimmat kuolivat keripukkiin ja muihin '
+            + 'tauteihin. Vuosien 1733–1734 isorokkoepidemia tappoi '
+            + 'suuren osan paikallisväestöstä ja myös Egeden vaimon. '
+            + 'Egede palasi Tanskaan 1736 ja jätti työn pojalleen '
+            + 'Poulille. Nimi vaihtui Nuukiksi vasta 1. toukokuuta '
+            + '1979, samana päivänä kun kotihallinto aloitti.',
+          wiki: 'Nuuk',
+        },
+        {
+          otsikko: '1873: kaksi kylää, jotka eivät puhuneet toisilleen',
+          teksti: 'Isoisän matkavuonna Godthåb oli Etelä-Grönlannin '
+            + 'siirtomaan hallintopaikka; pohjoisella puoliskolla oli '
+            + 'oma pääkaupunkinsa Godhavnissa aina vuoteen 1940, jolloin '
+            + 'hallinto yhdistettiin tänne. Aivan vieressä oli toinen '
+            + 'asutus. Herrnhutilaiset lähetyssaarnaajat olivat saaneet '
+            + 'luvan 1733, ja käännynnäisiä kertyi niin paljon, että '
+            + 'vuonna 1747 perustettiin Uusi Herrnhut ja rakennettiin '
+            + 'lähetystalo — Grönlannin ensimmäinen varsinainen kirkko, '
+            + 'sillä luterilainen lähetys tuli siihen asti toimeen '
+            + 'päärakennuksen kappelilla. Kaksi lähetystä toimivat eri '
+            + 'tavoin ja pysyivät erillisinä asutuksina, kunnes '
+            + 'herrnhutilaiset lähtivät maasta 1900.',
+          wiki: 'Old Nuuk',
+        },
+        {
+          otsikko: 'Kolme liikennevaloa eikä yhtään tietä ulos',
+          teksti: 'Nuukissa oli vuonna 2017 kahdeksankymmentä '
+            + 'kilometriä katua, eikä yksikään tie yhdistä kaupunkia '
+            + 'mihinkään muuhun Grönlannin paikkaan. Silti täällä on '
+            + 'kolme liikennevaloa, kaksitoista liikenneympyrää ja yksi '
+            + 'tietunneli — koko maan ainoat. Suurin osa Grönlannin '
+            + 'autoista ja busseista liikkuu näillä kahdeksallakymmenellä '
+            + 'kilometrillä. Bussiyhtiö Nuup Bussii on hoitanut '
+            + 'joukkoliikennettä vuodesta 1980, ja vuonna 2012 se '
+            + 'kuljetti yli kaksi miljoonaa matkustajaa kaupungissa, '
+            + 'jossa on runsaat kaksikymmentätuhatta asukasta. Ulos '
+            + 'pääsee vain lentäen tai laivalla.',
+          wiki: 'Nuuk',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Nuuk on Grönlannin pääkaupunki, hallinnon ja '
+          + 'talouden keskus ja koko alueen suurin kaupunki. Se on '
+          + 'Nuup Kangerlua -vuonon suulla lounaisrannikolla, '
+          + 'kymmenen kilometriä avomereltä ja runsaat kaksisataa '
+          + 'kilometriä napapiiristä etelään. Asukkaita oli '
+          + 'tammikuussa 2025 runsaat kaksikymmentätuhatta eli yli '
+          + 'kolmasosa koko alueen väestöstä. Kaupunki on kolmessa '
+          + 'osassa: vanha siirtomaakaupunginosa niemenkärjessä, '
+          + 'keskusta sen itäpuolella ja uudet lähiöt Nuussuaq ja '
+          + 'Qinngorput kauempana. Koillisessa kohoaa Sermitsiaq, '
+          + '1 210 metriä, joka näkyy lähes kaikkialta.',
+        artikkeli: {
+          nimi: 'Matkailijan Nuuk',
+          taitto: 'opas',
+          teksti: 'Kaupunki, johon ei pääse autolla mistään: '
+            + 'Nuukiin tullaan lentäen tai laivalla, ja sen jälkeen '
+            + 'koko kaupunki kuljetaan jalan tai bussilla.',
+          nosto: 'Nuuk on maailman pohjoisin pääkaupunki, muutaman '
+            + 'kilometrin Reykjavíkia pohjoisempana. The Guardian '
+            + 'arvioi 2016, että Nuuk saattaa hyvinkin olla maailman '
+            + 'alkuperäiskansaisin kaupunki — ja se on samalla yksi '
+            + 'maailman pienimmistä pääkaupungeista.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentoasema on neljä kilometriä keskustasta '
+                + 'koilliseen. Se rakennettiin 1979 ja uusittiin '
+                + 'perusteellisesti 2024, ja se on nyt Air Greenlandin '
+                + 'kansainvälinen ja kotimaan solmukohta: suorat lennot '
+                + 'Kööpenhaminaan ja Reykjavík-Keflavíkiin kulkevat '
+                + 'ympäri vuoden, ja kausireittejä on New York-Newarkiin, '
+                + 'Billundiin, Aalborgiin ja Iqaluitiin. Merta pitkin '
+                + 'tulee Royal Arctic Linen konttialus Aalborgista '
+                + 'Islannin kautta; se tuo vaatteet, jauhot, lääkkeet, '
+                + 'puun ja koneet ja vie mukanaan pakastetun katkaravun '
+                + 'ja kalan. Arctic Umiaq Line -rannikkolautta käy '
+                + 'Nuukissa kahdesti viikossa suurimman osan vuodesta.',
+            },
+            {
+              otsikko: 'Vuono ja vuoret',
+              teksti: 'Nuup Kangerlua jakautuu ylempänä kolmeen haaraan '
+                + 'kolmen suuren saaren ympärille, ja suullaan se '
+                + 'levenee luotojen täyttämäksi lahdeksi. Kaupungin '
+                + 'takana on kolme vuorta, jotka kaikki voi kävellä: '
+                + 'Sermitsiaq on korkein, 1 210 metriä ja parinkymmenen '
+                + 'kilometrin päässä koillisessa, ja lähempänä ovat '
+                + 'Store Malene eli Ukkusissaq, vuolukivivuori, 790 '
+                + 'metriä, ja Lille Malene, 420 metriä. Lille Malenen '
+                + 'rinteessä on laskettelumäki, jonka korkeusero on noin '
+                + 'kolmesataa metriä ja jonka ala-asema on aivan '
+                + 'lentoaseman terminaalin vieressä. Kaupungissa on myös '
+                + 'maailman ainoa arktinen golfkenttä.',
+            },
+            {
+              otsikko: 'Kaupunki kolmessa osassa',
+              teksti: 'Vanha Nuuk on niemenkärjessä: matalia värillisiä '
+                + 'puutaloja, kaksi vanhinta hautausmaata ja '
+                + 'siirtomaasatama. Keskusta alkaa kilometrin päästä '
+                + 'idästä, ja siellä on maan ensimmäinen kauppakeskus '
+                + 'Nuuk Center vuodelta 2012 — samalla maan ensimmäinen '
+                + 'maanalainen pysäköintihalli. Uudet asuinalueet '
+                + 'Nuussuaq ja Qinngorput ovat kauempana koillisessa. '
+                + 'Keskustasta puuttuu yksi rakennus, jonka kaikki '
+                + 'muistavat: Blok P, maan suurin asuintalo, jossa oli '
+                + 'noin 320 asuntoa ja jossa asui noin prosentti koko '
+                + 'saaren väestöstä. Se purettiin 19. lokakuuta 2012.',
+            },
+            {
+              otsikko: 'Torilla ja hallissa',
+              teksti: 'Kaupungin oma rytmi näkyy kahdessa paikassa. '
+                + 'Vanhan Nuukin Kalaaliaraq on maan suurin tuoretori, '
+                + 'jossa pyytäjät myyvät saaliinsa itse; se on yhtä '
+                + 'paljon kohtaamispaikka kuin kauppa. Urheilupuolella '
+                + 'seurat ovat vanhoja — Nuuk IL perustettiin 1934 — ja '
+                + 'Godthåbhallen on Grönlannin miesten '
+                + 'käsipallomaajoukkueen koti tuhannelle katsojalle. '
+                + 'Nuuk Stadiumille mahtuu kaksituhatta, ja siellä on '
+                + 'soittanut myös skotlantilainen rockyhtye Nazareth. '
+                + 'Sisäliikuntakeskus Inussivik avattiin 2002.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Nuuk-artikkelin '
+                + 'ilmasto-osiosta; lehdellä ei ole omaa vuosigraafia, '
+                + 'koska säärivi tehdään erikseen. Ilmasto on '
+                + 'merellinen tundrailmasto: pitkä, kylmä ja luminen '
+                + 'talvi ja lyhyt, viileä kesä. Kuukausikeskiarvot '
+                + 'liikkuvat noin yhdeksän pakkasasteen ja seitsemän '
+                + 'lämpöasteen välillä, ja mitatut ääriarvot ovat '
+                + '−32,5 astetta 14. tammikuuta 1984 ja 26,3 astetta '
+                + '6. heinäkuuta 2008. Talvet ovat leudompia kuin '
+                + 'muualla samalla leveysasteella tundravyöhykkeellä. '
+                + 'Joulukuun 21. päivänä aurinko nousee 11.22 ja laskee '
+                + '15.28; kesäkuun 21. päivänä se laskee 1.03 ja nousee '
+                + '3.53, joten yö on pelkkää hämärää.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Vanha Nuuk',
+                tahdet: 3,
+                selite: 'Siirtomaasataman kaupunginosa, jossa ovat maan '
+                  + 'vanhin talo, katedraali ja kansallismuseo.',
+              },
+              {
+                mita: 'Grönlannin kansallismuseo',
+                tahdet: 3,
+                selite: 'Qilakitsoqin 1400-luvun muumiot ja kokoelma, '
+                  + 'joka palautettiin Tanskasta.',
+              },
+              {
+                mita: 'Katuaq',
+                tahdet: 2,
+                selite: 'Kulttuuritalo, jonka aaltoileva puujulkisivu '
+                  + 'on revontulten innoittama.',
+              },
+              {
+                mita: 'Kalaaliaraq-tori',
+                tahdet: 2,
+                selite: 'Maan suurin tuoretori, jossa pyytäjät myyvät '
+                  + 'saaliinsa itse.',
+              },
+              {
+                mita: 'Lille Malene',
+                tahdet: 2,
+                selite: 'Kaupungin oma vuori hiihtohissineen; ylhäältä '
+                  + 'näkee koko vuonon.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Ulos pääsee vain lentäen tai laivalla',
+                teksti: 'Yksikään tie ei yhdistä Nuukia muihin '
+                  + 'Grönlannin paikkoihin, joten jokainen jatkomatka '
+                  + 'on lento tai laiva — ja molemmat riippuvat säästä.',
+              },
+              {
+                otsikko: 'Talvipäivä on lyhyt',
+                teksti: 'Joulukuun 21. päivänä aurinko on ylhäällä '
+                  + 'runsaat neljä tuntia, ja pakkasennätys on '
+                  + '−32,5 astetta.',
+              },
+              {
+                otsikko: 'Puita ei juuri ole',
+                teksti: 'Lämpimimmän kuukauden keskilämpötila on '
+                  + '7,4 astetta eli alle metsänrajan kymmenen astetta; '
+                  + 'istutetut puut sinnittelevät huonosti.',
+              },
+              {
+                otsikko: 'Kaupunki on kallis',
+                teksti: 'Lähes kaikki tavara tuodaan laivalla '
+                  + 'Aalborgista Islannin kautta, ja se näkyy hinnoissa '
+                  + 'ruokakaupasta majoitukseen.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede ja tekniikka',
+      johdanto: 'Nuukin ympäriltä luetaan kahta arkistoa: jäätikköä, '
+        + 'johon on tallentunut satojatuhansia vuosia ilmastoa, ja '
+        + 'kalliota, joka on maapallon vanhimpia.',
+      tehtava: {
+        kysymys: 'Kuinka vanhoja Isuan viherkivivyöhykkeen kivet ovat?',
+        vaihtoehdot: [
+          '3,7–3,8 miljardia vuotta',
+          '370 miljoonaa vuotta',
+          '37 miljoonaa vuotta',
+          '3,7 miljoonaa vuotta',
+        ],
+        oikea: 0,
+        fakta: 'Isuan vyöhyke on 3,7–3,8 miljardia vuotta vanha ja '
+          + 'maailman laajin eoarkeeisten pintasyntyisten kivien '
+          + 'paljastuma. Juuri siksi sieltä etsitään merkkejä '
+          + 'varhaisimmasta elämästä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Jää, joka muistaa ilmakehän',
+          teksti: 'Neljä viidesosaa Grönlannista on mannerjäätikön '
+            + 'alla. Se on Etelämantereen jälkeen maailman toiseksi '
+            + 'suurin jäämassa ja paksuimmillaan yli kolme kilometriä. '
+            + 'Jäätikkö on myös arkisto: kun lumi puristuu jääksi, '
+            + 'väliin jää ilmakuplia ja hapen isotooppisuhde tallentaa '
+            + 'sen ajan lämpötilan. Poraamalla jäätiköstä läpi sydämen '
+            + 'tutkijat saavat pystysuoran aikajanan, josta voi lukea '
+            + 'menneiden aikojen lämpötilan, ilmakehän koostumuksen ja '
+            + 'jopa kaukaisten tulivuorenpurkausten tuhkan. Näytteet '
+            + 'porataan jäätiköltä, mutta tutkimus, hallinto ja '
+            + 'logistiikka ovat täällä rannikolla.',
+          wiki: 'Ice core',
+        },
+        {
+          otsikko: 'Kivi, jossa saattaa olla vanhin elämä',
+          teksti: 'Nuukin pääkaupunkiseudun lähellä on Isuan '
+            + 'viherkivivyöhyke, 3,7–3,8 miljardia vuotta vanhaa '
+            + 'kalliota ja maailman laajin näin vanhojen kivien '
+            + 'paljastuma. Vuonna 1996 geologi Steve Mojzsis '
+            + 'työtovereineen esitti, että kivien hiilirikkaiden '
+            + 'kerrosten isotooppisesti kevyt hiili viittaa biologiseen '
+            + 'toimintaan. Elokuussa 2016 australialaisryhmä ilmoitti '
+            + 'löytäneensä sulaneen lumen alta pieniä kupumaisia '
+            + 'rakenteita, jotka olisivat 3,7 miljardia '
+            + 'vuotta vanhoja stromatoliitteja. Kiista jatkuu: osa '
+            + 'geologeista pitää muotoja kiven myöhemmän '
+            + 'muodonmuutoksen tuloksena, ja yksi löydön '
+            + 'puolustajista julkaisi 2018 itse artikkelin, joka '
+            + 'kyseenalaistaa tulkinnan.',
+          wiki: 'Isua Greenstone Belt',
+        },
+        {
+          otsikko: 'Sähkölinja, joka hyppää vuonon yli',
+          teksti: 'Nuukin sähkö tulee vuodesta 1993 Buksefjordin '
+            + 'vesivoimalasta, ja matkalla on maailman pisin '
+            + 'sähkölinjan jänneväli. Ameralikin vuonon yli on '
+            + 'vedetty 5 376 metriä johtoa ilman yhtäkään pylvästä: '
+            + 'neljä 40 millimetrin teräsjohdinta, joista yksi on '
+            + 'varalla. Jänne riippuu pienimmillään 128 metrin '
+            + 'korkeudessa vedestä, ja sen päät on ankkuroitu '
+            + 'vuorille, jotka ovat 444 metriä pohjoisrannalla ja '
+            + '1 013 metriä etelärannalla. Kumpikin pylväs kantaa vain '
+            + 'yhden johtimen. Rakenne on suunniteltu kestämään '
+            + 'Grönlannin talvet, ja sen pystytti 1993 norjalainen '
+            + 'urakoitsija.',
+          wiki: 'Ameralik Span',
+        },
+        {
+          otsikko: 'Yliopisto, joka aloitti lähetysasemalla',
+          teksti: 'Grönlannin ainoa yliopisto Ilisimatusarfik '
+            + 'perustettiin Nuukiin 1987, jotta korkeakoulutusta olisi '
+            + 'saatavilla myös kotona. Ensimmäiset vuodet se toimi '
+            + 'entisellä herrnhutilaisella lähetysasemalla Uudessa '
+            + 'Herrnhutissa — samassa paikassa, josta koko kaupunki '
+            + 'osittain kasvoi. 2000-luvun lopulla yliopisto muutti '
+            + 'omaan tutkimuskompleksiinsa Ilimmarfikiin, jossa ovat '
+            + 'muun muassa kielen, kulttuurihistorian ja teologian '
+            + 'laitokset, Grönlannin tilastokeskus ja '
+            + 'kansalliskirjaston Groenlandica-kokoelma. Useimmat '
+            + 'kurssit opetetaan tanskaksi, osa grönlanniksi. '
+            + 'Yliopisto on pieni, koska moni grönlantilainen '
+            + 'opiskelija lähtee Tanskaan.',
+          wiki: 'University of Greenland',
+        },
+      ],
+    },
+  ],
+  /*
+   * ANCHORAGE (Opus 7.9.2026, paketti O9) — Pohjois-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-anchorage.md ja sen riippumaton tarkistus
+   * tarkistus-anchorage.md (tuomio "kelpaa, kun kohtien A–F ratkaisut
+   * tehdään"; kaikki ratkaisut on tehty, ks. alla). Väitteet on
+   * luettu en-Wikipedian raakateksteistä 7.9.2026: "Anchorage,
+   * Alaska", "1964 Alaska earthquake", "Ship Creek (Alaska)",
+   * "Bears in Anchorage", "Chugach State Park", "Flattop Mountain
+   * (Anchorage, Alaska)", "Climate of Anchorage", "Alaska Native
+   * Heritage Center", "Fur Rendezvous Festival".
+   *
+   * RAJAUS MAALEHTEEN JA KARTTANOSTOIHIN NÄHDEN: Yhdysvaltain
+   * maalehti (maa-kategoriat.js USA) ja karttanostot
+   * (maastokohteet-usa.js: Mount St. Helens, Crater Lake, Nantucket,
+   * Mesa Verde, Cahokia, Chacon kanjoni, Gettysburg, Kill Devil
+   * Hills, Promontory, Independence Hall, Mammothin luola) sekä
+   * skandaalit (Teapot Dome, Crédit Mobilier) on luettu — yksikään
+   * ei ole Alaskasta eikä tämän lehden aihe.
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * northamerica-saapumiset.js:n anchorage-merkintään EI koskettu.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto' (AIHE_IKONIT, js/ui-apurit.js).
+   *
+   * TARKISTUKSEN RATKAISUT:
+   *  - A: kaupungin oma artikkeli väittää järistyksen tappaneen 115
+   *    ihmistä; tarkempi artikkeli sanoo 139, joista 15 tärinässä ja
+   *    124 tsunameissa, eikä Anchorageen osunut tsunamia. Nosto A4
+   *    käyttää tarkempaa artikkelia ja sanoo jaon ääneen.
+   *  - B: karhujen määrä on lähteissä eri (250 + 60 vs. 200–300 ja
+   *    vähintään 36); ero kirjoitetaan auki nostossa T2.
+   *  - C: Köppen-koodia ei käytetä (lähteissä Dfc ja Dsc).
+   *  - D: kaupunkikaavan vuotta ei esitetä yhtenä lukuna.
+   *  - F: pääkaupungin siirtoäänestykset ja sotahistoria jätetään
+   *    pois; Alaskan kauppa kerrotaan tapahtumana.
+   *
+   * MINITEHTÄVÄ kysyy talven hirvimäärää eikä toista laudan visan
+   * viittä kysymystä (northamerica-questions.js anchorage:
+   * osavaltio, vuoden 1867 kauppa, kaupungin asema, vuosi 1964,
+   * rahtilentoasema).
+   *
+   * SÄÄRIVIÄ EI OLE: se ei kuulu tähän erään.
+   */
+  anchorage: [
+    {
+      id: 'kaupunki',
+      nimi: 'Anchorage',
+      johdanto: 'Anchorage on Alaskan suurin kaupunki, ja sen nimi on '
+        + 'peräisin ankkuripaikasta, jonka James Cook merkitsi '
+        + 'kartalle 1778. Isoisän matkavuonna 1873 tässä ei ollut '
+        + 'kaupunkia lainkaan.',
+      nostot: [
+        {
+          otsikko: 'Kansa, joka ei rakentanut kylää',
+          teksti: 'Beluga Pointin löydöt Turnagain Armin varrella '
+            + 'kertovat, että Cook Inletin asutus alkoi viisituhatta '
+            + 'vuotta sitten, kun alutiiq-ryhmä saapui kajakeilla. '
+            + 'Aaltoja tuli kolme, ja noin vuonna 500 vuorensolien '
+            + 'kautta saapuivat dena\'ina-athabaskit. Heillä ei ollut '
+            + 'kiinteitä asuinpaikkoja: kesällä kalastettiin rannikon '
+            + 'puroilla ja joilla, alkusyksystä metsästettiin hirveä, '
+            + 'vuorivuohta ja dallinlammasta, loppusyksystä poimittiin '
+            + 'marjoja, ja talvi vietettiin kauppapaikkojen lähellä '
+            + 'kulkureittien varrella. Paikan oma nimi on Dgheyay Kaq\', '
+            + 'ja puron, jonka rannalta kaupunki alkoi, nimi on '
+            + 'Dgheyaytnu.',
+          wiki: 'Anchorage',
+        },
+        {
+          otsikko: 'Kymmenen päivää väärässä vuonossa',
+          teksti: 'James Cook etsi Luoteisväylää, ja 15. toukokuuta '
+            + '1778 hän kääntyi viikkojen kovan sään jälkeen vuonoon, '
+            + 'jonka suulla oli kaksi hänen nimeämäänsä maamerkkiä. '
+            + 'Hän ankkuroi HMS Resolutionin paikkaan, jota kutsui '
+            + 'Anchor Pointiksi, ja nimesi viereisen puron Ship '
+            + 'Creekiksi. Vuonon tutkimiseen meni kymmenen päivää. '
+            + 'Cook lähetti William Blighin pohjoiselle haaralle, ja '
+            + 'siellä paikalliset dena\'inat kertoivat, ettei se ollut '
+            + 'väylä vaan kahden joen laskukohta. Cook purjehti '
+            + 'etelään toiselle haaralle, ajoi paluumatkalla laivansa '
+            + 'matalikolle ja nimesi haaran huonolla tuulella '
+            + 'Turnagainiksi — käänny taas.',
+          wiki: 'Anchorage',
+        },
+        {
+          otsikko: '1873: kaksi senttiä eekkeriltä',
+          teksti: 'Kuusi vuotta ennen isoisän matkaa ulkoministeri '
+            + 'William H. Seward oli neuvotellut Alaskan ostosta '
+            + 'Venäjältä 7,2 miljoonalla dollarilla eli noin kahdella '
+            + 'sentillä eekkeriltä. Poliittiset vastustajat pilkkasivat '
+            + 'kauppaa nimillä Sewardin hulluus, Sewardin jääkaappi ja '
+            + 'Mursuvenäjä. Isoisän matkavuonna 1873 tässä ei ollut '
+            + 'kaupunkia, ei kaivosta eikä satamaa — vain Knik Armin '
+            + 'rannan asuinpaikkoja. Kultaa löytyi Turnagain Armin '
+            + 'varrelta vasta 1888, ja silloinkin se synnytti vain '
+            + 'pikkukyliä. Anchorage ei koskaan ollut kalastus- eikä '
+            + 'kaivosleiri, toisin kuin lähes jokainen muu Alaskan '
+            + 'suuri kaupunki: sen ympäriltä ei löydy merkittäviä '
+            + 'metallimalmeja.',
+          wiki: 'Anchorage',
+        },
+        {
+          otsikko: 'Pitkäperjantai 1964',
+          teksti: '27. maaliskuuta 1964 kello 17.36 alkoi järistys, '
+            + 'joka kesti neljä minuuttia ja 38 sekuntia ja jonka '
+            + 'magnitudi oli 9,2. Se on voimakkain koskaan '
+            + 'Pohjois-Amerikassa mitattu ja toiseksi voimakkain '
+            + 'maailmassa. Koko järistyksessä kuoli 139 ihmistä, mutta '
+            + 'heistä vain viisitoista itse tärinässä ja loput 124 '
+            + 'sitä seuranneissa tsunameissa Alaskassa, Oregonissa ja '
+            + 'Kaliforniassa — Anchorageen ei osunut aaltoa. Täällä '
+            + 'tuho oli toisenlaista: kaupunki on rakennettu '
+            + 'jäätikkösiltille, joka juoksettui pitkässä tärinässä. '
+            + 'Turnagainin kaupunginosa menetti 75 taloa maanvyöryyn, '
+            + 'ja tuhoutunut alue on nykyään Earthquake Park.',
+          wiki: '1964 Alaska earthquake',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Anchorage on Alaskan suurin kaupunki ja sen '
+          + 'liikenteen solmu: lähes neljäkymmentä prosenttia '
+          + 'osavaltion asukkaista asuu täällä, vaikka pääkaupunki on '
+          + 'Juneau. Kaupunki on Cook Inletin pohjukassa kahden '
+          + 'vuorovesihaaran välissä, ja itäpuolella kohoavat '
+          + 'Chugachin vuoret. Maapinta-alaltaan Anchorage on '
+          + 'Yhdysvaltain neljänneksi laajin kunta, mutta suurin osa '
+          + 'siitä on vuorta ja metsää. Keskusta on pieni ruutukaava, '
+          + 'joka kävellään puolessa päivässä, ja sen laidalta pääsee '
+          + 'suoraan rantapolulle ja erämaahan.',
+        artikkeli: {
+          nimi: 'Matkailijan Anchorage',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa erämaa alkaa bussipysäkiltä: '
+            + 'keskustasta on puolen tunnin matka paikkaan, jossa '
+            + 'vastaan voi tulla hirvi, karhu tai jäätikkö.',
+          nosto: 'Anchorage on lähes yhtä kaukana New Yorkista, '
+            + 'Tokiosta ja Murmanskista, ja kymmenen lentotunnin '
+            + 'sisällä on lähes yhdeksänkymmentä prosenttia asutusta '
+            + 'pohjoista pallonpuoliskoa. Siksi kaupungin lentoasema '
+            + 'on maailman kolmanneksi vilkkain rahtiliikenteessä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Ted Stevensin kansainvälinen lentoasema on '
+                + 'kaupungin länsilaidalla, ja se on maailman '
+                + 'kolmanneksi vilkkain rahtilentoasema — edellä ovat '
+                + 'vain Hongkong ja Shanghai Pudong. Syy on '
+                + 'isoympyräreitti: Aasian ja Yhdysvaltain mantereen '
+                + 'lyhin lentoreitti kulkee tästä. Merta pitkin tulee '
+                + 'lähes kaikki muu: Port of Alaska vastaanottaa 95 '
+                + 'prosenttia kaikesta Alaskaan menevästä tavarasta, ja '
+                + 'laivat saapuvat kahdesti viikossa Tacoman satamasta. '
+                + 'Alaskan rautatien asema on keskustan alapuolella '
+                + 'Ship Creekin törmällä, ja sieltä lähtevät junat '
+                + 'pohjoiseen Denalille ja etelään Sewardiin.',
+            },
+            {
+              otsikko: 'Vuorelle ja rantaa pitkin',
+              teksti: 'Chugach State Park alkaa heti kaupungin '
+                + 'itäpuolelta ja kattaa 495 204 eekkeriä eli runsaat '
+                + 'kaksituhatta neliökilometriä. Se on Yhdysvaltain '
+                + 'kolmanneksi suurin osavaltionpuisto, ja se '
+                + 'perustettiin 1970 sekä virkistystä että Anchoragen '
+                + 'vedenhankinnan turvaamista varten. Puiston '
+                + 'kiivetyin kohde on Flattop Mountain, 3 510 jalkaa: '
+                + 'Glen Alpsin polunpäästä on puolentoista mailin '
+                + 'nousu, ja se on koko osavaltion kiivetyin vuori. '
+                + 'Selkeällä säällä sieltä näkyvät Denali, Mount '
+                + 'Foraker ja Mount Spurr. Rantaa pitkin kulkee Tony '
+                + 'Knowles Coastal Trail, ja kaupungin puistot on '
+                + 'kytketty toisiinsa viherkäytävillä, jotka seuraavat '
+                + 'järviä ja puroja.',
+            },
+            {
+              otsikko: 'Yksitoista kulttuuria järven ympärillä',
+              teksti: 'Alaska Native Heritage Center avattiin 1999 '
+                + 'kymmenen mailin päähän keskustasta, ja sen '
+                + 'kahdenkymmenenkuuden eekkerin metsäalueella '
+                + 'esitellään Alaskan yhdentoista suuren '
+                + 'kulttuuriryhmän perintöä. Ulkona Tiulana-järven '
+                + 'ympärillä on kuusi luonnollisen kokoista '
+                + 'alkuperäisasumusta, ja järvi on nimetty '
+                + 'inupiat-taiteilija ja tanssija Paul Tiulanan mukaan. '
+                + 'Sisällä on tanssia, alkuperäiskansojen kisoja ja '
+                + 'tarinankerrontaa sekä vaihtuvia näyttelyitä. Keskus '
+                + 'on ainoa koko osavaltion kattava järjestö, joka '
+                + 'edustaa kaikkia Alaskan alkuperäiskulttuureita, ja '
+                + 'sitä johtavat alkuperäiskansojen omat edustajat.',
+            },
+            {
+              otsikko: 'Talven suurin juhla',
+              teksti: 'Fur Rendezvous alkoi 1935, kun Anchoragessa oli '
+                + 'noin kolmetuhatta asukasta ja kaupunki oli hyvin '
+                + 'eristynyt. Vern Johnson järjesti kolmipäiväisen '
+                + 'urheiluturnauksen samaan aikaan kuin '
+                + 'turkismetsästäjien vaihtokauppa, ja tapahtumat '
+                + 'yhdistettiin, koska turkiskauppa oli silloin Alaskan '
+                + 'toiseksi suurin elinkeino. Juhla keskeytyi sodan '
+                + 'ajaksi ja jatkui 1946. Nykyään ohjelmassa on yli sata '
+                + 'tapahtumaa: maan vanhin katukilpailu, '
+                + 'lumiveistoskilpailu, partakilpailu vuodesta 1950, '
+                + 'kolmipäiväinen 75 mailin koiravaljakkoajo vuodesta '
+                + '1946 sekä vuodesta 2008 Running of the Reindeer, '
+                + 'jossa väkijoukko juoksee neljä korttelia ja perässä '
+                + 'päästetään porot.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Climate of '
+                + 'Anchorage -artikkelista; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säärivi tehdään erikseen. '
+                + 'Ilmasto on subarktinen, ja sää on minä tahansa '
+                + 'päivänä arvaamaton. Kesän päivälämpötilat ovat noin '
+                + '13–26 astetta ja talven noin −15…−1 astetta; '
+                + 'kuumin mitattu lukema on 32,2 astetta '
+                + '4. heinäkuuta 2019. Lunta tulee talvessa keskimäärin '
+                + 'lähes kaksi metriä, ja 17. maaliskuuta 2002 yksi '
+                + 'myrsky toi 73 senttiä ja sulki koulut kahdeksi '
+                + 'päiväksi. Valoa on kesäkuussa 19 tuntia ja 21 '
+                + 'minuuttia, joulukuussa 5 tuntia ja 28 minuuttia.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Chugach State Park',
+                tahdet: 3,
+                selite: 'Yhdysvaltain kolmanneksi suurin '
+                  + 'osavaltionpuisto alkaa kaupungin itälaidalta.',
+              },
+              {
+                mita: 'Ship Creekin lohi',
+                tahdet: 3,
+                selite: 'Maailman ainoa kaupunkialueen '
+                  + 'kuningaslohijoki, muutaman korttelin päässä '
+                  + 'keskustasta.',
+              },
+              {
+                mita: 'Alaska Native Heritage Center',
+                tahdet: 3,
+                selite: 'Yhdentoista kulttuuriryhmän perintö ja kuusi '
+                  + 'asumusta Tiulana-järven ympärillä.',
+              },
+              {
+                mita: 'Flattop Mountain',
+                tahdet: 2,
+                selite: 'Osavaltion kiivetyin vuori; polku alkaa '
+                  + 'puolen tunnin ajomatkan päästä.',
+              },
+              {
+                mita: 'Fur Rendezvous',
+                tahdet: 2,
+                selite: 'Helmikuun lopun talvijuhla, jonka juuret ovat '
+                  + 'vuoden 1935 urheiluturnauksessa.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Hirvi on vaarallisempi kuin miltä näyttää',
+                teksti: 'Talvella kaupungissa on jopa tuhat hirveä, ja '
+                  + 'yli sata jää vuosittain auton alle; hiihtäjien ja '
+                  + 'valjakoiden kimppuun on hyökätty poluilla.',
+              },
+              {
+                otsikko: 'Karhut käyvät kaduilla',
+                teksti: 'Kaupungissa elää satoja mustakarhuja ja '
+                  + 'kymmeniä harmaakarhuja, ja roskien ulos vieminen '
+                  + 'ennen tyhjennyspäivän aamua on siksi kielletty.',
+              },
+              {
+                otsikko: 'Talvipäivä on lyhyt',
+                teksti: 'Joulukuussa valoa on viisi ja puoli tuntia ja '
+                  + 'taivas on usein pilvessä, mikä vähentää sitäkin.',
+              },
+              {
+                otsikko: 'Vuorovesi ja mutatasangot',
+                teksti: 'Turnagain Armin vuorovesi paljastaa laajat '
+                  + 'mutatasangot, joille ei kävellä — ne näyttävät '
+                  + 'kiinteältä maalta mutta eivät ole sitä.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Eläimet kaupungissa',
+      johdanto: 'Anchoragessa erämaa ei ala kaupungin ulkopuolelta '
+        + 'vaan sen sisältä: hirvi seisoo pihalla, karhu kävelee '
+        + 'kadun yli ja lohi nousee purossa muutaman korttelin päässä '
+        + 'keskustasta.',
+      tehtava: {
+        kysymys: 'Kuinka monta hirveä Anchorage Bowlissa on talvella?',
+        vaihtoehdot: [
+          'jopa tuhat',
+          'noin viisikymmentä',
+          'noin kymmenen',
+          'ei yhtään — ne siirtyvät etelään',
+        ],
+        oikea: 0,
+        fakta: 'Kesällä hirviä on noin 250 ja talvella jopa tuhat, '
+          + 'kun ne laskeutuvat vuorilta kaupunkiin. Yli sata jää '
+          + 'vuosittain auton alle.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tuhat hirveä talvella',
+          teksti: 'Anchorage Bowlissa on kesällä noin 250 hirveä, ja '
+            + 'talvella määrä nousee jopa tuhanteen, kun eläimet '
+            + 'laskeutuvat vuorilta matalammalle. Se näkyy '
+            + 'liikenteessä: yli sata hirveä jää vuosittain auton '
+            + 'alle. Hirvi ei ole lempeä naapuri, vaikka siltä '
+            + 'näyttää — kaksi ihmistä on kuollut hirven tallaamana, '
+            + '1993 ja 1995, ja hiihtäjien sekä koiravaljakoiden '
+            + 'kimppuun on hyökätty kaupungin poluilla useaan '
+            + 'otteeseen. Alaskan kala- ja riistavirasto joutuu '
+            + 'lopettamaan muutaman erityisen aggressiivisen yksilön '
+            + 'joka vuosi. Paikalliset pitävät hirvestä etäisyyttä '
+            + 'samalla tavalla kuin liikenteestä.',
+          wiki: 'Anchorage',
+        },
+        {
+          otsikko: 'Karhuja, joita ei osata laskea',
+          teksti: 'Karhuja on kaupungissa paljon, mutta tarkkaa '
+            + 'lukua ei ole. Kaupungin oma artikkeli sanoo alueella '
+            + 'elävän noin 250 mustakarhua ja 60 harmaakarhua. '
+            + 'Tarkempi lähde antaa mustakarhuille osavaltion '
+            + 'riistabiologin karkean arvion 200–300 ja '
+            + 'harmaakarhuille luvun vähintään 36 — sen verran '
+            + 'yksilöitä on tunnistettu kerätyistä karvanäytteistä, ja '
+            + 'lähde sanoo itse luvun olevan todennäköisesti aliarvio. '
+            + 'Karhut tulevat Chugachin vuorilta seuraamaan Campbell '
+            + 'Creekiin nousevaa lohta. Kohtaamiset ovat lisääntyneet, '
+            + 'kun kaupunki kasvaa, ja siksi roskien ulos vieminen '
+            + 'ennen tyhjennyspäivän aamua on tehty laittomaksi.',
+          wiki: 'Bears in Anchorage',
+        },
+        {
+          otsikko: 'Puro, jossa nousee kuningaslohi',
+          teksti: 'Ship Creek virtaa Chugachin vuorilta Cook '
+            + 'Inletiin, ja sen suulla ollut satama antoi kaupungille '
+            + 'nimen. Sitä pidetään maailman ainoana kaupunkialueen '
+            + 'kuningaslohijokena: purossa nousee vuosittain sekä '
+            + 'kuningas- että hopealohta, ja rannalla järjestetään '
+            + 'säännöllisesti lohikilpailuja muutaman korttelin '
+            + 'päässä keskustan toimistotaloista. Valuma-alue on yli '
+            + 'sata neliömailia, ja virtaamaa on mitattu vuodesta '
+            + '1946: keskiarvo on 262 kuutiojalkaa sekunnissa, pienin '
+            + 'mitattu vuorokausivirtaama 56 ja suurin 870. Vesi on '
+            + 'talvella nollassa asteessa ja heinäkuussa jopa '
+            + 'viidessätoista.',
+          wiki: 'Ship Creek (Alaska)',
+        },
+        {
+          otsikko: 'Susia, valkovalaita ja dallinlampaita',
+          teksti: 'Hirvi ja karhu eivät ole ainoat. Anchoragen '
+            + 'seudulla elää noin kolmekymmentä sisämaan '
+            + 'alaskansutta, ja vuonna 2007 sudet tappoivat useita '
+            + 'koiria lenkillä omistajiensa kanssa. Puroissa ja '
+            + 'järvissä on majavanpatoja, ja keväisin kettuja '
+            + 'poikasineen näkee metsien viereisillä parkkipaikoilla. '
+            + 'Ilveksiäkin havaitaan. Sewardin valtatiellä Kenain '
+            + 'suuntaan Turnagain Armissa nähdään usein '
+            + 'valkovalaita, ja Windy Pointissa dallinlampaat '
+            + 'seisovat toisinaan aivan tien vierellä. Kaupungin '
+            + 'itäpuolella alkaa Chugach State Park, jonka korkein '
+            + 'kohta Bashful Peak on 8 005 jalkaa.',
+          wiki: 'Chugach State Park',
+        },
+      ],
+    },
+  ],
 };

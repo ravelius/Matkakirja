@@ -13834,6 +13834,117 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Giménezin talo', lat: -23.650041, lon: -70.39665 },
     ],
   },
+  /*
+   * VANHA NUUK JA KESKUSTA (Opus 7.9.2026). Ruutu on 1,28 × 1,06
+   * kilometriä eli pelin tiiviimpiä: lännessä siirtomaasataman
+   * Vanha Nuuk, keskellä Nuuk Centrum ja idässä taidemuseo.
+   * Perustelut tools/piirra-kaupunkikartta.mjs:n nuuk-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA EIVÄTKÄ KARTTANOSTOJA.
+   * Lehden nostot kertovat niemen asuttajista, vuoden 1728 siirrosta,
+   * kahdesta lähetysasemasta 1873 ja kaupungin tieverkosta; teemasivu
+   * kertoo jääkairauksista, Isuan kivistä, Ameralikin ylityksestä ja
+   * Ilisimatusarfikista. Grönlannin maalehden aiheet
+   * (maa-kategoriat.js GRL) ja karttanostot (maastokohteet-grl.js)
+   * on luettu, eikä yksikään niistä ole kartalla.
+   *
+   * KAKSI EHDOKASTA HYLÄTTIIN. Atuagkat, Grönlannin ainoa
+   * kirjakauppa, oli listalla, kunnes sen oma artikkeli osoitti sen
+   * lopettaneen 15.1.2025 — kohdekartta on nykyisten kohteiden
+   * kävelykartta. Blok P purettiin 19.10.2012, ja se kerrotaan
+   * matkaoppaassa. Kirjakaupan tilalle otettiin kansalliskirjasto.
+   */
+  nuuk: {
+    polku: 'assets/kartat/nuuk-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 64.1825, etela: 64.173, lansi: -51.751, ita: -51.7245 },
+    esittely: 'Nuuk on maailman pohjoisin pääkaupunki, ja sen vanhin '
+      + 'osa on kilometrin levyinen niemenkärki. Siellä ovat Grönlannin '
+      + 'vanhin talo vuodelta 1728, vuonna 1849 vihitty katedraali ja '
+      + 'maan suurin tuoretori, ja kilometrin päässä idässä on '
+      + 'nykyinen keskusta parlamentteineen ja kulttuuritaloineen. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään. Koordinaatit
+       * en-Wikipedian geosearch-rajapinnasta 7.9.2026 ja
+       * ristiintarkistettu artikkelien coord-malleista.
+       *
+       * VÄLIT OVAT PELIN PIENIMPIÄ ja se on tässä oikein: Vanha Nuuk
+       * on niin tiivis, ettei 200 metrin väljyyteen pääse ilman että
+       * puolet kohteista putoaa pois. Kolme pienintä väliä ovat
+       * Kalaaliaraq-tori – Inatsisartut 98 m, Hans Egeden talo –
+       * Kalaaliaraq-tori 120 m ja kansallismuseo – Hans Egeden talo
+       * 130 m. Ruutu on siksi tiivistetty 1,28 kilometrin
+       * levyiseksi (0,80 m/px), jolloin nuo välit ovat 122, 150 ja
+       * 163 pikseliä eivätkä numeroympyrät mene päällekkäin;
+       * tarkista-karttapisteet.mjs vahvistaa sen. Sama ratkaisu kuin
+       * Fèsin medinassa (v1670).
+       *
+       * KOORDINAATIT ON VAHVISTETTU RIIPPUMATTOMASTI: "Kalaaliaraq
+       * Market" sanoo torin olevan noin 150 metriä katedraalista
+       * kaakkoon, ja näistä koordinaateista haversinilla laskettu
+       * väli on 148 metriä kaakkoon.
+       */
+      { nimi: 'Grönlannin kansallismuseo', lat: 64.1772, lon: -51.7462 },
+      { nimi: 'Hans Egeden talo', lat: 64.1782, lon: -51.7448 },
+      { nimi: 'Nuukin katedraali', lat: 64.17972, lon: -51.74417 },
+      { nimi: 'Kalaaliaraq-tori', lat: 64.17861, lon: -51.7425 },
+      { nimi: 'Inatsisartut', lat: 64.1783, lon: -51.7406 },
+      { nimi: 'Katuaq', lat: 64.17722, lon: -51.73889 },
+      { nimi: 'Grönlannin kansalliskirjasto', lat: 64.17556, lon: -51.73917 },
+      { nimi: 'Nuukin taidemuseo', lat: 64.17786, lon: -51.72922 },
+    ],
+  },
+  /*
+   * ANCHORAGEN KESKUSTA (Opus 7.9.2026). Ruutu on 2,47 × 1,61
+   * kilometriä: pohjoisessa rautatieasema Ship Creekin törmän
+   * yläpuolella, keskellä vuoden 1915 kaupunkitonttien ruutukaava,
+   * lännessä Elderberry Park ja etelässä Delaney Park Strip.
+   * Perustelut tools/piirra-kaupunkikartta.mjs:n anchorage-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA. Lehden nostot kertovat
+   * dena'inoista, Cookin kymmenestä päivästä 1778, Alaskan kaupasta
+   * 1867 ja vuoden 1964 järistyksestä; teemasivu kertoo hirvistä,
+   * karhuista, Ship Creekin lohesta ja Chugachin vuorista. Ship
+   * Creek on ruudussa mutta ei numeroitu, koska se on teemasivun
+   * nosto. Yhdysvaltain maalehden ja karttanostojen
+   * (maastokohteet-usa.js) aiheet on luettu — yksikään ei ole
+   * Alaskasta.
+   *
+   * KAIKKI 28 KOHDEVÄLIÄ YLITTÄVÄT 200 METRIÄ, pienin on 279 metriä
+   * (rautatieasema – A.E.C.:n mökki 23). Anchorage kaavoitettiin
+   * leveisiin kortteleihin, joten tässä ei tarvita Nuukin eikä
+   * Fèsin kaltaista poikkeusta.
+   */
+  anchorage: {
+    polku: 'assets/kartat/anchorage-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 61.2245, etela: 61.21, lansi: -149.916, ita: -149.87 },
+    esittely: 'Anchoragen keskusta on yhä se ruutukaava, joka '
+      + 'mitattiin 1915 telttakaupungin eteläpuolelle korkeammalle '
+      + 'maalle. Pohjoisreunalla virtaa Ship Creek, jonka rannalta '
+      + 'kaupunki alkoi, ja eteläreunaa myötäilee Delaney Park Strip '
+      + '— entinen paloaukea, joka oli kaupungin ensimmäinen '
+      + 'lentokenttä. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään ja
+       * lopuksi länteen. Koordinaatit en-Wikipedian artikkelien
+       * coord-malleista ja geosearch-rajapinnasta 7.9.2026; viisi
+       * kahdeksasta täsmäsi molemmissa.
+       */
+      { nimi: 'Anchoragen rautatieasema', lat: 61.22167, lon: -149.89056 },
+      { nimi: 'A.E.C.:n mökki 23', lat: 61.22, lon: -149.89444 },
+      { nimi: 'Wendlerin talo', lat: 61.21833, lon: -149.88972 },
+      { nimi: 'Alaska Center for the Performing Arts', lat: 61.21707, lon: -149.89439 },
+      { nimi: 'Anchorage Museum', lat: 61.2161, lon: -149.8845 },
+      { nimi: 'Anchoragen vanha hautausmaa', lat: 61.215, lon: -149.87611 },
+      { nimi: 'Oscar Andersonin talo', lat: 61.21861, lon: -149.90611 },
+      { nimi: 'Delaney Park Strip', lat: 61.21333, lon: -149.90167 },
+    ],
+  },
 };
 
 /*
