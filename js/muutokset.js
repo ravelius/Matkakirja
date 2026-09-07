@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1678, teksti: 'Ihmisen matka: palkin napit samankorkuisiksi' },
   { v: 1677, teksti: 'Ihmisen matka: palkki, kortti, muisti; agenttisääntö' },
   { v: 1676, teksti: 'Säärivit 65 lehtikaupungille, kuplapinon vartio, Raamattu' },
   { v: 1675, teksti: 'Kohtaamiset: 6 henkilövaihtoa, pulun välihuomiot, kertomus' },

@@ -2694,15 +2694,30 @@ body.aikajana-palkki-auki .topbar {
   gap: 0.35rem;
   flex: 0 0 auto;
 }
-/* ✕ on palkin oikea laita, ei enää kartan kulmassa erikseen. */
+/*
+ * ✕ on palkin oikea laita, ei enää kartan kulmassa erikseen.
+ * KAIKKI OIKEAN LAIDAN NAPIT SAMANKORKUISIA (omistaja 7.9.2026 ilta:
+ * "Oik yläkulman napit pitää olla yhtäkorkeita"): Tauko, ↺ ja ✕
+ * jakavat yhden korkeuden (--palkin-nappi); ↺ ja ✕ ovat neliöitä.
+ */
+.aikajana.kertomus .aikajana-ohjaimet { --palkin-nappi: 36px; }
+.aikajana.kertomus .aikajana-ohjaimet > .aikajana-nappi {
+  min-height: var(--palkin-nappi);
+  height: var(--palkin-nappi);
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 .aikajana.kertomus .aikajana-sulje {
   position: static;
-  min-width: 40px;
-  min-height: 40px;
+  min-width: var(--palkin-nappi);
+  width: var(--palkin-nappi);
+  padding: 0;
 }
 .aikajana.kertomus .aikajana-alusta {
-  min-width: 32px;
-  min-height: 32px;
+  min-width: var(--palkin-nappi);
+  width: var(--palkin-nappi);
   padding: 0;
   font-size: 1.05rem;
   line-height: 1;
@@ -2726,6 +2741,5 @@ body.aikajana-palkki-auki .topbar {
 @media (max-width: 600px) {
   .aikajana.kertomus .aikajana-ylarivi { padding: 0 0.35rem 0 0.5rem; gap: 0.35rem; }
   .aikajana.kertomus .aikajana-ohjaimet { gap: 0.2rem; }
-  .aikajana.kertomus .aikajana-sulje { min-width: 36px; min-height: 36px; }
-  .aikajana.kertomus .aikajana-alusta { min-width: 28px; min-height: 28px; }
+  .aikajana.kertomus .aikajana-ohjaimet { --palkin-nappi: 32px; }
 }
