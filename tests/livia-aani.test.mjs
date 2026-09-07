@@ -24,9 +24,10 @@ import {
   LIVIAN_KAIKU, LIVIAN_KAUPUNKILAHTEET, LIVIAN_SAAPUMISREPLIIKIT, livianAaniAjanTasalla,
   livianAaniNimi,
   livianAaniOsoite, livianAanitykset, livianKaupunkiAanitetty, LIVIAN_KAUPUNKIAANET_KAYTOSSA,
-  livianKaupunkiIndeksi, livianKaupunkiKentat, livianKaupunkiKuplia, livianKentanKuplat,
-  livianKenttaPinoutuu, livianKorostetutKaupungit, livianKuplat, livianSaapumisrepliikki,
-  livianSoitettava, livianTiiviste, LIVIAN_KOROSTUS_KAYTOSSA,
+  livianAanenKesto, livianKaupunkiIndeksi, livianKaupunkiKentat, livianKaupunkiKuplia,
+  livianKentanKuplat, livianKenttaPinoutuu, livianKorostetutKaupungit, livianKuplanAika,
+  livianKuplanAjastin, livianKuplat, livianSaapumisrepliikki,
+  livianSoitettava, livianTiiviste, LIVIAN_KOROSTUS_KAYTOSSA, LIVIAN_PUHEEN_HANTA_MS,
 } from '../js/liviapuhe.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
@@ -434,14 +435,19 @@ test('paljastus äänitetään sillä variantilla, jonka peli soittaa', () => {
 
 test('js/livia.js soittaa jokaisen kuplan äänen', () => {
   const livia = lue('../js/livia.js');
-  assert.match(livia, /import \{ soitaLivianAani, pysaytaLivianAani \} from '\.\/liviapuhe\.js';/);
-  assert.match(livia, /soitaLivianAani\(ui, 'avaus', i, \{ teksti \}\);/);
-  assert.match(livia, /soitaLivianAani\(ui, 'paljastus', i, \{ \.\.\.variantti, teksti \}\);/);
+  assert.match(livia,
+    /import \{\n\s*livianKuplanAjastin, pysaytaLivianAani, soitaLivianAani,\n\} from '\.\/liviapuhe\.js';/);
+  assert.match(livia, /const aani = soitaLivianAani\(ui, 'avaus', i, \{ teksti \}\);/);
+  assert.match(livia,
+    /const aani = soitaLivianAani\(ui, 'paljastus', i, \{ \.\.\.variantti, teksti \}\);/);
   assert.match(livia, /soitaLivianAani\(ui, 'mannerivihje', 0, \{ teksti: MANNERIVIHJE \}\);/);
   // Kupla ensin, ääni sen jälkeen: äänen soitto on kuplan
   // onnistumisen jälkeisellä polulla.
   assert.ok(livia.indexOf('const nakyi = polloAvauskupla')
     < livia.indexOf("soitaLivianAani(ui, 'avaus', i"));
+  // KUPLA ODOTTAA PUHEEN LOPPUUN: avaussarjan ajastin lukee soittimen
+  // keston eikä pelkkää tekstin pituutta.
+  assert.match(livia, /avausAjastin = livianKuplanAjastin\(\n\s*lukuaika\(teksti\), aani,/);
   // Viimeinen repliikki saa puhua loppuun: itsestään päättyvä sarja ei
   // vaienna ääntä, keskeytys vaientaa.
   assert.match(livia, /lopetaAvaus\(\{ vaienna: false \}\);/);
@@ -458,7 +464,7 @@ test('mannerivihje ja avaus käyttävät samoja repliikkejä kuin äänitteet', 
 test('js/fokusvirta.js soittaa Euroopan kaupunkien repliikit kupla kerrallaan', () => {
   const virta = lue('../js/fokusvirta.js');
   assert.match(virta,
-    /livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu, livianKuplat,\n\s*soitaLivianAani, soitaLivianKaupunkiAani,\n\} from '\.\/liviapuhe\.js';/);
+    /livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu, livianKuplanAika,\n\s*livianKuplanAjastin, livianKuplat,\n\s*soitaLivianAani, soitaLivianKaupunkiAani,\n\} from '\.\/liviapuhe\.js';/);
   /*
    * YKSI KUPLA = YKSI ÄÄNITIEDOSTO (omistaja 7.9.2026). Kutsupaikat
    * eivät enää soita kenttää kerran, vaan antavat puheenvuorolle
@@ -479,7 +485,7 @@ test('js/fokusvirta.js soittaa Euroopan kaupunkien repliikit kupla kerrallaan', 
   // Paluu on kuplasarja samassa paikassa (polloKuplasarja).
   assert.match(virta, /polloKuplasarja\(ui, city, 'paluu',/);
   assert.match(virta,
-    /soitaLivianKaupunkiAani\(ui, city\?\.id, kentta, \{ kupla: i, teksti \}\);/);
+    /const aani = soitaLivianKaupunkiAani\(ui, city\?\.id, kentta, \{ kupla: i, teksti \}\);/);
   // Johdanto ja odotus kulkevat sähkesaatteen kautta: kenttä välitetään
   // sinne nimenä ja saate soittaa sen.
   assert.match(virta, /sahkeSaateKuplaan\(ui, city, avain, tehtava\.johdanto \?\? '', 'johdanto'\)/);
@@ -494,6 +500,18 @@ test('js/fokusvirta.js soittaa Euroopan kaupunkien repliikit kupla kerrallaan', 
    * perusrytmillä — sama sääntö kuin avauksessa.
    */
   assert.match(virta, /function livianPuherytmi\(kaupunkiId, kentta\) \{[\s\S]{0,200}livianKuplanLukuaika/);
+  /*
+   * KUPLA ODOTTAA PUHEEN LOPPUUN (7.9.2026). Rytmi kysyy myös soivalta
+   * äänitteeltä sen keston, ja kuplasarjat kulkevat venyvällä
+   * ajastimella (js/liviapuhe.js livianKuplanAjastin).
+   */
+  assert.match(virta,
+    /\{ viive: \(teksti, aani\) => livianKuplanAika\(livianKuplanLukuaika\(teksti\), aani\) \}/);
+  assert.match(virta, /ui\.livianKorttiSarja = livianKuplanAjastin\(/);
+  assert.match(virta, /ui\.polloKuplasarjaAjastin = livianKuplanAjastin\(/);
+  // Isoisän luenta ei ala alustuksen puheen päälle.
+  assert.match(virta,
+    /ui\.alustuksenAjastin = livianKuplanAjastin\(\n\s*livianSarjanKesto\(kulku\.alustus\), \(\) => ui\.liviaAani,/);
   assert.match(virta, /livianKuplanLukuaika,\n  livianLehtivinkkiOdottaa, livianPaljastusKesken, merkitseLehtivinkkiNahdyksi,\n\} from '\.\/livia\.js';/);
   // Sähkelento odottaa kuittauksen puheen loppuun ennen paluukuplaa.
   assert.match(virta, /const lento = livianKaupunkiAanitetty\(city\.id, 'oikein'\)/);
@@ -529,8 +547,82 @@ test('js/fokusvirta.js soittaa Euroopan kaupunkien repliikit kupla kerrallaan', 
   assert.match(pollo, /naytaPuheenvuoro\(osat, \{[\s\S]{0,200}aani = null,/);
   assert.match(pollo, /tila\.viive[\s\S]{0,120}PUHEENVUORON_VIIVE_ALA/);
   // Kupla ensin, ääni sen jälkeen — myös jatko-osissa.
-  assert.match(pollo, /if \(nakyi\) aani\?\.\(0, palat\[0\]\);/);
-  assert.match(pollo, /if \(osaNakyi\) nyt\.aani\?\.\(i, nyt\.palat\[i\]\);/);
+  assert.match(pollo, /const aaniKahva = nakyi \? \(aani\?\.\(0, palat\[0\]\) \?\? null\) : null;/);
+  assert.match(pollo,
+    /nyt\.aaniKahva = osaNakyi \? \(nyt\.aani\?\.\(i, nyt\.palat\[i\]\) \?\? null\) : null;/);
+  // Soittimen kahva kulkee rytmille, ja odotus venyy uudella kierroksella.
+  assert.match(pollo, /tila\.viive\(edellinen, tila\.aaniKahva\)/);
+  assert.match(pollo, /if \(viive > kulunut && kierros < 2\)/);
+});
+
+/* ---------- kupla odottaa puheen loppuun ---------- */
+
+/*
+ * OMISTAJAN LINJAUS (Raamattu, PULU PUHUU 6.9.2026): *"kupla odottaa
+ * puheen loppuun"*. Kuplan aika laskettiin tekstin pituudesta
+ * (js/livia.js lukuaika), mutta Dr. Vonin ajossa 7.9.2026 kymmenen
+ * repliikkiä 85:stä puhui kuplaansa pidempään — esimerkiksi 7,37 s
+ * puhetta 5,38 s kuplassa — ja seuraava kupla häivytti äänitteen pois
+ * kesken lauseen (js/liviapuhe.js pysaytaLivianAani).
+ */
+test('kuplan aika venyy äänitteen kestoon, ei koskaan lyhene', () => {
+  assert.equal(LIVIAN_PUHEEN_HANTA_MS, 400);
+  // Kesto millisekunteina; tuntematon kesto on null eikä nolla.
+  assert.equal(livianAanenKesto({ duration: 7.37 }), 7370);
+  assert.equal(livianAanenKesto({ duration: NaN }), null, 'metatiedot puuttuvat');
+  assert.equal(livianAanenKesto({ duration: 0 }), null, 'purettu soitin');
+  assert.equal(livianAanenKesto({ duration: Infinity }), null, 'virta ei ole äänite');
+  assert.equal(livianAanenKesto(null), null);
+  // Ilman äänitettä (mykistys, puuttuva tiedosto) aika on kuten ennen.
+  assert.equal(livianKuplanAika(5380, null), 5380);
+  assert.equal(livianKuplanAika(5380, { duration: NaN }), 5380);
+  // Lyhyt äänite ei lyhennä kuplaa: lukuaika on vähimmäisaika.
+  assert.equal(livianKuplanAika(7100, { duration: 2 }), 7100);
+  // Pitkä äänite venyttää: 7,37 s puhetta 5,38 s kuplassa (Dr. Von).
+  assert.equal(livianKuplanAika(5380, { duration: 7.37 }), 7770);
+  assert.equal(livianKuplanAika(7100, { duration: 7.73 }), 8130);
+  // Kahva saa tulla funktiona: se luetaan vasta laukaisuhetkellä.
+  assert.equal(livianKuplanAika(3200, () => ({ duration: 7 })), 7400);
+  assert.equal(livianKuplanAika(3200, () => null), 3200);
+});
+
+test('kuplan ajastin odottaa äänitteen loppuun, vaikka kesto selviää myöhässä', async () => {
+  /*
+   * Metatiedot tulevat vasta soiton käynnistyttyä, joten aikaa ei voi
+   * laskea kerralla valmiiksi: ajastin herää kuplan lukuajan kohdalla
+   * ja odottaa vasta silloin tietoon tulleen puheen loput.
+   */
+  const soitin = { duration: NaN };
+  const alku = Date.now();
+  let kahva = null;
+  const kulunut = await new Promise((valmis) => {
+    kahva = livianKuplanAjastin(
+      80, soitin, () => valmis(Date.now() - alku), (id) => { kahva = id; },
+    );
+    setTimeout(() => { soitin.duration = 0.6; }, 20);
+  });
+  // 600 ms puhetta + 400 ms häntä = 1000 ms, ei 80 ms.
+  assert.ok(kulunut >= 900, `ajastin ei venynyt puheen mittaan: ${kulunut} ms`);
+  assert.ok(kulunut < 2500, `ajastin venyi liikaa: ${kulunut} ms`);
+  assert.ok(kahva !== null, 'kahva jäi antamatta kutsupaikalle');
+});
+
+test('ilman äänitettä ajastin laukeaa kuplan lukuajalla', async () => {
+  const alku = Date.now();
+  const kulunut = await new Promise((valmis) => {
+    livianKuplanAjastin(60, null, () => valmis(Date.now() - alku));
+  });
+  assert.ok(kulunut < 500, `hiljainen kupla odotti turhaan: ${kulunut} ms`);
+});
+
+test('peruttu ajastin ei laukea: napautus jatkaa heti', async () => {
+  let laukesi = false;
+  let kahva = null;
+  kahva = livianKuplanAjastin(40, { duration: 9 }, () => { laukesi = true; },
+    (id) => { kahva = id; });
+  clearTimeout(kahva);
+  await new Promise((ok) => { setTimeout(ok, 300); });
+  assert.equal(laukesi, false, 'clearTimeout ei perunut kuplasarjaa');
 });
 
 test('uusi moduuli on niputus- ja esilatauslistoilla', () => {

@@ -35,7 +35,9 @@
  * ajoituksen ja portit.
  */
 
-import { soitaLivianAani, pysaytaLivianAani } from './liviapuhe.js';
+import {
+  livianKuplanAjastin, pysaytaLivianAani, soitaLivianAani,
+} from './liviapuhe.js';
 import { luennanLoppuun } from './luenta.js';
 import { polloAvauskupla, polloKuplatPois, polloSaapumiskupla } from './pollo.js';
 import { sfx } from './sound.js';
@@ -281,7 +283,7 @@ function naytaRepliikki(ui, i) {
    * 6.9.2026 ilta (js/liviapuhe.js LIVIAN_KAIKU). Puuttuva äänite on
    * hiljainen, kupla ennallaan.
    */
-  soitaLivianAani(ui, 'avaus', i, { teksti });
+  const aani = soitaLivianAani(ui, 'avaus', i, { teksti });
   // Lippu vasta kun sarja oikeasti näkyi (sama sopimus kuin pöllön
   // kutsukuplalla, js/ehdotukset.js ajastaEhdotusKupla).
   if (i === 0) merkitseNahdyksi();
@@ -290,7 +292,17 @@ function naytaRepliikki(ui, i) {
   avausNakyi = true;
   if (i === 0) soitaLivianTehoste('saapuu');
   else if (onLivianSekoilua(teksti)) soitaLivianTehoste('sekoilee');
-  avausAjastin = setTimeout(() => seuraavaRepliikki(ui, i + 1), lukuaika(teksti));
+  /*
+   * KUPLA ODOTTAA PUHEEN LOPPUUN (7.9.2026): lukuaika on vähimmäis-
+   * aika, ja sitä pidempi äänite venyttää kuplan omaan mittaansa
+   * (js/liviapuhe.js livianKuplanAjastin). Ilman äänitettä aika on
+   * tasan lukuaika kuten ennen.
+   */
+  avausAjastin = livianKuplanAjastin(
+    lukuaika(teksti), aani,
+    () => seuraavaRepliikki(ui, i + 1),
+    (id) => { avausAjastin = id; },
+  );
 }
 
 /*
@@ -595,14 +607,20 @@ function paljastusRepliikki(ui, cityId, i, jalkeen, repliikit = LIVIAN_PALJASTUS
    * alusta omistajan päätöksellä 6.9.2026 ilta (js/liviapuhe.js
    * LIVIAN_KAIKU).
    */
-  soitaLivianAani(ui, 'paljastus', i, { ...variantti, teksti });
+  const aani = soitaLivianAani(ui, 'paljastus', i, { ...variantti, teksti });
   /*
    * ISOISÄN LUENTA KUPLIEN VÄLISSÄ (omistaja 7.9.2026). Viimeinen
    * ennen luentaa tuleva kupla saa lukuaikansa, ja vasta sen jälkeen
    * luenta päästetään liikkeelle — kupla ehtii siis luettavaksi ennen
    * kuin kertoja aloittaa.
+   *
+   * KUPLA ODOTTAA PUHEEN LOPPUUN (7.9.2026): lukuaikaansa pidempi
+   * äänite venyttää ajastinta (js/liviapuhe.js livianKuplanAjastin),
+   * joten myöskään isoisä ei aloita pulun lauseen päälle.
    */
-  paljastusAjastin = setTimeout(jatka, lukuaika(teksti));
+  paljastusAjastin = livianKuplanAjastin(
+    lukuaika(teksti), aani, jatka, (id) => { paljastusAjastin = id; },
+  );
 }
 
 /**

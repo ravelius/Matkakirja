@@ -3457,20 +3457,27 @@ class Pollo {
    *   ennen jokaista jatko-osaa.
    * @param {boolean} [asetukset.linssinOma] LINSSIN OMA PUHEENVUORO:
    *   ohittaa linssiportin (ks. LINSSIN OMA POIKKEUS alla).
-   * @param {((teksti: string) => number)|null} [asetukset.viive] OMA
-   *   RYTMI ÄÄNITETYLLE PUHEENVUOROLLE (js/fokusvirta.js): funktio,
-   *   joka kertoo edellisen osan perusteella, kuinka kauan seuraavaa
-   *   odotetaan. Livian oma ääni on hitaampi kuin lukurytmi (noin 14
-   *   merkkiä sekunnissa), joten äänitetty repliikki käyttää kuplan
-   *   lukuaikaa (js/livia.js livianKuplanLukuaika) — muuten viimeinen
-   *   osa olisi ruudulla jo silloin, kun puhe on vasta ensimmäisessä.
-   *   Ilman funktiota rytmi on sanamäärään sidottu perusrytmi.
-   * @param {((indeksi: number, teksti: string) => void)|null}
+   * @param {((teksti: string, aani: object|null) => number)|null}
+   *   [asetukset.viive] OMA RYTMI ÄÄNITETYLLE PUHEENVUOROLLE
+   *   (js/fokusvirta.js): funktio, joka kertoo edellisen osan ja sen
+   *   SOIVAN ÄÄNITTEEN perusteella, kuinka kauan seuraavaa odotetaan.
+   *   Livian oma ääni on hitaampi kuin lukurytmi (noin 14 merkkiä
+   *   sekunnissa), joten äänitetty repliikki käyttää kuplan lukuaikaa
+   *   (js/livia.js livianKuplanLukuaika) — muuten viimeinen osa olisi
+   *   ruudulla jo silloin, kun puhe on vasta ensimmäisessä. Toinen
+   *   argumentti on `aani`-takaisinkutsun palauttama soitin, josta
+   *   funktio saa äänitteen todellisen keston (js/liviapuhe.js
+   *   livianKuplanAika): KUPLA ODOTTAA PUHEEN LOPPUUN, vaikka puhe
+   *   olisi lukuaikaansa pidempi. Ilman funktiota rytmi on
+   *   sanamäärään sidottu perusrytmi.
+   * @param {((indeksi: number, teksti: string) => object|null)|null}
    *   [asetukset.aani] ÄÄNI KUPLAA KOHTI (js/fokusvirta.js): kutsutaan
    *   jokaisen osan ilmestyttyä. Osat ovat nyt myös omia äänitteitään
    *   (omistaja 7.9.2026: jokainen kupla on oma tiedostonsa), joten
    *   soitto ei voi tapahtua kerran sarjan alussa. Kupla ensin, ääni
    *   sen jälkeen — sama järjestys kuin avauksessa (js/livia.js).
+   *   PALUUARVO on soitin (tai null), ja se annetaan `viive`-funktiolle
+   *   seuraavan osan ajastusta varten.
    * @returns {boolean} näkyikö ensimmäinen kupla.
    */
   naytaPuheenvuoro(osat, {
@@ -3497,27 +3504,45 @@ class Pollo {
       kuittaus: yksi ? kuittaus : null,
       linssinOma,
     });
-    if (nakyi) aani?.(0, palat[0]);
+    const aaniKahva = nakyi ? (aani?.(0, palat[0]) ?? null) : null;
     if (!nakyi || yksi) return nakyi;
     this.puheenvuoro = {
-      palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive, aani,
+      palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive, aani, aaniKahva,
     };
     this.ajastaPuheenvuoro();
     return true;
   }
 
-  /** Seuraava osa vuorossa; viive kasvaa edellisen osan pituuden mukaan. */
-  ajastaPuheenvuoro() {
+  /**
+   * Seuraava osa vuorossa; viive kasvaa edellisen osan pituuden mukaan.
+   *
+   * KUPLA ODOTTAA PUHEEN LOPPUUN (7.9.2026). Äänitteen kesto ei ole
+   * tiedossa silloin kun kupla ilmestyy — soitin on juuri luotu eikä
+   * metatietoja ole vielä haettu — joten `viive` kysytään UUDESTAAN
+   * ensimmäisen odotuksen jälkeen. Jos se on silloin kasvanut (puhe on
+   * lukuaikaansa pidempi, js/liviapuhe.js livianKuplanAika), loput
+   * odotetaan vielä. `kulunut` on jo odotettu aika ja `kierros` estää
+   * odotuksen venymisen loputtomiin.
+   */
+  ajastaPuheenvuoro(kulunut = 0, kierros = 0) {
     const tila = this.puheenvuoro;
     if (!tila) return;
     const edellinen = tila.palat[tila.seuraava - 1] ?? '';
     // Äänitetyllä puheenvuorolla oma rytmi (ks. naytaPuheenvuoro viive);
     // muuten sanamäärään sidottu perusrytmi.
     const viive = tila.viive
-      ? Math.max(PUHEENVUORON_VIIVE_ALA, Number(tila.viive(edellinen)) || 0)
+      ? Math.max(PUHEENVUORON_VIIVE_ALA, Number(tila.viive(edellinen, tila.aaniKahva)) || 0)
       : Math.min(PUHEENVUORON_VIIVE_YLA, Math.max(PUHEENVUORON_VIIVE_ALA,
         PUHEENVUORON_PERUSVIIVE + PUHEENVUORON_SANAVIIVE * sanamaara(edellinen)));
     clearTimeout(this.puheenvuoroAjastin);
+    if (viive > kulunut && kierros < 2) {
+      this.puheenvuoroAjastin = setTimeout(() => {
+        this.puheenvuoroAjastin = null;
+        if (this.puheenvuoro === tila) this.ajastaPuheenvuoro(viive, kierros + 1);
+      }, viive - kulunut);
+      return;
+    }
+    // Odotus on jo takana (kulunut): seuraava osa tulee saman tien.
     this.puheenvuoroAjastin = setTimeout(() => {
       this.puheenvuoroAjastin = null;
       const nyt = this.puheenvuoro;
@@ -3537,14 +3562,15 @@ class Pollo {
         // oma puheenvuoro puhutaan loppuun, vaikka linssi on yhä päällä.
         linssinOma: nyt.linssinOma,
       });
-      // Ääni kuplaa kohti: jokainen osa on oma äänitiedostonsa.
-      if (osaNakyi) nyt.aani?.(i, nyt.palat[i]);
+      // Ääni kuplaa kohti: jokainen osa on oma äänitiedostonsa, ja sen
+      // soitin kertoo seuraavalle ajastukselle puheen todellisen keston.
+      nyt.aaniKahva = osaNakyi ? (nyt.aani?.(i, nyt.palat[i]) ?? null) : null;
       if (viimeinen) {
         this.puheenvuoro = null;
         return;
       }
       this.ajastaPuheenvuoro();
-    }, viive);
+    }, Math.max(0, viive - kulunut));
   }
 
   /** Sarja poikki; loput osat chatin virtaan (ks. naytaPuheenvuoro). */

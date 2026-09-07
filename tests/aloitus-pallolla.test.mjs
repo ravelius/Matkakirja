@@ -272,9 +272,12 @@ test('Livian avaus alkaa 1,5 s myöhemmin, rytmi ennallaan', () => {
   assert.match(livia, /const viive = AVAUKSEN_VIIVE \+ \(ui\.reducedMotion \? 0 : LIVIAN_AVAUKSEN_VIIVE_MS\);/,
     'reduced motion: ei lisäviivettä');
   assert.match(livia, /avausAjastin = setTimeout\(\(\) => naytaRepliikki\(ui, 0\), viive\);/);
-  // Kuplien keskinäinen rytmi ei muuttunut.
+  // Kuplien keskinäinen rytmi ei muuttunut: lukuaika ohjaa yhä sarjaa.
+  // (7.9.2026: lukuaika on VÄHIMMÄISAIKA — sitä pidempi äänite venyttää
+  // kuplaa, js/liviapuhe.js livianKuplanAjastin.)
   assert.match(livia, /const KUPLIEN_VALI = 280;/);
-  assert.match(livia, /avausAjastin = setTimeout\(\(\) => seuraavaRepliikki\(ui, i \+ 1\), lukuaika\(teksti\)\);/);
+  assert.match(livia,
+    /avausAjastin = livianKuplanAjastin\(\n\s*lukuaika\(teksti\), aani,\n\s*\(\) => seuraavaRepliikki\(ui, i \+ 1\),/);
 });
 
 test('nappula seisoo Lontoossa PALLON koordinaateissa myös lähtövalinnassa', () => {

@@ -76,10 +76,13 @@
  * Omistaja 6.9.2026: *"Kaiuttimen kuvake kuplassa ei ole tarpeen;
  * luenta seuraa kuplia."* Kuplien rytmi (js/livia.js lukuaika) ohjaa
  * siis ääntä eikä toisin päin: kun seuraava kupla tulee, edellinen
- * äänite häivytetään pois. Siksi repliikkien PITUUS on äänitteen
- * pituus — liian pitkä repliikki katkeaa kesken (ks. lyhennysehdotukset
- * raportissa ja tools/generoi-pulu.mjs:n kuivassa ajossa, joka
- * tulostaa jokaisen repliikin arvioidun keston).
+ * äänite häivytetään pois.
+ *
+ * MUTTA KUPLA ODOTTAA PUHEEN LOPPUUN (7.9.2026): jos äänite on
+ * lukuaikaansa pidempi, kuplan ajastin venyy sen mittaan
+ * (livianKuplanAjastin) eikä lause enää katkea kesken. Repliikkien
+ * lyhyys on silti tavoite — pitkä kupla seisoo ruudulla pitkään — ja
+ * tools/generoi-pulu.mjs varoittaa yhä ylityksestä.
  *
  * Kytkin on sama kuin kertojalla (js/luenta.js luentaKytkinPaalla):
  * mykistetty peli on mykistetty myös pulun osalta. Puuttuva tiedosto
@@ -601,6 +604,105 @@ export function livianAanitykset(lahteet = {}) {
     });
   }
   return rivit;
+}
+
+/* ------------------------------------------------------------------ *
+ * Kupla odottaa puheen loppuun
+ * ------------------------------------------------------------------ */
+
+/*
+ * KUPLA ODOTTAA PUHEEN LOPPUUN (omistaja, Raamattu PULU PUHUU
+ * 6.9.2026 — korjaus 7.9.2026).
+ *
+ * Kuplan näkyvä aika laskettiin pelkästä tekstin pituudesta
+ * (js/livia.js lukuaika, 78 ms/merkki). Generoitu puhe ei kuitenkaan
+ * ole tasatahtista: Dr. Vonin ajossa 7.9.2026 kymmenen repliikkiä
+ * 85:stä puhui kuplaansa pidempään (esim. 7,37 s puhetta 5,38 s
+ * kuplassa), ja koska seuraava kupla häivyttää edellisen äänitteen
+ * pois (pysaytaLivianAani), lause katkesi kesken.
+ *
+ * Nyt ajastin on `max(lukuaika, äänitteen kesto + LIVIAN_PUHEEN_HANTA_MS)`.
+ * Kesto luetaan siitä samasta `<audio>`-elementistä, joka soi — ei
+ * manifestista eikä uudesta verkkohausta: peli ei lue manifestia
+ * lainkaan, ja `duration` on selaimella jo valmiina heti metatietojen
+ * saavuttua (loadedmetadata).
+ *
+ * EI ÄÄNITETTÄ, EI MUUTOSTA. Puuttuva tiedosto, mykistys tai vielä
+ * tuntematon kesto antaa `null`-keston, ja kuplan aika on tasan se
+ * mikä ennenkin. Napautus jatkaa yhä heti (kutsupaikan `kuittaus`),
+ * ja se häivyttää äänen kuten tähänkin asti.
+ */
+
+/** Hengähdys puheen lopun ja seuraavan kuplan välissä. */
+export const LIVIAN_PUHEEN_HANTA_MS = 400;
+
+/**
+ * Äänitteen kesto MILLISEKUNTEINA — tai null, jos sitä ei tiedetä.
+ *
+ * `duration` on NaN ennen metatietoja, Infinity virrassa ja 0 puretulla
+ * soittimella (pysaytaLivianAani poistaa srcin); kaikissa niissä
+ * vastaus on "ei tietoa", jolloin kupla pitää entisen aikansa.
+ *
+ * @param {HTMLAudioElement|{duration:number}|null} audio
+ * @returns {number|null}
+ */
+export function livianAanenKesto(audio) {
+  const kesto = Number(audio?.duration);
+  return Number.isFinite(kesto) && kesto > 0 ? Math.round(kesto * 1000) : null;
+}
+
+/**
+ * KUPLAN NÄKYVÄ AIKA: lukuaika tai puheen mitta, kumpi on pidempi.
+ *
+ * @param {number} perusaika kuplan lukuaika millisekunteina
+ *   (js/livia.js livianKuplanLukuaika)
+ * @param {HTMLAudioElement|(() => HTMLAudioElement|null)|null} audio
+ *   soiva äänite — tai funktio, joka kertoo sen vasta kutsuhetkellä
+ *   (silloin kahvaa ei tarvitse kuljettaa kutsupaikan läpi).
+ * @returns {number} millisekunteina
+ */
+export function livianKuplanAika(perusaika, audio) {
+  const kahva = typeof audio === 'function' ? audio() : audio;
+  const kesto = livianAanenKesto(kahva);
+  if (kesto === null) return perusaika;
+  return Math.max(perusaika, kesto + LIVIAN_PUHEEN_HANTA_MS);
+}
+
+/**
+ * KUPLASARJAN AJASTIN, JOKA VENYY PUHEEN MITTAAN.
+ *
+ * Kesto ei ole tiedossa silloin kun kupla ilmestyy — `new Audio(url)`
+ * on juuri luotu eikä metatietoja ole vielä haettu — joten aikaa ei
+ * voi laskea kerralla valmiiksi. Ajastin herää siis ensin kuplan
+ * LUKUAJAN kohdalla, kysyy vasta silloin äänitteen keston (metatiedot
+ * ovat ehtineet tulla kauan sitten: lyhinkin lukuaika on 3,2 s) ja
+ * odottaa tarvittaessa loput.
+ *
+ * Kahva on tavallinen setTimeout-tunnus, joten kutsupaikkojen
+ * `clearTimeout` peruu sarjan täsmälleen kuten ennen. Koska tunnus
+ * vaihtuu jatkoajastimen myötä, kutsupaikka antaa `aseta`-funktion,
+ * joka päivittää oman muuttujansa.
+ *
+ * @param {number} perusaika kuplan lukuaika millisekunteina
+ * @param {HTMLAudioElement|(() => HTMLAudioElement|null)|null} audio
+ * @param {() => void} jatka mitä tehdään ajan kuluttua
+ * @param {((id:number) => void)|null} [aseta] kahvan päivitys
+ * @returns {number} ajastimen kahva
+ */
+export function livianKuplanAjastin(perusaika, audio, jatka, aseta = null) {
+  const kaynnista = (ms, kutsu) => {
+    const id = setTimeout(kutsu, Math.max(0, ms));
+    aseta?.(id);
+    return id;
+  };
+  return kaynnista(perusaika, () => {
+    const jaljella = livianKuplanAika(perusaika, audio) - perusaika;
+    if (jaljella > 0) {
+      kaynnista(jaljella, jatka);
+      return;
+    }
+    jatka();
+  });
 }
 
 /**

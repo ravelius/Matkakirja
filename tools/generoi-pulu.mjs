@@ -1088,15 +1088,17 @@ async function main() {
       console.log(`  mallille: "${tyo.puhe}"`);
       console.log(`  tiiviste ${tyo.tiiviste} — ${tyo.tila.toUpperCase()}`);
       if (tyo.arvioSekunteina > tyo.kuplaSekunteina) {
-        console.log('  PITKÄ: ääni jatkuisi vielä kun seuraava kupla tulee — lyhennä '
-          + `repliikkiä noin ${Math.ceil(tyo.merkit - tyo.kuplaSekunteina * MERKKIA_SEKUNNISSA)} `
-          + 'merkkiä (tai nopeuta tempoa).');
+        console.log('  PITKÄ: kupla odottaa puheen loppuun ja jää siksi ruudulle '
+          + 'lukuaikaansa pidemmäksi — lyhennä repliikkiä noin '
+          + `${Math.ceil(tyo.merkit - tyo.kuplaSekunteina * MERKKIA_SEKUNNISSA)} `
+          + 'merkkiä (tai nopeuta tempoa), jos tahti tuntuu hitaalta.');
       }
     }
     const ajettavat = tyot.filter((tyo) => tyo.tila === 'uusi' || tyo.tila === 'muuttunut');
     console.log(`\nKuiva ajo valmis: ${tyot.length} repliikkiä, `
       + `${new Set(tyot.map((t) => t.nimi)).size} eri tiedostonimeä. `
-      + 'Merkintä PITKÄ tarkoittaa, että kupla vaihtuu ennen kuin ääni loppuu — '
+      + 'Merkintä PITKÄ tarkoittaa, että puhe on kuplan lukuaikaa pidempi ja '
+      + 'kupla venyy sen mittaan (kupla odottaa puheen loppuun) — '
       + 'kenttä, joka on yhä yksi pitkä merkkijono (pinoutuva puheenvuoro), '
       + 'mitataan osien lukuaikojen summana.');
     if (ajettavat.length) {
@@ -1181,7 +1183,9 @@ async function main() {
       }
       if (tulos.pituus > tyo.kuplaSekunteina) {
         console.log(`   HUOM: ääni ${tulos.pituus.toFixed(2)} s > kuplan aika `
-          + `${tyo.kuplaSekunteina} s — loppu jää seuraavan kuplan alle (lyhennä repliikkiä).`);
+          + `${tyo.kuplaSekunteina} s — kupla odottaa puheen loppuun `
+          + '(js/liviapuhe.js livianKuplanAjastin), mutta seisoo ruudulla sitä '
+          + 'kauemmin; lyhennä repliikkiä jos tahti tuntuu hitaalta.');
       }
       const rivi = { kesto: Number(tulos.pituus.toFixed(2)), kaikuKesto: null };
       valmiit.push(tyo.nimi);

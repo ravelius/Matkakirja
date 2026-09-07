@@ -120,7 +120,8 @@ import {
  * livianKentanKuplat normalisoi kummankin muodon samaksi listaksi.
  */
 import {
-  livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu, livianKuplat,
+  livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu, livianKuplanAika,
+  livianKuplanAjastin, livianKuplat,
   soitaLivianAani, soitaLivianKaupunkiAani,
 } from './liviapuhe.js';
 import { luennanLoppuun } from './luenta.js';
@@ -703,6 +704,13 @@ const SAAPUMISKUPLAN_PALJASTUSKATTO_MS = 90_000;
  * mittaan. Kuplat pinoutuvat eivätkä korvaa toisiaan, joten koko
  * repliikki jää ruudulle siksi aikaa kun se puhutaan.
  *
+ * KUPLA ODOTTAA PUHEEN LOPPUUN (7.9.2026). Lukuaika on arvio tekstin
+ * pituudesta, ja osa generoiduista repliikeistä puhuu sitä pidempään.
+ * Siksi rytmi kysyy myös SOIVALTA ÄÄNITTEELTÄ sen todellisen keston
+ * (js/liviapuhe.js livianKuplanAika): kupla vaihtuu vasta kun puhe on
+ * ohi. Soittimen antaa js/pollo.js ajastaPuheenvuoro `aani`-
+ * takaisinkutsun paluuarvona.
+ *
  * Kaupunki, jota ei ole äänitetty, saa tyhjän asetusolion — rytmi
  * pysyy ennallaan eikä kutsupaikkaan tarvita ehtoa.
  *
@@ -712,7 +720,7 @@ const SAAPUMISKUPLAN_PALJASTUSKATTO_MS = 90_000;
  */
 function livianPuherytmi(kaupunkiId, kentta) {
   return livianKaupunkiAanitetty(kaupunkiId, kentta)
-    ? { viive: livianKuplanLukuaika } : {};
+    ? { viive: (teksti, aani) => livianKuplanAika(livianKuplanLukuaika(teksti), aani) } : {};
 }
 
 /**
@@ -742,9 +750,11 @@ function livianOsatJaAani(ui, kaupunkiId, kentta, kuplat) {
   const teksti = kuplat[0] ?? '';
   return {
     osat: jaaPuheenvuoroksi(teksti),
-    aani: (i) => {
-      if (i === 0) soitaLivianKaupunkiAani(ui, kaupunkiId, kentta, { teksti });
-    },
+    // Paluuarvo on soitin: js/pollo.js antaa sen rytmille, joka odottaa
+    // puheen loppuun (livianPuherytmi).
+    aani: (i) => (i === 0
+      ? soitaLivianKaupunkiAani(ui, kaupunkiId, kentta, { teksti })
+      : null),
   };
 }
 
@@ -869,11 +879,23 @@ export function fokusvirtaAlustus(ui, city) {
     ui.aloitaLykattyLuenta?.();
     return false;
   }
-  ui.alustuksenAjastin = setTimeout(() => {
-    if (ui.dead) return;
-    ui.aloitaLykattyLuenta?.();
-    ajastaHuudahdus(ui, city, kulku.huudahdus, merkinta);
-  }, livianSarjanKesto(kulku.alustus));
+  /*
+   * LUENTA ODOTTAA ALUSTUKSEN PUHEEN LOPPUUN (7.9.2026). Sarjan kesto
+   * on kuplien lukuaikojen summa, mutta viimeinen äänite voi olla omaa
+   * lukuaikaansa pidempi — silloin isoisä aloittaisi pulun lauseen
+   * päälle. Ajastin kysyy siksi vielä soivalta äänitteeltä
+   * (ui.liviaAani, luettuna vasta laukaisuhetkellä), onko puhetta
+   * jäljellä. Ilman ääntä tahti on tasan entinen.
+   */
+  ui.alustuksenAjastin = livianKuplanAjastin(
+    livianSarjanKesto(kulku.alustus), () => ui.liviaAani,
+    () => {
+      if (ui.dead) return;
+      ui.aloitaLykattyLuenta?.();
+      ajastaHuudahdus(ui, city, kulku.huudahdus, merkinta);
+    },
+    (id) => { ui.alustuksenAjastin = id; },
+  );
   return true;
 }
 
@@ -958,13 +980,20 @@ function ajastaHuudahdus(ui, city, huudahdus, merkinta) {
 function soitaLivianKaupunkiSarja(ui, kaupunkiId, kentta, kuplat, i = 0) {
   const teksti = kuplat[i];
   if (!teksti) return;
-  soitaLivianKaupunkiAani(ui, kaupunkiId, kentta, { kupla: i, teksti });
+  const aani = soitaLivianKaupunkiAani(ui, kaupunkiId, kentta, { kupla: i, teksti });
   if (i + 1 >= kuplat.length) return;
   clearTimeout(ui.livianKorttiSarja);
-  ui.livianKorttiSarja = setTimeout(() => {
-    if (ui.dead) return;
-    soitaLivianKaupunkiSarja(ui, kaupunkiId, kentta, kuplat, i + 1);
-  }, livianKuplanLukuaika(teksti));
+  // KUPLA ODOTTAA PUHEEN LOPPUUN: lukuaikaansa pidempi äänite venyttää
+  // ajastinta (js/liviapuhe.js livianKuplanAjastin), joten seuraava
+  // repliikki ei häivytä edellistä kesken lauseen.
+  ui.livianKorttiSarja = livianKuplanAjastin(
+    livianKuplanLukuaika(teksti), aani,
+    () => {
+      if (ui.dead) return;
+      soitaLivianKaupunkiSarja(ui, kaupunkiId, kentta, kuplat, i + 1);
+    },
+    (id) => { ui.livianKorttiSarja = id; },
+  );
 }
 
 /**
@@ -3545,15 +3574,20 @@ function polloKuplasarja(ui, city, kentta, kuplat, i = 0) {
   const teksti = kuplat[i];
   if (!teksti) return false;
   if (!naytaPolloKupla(ui, teksti)) return false;
-  soitaLivianKaupunkiAani(ui, city?.id, kentta, { kupla: i, teksti });
+  const aani = soitaLivianKaupunkiAani(ui, city?.id, kentta, { kupla: i, teksti });
   if (i + 1 < kuplat.length) {
     clearTimeout(ui.polloKuplasarjaAjastin);
-    ui.polloKuplasarjaAjastin = setTimeout(() => {
-      // Pelaaja on voinut lähteä kaupungista: sarjan loppu kuuluu vain
-      // siihen käyntiin, jossa se alkoi.
-      if (ui.dead || ui.game?.cityOf?.()?.id !== city?.id) return;
-      polloKuplasarja(ui, city, kentta, kuplat, i + 1);
-    }, livianKuplanLukuaika(teksti));
+    // KUPLA ODOTTAA PUHEEN LOPPUUN (js/liviapuhe.js livianKuplanAjastin).
+    ui.polloKuplasarjaAjastin = livianKuplanAjastin(
+      livianKuplanLukuaika(teksti), aani,
+      () => {
+        // Pelaaja on voinut lähteä kaupungista: sarjan loppu kuuluu vain
+        // siihen käyntiin, jossa se alkoi.
+        if (ui.dead || ui.game?.cityOf?.()?.id !== city?.id) return;
+        polloKuplasarja(ui, city, kentta, kuplat, i + 1);
+      },
+      (id) => { ui.polloKuplasarjaAjastin = id; },
+    );
   }
   return true;
 }

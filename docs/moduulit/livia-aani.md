@@ -143,6 +143,29 @@ livianKuplanLukuaika`). Samasta syystä sähkelento (`aloitaSahkelento`)
 odottaa kuittauksen (`oikein`) kuplien yhteenlasketun lukuajan ennen
 paluukuplaa, ja aarteen paljastus odottaa paluusarjan viimeistä kuplaa.
 
+**Lukuaika on vähimmäisaika, äänite voi venyttää sitä (7.9.2026).**
+Lukuaika on arvio tekstin pituudesta, ja Dr. Vonin ajossa kymmenen
+repliikkiä 85:stä puhui kuplaansa pidempään (esim. 7,37 s puhetta
+5,38 s kuplassa) — seuraava kupla häivytti äänen kesken lauseen. Nyt
+kuplan ajastin on `max(lukuaika, äänitteen kesto + 400 ms)`, ja kesto
+luetaan siitä samasta `<audio>`-elementistä joka soi (`duration`,
+metatietojen tultua). Manifestia peli ei lue eikä uutta verkkohakua
+tehdä; ilman äänitettä tai mykistettynä aika on tasan entinen, ja
+napautus jatkaa yhä heti.
+
+| Missä | Mikä odottaa |
+| --- | --- |
+| `js/liviapuhe.js` | `LIVIAN_PUHEEN_HANTA_MS`, `livianAanenKesto`, `livianKuplanAika`, `livianKuplanAjastin` |
+| `js/livia.js` | avaussarja (`naytaRepliikki`) ja paljastussarja (`paljastusRepliikki`) |
+| `js/pollo.js` | `ajastaPuheenvuoro` kysyy `viive`-funktiolta uudestaan, kun metatiedot ovat tulleet (`aaniKahva`) |
+| `js/fokusvirta.js` | `livianPuherytmi` (alustus, kommentti, sähkevaiheet), `soitaLivianKaupunkiSarja`, `polloKuplasarja`, `fokusvirtaAlustus` (luenta ei ala pulun puheen päälle) |
+
+Huudahduksen 2 sekunnin kupla EI odota: se on välihuuto kertojan
+päällä, ei repliikki omassa vuorossaan. Vartiot:
+`tests/livia-aani.test.mjs` (aika ja ajastin) ja
+`tools/savukkeet/savuke-pulun-kulku.mjs` (Budapest, äänite mokattu
+7 sekunnin mittaiseksi).
+
 **Vanhentunut äänite on hiljainen myös kaupungeissa** (7.9.2026):
 kaupunkirepliikit ovat samassa tiivistevartioinnissa kuin `paljastus` ja
 `lehtivinkki`, joten ämpärin vanha tiedosto ei voi soida uuden kuplan
@@ -245,11 +268,12 @@ toimii ilman ääntä kuten ennenkin.
 ## Pituusraja — repliikit on lyhennettävä
 
 Kuplien rytmi ohjaa ääntä (*"luenta seuraa kuplia"*): kupla vaihtuu
-`min(8200, max(2800, merkit × 58))` millisekunnin kuluttua, ja seuraavan
-repliikin alkaessa edellinen äänite häivytetään pois. Nopea puhe etenee
-noin 14 merkkiä sekunnissa, kuplan rytmi noin 17 — eli **jokainen nykyinen
-repliikki jää kesken**. Sarjan VIIMEINEN repliikki saa puhua loppuun
-(6.9.2026 muutos), muut eivät.
+`min(9500, max(3200, merkit × 78))` millisekunnin kuluttua, ja seuraavan
+repliikin alkaessa edellinen äänite häivytetään pois. Sarjan VIIMEINEN
+repliikki saa puhua loppuun (6.9.2026 muutos). Arvio ei aina osu, ja
+7.9.2026 alkaen kuplan ajastin venyy äänitteen todelliseen kestoon
+(ks. *Kupla odottaa puheen loppuun*) — lyhyys on silti tavoite, koska
+pitkä kupla seisoo ruudulla pitkään.
 
 Nykytila ja ehdotukset (päätoimittaja päättää; kaanonia ei muuteta täällä):
 
@@ -270,6 +294,9 @@ Nykytila ja ehdotukset (päätoimittaja päättää; kaanonia ei muuteta tääll
 
 Nyrkkisääntö: **enintään noin 85 merkkiä** repliikkiä kohti (≈6 s).
 Kuiva ajo laskee jokaiselle repliikille ylityksen merkkeinä.
+
+Ylitys ei enää katkaise lausetta (kupla odottaa puheen loppuun), mutta
+se pidentää kuplan seisomista ruudulla — lyhyys on siis yhä tavoite.
 
 ## Muut Livian repliikkilähteet (ei vielä äänitetty)
 

@@ -1923,7 +1923,9 @@ test('linssin oma kupla ohittaa portin — mutta vain linssin kutsumana', () => 
   assert.match(lahde, /if \(!linssinOma && linssiEstaa\(this\.doc\)\) \{\n\s*return this\.lykkaaLinssiin\(\(\) => this\.naytaSaapumiskupla\(/);
   assert.match(lahde, /if \(!linssinOma && linssiEstaa\(this\.doc\)\) \{\n\s*return this\.lykkaaLinssiin\(\n?\s*\(\) => this\.naytaPuheenvuoro\(/);
   // Osiin jaettu puheenvuoro puhuu loppuun: lippu kulkee jatko-osiin.
-  assert.match(lahde, /this\.puheenvuoro = \{\n\s*palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive, aani,\n\s*\};/);
+  // (7.9.2026: sarjan tilassa on myös soivan äänitteen kahva, jotta
+  // kupla osaa odottaa puheen loppuun — js/liviapuhe.js livianKuplanAika.)
+  assert.match(lahde, /this\.puheenvuoro = \{\n\s*palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive, aani, aaniKahva,\n\s*\};/);
   assert.match(lahde, /linssinOma: nyt\.linssinOma,/);
   // Muut vientifunktiot EIVÄT saa lippua: ohitus on vain linssin.
   for (const nimi of ['polloSaapumiskupla', 'polloPuheenvuoro', 'polloAvauskupla']) {
