@@ -1,0 +1,218 @@
+{
+  "createdAt": "2026-09-07T07:16:03.317245+00:00",
+  "items": [
+    {
+      "id": "maalehti-sen-elokuva-3-r20260907-v4",
+      "canonicalId": "maalehti-sen-elokuva-3",
+      "caption": "Beniniin vuonna 2021 palautetun kuningas Ghézon korkean valtaistuimen muotoon perustuva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-elokuva-3-r20260907-v4.jpg",
+      "sha256": "d85cff71a394617939e1c8f7136d322b5ba59469b61e5a22b099d66368291342",
+      "bytes": 335038,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: product-mockup. Asset type: Matkakirja country feature, 4:3 landscape museum object photograph. Use the supplied Musée du quai Branly image only as a factual reference for the single returned throne of King Ghézo. Preserve its exact tall narrow rectangular pedestal-like silhouette, flared concave seat at the top, four round bosses below the seat, warm carved wood, and the openwork scroll panels down the front. Do not transform it into a European chair with arms or a backrest. Show only this complete object on a plain low museum plinth, three-quarter view, occupying central 50–55 percent with generous empty floor and wall. Crisp camera realism. No people, no labels, no text, no logos, no watermark, no illustration.\n",
+      "promptExactSubmitted": true,
+      "sources": [
+        "https://www.quaibranly.fr/en/collections/living-collections/news/restitution-of-26-works-to-the-republic-of-benin/"
+      ],
+      "sourceQa": "Root personally viewed selected full-size ICC image and relevant reference; source evidence read. Generated illustration with named-person faces unidentifiable; prior rejected versions preserved.",
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus."
+    },
+    {
+      "id": "maalehti-gtm-musiikki-2-r20260907-v4",
+      "canonicalId": "maalehti-gtm-musiikki-2",
+      "caption": "Kaksirivinen kromaattinen marimba puisine resonaattoreineen — museoesineen rakennetta mukaileva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-gtm-musiikki-2-r20260907-v4.jpg",
+      "sha256": "a5d207a83d40271b13c47d00fdb0bdd4d2f7f832cc747b40e2f4e1d30416f87b",
+      "bytes": 298990,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: product-mockup. Asset type: Matkakirja country feature, 4:3 landscape museum instrument photograph. Use the supplied museum photograph as the structural reference for a Central American chromatic marimba. Preserve the photographed interlocking two-row keyboard geometry: one uninterrupted natural-note row and a staggered raised accidental row with clearly visible alternating groups of exactly TWO bars and exactly THREE bars separated by piano-key gaps, repeated consistently across the keyboard. Keep the long graduated wooden resonators, turned wooden legs and slender horizontal frame. Show the complete instrument from a slightly higher three-quarter angle so the 2+3 sequence can be counted. Four mallets rest separately. The object occupies central 55–60 percent with generous space at every edge. Crisp camera realism. No people, no labels, no text, no logos, no watermark, no illustration.\n",
+      "promptExactSubmitted": true,
+      "sources": [
+        "https://folkways-media.si.edu/docs/folkways/artwork/SFW40542.pdf"
+      ],
+      "sourceQa": "Root personally viewed selected full-size ICC image and relevant reference; source evidence read. Generated illustration with named-person faces unidentifiable; prior rejected versions preserved. Root read downloaded Smithsonian SFW40542 PDF on 2026-09-07 for Guatemalan chromatic form and wooden pyramidal resonators. Philharmonie reference photo viewed for shape only: webpage 500 means its numerical bar count and specimen origin are NOT verified. No claim this exact specimen is Guatemalan.",
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus."
+    },
+    {
+      "id": "maalehti-sen-historia-0-r20260907-v2",
+      "canonicalId": "maalehti-sen-historia-0",
+      "caption": "Wolofin suullisen Njaajan Njaay -perinteen innoittama kuvitus valtakunnan perustamisesta; perustaja nähdään selin.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-historia-0-r20260907-v2.jpg",
+      "sha256": "191fa589c5bfd34254cb15540c42bbab2b305f60ddf732e84d92cdba7888bffe",
+      "bytes": 636471,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja country feature, 4:3 landscape source-grounded illustration of Wolof oral tradition. Evoke the Njaajan Njaay / Ndiadiane Ndiaye kingdom-origin story without inventing a portrait: a distant cloaked founder seen strictly from behind approaches a Wolof council gathered beneath a broad tree, all human faces turned away, fully shadowed, or too distant to identify. Emphasize the river landscape, woven mats, spears laid down in council and the formation of a polity, not a documented ceremony. Entire group occupies central 55–60 percent with generous space at all edges. Camera-like historical realism, Senegal region material culture, warm dawn. No visible identifiable face, no portrait, no crown fantasy, no text, no logos, no watermark.\n",
+      "promptExactSubmitted": true,
+      "sources": [
+        "https://www.cambridge.org/core/journals/journal-of-african-history/article/abs/njaajan-njaay-goes-to-berkeley-the-oral-history-and-literature-of-the-wolof-people-of-waalo-northern-senegal-the-master-of-the-word-griot-in-the-wolof-tradition-by-samba-diop-lewiston-queenston-and-lampeter-edwin-mellen-press-1995-pp-389-10995-isbn-0773490310/3BE32521CB6F928ED4C4D784AB852920"
+      ],
+      "sourceQa": "Root personally viewed selected full-size ICC image and relevant reference; source evidence read. Generated illustration with named-person faces unidentifiable; prior rejected versions preserved.",
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus."
+    },
+    {
+      "id": "maalehti-sen-historia-1-r20260907-v2",
+      "canonicalId": "maalehti-sen-historia-1",
+      "caption": "Ndaté Yalla Mbodjin valtaa ja vastarintaa mukaileva kuvitus: hallitsija katsoo selin Senegaljoen tasangolle.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-historia-1-r20260907-v2.jpg",
+      "sha256": "71569db51465ed0e9bde570e65e0ad006ab407c5b89ccfc700862afe8d63a42b",
+      "bytes": 523898,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja country feature, 4:3 landscape source-grounded illustration of Ndaté Yalla Mbodj’s authority and resistance, without inventing her face. Show a commanding nineteenth-century Waalo queen only from behind, standing on a shaded palace veranda and looking toward distant horsemen across the Senegal River plain; her full figure is small in frame, face entirely unseen. Use historically restrained Senegalese textile layers, a staff and council mat as symbols of rule; no invented throne portrait or European fantasy crown. Subject group occupies central 55–60 percent with generous edge space. Crisp camera-like realism. No visible identifiable face, no facial profile, no text, no logos, no watermark.\n",
+      "promptExactSubmitted": true,
+      "sources": [
+        "https://collections.carlos.emory.edu/exhibitions/804/docta-ndate-yalla-mbodj-powerful-african-queen-and-daughte?ctx=e61a0cdd8f753d2c8307c29f74d33c87973dd305&idx=11"
+      ],
+      "sourceQa": "Root personally viewed selected full-size ICC image and relevant reference; source evidence read. Generated illustration with named-person faces unidentifiable; prior rejected versions preserved.",
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus."
+    },
+    {
+      "id": "maalehti-sen-historia-3-r20260907-v2",
+      "canonicalId": "maalehti-sen-historia-3",
+      "caption": "Kuvitteellinen kirjoituspöytä, runokirjat ja Senegalin värit viittaavat runoilija-presidentti Léopold Sédar Senghorin kahteen rooliin.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-historia-3-r20260907-v2.jpg",
+      "sha256": "8d8cb39c1292045a09fc74189a42696029169f03c1904ce959d8ddabc3d13f42",
+      "bytes": 430835,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: product-mockup. Asset type: Matkakirja country feature, 4:3 landscape editorial still life evoking poet-president Léopold Sédar Senghor without depicting him. An empty mid-century Dakar writing desk with an open notebook containing only non-readable ink texture, a fountain pen, a modest stack of blank-spined poetry books, reading glasses, and a folded Senegalese presidential sash beside a small abstract bronze baobab paperweight. Warm window light, elegant but restrained, sharp camera realism. Entire desk arrangement occupies central 55–60 percent with generous space around every edge. No person, no face, no portrait photograph, no readable words or book titles, no letters, no logos, no watermark, no illustration.\n",
+      "promptExactSubmitted": true,
+      "sources": [
+        "https://www.poetryfoundation.org/poets/leopold-sedar-senghor"
+      ],
+      "sourceQa": "Root personally viewed selected full-size ICC image and relevant reference; source evidence read. Generated illustration with named-person faces unidentifiable; prior rejected versions preserved.",
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus."
+    },
+    {
+      "id": "maalehti-sen-elokuva-0-r20260907-v2",
+      "canonicalId": "maalehti-sen-elokuva-0",
+      "caption": "Afrique sur Seinen vuoden 1955 tekijäryhmän innoittama kuvitus Seinen rannalta; ryhmä näkyy selin.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-elokuva-0-r20260907-v2.jpg",
+      "sha256": "0b1a6fa66849839a63520da7a26ec3371a9b2369c4b0749ba77b1741ab3e3cf2",
+      "bytes": 464153,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Asset type: Matkakirja country feature, 4:3 landscape 1955 documentary-style photograph evoking the production of Afrique-sur-Seine on the Seine riverbank in Paris. Three African film students operate a compact period motion-picture camera and tripod, all shown from behind at a distance with faces entirely hidden; one frames the river and bridges while another carries film cans with blank surfaces. Full crew and complete tripod occupy central 55–60 percent with generous space at every edge. Cool Paris morning, subtle 1950s black-and-white film grain, factual camera realism. Do not claim a film gauge. No identifiable face, no named portrait, no readable text, no logos, no watermark, no illustration.\n",
+      "promptExactSubmitted": true,
+      "sources": [
+        "https://africanfilmny.org/films/afrique-sur-seine/"
+      ],
+      "sourceQa": "Root personally viewed selected full-size ICC image and relevant reference; source evidence read. Generated illustration with named-person faces unidentifiable; prior rejected versions preserved.",
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus."
+    },
+    {
+      "id": "maalehti-eth-historia-2-r20260907-v3",
+      "canonicalId": "maalehti-eth-historia-2",
+      "caption": "Ras Mikael Sehulin ja Iyoas I:n valtapeliä vuonna 1769 esittävä kasvoton historiallinen rekonstruktio.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-eth-historia-2-r20260907-v3.jpg",
+      "sha256": "611eb6ce295753af040e399abaec93399e9c8cd201c56850166cdb6027ffa1bb",
+      "bytes": 395375,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new 1536x1024 landscape, camera-like historical reconstruction of Ethiopia’s 1769 royal power struggle. In a dim Gondarine audience hall, the young emperor Iyoas I is represented only as a small seated figure seen from directly behind, face completely invisible. The older kingmaker Ras Mikael Sehul stands farther away in strict side-back silhouette with his face fully obscured by shadow and angle, while armed retainers quietly close the exits and court nobles watch, making the transfer of power unmistakable without violence. No generated likeness or identifiable face of either named real person. Historically plausible late-18th-century Ethiopian cotton robes, cloaks, shields and stone/timber palace interior. Broad 4:3-safe margins, complete figures, restrained documentary realism. No exact date claim, readable text, modern object, logo or watermark.",
+      "promptExactSubmitted": false,
+      "sources": [
+        "https://www.cambridge.org/core/books/history-of-modern-ethiopia-18551991/C0852BA84C34071333C899ACC8F1C863/listing"
+      ],
+      "sourceQa": "Root personally viewed full-size ICC image. Named real figures shown from behind or distant and unidentifiable. Context and architectural details are illustrative, not an exact documentary reconstruction. Root read Bahru Zewde chapter extract lines583-587: Ras Mikael intervened in Gondar in1769, killed Iyoas and installed successors. No claim the pictured audience is documented.",
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus."
+    },
+    {
+      "id": "maalehti-eth-historia-3-r20260907-v3",
+      "canonicalId": "maalehti-eth-historia-3",
+      "caption": "Menelik II:n kruunajaisia Entoto Maryamissa vuonna 1889 esittävä historiallinen rekonstruktio; nimetty henkilö jää etäiseksi ja kasvot tunnistamattomiksi.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-eth-historia-3-r20260907-v3.jpg",
+      "sha256": "0c4f5a8207e1c371734c7d32593b76ec06302fc8381c098b9bb83080a247cff2",
+      "bytes": 529376,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new 1536x1024 landscape, camera-like historical reconstruction of Menelik II’s coronation at Entoto Maryam on 3 November 1889. Use the referenced real church photograph only for the church’s distinctive octagonal massing, encircling veranda, rhythmic timber arches, window placement, roof tiers and small central lantern; reconstruct its plausible 1889 appearance in natural materials. Show the WHOLE important church facade and roof with broad sky, ground and side margins, every cross comfortably inside the central 70 percent. A modest distant ceremonial gathering in accurate late-19th-century Ethiopian white cotton dress occupies the forecourt; Menelik is small, distant and not facially identifiable. Photorealistic documentary lens, crisp natural detail, subdued highland daylight, historically plausible. Absolutely no loudspeaker, PA horn, electric cable, antenna, utility pole, modern railing, concrete sign, scaffolding, car, plastic, readable text, logo or watermark. No painterly or CGI appearance. Compose for a centered 4:3 crop with all architecture and figures safely inside.",
+      "promptExactSubmitted": true,
+      "sources": [
+        "https://www.britishmuseum.org/collection/term/BIOG172201",
+        "https://www.entoto-natural-park.org/2018/12/the-capital-and-entotos-contemporary.html"
+      ],
+      "sourceQa": "Root personally viewed full-size ICC image. Named real figures shown from behind or distant and unidentifiable. Context and architectural details are illustrative, not an exact documentary reconstruction. BM indexed curator biography corroborates Entoto coronation1889; Entoto park history specifies Maryam. Root saw actual church photo and selected image; no modern loudspeaker/wires remain. Original LOC blog URL did not substantiate year and is removed.",
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus."
+    },
+    {
+      "id": "maalehti-sen-ruoka-3-r20260907-v4-root",
+      "canonicalId": "maalehti-sen-ruoka-3",
+      "caption": "Café Touba, kahvipavut ja pitkät kuivat djar-hedelmät senegalilaista kahvihetkeä mukailevassa kuvituksessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-ruoka-3-r20260907-v4-root.jpg",
+      "sha256": "ad3e410bf4058144f644e088ca4b3713a73ca3be37504ac8ff9e2faeb10eb3d0",
+      "bytes": 597047,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. New horizontal 4:3 editorial photograph for a Senegal Café Touba food story. Input image is a university botanical REFERENCE only: its fresh green Xylopia aethiopica fruits demonstrate narrow, slightly bent finger shapes. In the new photograph show a few DRIED individual Xylopia fruits, dark chocolate brown to black, 3-6cm long and 5-7mm thick, shrivelled cylindrical slender pods with subtle seed bulges. They are NOT spherical, not cardamom, not peppercorns, not star anise, not fresh green. Scene: a warmly sunlit modest Senegalese coffee table, a cloth coffee filter hanging over a worn white enamel pot with dark black coffee, a small shallow dish of roasted coffee beans, a separate small shallow dish displaying 5 long dried djar pods clearly, and two small simple glasses of black spiced coffee. Light steam just above the pot. No people necessary. Natural documentary photography, believable everyday materials and morning side light, appetizing rich coffee color, softly receding courtyard context but no artificial swirling bokeh. WIDE FRAMING: the entire arrangement including top of filter, pot handle, two glasses and both dishes lies within the middle 60% of the canvas, x20%-80% and y20%-80%, with clean surrounding tabletop and space above; pull the camera back. Nothing essential touches any border; space is needed for future edge fade. NO added vignette, border, lettering or watermark, no modern brand packaging. New whole composition, not an edit. The result is illustrative, not an authentic documentary photograph.\n",
+      "promptExactSubmitted": true,
+      "sources": [
+        "https://www.heritage.sn/gastronomie/le-cafe-touba-histoire-recette-et-secrets-du-cafe-epice-du-senegal",
+        "https://pharmacognosy.ucc.edu.gh/xylopia-aethiopica",
+        "https://www.worldfloraonline.org/taxon/wfo-0000428869"
+      ],
+      "sourceQa": "Root generated and personally viewed original and final ICC. Correct narrow long dried Xylopia fruit shape compared with downloaded University of Cape Coast actual fruit photograph and World Flora Online dimensions. Heritage Senegal recipe context read. Filter/pot setup illustrative; no health or exact-origin legend claim.",
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus."
+    }
+  ],
+  "count": 9,
+  "reviewPublished": false,
+  "gameIntegrationClaimed": false
+}

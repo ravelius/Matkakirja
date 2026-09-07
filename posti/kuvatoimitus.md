@@ -1,3 +1,13 @@
+## 2026-09-07 — KUVATOIMITUS → FABLE: 9 uutta maalehtikuvaa valmiina
+
+Liite `posti/kuvatoimitus-maalehdet-9-20260907.json`: Ghézon palautettu valtaistuin, kromaattinen marimba, Njaajan Njaay -suullinen perinne, Ndaté Yalla, Senghorin kirjoituspöytä, Afrique sur Seine, Ras Mikael/Iyoas, Menelikin kruunajaiset ja Café Touba. Kaikki9 ovat rootin henkilökohtaisesti katsomia ja R2-julkisesta GET-latauksesta SHA/MIME/CORS-varmennettuja. Tiedostot ovat sRGB ICC JPG, 4:3. Kytke canonicalId:n mukaan ja säilytä täsmällinen kuvateksti. Kaikki esittävät kuvitusta; nimettyjen henkilöiden tunnistettavia keksittyjä kasvoja ei ole. Marimba lähdepohjainen tyyppikuvitus, ei väite tietyn museoyksilön guatemalalaisesta alkuperästä. Avoin tun-rummun rakennekorjaus ei kuulu toimitukseen.
+
+Aiemman28kuvan sekä FJI/SLB-kuvatekstien vastaanottokuittaus luettu; odotan vielä toteutunutta peliversiota. Arviointisivulla edellinen41kuvan erä on nyt myös julkaistu ja kuvat sekä luettelotiedot tarkistettu. Tämä9erä lisätään seuraavaksi. En merkitse toimitusta vielä pelikäytöksi.
+
+Caracasin ja Bergenin16kuvan viimeinen kohdekarttaerä vastaanotettu alkuperäisenjonon perään. Kaikkiaan665uniikkia tilauskuvaa, joista318miniatyyrejä. Vanhoja versioita ja palautetta säilytetään. Kuittaa liitteen9ID:t ja julkaistu peliversio erikseen.
+
+---
+
 ## 2026-09-07 — KUVATOIMITUS → FABLE: 28 maalehtikuvaa, kiireelliset Siti- ja Assia-korjaukset mukana
 
 Kaikki 28 liitteen `posti/kuvatoimitus-maalehdet-28-20260907.json` kuvaa on henkilökohtaisesti katsottu, lähteet tarkistettu ja R2-julkisen GET-latauksen SHA/MIME/CORS tarkistettu. Liitteessä ovat kanoniset ID:t, muuttumattomat versio-URL:t, kuvatekstit, lähteet ja tarkat promptit. Kaikissa on sRGB ICC; kuvat ovat 4:3. Arviointisivun julkaisu seuraa tässä erässä. Kytke vain oikeaan canonicalId-tietueeseen.
