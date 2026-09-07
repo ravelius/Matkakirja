@@ -175,3 +175,48 @@ Kuiva ajo laskee jokaiselle repliikille ylityksen merkkeinä.
 Näiden äänittäminen on oma tilauksensa: lähde lisätään
 `LIVIAN_AANILAHTEET`-listaan ja tekstit `repliikit()`-funktioon, jolloin
 nimeäminen, kaikusääntö, manifesti ja testit pätevät sellaisenaan.
+
+## Kuplien näkymä ruudulla ja Livian loki (7.9.2026)
+
+Omistajan linjaus (Raamattu, *"PULUN KUPLAT: VAIN VIIMEISIN, HISTORIA
+CHATISSA"*): kartan päällä näkyy **vain viimeisin kupla**, kelaus
+laajentaa näkymän ylöspäin noin kymmeneen tekstiriviin, ja kartan liike
+supistaa sen takaisin yhteen — kaikki pehmeästi animoiden. Repliikkien
+sanoja, paljastussarjan ajoitusta tai lehtivinkin logiikkaa tämä ei
+kosketa; kyse on pelkästä näkymästä.
+
+| Osa | Missä |
+| --- | --- |
+| Pinon laajuus (`pinoLaaja`, `laajennaPino`, `supistaPino`, `paivitaPinonKorkeus`) | `js/pollo.js` |
+| Kelauksen tunnistus (rulla, sormen veto, nuoli ylös, Escape) | `js/pollo.js varmistaPino` |
+| Supistus kartan vedosta (dokumentin `pointerdown`) | `js/pollo.js seuraaSulkemista` |
+| Korkeuden liuku, häivytys ja puhelimen katto | `css/styles.css .pollo-kuplapino` |
+| Laitteen loki (`matkakirja-livia-loki`, katto 400) | `js/pollo.js lueLivianLoki`, `kirjaaLivianLokiin` |
+| Lokin lataus chattiin ja kuplaviestien asu | `js/pollo.js lataaLokiVirtaan`, `css .pollo-kuplaviesti` |
+| Selainvartiot | `tools/savukkeet/savuke-pulun-kuplat.mjs` |
+
+Muistettavaa:
+
+- **Supistettu korkeus mitataan, ei arvata.** `paivitaPinonKorkeus`
+  asettaa pinon katoksi viimeisimmän kuplan mitan pikseleinä;
+  laajennettuna inline-arvo poistuu ja css:n oma katto
+  (`min(60vh, 14rem)`, puhelimella `min(45vh, 14rem)`) on taas voimassa.
+  Molemmat päät ovat pikseleitä, joten `transition: max-height` liu'uttaa
+  niiden välillä. Ensimmäinen kupla ja liikeherkkyys ohittavat liu'un
+  (`.pollo-kuplapino-hyppy`).
+- **Supistettuna ei tehdä FLIP-siirtoa.** Vanhat kuplat ovat pinon
+  leikkauksen takana, joten niiden nousu olisi liikettä jota kukaan ei
+  näe — ja se kilpailisi korkeuden liu'un kanssa.
+- **Loki on oma avaimensa eikä osa pelitallennusta.** Se saa kadota
+  (yksityinen selaus, muisti täynnä) ilman että peli menettää mitään, ja
+  uusi peli ei pyyhi sitä. Merkintä on `{ r, t, aika }`, jossa `r` on
+  `kupla`, `kayttaja` tai `pollo`. Chattiin loki ladataan **kerran**,
+  ensimmäisellä avauksella, istunnon omien viestien yläpuolelle; ladatut
+  rivit kantavat luokan `.pollo-historiaviesti` eivätkä siksi estä
+  tervehdystä.
+- **Chatin tervehdys on kolme virkettä** ja sen ydin lihavoidaan
+  (`TERVEHDYS_ALKU` + `TERVEHDYS_YDIN` + `TERVEHDYS_LOPPU`,
+  `naytaTervehdys`). Teksti on kaanonia — päätoimittaja kirjoittaa.
+- **Laajennus hakee lokista aiemmat kuplat** kartan päälle
+  (`taytaPinoHistorialla`, enintään kuusi). Ne ovat lajia `historia`:
+  kartan kosketus ei poista niitä, napautus avaa chatin.

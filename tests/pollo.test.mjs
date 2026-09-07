@@ -24,10 +24,13 @@ import { readFileSync } from 'node:fs';
 import {
   KONTEKSTIN_ENIMMAISPITUUS,
   LINSSIJONON_KATTO,
+  LIVIAN_LOKIN_KATTO,
+  LIVIAN_LOKI_AVAIN,
   LIVIAN_MIETINNAT,
   MIETINNAN_JATKOVIIVE,
   arvoMietinta,
   linssijonoLisaa,
+  lisaaLokiin,
   jasennaKasitteet,
   kehysLaji,
   kokoaKonteksti,
@@ -2185,4 +2188,89 @@ test('vanha varateksti "En osaa vastata" ei ole enää missään', () => {
       .filter((rivi) => /'[^']*En osaa vastata/.test(rivi));
     assert.deepEqual(koodissa, [], `varateksti elää yhä: ${tiedosto}`);
   }
+});
+
+/* ---------------------------------------------------------------- */
+/* Kuplat: vain viimeisin, historia kelattavissa (7.9.2026)          */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN LINJAUS 7.9.2026 (Raamattu, "PULUN KUPLAT: VAIN VIIMEISIN,
+ * HISTORIA CHATISSA"): *"ruudulla näkyvät kuplat voisi vaihtaa niin,
+ * että siinä näkyisi kerrallaan vain viimeisin kupla. Mutta jos
+ * käyttäjä menee scrollaamaan viestejä niin näkymä laajenee ylöspäin
+ * 10 riiviin. Mutta sitten kun käyttäjä liikuttaa karttaa niin näkymä
+ * palaa taas siihen yhteen kuplaan. Nämä kaikki pehmeästi animoiden."*
+ *
+ * Näkymän mitat ja liikkeet mitataan selaimessa
+ * (tools/savukkeet/savuke-pulun-kuplat.mjs); täällä vartioidaan ne
+ * kohdat, jotka voi hukata hiljaa: lokin katto, supistuksen kutsupaikat
+ * ja se, ettei supistettu pino häivytä ainoaa näkyvää kuplaansa.
+ */
+
+test('lokin katto pudottaa vanhimman eikä uusinta', () => {
+  let loki = [];
+  for (let i = 0; i < LIVIAN_LOKIN_KATTO + 25; i += 1) {
+    loki = lisaaLokiin(loki, { r: 'kupla', t: `rivi ${i}` });
+  }
+  assert.equal(loki.length, LIVIAN_LOKIN_KATTO);
+  assert.equal(loki.at(-1).t, `rivi ${LIVIAN_LOKIN_KATTO + 24}`);
+  assert.equal(loki[0].t, 'rivi 25', 'karsinta osui väärään päähän');
+  // Katto on omistajan mitta: neljäsataa puheenvuoroa on
+  // "mahdollisimman pitkälle" ilman että laitteen muisti täyttyy.
+  assert.equal(LIVIAN_LOKIN_KATTO, 400);
+  // Oma avain eikä pelitallennus: loki saa kadota ilman että peli
+  // menettää mitään.
+  assert.equal(LIVIAN_LOKI_AVAIN, 'matkakirja-livia-loki');
+});
+
+test('kartan kosketus, Escape ja nuoli ylös ohjaavat kuplanäkymää', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  // Supistus tulee dokumentin pointerdownista (kartan vedon alku), ja
+  // pinon oma alue on rajattu pois — muuten kelaus supistaisi itsensä.
+  assert.match(lahde, /this\.pinoLaaja && !e\.target\?\.closest\?\.\('\.pollo-kuplapino-kehys'\)/);
+  assert.match(lahde, /if \(!this\.auki && this\.pinoLaaja\) \{/);
+  // Näppäimistöllä laajennus: nuoli ylös kuplassa.
+  assert.match(lahde, /tapahtuma\.key === 'ArrowUp'/);
+  assert.match(lahde, /this\.laajennaPino\(\);/);
+});
+
+test('supistettu pino ei häivytä ainoaa kuplaansa, ja katto liukuu', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  // Häivytys kuuluu vain laajennettuun pinoon: supistettuna ruudulla on
+  // yksi kupla, ja häivytys söisi sen ensimmäisen rivin.
+  assert.match(css, /\.pollo-kuplapino-yli \.pollo-kuplapino\.pollo-kuplapino-laaja \{/);
+  // Korkeuden liuku on se "pehmeästi animoiden", jota omistaja pyysi.
+  assert.match(css, /transition: max-height 300ms var\(--liike-pehmea\);/);
+  // Puhelimen katto on enintään 45 % ruudusta (omistajan linjaus).
+  const kapea = css.match(/\.pollo-kuplapino \{ max-height: min\((\d+)vh, [\d.]+rem\); \}/);
+  assert.ok(kapea && Number(kapea[1]) <= 45, `puhelimen katto ${kapea?.[1]}vh`);
+});
+
+test('tervehdys on lyhyt ja sen ydin lihavoidaan', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  const ydin = lahde.match(/const TERVEHDYS_YDIN = '([^']+)'/)?.[1] ?? '';
+  const loppu = lahde.match(/const TERVEHDYS_LOPPU = '([^']+)'/)?.[1] ?? '';
+  const alku = [...lahde.matchAll(/const TERVEHDYS_ALKU = ([\s\S]*?);\n/g)][0]?.[1] ?? '';
+  const alkuTeksti = [...alku.matchAll(/'([^']*)'/g)].map((m) => m[1]).join('');
+  assert.match(ydin, /Kysy mitä vain/, 'ydintä ei löydy');
+  // Omistaja 7.9.2026: avaus lyhennetään, koska sen yläpuolella on nyt
+  // kuplien ja aiempien keskustelujen loki.
+  const teksti = alkuTeksti + ydin + loppu;
+  assert.ok(teksti.length > 40 && teksti.length < 220, `tervehdys on ${teksti.length} merkkiä`);
+  // Ydin ladotaan omaksi elementikseen, jotta lihavointi ei vaadi
+  // HTML:ää viestivirtaan.
+  assert.match(lahde, /polloElementti\('b', 'pollo-tervehdys-ydin', TERVEHDYS_YDIN\)/);
+});
+
+test('lokista ladattu rivi ei estä tervehdystä eikä laske keskusteluksi', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  assert.match(
+    lahde,
+    /'\.pollo-viesti:not\(\.pollo-kuplaviesti\):not\(\.pollo-historiaviesti\)'/,
+  );
+  // Loki ladataan kerran, vanhimmasta uusimpaan ja istunnon omien
+  // viestien yläpuolelle.
+  assert.match(lahde, /this\.virta\.insertBefore\(viesti, eka\);/);
+  assert.match(lahde, /if \(this\.lokiLadattu \|\| !this\.virta\) return 0;/);
 });
