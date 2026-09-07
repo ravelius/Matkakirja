@@ -1182,4 +1182,110 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'Alaskaan menevästä tavarasta, ja kaupungissa elää satoja '
       + 'hirviä ja karhuja ihmisten seassa.',
   },
+  /*
+   * MONTERREY (7.9.2026, parvierä). Väitteet ovat samasta erästä
+   * kuin lehden tekstit (js/packs/kulttuuri-kategoriat.js, avain
+   * monterrey), ja ne on luettu en-Wikipedian raakateksteistä
+   * 7.9.2026 — uusia lähdehakuja ei tarvittu. Sisältölinjaus on
+   * spec-mantereet.md:n Meksiko-kohta: arkeologia, kulttuuri ja
+   * historia kantavat, nykyväkivaltaa ei käsitellä. Vuoden 1873
+   * kulma on introssa mukana.
+   */
+  Monterrey: {
+    intro: 'Monterrey on Nuevo Leónin pääkaupunki Koillis-Meksikossa, '
+      + 'noin 540 metrin korkeudessa Sierra Madre Orientalin juurella '
+      + 'ja parinsadan kilometrin päässä Texasin rajasta. Kaupungin '
+      + 'halki kulkee idästä länteen Santa Catarina -joki, joka on '
+      + 'pinnalta kuiva suurimman osan vuotta mutta virtaa maan alla. '
+      + 'Idässä kohoaa **Cerro de la Silla**, satulavuori, jonka '
+      + 'neljästä huipusta kaksi ja niiden välinen notko muodostavat '
+      + 'kaupungin tunnuksen.'
+      + '\n\n'
+      + 'Kaupunki syntyi kolmannella yrityksellä. Alberto del Canton '
+      + 'ja Luis Carvajal y de la Cuevan asutukset autioituivat, ja '
+      + 'vasta **Diego de Montemayor** sai 20. syyskuuta 1596 '
+      + 'kolmentoista perheen retkikunnallaan aikaan pysyvän '
+      + 'kaupungin Santa Lucían lähteen viereen. Espanjan vallan '
+      + 'aikana Monterrey pysyi pienenä ja välitti kauppaa San '
+      + 'Antonion, Tampicon ja Saltillon välillä. Isoisän matkavuonna '
+      + '1873 se oli 277-vuotias osavaltionpääkaupunki, jonka '
+      + 'rikkaus oli tullut rajan takaa: Yhdysvaltain sisällissodan '
+      + 'aikana puuvilla oli kulkenut näiden kauppahuoneiden kautta.'
+      + '\n\n'
+      + 'Terästehdas perustettiin 1900 ja teki kaupungista Meksikon '
+      + 'teollisuuden ytimen. Kun tehdas meni konkurssiin 1986, '
+      + 'alueesta tehtiin puisto, jossa masuunit seisovat yhä '
+      + 'paikoillaan.',
+    teksti: 'Monterrey on laaksossa vuorten välissä: idässä Cerro de '
+      + 'la Silla, lännessä piispanhiippoja muistuttava Cerro de las '
+      + 'Mitras, etelässä Loma Larga ja sen takana Sierra Madre '
+      + 'Orientalin kansallispuisto. Sisämaan ja matalan korkeuden '
+      + 'takia se on yksi Meksikon lämpimimmistä suurkaupungeista.'
+      + '\n\n'
+      + 'Kaupunki perustettiin 1596, mutta se kasvoi vasta '
+      + 'itsenäistymisen jälkeen, kun siitä tuli 1824 Nuevo Leónin '
+      + 'pääkaupunki ja rajakaupan solmukohta. Vuonna 1846 täällä '
+      + 'käytiin Meksikon–Yhdysvaltain sodan ensimmäinen suuri '
+      + 'taistelu. Panimo perustettiin 1890, rautatie tuli '
+      + 'vuosikymmentä myöhemmin ja terästehdas 1900.'
+      + '\n\n'
+      + 'Nykyään Monterrey on Meksikon toiseksi suurimman '
+      + 'metropolialueen keskus ja maan teollisuuden ydin: terästä, '
+      + 'sementtiä, lasia, autonosia ja olutta. Keskustan sydän on '
+      + 'Macroplaza, jonka pohjoispäässä on hallintopalatsi ja '
+      + 'eteläpäässä kaupungintalo; itälaidalta alkaa vanha '
+      + 'kortteliverkko Barrio Antiguo.',
+  },
+  /*
+   * MÉRIDA (7.9.2026, parvierä). Avain on laudan wiki-nimi
+   * 'Mérida (Meksiko)' (js/packs/northamerica.js), ei
+   * en-Wikipedian otsikko — sama käytäntö kuin New Yorkissa.
+   * Väitteet ovat samasta erästä kuin lehden tekstit
+   * (kulttuuri-kategoriat.js, avain merida). Sisältölinjaus on
+   * spec-mantereet.md: alkuperäiskansat kunnioittavasti ja elävinä,
+   * väkivaltainen historia tapahtumina ilman yksityiskohtia.
+   */
+  'Mérida (Meksiko)': {
+    intro: 'Mérida on Yucatánin osavaltion pääkaupunki ja koko '
+      + 'niemimaan kulttuurin ja talouden keskus. Se on noin 35 '
+      + 'kilometriä Meksikonlahden rannalta sisämaassa ja vain '
+      + 'yhdeksän metriä merenpinnan yläpuolella, tasaisella '
+      + 'kalkkikivialustalla, jolla ei ole jokia lainkaan: sadevesi '
+      + 'imeytyy kiveen ja kerääntyy cenote-kaivoihin.'
+      + '\n\n'
+      + 'Kaupunki rakennettiin 1542 mayakaupungin **Tʼhón** päälle ja '
+      + 'sen kivistä; espanjalaiset nimesivät sen Extremaduran '
+      + 'Méridan mukaan, koska rauniot muistuttivat heitä Rooman '
+      + 'Augusta Emeritasta. Siirtomaa-ajasta 1800-luvun puoliväliin '
+      + 'Mérida oli muurattu kaupunki. Isoisän matkavuonna 1873 '
+      + '**kastisota** oli yhä käynnissä: niemimaan luoteisosaa '
+      + 'hallitsi Méridasta käsin osavaltion hallinto ja kaakkoisosaa '
+      + 'itsenäinen mayavaltio Chan Santa Cruz, jonka Britannia oli '
+      + 'tunnustanut tosiasialliseksi valtioksi.'
+      + '\n\n'
+      + 'Samaan aikaan alkoi vaurastuminen: heneken-agaaven kuidusta '
+      + 'tehtiin köyttä koko maailman laivoille, ja siitä rahasta '
+      + 'rakennettiin Paseo de Montejon bulevardi kartanoineen. '
+      + 'Nykyään kolmasosa osavaltion väestöstä puhuu yucatekin '
+      + 'mayaa, ja se kuuluu kaupungin espanjassa.',
+    teksti: 'Mérida on Yucatánin niemimaan luoteisosassa. Katuruudukko '
+      + 'on poikkeuksellisen selkeä: parittomat kadut kulkevat idästä '
+      + 'länteen ja parilliset pohjoisesta etelään, ja kadut 60 ja 61 '
+      + 'rajaavat pääaukiota Plaza Grandea. Historiallinen keskusta on '
+      + 'yksi Amerikan suurimmista.'
+      + '\n\n'
+      + 'Espanjalaiset perustivat kaupungin 1542, ja sen katedraali '
+      + 'valmistui 1598. Yucatán julistautui välillä omaksi '
+      + 'tasavallakseen ja palasi Meksikoon 1848. Kastisota kesti '
+      + 'vuodesta 1847 pitkälle 1900-luvulle, ja samalla '
+      + 'henekenviljelmät tekivät niemimaasta rikkaan; niiden '
+      + 'työväeksi saapui 1905 yli tuhat korealaista siirtolaista.'
+      + '\n\n'
+      + 'Nykyään Mérida on osavaltion hallinnon, yliopistojen ja '
+      + 'tutkimuslaitosten kaupunki. Se oli ensimmäinen Amerikan '
+      + 'kulttuuripääkaupunki ja ainoa, joka on saanut arvon '
+      + 'kahdesti. Mayakulttuuri näkyy arjessa: puheessa, '
+      + 'Hanal Pixán -juhlassa ja ruoassa, jonka mausteena on '
+      + 'annatto ja kypsennystapana maakuoppa.',
+  },
 };

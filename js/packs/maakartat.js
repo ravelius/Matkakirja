@@ -14057,6 +14057,117 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Tahuichi Aguileran stadion', lat: -17.796100, lon: -63.183900 },
     ],
   },
+  /*
+   * MONTERREY (7.9.2026). Rajaus on noin 4,3 × 2,8 kilometriä
+   * Obispadon kukkulalta Barrio Antiguoon — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n monterrey-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat kolme
+   * perustamisyritystä ja Santa Lucían lähde, nimen alkuperä,
+   * Cerro de la Silla ja Fundidoran puisto; teemasivu kertoo
+   * Cumbres de Monterreyn kansallispuistosta, Chipinquestä,
+   * Grutas de Garcíasta ja Santa Catarina -joesta. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-monterrey.md, kohta E): Faro del Comercio on
+   * 70 metrin päässä katedraalista, MARCO 110 metrin päässä,
+   * Museo Metropolitano 175 metrin päässä ja Explanada de los
+   * Héroes 102 metrin päässä hallintopalatsista. Kaikki neljä
+   * mainitaan matkaoppaassa.
+   *
+   * VIIDEN KOHTEEN LÄHDE ON ES-WIKIPEDIA, koska englanninkielistä
+   * artikkelia ei ole lainkaan; se sanotaan jokaisen jutun
+   * lähderivillä (tarkistus-monterrey.md).
+   */
+  monterrey: {
+    polku: 'assets/kartat/monterrey-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 25.6820, etela: 25.6570, lansi: -100.3470, ita: -100.3040 },
+    esittely: 'Kartan alue ulottuu lännessä Obispadon kukkulalta '
+      + 'idässä Barrio Antiguoon. Alareunassa kaartaa Santa Catarina '
+      + '-joki, joka on pinnalta kuiva suurimman osan vuotta ja jakaa '
+      + 'kaupungin kahtia. Sen pohjoispuolella on tiivis ruutukaava, '
+      + 'jonka itäosassa kadut levenevät Macroplazan aukioksi. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * (katedraali), es-Wikipedian coordinates-rajapinnasta
+       * (Dulces Nombres) ja Nominatimista (muut) 7.9.2026, ja kaikki
+       * 28 väliä on mitattu haversinilla: pienin on 287 metriä
+       * (hallintopalatsi – Meksikon historian museo), toiseksi
+       * pienin 302 metriä (katedraali – Barrio Antiguo).
+       */
+      { nimi: 'Museo del Obispado', lat: 25.673324, lon: -100.342248 },
+      { nimi: 'La Purísiman kirkko', lat: 25.669728, lon: -100.326297 },
+      { nimi: 'Colegio Civil', lat: 25.674141, lon: -100.315768 },
+      { nimi: 'Nuevo Leónin hallintopalatsi', lat: 25.672615, lon: -100.308978 },
+      { nimi: 'Meksikon historian museo', lat: 25.671478, lon: -100.306412 },
+      { nimi: 'Dulces Nombresin kappeli', lat: 25.668333, lon: -100.308889 },
+      { nimi: 'Monterreyn katedraali', lat: 25.665600, lon: -100.309800 },
+      { nimi: 'Barrio Antiguo', lat: 25.665527, lon: -100.306786 },
+    ],
+  },
+  /*
+   * MÉRIDA (7.9.2026). Rajaus on noin 2,7 × 2,7 kilometriä Santa
+   * Anasta Santa Isabelin ermitaan — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n merida-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Tʼhó
+   * ja katedraalin kivet, Valkoisen kaupungin kaksi selitystä,
+   * kastisota ja Chan Santa Cruz sekä heneken ja Paseo de Montejo;
+   * teemasivu kertoo Yucatánin keittiöstä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KATEDRAALI, PASEO DE MONTEJO JA LUCAS DE GÁLVEZIN TORI OVAT
+   * RUUDUSSA MUTTA EIVÄT NUMEROITUJA: katedraali on noston 1
+   * loppuhuipennus, Paseo de Montejo noston 4 aihe ja tori
+   * etusivun ennen–nyt-parin aihe (New Yorkin sääntö).
+   *
+   * KOLME KOHDETTA JÄI POIS (tarkistus-merida.md, kohta F):
+   * kaupungintalo on 103 metrin päässä Casa de los Montejosta ja
+   * Santa Lucían puisto 188 metrin päässä Peón Contrerasin
+   * teatterista — molemmat alle 200 metrin säännön. Yucatánin
+   * hallintopalatsi mahtuisi juuri (206 ja 211 metriä), mutta
+   * Plaza Grandelta otetaan kartalle vain yksi kohde. Kaikki kolme
+   * mainitaan matkaoppaassa.
+   *
+   * KAIKKIEN KAHDEKSAN LÄHDE ON ES-WIKIPEDIA, koska
+   * englanninkielisiä artikkeleita ei ole; se sanotaan jokaisen
+   * jutun lähderivillä.
+   */
+  merida: {
+    polku: 'assets/kartat/merida-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 20.9790, etela: 20.9520, lansi: -89.6375, ita: -89.6085 },
+    esittely: 'Kartan alue kattaa koko siirtomaa-ajan Méridan. '
+      + 'Ruutukaava on poikkeuksellisen säännöllinen: parittomat '
+      + 'kadut kulkevat idästä länteen ja parilliset pohjoisesta '
+      + 'etelään, ja keskellä on Plaza Grande. Ainoa vino viiva on '
+      + 'Paseo de Montejo, joka lähtee ruudukosta luoteeseen. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit es-Wikipedian coordinates-rajapinnasta
+       * (Casa de los Montejo, Peón Contreras), artikkelin omasta
+       * koordinaattimallineesta (Santa Ana) ja Nominatimista (muut)
+       * 7.9.2026, ja kaikki 28 väliä on mitattu haversinilla:
+       * pienin on 368 metriä (Casa de los Montejo –
+       * kaupunginmuseo), toiseksi pienin 417 metriä.
+       */
+      { nimi: 'Santa Anan kirkko', lat: 20.975846, lon: -89.621209 },
+      { nimi: 'Peón Contrerasin teatteri', lat: 20.969489, lon: -89.622476 },
+      { nimi: 'La Mejoradan puisto', lat: 20.968346, lon: -89.616398 },
+      { nimi: 'Casa de los Montejo', lat: 20.966195, lon: -89.624388 },
+      { nimi: 'Méridan kaupunginmuseo', lat: 20.964452, lon: -89.621377 },
+      { nimi: 'San Juanin puisto ja kaari', lat: 20.962616, lon: -89.626035 },
+      { nimi: 'San Cristóbalin kirkko', lat: 20.961151, lon: -89.617410 },
+      { nimi: 'Santa Isabelin ermita', lat: 20.957247, lon: -89.629632 },
+    ],
+  },
 };
 
 /*

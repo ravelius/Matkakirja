@@ -93602,4 +93602,852 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MONTERREY (Opus 7.9.2026, parvierä) — P-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-monterrey.md ja sen riippumaton tarkistus
+   * tarkistus-monterrey.md (tuomio "kelpaa, kun kohtien A–F
+   * ratkaisut tehdään"; kaikki kuusi on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Monterrey", "Cerro de la Silla", "Fundidora Park",
+   * "Grutas de García", "Cerro de Chipinque", "Cumbres de Monterrey
+   * National Park", "Santiago Vidaurri", "Cabrito", "Machaca",
+   * "Macroplaza", "Faro del Comercio", "Museo de Arte Contemporáneo
+   * de Monterrey", "Barrio Antiguo".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu) kuten Guatemala Cityssä.
+   * Teemasivun id on vakioaihe 'luonto' (ui-apurit.js AIHE_IKONIT),
+   * koska uusia sivu-id:itä ei tehdä; sivun nimi "Vuoret, luolat ja
+   * kuiva joki" kertoo aiheen.
+   *
+   * MEKSIKON MAALEHTEÄ EI TOISTETA. Maalehti (maa-kategoriat.js,
+   * MEX) kertoo Hidalgosta ja Juárezista, Teotihuacánista, Monte
+   * Albánista, Chichén Itzásta ja El Tajínista, nikstamalisoinnista,
+   * molesta ja salsoista, mariachista ja corridosta sekä
+   * monarkkiperhosesta, cenote-kehästä, aksolotlista ja Copper
+   * Canyonista. Yksikään näistä ei ole tämän lehden aihe: oppaan
+   * ruokajakso käyttää siksi cabritoa, machacaa, semitaa ja
+   * capirotadaa, ja teemasivu Sierra Madre Orientalin omia vuoria.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: nimi Monterrey tulee Etymology-osion mukaan Gaspar de
+   *    Zúñigasta ja Galician Monterreistä. Geography-osion
+   *    lähteetön sivuhuomautus "kreivin vaimon mukaan" jätetään
+   *    pois; kansanetymologia "kuningasvuori" kerrotaan
+   *    nimenomaan kansanetymologiana.
+   *  - B: Macroplazan sijaluku maailman aukioiden joukossa on
+   *    lähteissä eri (Landmarks-osio: 8., "Macroplaza": 5.), joten
+   *    lehti kertoo vain pinta-alan 400 000 m² eikä sijalukua.
+   *  - C: Fundidoran pinta-ala kohdeartikkelista (114 ha vuonna
+   *    2001, 144 ha vuodesta 2010, 80 ha viheralaa); yleisartikkelin
+   *    pyöristetty 120 ha jätetään pois.
+   *  - D: Grutas de Garcían löytövuosi 1843 on vain "Monterrey"-
+   *    artikkelissa ja senkin lähde on kuollut matkailulinkki,
+   *    joten se kerrotaan lähteen tasolla eikä sidota löytäjän
+   *    nimeen samassa lauseessa.
+   *  - E: kohdekartan neljä lähintä naapuria (Faro del Comercio
+   *    70 m, MARCO 110 m, Museo Metropolitano 175 m, Explanada
+   *    102 m) pudotettiin 200 metrin säännöllä ja siirrettiin
+   *    matkaoppaaseen.
+   *  - F: nykyväkivalta, nykypolitiikka ja varallisuusvertailut
+   *    jätetään kokonaan pois (spec-mantereet.md, Meksiko-kohta).
+   *
+   * ENNEN JA NYT: pari EI tule matkakirjan valokuvataulusta
+   * (northamerica-valokuvat.js, monterrey), koska taulun vanha kuva
+   * on tehdaspostikortti 1912 ja uusi ilmakuva Macroplazalta — eri
+   * paikat. Pari haettiin erikseen Commonsista: sama näkymä
+   * Obispadon kukkulalta Cerro de la Sillaa kohti 1904 ja nykyään.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026). Oppaan
+   * sääjakso nojaa siksi en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen.
+   */
+  monterrey: [
+    {
+      id: 'kaupunki',
+      nimi: 'Monterrey',
+      johdanto: 'Kolme kertaa espanjalaiset yrittivät perustaa '
+        + 'kaupungin näiden vuorten väliin, ja kolmas onnistui. '
+        + 'Satulan muotoinen huippu on ollut siitä asti kaupungin '
+        + 'tunnus — ja tehtaista tuli sen toinen.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin. Ne ovat kolme laajaa yleiskuvaa: kaupunki
+       * satulavuoren juurella, keskustan siluetti ja laakso
+       * vuorten välissä.
+       */
+      kansikuvat: [],
+      /*
+       * AVAUSKARUSELLI: laajoja yleiskuvia kansikuvakaavan mukaan.
+       * Monterreylle ei ole generoitu herokuvia, joten kaikki
+       * kolme ovat aitoja valokuvia.
+       */
+      avauskuvat: [],
+      nostot: [
+        {
+          otsikko: 'Kolmas yritys jäi pystyyn',
+          teksti: 'Laaksoa kutsuttiin 1500-luvulla Extremaduran '
+            + 'laaksoksi. Ensimmäisenä sinne tuli Alberto del Canto, '
+            + 'joka nimesi paikan Santa Luciaksi; yritys kaatui. '
+            + 'Toisen teki Luis Carvajal y de la Cueva, joka oli '
+            + 'neuvotellut kuningas Filip II:n kanssa oman '
+            + 'kuningaskunnan pohjoiseen ja perusti 1582 asutuksen '
+            + 'San Luis Rey de Francia. Sekin autioitui, ja Nuevo '
+            + 'León oli kahdeksan vuotta tyhjä. Kolmannen yrityksen '
+            + 'teki Diego de Montemayor kolmentoista perheen '
+            + 'retkikunnalla 20. syyskuuta 1596. Hän valitsi paikan '
+            + 'Santa Lucían lähteen viereltä — siitä kohdasta lähtee '
+            + 'nykyään keskustan kanava.',
+          wiki: 'Monterrey',
+        },
+        {
+          otsikko: 'Kuningasvuori, joka onkin kreivi',
+          teksti: 'Espanjaksi Monterrey kääntyy kirjaimellisesti '
+            + 'kuningasvuoreksi, ja kansanetymologia liittää nimen '
+            + 'kaupunkia ympäröiviin vuoriin. Se ei pidä paikkaansa: '
+            + 'kaupunki on nimetty Gaspar de Zúñigan, Monterreyn '
+            + 'viidennen kreivin mukaan, joka oli Uuden Espanjan '
+            + 'varakuningas vuosina 1595–1603 ja jonka suku oli '
+            + 'kotoisin Monterreistä Galiciasta. Vuoret olivat silti '
+            + 'paikalla ennen nimeä. Ennen eurooppalaisia laaksossa '
+            + 'ei ollut valtiota vaan paimentolaisryhmiä, joista '
+            + 'kalliopiirrosten ja luolamaalausten perusteella on '
+            + 'tunnistettu neljä: azalapat, huachichilit, coahuiltecot '
+            + 'ja borradot.',
+          wiki: 'Monterrey',
+        },
+        {
+          otsikko: 'Satulan neljä huippua',
+          teksti: 'Cerro de la Silla, satulavuori, kohoaa kaupungin '
+            + 'itäpuolella ja on sen tunnus. Se on Sierra Madre '
+            + 'Orientalin esivuoristoa ja levittäytyy 60,5 '
+            + 'neliökilometrille kolmen kunnan alueelle. Huippuja on '
+            + 'neljä — Pico Antena, Pico Norte, Pico Sur ja Pico la '
+            + 'Virgen — ja niiden välinen notko tekee satulan. '
+            + 'Korkein on Pico Norte, 1 820 metriä; matalin Pico la '
+            + 'Virgen, 1 750. Vuori julistettiin luonnonmonumentiksi '
+            + '1991, ja huipulle nousee 5,3 kilometrin polku, jonka '
+            + 'kävelyyn menee noin kolme tuntia.',
+          wiki: 'Cerro de la Silla',
+        },
+        {
+          otsikko: 'Masuuni jäi puistoon seisomaan',
+          teksti: 'Fundidora Monterrey oli Latinalaisen Amerikan '
+            + 'ensimmäinen rauta- ja terästehdas. Se meni konkurssiin '
+            + '1986, alue pakkolunastettiin 1988 ja rakennustyöt '
+            + 'alkoivat 1989 — ensin suojelemalla historiallisesti '
+            + 'tärkeät rakennukset ja purkamalla muut. Puisto avattiin '
+            + '24. helmikuuta 2001 sadanneljäntoista hehtaarin '
+            + 'kokoisena, ja se sai lisänimen teollisen arkeologian '
+            + 'museoalue. Vuonna 2010 mukaan tuli 2,35 kilometrin '
+            + 'kanava, ja ala nousi 144 hehtaariin, josta 80 on '
+            + 'vihreää. Paikallaan seisovat yhä 27 suurta '
+            + 'teollisuusrakennelmaa ja 127 teräksentekokonetta.',
+          wiki: 'Fundidora Park',
+        },
+      ],
+      matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA: yksi aihe, joka täyttää ruudun.
+         * Cerro de la Silla on kaupungin oma erikoisuus ja toimii
+         * pienenä, koska satulan muoto erottuu siluettina.
+         */
+        kuva: null,
+        kappale: 'Monterrey on Nuevo Leónin pääkaupunki '
+          + 'Koillis-Meksikossa, 540 metrin korkeudessa Sierra Madre '
+          + 'Orientalin juurella. Kaupungin halki kulkee idästä '
+          + 'länteen Santa Catarina -joki, joka on pinnalta kuiva '
+          + 'suurimman osan vuotta mutta virtaa maan alla; se jakaa '
+          + 'kaupungin pohjois- ja eteläpuoleen. Idässä kohoaa Cerro '
+          + 'de la Silla, lännessä piispanhiippoja muistuttava Cerro '
+          + 'de las Mitras ja etelässä Loma Larga. Kaupunki on '
+          + 'Meksikon toiseksi suurimman metropolialueen keskus ja '
+          + 'maan teollisuuden ydin: terästä, sementtiä, lasia, '
+          + 'autonosia ja olutta. Keskustan sydän on Macroplaza, '
+          + 'neljänsadantuhannen neliömetrin aukio, jonka pohjoispäässä '
+          + 'on hallintopalatsi ja eteläpäässä kaupungintalo. Vanha '
+          + 'kortteliverkko Barrio Antiguo alkaa aukion itälaidalta.',
+        artikkeli: {
+          nimi: 'Matkailijan Monterrey',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa joki on kuiva, terästehdas on '
+            + 'puisto ja vuori on satula — ja jossa keskustan '
+            + 'kävelymatkat mitataan aukion pituudessa.',
+          nosto: 'Vuorelle rakennettiin köysirata 1900-luvun '
+            + 'jälkipuoliskolla. Vihkiäispäivänä 2. kesäkuuta 1961 '
+            + 'onnettomuudessa kuoli viisi ihmistä, joukossa radan '
+            + 'suunnitellut insinööri Jesús Fernández — ja samana '
+            + 'päivänä rata suljettiin lopullisesti. Yläasema seisoo '
+            + 'vuorella yhä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Monterrey on noin kahdensadan kilometrin '
+                + 'päässä Texasin rajasta etelään, ja koko kaupungin '
+                + 'historia on kiinni siitä: 1800-luvulla se välitti '
+                + 'kauppaa San Antonion, Tampicon ja Saltillon '
+                + 'välillä, ja nykyinen teollisuus nojaa samaan '
+                + 'sijaintiin. Rautatie tuli kaupunkiin vasta '
+                + '1800-luvun viimeisellä vuosikymmenellä. Keskustassa '
+                + 'liikkuminen on helppoa, koska kaikki on saman '
+                + 'aukion varrella: Macroplaza on lähes kilometrin '
+                + 'pitkä pohjoisesta etelään, ja sen päistä pääsee '
+                + 'kävellen sekä Barrio Antiguoon että Santa Lucían '
+                + 'kanavalle.',
+            },
+            {
+              otsikko: 'Macroplaza päästä päähän',
+              teksti: 'Aukio rakennettiin 1980-luvun alussa, ja sen '
+                + 'kehitystä johti Ángela Alessio Robles; tieltä '
+                + 'purettiin vanhoja taloja. Pinta-alaa on 400 000 '
+                + 'neliömetriä — sijaluvusta maailman aukioiden '
+                + 'joukossa lähteet ovat eri mieltä, joten sitä ei '
+                + 'kannata uskoa kummallakaan tavalla. Pohjoispäässä '
+                + 'ovat hallintopalatsi ja sen edusaukio Explanada de '
+                + 'los Héroes, keskellä Neptunuksen suihkulähde ja '
+                + 'uponnut puutarha puhujannurkkineen, eteläpäässä '
+                + 'kaupungintalo ja Rufino Tamayon Homenaje al Sol. '
+                + 'Katedraalia vastapäätä nousee Luis Barragánin ja '
+                + 'Raúl Ferreran Faro del Comercio, vuonna 1984 '
+                + 'kauppakamarin satavuotisjuhlaan rakennettu 69,8 '
+                + 'metriä korkea monumentti, joka heittää iltaisin '
+                + 'vihreää laseria kaupungin yli.',
+            },
+            {
+              otsikko: 'Museot ja vanha kortteli',
+              teksti: 'MARCO eli nykytaiteen museo on katedraalin '
+                + 'kulmalla; Ricardo Legorretan minimalistinen '
+                + 'rakennus avattiin 1991, ja sisäänkäynnin edessä '
+                + 'seisoo Juan Sorianon neljä tonnia painava '
+                + 'pronssikyyhky La Paloma. Plaza Zaragozan laidalla '
+                + 'vanhassa kaupungintalossa toimii Museo '
+                + 'Metropolitano. Meksikon historian museo, Museo del '
+                + 'Palacio ja Koillisen museo muodostavat kolmen '
+                + 'museon ryhmän kanavan varrella. Barrio Antiguon '
+                + 'mukulakivikaduilla on 1700-luvun ja 1800-luvun '
+                + 'lopun taloja; osa kaduista, kuten Calle Morelos, '
+                + 'on muutettu kävelykaduiksi vuodesta 2013 alkaneessa '
+                + 'kunnostuksessa.',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Kaupungin perinteisin ruoka on cabrito, '
+                + 'hiilloksella paistettu kilinpoika. Tunnetuin tapa '
+                + 'on cabrito al pastor: ruho avataan litteäksi, '
+                + 'pistetään vartaaseen ja paistetaan hitaasti '
+                + 'hiilloksen vieressä ilman mausteita, jolloin maku '
+                + 'tulee hitaasti palavasta hiilestä. Toinen '
+                + 'tunnusruoka on machaca, kuivattu ja maustettu '
+                + 'liha, joka liotetaan ja murennetaan; aamiaisella '
+                + 'se paistetaan munan kanssa ja tarjotaan suurilla '
+                + 'vehnätortilloilla. Viikonloppuisin perheet '
+                + 'grillaavat carne asadaa. Paikallisia ovat myös '
+                + 'hapattamaton semita-leipä ja capirotada, jälkiruoka '
+                + 'leivästä, juustosta, rusinoista, maapähkinöistä ja '
+                + 'kiteytetystä ruokosokerista.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Monterrey-'
+                + 'artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia. Ilmasto on puolikuiva, ja kaupunki '
+                + 'on yksi Meksikon lämpimimmistä suurkaupungeista, '
+                + 'koska se on sisämaassa ja matalalla. Elokuun '
+                + 'keskiylin on 36 astetta ja keskialin 24; '
+                + 'tammikuussa vastaavat luvut ovat 22 ja 10. Sade on '
+                + 'talvella niukkaa ja yleisintä touko–syyskuussa. '
+                + 'Vuodenajat eivät ole selvärajaisia: lämmin kausi '
+                + 'voi alkaa helmikuussa ja jatkua syyskuuhun, ja '
+                + 'tammikuussakin voi olla kolmekymmentä astetta. '
+                + 'Lumi on hyvin harvinaista — viimeksi sitä satoi '
+                + 'helmikuussa 2021.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Cerro de la Silla',
+                tahdet: 3,
+                selite: 'Neljä huippua ja niiden välinen notko, '
+                  + 'luonnonmonumentti vuodesta 1991.',
+              },
+              {
+                mita: 'Fundidoran puisto',
+                tahdet: 3,
+                selite: 'Latinalaisen Amerikan ensimmäinen '
+                  + 'terästehdas 144 hehtaarin puistona.',
+              },
+              {
+                mita: 'Macroplaza',
+                tahdet: 3,
+                selite: 'Neljäsataatuhatta neliömetriä aukiota '
+                  + 'hallintopalatsista Tamayon aurinkoon.',
+              },
+              {
+                mita: 'Grutas de García',
+                tahdet: 2,
+                selite: 'Merifossiileja luolan seinissä '
+                  + 'neljänkymmenen kilometrin päässä.',
+              },
+              {
+                mita: 'Barrio Antiguo',
+                tahdet: 2,
+                selite: 'Mukulakiviä ja 1700-luvun taloja '
+                  + 'Macroplazan itälaidalla.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5
+             * ja teemasivun nostossa neljä.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Kesä on kuuma',
+                teksti: 'Elokuun keskiylin on 36 astetta eikä yökään '
+                  + 'laske 24:ää alemmas; kävelykierrokset kannattaa '
+                  + 'ajoittaa aamuun tai iltaan.',
+              },
+              {
+                otsikko: 'Kuiva joki ei ole aina kuiva',
+                teksti: 'Santa Catarina on pinnalta kuiva suurimman '
+                  + 'osan vuotta, mutta rankkasateilla se on tulvinut '
+                  + 'yli — pahiten 1988 ja 2010.',
+              },
+              {
+                otsikko: 'Vuorille tarvitaan aikaa',
+                teksti: 'Cerro de la Sillan huipulle on 5,3 '
+                  + 'kilometrin polku ja noin kolmen tunnin nousu; '
+                  + 'köysirataa ei ole ollut vuoden 1961 jälkeen.',
+              },
+              {
+                otsikko: 'Luolissa on viileää',
+                teksti: 'Grutas de Garcían lämpötila pysyy noin '
+                  + 'kahdeksassatoista asteessa ympäri vuoden, vaikka '
+                  + 'ulkona olisi kolmekymmentäviisi.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Vuoret, luolat ja kuiva joki',
+      johdanto: 'Kaupunkia ympäröi vuorimuuri, jonka sisällä on '
+        + 'kansallispuisto, kanjoneita ja luolasto, jonka seinissä on '
+        + 'merikotiloita. Keskeltä kulkee joki, jota ei useimmiten näy.',
+      tehtava: {
+        kysymys: 'Miksi Grutas de Garcían luolien seinistä löytyy '
+          + 'simpukan- ja kotilonkuoria?',
+        vaihtoehdot: [
+          'ne kannettiin sinne uhrilahjoiksi',
+          'luolat olivat esihistoriallisella ajalla meren alla',
+          'ne ovat tippukiviä, jotka muistuttavat kuoria',
+          'joki toi ne tulvien mukana',
+        ],
+        oikea: 1,
+        fakta: 'Luolat syntyivät 50–60 miljoonaa vuotta sitten, ja '
+          + 'meri peitti ne pitkään ennen kuin vuoret nousivat.',
+      },
+      nostot: [
+        {
+          otsikko: 'Biosfäärialue kaupungin kyljessä',
+          teksti: 'Kaupungin eteläpuolella kohoavat Sierra Madre '
+            + 'Orientalin vuoret kuuluvat Cumbres de Monterreyn '
+            + 'kansallispuistoon, joka on ollut Unescon MAB-ohjelman '
+            + 'biosfäärialue vuodesta 2006. Puiston sisällä on '
+            + 'kanjoneita, polkuja ja teitä, jotka kulkevat vuoroin '
+            + 'aavikon ja metsän läpi. Tunnetuimmat kohteet ovat La '
+            + 'Huasteca lännessä ja Potrero Chico koillisessa, joista '
+            + 'kummastakin on tullut kansainvälisen tason '
+            + 'kalliokiipeilypaikka. Matacanesin kymmenen tunnin '
+            + 'reitillä laskeudutaan köysillä, kahlataan maanalaisia '
+            + 'jokia ja ohitetaan putouksia. Cola de Caballo, '
+            + 'hevosenhäntä, putoaa noin 35 kilometriä etelämpänä.',
+          wiki: 'Cumbres de Monterrey National Park',
+        },
+        {
+          otsikko: 'Kotkien töyhtö',
+          teksti: 'Cerro de Chipinque nousee 2 229 metriin kolmen '
+            + 'kunnan rajalla ja on kaupungin toinen tunnusvuori. '
+            + 'Nimen arvellaan tulevan nahuatlin sanasta chichipinqui, '
+            + 'pieni sade, tai alkuperäiskansan päällikön nimestä. '
+            + 'Ekologinen puisto on ollut olemassa vuodesta 1992, se '
+            + 'on avoinna joka päivä kello kuudesta kahteenkymmeneen, '
+            + 'ja siellä työskentelee 22 metsänvartijaa. Alue on '
+            + '1 625 hehtaaria, mutta yleisölle on avoinna vain noin '
+            + 'kolmesataa; korkein huippu on nimeltään Copete de las '
+            + 'Aguillas, kotkien töyhtö. Metsä on mäntyä ja tammea, ja '
+            + 'siellä elää mustakarhuja, kojootteja, nasuja ja '
+            + 'valkohäntäpeuroja.',
+          wiki: 'Cerro de Chipinque',
+        },
+        {
+          otsikko: 'Kahdeksas ihme kalliossa',
+          teksti: 'Grutas de García on luolasto Garcían kunnassa. '
+            + 'Luolat syntyivät 50–60 miljoonaa vuotta sitten, ja '
+            + 'esihistoriallisella ajalla ne olivat meren alla — siksi '
+            + 'seinistä löytyy simpukan- ja kotilonkuoria. Luolasto '
+            + 'pysyi piilossa, kunnes fray Juan Antonio de Sobrevilla '
+            + 'löysi sen satunnaisella vuoristoretkellä; en-Wikipedia '
+            + 'ajoittaa löydön vuoteen 1843. Sisältä laskeutuu kaksi '
+            + 'reittiä: toinen 2,5 kilometriä ja kuusitoista salia, '
+            + 'toinen kilometrin ja yksitoista. Muodostumilla on '
+            + 'nimet — valon sali, jonka katon kivi päästää ulkovaloa '
+            + 'läpi, ja kahdeksas ihme, jossa tippukivi ja pisarakivi '
+            + 'ovat kasvaneet yhteen pylvääksi.',
+          wiki: 'Grutas de García',
+        },
+        {
+          otsikko: 'Joki, jota ei näy',
+          teksti: 'Santa Catarina halkoo kaupungin idästä länteen ja '
+            + 'jakaa sen kahtia. Pinnalla se on kuiva suurimman osan '
+            + 'vuotta, mutta vesi virtaa maan alla, ja lopulta se '
+            + 'laskee San Juan -joen kautta Rio Grandeen. Kuiva uoma '
+            + 'ei tarkoita vaaratonta uomaa. Syyskuussa 1988 '
+            + 'hurrikaani Gilbert nosti joen yli äyräiden, ja yli sata '
+            + 'ihmistä kuoli. Kesäkuun 30. ja heinäkuun 2. päivän '
+            + 'välillä 2010 hurrikaani Alex toi 72 tunnissa yli 584 '
+            + 'millimetriä sadetta, paikoin lähes metrin — kolmin- tai '
+            + 'nelinkertaisesti Gilbertiin verrattuna. Vettä tuli '
+            + 'saman verran kuin tavallisesti koko vuonna.',
+          wiki: 'Monterrey',
+        },
+      ],
+    },
+  ],
+  /*
+   * MÉRIDA (Opus 7.9.2026, parvierä) — P-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-merida.md ja sen riippumaton tarkistus
+   * tarkistus-merida.md (tuomio "kelpaa, kun kohtien A–G ratkaisut
+   * tehdään"; kaikki seitsemän on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Mérida, Yucatán", "Cathedral of Mérida, Yucatán", "T'ho",
+   * "Caste War of Yucatán", "Agave fourcroydes", "Paseo de Montejo",
+   * "Cochinita pibil", "Papadzules", "Sopa de lima",
+   * "Dzibilchaltun", "Uxmal", "Progreso, Yucatán", "Celestún",
+   * "Jarana yucateca". Kohdekartan kohteiden lähde on es-Wikipedia,
+   * koska englanninkielisiä artikkeleita ei ole (ks. maakartat.js).
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu) kuten Guatemala Cityssä.
+   * Teemasivun id on vakioaihe 'ruoka'.
+   *
+   * MEKSIKON MAALEHTEÄ EI TOISTETA — ja tämä on tässä kaupungissa
+   * tavallista tiukempi rajaus. Maalehti (maa-kategoriat.js, MEX)
+   * kertoo jo CHICHÉN ITZÁN käärmevarjosta ja CHICXULUBIN
+   * cenote-kehästä, ja molemmat ovat myös karttanostoja
+   * (maastokohteet-mex.js). Kumpaakaan ei siis käsitellä täällä,
+   * vaikka molemmat ovat Méridan lähellä. Sama koskee maalehden
+   * ruokasivua (nikstamalisointi, mole, salsat, Unescon luettelo):
+   * tämän lehden ruokasivu pysyy Yucatánin omissa ruoissa, joita
+   * maalehdessä ei ole (cochinita pibil, papadzules, sopa de lima,
+   * panuchos ja salbutes, queso relleno).
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: katedraalin iästä on kolme eri väitettä. Lehti käyttää
+   *    kohdeartikkelia (alku 1561 tai 1562 — artikkeli antaa
+   *    molemmat, valmis 1598, Amerikan TOINEN Santo Domingon
+   *    jälkeen) ja sanoo lukijalle, että yleisartikkeli väittää
+   *    sitä ensimmäiseksi.
+   *  - B: liikanimestä "Valkoinen kaupunki" on kaksi selitystä
+   *    (en: kalkkikivi, kansanperinteenä segregaatio; es:
+   *    historioitsija Antochiw'n mukaan nimenomaan segregaatio).
+   *    Lehti kertoo molemmat JA sen tosiasian, että ensimmäiset
+   *    kaaret tilattiin vasta 1690.
+   *  - C: kastisodan uhriluvusta ei anneta yhtä lukua — leipäteksti
+   *    sanoo 40 000–50 000, infobox yli 300 000, ja ero kerrotaan.
+   *  - D: Dzibilchaltúnin päiväntasausvaraus säilytetään oppaassa
+   *    sanatarkasti (arkeologista merkkiä katselupaikasta ei ole).
+   *  - E: jarana-artikkelista otetaan vain rakenteelliset piirteet,
+   *    ei sen omia historiantulkintoja.
+   *  - F: kohdekartan kolme lähintä naapuria jätettiin pois
+   *    (ks. maakartat.js:n merida-lohko).
+   *  - G: nykypolitiikka ja turvallisuusvertailut jätetään pois.
+   *
+   * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+   * (northamerica-valokuvat.js, merida), jossa se on jo tarkistettu
+   * — vanha puoli on Lucas de Gálvezin tori vuoden 1901
+   * stereokuvassa ja uusi sama tori nykyään. Selitteet on
+   * kirjoitettu uudestaan yhdeksi virkkeeksi reseptin mukaan.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026). Oppaan
+   * sääjakso nojaa siksi en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen.
+   */
+  merida: [
+    {
+      id: 'kaupunki',
+      nimi: 'Mérida',
+      johdanto: 'Espanjalaiset rakensivat kaupunkinsa mayakaupungin '
+        + 'päälle ja sen kivistä. Neljäsataa vuotta myöhemmin mayoja '
+        + 'on yhä enemmistö — ja kolmasosa osavaltion väestöstä puhuu '
+        + 'yucatekia.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin. Ne ovat kolme laajaa yleiskuvaa: Plaza Grande,
+       * katedraali aukion laidalla ja Paseo de Montejon bulevardi.
+       */
+      kansikuvat: [],
+      /*
+       * AVAUSKARUSELLI: laajoja yleiskuvia kansikuvakaavan mukaan.
+       * Méridalle ei ole generoitu herokuvia, joten kaikki kolme
+       * ovat aitoja valokuvia.
+       */
+      avauskuvat: [],
+      nostot: [
+        {
+          otsikko: 'Viiden kukkulan kaupunki',
+          teksti: 'Ennen Méridaa paikalla oli mayakaupunki Tʼhó, '
+            + 'jota kutsuttiin myös nimellä Ichcaanzihó, viiden '
+            + 'kukkulan kaupunki — nimi viittasi sen pyramideihin. '
+            + 'Kaupungin perustivat 1542 espanjalaiset valloittajat, '
+            + 'joiden joukossa olivat Francisco de Montejo nuorempi ja '
+            + 'Juan de la Cámara. Nimen he ottivat Extremaduran '
+            + 'Méridasta, koska Tʼhón rauniot muistuttivat heitä '
+            + 'Rooman Augusta Emeritan raunioista. Uudet rakennukset '
+            + 'tehtiin vanhan kaupungin veistetyistä kivistä, ja niitä '
+            + 'näkee yhä katedraalin seinissä. Kiviä otettiin '
+            + 'mayatemppelistä nimeltä Yajam Cumu, ja työn tekivät '
+            + 'mayat itse — kahden heistä nimet tunnetaan, Francisco '
+            + 'Pool ja Diego Can.',
+          wiki: 'Mérida (Meksiko)',
+        },
+        {
+          otsikko: 'Miksi kaupunkia sanotaan valkoiseksi',
+          teksti: 'Liikanimi on La Ciudad Blanca, ja selityksiä on '
+            + 'kaksi. Englanninkielinen Wikipedia sanoo sen johtuvan '
+            + 'siirtomaatalojen kalkkikivestä — kaupunki näkyy '
+            + 'avaruudesta valkeahkona läikkänä vihreän metsän '
+            + 'keskellä, ja sama liikanimi on Arequipalla ja '
+            + 'Popayánilla. Kansanperinne kertoo toisin: että '
+            + 'kaupunkiin sai alun perin asua vain eurooppalaisia ja '
+            + 'että sisääntulokaaret rakennettiin sitä varten. '
+            + 'Espanjankielinen Wikipedia pitää tätä historioitsija '
+            + 'Michel Antochiw Kolpaan nojaten oikeana selityksenä. '
+            + 'Ajoitus ei silti täsmää: ensimmäiset kaaret tilattiin '
+            + 'vasta 1690, lähes 150 vuotta perustamisen jälkeen.',
+          wiki: 'Mérida (Meksiko)',
+        },
+        {
+          otsikko: 'Sota, joka kesti isoisän koko elämän',
+          teksti: 'Kastisota alkoi 1847, kun heneken- ja '
+            + 'sokeriviljelmien laajeneminen oli syönyt mayojen '
+            + 'yhteismaita ja ajanut suuren osan velkatyöhön '
+            + 'haciendoille. Jacinto Pat kirjoitti 1848 haluavansa '
+            + '"vapautta eikä sortoa, koska ennen meidät alistettiin '
+            + 'monilla maksuilla ja veroilla". Keväällä 1848 mayat '
+            + 'hallitsivat lähes koko Yucatánia paitsi muurattuja '
+            + 'Campecheä ja Méridaa. Piiritys purkautui yhtäkkiä, '
+            + 'eivätkä historioitsijat ole yksimielisiä syystä: '
+            + 'toisten mukaan joukot lähtivät kylvämään peltojaan, '
+            + 'toisten mukaan muona loppui. Vuodesta 1850 kaakossa oli '
+            + 'itsenäinen mayavaltio Chan Santa Cruz, jonka Britannia '
+            + 'tunnusti tosiasialliseksi valtioksi.',
+          wiki: 'Caste War of Yucatán',
+        },
+        {
+          otsikko: 'Vihreä kulta ja bulevardi',
+          teksti: 'Heneken on agaave, jonka lehdistä irrotetusta '
+            + 'kuidusta tehdään köyttä ja narua. Laji on steriili '
+            + 'risteymä, joten sitä ei lisätä siemenistä vaan '
+            + 'juurivesoista; lehdet ovat puolentoista metrin mittaisia '
+            + 'ja niiden kärjessä on tummanruskea piikki. Kuitu ei ole '
+            + 'yhtä laadukasta kuin sisal, mutta se riitti tekemään '
+            + 'Yucatánista rikkaan: 1800-luvun lopulla puhuttiin '
+            + 'vihreästä kullasta. Méridassa ei ollut yhtään bulevardia, '
+            + 'joten kuvernööri Guillermo Palominon kaudella syntyi '
+            + 'ajatus rakentaa sellainen. Tammikuussa 1888 aloitettiin '
+            + 'Paseo de Montejo, yli kuusi kilometriä pitkä ja '
+            + 'ranskalaisen bulevardin mallinen katu, jonka varteen '
+            + 'nousivat kartanot.',
+          wiki: 'Paseo de Montejo',
+        },
+      ],
+      matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA: yksi aihe, joka täyttää ruudun.
+         * Katedraalin kaksi tornia ovat kaupungin oma erikoisuus ja
+         * toimivat pienenä, koska muoto on yksinkertainen.
+         */
+        kuva: null,
+        kappale: 'Mérida on Yucatánin osavaltion pääkaupunki ja koko '
+          + 'niemimaan kulttuurin ja talouden keskus. Se on hieman '
+          + 'sisämaassa, noin 35 kilometriä Meksikonlahden rannalta, '
+          + 'ja vain yhdeksän metriä merenpinnan yläpuolella. '
+          + 'Kaupungin katuruudukko on poikkeuksellisen selkeä: '
+          + 'parittomat kadut kulkevat idästä länteen ja parilliset '
+          + 'pohjoisesta etelään, ja kadut 60 ja 61 rajaavat '
+          + 'pääaukiota Plaza Grandea. Historiallinen keskusta on '
+          + 'Amerikan suurimpia — johdantoartikkelin mukaan maanosan '
+          + 'kolmanneksi suurin. Ympäröivällä maalla ei ole juuri '
+          + 'pintavettä lainkaan: sadevesi imeytyy kalkkikiveen ja '
+          + 'kerääntyy cenote-kaivoihin. Kaupungin kulttuuri on '
+          + 'mayojen ja espanjalaisten sekoitus, ja se kuuluu '
+          + 'kaikessa — puheessa, ruoassa ja juhlissa. Mérida oli '
+          + 'ensimmäinen Amerikan kulttuuripääkaupunki ja ainoa, joka '
+          + 'on saanut arvon kahdesti.',
+        artikkeli: {
+          nimi: 'Matkailijan Mérida',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa osoite on kaksi numeroa, ruoka '
+            + 'maistuu annatolta ja kalkkikiven alla kulkevat joet, '
+            + 'joita ei näy maan päällä.',
+          nosto: 'Kaupungin espanja kuulostaa erilaiselta kuin muualla '
+            + 'Meksikossa, koska se on saanut vaikutteita yucatekin '
+            + 'mayasta — kielestä, jota puhuu kolmasosa osavaltion '
+            + 'väestöstä. Siinä on ejektiivisiä konsonantteja ja '
+            + 'suhuäänteitä, joita merkitään kirjaimella x. Yucatánin '
+            + 'espanja on myös säilyttänyt sanoja, jotka ovat muualta '
+            + 'kadonneet.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Mérida on niemimaan solmukohta: pohjoisessa on '
+                + 'Progreso, idässä Valladolid ja Tizimín, lännessä '
+                + 'Celestún. Kaupungin oma satama on Progreso, jonka '
+                + 'Juan Miguel Castro perusti 1872, koska vanha Sisal '
+                + 'oli liian kaukana; niemimaan ensimmäinen '
+                + 'rautatiekisko oli laskettu La Mejoradan puistoon '
+                + 'kaksi vuotta aiemmin. Keskustassa liikkuminen on '
+                + 'helppoa, kun ruudukon logiikan oppii: osoite on '
+                + 'kaksi numeroa, ensin katu ja sitten poikkikadut '
+                + 'joiden välissä ollaan. Varakkaammat kaupunginosat '
+                + 'ovat pohjoisessa, tiiveimmin asutut etelässä.',
+            },
+            {
+              otsikko: 'Plaza Grande ja sen laidat',
+              teksti: 'Pääaukion itälaidalla on katedraali. Sen '
+                + 'rakentaminen alkoi kohdeartikkelin mukaan 1561 tai '
+                + '1562 — artikkeli antaa molemmat vuodet — ja se '
+                + 'valmistui 1598. Sama artikkeli laskee sen Amerikan '
+                + 'toiseksi valmistuneeksi katedraaliksi Santo '
+                + 'Domingon jälkeen, kun taas kaupunkiartikkeli sanoo '
+                + 'sitä mantereen ensimmäiseksi; kannattaa siis '
+                + 'suhtautua ensimmäisyysväitteisiin varauksella. '
+                + 'Julkisivun vaakuna on oma tarinansa: espanjalainen '
+                + 'kilpi hakattiin itsenäistymisen jälkeen pois, '
+                + 'tilalle tuli 1824 Meksikon kotka, ja lopulta koko '
+                + 'vaakuna haudattiin sementin alle — se kaivettiin '
+                + 'esiin vasta myöhemmin. Aukion muilla laidoilla '
+                + 'ovat kaupungintalo, Yucatánin hallintopalatsi ja '
+                + 'Casa de los Montejo.',
+            },
+            {
+              otsikko: 'Pohjoiseen bulevardia pitkin',
+              teksti: 'Paseo de Montejo lähtee keskustasta '
+                + 'luoteeseen ja on yli kuusi kilometriä pitkä. Sen '
+                + 'varrella ovat henekenkauden kartanot, muun muassa '
+                + 'Las Casas Gemelas eli kaksoistalot, jotka Camilo ja '
+                + 'Ernesto Cámara Zavala saivat valmiiksi 1911 ja '
+                + 'joissa yhä asutaan. MACAY-museo pystyttää kadulle '
+                + 'joka vuosi uuden veistosnäyttelyn, jossa on töitä '
+                + 'Meksikosta ja yhdestä toisesta maasta; näyttely on '
+                + 'esillä kymmenen kuukautta. Santa Lucían puisto '
+                + 'kadun eteläpäässä ja Peón Contrerasin teatteri ovat '
+                + 'kävelymatkan päässä, ja teatterissa soittaa '
+                + 'Yucatánin sinfoniaorkesteri.',
+            },
+            {
+              otsikko: 'Retket kaupungin ulkopuolelle',
+              teksti: 'Dzibilchaltún on kuudentoista kilometrin '
+                + 'päässä pohjoisessa. Sen tunnetuin rakennus on '
+                + 'Seitsemän nuken temppeli, joka sai nimensä '
+                + '1950-luvulla myöhemmän pyramidin alta löytyneistä '
+                + 'seitsemästä pienestä kuvasta. Kevätpäiväntasauksena '
+                + 'paikalle kokoontuu väkeä katsomaan auringonnousua '
+                + 'oviaukkojen läpi — mutta artikkeli huomauttaa, '
+                + 'ettei mikään arkeologinen rakennepiirre merkitse '
+                + 'katselupaikkaa, joten yhteys temppelin suuntauksen '
+                + 'ja päiväntasausten välillä on hyvin '
+                + 'epätodennäköinen. Uxmal on 62 kilometriä etelässä; '
+                + 'sen Puuc-tyylin friisit esittävät mayamajan '
+                + 'ruokoseiniä ja olkikattoja. Celestúnin '
+                + 'biosfäärialue lännessä on amerikanflamingojen '
+                + 'talvikoti ja yli kahdensadan lintulajin '
+                + 'levähdyspaikka.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Mérida-'
+                + 'artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia. Ilmasto on trooppinen savanni, ja '
+                + 'kaupunki on pasaativyöhykkeessä lähellä Kravun '
+                + 'kääntöpiiriä, joten tuuli tulee idästä. Vuoden '
+                + 'keskiylin on 33,5 astetta: joulukuun 30,6:sta '
+                + 'toukokuun 36,3:een, ja iltapäivällä lämpötila '
+                + 'nousee usein yli kolmenkymmenenkahdeksan. Alimmat '
+                + 'ovat 17,2 ja 21,7 asteen välillä. Sisämaan '
+                + 'sijainnin takia Méridassa on tavallisesti pari '
+                + 'astetta kuumempaa kuin rannikolla. Sadekausi '
+                + 'kestää kesäkuusta lokakuuhun, ja silloin alueeseen '
+                + 'vaikuttavat myös itäiset aallot ja trooppiset '
+                + 'myrskyt.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Plaza Grande',
+                tahdet: 3,
+                selite: 'Katedraali, kaupungintalo, hallintopalatsi '
+                  + 'ja Casa de los Montejo samalla aukiolla.',
+              },
+              {
+                mita: 'Paseo de Montejo',
+                tahdet: 3,
+                selite: 'Kuusi kilometriä bulevardia ja '
+                  + 'henekenkauden kartanoita.',
+              },
+              {
+                mita: 'Peón Contrerasin teatteri',
+                tahdet: 2,
+                selite: 'Vuoden 1908 eklektinen oopperatalo, jossa '
+                  + 'muusat on maalattu kupoliin.',
+              },
+              {
+                mita: 'Dzibilchaltún',
+                tahdet: 2,
+                selite: 'Seitsemän nuken temppeli ja Xlakahin '
+                  + 'cenote kuudentoista kilometrin päässä.',
+              },
+              {
+                mita: 'Celestúnin biosfäärialue',
+                tahdet: 2,
+                selite: 'Kuudensadan neliökilometrin kosteikko ja '
+                  + 'flamingojen talvikoti.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Toukokuu on kuumin',
+                teksti: 'Toukokuun keskiylin on 36,3 astetta ja '
+                  + 'iltapäivisin ylitetään usein kolmekymmentä-'
+                  + 'kahdeksan; aamu on paras aika kävellä.',
+              },
+              {
+                otsikko: 'Sadekausi kesä–lokakuu',
+                teksti: 'Samaan aikaan alueeseen vaikuttavat myös '
+                  + 'trooppiset myrskyt, joten sateet tulevat '
+                  + 'ryöppyinä eivätkä tihkuna.',
+              },
+              {
+                otsikko: 'Osoite on kaksi numeroa',
+                teksti: 'Parittomat kadut kulkevat idästä länteen ja '
+                  + 'parilliset pohjoisesta etelään — ilman toista '
+                  + 'numeroa osoite ei kerro paikasta mitään.',
+              },
+              {
+                otsikko: 'Habanero on tulinen',
+                teksti: 'Chiliä tarjotaan useimpien ruokien kanssa '
+                  + 'joko kokonaisena tai soseena; sen voi jättää '
+                  + 'sivuun, eikä ruoka menetä makuaan.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Jukatanin oma keittiö',
+      johdanto: 'Yucatánin ruoka ei maistu siltä, mitä useimmat '
+        + 'pitävät meksikolaisena: mausteena on annatto, kypsennys '
+        + 'tapahtuu maakuopassa ja kastikkeen pohja on '
+        + 'kurpitsansiemen.',
+      tehtava: {
+        kysymys: 'Mikä antaa cochinita pibilille sen kirkkaan '
+          + 'poltetun oranssin värin?',
+        vaihtoehdot: [
+          'banaaninlehti',
+          'annatto eli achiote',
+          'katkeraappelsiini',
+          'habanerochili',
+        ],
+        oikea: 1,
+        fakta: 'Kova annattosiemen jauhetaan muiden mausteiden kanssa '
+          + 'punertavaksi tahnaksi, jota kutsutaan nimellä recado '
+          + 'rojo.',
+      },
+      nostot: [
+        {
+          otsikko: 'Possu maan alla',
+          teksti: 'Cochinita pibil on Yucatánin tunnetuin ruoka. '
+            + 'Sianliha liotetaan happamaan sitrusmehuun — '
+            + 'yucatekilaisissa resepteissä aina sevillan- eli '
+            + 'katkeraappelsiiniin — ja siihen lisätään annatto, joka '
+            + 'antaa kirkkaan poltetun oranssin värin. Liha kääritään '
+            + 'banaaninlehteen ja paahdetaan hitaasti píib-kuopassa, '
+            + 'jonka pohjalla palaa tuli. Sana cochinita tarkoittaa '
+            + 'porsasta, joten aito cochinita pibil on kokonainen '
+            + 'maitoporsas; nykyään käytetään usein lapaa tai '
+            + 'ulkofileetä. Hapan marinadi ja pitkä kypsennysaika '
+            + 'mureuttavat myös sitkeän lihan. Ruoka tarjotaan '
+            + 'keltaisten maissitortillojen, punaisten etikkasipulien, '
+            + 'papujen ja habanerojen kanssa.',
+          wiki: 'Cochinita pibil',
+        },
+        {
+          otsikko: 'Herrojen ruoka vai voideltu ja liotettu',
+          teksti: 'Papadzules on tortilla, joka kastetaan '
+            + 'kurpitsansiemenkastikkeeseen ja täytetään kovaksi '
+            + 'keitetyllä kananmunalla; päälle tulee tomaatti-'
+            + 'chilikastike. Nimestä on kaksi selitystä: toisen mukaan '
+            + 'se tarkoittaa herrojen ruokaa, koska ruokaa kerrotaan '
+            + 'tarjotun espanjalaisille, toisen mukaan se tulee mayan '
+            + 'sanoista papakʼ, voidella, ja sul, liottaa. Ruokaa '
+            + 'sanotaan hyvin vanhaksi, mutta arkeologisessa '
+            + 'aineistossa ei ole comal-paistolevyjä, joten ohuita '
+            + 'täytettäviä tortilloja tuskin tehtiin: mayojen oma pim '
+            + 'oli paksu ja kypsennettiin tuhkassa. Kananmunia ei '
+            + 'ollut, mutta kalkkunoita ja myskisorsia oli kesytetty.',
+          wiki: 'Papadzules',
+        },
+        {
+          otsikko: 'Keitto, jonka nimi valehtelee',
+          teksti: 'Sopa de lima on kana- tai muusta lihasta keitetty '
+            + 'liemi, jonka kanssa tarjotaan tortillasiruja. Nimestä '
+            + 'huolimatta limetti ei ole pääaines vaan se, mikä antaa '
+            + 'keitolle maun; mukana ovat myös tomaatti, paprika ja '
+            + 'korianteri. Keitto ei ole ikivanha, vaikka siltä '
+            + 'kuulostaa: se luotiin 1946, ja tekijänä mainitaan '
+            + 'mestari nimeltä Katún, joka on mayaksi soturi. Nykyään '
+            + 'sitä pidetään yhtenä Yucatánin edustavimmista '
+            + 'keitoista. Meksiko on ollut ainakin 1950-luvulta '
+            + 'lähtien maailman suurin limetin tuottaja ja viejä. '
+            + 'Tortillat tarjotaan erikseen, jotta ne pysyvät rapeina.',
+          wiki: 'Sopa de lima',
+        },
+        {
+          otsikko: 'Punainen tahna ja hollantilainen juusto',
+          teksti: 'Alueen tunnusmauste on achiote eli annatto. Kova '
+            + 'siemen jauhetaan muiden mausteiden kanssa punertavaksi '
+            + 'tahnaksi, recado rojoksi; mukaan tulee kanelia, '
+            + 'maustepippurin marjoja, neilikkaa, meksikonoreganoa, '
+            + 'juustokuminaa, merisuolaa, mietoa mustapippuria, '
+            + 'omenaviinietikkaa ja valkosipulia. Muita alueen ruokia '
+            + 'ovat salbutes, pehmeät tortillat salaatin, tomaatin, '
+            + 'kalkkunan ja avokadon kanssa, sekä panuchos, joissa '
+            + 'paistettu tortilla on täytetty mustilla pavuilla. '
+            + 'Omintakeisin on queso relleno: koverrettu '
+            + 'edamjuustopallo täytetään jauhetulla sianlihalla ja '
+            + 'tarjotaan tomaattikastikkeessa.',
+          wiki: 'Mérida (Meksiko)',
+        },
+      ],
+    },
+  ],
 };

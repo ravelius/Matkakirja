@@ -56502,4 +56502,475 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
   },
+  /*
+   * MONTERREY (7.9.2026). Kahdeksan kohdejuttua kohdekartalle
+   * (maakartat.js, monterrey). Viiden kohteen lähde on
+   * es-Wikipedia, koska englanninkielistä artikkelia ei ole
+   * lainkaan — se sanotaan jokaisen jutun lähderivillä.
+   * Jutut eivät toista lehden nostoja (kulttuuri-kategoriat.js,
+   * monterrey): lehti kertoo perustamisesta, nimestä, Cerro de la
+   * Sillasta, Fundidorasta, kansallispuistosta, Chipinquestä,
+   * Grutas de Garcíasta ja Santa Catarinasta.
+   */
+  monterrey: {
+    'Museo del Obispado': {
+      aika: '1790',
+      teksti: 'Obispadon kukkulalla seisova talo aloitti '
+          + 'rakentumisensa 5. heinäkuuta 1790 Linaresin hiippakunnan '
+          + 'piispan lepo- ja rukoustaloksi. Alkuperäinen nimi oli '
+          + 'Nuestra Señora de Guadalupen palatsi.'
+          + '\n\n'
+          + 'Sen jälkeen talo oli vuorollaan lähes kaikkea muuta: '
+          + 'sotilaskasarmi, linnoitus, spitaalisairaala ja kabaree. '
+          + '1920-luvun alussa, kun kukkulalla vielä tanssittiin, '
+          + 'tohtori Amado Fernández Muguerza johti vuonna 1907 '
+          + 'perustettua Junta Arqueófilaa ja sai osavaltion '
+          + 'tunnustamaan rakennuksen historiallisen arvon. Talo '
+          + 'julistettiin kansalliseksi siirtomaamonumentiksi 8. '
+          + 'joulukuuta 1932 ja siirtyi liittovaltion '
+          + 'antropologiaviraston hoitoon 1938; ensimmäinen '
+          + 'restaurointi tehtiin 1946.'
+          + '\n\n'
+          + 'Museoksi se vihittiin 20. syyskuuta 1956, kaupungin '
+          + '360-vuotispäivänä. Nykyään siinä on kymmenen '
+          + 'näyttelysalia noin puolellatoista tuhannella '
+          + 'neliömetrillä ja kokoelmassa 1 325 esinettä, joista vain '
+          + 'osa on kerrallaan esillä. Esineistä tunnetuimpia ovat '
+          + 'Porfirio Díazin vaunut, 1800-luvun kastemalja ja Servando '
+          + 'Teresa de Mierin kirjapaino. Salissa nimeltä "Nuestros '
+          + 'caudillos" riippuu Santiago Vidaurrin muotokuva. Kukkulan '
+          + 'laella on lisäksi näköalapaikka ja monumenttilippu.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'La Purísiman kirkko': {
+      aika: '1939',
+      teksti: 'Kirkon takana on tlaxcalteekkinainen. Antonia Teresa '
+          + 'asettui Monterreyhin noin vuonna 1680 ja toi mukanaan '
+          + 'neljänkymmenenkahden sentin korkuisen Purísima-veistoksen, '
+          + 'jota alettiin kutsua nimellä Virgen Chiquita, pieni '
+          + 'Neitsyt. Antonia oli suutarin leski, ja siitä tuli hänen '
+          + 'liikanimensä la Zapatera.'
+          + '\n\n'
+          + 'Perimätiedon mukaan noin vuonna 1700 satoi neljäkymmentä '
+          + 'päivää putkeen ja Santa Catarina uhkasi tulvia yli '
+          + 'äyräidensä. Antonia kantoi kuvan kulkueessa joen rantaan, '
+          + 'ja vedet vetäytyivät. Fray Servando Teresa de Mier kirjasi '
+          + 'tarinan 1700-luvulla mutta epäilevään sävyyn; arkistot '
+          + 'vahvistavat Antonia Teresan olemassaolon ja sen, että hän '
+          + 'toi veistoksen. Testamentissaan 20. lokakuuta 1719 hän '
+          + 'jätti kuvan ja pienen kappelin tyttärelleen, ja vuoden '
+          + '1791 kaupunginkartassa kappeli on jo merkitty.'
+          + '\n\n'
+          + 'Seurakunta perustettiin 19. joulukuuta 1894, ja sen '
+          + 'uusklassinen kirkko purettiin, kun arkkihiippakunta '
+          + 'halusi rakennuksen, joka vastaisi teollisuuskaupungin '
+          + 'uutta ilmettä. Nykyinen kirkko aloitettiin 1939, ja se on '
+          + 'Meksikon ensimmäinen moderni kirkkorakennus sekä tärkeä '
+          + 'edeltäjä niille betonikuorirakenteille, joita Félix '
+          + 'Candela teki myöhemmin. Arkkitehti oli Enrique de la '
+          + 'Mora. Kellotornissa seisoo kuusi ja puoli metriä korkea '
+          + 'poltetusta savesta tehty Purísima, tekijänä Adolfo '
+          + 'Laubner Mayer.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Colegio Civil': {
+      aika: '1870',
+      teksti: 'Rakennus aloitettiin 1793–1794 arkkitehti Juan '
+          + 'Crousetin piirustuksin, mutta ei kouluksi vaan köyhien '
+          + 'sairaalaksi. Työ keskeytyi 1797 piispan ja kuvernöörin '
+          + 'erimielisyyksiin. Vuoden 1798 isorokkoepidemiassa '
+          + 'valmiita huoneita otettiin hätäkäyttöön, ja kun epidemia '
+          + 'oli ohi, talo suljettiin taas. Itsenäisyystaistelujen '
+          + 'aikana puolivalmis sairaala muutettiin ratsuväen ja '
+          + 'tykistön kasarmiksi ja sen edessä ollut tyhjä tontti '
+          + 'paraatikentäksi.'
+          + '\n\n'
+          + 'Vuonna 1857 kuvernööri Santiago Vidaurri esitti '
+          + 'kongressille Colegio Civilin perustamista. Opetus alkoi '
+          + '1859 väliaikaisesti piispantalossa: keskikoulu, lukio '
+          + 'sekä oikeustieteen ja kirurgian koulut. Ensimmäinen '
+          + 'johtaja oli tohtori Ángel Martínez Villarreal ja '
+          + 'ensimmäinen oppilas Antonio María Elizondo, joka maksoi '
+          + 'kirjoittautumisestaan kaksi pesoa. Ranskan miehityksen '
+          + 'aikana keisari Maximilian sulki koulun, mutta tunteja '
+          + 'pidettiin salaa opettajien kodeissa.'
+          + '\n\n'
+          + 'Kun tasavaltalaiset olivat ottaneet kaupungin takaisin, '
+          + 'kuvernööri Mariano Escobedo määräsi rakennuksen '
+          + 'valmiiksi. Se vihittiin juhlallisesti lokakuussa 1870, ja '
+          + 'juhlapuheen piti koulun kolmas johtaja, lääkäri José '
+          + 'Eleuterio González. Taloon tuli myöhemmin '
+          + 'säähavaintoasema, kaukoputki ja luonnonhistoriallinen '
+          + 'museo. Vuosien 2004–2006 restauroinnin jälkeen se on '
+          + 'yliopiston kulttuurikeskus.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Nuevo Leónin hallintopalatsi': {
+      aika: '1895',
+      teksti: 'Vanha hallintopalatsi seisoi Morelosin ja Escobedon '
+          + 'kulmassa ja toimi osavaltion hallintotalona vuodesta 1817 '
+          + '1900-luvun alkuun. Se oli myös Benito Juárezin työhuone, '
+          + 'ja se kärsi vaurioita Monterreyn taistelussa — siitä '
+          + 'syntyi ajatus uudesta palatsista.'
+          + '\n\n'
+          + 'Kuvernööri Bernardo Reyes valitsi uudelle talolle tontin, '
+          + 'joka oli ollut kaupungin alkuperäinen pääaukio. Työt '
+          + 'alkoivat 8. elokuuta 1895 insinööri Francisco Beltránin '
+          + 'suunnitelmalla ja Martín Peñan työnjohdolla. Rahaa ei '
+          + 'ollut: osa saatiin myymällä vanha palatsi 1897 '
+          + 'seitsemälläkymmenellätuhannella pesolla. Arvioitu kulu '
+          + 'oli satatuhatta pesoa ja rakennusaika viisi vuotta — '
+          + 'todellisuudessa siihen meni kolmetoista.'
+          + '\n\n'
+          + 'Rakennus on 51 metriä leveä ja 88 pitkä ja päällystetty '
+          + 'vaaleanpunaisella cantera-kivellä, joka tuotiin San Luis '
+          + 'Potosísta. Kiveä ei osattu Monterreyssä työstää, joten '
+          + 'kivenveistäjät värvättiin sen lähtöpaikasta; heidän '
+          + 'asuinalueestaan tuli Barrio San Luisito, nykyinen Colonia '
+          + 'Independencia. Sisällä on viisi–kuusisataa juoksumetriä '
+          + 'Fundidoran valamia kaiteita. Julkisivun huipulla seisoo '
+          + 'Voiton patsas, ja peristyylien päällä on metalliveistoksia '
+          + 'leijonasta, jota lapsi pitelee ruusuköynnöksin.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Meksikon historian museo': {
+      aika: '1994',
+      teksti: 'Museo seisoo siinä kohdassa, josta koko kaupunki '
+          + 'alkoi: Santa Lucían lähteen paikalla, jonka viereen '
+          + 'Diego de Montemayor perusti Monterreyn 1596.'
+          + '\n\n'
+          + 'Hanke alkoi marraskuussa 1992 osavaltion johdolla. '
+          + 'Vuonna 1993 kirjoitettiin historiallinen käsikirjoitus, '
+          + 'ja siihen osallistuivat muun muassa historioitsija '
+          + 'Israel Cavazos ja Nuevo Leónin historian museon silloinen '
+          + 'johtaja Marcela Guerra; koordinaattorina oli '
+          + 'historioitsija Margarita Loera. Arkkitehtuurikilpailun '
+          + 'voittivat Óscar Bulnes ja Augusto Álvarez.'
+          + '\n\n'
+          + 'Rakentaminen alkoi lokakuussa 1993 ja museo vihittiin jo '
+          + '30. marraskuuta 1994 — runsaassa vuodessa rakennettiin '
+          + 'talo ja asennettiin noin puolitoistatuhatta esinettä sekä '
+          + 'suuri määrä videoseiniä ja toiminnallisia laitteita. '
+          + 'Museo kuuluu kolmen museon ryhmään yhdessä '
+          + 'hallintopalatsin museon ja Koillisen museon kanssa.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Dulces Nombresin kappeli': {
+      aika: '1830',
+      teksti: 'Barrio Antiguon kapeiden katujen keskellä on '
+          + 'kolmentoista metrin pituinen ja kahdeksan metrin levyinen '
+          + 'cantera-kivestä muurattu kappeli. Se on omistettu '
+          + 'Jeesuksen ja Marian suloisille nimille — siitä nimi '
+          + 'Dulces Nombres.'
+          + '\n\n'
+          + 'Rakentaminen ajoittuu noin vuoteen 1830, ja sen määräsi '
+          + 'José Antonio de la Garza Saldívarin leski täyttääkseen '
+          + 'ehdon, jonka hänen miehensä oli kirjannut testamenttiinsa. '
+          + 'Vihkiminen tapahtui vasta 17. maaliskuuta 1866, eli '
+          + 'kolmisenkymmentä vuotta myöhemmin.'
+          + '\n\n'
+          + 'Kappeli on merkitty Nuevo Leónin historiallisten '
+          + 'monumenttien luetteloon numerolla 09334, ja se on yhä '
+          + 'julkinen kappeli, joka on auki päivittäin. Sen kokoluokka '
+          + 'kertoo, millaisia kaupungin rakennukset olivat ennen '
+          + 'teollisuuden vuosia: pieni kivinen talo korttelin '
+          + 'kulmassa, ei aukiota ympärillään.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Monterreyn katedraali': {
+      aika: '1791',
+      teksti: 'Katedraalin rakentamiseen meni 86 vuotta: se '
+          + 'aloitettiin 1705 ja saatiin valmiiksi 1791. Katedraaliksi '
+          + 'se julistettiin jo kesken työn, 1777, kun paavi Pius VI '
+          + 'perusti Linaresin hiippakunnan.'
+          + '\n\n'
+          + 'Keskuslaiva on latinalaisen ristin muotoinen, ja sen '
+          + 'sivuilla on syvennyskappeleita. Holvit ovat ristiholveja, '
+          + 'ja niiden päällä on kahdeksankulmainen kupoli. Sisustus '
+          + 'on hillitty ja eklektinen: tyylit ovat uusklassinen ja '
+          + 'barokki, ja barokki näkyy erityisesti julkisivussa. '
+          + 'Sakramenttikappelissa on pakotettu hopeainen etuseinä.'
+          + '\n\n'
+          + 'Kuorissa on Merklin-urut vuodelta 1893. Ne ovat '
+          + 'vaurioituneet eivätkä ole käytössä, mutta ne ovat '
+          + 'paikallaan. Kellotorni on nykyisessä muodossaan uudempi '
+          + 'kuin muu kirkko: espanjalaisen kuvalehden vuoden 1880 '
+          + 'piirroksessa katedraali näkyy vielä ilman sitä.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjan- ja englanninkielinen Wikipedia',
+    },
+    'Barrio Antiguo': {
+      aika: '1700-luku',
+      teksti: 'Barrio Antiguo on kaupungin vanha kortteliverkko '
+          + 'Macroplazan itälaidalla: mukulakivikatuja ja siirtomaa-'
+          + 'ajan arkkitehtuuria. Alue ulottui alun perin Santa '
+          + 'Catarina -joelta 5 de Mayo -kadulle ja Mina-kadulta '
+          + 'Roble-kadulle, joka on nykyään Avenida Benito Juárez.'
+          + '\n\n'
+          + 'Vanhinta Monterreytä on tietysti kaupungin perustamisen '
+          + 'aika 1500-luvun lopulla, mutta säilyneet rakennukset ovat '
+          + 'enimmäkseen 1700-luvulta ja 1800-luvun viimeisiltä '
+          + 'vuosikymmeniltä. Alue oli varakuninkaan ajasta '
+          + '1900-luvun alkupuolelle kaupungin kaupallinen ja '
+          + 'kulttuurinen keskus, kunnes muut osat kasvoivat sen ohi.'
+          + '\n\n'
+          + 'Monta korttelin taloa purettiin Macroplazan tieltä '
+          + '1900-luvun lopulla, ja sen jälkeen alue autioitui. '
+          + 'Vuodesta 2013 alkoi kunnostushanke, jossa osa kaduista on '
+          + 'muutettu kävelykaduiksi — ensimmäisenä Calle Morelos. '
+          + 'Marraskuussa järjestetyn Festival Cultural Barrio '
+          + 'Antiguon on korvannut syyskuinen Festival Internacional '
+          + 'de Santa Lucía.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+  },
+  /*
+   * MÉRIDA (7.9.2026). Kahdeksan kohdejuttua kohdekartalle
+   * (maakartat.js, merida). Kaikkien kahdeksan lähde on
+   * es-Wikipedia, koska englanninkielisiä artikkeleita ei ole
+   * lainkaan — se sanotaan jokaisen jutun lähderivillä.
+   * Jutut eivät toista lehden nostoja (kulttuuri-kategoriat.js,
+   * merida): lehti kertoo Tʼhósta ja katedraalin kivistä,
+   * Valkoisen kaupungin nimestä, kastisodasta, henekenistä ja
+   * Paseo de Montejosta sekä Yucatánin keittiöstä.
+   */
+  merida: {
+    'Santa Anan kirkko': {
+      aika: '1733',
+      teksti: 'Vuonna 1726 Yucatánin kuvernööri ja kenraalikapteeni '
+          + 'Antonio de Figueroa y Silva määräsi rakennettavaksi '
+          + 'suoran kadun piispantalolta pohjoiseen. Katu jatkoi sitä '
+          + 'väylää, joka siihen asti oli päättynyt Santa Lucían '
+          + 'kaupunginosaan, ja sen varrelle tehtiin kaksi kivikaarta. '
+          + 'Näin työläisten ja käsityöläisten asuttama Santa Ana '
+          + 'liitettiin osaksi keskustaa.'
+          + '\n\n'
+          + 'Sama kuvernööri rakennutti Santa Anan kirkon '
+          + 'esikolumbiaanisen mayaperustuksen päälle siihen kohtaan, '
+          + 'jossa oli vuosisataa aiemmin rakennettu avokappeli. '
+          + 'Työhön kuului myös pieni puistikko, jota kutsuttiin '
+          + 'ensin nimellä Paseo de Santa Ana ja joka on nykyinen '
+          + 'puisto. Kokonaisuus valmistui 1733, mutta Figueroa y '
+          + 'Silva ei ehtinyt nähdä sitä: hän kuoli hieman ennen. '
+          + 'Kirkon julkisivun laatta kertoo, että hänen jäännöksensä '
+          + 'lepäävät siellä.'
+          + '\n\n'
+          + 'Vuonna 1867 puistossa käytiin Yucatánin ratkaissut '
+          + 'taistelu keisarikuntaa kannattaneiden ja tasavaltalaisten '
+          + 'joukkojen välillä. Tasavaltalaiset voittivat kenraali '
+          + 'Manuel Cepeda Perazan johdolla, ja hän palautti '
+          + 'tasavaltalaisen hallinnon niemimaalle 15. kesäkuuta '
+          + 'samana vuonna. 1900-luvun alussa kaupunginosaan '
+          + 'perustettiin leipomo, jonka pan francés on Yucatánissa '
+          + 'yhä käsite; sitä pitivät katalonialaiset Llanon '
+          + 'veljekset 1940-luvulle asti.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Peón Contrerasin teatteri': {
+      aika: '1908',
+      teksti: 'Méridan vanhin näyttämö on ollut samalla paikalla '
+          + 'kolmella nimellä ja kolmessa rakennuksessa. Ensimmäisen, '
+          + 'Teatro San Carlosin, valinta alkoi 1806. Vuonna 1877 '
+          + 'Antonino Bolio Guzmán osti sen ja nimesi Teatro Bolioksi, '
+          + 'ja jo seuraavan näytäntökauden jälkeen se vaihtoi omistajaa '
+          + 'uudestaan. Nykyisen nimensä se sai 27. joulukuuta 1878 '
+          + 'kahden sanomalehden aloitteesta yucatánilaisen lääkärin ja '
+          + 'näytelmäkirjailijan José Peón Contrerasin mukaan.'
+          + '\n\n'
+          + 'Vuonna 1897 saliin asennettiin Lumièren veljesten '
+          + 'tekniikka, ja liikkuvia kuvia alettiin esittää samassa '
+          + 'talossa oopperan ja zarzuelan kanssa. Vuonna 1899 '
+          + 'perustettu teatteriyhtiö osti tontin ja purki vanhan '
+          + 'rakennuksen. Nykyinen talo rakennettiin 1900–1908: '
+          + 'urakoitsija oli italialainen Enrico Deserti ja '
+          + 'arkkitehtuuri niin ikään italialaisen Pío Pialentinin. '
+          + 'Tyyli on akateeminen eklektismi, ja se sovitettiin '
+          + 'kuumaan ilmastoon leveillä tuulettavilla käytävillä. '
+          + 'Marmoriportaikko vie saliin, jossa on viisi aitiokerrosta '
+          + 'ja seitsemänsataa paikkaa; kupoliin on maalattu '
+          + 'kreikkalaiset muusat.'
+          + '\n\n'
+          + 'Alkuvuodesta 1916 talossa pidettiin Yucatánin ensimmäinen '
+          + 'naisten kongressi, joka oli samalla koko Meksikon '
+          + 'ensimmäinen. Vuonna 1940 teatteri muutettiin '
+          + 'elokuvateatteriksi, 1974 se suljettiin huonokuntoisena, '
+          + '1977 julistettiin historialliseksi monumentiksi ja 1979 '
+          + 'pakkolunastettiin. Restaurointi valmistui syksyllä 1984, '
+          + 'ja vuodesta 2004 talo on ollut Yucatánin '
+          + 'sinfoniaorkesterin koti.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'La Mejoradan puisto': {
+      aika: '1870',
+      teksti: 'Aukio on Calle 50:llä katujen 59 ja 57 välissä, '
+          + 'entisen fransiskaaniluostarin edessä. Tänne laskettiin '
+          + '1. huhtikuuta 1870 koko Yucatánin niemimaan ensimmäinen '
+          + 'rautatiekisko.'
+          + '\n\n'
+          + 'Puisto on saanut nimensä kirkosta ja luostarista, joita on '
+          + 'siirtomaa-ajasta asti kutsuttu La Mejoradaksi; nimi tulee '
+          + 'todennäköisesti Espanjan Mejoradasta, jonka '
+          + 'samanaikaisen seurakuntakirkon piirustukset muistuttavat '
+          + 'näitä. Kirkkoa alettiin rakentaa 1621 encomendero Diego '
+          + 'Montalvo Garcían varoilla. Hän luovutti keskeneräisen '
+          + 'rakennuksen fransiskaaneille, ja se valmistui 1640; '
+          + 'nykyään se tunnetaan Nuestra Señora del Carmenin '
+          + 'kirkkona.'
+          + '\n\n'
+          + 'Luostari rakennettiin 1688–1694, ja se oli tarkoitettu '
+          + 'niille sääntökunnan jäsenille, jotka noudattivat '
+          + 'ankarinta sääntöä; perustajien joukossa oli Juan de '
+          + 'Acevedo. Munkit asuivat siellä, kunnes Yucatánin viimeinen '
+          + 'siirtomaakuvernööri Juan María Echeverri otti rakennuksen '
+          + '1820 sotaväen majoitukseen — kerjäläisveljeskunnat oli '
+          + 'juuri lakkautettu kuninkaallisella asetuksella. Nykyään '
+          + 'talossa toimii Yucatánin yliopiston arkkitehtuurin '
+          + 'tiedekunta.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Casa de los Montejo': {
+      aika: '1549',
+      teksti: 'Plaza Granden eteläisellä laidalla on talo, joka '
+          + 'rakennettiin 1542–1549 Yucatánin valloittajien '
+          + 'asunnoksi: Francisco de Montejo el adelantadon, hänen '
+          + 'poikansa el mozon ja veljenpoikansa. Se on mahdollisesti '
+          + 'Meksikon ainoa 1500-luvulla rakennettu siviilitalo '
+          + 'plateresco-tyylissä.'
+          + '\n\n'
+          + 'Kalkkikivijulkisivussa on kirjoitus, jonka mukaan '
+          + 'adelantado teetti työn vuonna 1549 — siitä päätellään '
+          + 'valmistumisvuosi. Adelantadon kuoltua talo siirtyi '
+          + 'pojalle ja tämän leskelle Andrea del Castillolle, joka '
+          + 'määräsi, ettei taloa saanut myydä vaan ainoastaan periä. '
+          + 'Näin syntyi Montejojen majoraatti, ja suvun hallussa '
+          + 'rakennus pysyi noin vuoteen 1832 asti. Alun perin tontti '
+          + 'käsitti koko korttelin, mutta se kutistui vuosisatojen '
+          + 'mittaan osamyynneissä.'
+          + '\n\n'
+          + 'Vuonna 1839 talon osti Simón Peón y Peón, ja 1896 '
+          + 'sisätilat muutettiin muodinmukaiseen ranskalaistyyliin; '
+          + 'silloin ikkunoiden ympärille lisättiin karyatidit. Vuonna '
+          + '1981 rakennuksen osti Banamexin kulttuurisäätiö, ja 2. '
+          + 'joulukuuta 2010 siihen avattiin kulttuuritalo ja museo '
+          + 'nimeltä Casa Montejo. Museossa on 1800-luvun lopun ja '
+          + '1900-luvun alun huonekaluja sekä vaihtuvien näyttelyiden '
+          + 'sali.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Méridan kaupunginmuseo': {
+      aika: '1908',
+      teksti: 'Museon talo on porfiriaton ajalta ja rakennettiin '
+          + 'liittovaltion postipalatsiksi. Se vihittiin 5. toukokuuta '
+          + '1908 kuvernööri Enrique Muñoz Arísteguin kaudella, ja '
+          + 'siihen tuli lennätin-, posti- ja tuomioistuintoimistoja.'
+          + '\n\n'
+          + 'Rakennuksen suunnitteli ja rakensi sotilasinsinööri '
+          + 'Salvador Echegaray. Tyyli on uusklassinen, mutta '
+          + 'lattioiden, seinien ja ikkunapuitteiden viimeistelyssä on '
+          + 'sekä ranskalaisia että moderneja sävyjä, ja talo erottuu '
+          + 'siksi naapureistaan. Museon esineistössä on myös '
+          + 'postiajan muistoja.'
+          + '\n\n'
+          + 'Museo muutti taloon 29. kesäkuuta 2007. Pysyvästi esillä '
+          + 'on noin 150 esinettä neljässä salissa: esikolumbiaaninen '
+          + 'Mérida, siirtomaa-aika, 1800-luku ja 1900-luvun alku sekä '
+          + '1900-luku. Ensimmäisessä kerroksessa on kuusi salia '
+          + 'vaihtuville näyttelyille, ja niissä on tilaa myös '
+          + 'paikallisille kuvataiteilijoille.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'San Juanin puisto ja kaari': {
+      aika: '1690-luku',
+      teksti: 'San Juanin kaupunginosa on Calle 61:llä katujen 58 ja '
+          + '69 välissä. Kirkon vieressä seisoo yhä kaari, joka '
+          + 'merkitsi valkoisten kaupungin loppua ja niin sanottujen '
+          + 'intiaanikaupunginosien alkua.'
+          + '\n\n'
+          + 'Yhdessä Santa Isabelin ermitan sekä Santiagon, Santa '
+          + 'Anan, San Sebastiánin, San Cristóbalin ja Mejoradan '
+          + 'kaupunginosien kanssa San Juan merkitsi siirtomaa-ajan '
+          + 'Méridan rajoja. Espanjankielisen Wikipedian mukaan '
+          + 'historioitsija Michel Antochiw Kolpa johtaa kaupungin '
+          + 'liikanimen Ciudad Blanca juuri tästä asetelmasta eikä '
+          + 'talojen kalkituksesta. Sama lähde toteaa, että jako ei '
+          + 'kestänyt: työvoimaa tarvittiin lähelle, ja kaupunki '
+          + 'kasvoi porttiensa yli.'
+          + '\n\n'
+          + 'Nykyään San Juan on tavallinen keskustan kaupunginosa, '
+          + 'jonka puisto on kohtaamispaikka ja jonka juhlapäivä on '
+          + '24. kesäkuuta, Johannes Kastajan päivä. Kaari on '
+          + 'säilynyt, vaikka useimmat muut samanikäiset kaaret ovat '
+          + 'kadonneet — osa niistä oli alun perinkin pelkkää '
+          + 'koristetta.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'San Cristóbalin kirkko': {
+      aika: '1669',
+      teksti: 'San Cristóbal on keskustan suurin ja asutuin '
+          + 'kaupunginosa. Sinne asettui alun perin se mexica- ja '
+          + 'tlaxcalteekkiväestö, joka oli tullut Yucatániin '
+          + 'valloituksen mukana; heille kuului osallistumisensa '
+          + 'perusteella verovapaus. Kuvernööri Diego Quijada otti '
+          + 'oikeuden pois, eivätkä asukkaat saaneet sitä protestoimalla '
+          + 'takaisin.'
+          + '\n\n'
+          + 'Viiden korttelin päähän pääaukiolta, yhden Tʼhón '
+          + 'kukkulan päälle, rakennettiin pian valloituksen jälkeen '
+          + 'suuri fransiskaaniluostari. Paikan oli valinnut Francisco '
+          + 'de Montejo nuorempi linnoitusta varten, ja vuonna 1669 '
+          + 'kuvernööri Rodrigo Flores de Aldanan aikana ajatus '
+          + 'toteutettiin: San Beniton linnoitus rakennettiin '
+          + 'luostarin ympärille. Alussa portteja oli kolme — yksi '
+          + 'sotilaille, yksi papistolle ja yksi seurakunnalle — mutta '
+          + 'sotilaat muurasivat kaksi umpeen turvallisuussyistä, ja '
+          + 'kaikkien oli kuljettava samasta ovesta pitkälle '
+          + '1700-luvulle asti.'
+          + '\n\n'
+          + '1800-luvun lopulla kaupunginosaan asettui merkittävä osa '
+          + 'niemimaan syyrialais-libanonilaisesta siirtolaisuudesta, '
+          + 'joka perusti sinne kotinsa ja liikkeensä. Kadut kivettiin '
+          + 'ja puisto kunnostettiin penkkeineen ja istutuksineen, ja '
+          + 'se vihittiin 5. toukokuuta 1910. Kaupunginosan '
+          + 'seurakuntakirkko on Guadalupen Neitsyen juhlien keskus, '
+          + 'ja juhlat kokoavat käytännössä koko alueen väen.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Santa Isabelin ermita': {
+      aika: '1748',
+      teksti: 'Kappeli seisoo Calle 66:n eteläpäässä San Sebastiánin '
+          + 'kaupunginosassa, siinä kohdassa josta alkoi camino real '
+          + 'eli kuninkaantie Méridasta Campecheen.'
+          + '\n\n'
+          + 'Tienvarsisijainnin takia sitä kutsuttiin aikoinaan '
+          + 'nimellä Nuestra señora del buen viaje, hyvän matkan '
+          + 'Neitsyt. Nykyinen nimi viittaa Santa Isabeliin eli '
+          + 'Johannes Kastajan äitiin. Perustamisvuotta ei tiedetä '
+          + 'tarkasti, mutta pääoven yllä on kaiverrus, jossa on vuosi '
+          + '1748.'
+          + '\n\n'
+          + 'Rakennuttajaksi tiedetään 1600-luvulla elänyt Gaspar '
+          + 'González de Ledezma, jonka näkemys oli, että temppelin '
+          + 'rakentaminen ansaitsi taivaspaikan varmemmin kuin '
+          + 'hurskaus tai yksittäisen pyhimyksen palvonta. Kappelin '
+          + 'ympärillä oleva puisto on nykyään yksi keskustan '
+          + 'rauhallisimmista, ja se on samalla eteläisin niistä '
+          + 'paikoista, jotka merkitsivät vanhan kaupungin rajaa.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+  },
 };

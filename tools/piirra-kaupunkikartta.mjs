@@ -5366,6 +5366,71 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: -17.7729, etela: -17.7988, lansi: -63.1988, ita: -63.1693 },
   },
+  monterrey: {
+    /*
+     * OBISPADON KUKKULALTA BARRIO ANTIGUOON (7.9.2026). Ruutu on
+     * noin 4,3 x 2,8 kilometriä: lännessä Obispadon kukkula ja sen
+     * museo, keskellä La Purísima ja Colegio Civil, idässä
+     * Macroplazan pohjoispää, katedraali ja Barrio Antiguo.
+     * Rajaus on tavallista leveämpi, koska Monterreyn vanhat
+     * kohteet ovat nauhassa Santa Catarinan pohjoispuolella eivätkä
+     * yhden aukion ympärillä.
+     *
+     * ETELÄREUNA ON VEDETTY JOEN YLI tarkoituksella: kuiva
+     * Santa Catarina halkoo kaupungin idästä länteen (en-Wikipedia
+     * "Monterrey", Geography), ja se on ruudun luettavin
+     * maastonmuoto. Ilman sitä kartta olisi pelkkää ruutukaavaa.
+     *
+     * Ei meri-lippua: joki on OSM:ssä uoma, ei rantaviivaa, eikä
+     * ruudussa ole muuta vettä.
+     *
+     * FUNDIDORAN PUISTO (2,5 km itään) JA CERRO DE LA SILLA (6 km
+     * itään) EIVÄT MAHDU RUUTUUN — ja se sopii, koska molemmat ovat
+     * lehden kansisivun nostojen aiheita eikä kohdekartta toista
+     * lehden juttuja (New Yorkin sääntö). Sama koskee Grutas de
+     * Garcíaa ja Chipinqueä, jotka ovat teemasivun aiheita
+     * kymmenien kilometrien päässä.
+     *
+     * KATEDRAALIN NAAPURIT EIVÄT OLE NUMEROITUJA KOHTEITA:
+     * Faro del Comercio on 70 metrin, MARCO 110 metrin ja
+     * Museo Metropolitano 175 metrin päässä siitä. Ne näkyvät
+     * kartalla rakennuksina ja mainitaan matkaoppaassa.
+     */
+    rajat: { pohjoinen: 25.6820, etela: 25.6570, lansi: -100.3470, ita: -100.3040 },
+  },
+  merida: {
+    /*
+     * SANTA ANASTA SANTA ISABELIN ERMITAAN (7.9.2026). Ruutu on
+     * noin 3,0 x 3,0 kilometriä ja kattaa koko siirtomaa-ajan
+     * Méridan: pohjoisessa Santa Anan kirkko ja Paseo de Montejon
+     * alku, keskellä Plaza Grande ja Peón Contrerasin teatteri,
+     * etelässä San Juanin ja San Cristóbalin kaupunginosat sekä
+     * Santa Isabelin ermita vanhan Campechen-tien varressa.
+     *
+     * RUUTUKAAVA ON POIKKEUKSELLISEN SÄÄNNÖLLINEN: parittomat kadut
+     * kulkevat itä–länsi ja parilliset pohjois–etelä (en-Wikipedia
+     * "Mérida, Yucatán", Geography), joten kartta on tiheä ristikko
+     * ja Paseo de Montejo erottuu siitä vinona bulevardina.
+     *
+     * Ei meri-lippua: Meksikonlahti on 35 kilometrin päässä eikä
+     * niemimaalla ole jokia lainkaan — pintavettä ei ruudussa ole.
+     *
+     * KATEDRAALI EI OLE NUMEROITU KOHDE, vaikka se on ruudun
+     * keskellä: se on lehden kansisivun noston 1 loppuhuipennus
+     * (Tʼhón kivet katedraalin seinissä). Samasta syystä ruudulla
+     * näkyvä Paseo de Montejo ja Lucas de Gálvezin tori eivät ole
+     * numeroituja — edellinen on noston 4 aihe, jälkimmäinen
+     * etusivun ennen–nyt-parin aihe.
+     *
+     * ETELÄREUNAA LASKETTIIN 300 METRIÄ ensimmäisestä yrityksestä
+     * (etela 20.9550 → 20.9520, lansi ja ita saman verran
+     * leveämmiksi), koska tools/tarkista-karttapisteet.mjs ilmoitti
+     * Santa Isabelin ermitan numeroympyrän peittävän lehden
+     * mittakaavajanan vasemmassa alakulmassa — sama korjaus kuin
+     * Kööpenhaminan Tivolissa.
+     */
+    rajat: { pohjoinen: 20.9790, etela: 20.9520, lansi: -89.6375, ita: -89.6085 },
+  },
 };
 
 /*
