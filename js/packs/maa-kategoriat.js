@@ -38583,8 +38583,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Valtakunta, jonka perustaja puhui väärää kieltä',
           aika: '1300–1549',
-          // Kuvaton (Opus 6.9.2026): Jolofin valtakunnan ajalta ei ole
-          // Commonsissa kuvaa, joka kestäisi lähdetarkistuksen.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-historia-0-r20260907-v2.jpg',
           teksti: 'Jolofin valtakunta hallitsi 1300-luvun puolivälistä '
               + 'alkaen osia nykyisestä Senegalista, Mauritaniasta ja '
               + 'Gambiasta. Se oli pitkään Malin valtakunnan vasalli, ja '
@@ -38597,14 +38596,16 @@ export const MAA_KATEGORIAT = {
               + 'eikä wolofiksi, mikä teki hänestä jalosukuisen '
               + 'muukalaisen. Dankin taistelu 1549 hajotti valtakunnan '
               + 'itsenäisiksi kuningaskunniksi.',
-          selite: 'Jolofin nimi elää yhä ruokalajissa: jollof-riisi on '
-              + 'saanut nimensä tästä valtakunnasta.',
+          selite: 'Wolofin suullisen Njaajan Njaay -perinteen innoittama kuvitus '
+            + 'valtakunnan perustamisesta; perustaja nähdään selin.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Journal of African '
+            + 'History — arvio teoksesta Samba Diop, The Oral History and '
+            + 'Literature of the Wolof People of Waalo',
         },
         {
           otsikko: 'Lingeer valitsi kuninkaan',
           aika: '1846–1855',
-          // Kuvaton (Opus 6.9.2026): Waalon hallitsijoista ei ole
-          // Commonsissa vapaata aikalaiskuvaa.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-historia-1-r20260907-v2.jpg',
           teksti: 'Waalon kuningaskunta hallitsi Senegaljoen alajuoksua, ja '
               + 'sen valta jakautui kahtia. Kuninkaan arvonimi oli brak, '
               + 'mutta kruununperimys kulki kolmen äidin puolelta '
@@ -38615,8 +38616,10 @@ export const MAA_KATEGORIAT = {
               + 'padotakseen ryöstöretket ja ranskalaisten etenemisen, ja '
               + 'hänen sisarensa Ndaté Yalla Mbodj hallitsi vuodesta 1846. '
               + 'Ranska valloitti Waalon 1855.',
-          selite: 'Joos-suku oli sereeritaustainen, ja sen kantaäitinä '
-              + 'pidetään Sinen lingeeriä Fatim Beyeä.',
+          selite: 'Ndaté Yalla Mbodjin valtaa ja vastarintaa mukaileva kuvitus: '
+            + 'hallitsija katsoo selin Senegaljoen tasangolle.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Michael C. Carlos '
+            + 'Museum — Ndaté Yalla Mbodj -näyttely',
         },
         {
           otsikko: 'Ensimmäinen afrikkalainen Ranskan parlamentissa',
@@ -38641,8 +38644,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Runoilija, joka luopui vallasta itse',
           aika: '1906–2001',
-          // Kuvaton (Opus 6.9.2026): Senghorista on Commonsissa vain
-          // ryhmäkuvia, joissa on tunnistettavia sivullisia.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-historia-3-r20260907-v2.jpg',
           teksti: 'Léopold Sédar Senghor syntyi Joalissa sereeriperheeseen '
               + 'ja opiskeli Pariisissa, jossa hän kehitti 1930-luvulla '
               + 'ystäviensä kanssa négritude-ajattelun: mustan kulttuurin '
@@ -38654,9 +38656,11 @@ export const MAA_KATEGORIAT = {
               + '1976. Senghor luopui vallasta itse 1980 ja luovutti sen '
               + 'seuraajalleen — harvinaista siihen aikaan. Hänet '
               + 'valittiin ensimmäisenä afrikkalaisena Ranskan akatemiaan.',
-          selite: 'Senghorin runot on kirjoitettu ranskaksi mutta sereerien '
-              + 'ja wolofien kuvakielellä; hän kutsui sitä mustan Afrikan '
-              + 'omaksi rytmiksi.',
+          selite: 'Kuvitteellinen kirjoituspöytä, runokirjat ja Senegalin värit '
+            + 'viittaavat runoilija-presidentti Léopold Sédar Senghorin '
+            + 'kahteen rooliin.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Poetry Foundation '
+            + '— Léopold Sédar Senghor',
         },
       ],
     },
@@ -38720,8 +38724,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kahvi, jossa on pippuria',
           aika: '1902',
-          // Kuvaton (Opus 6.9.2026): café Touban myyjistä otetut kuvat
-          // ovat kasvokuvia tai vesileimattuja.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-ruoka-3-r20260907-v4-root.jpg',
           teksti: 'Café Touba on kahvia, johon on paahdettu mukaan '
               + 'djar-maustetta eli guineanpippuria, joskus myös '
               + 'neilikkaa. Pavut ja mausteet jauhetaan yhdessä, ja juoma '
@@ -38733,8 +38736,11 @@ export const MAA_KATEGORIAT = {
               + '1902. Sitä tarjotaan juhlissa ja muistotilaisuuksissa, ja '
               + '2000-luvulla se on levinnyt kadunkulmiin uskonnosta '
               + 'riippumatta.',
-          selite: 'Guineanpippuri kasvaa Touban seudulla, ja se antaa '
-              + 'kahville pippurisen, hieman yrttisen jälkimaun.',
+          selite: 'Café Touba, kahvipavut ja pitkät kuivat djar-hedelmät '
+            + 'senegalilaista kahvihetkeä mukailevassa kuvituksessa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Heritage Sénégal — '
+            + 'Café Touba; University of Cape Coast — Xylopia aethiopica; '
+            + 'World Flora Online',
         },
       ],
     },
@@ -38829,8 +38835,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Ensimmäinen elokuva kuvattiin Seinen rannalla',
           aika: '1955',
-          // Kuvaton (Opus 6.9.2026): Paulin Vieyrasta tai hänen
-          // elokuvistaan ei ole Commonsissa vapaata kuvaa.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-elokuva-0-r20260907-v2.jpg',
           teksti: 'Senegalilaisen elokuvan ensimmäinen teos on Paulin '
               + 'Soumanou Vieyran lyhytelokuva Afrique-sur-Seine vuodelta '
               + '1955, joka kuvattiin Pariisissa. Vieyra jatkoi '
@@ -38841,8 +38846,10 @@ export const MAA_KATEGORIAT = {
               + 'vasta Senegalin itsenäistyttyä 1960. Maasta tuli '
               + 'nopeasti afrikkalaisen elokuvan keskuksia, ja sen '
               + 'kulta-aika kesti 1960-luvulta 1980-luvun alkuun.',
-          selite: 'Vieyra opiskeli elokuvakoulussa Pariisissa ja toimi '
-              + 'myöhemmin myös afrikkalaisen elokuvan historioitsijana.',
+          selite: 'Afrique sur Seinen vuoden 1955 tekijäryhmän innoittama kuvitus '
+            + 'Seinen rannalta; ryhmä näkyy selin.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: African Film '
+            + 'Festival New York — Afrique sur Seine (1955)',
         },
         {
           otsikko: 'Satamatyöläisestä elokuvan isäksi',
@@ -38887,8 +38894,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kultainen karhu isovanhempien maasta',
           aika: '2019–2024',
-          // Kuvaton (Opus 6.9.2026): Mati Diopista on Commonsissa vain
-          // lähikuvia kasvoista.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-elokuva-3-r20260907-v4.jpg',
           teksti: 'Mati Diop on Djibril Diop Mambétyn veljentytär ja '
               + 'muusikko Wasis Diopin tytär, ja hän kasvoi Pariisin ja '
               + 'Senegalin väliä. Vuonna 2019 hänen ensimmäinen pitkä '
@@ -38900,8 +38906,10 @@ export const MAA_KATEGORIAT = {
               + 'elpynyt uudelleen, ja valtio on tukenut sitä omalla '
               + 'rahastollaan vuodesta 2015. Uuden aallon tekijöistä moni '
               + 'on nainen.',
-          selite: 'Dahomey seuraa esineitä matkalla museosta takaisin '
-              + 'kotiin ja antaa yhdelle patsaalle äänen.',
+          selite: 'Beniniin vuonna 2021 palautetun kuningas Ghézon korkean '
+            + 'valtaistuimen muotoon perustuva kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Musée du quai '
+            + 'Branly — 26 teoksen palautus Beninin tasavallalle',
         },
       ],
     },
@@ -39417,8 +39425,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Quetzaltenangolainen, joka teki marimbasta pianon',
           aika: '1894',
-          // Kuvaton (Opus 6.9.2026): kromaattisesta marimbasta ei löytynyt
-          // yhtään >= 1200 px:n kuvaa ilman tunnistettavia kasvoja.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-gtm-musiikki-2-r20260907-v4.jpg',
           teksti: 'Vanha marimba oli diatoninen: siinä oli vain yksi '
               + 'kieliriviin ladottu asteikko. Antigua Guatemalassa pappi '
               + 'Joseph de Padilla oli 1700-luvun puolivälissä laajentanut '
@@ -39428,9 +39435,10 @@ export const MAA_KATEGORIAT = {
               + 'kromaattisen eli kaksirivisen marimban hormigo-puusta. '
               + 'Hänen poikansa esittivät soitinta Buffalossa New Yorkin '
               + 'osavaltiossa 1908, ja niin marimba lähti maailmalle.',
-          selite: 'Kromaattisessa marimbassa on kaksi kielirivistöä pianon '
-              + 'koskettimiston tapaan, ja sillä voi soittaa kaikissa '
-              + 'sävellajeissa.',
+          selite: 'Kaksirivinen kromaattinen marimba puisine resonaattoreineen — '
+            + 'museoesineen rakennetta mukaileva kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Smithsonian '
+            + 'Folkways — SFW40542-levyn tekstivihko (PDF)',
         },
         {
           otsikko: 'Näytelmä, jota on esitetty samana päivänä vuosisatoja',
@@ -40473,6 +40481,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Sata vuotta, jolloin keisari oli vieras omassa linnassaan',
           aika: '1769–1855',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-eth-historia-2-r20260907-v3.jpg',
           teksti: 'Ras Mikael Sehul syrjäytti keisari Iyoas I:n 7. '
               + 'toukokuuta 1769, ja siitä alkoi Zemene Mesafint, '
               + 'ruhtinaiden aika. Keisarit istuivat yhä Gondarissa, '
@@ -40485,10 +40494,15 @@ export const MAA_KATEGORIAT = {
               + 'kruunattiin keisari Tewodros II:ksi lyötyään kaikki '
               + 'kilpailijansa.',
           wiki: 'Zemene Mesafint',
+          selite: 'Ras Mikael Sehulin ja Iyoas I:n valtapeliä vuonna 1769 '
+            + 'esittävä kasvoton historiallinen rekonstruktio.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Bahru Zewde, A '
+            + 'History of Modern Ethiopia 1855–1991 (Cambridge)',
         },
         {
           otsikko: 'Keisari, joka tilasi maalleen postin ja polkupyörät',
           aika: '1886–1913',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-eth-historia-3-r20260907-v3.jpg',
           teksti: 'Menelik II siirsi pääkaupunkinsa Addis Abebaan 1886 ja '
               + 'kruunattiin Entoton vuorella 3. marraskuuta 1889. Hänen '
               + 'luottomiehensä oli sveitsiläinen insinööri Alfred Ilg, '
@@ -40501,6 +40515,12 @@ export const MAA_KATEGORIAT = {
               + 'pääkaupunkiin asti vasta 1917, neljä vuotta keisarin '
               + 'kuoleman jälkeen.',
           wiki: 'Menelik II',
+          selite: 'Menelik II:n kruunajaisia Entoto Maryamissa vuonna 1889 '
+            + 'esittävä historiallinen rekonstruktio; nimetty henkilö jää '
+            + 'etäiseksi ja kasvot tunnistamattomiksi.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: British Museum — '
+            + 'Menelik II, henkilötietue BIOG172201; Entoto Natural Park — '
+            + 'Entoto Maryamin historia',
         },
       ],
     },
@@ -40790,6 +40810,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Metsäsaaret, joita kirkot ovat vartioineet 1 500 vuotta',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-eth-luonto-0-r20260907-v1.jpg',
           teksti: 'Pohjois-Etiopian ylängöistä on raivattu pelloiksi niin '
               + 'paljon, että alkuperäistä metsää on jäljellä noin neljä '
               + 'prosenttia — ja lähes kaikki siitä kasvaa kirkkojen '
@@ -40801,6 +40822,12 @@ export const MAA_KATEGORIAT = {
               + 'reunat alkoivat kulua, papit ja kyläläiset ryhtyivät '
               + 'muuraamaan niiden ympärille kiviaitoja.',
           wiki: 'Ethiopian Orthodox Tewahedo Church',
+          selite: 'Etiopialaisen kirkkometsän innoittama kuvitus: '
+            + 'ortodoksikirkkoa ympäröivä metsäsaareke ylängön '
+            + 'viljelymaisemassa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Wageningen '
+            + 'University & Research — Conservation of the Ethiopian church '
+            + 'forests',
         },
         {
           otsikko: 'Vuorikauris, joka jäi yhden vuoriston vangiksi',
@@ -40888,6 +40915,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Rauhansopimus, joka kesti lähes seitsemänsataa vuotta',
           aika: '652',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-historia-0-r20260907-v1.jpg',
           teksti: 'Arabiarmeija tuli Egyptistä etelään vuonna 652 ja '
               + 'kohtasi Makurian kristillisen kuningaskunnan Dongolan '
               + 'muurien edessä. Valloitus jäi tekemättä, ja sen sijaan '
@@ -40900,6 +40928,12 @@ export const MAA_KATEGORIAT = {
               + 'sen mukaan elettiin 1300-luvulle asti — pitempään kuin '
               + 'minkään toisen tunnetun sopimuksen mukaan.',
           wiki: 'Mukurra',
+          selite: 'Baqt-sopimuksen alkuvaiheita mukaileva historiallinen kuvitus '
+            + 'nubialaisten ja Egyptin lähettiläiden kohtaamisesta 600-luvun '
+            + 'puolivälissä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Library of '
+            + 'Congress — Arabic Documents from Medieval Nubia (PDF, s. '
+            + '20–24)',
         },
         {
           otsikko: 'Kuningatar, joka hautasi keisarin pään portaiden alle',
@@ -41067,6 +41101,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Musiikkilaji, joka nimettiin salkun mukaan',
           aika: '1920-luku',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-musiikki-0-r20260907-v1.jpg',
           teksti: 'Omdurmanissa syntyi 1920-luvulla uusi kaupunkilaulu: '
               + 'solisti ja kuoro, säestyksenä pelkkä tar-kehärumpu, ja '
               + 'sävelmät lainattiin uskonnollisesta ylistyslaulusta '
@@ -41078,6 +41113,10 @@ export const MAA_KATEGORIAT = {
               + 'tarkoittaa salkkua. Ensimmäiset savikiekot äänitettiin '
               + 'Kairossa 1930-luvulla ja myytiin Omdurmanista käsin.',
           wiki: 'Music of Sudan',
+          selite: 'Solisti, kuoro ja kehärumpu 1920-luvun Omdurmanin '
+            + 'haqiba-laulua mukailevassa kuvituksessa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Rift Valley '
+            + 'Institute — The Sudan Handbook (PDF, s. 248–249)',
         },
         {
           otsikko: 'Lyyra, joka soi henkien parannusmenoissa',
@@ -41100,6 +41139,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Naiset, joiden laulu saattoi ratkaista riidan',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-musiikki-2-r20260907-v1.jpg',
           teksti: 'Länsi-Sudanissa on hakamat: arvostettuja naisia, '
               + 'joiden ase on runo. He ylistävät tai pilkkaavat oman '
               + 'heimonsa miehiä, ja heidän sanansa painaa niin paljon, '
@@ -41112,6 +41152,10 @@ export const MAA_KATEGORIAT = {
               + 'omaa musiikkia ovat myös dalooka-rummun tahdittamat '
               + 'aghani al-banat eli tyttöjen laulut.',
           wiki: 'Music of Sudan',
+          selite: 'Hakamattien yhteisösovittelun innoittama kuvitus läntisestä '
+            + 'Sudanista: naisen sanat kokoavat kuulijat yhteen.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: UN Women — Women’s '
+            + 'Peace and Humanitarian Fund, Sudanin vuosiraportti 2024 (PDF)',
         },
         {
           otsikko: 'Perjantain rumpu ei ole esitys vaan rukous',
@@ -41191,6 +41235,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Koulu, joka teki kirjaimista kuvia',
           aika: '1957–',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-kuvataide-2-r20260907-v3.jpg',
           teksti: 'Ibrahim El-Salahi syntyi Omdurmanissa 1930 perheeseen, '
               + 'jossa isä piti koraanikoulua — sieltä hän oppi '
               + 'arabialaisen kalligrafian, josta tuli myöhemmin hänen '
@@ -41202,6 +41247,11 @@ export const MAA_KATEGORIAT = {
               + 'järjesti hänestä ensimmäisen afrikkalaista '
               + 'nykytaiteilijaa esittelevän retrospektiivinsä.',
           wiki: 'Ibrahim El-Salahi',
+          selite: 'Ibrahim El-Salahin ja Khartumin koulukunnan innoittama '
+            + 'kuvitus: selin nähty maalari kuvitteellisessa työhuoneessa '
+            + '1950-luvun lopulla.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Ashmolean Museum — '
+            + 'Ibrahim El-Salahi -näyttelyteksti',
         },
         {
           otsikko: 'Kuninkaan haudan päälle ladottiin valkoista ja mustaa',
@@ -41267,7 +41317,8 @@ export const MAA_KATEGORIAT = {
           wiki: 'Dungonab Bay',
         },
         {
-          otsikko: 'Keltainen Niili, joka kuivui kahdentuhannen vuoden takana',
+          otsikko: 'Keltainen Niili, joka kuivui Saharan mukana',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-luonto-2-r20260907-v1.jpg',
           teksti: 'Wadi Howar on yli 1 100 kilometriä pitkä kuiva uoma, '
               + 'joka alkaa Tšadin Ennedistä ja päättyy Niiliin Vanhan '
               + 'Dongolan kohdalla. Nykyään siihen sataa noin 25 '
@@ -41275,11 +41326,15 @@ export const MAA_KATEGORIAT = {
               + 'oli Niilin sivujoki, jota kutsutaan Keltaiseksi Niiliksi: '
               + 'silloin Saharan eteläraja oli viisisataa kilometriä '
               + 'nykyistä pohjoisempana ja uoman varrella laidunsi '
-              + 'karjaa. Kuivumisen aikana joesta tuli ensin '
-              + 'makeanveden järvien ketju, joka näkyy vielä Ptolemaioksen '
-              + 'maailmankartalla, ja noin kaksituhatta vuotta sitten se '
-              + 'kuoli kokonaan.',
+              + 'karjaa. Jokivaihe päättyi noin 4 500 vuotta sitten: '
+              + 'uomaan jäi ensin makeanveden järvien ketju, joka näkyy '
+              + 'vielä Ptolemaioksen maailmankartalla, ja lopulta sekin '
+              + 'kuivui.',
           wiki: 'Wadi Howar',
+          selite: 'Wadi Howarin kosteamman holoseenikauden jokimaisemaa mukaileva '
+            + 'luonnonhistoriallinen kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Science 237 (1987) '
+            + '— Wadi Howar, DOI 10.1126/science.237.4812.298',
         },
         {
           otsikko: 'Paikka, jossa kaksi Niiliä sekoittuu yhdeksi',
@@ -41378,6 +41433,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Heittoveitsi, jossa on kolme terää',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-historia-2-r20260907-v3.jpg',
           teksti: 'Azandeja hallitsi Avongara-suku, ja heidän seutunsa '
               + 'ulottuu nykyisen Etelä-Sudanin lounaiskolkasta Kongoon '
               + 'ja Keski-Afrikan tasavaltaan. Kuuluisin heidän '
@@ -41389,10 +41445,15 @@ export const MAA_KATEGORIAT = {
               + 'appelsiinia, banaania ja ananasta. Zandea puhuu noin 1,1 '
               + 'miljoonaa ihmistä.',
           wiki: 'Azande people',
+          selite: 'Azande-perinteeseen kuuluvan moniteräisen heittoveitsen '
+            + 'muotoon perustuva kuvitus sepän työpajasta.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: University of '
+            + 'Michigan Museum of Art — heittoveitsi 1983/1.149',
         },
         {
           otsikko: 'Maa, jolle piti ensin keksiä nimi',
           aika: '2011',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-historia-3-r20260907-v1.jpg',
           teksti: 'Kansanäänestys järjestettiin 9.–15. tammikuuta 2011, ja '
               + '98,83 prosenttia äänestäneistä kannatti eroa. Nimestä '
               + 'väiteltiin komiteassa vielä sen jälkeen: ehdolla olivat '
@@ -41405,6 +41466,11 @@ export const MAA_KATEGORIAT = {
               + 'Afrikan unioniin. Syyskuussa Google Maps piirsi rajan '
               + 'kartalle.',
           wiki: 'Etelä-Sudan',
+          selite: 'Tammikuun 2011 Etelä-Sudanin kansanäänestyksen innoittama '
+            + 'kuvitus äänestyshetkestä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: YK:n '
+            + 'UNMIS-operaatio — Etelä-Sudanin kansanäänestys tammikuussa '
+            + '2011',
         },
       ],
       tehtava: {
@@ -41428,6 +41494,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Veijari, joka tekee kaiken väärin',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-tarinat-0-r20260907-v1.jpg',
           teksti: 'Azandejen tarinoiden päähenkilö on Ture, veijari, joka '
               + 'tekee harkitsemattomia päätöksiä ja äkkipikaisia tekoja '
               + 'ja saa niistä aina seuraukset. Tarinoita ei kerrota '
@@ -41439,9 +41506,14 @@ export const MAA_KATEGORIAT = {
               + 'julkaistiin 1960-luvulla — muun muassa antropologi '
               + 'E. E. Evans-Pritchardin kokoelma Ture-tarinoita.',
           wiki: 'Azande people',
+          selite: 'Ture-veijarin tarinaperinteen innoittama kuvitus: hunajaruukun '
+            + 'kumoutuminen huvittaa kuulijoita.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Persée — arvio '
+            + 'teoksesta E. E. Evans-Pritchard, The Zande Trickster (1969)',
         },
         {
           otsikko: 'Kolme oraakkelia, joilla oli eri hinta',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-tarinat-1-r20260907-v1.jpg',
           teksti: 'Azandet käyttivät kolmea oraakkelia, ja niillä oli '
               + 'selvä arvojärjestys. Arvostetuin oli benge, myrkkyoraakkeli, '
               + 'jota vain miehet saivat käyttää ja jonka päätöstä ei '
@@ -41454,6 +41526,10 @@ export const MAA_KATEGORIAT = {
               + 'oikeuslaitos: ne osoittivat, kuka oli aiheuttanut '
               + 'onnettomuuden.',
           wiki: 'Azande people',
+          selite: 'Benge-oraakkelin kysymistä mukaileva historiallinen kuvitus '
+            + 'Azande-yhteisöstä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: HAU: Journal of '
+            + 'Ethnographic Theory — benge-oraakkeli, DOI 10.1086/732910',
         },
         {
           otsikko: 'Keihäänherrat uhraavat härän',
@@ -41511,6 +41587,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Sama taikina paistetaan tai keitetään',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-ruoka-0-r20260907-v1.jpg',
           teksti: 'Etelä-Sudanin keittiö nojaa viljaan: maissiin, '
               + 'durraan ja hirssiin. Kansallisruoka on kisra, ohut '
               + 'durrasta hapatettu lettu, ja samasta jauhosta keitetään '
@@ -41522,9 +41599,15 @@ export const MAA_KATEGORIAT = {
               + 'keitetään, grillataan tai kuivataan. Arabialainen '
               + 'keittiö on jättänyt jälkensä pohjoisimpiin ruokiin.',
           wiki: 'South Sudanese cuisine',
+          selite: 'Ohutta durrasta valmistettua kisraa paistetaan paksun '
+            + 'viljapuuron rinnalla sudanilaista ruokaperinnettä mukailevassa '
+            + 'kuvituksessa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: FAO — Sorghum and '
+            + 'millets in human nutrition',
         },
         {
           otsikko: 'Pinaattipata, joka maistuu maapähkinältä',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-ruoka-1-r20260907-v2.jpg',
           teksti: 'Kombo tehdään kolmesta aineksesta: pinaatista tai '
               + 'muusta lehtivihanneksesta, maapähkinävoista ja '
               + 'tomaatista. Maapähkinä antaa padalle paksuuden ja '
@@ -41537,6 +41620,10 @@ export const MAA_KATEGORIAT = {
               + 'paistetaan mandazia, kolmion muotoista uppopaistettua '
               + 'leipää.',
           wiki: 'South Sudanese cuisine',
+          selite: 'Kombo-pata, lehtivihannes, maapähkinätahna ja tomaatti '
+            + 'eteläsudanilaisen reseptin innoittamassa kuvituksessa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Global Table '
+            + 'Adventure — kombo-pata South Sudanese Cookbookin mukaan',
         },
         {
           otsikko: 'Kala, joka painaa enemmän kuin kaksi ihmistä',
@@ -41627,10 +41714,10 @@ export const MAA_KATEGORIAT = {
           wiki: 'Nuerit',
         },
         {
-          otsikko: 'Rumpu, joka veistettiin ihmisen muotoiseksi',
-          teksti: 'Azandejen soittimet ovat myös veistoksia: rummut ja '
-              + 'sansa-peukalopianot tehtiin toisinaan ihmisen tai '
-              + 'eläimen muotoisiksi, toisinaan puhtaan kuviollisiksi. '
+          otsikko: 'Ihmishahmo, joka soi peukaloilla',
+          teksti: 'Azandejen soittimet ovat myös veistoksia: '
+              + 'sansa-peukalopianot ja rummut tehtiin toisinaan ihmisen '
+              + 'tai eläimen muotoisiksi, toisinaan puhtaan kuviollisiksi. '
               + 'Peukalopianossa on laatikon päälle kiinnitetyt '
               + 'metallikielet, joita näppäillään peukaloilla, ja se '
               + 'kulkee mukana taskussa. Soittimia käytettiin häissä ja '
@@ -41660,12 +41747,14 @@ export const MAA_KATEGORIAT = {
           + 'sekakieli, ja niiden lisäksi kieliä on yli kuusikymmentä.',
       nostot: [
         {
-          otsikko: 'Kuusikymmentä kieltä ja yksi virallinen',
-          teksti: 'Etelä-Sudanissa puhutaan yli kuuttakymmentä '
-              + 'alkuperäiskieltä, ja useimmat niistä kuuluvat '
-              + 'nilo-saharalaiseen kielikuntaan — mukana on sekä '
-              + 'Niilin sudanilaisia että Keski-Sudanin kieliä. '
-              + 'Virallinen kieli on englanti. Läntisen Bahr el Ghazalin '
+          otsikko: 'Kymmeniä kieliä ja yksi työkieli',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-kielet-0-r20260907-v2.jpg',
+          teksti: 'Etelä-Sudanissa puhutaan kymmeniä alkuperäiskieliä, '
+              + 'ja useimmat niistä kuuluvat nilo-saharalaiseen '
+              + 'kielikuntaan — mukana on sekä Niilin sudanilaisia että '
+              + 'Keski-Sudanin kieliä. Vuoden 2011 perustuslaki tekee '
+              + 'kaikista alkuperäiskielistä kansalliskieliä, ja '
+              + 'englanti on virallinen työkieli. Läntisen Bahr el Ghazalin '
               + 'ja Sudanin rajaseudulla asuu ihmisiä, joiden esi-isät '
               + 'jäivät seudulle palatessaan pyhiinvaellukselta Mekasta '
               + 'Länsi-Afrikkaan; he puhuvat tšadilaisia kieliä ja '
@@ -41673,6 +41762,10 @@ export const MAA_KATEGORIAT = {
               + 'jälkeen maa on suunnannut katseensa itään ja '
               + 'suahilinkieliseen Itä-Afrikan yhteisöön.',
           wiki: 'Culture of South Sudan',
+          selite: 'Etelä-Sudanin monikielisyyden innoittama kuvitus keskustelusta '
+            + 'yhteisöradion mikrofonien äärellä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: ILO NATLEX — '
+            + 'Etelä-Sudanin väliaikainen perustuslaki 2011, artikla 6 (PDF)',
         },
         {
           otsikko: 'Kieli, joka syntyi varuskunnassa',
@@ -41690,6 +41783,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kieli, jossa vokaalilla on kolme pituutta',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-kielet-2-r20260907-v2.jpg',
           teksti: 'Dinkan kielessä on piirre, joka on maailman kielissä '
               + 'harvinainen: vokaalilla voi olla kolme eri pituutta, ja '
               + 'pituus vaihtaa sanan merkityksen. Kieli myös taivuttaa '
@@ -41701,9 +41795,15 @@ export const MAA_KATEGORIAT = {
               + 'Sanastossa on paljon yhteistä nubian kanssa, luultavasti '
               + 'keskiajan Alwan valtakunnan ajoilta.',
           wiki: 'Dinkan kieli',
+          selite: 'Dinkan vokaalien pituuserojen tutkimista mukaileva kuvitus '
+            + 'äänitystilanteesta.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Edinburghin '
+            + 'yliopisto — dinkan vokaalinpituudet, DOI '
+            + '10.1016/j.wocn.2007.09.002',
         },
         {
           otsikko: 'Zande on yhden kansan ja monen kielen nimi',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-kielet-3-r20260907-v1.jpg',
           teksti: 'Azandet kutsuvat kieltään nimellä Pa-Zande, ja sitä '
               + 'puhuu noin 1,1 miljoonaa ihmistä. Nimi zande tarkoittaa '
               + 'myös laajempaa kieliryhmää, johon kuuluvat muun muassa '
@@ -41714,6 +41814,10 @@ export const MAA_KATEGORIAT = {
               + 'perinnettä, jota käännettiin 1960-luvulla. Azandet '
               + 'tunnetaan koko seudulla juuri tarinankertojinaan.',
           wiki: 'Azande people',
+          selite: 'Zandenkielisen suullisen tarinankerronnan innoittama kuvitus '
+            + 'vanhimmasta ja eri-ikäisistä kuulijoista.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Glottolog — Zande '
+            + '(zand1248)',
         },
       ],
       tehtava: {
@@ -42882,6 +42986,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Rytmi, joka tuli laivoissa ja jäi',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-lka-musiikki-0-r20260907-v1.jpg',
           teksti: 'Baila on saanut nimensä portugalin verbistä bailar, tanssia. Sen '
               + 'juuret ovat kahdessa vanhassa muodossa: hitaassa ja juhlallisessa '
               + 'chicotessa ja nopeassa, nykivässä kafrinhassa. Niitä soittivat '
@@ -42892,6 +42997,10 @@ export const MAA_KATEGORIAT = {
               + 'laulajaksi siirtynyt Wally Bastiansz sovitti sen 1960-luvun alussa '
               + 'sinhalankielisiin sanoihin. Wada bailassa laulajat sepittävät säkeitä '
               + 'kilpaa tuomariston antamasta aiheesta.',
+          selite: 'Sri Lankan bailan innoittama kuvitus rannikkokylän soittajista '
+            + 'kitaran, viulun ja kehärummun äärellä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Smithsonian, '
+            + 'National Museum of Asian Art — Baila Music from Sri Lanka',
         },
         {
           otsikko: 'Aasian ensimmäinen radioasema',
@@ -43082,6 +43191,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kori päälaella',
           aika: '1868–1926',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-nam-historia-1-r20260907-v2.jpg',
           teksti: 'Viisi Suomen Lähetysseuran lähettiä lähti Suomesta 24. '
               + 'kesäkuuta 1868. Joukossa oli inkeriläisen köyhän perheen poika Martti '
               + 'Rautanen, joka saapui Walvis Bayn kautta Hereromaahan huhtikuussa '
@@ -43092,9 +43202,10 @@ export const MAA_KATEGORIAT = {
               + 'kalottia, joka näytti paikallisten silmään pieneltä korilta, '
               + 'okambale — lempinimi Nakambale päätyi hänen hautakiveensä. Ensimmäiset '
               + 'paikalliset pastorit aloittivat työnsä 1925.',
-          selite: 'Rautasen etnografinen kokoelma on Suomen kansallismuseossa ja '
-            + 'päiväkirjat Turun yliopistossa; sveitsiläinen kasvitieteilijä Hans '
-            + 'Schinz nimesi hänen mukaansa kasvisuvun Neorautanenia.',
+          selite: 'Ambomaan suomalaisen lähetystyön innoittama historiallinen '
+            + 'kuvitus 1800-luvun lopun kohtaamisesta lähetysasemalla.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Museums '
+            + 'Association of Namibia — Nakambale Museum',
         },
         {
           otsikko: 'Satama, joka jäi naapurille',
@@ -43343,6 +43454,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Suojelualue, jonka aarre on pimeys',
           aika: '1984–2012',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-nam-tiede-2-r20260907-v1.jpg',
           teksti: 'Namibiassa on yli kolmesataa aurinkoista päivää vuodessa, ja sama '
               + 'kuiva ja pilvetön ilma tekee öistä poikkeuksellisen pimeitä, kun '
               + 'lähin kaupunki on kaukana. J. A. Brückner perusti 1984 aavikon '
@@ -43353,8 +43465,10 @@ export const MAA_KATEGORIAT = {
               + 'International Dark-Sky Association julisti NamibRandin '
               + 'kansainväliseksi pimeän taivaan suojelualueeksi — suojelukohde ei ole '
               + 'eläin eikä kasvi vaan yötaivas.',
-          selite: 'Suojelualue on yksityinen ja rahoittaa itsensä matkailun maksuilla '
-            + '— pimeys on sen tuote siinä missä maisemakin.',
+          selite: 'NamibRandin pimeän taivaan suojelun innoittama yömaisemakuva '
+            + 'Linnunradasta aavikon yllä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: NamibRand Nature '
+            + 'Reserve — International Dark Sky Reserve',
         },
         {
           otsikko: 'Vanhin kuori — ja reikä siinä',
