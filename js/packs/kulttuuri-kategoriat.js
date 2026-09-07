@@ -94450,4 +94450,774 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * WINNIPEGIN KAUPUNKILEHTI (Opus 7.9.2026). Kansi + teemasivu,
+   * aineisto docs/mantereet-tyoaineisto/faktapohja-winnipeg.md ja sen
+   * riippumaton tarkistus tarkistus-winnipeg.md (tuomio "kelpaa, kun
+   * kohtien A-F ratkaisut tehdään"; kaikki kuusi on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Winnipeg", "History of Winnipeg", "Red River Colony", "Battle of
+   * Seven Oaks", "Fort Garry", "Red River Rebellion", "Manitoba Act,
+   * 1870", "Treaty 1", "The Forks, Winnipeg", "Winnipeg general
+   * strike", "Winnipeg (bear)", "Harry Colebourn", "Manitoba
+   * Legislative Building".
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * kosketa; litteä kysymystaulu (northamerica-questions.js) jää
+   * ennalleen samoin kuin Lagosissa ja Sansibarissa.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto', koska AIHE_IKONIT ei tarjoa preerialle omaa
+   * kuvaketta eikä uusia sivu-id:itä tehdä; nimi "Talvi, tulva ja
+   * preeria" kertoo aiheen.
+   *
+   * VISAN VASTAUKSET LÖYTYVÄT LEHDESTÄ. northamerica-questions.js
+   * kysyy Winnipegiltä viisi asiaa: maa Kanada, Nalle Puh, kylmä
+   * talvi, Redin ja Assiniboinen risteys sekä métis-kansan synty
+   * Punaisenjoen laaksossa. Neljä ensimmäistä ovat kannen ja
+   * teemasivun nostoissa; métis-kansan syntyminen on Kanadan
+   * maalehden aihe (maa-kategoriat.js, CAN), eikä sitä toisteta
+   * täällä. TEEMASIVUN MINITEHTÄVÄ KYSYY SIKSI AIVAN MUUTA:
+   * auringonpaistetuntien sijaa.
+   *
+   * KANADAN MAALEHTEÄ EI TOISTETA. Maalehti kertoo L'Anse aux
+   * Meadowsista, Hudson's Bay Companyn peruskirjasta ja Rupert's
+   * Landista, Charlottetownin kokouksesta, ratsupoliisin
+   * perustamisesta 1873, métis-kansan synnystä ja Punaisenjoen
+   * kärryistä, toteemipaalusta, inuksukista, sisäoppilaitoksista,
+   * Banffista, Fundynlahdesta, W. A. C. Bennettin padosta, Wood
+   * Buffalosta, vaahterasiirapista, hummerista, leipäriidasta,
+   * poutinesta ja urheilusta. Yksikään näistä ei ole tämän lehden
+   * aihe.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: pörssikorttelin koko ja viljapörssin vuodet otetaan
+   *    kohteen omasta artikkelista (kohdekartan juttu, ei lehti).
+   *  - B: ihmisoikeusmuseon kolme eri päivää 2014 eivät ole
+   *    ristiriita vaan eri tapahtumia (kohdekartan juttu).
+   *  - C: nimi Winnipeg on creen ja odžibwen sana, jonka Kelsey
+   *    omaksui; merkitys annetaan lähteen molemmilla sanoilla
+   *    ("samea eli mutainen vesi"), eikä nimeä väitetä yhden
+   *    kielen omaksi.
+   *  - D: väkiluvuista käytetään VAIN vuoden 2021 väestönlaskentaa
+   *    (kaupunki 749 607, metropolialue 834 678). Lähteen 850 000:n
+   *    arviota ei käytetä, koska sama luku esiintyy artikkelissa
+   *    kerran kaupungin ja kerran metropolialueen lukuna.
+   *  - E: vuoden 1919 yleislakko kerrotaan kohdekartan Burton
+   *    Cummings -teatterin jutussa, ei lehden nostona, ja
+   *    neutraalina historiana ilman yksityiskohtien korostusta.
+   *  - F: métis-aihe rajattu kaupungin omaan tarinaan (kapina 1870,
+   *    James McKay), ei kansan syntyyn.
+   *
+   * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+   * (northamerica-valokuvat.js, winnipeg), jossa se on jo
+   * tarkistettu — vanha puoli on koiravaljakko Fort Garryn portin
+   * edessä 1899 ja uusi puoli sama kaupunki nykyään. Selitteet on
+   * kirjoitettu uudestaan yhdeksi virkkeeksi reseptin mukaan.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026): oppaan
+   * sääjakso nojaa siksi en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen.
+   */
+  winnipeg: [
+    {
+      id: 'kaupunki',
+      nimi: 'Winnipeg',
+      johdanto: 'Winnipeg on rakennettu sinne, missä Assiniboine yhtyy '
+        + 'Punaiseenjokeen — risteykseen, joka oli kauppapaikka '
+        + 'tuhansia vuosia ennen kaupunkia. Kaupunkioikeudet se sai '
+        + 'isoisän matkavuonna 1873.',
+      nostot: [
+        {
+          otsikko: 'Risteys, joka oli valmis ennen kaupunkia',
+          teksti: 'Punaisenjoen ja Assiniboinen yhtymäkohta on nimeltään '
+            + 'The Forks, ja se oli kanoottireittien risteys kauan ennen '
+            + 'eurooppalaisia. Arkeologia, kalliopiirrokset ja suullinen '
+            + 'perinne kertovat leireistä, keräilystä, metsästyksestä, '
+            + 'työkalujen teosta, kalastuksesta ja kaupasta; arvio '
+            + 'vanhimmasta asutuksesta on Forksissa kuusituhatta vuotta. '
+            + 'Odžibwet piirsivät ensimmäisiä karttoja tuohelle, ja ne '
+            + 'auttoivat turkiskauppiaita löytämään vesireitit. Sieur de '
+            + 'La Vérendrye rakensi paikalle 1738 ensimmäisen '
+            + 'kauppa-aseman, Fort Rougen.',
+          wiki: 'The Forks, Winnipeg',
+        },
+        {
+          otsikko: 'Kaksi yhtiötä ja seitsemän tammea',
+          teksti: 'North West Company rakensi Fort Gibraltarin 1809 ja '
+            + 'Hudson\'s Bay Company Fort Douglasin 1812, ja yhtiöt '
+            + 'kilpailivat kiivaasti samasta turkiskaupasta. Lord '
+            + 'Selkirk osti maata ja perusti ensimmäisen pysyvän '
+            + 'siirtokunnan, Red River Colonyn, ja mittautti jokitontit. '
+            + 'Métisit ja Selkirkin uudisasukkaat ottivat yhteen '
+            + 'Seitsemän tammen taistelussa 1816. Kilpailu päättyi '
+            + 'vasta 1821, kun yhtiöt yhdistyivät. Fort Gibraltar '
+            + 'nimettiin Fort Garryksi 1822; tulva tuhosi sen 1826, ja '
+            + 'se rakennettiin uudelleen vasta 1835.',
+          wiki: 'Red River Colony',
+        },
+        {
+          otsikko: 'Marraskuu 1873',
+          teksti: 'Vuosina 1869–70 alueella käytiin Punaisenjoen kapina, '
+            + 'métisien väliaikaisen hallituksen ja idästä tulleiden '
+            + 'uudisasukkaiden välinen kiista, jota kenraali Garnet '
+            + 'Wolseley lähetettiin tukahduttamaan. Manitoba Act teki '
+            + '1870 Manitobasta kolmivuotiaan Kanadan viidennen '
+            + 'provinssin, ja Treaty 1 allekirjoitettiin 3. elokuuta '
+            + '1871. Kaupunki perustettiin 8. marraskuuta 1873 '
+            + 'Selkirkin siirtokunnan ympärille, ja sille antoi nimen '
+            + 'métis-lainsäätäjä ja tulkki James McKay. Nimi tuli '
+            + 'järveltä kuudenkymmenenviiden kilometrin päästä: creen '
+            + 'ja odžibwen sana tarkoittaa sameaa eli mutaista vettä.',
+          wiki: 'Manitoba Act, 1870',
+        },
+        {
+          otsikko: 'Karhu, joka jäi Lontooseen',
+          teksti: 'Elokuussa 1914 luutnantti Harry Colebourn, '
+            + 'ratsuväkirykmentti Fort Garry Horsen eläinlääkäri, oli '
+            + 'matkalla sotaan. Junapysäkillä White Riverissä hän osti '
+            + '24. elokuuta kahdellakymmenellä dollarilla karhunpennun, '
+            + 'jonka emo oli tapettu keväällä, ja nimesi sen '
+            + 'kotikaupunkinsa mukaan: Winnipeg, lyhyesti Winnie. Karhu '
+            + 'seurasi häntä Englantiin asti, ja ennen Ranskaan lähtöä '
+            + 'hän jätti sen Lontoon eläintarhaan 9. joulukuuta 1914. '
+            + 'Sinne se jäi. Vuodesta 1924 karhua kävi katsomassa '
+            + 'A. A. Milnen poika Christopher Robin, joka vaihtoi oman '
+            + 'nallensa nimen Edward Bearista Winnie the Poohiksi.',
+          wiki: 'Winnipeg (bear)',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Winnipeg on Manitoban pääkaupunki ja maakunnan '
+          + 'suurin kaupunki, ja se on rakennettu Punaisenjoen laakson '
+          + 'pohjalle, tulvatasangolle, jonka pinnanmuodot ovat '
+          + 'erittäin tasaiset. Vuoden 2021 väestönlaskennassa '
+          + 'kaupungissa asui 749 607 ja metropolialueella 834 678 '
+          + 'ihmistä; se on Kanadan kuudenneksi suurin kaupunki. '
+          + 'Kaupunkia sanotaan lännen portiksi, ja se on yhä '
+          + 'rautatiesolmu, jonka talous nojaa terveydenhuoltoon, '
+          + 'kauppaan, teollisuuteen ja julkishallintoon.',
+        artikkeli: {
+          nimi: 'Matkailijan Winnipeg',
+          taitto: 'opas',
+          teksti: 'Kaupunki, joka on tasainen kuin pöytä ja jonka ydin '
+            + 'mahtuu kävelymatkalle: jokien kärki, pörssikortteli ja '
+            + 'parlamenttitalon puisto ovat kaikki puolen tunnin '
+            + 'päässä toisistaan.',
+          nosto: 'Winnipegissä on Kanadan suurin alkuperäiskansojen '
+            + 'osuus (12,4 %) ja lukumäärä (90 995) minkään suuren '
+            + 'kaupungin osalta sekä maan suurin métis-väestö sekä '
+            + 'osuutena (6,5 %) että lukumääränä (47 915). Kaupungissa '
+            + 'puhutaan yli sataa kieltä, ja St. Bonifacessa on '
+            + 'Länsi-Kanadan suurin ranskankielinen yhteisö.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Winnipeg James Armstrong Richardson '
+                + 'International Airport on maakunnan ainoa kaupallinen '
+                + 'kansainvälinen lentoasema, ja sen 585 miljoonan '
+                + 'dollarin uudistus valmistui lokakuussa 2011. '
+                + 'Kaukojunat lähtevät Union Stationilta Main Streetin '
+                + 'varrelta. Kaupunki on rautatiesolmu, jota palvelee '
+                + 'neljä rahtiyhtiötä, ja se on ainoa Vancouverin ja '
+                + 'Thunder Bayn välinen suuri kaupunki, jolla on suora '
+                + 'rautatieyhteys Yhdysvaltoihin. Julkista liikennettä '
+                + 'on ollut vuodesta 1882, aluksi hevosraitiovaunuilla; '
+                + 'elokuussa 2025 Winnipegistä tuli ensimmäinen '
+                + 'kanadalainen kaupunki, jonka kalustossa on '
+                + '60-jalkaisia akkusähköbusseja.',
+            },
+            {
+              otsikko: 'Keskusta ja katettu käytävä',
+              teksti: 'Keskusta on Portage Avenuen ja Main Streetin '
+                + 'risteyksen ympärillä ja kattaa noin 2,6 '
+                + 'neliökilometriä; siellä työskentelee yli 72 000 '
+                + 'ihmistä ja opiskelee yli 40 000. Monet keskustan '
+                + 'suurista rakennuksista on yhdistetty Winnipeg '
+                + 'Walkway -käytäväverkkoon, jota pitkin pääsee '
+                + 'korttelista toiseen ulos menemättä — mikä on '
+                + 'tammikuussa hyvä tietää. Virallisia kaupunginosia '
+                + 'on 236, ja tiheimmin asuttu on Osborne Village. '
+                + 'Pörssikortteli keskustan pohjoispäässä on '
+                + 'kansallinen historiallinen kohde.',
+            },
+            {
+              otsikko: 'Puistot ja näyttämöt',
+              teksti: 'Suurin puisto on Assiniboine Park, jossa ovat '
+                + 'eläintarha ja Leo Molin veistöspuutarha; muita '
+                + 'suuria ovat Kildonan Park ja St. Vital Park. '
+                + 'Winnipeg oli Kanadan kulttuuripääkaupunki 2010, ja '
+                + 'siellä on 26 kansallista historiallista kohdetta. '
+                + 'Winnipeg Art Gallery on Länsi-Kanadan vanhin '
+                + 'julkinen taidegalleria (1912), maan kuudenneksi '
+                + 'suurin ja maailman suurimman julkisen '
+                + 'nykyinuiittitaiteen kokoelman koti. Royal Manitoba '
+                + 'Theatre Centre on Kanadan vanhin englanninkielinen '
+                + 'aluetteatteri, Le Cercle Molière maan vanhin '
+                + 'teatteriseurue (1925) ja Royal Winnipeg Ballet '
+                + 'Kanadan vanhin balettiryhmä.',
+            },
+            {
+              otsikko: 'Juhlat ja pöytä',
+              teksti: 'Festival du Voyageur on Länsi-Kanadan suurin '
+                + 'talvijuhla, ja se juhlii Punaisenjoen laakson '
+                + 'varhaisia ranskalaisia kulkijoita; Folklorama on '
+                + 'maailman suurin ja pisimpään toiminut '
+                + 'kulttuurijuhla, ja Winnipeg Fringe Theatre Festival '
+                + 'Pohjois-Amerikan toiseksi suurin '
+                + 'vaihtoehtoteatterifestivaali. Kanadan ensimmäinen '
+                + 'jazzkonsertti soitettiin täällä 1914. Ruoassa '
+                + 'kaupungilla on omat erikoisuutensa etenkin '
+                + 'makeisissa ja kuumasavustetussa kalassa, ja omia '
+                + 'jälkiruokia ovat schmoo torte ja wafer pie.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian '
+                + 'Winnipeg-artikkelin Climate-osiosta; lehdellä ei ole '
+                + 'omaa vuosigraafia, koska säänormaaleja ei haettu '
+                + 'tässä erässä. Kesä on lämmin ja kostea, talvi pitkä '
+                + 'ja ankaran kylmä: heinäkuun keskilämpötila on '
+                + '19,7 astetta ja tammikuun noin kuusitoista astetta '
+                + 'pakkasella. Sadetta ja lunta tulee vuodessa runsaat '
+                + '521 millimetriä, mutta talvikuukausina vain 55. '
+                + 'Auringossa Winnipeg on Kanadan kärkeä: 2 353 tuntia '
+                + 'vuodessa ja 317,8 päivää, joina paistetta voi '
+                + 'mitata. Hallaton kausi kestää keskimäärin '
+                + 'toukokuun 23. päivästä syyskuun 22. päivään.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Jokien kärki',
+                tahdet: 3,
+                selite: 'Kansallinen historiallinen kohde ja kaupungin '
+                  + 'suosituin käyntikohde, neljä miljoonaa kävijää '
+                  + 'vuodessa.',
+              },
+              {
+                mita: 'Pörssikortteli',
+                tahdet: 3,
+                selite: 'Kaksikymmentä korttelia 1900-luvun alun '
+                  + 'varastoja ja terrakottajulkisivuja, '
+                  + 'kansallinen historiallinen kohde 1997.',
+              },
+              {
+                mita: 'Manitoban parlamenttitalo',
+                tahdet: 2,
+                selite: 'Tyndall-kivinen beaux-arts-talo, jonka kupolin '
+                  + 'päällä juoksee kullattu Kultapoika.',
+              },
+              {
+                mita: 'Manitoban museo',
+                tahdet: 2,
+                selite: 'Maakunnan suurin museo, jonka päänähtävyys on '
+                  + 'täysikokoinen Nonsuch-aluksen jäljennös.',
+              },
+              {
+                mita: 'Assiniboine Park',
+                tahdet: 2,
+                selite: 'Kaupungin suurin puisto, jossa ovat eläintarha '
+                  + 'ja Leo Molin veistöspuutarha.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin oppaan
+             * jaksossa 5 ja teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Pakkanen on oikeaa pakkasta',
+                teksti: 'Lämpötila laskee ajoittain alle neljänkymmenen '
+                  + 'pakkasasteen, ja purevuusluku on käynyt '
+                  + '57,1 pakkasasteessa.',
+              },
+              {
+                otsikko: 'Tulvakevät on osa kalenteria',
+                teksti: 'Punainen joki nousee säännöllisesti; '
+                  + 'suurtulvia oli 1826, 1950, 1997, 2009 ja 2011.',
+              },
+              {
+                otsikko: 'Hyttysvuosia on',
+                teksti: 'Tasainen maasto ja savipohjan huono kuivatus '
+                  + 'tuottavat märkinä kesinä runsaasti hyttysiä.',
+              },
+              {
+                otsikko: 'Kesällä ukkostaa',
+                teksti: 'Ukkoset ovat hyvin yleisiä ja joskus niin '
+                  + 'voimakkaita, että syntyy tornadoja.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Talvi, tulva ja preeria',
+      johdanto: 'Winnipegissä sää tulee joka suunnasta ja koko '
+        + 'voimallaan: talvi on pitkä ja ankara, kesä kuuma ja '
+        + 'ukkoinen, ja joka kevät katsotaan, kuinka korkealle '
+        + 'Punainen joki nousee.',
+      tehtava: {
+        kysymys: 'Monesko Kanadan aurinkoisin kaupunki Winnipeg on?',
+        vaihtoehdot: ['toiseksi aurinkoisin', 'aurinkoisin', 'viidenneksi aurinkoisin', 'kymmenenneksi aurinkoisin'],
+        oikea: 0,
+        fakta: 'Ankara talvi ei tarkoita pimeää talvea. Winnipegissä on '
+          + '2 353 auringonpaistetuntia vuodessa, mikä tekee siitä '
+          + 'Kanadan toiseksi aurinkoisimman kaupungin, ja mitattavaa '
+          + 'paistetta on 317,8 päivänä vuodessa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Winterpeg ja sen aurinko',
+          teksti: 'Winnipegin ilmasto on kostea mannerilmasto lämpimin '
+            + 'kesin: kesät ovat lämpimiä ja kosteita, talvet pitkiä ja '
+            + 'ankaran kylmiä. Tammikuun keskilämpötila on noin '
+            + 'kuusitoista astetta pakkasella, ja lämpötila laskee '
+            + 'ajoittain alle neljänkymmenen pakkasasteen. Purevuusluku '
+            + 'on käynyt 57,1 pakkasasteessa, ja keskimäärin '
+            + 'kahtenatoista päivänä vuodessa se alittaa neljänkymmenen '
+            + 'pakkasasteen. Talvi on kuitenkin kirkas: kaupungissa on '
+            + '2 353 auringonpaistetuntia vuodessa, enemmän kuin '
+            + 'yhdessäkään Kanadan kaupungissa yhtä lukuun ottamatta, '
+            + 'ja mitattavaa paistetta 317,8 päivänä.',
+          wiki: 'Winnipeg',
+        },
+        {
+          otsikko: 'Kun Punainen joki nousee',
+          teksti: 'Kaupunki on Punaisenjoen laakson pohjalla, ja '
+            + 'tulvatasanko on niin tasainen, ettei vedellä ole minne '
+            + 'mennä. Joki nousi korkeimmilleen 1826. Vuoden 1950 '
+            + 'suurtulva pakotti joukkoevakuointeihin, ja liittovaltio '
+            + 'arvioi vahingot yli 26 miljoonaksi dollariksi — '
+            + 'maakunnan mukaan vähintään kaksinkertaisiksi. Se sai '
+            + 'pääministeri Duff Roblinin ajamaan tulvakanavan '
+            + 'rakentamista kaupungin ohi. Vuonna 1997 patoja '
+            + 'korotettiin hiekkasäkeillä, ja Winnipeg selvisi vähin '
+            + 'vahingoin, kun taas padoton Grand Forks rajan takana ei. '
+            + 'Tulvia oli myös 2009 ja 2011.',
+          wiki: 'Red River Floodway',
+        },
+        {
+          otsikko: 'Preerian reuna ja jalavat',
+          teksti: 'Winnipeg on Kanadan preerian itäreunalla, ja siitä '
+            + 'tulee lempinimi lännen portti. Lännessä ja etelässä '
+            + 'levittäytyy korkearuohopreeria, koillisessa '
+            + 'haapaparkkimaa — vaikka suurin osa alkuperäisistä '
+            + 'preeriaheinistä on raivattu pelloiksi ja kaduiksi. '
+            + 'Kaupungissa kasvaa Pohjois-Amerikan suurin jäljellä '
+            + 'oleva kypsä kaupunkijalavametsä. Kuudenkymmenenviiden '
+            + 'kilometrin päässä pohjoisessa on Winnipegjärvi, maailman '
+            + 'yhdestoista suurin makean veden järvi, ja kaupungin läpi '
+            + 'virtaa neljä jokea: Red, Assiniboine, La Salle ja Seine.',
+          wiki: 'Canadian Prairies',
+        },
+        {
+          otsikko: 'Kesä, joka tulee kerralla',
+          teksti: 'Heinäkuun keskilämpötila on 19,7 astetta, mutta '
+            + 'ääripäät ovat kaukana toisistaan. Korkein mitattu '
+            + 'lämpötila on 42,2 astetta 11. heinäkuuta 1936, ja '
+            + 'seuraavana yönä lämpötila ei laskenut 28,3 astetta '
+            + 'alemmas — sekin on ennätys. Kosteus voi tehdä helteestä '
+            + 'vielä ankaramman: 12. heinäkuuta 2026 mitattiin '
+            + 'humidex-lukema 48,0. Ukkoset ovat kesällä hyvin yleisiä '
+            + 'ja joskus niin voimakkaita, että syntyy tornadoja. '
+            + 'Hallaton kausi on ankaraan talveen nähden pitkä: '
+            + 'viimeinen keväthalla on keskimäärin 23. toukokuuta ja '
+            + 'ensimmäinen syyshalla 22. syyskuuta.',
+          wiki: 'Winnipeg',
+        },
+      ],
+    },
+  ],
+  /*
+   * ST. JOHN'SIN KAUPUNKILEHTI (Opus 7.9.2026). Kansi + teemasivu,
+   * aineisto docs/mantereet-tyoaineisto/faktapohja-stjohns.md ja sen
+   * riippumaton tarkistus tarkistus-stjohns.md (tuomio "kelpaa, kun
+   * kohtien A-G ratkaisut tehdään"; kaikki seitsemän on tehty).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "St. John's, Newfoundland and Labrador", "Newfoundland Colony",
+   * "Fort William, Newfoundland", "Great Fire of 1892", "Great Fire
+   * of 1846", "Grand Banks of Newfoundland", "Collapse of the
+   * Atlantic northwest cod fishery", "Heart's Content Cable
+   * Station", "Newfoundland Time Zone", "Cabot Tower (St. John's)".
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * kosketa.
+   *
+   * TEEMASIVU ON TIEDESIVU EIKÄ SÄÄSIVU. Halifaxin lehden teemasivu
+   * ("Satama, sumu ja myrskyt") kertoo jo luonnonsatamasta,
+   * Golfvirrasta, hurrikaaneista ja graniitista, eikä toista samaa
+   * tehdä naapurikaupunkiin. St. John'sin teemasivu jatkaa siitä,
+   * mihin saapumistekstin isoisä-nosto jää: merestä nousevasta
+   * lennätinkaapelista. Sää kerrotaan oppaan sääjaksossa.
+   *
+   * VISAN VASTAUKSET: northamerica-questions.js kysyy St. John'silta
+   * viisi asiaa — Newfoundlandin saari, Grand Banksin turska
+   * (kahdesti), kirkkaanväriset puutalot ja L'Anse aux Meadowsin
+   * viikinkiasutus. Neljä ensimmäistä ovat kannen nostoissa; L'Anse
+   * aux Meadows on Kanadan maalehden ja karttanoston aihe, eikä sitä
+   * toisteta täällä. MINITEHTÄVÄ KYSYY AIVAN MUUTA: mistä Marconin
+   * viesti lähetettiin.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: kruununsiirtomaan vuosiluku (1824 vai 1825) on lähteen
+   *    sisäinen ristiriita, joten kumpaakaan ei käytetä; lehti sanoo
+   *    vain, että Newfoundland oli 1873 itsehallinnollinen
+   *    brittiläinen siirtomaa.
+   *  - B: parlamentaarinen hallinto 1855 kerrotaan kohdekartan
+   *    Colonial Building -jutussa, ei tässä.
+   *  - C: Christopher Martinin 23 miestä ja kolme hollantilaista
+   *    sotalaivaa pääartikkelin mukaan; merirosvoretkeä ei mainita.
+   *  - D: turskan romahdus ja pyyntikielto 1992, kalastus suljettuna
+   *    vuoteen 2024; kuvatekstin vuotta 1993 ei käytetä, ja
+   *    kaksivuotinen alkuperäinen kielto ei jää lukijalle
+   *    lopullisuudeksi.
+   *  - E ja F: Cabot Towerin vuosiluku ja Marconin rajaus koskevat
+   *    kohdekarttaa (maakartat.js, nahtavyysjutut.js).
+   *  - G: L'Anse aux Meadows, viikingit ja Halifaxin sääsivu
+   *    rajattu pois.
+   *
+   * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+   * (northamerica-valokuvat.js, stjohns), jossa se on jo
+   * tarkistettu — vanha puoli on piirtäjä satamaa luonnostelemassa
+   * noin 1890 ja uusi puoli sama satama nykyään.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026).
+   */
+  stjohns: [
+    {
+      id: 'kaupunki',
+      nimi: 'St. John’s',
+      johdanto: 'St. John’s on Pohjois-Amerikan itäisin kaupunki ja '
+        + 'Newfoundlandin ja Labradorin pääkaupunki. Sen nimi on '
+        + 'kartoilla vanhempi kuin sen asutus, ja sen elämä on aina '
+        + 'tullut merestä.',
+      nostot: [
+        {
+          otsikko: 'Nimi ennen kaupunkia',
+          teksti: 'Kalastajat pitivät täällä kausileirejä 1500-luvun '
+            + 'alussa, ja vuoteen 1540 mennessä ranskalaiset, '
+            + 'espanjalaiset ja portugalilaiset alukset ylittivät '
+            + 'Atlantin joka vuosi näille kalavesille. Nimi São João on '
+            + 'portugalilaisella kartalla jo 1519. Englantilainen John '
+            + 'Rut löysi 1527 satamasta normanni-, bretagne- ja '
+            + 'portugalilaisaluksia ja kirjoitti kuninkaalleen kirjeen, '
+            + 'joka on ensimmäinen tunnettu Pohjois-Amerikasta '
+            + 'lähetetty. Sir Humphrey Gilbert julisti paikan '
+            + '5. elokuuta 1583 Englannin ensimmäiseksi merentakaiseksi '
+            + 'siirtomaaksi — mutta pysyvää väkeä ei ollut: hallitus '
+            + 'kielsi kalastajilta pysyvän asutuksen, ja kaupunki '
+            + 'syntyi vasta vuoden 1630 jälkeen.',
+          wiki: 'St. John’s, Newfoundland and Labrador',
+        },
+        {
+          otsikko: 'Kapea portti ja sen puolustajat',
+          teksti: 'Satamaan johtaa kapea sola kallioiden välissä, ja '
+            + 'juuri se teki kaupungista sekä turvallisen että halutun. '
+            + 'Hollantilainen amiraali Michiel de Ruyter valtasi '
+            + 'kaupungin kesäkuussa 1665, ja kauppiaat rakensivat '
+            + 'puolustuksensa itse: englantilainen kauppiaskapteeni '
+            + 'Christopher Martin laski maihin kuusi tykkiä '
+            + 'aluksestaan ja torjui 1673 kahdellakymmenelläkolmella '
+            + 'miehellä kolmen hollantilaisen sotalaivan hyökkäyksen. '
+            + 'Ranskalaiset tuhosivat kaupungin 1696, piirittivät sen '
+            + '1705 ja valtasivat 1709. Seitsenvuotisen sodan viimeinen '
+            + 'taistelu Pohjois-Amerikassa käytiin täällä 1762, kun '
+            + 'eversti William Amherst valtasi Signal Hillin '
+            + 'aamunkoitteessa 15. syyskuuta.',
+          wiki: 'Battle of Signal Hill',
+        },
+        {
+          otsikko: 'Turska, ja mitä sen jälkeen tuli',
+          teksti: 'Kaupungin edustalla ovat Grand Banks, vedenalaiset '
+            + 'tasangot, joilla kylmä Labradorin virta kohtaa lämpimän '
+            + 'Golfvirran. Sekoittuminen nostaa ravinteet pintaan ja '
+            + 'teki alueesta yhden maailman rikkaimmista kalavesistä. '
+            + 'Vuonna 1992 pohjoisen turskan kanta oli pudonnut '
+            + 'prosenttiin historiallisesta tasosta, ja kalastus, joka '
+            + 'oli muovannut rannikon elämää viisisataa vuotta, '
+            + 'kiellettiin; Grand Banks pysyi suljettuna vuoteen 2024. '
+            + 'Sen jälkeen meri elättää kaupunkia toisin: Hibernian, '
+            + 'Terra Novan ja White Rosen öljykentät ovat aivan '
+            + 'rannikon edustalla, ja St. John’sin alue vastaa noin '
+            + 'puolta koko maakunnan taloudesta.',
+          wiki: 'Grand Banks of Newfoundland',
+        },
+        {
+          otsikko: 'Viisi paloa ja karkkirivi',
+          teksti: 'Kaupunki tuhoutui suurpaloissa 1816, 1817, 1819, '
+            + '1846 ja 1892. Helmikuussa 1816 paloi satakaksikymmentä '
+            + 'taloa, noin tuhannen ihmisen kodit. Vuoden 1846 palo '
+            + 'lähti puusepän liimapadasta ja levisi kauppiaiden '
+            + 'hylkeenrasvavarastoissa; sitä pahensi yritys räjäyttää '
+            + 'talo tulen tieltä, mikä sinkosi kekäleitä pitkin '
+            + 'kaupunkia. Viimeinen suurpalo alkoi 8. heinäkuuta 1892 '
+            + 'Carter’s Hillillä ja söi koko itäpään. Siksi keskustan '
+            + 'puutalot ovat palon jälkeisiä. Värit ovat paljon '
+            + 'nuorempia: kivihiilinoki teki vaaleat maalit '
+            + 'mahdottomiksi, ja kirkkaat sävyt tulivat vasta '
+            + '1970-luvulla, kun hiilestä luovuttiin.',
+          wiki: 'Great Fire of 1892',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'St. John’s on Newfoundlandin ja Labradorin '
+          + 'pääkaupunki ja Avalonin niemimaan itäkärjessä. Kaupunki '
+          + 'kattaa 446 neliökilometriä — enemmän kuin Montreal — '
+          + 'mutta suurin osa siitä on rakentamatonta metsää. '
+          + 'Metropolialueella asui tammikuussa 2025 noin 239 300 '
+          + 'ihmistä, mikä tekee siitä Atlantin Kanadan toiseksi '
+          + 'suurimman Halifaxin jälkeen. Kaupunki liitettiin '
+          + 'virallisesti kaupungiksi vasta 1888, vaikka nimi on '
+          + 'kartoilla 1500-luvulta.',
+        artikkeli: {
+          nimi: 'Matkailijan St. John’s',
+          taitto: 'opas',
+          teksti: 'Kaupunki, joka nousee rinteeseen kapean sataman '
+            + 'ympäriltä: Water Street rannassa, kirkot ylempänä, ja '
+            + 'kaiken yllä kallioinen kukkula, jolta on aina katsottu '
+            + 'merelle.',
+          nosto: 'Newfoundlandilla on oma aika. Maakunta pitää '
+            + 'kelloaan puoli tuntia muusta Atlantin Kanadasta '
+            + 'poikkeavassa vyöhykkeessä, ja se on Amerikoiden ainoa '
+            + 'käytössä oleva puolen tunnin poikkeama '
+            + 'maailmanajasta — perua ajalta, jolloin saari oli oma '
+            + 'dominionsa ja sai valita aikansa itse.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'St. John’s International Airport on kymmenen '
+                + 'minuutin päässä keskustasta luoteeseen ja Atlantin '
+                + 'Kanadan toiseksi vilkkain lentoasema. Kaupunki on '
+                + 'myös Trans-Canada Highwayn itäinen päätepiste; '
+                + 'kaupungin ohi kiertävää osuutta sanotaan Outer Ring '
+                + 'Roadiksi. Satama on merkittävä ja toimii Kanadan '
+                + 'rannikkovartioston kotisatamana — siellä on '
+                + 'kotipaikkansa viidellä jäänmurtajalla. '
+                + 'Risteilyalukset käyttävät satamaa sekä kotisatamana '
+                + 'että välisatamana.',
+            },
+            {
+              otsikko: 'Kadut rinteessä',
+              teksti: 'Keskustan arkkitehtuuri on omanlaisensa: '
+                + 'kaupunki alkoi kalastusasemana, jossa oli '
+                + 'kalastajien taloja, vajoja ja laitureita, kaikki '
+                + 'puusta. Water Street ja Duckworth Street tunnetaan '
+                + 'matalista, kirkkaanvärisistä perintörakennuksista, '
+                + 'joissa on kauppoja, putiikkeja ja ravintoloita. '
+                + 'George Street, lyhyt sivukatu Water Streetin '
+                + 'länsipään yläpuolella, on kaupungin yöelämän ydin. '
+                + 'Keskustassa on tiukat perintösäännöt, muun muassa '
+                + 'rakennusten korkeusrajoitus, ja kaupungin varhaisin '
+                + 'esikaupunki Georgestown säilyi vuoden 1892 '
+                + 'suurpalolta.',
+            },
+            {
+              otsikko: 'Puistot, polut ja museot',
+              teksti: 'Grand Concourse kokoaa kaupungin polut: '
+                + 'Quidi Vidin järven kierroksen, osia Signal '
+                + 'Hillistä, keskustan kadut ja jokivarret. Pippy Park '
+                + 'kaupungin itäosassa on yli 1 400 hehtaaria ja siten '
+                + 'Kanadan suurimpia kaupunkipuistoja; siellä on kaksi '
+                + 'golfkenttää, maakunnan suurin leirintäalue ja '
+                + 'Fluvarium, joka näyttää purosta poikkileikkauksen. '
+                + 'Bowring Parkin lahjoitti kaupungille 1911 Sir Edgar '
+                + 'Rennie Bowring, ja sen avasi Connaughtin herttua '
+                + '15. heinäkuuta 1914. The Rooms kokoaa maakunnan '
+                + 'museon, taidegallerian ja arkiston samaan taloon, ja '
+                + 'Signal Hillillä käy 97 prosenttia kaupungin '
+                + 'matkailijoista.',
+            },
+            {
+              otsikko: 'Regatta ja muut juhlapäivät',
+              teksti: 'Royal St. John’s Regatta on Pohjois-Amerikan '
+                + 'vanhin vuosittainen urheilutapahtuma: soutukilpailut '
+                + 'vuodelta 1816 ovat asiakirjoin todistetut. Se '
+                + 'soudetaan Quidi Vidin järvellä elokuun ensimmäisenä '
+                + 'keskiviikkona, ja jos sää tai tuuli ei sovi, se '
+                + 'siirretään seuraavaan sopivaan päivään. Koska '
+                + 'regattapäivä on kaupungissa vapaapäivä, sää päättää '
+                + 'myös sen, saavatko työntekijät vapaata — yksi '
+                + 'maailman harvoista säästä riippuvista juhlapäivistä. '
+                + 'Miehistöt soutavat kuuden hengen kiinteäistuimisia '
+                + 'veneitä, miehet 2,450 ja naiset 1,225 kilometriä; '
+                + 'katsojia on viime vuosina ollut noin 50 000. '
+                + 'Elokuussa on myös George Street Festival ja '
+                + 'joka toinen vuosi Sound Symposium, jonka '
+                + 'Harbour Symphonyn soittavat sataman laivojen torvet '
+                + 'keskipäivällä.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa vuosigraafia, '
+                + 'koska säänormaaleja ei haettu tässä erässä. Golfvirta '
+                + 'tasoittaa vuodenaikoja niin, että vaihtelu on '
+                + 'leveysasteeseen nähden pieni: helmikuun '
+                + 'keskilämpötila on 4,7 pakkasastetta ja elokuun 16,5 '
+                + 'lämpöastetta. Sadetta tulee 1 538,9 millimetriä '
+                + 'vuodessa, ja kuivin kuukausi on kesäkuu, märin '
+                + 'joulukuu. Lunta kertyy talvessa keskimäärin 242,8 '
+                + 'senttimetriä, mutta sama myrsky voi tuoda lunta, '
+                + 'räntää, jäätävää sadetta ja vettä peräkkäin. Kaupunki '
+                + 'on Kanadan suurista kaupungeista sumuisin ja '
+                + 'tuulisin.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Signal Hill ja Cabot Tower',
+                tahdet: 3,
+                selite: 'Kansallinen historiallinen kohde, jolla käy '
+                  + '97 prosenttia kaupungin matkailijoista.',
+              },
+              {
+                mita: 'Pyhän Johannes Kastajan basilika',
+                tahdet: 3,
+                selite: 'Kanadan suurin katedraalikirkko ja '
+                  + 'valmistuessaan 1855 Pohjois-Amerikan suurin '
+                  + 'kirkkorakennus.',
+              },
+              {
+                mita: 'Water Street',
+                tahdet: 2,
+                selite: 'Kansallinen historiallinen kaupunginosa ja '
+                  + 'kaupungin vanhin kauppakatu.',
+              },
+              {
+                mita: 'The Rooms',
+                tahdet: 2,
+                selite: 'Maakunnan museo, taidegalleria ja arkisto '
+                  + 'saman katon alla keskustan yläpuolella.',
+              },
+              {
+                mita: 'Quidi Vidin järvi',
+                tahdet: 2,
+                selite: 'Regattaradan ja kävelyreitin järvi kaupungin '
+                  + 'koillispuolella.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sumu kuuluu hintaan',
+                teksti: 'St. John’s on Kanadan suurista kaupungeista '
+                  + 'sumuisin: sumupäiviä on vuodessa 124.',
+              },
+              {
+                otsikko: 'Tuuli on jatkuvaa',
+                teksti: 'Kaupunki on myös maan tuulisin; keskituuli on '
+                  + '24,3 kilometriä tunnissa.',
+              },
+              {
+                otsikko: 'Talvimyrsky voi olla iso',
+                teksti: 'Tammikuussa 2020 kaupunki julisti hätätilan: '
+                  + 'lunta tuli vuorokaudessa 76 senttiä ja tuuli '
+                  + 'yltyi 130 kilometriin tunnissa.',
+              },
+              {
+                otsikko: 'Kello on eri kuin muualla',
+                teksti: 'Newfoundlandin aika on puoli tuntia edellä '
+                  + 'muuta Atlantin Kanadaa — tarkista lentojen ja '
+                  + 'laivojen ajat.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Viesti valtameren yli',
+      johdanto: 'St. John’s on Pohjois-Amerikan itäisin kaupunki, ja '
+        + 'siksi se on ollut mantereen ensimmäinen pysäkki aina, kun '
+        + 'joku on keksinyt uuden tavan ylittää Atlantti.',
+      tehtava: {
+        kysymys: 'Mistä lähetettiin viesti, jonka Marconi vastaanotti Signal Hillillä?',
+        vaihtoehdot: ['Poldhusta Cornwallista', 'Dublinista', 'Lissabonista', 'Reykjavikista'],
+        oikea: 0,
+        fakta: 'Guglielmo Marconi vastaanotti ensimmäisen langattoman '
+          + 'viestin Atlantin yli 12. joulukuuta 1901. Lähetys tuli '
+          + 'hänen omalta asemaltaan Poldhusta Cornwallista, ja viesti '
+          + 'oli morsen kirjain S.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaapeli, joka nousi merestä',
+          teksti: 'Ensimmäisen pysyvän valtamerenalaisen '
+            + 'lennätinkaapelin läntinen pääte oli Heart’s Content '
+            + 'Newfoundlandilla, itäinen Valentian saarella '
+            + 'Irlannissa. Kaapeli vedettiin maihin 27. heinäkuuta '
+            + '1866 useiden epäonnistuneiden yritysten jälkeen, ja sen '
+            + 'toi paikalle Great Eastern, aikansa suurin höyrylaiva. '
+            + 'Ensimmäiset viestit lähetettiin morsella, ja asemalla '
+            + 'työskenteli kolme ihmistä. Isoisän matkavuonna 1873 '
+            + 'yhteys oli seitsemän vuotta vanha ja yhä ihme. '
+            + 'Parhaimmillaan yli kaksisataa kylän asukasta '
+            + 'työskenteli kaapeliyhtiölle; asema suljettiin 1965, kun '
+            + 'puhelinkaapelit ja satelliitit tekivät lennättimen '
+            + 'tarpeettomaksi.',
+          wiki: 'Heart’s Content Cable Station',
+        },
+        {
+          otsikko: 'Kirjain S kukkulalla',
+          teksti: 'Guglielmo Marconi vastaanotti 12. joulukuuta 1901 '
+            + 'ensimmäisen langattoman viestin Atlantin yli. '
+            + 'Vastaanottopaikka oli Signal Hillillä lähellä Cabot '
+            + 'Toweria, lähetys tuli Poldhusta Cornwallista, ja koko '
+            + 'viesti oli morsen kirjain S — kolme pistettä. Kukkula '
+            + 'oli valittu siksi, mihin sitä oli käytetty jo '
+            + 'kahdensadan vuoden ajan: siellä katsottiin merelle. '
+            + 'Cabot Toweriin avattiin 1933 Marconi-asema, joka toimi '
+            + 'vuoteen 1960, ja jo 1920 sieltä tehtiin yksi '
+            + 'ensimmäisistä langattomista ihmisäänen lähetyksistä '
+            + 'valtameren yli: aseman miehet puhuivat Englannista '
+            + 'lähteneen höyrylaivan kanssa.',
+          wiki: 'Guglielmo Marconi',
+        },
+        {
+          otsikko: 'Suolta suolle',
+          teksti: 'Kaupunki oli lähtöpaikka myös ensimmäiselle '
+            + 'keskeytyksettömälle Atlantin ylittäneelle lennolle. '
+            + 'Kesäkuussa 1919 John Alcock ja Arthur Brown nousivat '
+            + 'ilmaan Lester’s Fieldiltä muunnetulla Vickers Vimy '
+            + 'IV -pommikoneella ja päätyivät suohon Clifdenin lähelle '
+            + 'Connemaraan Irlantiin. Lester’s Fieldiä ei enää ole: '
+            + 'se on nykyään tavallista asuinaluetta keskellä '
+            + 'kaupunkia. Kun amerikkalainen Steve Fossett toisti '
+            + 'lennon heinäkuussa 2005 Vickers Vimyn jäljennöksellä, '
+            + 'hänen oli lähdettävä lentoasemalta.',
+          wiki: 'Transatlantic flight of Alcock and Brown',
+        },
+        {
+          otsikko: 'Puoli tuntia omaa aikaa',
+          teksti: 'Newfoundlandin aikavyöhyke vähentää normaaliaikana '
+            + 'kolme ja puoli tuntia maailmanajasta, ja se on '
+            + 'Amerikoiden ainoa käytössä oleva puolen tunnin poikkeama. '
+            + 'Kellonaika perustuu 52 asteen ja 30 minuutin läntisen '
+            + 'pituuspiirin keskiaurinkoaikaan — lähes tarkalleen St. '
+            + 'John’sin omaan pituuspiiriin. Vyöhyke on olemassa '
+            + 'siksi, että saari oli erillinen dominio, kun '
+            + 'aikavyöhykkeet luotiin, ja sai valita aikansa itse; '
+            + 'hallintokomissio sääti asian lailla 1935. Vuonna 1963 '
+            + 'maakunta yritti siirtyä Atlantin aikaan mutta perui '
+            + 'hankkeen vastustuksen takia. Saari on puolitoista tuntia '
+            + 'Keski-Kanadaa edellä ja puoli tuntia jäljessä '
+            + 'Saint-Pierreä.',
+          wiki: 'Newfoundland Time Zone',
+        },
+      ],
+    },
+  ],
 };

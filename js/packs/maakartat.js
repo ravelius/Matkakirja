@@ -14168,6 +14168,132 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Santa Isabelin ermita', lat: 20.957247, lon: -89.629632 },
     ],
   },
+  /*
+   * WINNIPEG (7.9.2026). Rajaus on noin 2,3 × 2,2 kilometriä
+   * keskustan ympärillä — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * winnipeg-lohkossa. Kuvan oikeassa laidassa kaartaa Punainen joki,
+   * ja alhaalta siihen yhtyy Assiniboine; niiden välinen kärki on
+   * The Forks.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN JUTTUJA. Lehden nostot ovat kahden
+   * joen risteys ja sen linnakkeet, Selkirkin siirtokunta ja
+   * Seitsemän tammen taistelu, vuosi 1873 ja Winnie-karhu; teemasivu
+   * kertoo talvesta, tulvista, preeriasta ja kesän ukkosista.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * THE FORKS JA ESPLANADE RIEL OVAT RUUDUSSA MUTTA EIVÄT
+   * NUMEROITUJA: The Forks on noston W1 koko aihe, ja Esplanade Riel
+   * on matkakirjan valokuvataulun uusi puoli (northamerica-valokuvat.js,
+   * winnipeg). Sama koskee Upper Fort Garryn porttia Main Streetin ja
+   * Broadwayn kulmassa — se on noston W1 loppu.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-winnipeg.md, kohta H): Pantages Playhouse on 149
+   * metrin päässä Manitoban museosta ja Royal Manitoba Theatre
+   * Centre 112 metrin päässä Pantagesista.
+   *
+   * PÖRSSIKORTTELIN KOKO on kohteen oman artikkelin mukaan
+   * kaksikymmentä korttelia ja noin 150 perintörakennusta;
+   * "Winnipeg"-artikkeli sanoo kolmekymmentä korttelia.
+   * Nähtävyysjuttu käyttää kohdeartikkelin lukuja
+   * (tarkistus-winnipeg.md, kohta A).
+   */
+  winnipeg: {
+    polku: 'assets/kartat/winnipeg-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 49.902, etela: 49.8805, lansi: -97.152, ita: -97.118 },
+    esittely: 'Kartan oikeaa laitaa kaartaa Punainen joki, ja alhaalta '
+      + 'siihen yhtyy Assiniboine. Jokien väliin jäävä kärki on The '
+      + 'Forks. Vasemmalla puolella on keskustan ruutukaava, jonka '
+      + 'halki kulkee vinosti kaksi leveää katua — Portage Avenue ja '
+      + 'Main Street — ja niiden risteys on kuvan keskellä. Joen '
+      + 'toisella puolella oikealla ovat Saint-Bonifacen korttelit. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates- ja
+       * geosearch-rajapinnasta 7.9.2026, ja kaikki 28 väliä on
+       * mitattu haversinilla: pienin on 309 metriä (Manitoban museo
+       * – pörssikortteli), toiseksi pienin 311 metriä (Union Station
+       * – ihmisoikeusmuseo).
+       */
+      { nimi: 'Manitoban museo', lat: 49.9, lon: -97.136667 },
+      { nimi: 'Pörssikortteli', lat: 49.8985, lon: -97.1403 },
+      { nimi: 'Burton Cummings -teatteri', lat: 49.895833, lon: -97.143611 },
+      { nimi: 'Manitoba Hydro Place', lat: 49.892397, lon: -97.1464 },
+      { nimi: 'Kanadan ihmisoikeusmuseo', lat: 49.890797, lon: -97.130997 },
+      { nimi: 'Saint-Bonifacen katedraali', lat: 49.8893, lon: -97.122 },
+      { nimi: 'Union Station', lat: 49.888889, lon: -97.134167 },
+      { nimi: 'Manitoban parlamenttitalo', lat: 49.8844, lon: -97.1469 },
+    ],
+  },
+  /*
+   * ST. JOHN'S (7.9.2026). Rajaus on noin 2,9 × 1,7 kilometriä ja se
+   * on tarkoituksella vaaka: kaupungin koko juoni on kapea
+   * itä–länsi-suuntainen satama-allas ja sen portti kallioiden
+   * välissä. Perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * stjohns-lohkossa.
+   *
+   * meri: 'maa' EIKÄ true, ja molemmat on kokeiltu 7.9.2026.
+   * Tavallinen vesipuolen täyttö varoitti "meri peittäisi 126 %
+   * rajauksesta" ja putosi rantanauhaan, jolloin satama jäi paperin
+   * väriseksi — se olisi ollut harhaanjohtavaa, koska kartan koko
+   * keskiosa on vettä. Maapuolitapa maalaa ruudun mereksi ja
+   * maamassat paperilla päälle, ja silloin satama, Narrows ja
+   * avomeri erottuvat oikein (Istanbulin ja Kööpenhaminan
+   * ennakkotapaus).
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN JUTTUJA. Lehden nostot ovat nimi ja
+   * ensimmäiset purjehdukset, satamansuun puolustus, turska ja öljy
+   * sekä viisi suurpaloa; teemasivu kertoo merikaapelista,
+   * Marconista, Alcockista ja Brownista sekä Newfoundlandin omasta
+   * aikavyöhykkeestä. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * CABOT TOWERIN JUTUSTA ON TARKOITUKSELLA JÄTETTY POIS MARCONI,
+   * joka on teemasivun oma aihe — sama ratkaisu kuin Tangerin Pyhän
+   * Andreaksen kirkossa ja Matissessa (v1670). Samasta syystä
+   * vuoden 1762 Signal Hillin taistelu kerrotaan vain lehden
+   * nostossa, ei kartalla.
+   *
+   * VIISI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-stjohns.md, kohta H): Government House on 190 metrin
+   * päässä Colonial Buildingista, Bannerman Park 75 metrin päässä
+   * samasta, The Rooms 180 metrin päässä basilikasta, LSPU Hall 146
+   * metrin ja George Street 187 metrin päässä lähimmästä valitusta
+   * kohteesta. Quidi Vidin järvi jäi pois vesisäännöllä: sen piste
+   * osuisi vesialueelle. Regatta kerrotaan matkaoppaassa.
+   */
+  stjohns: {
+    polku: 'assets/kartat/stjohns-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 47.5745, etela: 47.5595, lansi: -52.716, ita: -52.677 },
+    esittely: 'Kartan keskellä on satama-allas, joka kapenee oikealla '
+      + 'kallioiden väliseksi portiksi ja avautuu siitä Atlantille. '
+      + 'Vasemmassa laidassa nousee keskusta: rinnakkaiset kadut '
+      + 'seuraavat rantaa, ja niiden takana rinne kohoaa jyrkästi. '
+      + 'Oikeassa yläkulmassa on Signal Hillin paljas kukkula, '
+      + 'oikeassa alakulmassa sataman eteläpuolen kalliorannikko. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit artikkelien omista coord-mallineista 7.9.2026
+       * (asteminuuttisekunnit muunnettu desimaaleiksi) ja
+       * ristiintarkistettu geosearchista; kaikki 28 väliä on mitattu
+       * haversinilla, ja pienin on 251 metriä (basilika –
+       * anglikaaninen katedraali).
+       */
+      { nimi: 'Colonial Building', lat: 47.570928, lon: -52.706789 },
+      { nimi: 'Fort William', lat: 47.5708, lon: -52.7006 },
+      { nimi: 'Cabot Tower', lat: 47.570014, lon: -52.681772 },
+      { nimi: 'The Battery', lat: 47.568892, lon: -52.690414 },
+      { nimi: 'Kansallinen sotamuistomerkki', lat: 47.567578, lon: -52.703797 },
+      { nimi: 'Pyhän Johannes Kastajan basilika', lat: 47.567356, lon: -52.7101 },
+      { nimi: 'Anglikaaninen katedraali', lat: 47.5655, lon: -52.7082 },
+      { nimi: 'Water Street', lat: 47.562581, lon: -52.708647 },
+    ],
+  },
 };
 
 /*

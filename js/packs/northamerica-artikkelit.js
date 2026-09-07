@@ -1288,4 +1288,117 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'Hanal Pixán -juhlassa ja ruoassa, jonka mausteena on '
       + 'annatto ja kypsennystapana maakuoppa.',
   },
+  /*
+   * WINNIPEG (7.9.2026). Väitteet tulevat samasta erästä kuin lehden
+   * tekstit (js/packs/kulttuuri-kategoriat.js, avain winnipeg), ja ne
+   * on luettu en-Wikipedian raakateksteistä 7.9.2026 ("Winnipeg",
+   * "Manitoba Act, 1870", "Treaty 1"). Väkiluvut ovat vuoden 2021
+   * väestönlaskennasta; lähteen 850 000:n arviota ei käytetä, koska
+   * sama luku esiintyy artikkelissa kerran kaupungin ja kerran
+   * metropolialueen lukuna (tarkistus-winnipeg.md, kohta D).
+   */
+  Winnipeg: {
+    intro: 'Winnipeg on Manitoban pääkaupunki ja maakunnan suurin '
+      + 'kaupunki, ja se on rakennettu sinne, missä Assiniboine yhtyy '
+      + 'Punaiseenjokeen. Kaupunki on Kanadan preerian itäreunalla '
+      + 'Punaisenjoen laakson pohjalla, tulvatasangolla, jonka '
+      + 'pinnanmuodot ovat erittäin tasaiset. Vuonna 2021 kaupungissa '
+      + 'asui 749 607 ja metropolialueella 834 678 ihmistä — Kanadan '
+      + '**kuudenneksi suurin kaupunki**. Nimi tulee Winnipegjärveltä: '
+      + 'creen ja odžibwen sana tarkoittaa sameaa eli mutaista vettä.'
+      + '\n\n'
+      + 'Jokien yhtymäkohta oli kanoottireittien risteys kauan ennen '
+      + 'eurooppalaisia, ja se on anishinaabe-, ininew-, oji-cree-, '
+      + 'dene- ja dakota-kansojen perinteistä aluetta sekä '
+      + 'métis-kansan syntysija. La Vérendrye rakensi paikalle '
+      + 'ensimmäisen turkiskauppa-aseman 1738, ja Manitoba Act teki '
+      + '1870 Manitobasta Kanadan viidennen provinssin.'
+      + '\n\n'
+      + '**Isoisän matkavuonna 1873 Winnipeg sai kaupunkioikeudet.** '
+      + 'Kaupunki perustettiin 8. marraskuuta 1873 Selkirkin '
+      + 'siirtokunnan ympärille, ja sille antoi nimen '
+      + 'métis-lainsäätäjä James McKay. Rautatie tuli 1881, ja sen '
+      + 'jälkeen kasvu oli nopeaa: vuoteen 1911 mennessä Winnipeg oli '
+      + 'Kanadan kolmanneksi suurin kaupunki.',
+    teksti: 'Winnipeg on Manitoban pääkaupunki Kanadan preerian '
+      + 'itäreunalla, Punaisen- ja Assiniboinejoen yhtymäkohdassa. '
+      + 'Kaupungin läpi virtaa neljä jokea, ja sitä ympäröi lännessä '
+      + 'korkearuohopreeria ja koillisessa haapaparkkimaa. Kaupungissa '
+      + 'kasvaa Pohjois-Amerikan suurin jäljellä oleva kypsä '
+      + 'kaupunkijalavametsä.'
+      + '\n\n'
+      + 'Turkiskaupan asemasta kasvoi rautateiden solmukohta, jota '
+      + 'sanottiin lännen portiksi ja pohjoisen Chicagoksi. Panaman '
+      + 'kanavan avaaminen 1914 vei osan tavaravirrasta muualle, ja '
+      + 'Vancouver ohitti Winnipegin ensimmäisen maailmansodan '
+      + 'loppuun mennessä. Toukokuussa 1919 yli kolmekymmentätuhatta '
+      + 'työntekijää jätti työnsä yleislakossa, joka päättyi '
+      + 'kesäkuussa. Manitoban parlamenttitalo Kultapoikineen '
+      + 'valmistui 1920.'
+      + '\n\n'
+      + 'Nykyään talous nojaa terveydenhuoltoon, kauppaan, '
+      + 'teollisuuteen ja julkishallintoon, ja kaupungissa lyödään '
+      + 'kaikki Kanadan kiertorahat. Ilmasto on äärimmäisen '
+      + 'vuodenaikainen: tammikuun keskilämpötila on noin kuusitoista '
+      + 'astetta pakkasella ja heinäkuun 19,7 astetta lämmintä, mutta '
+      + 'auringonpaistetunneissa Winnipeg on Kanadan toinen. Yli sataa '
+      + 'kieltä puhutaan, ja kaupungissa on maan suurin métis-väestö.',
+  },
+  /*
+   * ST. JOHN'S (7.9.2026). Avain on pelin wiki-nimi
+   * (js/packs/northamerica.js: 'St. John’s (Kanada)'), sama tapa kuin
+   * Halifaxilla. Väitteet ovat samasta erästä kuin lehden tekstit
+   * (kulttuuri-kategoriat.js, avain stjohns) ja luettu
+   * en-Wikipedian raakateksteistä 7.9.2026 ("St. John's, Newfoundland
+   * and Labrador", "Newfoundland Colony"). Kruununsiirtomaan
+   * vuosilukua ei käytetä, koska lähde antaa siitä kaksi eri vuotta
+   * (tarkistus-stjohns.md, kohta A).
+   */
+  'St. John’s (Kanada)': {
+    intro: 'St. John’s on Newfoundlandin ja Labradorin pääkaupunki ja '
+      + 'maakunnan suurin kaupunki, ja se on **Pohjois-Amerikan '
+      + 'itäisin kaupunki** Grönlantia lukuun ottamatta. Se on '
+      + 'Avalonin niemimaan itäkärjessä ja kattaa 446 neliökilometriä, '
+      + 'josta suurin osa on rakentamatonta metsää. Keskusta nousee '
+      + 'rinteeseen kapean sataman ympäriltä.'
+      + '\n\n'
+      + 'Kalastajat pitivät täällä kausileirejä 1500-luvun alussa, ja '
+      + 'nimi São João on portugalilaisella kartalla jo 1519. Sir '
+      + 'Humphrey Gilbert julisti paikan 5. elokuuta 1583 Englannin '
+      + 'ensimmäiseksi merentakaiseksi siirtomaaksi, mutta pysyvää '
+      + 'asutusta ei ollut: Englannin hallitus kielsi kalastajilta '
+      + 'pysyvät siirtokunnat, ja kaupunki syntyi vasta vuoden 1630 '
+      + 'jälkeen. Seitsenvuotisen sodan viimeinen taistelu '
+      + 'Pohjois-Amerikassa käytiin täällä 1762.'
+      + '\n\n'
+      + '**Isoisän matkavuonna 1873 St. John’s ei ollut Kanadaa.** '
+      + 'Newfoundland oli itsehallinnollinen brittiläinen siirtomaa, '
+      + 'joka oli hylännyt liiton Kanadan kanssa vuosina 1864–1869 ja '
+      + 'liittyi siihen vasta 1949. Atlantin lennätinkaapeli oli '
+      + 'noussut merestä Heart’s Contentissa seitsemän vuotta '
+      + 'aiemmin.',
+    teksti: 'St. John’s on Newfoundlandin saaren itäkärjessä, '
+      + 'Atlantin rannalla. Sen edustalla ovat Grand Banks, '
+      + 'vedenalaiset tasangot, joilla kylmä Labradorin virta kohtaa '
+      + 'lämpimän Golfvirran; sekoittuminen nostaa ravinteet pintaan '
+      + 'ja synnyttää myös kaupungin kuuluisan sumun.'
+      + '\n\n'
+      + 'Kaupunki eli viisisataa vuotta turskasta. Vuonna 1992 '
+      + 'pohjoisen turskan kanta oli pudonnut prosenttiin '
+      + 'historiallisesta tasosta ja kalastus kiellettiin; Grand Banks '
+      + 'pysyi suljettuna vuoteen 2024. Kaupunki tuhoutui myös '
+      + 'suurpaloissa 1816, 1817, 1819, 1846 ja 1892, ja keskustan '
+      + 'puutalot ovat viimeisen palon jälkeisiä. Marconi vastaanotti '
+      + 'Signal Hillillä ensimmäisen langattoman viestin Atlantin yli '
+      + '12. joulukuuta 1901.'
+      + '\n\n'
+      + 'Turskan jälkeen meri elättää kaupunkia toisin: Hibernian, '
+      + 'Terra Novan ja White Rosen öljykentät ovat rannikon '
+      + 'edustalla, ja St. John’sin alue vastaa noin puolta koko '
+      + 'maakunnan taloudesta. Metropolialueella asui tammikuussa 2025 '
+      + 'noin 239 300 ihmistä. Kaupunki on Kanadan suurista '
+      + 'kaupungeista sumuisin ja tuulisin, ja maakunnalla on oma '
+      + 'aikavyöhykkeensä, joka on puoli tuntia muuta Atlantin '
+      + 'Kanadaa edellä.',
+  },
 };

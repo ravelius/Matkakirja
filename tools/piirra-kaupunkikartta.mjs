@@ -5431,6 +5431,74 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 20.9790, etela: 20.9520, lansi: -89.6375, ita: -89.6085 },
   },
+  winnipeg: {
+    /*
+     * KESKUSTA JA KAHDEN JOEN RISTEYS (7.9.2026). Ruutu on noin
+     * 2,3 × 2,2 kilometriä: pohjoisessa pörssikortteli ja Manitoban
+     * museo, keskellä Portage ja Main sekä Union Station, idässä
+     * Punaisenjoen yli Saint-Boniface ja lännessä parlamenttitalon
+     * puisto. Kaikki kahdeksan kohdetta ovat ruudussa.
+     *
+     * RUUTU ON LÄHES NELIÖ, KOSKA KAUPUNKI ON. Winnipegin
+     * ruutukaava on tasainen joka suuntaan, ja kohteet ovat
+     * kahdessa nauhassa: Main Streetin varrella pohjois–etelä ja
+     * Portage Avenuen varrella itä–länsi. Kapeampi ruutu leikkaisi
+     * toisen nauhan poikki.
+     *
+     * EI MERI-LIPPUA. Ruudussa on vain jokia — Punainen joki ja
+     * Assiniboine — ja ne ovat OSM:ssä tavallisia vesialueita, eivät
+     * rantaviivan takaista merta. Merentäyttö täyttäisi tässä koko
+     * ruudun (vertaa Halifaxin lohkokommentti).
+     *
+     * THE FORKS JA ESPLANADE RIEL NÄKYVÄT MUTTA EIVÄT OLE
+     * NUMEROITUJA. The Forks on lehden noston W1 koko aihe ja
+     * Esplanade Riel on matkakirjan valokuvataulun uusi puoli
+     * (northamerica-valokuvat.js, winnipeg) — kohdekartta ei toista
+     * lehden juttuja (New Yorkin sääntö).
+     *
+     * PANTAGES PLAYHOUSE JA ROYAL MANITOBA THEATRE CENTRE PUTOSIVAT
+     * 200 METRIN SÄÄNNÖLLÄ: Pantages on 149 metrin päässä
+     * Manitoban museosta ja teatterikeskus 112 metrin päässä
+     * Pantagesista (tarkistus-winnipeg.md, kohta H).
+     *
+     * MITTAKAAVAJANA PAKOTTI RAJAUSTA ALAS JA VASEMMALLE 7.9.2026.
+     * Ensimmäinen rajaus (49.8825 / -97.1500) asetti parlamenttitalon
+     * numeroympyrän kohtaan 9,7 % / 90,3 %, ja
+     * tarkista-karttapisteet.mjs varoitti sen peittävän lehden oman
+     * mittakaavajanan vasemmassa alakulmassa (Kööpenhaminan
+     * ennakkotapaus). Etelä- ja länsireunaa vedettiin ulospäin
+     * kaksisataa metriä, ja ympyrä siirtyi kohtaan 15 % / 82 %.
+     */
+    rajat: { pohjoinen: 49.9020, etela: 49.8805, lansi: -97.1520, ita: -97.1180 },
+  },
+  stjohns: {
+    /*
+     * SATAMA, NARROWS JA SIGNAL HILL (7.9.2026). Ruutu on noin
+     * 2,9 × 1,7 kilometriä. Lännessä on keskusta rinteineen,
+     * keskellä pitkä ja kapea satama-allas, ja idässä kallioinen
+     * Narrows sekä Signal Hill Cabot Towereineen.
+     *
+     * RUUTU ON VAAKA, KOSKA SATAMA ON. St. John'sin satama on
+     * kapea itä–länsi-suuntainen allas, ja koko kaupungin logiikka
+     * — kadut rinteessä, portti kallioiden välissä — näkyy vain
+     * silloin, kun molemmat päät mahtuvat samaan kuvaan.
+     *
+     * meri: true. Atlantti ja satama ovat OSM:ssä rantaviivan
+     * takana, ja ilman lippua ruudun itäpuoli ja koko satama-allas
+     * jäisivät paperin värisiksi.
+     *
+     * QUIDI VIDIN JÄRVI JÄÄ RUUDUN ULKOPUOLELLE, ja se on päätös.
+     * Regatta olisi hieno kohde, mutta järven karttapiste osuisi
+     * vesialueelle ja tarkista-karttapisteet.mjs hylkäisi sen.
+     * Regatta kerrotaan matkaoppaan urheilujaksossa.
+     *
+     * GOVERNMENT HOUSE, BANNERMAN PARK JA THE ROOMS OVAT RUUDUSSA
+     * MUTTA EIVÄT NUMEROITUJA: ne ovat 190, 75 ja 180 metrin
+     * päässä valituista kohteista (tarkistus-stjohns.md, kohta H).
+     */
+    rajat: { pohjoinen: 47.5745, etela: 47.5595, lansi: -52.7160, ita: -52.6770 },
+    meri: 'maa',
+  },
 };
 
 /*

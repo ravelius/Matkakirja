@@ -56973,4 +56973,547 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
   },
+  /*
+   * WINNIPEGIN KOHDEKARTAN JUTUT (Opus 7.9.2026). Kahdeksan kohdetta,
+   * faktapohja docs/mantereet-tyoaineisto/faktapohja-winnipeg.md ja
+   * sen erillinen tarkistus tarkistus-winnipeg.md. Jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit
+   * "Manitoba Museum", "Nonsuch (1650 ship)", "Exchange District",
+   * "Burton Cummings Theatre", "Winnipeg", "Manitoba Hydro Place",
+   * "Canadian Museum for Human Rights", "St. Boniface Cathedral",
+   * "Union Station (Winnipeg)", "Countess of Dufferin", "Winnipeg
+   * Railway Museum", "Manitoba Legislative Building", "Golden Boy
+   * (Manitoba)").
+   *
+   * NÄMÄ EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö): lehti
+   * kertoo kahden joen risteyksestä ja linnakkeista, Selkirkin
+   * siirtokunnasta, vuodesta 1873 ja Winnie-karhusta sekä
+   * teemasivulla talvesta, tulvista, preeriasta ja ukkosista.
+   */
+  winnipeg: {
+    'Manitoban museo': {
+      aika: '1932 ja 1970',
+      teksti: 'Manitoban historiallinen ja luonnontieteellinen seura '
+          + 'alkoi kerätä maakunnan perintöä jo vuonna 1879, ja '
+          + '1890-luvun alussa kokoelmaa säilytettiin kuulemma '
+          + 'kaupungintalon kellarissa. Museo avattiin virallisesti '
+          + '15. joulukuuta 1932 vasta valmistuneessa Winnipeg Civic '
+          + 'Auditoriumissa yhdessä kaupungin taidegallerian kanssa, '
+          + 'ja se toimi siellä vuoteen 1967. Talo oli pitkään '
+          + 'vapaaehtoisten varassa: kuraattorit hoitivat tehtävää '
+          + 'palkatta.'
+          + '\n\n'
+          + 'Nykyinen rakennus on vuoden 1965 piirustusten mukainen, '
+          + 'ja sen suunnitteli Herbert Henry Gatenby Moody. Museo on '
+          + 'maakunnan suurin voittoa tavoittelematon perintö- ja '
+          + 'tiedekasvatuskeskus, ja siinä on oma planetaario ja '
+          + 'tiedegalleria. Hudson’s Bay Company lahjoitti '
+          + 'museolle 1994 kolmensadan vuoden kokoelmansa ja rahat sen '
+          + 'hoitoon — museon suurin yrityslahjoitus.'
+          + '\n\n'
+          + 'Näyttelyn kuuluisin esine on täysikokoinen jäljennös '
+          + 'Nonsuch-aluksesta. Alkuperäinen oli 1650 rakennettu '
+          + 'kauppa-alus, joka purjehti Hudsoninlahdelle 1668–69 ja '
+          + 'teki sen kauppamatkan, josta kaksi vuotta myöhemmin '
+          + 'syntyi turkiskauppayhtiö. Alus valittiin nimenomaan '
+          + 'pienuutensa takia: 54 jalkaa pitkän ja kuusi jalkaa '
+          + 'syvässä kulkevan aluksen saattoi purjehtia jokea ylös ja '
+          + 'nostaa maihin ennen jäätä. Jäljennös rakennettiin '
+          + 'Devonissa 1600-luvun työkaluin ja materiaalein yhtiön '
+          + '300-vuotisjuhlaan, ja se asetettiin Winnipegiin pysyvästi '
+          + 'näytteille 1973.',
+      lahde: 'Wikipedia',
+    },
+    'Pörssikortteli': {
+      aika: '1881–1918',
+      teksti: 'Pörssikortteli on kaksikymmentä korttelia ja noin 150 '
+          + 'perintörakennusta keskustan pohjoispäässä. Nimi tulee '
+          + 'Winnipegin viljapörssistä, joka oli aikanaan Kanadan '
+          + 'viljakaupan keskus, ja muista hyödykepörsseistä, joita '
+          + 'kaupunkiin syntyi vuosina 1881–1918. Kortteleissa on '
+          + 'ehjänä säilynyt kokoelma 1900-luvun alun varastoja, '
+          + 'rahalaitoksia ja terrakottapintaisia varhaisia '
+          + 'pilvenpiirtäjiä.'
+          + '\n\n'
+          + 'Winnipeg oli vuosisadan vaihteessa Pohjois-Amerikan '
+          + 'nopeimmin kasvavia kaupunkeja, ja sitä sanottiin '
+          + 'pohjoisen Chicagoksi — myös rakennustyyli tuli sieltä. '
+          + 'Vuoteen 1911 mennessä keskustan lähellä yhtyi yli kaksi '
+          + 'tusinaa rautatielinjaa ja kaupungissa oli yli kaksisataa '
+          + 'tukkuliikettä.'
+          + '\n\n'
+          + 'Sitten kasvu pysähtyi. Ensimmäinen maailmansota ja '
+          + 'Panaman kanavan avaaminen 1914 veivät tavaravirran '
+          + 'muualle, tukkukauppa siirtyi Edmontoniin, Moose Jaw’hun '
+          + 'ja Reginaan, ja 1940-luvulla varastoista tuli '
+          + 'vaatetehtaita. Juuri se pelasti korttelit: kun mitään '
+          + 'uutta ei rakennettu, vanha jäi paikalleen. Alue '
+          + 'julistettiin kansalliseksi historialliseksi kohteeksi '
+          + '27. syyskuuta 1997.',
+      lahde: 'Wikipedia',
+    },
+    'Burton Cummings -teatteri': {
+      aika: '1907',
+      teksti: 'Teatterin rakennutti paikallinen impressaario Corliss '
+          + 'Powers Walker, ja sata vuotta se tunnettiin Walkerin '
+          + 'teatterina. Tontit ostettiin heinäkuussa 1905, talo '
+          + 'rakennettiin 1906–07, ja avajaiset pidettiin '
+          + '18. helmikuuta 1907 Puccinin Madame Butterflyllä. '
+          + 'Katsomoon mahtui 1 798 ihmistä, holvikatto nousee '
+          + 'kuuteenkymmeneen jalkaan, ja kaksi parveketta '
+          + 'rakennettiin ilman tukipylväitä, jotta ylhäältäkin näkisi '
+          + 'näyttämölle. Lippu maksoi parvekkeella 25 senttiä ja '
+          + 'permannolla kaksi dollaria.'
+          + '\n\n'
+          + 'Walker oli nähnyt Chicagon Iroquois-teatterin palon 1903 '
+          + 'ja tilasi montrealilaiselta Howard C. Stonelta '
+          + 'paloturvallisen talon: teräshäkki, betoniin ja '
+          + 'terrakottaan valetut rakenteet, betonilattiat, '
+          + 'palo-ovet ja liuskekivipintaiset metalliportaat. Hän '
+          + 'väitti sitä Kanadan ensimmäiseksi paloturvalliseksi '
+          + 'teatteriksi.'
+          + '\n\n'
+          + 'Näyttämöltä on puhuttu muutakin kuin repliikkejä. '
+          + 'Salissa pidettiin työväenliikkeen ja naisten '
+          + 'äänioikeusliikkeen kokouksia, muun muassa Nellie '
+          + 'McClungin pilkkaparlamentti, ja 1918 Winnipegin '
+          + 'ammattiyhdistysneuvoston ja sosialistipuolueen kokous, '
+          + 'joka johti seuraavan kevään yleislakkoon. Toukokuussa '
+          + '1919 yli kolmekymmentätuhatta työntekijää jätti työnsä; '
+          + 'lakko päättyi 21. kesäkuuta, kun mellakkalaki luettiin, '
+          + 'ja päivä jäi historiaan verisenä lauantaina. Talo '
+          + 'suljettiin 1933, oli elokuvateatterina 1945 alkaen, '
+          + 'palautettiin näyttämökäyttöön 1991 ja sai nykyisen '
+          + 'nimensä winnipegiläisen laulaja-lauluntekijän mukaan '
+          + '2002.',
+      lahde: 'Wikipedia',
+    },
+    'Manitoba Hydro Place': {
+      aika: '2009',
+      teksti: 'Manitoban sähköyhtiön pääkonttori valmistui Portage '
+          + 'Avenuen varteen syyskuussa 2009 kaupungin neljänneksi '
+          + 'korkeimpana rakennuksena. Se on liitetty Winnipeg '
+          + 'Walkwayhin, keskustan katettuun käytäväverkkoon, joten '
+          + 'talvella sinne pääsee useasta korttelista ulos '
+          + 'menemättä.'
+          + '\n\n'
+          + 'Torni sai toukokuussa 2012 LEED Platinum -luokituksen, '
+          + 'ja se on siten yksi Pohjois-Amerikan '
+          + 'energiatehokkaimmista toimistotorneista. Se on '
+          + 'huomionarvoista juuri täällä: kaupungissa, jossa '
+          + 'tammikuun keskilämpötila on kuudentoista pakkasasteen '
+          + 'tienoilla ja heinäkuussa voidaan mitata kolmeakymmentä '
+          + 'lämpöastetta, talon on selvittävä molemmista ääripäistä '
+          + 'saman vuoden aikana.',
+      lahde: 'Wikipedia',
+    },
+    'Kanadan ihmisoikeusmuseo': {
+      aika: '2014',
+      teksti: 'Museo seisoo aivan jokien yhtymäkohdan vieressä, ja se '
+          + 'on kahdella tavalla ensimmäinen: se on ensimmäinen uusi '
+          + 'kansallinen museo Kanadassa vuoden 1967 jälkeen ja '
+          + 'ensimmäinen kansallinen museo pääkaupunkiseudun '
+          + 'ulkopuolella. Talon perusti vuoden 2008 lakimuutos.'
+          + '\n\n'
+          + 'Ajatus oli winnipegiläisen Izzy Asperin, ja hän keksi sen '
+          + '18. heinäkuuta 2000. Asper kuoli 2003 matkalla '
+          + 'julkistamaan arkkitehtuurikilpailua, ja työtä jatkoi '
+          + 'hänen tyttärensä Gail Asper. Kilpailuun tuli sata '
+          + 'ehdotusta kahdestakymmenestäyhdestä maasta, ja voittajaksi '
+          + 'valittiin albuquerquelainen Antoine Predock. Ennen '
+          + 'rakentamista arkeologit kaivoivat paikalta vanhinten '
+          + 'kanssa yli 400 000 esinettä — jokien risteys on ollut '
+          + 'kohtaamispaikka tuhansia vuosia.'
+          + '\n\n'
+          + 'Peruskiven paljasti 3. heinäkuuta 2010 kuningatar '
+          + 'Elisabet II, joka valitsi kiven itse Runnymeden niityltä, '
+          + 'missä Magna Carta sinetöitiin 1215; kivi koteloitiin '
+          + 'manitobalaiseen Tyndall-kiveen. Viimeinen 1 669 '
+          + 'mittatilaukseen leikatusta lasista asennettiin syyskuussa '
+          + '2012. Avajaisseremonia pidettiin 19. syyskuuta 2014, ja '
+          + 'ovet avautuivat yleisölle saman kuun 27. päivänä.',
+      lahde: 'Wikipedia',
+    },
+    'Saint-Bonifacen katedraali': {
+      aika: '1818–1972',
+      teksti: 'Punaisenjoen itärannalla on ollut kirkko vuodesta 1818, '
+          + 'jolloin vastasaapunut pastori Norbert Provencher rakensi '
+          + 'kahden työtoverin kanssa hirsitalon Selkirkin jaarlin '
+          + 'lahjoittamalle maalle. Rakennus oli viisikymmentä jalkaa '
+          + 'pitkä ja kolmekymmentä leveä, ja se oli yhtä aikaa '
+          + 'kappeli, asunto ja koulu. Piispaksi noussut Provencher '
+          + 'rakensi ensimmäisen varsinaisen katedraalin 1832.'
+          + '\n\n'
+          + 'Kirkon kellot pääsivät runoon: yhdysvaltalainen John '
+          + 'Greenleaf Whittier kirjoitti niistä 1859 runossaan The '
+          + 'Red River Voyageur, ja 17. joulukuuta 1891, runoilijan '
+          + '84-vuotispäivänä, arkkipiispa Taché soitatti niitä hänen '
+          + 'kunniakseen. Provencherin katedraali oli silloin jo '
+          + 'palanut — se tuhoutui 14. joulukuuta 1860 — ja tilalle '
+          + 'oli rakennettu kivinen kirkko, jonka kellotorni valmistui '
+          + 'kahdeksan vuotta myöhemmin.'
+          + '\n\n'
+          + 'Katolisten määrä Saint-Bonifacessa kasvoi vuosina '
+          + '1888–1906 luvusta 2 154 lukuun 4 615, ja 15. elokuuta '
+          + '1906 vihittiin uusi, montrealilaisen Jean-Omer Marchandin '
+          + 'suunnittelema katedraali. Se paloi 22. heinäkuuta 1968: '
+          + 'ruusuikkuna, messupuvut, vuoden 1860 kellot ja '
+          + 'seurakunnan arkisto tuhoutuivat, ja jäljelle jäivät '
+          + 'julkisivu, sakaristo ja vanhat muurit. Vuonna 1972 '
+          + 'julkisivun taakse rakennettiin uusi, pienempi kirkko — '
+          + 'joten portti ja seinät ovat yhä vuodelta 1906 ja '
+          + 'kirkkosali sen takana puoli vuosisataa nuorempi.',
+      lahde: 'Wikipedia',
+    },
+    'Union Station': {
+      aika: '1911',
+      teksti: 'Main Streetin varrella oleva Union Station avattiin '
+          + '1911, ja sen suunnitteli newyorkilainen toimisto Warren '
+          + 'and Wetmore. Beaux-arts-tyylisessä talossa on kolme '
+          + 'laituria ja kahdeksan raidetta, ja siitä lähtevät yhä '
+          + 'Kanadan halki kulkevat kaukojunat.'
+          + '\n\n'
+          + 'Asemalla, raiteilla yksi ja kaksi, on rautatiemuseo, ja '
+          + 'sen tunnetuin kappale on Countess of Dufferin — '
+          + 'ensimmäinen höyryveturi, joka on kulkenut Kanadan '
+          + 'preeriamaakunnissa. Baldwin Locomotive Works rakensi sen '
+          + '1872 Northern Pacific Railwaylle, ja 1877 se myytiin '
+          + '9 700 dollarilla rautatieurakoitsija Joseph '
+          + 'Whiteheadille. Veturi lastattiin proomulle Minnesotassa '
+          + 'ja hinattiin Punaistajokea pohjoiseen; se saapui '
+          + 'St. Bonifaceen 9. lokakuuta 1877, ja rahti maksoi 440 '
+          + 'dollaria.'
+          + '\n\n'
+          + 'Nimi tulee kenraalikuvernöörin puolisosta, Dufferinin '
+          + 'jaarlittaresta. Veturi rakensi rataa etelään '
+          + 'Yhdysvaltain rajalle, sitten itään ja lopulta lännessä '
+          + 'aina Goldeniin asti. 1880-luvun puolivälissä se myytiin '
+          + 'sahayhtiölle, joka nimesi sen uudelleen Betsyksi ja '
+          + 'pani sen pyörittämään sahaa. Winnipegin kaupunki löysi '
+          + 'sen 1909 ja sai omistajat lahjoittamaan sen takaisin.',
+      lahde: 'Wikipedia',
+    },
+    'Manitoban parlamenttitalo': {
+      aika: '1913–1920',
+      teksti: 'Manitoban kolmas lakiasäätävä rakennus valmistui 1920, '
+          + 'ja se on 77 metriä korkea uusklassinen beaux-arts-talo. '
+          + 'Kaksi edellistä olivat vaatimattomampia: ensimmäinen oli '
+          + 'hirsitalo Main Streetin ja McDermot Avenuen kulmassa, ja '
+          + 'se paloi 1873 — samana vuonna, jona Winnipegistä tuli '
+          + 'kaupunki. Toinen avattiin 1884.'
+          + '\n\n'
+          + 'Vuonna 1911 maakunta julisti arkkitehtuurikilpailun '
+          + 'kaikille Brittiläisen imperiumin arkkitehdeille; palkinto '
+          + 'oli kymmenentuhatta dollaria ja työstä maksettiin sata '
+          + 'tuhatta. Kuudestakymmenestäseitsemästä ehdotuksesta '
+          + 'valittiin Frank Worthington Simonin työ. Rakentaminen '
+          + 'alkoi kesällä 1913 manitobalaisella Tyndall-kivellä, '
+          + 'joka louhittiin Garsonista parinkymmenen kilometrin '
+          + 'päästä. Piirustuksia oli vuoteen 1914 mennessä 1 231. '
+          + 'Työ venyi lähes seitsemäksi vuodeksi: sota vei työvoiman '
+          + 'ja rahat, ja urakoitsija Thomas Kelly vei '
+          + 'rakennusaineita omaan taloonsa kolmen korttelin päähän. '
+          + 'Skandaali johti tutkintakomissioon ja hallituksen '
+          + 'vaihtumiseen, ja lopullinen lasku oli 9 379 000 '
+          + 'dollaria.'
+          + '\n\n'
+          + 'Kupolin päällä juoksee Kultapoika, viralliselta nimeltään '
+          + 'Ikuinen nuoruus ja yritteliäisyyden henki: alaston '
+          + 'nuorukainen, jolla on soihtu toisessa ja viljalyhde '
+          + 'toisessa kädessä. Patsas painaa 1 650 kiloa ja on '
+          + 'varpaasta soihdun kärkeen 5,25 metriä, ja asennettaessa '
+          + 'sen soihtu oli 77 metrissä Winnipegin korkein piste. '
+          + 'Simon tilasi sen 1915 pariisilaiselta Georges '
+          + 'Gardet’lta; se valmistui 1918, ja valimoa pommitettiin '
+          + 'mutta patsas säilyi ehjänä. Kuljetuslaiva otettiin sotaan, '
+          + 'joten patsas matkusti ruumassa kaksi kertaa Välimeren ja '
+          + 'viisi kertaa Atlantin yli ennen kuin se nostettiin '
+          + 'paikalleen marraskuussa 1919.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * ST. JOHN'SIN KOHDEKARTAN JUTUT (Opus 7.9.2026). Kahdeksan
+   * kohdetta, faktapohja docs/mantereet-tyoaineisto/faktapohja-stjohns.md
+   * ja sen erillinen tarkistus tarkistus-stjohns.md. Jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit "Colonial
+   * Building", "Fort William, Newfoundland", "Cabot Tower (St.
+   * John's)", "The Battery, St. John's", "Basilica of St. John the
+   * Baptist", "National War Memorial (Newfoundland)", "Cathedral of
+   * St. John the Baptist (St. John's)", "Water Street (St. John's)").
+   *
+   * MARCONI EI OLE TÄÄLLÄ. Vuoden 1901 vastaanotto on teemasivun oma
+   * aihe, ja Cabot Towerin juttu kertoo tornin oman tarinan — sama
+   * ratkaisu kuin Tangerin Pyhän Andreaksen kirkossa ja Matissessa
+   * (v1670). Samasta syystä vuoden 1762 Signal Hillin taistelu on
+   * vain lehden nostossa.
+   *
+   * CABOT TOWERIN VUOSILUKU: pääartikkeli sanoo 1897, tornin oma
+   * artikkeli 1898–1900. Juttu käyttää kohdeartikkelia
+   * (tarkistus-stjohns.md, kohta E).
+   */
+  stjohns: {
+    'Colonial Building': {
+      aika: '1850–1959',
+      teksti: 'Kun Newfoundland sai 1832 edustuksellisen hallinnon, '
+          + 'sen lakiasäätävällä kokouksella ei ollut taloa. '
+          + 'Ensimmäinen koti oli Mary Traversin majatalo Duckworth '
+          + 'Streetillä, ja oleskelu jäi lyhyeksi: kokous unohti '
+          + 'kiireessään hyväksyä rahat vuokraan. Talo paloi vuoden '
+          + '1846 suurpalossa, ja seuraavat seitsemäntoista vuotta '
+          + 'kokoonnuttiin milloin missäkin, muun muassa '
+          + 'raastuvassa.'
+          + '\n\n'
+          + 'Pysyvän talon peruskiven laski kuvernööri Sir John '
+          + 'Gaspar Le Marchant 24. toukokuuta 1847, ja rakennus '
+          + 'avattiin 28. tammikuuta 1850. Pääarkkitehti oli James '
+          + 'Purcell. Uusklassinen talo tehtiin valkoisesta '
+          + 'kalkkikivestä, joka tuotiin varta vasten Little '
+          + 'Islandilta Corkista Irlannista; julkisivussa on kuusi '
+          + 'joonialaista pylvästä ja päädyssä syvänä reliefinä '
+          + 'kuninkaalliset vaakunat. Koko talo maksoi 18 335 puntaa. '
+          + 'Isoisän matkavuonna 1873 tässä salissa istui '
+          + 'itsehallinnollisen brittiläisen siirtomaan parlamentti — '
+          + 'Newfoundland ei ollut Kanadaa eikä siitä tullut Kanadaa '
+          + 'ennen kuin 1949.'
+          + '\n\n'
+          + 'Talossa on kaksi tapaa, jotka jäivät elämään. Vuonna '
+          + '1880 puolalainen freskomaalari Alexander Pindikowski '
+          + 'istui viidentoista kuukauden tuomiota väärennöksestä ja '
+          + 'sai kuukauden lyhennyksen siitä, että hän maalasi '
+          + 'Colonial Buildingin ja kuvernöörin talon katot. Ja kun '
+          + 'hallituspuolue valitsi paikkansa, se asettui puhemiehen '
+          + 'vasemmalle puolelle eikä perinteiselle oikealle — siellä '
+          + 'olivat lämmittimet. Tapa jatkuu Newfoundlandin ja '
+          + 'Labradorin parlamentissa yhä.',
+      lahde: 'Wikipedia',
+    },
+    'Fort William': {
+      aika: '1698–1881',
+      teksti: 'Cavendish Squaren ja Duckworth Streetin kulmassa on '
+          + 'tukimuurissa laatta, ja se on kaikki mitä linnakkeesta '
+          + 'on jäljellä. Fort William rakennettiin 1698 ja valmistui '
+          + '1700: tiilipintaiset vallit, pomminkestävät '
+          + 'rintavarustukset, ruutikellarit ja kunnon kasarmit. Se '
+          + 'oli Newfoundlandin brittivaruskunnan alkuperäinen '
+          + 'esikunta. Sataman itäpäässä oli toinen linnake, Fort '
+          + 'George, ja niiden välillä kulki maanalainen käytävä; '
+          + 'Narrowsin eteläpuolella oli kolmas varustus, jota '
+          + 'sanottiin Linnaksi.'
+          + '\n\n'
+          + 'Linnake nousi vasta katastrofin jälkeen. Ranskalaiset '
+          + 'olivat tuhonneet kaupungin 1696, ja kun tuhannenviidensadan '
+          + 'miehen apujoukko saapui seuraavana kesänä, se löysi '
+          + 'autiot rauniot; talven aikana kolmestasadasta sotilaasta '
+          + 'kuoli 214 ruoan ja suojan puutteessa. Linnaketta '
+          + 'koeteltiin pian: ranskalaiset piirittivät kaupunkia 1705 '
+          + 'viisi viikkoa, ja 1709 varuskunta antautui lyhyen '
+          + 'vastarinnan jälkeen.'
+          + '\n\n'
+          + 'Paikka oli valittu huonosti. Linnake ei suojannut '
+          + 'satamaa kunnolla ja oli itse altis maahyökkäykselle, '
+          + 'joten britit rakensivat 1779 lännemmäksi Fort '
+          + 'Townshendin, ja Fort Williamista tuli sivuvarustus. '
+          + 'Vuonna 1881 se purettiin rautatien ratapihan ja hotellin '
+          + 'tieltä, ja kasarmia käytettiin asemarakennuksena, kunnes '
+          + 'sekin purettiin 1910. Kansalliseksi historialliseksi '
+          + 'kohteeksi paikka nimettiin 1952 — muistomerkkinä sille, '
+          + 'mitä ei enää ole.',
+      lahde: 'Wikipedia',
+    },
+    'Cabot Tower': {
+      aika: '1898–1900',
+      teksti: 'Signal Hillin laella oli masto jo noin vuonna 1704. '
+          + 'Kukkulaa sanottiin silloin nimellä the Lookout, ja '
+          + 'signaalimiehen työ oli katsoa merelle: kun alus näkyi, '
+          + 'hän kertoi lipuilla, minkätyyppinen se oli ja mistä '
+          + 'maasta se tuli, ja ampui tykillä, jotta kaupungissa '
+          + 'osattaisiin katsoa ylös. Alhaalla vastattiin '
+          + 'laukauksella. 1700-luvun loppuun mennessä laelle oli '
+          + 'rakennettu vartiotalo, ja 1800-luvulla signaloitiin '
+          + 'enimmäkseen kaupungin kauppahuoneille.'
+          + '\n\n'
+          + 'Cabot Tower on viimeinen näistä signaalitaloista. '
+          + 'Rakentaminen alkoi 1898 ja torni valmistui 1900; se '
+          + 'pystytettiin John Cabotin Newfoundlandiin saapumisen '
+          + '400-vuotispäivän ja kuningatar Viktorian timanttijuhlan '
+          + 'muistoksi. Hanke ei ollut suosittu. Kaupunki oli palanut '
+          + '1892 ja saaren pankit kaatuneet 1894, ja kun tuomari '
+          + 'D. W. Prowse ehdotti tornia, eräs kirjoitti '
+          + 'paikallislehdessä, että se on kuin panisi silkkihatun '
+          + 'sellaisen miehen päähän, jolla ei ole varaa saappaisiin. '
+          + 'Sairaalan uusi siipi sai paljon enemmän kannatusta.'
+          + '\n\n'
+          + 'Arkkitehti oli William Howe Greene, ja tyyli on myöhäistä '
+          + 'uusgotiikkaa: epäsäännöllisesti ladottua punaista '
+          + 'hiekkakiveä, kaksikerroksinen neliörunko ja sen '
+          + 'kaakkoiskulmassa kolmikerroksinen kahdeksankulmainen '
+          + 'torni. Lippusignalointi jatkui täällä vuoteen 1958. '
+          + 'Uudenvuodenaattona 1918 tornissa sattui räjähdys, kun '
+          + 'Michael Cantwell valmisteli ruutia keskipäivän '
+          + 'laukausta varten — syyksi arveltiin hänen piippuaan — ja '
+          + 'eteläkulma korjattiin jälkeenpäin.',
+      lahde: 'Wikipedia',
+    },
+    'The Battery': {
+      aika: '1770-luvulta',
+      teksti: 'Satamansuun pohjoisrinteellä, Signal Hillin juurella, '
+          + 'on kaupunginosa jota sanotaan outportiksi kaupungin '
+          + 'sisällä: jyrkkiä rinteitä, kapeita kujia ja '
+          + 'kirkkaanvärisiä taloja, jotka ovat kiinni kalliossa. '
+          + 'Nimi tulee tykkipattereista, joita rinteellä on ollut '
+          + 'vuosisatojen ajan — muun muassa Fort Waldegrave — ja '
+          + 'joita miehitettiin vielä molemmissa maailmansodissa.'
+          + '\n\n'
+          + 'Rannassa on Chain Rock, kallionokka, joka on antanut '
+          + 'nimensä yhdelle kaupungin oudoimmista laitteista. Jo '
+          + '1770-luvulta lähtien kiveen kiinnitettiin ketju, joka '
+          + 'ulottui salmen yli Fort Amherstiin. Vastarannan kiveä '
+          + 'sanotaan Pancake Rockiksi, ja kivien väli on 174 metriä. '
+          + 'Iltaisin ketju kiristettiin vintturilla pintaan, jolloin '
+          + 'satamaan ei päässyt kukaan. Maailmansodissa ketjun tilalle '
+          + 'tuli sukellusveneverkko.'
+          + '\n\n'
+          + 'Rinne, joka tekee näkymän, tekee myös riskin. Alueella on '
+          + 'ollut usein pieniä maanvyöryjä, ja 1900-luvulla kolme '
+          + 'lumivyöryä vei ihmishenkiä tai aiheutti vakavia '
+          + 'loukkaantumisia — kaksi helmikuussa 1921 ja yksi '
+          + 'helmikuussa 1959. Kaupunki alkoi tutkia rinnettä 1995 ja '
+          + 'käytti arviolta 300 000 dollaria sen vakauttamiseen. '
+          + 'Silti tammikuussa 2020, ennätyslumisateen ja '
+          + 'hurrikaanivoimaisten tuulten jälkeen, yksi talo '
+          + 'vaurioitui pahoin lumivyöryssä.',
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen sotamuistomerkki': {
+      aika: '1924',
+      teksti: 'Muistomerkki on King’s Beachilla Water Streetin '
+          + 'varrella, ja paikka on valittu tarkasti: siitä näkyy koko '
+          + 'satama, jonka läpi jokainen Eurooppaan lähtenyt sotilas '
+          + 'kulki. Muistomerkki paljastettiin Memorial Daynä '
+          + '1. heinäkuuta 1924, ja paljastajaksi pyydettiin '
+          + 'sotamarsalkka Douglas Haig. Paikalle tuli 20 000 '
+          + 'ihmistä — noin kymmenen prosenttia koko saaren '
+          + 'väestöstä.'
+          + '\n\n'
+          + 'Päivämäärä on sama kuin Beaumont-Hamelin päivä. '
+          + '1. heinäkuuta 1916 Royal Newfoundland Regiment menetti '
+          + 'noin puolessa tunnissa 86 prosenttia vahvuudestaan '
+          + 'kaatuneina, kadonneina tai haavoittuneina; seuraavana '
+          + 'aamuna kahdeksastasadasta miehestä ilmoittautui '
+          + 'kuusikymmentäkahdeksan. Sodassa kuoli noin 1 700 '
+          + 'newfoundlandilaista, joista 820:llä ei ole tunnettua '
+          + 'hautaa. Rahaa muistomerkkiin kerättiin ympäri saarta, ja '
+          + 'työtä valvoivat rykmentin pappi Thomas Nangle ja '
+          + 'kapteeni Gerald Whitty.'
+          + '\n\n'
+          + 'Viisi pronssihahmoa valettiin Lontoossa englantilaisten '
+          + 'Ferdinand Victor Blundstonen ja Gilbert Bayesin '
+          + 'malleista. Ylimpänä on nainen, jolla on soihtu '
+          + 'vasemmassa ja miekka oikeassa kädessä. Sivusiivillä ovat '
+          + 'merireservin merimies kaukoputkineen ja rykmentin '
+          + 'sotilas, ja alempana kalastajat öljyvaatteissa ja '
+          + 'kumisaappaissa sekä metsätyömies kirves olalla — '
+          + 'kauppalaivaston ja metsäkomppanian miehet. '
+          + 'Satavuotispäivänään 2024 muistomerkki kunnostettiin ja '
+          + 'siihen lisättiin tuntemattoman sotilaan hauta. Se on '
+          + 'ainoa kerta, jolloin Commonwealth War Graves Commission '
+          + 'on sallinut samaan maahan toisen tuntemattoman sotilaan '
+          + 'haudan — syystä, joka on itsessään historiaa: '
+          + 'Newfoundland ei ollut vielä Kanadaa, kun sen miehet '
+          + 'lähtivät.',
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Johannes Kastajan basilika': {
+      aika: '1839–1855',
+      teksti: 'Basilika on Newfoundlandin siihenastisen historian '
+          + 'suurin rakennushanke. Kaivutyöt alkoivat toukokuussa '
+          + '1839, peruskivi laskettiin toukokuussa 1841, ja kirkko '
+          + 'vihittiin 9. syyskuuta 1855. Valmistuessaan se oli '
+          + 'Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä '
+          + 'Kanadan suurin katedraalikirkko ja maan toiseksi suurin '
+          + 'kirkko. Se on myös yksi harvoista rakennuksista, jotka '
+          + 'selvisivät vuoden 1892 suurpalosta.'
+          + '\n\n'
+          + 'Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- '
+          + 'akselille eikä se katso satamansuulle. Sen julkisivu on '
+          + 'käännetty talvipäivänseisauksen nousevan ja '
+          + 'kesäpäivänseisauksen laskevan auringon linjaan — samalla '
+          + 'periaatteella kuin keskiaikainen Chartresin katedraali. '
+          + 'Piispa Michael Anthony Flemingille sen suunnitteli Tanskan '
+          + 'hallituksen arkkitehti Ole Joergen Schmidt Hampurin '
+          + 'Altonasta, ja tyyli on lombardialainen romaaninen.'
+          + '\n\n'
+          + 'Aineet tuotiin kaukaa: kalkkikivi ja graniitti Galwaysta '
+          + 'ja Dublinista, 400 000 tiiltä Hampurista, ja niiden '
+          + 'lisäksi paikallista hiekkakiveä. Ulkomitat ovat 260 × 220 '
+          + 'jalkaa, tornit nousevat 150 jalkaan, ja kirkkoon mahtuu '
+          + 'noin kaksituhattaviisisataa ihmistä. Itätornissa on kahden '
+          + 'tonnin kello, jonka piispa Mullock osti helmikuussa 1850 '
+          + 'ja jonka John Murphy valoi Dublinissa; se oli siihen '
+          + 'mennessä suurin Irlannissa valettu kello ja voitti '
+          + 'kultamitalin. Alttarilla on John Hoganin 1854 carraran '
+          + 'marmorista veistämä Kuollut Kristus — kolmesta '
+          + 'samanlaisesta veistoksesta ainoa Irlannin ulkopuolella.',
+      lahde: 'Wikipedia',
+    },
+    'Anglikaaninen katedraali': {
+      aika: '1847–1905',
+      teksti: 'Anglikaaninen seurakunta perustettiin 1699 vetoomuksella '
+          + 'Lontoon piispalle Henry Comptonille. Vetoomuksessa '
+          + 'pyydettiin apua myös kirkon jälleenrakentamiseen: '
+          + 'ranskalaiset olivat tuhonneet sen ja koko kaupungin '
+          + '1696. Paikalla tai sen lähellä on ollut ainakin kuusi '
+          + 'puukirkkoa, ja jokainen niistä tuhoutui sotatoimissa.'
+          + '\n\n'
+          + 'Ensimmäinen kivikirkko aloitettiin 1843, mutta se paloi '
+          + 'vuoden 1846 suurpalossa ennen kuin siitä ehti tulla '
+          + 'muuta kuin peruskivi ja alkua. Nykyisen katedraalin '
+          + 'aloitti 1847 piispa Edward Feild, ja piirustukset '
+          + 'tilattiin uusgotiikan johtavalta arkkitehdilta George '
+          + 'Gilbert Scottilta. Kirkkosali rakennettiin 1847–1850, ja '
+          + 'se sai toimia yksinään koko katedraalina 35 vuotta; '
+          + 'kuoro ja poikkilaivat rakennettiin vasta 1880–1885, '
+          + 'jolloin kirkko sai latinalaisen ristin muodon. Isoisän '
+          + 'matkavuonna 1873 kirkko oli siis vielä pelkkä pitkä '
+          + 'sali.'
+          + '\n\n'
+          + '8. heinäkuuta 1892 tuli tuhosi sen. Kattopalkit '
+          + 'syttyivät, katto romahti ja veti mukanaan kirkkosalin '
+          + 'ylemmät seinät ja pilarit, ja kuumuus sulatti lyijyn '
+          + 'lasimaalauksista niin, että kaikki paitsi kaksi '
+          + 'tuhoutuivat; ainoa säilynyt on sakastissa. Kunnostus '
+          + 'alkoi 1893, kuori ja poikkilaivat valmistuivat 1895, '
+          + 'kirkkosali 1905, ja kirkko vihittiin uudelleen '
+          + '21. syyskuuta 1905. Yksi asia jäi tekemättä: Scottin '
+          + 'suunnittelema torninhuippu puuttuu yhä. Insinöörit ovat '
+          + 'todenneet 150 jalan tornin mahdolliseksi, mutta '
+          + 'kustannusarvio oli kolme miljoonaa dollaria, eikä '
+          + 'seurakunnalla ole aikeita rakentaa sitä.',
+      lahde: 'Wikipedia',
+    },
+    'Water Street': {
+      aika: '1500-luvulta',
+      teksti: 'Water Street kulkee sataman rantaa pitkin, ja se on '
+          + 'kaupungin vanhin katulinja: siitä tuli kauppapaikka '
+          + 'baskeille, ranskalaisille, espanjalaisille, '
+          + 'portugalilaisille ja englantilaisille jo silloin, kun '
+          + 'St. John’s oli kalastuskausien leiripaikka eikä vielä '
+          + 'kaupunki. Kaikki tuli ja meni tämän kadun kautta, koska '
+          + 'kaikki tuli ja meni satamasta.'
+          + '\n\n'
+          + 'Kadun varren liikerakennukset muodostavat Water Street '
+          + 'Historic Districtin, joka nimettiin kansalliseksi '
+          + 'historialliseksi kohteeksi 1987. Ne edustavat 1800-luvun '
+          + 'kauppahuoneita, Newfoundlandin kalastusta ja Atlantin '
+          + 'kauppaa — ja useimmat ovat vuoden 1892 suurpalon '
+          + 'jälkeisiä, koska palo söi koko itäpään.'
+          + '\n\n'
+          + 'Katu on yhä kaupungin kaupallinen ydin: matkamuistokauppoja, '
+          + 'ravintoloita, pubeja ja putiikkeja matalissa '
+          + 'perintörakennuksissa. Vuonna 2020 kaupunki teki siitä '
+          + 'kesäkaudeksi osittain kävelykadun.',
+      lahde: 'Wikipedia',
+    },
+  },
 };
