@@ -42,9 +42,33 @@ British survey). Portit: fail 0, nimiölimitys 0, nostopaikat ok;
 savuke-maastokohteet on ohituksessa (vanha-kartta-ohitus.mjs) — agentti ajoi
 vartion 7a erikseen: 0 kohdetta lehden ikkunan ulkopuolella.
 
+### Maalehti Mosambik (MOZ) — 84d48c0 (tekstit), a2b653a (kuvat)
+Tiedostot: docs/mantereet-tyoaineisto/faktapohja-moz.md, js/packs/maa-kategoriat.js,
+js/packs/africa-artikkelit.js (maaintro), js/packs/uutislahteet.js,
+tools/uutisproxy/worker.js, tools/uutisproxy/OHJE.md. Aiheet: historia
+(prazot, Baruen kruunajaiset, Mosambikin yhtiö, Niassan yhtiön postimerkit),
+luonto (Mabu, Lico, Namuli, Niassajärvi), ruoka (matapa, xima, curry, cashew +
+minitehtävä), musiikki (timbila, mgodo/mzeno, Fany Pfumo, Havannan
+mozambique-rytmi), kuvataide (makonde, Malangatana, Reinata Sadimba, Trono de
+Armas). Kuvia 12/20, kaikki Commons PD/CC, ≥ 1200 px, katsottu. Uutislähde
+Jornal Notícias (pt, jornalnoticias.co.mz/feed/, ilman www:tä).
+Pistokokeet: (1) Teten maakunnassa 1800-luvulla 32 tilanherraa hallitsi 57
+prazoa (en-Wikipedia "Prazo", History). (2) mbilassa jopa 19 kieltä, joista 8
+voi soida yhtä aikaa ("Xylophone", Mbila). (3) Niassan yhtiö laski liikkeelle
+141 postimerkkiä, 158 miljoonan reisin edestä ("Postage stamps and postal
+history of the Niassa Company"). Portit: fail 0, kaikki tarkistukset vihreät.
+
 ## Kuvaputken tilaukset (kuvattomat nostot ja miniatyyrit)
 
-(täydennetään)
+**MOZ, kuvattomat nostot (8):**
+- historia "Vesi, joka sitoo" — Baruen seutu: Ruenyan laakso tai Nyangan ylätasangon reuna Mosambikin puolella
+- historia "Yhtiö, jolla oli oma pankki ja oma raha" — Beira 1900-luvun alussa tai Banco da Beiran seteli
+- historia "Postimerkit, joita ei ollut tarkoitettu kirjeisiin" — Nyassan 1901 kirahvimerkki suurena
+- musiikki "Sävellys, jossa pilkataan naapuria" — timbilaorkesteri soitossa, ei tunnistettavia kasvoja
+- musiikki "Kitara peltipurkista" — peltipurkkikitara tai 1950-luvun HMV-savikiekko
+- musiikki "Rytmi, joka ei ole Mosambikista" — kuubalainen comparsa-soittimisto (congat, bombo, lehmänkello, pasuuna)
+- kuvataide "Tennisklubin pallopoika" — Malangatanan maalaus (tekijänoikeus, ei Commonsista)
+- kuvataide "Savi, joka on vihreää grafiitista" — Reinata Sadimban keramiikkaa (sama varaus)
 
 ## Päätöstä vaativat asiat
 
@@ -58,6 +82,13 @@ vartion 7a erikseen: 0 kohdetta lehden ikkunan ulkopuolella.
   kohdekarttatyötä tai lehden rajauksen levennystä, eivät pääkarttaa.
 - VUT:n kookoskrapu on eläintäkytaulun ensimmäinen Commons-kuva (muut ovat
   omistajan generoituja havainnekuvia) — perustelu tietueen vieressä.
+
+- MOZ: Malangatanan ja Reinata Sadimban kuvat vain tekijänoikeuden alaisina
+  — omistaja päättää, hankitaanko muualta. Matapa-kuva kännykkätasoa (ainoa
+  Commonsissa). Niassan luonnonpuisto jätettiin pois Myanmar-linjalla
+  (käynnissä oleva selkkaus); uutissyötteessä näkyy ajoittain Cabo Delgadon
+  otsikoita. Marrabenta on jo africa-kulttuuri.js:n nostona; maalehdessä vain
+  maininta Fany Pfumon nostossa.
 
 ## Keskeneräiset
 
