@@ -86998,4 +86998,778 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * ADDIS ABEBA (Opus, Fablen parvi 7.9.2026) — Afrikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-addisabeba.md ja sen erillinen tarkistus
+   * tarkistus-addisabeba.md. Väitteet on luettu en-Wikipedian
+   * raakatekstistä 7.9.2026: "Addis Ababa", "History of Addis Ababa",
+   * "Timeline of Addis Ababa", "Mount Entoto", "Addis Mercato",
+   * "Ethio-Djibouti Railways", "Addis Ababa Light Rail", "Ethio-jazz",
+   * "Mulatu Astatke", "Injera", "Ethiopian cuisine".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   *
+   * LITTEÄT NOSTOT SIIRRETTIIN TÄNNE. africa-kulttuuri.js:n
+   * addisabeba-lohkossa oli kolme nostoa (kahviseremonia, ethio-jazz
+   * musiikkilinkkeineen, injera). Kun kaupunki saa kategoriat, ne eivät
+   * enää näy pelissä (docs/moduulit/kaupunkilehti.md, "Kulttuurivisa ja
+   * litteä taulu"), joten kaikki kolme aihetta ja Mulatu Astatken
+   * musiikkilinkki ovat nyt tässä ja litteään tauluun jäi vain visa.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on vakioaihe
+   * 'ruoka', koska AIHE_IKONIT ei tarjoa torille eikä kahville omaa
+   * kuvaketta eikä uusia sivu-id:itä tehdä.
+   *
+   * RAJAUS MAALEHTEEN: ETH-maalehti kertoo tefistä, watista ja
+   * berberestä, ensetistä, paastosta, Yaredista, begenasta, azmareista,
+   * eskistasta, geezistä, kalenterista ja luonnosta. Tämä lehti kertoo
+   * vain kaupungin omat aiheet: perustamisen, eukalyptuksen, radan,
+   * ethio-jazzin, kahviseremonian, injeran ateriatapana, Merkaton ja
+   * Piazzan. Kartan maastokohteet (maastokohteet-eth.js) ja skandaalit
+   * (Tewodros, Wuchale, Adwa) on jätetty pois; Adwa mainitaan vain
+   * ajankohtana, johon katedraalin nimi ja hotellin perustaminen
+   * ajoittuvat.
+   *
+   * EI NYKYPOLITIIKKAA: vuoden 2014 yleiskaavakiista, Sheger City,
+   * Dergin kausi, 1991 vallanvaihto sekä miehityksen kaasusodankäynti
+   * ja teloitukset on jätetty kokonaan pois. Miehitys 1936–1941
+   * kerrotaan tapahtumana rakennusten historian osana.
+   *
+   * RISTIRIIDAT KIRJOITETTU AUKI (tarkistus-addisabeba.md A–E):
+   *  - Pääkaupungin siirto: pääartikkeli sanoo 1889, aikajana "noin
+   *    1891". Lehti käyttää pääartikkelin lukua ja kertoo siirtymän
+   *    vähittäisenä (palatsi 1887 → pääkaupunki 1889).
+   *  - Uusi rata: liikenne alkoi 2016, rata valmistui 2017 — molemmat
+   *    luvut samassa virkkeessä.
+   *  - Injeran käyminen on 24–72 tuntia, ei "useita päiviä"
+   *    (tarkistuksen kohta G).
+   *  - Kahvikierrosten nimet lähteen muodossa: abol, tona, bereka.
+   *
+   * SÄÄRIVIÄ EI OLE TÄSSÄ ERÄSSÄ (Fablen työnjako 7.9.2026: säärivin
+   * tekee erillinen agentti). js/packs/saatiedot.js jää koskematta ja
+   * oppaan sääjakso nojaa en-Wikipedian Climate-osioon sen ääneen
+   * sanoen.
+   *
+   * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+   * (africa-valokuvat.js, addisabeba), jossa se on jo tarkistettu —
+   * vanha puoli on kruunajaisvuoden 1930 kulkue ja uusi sama kaupunki
+   * nykyään. Selitteet on kirjoitettu uudestaan yhdeksi virkkeeksi.
+   */
+  addisabeba: [
+    {
+      id: 'kaupunki',
+      nimi: 'Addis Abeba',
+      johdanto: 'Isoisän matkavuonna 1873 tässä laaksossa kohisivat '
+        + 'vain kuumat lähteet. Kaupunki perustettiin vasta 1886, ja '
+        + 'se on nyt Afrikan korkeimmalla sijaitseva pääkaupunki.',
+      nostot: [
+        {
+          otsikko: 'Finfinne ja uusi kukka',
+          teksti: 'Ennen kaupunkia laakson pohjalla oli Finfinne, '
+            + 'kuumien lähteiden paikka. Keisarinna Taytu Betul '
+            + 'rakennutti ensin itselleen talon Filwuhan '
+            + 'kivennäisvesilähteiden luo, joissa Shewan hovi kävi '
+            + 'kylvyissä, ja suostutteli Menelik II:n siirtämään '
+            + 'hovin kylmältä ja tuuliselta Entoton vuorelta alas '
+            + 'tasangolle. Asutus alkoi 1886, ja Taytu antoi paikalle '
+            + 'nimen Addis Abeba, uusi kukka. Seuraavana vuonna suuria '
+            + 'maapalstoja jaettiin aatelisille ja kirkoille; '
+            + 'paikallisilta oromoheimoilta maat takavarikoitiin ja '
+            + 'monet joutuivat siirtymään. Menelik rakensi palatsinsa '
+            + '1887, ja pääkaupunki kaupungista tuli 1889.',
+          wiki: 'Addis Ababa',
+        },
+        {
+          otsikko: 'Eukalyptus, kaupungin keuhko',
+          teksti: 'Menelikin näkyvin jälki kaupungissa kasvaa yhä. '
+            + 'Eukalyptus tuotiin Australiasta hänen aikanaan ja '
+            + 'istutettiin katujen varsille — aikajana ajoittaa '
+            + 'istutukset vuoteen 1903 — mutta suurin osa metsästä '
+            + 'nousi vasta Haile Selassien aikana. Kaupungin '
+            + 'pohjoispuolella kohoavaa 3 200 metrin Entotoa '
+            + 'kutsutaan siksi Addis Abeban keuhkoksi, ja metsä on '
+            + 'yhä kaupungin tärkeä polttopuun lähde. Rinteellä on '
+            + '1 300 hehtaarin luonnonpuisto 2 600–3 100 metrissä; '
+            + 'sen pohjoisreuna on Sinisen Niilin ja Awashin '
+            + 'vedenjakaja, ja huipulla seisoo observatorio.',
+          wiki: 'Mount Entoto',
+        },
+        {
+          otsikko: 'Kuusi viikkoa muulilla, nyt kolme päivää',
+          teksti: 'Ennen rautatietä matka rannikolta kesti kuusi '
+            + 'viikkoa kameli- ja muulikaravaanilla. Metrilevyinen '
+            + 'rata Djiboutin satamaan rakennettiin 1897–1917, se on '
+            + '784 kilometriä pitkä, ja liikenne alkoi 1917. '
+            + 'Ranskalaisvetoinen yhtiö kansallistettiin Etiopiassa '
+            + '1909, ja radasta tuli itsenäisyyden vertauskuva. '
+            + 'Tieliikenne vei matkustajat 1950-luvulta alkaen; uusi '
+            + 'sähköistetty rata aloitti liikenteen 2016 ja valmistui '
+            + '2017. Kaupungin sisällä kulkee vuodesta 2015 '
+            + 'pikaraitiotie, ensimmäinen Saharan eteläpuolisessa '
+            + 'Afrikassa: kaksi linjaa, 31,6 kilometriä, 39 asemaa.',
+          wiki: 'Ethio-Djibouti Railways',
+        },
+        {
+          otsikko: 'Ethio-jazz syntyi täällä',
+          teksti: 'Ethio-jazz yhdistää amharalaisen musiikin '
+            + 'viisisäveliset asteikot länsimaiseen soitinnukseen ja '
+            + 'jazziin. Juuret ovat 1950-luvulla, jolloin '
+            + 'armenialaistaustainen Nerses Nalbandian sävelsi '
+            + 'kansallisteatterille musiikkia, jossa kaksi maailmaa '
+            + 'kohtasi. Tyylin isänä pidetään Mulatu Astatkea, joka '
+            + 'lähetettiin kuusitoistavuotiaana Walesiin opiskelemaan '
+            + 'insinööriksi mutta päätyi musiikkiin ja 1963 Berkleen '
+            + 'ensimmäisenä afrikkalaisena opiskelijana. Hän palasi '
+            + '1969 ja toi mukanaan vibrafonin, congat ja uuden '
+            + 'soundin. Vuodesta 1998 Éthiopiques-sarja on kantanut '
+            + 'levytykset takaisin maailmalle.',
+          wiki: 'Ethio-jazz',
+          musiikki: 'https://music.apple.com/fi/artist/mulatu-astatke/76533627',
+          musiikkiNimi: 'Mulatu Astatke Apple Musicissa',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Addis Abeba on Etiopian pääkaupunki 2 355 metrin '
+          + 'korkeudessa, neljänneksi korkein pääkaupunki maailmassa '
+          + 'ja Afrikan korkein. Kaupunki on Etiopian ylängöllä Suuren '
+          + 'hautavajoaman länsireunan tuntumassa ja Entoton vuoren '
+          + 'juurella; alin kohta on Bolen lentoaseman seutu 2 326 '
+          + 'metrissä ja ylin yli 3 000 metriä pohjoisessa. Asukkaita '
+          + 'arvioidaan olevan noin 6,3 miljoonaa. Kaupunki jakautuu '
+          + 'kymmeneen alakaupunkiin, ja sitä kutsutaan Afrikan '
+          + 'poliittiseksi pääkaupungiksi, koska Afrikan unionin ja '
+          + 'YK:n Afrikan talouskomission päämajat ovat täällä. Addis '
+          + 'Abebaa ei rakennettu siirtomaakaupungiksi, joten '
+          + 'eurooppalaista arkkitehtuuria on vain Piazzan '
+          + 'kaupunginosassa.',
+        artikkeli: {
+          nimi: 'Matkailijan Addis Abeba',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa hengästyy portaissa ja luulee '
+            + 'sairastuneensa, kunnes muistaa seisovansa kahden ja '
+            + 'puolen kilometrin korkeudessa: viileä ilma, '
+            + 'eukalyptuksen tuoksu ja tunti kahvia.',
+          nosto: 'Etiopian kalenterissa on kolmetoista kuukautta ja '
+            + 'vuosiluku on noin seitsemän vuotta jäljessä '
+            + 'länsimaisesta. Se ei ole matkailijan kuriositeetti '
+            + 'vaan käytössä oleva kalenteri — Taitu-hotellin '
+            + 'rakennusvuosi 1898 tarkoittaa vuotta 1905.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Bolen kansainvälinen lentoasema on kaupungin '
+                + 'eteläreunalla, ja sen uusi terminaali avattiin '
+                + '2003. Julkista liikennettä hoitavat kolmen yhtiön '
+                + 'bussit, pikaraitiotie ja sini-valkoiset taksit, '
+                + 'jotka ovat useimmiten enintään kahdentoista hengen '
+                + 'pikkubusseja. Niissä on kuljettajan lisäksi '
+                + 'weyala, joka kerää maksut ja huutaa määränpään '
+                + 'ovelta. Raitiovaunun lippu maksaa kahdesta kuuteen '
+                + 'birriä ja ostetaan aseman vieressä olevasta '
+                + 'oranssista kioskista; pohjois–etelä-linjan vaunut '
+                + 'ovat sinivalkoisia ja itä–länsi-linjan '
+                + 'vihreävalkoisia. Kehätien rakentaminen alkoi 1998.',
+            },
+            {
+              otsikko: 'Museokukkulalta Piazzaan',
+              teksti: 'Kansallismuseon kellarissa on Lucy — '
+                + 'etiopialaisittain Dinkinesh — ja sen naapurissa '
+                + 'Selam, noin 3,3 miljoonaa vuotta vanha fossiili. '
+                + 'Yliopiston kampuksella Guenete Leul -palatsissa '
+                + 'toimii etnologinen museo. Piazzan korttelit ovat '
+                + 'kaupungin ainoa selvästi italialainen jälki: '
+                + 'talot, pienet kahvilat ja ravintolat. Meskel-aukio '
+                + 'täyttyy syyskuun lopussa Meskel-juhlan väestä. '
+                + 'Kansallisteatteri perustettiin 1955, ja Hager '
+                + 'Fikir -teatteri Piazzassa on sitäkin vanhempi.',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Ateria katetaan injeran päälle, ja padat '
+                + 'kaadetaan sen pinnalle: leipä on samalla lautanen '
+                + 'ja lusikka, ja siitä revitään pala kerrallaan '
+                + 'yhteiseltä lautaselta. Kahvi juodaan seremoniassa, '
+                + 'joka kestää tunnin ja alkaa siitä, että pavut '
+                + 'paahdetaan vieraiden nenän edessä. Merkatolla '
+                + 'kahvin ja mausteiden osastot ovat matkailijalle '
+                + 'tutuimpia; loput torista on tukkukauppaa '
+                + 'romumetallista kodinkoneisiin. Piazzan kahviloissa '
+                + 'juodaan italialaisen miehityksen jättämä macchiato.',
+            },
+            {
+              otsikko: 'Afrikan kokouspaikka',
+              teksti: 'Menelik II -kadun varrella seisoo Africa '
+                + 'Hall, jossa perustettiin 1963 Afrikan '
+                + 'yhtenäisyysjärjestö; se lakkautettiin 2002 ja '
+                + 'tilalle tuli Afrikan unioni, jonka uusi päämaja '
+                + 'rakennettiin kaupungin lounaisosaan. YK:n Afrikan '
+                + 'talouskomissio perustettiin 1958, ja sen päämaja '
+                + 'on samassa talossa. Tästä syystä Addis Abebaa '
+                + 'kutsutaan Afrikan poliittiseksi pääkaupungiksi ja '
+                + 'kaupungissa on poikkeuksellisen paljon '
+                + 'lähetystöjä — ensimmäiset avattiin heti sen '
+                + 'jälkeen, kun kaupungista tuli pääkaupunki 1889.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Addis Ababa '
+                + '-artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia. Ilmasto on subtrooppinen '
+                + 'ylänköilmasto, ja korkeus tasaa lämpötilat niin, '
+                + 'ettei yhdenkään kuukauden keskilämpötila ylitä '
+                + 'kahtakymmentäkahta astetta. Marraskuun '
+                + 'puolivälistä tammikuuhun on kuiva kausi: päivällä '
+                + 'harvoin yli 23 astetta, öisin 5–10 astetta ja '
+                + 'toisinaan pakkasta. Helmi–toukokuussa sataa '
+                + 'lyhyesti ja yöt ovat 10–15 asteessa. Kesäkuusta '
+                + 'syyskuun puoliväliin on pitkä sadekausi ja vuoden '
+                + 'kylmin, pilvisin aika. Korkein mitattu lämpötila '
+                + 'on 30,6 astetta ja alin nolla.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Etiopian kansallismuseo',
+                tahdet: 3,
+                selite: 'Lucy ja Selam kellarikerroksessa; Selam on '
+                  + 'noin 3,3 miljoonaa vuotta vanha.',
+              },
+              {
+                mita: 'Merkato',
+                tahdet: 3,
+                selite: 'Afrikan suurin ulkoilmatori: arviolta '
+                  + '13 000 työntekijää 7 100 yrityksessä.',
+              },
+              {
+                mita: 'Pyhän Yrjön katedraali',
+                tahdet: 3,
+                selite: 'Kahdeksankulmainen kirkko, jossa kaksi '
+                  + 'hallitsijaa kruunattiin.',
+              },
+              {
+                mita: 'Entoton metsä',
+                tahdet: 2,
+                selite: 'Eukalyptusrinne ja näköala koko laaksoon '
+                  + 'yli 3 000 metristä.',
+              },
+              {
+                mita: 'Piazza',
+                tahdet: 2,
+                selite: 'Kaupungin ainoa eurooppalainen kortteli — '
+                  + 'kahviloita, vanhin hotelli ja vanhin teatteri.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Korkeus tuntuu heti',
+                teksti: 'Kaupunki on 2 355 metrissä, ja portaissa '
+                  + 'hengästyy ensimmäisinä päivinä myös hyvässä '
+                  + 'kunnossa oleva matkaaja.',
+              },
+              {
+                otsikko: 'Illat ovat viileitä',
+                teksti: 'Päiväntasaajan lähellä mutta korkealla: '
+                  + 'kuivan kauden yöt ovat 5–10 asteessa ja voivat '
+                  + 'käydä pakkasen puolella.',
+              },
+              {
+                otsikko: 'Pitkä sadekausi osuu kesään',
+                teksti: 'Kesäkuusta syyskuun puoliväliin on vuoden '
+                  + 'kylmin ja pilvisin jakso — sade, rae ja lyhyet '
+                  + 'aurinkohetket.',
+              },
+              {
+                otsikko: 'Kalenteri on toinen',
+                teksti: 'Etiopiassa on oma kalenteri, jossa on '
+                  + 'kolmetoista kuukautta ja vuosiluku noin '
+                  + 'seitsemän vuotta jäljessä — vuosiluvut '
+                  + 'kannattaa tarkistaa kyltistä.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Kahvin pääkaupunki',
+      johdanto: 'Kahvipensas on kotoisin näiltä ylängöiltä, ja '
+        + 'Addis Abebassa kahvin juominen kestää tunnin. Sama tori, '
+        + 'joka myy pavut, on Afrikan suurin.',
+      tehtava: {
+        kysymys: 'Mistä Addis Abeban Merkato sai alkunsa?',
+        vaihtoehdot: [
+          'keisari Menelikin määräyksestä',
+          'rautatieaseman viereen syntyneestä kauppapaikasta',
+          'miehityshallinnon erottelupolitiikasta',
+          'Afrikan unionin hankkeesta',
+        ],
+        oikea: 2,
+        fakta: 'Vanha tori oli Pyhän Yrjön kirkon luona siinä, missä '
+          + 'kaupungintalo nyt on. Miehityshallinto siirsi sen '
+          + 'länteen ja rajasi vanhan torin eurooppalaisille '
+          + 'Piazzana.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tunti, joka alkaa paahtimesta',
+          teksti: 'Kahviseremonia on Etiopian vieraanvaraisuuden '
+            + 'muoto, ja se tehdään yleensä ison aterian jälkeen. '
+            + 'Valmistaja paahtaa pavut vieraiden edessä ja kiertää '
+            + 'huoneen savuavan pannun kanssa, jotta jokainen saa '
+            + 'haistaa tuoksun. Sitten pavut jauhetaan ja keitetään '
+            + 'jebena-savipannussa, ja kahvi kaadetaan pieniin '
+            + 'si’ni-kuppeihin. Täydessä seremoniassa on kolme '
+            + 'kierrosta — abol, tona ja bereka — ja koko ajan palaa '
+            + 'suitsuke. Kahvin kanssa tarjotaan popcornia tai '
+            + 'paahdettua ohraa eli koloa, ja lattialle levitetään '
+            + 'tuoretta ruohoa.',
+          wiki: 'Ethiopian cuisine',
+        },
+        {
+          otsikko: 'Injera on lautanen ja lusikka',
+          teksti: 'Injera on hapan, sienimäisen huokoinen lettuleipä, '
+            + 'jonka päälle ateria katetaan: se on samalla lautanen, '
+            + 'lusikka ja leipä. Taikina käy ersho-nimisen hapatteen '
+            + 'kanssa 24–72 tuntia, mistä tulee hapan maku. Sen '
+            + 'jälkeen osa taikinasta keitetään absitiksi ja '
+            + 'sekoitetaan takaisin; toinen käyminen kestää enää '
+            + 'puolesta tunnista kahteen. Leipä paistetaan savisella '
+            + 'mitad-levyllä 90–95 asteessa: taikina kaadetaan '
+            + 'spiraalina ulkoa sisäänpäin, kansi päälle, kaksi tai '
+            + 'kolme minuuttia — eikä sitä käännetä. Höyry tekee '
+            + 'pintaan kuplat, joita sanotaan silmiksi.',
+          wiki: 'Injera',
+        },
+        {
+          otsikko: 'Merkato, Afrikan suurin tori',
+          teksti: 'Merkato on Afrikan suurin ulkoilmatori: se peittää '
+            + 'useita neliökilometrejä ja työllistää arviolta 13 000 '
+            + 'ihmistä 7 100 yrityksessä. Sen läpi kulkeva päätavara '
+            + 'on paikallisesti kasvatettu kahvi. Tori syntyi '
+            + 'miehityksen aikana: vanha kauppapaikka oli Pyhän '
+            + 'Yrjön kirkon luona, ja miehityshallinto siirsi sen '
+            + 'länteen ja nimesi uuden torin italian sanalla '
+            + 'markkinat. Tori kasvoi ilman kaavaa ja jakautui '
+            + 'tavaralajien mukaan osastoihin, joita kutsutaan '
+            + 'nimellä terra: yhdessä myydään huonekaluja, toisessa '
+            + 'kodinkoneita, kolmannessa kierrätettyä romumetallia.',
+          wiki: 'Addis Mercato',
+        },
+        {
+          otsikko: 'Piazza ja macchiato',
+          teksti: 'Addis Abebaa ei rakennettu siirtomaakaupungiksi, '
+            + 'joten eurooppalaista arkkitehtuuria on vain yhdessä '
+            + 'korttelissa. Piazza sai nimensä, kun miehityshallinto '
+            + 'rajasi vanhan torin eurooppalaisille ja siihen '
+            + 'rakennettiin liikkeitä näyteikkunoineen. Italialaiset '
+            + 'talot, pienet kahvilat ja ravintolat ovat jääneet, ja '
+            + 'niin on macchiatokin. Merkaton sydämessä seisoo '
+            + 'Anwarin suurmoskeija vuodelta 1922 ja muutaman metrin '
+            + 'päässä Raguelin kirkko, jonka keisarinna Menen '
+            + 'rakennutti vapautuksen jälkeen — niiden läheisyyttä '
+            + 'pidetään vertauskuvana pitkästä rinnakkaiselosta.',
+          wiki: 'Addis Ababa',
+        },
+      ],
+    },
+  ],
+  /*
+   * GUATEMALA CITY (Opus, Fablen parvi 7.9.2026) — P-Amerikan laudan
+   * kaupunkilehti, kaupunki-id `guatemala`. Aineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-guatemalacity.md ja sen
+   * erillinen tarkistus tarkistus-guatemalacity.md. Väitteet on luettu
+   * en-Wikipedian raakatekstistä 7.9.2026: "Guatemala City",
+   * "History of Guatemala City", "Kaminaljuyu", "National Palace
+   * (Guatemala)", "Cathedral of Guatemala City", "Relief map of
+   * Guatemala", "Centro Cultural Miguel Ángel Asturias", "Efraín
+   * Recinos", "Carlos Mérida", "Museo Popol Vuh".
+   *
+   * ES-WIKIPEDIA NIMETÄÄN LÄHTEENÄ. Keskustan rakennuksista viidellä
+   * kahdeksasta ei ole englanninkielistä artikkelia lainkaan, joten
+   * nähtävyysjuttujen lähde on es-Wikipedia ja se sanotaan
+   * lähderivillä. Ennakkotapaus: js/packs/fokusvirta-granada.js ja
+   * fokusvirta-madrid.js (es), elaintakyt.js ja fokusvirta-lontoo.js
+   * (de). Antiguan ja pääkaupungin samannimiset kirkot on erotettu
+   * toisistaan juttu kerrallaan (tarkistus-guatemalacity.md, kohta C).
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on vakioaihe
+   * 'kuvataide'; sivun nimi kertoo aiheen.
+   *
+   * RAJAUS MAALEHTEEN: GTM-maalehti kertoo Tecun Umanista, Antiguasta
+   * ja vuoden 1773 järistyksestä, Popol Vuh -kirjasta, Barriosista,
+   * Fuegosta, Cuchumatanesista, ruoasta, tekstiileistä ja marimbasta.
+   * Tämä lehti kertoo vain kaupungin omat aiheet. Antigua mainitaan
+   * siirron syynä yhdellä virkkeellä. Marimba on maalehdessä, joten
+   * Mapa en Relieven vieressä oleva marimbasäveltäjien puisto on
+   * jätetty pois; tekstiilit ovat maalehdessä, joten Ixchel-museo on
+   * vain matkaoppaan luettelossa; Popol Vuh -kirja on maalehdessä,
+   * joten museon nosto kertoo kokoelmasta eikä kirjasta. Kartan
+   * maastokohteet (maastokohteet-gtm.js) ja skandaalit (United Fruit
+   * 1904, Santa Marían purkaus 1902) on jätetty pois.
+   *
+   * EI NYKYPOLITIIKKAA EIKÄ NYKYRIKOLLISUUTTA (spec-mantereet.md,
+   * Keski-Amerikan linjaus): sisällissota 1960–1996, katedraalin
+   * edustan muistopilarit, vuoden 1982 vallankaappaus ja
+   * erityistuomioistuimet on jätetty kokonaan pois.
+   *
+   * RISTIRIIDAT KIRJOITETTU AUKI (tarkistus-guatemalacity.md A–B):
+   *  - Kaminaljuyún nimi: sama artikkeli antaa kaksi käännöstä
+   *    ("kuolleiden kukkula" ja "esi-isien kummut"). Lehti kertoo
+   *    molemmat.
+   *  - Romahdus: vanha tulkinta noin 300 jKr., uudempi tutkimus
+   *    taantuma 550–800 ja romahdus 800–900. Lehti kertoo uuden ja
+   *    mainitsee vanhan.
+   *
+   * MENETELMÄVAROITUS (tarkistuksen kohta E): mallineiden poisto syö
+   * raakatekstistä vuosisadat ja convert-luvut näkymättömiin. Jokainen
+   * lehteen päätynyt numero on tarkistettu siivoamattomasta
+   * raakatekstistä; La Recolecciónin veistosten vuosisadat jäivät
+   * mallineiden sisään, joten niistä ei kerrota vuosisataa.
+   *
+   * SÄÄRIVIÄ EI OLE TÄSSÄ ERÄSSÄ (Fablen työnjako 7.9.2026: säärivin
+   * tekee erillinen agentti). js/packs/saatiedot.js jää koskematta ja
+   * oppaan sääjakso nojaa en-Wikipedian Climate-osioon sen ääneen
+   * sanoen.
+   *
+   * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+   * (northamerica-valokuvat.js, guatemala), jossa se on jo
+   * tarkistettu — vanha puoli on Plaza de Armas 1915 ja uusi saman
+   * aukion laidalla seisova kansallispalatsi 2022.
+   */
+  guatemala: [
+    {
+      id: 'kaupunki',
+      nimi: 'Guatemala City',
+      johdanto: 'Guatemalan pääkaupunki on neljäs yritys: kolme '
+        + 'edellistä pääkaupunkia jätettiin mutavyöryn ja järistysten '
+        + 'takia. Tämänkin alla maa liikkuu — ja sen alla on '
+        + 'mayakaupunki.',
+      nostot: [
+        {
+          otsikko: 'Kaminaljuyú, kaupunki kaupungin alla',
+          teksti: 'Nykyisen kaupungin länsiosan alla on Kaminaljuyú, '
+            + 'suurin mayakeskus Yucatánin alankojen ulkopuolella. '
+            + 'Paikalla asuttiin 1500 eKr. alkaen, ja noin 300 eKr. '
+            + 'se nousi obsidiaanin louhinnan ja kaupan varassa: '
+            + 'musta vulkaaninen lasi oli Mesoamerikan arvokkainta '
+            + 'tavaraa. Ensimmäisissä kartoituksissa laskettiin noin '
+            + 'kaksisataa alustaa ja kumpua. Nimen antoi opetusministeri '
+            + 'Villacorta; sama artikkeli kääntää sen kʼicheʼstä sekä '
+            + 'kuolleiden kukkulaksi että esi-isien kummuiksi. '
+            + 'Rakennusaine oli kovetettu adobe, joka kestää huonommin '
+            + 'kuin alankojen kalkkikivi — siksi jäljet ovat matalia.',
+          wiki: 'Kaminaljuyu',
+        },
+        {
+          otsikko: 'Neljäs pääkaupunki, uusi laakso',
+          teksti: 'Vuoden 1773 järistykset jättivät edellisen '
+            + 'pääkaupungin raunioiksi, ja siitä syntyi riita. '
+            + 'Siirtoa ajaneita johti kenraalikapteeni Martín de '
+            + 'Mayorga, paikalleen jäämistä arkkipiispa Pedro Cortés '
+            + 'y Larraz. Syyskuussa 1773 Mayorga lähti Ermitan '
+            + 'laaksoon ja perusti väliaikaisen hallinnon La '
+            + 'Asunciónin kylään; hallinnon istuin siirrettiin '
+            + 'nykyiselle paikalle 1776. Kaupungin virallinen nimi on '
+            + 'siitä asti ollut Nueva Guatemala de la Asunción, ja '
+            + 'sen juhlapäivä on 15. elokuuta. Katedraali muutti '
+            + 'perässä 1779; uusi rakennettiin 1782–1815 ja valmistui '
+            + '1871.',
+          wiki: 'Guatemala City',
+        },
+        {
+          otsikko: 'Osoite kertoo, montako metriä risteyksestä',
+          teksti: 'Kaupunki on jaettu 22 vyöhykkeeseen, jotka '
+            + 'suunnitteli insinööri Raúl Aguilar Batres. Numeroita '
+            + 'on 1–25, mutta 20, 22 ja 23 puuttuvat: ne olisivat '
+            + 'osuneet naapurikuntien alueelle. Osoite kertoo '
+            + 'etäisyyden metreinä — 7a Av. 1–17, Zona 4 on '
+            + 'seitsemännellä avenuella seitsemäntoista metriä '
+            + 'ensimmäisen kadun risteyksestä. Vyöhyke on osa '
+            + 'osoitetta, joten sama numerosarja eri vyöhykkeellä on '
+            + 'aivan toinen paikka. Lyhyt katu saa kirjaimen numeron '
+            + 'sijaan, ja jokaisen guatemalalaisen kaupungin keskipiste '
+            + 'on Calle 1, Avenida 1, Zona 1.',
+          wiki: 'Guatemala City',
+        },
+        {
+          otsikko: 'Maa liikkuu yhä',
+          teksti: 'Kaupungista näkyy neljä kerrostulivuorta, joista '
+            + 'kaksi on aktiivisia; ne kuuluvat 33 tulivuoren ketjuun '
+            + 'ja muodostavat muurin Tyynenmeren alankoja vasten. '
+            + 'Vuosien 1917–1918 järistykset tuhosivat suuren osan '
+            + '1700- ja 1800-luvun rakennuksista, 144 vuotta edellisen '
+            + 'suuren järistyksen jälkeen. Viimeisin suuri tärähdys '
+            + 'oli 1976 Motaguan siirroksella, voimakkuudeltaan 7,5. '
+            + 'Laaksoa halkovat jyrkkäreunaiset rotkot, ja sadekauden '
+            + 'rankkasateet aiheuttavat niissä vyöryjä. Vuonna 2007 '
+            + 'kaupungin koillisosaan avautui noin sadan metrin '
+            + 'syvyinen pystyseinäinen kuoppa, jossa kuoli viisi '
+            + 'ihmistä; geologit kutsuvat ilmiötä pseudokarstiksi.',
+          wiki: 'Guatemala City',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Guatemala City on Guatemalan pääkaupunki ja '
+          + 'Väli-Amerikan suurin kaupunki, noin 1 500 metrin '
+          + 'korkeudessa Ermitan laaksossa vuorten välissä. Korkeus '
+          + 'tekee ilmastosta lähes kevätmäisen ympäri vuoden: '
+          + 'päivällä 22–28 astetta ja öisin 12–17. Kaupunki on maan '
+          + 'talouden, hallinnon ja kulttuurin keskus sekä '
+          + 'liikenteen solmukohta, jossa useimmat maan valtatiet '
+          + 'alkavat tai päättyvät. Vyöhyke 1 on historiallinen '
+          + 'keskusta, jossa ovat kansallispalatsi, katedraali, '
+          + 'kansalliskirjasto ja Plaza de la Constitución. Vyöhyke 4 '
+          + 'on rahoituskeskus ja Cuatro Grados Norten kortteli, '
+          + 'vyöhyke 10 museoiden ja ravintoloiden Zona Viva ja '
+          + 'vyöhyke 13 La Auroran puisto museoineen ja '
+          + 'lentoasemineen.',
+        artikkeli: {
+          nimi: 'Matkailijan Guatemala City',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa osoite kertoo etäisyyden metreinä, '
+            + 'koko maa mahtuu yhteen puistoon pienoiskoossa ja '
+            + 'kansallisteatteri on jaguaarin muotoinen.',
+          nosto: 'Kaupungin alla on toinen kaupunki. Kaminaljuyún '
+            + 'raunioista on säilynyt puistona noin puoli '
+            + 'neliökilometriä alkuperäisestä noin viiden '
+            + 'neliökilometrin kentästä — loppu jäi rakentamisen alle, '
+            + 'ja kaivinkoneet paljastavat yhä ajoittain suurten '
+            + 'veistosten paloja.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'La Auroran kansainvälinen lentoasema on '
+                + 'vyöhykkeellä 13, aivan kaupungin sisällä, ja '
+                + 'sen läheisyys rajoittaa rakennusten korkeutta '
+                + 'ilmailusäännösten takia. Kaupungissa liikutaan '
+                + 'Transmetro-runkobusseilla. Osoitetta lukiessa '
+                + 'kannattaa aloittaa lopusta: vyöhykenumero '
+                + 'ratkaisee, missä päin kaupunkia ollaan, ja vasta '
+                + 'sen jälkeen avenue, katu ja metrimäärä. Kaupungin '
+                + 'nollapiste on kansallispalatsissa: siitä lasketaan '
+                + 'koko maan tieverkon kilometrit.',
+            },
+            {
+              otsikko: 'Vyöhyke 1 kävellen',
+              teksti: 'Plaza de la Constitución on kaupungin '
+                + 'pääaukio; sen laidalla ovat vihreä '
+                + 'kansallispalatsi ja katedraali. Paseo de la Sexta '
+                + 'eli kuudes avenue on aukiolta etelään kulkeva '
+                + 'kävelykatu, ja katedraalin takana on Mercado '
+                + 'Central, jossa myydään ruokaa, kankaita ja '
+                + 'käsitöitä. Postipalatsin holvikaari kaartaa 12. '
+                + 'kadun yli, ja pohjoisessa kukkulan päällä on '
+                + 'Cerrito del Carmen, kaupunkia vanhempi '
+                + 'erakkomaja. Kaikki mahtuvat parin kilometrin '
+                + 'kävelylle.',
+            },
+            {
+              otsikko: 'Museokaupunki',
+              teksti: 'Vyöhykkeellä 10 ovat Museo Popol Vuh ja '
+                + 'Ixchel-museo, joka esittelee alkuperäiskansojen '
+                + 'pukuja ja kudontaa. Vyöhykkeen 13 La Auroran '
+                + 'puistossa ovat arkeologian ja etnologian '
+                + 'kansallismuseo, Carlos Mérida -nimeä kantava '
+                + 'modernin taiteen museo, luonnonhistoriallinen '
+                + 'museo ja eläintarha. Vyöhykkeellä 2 on Mapa en '
+                + 'Relieve, koko maan maastokartta ulkoilmassa, ja '
+                + 'vyöhykkeellä 11 Miraflores-museo Kaminaljuyún '
+                + 'löydöistä. Kansallisteatteri seisoo omalla '
+                + 'kukkulallaan Centro Cívicon laidalla.',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Ruokalajit ovat koko maan yhteisiä, mutta '
+                + 'kaupungissa on omat paikkansa. Mercado Centralin '
+                + 'ruokakojut ovat vyöhykkeellä 1 katedraalin '
+                + 'takana; Cuatro Grados Norte vyöhykkeellä 4 on '
+                + 'kävelykortteli ravintoloineen, ja Zona Viva '
+                + 'vyöhykkeellä 10 on ravintoloiden ja hotellien '
+                + 'aluetta. Kahvi on maan tärkeimpiä vientituotteita, '
+                + 'ja sitä myydään kaupungissa myös tilalta suoraan '
+                + 'paahdettuna. La Terminalin tori vyöhykkeellä 4 on '
+                + 'kaupungin suurin tukkutori.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Guatemala City '
+                + '-artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia. Ilmasto on trooppinen savanni, joka '
+                + 'rajautuu lauhkeampaan tyyppiin, koska kaupunki on '
+                + '1 500 metrissä. Päivälämpötila on 22–28 astetta ja '
+                + 'yölämpötila 12–17 astetta ympäri vuoden, ja '
+                + 'kuumin kuukausi on huhtikuu. Sadekausi kestää '
+                + 'toukokuusta lokakuuhun ja osuu samaan aikaan '
+                + 'Karibian hirmumyrskykauden kanssa; kuiva kausi on '
+                + 'marraskuusta huhtikuuhun. Suhteellinen kosteus on '
+                + 'aamulla 82 ja illalla 58 prosenttia. Kaupunki on '
+                + 'ajoittain tuulinen, mikä viilentää entisestään.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kaminaljuyún puisto',
+                tahdet: 3,
+                selite: 'Puoli neliökilometriä mayakaupunkia '
+                  + 'kaupungin länsiosassa.',
+              },
+              {
+                mita: 'Plaza de la Constitución',
+                tahdet: 3,
+                selite: 'Kansallispalatsi, katedraali ja maan '
+                  + 'tieverkon nollapiste samalla aukiolla.',
+              },
+              {
+                mita: 'Mapa en Relieve',
+                tahdet: 3,
+                selite: 'Koko maa 1 800 neliömetrissä, vuoret '
+                  + 'viisinkertaisina.',
+              },
+              {
+                mita: 'Museo Popol Vuh',
+                tahdet: 2,
+                selite: 'Yksi maailman merkittävimmistä '
+                  + 'mayataiteen kokoelmista.',
+              },
+              {
+                mita: 'Kansallisteatteri',
+                tahdet: 2,
+                selite: 'Efraín Recinosin jaguaari kukkulan '
+                  + 'päällä, avattu 1978.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5
+             * ja kansisivun nostossa neljä.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Vyöhyke kuuluu osoitteeseen',
+                teksti: 'Sama katu- ja avenuenumero toistuu monella '
+                  + 'vyöhykkeellä, joten ilman zonaa osoite ei '
+                  + 'kerro paikasta mitään.',
+              },
+              {
+                otsikko: 'Sadekausi touko–lokakuu',
+                teksti: 'Rankkasateet tulevat iltapäivisin ja '
+                  + 'aiheuttavat rotkojen reunoilla vyöryjä; '
+                  + 'kuivalla kaudella marras–huhtikuussa on '
+                  + 'helpompaa.',
+              },
+              {
+                otsikko: 'Illat viilenevät',
+                teksti: 'Tropiikissa mutta 1 500 metrissä: yöt ovat '
+                  + '12–17 asteessa, ja tuuli tekee niistä vielä '
+                  + 'viileämpiä.',
+              },
+              {
+                otsikko: 'Tulivuoret ovat lähellä',
+                teksti: 'Neljä kerrostulivuorta näkyy kaupunkiin, ja '
+                  + 'lähin niistä purkaa ajoittain tuhkaa — '
+                  + 'tuhkasadetta esiintyy silloin myös kaupungissa.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kaupungin omat kokoelmat',
+      johdanto: 'Guatemala City on tehnyt taiteestaan julkista: koko '
+        + 'maa on rakennettu pienoiskoossa puistoon, ja mosaiikit '
+        + 'peittävät kokonaisia julkisivuja.',
+      tehtava: {
+        kysymys: 'Minkä eläimen muotoiseksi Efraín Recinos suunnitteli '
+          + 'Guatemala Cityn kansallisteatterin?',
+        vaihtoehdot: [
+          'kilpikonnan',
+          'istuvan jaguaarin',
+          'ketsaalin',
+          'krokotiilin',
+        ],
+        oikea: 1,
+        fakta: 'Valkoinen rakennus nousi kukkulalle vanhan Fuerte de '
+          + 'San Josén paikalle, ja sen muoto on mayamotiivien '
+          + 'innoittama.',
+      },
+      nostot: [
+        {
+          otsikko: 'Koko maa 1 800 neliömetrissä',
+          teksti: 'Mapa en Relieve on maastokartta koko Guatemalasta '
+            + 'maan tasossa, ulkoilmassa. Mittakaavoja on kaksi: '
+            + 'vaakasuunnassa 1:10 000 ja pystysuunnassa 1:2 000, '
+            + 'joten vuoret ovat viisinkertaisina. Kartan rakensi '
+            + 'everstiluutnantti ja insinööri Francisco Vela '
+            + 'kahdeksassatoista kuukaudessa huhtikuusta 1904 '
+            + 'lokakuuhun 1905; topografiset tiedot antoi insinööri '
+            + 'Claudio Urrutia. Korkeuskäyrät ovat tiiltä, rautatiet '
+            + 'lyijyä ja sillat terästä, ja valtamerten kohdalla on '
+            + 'hohkakiveä. Maanalainen kuudenkymmenen kuutiometrin '
+            + 'säiliö syöttää joet ja järvet yhä.',
+          wiki: 'Relief map of Guatemala',
+        },
+        {
+          otsikko: 'Carlos Mérida ja mosaiikkiseinät',
+          teksti: 'Carlos Mérida syntyi Guatemala Cityssä 1891 ja oli '
+            + 'ensimmäisiä, jotka yhdistivät eurooppalaisen '
+            + 'modernismin amerikkalaisiin aiheisiin. Hän kuului '
+            + 'aiheiltaan Meksikon muralismiin mutta ei tyyliltään: '
+            + 'kertovan kuvan sijaan hän maalasi ei-esittävästi ja '
+            + 'myöhemmin geometrisesti. Vuonna 1950 hän opiskeli '
+            + 'Italiassa venetsialaista mosaiikkitekniikkaa, ja '
+            + 'siitä syntyi ajatus taiteen ja arkkitehtuurin '
+            + 'yhdistämisestä samaksi työksi. Guatemala Cityssä hänen '
+            + 'töitään on kaupungintalossa, ulkoministeriössä ja '
+            + 'keskuspankissa. Hän sai Ketsaalin ritarikunnan 1958.',
+          wiki: 'Carlos Mérida',
+        },
+        {
+          otsikko: 'Jaguaari kukkulalla',
+          teksti: 'Kansallisteatteri eli Centro Cultural Miguel Ángel '
+            + 'Asturias avattiin 1978 vanhan Fuerte de San Josén '
+            + 'paikalle. Sen suunnittelivat Efraín Recinos ja Carlos '
+            + 'Alberto Haeussler, ja valkoinen rakennus on '
+            + 'kukkulalle asetetun istuvan jaguaarin muotoinen '
+            + 'mayamotiivien innoittamana. Sisällä ovat suuri sali, '
+            + 'kamariteatteri, ulkoilmateatteri ja marimban '
+            + 'kansallinen instituutti. Recinos oli arkkitehti, '
+            + 'muralisti ja kuvanveistäjä; hänen isänsä opetti hänet '
+            + 'lukemaan kotona, ja seitsemänvuotiaana hän soitti jo '
+            + 'marimbaa, viulua ja mandoliinia.',
+          wiki: 'Centro Cultural Miguel Ángel Asturias',
+        },
+        {
+          otsikko: 'Museo Popol Vuh',
+          teksti: 'Vyöhykkeellä 10, Universidad Francisco '
+            + 'Marroquínin kampuksella, on yksi maailman '
+            + 'merkittävimmistä mayataiteen kokoelmista. Museo on '
+            + 'yksityinen ja voittoa tavoittelematon, ja sitä johtaa '
+            + 'guatemalalaisista koostuva johtokunta. Tunnetuinta on '
+            + 'hautakeramiikka: kokoelmassa on parhaiten säilyneitä '
+            + 'mayamaljakoita ja -kulhoja sekä siirrettäviä '
+            + 'kiviveistoksia rannikolta ja ylängöiltä. Kokoelma sai '
+            + 'alkunsa 1975, kun Jorge Castillo palkkasi arkeologian '
+            + 'opiskelijan luetteloimaan sen; Castillon kuoltua 1977 '
+            + 'kokoelma lahjoitettiin yliopistolle.',
+          wiki: 'Museo Popol Vuh',
+        },
+      ],
+    },
+  ],
 };

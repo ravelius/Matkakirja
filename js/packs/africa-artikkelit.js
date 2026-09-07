@@ -500,10 +500,42 @@ export const OMAT_ARTIKKELIT = {
       + 'punaisina auringonlaskua vasten — sama näky kuin sata ja '
       + 'tuhat vuotta sitten.',
   },
+  /*
+   * ADDIS ABEBAN INTRO LAAJENNETTIIN 7.9.2026 (Opus, Fablen parvi)
+   * reseptin mittaan: etusivun leipäteksti on 7–10 virkkeen johdatus
+   * kaupunkiin. Lähteinä en-Wikipedian "Addis Ababa", "Timeline of
+   * Addis Ababa", "Mount Entoto" ja "Addis Mercato" 7.9.2026; sama
+   * aineisto kuin kaupunkilehdellä (js/packs/kulttuuri-kategoriat.js,
+   * avain addisabeba, sekä docs/mantereet-tyoaineisto/
+   * faktapohja-addisabeba.md). artikkeli-kenttä on ennallaan.
+   *
+   * 1873-KEHYS: kaupunkia ei ollut isoisän matkavuonna, ja intro
+   * sanoo sen suoraan.
+   */
   'Addis Abeba': {
-    intro: 'Addis Abeba on Etiopian pääkaupunki ylängöllä lähes '
-      + 'kahden ja puolen kilometrin korkeudessa. "Uusi kukka" on koko '
-      + 'Afrikan kokouspaikka — ja kahvin kotimaan pääkaupunki.',
+    intro: 'Addis Abeba on Etiopian pääkaupunki **2 355 metrin '
+      + 'korkeudessa** — Afrikan korkein ja maailman neljänneksi '
+      + 'korkein pääkaupunki. Ilma on viileän kirkasta '
+      + 'päiväntasaajan lähelläkin: yhdenkään kuukauden '
+      + 'keskilämpötila ei nouse yli 22 asteen. '
+      + 'Kaupunki on Etiopian ylängöllä Entoton vuoren juurella, ja '
+      + 'sen nimi tarkoittaa amharaksi uutta kukkaa.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 täällä ei ollut kaupunkia lainkaan. '
+      + 'Laakson pohjalla oli Finfinne, kuumien lähteiden paikka, ja '
+      + 'asutus alkoi vasta 1886, kun keisarinna **Taytu Betul** '
+      + 'valitsi paikan lähteiden luota ja antoi sille nimen. Menelik '
+      + 'II rakensi palatsinsa 1887, ja pääkaupunki kaupungista tuli '
+      + '1889; sen jälkeen avattiin ensimmäiset lähetystöt. Vuonna '
+      + '1889 asukkaita oli noin 15 000, nyt 6,3 miljoonaa.'
+      + '\n\n'
+      + 'Addis Abebaa ei rakennettu siirtomaakaupungiksi, joten '
+      + 'eurooppalaista arkkitehtuuria on vain Piazzan korttelissa. '
+      + 'Kaupunkia kutsutaan Afrikan poliittiseksi pääkaupungiksi, '
+      + 'koska Afrikan unionin ja YK:n Afrikan talouskomission '
+      + 'päämajat ovat täällä. Merkato on **Afrikan suurin '
+      + 'ulkoilmatori**, ja kaupungin kaduilla kasvaa Menelikin '
+      + 'aikanaan tuotu eukalyptus.',
     artikkeli: 'Addis Abeba sijaitsee Etiopian ylängöllä noin 2 400 '
       + 'metrin korkeudessa, ja ilma on siellä aina viileän kirkasta. '
       + 'Nimi tarkoittaa amharaksi uutta kukkaa.'

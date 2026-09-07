@@ -4965,6 +4965,57 @@ const KAUPUNGIT = {
     jalkakaydat: true,
     palvelutiet: true,
   },
+  addisabeba: {
+    /*
+     * YLIOPISTOKAMPUKSELTA KOLMINAISUUDEN KATEDRAALILLE (7.9.2026).
+     * Ruutu on 2,5 x 2,5 kilometriä: pohjoisessa Addis Abeban
+     * yliopiston kampus ja etnologinen museo, keskellä Piazza ja
+     * Arat Kilo, etelässä Kolminaisuuden katedraali ja
+     * Abrehot-kirjasto. Kaupunki syntyi Entoton rinteen alle, ja
+     * ruutu kulkee siksi rinteeltä alaspäin.
+     *
+     * MERKATO EI OLE RUUDUSSA. Afrikan suurin ulkoilmatori on 1,7
+     * kilometriä länsireunan ulkopuolella (9,0306 / 38,7389), ja se
+     * on lehden teemasivun noston aihe — kohdekartta ei toista
+     * lehden juttuja.
+     *
+     * AFRICA HALL JA MESKEL-AUKIO JÄÄVÄT ETELÄÄN. Ne ovat 1,8 ja
+     * 2,2 kilometriä eteläreunan alapuolella; mukaan ottaminen
+     * olisi tehnyt ruudusta 4,5 kilometriä korkean mutta alle
+     * kolmen kilometrin levyisen kaistaleen. Molemmat kerrotaan
+     * matkaoppaassa.
+     *
+     * Ei meri-lippua: Addis Abeba on ylängöllä yli 2 300 metrissä
+     * eikä ruudussa ole vesialueita rantaviivana.
+     */
+    rajat: { pohjoinen: 9.0500, etela: 9.0270, lansi: 38.7460, ita: 38.7690 },
+  },
+  guatemala: {
+    /*
+     * VYÖHYKE 1 KOKONAAN (7.9.2026). Ruutu on 2,6 x 1,9 kilometriä:
+     * pohjoisessa Carmenin kukkula ja La Recolección, keskellä
+     * Plaza de la Constitución ja kansallispalatsi, etelässä
+     * postipalatsi ja Santo Domingo. Historiallinen keskusta mahtuu
+     * kokonaan yhteen ruutuun, koska espanjalainen ruutukaava on
+     * tiivis.
+     *
+     * AVAIN ON guatemala eikä 'Guatemala (kaupunki)': laudan
+     * kaupunki-id on guatemala (js/packs/northamerica.js), ja
+     * KAUPUNKIKARTAT haetaan sillä.
+     *
+     * KATEDRAALI EI OLE NUMEROITU KOHDE (191 m kansallispalatsista,
+     * alle 200 metrin säännön), mutta se näkyy kartalla
+     * rakennuksena aukion laidalla.
+     *
+     * MAPA EN RELIEVE ON 2,1 KM POHJOISEEN ja Torre del Reformador
+     * 3,3 km etelään; kumpikaan ei mahdu ruutuun, ja edellinen on
+     * lehden teemasivun noston aihe.
+     *
+     * Ei meri-lippua: kaupunki on 1 500 metrissä vuorten välissä,
+     * ja laakson rotkot ovat OSM:ssä maastonmuotoja eivät vettä.
+     */
+    rajat: { pohjoinen: 14.6505, etela: 14.6330, lansi: -90.5250, ita: -90.5010 },
+  },
 };
 
 /*

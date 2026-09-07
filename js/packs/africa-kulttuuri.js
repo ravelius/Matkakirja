@@ -411,43 +411,18 @@ export const AFRICA_KULTTUURI = {
         + 'yhtyeestä on nostossa yllä.',
     },
   },
+  /*
+   * ADDIS ABEBAN LITTEÄT NOSTOT SIIRRETTIIN LEHTEEN (Opus 7.9.2026).
+   * Kaupunki sai kaupunkilehden (js/packs/kulttuuri-kategoriat.js,
+   * avain addisabeba), ja silloin litteät nostot eivät enää näy
+   * pelissä (docs/moduulit/kaupunkilehti.md, "Kulttuurivisa ja litteä
+   * taulu"). Kaikki kolme aihetta — kahviseremonia, ethio-jazz ja
+   * injera — sekä Mulatu Astatken musiikkilinkki ovat nyt lehden
+   * teemasivulla ja kansisivun nostossa neljä. Tänne jää vain visa,
+   * jonka vastaus (kahvi on kotoisin Etiopiasta) käsitellään lehden
+   * teemasivulla.
+   */
   addisabeba: {
-    nostot: [
-      {
-        tyyppi: 'kuva',
-        otsikko: 'Kahviseremonia',
-        tiedosto: 'Ethiopian coffee ceremony.jpg',
-        teksti: 'Kahvi on kotoisin Etiopiasta, ja siellä sen juominen on '
-          + 'seremonia: pavut paahdetaan hiilloksella vieraiden edessä, '
-          + 'jauhetaan huhmareessa ja keitetään jebena-savipannussa. '
-          + 'Kolme kierrosta kuuluu tapaan — lähteä ei sovi ennen '
-          + 'kolmatta kuppia.',
-        selite: 'Kahviseremonian välineet: pyöreäpohjainen jebena-pannu, '
-          + 'pienet kupit ja suitsuke. Lattialle levitetään tuoretta '
-          + 'ruohoa ja paahtuvien papujen savu kutsuu naapuritkin '
-          + 'paikalle.',
-        lahde: 'Adanech Mamo, Wikimedia Commons (CC BY-SA 4.0)',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Ethio-jazz',
-        teksti: 'Addis Abebassa syntyi 1960-luvulla ethio-jazz, kun '
-          + 'Mulatu Astatke yhdisti etiopialaiset viisisäveliset '
-          + 'asteikot jazziin ja latinalaisrytmeihin. Tulos ei kuulosta '
-          + 'miltään muulta maailmassa — ja sitä soitetaan taas '
-          + 'kaupungin klubeilla.',
-        musiikki: 'https://music.apple.com/fi/artist/mulatu-astatke/76533627',
-        musiikkiNimi: 'Mulatu Astatke Apple Musicissa',
-      },
-      {
-        tyyppi: 'teksti',
-        otsikko: 'Injera',
-        teksti: 'Etiopialainen ateria katetaan injeran päälle: suuren, '
-          + 'happaman lettuleivän, joka on lautanen, lusikka ja leipä '
-          + 'samassa. Padat kaadetaan sen päälle ja syödään käsin '
-          + 'yhdessä — oma pala revitään aina samasta leivästä.',
-      },
-    ],
     kysymys: {
       q: 'Mistä maasta kahvi on alun perin kotoisin?',
       options: ['Etiopiasta', 'Brasiliasta', 'Kolumbiasta', 'Intiasta'],
