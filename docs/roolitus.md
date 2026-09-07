@@ -1,3 +1,10 @@
+# !!! AGENTIT VAIN OPUS JA SONNET — FABLE-MALLIA EI KOSKAAN AGENTTINA !!!
+
+Omistajan sitova sääntö (1.9. ja 7.9.2026): jokainen ali-agentti, parvi ja
+workflow ajetaan Opuksella (koodi, sisältö) tai Sonnetilla (lukeva työ,
+tarkistukset). Ei poikkeuksia vaikeaankaan ongelmaan. Parvina saa ajaa.
+Fablemax-agenttityyppi on poistettu 7.9.2026.
+
 # Roolitus: kolme sessiota, yksi peli
 
 *(Päätetty omistajan kanssa 8.8.2026. Roolit on sidottu NIMIIN ja
