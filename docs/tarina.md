@@ -203,8 +203,8 @@ punoja Safa (paja kaupungin ulkopuolella — Horatio ei astu
 kaupunkiin), Kiova näyttelymestari Danylo (Kultaisen portin museo;
 1873 portti oli raunio, ei kupolia), Lappi poronhoitaja Reetta
 (talvinen metsä päivänvalossa) ja Nikosia seripainotaiteilija Marios
-(Chrysaliniotissan käsityöpiha; henkilö vahvistetaan omistajan
-kuvavalinnalla, vaihtoehtona Elena). Vanhat henkilöt (Eve, Kjell,
+(Chrysaliniotissan käsityöpiha; omistaja vahvisti Marioksen
+7.9.2026). Vanhat henkilöt (Eve, Kjell,
 Omar, Taras, Aslak, Andreas) poistuivat kaanonista.
 
 ## Avoinna (mietitään yhdessä)
