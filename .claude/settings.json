@@ -13,7 +13,25 @@
       "mcp__bf7c680d-5fdc-5ef4-b4a0-abadb619bf0a",
       "mcp__bf7c680d-5fdc-5ef4-b4a0-abadb619bf0a__*",
       "mcp__github",
-      "mcp__github__*"
+      "mcp__github__*",
+      "Bash(git:*)",
+      "Bash(node:*)",
+      "Bash(python3:*)",
+      "Bash(bash tools/*)",
+      "Bash(bash -n:*)",
+      "Bash(curl:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(grep:*)",
+      "Bash(sed -n:*)",
+      "Bash(wc:*)",
+      "Bash(cp:*)",
+      "Bash(mkdir:*)",
+      "Bash(sha256sum:*)",
+      "Bash(timeout:*)",
+      "Bash(for:*)"
     ]
   }
 }
