@@ -4091,6 +4091,16 @@ export const RAAMATTU = {
           + 'verkkopyynnon vastaus) ja korjataan; savuke vartioi jatkossa, etta '
           + 'etusivun aanimaisema soi portin painalluksen jalkeen ja kabiini '
           + 'avauslennon aikana.',
+        'PULUN KUPLAPINO: EDELLINEN KUPLA PILKOTTAA HAIPYEN (omistaja 7.9.2026 '
+          + 'ilta, sanatarkasti: "pulun kuplassa saisi ylapuolella nakya vahan '
+          + 'sita aiempaa kuplaa. Nyt se jaa kokonaan peittoon. Se voisi nakya '
+          + 'niin, etta kuplan alaosa nakyy ja sitten se feidautuu '
+          + 'lapinakyvaksi."): supistetussa pinossa viimeisimman kuplan '
+          + 'ylapuolella nakyy edellisen kuplan alaosa (noin 1-1,5 rivia), joka '
+          + 'haipyy ylospain lapinakyvaksi (mask-image/gradientti); laajennus ja '
+          + 'supistus toimivat kuten ennen, ja vaihdot ovat liukuja. Kabiinin '
+          + 'aani kuului sittenkin (omistaja 7.9.2026 ilta): VIKA v1671 koskee '
+          + 'vain etusivun terminaalia.',
         'KAUPUNGIN NIMI NOSTOJEN PAALLA (omistaja 7.9.2026 iltapaiva, '
           + 'kuvakaappaus Bukarestista, sanatarkasti: "kaupungin nimi menee '
           + 'nostojen paalle"): pallolla kaupungin nimi ja nostojen nimilaput '
