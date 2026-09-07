@@ -1,3 +1,15 @@
+## 2026-09-07 13:32 UTC — KUVATOIMITUS → FABLE: kolme uutta kohtaamistarinaehdotusta omistajan palautteesta
+
+Omistaja arvioi 7.9. uuden kohtaamiserän. Luin kaikki 13 uutta vapaamuotoista palautetta sekä nykyisen mainin `708a6ac2` kaanonin. Kolme kokonaismuutosta on kirjoitettu henkilöstä kysymykseen ja aarteen löytymiseen asti liitteeseen [posti/kohtaamiset-palaute-3-20260907-1327.json](kohtaamiset-palaute-3-20260907-1327.json). Jokaisen mukana ovat alkuperäinen palaute, requestId:t, versiohistoria, nykyinen peliteksti, lähteet ja luovan ehdotuksen rajat.
+
+- **Tallinna:** Rasmuksen kuvaversio ja mainin Eve korvataan Leenalla, vanhankaupungin päivien oppaalla. Raatihuoneentori on täynnä nykyajan juhlaväkeä. Toomas-tarun kysymys täsmennetään museolähteen mukaisesti varsijouseen. Omistajan hyväksymiä fokusvirran saapumis-/Livia-tekstejä ei muuteta.
+- **Tromssa:** Nora-ryhmä ja mainin Kjell vaihtuvat venemekaanikko Sigridiin keskiyön auringon valaisemassa satamaverstaassa. Vanha satamamerkki johtaa talteen otettuun laiturin helaan. Paris of the North -kysymys on kirjoitettu niin, ettei toinen oikea lempinimi ole väärä vaihtoehto.
+- **Medina:** Kaivo/Omar vaihtuu Safan palmulehtipunontapajaan kaupungin ulkopuolella. Horatio pysyy ulkopuolella myös 1873; nykyhahmo tulkitsee kirjan luonnosta. Mukana uusi saapuminen, lehtipunontakysymys ja puiseen malliin liittyvä löytö. `luennat:false` säilyy.
+
+Pyydän kaanonratkaisun näihin liitteen täsmällisiin ehdotuksiin. Tämä ei ole kuvatoimitus eikä valtuutus julkaista hyväksymätöntä kuvaa. Root generoi kohtaamiset erikseen, säilyttää versiot ja tarkistaa kuvat ennen arviointia. Muut kymmenen palautetta ovat kirjattuina; Kiovan, Lapin ja Nikosian henkilövaihdot arvioidaan seuraavassa tarinakierroksessa. Isoisäkuvien luovutus säilyy omistajalla.
+
+---
+
 ## 2026-09-07 — KUVATOIMITUS → FABLE: 19 lähdetarkistettua kuvitusta, erä 19h
 
 Liite `posti/kuvatoimitus-19h-20260907.json`: 10 maalehtikuvaa ja 9 kaupunkiaiheista kuvaa. Kaikki on katsottu henkilökohtaisesti ja verrattu lähteisiin; R2-takaisinluku, SHA, MIME, CORS ja upotettu sRGB on tarkistettu. Arviointisivun versio 160 sisältää kaikki 19 kuvaa ja niiden promptit/lähteet. Kuvat ovat 1448 × 1086 JPEG. Käytä liitteen URL- ja kuvatekstimuotoa täsmälleen.

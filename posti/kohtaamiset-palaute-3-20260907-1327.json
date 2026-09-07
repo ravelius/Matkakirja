@@ -1,0 +1,338 @@
+{
+  "createdAt": "2026-09-07T13:32:59.481562+00:00",
+  "scope": "Three proposals based on complete new owner feedback; no game or review mutation",
+  "authority": "Owner authorized feedback-driven story suggestions to Fable on 2026-09-05; latest correction text preserved verbatim.",
+  "items": [
+    {
+      "cityId": "tallinna",
+      "name": "Leena",
+      "occupation": "vanhankaupungin päivien opas",
+      "title": "Tallinna — juhla keskeytyy",
+      "visual": "Nykyajan vanhankaupungin päivät Raatihuoneentorilla. Noin 35-vuotias Leena on siistissä koboltinsinisessä pellavatakissa ja sahraminkeltaisessa huivissa. Tiivis ympäristömuotokuva; koko pää ja molemmat kädet näkyvät. Hän on pysäyttänyt kädellään oman opasryhmänsä ja kääntyy aivan suoraan kameraan: ensin huvittunut yllätys, sitten terävä epäusko. Taustalla paljon eri-ikäisiä nykyvaatteisia juhlijoita, muusikoita ja kojuja; ei lavastettua keskiaikakaupunkia. Raatihuoneen oikea julkisivu ja kesäinen sivuvalo. Ei pyörää, ei Rasmusta, ei vastausta paljastavaa papukaijaa.",
+      "framing": "Rasmus on vain kuvaversioiden hahmo; mainissa on yhä tornin opas Eve. Ehdotus vaihtaa kohtaamisen Leenaan ja siirtää avaushetken torille. Pelin olemassa oleva saapumismerkintä ja fokusvirran omistajan sanatarkasti hyväksymät Livia-repliikit säilyvät. Vanha kirja antaa paikan/vihjeen, ei fyysistä avainta tai valmista vastausta. Leena ottaa kirjan muuria koskevan vihjeen vakavasti ja johdattaa nykyiselle opaskierrokselle.",
+      "saapuminen": "Ostin päänsärkyyni jauheen apteekista, joka on seissyt samalla torilla yli neljäsataa vuotta. Kaupan päälle sain palan marsipaania: se on täällä lääke, sanoi apteekkari — sydänsuruun ja muistin parantamiseen. Se on paras lääke, jonka olen apteekista saanut. Päänsärky hellitti vasta illalla, mutta annan kunnian marsipaanille.",
+      "henkilo": "Opas Leena luotsaa ryhmäänsä vanhankaupungin päivien tungoksessa. Hän tuntee raatihuoneen tornin ja sen tarinat.",
+      "kohtaaminen": "Leena pysäyttää ryhmänsä, kun kysyt kirjan muurivihjeestä. Hymy jää puolitiehen. ”Keskellä juhlaa, tietenkin. Vanhat talot kyllä kätkevät asioita. Tule kierrokselle — mutta ensin: minkä kilpailun Toomas tarun mukaan voitti?”",
+      "kysymys": {
+        "q": "Minkä kilpailun Toomas voitti Tallinnan tarun mukaan?",
+        "vaihtoehdot": [
+          "Raatihuoneen shakkiturnauksen",
+          "Varsijousiammunnan, jossa maalina oli puinen papukaija",
+          "Suomenlahden kilpapurjehduksen",
+          "Torilla pidetyn painikilpailun"
+        ],
+        "oikea": 1,
+        "fakta": "Tallinnan kaupunginmuseon mukaan Toomas-tarun kilpailussa ammuttiin varsijousella puista papukaijaa. Tuuliviirin alkuperäinen hahmo on vuodelta 1530. Tarina kilpailusta on legenda, ei varmennettu elämäkerta."
+      },
+      "aarre": "Leena saattaa sinut tornin tasanteelle. Vanhan huoltoluukun takaa löytyy rasia. Hän vertaa kirjan merkkiä talon vanhaan piirrokseen. ”Sama kohta. Mutta tämä piirros on kirjaasi vanhempi.” Torin soitto kantautuu portaisiin.",
+      "implementationNotes": [
+        "Nykyisen aarteen seinäsyvennys voidaan vaihtaa henkilökunnan avaamaksi huoltoluukuksi; ei pelaajaa purkamaan suojeltua muurirakennetta. Luukku, rasia ja piirros ovat pelifiktiota.",
+        "Kysymyksen jousi täsmennetään varsijouseksi museolähteen mukaisesti.",
+        "Juhla on nykyinen vanhankaupungin päivien kulttuuritapahtuma; ei väitettä virallisesta kansallisesta vapaapäivästä tai tietyn vuoden ohjelmasta.",
+        "Tarkistettu myös fokusvirta-tallinna.js: siinä saapuminen on rautatie/muuri ja aarremerkintä hansakauppiaan hopeasta. Säilytä nämä sana sanalta; liitteen saapuminen on vain kaaren nykyinen varjossa oleva teksti. Leenan pieni rasialöytö ei korvaa fokusvirran hopeakätköä eikä oikeuta muurin purkamista. Yhteensovita puheessa kirjan muuria koskeva vihje ja opaskierros ilman uutta marginaalitekstiä."
+      ],
+      "sources": [
+        {
+          "url": "https://www.visittallinn.ee/eng/visitor/see-do/things-to-do/attractions-museums/26907/tallinn-town-hall-square",
+          "supports": "Raatihuoneentori on Old Town Days -juhlan, markkinoiden ja ulkoilmakonserttien paikka. Virallinen matkailusivu avattu."
+        },
+        {
+          "url": "https://artsandculture.google.com/asset/old-thomas-weather-vane/1gEeJe9alXOhpQ?hl=en-gb",
+          "supports": "Tallinn City Museum: 1530 tuuliviiri ja legenda varsijousella ammutusta puisesta papukaijasta. Koko tietue luettu."
+        }
+      ],
+      "proposalId": "tallinna-feedback-story-20260907-1327",
+      "feedbackId": "tallinna-rasmus-r20260907-v1:ed223f67dbe8eea69437826eba0606bf3c61a0182bf238ef58422598d26492b1",
+      "imageId": "tallinna-rasmus-r20260907-v1",
+      "requestIds": [
+        "c1aa4be9-6e3e-4949-af84-be22324cffcd"
+      ],
+      "originalFeedback": "Vaihda henkilö ja vaatetus ja tuo taustalle paljon ihmisiä näkyviin. Saisi olla joku paikallinen juhlapäivä menossa. rajaa vähän tiiviimmin",
+      "feedbackSha256": "ed223f67dbe8eea69437826eba0606bf3c61a0182bf238ef58422598d26492b1",
+      "sourceUpdatedAt": "2026-09-07T07:46:10.729Z",
+      "currentCanonicalRecord": {
+        "id": "tallinna",
+        "mykistetyt": [],
+        "otsikko": "Tallinna — makea lääke",
+        "saapuminen": "Ostin päänsärkyyni jauheen apteekista, joka on seissyt samalla torilla yli neljäsataa vuotta. Kaupan päälle sain palan marsipaania: se on täällä lääke, sanoi apteekkari — sydänsuruun ja muistin parantamiseen. Se on paras lääke, jonka olen apteekista saanut. Päänsärky hellitti vasta illalla, mutta annan kunnian marsipaanille.",
+        "henkilo": "Opas Eve nousee raatihuoneen tornin portaat useita kertoja päivässä ja laskee jokaisen ryhmän myös alas.",
+        "kohtaaminen": "Tornin kierreportaissa opas Eve tarttuu köysikaiteeseen ja väistää sinut ohitseen. \"Kysy tuo uudestaan, kun saat hengityksen takaisin.\" Hän katsoo silmälasiensa yli ja alkaa nauraa. \"Torni on täynnä yhtä tarua. Kerro sinä, minkä kilpailun Toomas voitti.\"",
+        "kysymys": {
+          "q": "Eve kertoo tornin tarun: köyhä poika Toomas voitti kilpailun mutta jäi ilman palkintoa. Minkä kilpailun?",
+          "vaihtoehdot": [
+            "Raatihuoneen shakkiturnauksen, jonka raatimiehet järjestivät",
+            "Kevätjuhlan jousiammunnan puisesta papukaijasta",
+            "Suuren kilpapurjehduksen Suomenlahden yli",
+            "Painin, jossa kaatui raatimieskin"
+          ],
+          "oikea": 1,
+          "fakta": "Keväisin ammuttiin jousella puista papukaijaa tangon nokasta. Tarun mukaan köyhä poika Toomas osui ensimmäisenä, mutta palkinto kuului säätyläisille. Hänestä tehtiin lopulta jotain suurempaa: kaupungin vartija raatihuoneen torniin, jossa Vana Toomas on kääntynyt vuodesta 1530."
+        },
+        "aarre": "Kätkö oli tasanteen seinäsyvennyksessä irtokiven takana. Eve piti kahta vanhaa kirjausta rinnakkain valoa vasten: \"Tämä kolo on merkitty jo ennen kirjaasi. Kaksitoista vuotta ennen.\" Nimeä ei ole kummassakaan."
+      },
+      "currentMainSha": "708a6ac20f4404e847aff8e4a4d1872351781e11",
+      "sameCityReviews": [
+        {
+          "imageId": "tallinna-kristjan-oljykannu-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "",
+          "updatedAt": "2026-09-04T20:18:35.034Z"
+        },
+        {
+          "imageId": "tallinna-kristjan-oljykannu-v1-r20260905-night-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "",
+          "updatedAt": "2026-09-05T06:55:35.092Z"
+        },
+        {
+          "imageId": "tallinna-kristjan-r20260905-redo-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "Vaihda henkilö ja mieti uusiksi",
+          "updatedAt": "2026-09-05T19:12:48.447Z"
+        },
+        {
+          "imageId": "tallinna-eve-feedback-r20260905-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "vaihda henkilö ja paikka, aurinko mukaan",
+          "updatedAt": "2026-09-05T20:46:10.025Z"
+        },
+        {
+          "imageId": "tallinna-rasmus-round2-r20260905-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "poista toinen henkilö ja muuta hieman kompositiota",
+          "updatedAt": "2026-09-07T04:25:40.203Z"
+        },
+        {
+          "imageId": "tallinna-rasmus-r20260907-v1",
+          "workflowStatus": "regenerate",
+          "archived": false,
+          "suggestion": "Vaihda henkilö ja vaatetus ja tuo taustalle paljon ihmisiä näkyviin. Saisi olla joku paikallinen juhlapäivä menossa. rajaa vähän tiiviimmin",
+          "updatedAt": "2026-09-07T07:46:10.729Z"
+        }
+      ],
+      "status": "proposal-only-awaiting-fable",
+      "imageGenerated": false,
+      "imageApproved": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "cityId": "tromssa",
+      "name": "Sigrid",
+      "occupation": "venemekaanikko",
+      "title": "Tromssa — työvuoro ilman yötä",
+      "visual": "Nykyinen sataman veneverstas keskiyön auringossa. Noin 45-vuotias lyhyttukkainen Sigrid, petrolinväriset työhaalarit ja punainen aluspaita, on nostamassa irrotettua pientä pronssipotkuria työpenkille. Molemmat kädet ja koko potkuri turvallisesti näkyvissä, ei käynnissä olevaa moottoria. Hän pysähtyy ja katsoo läheltä suoraan kameraan: tuima arviointi muuttuu juuri pidätellyksi nauruksi. Matala aurinko piirtää kasvon, potkurin metalli heijastaa valoa. Avoimesta ovesta satama, puinen vene ja vuoririnne. Tiivis hahmopainotteinen kuva, silti ympäristö luettava; ei poseeraavaa nuorisoryhmää, kahvikärryä tai revontulia.",
+      "framing": "Arviointikuvassa Nora ystävineen, mainissa kahvilanpitäjä Kjell. Molemmat korvataan tällä uudella tilanteella. Horation keskiyön aurinkoa ja satamaa kuvaava saapuminen säilyy muuten, mutta sen loppuun ehdotetaan yhtä merkkivihjeen lausetta. Nykyhahmo tulkitsee kirjan satamamerkin; isoisä ei ole tavannut häntä eikä rakentanut nykyverstasta.",
+      "saapuminen": "Aurinko ei laskenut. Se vieri taivaanrannan yli kuin kolikko, joka ei putoa, ja minä mittasin, kuinka alas se suostuu: kämmenen leveyden merestä. Satama teki työtä kello kahdelta yöllä. Kukaan ei toivottanut hyvää yötä, koska yötä ei ollut, ja minä jäin laiturille seisomaan kuin olisin unohtanut jotakin. Piirsin renkaan laiturin reunasta: sen jalassa oli merkki, jonka olin nähnyt jo kaukana täältä.",
+      "henkilo": "Venemekaanikko Sigrid korjaa sataman veneitä ja ottaa talteen poistettujen laiturirakenteiden vanhoja heloja.",
+      "kohtaaminen": "Sigrid laskee potkurin penkille, kun kysyt aarteesta. ”Kello on kaksi yöllä. Tietenkin joku tulee nyt kyselemään vanhasta kirjasta.” Hän katsoo sinua tarkemmin. ”Näytä se laiturimerkki. Mutta ensin: miksi tätä kaupunkia sanotaan — Pariisiksiko vai miksi?”",
+      "kysymys": {
+        "q": "Mikä Pariisiin viittaava lempinimi Tromssalla on?",
+        "vaihtoehdot": [
+          "Pohjolan Pariisi",
+          "Lännen Pariisi",
+          "Vuoriston Pariisi",
+          "Etelän Pariisi"
+        ],
+        "oikea": 0,
+        "fakta": "Tromssasta käytetään lempinimeä Pohjolan Pariisi. Kaupungin matkailutoimisto käyttää myös nimeä Jäämeren portti. Kesäkaudella keskiyön aurinko valaisee satamaa myös öisin."
+      },
+      "aarre": "Sigrid hakee varastosta vanhan kiinnitysrenkaan jalustoineen. ”Laituri uusittiin. Tätä en hennonut heittää pois.” Ontosta jalustasta löytyy pieni rasia. Sen puhtaassa pölyrajassa on tuore sormenjälki.",
+      "implementationNotes": [
+        "Satamaverstas, Sigrid, talteen otettu hela ja löytö ovat luovaa pelifiktiota. Ei nimetyn telakan tai aidon historiallisen esineen dokumentointiväitettä.",
+        "Vanha laiturikätkö siirtyy purussa säästettyyn osaan: jatkuvuus ilman oletusta saman laiturikiven koskemattomuudesta 150 vuotta.",
+        "Kysymysmuoto ja kaikki väärät vaihtoehdot on kirjoitettu niin, ettei toinen oikea lempinimi Jäämeren portti ole vaihtoehtona.",
+        "Saapumisen loppuun ehdotetaan yksi lause kiinnitysrenkaan merkistä, jotta kirjan vihje todella edeltää nykykohtaamista. Muun saapumisen keskiyön aurinko säilyy. Tämä lisäys on uusi luova ehdotus, ei nykyinen kaanon."
+      ],
+      "sources": [
+        {
+          "url": "https://www.visittromso.no/inspiration",
+          "supports": "Virallinen matkailutoimisto: Paris of the North ja Gateway to the Arctic; keskiyön aurinko loppukeväästä keskikesään; kalastus-, kauppa- ja satamakonteksti. Koko sivu luettu."
+        }
+      ],
+      "proposalId": "tromssa-feedback-story-20260907-1327",
+      "feedbackId": "tromssa-nora-ystavat-r20260907-v1:f184c351497eae618daf7cb829e5b361e80f651650b8ae4ae12623aa84e5f53b",
+      "imageId": "tromssa-nora-ystavat-r20260907-v1",
+      "requestIds": [
+        "41b05a1b-e0e3-41f5-b171-f40a8e24ebfc"
+      ],
+      "originalFeedback": "Keksi kokonaan jokin toinen idea ja toteutus. Saat vapaat kädet.",
+      "feedbackSha256": "f184c351497eae618daf7cb829e5b361e80f651650b8ae4ae12623aa84e5f53b",
+      "sourceUpdatedAt": "2026-09-07T07:47:13.413Z",
+      "currentCanonicalRecord": {
+        "id": "tromssa",
+        "mykistetyt": [],
+        "otsikko": "Tromssa — yö jota ei tullut",
+        "saapuminen": "Aurinko ei laskenut. Se vieri taivaanrannan yli kuin kolikko, joka ei putoa, ja minä mittasin, kuinka alas se suostuu: kämmenen leveyden merestä. Satama teki työtä kello kahdelta yöllä. Kukaan ei toivottanut hyvää yötä, koska yötä ei ollut, ja minä jäin laiturille seisomaan kuin olisin unohtanut jotakin.",
+        "henkilo": "Kahvilanpitäjä Kjell myy kahvia sataman kärrystä yötä päivää ja kerää vanhoja laivapostikortteja.",
+        "kohtaaminen": "Laiturin päässä kahvilanpitäjä Kjell läimäyttää kämmenen tiskiin ja hätistää lokin. \"Jos etsit aarretta, aloita tuosta varkaasta.\" Hän kaataa sinulle kahvia kysymättä. \"Tällä kaupungilla oli 1800-luvulla lempinimi, jota etelässä ei uskottu. Sano se.\"",
+        "kysymys": {
+          "q": "Kjell sanoo, ettei etelässä uskottu Tromssan 1800-luvun lempinimeä. Mikä se oli?",
+          "vaihtoehdot": [
+            "Pohjolan Pariisi",
+            "Valaanpyytäjien pääkaupunki",
+            "Kaamoksen kaupunki",
+            "Jäämeren portti"
+          ],
+          "oikea": 0,
+          "fakta": "Tromssaa alettiin 1800-luvulla kutsua Pohjolan Pariisiksi: pieni arktinen satama yllätti etelän vieraat kahviloillaan, muodillaan ja seuraelämällään. Jäämeren pyynti ja kauppa toivat tänne rahaa ja maailman — ja keskiyön aurinko piti sataman hereillä kellon ympäri."
+        },
+        "aarre": "Kätkö oli laiturin kivijalassa, kiinnitysrenkaan alla. Kjell asetti keräilemänsä postikortin rasian viereen: \"Sama käsiala. Eri muste.\" Kello oli kaksi yöllä ja täysin valoisaa, enkä osannut lähteä."
+      },
+      "currentMainSha": "708a6ac20f4404e847aff8e4a4d1872351781e11",
+      "sameCityReviews": [
+        {
+          "imageId": "tromssa-ingrid-satamavahti-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "",
+          "updatedAt": "2026-09-04T20:18:50.948Z"
+        },
+        {
+          "imageId": "tromssa-ingrid-satamavahti-v1-r20260905-night-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "",
+          "updatedAt": "2026-09-05T06:55:13.842Z"
+        },
+        {
+          "imageId": "tromssa-ingrid-satamavahti-r20260905-redo-a01",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "Vaihda henkilö ja mieti uusiksi",
+          "updatedAt": "2026-09-05T19:12:52.159Z"
+        },
+        {
+          "imageId": "tromssa-kjell-feedback-r20260905-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "etsi lisää kuvalähteitä ja tee yllättävä kuva. nuoret voisivat innostua kun heiltä tullaan kysymään ja päättävät tehdä jokainen oman poseerauksensa kameralle, iloinen, energinen ja aurinkoinen kuva",
+          "updatedAt": "2026-09-05T20:46:13.875Z"
+        },
+        {
+          "imageId": "tromssa-nora-ystavat-round2-r20260905-v2",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "henkilöt saisivat olla nuorempia ja vielä enemmän innoissaan",
+          "updatedAt": "2026-09-07T04:25:58.563Z"
+        },
+        {
+          "imageId": "tromssa-nora-ystavat-r20260907-v1",
+          "workflowStatus": "regenerate",
+          "archived": false,
+          "suggestion": "Keksi kokonaan jokin toinen idea ja toteutus. Saat vapaat kädet.",
+          "updatedAt": "2026-09-07T07:47:13.413Z"
+        }
+      ],
+      "status": "proposal-only-awaiting-fable",
+      "imageGenerated": false,
+      "imageApproved": false,
+      "gameIntegrationVerified": false
+    },
+    {
+      "cityId": "medina",
+      "name": "Safa",
+      "occupation": "palmulehtipunonnan käsityöläinen",
+      "title": "Medina — kuvio joka jäi kesken",
+      "visual": "Nykyinen kuvitteellinen avoin käsityöpaja taateliviljelmän laidalla Medinan ulkopuolella. Noin 50-vuotias Safa neutraalissa tummassa huivissa ja savenvärisessä työvaatteessa; luonnollisesti näkyvät kasvot, voimakas suora katsekontakti kameraan. Sormissa kesken oleva taatelinlehtipunoksen reuna, pöydällä muutama kokonainen kori. Hän pysähtyy kuullessaan kysymyksen, kulmakarvat vetäytyvät epäilevästi mutta suupieli on juuri nousemassa. Palmujen läpi siivilöityvä aurinko, varjon viileät sävyt, kultaiset lehtisuikaleet, pieni nykyajan työpaja ympärillä. Läheinen mutta kokonaiset kädet ja pään sisältävä rajaus. Ei kaivoa, kamelia, Omaria, moskeijan sisätilaa tai historialliseksi naamioitua nykyhetkeä.",
+      "framing": "Vaihdetaan kaivo ja Omar kokonaan. Horatio jää edelleen kaupungin ulkopuolelle, kuten nykyinen Lähi-idän kaanon määrää. Vuoden 1873 merkintä kuvaa kuvitteellista punontakohtaamista; nykyinen Safa tunnistaa piirroksen tekniikan, ei muista Horatiota eikä peri häneltä tehtävää. Kirjassa on luonnos, ei punottua esinettä tai valmista avainta.",
+      "saapuminen": "Pysyin kaupungin ulkopuolella palmujen varjossa. Punojan sormet kulkivat niin nopeasti, että kadotin kuvion. Hän antoi minun yrittää. Sain aikaan solmun, jota kumpikaan ei osannut avata. Piirsin sivulle sen kohdan, johon taitoni loppuivat. Punojan ilmeestä päätellen juuri siinä olisi pitänyt aloittaa.",
+      "henkilo": "Safa punoo taatelinlehdistä koreja ja korjaa vanhoja punontamalleja pienessä pajassa Medinan ulkopuolella.",
+      "kohtaaminen": "Safa pysäyttää sormensa, kun kysyt aarteesta. ”Kirjasi mies sotki tämän kuvion. Sinä tulit selvittämään sen?” Hänen epäilevä katseensa pehmenee hiukan. ”Aloitetaan alusta. Mistä kasvin osasta tällainen kori punotaan?”",
+      "kysymys": {
+        "q": "Mitä taatelipalmun osaa käytetään perinteisten korien punontaan?",
+        "vaihtoehdot": [
+          "Hedelmän kiviä",
+          "Lehtisuikaleita",
+          "Kukkien terälehtiä",
+          "Juuren mehua"
+        ],
+        "oikea": 1,
+        "fakta": "Taatelipalmun lehtiä ja kuituja käytetään perinteisiin käsitöihin, kuten koreihin ja mattoihin. Taatelipalmuun liittyvä tieto ja käsityöperinne sisältyvät UNESCOn aineettoman kulttuuriperinnön luetteloon, myös Saudi-Arabian osalta."
+      },
+      "aarre": "Safa hakee vanhan puisen punontamallin. Kirjan piirros jatkuu sen alapinnalla. Mallin irtoavan pohjan alta löytyy ohut rasia. ”Tämä ei kuulunut punontaan”, hän sanoo. Pohjan ruuvissa on aivan tuore naarmu.",
+      "implementationNotes": [
+        "Safa, paja, punontamalli ja kätkö ovat luovaa pelifiktiota; lähde tukee käsityötekniikkaa ja alueen taatelikontekstia, ei juuri tätä paja- tai esinehistoriaa.",
+        "Ei päivämäärää nykyiselle taatelitapahtumalle eikä väitettä tietystä viljelmästä.",
+        "Medina on mainissa luennat:false: pidetään ennallaan. Uusia ääniä tai kartta-aktivointia ei tilata tämän ehdotuksen mukana."
+      ],
+      "sources": [
+        {
+          "url": "https://ich.unesco.org/en/RL/date-palm-knowledge-skills-traditions-and-practices-01902",
+          "supports": "UNESCO: lehdet ja kuidut perinteisissä käsitöissä; Saudi-Arabia mukana. Virallisen sivun hakuteksti ja UNESCOn asiakirja 57494-EN tukevat väitettä; suora sivu palautti JS-haasteen."
+        },
+        {
+          "url": "https://ich.unesco.org/doc/src/57494-EN.pdf",
+          "supports": "UNESCOn luettelokuvauksen mukaan lehtiä, lehvästöä ja kuituja käytetään perinteisiin käsitöihin. Luettu virallisen PDF:n indeksoidusta hakutekstistä; suora avaus palautti JS-haasteen. Ei väitettä koko PDF:n lukemisesta."
+        },
+        {
+          "url": "https://www.spa.gov.sa/fa/N2636715",
+          "supports": "Saudi Press Agency 18.7.2026: Medina liittyy vahvasti taatelipalmuun ja keskustaateelimarkkinaan; vain paikallisen aihepiirin tuki, ei kuvan pajan todistaminen."
+        }
+      ],
+      "proposalId": "medina-feedback-story-20260907-1327",
+      "feedbackId": "medina-omar-r20260907-v1:debcfe6166395cda7ec154314f93c9aa9a9ae9e9c498ccbda4b1dbb5348f4659",
+      "imageId": "medina-omar-r20260907-v1",
+      "requestIds": [
+        "9af3cb4a-c9ef-46fd-b85d-37cfb497c211"
+      ],
+      "originalFeedback": "Keksi joku muu juttu, ihan kokonaan. Vaihda kaikki.",
+      "feedbackSha256": "debcfe6166395cda7ec154314f93c9aa9a9ae9e9c498ccbda4b1dbb5348f4659",
+      "sourceUpdatedAt": "2026-09-07T07:48:35.481Z",
+      "currentCanonicalRecord": {
+        "id": "medina",
+        "lauta": "middleeast",
+        "luennat": false,
+        "otsikko": "Medina — karavaanien kaivo",
+        "saapuminen": "Kaupunkiin itseensä en kulkenut — se on pyhiinvaeltajien kaupunki, eikä minun tieni vie porteista sisään. Leiriydyin karavaanipaikalle sen ulkopuolelle, missä kaivon ympärillä lepäsi satoja kameleita. Vedennostaja kertoi matkalaisista, jotka olivat tulleet Damaskoksesta asti nelikymmentä päivää erämaan halki. Kaivon kivessä oli nimikirjaimia monella kielellä. Kaksi niistä tunsin.",
+        "henkilo": "Vedennostaja Omar juottaa karavaanien kamelit kaivolla, jonka äärellä hänen sukunsa on palvellut kulkijoita sukupolvien ajan.",
+        "kohtaaminen": "Omar kiertää köyden vinssille. \"Kirjaimet hakkasi kiveen matkalainen, joka ei mennyt kaupunkiin vaan istui kaivolla kolme päivää kyselemässä karavaaneista. Hän jätti kysymyksensä minun isoisälleni. Vastaa.\"",
+        "kysymys": {
+          "q": "Pyhiinvaeltajat matkasivat Damaskoksesta Medinaan kauan ennen rautatietä. Miten pitkä erämaataival tehtiin?",
+          "vaihtoehdot": [
+            "Kamelikaravaaneissa, joissa kulki tuhansia ihmisiä yhdessä",
+            "Jokilaivoilla, jotka nousivat virtaa niin pitkälle kuin vettä riitti",
+            "Härkävankkureilla, jotka kulkivat vanhaa kivettyä valtatietä",
+            "Jalkaisin ja yksin — jokainen kulkija omaa polkuaan tähtien mukaan"
+          ],
+          "oikea": 0,
+          "fakta": "Pyhiinvaellus kulki suurina kamelikaravaaneina: tuhansia ihmisiä, kameleita ja vesivarastoja eteni yhdessä noin neljäkymmentä päivää Damaskoksesta Medinaan. Karavaani oli kuin liikkuva kaupunki, jota kaivot ja levähdyspaikat rytmittivät."
+        },
+        "aarre": "Kätkö oli kaivon kivijalassa, nimikirjainten alla irtokiven takana. Omar laski kiven paikalleen: \"Kaivolla käy tuhansia käsiä vuodessa, ja silti juuri tämä kivi on aina ollut tiukassa — eilen se oli löysällä.\""
+      },
+      "currentMainSha": "708a6ac20f4404e847aff8e4a4d1872351781e11",
+      "sameCityReviews": [
+        {
+          "imageId": "medina-omar-kaivo-v1",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "",
+          "updatedAt": "2026-09-05T06:57:02.195Z"
+        },
+        {
+          "imageId": "medina-omar-r20260905-redo-v2",
+          "workflowStatus": "archived",
+          "archived": true,
+          "suggestion": "Kokeile eri ilme ja lisää auringon valo",
+          "updatedAt": "2026-09-07T04:25:51.447Z"
+        },
+        {
+          "imageId": "medina-omar-r20260907-v1",
+          "workflowStatus": "regenerate",
+          "archived": false,
+          "suggestion": "Keksi joku muu juttu, ihan kokonaan. Vaihda kaikki.",
+          "updatedAt": "2026-09-07T07:48:35.481Z"
+        }
+      ],
+      "status": "proposal-only-awaiting-fable",
+      "imageGenerated": false,
+      "imageApproved": false,
+      "gameIntegrationVerified": false
+    }
+  ],
+  "implementationContract": "Fable decides canon and applies text; root owns encounter generation and final QA. Preserve all earlier image versions. Do not activate an unapproved image. Changed screen text requires matching audio or muting the changed audio. Existing owner-approved focus narration remains untouched."
+}
