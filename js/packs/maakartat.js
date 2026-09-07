@@ -11850,6 +11850,148 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'The Mansions', lat: -27.4744, lon: 153.0266 },
     ],
   },
+  /*
+   * VANCOUVER (7.9.2026). Rajaus on 1,9 × 1,5 kilometriä niemen
+   * keskustassa: yläreunassa satama, alareunassa Georgia Streetin
+   * eteläpuoli, oikeassa reunassa Chinatown. Rajauksen perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n vancouver-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Hastings Millin saha ja Gastown, vuoden 1886 suurpalo, rautatien
+   * tuoma nimi ja veturi 374 sekä satama; historiasivu kertoo
+   * kahdeksantuhannen vuoden asutuksesta, sademetsästä ja
+   * Granvillen kylästä, kasvusta sataantuhanteen ja Tyynenmeren
+   * postilaivoista, alkuperäiskansasivu musqueamista, squamishista,
+   * Sen̓áḵwista ja vuoden 2010 kisoista. Matkaopas käsittelee
+   * höyrykellon, maailmannäyttelyn 1986 ja SkyTrainin. Yksikään
+   * kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Gastownin
+   * höyrykello, Canada Place, Stanley Park, Granville Islandin tori
+   * ja Science World mahtuisivat joko ruutuun tai sen viereen, mutta
+   * ne ovat kaikki lehden oman aineiston aihe — kolme nostossa,
+   * kaksi kansi- tai avauskuvan selitteessä. Sama koskee Dominion
+   * Buildingia, joka on noston "Tuhannesta sataantuhanteen"
+   * lähdeartikkeli ja seisoo Sun Towerin naapurikorttelissa.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ. Hotel Vancouver
+   * on 61 metriä Christ Churchin katedraalista ja 144 metriä
+   * taidegalleriasta, ja Christ Church itse on 144 metriä
+   * galleriasta; kolmesta valittiin taidegalleria, koska se on
+   * ainoa, jonka tarina ei ole kirkko tai hotelli. Samalla säännöllä
+   * jäi pois Sam Kee Building, joka on 140 metriä Sun Yat-senin
+   * puutarhasta; kahdesta valittiin puutarha, koska se on kartalla
+   * kokonainen kortteli eikä yksi kapea julkisivu.
+   *
+   * WATERFRONT STATION EI OLE KARTALLA, vaikka se on komea ja
+   * lähellä. Se on CPR:n kolmas pääteasema, ja lehden nosto "Nimi
+   * tuli rautatien mukana" kertoo juuri siitä, miten rautatie tuli
+   * Vancouveriin. Harbour Centre on sen naapurikorttelissa ja
+   * kelpaa kartalle, koska sen tarina alkaa vasta 1977.
+   */
+  vancouver: {
+    polku: 'assets/kartat/vancouver-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 49.2900, etela: 49.2755, lansi: -123.1250, ita: -123.0990 },
+    esittely: 'Kartta näyttää sen kapean niemen kärjen, jolle '
+      + 'Vancouverin keskusta on rakennettu. Oikeassa yläkulmassa on '
+      + 'Burrard Inletin satamavesi ja sen alla laiturien rivi; '
+      + 'kaupunki itse on kahta ruutukaavaa, jotka kohtaavat vinosti '
+      + 'kuvan halki kulkevalla saumalla. Oikeassa reunassa on '
+      + 'Chinatown, vasemmalla liikekeskustan korttelit ja '
+      + 'alareunassa stadionin soikio. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Halifaxissa ja Wellingtonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta ja geosearchista 7.9.2026. Pienin
+       * väli on 256 metriä (katedraali – keskuskirjasto), toiseksi
+       * pienin 310 metriä (taidegalleria – Orpheum).
+       */
+      { nimi: 'Harbour Centre', lat: 49.2846, lon: -123.1123 },
+      { nimi: 'Hotel Europe', lat: 49.28339722, lon: -123.10364722 },
+      { nimi: 'Vancouverin taidegalleria', lat: 49.282875, lon: -123.120464 },
+      { nimi: 'Pyhän ruusukon katedraali', lat: 49.28194444, lon: -123.11472222 },
+      { nimi: 'Sun Tower', lat: 49.281, lon: -123.1084 },
+      { nimi: 'Orpheum-teatteri', lat: 49.280096, lon: -123.120196 },
+      { nimi: 'Keskuskirjasto', lat: 49.279719, lon: -123.115625 },
+      /*
+       * PUUTARHAN PISTE ON SIIRRETTY 33 METRIÄ LOUNAASEEN.
+       * en-Wikipedian koordinaatti (49,279551 / −123,103416) osuu
+       * puutarhan omaan lampeen, ja tools/tarkista-karttapisteet.mjs
+       * raportoi sille 80 prosentin vesiosuuden. Vesi on tässä
+       * oikeaa vettä eikä työkalun vika, mutta numeroympyrä peittäisi
+       * juuri sen lammen, jonka takia kohde on kartalla. Piste on
+       * siirretty puutarhan lounaiskulmaan Carrall Streetin portille
+       * (osoite 578 Carrall Street); siirto on lyhyempi kuin
+       * numeroympyrän halkaisija, eikä se muuta kohteen paikkaa
+       * korttelin tarkkuudella.
+       */
+      { nimi: 'Sun Yat-senin puutarha', lat: 49.2794, lon: -123.1038 },
+    ],
+  },
+  /*
+   * TORONTO (7.9.2026). Rajaus on 2,5 × 3,2 kilometriä ja
+   * poikkeuksellisesti pystysuuntainen: kohteet asettuvat
+   * yliopistokorttelista rautatieasemalle University Avenuen
+   * suuntaiselle nauhalle. Perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n toronto-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Fort
+   * York ja kaupungin nimi, vuosien 1849 ja 1904 palot, Distillery
+   * District, CN-torni, Yorkin taistelu, St. Lawrence Hall ja
+   * kuuden kaupungin yhdistyminen; alkuperäiskansasivu kertoo
+   * mississauga-kansasta, Toronton kaupasta ja Peter Jonesista.
+   * Matkaopas käsittelee St. Lawrencen torin, Scarborough'n
+   * jyrkänteet ja Niagaran. Yksikään kartan kohteista ei ole
+   * niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN POIS AIHESYISTÄ. CN-torni,
+   * Distillery District, St. Lawrencen tori ja St. Lawrence Hall
+   * ovat kaikki lehden nostoja. Casa Loma ja parlamenttitalo
+   * jätettiin samasta syystä pois: molemmat ovat lehden
+   * kansikuvan selitteen aihe, ja Casa Loma on lisäksi ruudun
+   * ulkopuolella pohjoisessa.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ, ja kaikki
+   * kolme ovat samassa kaupungintalojen ryppäässä: vanha
+   * kaupungintalo on 201 metriä uudesta, Osgoode Hall 182 metriä
+   * ja Nathan Phillipsin aukio on osa uuden kaupungintalon
+   * suunnitelmaa. Massey Hall taas on 124 metriä Elginin
+   * teattereista. Kummastakin parista valittiin se, jonka tarina
+   * kantaa kauimmas — Viljo Revellin kaupungintalo ja maailman
+   * viimeinen päällekkäinen teatteripari.
+   */
+  toronto: {
+    polku: 'assets/kartat/toronto-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 43.6705, etela: 43.6415, lansi: -79.4045, ita: -79.3735 },
+    esittely: 'Kartta kulkee pohjois-eteläsuunnassa yliopiston '
+      + 'kortteleista rautatieasemalle. Yläreunassa on Queen’s '
+      + 'Parkin puisto ja sen ympärillä yliopistoalue, keskellä '
+      + 'liikekeskustan ruutukaava ja alareunassa ratapiha, joka '
+      + 'katkaisee kaupungin poikkisuunnassa. Vasemmassa reunassa '
+      + 'on Kensingtonin torin pieni kortteliverkko. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta ja
+       * geosearchista 7.9.2026. Pienin väli on 369 metriä
+       * (jääkiekkomuseo – rautatieasema), toiseksi pienin 381
+       * metriä (kaupungintalo – Elgin ja Winter Garden).
+       */
+      { nimi: 'Ontarion kuninkaallinen museo', lat: 43.667679, lon: -79.394809 },
+      { nimi: 'University College', lat: 43.66277778, lon: -79.39555556 },
+      { nimi: 'Kensingtonin tori', lat: 43.65477222, lon: -79.40067778 },
+      { nimi: 'Ontarion taidegalleria', lat: 43.65361111, lon: -79.39277778 },
+      { nimi: 'Kaupungintalo', lat: 43.65333333, lon: -79.38388889 },
+      { nimi: 'Elgin ja Winter Garden', lat: 43.653056, lon: -79.379167 },
+      { nimi: 'Jääkiekkomuseo', lat: 43.6469, lon: -79.3772 },
+      { nimi: 'Rautatieasema', lat: 43.64444444, lon: -79.38027778 },
+    ],
+  },
 };
 
 /*

@@ -4164,6 +4164,75 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: -1.2700, etela: -1.2975, lansi: 36.8080, ita: 36.8320 },
   },
+  vancouver: {
+    /*
+     * NIEMEN KESKUSTA SATAMASTA CHINATOWNIIN (7.9.2026). Ruutu on
+     * 1,9 × 1,5 kilometriä eli pelin tiiviimpiä, Christchurchin ja
+     * Dubrovnikin kokoluokkaa. Syy on sama kuin Christchurchissa:
+     * kaikki kahdeksan kohdetta ovat samalla niemellä alle 1,3
+     * kilometrin nauhassa Chinatownista Georgia Streetille, ja
+     * väljempi ruutu jättäisi ne kuvan keskelle ryppääksi.
+     *
+     * LAAJEMPI RUUTU KOKEILTIIN JA HYLÄTTIIN. Stanley Park, Granville
+     * Island ja Canada Place mahtuisivat kolme kertaa suurempaan
+     * ruutuun, mutta ne kaikki ovat kaupunkilehden omien juttujen tai
+     * kansikuvien aihe — kohdekartta ei toista lehden juttuja (New
+     * Yorkin sääntö), joten laajennus ei toisi ruutuun yhtään uutta
+     * kohdetta, vain tyhjää.
+     *
+     * POHJOISREUNA 49,2900 ON VEDETTY SATAMAAN. Ilman sitä ruutu
+     * loppuisi Cordova Streetille ja kuvasta puuttuisi se, mikä
+     * Vancouverissa on olennaisinta: Burrard Inlet keskustan
+     * takana. Nyt yläreunassa on vettä noin sadan metrin kaistale.
+     *
+     * ETELÄREUNA 49,2755 EI YLLÄ FALSE CREEKILLE, ja se on valinta.
+     * Lahti alkaa noin 49,274 kohdalta, ja sen mukaan ottaminen
+     * venyttäisi ruudun 2,2 kilometriä korkeaksi pelkkää
+     * moottoritieramppia ja stadionin kattoa varten. BC Place ja
+     * Science World jäävät siis ulkopuolelle; molemmat ovat lehden
+     * oman aineiston aihe (maailmannäyttely 1986, iltaheron selite).
+     *
+     * meri: true. Burrard Inlet on OSM:ssä rantaviivaa
+     * (natural=coastline) eikä vesimonikulmio, joten ilman lippua
+     * kuvan yläreuna olisi paperin värinen. Maata on vain veden
+     * eteläpuolella, joten tavallinen täyttö riittää.
+     */
+    rajat: { pohjoinen: 49.2900, etela: 49.2755, lansi: -123.1250, ita: -123.0990 },
+    meri: true,
+  },
+  toronto: {
+    /*
+     * QUEEN'S PARKISTA UNION STATIONILLE (7.9.2026). Ruutu on
+     * 2,5 × 3,2 kilometriä ja pystysuuntainen, mikä on pelissä
+     * harvinaista mutta tässä oikein: Toronton kohteet asettuvat
+     * yliopistokorttelista rautatieasemalle eli pohjois-eteläiselle
+     * nauhalle, jonka University Avenue vetää suoraksi.
+     *
+     * POHJOISREUNA 43,6705 ON KUNINGATARPUISTON MUSEON MUKAAN.
+     * Kanadan suurin museo on Bloor Streetillä ruudun ylälaidassa,
+     * ja sen pohjoispuolella alkaa Yorkvillen kortteliverkko, jossa
+     * ei ole yhtään kartan kohdetta. Casa Loma on vielä kilometrin
+     * pohjoisempana ja kaupunkilehden kansikuvan aihe.
+     *
+     * ETELÄREUNA 43,6415 PYSÄHTYY RATAPIHAN POHJOISPUOLELLE, eikä se
+     * ole unohdus. Ontariojärvi alkaa vasta 43,639 kohdalta, mutta
+     * järvi on OSM:ssä valtava vesirelaatio, jonka rengas ei sulkeudu
+     * tämän kokoisessa ruudussa; rantaviivalippu taas on tarkoitettu
+     * merelle. Ratapiha on samalla luonteva alareuna, koska Union
+     * Station on kartan eteläisin kohde.
+     *
+     * CN-TORNI, FORT YORK JA DISTILLERY DISTRICT JÄÄVÄT POIS. Torni
+     * ja ratapihan länsipää olisivat mahtuneet, jos ruutua olisi
+     * levennetty puoli kilometriä länteen, mutta kaikki kolme ovat
+     * kaupunkilehden omien nostojen aihe eivätkä siksi voi olla
+     * kartan kohteita. Torni näkyy silti kuvassa rakennuksena.
+     *
+     * Ei meri-lippua: Toronto on järven rannalla, ja Don-joki sekä
+     * Garrison Creekin jäänteet ovat OSM:ssä tavallisia
+     * vesiväyliä.
+     */
+    rajat: { pohjoinen: 43.6705, etela: 43.6415, lansi: -79.4045, ita: -79.3735 },
+  },
 };
 
 /*
