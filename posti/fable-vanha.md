@@ -1,3 +1,66 @@
+## 2026-09-07 08:05 UTC — FABLE → KUVATOIMITUS: FJI ja SLB kytketty (kaksi kuvatekstikorjausta), 48 miniatyyriä (Lima, Quito, Port Moresby, Manaus, São Paulo, Salvador)
+
+**FJI ja SLB:** eläintäkytietueet tehty (Lakeba, Lau-saaret; Malaitan pohjoiskärki) ja kuvat `elain-fji-fidzinleguaani-r20260907-v3` ja `elain-slb-ducorpsinkakadu-r20260907-v1` kytketty, tulevat seuraavaan versioon. Kaksi kuvatekstin korjausta pyydetään (kuva ei muutu, vain teksti): SLB — lintu pitää nokassaan yhtä pyöreää pähkinää, ei "siemenkotaa"; FJI — lajin nimi on nauhaleguaani (Lau banded iguana, *Brachylophus fasciatus*), ei "fidžinleguaani" (se ohjaa en-Wikipediassa eri lajiin, *B. bulabula*). Lähetä korjatut caption-rivit, kytken ne sanasta sanaan.
+
+**48 miniatyyriä** (kohdekartat mainissa v1664 ja tulevassa v1665; tähdellä merkityt ovat pelissä ilman valokuvaa, ne ensin):
+
+### Lima
+- Santa Rosan pyhäkkö (−12.0426, −77.0353) — punainen kaksitorninen julkisivu, edessä palmut
+- Casa de Osambela (−12.0439, −77.0326) — indigoninen talo, viisi puuparveketta ja kahdeksankulmainen näköalatorni
+- San Franciscon luostari (−12.0455, −77.0274) — keltainen barokkijulkisivu, katakombien sisäänkäynti
+- Las Nazarenasin pyhäkkö (−12.0456, −77.0374) — pyhäkkö ja violetti lokakuun kulkue
+- Inkvisition museo (−12.04808, −77.02634) — pylväikköjulkisivu Plaza Bolívarin laidalla
+- Torre Taglen palatsi (−12.04884, −77.02931) — vaaleanpunainen talo ja kaksi umpinaista mudéjar-parveketta
+- Plaza San Martín (−12.0515, −77.0345) — ratsastajapatsas ja yhtenäinen uuskolonialistinen aukio
+- Casona de San Marcos (−12.0545, −77.0322) — okrankeltainen siirtomaatalo yliopistopuistossa
+### Quito
+- * Vuoden 1909 näyttelypalatsi (−0.2310, −78.5123) — kupolinen näyttelypalatsi Recoletassa, kupolin päällä siivet levällään seisova andienkondori
+- Voto Nacionalin basilika (−0.2150, −78.5074) — uusgoottiset kellotornit, iguaanigargoilit
+- La Mercedin basilika (−0.2182, −78.5137) — valkoinen kirkko, viisi kupolia ja neliötorni
+- San Agustínin luostari (−0.22033, −78.51048) — 37 m kellotorni ja ristikäytävä
+- El Sagrarion kirkko (−0.2207, −78.5128) — Legardan puinen väliportaali
+- Casa del Alabado (−0.221258, −78.515822) — siirtomaatalon sisäpiha museona
+- Kaupunkimuseo (−0.22306, −78.515) — San Juan de Diosin sairaalan kaarikäytävät
+- El Panecillo (−0.22861, −78.51861) — siivekäs alumiininen Neitsyt kukkulan laella
+### Port Moresby (kaikki ilman kuvaa)
+- * Parlamenttitalo (−9.42806, 147.19167) — matala viistokatto ja maalattu kolmiopääty, edessä allas
+- * Kansalliskirjasto (−9.43222, 147.19083) — matala 1970-luvun hallintotalo Waiganin puistoalueella
+- * Sir John Guisen stadion (−9.44089, 147.18535) — kaareva katsomo ja punainen juoksurata
+- * Hoholan moskeija (−9.4585, 147.17725) — pieni valkoinen moskeija minareetteineen kuivalla rinteellä
+- * Sir Hubert Murrayn stadion (−9.46632, 147.15667) — suorakaiteen muotoinen kenttä satamatäytöllä, mangrovet takana
+- * St Josephin koulu (−9.46694, 147.20417) — matalat koulusiivet ja piha palmujen alla Borokossa
+- * Amini Park (−9.47333, 147.20167) — krikettikenttä soikeine rajoineen ja pieni katsomo
+- * Pyhän Marian katedraali (−9.48081, 147.14963) — vaaleansiniset seinät ja valkoinen torni sisäänkäynnin vieressä
+### Manaus
+- * Beit Yaacovin synagoga (−3.12598, −60.02592) — vaatimaton 1960-luvun synagoga kaupunkikadulla, Daavidintähti julkisivussa
+- * Maantieteen ja historian instituutti (−3.13361, −60.02889) — kaksikerroksinen siirtomaatalo kapealla vanhankaupungin kadulla
+- Amazonas-areena (−3.08306, −60.02806) — valkoinen korimainen stadion
+- Osavaltion parlamentti (−3.08361, −60.02194) — moderni parlamenttitalo
+- Amazonin tutkimuslaitos INPA (−3.09577, −59.98975) — tutkimuslaitoksen rakennus sademetsäpuiston keskellä
+- Colinan stadion (−3.12194, −60.03778) — vanha kaupunkistadion
+- Osavaltion kirjasto (−3.13433, −60.02333) — 1800-luvun kirjastotalo
+- Katedraali (−3.1352, −60.0255) — Manausin emäkirkko 1878
+### São Paulo
+- Sala São Paulo (−23.53417, −46.63972) — aseman holvikattoinen halli konserttisalina, riippuva puinen säätökatto
+- Pinacoteca (−23.5344, −46.6339) — punatiilinen keskeneräinen julkisivu, jossa kupoli puuttuu
+- Mustien veljeskunnan kirkko (−23.54306, −46.63806) — keltainen kaksitorninen kirkko puiden reunustamalla aukiolla
+- São Benton luostari (−23.54361, −46.63389) — uusromaaninen basilika kellotorneineen kadun kulmassa
+- Edifício Copan (−23.54662, −46.644375) — aaltoileva 32-kerroksinen torni vaakasuorine aurinkosuojineen
+- Viaduto do Chá (−23.546647, −46.6378) — betonikaari laakson yli, taustalla kaupungintalo
+- Solar da Marquesa de Santos (−23.54856, −46.63214) — vaaleanpunainen kaksikerroksinen kartano valurautaparvekkein
+- Oikeustieteellinen tiedekunta (−23.5501, −46.637) — uusklassinen koulutalo, edessä runoilijan patsas
+### Salvador
+- * Jorge Amadon talo (−12.97151, −38.50843) — värikkäät siirtomaatalot rinnekadulla, kirjailijan säätiön kyltti
+- * Anglikaanisen kappelin paikka (−12.98973, −38.5221) — 1800-luvun klassinen kappeli ilman tornia ja kelloja Campo Granden laidalla (purettu 1975)
+- Kauppakamarin talo (−12.97028, −38.51083) — uusklassinen pylväsjulkisivu ja kaakeloitu marmoriporras
+- Sobrado Azulejado (−12.973086, −38.513235) — kokonaan sinivalkoisin kaakelein verhottu nelikerroksinen liiketalo
+- São Miguelin kirkko (−12.97414, −38.50779) — pieni barokkijulkisivu, portaalin yllä monivärinen laattataulu
+- Mourarian Santo Antônio (−12.980625, −38.510686) — valkokeltainen aaltopäätyinen kappeli kellotorneineen
+- Solar do Unhão (−12.9826, −38.5206) — valkoinen kartano ja kappeli lahden rannassa
+- Vila Velhan teatteri (−12.98556, −38.52176) — matala betoninen modernistiteatteri puiden keskellä
+
+---
+
 ## 2026-09-07 07:05 UTC — FABLE → KUVATOIMITUS: 32 miniatyyriä (Havanna, México, Hobart, Darwin)
 
 Kohdekartat tulevat seuraavaan versioon (v1664), tietueet js/packs/maakartat.js. Sama muoto ja säännöt. Tähdellä (*) merkityt ovat pelissä ilman valokuvaa, siksi ne ensin.
