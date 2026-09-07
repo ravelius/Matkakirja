@@ -55943,4 +55943,482 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * PUNTA ARENASIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026,
+   * parvierä). Kartta on js/packs/maakartat.js:
+   * KAUPUNKIKARTAT.puntaarenas. Väitteet on luettu en-Wikipedian
+   * raakatekstistä 7.9.2026 (artikkelit "Punta Arenas", "Cemetery of
+   * Punta Arenas", "Sacred Heart Cathedral, Punta Arenas", "Sara
+   * Braun", "County of Peebles (ship)", "Strait of Magellan") ja
+   * es-Wikipediasta niiden kohteiden osalta, joilla ei ole
+   * en-artikkelia ("Monumento al Ovejero", "Museo Regional de
+   * Magallanes") — sama ratkaisu kuin Guatemalan kohdekartassa.
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat nimi Sandy Point, kuunari Ancud, rangaistussiirtola ja
+   * vuoden 1873 kirje merenkulkumaille sekä lammastalous ja
+   * selkʼnamit; teemasivu kertoo salmesta, kartoituksesta,
+   * ilmastosta ja otsonista sekä Yelchon pelastusretkestä.
+   * Lähimpänä on lampuripatsas, jonka juttu kertoo veistoksesta ja
+   * sen kahdesta versiosta eikä lammasyhtiöstä.
+   *
+   * HIILENOTTOPAIKKA JA PANAMAN KANAVA ON TARKOITUKSELLA JÄTETTY
+   * LEHDESTÄ POIS ja annettu rantabulevardin jutulle, jotta
+   * kohdekartalla on oma aiheensa eikä lehden toisinto.
+   *
+   * CERRO DE LA CRUZILLA EI OLE OMAA WIKIPEDIA-ARTIKKELIA
+   * kummallakaan kielellä. Sen juttu kertoo vain sitä, mitä
+   * kukkulalta näkyy, ja kaikki asiafaktat ovat "Punta Arenas"
+   * -artikkelin Geography- ja Etymology-osioista. Kukkula itse on
+   * pelissä jo ennestään: matkakirjan valokuvataulun nykykuva
+   * (southamerica-valokuvat.js) on otettu sieltä.
+   *
+   * MAGALHÃESIN PATSAS EI OLE OMA KOHTEENSA: patsaan varpaan
+   * koskettaminen on saapumistekstin aihe, eikä kohdekartta toista
+   * sitä. Aukio näkyy kartalla katedraalin vieressä.
+   *
+   * MUSEO REGIONAL DE MAGALLANESIN PERUSTAMISVUOSI: es-artikkeli
+   * sanoo museon syntyneen 1982, en-artikkeli sen toimineen talossa
+   * helmikuusta 1983. Molemmat kerrotaan.
+   */
+  puntaarenas: {
+    'Lampuripatsas': {
+      aika: '1944 ja 1962',
+      teksti: 'Avenida Bulnesin keskikaistalla seisoo '
+          + 'kaksitoistaosainen veistosryhmä luonnollisessa koossa. '
+          + 'Siinä lampuri kestää pampan tuulta hevosensa ohjakset '
+          + 'toisessa kädessä ja ruoska toisessa, jolla hän ohjaa '
+          + 'lampaitaan. Ryhmä on kaupungin tunnetuin ulkoveistos ja '
+          + 'seisoo juuri sillä kadulla, jonka varrella ovat myös '
+          + 'salesiaanien museo ja hautausmaa.'
+          + '\n\n'
+          + 'Aloite tuli kenraali Ramón Cañas Montalvalta, ja teoksen '
+          + 'lahjoitti Francisco Campos Torreblanca. Ensimmäinen '
+          + 'versio oli graniittia, ja se paljastettiin 1944 '
+          + 'tasavallan presidentin Juan Antonio Ríosin läsnä '
+          + 'ollessa.'
+          + '\n\n'
+          + 'Nykyinen pronssiveistos paljastettiin 1. huhtikuuta '
+          + '1962, jotta teos kestäisi ikuisesti. Graniittinen '
+          + 'ensimmäinen versio ei joutunut varastoon: Punta Arenas '
+          + 'lahjoitti sen naapurialueen pääkaupungille Coyhaiquelle, '
+          + 'jossa se seisoo nykyään Avenida Baquedanon '
+          + 'keskikaistalla joen rinnalla kaupungin pohjoislaidassa.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Sara Braunin hautausmaa': {
+      aika: '1894',
+      teksti: 'Avenida Bulnesin varrella on neljän hehtaarin '
+          + 'hautausmaa, jolla on kolme porttia. Se vihittiin '
+          + '9. huhtikuuta 1894 kuvernööri Manuel Señoretin aikana ja '
+          + 'korvasi vanhan hautausmaan, joka oli nykyisen Lautaron '
+          + 'aukion paikalla. Maan lahjoitti Sara Braun, ja insinööri '
+          + 'Fortunato Circutti suunnitteli portit ja muurit 1919. '
+          + 'Alue täyttyi jo kauan sitten, ja sen tilalle on tullut '
+          + 'uudempi hautausmaa pohjoisempana; vanha on säilyttänyt '
+          + 'asemansa monumenttihautausmaana. CNN on listannut sen '
+          + 'maailman kauneimpien hautausmaiden joukkoon, ja se on '
+          + 'ollut Chilen kansallismonumentti vuodesta 2012.'
+          + '\n\n'
+          + 'Käytävien varrella ovat kaupungin suurten sukujen '
+          + 'kappelit: Menéndez-Behety, Braun Hamburger, Blanchard, '
+          + 'Greenshields, Kusanovic ja Menéndez-Montes. Täällä lepää '
+          + 'myös brittiläinen merimies Charles Amherst Milward, joka '
+          + 'innoitti Bruce Chatwinin matkakirjan In Patagonia.'
+          + '\n\n'
+          + 'Hautausmaalla kerrotaan kahta tarinaa. Ensimmäinen on '
+          + 'se, että Sara Braun pyysi lahjoituksensa vastineeksi '
+          + 'yhtä asiaa: pääportti suljettaisiin hänen kuolemansa '
+          + 'jälkeen lopullisesti. Portti on yhä kiinni. Toinen '
+          + 'koskee tuntemattoman intiaanin hautaa, jolle 1950-luvulta '
+          + 'alkaen alettiin jättää kynttilöitä ja kolikoita; '
+          + 'Magdalena Vrsalovic lahjoitti kertyneet rahat kaupungin '
+          + 'Punaiselle Ristille, ja haudalle pystytettiin Edmundo '
+          + 'Casanovan veistämä muistomerkki.',
+      lahde: 'Wikipedia',
+    },
+    'Salesiaanien museo': {
+      aika: '1893',
+      teksti: 'Avenida Bulnes 374, aivan María Auxiliadoran kirkon '
+          + 'vieressä, on alueen tärkein museo. Salesiaanien '
+          + 'sääntökunta perusti sen 1893, ja sitä ylläpidetään yhä '
+          + 'yhteisön vapaaehtoisin lahjoituksin. Museo on nimetty '
+          + 'Maggiorino Borgatellon mukaan.'
+          + '\n\n'
+          + 'Kokoelma on kolmiosainen. Ensimmäinen osa on alueen '
+          + 'luonto: täydellinen näytesarja Magallanesin lajeista. '
+          + 'Toinen on selkʼnam-kulttuuri, ja kolmas Etelämantereelta '
+          + 'tuodut näytteet. Museo on siis yhdellä kertaa '
+          + 'luonnontieteellinen, kansatieteellinen ja napa-alueen '
+          + 'kokoelma.'
+          + '\n\n'
+          + 'Salesiaanien osuus alueen historiassa on kaksijakoinen, '
+          + 'ja se kannattaa tietää ennen kuin astuu sisään. '
+          + 'Sääntökunta perusti lähetysasemia, joihin selkʼnameja ja '
+          + 'muita kansoja siirrettiin pois lammastilojen tieltä, ja '
+          + 'siirto katkaisi heidän elämäntapansa. Samat '
+          + 'lähetyssaarnaajat tallensivat kuitenkin esineitä, '
+          + 'valokuvia ja kielitietoa, joita ei muualla ole '
+          + 'säilynyt — juuri se aineisto on nyt tässä talossa.',
+      lahde: 'Wikipedia',
+    },
+    'Cerro de la Cruz': {
+      aika: 'näköalapaikka',
+      teksti: 'Keskustan yläpuolella, muutaman korttelin päässä '
+          + 'aukiolta, katu nousee jyrkästi ja päättyy kaiteeseen. '
+          + 'Sieltä koko kaupunki avautuu yhtenä kuvana, ja siitä '
+          + 'näkee heti, miksi Punta Arenas on sen muotoinen kuin on: '
+          + 'kaupunki on puristuksissa kukkuloiden ja veden väliin '
+          + 'kapealle rantakaistaleelle Brunswickin niemimaan '
+          + 'koillisrannalla.'
+          + '\n\n'
+          + 'Ruutukaava laskeutuu rannalle suorina riveinä, ja sen '
+          + 'takana on Magalhãesinsalmi. Salmen toisella puolella '
+          + 'näkyy Tulimaan pääsaari. Kattojen väri kertoo oman '
+          + 'tarinansa: kaupunkia sanottiin pitkään punaisten '
+          + 'kattojen kaupungiksi, koska peltikatot maalattiin '
+          + 'punaisiksi, ja vasta noin 1970 alkaen muita värejä alkoi '
+          + 'olla saatavilla.'
+          + '\n\n'
+          + 'Kukkulalta katsoen kaupungin rajat ovat selvät. '
+          + 'Itäranta on ainoa asuttu osa niemimaata — muualla '
+          + 'Brunswick on lähes autio, ja kunnan alueeseen kuuluu '
+          + 'sen lisäksi joukko lähes asumattomia saaria Tulimaan '
+          + 'länsipuolella. Yhdellä niistä, Dawsonin saarella, oli '
+          + 'vuoden 2002 laskennassa noin 301 asukasta; Clarencen '
+          + 'saarella viisi.',
+      lahde: 'Wikipedia',
+    },
+    'Sagrado Corazónin katedraali': {
+      aika: '1892–1901',
+      teksti: 'Aukion laidalla oleva katedraali on salesiaanien '
+          + 'perustama, ja sen renessanssitorni erottuu keskustan '
+          + 'kattojen yli. Rakennustyö alkoi 28. joulukuuta 1892 '
+          + 'salesiaani-isä Juan Bernabén piirustusten mukaan, ja '
+          + 'kirkko valmistui 1. kesäkuuta 1901. Se oli aikanaan '
+          + 'alueella virstanpylväs jo materiaalinsa takia: tästä '
+          + 'talosta tuli tiilirakentamisen esimerkki.'
+          + '\n\n'
+          + 'Sisätila on basilikamainen ja kolmilaivainen. Laivat '
+          + 'erottaa toisistaan korinttilainen pylväsrivi, holvit '
+          + 'ovat romaaniset, ja mitat ovat 46 metriä pitkä, 18 '
+          + 'leveä ja 30,60 korkea. Kellotorni nostettiin 1898, ja '
+          + 'se on kolmekymmentä metriä ristiin asti.'
+          + '\n\n'
+          + 'Kirkko on omistettu Jeesuksen pyhälle sydämelle, ja '
+          + 'se vihittiin 4. joulukuuta 1977. Nykyään se on Punta '
+          + 'Arenasin hiippakunnan piispanistuin. Aukio kirkon '
+          + 'edessä on kaupungin pääaukio, ja sen keskellä seisoo '
+          + 'vuoden 1920 Magalhães-muistomerkki.',
+      lahde: 'Wikipedia',
+    },
+    'Braun-Menéndezin palatsi': {
+      aika: '1903',
+      teksti: 'Hernando de Magallanes -kadun varrella on talo, joka '
+          + 'rakennettiin 1903 Mauricio Braunin ja Josefina '
+          + 'Menéndezin asunnoksi. Se on kansallismonumentti vuodesta '
+          + '1974, ja siinä toimii Magallanesin aluemuseo, jota '
+          + 'hoitaa valtion kulttuuriperintöpalvelu.'
+          + '\n\n'
+          + 'Museo syntyi 1982 ja on toiminut talossa helmikuusta '
+          + '1983. Kokoelmaan kuuluu lähes 1 800 esinettä, ja se '
+          + 'kertoo Magallanesin ja etenkin Punta Arenasin historian '
+          + '1500-luvun löytöretkistä 1900-luvun alkuun. Enrique '
+          + 'Campos Menéndez neuvotteli suvun palatsin lahjoituksesta '
+          + 'valtiolle sillä ehdolla, että talo kunnostetaan '
+          + 'kokonaan ja muutetaan museoksi. Näyttely jakautuu '
+          + 'kolmeen osaan: Aikakausi esittelee eurooppalaista '
+          + 'huonekalustoa uusklassismista jugendiin, Historia '
+          + 'alueen ja kaupungin esineitä, ja kellarikerros näyttää '
+          + 'talon palvelusväen keittiön, kylpyhuoneet ja huoneet.'
+          + '\n\n'
+          + 'Museota on myös arvosteltu, ja sekin kannattaa tietää. '
+          + 'Talon esittelyssä ei viitata alkuperäiskansojen '
+          + 'kansanmurhaan, johon rakennuttajasuvun jäsenet '
+          + 'osallistuivat. Sama tarina kerrotaan tässä lehdessä '
+          + 'kansisivun neljännessä jutussa.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Merisotamuseo': {
+      aika: 'Pedro Montt 981',
+      teksti: 'Sotilasmuseon vieressä, Pedro Montt -kadun numerossa '
+          + '981, on Punta Arenasin meri- ja laivastomuseo. Sen '
+          + 'kokoelma kertoo Chilen asevoimien osuudesta Magallanesin '
+          + 'ja Chilen Antarktiksen alueen asuttamisessa.'
+          + '\n\n'
+          + 'Aihe on kaupungille perustavaa laatua. Chile ei '
+          + 'perustanut Punta Arenasia kaupankäynnin takia vaan '
+          + 'osoittaakseen, että salmi kuuluu sille: kuunari Ancud '
+          + 'purjehti 1843 laivaston upseerin komennossa, ja alueen '
+          + 'ensimmäiset vuosikymmenet olivat sotilashallintoa. '
+          + 'Kokoelmassa on siis yhtä paljon kolonisaatiota kuin '
+          + 'merenkulkua.'
+          + '\n\n'
+          + 'Museon vieressä on sotilasmuseo, ja kadun toisessa '
+          + 'päässä rantabulevardi, jolta näkyy salmi. Kaupungin '
+          + 'katukuvassa laivasto on läsnä muutenkin: rannalla on '
+          + 'muistomerkki luutnantti Luis Pardolle, jonka '
+          + 'pelastusretkestä kerrotaan tämän lehden teemasivulla.',
+      lahde: 'Wikipedia',
+    },
+    'Salmen rantabulevardi': {
+      aika: '1800-luku – nykyaika',
+      teksti: 'Rantakatu kulkee salmen laitaa, ja siitä avautuu '
+          + 'näkymä vedelle ja Tulimaahan. Satama on avoin myrskyille, '
+          + 'mutta ennen Panaman kanavan valmistumista se oli yksi '
+          + 'Chilen tärkeimmistä: täällä Atlantin ja Tyynenmeren '
+          + 'väliä kulkevat höyrylaivat ottivat hiiltä. Kanava vei '
+          + 'liikenteen, ja nykyään satamaa käyttävät enimmäkseen '
+          + 'risteilyt ja tutkimusretkikunnat. Osa Etelämantereen '
+          + 'risteilyistä lähtee täältä, ja satama on tukikohta myös '
+          + 'alueen kanaviin ja vuonoihin suuntautuville matkoille.'
+          + '\n\n'
+          + 'Rannassa on kaksi laivaa, jotka eivät enää purjehdi. '
+          + 'County of Peebles ja Cavenga on upotettu paikoilleen '
+          + 'aallonmurtajiksi suojaamaan satama-allasta. County of '
+          + 'Peebles on merenkulun historiassa oma lukunsa: se oli '
+          + 'ensimmäinen nelimastoinen rautarunkoinen täystakiloitu '
+          + 'laiva ja valmistui Skotlannissa 1875.'
+          + '\n\n'
+          + 'Rannalta lähtee myös aikataulun mukainen lautta '
+          + 'Tulimaan pääsaarelle ja harvemmin Puerto Williamsiin. '
+          + 'Tuuli käy tällä rannalla lähes yhtenään, ja se on '
+          + 'voimakkaimmillaan kesällä eikä talvella.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * SANTA CRUZIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026,
+   * parvierä). Kartta on js/packs/maakartat.js:
+   * KAUPUNKIKARTAT.santacruz. Kahdella kohteella on en-Wikipedian
+   * artikkeli ("Cathedral Basilica of St. Lawrence, Santa Cruz de la
+   * Sierra", "General Cemetery of Santa Cruz"); kuudella ei ole
+   * lainkaan, ja niiden lähde on es-Wikipedia (7.9.2026: "Avión
+   * Pirata", "Universidad Autónoma Gabriel René Moreno", "Parque El
+   * Arenal", "Plaza 24 de Septiembre", "Museo de Historia Natural
+   * Noel Kempff Mercado", "Estadio Ramón Aguilera Costas"). Sama
+   * ratkaisu kuin Guatemalan kohdekartassa, ja lähderivi on sama.
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat chanét ja Grigotá, kaupungin kolme muuttoa, vuoden
+   * 1810 kapina ja Warnesin vuodet sekä Andrés Ibáñez ja
+   * igualitaarit; teemasivu kertoo camba-sanasta, taquiraritanssista,
+   * chovenasta ja karnevaalista. Lähimpänä ovat aukio ja hautausmaa:
+   * aukion juttu kertoo aukion nimihistorian eikä vuoden 1810
+   * kapinaa, ja hautausmaan juttu mainitsee Ibáñezin haudan yhdellä
+   * lauseella ja viittaa lehteen — sama tapa kuin Lagosin
+   * Ajele-jutussa, joka viittaa Kristuksen katedraaliin.
+   *
+   * CHIQUITOSIN LÄHETYSASEMAT JA SAMAIPATA EIVÄT OLE KOHTEITA eivätkä
+   * juttujen aiheita: ne ovat karttanostoja (maastokohteet-bol.js).
+   *
+   * KATEDRAALIN VUOSILUVUT 1595 JA 1915 JÄTETÄÄN POIS, koska
+   * lähteet ovat niistä ristiriidassa (tarkistus-santacruz.md,
+   * kohta H). Käytetään vain vuosia 1770 ja 1838, jotka ovat
+   * molempien artikkelien leipätekstissä samoina.
+   */
+  santacruz: {
+    'Avión Pirata': {
+      aika: '1961',
+      teksti: 'Toisen kehän varrella pienessä puistossa seisoo '
+          + 'nelimoottorinen Lockheed Constellation, jota Boliviassa '
+          + 'sanotaan merirosvokoneeksi. Kone oli rekisteröity '
+          + 'tunnuksella N2520B ja oli aiemmin lentänyt Braniff '
+          + 'International Airwaysille ja Trans American Airlinesille. '
+          + 'Vuonna 1961 samanlaiset koneet tekivät yölentoja El '
+          + 'Trompillon kentälle, ja kaupunkilaiset uskoivat niiden '
+          + 'kuljettavan tavaraa ilman tullia.'
+          + '\n\n'
+          + 'Lauantaina 29. heinäkuuta 1961 kone laskeutui El '
+          + 'Trompillolle ja lähti seuraavana päivänä etelään ilman '
+          + 'lentosuunnitelmaa. Lennonjohto hälytti ilmavoimat, joka '
+          + 'lähetti perään P-51 Mustang -hävittäjiä. Miehistö ei '
+          + 'totellut käskyä lentää Cochabambaan, ja takaa-ajossa '
+          + 'yksi hävittäjälentäjä, kapteeni Alberto Peredo Céspedes, '
+          + 'menehtyi koneensa syöksyttyä maahan. Constellation teki '
+          + 'hätälaskun samalle kentälle, jolta se oli noussut.'
+          + '\n\n'
+          + 'Presidentti Víctor Paz Estenssoro määräsi tutkinnan, ja '
+          + 'tapaus tunnetaan Boliviassa nimellä caso Constelación. '
+          + 'Kone ei koskaan lähtenyt maasta: se vaihtoi omistajaa '
+          + 'useaan kertaan, päätyi lopulta puistoon ja on nykyään '
+          + 'sekä matkailukohde että paikallinen kaupunkilegenda.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Gabriel René Moreno -yliopisto': {
+      aika: '1880',
+      teksti: 'Bolivian idän suurin julkinen korkeakoulu perustettiin '
+          + '11. tammikuuta 1880 nimellä Santa Cruzin yliopisto. '
+          + 'Perustamisen taustalla oli valtion asetus 15. joulukuuta '
+          + '1879, jolla haluttiin vastata kaupungin nuorten '
+          + 'tarpeeseen: siihen asti tutkintoa oli pitänyt hakea '
+          + 'Sucresta tai La Pazista asti. Aloite tuli tohtori Felipe '
+          + 'Leonor Riberalta ja cruceño-piispalta, joka toimi myös '
+          + 'ensimmäisenä rehtorina.'
+          + '\n\n'
+          + 'Aluksi tarjolla oli kolme alaa: teologia, lääketiede ja '
+          + 'oikeustiede. Niin pysyi lähes viisikymmentä vuotta. '
+          + 'Yliopisto sai nimekseen Pyhän Tuomas Akvinolaisen '
+          + 'yliopisto 1898 ja nykyisen nimensä 1911 cruceño-'
+          + 'kirjailijan ja historioitsijan Gabriel René Morenon '
+          + 'mukaan. Keskusrakennus nousi 1940 Junínin ja Libertadin '
+          + 'kulmaan aivan pääaukion viereen.'
+          + '\n\n'
+          + 'Kasvuluvut kertovat kaupungin tarinan pienoiskoossa. '
+          + 'Vuonna 1940 opiskelijoita oli sata, 1970 jo 1 863, 1980 '
+          + 'kuutisen tuhatta ja 1990 kaksitoista tuhatta; 2020 luku '
+          + 'ylitti kahdeksankymmentä tuhatta. Yliopistolla on '
+          + 'kaupungissa kaksitoista tiedekuntaa ja departementin '
+          + 'maakunnissa kuusi lisää, ja sen yhteydessä toimii myös '
+          + 'kaupungin luonnonhistoriallinen museo.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'El Arenalin puisto': {
+      aika: '1958',
+      teksti: 'Keskustan pohjoislaidalla on laguuni ja sen keskellä '
+          + 'saari. Paikka oli 1800-luvulta 1900-luvun puoliväliin '
+          + 'luonnollinen lampi, jonne vedet valuivat itsestään. '
+          + 'Rakentaminen virkistysalueeksi alkoi 1958, ja siitä tuli '
+          + 'kaupungin ensimmäinen kaupunkipuisto.'
+          + '\n\n'
+          + 'Saari sai 1970-luvulla museon ja ravintolan arkkitehti '
+          + 'Sergio Antelon johdolla. Puiston tunnetuin yksityiskohta '
+          + 'on Lorgio Vacan muraali. Puisto ei ole pelkkä '
+          + 'koristeaihe: se on yhä alueen hulevesiallas, eli sama '
+          + 'painanne, joka keräsi vedet luonnostaan, tekee edelleen '
+          + 'saman työn sadekaudella.'
+          + '\n\n'
+          + 'Vuonna 2018 puistolle esiteltiin kunnostushanke, jonka '
+          + 'tarkoitus on yhdistää se suoraan kaupungin keskustaan; '
+          + 'suunnitelmaa oli käyty läpi asukkaiden kanssa jo '
+          + 'lokakuussa 2016, ja työtä johtaa arkkitehti Víctor Hugo '
+          + 'Limpias.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Yleinen hautausmaa': {
+      aika: '1834',
+      teksti: 'Viedma-kadun ja Arenalesin, Paitítin ja Salvatierran '
+          + 'katujen rajaama kortteli on kaupungin vanhin virallinen '
+          + 'hautausmaa. Se perustettiin presidentti Andrés de Santa '
+          + 'Cruzin aikana vuoden 1826 asetuksella, joka määräsi '
+          + 'hautausmaat koko Bolivialle, ja otettiin käyttöön 1834.'
+          + '\n\n'
+          + 'Hautausmaa tunnetaan ensimmäisten cruceño-sukujen '
+          + 'haudoista sekä mausoleumeistaan, kävelyteistään ja '
+          + 'poluistaan. Se julistettiin historialliseksi '
+          + 'kulttuuriperinnöksi 2013. Kaupungissa on nykyään '
+          + 'kymmeniä hautausmaita, sekä säänneltyjä että itsestään '
+          + 'syntyneitä, ja kaupunki on joutunut pienentämään uusien '
+          + 'mausoleumien alaa tilanpuutteen takia.'
+          + '\n\n'
+          + 'Täällä lepää Andrés Ibáñez, 1844 syntynyt asianajaja ja '
+          + 'kansanedustaja, joka johti kaupungin igualitaarista '
+          + 'liikettä ja kuoli 1877. Hänen mukaansa on nimetty myös '
+          + 'se maakunta, jossa Santa Cruz sijaitsee. Hänen tarinansa '
+          + 'kerrotaan tämän lehden kansisivun neljännessä jutussa.',
+      lahde: 'Wikipedia',
+    },
+    'Plaza 24 de Septiembre': {
+      aika: '1500-luku – nykyaika',
+      teksti: 'Pääaukio oli kaupungin ensimmäisiä kaavoitettuja '
+          + 'elementtejä, ja sen ympärille rakennettiin kaikki '
+          + 'tärkeä. Aukiota rajaavat Libertadin, 24 de Septiembren, '
+          + 'Ayacuchon, Junínin, Sucren ja Bolívarin kadut, ja sen '
+          + 'laidalla ovat katedraali, kulttuuritalo, hallintotalo, '
+          + 'kaupungintalo, seurahuone ja Argentiinan konsulaatti '
+          + 'sekä kauppoja ja ravintoloita. Kasvillisuus on palmuja '
+          + 'ja muuta seudun omaa lajistoa.'
+          + '\n\n'
+          + 'Nimi on vaihtunut kolmesti, ja jokainen nimi kertoo '
+          + 'oman aikansa. Ensin se oli Plaza de Armas, aseaukio. '
+          + 'Vuoden 1898 liberaali-federalistisen vallankumouksen '
+          + 'yhteenottojen jälkeen se nimettiin uudelleen Plaza de la '
+          + 'Concordiaksi, sovun aukioksi. Nykyinen nimi muistuttaa '
+          + '24. syyskuuta 1810, jolloin kaupunkilaiset nousivat '
+          + 'siirtomaahallintoa vastaan.'
+          + '\n\n'
+          + 'Aukiolla seisoo Ignacio Warnesin patsas. Vuonna 2004 '
+          + 'Ayacuchon ja Junínin kadut muutettiin kävelykaduiksi, ja '
+          + 'aukiosta tuli entistä selvemmin kaupungin olohuone: '
+          + 'siellä järjestetään taide- ja yleisötapahtumia ympäri '
+          + 'vuoden.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'San Lorenzon katedraali': {
+      aika: '1770 ja 1838',
+      teksti: 'Aukion laidalla oleva katedraali on kaupungin '
+          + 'pääkirkko. Ensimmäisen kirkon rakensi mercedaarimunkki '
+          + 'Diego de Porres varakuningas Francisco Álvarez de '
+          + 'Toledon aikaan. Vuonna 1770 piispa Ramón de Herbosos '
+          + 'rakennutti kirkon uudestaan ja antoi työn '
+          + 'ylisakastinhoitaja Antonio Lombardolle.'
+          + '\n\n'
+          + 'Nykyinen rakennus on kolmas. Marsalkka Andrés de Santa '
+          + 'Cruzin aikaan 1838 vanha temppeli korvattiin uudella '
+          + 'eklektisellä kirkolla, jonka suunnitteli ranskalainen '
+          + 'arkkitehti Felipe Bertrés. Kirkon tunnetuin piirre ovat '
+          + 'sen puuholvit ja niitä peittävä maalauskoristelu.'
+          + '\n\n'
+          + 'Pääalttarilla on säilynyt osa alkuperäisestä '
+          + 'hopeaverhoilusta, joka tuotiin Moxosin San Pedron '
+          + 'lähetysasemalta; samasta paikasta on esillä myös neljä '
+          + 'veistosreliefiä. Kirkossa on lisäksi kirkkotaiteen '
+          + 'museo. Sen tornista otetut kuvat ovat se näkymä, josta '
+          + 'aukio yleensä valokuvataan.',
+      lahde: 'Wikipedia',
+    },
+    'Noel Kempff Mercadon museo': {
+      aika: '1986',
+      teksti: 'Avenida Iralan varrella on Bolivian idän tärkein '
+          + 'luonnonhistoriallinen kokoelma. Museo perustettiin '
+          + '23. lokakuuta 1986 Gabriel René Moreno -yliopiston '
+          + 'maataloustieteellisen tiedekunnan yhteyteen, kun joukko '
+          + 'opiskelijoita ja tutkijoita halusi virallistaa alueen '
+          + 'luonnon luetteloinnin ja suojelun. Nimi on samana vuonna '
+          + 'kuolleen cruceño-luonnontieteilijän Noel Kempff Mercadon '
+          + 'mukaan. Museo muutti kampukselta nykyiselle paikalleen '
+          + '1992.'
+          + '\n\n'
+          + 'Kokoelmien mittakaava yllättää. Kasvinäytteitä on '
+          + '50 000, hyönteisiä 135 000, nisäkkäitä 1 960, kaloja '
+          + '22 000, matelijoita 4 920, sammakkoeläimiä 2 685, '
+          + 'lintuja 3 000 ja fossiileja 5 000. Näyttelyssä on '
+          + 'esillä vain pieni osa; loput ovat tutkijoiden käytössä. '
+          + 'Fossiileista huomattavimpia ovat La Guardiasta löydetyt '
+          + 'jättiläislaiskiaisen jäänteet ja laaja '
+          + 'trilobiittikokoelma.'
+          + '\n\n'
+          + 'Näyttely alkaa hedelmistä, joilla on paikalliset nimet: '
+          + 'patujú, tutumillo, mata cangrejo, peine de mono. '
+          + 'Sen jälkeen tulevat lääke- ja myrkkykasvit, käsityöpuut '
+          + 'ja chiquitano-metsän siemenet, ja vitriineissä '
+          + 'jaguaarista sähköankeriaaseen. Museon yhteydessä toimii '
+          + 'myös Bolivian idän kasvitieteellinen kokoelma ja '
+          + 'satelliittikuva-arkisto.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Tahuichi Aguileran stadion': {
+      aika: '1940',
+      teksti: 'Ensimmäisen ja toisen kehän välissä, Ejército '
+          + 'Nacionalin, Ana Barban ja Héroes del Chacon katujen '
+          + 'rajaamalla alueella, on Bolivian toiseksi suurin '
+          + 'stadion. Se avattiin 1940 kahdenkymmenenviidentuhannen '
+          + 'katsojan paikalla, ja nykyinen kapasiteetti on 32 740. '
+          + 'Stadionia hoitaa Santa Cruzin departementin hallinto.'
+          + '\n\n'
+          + 'Kotijoukkueita on kaksi, Oriente Petrolero ja Blooming, '
+          + 'ja niiden keskinäinen ottelu — Clásico Cruceño — täyttää '
+          + 'katsomot säännöllisesti. Kentällä pelaavat myös useat '
+          + 'alempien sarjojen cruceño-seurat.'
+          + '\n\n'
+          + 'Stadion on korjattu monta kertaa. Valot sytytettiin '
+          + 'ensi kerran 26. syyskuuta 1974 ottelussa, jossa '
+          + 'kohtasivat La Bélgica ja Destroyers. Seuraava iso '
+          + 'kunnostus tehtiin 1996–1997 Copa Américaa varten, '
+          + '2016–2017 tuli led-valaistus ja kameravalvonta, ja '
+          + '2021 asennettiin 14 300 istuinta. Kentän nurmea '
+          + 'pidetään maan parhaana.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+  },
 };

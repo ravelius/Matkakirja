@@ -13945,6 +13945,118 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Delaney Park Strip', lat: 61.21333, lon: -149.90167 },
     ],
   },
+  /*
+   * PUNTA ARENAS (7.9.2026). Rajaus on 1,86 × 2,13 kilometriä
+   * lampuripatsaalta rantabulevardille — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n puntaarenas-lohkossa. Ruutu on
+   * pystysuuntainen, koska kaupunki on: se on kasvanut kapealle
+   * rantakaistaleelle kukkuloiden ja Magalhãesinsalmen väliin.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN JUTTUJA. Lehden nostot ovat nimi
+   * Sandy Point, kuunari Ancud ja Fuerte Bulnes, rangaistussiirtola ja
+   * vuosi 1873 sekä lammastalous ja selkʼnamit; teemasivu kertoo
+   * salmesta, tuulesta ja ilmastosta, otsonikadosta ja Etelämantereen
+   * portista. Yksikään kartan kahdeksasta kohteesta ei ole niiden
+   * aihe. Hiilenottopaikka ja Panaman kanava on tarkoituksella
+   * jätetty lehdestä pois ja annettu rantabulevardin jutulle.
+   *
+   * MAGALHÃESIN PATSAS JA MUÑOZ GAMERON AUKIO EIVÄT OLE NUMEROITUJA
+   * KOHTEITA, vaikka ne ovat ruudun keskellä: patsaan varpaan
+   * koskettaminen on jo saapumistekstin aihe
+   * (southamerica-saapumiset.js, puntaarenas), eikä kohdekartta toista
+   * sitä. Aukio näkyy kartalla katedraalin vieressä.
+   *
+   * SARA BRAUNIN PALATSI PUDOTETTIIN ETÄISYYDEN TAKIA, ei aiheen: se
+   * on 121 metrin päässä Braun-Menéndezin palatsista, ja kaksi
+   * saman suvun palatsia vierekkäin olisi sekä liian lähellä että
+   * saman jutun toisinto. Se kerrotaan matkaoppaassa.
+   *
+   * ARTURO PRATIN LAITURI JA KAUPUNGINTORI PUDOTETTIIN
+   * ENSIMMÄISESTÄ LUONNOKSESTA: laituri osoittautui
+   * tarkista-karttapisteet.mjs:n mukaan 84-prosenttisesti vedeksi, ja
+   * kaupungintorille ei löytynyt lähdeartikkelia. Tilalle tulivat
+   * merisotamuseo ja rantabulevardi.
+   */
+  puntaarenas: {
+    polku: 'assets/kartat/puntaarenas-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -53.1478, etela: -53.1670, lansi: -70.9201, ita: -70.8923 },
+    esittely: 'Oikeassa laidassa on Magalhãesinsalmi, ja rantaviiva '
+      + 'kulkee kuvan halki vinosti oikeasta yläkulmasta alas '
+      + 'keskelle. Rannan ja kukkuloiden väliin jää tiivis ruutukaava, '
+      + 'jonka poikki kulkee kolme leveämpää väylää. Vasemmassa '
+      + 'laidassa korttelit harvenevat ja maa nousee. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit Nominatimista 7.9.2026, katedraali en-Wikipedian
+       * coord-mallista. Kaikki 28 väliä on mitattu haversinilla:
+       * pienin on 188 metriä (Braun-Menéndezin palatsi –
+       * merisotamuseo), toiseksi pienin 208 metriä.
+       */
+      { nimi: 'Lampuripatsas', lat: -53.149764, lon: -70.896575 },
+      { nimi: 'Sara Braunin hautausmaa', lat: -53.152999, lon: -70.897648 },
+      { nimi: 'Salesiaanien museo', lat: -53.155612, lon: -70.902287 },
+      { nimi: 'Cerro de la Cruz', lat: -53.160112, lon: -70.915813 },
+      { nimi: 'Sagrado Corazónin katedraali', lat: -53.162000, lon: -70.909000 },
+      { nimi: 'Braun-Menéndezin palatsi', lat: -53.162177, lon: -70.905893 },
+      { nimi: 'Merisotamuseo', lat: -53.163581, lon: -70.904302 },
+      { nimi: 'Salmen rantabulevardi', lat: -53.164567, lon: -70.900459 },
+    ],
+  },
+  /*
+   * SANTA CRUZ DE LA SIERRA (7.9.2026). Rajaus on 3,12 × 2,88
+   * kilometriä ja kattaa vanhan ruutukaavan, ensimmäisen kehäkadun ja
+   * sen molemmat laidat — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n santacruz-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN JUTTUJA. Lehden nostot ovat chanét ja
+   * Grigotá, kaupungin kolme muuttoa 1561–1622, vuoden 1810 kapina ja
+   * Warnesin vuodet sekä Andrés Ibáñez ja igualitaarit 1872—1877;
+   * teemasivu kertoo camba-sanasta, taquiraritanssista, chovenasta ja
+   * karnevaalista. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe. Hautausmaan juttu mainitsee Ibáñezin haudan yhdellä
+   * lauseella ja viittaa lehteen, kuten Lagosin Ajele-juttu viittaa
+   * Kristuksen katedraaliin.
+   *
+   * PLAZA 24 DE SEPTIEMBRE JA KATEDRAALI OVAT 114 METRIN PÄÄSSÄ
+   * toisistaan, ja se on tietoinen poikkeus 200 metrin
+   * nyrkkisäännöstä samalla perusteella kuin Fèsin medinassa: tässä
+   * mittakaavassa (1,95 m/px) väli on 58 pikseliä eivätkä
+   * numeroympyrät mene päällekkäin. Aukiolla ja kirkolla on eri
+   * tarina — aukiolla nimihistoria, katedraalilla rakennus ja
+   * Moxosin hopeaverhoilu.
+   */
+  santacruz: {
+    polku: 'assets/kartat/santacruz-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -17.7729, etela: -17.7988, lansi: -63.1988, ita: -63.1693 },
+    esittely: 'Kartan keskellä on vanha ruutukaava, jonka ympäri '
+      + 'kaartaa ensimmäinen kehäkatu — se on kartan selvin muoto ja '
+      + 'näkyy lähes täytenä renkaana. Renkaasta lähtee säteittäisiä '
+      + 'katuja joka suuntaan, ja niiden välit ovat kortteleita. '
+      + 'Vasemmassa laidassa on yliopiston kampus, oikeassa laidassa '
+      + 'hautausmaan kortteli ja alalaidassa toinen kehä. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit Nominatimista 7.9.2026, katedraali en-Wikipedian
+       * coord-mallista ja hautausmaa en-Wikipedian geosearchista.
+       * Kaikki 28 väliä on mitattu haversinilla: pienin on 114 metriä
+       * (aukio – katedraali), toiseksi pienin 433 metriä.
+       */
+      { nimi: 'Avión Pirata', lat: -17.775674, lon: -63.174000 },
+      { nimi: 'Gabriel René Moreno -yliopisto', lat: -17.775749, lon: -63.195902 },
+      { nimi: 'El Arenalin puisto', lat: -17.778800, lon: -63.180600 },
+      { nimi: 'Yleinen hautausmaa', lat: -17.781409, lon: -63.172133 },
+      { nimi: 'Plaza 24 de Septiembre', lat: -17.783255, lon: -63.182119 },
+      { nimi: 'San Lorenzon katedraali', lat: -17.784200, lon: -63.181700 },
+      { nimi: 'Noel Kempff Mercadon museo', lat: -17.792713, lon: -63.181884 },
+      { nimi: 'Tahuichi Aguileran stadion', lat: -17.796100, lon: -63.183900 },
+    ],
+  },
 };
 
 /*

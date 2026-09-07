@@ -92521,4 +92521,847 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * PUNTA ARENAS (Opus 7.9.2026, parvierä) — Etelä-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-puntaarenas.md ja sen riippumaton tarkistus
+   * tarkistus-puntaarenas.md (tuomio "kelpaa, kun kohtien A–H
+   * ratkaisut tehdään"; kaikki on tehty, ks. alla). Väitteet on luettu
+   * en-Wikipedian raakatekstistä 7.9.2026: "Punta Arenas",
+   * "Strait of Magellan", "Fuerte Bulnes", "Puerto del Hambre",
+   * "Chilean schooner Ancud", "Sociedad Explotadora de Tierra del
+   * Fuego", "Sara Braun", "Cemetery of Punta Arenas", "Magdalena
+   * Island, Magallanes Region", "Croatian Chileans", "Luis Pardo",
+   * "Selkʼnam people", "Antarctic gateway cities".
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   * Saapumisteksti (southamerica-saapumiset.js) ja valokuvataulu
+   * (southamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * kosketa. Saapumistekstin köydet kadulla, salmen tulli ja
+   * Magalhãesin patsaan varvas jäävät siis peliin, eikä lehti toista
+   * niitä.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto', koska AIHE_IKONIT ei tarjoa salmelle omaa
+   * kuvaketta eikä uusia sivu-id:itä tehdä; sivun nimi "Salmi ja
+   * Etelämanner" kertoo aiheen.
+   *
+   * CHILEN MAALEHTEÄ EI TOISTETA. Maalehti (maa-kategoriat.js, CHL)
+   * kertoo mapuchejen rajasta, itsenäisyysjulistuksesta,
+   * saksalaissiirtolaisista ja Humberstonesta, Pääsiäissaaresta,
+   * Robinson Crusoen saaresta, Chilotén puukirkoista, JAGANEISTA JA
+   * BRIDGESIN SANAKIRJASTA, Atacamasta, Valdivian maanjäristyksestä,
+   * ETELÄISESTÄ JÄÄKENTÄSTÄ, alercesta, carménèrestä, curannosta,
+   * humitasta, merkénistä, cuecasta ja Violeta Parrasta. Yksikään
+   * näistä ei ole tämän lehden aihe. GUANAKO mainitaan yhdessä
+   * lauseessa, koska ilman sitä selkʼnamien tarina ei ole
+   * ymmärrettävä — lajista itsestään ei sanota mitään, se on
+   * elaintakyt.js:n CHL-täky.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: Cavendishin löytämistä eloonjääneistä kerrotaan kohteen
+   *    oman artikkelin versio (kaksi, joista toinen kuoli).
+   *  - B: Ancudin miehistömäärä kerrotaan MOLEMMILLA luvuilla
+   *    (23 ja 21), koska lähteet eivät sovi yhteen.
+   *  - C: Fuerte Bulnesin etäisyydeksi sanotaan "runsaat
+   *    viisikymmentä kilometriä" — koordinaateista laskettu 51,7 km
+   *    voittaa leipätekstien 58, 62, 70 ja 80 kilometriä.
+   *  - D: lammasyhtiön koko kerrotaan vuokrasopimusten omilla
+   *    luvuilla, ei ristiriitaisilla pyöreillä pinta-aloilla.
+   *  - E: lämpötilat sääruudusta (1991–2020), ei leipätekstin
+   *    pyöristyksistä.
+   *  - F: köysiä kadulla EI mainita — Wikipedia on itse merkinnyt
+   *    väitteen lähteettömäksi vuonna 2015.
+   *  - G: katedraalin "ensimmäinen kirkko 1584" jätetään pois
+   *    (kaupunkia ei ollut olemassa); kohde on kohdekartalla.
+   *  - H: selkʼnamien kohtalo kerrotaan tapahtumana ilman
+   *    julmuuksien yksityiskohtia ja päättyy vuoden 2023
+   *    tunnustukseen; vuodet 1973–1990 on rajattu ulos samalla
+   *    periaatteella kuin Chilen maalehdessä.
+   *
+   * MINITEHTÄVÄ EI TOISTA VISAA. Kaupungin visa
+   * (southamerica-questions.js, puntaarenas) kysyy salmesta, Panaman
+   * kanavasta 1914, eteläisimmästä kaupungista, Magalhãesista 1520 ja
+   * lampaanvillasta. Minitehtävä kysyy Luis Pardon vastauksesta
+   * Britannian rahapalkkioon, eikä se ole yksikään niistä.
+   */
+  puntaarenas: [
+    {
+      id: 'kaupunki',
+      nimi: 'Punta Arenas',
+      johdanto: 'Kaupunki syntyi rangaistussiirtolasta ja merkiksi '
+        + 'siitä, että Magalhãesinsalmi kuuluu Chilelle. Isoisän '
+        + 'matkavuonna 1873 se oli yhä pieni — vauraus tuli vasta '
+        + 'lampaista, ja se maksoi hintansa.',
+      nostot: [
+        {
+          otsikko: 'Sandy Point, joka käännettiin kahdesti',
+          teksti: 'Kaupungin nimi on käännös käännöksestä. '
+            + 'Englantilainen John Narborough purjehti salmelle '
+            + 'vuosina 1669–1671 ja kirjoitti muistiin matalan niemen, '
+            + 'joka työntyy muita kauemmas ja jolla kasvaa muutama '
+            + 'puu: Sand-Point. Espanjaksi siitä tuli ensin Punta '
+            + 'Arenosa ja lopulta Punta Arenas, hiekkaniemi. '
+            + 'Nimeäminen liitetään joskus virheellisesti John '
+            + 'Byroniin. Kaupunki nimettiin '
+            + 'virallisesti Magallanesiksi 1927, mutta nimi '
+            + 'palautettiin 1938; koko alue kantaa yhä Magallanesin '
+            + 'nimeä. Lempinimi punaisten kattojen kaupunki tulee '
+            + 'punaiseksi maalatuista peltikatoista — noin 1970 '
+            + 'alkaen muitakin värejä on ollut saatavilla, ja katot '
+            + 'ovat kirjavoituneet.',
+          wiki: 'Punta Arenas',
+        },
+        {
+          otsikko: 'Kuunari, joka rakennettiin yhtä matkaa varten',
+          teksti: 'Chile lähetti 1843 retkikunnan rakentamaan '
+            + 'linnakkeen salmen rannalle. Sitä varten rakennettiin '
+            + 'San Carlos de Ancudissa kuunari Ancud, ensimmäinen '
+            + 'Chilessä rakennettu sota-alus: viisitoista metriä '
+            + 'pitkä ja neljällä tykillä varustettu. Komentajana oli '
+            + 'britannialaissyntyinen Chilen laivaston upseeri John '
+            + 'Williams Wilson. Aluksen oma artikkeli laskee kannella '
+            + 'olleen kaksikymmentäkolme ihmistä, joista kaksi naista '
+            + 'ja yksi lapsi; kaupungin artikkeli laskee '
+            + 'kaksikymmentäyksi. Ancud lähti 22. toukokuuta ja saapui '
+            + 'Punta Santa Analle 21. syyskuuta 1843. Koko miehistö '
+            + 'nousi maihin, ja rantaan jätettiin kyltti sanoilla '
+            + 'Viva Chile.',
+          wiki: 'Chilean schooner Ancud',
+        },
+        {
+          otsikko: 'Vuosi 1873: kirje merenkulkumaille',
+          teksti: 'Ensimmäiset vuosikymmenet olivat rankkoja. Chile '
+            + 'käytti Punta Arenasia rangaistussiirtolana ja '
+            + 'kurinpitopaikkana ongelmallisiksi katsotuille '
+            + 'sotilaille. Joulukuussa 1851 vankien kapina johti '
+            + 'kuvernööri Muñoz Gameron ja paikkakunnan papin surmaan '
+            + 'sekä kirkon ja sairaalan tuhoon, ja 1877 tykkimiesten '
+            + 'kapina tuhosi suuren osan kaupungista. Väliin mahtui '
+            + 'käänne: 1867 presidentti José Joaquín Pérez tarjosi '
+            + 'maata kenelle tahansa, joka suostui asettumaan '
+            + 'seudulle, ja ensimmäiset britit saapuivat samana '
+            + 'vuonna. Isoisän matkavuonna 1873 Chile lähetti suurille '
+            + 'merenkulkumaille kirjeen, jossa se lupasi salmen olevan '
+            + 'vapaa ja puolueeton kaikille lipuille.',
+          wiki: 'Punta Arenas',
+        },
+        {
+          otsikko: 'Miljoona hehtaaria lampaita',
+          teksti: 'Huhtikuussa 1889 portugalilainen laivanvarustaja '
+            + 'José Nogueira vuokrasi 180 000 hehtaaria Tulimaata, ja '
+            + 'vuotta myöhemmin hän ja Sara Braun saivat vuokralle '
+            + '1 009 000 hehtaaria eli kolmanneksen saaren '
+            + 'vuokrattavasta maasta. Nogueiran kuoltua 1893 Braun '
+            + 'otti yhtiön haltuunsa. Aidat katkaisivat selkʼnamien '
+            + 'vaellusreitit ja lampaat veivät heidän tärkeimmän '
+            + 'ravintonsa guanakon; yhtiö sai hallitukselta luvan '
+            + 'poistaa alkuperäisväestön alueelta, ja José Menéndez '
+            + 'antoi käskyn heidän hävittämisestään. Vuoden 2008 '
+            + 'totuuskomissio osoitti sukujen osuuden. Isoisän '
+            + 'matkavuonna selkʼnameja oli vielä noin neljä tuhatta, '
+            + 'ja Chile tunnusti heidät eläväksi kansaksi 2023.',
+          wiki: 'Sociedad Explotadora de Tierra del Fuego',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Punta Arenas on Magallanesin ja Chilen Antarktiksen '
+          + 'alueen pääkaupunki ja maailman eteläisin yli sadantuhannen '
+          + 'asukkaan kaupunki — Argentiinan Ushuaia on etelämpänä '
+          + 'mutta pienempi. Vuoden 2024 laskennassa asukkaita oli '
+          + '132 363. Kaupunki on Brunswickin niemimaan koillisrannalla, '
+          + '635 kilometriä Ushuaiasta ja 1 419 kilometriä '
+          + 'Etelämantereen rannikolta. Maanteitse muualle Chileen '
+          + 'pääsee vain Argentiinan kautta. Vuodesta 1977 se on ollut '
+          + 'yksi Chilen kahdesta vapaa-alueen kaupungista Iquiquen '
+          + 'ohella; kaupunki itse ei ole vapaasatama, vaan sen '
+          + 'ulkopuolella on zona franca, jossa osa tuonnista saa '
+          + 'alennetun verokohtelun. Lähellä ovat Chilen tärkeimmät '
+          + 'öljyvarat, ja lampaat ja karja ovat yhä merkittäviä.',
+        artikkeli: {
+          nimi: 'Matkailijan Punta Arenas',
+          taitto: 'opas',
+          teksti: 'Kaupunki, johon ei pääse omasta maastaan käsin '
+            + 'ajamatta naapurin läpi: salmi edessä, Etelämanner '
+            + 'takana ja tuuli joka päivä.',
+          nosto: 'Magdalenan saari on 32 kilometriä koilliseen, ja '
+            + 'siitä tuli Martan saaren kanssa Los Pingüinosin '
+            + 'luonnonmuistomerkki 1982. Magalhãespingviinien '
+            + 'pesimäkanta oli 59 000 paria kaudella 2000–01 ja '
+            + '63 000 paria 2008–09, mutta enää 43 000 paria '
+            + '2018–19.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Carlos Ibáñez del Campon kansainvälinen '
+                + 'lentoasema on kahdenkymmenen kilometrin päässä '
+                + 'keskustasta, ja siellä lentävät LATAM Chile ja Sky '
+                + 'Airline sekä tilauslennot. Siviili- ja '
+                + 'sotilaslentoasema muodostavat yhden kokonaisuuden. '
+                + 'Maanteitse muualle Chileen pääsee vain Argentiinan '
+                + 'puolen kautta, mikä on hyvä muistaa passia '
+                + 'pakatessa. Meritse kaupunkiin tulee risteilyjä ja '
+                + 'lauttoja; kustannukset ovat korkeammat, koska '
+                + 'matkaan kuuluu pysähdyksiä reitin varrella. '
+                + 'Aikatauluun kuuluva lautta kulkee Tulimaan '
+                + 'pääsaarelle ja harvemmin Puerto Williamsiin. '
+                + 'Vuodesta 2017 kaupunki ja koko alue ovat omassa '
+                + 'aikavyöhykkeessään ja käyttävät kesäaikaa ympäri '
+                + 'vuoden.',
+            },
+            {
+              otsikko: 'Salmen laidalla',
+              teksti: 'Kaupungista etelään, runsaat viisikymmentä '
+                + 'kilometriä, on Fuerte Bulnes: 1843 pystytetty '
+                + 'linnake, joka rakennettiin hirsistä sekä mullasta '
+                + 'ja ruohosta tehdyistä tiilistä ja nimettiin '
+                + 'presidentti Manuel Bulnes Prieton mukaan. Kun väki '
+                + 'muutti Punta Arenasiin 1848, linnake poltettiin; '
+                + 'se rakennettiin uudelleen museokohteeksi '
+                + '1941–1943 ja on ollut kansallismonumentti 1968. '
+                + 'Kaksi kilometriä pohjoisempana on Puerto del '
+                + 'Hambre, espanjalaisten vuoden 1584 siirtokunnan '
+                + 'paikka. Pohjoiseen päin, 7,5 kilometriä '
+                + 'keskustasta, on Nao Victoria -museo, jossa on '
+                + 'täysimittaiset jäljennökset Magalhãesin '
+                + 'Victoriasta, Shackletonin James Cairdista ja '
+                + 'kuunari Ancudista.',
+            },
+            {
+              otsikko: 'Pingviinisaari ja vartijat',
+              teksti: 'Magdalenan saarella on kesäisin kuusi ja '
+                + 'talvisin kolme puistovartijaa, jotka asuvat '
+                + 'majakkaan liittyvässä rakennuksessa; '
+                + 'ensimmäisen vuoden vartijat eivät saa ilmoittautua '
+                + 'talvivuoroon. Pingviinikannan lasku on tutkittu, ja '
+                + 'syy ei ole turismi: vuosien 2009 ja 2010 ankara '
+                + 'kuivuus tappoi saaren kasvillisuuden, ja tuuli '
+                + 'siirsi irtomaata koloihin, munien ja poikasten '
+                + 'päälle. Poikasten tärkein saalistaja on '
+                + 'chilenkihu, joka karttaa turistipolkuja — polun '
+                + 'varren pesissä poikaset menestyvät hieman muita '
+                + 'paremmin. Osa linnuista on siirtynyt Argentiinan '
+                + 'puolen Cabo Vírgenesin yhdyskuntaan.',
+            },
+            {
+              otsikko: 'Brauneja ja muistoja',
+              teksti: 'Sara Braun saapui Magallanesiin helmikuussa '
+                + '1874 kaksitoistavuotiaana, neljänkymmenenkuuden '
+                + 'muun siirtolaisen kanssa; perhe oli lähtenyt '
+                + 'Kuurinmaalta juutalaisvainojen takia ja kiertänyt '
+                + 'Buenos Airesin ja Paraguayn kautta. Hänen '
+                + 'palatsinsa aukion laidalla ostettiin kalusteineen '
+                + 'Unionin klubille, ja se on ollut historiallinen '
+                + 'monumentti vuodesta 1981. Kaupungin pohjoisosassa '
+                + 'on Magallanesin yliopiston Museo del Recuerdo: '
+                + 'kahdeksan puista perinnerakennusta, neljäkymmentä '
+                + 'vanhaa ajoneuvoa sekä koneita ja työkaluja, '
+                + 'enimmäkseen karjatalouden ja öljyntuotannon '
+                + 'jäljiltä. Kroaattien vaikutus näkyy kaupungissa '
+                + 'kauppojen, katujen ja rakennusten nimissä.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Punta Arenas '
+                + '-artikkelin sääruudusta (1991–2020); lehdellä ei '
+                + 'ole omaa vuosigraafia, koska säänormaaleja ei '
+                + 'haettu tässä erässä. Ilmasto on subpolaarinen '
+                + 'merellinen, ja meri tasaa lämpötilat: tammikuun '
+                + 'keskiylin on 16,3 astetta ja heinäkuun 4,9, '
+                + 'heinäkuun keskialin −1,5. Sadetta tulee vain 390 '
+                + 'millimetriä vuodessa, koska Andit jäävät väliin; '
+                + 'sateisinta on huhti–toukokuussa ja lunta sataa '
+                + 'kesäkuusta syyskuuhun. Tuuli on kova, jopa 130 '
+                + 'kilometriä tunnissa, ja voimakkaimmillaan juuri '
+                + 'kesällä — matkalaukkuun kannattaa siis pakata '
+                + 'tuulitakki myös tammikuuksi.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Sara Braunin hautausmaa',
+                tahdet: 3,
+                selite: 'Neljä hehtaaria sypressikäytäviä ja '
+                  + 'sukujen kappeleita; Chilen kansallismonumentti '
+                  + 'vuodesta 2012.',
+              },
+              {
+                mita: 'Magdalenan saaren pingviinit',
+                tahdet: 3,
+                selite: 'Kymmeniätuhansia pesiviä pareja 32 '
+                  + 'kilometrin päässä koilliseen; käynti onnistuu '
+                  + 'vain pesimäkaudella.',
+              },
+              {
+                mita: 'Nao Victoria -museo',
+                tahdet: 3,
+                selite: 'Kolme täysimittaista laivajäljennöstä: '
+                  + 'Victoria, James Caird ja kuunari Ancud.',
+              },
+              {
+                mita: 'Fuerte Bulnes',
+                tahdet: 2,
+                selite: 'Chilen ensimmäinen asutus salmella, '
+                  + 'rakennettu uudelleen alkuperäiselle paikalleen '
+                  + 'kalliokukkulalle.',
+              },
+              {
+                mita: 'Cerro de la Cruz',
+                tahdet: 2,
+                selite: 'Keskustan yläpuolinen kukkula, jolta '
+                  + 'ruutukaava, satama ja salmi näkyvät yhdellä '
+                  + 'silmäyksellä.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5
+             * ja teemasivun nostoissa. Otsoniriviä ei kirjoiteta
+             * varoitukseksi vaan tosiasiaksi, kuten lähde sen antaa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Rajan yli omaan maahan',
+                teksti: 'Maanteitse muualle Chileen pääsee vain '
+                  + 'Argentiinan puolen kautta — passi kannattaa '
+                  + 'pitää mukana myös kotimaan matkalla.',
+              },
+              {
+                otsikko: 'Tuuli on kovinta kesällä',
+                teksti: 'Puuskat yltävät 130 kilometriin tunnissa, '
+                  + 'ja ne ovat voimakkaimmillaan juuri lämpimimpinä '
+                  + 'kuukausina eivätkä talvella.',
+              },
+              {
+                otsikko: 'Aurinko puree tavallista enemmän',
+                teksti: 'Kaupunki oli 1986 jälkeen ensimmäinen '
+                  + 'väkirikas paikka ohentuvan otsonikerroksen '
+                  + 'alla, ja asukkaiden katsotaan altistuvan '
+                  + 'tavallista voimakkaammalle ultraviolettisäteilylle.',
+              },
+              {
+                otsikko: 'Kello käy omalla ajallaan',
+                teksti: 'Alue on vuodesta 2017 omassa '
+                  + 'aikavyöhykkeessään ja käyttää kesäaikaa ympäri '
+                  + 'vuoden, joten ero muuhun Chileen vaihtelee '
+                  + 'vuodenajan mukaan.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Salmi ja Etelämanner',
+      johdanto: 'Punta Arenas on olemassa salmen takia: se on ainoa '
+        + 'suojainen tie valtamerestä toiseen mantereen eteläkärjen '
+        + 'ohi. Sama sijainti tekee kaupungista Etelämantereen '
+        + 'portin.',
+      tehtava: {
+        kysymys: 'Mitä Luis Pardo teki, kun Britannian hallitus '
+          + 'tarjosi hänelle suurta rahapalkkiota pelastusretkestä?',
+        vaihtoehdot: [
+          'Lahjoitti sen laivastolle',
+          'Kieltäytyi ja sanoi vain täyttäneensä tehtävänsä',
+          'Osti sillä oman laivan',
+          'Jakoi sen Yelchon miehistön kesken',
+        ],
+        oikea: 1,
+        fakta: 'Pardo jäi eläkkeelle laivastosta 1919 ja toimi '
+          + 'myöhemmin Chilen konsulina Liverpoolissa 1930–1934.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kolmekymmentäkahdeksan päivää salmessa',
+          teksti: 'Magalhãesinsalmi on noin 570 kilometriä pitkä ja '
+            + 'kapeimmillaan kaksi kilometriä leveä Carlos III '
+            + '-saaren kohdalla. Se erottaa Etelä-Amerikan mantereen '
+            + 'Tulimaan saaristosta ja on tärkein luonnollinen '
+            + 'kulkuväylä Atlantilta Tyynellemerelle. Magalhãesin '
+            + 'laivue purjehti sinne pyhäinpäivänä 1. marraskuuta '
+            + '1520, ja hän antoi salmelle nimen Kaikkien pyhien '
+            + 'salmi; läpimenoon kului kolmekymmentäkahdeksan päivää. '
+            + 'Sadassa vuodessa salmen kulki vähintään 55 laivaa: 23 '
+            + 'espanjalaista, 17 englantilaista ja 15 hollantilaista. '
+            + 'Purjelaivat suosivat silti Drakensalmea, vaikka reitti '
+            + 'on satoja maileja pidempi.',
+          wiki: 'Strait of Magellan',
+        },
+        {
+          otsikko: 'Beaglen jäljillä ja Darwinin pyynnöstä',
+          teksti: 'Salmi kartoitettiin kunnolla vasta 1800-luvulla. '
+            + 'Phillip Parker King mittasi rannat 1826–1830 HMS '
+            + 'Adventurella yhdessä HMS Beaglen kanssa, ja työstä '
+            + 'kerrottiin Lontoon maantieteellisen seuran kahdessa '
+            + 'kokouksessa 1831. Richard Charles Mayne johti HMS '
+            + 'Nassaun mittausretkeä 1866–1869; luonnontieteilijänä '
+            + 'oli Robert Oliver Cunningham. Charles Darwin pyysi '
+            + 'amiraliteettia käskemään Maynen keräämään venelastin '
+            + 'verran sukupuuttoon kuolleiden nelijalkaisten '
+            + 'fossiileja, ja löydöt vietiin British Museumiin. '
+            + 'Amiraliteetti kokosi salmen purjehdusohjeet 1871, '
+            + 'kaksi vuotta ennen isoisän matkaa. Vuoden 1881 '
+            + 'rajasopimuksessa Argentiina tunnusti salmen Chilelle.',
+          wiki: 'Strait of Magellan',
+        },
+        {
+          otsikko: 'Ensimmäinen kaupunki ohentuvan taivaan alla',
+          teksti: 'Ilmasto on subpolaarinen merellinen, ja meren '
+            + 'läheisyys tasaa lämpötilat: tammikuun keskiylin on '
+            + '16,3 astetta ja heinäkuun 4,9, heinäkuun keskialin '
+            + '−1,5. Sade jää 390 millimetriin vuodessa, koska Andit '
+            + 'tekevät sadevarjon, ja tuuli yltää 130 kilometriin '
+            + 'tunnissa voimakkaimmillaan kesällä. Vuoden 1986 '
+            + 'jälkeen Punta Arenasista tuli maailman ensimmäinen '
+            + 'väkirikas kaupunki, johon ohentuva otsonikerros '
+            + 'vaikutti suoraan, ja asukkaiden katsotaan altistuvan '
+            + 'mahdollisesti haitalliselle '
+            + 'ultraviolettisäteilylle. Väitettä on tutkittu '
+            + 'vertaisarvioidusti ihosyövän ja UV-B-säteilyn osalta '
+            + 'vuosina 1987–2000.',
+          wiki: 'Punta Arenas',
+        },
+        {
+          otsikko: 'Hinaaja, joka haki kaksikymmentäkaksi miestä',
+          teksti: 'Ernest Shackletonin Endurance jäi jäihin 1915 ja '
+            + 'murskaantui; miehistö pääsi veneillä Elephant '
+            + 'Islandille. Shackleton lähti viiden miehen kanssa '
+            + 'hakemaan apua, ja kaksikymmentäkaksi miestä jäi '
+            + 'odottamaan. Kolme yritystä epäonnistui, ja neljänteen '
+            + 'lähti Punta Arenasista höyryhinaaja Yelcho '
+            + 'luutnantti Luis Pardon komennossa: 36,5 metriä pitkä '
+            + 'alus ilman radiota, lämmitystä ja kaksoisrunkoa, '
+            + 'keskellä eteläistä talvea. Yelcho '
+            + 'lähti 25. elokuuta 1916, miehet pelastettiin 30. '
+            + 'elokuuta ja paluu kaupunkiin oli 3. syyskuuta. '
+            + 'Britannian hallitus tarjosi Pardolle suurta '
+            + 'rahapalkkiota; hän kieltäytyi ja sanoi vain '
+            + 'täyttäneensä laivaston antaman tehtävän.',
+          wiki: 'Luis Pardo',
+        },
+      ],
+    },
+  ],
+  /*
+   * SANTA CRUZ DE LA SIERRA (Opus 7.9.2026, parvierä) —
+   * Etelä-Amerikan laudan kaupunkilehti. Aineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-santacruz.md ja sen
+   * riippumaton tarkistus tarkistus-santacruz.md (tuomio "kelpaa,
+   * kun kohtien A–J ratkaisut tehdään"; kaikki on tehty).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Santa Cruz de la Sierra", "Ñuflo de Chaves", "Camba",
+   * "Cathedral Basilica of St. Lawrence, Santa Cruz de la Sierra",
+   * "General Cemetery of Santa Cruz", "Carnival of Santa Cruz de la
+   * Sierra". Kuudelle aiheelle en-Wikipediassa ei ole artikkelia
+   * lainkaan, ja niiden lähde on es-Wikipedia (7.9.2026):
+   * "Andrés Ibáñez (político)", "Taquirari", "Chovena",
+   * "Carnaval de Santa Cruz de la Sierra". Sama ratkaisu kuin
+   * Guatemalan kohdekartassa.
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti.
+   * Saapumisteksti (southamerica-saapumiset.js) ja valokuvataulu
+   * olivat jo olemassa eikä niihin kosketa — laiskiaiset
+   * pääaukion puissa ja härkävankkurit jäävät saapumiskortille.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'musiikki'; sivun nimi "Karnevaali ja camban tanssit"
+   * kertoo aiheen.
+   *
+   * BOLIVIAN MAALEHTEÄ EI TOISTETA. Maalehti (maa-kategoriat.js,
+   * BOL) kertoo La Pazin piirityksestä ja Túpac Katarista, maan
+   * nimen keksimisestä, kymmenen sentin verosta ja merenmenetyksestä,
+   * merivoimista ilman merta; Madidista, James-flamingosta, Puya
+   * raimondiista ja Mojosin savannista; salteñasta, chuñosta,
+   * singanista ja kvinoasta; Los Jairasista, sayasta, "Llorando se
+   * fue" -laulusta ja Luzmila Carpiosta; Holguínista, Cuzcon
+   * enkeleistä, Guzmán de Rojasista ja Núñez del Pradosta.
+   *
+   * KAKSI SANTA CRUZIN OMAN MAAKUNNAN AIHETTA ON VARATTU
+   * KARTTANOSTOILLE: Chiquitosin lähetysasemat ja Samaipata
+   * (maastokohteet-bol.js). Lehti ei kerro kummastakaan;
+   * jesuiittalähetykset mainitaan vain siinä yhdessä lauseessa,
+   * jossa ne selittävät kaupungin roolin lähtöpaikkana.
+   * ORURON KARNEVAALI on niin ikään karttanosto, ja siksi teemasivun
+   * karnevaalinosto kertoo VAIN Santa Cruzin oman juhlan piirteet:
+   * 1800-luvun ratsastuskulkueen, talkin ja mullan, yksitoista
+   * päivää, munankuoret ja vuoden 1936 ensimmäisen kuningattaren.
+   * Diabladaa, Oruroa ja Unescoa ei mainita.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: chané- ja Grigotá-osio on Wikipedian itsensä mukaan
+   *    lähteetön, joten nosto alkaa siitä, mitä ei tiedetä.
+   *  - B: perustamispaikan etäisyydeksi sanotaan "runsaat
+   *    kaksisataa kilometriä" (lähteet antavat 200 ja 220).
+   *  - C ja D: camba-sanasta ja taquirarista kerrotaan MOLEMMAT
+   *    etymologiat, koska lähde ei valitse.
+   *  - E: chovenan alkuperäksi ei nimetä yhtä kansaa.
+   *  - F: cuñapé mainitaan vain nimenä (en-Wikipedian ohjaus vie
+   *    väärään artikkeliin "Chipa").
+   *  - H: katedraalin vuosilukuja 1595 ja 1915 ei käytetä; kohde on
+   *    kohdekartalla.
+   *  - J: Ibáñezin loppu kerrotaan yhdellä lauseella ilman
+   *    yksityiskohtia, ja nykypolitiikka on kokonaan poissa.
+   *
+   * MINITEHTÄVÄ EI TOISTA VISAA. Kaupungin visa
+   * (southamerica-questions.js, santacruz) kysyy maasta, Andien
+   * puolesta, soijasta, virallisten kielten määrästä ja hallinnon
+   * sijainnista. Minitehtävä kysyy chovenaan lisätystä soittimesta.
+   */
+  santacruz: [
+    {
+      id: 'kaupunki',
+      nimi: 'Santa Cruz de la Sierra',
+      johdanto: 'Kaupunki perustettiin kolme kertaa, jäi kolmeksi '
+        + 'vuosisadaksi pieneksi etupostiksi ja kasvoi sitten '
+        + 'maansa suurimmaksi. Isoisän matkavuonna se oli vielä '
+        + 'jälkimmäisessä vaiheessa.',
+      nostot: [
+        {
+          otsikko: 'Chanét, Grigotá ja se mitä ei tiedetä',
+          teksti: 'Alueen historiaa ennen eurooppalaisia tunnetaan '
+            + 'huonosti: paikallisilla kansoilla ei ollut '
+            + 'kirjoitusta, ja elämä oli osin kiertelevää. '
+            + 'Tuoreemman aineiston mukaan nykyisen kaupungin '
+            + 'paikalla asui arawak-kansa, jota espanjalaiset '
+            + 'alkoivat kutsua chanéksi; alueelta on löydetty '
+            + 'keramiikkaa ja aseita, mikä viittaa pysyviin '
+            + 'asuinpaikkoihin. Ensimmäisten espanjalaisten '
+            + 'kertomusten mukaan chanéilla oli päällikkö, cacique, '
+            + 'nimeltä Grigotá, ja hänen valtansa päättyi yhteen '
+            + 'guaraníkansan hyökkäyksistä. Chanét eivät hävinneet '
+            + 'minnekään: he ovat yksi nykyisen cruceño-väestön '
+            + 'juurista espanjalaisten ja Paraguayn guaraníen '
+            + 'rinnalla.',
+          wiki: 'Santa Cruz de la Sierra',
+        },
+        {
+          otsikko: 'Kaupunki, joka muutti kolme kertaa',
+          teksti: 'Ñuflo de Chávez perusti Santa Cruz de la Sierran '
+            + '26. helmikuuta 1561 runsaat kaksisataa kilometriä '
+            + 'nykyisestä paikasta itään ja nimesi sen kotikaupunkinsa '
+            + 'mukaan Extremadurassa. Chávez kaatui 1568, ja Perun '
+            + 'viranomaiset käskivät siirtää kaupungin länteen: 13. '
+            + 'syyskuuta 1590 se muutti Guapay Empero -joen rannalle '
+            + 'nimellä San Lorenzo de la Frontera, ja koska olot '
+            + 'olivat siellä vielä ankarammat, uudelleen 21. '
+            + 'toukokuuta 1595. Vanhalle paikalle jääneet '
+            + 'suostuteltiin muuttamaan vasta 1600-luvun alussa, ja '
+            + '1622 kaupunki vakiintui ja otti takaisin '
+            + 'alkuperäisen nimensä. Ensimmäisen asutuksen jäänteet '
+            + 'ovat Santa Cruz la Viejassa.',
+          wiki: 'Santa Cruz de la Sierra',
+        },
+        {
+          otsikko: 'Warnes, Florida ja seitsemän vuotta',
+          teksti: 'Kaupunkilaiset syrjäyttivät kuvernöörin sijaisen '
+            + '24. syyskuuta 1810 Antonio Vicente Seoanen johdolla, '
+            + 'ja paikallisista komentajista koottu juntta otti '
+            + 'vallan. Kolme vuotta myöhemmin Argentiinan '
+            + 'vallankumousarmeija lähetti kenraali Manuel Belgranon '
+            + 'käskystä Ignacio Warnesin pienen joukon kanssa. '
+            + 'Warnes kokosi vuodessa laajan kannatuksen kreoleista, '
+            + 'mestitseistä ja alkuperäisväestöstä ja voitti '
+            + 'espanjalaiset Floridan taistelussa. Kaksi vuotta '
+            + 'myöhemmin hän kaatui Parin taistelussa. Sen '
+            + 'jälkeen José Manuel Baca ja José Manuel Mercado '
+            + 'jatkoivat vielä seitsemän vuotta, kunnes viimeinen '
+            + 'espanjalainen kuvernööri syrjäytettiin helmikuussa '
+            + '1825.',
+          wiki: 'Santa Cruz de la Sierra',
+        },
+        {
+          otsikko: 'Vuosi 1873: kansanedustaja, joka riisui kenkänsä',
+          teksti: 'Andrés Ibáñez oli Santa Cruzin kansanedustaja '
+            + 'kolmella istuntokaudella: 1872, 1873 ja 1874. Hän oli '
+            + 'valmistunut oikeustieteen tohtoriksi Sucressa 1868 ja '
+            + 'toiminut kaupungin pormestarina. Vuonna 1872 '
+            + 'kaupunkiin perustettiin Club Igualitario ja sen lehti '
+            + 'Tasa-arvon kaiku. Perimätiedon mukaan Ibáñez heitti '
+            + 'pääaukiolla '
+            + 'puheensa päätteeksi pois tohtorintakkinsa ja kenkänsä '
+            + 'ja käveli paljain jaloin osoittaakseen olevansa yksi '
+            + 'muiden joukossa. Joulukuun 25. päivänä 1876 avoin '
+            + 'cabildo julisti Santa Cruzin liittovaltioksi, ja uusi '
+            + 'hallinto lakkautti maaorjuuden. Keskushallinto kukisti '
+            + 'liikkeen keväällä 1877, ja Ibáñez kuoli toukokuun '
+            + 'ensimmäisenä päivänä.',
+          wiki: 'Santa Cruz de la Sierra',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Santa Cruz de la Sierra on Bolivian suurin kaupunki '
+          + 'ja maan itäisten alankojen keskus. Kunnassa asui vuonna '
+          + '2024 runsaat 1,6 miljoonaa ihmistä ja koko '
+          + 'kaupunkiseudulla noin 2,4 miljoonaa seitsemän kunnan '
+          + 'alueella. Kaupunki tuottaa lähes 35 prosenttia maan '
+          + 'bruttokansantuotteesta ja saa yli 40 prosenttia kaikesta '
+          + 'suorasta ulkomaisesta sijoituksesta, ja sen inhimillisen '
+          + 'kehityksen indeksi on maan korkein. Kaava on helppo '
+          + 'oppia: keskellä on espanjalainen ruutukaava, ja sen '
+          + 'ympärillä kymmenen sisäkkäistä kehäkatua yhden tai '
+          + 'kahden kilometrin välein sekä 27 sädekatua, jotka '
+          + 'lähtevät ensimmäiseltä kehältä. Piraí-joki katkaisee '
+          + 'osan kehistä lännessä. Kaupunkia sanotaan myös Bolivian '
+          + 'franchising-pääkaupungiksi, koska ketjuja on täällä '
+          + 'enemmän kuin missään muualla maassa.',
+        artikkeli: {
+          nimi: 'Matkailijan Santa Cruz',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa osoite kerrotaan kehän numerolla: '
+            + 'tasankoa joka suuntaan, kolmenkymmenen asteen '
+            + 'lämpöä ja bussi, joka on nimetty pistiäisen mukaan.',
+          nosto: 'Kehäbusseja sanotaan vuelteroiksi, ja ne on '
+            + 'nimetty maakunnan eläinten mukaan: chuturubí eli '
+            + 'pistiäinen kiertää ensimmäistä kehää ja tiluchi eli '
+            + 'uunilintu toista. Linjoja on kaikkiaan 132, ja koko '
+            + 'verkko on yksityisten liikennöitsijöiden käsissä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaupungilla on kaksi lentoasemaa. Viru Viru on '
+                + 'kolmentoista kilometrin päässä pohjoiseen Warnesin '
+                + 'kunnan alueella ja Bolivian suurin; El Trompillo '
+                + 'on kaupungin eteläosassa. Kaupungin sisällä '
+                + 'liikutaan busseilla, joita ajaa 132 linjaa. '
+                + 'Tunnetuimpia ovat vuelterot eli kehäkatuja '
+                + 'kiertävät bussit. Idästä kaupunkiin tulee '
+                + 'ferrobus, joka kulkee Puerto Quijarroon Brasilian '
+                + 'rajalle asti — itäinen rataverkko ei ole koskaan '
+                + 'yhdistynyt maan länsiosan rataan. Neljännen kehän '
+                + 'katkennut osuus yhdistettiin tunnelilla El '
+                + 'Trompillon kiitoradan ali.',
+            },
+            {
+              otsikko: 'Kehät ja keskusta',
+              teksti: 'Vanha keskusta on espanjalaista ruutukaavaa, '
+                + 'jossa tärkeimmät kirkolliset, hallinnolliset ja '
+                + 'kaupalliset rakennukset ovat pääaukion ympärillä. '
+                + 'Sen ulkopuolelta alkaa kehäverkko: kymmenen '
+                + 'sisäkkäistä anilloa ja 27 sädekatua, jotka '
+                + 'halkovat koko kaupungin. Kaupunki suunniteltiin '
+                + 'aikanaan neljälle kehälle vuoteen 2000 mennessä, '
+                + 'mutta kasvu ohitti kaavan, ja laitakaupungin '
+                + 'korttelit sotkivat neljännen jälkeiset kehät. '
+                + 'Ensimmäisen kehän keskikaista on istutettu '
+                + 'puistokujaksi, ja Avenida Argentinan ja toisen '
+                + 'kehän välissä on Parque Urbano Central '
+                + 'dinosauruskoristeineen ja tanssivine '
+                + 'suihkulähteineen.',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Kaupungin oma ruoka on majao eli majadito, '
+                + 'jonka alkuperäisessä versiossa ei ole naudanlihaa. '
+                + 'Muita perinneruokia ovat urucúlla värjätty locro, '
+                + 'maapähkinäkeitto, keperí, patasca, '
+                + 'surubí-chicharrón, pacumuto ja uunitamal. '
+                + 'Empanadoita on riisillä, juustolla, jigotella, '
+                + 'lihalla, kanalla, maissilla ja charquella; masaco '
+                + 'tehdään banaanista, yucasta tai juustosta. Camban '
+                + 'leivonnaisista tunnetuimmat ovat cuñapé ja sonso. '
+                + 'Juomat ovat somó, mocochinchi ja chicha camba. '
+                + 'Monseñor Riveron puistokadun varrella on '
+                + 'ravintoloita, kahviloita, jäätelöbaareja ja '
+                + 'leipomoita peräkkäin.',
+            },
+            {
+              otsikko: 'Vettä, hiekkaa ja puutarhoja',
+              teksti: 'Kaupungin laidoilla on enemmän luontoa kuin '
+                + 'tasangolta arvaisi. Lomas de Arenan suojelualue '
+                + 'jaetaan La Guardian ja Cabezasin kuntien kanssa, '
+                + 'ja siellä on tuulen kuluttamia valkoisia '
+                + 'hiekkadyynejä laguunien ympärillä. Güembén '
+                + 'biokeskus on 24 hehtaarin alue, jolla on '
+                + 'luonnonmukaisia altaita, perhostalo ja suuri '
+                + 'lintuhäkki. Cotocan tiellä on kasvitieteellinen '
+                + 'puutarha, jossa on noin viisisataa luetteloitua '
+                + 'kasvilajia ja tuhat vielä luetteloimatonta. '
+                + 'Piraí-joen rannalla länsilaidalla on mökkejä, '
+                + 'perinneruokaa ja ratsastusta; tarpon-verkkokalastus '
+                + 'käy maalis–kesäkuussa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Santa Cruz de la '
+                + 'Sierra -artikkelista; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säänormaaleja ei haettu tässä '
+                + 'erässä. Ilmasto on trooppinen monsuuni-ilmasto: '
+                + 'vuoden keskilämpötila on noin 25 astetta ja '
+                + 'jokaisen kuukauden keskiarvo yli 18. Neljää '
+                + 'vuodenaikaa ei ole, mutta lämpötila vaihtelee '
+                + 'enemmän kuin rannikolla. Sadetta tulee 1 321 '
+                + 'millimetriä vuodessa, eniten joulu- ja '
+                + 'tammikuussa; eri vuosina määrä on vaihdellut 900 '
+                + 'ja 2 300 millimetrin välillä. Talvella etelästä '
+                + 'puhaltavat surazo-tuulet voivat pudottaa '
+                + 'lämpötilan yllättäen, joten pitkähihaista '
+                + 'kannattaa varata mukaan myös tropiikkiin.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Plaza 24 de Septiembre',
+                tahdet: 3,
+                selite: 'Kaupungin vanhin aukio palmuineen; sen '
+                  + 'laidalla ovat katedraali, kulttuuritalo ja '
+                  + 'kaupungintalo.',
+              },
+              {
+                mita: 'San Lorenzon katedraali',
+                tahdet: 3,
+                selite: 'Puuholvit maalauskoristeluineen ja '
+                  + 'pääalttarin hopeaverhoilu Moxosin '
+                  + 'lähetysasemalta.',
+              },
+              {
+                mita: 'Lomas de Arena',
+                tahdet: 3,
+                selite: 'Valkoiset hiekkadyynit ja laguunit '
+                  + 'kaupungin eteläpuolella, keskellä trooppista '
+                  + 'tasankoa.',
+              },
+              {
+                mita: 'El Arenalin puisto',
+                tahdet: 2,
+                selite: 'Keskustan laguuni ja sen saari; puisto '
+                  + 'toimii myös alueen hulevesialtaana.',
+              },
+              {
+                mita: 'Karnevaali helmikuussa',
+                tahdet: 2,
+                selite: 'Kolme päivää comparsoja ja kulkueita, '
+                  + 'valmisteluja joulukuusta alkaen.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua.
+             * Luvut ovat samat kuin jaksossa 5 ja teemasivun
+             * nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Osoite kerrotaan kehällä',
+                teksti: 'Paikat ilmoitetaan kehäkadun numerolla ja '
+                  + 'säteen suunnalla, ei katuosoitteella — kartan '
+                  + 'renkaat kannattaa opetella ensin.',
+              },
+              {
+                otsikko: 'Surazo tulee yllättäen',
+                teksti: 'Etelästä puhaltava kylmä tuuli voi laskea '
+                  + 'lämpötilan monella asteella keskellä '
+                  + 'trooppista talvea, useimmiten kesä–elokuussa.',
+              },
+              {
+                otsikko: 'Sadekausi on juhla-aikaa',
+                teksti: 'Eniten sataa joulu- ja tammikuussa, ja '
+                  + 'karnevaali osuu juuri sadekauden '
+                  + 'loppupuolelle.',
+              },
+              {
+                otsikko: 'Bussi kulkee kehää, ei suoraan',
+                teksti: 'Vueltero kiertää oman kehänsä ympäri, '
+                  + 'joten lyhinkin matka voi kulkea pitkän kaaren '
+                  + 'kautta.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Karnevaali ja camban tanssit',
+      johdanto: 'Itäisellä alangolla on oma sanansa itsestään, omat '
+        + 'tanssinsa ja oma juhlansa. Kaikkien kolmen juuret ovat '
+        + 'sekoituksessa, ja kaikista kolmesta on esitetty kaksi eri '
+        + 'selitystä.',
+      tehtava: {
+        kysymys: 'Minkä soittimen lähetyssaarnaajat lisäsivät '
+          + 'chovenaan?',
+        vaihtoehdot: [
+          'Harpun',
+          'Viulun',
+          'Trumpetin',
+          'Charangon',
+        ],
+        oikea: 1,
+        fakta: 'Chovenassa ei ollut sanoja, ja lähetysasemilla se '
+          + 'otettiin osaksi myös kirkkomusiikkia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Camba — sana, jolla on kaksi alkuperää',
+          teksti: 'Camba tarkoitti Boliviassa alun perin maan '
+            + 'itäisen trooppisen alueen alkuperäisväestöä tai Santa '
+            + 'Cruzissa, Benissä ja Pandossa syntyneitä; nykyään sillä '
+            + 'tarkoitetaan alankojen espanjalais-, chané- ja muun '
+            + 'amazonilaisen alkuperän sekoittunutta väestöä. Sana on '
+            + 'myös arkinen sana ihmiselle: kysymys "kuka tuo camba '
+            + 'on?" ei kerro mitään kysytyn taustasta. Alkuperästä on '
+            + 'kaksi selitystä. Toisen mukaan sana tulee Angolan '
+            + 'bantukielistä, joissa jesuiitta Pedro Dias kirjasi sen '
+            + 'vuoden 1697 kielioppiinsa muodossa camba, monikko '
+            + 'macamba. Toisen mukaan se tulee Galician Cambadosista. '
+            + 'Kumpaakaan ei ole todistettu.',
+          wiki: 'Camba',
+        },
+        {
+          otsikko: 'Taquirari: nuoli vai laulu',
+          teksti: 'Taquirari on Santa Cruzin, Benin ja Pandon '
+            + 'perinteinen tanssi ja musiikkilaji. Nimen alkuperästä '
+            + 'esitetään kaksi selitystä: joko moxeñon sana '
+            + 'takiríkire, joka liittyy nuolen kunnioittamiseen, tai '
+            + 'guaraníın tairarí, hyräillä tai laulaa laulu. '
+            + 'Historioitsija Germán Coimbra Sanzin mukaan tanssiin '
+            + 'on vaikuttanut myös katalonialainen sardana. '
+            + 'Merkintöjä sen esittämisestä on 1800-luvulta: '
+            + 'cruceño-sissi Cañoton kerrotaan soittaneen kitarallaan '
+            + 'melodioita hevosensa ravin tahtiin. Pari tanssii '
+            + 'vastakkain käsistä kiinni pitäen, ja kuvioihin '
+            + 'kuuluvat ganchos eli koukku ja rueda eli rengas; '
+            + 'nenäliina on osa tanssia.',
+          wiki: 'Taquirari',
+        },
+        {
+          otsikko: 'Chovena, jonka jesuiitat säilyttivät',
+          teksti: 'Chovena on Bolivian idän vanhimpia tansseja, ja se '
+            + 'on levinnyt chiquitano-, guarayo- ja moxeño-alueille. '
+            + 'Lähde ei nimeä yhtä alkuperäiskansaa: se sanoo tanssin '
+            + 'olevan chiquitano-alueen omaa perinnettä ja toisaalla '
+            + 'guaraníkulttuurin esikolumbiaanista perua. Rytmi on '
+            + 'kahdesta neljäsosaa, jaksot lyhyitä ja toistuvia, ja '
+            + 'sävelrakenne muistuttaa taquiraria. Lähetyssaarnaajat '
+            + 'ottivat tanssin osaksi käännytystyön musiikkia ja '
+            + 'lisäsivät siihen viulut; sanoja siinä ei ollut. '
+            + 'Tanssijat aloittavat kahdessa jonossa puoliravia, '
+            + 'miehet nostavat hattunsa kaksin käsin ja laskevat ne '
+            + 'kumarrukseksi, ja lopuksi muodostetaan rengas.',
+          wiki: 'Chovena',
+        },
+        {
+          otsikko: 'Yksitoista päivää talkkia ja multaa',
+          teksti: 'Karnevaali edeltää paastonaikaa kolmella päivällä, '
+            + 'mutta 1800-luvulla se kesti yksitoista. Silloin juhla '
+            + 'oli ratsastuskulkue kaupungin katujen läpi, kadulla '
+            + 'heiteltiin talkkia ja multaa, tiistaina tanssittiin ja '
+            + 'keskiviikkona alkoi paasto; kuvernööri määräsi '
+            + 'cabildossa teurastettavaksi lehmiä juhlan ruoaksi. '
+            + '1800-luvun lopulla mukaan tulivat värjätyllä ja '
+            + 'hajustetulla vedellä täytetyt munankuoret sekä '
+            + '"karnevaalin posti". Ensimmäinen karnevaalikuningatar '
+            + 'valittiin 1936. Nykyään valmistelut alkavat '
+            + 'joulukuussa, esikarnevaalikulkueet kiertävät kaupunkia '
+            + 'ja itse juhla on kolme vapaapäivää, jolloin '
+            + 'tanssitaan comparsoissa.',
+          wiki: 'Carnival of Santa Cruz de la Sierra',
+        },
+      ],
+    },
+  ],
 };

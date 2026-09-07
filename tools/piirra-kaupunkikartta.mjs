@@ -5287,6 +5287,85 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 61.2245, etela: 61.2100, lansi: -149.9160, ita: -149.8700 },
     meri: true,
   },
+  puntaarenas: {
+    /*
+     * LAMPURIPATSAALTA RANTABULEVARDILLE (7.9.2026). Ruutu on 1,86 ×
+     * 2,13 kilometriä eli 1600 × 1841 pikseliä — kuvasuhde 0,87 on
+     * Varanasin (1600 × 1595) ja Isfahanin (1600 × 1983) välissä.
+     *
+     * ENSIMMÄINEN RAJAUS ULOTTUI 600 METRIÄ ETELÄMMÄS (etelä
+     * −53,1712) satamalaiturille asti, ja se hylättiin kahdesta
+     * syystä. Arturo Pratin laituri osoittautui piirretyssä kuvassa
+     * 84-prosenttisesti vedeksi (tarkista-karttapisteet), ja
+     * kaupungintorille ei löytynyt lähdeartikkelia. Molemmat
+     * korvattiin: merisotamuseo ja rantabulevardi ovat kuivalla
+     * maalla ja molemmilla on lähde. Samalla ruudun alalaidasta
+     * poistui tyhjä kaistale, jolla ei ollut yhtään kohdetta.
+     *
+     * RUUTU ON PYSTY, KOSKA KAUPUNKI ON PYSTY. Punta Arenas on
+     * rakennettu kapealle rantakaistaleelle Brunswickin niemimaalla
+     * (en-Wikipedia, "Punta Arenas", Geography): länsipuolella maa
+     * nousee heti kukkuloiksi ja itäpuolella on Magalhãesinsalmi,
+     * joten kaupunki on kasvanut pohjoiseen ja etelään rantaa pitkin.
+     * Vaakaruutu olisi täyttynyt kolmanneksen verran salmella ja
+     * kolmanneksen verran tyhjällä rinteellä.
+     *
+     * MERI-LIPPU PÄÄLLÄ: itäreuna on salmella, ja rantaviiva kulkee
+     * kuvan oikeassa laidassa pohjoisesta etelään.
+     *
+     * KAHDEKSAN KOHDETTA MAHTUVAT 1,29 × 1,65 KILOMETRIN ALALLE, ja
+     * reunoille jää joka suuntaan yli 200 metriä. Pienin väli on 189
+     * metriä (Braun-Menéndezin palatsi – merisotamuseo), eli 163
+     * pikseliä tässä mittakaavassa (1,16 m/px).
+     *
+     * FUERTE BULNES, NAO VICTORIA -MUSEO JA VAPAA-ALUE JÄÄVÄT POIS,
+     * eikä se ole rajauksen vika vaan etäisyyden: Fuerte Bulnes on
+     * runsaat 50 kilometriä etelässä, Nao Victoria -museo 7,5
+     * kilometriä pohjoisessa (en-Wikipedia, "Punta Arenas", Museums)
+     * ja vapaa-alue 3,5 kilometriä pohjoisessa. Kaikki kolme
+     * kerrotaan lehdessä tai matkaoppaassa.
+     *
+     * MAGALHÃESIN PATSAS EI OLE OMA KOHTEENSA, vaikka se seisoo
+     * ruudussa: aukio kuuluu katedraalin viereen ja patsas on jo
+     * saapumistekstin aihe. Katedraali on kartalla sen sijaan.
+     */
+    rajat: { pohjoinen: -53.1478, etela: -53.1670, lansi: -70.9201, ita: -70.8923 },
+    meri: true,
+  },
+  santacruz: {
+    /*
+     * ENSIMMÄINEN KEHÄ JA SEN MOLEMMAT LAIDAT (7.9.2026). Ruutu on
+     * 3,12 × 2,88 kilometriä ja kattaa vanhan keskustan ruutukaavan,
+     * ensimmäisen kehäkadun sekä sen ulkopuolelta yliopiston lännessä
+     * ja hautausmaan idässä.
+     *
+     * RUUTU ON RAKENNETTU KEHÄKATUJEN VARAAN, koska kaupunki on:
+     * keskusta on espanjalaista ruutukaavaa, ja sen ympärillä alkaa
+     * kymmenen sisäkkäisen kehän ja 27 säteen verkko (en-Wikipedia,
+     * "Santa Cruz de la Sierra", Architecture and urban planning).
+     * Kartalta pitää siis erottua sekä ruutu että ensimmäinen kaari,
+     * ja se vaatii vähintään kolmen kilometrin ruudun.
+     *
+     * EI MERI-LIPPUA: Santa Cruz on sisämaassa. Piraí-joki kulkee
+     * ruudun länsipuolella noin kilometrin päässä yliopistosta, eikä
+     * sitä oteta mukaan — se levittäisi ruudun länteen pelkän
+     * tulvatasangon yli.
+     *
+     * KAKSI KOHDETTA ON 114 METRIN PÄÄSSÄ TOISISTAAN (Plaza 24 de
+     * Septiembre ja San Lorenzon katedraali), ja se on tietoinen
+     * poikkeus 200 metrin nyrkkisäännöstä samalla perusteella kuin
+     * Fèsin medinassa: tässä mittakaavassa (1,95 m/px) väli on 58
+     * pikseliä, eli numeroympyrät eivät mene päällekkäin.
+     * Katedraali on aukion laidalla, ja molemmilla on oma tarinansa —
+     * aukiolla nimihistoria, katedraalilla rakennus ja hopeaverhoilu.
+     *
+     * LOMAS DE ARENA, GÜEMBÉ JA KASVITIETEELLINEN PUUTARHA JÄÄVÄT
+     * POIS: kaikki kolme ovat kaupungin ulkopuolella (kasvitieteellinen
+     * puutarha 12 kilometriä idässä Cotocan tiellä). Ne kerrotaan
+     * matkaoppaassa.
+     */
+    rajat: { pohjoinen: -17.7729, etela: -17.7988, lansi: -63.1988, ita: -63.1693 },
+  },
 };
 
 /*

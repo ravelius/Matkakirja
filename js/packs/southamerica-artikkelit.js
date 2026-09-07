@@ -1148,4 +1148,108 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'camanchaca-sumun peitossa, ja juuri siitä sumusta on '
       + 'kerätty vettä verkoilla aavikon kyliin.',
   },
+  /* PUNTA ARENAS (7.9.2026, parvierä). Jokainen väite tulee samasta
+   * erästä kuin lehden tekstit (js/packs/kulttuuri-kategoriat.js,
+   * avain puntaarenas), ja ne on tarkistettu en-Wikipedian
+   * raakateksteistä 7.9.2026 (faktapohja-puntaarenas.md +
+   * tarkistus-puntaarenas.md). Vuoden 1873 kulma on introssa, koska
+   * se on lehden kantava aihe: isoisän matkavuonna Chile lupasi
+   * salmen olevan vapaa ja puolueeton kaikille lipuille. Selkʼnamien
+   * kohtalo kerrotaan tapahtumana ja päättyy vuoden 2023
+   * tunnustukseen — kadonneen kansan kehys on kielletty
+   * (spec-mantereet §1). Vuodet 1973–1990 on rajattu ulos samalla
+   * periaatteella kuin Chilen maalehdessä. */
+  'Punta Arenas': {
+    intro: 'Punta Arenas on Chilen eteläisimmän alueen pääkaupunki ja '
+      + 'maailman eteläisin kaupunki, jossa asuu yli satatuhatta '
+      + 'ihmistä. Se on rakennettu kapealle rantakaistaleelle '
+      + 'kukkuloiden ja Magalhãesinsalmen väliin. Nimi on käännös '
+      + 'käännöksestä: englantilainen John Narborough merkitsi paikan '
+      + 'matkakertomukseensa 1669–1671 nimellä Sandy Point, ja siitä '
+      + 'tuli espanjaksi Punta Arenas.'
+      + '\n\n'
+      + 'Chile perusti kaupungin 1848 siirtämällä viisi vuotta '
+      + 'aiemmin pystytetyn Fuerte Bulnesin väen pohjoisemmaksi Las '
+      + 'Minas -joen suulle. Ensimmäiset vuodet se oli '
+      + 'rangaistussiirtola ja merkki siitä, että salmi kuuluu '
+      + 'Chilelle. **Isoisän matkavuonna 1873 Chile lähetti suurille '
+      + 'merenkulkumaille kirjeen, jossa se lupasi salmen olevan vapaa '
+      + 'ja puolueeton kaikille lipuille.**'
+      + '\n\n'
+      + 'Vauraus tuli lampaista: yksi yhtiö hallitsi vuosisadan '
+      + 'vaihteessa miljoonaa hehtaaria Tulimaata, ja sen omistajat '
+      + 'asuivat täällä. **Sama lammastalous vei selkʼnameilta heidän '
+      + 'maansa ja ravintonsa**, ja Chile tunnusti kansan eläväksi '
+      + 'vasta 2023. Nykyään kaupunki elää Etelämantereen '
+      + 'liikenteestä: manner on 1 419 kilometrin päässä.',
+    teksti: 'Punta Arenas on Magalhãesinsalmen rannalla, Brunswickin '
+      + 'niemimaan koillisrannalla. Kaupunkiin ei pääse maanteitse '
+      + 'muualta Chilestä kulkematta Argentiinan puolen kautta, ja '
+      + 'lähin naapurikaupunki Ushuaia on 635 kilometrin päässä.'
+      + '\n\n'
+      + 'Espanjalaiset yrittivät asuttaa salmen 1584 kahdesti, ja '
+      + 'toinen yritys tunnetaan nimellä Puerto del Hambre, Nälän '
+      + 'satama. Chile onnistui vasta 1843, kun kuunari Ancud purjehti '
+      + 'Ancudista salmelle ja otti alueen haltuun. Kaupunki kasvoi '
+      + 'kultaryntäyksen ja lammastalouden myötä, ja siirtolaisia '
+      + 'tuli etenkin Kroatiasta ja Britanniasta.'
+      + '\n\n'
+      + 'Nykyään Punta Arenas on yksi Chilen kahdesta vapaa-alueen '
+      + 'kaupungista ja kolmesta Etelämantereen porttikaupungista '
+      + 'Ushuaian ja Christchurchin rinnalla. Ilmasto on subpolaarinen '
+      + 'merellinen: lämpötila vaihtelee vähän, sade on niukkaa ja '
+      + 'tuuli yltyy kesällä kovimmilleen.',
+  },
+  /* SANTA CRUZ DE LA SIERRA (7.9.2026, parvierä). Väitteet ovat
+   * samasta erästä kuin lehden tekstit (avain santacruz), tarkistettu
+   * en- ja es-Wikipedian raakateksteistä 7.9.2026
+   * (faktapohja-santacruz.md + tarkistus-santacruz.md). Vuoden 1873
+   * kulma on Andrés Ibáñez, joka oli Santa Cruzin kansanedustaja
+   * juuri vuosina 1872–1874. Maaintro (avain Bolivia) samassa
+   * tiedostossa kertoo merenmenetyksen, 36 kieltä ja vuoden 1952
+   * äänioikeuden — niitä ei toisteta tässä. */
+  'Santa Cruz de la Sierra': {
+    intro: 'Santa Cruz de la Sierra on Bolivian suurin kaupunki ja '
+      + 'maan itäisten trooppisten alankojen pääkaupunki. Se on '
+      + 'Piraí-joen varrella neljänsadan metrin korkeudessa, tuhansia '
+      + 'metrejä alempana kuin La Paz. Kaupunki on kasvanut '
+      + 'kehäkaduiksi: sisäkkäisiä anilloja on kymmenen ja niistä '
+      + 'haarautuvia sädekatuja 27.'
+      + '\n\n'
+      + 'Ñuflo de Chávez perusti kaupungin 26. helmikuuta 1561 '
+      + 'runsaat kaksisataa kilometriä nykyisestä paikasta itään ja '
+      + 'nimesi sen kotikaupunkinsa mukaan Extremadurassa. **Kaupunki '
+      + 'muutti kahdesti ja vakiintui nykyiselle paikalleen vasta '
+      + '1622** — vanhan asutuksen jäänteet ovat yhä nähtävissä Santa '
+      + 'Cruz la Viejassa. Siirtomaa-aikana provinssi sai '
+      + 'poikkeuksellisen autonomian ja vapautuksen keisarillisista '
+      + 'veroista.'
+      + '\n\n'
+      + 'Kasvua se ei silti tuonut. **Isoisän matkavuonna 1873 Santa '
+      + 'Cruz oli yhä pieni etuposti, jonka kansanedustaja oli '
+      + '28-vuotias Andrés Ibáñez** — mies, joka kolme vuotta '
+      + 'myöhemmin julisti kaupungin liittovaltioksi ja lakkautti '
+      + 'maaorjuuden. Kaupunki alkoi kasvaa toden teolla vasta '
+      + '1900-luvun puolivälin maareformien jälkeen, ja nykyään se '
+      + 'tuottaa lähes kolmanneksen koko maan '
+      + 'bruttokansantuotteesta.',
+    teksti: 'Santa Cruz de la Sierra on Bolivian itäosassa, Andien ja '
+      + 'Amazonin altaan välissä. Kaupunkiseudulla asuu noin 2,4 '
+      + 'miljoonaa ihmistä seitsemän kunnan alueella, ja se on maan '
+      + 'väkirikkain taajama.'
+      + '\n\n'
+      + 'Ennen espanjalaisia paikalla asui chané-kansa, ja kaupungin '
+      + 'ensimmäiset asukkaat olivat chanéja, espanjalaisia ja '
+      + 'Paraguayn guaraníta. Kaupunki oli kaksisataa vuotta '
+      + 'lähtöpaikka Chiquitosin ja Moxosin lähetysretkille ja '
+      + 'etuvartio portugalilaisia vastaan, mutta jäi pieneksi. '
+      + 'Vuoden 1810 kapina ja Ignacio Warnesin vuodet kuuluvat maan '
+      + 'itsenäistymisen kertomukseen.'
+      + '\n\n'
+      + 'Ilmasto on trooppinen monsuuni-ilmasto: vuoden keskilämpötila '
+      + 'on noin 25 astetta, ja sadetta tulee runsaat 1 300 '
+      + 'millimetriä, eniten joulu- ja tammikuussa. Talvisin etelästä '
+      + 'puhaltavat kylmät surazo-tuulet laskevat lämpötilan yllättäen '
+      + 'monella asteella.',
+  },
 };
