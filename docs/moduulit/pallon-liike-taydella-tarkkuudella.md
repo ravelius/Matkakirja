@@ -742,3 +742,61 @@ savuke-pallolauta.mjs vaihe 3. Raportti: luvut.
   `montaasi-ennen.png`, `montaasi-maplibre.png`, `montaasi-tri.png`,
   `montaasi-cesium.png`, `montaasi-kartta.png`; JSON-raportit samassa
   kansiossa.
+
+## 10. Pitkät ajot Macilla: työnkulut, kaistat ja mitatut kestot
+
+Omistajan linjaus 7.9.2026 aamu, sanatarkasti: *"No Tee loputkin
+macilla sitten. Ja korjaa pyyntö jatkossa"* ja saman päivän tarkennus
+*"Macilla voi tehdä lyhyempiäkin nyt kun työnkulku automatisoitu"* —
+eli aiempi 15 minuutin raja (Raamattu, MAC GITHUBIN AJOKONEENA) ei enää
+ratkaise, vaan pallon ämpäriajot lähtevät oletuksena omistajan Mac
+Studiolta, joka on repon self-hosted-runner (`polta-macilla.yml`:n
+malli: vain `workflow_dispatch`, omistajaehto, oma concurrency-ryhmä,
+kaatuneiden lokit näkyviin ja artefaktiin, avaimet secreteistä).
+
+Neljä työnkulkua sai syötteen **ajokone** (`mac` | `actions`, oletus
+`mac`). Mac-polku ei koske iOS-käännökseen eikä TestFlightiin — ne
+jäävät Actionsiin omistajan päätöksellä.
+
+| työnkulku | Actionsissa mitattu | Macilla | rinnakkaisuus |
+| --- | --- | --- | --- |
+| tee-etusivupallo | 20–22 min (ajot 33958982573, 33964409525, 33987642916) | kaistat ytimet/2 | kuvasarja kaistoina, vienti rinnakkain |
+| vie-korkeuspalat | 3 min 14 s, siitä pilkkominen 107 s ja vienti 77 s (ajo 33559583302) | kaistat = ytimet | palat kaistoina, vienti 32 pyyntöä |
+| tee-pallotekstuuri | 1 min 23 s … 4 min 36 s | sama työ | ei kaistoja (yhden ytimen käännös) |
+| tee-pallovektorit | 2 min 32 s (ajo 34048416053) | sama työ | vienti 32 pyyntöä (tuhansia pieniä tiedostoja) |
+
+**Kaistat.** `tools/tee-etusivupallo.mjs --osa k/n` polttaa yhtenäisen
+välin kehyksiä samaan kehyskansioon (kaista 0 myös julisteen), ja
+`--kokoa` tekee valmiista kehyksistä videot ja luettelon — se kaatuu,
+jos yksikin kehys puuttuu tai kansiossa on ylimääräisiä tiedostoja.
+`tools/tee-korkeuspalat.mjs --osa k/n` pilkkoo oman siivunsa paloja ja
+kirjoittaa oman luettelonsa, `--nouda` hakee 322 Mt:n lähdeaineiston
+kerran ennen kaistoja, ja `--kokoa n` liittää kaistojen luettelot
+yhdeksi samassa järjestyksessä kuin peräkkäisajo.
+`tools/mac-ajovalmis.sh` on Mac-askelten `setup-node`: node@22 ja
+awscli polkuun, Chromium ja ffmpeg pyydettäessä, ytimet `YTIMET`-
+muuttujaan (`sysctl -n hw.ncpu`, ei `nproc`).
+
+**Kolme vikaa löytyi rinnakkaisuutta todennettaessa** (kontti, 4 vCPU,
+kuuden kehyksen otos; kaikki koskivat myös peräkkäisajoa):
+
+1. Työkalu reititti selaimen pyynnöt vain `r2.dev`-kaavalla, vaikka
+   ämpärin isäntä on `media.matkakirja.app` — kontissa ajo kaatui
+   "Globe is not defined".
+2. Laattatason kynnysten asetus (`asetaKynnykset`) yritti 40 kertaa
+   150 ms:n välein ja **luovutti hiljaa**. Kuormitetulla koneella kuusi
+   sekuntia ei riitä, jolloin koko pallo poltettiin karkeammilla
+   laatoilla (ero 25–72 % pikseleistä, suurin 68/255). Nyt odotetaan
+   kehyksinä ja ajo kaatuu, jos moottoria ei kuulu.
+3. Kaappaus otettiin, kun laattapyynnöt olivat maalissa — mutta JPEG
+   puretaan ja viedään näytönohjaimelle vasta sen jälkeen, eikä siitä
+   tule tapahtumaa. Nopea kone ehti kaapata liian aikaisin. Nyt
+   kaappaus toistetaan, kunnes kaksi peräkkäistä kaappausta on
+   tavulleen sama, ja ämpärinouto uusitaan kolmesti.
+
+**Todennus:** kuuden kehyksen sarja peräkkäin ja kahtena rinnakkaisena
+kaistana antoi näiden korjausten jälkeen **bitilleen samat PNG:t ja
+saman julisteen**; korkeuspaloista kolmen palan otos peräkkäin ja
+kolmena kaistana antoi samat `.bin.gz`-tiivisteet ja saman
+`luettelo.json`in. Uusi poltto on siis myös hitusen terävämpi kuin
+ämpärissä oleva video 2026-09-05c (kehykset asettuvat loppuun asti).
