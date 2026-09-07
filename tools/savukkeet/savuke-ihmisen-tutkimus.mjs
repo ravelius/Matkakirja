@@ -1,37 +1,48 @@
 /*
- * SELAINSAVUKE: IHMISEN MATKAN TUTKIMUSVAIHE
- * (js/linssit/ihmisen-matka-tutkimus.js; omistaja 7.9.2026 ilta,
- * Raamattu "IHMISEN MATKA: KAARI HYVAKSYTTY, TUTKIMUSVAIHE, VIISI
- * NAPPIA, PULUN VALIHUOMIOT").
+ * SELAINSAVUKE: IHMISEN MATKAN PALKKI, KORTTI, MUISTI JA TUTKIMUSVAIHE
+ * (js/aikajana.js rakennaPalkki, js/linssit/ihmisen-matka-kortti.js,
+ * js/linssit/ihmisen-matka-muisti.js, js/linssit/ihmisen-matka-
+ * tutkimus.js; omistaja 7.9.2026 ilta, Raamattu "IHMISEN MATKA: KAARI
+ * HYVAKSYTTY, TUTKIMUSVAIHE, VIISI NAPPIA, PULUN VALIHUOMIOT" ja
+ * "IHMISEN MATKA: YKSI PALKKI, EI KARUSELLIA, KAIKKIIN NOSTOIHIN KUVA,
+ * LINSSI MUISTAA PAIKKANSA").
  *
  *   NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-ihmisen-tutkimus.mjs
  *
- * ESITYSTÄ EI AJETA. Tutkimusvaihe alkaa yhdestä kutsusta
- * (`ui.aloitaTutkimusvaihe()`), jonka kertomusmoottori tekee esityksen
- * päätteeksi — savuke tekee saman kutsun heti Käynnistä-napin jälkeen,
- * jolloin vartio mittaa vain tutkimusvaihetta eikä neljän minuutin
- * kertomusta. Vanojen on silti oltava valmiit (virrat.valmis), koska
- * nostojen sävy ja nappien rajaus luetaan niistä.
+ * KOKO ESITYSTÄ EI AJETA (se on savuke-ihmisen-esitys.mjs:n työ).
+ * Tämä savuke katsoo, mitä pelaajan SORMEN alla tapahtuu: palkki
+ * yläpalkin tilalla, kortti kartan kohdasta, linssin muisti sulun yli
+ * ja tutkimusvaihe. Tutkimusvaiheeseen mennään SITÄ TIETÄ, jonka
+ * pelaaja kulkee toisella avauksella: koukku kerran, sulku, ja muisti
+ * jatkaa suoraan tutkimusvaiheesta ilman mustaa alkua.
  *
  * VÄITTEET (kummassakin näkymässä, 834 × 1100 ja 390 × 844):
- *   1. Tutkimusvaihe käynnistyy ja kello seisoo: vanat ovat kokonaan
- *      piirretyt eikä kamera enää seuraa ketään.
- *   2. NOSTOT: kartalla on vähintään 30 hehkuvaa nostoa (20
- *      löytöpaikkaa + lisänostot), ja jokaisella on oma sävynsä.
- *   3. KORTTI: noston napautus (laudan oma linssimerkkipolku) avaa
- *      kortin, jossa on otsikko, ajoitus, teksti, lähde ja 2–3
- *      valmista kysymystä.
- *   4. KYSYMYS: kysymysnapin painallus vie kysymyksen pulun chattiin
- *      (viesti näkyy virrassa pelaajan omana repliikkinä).
- *   5. NAPPI V3 (Siperia): kamera kääntyy niin että vana näkyy, vana
- *      korostuu ja pergamenttilappu kertoo yhteenvedon.
- *   6. Toinen napautus samaan nappiin palauttaa kaikki.
- *   7. Esinerivi (karuselli) on näkyvissä tutkimusvaiheessa.
- *   8. Linssin sulku (✕) purkaa kaiken: ei nostoja, ei nappeja, ei
- *      body-luokkaa.
- *   9. Ei sivuvirheitä.
+ *   1. YKSI PALKKI: Matkakirjan yläpalkki on piilossa mutta ruudukossa
+ *      (kartta ei kutistu), ja linssin palkissa ovat nimi, kello,
+ *      viisi väripilkkua ja ✕. Alareunan karusellia ei ole.
+ *   2. AITO NAPAUTUS ESITYKSEN AIKANA: kartan lampun napautus
+ *      RUUTUKOORDINAATILLA (page.mouse, ei elementin dispatch) avaa
+ *      noston kortin ja panee esityksen tauolle; sulku jatkaa.
+ *   3. MUISTI, ESITYS: ✕ ja uusi avaus jatkavat samasta jaksosta —
+ *      ei mustaa peitettä, ei Käynnistä-nappia.
+ *   4. MUISTI, TUTKIMUS: kun sulku tapahtui tutkimusvaiheessa, uusi
+ *      avaus alkaa suoraan tutkimusvaiheesta (nostot kartalla).
+ *   5. NOSTOT: kartalla on 40 hehkuvaa nostoa useassa sävyssä, ja
+ *      hehkun napautus RUUTUKOORDINAATILLA avaa kortin.
+ *   6. KORTTI: ajoitus, otsikko, kuva-alue (löytöpaikalla kaksi
+ *      kehystä, lisänostolla kuvituskuva tai sen varapaikka), teksti,
+ *      lähde ja 2–3 valmista kysymystä; kysymys menee pulun chattiin.
+ *   7. LUE LISÄÄ: löytöpaikan kortista aukeaa Tiedeliite, jonka
+ *      sisällys on YKSI aikajärjestyksen lista väripilkkuineen.
+ *   8. VIISI NAPPIA: V3 (Siperia) kääntää kameran, korostaa vanan ja
+ *      avaa lapun; toinen napautus palauttaa kaikki.
+ *   9. ALOITA ALUSTA (↺): muisti tyhjenee ja linssi alkaa alusta.
+ *  10. Linssin sulku (✕) purkaa kaiken ja palauttaa yläpalkin.
+ *  11. Ei sivuvirheitä.
  *
- * KUVAKAAPPAUKSET: tutkimusvaihe auki, kortti auki, vana valittuna.
+ * KUVAKAAPPAUKSET: palkki esityksen aikana, kortti esityksen päällä,
+ * tutkimusvaihe, löytöpaikan kortti, lisänoston kortti, Tiedeliitteen
+ * sisällys, vana valittuna.
  */
 import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -90,7 +101,13 @@ async function avaaSivu(nakyma, virhelista) {
   await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
   await sivu.route(/media\.matkakirja\.app|r2\.dev/, async (route) => {
     const vastaus = await ampariHaku(route.request().url());
-    if (!vastaus) { route.abort(); return; }
+    /*
+     * PUUTTUVA KUVA ON 404 EIKÄ KATKO. Lisänostojen kuvituskuvat ovat
+     * vielä kuvaputkella (aikajana/ihmisen-matka/nosto/<tunnus>.jpg),
+     * ja kortin varapaikka syntyy nimenomaan img-alkion `error`-
+     * tapahtumasta: abort ei laukaise sitä kaikissa selaimissa.
+     */
+    if (!vastaus) { route.fulfill({ status: 404, body: '' }); return; }
     route.fulfill({
       status: 200, contentType: vastaus.tyyppi ?? 'application/octet-stream', body: vastaus.body,
       headers: { 'access-control-allow-origin': '*' },
@@ -123,6 +140,27 @@ async function avaaPeli(s) {
     .then(() => true).catch(() => false);
 }
 
+/** Linssi laukusta ja vanat valmiiksi laskettuina. */
+async function avaaLinssi(s) {
+  return s.evaluate(async () => {
+    const { ui } = window.matkakirja;
+    ui.busy = false;
+    if (!ui.game.player.linssit.includes('ihmisen-matka')) ui.game.player.linssit.push('ihmisen-matka');
+    ui.valitseLinssi('ihmisen-matka');
+    for (let i = 0; i < 600; i += 1) {
+      if (ui.aikajana) break;
+      await new Promise((r) => setTimeout(r, 25));
+    }
+    const ajo = ui.aikajana;
+    if (!ajo?.virrat) return { virhe: 'aikajana tai virrat puuttuvat' };
+    await ajo.virrat.valmis;
+    return {
+      avausnappi: Boolean(document.querySelector('.aikajana-avaus-nappi')),
+      esitys: ajo.esitys?.tila?.() ?? null,
+    };
+  });
+}
+
 /** Kameran liuku perille (kontin ohjelmisto-WebGL piirtää hitaasti). */
 async function rauhoitu(s, kierroksia = 25) {
   await s.evaluate(async (n) => {
@@ -141,6 +179,60 @@ async function rauhoitu(s, kierroksia = 25) {
   }, kierroksia);
 }
 
+/**
+ * RUUTUKOORDINAATTI KARTAN KOHDASTA (omistajan vika 7.9.2026: *"jos
+ * klikkaa valopalloa kartalla, niin tällä hetkellä ei tapahdu
+ * mitään"*). Elementin oma `click()` ei kelpaa vartioksi: merkkikerros
+ * on pointer-events: none, ja pelaajan napautus kulkee pallon pinnan
+ * osumatestin kautta (js/pallolauta/lauta.js napautaPintaan). Siksi
+ * haetaan PALLON ETUPUOLELLA oleva merkki (kirjasto merkitsee takana
+ * olevat luokalla `pallolauta-takana`) reilusti ruudun sisältä ja
+ * napautetaan sitä page.mouse-koordinaatilla.
+ */
+async function ruutupaikka(s, valitsin) {
+  return s.evaluate((v) => {
+    const varaa = 12;
+    const ehdokkaat = [...document.querySelectorAll(`${v}:not(.pallolauta-takana)`)]
+      .map((e) => ({ e, r: e.getBoundingClientRect() }))
+      .filter(({ r }) => r.width > 0 && r.height > 0
+        && r.top > 130 && r.bottom < window.innerHeight - 90
+        && r.left > 40 && r.right < window.innerWidth - 40);
+    if (!ehdokkaat.length) return null;
+    // Keskimmäinen: reunimmaiset ovat pallon kaarella ja liikkuvat eniten.
+    const { e, r } = ehdokkaat[Math.floor(ehdokkaat.length / 2)];
+    const x = r.left + r.width / 2;
+    const y = r.top + r.height / 2;
+    const paalla = document.elementFromPoint(x, y);
+    return {
+      x, y, varaa, ehdokkaita: ehdokkaat.length,
+      otsikko: e.getAttribute('title') ?? e.getAttribute('aria-label') ?? null,
+      paalla: paalla?.tagName ?? null,
+    };
+  }, valitsin);
+}
+
+/** Kortin sisältö mittarina. */
+async function kortinTila(s) {
+  return s.evaluate(() => {
+    const el = document.querySelector('.ihmisen-nostokortti');
+    const r = el?.getBoundingClientRect();
+    return {
+      auki: Boolean(el && !el.hidden),
+      laji: el?.dataset?.laji ?? null,
+      otsikko: el?.querySelector('.ihmisen-nostokortti-otsikko')?.textContent ?? null,
+      ajoitus: el?.querySelector('.ihmisen-nostokortti-ajoitus')?.textContent ?? null,
+      lahde: el?.querySelector('.ihmisen-nostokortti-lahde')?.textContent ?? null,
+      teksti: (el?.querySelector('.ihmisen-nostokortti-teksti')?.textContent ?? '').length,
+      kehyksia: el?.querySelectorAll('.ihmisen-nostokortti-kuvakehys').length ?? 0,
+      varapaikkoja: el?.querySelectorAll('.ihmisen-nostokortti-varakuva').length ?? 0,
+      kuvia: el?.querySelectorAll('.ihmisen-nostokortti-kuva').length ?? 0,
+      lue: Boolean(el?.querySelector('.ihmisen-nostokortti-lue')),
+      kysymyksia: el?.querySelectorAll('.ihmisen-nostokysymys').length ?? 0,
+      mahtuu: r ? (r.bottom <= window.innerHeight + 1 && r.right <= window.innerWidth + 1 && r.top >= 0) : false,
+    };
+  });
+}
+
 for (const nakyma of ['tabletti', 'puhelin']) {
   const virhelista = [];
   const { konteksti, sivu: s } = await avaaSivu(NAKYMAT[nakyma], virhelista);
@@ -150,99 +242,218 @@ for (const nakyma of ['tabletti', 'puhelin']) {
   const pallo = await avaaPeli(s);
   vaadi(nimessa('pallolauta avautuu'), pallo, 'ui.pallolauta ei syntynyt 45 s:ssa');
 
-  /* --- 1. Linssi käyntiin ja tutkimusvaihe heti perään --------------- */
-  const alku = await s.evaluate(async () => {
+  /* --- 1. Linssi auki, palkki yläpalkin tilalle ---------------------- */
+  const avaus = await avaaLinssi(s);
+  const esitykseen = await s.evaluate(async () => {
     const { ui } = window.matkakirja;
-    ui.busy = false;
-    if (!ui.game.player.linssit.includes('ihmisen-matka')) ui.game.player.linssit.push('ihmisen-matka');
-    ui.valitseLinssi('ihmisen-matka');
-    for (let i = 0; i < 600; i += 1) {
-      if (ui.aikajana) break;
-      await new Promise((r) => setTimeout(r, 25));
-    }
-    const ajo = ui.aikajana;
-    if (!ajo?.virrat) return { virhe: 'aikajana tai virrat puuttuvat' };
-    await ajo.virrat.valmis;
-    // Käynnistä vie mustan peitteen pois; esitystä ei ajeta pidemmälle.
     document.querySelector('.aikajana-avaus-nappi')?.click();
+    // Pimeä väistyy avausjakson jälkeen (VALOJEN_MS); vasta sitten
+    // kartta on napautettavissa ja palkki mitattavissa.
+    for (let i = 0; i < 240; i += 1) {
+      if (ui.aikajana?.esitys?.tila?.().vaihe === 'matka') break;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+    await new Promise((r) => setTimeout(r, 1500));
+    const palkki = document.querySelector('.aikajana-ylarivi');
+    const topbar = document.querySelector('.topbar');
+    const kartta = document.querySelector('.pallo-kotelo') ?? ui.mapPane;
+    const nauha = document.querySelector('.aikajana-nauha');
+    return {
+      vaihe: ui.aikajana?.esitys?.tila?.().vaihe ?? null,
+      jakso: ui.aikajana?.esitys?.tila?.().jakso ?? null,
+      palkki: palkki?.classList.contains('aikajana-palkki') ?? false,
+      palkkiKorkeus: Math.round(palkki?.getBoundingClientRect().height ?? 0),
+      palkkiLeveys: Math.round(palkki?.getBoundingClientRect().width ?? 0),
+      otsikko: palkki?.querySelector('.aikajana-otsikko')?.textContent ?? null,
+      kello: Boolean(palkki?.querySelector('.aikajana-kello')),
+      pilkkuja: palkki?.querySelectorAll('.ihmisen-vananappi-pilkku').length ?? 0,
+      sulje: Boolean(palkki?.querySelector('.aikajana-sulje')),
+      alusta: Boolean(palkki?.querySelector('.aikajana-alusta')),
+      topbarNakyvyys: topbar ? getComputedStyle(topbar).visibility : null,
+      topbarKorkeus: Math.round(topbar?.getBoundingClientRect().height ?? -1),
+      karuselli: nauha ? getComputedStyle(nauha).display : 'ei-nauhaa',
+      karttaKorkeus: Math.round(kartta?.getBoundingClientRect().height ?? 0),
+      ikkuna: window.innerHeight,
+      peite: Boolean(document.querySelector('.aikajana-esitys-peite')),
+      hampurilainen: document.querySelector('.topbar .menu-btn, .topbar button')
+        ? getComputedStyle(document.querySelector('.topbar')).visibility : null,
+    };
+  });
+  /*
+   * KARTTA EI SAA KUTISTUA. Yläpalkki jää ruudukkoon nollan korkuisena
+   * (css/aikajana.css: visibility, ei display) — display: none pudotti
+   * kartan riville 1 ja auto-korkeuteen (mitattu 834 × 1100: 814 px
+   * korkea neliö). Kartan on siis oltava lähes ikkunan korkuinen.
+   */
+  vaadi(nimessa('yksi palkki: yläpalkki piilossa, kartta ei kutistu, karusellia ei ole'),
+    esitykseen.palkki && esitykseen.topbarNakyvyys === 'hidden' && esitykseen.topbarKorkeus === 0
+      && esitykseen.karuselli === 'none' && esitykseen.karttaKorkeus > esitykseen.ikkuna * 0.9
+      && !esitykseen.peite,
+    JSON.stringify(esitykseen));
+  vaadi(nimessa('palkissa nimi, kello, viisi väripilkkua ja ✕'),
+    /IHMISEN MATKA/i.test(esitykseen.otsikko ?? '') && esitykseen.kello
+      && esitykseen.pilkkuja === 5 && esitykseen.sulje && esitykseen.alusta
+      && avaus.avausnappi,
+    JSON.stringify({ otsikko: esitykseen.otsikko, pilkkuja: esitykseen.pilkkuja, avausnappi: avaus.avausnappi }));
+  await s.screenshot({ path: kuva('palkki') });
+
+  /* --- 2. AITO NAPAUTUS: lamppu esityksen aikana --------------------- */
+  const lampunPaikka = await ruutupaikka(s, '.aikajana-valo-pallolla');
+  if (lampunPaikka) await s.mouse.click(lampunPaikka.x, lampunPaikka.y);
+  await s.waitForTimeout(900);
+  const lampunKortti = await kortinTila(s);
+  const taukoTila = await s.evaluate(() => window.matkakirja.ui.aikajana?.esitys?.tila?.() ?? null);
+  vaadi(nimessa('lampun napautus ruutukoordinaatilla avaa kortin ja panee esityksen tauolle'),
+    Boolean(lampunPaikka) && lampunKortti.auki && lampunKortti.kehyksia >= 1 && taukoTila?.tauolla === true,
+    JSON.stringify({ lampunPaikka, lampunKortti, tauolla: taukoTila?.tauolla }));
+  await s.screenshot({ path: kuva('kortti-esityksessa') });
+  const jatkui = await s.evaluate(async () => {
+    document.querySelector('.ihmisen-nostokortti-sulje')?.click();
     await new Promise((r) => setTimeout(r, 600));
+    return window.matkakirja.ui.aikajana?.esitys?.tila?.() ?? null;
+  });
+  vaadi(nimessa('kortin sulku jatkaa esitystä'), jatkui?.tauolla === false && jatkui?.kaynnissa === true,
+    JSON.stringify(jatkui));
+
+  /* --- 3. MUISTI, ESITYS: sulku ja uusi avaus ------------------------ */
+  const jaksoEnnen = jatkui?.jakso ?? null;
+  await s.evaluate(async () => {
+    document.querySelector('.aikajana-sulje')?.click();
+    await new Promise((r) => setTimeout(r, 1200));
+  });
+  const muistiEsitys = await s.evaluate(() => {
+    try { return JSON.parse(localStorage.getItem('matkakirja-linssimuisti-ihmisen-matka') ?? 'null'); } catch { return null; }
+  });
+  await avaaLinssi(s);
+  await s.waitForTimeout(2500);
+  const jatko = await s.evaluate(() => {
+    const { ui } = window.matkakirja;
+    return {
+      avausnappi: Boolean(document.querySelector('.aikajana-avaus-nappi')),
+      peite: Boolean(document.querySelector('.aikajana-esitys-peite')),
+      pimea: document.querySelector('.aikajana')?.classList.contains('esitys-pimea') ?? null,
+      esitys: ui.aikajana?.esitys?.tila?.() ?? null,
+      topbarNakyvyys: getComputedStyle(document.querySelector('.topbar')).visibility,
+    };
+  });
+  vaadi(nimessa('muisti: sulku ja uusi avaus jatkavat samasta jaksosta ilman mustaa'),
+    muistiEsitys?.vaihe === 'esitys' && muistiEsitys?.jakso === jaksoEnnen
+      && !jatko.avausnappi && !jatko.peite && jatko.pimea === false
+      && jatko.esitys?.muistista === true && jatko.esitys?.jakso === jaksoEnnen,
+    JSON.stringify({ jaksoEnnen, muistiEsitys, jatko }));
+
+  /* --- 4. MUISTI, TUTKIMUS: koukku, sulku, uusi avaus ---------------- */
+  await s.evaluate(async () => {
+    const { ui } = window.matkakirja;
     /*
-     * KENTTÄ LUETAAN ENSIN MUUTTUJAAN. `ui.aloitaTutkimusvaihe` ei ole
-     * UI-luokan metodi vaan kenttä, jonka js/aikajana.js asettaa ajon
-     * ajaksi — savukevartija (tools/tarkista-savukkeet.mjs) vaatii
-     * kutsulta luokan metodin, joten kenttää kutsutaan lukemalla se.
+     * KOUKKU KERRAN (kertomusmoottori tekee saman esityksen lopuksi;
+     * ks. savuke-ihmisen-esitys.mjs). Kenttä luetaan ensin muuttujaan:
+     * `ui.aloitaTutkimusvaihe` ei ole UI-luokan metodi vaan ajon
+     * asettama kenttä (tools/tarkista-savukkeet.mjs).
      */
     const aloita = ui.aloitaTutkimusvaihe;
-    const lahti = typeof aloita === 'function' ? aloita() : false;
+    if (typeof aloita === 'function') aloita();
+    await new Promise((r) => setTimeout(r, 800));
+    document.querySelector('.aikajana-sulje')?.click();
+    await new Promise((r) => setTimeout(r, 1200));
+  });
+  const muistiTutkimus = await s.evaluate(() => {
+    try { return JSON.parse(localStorage.getItem('matkakirja-linssimuisti-ihmisen-matka') ?? 'null'); } catch { return null; }
+  });
+  await avaaLinssi(s);
+  const alku = await s.evaluate(async () => {
+    const { ui } = window.matkakirja;
     // Kirjasto rakentaa merkkien elementit seuraavassa piirrossa, ja
     // kontin ohjelmisto-WebGL piirtää harvakseltaan: odotetaan ruutua,
     // ei kelloa.
-    for (let i = 0; i < 100; i += 1) {
-      if (document.querySelectorAll('.ihmisen-nosto').length >= 30) break;
+    for (let i = 0; i < 150; i += 1) {
+      if (document.querySelectorAll('.ihmisen-nosto').length >= 40) break;
       await new Promise((r) => setTimeout(r, 100));
     }
-    const tila = ui.tutkimusvaihe?.tila?.() ?? null;
+    const ajo = ui.aikajana;
     return {
-      lahti: Boolean(lahti),
-      tila,
-      kaynnissa: Boolean(ajo.kaynnissa),
-      seuraa: Boolean(ajo.virrat.ohjaaKameraa()),
+      tila: ui.tutkimusvaihe?.tila?.() ?? null,
+      avausnappi: Boolean(document.querySelector('.aikajana-avaus-nappi')),
+      peite: Boolean(document.querySelector('.aikajana-esitys-peite')),
+      kaynnissa: Boolean(ajo?.kaynnissa),
+      seuraa: Boolean(ajo?.virrat?.ohjaaKameraa()),
       nostoja: document.querySelectorAll('.ihmisen-nosto').length,
       nappeja: document.querySelectorAll('.ihmisen-vananappi').length,
       savyja: new Set([...document.querySelectorAll('.ihmisen-nosto')]
         .map((el) => el.style.getPropertyValue('--nosto-savy'))).size,
-      nauha: Boolean(document.querySelector('.aikajana-nauha')),
-      nauhaTyhja: document.querySelector('.aikajana-nauha')?.classList.contains('tyhja') ?? null,
       chattiAuki: document.body.classList.contains('aikajana-tutkimus-auki'),
     };
   });
-  vaadi(nimessa('tutkimusvaihe käynnistyy: kello seis, kamera vapaa'),
-    alku.lahti && alku.kaynnissa === false && alku.seuraa === false && alku.chattiAuki,
-    JSON.stringify({ lahti: alku.lahti, kaynnissa: alku.kaynnissa, seuraa: alku.seuraa, virhe: alku.virhe }));
+  vaadi(nimessa('muisti: tutkimusvaihe jatkuu suoraan, kello seis, kamera vapaa'),
+    muistiTutkimus?.vaihe === 'tutkimus' && !alku.avausnappi && !alku.peite
+      && Boolean(alku.tila) && alku.kaynnissa === false && alku.seuraa === false && alku.chattiAuki,
+    JSON.stringify({ muistiTutkimus, alku }));
 
-  /* --- 2. Nostot kartalla ------------------------------------------- */
-  vaadi(nimessa('kartalla vähintään 30 hehkuvaa nostoa, useita sävyjä'),
-    alku.nostoja >= 30 && alku.savyja >= 3 && alku.nappeja === 5,
+  /* --- 5. Nostot kartalla ------------------------------------------- */
+  vaadi(nimessa('kartalla 40 hehkuvaa nostoa, useita sävyjä'),
+    alku.nostoja === 40 && alku.savyja >= 3 && alku.nappeja === 5,
     `nostoja ${alku.nostoja}, sävyjä ${alku.savyja}, nappeja ${alku.nappeja}, mittari ${JSON.stringify(alku.tila)}`);
-
-  /* --- 7. Esinerivi näkyvissä --------------------------------------- */
-  vaadi(nimessa('esinerivi (karuselli) on näkyvissä tutkimusvaiheessa'),
-    alku.nauha === true && alku.nauhaTyhja === false, `nauha ${alku.nauha}, tyhjä ${alku.nauhaTyhja}`);
 
   await rauhoitu(s, 12);
   await s.screenshot({ path: kuva('vaihe') });
 
-  /* --- 3. Kortti auki laudan omalla napautuspolulla ------------------ */
-  const kortti = await s.evaluate(async () => {
-    const { ui } = window.matkakirja;
-    // Sama tie kuin pelaajan sormella: laudan linssimerkin `napautus`
-    // (js/pallolauta/lauta.js lahinLinssimerkki → napautus(d)).
-    const merkit = ui.pallolauta.merkit.napautettavat();
-    const merkki = merkit.find((d) => d.avain === 'tutkimus:toba');
-    if (!merkki) return { virhe: `linssimerkkejä ${merkit.length}, tutkimus:toba puuttuu` };
-    merkki.napautus(merkki);
-    await new Promise((r) => setTimeout(r, 400));
-    const el = document.querySelector('.ihmisen-nostokortti');
-    return {
-      auki: Boolean(el && !el.hidden),
-      otsikko: el?.querySelector('.ihmisen-nostokortti-otsikko')?.textContent ?? null,
-      ajoitus: el?.querySelector('.ihmisen-nostokortti-ajoitus')?.textContent ?? null,
-      lahde: el?.querySelector('.ihmisen-nostokortti-lahde')?.textContent ?? null,
-      teksti: (el?.querySelector('.ihmisen-nostokortti-teksti')?.textContent ?? '').length,
-      kysymyksia: el?.querySelectorAll('.ihmisen-nostokysymys').length ?? 0,
-      // Kortti ei saa valua ruudun ulkopuolelle kummassakaan näkymässä.
-      mahtuu: el ? (el.getBoundingClientRect().bottom <= window.innerHeight + 1
-        && el.getBoundingClientRect().right <= window.innerWidth + 1) : false,
-    };
+  /* --- 5b. AITO NAPAUTUS: hehku tutkimusvaiheessa -------------------- */
+  /*
+   * KAMERA KAUEMMAS ENSIN. Muistista jatkettu tutkimusvaihe perii sen
+   * näkymän, johon esitys jäi (mitattu: korkeus 0,66 eli tiukka
+   * lähikuva Afrikkaan), ja silloin ruudun sisällä saattaa olla vain
+   * pari hehkua — kaikki reunavaran ulkopuolella. Vedetään kamera
+   * kauas laudan omalla rajapinnalla, kuten vanan nappikin tekee.
+   */
+  await s.evaluate(async () => {
+    window.matkakirja.ui.aikajana?.kamera?.()?.ajaKamera?.(
+      { lat: 20, lng: 40, korkeus: 1.9 }, { kesto: 900 },
+    );
+    await new Promise((r) => setTimeout(r, 1200));
   });
-  vaadi(nimessa('noston napautus avaa kortin kysymyksineen'),
-    kortti.auki && /Tulivuori/.test(kortti.otsikko ?? '') && kortti.teksti > 100
-      && kortti.kysymyksia >= 2 && kortti.kysymyksia <= 3 && /en-Wikipedia/.test(kortti.lahde ?? '')
-      && kortti.mahtuu,
-    JSON.stringify(kortti));
-  await s.screenshot({ path: kuva('kortti') });
+  await rauhoitu(s, 15);
+  const hehkunPaikka = await ruutupaikka(s, '.ihmisen-nosto');
+  if (hehkunPaikka) await s.mouse.click(hehkunPaikka.x, hehkunPaikka.y);
+  await s.waitForTimeout(900);
+  const hehkunKortti = await kortinTila(s);
+  vaadi(nimessa('hehkun napautus ruutukoordinaatilla avaa kortin'),
+    Boolean(hehkunPaikka) && hehkunKortti.auki && hehkunKortti.kehyksia >= 1 && hehkunKortti.mahtuu,
+    JSON.stringify({ hehkunPaikka, hehkunKortti }));
 
-  /* --- 4. Kysymys pulun chattiin ------------------------------------ */
+  /* --- 6. Kortti: löytöpaikka ja lisänosto samalla mallilla ---------- */
+  await s.evaluate(async () => {
+    const { ui } = window.matkakirja;
+    ui.nostokortti.sulje();
+    ui.nostokortti.avaa('jebel-irhoud');
+    await new Promise((r) => setTimeout(r, 900));
+  });
+  const loytopaikka = await kortinTila(s);
+  vaadi(nimessa('löytöpaikan kortti: kuva-alue, teksti, lähde, Lue lisää ja kysymykset'),
+    loytopaikka.auki && loytopaikka.laji === 'loytopaikka' && loytopaikka.kehyksia >= 2
+      && loytopaikka.teksti > 100 && /en-Wikipedia/.test(loytopaikka.lahde ?? '')
+      && loytopaikka.lue && loytopaikka.kysymyksia >= 2 && loytopaikka.kysymyksia <= 3
+      && loytopaikka.mahtuu,
+    JSON.stringify(loytopaikka));
+  await s.screenshot({ path: kuva('kortti-loytopaikka') });
+
+  await s.evaluate(async () => {
+    const { ui } = window.matkakirja;
+    ui.nostokortti.sulje();
+    ui.nostokortti.avaa('toba');
+    // Kuvituskuva on vielä kuvaputkella: 404 vaihtaa kehyksen
+    // varapaikaksi vasta img-alkion error-tapahtumasta.
+    await new Promise((r) => setTimeout(r, 2500));
+  });
+  const lisanosto = await kortinTila(s);
+  vaadi(nimessa('lisänoston kortti: sama malli ja kuva-alue (varapaikka, ei nimikirjainlaattaa)'),
+    lisanosto.auki && lisanosto.laji === 'lisanosto' && lisanosto.kehyksia === 1
+      && lisanosto.varapaikkoja === 1 && lisanosto.kuvia === 0
+      && /Tulivuori/.test(lisanosto.otsikko ?? '') && lisanosto.teksti > 100
+      && lisanosto.kysymyksia >= 2 && lisanosto.mahtuu,
+    JSON.stringify(lisanosto));
+  await s.screenshot({ path: kuva('kortti-lisanosto') });
+
+  /* --- 6b. Kysymys pulun chattiin ----------------------------------- */
   const kysymys = await s.evaluate(async () => {
     const nappi = document.querySelector('.ihmisen-nostokysymys');
     const teksti = nappi?.textContent ?? '';
@@ -253,7 +464,6 @@ for (const nakyma of ['tabletti', 'puhelin']) {
       teksti,
       merkitty: Boolean(nappi?.classList.contains('lahetetty')),
       chatissa: viestit.some((v) => v.trim() === teksti.trim()),
-      paneeli: Boolean(document.querySelector('.pollo-paneeli')),
       kysymyksia: window.matkakirja.ui.tutkimusvaihe?.tila?.().kysymyksia ?? 0,
     };
   });
@@ -261,8 +471,54 @@ for (const nakyma of ['tabletti', 'puhelin']) {
     kysymys.merkitty && kysymys.chatissa && kysymys.kysymyksia === 1,
     JSON.stringify(kysymys));
 
-  /* --- 5. Nappi V3 (Siperia) kääntää kameran ja korostaa ------------- */
-  const ennen = await s.evaluate(() => {
+  /* --- 7. Lue lisää: Tiedeliite yhtenä listana ---------------------- */
+  const liite = await s.evaluate(async () => {
+    const { ui } = window.matkakirja;
+    ui.nostokortti.sulje();
+    ui.nostokortti.avaa('jebel-irhoud');
+    await new Promise((r) => setTimeout(r, 500));
+    document.querySelector('.ihmisen-nostokortti-lue')?.click();
+    await new Promise((r) => setTimeout(r, 900));
+    document.querySelector('.tiedeliite-hampurilainen')?.click();
+    await new Promise((r) => setTimeout(r, 700));
+    const sis = document.querySelector('.tiedeliite-sisallys');
+    const rivit = [...(sis?.querySelectorAll('.tiedeliite-sisallysrivi') ?? [])];
+    // Päällekkäisyys: kahden peräkkäisen rivin laatikot eivät saa leikata.
+    const paallekkain = rivit.slice(1).filter((r, i) => {
+      const a = rivit[i].getBoundingClientRect();
+      const b = r.getBoundingClientRect();
+      return b.top < a.bottom - 1;
+    }).length;
+    return {
+      kortti: Boolean(document.querySelector('.tiedeliite-kortti')),
+      sisallys: Boolean(sis && !sis.hidden),
+      lista: sis?.classList.contains('lista') ?? null,
+      palstat: sis ? getComputedStyle(sis).columnCount : null,
+      rivit: rivit.length,
+      pilkkuja: sis?.querySelectorAll('.tiedeliite-sisallyspilkku').length ?? 0,
+      paallekkain,
+      // Ylivuotopalsta näkyy siinä, että rivit alkavat eri x:stä ja
+      // toinen puoli listaa on laatikon ulkopuolella (ks. css).
+      palstoja: new Set(rivit.map((r) => Math.round(r.getBoundingClientRect().left))).size,
+      ulkona: rivit.filter((r) => r.getBoundingClientRect().right
+        > (sis?.getBoundingClientRect().right ?? 0) + 1).length,
+      ekaAjoitus: sis?.querySelector('.tiedeliite-sisallysvuosi')?.textContent ?? null,
+    };
+  });
+  vaadi(nimessa('Lue lisää avaa Tiedeliitteen, jonka sisällys on yksi lista väripilkuin'),
+    liite.kortti && liite.sisallys && liite.lista === true && liite.palstat === 'auto'
+      && liite.rivit >= 15 && liite.pilkkuja === liite.rivit && liite.paallekkain === 0
+      && liite.palstoja === 1 && liite.ulkona === 0
+      && /v\./.test(liite.ekaAjoitus ?? ''),
+    JSON.stringify(liite));
+  await s.screenshot({ path: kuva('tiedeliite-sisallys') });
+
+  /* --- 8. Nappi V3 (Siperia) kääntää kameran ja korostaa ------------- */
+  const ennen = await s.evaluate(async () => {
+    // Tiedeliite kiinni ja kortti pois kameran tieltä.
+    document.querySelector('.tiedeliite-kortti .fokusnosto-kortti-sulje')?.click();
+    await new Promise((r) => setTimeout(r, 600));
+    window.matkakirja.ui.nostokortti.sulje();
     const a = window.matkakirja.ui.nakyvaAlue();
     return { x: a.x, y: a.y, skaala: a.skaala };
   });
@@ -282,8 +538,8 @@ for (const nakyma of ['tabletti', 'puhelin']) {
       lappuAuki: Boolean(lappu && !lappu.hidden && lappu.classList.contains('esilla')),
       otsikko: lappu?.querySelector('.ihmisen-vanalappu-otsikko')?.textContent ?? null,
       yhteenveto: (lappu?.querySelector('.ihmisen-vanalappu-teksti')?.textContent ?? '').length,
-      mahtuu: lappu ? lappu.getBoundingClientRect().top > 0 : false,
-      // Vanojen korostus: valitun peittävyys 1, muiden 0,35-kertainen.
+      mahtuu: lappu ? (lappu.getBoundingClientRect().top > 0
+        && lappu.getBoundingClientRect().bottom <= window.innerHeight + 1) : false,
       tila: window.matkakirja.ui.tutkimusvaihe.tila(),
     };
   });
@@ -292,11 +548,10 @@ for (const nakyma of ['tabletti', 'puhelin']) {
   vaadi(nimessa('V3 Siperia: kamera kääntyy, vana korostuu, lappu kertoo yhteenvedon'),
     liikkui && valinta.valittuKolmas && valinta.valittuja === 1 && valinta.lappuAuki
       && valinta.otsikko === 'Siperia' && valinta.yhteenveto > 150 && valinta.mahtuu
-      && valinta.tila.valittu === 'siperia',
+      && valinta.tila.valittu === 'siperia' && valinta.tila.palkissa === true,
     JSON.stringify({ liikkui, ennen, ...valinta }));
   await s.screenshot({ path: kuva('vana-v3') });
 
-  /* --- 6. Toinen napautus palauttaa kaikki -------------------------- */
   const paluu = await s.evaluate(async () => {
     document.querySelectorAll('.ihmisen-vananappi')[2].click();
     await new Promise((r) => setTimeout(r, 400));
@@ -310,7 +565,27 @@ for (const nakyma of ['tabletti', 'puhelin']) {
   vaadi(nimessa('toinen napautus samaan nappiin palauttaa kaikki'),
     paluu.valittuja === 0 && paluu.lappuPiilossa && paluu.valittu === null, JSON.stringify(paluu));
 
-  /* --- 8. Sulku purkaa kaiken --------------------------------------- */
+  /* --- 9. Aloita alusta (↺) ----------------------------------------- */
+  const alusta = await s.evaluate(async () => {
+    const { ui } = window.matkakirja;
+    document.querySelector('.aikajana-alusta')?.click();
+    for (let i = 0; i < 200; i += 1) {
+      if (document.querySelector('.aikajana-avaus-nappi')) break;
+      await new Promise((r) => setTimeout(r, 50));
+    }
+    return {
+      muisti: localStorage.getItem('matkakirja-linssimuisti-ihmisen-matka'),
+      avausnappi: Boolean(document.querySelector('.aikajana-avaus-nappi')),
+      tutkimusvaihe: Boolean(ui.tutkimusvaihe),
+      aikajana: Boolean(ui.aikajana),
+      nostoja: document.querySelectorAll('.ihmisen-nosto').length,
+    };
+  });
+  vaadi(nimessa('Aloita alusta tyhjentää muistin ja aloittaa linssin alusta'),
+    alusta.muisti === null && alusta.avausnappi && !alusta.tutkimusvaihe && alusta.aikajana,
+    JSON.stringify(alusta));
+
+  /* --- 10. Sulku purkaa kaiken -------------------------------------- */
   const sulku = await s.evaluate(async () => {
     const { ui } = window.matkakirja;
     document.querySelector('.aikajana-sulje')?.click();
@@ -329,17 +604,22 @@ for (const nakyma of ['tabletti', 'puhelin']) {
         .filter((d) => String(d.avain ?? '').startsWith('tutkimus:')).length,
       aikajana: Boolean(window.matkakirja.ui.aikajana),
       tutkimusvaihe: Boolean(window.matkakirja.ui.tutkimusvaihe),
+      nostokortti: Boolean(window.matkakirja.ui.nostokortti),
       nostoja: document.querySelectorAll('.ihmisen-nosto').length,
       nappeja: document.querySelectorAll('.ihmisen-vananappi').length,
+      kortteja: document.querySelectorAll('.ihmisen-nostokortti').length,
       kerros: document.querySelectorAll('.ihmisen-tutkimus').length,
       luokka: document.body.classList.contains('aikajana-tutkimus-auki'),
+      palkkiluokka: document.body.classList.contains('aikajana-palkki-auki'),
+      topbarNakyvyys: getComputedStyle(document.querySelector('.topbar')).visibility,
       pallo: Boolean(window.matkakirja.ui.pallolauta),
     };
   });
-  vaadi(nimessa('sulku (✕) purkaa tutkimusvaiheen ja jättää pallon'),
-    !sulku.aikajana && !sulku.tutkimusvaihe && sulku.nostoja === 0 && sulku.listalla === 0
-      && sulku.nappeja === 0
-      && sulku.kerros === 0 && !sulku.luokka && sulku.pallo, JSON.stringify(sulku));
+  vaadi(nimessa('sulku (✕) purkaa kaiken ja palauttaa yläpalkin'),
+    !sulku.aikajana && !sulku.tutkimusvaihe && !sulku.nostokortti && sulku.nostoja === 0
+      && sulku.listalla === 0 && sulku.nappeja === 0 && sulku.kortteja === 0
+      && sulku.kerros === 0 && !sulku.luokka && !sulku.palkkiluokka
+      && sulku.topbarNakyvyys === 'visible' && sulku.pallo, JSON.stringify(sulku));
 
   vaadi(nimessa('ei sivuvirheitä'), virhelista.length === 0, virhelista.slice(0, 3).join(' | '));
   await konteksti.close();

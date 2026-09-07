@@ -39,6 +39,8 @@
  *   7. PULU: välihuomiot sanotaan (neljä kuplaa) eikä esitys pysähdy.
  *   8. LOPPU: kamera koko pallossa, esinerivi palaa ja
  *      ui.aloitaTutkimusvaihe on kutsuttu tasan kerran.
+ *   8b. KÄRKI KUVASSA: kulkevan vanan kärki pysyy ruudulla jokaisessa
+ *      jaksossa (Raamattu ETELA-AFRIKASSA KAMERA ULOS).
  *   9. Sulje purkaa kaiken: ei kelloa, ei peitettä, ei body-luokkaa.
  *  10. Ei sivuvirheitä.
  *
@@ -212,17 +214,71 @@ await s.evaluate(() => {
   // vain laskee, kutsutaanko se — ja tasan kerran.
   window.__tutkimus = 0;
   ui.aloitaTutkimusvaihe = () => { window.__tutkimus += 1; };
+  /*
+   * KÄRKI EI SAA POISTUA KUVASTA (Raamattu "IHMISEN MATKA:
+   * ETELA-AFRIKASSA KAMERA ULOS, VANA EI SAA HUKKUA", omistaja
+   * 7.9.2026 klo 18.15: *"kartta voisi zoomautua ulospäin, jotta ei
+   * hukattaisi sitä viivaa, jossa oltiin menossa niin pahasti"*).
+   *
+   * Kärki lasketaan SELKÄRANGAN kärkilistasta (vana 0) sillä
+   * lukemalla, johon kello on syvimmillään ehtinyt (`pitoMin`):
+   * pito pitää piirretyn pituuden, joten kärki on siinä eikä
+   * nykyisessä lukemassa. Ruudulla-olo mitataan pallon omalla
+   * projektiolla ja etupuolen testillä (js/pallolauta/lauta.js
+   * pisteEdessa) — takapuolen piste projisoituu ruudulle, muttei näy.
+   *
+   * RINTAMALLA-lippu erottaa ne näytteet, joissa vana KASVAA
+   * (kello on syvimmässä lukemassaan). Kelauksen jälkeen (aikahyppy)
+   * selkärangan kärki on Chilessä eikä ole enää rintama — silloin
+   * kameran ei kuulukaan pitää sitä kuvassa (ks. jaksonRajaus).
+   */
+  const pisteet = ui.aikajana?.virrat?.vanat?.()?.pisteet?.() ?? [];
+  window.__selkaranka = pisteet[0]?.pisteet ?? [];
+  window.__karki = (nyt) => {
+    const p = window.__selkaranka;
+    if (!p.length || nyt >= p[0][2]) return null;
+    const kierra = (v) => ((v + 540) % 360) - 180;
+    for (let i = 1; i < p.length; i += 1) {
+      if (p[i][2] <= nyt) {
+        const a = p[i - 1];
+        const b = p[i];
+        const f = (a[2] - b[2]) ? (a[2] - nyt) / (a[2] - b[2]) : 0;
+        return { lat: a[0] + (b[0] - a[0]) * f, lng: kierra(a[1] + kierra(b[1] - a[1]) * f) };
+      }
+    }
+    return { lat: p[p.length - 1][0], lng: p[p.length - 1][1] };
+  };
+  window.__ruudulla = (piste) => {
+    const pallo = ui.pallonInstanssi;
+    if (!pallo || !piste) return null;
+    const k = pallo.getCoords(piste.lat, piste.lng, 0);
+    const kamera = pallo.camera()?.position;
+    const edessa = kamera
+      && (kamera.x - k.x) * k.x + (kamera.y - k.y) * k.y + (kamera.z - k.z) * k.z > 0;
+    if (!edessa) return false;
+    const r = pallo.getScreenCoords(piste.lat, piste.lng, 0);
+    // Reunavara: kärki ei riitä olla juuri ja juuri ruudun laidassa.
+    const vara = 24;
+    return r.x > vara && r.x < window.innerWidth - vara
+      && r.y > vara && r.y < window.innerHeight - vara;
+  };
   window.__nayte = [];
   window.__poiminta = setInterval(() => {
     const ajo = window.matkakirja.ui.aikajana;
     const t = ajo?.esitys?.tila?.();
     if (!t) return;
     const kuvake = document.querySelector('.aikajana-kertomuskuva');
+    const pito = Number.isFinite(t.pitoMin) ? t.pitoMin : t.vuosia;
+    const karki = window.__karki(pito);
     window.__nayte.push({
       ...t,
       aika: Math.round(performance.now()),
       kuvaLeveys: kuvake ? Math.round(kuvake.getBoundingClientRect().width) : 0,
       alue: ui.nakyvaAlue ? Math.round(ui.nakyvaAlue().w) : null,
+      karki,
+      karkiRuudulla: window.__ruudulla(karki),
+      // Rintama = kello on syvimmässä lukemassaan (vana kasvaa nyt).
+      rintamalla: karki ? t.vuosia <= pito + 1 : false,
     });
   }, 200);
 });
@@ -563,6 +619,38 @@ try {
       nauha: loppu.nauhaNakyy,
       tutkimus: loppu.tutkimus,
     }));
+  /*
+   * KÄRKI KUVASSA JOKAISESSA JAKSOSSA. Väite koskee niitä näytteitä,
+   * joissa vana KASVAA (rintamalla): kelauksen jälkeen piirretty osuus
+   * on vanhaa väestöä eikä rintamaa, eikä kameran kuulu seurata sitä.
+   * Jaksokohtainen ehto on tiukempi kuin kokonaisosuus: yhdenkin
+   * jakson hukkuva kärki (Etelä-Afrikan alkujaksot ennen korjausta)
+   * kaataa väitteen, vaikka muut jaksot olisivat kunnossa.
+   */
+  const rintama = nayte.filter((n) => n.rintamalla && n.karki);
+  const jaksoittain = new Map();
+  for (const n of rintama) {
+    if (!jaksoittain.has(n.jakso)) jaksoittain.set(n.jakso, []);
+    jaksoittain.get(n.jakso).push(n);
+  }
+  const hukkuneet = [...jaksoittain.entries()]
+    .map(([jakso, otos]) => {
+      const ruudulla = otos.filter((n) => n.karkiRuudulla).length;
+      return {
+        jakso, otos: otos.length, ruudulla, viimeinen: otos.at(-1).karkiRuudulla === true,
+      };
+    })
+    .filter((r) => !r.viimeinen || r.ruudulla / r.otos < 0.5);
+  const osuus = rintama.length ? rintama.filter((n) => n.karkiRuudulla).length / rintama.length : 0;
+  vaadi('KÄRKI KUVASSA: kulkevan vanan kärki pysyy ruudulla jokaisessa jaksossa',
+    rintama.length >= 20 && jaksoittain.size >= 8 && hukkuneet.length === 0 && osuus >= 0.85,
+    JSON.stringify({
+      naytteita: rintama.length,
+      jaksoja: jaksoittain.size,
+      osuus: Number(osuus.toFixed(2)),
+      hukkuneet: hukkuneet.slice(0, 5),
+    }));
+
   /* ------------------------------------------------------- 9. purku */
 
   await s.evaluate(() => document.querySelector('.aikajana-sulje')?.click());
