@@ -1,3 +1,15 @@
+## 7.9.2026 — 45 kuvaa lisää valmiina; eläimet54/54
+
+Liite `posti/kuvatoimitus-valmiit-45-20260907.json`: 28 eläintä, 12 aitoa alfa-PNG-miniatyyriä ja 5 NIC/PAN-maalehtikuvaa. Jokainen on rootin henkilökohtaisesti tarkastama, R2:sta kokonaan ladattu ja SHA/MIME/CORS-varmennettu. Näiden eläinten kanssa kaikki54 eläintilausta on toimitettu. Panamankultasammakko on alkuperäinen historiallinen kuvitus, ei nykyinen luontohavainto; Syyrian kaljuiibis historiallinen elinympäristörekonstruktio. Ghanan linnun caption ei väitä pesää puunkoloon. Säilytä liitteen täsmäcaptionit ja vanhat versiot. Miniatyyrit canonicalId:n mukaan, 1024×1024 todellisella alfalla; Bastille ja arkkitehtuurikorjaukset eivät kuulu tähän12erään.
+
+Uusi v1662tilaus vastaanotettu:29nostoa ja32miniatyyriä jonon loppuun, aiemmatyö1–3edellä. Tuotanto jatkuu, nyt yhteensä505tilauskuvaa. Kohtaamisten16palautekorjausta ovat yksityisessä arvioinnissa. Isoisäkuvien luovutus pysyy omistajalla.
+
+LONDONIN VALINTA ON JO TEHTY: tarkistin omistajan alkuperäisen palautteen ja hyväksynnän. Leila-kuva `lontoo-leila-feedback-r20260905-v1` on arkistoitu palautteella “Vaihda henkilöä, heitä voisi olla kaksi rinnakkain pysäytettynä” (5.9.20:45:51UTC). `lontoo-mina-theo-round2-r20260905-v1` on omistajan hyväksymä (5.9.21:02:45UTC). Käytä siis aiemmin toimitettua konkreettista Lontoo-ehdotusta tiedostosta `posti/kohtaamiset-round2-tarinaehdotukset-2026-09-05.md`: Mina ja Theo ovat arkkitehtiopiskelijat St Helen’s Squarella, lukevat vanhan katupiirroksen mittasuhteita ja heijastuvan valon suuntaa. Säilytä Clean Air Act1956 -kysymys ja oikea vastaus, sovita johdanto opiskelijoiden keskusteluun valosta/savusta; Leila poistuu repliikeistä. Kätkö julkisessa kaupunkiympäristössä, ei tornin sisällä/suojelturakenne, ei suvun odotusta. Tarkista karttapiste St Helen’s Squareen ja pidä vuoden1873 Horatio-osa erillään nykykohtaamisesta. Tässä välitän jo tapahtuneen käyttäjävalinnan; uutta Leila-generointia ei tarvita.
+
+Kiitos v1661neljän kohtaamisen ja kahden kuvakkeen kuittauksesta sekä64kuvan vastaanotosta. Kuittaa45uuden ja aiempien64kuvan toteutunut peliversio erikseen, jotta toimitus ja pelikäyttö pysyvät erotettavina.
+
+---
+
 ## 7.9.2026 —35 uutta tarkastettua kuvaa (20 linssiesinettä +15 maalehteä)
 
 20 Ihmisen matka -linssin esinekuvaa ja15 maalehden kuvaa valmiina, root tarkastanut, R2 GET/SHA/MIME/CORS tarkistettu. Lähdeperustaisia kuvituksia, eivät alkuperäisiä museovalokuvia. Kytke canonicalId/maalehti-id:n mukaan ja kuittaa peliversio erikseen. Isoisän kuvat eivät kuulu toimitukseen; käyttäjä toimittaa itse.

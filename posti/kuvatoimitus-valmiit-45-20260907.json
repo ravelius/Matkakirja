@@ -1,0 +1,1113 @@
+{
+  "createdAt": "2026-09-07T05:29:43.378674+00:00",
+  "message": "45 uutta root-tarkastettua ja julkisesti tavutarkistettua kuvaa: 28 eläintä, 12 läpinäkyvää miniatyyriä ja 5 maalehteä. Eläinten tilaus nyt54/54toimitettu. Kytke tarkat URL:t oikeisiin kanonisiin tietueisiin ja kuittaa peliversio erikseen.",
+  "items": [
+    {
+      "id": "istanbul-konstantinopoli-1453",
+      "fileName": "istanbul-konstantinopoli-1453.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Konstantinopoli 1453",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/istanbul-konstantinopoli-1453.png",
+      "sha256": "66fbea7bae43b794d05016f8503f5e7e2d4b369ef88f5aafb3c3220c163c971d",
+      "bytes": 971161,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept\nAsset type: Matkakirja interactive map miniature, square transparent PNG\nPrimary request: Constantinople, morning of 29 May 1453. Create one compact, polished historical miniature centered on the final assault: a short section of the massive Theodosian land walls with a clearly breached center, one large Ottoman bombard cannon in the foreground, and only five period-correct Ottoman figures plus two restrained banners. No gore.\nScene/backdrop: no environment rectangle and no sky field; only the self-contained wall, rubble and cannon vignette floating on transparent alpha.\nStyle/medium: refined museum diorama rendered as precise dark sepia engraved linework with light warm ochre watercolor washes, crisp detail and subtle material texture; premium historical map miniature.\nComposition/framing: slightly elevated three-quarter view. CRITICAL: scale the entire vignette small enough that every wall top, flag tip, cannon base, rubble edge and figure fits completely inside the central 75 percent of the square canvas, leaving at least 12.5 percent fully transparent empty margin on each of all four sides. Nothing may touch or cross an image edge.\nLighting/mood: clear warm daylight, solemn and dramatic, readable at small size.\nConstraints: actual transparent alpha background; isolated vignette only; plausible 1453 masonry and gunpowder cannon; Ottoman figures and banners must be distinct from the Byzantine defenders; no modern objects; no labels, letters, dates, borders, frames, logos, watermark, cast shadow, white halo, matte, checkerboard or filled background; all parts complete.",
+      "sources": [
+        "https://www.britannica.com/event/Fall-of-Constantinople-1453"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "canonicalId": "istanbul-konstantinopoli-1453",
+      "hasAlpha": true
+    },
+    {
+      "id": "helsinki-suomi-heraa-1899",
+      "fileName": "helsinki-suomi-heraa-1899.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Suomi herää 1899",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/helsinki-suomi-heraa-1899.png",
+      "sha256": "3a05fac75ec7aeaf5e507730a3628e4daba6217350590f4ecb97765b4d6432e6",
+      "bytes": 868271,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept\nAsset type: Matkakirja interactive map miniature, square transparent PNG\nPrimary request: Helsinki, Finland Awakens, 4 November 1899. Jean Sibelius, age 34, conducts a compact late-19th-century orchestra at a music stand during the Press Celebrations Music at the Swedish Theatre. Show Sibelius's emotionally rising baton gesture and only six musicians in a restrained semicircle: two violins, cello, double bass, French horn and bassoon.\nScene/backdrop: isolated conductor-and-small-orchestra vignette only; no theatre room, wall, curtain, scenery, sky or rectangular stage.\nStyle/medium: premium historical map miniature, precise dark sepia engraved linework with restrained warm ochre watercolor, crisp museum-diorama detail.\nComposition/framing: slightly elevated three-quarter view. CRITICAL: the entire ensemble, every raised fingertip, baton tip, bow, instrument, chair leg and small platform must fit completely inside the central 75 percent of the square canvas, leaving at least 12.5 percent fully transparent empty margin on each of all four sides. Nothing touches or crosses an image edge.\nLighting/mood: warm gaslight implied on subjects, stirring and dignified.\nConstraints: actual transparent alpha background; authentic 1899 formal concert clothing and instruments; no flags, national emblems, labels, readable notes, letters, dates, border, frame, logo, watermark, cast shadow, white halo, matte, checkerboard or filled background; no cropped limbs or instruments.",
+      "sources": [
+        "https://kansalliskirjasto.finna.fi/Record/fikka.4954500"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "canonicalId": "helsinki-suomi-heraa-1899",
+      "hasAlpha": true
+    },
+    {
+      "id": "ateena-louis-1896",
+      "fileName": "ateena-louis-1896.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Louis 1896",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/ateena-louis-1896.png",
+      "sha256": "52c0be9ee0a71a9be4217449694a1ddc83f7381993116be2bede6fdaac6fc703",
+      "bytes": 658694,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept\nAsset type: Matkakirja interactive map miniature, square transparent PNG\nPrimary request: Athens, 10 April 1896, Spyridon Louis entering the Panathenaic Stadium as winner of the first Olympic marathon. Show Louis in an exhausted but triumphant running stride on a short curved fragment of pale Pentelic-marble track with three low tiers of marble seating. He holds a short modest olive sprig DOWN BESIDE HIS SHOULDER, elbow bent; the sprig must not rise above his cap or extend sideways.\nScene/backdrop: isolated runner-and-marble-track vignette only; no complete stadium, crowd, sky, wall rectangle or broad environment.\nStyle/medium: premium historical map miniature, precise dark sepia engraved linework with restrained warm ochre watercolor, crisp museum-diorama detail.\nComposition/framing: slightly elevated three-quarter view. CRITICAL: place the complete vignette within the central 60 percent of the square canvas, leaving at least 20 percent fully transparent empty margin on every side. Keep head, cap, both arms and the lowered olive sprig well below the top margin. Nothing touches any edge.\nLighting/mood: clear spring daylight, human, celebratory and dignified.\nConstraints: actual transparent alpha background; historically plausible 1896 athlete clothing; completely plain white sleeveless singlet with no emblem, crest, cross, flag, symbol, number, lettering or decoration; knee-length plain shorts, simple cap and dark shoes; dark hair, strong moustache, lean Greek adult man; no modern sportswear, Olympic rings, flags, podium, labels, dates, border, frame, logo, watermark, cast shadow, white halo, matte, checkerboard or filled background; all anatomy and leaves complete.",
+      "sources": [
+        "https://library.olympics.com/digitalCollection/DigitalCollectionAttachmentDownloadHandler.ashx?documentId=2953614&parentDocumentId=2953612&skipCopyright=true&skipWatermark=true"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "canonicalId": "ateena-louis-1896",
+      "hasAlpha": true
+    },
+    {
+      "id": "pariisi-curie-1898",
+      "fileName": "pariisi-curie-1898.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Curie 1898",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/pariisi-curie-1898.png",
+      "sha256": "8cd8d55e014bf0fefdb7ff63ee20ef98bad208e8c74cc90310d299a628c24da2",
+      "bytes": 973331,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept\nAsset type: Matkakirja map miniature, square transparent PNG\nPrimary request: Paris 1898, Marie and Pierre Curie in their famously drafty shed laboratory. Marie, age 31, in a dark high-necked work dress with hair pinned up, laboriously stirs pitchblende residue in a large black iron cauldron using a heavy iron rod; Pierre works at a worn pine table with a period electrometer and a few dirty glass vessels.\nScene/backdrop: ONLY the two scientists, complete cauldron with small furnace, complete table, a coal bucket and two bottles on one small irregular floor patch. Absolutely no upright shed beams, walls, window, roof, hanging cloth, room box or rectangular scenery.\nStyle/medium: premium historical map miniature, precise dark sepia engraved linework with restrained warm ochre watercolor, crisp tactile old-material detail.\nComposition/framing: slightly elevated three-quarter view; complete compact silhouette within central 60 percent, at least 20 percent transparent margin on every side; both heads, rod top, feet, cauldron, table legs and every vessel fully visible.\nLighting/mood: cold gray daylight implied on subjects, determined collaboration.\nConstraints: actual transparent alpha; plausible 1898 clothing and instruments; no glowing fantasy radium, modern lab equipment, labels, readable text, border, frame, logo, watermark, cast shadow, white matte, checkerboard, background, cropped or missing parts.",
+      "sources": [
+        "https://www.nobelprize.org/prizes/themes/marie-and-pierre-curie-and-the-discovery-of-polonium-and-radium"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "canonicalId": "pariisi-curie-1898",
+      "hasAlpha": true
+    },
+    {
+      "id": "pariisi-lavoisier-1780",
+      "fileName": "pariisi-lavoisier-1780.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Lavoisier 1780",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/pariisi-lavoisier-1780.png",
+      "sha256": "f1aa25563276f230d13a21c86eb32cddd79618b6bd1059f3874d8d2495f1c3fa",
+      "bytes": 1166681,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept\nAsset type: Matkakirja interactive map miniature, square transparent PNG\nPrimary request: Paris around 1780, Antoine Lavoisier and Marie-Anne Paulze Lavoisier conducting a chemistry experiment in the Arsenal laboratory. Antoine carefully observes a glass bell jar and pneumatic trough with period brass-and-glass gas measurement apparatus while Marie-Anne, in an accurate late-18th-century dress, records the result with a quill at a compact writing stand.\nScene/backdrop: only a small self-contained laboratory tabletop and floor-base vignette, no room walls or rectangular scene.\nStyle/medium: precise dark sepia engraved linework with restrained warm ochre watercolor washes, crisp museum-diorama detail, consistent with premium historical map miniatures.\nComposition/framing: slightly elevated three-quarter view, two clear figures, apparatus readable, compact silhouette; all parts fully visible with generous transparent margin around the whole group.\nLighting/mood: warm directional window light, alert collaborative discovery.\nConstraints: actual transparent alpha background; accurate 1780s clothing and glass/brass apparatus; no modern lab equipment, no flames near mercury, no labels or readable text, no border, frame, logo, watermark, cast shadow, white matte, checkerboard or filled background; no cropped or missing parts.",
+      "sources": [
+        "https://www.sciencehistory.org/stories/magazine/revolutionary-instruments-lavoisiers-tools-as-objets-dart/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "canonicalId": "pariisi-lavoisier-1780",
+      "hasAlpha": true
+    },
+    {
+      "id": "pariisi-pasteur-1862",
+      "fileName": "pariisi-pasteur-1862.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Pasteur 1862",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/pariisi-pasteur-1862.png",
+      "sha256": "80e5e931dfd49a03808a782b8d79805690ebdc41ec831ccb52b5567532aa47e0",
+      "bytes": 623145,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept\nAsset type: Matkakirja interactive map miniature, square transparent PNG\nPrimary request: Paris 1862, Louis Pasteur demonstrating his swan-neck flask experiment at École normale supérieure. Show Pasteur, age about 40 with period beard and dark frock coat, closely inspecting two elegant glass swan-neck flasks on a compact laboratory table; one flask clear and intact, a small spirit lamp and simple brass microscope nearby.\nScene/backdrop: only the self-contained scientist, table and apparatus vignette; no room walls, window, sky, or rectangular ground.\nStyle/medium: premium historical map miniature, precise dark sepia engraved linework with restrained warm ochre watercolor, crisp material detail, visually interesting and readable at small size.\nComposition/framing: slightly elevated three-quarter view, graceful flask necks clearly visible, full figure and table intact, generous transparent margin around the whole silhouette.\nLighting/mood: quiet warm window light implied on the subject, focused discovery.\nConstraints: actual transparent alpha background; accurate mid-19th-century clothing and laboratory glassware; no modern lab equipment, no labels, letters or readable text, no microbes floating in air, border, frame, logo, watermark, cast shadow, white matte, checkerboard, filled background, crop, missing parts or extra limbs.",
+      "sources": [
+        "https://www.pasteur.fr/en/about-us/middle-years-1862-1877"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "canonicalId": "pariisi-pasteur-1862",
+      "hasAlpha": true
+    },
+    {
+      "id": "pariisi-torni-1888",
+      "fileName": "pariisi-torni-1888.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Torni 1888",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/pariisi-torni-1888.png",
+      "sha256": "c18cc6eb496c540c6eeaadc46df0b85aeca78b68e2934cf93826ed320fd67841",
+      "bytes": 1131031,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept\nAsset type: Matkakirja map miniature, square transparent PNG\nPrimary request: Paris spring 1888, construction of the Eiffel Tower. Show the iron tower complete only through its second platform, with two compact timber derrick cranes on top and one four-man riveting team working around a glowing rivet on a girder. No finished upper tower.\nScene/backdrop: isolated ironwork construction vignette with a tiny fragment of Champ de Mars base; no sky, city panorama or rectangular ground.\nStyle/medium: precise dark sepia engraved linework with restrained warm ochre watercolor, crisp premium museum-diorama miniature.\nComposition/framing: elevated three-quarter view; keep the whole unfinished structure, every crane tip, worker and base inside the central 72 percent of the canvas, at least 14 percent fully transparent margin on every side.\nLighting/mood: clear daylight, energetic engineering.\nConstraints: actual transparent alpha; historically plausible 1888 iron construction, hand riveting and clothing; no modern cranes, no completed Eiffel Tower, no labels, letters, flags, border, frame, logo, watermark, cast shadow, white matte, checkerboard or background; no cropped or missing parts.",
+      "sources": [
+        "https://www.toureiffel.paris/en/the-monument/history"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "canonicalId": "pariisi-torni-1888",
+      "hasAlpha": true
+    },
+    {
+      "id": "pariisi-lumiere-1895",
+      "fileName": "pariisi-lumiere-1895.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Lumière 1895",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/pariisi-lumiere-1895.png",
+      "sha256": "4d88fe3721e3345c34b753ac1dfaaa662265daa0f9eec7df42109693f18ef9d8",
+      "bytes": 1030622,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept\nAsset type: Matkakirja map miniature, square transparent PNG\nPrimary request: Paris, Salon Indien du Grand Café, 28 December 1895. Show a compact early cinema vignette: the hand-cranked Lumière Cinématographe no. 1 on a tripod projecting toward a small freestanding screen, with six seated Belle Époque spectators reacting in wonder. On the screen show only an indistinct monochrome glimpse of workers leaving a factory gate, one of the films in the first paid program. Do not show a train.\nScene/backdrop: isolated projector-screen-audience grouping only; no room walls, ceiling, curtains or rectangular floor.\nStyle/medium: precise dark sepia engraved linework with restrained warm ochre watercolor, crisp premium historical museum-diorama miniature.\nComposition/framing: elevated three-quarter view; keep complete grouping within central 60 percent, then leave at least 20 percent transparent margin on all sides; projector crank, light beam, screen corners, hats and chair legs complete.\nLighting/mood: warm dim café light implied on subjects, intimate astonishment.\nConstraints: actual transparent alpha; accurate 1895 clothing and cinematograph; screen image is workers at a factory gate, never a train; no modern camera/projector, no readable captions, labels or trademarks, border, frame, logo, watermark, cast shadow, white matte, checkerboard, filled background, crop or missing parts.",
+      "sources": [
+        "https://www.institut-lumiere.org/musee-lumiere-fr"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "canonicalId": "pariisi-lumiere-1895",
+      "hasAlpha": true
+    },
+    {
+      "id": "wien-yhdeksas-1824",
+      "fileName": "wien-yhdeksas-1824.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Yhdeksäs 1824",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/wien-yhdeksas-1824.png",
+      "sha256": "3542e1ba9f9fbd5ca0d81b04a36ce423b161ccdd807d88eb8b0bd123890facb0",
+      "bytes": 933272,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept\nAsset type: Matkakirja map miniature, square transparent PNG\nPrimary request: Vienna, Kärntnertortheater, 7 May 1824, premiere of Beethoven's Ninth Symphony. Show deaf Beethoven in black early-19th-century concert clothes standing on a small complete podium with his back partly toward a very small group of four applauding patrons; the contralto soloist gently turns him by the sleeve to see them. Add only two seated orchestra musicians with complete instruments and stands behind.\nScene/backdrop: isolated complete figures-and-orchestra vignette only; no theatre room, curtain, wall or rectangular stage.\nStyle/medium: precise dark sepia engraved linework with restrained warm ochre watercolor, crisp premium historical museum-diorama miniature.\nComposition/framing: elevated three-quarter view; all nine people shown as COMPLETE FULL-BODY figures from head to shoes, no foreground busts or cropped crowd. Entire group inside central 60 percent, minimum 20 percent transparent margin all around; all raised hands, bows, chair legs and platform complete.\nLighting/mood: warm candlelight implied, deeply moving recognition.\nConstraints: actual transparent alpha; plausible 1824 clothing, Beethoven's unruly gray hair and stern face; no modern clothing or instruments, no readable music, labels, letters, border, frame, logo, watermark, cast shadow, white matte, checkerboard, background, cropped bodies or missing anatomy.",
+      "sources": [
+        "https://www.beethoven.de/en/glossar/view/6642245373526016/Mit%20Beethovens%20Ohr%20geh%C3%B6rt"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "canonicalId": "wien-yhdeksas-1824",
+      "hasAlpha": true
+    },
+    {
+      "id": "wien-figaro-1786",
+      "fileName": "wien-figaro-1786.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Figaro 1786",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/wien-figaro-1786.png",
+      "sha256": "8bd845d109043bd28d0c5b308d202deff7e8576bd55496d345eccc29f3a088f7",
+      "bytes": 873411,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept\nAsset type: Matkakirja map miniature, square transparent PNG\nPrimary request: Vienna, Burgtheater, 1 May 1786, premiere of The Marriage of Figaro. Show Wolfgang Amadeus Mozart at a compact fortepiano, conducting singers and a tiny period orchestra from the keyboard; one expressive soprano and baritone in restrained stage dress, two string players, and two candle chandeliers reduced to small candelabra.\nScene/backdrop: isolated musician-and-performers vignette only; no theatre room, curtain, wall or rectangular stage.\nStyle/medium: precise dark sepia engraved linework with restrained warm ochre watercolor, crisp premium historical museum-diorama miniature.\nComposition/framing: elevated three-quarter view; entire group confined to central 60 percent, minimum 20 percent transparent margin on every side; all wigs, raised hands, candles, bows, instrument legs and base complete.\nLighting/mood: warm candlelight, lively comic-opera energy.\nConstraints: actual transparent alpha; plausible 1786 clothing and instruments; no modern piano, no readable score or signage, no labels, letters, border, frame, logo, watermark, cast shadow, white matte, checkerboard, background, crop or missing anatomy.",
+      "sources": [
+        "https://www.mozarthausvienna.at/en/geschichte-des-hauses"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "canonicalId": "wien-figaro-1786",
+      "hasAlpha": true
+    },
+    {
+      "id": "lontoo-faraday-1831",
+      "fileName": "lontoo-faraday-1831.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Faraday 1831",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/lontoo-faraday-1831.png",
+      "sha256": "eacf62894613c570cf744dc08af1922cd5a12ad6932296fdb6748c795f1a3bcc",
+      "bytes": 852003,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept\nAsset type: Matkakirja map miniature, square transparent PNG\nPrimary request: London, Royal Institution lecture theatre around 1831. Michael Faraday demonstrates electromagnetic induction: he stands beside a compact mahogany lecture table with two copper-wire coils, iron ring and a period needle galvanometer, gesturing as the needle moves; four seated spectators in early-Victorian clothes form a small curved row behind.\nScene/backdrop: isolated lecturer-table-audience vignette only; no walls, ceiling, theatre architecture or rectangular floor.\nStyle/medium: precise dark sepia engraved linework with restrained warm ochre watercolor, crisp premium historical museum-diorama miniature.\nComposition/framing: elevated three-quarter view; all content inside central 60 percent, at least 20 percent transparent margin on every side; every head, hand, wire loop, chair leg and table foot intact.\nLighting/mood: warm gaslight implied on subjects, lucid scientific excitement.\nConstraints: actual transparent alpha; plausible 1831 clothing and apparatus; no visible electric sparks, lightning or modern meters, no readable labels, letters, border, frame, logo, watermark, cast shadow, white matte, checkerboard, background, crop or missing parts.",
+      "sources": [
+        "https://www.rigb.org/explore-science/explore/collection/michael-faradays-generator"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "canonicalId": "lontoo-faraday-1831",
+      "hasAlpha": true
+    },
+    {
+      "id": "lontoo-fleming-1928",
+      "fileName": "lontoo-fleming-1928.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Fleming 1928",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/lontoo-fleming-1928.png",
+      "sha256": "e001c2eed13d807bde11f56ea38ad8c610cf9a9a4c5d55420e3f99e1b4c5ddc9",
+      "bytes": 872462,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: stylized-concept\nAsset type: Matkakirja map miniature, square transparent PNG\nPrimary request: London, St Mary's Hospital, 3 September 1928. Alexander Fleming has just returned to his untidy laboratory and leans over a petri dish, clearly seeing a small mold colony surrounded by a clean bacteria-free zone; show the dish enlarged enough to read visually on a compact cluttered bench with period microscope, stacked dishes and two reagent bottles.\nScene/backdrop: isolated scientist-and-lab-bench vignette only; no room walls, window, skyline or rectangular floor.\nStyle/medium: precise dark sepia engraved linework with restrained warm ochre watercolor, crisp premium historical museum-diorama miniature.\nComposition/framing: elevated three-quarter view; entire silhouette inside central 60 percent, at least 20 percent transparent margin on every side; full head, hands, petri dish, table and apparatus intact.\nLighting/mood: cool daylight implied, quiet surprise and discovery.\nConstraints: actual transparent alpha; plausible 1928 clothing and lab equipment; no giant fantasy mold, no modern plastic labware or electronics, no readable labels, letters, border, frame, logo, watermark, cast shadow, white matte, checkerboard, background, crop or missing anatomy.",
+      "sources": [
+        "https://www.imperial.ac.uk/media/imperial-college/giving/public/Facing-Infection-Together_Institute-of-Infection.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "canonicalId": "lontoo-fleming-1928",
+      "hasAlpha": true
+    },
+    {
+      "id": "elain-kor-koreanvesihirvi-r20260907-v1",
+      "fileName": "elain-kor-koreanvesihirvi-r20260907-v1.jpg",
+      "categoryId": "elaimet",
+      "caption": "Sarveton koreanvesihirvi astuu ruovikosta joen rantaan; uroksen kaksi alaspäin osoittavaa kulmahammasta näkyvät.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-kor-koreanvesihirvi-r20260907-v1.jpg",
+      "sha256": "4c98956e7fafceab0e46367c611dda78f494e53cf86910374af7c701c57f8f42",
+      "bytes": 569589,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Sarveton koreanvesihirvi astuu ruovikosta joen rantaan; uroksen kaksi alaspäin osoittavaa kulmahammasta näkyvät. Render accurate Hydropotes inermis argyropus morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/4262389",
+        "https://www.inaturalist.org/taxa/860540"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "KOR",
+      "scientificName": "Hydropotes inermis argyropus"
+    },
+    {
+      "id": "elain-twn-formosanmustakarhu-r20260907-v2",
+      "fileName": "elain-twn-formosanmustakarhu-r20260907-v2.jpg",
+      "categoryId": "elaimet",
+      "caption": "Formosanmustakarhu vetää marjaista oksaa Taiwanin sumuisessa vuoristometsässä; vaalea V-kuvio näkyy rinnassa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-twn-formosanmustakarhu-r20260907-v2.jpg",
+      "sha256": "f14dac58357471dc4c828ab3741b76ec292e9a0ea4154e557e873e91abcc29f4",
+      "bytes": 892596,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Formosanmustakarhu vetää marjaista oksaa Taiwanin sumuisessa vuoristometsässä; vaalea V-kuvio näkyy rinnassa. Render accurate Ursus thibetanus formosanus morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/6163864",
+        "https://www.inaturalist.org/taxa/711632"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "TWN",
+      "scientificName": "Ursus thibetanus formosanus"
+    },
+    {
+      "id": "elain-kaz-saiga-r20260907-v1",
+      "fileName": "elain-kaz-saiga-r20260907-v1.jpg",
+      "categoryId": "elaimet",
+      "caption": "Sarvipäinen saigauros laiduntaa pienen lauman edessä Kazakstanin kesäarolla; alaspäin suuntautunut turpa erottuu.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-kaz-saiga-r20260907-v1.jpg",
+      "sha256": "835143b0fa6669cb9693851b0c9b3b230b9568e627a2ad8919cb8a9905695f1d",
+      "bytes": 516349,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Sarvipäinen saigauros laiduntaa pienen lauman edessä Kazakstanin kesäarolla; alaspäin suuntautunut turpa erottuu. Render accurate Saiga tatarica morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/2441067",
+        "https://www.inaturalist.org/taxa/42378"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "KAZ",
+      "scientificName": "Saiga tatarica"
+    },
+    {
+      "id": "elain-mng-przewalskinhevonen-r20260907-v1",
+      "fileName": "elain-mng-przewalskinhevonen-r20260907-v1.jpg",
+      "categoryId": "elaimet",
+      "caption": "Kaksi przewalskinhevosta tervehtii toisiaan kuonoillaan Mongolian arolla muun lauman laiduntaessa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-mng-przewalskinhevonen-r20260907-v1.jpg",
+      "sha256": "c8796752c53223cd65883e6b3bd9055731feeed703ee3ad0e9771c0fc21340cc",
+      "bytes": 483822,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Kaksi przewalskinhevosta tervehtii toisiaan kuonoillaan Mongolian arolla muun lauman laiduntaessa. Render accurate Equus ferus przewalskii morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/5787170",
+        "https://www.inaturalist.org/taxa/62628"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "MNG",
+      "scientificName": "Equus ferus przewalskii"
+    },
+    {
+      "id": "elain-afg-lumileopardi-r20260907-v2",
+      "fileName": "elain-afg-lumileopardi-r20260907-v2.jpg",
+      "categoryId": "elaimet",
+      "caption": "Lumileopardi ja lähes aikuinen pentu kulkevat lumisella Hindukušin kalliohyllyllä.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-afg-lumileopardi-r20260907-v2.jpg",
+      "sha256": "35224bbc22ae6fd0271d5d92886bbb033bbde7fdca286dcb2158ab290d7ee319",
+      "bytes": 462893,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Lumileopardi ja lähes aikuinen pentu kulkevat lumisella Hindukušin kalliohyllyllä. Render accurate Panthera uncia morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/5787213",
+        "https://www.inaturalist.org/taxa/74831"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "AFG",
+      "scientificName": "Panthera uncia"
+    },
+    {
+      "id": "elain-pak-markhor-r20260907-v2",
+      "fileName": "elain-pak-markhor-r20260907-v2.jpg",
+      "categoryId": "elaimet",
+      "caption": "Kaksi markhorurosta seisoo Chitralin vuoristometsän kalliolla korkkiruuvimaisten sarvien näkyessä.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-pak-markhor-r20260907-v2.jpg",
+      "sha256": "cd4d778536e82d025664e4b582eab05e42a5c551854a23d59bd4cd455c9fd1cf",
+      "bytes": 711793,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Kaksi markhorurosta seisoo Chitralin vuoristometsän kalliolla korkkiruuvimaisten sarvien näkyessä. Render accurate Capra falconeri morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/2441050",
+        "https://www.inaturalist.org/taxa/42356"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "PAK",
+      "scientificName": "Capra falconeri"
+    },
+    {
+      "id": "elain-uzb-bukharanhirvi-r20260907-v1",
+      "fileName": "elain-uzb-bukharanhirvi-r20260907-v1.jpg",
+      "categoryId": "elaimet",
+      "caption": "Bukharanhirviuros seisoo Amudarjan tugai-metsässä kahden muun hirven ylittäessä matalaa uomaa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-uzb-bukharanhirvi-r20260907-v1.jpg",
+      "sha256": "5567fc522c3c7736cfb8a329912356606240947b9100fd8dc3743bbdde73dc30",
+      "bytes": 776689,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Bukharanhirviuros seisoo Amudarjan tugai-metsässä kahden naaraan ylittäessä matalaa uomaa. Render accurate Cervus hanglu bactrianus morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/10715744",
+        "https://documents1.worldbank.org/curated/en/143191468761959151/pdf/multi0page.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "UZB",
+      "scientificName": "Cervus hanglu bactrianus"
+    },
+    {
+      "id": "elain-phl-filippiinientarsieri-r20260907-v1",
+      "fileName": "elain-phl-filippiinientarsieri-r20260907-v1.jpg",
+      "categoryId": "elaimet",
+      "caption": "Filippiinientarsieri tarkkailee yöperhosta Mindanaon sademetsän oksalla.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-phl-filippiinientarsieri-r20260907-v1.jpg",
+      "sha256": "a0a3b742f78eeda20892d4622a96926741f07bbaefa9e7877c4e44dccef6255c",
+      "bytes": 389136,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Filippiinientarsieri tarkkailee yöperhosta Mindanaon sademetsän oksalla. Render accurate Carlito syrichta morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/8008808",
+        "https://www.inaturalist.org/taxa/1369286"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "PHL",
+      "scientificName": "Carlito syrichta"
+    },
+    {
+      "id": "elain-moz-dugongi-r20260907-v2",
+      "fileName": "elain-moz-dugongi-r20260907-v2.jpg",
+      "categoryId": "elaimet",
+      "caption": "Dugongi laiduntaa meriruohoa poikasen seuratessa Mosambikin matalassa rannikkovedessä.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-moz-dugongi-r20260907-v2.jpg",
+      "sha256": "6886bacada2f3cd85443f40f7ed52151a54bfc57820f6cda17153543cf98ba15",
+      "bytes": 607965,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Dugongi laiduntaa meriruohoa poikasen seuratessa Mosambikin matalassa rannikkovedessä. Render accurate Dugong dugon morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/9729967",
+        "https://www.inaturalist.org/taxa/46311"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "MOZ",
+      "scientificName": "Dugong dugon"
+    },
+    {
+      "id": "elain-zwe-mustasarvikuono-r20260907-v2",
+      "fileName": "elain-zwe-mustasarvikuono-r20260907-v2.jpg",
+      "categoryId": "elaimet",
+      "caption": "Mustasarvikuono kurkottaa tarttuvalla ylähuulellaan akaasian lehtiä Zimbabwen pensaikossa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-zwe-mustasarvikuono-r20260907-v2.jpg",
+      "sha256": "42535eeba96fdc890c321a68d53630f0164f9dbe5d715af096d0b727136b815e",
+      "bytes": 614151,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Mustasarvikuono kurkottaa tarttuvalla ylähuulellaan akaasian lehtiä Zimbabwen pensaikossa. Render accurate Diceros bicornis morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/5220111",
+        "https://www.inaturalist.org/taxa/43350"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "ZWE",
+      "scientificName": "Diceros bicornis"
+    },
+    {
+      "id": "elain-sen-afrikanmanaatti-r20260907-v3",
+      "fileName": "elain-sen-afrikanmanaatti-r20260907-v3.jpg",
+      "categoryId": "elaimet",
+      "caption": "Afrikanmanaatti ja poikanen nousevat sameassa vedessä Senegalin mangrovejuurten edessä.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-sen-afrikanmanaatti-r20260907-v3.jpg",
+      "sha256": "1e0788d8dfb35aac9aeda1db383968ae209cfd3556c851bbc1eb8f68093ef2f1",
+      "bytes": 465595,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Afrikanmanaatti ja poikanen nousevat sameassa vedessä Senegalin mangrovejuurten edessä. Render accurate Trichechus senegalensis morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/2435294",
+        "https://www.inaturalist.org/taxa/46320"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "SEN",
+      "scientificName": "Trichechus senegalensis"
+    },
+    {
+      "id": "elain-mli-gourmannorsu-r20260907-v2",
+      "fileName": "elain-mli-gourmannorsu-r20260907-v2.jpg",
+      "categoryId": "elaimet",
+      "caption": "Gourmanorsut lepäävät akaasian varjossa matkalla vesipaikalle Malin Sahelissa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-mli-gourmannorsu-r20260907-v2.jpg",
+      "sha256": "4488f5f956ececc128e7df7bc061b4f4ffd1baba7250304f515c719b25002b52",
+      "bytes": 744292,
+      "dimensions": [
+        1449,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Gourmanorsut lepäävät akaasian varjossa matkalla vesipaikalle Malin Sahelissa. Render accurate Loxodonta africana morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/2435350",
+        "https://www.inaturalist.org/taxa/43694"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "MLI",
+      "scientificName": "Loxodonta africana"
+    },
+    {
+      "id": "elain-lbr-kaapiovirtahepo-r20260907-v1",
+      "fileName": "elain-lbr-kaapiovirtahepo-r20260907-v1.jpg",
+      "categoryId": "elaimet",
+      "caption": "Kääpiövirtahepo tutkii pudonneita hedelmiä poikasen seuratessa Liberian metsäpurolla.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-lbr-kaapiovirtahepo-r20260907-v1.jpg",
+      "sha256": "986595c3ed790def8cc1977e46fa805fbce24881c1280385f8755878b5f24660",
+      "bytes": 602723,
+      "dimensions": [
+        1449,
+        1085
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Kääpiövirtahepo tutkii pudonneita hedelmiä poikasen seuratessa Liberian metsäpurolla. Render accurate Choeropsis liberiensis morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/5787064",
+        "https://www.inaturalist.org/taxa/74192"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "LBR",
+      "scientificName": "Choeropsis liberiensis"
+    },
+    {
+      "id": "elain-sle-lansiafrikansimpanssi-r20260907-v2",
+      "fileName": "elain-sle-lansiafrikansimpanssi-r20260907-v2.jpg",
+      "categoryId": "elaimet",
+      "caption": "Länsiafrikansimpanssi syö oksasta poimimaansa hedelmää nuoren yksilön katsellessa Sierra Leonessa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-sle-lansiafrikansimpanssi-r20260907-v2.jpg",
+      "sha256": "c4f706e87184998112bb378cd50f032c466e260f1adbdf82344d14bc39e50f2a",
+      "bytes": 911404,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Länsiafrikansimpanssi syö oksasta poimimaansa hedelmää nuoren yksilön katsellessa Sierra Leonessa. Render accurate Pan troglodytes verus morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/5707422",
+        "https://www.inaturalist.org/taxa/147739"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "SLE",
+      "scientificName": "Pan troglodytes verus"
+    },
+    {
+      "id": "elain-sdn-arruikatsa-r20260907-v1",
+      "fileName": "elain-sdn-arruikatsa-r20260907-v1.jpg",
+      "categoryId": "elaimet",
+      "caption": "Kaksisarvinen arruikatsauros kulkee Sudanin Punaisenmeren kukkuloiden kivikkorinteellä.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-sdn-arruikatsa-r20260907-v1.jpg",
+      "sha256": "8dbdeff209da7776c9fb804ef190fabd994d173f08aa9838d4963edcd6e23d2a",
+      "bytes": 755569,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Kaksisarvinen arruikatsauros kulkee Sudanin Punaisenmeren kukkuloiden kivikkorinteellä. Render accurate Ammotragus lervia morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/2441005",
+        "https://www.inaturalist.org/taxa/42422"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "SDN",
+      "scientificName": "Ammotragus lervia"
+    },
+    {
+      "id": "elain-tcd-sapelisarvioryksi-r20260907-v1",
+      "fileName": "elain-tcd-sapelisarvioryksi-r20260907-v1.jpg",
+      "categoryId": "elaimet",
+      "caption": "Sapelisarvioryksi juoksee pölyävän lajitoverin ohi Tšadin kuivalla Sahel-aroalueella.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-tcd-sapelisarvioryksi-r20260907-v1.jpg",
+      "sha256": "d231434908996c7161fad6297cab5242f933adf2ae3e204f02e58fe194a4e5b7",
+      "bytes": 469680,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Sapelisarvioryksi juoksee pölyävän lajitoverin ohi Tšadin kuivalla Sahel-aroalueella. Render accurate Oryx dammah morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/5220165",
+        "https://www.inaturalist.org/taxa/42310"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "TCD",
+      "scientificName": "Oryx dammah"
+    },
+    {
+      "id": "elain-lby-saharangaselli-r20260907-v1",
+      "fileName": "elain-lby-saharangaselli-r20260907-v1.jpg",
+      "categoryId": "elaimet",
+      "caption": "Kaksi saharangasellia kulkee Libyan dyynien välisessä painanteessa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-lby-saharangaselli-r20260907-v1.jpg",
+      "sha256": "b46d82ae2d6bcd089c32d89466cd832df20e1fe5f2060e8dff8fb55fa89ec7b3",
+      "bytes": 519991,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Kaksi saharangasellia kulkee Libyan dyynien välisessä painanteessa. Render accurate Gazella leptoceros morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/5220150",
+        "https://www.inaturalist.org/taxa/42259"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "LBY",
+      "scientificName": "Gazella leptoceros"
+    },
+    {
+      "id": "elain-nga-drilli-r20260907-v1",
+      "fileName": "elain-nga-drilli-r20260907-v1.jpg",
+      "categoryId": "elaimet",
+      "caption": "Drilli ja nuori yksilö etsivät ravintoa Nigerian sademetsän karikkeesta.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-nga-drilli-r20260907-v1.jpg",
+      "sha256": "127c8845edfada3478363c0e560a54d29db861b05fce58787575375a243a4913",
+      "bytes": 661062,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Drilli ja nuori yksilö etsivät ravintoa Nigerian sademetsän karikkeesta. Render accurate Mandrillus leucophaeus morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/5219557",
+        "https://www.inaturalist.org/taxa/43532"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "NGA",
+      "scientificName": "Mandrillus leucophaeus"
+    },
+    {
+      "id": "elain-som-beira-r20260907-v1",
+      "fileName": "elain-som-beira-r20260907-v1.jpg",
+      "categoryId": "elaimet",
+      "caption": "Beirauros seisoo valppaana Somalian kivikkoisella akasiarinteellä toisen yksilön laiduntaessa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-som-beira-r20260907-v1.jpg",
+      "sha256": "cf2fc3745fcc00a72531cc57d4e21514eed960e0fec39d9696b6c2eb63eefef3",
+      "bytes": 544734,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Beirauros seisoo valppaana Somalian kivikkoisella akasiarinteellä toisen yksilön laiduntaessa. Render accurate Dorcatragus megalotis morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/2441197",
+        "https://www.inaturalist.org/taxa/42270"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "SOM",
+      "scientificName": "Dorcatragus megalotis"
+    },
+    {
+      "id": "elain-tun-dorkasgaselli-r20260907-v1",
+      "fileName": "elain-tun-dorkasgaselli-r20260907-v1.jpg",
+      "categoryId": "elaimet",
+      "caption": "Dorkasgaselli loikkaa Tunisian puoliaavikolla lajitoverin katsellessa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-tun-dorkasgaselli-r20260907-v1.jpg",
+      "sha256": "4b06d9c0a9aa8640acdbd37730ef40dd3a7f88fa2cdce47ba4c51588d937ea7e",
+      "bytes": 557712,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Dorkasgaselli loikkaa Tunisian puoliaavikolla lajitoverin katsellessa. Render accurate Gazella dorcas morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/5220149",
+        "https://www.inaturalist.org/taxa/42266"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "TUN",
+      "scientificName": "Gazella dorcas"
+    },
+    {
+      "id": "elain-syr-kaljuiibis-r20260907-v1",
+      "fileName": "elain-syr-kaljuiibis-r20260907-v1.jpg",
+      "categoryId": "elaimet",
+      "caption": "Kaljuiibispari Syyrian Palmyran autiomaa-aron historiallista pesimäympäristöä esittävässä rekonstruktiossa; kuva ei väitä nykyistä villihavaintoa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-syr-kaljuiibis-r20260907-v1.jpg",
+      "sha256": "621b9d5bac7ad0c1359c0f1a3c4692b5ea75295465ff473340b563463cd4caee",
+      "bytes": 506035,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Kaksi kaljuiibistä on Syyrian autiomaa-aron kalliohyllyllä. Render accurate Geronticus eremita morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/2480770",
+        "https://www.cambridge.org/core/journals/oryx/article/northern-bald-ibis-geronticus-eremita-history-current-status-and-future-perspectives/570EE0C496F173CE86B34429B8675583"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "SYR",
+      "scientificName": "Geronticus eremita"
+    },
+    {
+      "id": "elain-yem-jemeninkameleontti-r20260907-v2",
+      "fileName": "elain-yem-jemeninkameleontti-r20260907-v2.jpg",
+      "categoryId": "elaimet",
+      "caption": "Jemeninkameleontti kurottaa oksalta toiselle Jemenin kuivassa ylänköwadissa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-yem-jemeninkameleontti-r20260907-v2.jpg",
+      "sha256": "29b1c938cb058485e5a604617038127f54c52c66311088c722d85f943e510d07",
+      "bytes": 697608,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Jemeninkameleontti kurottaa oksalta toiselle Jemenin kuivassa ylänköwadissa. Render accurate Chamaeleo calyptratus morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/2449133",
+        "https://www.inaturalist.org/taxa/32873"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "YEM",
+      "scientificName": "Chamaeleo calyptratus"
+    },
+    {
+      "id": "elain-ecu-andienkarhu-r20260907-v2",
+      "fileName": "elain-ecu-andienkarhu-r20260907-v2.jpg",
+      "categoryId": "elaimet",
+      "caption": "Andienkarhu syö bromeliaa Ecuadorin sumumetsän puussa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-ecu-andienkarhu-r20260907-v2.jpg",
+      "sha256": "e4a3a268ef65b32c93e7a9528534baadf17db8915e181178f7e7b82220af3e8a",
+      "bytes": 732221,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Andienkarhu syö bromeliaa Ecuadorin sumumetsän puussa. Render accurate Tremarctos ornatus morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/2433401",
+        "https://www.inaturalist.org/taxa/41657"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "ECU",
+      "scientificName": "Tremarctos ornatus"
+    },
+    {
+      "id": "elain-pry-chacopekari-r20260907-v1",
+      "fileName": "elain-pry-chacopekari-r20260907-v1.jpg",
+      "categoryId": "elaimet",
+      "caption": "Chacopekari ja nuori yksilö etsivät ravintoa Paraguayn piikkipensaikossa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-pry-chacopekari-r20260907-v1.jpg",
+      "sha256": "0293a71a577998959d0355356a8b31ffb87547f4ad911ce28cc07d1be0c43645",
+      "bytes": 798682,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Chacopekari ja nuori yksilö etsivät ravintoa Paraguayn piikkipensaikossa. Render accurate Catagonus wagneri morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/2440998",
+        "https://www.inaturalist.org/taxa/42117"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "PRY",
+      "scientificName": "Catagonus wagneri"
+    },
+    {
+      "id": "elain-ury-kapybara-r20260907-v2",
+      "fileName": "elain-ury-kapybara-r20260907-v2.jpg",
+      "categoryId": "elaimet",
+      "caption": "Kapibaraperhe lepää Uruguayn joenrannalla poikasten kiivetessä aikuisen selälle.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-ury-kapybara-r20260907-v2.jpg",
+      "sha256": "1cf0308ef7a51f69aa872a2ff7f643ef16ec39732e498ec406e5bf1c9fef83d3",
+      "bytes": 419639,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Kapibaraperhe lepää Uruguayn joenrannalla poikasten kiivetessä aikuisen selälle. Render accurate Hydrochoerus hydrochaeris morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/5786666",
+        "https://www.inaturalist.org/taxa/74442"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "URY",
+      "scientificName": "Hydrochoerus hydrochaeris"
+    },
+    {
+      "id": "elain-ven-jattimuurahaiskarhu-r20260907-v2",
+      "fileName": "elain-ven-jattimuurahaiskarhu-r20260907-v2.jpg",
+      "categoryId": "elaimet",
+      "caption": "Jättimuurahaiskarhu kantaa poikastaan Venezuelan llanojen ruohikossa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-ven-jattimuurahaiskarhu-r20260907-v2.jpg",
+      "sha256": "9928bcd62da9d7605391f038364ecab7d33fac17a5b3f43806b014fd6310ed12",
+      "bytes": 623020,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja animal sighting, horizontal 4:3. Jättimuurahaiskarhu kantaa poikastaan Venezuelan llanojen ruohikossa. Render accurate Myrmecophaga tridactyla morphology and authentic habitat. Keep the complete subject and all important anatomy inside the central 65% with generous edge room. Natural documentary wildlife photography, truthful fur, feathers or skin, quiet optical bokeh. No text, border or watermark.",
+      "sources": [
+        "https://www.gbif.org/species/2436346",
+        "https://www.inaturalist.org/taxa/47107"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "VEN",
+      "scientificName": "Myrmecophaga tridactyla"
+    },
+    {
+      "id": "maalehti-nic-musiikki-3",
+      "fileName": "maalehti-nic-musiikki-3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Chichero-yhtye soittaa vaskia ja lyömäsoittimia Nicaraguan katujuhlassa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nic-musiikki-3.jpg",
+      "sha256": "0c499e8afb151068daf5956a9f70a2e247b1d1c200716c5afdec5df1b88a84fa",
+      "bytes": 633872,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: Matkakirja country feature, camera-like documentary photograph, horizontal 4:3. Entirely new WIDE view of a Nicaraguan chichero street band performing while walking through a northern town celebration: trumpet, trombone, euphonium, bass drum and snare, with neighbors dancing behind. Authentic everyday festive clothing and weathered colonial street. Frame from farther back: the COMPLETE five-person band and every instrument, bell, drum rim, hand and foot occupy only the central 55% of the canvas, with at least 22% empty street/building margin on left, right, top and bottom for later fade. Warm available light, crisp natural skin, brass and drum texture. No marching uniforms, cropped person or instrument, text, logo, border, watermark, illustration or CGI.",
+      "sources": [
+        "https://www.intur.gob.ni/2017/10/04/musica-chicheros/",
+        "https://www.mined.gob.ni/mapatradicionesculturapopular/musica/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "NIC",
+      "featureCategoryId": "musiikki",
+      "canonicalTitle": "Pohjoisessa soi polkka"
+    },
+    {
+      "id": "maalehti-nic-kansanperinne-1",
+      "fileName": "maalehti-nic-kansanperinne-1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "La Mocuanan tarinan prinsessa luolan aarrekätkön äärellä nicaragualaisessa kansantarurekonstruktiossa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nic-kansanperinne-1.jpg",
+      "sha256": "441eb337c4e88fad66a7be72c9cb8001e7c058d975f0c240003f1a31b1dd55a7",
+      "bytes": 424750,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: Matkakirja folklore feature, cinematic camera-like staged photograph, horizontal 4:3. A respectful Nicaraguan visual retelling of La Mocuana: a young Indigenous chief's daughter in historically inspired plain woven clothing kneels inside a volcanic cave, discovering a small concealed cache of old gold ornaments and pottery in a rock hollow while pale forest daylight reaches from a distant rear opening. Her face is partly turned away and mysterious; the treasure remains modest and archaeologically plausible, not pirate loot. Full figure and treasure central within 55%, at least 20% dark cave margin on every edge. Rich natural rock texture, humid mist, warm reflected light, realistic photographic surface. No conquistador costume, crown, giant chest, modern gear, horror gore, text, border, watermark, fantasy illustration or CGI.",
+      "sources": [
+        "https://www.aghn.edu.ni/wp-content/uploads/2021/10/RAGHN-64.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "NIC",
+      "featureCategoryId": "kansanperinne",
+      "canonicalTitle": "Prinsessa, joka kätki aarteen ja jäi luolaan"
+    },
+    {
+      "id": "maalehti-nic-kansanperinne-2",
+      "fileName": "maalehti-nic-kansanperinne-2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "La Ceguan tarinan valkea hahmo ilmestyy etäällä Nicaraguan metsätiellä tunnelmallisessa kansantarurekonstruktiossa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nic-kansanperinne-2.jpg",
+      "sha256": "857963fe747e3fd5881873025ff86941010abceacde02817145bf0bd3852a313",
+      "bytes": 477478,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: Matkakirja folklore feature, atmospheric camera-like staged photograph, horizontal 4:3. A restrained Nicaraguan retelling of La Cegua on a lonely rural forest road at night: a distant woman-shaped figure wears a long white dress textured like pale dried corn leaves and a veil, with long dark hair partly hiding her face. A lone adult traveler has stopped far down the road, uncertain, while scattered mustard seeds glint in the foreground as a subtle story clue. The figure remains small, mysterious and non-graphic; no monster-face close-up. All figures within central 55%, broad dark foliage and road margins for later fade. Moonlit mist, believable fabric and vegetation, cinematic photographic realism. No gore, horse skull, sexualized pose, child, modern car, text, border, watermark, illustration or CGI.",
+      "sources": [
+        "https://www.aghn.edu.ni/wp-content/uploads/2021/10/RAGHN-64.pdf",
+        "https://ich.unesco.org/doc/src/00254-ES.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "NIC",
+      "featureCategoryId": "kansanperinne",
+      "canonicalTitle": "Hahmo, joka varmisti että miehet tulivat kotiin"
+    },
+    {
+      "id": "maalehti-nic-kansanperinne-3",
+      "fileName": "maalehti-nic-kansanperinne-3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Käsityöläiset esittelevät riippumattoja Masayan käsityöpihasta vapaasti rakennetussa dokumentaarisessa kohtauksessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nic-kansanperinne-3.jpg",
+      "sha256": "232e2a0ddab6707390daf836446e235ed332ae1435b379d07f8c951d226f59cb",
+      "bytes": 764757,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: Matkakirja country feature, camera-like documentary photograph, horizontal 4:3. The courtyard of Masaya's Centro Cultural Antiguo Mercado de Artesanías in Nicaragua, grounded in the real restored early-20th-century market hall: low red-tile roofs, ochre walls, repeated arched openings and an open central courtyard. Local artisans display handwoven striped hammocks; one weaver demonstrates the loom while families browse embroidered blouses and small woodcarvings. Architecture and people both visible, candid activity, no posed souvenir tableau. Main action within central 60%, ample 20% courtyard and arcade margin. Bright shaded tropical daylight, crisp natural cloth and masonry texture, quiet optical depth. No modern mall, generic bazaar domes, mass-produced signs, text, logos, border, watermark or CGI.",
+      "sources": [
+        "https://tramites.intur.gob.ni/siit/public/site/atractivosTuristicosMasaya.html",
+        "https://www.intur.gob.ni/2018/09/17/todas-las-expresiones-culturales-de-chontales-en-masaya/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "NIC",
+      "featureCategoryId": "kansanperinne",
+      "canonicalTitle": "Kaupunki, jota sanotaan kansanperinteen kehdoksi"
+    },
+    {
+      "id": "maalehti-pan-historia-3",
+      "fileName": "maalehti-pan-historia-3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Vuoden 1826 Panaman kongressin edustajat kokoontuvat entisen fransiskaaniluostarin kokoustilaa mukailevassa historiallisessa rekonstruktiossa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-pan-historia-3.jpg",
+      "sha256": "48268376a468b7665a6a1b0a398265d9bbcb0e11a2ff50c6f7aa96fe7d6e1367",
+      "bytes": 501093,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: Matkakirja historical feature, camera-like cinematic reconstruction photograph, horizontal 4:3, year 1826. Delegates to the Amphictyonic Congress of Panama meet in the actual type of space that survives as Salón Bolívar: the modest ground-floor chapter hall of the former Franciscan convent, thick pale masonry walls, dark timber doors, tiled floor, restrained colonial interior, tall shuttered openings. A diverse group of early republican Latin American delegates in accurate 1820s civilian formal dress gathers around one long plain wooden table covered with maps, sealed papers, quills and inkwells; discussion feels active, not a modern diplomatic photo. Simón Bolívar is not falsely shown as personally attending. Room architecture and all main figures within central 60% with broad wall and floor margins for fade. Soft tropical window light, convincing period textile and paper detail, natural lens rendering. No flags invented for every delegate, modern suits, electric lights, grand palace ballroom, text, border, watermark, painting or CGI.",
+      "sources": [
+        "https://whc.unesco.org/en/decisions/2899/",
+        "https://whc.unesco.org/document/154280",
+        "https://www.loc.gov/item/37020781/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "PAN",
+      "featureCategoryId": "historia",
+      "canonicalTitle": "Kokous, jossa Amerikka tapasi itsensä"
+    },
+    {
+      "id": "elain-gha-valkokaulakalliovaris-r20260907-v3",
+      "fileName": "elain-gha-valkokaulakalliovaris-r20260907-v3.jpg",
+      "categoryId": "elaimet",
+      "caption": "Valkokaulakalliovaris kantaa kuivaa lehteä Ghanan sademetsässä.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-gha-valkokaulakalliovaris-r20260907-v3.jpg",
+      "sha256": "57bfaae5232c49a3152f65c43cc61262e8160d8071db67345ff6fbea8c42f548",
+      "bytes": 417131,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1536x1024 landscape wildlife photograph, using the supplied real Picathartes gymnocephalus side-profile photograph strictly as the morphology reference. Show one white-necked rockfowl in Ghana rainforest carrying one dry leaf in its beak toward a mud nest site. Preserve the real species anatomy exactly: bare bright yellow head with black rear crown patch, black upperparts, white neck and belly, very long narrow dark tail extending clearly well behind the body, long pale legs and natural feet. Side profile, photographic feather detail and quiet forest bokeh. Frame much wider than the reference: the entire bird, long tail, leaf, feet and perch occupy only the central 55% of the canvas, at least 22% calm habitat on all edges for later fade. No cropped tail, no short-tailed silhouette, no missing leaf, no extra birds, no text, border, illustration or CGI.",
+      "sources": [
+        "https://www.gbif.org/species/2486962",
+        "https://leesbird.com/2015/07/19/sunday-inspiration-australian-robin-and-friends/pas-pica-white-necked-rockfowl-picathartes-gymnocephalus-mjandersen/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "GHA",
+      "scientificName": "Picathartes gymnocephalus"
+    },
+    {
+      "id": "elain-pan-panamankultasammakko-r20260907-v6",
+      "fileName": "elain-pan-panamankultasammakko-r20260907-v6.jpg",
+      "categoryId": "elaimet",
+      "caption": "Panamankultasammakko historiallista Tabasarán pilvimetsäelinympäristöä esittävässä alkuperäisessä akvarelli- ja guassikuvituksessa; kuva ei väitä nykyistä luontohavaintoa.",
+      "url": "https://media.matkakirja.app/elaimet/20260907/elain-pan-panamankultasammakko-r20260907-v6.jpg",
+      "sha256": "e3ee9902668d1010aa8a52fab00da1fb58211d0a9a2f87219675533d857970ab",
+      "bytes": 628879,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1536x1024 landscape watercolor-and-gouache museum natural-history plate based closely on the supplied Smithsonian photograph of the exact species Atelopus zeteki. One frog in side profile on a mossy stream stone in a historical Panama cloud-forest reconstruction. Copy the real reference silhouette and feet: long pointed snout, smooth flat cheek immediately behind eye with absolutely no eardrum circle or disk, slim limbs, front feet with exactly four small plain narrow digits, rear feet with exactly five small plain narrow digits; tips only subtly rounded as in reference, never bulbous and never suction cups. Keep both forefeet resting naturally on the stone so the digits remain small and unexaggerated; suggest the species signaling behavior only with a slight lift of one wrist, not an open splayed palm. Entire frog central and modest scale with generous habitat around it. Original illustration, no current wild-sighting claim. No visible tympanum, no ear ring, no tree-frog pads, no extra digits, no text or border.",
+      "sources": [
+        "https://www.gbif.org/species/5216695",
+        "https://www.si.edu/newsdesk/photos/panamanian-golden-frog"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "iccEmbedded": true,
+      "countryCode": "PAN",
+      "scientificName": "Atelopus zeteki"
+    }
+  ],
+  "gameIntegrationClaimed": false
+}
