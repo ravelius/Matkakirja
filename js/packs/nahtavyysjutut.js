@@ -54517,6 +54517,16 @@ export const NAHTAVYYSJUTUT = {
           + 'Euroopan komissio, Euroopan investointipankki, Ranska, '
           + 'Saksa ja Belgia sopivat suuren rokotetuotantolaitoksen '
           + 'rakentamisesta instituutin yhteyteen.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-dakar-kaupunki-4-r20260907-v2.jpg',
+          selite: 'Dakarin historiallisen Pasteur-instituutin nykyistä '
+            + 'pääsisäänkäyntiä mukaileva tekoälykuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Institut '
+            + 'Pasteur de Dakar — laitoksen oma esittely; Action Santé '
+            + 'Mondiale — vierailu Dakarin Pasteur-instituutissa',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Théodore Monod -museo': {
@@ -54658,6 +54668,15 @@ export const NAHTAVYYSJUTUT = {
           + 'opetusministeriön alaisena ja omistettu islamilaiselle '
           + 'tutkimukselle ja opetukselle. Instituutin kirjasto '
           + 'avattiin 9. lokakuuta 2004.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-dakar-kaupunki-6-r20260907-v1.jpg',
+          selite: 'Dakarin suuren moskeijan todellista julkisivua ja '
+            + 'minareettia mukaileva tekoälykuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Wikimedia '
+            + 'Commons — Grande mosquée de Dakar',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Soumbédiounen käsityökylä': {

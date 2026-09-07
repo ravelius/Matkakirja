@@ -41242,7 +41242,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Koulu, joka teki kirjaimista kuvia',
           aika: '1957–',
-          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-kuvataide-2-r20260907-v3.jpg',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-kuvataide-2-r20260907-v4.jpg',
           teksti: 'Ibrahim El-Salahi syntyi Omdurmanissa 1930 perheeseen, '
               + 'jossa isä piti koraanikoulua — sieltä hän oppi '
               + 'arabialaisen kalligrafian, josta tuli myöhemmin hänen '
@@ -41253,12 +41253,13 @@ export const MAA_KATEGORIAT = {
               + 'länsimaisen modernismin. Vuonna 2013 Tate Modern '
               + 'järjesti hänestä ensimmäisen afrikkalaista '
               + 'nykytaiteilijaa esittelevän retrospektiivinsä.',
+          selite: 'Kasvottomana takaapäin kuvattu anonyymi taiteilija '
+            + 'työskentelee kuvitteellisen maalauksen äärellä; teos ei ole '
+            + 'Ibrahim El-Salahin aito työ.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Ashmolean '
+            + 'Museum — Ibrahim El-Salahi -näyttelyteksti; Metropolitan '
+            + 'Museum of Art — kokoelmateos 702950',
           wiki: 'Ibrahim El-Salahi',
-          selite: 'Ibrahim El-Salahin ja Khartumin koulukunnan innoittama '
-            + 'kuvitus: selin nähty maalari kuvitteellisessa työhuoneessa '
-            + '1950-luvun lopulla.',
-          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Ashmolean Museum — '
-            + 'Ibrahim El-Salahi -näyttelyteksti',
         },
         {
           otsikko: 'Kuninkaan haudan päälle ladottiin valkoista ja mustaa',
@@ -41620,7 +41621,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Pinaattipata, joka maistuu maapähkinältä',
-          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-ruoka-1-r20260907-v2.jpg',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-ruoka-1-r20260907-v4.jpg',
           teksti: 'Kombo tehdään kolmesta aineksesta: pinaatista tai '
               + 'muusta lehtivihanneksesta, maapähkinävoista ja '
               + 'tomaatista. Maapähkinä antaa padalle paksuuden ja '
@@ -41632,11 +41633,11 @@ export const MAA_KATEGORIAT = {
               + 'kuivatusta kalasta keitetty pata, ja kaupungeissa '
               + 'paistetaan mandazia, kolmion muotoista uppopaistettua '
               + 'leipää.',
-          wiki: 'South Sudanese cuisine',
-          selite: 'Kombo-pata, lehtivihannes, maapähkinätahna ja tomaatti '
-            + 'eteläsudanilaisen reseptin innoittamassa kuvituksessa.',
+          selite: 'Kombo-ruoan lehtivihannes-, maapähkinä- ja '
+            + 'tomaattiaineksia havainnollistava väljä keittiökuvitus.',
           lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Global Table '
             + 'Adventure — kombo-pata South Sudanese Cookbookin mukaan',
+          wiki: 'South Sudanese cuisine',
         },
         {
           otsikko: 'Kala, joka painaa enemmän kuin kaksi ihmistä',
@@ -41699,6 +41700,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Juban yöt, jolloin soittivat Skylarks ja Rejaf Jazz',
           aika: '1970–1980-luvut',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-musiikki-1-r20260907-v4.jpg',
           teksti: 'Juba oli 1970- ja 1980-luvuilla vilkkaan yöelämän '
               + 'kaupunki, ja lavalla soittivat muun muassa Skylarks ja '
               + 'Rejaf Jazz. Musiikissa kuului koko naapuruston kirjo: '
@@ -41710,6 +41712,10 @@ export const MAA_KATEGORIAT = {
               + 'tyylit. Emmanuel Kembe laulaa kansanmusiikkia, reggaeta '
               + 'ja afrobeatia, Yaba Angelosi afrobeatia, r&b:tä ja '
               + 'zoukia.',
+          selite: 'Kuvitteellinen yhtye ja tanssiyleisö 1970-luvun Juban '
+            + 'yöelämää mukailevassa rekonstruktiossa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Freemuse — 1st '
+            + 'World Conference on Music and Censorship (1998), s. 31',
           wiki: 'Culture of South Sudan',
         },
         {
@@ -43163,6 +43169,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kamppailulaji temppelin seinämaalauksissa',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-lka-urheilu-3-r20260907-v3.jpg',
           teksti: 'Angampora yhdistää kaksi puolta: angam on aseeton taistelu ja '
               + 'illangam käyttää aseita, muun muassa taipuisaa ethunu kaduwa -miekkaa. '
               + 'Ominaista ovat painepisteisiin kohdistuvat iskut ja ottelun päättyminen '
@@ -43172,6 +43179,12 @@ export const MAA_KATEGORIAT = {
               + 'koko saari siirtyi siirtomaahallintoon 1815; usein toistetun väitteen '
               + 'mukaan se olisi myös kielletty asetuksella, mutta väitteelle ei ole '
               + 'esitetty näyttöä. Liikkeitä on säilynyt temppelien seinämaalauksissa.',
+          selite: 'Embekke Devalayan painijareliefin todelliseen '
+            + 'paneelirakenteeseen perustuva kuvitus; ei tarkka toisinto eikä '
+            + 'väite nimetystä angampora-tekniikasta.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Sri Lankan '
+            + 'Keski-provinssin matkailusivusto — Ambekke Devalaya; Cyril '
+            + 'Tours — valokuva Embekke Devalayan pylväsreliefistä',
         },
       ],
     },
@@ -43401,6 +43414,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Liha, jonka hinnasta neuvotellaan',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-nam-ruoka-0-r20260907-v4.jpg',
           teksti: 'Kapana on avotulella grillattua naudanlihaa, ja se myydään torilla '
               + 'kypsyessään. Grilli on hitsattu metallilevy, jonka alla palaa puu; '
               + 'kapana-miehet — mukana on naisiakin — paloittelevat raa\'an lihan '
@@ -43410,8 +43424,10 @@ export const MAA_KATEGORIAT = {
               + 'paistettu taikinapallo. Myyjiä on samassa paikassa monta, joten '
               + 'hinnasta sovitaan paikan päällä ja jokainen huutaa oman lihansa '
               + 'olevan paras. Windhoekin Katutura on kapanan tunnetuin kortteli.',
-          selite: 'Grillin ympärys on ennen kaikkea kohtaamispaikka: moni tulee '
-            + 'syömään ja juttelemaan sinne, vaikka osaisi paistaa lihansa kotonakin.',
+          selite: 'Anonyymi myyjä grillaa pieniä kapana-naudanlihapaloja '
+            + 'Katuturan markkinoita mukailevassa kuvituksessa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Visit Namibia — '
+            + 'Uniquely Namibian Food',
         },
         {
           otsikko: 'Hirssi, joka myös juodaan',
@@ -48813,9 +48829,12 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Vanha soittaja, joka teki tyylistä kansallisen',
           aika: '1905–1987',
-          // Kuvaton (Opus 6.9.2026): Yadamsürenin teokset ovat yhä
-          // tekijänoikeuden alaisia eikä Commonsissa ole niistä kuvia.
-          // Kuva tilataan kuvaputkelta.
+          // Yadamsürenin teokset ovat yhä tekijänoikeuden alaisia eikä
+          // Commonsissa ole niistä kuvia, joten kuva tilattiin
+          // kuvaputkelta (erä 19g). Havainnekuva ei jäljittele Vanhaa
+          // soittajaa eikä esitä Yadamsürenia: soitin on tehty Metin
+          // morin khuur -esineen mukaan ja maalari on nimetön ja selin.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-mng-kuvataide-3-r20260907-v3.jpg',
           teksti: 'Ürjingiin Yadamsüren syntyi käsityöläisperheeseen: isoisä veisti '
               + 'puuta ja isä maalasi jurttia. Kahdeksanvuotiaasta hän opiskeli setänsä '
               + 'luona luostarissa puupiirrostekniikkaa, muutti 1930 Ulan Batoriin '
@@ -48825,8 +48844,12 @@ export const MAA_KATEGORIAT = {
               + 'otti aiheikseen paimenten arjen. Tästä uustyylistä tuli mongol zurag. '
               + 'Vuoden 1958 työ Vanha soittaja esittää morin khuuria pitelevää vanhusta '
               + 'ja on yhä maan toistetuimpia maalauksia.',
-          selite: 'Vanha soittaja (1958) esittää morin khuuria pitelevää vanhaa miestä; '
-            + 'teos toi mongol zurag -tyylin koko maan tietoisuuteen.',
+          selite: 'Havainnekuva taiteilijan työhuoneesta; soitin perustuu '
+            + 'Metin morin khuur -esineeseen eikä kuva esitä Yadamsürenia tai '
+            + 'jäljittele hänen teostaan.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Metropolitan '
+            + 'Museum of Art — morin khuur, kokoelmaesine 503800; Unesco ICH '
+            + '— Traditional music of the Morin Khuur',
         },
       ],
     },
@@ -49938,6 +49961,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kahvi sytytetään, olut pannaan jäätiköstä',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-grl-ruoka-3-r20260907-v2.jpg',
           teksti: 'Grönlanninkahvi tarjotaan bordeaux-lasissa: kuumaa kahvia, viskiä, Kahlúaa '
               + 'ja Grand Marnieria, päälle kermavaahtoa, ja seos sytytetään palamaan ennen '
               + 'juomista. Panimoilla on oma temppunsa. Greenland Brewhouse Narsaqissa alkoi '
@@ -49946,6 +49970,10 @@ export const MAA_KATEGORIAT = {
               + 'Icefiord Bryghus Ilulissatissa, joka maustaa oluensa variksenmarjalla ja '
               + 'väinönputkella. Vuoteen 1954 asti alkoholin myyntiä rajoitettiin ankarasti, '
               + 'ja siltä ajalta on jäänyt tapa panna itse.',
+          selite: 'Kuvitus grönlantilaisen kahvin näyttävästä valmistuksesta.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Visit Greenland '
+            + '— Greenlandic gastronomy; Greenland Travel — The taste of '
+            + 'Greenland',
         },
       ],
       tehtava: {
@@ -50003,6 +50031,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kartat, joita luetaan sormenpäillä',
           aika: '1885',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-grl-kuvataide-2-r20260907-v2.jpg',
           teksti: 'Kun Gustav Holmin retkikunta pääsi 1880-luvulla Ammassalikin rannikolle '
               + 'Itä-Grönlantiin, se tapasi tunumiit-yhteisöjä, joilla monien mukaan ei ollut '
               + 'ollut aiempaa suoraa kosketusta eurooppalaisiin. Umivikista kotoisin ollut '
@@ -50012,6 +50041,10 @@ export const MAA_KATEGORIAT = {
               + 'toi vielä yhden. Pariisin maantieteellisessä seurassa epäiltiin 1886, '
               + 'olivatko paikalliset voineet tehdä sellaista; Holm kumosi epäilyn. Kartat '
               + 'ovat nyt Grönlannin kansallismuseossa Nuukissa.',
+          selite: 'Kuvitus museokokoelman kahdesta Ammassalikin puisesta '
+            + 'tuntokartasta.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Tanskan '
+            + 'kansallismuseo — esinetietue 35702',
         },
         {
           otsikko: 'Lippu, joka voitti äänin 14–11',
@@ -50057,6 +50090,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Polkka, jonka toivat lähetyssaarnaajat',
           aika: '1916–',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-grl-musiikki-1-r20260907-v2.jpg',
           teksti: 'Tanskalaisten mukana Grönlantiin tulivat viulu, haitari ja virsi, ja '
               + 'herrnhutilaiset lähetyssaarnaajat toivat lisäksi vaskisoittimia ja '
               + 'moniäänisen kuoron — juuri kuorosta tuli heidän vaikutusvaltaisin '
@@ -50066,6 +50100,10 @@ export const MAA_KATEGORIAT = {
               + '"Maamme, joka olet käynyt niin vanhaksi", on ollut virallinen vuodesta 1916; '
               + 'sen sävelsi Jonathan Petersen ja sanoitti Henrik Lund, molemmat '
               + 'grönlantilaisia.',
+          selite: 'Kuvitus kalattuut-tanssista grönlantilaisessa '
+            + 'kokoontumistilassa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Visit Greenland '
+            + '— Music',
         },
         {
           otsikko: 'Levy, jonka osti joka viides grönlantilainen',
@@ -50190,6 +50228,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Raha, joka poimittiin meren pohjasta',
           aika: '1500–1800-luku',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-ago-historia-2-r20260907-v2.jpg',
           teksti: 'Kongon kuningaskunnan raha ei ollut metallia vaan simpukkaa. Luandan '
               + 'saaren rannoilta poimittiin pienen Olivella nana -kotilon kuoria, '
               + 'joita sanottiin nzimbuiksi tai zimboiksi, ja niitä kelpuutettiin '
@@ -50200,6 +50239,10 @@ export const MAA_KATEGORIAT = {
               + 'siellä mistä ne haettiin, ja voittojen kerrotaan yltäneen viiteensataan '
               + 'prosenttiin. Lopulta tuonti kasvoi niin suureksi, että inflaatio söi '
               + 'rahan arvon.',
+          selite: 'Kongon valtakunnan nzimbu-kuorirahan keräämistä '
+            + 'havainnollistava historiallinen kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Yale MAVCOR — '
+            + 'Money in Kongo',
         },
         {
           otsikko: 'Kalliot, joissa on kuningattaren jalanjäljet',
@@ -50753,6 +50796,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Nainen, jolle kukaan ei halunnut opettaa',
           aika: '1946–2023',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-zwe-musiikki-1-r20260907-v2.jpg',
           teksti: 'Stella Chiweshe syntyi 1946 Mhondorossa ja halusi oppia '
               + 'mbiraa aikana, jolloin naisen ei ollut tapana soittaa sitä. '
               + 'Opettajat kieltäytyivät toisensa jälkeen, kunnes isoisän '
@@ -50763,10 +50807,16 @@ export const MAA_KATEGORIAT = {
               + 'ja otti bändiinsä kitarat ja rummut. Hän näytteli Nehandaa '
               + 'elokuvassa Ambuya Nehanda. Tytär Virginia Mukwesha soittaa '
               + 'samaa soitinta.',
+          selite: 'Nimettömän soittajan käsissä oleva mbira dzavadzimu ja sen '
+            + 'deze-kaikukoppa. Tekoälykuvitus, ei nimetyn muusikon '
+            + 'muotokuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Washingtonin '
+            + 'yliopiston etnomusikologinen kokoelma — mbira dzavadzimu',
           wiki: 'Stella Chiweshe',
         },
         {
           otsikko: 'Hiiritanssi, joka sai raamatullisen nimen',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-zwe-musiikki-2-r20260907-v2.jpg',
           teksti: 'Zezuru-shonojen tanssi Murewan ja '
               + 'Uzumba-Maramba-Pfungwen seudulla on nimeltään mbende, '
               + 'nopeasti juokseva hiiri. Tanssijat lainaavat jyrsijän '
@@ -50777,6 +50827,10 @@ export const MAA_KATEGORIAT = {
               + 'kumpaakin nimeä käytetään yhä. Musiikin johdossa on yksi '
               + 'rumpali. Mutumba-rumpu tehdään mutiti-puusta ja tahtia '
               + 'lyödään kovapuisilla lautasilla, joita sanotaan maja.',
+          selite: 'Mbende Jerusarema -tanssia, rumpalia ja puukapuloiden '
+            + 'soittajaa havainnollistava tekoälykuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Unesco ICH — '
+            + 'Mbende Jerusarema -tanssi, valokuva 00233',
           wiki: 'Mbende Jerusarema dance',
         },
         {
@@ -50886,6 +50940,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kutsu tuli, kun muut jäivät pois',
           aika: '1980',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-zwe-urheilu-0-r20260907-v3.jpg',
           teksti: 'Moskovassa 1980 pelattiin ensimmäinen naisten '
               + 'olympiaturnaus maahockeyssa. Viisi karsinnoista selvinnyttä '
               + 'maata jätti turnauksen väliin boikotin takia, ja '
@@ -50895,11 +50950,17 @@ export const MAA_KATEGORIAT = {
               + 'Tšekkoslovakian ja Neuvostoliiton edellä. Se oli maan '
               + 'ensimmäinen kisa omalla nimellään ja on yhä sen ainoa '
               + 'joukkuemitali: seitsemän muuta on uima-altaasta.',
+          selite: 'Zimbabwen vuoden 1980 olympiakultaa muistava kuvitus: '
+            + 'aikakauden tyylinen maahockeymaila, pallo ja maan värit.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: FIH — '
+            + 'maahockeyn historia; Wikimedia Commons — RIA Novostin '
+            + 'arkistokuva 556180 Zimbabwen naisten maahockeyjoukkueesta',
           wiki: "Field hockey at the 1980 Summer Olympics – Women's tournament",
         },
         {
           otsikko: 'Ensimmäinen maaottelu, ensimmäinen yllätys',
           aika: '1983',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-zwe-urheilu-1-r20260907-v2.jpg',
           teksti: 'Zimbabwe pelasi kriketissä ensimmäisen virallisen '
               + 'yhden päivän maaottelunsa vasta vuoden 1983 maailmancupissa '
               + '— ja voitti heti Australian. Kapteeni Duncan Fletcher teki '
@@ -50910,6 +50971,11 @@ export const MAA_KATEGORIAT = {
               + 'Testiasema tuli heinäkuussa 1992, ja saman vuoden '
               + 'lokakuussa Zimbabwe pelasi yhdeksäntenä testimaana '
               + 'ensimmäisen testinsä Intiaa vastaan Hararessa.',
+          selite: 'Zimbabwen vuoden 1983 yllätysvoittoa taustoittava '
+            + 'krikettikuvitus. Välineet ja kenttänäkymä eivät ole '
+            + 'alkuperäinen otteluvalokuva.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: CricketArchive '
+            + '— Zimbabwen maailmancupottelut',
           wiki: 'Zimbabwe national cricket team',
         },
         {
@@ -51147,6 +51213,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Maissi, papu ja kurpitsa samassa padassa',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-tls-ruoka-1-r20260907-v1.jpg',
           teksti: 'Batar daan on itätimorilaisen kotiruoan perusmalli: maissi, mungpavut '
               + 'ja kurpitsa haudutetaan yhdessä. Riisi on maan yleisimmin viljelty '
               + 'kasvi, mutta sen rinnalla kasvatetaan bataattia, maissia, maniokkia ja '
@@ -51155,9 +51222,16 @@ export const MAA_KATEGORIAT = {
               + 'sikoja ja vuohia. Kaksi kolmasosaa perheistä saa osan ruoastaan omasta '
               + 'viljelystä tai kalastuksesta, ja silti maa ei tuota tarpeeksi ruokaa '
               + 'itselleen vaan tuo osan ulkomailta.',
+          selite: 'Batar daan: maissia, papuja ja kurpitsaa samassa '
+            + 'annoksessa. Timor-Lesten ruokaperinnettä havainnollistava '
+            + 'tekoälykuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Timor-Lesten '
+            + 'matkailusivusto — Eat & Drink; Timor-Lesten hallitus — ASEAN '
+            + 'Media Guide',
         },
         {
           otsikko: 'Makrilli tamarindissa',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-tls-ruoka-2-r20260907-v2.jpg',
           teksti: 'Ikan sabuko on kuninkaanmakrilli, joka marinoidaan tamarindissa ja '
               + 'kypsennetään basilikan ja paprikan kanssa. Kastikkeeksi tulee budu: '
               + 'tomaattia, minttua, limeä ja sipulia. Kalastus on maatalouden jälkeen '
@@ -51166,9 +51240,14 @@ export const MAA_KATEGORIAT = {
               + 'keitto, jossa on punaisia papuja, naudanlihaa, salaattia ja kananmunaa '
               + 'riisin kera, sekä tapai, käytetty riisi, joka on yhtaikaa makeaa, '
               + 'hapanta ja hitusen alkoholista.',
+          selite: 'Ikan sabuko: grillattua makrillia ja tamarindikastiketta. '
+            + 'Annos on tekoälykuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Timor-Lesten '
+            + 'matkailusivusto — Eat & Drink',
         },
         {
           otsikko: 'Portugali jäi ruokapöytään',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-tls-ruoka-3-r20260907-v1.jpg',
           teksti: 'Siirtomaakausi näkyy Itä-Timorin pöydässä selvemmin kuin juuri missään '
               + 'muualla Kaakkois-Aasiassa. Feijoada — possua, valkoisia papuja ja '
               + 'chorizoa — on sama pata kuin muissakin entisissä Portugalin '
@@ -51177,6 +51256,12 @@ export const MAA_KATEGORIAT = {
               + 'nata, portugalilainen munatorttu, tai bibingka, grillattu kerroksellinen '
               + 'kookoskakku. Makuja on kulkeutunut myös Portugalin muista siirtomaista, '
               + 'koska niistä tuotiin sotilaita Timorille.',
+          selite: 'Portugalilaista vaikutusta ja Timorin kahvikulttuuria '
+            + 'havainnollistava tekoälykuvitus kuvitteellisessa '
+            + 'rantakahvilassa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Timor-Lesten '
+            + 'matkailusivusto — Eat & Drink; Timor-Lesten matkailusivusto — '
+            + 'Coffee',
         },
       ],
     },
@@ -51313,6 +51398,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kuunsirppi otsalla, kiekko rinnalla',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-tls-musiikki-3-r20260907-v4.jpg',
           teksti: 'Esiintyjän puku on osa musiikkia. Miehet kietovat vyötärölleen tais '
               + 'manen ja naiset asettavat tais feton kainaloiden alle. Miehen päähuivin '
               + 'päälle tulee kaibauk, metallinen kuunsirppi, johon on kiinnitetty pieniä '
@@ -51321,6 +51407,12 @@ export const MAA_KATEGORIAT = {
               + 'rinnalle ripustettava metallikiekko. Naisilla on kaibaukin lisäksi ulum '
               + 'suku hiuksissa, pitkäpiikkinen sasuit-kampa ja mortene-kaulanauha. '
               + 'Kaikki esiintyvät paljain jaloin, olkapäillään salenda-huivi.',
+          selite: 'Atsaben noin vuoden 1930 kaibauk- ja belak-korujen muotoja '
+            + 'mukaileva tekoälykuvitus. Referenssit ovat Museu do Orienten '
+            + 'kokoelmasta.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: e-Cultura — '
+            + 'Museu do Oriente, kaibauk ja belak; Wikimedia Commons — Belak, '
+            + 'Atsabe, Ermera, noin 1930, Museu do Oriente',
         },
       ],
     },
@@ -51539,6 +51631,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Levä, jota syötiin ennen kuin kukaan tiesi mitä se on',
           aika: '1940–1965',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-tcd-ruoka-2-r20260907-v1.jpg',
           teksti: 'Kanembut ovat korjanneet Tšadjärven ympäristön pikkujärvistä ja '
               + 'lammikoista vihreää massaa, kuivanneet sen kakuiksi ja keittäneet niistä '
               + 'lientä. Kakun nimi on dihé, ja sitä myydään toreilla yhä. Belgialainen '
@@ -51547,9 +51640,10 @@ export const MAA_KATEGORIAT = {
               + 'Leonard varmisti vuosina 1964–1965, että dihé on spirulinaa — ja juuri '
               + 'siitä alkoivat ensimmäiset järjestelmälliset tutkimukset levän '
               + 'kasvattamisesta ravinnoksi 1970-luvulla.',
-          selite: 'Dihé on kuivattua massaa samasta levästä, jota myydään nykyään '
-            + 'maailmalla nimellä spirulina. Tšadissa se on ollut kaupan tavallisena '
-            + 'torikauppatavarana koko sen ajan.',
+          selite: 'Dihé-leväkakkujen kuivatusta Tšadjärven alueella '
+            + 'havainnollistava tekoälykuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: FAO — '
+            + 'spirulinan kuvagalleria; FAO — Spirulina-raportti i0424e',
         },
         {
           otsikko: 'Punainen juoma ja punainen hirssi',

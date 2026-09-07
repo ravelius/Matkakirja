@@ -88255,6 +88255,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kirjaimellisesti pippuripellon palatsia. Kaupan '
             + 'painopiste siirtyi Isheristä Ebute-Mettaan, sitten '
             + 'Iddoon ja lopulta Ekon saarelle.',
+          osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-lagos-kaupunki-0-r20260907-v3.jpg',
+          selite: 'Iga Idunganranin nykyistä pääsisäänkäyntiä Lagosissa '
+            + 'mukaileva tekoälykuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Airial Travel — '
+            + 'Iga Idunganran, Lagosin oban palatsi',
           wiki: 'Lagos',
         },
         {
@@ -89464,6 +89469,13 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ollaan nimestä: väri saatiin täältä karmiininpunaisista '
             + 'marjoista. Osmanisulttaani Mahmud II määräsi hatun '
             + 'armeijalleen 1827.',
+          osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-fes-kaupunki-3-r20260907-v2.jpg',
+          selite: 'Fèsin fetsihattuaihetta havainnollistava kuvitteellinen '
+            + 'työpaja. Valmistuksen yksityiskohdat ovat tulkinta '
+            + 'pohjoisafrikkalaisesta hattuperinteestä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: British Museum '
+            + '— chechia-hatun valmistus, esine Af1998,01.99; British Museum '
+            + '— esine As1968,10.51',
           wiki: 'Fez (hat)',
         },
       ],
@@ -89698,6 +89710,13 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Córdoban ohella yksi 900- ja 1000-luvun juutalaisen '
             + 'sivistyksen keskuksista, ja kaupungin juutalaisyhteisö '
             + 'oli Marokon vanhin ja suurin.',
+          osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-fes-kirjallisuus-0-r20260907-v1.jpg',
+          selite: 'Fèsissä 1516/1517 painettua Sefer Abudarhamia '
+            + 'havainnollistava tekoälykuvitus. Aukeama ja heprealainen '
+            + 'teksti eivät ole alkuperäisen sivun jäljennös.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Library of '
+            + 'Congress — 16th Century Hebrew Books, finding aid; Library of '
+            + 'Congress — 16th-century Hebrew books, collection overview',
           wiki: 'Fès',
         },
         {
@@ -89717,6 +89736,14 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Samana vuonna paino siirrettiin Fèsiin, jossa se toimi '
             + '1940-luvulle asti. Vuoteen 1908 mennessä kaupungissa oli '
             + 'vähintään neljä kirjapainoa.',
+          osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-fes-kirjallisuus-1-r20260907-v7.jpg',
+          selite: 'Fèsin 1860-luvun kivipainoa havainnollistava '
+            + 'tekoälykuvitus. Koneen rakenne perustuu saman aikakauden '
+            + 'museoprässiin; kuva ei ole al-Rudanin painon tai aidon '
+            + 'kirjasivun jäljennös.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Science Museum '
+            + 'Group — litografinen kivipaino 1855–1865; Bryan S. Ayers — pro '
+            + 'gradu, University of Georgia 2004',
           wiki: 'Fès',
         },
         {
@@ -89994,6 +90021,13 @@ export const KULTTUURI_KATEGORIAT = {
             + 'länsimaistyyppisistä kunnista. Isoisän matkavuonna Dakar '
             + 'oli siis vuoden vanhan Goréen kunnan osa; omaksi '
             + 'kunnakseen se irrotettiin vasta 1887.',
+          osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-dakar-kaupunki-2-r20260907-v2.jpg',
+          selite: 'Senegalin 1800-luvun maapähkinäkauppaa ja Dakarin '
+            + 'varhaista satamaa havainnollistava tekoälykuvitus. Kuva ei '
+            + 'esitä dokumentoitua yksittäistä lastausta vuodelta 1873.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Port autonome '
+            + 'de Dakar — Tout sur le port, nro 18; IRD Horizon — Senegalin '
+            + 'maapähkinätaloutta käsittelevä tutkimus',
           wiki: 'Dakar',
         },
         {
@@ -90268,6 +90302,12 @@ export const KULTTUURI_KATEGORIAT = {
             + 'mittakaavan taidetapahtuma. Kansainväliseen näyttelyyn '
             + 'pääsi pitkään vain Afrikan maan kansalainen; 2014 se '
             + 'avattiin ensimmäistä kertaa myös muille.',
+          osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-dakar-nykytaide-1-r20260907-v2.jpg',
+          selite: 'Kuvitteellinen Dak’Artin teemasta inspiroitunut '
+            + 'nykytaidesali. Teokset ja näyttely eivät jäljennä oikeaa '
+            + 'tapahtumaa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
+            + 'Dak’Art-biennaali — Histoire',
           wiki: 'Dakar Biennale',
         },
         {
@@ -90289,6 +90329,12 @@ export const KULTTUURI_KATEGORIAT = {
             + '-sillalla 1999. Vuonna 2012 hänestä tuli Académie des '
             + 'Beaux-Artsin ensimmäinen musta jäsen. Hän kuoli '
             + 'Dakarissa 2016.',
+          osoite: 'https://media.matkakirja.app/kaupunkilehdet/20260907/kaupunkilehti-dakar-nykytaide-2-r20260907-v3.jpg',
+          selite: 'Ousmane Sow’n Couple de lutteurs (Corps à corps) '
+            + '-veistoksen muotoja mukaileva tekoälykuvitus. Näyttelypiha on '
+            + 'kuvitteellinen.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Les Abattoirs '
+            + '(Navigart) — Ousmane Sow, Couple de lutteurs (Corps à corps)',
           wiki: 'Ousmane Sow',
         },
         {
