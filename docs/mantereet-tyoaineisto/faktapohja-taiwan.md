@@ -293,3 +293,29 @@ osaa lukea `<entry>`-elementtejä; `www.cna.com.tw/rss/*.xml` — 404.
 
 `MAATIEDOT.asia.TWN` oli jo olemassa (`js/packs/asia-maatiedot.js`), joten
 `tests/maatiedot.test.mjs` ei vaatinut mitään uutta.
+
+## 9. Kuvat
+
+16 nostoa kahdestakymmenestä sai kuvan Commonsista (lisenssi ja tekijä
+extmetadatasta, leveys yli 1200 px, jokainen katsottu 640 px:n
+esikatselussa 7.9.2026). **Neljä jäi kuvattomaksi** ja on tilattu
+kuvaputkelta: kuplatee, Teresa Teng, Difangin amis-laulu ja bununien
+pasibutbut — kaikissa ainoat osumat sisälsivät tunnistettavia kasvoja.
+
+Hylätyt kuvat ja syyt: `Qigu Black-faced Spoonbill Sanctuary … - 1.jpg`
+esittää tiiroja eikä lusikkanokkia; `Bubble tea of Chunshuitang.jpg`
+(oikea teehuone, mutta taustalla tunnistettavia kasvoja);
+`2013 Exhibition of Teresa Teng 01.jpg` (avajaiskuva, tunnistettavia
+henkilöitä); `Giant Defy Advanced Pro … 20201101.jpg` (messuosasto,
+kuvassa sumennettu alue); `The black bearded barbarian … (1912) …jpg`
+(kuvalevyyn painettu tekijänoikeusteksti); `2.2 pounds of tapioca balls
+…jpg` (tuotepakkaus); `Urocissa caerulea (26656595768).jpg` ja
+`台灣藍鵲 … panoramio.jpg` (lintu liian pieni tai liike-epäterävä);
+Taipein Nanmenin kamferitehtaan pienoismallit (vitriinikuvia);
+`Formosan Sika Deer Rest under the Tree …jpg` (pää lehtien takana).
+
+Yksi kuva on rajatapaus ja merkitty raporttiin: gezaixi-oopperan
+katulava (`Taiwanese Ke-Tse opera(154745).jpg`) — esiintyjien kasvot
+ovat lavameikissä ja kaukana, mutta täydessä koossa erottuvat. Jos
+QA katsoo sen rikkovan kasvosääntöä, nosto jää kuvattomaksi ja kuva
+tilataan kuvaputkelta.

@@ -25335,6 +25335,21 @@ export const MAA_KATEGORIAT = {
    * Bicycles, Hsinchu Science Park ja TSMC. Faktapohja ja
    * ristiriidat: docs/mantereet-tyoaineisto/faktapohja-taiwan.md.
    *
+   * KUVAT: 16 nostoa kahdestakymmenestä sai kuvan Commonsin
+   * rajapinnasta (lisenssi ja tekijä extmetadatasta, leveys yli
+   * 1200 px, jokainen katsottu silmin 640 px:n esikatselussa).
+   * NELJÄ NOSTOA JÄI TIETOISESTI KUVATTOMAKSI, koska kelvollista
+   * kuvaa ei ollut: kuplatee (Chun Shui Tangin lasista otetussa
+   * kuvassa on taustalla tunnistettavia kasvoja), Teresa Teng
+   * (ainoa vapaa kuva on näyttelyn avajaiskuva, jossa on
+   * tunnistettavia henkilöitä), Difangin amis-laulu (Amis Music
+   * Festivalin kuvissa on tunnistettavia kasvoja) ja bununien
+   * pasibutbut (ainoa osuma on vuoden 1935 muotokuva). Nämä neljä
+   * on tilattu kuvaputkelta. Hylättyjä muita: Qigun
+   * lusikkanokka-alueen kuva esittää tiiroja eikä lusikkanokkia,
+   * Giantin messuosaston kuvassa on sumennettu alue ja Mackayn
+   * elämäkerran 1895 kuvalevyssä on painettu tekijänoikeusteksti.
+   *
    * MINITEHTÄVÄ on yksi (ruoka-sivu), ja sen vastaus löytyy saman
    * sivun nostosta R2. Tarkistettu, ettei se osu asia-questions.js:n
    * Taipei-visaan (siellä kysytään tornia, yömarkkinoita, saarta,
@@ -25351,6 +25366,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kieli lähti saarelta veneellä',
           aika: 'n. 3000–1500 eaa.',
+          tiedosto: 'The Traditional Boat Of Tao People (228631843).jpeg',
           teksti: 'Austronesialaisten kielten kotiseutu on tutkijoiden '
             + 'valtavirtakäsityksen mukaan Taiwan ja Penghun saaristo: '
             + 'saaren alkuperäiskansojen kielet ovat suvun syvimmät haarat, '
@@ -25362,10 +25378,16 @@ export const MAA_KATEGORIAT = {
             + 'Madagaskarille lännessä, Pääsiäissaarelle idässä ja '
             + 'Uuteen-Seelantiin noin 1250 jaa. Mukana kulkivat riisi, '
             + 'banaani, kookos, taaro, kana, sika ja koira.',
+          selite: 'Lanyun saaren tao-kansa on yksi Taiwanin austronesialaisista '
+            + 'alkuperäiskansoista, ja sen merikulttuurissa veneenrakennus ja '
+            + 'kalastus ovat rituaalisesti tärkeimmät taidot.',
+          lahde: 'Cho Hsun Lu, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Tao people',
         },
         {
           otsikko: 'Peurannahat lähtivät Japaniin',
           aika: '1624–1662',
+          tiedosto: '1640 Map of Formosa-Taiwan by Dutch 荷蘭人所繪福爾摩沙-臺灣.jpg',
           teksti: 'Hollantilainen Itä-Intian kauppakomppania asettui '
             + 'Formosalle vuonna 1624 käydäkseen kauppaa Kiinan ja Japanin '
             + 'kanssa. Pian yhtiö huomasi, mikä saarella oli arvokkainta: '
@@ -25376,10 +25398,16 @@ export const MAA_KATEGORIAT = {
             + 'vuonna 1658 Taiwan tuotti 1 730 000 catty-painoa, josta '
             + '800 000 purjehti Persiaan ja 600 000 Japaniin. Kolmas oli '
             + 'rikki, jota kerättiin Keelungin ja Tamsuin seudulta.',
+          selite: 'Johannes Vingboonsin noin vuonna 1640 piirtämässä kartassa saari '
+            + 'on nimeltään Het Eylant Formosa ja sen edustalla ovat Pescadores '
+            + 'eli Penghun saaret.',
+          lahde: 'Johannes Vingboons, Wikimedia Commons (PD)',
+          wiki: 'Dutch Formosa',
         },
         {
           otsikko: 'Kuningaskunta, joka kesti kaksikymmentä vuotta',
           aika: '1662–1683',
+          tiedosto: 'Tainan Taiwan Koxingas-Shrine-02.jpg',
           teksti: 'Zheng Chenggong syntyi 27. elokuuta 1624 Hiradossa '
             + 'Japanissa fujianilaisen kauppiaan ja japanilaisen äidin '
             + 'poikana, ja hänet tunnetaan kunnianimellä Koxinga. Vuonna '
@@ -25392,10 +25420,15 @@ export const MAA_KATEGORIAT = {
             + 'eikä vain odottaa paluuta. Kuningaskunta hallitsi Taiwanin '
             + 'lounaisosaa ja Penghuta, ja Qing-dynastia liitti sen itseensä '
             + 'vuonna 1683.',
+          selite: 'Tainanissa on Koxingalle omistettu pyhäkkö, jonka päärakennus on '
+            + 'punainen ja sen katto vihreä.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Koxinga',
         },
         {
           otsikko: 'Hammaslääkäri Tamsuissa',
           aika: '1872',
+          tiedosto: '牛津學堂.JPG',
           teksti: 'Kanadalainen George Leslie Mackay saapui Taiwaniin 29. '
             + 'joulukuuta 1871 ja asettui seuraavana vuonna Tamsuihin, jossa '
             + 'hän asui kuolemaansa 1901 asti. Työ alkoi kiertävästä '
@@ -25408,6 +25441,11 @@ export const MAA_KATEGORIAT = {
             + 'Ontariossa, ja vuotta myöhemmin tyttökoulu; samana vuonna '
             + 'alkoi toimia Tamsuin sairaala. Isoisän matkavuonna 1873 '
             + 'Mackay oli ollut Tamsuissa vasta vuoden.',
+          selite: 'Oxford College valmistui Tamsuihin 1882, ja rakennuksen otsikkoon '
+            + 'on muurattu sen nimi ja vuosiluku. Nykyään siinä toimii Aletheian '
+            + 'yliopisto.',
+          lahde: '勤岸, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'George Leslie Mackay',
         },
       ],
     },
@@ -25420,6 +25458,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Liemi kiehuu vuorokauden',
+          tiedosto: 'Yong Kang Beef Noodle 1.jpg',
           teksti: 'Punaruskeaksi haudutettu naudanlihanuudelikeitto on '
             + 'Taiwanin tunnetuin oma ruokalaji. Sen kehittivät saarelle '
             + 'Sichuanista tulleet siirtolaiset, ja siksi sitä kutsutaan '
@@ -25430,6 +25469,11 @@ export const MAA_KATEGORIAT = {
             + 'sitä yli vuorokauden. Päälle tulee hapansäilöttyä sinappikaalia '
             + 'ja kevätsipulia. Lanzhoun kuuluisa versio on juuri päinvastainen: '
             + 'kirkas liemi ilman soijakastiketta.',
+          selite: 'Punaruskeaksi haudutetussa naudanlihanuudelikeitossa on lihaa, '
+            + 'vehnänuudelia ja kevätsipulia, ja lientä keitetään joskus yli '
+            + 'vuorokauden.',
+          lahde: 'Minghong, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Beef noodle soup',
         },
         {
           otsikko: 'Helmet putosivat teehen kokouksessa',
@@ -25447,6 +25491,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Ruskea kastike valkoisen riisin päällä',
+          tiedosto: 'Lurou fan(Taiwanese cuisine).jpg',
           teksti: 'Arkiruoista tavallisin on lihasilppuriisi: possunkylkeä '
             + 'kuutioidaan pieneksi, paistetaan siivutetun salottisipulin '
             + 'kanssa ja haudutetaan soijakastikkeessa sokerin, riisiviinin ja '
@@ -25456,9 +25501,13 @@ export const MAA_KATEGORIAT = {
             + 'kotoisin Shandongista — luultavasti siksi, että nimen ensimmäinen '
             + 'merkki kirjoitetaan usein samalta kuulostavalla merkillä, joka on '
             + 'Shandongin vanha nimi. Taipein kaupunki vaati julkisesti korjausta.',
+          selite: 'Lihasilppuriisissä soijakastikkeessa haudutettu possunkylki '
+            + 'lusikoidaan höyrytetyn riisin päälle.',
+          lahde: 'Jzest, Wikimedia Commons (CC BY-SA 2.5)',
         },
         {
           otsikko: 'Ananas kääritään voitaikinaan',
+          tiedosto: 'Pineapple Pastry.JPG',
           teksti: 'Ananasleivos on paksu neliö murenevaa taikinaa, jonka sisällä '
             + 'on tiivis ananashillo. Ananas tuli saarelle portugalilaisten '
             + 'kauppiaiden mukana, ja Japanin hallintokaudella siitä tuli tärkeä '
@@ -25468,6 +25517,10 @@ export const MAA_KATEGORIAT = {
             + 'Nimi kantaa toivotuksen: hokkieniksi ananas kuulostaa lähes samalta '
             + 'kuin sanonta, joka tarkoittaa vaurauden tulemista, ja siksi leivoksia '
             + 'annetaan kihlajaislahjaksi.',
+          selite: 'Ananasleivoksen kuori on murenevaa voitaikinaa ja sisus tiivistä '
+            + 'ananashilloa.',
+          lahde: 'Mk2010, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Pineapple cake',
         },
       ],
       tehtava: {
@@ -25493,6 +25546,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Harakka, joka toi tulen vuorelta',
+          tiedosto: 'Urocissa caerulea, Taiwan 2.jpg',
           teksti: 'Taiwaninsiniharakka on saaren oma laji, jota ei tavata '
             + 'missään muualla. Se on 63–68 senttiä pitkä, ja siitä pyrstö on '
             + '34–42 senttiä: pää, kaula ja rinta ovat mustat, silmät keltaiset, '
@@ -25502,9 +25556,14 @@ export const MAA_KATEGORIAT = {
             + 'thao- ja bununkansojen suuressa tulvatarinassa ihmiset pakenivat '
             + 'vuorten huipuille, ja siniharakka uhrasi itsensä kantaakseen '
             + 'viimeisen sytykkeen Yu Shanin huipulta takaisin heille.',
+          selite: 'Taiwaninsiniharakalla on musta pää, keltaiset silmät, punainen '
+            + 'nokka ja pyrstö, joka on pidempi kuin muu lintu.',
+          lahde: 'Charles Lam from Hong Kong, China, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Taiwan blue magpie',
         },
         {
           otsikko: 'Lohi, joka jäi vuorille',
+          tiedosto: '水波光影中的櫻花鉤吻鮭.jpg',
           teksti: 'Formosanlohi on jäänne ajalta, jolloin viileä vesi ulottui '
             + 'alemmas: kun Dajia-joen alajuoksu lämpeni viime jääkauden '
             + 'jälkeen, kanta jäi loukkuun vuoristolaaksoihin. Se on '
@@ -25514,9 +25573,13 @@ export const MAA_KATEGORIAT = {
             + 'romahti: vuonna 1992 yksilöitä laskettiin enää 200. Shei-Pan '
             + 'kansallispuistossa aloitettiin 1995 istutustyö, ja maaliskuussa '
             + '2023 laskennassa löytyi 15 374 kalaa.',
+          selite: 'Formosanlohi elää kirkkaissa vuoristopuroissa yli 1 500 metrin '
+            + 'korkeudessa, missä vesi pysyy alle 17 asteessa.',
+          lahde: 'Kyo chen, Wikimedia Commons (CC BY-SA 4.0)',
         },
         {
           otsikko: 'Peura katosi ja palasi',
+          tiedosto: '2010 07 19340 7195 Wenshan District, Taipei, Zoo, Cervus nippon taiouanus, Taiwan.JPG',
           teksti: 'Formosanpeura tuli saarelle jääkausien aikana, kun matala '
             + 'merenpinta yhdisti Taiwanin mantereeseen. Sen paras elinalue oli '
             + 'juuri se länsirannikon alava tasanko, jolle ihmiset sittemmin '
@@ -25527,9 +25590,14 @@ export const MAA_KATEGORIAT = {
             + 'palautus: Taipein eläintarhasta vietiin 22 peuraa Kentingin '
             + 'kansallispuistoon, aitauksissa odotettiin kymmenen vuotta ja '
             + '1994 ne päästettiin vapaaksi. Nyt niitä on yli tuhat.',
+          selite: 'Formosanpeurojen palautus luontoon alkoi Taipein eläintarhan '
+            + 'yksilöistä, ja tarhassa lajia hoidetaan yhä.',
+          lahde: 'Lord Koxinga, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Formosan sika deer',
         },
         {
           otsikko: 'Lusikkanokka talvehtii lounaassa',
+          tiedosto: '101777台南黑面琵鷺.jpg',
           teksti: 'Mustanaamalusikkanokka on kuudesta lusikkanokkalajista se, '
             + 'jonka levinneisyys on kaikkein kapein, ja ainoa uhanalaiseksi '
             + 'luokiteltu. Se pesii muutamalla pienellä kalliosaarella Korean '
@@ -25540,6 +25608,10 @@ export const MAA_KATEGORIAT = {
             + 'osuu saaliiseen — siksi se on täysin riippuvainen vuorovesilietteistä. '
             + '1980-luvulla laji oli lähellä hävitä. Vuoden 2012 laskennassa '
             + 'lintuja oli 2 693 ja vuoden 2022 laskennassa 6 162.',
+          selite: 'Mustanaamalusikkanokka ruokailee matalassa vedessä huitomalla '
+            + 'lapiomaista nokkaansa puolelta toiselle.',
+          lahde: '邱文強, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Black-faced spoonbill',
         },
       ],
     },
@@ -25567,6 +25639,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Ainoa ooppera, joka syntyi täällä',
+          tiedosto: 'Taiwanese Ke-Tse opera(154745).jpg',
           teksti: 'Gezaixi on ainoa han-kiinalaisen oopperan muoto, joka on '
             + 'saanut alkunsa Taiwanissa — Yilanissa saaren koillisosassa. Sen '
             + 'juuri on koa-á, hokkieniksi laulettu kertova balladi, jossa '
@@ -25577,6 +25650,10 @@ export const MAA_KATEGORIAT = {
             + 'viisisataa. Ooppera siirtyi radioon 1954, ensimmäiseen '
             + 'elokuvaan 1955 ja televisioon 1962. Miesten roolit laulaa '
             + 'perinteisesti nainen.',
+          selite: 'Gezaixi esitetään usein ulkona kadulle pystytetyllä koristellulla '
+            + 'lavalla, ja soittajat istuvat näyttämön laidassa.',
+          lahde: 'Sean Chiu, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Taiwanese opera',
         },
         {
           otsikko: 'Amis-laulu olympialaisissa',
@@ -25618,6 +25695,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Rata kiipeää sikin sokin',
           aika: '1912',
+          tiedosto: 'Alishan Taiwan Alishan-Forest-Railway-03a.jpg',
           teksti: 'Alishanin metsärata on 86 kilometrin verkosto, jonka '
             + 'raideleveys on 762 millimetriä. Se rakennettiin sypressin ja '
             + 'taiwanianpuun kuljettamiseen. Maastotutkimukset tehtiin 1900 ja '
@@ -25628,10 +25706,16 @@ export const MAA_KATEGORIAT = {
             + 'viisikymmentä tunnelia, 77 puusiltaa ja harvinaisia Z-kirjaimen '
             + 'muotoisia peräytysmutkia, joissa juna kiipeää rinnettä sahaten. '
             + 'Koko päärata avattiin taas heinäkuussa 2024.',
+          selite: 'Alishanin metsäradalla käytettiin Shay-vetureita, joiden '
+            + 'sylinterit ovat rungon kyljessä ja voima siirtyy pyöriin '
+            + 'hammasakselin kautta.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Alishan Forest Railway',
         },
         {
           otsikko: 'Kamferi ja suomalainen kemisti',
           aika: '1903',
+          tiedosto: 'Camphor Tree (Cinnamomum camphora) (21810689684).jpg',
           teksti: 'Kamferipuun suuret metsiköt olivat 1800-luvun alkuun '
             + 'mennessä kaadettu lähes kaikkialta muualta, ja jäljellä olivat '
             + 'Japani ja Taiwan — Taiwan selvästi suurempana. Kamferista tuli '
@@ -25642,10 +25726,15 @@ export const MAA_KATEGORIAT = {
             + 'täydellisen synteesin kamferihaposta ja aloitti 1907 teollisen '
             + 'valmistuksen Tainionkoskella. Formosan kamferi maksoi tavallisesti '
             + 'noin 50 senttiä naulalta, vuonna 1918 jo 3,75 dollaria.',
+          selite: 'Kamferipuun rungosta ja oksista höyrytettiin kamferia, joka oli '
+            + '1800-luvun lopulla Taiwanin tuottoisimpia vientitavaroita.',
+          lahde: 'harum.koh from Kobe city, Japan, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Camphor',
         },
         {
           otsikko: 'Polkupyörä Taichungista',
           aika: '1972',
+          tiedosto: 'Giant Taitung Bicycles Rental and Service 20130601.jpg',
           teksti: 'Giant perustettiin vuonna 1972 Dajiassa Taichungin '
             + 'kupeessa, ja sen perustaja oli King Liu. Vuonna 1977 yhtiö sopi '
             + 'valmistavansa pyöriä amerikkalaiselle Schwinnille tämän omalla '
@@ -25655,10 +25744,15 @@ export const MAA_KATEGORIAT = {
             + 'Schwinn siirsi tilauksensa muualle 1987, Giant toi markkinoille '
             + 'oman merkkinsä. Vuonna 2017 yhtiö myi 6,6 miljoonaa polkupyörää, '
             + 'ja niitä myytiin yli viidessäkymmenessä maassa.',
+          selite: 'Taiwanissa polkupyörä on myös matkailuväline: saaren ympäri '
+            + 'kulkevan reitin varrella on vuokraamoja, joista pyörän saa '
+            + 'yhdestä kaupungista ja jättää toiseen.',
+          lahde: '玄史生, Wikimedia Commons (CC BY-SA 3.0)',
         },
         {
           otsikko: 'Tehdas, joka ei suunnittele mitään',
           aika: '1987',
+          tiedosto: 'TSMC Fab5.JPG',
           teksti: 'Hsinchun tiedepuisto perustettiin 15. joulukuuta 1980. '
             + 'Ajatus oli Shu Shien-Siun, joka oli kiertänyt 1976 Yhdysvalloissa, '
             + 'Euroopassa ja Japanissa ja halusi Piilaakson kaltaisen alueen '
@@ -25669,6 +25763,10 @@ export const MAA_KATEGORIAT = {
             + 'suunnittelemia — maailman ensimmäinen pelkkä sopimusvalimo. Vuonna '
             + '2022 saaren mikropiirivienti oli 184 miljardia dollaria eli lähes '
             + 'neljännes koko talouden arvosta.',
+          selite: 'TSMC:n päämaja ja vanhimmat tehtaat ovat Hsinchun tiedepuistossa, '
+            + 'joka perustettiin 1980.',
+          lahde: 'Peellden, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'TSMC',
         },
       ],
     },
