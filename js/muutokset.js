@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1666, teksti: 'Vanha kartta pois kaytosta, pallo on ainoa lauta' },
   { v: 1665, teksti: 'Kohdekartat 4 kaupunkia, elaintakyt FJI ja SLB' },
   { v: 1664, teksti: '8 kohdekarttaa ja Ihmisen matkan 20 loytokuvaa' },
   { v: 1663, teksti: '8 kohdekarttaa, 24 elainkuvaa, 16 maalehden kuvaa' },
