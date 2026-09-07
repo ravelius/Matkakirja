@@ -1,0 +1,613 @@
+{
+  "createdAt": "2026-09-07T09:54:45.724977+00:00",
+  "message": "17 maalehtikuvaa ja7 miniatyyriä, root- ja lähdetarkistettu.",
+  "items": [
+    {
+      "id": "maalehti-sle-ruoka-1-r20260907-v3",
+      "canonicalId": "maalehti-sle-ruoka-1",
+      "fileName": "maalehti-sle-ruoka-1-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kassavanlehtien survomista ja riisin kanssa tarjottavaa lehtikastiketta Sierra Leonessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-ruoka-1-r20260907-v3.jpg",
+      "sha256": "74afdcb1c2333021c0c24b61bc9459c57ff250f1f6ebd91088be8c7eda9823b3",
+      "bytes": 644788,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja country feature, wide 4:3 food-process photograph. Extreme wide environmental view with the cooking setup deliberately small. A complete anonymous cook stands behind a broad table in Sierra Leone, using a complete long wooden pestle in a wooden mortar of cassava leaves; beside it is a complete enamel plate of rice with cassava-leaf stew. Keep the cook's entire head and feet, full pestle from top to mortar, mortar, table and plate all inside an imaginary centered rectangle covering only 55 percent of image width and height. Leave at least 18 percent unobstructed courtyard environment on every edge. Match documentary cassava-pounding photographs. Sharp natural camera realism. No text, logos, packaging or watermark.\n",
+      "sources": [
+        "https://travelfoodguide.com/country/sierra-leone"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Full mortar, pestle, cook and table with ample margins; source cooking details pending. Root personally viewed source actual mortar/pestle/green leaf mash and generated whole person, full pestle and table. Comparable utensils; generalized anonymous cassava preparation. Lossless ICC APP2 insertion only; complete non-ICC JPEG bytes identical, no resizing, cropping, retouching or recompression."
+    },
+    {
+      "id": "maalehti-sle-ruoka-2-r20260907-v3",
+      "canonicalId": "maalehti-sle-ruoka-2",
+      "fileName": "maalehti-sle-ruoka-2-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Palmuviinin keruuta Sierra Leonen rannikolla.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-ruoka-2-r20260907-v3.jpg",
+      "sha256": "99b12ef5aea28e1abd3869165d2a38871eb463e42754a0e59ca7e3d42e5c080a",
+      "bytes": 490275,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja country feature, wide 4:3 documentary landscape photograph. Extreme wide establishing shot with the oil palm deliberately small. A complete Sierra Leone oil palm, including ground beneath its roots and every crown-tip, stands in the center of a large grassy clearing. An anonymous palm-wine tapper is a small figure near the crown, with collection gourd visibly tied below a cut flower stalk and a climbing rope. Keep the entire palm and worker inside an imaginary centered rectangle covering only 55 percent of image width and height. Leave a thick border at least 18 percent wide of sky, ground and side landscape on all four edges. Match documentary poyo-tapping photographs. Sharp camera realism. No text, logos or watermark.\n",
+      "sources": [
+        "https://www.joshuabermanarts.com/sierra-leone"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Full palm crown and base, distant tapper and collection vessel; source technique pending. Root personally viewed photographer actual John Obey2013 oil-palm tapper and generated whole palm/tapper/vessel. Describe palm-wine collection generally; exact cut-inflorescence method is not resolved at this image scale. Lossless ICC APP2 insertion only; complete non-ICC JPEG bytes identical, no resizing, cropping, retouching or recompression."
+    },
+    {
+      "id": "maalehti-sgp-musiikki-1-r20260907-v2",
+      "canonicalId": "maalehti-sgp-musiikki-1",
+      "fileName": "maalehti-sgp-musiikki-1-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Nuorten xinyao-yhtyeen kouluharjoitus Singaporessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sgp-musiikki-1-r20260907-v2.jpg",
+      "sha256": "fff990afdf6fd900e86f395f32fb895295ff4f7bc774d10d25e01107b9fdb9e8",
+      "bytes": 467794,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical cultural scene. Asset type: Matkakirja country feature, very wide 4:3 documentary photograph. A Singapore secondary-school assembly hall in 1984. One anonymous teenage singer-songwriter stands at a microphone with one complete acoustic guitar. Behind the singer, exactly eight classmates sit in two compact rows entirely on the raised stage, listening. Period-correct school uniforms, red stage curtains, wooden hall and 1980s microphone. Pull the camera far back: the complete singer, microphone stand, guitar and all eight complete audience bodies from head to shoes stay strictly inside the middle 55 percent, with at least 20 percent empty stage floor below, curtain/wall above and blank side margins. No foreground audience and no cropped people. Sharp camera-like photorealism, warm hall light. No banner, readable text, famous person, logos or watermark.\n",
+      "sources": [
+        "https://www.roots.gov.sg/ich-landing/ich/xinyao"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Whole school ensemble, guitar, microphone and natural stage margins; source pending. Root read NHB: young Singaporean Mandarin songs, school-campus roots from late1970s, 1982 term, guitar accompaniment. Anonymous school ensemble consistent; no named performance claimed. Lossless ICC APP2 insertion only; complete non-ICC JPEG bytes identical, no resizing, cropping, retouching or recompression."
+    },
+    {
+      "id": "maalehti-sgp-musiikki-3-r20260907-v2",
+      "canonicalId": "maalehti-sgp-musiikki-3",
+      "fileName": "maalehti-sgp-musiikki-3-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Yhteislaulua Singaporen kansallispäivän juhlassa nykyajan kaupunkimaisemassa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sgp-musiikki-3-r20260907-v2.jpg",
+      "sha256": "21acb679bf89a8181918d86f3305e6279049903e1a9041794e23fe7ef1021b34",
+      "bytes": 352098,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: public celebration scene. Asset type: Matkakirja country feature, very wide 4:3 documentary photograph. A Singapore National Day evening stage performance inspired by community singing of “Home.” One anonymous adult singer, not a portrait of Dick Lee or Kit Chan, stands at a complete microphone stand. Behind a low barrier is a compact group of exactly twelve complete audience members, each fully visible, with six small red-and-white Singapore flags. Pull the camera far back so singer, microphone, barrier, all twelve people and every complete flag fit strictly inside the middle 55 percent, surrounded by at least 20 percent empty stage floor, dark sky and side space. No huge crowd continuing beyond the frame. Sharp camera-like realism, warm stage light and distant city glow. No readable lyrics, giant text, logos or watermark.\n",
+      "sources": [
+        "https://biblioasia.nlb.gov.sg/all-sections/vol-21-issue-1-apr-jun-2025-sing-singapore-national-day-songs/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Whole anonymous performer and audience; Marina Bay Sands makes this a contemporary scene, caption must not imply 1998 staging. Source pending. Root read former committee chair Bernard T.G. Tan first-person NLB account. Anonymous modern National Day singing illustration, NOT the 1998 original recording/performance; Marina Bay Sands skyline fits contemporary setting. Lossless ICC APP2 insertion only; complete non-ICC JPEG bytes identical, no resizing, cropping, retouching or recompression."
+    },
+    {
+      "id": "maalehti-sgp-kuvataide-0-r20260907-v2",
+      "canonicalId": "maalehti-sgp-kuvataide-0",
+      "fileName": "maalehti-sgp-kuvataide-0-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Balilla maalaavia taiteilijoita Nanyang-taiteen matkojen innoittamassa kuvituksessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sgp-kuvataide-0-r20260907-v2.jpg",
+      "sha256": "220855fb270e9203c54bd64f8c22f0ffbbeb6b564fdc5c957e1d351f07f889ac",
+      "bytes": 614931,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical cultural scene. Asset type: Matkakirja country feature, very wide 4:3 documentary reconstruction. Bali in 1952: exactly four complete wooden field easels grouped on a flat overlook beside a real stepped rice terrace. Two anonymous Chinese-Singaporean artists paint at two easels; two easels hold unfinished tropical landscape canvases. Put all four easels, both complete artists and exactly two closed wooden paint boxes in a tight group within the middle 55 percent. Leave at least 20 percent open dirt foreground, sky and landscape on all edges. Every easel top and leg, both artists’ heads and feet, canvases and boxes must be fully visible and far from the frame. Artists are seen from behind or profile and are not portraits of named Nanyang painters. Period-correct 1950s clothing, camera-like photorealism, soft tropical morning. No readable signatures, logos or watermark.\n",
+      "sources": [
+        "https://www.nationalgallery.sg/sg/en/learn-about-art/our-publications/digital-catalog/siapa-nama-kamu-exhibition-catalogue/chapters-overview/nanyang-reverie.html"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Whole four easels and two anonymous painters in 1952-inspired Bali environment; source pending. Root read National Gallery catalogue section5/6: 1952 Indonesia/Bali trip by four artists, rural landscape/architecture themes and 1953 exhibition. Two anonymous painters and four invented canvases are contextual illustration, not identified portraits or reproductions. Lossless ICC APP2 insertion only; complete non-ICC JPEG bytes identical, no resizing, cropping, retouching or recompression."
+    },
+    {
+      "id": "maalehti-lbr-kuvataide-0-r20260907-v1",
+      "canonicalId": "maalehti-lbr-kuvataide-0",
+      "fileName": "maalehti-lbr-kuvataide-0-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kuvitteellinen tulkinta Martha Ann Ricksin vuonna 1892 lahjoittamasta kahvipuupeitteestä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-lbr-kuvataide-0-r20260907-v1.jpg",
+      "sha256": "d34836ed6f8a749d6892a3cdab1fae9a9c6c48eece9c057399e78d4bb08d8fff",
+      "bytes": 509678,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: lost-artifact reconstruction. Asset type: Matkakirja country feature, very wide 4:3 camera-like textile photograph. A clearly interpretive reconstruction of Martha Ann Ricks’s lost 1892 Coffee Tree quilt displayed flat on a neutral museum wall: square white satin ground, a central appliquéd Liberian coffee tree with many branching limbs, more than three hundred small green leaves suggested through dense hand appliqué, clusters of red and green coffee berries, one very small anonymous coffee picker motif, and a restrained passion-flower border. Do not claim or imitate an extant original photograph. Keep the entire square quilt and every border corner within the central 55 percent with at least 20 percent blank wall on every side. Crisp textile realism, visible hand stitching, even museum light. No person, caption card, readable text, crown, royal emblem, logos or watermark.\n",
+      "sources": [
+        "https://home.nps.gov/grsm/learn/historyculture/the-erskine-family-and-the-emigration-of-freed-black-people-to-liberia.htm"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Whole coffee-tree quilt on white satin, explicitly interpretive lost-work reconstruction; source text pending. Root read NPS lines39–42: Martha Ann Ricks made satin coffee-tree quilt presented1892 in Windsor; original lost. Image is expressly imagined reconstruction, not historical facsimile. Do not use separate erroneous1822independence detail on page. Existing ICC JPEG preserved byte for byte."
+    },
+    {
+      "id": "maalehti-sle-kirjallisuus-1-r20260907-v4",
+      "canonicalId": "maalehti-sle-kirjallisuus-1",
+      "fileName": "maalehti-sle-kirjallisuus-1-r20260907-v4.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Freetownin 1800-luvun alun kirjapainotoiminnan havainnekuva. Puinen painokone perustuu aikakauden museoesineeseen.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-kirjallisuus-1-r20260907-v4.jpg",
+      "sha256": "c1ab536111512314683c49941d84d6ea33279f37f5bff963e0f31fe08fa8c604",
+      "bytes": 500301,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene. Entirely new 4:3 camera-realistic circa-1800 Freetown print room using the supplied Science Museum 1701–1734 wooden common press photograph as structural reference. Reproduce the credible tall wooden frame, central screw and platen, sliding bed and ONE operating bar only; no opposing second bar, no Stanhope iron press. Two anonymous workers, full press and bodies middle 45%, 25% clear margin all edges and floor below. This represents a replacement press operating around 1800, not the press destroyed in 1794. No readable text, logos, watermark, cropped parts.\n",
+      "sources": [
+        "https://collection.sciencemuseumgroup.org.uk/objects/co37944/wooden-printing-press",
+        "https://moice.gov.sl/restoring-and-modernising-one-of-sierra-leones-oldest-public-institutions/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed ScienceMuseum actual and delivery. Single operating bar, wooden frame, screw and sliding bed credible; complete people and main machine. Root read government indexed history: Royal Gazette operations1801. Caption should say early1800s contextual common press; no claim exact surviving Freetown machine or visually documented1794replacement. Existing ICC JPEG preserved byte for byte."
+    },
+    {
+      "id": "maalehti-sgp-kuvataide-2-r20260907-v5",
+      "canonicalId": "maalehti-sgp-kuvataide-2",
+      "fileName": "maalehti-sgp-kuvataide-2-r20260907-v5.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Gibboni taiteilijan työtilassa: Chen Wen Hsin kotipuutarhan ja maalausaiheiden innoittama kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sgp-kuvataide-2-r20260907-v5.jpg",
+      "sha256": "bddf100b826989728b0ca7f55e3c93d487f13faa482fd986f22760a892da8695",
+      "bytes": 423428,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural. Entirely new 4:3 camera-realistic Singapore artist studio using the supplied National Gallery Singapore Chen Wen Hsi Gibbons image only to verify that real gibbons are TAILLESS. Show one complete small wooden worktable with all four legs, inkstone, brushes and an unfinished interpretive ink study of a tailless gibbon; through an open doorway one live tailless gibbon sits safely on a branch. Neither animal nor paper drawing may have any tail or tail-like line. Entire table, legs, paper, tools and animal occupy middle 45%, at least 25% empty margin all edges and floor below. No artist, no copied signature/seal, no readable text, logo, watermark or cropped object.\nMandatory composition correction: camera is much farther back and slightly higher. The table is a small object in the middle distance. Leave an uninterrupted empty floor foreground occupying the bottom 25–30% of the whole image below every table foot. Every table foot must be at least 20% above the bottom edge. Do not enlarge the table to fill the frame.\n",
+      "sources": [
+        "https://www.nationalgallery.sg/sg/en/our-collections/search-collection.artwork.html/national-collection/chen-wen-hsi/2015/2015-00455.tif.html",
+        "https://www.nationalgallery.sg/sg/en/festivals/painting-with-light-2025/exhibition-readings/home-to-heart.html"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root actual Chen Gibbons painting and generated scene viewed; live and drawn gibbons tailless, complete table with broad floor. Root read NationalGallery film description150–152 confirms home studio adjacent garden with gibbon model. Caption as contextual interpretation, not exact documented house or painting. Existing ICC JPEG preserved byte for byte."
+    },
+    {
+      "id": "maalehti-sle-kirjallisuus-3-r20260907-v2",
+      "canonicalId": "maalehti-sle-kirjallisuus-3",
+      "fileName": "maalehti-sle-kirjallisuus-3-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "1800-luvun lääkärin työpöytä, kirjoja ja puinen stetoskooppi James Africanus Hortonin ajan innoittamassa kuvituksessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-kirjallisuus-3-r20260907-v2.jpg",
+      "sha256": "d658bc61b956ae4d9b337b66b477bc1999cdb382b58f5ed86e10634cd5d89dc2",
+      "bytes": 375190,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical still life. Asset type: Matkakirja country feature, very wide 4:3 camera-like photograph. A complete freestanding 1860s wooden writing desk seen from far enough away that all four legs, feet and the full floor shadow are visible. On its center sit a closed scholarly book, an open blank notebook, quill and ink, a compact leather physician’s bag, and one straight wooden monaural stethoscope based on early-19th-century museum examples. The arrangement evokes Africanus Horton’s combined work as physician and political writer without showing or inventing his portrait. Every desk corner, leg, foot, bag, book, paper and stethoscope stays strictly inside the middle 60 percent, with at least 18 percent empty floor below and beside the desk and blank wall above. Sharp camera-like realism, natural window light, historically plausible 1860s materials. No modern rubber-tube stethoscope, readable text, cropped furniture, people, logos or watermark.\n",
+      "sources": [
+        "https://calmview.bham.ac.uk/Record.aspx?id=XCMS%2FB%2F1803-1880%2FA1%2FO%2F26-235%2F118&src=CalmView.Catalog",
+        "https://americanhistory.si.edu/collections/object/nmah_1073629"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Whole table, four feet, books and small wooden monaural stethoscope; contextual still life, not named ownership claim. Root read Birmingham archive1859–1863 surgeon/tropical-disease treatise; root read Smithsonian indexed object1073629 for19th-century wood stethoscope. Lossless ICC APP2 insertion only; complete non-ICC JPEG bytes identical, no resizing, cropping, retouching or recompression."
+    },
+    {
+      "id": "maalehti-kaz-kirjallisuus-2-r20260907-v4",
+      "canonicalId": "maalehti-kaz-kirjallisuus-2",
+      "fileName": "maalehti-kaz-kirjallisuus-2-r20260907-v4.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kaksikielinen dombra ja käsikirjoitus kazakkien kertovan lauluperinteen kuvituksena.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-kaz-kirjallisuus-2-r20260907-v4.jpg",
+      "sha256": "3929f304730b3b7867cf5eda18e028f978467ed9ce7bcb89a6392d18f8777210",
+      "bytes": 610843,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical artifact reconstruction. Asset type: Matkakirja country feature, very wide 4:3 camera-like still life. A small open 1894 Turkic-language epic booklet beside one complete authentic traditional Kazakh dombra, centered on a large empty wooden printshop table. Dombra anatomy is critical: pear-shaped body, long narrow fretted neck, exactly TWO thick visible strings total and exactly TWO large opposing side tuning pegs total at the head, one peg left and one peg right. No other peg, knob, pin or string. The head is a simple narrow wooden block, never a guitar headstock. Small round sound hole and simple bridge. Printed marks are tiny and unreadable; reconstruction, not facsimile. Both objects within central 45 percent and 22 percent empty table/air on all edges. Sharp realism. No readable text, modern object, logo or watermark.\n",
+      "sources": [
+        "https://e-museum.kz/en/exhibit/68db59698958e0562-en/",
+        "https://e-museum.kz/en/exhibit/68daaaf333a6823e8-en/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Whole pear-shaped dombra with two fine strings, two pegs and small central hole; about10%top/bottom clearance. Root read official e-museum99cm object and two-string Bala dombra records; generic instrument and manuscript, no named object/facsimile claim. Existing ICC JPEG preserved byte for byte."
+    },
+    {
+      "id": "maalehti-kaz-kirjallisuus-3-r20260907-v2",
+      "canonicalId": "maalehti-kaz-kirjallisuus-3",
+      "fileName": "maalehti-kaz-kirjallisuus-3-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Musiikin mittasuhteita tutkiva oppinut al-Farabin ajan innoittamassa kuvituksessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-kaz-kirjallisuus-3-r20260907-v2.jpg",
+      "sha256": "790922e18b31da76fb9d73326e7ee0612f225072eb12d4f2f766231452401bf4",
+      "bytes": 620596,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical scholarly reconstruction. Asset type: Matkakirja country feature, very wide 4:3 camera-like photograph. A 10th-century Baghdad scholar seen only from behind, deliberately anonymous and not a portrait of al-Farabi, seated at a complete low wooden desk. He compares several bound and rolled Arabic manuscripts, a geometric compass, straightedge, small counting stones and a simple string stretched across a marked wooden measuring board for studying ratios and intervals. All manuscript marks and diagrams are too small to read. Historically restrained Abbasid plaster interior, reed mat, ceramic inkpot and filtered courtyard light. Do not show any lute, tanbur, dombra, modern instrument or identifiable later-period object. Keep the complete scholar, desk, papers and tools inside the middle 60 percent with 18 percent clear floor, wall and air around them. Sharp photorealism. No recognizable named face, readable text, logos or watermark.\n",
+      "sources": [
+        "https://searcharchives.bl.uk/?q=040-003474539&sort=hierarchy"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Full anonymous scholar, low desk and manuscripts; removed anachronistic modern instrument. Root read BritishLibrary Or2361 ff238v–240r catalogue for Farabi music treatise and Arabic language. Generic early scholar context, no exact manuscript/furniture/portrait claim; original Bodleian item page unavailable. Existing ICC JPEG preserved byte for byte."
+    },
+    {
+      "id": "maalehti-hkg-musiikki-2-r20260907-v2",
+      "canonicalId": "maalehti-hkg-musiikki-2",
+      "fileName": "maalehti-hkg-musiikki-2-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "1970-luvun hongkongilaisen televisiostudion kuvitettu Cantopop-esitys: koko yhtye, kaksi studiokameraa ja ohjauspöytä näkyvät.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-hkg-musiikki-2-r20260907-v2.jpg",
+      "sha256": "a4b37e739d63ab6ffa084dd03f040159403a54655ef9027c08a1cbbd77a340d6",
+      "bytes": 580878,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new very wide 4:3 camera-like historical reconstruction of a 1970s Hong Kong television music studio. Show an anonymous singer from far behind at a period microphone, a small complete backing ensemble, two complete period broadcast cameras with both operators fully visible, and one compact complete analogue control console. Minimize foreground props: no turntables or records crossing the foreground. The entire production group occupies only central 50–55%, with at least 22% genuine sharp studio floor, walls and ceiling around every edge. No cropped people, camera pedestals, console, instruments or microphone boom. No real performer likeness, readable lyrics, labels, logos or album art. Crisp period technology, warm practical studio lamps, no border, padding, blurred extension or duplicated background.\n",
+      "sources": [
+        "https://magazine.mplus.org.hk/imaging-cantopop-design-and-performativity-side-a/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Full studio ensemble, operators and cameras; anonymous period illustration. Root read M+ alternate full article, supporting mid1970s Cantonese popular music and TVB role. Existing ICC JPEG preserved byte for byte."
+    },
+    {
+      "id": "maalehti-hkg-kuvataide-3-r20260907-v2",
+      "canonicalId": "maalehti-hkg-kuvataide-3",
+      "fileName": "maalehti-hkg-kuvataide-3-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Anonyymi 1960-luvun hongkongilainen sarjakuvalehtikioski, kuvitteellisin kansikuvin.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-hkg-kuvataide-3-r20260907-v2.jpg",
+      "sha256": "348257a4cf5f70bce21ae000f6968bf7f68ed0b9b39649925fd26f98bf907d85",
+      "bytes": 631838,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new very wide 4:3 historical reconstruction of a modest 1960s Hong Kong newspaper kiosk. The complete kiosk structure, awning, counter and every stack of booklets fit within central 50–55%, with at least 22% genuine sharp pavement, street and wall environment on all edges. One anonymous vendor stands fully visible from behind inside the kiosk; two distant pedestrians are also complete. Display only a limited number of small generic black-and-white sequential-art booklets using abstract geometric silhouettes; no recognizable Old Master Q characters, copied panels, readable titles or Chinese text. No papers hanging to frame edges and no cropped people or props. Crisp period street photography, no border, padding, blur extension or duplicated background.\n",
+      "sources": [
+        "https://www.oldmasterq.com/about"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Whole kiosk, stock and distant pedestrians; root read creator/family website biography1962start. Invented cover silhouettes, no claim of exact OldMasterQ issue. Existing ICC JPEG preserved byte for byte."
+    },
+    {
+      "id": "maalehti-mmr-kuvataide-3-r20260907-v2",
+      "canonicalId": "maalehti-mmr-kuvataide-3",
+      "fileName": "maalehti-mmr-kuvataide-3-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Anonyymi selin kuvattu taidemaalari työhuoneessa; ympäristökuvitus viittaa Myanmarin modernin maalaustaiteen murroskauteen.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-mmr-kuvataide-3-r20260907-v2.jpg",
+      "sha256": "eee7a4bbf9060b10f8b0d840ed68a8065d99c3eaf2dc837b6e48a71516558d78",
+      "bytes": 544731,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new very wide 4:3 camera-like reconstruction of an early-20th-century Burmese painting studio. One anonymous artist is shown fully from behind, including entire head, torso, longyi, feet and floor shadow, standing several steps from a complete modest easel. The easel top and legs are fully visible. Its canvas contains a clearly fictional, original quiet Burmese domestic interior using restrained European-influenced perspective and chiaroscuro; it is not a Ba Nyan painting and copies no known work. Use few complete tools on one small side table, no foreground clutter. Entire artist/easel/canvas group occupies central 50–55%; at least 22% genuine sharp studio floor, walls and window around every edge. No named face, royalty likeness, signatures, readable text, cropped body/easel, border, padding, blur extension or duplicated background.\n",
+      "sources": [
+        "https://www.roots.gov.sg/Collection-Landing/listing/1395370"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Full painter/easel/table; root read NHB museum collection and viewed actual Before1925–1930s. Supports European training and artistic context; anonymous artist and fictional canvas, no exact portrait/painting-rescue event claim. Existing ICC JPEG preserved byte for byte."
+    },
+    {
+      "id": "maalehti-hkg-kuvataide-2-r20260907-v3",
+      "canonicalId": "maalehti-hkg-kuvataide-2",
+      "fileName": "maalehti-hkg-kuvataide-2-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Anonyymi työvälineasetelma, jonka viisi bambusivellintä ja muste viittaavat Hongkongin mustekirjoituksen materiaaliseen perinteeseen.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-hkg-kuvataide-2-r20260907-v3.jpg",
+      "sha256": "9f13688df45bd397b7a6f310e9d67afcdfa5896bee434e47a3786cc177cd9697",
+      "bytes": 773418,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 4:3 sharp museum-style still-life photograph using the attached M+ photograph of Tsang Tsou-choi's actual early brushes as controlling morphology reference. On a plain worn worktable, show five complete slender bamboo writing brushes matching the reference range: one broad curved ink-darkened brush and four normal narrow pointed writing brushes, plus one small closed black ink bottle and one plain cotton cloth. No wall panel, utility box, map, paper, writing, characters, genealogy, signature, person, or copied artwork. This is an anonymous contextual tool still life inspired by the tradition, not a claim that generated objects are the originals. Arrange the whole group compactly inside central 45–50%, leaving 25% genuine sharp tabletop on every edge. No clipping, text, border, padding, blur extension, copied background, or watermark. Natural museum-documentary light and factual bamboo/bristle materials.\n",
+      "sources": [
+        "https://webmedia.mplus.org.hk/original_images/brushes_cropped.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root compared actual M+ five brushes photograph to entire generated still life: slender bamboo, one large bent brush and four fine brushes match; full bottle/cloth and broad margins. Contextual tool illustration. Existing ICC JPEG preserved byte for byte."
+    },
+    {
+      "id": "maalehti-hkg-urheilu-2-r20260907-v3",
+      "canonicalId": "maalehti-hkg-urheilu-2",
+      "fileName": "maalehti-hkg-urheilu-2-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Purjelautailija valmistautuu vesille Hongkongin rannalla.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-hkg-urheilu-2-r20260907-v3.jpg",
+      "sha256": "f5da2c2811bee2098f8706a6ed67803e89da22b73bfcfebe84460f091f7f47ac",
+      "bytes": 550299,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 4:3 crisp coastal documentary-style photograph on Cheung Chau beach, Hong Kong. One anonymous distant windsurfer stands beside a complete 1990s-style windsurf board and rig. The entire board, mast foot, boom, every edge and all three corners of the triangular sail, and complete person must occupy no more than central 45–50% of frame. Leave at least 20% genuine sharp sky above mast tip and at least 20% sand, sea and island environment on every other edge. Face distant/back-facing and unrecognizable. Accurate rig connections; no clipped sail/person, logos, readable text, border, padding, blur extension, duplicated background or watermark. Natural daylight, camera-like detail.\n",
+      "sources": [
+        "https://www.lcsd.gov.hk/en/watersport/common/graphics/gallery/large/SMBWSC_yatch_24_spr/08.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed official LCSD actual windsurfing photograph and complete delivery. Mast, triangular sail, boom and board coherent; anonymous shoreline practice with full rig and generous margins. Not a named athlete or event. Existing ICC JPEG preserved byte for byte."
+    },
+    {
+      "id": "maalehti-mmr-luonto-3-r20260907-v3",
+      "canonicalId": "maalehti-mmr-luonto-3",
+      "fileName": "maalehti-mmr-luonto-3-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Tiikkipuun runko, lämmin sydänpuu ja suuret lehdet havainnollistavat Tectona grandiksen tunnusomaisia piirteitä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-mmr-luonto-3-r20260907-v3.jpg",
+      "sha256": "f36cb744dd23db6a0db2b78ca2cd1c14623c3a1079bb0719f400af37e0698056",
+      "bytes": 1140553,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 4:3 natural-history photograph using the attached World Agroforestry Tectona grandis morphology sheet as controlling botanical reference. In a Myanmar teak forest show one complete moderate-size cut teak log section with golden-brown heartwood, brown distinctly fibrous bark with shallow longitudinal fissures, and one complete branch bearing several very large simple opposite elliptic leaves with clear vein network, shiny green above. Keep log, branch, leaf tips and nearby trunks entirely inside central 50–55%, leaving 22% genuine sharp forest-floor and forest environment on every edge. No people, tools, active logging claim, text, border, padding, blur extension, duplicated background or clipped leaves. Crisp camera-like botanic realism.\n",
+      "sources": [
+        "https://apps.worldagroforestry.org/treedb2/AFTPDFS/Tectona_grandis.PDF"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read and viewed actual World Agroforestry species plate; full branch with large veined leaves and log with fibrous fissured bark/golden heartwood fits. Prior incorrect Kew URL rejected. Existing ICC JPEG preserved byte for byte."
+    },
+    {
+      "id": "portoalegre-joaquim-felizardon-museo",
+      "canonicalId": "portoalegre-joaquim-felizardon-museo",
+      "fileName": "portoalegre-joaquim-felizardon-museo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Museu de Porto Alegre Joaquim José Felizardo miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/portoalegre-joaquim-felizardon-museo.png",
+      "sha256": "fcb00e5432dbc3d10e43677cdb84f2cb22973ff4aadbf4734ce566403a3386fb",
+      "bytes": 1151085,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a 1024×1024 M3 miniature strictly from the attached actual photo of Porto Alegre's Museu Joaquim José Felizardo / Solar Lopo Gonçalves. Preserve the humble long low whitewashed raised house, shallow orange clay-tile hipped roof, one row of tall rectangular windows with dark green trim and decorative semicircle fan patterns, small round basement vents, and the defining narrow exterior staircase at the LEFT end with a simple dark railing. Do not invent a grand central entrance, front stoop, ornate mansion facade, extra floor or front-facing gable. Include one restrained magnolia/tree trunk at the right edge. No signs, address numbers, text, logos, letters or people. Fine ink and restrained watercolor, compact within 800×800, pure #00FF00 background without green tint or distant shadow.",
+      "sources": [
+        "https://1regiao.wordpress.com/xi-mostra-conjunta-de-museus/foto-fachada-solar1/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual low white raised house, left stair, green fanlight windows, round vents and clay-tile roof match; clean dark and light composites. Root re-viewed final dark/light after documented alpha/despill/sRGB reprocessing; no semantic regeneration."
+    },
+    {
+      "id": "asuncion-ateneo-paraguayo",
+      "canonicalId": "asuncion-ateneo-paraguayo",
+      "fileName": "asuncion-ateneo-paraguayo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Ateneo Paraguayo miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/asuncion-ateneo-paraguayo.png",
+      "sha256": "9fcf921565c5da01534bd52d7e2826d057dd1706282042659b0075d85d4e7d19",
+      "bytes": 825896,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a 1024×1024 M3 miniature strictly from the attached actual photo of the Ateneo Paraguayo at Nuestra Señora de la Asunción 820. Preserve the real LONG SINGLE-STOREY street facade: warm tan/brown stucco, strong white horizontal cornices and base, repeated shallow white pilasters, alternating tall rectangular recessed wall panels framed by low triangular or curved pediments, decorative pierced panels with round medallions below, and one tall dark arched wooden doorway right of center. Flat parapet; no visible tiled roof. Remove posters, overhead wires, poles, signs and all text. Do not add a second storey, balconies, flags, towers, grand palace pediment or invented windows. Fine ink and restrained watercolor, complete facade within 800×800, pure #00FF00 background without green tint or distant shadow.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Ateneo_de_d%C3%ADa.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual single-storey tan and white facade, arched doorway and alternating framed panels match; clean dark and light composites. Root re-viewed final dark/light after documented alpha/despill/sRGB reprocessing; no semantic regeneration."
+    },
+    {
+      "id": "asuncion-kaupunginteatteri",
+      "canonicalId": "asuncion-kaupunginteatteri",
+      "fileName": "asuncion-kaupunginteatteri.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Teatro Municipal Ignacio A. Pane miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/asuncion-kaupunginteatteri.png",
+      "sha256": "11968263d11914d05ff246b127ce679e4381f79c35dd2404685cd20b64ca8951",
+      "bytes": 966418,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1024×1024 M3 miniature strictly from the attached actual front photograph of Teatro Municipal Ignacio A. Pane in Asunción. Preserve the real symmetrical pale cream classical facade and its depth: a recessed central entrance under the projecting transparent glass-and-metal canopy, with the broad curved central roof wall behind it and a small decorative ornament/finial exactly at the crown. The left wing must show exactly THREE tall arched upper windows and exactly THREE aligned rectangular/barred lower openings. The right wing must also show exactly THREE tall arched upper windows and exactly THREE aligned rectangular/barred lower openings. Keep both wings equally broad and complete; do not crop or narrow the right wing. Preserve the shallow side perspective and the good projecting canopy depth. No extra floors, towers, domes, signs, text, logos, letters, numbers, people, cars or street furniture. Fine ink and restrained cream, ochre and grey watercolor, complete centered silhouette within 800×800, pure #00FF00 background without green tint or distant shadow.",
+      "sources": [
+        "https://www.asuncion.gov.py/intendencia/la-municipalidad-informa-que-no-se-constato-gas-o-elementos-nocivos-en-la-sede-del-teatro-municipal"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual municipal photo and v3 dark/light viewed. Both wings now three upper and three lower openings; recessed central crest/pediment and glass canopy match."
+    },
+    {
+      "id": "honiara-kansallismuseo",
+      "canonicalId": "honiara-kansallismuseo",
+      "fileName": "honiara-kansallismuseo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Solomon Islands National Museum miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/honiara-kansallismuseo.png",
+      "sha256": "bef264d5711a8360f3749a6ea39915f7e8f518e83a6cdd918cd10d0fdfe983f0",
+      "bytes": 1015155,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a 1024×1024 M3 miniature strictly from the attached actual photo of the Solomon Islands National Museum in Honiara. Preserve the real long LOW RED HORIZONTAL-TIMBER building and fence, with the central pavilion's very tall steep dark-brown THATCHED gable roof, pale aqua-blue gable fascia, black triangular window group, and tan woven patterned panels beneath the gable. Show a restrained white horizontal rail fence and simple right-side gate. Omit the blue museum sign entirely and include no words, text, logos, letters or numbers. No white stucco fantasy pavilion, carved columns, fish murals, extra floors, people, vehicles or palms hiding the form. Fine ink and restrained watercolor, complete within 800×800, pure #00FF00 background without green tint or distant shadow.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Solomon_Islands_National_Museum_(9574486108).jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual red horizontal timber, aqua gable, steep thatch roof, triangular glazing and side woven panels match; clean dark and light composites. Root re-viewed final dark/light after documented alpha/despill/sRGB reprocessing; no semantic regeneration."
+    },
+    {
+      "id": "honiara-point-cruz",
+      "canonicalId": "honiara-point-cruz",
+      "fileName": "honiara-point-cruz.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Point Cruz miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/honiara-point-cruz.png",
+      "sha256": "6b933d61d68cc61d60f2f759d01792110286a360282b5af3c45f28010856dda8",
+      "bytes": 1027813,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a 1024×1024 M3 miniature strictly from the attached actual aerial photo of Point Cruz / Honiara international port. Preserve the real broad rectangular reclaimed waterfront: dense stacks of red, blue and green shipping containers on the older left wharf, low long industrial sheds and a few port cranes, plus the defining enormous nearly empty pale-grey rectangular new wharf projecting into deep blue water on the right. One cargo vessel may lie along the old quay. Back edge shows only a restrained strip of low coastal town and green hills. Do not invent a narrow hook peninsula, radio tower, village houses, multiple decorative ships or fantasy harbor geometry. No container logos, ship names, text, letters or numbers. Fine ink and restrained watercolor, complete within 800×800, pure #00FF00 background beyond the compact water silhouette; no green tint or distant shadow.",
+      "sources": [
+        "https://www.jica.go.jp/oda/project/1460040/index.html"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual JICA port photograph and dark/light viewed. Cargo ship at left, container field, large pale new wharf, coast and hills agree."
+    },
+    {
+      "id": "honiara-holy-cross-katedraali",
+      "canonicalId": "honiara-holy-cross-katedraali",
+      "fileName": "honiara-holy-cross-katedraali.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Holy Cross Cathedral miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/honiara-holy-cross-katedraali.png",
+      "sha256": "19786a99fc4a074737213271235e21f670591c1829adee452c6eaf37feff9191",
+      "bytes": 908369,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a 1024×1024 M3 miniature strictly from the attached actual front photograph of Holy Cross Cathedral, Honiara. Preserve the real enormous shallow A-frame roof with thick cream fascia and a very small truncated open peak, not a needle spire. Under it, reproduce the wide low triangular facade divided by dark brown timber beams into large cream, muted green and pastel lavender rectangular panels. Ground level is an open shaded porch supported by chunky round river-stone columns and low river-stone walls. Include the separate thin open metal bell frame with tiny roof and cross at far right. Do not invent a towering stained-glass wall, green copper roof, twin towers, grand central staircase or extra crosses. No statues, people, streetlights, text, logos, letters or numbers. Fine ink and restrained watercolor, complete within 800×800, pure #00FF00 background without green tint or distant shadow.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Holy_Cross_Cathedral,_St_Mary_Catholic._Front_view.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual cathedral photograph and dark/light viewed. Full A-frame roof, timber grid/purple panes, stone porch and separate metal bell tower match."
+    },
+    {
+      "id": "honiara-guadalcanalin-muistomerkki",
+      "canonicalId": "honiara-guadalcanalin-muistomerkki",
+      "fileName": "honiara-guadalcanalin-muistomerkki.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Guadalcanal American Memorial miniatyyrinä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/honiara-guadalcanalin-muistomerkki.png",
+      "sha256": "ba20b44fcdf68f84d5400b53d9347b30750fa19f0a01c3ec48aa0fffb57c1f01",
+      "bytes": 1028031,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a 1024×1024 M3 miniature strictly from the attached actual photo of the Guadalcanal American Memorial above Honiara. Preserve the real open gravel plaza: one tall plain narrow rectangular reddish-brown stone central pylon on a low square base, and four separate reddish-brown polished granite wall panels arranged around it, each panel leaning/slanting inward with an angled top. Include the large pale five-point star mosaic embedded flat in the dark pebble foreground. Omit both flags and all writing on pylon and panels. Do not create a circular white wall, obelisk point, stairs, tropical hill island, fence or enclosing amphitheatre. No text, inscriptions, logos, letters or numbers. Fine ink and restrained reddish-brown, charcoal and cream watercolor, complete within 800×800, pure #00FF00 background without green tint or distant shadow.",
+      "sources": [
+        "https://www.explorow.com/places/guadalcanal-american-memorial/10147"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Actual memorial photograph and dark/light viewed. Central rectangular pylon, angled granite panels and flat pebble star mosaic match."
+    }
+  ],
+  "reviewPublished": true,
+  "reviewVersion": 155,
+  "gameIntegrationClaimed": false
+}

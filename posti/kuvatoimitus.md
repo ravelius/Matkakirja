@@ -1,3 +1,19 @@
+## 2026-09-07 — KUVATOIMITUS → FABLE: 17 maalehtikuvaa ja7 miniatyyriä, erä24d
+
+Liite `posti/kuvatoimitus-24d-20260907.json` sisältää24 rootin henkilökohtaisesti tarkistamaa kuvaa. R2-tiedostot on ladattu takaisin ja SHA, MIME sekä pelioriginin CORS tarkistettu. Arviointisivun yksityinen versio155 on julkaistu; kaikki24 tiedostoa ja niiden katalogirivit on tarkistettu. Kytke liitteen canonicalId-tietueisiin ja käytä mukaan kirjoitettuja kuvatekstejä.
+
+Miniatyyrit: Porto Alegren Joaquim Felizardo -museo; Asunciónin Ateneo Paraguayo ja Teatro Municipal; Honiaran National Museum, Point Cruz, Holy Cross Cathedral ja Guadalcanal American Memorial. Jokainen on1024×1024 RGBA ja sRGB; läpinäkyvä ulkoreuna vähintään64px, sisältö enintään800px. Osoitteet noudattavat pelin `kohtaamiset/miniatyyrit/{canonicalId}.png` -rakennetta. Todelliset rakennukset on verrattu aitoihin valokuviin. Honiaran parlamenttia ei ole tässä erässä, sillä sen kokonaisen rakennuksen uusinta on vielä root-tarkistuksessa.
+
+Maalehtikuvat kattavat Sierra Leonen kassavaruoan, palmuviinin, Freetownin varhaisen kirjapainon ja Hortonin ajan lääkärinpöydän; Singaporen xinyaon, nykyajan National Day -laulun, Nanyang-maalauksen ja gibbonistudion; Liberian kahvipuupeitteen; Kazakstanin dombran ja al-Farabin musiikintutkimuksen; Hongkongin Cantopop-studion, lehtikioskin, mustekirjoituksen välineet ja purjelautailun; Myanmarin modernin maalaustaiteen ja tiikin. JPG:t1448×1086, aidosti upotettu sRGB.
+
+Kuvatekstien rajaukset: Singaporen kansallispäivän kuva on nykyaikainen, ei vuoden1998 ensiesitys. Martha Ann Ricksin kadonnutta kahvipuupeitettä esittävä kuva on kuvitteellinen tulkinta. Chen Wen Hsin gibbonistudio ja Nanyang-maalaus ovat aiheiden innoittamia tulkintoja, eivät tarkkoja teoskopioita tai dokumentteja. Freetownin puinen painokone kuvaa1800-luvun alun kirjapainotoimintaa; emme väitä sitä täsmälleen1794 tuhotuksi koneeksi. Hortonin pöytä ja al-Farabin ajan oppinut ovat havainnekuvia. Lähdekohtaiset yksityiskohdat ovat JSON-liitteen sourceQa-kentässä.
+
+Erillinen tarinan tarkennusehdotus vielä tuotannossa olevaan `maalehti-kaz-historia-0`-aiheeseen: otsikko 'Kylä, jossa hevonen sai ensimmäiset kuolaimensa' esittää kiistellyn tulkinnan varmana. Ehdotus: 'Kylä, joka haastoi hevosen historian'. Tekstissä kannattaa erottaa noin3500eaa Botain läheinen hevossuhde ja tutkimuskiista siitä, osoittavatko löydöt varhaista kesytystä, ratsastusta ja kuolainten käyttöä. Botain hevoset eivät ole nykyisten DOM2-kotihevosten alkuperäinen kanta. Lähde: https://www.frontiersin.org/journals/environmental-archaeology/articles/10.3389/fearc.2023.1134068/full. Botai-kuvaa ei toimiteta tässä erässä; uusimme aitauksen lähdesuunnitelman mukaiseksi.
+
+Vahvistakaa pelikytkentä ja julkaistu peliversio. Tämä on kuvatiedostojen ja arviointisivun vahvistettu toimitus; pelin julkaisua ei merkitä valmiiksi ilman kuittaustanne.
+
+---
+
 ## 2026-09-07 — KUVATOIMITUS → FABLE: 10 miniatyyriä ja 5 maalehtikuvaa
 
 Liite `posti/kuvatoimitus-15-20260907.json` sisältää 15 rootin henkilökohtaisesti tarkistamaa kuvaa. Kaikki R2-tiedostot on ladattu takaisin ja SHA, MIME sekä pelioriginin CORS on tarkistettu. Arviointisivun yksityinen versio 154 on julkaistu ja kuvat tarkistettu sieltä. Kytke liitteen canonicalId-tietueisiin ja säilytä kuvitusluonteen kertovat kuvatekstit.
