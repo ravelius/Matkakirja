@@ -536,6 +536,108 @@ rannalla; Hirsikoulu — pieni yhden huoneen hirsikoulu.
   "Unknown author"). Viereinen: piirra-kaupunkikartta.mjs jättää ison svg:n
   assets/kartat/-kansioon (gitignoressa).
 
-## Keskeneräiset
+## Keskeneräiset (sessio päättyi omistajan pyynnöstä, tokenit loppuivat)
 
-(täydennetään session päättyessä)
+- **Iqaluit + Santa Fe**: Iqaluitin tekstit ja kohdekartta haarassa (ec5ce08).
+  Santa Fe oli kesken agentin worktreessä; jos alla ei ole toista sha:ta,
+  Santa Fe on aloitettava alusta (faktapohja, tarkistus, lehti, kohdekartta,
+  jutut). Iqaluitin kuvat, kuvalähteet ja pistokokeet tekemättä.
+- **Puerto Montt + João Pessoa, São Luís + Ouro Preto, Kimberley + Managua**:
+  agentit käynnistettiin ja pysäytettiin heti — EI mitään tehtyä; aloitetaan
+  alusta samalla ohjeella (scratchpad/ohje-kaupunkipari.md:n sisältö on
+  tämän raportin liitteenä alla).
+- **Säärivit** (saatiedot.js): tekemättä kaikille tämän illan 22 kaupungille
+  sekä 43 aiemmalle lehtikaupungille (lista: comm kulttuuri-kategoriat vs
+  saatiedot -avaimet). Malli: v1661:n en-Wikipedia-ilmastotaulukkorivit
+  lahde-kentällä, tai Open-Meteo kun päiväraja sallii.
+- **Kuvitus**: Dili, Alice Springs kokonaan; Townsville, Iquitos, Timbuktu,
+  Lalibela, Whitehorse, Yellowknife, Kumasi osittain (Commons vastasi 429
+  koko illan, 8 agenttia samasta osoitteesta). Suositus: kuvahaku 1–2
+  agentilla kerrallaan rauhallisena hetkenä, tai kuvaputki.
+- Kaikki poiminnat läpäisivät portit (node --test # fail 0, kaksoisavaimet,
+  niputus, savukkeet, nimiölimitys 0, karttapisteet). Agenttien worktreet
+  katoavat session mukana; kaikki committoitu työ on tässä haarassa.
+
+## Liite: agentin ohje (kaupunkipari), käytetty 7.9.2026 illalla
+
+# Kaupunkiparin ohje (Fable-sessio 2, 7.9.2026 ilta)
+
+Olet Opus-toteuttaja Matkakirja-pelissä. Työskentelet omassa git-worktreessä,
+jonka pohja on haaran claude/lehdet-2026-09-07-ilta HEAD (= origin/main v1671).
+Päätoimittaja poimii committisi cherry-pickillä; ÄLÄ pushaa, ÄLÄ tee PR:ää.
+
+TEHTÄVÄ: KAUPUNKILEHDET kahdelle kaupungille (tunnukset annetaan tehtävässä;
+ne ovat js/packs/maailmankartta.js CITIES-taulun id-arvoja — sieltä näet myös
+"wiki"-kentän ja CITY_COUNTRY-maan). Kummallekin SAMA TÄYSI LAAJUUS kuin
+Lagosilla ja Fesillä v1670:ssä (commit 4d8126e, `git show 4d8126e --stat`):
+- faktapohja docs/mantereet-tyoaineisto/faktapohja-<kaupunki>.md en-Wikipedian
+  raakatekstistä ja ERILLINEN tarkistusraportti tarkistus-<kaupunki>.md
+  (lähteet luettu uudelleen; tarkistuspäivä 7.9.2026)
+- kansi + teemasivu js/packs/kulttuuri-kategoriat.js (avain = kaupunkitunnus),
+  3 kansikuvaa, 3 avauskuvaa, ennen–nyt-pari (jos sääntöjen mukainen vanha
+  kuva löytyy; muuten kirjaa kuten Lagosissa), matkaopas
+- kohdekartta 8 kohteella: js/packs/maakartat.js KAUPUNKIKARTAT.<kaupunki>
+  (ankkuri: ' * Lambertin tasapinta' -kommenttia EDELTÄVÄ };),
+  tools/piirra-kaupunkikartta.mjs KAUPUNGIT-rajaus, assets/kartat/<kaupunki>-
+  keskusta.png (KATSO png silmin), sekä 8 nähtävyysjuttua
+  js/packs/nahtavyysjutut.js. Kohteet EIVÄT toista lehden juttuja.
+- saapumisteksti (<mantere>-saapumiset.js) ja intro/artikkeli
+  (<mantere>-artikkelit.js), 1873-kehys; tarvittaessa <mantere>-valokuvat.js.
+  Mantereen tiedosto on se, jossa kaupungin avain jo on (grep "^  <kaupunki>: {"
+  js/packs/*-saapumiset.js).
+
+LUE ENSIN tässä järjestyksessä: tools/parvi/agentin-yhteiset-saannot.md,
+tools/parvi/kaupunkilehti-ohje.md (SITOVA — se nimeää muut luettavat
+dokumentit ja mallit), tools/parvi/kohdekartta-ohje.md. Lue mallikaupungin
+(Lagos tai Fes) toteutus KAIKISTA em. tiedostoista ennen kuin kirjoitat.
+Lue myös kaupungin maan maalehti (js/packs/maa-kategoriat.js) ja karttanostot
+(js/packs/maastokohteet-<iso>.js, skandaalit.js, elaintakyt.js) äläkä toista
+niiden aiheita.
+
+POIKKEAMAT yhteisiin sääntöihin (Fable 7.9.2026 ilta, sitovat):
+1. KAKSI COMMITTIA, ei yksi. Commit 1 = checkpoint HETI kun molempien
+   kaupunkien tekstit, kohdekartat (png + rajaus + karttapisteet) ja
+   nähtävyysjutut ovat valmiit ja portit vihreät — ENNEN yhtään kuvahakua
+   (kuvakentät tyhjinä/puuttuvina niin, että testit menevät läpi; otsikko
+   esim. "Kaupunkilehdet Salta ja Antofagasta: tekstit"). Commit 2 =
+   lopullinen kuvien jälkeen ("Kaupunkilehdet Salta ja Antofagasta: kuvat").
+   Kummankin pitää läpäistä portit. git add vain muuttamasi tiedostot.
+   Commit-viestin otsikko ASCII, ≤ 60 merkkiä; viestin loppuun rivit:
+   Co-Authored-By: Claude <noreply@anthropic.com>
+   Claude-Session: https://claude.ai/code/session_01QFAVkDyYhAPzL2NqPAo3Nh
+2. Säärivejä (js/packs/saatiedot.js, Open-Meteo, hae-saanormaalit) ET tee.
+3. EI matkakirjatekstiä, EI kohtaamisia, EI kysymyksiä. ÄLÄ koske:
+   js/tyohuone-raamattu.js, js/tyohuone-tilanne.js, js/main.js,
+   js/muutokset.js, sw.js, docs/tarina.md, docs/isoisan-raamattu.md, dist/.
+   Älä aja tools/uusi-versio.mjs. Ei git stash.
+4. Verkko: NODE_USE_ENV_PROXY=1. User-Agent Wikimedian rajapinnoille
+   TÄSMÄLLEEN "Matkakirja/1.0 (https://github.com/ravelius/Matkakirja)".
+   Ei sähköposteja, ei API-avaimia mihinkään.
+5. Kuvat vain Commonsista: lisenssi ja tekijä extmetadatasta, ≥ 1200 px,
+   JOKAINEN kuva katsottu (Read näyttää kuvan); tunnistettavat kasvot,
+   logot, vesileimat, heikot kuvat hylätään. Kuvaton on parempi kuin
+   tarkistamaton. Kuvia ET generoi. Rinnakkaisia Commons-hakuja enintään 2;
+   429 → odota 45 s (parvessa on 8 agenttia).
+6. Apuskriptit ja välitulokset VAIN omaan alikansioon
+   <scratchpad>/<kaupunki1>-<kaupunki2>/ (scratchpad-polku on tehtävässä).
+7. Jos huomaat, että jokin osa on jo tehty pohjassa, älä toista sitä.
+   Viereisiä ongelmia ET korjaa — kirjaat ne raporttiin.
+
+PORTIT ennen KUMPAAKIN committia (kaikki vihreitä, korjaa ennen committia):
+  node --test tests/*.test.mjs        (lue itse "# fail 0")
+  node tools/tarkista-kaksoisavaimet.mjs
+  node tools/tarkista-niputus.mjs
+  node tools/tarkista-savukkeet.mjs
+  node tools/tarkista-nimiolimitys.mjs
+  node tools/tarkista-karttapisteet.mjs <kaupunki1>
+  node tools/tarkista-karttapisteet.mjs <kaupunki2>
+
+LOPPURAPORTTI (vastauksesi, suomeksi, tiivis, ≤ 80 riviä):
+- molempien committien SHA ja otsikot; muutetut tiedostot
+- per kaupunki: lehden aiheet (kansi/teemasivu), kohdekartan 8 kohdetta
+  nimineen muodossa "kohde — mitä miniatyyrikuvan pitää esittää"
+- kuvien lähteet (tiedosto, tekijä, lisenssi) ja kuvattomat nostot muodossa
+  "nosto — mitä kuvan pitää esittää" (kuvaputkea varten)
+- KOLME pistokoeväitettä lähteineen (väite; en-Wikipedia-artikkeli ja osio)
+- porttien tulos (# pass / # fail), päätöstä vaativat asiat, mitä jäi
+  tekemättä ja miksi.
