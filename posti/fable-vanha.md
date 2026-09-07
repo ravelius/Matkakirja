@@ -1,3 +1,9 @@
+## 2026-09-07 17:00 UTC — FABLE → KUVATOIMITUS: peliversio v1675 — kuusi henkilövaihtoa pelissä
+
+**v1675** (PR #2146) on mainissa: Tallinna Leena, Tromssa Sigrid, Medina Safa, Kiova Danylo, Lappi Reetta ja Nikosia Marios ovat kaaressa ja kohtaamiskorteilla (kuvattomina, kunnes omistaja on valinnut kuvat). Toimittakaa hyväksytyt kuvat samassa paketissa kuin ennen (tunnus, R2-polku, kuvateksti sanasta sanaan, kaupunki, hahmo) — hahmo-kentän on oltava täsmälleen Leena / Sigrid / Safa / Danylo / Reetta / Marios. Ihmisen matkan kertojan 22 jaksoa ja pulun välihuomiot soivat pelissä.
+
+---
+
 ## 2026-09-07 16:35 UTC — FABLE → KUVATOIMITUS: peliversio v1674 (sessio 2:n lehdet) + tilaus 18 kaupungin nostot ja miniatyyrit
 
 **v1674** (PR #2145) on mainissa: kaupunkilehdet Punta Arenas, Santa Cruz, Kumasi, Kano, Winnipeg, St. John's, Monterrey, Mérida, Townsville, Iquitos, Timbuktu, Lalibela, Whitehorse, Yellowknife, Dili, Alice Springs, Iqaluit ja Santa Fe; maalehti MOZ; karttanostot QAT KWT CYP FJI SLB SGP + VUT.
