@@ -2465,7 +2465,41 @@ export const ELAINTAKYT = {
     lahde: 'en-Wikipedia "Coconut crab", johdanto sekä osiot "Description", "Respiration", '
       + '"Sense of smell", "Life cycle", "Distribution", "Diet", "Habitat" ja '
       + '"Conservation". Tarkistettu 7.9.2026.',
-    kuvat: [],
+    /*
+     * KUVA ON COMMONSISTA EIKÄ KUVAPUTKESTA, ja se on tämän taulun
+     * ensimmäinen sellainen. Muut kuvalliset täyt kantavat omistajan
+     * generoituja havainnekuvia (ks. tiedoston alku), mutta Vanuatun
+     * kuvaa ei ole tilattu kuvaputkelta — omistaja tilasi kravun ja
+     * kuvan samalla kertaa, ja Commonsista löytyi lajista valokuva,
+     * joka on OTETTU VANUATUSSA (tiedoston Location-malline
+     * −18,7588 / 169,3558, luokat "Animals of Vanuatu" ja "Vanuatu
+     * photographs taken on 2019-05-12"). Kuvaton kortti olisi ollut
+     * huonompi kuin tarkistettu vapaa valokuva.
+     *
+     * LISENSSI JA TEKIJÄ ON LUETTU COMMONSIN extmetadatasta eikä
+     * arvattu: LicenseShortName "CC BY 4.0", Artist "Dominik Maximilián
+     * Ramík", UsageTerms "Creative Commons Attribution 4.0",
+     * AttributionRequired true. Alkuperäinen on 2048 × 1365 px, eli
+     * reilusti yli 1200 pikselin vaatimuksen; osoite skaalaa sen
+     * 1200:aan samalla Special:FilePath-tavalla kuin muutkin pelin
+     * Commons-kuvat (js/packs/africa-valokuvat.js). Kuva on katsottu:
+     * siinä on tummansininen kookoskrapu tarttumassa keppiin
+     * kyläpihalla.
+     *
+     * KENTÄT: `url` on kuvan valmis osoite ja `lahdeUrl` sen Commons-
+     * sivu — sama kenttäjako kuin kuvaputken toimituksissa (ks.
+     * tiedoston alku "KUVAN LÄHDEOSOITE ON lahdeUrl").
+     */
+    kuvat: [
+      {
+        url: 'https://commons.wikimedia.org/wiki/Special:FilePath/'
+          + 'Birgus%20latro%20197146121.jpg?width=1200',
+        kuvateksti: 'Kookoskrapu tarttuu keppiin kyläpihalla Vanuatussa; '
+          + 'sinertävä väri on lajilla useimmilla alueilla vallitseva.',
+        lahde: 'Dominik Maximilián Ramík, Commons (CC BY 4.0)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Birgus_latro_197146121.jpg',
+      },
+    ],
     // Piste on Espiritu Santon pohjoiskärjessä (166,6 / −14,65),
     // 118,7 lautayksikköä Port Vilasta ja maan monikulmion sisällä.
     // Laudan rantaviiva ei tunne saarta — ks. erän otsikkokommentti ja
