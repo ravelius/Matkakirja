@@ -1083,4 +1083,199 @@ export const OCEANIA_ARTIKKELIT = {
       + 'maakuopassa kuumilla kivillä, ja illan kava juodaan yhteisessä '
       + 'nakamalissa, jonka ovessa ei ole lukkoa.',
   },
+  /* DILI (Opus 7.9.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain dili); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-dili.md ja
+   * tarkistus-dili.md. Avain on kaupungin wiki-nimi
+   * (js/packs/oceania.js: 'Dili'). Väitteet on luettu en-Wikipedian
+   * raakateksteistä 7.9.2026 ("Dili", "Casa Europa", "Port of Dili",
+   * "Tetun language").
+   *
+   * EI NYKYPOLITIIKKAA EIKÄ NYKYVÄKIVALTAA (Myanmar-linja):
+   * miehitysajan väkivalta, Santa Cruz 1991 sekä vuosien 1999 ja
+   * 2006 kriisit on jätetty pois. Miehitys ja itsenäistyminen
+   * esiintyvät vain päivämäärinä.
+   *
+   * VUOSILUKUA 1866 EI KÄYTETÄ (tarkistus-dili.md, kohta A): lähde
+   * antaa vain suhteellisen ajan "viisi vuotta ennen vuotta 1871".
+   * Maan intro ('Itä-Timor') kertoo santelipuusta ja Oecussesta,
+   * joten niitä ei toisteta täällä. */
+  Dili: {
+    intro: 'Dili on Itä-Timorin pääkaupunki ja suurin kaupunki '
+      + 'Timorin saaren pohjoisrannikolla. Se on rakennettu pienelle '
+      + 'tasaisen maan alueelle, jota vuoret ympäröivät, ja se on '
+      + 'ollut maan talouden keskus ja pääsatama siitä asti, kun '
+      + 'siitä tehtiin Portugalin Timorin pääkaupunki 1769.'
+      + '\n\n'
+      + 'Kuvernööri António José Teles de Meneses siirsi silloin '
+      + 'hallinnon ja 1 200 ihmistä itään. Paikka kuului Motaelin '
+      + 'kuningaskuntaan, jonka johtaja oli portugalilaisten ystävä, '
+      + 'ja ympärillä oli riisinviljelyyn sopivaa kosteikkoa. '
+      + 'Kaupunki rakennettiin uudelleen ruutukaavaan 1830-luvulta '
+      + 'alkaen, ja isoisän matkan aikaan se oli **rakennustyömaa**: '
+      + 'tulipalo oli tuhonnut linnoituksen, ja sen raunioille '
+      + 'nostettiin uutta kasarmia vuodesta 1871.'
+      + '\n\n'
+      + 'Nykyään Dili on nuoren maan pääkaupunki. Väestö on '
+      + 'poikkeuksellisen nuorta ja kasvaa muuttajista: joka muusta '
+      + 'kunnasta muutetaan pois, ja Diliin muutetaan. Kaupungin oma '
+      + 'kieli on tetum, ja sen Dilissä syntynyt muoto **Tetun Prasa '
+      + 'eli torin tetum** on koko maan yleiskieli.',
+    teksti: 'Dili sijaitsee Timorin pohjoisrannikolla kapealla '
+      + 'rantatasangolla. Kaupungin ydin on alle sadan metrin '
+      + 'korkeudessa, ja vain noin 37 prosenttia kaupunkialueesta on '
+      + 'riittävän tasaista rakentamiseen. Comoro-joki virtaa '
+      + 'länsiosan läpi, ja sen valuma-alue ulottuu yhdeksän '
+      + 'kilometrin päähän sisämaahan, missä vuoret ovat jo '
+      + 'yhdeksänsataa metriä korkeita.'
+      + '\n\n'
+      + 'Paikalla on ollut satama ainakin vuodesta 1726. Vuonna 1769 '
+      + 'siitä tuli Portugalin Timorin pääkaupunki, ja kuvernööri '
+      + 'José Maria Marques rakensi asutuksen uudelleen ruutukaavaan '
+      + '1834 alkaen, kun vanhan kaupungin ja Lahanen välinen '
+      + 'kosteikko kuivattiin. Toisessa maailmansodassa kaupunki '
+      + 'joutui kahden sotajoukon väliin, ja syyskuuhun 1945 mennessä '
+      + 'sen keskusta oli raunioina. Portugalin hallinto päättyi '
+      + '1975, ja maa itsenäistyi lopullisesti 2002.'
+      + '\n\n'
+      + 'Ilmasto on trooppinen savanni-ilmasto, jossa on kaksi '
+      + 'vuodenaikaa: sadekausi marraskuusta huhtikuuhun ja kuiva '
+      + 'kausi toukokuusta lokakuuhun. Kaupungissa on maan ainoa '
+      + 'toimiva kansainvälinen lentokenttä ja maan yliopistot, ja '
+      + 'kolme neljäsosaa maan yliopisto-opiskelijoista opiskelee '
+      + 'täällä.',
+  },
+  /* ALICE SPRINGS (Opus 7.9.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain alicesprings); pohjana
+   * faktapohja-alicesprings.md ja tarkistus-alicesprings.md. Avain
+   * on kaupungin wiki-nimi (js/packs/oceania.js: 'Alice Springs').
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026
+   * ("Alice Springs", "Alice Springs railway station").
+   *
+   * PILARI 1: arrernte-kansa ja paikan oma nimi Mparntwe tulevat
+   * ennen siirtomaanimiä, ja kansa näytetään nykypäivän toimijana
+   * (vuoden 2000 maaoikeuspäätös).
+   *
+   * ASUKASLUKUA EI ANNETA (tarkistus-alicesprings.md, kohta B):
+   * infobox ja leipäteksti ovat 34 prosentin päässä toisistaan.
+   * Stuart Town Gaol on 1907 eikä 1909 (kohta A). AUS-maalehden
+   * lennätinnosto kertoo linjan rakentamisen, joten sitä ei toisteta
+   * täällä. */
+  'Alice Springs': {
+    intro: 'Alice Springs on kaupunki Pohjoisterritoriossa '
+      + 'suunnilleen Australian maantieteellisessä keskipisteessä, '
+      + 'lähes yhtä kaukana Adelaidesta ja Darwinista. Seudun '
+      + 'alkuperäiset asukkaat, **arrernte-kansa**, ovat asuneet '
+      + 'Keski-Australian aavikolla kymmeniätuhansia vuosia, ja '
+      + 'taajaman alueen perinteinen nimi on Mparntwe eli '
+      + 'vedenottopaikka.'
+      + '\n\n'
+      + 'Isoisän matkan aikaan kaupunkia ei ollut. Yleislennätinlinja '
+      + 'Adelaidesta Darwiniin oli valmistunut 1872, ja sen '
+      + 'toistinasema oli pystytetty tavallisesti kuivan Todd-joen '
+      + 'vesikuopan viereen. W. W. Mills nimesi paikan Alice '
+      + 'Springsiksi lennätinylitarkastajan sir Charles Toddin vaimon '
+      + 'mukaan — mutta viereinen asutus sai nimen Stuart, ja **se '
+      + 'nimettiin uudelleen Alice Springsiksi vasta 31. elokuuta '
+      + '1933**.'
+      + '\n\n'
+      + 'Kaupunki kasvoi vasta radan myötä 1929. Nykyään se on seudun '
+      + 'palvelukeskus ja matkailukaupunki, jossa asuu noin '
+      + 'kymmenesosa koko Pohjoisterritorion väestöstä, ja se on '
+      + 'Keski-Australian aboriginaalitaiteen kauppa- ja '
+      + 'näyttelykeskus.',
+    teksti: 'Alice Springs on 545 metrin korkeudessa '
+      + 'MacDonnell-vuorten pohjoispuolella, tavallisesti kuivan '
+      + 'Todd-joen molemmin puolin. Ympäröivä seutu tunnetaan nimellä '
+      + 'Keski-Australia tai Punainen keskusta, ja se on kuivaa '
+      + 'aavikkoa. Merelle on noin kaksitoistasataa kilometriä ja '
+      + 'lähimpiin suuriin kaupunkeihin noin puolitoista tuhatta.'
+      + '\n\n'
+      + 'Merkittävä eurooppalainen asutus alkoi vasta, kun '
+      + 'Arltungasta löytyi kultaa 1887. Kaupungin ensimmäinen '
+      + 'kunnollinen rakennus, Stuart Town Gaol, valmistui 1907, '
+      + 'jolloin eurooppalaisia asukkaita oli alle kaksikymmentä. '
+      + 'Keski-Australian ensimmäinen sairaala Adelaide House avattiin '
+      + '1926, rata tuli 1929, ja maailman ensimmäinen radiokoulu '
+      + 'School of the Air aloitti täältä 1951. Toukokuussa 2000 '
+      + 'liittovaltion tuomioistuin tunnusti arrernte-kansan '
+      + 'kaupungin perinteisiksi omistajiksi — se oli Australian '
+      + 'ensimmäinen onnistunut kaupunkialueen maaoikeusvaade.'
+      + '\n\n'
+      + 'Kaupunki palvelee aluetta, joka on Suomea suurempi. Se on '
+      + 'Adelaide–Darwin-radan puolivälissä, ja sitä palvelee '
+      + 'matkailujuna Ghan. Ilmasto on subtrooppinen kuuma '
+      + 'aavikkoilmasto: kesän ylin keskilämpötila on 35,6 astetta ja '
+      + 'talvella pakkasöitä on keskimäärin kaksitoista vuodessa.',
+  },
+  /*
+   * TOWNSVILLE (Opus 7.9.2026, Fablen parvi). Avain on 'Townsville',
+   * koska js/packs/maailmankartta.js antaa kaupungille wiki-nimeksi
+   * 'Townsville' — ui.js hakee introa kentällä `city.wiki ?? city.name`.
+   * Sama erä kuin lehden tekstit (js/packs/kulttuuri-kategoriat.js,
+   * avain townsville): väitteet on luettu en-Wikipedian raakatekstistä
+   * 7.9.2026, lähdeaineistona
+   * docs/mantereet-tyoaineisto/faktapohja-townsville.md ja sen
+   * riippumaton tarkistus tarkistus-townsville.md, joka voittaa
+   * ristiriidassa.
+   *
+   * VUODEN 1873 KULMA: isoisän matkavuonna Townsville oli yhdeksän
+   * vuoden ikäinen satamakaupunki ilman rautatietä. Kultaa oli
+   * löytynyt Cape Riveriltä 1867, Ravenswoodista 1869 ja Charters
+   * Towersista jouluaattona 1871, ja kaikki se kulki Townsvillen
+   * laitureille maanteitse. Rata Charters Towersista valmistui vasta
+   * joulukuussa 1882. Tullilla ja oikeusistuimella oli tuolloin yhä
+   * yhteinen ahdas puurakennus.
+   *
+   * PERUSTAMISLEIRIN KUUKAUTTA EI ANNETA (tarkistus, kohta A):
+   * "Townsville" sanoo huhtikuu 1864, "Townsville Customs House"
+   * marraskuu 1864. Teksti sanoo vain vuoden.
+   */
+  Townsville: {
+    intro: 'Townsville on Pohjois-Queenslandin suurin kaupunki, '
+      + 'satama Cleveland Bayn rannalla 1 350 kilometriä Brisbanesta '
+      + 'pohjoiseen ja 350 kilometriä Cairnsista etelään. Asukkaita on '
+      + 'kaupungin oman ilmoituksen mukaan 204 541, ja keskustaa '
+      + 'hallitsee 286 metriä korkea graniittikallio Castle Hill.'
+      + '\n\n'
+      + 'Kaupunki syntyi tulvan takia. Burdekin-joki katkaisi joka '
+      + 'sadekausi karjatilojen tien etelän satamiin, joten **satama '
+      + 'oli pakko perustaa joen pohjoispuolelle** — ja niin Woodstock '
+      + 'Stationin John Melton Black lähetti 1864 miehiä etsimään '
+      + 'paikkaa. Leiri pystytettiin Ross Creekin rantaan Melton '
+      + 'Hillin alle. Nimi tuli sydneyläiseltä liikemieheltä Robert '
+      + 'Townsilta, joka rahoitti asutuksen mutta kävi paikalla vain '
+      + 'kerran, kolmen päivän ajan.'
+      + '\n\n'
+      + 'Kulta teki lopun. Cape River 1867, Ravenswood 1869 ja '
+      + 'Charters Towers jouluaattona 1871 — viisi kultakenttää lähetti '
+      + 'saaliinsa Townsvillen laitureille. **Isoisän matkavuonna 1873 '
+      + 'kaupungissa ei vielä ollut rautatietä, ja kulta tuli alas '
+      + 'maanteitse.** Rautateiden rakentaminen alkoi 1879, ja rata '
+      + 'Charters Towersiin valmistui joulukuussa 1882. Väkiluku oli '
+      + 'silloin 4 000; yhdeksän vuotta myöhemmin 13 000.',
+    teksti: 'Townsville on trooppisessa Queenslandissa mutta kuivalla '
+      + 'kaistaleella. Rannikko kääntyy juuri tässä itä—länsisuuntaan, '
+      + 'eikä kaakkoispasaati enää nouse rinnettä ylös — siksi talvet '
+      + 'ovat sinitaivaisia ja sade kertyy marras—huhtikuun kuudelle '
+      + 'kuukaudelle. Kaupungin keskellä on Castle Hill, edustalla '
+      + 'kahdeksan kilometrin päässä Magnetic Island, ja lävitse '
+      + 'virtaa Ross River.'
+      + '\n\n'
+      + 'Kaupunki on ollut aina jonkin toisen paikan satama: ensin '
+      + 'karjatilojen, sitten kultakenttien, sitten sokerin. Vuonna '
+      + '1896 Japani avasi tänne ensimmäisen australialaisen '
+      + 'konsulaattinsa, koska seudulla oli noin neljätuhatta '
+      + 'japanilaista työntekijää. Toisen maailmansodan aikana '
+      + 'kaupungissa oli yli 50 000 sotilasta. Vuonna 1992 Australian '
+      + 'korkein oikeus tunnusti alkuperäisen maaoikeuden jutussa, '
+      + 'jonka aloitti täkäläinen puutarhuri Eddie Mabo.'
+      + '\n\n'
+      + 'Nykyään Townsville on hallinnon ja raskaan teollisuuden '
+      + 'keskus: se on ainoa kaupunki maailmassa, joka jalostaa '
+      + 'kolmea perusmetallia — sinkkiä, kuparia ja nikkeliä. Täällä '
+      + 'ovat James Cook -yliopiston suurin kampus ja Australian '
+      + 'meritieteen instituutin päämaja. Flinders Street on yhä '
+      + 'vanhin katu.',
+  },
 };

@@ -1182,4 +1182,323 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'Alaskaan menevästä tavarasta, ja kaupungissa elää satoja '
       + 'hirviä ja karhuja ihmisten seassa.',
   },
+  /*
+   * MONTERREY (7.9.2026, parvierä). Väitteet ovat samasta erästä
+   * kuin lehden tekstit (js/packs/kulttuuri-kategoriat.js, avain
+   * monterrey), ja ne on luettu en-Wikipedian raakateksteistä
+   * 7.9.2026 — uusia lähdehakuja ei tarvittu. Sisältölinjaus on
+   * spec-mantereet.md:n Meksiko-kohta: arkeologia, kulttuuri ja
+   * historia kantavat, nykyväkivaltaa ei käsitellä. Vuoden 1873
+   * kulma on introssa mukana.
+   */
+  Monterrey: {
+    intro: 'Monterrey on Nuevo Leónin pääkaupunki Koillis-Meksikossa, '
+      + 'noin 540 metrin korkeudessa Sierra Madre Orientalin juurella '
+      + 'ja parinsadan kilometrin päässä Texasin rajasta. Kaupungin '
+      + 'halki kulkee idästä länteen Santa Catarina -joki, joka on '
+      + 'pinnalta kuiva suurimman osan vuotta mutta virtaa maan alla. '
+      + 'Idässä kohoaa **Cerro de la Silla**, satulavuori, jonka '
+      + 'neljästä huipusta kaksi ja niiden välinen notko muodostavat '
+      + 'kaupungin tunnuksen.'
+      + '\n\n'
+      + 'Kaupunki syntyi kolmannella yrityksellä. Alberto del Canton '
+      + 'ja Luis Carvajal y de la Cuevan asutukset autioituivat, ja '
+      + 'vasta **Diego de Montemayor** sai 20. syyskuuta 1596 '
+      + 'kolmentoista perheen retkikunnallaan aikaan pysyvän '
+      + 'kaupungin Santa Lucían lähteen viereen. Espanjan vallan '
+      + 'aikana Monterrey pysyi pienenä ja välitti kauppaa San '
+      + 'Antonion, Tampicon ja Saltillon välillä. Isoisän matkavuonna '
+      + '1873 se oli 277-vuotias osavaltionpääkaupunki, jonka '
+      + 'rikkaus oli tullut rajan takaa: Yhdysvaltain sisällissodan '
+      + 'aikana puuvilla oli kulkenut näiden kauppahuoneiden kautta.'
+      + '\n\n'
+      + 'Terästehdas perustettiin 1900 ja teki kaupungista Meksikon '
+      + 'teollisuuden ytimen. Kun tehdas meni konkurssiin 1986, '
+      + 'alueesta tehtiin puisto, jossa masuunit seisovat yhä '
+      + 'paikoillaan.',
+    teksti: 'Monterrey on laaksossa vuorten välissä: idässä Cerro de '
+      + 'la Silla, lännessä piispanhiippoja muistuttava Cerro de las '
+      + 'Mitras, etelässä Loma Larga ja sen takana Sierra Madre '
+      + 'Orientalin kansallispuisto. Sisämaan ja matalan korkeuden '
+      + 'takia se on yksi Meksikon lämpimimmistä suurkaupungeista.'
+      + '\n\n'
+      + 'Kaupunki perustettiin 1596, mutta se kasvoi vasta '
+      + 'itsenäistymisen jälkeen, kun siitä tuli 1824 Nuevo Leónin '
+      + 'pääkaupunki ja rajakaupan solmukohta. Vuonna 1846 täällä '
+      + 'käytiin Meksikon–Yhdysvaltain sodan ensimmäinen suuri '
+      + 'taistelu. Panimo perustettiin 1890, rautatie tuli '
+      + 'vuosikymmentä myöhemmin ja terästehdas 1900.'
+      + '\n\n'
+      + 'Nykyään Monterrey on Meksikon toiseksi suurimman '
+      + 'metropolialueen keskus ja maan teollisuuden ydin: terästä, '
+      + 'sementtiä, lasia, autonosia ja olutta. Keskustan sydän on '
+      + 'Macroplaza, jonka pohjoispäässä on hallintopalatsi ja '
+      + 'eteläpäässä kaupungintalo; itälaidalta alkaa vanha '
+      + 'kortteliverkko Barrio Antiguo.',
+  },
+  /*
+   * MÉRIDA (7.9.2026, parvierä). Avain on laudan wiki-nimi
+   * 'Mérida (Meksiko)' (js/packs/northamerica.js), ei
+   * en-Wikipedian otsikko — sama käytäntö kuin New Yorkissa.
+   * Väitteet ovat samasta erästä kuin lehden tekstit
+   * (kulttuuri-kategoriat.js, avain merida). Sisältölinjaus on
+   * spec-mantereet.md: alkuperäiskansat kunnioittavasti ja elävinä,
+   * väkivaltainen historia tapahtumina ilman yksityiskohtia.
+   */
+  'Mérida (Meksiko)': {
+    intro: 'Mérida on Yucatánin osavaltion pääkaupunki ja koko '
+      + 'niemimaan kulttuurin ja talouden keskus. Se on noin 35 '
+      + 'kilometriä Meksikonlahden rannalta sisämaassa ja vain '
+      + 'yhdeksän metriä merenpinnan yläpuolella, tasaisella '
+      + 'kalkkikivialustalla, jolla ei ole jokia lainkaan: sadevesi '
+      + 'imeytyy kiveen ja kerääntyy cenote-kaivoihin.'
+      + '\n\n'
+      + 'Kaupunki rakennettiin 1542 mayakaupungin **Tʼhón** päälle ja '
+      + 'sen kivistä; espanjalaiset nimesivät sen Extremaduran '
+      + 'Méridan mukaan, koska rauniot muistuttivat heitä Rooman '
+      + 'Augusta Emeritasta. Siirtomaa-ajasta 1800-luvun puoliväliin '
+      + 'Mérida oli muurattu kaupunki. Isoisän matkavuonna 1873 '
+      + '**kastisota** oli yhä käynnissä: niemimaan luoteisosaa '
+      + 'hallitsi Méridasta käsin osavaltion hallinto ja kaakkoisosaa '
+      + 'itsenäinen mayavaltio Chan Santa Cruz, jonka Britannia oli '
+      + 'tunnustanut tosiasialliseksi valtioksi.'
+      + '\n\n'
+      + 'Samaan aikaan alkoi vaurastuminen: heneken-agaaven kuidusta '
+      + 'tehtiin köyttä koko maailman laivoille, ja siitä rahasta '
+      + 'rakennettiin Paseo de Montejon bulevardi kartanoineen. '
+      + 'Nykyään kolmasosa osavaltion väestöstä puhuu yucatekin '
+      + 'mayaa, ja se kuuluu kaupungin espanjassa.',
+    teksti: 'Mérida on Yucatánin niemimaan luoteisosassa. Katuruudukko '
+      + 'on poikkeuksellisen selkeä: parittomat kadut kulkevat idästä '
+      + 'länteen ja parilliset pohjoisesta etelään, ja kadut 60 ja 61 '
+      + 'rajaavat pääaukiota Plaza Grandea. Historiallinen keskusta on '
+      + 'yksi Amerikan suurimmista.'
+      + '\n\n'
+      + 'Espanjalaiset perustivat kaupungin 1542, ja sen katedraali '
+      + 'valmistui 1598. Yucatán julistautui välillä omaksi '
+      + 'tasavallakseen ja palasi Meksikoon 1848. Kastisota kesti '
+      + 'vuodesta 1847 pitkälle 1900-luvulle, ja samalla '
+      + 'henekenviljelmät tekivät niemimaasta rikkaan; niiden '
+      + 'työväeksi saapui 1905 yli tuhat korealaista siirtolaista.'
+      + '\n\n'
+      + 'Nykyään Mérida on osavaltion hallinnon, yliopistojen ja '
+      + 'tutkimuslaitosten kaupunki. Se oli ensimmäinen Amerikan '
+      + 'kulttuuripääkaupunki ja ainoa, joka on saanut arvon '
+      + 'kahdesti. Mayakulttuuri näkyy arjessa: puheessa, '
+      + 'Hanal Pixán -juhlassa ja ruoassa, jonka mausteena on '
+      + 'annatto ja kypsennystapana maakuoppa.',
+  },
+  /*
+   * WINNIPEG (7.9.2026). Väitteet tulevat samasta erästä kuin lehden
+   * tekstit (js/packs/kulttuuri-kategoriat.js, avain winnipeg), ja ne
+   * on luettu en-Wikipedian raakateksteistä 7.9.2026 ("Winnipeg",
+   * "Manitoba Act, 1870", "Treaty 1"). Väkiluvut ovat vuoden 2021
+   * väestönlaskennasta; lähteen 850 000:n arviota ei käytetä, koska
+   * sama luku esiintyy artikkelissa kerran kaupungin ja kerran
+   * metropolialueen lukuna (tarkistus-winnipeg.md, kohta D).
+   */
+  Winnipeg: {
+    intro: 'Winnipeg on Manitoban pääkaupunki ja maakunnan suurin '
+      + 'kaupunki, ja se on rakennettu sinne, missä Assiniboine yhtyy '
+      + 'Punaiseenjokeen. Kaupunki on Kanadan preerian itäreunalla '
+      + 'Punaisenjoen laakson pohjalla, tulvatasangolla, jonka '
+      + 'pinnanmuodot ovat erittäin tasaiset. Vuonna 2021 kaupungissa '
+      + 'asui 749 607 ja metropolialueella 834 678 ihmistä — Kanadan '
+      + '**kuudenneksi suurin kaupunki**. Nimi tulee Winnipegjärveltä: '
+      + 'creen ja odžibwen sana tarkoittaa sameaa eli mutaista vettä.'
+      + '\n\n'
+      + 'Jokien yhtymäkohta oli kanoottireittien risteys kauan ennen '
+      + 'eurooppalaisia, ja se on anishinaabe-, ininew-, oji-cree-, '
+      + 'dene- ja dakota-kansojen perinteistä aluetta sekä '
+      + 'métis-kansan syntysija. La Vérendrye rakensi paikalle '
+      + 'ensimmäisen turkiskauppa-aseman 1738, ja Manitoba Act teki '
+      + '1870 Manitobasta Kanadan viidennen provinssin.'
+      + '\n\n'
+      + '**Isoisän matkavuonna 1873 Winnipeg sai kaupunkioikeudet.** '
+      + 'Kaupunki perustettiin 8. marraskuuta 1873 Selkirkin '
+      + 'siirtokunnan ympärille, ja sille antoi nimen '
+      + 'métis-lainsäätäjä James McKay. Rautatie tuli 1881, ja sen '
+      + 'jälkeen kasvu oli nopeaa: vuoteen 1911 mennessä Winnipeg oli '
+      + 'Kanadan kolmanneksi suurin kaupunki.',
+    teksti: 'Winnipeg on Manitoban pääkaupunki Kanadan preerian '
+      + 'itäreunalla, Punaisen- ja Assiniboinejoen yhtymäkohdassa. '
+      + 'Kaupungin läpi virtaa neljä jokea, ja sitä ympäröi lännessä '
+      + 'korkearuohopreeria ja koillisessa haapaparkkimaa. Kaupungissa '
+      + 'kasvaa Pohjois-Amerikan suurin jäljellä oleva kypsä '
+      + 'kaupunkijalavametsä.'
+      + '\n\n'
+      + 'Turkiskaupan asemasta kasvoi rautateiden solmukohta, jota '
+      + 'sanottiin lännen portiksi ja pohjoisen Chicagoksi. Panaman '
+      + 'kanavan avaaminen 1914 vei osan tavaravirrasta muualle, ja '
+      + 'Vancouver ohitti Winnipegin ensimmäisen maailmansodan '
+      + 'loppuun mennessä. Toukokuussa 1919 yli kolmekymmentätuhatta '
+      + 'työntekijää jätti työnsä yleislakossa, joka päättyi '
+      + 'kesäkuussa. Manitoban parlamenttitalo Kultapoikineen '
+      + 'valmistui 1920.'
+      + '\n\n'
+      + 'Nykyään talous nojaa terveydenhuoltoon, kauppaan, '
+      + 'teollisuuteen ja julkishallintoon, ja kaupungissa lyödään '
+      + 'kaikki Kanadan kiertorahat. Ilmasto on äärimmäisen '
+      + 'vuodenaikainen: tammikuun keskilämpötila on noin kuusitoista '
+      + 'astetta pakkasella ja heinäkuun 19,7 astetta lämmintä, mutta '
+      + 'auringonpaistetunneissa Winnipeg on Kanadan toinen. Yli sataa '
+      + 'kieltä puhutaan, ja kaupungissa on maan suurin métis-väestö.',
+  },
+  /*
+   * ST. JOHN'S (7.9.2026). Avain on pelin wiki-nimi
+   * (js/packs/northamerica.js: 'St. John’s (Kanada)'), sama tapa kuin
+   * Halifaxilla. Väitteet ovat samasta erästä kuin lehden tekstit
+   * (kulttuuri-kategoriat.js, avain stjohns) ja luettu
+   * en-Wikipedian raakateksteistä 7.9.2026 ("St. John's, Newfoundland
+   * and Labrador", "Newfoundland Colony"). Kruununsiirtomaan
+   * vuosilukua ei käytetä, koska lähde antaa siitä kaksi eri vuotta
+   * (tarkistus-stjohns.md, kohta A).
+   */
+  'St. John’s (Kanada)': {
+    intro: 'St. John’s on Newfoundlandin ja Labradorin pääkaupunki ja '
+      + 'maakunnan suurin kaupunki, ja se on **Pohjois-Amerikan '
+      + 'itäisin kaupunki** Grönlantia lukuun ottamatta. Se on '
+      + 'Avalonin niemimaan itäkärjessä ja kattaa 446 neliökilometriä, '
+      + 'josta suurin osa on rakentamatonta metsää. Keskusta nousee '
+      + 'rinteeseen kapean sataman ympäriltä.'
+      + '\n\n'
+      + 'Kalastajat pitivät täällä kausileirejä 1500-luvun alussa, ja '
+      + 'nimi São João on portugalilaisella kartalla jo 1519. Sir '
+      + 'Humphrey Gilbert julisti paikan 5. elokuuta 1583 Englannin '
+      + 'ensimmäiseksi merentakaiseksi siirtomaaksi, mutta pysyvää '
+      + 'asutusta ei ollut: Englannin hallitus kielsi kalastajilta '
+      + 'pysyvät siirtokunnat, ja kaupunki syntyi vasta vuoden 1630 '
+      + 'jälkeen. Seitsenvuotisen sodan viimeinen taistelu '
+      + 'Pohjois-Amerikassa käytiin täällä 1762.'
+      + '\n\n'
+      + '**Isoisän matkavuonna 1873 St. John’s ei ollut Kanadaa.** '
+      + 'Newfoundland oli itsehallinnollinen brittiläinen siirtomaa, '
+      + 'joka oli hylännyt liiton Kanadan kanssa vuosina 1864–1869 ja '
+      + 'liittyi siihen vasta 1949. Atlantin lennätinkaapeli oli '
+      + 'noussut merestä Heart’s Contentissa seitsemän vuotta '
+      + 'aiemmin.',
+    teksti: 'St. John’s on Newfoundlandin saaren itäkärjessä, '
+      + 'Atlantin rannalla. Sen edustalla ovat Grand Banks, '
+      + 'vedenalaiset tasangot, joilla kylmä Labradorin virta kohtaa '
+      + 'lämpimän Golfvirran; sekoittuminen nostaa ravinteet pintaan '
+      + 'ja synnyttää myös kaupungin kuuluisan sumun.'
+      + '\n\n'
+      + 'Kaupunki eli viisisataa vuotta turskasta. Vuonna 1992 '
+      + 'pohjoisen turskan kanta oli pudonnut prosenttiin '
+      + 'historiallisesta tasosta ja kalastus kiellettiin; Grand Banks '
+      + 'pysyi suljettuna vuoteen 2024. Kaupunki tuhoutui myös '
+      + 'suurpaloissa 1816, 1817, 1819, 1846 ja 1892, ja keskustan '
+      + 'puutalot ovat viimeisen palon jälkeisiä. Marconi vastaanotti '
+      + 'Signal Hillillä ensimmäisen langattoman viestin Atlantin yli '
+      + '12. joulukuuta 1901.'
+      + '\n\n'
+      + 'Turskan jälkeen meri elättää kaupunkia toisin: Hibernian, '
+      + 'Terra Novan ja White Rosen öljykentät ovat rannikon '
+      + 'edustalla, ja St. John’sin alue vastaa noin puolta koko '
+      + 'maakunnan taloudesta. Metropolialueella asui tammikuussa 2025 '
+      + 'noin 239 300 ihmistä. Kaupunki on Kanadan suurista '
+      + 'kaupungeista sumuisin ja tuulisin, ja maakunnalla on oma '
+      + 'aikavyöhykkeensä, joka on puoli tuntia muuta Atlantin '
+      + 'Kanadaa edellä.',
+  },
+  // IQALUIT (7.9.2026): faktat ovat samasta erästä kuin lehden tekstit
+  // (js/packs/kulttuuri-kategoriat.js, avain iqaluit) ja tarkistettu
+  // en-Wikipedian raakateksteistä 7.9.2026 ("Iqaluit", "Frobisher Bay",
+  // "Nunavut"). Sisältölinjaus on spec-mantereet.md:n P-Amerikka-kohta:
+  // arktinen arki ja inuiittikulttuuri asukkaiden silmin,
+  // ilmastonmuutos neutraalina luonnontieteellisenä tosiasiana.
+  Iqaluit: {
+    intro: 'Iqaluit on Nunavutin pääkaupunki Baffininsaaren '
+      + 'kaakkoiskulmassa, Frobisherinlahden pohjukassa. Se on Kanadan '
+      + 'pohjoisin kaupunki ja väkiluvultaan sen pienin pääkaupunki: '
+      + 'vuoden 2021 laskennassa asukkaita oli 7 429. Nimi on '
+      + 'inuktitutia ja tarkoittaa **paikkaa, jossa on paljon kalaa** — '
+      + 'inuiitit ja heidän edeltäjänsä ovat kalastaneet täällä '
+      + 'tuhansia vuosia.'
+      + '\n\n'
+      + 'Kaupunkia ei silti ollut ennen vuotta 1942, jolloin '
+      + 'Yhdysvallat rakensi rannalle lentotukikohdan ja paikka sai '
+      + 'nimen Frobisher Bay. Tutkalinjan rakentaminen 1950-luvulla '
+      + 'toi lisää väkeä, ja hallinto seurasi perässä. **1. tammikuuta '
+      + '1987 nimi vaihdettiin takaisin Iqaluitiksi**, ja 1999 '
+      + 'kaupungista tuli vastaperustetun Nunavutin pääkaupunki.'
+      + '\n\n'
+      + 'Iqaluit on ainoa Kanadan pääkaupunki, jota ei yhdistä muihin '
+      + 'asutuksiin maantie: sinne pääsee lentäen ja jääolojen '
+      + 'salliessa veneellä. Enemmistökieltä ei ole, ja kylteissä lukee '
+      + 'sama asia englanniksi ja inuktitutin tavumerkein. Kaupungin '
+      + 'edessä vuorovesi liikuttaa merta seitsemästä yhteentoista '
+      + 'metriä vuorokaudessa.',
+    teksti: 'Iqaluit on Everett Mountainsin rinteillä Koojesse Inletin '
+      + 'pohjukassa, 63 astetta päiväntasaajasta pohjoiseen mutta '
+      + 'selvästi napapiirin eteläpuolella. Kylmä merivirta pitää kesät '
+      + 'viileinä, joten puuraja kulkee täällä poikkeuksellisen '
+      + 'etelässä.'
+      + '\n\n'
+      + 'Eurooppalaisille lahti oli pitkään väärin ymmärretty. Martin '
+      + 'Frobisher piti sitä 1576 Luoteisväylän salmena ja vei kotiin '
+      + 'satoja tonneja kiveä, jonka luultiin olevan kultamalmia; se '
+      + 'osoittautui arvottomaksi. Vasta 1861 amerikkalainen Charles '
+      + 'Francis Hall totesi inuiittien avustuksella, että kyseessä on '
+      + 'umpilahti.'
+      + '\n\n'
+      + 'Nykyään kaupunki on territorion hallinnon, koulutuksen ja '
+      + 'lentoliikenteen keskus. Parlamenttitalossa hallitaan ilman '
+      + 'puolueita konsensuksella, iglun muotoinen katedraali on '
+      + 'kaupungin maamerkki, ja Sylvia Grinnellin puisto alkaa '
+      + 'kilometrin päässä keskustasta. Ilmasto lämpenee mitattavasti: '
+      + 'vuoden keskilämpötila oli 1979 −9,0 astetta ja 2023 −6,8.',
+  },
+  /*
+   * SANTA FE (7.9.2026): faktat ovat samasta erästä kuin lehden
+   * tekstit (js/packs/kulttuuri-kategoriat.js, avain santafe) ja
+   * tarkistettu en-Wikipedian raakateksteistä 7.9.2026 ("Santa Fe,
+   * New Mexico", "Pueblo Revolt", "Santa Fe Trail").
+   *
+   * AVAIN ON WIKI-NIMI, ei näyttönimi: js/packs/northamerica.js antaa
+   * kaupungille wiki-nimeksi 'Santa Fe (New Mexico)' ja näyttönimeksi
+   * 'Santa Fe', ja ui.js hakee artikkelin avaimella
+   * `city.wiki ?? city.name`.
+   */
+  'Santa Fe (New Mexico)': {
+    intro: 'Santa Fe on New Mexicon pääkaupunki Sangre de Cristo '
+      + '-vuorten juurella, runsaan kahden kilometrin korkeudessa. Se '
+      + 'on **Yhdysvaltain vanhin osavaltion pääkaupunki ja sen '
+      + 'korkeimmalla sijaitseva**. Ennen espanjalaisia paikalla oli '
+      + 'tewojen kylä, jonka nimi Kháˀ Pʼoegeh tarkoittaa valkoisen '
+      + 'simpukan vesipaikkaa.'
+      + '\n\n'
+      + 'Espanjalainen kuvernööri Pedro de Peralta perusti kaupungin '
+      + '1607 ja teki siitä provinssin pääkaupungin 1610. Vuonna 1680 '
+      + 'pueblo-kansat ajoivat espanjalaiset pois ja hallitsivat '
+      + 'New Mexicoa kuvernöörien palatsista kahdentoista vuoden ajan, '
+      + 'kunnes Diego de Vargas valtasi alueen takaisin 1692. Meksikon '
+      + 'itsenäistyttyä kaupunki oli sen pohjoisen provinssin '
+      + 'pääkaupunki, ja 1846 Yhdysvallat otti sen haltuunsa.'
+      + '\n\n'
+      + 'Vuodesta 1912 kaupunki on rakentanut itsensä yhtenäisen '
+      + 'rakennustyylin mukaan, ja **keskustassa vaaditaan yhä '
+      + 'pueblo- tai territoriaalityyliä**. Taide elättää: yli 250 '
+      + 'galleriaa, iso museokeskittymä ja joka kymmenes työpaikka '
+      + 'taiteen ja kulttuurin aloilla.',
+    teksti: 'Santa Fe on Santa Fe -joen laaksossa Rio Granden '
+      + 'itäpuolella, ja kaupungin takana nousevat Sangre de Cristo '
+      + '-vuoret. Ilmasto on kylmä puolikuiva: kuivaa, aurinkoista ja '
+      + 'niin korkealla, että vuorokauden lämpötilaero ylittää '
+      + 'kaksikymmentäviisi Fahrenheit-astetta joka kuukausi.'
+      + '\n\n'
+      + '1820-luvulta alkaen Santa Fe Trail toi vaunuilla tavaraa '
+      + 'Missourista, ja kaupunki oli Mississippin länsipuolen '
+      + 'keskeinen kauppasolmu. Rautatie tuli vasta 1880 — ja meni '
+      + 'ohi: pääratalinja vedettiin Lamyn kylän kautta, ja Santa Fe '
+      + 'jäi haararadan päähän ja taantui vuosikymmeniksi.'
+      + '\n\n'
+      + 'Taantuma käännettiin matkailulla ja arkkitehtuurilla. '
+      + 'Kaupunki loi Pueblo Revival -tyylin, teki siitä pakollisen ja '
+      + 'sai yhtenäisen katukuvan, jossa matalat rapatut talot ja '
+      + 'näkyvät kattopalkit toistuvat korttelista toiseen. Nykyään '
+      + 'Santa Fe on Yhdysvaltain lounaisosan kulttuuripääkaupunki ja '
+      + 'vuodesta 2005 Unescon luovien kaupunkien verkoston jäsen '
+      + 'käsityön ja kansantaiteen alalla.',
+  },
 };

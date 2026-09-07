@@ -335,7 +335,9 @@ export const NORTHAMERICA_SAAPUMISET = {
       + 'kaari — Cerro de la Silla on kaupungin tunnus, ja se näkyy '
       + 'joka kadulta. Vanha valimo on nyt tiedepuisto, jossa masuunin '
       + 'sisään voi kävellä: teollisuuskaupunki teki historiastaan '
-      + 'leikkipaikan.',
+      + 'leikkipaikan. Isoisän matkavuonna tehtaita ei vielä ollut '
+      + 'lainkaan: kaupunki oli 277-vuotias rajakauppapaikka, jonka '
+      + 'uusin ylpeys oli kolme vuotta aiemmin vihitty Colegio Civil.',
     nosto: 'Isoisä kirjoitti: "Vuoret sulkevat kaupungin syliinsä — '
       + 'pohjoisen kauppiaat kutsuvat sitä Meksikon ovenkahvaksi." '
       + 'Kahvasta tuli kone: täällä valetaan, hitsataan ja rakennetaan '
@@ -357,7 +359,10 @@ export const NORTHAMERICA_SAAPUMISET = {
       + 'torilla, ja valkoiset puvut hohtavat helteessä. Kaupungista '
       + 'ajetaan tunnissa Chichén Itzáan, jonka pyramidin portaita '
       + 'laskeutuu päiväntasauksena käärmeen varjo — mayat rakensivat '
-      + 'kalenterinsa kiveen.',
+      + 'kalenterinsa kiveen. Isoisän matkavuonna niemimaa oli kahtia '
+      + 'jaettu: lännessä Mérida, idässä itsenäinen mayavaltio Chan '
+      + 'Santa Cruz, ja kaupungin uusi satama Progreso oli vasta '
+      + 'perustettu.',
     nosto: 'Isoisä kirjoitti: "Sisal-agaave tekee tästä kaupungista '
       + 'rikkaan — köyttä lähtee täältä koko maailman laivoihin." '
       + 'Vihreä kulta rakensi palatsikadun. Mayat rakensivat kaiken '

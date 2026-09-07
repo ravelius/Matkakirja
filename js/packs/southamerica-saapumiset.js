@@ -356,8 +356,8 @@ export const SOUTHAMERICA_SAAPUMISET = {
       + 'linnut ovat edelleen parhaiten pukeutuneita.',
   },
   puntaarenas: {
-    kuvaus: 'Punta Arenasissa tuuli on niin kova, että keskustan kadulle on '
-      + 'viritetty köysiä, joista pitää kiinni pahimpina päivinä. '
+    kuvaus: 'Punta Arenasissa tuuli puhaltaa niin kovaa, että kadunkulmassa '
+      + 'siihen nojaa kuin seinään ja hattu kulkee omia teitään. '
       + 'Kaupunki vaurastui aikanaan Magalhãesinsalmen laivoista ja '
       + 'lampaista — aukiolla intiaanipatsaan varvasta kosketetaan, '
       + 'jotta tänne vielä palataan.',

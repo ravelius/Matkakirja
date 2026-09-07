@@ -55962,4 +55962,4848 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * PUNTA ARENASIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026,
+   * parvierä). Kartta on js/packs/maakartat.js:
+   * KAUPUNKIKARTAT.puntaarenas. Väitteet on luettu en-Wikipedian
+   * raakatekstistä 7.9.2026 (artikkelit "Punta Arenas", "Cemetery of
+   * Punta Arenas", "Sacred Heart Cathedral, Punta Arenas", "Sara
+   * Braun", "County of Peebles (ship)", "Strait of Magellan") ja
+   * es-Wikipediasta niiden kohteiden osalta, joilla ei ole
+   * en-artikkelia ("Monumento al Ovejero", "Museo Regional de
+   * Magallanes") — sama ratkaisu kuin Guatemalan kohdekartassa.
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat nimi Sandy Point, kuunari Ancud, rangaistussiirtola ja
+   * vuoden 1873 kirje merenkulkumaille sekä lammastalous ja
+   * selkʼnamit; teemasivu kertoo salmesta, kartoituksesta,
+   * ilmastosta ja otsonista sekä Yelchon pelastusretkestä.
+   * Lähimpänä on lampuripatsas, jonka juttu kertoo veistoksesta ja
+   * sen kahdesta versiosta eikä lammasyhtiöstä.
+   *
+   * HIILENOTTOPAIKKA JA PANAMAN KANAVA ON TARKOITUKSELLA JÄTETTY
+   * LEHDESTÄ POIS ja annettu rantabulevardin jutulle, jotta
+   * kohdekartalla on oma aiheensa eikä lehden toisinto.
+   *
+   * CERRO DE LA CRUZILLA EI OLE OMAA WIKIPEDIA-ARTIKKELIA
+   * kummallakaan kielellä. Sen juttu kertoo vain sitä, mitä
+   * kukkulalta näkyy, ja kaikki asiafaktat ovat "Punta Arenas"
+   * -artikkelin Geography- ja Etymology-osioista. Kukkula itse on
+   * pelissä jo ennestään: matkakirjan valokuvataulun nykykuva
+   * (southamerica-valokuvat.js) on otettu sieltä.
+   *
+   * MAGALHÃESIN PATSAS EI OLE OMA KOHTEENSA: patsaan varpaan
+   * koskettaminen on saapumistekstin aihe, eikä kohdekartta toista
+   * sitä. Aukio näkyy kartalla katedraalin vieressä.
+   *
+   * MUSEO REGIONAL DE MAGALLANESIN PERUSTAMISVUOSI: es-artikkeli
+   * sanoo museon syntyneen 1982, en-artikkeli sen toimineen talossa
+   * helmikuusta 1983. Molemmat kerrotaan.
+   */
+  puntaarenas: {
+    'Lampuripatsas': {
+      aika: '1944 ja 1962',
+      teksti: 'Avenida Bulnesin keskikaistalla seisoo '
+          + 'kaksitoistaosainen veistosryhmä luonnollisessa koossa. '
+          + 'Siinä lampuri kestää pampan tuulta hevosensa ohjakset '
+          + 'toisessa kädessä ja ruoska toisessa, jolla hän ohjaa '
+          + 'lampaitaan. Ryhmä on kaupungin tunnetuin ulkoveistos ja '
+          + 'seisoo juuri sillä kadulla, jonka varrella ovat myös '
+          + 'salesiaanien museo ja hautausmaa.'
+          + '\n\n'
+          + 'Aloite tuli kenraali Ramón Cañas Montalvalta, ja teoksen '
+          + 'lahjoitti Francisco Campos Torreblanca. Ensimmäinen '
+          + 'versio oli graniittia, ja se paljastettiin 1944 '
+          + 'tasavallan presidentin Juan Antonio Ríosin läsnä '
+          + 'ollessa.'
+          + '\n\n'
+          + 'Nykyinen pronssiveistos paljastettiin 1. huhtikuuta '
+          + '1962, jotta teos kestäisi ikuisesti. Graniittinen '
+          + 'ensimmäinen versio ei joutunut varastoon: Punta Arenas '
+          + 'lahjoitti sen naapurialueen pääkaupungille Coyhaiquelle, '
+          + 'jossa se seisoo nykyään Avenida Baquedanon '
+          + 'keskikaistalla joen rinnalla kaupungin pohjoislaidassa.',
+      kuvat: [
+        {
+          tiedosto: 'Monumento al Ovejero Punta Arenas.jpg',
+          selite: 'Pronssinen lammaslauma kulkee kadun keskikaistaa '
+            + 'pitkin, ja lampuri johtaa sitä hevosineen ja koirineen.',
+          lahde: 'Micah MacAllen from Travel Bums, Latin America, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Sara Braunin hautausmaa': {
+      aika: '1894',
+      teksti: 'Avenida Bulnesin varrella on neljän hehtaarin '
+          + 'hautausmaa, jolla on kolme porttia. Se vihittiin '
+          + '9. huhtikuuta 1894 kuvernööri Manuel Señoretin aikana ja '
+          + 'korvasi vanhan hautausmaan, joka oli nykyisen Lautaron '
+          + 'aukion paikalla. Maan lahjoitti Sara Braun, ja insinööri '
+          + 'Fortunato Circutti suunnitteli portit ja muurit 1919. '
+          + 'Alue täyttyi jo kauan sitten, ja sen tilalle on tullut '
+          + 'uudempi hautausmaa pohjoisempana; vanha on säilyttänyt '
+          + 'asemansa monumenttihautausmaana. CNN on listannut sen '
+          + 'maailman kauneimpien hautausmaiden joukkoon, ja se on '
+          + 'ollut Chilen kansallismonumentti vuodesta 2012.'
+          + '\n\n'
+          + 'Käytävien varrella ovat kaupungin suurten sukujen '
+          + 'kappelit: Menéndez-Behety, Braun Hamburger, Blanchard, '
+          + 'Greenshields, Kusanovic ja Menéndez-Montes. Täällä lepää '
+          + 'myös brittiläinen merimies Charles Amherst Milward, joka '
+          + 'innoitti Bruce Chatwinin matkakirjan In Patagonia.'
+          + '\n\n'
+          + 'Hautausmaalla kerrotaan kahta tarinaa. Ensimmäinen on '
+          + 'se, että Sara Braun pyysi lahjoituksensa vastineeksi '
+          + 'yhtä asiaa: pääportti suljettaisiin hänen kuolemansa '
+          + 'jälkeen lopullisesti. Portti on yhä kiinni. Toinen '
+          + 'koskee tuntemattoman intiaanin hautaa, jolle 1950-luvulta '
+          + 'alkaen alettiin jättää kynttilöitä ja kolikoita; '
+          + 'Magdalena Vrsalovic lahjoitti kertyneet rahat kaupungin '
+          + 'Punaiselle Ristille, ja haudalle pystytettiin Edmundo '
+          + 'Casanovan veistämä muistomerkki.',
+      kuvat: [
+        {
+          tiedosto: 'Cementerio de Punta Arenas.jpg',
+          selite: 'Leikatut sypressit reunustavat käytävää, ja niiden '
+            + 'välissä seisovat sukujen kappelit enkelipatsaineen.',
+          lahde: 'Daniel Diaz Nauto, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Salesiaanien museo': {
+      aika: '1893',
+      teksti: 'Avenida Bulnes 374, aivan María Auxiliadoran kirkon '
+          + 'vieressä, on alueen tärkein museo. Salesiaanien '
+          + 'sääntökunta perusti sen 1893, ja sitä ylläpidetään yhä '
+          + 'yhteisön vapaaehtoisin lahjoituksin. Museo on nimetty '
+          + 'Maggiorino Borgatellon mukaan.'
+          + '\n\n'
+          + 'Kokoelma on kolmiosainen. Ensimmäinen osa on alueen '
+          + 'luonto: täydellinen näytesarja Magallanesin lajeista. '
+          + 'Toinen on selkʼnam-kulttuuri, ja kolmas Etelämantereelta '
+          + 'tuodut näytteet. Museo on siis yhdellä kertaa '
+          + 'luonnontieteellinen, kansatieteellinen ja napa-alueen '
+          + 'kokoelma.'
+          + '\n\n'
+          + 'Salesiaanien osuus alueen historiassa on kaksijakoinen, '
+          + 'ja se kannattaa tietää ennen kuin astuu sisään. '
+          + 'Sääntökunta perusti lähetysasemia, joihin selkʼnameja ja '
+          + 'muita kansoja siirrettiin pois lammastilojen tieltä, ja '
+          + 'siirto katkaisi heidän elämäntapansa. Samat '
+          + 'lähetyssaarnaajat tallensivat kuitenkin esineitä, '
+          + 'valokuvia ja kielitietoa, joita ei muualla ole '
+          + 'säilynyt — juuri se aineisto on nyt tässä talossa.',
+      kuvat: [
+        {
+          tiedosto: 'Museo territorial salesiano - Punta Arenas.jpg',
+          selite: 'Museon salissa on lasivitriinejä seinän täydeltä, '
+            + 'katosta riippuu kanootti ja keskellä seisoo rintakuva.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Cerro de la Cruz': {
+      aika: 'näköalapaikka',
+      teksti: 'Keskustan yläpuolella, muutaman korttelin päässä '
+          + 'aukiolta, katu nousee jyrkästi ja päättyy kaiteeseen. '
+          + 'Sieltä koko kaupunki avautuu yhtenä kuvana, ja siitä '
+          + 'näkee heti, miksi Punta Arenas on sen muotoinen kuin on: '
+          + 'kaupunki on puristuksissa kukkuloiden ja veden väliin '
+          + 'kapealle rantakaistaleelle Brunswickin niemimaan '
+          + 'koillisrannalla.'
+          + '\n\n'
+          + 'Ruutukaava laskeutuu rannalle suorina riveinä, ja sen '
+          + 'takana on Magalhãesinsalmi. Salmen toisella puolella '
+          + 'näkyy Tulimaan pääsaari. Kattojen väri kertoo oman '
+          + 'tarinansa: kaupunkia sanottiin pitkään punaisten '
+          + 'kattojen kaupungiksi, koska peltikatot maalattiin '
+          + 'punaisiksi, ja vasta noin 1970 alkaen muita värejä alkoi '
+          + 'olla saatavilla.'
+          + '\n\n'
+          + 'Kukkulalta katsoen kaupungin rajat ovat selvät. '
+          + 'Itäranta on ainoa asuttu osa niemimaata — muualla '
+          + 'Brunswick on lähes autio, ja kunnan alueeseen kuuluu '
+          + 'sen lisäksi joukko lähes asumattomia saaria Tulimaan '
+          + 'länsipuolella. Yhdellä niistä, Dawsonin saarella, oli '
+          + 'vuoden 2002 laskennassa noin 301 asukasta; Clarencen '
+          + 'saarella viisi.',
+      kuvat: [
+        {
+          tiedosto: 'Mirador del Cerro de la Cruz, Punta Arenas, Chile 2014-04-18 21-10.jpg',
+          selite: 'Näköalapaikan mukulakivitasanteelta katsottuna katot '
+            + 'laskeutuvat riveinä rannalle ja salmelle.',
+          lahde: 'User:Maxvillarroeldouglas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sagrado Corazónin katedraali': {
+      aika: '1892–1901',
+      teksti: 'Aukion laidalla oleva katedraali on salesiaanien '
+          + 'perustama, ja sen renessanssitorni erottuu keskustan '
+          + 'kattojen yli. Rakennustyö alkoi 28. joulukuuta 1892 '
+          + 'salesiaani-isä Juan Bernabén piirustusten mukaan, ja '
+          + 'kirkko valmistui 1. kesäkuuta 1901. Se oli aikanaan '
+          + 'alueella virstanpylväs jo materiaalinsa takia: tästä '
+          + 'talosta tuli tiilirakentamisen esimerkki.'
+          + '\n\n'
+          + 'Sisätila on basilikamainen ja kolmilaivainen. Laivat '
+          + 'erottaa toisistaan korinttilainen pylväsrivi, holvit '
+          + 'ovat romaaniset, ja mitat ovat 46 metriä pitkä, 18 '
+          + 'leveä ja 30,60 korkea. Kellotorni nostettiin 1898, ja '
+          + 'se on kolmekymmentä metriä ristiin asti.'
+          + '\n\n'
+          + 'Kirkko on omistettu Jeesuksen pyhälle sydämelle, ja '
+          + 'se vihittiin 4. joulukuuta 1977. Nykyään se on Punta '
+          + 'Arenasin hiippakunnan piispanistuin. Aukio kirkon '
+          + 'edessä on kaupungin pääaukio, ja sen keskellä seisoo '
+          + 'vuoden 1920 Magalhães-muistomerkki.',
+      kuvat: [
+        {
+          tiedosto: 'Plaza Muñoz Gamero y monumento a Magallanes - Punta Arenas.jpg',
+          selite: 'Vanhassa painetussa kuvassa aukio on lumen peitossa, '
+            + 'keskellä Magalhãesin muistomerkki ja oikealla '
+            + 'katedraalin kellotorni.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Braun-Menéndezin palatsi': {
+      aika: '1903',
+      teksti: 'Hernando de Magallanes -kadun varrella on talo, joka '
+          + 'rakennettiin 1903 Mauricio Braunin ja Josefina '
+          + 'Menéndezin asunnoksi. Se on kansallismonumentti vuodesta '
+          + '1974, ja siinä toimii Magallanesin aluemuseo, jota '
+          + 'hoitaa valtion kulttuuriperintöpalvelu.'
+          + '\n\n'
+          + 'Museo syntyi 1982 ja on toiminut talossa helmikuusta '
+          + '1983. Kokoelmaan kuuluu lähes 1 800 esinettä, ja se '
+          + 'kertoo Magallanesin ja etenkin Punta Arenasin historian '
+          + '1500-luvun löytöretkistä 1900-luvun alkuun. Enrique '
+          + 'Campos Menéndez neuvotteli suvun palatsin lahjoituksesta '
+          + 'valtiolle sillä ehdolla, että talo kunnostetaan '
+          + 'kokonaan ja muutetaan museoksi. Näyttely jakautuu '
+          + 'kolmeen osaan: Aikakausi esittelee eurooppalaista '
+          + 'huonekalustoa uusklassismista jugendiin, Historia '
+          + 'alueen ja kaupungin esineitä, ja kellarikerros näyttää '
+          + 'talon palvelusväen keittiön, kylpyhuoneet ja huoneet.'
+          + '\n\n'
+          + 'Museota on myös arvosteltu, ja sekin kannattaa tietää. '
+          + 'Talon esittelyssä ei viitata alkuperäiskansojen '
+          + 'kansanmurhaan, johon rakennuttajasuvun jäsenet '
+          + 'osallistuivat. Sama tarina kerrotaan tässä lehdessä '
+          + 'kansisivun neljännessä jutussa.',
+      kuvat: [
+        {
+          tiedosto: 'Punta Arenas - Palacio Braun Menendez.jpg',
+          selite: 'Palatsin liuskekivikatto ja pyöreä kulmatorni näkyvät '
+            + 'katua reunustavan takorauta-aidan takaa.',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Merisotamuseo': {
+      aika: 'Pedro Montt 981',
+      teksti: 'Sotilasmuseon vieressä, Pedro Montt -kadun numerossa '
+          + '981, on Punta Arenasin meri- ja laivastomuseo. Sen '
+          + 'kokoelma kertoo Chilen asevoimien osuudesta Magallanesin '
+          + 'ja Chilen Antarktiksen alueen asuttamisessa.'
+          + '\n\n'
+          + 'Aihe on kaupungille perustavaa laatua. Chile ei '
+          + 'perustanut Punta Arenasia kaupankäynnin takia vaan '
+          + 'osoittaakseen, että salmi kuuluu sille: kuunari Ancud '
+          + 'purjehti 1843 laivaston upseerin komennossa, ja alueen '
+          + 'ensimmäiset vuosikymmenet olivat sotilashallintoa. '
+          + 'Kokoelmassa on siis yhtä paljon kolonisaatiota kuin '
+          + 'merenkulkua.'
+          + '\n\n'
+          + 'Museon vieressä on sotilasmuseo, ja kadun toisessa '
+          + 'päässä rantabulevardi, jolta näkyy salmi. Kaupungin '
+          + 'katukuvassa laivasto on läsnä muutenkin: rannalla on '
+          + 'muistomerkki luutnantti Luis Pardolle, jonka '
+          + 'pelastusretkestä kerrotaan tämän lehden teemasivulla.',
+      lahde: 'Wikipedia',
+    },
+    'Salmen rantabulevardi': {
+      aika: '1800-luku – nykyaika',
+      teksti: 'Rantakatu kulkee salmen laitaa, ja siitä avautuu '
+          + 'näkymä vedelle ja Tulimaahan. Satama on avoin myrskyille, '
+          + 'mutta ennen Panaman kanavan valmistumista se oli yksi '
+          + 'Chilen tärkeimmistä: täällä Atlantin ja Tyynenmeren '
+          + 'väliä kulkevat höyrylaivat ottivat hiiltä. Kanava vei '
+          + 'liikenteen, ja nykyään satamaa käyttävät enimmäkseen '
+          + 'risteilyt ja tutkimusretkikunnat. Osa Etelämantereen '
+          + 'risteilyistä lähtee täältä, ja satama on tukikohta myös '
+          + 'alueen kanaviin ja vuonoihin suuntautuville matkoille.'
+          + '\n\n'
+          + 'Rannassa on kaksi laivaa, jotka eivät enää purjehdi. '
+          + 'County of Peebles ja Cavenga on upotettu paikoilleen '
+          + 'aallonmurtajiksi suojaamaan satama-allasta. County of '
+          + 'Peebles on merenkulun historiassa oma lukunsa: se oli '
+          + 'ensimmäinen nelimastoinen rautarunkoinen täystakiloitu '
+          + 'laiva ja valmistui Skotlannissa 1875.'
+          + '\n\n'
+          + 'Rannalta lähtee myös aikataulun mukainen lautta '
+          + 'Tulimaan pääsaarelle ja harvemmin Puerto Williamsiin. '
+          + 'Tuuli käy tällä rannalla lähes yhtenään, ja se on '
+          + 'voimakkaimmillaan kesällä eikä talvella.',
+      kuvat: [
+        {
+          tiedosto: 'Vista Sur.jpg',
+          selite: 'Iltavalossa aallonmurtajaksi upotetun purjelaivan mastot '
+            + 'törröttävät vedestä, ja takana kaartaa Tulimaan rannikko.',
+          lahde: 'Gonzalo Baeza H, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * SANTA CRUZIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026,
+   * parvierä). Kartta on js/packs/maakartat.js:
+   * KAUPUNKIKARTAT.santacruz. Kahdella kohteella on en-Wikipedian
+   * artikkeli ("Cathedral Basilica of St. Lawrence, Santa Cruz de la
+   * Sierra", "General Cemetery of Santa Cruz"); kuudella ei ole
+   * lainkaan, ja niiden lähde on es-Wikipedia (7.9.2026: "Avión
+   * Pirata", "Universidad Autónoma Gabriel René Moreno", "Parque El
+   * Arenal", "Plaza 24 de Septiembre", "Museo de Historia Natural
+   * Noel Kempff Mercado", "Estadio Ramón Aguilera Costas"). Sama
+   * ratkaisu kuin Guatemalan kohdekartassa, ja lähderivi on sama.
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat chanét ja Grigotá, kaupungin kolme muuttoa, vuoden
+   * 1810 kapina ja Warnesin vuodet sekä Andrés Ibáñez ja
+   * igualitaarit; teemasivu kertoo camba-sanasta, taquiraritanssista,
+   * chovenasta ja karnevaalista. Lähimpänä ovat aukio ja hautausmaa:
+   * aukion juttu kertoo aukion nimihistorian eikä vuoden 1810
+   * kapinaa, ja hautausmaan juttu mainitsee Ibáñezin haudan yhdellä
+   * lauseella ja viittaa lehteen — sama tapa kuin Lagosin
+   * Ajele-jutussa, joka viittaa Kristuksen katedraaliin.
+   *
+   * CHIQUITOSIN LÄHETYSASEMAT JA SAMAIPATA EIVÄT OLE KOHTEITA eivätkä
+   * juttujen aiheita: ne ovat karttanostoja (maastokohteet-bol.js).
+   *
+   * KATEDRAALIN VUOSILUVUT 1595 JA 1915 JÄTETÄÄN POIS, koska
+   * lähteet ovat niistä ristiriidassa (tarkistus-santacruz.md,
+   * kohta H). Käytetään vain vuosia 1770 ja 1838, jotka ovat
+   * molempien artikkelien leipätekstissä samoina.
+   */
+  santacruz: {
+    'Avión Pirata': {
+      aika: '1961',
+      teksti: 'Toisen kehän varrella pienessä puistossa seisoo '
+          + 'nelimoottorinen Lockheed Constellation, jota Boliviassa '
+          + 'sanotaan merirosvokoneeksi. Kone oli rekisteröity '
+          + 'tunnuksella N2520B ja oli aiemmin lentänyt Braniff '
+          + 'International Airwaysille ja Trans American Airlinesille. '
+          + 'Vuonna 1961 samanlaiset koneet tekivät yölentoja El '
+          + 'Trompillon kentälle, ja kaupunkilaiset uskoivat niiden '
+          + 'kuljettavan tavaraa ilman tullia.'
+          + '\n\n'
+          + 'Lauantaina 29. heinäkuuta 1961 kone laskeutui El '
+          + 'Trompillolle ja lähti seuraavana päivänä etelään ilman '
+          + 'lentosuunnitelmaa. Lennonjohto hälytti ilmavoimat, joka '
+          + 'lähetti perään P-51 Mustang -hävittäjiä. Miehistö ei '
+          + 'totellut käskyä lentää Cochabambaan, ja takaa-ajossa '
+          + 'yksi hävittäjälentäjä, kapteeni Alberto Peredo Céspedes, '
+          + 'menehtyi koneensa syöksyttyä maahan. Constellation teki '
+          + 'hätälaskun samalle kentälle, jolta se oli noussut.'
+          + '\n\n'
+          + 'Presidentti Víctor Paz Estenssoro määräsi tutkinnan, ja '
+          + 'tapaus tunnetaan Boliviassa nimellä caso Constelación. '
+          + 'Kone ei koskaan lähtenyt maasta: se vaihtoi omistajaa '
+          + 'useaan kertaan, päätyi lopulta puistoon ja on nykyään '
+          + 'sekä matkailukohde että paikallinen kaupunkilegenda.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Gabriel René Moreno -yliopisto': {
+      aika: '1880',
+      teksti: 'Bolivian idän suurin julkinen korkeakoulu perustettiin '
+          + '11. tammikuuta 1880 nimellä Santa Cruzin yliopisto. '
+          + 'Perustamisen taustalla oli valtion asetus 15. joulukuuta '
+          + '1879, jolla haluttiin vastata kaupungin nuorten '
+          + 'tarpeeseen: siihen asti tutkintoa oli pitänyt hakea '
+          + 'Sucresta tai La Pazista asti. Aloite tuli tohtori Felipe '
+          + 'Leonor Riberalta ja cruceño-piispalta, joka toimi myös '
+          + 'ensimmäisenä rehtorina.'
+          + '\n\n'
+          + 'Aluksi tarjolla oli kolme alaa: teologia, lääketiede ja '
+          + 'oikeustiede. Niin pysyi lähes viisikymmentä vuotta. '
+          + 'Yliopisto sai nimekseen Pyhän Tuomas Akvinolaisen '
+          + 'yliopisto 1898 ja nykyisen nimensä 1911 cruceño-'
+          + 'kirjailijan ja historioitsijan Gabriel René Morenon '
+          + 'mukaan. Keskusrakennus nousi 1940 Junínin ja Libertadin '
+          + 'kulmaan aivan pääaukion viereen.'
+          + '\n\n'
+          + 'Kasvuluvut kertovat kaupungin tarinan pienoiskoossa. '
+          + 'Vuonna 1940 opiskelijoita oli sata, 1970 jo 1 863, 1980 '
+          + 'kuutisen tuhatta ja 1990 kaksitoista tuhatta; 2020 luku '
+          + 'ylitti kahdeksankymmentä tuhatta. Yliopistolla on '
+          + 'kaupungissa kaksitoista tiedekuntaa ja departementin '
+          + 'maakunnissa kuusi lisää, ja sen yhteydessä toimii myös '
+          + 'kaupungin luonnonhistoriallinen museo.',
+      kuvat: [
+        {
+          tiedosto: 'Uagrm - Facultad de ciencias de la salud humana - panoramio.jpg',
+          selite: 'Terveystieteiden tiedekunnan matala rakennus, jonka '
+            + 'seinään on maalattu oppiaineiden nimet.',
+          lahde: 'vozachudo2004, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'El Arenalin puisto': {
+      aika: '1958',
+      teksti: 'Keskustan pohjoislaidalla on laguuni ja sen keskellä '
+          + 'saari. Paikka oli 1800-luvulta 1900-luvun puoliväliin '
+          + 'luonnollinen lampi, jonne vedet valuivat itsestään. '
+          + 'Rakentaminen virkistysalueeksi alkoi 1958, ja siitä tuli '
+          + 'kaupungin ensimmäinen kaupunkipuisto.'
+          + '\n\n'
+          + 'Saari sai 1970-luvulla museon ja ravintolan arkkitehti '
+          + 'Sergio Antelon johdolla. Puiston tunnetuin yksityiskohta '
+          + 'on Lorgio Vacan muraali. Puisto ei ole pelkkä '
+          + 'koristeaihe: se on yhä alueen hulevesiallas, eli sama '
+          + 'painanne, joka keräsi vedet luonnostaan, tekee edelleen '
+          + 'saman työn sadekaudella.'
+          + '\n\n'
+          + 'Vuonna 2018 puistolle esiteltiin kunnostushanke, jonka '
+          + 'tarkoitus on yhdistää se suoraan kaupungin keskustaan; '
+          + 'suunnitelmaa oli käyty läpi asukkaiden kanssa jo '
+          + 'lokakuussa 2016, ja työtä johtaa arkkitehti Víctor Hugo '
+          + 'Limpias.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Yleinen hautausmaa': {
+      aika: '1834',
+      teksti: 'Viedma-kadun ja Arenalesin, Paitítin ja Salvatierran '
+          + 'katujen rajaama kortteli on kaupungin vanhin virallinen '
+          + 'hautausmaa. Se perustettiin presidentti Andrés de Santa '
+          + 'Cruzin aikana vuoden 1826 asetuksella, joka määräsi '
+          + 'hautausmaat koko Bolivialle, ja otettiin käyttöön 1834.'
+          + '\n\n'
+          + 'Hautausmaa tunnetaan ensimmäisten cruceño-sukujen '
+          + 'haudoista sekä mausoleumeistaan, kävelyteistään ja '
+          + 'poluistaan. Se julistettiin historialliseksi '
+          + 'kulttuuriperinnöksi 2013. Kaupungissa on nykyään '
+          + 'kymmeniä hautausmaita, sekä säänneltyjä että itsestään '
+          + 'syntyneitä, ja kaupunki on joutunut pienentämään uusien '
+          + 'mausoleumien alaa tilanpuutteen takia.'
+          + '\n\n'
+          + 'Täällä lepää Andrés Ibáñez, 1844 syntynyt asianajaja ja '
+          + 'kansanedustaja, joka johti kaupungin igualitaarista '
+          + 'liikettä ja kuoli 1877. Hänen mukaansa on nimetty myös '
+          + 'se maakunta, jossa Santa Cruz sijaitsee. Hänen tarinansa '
+          + 'kerrotaan tämän lehden kansisivun neljännessä jutussa.',
+      kuvat: [
+        {
+          tiedosto: 'Cementerio de Santa Cruz de la Sierra.jpg',
+          selite: 'Hautausmaan katua reunustavat valkoiset kolumbaarioseinät, '
+            + 'ja keskellä kasvaa yksi leveälatvainen puu.',
+          lahde: 'Noé, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Plaza 24 de Septiembre': {
+      aika: '1500-luku – nykyaika',
+      teksti: 'Pääaukio oli kaupungin ensimmäisiä kaavoitettuja '
+          + 'elementtejä, ja sen ympärille rakennettiin kaikki '
+          + 'tärkeä. Aukiota rajaavat Libertadin, 24 de Septiembren, '
+          + 'Ayacuchon, Junínin, Sucren ja Bolívarin kadut, ja sen '
+          + 'laidalla ovat katedraali, kulttuuritalo, hallintotalo, '
+          + 'kaupungintalo, seurahuone ja Argentiinan konsulaatti '
+          + 'sekä kauppoja ja ravintoloita. Kasvillisuus on palmuja '
+          + 'ja muuta seudun omaa lajistoa.'
+          + '\n\n'
+          + 'Nimi on vaihtunut kolmesti, ja jokainen nimi kertoo '
+          + 'oman aikansa. Ensin se oli Plaza de Armas, aseaukio. '
+          + 'Vuoden 1898 liberaali-federalistisen vallankumouksen '
+          + 'yhteenottojen jälkeen se nimettiin uudelleen Plaza de la '
+          + 'Concordiaksi, sovun aukioksi. Nykyinen nimi muistuttaa '
+          + '24. syyskuuta 1810, jolloin kaupunkilaiset nousivat '
+          + 'siirtomaahallintoa vastaan.'
+          + '\n\n'
+          + 'Aukiolla seisoo Ignacio Warnesin patsas. Vuonna 2004 '
+          + 'Ayacuchon ja Junínin kadut muutettiin kävelykaduiksi, ja '
+          + 'aukiosta tuli entistä selvemmin kaupungin olohuone: '
+          + 'siellä järjestetään taide- ja yleisötapahtumia ympäri '
+          + 'vuoden.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'San Lorenzon katedraali': {
+      aika: '1770 ja 1838',
+      teksti: 'Aukion laidalla oleva katedraali on kaupungin '
+          + 'pääkirkko. Ensimmäisen kirkon rakensi mercedaarimunkki '
+          + 'Diego de Porres varakuningas Francisco Álvarez de '
+          + 'Toledon aikaan. Vuonna 1770 piispa Ramón de Herbosos '
+          + 'rakennutti kirkon uudestaan ja antoi työn '
+          + 'ylisakastinhoitaja Antonio Lombardolle.'
+          + '\n\n'
+          + 'Nykyinen rakennus on kolmas. Marsalkka Andrés de Santa '
+          + 'Cruzin aikaan 1838 vanha temppeli korvattiin uudella '
+          + 'eklektisellä kirkolla, jonka suunnitteli ranskalainen '
+          + 'arkkitehti Felipe Bertrés. Kirkon tunnetuin piirre ovat '
+          + 'sen puuholvit ja niitä peittävä maalauskoristelu.'
+          + '\n\n'
+          + 'Pääalttarilla on säilynyt osa alkuperäisestä '
+          + 'hopeaverhoilusta, joka tuotiin Moxosin San Pedron '
+          + 'lähetysasemalta; samasta paikasta on esillä myös neljä '
+          + 'veistosreliefiä. Kirkossa on lisäksi kirkkotaiteen '
+          + 'museo. Sen tornista otetut kuvat ovat se näkymä, josta '
+          + 'aukio yleensä valokuvataan.',
+      kuvat: [
+        {
+          tiedosto: 'Catedral Basílica Menor de San Lorenzo, Santa Cruz de la Sierra recorte.jpg',
+          selite: 'Katedraali ylhäältä: kaksi kellotornia punatiilisine '
+            + 'kupoleineen ja niiden takana koko keskustan kattomeri.',
+          lahde: 'Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Noel Kempff Mercadon museo': {
+      aika: '1986',
+      teksti: 'Avenida Iralan varrella on Bolivian idän tärkein '
+          + 'luonnonhistoriallinen kokoelma. Museo perustettiin '
+          + '23. lokakuuta 1986 Gabriel René Moreno -yliopiston '
+          + 'maataloustieteellisen tiedekunnan yhteyteen, kun joukko '
+          + 'opiskelijoita ja tutkijoita halusi virallistaa alueen '
+          + 'luonnon luetteloinnin ja suojelun. Nimi on samana vuonna '
+          + 'kuolleen cruceño-luonnontieteilijän Noel Kempff Mercadon '
+          + 'mukaan. Museo muutti kampukselta nykyiselle paikalleen '
+          + '1992.'
+          + '\n\n'
+          + 'Kokoelmien mittakaava yllättää. Kasvinäytteitä on '
+          + '50 000, hyönteisiä 135 000, nisäkkäitä 1 960, kaloja '
+          + '22 000, matelijoita 4 920, sammakkoeläimiä 2 685, '
+          + 'lintuja 3 000 ja fossiileja 5 000. Näyttelyssä on '
+          + 'esillä vain pieni osa; loput ovat tutkijoiden käytössä. '
+          + 'Fossiileista huomattavimpia ovat La Guardiasta löydetyt '
+          + 'jättiläislaiskiaisen jäänteet ja laaja '
+          + 'trilobiittikokoelma.'
+          + '\n\n'
+          + 'Näyttely alkaa hedelmistä, joilla on paikalliset nimet: '
+          + 'patujú, tutumillo, mata cangrejo, peine de mono. '
+          + 'Sen jälkeen tulevat lääke- ja myrkkykasvit, käsityöpuut '
+          + 'ja chiquitano-metsän siemenet, ja vitriineissä '
+          + 'jaguaarista sähköankeriaaseen. Museon yhteydessä toimii '
+          + 'myös Bolivian idän kasvitieteellinen kokoelma ja '
+          + 'satelliittikuva-arkisto.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Tahuichi Aguileran stadion': {
+      aika: '1940',
+      teksti: 'Ensimmäisen ja toisen kehän välissä, Ejército '
+          + 'Nacionalin, Ana Barban ja Héroes del Chacon katujen '
+          + 'rajaamalla alueella, on Bolivian toiseksi suurin '
+          + 'stadion. Se avattiin 1940 kahdenkymmenenviidentuhannen '
+          + 'katsojan paikalla, ja nykyinen kapasiteetti on 32 740. '
+          + 'Stadionia hoitaa Santa Cruzin departementin hallinto.'
+          + '\n\n'
+          + 'Kotijoukkueita on kaksi, Oriente Petrolero ja Blooming, '
+          + 'ja niiden keskinäinen ottelu — Clásico Cruceño — täyttää '
+          + 'katsomot säännöllisesti. Kentällä pelaavat myös useat '
+          + 'alempien sarjojen cruceño-seurat.'
+          + '\n\n'
+          + 'Stadion on korjattu monta kertaa. Valot sytytettiin '
+          + 'ensi kerran 26. syyskuuta 1974 ottelussa, jossa '
+          + 'kohtasivat La Bélgica ja Destroyers. Seuraava iso '
+          + 'kunnostus tehtiin 1996–1997 Copa Américaa varten, '
+          + '2016–2017 tuli led-valaistus ja kameravalvonta, ja '
+          + '2021 asennettiin 14 300 istuinta. Kentän nurmea '
+          + 'pidetään maan parhaana.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+  },
+  /*
+   * MONTERREY (7.9.2026). Kahdeksan kohdejuttua kohdekartalle
+   * (maakartat.js, monterrey). Viiden kohteen lähde on
+   * es-Wikipedia, koska englanninkielistä artikkelia ei ole
+   * lainkaan — se sanotaan jokaisen jutun lähderivillä.
+   * Jutut eivät toista lehden nostoja (kulttuuri-kategoriat.js,
+   * monterrey): lehti kertoo perustamisesta, nimestä, Cerro de la
+   * Sillasta, Fundidorasta, kansallispuistosta, Chipinquestä,
+   * Grutas de Garcíasta ja Santa Catarinasta.
+   */
+  monterrey: {
+    'Museo del Obispado': {
+      aika: '1790',
+      teksti: 'Obispadon kukkulalla seisova talo aloitti '
+          + 'rakentumisensa 5. heinäkuuta 1790 Linaresin hiippakunnan '
+          + 'piispan lepo- ja rukoustaloksi. Alkuperäinen nimi oli '
+          + 'Nuestra Señora de Guadalupen palatsi.'
+          + '\n\n'
+          + 'Sen jälkeen talo oli vuorollaan lähes kaikkea muuta: '
+          + 'sotilaskasarmi, linnoitus, spitaalisairaala ja kabaree. '
+          + '1920-luvun alussa, kun kukkulalla vielä tanssittiin, '
+          + 'tohtori Amado Fernández Muguerza johti vuonna 1907 '
+          + 'perustettua Junta Arqueófilaa ja sai osavaltion '
+          + 'tunnustamaan rakennuksen historiallisen arvon. Talo '
+          + 'julistettiin kansalliseksi siirtomaamonumentiksi 8. '
+          + 'joulukuuta 1932 ja siirtyi liittovaltion '
+          + 'antropologiaviraston hoitoon 1938; ensimmäinen '
+          + 'restaurointi tehtiin 1946.'
+          + '\n\n'
+          + 'Museoksi se vihittiin 20. syyskuuta 1956, kaupungin '
+          + '360-vuotispäivänä. Nykyään siinä on kymmenen '
+          + 'näyttelysalia noin puolellatoista tuhannella '
+          + 'neliömetrillä ja kokoelmassa 1 325 esinettä, joista vain '
+          + 'osa on kerrallaan esillä. Esineistä tunnetuimpia ovat '
+          + 'Porfirio Díazin vaunut, 1800-luvun kastemalja ja Servando '
+          + 'Teresa de Mierin kirjapaino. Salissa nimeltä "Nuestros '
+          + 'caudillos" riippuu Santiago Vidaurrin muotokuva. Kukkulan '
+          + 'laella on lisäksi näköalapaikka ja monumenttilippu.',
+      kuvat: [
+        {
+          tiedosto: 'Museo del Obispado - panoramio.jpg',
+          selite: 'Keltainen kahdeksankulmainen kupoli nousee museon '
+            + 'valkoisen pylväskäytävän takaa.',
+          lahde: 'JavierDo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'La Purísiman kirkko': {
+      aika: '1939',
+      teksti: 'Kirkon takana on tlaxcalteekkinainen. Antonia Teresa '
+          + 'asettui Monterreyhin noin vuonna 1680 ja toi mukanaan '
+          + 'neljänkymmenenkahden sentin korkuisen Purísima-veistoksen, '
+          + 'jota alettiin kutsua nimellä Virgen Chiquita, pieni '
+          + 'Neitsyt. Antonia oli suutarin leski, ja siitä tuli hänen '
+          + 'liikanimensä la Zapatera.'
+          + '\n\n'
+          + 'Perimätiedon mukaan noin vuonna 1700 satoi neljäkymmentä '
+          + 'päivää putkeen ja Santa Catarina uhkasi tulvia yli '
+          + 'äyräidensä. Antonia kantoi kuvan kulkueessa joen rantaan, '
+          + 'ja vedet vetäytyivät. Fray Servando Teresa de Mier kirjasi '
+          + 'tarinan 1700-luvulla mutta epäilevään sävyyn; arkistot '
+          + 'vahvistavat Antonia Teresan olemassaolon ja sen, että hän '
+          + 'toi veistoksen. Testamentissaan 20. lokakuuta 1719 hän '
+          + 'jätti kuvan ja pienen kappelin tyttärelleen, ja vuoden '
+          + '1791 kaupunginkartassa kappeli on jo merkitty.'
+          + '\n\n'
+          + 'Seurakunta perustettiin 19. joulukuuta 1894, ja sen '
+          + 'uusklassinen kirkko purettiin, kun arkkihiippakunta '
+          + 'halusi rakennuksen, joka vastaisi teollisuuskaupungin '
+          + 'uutta ilmettä. Nykyinen kirkko aloitettiin 1939, ja se on '
+          + 'Meksikon ensimmäinen moderni kirkkorakennus sekä tärkeä '
+          + 'edeltäjä niille betonikuorirakenteille, joita Félix '
+          + 'Candela teki myöhemmin. Arkkitehti oli Enrique de la '
+          + 'Mora. Kellotornissa seisoo kuusi ja puoli metriä korkea '
+          + 'poltetusta savesta tehty Purísima, tekijänä Adolfo '
+          + 'Laubner Mayer.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de la Purísima.jpg',
+          selite: 'Kirkon betonikuoret kaartuvat maasta katoksi, ja '
+            + 'vieressä nousee kivinen kellotorni.',
+          lahde: 'Documentacion LABNL, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Colegio Civil': {
+      aika: '1870',
+      teksti: 'Rakennus aloitettiin 1793–1794 arkkitehti Juan '
+          + 'Crousetin piirustuksin, mutta ei kouluksi vaan köyhien '
+          + 'sairaalaksi. Työ keskeytyi 1797 piispan ja kuvernöörin '
+          + 'erimielisyyksiin. Vuoden 1798 isorokkoepidemiassa '
+          + 'valmiita huoneita otettiin hätäkäyttöön, ja kun epidemia '
+          + 'oli ohi, talo suljettiin taas. Itsenäisyystaistelujen '
+          + 'aikana puolivalmis sairaala muutettiin ratsuväen ja '
+          + 'tykistön kasarmiksi ja sen edessä ollut tyhjä tontti '
+          + 'paraatikentäksi.'
+          + '\n\n'
+          + 'Vuonna 1857 kuvernööri Santiago Vidaurri esitti '
+          + 'kongressille Colegio Civilin perustamista. Opetus alkoi '
+          + '1859 väliaikaisesti piispantalossa: keskikoulu, lukio '
+          + 'sekä oikeustieteen ja kirurgian koulut. Ensimmäinen '
+          + 'johtaja oli tohtori Ángel Martínez Villarreal ja '
+          + 'ensimmäinen oppilas Antonio María Elizondo, joka maksoi '
+          + 'kirjoittautumisestaan kaksi pesoa. Ranskan miehityksen '
+          + 'aikana keisari Maximilian sulki koulun, mutta tunteja '
+          + 'pidettiin salaa opettajien kodeissa.'
+          + '\n\n'
+          + 'Kun tasavaltalaiset olivat ottaneet kaupungin takaisin, '
+          + 'kuvernööri Mariano Escobedo määräsi rakennuksen '
+          + 'valmiiksi. Se vihittiin juhlallisesti lokakuussa 1870, ja '
+          + 'juhlapuheen piti koulun kolmas johtaja, lääkäri José '
+          + 'Eleuterio González. Taloon tuli myöhemmin '
+          + 'säähavaintoasema, kaukoputki ja luonnonhistoriallinen '
+          + 'museo. Vuosien 2004–2006 restauroinnin jälkeen se on '
+          + 'yliopiston kulttuurikeskus.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Nuevo Leónin hallintopalatsi': {
+      aika: '1895',
+      teksti: 'Vanha hallintopalatsi seisoi Morelosin ja Escobedon '
+          + 'kulmassa ja toimi osavaltion hallintotalona vuodesta 1817 '
+          + '1900-luvun alkuun. Se oli myös Benito Juárezin työhuone, '
+          + 'ja se kärsi vaurioita Monterreyn taistelussa — siitä '
+          + 'syntyi ajatus uudesta palatsista.'
+          + '\n\n'
+          + 'Kuvernööri Bernardo Reyes valitsi uudelle talolle tontin, '
+          + 'joka oli ollut kaupungin alkuperäinen pääaukio. Työt '
+          + 'alkoivat 8. elokuuta 1895 insinööri Francisco Beltránin '
+          + 'suunnitelmalla ja Martín Peñan työnjohdolla. Rahaa ei '
+          + 'ollut: osa saatiin myymällä vanha palatsi 1897 '
+          + 'seitsemälläkymmenellätuhannella pesolla. Arvioitu kulu '
+          + 'oli satatuhatta pesoa ja rakennusaika viisi vuotta — '
+          + 'todellisuudessa siihen meni kolmetoista.'
+          + '\n\n'
+          + 'Rakennus on 51 metriä leveä ja 88 pitkä ja päällystetty '
+          + 'vaaleanpunaisella cantera-kivellä, joka tuotiin San Luis '
+          + 'Potosísta. Kiveä ei osattu Monterreyssä työstää, joten '
+          + 'kivenveistäjät värvättiin sen lähtöpaikasta; heidän '
+          + 'asuinalueestaan tuli Barrio San Luisito, nykyinen Colonia '
+          + 'Independencia. Sisällä on viisi–kuusisataa juoksumetriä '
+          + 'Fundidoran valamia kaiteita. Julkisivun huipulla seisoo '
+          + 'Voiton patsas, ja peristyylien päällä on metalliveistoksia '
+          + 'leijonasta, jota lapsi pitelee ruusuköynnöksin.',
+      kuvat: [
+        {
+          tiedosto: 'Vista del Palacio de Gobierno del estado de Nuevo León.jpg',
+          selite: 'Palatsin pylväikkö sulkee Macroplazan pohjoispään, '
+            + 'ja sen edessä liehuu monumenttilippu.',
+          lahde: 'B.jars, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Meksikon historian museo': {
+      aika: '1994',
+      teksti: 'Museo seisoo siinä kohdassa, josta koko kaupunki '
+          + 'alkoi: Santa Lucían lähteen paikalla, jonka viereen '
+          + 'Diego de Montemayor perusti Monterreyn 1596.'
+          + '\n\n'
+          + 'Hanke alkoi marraskuussa 1992 osavaltion johdolla. '
+          + 'Vuonna 1993 kirjoitettiin historiallinen käsikirjoitus, '
+          + 'ja siihen osallistuivat muun muassa historioitsija '
+          + 'Israel Cavazos ja Nuevo Leónin historian museon silloinen '
+          + 'johtaja Marcela Guerra; koordinaattorina oli '
+          + 'historioitsija Margarita Loera. Arkkitehtuurikilpailun '
+          + 'voittivat Óscar Bulnes ja Augusto Álvarez.'
+          + '\n\n'
+          + 'Rakentaminen alkoi lokakuussa 1993 ja museo vihittiin jo '
+          + '30. marraskuuta 1994 — runsaassa vuodessa rakennettiin '
+          + 'talo ja asennettiin noin puolitoistatuhatta esinettä sekä '
+          + 'suuri määrä videoseiniä ja toiminnallisia laitteita. '
+          + 'Museo kuuluu kolmen museon ryhmään yhdessä '
+          + 'hallintopalatsin museon ja Koillisen museon kanssa.',
+      kuvat: [],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Dulces Nombresin kappeli': {
+      aika: '1830',
+      teksti: 'Barrio Antiguon kapeiden katujen keskellä on '
+          + 'kolmentoista metrin pituinen ja kahdeksan metrin levyinen '
+          + 'cantera-kivestä muurattu kappeli. Se on omistettu '
+          + 'Jeesuksen ja Marian suloisille nimille — siitä nimi '
+          + 'Dulces Nombres.'
+          + '\n\n'
+          + 'Rakentaminen ajoittuu noin vuoteen 1830, ja sen määräsi '
+          + 'José Antonio de la Garza Saldívarin leski täyttääkseen '
+          + 'ehdon, jonka hänen miehensä oli kirjannut testamenttiinsa. '
+          + 'Vihkiminen tapahtui vasta 17. maaliskuuta 1866, eli '
+          + 'kolmisenkymmentä vuotta myöhemmin.'
+          + '\n\n'
+          + 'Kappeli on merkitty Nuevo Leónin historiallisten '
+          + 'monumenttien luetteloon numerolla 09334, ja se on yhä '
+          + 'julkinen kappeli, joka on auki päivittäin. Sen kokoluokka '
+          + 'kertoo, millaisia kaupungin rakennukset olivat ennen '
+          + 'teollisuuden vuosia: pieni kivinen talo korttelin '
+          + 'kulmassa, ei aukiota ympärillään.',
+      kuvat: [
+        {
+          tiedosto: 'Capilla de los Dulces Nombres.png',
+          selite: 'Kappelin kermanvalkoisessa julkisivussa on kaksi '
+            + 'kellokaarta ja tummanpunaiset pilasterit.',
+          lahde: 'Prozaco, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Monterreyn katedraali': {
+      aika: '1791',
+      teksti: 'Katedraalin rakentamiseen meni 86 vuotta: se '
+          + 'aloitettiin 1705 ja saatiin valmiiksi 1791. Katedraaliksi '
+          + 'se julistettiin jo kesken työn, 1777, kun paavi Pius VI '
+          + 'perusti Linaresin hiippakunnan.'
+          + '\n\n'
+          + 'Keskuslaiva on latinalaisen ristin muotoinen, ja sen '
+          + 'sivuilla on syvennyskappeleita. Holvit ovat ristiholveja, '
+          + 'ja niiden päällä on kahdeksankulmainen kupoli. Sisustus '
+          + 'on hillitty ja eklektinen: tyylit ovat uusklassinen ja '
+          + 'barokki, ja barokki näkyy erityisesti julkisivussa. '
+          + 'Sakramenttikappelissa on pakotettu hopeainen etuseinä.'
+          + '\n\n'
+          + 'Kuorissa on Merklin-urut vuodelta 1893. Ne ovat '
+          + 'vaurioituneet eivätkä ole käytössä, mutta ne ovat '
+          + 'paikallaan. Kellotorni on nykyisessä muodossaan uudempi '
+          + 'kuin muu kirkko: espanjalaisen kuvalehden vuoden 1880 '
+          + 'piirroksessa katedraali näkyy vielä ilman sitä.',
+      kuvat: [
+        {
+          tiedosto: 'Catedral Metropolitana mty.jpg',
+          selite: 'Sivuportaalin barokkikoristelu erottuu vaaleaa '
+            + 'seinää vasten.',
+          lahde: 'Andrés Agustín I, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjan- ja englanninkielinen Wikipedia',
+    },
+    'Barrio Antiguo': {
+      aika: '1700-luku',
+      teksti: 'Barrio Antiguo on kaupungin vanha kortteliverkko '
+          + 'Macroplazan itälaidalla: mukulakivikatuja ja siirtomaa-'
+          + 'ajan arkkitehtuuria. Alue ulottui alun perin Santa '
+          + 'Catarina -joelta 5 de Mayo -kadulle ja Mina-kadulta '
+          + 'Roble-kadulle, joka on nykyään Avenida Benito Juárez.'
+          + '\n\n'
+          + 'Vanhinta Monterreytä on tietysti kaupungin perustamisen '
+          + 'aika 1500-luvun lopulla, mutta säilyneet rakennukset ovat '
+          + 'enimmäkseen 1700-luvulta ja 1800-luvun viimeisiltä '
+          + 'vuosikymmeniltä. Alue oli varakuninkaan ajasta '
+          + '1900-luvun alkupuolelle kaupungin kaupallinen ja '
+          + 'kulttuurinen keskus, kunnes muut osat kasvoivat sen ohi.'
+          + '\n\n'
+          + 'Monta korttelin taloa purettiin Macroplazan tieltä '
+          + '1900-luvun lopulla, ja sen jälkeen alue autioitui. '
+          + 'Vuodesta 2013 alkoi kunnostushanke, jossa osa kaduista on '
+          + 'muutettu kävelykaduiksi — ensimmäisenä Calle Morelos. '
+          + 'Marraskuussa järjestetyn Festival Cultural Barrio '
+          + 'Antiguon on korvannut syyskuinen Festival Internacional '
+          + 'de Santa Lucía.',
+      kuvat: [
+        {
+          tiedosto: 'Monterrey Barrio Antiguo.JPG',
+          selite: 'Mukulakivikadun varrella on matalia värillisiä '
+            + 'taloja ja vanhoja puuovia.',
+          lahde: 'Ivanmartinez, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+  },
+  /*
+   * MÉRIDA (7.9.2026). Kahdeksan kohdejuttua kohdekartalle
+   * (maakartat.js, merida). Kaikkien kahdeksan lähde on
+   * es-Wikipedia, koska englanninkielisiä artikkeleita ei ole
+   * lainkaan — se sanotaan jokaisen jutun lähderivillä.
+   * Jutut eivät toista lehden nostoja (kulttuuri-kategoriat.js,
+   * merida): lehti kertoo Tʼhósta ja katedraalin kivistä,
+   * Valkoisen kaupungin nimestä, kastisodasta, henekenistä ja
+   * Paseo de Montejosta sekä Yucatánin keittiöstä.
+   */
+  merida: {
+    'Santa Anan kirkko': {
+      aika: '1733',
+      teksti: 'Vuonna 1726 Yucatánin kuvernööri ja kenraalikapteeni '
+          + 'Antonio de Figueroa y Silva määräsi rakennettavaksi '
+          + 'suoran kadun piispantalolta pohjoiseen. Katu jatkoi sitä '
+          + 'väylää, joka siihen asti oli päättynyt Santa Lucían '
+          + 'kaupunginosaan, ja sen varrelle tehtiin kaksi kivikaarta. '
+          + 'Näin työläisten ja käsityöläisten asuttama Santa Ana '
+          + 'liitettiin osaksi keskustaa.'
+          + '\n\n'
+          + 'Sama kuvernööri rakennutti Santa Anan kirkon '
+          + 'esikolumbiaanisen mayaperustuksen päälle siihen kohtaan, '
+          + 'jossa oli vuosisataa aiemmin rakennettu avokappeli. '
+          + 'Työhön kuului myös pieni puistikko, jota kutsuttiin '
+          + 'ensin nimellä Paseo de Santa Ana ja joka on nykyinen '
+          + 'puisto. Kokonaisuus valmistui 1733, mutta Figueroa y '
+          + 'Silva ei ehtinyt nähdä sitä: hän kuoli hieman ennen. '
+          + 'Kirkon julkisivun laatta kertoo, että hänen jäännöksensä '
+          + 'lepäävät siellä.'
+          + '\n\n'
+          + 'Vuonna 1867 puistossa käytiin Yucatánin ratkaissut '
+          + 'taistelu keisarikuntaa kannattaneiden ja tasavaltalaisten '
+          + 'joukkojen välillä. Tasavaltalaiset voittivat kenraali '
+          + 'Manuel Cepeda Perazan johdolla, ja hän palautti '
+          + 'tasavaltalaisen hallinnon niemimaalle 15. kesäkuuta '
+          + 'samana vuonna. 1900-luvun alussa kaupunginosaan '
+          + 'perustettiin leipomo, jonka pan francés on Yucatánissa '
+          + 'yhä käsite; sitä pitivät katalonialaiset Llanon '
+          + 'veljekset 1940-luvulle asti.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia del Barrio de Santa Ana, Mérida, Yucatán (01).JPG',
+          selite: 'Keltainen kirkko kahden valkoisen tornihuipun '
+            + 'välissä, julkisivussa muistolaatta.',
+          lahde: 'Inri, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Peón Contrerasin teatteri': {
+      aika: '1908',
+      teksti: 'Méridan vanhin näyttämö on ollut samalla paikalla '
+          + 'kolmella nimellä ja kolmessa rakennuksessa. Ensimmäisen, '
+          + 'Teatro San Carlosin, valinta alkoi 1806. Vuonna 1877 '
+          + 'Antonino Bolio Guzmán osti sen ja nimesi Teatro Bolioksi, '
+          + 'ja jo seuraavan näytäntökauden jälkeen se vaihtoi omistajaa '
+          + 'uudestaan. Nykyisen nimensä se sai 27. joulukuuta 1878 '
+          + 'kahden sanomalehden aloitteesta yucatánilaisen lääkärin ja '
+          + 'näytelmäkirjailijan José Peón Contrerasin mukaan.'
+          + '\n\n'
+          + 'Vuonna 1897 saliin asennettiin Lumièren veljesten '
+          + 'tekniikka, ja liikkuvia kuvia alettiin esittää samassa '
+          + 'talossa oopperan ja zarzuelan kanssa. Vuonna 1899 '
+          + 'perustettu teatteriyhtiö osti tontin ja purki vanhan '
+          + 'rakennuksen. Nykyinen talo rakennettiin 1900–1908: '
+          + 'urakoitsija oli italialainen Enrico Deserti ja '
+          + 'arkkitehtuuri niin ikään italialaisen Pío Pialentinin. '
+          + 'Tyyli on akateeminen eklektismi, ja se sovitettiin '
+          + 'kuumaan ilmastoon leveillä tuulettavilla käytävillä. '
+          + 'Marmoriportaikko vie saliin, jossa on viisi aitiokerrosta '
+          + 'ja seitsemänsataa paikkaa; kupoliin on maalattu '
+          + 'kreikkalaiset muusat.'
+          + '\n\n'
+          + 'Alkuvuodesta 1916 talossa pidettiin Yucatánin ensimmäinen '
+          + 'naisten kongressi, joka oli samalla koko Meksikon '
+          + 'ensimmäinen. Vuonna 1940 teatteri muutettiin '
+          + 'elokuvateatteriksi, 1974 se suljettiin huonokuntoisena, '
+          + '1977 julistettiin historialliseksi monumentiksi ja 1979 '
+          + 'pakkolunastettiin. Restaurointi valmistui syksyllä 1984, '
+          + 'ja vuodesta 2004 talo on ollut Yucatánin '
+          + 'sinfoniaorkesterin koti.',
+      kuvat: [
+        {
+          tiedosto: 'Teatro Peón Contreras-1.JPG',
+          selite: 'Teatterin keltainen eklektinen julkisivu '
+            + 'pylväikköineen kadun kulmassa.',
+          lahde: 'D. Eugenia Romero Carrillo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'La Mejoradan puisto': {
+      aika: '1870',
+      teksti: 'Aukio on Calle 50:llä katujen 59 ja 57 välissä, '
+          + 'entisen fransiskaaniluostarin edessä. Tänne laskettiin '
+          + '1. huhtikuuta 1870 koko Yucatánin niemimaan ensimmäinen '
+          + 'rautatiekisko.'
+          + '\n\n'
+          + 'Puisto on saanut nimensä kirkosta ja luostarista, joita on '
+          + 'siirtomaa-ajasta asti kutsuttu La Mejoradaksi; nimi tulee '
+          + 'todennäköisesti Espanjan Mejoradasta, jonka '
+          + 'samanaikaisen seurakuntakirkon piirustukset muistuttavat '
+          + 'näitä. Kirkkoa alettiin rakentaa 1621 encomendero Diego '
+          + 'Montalvo Garcían varoilla. Hän luovutti keskeneräisen '
+          + 'rakennuksen fransiskaaneille, ja se valmistui 1640; '
+          + 'nykyään se tunnetaan Nuestra Señora del Carmenin '
+          + 'kirkkona.'
+          + '\n\n'
+          + 'Luostari rakennettiin 1688–1694, ja se oli tarkoitettu '
+          + 'niille sääntökunnan jäsenille, jotka noudattivat '
+          + 'ankarinta sääntöä; perustajien joukossa oli Juan de '
+          + 'Acevedo. Munkit asuivat siellä, kunnes Yucatánin viimeinen '
+          + 'siirtomaakuvernööri Juan María Echeverri otti rakennuksen '
+          + '1820 sotaväen majoitukseen — kerjäläisveljeskunnat oli '
+          + 'juuri lakkautettu kuninkaallisella asetuksella. Nykyään '
+          + 'talossa toimii Yucatánin yliopiston arkkitehtuurin '
+          + 'tiedekunta.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de Nuestra Señora del Carmen, Mérida, Yucatán.jpg',
+          selite: 'Mejoradan kirkon kivijulkisivu ja sen vieressä '
+            + 'entisen luostarin pitkä muuri.',
+          lahde: 'Andyson21, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Casa de los Montejo': {
+      aika: '1549',
+      teksti: 'Plaza Granden eteläisellä laidalla on talo, joka '
+          + 'rakennettiin 1542–1549 Yucatánin valloittajien '
+          + 'asunnoksi: Francisco de Montejo el adelantadon, hänen '
+          + 'poikansa el mozon ja veljenpoikansa. Se on mahdollisesti '
+          + 'Meksikon ainoa 1500-luvulla rakennettu siviilitalo '
+          + 'plateresco-tyylissä.'
+          + '\n\n'
+          + 'Kalkkikivijulkisivussa on kirjoitus, jonka mukaan '
+          + 'adelantado teetti työn vuonna 1549 — siitä päätellään '
+          + 'valmistumisvuosi. Adelantadon kuoltua talo siirtyi '
+          + 'pojalle ja tämän leskelle Andrea del Castillolle, joka '
+          + 'määräsi, ettei taloa saanut myydä vaan ainoastaan periä. '
+          + 'Näin syntyi Montejojen majoraatti, ja suvun hallussa '
+          + 'rakennus pysyi noin vuoteen 1832 asti. Alun perin tontti '
+          + 'käsitti koko korttelin, mutta se kutistui vuosisatojen '
+          + 'mittaan osamyynneissä.'
+          + '\n\n'
+          + 'Vuonna 1839 talon osti Simón Peón y Peón, ja 1896 '
+          + 'sisätilat muutettiin muodinmukaiseen ranskalaistyyliin; '
+          + 'silloin ikkunoiden ympärille lisättiin karyatidit. Vuonna '
+          + '1981 rakennuksen osti Banamexin kulttuurisäätiö, ja 2. '
+          + 'joulukuuta 2010 siihen avattiin kulttuuritalo ja museo '
+          + 'nimeltä Casa Montejo. Museossa on 1800-luvun lopun ja '
+          + '1900-luvun alun huonekaluja sekä vaihtuvien näyttelyiden '
+          + 'sali.',
+      kuvat: [
+        {
+          tiedosto: 'Casa de los Montejo, Mérida, Yucatán (01).jpg',
+          selite: 'Talon koko julkisivu Plaza Granden laidalla, '
+            + 'keskellä veistetty plateresco-portaali.',
+          lahde: 'Inri, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Méridan kaupunginmuseo': {
+      aika: '1908',
+      teksti: 'Museon talo on porfiriaton ajalta ja rakennettiin '
+          + 'liittovaltion postipalatsiksi. Se vihittiin 5. toukokuuta '
+          + '1908 kuvernööri Enrique Muñoz Arísteguin kaudella, ja '
+          + 'siihen tuli lennätin-, posti- ja tuomioistuintoimistoja.'
+          + '\n\n'
+          + 'Rakennuksen suunnitteli ja rakensi sotilasinsinööri '
+          + 'Salvador Echegaray. Tyyli on uusklassinen, mutta '
+          + 'lattioiden, seinien ja ikkunapuitteiden viimeistelyssä on '
+          + 'sekä ranskalaisia että moderneja sävyjä, ja talo erottuu '
+          + 'siksi naapureistaan. Museon esineistössä on myös '
+          + 'postiajan muistoja.'
+          + '\n\n'
+          + 'Museo muutti taloon 29. kesäkuuta 2007. Pysyvästi esillä '
+          + 'on noin 150 esinettä neljässä salissa: esikolumbiaaninen '
+          + 'Mérida, siirtomaa-aika, 1800-luku ja 1900-luvun alku sekä '
+          + '1900-luku. Ensimmäisessä kerroksessa on kuusi salia '
+          + 'vaihtuville näyttelyille, ja niissä on tilaa myös '
+          + 'paikallisille kuvataiteilijoille.',
+      kuvat: [
+        {
+          tiedosto: 'Museo de la Ciudad de Mérida, Yucatán.jpg',
+          selite: 'Vanhan postipalatsin kermanvalkoisessa '
+            + 'julkisivussa on puna-valkoinen vinoruutukoriste.',
+          lahde: 'Estefinito, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'San Juanin puisto ja kaari': {
+      aika: '1690-luku',
+      teksti: 'San Juanin kaupunginosa on Calle 61:llä katujen 58 ja '
+          + '69 välissä. Kirkon vieressä seisoo yhä kaari, joka '
+          + 'merkitsi valkoisten kaupungin loppua ja niin sanottujen '
+          + 'intiaanikaupunginosien alkua.'
+          + '\n\n'
+          + 'Yhdessä Santa Isabelin ermitan sekä Santiagon, Santa '
+          + 'Anan, San Sebastiánin, San Cristóbalin ja Mejoradan '
+          + 'kaupunginosien kanssa San Juan merkitsi siirtomaa-ajan '
+          + 'Méridan rajoja. Espanjankielisen Wikipedian mukaan '
+          + 'historioitsija Michel Antochiw Kolpa johtaa kaupungin '
+          + 'liikanimen Ciudad Blanca juuri tästä asetelmasta eikä '
+          + 'talojen kalkituksesta. Sama lähde toteaa, että jako ei '
+          + 'kestänyt: työvoimaa tarvittiin lähelle, ja kaupunki '
+          + 'kasvoi porttiensa yli.'
+          + '\n\n'
+          + 'Nykyään San Juan on tavallinen keskustan kaupunginosa, '
+          + 'jonka puisto on kohtaamispaikka ja jonka juhlapäivä on '
+          + '24. kesäkuuta, Johannes Kastajan päivä. Kaari on '
+          + 'säilynyt, vaikka useimmat muut samanikäiset kaaret ovat '
+          + 'kadonneet — osa niistä oli alun perinkin pelkkää '
+          + 'koristetta.',
+      kuvat: [
+        {
+          tiedosto: 'Arco de San Juan, Mérida, Yucatán (02).JPG',
+          selite: 'Valkoinen kaari kaartuu kadun yli, ja sen takana '
+            + 'jatkuvat värilliset matalat talot.',
+          lahde: 'Inri, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'San Cristóbalin kirkko': {
+      aika: '1669',
+      teksti: 'San Cristóbal on keskustan suurin ja asutuin '
+          + 'kaupunginosa. Sinne asettui alun perin se mexica- ja '
+          + 'tlaxcalteekkiväestö, joka oli tullut Yucatániin '
+          + 'valloituksen mukana; heille kuului osallistumisensa '
+          + 'perusteella verovapaus. Kuvernööri Diego Quijada otti '
+          + 'oikeuden pois, eivätkä asukkaat saaneet sitä protestoimalla '
+          + 'takaisin.'
+          + '\n\n'
+          + 'Viiden korttelin päähän pääaukiolta, yhden Tʼhón '
+          + 'kukkulan päälle, rakennettiin pian valloituksen jälkeen '
+          + 'suuri fransiskaaniluostari. Paikan oli valinnut Francisco '
+          + 'de Montejo nuorempi linnoitusta varten, ja vuonna 1669 '
+          + 'kuvernööri Rodrigo Flores de Aldanan aikana ajatus '
+          + 'toteutettiin: San Beniton linnoitus rakennettiin '
+          + 'luostarin ympärille. Alussa portteja oli kolme — yksi '
+          + 'sotilaille, yksi papistolle ja yksi seurakunnalle — mutta '
+          + 'sotilaat muurasivat kaksi umpeen turvallisuussyistä, ja '
+          + 'kaikkien oli kuljettava samasta ovesta pitkälle '
+          + '1700-luvulle asti.'
+          + '\n\n'
+          + '1800-luvun lopulla kaupunginosaan asettui merkittävä osa '
+          + 'niemimaan syyrialais-libanonilaisesta siirtolaisuudesta, '
+          + 'joka perusti sinne kotinsa ja liikkeensä. Kadut kivettiin '
+          + 'ja puisto kunnostettiin penkkeineen ja istutuksineen, ja '
+          + 'se vihittiin 5. toukokuuta 1910. Kaupunginosan '
+          + 'seurakuntakirkko on Guadalupen Neitsyen juhlien keskus, '
+          + 'ja juhlat kokoavat käytännössä koko alueen väen.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia De San Cristobal.jpg',
+          selite: 'Kirkon kivijulkisivussa on simpukankuoren '
+            + 'muotoinen kaari, ja juhlaviirit kulkevat ristiin '
+            + 'sen yli.',
+          lahde: 'Kazekage AMT, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Santa Isabelin ermita': {
+      aika: '1748',
+      teksti: 'Kappeli seisoo Calle 66:n eteläpäässä San Sebastiánin '
+          + 'kaupunginosassa, siinä kohdassa josta alkoi camino real '
+          + 'eli kuninkaantie Méridasta Campecheen.'
+          + '\n\n'
+          + 'Tienvarsisijainnin takia sitä kutsuttiin aikoinaan '
+          + 'nimellä Nuestra señora del buen viaje, hyvän matkan '
+          + 'Neitsyt. Nykyinen nimi viittaa Santa Isabeliin eli '
+          + 'Johannes Kastajan äitiin. Perustamisvuotta ei tiedetä '
+          + 'tarkasti, mutta pääoven yllä on kaiverrus, jossa on vuosi '
+          + '1748.'
+          + '\n\n'
+          + 'Rakennuttajaksi tiedetään 1600-luvulla elänyt Gaspar '
+          + 'González de Ledezma, jonka näkemys oli, että temppelin '
+          + 'rakentaminen ansaitsi taivaspaikan varmemmin kuin '
+          + 'hurskaus tai yksittäisen pyhimyksen palvonta. Kappelin '
+          + 'ympärillä oleva puisto on nykyään yksi keskustan '
+          + 'rauhallisimmista, ja se on samalla eteläisin niistä '
+          + 'paikoista, jotka merkitsivät vanhan kaupungin rajaa.',
+      kuvat: [
+        {
+          tiedosto: 'Ermita de Santa Isabel, Mérida, Yucatán (01).jpg',
+          selite: 'Kappelin keltainen muuri ja veistetty oviaukko '
+            + 'nousevat puiston penkkien takaa.',
+          lahde: 'Inri, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+  },
+  /*
+   * WINNIPEGIN KOHDEKARTAN JUTUT (Opus 7.9.2026). Kahdeksan kohdetta,
+   * faktapohja docs/mantereet-tyoaineisto/faktapohja-winnipeg.md ja
+   * sen erillinen tarkistus tarkistus-winnipeg.md. Jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit
+   * "Manitoba Museum", "Nonsuch (1650 ship)", "Exchange District",
+   * "Burton Cummings Theatre", "Winnipeg", "Manitoba Hydro Place",
+   * "Canadian Museum for Human Rights", "St. Boniface Cathedral",
+   * "Union Station (Winnipeg)", "Countess of Dufferin", "Winnipeg
+   * Railway Museum", "Manitoba Legislative Building", "Golden Boy
+   * (Manitoba)").
+   *
+   * NÄMÄ EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö): lehti
+   * kertoo kahden joen risteyksestä ja linnakkeista, Selkirkin
+   * siirtokunnasta, vuodesta 1873 ja Winnie-karhusta sekä
+   * teemasivulla talvesta, tulvista, preeriasta ja ukkosista.
+   */
+  winnipeg: {
+    'Manitoban museo': {
+      aika: '1932 ja 1970',
+      teksti: 'Manitoban historiallinen ja luonnontieteellinen seura '
+          + 'alkoi kerätä maakunnan perintöä jo vuonna 1879, ja '
+          + '1890-luvun alussa kokoelmaa säilytettiin kuulemma '
+          + 'kaupungintalon kellarissa. Museo avattiin virallisesti '
+          + '15. joulukuuta 1932 vasta valmistuneessa Winnipeg Civic '
+          + 'Auditoriumissa yhdessä kaupungin taidegallerian kanssa, '
+          + 'ja se toimi siellä vuoteen 1967. Talo oli pitkään '
+          + 'vapaaehtoisten varassa: kuraattorit hoitivat tehtävää '
+          + 'palkatta.'
+          + '\n\n'
+          + 'Nykyinen rakennus on vuoden 1965 piirustusten mukainen, '
+          + 'ja sen suunnitteli Herbert Henry Gatenby Moody. Museo on '
+          + 'maakunnan suurin voittoa tavoittelematon perintö- ja '
+          + 'tiedekasvatuskeskus, ja siinä on oma planetaario ja '
+          + 'tiedegalleria. Hudson’s Bay Company lahjoitti '
+          + 'museolle 1994 kolmensadan vuoden kokoelmansa ja rahat sen '
+          + 'hoitoon — museon suurin yrityslahjoitus.'
+          + '\n\n'
+          + 'Näyttelyn kuuluisin esine on täysikokoinen jäljennös '
+          + 'Nonsuch-aluksesta. Alkuperäinen oli 1650 rakennettu '
+          + 'kauppa-alus, joka purjehti Hudsoninlahdelle 1668–69 ja '
+          + 'teki sen kauppamatkan, josta kaksi vuotta myöhemmin '
+          + 'syntyi turkiskauppayhtiö. Alus valittiin nimenomaan '
+          + 'pienuutensa takia: 54 jalkaa pitkän ja kuusi jalkaa '
+          + 'syvässä kulkevan aluksen saattoi purjehtia jokea ylös ja '
+          + 'nostaa maihin ennen jäätä. Jäljennös rakennettiin '
+          + 'Devonissa 1600-luvun työkaluin ja materiaalein yhtiön '
+          + '300-vuotisjuhlaan, ja se asetettiin Winnipegiin pysyvästi '
+          + 'näytteille 1973.',
+      kuvat: [
+        {
+          tiedosto: 'Nonsuch - Manitoba Museum (6782314750).jpg',
+          selite: 'Nonsuchin jäljennöksen keula museosalissa, ja taustalla '
+            + 'lavastettu 1600-luvun satamakortteli.',
+          lahde: 'Thomas Quine, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pörssikortteli': {
+      aika: '1881–1918',
+      teksti: 'Pörssikortteli on kaksikymmentä korttelia ja noin 150 '
+          + 'perintörakennusta keskustan pohjoispäässä. Nimi tulee '
+          + 'Winnipegin viljapörssistä, joka oli aikanaan Kanadan '
+          + 'viljakaupan keskus, ja muista hyödykepörsseistä, joita '
+          + 'kaupunkiin syntyi vuosina 1881–1918. Kortteleissa on '
+          + 'ehjänä säilynyt kokoelma 1900-luvun alun varastoja, '
+          + 'rahalaitoksia ja terrakottapintaisia varhaisia '
+          + 'pilvenpiirtäjiä.'
+          + '\n\n'
+          + 'Winnipeg oli vuosisadan vaihteessa Pohjois-Amerikan '
+          + 'nopeimmin kasvavia kaupunkeja, ja sitä sanottiin '
+          + 'pohjoisen Chicagoksi — myös rakennustyyli tuli sieltä. '
+          + 'Vuoteen 1911 mennessä keskustan lähellä yhtyi yli kaksi '
+          + 'tusinaa rautatielinjaa ja kaupungissa oli yli kaksisataa '
+          + 'tukkuliikettä.'
+          + '\n\n'
+          + 'Sitten kasvu pysähtyi. Ensimmäinen maailmansota ja '
+          + 'Panaman kanavan avaaminen 1914 veivät tavaravirran '
+          + 'muualle, tukkukauppa siirtyi Edmontoniin, Moose Jaw’hun '
+          + 'ja Reginaan, ja 1940-luvulla varastoista tuli '
+          + 'vaatetehtaita. Juuri se pelasti korttelit: kun mitään '
+          + 'uutta ei rakennettu, vanha jäi paikalleen. Alue '
+          + 'julistettiin kansalliseksi historialliseksi kohteeksi '
+          + '27. syyskuuta 1997.',
+      kuvat: [
+        {
+          tiedosto: 'Bannatyne Ave.jpg',
+          selite: 'Bannatyne Avenue talvella: punatiilisiä ja vaaleita '
+            + 'varastotaloja rivissä, ja perällä keskustan torni.',
+          lahde: 'Krazytea, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Burton Cummings -teatteri': {
+      aika: '1907',
+      teksti: 'Teatterin rakennutti paikallinen impressaario Corliss '
+          + 'Powers Walker, ja sata vuotta se tunnettiin Walkerin '
+          + 'teatterina. Tontit ostettiin heinäkuussa 1905, talo '
+          + 'rakennettiin 1906–07, ja avajaiset pidettiin '
+          + '18. helmikuuta 1907 Puccinin Madame Butterflyllä. '
+          + 'Katsomoon mahtui 1 798 ihmistä, holvikatto nousee '
+          + 'kuuteenkymmeneen jalkaan, ja kaksi parveketta '
+          + 'rakennettiin ilman tukipylväitä, jotta ylhäältäkin näkisi '
+          + 'näyttämölle. Lippu maksoi parvekkeella 25 senttiä ja '
+          + 'permannolla kaksi dollaria.'
+          + '\n\n'
+          + 'Walker oli nähnyt Chicagon Iroquois-teatterin palon 1903 '
+          + 'ja tilasi montrealilaiselta Howard C. Stonelta '
+          + 'paloturvallisen talon: teräshäkki, betoniin ja '
+          + 'terrakottaan valetut rakenteet, betonilattiat, '
+          + 'palo-ovet ja liuskekivipintaiset metalliportaat. Hän '
+          + 'väitti sitä Kanadan ensimmäiseksi paloturvalliseksi '
+          + 'teatteriksi.'
+          + '\n\n'
+          + 'Näyttämöltä on puhuttu muutakin kuin repliikkejä. '
+          + 'Salissa pidettiin työväenliikkeen ja naisten '
+          + 'äänioikeusliikkeen kokouksia, muun muassa Nellie '
+          + 'McClungin pilkkaparlamentti, ja 1918 Winnipegin '
+          + 'ammattiyhdistysneuvoston ja sosialistipuolueen kokous, '
+          + 'joka johti seuraavan kevään yleislakkoon. Toukokuussa '
+          + '1919 yli kolmekymmentätuhatta työntekijää jätti työnsä; '
+          + 'lakko päättyi 21. kesäkuuta, kun mellakkalaki luettiin, '
+          + 'ja päivä jäi historiaan verisenä lauantaina. Talo '
+          + 'suljettiin 1933, oli elokuvateatterina 1945 alkaen, '
+          + 'palautettiin näyttämökäyttöön 1991 ja sai nykyisen '
+          + 'nimensä winnipegiläisen laulaja-lauluntekijän mukaan '
+          + '2002.',
+      kuvat: [
+        {
+          tiedosto: 'Winnipeg - Walker Theatre 2.JPG',
+          selite: 'Teatterin julkisivu ja pystykyltti; sivuseinät jäivät '
+            + 'koristelematta, koska niiden viereen oli tarkoitus '
+            + 'rakentaa muita taloja.',
+          lahde: 'Amqui, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Manitoba Hydro Place': {
+      aika: '2009',
+      teksti: 'Manitoban sähköyhtiön pääkonttori valmistui Portage '
+          + 'Avenuen varteen syyskuussa 2009 kaupungin neljänneksi '
+          + 'korkeimpana rakennuksena. Se on liitetty Winnipeg '
+          + 'Walkwayhin, keskustan katettuun käytäväverkkoon, joten '
+          + 'talvella sinne pääsee useasta korttelista ulos '
+          + 'menemättä.'
+          + '\n\n'
+          + 'Torni sai toukokuussa 2012 LEED Platinum -luokituksen, '
+          + 'ja se on siten yksi Pohjois-Amerikan '
+          + 'energiatehokkaimmista toimistotorneista. Se on '
+          + 'huomionarvoista juuri täällä: kaupungissa, jossa '
+          + 'tammikuun keskilämpötila on kuudentoista pakkasasteen '
+          + 'tienoilla ja heinäkuussa voidaan mitata kolmeakymmentä '
+          + 'lämpöastetta, talon on selvittävä molemmista ääripäistä '
+          + 'saman vuoden aikana.',
+      kuvat: [
+        {
+          tiedosto: 'Manitoba hydro place May 2022.jpg',
+          selite: 'Lasitorni sinisenä hetkenä, ja sen kyljessä nousee '
+            + 'kapea ilmanvaihtopiippu katon yli.',
+          lahde: 'ElatedCoder, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kanadan ihmisoikeusmuseo': {
+      aika: '2014',
+      teksti: 'Museo seisoo aivan jokien yhtymäkohdan vieressä, ja se '
+          + 'on kahdella tavalla ensimmäinen: se on ensimmäinen uusi '
+          + 'kansallinen museo Kanadassa vuoden 1967 jälkeen ja '
+          + 'ensimmäinen kansallinen museo pääkaupunkiseudun '
+          + 'ulkopuolella. Talon perusti vuoden 2008 lakimuutos.'
+          + '\n\n'
+          + 'Ajatus oli winnipegiläisen Izzy Asperin, ja hän keksi sen '
+          + '18. heinäkuuta 2000. Asper kuoli 2003 matkalla '
+          + 'julkistamaan arkkitehtuurikilpailua, ja työtä jatkoi '
+          + 'hänen tyttärensä Gail Asper. Kilpailuun tuli sata '
+          + 'ehdotusta kahdestakymmenestäyhdestä maasta, ja voittajaksi '
+          + 'valittiin albuquerquelainen Antoine Predock. Ennen '
+          + 'rakentamista arkeologit kaivoivat paikalta vanhinten '
+          + 'kanssa yli 400 000 esinettä — jokien risteys on ollut '
+          + 'kohtaamispaikka tuhansia vuosia.'
+          + '\n\n'
+          + 'Peruskiven paljasti 3. heinäkuuta 2010 kuningatar '
+          + 'Elisabet II, joka valitsi kiven itse Runnymeden niityltä, '
+          + 'missä Magna Carta sinetöitiin 1215; kivi koteloitiin '
+          + 'manitobalaiseen Tyndall-kiveen. Viimeinen 1 669 '
+          + 'mittatilaukseen leikatusta lasista asennettiin syyskuussa '
+          + '2012. Avajaisseremonia pidettiin 19. syyskuuta 2014, ja '
+          + 'ovet avautuivat yleisölle saman kuun 27. päivänä.',
+      kuvat: [
+        {
+          tiedosto: 'Canadian Museum for Human Rights at night, Winnipeg, Manitoba, Canada.jpg',
+          selite: 'Lasipilvi ja sen läpi kohoava torni valaistuna '
+            + 'illalla.',
+          lahde: 'Ethan Sahagun, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Saint-Bonifacen katedraali': {
+      aika: '1818–1972',
+      teksti: 'Punaisenjoen itärannalla on ollut kirkko vuodesta 1818, '
+          + 'jolloin vastasaapunut pastori Norbert Provencher rakensi '
+          + 'kahden työtoverin kanssa hirsitalon Selkirkin jaarlin '
+          + 'lahjoittamalle maalle. Rakennus oli viisikymmentä jalkaa '
+          + 'pitkä ja kolmekymmentä leveä, ja se oli yhtä aikaa '
+          + 'kappeli, asunto ja koulu. Piispaksi noussut Provencher '
+          + 'rakensi ensimmäisen varsinaisen katedraalin 1832.'
+          + '\n\n'
+          + 'Kirkon kellot pääsivät runoon: yhdysvaltalainen John '
+          + 'Greenleaf Whittier kirjoitti niistä 1859 runossaan The '
+          + 'Red River Voyageur, ja 17. joulukuuta 1891, runoilijan '
+          + '84-vuotispäivänä, arkkipiispa Taché soitatti niitä hänen '
+          + 'kunniakseen. Provencherin katedraali oli silloin jo '
+          + 'palanut — se tuhoutui 14. joulukuuta 1860 — ja tilalle '
+          + 'oli rakennettu kivinen kirkko, jonka kellotorni valmistui '
+          + 'kahdeksan vuotta myöhemmin.'
+          + '\n\n'
+          + 'Katolisten määrä Saint-Bonifacessa kasvoi vuosina '
+          + '1888–1906 luvusta 2 154 lukuun 4 615, ja 15. elokuuta '
+          + '1906 vihittiin uusi, montrealilaisen Jean-Omer Marchandin '
+          + 'suunnittelema katedraali. Se paloi 22. heinäkuuta 1968: '
+          + 'ruusuikkuna, messupuvut, vuoden 1860 kellot ja '
+          + 'seurakunnan arkisto tuhoutuivat, ja jäljelle jäivät '
+          + 'julkisivu, sakaristo ja vanhat muurit. Vuonna 1972 '
+          + 'julkisivun taakse rakennettiin uusi, pienempi kirkko — '
+          + 'joten portti ja seinät ovat yhä vuodelta 1906 ja '
+          + 'kirkkosali sen takana puoli vuosisataa nuorempi.',
+      kuvat: [
+        {
+          tiedosto: 'St Boniface Cathedral facade front (3707979349).jpg',
+          selite: 'Vuoden 1906 julkisivu seisoo yksin: ruusuikkunan '
+            + 'aukosta näkyy taivas, ja uusi kirkko on sen takana.',
+          lahde: 'Beatnik Photos, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Union Station': {
+      aika: '1911',
+      teksti: 'Main Streetin varrella oleva Union Station avattiin '
+          + '1911, ja sen suunnitteli newyorkilainen toimisto Warren '
+          + 'and Wetmore. Beaux-arts-tyylisessä talossa on kolme '
+          + 'laituria ja kahdeksan raidetta, ja siitä lähtevät yhä '
+          + 'Kanadan halki kulkevat kaukojunat.'
+          + '\n\n'
+          + 'Asemalla, raiteilla yksi ja kaksi, on rautatiemuseo, ja '
+          + 'sen tunnetuin kappale on Countess of Dufferin — '
+          + 'ensimmäinen höyryveturi, joka on kulkenut Kanadan '
+          + 'preeriamaakunnissa. Baldwin Locomotive Works rakensi sen '
+          + '1872 Northern Pacific Railwaylle, ja 1877 se myytiin '
+          + '9 700 dollarilla rautatieurakoitsija Joseph '
+          + 'Whiteheadille. Veturi lastattiin proomulle Minnesotassa '
+          + 'ja hinattiin Punaistajokea pohjoiseen; se saapui '
+          + 'St. Bonifaceen 9. lokakuuta 1877, ja rahti maksoi 440 '
+          + 'dollaria.'
+          + '\n\n'
+          + 'Nimi tulee kenraalikuvernöörin puolisosta, Dufferinin '
+          + 'jaarlittaresta. Veturi rakensi rataa etelään '
+          + 'Yhdysvaltain rajalle, sitten itään ja lopulta lännessä '
+          + 'aina Goldeniin asti. 1880-luvun puolivälissä se myytiin '
+          + 'sahayhtiölle, joka nimesi sen uudelleen Betsyksi ja '
+          + 'pani sen pyörittämään sahaa. Winnipegin kaupunki löysi '
+          + 'sen 1909 ja sai omistajat lahjoittamaan sen takaisin.',
+      kuvat: [
+        {
+          tiedosto: 'Union Station (Winnipeg).jpg',
+          selite: 'Aseman symmetrinen julkisivu ja vihreä kupoli, ja sen '
+            + 'takana näkyy ihmisoikeusmuseon lasikuori.',
+          lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Manitoban parlamenttitalo': {
+      aika: '1913–1920',
+      teksti: 'Manitoban kolmas lakiasäätävä rakennus valmistui 1920, '
+          + 'ja se on 77 metriä korkea uusklassinen beaux-arts-talo. '
+          + 'Kaksi edellistä olivat vaatimattomampia: ensimmäinen oli '
+          + 'hirsitalo Main Streetin ja McDermot Avenuen kulmassa, ja '
+          + 'se paloi 1873 — samana vuonna, jona Winnipegistä tuli '
+          + 'kaupunki. Toinen avattiin 1884.'
+          + '\n\n'
+          + 'Vuonna 1911 maakunta julisti arkkitehtuurikilpailun '
+          + 'kaikille Brittiläisen imperiumin arkkitehdeille; palkinto '
+          + 'oli kymmenentuhatta dollaria ja työstä maksettiin sata '
+          + 'tuhatta. Kuudestakymmenestäseitsemästä ehdotuksesta '
+          + 'valittiin Frank Worthington Simonin työ. Rakentaminen '
+          + 'alkoi kesällä 1913 manitobalaisella Tyndall-kivellä, '
+          + 'joka louhittiin Garsonista parinkymmenen kilometrin '
+          + 'päästä. Piirustuksia oli vuoteen 1914 mennessä 1 231. '
+          + 'Työ venyi lähes seitsemäksi vuodeksi: sota vei työvoiman '
+          + 'ja rahat, ja urakoitsija Thomas Kelly vei '
+          + 'rakennusaineita omaan taloonsa kolmen korttelin päähän. '
+          + 'Skandaali johti tutkintakomissioon ja hallituksen '
+          + 'vaihtumiseen, ja lopullinen lasku oli 9 379 000 '
+          + 'dollaria.'
+          + '\n\n'
+          + 'Kupolin päällä juoksee Kultapoika, viralliselta nimeltään '
+          + 'Ikuinen nuoruus ja yritteliäisyyden henki: alaston '
+          + 'nuorukainen, jolla on soihtu toisessa ja viljalyhde '
+          + 'toisessa kädessä. Patsas painaa 1 650 kiloa ja on '
+          + 'varpaasta soihdun kärkeen 5,25 metriä, ja asennettaessa '
+          + 'sen soihtu oli 77 metrissä Winnipegin korkein piste. '
+          + 'Simon tilasi sen 1915 pariisilaiselta Georges '
+          + 'Gardet’lta; se valmistui 1918, ja valimoa pommitettiin '
+          + 'mutta patsas säilyi ehjänä. Kuljetuslaiva otettiin sotaan, '
+          + 'joten patsas matkusti ruumassa kaksi kertaa Välimeren ja '
+          + 'viisi kertaa Atlantin yli ennen kuin se nostettiin '
+          + 'paikalleen marraskuussa 1919.',
+      kuvat: [
+        {
+          tiedosto: 'Manitoba Legislature December 2023.jpg',
+          selite: 'Joulukuun hämärässä kupolin päällä erottuu kullattu '
+            + 'juoksija, ja etualalla palavat puiston pallolyhdyt.',
+          lahde: 'Reid Campbell, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * ST. JOHN'SIN KOHDEKARTAN JUTUT (Opus 7.9.2026). Kahdeksan
+   * kohdetta, faktapohja docs/mantereet-tyoaineisto/faktapohja-stjohns.md
+   * ja sen erillinen tarkistus tarkistus-stjohns.md. Jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit "Colonial
+   * Building", "Fort William, Newfoundland", "Cabot Tower (St.
+   * John's)", "The Battery, St. John's", "Basilica of St. John the
+   * Baptist", "National War Memorial (Newfoundland)", "Cathedral of
+   * St. John the Baptist (St. John's)", "Water Street (St. John's)").
+   *
+   * MARCONI EI OLE TÄÄLLÄ. Vuoden 1901 vastaanotto on teemasivun oma
+   * aihe, ja Cabot Towerin juttu kertoo tornin oman tarinan — sama
+   * ratkaisu kuin Tangerin Pyhän Andreaksen kirkossa ja Matissessa
+   * (v1670). Samasta syystä vuoden 1762 Signal Hillin taistelu on
+   * vain lehden nostossa.
+   *
+   * CABOT TOWERIN VUOSILUKU: pääartikkeli sanoo 1897, tornin oma
+   * artikkeli 1898–1900. Juttu käyttää kohdeartikkelia
+   * (tarkistus-stjohns.md, kohta E).
+   */
+  stjohns: {
+    'Colonial Building': {
+      aika: '1850–1959',
+      teksti: 'Kun Newfoundland sai 1832 edustuksellisen hallinnon, '
+          + 'sen lakiasäätävällä kokouksella ei ollut taloa. '
+          + 'Ensimmäinen koti oli Mary Traversin majatalo Duckworth '
+          + 'Streetillä, ja oleskelu jäi lyhyeksi: kokous unohti '
+          + 'kiireessään hyväksyä rahat vuokraan. Talo paloi vuoden '
+          + '1846 suurpalossa, ja seuraavat seitsemäntoista vuotta '
+          + 'kokoonnuttiin milloin missäkin, muun muassa '
+          + 'raastuvassa.'
+          + '\n\n'
+          + 'Pysyvän talon peruskiven laski kuvernööri Sir John '
+          + 'Gaspar Le Marchant 24. toukokuuta 1847, ja rakennus '
+          + 'avattiin 28. tammikuuta 1850. Pääarkkitehti oli James '
+          + 'Purcell. Uusklassinen talo tehtiin valkoisesta '
+          + 'kalkkikivestä, joka tuotiin varta vasten Little '
+          + 'Islandilta Corkista Irlannista; julkisivussa on kuusi '
+          + 'joonialaista pylvästä ja päädyssä syvänä reliefinä '
+          + 'kuninkaalliset vaakunat. Koko talo maksoi 18 335 puntaa. '
+          + 'Isoisän matkavuonna 1873 tässä salissa istui '
+          + 'itsehallinnollisen brittiläisen siirtomaan parlamentti — '
+          + 'Newfoundland ei ollut Kanadaa eikä siitä tullut Kanadaa '
+          + 'ennen kuin 1949.'
+          + '\n\n'
+          + 'Talossa on kaksi tapaa, jotka jäivät elämään. Vuonna '
+          + '1880 puolalainen freskomaalari Alexander Pindikowski '
+          + 'istui viidentoista kuukauden tuomiota väärennöksestä ja '
+          + 'sai kuukauden lyhennyksen siitä, että hän maalasi '
+          + 'Colonial Buildingin ja kuvernöörin talon katot. Ja kun '
+          + 'hallituspuolue valitsi paikkansa, se asettui puhemiehen '
+          + 'vasemmalle puolelle eikä perinteiselle oikealle — siellä '
+          + 'olivat lämmittimet. Tapa jatkuu Newfoundlandin ja '
+          + 'Labradorin parlamentissa yhä.',
+      kuvat: [
+        {
+          tiedosto: 'Colonial Building, St. John\'s, Canada.jpg',
+          selite: 'Kuusi joonialaista pylvästä kannattaa päätykolmiota, '
+            + 'jonka reliefinä ovat kuninkaalliset vaakunat.',
+          lahde: 'Shhewitt, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Fort William': {
+      aika: '1698–1881',
+      teksti: 'Cavendish Squaren ja Duckworth Streetin kulmassa on '
+          + 'tukimuurissa laatta, ja se on kaikki mitä linnakkeesta '
+          + 'on jäljellä. Fort William rakennettiin 1698 ja valmistui '
+          + '1700: tiilipintaiset vallit, pomminkestävät '
+          + 'rintavarustukset, ruutikellarit ja kunnon kasarmit. Se '
+          + 'oli Newfoundlandin brittivaruskunnan alkuperäinen '
+          + 'esikunta. Sataman itäpäässä oli toinen linnake, Fort '
+          + 'George, ja niiden välillä kulki maanalainen käytävä; '
+          + 'Narrowsin eteläpuolella oli kolmas varustus, jota '
+          + 'sanottiin Linnaksi.'
+          + '\n\n'
+          + 'Linnake nousi vasta katastrofin jälkeen. Ranskalaiset '
+          + 'olivat tuhonneet kaupungin 1696, ja kun tuhannenviidensadan '
+          + 'miehen apujoukko saapui seuraavana kesänä, se löysi '
+          + 'autiot rauniot; talven aikana kolmestasadasta sotilaasta '
+          + 'kuoli 214 ruoan ja suojan puutteessa. Linnaketta '
+          + 'koeteltiin pian: ranskalaiset piirittivät kaupunkia 1705 '
+          + 'viisi viikkoa, ja 1709 varuskunta antautui lyhyen '
+          + 'vastarinnan jälkeen.'
+          + '\n\n'
+          + 'Paikka oli valittu huonosti. Linnake ei suojannut '
+          + 'satamaa kunnolla ja oli itse altis maahyökkäykselle, '
+          + 'joten britit rakensivat 1779 lännemmäksi Fort '
+          + 'Townshendin, ja Fort Williamista tuli sivuvarustus. '
+          + 'Vuonna 1881 se purettiin rautatien ratapihan ja hotellin '
+          + 'tieltä, ja kasarmia käytettiin asemarakennuksena, kunnes '
+          + 'sekin purettiin 1910. Kansalliseksi historialliseksi '
+          + 'kohteeksi paikka nimettiin 1952 — muistomerkkinä sille, '
+          + 'mitä ei enää ole.',
+      lahde: 'Wikipedia',
+    },
+    'Cabot Tower': {
+      aika: '1898–1900',
+      teksti: 'Signal Hillin laella oli masto jo noin vuonna 1704. '
+          + 'Kukkulaa sanottiin silloin nimellä the Lookout, ja '
+          + 'signaalimiehen työ oli katsoa merelle: kun alus näkyi, '
+          + 'hän kertoi lipuilla, minkätyyppinen se oli ja mistä '
+          + 'maasta se tuli, ja ampui tykillä, jotta kaupungissa '
+          + 'osattaisiin katsoa ylös. Alhaalla vastattiin '
+          + 'laukauksella. 1700-luvun loppuun mennessä laelle oli '
+          + 'rakennettu vartiotalo, ja 1800-luvulla signaloitiin '
+          + 'enimmäkseen kaupungin kauppahuoneille.'
+          + '\n\n'
+          + 'Cabot Tower on viimeinen näistä signaalitaloista. '
+          + 'Rakentaminen alkoi 1898 ja torni valmistui 1900; se '
+          + 'pystytettiin John Cabotin Newfoundlandiin saapumisen '
+          + '400-vuotispäivän ja kuningatar Viktorian timanttijuhlan '
+          + 'muistoksi. Hanke ei ollut suosittu. Kaupunki oli palanut '
+          + '1892 ja saaren pankit kaatuneet 1894, ja kun tuomari '
+          + 'D. W. Prowse ehdotti tornia, eräs kirjoitti '
+          + 'paikallislehdessä, että se on kuin panisi silkkihatun '
+          + 'sellaisen miehen päähän, jolla ei ole varaa saappaisiin. '
+          + 'Sairaalan uusi siipi sai paljon enemmän kannatusta.'
+          + '\n\n'
+          + 'Arkkitehti oli William Howe Greene, ja tyyli on myöhäistä '
+          + 'uusgotiikkaa: epäsäännöllisesti ladottua punaista '
+          + 'hiekkakiveä, kaksikerroksinen neliörunko ja sen '
+          + 'kaakkoiskulmassa kolmikerroksinen kahdeksankulmainen '
+          + 'torni. Lippusignalointi jatkui täällä vuoteen 1958. '
+          + 'Uudenvuodenaattona 1918 tornissa sattui räjähdys, kun '
+          + 'Michael Cantwell valmisteli ruutia keskipäivän '
+          + 'laukausta varten — syyksi arveltiin hänen piippuaan — ja '
+          + 'eteläkulma korjattiin jälkeenpäin.',
+      kuvat: [
+        {
+          tiedosto: 'Cabot Tower on Signal Hill.jpg',
+          selite: 'Torni seisoo paljaalla kalliokukkulalla, ja sen luo '
+            + 'kiemurtelee tie alhaalta kaupungista.',
+          lahde: 'WiseWoman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'The Battery': {
+      aika: '1770-luvulta',
+      teksti: 'Satamansuun pohjoisrinteellä, Signal Hillin juurella, '
+          + 'on kaupunginosa jota sanotaan outportiksi kaupungin '
+          + 'sisällä: jyrkkiä rinteitä, kapeita kujia ja '
+          + 'kirkkaanvärisiä taloja, jotka ovat kiinni kalliossa. '
+          + 'Nimi tulee tykkipattereista, joita rinteellä on ollut '
+          + 'vuosisatojen ajan — muun muassa Fort Waldegrave — ja '
+          + 'joita miehitettiin vielä molemmissa maailmansodissa.'
+          + '\n\n'
+          + 'Rannassa on Chain Rock, kallionokka, joka on antanut '
+          + 'nimensä yhdelle kaupungin oudoimmista laitteista. Jo '
+          + '1770-luvulta lähtien kiveen kiinnitettiin ketju, joka '
+          + 'ulottui salmen yli Fort Amherstiin. Vastarannan kiveä '
+          + 'sanotaan Pancake Rockiksi, ja kivien väli on 174 metriä. '
+          + 'Iltaisin ketju kiristettiin vintturilla pintaan, jolloin '
+          + 'satamaan ei päässyt kukaan. Maailmansodissa ketjun tilalle '
+          + 'tuli sukellusveneverkko.'
+          + '\n\n'
+          + 'Rinne, joka tekee näkymän, tekee myös riskin. Alueella on '
+          + 'ollut usein pieniä maanvyöryjä, ja 1900-luvulla kolme '
+          + 'lumivyöryä vei ihmishenkiä tai aiheutti vakavia '
+          + 'loukkaantumisia — kaksi helmikuussa 1921 ja yksi '
+          + 'helmikuussa 1959. Kaupunki alkoi tutkia rinnettä 1995 ja '
+          + 'käytti arviolta 300 000 dollaria sen vakauttamiseen. '
+          + 'Silti tammikuussa 2020, ennätyslumisateen ja '
+          + 'hurrikaanivoimaisten tuulten jälkeen, yksi talo '
+          + 'vaurioitui pahoin lumivyöryssä.',
+      kuvat: [
+        {
+          tiedosto: 'An aerial view of The Battery, Located in St. John\'s, Newfoundland and Labrador.jpg',
+          selite: 'Ilmasta katsottuna värilliset talot ovat kiinni '
+            + 'jyrkässä kalliossa aivan veden rajassa.',
+          lahde: 'Erikallen920, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kansallinen sotamuistomerkki': {
+      aika: '1924',
+      teksti: 'Muistomerkki on King’s Beachilla Water Streetin '
+          + 'varrella, ja paikka on valittu tarkasti: siitä näkyy koko '
+          + 'satama, jonka läpi jokainen Eurooppaan lähtenyt sotilas '
+          + 'kulki. Muistomerkki paljastettiin Memorial Daynä '
+          + '1. heinäkuuta 1924, ja paljastajaksi pyydettiin '
+          + 'sotamarsalkka Douglas Haig. Paikalle tuli 20 000 '
+          + 'ihmistä — noin kymmenen prosenttia koko saaren '
+          + 'väestöstä.'
+          + '\n\n'
+          + 'Päivämäärä on sama kuin Beaumont-Hamelin päivä. '
+          + '1. heinäkuuta 1916 Royal Newfoundland Regiment menetti '
+          + 'noin puolessa tunnissa 86 prosenttia vahvuudestaan '
+          + 'kaatuneina, kadonneina tai haavoittuneina; seuraavana '
+          + 'aamuna kahdeksastasadasta miehestä ilmoittautui '
+          + 'kuusikymmentäkahdeksan. Sodassa kuoli noin 1 700 '
+          + 'newfoundlandilaista, joista 820:llä ei ole tunnettua '
+          + 'hautaa. Rahaa muistomerkkiin kerättiin ympäri saarta, ja '
+          + 'työtä valvoivat rykmentin pappi Thomas Nangle ja '
+          + 'kapteeni Gerald Whitty.'
+          + '\n\n'
+          + 'Viisi pronssihahmoa valettiin Lontoossa englantilaisten '
+          + 'Ferdinand Victor Blundstonen ja Gilbert Bayesin '
+          + 'malleista. Ylimpänä on nainen, jolla on soihtu '
+          + 'vasemmassa ja miekka oikeassa kädessä. Sivusiivillä ovat '
+          + 'merireservin merimies kaukoputkineen ja rykmentin '
+          + 'sotilas, ja alempana kalastajat öljyvaatteissa ja '
+          + 'kumisaappaissa sekä metsätyömies kirves olalla — '
+          + 'kauppalaivaston ja metsäkomppanian miehet. '
+          + 'Satavuotispäivänään 2024 muistomerkki kunnostettiin ja '
+          + 'siihen lisättiin tuntemattoman sotilaan hauta. Se on '
+          + 'ainoa kerta, jolloin Commonwealth War Graves Commission '
+          + 'on sallinut samaan maahan toisen tuntemattoman sotilaan '
+          + 'haudan — syystä, joka on itsessään historiaa: '
+          + 'Newfoundland ei ollut vielä Kanadaa, kun sen miehet '
+          + 'lähtivät.',
+      kuvat: [
+        {
+          tiedosto: 'Newfoundland National War Memorial.jpg',
+          selite: 'Viisi pronssihahmoa graniittijalustalla, seppeleitä '
+            + 'alla ja värilliset talot takana.',
+          lahde: 'Nilfanion, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Johannes Kastajan basilika': {
+      aika: '1839–1855',
+      teksti: 'Basilika on Newfoundlandin siihenastisen historian '
+          + 'suurin rakennushanke. Kaivutyöt alkoivat toukokuussa '
+          + '1839, peruskivi laskettiin toukokuussa 1841, ja kirkko '
+          + 'vihittiin 9. syyskuuta 1855. Valmistuessaan se oli '
+          + 'Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä '
+          + 'Kanadan suurin katedraalikirkko ja maan toiseksi suurin '
+          + 'kirkko. Se on myös yksi harvoista rakennuksista, jotka '
+          + 'selvisivät vuoden 1892 suurpalosta.'
+          + '\n\n'
+          + 'Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- '
+          + 'akselille eikä se katso satamansuulle. Sen julkisivu on '
+          + 'käännetty talvipäivänseisauksen nousevan ja '
+          + 'kesäpäivänseisauksen laskevan auringon linjaan — samalla '
+          + 'periaatteella kuin keskiaikainen Chartresin katedraali. '
+          + 'Piispa Michael Anthony Flemingille sen suunnitteli Tanskan '
+          + 'hallituksen arkkitehti Ole Joergen Schmidt Hampurin '
+          + 'Altonasta, ja tyyli on lombardialainen romaaninen.'
+          + '\n\n'
+          + 'Aineet tuotiin kaukaa: kalkkikivi ja graniitti Galwaysta '
+          + 'ja Dublinista, 400 000 tiiltä Hampurista, ja niiden '
+          + 'lisäksi paikallista hiekkakiveä. Ulkomitat ovat 260 × 220 '
+          + 'jalkaa, tornit nousevat 150 jalkaan, ja kirkkoon mahtuu '
+          + 'noin kaksituhattaviisisataa ihmistä. Itätornissa on kahden '
+          + 'tonnin kello, jonka piispa Mullock osti helmikuussa 1850 '
+          + 'ja jonka John Murphy valoi Dublinissa; se oli siihen '
+          + 'mennessä suurin Irlannissa valettu kello ja voitti '
+          + 'kultamitalin. Alttarilla on John Hoganin 1854 carraran '
+          + 'marmorista veistämä Kuollut Kristus — kolmesta '
+          + 'samanlaisesta veistoksesta ainoa Irlannin ulkopuolella.',
+      kuvat: [
+        {
+          tiedosto: 'St John\'s Basilica.jpg',
+          selite: 'Basilikan harmaa kalkkikivijulkisivu ja kaksi tornia, '
+            + 'joista toisessa on kello.',
+          lahde: 'Nilfanion, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Anglikaaninen katedraali': {
+      aika: '1847–1905',
+      teksti: 'Anglikaaninen seurakunta perustettiin 1699 vetoomuksella '
+          + 'Lontoon piispalle Henry Comptonille. Vetoomuksessa '
+          + 'pyydettiin apua myös kirkon jälleenrakentamiseen: '
+          + 'ranskalaiset olivat tuhonneet sen ja koko kaupungin '
+          + '1696. Paikalla tai sen lähellä on ollut ainakin kuusi '
+          + 'puukirkkoa, ja jokainen niistä tuhoutui sotatoimissa.'
+          + '\n\n'
+          + 'Ensimmäinen kivikirkko aloitettiin 1843, mutta se paloi '
+          + 'vuoden 1846 suurpalossa ennen kuin siitä ehti tulla '
+          + 'muuta kuin peruskivi ja alkua. Nykyisen katedraalin '
+          + 'aloitti 1847 piispa Edward Feild, ja piirustukset '
+          + 'tilattiin uusgotiikan johtavalta arkkitehdilta George '
+          + 'Gilbert Scottilta. Kirkkosali rakennettiin 1847–1850, ja '
+          + 'se sai toimia yksinään koko katedraalina 35 vuotta; '
+          + 'kuoro ja poikkilaivat rakennettiin vasta 1880–1885, '
+          + 'jolloin kirkko sai latinalaisen ristin muodon. Isoisän '
+          + 'matkavuonna 1873 kirkko oli siis vielä pelkkä pitkä '
+          + 'sali.'
+          + '\n\n'
+          + '8. heinäkuuta 1892 tuli tuhosi sen. Kattopalkit '
+          + 'syttyivät, katto romahti ja veti mukanaan kirkkosalin '
+          + 'ylemmät seinät ja pilarit, ja kuumuus sulatti lyijyn '
+          + 'lasimaalauksista niin, että kaikki paitsi kaksi '
+          + 'tuhoutuivat; ainoa säilynyt on sakastissa. Kunnostus '
+          + 'alkoi 1893, kuori ja poikkilaivat valmistuivat 1895, '
+          + 'kirkkosali 1905, ja kirkko vihittiin uudelleen '
+          + '21. syyskuuta 1905. Yksi asia jäi tekemättä: Scottin '
+          + 'suunnittelema torninhuippu puuttuu yhä. Insinöörit ovat '
+          + 'todenneet 150 jalan tornin mahdolliseksi, mutta '
+          + 'kustannusarvio oli kolme miljoonaa dollaria, eikä '
+          + 'seurakunnalla ole aikeita rakentaa sitä.',
+      kuvat: [
+        {
+          tiedosto: 'St-john-the-baptist-cathedral-newfoundland.jpg',
+          selite: 'Harmaakivinen uusgoottilainen kirkko syksyisten puiden '
+            + 'takana; torninhuippu puuttuu yhä.',
+          lahde: 'Anne Beaumont, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Water Street': {
+      aika: '1500-luvulta',
+      teksti: 'Water Street kulkee sataman rantaa pitkin, ja se on '
+          + 'kaupungin vanhin katulinja: siitä tuli kauppapaikka '
+          + 'baskeille, ranskalaisille, espanjalaisille, '
+          + 'portugalilaisille ja englantilaisille jo silloin, kun '
+          + 'St. John’s oli kalastuskausien leiripaikka eikä vielä '
+          + 'kaupunki. Kaikki tuli ja meni tämän kadun kautta, koska '
+          + 'kaikki tuli ja meni satamasta.'
+          + '\n\n'
+          + 'Kadun varren liikerakennukset muodostavat Water Street '
+          + 'Historic Districtin, joka nimettiin kansalliseksi '
+          + 'historialliseksi kohteeksi 1987. Ne edustavat 1800-luvun '
+          + 'kauppahuoneita, Newfoundlandin kalastusta ja Atlantin '
+          + 'kauppaa — ja useimmat ovat vuoden 1892 suurpalon '
+          + 'jälkeisiä, koska palo söi koko itäpään.'
+          + '\n\n'
+          + 'Katu on yhä kaupungin kaupallinen ydin: matkamuistokauppoja, '
+          + 'ravintoloita, pubeja ja putiikkeja matalissa '
+          + 'perintörakennuksissa. Vuonna 2020 kaupunki teki siitä '
+          + 'kesäkaudeksi osittain kävelykadun.',
+      kuvat: [
+        {
+          tiedosto: 'Water street st. john\'s2.jpg',
+          selite: 'Matalia perintörakennuksia rinteessä laskevan kadun '
+            + 'varrella, ja perällä keskustan tornitalo.',
+          lahde: 'Jcmurphy at English Wikipedia, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * KUMASIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026, paketti
+   * O9). Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.kumasi, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Centre for National Culture (Kumasi)", "Prempeh II
+   * Jubilee Museum", "Kumasi Zoo", "Kejetia Market", "Komfo Anokye
+   * Teaching Hospital", "Okomfo Anokye", "Armed Forces Museum
+   * (Ghana)", "Ramseyer Memorial Presbyterian Church", "Baba Yara
+   * Stadium", "Rattray Park", "Kumasi", "Anglo-Ashanti wars").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat nimen synty kum-puun alla, kultajakkaran synty ja
+   * Asanten liitto, vuosi 1873 ja Wolseleyn retki, jälleenrakennus
+   * ja väkilukukiista sekä Kumawood; teemasivu kertoo
+   * Bosumtwe-järvestä, kahdesta sadekaudesta, puutarhakaupungista,
+   * Owabin lintusuosta ja metsätaloudesta. Lähimmät kosketuskohdat
+   * on ratkaistu näin (tarkistus-kumasi.md, kohta G):
+   *  - Komfo Anokyen sairaala: lehti kertoo kultajakkarasta, juttu
+   *    miekasta ja sairaalasta.
+   *  - Ramseyerin kirkko: lehden 1873-nosto EI mainitse vangittuja
+   *    lähetyssaarnaajia lainkaan, jotta ne ovat tämän jutun aihe.
+   *  - Kumasin linnake: vuoden 1900 sota on GHA-skandaalin aihe
+   *    (skandaalit.js, kultajakkaran sota), ja juttu kertoo siitä
+   *    vain rakennuksen historiana yhdessä kappaleessa.
+   *
+   * MANHYIAN PALATSI EI OLE KOHDE: se on Ghanan maalehden nosto ja
+   * AFRICA_FACTS-sähkeen aihe. Perustelu maakartat.js:n
+   * kumasi-lohkossa.
+   */
+  kumasi: {
+    'Prempeh II:n museo': {
+      aika: '1954 ja 1956',
+      teksti: 'Ennen Ghanan itsenäisyyttä Alex A. Y. Kyerematen alkoi '
+          + 'asantehene Prempeh II:n ja Asantemanin neuvoston tuella '
+          + 'suunnitella Asanten kulttuurikeskusta, joka säilyttäisi '
+          + 'ja esittelisi kansan omaa kulttuuria. Suunnitelmaan '
+          + 'kuuluivat kirjasto, perinteinen kappeli, näyttelyhalli, '
+          + 'teatteri, tanssiareena ja museo — kokonaisuudesta piti '
+          + 'tulla yhtä aikaa ulkoilmamuseo ja kulttuurikeskus.'
+        + '\n\n'
+        + 'Keskus avattiin 1956. Avajaisissa Prempeh II laski '
+          + 'peruskiven sen pääkohteelle, jonka nimi oli '
+          + 'Traditional House for the Ashanti Museum and Art '
+          + 'Gallery. Alueella toimii myös Prempeh II Jubilee '
+          + 'Museum, joka perustettiin jo 1954 ja on nimetty saman '
+          + 'kuninkaan mukaan.'
+        + '\n\n'
+        + 'Nimi vaihtui politiikan takia. Keskus joutui ristiriitaan '
+          + 'presidentti Kwame Nkrumahin kansallisen linjan kanssa, '
+          + 'ja se nimettiin 1963 uudelleen kansalliseksi '
+          + 'kulttuurikeskukseksi. Kaksi nimeä kertovat samasta '
+          + 'kysymyksestä: kuuluuko asantien perintö Asantelle vai '
+          + 'koko maalle.',
+      lahde: 'Wikipedia',
+    },
+    'Kumasin eläintarha': {
+      aika: '1951',
+      teksti: 'Eläintarha perustettiin 1951, ja Asantemanin neuvosto '
+          + 'avasi sen virallisesti 1957 — samana vuonna, jona Ghana '
+          + 'itsenäistyi. Tarkoitus oli suojella luontoa ja näyttää '
+          + 'kävijöille maan omia villieläimiä.'
+        + '\n\n'
+        + 'Puolentoista neliökilometrin alue on aivan keskustassa: '
+          + 'se on Kejetian linja-autoaseman, vanhan laukkaradan ja '
+          + 'kansallisen kulttuurikeskuksen välissä. Lajeja on noin '
+          + 'neljäkymmentä ja yksilöitä yli sataviisikymmentä.'
+        + '\n\n'
+        + 'Vaikuttavin osa ei ole aidattu lainkaan. Tarhan puissa '
+          + 'lepää tuhansia lepakoita, ja ne ovat paikan tunnetuin '
+          + 'näky. Rakennusten kunto on toista maata: paikallisten '
+          + 'mukaan tarha kaipaa kipeästi korjausta, ja sama koskee '
+          + 'useimpia kaupungin puistoja.',
+      lahde: 'Wikipedia',
+    },
+    'Kejetian tori': {
+      aika: '1924',
+      teksti: 'Kumasin keskustori, jota sanotaan Kejetiaksi, on '
+          + 'Länsi-Afrikan suurin yksittäinen tori. Myymälöitä ja '
+          + 'kojuja on yli kahdeksantuhatta, myyjiä kaksikymmentä'
+          + 'tuhatta, ja kävijöitä lasketaan noin viisikymmentä'
+          + 'tuhatta päivässä.'
+        + '\n\n'
+        + 'Tori perustettiin 1924 yhtä aikaa Accran Makolan torin '
+          + 'kanssa. Malli tuli brittiläisistä toreista, ja tarkoitus '
+          + 'oli saada suuri määrä myyjiä saman järjestyksen alle; '
+          + 'samalla rakennettiin kuorma-autoasema. Investointeja ei '
+          + 'juuri tullut, joten rakenteet ja hygienia jäivät '
+          + 'huonoiksi. Siirtomaahallinto yritti hillitä myyjien '
+          + 'määrää edistämällä suurteollisuutta, mutta itsenäisyyden '
+          + 'jälkeenkin suuri osa työvoimasta jäi pienkauppaan.'
+        + '\n\n'
+        + 'Uudistus on kesken. Ensimmäinen vaihe rakennettiin '
+          + '2015–2018, ja siihen tuli noin 8 420 myymälää; toinen '
+          + 'vaihe aloitettiin toukokuussa 2019 eikä se ole '
+          + 'valmistunut. Tulipalot ovat torin toistuva vitsaus: '
+          + 'tammi- ja maaliskuussa 2016 paloi yli kaksisataa '
+          + 'myymälää, ja uusi palo syttyi tammikuussa 2025.',
+      lahde: 'Wikipedia',
+    },
+    'Komfo Anokyen sairaala': {
+      aika: '1954',
+      teksti: 'Sairaala rakennettiin 1954 urakoitsijoidensa mukaan '
+          + 'nimetyllä lisänimellä GEE, ja siitä tuli Ashantin, '
+          + 'Brong Ahafon ja pohjoisten alueiden pääsairaala. '
+          + 'Opetussairaalaksi se muutettiin 1975. Vuodepaikkoja on '
+          + 'nyt noin tuhat, kun niitä alussa oli viisisataa, ja '
+          + 'uusin rakennus on kansallinen tapaturma- ja '
+          + 'päivystyskeskus.'
+        + '\n\n'
+        + 'Nimi on vanhempi kuin talo. Okomfo Anokye oli Asanten '
+          + 'ensimmäinen pappi ja kuningas Osei Tutun neuvonantaja '
+          + '1600-luvun lopulla. Perimätiedon mukaan hän löi maahan '
+          + 'miekan, jota kukaan ei ole saanut irti, ja miekka on '
+          + 'sairaalan alueella; paikkaa sanotaan Komfo Anokyen '
+          + 'miekkamuseoksi.'
+        + '\n\n'
+        + 'Tarinaa kannattaa lukea niin kuin lähde sen kertoo. '
+          + 'Wikipedia käyttää sanaa "uskotaan" ja merkitsee saman '
+          + 'artikkelin toisen väitteen — että eurooppalaiset '
+          + 'olisivat yrittäneet irrottaa Anokyen tikaria '
+          + 'viidensadan vuoden ajan — lähteettömäksi. Miekka on '
+          + 'siis perimätietoa, ei mittaustulos, ja juuri siksi se '
+          + 'on yhä paikallaan.',
+      kuvat: [
+        {
+          tiedosto: 'Komfo Anokye Teaching Hospital, Kumasi.jpg',
+          selite: 'Sairaalan pitkä siipi nousee leikattujen '
+            + 'pensasaitojen ja nurmen takaa neljään kerrokseen.',
+          lahde: 'OER Africa, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kumasin linnake': {
+      aika: '1896 ja 1897',
+      teksti: 'Kolmannessa brittiläis-asantilaisessa sodassa '
+          + 'kaupungin Aban-palatsi tuhottiin, ja britit käyttivät '
+          + 'raunioiden kiviaineksen linnakkeeseen, jonka he '
+          + 'rakensivat Kumasiin 1896. Linnake tuhoutui samana '
+          + 'vuonna aseellisessa kapinassa, ja tilalle pystytettiin '
+          + 'uusi 1897. Se seisoo yhä.'
+        + '\n\n'
+        + 'Maaliskuussa 1900 linnakkeessa pidettiin '
+          + 'kaksikymmentäyhdeksän brittiä vangittuina useiden '
+          + 'viikkojen ajan; piirittäjiä johti Ejisun kuningataräiti '
+          + 'Yaa Asantewaa. Naiset ja lapset päästettiin lopulta '
+          + 'vapaaksi, ja he hälyttivät siirtomaajoukot nykyisen '
+          + 'Nigerian alueelta hakemaan loput.'
+        + '\n\n'
+        + 'Vuosina 1952–1953 puolustusvoimat ottivat rakennuksen ja '
+          + 'muuttivat sen museoksi. Ensimmäisessä salissa ovat '
+          + 'Kultarannikon armeijan toisen maailmansodan aseet ja '
+          + 'mitalit, toinen sali on takatornissa, kolmannessa ovat '
+          + 'Royal West African Frontier Forcen muotokuvat. '
+          + 'Toiseksi viimeisessä salissa katsovat vastakkain '
+          + 'Prempeh I, Prempeh II ja Yaa Asantewaa; viimeisessä '
+          + 'ovat liput.',
+      kuvat: [
+        {
+          tiedosto: 'Fort Kumasi and Millitary Museum (2).jpg',
+          selite: 'Linnakkeen punaisen sisäpihan keskeltä kohoaa '
+            + 'kahdeksankulmainen torni peltikattoineen.',
+          lahde: 'Noahalorwu, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ramseyerin muistokirkko': {
+      aika: '1869–1914',
+      teksti: 'Kesäkuussa 1869 Asanten armeija otti vangiksi Baselin '
+          + 'lähetyssaarnaajan Fritz Augustus Ramseyerin, hänen '
+          + 'vaimonsa Rosan, veljensä Johanneksen ja akan-kristityn '
+          + 'Thomas Owusun. Neuvottelut vapauttamisesta epäonnistuivat '
+          + 'puolen vuosikymmenen ajan; vasta kun britit valtasivat '
+          + 'Kumasin, neljä vankia pääsivät vapaaksi. Isoisän '
+          + 'matkavuonna 1873 he olivat siis yhä kaupungissa.'
+        + '\n\n'
+        + 'Ramseyer palasi Kumasiin lähetyssaarnaajana 1896, '
+          + 'kaksikymmentäkaksi vuotta vapautumisensa jälkeen, ja '
+          + 'osti Thomas Owusun avustuksella maata Bantamasta '
+          + 'nykyisen Komfo Anokyen sairaalan tienoilta. Vuodessa '
+          + 'syntyi kaksi lähetysasemaa ja kaksi koulua. Hanke ei '
+          + 'ollut suosittu: sotilaallisen valloituksen jälkeen '
+          + 'lähetystyötä pidettiin siirtomaavallan jatkeena ja '
+          + 'kristinuskoa "voittajan uskontona".'
+        + '\n\n'
+        + 'Vuoteen 1900 mennessä Baselin lähetyksellä oli Kumasissa '
+          + 'kuusitoista koulua ja niissä 311 oppilasta. Kappeli '
+          + 'rakennettiin 1907 seurakunnan talkootyönä ja nimettiin '
+          + 'Ebenezerin kirkoksi. Ramseyerin kuoltua 6. elokuuta '
+          + '1914 se sai hänen nimensä. Nykyisessä katedraalissa on '
+          + 'kolmetuhatta istumapaikkaa.',
+      lahde: 'Wikipedia',
+    },
+    'Baba Yaran stadion': {
+      aika: '1957',
+      teksti: 'United African Company rakensi stadionin 1957, ja '
+          + 'jalkapallokentäksi se vihittiin 1959. Ensimmäiset '
+          + 'katsomot tulivat 1971, ja koko paikka rakennettiin '
+          + 'uusiksi 1977. Nykyisin katsojia mahtuu 40 528 — enemmän '
+          + 'kuin mihinkään muuhun Ghanan stadioniin.'
+        + '\n\n'
+        + 'Nimi on kumasilaisen jalkapalloilijan. Baba Yara '
+          + '(1936–1969) pelasi Asante Kotokossa vuosina 1955–1961, '
+          + 'ja stadion nimettiin hänen mukaansa 2004. Kotoko on yhä '
+          + 'talon isäntä, ja sen rinnalla pelaa King Faisal.'
+        + '\n\n'
+        + 'Kolmas suuri remontti valmistui 2008: länsikatsomo '
+          + 'purettiin ja tilalle tuli kaksikerroksinen katsomo '
+          + 'lehdistö- ja vierastiloineen, muut katsomot uusittiin, '
+          + 'ja katsomon ja kentän väliin asennettiin läpinäkyvät '
+          + 'paneelit, jotta yleisö ei pääse kentälle. Stadion on '
+          + 'isännöinyt Afrikan cupin otteluita kolmesti: 1978 kuusi '
+          + 'alkulohko-ottelua ja välierän, 2000 seitsemän ottelua ja '
+          + '2008 uudestaan.',
+      kuvat: [
+        {
+          tiedosto: 'Baba Yara Sports Stadium in Kumasi.jpg',
+          selite: 'Iltaottelussa valonheittimet valaisevat kentän ja '
+            + 'keltaiset katsomot täyttyvät reunoja myöten.',
+          lahde: 'Michael Schubert, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rattrayn puisto': {
+      aika: '2015',
+      teksti: 'Kumasi Metropolitan Assembly rakensi puiston '
+          + 'palauttaakseen kaupungille sen vanhan lisänimen, '
+          + 'Länsi-Afrikan puutarhakaupungin. Se vihittiin '
+          + '20. kesäkuuta 2015, ja vihkijöinä olivat presidentti '
+          + 'John Dramani Mahama, asantehene Otumfuo Nana Osei Tutu '
+          + 'II ja kaupungin pormestari Kojo Bonsu.'
+        + '\n\n'
+        + 'Nimi tuli kapteeni Robert Sutherland Rattraylta, '
+          + 'skotlantilaiselta, joka toimi Kultarannikon '
+          + 'apulaissiirtomaasihteerinä ja Accran lakiasäätävän '
+          + 'kokouksen sihteerinä vuonna 1919.'
+        + '\n\n'
+        + 'Puistossa on tekojärvi, lasten leikkipaikka, kuntosali, '
+          + 'golfkärry ja langaton verkko sekä ravintoloita ja '
+          + 'kahviloita. Ylpeyden aihe on kuuden neliömetrin '
+          + 'tanssiva suihkulähde: se oli maansa ensimmäinen.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * KANON KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026, paketti
+   * O9). Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.kano, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Sabon Gari Market", "Sabon Gari", "Dalla Hill",
+   * "Kofar Mata Dye Pits", "Sani Abacha Stadium", "Kano Pillars
+   * F.C.", "Great Mosque of Kano", "Gidan Rumfa", "Ancient Kano
+   * City Walls", "Gates of Hausa kingdoms", "Gidan Makama Museum
+   * Kano", "Kano (city)", "Kano Chronicle").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat Kanon kronikka, islamin tulo ja sultanaatti, Rumfan
+   * vuosisata, vuosi 1873 Sokoton kalifaatin emiirikuntana ja
+   * durbar; teemasivu kertoo Kurmin torista, marokkonahasta,
+   * maapähkinästä ja rautatiestä sekä hausasta kauppakielenä.
+   * Rajapinnat (tarkistus-kano.md, kohta G): kronikkanosto kertoo
+   * käsikirjoituksesta ja kuningasluettelosta, ja yhdentoista
+   * klaanin ennustus sekä Barbushe ovat Dala-kukkulan jutun aihe;
+   * Rumfa-nosto ei kerro palatsista eikä torista rakennuksina;
+   * durbar-nosto mainitsee Kofar Kudun vain reittinä.
+   *
+   * NYKYKONFLIKTIT JÄTETÄÄN POIS KOKONAAN (Raamattu: ei nykysotaa,
+   * ei nykypolitiikkaa). Suurmoskeijan juttu päättyy 1950-luvun
+   * jälleenrakennukseen, ja Sabon Garin juttu vuoden 1983
+   * uudisrakennukseen. Sama linjaus kuin Aleppossa ja Bagdadissa.
+   */
+  kano: {
+    'Sabon Garin tori': {
+      aika: '1914 ja 1915',
+      teksti: 'Sabon gari tarkoittaa hausaksi uutta kaupunkia. Jo '
+          + 'ennen kuin britit saapuivat Pohjois-Nigeriaan vuonna '
+          + '1900, kaupungeissa oli vakiintuneita uudisasukkaiden '
+          + 'yhteisöjä, jotka asuivat erillään vanhoista '
+          + 'asutuksista mutta emiirin vallan alaisina.'
+        + '\n\n'
+        + 'Uudet rautatiet toivat Etelä-Nigeriasta paljon työläisiä '
+          + 'ja kauppiaita, ja he asettuivat näihin uusiin '
+          + 'kaupunginosiin. Vuoden 1914 Cantonments Proclamation '
+          + 'vakiinnutti järjestelyn hallinnollisesti. Tyypillinen '
+          + 'pohjoisnigerialainen kaupunki koostui sen jälkeen '
+          + 'neljästä osasta: muurien sisäisestä vanhastakaupungista, '
+          + 'sabon garista, tudun wadasta niille pohjoisen väelle '
+          + 'joka ei ollut paikallista, sekä muutamasta '
+          + 'eurooppalaisten asuinalueesta.'
+        + '\n\n'
+        + 'Tori rakennettiin 1914, mutta se avattiin vasta 1915. '
+          + 'Kanon hallinto rakensi sen uudelleen nykyaikaisena 1983, '
+          + 'ja se on nykyään koko kaupungin suurin tori. Alue kuuluu '
+          + 'Faggen paikallishallintoon, jonka pinta-ala on 21 '
+          + 'neliökilometriä ja jonka päätoimiala on kauppa.',
+      lahde: 'Wikipedia',
+    },
+    'Dala-kukkula': {
+      aika: '600-luku',
+      teksti: 'Kaupunki tunnettiin alun perin nimellä Dala tämän '
+          + 'kukkulan mukaan, ja bornulaiset lähteet käyttivät sitä '
+          + 'nimeä 1400-luvun loppuun asti. Kukkula kohoaa 534 '
+          + 'metriin merenpinnasta, ja huipulle nousee 101 porrasta. '
+          + '(Wikipedia merkitsee korkeusluvun itse epäselväksi: '
+          + 'sadalla portaalla ei nousta puolta kilometriä.)'
+        + '\n\n'
+        + '600-luvulla kukkulalla asui metsästäjien ja keräilijöiden '
+          + 'yhteisö, joka teki rautatöitä. Perimätieto kertoo '
+          + 'Barbushesta, kookkaasta ja voimakkaasta miehestä, joka '
+          + 'metsästi norsuja kepillään ja kantoi ne selässään '
+          + 'kukkulalle. Hän rakensi sinne pyhäkön Tsumburbura-'
+          + 'nimiselle jumaluudelle, jota hausat palvoivat ennen '
+          + 'islamia. Vain Barbushe sai käydä pyhäkössä, ja hän '
+          + 'laskeutui kukkulalta vain kahtena juhlapäivänä; niiden '
+          + 'lähestyessä seudun väki toi uhrieläimiä.'
+        + '\n\n'
+        + 'Kanon kronikka jatkaa tarinan. Se kertoo yhdestätoista '
+          + 'klaanista — suolankeittäjistä, oluenpanijoista, sepistä '
+          + '— joita hengellinen johtaja varoitti, että tulee '
+          + 'muukalainen, joka kaataa heidän pyhän puunsa ja ottaa '
+          + 'vallan: ellei omana aikananne, niin lastenne aikana. '
+          + 'Pian saapui Bagauda, ja hänestä tuli kronikan mukaan '
+          + 'Kanon ensimmäinen kuningas.',
+      kuvat: [
+        {
+          tiedosto: 'Dala Hill, Kano.jpg',
+          selite: 'Ilmasta katsottuna kukkulan kylkeen on hakattu '
+            + 'porrastie, ja tasainen laki nousee tiheän '
+            + 'vanhankaupungin yläpuolelle.',
+          lahde: 'Solasly, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kofar Matan värjäämöt': {
+      aika: '1400-luku',
+      teksti: 'Kofar Matan portin vieressä maassa ammottaa rivi '
+          + 'syviä pyöreitä kuoppia, joissa käy indigoliuos. Paikkaa '
+          + 'pidetään yhtenä Länsi-Afrikan pitkäikäisimmistä '
+          + 'yhtäjaksoisesti toimivista värjäämöistä; alkua '
+          + 'jäljitetään yli viidensadan vuoden taakse, aikaan '
+          + 'jolloin Kano oli Saharan-kaupan suuria keskuksia.'
+        + '\n\n'
+        + 'Väri syntyy toistolla eikä keitolla. Kangas kastetaan '
+          + 'altaaseen kerta toisensa jälkeen ja nostetaan välillä '
+          + 'ilmaan hapettumaan — vasta hapettuminen tekee '
+          + 'kellertävästä liemestä syvän sinisen. Mitä useammin '
+          + 'kastetaan, sitä tummempi sävy. Työn tekevät pääosin '
+          + 'miesvärjärit, ja tieto liemen valmistuksesta ja '
+          + 'kankaan käsittelystä kulkee suvuissa; menetelmä on '
+          + 'muuttunut vähän sukupolvesta toiseen.'
+        + '\n\n'
+        + 'Kanossa värjättyä kangasta myytiin esikoloniaalisena '
+          + 'aikana laajalti nykyisen Pohjois-Nigerian alueella ja '
+          + 'sen ulkopuolellakin, ja kuopat kävivät läpi koko '
+          + 'siirtomaakauden. Ne ovat käytössä yhä, mutta '
+          + 'kaupunkirakentaminen, ympäristöpaine ja nuorempien '
+          + 'polvien vähenevä kiinnostus ovat saaneet monet '
+          + 'vaatimaan paikalle suojelua.',
+      lahde: 'Wikipedia',
+    },
+    'Sani Abachan stadion': {
+      aika: '2000 ja 2009',
+      teksti: 'Kanon monitoimistadion on Kano Pillarsin koti, ja '
+          + 'katsojia siihen mahtuu kuusitoistatuhatta. Se on '
+          + 'nimetty entisen valtionpäämiehen, kenraali Sani '
+          + 'Abachan mukaan.'
+        + '\n\n'
+        + 'Stadion on nähnyt enemmän kansainvälistä jalkapalloa kuin '
+          + 'moni suurempi areena. Se isännöi vuoden 1999 nuorten '
+          + 'maailmanmestaruuskisojen otteluita, vuoden 2000 Afrikan '
+          + 'cupia ja vuoden 2009 alle 17-vuotiaiden MM-kisoja.'
+        + '\n\n'
+        + 'Kotiyleisö on tehnyt oman ennätyksensä. Kaudella 2017 '
+          + 'Kano Pillarsin kotiotteluissa oli keskimäärin '
+          + 'kymmenentuhatta katsojaa — korkein keskiarvo, joka '
+          + 'Nigerian liigassa on koskaan kirjattu.',
+      lahde: 'Wikipedia',
+    },
+    'Kanon suurmoskeija': {
+      aika: '1400-luku',
+      teksti: 'Kanon perjantaimoskeija on Nigerian vanhin moskeija. '
+          + 'Se rakennettiin 1400-luvulla Muhammad Rumfalle, ja se '
+          + 'oli savesta ja soro- eli tornityyppinen. Moskeija on '
+          + 'kaupungin sydämessä.'
+        + '\n\n'
+        + 'Rakennus on siirtynyt ja noussut uudelleen useasti. '
+          + 'Muhammad Zaki siirsi sen uudelle paikalle 1582, ja '
+          + 'Abdullahi Dan Dabo rakensi sen uudelleen 1800-luvun '
+          + 'puolivälissä. Sokoton jihadin jälkeen emiiri Suleiman, '
+          + 'jota pidettiin Kanon imaamina, johti perjantairukoukset '
+          + 'itse; myöhemmät emiirit ovat antaneet tehtävän '
+          + 'nimitetylle imaamille.'
+        + '\n\n'
+        + 'Nykyinen talo on nuori mutta paikka vanha: moskeija '
+          + 'tuhoutui 1950-luvulla ja rakennettiin uudelleen '
+          + 'brittien tuella. Kaupunkilaiselle se on silti sama '
+          + 'moskeija, jonka Rumfa perusti — paikka ja tehtävä ovat '
+          + 'säilyneet, vaikka seinät ovat vaihtuneet.',
+      lahde: 'Wikipedia',
+    },
+    'Gidan Rumfa': {
+      aika: '1400-luvun loppu',
+      teksti: 'Emiirin palatsi, jota sanotaan myös Gidan Sarkiksi eli '
+          + 'emiirin taloksi, rakennettiin 1400-luvun lopulla ja sitä '
+          + 'on muutettu ja laajennettu 1900-luvulle asti. Rumfan '
+          + 'ajoista lähtien se on ollut yhtäjaksoisesti kaupungin '
+          + 'perinteisen hallitsijan asuinpaikka — myös fulanit, '
+          + 'jotka ottivat vallan 1800-luvun alussa, jättivät sen '
+          + 'ennalleen.'
+        + '\n\n'
+        + 'Palatsi rakennettiin alun perin kaupungin laidalle, ja se '
+          + 'veti kaupunkia mukanaan: uuden rakennuksen ympärille '
+          + 'syntyi Kurmin tori. Ala on noin 33 eekkeriä eli '
+          + 'kolmetoista hehtaaria, ja sitä ympäröivät jopa viiden '
+          + 'metrin korkuiset muurit. Sisäpuoli jakautuu kolmeen: '
+          + 'avoimiin tiloihin, puutarhoihin ja asuttuihin '
+          + 'rakennuksiin. Muurien sisällä ovat toimistot, moskeija, '
+          + 'oikeussalit, ala- ja yläkoulu, englantilaiseksi saliksi '
+          + 'kutsuttu Soron ingila sekä asuintilat.'
+        + '\n\n'
+        + 'Kuuluisin osa on eteläinen portti Kofar Kudu, jonka '
+          + 'rakennutti emiiri Abdullahi Maje Karofi 1800-luvun '
+          + 'jälkipuoliskolla — siis suunnilleen isoisän '
+          + 'matkavuosina. Portti ei ole koriste vaan käytössä: '
+          + 'durbar-kulkue palaa sen kautta palatsiin. Emiirin '
+          + 'yksityistiloissa asuu jopa kaksisataa henkeä ja koko '
+          + 'rakennuksessa yli tuhat.',
+      kuvat: [
+        {
+          tiedosto: 'Kano Emir Palace Entrance Kano State Nigeria.jpg',
+          selite: 'Kofar Kudun portti kohoaa tummanpunaisena ja '
+            + 'vaaleana kaarena palatsin muurin keskellä.',
+          lahde: 'Sani Ahmad Usman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kofar Nassarawan portti': {
+      aika: '1095–1134',
+      teksti: 'Kanon muurin hausankielinen nimi on ganuwa. '
+          + 'Perustuksen laski Kanon kronikan mukaan Sarki Gijimasu, '
+          + 'kuningaskunnan kolmas hallitsija, joka hallitsi vuosina '
+          + '1095–1134. Valmistumisesta lähde kertoo kaksi eri '
+          + 'versiota: toisaalla sanotaan, että Gijimasun poika '
+          + 'Tsaraki sai muurin valmiiksi 1100-luvulla, toisaalla '
+          + 'että se valmistui vasta 1300-luvun puolivälissä '
+          + 'Zamnagawan aikana ja että sitä laajennettiin vielä '
+          + '1500-luvulla. Kumpaakaan versiota ei tässä valita.'
+        + '\n\n'
+        + 'Mitat ovat joka tapauksessa samat: muuri oli alkujaan '
+          + '30–50 jalkaa korkea ja tyveltään noin neljäkymmentä '
+          + 'jalkaa paksu, ja siinä oli viisitoista porttia. Kun '
+          + 'britit valtasivat kaupungin 1903, kuvernööri Frederick '
+          + 'Lugard kirjoitti raporttiinsa, ettei ollut koskaan '
+          + 'nähnyt Afrikassa mitään vastaavaa.'
+        + '\n\n'
+        + 'Jokaisella portilla on nimi ja vartija, sarkin kofa eli '
+          + 'portin kuningas. Ennen vanhaan yksi mies vastasi yhdestä '
+          + 'portista kaikkina aikoina, ja virka periytyi isältä '
+          + 'lapsille; nykyään kaikki portit on annettu yhden '
+          + 'henkilön huostaan. Portit rakennettiin savesta, '
+          + 'kuivatusta heinästä, puusta, metallista ja kivestä, ja '
+          + 'ne ovat keskimäärin viitisen metriä korkeita ja '
+          + 'kymmenen metriä pitkiä. Kaupunkiin sai tulla vain '
+          + 'porttien kautta, ja kun ne suljettiin yöksi, ne '
+          + 'avattiin vasta aamunkoitteessa.',
+      kuvat: [
+        {
+          tiedosto: 'Kofar Nasarawa - Kano City Gate.jpg',
+          selite: 'Kofar Nassarawan valkoinen kaari ylittää '
+            + 'nelikaistaisen tien, ja otsassa lukee vuosiluku '
+            + '2014.',
+          lahde: 'Suleiman Umar, Aminu Abdullahi, Abubakar Yusuf, '
+            + 'www.kanostreetsonosm.org.ng, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gidan Makaman museo': {
+      aika: '1400-luku',
+      teksti: 'Ennen kuin Gidan Rumfa rakennettiin, Kanon '
+          + 'hausakuninkaat asuivat tässä talossa. Se rakennettiin '
+          + '1400-luvulla nuorelle Muhammad Rumfalle, joka oli juuri '
+          + 'saanut perinteisen arvonimen makama. Kun Rumfasta tuli '
+          + 'kuningas ja hän muutti uuteen palatsiin, taloon jäivät '
+          + 'asumaan seuraavat makamat.'
+        + '\n\n'
+        + 'Brittien vallattua Kanon 1903 rakennus toimi lyhyen aikaa '
+          + 'siirtomaavirkamiesten toimistona. Sen jälkeen se '
+          + 'jaettiin kolmeen: museoksi, alakouluksi ja '
+          + 'asuinrakennukseksi. Seinät olivat alun perin savea, ja '
+          + 'talo on yhä yksi parhaista esimerkeistä perinteisestä '
+          + 'hausa-arkkitehtuurista, vaikka korjauksissa on käytetty '
+          + 'nykyaineita.'
+        + '\n\n'
+        + 'Museossa on yksitoista galleriaa, jotka ovat vanhojen '
+          + 'makamojen huoneita ja pihoja. Sisäänkäynnillä on Kofar '
+          + 'Kabugan portilta kaivettuja ruukkuja ja kaksi '
+          + 'siirtomaa-ajan tykkiä. Gallerioissa kulkevat vuorotellen '
+          + 'hausa-arkkitehtuuri, Kanon muurien kartta, Bagaudan '
+          + 'tarina, fulanien aika, kaupungin vanha talous ja '
+          + 'durbar, islamilainen perintö, elinkeinot ja soittimet, '
+          + 'ja viimeisenä on perinteinen morsiamen huone. Sisäpiha '
+          + 'toimii Koroso-tanssiryhmän näyttämönä.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * DILI (Opus 7.9.2026). Kahdeksan juttua vastaavat kohdekartan
+   * kahdeksaa pistettä (maakartat.js: KAUPUNKIKARTAT.dili), ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Motael Church", "Port of Dili", "Government Palace,
+   * Dili", "Banco Nacional Ultramarino building, Dili", "National
+   * Stadium (Timor-Leste)", "Immaculate Conception Cathedral, Dili",
+   * "National Archives of Timor-Leste" ja "Municipal Market of
+   * Dili").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat kaupungin perustaminen 1769, vuoden 1873 jälleenrakennus,
+   * toinen maailmansota ja Tetun Prasa; teemasivu kertoo maastosta ja
+   * luonnosta. Lähimpänä ovat satama ja hallituspalatsi, joita lehti
+   * sivuaa yhdellä virkkeellä — jutut kertovat ankkuripaikan
+   * historiasta, vuoden 1964 laiturista ja kolmen eri palatsin
+   * sarjasta, joita opas ei käsittele.
+   *
+   * EI NYKYPOLITIIKKAA EIKÄ NYKYVÄKIVALTAA (Myanmar-linja). Kaikkien
+   * kahdeksan rakennuksen artikkelissa on vuoden 1999 tuhot ja usein
+   * miehitysajan tapahtumia; niitä ei toisteta. Palatsin jutusta on
+   * jätetty pois vuoden 1975 itsenäisyysjulistus ja invaasio,
+   * stadionin jutusta pakolaisleirit 1999 ja 2006, arkiston jutusta
+   * kaikki muu kuin arkiston oma toiminta. Vuosiluvut esiintyvät
+   * siellä, missä rakennuksen vaiheet edellyttävät.
+   *
+   * KUVAT PUUTTUVAT, JA SE ON LÄHDETILANNE. Commonsin rajapinta
+   * vastasi 7.9.2026 jokaiseen pyyntöön 429:llä (parvessa kahdeksan
+   * agenttia samalla osoitteella), eikä tiedostoa oteta ilman että
+   * lisenssi ja tekijä on luettu extmetadatasta ja kuva katsottu
+   * silmin. Ilman kuvaa merkki näkyy kartalla täplänä, joka on yhä
+   * napautettava (tests/nahtavyydet.test.mjs pitää siitä huolta).
+   * KUVAPUTKELLE TILATTAVAT MINIATYYRIT:
+   *  Motaelin kirkko — valkoinen kirkko kellotorneineen ja
+   *    pylväskuisteineen; Dilin satama — laituri ja rantaviiva
+   *    riuttojen reunustamassa lahdessa; Hallituspalatsi — kolme
+   *    kaksikerroksista siipeä ja niitä yhdistävä pylväskäytävä
+   *    meren puolelta; BNU-pankkitalo — modernistinen betoniritilä-
+   *    julkisivu pilarien päällä; Kansallisstadion — kaksi katsomoa
+   *    ja nurmivallit kentän ympärillä; Tuomiokirkko — suuri
+   *    1980-luvun katedraali julkisivun puolelta; Kansallisarkisto —
+   *    arkiston rakennus kadulta; Kaupungin torihalli —
+   *    puoliympyräportaali, jonka yllä lukee Mercado Municipal de
+   *    Dili.
+   *
+   * LÄHDERISTIRIITA, JOKA ON KIRJOITETTU AUKI: kansallisstadionin
+   * kapasiteetti on "National Stadium (Timor-Leste)" -artikkelin
+   * mukaan 5 000 ja "Dili"-artikkelin mukaan noin 9 000. Juttu antaa
+   * molemmat luvut ja sanoo, mistä ero todennäköisesti tulee
+   * (katsomot vs. nurmivallit) — se ei valitse puolta.
+   */
+  dili: {
+    'Motaelin kirkko': {
+      aika: '1955',
+      teksti: 'Santo António de Motaelin kirkko on Itä-Timorin vanhin '
+          + 'katolinen kirkko. Portugalilaisaikana Motael oli Dilin '
+          + 'portugalilaisen elämän keskus, ja ensimmäinen kirkko '
+          + 'rakennettiin tälle paikalle noin vuonna 1800. Maan '
+          + 'lahjoitti Mota-a inin liurai eli paikallinen kuningas — '
+          + 'kaupungin vanhin kirkko seisoo siis maalla, jonka '
+          + 'timorilainen hallitsija antoi.'
+          + '\n\n'
+          + 'Kirkkoa alettiin rakentaa uudelleen noin vuonna 1901. '
+          + 'Valmistumisvuotta ei tiedetä, mutta valmiista kirkosta on '
+          + 'merkintöjä vuodelta 1937; siinä ei silloin vielä ollut '
+          + 'kellotornia eikä pylväskuistia, jotka rakennuksella nyt '
+          + 'on. Japanilaiset ilmaiskut vaurioittivat kirkkoa osittain '
+          + 'toisen maailmansodan aikana, ja nykyinen rakennus on '
+          + 'vuodelta 1955.'
+          + '\n\n'
+          + 'Kirkko on omistettu Padovan Antoniukselle, joka '
+          + 'portugaliksi tunnetaan Lissabonin Antoniuksena. Se on '
+          + 'yli viidensadan portaan mittaisen ristintien päässä. '
+          + 'Ennen kuin kaupunkiin rakennettiin tuomiokirkko, Motaelin '
+          + 'kirkko toimi Dilin prokatedraalina.',
+      lahde: 'Wikipedia',
+    },
+    'Dilin satama': {
+      aika: '1726',
+      teksti: 'Dilin satama on pieni, avoin ja luonnollinen: '
+          + 'merenpohja on hiekkaa, mutta siinä on niin paljon '
+          + 'riuttoja, että käytettävissä oleva syväys vaihtelee '
+          + 'huomattavasti paikasta toiseen. Sataman reunaa kiertävä '
+          + 'luonnonriutta suojaa sitä sadekauden pahimmilta säiltä, '
+          + 'ja sisääntulo kulkee kapeaa väylää kahden erillisen '
+          + 'riutan välistä — ne näkyvät laskuvedellä ja on merkitty '
+          + 'poijuin.'
+          + '\n\n'
+          + 'Paikalla on ollut satama ainakin vuodesta 1726, jolloin '
+          + 'se oli jo portugalilaisten pysähdyspaikka. Skotlantilainen '
+          + 'John Crawfurd kirjoitti 1820, että Dilissä kävi vuosittain '
+          + 'kymmenestä kahteentoista englantilaista laivaa '
+          + 'täydentämässä varastojaan sinä aikana, kun britit '
+          + 'miehittivät Molukkeja 1810–1814. Sataman '
+          + 'satamalaitteet pysyivät silti vähäisinä pitkälle '
+          + '1900-luvulle: ennen vuotta 1964, jolloin ensimmäinen '
+          + 'kunnollinen laituri valmistui, lasti purettiin ja '
+          + 'lastattiin proomuilla.'
+          + '\n\n'
+          + '1800-luvun eurooppalaiset kävijät kirjoittivat satamasta '
+          + 'kitkerästi. Anna Forbes totesi 1880-luvulla, ettei kukaan '
+          + 'matkusta Diliin vapaaehtoisesti, koska sen maine '
+          + 'saariston epäterveellisimpänä satamana ei ole '
+          + 'ansaitsematon — kaupunkia ympäröivät silloin suot ja '
+          + 'liejutasangot. Nykyään satama on toisenlainen: '
+          + 'konttiliikenne siirtyi 30. syyskuuta 2022 Tibar Bayn '
+          + 'satamaan, ja vanha laituri palvelee kotimaan '
+          + 'matkustajalaivoja ja risteilijöitä.',
+      lahde: 'Wikipedia',
+    },
+    'Hallituspalatsi': {
+      aika: '1953–1969',
+      teksti: 'Dilissä on ollut kolme hallintopalatsia peräkkäin, ja '
+          + 'ne kertovat kaupungin kasvun. Ensimmäinen rakennettiin '
+          + '1874–1881 siirtomaakuvernöörin virka-asunnoksi: pitkä '
+          + 'yksikerroksinen talo, jonka julkisivussa oli pylväikkö. '
+          + 'Se lakkasi olemasta virka-asunto jo 1886, kun uusi '
+          + 'asunto, Lahanen palatsi, valmistui vuorille kaupungin '
+          + 'eteläpuolelle.'
+          + '\n\n'
+          + '1940-luvulla siirtomaan virastot olivat hajallaan '
+          + 'kolmessa talossa. Vanhassa palatsissa olivat hallituksen '
+          + 'sihteeristö, kuvernöörin työhuone, siviilihallinnon '
+          + 'johto ja sotilasosasto. Palvelurakennus, hyvin suuri talo '
+          + 'vuosilta 1882–1886, piti sisällään yleiset työt ja '
+          + 'postin. Kolmas, vaatimaton yksikerroksinen varainhoidon '
+          + 'talo vuodelta 1890, oli rakennettu sotilastarvikkeiden '
+          + 'varastoksi mutta toimi vuoteen 1909 asti väliaikaisena '
+          + 'sairaalana.'
+          + '\n\n'
+          + 'Nykyinen palatsi rakennettiin näiden tilalle 1950-luvun '
+          + 'alun ja 1960-luvun lopun välillä. Se on kolme '
+          + 'kaksikerroksista rakennusta, jotka yhdistää yksi '
+          + 'pylväskäytävä, ja ne valmistuivat eri aikoina vuosien '
+          + '1953 ja 1969 välillä. Talo seisoo Largo Infante Dom '
+          + 'Henriquen aukiolla aivan rannassa, ja paikka määriteltiin '
+          + 'jo vuoden 1951 kaavassa.',
+      lahde: 'Wikipedia',
+    },
+    'BNU-pankkitalo': {
+      aika: '1966–1968',
+      teksti: 'Banco Nacional Ultramarino perustettiin 1864 ja avasi '
+          + 'konttorin Dilissä 1912. Tavallisten pankkipalvelujen '
+          + 'lisäksi se hoiti Portugalin Timorin rahan: ensin patacan '
+          + 'ja myöhemmin escudon. Pankki oli myös siirtomaan suuri '
+          + 'sijoittaja, ja sen Dilin konttori toimi pitkään sen oman '
+          + 'sijoituskohteen pääkonttorissa — kunnes japanilaiset '
+          + 'tuhosivat talon toisessa maailmansodassa.'
+          + '\n\n'
+          + 'Oman talonsa pankki sai vasta 1960-luvun lopussa. '
+          + 'Fernando Schiappa de Camposin suunnittelema modernistinen '
+          + 'rakennus tehtiin 1966–1968, ja se on Dilissä '
+          + 'poikkeuksellinen: sillä on vain yksi aikalainen, ACAIT:n '
+          + 'talo. Molemmat olivat irtiotto siitä uusklassisesta '
+          + 'siirtomaatyylistä, jolla edustusrakennukset oli siihen '
+          + 'asti tehty.'
+          + '\n\n'
+          + 'Talo on ilmastoa varten suunniteltu. Katto on tasainen '
+          + 'terassi, ja rakennus seisoo pilareilla niin, että '
+          + 'pohjakerros kelluu maan yläpuolella. Etujulkisivu on '
+          + 'betoniritilä, joka suojaa ikkunoita suoralta '
+          + 'auringolta, ja itä–länsi-suuntaus jäähdyttää taloa: '
+          + 'vallitsevat tuulet käyvät mereltä pohjoisesta, ja aukot '
+          + 'pohjoiseen ja etelään pitävät auringon poissa idästä ja '
+          + 'lännestä.',
+      lahde: 'Wikipedia',
+    },
+    'Kansallisstadion': {
+      aika: '2015',
+      teksti: 'Itä-Timorin kansallisstadion tunnetaan myös nimellä '
+          + 'Dilin kaupunginstadion, ja portugaliksi molemmat nimet '
+          + 'ovat käytössä: Estádio Nacional de Timor-Leste ja Estádio '
+          + 'Municipal de Díli. Se on monikäyttöstadion, mutta '
+          + 'käytännössä sillä pelataan jalkapalloa, joka on maan '
+          + 'suosituin urheilulaji.'
+          + '\n\n'
+          + 'Katsomoja on kaksi, yksi kummallakin sivulla, ja muille '
+          + 'katsojille on nurmivallit. Kapasiteetista lähteet ovat '
+          + 'eri mieltä: stadionin oma artikkeli sanoo 5 000 ja '
+          + 'kaupungin artikkeli noin 9 000. Ero selittyy '
+          + 'todennäköisesti sillä, lasketaanko vallit mukaan, mutta '
+          + 'kumpikaan lähde ei sano sitä ääneen, joten tässä '
+          + 'annetaan molemmat luvut.'
+          + '\n\n'
+          + 'Vuodesta 2004 stadionilla on pelattu maan sarjojen '
+          + 'finaalit. Kenttä ja katsomot kunnostettiin kahdessa '
+          + 'erässä 2010-luvulla, ensin 2011 alkaneessa ja sitten '
+          + '2016 alkaneessa hankkeessa. 12. maaliskuuta 2015 '
+          + 'stadionilla pelattiin Itä-Timorin maajoukkueen '
+          + 'ensimmäinen kansainvälinen kotiottelu: vastassa oli '
+          + 'Mongolia, ja Itä-Timor voitti 4–1.',
+      lahde: 'Wikipedia',
+    },
+    'Tuomiokirkko': {
+      aika: '1988',
+      teksti: 'Tahrattoman sikiämisen tuomiokirkko on Dilin '
+          + 'arkkihiippakunnan pääkirkko. Sen suunnittelu alkoi 1984, '
+          + 'ja rakentaminen rahoitettiin noin 235 000 Yhdysvaltain '
+          + 'dollarilla. Kirkko seisoo kymmenentuhannen neliömetrin '
+          + 'tontilla, itse rakennus on 1 800 neliömetriä ja siihen '
+          + 'mahtuu kaksituhatta ihmistä.'
+          + '\n\n'
+          + 'Kirkko vihittiin käyttöön 2. marraskuuta 1988, ja sitä '
+          + 'pidettiin tuolloin Kaakkois-Aasian suurimpana '
+          + 'katedraalina. Vihkiäisissä oli läsnä Dilin apostolinen '
+          + 'hallintomies, piispa Carlos Filipe Ximenes Belo. '
+          + 'Lokakuussa 1989 kirkon siunasi paavi Johannes Paavali II '
+          + 'vieraillessaan saarella.'
+          + '\n\n'
+          + 'Ennen tuomiokirkkoa Dilin prokatedraalina toimi Motaelin '
+          + 'Santo Antóniolle omistettu kirkko kaupungin länsipäässä. '
+          + 'Kun uusi katedraali valmistui, hiippakunnan pääkirkko '
+          + 'siirtyi tänne. Huhtikuussa 2002, kolme viikkoa ennen '
+          + 'maan itsenäistymistä, kirkkoon kokoontui noin '
+          + 'kaksituhatta ihmistä ottamaan vastaan Portugalista '
+          + 'tuodun Fátiman Neitsyt Marian patsaan; Fátiman Maria on '
+          + 'Itä-Timorin suojeluspyhimys.',
+      lahde: 'Wikipedia',
+    },
+    'Kansallisarkisto': {
+      aika: '1999',
+      teksti: 'Dilin arkistoilla on onneton historia: kaupungin '
+          + 'arkistot ovat tuhoutuneet neljä kertaa — 1779, 1890, 1975 '
+          + 'ja 1999. Juuri siksi kaupungin oma menneisyys on '
+          + 'monelta osin kadonnut, ja juuri siksi kansallisarkisto on '
+          + 'olemassa.'
+          + '\n\n'
+          + 'Nykyinen arkisto perustettiin 1999 kolmen kansainvälisen '
+          + 'työntekijän voimin. Heinäkuussa 2000 palkattiin '
+          + 'ensimmäiset paikalliset työntekijät keräämään aineistoa, '
+          + 'ja samana vuonna perustettiin toimisto sisäisen hallinnon '
+          + 'osastolle. Vuonna 2001 kaksi työntekijää kävi puolen '
+          + 'vuoden koulutuksen Lissabonin historiallisessa arkistossa, '
+          + 'ja saman vuoden aikana arkisto korotettiin '
+          + 'kansalliseksi osastoksi.'
+          + '\n\n'
+          + 'Rakennuksen arkisto sai 2004, ja se oli aiemmin ollut '
+          + 'kansainvälisten rauhanturvaajien käytössä; talon '
+          + 'muutostyöt kestivät vuoteen 2007. Vuonna 2018 arkistossa '
+          + 'työskenteli 56 ihmistä. Tehtäviin kuuluu historiallisesti '
+          + 'tärkeiden asiakirjojen etsiminen ja entistäminen, niiden '
+          + 'säilytys, arkistotyön standardien kehittäminen sekä '
+          + 'aineiston avaaminen tutkijoille ja yleisölle.',
+      lahde: 'Wikipedia',
+    },
+    'Kaupungin torihalli': {
+      aika: '1960-luku',
+      teksti: 'Dilin vanha kaupungin torihalli, Mercado Municipal de '
+          + 'Díli, oli ensimmäinen kolmesta julkisesta torista, jotka '
+          + 'kaupunkiin rakennettiin ennen itsenäistymistä. Se '
+          + 'avattiin 1960-luvulla, ja sen sisällä käytiin kauppaa '
+          + 'lähes kaikilla paikallisilla tuotteilla. Rakennuksen '
+          + 'ympärillä oli laaja ulkotoriksi käytetty alue, jolla kävi '
+          + 'sunnuntaisin väkeä koko Dilin ulkopuolelta.'
+          + '\n\n'
+          + 'Tontti on noin hehtaarin kokoinen, ja sen keskellä on '
+          + 'ristinmuotoinen kaksikerroksinen talo. Neljä siipeä '
+          + 'jättävät väliinsä neljä puolipatiota, joista kukin '
+          + 'liittyy omaan ulkotorialueeseensa; siipien '
+          + 'risteyskohdassa oli jakelutila. Harjakattoa kruunaavat '
+          + 'siipien mittaiset kattolyhdyt, ja julkisivujen edessä '
+          + 'kulkevat kapeat kuistit. Kolme kattokerrosta — kuisti, '
+          + 'lape ja lyhty — ovat hyvin yksinkertaisia mutta tekevät '
+          + 'sisätilasta juuri torille sopivan.'
+          + '\n\n'
+          + 'Pääsisäänkäynti on itäsiiven päässä ja avautuu tontin '
+          + 'leveimmälle kohdalle. Se on puoliympyräportaali, jonka '
+          + 'yllä on kolmiopääty ja pyöristetty huippu, ja sen '
+          + 'kummallakin puolella pienempi portaali. Portaalin yllä '
+          + 'lukee Mercado Municipal de Dili, ja tekstin ja '
+          + 'räystäslistan välissä on Portugalin vaakunan '
+          + 'armillaaripallo ja kilpi. Rakennus on nykyään kunnostettu '
+          + 'kongressikeskukseksi.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * ALICE SPRINGS (Opus 7.9.2026). Kahdeksan juttua vastaavat
+   * kohdekartan kahdeksaa pistettä (maakartat.js:
+   * KAUPUNKIKARTAT.alicesprings), ja jokainen väite on luettu
+   * en-Wikipedian raakatekstistä 7.9.2026 (artikkelit "ANZAC Hill",
+   * "Totem Theatre", "Alice Springs railway station", "Stuart Town
+   * Gaol", "Pioneer Theatre", "Alice Springs Public Library",
+   * "Women's Museum of Australia", "Her Majesty's Gaol and Labour
+   * Prison, Alice Springs" ja "Olive Pink Botanic Garden").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Mparntwe, vuoden 1873 lennätinasema ja nimenvaihto,
+   * kameliajajat sekä Flynn ja radiokoulu; teemasivu kertoo
+   * Namatjirasta, Hermannsburgista, Papunya Tulasta ja Araluenista.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * PILARI 4: kolme syrjivää käytäntöä sanotaan yhdellä virkkeellä
+   * eikä niillä mässäillä. Stuart Town Gaolin erotellut sellit ovat
+   * vankilan omassa jutussa, vuosien 1928–1964 kaupunkirajojen
+   * päivärajoitus Pioneer-teatterin jutussa (koska se on juuri se
+   * syy, miksi elokuvateatteri oli sen ajan aboriginaaleille tärkeä),
+   * ja naisten museon jutussa kerrotaan, että talo oli vankila
+   * 1938–1996 — mutta vankilan vangitsemisluvut ja nuorisovangit on
+   * jätetty kokonaan pois. Kartan piste on museo, ei vankila.
+   *
+   * KUVAT PUUTTUVAT SAMASTA SYYSTÄ KUIN DILISSÄ (Commonsin 429).
+   * KUVAPUTKELLE TILATTAVAT MINIATYYRIT:
+   *  ANZAC Hill — kukkulan laen muistomerkki ja näkymä kaupunkiin;
+   *    Totem-teatteri — matala peltinen Sidney Williams -halli;
+   *    Rautatieasema — 1980-luvun asemarakennus laitureineen;
+   *    Stuart Town Gaol — matala kivinen vankilarakennus
+   *    peltikattoineen; Pioneer-teatteri — vanhan katottoman
+   *    elokuvateatterin julkisivu Parsons Streetillä;
+   *    Kaupunginkirjasto — kirjaston rakennus ja sen ulkoseinän
+   *    muraali; Australian naisten museo — entisen vankilan
+   *    portti ja muuri; Olive Pinkin puutarha — kuivan alueen
+   *    kasveja ja polku, taustalla MacDonnell-vuoret.
+   */
+  alicesprings: {
+    'ANZAC Hill': {
+      aika: '1934',
+      teksti: 'ANZAC Hill on 608 metrin korkuinen kukkula keskellä '
+          + 'Alice Springsiä, ja se on arrernte-kansan maalla. Sen '
+          + 'arrernte-nimestä on kirjattu kaksi muotoa, '
+          + 'Untyeyetwelye ja Atnelkentyarliweke; edellinen on '
+          + 'peräisin paikallisen aboriginaaliradion aineistosta ja '
+          + 'jälkimmäinen David Brooksin kirjasta A town like '
+          + 'Mparntwe (2003).'
+          + '\n\n'
+          + 'Eurooppalainen nimi tulee muistomerkistä, joka on ollut '
+          + 'kukkulan laella vuodesta 1933. Pastori Harry Griffiths '
+          + 'suunnitteli muistomerkin samana vuonna, ja se '
+          + 'paljastettiin Anzac-päivänä 1934. Griffithsin ja hänen '
+          + 'vaimonsa tuhkat sijoitettiin muistomerkille 2. kesäkuuta '
+          + '1987.'
+          + '\n\n'
+          + 'Toisen maailmansodan aikana kukkulan ympäristö oli '
+          + 'armeijan käytössä, ja sen juurella oli suuria leirejä. '
+          + 'Kukkulalle nousee portaat, ja laelta näkyy kaupungin '
+          + 'ruutukaava, Todd-joen uoma ja MacDonnell-vuorten '
+          + 'Heavitree Gap eteläreunassa.',
+      lahde: 'Wikipedia',
+    },
+    'Totem-teatteri': {
+      aika: '1945',
+      teksti: 'Totem-teatterin kaksi päärakennusta ovat Sidney '
+          + 'Williams -halleja, jotka Australian armeija pystytti '
+          + 'vuonna 1945. Sota toi Alice Springsiin poikkeuksellisen '
+          + 'määrän sotilaita ja siviilityövoimaa, ja sen mukana '
+          + 'kaupunki sai parannuksia, jotka jäivät: Stuart Highwayn '
+          + 'päällystyksen, vanhan lennätinlinjan kunnostuksen niin '
+          + 'että kaukopuhelut tulivat mahdollisiksi, ja ensimmäistä '
+          + 'kertaa juoksevan veden koteihin.'
+          + '\n\n'
+          + 'Sodan jälkeen armeijan omaisuus inventoitiin ja pantiin '
+          + 'myyntiin. Sidney Williams -hallit olivat erityisen '
+          + 'haluttuja, ja useimmat siirrettiin muualle tai '
+          + 'muutettiin asunnoiksi ja liiketiloiksi; ne on sittemmin '
+          + 'lähes kaikki purettu. Totem-teatterin rakennukset jäivät '
+          + 'paikoilleen ja näyttävät olleen enimmäkseen tyhjillään, '
+          + 'kunnes Alice Springs Theatre Group vuokrasi ne 1963 ja '
+          + 'avasi maaliskuussa 1964 Totem Club House Theatren.'
+          + '\n\n'
+          + 'Molempia rakennuksia on muutettu käyttöä varten, mutta '
+          + 'niissä on yhä suurin osa alkuperäisistä osista. Talo '
+          + 'merkittiin Pohjoisterritorion suojelurekisteriin 18. '
+          + 'tammikuuta 2006. Nykyään teatterissa esitetään vuosittain '
+          + 'musikaali sekä näytelmiä, komediailtoja, lausuntaa ja '
+          + 'elävää musiikkia, ja se on yksi Alice Desert Festivalin '
+          + 'päänäyttämöistä.',
+      lahde: 'Wikipedia',
+    },
+    'Rautatieasema': {
+      aika: '1929',
+      teksti: 'Ensimmäinen rautatieasema avattiin Railway Terracella '
+          + '2. elokuuta 1929, kun 1 067 millimetrin kapearaiteinen '
+          + 'rata jatkettiin Oodnadattasta pohjoiseen. Ensimmäiset '
+          + 'yksitoista kuukautta asema oli nimeltään Stuart, sama '
+          + 'kuin viereinen taajama. Koko Australiassa paikka '
+          + 'kuitenkin tunnettiin nimellä Alice Springs, joka oli '
+          + 'kolme ja puoli kilometriä pohjoisempana olevan '
+          + 'lennätinaseman nimi, ja Commonwealth Railways ilmoitti '
+          + 'nimenmuutoksesta 8. heinäkuuta 1930 juuri sillä '
+          + 'perusteella. Asema vaihtoi siis nimensä kolme vuotta '
+          + 'ennen kaupunkia.'
+          + '\n\n'
+          + 'Puinen asemarakennus korvattiin, kun uusi 1 435 '
+          + 'millimetrin normaaliraiteinen rata avattiin Tarcoolasta '
+          + '9. lokakuuta 1980. Se oli radan pääteasema siihen asti, '
+          + 'kunnes linja jatkettiin Darwiniin helmikuussa 2004. '
+          + 'Adelaidelainen arkkitehti Guy Maron suunnitteli talon, ja '
+          + 'se sai 2015 Pohjoisterritorion kestävän arkkitehtuurin '
+          + 'palkinnon — 35 vuotta valmistumisensa jälkeen.'
+          + '\n\n'
+          + 'Nykyisen aseman aulassa on kuvanveistäjä Gabriel Sterkin '
+          + 'muistomerkki afgaanikameliajajille, jotka kuljettivat '
+          + 'tarvikkeet Keski-Australiaan ennen radan rakentamista. '
+          + 'Asemaa palvelee matkailujuna Ghan, joka kulkee '
+          + 'tavallisesti kerran viikossa kumpaankin suuntaan.',
+      lahde: 'Wikipedia',
+    },
+    'Stuart Town Gaol': {
+      aika: '1907',
+      teksti: 'Parson Streetin varrella oleva Stuart Town Gaol '
+          + 'rakennettiin 1907. Se on kaupungin varhaisimpia pysyviä '
+          + 'rakennuksia ja sen ensimmäinen hallintorakennus, ja '
+          + 'kivimuurari Jack Williams teki sen paikallisista '
+          + 'aineksista yksinkertaisen suunnitelman mukaan. Vuosiluku '
+          + 'kannattaa panna merkille: kaupungin oma Wikipedia-'
+          + 'artikkeli sanoo 1909, mutta rakennuksen oma artikkeli '
+          + 'antaa 1907 katuosoitteen ja rakentajan kanssa.'
+          + '\n\n'
+          + 'Ennen vankilaa vangit vietiin vuosina 1863–1910 pääosin '
+          + 'Port Augustaan, 1 200 kilometrin päähän etelään, jossa '
+          + 'heidät tuomittiin ja vangittiin. Talossa oli hyvin pieni '
+          + 'selli valkoisille vangeille, joilla oli puiset lavitsat, '
+          + 'ja suuri selli aboriginaalivangeille; takana oli '
+          + 'kattamaton ulkoilupiha ja sen poikki muuri. Suuren '
+          + 'sellin lattiaan on valettu rautarenkaita. Monille '
+          + 'aboriginaalivangeille vankila oli ensimmäinen kosketus '
+          + 'eurooppalaisiin, ja vankilan kirjoista näkyy suora '
+          + 'yhteys kuivuuskausien ja karjavarkaussyytteiden välillä.'
+          + '\n\n'
+          + 'Ensimmäinen vartija oli poliisi Robert Stott, joka oli '
+          + 'käytännössä koko kaupungin hallinnollinen johtaja; hän '
+          + 'asui vankilan vieressä ja piti talojen välissä suurta '
+          + 'kaalimaata. Vankila oli käytössä 1938 asti, jolloin se '
+          + 'oli ylitäysi ja — mikä painoi aikanaan enemmän — sen '
+          + 'sijainti aivan kaupungin keskellä katsottiin '
+          + 'sopimattomaksi. 1970-luvulla talo oli purku-uhan alla, '
+          + 'mutta National Trust pelasti sen, ja 1985 se merkittiin '
+          + 'kansallisen perinnön rekisteriin.',
+      lahde: 'Wikipedia',
+    },
+    'Pioneer-teatteri': {
+      aika: '1942',
+      teksti: 'Leslie Kenna, jota kaikki kutsuivat Snowksi, saapui '
+          + 'Alice Springsiin vuoden 1936 jälkipuoliskolla mukanaan '
+          + 'elokuvakalusto ja tonni nitraattifilmiä. Vuonna 1942 hän '
+          + 'rakensi Parsons Streetille oman teatterinsa. Siinä ei '
+          + 'ollut kattoa: kaupungissa ei ollut ilmastointia, ja '
+          + 'katoton sali ja kansituolit pitivät katsojat viileinä. '
+          + 'Talvella, kun lämpötila menee pakkasen puolelle, väki toi '
+          + 'mukanaan huopia, kuumavesipulloja ja termospullollisen '
+          + 'kahvia.'
+          + '\n\n'
+          + 'Elokuvat olivat kaupungin seuraelämän kannalta '
+          + 'poikkeuksellisen tärkeitä, ja syy oli karu: vuosina '
+          + '1928–1964 aboriginaalit saivat olla kaupungin rajojen '
+          + 'sisällä päiväsaikaan vain lääkäriin mennäkseen ja '
+          + 'iltaisin vain elokuvissa. Ulkoilmasaliin kulkeutui '
+          + 'säännöllisesti koiria kaupungin laidan leireistä '
+          + 'omistajiensa mukana, ja ne pitivät oman esityksensä.'
+          + '\n\n'
+          + 'Vuonna 1955 salissa nähtiin Jedda-elokuvan Alice '
+          + 'Springsin ensi-ilta; pääosassa oli paikallinen tyttö Rose '
+          + 'Kgarla Kunoth, ja suuri osa elokuvasta oli kuvattu '
+          + 'Keski-Australiassa. Vuoden 1956 A Town Like Alice '
+          + '-elokuvan pusikkoensi-illassa hermannsburgilaiset '
+          + 'arrernte-miehet lauloivat väliajalla arrernten kielellä; '
+          + 'paikalla olivat muun muassa näyttelijä Peter Finch ja '
+          + 'kirjailija Nevil Shute. Ilta tuotti lähes tuhat puntaa, '
+          + 'ja Kenna lahjoitti koko summan lentävän lääkärin '
+          + 'palvelulle. Teatteri suljettiin 1984.',
+      lahde: 'Wikipedia',
+    },
+    'Kaupunginkirjasto': {
+      aika: '1953',
+      teksti: 'Alice Springsin kaupunginkirjaston virallinen nimi on '
+          + 'Nevil Shute Memorial Library, mutta nimeä ei juuri '
+          + 'käytetä. Se sai sen, kun nykyinen talo avattiin 19. '
+          + 'lokakuuta 1980: kirjailijan romaani A Town Like Alice ja '
+          + 'siitä tehty elokuva olivat tehneet kaupungin tunnetuksi. '
+          + 'Nimi oli kiistanalainen jo avajaisissa eikä ole '
+          + 'koskaan vakiintunut puhekieleen.'
+          + '\n\n'
+          + 'Kirjastoja on kaupungissa ollut alusta asti pieninä. '
+          + '1930-luvulla maaseudun naisjärjestö piti omaa pientä '
+          + 'kokoelmaansa, jonka Pohjoisterritorion hallitus otti '
+          + 'haltuunsa 1938; vuoteen 1940 mennessä kirjoja oli 760. '
+          + 'Sota katkaisi toiminnan, ja sen jälkeen Australian '
+          + 'kansalliskirjasto rahoitti kaupungin ensimmäisen '
+          + 'varsinaisen yleisen kirjaston vanhaan Gum Tree Cafén '
+          + 'taloon. Ensimmäinen kirjastonhoitaja Joy Cuskey saapui '
+          + '28. elokuuta 1953 kolmentuhannen kirjan kanssa, jotka hän '
+          + 'oli kuljettanut Darwinista paloautolla.'
+          + '\n\n'
+          + 'Kirjastossa käy nykyään yli 120 000 kävijää vuodessa, ja '
+          + 'sillä on kaksi lainaamatonta erikoiskokoelmaa. Alice '
+          + 'Springs Collection kerää Keski-Australian historiaa, '
+          + 'tiedettä ja kulttuuria; sitä säilytettiin aluksi '
+          + 'lukitussa huoneessa, mutta 1995 kirjastoon rakennettiin '
+          + 'sitä varten oma lukusali. Kokoelmaan kuuluu myös yli '
+          + 'kuusituhatta valokuvaa ja Centralian Advocate -lehden '
+          + 'vuosikerrat 1947–2015. Ulkoseinässä on muraali, jonka '
+          + 'Billy Tjampijinpa Kenda suunnitteli ja maalasi Bindi '
+          + 'Mwerre Anthurre Artists -ryhmän kanssa vuonna 2020.',
+      lahde: 'Wikipedia',
+    },
+    'Australian naisten museo': {
+      aika: '1993',
+      teksti: 'Australian naisten museo, aiemmalta nimeltään National '
+          + 'Pioneer Women’s Hall of Fame, kertoo naisten '
+          + 'paikasta Australian historiassa. Sen perusti 1993 Molly '
+          + 'Clark Old Andadon karjatilalta. Vuoteen 2001 mennessä '
+          + 'ensimmäiset tilat kävivät ahtaiksi, ja museolle '
+          + 'tarjottiin uudeksi paikaksi suojeltua vanhaa vankilaa '
+          + 'kaupungin perintökorttelissa.'
+          + '\n\n'
+          + 'Museo avattiin uudessa paikassaan 2007, ja avaajana oli '
+          + 'naisasioista vastaava ministeri Marion Scrymgour, '
+          + 'ensimmäinen Pohjoisterritorion parlamenttiin valittu '
+          + 'alkuperäiskansaan kuuluva nainen. Nimi muutettiin '
+          + 'Australian naisten museoksi 2019, ja seuraavana vuonna '
+          + 'aloitettiin piha-alueen kunnostus ja uusien näyttelyiden '
+          + 'suunnittelu.'
+          + '\n\n'
+          + 'Pysyviä näyttelyitä ovat muun muassa Ordinary Women / '
+          + 'Extraordinary Lives, joka esittelee alallaan '
+          + 'ensimmäisinä olleita naisia, sisämaan naisten elämästä '
+          + 'kertova Women at the Heart, työn arvoa käsittelevä '
+          + 'What’s Work Worth ja lentäjänaisille omistettu '
+          + 'Aviatrix Tapestry. Kokoelman tunnetuin esine on suuri '
+          + 'nimikirjoitustilkkutäkki. Talo itse on Her Majesty’s '
+          + 'Gaol and Labour Prison, joka toimi vankilana vuosina '
+          + '1938–1996 ja sai suojelustatuksen 1993. Museon patroneja '
+          + 'ovat entinen kenraalikuvernööri Quentin Bryce ja Gaby '
+          + 'Kennard, ensimmäinen australialainen nainen, joka lensi '
+          + 'yksin maapallon ympäri.',
+      lahde: 'Wikipedia',
+    },
+    'Olive Pinkin puutarha': {
+      aika: '1956',
+      teksti: 'Olive Pinkin kasvitieteellinen puutarha on '
+          + 'kuudentoista hehtaarin alue Todd-joen itäpuolella '
+          + 'kaupungin keskustan eteläreunassa, ja se on '
+          + 'erikoistunut Keski-Australian kuivan alueen kasveihin. '
+          + 'Alue määrättiin 1956 Australian kuivien alueiden '
+          + 'kasvistoreserviksi sen jälkeen, kun sen perustaja ja '
+          + 'ensimmäinen kunniakuraattori Olive Muriel Pink oli '
+          + 'lobannut asiaa sitkeästi.'
+          + '\n\n'
+          + 'Ennen vuotta 1956 maa oli ollut käyttämätöntä ja siellä '
+          + 'olivat laiduntaneet villivuohet, kanit ja karja, niin '
+          + 'että tulvatasangon kasvillisuus oli muuttunut '
+          + 'perusteellisesti eikä puita tai pensaita ollut jäljellä. '
+          + 'Pink ja hänen warlpiri-avustajansa käyttivät seuraavat '
+          + 'kaksi vuosikymmentä kuivuutta ja lähes olematonta '
+          + 'rahoitusta vastaan taistellen: he istuttivat '
+          + 'keskiaustralialaisia puita ja pensaita sekä majan '
+          + 'ympärille kaktuksia ja puutarhakukkia, jotka kestivät '
+          + 'ankarat kesät.'
+          + '\n\n'
+          + 'Pinkin kuoltua 1975 Pohjoisterritorion hallitus otti '
+          + 'alueen hoitoonsa ja alkoi toteuttaa hänen ajatustaan '
+          + 'julkisesta paikasta, jossa kotimaista kasvistoa voi '
+          + 'katsella. Seuraavan vuosikymmenen aikana rakennettiin '
+          + 'polkuverkosto ja vierailukeskus, istutettiin mulgaa ja '
+          + 'punaeukalyptuksia ja tehtiin vesiaihe sekä '
+          + 'hiekkadyynielinympäristö. Puutarha avattiin yleisölle '
+          + '1985 nimellä Olive Pink Flora Reserve ja sai nykyisen '
+          + 'nimensä 1996. Se merkittiin kansallisen perinnön '
+          + 'rekisteriin 30. toukokuuta 1995 nimenomaan siksi, että '
+          + 'sillä on vahva side Pinkiin — antropologiin, '
+          + 'aboriginaalien oikeuksien puolustajaan, taiteilijaan ja '
+          + 'puutarhurivisionääriin.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * TIMBUKTU (Opus 7.9.2026, paketti O9). Kahdeksan kohdetta
+   * lännestä koilliseen. Tekstit en-Wikipedian raakateksteistä
+   * 7.9.2026: "Timbuktu", "Djinguereber Mosque",
+   * "Sidi Yahya Mosque", "Sankoré Madrasah", "Ahmed Baba Institute",
+   * "Mohammed Bagayogo", "Alexander Gordon Laing", "René Caillié",
+   * "Heinrich Barth", "Ahmad al-Bakkai al-Kunti".
+   *
+   * NÄMÄ JUTUT EIVÄT TOISTA LEHDEN JUTTUJA. Lehti kertoo kaupungin
+   * nimestä, suolakaravaanista, vuoden 1873 valtatilanteesta,
+   * joesta, Sankorén opetustavasta, käsikirjoituksista, Ahmad
+   * Babasta ja Leo Africanuksesta; nämä jutut kertovat rakennukset
+   * ja niissä asuneet ihmiset. Vuosien 2012–2013 tapahtumia ei
+   * käsitellä (skandaalit.js MLI hoitaa ne).
+   */
+  timbuktu: {
+    'Djinguereberin moskeija': {
+      aika: '1327',
+      teksti: 'Djinguereber tarkoittaa koyra chiinin kielellä suurta '
+          + 'moskeijaa, ja se on kaupungin kolmesta vanhasta '
+          + 'moskeijasta suurin. Se rakennettiin vuonna 1327 Mansa '
+          + 'Musan aikana. Rakennus on lähes kokonaan maata ja '
+          + 'orgaanisia aineita: kuitua, olkea ja puuta. Vain '
+          + 'pohjoisjulkisivun pieni osa vahvistettiin 1960-luvulla '
+          + 'kalkkikivestä, ja minareetti on niin ikään kalkkikiveä '
+          + 'savirappauksella. Sisällä on kolme pihaa, kaksi '
+          + 'minareettia ja kaksikymmentäviisi pilaririviä '
+          + 'itä–länsi-suunnassa; rukoustilaa on kahdelle tuhannelle.'
+        + '\n\n'
+        + 'Suunnittelu on perinteisesti luettu andalusialaisen '
+          + 'oppineen Abu Ishaq al-Sahilin ansioksi, ja Ibn Khaldunin '
+          + 'mukaan hän sai työstä kaksitoistatuhatta mithkalia '
+          + 'kultahiekkaa. Uudempi tutkimus torjuu tämän: '
+          + 'arabialaisissa lähteissä al-Sahili on varmuudella vain '
+          + 'Malin kaupungin audienssisalin suunnittelija, ja hänen '
+          + 'roolinsa näyttää olleen organisoiva eikä rakenteellinen. '
+          + 'Länsi-Afrikan moskeijatyyli juontuu Saharan moskeijoista '
+          + 'ja paikallisesta rakennusperinteestä.'
+        + '\n\n'
+        + 'Askia Daudin aikana Timbuktun kadi Aqib ibn Mahmud alkoi '
+          + 'kunnostaa moskeijaa 1570, ja työ aiheutti kiistan: kadi '
+          + 'paheksui sitä, että kunnostettu moskeija yhdistettiin '
+          + 'maalliseen valtaan. Nykyisin suurin uhka on hiekka ja '
+          + 'sade. Aga Khan Trust for Culture aloitti nelivuotisen '
+          + 'kunnostuksen kesäkuussa 2006; ensimmäisessä vaiheessa '
+          + 'tehtiin kuivatus ja päällystys moskeijan ympärille ja '
+          + 'vaihdettiin noin puolet kattopalkeista. Palkkipuu on '
+          + 'nykyään tuotava Ghanasta, koska alkuperäiset puulajit '
+          + 'ovat kadonneet seudulta.',
+      kuvat: [
+        {
+          tiedosto: 'Djinguereber Mosque.jpg',
+          selite: 'Minareetti näkyy portinaukosta: savipinnasta '
+            + 'työntyvät puupalkit ovat rappaajien pysyvät telineet.',
+          lahde: 'Dr. Ondřej Havelka (cestovatel), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gordon Laingin talo': {
+      aika: '1826',
+      teksti: 'Skotlantilainen majuri Alexander Gordon Laing oli '
+          + 'ensimmäinen uuden ajan eurooppalainen, joka ylitti '
+          + 'Saharan pohjoisesta etelään ja pääsi Timbuktuun. Hän '
+          + 'lähti Englannista helmikuussa 1825, avioitui Tripolissa '
+          + 'Britannian konsulin tyttären Emma Warringtonin kanssa '
+          + '14. heinäkuuta ja lähti kaksi päivää myöhemmin aavikolle. '
+          + 'Tammikuussa 1826 hän suuntasi Tuatista Tanezrouftin yli. '
+          + 'Kirjeissään hän kertoi kuumeesta ja siitä, että hänen '
+          + 'karavaaninsa oli ryöstetty; hän kuvasi saaneensa '
+          + 'kaksikymmentäneljä haavaa ja menettäneensä oikean '
+          + 'kätensä.'
+        + '\n\n'
+        + 'Hän saapui kaupunkiin 18. elokuuta 1826 ja asui täällä '
+          + 'kolmekymmentäkahdeksan päivää. Syyskuun 21. päivän '
+          + 'kirjeessä hän kertoi asemansa olevan turvaton ja '
+          + 'aikovansa lähteä kolmen päivän kuluttua. Hän lähti '
+          + 'suunnitelmansa mukaisesti eikä häntä nähty enää: hän '
+          + 'kuoli heti kaupungin ulkopuolella oman saattueensa '
+          + 'käsissä. Papereita ei koskaan löydetty, ja hänen appensa '
+          + 'Hanmer Warrington syytti niiden hankkimisesta '
+          + 'ranskalaisia — näyttöä siitä ei ole koskaan ollut.'
+        + '\n\n'
+        + 'Ranskan hallitus asetti 1903 laatan taloon, jossa Laing '
+          + 'kaupungissa asui; siinä on hänen nimensä ja käyntinsä '
+          + 'päiväys. Talo on Djingareiberin kaupunginosassa, ja se '
+          + 'julistettiin kansalliseksi kulttuuriperinnöksi '
+          + 'asetuksella 18. joulukuuta 1992. Laing ja hänen '
+          + 'seuraajansa René Caillié saivat kumpikin Société de '
+          + 'Géographien kultamitalin vuodelta 1830 — toinen niistä '
+          + 'jaettiin kuolemanjälkeisesti.',
+      lahde: 'Wikipedia',
+    },
+    'René Cailliéen talo': {
+      aika: '1828',
+      teksti: 'René Caillié oli ensimmäinen eurooppalainen, joka '
+          + 'palasi Timbuktusta elävänä. Hän valmistautui vuosia: '
+          + 'vietti kahdeksan kuukautta Braknan paimentolaisten '
+          + 'parissa oppien arabiaa ja islamin tavat, ja kun rahoitusta '
+          + 'ei tullut Ranskan eikä Britannian hallitukselta, hän teki '
+          + 'töitä Sierra Leonessa ja maksoi matkan itse. Aikana, '
+          + 'jolloin normi olivat sotilaiden saattamat suuret '
+          + 'retkikunnat, hän matkusti yksin ja paikallisten tavoin. '
+          + 'Sairaus pidätti häntä Tiémén kylässä viisi kuukautta, ja '
+          + 'Djennéssä hän oli maaliskuussa 1828.'
+        + '\n\n'
+        + 'Kaupunki ei vastannut sitä, mitä Euroopassa oli luvattu. '
+          + 'Caillié kirjoitti: "Olin muodostanut aivan toisenlaisen '
+          + 'käsityksen Timbuktun mahtavuudesta ja rikkaudesta. '
+          + 'Kaupunki ei ensi näkemältä ollut muuta kuin joukko '
+          + 'rumannäköisiä, savesta rakennettuja taloja." Hän vietti '
+          + 'täällä kaksi viikkoa ja lähti 4. toukokuuta 1828 '
+          + 'karavaanin mukana, jossa oli noin kuusisataa kamelia — '
+          + 'hän antoi kirjassaan kaksi eri lukua, leipätekstissä '
+          + 'lähes kuusisataa ja lopun matkataulukossa seitsemästä '
+          + 'kahdeksaansataa.'
+        + '\n\n'
+        + 'Palkinto oli yhdeksäntuhatta frangia, jonka Société de '
+          + 'Géographie oli luvannut 1824 ensimmäiselle, joka pääsisi '
+          + 'kaupunkiin ja palaisi tiedon kanssa. Caillié sai sen, '
+          + 'nimitettiin Kunnialegioonan ritariksi 10. joulukuuta 1828 '
+          + 'ja sai kultamitalin 1830. Matkakertomus julkaistiin '
+          + 'kolmena niteenä valtion kustannuksella. Talo, jossa hän '
+          + 'asui, on merkitty vuoden 1896 Timbuktu-karttaan '
+          + 'Djinguereberin ja Sidi Yahyan moskeijoiden väliin.',
+      lahde: 'Wikipedia',
+    },
+    'Sidi Yahyan moskeija': {
+      aika: '1400–1440',
+      teksti: 'Sidi Yahyan moskeijan rakentaminen alkoi vuonna 1400 '
+          + 'sheikki el-Mokhtar Hamallan johdolla ja valmistui 1440 — '
+          + 'työ kesti neljäkymmentä vuotta. Kun tuaregit johtajanaan '
+          + 'Akil ottivat Timbuktun 1433, he antoivat päällikkyyden '
+          + 'Mohammed Naddille, chinguettiläiselle sanhajalle, joka '
+          + 'tilasi moskeijan. Vuonna 1441 kaupungin kuvernööri '
+          + 'nimitti läheisen ystävänsä Sidi Yahya al-Tadelsin sen '
+          + 'ensimmäiseksi imaamiksi. Hänet julistettiin myöhemmin '
+          + 'pyhimykseksi, ja hänen hautansa on moskeijassa.'
+        + '\n\n'
+        + 'Moskeijan matalat, koristeelliset ovet kertovat '
+          + 'marokkolaisesta vaikutuksesta ajalta, jolloin kaupunki '
+          + 'oli maghsharan-tuaregien hallussa. Rakennuksessa on '
+          + 'katettu rukoussali, sisäpihoja, puuovia ja kaariaukkoja. '
+          + 'Yksi minareetti nousee moskeijan ja pääpihan yli, mutta '
+          + 'se ei yllä kaupungin kahden muun suuren moskeijan '
+          + 'korkeuteen. Piha oli aikanaan hautausmaa, joka ei enää '
+          + 'ole käytössä; moskeijan imaamit on haudattu rakennuksen '
+          + 'pohjoispuolelle maan alle, ja siellä luetaan ilta- ja '
+          + 'aamurukoukset.'
+        + '\n\n'
+        + 'Vuosista 1468–1583 tiedetään vain, että kadi el-Aqib '
+          + 'kunnosti moskeijan 1569. Nykyinen ulkoasu on peräisin '
+          + 'vuodesta 1939, jolloin rakennus tehtiin olennaisesti '
+          + 'uudelleen. Yhteisö on pitänyt Sidi Yahyaa paremmassa '
+          + 'kunnossa kuin kahta muuta päämoskeijaa. Tutkija Prussin '
+          + 'Labelle huomauttaa, että moskeijan arkkitehtuuri poikkeaa '
+          + 'islamilaisen rakennustaiteen tavallisesta '
+          + 'kosmologiapainotuksesta: savi, muta ja kivi korostavat '
+          + 'maanläheisyyttä ja yhteyttä esivanhempiin, joiden ruumiit '
+          + 'lepäävät rakennuksen sisällä.',
+      kuvat: [
+        {
+          tiedosto: 'ASC Leiden - van Achterberg Collection - 05 - 37 - La mosquée de Sidi Yahya - Tombouctou, Mali - Novembre-décembre 1993.jpg',
+          selite: 'Moskeijan savipinnasta työntyvät palkinpäät, ja '
+            + 'matalalla pihamuurilla on rivi savisia vesiruukkuja.',
+          lahde: 'Angeline A. van Achterberg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'al-Wangarin kirjasto': {
+      aika: '1500-luku',
+      teksti: 'Kirjasto on nimetty oppineen Mohammed Bagayogo Es '
+          + 'Sudane Al Wangari Al Timbuktin mukaan. Hän syntyi '
+          + 'Djennéssä 1523 kadi Mahmud Bagayogon poikana ja kuului '
+          + 'juula-kansaan, mande-ryhmään, jossa oli kauppiaita ja '
+          + 'oppineita. Nuorena hän opiskeli veljensä kanssa '
+          + 'islamilaisen lain klassikoita. Kun Askia Daoud pyysi '
+          + 'häntä Djennén kadiksi — samaan virkaan, jota hänen isänsä '
+          + 'oli aikanaan kieltäytynyt ottamasta vastaan — hän kieltäytyi, '
+          + 'piileskeli veljensä kanssa moskeijassa useita kuukausia ja '
+          + 'pakeni lopulta opettajansa kanssa Timbuktuun.'
+        + '\n\n'
+        + 'Timbuktussa hänestä tuli Sankorén medresan sheikki ja '
+          + 'opettaja. Vuoteen 1583 mennessä hän oli niin merkittävä, '
+          + 'että toimi kaupungin tosiasiallisena kadina edeltäjänsä '
+          + 'kuoleman jälkeen ja antoi tuomioita Sidi Yahyan moskeijan '
+          + 'edessä — kahden korttelin päässä tästä talosta. Hän kuoli '
+          + '7. heinäkuuta 1593 Timbuktun vanhassakaupungissa, kaksi '
+          + 'vuotta marokkolaisvalloituksen jälkeen.'
+        + '\n\n'
+        + 'Bagayogo muistetaan oppineisuutensa lisäksi siitä, että hän '
+          + 'kieltäytyi taipumasta valloittajille. Merkittävä osa '
+          + 'hänen kirjoituksistaan on säilynyt käsikirjoituksina '
+          + 'kaupungissa, ja osa päätyi aikanaan ranskalaisiin '
+          + 'museoihin. Kirjasto on yksi niistä kaupungin '
+          + 'sukukirjastoista, joissa käsikirjoitukset ovat kulkeneet '
+          + 'perintönä sukupolvelta toiselle; niitä lasketaan olevan '
+          + 'kuudenkymmenen paikkeilla, ja osa on vain hyllyrivi tai '
+          + 'kirja-arkku.',
+      lahde: 'Wikipedia',
+    },
+    'Heinrich Barthin talo': {
+      aika: '1853–1854',
+      teksti: 'Saksalainen Heinrich Barth saapui Timbuktuun 7. '
+          + 'syyskuuta 1853. Hän oli lähtenyt liikkeelle kolmen miehen '
+          + 'retkikunnassa, mutta Richardson kuoli maaliskuussa 1851 '
+          + 'ja Overweg syyskuussa 1852, joten Barth jatkoi yksin. Kun '
+          + 'hän palasi Tripoliin syyskuussa 1855, matka oli ulottunut '
+          + 'kahdenkymmenenneljän leveysasteen ja kahdenkymmenen '
+          + 'pituusasteen yli — Tripolista Kameruniin ja Tšad-järveltä '
+          + 'Timbuktuun, yli kaksitoistatuhatta mailia. Hän puhui '
+          + 'sujuvasti arabiaa sekä fulania, hausaa ja kanuria ja '
+          + 'tutki erityisesti Songhain historiaa.'
+        + '\n\n'
+        + 'Timbuktussa hän asui kunta-suvun sheikin Ahmad al-Bakkai '
+          + 'al-Kuntin talossa. Al-Bakkai (1803–1865) oli '
+          + 'esikoloniaalisen Länsi-Sudanin viimeisiä merkittäviä '
+          + 'sovittelevan linjan puolustajia suhteessa kristittyyn '
+          + 'Eurooppaan, ja hän suojeli Barthia kaappausyritykseltä. '
+          + 'Massinan hallitsijalle hän kirjoitti fatwan muotoisen '
+          + 'kirjeen, jossa kiisti tämän oikeuden pidättää Barth tai '
+          + 'takavarikoida tämän omaisuus: kristitty ei ollut '
+          + 'muslimivallan alainen eikä islamin vihollinen vaan '
+          + 'ystävällismielisen maan kansalainen.'
+        + '\n\n'
+        + 'Barth arvosteli edeltäjänsä Caillién kuvausta kaupungista. '
+          + 'Caillién piirroksissa talot seisoivat erillään, mutta '
+          + 'Barthin mukaan "todellisuudessa kadut ovat kokonaan '
+          + 'suljettuja, sillä asunnot muodostavat yhtenäisiä, '
+          + 'katkeamattomia rivejä". Talosta, jossa Barth asui, on '
+          + 'valokuva vuodelta 1908 — otettu ennen kuin rakennus '
+          + 'sortui.',
+      lahde: 'Wikipedia',
+    },
+    'Sankorén moskeija': {
+      aika: '1300–1400-luku',
+      teksti: 'Sankorén moskeija ja medresa rakennettiin 1300- tai '
+          + 'varhaisella 1400-luvulla aghlal-heimoon kuuluneen '
+          + 'tuaregnaisen rahoituksella. Se sijaitsi Sankorén '
+          + 'kaupunginosassa, jossa asui suurin osa kaupungin '
+          + 'berbereistä ja arabeista. Nimi tarkoittaa songhaiksi '
+          + 'valkoisia mestareita tai valkoisia ylimyksiä; "valkoinen" '
+          + 'viittaa vaaleaihoisiin sanhaja-berbereihin. Kronikan '
+          + 'ranskantajat Octave Houdas ja Maurice Delafosse '
+          + 'käänsivät nimen muotoon "ylimysten kaupunginosa".'
+        + '\n\n'
+        + 'Rakennus on savea ja puupalkkeja, ja se on pienempi ja '
+          + 'koristelultaan vaatimattomampi kuin Djennén suuri '
+          + 'moskeija. Vuosina 1578–1582 Timbuktun ylituomari, imaami '
+          + 'Al-Aqib ibn Mahmud ibn Umar purki pyhäkön ja rakennutti '
+          + 'sen uudelleen Mekan Kaaban mitoilla. Piha oli myös '
+          + 'luokkahuone: opetus pidettiin avoimessa sisäpihassa tai '
+          + 'opettajan kotona.'
+        + '\n\n'
+        + 'Ibn Battuta kävi kaupungissa 1352 ja totesi, että suurin '
+          + 'osa asukkaista kuului sanhaja-berbereiden massufa-heimoon '
+          + '— mutta hän ei sanonut islamilaisesta oppineisuudesta '
+          + 'mitään. Vuosisataa myöhemmin massufan Aqit-suku muutti '
+          + 'Timbuktuun ja toi mukanaan syvän oppineisuusperinteen, ja '
+          + 'siitä alkoi se, mistä kaupunki tunnetaan. Kwame Nkrumah '
+          + 'sanoi Ghanan yliopiston avajaisissa 1961, että jos '
+          + 'Sankoré olisi selvinnyt vieraiden hyökkäysten tuhoista, '
+          + 'Afrikan akateeminen ja kulttuurihistoria olisi voinut '
+          + 'olla toinen kuin se tänään on.',
+      lahde: 'Wikipedia',
+    },
+    'Ahmed Baba -instituutti': {
+      aika: '1973',
+      teksti: 'Ahmed Baba -instituutti eli virallisemmin Ahmed Baba '
+          + 'Institute of Higher Learning and Islamic Research '
+          + 'perustettiin 1973, ja rahoitus tuli pääosin Kuwaitista. '
+          + 'Nimi on 1600-luvulla eläneen timbuktulaisen oppineen '
+          + 'Ahmad Baban. Instituutti on kaupungin ainoa julkinen '
+          + 'kirjasto; muut kokoelmat ovat sukujen hallussa.'
+        + '\n\n'
+        + 'Nykyisen rakennuksen suunnitteli eteläafrikkalainen '
+          + 'arkkitehti, ja se valmistui 2009. Se maksoi noin 5,8 '
+          + 'miljoonaa euroa, on 4 600 neliömetriä ja korvasi '
+          + 'neljäkymmentä vuotta vanhan rapistuneen talon. '
+          + 'Rakennuksessa on ilmastointi käsikirjoitusten säilytystä '
+          + 'varten ja automaattinen sammutusjärjestelmä — molemmat '
+          + 'ovat aavikon reunalla vaikeampia asioita kuin miltä '
+          + 'kuulostaa.'
+        + '\n\n'
+        + 'Kokoelmassa on noin kaksikymmentätuhatta käsikirjoitusta. '
+          + 'Suurin osa on 1300–1500-luvuilta ja arabiaksi, mutta '
+          + 'joukossa on songhaita, tamashekia ja bamanankania sekä '
+          + 'yksi turkin- ja yksi hepreankielinen teos. Aiheina ovat '
+          + 'lääketiede, tähtitiede, runous, kirjallisuus ja '
+          + 'islamilainen laki. Yksi niteistä on 1800-luvun akrostinen '
+          + 'runo, joka käsittelee rauhan saavuttamista Sokoton '
+          + 'kalifaatin ja Bornun välillä; Unesco liitti sen Maailman '
+          + 'muisti -rekisteriin 2017. Digitointia on tehty Norjan ja '
+          + 'Luxemburgin rahoituksella Unescon valvonnassa.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * LALIBELA (Opus 7.9.2026, paketti O9). Kahdeksan kirkkoa
+   * lännestä itään. Tekstit en-Wikipedian raakateksteistä 7.9.2026:
+   * "Lalibela", "Rock-Hewn Churches, Lalibela",
+   * "Church of Saint George, Lalibela", "Biete Medhane Alem",
+   * "Biete Maryam", "Biete Amanuel", "Biete Abba Libanos",
+   * "Biete Gabriel-Rufael", "Biete Lehem", "Lalibela Cross",
+   * "Gebre Meskel Lalibela".
+   *
+   * NÄMÄ JUTUT EIVÄT TOISTA LEHTEÄ EIVÄTKÄ ETIOPIAN MAALEHTEÄ.
+   * Maalehden nosto kertoo louhintatavan ja Jerusalem-symboliikan,
+   * lehti kertoo kuninkaan, veden, vuoden 1873 ja asuintalot; nämä
+   * jutut kertovat kunkin kirkon oman tarinan.
+   *
+   * AJOITUS KIRJOITETAAN LÄHTEEN MUKAAN. Neljän eteläisen ryhmän
+   * kirkon omat artikkelit sanovat kirkot rakennetun "Aksumin
+   * kuningaskunnan aikana", mutta pääartikkeli ajoittaa kirkot
+   * perinteisesti Zagwe-kuningas Lalibelan kaudelle ja esittää
+   * varhaisemman ajoituksen hypoteesina. Jutut noudattavat
+   * pääartikkelia (ks. tarkistus-lalibela.md, kohta F).
+   */
+  lalibela: {
+    'Biete Giyorgis': {
+      aika: '1100-luvun loppu',
+      teksti: 'Pyhän Yrjön kirkko on louhittu alaspäin vulkaanisesta '
+          + 'tuffista, joka on koko rakenteen ainoa materiaali. Se on '
+          + 'ajoitettu 1100-luvun loppuun tai 1200-luvun alkuun ja on '
+          + 'todennäköisesti viimeinen yhdestätoista kirkosta. '
+          + 'Pohjakaava on risti, ja katto on maanpinnan tasalla. '
+          + 'Kirkkoa on kutsuttu maailman kahdeksanneksi ihmeeksi, ja '
+          + 'se on kirkoista parhaiten säilynyt.'
+        + '\n\n'
+        + 'Ensi näkemältä paikka vaikuttaa täysin saavuttamattomalta: '
+          + 'joka puolella on pystysuora pudotus eikä sisäänkäyntisiltaa. '
+          + 'Sisään mennään hyvin kapeaa, ihmisen hakkaamaa kanjonia '
+          + 'pitkin, joka kiertää alaspäin ja muuttuu lähellä kirkkoa '
+          + 'tunneliksi — se kätkee kirkon entisestään. Ulkoseinillä on '
+          + 'yksinkertaisia avoimia hautoja pyhiinvaeltajille, jotka '
+          + 'kuolivat päästyään perille.'
+        + '\n\n'
+        + 'Etiopialaisen kulttuurihistorian mukaan kirkko rakennettiin '
+          + 'sen jälkeen, kun kuningas Gebre Mesqel Lalibela sai näyn, '
+          + 'jossa häntä käskettiin rakentaa se; käskyn antajaksi on '
+          + 'mainittu sekä Pyhä Yrjö että Jumala. Sisällä on '
+          + 'yksinkertainen Pyhän Yrjön pyhäkkö, ja verhon takana — '
+          + 'jonne muilla kuin papeilla ei ole pääsyä — on liitonarkin '
+          + 'jäljennös. Kirkko dokumentoitiin kolmiulotteisesti 2005.',
+      lahde: 'Wikipedia',
+    },
+    'Biete Golgotha Mikael': {
+      aika: '1100–1200-luku',
+      teksti: 'Golgata Mikaelin talo kuuluu Jordan-puron pohjoiseen '
+          + 'ryhmään, ja se on Lalibelan kirkoista se, joka '
+          + 'tunnetaan ennen kaikkea taiteestaan. Sisällä on '
+          + 'ihmishahmoja esittäviä reliefejä, jotka on hakattu '
+          + 'samasta kivestä kuin seinät. Yhdessä Biete Maryamin '
+          + 'maalausten kanssa ne ovat selvin osoitus siitä, ettei '
+          + 'Lalibela ole yksi rakennustyö vaan monta erilaista.'
+        + '\n\n'
+        + 'Kirkko on samalla Lalibelan pyhin paikka: sen kerrotaan '
+          + 'sisältävän kuningas Lalibelan haudan. Siinä on myös '
+          + 'jäljennökset Kristuksen ja Aadamin haudoista sekä '
+          + 'jouluseimestä — nimien ja rakennelmien järjestys toistaa '
+          + 'pyhiinvaeltajalle Jerusalemin paikkoja niin, että koko '
+          + 'kaupungin voi kiertää kuin pyhää maata.'
+        + '\n\n'
+        + 'Kirkko on ollut viime vuosina entisöinnin kohteena '
+          + 'yhdessä naapurinsa Biete Gabriel-Rufaelin kanssa. Työtä '
+          + 'on rahoittanut Yhdysvaltain suurlähetystö, ja se on '
+          + 'osoittautunut hankalaksi: Etiopian '
+          + 'kulttuuriperintöviranomaisen sekä paikallisen komitean ja '
+          + 'kirkon välillä on ollut erimielisyyttä siitä, mitä '
+          + 'hankkeeseen kuuluu.',
+      lahde: 'Wikipedia',
+    },
+    'Biete Maryam': {
+      aika: '1000–1200-luku',
+      teksti: 'Marian talo on mahdollisesti Lalibelan kirkoista '
+          + 'vanhin. Sen tarkkaa rakennusaikaa ei tiedetä: se on '
+          + 'rakennettu aikaisintaan 600-luvulla ja viimeistään '
+          + '1200-luvulla, ja perinne lukee sen Zagwe-kuningas '
+          + 'Lalibelan hallituskaudelle. Arkeologiset analyysit '
+          + 'ajoittavat paikan puolustusvarustusten rauniot noin '
+          + '700-luvulle ja monoliittiset kirkot kahteen vaiheeseen: '
+          + 'ensimmäinen 1000-luvulta 1100-luvun alkuun, toinen '
+          + '1100-luvun lopulta 1200-luvun alkuun.'
+        + '\n\n'
+        + 'Kirkko on Lalibelan värikkäin. Sen katto on maalattu, ja '
+          + 'maalauksissa on geometrisia kuvioita ja raamatullisia '
+          + 'kohtauksia. Kirkossa on myös jäljennökset Aadamin ja '
+          + 'Kristuksen haudoista. Sisätiloissa säilytetään '
+          + 'kulkueristejä, joita kannetaan juhlapäivinä ulos.'
+        + '\n\n'
+        + 'Rakennus kertoo kahdesta perinteestä yhtä aikaa. Sen ovi '
+          + 'on yksi Lalibelan selvimmistä esimerkeistä kehyksestä, '
+          + 'joka toistaa Aksumin steelojen muotoa — sama aihe '
+          + 'toistuu Biete Gabriel-Rufaelin kaarikäytävässä ja Biete '
+          + 'Amanuelin ikkunoissa. Harjakatto ja suoraviivaiset '
+          + 'listat taas viittaavat syyrialaiseen vaikutukseen. '
+          + 'Kirkko kuuluu Jordan-puron pohjoiseen ryhmään.',
+      kuvat: [
+        {
+          tiedosto: 'Bete Maryam 01.jpg',
+          selite: 'Punaisesta kalliosta louhitun kirkon seinässä on '
+            + 'ristinmuotoisia ikkuna-aukkoja ja kolme ikkunariviä.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Biete Medhane Alem': {
+      aika: '1100–1200-luku',
+      teksti: 'Maailman Vapahtajan taloa pidetään maailman suurimpana '
+          + 'monoliittikirkkona: se on kokonaan yhtä kivipaatta, jonka '
+          + 'ympäriltä kallio on louhittu pois. Se rakennettiin '
+          + 'Zagwe-dynastian aikana ja kuuluu Jordan-puron pohjoiseen '
+          + 'ryhmään. Kirkkoa ympäröi pilarikäytävä, ja koko rakennus '
+          + 'on tehty samasta kivestä kuin sen katto ja lattia.'
+        + '\n\n'
+        + 'Täällä säilytetään Lalibelan ristiä, Etiopian '
+          + 'arvokkaimpia uskonnollisia perintöesineitä. Kirkko on '
+          + 'myös yksi niistä viidestä, joiden päälle pystytettiin '
+          + '2008 Euroopan unionin rahoituksella suojakatokset. Ne '
+          + 'oli tarkoitettu väliaikaisiksi siihen asti, kunnes '
+          + 'pysyvämpi ratkaisu löytyisi, mutta ne ovat yhä '
+          + 'paikoillaan — ja niiden paino on nyt oma ongelmansa.'
+        + '\n\n'
+        + 'Kirkkoon liittyy myös kysymys, johon lähteet vastaavat eri '
+          + 'tavoin. Erään 1500-luvun kertomuksen mukaan Lalibelassa '
+          + 'poltettiin yksi kirkoista vuonna 1531. Historioitsija '
+          + 'Richard Pankhurst suhtautuu kertomukseen epäillen, koska '
+          + 'aikakauden kuninkaalliset kronikat vaikenevat asiasta '
+          + 'kokonaan; jos jokin kirkko kuitenkin vahingoittui, se oli '
+          + 'hänen mukaansa todennäköisimmin juuri tämä — tai '
+          + 'kuudentoista kilometrin päässä oleva Gannata Maryam, '
+          + 'jossa on samanlainen pilarikäytävä.',
+      kuvat: [
+        {
+          tiedosto: 'Lalibela, chiesa di bete medhane alem, esterno 08,0.jpg',
+          selite: 'Kirkkoa kiertää pilarikäytävä, ja sen yllä on '
+            + 'vuoden 2008 suojakatos teräsjalkoineen.',
+          lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Biete Gabriel-Rufael': {
+      aika: 'kiistanalainen',
+      teksti: 'Gabrielin ja Rafaelin talo on maanalainen kalliokirkko '
+          + 'Jordan-puron eteläisessä ryhmässä. Sen alkuperä on '
+          + 'Lalibelan kiistellyin. Perinne lukee kirkot '
+          + 'Zagwe-kuningas Lalibelan kaudelle, mutta Cambridgen '
+          + 'Afrikan arkeologian professori David Phillipson on '
+          + 'esittänyt, että juuri tämä kirkko sekä Merkorioksen ja '
+          + 'Danagelin kirkot louhittiin kalliosta puoli vuosituhatta '
+          + 'aiemmin, vuosina 600–800, linnoituksiksi tai muiksi '
+          + 'palatsirakenteiksi — ja että kuningas Lalibelan nimi '
+          + 'liitettiin niihin vasta hänen kuolemansa jälkeen.'
+        + '\n\n'
+        + 'Perinne kertoo rakennuksesta samaa: sitä pidetään '
+          + 'mahdollisena entisenä kuninkaanpalatsina, ja se on '
+          + 'yhdistetty pyhään leipomoon. Kirkon kaarikäytävä on yksi '
+          + 'Lalibelan selvimmistä esimerkeistä siitä, miten kivessä '
+          + 'toistetaan Aksumin steelojen muotoa: ikkunoiden ja ovien '
+          + 'kehykset jäljittelevät puurakennusta, jota ei ole enää '
+          + 'olemassa.'
+        + '\n\n'
+        + 'Kirkko on ollut italialaisen tutkimusryhmän '
+          + 'geologis-arkkitehtonisen pilottitutkimuksen kohteena, '
+          + 'jossa selvitettiin, miten kallion rakenne on ohjannut '
+          + 'louhintaa. Se on myös Yhdysvaltain suurlähetystön '
+          + 'rahoittaman entisöinnin kohde yhdessä Biete Golgotha '
+          + 'Mikaelin kanssa.',
+      lahde: 'Wikipedia',
+    },
+    'Biete Lehem': {
+      aika: '1100–1200-luku',
+      teksti: 'Biete Lehem on maanalainen monoliittikirkko Jordan-'
+          + 'puron eteläisessä ryhmässä, ja se on kirkoista pienimpiä. '
+          + 'Nimi tulee Betlehemistä: heprean bet lehem tarkoittaa '
+          + 'leivän taloa, ja amharaksi kirkkoa kutsutaan Pyhän '
+          + 'leivän taloksi.'
+        + '\n\n'
+        + 'Nimi ei ole sattumaa vaan osa suunnitelmaa. Lalibelan '
+          + 'rakennusten nimet ja sijoittelu toistavat Jerusalemin ja '
+          + 'Pyhän maan paikkoja niin, että pyhiinvaeltaja voi kiertää '
+          + 'ne kävellen: kaupungin läpi kulkee Jordan, kirkkojen '
+          + 'joukossa on Golgata ja Betlehem, ja ryhmien on tulkittu '
+          + 'esittävän maallista ja taivaallista Jerusalemia.'
+        + '\n\n'
+        + 'Nimen käytännöllinen puoli on sekin uskottava: leivän talo '
+          + 'on ollut myös leivän talo. Naapurikirkko Biete '
+          + 'Gabriel-Rufael on lähteissä yhdistetty pyhään leipomoon, '
+          + 'ja ehtoollisleivän valmistus on Etiopian ortodoksisessa '
+          + 'kirkossa oma tarkkaan säädelty toimituksensa. Kirkot '
+          + 'ovat yhä käytössä, joten leipää leivotaan Lalibelassa '
+          + 'edelleen.',
+      lahde: 'Wikipedia',
+    },
+    'Biete Abba Libanos': {
+      aika: '1200-luku',
+      teksti: 'Apotti Libanoksen talo on maanalainen kalliokirkko '
+          + 'Jordan-puron eteläisessä ryhmässä. Se on Lalibelan '
+          + 'kirkoista se, jolla on selvin oma tarinansa: paikallisen '
+          + 'historioitsijan Getachew Mekonnenin mukaan kuningatar '
+          + 'Masqal Kibra rakennutti sen miehensä Lalibelan '
+          + 'muistomerkiksi tämän kuoleman jälkeen.'
+        + '\n\n'
+        + 'Masqal Kibrasta on säilynyt useita perinteitä, ja ne '
+          + 'piirtävät kuvan vaikutusvaltaisesta kuningattaresta. Hän '
+          + 'sai piispan tekemään veljestään Hirunista niin ikään '
+          + 'piispan; toisen perinteen mukaan hän sai kuninkaan '
+          + 'luopumaan kruunusta veljenpoikansa hyväksi ja '
+          + 'kahdeksantoista kuukautta myöhemmin palaamaan valtaan. '
+          + 'Historioitsija Taddesse Tamrat epäilee, että kertomus '
+          + 'peittää alleen lyhyen vallankaappauksen.'
+        + '\n\n'
+        + 'Kirkko on osittain kiinni vuoressa: Lalibelan '
+          + 'yhdestätoista kirkosta neljä on irti kalliosta joka '
+          + 'suunnalta, ja seitsemän jakaa yhden seinän vuoren kanssa. '
+          + 'Sisäänkäynti on kaivannon pohjalta. Kirkosta on tehty '
+          + 'kolmiulotteinen malli Kapkaupungin yliopiston '
+          + 'Zamani-hankkeessa, joka dokumentoi Lalibelan kirkot '
+          + 'neljällä kenttäjaksolla vuosina 2005–2009.',
+      lahde: 'Wikipedia',
+    },
+    'Biete Amanuel': {
+      aika: '1100–1200-luku',
+      teksti: 'Immanuelin talo on maanalainen monoliittikirkko '
+          + 'Jordan-puron eteläisessä ryhmässä, ja se on yksi '
+          + 'Lalibelan neljästä vapaasti seisovasta kirkosta — sen '
+          + 'ympäriltä kallio on louhittu pois joka suunnalta. Sitä on '
+          + 'pidetty mahdollisena entisenä kuninkaallisena kappelina, '
+          + 'mikä sopisi sen huolelliseen viimeistelyyn.'
+        + '\n\n'
+        + 'Kirkko on paras esimerkki siitä, mikä tekee Lalibelasta '
+          + 'aksumilaisen perinteen jatkeen. Tutkija Stuart Munro-Hay '
+          + 'huomauttaa, että Biete Amanuelin julkisivussa on kivestä '
+          + 'tehty jäljitelmä puurakenteista — samoista '
+          + 'vaakapalkeista ja ulkonevista päistä, joita näkee yhä '
+          + 'joissakin Tigrayn ja Eritrean vanhoissa kirkoissa, joissa '
+          + 'puu on oikeasti paikallaan. Kirkon ikkunat toistavat '
+          + 'Aksumin steelojen muotoa.'
+        + '\n\n'
+        + 'Phillipson muistuttaa, ettei aksumilainen tyyli todista '
+          + 'aksumilaista ikää: piirteitä on voitu ottaa käyttöön '
+          + 'kauan Aksumin tuhon jälkeen. Se todistaa jotain muuta ja '
+          + 'kiinnostavampaa — katkeamattoman rakennusperinteen, joka '
+          + 'kesti vuosisatoja sen valtakunnan jälkeen, jossa se '
+          + 'syntyi. Koptilaisia vaikutteita näkyy koristeissa, mutta '
+          + 'runko on paikallinen.',
+      kuvat: [
+        {
+          tiedosto: 'Lalibela, chiesa di bete amanuel, esterno 01,0.jpg',
+          selite: 'Julkisivun vaakakerrokset ja ulkonevat palkinpäät '
+            + 'ovat kiveen veistetty jäljitelmä puurakennuksesta.',
+          lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * TOWNSVILLE (Opus 7.9.2026, Fablen parvi). Kahdeksan kohdetta
+   * kohdekartalta (js/packs/maakartat.js, KAUPUNKIKARTAT.townsville).
+   *
+   * LÄHDEKIELI. Kaikilla kahdeksalla on oma englanninkielinen
+   * artikkeli, useimmilla Queensland Heritage Register -kuvauksen
+   * pohjalta, joten toista kieliversiota ei tarvittu. Luetut
+   * artikkelit raakatekstinä 7.9.2026: "Queens Gardens, Townsville",
+   * "Tobruk Memorial Baths", "Townsville Customs House", "St James
+   * Cathedral, Townsville", "Queensland Museum Tropics", "SS
+   * Yongala", "Townsville Post Office", "Townsville School of Arts",
+   * "Great Northern Hotel, Townsville", "The Strand, Townsville",
+   * "Magnetic Island".
+   *
+   * YKSIKÄÄN JUTTU EI TOISTA LEHDEN NOSTOJA. Lehti kertoo kaupungin
+   * perustamisesta, James Morrillista, vuodesta 1873, Japanin
+   * konsulaatista, Eddie Mabosta, kuivasta tropiikista, Nooan yöstä,
+   * Castle Hillistä ja Magnetic Islandista; nämä kahdeksan kertovat
+   * kukin oman rakennuksensa tai puistonsa historian.
+   *
+   * KOLME TARKISTUKSEN RATKAISUA NÄKYY TÄSSÄ:
+   *  - Queens Gardensin lajilista on kohteen oman artikkelin
+   *    (kaakao, öljypalmu, mango), ei pääartikkelin;
+   *  - vanhan rautatieaseman vuosilukua ei anneta (1913 vai 1914);
+   *  - postitalon vaiheiden vuosia ei sidota toisiinsa, koska
+   *    lähdelause on kaksitulkintainen.
+   */
+  townsville: {
+    'Queens Gardens': {
+      aika: '1870',
+      teksti: 'Kesäkuun 14. päivänä 1870 julistettiin sadan eekkerin '
+          + 'kasvitieteellinen reservi, jollaisia perustettiin '
+          + 'siihen aikaan lähes joka kaupunkiin Queenslandissa. '
+          + 'Nimi Queens Park viittasi Viktoriaan, ja tarkoitus oli '
+          + 'yhtä lailla tieteellinen kuin taloudellinen.'
+        + '\n\n'
+        + 'Puutarha oli akklimatisaatiopuutarha: siellä kokeiltiin, '
+          + 'mitkä kaupalliset kasvit kestäisivät tropiikin. '
+          + 'Ensimmäisiä lajeja olivat kaakao, afrikkalainen '
+          + 'öljypalmu ja mango. Osa silloin istutetuista '
+          + 'hoop-männyistä ja mustapavuista kasvaa yhä, ja lähteen '
+          + 'mukaan ne saattavat olla Australian vanhimpia viljeltyjä '
+          + 'yksilöitä.'
+        + '\n\n'
+        + 'Vuosisadan lopulla puutarha alkoi muuttua muodolliseksi '
+          + 'virkistyspuistoksi. Toisen maailmansodan aikana se oli '
+          + 'sadantuhannen amerikkalaissotilaan tukikohta, ja 1959 '
+          + 'puistonhoidon esimies Alan Wilson suunnitteli sen '
+          + 'uudelleen. Kaupungin kasvu söi loput: nykyinen puisto on '
+          + 'kymmenesosa alkuperäisestä.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+    'Tobruk Memorial Baths': {
+      aika: '1941—1950',
+      teksti: 'Uimala aloitettiin loppuvuodesta 1941 kaupungin omana '
+          + 'hankkeena: Townsville halusi olympiamittaisen altaan. '
+          + 'Ajoitus oli hankala. Yleisö vastusti rahankäyttöä kesken '
+          + 'sodan, ja osavaltion hallitukselle tehtiin vetoomus '
+          + 'työn pysäyttämiseksi — mutta kaupunki oli noudattanut '
+          + 'sota-ajan rakennusmääräyksiä, ja vetoomus hylättiin.'
+        + '\n\n'
+        + 'Joulukuussa 1941, keskellä kiistaa, valtuusto päätti '
+          + 'nimetä uimalan Tobrukin piirityksessä taistelleiden '
+          + 'australialaisten muistoksi. Työ keskeytyi kuitenkin, kun '
+          + 'kaupungista tuli 1942 Tyynenmeren tukikohta, ja jatkui '
+          + 'vasta rauhan tultua työvoima- ja materiaalipulassa. '
+          + 'Allas avattiin yleisölle 14. lokakuuta 1950 ja vihittiin '
+          + 'virallisesti 26. marraskuuta 1951.'
+        + '\n\n'
+        + 'Kahdeksanratainen viidenkymmenen metrin allas osoittautui '
+          + 'poikkeukselliseksi harjoituspaikaksi: Australiassa ei '
+          + 'ollut sisäuimahalleja, ja lämpimässä ilmastossa '
+          + 'talviharjoittelu onnistui. Vuosien 1956 ja 1960 '
+          + 'olympiajoukkueet valmistautuivat täällä, ja yhtenä yönä '
+          + '1956 altaassa uitiin kuusi maailmanennätystä ja '
+          + 'kolmetoista Australian ennätystä.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+    'Vanha tullitalo': {
+      aika: '1900—1902',
+      teksti: 'Tämä on Townsvillen neljäs tullirakennus. Cleveland '
+          + 'Bay julistettiin tuontisatamaksi 17. kesäkuuta 1865, ja '
+          + 'ensimmäiset tullitilat olivat kolmihuoneinen puutalo, '
+          + 'jota laajennettiin pala kerrallaan. Vuoteen 1898 mennessä '
+          + 'tullilaitos oli kasvanut ulos jo kolmannesta talostaan.'
+        + '\n\n'
+        + 'Ajoitus ei ollut sattumaa. Queensland rakensi juuri silloin '
+          + 'uusia tullitaloja Rockhamptoniin, Bundabergiin ja '
+          + 'Mackayhin — lahjaksi tulevalle liittovaltiolle, joka '
+          + 'ottaisi ne haltuunsa. Piirustukset teki 1899 '
+          + 'lontoolaissyntyinen arkkitehti George Payne, joka oli '
+          + 'tullut osavaltion rakennusvirastoon 1890-luvun laman '
+          + 'ajaksi. Rakennus valmistui myöhäissyksyllä 1902 hintaan '
+          + '26 642 puntaa.'
+        + '\n\n'
+        + 'Payne suunnitteli tropiikkia varten: kolonnadillinen '
+          + 'romaaninen talo, korkeat katot ja leveät varjostavat '
+          + 'kuistit, keskellä brittiläisen tavan mukainen korkea '
+          + 'long room yleisöä varten. Jalusta on graniittia Magnetic '
+          + 'Islandin Cockle Baystä. Hirmumyrsky Leonta pudotti '
+          + 'maaliskuussa 1903 kaksi savupiippua katon läpi, ja '
+          + 'toisessa maailmansodassa kellari muutettiin '
+          + 'pommisuojaksi.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+    'St James -katedraali': {
+      aika: '1887—1960',
+      teksti: 'Melton Hillin päällä seisova punatiilinen katedraali '
+          + 'rakennettiin kahdessa erässä, ja niiden väliin jäi '
+          + 'kuusikymmentäseitsemän vuotta. Pohjois-Queenslandin '
+          + 'anglikaaninen hiippakunta perustettiin 1878 ja sen '
+          + 'ensimmäinen piispa George Henry Stanton saarnasi '
+          + 'Townsvillessä 21. toukokuuta 1879 — sitä ennen hän oli '
+          + 'kiertänyt Englannissa keräämässä rahaa ja pappeja.'
+        + '\n\n'
+        + 'Suunnitelman teki sydneyläinen Arthur Blacket, ja '
+          + 'peruskivi laskettiin Viktorian kultaisena riemuvuonna '
+          + '27. kesäkuuta 1887. Sitten raha loppui. Hiekkakivi '
+          + 'vaihdettiin punatiileen, marmori ja graniitti betoniin, '
+          + 'tornit jätettiin pois ja Blacketin toimeksianto '
+          + 'purettiin 1890; työn vei loppuun townsvilleläinen Walter '
+          + 'Morris Eyre.'
+        + '\n\n'
+        + 'Lopulta päätettiin rakentaa vain puolet. Kuori, kuoriosa, '
+          + 'ristivarret ja osa pääkäytävästä vihittiin väliaikaisen '
+          + 'katon alla 27. lokakuuta 1892. Toinen puoli rakennettiin '
+          + 'vasta 1959—1960. Hirmumyrsky Sigma pyyhkäisi Townsvillen '
+          + 'yli 26. tammikuuta 1896, mutta katedraali selvisi '
+          + 'siitä lähes vahingoitta.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+    'Tropiikin museo': {
+      aika: '1987—',
+      teksti: 'Museo avattiin 1987 Ross Creekin varrelle nimellä '
+          + 'Queensland Museum, North Queensland Branch, ja sai 1990 '
+          + 'nimen Museum of Tropical Queensland; nykyään se on '
+          + 'Queensland Museum Tropics. Uusi, varta vasten rakennettu '
+          + 'talo nousi vanhan paikalle, koska yhden hylyn löydöille '
+          + 'tarvittiin tila.'
+        + '\n\n'
+        + 'Se hylky on HMS Pandora, laiva, joka lähetettiin '
+          + 'nappaamaan Bountyn kapinalliset ja upposi itse '
+          + 'paluumatkalla. Museo hoitaa myös toista hylkypaikkaa: '
+          + 'SS Yongalaa, joka lähti Mackaysta 23. maaliskuuta 1911 '
+          + 'kello 13.40 kohti Townsvilleä. Pian lähdön jälkeen '
+          + 'merkinantoasema sai sähkeen hirmumyrskystä ja nosti '
+          + 'liput, mutta Yongala ei nähnyt niitä — ja sille '
+          + 'Englannista lähetetty langattoman lennättimen laitteisto '
+          + 'ei ollut vielä ehtinyt Australiaan.'
+        + '\n\n'
+        + 'Laiva upposi yöllä, eikä kukaan laivalla olleista 122:sta '
+          + 'selvinnyt. Hylkyä etsittiin vuosikymmeniä. Vuonna 1958 '
+          + 'paikallinen kalastaja Bill Kirkpatrick nosti pohjasta '
+          + 'kassakaapin, jossa oli vain mustaa liejua — mutta '
+          + 'sarjanumerosta erottui osa: 9825W. Kolme vuotta '
+          + 'myöhemmin Chubb tunnisti Englannissa numeron '
+          + 'kassakaapiksi, jonka se toimitti Yongalan purserin '
+          + 'hyttiin 1903.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+    'Vanha postitalo': {
+      aika: '1886—1964',
+      teksti: 'Flinders Mallin itäpäässä seisoo sementtirapattu '
+          + 'tiilitalo, jossa on renessanssin piirteitä: alakerrassa '
+          + 'varjostava pylväskäytävä ja yläkerran julkisivulla '
+          + 'kuisti. Suunnittelija oli John James Clark ja rakentaja '
+          + 'Dennis Kellcher. Talo tehtiin vaiheittain 1880-luvulla: '
+          + 'yksi vaihe oli kaksikerroksinen lennätinkonttori, toinen '
+          + 'postikonttori ja postimestarin asunto, ja laajennuksia '
+          + 'tehtiin vielä 1888.'
+        + '\n\n'
+        + 'Kellotornin rakensi Henry L Davis & Co. Kellopeli tilattiin '
+          + 'Englannista 1889 ja se oli asennettu 1891. Torni näkyi '
+          + 'Ross Creekin yli, ja postitalon portailta pidettiin '
+          + 'usein poliittisia puheita saippualaatikon päältä.'
+        + '\n\n'
+        + 'Vuonna 1942 torni purettiin ja koneisto pantiin '
+          + 'varastoon — Darwinin pommituksen jälkeen korkea '
+          + 'maamerkki oli enemmän riski kuin ylpeydenaihe. Uusi, '
+          + 'huomattavasti muutettu torni pystytettiin 1963—64 '
+          + 'hintaan 42 135 puntaa, ja samalla sisätilat '
+          + 'nykyaikaistettiin. Vuodesta 2001 talossa on toiminut '
+          + 'panimo.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+    'School of Arts': {
+      aika: '1866—1938',
+      teksti: 'Ensimmäinen School of Arts -komitea kokoontui '
+          + 'Townsvillessä 1866, ja siinä istuivat kaupungin '
+          + 'perustajat Robert Towns ja John Melton Black. '
+          + 'Schools of Arts oli brittiläinen keksintö: luentoja, '
+          + 'keskusteluja ja lainakirjasto niille, joilla ei ollut '
+          + 'varaa ostaa kirjoja. Townsvillen kokoelma alkoi '
+          + 'kolmestakymmenestä niteestä vuokramökissä.'
+        + '\n\n'
+        + 'Kun liike-elämä siirtyi länteen, Melton Hillin talo jäi '
+          + 'syrjään ja myytiin osavaltiolle oikeustaloksi. Uuden '
+          + 'talon suunnittelukilpailun voittivat townsvilleläiset '
+          + 'Eyre ja Munro, rakentajana oli James Smith, ja talo '
+          + 'avattiin toukokuussa 1891 debytanttitanssiaisilla. '
+          + 'Alakerrassa oli luokkia, yläkerrassa kirjasto ja '
+          + 'vieressä kuudensadan hengen teatteri Her Majesty\'s, '
+          + 'jossa Nellie Melba lauloi 1909 ja jossa nähtiin 1907 '
+          + 'Townsvillen ensimmäinen aboriginaalien näyttämöesitys.'
+        + '\n\n'
+        + 'Lamavuosina valtion tuet loppuivat ja Schools of Arts '
+          + 'kuihtui kaikkialla. Townsvillessä säätiön hoitajat '
+          + 'erosivat 1938 ja luovuttivat omaisuuden kaupungille — '
+          + 'ja artikkelin mukaan siitä syntyi Australian ensimmäinen '
+          + 'ilmainen lainakirjasto. Nykyään talossa toimii '
+          + 'tanssiteatteri Dancenorth.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+    'Great Northern Hotel': {
+      aika: '1900—1901',
+      teksti: 'Hotelli rakennettiin sen varaan, että rautatieasema '
+          + 'siirtyisi. Kun osavaltion hallitus ilmoitti 1900 uudesta '
+          + 'päätepysäkistä Blackwood Streetin varteen Ross Creekin '
+          + 'viereen, saman risteyksen kahdelle kulmalle jätettiin '
+          + 'heti kesäkuussa hakemukset ensiluokkaisesta hotellista. '
+          + 'Perustelu oli molemmissa sama: 1880-luvun buumihotellit '
+          + 'eivät enää vastanneet vuosisadan vaihteen matkustajan '
+          + 'vaatimuksia.'
+        + '\n\n'
+        + 'Vain toinen hanke toteutui. Great Northern nousi '
+          + 'townsvilleläisen puutavarafirman Wilson Hart & Companyn '
+          + 'tontille arkkitehtiveljesten Tunbridge ja Tunbridge '
+          + 'piirustusten mukaan: kaksikerroksinen tiili- ja '
+          + 'puurakennus, 36 makuuhuonetta, hinta-arvio 8 000—9 000 '
+          + 'puntaa. Nimi tuli Great Northern Railwaystä, jonka uutta '
+          + 'päätepysäkkiä se oli lähinnä.'
+        + '\n\n'
+        + 'Asema kuitenkin viivästyi yli vuosikymmenen — sen '
+          + 'valmistumisvuodesta lähteet eivät ole yksimielisiä — '
+          + 'eikä se haitannut hotellia lainkaan. Great Northern oli '
+          + 'suosittu heti avaamisestaan alkaen 1901, ja kuten '
+          + 'useimmat australialaiset hotellit se oli myös kaupungin '
+          + 'kokoontumispaikka. Isot parvekkeet ovat yhä Flinders '
+          + 'Streetin tunnistettavin julkisivu.',
+      lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
+    },
+  },
+  /*
+   * IQUITOS (Opus 7.9.2026, Fablen parvi). Kahdeksan kohdetta
+   * kohdekartalta (js/packs/maakartat.js, KAUPUNKIKARTAT.iquitos).
+   *
+   * LÄHDEKIELI. Yhdelläkään kahdeksasta kohteesta ei ole omaa
+   * englanninkielistä artikkelia, joten lähde on es-Wikipedia ja se
+   * sanotaan lähderivillä, koska lukijan on voitava löytää lähde
+   * (tarkistus-iquitos.md, kohta 0; ennakkotapaus guatemala ja
+   * salta). Luetut artikkelit raakatekstinä 7.9.2026: "Casa Morey",
+   * "Escuela Superior de Bellas Artes Víctor Morey Peña", "Mercado
+   * Central (Iquitos)", "Catedral de Iquitos", "Ex Hotel Palace",
+   * "Malecón Tarapacá", "Casa Strassberger", "Plaza Veintiocho de
+   * Julio", "Casa de Fierro", "Zona Monumental de Iquitos" sekä
+   * en-Wikipedian "Iquitos".
+   *
+   * YKSIKÄÄN JUTTU EI TOISTA LEHDEN NOSTOJA. Lehti kertoo
+   * tiettömyydestä, jesuiittalähetysasemista, vuodesta 1873,
+   * rautatalon lähderistiriidasta, kumibuumista, joen vuotuisesta
+   * vaihtelusta, Belénistä, Allpahuayo-Mishanasta ja härkähaista.
+   * Nämä kahdeksan kertovat kukin oman rakennuksensa tai aukionsa
+   * historian.
+   *
+   * MERCADO CENTRAL ON RAUTATALON TOINEN PUOLIKAS, mutta juttu
+   * kertoo torin oman tarinan — siirrot, uudistuksen ja
+   * myyntipaikat — eikä lähteiden erimielisyyttä Eiffelistä. Se on
+   * lehden noston aihe.
+   *
+   * CASA STRASSBERGERIN TAKAVARIKKO kerrotaan tapahtumana ilman
+   * osapuolikehystä (Raamattu: ei nykypolitiikkaa, väkivalta ja sota
+   * vain neutraalina historiana).
+   */
+  iquitos: {
+    'Casa Morey': {
+      aika: '1910—1913',
+      teksti: 'Kumiparoni Luis Felipe Morey rakennutti talon vuosina '
+          + '1910—1913, ja se päätyi hänen veljelleen, niin ikään '
+          + 'kumiparonille Adolfo Morey Ariasille. Adolfo asui siellä '
+          + 'vaimonsa Estefanía Peñan ja neljäntoista lapsensa kanssa; '
+          + 'useat lapsista lähetettiin kouluun Eurooppaan.'
+        + '\n\n'
+        + 'Talo on kaksikerroksinen, ja sen ikkunoita suojaavat hienot '
+          + 'takoraudasta tehdyt ristikot. Sitä pidetään yhtenä '
+          + 'kumikauden Iquitosin komeimmista rakennuskokonaisuuksista, '
+          + 'ja se seisoo Plaza Ramón Castilla y Marquesadoa '
+          + 'vastapäätä kaupungin pohjoisosassa lähellä satamaa.'
+        + '\n\n'
+        + 'Talo kertoo, mihin kumiraha meni. Kaupungissa oli vuonna '
+          + '1900 kaksikymmentäviisi kumikauppahuonetta, ja niiden '
+          + 'omistajat rakensivat itselleen taloja, joiden materiaalit '
+          + 'tuotiin Atlantin yli — samaan aikaan kun kaupunkiin ei '
+          + 'johtanut yhtään maantietä. Nykyään talo on hotelli.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Kuvataidekoulu': {
+      aika: '1960-luku',
+      teksti: 'Escuela Superior de Bellas Artes Víctor Morey Peña '
+          + 'perustettiin 1960-luvulla, ja perustajina olivat '
+          + 'taiteilijat, jotka olivat tehneet uransa Iquitosissa. '
+          + 'Alkuperäiseen hankkeeseen kuului myös musiikkikoulu, joka '
+          + 'ei toteutunut.'
+        + '\n\n'
+        + 'Nimi on iquitosilaisen maalarin ja runoilijan Víctor Morey '
+          + 'Peñan mukaan. Hänen tyttärensä Selva Morey oli koulun '
+          + 'ensimmäinen sihteeri ja johtajaksi tuli Ángel Chávez '
+          + 'López — jonka omia maalauksia ei kuitenkaan koskaan '
+          + 'ripustettu koulun galleriaan. Koulu toimii myös '
+          + 'lehtiarkistona, johon on koottu Amazonian maalaustaiteen '
+          + 'historia.'
+        + '\n\n'
+        + 'Kaupungilla on oma taidesuuntansa. Iquitos on Amazonian '
+          + 'pop-taiteen syntypaikka: itseoppinut tyyli, joka '
+          + 'tunnetaan kimaltavista väreistään ja viittauksistaan '
+          + 'ayahuasca-kokemuksiin. Alun perin se oli muraalitaidetta, '
+          + 'jossa sekoittuvat Amazonian kulttuuri, eurooppalaiset '
+          + 'aiheet ja mainoshahmot. Tunnettuja nimiä ovat muun muassa '
+          + 'Christian Bendayan ja Rember Yahuarcani.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Mercado Central': {
+      teksti: 'Sargento Loresin ja Mooren kulmassa seisoo '
+          + 'esivalmisteinen rautahalli, joka ei ole aina ollut '
+          + 'täällä. Se on osa samaa Euroopasta laivattua rautataloa '
+          + 'kuin Plaza de Armasin Casa de Fierro: talo oli liian iso '
+          + 'yhteen paikkaan ja jaettiin kahtia.'
+        + '\n\n'
+        + 'Toinen puolikas kulki pitkän kierroksen. Se asennettiin '
+          + 'ensin Malecón Tarapacán varteen silloisen Hotel Palacen '
+          + 'viereen, purettiin myöhemmin ja siirrettiin nykyiselle '
+          + 'paikalleen. Vuonna 1950 rakennus uudistettiin '
+          + 'toriksi.'
+        + '\n\n'
+        + 'Nyt hallissa on 164 kiinteää myyntipaikkaa, kaikki '
+          + 'jatkuvassa käytössä, sekä vesi, viemäri ja sähkö; '
+          + 'hallintoa hoitaa Maynasin provinssin kunta. Kaupungin '
+          + 'kuulu Belénin tori on aivan toinen asia — se on ulkona ja '
+          + 'moninkertaisesti suurempi — mutta Mercado Central on se '
+          + 'paikka, jossa keskustan asukas käy aamulla.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Iquitosin katedraali': {
+      aika: '1911—1925',
+      teksti: 'Aricán ja Putumayon kulmassa seisoo San Juan Bautistan '
+          + 'katedraali, jota kaupungissa sanotaan yksinkertaisesti '
+          + 'Iglesia Matriziksi. Se on uusgoottilainen ja kaupungin '
+          + 'korkein kirkko, ja se on samalla yksi parhaiten '
+          + 'säilyneistä perintörakennuksista. Alla on krypta.'
+        + '\n\n'
+        + 'Vanha temppeli purettiin, ja uuden rakentaminen alkoi '
+          + '1911. Kirkko vihittiin 16. maaliskuuta 1919, mutta torni '
+          + 'valmistui vasta 1924. Seuraavana vuonna paikallinen '
+          + 'edistysseura asensi kahdenkymmenen metrin torniin '
+          + 'Sveitsistä ostetun julkisen kellon, kellotapulin ja '
+          + 'metalliristin huipulle. Nykyisen muotonsa kirkko sai '
+          + 'laajennuksissa 1944—1949 isä Avencio Villarejon '
+          + 'johdolla.'
+        + '\n\n'
+        + 'Katedraali edustaa lähteen jaottelussa Iquitosin '
+          + 'arkkitehtuurin viidettä vaihetta, vuosia 1915—1940 — '
+          + 'sitä aikaa, jolloin kumiraha oli jo hiipumassa mutta '
+          + 'kaupunki rakensi yhä eurooppalaisittain. Se julistettiin '
+          + 'kansalliseksi historialliseksi kulttuuriperinnöksi 1996.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Hotel Palace': {
+      aika: '1908—1912',
+      teksti: 'Malecón Tarapacán ensimmäisessä korttelissa on '
+          + 'kolmikerroksinen art nouveau -talo kulmatorneineen, jonka '
+          + 'tyylissä on katalonialaisen modernismin ja Gaudín '
+          + 'koulukunnan vaikutteita. Sen rakennutti Otoniel Vela, ja '
+          + 'työtä johtivat perulainen rakennusinsinööri Samuel Young '
+          + 'Mass ja espanjalainen arkkitehti José Altamira y Motta '
+          + 'vuosina 1908—1912.'
+        + '\n\n'
+        + 'Kaikki rakennusosat kuljetettiin Atlantin yli: kaakelit '
+          + 'tuotiin Málagasta, ja parvekkeiden takoraudat on taivutettu '
+          + 'kasviaiheiksi. Rakennusta jouduttiin muuttamaan matkan '
+          + 'varrella, jotta se sopisi tropiikin ilmastoon. Sitä '
+          + 'pidetään Perun ensimmäisenä luksushotellina — '
+          + 'kaksitoista vuotta vanhempana kuin Liman Gran Hotel '
+          + 'Bolívar — ja Iquitosin arkkitehtuurin huippuna.'
+        + '\n\n'
+        + 'Kumibuumin aikaan täällä yöpyivät kumiherrat ja '
+          + 'eurooppalaiset kauppiaat. Vuodesta 1961 talossa on '
+          + 'toiminut Itäisen sotilasalueen esikunta. Rakennus on '
+          + 'kuvattu Perun yhden solin kolikossa nimellä "Antiguo '
+          + 'Hotel Palace, 1912".',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Malecón Tarapacá': {
+      aika: '1800-luvun loppu',
+      teksti: 'Malecón on viiden korttelin mittainen betonoitu ja '
+          + 'mayolikalla päällystetty rantakatu Itaya-joen '
+          + 'törmällä, kaupungin itäreunassa ja korttelin päässä '
+          + 'Plaza de Armasista. Se rakennettiin 1800-luvun lopulla, '
+          + 'kun kumi teki kaupungista rikkaan.'
+        + '\n\n'
+        + 'Alkuaan se oli kokoontumispaikka: kaupunkiin saapuneet '
+          + 'tutkimusmatkailijat tapasivat toisensa täällä ja '
+          + 'katselivat ulkomaisia aluksia, jotka menivät alas '
+          + 'Amazonille. Nimi tulee Tarapacán departementista, jonka '
+          + 'Peru menetti Tyynenmeren sodassa — muistoksi kaatuneille, '
+          + 'ei paikan omasta historiasta.'
+        + '\n\n'
+        + 'Varrella on kumikauden julkisivuja, Orlando Casanova '
+          + 'Hellerin pronssipatsas, vanha San Agustínin koulu ja '
+          + 'augustinolaisten luostari, Amazonian kirjasto ja museo '
+          + 'sekä entinen Kolumbian konsulaatti. Rannassa on Centro '
+          + 'Artesanal Anaconda parinkymmenen myyntipisteen kanssa. '
+          + 'Malecón jakautuu kolmeen osaan, ja alin niistä laskeutuu '
+          + 'Beléniin.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Casa Strassberger': {
+      aika: '1912—2018',
+      teksti: 'Talon rakennutti saksalainen Emilio Strassberger, '
+          + 'Banco Alemán Transatlánticon edustaja ja Iquitosin '
+          + 'pormestari kahtena kautena: 1912—1914 ja 1924—1925. '
+          + 'Kumikauden Iquitos oli kansainvälinen kaupunki, jossa '
+          + 'kauppahuoneiden johtajat istuivat myös kaupungin '
+          + 'luottamustoimissa.'
+        + '\n\n'
+        + 'Perun valtio takavarikoi talon 1940-luvulla omistajansa '
+          + 'toisen maailmansodan aikaisten Saksa-kytkösten takia ja '
+          + 'luovutti sen armeijan viidennelle sotilasalueelle '
+          + 'toimistokasarmiksi. Nimi säilyi silti virallisena. Vuonna '
+          + '1986 talo julistettiin kansalliseksi '
+          + 'kulttuuriperinnöksi.'
+        + '\n\n'
+        + 'Sen jälkeen tarina on rappiota. Armeija julisti talon '
+          + 'asuinkelvottomaksi 2008 kunnossapidon puutteen takia ja '
+          + 'lopetti toimistokäytön 2011, mutta jätti vartion '
+          + 'paikalle juuri perintöaseman vuoksi. Tammikuussa 2016 '
+          + 'tulipalo tuhosi talon osittain. Armeija ilmoitti '
+          + 'aikovansa korjata sen mutta vetosi varojen puutteeseen; '
+          + 'osittainen jälleenrakennus alkoi 2018.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+    'Plaza 28 de Julio': {
+      aika: '2012',
+      teksti: 'Keskustan lounaiskulmassa on kaupungin suurin aukio, '
+          + 'toiseksi tärkein heti Plaza de Armasin jälkeen. Nimi '
+          + 'viittaa Perun itsenäisyyspäivään. Aukio on Iquitosin '
+          + 'mittapuulla väljä ja tavallisesti hiljainen; '
+          + 'en-Wikipedia mainitsee sen kesykyyhkyistä.'
+        + '\n\n'
+        + 'Yhtenä iltana se ei ollut hiljainen. 13. elokuuta 2012 '
+          + 'aukiolla pidettiin juhlan päätöstilaisuus, jossa '
+          + 'Amazonjoki ja sademetsä julistettiin yhdeksi maailman '
+          + 'seitsemästä luonnonihmeestä. Päivä oli alkanut Itayan ja '
+          + 'Nanayn yhtymäkohdassa ja jatkunut kulkueena Avenida '
+          + 'Quiñonezia pitkin.'
+        + '\n\n'
+        + 'Aukiolle asetettiin 120 kilon pronssinen muistolaatta, '
+          + 'joka oli taottu Münchenissä. Tunnustus jaetaan '
+          + 'seitsemän muun Amazonin maan ja alueen kanssa, mutta se '
+          + 'annettiin Perulle, koska Loreton aluehallinto Iquitosista '
+          + 'käsin oli asettanut joen ehdolle. Vuonna 2013 kunta '
+          + 'ilmoitti uusivansa koko aukion.',
+      lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
+    },
+  },
+  /*
+   * WHITEHORSE (Opus 7.9.2026, parvierä). Kahdeksan kohdetta
+   * Yukonjoen laaksossa: keskustan rantatörmä, joen itäranta ja
+   * lentoaseman penger. Väitteet luettu en-Wikipedian raakateksteistä
+   * 7.9.2026 ("MacBride Museum of Yukon History", "Diocese of Yukon",
+   * "Christ Church Cathedral (Whitehorse)", "Yukon Legislative
+   * Building", "SS Klondike", "Riverdale, Whitehorse", "Erik Nielsen
+   * Whitehorse International Airport", "Yukon Transportation Museum",
+   * "Yukon Beringia Interpretive Centre").
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö). Lehti
+   * kertoo Kwanlin Dünistä, vuodesta 1873, koskista ja kanjonista,
+   * rautatiestä ja nimestä Closeleigh sekä Robert Servicen
+   * pankkilomakkeesta; teemasivu lohesta, ilmastosta, Yukon Questistä
+   * ja laakson vuorista. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe.
+   */
+  whitehorse: {
+    'MacBride-museo': {
+      aika: '1950–1952',
+      teksti: 'Yukon Historical Society perusti museon vuonna 1950, ja '
+          + 'ovet avautuivat 1952. Se on Yukonin vanhin museo, ja se '
+          + 'toimii yhä voittoa tavoittelemattomana yhdistyksenä.'
+        + '\n\n'
+        + 'Museo ei ole yksi talo vaan kolme paikkaa: itse MacBride-'
+          + 'museo keskustan rantatörmällä, MacBriden veturitalli ja '
+          + 'MacBride Copperbelt Mining Museum kuparivyöhykkeellä '
+          + 'kaupungin luoteispuolella. Päärakennukseen on liitetty '
+          + 'Whitehorsen alkuperäinen lennätinkonttori — talo, jonka '
+          + 'kautta kulki se tieto, joka ennen radiota ja lentokoneita '
+          + 'oli ainoa nopea yhteys etelään.'
+        + '\n\n'
+        + 'Vuonna 2016 Kanadan kulttuuriministeriö ja Yukonin hallitus '
+          + 'myönsivät rahoituksen laajennukselle, jonka kaupunki '
+          + 'hyväksyi omalta osaltaan. Museo on siitä lähtien '
+          + 'kasvanut keskustan kulmatontilla ylöspäin — mikä on '
+          + 'Whitehorsessa harvinaista, koska koko kaupunki on '
+          + 'rakennettu matalaksi.',
+      lahde: 'Wikipedia',
+    },
+    'Kristuksen katedraali': {
+      aika: '1891 alkaen',
+      teksti: 'Whitehorsen anglikaaninen katedraali on Yukonin '
+          + 'hiippakunnan istuin. Hiippakunta syntyi 1891, kun '
+          + 'Mackenzie-joen hiippakunta jaettiin kahtia; se sai ensin '
+          + 'nimen Selkirk ja vaihtoi nimekseen Yukon vasta 1907.'
+        + '\n\n'
+        + 'Alue on suuri ja seurakuntia vähän: kolmetoista seurakuntaa '
+          + 'kattaa koko Yukonin ja osan Pohjois-Brittiläistä '
+          + 'Kolumbiaa, ja jäseniä laskettiin vuonna 2022 vajaat '
+          + 'tuhat. Hiippakunta siirrettiin nykyiseen kirkkoprovinssiin '
+          + '1947.'
+        + '\n\n'
+        + 'Katedraalissa on nähty myös yksi Kanadan kirkkohistorian '
+          + 'ensimmäisistä: Lesley Wheeler-Dame valittiin 2019 ensin '
+          + 'apulaispiispaksi ja hänestä tuli hiippakunnan '
+          + 'ensimmäinen naispuolinen piispa. Hänet vihittiin ja '
+          + 'asetettiin virkaan elokuussa 2019.',
+      lahde: 'Wikipedia',
+    },
+    'Yukonin parlamenttitalo': {
+      aika: '1976',
+      teksti: 'Yukonin lakiasäätävä kokous istuu kolmikerroksisessa '
+          + 'valkoisessa teräsverhoillussa talossa aivan Yukonjoen ja '
+          + 'Rotary Parkin vieressä. Sama rakennus on koko territorion '
+          + 'hallinnon päämaja: siinä ovat useimmat Yukonin hallituksen '
+          + 'osastot, ja kokous sekä toimeenpaneva neuvosto istuvat '
+          + 'samassa salissa.'
+        + '\n\n'
+        + 'Ennen Whitehorsea kokous istui Dawson Cityssä vuosina '
+          + '1907–1953. Whitehorsessa se muutti kolmesti: ensin vanhaan '
+          + 'postitaloon, sitten liittovaltion taloon ja lopulta Lynnin '
+          + 'taloon Steele Streetillä. Nykyiseen taloon muutettiin '
+          + '1976, ja Kanadan kenraalikuvernööri Jules Léger avasi sen '
+          + '25. toukokuuta.'
+        + '\n\n'
+        + 'Lokakuussa 2022 rakennus nimettiin Jim Smithin mukaan. Hän '
+          + 'oli territorion pisimpään palvellut komissaari, ja '
+          + 'nimeämistilaisuudessa olivat läsnä sekä varapääministeri '
+          + 'että Yukonin komissaari ja Smithin perhe.',
+      lahde: 'Wikipedia',
+    },
+    'SS Klondike': {
+      aika: '1929–1955',
+      teksti: 'Nimellä SS Klondike kulki kaksi siipiratasalusta. '
+          + 'Ensimmäisen rakensi 1929 British Yukon Navigation Company, '
+          + 'White Pass and Yukon Route -rautatien tytäryhtiö. Alus oli '
+          + 'poikkeuksellinen: siihen mahtui puolitoista kertaa enemmän '
+          + 'kuin tavalliseen siipiratasalukseen, mutta se oli yhä niin '
+          + 'matalakulkuinen ja niin mittainen, että se pystyi '
+          + 'kulkemaan Yukonjokea. Rahtia meni 270 tonnia ilman '
+          + 'proomuakin.'
+        + '\n\n'
+        + 'Kesäkuussa 1936 Klondike I ajoi karille Thirty Mile '
+          + '-osuuden pohjoispuolella. Yhtiö nosti hylystä kattilan, '
+          + 'koneet ja varusteet ja rakensi niistä seuraavana vuonna '
+          + 'lähes tarkan kaksoiskappaleen, Klondike II:n. Se ajoi '
+          + 'rahtia 1950-luvun alkuun asti, kunnes Dawsonin ja '
+          + 'Whitehorsen välinen maantie teki jokiliikenteestä '
+          + 'tarpeetonta. Alus muutettiin risteilylaivaksi — '
+          + 'Edinburghin herttua kävi katsomassa sitä 1954 — mutta '
+          + 'matkustajia ei riittänyt, ja yritys lopetettiin 1955.'
+        + '\n\n'
+        + 'Alus lahjoitettiin Parks Canadalle ja kunnostettiin '
+          + 'vähitellen. Vuonna 1966 kaupunki suostui siirtämään sen '
+          + 'nykyiselle paikalleen. Siirtoon tarvittiin kolme '
+          + 'puskutraktoria, kahdentoista miehen ryhmä, kolme viikkoa '
+          + 'aikaa, rasvatut tukkirullat ja kahdeksan tonnia '
+          + 'Palmolive-saippuaa. Kansallinen historiallinen paikka '
+          + 'aluksesta tuli 24. kesäkuuta 1967.',
+      kuvat: [
+        {
+          tiedosto: 'Klondike sternwheeler in Whitehorse, Yukon, in 1987 (50043404432).jpg',
+          selite: 'Valkoinen siipiratasalus seisoo kuivalla maalla '
+            + 'kivipenkereen päällä, ja takana kohoavat vaarat.',
+          lahde: 'David Wipf, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Riverdale: {
+      aika: '1900-luku',
+      teksti: 'Riverdale on Yukonjoen itärannalla, keskustaa '
+          + 'vastapäätä. Yhteys yli joen kulkee Lewes Boulevardia, '
+          + 'joka on samalla kaupunginosan pääväylä.'
+        + '\n\n'
+        + 'Paikka on Whitehorsessa omanlaisensa: sitä ympäröivät suuret '
+          + 'vuoret kolmelta sivulta ja Yukonjoki neljänneltä. '
+          + 'Riverdalesta lähtee tie, joka kiipeää Grey Mountainille, '
+          + 'ja kaupunginosassa on vuoren länsipää näköalapaikkoineen.'
+        + '\n\n'
+        + 'Riverdalessa on Lewes Boulevardin varrella useita matalia '
+          + 'kerrostaloja. Se kuulostaa arkiselta, mutta on '
+          + 'Pohjois-Kanadassa verrattain harvinaista — pohjoisessa '
+          + 'rakennetaan yleensä matalaa ja hajalleen. Kaupunginosa on '
+          + 'yksi Whitehorsen vanhimmista, ja sen mukaan on nimetty '
+          + 'kaksi Yukonin vaalipiiriä.',
+      lahde: 'Wikipedia',
+    },
+    'Whitehorsen lentoasema': {
+      aika: '1920 alkaen',
+      teksti: 'Keväällä 1920 kaupungin yläpuolisella rinteellä olevaa '
+          + 'puutavaratonttia raivattiin kiitoradaksi, koska '
+          + 'Yhdysvaltain armeijan Black Wolf Squadron oli tulossa '
+          + 'neljällä de Havilland DH-4 -koneella. Sama kaistale '
+          + 'palveli 1920-luvun lopulla kaivosyhtiötä ja Yukon Airways '
+          + 'and Exploration Companya.'
+        + '\n\n'
+        + 'Kenttää laajennettiin 1940–1941, ja 1942 se siirtyi Kanadan '
+          + 'ilmavoimille osana Luoteista porrasreittiä, jota pitkin '
+          + 'koneita siirrettiin pohjoisen kautta. Sotilastukikohta '
+          + 'suljettiin 1968, ja kenttä palasi siviilikäyttöön.'
+        + '\n\n'
+        + 'Kenttä nimettiin 15. joulukuuta 2008 Erik Nielsenin mukaan, '
+          + 'joka edusti Yukonia pitkään Kanadan parlamentissa. Se on '
+          + 'osa Kanadan kansallista lentoasemajärjestelmää ja Yukonin '
+          + 'hallituksen omistuksessa; matkustajia oli vuonna 2017 noin '
+          + '366 000. Kenttä on myös Air Northin kotikenttä — '
+          + 'territoriolla on siis oma lentoyhtiö.',
+      lahde: 'Wikipedia',
+    },
+    'Yukonin liikennemuseo': {
+      aika: '1990',
+      teksti: 'Museo perustettiin 1990 lentoaseman viereen, Ta\'an '
+          + 'Kwäch\'än Councilin ja Kwanlin Dün First Nationin '
+          + 'perinteisille alueille. Sen aihe on se, mikä pohjoisessa '
+          + 'ratkaisee kaiken muun: miten paikasta toiseen pääsee.'
+        + '\n\n'
+        + 'Näyttelyissä kulkevat rinnakkain Yukonin First Nationsin '
+          + 'vesikulkuneuvot, lumikengät ja sukset, koiravaljakot ja '
+          + 'Yukon Quest, pensaslentäjät sekä kultaryntäyksen ja Alaska '
+          + 'Highwayn koneet. Esineistössä on R. G. LeTourneaun '
+          + 'LCC-1 Sno-Train, White Pass and Yukon Routen kalustoa '
+          + 'malmivaunusta matkustajavaunun jäljennökseen ja '
+          + '1920-luvun rantamaisemaa esittävä pienoisrautatie.'
+        + '\n\n'
+        + 'Museon tunnetuin esine ei ole sisällä vaan pihalla: '
+          + 'Douglas DC-3 tolpan päässä. Kone kääntyy tuulen mukana ja '
+          + 'sitä kutsutaan yhdeksi maailman suurimmista '
+          + 'tuuliviireistä. Whitehorsessa se on käytännöllinen: '
+          + 'lentoasema on aivan vieressä.',
+      lahde: 'Wikipedia',
+    },
+    'Beringia-keskus': {
+      aika: '1997',
+      teksti: 'Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 '
+          + 'ja kertoo Beringiasta — 3 200 kilometrin levyisestä '
+          + 'maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan '
+          + 'Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, '
+          + 'koska ilmasto oli kuiva ja lunta satoi vähän.'
+        + '\n\n'
+        + 'Juuri siksi Beringia kiinnostaa arkeologeja ja '
+          + 'paleontologeja: se oli eläinten ja ihmisten kulkureitti '
+          + 'Aasian ja Amerikan välillä. Liikennettä oli molempiin '
+          + 'suuntiin. Idän suuntaan tulivat mastodontit, mammutit, '
+          + 'hirvieläimet, biisonit, lampaat ja myskihärät; länteen '
+          + 'menivät hevoseläimet ja kamelit. Sanan Beringia keksi '
+          + 'ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937.'
+        + '\n\n'
+        + 'Keskus on myös tutkimuslaitos. Sen aineistossa on Old Crow\'n '
+          + 'seudun löytöjä, joissa on harvinaisia jääkauden nisäkkäitä: '
+          + 'jättiläismajava, leveäotsahirvi, länsikameli, '
+          + 'amerikanmastodontti, sapelikissa ja lyhytkuonokarhu. '
+          + 'Radiohiiliajoitukset ovat monen kohdalla yhä kesken.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * YELLOWKNIFE (Opus 7.9.2026, parvierä). Kahdeksan kohdetta kahdessa
+   * ryppäässä: Old Townin kalliokärki Yellowknife Bayn rannalla ja
+   * hallinnon New Town Frame Laken rannalla. Väitteet luettu
+   * en-Wikipedian raakateksteistä 7.9.2026 ("Bank of Toronto
+   * (Yellowknife)", "The Wildcat Cafe", "Back Bay Cemetery",
+   * "Weaver & Devore Trading", "Ragged Ass Road (Yellowknife)",
+   * "Northwest Territories Legislative Building", "Prince of Wales
+   * Northern Heritage Centre", "Log School House").
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö). Lehti
+   * kertoo Yellowknives Denestä, vuodesta 1873 ja Old Fort
+   * Providencesta, kullan löytymisestä ja Con Minestä, pääkaupungiksi
+   * tulosta sekä timanteista ja Giant Minen arseenista; teemasivu
+   * Isonorjajärvestä, jäätiestä, asuntolaivoista, ilmastosta ja
+   * lumilinnasta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe.
+   */
+  yellowknife: {
+    'Bank of Toronton hirsimökki': {
+      aika: '1939–1951',
+      teksti: 'Hirsityön mestari John Stakson rakensi mökin 1939 '
+          + 'Yellowknifen liikekortteliin — asunnoksi, ei pankiksi.'
+        + '\n\n'
+        + 'Lokakuussa 1944 Bank of Toronto osti mökin ja avasi siihen '
+          + 'konttorin. Pankki tuli rahan perässä: Giant Minen '
+          + 'kultalöydöt olivat käynnistäneet uuden valtausryntäyksen, '
+          + 'ja kaupungissa liikkui yhtäkkiä enemmän rahaa kuin '
+          + 'ensimmäinen pankki, vuonna 1938 avattu Bank of Commerce, '
+          + 'ehti käsitellä. Kun ryntäys laantui, liikevaihto ei enää '
+          + 'kantanut konttoria, ja pankki sulki sen elokuussa 1951.'
+        + '\n\n'
+        + 'Kullanetsijä Sam Otto osti mökin 1964, kunnosti sen ja '
+          + 'siirsi Latham Islandille vuokra-asunnoksi. Kaupungin '
+          + 'perintökohteeksi se nimettiin 1998. Talo on siis '
+          + 'kolmessa elämässään ollut koti, pankki ja taas koti — ja '
+          + 'kaikki kolme hirsistä, jotka yksi mies veisti käsin.',
+      lahde: 'Wikipedia',
+    },
+    'Wildcat Cafe': {
+      aika: '1937',
+      teksti: 'Wildcat Cafe avattiin 1937, kun kaupunki oli vuoden '
+          + 'vanha. Se on Yellowknifen vanhin ravintola, ja sen '
+          + 'hirsimökki edustaa juuri sitä kaivosleirityyliä, jolla '
+          + 'koko Old Town rakennettiin. Perustajat olivat Willie Wylie '
+          + 'ja Smokey Stout; myöhempiä omistajia olivat Carl ja '
+          + 'Dorothy Jensen sekä vuosina 1942–1951 Mah Gow, '
+          + 'Yellowknifen ensimmäinen kirjattu kiinalainen asukas. '
+          + 'Kahvila sulki ovensa 1951, kun Gow sairastui.'
+        + '\n\n'
+        + 'Talo oli lähellä joutua puretuksi 1950-luvun lopulla, mutta '
+          + 'joukko yellowknifeläisiä sai sen suojeltua. Vielä 1970 '
+          + 'mökki oli huonossa kunnossa, ja uusi sukupolvi joutui '
+          + 'lobbaamaan sen puolesta uudestaan. Ravintola avattiin '
+          + 'jälleen 1979, ja kaupunki otti talon omistukseensa 1992.'
+        + '\n\n'
+        + 'Vuonna 2011 kävi ilmi, ettei kunnostus enää riittäisi: '
+          + 'talo oli painunut syvälle maahan ja kallistui useaan '
+          + 'suuntaan yhtä aikaa. Kaupunki palkkasi territorion '
+          + 'kokeneimman hirsirakentajan, ja koko mökki purettiin '
+          + 'osiin. Jokainen hirsi luetteloitiin ja numeroitiin ennen '
+          + 'irrotusta; purku alkoi 11. toukokuuta 2011. Ravintola '
+          + 'avattiin uudelleen 22. kesäkuuta 2013 ja on auki kesäisin.',
+      lahde: 'Wikipedia',
+    },
+    'Back Bayn hautausmaa': {
+      aika: '1938–1946',
+      teksti: 'Yellowknifen ensimmäinen hautausmaa on Back Bayn '
+          + 'rannalla, Yellowknife Bayn pohjoisessa lahdekkeessa. '
+          + 'Ensimmäinen kirjattu hautaus tehtiin 27. syyskuuta 1938 — '
+          + 'kaksi vuotta sen jälkeen, kun ensimmäiset asukkaat olivat '
+          + 'pystyttäneet telttansa lahden rannalle.'
+        + '\n\n'
+        + 'Vuosien 1938 ja 1946 välillä tänne haudattiin yli '
+          + 'neljäkymmentä ihmistä. Sitten hautausmaa suljettiin ja '
+          + 'siirrettiin muualle. Määrä kertoo enemmän kuin miltä '
+          + 'kuulostaa: kaupungissa oli vuonna 1940 tuhat asukasta, ja '
+          + 'kaikki työ tehtiin kaivoksissa, jäällä ja metsässä.'
+        + '\n\n'
+        + 'Paikka on kaupungin perintökohde, mutta se ei ole hyvässä '
+          + 'kunnossa. Viereisen puron törmä kuluu jatkuvasti ja on '
+          + 'vahingoittanut hautoja; vuoteen 2014 mennessä kunto oli '
+          + 'huonontunut niin, että hoitoa vaadittiin julkisesti. '
+          + 'Hautausmaa on siitä harvinainen kohde, että sen tarina '
+          + 'jatkuu yhä — ja lopputulos on avoin.',
+      lahde: 'Wikipedia',
+    },
+    'Weaver & Devoren kauppa': {
+      aika: '1936',
+      teksti: 'Turkiskauppiaat ja vesikulkijat Harry Weaver ja Ellis '
+          + '"Bud" Devore tulivat Peace Riveristä Albertasta ja tekivät '
+          + 'ensimmäisen kauppamatkansa Yellowknife Baylle kesällä '
+          + '1936, kun kaivostoiminta oli juuri vilkastunut. Seuraavana '
+          + 'vuonna he pystyttivät pysyvän hirsisen kauppa-aseman.'
+        + '\n\n'
+        + 'Kauppa kasvoi kaupungin mukana. Devore myi osuutensa 1955 ja '
+          + 'Weaver kuoli 1957, mutta liike jatkoi samalla nimellä ja '
+          + 'pysyi Weaverin suvun käsissä vuoteen 2025 asti. '
+          + '1960-luvulla se laajeni nykyisiin tiloihinsa kadun toiselle '
+          + 'puolelle. Turkiskaupasta luovuttiin 1980-luvulla; nyt '
+          + 'hyllyillä on sekatavaraa, tuoretuotteita, erävarusteita ja '
+          + 'ulkoiluvaatteita, ja kauppa kokoaa myös tilauksia '
+          + 'erämaahan lähteville.'
+        + '\n\n'
+        + 'Alkuperäinen vuoden 1937 kauppa-asema seisoo yhä. Siinä '
+          + 'toimii nykyään paikallinen ravintola, ja rakennus on '
+          + 'kaupungin historiallinen kohde.',
+      lahde: 'Wikipedia',
+    },
+    'Ragged Ass Road': {
+      aika: '1970',
+      teksti: 'Old Townissa on noin sadanviidenkymmenen metrin mittainen '
+          + 'päällystämätön asuinkatu, jota on kutsuttu yhdeksi Kanadan '
+          + 'kuuluisimmista. Nimi tarkoittaa suunnilleen '
+          + '"riekaleiskatu" ja on peräisin sanonnasta, jolla '
+          + 'kuvataan täysin rahatonta ihmistä. Sitä ennen katu '
+          + 'tunnettiin nimellä Privy Road eli huussitie, koska sen '
+          + 'varrella oli paljon ulkohuusseja.'
+        + '\n\n'
+        + 'Nimi syntyi vitsinä vuoden 1970 lopulla. Kadun yhdeksästä '
+          + 'tontista kuusi omisti Lou Rocher, joka elätti itsensä '
+          + 'polttopuulla, kalastuksella ja ennen kaikkea '
+          + 'malminetsinnällä. Huonon etsintäkauden jälkeen hän totesi '
+          + 'ystävineen olevansa täysin rahaton — ja he pystyttivät '
+          + 'kyltin samana yönä. Poikansa mukaan Rocher katsoi voivansa '
+          + 'nimetä kadun, koska omisti siitä suurimman osan.'
+        + '\n\n'
+        + 'Kaupunki ei tunnustanut nimeä vuosikymmeniin. Rocher teki '
+          + 'omat kylttinsä ja joutui uusimaan ne, koska matkailijat '
+          + 'veivät ne mukanaan; lopulta kyltit hitsattiin tolppiinsa. '
+          + 'Viralliset kyltit tulivat vasta 2010-luvun puolivälissä, '
+          + 'Rocherin kuoleman jälkeen. Tom Cochrane nimesi vuoden '
+          + '1995 albuminsa kadun mukaan.',
+      lahde: 'Wikipedia',
+    },
+    'Luoteisterritorioiden parlamenttitalo': {
+      aika: '1993–1994',
+      teksti: 'Talo rakennettiin 1993 ja otettiin käyttöön 1994, ja '
+          + 'kuningatar Elisabet II vihki sen. Suunnittelusta vastasivat '
+          + 'yellowknifeläinen ja vancouverilainen arkkitehtitoimisto '
+          + 'yhdessä. Rakennus on kaksikerroksinen, ja sen sisällä on '
+          + 'kaksi pyöreää salia: suuri sali ja ryhmähuone.'
+        + '\n\n'
+        + 'Pyöreys ei ole koriste. Luoteisterritorioissa hallitaan '
+          + 'konsensuksella, joten istuntosalissa ei ole hallitusta ja '
+          + 'oppositiota vastakkain vaan yksi ympyrä. Salia kiertävät '
+          + 'tulkkauskopit, joista käännetään kaikkia territorion '
+          + 'yhtätoista virallista kieltä, ja kattoikkunat kiertävät '
+          + 'kattoa, koska kesällä valo tulee joka suunnasta. '
+          + 'Puhemiehen takana on käsintaottu sinkkiseinä, joka '
+          + 'mukailee lähistön kallioita.'
+        + '\n\n'
+        + 'Puhemiehen edessä on teline valtikkaa varten. Valtikassa on '
+          + 'mursunnorsunluuta ja puuta vuoden 1845 Franklinin '
+          + 'retkikunnan aluksista — samojen laivojen, joiden kohtaloa '
+          + 'etsittiin näiltä vesiltä vuosikymmeniä. Pihat suunnitteli '
+          + 'maisema-arkkitehti Cornelia Oberlander, ja ne katsovat '
+          + 'Frame Lakelle.',
+      lahde: 'Wikipedia',
+    },
+    'Prince of Walesin pohjoinen perintökeskus': {
+      aika: '1979',
+      teksti: 'Territorion museo ja arkisto sai alkunsa 1950-luvulla, '
+          + 'kun joukko historiasta kiinnostuneita yellowknifeläisiä '
+          + 'alkoi haaveilla museosta. Museum of the North avattiin '
+          + 'heinäkuussa 1963 kolmen rakennusvuoden jälkeen, ja sitä '
+          + 'pyörittivät vapaaehtoiset vuoteen 1970, jolloin esineistö '
+          + 'siirtyi territorion hallinnolle.'
+        + '\n\n'
+        + 'Isompaa laitosta alettiin suunnitella, koska pohjoista '
+          + 'esineistöä katosi ja museopalveluja tarvittiin koko '
+          + 'territoriossa. Ohjelma hyväksyttiin 1972, rakentaminen '
+          + 'alkoi 1975, ja Walesin prinssi Charles vihki talonsa '
+          + 'kaimalle 3. huhtikuuta 1979.'
+        + '\n\n'
+        + 'Keskus on enemmän kuin museo. Se kokoaa ja hoitaa esineitä '
+          + 'ja arkistoaineistoa, jotka kertovat inuiittien, '
+          + 'inuvialuittien, denejen, métisien ja muiden asukkaiden '
+          + 'kulttuureista; talossa toimii territorion arkisto; ja se '
+          + 'myöntää luvat kaikkiin Luoteisterritorioiden arkeologisiin '
+          + 'tutkimuksiin. Rakennus on Frame Laken rannalla '
+          + 'keskustan pohjoispuolella.',
+      lahde: 'Wikipedia',
+    },
+    Hirsikoulu: {
+      aika: '1938',
+      teksti: 'Kaupungin ensimmäinen koulurakennus on pieni '
+          + '1930-luvun puolivälin hirsimökki. Sen rakensi paikallinen '
+          + 'kultakaivosyhtiö aivan muuhun tarkoitukseen, mutta 1938 '
+          + 'väkiluku oli kasvanut niin, että koulu oli pakko saada — '
+          + 'ja mökki otettiin siihen käyttöön.'
+        + '\n\n'
+        + 'Koulua varten perustettiin Yellowknife Education District '
+          + 'No. 1, ja sen koululautakunta oli koko territorion '
+          + 'ensimmäinen demokraattisesti valittu hallintoelin. '
+          + 'Oppilaita oli kaksikymmentä, ja siltikin tila oli niin '
+          + 'ahdas, että opetus jouduttiin pitämään kahdessa vuorossa. '
+          + 'Tunteja keskeyttivät ohi kulkevat kaivosmiehet, jotka '
+          + 'jäivät katsomaan sisään tai luulivat taloa baariksi.'
+        + '\n\n'
+        + 'Kahden vuoden kuluttua koulupiiri muutti isompiin tiloihin, '
+          + 'ja mökki jatkoi elämäänsä pesulana ja asuntona. Vuonna '
+          + '1987 se siirrettiin Old Townista nykyiselle paikalleen '
+          + 'Mildred Hallin koulun tontille ja kunnostettiin; '
+          + 'kaupungin perintökohde siitä tuli 1998.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * IQALUIT (7.9.2026). Kahdeksan kohdetta, samat kuin
+   * js/packs/maakartat.js:n KAUPUNKIKARTAT.iqaluit-lohkossa ja samassa
+   * järjestyksessä (luoteesta kaakkoon). Kaikki tiedot en-Wikipedian
+   * raakateksteistä 7.9.2026; tarkistusraportti on
+   * docs/mantereet-tyoaineisto/tarkistus-iqaluit.md.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö). Lehden
+   * nostot ovat kalapaikan nimi, Frobisherin arvoton malmi, Charles
+   * Francis Hallin matka 1861 ja kaupungin tie tukikohdasta
+   * pääkaupungiksi; teemasivu kertoo vuorovedestä, puurajasta,
+   * ilmastosta ja jäästä kulkuväylänä. Lentoaseman juttu kertoo
+   * NYKYISESTÄ lentoasemasta, ei vuoden 1942 tukikohdasta, joka on
+   * noston K4 aihe.
+   *
+   * NIERIÄN SÄILYKETEHDAS on lehden nostossa K1 (se selittää nimen),
+   * eikä sitä toisteta Apexin jutussa.
+   */
+  iqaluit: {
+    'Iqaluitin lentoasema': {
+      aika: '2018',
+      teksti: 'Iqaluitin lentoasema on kaupungin ainoa ympärivuotinen '
+          + 'yhteys muuhun maailmaan. Kiitotie 16/34 on asfalttia ja '
+          + '2 623 metriä pitkä, mikä riittää useimmille nykyaikaisille '
+          + 'suihkukoneille, ja kenttä on 34 metriä merenpinnan '
+          + 'yläpuolella. Uusi, vanhaa suurempi matkustajaterminaali '
+          + 'valmistui vanhan pohjoispuolelle vuonna 2018.'
+          + '\n\n'
+          + 'Canadian North lentää Iqaluitiin Ottawasta, Yellowknifesta '
+          + 'ja useista Nunavutin yhteisöistä. Paikalliset yhtiöt Air '
+          + 'Nunavut, Canadian Helicopters, Nunasi Helicopters ja '
+          + 'Unaalik Aviation hoitavat tilauslennot, ja Air Nunavut ja '
+          + 'Keewatin Air lääkärikuljetukset. Kenttä on virallinen '
+          + 'saapumislentoasema, mutta rajaviranomainen käsittelee vain '
+          + 'yleisilmailukoneita, joissa on enintään viisitoista '
+          + 'matkustajaa.'
+          + '\n\n'
+          + 'Sijainti tekee kentästä muutakin kuin paikallisen. Se on '
+          + 'napareittien varalaskupaikka, ja siellä testataan uusia '
+          + 'koneita pakkasessa — Airbus A380 kävi helmikuussa 2006. '
+          + 'Kiitotie oli pitkään yhteinen Kanadan ilmavoimien kanssa, '
+          + 'ja parakit ja hävittäjähallit on pidetty kunnossa. Vuonna '
+          + '2019 matkustajia oli noin 172 000.',
+      kuvat: [
+        {
+          tiedosto: 'Taxiing towards new Iqaluit airport terminal.jpg',
+          selite: 'Punainen terminaali kaartuu kiitotien laidalla, ja '
+            + 'takana nousee paljas tunturi.',
+          lahde: 'OhanaUnited, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sylvia Grinnellin puisto': {
+      aika: '1861',
+      teksti: 'Puisto alkaa kilometrin päässä kaupungista länteen, ja '
+          + 'keskustasta sinne kävelee puolessa tunnissa. Inuktitutiksi '
+          + 'se on Iqaluit Kuunga eli Iqaluitin joki. Maisema syntyi '
+          + 'jäätiköitymisessä noin 7 100 vuotta sitten, ja joki laskee '
+          + 'Sylvia Grinnellin järvestä Peterhead Inletiin. Putousten '
+          + 'yläpuolella on näköalatasanne 55 metrin korkeudessa.'
+          + '\n\n'
+          + 'Nimi on tuontitavaraa. Amerikkalainen Charles Francis Hall '
+          + 'nimesi seudun paikkoja rahoittajiensa mukaan, ja järvi ja '
+          + 'joki saivat nimen hänen ystävänsä ja tukijansa Henry '
+          + 'Grinnellin tyttären Sylvian mukaan. Joesta nostettu nieriä '
+          + 'on se kala, josta koko kaupungin nimi kertoo; kaupallinen '
+          + 'nieriänkalastus joessa kiellettiin 1965, ja muu kuin '
+          + 'inuiitti tarvitsee kalastukseen luvan.'
+          + '\n\n'
+          + 'Puistossa on dorset-kulttuurin ja thule-kansan '
+          + 'muinaisjäännöksiä: kivilatomuksia ja thule-raunioita. '
+          + 'Karibu on tärkein eläin ja yhä osa inuiittien ruokavaliota, '
+          + 'ja alueella nähdään myös naali, jänis ja jääkarhu. Kesällä '
+          + 'lintulajeja on noin neljäkymmentä, muun muassa tunturihaukka, '
+          + 'kiiruna ja pulmunen. Yleisimpiä kasveja on '
+          + 'sinirikko, Nunavutin virallinen kukka.',
+      kuvat: [
+        {
+          tiedosto: 'River at Sylvia Grinnell Territorial Park.JPG',
+          selite: 'Joki levittäytyy kallioiden väliin, ja rannoilla '
+            + 'kasvaa matalaa tundraa.',
+          lahde: 'Sebastian Kasten, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nunavutin parlamenttitalo': {
+      aika: '1999',
+      teksti: 'Rakennus 926 Federal Roadin varrella on kolmikerroksinen '
+          + 'lasi- ja puutalo, jonka sisällä on kaksikerroksinen '
+          + 'istuntosali. Montrealilainen Arcop suunnitteli sen, ja '
+          + 'ensimmäinen luonnos esiteltiin yleisölle joulukuussa 1997. '
+          + 'Rakennustyöt alkoivat toukokuussa 1998 ja valmistuivat '
+          + 'syyskuussa 1999; talo vihittiin 19. lokakuuta 1999, ja se '
+          + 'maksoi kaksitoista miljoonaa Kanadan dollaria.'
+          + '\n\n'
+          + 'Iqaluitin arkkitehtuuri on muuten korostetun '
+          + 'toiminnallista, ja parlamenttitalo on siitä poikkeus: sen '
+          + 'värikäs sisustus on koristeltu parhaalla inuiittitaiteella. '
+          + 'Muotokieli nojaa inuktitutin käsitteeseen qaggiq, '
+          + 'kokoontumispaikka. Aula avautuu kaksikerroksiseksi '
+          + 'valoholviksi, valtiopäiväsauva säilytetään istuntosalin '
+          + 'ulkopuolella, ja kirjasto on kolmannessa kerroksessa.'
+          + '\n\n'
+          + 'Talossa hallitaan toisin kuin muualla Kanadassa. Nunavut '
+          + 'toimii konsensushallinnolla, eikä territoriossa ole '
+          + 'puolueita lainkaan: kaksi viikkoa vaalien jälkeen '
+          + 'kaksikymmentäkaksi valittua jäsentä kokoontuvat '
+          + 'johtajafoorumiin valitsemaan hallituksen. Istuntojen '
+          + 'pöytäkirja julkaistaan sekä inuktitutin tavumerkein että '
+          + 'englanniksi. Ennen talon valmistumista edustajat '
+          + 'kokoontuivat Inuksuk-lukion liikuntasalissa.',
+      kuvat: [
+        {
+          tiedosto: 'Leg Building Iqaluit 2000-08-27.jpg',
+          selite: 'Tummaksi verhoiltu talo kaartuu loivasti, ja sen '
+            + 'edessä liehuu Nunavutin lippu.',
+          lahde: 'Ansgar Walk, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Inuksuk-lukio': {
+      aika: '1971',
+      teksti: 'Kaupungin yläpuolella harjanteella seisoo sinivalkoinen '
+          + 'Inuksuk High School. Rakennus koostuu neljästä yhteen '
+          + 'liitetystä neliönmuotoisesta osasta, jotka muodostavat '
+          + 'ilmasta katsottuna apilanlehden. Seinäpaneelit on mitoitettu '
+          + 'kestämään sadan mailin tuntinopeutta eli noin 160 '
+          + 'kilometriä tunnissa — sellaisia tuulia täällä ajoittain on.'
+          + '\n\n'
+          + 'Koulussa opiskellaan luokat 9–12 sekä inuktitutiksi että '
+          + 'englanniksi, ja oppilaita on noin 410. Ensimmäinen rehtori '
+          + 'oli Don King, ja urheilujoukkueet kulkevat nimellä Iqaluit '
+          + 'Huskies. Vuosina ennen parlamenttitalon valmistumista koulun '
+          + 'liikuntasali toimi Nunavutin edustajakokouksen '
+          + 'istuntosalina.'
+          + '\n\n'
+          + 'Nimi ei ole koristetta. Inuksuk on ihmisen latoma kivimerkki, '
+          + 'jollaisia inuiitit ja muut arktisen alueen kansat ovat '
+          + 'pystyttäneet tuntureille vuosituhansia: se on merkinnyt '
+          + 'reittiä, kalapaikkaa, ruokakätköä tai leiripaikkaa siellä, '
+          + 'missä maastossa ei ole muita kiintopisteitä. Inuksuk on myös '
+          + 'Nunavutin lipun tunnus.',
+      kuvat: [
+        {
+          tiedosto: 'Inuksuk High School.jpg',
+          selite: 'Vaaleansininen koulu on kaksi pyöreäkulmaista siipeä, '
+            + 'joiden seinissä on pyöreitä ikkunoita.',
+          lahde: 'OhanaUnited, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Juudaksen katedraali': {
+      aika: '2012',
+      teksti: 'Virallisesti se on Pyhien Simonin ja Juudaksen katedraali, '
+          + 'mutta kaupungissa sitä sanotaan iglukatedraaliksi: valkoinen '
+          + 'rakennus on iglun muotoinen. Se on arktisen hiippakunnan '
+          + 'piispanistuin, ja hiippakunta kattaa Luoteisterritoriot, '
+          + 'Nunavutin ja Pohjois-Quebecin Nunavikin — pinta-alaltaan '
+          + 'maailman suurin anglikaaninen hiippakunta. Jumalanpalvelukset '
+          + 'pidetään englanniksi ja inuktitutiksi.'
+          + '\n\n'
+          + 'Ensimmäisen katedraalin suunnitteli Ronald Thom 1970, ja '
+          + 'paikalliset vapaaehtoiset rakensivat sen 1972. Koristeet '
+          + 'olivat inuiittikäsityötä: seinävaatteita, punottuja '
+          + 'kolehtikoreja, kahdesta sarvivalaan syöksyhampaasta tehty '
+          + 'risti ja vuolukivinen kastemalja, jonka kuningatar '
+          + 'Elisabet II vihki käyttöön vieraillessaan kaupungissa. '
+          + 'Alttarin rakensivat seurakuntalaiset perinteisen kirvesmiehen '
+          + 'Markoosie Peterin ohjauksessa, ja se tehtiin inuiittireen '
+          + 'muotoiseksi.'
+          + '\n\n'
+          + 'Tuhopoltto vaurioitti rakennusta pahoin 5. marraskuuta 2005, '
+          + 'ja se purettiin 1. kesäkuuta 2006. Uusi, samanmuotoinen '
+          + 'katedraali avattiin 3. kesäkuuta 2012. Se rakennettiin '
+          + 'palonkestävin palkein, ja vanhasta talosta siirrettiin '
+          + 'sisään sarvivalaanhampainen alttariristi ja kuningattaren '
+          + 'vuoden 1970 peruskivenmuurauksessa lahjoittama hopeamalja. '
+          + 'Rakentamisen velat oli maksettu vuoteen 2017 mennessä.',
+      kuvat: [
+        {
+          tiedosto: 'Iqaluit St. Jude\'s Anglican Cathedral 2012.JPG',
+          selite: 'Valkoinen kupoli on iglun muotoinen, ja sen huipulla '
+            + 'on lasinen lyhty ja risti.',
+          lahde: 'Cwk36, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Astro Hill': {
+      aika: '1976',
+      teksti: 'Astro Hill on neljän rakennuksen ryhmä kukkulalla '
+          + 'Frobisherinlahden yllä, ja siinä ovat kaupungin suurimmat ja '
+          + 'korkeimmat talot. Kokonaisuuteen kuuluvat W. G. Brownin '
+          + 'talo, hotelli Frobisher Inn ja kaksi asuintornia: '
+          + 'kuusikerroksinen Nanurjuk ja kahdeksankerroksinen '
+          + 'Tukturjuk. Kahdeksan kerrosta on Iqaluitin ennätys.'
+          + '\n\n'
+          + 'Talot ovat sekakäytössä. Liiketilaa on noin tuhat '
+          + 'neliömetriä, ja vuokralaisina ovat muun muassa CBC Northin '
+          + 'radiostudiot, Astro-elokuvateatteri, kongressitila, '
+          + 'kuntosali, lähikauppa ja kolme ravintolaa; hotellissa on 95 '
+          + 'huonetta. W. G. Brownin talossa hoidetaan Nunavutin '
+          + 'hallinnon palveluita, kuten oikeusrekistereitä ja '
+          + 'toimeentulotukea.'
+          + '\n\n'
+          + 'Astro Hill Terrace rakennettiin 1976 katsomaan lahdelle, ja '
+          + 'Frobisher Inn oli silloin kaksikerroksinen kokonaisuus, '
+          + 'jossa oli myös kauppoja; se peruskorjattiin 2004. Viereen '
+          + 'on noussut Creekside Village, jossa on 144 rivitalo- ja '
+          + 'kerrostaloasuntoa. Vuonna 2012 halkeamat sulkivat '
+          + 'kaupungin uimahallin.',
+      kuvat: [
+        {
+          tiedosto: 'Astro Hill Complex, Iqaluit.JPG',
+          selite: 'Kukkulalla seisoo neljä isoa taloa vierekkäin, ja '
+            + 'niiden takana avautuu lahti.',
+          lahde: 'Sebastian Kasten, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nunatta Sunakkutaangit -museo': {
+      aika: '1969',
+      teksti: 'Nunatta Sunakkutaangit on Nunavutin historian ja '
+          + 'inuiittikulttuurin museo. Sen perusti 1969 kaksi Kanadan '
+          + 'intiaaniasiain viraston työntekijää, ja kokoelmissa on '
+          + 'runsaasti inuiittien ja arktisen alueen esineistöä.'
+          + '\n\n'
+          + 'Talo itse on osa kokoelmaa. Museo asuu entisessä Hudson\'s '
+          + 'Bay Companyn rakennuksessa, joka siirrettiin telaketjujen '
+          + 'päällä alkuperäiseltä paikaltaan Apexin rannalta Iqaluitiin '
+          + 'ja kunnostettiin ja laajennettiin museoksi. Ulkoseinät ovat '
+          + 'yhä yhtiön tunnusvärit, punainen ja valkoinen.'
+          + '\n\n'
+          + 'Museon aihe on elävä taidemuoto. Inuiittitaide tunnetaan '
+          + 'maailmalla vuolukivi-, luu- ja sarviveistoksista sekä '
+          + '1950-luvulta alkaen tehdyistä grafiikanlehdistä, ja '
+          + 'Iqaluitissa sitä näkee muuallakin kuin museossa: '
+          + 'parlamenttitalon sisustus on koottu saman perinteen '
+          + 'parhaimmistosta.',
+      kuvat: [
+        {
+          tiedosto: 'Nunatta Sunakkutaangit Museum (September 2025).jpg',
+          selite: 'Punakattoisen valkoisen puutalon kyljessä on kyltti '
+            + 'inuktitutin tavumerkein ja englanniksi.',
+          lahde: 'OhanaUnited, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Apex eli Niaqunngut': {
+      aika: '1949',
+      teksti: 'Apex, inuktitutiksi Niaqunngut, on pieni yhteisö viiden '
+          + 'kilometrin päässä Iqaluitin keskustasta kaakkoon. Se on '
+          + 'niemellä, joka erottaa Koojesse Inletin Tarr Inletistä, ja '
+          + 'sinne pääsee siltaa tai pengertietä pitkin. Yhteisöä '
+          + 'reunustavat puro, kuujuusi, ja putous, kugluktuk. Asukkaita '
+          + 'on noin kuudenkymmenen perheen verran, ja paikalla ovat '
+          + 'kirkko, Nanookin alakoulu, naisten turvakoti ja majatalo.'
+          + '\n\n'
+          + 'Apex sai alkunsa 1949, kun Hudson\'s Bay Company siirsi '
+          + 'eteläisen Baffinin toimintansa Ward Inletistä Apexin '
+          + 'rannalle uuden lentokentän liepeille. 1950-luvulla siellä '
+          + 'oli hallintorakennuksia, inuiittien asuntoja, yleinen '
+          + 'pesula ja saunarakennus sekä koko Baffinin alueen '
+          + 'ensimmäinen terveysasema. Alkuperäiset perheet — Michael, '
+          + 'Alainga, Peter, Joamie, Onalik ja Timotee — rakensivat '
+          + 'talonsa itse valmispaketeista.'
+          + '\n\n'
+          + 'Apexilla on paikkansa kaupungin historiassa siksikin, että '
+          + 'se oli se paikka, jossa suurin osa inuiiteista asui silloin '
+          + 'kun Iqaluit oli sotilasalue eikä sinne päässyt kukaan, joka '
+          + 'ei ollut tukikohdan töissä. Terveysaseman edessä puron '
+          + 'penkalla seisoo Iqaluitin vanhimpien seuran Pairijait '
+          + 'Tigumivikin pystyttämä muistomerkki niille inuiiteille, '
+          + 'jotka lähtivät etelään tuberkuloosihoitoon eivätkä '
+          + 'palanneet. Kivessä on pieniä reikiä: niihin voi jättää '
+          + 'viestin poismenneelle.',
+      kuvat: [
+        {
+          tiedosto: 'Former Hudson\'s Bay Company store in Apex 1.jpg',
+          selite: 'Vanhan kauppahuoneen päätyyn on maalattu yhtiön nimi '
+            + 'ja perustamisvuosi.',
+          lahde: 'OhanaUnited, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * SANTA FE (7.9.2026). Kahdeksan kohdetta, samat kuin
+   * js/packs/maakartat.js:n KAUPUNKIKARTAT.santafe-lohkossa ja
+   * samassa järjestyksessä (lännestä itään ja pohjoisesta etelään).
+   * Kaikki tiedot en-Wikipedian raakateksteistä 7.9.2026;
+   * tarkistusraportti on
+   * docs/mantereet-tyoaineisto/tarkistus-santafe.md.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö). Lehden
+   * nostot ovat tewojen kylä ja nimi, kaupungin perustaminen ja
+   * aukiokaava, pueblokapina 1680 ja vuoden 1873 vaunureitti;
+   * teemasivu kertoo Pueblo Revival -rakennussäännöstä, Canyon
+   * Roadista, Indian Marketista ja Zozobrasta. Kuvernöörien palatsi,
+   * aukio, Canyon Road ja Fort Marcy jäivät siksi pois kartalta.
+   *
+   * KAHDEN KOHTEEN VÄLI ALITTAA 200 METRIÄ (katedraali – Loreton
+   * kappeli, noin 170 m). Molemmat pidetään Nuukin ja Iqaluitin
+   * ennakkotapauksen mukaisesti; perustelu ja mittaukset ovat
+   * maakartat.js:n lohkokommentissa.
+   *
+   * LORETON PORTAIKKO JA KATEDRAALIN TETRAGRAMMATON ovat lähteessä
+   * nimenomaan kertomuksia, joita ei ole vahvistettu
+   * (tarkistus-santafe.md, kohdat A ja B). Ne kerrotaan siksi
+   * kertomuksina, ja mitat ja vuodet faktoina.
+   */
+  santafe: {
+    'Guadalupen pyhäkkö': {
+      aika: 'noin 1795',
+      teksti: 'Santuario de Nuestra Señora de Guadalupe on '
+          + 'Yhdysvaltain vanhin Guadalupen Neitsyelle omistettu '
+          + 'kirkko. Se on yksinkertainen ristinmuotoinen rakennus, '
+          + 'jonka adobeseinät ovat paksut, ja sitä on muutettu monta '
+          + 'kertaa — viimeksi 1970-luvulla.'
+          + '\n\n'
+          + 'Tarkkaa rakennusvuotta ei tiedetä. Santa Fen '
+          + 'arkkihiippakunnan arkistot viittaavat vuoteen 1795, koska '
+          + 'rakennuslupa myönnettiin silloin, mutta varmasti kirkon '
+          + 'olemassaolo on dokumentoitu vasta 1821. Kuuluisa '
+          + 'alttaritaulu, joka esittää Guadalupen Neitsyttä, tuotiin '
+          + 'osissa Mexico Citystä Camino Realia pitkin; se on José de '
+          + 'Alcíbarin signeeraama ja vuodelta 1783.'
+          + '\n\n'
+          + 'Kirkko oli käytössä 1830-luvulle asti, ja kun Yhdysvaltain '
+          + 'armeija miehitti kaupungin 1846, se oli jo vähällä '
+          + 'käytöllä ja huonossa kunnossa. Vuonna 1881 kävijä kuvasi '
+          + 'ulkopuolen rapistuneeksi mutta sisätilat siisteiksi ja '
+          + 'suunnilleen sellaisiksi kuin ne olivat olleet sukupolvia '
+          + 'aiemmin; kattopalkit oli veistetty kirveellä. Silloin '
+          + 'kirkkoa käytettiin vain kerran vuodessa, Guadalupen '
+          + 'Neitsyen juhlana 12. joulukuuta.',
+      lahde: 'Wikipedia',
+    },
+    'Georgia O\'Keeffen museo': {
+      aika: '1997',
+      teksti: 'Museo avattiin 17. heinäkuuta 1997, yksitoista vuotta '
+          + 'Georgia O\'Keeffen kuoleman jälkeen, ja se on omistettu '
+          + 'hänen taiteelliselle perinnölleen ja amerikkalaiselle '
+          + 'modernismille. Päärakennuksen suunnitteli arkkitehti '
+          + 'Richard Gluckman yhdessä santafelaisen Allegretti '
+          + 'Architectsin kanssa; Gluckmanin muita töitä ovat Whitney-'
+          + 'museon kokoelmasiipi New Yorkissa ja Andy Warhol -museo '
+          + 'Pittsburghissa.'
+          + '\n\n'
+          + 'Museo on itse asiassa monta paikkaa kahdessa kaupungissa. '
+          + 'Santa Fessä ovat näyttelygalleriat, tutkimuskeskuksen '
+          + 'kirjasto ja arkisto historiallisessa A. M. Bergeren '
+          + 'talossa sekä opetustilat; Abiquiússa taiteilijan oma koti '
+          + 'ja ateljee sekä vierailukeskus. Abiquiún talo oli '
+          + 'O\'Keeffen päävakinainen koti 1940-luvun lopulta hänen '
+          + 'elämänsä loppuun, ja sen puutarhaa hoitavat ja korjaavat '
+          + 'yhä paikalliset koululaiset.'
+          + '\n\n'
+          + 'Kokoelmat ovat maailman suurin O\'Keeffen töiden ja '
+          + 'henkilökohtaisen aineiston kokonaisuus, ja mukana on '
+          + 'esineistöä hänen taloistaan. Teokset vaihtuvat gallerioissa '
+          + 'pitkin vuotta, joten sama näyttely ei odota kahta kertaa.',
+      lahde: 'Wikipedia',
+    },
+    'New Mexicon taidemuseo': {
+      aika: '1917',
+      teksti: 'New Mexicon taidemuseo on korttelin päässä aukiolta, ja '
+          + 'se on yksi neljästä osavaltion ylläpitämästä museosta, '
+          + 'jotka kuuluvat Museum of New Mexico -kokonaisuuteen. '
+          + 'Nykyinen nimi on vuodelta 2007; sitä ennen se oli '
+          + 'Museum of Fine Arts.'
+          + '\n\n'
+          + 'Rakennus itse on kaupungin kuuluisin esimerkki siitä '
+          + 'tyylistä, jonka Santa Fe keksi itselleen. Isaac Rappin '
+          + 'suunnittelema talo valmistui 1917, ja se on Pueblo '
+          + 'Revival -arkkitehtuuria: julkisivun esikuvina olivat '
+          + 'Acoman, San Felipen, Cochitin, Lagunan, Santa Anan ja '
+          + 'Pecosin lähetyskirkot. Talo yhdistää alkuperäiskansojen '
+          + 'ja espanjalaisen siirtomaa-ajan muotokieltä.'
+          + '\n\n'
+          + 'Kokoelmassa on yli 20 000 maalausta, valokuvaa, '
+          + 'veistosta, grafiikanlehteä ja piirustusta. Nimiin kuuluvat '
+          + 'muun muassa Ansel Adams, Gustave Baumann, Georgia '
+          + 'O\'Keeffe, Fritz Scholder, T. C. Cannon, Bruce Nauman ja '
+          + 'keramiikastaan tunnettu Maria Martinez sekä ryhmät Los '
+          + 'Cinco Pintores ja Taos Society of Artists. Syyskuussa 2023 '
+          + 'museo avasi Railyardin kaupunginosaan Vladem Contemporary '
+          + '-tilan nykytaiteelle.',
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Franciscuksen katedraali': {
+      aika: '1869',
+      teksti: 'Paavi Pius IX perusti Santa Fen hiippakunnan 1853 ja '
+          + 'nimitti ensimmäiseksi piispaksi ranskalaisen Jean '
+          + 'Baptiste Lamyn. Lamy piti messuja La Parroquiassa, '
+          + 'adobekirkossa, jonka espanjalaiset lähetyssaarnaajat olivat '
+          + 'rakentaneet 1714–1717; se oli korvannut samalla paikalla '
+          + 'olleen vuoden 1626 kirkon, joka tuhoutui pueblokapinassa '
+          + '1680.'
+          + '\n\n'
+          + 'Lamy aloitti uuden katedraalin rakentamisen 1869 ja toi '
+          + 'paikalle ranskalaisia arkkitehteja ja italialaisia '
+          + 'kivimiehiä. Työtapa oli poikkeuksellinen: uusi katedraali '
+          + 'rakennettiin vanhan kirkon YMPÄRILLE, ja La Parroquia '
+          + 'purettiin ja kannettiin ulos vasta sitten, kun uusi oli '
+          + 'valmis. Vanhasta jäi jäljelle vain pieni kappeli '
+          + 'pohjoissivulla.'
+          + '\n\n'
+          + 'Tulos on jyrkässä ristiriidassa ympäröivien adobetalojen '
+          + 'kanssa: romaanista uusrenessanssia, keltaista kalkkikiveä, '
+          + 'joka louhittiin nykyisen Lamyn kylän läheltä, pyöreitä '
+          + 'kaaria ja korinttilaisia pylväitä. Ruusuikkuna ja '
+          + 'sivulaivan apostoli-ikkunat tuotiin Clermont-Ferrandista '
+          + 'Ranskasta. Kummallekin tornille oli suunniteltu 160 jalan '
+          + 'huippu, mutta rahat loppuivat — ja pohjoistorni jäi '
+          + 'tasan yhden tiilirivin eteläistä korkeammaksi.',
+      lahde: 'Wikipedia',
+    },
+    'Loreton kappeli': {
+      aika: '1878',
+      teksti: 'Loreton sisaret tilasivat kappelin tyttökoulunsa '
+          + 'Loretto Academyn viereen 1873. Arkkipiispa Lamy oli '
+          + 'tuonut kaupunkiin ranskalaisarkkitehdit Antoine Moulyn ja '
+          + 'tämän pojan Projectuksen katedraalityötä varten ja ehdotti, '
+          + 'että sisaret voisivat käyttää heitä sivutyönä. Projectus '
+          + 'suunnitteli uusgoottilaisen kappelin Pariisin '
+          + 'Sainte-Chapellen mukaan, ja lasimaalaukset tuotiin '
+          + 'Ranskasta Santa Fe Trailia pitkin. Rakentaminen kesti '
+          + 'viisi vuotta, ja kappeli vihittiin 1878.'
+          + '\n\n'
+          + 'Kuuluisa on portaikko. Se kiertää kuoriparvelle noin '
+          + 'kuuden metrin korkeuteen kaksi täyttä kierrosta ilman '
+          + 'keskipylvästä tai tolppaa, ja se on koottu puusta ja '
+          + 'puutapeista — ei liimaa, ei nauloja. Sisempi jalas on '
+          + 'seitsemästä osasta, ulompi yhdeksästä, ja puulaji on '
+          + 'kuusi, joka ei todennäköisesti ole New Mexicon omaa. '
+          + 'Askelmia on 33. Kaiteet lisättiin vasta 1887.'
+          + '\n\n'
+          + 'Sisarten perimätiedon mukaan useat rakentajat totesivat '
+          + 'tehtävän mahdottomaksi ahtaissa tiloissa, minkä jälkeen '
+          + 'nunnat rukoilivat yhdeksän päivää puuseppien suojeluspyhimystä '
+          + 'Joosefia; viimeisenä päivänä ilmestyi tuntematon mies, '
+          + 'joka rakensi portaikon yksin muutamin käsityökaluin ja '
+          + 'katosi palkkaa perimättä. Kertomuksen versiot vaihtelevat '
+          + 'yhdestä yöstä kahdeksaan kuukauteen. Ammattikirvesmiehet '
+          + 'ovat kuvanneet työtä poikkeukselliseksi puusepäntaidoksi. '
+          + 'Koulu suljettiin 1968, ja kappeli on nykyään yksityinen '
+          + 'museo ja vihkikappeli.',
+      lahde: 'Wikipedia',
+    },
+    'San Miguelin kirkko': {
+      aika: 'noin 1610',
+      teksti: 'San Miguelin kappeli on espanjalaisen siirtomaa-ajan '
+          + 'lähetyskirkko, joka rakennettiin alun perin noin 1610, ja '
+          + 'sitä sanotaan usein Yhdysvaltain mantereen vanhimmaksi '
+          + 'kirkkorakennukseksi. Se pystytettiin Santa Fe -joen '
+          + 'toiselle puolelle varsinaisesta villasta, alueelle nimeltä '
+          + 'Barrio de Analco, jossa asui pääosin alkuperäisväestöä ja '
+          + 'espanjalaisten mukana Meksikosta tulleita tlaxcalteekkeja. '
+          + 'Lähetystyö oli etusijalla, joten tämä kirkko rakennettiin '
+          + 'ennen aukion viereistä omaa seurakuntakirkkoa.'
+          + '\n\n'
+          + 'Kirjallisesti kappeli mainitaan ensimmäisen kerran 1628. '
+          + 'Vuonna 1640 kuvernöörin ja fransiskaanien välinen kiista '
+          + 'johti siihen, että kaikki fransiskaanit karkotettiin Santa '
+          + 'Festä ja lähetysasema purettiin osittain tai kokonaan; '
+          + 'kuvernööri joutui myöhemmin vankilaan ja veljet palasivat '
+          + 'rakentamaan sen uudelleen. Kirkko vaurioitui jälleen '
+          + 'pueblokapinassa 1680.'
+          + '\n\n'
+          + 'Kun Diego de Vargas palasi Santa Feen 1692, hän löysi '
+          + 'lähetysaseman palaneena mutta korjattavissa; 18. joulukuuta '
+          + '1693 päivätyssä raportissaan hän määräsi seinät katettaviksi '
+          + 'ja ikkunat korjattaviksi. Kirkko rakennettiin uudelleen '
+          + '1710. Puinen alttarikaappi lisättiin 1798, ja siinä oleva '
+          + 'puinen Mikael-veistos on vähintään vuodelta 1709. Kirkko '
+          + 'kuuluu Barrio de Analcon historialliseen alueeseen, joka on '
+          + 'kansallinen historiallinen maamerkki, ja messu pidetään yhä '
+          + 'kuukauden ensimmäisenä sunnuntaina.',
+      lahde: 'Wikipedia',
+    },
+    'New Mexicon osavaltiotalo': {
+      aika: '1966',
+      teksti: 'New Mexicon osavaltiotalo on yksi vain yhdestätoista '
+          + 'osavaltiotalosta ilman kupolia — ja ainoa pyöreä '
+          + 'osavaltiotalo koko Yhdysvalloissa. Siksi sitä sanotaan '
+          + 'Roundhouseksi. Ylhäältä katsottuna rakennus muistuttaa '
+          + 'osavaltion Zia-aurinkosymbolia: neljä sisäänkäyntisiipeä '
+          + 'työntyy ulos lieriömäisestä rungosta.'
+          + '\n\n'
+          + 'Talo rakennettiin 1964–1966 ja vihittiin 8. joulukuuta '
+          + '1966. Suunnittelija oli paikallinen arkkitehti W. C. '
+          + 'Kruger ja rakentaja Robert E. McKee. Tyyli yhdistää New '
+          + 'Mexicon territoriaalityyliä ja klassisismia, ja jokaisen '
+          + 'sisäänkäynnin yläpuolella on kiveen veistetty osavaltion '
+          + 'sinetti. Pinta-alaa on 232 346 neliöjalkaa ja hinta oli '
+          + '4 676 860 dollaria eli 20 dollaria neliöjalalta.'
+          + '\n\n'
+          + 'Kerroksia on neljä, joista yksi on maan alla; siellä ovat '
+          + 'edustajainhuoneen ja senaatin puoliympyrän muotoiset salit. '
+          + 'Katutasolta yleisö pääsee lehtereille seuraamaan istuntoja. '
+          + 'Uusin osavaltiotalo Yhdysvalloissa on tämä, jos ei lasketa '
+          + 'Havaijia ja Floridaa — ja vanhin on samassa kaupungissa '
+          + 'muutaman korttelin päässä.',
+      lahde: 'Wikipedia',
+    },
+    'Kansantaiteen museo': {
+      aika: '1953',
+      teksti: 'Kansainvälisen kansantaiteen museo eli MOIFA on '
+          + 'Museum Hillillä, parin kilometrin päässä aukiolta '
+          + 'kaakkoon. Sen kokoelmissa on yli 130 000 esinettä yli '
+          + 'sadasta maasta, ja sitä kuvataan yleisesti maailman '
+          + 'suurimmaksi kansainvälisen kansantaiteen kokoelmaksi.'
+          + '\n\n'
+          + 'Museon perusti Florence Dibell Bartlett, ja se avattiin '
+          + 'yleisölle 1953. Alkuperäinen rakennus oli Bartlettin '
+          + 'lahja osavaltiolle, ja sen suunnitteli newmexicolainen '
+          + 'arkkitehti John Gaw Meem — sama mies, joka on yksi Santa '
+          + 'Fen oman rakennustyylin keskeisistä nimistä.'
+          + '\n\n'
+          + 'Kokoelma jakautuu neljään siipeen. Girardin siiven näyttely '
+          + '"Multiple Visions: A Common Bond" avattiin 1982 ja esittää '
+          + 'leluja, nukkeja, pukuja, naamioita, tekstiilejä ja '
+          + 'uskonnollista kansantaidetta yli sadasta maasta; sen '
+          + 'suunnitteli lahjoittaja itse, arkkitehti ja muotoilija '
+          + 'Alexander Girard, ja siinä on näytillä vain noin kymmenen '
+          + 'prosenttia kokoelmasta. Neutrogena-kokoelma tuli lahjana '
+          + '1995, ja espanjalaisperäisen kulttuurin siipi avattiin '
+          + '1988.',
+      lahde: 'Wikipedia',
+    },
+  },
 };

@@ -81189,6 +81189,916 @@ export const KULTTUURI_KATEGORIAT = {
     },
   ],
   /*
+   * DILI (Opus 7.9.2026) — Oseanian laudan kaupunkilehti, maa TLS.
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-dili.md ja sen
+   * tarkistus tarkistus-dili.md (tuomio "kelpaa korjausten jälkeen").
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026:
+   * "Dili", "Casa Europa", "Government Palace, Dili", "Port of Dili",
+   * "Tetun language", "Battle of Timor", "Motael Church", "Immaculate
+   * Conception Cathedral, Dili", "Municipal Market of Dili", "Banco
+   * Nacional Ultramarino building, Dili", "National Archives of
+   * Timor-Leste".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei uusia kysymyksiä.
+   * Saapumisteksti (oceania-saapumiset.js) ja valokuvataulu
+   * (oceania-valokuvat.js) olivat jo olemassa eikä niihin koskettu.
+   *
+   * SIVUJA ON KAKSI kuten Cairnsissa (kaupunki + teemasivu).
+   * Teemasivun id on vakioaihe 'luonto': kaupunkisivu on
+   * historiapainotteinen, ja aineisto kantoi toisen teeman, joka
+   * selittää koko kaupungin — Dili on puristettu kapealle
+   * rantatasangolle vuorten ja meren väliin.
+   *
+   * EI NYKYPOLITIIKKAA EIKÄ NYKYVÄKIVALTAA (Fablen linjaus 7.9.2026,
+   * Myanmar-linja). Indonesian miehityksen väkivalta, Santa Cruzin
+   * verilöyly 1991, vuoden 1999 kriisi, vuoden 2006 kriisi, nykyiset
+   * puolueet ja nykyiset johtajat on jätetty kokonaan pois, vaikka
+   * lähdeartikkelit käsittelevät niitä laajasti. Miehitys ja
+   * itsenäistyminen esiintyvät vain päivämäärinä siellä, missä
+   * rakennuksen vaiheet edellyttävät sitä. Toinen maailmansota
+   * kerrotaan tapahtumana kuten Cairnsissa ja Darwinissa: se on
+   * kahdeksankymmenen vuoden takaista historiaa. Pilarin 1 kannalta
+   * paras aines on timorilainen toimijuus: Motaelin kuningaskunnan
+   * maa ja johtaja kaupungin perustamisessa (K1) sekä Tetun Prasa,
+   * paikallinen kieli, josta tuli koko maan yleiskieli (K4).
+   *
+   * TARKISTUKSEN KAIKKI KORJAUKSET ON TEHTY:
+   *  - K2 EI SANO vuotta 1866. "Casa Europa" antaa vain suhteellisen
+   *    ajan: rakentaminen alkoi 1871, "five years after a fire had
+   *    destroyed the fortress". Vuosiluku olisi faktapohjan oma
+   *    vähennyslasku (sama oppi kuin Cairnsin 1 450 asukasta).
+   *  - Sadekauden rajat ilman päivämäärän tarkkuutta: artikkelin oma
+   *    kommentti sanoo, että toinen lähde antaa joulukuu–toukokuu.
+   *  - Suojelualueiden pinta-aloja EI anneta lainkaan: artikkeli
+   *    kirjoittaa ne kilometreinä eikä neliökilometreinä, mikä on
+   *    ilmeinen yksikkövirhe, jonka oikeaa arvoa ei voi päätellä.
+   *  - Tetumin puhujaluku on "noin 370 000": lähde käyttää merkintää
+   *    sigfig|374,000|2, joka renderöityy pyöristettynä.
+   *  - Väestöluku 324 269 on KUNNAN luku, ei kaupungin, ja se
+   *    sanotaan niin.
+   *
+   * KUVAT PUUTTUVAT, JA SE ON LÄHDETILANNE EIKÄ VALINTA. Commonsin
+   * rajapinta vastasi 7.9.2026 koko iltapäivän kaikkiin pyyntöihin
+   * "You are making too many requests to the API" — sekä
+   * action=api.php että rest.php, sekä hakuun että kategorialistaan.
+   * Parvessa oli kahdeksan agenttia samalla osoitteella, ja raja on
+   * osoitekohtainen. Talon sääntö on selvä: kuvaton on parempi kuin
+   * tarkistamaton, eikä yhtäkään tiedostoa oteta ilman että lisenssi
+   * ja tekijä on luettu extmetadatasta ja kuva katsottu silmin.
+   * Lehti näkyy siis toistaiseksi ilman kansikuvia, avauskuvia,
+   * ennen–nyt-paria ja nostokuvia — sama tilanne kuin kuvattomilla
+   * karttanostoerillä. KUVAPUTKELLE TILATTAVAT (Dili):
+   *  - kansikuvat (3): yleiskuva keskustasta vuorten edessä; näkymä
+   *    lahdelle sataman kohdalta; rantatasanko ylhäältä niin että
+   *    näkyy, miten kapea kaistale kaupungilla on.
+   *  - avauskuvat (3): sataman rantabulevardi aamulla; vanhan
+   *    korttelin portugalilaisajan julkisivu; Tasitolun kosteikko.
+   *  - ennen–nyt: 1800- tai 1900-luvun alun katunäkymä ja sama katu
+   *    nykyään. HUOM: oceania-valokuvat.js:n dili-lohkon viisi
+   *    tiedostoa on kierrettävä (KITLV A828 …, Tais Market …,
+   *    Fish market Bebonuk …, Arquivo & Museu …, Cristo Rei of
+   *    Dili.jpg).
+   *  - matkailijalle.kuva: mikrolet tai sininen taksi kadulla.
+   *  - K1–K4 ja L1–L4: ks. kunkin noston aihe.
+   *
+   * SÄÄRIVEJÄ EI OLE (tehtävänannon poikkeama 2, Fable 7.9.2026):
+   * Open-Meteon hakua ei tehty lainkaan, eikä lukuja keksitä
+   * (Samarkand-malli v965). Oppaan sääjakso nojaa en-Wikipedian
+   * sääruutuun ja sanoo sen ääneen: luvut ovat lentoaseman asemalta,
+   * normaalikaudelta 1991-2020.
+   */
+  dili: [
+    {
+      id: 'kaupunki',
+      nimi: 'Dili',
+      johdanto: 'Dili oli isoisän matkan aikaan yli satavuotias '
+        + 'pääkaupunki ja silti rakennustyömaa: tulipalo oli syönyt '
+        + 'linnoituksen ja suuren osan kaupungista, ja uutta nousi '
+        + 'ruutukaavaan kuivatun suon päälle.',
+      nostot: [
+        {
+          otsikko: 'Pääkaupunki perustettiin vieraan kuninkaan maalle',
+          teksti: 'Vuonna 1769 Portugalin Timorin kuvernööri António '
+            + 'José Teles de Meneses siirsi hallinnon ja 1 200 ihmistä '
+            + 'saaren itäosaan. Aikomus oli asettua kauemmas itään '
+            + 'Vemasseen, mutta edullisen maaston takia asutus '
+            + 'perustettiin Diliin. Paikka kuului Motaelin '
+            + 'kuningaskuntaan, jonka johtaja oli portugalilaisten '
+            + 'ystävä: kuvernööri otti haltuunsa paikalla olleen '
+            + 'linnoitetun rakennuksen ja alkoi hänen avullaan rakentaa '
+            + 'uutta asutusta. Ympäristö oli vuorilta tulevien jokien '
+            + 'ruokkimaa kosteikkoa ja sopi riisinviljelyyn, ja '
+            + 'rannikkokaupungin ja soiden väliin rakennettiin muuri. '
+            + 'Asutus jakautui alusta asti kolmeen: yksi osa oli '
+            + 'pääosin portugalilainen, toinen mestitsien ja muista '
+            + 'Portugalin siirtomaista tulleiden — siitä tuli Bidau — '
+            + 'ja kolmas joukoille, jotka olivat kotoisin '
+            + 'kuningaskunnasta, jonka arvellaan olleen Floresilla.',
+          wiki: 'Dili',
+        },
+        {
+          otsikko: 'Vuosi 1873: kaupunki nousi uudelleen tuhkasta',
+          teksti: 'Kuvernööri José Maria Marques saapui 1834 ja '
+            + 'rakensi asutuksen uudelleen ruutukaavaan. Kaupunki levisi '
+            + 'rantaa pitkin ja etelään, kun vanhan kaupungin ja '
+            + 'Lahanen välinen kosteikko kanavoitiin ja kuivattiin, ja '
+            + 'tie vietiin Lahaneen ja Dareen. Uusi kaupunki keskittyi '
+            + 'satamaansa: sen ympärille tulivat kauppatilat, kirkko, '
+            + 'sotilas- ja hallintorakennukset, kuvernöörin asunto sekä '
+            + 'Motaelin kuningaskunnan edustajan ja Manatuton '
+            + 'kuningattaren asunnot — mutta vain kirkko ja '
+            + 'valtiovarainhoitajan talo olivat kivestä. Sitten paloi. '
+            + 'Tulipalo tuhosi linnoituksen ja suuren osan kaupungista, '
+            + 'ja viisi vuotta myöhemmin, 1871, sen raunioille alettiin '
+            + 'rakentaa uutta jalkaväkikasarmia. Vuoden 1870 merikartta '
+            + 'Plano do Porto e Cidade de Dilly osoittaa, että sataman '
+            + 'mittaus oli valmis: ankkuripaikkaa suojasi toisella '
+            + 'puolen majakka ja toisella Carqueton linnake. Kuvernöörin '
+            + 'uusi palatsi rakennettiin 1874–1881 ja uusi kirkko 1877. '
+            + 'Isoisän vuonna kaupunki oli siis kokonaan telineissä.',
+          wiki: 'Dili',
+        },
+        {
+          otsikko: 'Puolueeton satama kahden sotajoukon välissä',
+          teksti: 'Portugali ja sen siirtomaat pysyivät toisessa '
+            + 'maailmansodassa puolueettomina, mutta liittoutuneet '
+            + 'pitivät Itä-Timoria mahdollisena japanilaisten kohteena. '
+            + 'Kun Tyynenmeren sota alkoi, australialaisia ja '
+            + 'hollantilaisia joukkoja lähetettiin Diliin Portugalin '
+            + 'vastalauseista huolimatta, ja 400 miehen osasto miehitti '
+            + 'Portugalin Timorin 17. joulukuuta 1941. Kuvernööri '
+            + 'julisti itsensä vangiksi säilyttääkseen puolueettomuuden '
+            + 'näön. Japanilaiset nousivat maihin Dilissä 19.–20. '
+            + 'helmikuuta 1942. Australialainen komppania vetäytyi '
+            + 'vuorille ja teki sieltä iskuja timorilaisten oppaiden, '
+            + 'kantajien ja vuoriponien avulla. Kun Japani antautui '
+            + 'syyskuussa 1945, Dilin keskusta oli molempien osapuolten '
+            + 'pommitusten jäljiltä raunioina. Yksi talo säilyi juuri '
+            + 'siksi, että siinä oli japanilaisten esikunta: entinen '
+            + 'kasarmi, jota nykyään kutsutaan nimellä Casa Europa.',
+          wiki: 'Battle of Timor',
+        },
+        {
+          otsikko: 'Torin tetum lähti tästä kaupungista',
+          teksti: 'Tetum levisi Timorin keski- ja itäosiin '
+            + 'kontaktikielenä jo 1400-luvulla mahtavan Wehalin '
+            + 'kuningaskunnan aikana. Portugalilaiset asettuivat '
+            + 'aluksi saaren länsiosaan, jossa puhuttiin dawania, ja '
+            + 'vasta kun pääkaupunki siirtyi 1769 Diliin, he alkoivat '
+            + 'edistää tetumia siirtomaansa yhteisenä kielenä. Timor '
+            + 'oli yksi harvoista Portugalin siirtomaista, joissa '
+            + 'yleiskieleksi tuli paikallinen kieli eikä portugalin '
+            + 'muunnos, ja syy oli hallintotavassa: portugalilaiset '
+            + 'hallitsivat epäsuorasti paikallisten kuninkaiden kautta. '
+            + 'Dilissä syntyi oma muotonsa, Tetun Prasa eli torin tetum '
+            + '— nimi tulee portugalin torista, praça. Se on '
+            + 'kieliopiltaan yksinkertaisempi ja täynnä portugalilaisia '
+            + 'lainasanoja, ja Ethnologue luokittelee sen tetumpohjaiseksi '
+            + 'kreoliksi. Vuonna 2004 sillä oli maassa noin 50 000 '
+            + 'äidinkielistä ja noin 370 000 toisen kielen puhujaa, ja '
+            + 'samana vuonna se sai vakioidun oikeinkirjoituksen. '
+            + 'Kaupungissa kadunnimet ovat yhä portugaliksi ja '
+            + 'opastekyltit tetumiksi.',
+          wiki: 'Tetum language',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Dili on pieni pääkaupunki kapealla rantatasangolla: '
+          + 'hallintokortteli, vanha kaupunki ja satama mahtuvat '
+          + 'kilometrin nauhalle, ja niiden takana vuoret nousevat '
+          + 'melkein pystyyn. Kaupungin ilme on kolmikielinen — '
+          + 'kadunnimet portugaliksi, opasteet tetumiksi, kauppojen '
+          + 'kyltit sekaisin molempia ja kiinaa. Vuodenaikoja on kaksi, '
+          + 'ja ne ovat jyrkät: sadekausi ja kuiva kausi, joiden '
+          + 'sademäärät eroavat kolmikymmenkertaisesti.',
+        artikkeli: {
+          nimi: 'Matkailijan Dili',
+          taitto: 'opas',
+          teksti: 'Maan ainoa kansainvälinen lentokenttä, maan ainoa '
+            + 'iso satama ja maan yliopistot ovat kaikki samassa '
+            + 'kaupungissa — Diliin ei tulla ohi kulkiessa, vaan '
+            + 'Diliin tullaan ensin.',
+          nosto: 'Lentokentän kiitotiellä ei ole valoja, joten kone ei '
+            + 'voi laskeutua pimeällä: koko maan lentoliikenne kulkee '
+            + 'kuudesta kuuteen. Kiitotietä rajoittavat toisella puolen '
+            + 'meri ja toisella Comoro-joki.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Presidente Nicolau Lobato -lentoasema on maan '
+                + 'ainoa toimiva kansainvälinen lentokenttä, ja sieltä '
+                + 'on säännölliset lennot Darwiniin, Denpasariin ja '
+                + 'Singaporeen. Kiitotie on 1 850 metriä pitkä ja 30 '
+                + 'metriä leveä, kahdeksan metriä merenpinnan '
+                + 'yläpuolella; vuonna 2014 kentän kautta kulki 198 080 '
+                + 'matkustajaa. Kaupungissa liikutaan mikroleteilla — '
+                + 'kymmenen hengen pikkubusseilla, joilla ei ole '
+                + 'aikatauluja eikä juuri pysäkkejä ja joissa matka '
+                + 'maksaa neljänneksen dollarin — tai ilmastoiduilla '
+                + 'sinisillä takseilla, joiden kuljettajien odotetaan '
+                + 'puhuvan tetumia ja englantia.',
+            },
+            {
+              otsikko: 'Vanha kaupunki ja satama',
+              teksti: 'Kaupungin vanha kortteli on nykyisen Dilin '
+                + 'itäpuoliskossa, ja tärkeimmät hallintorakennukset '
+                + 'ovat sataman ympärillä. Keskusta eli Bairro Central '
+                + 'on kaupungin kivirakenteisin osa, ja siellä on '
+                + 'eniten portugalilaisajan arkkitehtuuria; '
+                + 'siirtomaa-ajan taloja on tiheimmin Motaelin, '
+                + 'Gricenforin ja Bidau Leciderén kaupunginosissa vanhan '
+                + 'kaupungin pääkadun varrella. Hallintoytimen itäpuolella '
+                + 'on vanha kiinalaiskortteli, jossa on yhä kiinalaisen '
+                + 'rakennustavan taloja. Satama itse on muuttunut: '
+                + 'konttiliikenne siirtyi syyskuussa 2022 Tibar Bayn '
+                + 'satamaan, ja vanha laituri palvelee nyt kotimaan '
+                + 'matkustajalaivoja ja risteilijöitä.',
+            },
+            {
+              otsikko: 'Torit ja lautat',
+              teksti: 'Kaupungin ensimmäinen julkinen torihalli '
+                + 'avattiin 1960-luvulla, ja se oli yksi kolmesta '
+                + 'itsenäisyyttä edeltäneestä torista; nykyiset suuret '
+                + 'torit ovat Taibesissa, Becorassa ja Comorossa. '
+                + 'Satamasta lähtee lautta Atauron saarelle kerran '
+                + 'viikossa ja Oecussen eksklaaviin kahdesti viikossa. '
+                + 'Lautat purkavat matkustajat ja ajoneuvot luiskalle '
+                + 'eivätkä varsinaiseen laituriin, ja juuri ne ovat '
+                + 'monelle maan kolkalle ainoa yhteys muuhun maahan.',
+            },
+            {
+              otsikko: 'Vettä ja sähköä',
+              teksti: 'Dili oli maan ensimmäinen paikka, jossa sähköä '
+                + 'sai ympäri vuorokauden. Vesi on toinen asia: vuonna '
+                + '2015 alle kolmasosalla dililäisistä oli jatkuva '
+                + 'vedenjakelu, ja 2018 vettä oli saatavilla '
+                + 'keskimäärin neljästä kahdeksaan tuntia. Veden '
+                + 'keittämistä suositellaan. Sadekausi tuo oman '
+                + 'ongelmansa: viemäriverkko ei riitä, ojat tukkeutuvat '
+                + 'ja tulvia tulee joka vuosi muutamassa talossa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Dili-artikkelin '
+                + 'sääruudusta (lentoaseman asema, normaalikausi '
+                + '1991–2020); lehdellä ei ole omaa vuosigraafia, koska '
+                + 'säärivejä ei tähän erään tehty. Ilmasto on '
+                + 'trooppinen savanni-ilmasto ja vuodessa on kaksi '
+                + 'vuodenaikaa: sadekausi marraskuusta huhtikuuhun ja '
+                + 'kuiva kausi toukokuusta lokakuuhun. Ero on jyrkkä. '
+                + 'Tammikuussa sataa keskimäärin 175 millimetriä ja '
+                + 'sadepäiviä on neljätoista; syyskuussa sataa viisi '
+                + 'millimetriä ja sadepäiviä on yksi. Lämpötila ei '
+                + 'juuri liiku vuoden mittaan: ylin keskilämpötila on '
+                + 'kuukaudesta riippuen 30,7–32,7 astetta ja alin '
+                + '21,1–24,2 astetta. Vuorokauden sisäinen vaihtelu on '
+                + 'suurempi kuin vuodenaikojen välinen.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Vanha kortteli',
+                tahdet: 3,
+                selite: 'Portugalilaisajan julkisivut Motaelin, '
+                  + 'Gricenforin ja Bidau Leciderén kaupunginosissa '
+                  + 'vanhan pääkadun varrella.',
+              },
+              {
+                mita: 'Sataman rantabulevardi',
+                tahdet: 3,
+                selite: 'Hallintorakennukset ja laituri samalla '
+                  + 'rannalla, josta kaupunki lähti kasvamaan 1769.',
+              },
+              {
+                mita: 'Tasitolun kosteikko',
+                tahdet: 2,
+                selite: 'Suojeltu järvi- ja rannikkoalue kaupungin '
+                  + 'länsilaidalla, BirdLifen tärkeä lintualue.',
+              },
+              {
+                mita: 'Vanha torihalli',
+                tahdet: 2,
+                selite: '1960-luvun ristinmuotoinen halli, jonka '
+                  + 'portaalissa lukee yhä Mercado Municipal de Dili.',
+              },
+              {
+                mita: 'Atauron lautta',
+                tahdet: 2,
+                selite: 'Kerran viikossa satamasta pohjoiseen; matka '
+                  + 'kestää pari tuntia.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Vesi, sähkö ja lentokentän
+             * aukioloaika ovat käytännön asioita, jotka muuttavat
+             * matkasuunnitelmaa; luvut ovat samat kuin jaksoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Lentokenttä sulkeutuu pimeällä',
+                teksti: 'Kiitotiellä ei ole valoja, joten kone ei '
+                  + 'laskeudu illalla. Jatkoyhteydet kannattaa laskea '
+                  + 'aamupäivän lentojen varaan.',
+              },
+              {
+                otsikko: 'Vesi keitetään',
+                teksti: 'Vedenjakelu on ajoittaista ja laatu '
+                  + 'vaihtelee; vuonna 2018 vettä tuli keskimäärin '
+                  + 'neljästä kahdeksaan tuntia vuorokaudessa.',
+              },
+              {
+                otsikko: 'Kaksi vuodenaikaa, ei muuta',
+                teksti: 'Sadekausi marraskuusta huhtikuuhun tuo '
+                  + 'tammikuussa 175 millimetriä; syyskuussa sataa '
+                  + 'viisi. Tulvia tulee sadekaudella joka vuosi.',
+              },
+              {
+                otsikko: 'Bussilla ei ole aikataulua',
+                teksti: 'Mikrolet pysähtyy siellä, missä sille '
+                  + 'viittaa, eikä reittiä lue kyljessä numeroa '
+                  + 'lukuun ottamatta.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Vuorten ja meren välissä',
+      johdanto: 'Dili on rakennettu kaistaleelle, joka loppuu '
+        + 'yhdeksässä kilometrissä: sen jälkeen maa nousee '
+        + 'yhdeksänsataan metriin. Kaupunki on siis puristuksissa, ja '
+        + 'kaikki muu seuraa siitä.',
+      tehtava: {
+        kysymys: 'Kuinka suuri osa Dilin kaupunkialueesta on '
+          + 'riittävän tasaista rakentamiseen?',
+        vaihtoehdot: [
+          'noin kolmasosa',
+          'noin kaksi kolmasosaa',
+          'lähes kaikki',
+          'alle kymmenesosa',
+        ],
+        oikea: 0,
+        fakta: 'Kaupunkimaisten sucojen yhteispinta-ala on 17 862 '
+          + 'hehtaaria, mutta vain noin 37 prosenttia eli 6 698 '
+          + 'hehtaaria on niin tasaista, että sille voi rakentaa. '
+          + 'Loput ovat rinnettä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tasainen maa loppuu yhdeksässä kilometrissä',
+          teksti: 'Dili on Timorin pohjoisrannikolla pienellä '
+            + 'tasaisen maan alueella, jota vuoret ympäröivät. '
+            + 'Kaupungin ydin on alle sadan metrin korkeudessa. '
+            + 'Kaupunkialue ulottuu neljään hallintopostiin — Cristo '
+            + 'Rei, Dom Aleixo, Nain Feto ja Vera Cruz — ja niiden '
+            + 'kahdeksantoista kaupunkimaisen sucon yhteispinta-ala on '
+            + '17 862 hehtaaria. Siitä vain noin 37 prosenttia eli '
+            + '6 698 hehtaaria on riittävän tasaista rakentamiseen, ja '
+            + 'vuoteen 2014 mennessä siitä oli rakennettu neljännes. '
+            + 'Comoro-joki virtaa kaupungin länsiosan läpi, ja sen '
+            + 'valuma-alue ulottuu yhdeksän kilometrin päähän '
+            + 'sisämaahan, missä vuoret ovat jo yhdeksänsataa metriä '
+            + 'korkeita. Joen yli vie koko kaupungissa kaksi '
+            + 'ajoneuvosiltaa.',
+          wiki: 'Dili',
+        },
+        {
+          otsikko: 'Kolmekymmentäkertainen ero kahden kuukauden välillä',
+          teksti: 'Dilin ilmasto on trooppinen savanni-ilmasto. '
+            + 'Sadekausi kestää marraskuusta huhtikuuhun ja kuiva '
+            + 'kausi toukokuusta lokakuuhun. Vuosien 2005–2013 '
+            + 'mittausten mukaan sateisin kuukausi oli joulukuu '
+            + 'keskimäärin 170 millimetrillä ja kuivin elokuu 5,3 '
+            + 'millimetrillä; vuosikeskiarvo oli 902 millimetriä, ja '
+            + 'vuosien välinen vaihtelu on suurta. Lämpötila sen sijaan '
+            + 'pysyy paikallaan: keskilämpötilat ovat 26–28 astetta ja '
+            + 'vuorokauden sisäinen vaihtelu 10,8–13,8 astetta, eli '
+            + 'yöllä noin kaksikymmentä ja päivällä yli '
+            + 'kolmekymmentäkolme. Vuoteen 2013 mennessä kaupungin '
+            + 'korkein mitattu lämpötila oli 36 astetta marraskuussa '
+            + '2011 ja matalin 14 astetta elokuussa 2013.',
+          wiki: 'Dili',
+        },
+        {
+          otsikko: 'Kolme suojelualuetta kaupungin sisällä',
+          teksti: 'Dilin alueella on kolme suojeltua luonnon '
+            + 'monimuotoisuuden aluetta. Cristo Rein suojelualue on '
+            + 'vuoristossa, joka erottaa keskustan Heran '
+            + 'kaupunginosasta idässä. Tasitolu on kaupungin '
+            + 'länsilaidalla Liquiçán kunnan rajan tuntumassa ja '
+            + 'kattaa sekä maata että rannikkovesiä; sitä kehitetään '
+            + 'virkistysalueeksi ja pyhänä pidetyksi paikaksi. Behau '
+            + 'kattaa suuren osan itäisen Dilin edustan merestä sekä '
+            + 'rannikkoa Herassa ja siitä itään, ja se on '
+            + 'ehdotuksista uusin — hallitus harkitsee sen '
+            + 'korvaamista pienemmillä alueilla. BirdLife '
+            + 'International on määrittänyt Cristo Rein alueen ja '
+            + 'Tasitolun tärkeiksi lintualueiksi. Rakentaminen näille '
+            + 'alueille on mahdollista valtion luvalla.',
+          wiki: 'Dili',
+        },
+        {
+          otsikko: 'Meriruoho ruokkii dugongit',
+          teksti: 'Dilin ympäristö tuottaa luontaisesti kuivaa '
+            + 'lehtimetsää. Rannikon mangrovelajeihin kuuluu '
+            + 'silmälläpidettävä Ceriops decandra. Rannan edustan '
+            + 'meriruohoniityt elättävät dugongeja ja merikilpikonnia, '
+            + 'ja kauempana avovesillä liikkuu delfiinejä ja valaita. '
+            + 'Kaupungin oma kasvu näkyy näissä luvuissa: vuosina '
+            + '1990–2014 Dilin ympärillä olevan tasaisen maan '
+            + 'maatalouskäytön arvioidaan vähentyneen noin '
+            + 'neljäkymmentä prosenttia, ja kosteikot ovat kaventuneet '
+            + 'edelleen, kun niitä on kuivattu ja rakennettu.',
+          wiki: 'Dili',
+        },
+      ],
+    },
+  ],
+  /*
+   * ALICE SPRINGS (Opus 7.9.2026) — Oseanian laudan kaupunkilehti,
+   * maa AUS. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-alicesprings.md ja sen tarkistus
+   * tarkistus-alicesprings.md (tuomio "kelpaa korjausten jälkeen").
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026:
+   * "Alice Springs", "Adelaide House (Alice Springs)", "Alfred
+   * Traeger", "Royal Flying Doctor Service", "Alice Springs School of
+   * the Air", "Australian feral camel", "Albert Namatjira",
+   * "Hermannsburg School", "Papunya Tula", "Araluen Cultural
+   * Precinct".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti ja valokuvataulu olivat jo olemassa eikä niihin
+   * koskettu.
+   *
+   * SIVUJA ON KAKSI. Teemasivun id on vakioaihe 'kuvataide', ja
+   * perustelu on aineistossa: Keski-Australia on kahden
+   * kansainvälisesti merkittävän taideliikkeen koti (Hermannsburgin
+   * akvarellikoulu ja Papunya Tulan länsiaavikon liike), ja molempien
+   * kauppa- ja näyttelykeskus on Alice Springs. AUS-maalehden
+   * alkuperäiskansa-osasto ei käsittele taidetta lainkaan.
+   *
+   * PILARI 1: arrernte-kansa ja paikan oma nimi Mparntwe tulevat
+   * ensimmäisenä nostona ennen siirtomaanimiä, ja kansa kuvataan
+   * nykypäivän toimijana (vuoden 2000 maaoikeuspäätös, Lhere Artepe).
+   * Teemasivun neljästä nostosta kolme kertoo aboriginaalitaiteesta
+   * taiteilijoiden omilla nimillä.
+   *
+   * PILARI 4: syrjivät käytännöt sanotaan mutta niillä ei mässäillä.
+   * Helmikuun 1934 kielto käyttää Adelaide Housea on K4:ssä yhtenä
+   * virkkeenä. Stuart Town Gaolin erotellut sellit ja vuosien
+   * 1928–1964 kaupunkirajojen päivärajoitus ovat kohdekartan omissa
+   * jutuissa (nahtavyysjutut.js). Vanhan vankilan (1938–1996)
+   * vangitsemislukuja ei käsitellä lainkaan: kartan piste on naisten
+   * museo, ei vankila.
+   *
+   * EI NYKYPOLITIIKKAA: Pine Gap ja artikkelin Crime-osio on jätetty
+   * kokonaan pois.
+   *
+   * TARKISTUKSEN KAIKKI KORJAUKSET ON TEHTY:
+   *  - Stuart Town Gaol on 1907, ei 1909. "Alice Springs" sanoo 1909
+   *    sivulauseessa, kohteen oma artikkeli 1907 katuosoitteen ja
+   *    rakentajan kanssa — tarkempi lähde voittaa (Panamá-oppi).
+   *  - Adelaide Housen radiokoetta EI sanota maailman ensimmäiseksi:
+   *    väite on vain yhdessä artikkelissa ilman omaa lähdettä, ja
+   *    Traegerin oma artikkeli ei nimeä paikkaa.
+   *  - Asukaslukua ei anneta lainkaan: infobox sanoo 25 912 (2021) ja
+   *    leipäteksti 34 783 (2025), eikä ero selity. Käytetään
+   *    artikkelin omaa suhdelukua "noin kymmenesosa
+   *    Pohjoisterritorion väestöstä".
+   *  - Villikamelien miljoonaluku on aikaleimattu vuoteen 2008.
+   *  - Hermannsburgin etäisyys on "runsaat sata kilometriä", koska
+   *    kaksi artikkelia antavat 125 ja 126 kilometriä.
+   *
+   * KUVAT PUUTTUVAT SAMASTA SYYSTÄ KUIN DILISSÄ: Commonsin rajapinta
+   * vastasi 7.9.2026 kaikkiin pyyntöihin 429:llä (parvessa kahdeksan
+   * agenttia samalla osoitteella), eikä tiedostoa oteta ilman että
+   * lisenssi ja tekijä on luettu extmetadatasta ja kuva katsottu
+   * silmin. KUVAPUTKELLE TILATTAVAT (Alice Springs):
+   *  - kansikuvat (3): kaupunki ANZAC Hilliltä MacDonnell-vuoret ja
+   *    Heavitree Gap taustalla; punainen hiekka ja aavikkomaisema
+   *    kaupungin laidalla; Todd-joen kuiva uoma kumipuineen.
+   *  - avauskuvat (3): Todd Mallin kävelykatu aamuvalossa; Läntisten
+   *    MacDonnellien rotko; keskustan ruutukaava ylhäältä.
+   *  - ennen–nyt: kaupunki 1930-luvulla ja sama näkymä nykyään. HUOM:
+   *    oceania-valokuvat.js:n alicesprings-lohkon viisi tiedostoa ja
+   *    AUS-maalehden "Alice Springs Telegraph Station, 2015 (08).JPG"
+   *    on kierrettävä.
+   *  - matkailijalle.kuva: Ghan-juna tai aseman laituri.
+   *  - K1–K4: arrernte-maisema (EI tunnistettavia kasvoja);
+   *    lennätinaseman kivitalot; kameleja Keski-Australiassa;
+   *    Adelaide House tai poljettava radio museoesineenä.
+   *  - T1–T4: Hermannsburgin lähetysaseman rakennukset; Läntisten
+   *    MacDonnellien maisema aavegumipuineen; Papunyan seutu;
+   *    Araluenin taidekeskuksen rakennus. EI TEOSKUVIA —
+   *    Namatjiran ja Papunya Tulan maalaukset ovat tekijänoikeuden
+   *    alaisia.
+   *
+   * SÄÄRIVEJÄ EI OLE (tehtävänannon poikkeama 2). Oppaan sääjakso
+   * nojaa en-Wikipedian sääruutuun ja sanoo sen ääneen: luvut ovat
+   * Alice Springs Airportin asemalta, normaalikaudelta 1991-2020.
+   */
+  alicesprings: [
+    {
+      id: 'kaupunki',
+      nimi: 'Alice Springs',
+      johdanto: 'Isoisän matkan aikaan täällä oli vuoden vanha '
+        + 'lennätinasema, jolla oli tulevan kaupungin nimi. Kaupunki '
+        + 'itse tuli myöhemmin, sai väärän nimen ja piti sitä '
+        + 'neljäkymmentäviisi vuotta.',
+      nostot: [
+        {
+          otsikko: 'Mparntwe oli täällä ensin',
+          teksti: 'Arrernte-kansa on Alice Springsin ja sitä '
+            + 'ympäröivien MacDonnell-vuorten perinteinen omistaja, ja '
+            + 'se on asunut alueella ainakin kolmekymmentätuhatta '
+            + 'vuotta. Taajaman alueen perinteinen nimi on Mparntwe, '
+            + 'vedenottopaikka, ja se viittaa Atherreyurreen, '
+            + 'Todd-joen vesikuoppaan vanhan lennätinaseman kohdalla. '
+            + 'Mparntwe kattaa suurimman osan taajamasta; eteläosalla '
+            + 'on nimi Irlpme ja itäosalla Antulye. Arrernten kieltä on '
+            + 'kirjoitettu monella tavalla — Aranda, Arrarnta, Arunta — '
+            + 'ja siinä on viisi murretta. Arrernten omien kertomusten '
+            + 'mukaan maiseman muovasivat yeperenye-, ntyarlke- ja '
+            + 'utnerrengatye-toukat sekä akngwelye eli villikoirat, ja '
+            + 'perinteisesti tärkeitä paikkoja ovat muun muassa '
+            + 'Anthwerrke, Ntaripe ja Alhekulyele. Toukokuussa 2000 '
+            + 'liittovaltion tuomioistuin tunnusti arrernte-kansan '
+            + 'kaupungin perinteisiksi omistajiksi ja alkuperäisen '
+            + 'maanomistusoikeuden haltijoiksi ei-yksinomaisin '
+            + 'oikeuksin. Se oli Australian ensimmäinen onnistunut '
+            + 'kaupunkialueen maaoikeusvaade, ja sen oikeushenkilö on '
+            + 'Lhere Artepe Aboriginal Corporation.',
+          wiki: 'Alice Springs',
+        },
+        {
+          otsikko: 'Vuosi 1873: asema, jolla oli kaupungin nimi',
+          teksti: 'John McDouall Stuart johti 1861–62 retkikunnan '
+            + 'Keski-Australian halki myöhemmän Alice Springsin '
+            + 'länsipuolelta ja avasi reitin mantereen etelästä '
+            + 'pohjoiseen. Kymmenen vuotta myöhemmin tarvittiin '
+            + 'asutus, kun yleislennätinlinjalle rakennettiin '
+            + 'toistinasema; linja valmistui 1872 ja seurasi Stuartin '
+            + 'reittiä. Asema sijoitettiin sen vesikuopan viereen, jota '
+            + 'pidettiin pysyvänä muuten kuivassa Todd-joessa. W. W. '
+            + 'Mills nimesi paikan Alice Springsiksi Etelä-Australian '
+            + 'lennätinylitarkastajan sir Charles Toddin vaimon Alicen '
+            + 'mukaan, ja Todd-joki sekä sen sivujoki Charles-joki '
+            + 'nimettiin sir Charlesin mukaan. Läheinen asutus sai '
+            + 'sen sijaan nimen Stuart, ja se nimettiin uudelleen Alice '
+            + 'Springsiksi vasta 31. elokuuta 1933. Merkittävä '
+            + 'eurooppalainen asutus alkoi vasta, kun Arltungasta '
+            + 'löytyi kultaa 1887 sadan kilometrin päästä idästä. '
+            + 'Kaupungin ensimmäinen kunnollinen rakennus, Stuart Town '
+            + 'Gaol, valmistui 1907, ja eurooppalaisia asukkaita oli '
+            + 'silloin alle kaksikymmentä.',
+          wiki: 'Alice Springs',
+        },
+        {
+          otsikko: 'Kamelit tulivat ennen rataa ja jäivät sen jälkeen',
+          teksti: 'Sisämaan kuljetukset hoidettiin brittiaikana '
+            + 'kamelikaravaaneilla, joita ajoivat Brittiläisen Intian '
+            + 'luoteisen rajaseudun pataani-heimoista tulleet '
+            + 'siirtolaiset; paikallisesti heitä kutsuttiin '
+            + 'afgaaneiksi, ja heidän tukikohtansa oli Hergott Springs, '
+            + 'nykyinen Marree. Moni kameliajaja muutti Alice '
+            + 'Springsiin 1929, kun rata vihdoin ylsi kaupunkiin. He '
+            + 'asuivat sillä korttelilla, jolla kaupunginvaltuusto nyt '
+            + 'on, ja kuljettivat tavaraa radan päästä pohjoisen '
+            + 'karjatiloille ja asutuksille. Kamelit jäivät maahan, kun '
+            + 'auto tuli: vuonna 2008 villiintyneitä yksikyttyräisiä '
+            + 'kameleja arvioitiin olevan yli miljoona, ja kanta voi '
+            + 'kaksinkertaistua kahdeksassa tai kymmenessä vuodessa. '
+            + 'Pohjoisterritoriossa ne ovat keskittyneet '
+            + 'Simpsoninaavikolle sekä Keskiketjujen, Suuren '
+            + 'hiekka-aavikon ja Tanamin aavikon alueelle. Nykyisen '
+            + 'rautatieaseman aulassa on Gabriel Sterkin veistos '
+            + 'kameliajajien muistoksi.',
+          wiki: 'Alice Springs',
+        },
+        {
+          otsikko: 'Poljettu radio, lentävä lääkäri ja koulu ilmassa',
+          teksti: 'Pastori John Flynn suunnitteli ja rakennutti '
+            + 'Adelaide Housen, Keski-Australian ensimmäisen sairaalan. '
+            + 'Varainkeruu alkoi 1918, rakennustyöt 1920 kivimuurari '
+            + 'Jack Williamsin urakkana, työ pysähtyi 1923 rahan '
+            + 'loputtua ja jatkui 1925, ja talo avattiin 24. kesäkuuta '
+            + '1926 yhdeksäntenä Australian sisämaalähetyksen '
+            + 'neljästätoista hoitopaikasta. Flynn suunnitteli siihen '
+            + 'kellarin, josta viileä ilma nousi kanavia pitkin ylös — '
+            + 'periaate oli lainattu Coolgardie-kaapista. Helmikuussa '
+            + '1934 hallitus kielsi alkuperäiskansojen käytön '
+            + 'Adelaide Housessa ja rakennutti Todd-joen itärannalle '
+            + 'peltisen hoitomajan. Insinööri Alfred Traeger kehitti '
+            + 'Flynnin kanssa 1920-luvulta alkaen poljettavan radion: '
+            + 'polkimilla pyöritetty generaattori antoi virran '
+            + 'laatikkoon rakennetulle lähetin-vastaanottimelle. '
+            + 'Ensimmäiset polkulaitteet otettiin käyttöön '
+            + 'Queenslandissa 1929, ja 1933 Traeger keksi niille '
+            + 'morsekirjoituskoneen. Lentävän lääkärin palvelu '
+            + 'käynnistyi Cloncurryssä 15. toukokuuta 1928, ja '
+            + 'ensimmäisenä vuonna se lensi noin kaksikymmentätuhatta '
+            + 'mailia viidelläkymmenellä lennolla — maailman '
+            + 'ensimmäinen kattava ilma-ambulanssi. Radioverkosta '
+            + 'kasvoi lopulta koulu: kouluntarkastaja Adelaide Miethke '
+            + 'sai idean 1944, Flynnin luvan kokeiluun 1950, ja '
+            + 'maailman ensimmäinen School of the Air avattiin Alice '
+            + 'Springsissä 8. kesäkuuta 1951. Aluksi oli kolme puolen '
+            + 'tunnin oppituntia viikossa eikä lainkaan paluuyhteyttä.',
+          wiki: 'Royal Flying Doctor Service',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Alice Springs on suunnilleen mantereen '
+          + 'maantieteellisessä keskipisteessä: merelle on noin '
+          + 'kaksitoistasataa kilometriä joka suuntaan, ja lähimmät '
+          + 'suuret kaupungit Adelaide ja Darwin ovat kumpikin noin '
+          + 'puolentoista tuhannen kilometrin päässä. Kaupunki on '
+          + 'rakennettu tavallisesti kuivan Todd-joen molemmin puolin '
+          + 'MacDonnell-vuorten pohjoispuolelle, ja se on '
+          + 'palvelukeskus alueelle, joka on Suomea suurempi. Keskusta '
+          + 'on kävelymitassa: koko perintökortteli mahtuu '
+          + 'kahdensadan metrin ympyrään.',
+        artikkeli: {
+          nimi: 'Matkailijan Alice Springs',
+          taitto: 'opas',
+          teksti: 'Kaupunki, johon tullaan vuorten takia ja josta '
+            + 'lähdetään aavikolle: vaellusreitti länteen, aavikko '
+            + 'kaakkoon ja juna kumpaankin suuntaan pitkin mannerta.',
+          nosto: 'Alice Springs on Adelaide–Darwin-radan puolivälissä. '
+            + 'Rata tuli kaupunkiin 1929 ja pysähtyi siihen 75 '
+            + 'vuodeksi: vasta helmikuussa 2004 ensimmäinen '
+            + 'matkustajajuna ajoi Adelaidesta Darwiniin asti.',
+          jaksot: [
+            {
+              otsikko: 'Perille',
+              teksti: 'Kaupunki on lähes yhtä kaukana Adelaidesta '
+                + '(1 532 kilometriä) ja Darwinista (1 499 '
+                + 'kilometriä), ja lähimmälle merelle on noin '
+                + 'kaksitoistasataa kilometriä. Nykyinen rautatieasema '
+                + 'avattiin 9. lokakuuta 1980, kun uusi normaaliraiteinen '
+                + 'rata tuli Tarcoolasta, ja se oli radan pääteasema '
+                + 'siihen asti kunnes linja jatkettiin Darwiniin '
+                + 'helmikuussa 2004. Asemaa palvelee nykyään '
+                + 'matkailujuna Ghan, joka kulkee tavallisesti kerran '
+                + 'viikossa kumpaankin suuntaan.',
+            },
+            {
+              otsikko: 'Keskustassa',
+              teksti: 'Kaupungin keskipiste on Todd Mall, kävelykatu, '
+                + 'jonka varrella on useita aboriginaalitaiteen '
+                + 'gallerioita ja jossa pidetään kahden viikon välein '
+                + 'Todd Mall Markets. Helmikuussa 2024 kadun varteen '
+                + 'avattiin AIATSIS Central Australian tieto- ja '
+                + 'näyttelykeskus. Kaupungissa on paljon vanhoja '
+                + 'rakennuksia — lennätinasema, vanha oikeustalo ja '
+                + 'Residency, Hartley Streetin koulu ja Todd Mallin '
+                + 'keskellä seisova Adelaide House — ja niiden läpi '
+                + 'kulkee opastettu kaupunkireitti nimeltä Flynn '
+                + 'Trail.',
+            },
+            {
+              otsikko: 'Vuorille ja aavikolle',
+              teksti: 'MacDonnell-vuoret jatkuvat kaupungista sekä '
+                + 'itään että länteen, ja niissä on vaellusreittejä ja '
+                + 'uimapaikkoja: Ormiston Gorge, Redbank Gorge ja Glen '
+                + 'Helen Gorge. Läntisiä MacDonnelleja seuraa 223 '
+                + 'kilometrin Larapinta Trail. Kaupungista kaakkoon '
+                + 'alkaa Simpsoninaavikko, yksi Australian suurista '
+                + 'erämaista, jossa on suuria punaisia dyynejä ja '
+                + 'kalliomuodostumia kuten Chambers Pillar ja Rainbow '
+                + 'Valley. Kaupungissa itsessään on aavikkopuisto ja '
+                + 'Olive Pinkin kasvitieteellinen puutarha, joka on '
+                + 'erikoistunut kuivan alueen kasveihin.',
+            },
+            {
+              otsikko: 'Juhlat, joita ei ole muualla',
+              teksti: 'Aavikkoelämä on synnyttänyt kaupunkiin omia '
+                + 'tapahtumia: Camel Cup eli kamelinajot, '
+                + 'Henley-on-Todd -soutukilpailu kuivassa joenuomassa, '
+                + 'Bangtail muster, pipofestivaali ja Finke Desert '
+                + 'Race, joka on 460 kilometrin edestakainen ajo Alice '
+                + 'Springsistä Aputulan yhteisöön ja takaisin. '
+                + 'Vuodesta 2016 kaupungissa on järjestetty myös '
+                + 'valofestivaali Parrtjima.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Alice Springs '
+                + '-artikkelin sääruudusta (Alice Springs Airport, '
+                + 'normaalikausi 1991–2020); lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säärivejä ei tähän erään tehty. '
+                + 'Ilmasto on subtrooppinen kuuma aavikkoilmasto. '
+                + 'Kesällä ylin keskilämpötila on 35,6 astetta ja '
+                + 'talvella alin 5,1 astetta, ja pakkasöitä on '
+                + 'keskimäärin 12,4 vuodessa: kaupunki on 545 metrin '
+                + 'korkeudessa, mikä viilentää talviyöt. Kuukausien '
+                + 'ylimmät keskilämpötilat vaihtelevat heinäkuun 20,7 '
+                + 'asteesta tammikuun 37,1 asteeseen. Sade on '
+                + 'epäsäännöllistä: vuonna 2001 satoi 741 millimetriä '
+                + 'ja 2002 vain 198. Ennätyspakkanen −7,5 astetta '
+                + 'mitattiin 17. heinäkuuta 1976, ja se on samalla '
+                + 'koko Pohjoisterritorion mittausennätys.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Todd Mall',
+                tahdet: 3,
+                selite: 'Kävelykatu gallerioineen ja kahden viikon '
+                  + 'välein pidettävine toreineen.',
+              },
+              {
+                mita: 'Läntiset MacDonnell-vuoret',
+                tahdet: 3,
+                selite: 'Rotkoja ja uimapaikkoja; 223 kilometrin '
+                  + 'Larapinta Trail seuraa harjannetta.',
+              },
+              {
+                mita: 'Araluenin kulttuurikortteli',
+                tahdet: 3,
+                selite: 'Neljä galleriaa, Namatjira-sali, '
+                  + 'Keski-Australian museo ja ilmailumuseo samalla '
+                  + 'tontilla.',
+              },
+              {
+                mita: 'Lennätinasema',
+                tahdet: 2,
+                selite: 'Vuoden 1872 toistinasema kivitaloineen '
+                  + 'kolme kilometriä keskustasta pohjoiseen.',
+              },
+              {
+                mita: 'Olive Pinkin puutarha',
+                tahdet: 2,
+                selite: 'Kuudentoista hehtaarin kuivan alueen '
+                  + 'kasvitieteellinen puutarha joen mutkassa.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: aavikkokaupungin todelliset varaukset —
+             * lämpötilaerot, etäisyydet ja se, että joessa ei ole
+             * vettä. Luvut ovat samat kuin jaksossa 5.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Kesä ja talvi ovat eri planeetoilta',
+                teksti: 'Kesän ylin keskilämpötila on 35,6 astetta ja '
+                  + 'talven alin 5,1; pakkasöitä on keskimäärin 12,4 '
+                  + 'vuodessa.',
+              },
+              {
+                otsikko: 'Joessa ei yleensä ole vettä',
+                teksti: 'Todd-joki on tavallisesti kuiva uoma. Sen '
+                  + 'takia kaupungissa soudetaan kerran vuodessa '
+                  + 'pohjattomilla veneillä juosten.',
+              },
+              {
+                otsikko: 'Sade tulee tai ei tule',
+                teksti: 'Vuonna 2001 satoi 741 millimetriä ja 2002 '
+                  + 'vain 198. Suurin vuorokausisade 204,8 '
+                  + 'millimetriä mitattiin 31. maaliskuuta 1988.',
+              },
+              {
+                otsikko: 'Etäisyydet ovat todellisia',
+                teksti: 'Lähimmät suuret kaupungit ovat noin '
+                  + 'puolentoista tuhannen kilometrin päässä ja meri '
+                  + 'noin kahdentoistasadan.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Aavikon maalarit',
+      johdanto: 'Keski-Australiasta on lähtenyt kaksi taideliikettä, '
+        + 'jotka muuttivat sen, miltä Australia näyttää itselleen: '
+        + 'Hermannsburgin akvarellit ja Papunyan pistemaalaukset. '
+        + 'Molempien näyteikkuna on Alice Springs.',
+      tehtava: {
+        kysymys: 'Mistä Papunya Tulan taiteilijat saivat osuuskuntansa '
+          + 'nimen?',
+        vaihtoehdot: [
+          'lähellä olevasta kukkulasta',
+          'ensimmäisen maalauksen nimestä',
+          'perustajansa sukunimestä',
+          'käytetystä maalilajista',
+        ],
+        oikea: 0,
+        fakta: 'Nimen jälkiosa tula tulee pienestä kukkulasta '
+          + 'Papunyan lähellä. Kukkula on hunajamuurahaisen unipaikka, '
+          + 'eli nimi kertoo maasta eikä ihmisistä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Akvarelli, joka teki maalarista kotinimen',
+          teksti: 'Albert Namatjira (1902–1959) oli '
+            + 'länsiarrernte-maalari MacDonnell-vuorilta. Hän syntyi ja '
+            + 'kasvoi Hermannsburgin luterilaisella lähetysasemalla '
+            + 'runsaat sata kilometriä Alice Springsistä länteen. Hän '
+            + 'kiinnostui taiteesta varhain mutta alkoi maalata '
+            + 'tosissaan vasta 1934 Rex Battarbeen ohjauksessa; kun '
+            + 'Battarbee palasi 1936 maalaamaan seudun maisemaa, '
+            + 'Namatjira toimi hänen kameliajajanaan ja oppaanaan. '
+            + 'Hänen akvarellinsa poikkesivat perinteisen '
+            + 'aboriginaalitaiteen symboleista, ja niiden jäljennöksiä '
+            + 'ripustettiin koteihin ympäri Australiaa. Ensimmäinen '
+            + 'yksityisnäyttely oli Melbournessa 1938. Vuonna 1956 '
+            + 'William Dargien muotokuva Namatjirasta voitti '
+            + 'Archibald-palkinnon ensimmäisenä aboriginaalia '
+            + 'esittävänä työnä, ja 1957 Namatjira oli ensimmäinen '
+            + 'tiedossa oleva Pohjoisterritorion aboriginaali, joka '
+            + 'vapautettiin holhouksesta ja sai täydet '
+            + 'kansalaisoikeudet.',
+          wiki: 'Albert Namatjira',
+        },
+        {
+          otsikko: 'Hermannsburgin koulu maalasi oman maansa',
+          teksti: 'Hermannsburgin koulu on taideliike, joka alkoi '
+            + 'Hermannsburgin lähetysasemalla 1930-luvulla. Aseman '
+            + 'perustivat saksalaiset luterilaiset lähetystyöntekijät '
+            + '1877, ja länsiarrernte-kansa on asunut alueella tuhansia '
+            + 'vuosia. Liikkeelle ovat tyypillisiä pehmeäsävyiset '
+            + 'akvarellit siitä maisemasta, jota siirtolaiset kutsuivat '
+            + 'Läntisiksi MacDonnell-vuoriksi. Aiemmin '
+            + 'länsiarrernte-kansa oli käyttänyt kuvaa vain '
+            + 'seremoniallisesti, oman maansa ja unienaikojensa '
+            + 'topografisena tulkintana symboleilla. Aavegumipuu on '
+            + 'töissä keskeinen ja se on länsiarrernte-mytologiassa '
+            + 'pyhä; Otto Pareroultjan parhaissa töissä puut on '
+            + 'maalattu esi-isinä, joilla on vartaloa muistuttavat '
+            + 'rungot ja käsivarsia muistuttavat oksat. Rex Battarbee '
+            + 'perusti 1941 Aranda Art Groupin, joka hoiti '
+            + 'tarvikkeiden jakelun ja taiteilijoiden liikeasiat. '
+            + 'Liike hiipui 1970-luvun lopulla, mutta Wenten Rubuntja '
+            + 'maalasi 1990-luvulle asti. Nykyään Hermannsburg '
+            + 'tunnetaan myös savenvalajistaan.',
+          wiki: 'Hermannsburg School',
+        },
+        {
+          otsikko: 'Koulun seinämaalaus, josta tuli liike',
+          teksti: '1960-luvun lopulla hallitus siirsi useita '
+            + 'länsiaavikon ryhmiä Papunyaan, 240 kilometriä Alice '
+            + 'Springsistä luoteeseen: pintupeja, luritjoja, '
+            + 'warlpireja, arrernteja ja anmatyerreja. Vuonna 1971 '
+            + 'yhteisön koulunopettaja Geoffrey Bardon kannusti lapsia '
+            + 'maalaamaan seinämaalauksen perinteisellä keho- ja '
+            + 'hiekkaseremoniataiteen tyylillä. Vuotta myöhemmin, '
+            + '1972, perustettiin osuuskunta Papunya Tula, jonka '
+            + 'nimen jälkiosa tulee pienestä kukkulasta Papunyan '
+            + 'lähellä — hunajamuurahaisen unipaikasta. Ryhmä '
+            + 'tunnetaan länsiaavikon taideliikkeestä eli '
+            + 'pistemaalauksesta, ja sen katsotaan tuoneen nykyisen '
+            + 'aboriginaalitaiteen maailman tietoisuuteen. Useimmat '
+            + 'taiteilijat eivät olleet koskaan maalanneet '
+            + 'länsimaiseen tapaan akryylillä kovalle pinnalle. Kun '
+            + 'työt tulivat julkisiksi, yhteisö arvosteli sitä, että '
+            + 'liikaa pyhää tuli näkyviin, ja taiteilijat poistivat tai '
+            + 'muuttivat merkkejä; juuri silloin tiheästä pisteytyksestä '
+            + 'tuli tapa peittää se, mitä ei ollut tarkoitettu '
+            + 'ulkopuolisille. Ensimmäiset naiset tulivat mukaan '
+            + '1980-luvun lopulla ja yleisemmin vasta 1994. Yhtiö '
+            + 'toimii nykyään Alice Springsistä käsin, ja sen '
+            + 'taiteilijat tulevat jopa seitsemänsadan kilometrin '
+            + 'päästä lännestä.',
+          wiki: 'Papunya Tula',
+        },
+        {
+          otsikko: 'Näyteikkuna on pääkadulla ja kortteli joen takana',
+          teksti: 'Keski-Australiasta ovat kotoisin monet '
+            + 'aboriginaalitaiteen tunnetuimmista nimistä: Emily '
+            + 'Kngwarreye, Minnie Pwerle, Clifford Possum '
+            + 'Tjapaltjarri, Albert Namatjira ja Wenten Rubuntja. '
+            + 'Kauppa käydään Todd Mallin gallerioissa, mutta kokoelmat '
+            + 'ovat Araluenin kulttuurikorttelissa: siellä on neljä '
+            + 'galleriaa, joista yksi on Albert Namatjira -galleria, '
+            + 'noin viidensadan hengen teatteri, Keski-Australian museo '
+            + 'ja sen Strehlow-tutkimuskeskus, Keski-Australian '
+            + 'ilmailumuseo, Kookaburra-muistomerkki, '
+            + 'Yeperenye-veistos ja aboriginaalien pyhiä paikkoja. '
+            + 'Taidekeskuksen etuikkuna on paikallisesti tehty suuri '
+            + 'lasimaalaus, jonka Wenten Rubuntja suunnitteli '
+            + 'maalauksestaan Arrernte Country (1987). Vuosittain '
+            + 'korttelissa pidetään Keski-Australian suurin '
+            + 'alkuperäiskansojen taidetapahtuma Desert Mob. Kauppa on '
+            + 'myös rahaa: Clifford Possum Tjapaltjarrin maalaus teki '
+            + '2007 aboriginaalitaiteen huutokauppaennätyksen 1,03 '
+            + 'miljoonalla punnalla, yli kaksinkertaisesti edelliseen '
+            + 'ennätykseen verrattuna.',
+          wiki: 'Araluen Cultural Precinct',
+        },
+      ],
+    },
+  ],
+  /*
    * PANAMÁ (Opus 6.9.2026, paketti O9) — P-Amerikan laudan
    * kaupunkilehti, joka palvelee myös E-Amerikan lautaa. Fablen
    * päätös 24.8.2026 (spec-mantereet.md): kaupunki-id 'panama' on
@@ -92563,6 +93473,8060 @@ export const KULTTUURI_KATEGORIAT = {
             + 'rinteillä on jäätiköitä keskellä kesää.',
           lahde: 'Paxson Woelber, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Chugach State Park',
+        },
+      ],
+    },
+  ],
+  /*
+   * PUNTA ARENAS (Opus 7.9.2026, parvierä) — Etelä-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-puntaarenas.md ja sen riippumaton tarkistus
+   * tarkistus-puntaarenas.md (tuomio "kelpaa, kun kohtien A–H
+   * ratkaisut tehdään"; kaikki on tehty, ks. alla). Väitteet on luettu
+   * en-Wikipedian raakatekstistä 7.9.2026: "Punta Arenas",
+   * "Strait of Magellan", "Fuerte Bulnes", "Puerto del Hambre",
+   * "Chilean schooner Ancud", "Sociedad Explotadora de Tierra del
+   * Fuego", "Sara Braun", "Cemetery of Punta Arenas", "Magdalena
+   * Island, Magallanes Region", "Croatian Chileans", "Luis Pardo",
+   * "Selkʼnam people", "Antarctic gateway cities".
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   * Saapumisteksti (southamerica-saapumiset.js) ja valokuvataulu
+   * (southamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * kosketa. Saapumistekstin köydet kadulla, salmen tulli ja
+   * Magalhãesin patsaan varvas jäävät siis peliin, eikä lehti toista
+   * niitä.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto', koska AIHE_IKONIT ei tarjoa salmelle omaa
+   * kuvaketta eikä uusia sivu-id:itä tehdä; sivun nimi "Salmi ja
+   * Etelämanner" kertoo aiheen.
+   *
+   * CHILEN MAALEHTEÄ EI TOISTETA. Maalehti (maa-kategoriat.js, CHL)
+   * kertoo mapuchejen rajasta, itsenäisyysjulistuksesta,
+   * saksalaissiirtolaisista ja Humberstonesta, Pääsiäissaaresta,
+   * Robinson Crusoen saaresta, Chilotén puukirkoista, JAGANEISTA JA
+   * BRIDGESIN SANAKIRJASTA, Atacamasta, Valdivian maanjäristyksestä,
+   * ETELÄISESTÄ JÄÄKENTÄSTÄ, alercesta, carménèrestä, curannosta,
+   * humitasta, merkénistä, cuecasta ja Violeta Parrasta. Yksikään
+   * näistä ei ole tämän lehden aihe. GUANAKO mainitaan yhdessä
+   * lauseessa, koska ilman sitä selkʼnamien tarina ei ole
+   * ymmärrettävä — lajista itsestään ei sanota mitään, se on
+   * elaintakyt.js:n CHL-täky.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: Cavendishin löytämistä eloonjääneistä kerrotaan kohteen
+   *    oman artikkelin versio (kaksi, joista toinen kuoli).
+   *  - B: Ancudin miehistömäärä kerrotaan MOLEMMILLA luvuilla
+   *    (23 ja 21), koska lähteet eivät sovi yhteen.
+   *  - C: Fuerte Bulnesin etäisyydeksi sanotaan "runsaat
+   *    viisikymmentä kilometriä" — koordinaateista laskettu 51,7 km
+   *    voittaa leipätekstien 58, 62, 70 ja 80 kilometriä.
+   *  - D: lammasyhtiön koko kerrotaan vuokrasopimusten omilla
+   *    luvuilla, ei ristiriitaisilla pyöreillä pinta-aloilla.
+   *  - E: lämpötilat sääruudusta (1991–2020), ei leipätekstin
+   *    pyöristyksistä.
+   *  - F: köysiä kadulla EI mainita — Wikipedia on itse merkinnyt
+   *    väitteen lähteettömäksi vuonna 2015.
+   *  - G: katedraalin "ensimmäinen kirkko 1584" jätetään pois
+   *    (kaupunkia ei ollut olemassa); kohde on kohdekartalla.
+   *  - H: selkʼnamien kohtalo kerrotaan tapahtumana ilman
+   *    julmuuksien yksityiskohtia ja päättyy vuoden 2023
+   *    tunnustukseen; vuodet 1973–1990 on rajattu ulos samalla
+   *    periaatteella kuin Chilen maalehdessä.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Punta arenas.jpg" (extmetadatan Artist tyhjä),
+   * "Cerro La Cruz PUQ.jpg" (etualalla tunnistettavia kasvoja ja
+   * seinässä graffitia), "15mrz08 P Arenas 08.jpg" (kuvattu
+   * lentokoneen ikkunasta, alakulmassa siipi), "Punta Arenas 46.jpg"
+   * (katunäkymä liikekylttien kanssa, ei yleiskuva),
+   * "Panoramica punta arenas3.jpg" ja "Punta Arenas View.jpg"
+   * (alle 1200 px), "Yelcho.jpg" (1000 px) ja "Piloto Pardo.jpeg"
+   * (597 px).
+   *
+   * KUUSI NOSTOA JA YKSI KOHDEKARTAN JUTTU JÄÄ KUVATTOMAKSI, ja se
+   * on valinta: nimen etymologialle, vuoden 1873 siirtolalle,
+   * lammastaloudelle ja selkʼnameille, salmelle, salmen
+   * kartoitukselle, Yelchon pelastusretkelle ja merisotamuseolle ei
+   * löytynyt Commonsista kuvaa, joka täyttäisi säännöt ja vastaisi
+   * selitettä.
+   * Kuvaton on parempi kuin tarkistamaton — kohteet on tilattu
+   * kuvaputkelta raportissa.
+   *
+   * MINITEHTÄVÄ EI TOISTA VISAA. Kaupungin visa
+   * (southamerica-questions.js, puntaarenas) kysyy salmesta, Panaman
+   * kanavasta 1914, eteläisimmästä kaupungista, Magalhãesista 1520 ja
+   * lampaanvillasta. Minitehtävä kysyy Luis Pardon vastauksesta
+   * Britannian rahapalkkioon, eikä se ole yksikään niistä.
+   */
+  puntaarenas: [
+    {
+      id: 'kaupunki',
+      nimi: 'Punta Arenas',
+      johdanto: 'Kaupunki syntyi rangaistussiirtolasta ja merkiksi '
+        + 'siitä, että Magalhãesinsalmi kuuluu Chilelle. Isoisän '
+        + 'matkavuonna 1873 se oli yhä pieni — vauraus tuli vasta '
+        + 'lampaista, ja se maksoi hintansa.',
+      /*
+       * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+       * (southamerica-valokuvat.js, puntaarenas), jossa se on jo
+       * tarkistettu — vanha puoli on Nevin Otto Winterin kirjan
+       * kuvalaatta vuodelta 1912 ja uusi puoli näkymä Cerro de la
+       * Cruzilta 2019. Selitteet on kirjoitettu uudestaan yhdeksi
+       * virkkeeksi reseptin mukaan. Vanhassa vedoksessa on kirjan
+       * oma painettu kuvateksti ja kehys; se on julkaisijan omaa
+       * merkintää ja kerrotaan kuvatekstissä.
+       *
+       * SAMA NÄKÖALAPAIKKA ESIINTYY LEHDESSÄ KAHDESTI ja se on
+       * tietoinen valinta: parin uusi puoli on koko kaupungin näkymä
+       * Cerro de la Cruzilta, ja kohdekartan Cerro de la Cruz -jutun
+       * kuva on itse näköalatasanne mosaiikkeineen. Eri tiedostot,
+       * eri rajaus, eri asia — sama linja kuin Vasa-laivalla ja
+       * Magadanin surun maskilla (docs/moduulit/kaupunkilehti.md,
+       * tunnetut kuvatoistot).
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'General view of Punta Arenas.jpg',
+          vuosi: '1912',
+          selite: 'Matkakirjan painettu kuvalaatta vuodelta 1912: '
+            + 'peltikattojen takana on salmi ja sillä toistakymmentä '
+            + 'laivaa odottamassa.',
+          lahde: 'Winter, Nevin O. (Nevin Otto), 1869-1936, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Punta Arenas, Cerro de la Cruz 0798.jpg',
+          selite: 'Sama kaupunki Cerro de la Cruzilta nykyään: '
+            + 'ruutukaava on ennallaan, mutta salmella on enää '
+            + 'yksittäisiä aluksia ja yksi risteilijä.',
+          lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * KANSIKUVAT ovat omistajan 21.8.2026 linjauksen mukaisia
+       * laajoja yleiskuvia kaupungin eri puolilta: keskusta salmen
+       * rannalla, kattojen yli satamaan ja väriset peltikatot.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Centro de Punta Arenas.JPG',
+          selite: 'Keskustan katot laskeutuvat suorina riveinä '
+            + 'salmelle, jonka selällä on risteilijä.',
+          lahde: 'Oskaar4, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Punta Arenas, 26.jpg',
+          selite: 'Aamuhämärässä laituri työntyy salmelle ja sen '
+            + 'takana häämöttää Tulimaan rannikko.',
+          lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Punta Arenas-View2.jpg',
+          selite: 'Väriset peltikatot peittävät koko rinteen rannasta '
+            + 'kukkuloille asti.',
+          lahde: 'Heretiq, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: Punta Arenasille ei ole generoitu herokuvia,
+       * joten karusellissa on kolme aitoa valokuvaa (vertaa Lagosiin
+       * ja Denveriin): ilta, kuutamo ja rantabulevardi.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Sunset over Punta Arenas with the mysterious Strait of Magellan to Tierra del Fuego (33710490731).jpg',
+          selite: 'Iltavalo osuu keskustan katuun, joka laskee '
+            + 'suoraan salmelle asti.',
+          lahde: 'Vicuna R from Germany, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Punta Arenas1.jpg',
+          selite: 'Kuu nousee kattojen yli, ja vasemmalla erottuu '
+            + 'katedraalin torni.',
+          lahde: 'Felvalen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Vista dela costanera ala ciudad de Punta Arenas (2).jpg',
+          selite: 'Rantabulevardilta katsoen laiturin päässä on '
+            + 'oranssi tutkimusalus ja sen takana kaupunki.',
+          lahde: 'Tamtam90, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Sandy Point, joka käännettiin kahdesti',
+          teksti: 'Kaupungin nimi on käännös käännöksestä. '
+            + 'Englantilainen John Narborough purjehti salmelle '
+            + 'vuosina 1669–1671 ja kirjoitti muistiin matalan niemen, '
+            + 'joka työntyy muita kauemmas ja jolla kasvaa muutama '
+            + 'puu: Sand-Point. Espanjaksi siitä tuli ensin Punta '
+            + 'Arenosa ja lopulta Punta Arenas, hiekkaniemi. '
+            + 'Nimeäminen liitetään joskus virheellisesti John '
+            + 'Byroniin. Kaupunki nimettiin '
+            + 'virallisesti Magallanesiksi 1927, mutta nimi '
+            + 'palautettiin 1938; koko alue kantaa yhä Magallanesin '
+            + 'nimeä. Lempinimi punaisten kattojen kaupunki tulee '
+            + 'punaiseksi maalatuista peltikatoista — noin 1970 '
+            + 'alkaen muitakin värejä on ollut saatavilla, ja katot '
+            + 'ovat kirjavoituneet.',
+          wiki: 'Punta Arenas',
+        },
+        {
+          otsikko: 'Kuunari, joka rakennettiin yhtä matkaa varten',
+          teksti: 'Chile lähetti 1843 retkikunnan rakentamaan '
+            + 'linnakkeen salmen rannalle. Sitä varten rakennettiin '
+            + 'San Carlos de Ancudissa kuunari Ancud, ensimmäinen '
+            + 'Chilessä rakennettu sota-alus: viisitoista metriä '
+            + 'pitkä ja neljällä tykillä varustettu. Komentajana oli '
+            + 'britannialaissyntyinen Chilen laivaston upseeri John '
+            + 'Williams Wilson. Aluksen oma artikkeli laskee kannella '
+            + 'olleen kaksikymmentäkolme ihmistä, joista kaksi naista '
+            + 'ja yksi lapsi; kaupungin artikkeli laskee '
+            + 'kaksikymmentäyksi. Ancud lähti 22. toukokuuta ja saapui '
+            + 'Punta Santa Analle 21. syyskuuta 1843. Koko miehistö '
+            + 'nousi maihin, ja rantaan jätettiin kyltti sanoilla '
+            + 'Viva Chile.',
+          tiedosto: 'Réplica Goleta Ancud Terminada - Museo Nao Victoria Punta Arenas Chile.jpg',
+          selite: 'Ancudin täysimittainen jäljennös iltavalossa, ja '
+            + 'sen takana Nao Victorian runko.',
+          lahde: 'Juanmatassi, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Chilean schooner Ancud',
+        },
+        {
+          otsikko: 'Vuosi 1873: kirje merenkulkumaille',
+          teksti: 'Ensimmäiset vuosikymmenet olivat rankkoja. Chile '
+            + 'käytti Punta Arenasia rangaistussiirtolana ja '
+            + 'kurinpitopaikkana ongelmallisiksi katsotuille '
+            + 'sotilaille. Joulukuussa 1851 vankien kapina johti '
+            + 'kuvernööri Muñoz Gameron ja paikkakunnan papin surmaan '
+            + 'sekä kirkon ja sairaalan tuhoon, ja 1877 tykkimiesten '
+            + 'kapina tuhosi suuren osan kaupungista. Väliin mahtui '
+            + 'käänne: 1867 presidentti José Joaquín Pérez tarjosi '
+            + 'maata kenelle tahansa, joka suostui asettumaan '
+            + 'seudulle, ja ensimmäiset britit saapuivat samana '
+            + 'vuonna. Isoisän matkavuonna 1873 Chile lähetti suurille '
+            + 'merenkulkumaille kirjeen, jossa se lupasi salmen olevan '
+            + 'vapaa ja puolueeton kaikille lipuille.',
+          wiki: 'Punta Arenas',
+        },
+        {
+          otsikko: 'Miljoona hehtaaria lampaita',
+          teksti: 'Huhtikuussa 1889 portugalilainen laivanvarustaja '
+            + 'José Nogueira vuokrasi 180 000 hehtaaria Tulimaata, ja '
+            + 'vuotta myöhemmin hän ja Sara Braun saivat vuokralle '
+            + '1 009 000 hehtaaria eli kolmanneksen saaren '
+            + 'vuokrattavasta maasta. Nogueiran kuoltua 1893 Braun '
+            + 'otti yhtiön haltuunsa. Aidat katkaisivat selkʼnamien '
+            + 'vaellusreitit ja lampaat veivät heidän tärkeimmän '
+            + 'ravintonsa guanakon; yhtiö sai hallitukselta luvan '
+            + 'poistaa alkuperäisväestön alueelta, ja José Menéndez '
+            + 'antoi käskyn heidän hävittämisestään. Vuoden 2008 '
+            + 'totuuskomissio osoitti sukujen osuuden. Isoisän '
+            + 'matkavuonna selkʼnameja oli vielä noin neljä tuhatta, '
+            + 'ja Chile tunnusti heidät eläväksi kansaksi 2023.',
+          wiki: 'Sociedad Explotadora de Tierra del Fuego',
+        },
+      ],
+      matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA (omistaja 16.8.2026): yksi aihe, joka
+         * täyttää ruudun, paikan oma erikoisuus, selkeä valo ja
+         * rauhallinen tausta. Kuvasuhde on 0,75 eli kaavan
+         * vaatimalla maltillisella pystyalueella (0,60–0,85).
+         * Aihe on kaupungin oma: Etelämantereen pelastusretki.
+         */
+        kuva: {
+          tiedosto: 'PilotoPardo.jpg',
+          selite: 'Luutnantti Pardon muistomerkki osoittaa salmelle, '
+            + 'ja sen vieressä nousee laivan keulaa kuvaava teräslevy.',
+          lahde: 'AndrewDeAngelo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Punta Arenas on Magallanesin ja Chilen Antarktiksen '
+          + 'alueen pääkaupunki ja maailman eteläisin yli sadantuhannen '
+          + 'asukkaan kaupunki — Argentiinan Ushuaia on etelämpänä '
+          + 'mutta pienempi. Vuoden 2024 laskennassa asukkaita oli '
+          + '132 363. Kaupunki on Brunswickin niemimaan koillisrannalla, '
+          + '635 kilometriä Ushuaiasta ja 1 419 kilometriä '
+          + 'Etelämantereen rannikolta. Maanteitse muualle Chileen '
+          + 'pääsee vain Argentiinan kautta. Vuodesta 1977 se on ollut '
+          + 'yksi Chilen kahdesta vapaa-alueen kaupungista Iquiquen '
+          + 'ohella; kaupunki itse ei ole vapaasatama, vaan sen '
+          + 'ulkopuolella on zona franca, jossa osa tuonnista saa '
+          + 'alennetun verokohtelun. Lähellä ovat Chilen tärkeimmät '
+          + 'öljyvarat, ja lampaat ja karja ovat yhä merkittäviä.',
+        artikkeli: {
+          nimi: 'Matkailijan Punta Arenas',
+          taitto: 'opas',
+          teksti: 'Kaupunki, johon ei pääse omasta maastaan käsin '
+            + 'ajamatta naapurin läpi: salmi edessä, Etelämanner '
+            + 'takana ja tuuli joka päivä.',
+          nosto: 'Magdalenan saari on 32 kilometriä koilliseen, ja '
+            + 'siitä tuli Martan saaren kanssa Los Pingüinosin '
+            + 'luonnonmuistomerkki 1982. Magalhãespingviinien '
+            + 'pesimäkanta oli 59 000 paria kaudella 2000–01 ja '
+            + '63 000 paria 2008–09, mutta enää 43 000 paria '
+            + '2018–19.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Carlos Ibáñez del Campon kansainvälinen '
+                + 'lentoasema on kahdenkymmenen kilometrin päässä '
+                + 'keskustasta, ja siellä lentävät LATAM Chile ja Sky '
+                + 'Airline sekä tilauslennot. Siviili- ja '
+                + 'sotilaslentoasema muodostavat yhden kokonaisuuden. '
+                + 'Maanteitse muualle Chileen pääsee vain Argentiinan '
+                + 'puolen kautta, mikä on hyvä muistaa passia '
+                + 'pakatessa. Meritse kaupunkiin tulee risteilyjä ja '
+                + 'lauttoja; kustannukset ovat korkeammat, koska '
+                + 'matkaan kuuluu pysähdyksiä reitin varrella. '
+                + 'Aikatauluun kuuluva lautta kulkee Tulimaan '
+                + 'pääsaarelle ja harvemmin Puerto Williamsiin. '
+                + 'Vuodesta 2017 kaupunki ja koko alue ovat omassa '
+                + 'aikavyöhykkeessään ja käyttävät kesäaikaa ympäri '
+                + 'vuoden.',
+            },
+            {
+              otsikko: 'Salmen laidalla',
+              teksti: 'Kaupungista etelään, runsaat viisikymmentä '
+                + 'kilometriä, on Fuerte Bulnes: 1843 pystytetty '
+                + 'linnake, joka rakennettiin hirsistä sekä mullasta '
+                + 'ja ruohosta tehdyistä tiilistä ja nimettiin '
+                + 'presidentti Manuel Bulnes Prieton mukaan. Kun väki '
+                + 'muutti Punta Arenasiin 1848, linnake poltettiin; '
+                + 'se rakennettiin uudelleen museokohteeksi '
+                + '1941–1943 ja on ollut kansallismonumentti 1968. '
+                + 'Kaksi kilometriä pohjoisempana on Puerto del '
+                + 'Hambre, espanjalaisten vuoden 1584 siirtokunnan '
+                + 'paikka. Pohjoiseen päin, 7,5 kilometriä '
+                + 'keskustasta, on Nao Victoria -museo, jossa on '
+                + 'täysimittaiset jäljennökset Magalhãesin '
+                + 'Victoriasta, Shackletonin James Cairdista ja '
+                + 'kuunari Ancudista.',
+            },
+            {
+              otsikko: 'Pingviinisaari ja vartijat',
+              teksti: 'Magdalenan saarella on kesäisin kuusi ja '
+                + 'talvisin kolme puistovartijaa, jotka asuvat '
+                + 'majakkaan liittyvässä rakennuksessa; '
+                + 'ensimmäisen vuoden vartijat eivät saa ilmoittautua '
+                + 'talvivuoroon. Pingviinikannan lasku on tutkittu, ja '
+                + 'syy ei ole turismi: vuosien 2009 ja 2010 ankara '
+                + 'kuivuus tappoi saaren kasvillisuuden, ja tuuli '
+                + 'siirsi irtomaata koloihin, munien ja poikasten '
+                + 'päälle. Poikasten tärkein saalistaja on '
+                + 'chilenkihu, joka karttaa turistipolkuja — polun '
+                + 'varren pesissä poikaset menestyvät hieman muita '
+                + 'paremmin. Osa linnuista on siirtynyt Argentiinan '
+                + 'puolen Cabo Vírgenesin yhdyskuntaan.',
+              kuva: {
+                tiedosto: 'Faro Magdalena y pingüinos de Magallanes.jpg',
+                asettelu: 'kapea',
+                selite: 'Magalhãespingviinejä on rinteellä satoja, ja '
+                  + 'ylhäällä seisoo saaren puna-valkoinen majakka.',
+                lahde: 'PaulaGiraudi, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Brauneja ja muistoja',
+              teksti: 'Sara Braun saapui Magallanesiin helmikuussa '
+                + '1874 kaksitoistavuotiaana, neljänkymmenenkuuden '
+                + 'muun siirtolaisen kanssa; perhe oli lähtenyt '
+                + 'Kuurinmaalta juutalaisvainojen takia ja kiertänyt '
+                + 'Buenos Airesin ja Paraguayn kautta. Hänen '
+                + 'palatsinsa aukion laidalla ostettiin kalusteineen '
+                + 'Unionin klubille, ja se on ollut historiallinen '
+                + 'monumentti vuodesta 1981. Kaupungin pohjoisosassa '
+                + 'on Magallanesin yliopiston Museo del Recuerdo: '
+                + 'kahdeksan puista perinnerakennusta, neljäkymmentä '
+                + 'vanhaa ajoneuvoa sekä koneita ja työkaluja, '
+                + 'enimmäkseen karjatalouden ja öljyntuotannon '
+                + 'jäljiltä. Kroaattien vaikutus näkyy kaupungissa '
+                + 'kauppojen, katujen ja rakennusten nimissä.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Punta Arenas '
+                + '-artikkelin sääruudusta (1991–2020); lehdellä ei '
+                + 'ole omaa vuosigraafia, koska säänormaaleja ei '
+                + 'haettu tässä erässä. Ilmasto on subpolaarinen '
+                + 'merellinen, ja meri tasaa lämpötilat: tammikuun '
+                + 'keskiylin on 16,3 astetta ja heinäkuun 4,9, '
+                + 'heinäkuun keskialin −1,5. Sadetta tulee vain 390 '
+                + 'millimetriä vuodessa, koska Andit jäävät väliin; '
+                + 'sateisinta on huhti–toukokuussa ja lunta sataa '
+                + 'kesäkuusta syyskuuhun. Tuuli on kova, jopa 130 '
+                + 'kilometriä tunnissa, ja voimakkaimmillaan juuri '
+                + 'kesällä — matkalaukkuun kannattaa siis pakata '
+                + 'tuulitakki myös tammikuuksi.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Sara Braunin hautausmaa',
+                tahdet: 3,
+                selite: 'Neljä hehtaaria sypressikäytäviä ja '
+                  + 'sukujen kappeleita; Chilen kansallismonumentti '
+                  + 'vuodesta 2012.',
+              },
+              {
+                mita: 'Magdalenan saaren pingviinit',
+                tahdet: 3,
+                selite: 'Kymmeniätuhansia pesiviä pareja 32 '
+                  + 'kilometrin päässä koilliseen; käynti onnistuu '
+                  + 'vain pesimäkaudella.',
+              },
+              {
+                mita: 'Nao Victoria -museo',
+                tahdet: 3,
+                selite: 'Kolme täysimittaista laivajäljennöstä: '
+                  + 'Victoria, James Caird ja kuunari Ancud.',
+              },
+              {
+                mita: 'Fuerte Bulnes',
+                tahdet: 2,
+                selite: 'Chilen ensimmäinen asutus salmella, '
+                  + 'rakennettu uudelleen alkuperäiselle paikalleen '
+                  + 'kalliokukkulalle.',
+              },
+              {
+                mita: 'Cerro de la Cruz',
+                tahdet: 2,
+                selite: 'Keskustan yläpuolinen kukkula, jolta '
+                  + 'ruutukaava, satama ja salmi näkyvät yhdellä '
+                  + 'silmäyksellä.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5
+             * ja teemasivun nostoissa. Otsoniriviä ei kirjoiteta
+             * varoitukseksi vaan tosiasiaksi, kuten lähde sen antaa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Rajan yli omaan maahan',
+                teksti: 'Maanteitse muualle Chileen pääsee vain '
+                  + 'Argentiinan puolen kautta — passi kannattaa '
+                  + 'pitää mukana myös kotimaan matkalla.',
+              },
+              {
+                otsikko: 'Tuuli on kovinta kesällä',
+                teksti: 'Puuskat yltävät 130 kilometriin tunnissa, '
+                  + 'ja ne ovat voimakkaimmillaan juuri lämpimimpinä '
+                  + 'kuukausina eivätkä talvella.',
+              },
+              {
+                otsikko: 'Aurinko puree tavallista enemmän',
+                teksti: 'Kaupunki oli 1986 jälkeen ensimmäinen '
+                  + 'väkirikas paikka ohentuvan otsonikerroksen '
+                  + 'alla, ja asukkaiden katsotaan altistuvan '
+                  + 'tavallista voimakkaammalle ultraviolettisäteilylle.',
+              },
+              {
+                otsikko: 'Kello käy omalla ajallaan',
+                teksti: 'Alue on vuodesta 2017 omassa '
+                  + 'aikavyöhykkeessään ja käyttää kesäaikaa ympäri '
+                  + 'vuoden, joten ero muuhun Chileen vaihtelee '
+                  + 'vuodenajan mukaan.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Salmi ja Etelämanner',
+      johdanto: 'Punta Arenas on olemassa salmen takia: se on ainoa '
+        + 'suojainen tie valtamerestä toiseen mantereen eteläkärjen '
+        + 'ohi. Sama sijainti tekee kaupungista Etelämantereen '
+        + 'portin.',
+      tehtava: {
+        kysymys: 'Mitä Luis Pardo teki, kun Britannian hallitus '
+          + 'tarjosi hänelle suurta rahapalkkiota pelastusretkestä?',
+        vaihtoehdot: [
+          'Lahjoitti sen laivastolle',
+          'Kieltäytyi ja sanoi vain täyttäneensä tehtävänsä',
+          'Osti sillä oman laivan',
+          'Jakoi sen Yelchon miehistön kesken',
+        ],
+        oikea: 1,
+        fakta: 'Pardo jäi eläkkeelle laivastosta 1919 ja toimi '
+          + 'myöhemmin Chilen konsulina Liverpoolissa 1930–1934.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kolmekymmentäkahdeksan päivää salmessa',
+          teksti: 'Magalhãesinsalmi on noin 570 kilometriä pitkä ja '
+            + 'kapeimmillaan kaksi kilometriä leveä Carlos III '
+            + '-saaren kohdalla. Se erottaa Etelä-Amerikan mantereen '
+            + 'Tulimaan saaristosta ja on tärkein luonnollinen '
+            + 'kulkuväylä Atlantilta Tyynellemerelle. Magalhãesin '
+            + 'laivue purjehti sinne pyhäinpäivänä 1. marraskuuta '
+            + '1520, ja hän antoi salmelle nimen Kaikkien pyhien '
+            + 'salmi; läpimenoon kului kolmekymmentäkahdeksan päivää. '
+            + 'Sadassa vuodessa salmen kulki vähintään 55 laivaa: 23 '
+            + 'espanjalaista, 17 englantilaista ja 15 hollantilaista. '
+            + 'Purjelaivat suosivat silti Drakensalmea, vaikka reitti '
+            + 'on satoja maileja pidempi.',
+          wiki: 'Strait of Magellan',
+        },
+        {
+          otsikko: 'Beaglen jäljillä ja Darwinin pyynnöstä',
+          teksti: 'Salmi kartoitettiin kunnolla vasta 1800-luvulla. '
+            + 'Phillip Parker King mittasi rannat 1826–1830 HMS '
+            + 'Adventurella yhdessä HMS Beaglen kanssa, ja työstä '
+            + 'kerrottiin Lontoon maantieteellisen seuran kahdessa '
+            + 'kokouksessa 1831. Richard Charles Mayne johti HMS '
+            + 'Nassaun mittausretkeä 1866–1869; luonnontieteilijänä '
+            + 'oli Robert Oliver Cunningham. Charles Darwin pyysi '
+            + 'amiraliteettia käskemään Maynen keräämään venelastin '
+            + 'verran sukupuuttoon kuolleiden nelijalkaisten '
+            + 'fossiileja, ja löydöt vietiin British Museumiin. '
+            + 'Amiraliteetti kokosi salmen purjehdusohjeet 1871, '
+            + 'kaksi vuotta ennen isoisän matkaa. Vuoden 1881 '
+            + 'rajasopimuksessa Argentiina tunnusti salmen Chilelle.',
+          wiki: 'Strait of Magellan',
+        },
+        {
+          otsikko: 'Ensimmäinen kaupunki ohentuvan taivaan alla',
+          teksti: 'Ilmasto on subpolaarinen merellinen, ja meren '
+            + 'läheisyys tasaa lämpötilat: tammikuun keskiylin on '
+            + '16,3 astetta ja heinäkuun 4,9, heinäkuun keskialin '
+            + '−1,5. Sade jää 390 millimetriin vuodessa, koska Andit '
+            + 'tekevät sadevarjon, ja tuuli yltää 130 kilometriin '
+            + 'tunnissa voimakkaimmillaan kesällä. Vuoden 1986 '
+            + 'jälkeen Punta Arenasista tuli maailman ensimmäinen '
+            + 'väkirikas kaupunki, johon ohentuva otsonikerros '
+            + 'vaikutti suoraan, ja asukkaiden katsotaan altistuvan '
+            + 'mahdollisesti haitalliselle '
+            + 'ultraviolettisäteilylle. Väitettä on tutkittu '
+            + 'vertaisarvioidusti ihosyövän ja UV-B-säteilyn osalta '
+            + 'vuosina 1987–2000.',
+          tiedosto: 'Punta Arenas con nieve.jpeg',
+          selite: 'Talvella lumi peittää katot, ja kadun päässä salmi '
+            + 'jatkuu harmaana horisonttiin.',
+          lahde: 'Juan25, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Punta Arenas',
+        },
+        {
+          otsikko: 'Hinaaja, joka haki kaksikymmentäkaksi miestä',
+          teksti: 'Ernest Shackletonin Endurance jäi jäihin 1915 ja '
+            + 'murskaantui; miehistö pääsi veneillä Elephant '
+            + 'Islandille. Shackleton lähti viiden miehen kanssa '
+            + 'hakemaan apua, ja kaksikymmentäkaksi miestä jäi '
+            + 'odottamaan. Kolme yritystä epäonnistui, ja neljänteen '
+            + 'lähti Punta Arenasista höyryhinaaja Yelcho '
+            + 'luutnantti Luis Pardon komennossa: 36,5 metriä pitkä '
+            + 'alus ilman radiota, lämmitystä ja kaksoisrunkoa, '
+            + 'keskellä eteläistä talvea. Yelcho '
+            + 'lähti 25. elokuuta 1916, miehet pelastettiin 30. '
+            + 'elokuuta ja paluu kaupunkiin oli 3. syyskuuta. '
+            + 'Britannian hallitus tarjosi Pardolle suurta '
+            + 'rahapalkkiota; hän kieltäytyi ja sanoi vain '
+            + 'täyttäneensä laivaston antaman tehtävän.',
+          wiki: 'Luis Pardo',
+        },
+      ],
+    },
+  ],
+  /*
+   * SANTA CRUZ DE LA SIERRA (Opus 7.9.2026, parvierä) —
+   * Etelä-Amerikan laudan kaupunkilehti. Aineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-santacruz.md ja sen
+   * riippumaton tarkistus tarkistus-santacruz.md (tuomio "kelpaa,
+   * kun kohtien A–J ratkaisut tehdään"; kaikki on tehty).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Santa Cruz de la Sierra", "Ñuflo de Chaves", "Camba",
+   * "Cathedral Basilica of St. Lawrence, Santa Cruz de la Sierra",
+   * "General Cemetery of Santa Cruz", "Carnival of Santa Cruz de la
+   * Sierra". Kuudelle aiheelle en-Wikipediassa ei ole artikkelia
+   * lainkaan, ja niiden lähde on es-Wikipedia (7.9.2026):
+   * "Andrés Ibáñez (político)", "Taquirari", "Chovena",
+   * "Carnaval de Santa Cruz de la Sierra". Sama ratkaisu kuin
+   * Guatemalan kohdekartassa.
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti.
+   * Saapumisteksti (southamerica-saapumiset.js) ja valokuvataulu
+   * olivat jo olemassa eikä niihin kosketa — laiskiaiset
+   * pääaukion puissa ja härkävankkurit jäävät saapumiskortille.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'musiikki'; sivun nimi "Karnevaali ja camban tanssit"
+   * kertoo aiheen.
+   *
+   * BOLIVIAN MAALEHTEÄ EI TOISTETA. Maalehti (maa-kategoriat.js,
+   * BOL) kertoo La Pazin piirityksestä ja Túpac Katarista, maan
+   * nimen keksimisestä, kymmenen sentin verosta ja merenmenetyksestä,
+   * merivoimista ilman merta; Madidista, James-flamingosta, Puya
+   * raimondiista ja Mojosin savannista; salteñasta, chuñosta,
+   * singanista ja kvinoasta; Los Jairasista, sayasta, "Llorando se
+   * fue" -laulusta ja Luzmila Carpiosta; Holguínista, Cuzcon
+   * enkeleistä, Guzmán de Rojasista ja Núñez del Pradosta.
+   *
+   * KAKSI SANTA CRUZIN OMAN MAAKUNNAN AIHETTA ON VARATTU
+   * KARTTANOSTOILLE: Chiquitosin lähetysasemat ja Samaipata
+   * (maastokohteet-bol.js). Lehti ei kerro kummastakaan;
+   * jesuiittalähetykset mainitaan vain siinä yhdessä lauseessa,
+   * jossa ne selittävät kaupungin roolin lähtöpaikkana.
+   * ORURON KARNEVAALI on niin ikään karttanosto, ja siksi teemasivun
+   * karnevaalinosto kertoo VAIN Santa Cruzin oman juhlan piirteet:
+   * 1800-luvun ratsastuskulkueen, talkin ja mullan, yksitoista
+   * päivää, munankuoret ja vuoden 1936 ensimmäisen kuningattaren.
+   * Diabladaa, Oruroa ja Unescoa ei mainita.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: chané- ja Grigotá-osio on Wikipedian itsensä mukaan
+   *    lähteetön, joten nosto alkaa siitä, mitä ei tiedetä.
+   *  - B: perustamispaikan etäisyydeksi sanotaan "runsaat
+   *    kaksisataa kilometriä" (lähteet antavat 200 ja 220).
+   *  - C ja D: camba-sanasta ja taquirarista kerrotaan MOLEMMAT
+   *    etymologiat, koska lähde ei valitse.
+   *  - E: chovenan alkuperäksi ei nimetä yhtä kansaa.
+   *  - F: cuñapé mainitaan vain nimenä (en-Wikipedian ohjaus vie
+   *    väärään artikkeliin "Chipa").
+   *  - H: katedraalin vuosilukuja 1595 ja 1915 ei käytetä; kohde on
+   *    kohdekartalla.
+   *  - J: Ibáñezin loppu kerrotaan yhdellä lauseella ilman
+   *    yksityiskohtia, ja nykypolitiikka on kokonaan poissa.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Lockheed Constellation Santa Cruz.jpg" (rungossa
+   * lentoyhtiön logo), "Bailarines de taquirari.jpg" ja
+   * "Vestimenta Camba.jpg" (tunnistettavia kasvoja lähikuvassa;
+   * jälkimmäisessä myös mainosbanneri), "Facultad de Ciencias del
+   * Hábitat, Diseño y Arte.png" (valokuvaajan vesileima
+   * yhteystietoineen), "La Catedral de Santa Cruz de la Sierra.jpg"
+   * (tunnistettavia kasvoja ja poliittisia banderolleja),
+   * "Plaza 24 de Septiembre, Santa Cruz de la Sierra.jpg" ja
+   * "Santacruzdelasierra.JPG" (tunnistettavia kasvoja etualalla),
+   * "Condominio Vista Verde…" (asuntokohteen myyntikuva),
+   * "Vista aérea de Santa Cruz.jpg" (utuinen kaukokuva),
+   * "VistaSC.jpg" (440 px), "Guembe.jpg" (1024 px).
+   *
+   * KUUSI NOSTOA JA VIISI KOHDEKARTAN JUTTUA JÄÄ KUVATTOMAKSI, ja
+   * se on valinta: taquirarille, chovenalle ja karnevaalille ei ole
+   * Commonsissa kuvaa ilman tunnistettavia kasvoja, eikä chanéille,
+   * kaupungin kolmelle muutolle, Warnesin vuosille, Avión Piratalle,
+   * El Arenalin puistolle, pääaukiolle, Noel Kempff Mercadon
+   * museolle eikä Tahuichi Aguileran stadionille löytynyt
+   * kelvollista kuvaa lainkaan. Pääaukion kuvat ovat kansi- ja
+   * avauskarusellissa, eikä sama tiedosto saa esiintyä kahdesti. Kuvaton on parempi kuin tarkistamaton — kohteet on
+   * tilattu kuvaputkelta raportissa.
+   *
+   * MINITEHTÄVÄ EI TOISTA VISAA. Kaupungin visa
+   * (southamerica-questions.js, santacruz) kysyy maasta, Andien
+   * puolesta, soijasta, virallisten kielten määrästä ja hallinnon
+   * sijainnista. Minitehtävä kysyy chovenaan lisätystä soittimesta.
+   */
+  santacruz: [
+    {
+      id: 'kaupunki',
+      nimi: 'Santa Cruz de la Sierra',
+      johdanto: 'Kaupunki perustettiin kolme kertaa, jäi kolmeksi '
+        + 'vuosisadaksi pieneksi etupostiksi ja kasvoi sitten '
+        + 'maansa suurimmaksi. Isoisän matkavuonna se oli vielä '
+        + 'jälkimmäisessä vaiheessa.',
+      /*
+       * EI ENNEN JA NYT -PARIA. Matkakirjan valokuvataulussa
+       * (southamerica-valokuvat.js, santacruz) ei ole vanhaa puolta
+       * lainkaan, ja Commonsista etsittiin 7.9.2026 vanhaa vedosta
+       * hauilla "Santa Cruz de la Sierra 1900 antigua fotografia
+       * historica" ja kategoriasta "Category:Santa Cruz de la Sierra"
+       * — yhtään kuvasäännöt täyttävää (1200 px, PD/CC) vanhaa
+       * valokuvaa ei löytynyt. Lehti taittuu siis ilman paria kuten
+       * Lagos, Dubai, Doha, Salalah ja Astana. Kirjattu Fablelle
+       * kuvaputken tilaukseksi.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Vista Aérea del Parque de Protección ecológica del Río Piraí.jpg',
+          selite: 'Ilmasta katsottuna kaupunki päättyy suoraan '
+            + 'viivaan, jonka takana alkaa Piraí-joen metsävyöhyke.',
+          lahde: 'EEJCC, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Santa Cruz, Bolivia aerial.jpg',
+          selite: 'Punaiset tiilikatot ja puut vuorottelevat '
+            + 'tasangolla niin kauas kuin näkyy.',
+          lahde: 'Sam Beebe, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: '- panoramio (5178).jpg',
+          selite: 'Pääaukion panoraama: puistokäytävät, penkit ja '
+            + 'keskellä katedraalin tiilinen julkisivu.',
+          lahde: 'nivardo61, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: Santa Cruzille ei ole generoitu herokuvia,
+       * joten karusellissa on kolme aitoa valokuvaa. Kolmas on
+       * Lomas de Arenan suojelualue, joka kuuluu kaupungin omaan
+       * kuntaan ja on sen tunnetuin lähikohde.
+       */
+      avauskuvat: [
+        {
+          tiedosto: '004 - Santa Cruz main square and cathedral.jpg',
+          selite: 'Aukion kivetyksellä on enemmän kyyhkyjä kuin '
+            + 'kulkijoita, ja perällä nousee katedraalin julkisivu.',
+          lahde: 'Aurimaz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Tarde de la Basílica.jpg',
+          selite: 'Katedraalin kaksi tornia kohoavat aukion palmujen '
+            + 'takaa iltapäivän valossa.',
+          lahde: 'Ruateatro, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Lomas de Arena - Santa Cruz, Bolivia.jpg',
+          selite: 'Kaupungin eteläpuolella tuuli on kasannut '
+            + 'valkoiset hiekkadyynit laguunien ympärille.',
+          lahde: 'Gabriel Millos, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Chanét, Grigotá ja se mitä ei tiedetä',
+          teksti: 'Alueen historiaa ennen eurooppalaisia tunnetaan '
+            + 'huonosti: paikallisilla kansoilla ei ollut '
+            + 'kirjoitusta, ja elämä oli osin kiertelevää. '
+            + 'Tuoreemman aineiston mukaan nykyisen kaupungin '
+            + 'paikalla asui arawak-kansa, jota espanjalaiset '
+            + 'alkoivat kutsua chanéksi; alueelta on löydetty '
+            + 'keramiikkaa ja aseita, mikä viittaa pysyviin '
+            + 'asuinpaikkoihin. Ensimmäisten espanjalaisten '
+            + 'kertomusten mukaan chanéilla oli päällikkö, cacique, '
+            + 'nimeltä Grigotá, ja hänen valtansa päättyi yhteen '
+            + 'guaraníkansan hyökkäyksistä. Chanét eivät hävinneet '
+            + 'minnekään: he ovat yksi nykyisen cruceño-väestön '
+            + 'juurista espanjalaisten ja Paraguayn guaraníen '
+            + 'rinnalla.',
+          wiki: 'Santa Cruz de la Sierra',
+        },
+        {
+          otsikko: 'Kaupunki, joka muutti kolme kertaa',
+          teksti: 'Ñuflo de Chávez perusti Santa Cruz de la Sierran '
+            + '26. helmikuuta 1561 runsaat kaksisataa kilometriä '
+            + 'nykyisestä paikasta itään ja nimesi sen kotikaupunkinsa '
+            + 'mukaan Extremadurassa. Chávez kaatui 1568, ja Perun '
+            + 'viranomaiset käskivät siirtää kaupungin länteen: 13. '
+            + 'syyskuuta 1590 se muutti Guapay Empero -joen rannalle '
+            + 'nimellä San Lorenzo de la Frontera, ja koska olot '
+            + 'olivat siellä vielä ankarammat, uudelleen 21. '
+            + 'toukokuuta 1595. Vanhalle paikalle jääneet '
+            + 'suostuteltiin muuttamaan vasta 1600-luvun alussa, ja '
+            + '1622 kaupunki vakiintui ja otti takaisin '
+            + 'alkuperäisen nimensä. Ensimmäisen asutuksen jäänteet '
+            + 'ovat Santa Cruz la Viejassa.',
+          wiki: 'Santa Cruz de la Sierra',
+        },
+        {
+          otsikko: 'Warnes, Florida ja seitsemän vuotta',
+          teksti: 'Kaupunkilaiset syrjäyttivät kuvernöörin sijaisen '
+            + '24. syyskuuta 1810 Antonio Vicente Seoanen johdolla, '
+            + 'ja paikallisista komentajista koottu juntta otti '
+            + 'vallan. Kolme vuotta myöhemmin Argentiinan '
+            + 'vallankumousarmeija lähetti kenraali Manuel Belgranon '
+            + 'käskystä Ignacio Warnesin pienen joukon kanssa. '
+            + 'Warnes kokosi vuodessa laajan kannatuksen kreoleista, '
+            + 'mestitseistä ja alkuperäisväestöstä ja voitti '
+            + 'espanjalaiset Floridan taistelussa. Kaksi vuotta '
+            + 'myöhemmin hän kaatui Parin taistelussa. Sen '
+            + 'jälkeen José Manuel Baca ja José Manuel Mercado '
+            + 'jatkoivat vielä seitsemän vuotta, kunnes viimeinen '
+            + 'espanjalainen kuvernööri syrjäytettiin helmikuussa '
+            + '1825.',
+          wiki: 'Santa Cruz de la Sierra',
+        },
+        {
+          otsikko: 'Vuosi 1873: kansanedustaja, joka riisui kenkänsä',
+          teksti: 'Andrés Ibáñez oli Santa Cruzin kansanedustaja '
+            + 'kolmella istuntokaudella: 1872, 1873 ja 1874. Hän oli '
+            + 'valmistunut oikeustieteen tohtoriksi Sucressa 1868 ja '
+            + 'toiminut kaupungin pormestarina. Vuonna 1872 '
+            + 'kaupunkiin perustettiin Club Igualitario ja sen lehti '
+            + 'Tasa-arvon kaiku. Perimätiedon mukaan Ibáñez heitti '
+            + 'pääaukiolla '
+            + 'puheensa päätteeksi pois tohtorintakkinsa ja kenkänsä '
+            + 'ja käveli paljain jaloin osoittaakseen olevansa yksi '
+            + 'muiden joukossa. Joulukuun 25. päivänä 1876 avoin '
+            + 'cabildo julisti Santa Cruzin liittovaltioksi, ja uusi '
+            + 'hallinto lakkautti maaorjuuden. Keskushallinto kukisti '
+            + 'liikkeen keväällä 1877, ja Ibáñez kuoli toukokuun '
+            + 'ensimmäisenä päivänä.',
+          tiedosto: 'Andrés Ibáñez.jpg',
+          selite: 'Ibáñezin patsas nostaa nyrkkiä jalustalla, jonka '
+            + 'laatassa lukevat hänen elinvuotensa 1844–1877.',
+          lahde: 'Fernando J. Balderrama, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Santa Cruz de la Sierra',
+        },
+      ],
+      matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA (omistaja 16.8.2026): yksi aihe, joka
+         * täyttää ruudun, paikan oma erikoisuus, selkeä valo ja
+         * rauhallinen tausta. Kuvasuhde on 0,75 eli kaavan
+         * maltillisella pystyalueella (0,60–0,85).
+         */
+        kuva: {
+          tiedosto: 'Catedral Basílica Menor de San Lorenzo, Santa Cruz de la Sierra small.jpg',
+          selite: 'Katedraalin punatiiliset tornit ja kupolit '
+            + 'ylhäältä nähtynä, ja niiden takana alkaa matalien '
+            + 'kattojen meri.',
+          lahde: 'Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Santa Cruz de la Sierra on Bolivian suurin kaupunki '
+          + 'ja maan itäisten alankojen keskus. Kunnassa asui vuonna '
+          + '2024 runsaat 1,6 miljoonaa ihmistä ja koko '
+          + 'kaupunkiseudulla noin 2,4 miljoonaa seitsemän kunnan '
+          + 'alueella. Kaupunki tuottaa lähes 35 prosenttia maan '
+          + 'bruttokansantuotteesta ja saa yli 40 prosenttia kaikesta '
+          + 'suorasta ulkomaisesta sijoituksesta, ja sen inhimillisen '
+          + 'kehityksen indeksi on maan korkein. Kaava on helppo '
+          + 'oppia: keskellä on espanjalainen ruutukaava, ja sen '
+          + 'ympärillä kymmenen sisäkkäistä kehäkatua yhden tai '
+          + 'kahden kilometrin välein sekä 27 sädekatua, jotka '
+          + 'lähtevät ensimmäiseltä kehältä. Piraí-joki katkaisee '
+          + 'osan kehistä lännessä. Kaupunkia sanotaan myös Bolivian '
+          + 'franchising-pääkaupungiksi, koska ketjuja on täällä '
+          + 'enemmän kuin missään muualla maassa.',
+        artikkeli: {
+          nimi: 'Matkailijan Santa Cruz',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa osoite kerrotaan kehän numerolla: '
+            + 'tasankoa joka suuntaan, kolmenkymmenen asteen '
+            + 'lämpöä ja bussi, joka on nimetty pistiäisen mukaan.',
+          nosto: 'Kehäbusseja sanotaan vuelteroiksi, ja ne on '
+            + 'nimetty maakunnan eläinten mukaan: chuturubí eli '
+            + 'pistiäinen kiertää ensimmäistä kehää ja tiluchi eli '
+            + 'uunilintu toista. Linjoja on kaikkiaan 132, ja koko '
+            + 'verkko on yksityisten liikennöitsijöiden käsissä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaupungilla on kaksi lentoasemaa. Viru Viru on '
+                + 'kolmentoista kilometrin päässä pohjoiseen Warnesin '
+                + 'kunnan alueella ja Bolivian suurin; El Trompillo '
+                + 'on kaupungin eteläosassa. Kaupungin sisällä '
+                + 'liikutaan busseilla, joita ajaa 132 linjaa. '
+                + 'Tunnetuimpia ovat vuelterot eli kehäkatuja '
+                + 'kiertävät bussit. Idästä kaupunkiin tulee '
+                + 'ferrobus, joka kulkee Puerto Quijarroon Brasilian '
+                + 'rajalle asti — itäinen rataverkko ei ole koskaan '
+                + 'yhdistynyt maan länsiosan rataan. Neljännen kehän '
+                + 'katkennut osuus yhdistettiin tunnelilla El '
+                + 'Trompillon kiitoradan ali.',
+            },
+            {
+              otsikko: 'Kehät ja keskusta',
+              teksti: 'Vanha keskusta on espanjalaista ruutukaavaa, '
+                + 'jossa tärkeimmät kirkolliset, hallinnolliset ja '
+                + 'kaupalliset rakennukset ovat pääaukion ympärillä. '
+                + 'Sen ulkopuolelta alkaa kehäverkko: kymmenen '
+                + 'sisäkkäistä anilloa ja 27 sädekatua, jotka '
+                + 'halkovat koko kaupungin. Kaupunki suunniteltiin '
+                + 'aikanaan neljälle kehälle vuoteen 2000 mennessä, '
+                + 'mutta kasvu ohitti kaavan, ja laitakaupungin '
+                + 'korttelit sotkivat neljännen jälkeiset kehät. '
+                + 'Ensimmäisen kehän keskikaista on istutettu '
+                + 'puistokujaksi, ja Avenida Argentinan ja toisen '
+                + 'kehän välissä on Parque Urbano Central '
+                + 'dinosauruskoristeineen ja tanssivine '
+                + 'suihkulähteineen.',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Kaupungin oma ruoka on majao eli majadito, '
+                + 'jonka alkuperäisessä versiossa ei ole naudanlihaa. '
+                + 'Muita perinneruokia ovat urucúlla värjätty locro, '
+                + 'maapähkinäkeitto, keperí, patasca, '
+                + 'surubí-chicharrón, pacumuto ja uunitamal. '
+                + 'Empanadoita on riisillä, juustolla, jigotella, '
+                + 'lihalla, kanalla, maissilla ja charquella; masaco '
+                + 'tehdään banaanista, yucasta tai juustosta. Camban '
+                + 'leivonnaisista tunnetuimmat ovat cuñapé ja sonso. '
+                + 'Juomat ovat somó, mocochinchi ja chicha camba. '
+                + 'Monseñor Riveron puistokadun varrella on '
+                + 'ravintoloita, kahviloita, jäätelöbaareja ja '
+                + 'leipomoita peräkkäin.',
+            },
+            {
+              otsikko: 'Vettä, hiekkaa ja puutarhoja',
+              teksti: 'Kaupungin laidoilla on enemmän luontoa kuin '
+                + 'tasangolta arvaisi. Lomas de Arenan suojelualue '
+                + 'jaetaan La Guardian ja Cabezasin kuntien kanssa, '
+                + 'ja siellä on tuulen kuluttamia valkoisia '
+                + 'hiekkadyynejä laguunien ympärillä. Güembén '
+                + 'biokeskus on 24 hehtaarin alue, jolla on '
+                + 'luonnonmukaisia altaita, perhostalo ja suuri '
+                + 'lintuhäkki. Cotocan tiellä on kasvitieteellinen '
+                + 'puutarha, jossa on noin viisisataa luetteloitua '
+                + 'kasvilajia ja tuhat vielä luetteloimatonta. '
+                + 'Piraí-joen rannalla länsilaidalla on mökkejä, '
+                + 'perinneruokaa ja ratsastusta; tarpon-verkkokalastus '
+                + 'käy maalis–kesäkuussa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Santa Cruz de la '
+                + 'Sierra -artikkelista; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säänormaaleja ei haettu tässä '
+                + 'erässä. Ilmasto on trooppinen monsuuni-ilmasto: '
+                + 'vuoden keskilämpötila on noin 25 astetta ja '
+                + 'jokaisen kuukauden keskiarvo yli 18. Neljää '
+                + 'vuodenaikaa ei ole, mutta lämpötila vaihtelee '
+                + 'enemmän kuin rannikolla. Sadetta tulee 1 321 '
+                + 'millimetriä vuodessa, eniten joulu- ja '
+                + 'tammikuussa; eri vuosina määrä on vaihdellut 900 '
+                + 'ja 2 300 millimetrin välillä. Talvella etelästä '
+                + 'puhaltavat surazo-tuulet voivat pudottaa '
+                + 'lämpötilan yllättäen, joten pitkähihaista '
+                + 'kannattaa varata mukaan myös tropiikkiin.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Plaza 24 de Septiembre',
+                tahdet: 3,
+                selite: 'Kaupungin vanhin aukio palmuineen; sen '
+                  + 'laidalla ovat katedraali, kulttuuritalo ja '
+                  + 'kaupungintalo.',
+              },
+              {
+                mita: 'San Lorenzon katedraali',
+                tahdet: 3,
+                selite: 'Puuholvit maalauskoristeluineen ja '
+                  + 'pääalttarin hopeaverhoilu Moxosin '
+                  + 'lähetysasemalta.',
+              },
+              {
+                mita: 'Lomas de Arena',
+                tahdet: 3,
+                selite: 'Valkoiset hiekkadyynit ja laguunit '
+                  + 'kaupungin eteläpuolella, keskellä trooppista '
+                  + 'tasankoa.',
+              },
+              {
+                mita: 'El Arenalin puisto',
+                tahdet: 2,
+                selite: 'Keskustan laguuni ja sen saari; puisto '
+                  + 'toimii myös alueen hulevesialtaana.',
+              },
+              {
+                mita: 'Karnevaali helmikuussa',
+                tahdet: 2,
+                selite: 'Kolme päivää comparsoja ja kulkueita, '
+                  + 'valmisteluja joulukuusta alkaen.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua.
+             * Luvut ovat samat kuin jaksossa 5 ja teemasivun
+             * nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Osoite kerrotaan kehällä',
+                teksti: 'Paikat ilmoitetaan kehäkadun numerolla ja '
+                  + 'säteen suunnalla, ei katuosoitteella — kartan '
+                  + 'renkaat kannattaa opetella ensin.',
+              },
+              {
+                otsikko: 'Surazo tulee yllättäen',
+                teksti: 'Etelästä puhaltava kylmä tuuli voi laskea '
+                  + 'lämpötilan monella asteella keskellä '
+                  + 'trooppista talvea, useimmiten kesä–elokuussa.',
+              },
+              {
+                otsikko: 'Sadekausi on juhla-aikaa',
+                teksti: 'Eniten sataa joulu- ja tammikuussa, ja '
+                  + 'karnevaali osuu juuri sadekauden '
+                  + 'loppupuolelle.',
+              },
+              {
+                otsikko: 'Bussi kulkee kehää, ei suoraan',
+                teksti: 'Vueltero kiertää oman kehänsä ympäri, '
+                  + 'joten lyhinkin matka voi kulkea pitkän kaaren '
+                  + 'kautta.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Karnevaali ja camban tanssit',
+      johdanto: 'Itäisellä alangolla on oma sanansa itsestään, omat '
+        + 'tanssinsa ja oma juhlansa. Kaikkien kolmen juuret ovat '
+        + 'sekoituksessa, ja kaikista kolmesta on esitetty kaksi eri '
+        + 'selitystä.',
+      tehtava: {
+        kysymys: 'Minkä soittimen lähetyssaarnaajat lisäsivät '
+          + 'chovenaan?',
+        vaihtoehdot: [
+          'Harpun',
+          'Viulun',
+          'Trumpetin',
+          'Charangon',
+        ],
+        oikea: 1,
+        fakta: 'Chovenassa ei ollut sanoja, ja lähetysasemilla se '
+          + 'otettiin osaksi myös kirkkomusiikkia.',
+      },
+      nostot: [
+        {
+          otsikko: 'Camba — sana, jolla on kaksi alkuperää',
+          teksti: 'Camba tarkoitti Boliviassa alun perin maan '
+            + 'itäisen trooppisen alueen alkuperäisväestöä tai Santa '
+            + 'Cruzissa, Benissä ja Pandossa syntyneitä; nykyään sillä '
+            + 'tarkoitetaan alankojen espanjalais-, chané- ja muun '
+            + 'amazonilaisen alkuperän sekoittunutta väestöä. Sana on '
+            + 'myös arkinen sana ihmiselle: kysymys "kuka tuo camba '
+            + 'on?" ei kerro mitään kysytyn taustasta. Alkuperästä on '
+            + 'kaksi selitystä. Toisen mukaan sana tulee Angolan '
+            + 'bantukielistä, joissa jesuiitta Pedro Dias kirjasi sen '
+            + 'vuoden 1697 kielioppiinsa muodossa camba, monikko '
+            + 'macamba. Toisen mukaan se tulee Galician Cambadosista. '
+            + 'Kumpaakaan ei ole todistettu.',
+          tiedosto: 'Sombreo de saó 2.jpg',
+          selite: 'Saó-hattu on punottu leveälierinen olkihattu, joka '
+            + 'kuuluu camba-asuun ja suojaa maaseudulla auringolta.',
+          lahde: 'Carlillasa, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Camba',
+        },
+        {
+          otsikko: 'Taquirari: nuoli vai laulu',
+          teksti: 'Taquirari on Santa Cruzin, Benin ja Pandon '
+            + 'perinteinen tanssi ja musiikkilaji. Nimen alkuperästä '
+            + 'esitetään kaksi selitystä: joko moxeñon sana '
+            + 'takiríkire, joka liittyy nuolen kunnioittamiseen, tai '
+            + 'guaraníın tairarí, hyräillä tai laulaa laulu. '
+            + 'Historioitsija Germán Coimbra Sanzin mukaan tanssiin '
+            + 'on vaikuttanut myös katalonialainen sardana. '
+            + 'Merkintöjä sen esittämisestä on 1800-luvulta: '
+            + 'cruceño-sissi Cañoton kerrotaan soittaneen kitarallaan '
+            + 'melodioita hevosensa ravin tahtiin. Pari tanssii '
+            + 'vastakkain käsistä kiinni pitäen, ja kuvioihin '
+            + 'kuuluvat ganchos eli koukku ja rueda eli rengas; '
+            + 'nenäliina on osa tanssia.',
+          wiki: 'Taquirari',
+        },
+        {
+          otsikko: 'Chovena, jonka jesuiitat säilyttivät',
+          teksti: 'Chovena on Bolivian idän vanhimpia tansseja, ja se '
+            + 'on levinnyt chiquitano-, guarayo- ja moxeño-alueille. '
+            + 'Lähde ei nimeä yhtä alkuperäiskansaa: se sanoo tanssin '
+            + 'olevan chiquitano-alueen omaa perinnettä ja toisaalla '
+            + 'guaraníkulttuurin esikolumbiaanista perua. Rytmi on '
+            + 'kahdesta neljäsosaa, jaksot lyhyitä ja toistuvia, ja '
+            + 'sävelrakenne muistuttaa taquiraria. Lähetyssaarnaajat '
+            + 'ottivat tanssin osaksi käännytystyön musiikkia ja '
+            + 'lisäsivät siihen viulut; sanoja siinä ei ollut. '
+            + 'Tanssijat aloittavat kahdessa jonossa puoliravia, '
+            + 'miehet nostavat hattunsa kaksin käsin ja laskevat ne '
+            + 'kumarrukseksi, ja lopuksi muodostetaan rengas.',
+          wiki: 'Chovena',
+        },
+        {
+          otsikko: 'Yksitoista päivää talkkia ja multaa',
+          teksti: 'Karnevaali edeltää paastonaikaa kolmella päivällä, '
+            + 'mutta 1800-luvulla se kesti yksitoista. Silloin juhla '
+            + 'oli ratsastuskulkue kaupungin katujen läpi, kadulla '
+            + 'heiteltiin talkkia ja multaa, tiistaina tanssittiin ja '
+            + 'keskiviikkona alkoi paasto; kuvernööri määräsi '
+            + 'cabildossa teurastettavaksi lehmiä juhlan ruoaksi. '
+            + '1800-luvun lopulla mukaan tulivat värjätyllä ja '
+            + 'hajustetulla vedellä täytetyt munankuoret sekä '
+            + '"karnevaalin posti". Ensimmäinen karnevaalikuningatar '
+            + 'valittiin 1936. Nykyään valmistelut alkavat '
+            + 'joulukuussa, esikarnevaalikulkueet kiertävät kaupunkia '
+            + 'ja itse juhla on kolme vapaapäivää, jolloin '
+            + 'tanssitaan comparsoissa.',
+          wiki: 'Carnival of Santa Cruz de la Sierra',
+        },
+      ],
+    },
+  ],
+  /*
+   * MONTERREY (Opus 7.9.2026, parvierä) — P-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-monterrey.md ja sen riippumaton tarkistus
+   * tarkistus-monterrey.md (tuomio "kelpaa, kun kohtien A–F
+   * ratkaisut tehdään"; kaikki kuusi on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Monterrey", "Cerro de la Silla", "Fundidora Park",
+   * "Grutas de García", "Cerro de Chipinque", "Cumbres de Monterrey
+   * National Park", "Santiago Vidaurri", "Cabrito", "Machaca",
+   * "Macroplaza", "Faro del Comercio", "Museo de Arte Contemporáneo
+   * de Monterrey", "Barrio Antiguo".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu) kuten Guatemala Cityssä.
+   * Teemasivun id on vakioaihe 'luonto' (ui-apurit.js AIHE_IKONIT),
+   * koska uusia sivu-id:itä ei tehdä; sivun nimi "Vuoret, luolat ja
+   * kuiva joki" kertoo aiheen.
+   *
+   * MEKSIKON MAALEHTEÄ EI TOISTETA. Maalehti (maa-kategoriat.js,
+   * MEX) kertoo Hidalgosta ja Juárezista, Teotihuacánista, Monte
+   * Albánista, Chichén Itzásta ja El Tajínista, nikstamalisoinnista,
+   * molesta ja salsoista, mariachista ja corridosta sekä
+   * monarkkiperhosesta, cenote-kehästä, aksolotlista ja Copper
+   * Canyonista. Yksikään näistä ei ole tämän lehden aihe: oppaan
+   * ruokajakso käyttää siksi cabritoa, machacaa, semitaa ja
+   * capirotadaa, ja teemasivu Sierra Madre Orientalin omia vuoria.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: nimi Monterrey tulee Etymology-osion mukaan Gaspar de
+   *    Zúñigasta ja Galician Monterreistä. Geography-osion
+   *    lähteetön sivuhuomautus "kreivin vaimon mukaan" jätetään
+   *    pois; kansanetymologia "kuningasvuori" kerrotaan
+   *    nimenomaan kansanetymologiana.
+   *  - B: Macroplazan sijaluku maailman aukioiden joukossa on
+   *    lähteissä eri (Landmarks-osio: 8., "Macroplaza": 5.), joten
+   *    lehti kertoo vain pinta-alan 400 000 m² eikä sijalukua.
+   *  - C: Fundidoran pinta-ala kohdeartikkelista (114 ha vuonna
+   *    2001, 144 ha vuodesta 2010, 80 ha viheralaa); yleisartikkelin
+   *    pyöristetty 120 ha jätetään pois.
+   *  - D: Grutas de Garcían löytövuosi 1843 on vain "Monterrey"-
+   *    artikkelissa ja senkin lähde on kuollut matkailulinkki,
+   *    joten se kerrotaan lähteen tasolla eikä sidota löytäjän
+   *    nimeen samassa lauseessa.
+   *  - E: kohdekartan neljä lähintä naapuria (Faro del Comercio
+   *    70 m, MARCO 110 m, Museo Metropolitano 175 m, Explanada
+   *    102 m) pudotettiin 200 metrin säännöllä ja siirrettiin
+   *    matkaoppaaseen.
+   *  - F: nykyväkivalta, nykypolitiikka ja varallisuusvertailut
+   *    jätetään kokonaan pois (spec-mantereet.md, Meksiko-kohta).
+   *
+   * ENNEN JA NYT PUUTTUU, JA SE ON TIETOINEN RATKAISU. Matkakirjan
+   * valokuvataulun (northamerica-valokuvat.js, monterrey) pari ei
+   * kelpaa, koska sen vanha kuva on tehdaspostikortti 1912 ja uusi
+   * ilmakuva Macroplazalta — eri paikat. Erillinen haku Commonsista
+   * löysi oikean parin (sama näkymä Obispadon kukkulalta 1904 ja
+   * nykyään), mutta molemmat ovat alle 1200 pikseliä:
+   * "Monterrey entre el Obispado y el Cerro de la Silla 1904.jpg" on
+   * 1032 x 541 ja "Cerro de la Silla y Obispado.jpg" 880 x 580.
+   * Muuta 1800- tai 1900-luvun alun valokuvaa Monterreystä ei
+   * Commonsissa ole kuvasäännöt täyttävässä koossa (luokka "History
+   * of Monterrey" sisältää yhdeksän tiedostoa, joista ainoa iso on
+   * vuoden 1791 kaupunkikartta). Sama ratkaisu kuin Dubaissa,
+   * Dohassa, Salalahissa ja Astanassa: pari jää pois ja kirjataan
+   * jatkotyöksi. Ilman kenttää etusivu taittuu ennallaan ja
+   * kansikuvat näkyvät pikkurivillä.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026). Oppaan
+   * sääjakso nojaa siksi en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Chimeneas BOF Fundidora - panoramio.jpg" (kuvan
+   * vasemmassa alakulmassa on kameran polttama päiväysleima
+   * 10.28.2007), "Cabrito - Monterrey.JPG" (oikeassa reunassa
+   * tunnistettavat kasvot, ja kokonainen ruho on ruokakuvaksi
+   * raaka), "Calle Monterrey.jpg" (etualalla tunnistettavat kasvot),
+   * "Vista de Monterrey - panoramio.jpg" (voimakas turkoosi
+   * värivääristymä ja skannauksen mustat reunapalkit),
+   * "Monterrey, Mexico (Unsplash).jpg" (rinnekaupunginosa ei ole
+   * maamerkkinäkymä), "MonterreyCity.jpg" (harmaa ja etualalla
+   * pensaikko), "Macroplaza Monterrey 2022 - 1.jpg" ja "- 2.jpg"
+   * (patsas ja muistolaatta, ei aukiota), "Museo Historia Mexicana
+   * Monterrey01.JPG" (joulukuusi ja mainosteltta),
+   * "Iglesia de La Purísima (17311266338).jpg" (kuva ei esitä
+   * Monterreyn Purísimaa vaan aivan toisen kirkon sisätilan).
+   *
+   * KAKSI NOSTOA JA KAKSI NÄHTÄVYYSJUTTUA JÄÄ KUVATTOMAKSI, ja se
+   * on tarkoituksellista: nimen alkuperälle ja alueen
+   * paimentolaisryhmille ei ole Commonsissa sääntöjen mukaista
+   * kuvaa, eikä Colegio Civilistä (ainoa osuma 1028 x 767) tai
+   * Meksikon historian museosta löytynyt kelvollista. Kuvaton on
+   * parempi kuin tarkistamaton — nämä on kirjattu kuvaputken
+   * tilaukseksi Fablelle.
+   */
+  monterrey: [
+    {
+      id: 'kaupunki',
+      nimi: 'Monterrey',
+      johdanto: 'Kolme kertaa espanjalaiset yrittivät perustaa '
+        + 'kaupungin näiden vuorten väliin, ja kolmas onnistui. '
+        + 'Satulan muotoinen huippu on ollut siitä asti kaupungin '
+        + 'tunnus — ja tehtaista tuli sen toinen.',
+      /*
+       * KANSIKUVAT näkyvät myös pikkurivillä, koska Monterreylla ei
+       * ole ennen–nyt-paria (ks. lohkokommentti yllä). Kolme laajaa
+       * yleiskuvaa: kaupunki satulavuoren juurella, keskustan
+       * siluetti ja koko laakso vuorten välissä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'View of Monterrey (2015).jpg',
+          selite: 'Cerro de la Silla kohoaa kaupungin yllä '
+            + 'ukkospilvien alla.',
+          lahde: 'Rick González, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Skyline de Monterrey.jpg',
+          selite: 'Keskustan tornit nousevat vuorten juurella '
+            + 'kirkkaassa iltapäivävalossa.',
+          lahde: 'Daniel Escobedo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Mexico Monterrey 2.JPG',
+          selite: 'Ilmakuvassa koko laakso mahtuu Sierra Madren ja '
+            + 'satulavuoren väliin.',
+          lahde: 'Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: laajoja yleiskuvia kansikuvakaavan mukaan.
+       * Monterreylle ei ole generoitu herokuvia, joten kaikki
+       * kolme ovat aitoja valokuvia.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Monterrey Diciembre 2020.jpg',
+          selite: 'Auringonlasku Obispadon kukkulalta: kaupunki '
+            + 'täyttää laakson satulavuorelle asti.',
+          lahde: 'Carlos t, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Monterrey visto desde el Cerro de la Silla.jpg',
+          selite: 'Näkymä satulavuoren huipulta koko metropolialueen '
+            + 'yli.',
+          lahde: 'MetalixOne, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Zona mitras.jpg',
+          selite: 'Illan valot syttyvät Cerro de las Mitrasin '
+            + 'harjanteen alla.',
+          lahde: 'Víctor M. Velázquez Moreno, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kolmas yritys jäi pystyyn',
+          teksti: 'Laaksoa kutsuttiin 1500-luvulla Extremaduran '
+            + 'laaksoksi. Ensimmäisenä sinne tuli Alberto del Canto, '
+            + 'joka nimesi paikan Santa Luciaksi; yritys kaatui. '
+            + 'Toisen teki Luis Carvajal y de la Cueva, joka oli '
+            + 'neuvotellut kuningas Filip II:n kanssa oman '
+            + 'kuningaskunnan pohjoiseen ja perusti 1582 asutuksen '
+            + 'San Luis Rey de Francia. Sekin autioitui, ja Nuevo '
+            + 'León oli kahdeksan vuotta tyhjä. Kolmannen yrityksen '
+            + 'teki Diego de Montemayor kolmentoista perheen '
+            + 'retkikunnalla 20. syyskuuta 1596. Hän valitsi paikan '
+            + 'Santa Lucían lähteen viereltä — siitä kohdasta lähtee '
+            + 'nykyään keskustan kanava.',
+          tiedosto: 'Paseo Santa Lucía.jpg',
+          selite: 'Santa Lucían kanava kulkee valaistujen puiden '
+            + 'välissä siltä kohdalta, jossa kaupungin ensimmäinen '
+            + 'lähde oli.',
+          lahde: 'Crancket, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Monterrey',
+        },
+        {
+          otsikko: 'Kuningasvuori, joka onkin kreivi',
+          teksti: 'Espanjaksi Monterrey kääntyy kirjaimellisesti '
+            + 'kuningasvuoreksi, ja kansanetymologia liittää nimen '
+            + 'kaupunkia ympäröiviin vuoriin. Se ei pidä paikkaansa: '
+            + 'kaupunki on nimetty Gaspar de Zúñigan, Monterreyn '
+            + 'viidennen kreivin mukaan, joka oli Uuden Espanjan '
+            + 'varakuningas vuosina 1595–1603 ja jonka suku oli '
+            + 'kotoisin Monterreistä Galiciasta. Vuoret olivat silti '
+            + 'paikalla ennen nimeä. Ennen eurooppalaisia laaksossa '
+            + 'ei ollut valtiota vaan paimentolaisryhmiä, joista '
+            + 'kalliopiirrosten ja luolamaalausten perusteella on '
+            + 'tunnistettu neljä: azalapat, huachichilit, coahuiltecot '
+            + 'ja borradot.',
+          wiki: 'Monterrey',
+        },
+        {
+          otsikko: 'Satulan neljä huippua',
+          teksti: 'Cerro de la Silla, satulavuori, kohoaa kaupungin '
+            + 'itäpuolella ja on sen tunnus. Se on Sierra Madre '
+            + 'Orientalin esivuoristoa ja levittäytyy 60,5 '
+            + 'neliökilometrille kolmen kunnan alueelle. Huippuja on '
+            + 'neljä — Pico Antena, Pico Norte, Pico Sur ja Pico la '
+            + 'Virgen — ja niiden välinen notko tekee satulan. '
+            + 'Korkein on Pico Norte, 1 820 metriä; matalin Pico la '
+            + 'Virgen, 1 750. Vuori julistettiin luonnonmonumentiksi '
+            + '1991, ja huipulle nousee 5,3 kilometrin polku, jonka '
+            + 'kävelyyn menee noin kolme tuntia.',
+          tiedosto: 'Cerro de la Silla.jpg',
+          selite: 'Satulan muoto syntyy kahdesta huipusta ja niiden '
+            + 'välisestä notkosta.',
+          lahde: 'Nathaniel C. Sheetz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cerro de la Silla',
+        },
+        {
+          otsikko: 'Masuuni jäi puistoon seisomaan',
+          teksti: 'Fundidora Monterrey oli Latinalaisen Amerikan '
+            + 'ensimmäinen rauta- ja terästehdas. Se meni konkurssiin '
+            + '1986, alue pakkolunastettiin 1988 ja rakennustyöt '
+            + 'alkoivat 1989 — ensin suojelemalla historiallisesti '
+            + 'tärkeät rakennukset ja purkamalla muut. Puisto avattiin '
+            + '24. helmikuuta 2001 sadanneljäntoista hehtaarin '
+            + 'kokoisena, ja se sai lisänimen teollisen arkeologian '
+            + 'museoalue. Vuonna 2010 mukaan tuli 2,35 kilometrin '
+            + 'kanava, ja ala nousi 144 hehtaariin, josta 80 on '
+            + 'vihreää. Paikallaan seisovat yhä 27 suurta '
+            + 'teollisuusrakennelmaa ja 127 teräksentekokonetta.',
+          tiedosto: 'Hornos, Parque Fundidora - panoramio (1).jpg',
+          selite: 'Masuuni kohoaa nurmikentän takana, ja etualalla '
+            + 'seisoo niitattu terässäiliö.',
+          lahde: 'JavierDo, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Fundidora Park',
+        },
+      ],
+      matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA: yksi aihe, joka täyttää ruudun.
+         * Cerro de la Silla on kaupungin oma erikoisuus ja toimii
+         * pienenä, koska satulan muoto erottuu siluettina.
+         */
+        kuva: {
+          tiedosto: 'Faro del Comercio - panoramio.jpg',
+          selite: 'Kaupan majakka on ohut punainen levy, joka '
+            + 'kohoaa katedraalin tornia korkeammalle.',
+          lahde: 'JavierDo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Monterrey on Nuevo Leónin pääkaupunki '
+          + 'Koillis-Meksikossa, 540 metrin korkeudessa Sierra Madre '
+          + 'Orientalin juurella. Kaupungin halki kulkee idästä '
+          + 'länteen Santa Catarina -joki, joka on pinnalta kuiva '
+          + 'suurimman osan vuotta mutta virtaa maan alla; se jakaa '
+          + 'kaupungin pohjois- ja eteläpuoleen. Idässä kohoaa Cerro '
+          + 'de la Silla, lännessä piispanhiippoja muistuttava Cerro '
+          + 'de las Mitras ja etelässä Loma Larga. Kaupunki on '
+          + 'Meksikon toiseksi suurimman metropolialueen keskus ja '
+          + 'maan teollisuuden ydin: terästä, sementtiä, lasia, '
+          + 'autonosia ja olutta. Keskustan sydän on Macroplaza, '
+          + 'neljänsadantuhannen neliömetrin aukio, jonka pohjoispäässä '
+          + 'on hallintopalatsi ja eteläpäässä kaupungintalo. Vanha '
+          + 'kortteliverkko Barrio Antiguo alkaa aukion itälaidalta.',
+        artikkeli: {
+          nimi: 'Matkailijan Monterrey',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa joki on kuiva, terästehdas on '
+            + 'puisto ja vuori on satula — ja jossa keskustan '
+            + 'kävelymatkat mitataan aukion pituudessa.',
+          nosto: 'Vuorelle rakennettiin köysirata 1900-luvun '
+            + 'jälkipuoliskolla. Vihkiäispäivänä 2. kesäkuuta 1961 '
+            + 'onnettomuudessa kuoli viisi ihmistä, joukossa radan '
+            + 'suunnitellut insinööri Jesús Fernández — ja samana '
+            + 'päivänä rata suljettiin lopullisesti. Yläasema seisoo '
+            + 'vuorella yhä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Monterrey on noin kahdensadan kilometrin '
+                + 'päässä Texasin rajasta etelään, ja koko kaupungin '
+                + 'historia on kiinni siitä: 1800-luvulla se välitti '
+                + 'kauppaa San Antonion, Tampicon ja Saltillon '
+                + 'välillä, ja nykyinen teollisuus nojaa samaan '
+                + 'sijaintiin. Rautatie tuli kaupunkiin vasta '
+                + '1800-luvun viimeisellä vuosikymmenellä. Keskustassa '
+                + 'liikkuminen on helppoa, koska kaikki on saman '
+                + 'aukion varrella: Macroplaza on lähes kilometrin '
+                + 'pitkä pohjoisesta etelään, ja sen päistä pääsee '
+                + 'kävellen sekä Barrio Antiguoon että Santa Lucían '
+                + 'kanavalle.',
+              kuva: {
+                tiedosto: 'Vista de Monterrey desde el LABNL 01.jpg',
+                selite: 'Keskustan katot ja Macroplazan itälaita '
+                  + 'satulavuoren edessä.',
+                lahde: 'Christian Cariño, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Macroplaza päästä päähän',
+              teksti: 'Aukio rakennettiin 1980-luvun alussa, ja sen '
+                + 'kehitystä johti Ángela Alessio Robles; tieltä '
+                + 'purettiin vanhoja taloja. Pinta-alaa on 400 000 '
+                + 'neliömetriä — sijaluvusta maailman aukioiden '
+                + 'joukossa lähteet ovat eri mieltä, joten sitä ei '
+                + 'kannata uskoa kummallakaan tavalla. Pohjoispäässä '
+                + 'ovat hallintopalatsi ja sen edusaukio Explanada de '
+                + 'los Héroes, keskellä Neptunuksen suihkulähde ja '
+                + 'uponnut puutarha puhujannurkkineen, eteläpäässä '
+                + 'kaupungintalo ja Rufino Tamayon Homenaje al Sol. '
+                + 'Katedraalia vastapäätä nousee Luis Barragánin ja '
+                + 'Raúl Ferreran Faro del Comercio, vuonna 1984 '
+                + 'kauppakamarin satavuotisjuhlaan rakennettu 69,8 '
+                + 'metriä korkea monumentti, joka heittää iltaisin '
+                + 'vihreää laseria kaupungin yli.',
+            },
+            {
+              otsikko: 'Museot ja vanha kortteli',
+              teksti: 'MARCO eli nykytaiteen museo on katedraalin '
+                + 'kulmalla; Ricardo Legorretan minimalistinen '
+                + 'rakennus avattiin 1991, ja sisäänkäynnin edessä '
+                + 'seisoo Juan Sorianon neljä tonnia painava '
+                + 'pronssikyyhky La Paloma. Plaza Zaragozan laidalla '
+                + 'vanhassa kaupungintalossa toimii Museo '
+                + 'Metropolitano. Meksikon historian museo, Museo del '
+                + 'Palacio ja Koillisen museo muodostavat kolmen '
+                + 'museon ryhmän kanavan varrella. Barrio Antiguon '
+                + 'mukulakivikaduilla on 1700-luvun ja 1800-luvun '
+                + 'lopun taloja; osa kaduista, kuten Calle Morelos, '
+                + 'on muutettu kävelykaduiksi vuodesta 2013 alkaneessa '
+                + 'kunnostuksessa.',
+              kuva: {
+                tiedosto: 'Catedral Metropolitina desde los aires.jpg',
+                selite: 'Katedraali ja sen takana MARCOn punainen '
+                  + 'seinä vanhan keskustan kortteleissa.',
+                lahde: 'Al.vergara007, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Kaupungin perinteisin ruoka on cabrito, '
+                + 'hiilloksella paistettu kilinpoika. Tunnetuin tapa '
+                + 'on cabrito al pastor: ruho avataan litteäksi, '
+                + 'pistetään vartaaseen ja paistetaan hitaasti '
+                + 'hiilloksen vieressä ilman mausteita, jolloin maku '
+                + 'tulee hitaasti palavasta hiilestä. Toinen '
+                + 'tunnusruoka on machaca, kuivattu ja maustettu '
+                + 'liha, joka liotetaan ja murennetaan; aamiaisella '
+                + 'se paistetaan munan kanssa ja tarjotaan suurilla '
+                + 'vehnätortilloilla. Viikonloppuisin perheet '
+                + 'grillaavat carne asadaa. Paikallisia ovat myös '
+                + 'hapattamaton semita-leipä ja capirotada, jälkiruoka '
+                + 'leivästä, juustosta, rusinoista, maapähkinöistä ja '
+                + 'kiteytetystä ruokosokerista.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Monterrey-'
+                + 'artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia. Ilmasto on puolikuiva, ja kaupunki '
+                + 'on yksi Meksikon lämpimimmistä suurkaupungeista, '
+                + 'koska se on sisämaassa ja matalalla. Elokuun '
+                + 'keskiylin on 36 astetta ja keskialin 24; '
+                + 'tammikuussa vastaavat luvut ovat 22 ja 10. Sade on '
+                + 'talvella niukkaa ja yleisintä touko–syyskuussa. '
+                + 'Vuodenajat eivät ole selvärajaisia: lämmin kausi '
+                + 'voi alkaa helmikuussa ja jatkua syyskuuhun, ja '
+                + 'tammikuussakin voi olla kolmekymmentä astetta. '
+                + 'Lumi on hyvin harvinaista — viimeksi sitä satoi '
+                + 'helmikuussa 2021.',
+              kuva: {
+                tiedosto: 'MonterreyPanoramic.jpg',
+                selite: 'Matalat pilvet peittävät vuorten harjat '
+                  + 'kaupungin molemmin puolin.',
+                lahde: 'HappyNcrew, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Cerro de la Silla',
+                tahdet: 3,
+                selite: 'Neljä huippua ja niiden välinen notko, '
+                  + 'luonnonmonumentti vuodesta 1991.',
+              },
+              {
+                mita: 'Fundidoran puisto',
+                tahdet: 3,
+                selite: 'Latinalaisen Amerikan ensimmäinen '
+                  + 'terästehdas 144 hehtaarin puistona.',
+              },
+              {
+                mita: 'Macroplaza',
+                tahdet: 3,
+                selite: 'Neljäsataatuhatta neliömetriä aukiota '
+                  + 'hallintopalatsista Tamayon aurinkoon.',
+              },
+              {
+                mita: 'Grutas de García',
+                tahdet: 2,
+                selite: 'Merifossiileja luolan seinissä '
+                  + 'neljänkymmenen kilometrin päässä.',
+              },
+              {
+                mita: 'Barrio Antiguo',
+                tahdet: 2,
+                selite: 'Mukulakiviä ja 1700-luvun taloja '
+                  + 'Macroplazan itälaidalla.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5
+             * ja teemasivun nostossa neljä.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Kesä on kuuma',
+                teksti: 'Elokuun keskiylin on 36 astetta eikä yökään '
+                  + 'laske 24:ää alemmas; kävelykierrokset kannattaa '
+                  + 'ajoittaa aamuun tai iltaan.',
+              },
+              {
+                otsikko: 'Kuiva joki ei ole aina kuiva',
+                teksti: 'Santa Catarina on pinnalta kuiva suurimman '
+                  + 'osan vuotta, mutta rankkasateilla se on tulvinut '
+                  + 'yli — pahiten 1988 ja 2010.',
+              },
+              {
+                otsikko: 'Vuorille tarvitaan aikaa',
+                teksti: 'Cerro de la Sillan huipulle on 5,3 '
+                  + 'kilometrin polku ja noin kolmen tunnin nousu; '
+                  + 'köysirataa ei ole ollut vuoden 1961 jälkeen.',
+              },
+              {
+                otsikko: 'Luolissa on viileää',
+                teksti: 'Grutas de Garcían lämpötila pysyy noin '
+                  + 'kahdeksassatoista asteessa ympäri vuoden, vaikka '
+                  + 'ulkona olisi kolmekymmentäviisi.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Vuoret, luolat ja kuiva joki',
+      johdanto: 'Kaupunkia ympäröi vuorimuuri, jonka sisällä on '
+        + 'kansallispuisto, kanjoneita ja luolasto, jonka seinissä on '
+        + 'merikotiloita. Keskeltä kulkee joki, jota ei useimmiten näy.',
+      tehtava: {
+        kysymys: 'Miksi Grutas de Garcían luolien seinistä löytyy '
+          + 'simpukan- ja kotilonkuoria?',
+        vaihtoehdot: [
+          'ne kannettiin sinne uhrilahjoiksi',
+          'luolat olivat esihistoriallisella ajalla meren alla',
+          'ne ovat tippukiviä, jotka muistuttavat kuoria',
+          'joki toi ne tulvien mukana',
+        ],
+        oikea: 1,
+        fakta: 'Luolat syntyivät 50–60 miljoonaa vuotta sitten, ja '
+          + 'meri peitti ne pitkään ennen kuin vuoret nousivat.',
+      },
+      nostot: [
+        {
+          otsikko: 'Biosfäärialue kaupungin kyljessä',
+          teksti: 'Kaupungin eteläpuolella kohoavat Sierra Madre '
+            + 'Orientalin vuoret kuuluvat Cumbres de Monterreyn '
+            + 'kansallispuistoon, joka on ollut Unescon MAB-ohjelman '
+            + 'biosfäärialue vuodesta 2006. Puiston sisällä on '
+            + 'kanjoneita, polkuja ja teitä, jotka kulkevat vuoroin '
+            + 'aavikon ja metsän läpi. Tunnetuimmat kohteet ovat La '
+            + 'Huasteca lännessä ja Potrero Chico koillisessa, joista '
+            + 'kummastakin on tullut kansainvälisen tason '
+            + 'kalliokiipeilypaikka. Matacanesin kymmenen tunnin '
+            + 'reitillä laskeudutaan köysillä, kahlataan maanalaisia '
+            + 'jokia ja ohitetaan putouksia. Cola de Caballo, '
+            + 'hevosenhäntä, putoaa noin 35 kilometriä etelämpänä.',
+          tiedosto: 'Cola de Caballo - panoramio (2).jpg',
+          selite: 'Mänty- ja tammimetsä peittää kansallispuiston '
+            + 'rinteet, ja sumu makaa kanjonin pohjalla.',
+          lahde: 'ElGhuzz, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cumbres de Monterrey National Park',
+        },
+        {
+          otsikko: 'Kotkien töyhtö',
+          teksti: 'Cerro de Chipinque nousee 2 229 metriin kolmen '
+            + 'kunnan rajalla ja on kaupungin toinen tunnusvuori. '
+            + 'Nimen arvellaan tulevan nahuatlin sanasta chichipinqui, '
+            + 'pieni sade, tai alkuperäiskansan päällikön nimestä. '
+            + 'Ekologinen puisto on ollut olemassa vuodesta 1992, se '
+            + 'on avoinna joka päivä kello kuudesta kahteenkymmeneen, '
+            + 'ja siellä työskentelee 22 metsänvartijaa. Alue on '
+            + '1 625 hehtaaria, mutta yleisölle on avoinna vain noin '
+            + 'kolmesataa; korkein huippu on nimeltään Copete de las '
+            + 'Aguillas, kotkien töyhtö. Metsä on mäntyä ja tammea, ja '
+            + 'siellä elää mustakarhuja, kojootteja, nasuja ja '
+            + 'valkohäntäpeuroja.',
+          tiedosto: 'Chipinque - panoramio (1).jpg',
+          selite: 'Chipinquen harjanne nousee suoraan kaupungin '
+            + 'talojen takaa.',
+          lahde: 'JavierDo, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cerro de Chipinque',
+        },
+        {
+          otsikko: 'Kahdeksas ihme kalliossa',
+          teksti: 'Grutas de García on luolasto Garcían kunnassa. '
+            + 'Luolat syntyivät 50–60 miljoonaa vuotta sitten, ja '
+            + 'esihistoriallisella ajalla ne olivat meren alla — siksi '
+            + 'seinistä löytyy simpukan- ja kotilonkuoria. Luolasto '
+            + 'pysyi piilossa, kunnes fray Juan Antonio de Sobrevilla '
+            + 'löysi sen satunnaisella vuoristoretkellä; en-Wikipedia '
+            + 'ajoittaa löydön vuoteen 1843. Sisältä laskeutuu kaksi '
+            + 'reittiä: toinen 2,5 kilometriä ja kuusitoista salia, '
+            + 'toinen kilometrin ja yksitoista. Muodostumilla on '
+            + 'nimet — valon sali, jonka katon kivi päästää ulkovaloa '
+            + 'läpi, ja kahdeksas ihme, jossa tippukivi ja pisarakivi '
+            + 'ovat kasvaneet yhteen pylvääksi.',
+          tiedosto: 'Grutas de García 3029.jpg',
+          selite: 'Tippukiviverhot täyttävät salin katosta lattiaan, '
+            + 'ja opastusvalot värjäävät ne vihreäksi ja violetiksi.',
+          lahde: 'Phyrexian, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Grutas de García',
+        },
+        {
+          otsikko: 'Joki, jota ei näy',
+          teksti: 'Santa Catarina halkoo kaupungin idästä länteen ja '
+            + 'jakaa sen kahtia. Pinnalla se on kuiva suurimman osan '
+            + 'vuotta, mutta vesi virtaa maan alla, ja lopulta se '
+            + 'laskee San Juan -joen kautta Rio Grandeen. Kuiva uoma '
+            + 'ei tarkoita vaaratonta uomaa. Syyskuussa 1988 '
+            + 'hurrikaani Gilbert nosti joen yli äyräiden, ja yli sata '
+            + 'ihmistä kuoli. Kesäkuun 30. ja heinäkuun 2. päivän '
+            + 'välillä 2010 hurrikaani Alex toi 72 tunnissa yli 584 '
+            + 'millimetriä sadetta, paikoin lähes metrin — kolmin- tai '
+            + 'nelinkertaisesti Gilbertiin verrattuna. Vettä tuli '
+            + 'saman verran kuin tavallisesti koko vuonna.',
+          tiedosto: 'Cauce del Río Santa Catarina en Monterrey, Nuevo León.png',
+          selite: 'Kävelijät ylittävät kuivan kivikkouoman, ja '
+            + 'taustalla näkyvät keskustan tornit ja satulavuori.',
+          lahde: 'Chorizoconhuevo, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Monterrey',
+        },
+      ],
+    },
+  ],
+  /*
+   * MÉRIDA (Opus 7.9.2026, parvierä) — P-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-merida.md ja sen riippumaton tarkistus
+   * tarkistus-merida.md (tuomio "kelpaa, kun kohtien A–G ratkaisut
+   * tehdään"; kaikki seitsemän on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Mérida, Yucatán", "Cathedral of Mérida, Yucatán", "T'ho",
+   * "Caste War of Yucatán", "Agave fourcroydes", "Paseo de Montejo",
+   * "Cochinita pibil", "Papadzules", "Sopa de lima",
+   * "Dzibilchaltun", "Uxmal", "Progreso, Yucatán", "Celestún",
+   * "Jarana yucateca". Kohdekartan kohteiden lähde on es-Wikipedia,
+   * koska englanninkielisiä artikkeleita ei ole (ks. maakartat.js).
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu) kuten Guatemala Cityssä.
+   * Teemasivun id on vakioaihe 'ruoka'.
+   *
+   * MEKSIKON MAALEHTEÄ EI TOISTETA — ja tämä on tässä kaupungissa
+   * tavallista tiukempi rajaus. Maalehti (maa-kategoriat.js, MEX)
+   * kertoo jo CHICHÉN ITZÁN käärmevarjosta ja CHICXULUBIN
+   * cenote-kehästä, ja molemmat ovat myös karttanostoja
+   * (maastokohteet-mex.js). Kumpaakaan ei siis käsitellä täällä,
+   * vaikka molemmat ovat Méridan lähellä. Sama koskee maalehden
+   * ruokasivua (nikstamalisointi, mole, salsat, Unescon luettelo):
+   * tämän lehden ruokasivu pysyy Yucatánin omissa ruoissa, joita
+   * maalehdessä ei ole (cochinita pibil, papadzules, sopa de lima,
+   * panuchos ja salbutes, queso relleno).
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: katedraalin iästä on kolme eri väitettä. Lehti käyttää
+   *    kohdeartikkelia (alku 1561 tai 1562 — artikkeli antaa
+   *    molemmat, valmis 1598, Amerikan TOINEN Santo Domingon
+   *    jälkeen) ja sanoo lukijalle, että yleisartikkeli väittää
+   *    sitä ensimmäiseksi.
+   *  - B: liikanimestä "Valkoinen kaupunki" on kaksi selitystä
+   *    (en: kalkkikivi, kansanperinteenä segregaatio; es:
+   *    historioitsija Antochiw'n mukaan nimenomaan segregaatio).
+   *    Lehti kertoo molemmat JA sen tosiasian, että ensimmäiset
+   *    kaaret tilattiin vasta 1690.
+   *  - C: kastisodan uhriluvusta ei anneta yhtä lukua — leipäteksti
+   *    sanoo 40 000–50 000, infobox yli 300 000, ja ero kerrotaan.
+   *  - D: Dzibilchaltúnin päiväntasausvaraus säilytetään oppaassa
+   *    sanatarkasti (arkeologista merkkiä katselupaikasta ei ole).
+   *  - E: jarana-artikkelista otetaan vain rakenteelliset piirteet,
+   *    ei sen omia historiantulkintoja.
+   *  - F: kohdekartan kolme lähintä naapuria jätettiin pois
+   *    (ks. maakartat.js:n merida-lohko).
+   *  - G: nykypolitiikka ja turvallisuusvertailut jätetään pois.
+   *
+   * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+   * (northamerica-valokuvat.js, merida), jossa se on jo tarkistettu
+   * — vanha puoli on Lucas de Gálvezin tori vuoden 1901
+   * stereokuvassa ja uusi sama tori nykyään. Selitteet on
+   * kirjoitettu uudestaan yhdeksi virkkeeksi reseptin mukaan.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026). Oppaan
+   * sääjakso nojaa siksi en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Catedral de Merida Yucatan 2003.jpg",
+   * "Merida, Yucatan, Mexico - Plaza Grande, 6 Marzo 2021 - 01.jpg",
+   * "- 02.jpg" ja "- 03.jpg" sekä "Merida centro Feb 2016 - Peon
+   * Contreras.jpg" (kaikissa etualalla tunnistettavat kasvot),
+   * "Sopa de lima yucateca en Mercado Santa Anita de Mérida 01.jpg"
+   * (pöytäliina ja lautasliinateline ovat virvoitusjuomamainoksia),
+   * "Plaza Principal de Mérida Plaza Grande ... Marzo 2021.jpg"
+   * (etualan opastekyltti täyttää kolmanneksen kuvasta),
+   * "Kroz Méridu.jpg" ja "Avenue of Montejo ... Feb 2012.jpg"
+   * (tavallinen katunäkymä, kauppaketjun kyltti ja tunnistettava
+   * ohikulkija), "Catedral de Mérida (San Ildefonso) ... - 1.jpg"
+   * (sisätila, ei julkisivu).
+   *
+   * "Glorieta de la Paz, Merida.jpg" (yövalaistu alikulku, ei
+   * historiallinen yleisnäkymä).
+   *
+   * KAKSI NOSTOA, YKSI TEEMANOSTO JA KAKSI OPPAAN JAKSOA JÄÄ
+   * KUVATTOMAKSI. Valkoisen kaupungin nimikiistalle ja kastisodalle
+   * ei ole Commonsissa kuvaa, joka olisi sekä sääntöjen mukainen
+   * että kunnioittava, ja sopa de liman ainoat kuvat ovat
+   * mainospöydällä. Kuvaton on parempi kuin tarkistamaton — nämä on
+   * kirjattu kuvaputken tilaukseksi Fablelle.
+   */
+  merida: [
+    {
+      id: 'kaupunki',
+      nimi: 'Mérida',
+      johdanto: 'Espanjalaiset rakensivat kaupunkinsa mayakaupungin '
+        + 'päälle ja sen kivistä. Neljäsataa vuotta myöhemmin mayoja '
+        + 'on yhä enemmistö — ja kolmasosa osavaltion väestöstä puhuu '
+        + 'yucatekia.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin. Ne ovat kolme laajaa yleiskuvaa: Plaza Grande,
+       * katedraali aukion laidalla ja Paseo de Montejon bulevardi.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Monumento a la Patria, Mérida Yucatan Mexico 2018.jpg',
+          selite: 'Isänmaan monumentin kiveen veistetty kaari sulkee '
+            + 'Paseo de Montejon pohjoispään.',
+          lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Plaza Grande, Mérida, Yucatán - Verde.jpg',
+          selite: 'Vihreä hallintopalatsi Plaza Granden laidalla '
+            + 'iltahämärässä, ikkunoissa näkyvät seinämaalaukset.',
+          lahde: 'David Cabrera, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Fußgängerweg auf dem Paseo Montejo, Merida.jpg',
+          selite: 'Paseo de Montejon kävelykaista kulkee puiden '
+            + 'varjossa koko bulevardin mitan.',
+          lahde: 'Chivista, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: laajoja yleiskuvia kansikuvakaavan mukaan.
+       * Méridalle ei ole generoitu herokuvia, joten kaikki kolme
+       * ovat aitoja valokuvia. Valinta oli tässä kaupungissa
+       * tavallista tiukempi: Plaza Granden laajoissa yleiskuvissa on
+       * lähes poikkeuksetta etualalla tunnistettavia kasvoja, joten
+       * karuselli katsoo kaupunkia kattojen yli ja bulevardilta.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Iglesia de san cristobal desde el mercado de san benito - panoramio.jpg',
+          selite: 'Kattojen yli katsottuna kaupunki on matala ja '
+            + 'valkoinen, ja horisontissa erottuvat San Cristóbalin '
+            + 'tornit.',
+          lahde: 'Misael Lavadores, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Ende des Paseo Montejo, Merida.jpg',
+          selite: 'Paseo de Montejo jatkuu palmurivien välissä '
+            + 'kaupungin pohjoislaidalle asti.',
+          lahde: 'Chivista, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Casona Peón de Regil, Paseo de Montejo, Mérida. - panoramio.jpg',
+          selite: 'Henekenkauden kartano seisoo bulevardin varrella '
+            + 'tornikkaineen ja pylväikköineen.',
+          lahde: 'holachetumal, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+       * (northamerica-valokuvat.js, merida), jossa se on jo
+       * tarkistettu — sama tori kahdesti. Tekijä ja lisenssi haettu
+       * uudelleen Commonsin extmetadatasta 7.9.2026.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Merida Yucatan Stereo 1901 cropped.jpg',
+          vuosi: '1901',
+          selite: 'Lucas de Gálvezin tori kioskeineen ja '
+            + 'tuulimyllyineen vanhan San Beniton linnoituksen '
+            + 'muureilta nähtynä.',
+          lahde: 'Underwood & Underwood, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Mercado Municipal Lucas de Gálvez - Mérida, Yucatán.jpg',
+          selite: 'Sama tori on yhä kaupungin keskeisin kauppapaikka, '
+            + 'mutta kojut ovat siirtyneet katosten alle.',
+          lahde: 'Bex Walton, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Viiden kukkulan kaupunki',
+          teksti: 'Ennen Méridaa paikalla oli mayakaupunki Tʼhó, '
+            + 'jota kutsuttiin myös nimellä Ichcaanzihó, viiden '
+            + 'kukkulan kaupunki — nimi viittasi sen pyramideihin. '
+            + 'Kaupungin perustivat 1542 espanjalaiset valloittajat, '
+            + 'joiden joukossa olivat Francisco de Montejo nuorempi ja '
+            + 'Juan de la Cámara. Nimen he ottivat Extremaduran '
+            + 'Méridasta, koska Tʼhón rauniot muistuttivat heitä '
+            + 'Rooman Augusta Emeritan raunioista. Uudet rakennukset '
+            + 'tehtiin vanhan kaupungin veistetyistä kivistä, ja niitä '
+            + 'näkee yhä katedraalin seinissä. Kiviä otettiin '
+            + 'mayatemppelistä nimeltä Yajam Cumu, ja työn tekivät '
+            + 'mayat itse — kahden heistä nimet tunnetaan, Francisco '
+            + 'Pool ja Diego Can.',
+          tiedosto: 'Fachada de la Catedral de San Ildefonso en Merida, Yucatan.jpg',
+          selite: 'Katedraalin julkisivun karkeat kalkkikivilohkot '
+            + 'ovat suurelta osin vanhan mayakaupungin kiviä.',
+          lahde: 'Jannatormont, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mérida (Meksiko)',
+        },
+        {
+          otsikko: 'Miksi kaupunkia sanotaan valkoiseksi',
+          teksti: 'Liikanimi on La Ciudad Blanca, ja selityksiä on '
+            + 'kaksi. Englanninkielinen Wikipedia sanoo sen johtuvan '
+            + 'siirtomaatalojen kalkkikivestä — kaupunki näkyy '
+            + 'avaruudesta valkeahkona läikkänä vihreän metsän '
+            + 'keskellä, ja sama liikanimi on Arequipalla ja '
+            + 'Popayánilla. Kansanperinne kertoo toisin: että '
+            + 'kaupunkiin sai alun perin asua vain eurooppalaisia ja '
+            + 'että sisääntulokaaret rakennettiin sitä varten. '
+            + 'Espanjankielinen Wikipedia pitää tätä historioitsija '
+            + 'Michel Antochiw Kolpaan nojaten oikeana selityksenä. '
+            + 'Ajoitus ei silti täsmää: ensimmäiset kaaret tilattiin '
+            + 'vasta 1690, lähes 150 vuotta perustamisen jälkeen.',
+          wiki: 'Mérida (Meksiko)',
+        },
+        {
+          otsikko: 'Sota, joka kesti isoisän koko elämän',
+          teksti: 'Kastisota alkoi 1847, kun heneken- ja '
+            + 'sokeriviljelmien laajeneminen oli syönyt mayojen '
+            + 'yhteismaita ja ajanut suuren osan velkatyöhön '
+            + 'haciendoille. Jacinto Pat kirjoitti 1848 haluavansa '
+            + '"vapautta eikä sortoa, koska ennen meidät alistettiin '
+            + 'monilla maksuilla ja veroilla". Keväällä 1848 mayat '
+            + 'hallitsivat lähes koko Yucatánia paitsi muurattuja '
+            + 'Campecheä ja Méridaa. Piiritys purkautui yhtäkkiä, '
+            + 'eivätkä historioitsijat ole yksimielisiä syystä: '
+            + 'toisten mukaan joukot lähtivät kylvämään peltojaan, '
+            + 'toisten mukaan muona loppui. Vuodesta 1850 kaakossa oli '
+            + 'itsenäinen mayavaltio Chan Santa Cruz, jonka Britannia '
+            + 'tunnusti tosiasialliseksi valtioksi.',
+          wiki: 'Caste War of Yucatán',
+        },
+        {
+          otsikko: 'Vihreä kulta ja bulevardi',
+          teksti: 'Heneken on agaave, jonka lehdistä irrotetusta '
+            + 'kuidusta tehdään köyttä ja narua. Laji on steriili '
+            + 'risteymä, joten sitä ei lisätä siemenistä vaan '
+            + 'juurivesoista; lehdet ovat puolentoista metrin mittaisia '
+            + 'ja niiden kärjessä on tummanruskea piikki. Kuitu ei ole '
+            + 'yhtä laadukasta kuin sisal, mutta se riitti tekemään '
+            + 'Yucatánista rikkaan: 1800-luvun lopulla puhuttiin '
+            + 'vihreästä kullasta. Méridassa ei ollut yhtään bulevardia, '
+            + 'joten kuvernööri Guillermo Palominon kaudella syntyi '
+            + 'ajatus rakentaa sellainen. Tammikuussa 1888 aloitettiin '
+            + 'Paseo de Montejo, yli kuusi kilometriä pitkä ja '
+            + 'ranskalaisen bulevardin mallinen katu, jonka varteen '
+            + 'nousivat kartanot.',
+          tiedosto: 'Hacienda Sotuta de Peón - Campos de henequén.jpg',
+          selite: 'Henekenagaavet kasvavat suorissa riveissä Sotuta '
+            + 'de Peónin haciendan pelloilla.',
+          lahde: 'Gildardo Sánchez, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Paseo de Montejo',
+        },
+      ],
+      matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA: yksi aihe, joka täyttää ruudun.
+         * Katedraalin kaksi tornia ovat kaupungin oma erikoisuus ja
+         * toimivat pienenä, koska muoto on yksinkertainen.
+         */
+        kuva: {
+          tiedosto: 'Facade of Casa de Montejo - 16th Century Mansion - Merida - Mexico - 01.jpg',
+          selite: 'Casa de los Montejon portaalissa kivihahmot '
+            + 'seisovat parvekkeen molemmin puolin.',
+          lahde: 'Adam Jones, Ph.D., Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Mérida on Yucatánin osavaltion pääkaupunki ja koko '
+          + 'niemimaan kulttuurin ja talouden keskus. Se on hieman '
+          + 'sisämaassa, noin 35 kilometriä Meksikonlahden rannalta, '
+          + 'ja vain yhdeksän metriä merenpinnan yläpuolella. '
+          + 'Kaupungin katuruudukko on poikkeuksellisen selkeä: '
+          + 'parittomat kadut kulkevat idästä länteen ja parilliset '
+          + 'pohjoisesta etelään, ja kadut 60 ja 61 rajaavat '
+          + 'pääaukiota Plaza Grandea. Historiallinen keskusta on '
+          + 'Amerikan suurimpia — johdantoartikkelin mukaan maanosan '
+          + 'kolmanneksi suurin. Ympäröivällä maalla ei ole juuri '
+          + 'pintavettä lainkaan: sadevesi imeytyy kalkkikiveen ja '
+          + 'kerääntyy cenote-kaivoihin. Kaupungin kulttuuri on '
+          + 'mayojen ja espanjalaisten sekoitus, ja se kuuluu '
+          + 'kaikessa — puheessa, ruoassa ja juhlissa. Mérida oli '
+          + 'ensimmäinen Amerikan kulttuuripääkaupunki ja ainoa, joka '
+          + 'on saanut arvon kahdesti.',
+        artikkeli: {
+          nimi: 'Matkailijan Mérida',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa osoite on kaksi numeroa, ruoka '
+            + 'maistuu annatolta ja kalkkikiven alla kulkevat joet, '
+            + 'joita ei näy maan päällä.',
+          nosto: 'Kaupungin espanja kuulostaa erilaiselta kuin muualla '
+            + 'Meksikossa, koska se on saanut vaikutteita yucatekin '
+            + 'mayasta — kielestä, jota puhuu kolmasosa osavaltion '
+            + 'väestöstä. Siinä on ejektiivisiä konsonantteja ja '
+            + 'suhuäänteitä, joita merkitään kirjaimella x. Yucatánin '
+            + 'espanja on myös säilyttänyt sanoja, jotka ovat muualta '
+            + 'kadonneet.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Mérida on niemimaan solmukohta: pohjoisessa on '
+                + 'Progreso, idässä Valladolid ja Tizimín, lännessä '
+                + 'Celestún. Kaupungin oma satama on Progreso, jonka '
+                + 'Juan Miguel Castro perusti 1872, koska vanha Sisal '
+                + 'oli liian kaukana; niemimaan ensimmäinen '
+                + 'rautatiekisko oli laskettu La Mejoradan puistoon '
+                + 'kaksi vuotta aiemmin. Keskustassa liikkuminen on '
+                + 'helppoa, kun ruudukon logiikan oppii: osoite on '
+                + 'kaksi numeroa, ensin katu ja sitten poikkikadut '
+                + 'joiden välissä ollaan. Varakkaammat kaupunginosat '
+                + 'ovat pohjoisessa, tiiveimmin asutut etelässä.',
+            },
+            {
+              otsikko: 'Plaza Grande ja sen laidat',
+              teksti: 'Pääaukion itälaidalla on katedraali. Sen '
+                + 'rakentaminen alkoi kohdeartikkelin mukaan 1561 tai '
+                + '1562 — artikkeli antaa molemmat vuodet — ja se '
+                + 'valmistui 1598. Sama artikkeli laskee sen Amerikan '
+                + 'toiseksi valmistuneeksi katedraaliksi Santo '
+                + 'Domingon jälkeen, kun taas kaupunkiartikkeli sanoo '
+                + 'sitä mantereen ensimmäiseksi; kannattaa siis '
+                + 'suhtautua ensimmäisyysväitteisiin varauksella. '
+                + 'Julkisivun vaakuna on oma tarinansa: espanjalainen '
+                + 'kilpi hakattiin itsenäistymisen jälkeen pois, '
+                + 'tilalle tuli 1824 Meksikon kotka, ja lopulta koko '
+                + 'vaakuna haudattiin sementin alle — se kaivettiin '
+                + 'esiin vasta myöhemmin. Aukion muilla laidoilla '
+                + 'ovat kaupungintalo, Yucatánin hallintopalatsi ja '
+                + 'Casa de los Montejo.',
+            },
+            {
+              otsikko: 'Pohjoiseen bulevardia pitkin',
+              teksti: 'Paseo de Montejo lähtee keskustasta '
+                + 'luoteeseen ja on yli kuusi kilometriä pitkä. Sen '
+                + 'varrella ovat henekenkauden kartanot, muun muassa '
+                + 'Las Casas Gemelas eli kaksoistalot, jotka Camilo ja '
+                + 'Ernesto Cámara Zavala saivat valmiiksi 1911 ja '
+                + 'joissa yhä asutaan. MACAY-museo pystyttää kadulle '
+                + 'joka vuosi uuden veistosnäyttelyn, jossa on töitä '
+                + 'Meksikosta ja yhdestä toisesta maasta; näyttely on '
+                + 'esillä kymmenen kuukautta. Santa Lucían puisto '
+                + 'kadun eteläpäässä ja Peón Contrerasin teatteri ovat '
+                + 'kävelymatkan päässä, ja teatterissa soittaa '
+                + 'Yucatánin sinfoniaorkesteri.',
+              kuva: {
+                tiedosto: 'Monumento a la Patria, Mérida Yucatán - panoramio.jpg',
+                selite: 'Isänmaan monumentin kaareva kiviseinä '
+                  + 'kiertää bulevardin pohjoispään liikenneympyrää.',
+                lahde: 'panza.rayada, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Retket kaupungin ulkopuolelle',
+              teksti: 'Dzibilchaltún on kuudentoista kilometrin '
+                + 'päässä pohjoisessa. Sen tunnetuin rakennus on '
+                + 'Seitsemän nuken temppeli, joka sai nimensä '
+                + '1950-luvulla myöhemmän pyramidin alta löytyneistä '
+                + 'seitsemästä pienestä kuvasta. Kevätpäiväntasauksena '
+                + 'paikalle kokoontuu väkeä katsomaan auringonnousua '
+                + 'oviaukkojen läpi — mutta artikkeli huomauttaa, '
+                + 'ettei mikään arkeologinen rakennepiirre merkitse '
+                + 'katselupaikkaa, joten yhteys temppelin suuntauksen '
+                + 'ja päiväntasausten välillä on hyvin '
+                + 'epätodennäköinen. Uxmal on 62 kilometriä etelässä; '
+                + 'sen Puuc-tyylin friisit esittävät mayamajan '
+                + 'ruokoseiniä ja olkikattoja. Celestúnin '
+                + 'biosfäärialue lännessä on amerikanflamingojen '
+                + 'talvikoti ja yli kahdensadan lintulajin '
+                + 'levähdyspaikka.',
+              kuva: {
+                tiedosto: 'Dzibilchaltun, Temple of the Seven Dolls (14363090911).jpg',
+                selite: 'Seitsemän nuken temppeli seisoo matalalla '
+                  + 'porrasjalustalla, ja sen seinissä on neljä '
+                  + 'oviaukkoa.',
+                lahde: 'Arian Zwegers from Brussels, Belgium, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Mérida-'
+                + 'artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia. Ilmasto on trooppinen savanni, ja '
+                + 'kaupunki on pasaativyöhykkeessä lähellä Kravun '
+                + 'kääntöpiiriä, joten tuuli tulee idästä. Vuoden '
+                + 'keskiylin on 33,5 astetta: joulukuun 30,6:sta '
+                + 'toukokuun 36,3:een, ja iltapäivällä lämpötila '
+                + 'nousee usein yli kolmenkymmenenkahdeksan. Alimmat '
+                + 'ovat 17,2 ja 21,7 asteen välillä. Sisämaan '
+                + 'sijainnin takia Méridassa on tavallisesti pari '
+                + 'astetta kuumempaa kuin rannikolla. Sadekausi '
+                + 'kestää kesäkuusta lokakuuhun, ja silloin alueeseen '
+                + 'vaikuttavat myös itäiset aallot ja trooppiset '
+                + 'myrskyt.',
+              kuva: {
+                tiedosto: 'Parque de Santa Lucia, Mérida, Yucatán Junio 2024.jpg',
+                selite: 'Kesäkuun ilta Santa Lucían puistossa: '
+                  + 'palmut, valaistut terassit ja sateen jälkeen '
+                  + 'kostea kiveys.',
+                lahde: 'edenpictures, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Plaza Grande',
+                tahdet: 3,
+                selite: 'Katedraali, kaupungintalo, hallintopalatsi '
+                  + 'ja Casa de los Montejo samalla aukiolla.',
+              },
+              {
+                mita: 'Paseo de Montejo',
+                tahdet: 3,
+                selite: 'Kuusi kilometriä bulevardia ja '
+                  + 'henekenkauden kartanoita.',
+              },
+              {
+                mita: 'Peón Contrerasin teatteri',
+                tahdet: 2,
+                selite: 'Vuoden 1908 eklektinen oopperatalo, jossa '
+                  + 'muusat on maalattu kupoliin.',
+              },
+              {
+                mita: 'Dzibilchaltún',
+                tahdet: 2,
+                selite: 'Seitsemän nuken temppeli ja Xlakahin '
+                  + 'cenote kuudentoista kilometrin päässä.',
+              },
+              {
+                mita: 'Celestúnin biosfäärialue',
+                tahdet: 2,
+                selite: 'Kuudensadan neliökilometrin kosteikko ja '
+                  + 'flamingojen talvikoti.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Toukokuu on kuumin',
+                teksti: 'Toukokuun keskiylin on 36,3 astetta ja '
+                  + 'iltapäivisin ylitetään usein kolmekymmentä-'
+                  + 'kahdeksan; aamu on paras aika kävellä.',
+              },
+              {
+                otsikko: 'Sadekausi kesä–lokakuu',
+                teksti: 'Samaan aikaan alueeseen vaikuttavat myös '
+                  + 'trooppiset myrskyt, joten sateet tulevat '
+                  + 'ryöppyinä eivätkä tihkuna.',
+              },
+              {
+                otsikko: 'Osoite on kaksi numeroa',
+                teksti: 'Parittomat kadut kulkevat idästä länteen ja '
+                  + 'parilliset pohjoisesta etelään — ilman toista '
+                  + 'numeroa osoite ei kerro paikasta mitään.',
+              },
+              {
+                otsikko: 'Habanero on tulinen',
+                teksti: 'Chiliä tarjotaan useimpien ruokien kanssa '
+                  + 'joko kokonaisena tai soseena; sen voi jättää '
+                  + 'sivuun, eikä ruoka menetä makuaan.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Jukatanin oma keittiö',
+      johdanto: 'Yucatánin ruoka ei maistu siltä, mitä useimmat '
+        + 'pitävät meksikolaisena: mausteena on annatto, kypsennys '
+        + 'tapahtuu maakuopassa ja kastikkeen pohja on '
+        + 'kurpitsansiemen.',
+      tehtava: {
+        kysymys: 'Mikä antaa cochinita pibilille sen kirkkaan '
+          + 'poltetun oranssin värin?',
+        vaihtoehdot: [
+          'banaaninlehti',
+          'annatto eli achiote',
+          'katkeraappelsiini',
+          'habanerochili',
+        ],
+        oikea: 1,
+        fakta: 'Kova annattosiemen jauhetaan muiden mausteiden kanssa '
+          + 'punertavaksi tahnaksi, jota kutsutaan nimellä recado '
+          + 'rojo.',
+      },
+      nostot: [
+        {
+          otsikko: 'Possu maan alla',
+          teksti: 'Cochinita pibil on Yucatánin tunnetuin ruoka. '
+            + 'Sianliha liotetaan happamaan sitrusmehuun — '
+            + 'yucatekilaisissa resepteissä aina sevillan- eli '
+            + 'katkeraappelsiiniin — ja siihen lisätään annatto, joka '
+            + 'antaa kirkkaan poltetun oranssin värin. Liha kääritään '
+            + 'banaaninlehteen ja paahdetaan hitaasti píib-kuopassa, '
+            + 'jonka pohjalla palaa tuli. Sana cochinita tarkoittaa '
+            + 'porsasta, joten aito cochinita pibil on kokonainen '
+            + 'maitoporsas; nykyään käytetään usein lapaa tai '
+            + 'ulkofileetä. Hapan marinadi ja pitkä kypsennysaika '
+            + 'mureuttavat myös sitkeän lihan. Ruoka tarjotaan '
+            + 'keltaisten maissitortillojen, punaisten etikkasipulien, '
+            + 'papujen ja habanerojen kanssa.',
+          tiedosto: 'Cochinita pibil yucateca.jpg',
+          selite: 'Annatton värjäämä liha on kirkkaan oranssia, ja '
+            + 'kylkeen kuuluvat mustapapusose ja punaiset '
+            + 'etikkasipulit.',
+          lahde: 'Wotancito, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cochinita pibil',
+        },
+        {
+          otsikko: 'Herrojen ruoka vai voideltu ja liotettu',
+          teksti: 'Papadzules on tortilla, joka kastetaan '
+            + 'kurpitsansiemenkastikkeeseen ja täytetään kovaksi '
+            + 'keitetyllä kananmunalla; päälle tulee tomaatti-'
+            + 'chilikastike. Nimestä on kaksi selitystä: toisen mukaan '
+            + 'se tarkoittaa herrojen ruokaa, koska ruokaa kerrotaan '
+            + 'tarjotun espanjalaisille, toisen mukaan se tulee mayan '
+            + 'sanoista papakʼ, voidella, ja sul, liottaa. Ruokaa '
+            + 'sanotaan hyvin vanhaksi, mutta arkeologisessa '
+            + 'aineistossa ei ole comal-paistolevyjä, joten ohuita '
+            + 'täytettäviä tortilloja tuskin tehtiin: mayojen oma pim '
+            + 'oli paksu ja kypsennettiin tuhkassa. Kananmunia ei '
+            + 'ollut, mutta kalkkunoita ja myskisorsia oli kesytetty.',
+          tiedosto: 'Papadzules yucatecos.jpg',
+          selite: 'Vaaleanvihreä kurpitsansiemenkastike peittää '
+            + 'tortillat, ja päällä on tomaattikastiketta ja '
+            + 'murennettua munaa.',
+          lahde: 'Wotancito, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Papadzules',
+        },
+        {
+          otsikko: 'Keitto, jonka nimi valehtelee',
+          teksti: 'Sopa de lima on kana- tai muusta lihasta keitetty '
+            + 'liemi, jonka kanssa tarjotaan tortillasiruja. Nimestä '
+            + 'huolimatta limetti ei ole pääaines vaan se, mikä antaa '
+            + 'keitolle maun; mukana ovat myös tomaatti, paprika ja '
+            + 'korianteri. Keitto ei ole ikivanha, vaikka siltä '
+            + 'kuulostaa: se luotiin 1946, ja tekijänä mainitaan '
+            + 'mestari nimeltä Katún, joka on mayaksi soturi. Nykyään '
+            + 'sitä pidetään yhtenä Yucatánin edustavimmista '
+            + 'keitoista. Meksiko on ollut ainakin 1950-luvulta '
+            + 'lähtien maailman suurin limetin tuottaja ja viejä. '
+            + 'Tortillat tarjotaan erikseen, jotta ne pysyvät rapeina.',
+          wiki: 'Sopa de lima',
+        },
+        {
+          otsikko: 'Punainen tahna ja hollantilainen juusto',
+          teksti: 'Alueen tunnusmauste on achiote eli annatto. Kova '
+            + 'siemen jauhetaan muiden mausteiden kanssa punertavaksi '
+            + 'tahnaksi, recado rojoksi; mukaan tulee kanelia, '
+            + 'maustepippurin marjoja, neilikkaa, meksikonoreganoa, '
+            + 'juustokuminaa, merisuolaa, mietoa mustapippuria, '
+            + 'omenaviinietikkaa ja valkosipulia. Muita alueen ruokia '
+            + 'ovat salbutes, pehmeät tortillat salaatin, tomaatin, '
+            + 'kalkkunan ja avokadon kanssa, sekä panuchos, joissa '
+            + 'paistettu tortilla on täytetty mustilla pavuilla. '
+            + 'Omintakeisin on queso relleno: koverrettu '
+            + 'edamjuustopallo täytetään jauhetulla sianlihalla ja '
+            + 'tarjotaan tomaattikastikkeessa.',
+          tiedosto: 'Panuchos y salbutes.jpg',
+          selite: 'Panuchojen ja salbutesien päällä on kanaa, '
+            + 'avokadoa, tomaattia ja punaisia etikkasipuleita.',
+          lahde: 'Wotancito, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Mérida (Meksiko)',
+        },
+      ],
+    },
+  ],
+  /*
+   * WINNIPEGIN KAUPUNKILEHTI (Opus 7.9.2026). Kansi + teemasivu,
+   * aineisto docs/mantereet-tyoaineisto/faktapohja-winnipeg.md ja sen
+   * riippumaton tarkistus tarkistus-winnipeg.md (tuomio "kelpaa, kun
+   * kohtien A-F ratkaisut tehdään"; kaikki kuusi on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Winnipeg", "History of Winnipeg", "Red River Colony", "Battle of
+   * Seven Oaks", "Fort Garry", "Red River Rebellion", "Manitoba Act,
+   * 1870", "Treaty 1", "The Forks, Winnipeg", "Winnipeg general
+   * strike", "Winnipeg (bear)", "Harry Colebourn", "Manitoba
+   * Legislative Building".
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * kosketa; litteä kysymystaulu (northamerica-questions.js) jää
+   * ennalleen samoin kuin Lagosissa ja Sansibarissa.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto', koska AIHE_IKONIT ei tarjoa preerialle omaa
+   * kuvaketta eikä uusia sivu-id:itä tehdä; nimi "Talvi, tulva ja
+   * preeria" kertoo aiheen.
+   *
+   * VISAN VASTAUKSET LÖYTYVÄT LEHDESTÄ. northamerica-questions.js
+   * kysyy Winnipegiltä viisi asiaa: maa Kanada, Nalle Puh, kylmä
+   * talvi, Redin ja Assiniboinen risteys sekä métis-kansan synty
+   * Punaisenjoen laaksossa. Neljä ensimmäistä ovat kannen ja
+   * teemasivun nostoissa; métis-kansan syntyminen on Kanadan
+   * maalehden aihe (maa-kategoriat.js, CAN), eikä sitä toisteta
+   * täällä. TEEMASIVUN MINITEHTÄVÄ KYSYY SIKSI AIVAN MUUTA:
+   * auringonpaistetuntien sijaa.
+   *
+   * KANADAN MAALEHTEÄ EI TOISTETA. Maalehti kertoo L'Anse aux
+   * Meadowsista, Hudson's Bay Companyn peruskirjasta ja Rupert's
+   * Landista, Charlottetownin kokouksesta, ratsupoliisin
+   * perustamisesta 1873, métis-kansan synnystä ja Punaisenjoen
+   * kärryistä, toteemipaalusta, inuksukista, sisäoppilaitoksista,
+   * Banffista, Fundynlahdesta, W. A. C. Bennettin padosta, Wood
+   * Buffalosta, vaahterasiirapista, hummerista, leipäriidasta,
+   * poutinesta ja urheilusta. Yksikään näistä ei ole tämän lehden
+   * aihe.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: pörssikorttelin koko ja viljapörssin vuodet otetaan
+   *    kohteen omasta artikkelista (kohdekartan juttu, ei lehti).
+   *  - B: ihmisoikeusmuseon kolme eri päivää 2014 eivät ole
+   *    ristiriita vaan eri tapahtumia (kohdekartan juttu).
+   *  - C: nimi Winnipeg on creen ja odžibwen sana, jonka Kelsey
+   *    omaksui; merkitys annetaan lähteen molemmilla sanoilla
+   *    ("samea eli mutainen vesi"), eikä nimeä väitetä yhden
+   *    kielen omaksi.
+   *  - D: väkiluvuista käytetään VAIN vuoden 2021 väestönlaskentaa
+   *    (kaupunki 749 607, metropolialue 834 678). Lähteen 850 000:n
+   *    arviota ei käytetä, koska sama luku esiintyy artikkelissa
+   *    kerran kaupungin ja kerran metropolialueen lukuna.
+   *  - E: vuoden 1919 yleislakko kerrotaan kohdekartan Burton
+   *    Cummings -teatterin jutussa, ei lehden nostona, ja
+   *    neutraalina historiana ilman yksityiskohtien korostusta.
+   *  - F: métis-aihe rajattu kaupungin omaan tarinaan (kapina 1870,
+   *    James McKay), ei kansan syntyyn.
+   *
+   * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+   * (northamerica-valokuvat.js, winnipeg), jossa se on jo
+   * tarkistettu — vanha puoli on koiravaljakko Fort Garryn portin
+   * edessä 1899 ja uusi puoli sama kaupunki nykyään. Selitteet on
+   * kirjoitettu uudestaan yhdeksi virkkeeksi reseptin mukaan.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026): oppaan
+   * sääjakso nojaa siksi en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen.
+   */
+  winnipeg: [
+    {
+      id: 'kaupunki',
+      nimi: 'Winnipeg',
+      johdanto: 'Winnipeg on rakennettu sinne, missä Assiniboine yhtyy '
+        + 'Punaiseenjokeen — risteykseen, joka oli kauppapaikka '
+        + 'tuhansia vuosia ennen kaupunkia. Kaupunkioikeudet se sai '
+        + 'isoisän matkavuonna 1873.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: jokien kärki
+       * illalla, siluetti tasangon takaa ja pörssikortteli tornien
+       * juurella.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'The Forks at dusk, Winnipeg, Manitoba, Canada.jpg',
+          selite: 'Jokien yhtymäkohdan laiturit illalla, ja vesi käy '
+            + 'korkealla sateiden jäljiltä.',
+          lahde: 'Ethan Sahagun, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Downtown Winnipeg skyline seen from Westview Park.jpg',
+          selite: 'Keskustan siluetti näkyy kilometrien päähän, koska '
+            + 'kaupungin ympärillä ei ole mitään korkeampaa.',
+          lahde: 'ElatedCoder, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Downtown Winnipeg and the Exchange District, Manitoba, Canada - 20110530.jpg',
+          selite: 'Pörssikorttelin matalat tiilivarastot jäävät '
+            + 'keskustan tornien eteen.',
+          lahde: 'Wpg guy, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat — ilmakuva jokien kärjestä, parlamenttitalo
+       * puutarhoineen ja Saint-Bonifacen katedraalin julkisivu
+       * puistokäytävän päässä.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Evening glow at Downtown Winnipeg.jpg',
+          selite: 'Ilmasta katsottuna Punainen joki kaartaa vasemmalla, '
+            + 'ihmisoikeusmuseo kohoaa keskellä ja keskusta jää '
+            + 'taakse.',
+          lahde: 'ParsonsPhotographyNL, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Manitoba Legislative Building, Winnipeg, Canada (35918422850).jpg',
+          selite: 'Parlamenttitalo istuu puutarhojensa keskellä, ja '
+            + 'kupolin päällä erottuu kullattu patsas.',
+          lahde: 'Tony Webster from Minneapolis, Minnesota, United States, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Saint Boniface Cathedral, Winnipeg, Canada (35918578070).jpg',
+          selite: 'Saint-Bonifacen katedraalin julkisivu puistokäytävän '
+            + 'päässä; ruusuikkunan aukosta näkyy taivas.',
+          lahde: 'Tony Webster from Minneapolis, Minnesota, United States, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Canadian Dog Train and Remains of Old Fort Garry, Winnipeg 1899 (HS85-10-11350).jpg',
+          vuosi: '1899',
+          selite: 'Koiravaljakko ja kuormareki Fort Garryn porttitornin '
+            + 'edessä talvella 1899; alalaidan tekstiliuska on '
+            + 'valokuvaamon oma nimiö.',
+          lahde: 'Steele and Co., Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Winnipeg Esplanade Riel Bridge & CMHR.jpg',
+          selite: 'Sama kaupunki nykyään: vinoköysisilta joen yli, '
+            + 'ihmisoikeusmuseo vasemmalla ja keskustan tornit '
+            + 'takana.',
+          lahde: 'Travel Manitoba, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Risteys, joka oli valmis ennen kaupunkia',
+          teksti: 'Punaisenjoen ja Assiniboinen yhtymäkohta on nimeltään '
+            + 'The Forks, ja se oli kanoottireittien risteys kauan ennen '
+            + 'eurooppalaisia. Arkeologia, kalliopiirrokset ja suullinen '
+            + 'perinne kertovat leireistä, keräilystä, metsästyksestä, '
+            + 'työkalujen teosta, kalastuksesta ja kaupasta; arvio '
+            + 'vanhimmasta asutuksesta on Forksissa kuusituhatta vuotta. '
+            + 'Odžibwet piirsivät ensimmäisiä karttoja tuohelle, ja ne '
+            + 'auttoivat turkiskauppiaita löytämään vesireitit. Sieur de '
+            + 'La Vérendrye rakensi paikalle 1738 ensimmäisen '
+            + 'kauppa-aseman, Fort Rougen.',
+          tiedosto: 'Upper Fort Garry Gate April 2010.jpg',
+          selite: 'Upper Fort Garryn kiviportti on kaikki, mitä '
+            + 'linnakkeesta on jäljellä, ja sen takana kohoavat '
+            + 'nykyiset kerrostalot.',
+          lahde: 'Colincan, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'The Forks, Winnipeg',
+        },
+        {
+          otsikko: 'Kaksi yhtiötä ja seitsemän tammea',
+          teksti: 'North West Company rakensi Fort Gibraltarin 1809 ja '
+            + 'Hudson\'s Bay Company Fort Douglasin 1812, ja yhtiöt '
+            + 'kilpailivat kiivaasti samasta turkiskaupasta. Lord '
+            + 'Selkirk osti maata ja perusti ensimmäisen pysyvän '
+            + 'siirtokunnan, Red River Colonyn, ja mittautti jokitontit. '
+            + 'Métisit ja Selkirkin uudisasukkaat ottivat yhteen '
+            + 'Seitsemän tammen taistelussa 1816. Kilpailu päättyi '
+            + 'vasta 1821, kun yhtiöt yhdistyivät. Fort Gibraltar '
+            + 'nimettiin Fort Garryksi 1822; tulva tuhosi sen 1826, ja '
+            + 'se rakennettiin uudelleen vasta 1835.',
+          tiedosto: 'Scene of the Seven Oaks Fight (1887) (3749553619).jpg',
+          selite: 'Vuoden 1887 kirjan kartassa näkyvät Fort Gibraltar, '
+            + 'Fort Douglas ja Seven Oaks; katkoviiva on kustantajan '
+            + 'oma merkintä métisien kulkureitistä.',
+          lahde: 'Manitoba Historical Maps from Canada, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Red River Colony',
+        },
+        {
+          otsikko: 'Marraskuu 1873',
+          teksti: 'Vuosina 1869–70 alueella käytiin Punaisenjoen kapina, '
+            + 'métisien väliaikaisen hallituksen ja idästä tulleiden '
+            + 'uudisasukkaiden välinen kiista, jota kenraali Garnet '
+            + 'Wolseley lähetettiin tukahduttamaan. Manitoba Act teki '
+            + '1870 Manitobasta kolmivuotiaan Kanadan viidennen '
+            + 'provinssin, ja Treaty 1 allekirjoitettiin 3. elokuuta '
+            + '1871. Kaupunki perustettiin 8. marraskuuta 1873 '
+            + 'Selkirkin siirtokunnan ympärille, ja sille antoi nimen '
+            + 'métis-lainsäätäjä ja tulkki James McKay. Nimi tuli '
+            + 'järveltä kuudenkymmenenviiden kilometrin päästä: creen '
+            + 'ja odžibwen sana tarkoittaa sameaa eli mutaista vettä.',
+          tiedosto: 'Main Street Winnipeg -1874- (3068449327).jpg',
+          selite: 'Vuoden 1874 kaiverruksessa Main Street on vielä '
+            + 'mutainen kylätie; ylälaidan numerot ovat kustantajan '
+            + 'omia ja alalaidan teksti selittää ne.',
+          lahde: 'Manitoba Historical Maps from Canada, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Manitoba Act, 1870',
+        },
+        {
+          otsikko: 'Karhu, joka jäi Lontooseen',
+          teksti: 'Elokuussa 1914 luutnantti Harry Colebourn, '
+            + 'ratsuväkirykmentti Fort Garry Horsen eläinlääkäri, oli '
+            + 'matkalla sotaan. Junapysäkillä White Riverissä hän osti '
+            + '24. elokuuta kahdellakymmenellä dollarilla karhunpennun, '
+            + 'jonka emo oli tapettu keväällä, ja nimesi sen '
+            + 'kotikaupunkinsa mukaan: Winnipeg, lyhyesti Winnie. Karhu '
+            + 'seurasi häntä Englantiin asti, ja ennen Ranskaan lähtöä '
+            + 'hän jätti sen Lontoon eläintarhaan 9. joulukuuta 1914. '
+            + 'Sinne se jäi. Vuodesta 1924 karhua kävi katsomassa '
+            + 'A. A. Milnen poika Christopher Robin, joka vaihtoi oman '
+            + 'nallensa nimen Edward Bearista Winnie the Poohiksi.',
+          tiedosto: 'ZSL London - Harry Colebourn and Winnie the Bear (01).jpg',
+          selite: 'Lontoon eläintarhan pronssipatsaassa Colebourn '
+            + 'kumartuu karhunpennun puoleen, ja vieressä on '
+            + 'muistolaatta.',
+          lahde: 'Katie Chan, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Winnipeg (bear)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Manitoba Legislative Building 2 (8032854242).jpg',
+          selite: 'Parlamenttitalon kupolin päällä juoksee Kultapoika '
+            + 'soihtu kädessä, ja portaiden juurella seisoo patsas.',
+          lahde: 'Tony Hisgett from Birmingham, UK, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Winnipeg on Manitoban pääkaupunki ja maakunnan '
+          + 'suurin kaupunki, ja se on rakennettu Punaisenjoen laakson '
+          + 'pohjalle, tulvatasangolle, jonka pinnanmuodot ovat '
+          + 'erittäin tasaiset. Vuoden 2021 väestönlaskennassa '
+          + 'kaupungissa asui 749 607 ja metropolialueella 834 678 '
+          + 'ihmistä; se on Kanadan kuudenneksi suurin kaupunki. '
+          + 'Kaupunkia sanotaan lännen portiksi, ja se on yhä '
+          + 'rautatiesolmu, jonka talous nojaa terveydenhuoltoon, '
+          + 'kauppaan, teollisuuteen ja julkishallintoon.',
+        artikkeli: {
+          nimi: 'Matkailijan Winnipeg',
+          taitto: 'opas',
+          teksti: 'Kaupunki, joka on tasainen kuin pöytä ja jonka ydin '
+            + 'mahtuu kävelymatkalle: jokien kärki, pörssikortteli ja '
+            + 'parlamenttitalon puisto ovat kaikki puolen tunnin '
+            + 'päässä toisistaan.',
+          nosto: 'Winnipegissä on Kanadan suurin alkuperäiskansojen '
+            + 'osuus (12,4 %) ja lukumäärä (90 995) minkään suuren '
+            + 'kaupungin osalta sekä maan suurin métis-väestö sekä '
+            + 'osuutena (6,5 %) että lukumääränä (47 915). Kaupungissa '
+            + 'puhutaan yli sataa kieltä, ja St. Bonifacessa on '
+            + 'Länsi-Kanadan suurin ranskankielinen yhteisö.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Winnipeg James Armstrong Richardson '
+                + 'International Airport on maakunnan ainoa kaupallinen '
+                + 'kansainvälinen lentoasema, ja sen 585 miljoonan '
+                + 'dollarin uudistus valmistui lokakuussa 2011. '
+                + 'Kaukojunat lähtevät Union Stationilta Main Streetin '
+                + 'varrelta. Kaupunki on rautatiesolmu, jota palvelee '
+                + 'neljä rahtiyhtiötä, ja se on ainoa Vancouverin ja '
+                + 'Thunder Bayn välinen suuri kaupunki, jolla on suora '
+                + 'rautatieyhteys Yhdysvaltoihin. Julkista liikennettä '
+                + 'on ollut vuodesta 1882, aluksi hevosraitiovaunuilla; '
+                + 'elokuussa 2025 Winnipegistä tuli ensimmäinen '
+                + 'kanadalainen kaupunki, jonka kalustossa on '
+                + '60-jalkaisia akkusähköbusseja.',
+            },
+            {
+              otsikko: 'Keskusta ja katettu käytävä',
+              teksti: 'Keskusta on Portage Avenuen ja Main Streetin '
+                + 'risteyksen ympärillä ja kattaa noin 2,6 '
+                + 'neliökilometriä; siellä työskentelee yli 72 000 '
+                + 'ihmistä ja opiskelee yli 40 000. Monet keskustan '
+                + 'suurista rakennuksista on yhdistetty Winnipeg '
+                + 'Walkway -käytäväverkkoon, jota pitkin pääsee '
+                + 'korttelista toiseen ulos menemättä — mikä on '
+                + 'tammikuussa hyvä tietää. Virallisia kaupunginosia '
+                + 'on 236, ja tiheimmin asuttu on Osborne Village. '
+                + 'Pörssikortteli keskustan pohjoispäässä on '
+                + 'kansallinen historiallinen kohde.',
+              kuva: {
+                tiedosto: 'Winnipeg Skywalk and Manitoba Hydro Building.jpg',
+                selite: 'Lasitettu kävelysilta ylittää kadun keskustassa, '
+                  + 'ja sen takana kohoaa sähköyhtiön torni.',
+                lahde: 'Interlaker, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Puistot ja näyttämöt',
+              teksti: 'Suurin puisto on Assiniboine Park, jossa ovat '
+                + 'eläintarha ja Leo Molin veistöspuutarha; muita '
+                + 'suuria ovat Kildonan Park ja St. Vital Park. '
+                + 'Winnipeg oli Kanadan kulttuuripääkaupunki 2010, ja '
+                + 'siellä on 26 kansallista historiallista kohdetta. '
+                + 'Winnipeg Art Gallery on Länsi-Kanadan vanhin '
+                + 'julkinen taidegalleria (1912), maan kuudenneksi '
+                + 'suurin ja maailman suurimman julkisen '
+                + 'nykyinuiittitaiteen kokoelman koti. Royal Manitoba '
+                + 'Theatre Centre on Kanadan vanhin englanninkielinen '
+                + 'aluetteatteri, Le Cercle Molière maan vanhin '
+                + 'teatteriseurue (1925) ja Royal Winnipeg Ballet '
+                + 'Kanadan vanhin balettiryhmä.',
+            },
+            {
+              otsikko: 'Juhlat ja pöytä',
+              teksti: 'Festival du Voyageur on Länsi-Kanadan suurin '
+                + 'talvijuhla, ja se juhlii Punaisenjoen laakson '
+                + 'varhaisia ranskalaisia kulkijoita; Folklorama on '
+                + 'maailman suurin ja pisimpään toiminut '
+                + 'kulttuurijuhla, ja Winnipeg Fringe Theatre Festival '
+                + 'Pohjois-Amerikan toiseksi suurin '
+                + 'vaihtoehtoteatterifestivaali. Kanadan ensimmäinen '
+                + 'jazzkonsertti soitettiin täällä 1914. Ruoassa '
+                + 'kaupungilla on omat erikoisuutensa etenkin '
+                + 'makeisissa ja kuumasavustetussa kalassa, ja omia '
+                + 'jälkiruokia ovat schmoo torte ja wafer pie.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian '
+                + 'Winnipeg-artikkelin Climate-osiosta; lehdellä ei ole '
+                + 'omaa vuosigraafia, koska säänormaaleja ei haettu '
+                + 'tässä erässä. Kesä on lämmin ja kostea, talvi pitkä '
+                + 'ja ankaran kylmä: heinäkuun keskilämpötila on '
+                + '19,7 astetta ja tammikuun noin kuusitoista astetta '
+                + 'pakkasella. Sadetta ja lunta tulee vuodessa runsaat '
+                + '521 millimetriä, mutta talvikuukausina vain 55. '
+                + 'Auringossa Winnipeg on Kanadan kärkeä: 2 353 tuntia '
+                + 'vuodessa ja 317,8 päivää, joina paistetta voi '
+                + 'mitata. Hallaton kausi kestää keskimäärin '
+                + 'toukokuun 23. päivästä syyskuun 22. päivään.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Jokien kärki',
+                tahdet: 3,
+                selite: 'Kansallinen historiallinen kohde ja kaupungin '
+                  + 'suosituin käyntikohde, neljä miljoonaa kävijää '
+                  + 'vuodessa.',
+              },
+              {
+                mita: 'Pörssikortteli',
+                tahdet: 3,
+                selite: 'Kaksikymmentä korttelia 1900-luvun alun '
+                  + 'varastoja ja terrakottajulkisivuja, '
+                  + 'kansallinen historiallinen kohde 1997.',
+              },
+              {
+                mita: 'Manitoban parlamenttitalo',
+                tahdet: 2,
+                selite: 'Tyndall-kivinen beaux-arts-talo, jonka kupolin '
+                  + 'päällä juoksee kullattu Kultapoika.',
+              },
+              {
+                mita: 'Manitoban museo',
+                tahdet: 2,
+                selite: 'Maakunnan suurin museo, jonka päänähtävyys on '
+                  + 'täysikokoinen Nonsuch-aluksen jäljennös.',
+              },
+              {
+                mita: 'Assiniboine Park',
+                tahdet: 2,
+                selite: 'Kaupungin suurin puisto, jossa ovat eläintarha '
+                  + 'ja Leo Molin veistöspuutarha.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin oppaan
+             * jaksossa 5 ja teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Pakkanen on oikeaa pakkasta',
+                teksti: 'Lämpötila laskee ajoittain alle neljänkymmenen '
+                  + 'pakkasasteen, ja purevuusluku on käynyt '
+                  + '57,1 pakkasasteessa.',
+              },
+              {
+                otsikko: 'Tulvakevät on osa kalenteria',
+                teksti: 'Punainen joki nousee säännöllisesti; '
+                  + 'suurtulvia oli 1826, 1950, 1997, 2009 ja 2011.',
+              },
+              {
+                otsikko: 'Hyttysvuosia on',
+                teksti: 'Tasainen maasto ja savipohjan huono kuivatus '
+                  + 'tuottavat märkinä kesinä runsaasti hyttysiä.',
+              },
+              {
+                otsikko: 'Kesällä ukkostaa',
+                teksti: 'Ukkoset ovat hyvin yleisiä ja joskus niin '
+                  + 'voimakkaita, että syntyy tornadoja.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Talvi, tulva ja preeria',
+      johdanto: 'Winnipegissä sää tulee joka suunnasta ja koko '
+        + 'voimallaan: talvi on pitkä ja ankara, kesä kuuma ja '
+        + 'ukkoinen, ja joka kevät katsotaan, kuinka korkealle '
+        + 'Punainen joki nousee.',
+      tehtava: {
+        kysymys: 'Monesko Kanadan aurinkoisin kaupunki Winnipeg on?',
+        vaihtoehdot: ['toiseksi aurinkoisin', 'aurinkoisin', 'viidenneksi aurinkoisin', 'kymmenenneksi aurinkoisin'],
+        oikea: 0,
+        fakta: 'Ankara talvi ei tarkoita pimeää talvea. Winnipegissä on '
+          + '2 353 auringonpaistetuntia vuodessa, mikä tekee siitä '
+          + 'Kanadan toiseksi aurinkoisimman kaupungin, ja mitattavaa '
+          + 'paistetta on 317,8 päivänä vuodessa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Winterpeg ja sen aurinko',
+          teksti: 'Winnipegin ilmasto on kostea mannerilmasto lämpimin '
+            + 'kesin: kesät ovat lämpimiä ja kosteita, talvet pitkiä ja '
+            + 'ankaran kylmiä. Tammikuun keskilämpötila on noin '
+            + 'kuusitoista astetta pakkasella, ja lämpötila laskee '
+            + 'ajoittain alle neljänkymmenen pakkasasteen. Purevuusluku '
+            + 'on käynyt 57,1 pakkasasteessa, ja keskimäärin '
+            + 'kahtenatoista päivänä vuodessa se alittaa neljänkymmenen '
+            + 'pakkasasteen. Talvi on kuitenkin kirkas: kaupungissa on '
+            + '2 353 auringonpaistetuntia vuodessa, enemmän kuin '
+            + 'yhdessäkään Kanadan kaupungissa yhtä lukuun ottamatta, '
+            + 'ja mitattavaa paistetta 317,8 päivänä.',
+          wiki: 'Winnipeg',
+        },
+        {
+          otsikko: 'Kun Punainen joki nousee',
+          teksti: 'Kaupunki on Punaisenjoen laakson pohjalla, ja '
+            + 'tulvatasanko on niin tasainen, ettei vedellä ole minne '
+            + 'mennä. Joki nousi korkeimmilleen 1826. Vuoden 1950 '
+            + 'suurtulva pakotti joukkoevakuointeihin, ja liittovaltio '
+            + 'arvioi vahingot yli 26 miljoonaksi dollariksi — '
+            + 'maakunnan mukaan vähintään kaksinkertaisiksi. Se sai '
+            + 'pääministeri Duff Roblinin ajamaan tulvakanavan '
+            + 'rakentamista kaupungin ohi. Vuonna 1997 patoja '
+            + 'korotettiin hiekkasäkeillä, ja Winnipeg selvisi vähin '
+            + 'vahingoin, kun taas padoton Grand Forks rajan takana ei. '
+            + 'Tulvia oli myös 2009 ja 2011.',
+          tiedosto: 'Greater Winnipeg Flooded Area 1950 (1952) (2304469813).jpg',
+          selite: 'Vuoden 1952 kartassa vuoden 1950 tulva-alue on '
+            + 'merkitty siniseksi ilmakuvan päälle; oikean ylälaidan '
+            + 'nimiö ja merkkien selitys ovat julkaisijan omia.',
+          lahde: 'Manitoba Historical Maps from Canada, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Red River Floodway',
+        },
+        {
+          otsikko: 'Preerian reuna ja jalavat',
+          teksti: 'Winnipeg on Kanadan preerian itäreunalla, ja siitä '
+            + 'tulee lempinimi lännen portti. Lännessä ja etelässä '
+            + 'levittäytyy korkearuohopreeria, koillisessa '
+            + 'haapaparkkimaa — vaikka suurin osa alkuperäisistä '
+            + 'preeriaheinistä on raivattu pelloiksi ja kaduiksi. '
+            + 'Kaupungissa kasvaa Pohjois-Amerikan suurin jäljellä '
+            + 'oleva kypsä kaupunkijalavametsä. Kuudenkymmenenviiden '
+            + 'kilometrin päässä pohjoisessa on Winnipegjärvi, maailman '
+            + 'yhdestoista suurin makean veden järvi, ja kaupungin läpi '
+            + 'virtaa neljä jokea: Red, Assiniboine, La Salle ja Seine.',
+          tiedosto: 'Prairie view TGPP.JPG',
+          selite: 'Korkearuohopreeriaa Manitoban suojelualueella: '
+            + 'heinä yltää vyötärölle ja horisontti on suora viiva.',
+          lahde: 'Krazytea, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Canadian Prairies',
+        },
+        {
+          otsikko: 'Kesä, joka tulee kerralla',
+          teksti: 'Heinäkuun keskilämpötila on 19,7 astetta, mutta '
+            + 'ääripäät ovat kaukana toisistaan. Korkein mitattu '
+            + 'lämpötila on 42,2 astetta 11. heinäkuuta 1936, ja '
+            + 'seuraavana yönä lämpötila ei laskenut 28,3 astetta '
+            + 'alemmas — sekin on ennätys. Kosteus voi tehdä helteestä '
+            + 'vielä ankaramman: 12. heinäkuuta 2026 mitattiin '
+            + 'humidex-lukema 48,0. Ukkoset ovat kesällä hyvin yleisiä '
+            + 'ja joskus niin voimakkaita, että syntyy tornadoja. '
+            + 'Hallaton kausi on ankaraan talveen nähden pitkä: '
+            + 'viimeinen keväthalla on keskimäärin 23. toukokuuta ja '
+            + 'ensimmäinen syyshalla 22. syyskuuta.',
+          wiki: 'Winnipeg',
+        },
+      ],
+    },
+  ],
+  /*
+   * ST. JOHN'SIN KAUPUNKILEHTI (Opus 7.9.2026). Kansi + teemasivu,
+   * aineisto docs/mantereet-tyoaineisto/faktapohja-stjohns.md ja sen
+   * riippumaton tarkistus tarkistus-stjohns.md (tuomio "kelpaa, kun
+   * kohtien A-G ratkaisut tehdään"; kaikki seitsemän on tehty).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "St. John's, Newfoundland and Labrador", "Newfoundland Colony",
+   * "Fort William, Newfoundland", "Great Fire of 1892", "Great Fire
+   * of 1846", "Grand Banks of Newfoundland", "Collapse of the
+   * Atlantic northwest cod fishery", "Heart's Content Cable
+   * Station", "Newfoundland Time Zone", "Cabot Tower (St. John's)".
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * kosketa.
+   *
+   * TEEMASIVU ON TIEDESIVU EIKÄ SÄÄSIVU. Halifaxin lehden teemasivu
+   * ("Satama, sumu ja myrskyt") kertoo jo luonnonsatamasta,
+   * Golfvirrasta, hurrikaaneista ja graniitista, eikä toista samaa
+   * tehdä naapurikaupunkiin. St. John'sin teemasivu jatkaa siitä,
+   * mihin saapumistekstin isoisä-nosto jää: merestä nousevasta
+   * lennätinkaapelista. Sää kerrotaan oppaan sääjaksossa.
+   *
+   * VISAN VASTAUKSET: northamerica-questions.js kysyy St. John'silta
+   * viisi asiaa — Newfoundlandin saari, Grand Banksin turska
+   * (kahdesti), kirkkaanväriset puutalot ja L'Anse aux Meadowsin
+   * viikinkiasutus. Neljä ensimmäistä ovat kannen nostoissa; L'Anse
+   * aux Meadows on Kanadan maalehden ja karttanoston aihe, eikä sitä
+   * toisteta täällä. MINITEHTÄVÄ KYSYY AIVAN MUUTA: mistä Marconin
+   * viesti lähetettiin.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: kruununsiirtomaan vuosiluku (1824 vai 1825) on lähteen
+   *    sisäinen ristiriita, joten kumpaakaan ei käytetä; lehti sanoo
+   *    vain, että Newfoundland oli 1873 itsehallinnollinen
+   *    brittiläinen siirtomaa.
+   *  - B: parlamentaarinen hallinto 1855 kerrotaan kohdekartan
+   *    Colonial Building -jutussa, ei tässä.
+   *  - C: Christopher Martinin 23 miestä ja kolme hollantilaista
+   *    sotalaivaa pääartikkelin mukaan; merirosvoretkeä ei mainita.
+   *  - D: turskan romahdus ja pyyntikielto 1992, kalastus suljettuna
+   *    vuoteen 2024; kuvatekstin vuotta 1993 ei käytetä, ja
+   *    kaksivuotinen alkuperäinen kielto ei jää lukijalle
+   *    lopullisuudeksi.
+   *  - E ja F: Cabot Towerin vuosiluku ja Marconin rajaus koskevat
+   *    kohdekarttaa (maakartat.js, nahtavyysjutut.js).
+   *  - G: L'Anse aux Meadows, viikingit ja Halifaxin sääsivu
+   *    rajattu pois.
+   *
+   * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+   * (northamerica-valokuvat.js, stjohns), jossa se on jo
+   * tarkistettu — vanha puoli on piirtäjä satamaa luonnostelemassa
+   * noin 1890 ja uusi puoli sama satama nykyään.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026).
+   */
+  stjohns: [
+    {
+      id: 'kaupunki',
+      nimi: 'St. John’s',
+      johdanto: 'St. John’s on Pohjois-Amerikan itäisin kaupunki ja '
+        + 'Newfoundlandin ja Labradorin pääkaupunki. Sen nimi on '
+        + 'kartoilla vanhempi kuin sen asutus, ja sen elämä on aina '
+        + 'tullut merestä.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin. Ne ovat silti kolme laajaa yleiskuvaa: satama
+       * Signal Hillin rinteeltä, kalastuslaivasto laiturissa ja
+       * satama-allas ylhäältä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'St. John’s, Newfoundland and Labrador, 2023.jpg',
+          selite: 'Signal Hillin rinteeltä näkyy koko satama ja sen '
+            + 'takana kaupunki, joka jatkuu kukkuloille asti.',
+          lahde: 'CyberDetroit, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'City of St. John’s, Newfoundland.jpg',
+          selite: 'Kalastusaluksia laiturissa, ja rinteen päällä '
+            + 'erottuvat basilikan kaksi tornia.',
+          lahde: 'Sallyledrew, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '1998-08-01 St. John’s, Blick vom Signal Hill zum Hafen1.jpg',
+          selite: 'Rannikkovartioston jäänmurtaja kääntyy altaassa, ja '
+            + 'takana nousee kaupunki rinnettä ylös.',
+          lahde: 'Eduard47, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: laajat yleiskuvat kaupungin eri puolilta —
+       * satamansuu ilmasta auringonlaskussa, värillinen rinne
+       * sataman yllä ja basilika kaupungin harjalla.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Aerial view of Signal Hill, St. John’s, Newfoundland at sunset by photographer Erik Mclean of Introspective Design.jpg',
+          selite: 'Satamansuu ilmasta: kaksi kalliota jättää väliinsä '
+            + 'kapean portin, ja kukkulan laella erottuu torni.',
+          lahde: 'Erikallen920, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Jelly Bean Row (7701369614).jpg',
+          selite: 'Rinne on täynnä kirkkaanvärisiä puutaloja, ja '
+            + 'alhaalla sataman laiturissa on työaluksia.',
+          lahde: 'Kenny Louie from Vancouver, Canada, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Basilica of St. John the Baptist, St. John’s, Newfoundland.jpg',
+          selite: 'Basilikan kaksi tornia hallitsevat harjannetta, ja '
+            + 'niiden alapuolella kaupunki laskeutuu satamaan.',
+          lahde: 'Shhewitt, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Artist sketching the St. John\'s Harbour and skyline (c. 1910).jpg',
+          vuosi: 'noin 1890',
+          selite: 'Piirtäjä istuu kalliolla, ja altaassa on kymmeniä '
+            + 'purjealuksia mastot pystyssä.',
+          lahde: 'S.H. Parsons & Sons, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'St John Harbour Newfoundland (40650988114).jpg',
+          selite: 'Sama satama nykyään: keskellä avautuu kapea portti '
+            + 'merelle ja vasemmalla nousee Signal Hill.',
+          lahde: 'Michel Rathwell from Cornwall, Canada, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Nimi ennen kaupunkia',
+          teksti: 'Kalastajat pitivät täällä kausileirejä 1500-luvun '
+            + 'alussa, ja vuoteen 1540 mennessä ranskalaiset, '
+            + 'espanjalaiset ja portugalilaiset alukset ylittivät '
+            + 'Atlantin joka vuosi näille kalavesille. Nimi São João on '
+            + 'portugalilaisella kartalla jo 1519. Englantilainen John '
+            + 'Rut löysi 1527 satamasta normanni-, bretagne- ja '
+            + 'portugalilaisaluksia ja kirjoitti kuninkaalleen kirjeen, '
+            + 'joka on ensimmäinen tunnettu Pohjois-Amerikasta '
+            + 'lähetetty. Sir Humphrey Gilbert julisti paikan '
+            + '5. elokuuta 1583 Englannin ensimmäiseksi merentakaiseksi '
+            + 'siirtomaaksi — mutta pysyvää väkeä ei ollut: hallitus '
+            + 'kielsi kalastajilta pysyvän asutuksen, ja kaupunki '
+            + 'syntyi vasta vuoden 1630 jälkeen.',
+          tiedosto: 'Terra Nova e Labrador 04.png',
+          selite: '1500-luvun portugalilaisessa merikartassa Atlantin '
+            + 'yli purjehtii aluksia ja vasemmassa ylälaidassa on '
+            + 'Newfoundlandin rannikko.',
+          lahde: 'Mille, Wikimedia Commons (CC0)',
+          wiki: 'St. John’s, Newfoundland and Labrador',
+        },
+        {
+          otsikko: 'Kapea portti ja sen puolustajat',
+          teksti: 'Satamaan johtaa kapea sola kallioiden välissä, ja '
+            + 'juuri se teki kaupungista sekä turvallisen että halutun. '
+            + 'Hollantilainen amiraali Michiel de Ruyter valtasi '
+            + 'kaupungin kesäkuussa 1665, ja kauppiaat rakensivat '
+            + 'puolustuksensa itse: englantilainen kauppiaskapteeni '
+            + 'Christopher Martin laski maihin kuusi tykkiä '
+            + 'aluksestaan ja torjui 1673 kahdellakymmenelläkolmella '
+            + 'miehellä kolmen hollantilaisen sotalaivan hyökkäyksen. '
+            + 'Ranskalaiset tuhosivat kaupungin 1696, piirittivät sen '
+            + '1705 ja valtasivat 1709. Seitsenvuotisen sodan viimeinen '
+            + 'taistelu Pohjois-Amerikassa käytiin täällä 1762, kun '
+            + 'eversti William Amherst valtasi Signal Hillin '
+            + 'aamunkoitteessa 15. syyskuuta.',
+          tiedosto: 'Bunkers And Lighthouse St John Harbour Newfoundland (41321663242).jpg',
+          selite: 'Satamansuun eteläkalliolla on majakka ja sen alla '
+            + 'betonisia tykkipesäkkeitä.',
+          lahde: 'Michel Rathwell from Cornwall, Canada, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Battle of Signal Hill',
+        },
+        {
+          otsikko: 'Turska, ja mitä sen jälkeen tuli',
+          teksti: 'Kaupungin edustalla ovat Grand Banks, vedenalaiset '
+            + 'tasangot, joilla kylmä Labradorin virta kohtaa lämpimän '
+            + 'Golfvirran. Sekoittuminen nostaa ravinteet pintaan ja '
+            + 'teki alueesta yhden maailman rikkaimmista kalavesistä. '
+            + 'Vuonna 1992 pohjoisen turskan kanta oli pudonnut '
+            + 'prosenttiin historiallisesta tasosta, ja kalastus, joka '
+            + 'oli muovannut rannikon elämää viisisataa vuotta, '
+            + 'kiellettiin; Grand Banks pysyi suljettuna vuoteen 2024. '
+            + 'Sen jälkeen meri elättää kaupunkia toisin: Hibernian, '
+            + 'Terra Novan ja White Rosen öljykentät ovat aivan '
+            + 'rannikon edustalla, ja St. John’sin alue vastaa noin '
+            + 'puolta koko maakunnan taloudesta.',
+          tiedosto: 'Fishing Dory.jpg',
+          selite: 'Kulunut puinen soutuvene on nostettu nurmelle meren '
+            + 'rannalle, ja sen sisällä on merrat.',
+          lahde: 'Parsonsphotography.bp, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Grand Banks of Newfoundland',
+        },
+        {
+          otsikko: 'Viisi paloa ja karkkirivi',
+          teksti: 'Kaupunki tuhoutui suurpaloissa 1816, 1817, 1819, '
+            + '1846 ja 1892. Helmikuussa 1816 paloi satakaksikymmentä '
+            + 'taloa, noin tuhannen ihmisen kodit. Vuoden 1846 palo '
+            + 'lähti puusepän liimapadasta ja levisi kauppiaiden '
+            + 'hylkeenrasvavarastoissa; sitä pahensi yritys räjäyttää '
+            + 'talo tulen tieltä, mikä sinkosi kekäleitä pitkin '
+            + 'kaupunkia. Viimeinen suurpalo alkoi 8. heinäkuuta 1892 '
+            + 'Carter’s Hillillä ja söi koko itäpään. Siksi keskustan '
+            + 'puutalot ovat palon jälkeisiä. Värit ovat paljon '
+            + 'nuorempia: kivihiilinoki teki vaaleat maalit '
+            + 'mahdottomiksi, ja kirkkaat sävyt tulivat vasta '
+            + '1970-luvulla, kun hiilestä luovuttiin.',
+          tiedosto: 'Typical steeply graded street in St. John’s, Nfl (26984982184).jpg',
+          selite: 'Jyrkkä asuinkatu, jonka puutalot on maalattu '
+            + 'punaiseksi, keltaiseksi ja siniseksi.',
+          lahde: 'shankar s. from Dubai, united arab emirates, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Great Fire of 1892',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Bergy bit (7264830920).jpg',
+          selite: 'Pieni jäävuori on ajautunut kallioiden väliin aivan '
+            + 'rannan tuntumaan.',
+          lahde: 'Jeremy Keith from Brighton & Hove, United Kingdom, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'St. John’s on Newfoundlandin ja Labradorin '
+          + 'pääkaupunki ja Avalonin niemimaan itäkärjessä. Kaupunki '
+          + 'kattaa 446 neliökilometriä — enemmän kuin Montreal — '
+          + 'mutta suurin osa siitä on rakentamatonta metsää. '
+          + 'Metropolialueella asui tammikuussa 2025 noin 239 300 '
+          + 'ihmistä, mikä tekee siitä Atlantin Kanadan toiseksi '
+          + 'suurimman Halifaxin jälkeen. Kaupunki liitettiin '
+          + 'virallisesti kaupungiksi vasta 1888, vaikka nimi on '
+          + 'kartoilla 1500-luvulta.',
+        artikkeli: {
+          nimi: 'Matkailijan St. John’s',
+          taitto: 'opas',
+          teksti: 'Kaupunki, joka nousee rinteeseen kapean sataman '
+            + 'ympäriltä: Water Street rannassa, kirkot ylempänä, ja '
+            + 'kaiken yllä kallioinen kukkula, jolta on aina katsottu '
+            + 'merelle.',
+          nosto: 'Newfoundlandilla on oma aika. Maakunta pitää '
+            + 'kelloaan puoli tuntia muusta Atlantin Kanadasta '
+            + 'poikkeavassa vyöhykkeessä, ja se on Amerikoiden ainoa '
+            + 'käytössä oleva puolen tunnin poikkeama '
+            + 'maailmanajasta — perua ajalta, jolloin saari oli oma '
+            + 'dominionsa ja sai valita aikansa itse.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'St. John’s International Airport on kymmenen '
+                + 'minuutin päässä keskustasta luoteeseen ja Atlantin '
+                + 'Kanadan toiseksi vilkkain lentoasema. Kaupunki on '
+                + 'myös Trans-Canada Highwayn itäinen päätepiste; '
+                + 'kaupungin ohi kiertävää osuutta sanotaan Outer Ring '
+                + 'Roadiksi. Satama on merkittävä ja toimii Kanadan '
+                + 'rannikkovartioston kotisatamana — siellä on '
+                + 'kotipaikkansa viidellä jäänmurtajalla. '
+                + 'Risteilyalukset käyttävät satamaa sekä kotisatamana '
+                + 'että välisatamana.',
+            },
+            {
+              otsikko: 'Kadut rinteessä',
+              teksti: 'Keskustan arkkitehtuuri on omanlaisensa: '
+                + 'kaupunki alkoi kalastusasemana, jossa oli '
+                + 'kalastajien taloja, vajoja ja laitureita, kaikki '
+                + 'puusta. Water Street ja Duckworth Street tunnetaan '
+                + 'matalista, kirkkaanvärisistä perintörakennuksista, '
+                + 'joissa on kauppoja, putiikkeja ja ravintoloita. '
+                + 'George Street, lyhyt sivukatu Water Streetin '
+                + 'länsipään yläpuolella, on kaupungin yöelämän ydin. '
+                + 'Keskustassa on tiukat perintösäännöt, muun muassa '
+                + 'rakennusten korkeusrajoitus, ja kaupungin varhaisin '
+                + 'esikaupunki Georgestown säilyi vuoden 1892 '
+                + 'suurpalolta.',
+            },
+            {
+              otsikko: 'Puistot, polut ja museot',
+              teksti: 'Grand Concourse kokoaa kaupungin polut: '
+                + 'Quidi Vidin järven kierroksen, osia Signal '
+                + 'Hillistä, keskustan kadut ja jokivarret. Pippy Park '
+                + 'kaupungin itäosassa on yli 1 400 hehtaaria ja siten '
+                + 'Kanadan suurimpia kaupunkipuistoja; siellä on kaksi '
+                + 'golfkenttää, maakunnan suurin leirintäalue ja '
+                + 'Fluvarium, joka näyttää purosta poikkileikkauksen. '
+                + 'Bowring Parkin lahjoitti kaupungille 1911 Sir Edgar '
+                + 'Rennie Bowring, ja sen avasi Connaughtin herttua '
+                + '15. heinäkuuta 1914. The Rooms kokoaa maakunnan '
+                + 'museon, taidegallerian ja arkiston samaan taloon, ja '
+                + 'Signal Hillillä käy 97 prosenttia kaupungin '
+                + 'matkailijoista.',
+            },
+            {
+              otsikko: 'Regatta ja muut juhlapäivät',
+              teksti: 'Royal St. John’s Regatta on Pohjois-Amerikan '
+                + 'vanhin vuosittainen urheilutapahtuma: soutukilpailut '
+                + 'vuodelta 1816 ovat asiakirjoin todistetut. Se '
+                + 'soudetaan Quidi Vidin järvellä elokuun ensimmäisenä '
+                + 'keskiviikkona, ja jos sää tai tuuli ei sovi, se '
+                + 'siirretään seuraavaan sopivaan päivään. Koska '
+                + 'regattapäivä on kaupungissa vapaapäivä, sää päättää '
+                + 'myös sen, saavatko työntekijät vapaata — yksi '
+                + 'maailman harvoista säästä riippuvista juhlapäivistä. '
+                + 'Miehistöt soutavat kuuden hengen kiinteäistuimisia '
+                + 'veneitä, miehet 2,450 ja naiset 1,225 kilometriä; '
+                + 'katsojia on viime vuosina ollut noin 50 000. '
+                + 'Elokuussa on myös George Street Festival ja '
+                + 'joka toinen vuosi Sound Symposium, jonka '
+                + 'Harbour Symphonyn soittavat sataman laivojen torvet '
+                + 'keskipäivällä.',
+              kuva: {
+                tiedosto: 'Regatta Start, St. John’s, Newfoundland.jpg',
+                selite: 'Kuuden hengen kilpaveneet lähtevät liikkeelle '
+                  + 'Quidi Vidin järvellä, ja rannalla seisoo väkeä.',
+                lahde: 'Ken Eckert, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa vuosigraafia, '
+                + 'koska säänormaaleja ei haettu tässä erässä. Golfvirta '
+                + 'tasoittaa vuodenaikoja niin, että vaihtelu on '
+                + 'leveysasteeseen nähden pieni: helmikuun '
+                + 'keskilämpötila on 4,7 pakkasastetta ja elokuun 16,5 '
+                + 'lämpöastetta. Sadetta tulee 1 538,9 millimetriä '
+                + 'vuodessa, ja kuivin kuukausi on kesäkuu, märin '
+                + 'joulukuu. Lunta kertyy talvessa keskimäärin 242,8 '
+                + 'senttimetriä, mutta sama myrsky voi tuoda lunta, '
+                + 'räntää, jäätävää sadetta ja vettä peräkkäin. Kaupunki '
+                + 'on Kanadan suurista kaupungeista sumuisin ja '
+                + 'tuulisin.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Signal Hill ja Cabot Tower',
+                tahdet: 3,
+                selite: 'Kansallinen historiallinen kohde, jolla käy '
+                  + '97 prosenttia kaupungin matkailijoista.',
+              },
+              {
+                mita: 'Pyhän Johannes Kastajan basilika',
+                tahdet: 3,
+                selite: 'Kanadan suurin katedraalikirkko ja '
+                  + 'valmistuessaan 1855 Pohjois-Amerikan suurin '
+                  + 'kirkkorakennus.',
+              },
+              {
+                mita: 'Water Street',
+                tahdet: 2,
+                selite: 'Kansallinen historiallinen kaupunginosa ja '
+                  + 'kaupungin vanhin kauppakatu.',
+              },
+              {
+                mita: 'The Rooms',
+                tahdet: 2,
+                selite: 'Maakunnan museo, taidegalleria ja arkisto '
+                  + 'saman katon alla keskustan yläpuolella.',
+              },
+              {
+                mita: 'Quidi Vidin järvi',
+                tahdet: 2,
+                selite: 'Regattaradan ja kävelyreitin järvi kaupungin '
+                  + 'koillispuolella.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sumu kuuluu hintaan',
+                teksti: 'St. John’s on Kanadan suurista kaupungeista '
+                  + 'sumuisin: sumupäiviä on vuodessa 124.',
+              },
+              {
+                otsikko: 'Tuuli on jatkuvaa',
+                teksti: 'Kaupunki on myös maan tuulisin; keskituuli on '
+                  + '24,3 kilometriä tunnissa.',
+              },
+              {
+                otsikko: 'Talvimyrsky voi olla iso',
+                teksti: 'Tammikuussa 2020 kaupunki julisti hätätilan: '
+                  + 'lunta tuli vuorokaudessa 76 senttiä ja tuuli '
+                  + 'yltyi 130 kilometriin tunnissa.',
+              },
+              {
+                otsikko: 'Kello on eri kuin muualla',
+                teksti: 'Newfoundlandin aika on puoli tuntia edellä '
+                  + 'muuta Atlantin Kanadaa — tarkista lentojen ja '
+                  + 'laivojen ajat.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Viesti valtameren yli',
+      johdanto: 'St. John’s on Pohjois-Amerikan itäisin kaupunki, ja '
+        + 'siksi se on ollut mantereen ensimmäinen pysäkki aina, kun '
+        + 'joku on keksinyt uuden tavan ylittää Atlantti.',
+      tehtava: {
+        kysymys: 'Mistä lähetettiin viesti, jonka Marconi vastaanotti Signal Hillillä?',
+        vaihtoehdot: ['Poldhusta Cornwallista', 'Dublinista', 'Lissabonista', 'Reykjavikista'],
+        oikea: 0,
+        fakta: 'Guglielmo Marconi vastaanotti ensimmäisen langattoman '
+          + 'viestin Atlantin yli 12. joulukuuta 1901. Lähetys tuli '
+          + 'hänen omalta asemaltaan Poldhusta Cornwallista, ja viesti '
+          + 'oli morsen kirjain S.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaapeli, joka nousi merestä',
+          teksti: 'Ensimmäisen pysyvän valtamerenalaisen '
+            + 'lennätinkaapelin läntinen pääte oli Heart’s Content '
+            + 'Newfoundlandilla, itäinen Valentian saarella '
+            + 'Irlannissa. Kaapeli vedettiin maihin 27. heinäkuuta '
+            + '1866 useiden epäonnistuneiden yritysten jälkeen, ja sen '
+            + 'toi paikalle Great Eastern, aikansa suurin höyrylaiva. '
+            + 'Ensimmäiset viestit lähetettiin morsella, ja asemalla '
+            + 'työskenteli kolme ihmistä. Isoisän matkavuonna 1873 '
+            + 'yhteys oli seitsemän vuotta vanha ja yhä ihme. '
+            + 'Parhaimmillaan yli kaksisataa kylän asukasta '
+            + 'työskenteli kaapeliyhtiölle; asema suljettiin 1965, kun '
+            + 'puhelinkaapelit ja satelliitit tekivät lennättimen '
+            + 'tarpeettomaksi.',
+          tiedosto: 'Heart\'s Content Cable Station.JPG',
+          selite: 'Vuoden 1876 punatiilinen kaapeliasema seisoo yhä '
+            + 'tien varressa Heart’s Contentissa.',
+          lahde: 'Robthepiper, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Heart’s Content Cable Station',
+        },
+        {
+          otsikko: 'Kirjain S kukkulalla',
+          teksti: 'Guglielmo Marconi vastaanotti 12. joulukuuta 1901 '
+            + 'ensimmäisen langattoman viestin Atlantin yli. '
+            + 'Vastaanottopaikka oli Signal Hillillä lähellä Cabot '
+            + 'Toweria, lähetys tuli Poldhusta Cornwallista, ja koko '
+            + 'viesti oli morsen kirjain S — kolme pistettä. Kukkula '
+            + 'oli valittu siksi, mihin sitä oli käytetty jo '
+            + 'kahdensadan vuoden ajan: siellä katsottiin merelle. '
+            + 'Cabot Toweriin avattiin 1933 Marconi-asema, joka toimi '
+            + 'vuoteen 1960, ja jo 1920 sieltä tehtiin yksi '
+            + 'ensimmäisistä langattomista ihmisäänen lähetyksistä '
+            + 'valtameren yli: aseman miehet puhuivat Englannista '
+            + 'lähteneen höyrylaivan kanssa.',
+          tiedosto: 'Marconi, Signal Hill, Newfoundland and Labrador.jpg',
+          selite: 'Vihertynyt pronssilaatta kertoo kalliolla, että '
+            + 'ensimmäinen langaton viesti Atlantin yli otettiin '
+            + 'vastaan tällä paikalla.',
+          lahde: 'IMR2000, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Guglielmo Marconi',
+        },
+        {
+          otsikko: 'Suolta suolle',
+          teksti: 'Kaupunki oli lähtöpaikka myös ensimmäiselle '
+            + 'keskeytyksettömälle Atlantin ylittäneelle lennolle. '
+            + 'Kesäkuussa 1919 John Alcock ja Arthur Brown nousivat '
+            + 'ilmaan Lester’s Fieldiltä muunnetulla Vickers Vimy '
+            + 'IV -pommikoneella ja päätyivät suohon Clifdenin lähelle '
+            + 'Connemaraan Irlantiin. Lester’s Fieldiä ei enää ole: '
+            + 'se on nykyään tavallista asuinaluetta keskellä '
+            + 'kaupunkia. Kun amerikkalainen Steve Fossett toisti '
+            + 'lennon heinäkuussa 2005 Vickers Vimyn jäljennöksellä, '
+            + 'hänen oli lähdettävä lentoasemalta.',
+          tiedosto: 'Alcock and Brown Flight Commemorative St John\'s Newfoundland.jpg',
+          selite: 'Lennon muistokivi seisoo nykyään puiden keskellä '
+            + 'asuinkadun varrella.',
+          lahde: 'Rpitt, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Transatlantic flight of Alcock and Brown',
+        },
+        {
+          otsikko: 'Puoli tuntia omaa aikaa',
+          teksti: 'Newfoundlandin aikavyöhyke vähentää normaaliaikana '
+            + 'kolme ja puoli tuntia maailmanajasta, ja se on '
+            + 'Amerikoiden ainoa käytössä oleva puolen tunnin poikkeama. '
+            + 'Kellonaika perustuu 52 asteen ja 30 minuutin läntisen '
+            + 'pituuspiirin keskiaurinkoaikaan — lähes tarkalleen St. '
+            + 'John’sin omaan pituuspiiriin. Vyöhyke on olemassa '
+            + 'siksi, että saari oli erillinen dominio, kun '
+            + 'aikavyöhykkeet luotiin, ja sai valita aikansa itse; '
+            + 'hallintokomissio sääti asian lailla 1935. Vuonna 1963 '
+            + 'maakunta yritti siirtyä Atlantin aikaan mutta perui '
+            + 'hankkeen vastustuksen takia. Saari on puolitoista tuntia '
+            + 'Keski-Kanadaa edellä ja puoli tuntia jäljessä '
+            + 'Saint-Pierreä.',
+          tiedosto: 'Newfoundland time-zone sign.jpg',
+          selite: 'Tienvarsikyltti Labradorissa käskee siirtämään kelloa '
+            + 'puoli tuntia eteenpäin ja näyttää kartalla, mistä raja '
+            + 'kulkee.',
+          lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Newfoundland Time Zone',
+        },
+      ],
+    },
+  ],
+  /*
+   * KUMASI (Opus 7.9.2026, paketti O9) — Afrikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-kumasi.md ja sen riippumaton tarkistus
+   * tarkistus-kumasi.md (tuomio "kelpaa, kun kohtien A–G ratkaisut
+   * tehdään"; kaikki seitsemän on tehty). Väitteet on luettu
+   * en-Wikipedian raakatekstistä 7.9.2026: "Kumasi", "Asante
+   * Empire", "Golden Stool", "Okomfo Anokye", "Anglo-Ashanti wars",
+   * "Lake Bosumtwi", "Owabi Wildlife Sanctuary", "Kumawood".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti (africa-saapumiset.js), valokuvataulu ja litteä
+   * kulttuuritaulu olivat jo olemassa eikä niihin kosketa — sama
+   * ratkaisu kuin Lagosissa, Nairobissa ja Kapkaupungissa. Litteän
+   * taulun kente-kuva, adinkra- ja highlife-nostot jäävät siis
+   * peliin, ja kulttuurivisan vastaus (kente) näkyy matkaoppaan
+   * käsityöjaksossa.
+   *
+   * GHANAN MAALEHTEÄ EI TOISTETA. Maalehti (maa-kategoriat.js, GHA)
+   * kertoo Ghanan nimestä, BOWDICHIN 1817 NÄKEMÄSTÄ PALATSISTA JA
+   * SEN POLTOSTA 1874 SEKÄ MANHYIASTA 1925, Tetteh Quarshiesta ja
+   * kaakaosta, itsenäisyydestä 1957, jollofista ja kenkeystä,
+   * KENTESTÄ JA ANANSISTA, ADINKRASTA, KULTAPUNNUKSISTA,
+   * fantasia-arkuista, highlifesta, akan-päivänimistä, Homowosta ja
+   * äidin kautta kulkevasta perinnöstä. Yksikään näistä ei ole tämän
+   * lehden aihe.
+   *
+   * KULTAJAKKARAN SOTA 1900 EI OLE TÄMÄN LEHDEN AIHE. Se on
+   * GHA-skandaalin aihe kokonaisuudessaan (skandaalit.js,
+   * kultajakkaran-sota: Hodgson, Yaa Asantewaa, Prempeh I:n
+   * maanpako, Fomenan korvaus). Lehti kertoo jakkaran SYNNYN
+   * 1695–1701, jota skandaalikortti ei kerro lainkaan.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: perustamisvuodesta ei anneta yhtä lukua. 1680-luku
+   *    (perustaminen), 1695 (pääkaupunki) ja 1701 (Feyiase) ovat eri
+   *    asioita, ja kaikki kolme sanotaan auki.
+   *  - B: Butlerin halventavaa lausetta EI siteerata sanatarkasti,
+   *    mutta kerrotaan, että kuvaukset olivat vastakkaisia.
+   *    Brackenburyn 1873 lause siteerataan.
+   *  - C: väkiluvusta kerrotaan kaikki kolme arviota lähteineen.
+   *  - D: Anokyen miekka ja jakkaran laskeutuminen kerrotaan
+   *    perimätietona lähteen omin varauksin; lähteettömäksi
+   *    merkittyä tikariväitettä ei kerrota lainkaan.
+   *  - F: orjakauppa mainitaan kerran neutraalisti Feyiasen jälkeen
+   *    avautuneen rannikkokaupan yhteydessä.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ: säänormaalit ovat oman agentin
+   * työlistalla. Oppaan sääjakso nojaa siksi en-Wikipedian
+   * Climate-osioon ja sanoo sen ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Kumasi Market.jpg" ja "Kumasi Kejetia and its
+   * busiest road. 01.jpg" (kuva-alaa hallitsevat mainostaulut:
+   * Goodyear, itel, ENA PA), "Kumasi900.JPG" ja "Kumasi924.JPG"
+   * (Afrikan cupin laitamainokset), "Ramseyer Memorial Presbyterian
+   * Church 01–03.jpg" (kuvan päällä vesileima "KhoPhi Photography",
+   * ja kirkko on lisäksi Abetifin eikä Kumasin seurakunta),
+   * "Chimpazee at the Kumasi Zoo.jpg" (paljas häkki, ei kohteen
+   * arvoinen), "A busy monday in Kumasi.jpg" (tyhjä mainoskehikko
+   * hallitsee harmaata kuvaa), "KUMASI.jpg" (vinoon rajattu, harmaat
+   * reunapalkit), "Kumasi Adum.jpg" ja "Adum inside.jpg"
+   * (etualan täyttää auto).
+   *
+   * AVAUSKUVIA ON YKSI EIKÄ KOLME, EIKÄ ENNEN JA NYT -PARIA OLE
+   * LAINKAAN, ja se on valinta. Kumasista ei ole Commonsissa kuutta
+   * sääntöjen mukaista laajaa yleiskuvaa: kaupunki on matala ja
+   * vehreä, eikä siitä ole siluettikuvaa. Kolme kansikuvaa ja yksi
+   * avauskuva löytyi, ja loput ehdokkaat kaatuivat mainoksiin tai
+   * autoihin (ks. hylkäykset); karuselli näyttää yhden kuvan ilman
+   * nuolia (js/lehti.js piirraLehtiKuvat). Ennen ja nyt -pariin ei
+   * löytynyt paria, joka olisi sama paikka kahtena aikana: valokuvataulun vanha puoli (africa-valokuvat.js,
+   * "Kumasi 28-03-1900 sx.jpg") on rasteroitu kirjapainokuva vuoden
+   * 1900 kokouksesta eikä paikkakuva, ja sen uusi puoli
+   * ("Modern market hall of Kejetia market.jpg") on täynnä
+   * mainoslakanoita. Lehti taittuu siis ilman paria kuten Lagos ja
+   * Dubai. Kirjattu kuvaputken tilaukseksi.
+   *
+   * MATKAOPPAAN ETUSIVUKUVA PUUTTUU. Kaava vaatii tuoreen ja
+   * MALTILLISEN PYSTYN (w/h 0,60–0,85) kuvan kaupungin omasta
+   * erikoisuudesta. Kumasin parhaat kente-kuvat (Kwameghana,
+   * 6034 × 4012) ovat kaikki vaakoja, ja pystyt ehdokkaat ovat joko
+   * mainostäyteisiä katukuvia tai lähikuvia ihmisistä. Tilattu
+   * kuvaputkelta.
+   */
+  kumasi: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kumasi',
+      johdanto: 'Kumasi syntyi kum-puun alle sademetsäharjanteelle, '
+        + 'ja Asanten kuninkaat tekivät siitä pääkaupunkinsa. Isoisän '
+        + 'matkavuonna 1873 se oli yhä oman valtakuntansa keskus — '
+        + 'brittihallinto tuli vasta kaksikymmentä vuotta myöhemmin.',
+      kansikuvat: [
+        {
+          tiedosto: 'Kejetia-Markt.jpg',
+          selite: 'Iltavalossa torikadun päivänvarjot, pikkubussit ja '
+            + 'uuden kauppahallin runko jatkuvat horisonttiin asti.',
+          lahde: 'Afus199620, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'View over Kejetia Market - Largest in West Africa - Kumasi - Ghana - 01 (4755555789).jpg',
+          selite: 'Torin peltikatot peittävät koko näkymän, ja '
+            + 'kaukana kohoavat katedraalin kaksi tornia.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Luftbild Kumasi 2012 B004.jpg',
+          selite: 'Lentokoneen ikkunasta kaupunki näkyy matalana ja '
+            + 'vehreänä, ja punainen tie halkaisee sen kulmasta '
+            + 'kulmaan.',
+          lahde: 'Max Froumentin, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: "Kumasi Kejetia on the left and Adehyeman stores on the right, as I've said earlier there isn't anything you can't find here to buy. In between is the busiest road from Suame roundabout entering Kejetia.jpg",
+          selite: 'Sillalta katsottuna Kejetiaan johtava katu on '
+            + 'täynnä pikkubusseja, takseja ja kolmipyöriä '
+            + 'kaupparivien välissä.',
+          lahde: 'AsamoahEl, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaksi siementä, yksi kum-puu',
+          teksti: 'Nimi tulee twin sanasta Kumase, "kum-puun alla": '
+            + 'kum on puu ja ase alla. Kaupungin perusti 1680-luvulla '
+            + 'asantehene Osei Kofi Tutu I. Siitä, kuka paikan valitsi, '
+            + 'kerrotaan monta versiota, ja lähde luettelee ne itse: '
+            + 'toisen mukaan Osei Tutu neuvotteli maasta kum-puun alla, '
+            + 'toisen mukaan Nana Oti Akenten teki kaupat Tafon '
+            + 'päällikön kanssa, kolmannen mukaan Oti rakensi Kwamanin '
+            + 'ja hänen poikansa Obiri Yeboa Kumasin. Useimmat '
+            + 'suulliset lähteet panevat valinnan papin nimiin: Okomfo '
+            + 'Anokye istutti kaksi kum-siementä, toisen Kwamaniin ja '
+            + 'toisen Kumawuun, ja julisti, että kummasta puu kasvaa, '
+            + 'sinne tulee pääkaupunki. Kaupunki nousi harjanteen '
+            + 'itärinteille Nsubenin jokien soilta.',
+          wiki: 'Kumasi',
+        },
+        {
+          otsikko: 'Jakkara, jota ei lasketa maahan',
+          teksti: 'Akaanien käsityksessä jokainen jakkara on '
+            + 'omistajansa sielun istuin. Kun sitä ei käytetä, se '
+            + 'nostetaan seinää vasten, jotta ohikulkevat sielut '
+            + 'voivat levätä sillä. Kaikkien yläpuolella on kultainen '
+            + 'jakkara Sika Dwa Kofi, "perjantaina syntynyt '
+            + 'kultajakkara" — se on koko kansan istuin, elävien, '
+            + 'kuolleiden ja vielä syntymättömien, eikä se saa koskaan '
+            + 'koskettaa maata, vaan asetetaan huovalle. Istuin on 46 '
+            + 'senttiä korkea ja alusta 61 senttiä leveä. Perimätiedon '
+            + 'mukaan pappi Okomfo Anokye kutsui sen taivaalta alas '
+            + 'kansankokouksessa, ja se laskeutui Osei Tutun syliin.',
+          wiki: 'Golden Stool',
+        },
+        {
+          otsikko: 'Liitto, jonka jakkara sitoi yhteen',
+          teksti: 'Anokye ei ollut vain tietäjä vaan poliitikko. Hän '
+            + 'muutti löyhän asantiliiton kansalliseksi liitoksi vuonna '
+            + '1695, nimesi Kumasin pääkaupungiksi yhdessä Osei Tutun '
+            + 'kanssa, perusti liittoon otettujen valtioiden '
+            + 'päälliköistä valtioneuvoston ja järjesti armeijan '
+            + 'uudelleen. Sota ylivaltaa pitänyttä Denkyiraa vastaan '
+            + 'ratkesi Feyiasen taistelussa 1701, ja saaliiksi tuli '
+            + 'hollantilaisten Elminan linnan vuokrakirja. Se avasi '
+            + 'tien rannikolle: valtakunnan talous nojasi kultaan, '
+            + 'maataloustuotteisiin, käsityöhön, pohjoisen '
+            + 'karavaanikauppaan ja orjakauppaan. Sodan jälkeen '
+            + 'liittolaiset tunnustivat Kumasin liiton keskukseksi ja '
+            + 'Osei Tutun asantehenenä.',
+          wiki: 'Asante Empire',
+        },
+        {
+          otsikko: 'Vuosi 1873: tie, jonka päässä oli Kumasi',
+          teksti: 'Britannia osti 1872 Alankomaiden Kultarannikon ja '
+            + 'sen mukana Elminan, jota asantit pitivät ominaan; '
+            + 'asantit hyökkäsivät uuteen protektoraattiin, ja kolmas '
+            + 'sota alkoi. Kenraali Garnet Wolseley nimitettiin '
+            + '13. elokuuta 1873, ja retkikunta rakensi rannikolta '
+            + 'sisämaahan tien ja 237 siltaa; Pra-joen yli tuotiin '
+            + 'valmisosat Chathamista asti. Ensimmäiset joukot '
+            + 'marssivat 1. tammikuuta 1874, Amoafulin taistelu '
+            + 'käytiin 31. tammikuuta, ja britit saapuivat tyhjään '
+            + 'Kumasiin 4. helmikuuta. Fomenan rauha heinäkuussa 1874 '
+            + 'vaati asanteilta 50 000 unssia kultaa. Isoisän '
+            + 'matkavuonna kaupunki oli siis vielä pystyssä — ja tie '
+            + 'sitä kohti oli juuri rakenteilla.',
+          wiki: 'Anglo-Ashanti wars',
+        },
+        {
+          otsikko: 'Kaupunki, josta ei ollut kahta samaa kuvausta',
+          teksti: 'Vuonna 1873 Brackenbury kirjoitti Kumasista, että '
+            + '"kadut ovat yleensä hyvin leveitä ja puhtaita ja '
+            + 'koristeltuja monilla kauniilla banyan-puilla, jotka '
+            + 'antavat kiitollista varjoa auringon voimakkailta '
+            + 'säteiltä". Vuotta myöhemmin F. Boyle huomautti, että '
+            + 'kaupungin hajut eivät koskaan ole viemärin hajuja. '
+            + 'Samasta kaupungista kirjoitettiin myös päinvastaista: '
+            + 'William Butlerin kuvaus on yhtä halventava kuin '
+            + 'toisten on ylistävä. Väkiluvustakaan ei päästy yksiin: '
+            + 'asantilaiset lähteet arvioivat 1800-luvun alussa '
+            + 'satatuhatta, eurooppalaiset kaksitoista- tai '
+            + 'viisitoistatuhatta, ja historioitsija Ivor Wilks '
+            + 'neljäkymmentätuhatta 1860-luvulla. Kaupunki oli sama; '
+            + 'katsojat eivät.',
+          wiki: 'Kumasi',
+        },
+        {
+          otsikko: 'Kumawood kuvaa twiksi',
+          teksti: 'Kumasilla on oma elokuvateollisuutensa, Kumawood, '
+            + 'joka vetää puoleensa niitä, joilla ei ole pääsyä '
+            + 'koulutukseen mutta on into näytellä. Elokuvat '
+            + 'sijoittuvat kyliin, ne puhutaan twiksi, ja budjetti on '
+            + 'noin 6 900–11 400 dollaria. Elokuva ei ole kaupungissa '
+            + 'uutta: ensimmäinen dokumentoitu elokuvateatteri Rex '
+            + 'Cinema rakennettiin 1938 Prempeh Assembly Halliin, joka '
+            + 'oli silloin kaupungin suurimpia kokoontumispaikkoja, ja '
+            + 'toinen valmistui 1951 tuhannelleviidellesadalle '
+            + 'katsojalle. Teatterit omisti libanonilainen West '
+            + 'African Picture Company, joka toimi Kultarannikolla, '
+            + 'Nigeriassa ja Lontoossa — ja hindielokuvat olivat '
+            + 'katsotuimpia.',
+          wiki: 'Kumawood',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Kumasi on Ghanan toiseksi suurin kaupunki ja '
+          + 'Ashantin alueen pääkaupunki, noin kahdensadan kilometrin '
+          + 'päässä Accrasta sademetsävyöhykkeellä 250–300 metrin '
+          + 'korkeudella. Kaupungissa asuu 443 981 ihmistä ja koko '
+          + 'metropolialueella lähes kolme ja puoli miljoonaa — ero on '
+          + 'iso, ja se kannattaa muistaa lukuja vertaillessa. '
+          + 'Suurimmat kansat ovat asante, mole-dagbon ja ewe, ja '
+          + 'suurin osa asukkaista on syntynyt kunnan ulkopuolella, '
+          + 'noin puolet koko alueen ulkopuolella. Kumasi on maan '
+          + 'liikenteen risteys, ja siitä tulee suuri osa sen '
+          + 'vauraudesta; Ashantin alue tuotti 2014 viidenneksen '
+          + 'Ghanan tuotannosta, ja siitä lähes puolet syntyi tässä '
+          + 'kaupungissa. Se on yhä asantehenen istuinkaupunki, ja '
+          + 'siksi sitä sanotaan myös nimellä Oseikrom.',
+        artikkeli: {
+          nimi: 'Matkailijan Kumasi',
+          taitto: 'opas',
+          teksti: 'Puutarhakaupunki, jossa puutarhat ovat vähissä, '
+            + 'kuningaskunta, jolla on yhä kuningas, ja tori, jolla '
+            + 'kengät loppuvat ja tomaatit alkavat.',
+          nosto: 'Kumasi on yksi harvoista Afrikan kaupungeista, jotka '
+            + 'omaksuivat puutarhakaupungin mallin: Maxwell Fry ja '
+            + 'Jane Drew laativat 1945 kaavan, jossa kaupungin '
+            + 'ympärille piirrettiin viherkehät. Lempinimi jäi, '
+            + 'vaikka viheralasta on suuri osa rakennettu umpeen.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentokenttä on Prempeh I International '
+                + 'Airport, jonka laajennus valmistui lokakuussa '
+                + '2022; keväällä 2020 sieltä lensi säännöllisesti '
+                + 'kaksi yhtiötä Accraan. Kaupungissa liikutaan '
+                + 'tro-tro-pikkubusseilla, jotka ovat yksityisiä ja '
+                + 'kulkevat vakiintuneita, hyvin tunnettuja '
+                + 'reittejä; taksit ovat kalliimpia mutta mukavampia, '
+                + 'ja osa niistäkin ajaa vakioreittiä. Vuonna 2002 '
+                + 'aloitettiin MetroMass-pikabussit. Kaukoliikennettä '
+                + 'on Accraan, Tamaleen, Cape Coastiin, Takoradiin ja '
+                + 'Bolgatangaan asti. Junaa ei kannata odottaa: radat '
+                + 'Accraan ja Sekondi-Takoradiin ovat olemassa, mutta '
+                + 'liikenne on ollut vuosia poikki vaurioituneiden '
+                + 'ratojen, siltojen ja vetureiden takia.',
+            },
+            {
+              otsikko: 'Millaisissa taloissa täällä asutaan',
+              teksti: 'Yleisin talotyyppi on compound-talo: '
+                + 'yksikerroksinen rakennus, jossa yhden hengen '
+                + 'huoneet kiertävät neliömäistä sisäpihaa. Niissä '
+                + 'asuu keskimäärin kahdeksasta viiteentoista '
+                + 'taloutta, ja ne rakennetaan halvoista aineista '
+                + 'paikallisin voimin. Vuoden 2010 laskennassa '
+                + 'compound-talossa asui 54,9 prosenttia talouksista, '
+                + 'erillistalossa 16,4, kerrostalossa 12,9 ja '
+                + 'paritalossa 8,7. Kaupunkia ei koskaan kaavoitettu '
+                + 'muodollisesti, mutta sitä pidettiin hyvin '
+                + 'järjestettynä: rakennustapa noudatti paikallista '
+                + 'kulttuuria ja arkkitehtuuria. Metropoli jakautuu '
+                + 'kymmeneen alueeseen, joista tutuimmat nimet ovat '
+                + 'Manhyia, Adum, Bantama ja Asokwa.',
+            },
+            {
+              otsikko: 'Mitä täällä tehdään käsin',
+              teksti: 'Kumasi tunnetaan kentestä, ja kangas tehdään '
+                + 'lähes aina perinteisin menetelmin; kutojien kylä '
+                + 'on Bonwire. Kaupungin ympäristössä on myös '
+                + 'kymmenen asantilaista perinnerakennusta, jotka '
+                + 'ovat Unescon maailmanperintöluettelossa vuodesta '
+                + '1980. Ne olivat 1700- ja 1800-luvulla pyhäkköjä ja '
+                + 'ovat viimeiset laatuaan: rakennettu puusta, '
+                + 'bambusta ja savilaastista, huoneet sisäpihan '
+                + 'ympärillä, ja seinissä kohokuvioita — kierteitä, '
+                + 'arabeskeja, eläimiä, lintuja ja kasveja sekä '
+                + 'adinkra-merkkejä. Ne ovat säilyneet, koska niissä '
+                + 'yhä harjoitetaan perinteistä uskontoa; savi ja '
+                + 'olki eivät kestä ilman jatkuvaa hoitoa.',
+            },
+            {
+              otsikko: 'Koulut ja korkeakoulut',
+              teksti: 'Oppilaitoksia on kaupungissa 2 545, ja niistä '
+                + 'kymmenen on korkeakouluja. Suurin on Kwame Nkrumah '
+                + 'University of Science and Technology, joka on '
+                + 'Ashantin suurin ja koko Ghanan suurin yliopisto; '
+                + 'sen kasvatteihin kuuluu YK:n entinen pääsihteeri '
+                + 'Kofi Annan. Koulu avattiin 1952 nimellä College of '
+                + 'Technology, arkkitehtuurin osasto otti ensimmäiset '
+                + 'opiskelijansa 1958, ja yliopistoksi se muuttui '
+                + '1961. Toisen asteen kouluja on paljon ja osa '
+                + 'niistä on maan arvostetuimpia: Prempeh College, '
+                + 'Opoku Ware School, Yaa Asantewaa Girls’ Senior '
+                + 'High School ja St. Louis Senior High School.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Kumasi-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säänormaaleja ei haettu tässä '
+                + 'erässä. Ilmasto on trooppinen savanni-ilmasto, '
+                + 'jossa on kaksi sadekautta: suuri maaliskuusta '
+                + 'heinäkuuhun ja pieni syyskuusta marraskuuhun. '
+                + 'Sadetta tulee vuodessa noin 1 200 millimetriä, ja '
+                + 'ilman kosteus vaihtelee 53 ja 93 prosentin '
+                + 'välillä. Kuukausien ylimmät lämpötilat ovat noin '
+                + '31 astetta ja alimmat noin 22. Kuumin kuukausi on '
+                + 'helmikuu, viilein elokuu — ero on vain kuusi '
+                + 'astetta, joten vuodenaika valitaan sateen eikä '
+                + 'lämpötilan mukaan.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kejetian tori',
+                tahdet: 3,
+                selite: 'Länsi-Afrikan suurin yksittäinen tori: yli '
+                  + 'kahdeksantuhatta myymälää ja kojua.',
+              },
+              {
+                mita: 'Bosumtwe-järvi',
+                tahdet: 3,
+                selite: 'Miljoona vuotta vanha törmäyskraatteri '
+                  + 'sademetsässä, ja asanteille pyhä järvi.',
+              },
+              {
+                mita: 'Kumasin linnake ja sotamuseo',
+                tahdet: 3,
+                selite: 'Rakennettu 1897 tuhotun linnakkeen tilalle; '
+                  + 'museo vuodesta 1953.',
+              },
+              {
+                mita: 'Kansallinen kulttuurikeskus',
+                tahdet: 2,
+                selite: 'Avattiin 1956 asantien kulttuurikeskuksena; '
+                  + 'alueella on Prempeh II:n museo.',
+              },
+              {
+                mita: 'Owabin lintusuo',
+                tahdet: 2,
+                selite: 'Ghanan ainoa sisämaan Ramsar-kohde, jossa on '
+                  + 'noin 161 lintulajia.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin oppaan
+             * jaksoissa ja teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Kaksi sadekautta, ei yhtä',
+                teksti: 'Suuri sadekausi kestää maaliskuusta '
+                  + 'heinäkuuhun ja pieni syyskuusta marraskuuhun — '
+                  + 'väliin jää lyhyt kuivempi jakso elokuussa.',
+              },
+              {
+                otsikko: 'Juna ei kulje',
+                teksti: 'Radat Accraan ja Sekondi-Takoradiin ovat '
+                  + 'olemassa, mutta liikenne on ollut poikki vuosia '
+                  + 'vaurioituneen radan ja kaluston takia.',
+              },
+              {
+                otsikko: 'Puutarhakaupunki on osin nimi vain',
+                teksti: 'Vuoteen 2003 mennessä suuri osa vuoden 1945 '
+                  + 'kaavan viheralasta oli rakennettu asuinkäyttöön; '
+                  + 'viheralaa on noin 4,7 neliömetriä asukasta '
+                  + 'kohti.',
+              },
+              {
+                otsikko: 'Tro-tro kulkee reittiä, ei aikataulua',
+                teksti: 'Pikkubussit ajavat vakiintuneita ja hyvin '
+                  + 'tunnettuja reittejä; taksi maksaa enemmän mutta '
+                  + 'on mukavampi, ja osa niistäkin ajaa reittiä.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Metsä ja järvi',
+      johdanto: 'Kumasi seisoo sademetsävyöhykkeellä kahden sadekauden '
+        + 'rytmissä, ja sen eteläpuolella on järvi, joka syntyi '
+        + 'miljoona vuotta sitten taivaalta pudonneesta kivestä.',
+      tehtava: {
+        kysymys: 'Miksi Bosumtwe-järvellä saa kalastaa vain '
+          + 'puulankuilta?',
+        vaihtoehdot: [
+          'Vesi on liian syvää veneelle',
+          'Vene häiritsisi kraatterin mittauksia',
+          'Järvi on pyhä ja kuolleiden sielut käyvät siellä',
+          'Puu kelluu paremmin kuin metalli',
+        ],
+        oikea: 2,
+        fakta: 'Asantien perinteisen uskomuksen mukaan kuolleiden '
+          + 'sielut tulevat Bosumtwelle jättämään jäähyväiset '
+          + 'jumalatar Asase Yalle, ja siksi järvellä on lupa '
+          + 'kalastaa vain puulankuilta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Järvi, jonne sielut tulevat hyvästelemään',
+          teksti: 'Kaupungin eteläpuolella on Bosumtwe, asanteille '
+            + 'pyhä järvi. Perinteisen uskomuksen mukaan kuolleiden '
+            + 'sielut tulevat sinne jättämään jäähyväiset jumalatar '
+            + 'Asase Yalle, ja siksi järvellä saa kalastaa vain '
+            + 'puulankuilta — ei veneellä. Vedessä elää kotoperäinen '
+            + 'kirjoahven Hemichromis frempongi ja kaksi lähes '
+            + 'kotoperäistä tilapiaa. Järvi on 8,6 kilometriä pitkä ja '
+            + '8,1 leveä, syvimmillään 81 metriä, eikä siitä laske '
+            + 'jokea mihinkään: vesi tulee sateesta ja lähtee '
+            + 'haihtumalla. Nimen kirjoitusasu vaihtelee lähteestä '
+            + 'toiseen, Bosumtwi ja Bosomtwe.',
+          tiedosto: 'Lake Bosumtwi, Ghana.jpg',
+          selite: 'Rannalla palmunlehvät kaartuvat veden ylle, ja '
+            + 'takana nousee kraatterin metsäinen reunavuori.',
+          lahde: 'Stig Nygaard from Copenhagen, Denmark, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Lake Bosumtwi',
+        },
+        {
+          otsikko: 'Kivi, joka putosi miljoona vuotta sitten',
+          teksti: 'Järvi on törmäyskraatterissa. Kraatteri on '
+            + 'halkaisijaltaan 10,5 kilometriä eli hieman järveä '
+            + 'suurempi, ja se on 1,07 miljoonaa vuotta vanha. '
+            + 'Syvyyttä on noin 380 metriä ja sedimenttien kanssa '
+            + '750. Todisteet ovat kaukana: Norsunluurannikolta '
+            + 'löytyy tektiittejä, joiden uskotaan syntyneen tästä '
+            + 'törmäyksestä, ja mikrotektiittejä on syvänmeren '
+            + 'sedimenteissä Afrikan länsipuolella. Ennen törmäystä '
+            + 'alue oli rehevää sademetsää. Vesi on käynyt matalalla '
+            + 'ja korkealla: kukkuloiden huipuilta on löytynyt '
+            + 'kalanfossiileja, ja vielä noin kolmesataa vuotta '
+            + 'sitten järvi oli kutistunut lammeksi.',
+          tiedosto: 'An Explosive Beginning for Lake Bosumtwi (154739 - 151229 lrg).jpg',
+          selite: 'Satelliittikuvassa järvi on lähes pyöreä tumma '
+            + 'kiekko keskellä metsäistä kraatterirengasta, ja '
+            + 'vasemmassa yläkulmassa levittäytyy Kumasi.',
+          lahde: 'NASA Earth Observatory images by Michala Garrison, '
+            + 'using Landsat data from the U.S. Geological Survey. '
+            + 'Story by Adam Voiland., Wikimedia Commons (PD)',
+          wiki: 'Lake Bosumtwi',
+        },
+        {
+          otsikko: 'Puutarhakaupunki, joka piti puolustaa',
+          teksti: 'Kumasi on yksi harvoista Afrikan kaupungeista, '
+            + 'jotka omaksuivat Ebenezer Howardin puutarhakaupungin '
+            + 'mallin. Vuonna 1945 Maxwell Fry ja Jane Drew laativat '
+            + 'kaupungin ensimmäisen kehityssuunnitelman sen '
+            + 'ihanteiden pohjalta: kaupungin ympärille piirrettiin '
+            + 'viherkehät, ja puistoja ja kaupunkivihreää lisättiin, '
+            + 'jotta rakentaminen ei leviäisi hallitsemattomasti ja '
+            + 'ilma pysyisi puhtaampana. Lempinimi Garden City tuli '
+            + 'Fryn samana vuonna julkaisemasta kirjoituksesta. '
+            + 'Kaava ei kuitenkaan pitänyt: vuoteen 2003 mennessä '
+            + 'suuri osa viheralasta oli rakennettu asuinkäyttöön, ja '
+            + 'sitä on nyt 4,7 neliömetriä asukasta kohti.',
+          wiki: 'Kumasi',
+        },
+        {
+          otsikko: 'Sadankuudenkymmenen linnun suo',
+          teksti: 'Owabin luonnonsuojelualue on Ghanan ainoa sisämaan '
+            + 'Ramsar-kohde; se merkittiin kansainvälisesti '
+            + 'arvokkaaksi kosteikoksi 22. helmikuuta 1988. Alueella '
+            + 'elää noin 161 lintulajia, sekä kotoperäisiä että '
+            + 'muuttajia, ja se sopii sekä retkeilyyn että lintujen '
+            + 'tarkkailuun. Kaupunkiin verrattuna se on hiljainen '
+            + 'paikka: Kumasin omat puistot ovat suureksi osaksi '
+            + 'huonossa kunnossa, ja vuoden 2014 tutkimuksen mukaan '
+            + 'kolmasosa asukkaista ei käy puistoissa lainkaan ja '
+            + 'lähes yhtä moni pitää niitä tarpeettomina. Lintusuolla '
+            + 'kävijä on siis harvinaisemmassa seurassa kuin luulisi.',
+          wiki: 'Owabi Wildlife Sanctuary',
+        },
+        {
+          otsikko: 'Puolet maan sahoista',
+          teksti: 'Metsä ei jää kaupungin ulkopuolelle vaan tulee '
+            + 'sisään: puolet koko Ghanan puunjalostuksesta tapahtuu '
+            + 'Kumasissa. Kaupungin varallisuus tulee kahdesta '
+            + 'asiasta, siitä että se on maan pääteiden risteys ja '
+            + 'siitä että sen takamaastossa viljellään kaakaota. '
+            + 'Ashantin alue tuotti 2014 viidenneksen Ghanan '
+            + 'tuotannosta, ja siitä lähes puolet syntyi tässä '
+            + 'kaupungissa. Kasvulla on hintansa. Wiwi ja Subin, '
+            + 'kaupungin läpi kulkevat joet, ovat uhattuina, ja 2024 '
+            + 'julkaistun raportin mukaan niiden rannoilla oli '
+            + 'enemmän teollisuutta, asumista ja liiketiloja kuin '
+            + 'viheralaa; tutkijat esittivät kolmenkymmenen metrin '
+            + 'suojavyöhykettä.',
+          wiki: 'Kumasi',
+        },
+      ],
+    },
+  ],
+  /*
+   * KANO (Opus 7.9.2026, paketti O9) — Afrikan laudan kaupunkilehti.
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-kano.md ja sen
+   * riippumaton tarkistus tarkistus-kano.md (tuomio "kelpaa, kun
+   * kohtien A–G ratkaisut tehdään"; kaikki seitsemän on tehty).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Kano (city)", "Kano Chronicle", "Kurmi Market", "Morocco
+   * leather", "Durbar festival", "Hausa architecture",
+   * "Trans-Saharan trade".
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * Saapumisteksti, valokuvataulu ja litteä kulttuuritaulu olivat jo
+   * olemassa eikä niihin kosketa. Litteän taulun värjäämökuva,
+   * durbar- ja muurinostot jäävät siis peliin, eikä lehti käytä
+   * samaa kuvatiedostoa.
+   *
+   * NIGERIAN MAALEHTEÄ EI TOISTETA, EIKÄ LAGOSIN LEHTEÄ. Maalehti
+   * (maa-kategoriat.js, NGA) kertoo AMINASTA JA ZAZZAUN MUUREISTA,
+   * Oyon kalebassista, NANA ASMAʼUSTA JA SOKOTOSTA, vuoden 1929
+   * naisten sodasta, jollofista ja suyasta, puhuvasta rummusta ja
+   * afrobeatista, Ifen päistä ja ADIRESTA. Lagosin kaupunkilehti
+   * (v1670) kertoo aworeista, Beninistä, vuodesta 1861, saroista,
+   * Eyo-kulkueesta ja laguunista. Yksikään näistä ei ole tämän
+   * lehden aihe.
+   *
+   * INDIGO ESIINTYY MYÖS MAALEHDESSÄ, MUTTA ERI ASIANA. Maalehden
+   * "Sitoa ja liottaa" kertoo ADIRESTA, jorubanaisten sitomalla ja
+   * liottamalla värjäämästä kankaasta Abeokutassa ja Ibadanissa;
+   * Kanon Kofar Matan kuopat ovat hausalainen värjäämölaitos ja
+   * kohdekartan kohde. Tekniikkaa ei selosteta täällä uudestaan.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: muurin valmistumisvuodesta kerrotaan MOLEMMAT versiot
+   *    (Tsaraki 1100-luvulla / Zamnagawa 1300-luvun puolivälissä).
+   *    Nosto on kohdekartan Kofar Nassarawa -jutussa.
+   *  - B: Dala-kukkulan korkeus annetaan merenpinnasta, ei nousuna;
+   *    lähteen oma clarify-merkintä sanotaan ääneen.
+   *  - C: orjuus kerrotaan Barthin arviona lähteen varauksella,
+   *    ilman prosenttilukua.
+   *  - D: värjäämökuoppien iäksi sanotaan "yli viisisataa vuotta" ja
+   *    "1400-luvulta"; vuosilukua 1498 ei käytetä.
+   *  - F: Kurmin tori on teemasivun nosto eikä kartan kohde, koska
+   *    sille ei ole luotettavaa koordinaattia.
+   *
+   * NYKYKONFLIKTIT JA NYKYPOLITIIKKA JÄTETÄÄN POIS KOKONAAN. Sama
+   * linjaus kuin Aleppossa ja Bagdadissa: ei vuoden 1980
+   * mellakkaa, ei Boko Haramia, ei sharia-lain käyttöönottoa, ei
+   * emiirikunnan jakamista 2019.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ: säänormaalit ovat oman agentin
+   * työlistalla. Oppaan sääjakso nojaa siksi en-Wikipedian
+   * Climate-osioon ja sanoo sen ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Kofar Mata Dye Pit Entrance.jpg" ja "Kofar Mata Dye
+   * Pit since 1498.jpg" (kuvan päällä vesileima "©SOLASLY", lisäksi
+   * seinällä vaalijulisteita), "Circular dye pits.jpg" ja
+   * "Turning textiles in dye pit.jpg" (vesileima "@BLAQQYO"),
+   * "Kofar Mata Dye pit workers beating dye clothes.jpg" ja
+   * "Workers at a Kano Dye pit 01.jpg" (tunnistettavia kasvoja
+   * lähikuvassa; jälkimmäinen on lisäksi pyykkipaikka eikä
+   * indigovärjäämö), "Sabon Gari Market Kano.jpg" (kuvan keskellä
+   * iso LUMINOUS-mainostaulu), "Sandalwood and incense materials at
+   * Kurmi Market Kano.jpg" (etualalla tunnistettava lapsen kasvo),
+   * "View-Kano city-1911.jpg" (vain 760 × 425 pikseliä, eli alle
+   * kuvasäännön 1200 px — sama tiedosto jää valokuvatauluun, jossa
+   * kokovaatimusta ei ole).
+   *
+   * SUURMOSKEIJAN KUVA ON ENNEN JA NYT -PARISSA, EI JUTUSSA.
+   * Nykykuva "The Kano Central Mosque.jpg" on parin uusi puoli, ja
+   * kohdekartan moskeijajuttu jää siksi kuvattomaksi: sama rakennus
+   * kahdesti samassa lehdessä olisi aihetoistoa.
+   *
+   * KOFAR MATAN VÄRJÄÄMÖT JÄÄVÄT KUVATTOMIKSI, ja se on valinta.
+   * Commonsin värjäämökuvat ovat joko vesileimattuja tai
+   * lähikuvia tunnistettavista ihmisistä (ks. hylkäykset). Litteän
+   * taulun kuvaa (africa-kulttuuri.js, "Kofar Mata Dye Pit,
+   * Kano.jpg") ei käytetä uudestaan lehdessä. Tilattu kuvaputkelta.
+   */
+  kano: [
+    {
+      id: 'kaupunki',
+      nimi: 'Kano',
+      johdanto: 'Kano kasvoi Dala-kukkulan juurelle savimuurien '
+        + 'sisään ja eli tuhat vuotta Saharan-kaupan eteläisenä '
+        + 'päänä. Isoisän matkavuonna 1873 se oli Sokoton kalifaatin '
+        + 'suurin ja vaurain emiirikunta — ja yksi nälkävuosi.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: vanhakaupunki
+       * kukkulalta, portti muureineen ja Dala-kukkula kaupungin yllä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'KanofromDalaHill.jpg',
+          selite: 'Dala-kukkulan kalliolta katsoen vanhankaupungin '
+            + 'tasakatot jatkuvat horisonttiin palmujen ja '
+            + 'minareettien lomassa.',
+          lahde: 'Shiraz Chakera, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Sabuwar Kofa - Kano City Gate.jpg',
+          selite: 'Kolmikaarinen kaupunginportti kohoaa keskellä '
+            + 'katua, ja hammastettu muuri jatkuu sen molemmin '
+            + 'puolin.',
+          lahde: 'Suleiman Umar, Aminu Abdullahi, Abubakar Yusuf, '
+            + 'www.kanostreetsonosm.org.ng, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Dalla Hill from Kano City.jpg',
+          selite: 'Kaupungin takaa nousee Dala-kukkulan tasapäinen '
+            + 'kallio, ja etualalla lammen rannassa on savimuurin '
+            + 'jäänteitä.',
+          lahde: 'DipoTayo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Kanolle ei ole generoitu herokuvia, joten
+       * karusellissa on kolme aitoa valokuvaa (vertaa Lagosiin ja
+       * Fèsiin): vanha savimuuri, muuri ja sen kunnostettu osa sekä
+       * Kofar Naisan portti.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'A part of the Kano City Wall from Medieval times.jpg',
+          selite: 'Keskiaikaisen savimuurin pätkä ampuma-aukkoineen '
+            + 'seisoo yhä keskellä kaupunkia torikojujen takana.',
+          lahde: 'Solasly, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kano Wall 1.jpg',
+          selite: 'Vasemmalla on kulunut savimuuri, oikealla sama '
+            + 'muuri kunnostettuna ja maalattuna.',
+          lahde: 'Cepit, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Kofar Naisa - Kano City Gate.jpg',
+          selite: 'Kofar Naisan portin läpi näkyy kadun jatkuvan '
+            + 'vanhaankaupunkiin, ja muurin vieressä käydään '
+            + 'karjakauppaa.',
+          lahde: 'Suleiman Umar, Aminu Abdullahi, Abubakar Yusuf, '
+            + 'www.kanostreetsonosm.org.ng, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: sama moskeija, sama kuvakulma, kuusi
+       * vuosikymmentä. Vanha puoli on Dr Mary Gillham Archive
+       * Projectin värikuva vuodelta 1960, uusi puoli nykyvalokuva
+       * samasta suunnasta. Molemmissa näkyvät samat kaksi minareettia
+       * ja vihreä kupoli; erot ovat puiden koossa ja aidassa.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Kano Mosque in 1960.jpg',
+          vuosi: '1960',
+          selite: 'Vuonna 1960 moskeija oli vielä uusi ja hohtavan '
+            + 'valkoinen, ja edessä kasvoi vain nuoria puita.',
+          lahde: 'Dr Mary Gillham Archive Project, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'The Kano Central Mosque.jpg',
+          selite: 'Sama moskeija nykyään: kupoli on yhä vihreä, mutta '
+            + 'puut ovat kasvaneet minareettien juurelle.',
+          lahde: 'Usmanmaifada, Wikimedia Commons (CC0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kronikka, joka kirjoitettiin lopusta alkuun',
+          teksti: 'Kanon kronikka on arabiankielinen käsikirjoitus, '
+            + 'joka luettelee kaupungin hallitsijat 900-luvulle asti: '
+            + 'Bagauda 999–1063, Warisi, Gijimasu, Tsaraki, ja niin '
+            + 'edelleen Muhammad Rumfaan ja häntä myöhempiin. '
+            + 'Luettelo näyttää vanhalta, mutta teksti ei ole: '
+            + 'nykyinen kronikka on todennäköisesti kirjoitettu '
+            + '1880-luvulla, ja kirjoittajaksi arvellaan Malam '
+            + 'Barkaa, korkea-arvoista virkamiestä emiiri Muhammad '
+            + 'Bellon palveluksessa. Teos saattaa koota yhteen '
+            + 'vanhempia tekstejä. Alkuperäiskappale on yhä Kanossa, '
+            + 'Malam Idris al-Khilawiyn jälkeläisillä.',
+          wiki: 'Kano Chronicle',
+        },
+        {
+          otsikko: 'Kaksi käännöstä, kaksi eri tekstiä',
+          teksti: 'Kronikka tunnetaan maailmalla käännöksinä. Sir '
+            + 'Richmond Palmer käänsi sen englanniksi 1908, ja se on '
+            + 'yhä tunnetuin versio. Rupert M. East teki 1933 '
+            + 'hausannoksen nimellä Labarun Hausawa da Makwabtansu, '
+            + 'ja siinä on kohtia, jotka eivät ole Palmerin tekstissä '
+            + '— syy on yksinkertainen: East käytti eri '
+            + 'käsikirjoitusta. Kaksi käännöstä ovat siis kaksi '
+            + 'tekstiä eivätkä sama teksti kahdella kielellä. Kanon '
+            + 'oma nimi on sekin vaihtunut: kaupunkia sanottiin '
+            + 'alkujaan Dalaksi kukkulan mukaan, ja bornulaiset '
+            + 'lähteet käyttivät sitä nimeä vielä 1400-luvun '
+            + 'lopulla.',
+          wiki: 'Kano Chronicle',
+        },
+        {
+          otsikko: 'Kuningas, joka luopui pyhäköstä',
+          teksti: 'Islam saapui Kanoon 1000-luvulla tai aiemmin, '
+            + 'pääosin Saharan-kaupan mukana, ja kaupunki rikastui '
+            + 'sen myötä alueen kaupan hermokeskukseksi. Käänne '
+            + 'kirjattiin 1100-luvulle: Kudawa-suvun Ali Yaji luopui '
+            + 'Tsumburbura-kultin palvonnasta, kääntyi islamiin ja '
+            + 'julisti sultanaatin, joka kesti aina 1800-luvulle '
+            + 'asti. Hänen kaudellaan alkoi laajentuminen, joka teki '
+            + 'Kanosta hausalaisen valtapiirin pääkaupungin. '
+            + 'Kaupunki oli jo silloin monikansallinen: siellä asui '
+            + 'vakinaisesti arabeja, tuaregeja ja kanureita, ja niin '
+            + 'asuu yhä.',
+          wiki: 'Kano (city)',
+        },
+        {
+          otsikko: 'Strutsinsulkakengät ja kakaki',
+          teksti: 'Muhammad Rumfa nousi valtaistuimelle 1463 ja '
+            + 'hallitsi 1499 asti. Nousevan Songhain paine pakotti '
+            + 'hänet ottamaan vaimokseen Auwan, Askia Suuren '
+            + 'tyttären; Auwasta tuli myöhemmin Kanon ensimmäinen '
+            + 'naispuolinen madaki. Hovi oli komeileva: virkamiehillä '
+            + 'oli ylellisiä vaatteita ja kalliita '
+            + 'strutsinsulkakenkiä, ja kakaki-torvi otettiin käyttöön '
+            + 'hänen aikanaan. Rahat tulivat kaupasta, ja Kanon maine '
+            + 'Saharan-kaupan keskuksena oli keskiajalla korkeimmillaan '
+            + 'luultavasti juuri silloin. Leo Africanuksen kuvauksen '
+            + 'uskotaan olevan tältä ajalta: hän sanoi asukkaita '
+            + 'varakkaiksi kauppiaiksi ja taitaviksi käsityöläisiksi '
+            + 'ja pani merkille riisin, maissin, puuvillan ja '
+            + 'sitrushedelmien runsauden.',
+          wiki: 'Muhammad Rumfa',
+        },
+        {
+          otsikko: 'Vuosi 1873: emiirikunta ja nälkävuosi',
+          teksti: 'Usman dan Fodion jihadin jälkeen Kanon viimeinen '
+            + 'sultaani kukistettiin 1805, ja kaupungista tuli '
+            + 'Sokoton kalifaatin emiirikunta — jo silloin '
+            + 'valtakunnan suurin ja vaurain provinssi. Kudonta, '
+            + 'värjäys ja nahkatyö kulkivat kauppatavarana pohjoisessa '
+            + 'Marokkoon asti ja sieltä Eurooppaan, ja puuvillakangas '
+            + 'meni Tripoliin, Tšad-järvelle ja Timbuktuun. Heinrich '
+            + 'Barth kävi kaupungissa 1851 ja mittasi muurin noin '
+            + 'kymmenen mailin pituiseksi ja kolmenkymmenen jalan '
+            + 'korkuiseksi; asukkaita hän laski kolmekymmentätuhatta '
+            + 'ja kutsui Kanoa Keski-Afrikan suurimmaksi '
+            + 'kauppapaikaksi. Hän arvioi myös, että suuri osa '
+            + 'kaupungin väestä oli orjuutettuja; Wikipedia merkitsee '
+            + 'arvion lähteettömäksi. Isoisän matkavuosi oli '
+            + 'kaupungille raskas: 1873 on yksi sen nälkävuosista '
+            + '1847:n, 1855:n, 1863:n ja 1884:n rinnalla.',
+          wiki: 'Kano (city)',
+        },
+        {
+          otsikko: 'Neljä päivää hevosen selässä',
+          teksti: 'Kano on perinteisesti ratsastusyhteiskunta, ja se '
+            + 'näkyy durbarissa. Juhla alkaa rukouksilla '
+            + 'aamunkoitteessa, ja sitä seuraa emiirin sekä hänen '
+            + 'ratsastajiensa, muusikkojensa ja tykkimiestensä '
+            + 'kulkue; ylimykset saapuvat vahvistamaan uskollisuutensa. '
+            + 'Kanon durbar kestää neljä päivää, ja perinne on yli '
+            + 'kaksisataa vuotta vanha — se juontuu ajasta, jolloin '
+            + 'hevosia alettiin käyttää sodankäynnissä. Vaikuttavin '
+            + 'osa on Hawan Daushe, jonka lopussa on jahi: ratsastajat '
+            + 'kiitävät täyttä laukkaa kohti emiiriä, pysähtyvät '
+            + 'jyrkästi hänen eteensä, heiluttavat miekkaa tai lippua '
+            + 'ja poistuvat. Unesco otti juhlan aineettoman '
+            + 'kulttuuriperinnön luetteloon joulukuussa 2024.',
+          tiedosto: 'Horsemen during the September 2016 Durbar in Kano - 1.jpg',
+          selite: 'Kuvioiduissa kaavuissa ratsastavat miehet ohjaavat '
+            + 'koristeltuja hevosiaan hiekkakentän poikki '
+            + 'iltavalossa.',
+          lahde: 'DonCamillo, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Durbar festival',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Kano state emirs palace kofar kudu.jpg',
+          selite: 'Puna-kelta-vihreään puettu ratsastaja lähestyy '
+            + 'emiirin palatsin Kofar Kudun porttia.',
+          lahde: 'Bappancey, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kano on Pohjois-Nigerian suurin kaupunki, Kanon '
+          + 'osavaltion pääkaupunki ja koko maan toiseksi väkirikkain '
+          + 'kaupunki. Se on yksi seitsemästä keskiaikaisesta '
+          + 'hausakaupungista, ja pääasukkaat ovat hausat ja fulanit. '
+          + 'Kaupunki oli vahvasti kosmopoliittinen jo vuosisatoja '
+          + 'ennen brittihallintoa: siellä asui vakinaisesti arabeja, '
+          + 'tuaregeja ja kanureita, ja hausa on alueen kauppakieli, '
+          + 'jota puhuu yli seitsemänkymmentä miljoonaa ihmistä. Kano '
+          + 'on 481 metrin korkeudella Sudanin savannivyöhykkeessä '
+          + 'Saharan eteläpuolella, ja aivan sen lähellä yhtyvät '
+          + 'lounaasta tulevat Kano- ja Challawa-joki Hadejiaksi, '
+          + 'joka päätyy lopulta Tšad-järveen. Talouden ydin on yhä '
+          + 'sama kuin keskiajalla: kauppa.',
+        artikkeli: {
+          nimi: 'Matkailijan Kano',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa kadut päättyvät portteihin, savi '
+            + 'on rakennusaine ja väri, ja tori on ollut samassa '
+            + 'paikassa viisisataa vuotta.',
+          nosto: 'Kanon vanhankaupungin talot rakennetaan lateriitista '
+            + 'ja korjataan joka kuivan kauden alussa. Sade pyöristää '
+            + 'terävät muodot vuoden aikana, ja korjaus terävöittää ne '
+            + 'takaisin — juuri siksi hausalaisen talon muoto näyttää '
+            + 'orgaaniselta eikä veistetyltä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lähin lentokenttä on Mallam Aminu Kano '
+                + 'International Airport. Rautatieasemalta kulkee '
+                + 'junia Lagosiin Kadunan kautta; rata kunnostettiin '
+                + 'vuoteen 2013 mennessä, matka kestää '
+                + 'kolmekymmentä tuntia ja maksaa noin kaksitoista '
+                + 'dollaria eli neljänneksen bussilipun hinnasta. '
+                + 'Koska Kano on Kadunan risteyksen pohjoispuolella, '
+                + 'sillä on yhtä hyvä yhteys sekä Lagosin että Port '
+                + 'Harcourtin satamiin. Kaupungin läpi kulkee myös '
+                + 'kaksi Afrikan halki vedettyä autoreittiä, '
+                + 'Algiersista Lagosiin ja Dakarista Ndjamenaan. '
+                + 'Vuonna 2017 kaupungille suunniteltiin 74 '
+                + 'kilometrin ja neljän linjan pikaraitiotietä.',
+            },
+            {
+              otsikko: 'Vanhakaupunki ja Sabon Gari',
+              teksti: 'Kaupunki jakautuu yhä osiin, joiden nimet '
+                + 'kertovat historiaa. Muurien sisäpuolella on '
+                + 'vanhakaupunki portteineen; siellä ovat Kurmin '
+                + 'tori, emiirin palatsi, suurmoskeija ja Gidan '
+                + 'Makaman museo, ja lähistöllä vanhat '
+                + 'värjäämökuopat, jotka ovat yhä käytössä. Muurien '
+                + 'ulkopuolella on Sabon Gari, "uusi kaupunki", jonne '
+                + 'asettuivat rautateiden mukana tulleet kauppiaat ja '
+                + 'työläiset. Kolmas osa on tudun wada, joka '
+                + 'rakennettiin niille pohjoisen väelle, jotka eivät '
+                + 'olleet paikallisia. Neljäs oli eurooppalaisten '
+                + 'asuinalue. Jaon vahvisti hallinnollisesti vuoden '
+                + '1914 asetus.',
+            },
+            {
+              otsikko: 'Talot savesta',
+              teksti: 'Kano on sudanilais-sahelilaisen arkkitehtuurin '
+                + 'johtavia keskuksia, ja sen oma tyyli on nimeltään '
+                + 'tubali. Hausalaisen kaupungin pääosat ovat '
+                + 'puolustusmuuri, palatsi, moskeijat, tori ja '
+                + 'asuinrakennukset, ja rakennuksen pääosat kolme: '
+                + 'päähuone, sisäpiha ja muuri. Tärkein rakennusaine '
+                + 'on lateriitti. Uusi talo näyttää terävältä ja '
+                + 'täsmälliseltä, mutta sade pyöristää muodot vuoden '
+                + 'kuluessa, ja joka kuivalla kaudella talot '
+                + 'korjataan takaisin siisteiksi — siitä syntyy se '
+                + 'pehmeä muoto, josta tyyli tunnetaan. Julkisivujen '
+                + 'koristelu kertoo usein vauraudesta, ja se jakautuu '
+                + 'kolmeen lajiin: pintakuvioihin, ornamentteihin ja '
+                + 'kalligrafiaan.',
+            },
+            {
+              otsikko: 'Mitä täällä opiskellaan',
+              teksti: 'Kaupungin vanhin yliopisto on Bayero '
+                + 'University Kano. Sen siemen oli Isa Kaitan 1962 '
+                + 'perustama Ahmadu Bello College, joka nostettiin '
+                + 'University Collegeksi 1975 ja josta tuli '
+                + 'liittovaltion yliopisto 1977; se jakoi tutkintoja '
+                + 'Ahmadu Bello Universityn nimissä vuoteen 1980. '
+                + 'Muita korkeakouluja ovat Sa’adatu Rimi '
+                + 'University of Education, Yusuf Maitama Sule '
+                + 'University sekä 1975 perustettu Kano State '
+                + 'Polytechnic. Kaupungissa on myös Aminu Kano '
+                + 'College of Islamic Legal Studies ja Federal '
+                + 'College of Education.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Kano-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säänormaaleja ei haettu tässä '
+                + 'erässä. Ilmasto on trooppinen savanni-ilmasto. '
+                + 'Sadetta tulee vuodessa noin 980 millimetriä, ja '
+                + 'valtaosa siitä kesäkuun ja syyskuun välillä. '
+                + 'Kuuminta on huhtikuussa: kuukauden keskilämpö on '
+                + '32 astetta, ja korkein mitattu lukema on '
+                + 'toukokuun 44,8. Joulukuusta helmikuuhun on '
+                + 'viileämpää, ja aamut ovat keskimäärin 14–16 '
+                + 'asteessa; kylmin mitattu on tammikuun viisi '
+                + 'astetta. Samaan aikaan puhaltaa harmattan, joka '
+                + 'tuo Saharasta pölyä.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kofar Matan värjäämökuopat',
+                tahdet: 3,
+                selite: 'Länsi-Afrikan pitkäikäisimpiä '
+                  + 'yhtäjaksoisesti toimivia värjäämöitä, yli '
+                  + 'viisisataa vuotta vanha.',
+              },
+              {
+                mita: 'Gidan Rumfa, emiirin palatsi',
+                tahdet: 3,
+                selite: '1400-luvun lopulta; kolmentoista hehtaarin '
+                  + 'alue viiden metrin muurien sisällä.',
+              },
+              {
+                mita: 'Kurmin tori',
+                tahdet: 3,
+                selite: 'Rumfan perustama kauppapaikka, joka on '
+                  + 'ollut samassa korttelissa 1400-luvulta.',
+              },
+              {
+                mita: 'Gidan Makaman museo',
+                tahdet: 2,
+                selite: 'Yksitoista galleriaa vanhan makaman talossa '
+                  + '— hausa-arkkitehtuuria sisältä nähtynä.',
+              },
+              {
+                mita: 'Dala-kukkula',
+                tahdet: 2,
+                selite: 'Kaupungin vanhin asuinpaikka; huipulle '
+                  + 'nousee 101 porrasta.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin oppaan
+             * sääjaksossa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Harmattan tulee joulukuussa',
+                teksti: 'Joulukuusta helmikuuhun Saharasta puhaltava '
+                  + 'harmattan tuo pölyä; samaan aikaan aamut ovat '
+                  + 'vuoden viileimmät, keskimäärin 14–16 astetta.',
+              },
+              {
+                otsikko: 'Huhtikuu on kuumin',
+                teksti: 'Kuukauden keskilämpö on 32 astetta ja '
+                  + 'korkein mitattu lukema toukokuun 44,8 — '
+                  + 'sadekausi alkaa vasta kesäkuussa.',
+              },
+              {
+                otsikko: 'Sade tulee neljässä kuukaudessa',
+                teksti: 'Vuoden 980 millimetristä valtaosa sataa '
+                  + 'kesäkuun ja syyskuun välillä; muina kuukausina '
+                  + 'on kuivaa.',
+              },
+              {
+                otsikko: 'Durbar ei ole kalenterissa',
+                teksti: 'Kulkue järjestetään islamilaisten '
+                  + 'juhlapäivien mukaan, joten päivämäärä siirtyy '
+                  + 'vuosittain eikä sitä voi lyödä lukkoon '
+                  + 'etukäteen.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kauppa',
+      nimi: 'Kauppa ja käsityö',
+      johdanto: 'Kano oli Saharan karavaanireittien eteläisin pää, ja '
+        + 'sen tavara oli omaa tekoa: indigolla värjättyä kangasta, '
+        + 'vuohennahkaa ja myöhemmin maapähkinää.',
+      tehtava: {
+        kysymys: 'Mistä paras kirjansidontaan käytetty marokkonahka '
+          + 'oikeasti tuli?',
+        vaihtoehdot: [
+          'Marokon Safista',
+          'Egyptin Kairosta',
+          'Espanjan Córdobasta',
+          'Pohjois-Nigerian hausakaupungeista',
+        ],
+        oikea: 3,
+        fakta: 'Nimi tulee marokkolaisesta Safin kaupungista, mutta '
+          + 'osa parhaasta kirjansidontanahasta — yleensä '
+          + 'vuohennahkaa — hankittiin hausakaupunkivaltioista '
+          + 'Kanosta, Katsinasta ja Zazzausta.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tori, jonka kuningas perusti',
+          teksti: 'Muhammad Rumfa perusti Kurmin torin 1400-luvulla; '
+            + 'lähdeteoksen nimi ajoittaa alun vuoteen 1463. Tori '
+            + 'rakennettiin Jakaran kaupunginosaan kaupan ja '
+            + 'varastoinnin keskukseksi, kun alueellinen ja Saharan '
+            + 'yli kulkeva kauppa kasvoivat. Kanossa oli tuolloin jo '
+            + 'toimiva teollisuus: kudontaa, kankaanvärjäystä, '
+            + 'nahkatyötä ja savenvalantaa. Se veti kiertäviä '
+            + 'kauppiaita Länsi-Sudanista, Tripolista ja '
+            + 'Ghadamesista. Tori oli nelikulmio, jonka bambukojut '
+            + 'muodostivat epäsäännöllisiä katuja; eri kortteleissa '
+            + 'myytiin eri tavaraa, ja karjakauppa oli läntisimmässä '
+            + 'laidassa. Lähde toteaa myös, että tori toimi '
+            + 'aikanaan merkittävänä orjatorina.',
+          tiedosto: 'Medicinal herbs at Kurmi Market Kano.jpg',
+          selite: 'Kurmin torilla kuivatut yrtit, juuret ja kaarnat '
+            + 'odottavat ostajaa suurissa peltivadeissa.',
+          lahde: 'Fatima Bukar, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kurmi Market',
+        },
+        {
+          otsikko: 'Torin toinen elämä savikojuissa',
+          teksti: 'Vuonna 1904 vanha tori purettiin, jotta Kanon '
+            + 'natiivihallinto saisi siitä enemmän verotuloja. Uusi '
+            + 'tori avattiin 1909, ja siinä oli 755 savikojua sekä '
+            + 'moskeija ja oikeustalo; katuja levennettiin ja osa '
+            + 'karjakauppiaista siirrettiin muualle. Samaan aikaan '
+            + 'kaupan suunta kääntyi: Saharan sijasta katsottiin '
+            + 'etelään, naapureihin ja eurooppalaisiin. Vuonna 1969 '
+            + 'hallinto siirtyi kaupungin paikallishallinnolle, ja '
+            + 'sen jälkeen erikoistuneet torit ovat vieneet osan '
+            + 'kaupasta — Yan Kaba vihannekset ja Kantin Kwari '
+            + 'tekstiilit. Kurmi palvelee nykyään enimmäkseen omia '
+            + 'kaupunkilaisiaan.',
+          wiki: 'Kurmi Market',
+        },
+        {
+          otsikko: 'Marokkonahka, joka ei ollut Marokosta',
+          teksti: 'Marokkonahka on kasviparkittua nahkaa, joka '
+            + 'tunnetaan pehmeydestään, taipuisuudestaan ja siitä, '
+            + 'että se ottaa värin hyvin. Siitä tehtiin käsineitä, '
+            + 'kengänpäällisiä, lompakoita, matkalaukkujen vuorauksia '
+            + 'ja ennen kaikkea kirjojen kansia. Nimi tulee Marokon '
+            + 'Safin kaupungista, mutta nahka ei yleensä tullut '
+            + 'sieltä: osa parhaasta kirjansidontanahasta, yleensä '
+            + 'vuohennahkaa, hankittiin Pohjois-Nigeriasta ja '
+            + 'nimenomaan hausakaupungeista Kanosta, Katsinasta ja '
+            + 'Zazzausta. Ensimmäinen marokkonahka liitetään ennen '
+            + '1000-lukua eläneisiin maureihin. Parhaat laadut ovat '
+            + 'vuohennahkaa, mutta 1800-luvun lopulla tilalle '
+            + 'pantiin usein lammasta tai halkaistua vasikkaa.',
+          wiki: 'Morocco leather',
+        },
+        {
+          otsikko: 'Maapähkinäpyramidit ja rautatie',
+          teksti: 'Kanon taloushistoria alkaa keskiajalta, jolloin '
+            + 'kaupunki oli Saharan kauppareittien eteläisin piste ja '
+            + 'yhteydessä moniin Pohjois-Afrikan ja joihinkin '
+            + 'Etelä-Euroopan kaupunkeihin. Suunta muuttui 1911, kun '
+            + 'rautatie ylsi Kanoon ja liitti sen Atlantin kauppaan. '
+            + 'Kaupungista tuli vuotien, nahkojen, maapähkinöiden ja '
+            + 'puuvillan vienti- ja tuotantokeskus. Vuosina 1913–1914 '
+            + 'maapähkinäkauppa laajeni ja säkeistä ladotut '
+            + 'maapähkinäpyramidit yleistyivät — samana vuonna '
+            + 'kaupunkia koetteli kuivuus ja nälänhätä. Kanosta on '
+            + 'lähtöisin myös Afrikan rikkain mies Aliko Dangote, '
+            + 'jonka isoisoisä Alhassan Dantata oli 1900-luvun '
+            + 'puolivälissä Länsi-Afrikan rikkain mies.',
+          wiki: 'Kano (city)',
+        },
+        {
+          otsikko: 'Kieli, jolla kauppa käydään',
+          teksti: 'Kanon kauppa kulki kielellä, joka on jäänyt: hausa '
+            + 'on alueen lingua franca, ja sitä puhuu yli '
+            + 'seitsemänkymmentä miljoonaa ihmistä. Kaupunki oli '
+            + 'vuosisatoja ennen brittihallintoa vahvasti '
+            + 'kosmopoliittinen, ja siellä asui vakinaisesti arabeja, '
+            + 'tuaregeja ja kanureita — kaupunki kasvoi juuri siitä, '
+            + 'että vieras jäi asumaan. Kanon oma tavaramerkki oli '
+            + 'indigolla värjätty kangas, ja se kulki Tripoliin, '
+            + 'Tšad-järvelle ja Timbuktuun asti. Vuoden 1903 '
+            + 'brittiläinen lehtikirjoitus kutsui kaupunkia Nigerian '
+            + 'Manchesteriksi juuri tekstiilinvalmistuksen ja '
+            + 'indigovärjäyksen takia.',
+          wiki: 'Kano (city)',
+        },
+      ],
+    },
+  ],
+  /*
+   * TIMBUKTU (Opus 7.9.2026, paketti O9) — Afrikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-timbuktu.md ja sen riippumaton tarkistus
+   * tarkistus-timbuktu.md (tuomio "kelpaa, kun kohtien A–H
+   * ratkaisut tehdään"; kaikki ratkaisut on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026:
+   * "Timbuktu", "History of Timbuktu", "Sankoré Madrasah",
+   * "Timbuktu Manuscripts", "Ahmad Baba al-Timbukti",
+   * "Ahmed Baba Institute", "Azalai", "Tarikh al-Sudan".
+   *
+   * RAJAUS MAALEHTEEN, KARTTANOSTOIHIN JA SKANDAALEIHIN NÄHDEN.
+   * Malin maalehti (maa-kategoriat.js MLI), karttanostot
+   * (maastokohteet-mli.js) ja skandaalinosto (skandaalit.js MLI,
+   * "Kirjat, jotka piilotettiin koteihin") on luettu kokonaan.
+   * TÄSSÄ LEHDESSÄ EI SIIS KÄSITELLÄ: Sundiataa, Kouroukan Fougaa,
+   * MANSA MUSAN PYHIINVAELLUSTA, Tondibin taistelua, Taoudennin
+   * suolakylää, tigadegenaa, foniota, chiwaraa, bogolania, Seydou
+   * Keïtaa, koraa, Ali Farka Tourén aavikkoblusia, Djennén
+   * moskeijaa eikä Askian hautaa — eikä myöskään VUOSIEN 2012–2013
+   * TAPAHTUMIA, jotka ovat kokonaan skandaalinostossa
+   * (Ahmed Baba -instituutin palo, Abdel Kader Haidara,
+   * SAVAMA-DCI, Mahmud Katin tähdenlennot 1583, Platon-käännökset,
+   * al-Muhkam-sanakirja). Peli ei käsittele nykysotia.
+   *
+   * KULTTUURIVISAN VASTAUS. africa-kulttuuri.js timbuktu.kysymys
+   * kysyy "Mistä Timbuktun kirjastot ovat kuuluisia?" (vanhoista
+   * käsikirjoituksista). Vastaus on kansisivun johdannossa ja
+   * teemasivun nostossa T2.
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * africa-saapumiset.js:n ja africa-kulttuuri.js:n
+   * timbuktu-merkintöihin EI koskettu (sama ratkaisu kuin
+   * Nairobissa, Dakarissa ja Lagosissa). Litteän taulun Ali Farka
+   * Touré -musiikkilinkkiä ei voi siirtää tähän lehteen, koska
+   * Touré on Malin maalehden aihe. Raportoitu Fablelle.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'kirjallisuus' (AIHE_IKONIT, js/ui-apurit.js).
+   *
+   * TARKISTUKSEN RATKAISUT:
+   *  - A: kukaan ei tiedä, kuka hallitsi Timbuktua 1873. Nosto K3
+   *    SANOO ERON ÄÄNEEN eikä nimeä yhtä hallitsijaa.
+   *  - B: etäisyys jokeen on 15 km (Geography-osio, "joen
+   *    pääuomaan") eikä johdannon 20 km.
+   *  - C: Sankorén "tutkintoportaat ja turbaanit" ovat artikkelissa
+   *    lähteettömiä (citation needed) eikä niitä käytetä.
+   *  - D: Ahmed Baba -instituutin käsikirjoitusmäärä on instituutin
+   *    oman artikkelin noin 20 000.
+   *  - F: Caillién karavaanin koko kerrotaan muodossa "noin
+   *    kuusisataa", ja se että Caillié antoi itse kaksi eri lukua.
+   *  - G: Djinguereber ajoitetaan vuoteen 1327.
+   *  - H: Rauhan liekin monumentti jätettiin kokonaan pois, koska
+   *    artikkelin päiväys on mahdoton (kapina päättyi 1996,
+   *    seremonia "29.3.2007").
+   *
+   * SÄÄRIVIÄ EI OLE: sen tekee erillinen agentti tässä erässä.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi, tekijä
+   * ja koko extmetadatasta) ja jokainen katsottiin silmin 900 px
+   * esikatseluna. TIMBUKTUN KUVATILANNE ON POIKKEUKSELLISEN HUONO, ja
+   * se on mitattu eikä arvattu:
+   *  - upyernozin koko Timbuktu-sarja ("Sankore Mosque in Timbuktu",
+   *    "Djinguereber Mosque, Timbuktu", "CEDRHAB, Timbuktu") on
+   *    HYLÄTTY, koska jokaisessa on kameran polttama oranssi
+   *    päiväysleima kuvan päällä ("10 16 04"). Sääntö kieltää minkä
+   *    tahansa kuvan päälle lisätyn merkinnän. Sama sarja on
+   *    africa-valokuvat.js:ssä vanhan käytännön mukaisena — sitä ei
+   *    muuteta tässä erässä.
+   *  - "Gordon Laing House.jpg", "Bet Golgotha", "ASC Leiden 05-41
+   *    Sankorén portti" ja "Bet Abba Libanos": HYLÄTTY, etualalla
+   *    tunnistettavat kasvot.
+   *  - "Tombouctou-Mosquée de Sidi-Yahya (AOF).jpg": HYLÄTTY,
+   *    siirtomaa-ajan postikortti, jonka päälle on painettu
+   *    julkaisijan teksti ja Fortier-signeeraus, ja jossa on
+   *    poseeraavia tunnistettavia ihmisiä.
+   *  - "Timbuktu, 1906.png": HYLÄTTY lehdestä, koska se on vain
+   *    403 px leveä. Se jää africa-valokuvat.js:ään, jossa raja on
+   *    toinen.
+   *
+   * EI ENNEN–NYT-PARIA. Valokuvataulun vanha puoli on liian pieni
+   * (403 px) ja sen uusi puoli kantaa päiväysleiman, eikä
+   * korvaavaa paria löytynyt: Fortier'n vuosien 1905–06 postikortit
+   * ovat 1 000–1 078 px ja kantavat painettua tekstiä. Sama ratkaisu
+   * kuin Lagosissa v1670. Kuvatilaus on kirjattu raporttiin.
+   *
+   * EI KANSI- EIKÄ AVAUSKUVIA. Commonsista ei löytynyt yhtään
+   * kuvasäännöt täyttävää laajaa yleiskuvaa Timbuktusta: kaupungin
+   * siluettikuvat ovat joko upyernozin päiväysleimaisia, alle
+   * 1 200 px:n arkistokuvia tai satelliittikuvia, joiden päälle on
+   * painettu tekstiä. Kuvatilaus on kirjattu raporttiin.
+   */
+  timbuktu: [
+    {
+      id: 'kaupunki',
+      nimi: 'Timbuktu',
+      johdanto: 'Aavikon eteläreunan kaupunki, jonka savimoskeijoissa '
+        + 'opetettiin ja jonka sukujen kirjastoihin kertyi '
+        + 'satojatuhansia käsikirjoituksia. Euroopassa nimestä tuli '
+        + 'sanonta paikasta, jota ei ole.',
+      nostot: [
+        {
+          otsikko: 'Nainen, jonka mukaan kaupunki nimettiin',
+          teksti: 'Timbuktu alkoi tuaregien kausiluonteisena '
+            + 'leiripaikkana ja muuttui pysyväksi 1100-luvun alussa. '
+            + 'Nimen alkuperästä on ainakin neljä selitystä, eikä '
+            + 'yksikään ole voittanut. Kaupungin oma 1600-luvun '
+            + 'kronikka Tarikh al-Sudan kertoo, että tuaregit '
+            + 'jättivät tavaransa paikkaan, jota vartioi heidän '
+            + 'orjanaisensa Tinbuktu — nimi tarkoitti heidän '
+            + 'kielellään kyhmyä, ja leiripaikka nimettiin hänen '
+            + 'mukaansa. Heinrich Barth johti nimen songhaista: '
+            + 'tùmbutu tarkoittaa koloa, ja kaupunki rakennettiin '
+            + 'hiekkakumpujen väliseen kuoppaan. Malilainen Sekene '
+            + 'Cissoko taas lukee siitä berberin pienten dyynien '
+            + 'paikan.',
+          wiki: 'Timbuktu',
+        },
+        {
+          otsikko: 'Suola tulee pohjoisesta, kolme viikkoa kerrallaan',
+          teksti: 'Timbuktu oli Saharan kauppareitin eteläinen '
+            + 'päätepiste, ja siihen koko kaupunki perustui. Vielä '
+            + '1900-luvun jälkipuoliskolle asti kivisuola tuotiin '
+            + 'kuudensadankuudenkymmenenneljän kilometrin päästä '
+            + 'pohjoisesta kahdessa vuosittaisessa karavaanissa: '
+            + 'toinen lähti marraskuun alussa, toinen maaliskuun '
+            + 'lopussa. Karavaanissa oli useita tuhansia kameleja, '
+            + 'matka kesti kolme viikkoa suuntaansa, ja paluumatkalla '
+            + 'jokainen kameli kantoi neljä tai viisi kolmenkymmenen '
+            + 'kilon laattaa. Menomatkalla vietiin ruokaa '
+            + 'kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, '
+            + 'ja Timbuktusta suola jatkaa veneellä muualle Maliin.',
+          wiki: 'Azalai',
+        },
+        {
+          /*
+           * TARKISTUKSEN KOHTA A: ristiriita kirjoitetaan auki.
+           * Vuosi 1873 osuu juuri siihen aukkoon, jota lähteet
+           * eivät osaa täyttää, ja se on tässä nostossa asia
+           * itsessään eikä ongelma.
+           */
+          otsikko: '1873: kaupunki ilman yhtä hallitsijaa',
+          teksti: 'Isoisän matkavuonna Timbuktu ei ollut kenenkään '
+            + 'eurooppalaisen vallan alla — eikä oikeastaan minkään '
+            + 'yhden vallan alla lainkaan. Massinan valtakunta '
+            + 'hallitsi kaupunkia vuodesta 1826, kunnes '
+            + 'Toucouleur-valtakunta ajoi sen pois 1865. Sen jälkeen '
+            + 'lähteet menevät ristiin: yksi tutkija nimeää '
+            + 'soninke-wangarat, vuoden 1924 artikkeli tuaregit, ja '
+            + 'afrikanisti John Hunwick kieltäytyy nimeämästä ketään '
+            + 'ja puhuu useista valtioista, jotka kilpailivat '
+            + 'vallasta varjomaisesti. Ranska liitti kaupungin '
+            + 'itseensä vasta 15. joulukuuta 1893. Ristiriita ei ole '
+            + 'lähteiden virhe vaan sen ajan kuva.',
+          tiedosto: 'Barth 1858 Timbuktu from terrace.jpg',
+          selite: 'Kaupunki kattoterassilta 1850-luvulla Heinrich '
+            + 'Barthin luonnoksen mukaan: matalia savitaloja niin '
+            + 'kauas kuin näkee, ja takana Sankorén minareetti.',
+          lahde: 'Martin Bernatz, Wikimedia Commons (PD)',
+          wiki: 'Timbuktu',
+        },
+        {
+          otsikko: 'Kaupunki, joka ei ole joen rannalla',
+          teksti: 'Timbuktu on viisitoista kilometriä Nigerin '
+            + 'pääuomasta pohjoiseen, hiekkadyynien keskellä, ja sen '
+            + 'kadut ovat hiekan peitossa. Satama Kabara on kahdeksan '
+            + 'kilometrin päässä etelässä ja yhteydessä jokeen '
+            + 'kolmen kilometrin kanavalla, joka on kaivettu kahdesti: '
+            + 'ranskalaiset teettivät sen 1917–1921, ja kun se oli '
+            + 'liettynyt umpeen, se ruopattiin uudelleen 2007. Kabara '
+            + 'toimii satamana vain joulu- ja tammikuussa, koska '
+            + 'Nigerin tulva saapuu tänne asti vasta joulukuun '
+            + 'lopussa. Silloin korjataan myös kelluva riisi: se venyy '
+            + 'kolmimetriseksi veden noustessa ja leikataan '
+            + 'kanootista käsin.',
+          wiki: 'Timbuktu',
+        },
+      ],
+      matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA (omistajan linjaus 16.8.2026): yksi aihe,
+         * joka on paikan oma erikoisuus, ja maltillinen pysty
+         * (1899 × 2529 px eli 0,75). Sankorén pyramidiminareetti ei
+         * voi olla mistään muualta. Oikea yläkulma on tyhjää taivasta,
+         * joten Matkaopas-nauha ei peitä aihetta.
+         */
+        kuva: {
+          tiedosto: 'Sankore Madrasah.jpg',
+          selite: 'Sankorén minareetti nousee savimuurin takaa, ja '
+            + 'siitä työntyvät puupalkit ovat rappaajien telineet.',
+          lahde: 'Dr. Ondřej Havelka (cestovatel), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Timbuktu on Tombouctoun hallintoalueen pääkaupunki '
+          + 'Malin pohjoisosassa, Saharan eteläreunalla. Kaupungin '
+          + 'vanhaosa on savirakennusten ja hiekkakatujen aluetta, '
+          + 'jossa kolme suurta moskeijaa ja kuusitoista mausoleumia '
+          + 'ovat olleet maailmanperintökohteena vuodesta 1988. '
+          + 'Kaupunkiin ei pääse junalla: reitit ovat maantie, joki ja '
+          + 'lentokone. Matkailukausi on marraskuusta helmikuuhun, '
+          + 'jolloin ilma on viileimmillään — mutta senkin aikaan '
+          + 'päivälämpötila on kolmenkymmenen asteen paikkeilla.',
+        artikkeli: {
+          nimi: 'Matkailijan Timbuktu',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jota Euroopassa pidettiin satuna niin '
+            + 'kauan, että moni yllättyy sen olevan oikeasti olemassa: '
+            + 'savea, hiekkaa, kirjoja ja kolme moskeijaa.',
+          nosto: 'Timbuktu oli islamilaisen oppineisuuden '
+            + 'maailmankeskus 1200-luvulta 1600-luvulle. Kolme '
+            + 'moskeijaa toimivat kouluina, ja kaupungin kirjastoihin '
+            + 'kertyi vuoteen 2003 mennessä arviolta jopa 700 000 '
+            + 'käsikirjoitusta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Malissa ei ole rautateitä lukuun ottamatta '
+                + 'Koulikoroon päättyvää Dakar–Niger-rataa, joten '
+                + 'Timbuktuun pääsee maanteitse, veneellä tai '
+                + 'lentäen — lentoyhteys avattiin 1961, ja '
+                + 'lentoaseman kiitorata on 2 110 metriä, valaistu ja '
+                + 'päällystetty. Kun vesi on korkealla elokuusta '
+                + 'joulukuuhun, Nigerillä kulkee matkustajalautta '
+                + 'Koulikoron ja Gaon välillä noin viikoittain, ja '
+                + 'sen rinnalla liikkuvat pinassit eli suuret '
+                + 'moottoroidut ruuhet. Ne rantautuvat Korioumén '
+                + 'satamaan, josta on kahdeksantoista kilometriä '
+                + 'päällystettyä tietä kaupunkiin Kabaran kautta. '
+                + 'Tiet naapurikaupunkeihin ovat hiekkateitä.',
+            },
+            {
+              otsikko: 'Vanhassakaupungissa',
+              teksti: 'Vanhakaupunki on kävelymatkan kokoinen: '
+                + 'Djinguereberin moskeijasta Sankorélle on vajaa '
+                + 'kilometri, ja matkalle osuvat Sidi Yahyan moskeija, '
+                + 'kolmen tutkimusmatkailijan talot ja sukukirjastoja. '
+                + 'Kadut ovat hiekkaa, ja hiekka on myös kaupungin '
+                + 'suurin uhka: rakennukset ovat maata sekä kuitua, '
+                + 'olkea ja puuta, ja niitä pitää rapata uudelleen. '
+                + 'Djinguereberissä alkoi 2006 nelivuotinen kunnostus, '
+                + 'jossa vaihdettiin noin puolet kattopalkeista — '
+                + 'palkkipuu on nykyään tuotava Ghanasta, koska '
+                + 'alkuperäiset puulajit ovat kadonneet seudulta.',
+            },
+            {
+              otsikko: 'Suola ja tori',
+              teksti: 'Kivisuola on yhä se tavara, jota aavikon yli '
+                + 'säännöllisesti kuljetetaan. Laatat tulevat '
+                + 'Taoudennista, ja vaikka kamelikaravaanit ovat '
+                + 'suurelta osin korvautuneet kuorma-autoilla, reitti '
+                + 'on yhä yksi Saharan viimeisistä käytössä olevista '
+                + 'karavaaniteistä. Timbuktu on reitin päätepiste: '
+                + 'täältä suola jatkaa veneellä Moptiin ja muille '
+                + 'Sahelin markkinoille, joilla se lohkotaan, '
+                + 'punnitaan ja pakataan pienemmiksi eriksi. '
+                + 'Käsityön myynti ja opastyö ovat matkailun '
+                + 'tärkeimmät tulonlähteet kaupungissa.',
+            },
+            {
+              otsikko: 'Mawloud tammikuussa',
+              teksti: 'Kaupungin oma vuosijuhla on Mawloud, '
+                + 'viikon mittainen Muhammadin syntymän juhla '
+                + 'tammikuussa. Se saapui Persiasta noin vuonna 1600 '
+                + 'ja yhdistää sufilaisen islamin rituaalit kaupungin '
+                + 'kirjallisen perinteen juhlintaan. Juhlaviikon '
+                + 'huipentuma on ilta, jona tuhannet kokoontuvat '
+                + 'Sankorén moskeijan edessä olevalle suurelle '
+                + 'hiekka-aukiolle kuulemaan, kun kaupungin '
+                + 'arvostetuimpia käsikirjoituksia luetaan ääneen. '
+                + 'Toinen tunnettu tapahtuma on Festival au Désert, '
+                + 'joka pidettiin vuoteen 2010 asti aavikolla noin '
+                + 'seitsemänkymmenen kilometrin päässä kaupungista.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Timbuktu-'
+                + 'artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säärivi tehdään erikseen. '
+                + 'Ilmasto on kuuma aavikkoilmasto. Kuumimmat '
+                + 'kuukaudet ovat huhti-, touko- ja kesäkuu, jolloin '
+                + 'keskiylin on yli neljäkymmentä astetta — '
+                + 'toukokuussa 42,2. Viilein kuukausi on tammikuu, '
+                + 'jolloin keskiylin on 30,0 ja keskialin 13,0. '
+                + 'Keskiylin ei siis laske alle kolmenkymmenen minään '
+                + 'kuukautena. Mitatut ääriarvot ovat 49,0 ja 1,7 '
+                + 'astetta. Talvella puhaltaa harmattan, kuiva ja '
+                + 'pölyinen tuuli, joka rajoittaa näkyvyyttä ja kasaa '
+                + 'hiekkaa kaupunkiin.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Djinguereberin moskeija',
+                tahdet: 3,
+                selite: 'Vuonna 1327 rakennettu savimoskeija, jossa on '
+                  + 'rukoustila kahdelle tuhannelle.',
+              },
+              {
+                mita: 'Sankorén moskeija',
+                tahdet: 3,
+                selite: 'Kaupungin oppineisuuden keskus, jonka pyhäkkö '
+                  + 'rakennettiin uudelleen Kaaban mitoilla.',
+              },
+              {
+                mita: 'Sidi Yahyan moskeija',
+                tahdet: 2,
+                selite: 'Neljäkymmentä vuotta rakennettu moskeija, '
+                  + 'jonka matalat ovet ovat kaupungin koristeellisimmat.',
+              },
+              {
+                mita: 'Ahmed Baba -instituutti',
+                tahdet: 2,
+                selite: 'Kaupungin julkinen kirjasto, jossa on noin '
+                  + '20 000 käsikirjoitusta.',
+              },
+              {
+                mita: 'Tutkimusmatkailijoiden talot',
+                tahdet: 2,
+                selite: 'Laingin, Cailliéen ja Barthin asuinpaikat '
+                  + 'ovat kolmen korttelin päässä toisistaan.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Turvallisuusrivi on omistajan
+             * linjauksen mukainen (Raamattu, Kuvat ja lähteet,
+             * 20.8.2026): opas sanoo suoraan, jos matkustaminen on
+             * nykyisin vaarallista, asiallisesti ja lyhyesti.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Matkustaminen ei ole nyt turvallista',
+                teksti: 'Timbuktuun ja koko Malin pohjoisosaan '
+                  + 'matkustaminen ei ole tällä hetkellä turvallista, '
+                  + 'ja alue on ollut matkailulta käytännössä suljettu '
+                  + 'jo vuosia.',
+              },
+              {
+                otsikko: 'Kesällä on hyvin kuuma',
+                teksti: 'Huhti-, touko- ja kesäkuun keskiylin on yli '
+                  + 'neljäkymmentä astetta, ja kaupungin mitattu '
+                  + 'ennätys on 49,0 — matkailukausi on siksi '
+                  + 'marraskuusta helmikuuhun.',
+              },
+              {
+                otsikko: 'Harmattan vie näkyvyyden',
+                teksti: 'Talvituuli tuo Saharan pölyä, joka rajoittaa '
+                  + 'näkyvyyttä ja laskeutuessaan kasaa hiekkaa '
+                  + 'kaduille ja rakennusten kylkiin.',
+              },
+              {
+                otsikko: 'Satama toimii kahtena kuukautena',
+                teksti: 'Kabaraan pääsee veneellä vain joulu- ja '
+                  + 'tammikuussa, kun joki on tulvassa; muulloin '
+                  + 'veneet jäävät Korioumén satamaan.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjat ja oppineet',
+      johdanto: 'Timbuktussa kirja oli vaurauden merkki, ja opetus '
+        + 'kulki opettajalta oppilaalle ilman lukujärjestystä. '
+        + 'Kaupungin maine kulki Eurooppaan yhden ainoan kirjan '
+        + 'mukana.',
+      tehtava: {
+        kysymys: 'Kuinka monta kirjaa Ahmad Baba menetti, kun hänet '
+          + 'karkotettiin Marokkoon?',
+        vaihtoehdot: [
+          '1 600',
+          '160',
+          '16 000',
+          '60',
+        ],
+        oikea: 0,
+        fakta: 'Ahmad Baban yksityiskokoelmassa oli 1 600 kirjaa, ja '
+          + 'sitä pidettiin yhtenä aikansa rikkaimmista kirjastoista. '
+          + 'Hän itse palasi Timbuktuun 22. huhtikuuta 1608, mutta '
+          + 'kirjat eivät palanneet.',
+      },
+      nostot: [
+        {
+          /*
+           * TARKISTUKSEN KOHTA C: Sankorén "neljä tutkintoporrasta ja
+           * turbaanit" on artikkelissa merkitty lähteettömäksi
+           * (citation needed, helmikuu 2025) eikä sitä käytetä. Tämä
+           * nosto nojaa vain niihin kohtiin, joilla on lähdeviite.
+           */
+          otsikko: 'Yliopisto, jossa ei ollut yliopistoa',
+          teksti: 'Sankorén medresassa ei ollut keskushallintoa, '
+            + 'opiskelijaluetteloita eikä määrättyä opinto-ohjelmaa. '
+            + 'Koulu oli joukko yksittäisiä oppineita, joilla kullakin '
+            + 'oli omat oppilaansa; useimmat opiskelivat koko '
+            + 'koulutuksensa ajan saman opettajan johdolla, ja se '
+            + 'saattoi kestää kymmenen vuotta. Opetus pidettiin joko '
+            + 'moskeijassa tai opettajan kotona. Muualla '
+            + 'islamilaisessa maailmassa medresoja ylläpidettiin '
+            + 'lahjoitusrahastoilla, mutta täällä opiskelijat maksoivat '
+            + 'itse — rahalla tai vaihtotavaralla. 1500-luvulla '
+            + 'kaupungissa oli 150–180 koraanikoulua ja niissä '
+            + 'arviolta 4 000–9 000 oppilasta.',
+          wiki: 'Sankoré Madrasah',
+        },
+        {
+          otsikko: 'Kirja oli vaurauden merkki',
+          teksti: 'Timbuktulaisille lukutaito ja kirjat olivat '
+            + 'vaurauden, vallan ja siunauksen merkkejä, ja kirjojen '
+            + 'hankkimisesta tuli oppineiden päähuolenaihe. Osa '
+            + 'käsikirjoituksista kirjoitettiin kaupungissa, osa '
+            + 'tuotiin vilkkaan kirjakaupan kautta muualta '
+            + 'islamilaisesta maailmasta. Niitä piilotettiin '
+            + 'kellareihin, haudattiin maahan ja kätkettiin '
+            + 'moskeijoiden savimuureihin, ja suojelijoidensa '
+            + 'varjelemina monet selvisivät kaupungin rappion yli. '
+            + 'Vuonna 2003 kirjastoissa arvioitiin olevan jopa 700 000 '
+            + 'käsikirjoitusta; kirjastoja itseään on kuudenkymmenen '
+            + 'paikkeilla, ja osa niistä on vain hyllyrivi tai '
+            + 'kirja-arkku.',
+          tiedosto: 'Timbuktu Manuscript (48522180467).jpg',
+          selite: 'Sitomaton käsikirjoitus puhdistetaan pehmeällä '
+            + 'harjalla arkki kerrallaan.',
+          lahde: 'Mark Fischer, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Timbuktu Manuscripts',
+        },
+        {
+          otsikko: 'Oppinut, joka menetti kirjastonsa',
+          teksti: 'Ahmad Baba syntyi Araouanessa 26. lokakuuta 1556 ja '
+            + 'muutti Timbuktuun nuorena. Hän kirjoitti yli '
+            + 'neljäkymmentä kirjaa ja oli Sankorén viimeinen '
+            + 'kansleri; häntä pidetään kaupungin suurimpana '
+            + 'oppineena. Hän oli myös ensimmäisiä, jotka vastustivat '
+            + 'Marokon valloitusta 1591 — ja siitä seurasi karkotus. '
+            + 'Vuonna 1594 hänet vietiin Marokkoon, jossa hän jäi '
+            + 'Fesiin sulttaanin kuolemaan asti. Karkotuksessa '
+            + 'katosi hänen 1 600 kirjan kokoelmansa. Hän palasi '
+            + 'Timbuktuun 22. huhtikuuta 1608 ja kuoli siellä 1627.',
+          wiki: 'Ahmad Baba al-Timbukti',
+        },
+        {
+          otsikko: 'Mies, joka kertoi Timbuktusta paaville',
+          teksti: 'Leo Africanus syntyi Granadassa 1485, ja hänen '
+            + 'perheensä karkotettiin Espanjasta 1492. Hän opiskeli '
+            + 'Fesissä ja matkusti setänsä kanssa Pohjois-Afrikassa; '
+            + 'noilla matkoilla hän kävi Timbuktussa. Nuorena '
+            + 'miehenä merirosvot ottivat hänet vangiksi ja '
+            + 'esittelivät poikkeuksellisen oppineena orjana paavi '
+            + 'Leo X:lle, joka vapautti hänet ja tilasi häneltä '
+            + 'italiaksi kuvauksen Afrikasta. Siitä tuli '
+            + 'eurooppalaisten päälähde maanosasta vuosisadoiksi. '
+            + 'Hänen kuvauksensa kultalautasista ja oppineiden '
+            + 'joukosta teki Timbuktusta Euroopan mielessä '
+            + 'kultakaupungin.',
+          wiki: 'Leo Africanus',
+        },
+      ],
+    },
+  ],
+  /*
+   * LALIBELA (Opus 7.9.2026, paketti O9) — Afrikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-lalibela.md ja sen riippumaton tarkistus
+   * tarkistus-lalibela.md (tuomio "kelpaa, kun kohtien A–G
+   * ratkaisut tehdään"; kaikki ratkaisut on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026:
+   * "Lalibela", "Rock-Hewn Churches, Lalibela",
+   * "Gebre Meskel Lalibela", "Lalibela Cross",
+   * "Yemrehana Krestos Church", "Tekle Giyorgis II".
+   *
+   * RAJAUS MAALEHTEEN NÄHDEN ON TÄMÄN LEHDEN VAIKEIN ASIA.
+   * Etiopian maalehden (maa-kategoriat.js ETH) ensimmäinen nosto
+   * "Yksitoista kirkkoa, jotka kaivettiin alaspäin" kertoo jo
+   * louhintatavan, kirkkojen lukumäärän, Zagwe-kuninkaan,
+   * Jerusalem-symboliikan, Jerusalemin menetyksen 1187 ja
+   * Francisco Álvaresin valan — ja käyttää kuvaa
+   * Bete Giyorgis 01.jpg. TÄTÄ EI TOISTETA. Kaupunkilehti kertoo
+   * sen, mitä maalehti ei kerro: Rohan nimen ja mehiläiset,
+   * artesisen veden ja kaivannot, vuoden 1873 Lastan, kaupungin
+   * asuintalot; teemasivulla aksumilaisen perinnön kivessä,
+   * Lalibelan ristin, kirkkojen ajoituskiistan ja luolakirkko
+   * Yemrehana Krestosin. Kunkin yksittäisen kirkon oma tarina on
+   * kohdekartan nähtävyysjutuissa eikä lehdessä.
+   * Karttanostot (maastokohteet-eth.js: Aksum, Debre Damo, Fasil
+   * Ghebbi, Harar, Tiya…) ja Addis Abeban lehti (v1669) on luettu,
+   * eikä niiden aiheita toisteta.
+   *
+   * EI NYKYSOTAA: artikkelin 1900- ja 2000-luvun osiot jäävät
+   * kokonaan pois. Turvallisuus mainitaan matkaoppaassa lyhyesti ja
+   * asiallisesti (Raamattu, Kuvat ja lähteet, 20.8.2026).
+   *
+   * EI SAAPUMISTEKSTIÄ: lalibela on tests/vanha-maailma.test.mjs:n
+   * KAARETTOMAT-listalla, ja testi kaatuu, jos listalla olevalle
+   * kaupungille kirjoitetaan merkintä africa-saapumiset.js:ään.
+   * Listaa ei pureta ilman omistajan linjausta. Raportoitu Fablelle.
+   *
+   * EI KULTTUURIVISAA: africa-kulttuuri.js:ssä ei ole
+   * lalibela-merkintää, joten lehden ei tarvitse vastata mihinkään
+   * visakysymykseen. africa-questions.js:n viisi kysymystä on
+   * luettu, eikä minitehtävä toista niistä yhtäkään.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'kuvataide' (AIHE_IKONIT, js/ui-apurit.js).
+   *
+   * TARKISTUKSEN RATKAISUT:
+   *  - A: Tekle Giyorgis II:n kuolinvuosi on artikkelissa sekä
+   *    "noin lokakuu 1873" että "joitakin vuosia myöhemmin".
+   *    Nosto K3 EI väitä hänen kuolleen 1873 vaan kertoo, että hän
+   *    oli vankeudessa. Sokaisemista ei kerrota.
+   *  - B: Jordan-kaivannon mittoja (25 × 25 × 30 m) ei käytetä,
+   *    koska ne eivät voi koskea koko kaupungin halkaisevaa uomaa.
+   *  - C: rakennusvaiheiden lukumäärä (kaksi vai kolme) kirjoitetaan
+   *    auki teemasivun nostossa T3.
+   *  - D: käytetään kolmijakoa (pohjoinen ryhmä, eteläinen ryhmä,
+   *    erillinen Biete Giyorgis), koska artikkelin oma "neljä
+   *    ryhmää" on ristiriidassa sen oman luettelon kanssa.
+   *  - E: korkeus on kaupungin luku noin 2 500 m.
+   *  - F: kirkkojen stubien ehdotonta "Aksumin aikana" -väitettä ei
+   *    toisteta; ajoitus kerrotaan perinteisenä ja kiistanalaisena.
+   *
+   * SÄÄRIVIÄ EI OLE: sen tekee erillinen agentti tässä erässä.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi, tekijä
+   * ja koko extmetadatasta) ja jokainen katsottiin silmin 900 px
+   * esikatseluna. HYLÄTYT: "Biete Gabriel-Rufael.jpg" (kuvan alalaidassa
+   * valokuvaajan oma vesileima sähköpostiosoitteineen),
+   * "Bet Abba Libanos (5499043130).jpg" ja "Bet Golgotha
+   * (5497902954).jpg" (etualalla tunnistettavat kasvot),
+   * "Lalibela Cross.jpg" (koko kuvan täyttävä tunnistettava henkilö),
+   * "Lalibela 5 (28424647771).jpg" (mainoskyltti pääosassa),
+   * "Biete Lehem.jpg" (kohde jää varjoon rakennustelineiden alle,
+   * ei luettava pienenä), "GCT 1892.jpg" (ei liity aiheeseen).
+   *
+   * EI ENNEN–NYT-PARIA. africa-valokuvat.js:n lalibela-merkinnässä on
+   * vain yksi kuva (nykyinen Bete Giyorgis), eikä Commonsista
+   * löytynyt Lalibelasta yhtään kuvasäännöt täyttävää vanhaa vedosta:
+   * kirkot valokuvattiin ensi kerran laajasti vasta 1900-luvun
+   * puolivälissä, eivätkä ne kuvat ole vapaita. Sama ratkaisu kuin
+   * Lagosissa v1670. Kuvatilaus on kirjattu raporttiin.
+   *
+   * AVAUSKUVIA EI OLE (kansikuvia kaksi kolmesta): ks. kansikuvien
+   * lohkokommentti.
+   */
+  lalibela: [
+    {
+      id: 'kaupunki',
+      nimi: 'Lalibela',
+      johdanto: 'Ylängön kaupunki 2 500 metrin korkeudessa, jonka '
+        + 'kirkkoja ei muurattu vaan louhittiin kalliosta alaspäin. '
+        + 'Vanha nimi oli Roha; nykyisen se sai kuninkaalta.',
+      /*
+       * KANSIKUVAT ovat omistajan 21.8.2026 linjauksen mukaisia
+       * laajoja yleiskuvia: maamerkki ympäristössään ja kaupungin
+       * siluetti rinteessä. KOLMATTA EI OLE: Commonsista ei
+       * löytynyt kolmatta kuvasäännöt täyttävää yleiskuvaa
+       * Lalibelasta — kaupungin katukuvassa on mainoskylttejä ja
+       * tunnistettavia kasvoja, ja kirkkokuvat ovat lähikuvia.
+       * Kuvatilaus on kirjattu raporttiin.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Lalibela, san giorgio, esterno 24.jpg',
+          selite: 'Pyhän Yrjön kirkko seisoo omassa kuilussaan, ja '
+            + 'kalliota kiertävät portaat laskeutuvat sen pohjalle.',
+          lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: 'Ethiopie-0694.JPG',
+          selite: 'Kaupunki levittäytyy rinteelle: olkikattoisia '
+            + 'pyöreitä taloja, peltiä ja terasseja harjanteen alla.',
+          lahde: 'BluesyPete, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Mehiläiset, jotka tunnustivat kuninkaan',
+          teksti: 'Kaupungin vanha nimi oli Roha. Sinne pakeni vuonna '
+            + '1162 Kirwerna, Bugnan kuvernöörin palvelijatar, '
+            + 'synnyttämään. Hagiografian mukaan mehiläisparvi ympäröi '
+            + 'vastasyntyneen, ja äiti tulkitsi sen merkiksi tulevasta '
+            + 'vallasta; poika nimettiin Lalibelaksi, joka vanhassa '
+            + 'agaw-kielessä tarkoittaa, että mehiläiset tunnustavat '
+            + 'hänen valtansa. Ennustus herätti vihamielisyyttä '
+            + 'sukulaisissa, ja Lalibela vietti monta vuotta '
+            + 'maanpaossa Jerusalemissa. Palattuaan hän nousi valtaan '
+            + 'ja hallitsi noin 1181–1221. Kaupunki kantaa hänen '
+            + 'nimeään, ja kirkko muistaa hänet pyhimyksenä 19. '
+            + 'kesäkuuta.',
+          wiki: 'Gebre Meskel Lalibela',
+        },
+        {
+          otsikko: 'Vesi, joka nousee harjanteen laelle',
+          teksti: 'Lalibela seisoo vuorenharjanteella 2 500 metrin '
+            + 'korkeudessa, eikä vesi kulje sinne itsestään. Silti '
+            + 'kirkot liittyvät kaikki veteen: monen vieressä on '
+            + 'kaivo, joka täyttyy artesisesta geologisesta '
+            + 'järjestelmästä nostaen vettä harjanteen laelle. '
+            + 'Kirkkojen väliin hakatut kaivannot ja tunnelit '
+            + 'yhdistävät ryhmät toisiinsa, ja niiden louhinta tehtiin '
+            + 'ylhäältä alaspäin vasaroin ja taltoin. Kaupungin '
+            + 'vesiuoma kantaa nimeä Jordan; viisi kirkkoa on sen '
+            + 'pohjoispuolella, viisi eteläpuolella ja yksi jää '
+            + 'kummankin ryhmän ulkopuolelle.',
+          wiki: 'Rock-Hewn Churches, Lalibela',
+        },
+        {
+          /*
+           * TARKISTUKSEN KOHTA A. Nosto ei väitä Tekle Giyorgis
+           * II:n kuolleen 1873 — artikkeli antaa siitä kaksi eri
+           * tietoa. Kerrotaan vain, että hän oli vankeudessa.
+           * Sokaisemista ei kerrota (Kunnioitus-pilari).
+           */
+          otsikko: '1873: Lastan oma keisari',
+          teksti: 'Lalibela on Lastan pääkaupunki, ja Lastalla oli '
+            + 'isoisän matkan aikaan tuore muisto omasta '
+            + 'keisaristaan. Wagshum Gobeze, Wagin hallitsijan poika '
+            + 'ja vanhan Zagwe-valtaistuimen perijä, nousi kapinaan '
+            + 'Lastassa 1864 ja julistettiin keisariksi Soqotassa '
+            + 'elokuussa 1868 nimellä Tekle Giyorgis II. Hän kunnosti '
+            + 'Gondarin kirkot niin, että kronikoitsija kirjoitti: '
+            + '"Fasilin jälkeen kukaan ei tehnyt Gondarille sitä, '
+            + 'mitä Tekle Giyorgis teki." Adwan taistelun 11. '
+            + 'heinäkuuta 1871 hän hävisi, ja voittaja kruunattiin '
+            + 'puoli vuotta myöhemmin Yohannes IV:ksi. Vuonna 1873 '
+            + 'Lastan oma keisari oli vankeudessa.',
+          wiki: 'Tekle Giyorgis II',
+        },
+        {
+          otsikko: 'Talot, joissa portaat ovat ulkoseinällä',
+          teksti: 'Lalibela ei ole pelkkä kirkkoalue vaan kaupunki, '
+            + 'jossa asuu ihmisiä — vuoden 2007 laskennassa 17 367. '
+            + 'Sandro Angelini luetteloi 1970 kaupungin perinteiset '
+            + 'rakennukset ja erotti kaksi tyyppiä. Tukul on pyöreä, '
+            + 'kivestä ladottu talo, jossa on yleensä kaksi kerrosta '
+            + 'ja portaat ulkoseinällä ylempään kerrokseen. Chika on '
+            + 'yksikerroksinen pyöreä rakennus, joka on tehty maasta '
+            + 'ja risuista; Angelini piti sitä niukkuuden merkkinä. '
+            + 'Molemmat kuuluvat maailmanperintökohteen alueeseen, ja '
+            + 'niiden säilyminen on osa samaa suojelutyötä kuin '
+            + 'kirkkojen.',
+          tiedosto: 'Lalibela-Maisons.jpg',
+          selite: 'Kaksikerroksisen tukulin ulkoseinää pitkin nousevat '
+            + 'kiviportaat ylemmän kerroksen ovelle.',
+          lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Lalibela',
+        },
+      ],
+      matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA (omistajan linjaus 16.8.2026): yksi aihe,
+         * paikan oma erikoisuus, maltillinen pysty (3648 × 5472 px eli
+         * 0,67). Kalliosta louhittu pilaririvi ei voi olla mistään
+         * muualta.
+         *
+         * AIHETOISTO ON TIETOINEN JA KIRJATTU: sama kirkko (Biete
+         * Medhane Alem) on myös kohdekartan nähtävyysjutussa, mutta
+         * ERI TIEDOSTOLLA ja eri kuvakulmasta — juttukuva on koko
+         * kirkko kaivannossaan, tämä on pilaririvi alhaalta. Kuvassa
+         * näkyvä teräskatos on vuoden 2008 suojarakenne, ja lehti
+         * kertoo siitä oppaan jaksossa "Kirkkoalueella", jottei
+         * lukija jää ihmettelemään sitä.
+         */
+        kuva: {
+          tiedosto: 'Lalibela, chiesa di bete medhane alem, esterno 16.jpg',
+          selite: 'Kirkon pilarit on jätetty seisomaan siihen '
+            + 'kallioon, jonka ympäriltä kaikki muu on louhittu pois.',
+          lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
+        },
+        kappale: 'Lalibela on pieni kaupunki Etiopian ylängöllä '
+          + 'Amharan alueella, Lastan piirissä ja Pohjois-Wollon '
+          + 'vyöhykkeellä. Asukkaita oli vuoden 2007 laskennassa '
+          + '17 367, ja kaupungissa on lentoasema, suuri tori, kaksi '
+          + 'koulua ja sairaala. Yksitoista kalliokirkkoa on ollut '
+          + 'maailmanperintökohde vuodesta 1978, eivätkä ne ole museo: '
+          + 'kirkoissa asuu papisto ja niissä pidetään '
+          + 'jumalanpalveluksia joka päivä. Paras aika käydä on kuiva '
+          + 'kausi lokakuusta maaliskuuhun.',
+        artikkeli: {
+          nimi: 'Matkailijan Lalibela',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa kirkot ovat maanpinnan alapuolella '
+            + 'ja katot maan tasalla: sisään mennään alaspäin, '
+            + 'kaivantoja ja tunneleita pitkin.',
+          nosto: 'Kalliokirkot otettiin maailmanperintöluetteloon '
+            + 'vuonna 1978. Yksitoista kirkkoa on louhittu samasta '
+            + 'kalliosta, neljä niistä irti kalliosta joka suunnalta '
+            + 'ja seitsemän niin, että yksi seinä on yhä vuorta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lalibelassa on oma lentoasema, ja se on '
+                + 'käytännössä ainoa nopea reitti — kaupunki on '
+                + 'ylängöllä 2 500 metrin korkeudessa, ja tiet '
+                + 'nousevat sinne pitkiä mutkia. Kaupungin sisällä '
+                + 'liikutaan jalan: kirkkoalueen kaksi kaivantoryhmää '
+                + 'ovat parinsadan metrin päässä toisistaan, ja '
+                + 'erillään oleva Biete Giyorgis on lyhyen kävelyn '
+                + 'päässä lännessä. Kaupungin ulkopuolisiin kohteisiin '
+                + 'tarvitaan kyyti: Yemrehana Krestosin luolakirkolle '
+                + 'on 12,2 kilometriä koilliseen, ja sinne rakennettiin '
+                + 'tie vasta vuonna 2000 — sitä ennen matka oli '
+                + 'kokonainen päivä jalan tai muulilla.',
+            },
+            {
+              otsikko: 'Kirkkoalueella',
+              teksti: 'Kirkot on jaettu kolmeen: viisi Jordan-puron '
+                + 'pohjoispuolella, viisi eteläpuolella ja yksi '
+                + 'erillään. Ryhmien sisällä liikutaan kaivantoja ja '
+                + 'tunneleita pitkin, ja Biete Giyorgisiin mennään '
+                + 'kapeaa ihmisen hakkaamaa kanjonia myöten, joka '
+                + 'kiertää alaspäin ja muuttuu lopulta tunneliksi. '
+                + 'Viiden kirkon päälle pystytettiin 2008 Euroopan '
+                + 'unionin rahoituksella neljä suojakatosta; ne '
+                + 'oli tarkoitettu väliaikaisiksi ja ovat yhä '
+                + 'paikoillaan, ja niiden paino on nyt oma huolensa. '
+                + 'Katokset näkyvät kuvissa eivätkä ole rakennusvirhe '
+                + 'vaan suojelun keskeneräinen vaihe.',
+            },
+            {
+              otsikko: 'Genna ja Timkat',
+              teksti: 'Kaksi tammikuun juhlaa täyttävät kaupungin. '
+                + 'Genna vietetään 7. tammikuuta ja Timkat 19. '
+                + 'tammikuuta, ja kumpaankin liittyy monipäiväisiä '
+                + 'kulkueita, perinnemusiikkia ja rituaaleja. '
+                + 'Lalibela on Etiopian ortodoksisen kirkon pyhimpiä '
+                + 'kaupunkeja ja pyhiinvaelluksen päämäärä, joten '
+                + 'juhlien aikaan paikalla on moninkertaisesti '
+                + 'väkeä kaupungin omaan asukaslukuun nähden. Jos '
+                + 'haluaa nähdä kirkot rauhassa, kannattaa tulla '
+                + 'muulloin; jos haluaa nähdä ne käytössä, juuri '
+                + 'silloin.',
+            },
+            {
+              otsikko: 'Kaupungissa',
+              teksti: 'Kirkkojen ympärillä on tavallinen ylängön '
+                + 'kaupunki. Perinteisiä taloja on kahta lajia: '
+                + 'kaksikerroksinen kivestä ladottu tukul, jonka '
+                + 'ulkoseinällä nousevat portaat ylempään kerrokseen, '
+                + 'ja yksikerroksinen chika, joka on tehty maasta ja '
+                + 'risuista. Molemmat on luetteloitu osana '
+                + 'maailmanperintökohdetta. Kaupungissa on suuri '
+                + 'tori, kaksi koulua ja sairaala; asukkaita oli '
+                + 'vuoden 2007 laskennassa 17 367, kun vuoden 1994 '
+                + 'laskennassa heitä oli 8 484.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Lalibela-'
+                + 'artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säärivi tehdään erikseen. '
+                + 'Korkeus tasaa lämmön: keskiylin on koko vuoden '
+                + '20,6 ja 24,8 asteen välillä ja keskialin 8,1 ja '
+                + '12,3 asteen välillä. Vuodenkierto onkin sateen '
+                + 'kierto. Heinäkuussa sataa 259 ja elokuussa 278 '
+                + 'millimetriä, kun marraskuussa sataa 8 ja '
+                + 'joulukuussa 10. Kuiva kausi lokakuusta maaliskuuhun '
+                + 'on siksi se, jolloin kaivannoissa ja tunneleissa '
+                + 'kulkeminen on helpointa. Mitatut ääriarvot ovat '
+                + '31,0 ja 2,0 astetta.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Biete Giyorgis',
+                tahdet: 3,
+                selite: 'Ristinmuotoinen kirkko omassa kuilussaan; '
+                  + 'sisään mennään kapeaa kanjonia ja tunnelia myöten.',
+              },
+              {
+                mita: 'Biete Medhane Alem',
+                tahdet: 3,
+                selite: 'Uskotaan olevan maailman suurin '
+                  + 'monoliittikirkko.',
+              },
+              {
+                mita: 'Biete Maryam',
+                tahdet: 2,
+                selite: 'Mahdollisesti kirkoista vanhin, ja sen katto '
+                  + 'on maalattu raamatullisin kohtauksin.',
+              },
+              {
+                mita: 'Yemrehana Krestos',
+                tahdet: 2,
+                selite: 'Luolaan rakennettu kirkko 12 kilometriä '
+                  + 'koilliseen; sitä ei louhittu vaan muurattiin.',
+              },
+              {
+                mita: 'Genna ja Timkat',
+                tahdet: 2,
+                selite: 'Tammikuun 7. ja 19. päivä täyttävät kaupungin '
+                  + 'kulkueilla ja musiikilla.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Turvallisuusrivi on omistajan
+             * linjauksen mukainen (Raamattu, Kuvat ja lähteet,
+             * 20.8.2026).
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Tilanne alueella on ollut levoton',
+                teksti: 'Amharan alueella on viime vuosina ollut '
+                  + 'levottomuuksia, ja matkustaminen sinne voi olla '
+                  + 'ajoittain rajoitettua — kannattaa tarkistaa '
+                  + 'tilanne ennen matkaa.',
+              },
+              {
+                otsikko: 'Korkeus tuntuu',
+                teksti: 'Kaupunki on 2 500 metrissä, ja kirkkoalueella '
+                  + 'noustaan ja lasketaan portaita koko ajan; '
+                  + 'ensimmäisenä päivänä kannattaa ottaa rauhallisesti.',
+              },
+              {
+                otsikko: 'Heinä- ja elokuussa sataa paljon',
+                teksti: 'Sadetta tulee heinäkuussa 259 ja elokuussa '
+                  + '278 millimetriä, ja kaivannot ja tunnelit ovat '
+                  + 'silloin liukkaita.',
+              },
+              {
+                otsikko: 'Kirkot ovat käytössä',
+                teksti: 'Kohde ei ole museo vaan Etiopian '
+                  + 'ortodoksisen kirkon pyhä paikka, jossa pidetään '
+                  + 'jumalanpalveluksia päivittäin — osaan tiloista ei '
+                  + 'ole pääsyä muille kuin papeille.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kivi ja kuva',
+      johdanto: 'Lalibelan kirkkojen ovet ja ikkunat jäljittelevät '
+        + 'kivessä puurakennusta, jota ei enää ole missään. Sama '
+        + 'aksumilainen perinne näkyy kulkueristeissä ja luolakirkon '
+        + 'seinämaalauksissa.',
+      tehtava: {
+        kysymys: 'Mistä maasta vuonna 1997 varastettu Lalibelan risti '
+          + 'löytyi kaksi vuotta myöhemmin?',
+        vaihtoehdot: [
+          'Belgiasta',
+          'Italiasta',
+          'Egyptistä',
+          'Ranskasta',
+        ],
+        oikea: 0,
+        fakta: 'Risti paikannettiin Belgiaan 1999, kun addisabebalainen '
+          + 'kauppias oli myynyt sen belgialaiselle keräilijälle. Kun '
+          + 'keräilijän rahat oli palautettu ja sovittu, ettei '
+          + 'oikeustoimiin ryhdytä, risti palasi Etiopiaan 2001.',
+      },
+      nostot: [
+        {
+          otsikko: 'Puurakennus, joka veistettiin kiveen',
+          teksti: 'Lalibelan kirkoissa on aksumilainen tunnusmerkki: '
+            + 'kivestä tehty jäljitelmä puurakenteista. Biete '
+            + 'Amanuelissa se on niin selvä, että Stuart Munro-Hay '
+            + 'vertaa sitä Tigrayn ja Eritrean vanhoihin kirkkoihin, '
+            + 'joissa puu on yhä paikallaan. Kehystetyt ovet ja '
+            + 'ikkunat toistuvat aiheena, koska ne jäljittelevät '
+            + 'Aksumin steelojen muotoa: Biete Gabriel-Rufaelin '
+            + 'kaarikäytävä, Biete Maryamin ovi ja Biete Amanuelin '
+            + 'ikkunat ovat kaikki samaa perhettä. David Phillipson '
+            + 'muistuttaa, ettei aksumilainen tyyli todista '
+            + 'aksumilaista ikää — se todistaa katkeamattoman '
+            + 'perinteen.',
+          wiki: 'Lalibela',
+        },
+        {
+          otsikko: 'Risti, joka kävi Belgiassa',
+          teksti: 'Lalibelan risti on suuri koristeltu kulkueristi ja '
+            + 'yksi Etiopian arvokkaimmista perintöesineistä. Sitä '
+            + 'säilytetään Biete Medhane Alemissa. Risti on '
+            + 'arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä '
+            + 'ja seitsemän kilon painoinen, ja se on tehty yhdestä '
+            + 'metallikappaleesta — joko kullasta tai pronssista ja '
+            + 'kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka '
+            + 'toistuu etiopialaisissa kulkueristeissä; juhlapäivinä '
+            + 'ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata '
+            + 'uskovia rististillä siunatakseen heidät.',
+          wiki: 'Lalibela Cross',
+        },
+        {
+          /*
+           * TARKISTUKSEN KOHDAT C JA F: rakennusvaiheiden lukumäärä
+           * ja kirkkojen ikä kirjoitetaan auki. Lähteet ovat
+           * erimielisiä, ja se on tämän noston koko aihe.
+           */
+          otsikko: 'Kuka ne veisti, ja milloin',
+          teksti: 'Perinne ajoittaa kirkot Zagwe-kuningas Lalibelan '
+            + 'kaudelle, mutta tutkimus ei ole yksimielinen. David '
+            + 'Buxton huomautti, ettei näin suuri kivityö mahdu yhden '
+            + 'hallitsijan vuosikymmeniin, ja arveli työn jatkuneen '
+            + '1300-luvulle. David Phillipson on esittänyt, että '
+            + 'kolme kirkoista louhittiin puoli vuosituhatta '
+            + 'aiemmin, vuosina 600–800, linnoituksiksi tai '
+            + 'palatsirakenteiksi. Vaiheiden lukumäärästäkin on kaksi '
+            + 'lukemaa: yksi tutkimus laskee kolme rakennusvaihetta, '
+            + 'toinen kaksi. Kaivauksissa on löytynyt keramiikkaa '
+            + 'vuosilta 900–1100 — paikka oli asuttu ennen kuin siitä '
+            + 'tuli pyhä.',
+          wiki: 'Rock-Hewn Churches, Lalibela',
+        },
+        {
+          otsikko: 'Kirkko, jota ei louhittu vaan rakennettiin',
+          teksti: 'Kahdentoista kilometrin päässä koilliseen, Abuna '
+            + 'Yosef -vuoren rinteessä, on Yemrehana Krestosin '
+            + 'kirkko. Se on tehty päinvastoin kuin Lalibelan '
+            + 'kirkot: sitä ei louhittu kalliosta vaan muurattiin '
+            + 'kivestä ja puusta suuren luolan sisään. Seinissä on '
+            + 'sama vaakasuora kuvio upotettuja palkkeja ja ulkonevaa '
+            + 'kivityötä kuin Debre Damon vanhassa kirkossa, ja '
+            + 'nurkkakivet sekä ovi- ja ikkunakehykset ovat '
+            + 'aksumilaista tyyliä. Munro-Hay pitää sitä kaikista '
+            + 'tunnetuista muinaisista etiopialaisista kirkoista '
+            + 'koristeellisimpana, ja sen keskilaivan seinämaalauksia '
+            + 'Etiopian vanhimpina säilyneinä.',
+          tiedosto: 'Yemerehne kristos, esterno, 01.jpg',
+          selite: 'Kirkko seisoo luolan sisällä, ja sen seinät ovat '
+            + 'vuorottelevia valkoisen kiven ja tumman puun kerroksia.',
+          lahde: 'Sailko, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Yemrehana Krestos Church',
+        },
+      ],
+    },
+  ],
+  /*
+   * TOWNSVILLE (Opus 7.9.2026, Fablen parvi) — Oseanian laudan
+   * kaupunkilehti, kaupunki-id `townsville`. Aineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-townsville.md ja sen
+   * erillinen tarkistus tarkistus-townsville.md (tuomio "kelpaa, kun
+   * kohtien A–H ratkaisut tehdään"; kaikki kahdeksan on tehty).
+   *
+   * LÄHTEET. Väitteet on luettu en-Wikipedian raakateksteistä
+   * 7.9.2026: "Townsville", "James Morrill (castaway)", "Magnetic
+   * Island", "Castle Hill, Townsville", "Charters Towers", "Eddie
+   * Mabo", "SS Yongala", "Townsville Customs House", "Townsville Post
+   * Office", "Townsville School of Arts", "St James Cathedral,
+   * Townsville", "Tobruk Memorial Baths", "Queens Gardens,
+   * Townsville", "Great Northern Hotel, Townsville", "Queensland
+   * Museum Tropics", "The Strand, Townsville". Toista kieliversiota ei
+   * tarvittu: jokaisella kohdekartan kohteella on oma
+   * englanninkielinen artikkeli, useimmilla Queensland Heritage
+   * Register -kuvauksen pohjalta.
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti.
+   * Saapumisteksti ja valokuvataulu olivat jo olemassa eikä niihin
+   * kosketa; ennen–nyt-pari kopioidaan valokuvataulusta
+   * (oceania-valokuvat.js, townsville) kuvavaiheessa.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto'; sivun nimi kertoo aiheen.
+   *
+   * AUSTRALIAN MAALEHTEÄ EI TOISTETA, EIKÄ KARTTANOSTOJA.
+   * Maalehti (maa-kategoriat.js, AUS) kertoo ensimmäisestä
+   * laivastosta, viimeisestä vankilaivasta, Eurekan paalutuksesta,
+   * liittovaltiosta, viidestäsadasta kansasta, emusta tähtien
+   * välissä, tulenhoidosta, Ulurusta, kullasta, lampaista,
+   * sähkelennättimestä, Murray-joesta, kengurusta, vesinokkaeläimestä,
+   * ISOSTA VALLIRIUTASTA, Nullarborista, damperista, swagista,
+   * kultakenttien riisistä ja vegemitestä. Karttanostoja
+   * (maastokohteet-aus.js) ovat Port Arthur, Ubirr, Parkesin
+   * radioteleskooppi, Broken Hill, Mungojärvi, Snowy Mountains,
+   * Eurekan paalutus, Cooktown, Mount Augustus, ISO VALLIRIUTTA ja
+   * Tasmania.
+   *
+   * CAIRNSIN JA DARWININ LEHTIÄ EI TOISTETA. Cairns kertoo riutasta,
+   * korallien vaalentumisesta ja Daintreesta; Darwin kertoo vuoden
+   * 1942 pommituksista ja hirmumyrsky Tracysta. Siksi tässä lehdessä
+   * EI OLE riuttanostoa eikä sotanostoa: riutta mainitaan vain
+   * matkaoppaassa, ja vuosi 1942 näkyy ainoastaan siinä, että
+   * postitalon kellotorni purettiin (kohdekartan juttu). Hirmumyrskyt
+   * ovat oppaan Hyvä tietää -rivillä.
+   *
+   * KOHDEKARTTA EI TOISTA NÄITÄ JUTTUJA (New Yorkin sääntö). Lehti
+   * kertoo perustamisesta, James Morrillista, vuodesta 1873,
+   * Japanin konsulaatista, Eddie Mabosta, kuivasta tropiikista,
+   * Nooan yöstä, Castle Hillistä ja Magnetic Islandista; kartta
+   * kertoo kahdeksan rakennuksen ja puiston oman historian.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: perustamisleirin kuukautta ei anneta (huhtikuu vai
+   *    marraskuu 1864), vain vuosi.
+   *  - B: vuosisade on leipätekstin 1 095 mm, ei tietolaatikon
+   *    1 134,7 mm; keskustan ja Woodstockin ero sanotaan ääneen.
+   *  - C: Queens Gardensin lajilista on kohteen oman artikkelin
+   *    (kaakao, öljypalmu, mango).
+   *  - D: vanhan rautatieaseman vuosilukua ei anneta (1913 vai 1914).
+   *  - E: postitalon vaiheiden vuosia ei sidota toisiinsa.
+   *  - F: Castle Hillin graniitti on vaaleanpunaista (kohteen oma
+   *    artikkeli), ei punaista (pääartikkeli).
+   *  - G: "Australian ensimmäinen ilmainen lainakirjasto" kerrotaan
+   *    lähteen väitteenä.
+   *  - H: rajaseudun väkivalta kerrotaan tapahtumana ilman
+   *    yksityiskohtia; haaksirikon lautan yksityiskohdat jätetään
+   *    pois; nykypolitiikkaa ei mainita.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026 ilta).
+   * Oppaan sääjakso nojaa en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen.
+   *
+   * MINITEHTÄVÄ EI TOISTA KULTTUURIVISAA. oceania-questions.js:n
+   * townsville-visa kysyy osavaltiota, merivaakkua, Magnetic Islandia,
+   * meritieteen laitosta ja verkkoaitauksia; teemasivun tehtävä kysyy,
+   * miksi Townsvillen talvi on kuiva, ja vastaus on saman sivun
+   * ensimmäisessä nostossa.
+   */
+  townsville: [
+    {
+      id: 'kaupunki',
+      nimi: 'Townsville',
+      johdanto: 'Townsville perustettiin 1864 satamaksi sinne, minne '
+        + 'Burdekin-joen tulva ei yltänyt. Isoisän matkavuonna 1873 '
+        + 'kaupunki oli yhdeksänvuotias eikä siellä ollut rautatietä: '
+        + 'kulta tuli laitureille maanteitse.',
+      /*
+       * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+       * (oceania-valokuvat.js, townsville), jossa se on jo
+       * tarkistettu. Sama paikka, sama katse: Townsvillen satama.
+       * Vanhan puolen lähderivi nimeää albumin säilyttäjän, koska
+       * extmetadata ei anna kuvaajan nimeä lainkaan.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'StateLibQld 1 235004 Scene at Jetty Wharf, Townsville, Queensland, 1901.jpg',
+          vuosi: '1901',
+          selite: 'Elokuussa 1901 Jetty Wharfin laiturissa oli neljä '
+            + 'alusta kylki kyljessä, ja lastina oli sokeria, villaa '
+            + 'ja malmia.',
+          lahde: 'John Oxley Library, State Library of Queensland, '
+            + 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Views of the Port of Townsville from the Magnetic Island ferry, Townsville, Australia 01.jpg',
+          vuosi: '2026',
+          selite: 'Sama satama tänään: pitkän paalulaiturin päällä '
+            + 'kulkee kuljetinhihna, ja taustalla nousee Castle Hill.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+        },
+      ],
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * omistajan 21.8.2026 linjauksen mukaiset laajat yleiskuvat
+       * kaupungin eri puolilta: kallio mereltä, kaupunki kalliolta ja
+       * rantabulevardin laituri.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Castle Hill, Viewed From Townsville Breakwater..jpg',
+          selite: 'Castle Hillin paljas graniittilaki nousee '
+            + 'kaupungin talojen takaa, ja edessä on Cleveland Bayn '
+            + 'matala vesi.',
+          lahde: 'TheDinosaurMan08, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'View From Castle Hill Townsville - panoramio (11).jpg',
+          selite: 'Kalliolta katsottuna North Wardin matalat talot '
+            + 'levittäytyvät rantaan, ja lahden takana on Magnetic '
+            + 'Island.',
+          lahde: 'Lobster1, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'View from Castle Hill Lookout, Townsville, 2023, 02.jpg',
+          selite: 'Näköalatasanteelta katsottuna aurinko laskee '
+            + 'rannikon suuntaan ja kaupungin valot syttyvät alla.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: kolme aitoa valokuvaa eri suunnista — saari
+       * lahden takana, rantabulevardin laituri ja pääkatu.
+       * Townsvillelle ei ole generoitu herokuvia.
+       *
+       * STRANDIN LAITURI ESIINTYY KAHDESTI, ja se on tietoinen
+       * valinta: karusellin kuva on päivällä ja matkaoppaan kuva
+       * yöllä, jolloin laituri ja Ocean Siren -veistos on valaistu.
+       * Eri tiedostot, sama kohde — kirjattu raporttiin
+       * (kaupunkilehti.md: aihetoisto sallitaan perusteltuna).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Magnetic Island seen from Castle Hill Lookout, Townsville, 2023.jpg',
+          selite: 'Magnetic Island on kahdeksan kilometrin päässä ja '
+            + 'näkyy iltavalossa yhtenä pitkänä vuorijonona.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Strand Pier, Townsville, 2023, 01.jpg',
+          selite: 'The Strandin laituri työntyy Cleveland Baylle '
+            + 'kahden kilometrin rantabulevardin puolivälissä.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Flinders Street, Townsville, Queensland.jpg',
+          selite: 'Flinders Street on kaupungin vanhin katu, ja sen '
+            + 'varrella seisoo yhä rivi 1800-luvun lopun '
+            + 'pankkitaloja.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Satama, jonka tulva vaati',
+          aika: '1864—1866',
+          teksti: 'Burdekin-joki nousi joka sadekausi yli äyräiden, ja '
+            + 'silloin sisämaan karjatilat jäivät ilman yhteyttä etelän '
+            + 'satamiin. Siksi joen pohjoispuolelle oli pakko saada oma '
+            + 'satama. Woodstock Stationin John Melton Black, '
+            + 'sydneyläisen liikemiehen Robert Townsin työntekijä, '
+            + 'lähetti Andrew Ballin ja Mark Watt Reidin etsimään '
+            + 'paikkaa, ja leiri pystytettiin 1864 Ross Creekin '
+            + 'rantaan Melton Hillin alle. Towns kävi paikalla 1866 '
+            + 'kolme päivää — ensimmäisen ja ainoan kerran — ja lupasi '
+            + 'rahoituksen, jolloin kaupunki nimettiin hänen mukaansa. '
+            + 'Kunta julistettiin helmikuussa 1866, ja Blackista tuli '
+            + 'sen ensimmäinen pormestari.',
+        },
+        {
+          otsikko: 'Mies, joka palasi seitsemäntoista vuoden jälkeen',
+          aika: '1846—1863',
+          teksti: 'Englantilainen merimies James Morrill oli laivassa '
+            + 'nimeltä Peruvian, joka ajoi riutalle Korallimerellä '
+            + 'helmikuussa 1846. Purjelautalle pääsi 21 ihmistä, ja '
+            + 'neljänkymmenenkahden päivän jälkeen Cape Clevelandin '
+            + 'rantaan nousi seitsemän. Paikalliset klaanit toivat '
+            + 'ruokaa ja vettä ja opettivat eloonjääneet keräämään '
+            + 'ravintoa. Morrill jäi ainoana henkiin, sai nimen '
+            + 'Karckynjib-Wombil-Mooney ja oppi kahdeksan biri-kielen '
+            + 'murretta. Vuonna 1863 hän kiipesi Jarvisfieldin '
+            + 'lammasaseman aidalle ja huusi karjapaimenille '
+            + 'unohtumassa olevalla englannillaan olevansa '
+            + 'haaksirikkoutunut merimies. Ennen lähtöään hän varoitti '
+            + 'klaaniaan siirtymään rannikolle.',
+        },
+        {
+          otsikko: 'Vuosi 1873: viiden kultakentän satama',
+          aika: '1873',
+          teksti: 'Kultaa löytyi Cape Riveriltä 1867, Ravenswoodista '
+            + '1869 ja Charters Towersista jouluaattona 1871, kun '
+            + '12-vuotias aboriginaalipoika Jupiter Mosman etsi '
+            + 'salaman säikäyttämiä hevosia ja löysi puron pohjalta '
+            + 'kultamöhkäleen. Isoisän matkavuonna Townsville oli '
+            + 'näiden kenttien satama — myös Gilbertin ja Etheridgen — '
+            + 'mutta ilman rautatietä: radan rakentaminen alkoi vasta '
+            + '1879 ja rata Charters Towersiin valmistui joulukuussa '
+            + '1882. Kaupunki oli yhä pieni. Tulli ja oikeusistuin '
+            + 'jakoivat ahtaan kolmihuoneisen puurakennuksen, jonka '
+            + 'taakse oli 1871 lisätty kaksi toimistoa, ja vuonna 1882 '
+            + 'asukkaita oli 4 000.',
+        },
+        {
+          otsikko: 'Konsulaatti, jonka avasi sokeriruoko',
+          aika: '1896—1908',
+          teksti: 'Vuonna 1896 Japani perusti Townsvilleen ensimmäisen '
+            + 'australialaisen konsulaattinsa. Syy oli käytännöllinen: '
+            + 'seudulla työskenteli noin neljätuhatta japanilaista '
+            + 'siirtotyöläistä sokeriruokopelloilla ja meren '
+            + 'elinkeinoissa — kilpikonnan, trokosimpukan, '
+            + 'merimakkaran ja helmien pyynnissä. Konsulaatti oli '
+            + 'siellä missä työ oli, ei siellä missä hallinto. Kun '
+            + 'Valkoisen Australian politiikka astui voimaan, '
+            + 'japanilaisen työvoiman kysyntä väheni, ja konsulaatti '
+            + 'suljettiin 1908. Kaupunki oli jo sitä ennen tottunut '
+            + 'tuotuun työvoimaan: Robert Towns oli tuonut 8. '
+            + 'heinäkuuta 1866 ensimmäisen laivalastin Tyynenmeren '
+            + 'saarelaisia, 56 ihmistä.',
+        },
+        {
+          otsikko: 'Puutarhuri, joka muutti maan lain',
+          aika: '1974—1992',
+          teksti: 'Eddie Mabo työskenteli James Cook -yliopistossa '
+            + 'puutarhurina vuodesta 1967 vuoteen 1975. Yliopistolla '
+            + 'hän kuuli 1974 ensimmäisen kerran, mitä terra nullius '
+            + '-oppi tarkoitti: sen mukaan hän ei omistanut maata, '
+            + 'jonka hän oman kansansa perintöjärjestelmän mukaan '
+            + 'omisti. Vuonna 1981 samalla kampuksella pidettiin '
+            + 'maaoikeuskonferenssi, jossa Mabo selosti Murray '
+            + 'Islandin perintöjärjestelmää. Kuulijoiden joukossa '
+            + 'ollut lakimies ehdotti koeoikeudenkäyntiä. '
+            + 'Kymmenen vuoden jälkeen, 3. kesäkuuta 1992, Australian '
+            + 'korkein oikeus ratkaisi jutun Mabon hyväksi ja tunnusti '
+            + 'alkuperäisen maaoikeuden ensimmäistä kertaa maan '
+            + 'historiassa.',
+        },
+      ],
+      matkailijalle: {
+        /*
+         * Osion valokuva otsikon alla oikealla, teksti kiertää.
+         * Tuore maltillinen pysty (3024 x 4032 eli 0,75) omistajan
+         * 20.8.2026 linjauksen mukaan.
+         */
+        kuva: {
+          tiedosto: 'Strand Pier, Townsville, 2023, 03.jpg',
+          selite: 'Illalla The Strandin laituri ja Ocean Siren '
+            + '-veistos palavat sinisinä, ja takana näkyy Magnetic '
+            + 'Islandin siluetti.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Townsville on Pohjois-Queenslandin ja koko '
+          + 'Pohjois-Australian suurin taajama: asukkaita on '
+          + 'kaupungin oman ilmoituksen mukaan 204 541, ja vuoden 2021 '
+          + 'väestönlaskennassa 179 011. Vuonna 2021 yhdeksän '
+          + 'prosenttia asukkaista eli 21 180 ihmistä oli '
+          + 'aboriginaali- tai Torresinsalmen saarelaistaustaisia. '
+          + 'Alueen kansoja ovat wulgurukaba, bindal, girrugubba, '
+          + 'warakamai ja nawagi; wulgurukabat kutsuvat maataan '
+          + 'nimellä Gurrumbilbarra ja bindalit nimellä Thul Garrie '
+          + 'Waja. Keskusta on kolmen kilometrin kaistale Castle '
+          + 'Hillin ja meren välissä, ja kaikki oleellinen on '
+          + 'kävelymatkan päässä Flinders Streetiltä.',
+        artikkeli: {
+          nimi: 'Matkailijan Townsville',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa vuori on kadun päässä, talvi on '
+            + 'sininen ja lautta vie kahdeksan kilometrin päähän '
+            + 'saarelle, jonka nimen antoi rikkinäinen kompassi.',
+          nosto: 'Townsville on ainoa kaupunki maailmassa, joka '
+            + 'jalostaa kolmea eri perusmetallia — sinkkiä, kuparia ja '
+            + 'nikkeliä. Nikkelimalmi tuodaan laivalla Indonesiasta, '
+            + 'Filippiineiltä ja Uudesta-Kaledoniasta, sinkki tulee '
+            + 'junalla Canningtonin kaivokselta ja kuparirikaste Mount '
+            + 'Isasta.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Townsville on Brucen valtatien ja rannikkoradan '
+                + 'varrella: Brisbaneen on 1 350 kilometriä etelään ja '
+                + 'Cairnsiin 350 kilometriä pohjoiseen. Spirit of '
+                + 'Queensland kulkee molempiin suuntiin ja The '
+                + 'Inlander sisämaahan Mount Isaan; nykyinen asema '
+                + 'avattiin 2003, ja Mount Isan rata vihittiin 1929. '
+                + 'Keskustassa liikutaan kävellen. Flinders Street on '
+                + 'vanhin katu ja sen varrella seisovat 1880-luvun '
+                + 'pankit; Tattersalls Hotel on vuodelta 1864. '
+                + 'Magnetic Islandille menee lautta rannan '
+                + 'aallonmurtajalta Nelly Baytiin, ja saarella on '
+                + '39,5 neliökilometrin kansallispuisto '
+                + 'kävelypolkuineen.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Kaupunki on kasvanut kolmen kiven ympärille. '
+                + 'Castle Hill nousee keskustan takaa, Mount Stuart '
+                + 'etelässä ja Magnetic Island merellä — kaikki kolme '
+                + 'kuuluvat samaan kvartsimonzoniittiseen '
+                + 'kivilajiprovinssiin. Ross River virtaa lävitse, ja '
+                + 'sen kolme patoa ja ruoppaus ovat tehneet siitä '
+                + 'syvän ja vakaan; Ross River Dam on kolmenkymmenen '
+                + 'kilometrin päässä suulta ja on kaupungin '
+                + 'vesivarasto. Vanha satama-alue on Ross Creekin '
+                + 'varrella. Puistoja on kolme kasvitieteellistä: '
+                + 'Anderson Park, Queens Gardens ja The Palmetum. '
+                + 'Ravintolat ovat Palmer Streetillä, Flinders '
+                + 'Streetillä ja The Strandilla.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: kuivan kauden ilta',
+              teksti: 'Toukokuusta lokakuuhun Townsvillessä sataa '
+                + 'tuskin lainkaan: syyskuun keskisade on 9,9 '
+                + 'millimetriä ja heinäkuun 13,9. Päivä on 26 asteen '
+                + 'tuntumassa ja yö laskee neljääntoista, mikä on '
+                + 'trooppisessa kaupungissa viileää. Kaakkoispasaati '
+                + 'puhaltaa tasaisesti, ja historioitsija Henry '
+                + 'Reynolds, joka tuli kaupunkiin 1965, muisti juuri '
+                + 'sen: lyhyet kirkkaat hämärät, kuunvaloiset yöt ja '
+                + 'ennen kaikkea pasaatituulet. Ilta vietetään ulkona, '
+                + 'ja The Strandin kahden kilometrin rantabulevardi on '
+                + 'silloin täynnä kävelijöitä.',
+            },
+            {
+              otsikko: 'Historian käännekohta: kutsu vuodelta 1866',
+              teksti: 'Kaupungin ensimmäinen vuosikymmen ei ollut '
+                + 'kaikille sama. Robert Towns toi 8. heinäkuuta 1866 '
+                + 'Blue Bell -aluksella 56 Tyynenmeren saarelaista '
+                + 'Loyautén saarilta ja Uusilta Hebrideiltä työhön '
+                + 'sokeriruoko- ja puuvillapelloille. Townsin '
+                + 'värvääjää Henry Ross Lewiniä vastaan esitettiin '
+                + 'syytöksiä siitä, että osa saarelaisista oli '
+                + 'siepattu, ja 1867 pidettiin tutkinta yhden '
+                + 'saarelaisen kuolemasta. Samaan aikaan '
+                + 'siirtokunnan eteneminen oli alkuperäisväestölle '
+                + 'väkivaltaista — juuri siksi James Morrill käski '
+                + 'klaaninsa siirtyä rannikolle ja tarjoutui '
+                + 'välittäjäksi. Tarjous hylättiin.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian '
+                + 'Townsville-artikkelin Climate-osiosta; lehdellä ei '
+                + 'ole omaa vuosigraafia, koska säänormaaleja ei '
+                + 'haettu tässä erässä. Ilmasto on trooppinen savanni '
+                + 'ja vuosi jakautuu kahtia. Marraskuusta huhtikuuhun '
+                + 'on sadekausi: tammikuun keskisade on 252,6 '
+                + 'millimetriä ja helmikuun 338,1, ja päivät ovat noin '
+                + '32 astetta. Toukokuusta lokakuuhun on kuiva kausi, '
+                + 'jolloin päivä on 26—30 astetta ja yö 14—21. '
+                + 'Vuosisade on 1 095 millimetriä 61 sadepäivänä, '
+                + 'mutta se vaihtelee kaupungin sisälläkin: keskustassa '
+                + '1 136 millimetriä ja lounaisessa Woodstockissa '
+                + '853. Paras aika tulla on kuiva kausi.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Castle Hill',
+                tahdet: 3,
+                selite: '286 metriä keskellä kaupunkia; ylös vie tie '
+                  + 'tai Goat Trackin 758 porrasta.',
+              },
+              {
+                mita: 'Magnetic Island',
+                tahdet: 3,
+                selite: 'Kahdeksan kilometriä merellä, 52 '
+                  + 'neliökilometriä, josta 39,5 kansallispuistoa.',
+              },
+              {
+                mita: 'The Strand',
+                tahdet: 2,
+                selite: 'Kahden kilometrin rantabulevardi uima-altaineen '
+                  + 'ja joka toinen syyskuu veistosnäyttely.',
+              },
+              {
+                mita: 'Flinders Street',
+                tahdet: 2,
+                selite: 'Kaupungin vanhin katu ja rivi 1880-luvun '
+                  + 'pankkitaloja.',
+              },
+              {
+                mita: 'Queensland Museum Tropics',
+                tahdet: 2,
+                selite: 'Hoitaa HMS Pandoran ja SS Yongalan '
+                  + 'hylkypaikat ja säilyttää niiden esineet.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksoissa ja
+             * nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade tulee tai on tulematta',
+                teksti: 'Vuosivaihtelu on poikkeuksellisen suuri: '
+                  + 'kahdentoista kuukauden sademäärät ovat vaihdelleet '
+                  + '217,9 millimetristä 3 459,8 millimetriin, ja '
+                  + 'kuivin vuosi kymmenestä saa vain puolet '
+                  + 'keskisateesta.',
+              },
+              {
+                otsikko: 'Hirmumyrskyjen kausi',
+                teksti: 'Myrskyt osuvat joulu—huhtikuussa; viimeisiä '
+                  + 'ovat olleet Kirrily 2024 ja Yasi 2011, ja '
+                  + 'helmikuussa 2019 tulva vaurioitti noin 3 300 '
+                  + 'kotia.',
+              },
+              {
+                otsikko: 'Uiminen on aidattua',
+                teksti: 'The Strandin rannalla on uitu ainakin '
+                  + '1870-luvulta, mutta uimapaikat on eri aikoina '
+                  + 'aidattu verkoilla — avovedessä on esiintynyt sekä '
+                  + 'meduusojen pistoja että haita.',
+              },
+              {
+                otsikko: 'Kaupunki vaihtuu nopeasti',
+                teksti: 'Väki vaihtuu tavallista tiheämmin, koska '
+                  + 'varuskunta ja valtion virastot tuovat lyhyiden '
+                  + 'sopimusten työntekijöitä ja kaivostyötä tehdään '
+                  + 'lentäen.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Kuiva tropiikki',
+      johdanto: 'Townsville on tropiikissa mutta kuivalla kaistaleella, '
+        + 'ja syy on rannikon suunnassa. Sama geologia, joka teki '
+        + 'keskustan kalliosta 286-metrisen, nostaa merestä saaren, '
+        + 'joka vei kapteeni Cookin kompassin.',
+      tehtava: {
+        kysymys: 'Miksi Townsvillen talvi on kuiva, vaikka '
+          + 'pohjoisempana rannikolla sataa ympäri vuoden?',
+        vaihtoehdot: [
+          'Kaupunki on liian kaukana merestä',
+          'Rannikko kääntyy tässä itä—länsisuuntaiseksi',
+          'Castle Hill pysäyttää sateen',
+          'Pasaatituulet lakkaavat talveksi',
+        ],
+        oikea: 1,
+        fakta: 'Pohjoisempana rannikko kulkee pohjois—etelä-suunnassa '
+          + 'ja kaakkoispasaati nousee sitä vasten, jolloin sataa. '
+          + 'Townsvillen kohdalla rannikko kääntyy itä—länsisuuntaan, '
+          + 'eikä nostetta synny.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tropiikki, jossa talvi on sininen',
+          teksti: 'Townsvillen ilmasto on trooppinen savanni, ja '
+            + 'sen erikoisuus on talvi. Muualla Queenslandin '
+            + 'itärannikon tropiikissa — esimerkiksi Cairnsissa — '
+            + 'sataa myös talvella, koska rannikko kulkee '
+            + 'pohjois—etelä-suunnassa ja kaakkoispasaati nousee sitä '
+            + 'vasten. Townsvillen kohdalla rannikko kääntyy '
+            + 'itä—länsisuuntaiseksi, eikä nostetta synny. Siksi '
+            + 'talvikuukaudet ovat sinitaivaisia: lämpimät päivät, '
+            + 'viileät yöt ja tasainen pasaati. Vuosisade on 1 095 '
+            + 'millimetriä 61 sadepäivänä, ja lähes kaikki siitä tulee '
+            + 'marras—huhtikuun kuudessa kuukaudessa. Syyskuun '
+            + 'keskisade on 9,9 millimetriä.',
+        },
+        {
+          otsikko: 'Nooan yö',
+          aika: '11.1.1998',
+          teksti: 'Vuosisade kertoo Townsvillestä vähemmän kuin sen '
+            + 'vaihtelu. Mittausten alettua 1871 kahdentoista '
+            + 'kuukauden sademäärät ovat vaihdelleet 217,9 '
+            + 'millimetristä — joulukuusta 1901 marraskuuhun 1902, '
+            + 'liittovaltion kuivuuden huipulla — aina 3 459,8 '
+            + 'millimetriin helmikuun 2025 ja tammikuun 2026 välillä. '
+            + 'Vaihtelu on näin sateiselle ilmastolle lähes '
+            + 'ainutlaatuinen; vertailukelpoisia ovat vain muutamat '
+            + 'Koillis-Brasilian kaupungit. Sateisin vuorokausi on '
+            + '11. tammikuuta 1998, jolloin satoi 548,8 millimetriä '
+            + 'pääosin kahdentoista tunnin aikana pimeän tultua. '
+            + 'Townsvillelaiset kutsuvat sitä yhä Nooan yöksi.',
+        },
+        {
+          otsikko: 'Kallio, joka yritettiin korottaa vuoreksi',
+          teksti: 'Castle Hill on vaaleanpunaista graniittia ja 286 '
+            + 'metriä merenpinnasta. Sen alkuperäiskansan nimi on '
+            + 'Cootharinga, ja se on toinen kahdesta seudulla '
+            + 'säilyneestä alkuperäiskansan paikannimestä. Kallio '
+            + 'määräsi kaupungin epäsäännöllisen katuverkon. '
+            + '1800-luvulla asukkaat kaatoivat sen puut ja villit '
+            + 'vuohet söivät loput; vuohet poistettiin vasta '
+            + '1930-luvulla, ja huipulle vievä tie rakennettiin '
+            + '1935—36 työllisyystyönä. Ylös pääsee myös Goat Trackia, '
+            + 'jossa on 758 porrasta. Kukkula merkittiin '
+            + 'perintörekisteriin 1993. Lähde kertoo myös, että '
+            + 'korkeutta on ainakin kahdesti yritetty nostaa, jotta '
+            + 'kallio kelpaisi vuoreksi.',
+        },
+        {
+          otsikko: 'Saari, joka väänsi kompassia',
+          aika: '1770',
+          teksti: 'Kahdeksan kilometriä rannikolta on 52 '
+            + 'neliökilometrin vuoristoinen saari, jonka wulgurun '
+            + 'kielinen nimi on Yunbenun. James Cook purjehti ohi '
+            + '1770 ja kutsui sitä nimellä Magnetical Island, koska '
+            + 'saaresta näytti lähtevän magneettinen veto, joka '
+            + 'häiritsi aluksen kompassia. Aluetta on sittemmin '
+            + 'tutkittu monenlaisilla laitteilla eikä syytä ole '
+            + 'löytynyt. Saari on käytännössä kaupungin lähiö, jossa '
+            + 'asuu vajaat 2 500 ihmistä; siitä 39,5 neliökilometriä '
+            + 'on kansallispuistoa ja lintujen suojelualuetta. Saaren '
+            + 'graniitti ei jäänyt paikalleen: sitä louhittiin '
+            + 'sataman maantäyttöön ja Townsvillen tullitalon '
+            + 'jalustaan.',
+        },
+      ],
+    },
+  ],
+  /*
+   * IQUITOS (Opus 7.9.2026, Fablen parvi) — E-Amerikan laudan
+   * kaupunkilehti, kaupunki-id `iquitos`. Aineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-iquitos.md ja sen erillinen
+   * tarkistus tarkistus-iquitos.md (tuomio "kelpaa, kun kohtien A–G
+   * ratkaisut tehdään"; kaikki seitsemän on tehty, ks. alla).
+   *
+   * LÄHTEET. Väitteet on luettu raakateksteistä 7.9.2026.
+   * en-Wikipedia: "Iquitos".
+   * es-Wikipedia: "Casa de Fierro", "Barrio de Belén", "Zona
+   * Monumental de Iquitos", "Catedral de Iquitos", "Ex Hotel Palace",
+   * "Malecón Tarapacá", "Casa Strassberger", "Casa Morey", "Mercado
+   * Central (Iquitos)", "Plaza Veintiocho de Julio", "Escuela
+   * Superior de Bellas Artes Víctor Morey Peña". Espanjankielinen
+   * Wikipedia on nimetty lähteeksi siellä missä sitä käytetään
+   * (Guatemala Cityn ja Saltan ennakkotapaus samasta parvierästä):
+   * yhdelläkään kohdekartan kahdeksasta kohteesta ei ole omaa
+   * englanninkielistä artikkelia.
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti.
+   * Saapumisteksti ja valokuvataulu olivat jo olemassa eikä niihin
+   * kosketa; ennen–nyt-pari kopioidaan valokuvataulusta
+   * (southamerica-valokuvat.js, iquitos) kuvavaiheessa.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto'; sivun nimi kertoo aiheen.
+   *
+   * PERUN MAALEHTEÄ EI TOISTETA, EIKÄ KARTTANOSTOJA. Maalehti
+   * (maa-kategoriat.js, PER) kertoo inkavaltakunnasta, Atahualpan
+   * lunnaista, kuraka Guaman Pomasta, itsenäisyydestä, Caralista,
+   * Nazcan viivoista, quipusta, Sipánin haudasta, HOATSINISTA,
+   * PAPUKAIJOJEN SAVILAIKUISTA, Humboldtin virrasta, Titicacan
+   * kelluvista saarista, perunasta, kvinoasta, pachamancasta,
+   * piscosta, charangosta, cajónista, panhuiluista ja saksista.
+   * Karttanostoja (maastokohteet-per.js) ovat Huascarán, Apurímac,
+   * Ballestas-saaret, Nazcan viivat, Chan Chan, Caral, Kuélap, Sipán,
+   * Chavín de Huántar, Arequipa ja Colcan kanjoni. Teemasivun
+   * lintunosto kertoo Allpahuayo-Mishanan KOTOPERÄISESTÄ
+   * harmaasiepposta, jota kumpikaan maalehden lintunosto ei käsittele.
+   *
+   * MANAUSIN JA LIMAN LEHTIÄ EI TOISTETA. Manaus kertoo
+   * OOPPERATALOSTA, SÄHKÖVALOISTA, LONTOOTA JÄLJITTELEVÄSTÄ
+   * TULLITALOSTA ja WICKHAMIN SIEMENISTÄ; Lima kertoo aavikosta,
+   * guanosta, cevichestä ja Machu Picchusta. Siksi tässä lehdessä
+   * kumibuumin loppu kerrotaan vain siitä, mitä KAUPUNGISSA tapahtui
+   * (Casementin raportti, yhtiön purkaminen, väen lähtö), ja Aasian
+   * viljelmät mainitaan yhdellä sivulauseella.
+   *
+   * KOHDEKARTTA EI TOISTA NÄITÄ JUTTUJA (New Yorkin sääntö).
+   * Erityisesti CASA DE FIERRO ON NOSTON I4 AIHE, joten se ei ole
+   * kartalla, ja kartan Mercado Central -juttu kertoo torin oman
+   * tarinan eikä rautatalon ristiriitaa. BELÉN on noston aihe eikä
+   * mahtuisi ruutuun (1,4 km etelään).
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: Casa de Fierron neljä lähdelausumaa kirjoitetaan lukijalle
+   *    auki; yhtäkään vuosilukua ei esitetä varmana.
+   *  - B: väkiluvuista sanotaan aina, kumpaa ne koskevat, ja vuoden
+   *    1873 arvio esitetään johtopäätöksenä eikä lähteen lukuna.
+   *  - C: kumibuumin vuodet ovat johdannon 1880—1914.
+   *  - D: Putumayon tapahtumat kerrotaan tapahtumina ja seurauksina,
+   *    ei tekoina; hintoja ja lapsiin kohdistuneita rikoksia ei
+   *    kerrota.
+   *  - E: ayahuasca on oppaan Hyvä tietää -varauksena, ei nostona,
+   *    eikä nimiä mainita.
+   *  - F: härkähain matka annetaan sekä maileina että kilometreinä
+   *    (3 360 mailia ≈ 5 400 km, lehden oma muunnos) ja sanotaan
+   *    satunnaiseksi.
+   *  - G: tulvavuoden 2012 lukemaa "117 m" ei käytetä, koska se on
+   *    korkeus merenpinnasta eikä tulvan syvyys.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026 ilta).
+   * Oppaan sääjakso nojaa en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen.
+   *
+   * MINITEHTÄVÄ EI TOISTA KULTTUURIVISAA. southamerica-questions.js:n
+   * iquitos-visa kysyy tiettömyyttä, maata, motokaria, kumia ja
+   * Marañónin ja Ucayalin yhtymäkohtaa; teemasivun tehtävä kysyy
+   * joen vuotuista vaihteluväliä, ja vastaus on saman sivun
+   * ensimmäisessä nostossa.
+   */
+  iquitos: [
+    {
+      id: 'kaupunki',
+      nimi: 'Iquitos',
+      johdanto: 'Iquitos on maailman suurin kaupunki, johon ei johda '
+        + 'maantietä. Isoisän matkavuonna 1873 se oli yhdeksänvuotias '
+        + 'laivastosatama ja noin tuhannen asukkaan kylä sademetsän '
+        + 'reunassa.',
+      /*
+       * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+       * (southamerica-valokuvat.js, iquitos), jossa se on jo
+       * tarkistettu. Molemmat katsovat kaupunkia joelta: vanhassa
+       * The Booth Pier kumibuumin lopulla, uudessa sama rantaviiva
+       * paalutaloineen. Pari ei ole sama laituri vaan sama kaupunki
+       * samalta suunnalta, ja se sanotaan kuvateksteissä.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'PERU. SCENES IN IQUITOS LCCN2016864106.jpg',
+          vuosi: '1912',
+          selite: 'Vuonna 1912 Booth-yhtiön laiturissa oli '
+            + 'höyrylaivoja kylki kyljessä ja laiturin päässä '
+            + 'nosturi.',
+          lahde: 'Harris & Ewing Collection, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Vista ciudad desde rio.JPG',
+          vuosi: '2026',
+          selite: 'Sama kaupunki Itaya-joelta tänään: veneitä, '
+            + 'paalujen varaan rakennettuja taloja ja niiden takana '
+            + 'kellotorni.',
+          lahde: 'Gabymuaa, Wikimedia Commons (PD)',
+        },
+      ],
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * omistajan 21.8.2026 linjauksen mukaiset laajat yleiskuvat
+       * kaupungin eri puolilta: kaupunki ilmasta, keskusta katoilta ja
+       * rantakatu tulvatasangon yllä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: "Iquitos et l'Amazonie 983.jpg",
+          selite: 'Ilmasta katsottuna Belénin paalutalot reunustavat '
+            + 'Itayaa, ja kaupungin takana kaartaa Amazon.',
+          lahde: 'Viault, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: "Centre d'Iquitos.jpg",
+          selite: 'Keskustan tiilikatot jatkuvat aukiolle asti, ja '
+            + 'vasemmalla kohoaa katedraalin kellotorni.',
+          lahde: 'Anthony Baratier, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Iquitos Malecon01.jpg',
+          selite: 'Malecón Tarapacán kaidelta katsoo suoraan Belénin '
+            + 'kattojen yli tulvatasangolle.',
+          lahde: 'Håkan Svensson (Xauxa), Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLISSA ON VAIN KAKSI KUVAA, ja se on valinta.
+       * Iquitosille ei ole generoitu herokuvia, ja kaikissa
+       * Commonsin Plaza de Armas -kuvissa on aukion penkeillä
+       * istuvia ihmisiä lähietäisyydellä — kuvaton on parempi kuin
+       * tarkistamaton. Kolmas kuva on tilattu kuvaputkelta.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Iquitos, Peru (11470937056).jpg',
+          selite: 'Belénin peltikatot laskeutuvat rantaan, ja niiden '
+            + 'takana avautuu joki veneineen.',
+          lahde: 'M M from Switzerland, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Atardecer.JPG',
+          selite: 'Illalla tulvatasanko on peilityyni, ja '
+            + 'palmunlehtikattoiset talot seisovat paalujen varassa '
+            + 'vedessä.',
+          lahde: 'Gabymuaa, Wikimedia Commons (PD)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaupunki, jonne ei johda tietä',
+          teksti: 'Iquitos on Loreton alueen ja Maynasin provinssin '
+            + 'pääkaupunki, Perun Amazonian suurin kaupunki ja koko '
+            + 'maan yhdeksänneksi väkirikkain. Metropolialueella asuu '
+            + '471 993 ihmistä neljässä piirissä: Iquitos, Punchana, '
+            + 'Belén ja San Juan Bautista. Se on maailman suurin '
+            + 'kaupunki, johon ei pääse maantietä pitkin ja joka ei '
+            + 'ole saarella — sinne tullaan joko jokea pitkin tai '
+            + 'lentäen. Siitä seuraa kaikki muu: tavara tulee '
+            + 'proomulla tai lentokoneella, elinkustannukset ovat '
+            + 'Perun keskitasoa korkeammat, ja kaupunki on Cuscon '
+            + 'jälkeen maan toiseksi kallein. Kaduilla liikkuu yli '
+            + '25 000 kolmipyöräistä motokaria ja bussit ovat isoja '
+            + 'puisia ajoneuvoja.',
+        },
+        {
+          otsikko: 'Yhdeksän lähetysasemaa ja yksi nimi',
+          aika: '1730—1767',
+          teksti: 'Kaupungin nimi tulee kansasta, jota espanjalaiset '
+            + 'kutsuivat iquitoiksi. He asuivat Pastazan, Tigren, '
+            + 'Nanayn ja Curarayn varsilla ja siirtyivät myöhemmin '
+            + 'Amazonin ja Itayan seudulle. Vuosina 1638—1769 kansat '
+            + 'koottiin '
+            + 'jesuiittojen lähetysasemille, ja noin 130 vuoden aikana '
+            + 'siellä työskenteli 161 lähetyssaarnaajaa: 63 kreolia, '
+            + '43 espanjalaista, 32 saksalaista ja hollantilaista, 20 '
+            + 'italialaista ja kolme muuta. Isä José Bahamonde '
+            + 'käytti 37 vuotta '
+            + 'yhdeksän Iquitos-aseman perustamiseen; niistä yksi oli '
+            + 'San Pablo de los Napeanos vuodelta 1757. Kaarle III '
+            + 'karkotti jesuiitat 20. elokuuta 1767, ja asemista jäi '
+            + 'jäljelle kourallinen kauppakyliä.',
+        },
+        {
+          otsikko: 'Vuosi 1873: yhdeksänvuotias laivastosatama',
+          aika: '1861—1876',
+          teksti: 'Peru halusi pitää kiinni Amazonin latvavesistä, ja '
+            + 'keino oli asuttaa ne. Presidentti Ramón Castilla perusti '
+            + 'Loreton departementin 7. tammikuuta 1861 ja määräsi '
+            + 'rakennettavaksi jokisataman strategiseen paikkaan; '
+            + 'väittelyn jälkeen valittiin Iquitosin kauppakylä. '
+            + '5. tammikuuta 1864 kolme laivaston höyrylaivaa — '
+            + 'Pastaza, Próspero ja Morona — saapui kylään, ja tuo '
+            + 'päivä on Perun ensimmäisen jokisataman perustamispäivä. '
+            + 'Paikalle pystytettiin heti Englannista tuotu telakka ja '
+            + 'laivastopaja. Genaro Herreran mukaan asukkaita oli '
+            + '648 vuonna 1866 ja 1 475 vuonna 1876 — isoisän '
+            + 'matkavuonna siis suunnilleen tuhat.',
+        },
+        {
+          otsikko: 'Rautatalo, josta lähteet eivät ole samaa mieltä',
+          teksti: 'Plaza de Armasin laidalla seisoo esivalmisteinen '
+            + 'rautatalo, jonka seinät, katto ja parveke ovat '
+            + 'suorakaiteen muotoisia rautalevyjä. Sen alkuperästä on '
+            + 'neljä eri kertomusta. Englanninkielinen Wikipedia sanoo '
+            + 'yhdessä kohdassa, että taloa vain väitetään Gustave '
+            + 'Eiffelin suunnittelemaksi ja että todisteet ovat '
+            + 'niukat; toisessa kohdassa se sanoo Eiffelin rakentaneen '
+            + 'sen Pariisin näyttelyyn 1878. Espanjankielinen '
+            + 'Wikipedia sanoo suunnitelman syntyneen noin 1860, '
+            + 'valmistuksen tapahtuneen Belgiassa ja talon olleen '
+            + 'esillä vuoden 1889 näyttelyssä. Varmaa on, että talo '
+            + 'tuli laivalla, oli liian iso ja jaettiin kahtia.',
+        },
+        {
+          otsikko: 'Kumi, joka toi kaupungin ja jätti sen',
+          aika: '1880—1914',
+          teksti: 'Kumibuumi teki Iquitosista Manausin rinnalla '
+            + 'Amazonin toisen pääkaupungin. Vuonna 1900 kaupungissa '
+            + 'oli kaksikymmentäviisi kumikauppahuonetta, ja väkiluku '
+            + 'nousi 1 475:stä 9 438:aan vuoden 1903 laskennassa. '
+            + 'Kumiyrittäjät hoitivat myös politiikan: Julio César '
+            + 'Aranasta tuli pormestari 1902 ja Cecilio '
+            + 'Hernándezista 1906. Aranan Peruvian Amazon Company piti '
+            + 'alkuperäiskansojen työntekijöitä lähes orjuutta '
+            + 'vastaavissa oloissa. Britannian pääkonsuli Roger '
+            + 'Casement julkaisi tutkintaraportin 1913, brittiosakkaat '
+            + 'painostettiin muutoksiin ja Arana joutui purkamaan '
+            + 'yhtiön. Kun Aasian kumi halpeni, moni lähti.',
+        },
+      ],
+      matkailijalle: {
+        /*
+         * Osion valokuva otsikon alla oikealla, teksti kiertää.
+         * Tuore maltillinen pysty (3024 x 4032 eli 0,75) omistajan
+         * 20.8.2026 linjauksen mukaan. Kohde on kaupungin oma
+         * erikoisuus: kumikauden kaakelijulkisivu, joka on kuvattu
+         * myös Perun yhden solin kolikkoon.
+         */
+        kuva: {
+          tiedosto: 'Ex Hotel Palace en Iquitos, 2018.jpg',
+          selite: 'Ex Hotel Palacen kulmatorni, takorautaparvekkeet '
+            + 'ja Málagasta tuodut kaakelit ovat Iquitosin '
+            + 'arkkitehtuurin huippu.',
+          lahde: 'Carlos Correa Loyola, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Iquitos on 106 metrin korkeudessa Amazonin altaan '
+          + 'suurella tasangolla, ja kaupunkialue on 368,9 '
+          + 'neliökilometriä. Itaya ja Nanay rajaavat laajenemista '
+          + 'idässä ja pohjoisessa ja Moronacochan järvi lännessä, '
+          + 'joten kartalla kaupunki näyttää valtavalta jokisaarelta '
+          + 'olematta sitä. Keskusta on pieni ja kävelymatkan '
+          + 'kokoinen: Plaza de Armasilta on kortteli Malecón '
+          + 'Tarapacálle, viisi korttelia betonoitua rantakatua '
+          + 'Itaya-joen yllä. Noin yhdeksänkymmentä rakennusta on '
+          + 'julistettu Loreton arkkitehtoniseksi perinnöksi, ja '
+          + 'kumikauden julkisivujen kaakelit ovat Italiasta ja '
+          + 'Portugalista.',
+        artikkeli: {
+          nimi: 'Matkailijan Iquitos',
+          taitto: 'opas',
+          teksti: 'Kaupunki, johon ei aja mistään, jonka joki nousee '
+            + 'ja laskee kymmenen metriä vuodessa ja jonka '
+            + 'kaakelijulkisivut tilattiin aikanaan meren takaa.',
+          nosto: 'Belénin torille tuo tuotteitaan 150 '
+            + 'alkuperäiskansayhteisöä, ja siellä on inventoitu 390 '
+            + 'tuotetta: 231 kasviperäistä, 157 eläinperäistä ja kaksi '
+            + 'mineraaliperäistä. Niistä 84 prosenttia tuotetaan '
+            + 'alueella; loput tulevat rannikolta ja San Martínista.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kaupunkiin tullaan lentäen tai jokea pitkin. '
+                + 'Crnl. FAP Francisco Secada Vignetta -lentoasemalle '
+                + 'on Limasta 8—9 vuoroa päivässä ja suora lento '
+                + 'kestää tunnin ja 45 minuuttia; kansainväliseltä '
+                + 'terminaalilta on yhteys Panama Cityyn. Jokea pitkin '
+                + 'matka on hitaampi mutta mahdollinen kumpaankin '
+                + 'suuntaan. Kaupungissa liikutaan motokarilla, joita '
+                + 'on yli 25 000, tai kävellen — keskusta on niin '
+                + 'pieni, että sen kiertää tunnissa. Suunniteltu '
+                + 'maantie Sarameriza-suuntaan liittäisi Iquitosin '
+                + 'ensimmäistä kertaa maan tieverkkoon.',
+            },
+            {
+              otsikko: 'Alueen rakenne',
+              teksti: 'Vanha keskusta on Plaza de Armasin ympärillä ja '
+                + 'laskeutuu itään Malecón Tarapacálle, joka '
+                + 'rakennettiin kumikaudella 1800-luvun lopulla ja on '
+                + 'nimetty Tarapacán departementin mukaan. Sen '
+                + 'varrella ovat kumiparonien talot, kirjasto ja '
+                + 'entinen Kolumbian konsulaatti. Malecónin eteläpäästä '
+                + 'maasto laskee Beléniin. Lounaassa on Plaza 28 de '
+                + 'Julio, kaupungin suurin aukio. Kaupungin ulkopuolella '
+                + 'ovat Quistocochan matkailukeskus kuuden kilometrin '
+                + 'päässä ja Allpahuayo-Mishanan suojelualue '
+                + 'kahdenkymmenen kilometrin päässä.',
+            },
+            {
+              otsikko: 'Arjen ilmiö: San Juanin päivä',
+              teksti: 'Kesäkuun 24. päivä on Perun viidakon suurin '
+                + 'juhla, ja sen ruoka on juane: keitetty riisikäärö, '
+                + 'joka nimettiin Johannes Kastajan mukaan ja jolla '
+                + 'saattaa olla esikolumbiaanista alkuperää. Toinen '
+                + 'arjen ruoka on tacacho, paistetuista ja '
+                + 'chicharrónien kanssa survotuista banaaniviipaleista '
+                + 'tehty pallo, joka tarjoillaan chorizon kanssa; sana '
+                + 'tulee ketšuan ilmauksesta taka chu, survottu. '
+                + 'Helmikuussa on karnevaali, jossa kastellaan '
+                + 'ohikulkijoita vesipalloilla. Puhekieli on omaa '
+                + 'Amazonian espanjaa, jossa Juana ääntyy Fana.',
+            },
+            {
+              otsikko: 'Historian käännekohta: 5. tammikuuta 1864',
+              teksti: 'Sinä päivänä kolme Perun laivaston höyrylaivaa '
+                + 'ankkuroitui Iquitosin kylän eteen, ja kylästä tuli '
+                + 'Perun ensimmäinen jokisatama. Päätöksen takana oli '
+                + 'rajapolitiikka: Peru oli sopinut Brasilian kanssa '
+                + 'vapaasta purjehduksesta 23. lokakuuta 1851 ja '
+                + 'halusi vahvistaa vaatimuksensa asuttamalla '
+                + 'kiistanalaisen alueen. Iquitosista tuli Loreton '
+                + 'pääkaupunki 9. marraskuuta 1897, ja rajat sovittiin '
+                + 'Kolumbian kanssa 1922 ja Ecuadorin kanssa 1942. '
+                + 'Ilman tuota päivää kumibuumi olisi rakentanut '
+                + 'palatsinsa jonnekin muualle.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian '
+                + 'Iquitos-artikkelin Climate-osiosta; lehdellä ei ole '
+                + 'omaa vuosigraafia, koska säänormaaleja ei haettu '
+                + 'tässä erässä. Ilmasto on päiväntasaajan '
+                + 'sademetsäilmasto, jota ohjaa matalapainevyöhyke '
+                + 'eivätkä pasaatituulet, eikä hirmumyrskyjä ole. '
+                + 'Vuodenaikoja on kaksi. Sateinen kausi kestää '
+                + 'marraskuusta toukokuuhun, ja maaliskuussa ja '
+                + 'huhtikuussa sataa eniten, 280—300 millimetriä. '
+                + 'Heinä- ja elokuu ovat kuivimmat ja aurinkoisimmat, '
+                + 'mutta niissäkin on kaatosateita. Joki on '
+                + 'korkeimmillaan toukokuussa ja alimmillaan '
+                + 'lokakuussa — se ratkaisee, mihin veneellä pääsee.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Belénin tori',
+                tahdet: 3,
+                selite: 'Perun Amazonian suurin katutori; 390 '
+                  + 'inventoitua tuotetta ja 150 yhteisöä myyjinä.',
+              },
+              {
+                mita: 'Malecón Tarapacá',
+                tahdet: 3,
+                selite: 'Viisi korttelia rantakatua Itayan yllä, '
+                  + 'kumikauden julkisivut molemmin puolin.',
+              },
+              {
+                mita: 'Casa de Fierro',
+                tahdet: 2,
+                selite: 'Esivalmisteinen rautatalo Plaza de Armasin '
+                  + 'laidalla; lähteen mukaan Amerikan ensimmäinen.',
+              },
+              {
+                mita: 'Allpahuayo-Mishana',
+                tahdet: 2,
+                selite: 'Valkohiekkametsää 20 kilometriä pois; yli 600 '
+                  + 'lintulajia ja yksi kotoperäinen.',
+              },
+              {
+                mita: 'Quistococha',
+                tahdet: 2,
+                selite: '369 hehtaaria metsää, pieni eläintarha, '
+                  + 'akvaario ja tekoranta kuuden kilometrin päässä.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksoissa ja
+             * nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Kaikki tulee laivalla tai lentäen',
+                teksti: 'Koska maantietä ei ole, tavara maksaa '
+                  + 'enemmän kuin muualla Perussa: Iquitos on Cuscon '
+                  + 'jälkeen maan toiseksi kallein kaupunki.',
+              },
+              {
+                otsikko: 'Tulva on tavallinen',
+                teksti: 'Vuoden 2012 tulva oli kaupungin historian '
+                  + 'pahin luonnononnettomuus: helmikuussa vahingot '
+                  + 'koskivat yli 19 000 perhettä ja maaliskuussa yli '
+                  + '18 000, ja vesi nousi rantakaduille.',
+              },
+              {
+                otsikko: 'Ayahuasca-matkailua ei valvota',
+                teksti: 'Juoma on nimetty kansalliseksi '
+                  + 'kulttuuriperinnöksi ja mystiikkamatkailu on '
+                  + 'kasvanut, mutta shamaaneja ei valvota eikä '
+                  + 'kenelläkään ole todistusta pätevyydestään; '
+                  + 'kuolemantapauksia on raportoitu.',
+              },
+              {
+                otsikko: 'Helle ja kosteus',
+                teksti: 'Hellejaksoilla lämpötila voi nousta yli '
+                  + '37 asteen ja tuntua 45 asteelta; toisaalta '
+                  + 'mantereen eteläkärjestä tulee ajoittain kylmä '
+                  + 'aalto, joka tuo sadetta ja ukkosta.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Joki, joka nousee ja laskee',
+      johdanto: 'Iquitosissa vuodenaikoja on kaksi, ja ne mitataan '
+        + 'joen pinnasta. Amazon nousee toukokuuhun ja laskee '
+        + 'lokakuuhun, ja koko kaupunki — talot, tori ja metsä — on '
+        + 'sopeutunut siihen rytmiin.',
+      tehtava: {
+        kysymys: 'Kuinka paljon Amazonin pinta laskee Iquitosissa '
+          + 'toukokuun ja lokakuun välillä?',
+        vaihtoehdot: [
+          'Alle metrin',
+          'Kahdesta kolmeen metriä',
+          'Yhdeksästä kahteentoista metriä',
+          'Yli kolmekymmentä metriä',
+        ],
+        oikea: 2,
+        fakta: 'Joki on korkeimmillaan toukokuussa ja alimmillaan '
+          + 'lokakuussa, ja ero on yhdeksästä kahteentoista metriä. '
+          + 'Sen jälkeen se nousee taas sateiden mukana.',
+      },
+      nostot: [
+        {
+          otsikko: 'Yhdeksän metriä ylös ja alas',
+          teksti: 'Iquitosin ilmasto on päiväntasaajan '
+            + 'sademetsäilmasto: sataa ympäri vuoden eikä selvää '
+            + 'kuivakautta ole, mutta kesä on sateisempi. Sateinen '
+            + 'kausi alkaa marraskuussa ja päättyy toukokuuhun, ja '
+            + 'eniten sataa maaliskuussa ja huhtikuussa, 280—300 '
+            + 'millimetriä. Toukokuussa Amazon on korkeimmillaan. '
+            + 'Lokakuussa se on alimmillaan, yhdeksästä '
+            + 'kahteentoista metriä alempana, ja nousee sitten '
+            + 'kierroksen mukana uudelleen. Heinä- ja elokuu ovat '
+            + 'kuivimmat ja aurinkoisimmat kuukaudet, mutta niissäkin '
+            + 'tulee kaatosateita. Sadetta on enemmän kuin '
+            + 'Ayacuchossa, Cuscossa tai Limassa.',
+        },
+        {
+          otsikko: 'Kaupunginosa, joka nousee veden mukana',
+          teksti: 'Belén tunnetaan myös nimellä Amazonian Venetsia. '
+            + 'Sen talot ovat palafiitteja eli paalutaloja ja '
+            + 'asuinlauttoja Itaya-joen rannan takana, ja '
+            + 'kaupunginosan elämänrytmi vaihtuu vuodenajoittain joen '
+            + 'nousun ja laskun mukana. Kaupunginosa syntyi Belén '
+            + 'Cochan rannalle, joka oli Itayan pieni haara ja on '
+            + 'nykyään Itaya-niminen katu, ja levisi sieltä ylöspäin '
+            + 'Vizcarran kummulle ja Pijuayo Lomalle. Belénin tori on '
+            + 'Perun Amazonian suurin katutori: se alkaa 9 de '
+            + 'Diciembre -kadun päästä ja leviää kapeina käytävinä '
+            + 'useille kaduille. Siellä on inventoitu 390 tuotetta, '
+            + 'joista 60 on riistalajeja ja 56 kalalajeja.',
+        },
+        {
+          otsikko: 'Valkoisen hiekan metsä',
+          teksti: 'Kahdenkymmenen kilometrin päässä kaupungista alkaa '
+            + 'Allpahuayo-Mishanan kansallinen suojelualue, joka '
+            + 'kuuluu Nanayn valuma-alueeseen ja niin sanottuun Napon '
+            + 'ekoalueeseen. Sen erikoisuus ovat valkohiekkametsät, '
+            + 'joita ei ole muualla samanlaisina. Ekoalueella on '
+            + 'laskettu 112 sammakkoeläinlajia, 17 kädellislajia, '
+            + '1 900 kasvilajia ja yli 600 lintulajia. Yksi niistä on '
+            + 'kotoperäinen: Iquitosin harmaasieppo Polioptila '
+            + 'clementsi elää vain täällä ja on kaupungin symboli. '
+            + 'Kaupungin omalla metropolialueella on lisäksi 850 '
+            + 'kasvilajia, joista 22 palmulajia, sekä 130 nisäkäs- ja '
+            + '330 lintulajia.',
+        },
+        {
+          otsikko: 'Hai, joka tuli Atlantilta',
+          teksti: 'Kaupunkia ympäröi tulvametsä, jota kutsutaan '
+            + 'nimellä Iquitos varzea. Sen kierto on yksinkertainen: '
+            + 'puut pudottavat lehtensä maahan, ne muuttuvat '
+            + 'humukseksi, sade huuhtoo ravinteet jokiin ja antaa '
+            + 'vedelle sen vaalean tanniinivärin — ja sama alkaa '
+            + 'alusta. Metsässä elää 150 matelija- ja '
+            + 'sammakkoeläinlajia ja joissa 250 kalalajia. Joukossa on '
+            + 'yksi satunnainen vieras, joka ei ole jokikala '
+            + 'lainkaan: härkähai tulee Atlantilta asti, ja lähteen '
+            + 'mukaan matkaa kertyy 3 360 mailia eli noin 5 400 '
+            + 'kilometriä. Meri on Iquitosista kaukana, mutta joki '
+            + 'ei ole este.',
+        },
+      ],
+    },
+  ],
+  /*
+   * WHITEHORSE (Opus 7.9.2026, parvierä) — Pohjois-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-whitehorse.md ja sen riippumaton tarkistus
+   * tarkistus-whitehorse.md (tuomio "kelpaa, kun kohtien A–F
+   * ratkaisut tehdään"; kaikki kuusi on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Whitehorse", "Canyon City, Yukon", "White Horse Rapids",
+   * "Miles Canyon Basalts", "Schwatka Lake", "White Pass and Yukon
+   * Route", "Kwanlin Dün First Nation", "Ta'an Kwach'an Council",
+   * "The Cremation of Sam McGee", "Chinook salmon", "Yukon Quest",
+   * "Alaska Highway", "Whitehorse Waterfront Trolley".
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * kosketa.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto', koska AIHE_IKONIT ei tarjoa laaksolle omaa
+   * kuvaketta eikä uusia sivu-id:itä tehdä; sivun nimi "Laakso, sää
+   * ja tie" kertoo aiheen.
+   *
+   * KANADAN MAALEHTEÄ EI TOISTETA. Maalehti (maa-kategoriat.js, CAN)
+   * kertoo viikingeistä ja Hudson's Bay Companysta, konfederaatiosta
+   * ja punatakeista, métiseistä ja totem-paalusta, inuksukista ja
+   * sisäoppilaitoksista, Banffista, Fundynlahdesta, majavapadosta ja
+   * Wood Buffalosta, vaahterasiirapista, poutinesta, Nanaimo-palasta
+   * ja ketsuppisipsiriidasta sekä jääkiekosta, koripallosta ja
+   * curlingista. Yksikään näistä ei ole tämän lehden aihe.
+   *
+   * KLONDIKEN KULTARYNTÄYS ON KARTTANOSTO (maastokohteet-can.js,
+   * dawson-city: "500 asukasta 1896, 17 000 kaksi vuotta myöhemmin",
+   * Chilkootin sola ja vuoden ruokavarat), eikä lehti toista sitä.
+   * Tämä lehti kertoo siitä vain sen verran kuin kaupungin synty
+   * vaatii ja pysyy siinä kohdassa reittiä, jossa kaupunki on:
+   * koskissa, kanjonissa ja radassa.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: nimestä Closeleigh kerrotaan Whitehorse-artikkelin mukaan
+   *    (yritys ja komissaari Ogilvien kieltäytyminen), koska Miles
+   *    Canyon Basalts -artikkelin muotoilu "Closeleighin kaupunki"
+   *    on epätarkempi.
+   *  - B: uponneiden veneiden määrä kerrotaan Canyon City
+   *    -artikkelin tarkemmalla luvulla (lähes 300 venettä, viisi
+   *    hukkunutta).
+   *  - C: vuoden 1905 palon yhteydessä mainittu yhdysvaltalainen
+   *    liikemiessuku jätetään pois — nykypolitiikkaan kytkeytyvä
+   *    henkilöviite ei kuulu peliin.
+   *  - D: SS Klondike II:n palvelusaika kerrotaan leipätekstin
+   *    mukaan (rahti 1950-luvun alkuun, risteilyt 1955 asti).
+   *    Kohde on kohdekartalla, ei lehden nostona.
+   *  - E: minitehtävä ei koske Yukonjoen pituutta eikä mitään muuta
+   *    kaupungin viidestä kysymyksestä (northamerica-questions.js).
+   *  - F: kohdekartalta pudotettiin Downtown Whitehorse (105 m) ja
+   *    Waterfront Trolleyn pysäkki (75 m MacBride-museosta);
+   *    molemmat kerrotaan matkaoppaassa.
+   *
+   * ENNEN JA NYT sekä KANSI- JA AVAUSKUVAT lisätään tämän erän
+   * toisessa vaiheessa (kuvahaku Commonsista). Tämä lohko on
+   * tekstien checkpoint, ja lehti taittuu ilman kuvia.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026):
+   * säänormaalit ovat oman agentin työlistalla. Oppaan sääjakso
+   * nojaa siksi en-Wikipedian Climate-osioon ja sanoo sen ääneen.
+   */
+  whitehorse: [
+    {
+      id: 'kaupunki',
+      nimi: 'Whitehorse',
+      johdanto: 'Whitehorse kasvoi sen ympärille, mikä on nykyään '
+        + 'veden alla: kosken, joka esti matkan pohjoiseen. Isoisän '
+        + 'matkavuonna 1873 laaksossa oli kausittaisia kalaleirejä ja '
+        + 'kantoreitti kanjonin ohi — ei kaupunkia.',
+      /*
+       * EI ENNEN JA NYT -PARIA. Matkakirjan valokuvataulun vanha puoli
+       * (northamerica-valokuvat.js, whitehorse: "Sternwheelers at
+       * Whitehorse, Yukon, ca. 1899 …") on Commonsissa 6202 × 4462 ja
+       * PD, mutta se HYLÄTTIIN kaupunkilehden kuvasäännöillä: vedos on
+       * paspartuun kiinnitetty (lisätty kehys) ja negatiiviin on
+       * painettu vanhan studion kuvateksti ja numero. Kumpikin on
+       * kielletty "kuvan päälle lisätty merkintä". Korvaajaa etsittiin
+       * hauilla "Category:Whitehorse, Yukon" ja "Whitehorse Yukon"
+       * 7.9.2026; yhtään sääntöjen mukaista vanhaa vedosta ei
+       * löytynyt. Lehti taittuu siis ilman paria kuten Lagos, Dubai ja
+       * Doha, ja kansikuvien pikkurivi näkyy normaalisti. Kirjattu
+       * kuvaputken tilaukseksi.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Downtown Whitehorse (6325219946).jpg',
+          selite: 'Yukonjoki kaartaa keskustan ohi, ja sen takaa '
+            + 'nousee lumihuippuinen vuori.',
+          lahde: 'Anthony DeLorenzo from Whitehorse, Yukon, Canada, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Whitehorse Wharf (6346301048).jpg',
+          selite: 'Rantakäytävä ja penkkirivi ovat lumen alla, ja '
+            + 'joki virtaa jäätymättömänä niiden vieressä.',
+          lahde: 'Anthony DeLorenzo from Whitehorse, Yukon, Canada, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Whitehorse - Yukon Territory (12448173245).jpg',
+          selite: 'White Pass and Yukon Routen puinen asemarakennus '
+            + 'seisoo rantatien varrella metsäisen rinteen edessä.',
+          lahde: 'TravelingOtter from Houston, Texas, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Whitehorselle ei ole generoitu herokuvia, ja
+       * karusellissa on toistaiseksi VAIN YKSI aito valokuva. Kaksi
+       * muuta on kirjattu kuvaputken tilaukseksi: Commonsin
+       * Whitehorse-aineisto on ohut, ja tässä erässä löytyneistä
+       * ehdokkaista kelpasivat vain ne, jotka ovat jo kansikuvissa.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Alaska Highway - Yukon Territory (12448918423).jpg',
+          selite: 'Alaska Highway katoaa suorana kuusikon väliin, ja '
+            + 'horisontissa siintää vuorijono.',
+          lahde: 'TravelingOtter from Houston, Texas, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kwanlin, virtaava vesi kanjonissa',
+          teksti: 'Kwanlin Dün First Nation on Yukonin suurin, ja sen '
+            + 'nimi tulee joen omasta osuudesta. Kwanlin tarkoittaa '
+            + 'Southern Tutchonen kielellä virtaavaa vettä kanjonin '
+            + 'läpi, ja dün on väki: kyse on juuri siitä pätkästä, '
+            + 'joka kulkee Miles Canyonista koskille. Perinteinen '
+            + 'alue ulottuu Marsh Lakelta Lake Labergelle, ja joen '
+            + 'nimi on Tágà Shäw, iso joki. Arkeologia keskustan '
+            + 'eteläpuolelta osoittaa, että aluetta on käytetty '
+            + 'tuhansia vuosia. Maaoikeus- ja itsehallintosopimus '
+            + 'allekirjoitettiin 19. helmikuuta 2005, ja '
+            + 'kulttuurikeskus avattiin joen rannalla keskustassa '
+            + 'kesäkuussa 2012. Naapurina on Ta\'an Kwäch\'än '
+            + 'Council, joka irtautui neuvottelemaan oman '
+            + 'sopimuksensa ja sai sen 2002.',
+          tiedosto: 'The Wolf and the Crow, the two clans of the Kwanlin Dun (47975824718).jpg',
+          selite: 'Pyöreään setrilevyyn veistetyt susi ja korppi ovat '
+            + 'Kwanlin Dünin kaksi klaania.',
+          lahde: 'dvs from Vermont, USA, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Kwanlin Dün First Nation',
+        },
+        {
+          otsikko: 'Vuosi 1873: kartalla vain joki',
+          teksti: 'Isoisän matkavuonna laaksossa ei ollut kaupunkia '
+            + 'eikä kauppa-asemaa. Alueen läpi kulki kausittain useita '
+            + 'kansoja, joiden alueet menivät päällekkäin, ja '
+            + 'ulkopuoliset tunsivat paikan huonosti: vasta 1883 '
+            + 'Frederick Schwatka pani merkille kantoreitin, joka '
+            + 'kiersi Miles Canyonin, ja 1887 George Mercer Dawson '
+            + 'kirjasi kanjonin yläpuolisen suuren lohimäärän. Kaikki '
+            + 'muuttui elokuussa 1896, kun Skookum Jim, Tagish '
+            + 'Charlie ja George Washington Carmack löysivät kultaa '
+            + 'Klondikelta. Heinäkuussa 1897 höyrylaivoilla tulleita '
+            + 'leiriytyi jo paikkaan, jota sanottiin nimellä White '
+            + 'Horse — kaksi sanaa, kuten vielä pitkään sen jälkeen.',
+          wiki: 'Whitehorse',
+        },
+        {
+          otsikko: 'Kosket, joiden harja antoi nimen',
+          teksti: 'Kaupungin nimi on koskien nimi: White Horse '
+            + 'Rapidsin sanottiin muistuttavan valkoisen hevosen '
+            + 'harjaa. Kosket syntyivät siitä, että Yukonjoki leikkaa '
+            + 'basalttilaavavirtojen läpi, ja Miles Canyonin basaltit '
+            + 'ovat noin 8,4 miljoonaa vuotta vanhoja. Kanjoni ja '
+            + 'kosket olivat reitin vaarallisin kohta ja samalla '
+            + 'siipiratasalusten ylin piste joella. Kesäkuuhun 1898 '
+            + 'mennessä koskissa oli tuhoutunut lähes 300 venettä ja '
+            + 'viisi ihmistä oli hukkunut; ratsupoliisin tarkastaja '
+            + 'Samuel Steele ihmetteli ääneen, miksei onnettomuuksia '
+            + 'ollut sattunut enemmän, ja määräsi veneisiin '
+            + 'ammattiluotsit. Kosket katosivat 1958 padon taakse.',
+          wiki: 'White Horse Rapids',
+        },
+        {
+          otsikko: 'Kaupunki, joka melkein sai nimen Closeleigh',
+          teksti: 'Koskien ohi rakennettiin ensin kaksi rataa: '
+            + 'itärannalle kahdeksan kilometriä Canyon Citystä '
+            + 'koskien juurelle, ja toinen länsirannalle. Tavara '
+            + 'kulki hevosvetoisilla vaunuilla kolmella sentillä '
+            + 'naulaa kohti. Sitten tuli rautatie. Kapearaiteisen '
+            + 'White Pass and Yukon Routen rakentaminen Skagwaysta '
+            + 'alkoi toukokuussa 1898, ja koko reitti valmistui '
+            + 'kesä—heinäkuussa 1900. Rautatieväki halusi nimetä '
+            + 'paikan rahoittajiensa mukaan Closeleighiksi, mutta '
+            + 'territorion komissaari William Ogilvie kieltäytyi. '
+            + 'Vuonna 1901 Whitehorse Star raportoi jo päivittäisistä '
+            + 'rahtimääristä.',
+          wiki: 'White Pass and Yukon Route',
+        },
+        {
+          otsikko: 'Nimi, jonka pankkivirkailija näki lomakkeella',
+          teksti: 'Robert Service istui Canadian Bank of Commercen '
+            + 'konttorissa Whitehorsessa, kun hän vuonna 1904 näki '
+            + 'lomakkeessa nimen Sam McGee. Nimi kelpasi runoon, '
+            + 'koska se rimmasi Tennesseen kanssa, ja 1907 ilmestyi '
+            + 'Songs of a Sourdough ja siinä runo kullanetsijästä, '
+            + 'joka paleltuu kuoliaaksi Lake Labergen luona. Oikea '
+            + 'Sam McGee oli tienrakentaja, joka harrasti myös '
+            + 'malminetsintää: hän lähti San Franciscosta Klondikeen '
+            + '1898 ja valtasi 16. heinäkuuta 1899 kuparilöydön '
+            + 'kaupungin länsipuolelta. Servicen oma koettelemus tuli '
+            + '23. toukokuuta 1905, kun tuli karkasi hotellin '
+            + 'parturiliikkeestä ja paloauton vesi loppui. Vahingot '
+            + 'olivat 300 000 dollaria, kuolonuhreja ei tullut, ja '
+            + 'Service oli sammuttajien joukossa.',
+          wiki: 'The Cremation of Sam McGee',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Whitehorse on Yukonin pääkaupunki ja Pohjois-Kanadan '
+          + 'suurin kaupunki. Asukkaita on 28 201 kaupungin rajojen '
+          + 'sisällä ja 31 913 taajamassa — noin seitsemänkymmentä ja '
+          + 'seitsemänkymmentäyhdeksän prosenttia koko territorion '
+          + 'väestöstä. Kaupunki on Alaska Highwayn kilometrillä 1426 '
+          + 'ja levittäytyy Yukonjoen molemmille rannoille. Kaupungiksi '
+          + 'se tuli 1950 ja pääkaupungiksi 1. huhtikuuta 1953, kun '
+          + 'istuin siirrettiin Dawson Citystä Klondike Highwayn '
+          + 'valmistuttua. Nimi kirjoitettiin pitkään kahtena sanana: '
+          + 'virallisesti White Horsesta tuli Whitehorse vasta 21. '
+          + 'maaliskuuta 1957. Lempinimi on erämaakaupunki, ja se on '
+          + 'ansaittu — pinta-alaa on 414 neliökilometriä.',
+        artikkeli: {
+          nimi: 'Matkailijan Whitehorse',
+          taitto: 'opas',
+          teksti: 'Kaupunki, johon pääsi vuoteen 1942 asti vain '
+            + 'junalla, veneellä tai lentäen — ja jonka läpi virtaa '
+            + 'joki, jonka kosket ovat nykyään sähköä.',
+          nosto: 'Beringia-keskus kertoo 3 200 kilometrin levyisestä '
+            + 'maa-alueesta, joka ulottui Siperian Kolyma-joelta '
+            + 'Kanadan Mackenzie-joelle ja jäi jääkaudella '
+            + 'jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi '
+            + 'liian vähän. Sitä pitkin kulkivat mammutit ja '
+            + 'myskihärät itään, hevoset ja kamelit länteen.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Erik Nielsen Whitehorse International Airport '
+                + 'on keskustan yläpuolisella penkereellä, ja sen '
+                + 'kotikenttänään pitää Air North — territoriolla on '
+                + 'siis oma lentoyhtiönsä. Kentällä oli vuonna 2017 '
+                + 'noin 366 000 matkustajaa. Maanteitse tullaan '
+                + 'Alaska Highwayta, jonka varrella kaupunki on '
+                + 'kilometrillä 1426; Klondike Highway vie '
+                + 'pohjoiseen Dawson Cityyn. Keskustassa kulkee '
+                + 'kesäisin museoraitiovaunu: Whitehorse Waterfront '
+                + 'Trolley avattiin 15. heinäkuuta 2000 ja ajaa '
+                + 'veturitallilta Rotary Peace Parkiin runsaan '
+                + 'kilometrin matkan. Vaunu on sähköinen, mutta virta '
+                + 'ei tule ilmajohdoista vaan dieselgeneraattorista. '
+                + 'Liikenne oli tauolla vuodesta 2018 ja alkoi '
+                + 'uudelleen 2024.',
+            },
+            {
+              otsikko: 'Kaupunki joen molemmin puolin',
+              teksti: 'Keskusta on joen länsirannalla 640 metrin '
+                + 'korkeudella, ja sillan yli itärannalle pääsee '
+                + 'Riverdaleen, joka on kaupungin vanhimpia '
+                + 'kaupunginosia. Muu kaupunki on pääosin 690 metrin '
+                + 'yläpuolella pengertä nousevan Two Mile Hillin '
+                + 'takana. Siellä ovat Takhinin kaupunginosat, joiden '
+                + 'taloista moni on entinen armeijan parakki tai '
+                + 'upseeriasunto, sekä Yukonin yliopisto ja Yukon '
+                + 'Arts Centre. Pohjoisempana ovat Porter Creek, '
+                + 'Crestview ja uusin kaupunginosa Whistle Bend, jonka '
+                + 'rakentaminen alkoi 2010. Kaupunginosia erottavat '
+                + 'toisistaan isot maastonmuodot, ei kadut — se on '
+                + 'Whitehorsen oma piirre.',
+            },
+            {
+              otsikko: 'Neljä museota ja yksi laiva',
+              teksti: 'MacBride-museo keskustan rantatörmällä on '
+                + 'Yukonin vanhin museo: perustettu 1950, avattu '
+                + '1952. Lentoaseman kupeessa ovat Yukonin '
+                + 'liikennemuseo, jonka pihalla seisoo tolpan päässä '
+                + 'Douglas DC-3 — yksi maailman suurimmista '
+                + 'tuuliviireistä — ja Beringia-keskus, joka avattiin '
+                + '1997. Joen rannalla lepää SS Klondike, jonka '
+                + 'siirtämiseen nykypaikalleen tarvittiin 1966 kolme '
+                + 'puskutraktoria, kahdeksan tonnia saippuaa ja kolme '
+                + 'viikkoa. Kaikki neljä ovat kohdekartalla, ja '
+                + 'kaikkiin neljään pääsee keskustasta kävellen tai '
+                + 'lyhyellä ajolla.',
+            },
+            {
+              otsikko: 'Kanjoni ja aavekaupunki',
+              teksti: 'Miles Canyon on seitsemän kilometriä '
+                + 'keskustasta etelään: siellä Yukonjoki puristuu '
+                + 'kapeaan basalttikanjoniin, joka oli aikoinaan '
+                + 'reitin pahin kohta. Kanjonin yläpäässä on Canyon '
+                + 'City, kultaryntäyksen aavekaupunki ja Yukonin '
+                + 'hallituksen perintökohde, jonne järjestetään '
+                + 'kesäisin opastettuja kierroksia. Sen kohdalla '
+                + 'kullanetsijät pysähtyivät miettimään, uskaltavatko '
+                + 'jatkaa vesitse; moni purki veneensä ja kantoi '
+                + 'tavaransa maitse. Kaupunki kuivui kokoon jo 1900, '
+                + 'kun rautatie ulottui Whitehorseen eikä kiertotietä '
+                + 'enää tarvittu. Kanjonin alapuolella on Schwatka-'
+                + 'järvi, jonka pohjalla ovat kaupungin nimikot '
+                + 'kosket.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Whitehorse-'
+                + 'artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säänormaaleja ei haettu tässä '
+                + 'erässä. Ilmasto on subarktinen, ja kaupunki on '
+                + 'Rannikkovuorten sadevarjossa. Heinäkuun keskiylin '
+                + 'on 20,6 astetta ja tammikuun keskialin −19,2. '
+                + 'Kesäpäivässä on runsaat yhdeksäntoista tuntia '
+                + 'valoa, talvipäivä on lyhyt. Sadetta tulee vähän: '
+                + 'lunta 141,8 senttiä ja vettä 160,9 milliä '
+                + 'vuodessa. Helmikuussa kaupunkiin saapuu Yukon '
+                + 'Quest, ja kesä on jokiretkien ja polkujen aikaa. '
+                + 'Kylmiin jaksoihin kannattaa varautua: mittari on '
+                + 'käynyt −56,2 asteessa.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Miles Canyon',
+                tahdet: 3,
+                selite: 'Yukonjoki puristuu 8,4 miljoonan vuoden '
+                  + 'ikäiseen basalttikanjoniin seitsemän kilometriä '
+                  + 'keskustasta etelään.',
+              },
+              {
+                mita: 'SS Klondike',
+                tahdet: 3,
+                selite: 'Siipiratasalus kuivalla maalla joen '
+                  + 'rannassa; kansallinen historiallinen paikka '
+                  + 'vuodesta 1967.',
+              },
+              {
+                mita: 'Beringia-keskus',
+                tahdet: 3,
+                selite: 'Jääkauden mammutit, kamelit ja '
+                  + 'lyhytkuonokarhu siltä maalta, joka ei '
+                  + 'jäätiköitynyt.',
+              },
+              {
+                mita: 'MacBride-museo',
+                tahdet: 2,
+                selite: 'Yukonin vanhin museo, ja sen yhteydessä '
+                  + 'kaupungin alkuperäinen lennätinkonttori.',
+              },
+              {
+                mita: 'Canyon City',
+                tahdet: 2,
+                selite: 'Kultaryntäyksen aavekaupunki kanjonin '
+                  + 'yläpäässä; kesäisin opastettuja kierroksia.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Kuiva ei tarkoita lämmintä',
+                teksti: 'Whitehorse on Kanadan kuivin kaupunki, mutta '
+                  + 'kylmillä jaksoilla painutaan alle neljänkymmenen '
+                  + 'pakkasasteen — ennätys on −56,2 tammikuulta 1906.',
+              },
+              {
+                otsikko: 'Kesällä ei tule yötä',
+                teksti: 'Kesäpäivässä on runsaat yhdeksäntoista '
+                  + 'tuntia valoa; talvella suhde kääntyy toisin päin '
+                  + 'ja päivät ovat lyhyitä.',
+              },
+              {
+                otsikko: 'Auto ei kelpaa joka polulle',
+                teksti: 'Vuoden 1975 määräys numero 426 rajoittaa '
+                  + 'moottoriajoneuvot merkityille teille useilla '
+                  + 'suojelluilla alueilla, ja useimmat niistä ovat '
+                  + 'aivan keskustan tuntumassa.',
+              },
+              {
+                otsikko: 'Iso kaupunki, pieni keskusta',
+                teksti: 'Pinta-alaa on 414 neliökilometriä ja '
+                  + 'metropolialueella 8 465, mutta kävelymatkan '
+                  + 'päässä olevaa keskustaa on vain muutama kortteli.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Laakso, sää ja tie',
+      johdanto: 'Whitehorse elää joen ja vuodenaikojen tahdissa: '
+        + 'kesäpäivässä on yhdeksäntoista tuntia valoa, talvella '
+        + 'pakkanen painuu neljänkymmenen alle, ja lohi nousee jokea '
+        + 'pidemmälle kuin missään muualla maailmassa.',
+      tehtava: {
+        kysymys: 'Miksi Whitehorse on Kanadan kuivin kaupunki?',
+        vaihtoehdot: [
+          'Se on niin pohjoisessa, ettei ilmassa ole kosteutta',
+          'Rannikkovuoret pysäyttävät kosteuden ennen laaksoa',
+          'Yukonjoki imee sateet maahan',
+          'Kaupunki on aavikon reunalla',
+        ],
+        oikea: 1,
+        fakta: 'Kaupunki on Rannikkovuorten sadevarjossa. Lunta tulee '
+          + 'vuodessa 141,8 senttiä ja vettä 160,9 milliä — '
+          + 'Meteorological Service of Canadan mukaan koko maan '
+          + 'vähiten.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kolmetuhatta kilometriä yhtä nousua varten',
+          teksti: 'Whitehorsen pato rakennettiin 1957—1958, ja joen '
+            + 'pinta nousi Schwatka-järveksi. Padon ohi rakennettiin '
+            + 'kalaporras, ja syy on siinä, mikä nousee: Yukonjoen '
+            + 'kuninkuuslohella on kaikista lohista pisin makean veden '
+            + 'vaellusreitti, yli kolmetuhatta kilometriä '
+            + 'Beringinmeren suulta Whitehorsen yläpuolisille '
+            + 'kutupaikoille. Järvi on nimetty Frederick Schwatkan '
+            + 'mukaan, joka ensimmäisenä tutki Yukonjoen koko '
+            + 'pituudelta. Se on pieni — pinta-alaa noin viisitoista '
+            + 'hehtaaria ja syvyyttä kuudesta kahdeksaan metriin — '
+            + 'mutta sen alla ovat kaupungin nimikot kosket.',
+          wiki: 'Schwatka Lake',
+        },
+        {
+          otsikko: 'Kanadan kuivin kaupunki',
+          teksti: 'Whitehorse on Rannikkovuorten sadevarjossa, ja '
+            + 'siksi sadetta tulee vähän ympäri vuoden: lunta 141,8 '
+            + 'senttiä ja vettä 160,9 milliä vuodessa. Meteorological '
+            + 'Service of Canadan mukaan se tekee siitä Kanadan '
+            + 'kuivimman kaupungin. Laakso pitää ilmaston myös '
+            + 'leudompana kuin muissa vastaavissa pohjoisissa '
+            + 'yhdyskunnissa, esimerkiksi Yellowknifessä: vuoden '
+            + 'keskilämpötila on 0,2 astetta, mikä on koko Yukonin '
+            + 'lämpimin lukema. Se ei tarkoita lämmintä. Kylmillä '
+            + 'jaksoilla painutaan alle neljänkymmenen pakkasasteen, '
+            + 'ja kaikkien aikojen lukema on −56,2 astetta '
+            + 'tammikuulta 1906.',
+          wiki: 'Whitehorse',
+        },
+        {
+          otsikko: 'Tuhat mailia ja yksi reki',
+          teksti: 'Yukon Quest ajetaan helmikuussa vuodesta 1984 '
+            + 'Fairbanksin ja Whitehorsen välillä, ja suunta vaihtuu '
+            + 'joka vuosi. Reitti seuraa 1890-luvun posti- ja '
+            + 'kuljetusreittejä, kulkee jäätyneillä joilla ja neljän '
+            + 'vuoriston yli, ja matkaa kertyy yli 1 016 mailia. '
+            + 'Valjakossa on kuudesta neljääntoista koiraa ja matka '
+            + 'kestää kymmenestä kahteenkymmeneen vuorokauteen; ajaja '
+            + 'pakkaa mukaansa jopa 250 naulaa tavaraa ja käyttää '
+            + 'koko matkan yhtä ainoaa rekeä. Ensimmäiseen '
+            + 'kilpailuun 25. helmikuuta 1984 lähti 26 valjakkoa, ja '
+            + 'sen voitti Sonny Lindner. Nopein aika on Hans Gattin '
+            + '2010: yhdeksän vuorokautta ja 26 minuuttia.',
+          wiki: 'Yukon Quest',
+        },
+        {
+          otsikko: 'Kolme vuorta ja määräys numero 426',
+          teksti: 'Kaupunkia kehystää kolme vuorta: Grey Mountain '
+            + 'idässä, Mount Sumanik luoteessa ja Golden Horn '
+            + 'Mountain etelässä. Lempinimi erämaakaupunki on '
+            + 'ansaittu kahdesti. Ensinnäkin pinta-alaa on 413,94 '
+            + 'neliökilometriä ja metropolialueella 8 465, vaikka '
+            + 'asukkaita on 28 201 — Whitehorse on Kanadan '
+            + 'kuudenneksikymmenenneljäs kaupunki pinta-alaltaan. '
+            + 'Toiseksi kaupunki on itse päättänyt pitää metsänsä: '
+            + 'vuoden 1975 määräys numero 426 rajoittaa '
+            + 'moottoriajoneuvot merkityille teille suojelluilla '
+            + 'alueilla, jotta ympäristön laatu säilyy.',
+          wiki: 'Whitehorse',
+        },
+        {
+          otsikko: 'Tie, joka rakennettiin kahdeksassa kuukaudessa',
+          teksti: 'Vuoteen 1942 asti Whitehorseen tultiin vain '
+            + 'rautateitse, jokea pitkin tai lentäen. Ensimmäiset '
+            + 'koneet laskeutuivat 1920 ja ensimmäinen lentoposti '
+            + 'lähti marraskuussa 1927. Sitten Yhdysvaltain armeija '
+            + 'päätti, että sisämaan tie olisi turvallisempi tapa '
+            + 'siirtää joukkoja ja tavaraa Alaskaan, ja rakensi '
+            + 'Alaska Highwayn: koko 1 600 mailin urakka tehtiin '
+            + 'maaliskuun ja marraskuun 1942 välillä. Samaan aikaan '
+            + 'vedettiin Canol-putki ja kaupunkiin rakennettiin '
+            + 'jalostamo. Kanadan puoleinen osuus tiestä palasi '
+            + 'Kanadan hallintaan vasta sodan jälkeen. Vuoteen 1951 '
+            + 'mennessä kaupungin väkiluku oli kaksinkertaistunut '
+            + 'vuoden 1941 luvusta.',
+          wiki: 'Alaska Highway',
+        },
+      ],
+    },
+  ],
+  /*
+   * YELLOWKNIFE (Opus 7.9.2026, parvierä) — Pohjois-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-yellowknife.md ja sen riippumaton tarkistus
+   * tarkistus-yellowknife.md (tuomio "kelpaa, kun kohtien A–G
+   * ratkaisut tehdään"; kaikki seitsemän on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Yellowknife", "Yellowknives", "Old Fort Providence",
+   * "Con Mine", "Giant Mine", "Great Slave Lake", "Dettah",
+   * "Tibbitt to Contwoyto Winter Road", "Snowking Winter Festival",
+   * "Northwest Territories Legislative Building".
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti.
+   * Saapumisteksti ja valokuvataulu olivat jo olemassa eikä niihin
+   * kosketa.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto'; sivun nimi "Järvi, jää ja kesäyö" kertoo
+   * aiheen.
+   *
+   * KANADAN MAALEHTEÄ EI TOISTETA (sama luettelo kuin Whitehorsen
+   * lohkossa), eikä myöskään karttanostoja: Naha Dehé
+   * (maastokohteet-can.js) on 500 kilometriä länteen eikä sitä
+   * mainita, ja arktinen eläinaihe on jo Churchillin jääkarhu
+   * (elaintakyt.js, CAN).
+   *
+   * WHITEHORSE TEHTIIN SAMASSA ERÄSSÄ, ja aiheet on jaettu:
+   * kultaryntäys, siipiratasalukset ja koiravaljakot ovat
+   * Whitehorsen puolella, kaivosteollisuus, timantit ja jäätiet
+   * tämän lehden puolella. Kumpikin kertoo oman alkuperäiskansansa
+   * omalla nimellään.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: Yellowknivesin ja tłı̨chǫn 1830-luvun konflikti kerrotaan
+   *    tapahtumana ilman yksityiskohtia, ja lähteen epävarmuus
+   *    ("mielipiteet vaihtelevat") sanotaan ääneen; kansa kuvataan
+   *    nykypäivän toimijana.
+   *  - B: Giant Minen arseeni kerrotaan lukuina ja
+   *    puhdistushankkeena, ilman syyllisten osoittelua — kaunistelu
+   *    olisi pilarin 4 vastaista.
+   *  - C: Isonorjajärven uudelleennimeämiskeskustelu mainitaan
+   *    yhdellä neutraalilla virkkeellä kulttuuriasiana.
+   *  - D: konsensushallinto kerrotaan rakennetietona (istuntosalin
+   *    pyöreys), ei puoluepolitiikkana. Se on kohdekartan jutussa.
+   *  - E: vuoden 2023 maastopalot kerrotaan matkaoppaassa
+   *    neutraalina tapahtumana (evakuointi ja paluu).
+   *  - F: Ragged Ass Road pidetään englanninkielisellä nimellään ja
+   *    merkitys selitetään asiallisesti kohdekartan jutussa.
+   *  - G: kohdekartalta pudotettiin Hudson's Bay Warehouse ja
+   *    Canadian Pacific Airlines floatbase (70 m Wildcat Cafésta)
+   *    sekä The Gold Range (baari).
+   *
+   * ENNEN JA NYT sekä KANSI- JA AVAUSKUVAT lisätään tämän erän
+   * toisessa vaiheessa. Tämä lohko on tekstien checkpoint.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026).
+   */
+  yellowknife: [
+    {
+      id: 'kaupunki',
+      nimi: 'Yellowknife',
+      johdanto: 'Yellowknife nousi kalliolle kullan takia ja elää nyt '
+        + 'hallinnosta ja timanteista. Isoisän matkavuonna 1873 lahden '
+        + 'suulla oli kalapaikkoja ja viisikymmentä vuotta aiemmin '
+        + 'suljetun kauppa-aseman jäänteet.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: Old Townin
+       * kalliolta keskustaan, pensaslentäjien muistomerkiltä
+       * jäätyneelle järvelle ja kesäinen iltahämärä Niven Laken yllä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Frosty Skyline - Yellowknife, Canada (5325119239).jpg',
+          selite: 'Old Townin kalliolta katsottuna Franklin Avenue '
+            + 'nousee lumisten kumpujen yli keskustan torneille.',
+          lahde: 'TravelingOtter from Houston, Texas, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'View of Great Slave Lake from Pilots Memorial - Yellowknife, Canada (5325728776).jpg',
+          selite: 'Pensaslentäjien muistomerkiltä avautuu jäätynyt '
+            + 'Isonorjajärvi, ja rannassa talvehtii alus.',
+          lahde: 'TravelingOtter from Houston, Texas, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Dusk view of Niven Lake and Back Bay, Yellowknife, NT, from Explorer Hotel.jpg',
+          selite: 'Kesäinen iltahämärä värjää taivaan oranssiksi '
+            + 'Niven Laken ja Back Bayn yllä.',
+          lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Yellowknifelle ei ole generoitu herokuvia, joten
+       * karusellissa on kaksi aitoa valokuvaa: revontulet ja jäätynyt
+       * järvi. Kolmas on kirjattu kuvaputken tilaukseksi;
+       * asuntolaivapanoraama siirtyi teemasivun nostoon, jonka aihe
+       * se on.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Camping Under the Stars and Aurora Borealis - Flickr - stevehfung.jpg',
+          selite: 'Revontulet kaartavat kuusikon yllä, ja lumessa '
+            + 'hohtaa valaistu kartiomainen teltta.',
+          lahde: 'Steve FUNG, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Frozen Great Slave Lake - Yellowknife, Canada (5325723220).jpg',
+          selite: 'Jäätynyt Isonorjajärvi ulottuu kalliorannan '
+            + 'juurelta horisonttiin asti.',
+          lahde: 'TravelingOtter from Houston, Texas, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+       * (northamerica-valokuvat.js, yellowknife), jossa se on jo
+       * tarkistettu — vanha puoli on rahtialus Radium King laiturissa
+       * 1930-luvulla ja uusi sama Old Townin lahti kesällä 2008.
+       * Molempien koko ja lisenssi tarkistettiin uudelleen Commonsin
+       * rajapinnasta 7.9.2026 (3000 × 2001 PD ja 3072 × 2304
+       * CC BY-SA 3.0), ja selitteet on kirjoitettu uudestaan yhdeksi
+       * virkkeeksi reseptin mukaan. Vanhan kuvan lähderivi on
+       * valokuvataulun muodossa, koska Commonsin extmetadata antaa
+       * tekijäksi vain "Unknown author".
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Radium King moored in Yellowknife.jpg',
+          vuosi: '1930-luku',
+          selite: 'Rahtialus Radium King laiturissa 1930-luvulla, kun '
+            + 'kaikki tavara tuli Yellowknifeen vesitse.',
+          lahde: 'Edmonton Air Museum Committee / NWT Archives, Commons (PD)',
+        },
+        {
+          tiedosto: 'Old Town and N\'Dilo.JPG',
+          selite: 'Sama lahti kesällä: Old Townin talot kalliolla, '
+            + 'N\'Dilon niemi ja vesitasojen laituri.',
+          lahde: 'CambridgeBayWeather, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Sǫǫ̀mbak\'è, paikka jossa raha on',
+          teksti: 'Kaupunki ja sen vedet on nimetty dene-kansan '
+            + 'mukaan, jota kutsuttiin kuparikansaksi: he tekivät '
+            + 'työkalunsa Jäämeren rannikon kuparista ja kävivät '
+            + 'niillä kauppaa. Oma nimi on T\'atsaot\'ine. '
+            + 'Kauppareitit ulottuivat Hudsoninlahdelle asti, ja '
+            + 'Samuel Hearne kohtasi heidät 1770-luvulla; he opastivat '
+            + 'hänet tundran halki Jäämerelle etsimään sitä kuparia, '
+            + 'josta työkalut tehtiin. Tłı̨chǫn kielellä kaupunki on '
+            + 'Sǫǫ̀mbak\'è, paikka jossa raha on. Yellowknives Dene '
+            + 'First Nation perustettiin 1991, ja sen väkeä asuu '
+            + 'kaupungissa sekä Dettahin ja Ndilǫn yhteisöissä; '
+            + 'maaoikeuksista neuvotellaan Akaitcho-prosessissa.',
+          wiki: 'Yellowknives',
+        },
+        {
+          otsikko: 'Vuosi 1873: rauniot lahden suulla',
+          teksti: 'Isoisän matkavuonna lahden rannalla ei ollut '
+            + 'kauppa-asemaa — se oli ollut suljettuna viisikymmentä '
+            + 'vuotta. Old Fort Providence perustettiin 1789, kun '
+            + 'Alexander Mackenzie aloitti kaupan Yellowknivesin ja '
+            + 'tłı̨chǫn kanssa ja määräsi apulaisensa Laurent '
+            + 'Leroux\'n pystyttämään aseman. Paikka ei ollut suuri '
+            + 'turkiskeskus vaan huoltopiste: sieltä muonitettiin '
+            + 'muita asemia ja retkikuntia, muun muassa John '
+            + 'Franklinin Coppermine-retkeä 1820. Asema oli kalaisalla '
+            + 'paikalla, jota denet olivat käyttäneet sukupolvien '
+            + 'ajan. Hudson\'s Bay Company otti sen 1821 ja sulki '
+            + '1823; rauniot kaivettiin esiin vasta 1969—1971.',
+          wiki: 'Old Fort Providence',
+        },
+        {
+          otsikko: 'Kaksi kansaa saman järven rannalla',
+          teksti: 'Yellowknives oli 1800-luvun alkupuolella alueen '
+            + 'suurin ja vaikutusvaltaisin heimo. Naapurina pohjoisella '
+            + 'rannalla eli tłı̨chǫ, ja kansat olivat vanhoja '
+            + 'vastustajia. 1830-luvulta raportoitiin konfliktista, '
+            + 'jonka jälkeen Yellowknives joko hajaantui järven '
+            + 'eteläpuolelle tai sekoittui tłı̨chǫihin — lähde sanoo '
+            + 'suoraan, että mielipiteet vaihtelevat. Vuonna 1899 '
+            + 'päällikkö Snuff allekirjoitti Treaty 8:n. Sekoittumisen '
+            + 'jäljiltä syntyi myös wíílíídeh, murre jota puhutaan '
+            + 'Dettahissa ja Ndilǫssa. Ndilǫ rakennettiin 1950-luvun '
+            + 'puolivälissä Latham Islandin kärkeen.',
+          wiki: 'Yellowknives',
+        },
+        {
+          otsikko: 'Kulta, jota kukaan ei ehtinyt huomata',
+          teksti: 'Klondikeen matkalla ollut kullanetsijä E. A. '
+            + 'Blakeney löysi kultaa Yellowknife Baylta jo 1898, mutta '
+            + 'löytöä pidettiin merkityksettömänä: kaikkien katse oli '
+            + 'Klondikessa, ja Isonorjajärvi oli liian kaukana '
+            + 'kiinnostaakseen. Ratkaisu tuli lentokoneiden myötä '
+            + '1930-luvulla, kun etsijät levittäytyivät laajemmalle. '
+            + 'Kultaa löytyi lahden itäpuolelta 1934 ja suotuisammasta '
+            + 'geologiasta länsipuolelta syksyllä 1935, ja pieni '
+            + 'valtausryntäys alkoi. Vaikuttavin esiintymä oli Con '
+            + 'Mine — nimi on lyhenne sanasta Consolidated — ja sen '
+            + 'kehittäminen synnytti ensimmäisen asutuksen 1936—1937. '
+            + 'Kaivos aloitti tuotannon 5. syyskuuta 1938.',
+          wiki: 'Con Mine',
+        },
+        {
+          otsikko: 'Kulta loppui, timantit alkoivat',
+          teksti: 'Asukkaita oli tuhat vuonna 1940, ja 1942 seudulla '
+            + 'oli viisi kultakaivosta tuotannossa. Kunta '
+            + 'Yellowknifesta tuli 1953 ja Luoteisterritorioiden '
+            + 'pääkaupunki syyskuussa 1967 — se käynnisti kolmannen '
+            + 'buumin ja kokonaan uusia kaupunginosia virkamiehille. '
+            + 'Neljäs alkoi 1991, kun timantteja löytyi kolmesataa '
+            + 'kilometriä pohjoiseen. Ekati avattiin 1998 ja Diavik '
+            + '2003; vuonna 2004 ne tuottivat 12 618 000 karaattia, '
+            + 'arvoltaan yli 2,1 miljardia Kanadan dollaria. Samana '
+            + 'vuonna sulkeutui viimeinen kultakaivos. Kulta jätti '
+            + 'myös laskun: Giant Mine jätti 237 000 tonnia '
+            + 'arseenitrioksidia, ja puhdistus maksaa miljardin.',
+          wiki: 'Giant Mine',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Yellowknife on Luoteisterritorioiden pääkaupunki ja '
+          + 'territorion ainoa kaupunki: asukkaita on 20 340. Se on '
+          + 'koko territorion keskus kaivostoiminnalle, liikenteelle, '
+          + 'koulutukselle, terveydenhuollolle, matkailulle ja '
+          + 'hallinnolle. Territorion yhdestätoista virallisesta '
+          + 'kielestä viittä puhutaan täällä merkittävissä määrin: '
+          + 'dene sųłiné, tłı̨chǫ, etelä- ja pohjoisslavey, englanti ja '
+          + 'ranska. Matkailu on territorion suurin uusiutuva '
+          + 'elinkeino ja Yellowknife sen pääportti; moni tulee '
+          + 'katsomaan revontulia. Kaupunki on Kanadan kilven '
+          + 'kalliolla, jonka jääkausi hioi paljaaksi, ja lämpimien '
+          + 'kesiensä ansiosta se on selvästi metsänrajan '
+          + 'eteläpuolella — toisin kuin samoilla leveysasteilla '
+          + 'idempänä.',
+        artikkeli: {
+          nimi: 'Matkailijan Yellowknife',
+          taitto: 'opas',
+          teksti: 'Kaupunki kalliolla: kaksi vanhaa osaa, yksi '
+            + 'vinosti kulkeva pääkatu ja järvi, joka on puolet '
+            + 'vuodesta tie.',
+          nosto: 'Luoteisterritorioissa hallitaan konsensuksella, ja '
+            + 'se näkyy talossa. Istuntosali on pyöreä, sen ympärillä '
+            + 'ovat tulkkauskopit territorion yhdelletoista '
+            + 'viralliselle kielelle, ja puhemiehen valtikassa on '
+            + 'mursunnorsunluuta ja puuta vuoden 1845 Franklinin '
+            + 'retkikunnan aluksista.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Yellowknifen lentoasema on Pohjois-Kanadan '
+                + 'vilkkain: vuonna 2007 siellä oli 70 699 '
+                + 'lentotapahtumaa, ja vuosittain kulkee yli 400 000 '
+                + 'matkustajaa ja 30 000 tonnia rahtia. Kiitoratoja '
+                + 'on kaksi. Maanteitse tullaan valtatietä 3, ja '
+                + 'ensimmäinen pysyvä maantieyhteys muuhun Kanadaan '
+                + 'saatiin vasta 30. marraskuuta 2012, kun Deh Cho '
+                + '-silta Mackenzie-joen yli avattiin. Kaupungissa '
+                + 'kulkee YKTransit, koko territorion ainoa '
+                + 'joukkoliikenne. Kadut on päällystetty, mutta '
+                + 'ikirouta pakottaa uusimaan pinnat kymmenen tai '
+                + 'kahdenkymmenen vuoden välein, ja nopeusrajoitus on '
+                + 'useimmilla kaduilla 45 kilometriä tunnissa.',
+            },
+            {
+              otsikko: 'Old Town ja New Town',
+              teksti: 'Vanhin osa on Old Town, kalliokärki '
+                + 'Yellowknife Bayn rannalla; sinne rakennettiin '
+                + 'ensin, ja siellä ovat kaupungin vanhimmat talot. '
+                + 'Latham Islandin kärjessä on Ndilǫ. Liikkeet ovat '
+                + 'nykyään New Townissa eli keskustassa, jossa osa '
+                + 'asukkaista asuu tornitaloissa; asuinalueita ovat '
+                + 'myös Frame Lake, Niven Lake ja Range Lake. Centre '
+                + 'Square Mall on territorion suurin kauppakeskus ja '
+                + 'Pohjois-Kanadan korkein rakennus, ja siellä ovat '
+                + 'kirjasto ja matkailuneuvonta. Kaupungintalon '
+                + 'edessä seisoo kesäisin kasveista tehty myskihärkä.',
+            },
+            {
+              otsikko: 'Valo ja pimeä',
+              teksti: 'Päivänvaloa on joulukuussa viisi tuntia ja '
+                + 'kesäkuussa kaksikymmentä. Toukokuun lopusta '
+                + 'heinäkuun puoliväliin hämärä kestää koko yön, eikä '
+                + 'kunnon pimeää tule lainkaan — silloin pelataan '
+                + 'Midnight Sun Golf Tournament, joka kerää jopa '
+                + 'neljäsataa pelaajaa. Talvella suunta kääntyy, ja '
+                + 'kaupunkiin tullaan katsomaan revontulia; matkailu '
+                + 'on territorion suurin uusiutuva elinkeino. Kesällä '
+                + 'ohjelmassa on Folk on the Rocks -musiikkijuhla, '
+                + 'jota on järjestetty vuodesta 1980, ja elokuun '
+                + 'pitkänä viikonloppuna Old Town Ramble & Ride.',
+            },
+            {
+              otsikko: 'Elokuu 2023',
+              teksti: 'Kaupunki evakuoitiin kesällä 2023. '
+                + 'Territoriohallinto aloitti evakuoinnin 16. '
+                + 'elokuuta, kun maastopalot lähestyivät ja '
+                + 'valtatie 3 uhkasi jäädä kulkukelvottomaksi — se on '
+                + 'ainoa maantie ulos. Territoriossa oli tuolloin 236 '
+                + 'aktiivista paloa. Yhdeksästoista päivä oli 87 '
+                + 'prosenttia kaupungista tyhjentynyt: kahdenkymmenen '
+                + 'tuhannen asukkaan kaupungissa oli jäljellä 2 600 '
+                + 'ihmistä, joista tuhat välttämättömiä työntekijöitä. '
+                + 'Evakuointimääräys purettiin 6. syyskuuta, ja '
+                + 'asukkaat alkoivat palata samana päivänä. Jäljet '
+                + 'näkyvät yhä maisemassa kaupungin ulkopuolella.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Yellowknife-'
+                + 'artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säänormaaleja ei haettu tässä '
+                + 'erässä. Ilmasto on subarktinen ja kuiva: sadetta '
+                + 'tulee alle 300 milliä vuodessa, koska kaupunki on '
+                + 'lännen vuoristojen sadevarjossa. Tammikuun '
+                + 'keskilämpötila on noin −26 astetta ja heinäkuun 17. '
+                + 'Kuivin kuukausi on huhtikuu ja sateisin elokuu, ja '
+                + 'hallaton kasvukausi kestää runsaat sata '
+                + 'vuorokautta. Lumilinna on jäällä maaliskuun, '
+                + 'jäätie auki tammikuun lopusta kevääseen ja '
+                + 'revontulikausi pimeän puolella vuotta.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Old Town',
+                tahdet: 3,
+                selite: 'Kaupungin vanhin osa kalliokärjellä: '
+                  + 'omanlaisensa arkkitehtuuri ja pensaslentäjien '
+                  + 'muistomerkki.',
+              },
+              {
+                mita: 'Luoteisterritorioiden parlamenttitalo',
+                tahdet: 3,
+                selite: 'Pyöreä istuntosali, yksitoista kieltä ja '
+                  + 'valtikka Franklinin laivojen puusta.',
+              },
+              {
+                mita: 'Prince of Walesin perintökeskus',
+                tahdet: 3,
+                selite: 'Territorion museo ja arkisto Frame Laken '
+                  + 'rannalla; myöntää myös arkeologiset luvat.',
+              },
+              {
+                mita: 'Lumilinna Yellowknife Bayn jäällä',
+                tahdet: 2,
+                selite: 'Maaliskuussa jäälle rakennetaan linna, jossa '
+                  + 'on katsomo, kahvila ja liukumäki.',
+              },
+              {
+                mita: 'Jäätie Dettahiin',
+                tahdet: 2,
+                selite: 'Talvella lahden yli ajetaan kuusi ja puoli '
+                  + 'kilometriä; kesällä sama matka on 27.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Jäätie on kausituote',
+                teksti: 'Tibbitt to Contwoyto -jäätie on auki '
+                  + 'tavallisesti tammikuun lopusta maaliskuun loppuun '
+                  + 'tai huhtikuun alkuun, ja silloin Yellowknife on '
+                  + 'koko kuljetusketjun lähtöpiste.',
+              },
+              {
+                otsikko: 'Talvi on Kanadan kylmin',
+                teksti: 'Environment Canada arvioi 2014, että '
+                  + 'kaupungilla on Kanadan kaupungeista kylmin talvi '
+                  + 'ja pisin lumipeitteinen kausi; ennätys on −51,2 '
+                  + 'astetta tammikuulta 1947.',
+              },
+              {
+                otsikko: 'Kesäyö ei pimene',
+                teksti: 'Toukokuun lopusta heinäkuun puoliväliin '
+                  + 'hämärä kestää koko yön, ja kesäkuussa '
+                  + 'päivänvaloa on kaksikymmentä tuntia.',
+              },
+              {
+                otsikko: 'Arseeni on osa maaperää',
+                teksti: 'Kallioperässä on arsenopyriittiä, ja '
+                  + '1900-luvun kullankaivuu vapautti arseenia '
+                  + 'ympäristöön; pitoisuuksia seurataan useissa '
+                  + 'ohjelmissa ja Giant Minen puhdistus on kesken.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Järvi, jää ja kesäyö',
+      johdanto: 'Yellowknife istuu Kanadan kilven kalliolla '
+        + 'Pohjois-Amerikan syvimmän järven rannalla. Talvella '
+        + 'järvestä tulee tie ja rakennuspaikka, kesällä aurinko ei '
+        + 'tahdo laskea lainkaan.',
+      tehtava: {
+        kysymys: 'Mihin Yellowknifen lumilinna rakennetaan joka talvi?',
+        vaihtoehdot: [
+          'Yellowknife Bayn jäälle',
+          'Kaupungintalon pihalle',
+          'Vanhan kaivoksen kuilun päälle',
+          'Frame Laken rantapuistoon',
+        ],
+        oikea: 0,
+        fakta: 'Linna on noussut jäälle joka maaliskuu vuodesta 1996. '
+          + 'Ikkunat ja koristeet tehdään jäästä, ja linnassa on '
+          + 'katsomo, kahvila, sisäpiha ja liukumäki.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kuusisataa metriä alaspäin',
+          teksti: 'Isonorjajärvi on Pohjois-Amerikan syvin järvi: 614 '
+            + 'metriä, ja syvin kohta on itäisessä Christie Bayssa. '
+            + 'Pituutta on 469 kilometriä, leveyttä 20—203 ja '
+            + 'pinta-alaa 27 200 neliökilometriä, mikä tekee siitä '
+            + 'maailman kymmenenneksi suurimman pinta-alaltaan. '
+            + 'Keskimäärin järvi on ainakin osittain jäässä '
+            + 'kahdeksan kuukautta vuodessa. Nimiä on monta: '
+            + 'tłı̨chǫksi Tıdeè, chipewyaniksi Tu Nedhé ja dehcho '
+            + 'denen kielellä Tucho. Englanninkielinen nimi tuli '
+            + 'kiertoteitse cree-kielen kautta, ja 2010-luvun lopulta '
+            + 'alkaen on esitetty, että järvi nimettäisiin uudelleen '
+            + 'jollakin sen omista nimistä.',
+          wiki: 'Great Slave Lake',
+        },
+        {
+          otsikko: 'Kun vesi kantaa rekan',
+          teksti: 'Talvella järvi muuttuu tieksi. Dettahin kylään '
+            + 'ajetaan jäätä pitkin kuusi ja puoli kilometriä, kun '
+            + 'kesällä sama matka on 27 kilometriä Ingraham Trailia. '
+            + 'Isompi tie on Tibbitt to Contwoyto: sitä pitkin '
+            + 'puoliperävaunut vievät kaivoksille polttoaineen ja '
+            + 'tarvikkeet, ja se on auki tavallisesti tammikuun '
+            + 'lopusta maaliskuun loppuun tai huhtikuun alkuun. '
+            + 'Silloin Yellowknife on koko kuljetusketjun lähtöpiste, '
+            + 'ja kaupunkiin saapuu pohjoiseen ajavia kuljettajia '
+            + 'kaukaakin. Dettahin nimi on lyhentynyt muoto sanasta '
+            + 'T\'é?ehdaá, palanut niemi; kylässä asuu vajaat '
+            + 'kaksisataa ihmistä.',
+          wiki: 'Tibbitt to Contwoyto Winter Road',
+        },
+        {
+          otsikko: 'Talot, jotka kelluvat lahdella',
+          teksti: 'Yellowknife Bayssä on Jolliffe Island, joka siirtyi '
+            + 'kaupungin julkiseksi maaksi, kun öljy-yhtiö luopui '
+            + 'paikasta. Saarta ympäröi asuntolaivayhteisö, jossa on '
+            + 'asuttu sähköverkon ulkopuolella vuodesta 1978. Suhde '
+            + 'kaupunkiin on mutkikas: laivat ovat matkailijoiden '
+            + 'suosikkinäky, mutta asukkaat ovat kaupungin veropiirin '
+            + 'ulkopuolella ja käyttävät silti kaupungin palveluja, ja '
+            + 'siitä on seurannut oikeudenkäyntejä ja kitkaa. Saaren '
+            + 'takana kohoaa Old Townin kalliokärki, jonne kaupunki '
+            + 'alun perin rakennettiin ja jossa ovat sen vanhimmat '
+            + 'talot.',
+          tiedosto: 'Houseboats panorama cropped (14804051005).jpg',
+          selite: 'Värikkäät asuntolaivat kelluvat rivissä '
+            + 'kallioluotojen suojassa kesäisellä lahdella.',
+          lahde: 'Alan Sim from Cambridge Bay, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Yellowknife',
+        },
+        {
+          otsikko: 'Kanadan aurinkoisin kesä',
+          teksti: 'Environment and Climate Change Canadan mukaan '
+            + 'Yellowknifessä on Kanadan aurinkoisin kesä: '
+            + 'kesä—elokuussa paistetta kertyy keskimäärin 1 034 '
+            + 'tuntia. Koko vuoden lukema on 2 256,5 tuntia eli 43,5 '
+            + 'prosenttia mahdollisesta — joulukuussa 15,4 ja '
+            + 'kesäkuussa 63,0 prosenttia. Sama virasto arvioi 2014, '
+            + 'että kaupungilla on Kanadan kylmin talvi ja pisin '
+            + 'lumipeitteinen kausi. Tammikuun keskilämpötila on noin '
+            + '−26 astetta ja heinäkuun 17; alin mitattu on −51,2 '
+            + 'astetta 31. tammikuuta 1947 ja ylin 32,6 astetta 2. '
+            + 'elokuuta 2021.',
+          wiki: 'Yellowknife',
+        },
+        {
+          otsikko: 'Lumikuninkaan linna',
+          teksti: 'Joka maaliskuu vuodesta 1996 Yellowknife Bayn '
+            + 'jäälle nousee lumilinna. Ikkunat ja koristeet tehdään '
+            + 'jäästä, ja suunnittelusta ja rakentamisesta vastaa '
+            + 'Snowking, Anthony Foliot. Alussa linna oli tunneleita '
+            + 'hangissa Woodyardin naapurustossa; nyt siinä on '
+            + 'katsomo, kahvila, sisäpiha, liukumäki, rintavarustuksia '
+            + 'ja torneja, ja kuukauden mittaisessa juhlassa on '
+            + 'konsertteja, taidenäyttelyitä ja lastenteatteria. '
+            + 'Veistäjät täydentävät linnaa lumi- ja jääveistoksin. '
+            + 'Samalle jäälle tuli 2012 toinenkin talvijuhla, Long '
+            + 'John Jamboree.',
+          wiki: 'Snowking Winter Festival',
+        },
+      ],
+    },
+  ],
+  /*
+   * IQALUIT (7.9.2026). Faktapohja ja tarkistus:
+   * docs/mantereet-tyoaineisto/faktapohja-iqaluit.md ja
+   * tarkistus-iqaluit.md. Kaikki väitteet en-Wikipedian
+   * raakateksteistä 7.9.2026.
+   *
+   * SISÄLTÖLINJAUKSET (spec-mantereet.md, P-Amerikka): inuiitit ovat
+   * eläviä toimijoita eivätkä museokohde — Nakasuk, Ipirvik ja
+   * Taqulittuq nimetään, ja perimätieto on se, joka ratkaisee
+   * eurooppalaisen karttakiistan. Ilmastonmuutos todetaan
+   * neutraalisti luonnontieteellisenä tosiasiana ilman politiikkaa.
+   * Frobisherin kaappaukset ja Hallin kuolinsyykiista kerrotaan
+   * tapahtumina yhdellä virkkeellä ilman yksityiskohtia.
+   *
+   * MITÄ TÄSSÄ EI OLE JA MIKSI. Baffininsaaren nimihistoria on
+   * karttanostossa (maastokohteet-can.js), jääkarhu CAN-eläintäyssä
+   * (elaintakyt.js) ja sisäoppilaitoshistoria Kanadan maalehdessä
+   * (maa-kategoriat.js CAN) — lehti ei toista niitä. Kohdekartan
+   * kahdeksan kohdetta ovat omia juttujaan (nahtavyysjutut.js) eikä
+   * yksikään niistä ole näiden nostojen aihe.
+   *
+   * EI ENNEN JA NYT -PARIA. Matkakirjan valokuvataulussa
+   * (northamerica-valokuvat.js, iqaluit) on pelkkiä nykykuvia
+   * 2010–2025, eikä muuta voi ollakaan: paikalla ei ollut kaupunkia
+   * ennen vuotta 1942. Vanhan puolen ehdokas olisi 1940–50-luvun
+   * tukikohtakuva, mutta sen pitäisi täyttää samat säännöt (≥ 1200 px,
+   * PD/CC) — kirjattu kuvatyön tehtäväksi. Lehti taittuu ilman paria
+   * kuten Lagos, Dubai, Doha, Salalah ja Astana.
+   */
+  iqaluit: [
+    {
+      id: 'kaupunki',
+      nimi: 'Iqaluit',
+      johdanto: 'Iqaluit on Kanadan pohjoisin kaupunki ja sen pienin '
+        + 'pääkaupunki: reilut seitsemäntuhatta asukasta puurajan '
+        + 'pohjoispuolella, ilman tietä tai rataa muualle. Isoisän '
+        + 'matkavuonna 1873 rannalla ei ollut kaupunkia lainkaan — '
+        + 'vain kalapaikka, jonka nimi kertoo miksi.',
+      kansikuvat: [
+        {
+          tiedosto: 'City of Iqaluit.jpg',
+          selite: 'Ilta-aurinko osuu kaupunkiin, ja sen takana '
+            + 'Frobisherinlahti on täynnä ajojäätä.',
+          lahde: 'ADialla, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Bayview Iqaluit.JPG',
+          selite: 'Kesällä tundra on vihreä ja talot värikkäitä, ja '
+            + 'lahden takana näkyy vastaranta.',
+          lahde: 'Sebastian, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Iqaluit outskirts2.jpg',
+          selite: 'Talvella kaupunki nousee lumiselta rannalta ja meri '
+            + 'jäätyy sen edessä.',
+          lahde: 'Saffron Blaze, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Iqaluitille ei ole generoitu herokuvia, joten
+       * karusellissa on kolme aitoa valokuvaa (vertaa Lagosiin ja
+       * Denveriin): merijää, kivimerkki ja Apexin niemi.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Iqaluit 2020.jpg',
+          selite: 'Merijää työntyy röykkiöiksi lahden pohjukassa, ja '
+            + 'kaukana keskellä kulkee moottorikelkka.',
+          lahde: 'Hbmtl, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Inuksuk (7697388930).jpg',
+          selite: 'Kivistä ladottu inuksuk seisoo kalliolla taivasta '
+            + 'vasten kaupungin laidalla.',
+          lahde: 'Sebastian Kasten, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Apex Nunavut.JPG',
+          selite: 'Apexin niemi keväthämärässä: värikkäät talot '
+            + 'rivissä ja jäätynyt lahti niiden takana.',
+          lahde: 'Aaron M Lloyd, Wikimedia Commons (PD)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Paikka, jossa on paljon kalaa',
+          teksti: 'Ennen kuin täällä oli kaupunkia, täällä oli '
+            + 'kalapaikka. Inuiitit ja heidän edeltäjänsä — '
+            + 'dorset-kulttuurin paleoeskimot ja thule-kansa — ovat '
+            + 'kalastaneet Koojesse Inletin pohjukassa tuhansia '
+            + 'vuosia, ja siitä tulee nimi: inuktitutin ᐃᖃᓗᐃᑦ, '
+            + 'Iqaluit, tarkoittaa paikkaa, jossa on paljon kalaa. '
+            + 'Kala on nieriä, joka nousee Sylvia Grinnellin jokeen. '
+            + 'Nimi oli vähällä menettää katteensa 1900-luvulla, kun '
+            + 'Apexin pieni säilyketehdas kalasti kannan lähes '
+            + 'tyhjiin; vasta noin 2008 joessa nähtiin merkkejä siitä, '
+            + 'että kanta on palaamassa. Kaupunkilaiset ovat '
+            + 'iqalummiut.',
+          wiki: 'Iqaluit',
+        },
+        {
+          otsikko: 'Musta kivi, joka ei ollut kultaa',
+          teksti: 'Martin Frobisher purjehti 1576 etsimään '
+            + 'Luoteisväylää ja luuli löytäneensä sen: hän kääntyi '
+            + 'lännelle ylös lahtea ja nimesi sen Frobisherin '
+            + 'salmeksi. Mukaan tarttui myös musta kivi. Lontoossa '
+            + 'kolme koetusmestaria totesi sen arvottomaksi, mutta '
+            + 'italialainen alkemisti Giovanni Battista Agnello väitti '
+            + 'löytäneensä siitä kultaa — ja kysyttäessä, miksi muut '
+            + 'eivät löytäneet, vastasi että luontoa pitää osata '
+            + 'imarrella. Seuraava matka toi kotiin noin 200 tonnia '
+            + '"malmia", ja Dartfordiin rakennettiin sitä varten oma '
+            + 'sulatto. Viiden vuoden jälkeen kivi todettiin '
+            + 'hornblendeksi ja käytettiin tienpohjaksi. Yhtiö meni '
+            + 'konkurssiin.',
+          wiki: 'Martin Frobisher',
+        },
+        {
+          otsikko: 'Vuosi 1873: lahti, joka ei ollutkaan salmi',
+          teksti: 'Kaksisataa kahdeksankymmentä vuotta Frobisherin '
+            + 'jälkeen amerikkalainen Charles Francis Hall talvehti '
+            + 'valaanpyytäjän mukana Baffininsaarella. Paikalliset '
+            + 'inuiitit kertoivat hänelle, missä Frobisherin '
+            + 'kaivosyrityksen jäännökset olivat — tieto oli kulkenut '
+            + 'suullisena perimätietona koko sen ajan. Oppaikseen Hall '
+            + 'sai aviopari Ipirvikin ja Taqulittuqin, ja 1861 hänestä '
+            + 'tuli ensimmäinen ei-alkuperäinen ihminen, joka tajusi, '
+            + 'ettei Frobisherin salmi ole salmi vaan umpilahti. '
+            + 'Kartta korjattiin. Hall itse kuoli marraskuussa 1871 '
+            + 'Grönlannissa oudoissa oloissa, joten isoisän '
+            + 'matkavuonna kartta oli kaksi vuotta vanha ja sen '
+            + 'tekijä kaksi vuotta kuollut.',
+          wiki: 'Charles Francis Hall',
+        },
+        {
+          otsikko: 'Nimi, joka otettiin takaisin',
+          teksti: 'Kaupunki syntyi sodasta. Yhdysvallat rakensi 1942 '
+            + 'rannalle lentotukikohdan, jonka paikan valitsi '
+            + 'inuiittiopas Nakasuk — kaupungin ensimmäinen vakituinen '
+            + 'asukas. Viranomaiset nimesivät paikan lahden mukaan '
+            + 'Frobisher Bayksi. 1950-luvulla tutkalinjan rakentaminen '
+            + 'toi satoja työläisiä, ja inuiitteja muutti perässä työn '
+            + 'ja lääkärinhoidon takia: 1957 kaupungin 1 200 '
+            + 'asukkaasta 489 oli inuiitteja. Ensimmäiset '
+            + 'paikallisvaalit pidettiin 1964, ensimmäinen '
+            + 'pormestarinvaali 1979. Ja 1. tammikuuta 1987 nimi '
+            + 'vaihdettiin takaisin siksi, jota asukkaat olivat aina '
+            + 'käyttäneet. Nunavutin pääkaupunki Iqaluitista tuli '
+            + '1999 ja virallisesti kaupunki 19. huhtikuuta 2001.',
+          wiki: 'Iqaluit',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Iqaluit on Nunavutin pääkaupunki ja koko territorion '
+          + 'ainoa varsinainen kaupunki. Vuoden 2021 väestönlaskennassa '
+          + 'asukkaita oli 7 429, mikä tekee siitä väkiluvultaan Kanadan '
+          + 'pienimmän pääkaupungin. Se on myös ainoa Kanadan pääkaupunki, '
+          + 'jota ei yhdistä muihin asutuksiin maantie: kaupunkiin '
+          + 'pääsee lentäen ja jääolojen salliessa veneellä, ja kaikki '
+          + 'tavara tulee samaa reittiä. Se näkyy hinnoissa. '
+          + 'Enemmistökieltä ei ole: vuonna 2021 äidinkielenään '
+          + 'englantia puhui 49,1 prosenttia, inuktitutia 30,0 ja '
+          + 'ranskaa 5,9 — mutta englantia osaa 97,2 ja inuktitutia '
+          + '53,1 prosenttia asukkaista. Inuktitutia kirjoitetaan '
+          + 'omilla tavumerkeillä, jotka näkyvät kylteissä englannin '
+          + 'rinnalla. Osoitteet ilmoitetaan rakennusnumeroin: '
+          + 'kadunnimiä alettiin kehittää vasta noin 2003, eikä '
+          + 'katunumeroita ole annettu lainkaan.',
+        artikkeli: {
+          nimi: 'Matkailijan Iqaluit',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa ei ole liikennevaloja eikä '
+            + 'katuosoitteita, jossa vuorovesi liikuttaa merta '
+            + 'kymmenen metriä ja jossa koko tieverkko mahtuu yhteen '
+            + 'kuvaan.',
+          nosto: 'Iqaluit on ainoa Kanadan pääkaupunki ilman '
+            + 'liikennevaloja. Tilapäisiä on asennettu, ja niistä '
+            + 'syntyi aikanaan oma kohunsa. Risteykset hoituvat '
+            + 'stop-merkeillä, ja ruuhkaa kutsutaan paikallisesti '
+            + 'nimellä "the rush minute".',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Iqaluitiin ei tulla maitse. Lentoasemalla on '
+                + '2 623 metrin kiitotie ja vuonna 2018 valmistunut '
+                + 'uusi terminaali, ja Canadian North lentää sinne '
+                + 'Ottawasta, Yellowknifesta ja Nunavutin yhteisöistä. '
+                + 'Meritse pääsee vain osan vuotta; syvämerisatama '
+                + 'avattiin heinäkuussa 2023 viiden vuoden '
+                + 'rakentamisen jälkeen. Kaupungin sisällä on taksit, '
+                + 'ja maaliskuussa 2026 aloitti Iqaluit Transit '
+                + 'yhdellä bussireitillä arkisin ja lauantaisin; '
+                + 'perusmaksu on viisi dollaria. Aiempi kaupungin '
+                + 'bussiliikenne lakkautettiin vähäisen käytön takia. '
+                + 'Isot tiet ovat asfalttia, pienet soraa, ja '
+                + 'risteyksissä on stop-merkit.',
+            },
+            {
+              otsikko: 'Millaista täällä on',
+              teksti: 'Arkkitehtuuri on ensin toiminnallista: '
+                + 'materiaalikustannukset alas, lämpö sisään, ilmasto '
+                + 'kestettäväksi. Kirjo ulottuu 1950-luvun '
+                + 'tutkalinjaparakeista 1970-luvun valkoiseen '
+                + 'lasikuitulohkoon — Nakasukin koulu, kunnantalo ja '
+                + 'jäähalli — ja teräsbetonitorneihin kukkulalla. '
+                + 'Uudemmat talot ovat värikkäämpiä ja lähempänä '
+                + 'etelän tapaa. Kaupungissa on kaksi kaupunginosaa, '
+                + 'jotka kannattaa erottaa: keskusta Koojesse Inletin '
+                + 'pohjukassa ja Apex viiden kilometrin päässä '
+                + 'kaakossa omalla niemellään. Kaupungin ainoat tiet '
+                + 'yhdistävät ne ja päättyvät sitten.',
+            },
+            {
+              otsikko: 'Juhlat ja äänet',
+              teksti: 'Kevätjuhla Toonik Tyme järjestetään '
+                + 'vapaaehtoisvoimin kuten monessa muussakin Nunavutin '
+                + 'yhteisössä, ja siinä yhdistyvät perinteiset '
+                + 'inuiittilajit ja uudemmat tapahtumat. Alianait '
+                + 'Music and Arts Festival kestää viikon ja alkaa joka '
+                + 'vuosi 21. kesäkuuta; se on tuonut kaupunkiin sekä '
+                + 'kanadalaisia että ulkomaisia esiintyjiä. Kuultavin '
+                + 'perinne on katajjaq eli kurkkulaulu: kaksi naista '
+                + 'seisoo vastakkain aivan lähekkäin, toinen aloittaa '
+                + 'lyhyen rytmikuvion ja toinen täyttää välit, ja '
+                + 'ensimmäisenä hengästyvä tai nauramaan purskahtava '
+                + 'häviää. Etelä-Baffinilla laji tunnetaan myös '
+                + 'nimellä piqqusiraarniq.',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Ruoka on kallista, koska se tulee kaukaa: '
+                + 'vuotuinen laivakuljetus tuo suuren osan kerralla ja '
+                + 'loput lennätetään. Paikallista on nieriä, se sama '
+                + 'kala, josta kaupungin nimi kertoo; kaupallinen '
+                + 'nieriänkalastus Sylvia Grinnellin joessa '
+                + 'kiellettiin 1965, ja muu kuin inuiitti tarvitsee '
+                + 'kalastukseen luvan. Karibu on puiston tärkein eläin '
+                + 'ja merkittävä osa sekä perinteistä että nykyistä '
+                + 'inuiittien ruokavaliota. Keskustassa on kauppoja ja '
+                + 'noutoravintoloita, joiden kyltit lukevat saman '
+                + 'asian englanniksi ja inuktitutin tavumerkein.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian '
+                + 'Iqaluit-artikkelin Climate-osiosta; lehdellä ei ole '
+                + 'omaa vuosigraafia, koska säänormaaleja ei haettu '
+                + 'tässä erässä. Ilmasto on tundrailmastoa, ja '
+                + 'kuukauden keskilämpötila on pakkasen puolella '
+                + 'kahdeksana kuukautena vuodessa. Sadetta ja lunta '
+                + 'kertyy vuodessa hieman yli 400 millimetriä, ja '
+                + 'sateisin vuodenaika on kesä. Alin mitattu lämpötila '
+                + 'on −45,6 astetta (10.2.1967) ja ylin 26,8 astetta '
+                + '(21.7.2008). Kesäkuun 21. päivä on Alianaitin '
+                + 'aloituspäivä, ja silloin valoa riittää. Talvella '
+                + 'Qaummaarviitiin ja Katannilikiin pääsee vain '
+                + 'moottorikelkalla, koiravaljakolla tai jalan.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Iglukatedraali',
+                tahdet: 3,
+                selite: 'Pyhän Juudaksen katedraali on rakennettu '
+                  + 'iglun muotoon; nykyinen talo avattiin 2012.',
+              },
+              {
+                mita: 'Nunavutin parlamenttitalo',
+                tahdet: 3,
+                selite: 'Värikäs sisustus ja parasta inuiittitaidetta '
+                  + 'talossa, jossa hallitaan ilman puolueita.',
+              },
+              {
+                mita: 'Sylvia Grinnellin puisto',
+                tahdet: 3,
+                selite: 'Kilometri keskustasta länteen: joki, '
+                  + 'putoukset ja thule-kansan kivilatomukset.',
+              },
+              {
+                mita: 'Nunatta Sunakkutaangit -museo',
+                tahdet: 2,
+                selite: 'Inuiittitaidetta ja arktista esineistöä '
+                  + 'entisessä Hudson\'s Bay Companyn talossa.',
+              },
+              {
+                mita: 'Apex eli Niaqunngut',
+                tahdet: 2,
+                selite: 'Viisi kilometriä kaakkoon: vanhat '
+                  + 'kauppahuoneen talot ja tuberkuloosimuistomerkki.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksoissa ja
+             * teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Hinnat ovat pohjoisen hinnat',
+                teksti: 'Kaupunkiin ei johda tietä eikä rataa, ja '
+                  + 'laivayhteys toimii vain osan vuotta — kaikki '
+                  + 'muu lennätetään, ja se näkyy kaupan hyllyssä.',
+              },
+              {
+                otsikko: 'Osoite on rakennusnumero',
+                teksti: 'Kadunnimiä alettiin kehittää vasta noin '
+                  + '2003 eikä katunumeroita ole annettu; paikat '
+                  + 'kerrotaan rakennusnumerolla tai maamerkillä.',
+              },
+              {
+                otsikko: 'Vuorovesi on kymmenen metriä',
+                teksti: 'Frobisherinlahden suppilomuoto nostaa ja '
+                  + 'laskee vettä 7–11 metriä vuorokaudessa, joten '
+                  + 'ranta ei ole sama paikka aamulla ja illalla.',
+              },
+              {
+                otsikko: 'Kaksi kieltä joka kyltissä',
+                teksti: 'Inuktitut on Nunavutin virallisia kieliä ja '
+                  + 'sitä kirjoitetaan omilla tavumerkeillään; '
+                  + 'englanti riittää asiointiin.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Tundra ja vuorovesi',
+      johdanto: 'Kaupungin edessä nousee ja laskee joka päivä '
+        + 'seitsemästä yhteentoista metriä vettä, ja takana alkaa '
+        + 'tundra, jolla korkein pensas yltää nilkkaan. Sää tekee '
+        + 'täällä sen, mitä kartta ei kerro.',
+      tehtava: {
+        kysymys: 'Kuinka paljon vuorovesi nostaa ja laskee vettä '
+          + 'Iqaluitissa vuorokaudessa?',
+        vaihtoehdot: [
+          'Noin puoli metriä',
+          'Noin kaksi metriä',
+          'Seitsemästä yhteentoista metriä',
+          'Vuorovettä ei ole lainkaan',
+        ],
+        oikea: 2,
+        fakta: 'Syy on lahden muoto: Frobisherinlahti kapenee '
+          + 'suppiloksi 40 kilometristä noin 20 kilometriin, ja sama '
+          + 'vesimäärä puristuu yhä kapeampaan uomaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Suppilo, joka nostaa meren',
+          teksti: 'Frobisherinlahti on Davisinsalmen poukama '
+            + 'Baffininsaaren kaakkoiskulmassa: noin 230 kilometriä '
+            + 'pitkä ja suullaan 40 kilometriä leveä, mutta perukkaa '
+            + 'kohti se kapenee noin kahteenkymmeneen. Muotoa '
+            + 'reunustavat kaksi niemimaata, Hall Peninsula '
+            + 'koillisessa ja Meta Incognita Peninsula lounaassa, ja '
+            + 'juuri se suppilo saa vuoroveden nousemaan ja laskemaan '
+            + 'Iqaluitissa 7–11 metriä vuorokaudessa. Altaan kaivoi '
+            + 'jääkauden purkautumisjäätikkö, ja meri tulvi siihen '
+            + 'myöhemmin. Rannat ovat korkeaa kalliota: koillisessa '
+            + 'noin 330 metriä, lounaassa kaksi kertaa niin paljon.',
+          wiki: 'Frobisher Bay',
+        },
+        {
+          otsikko: 'Puu, joka kasvaa pitkin maata',
+          teksti: 'Iqaluit on puurajan pohjoispuolella, vaikka se on '
+            + 'selvästi napapiirin eteläpuolella. Syy on meressä: '
+            + 'kylmä Baffin Island Current pitää kesät niin viileinä, '
+            + 'että puuraja kulkee Kanadan itäosassa yhtä etelässä '
+            + 'kuin Pohjois-Labradorissa — talvet sen sijaan ovat '
+            + 'suunnilleen samanlaisia kuin Yellowknifessa. Puita '
+            + 'kaupungissa on silti muutama: etelään kääntyneitä '
+            + 'tuotuja mustakuusia, joita lumikinos suojaa talvella. '
+            + 'Pensaista tavallisin on arktinen paju, joka voi olla '
+            + 'lähes kahdeksan metriä pitkä ja viisitoista senttiä '
+            + 'korkea. Se kasvaa siihen suuntaan, johon kannattaa.',
+          wiki: 'Salix arctica',
+        },
+        {
+          otsikko: 'Mittarit, jotka liikkuvat',
+          teksti: 'Sadetta ja lunta kertyy vuodessa hieman yli 400 '
+            + 'millimetriä, mikä on paljon enemmän kuin useimmilla '
+            + 'arktisen saariston paikoilla, ja sateisin vuodenaika on '
+            + 'kesä. Golfvirran puolella samalla leveysasteella on '
+            + 'toinen maailma: Trondheimin vuoden keskilämpötila on '
+            + '15,2 astetta leudompi. Ennätykset ovat −45,6 astetta '
+            + '(10. helmikuuta 1967) ja 26,8 astetta (21. heinäkuuta '
+            + '2008). Keskiarvo liikkuu: 1979 vuoden keskilämpötila '
+            + 'oli −9,0 astetta ja 2023 −6,8. Mittausjakson '
+            + 'ensimmäisellä puoliskolla keskiarvoa kylmempiä vuosia '
+            + 'oli neljätoista, jälkimmäisellä kolme.',
+          wiki: 'Iqaluit',
+        },
+        {
+          otsikko: 'Jää on tie',
+          teksti: 'Kaupungin oma tieverkko ulottuu Apexista Sylvia '
+            + 'Grinnellin puistoon ja loppuu siihen. Muualle mennään '
+            + 'talvella jäätä pitkin: kokeneet paikalliset ylittävät '
+            + 'Hudsoninsalmen mantereelta jalan, koiravaljakolla tai '
+            + 'moottorikelkalla, yli sata kilometriä. Autoja on yhä '
+            + 'enemmän, ja niistä syntyy ruuhkia, joita sanotaan '
+            + '"kiireminuutiksi" — silti moottorikelkka on '
+            + 'suositumpi, koska auton rahtaaminen maksaa ja tie '
+            + 'kuluttaa sen. Läheiseen Qaummaarviitin puistoon, jossa '
+            + 'on yhdentoista turvetalon jäänteet, pääsee talvella '
+            + 'vain kelkalla, valjakolla tai jalan ja kesällä '
+            + 'veneellä.',
+          wiki: 'Iqaluit',
+        },
+      ],
+    },
+  ],
+  /*
+   * SANTA FE (7.9.2026). Faktapohja ja tarkistus:
+   * docs/mantereet-tyoaineisto/faktapohja-santafe.md ja
+   * tarkistus-santafe.md. Kaikki väitteet en-Wikipedian
+   * raakateksteistä 7.9.2026.
+   *
+   * SISÄLTÖLINJAUKSET (spec-mantereet.md, USA ja linjaus 1):
+   * pueblo-kansat ovat eläviä toimijoita — kylä oli olemassa ennen
+   * espanjalaisia, kapina 1680 onnistui, ja Indian Market on
+   * nykypäivän taiteilijoiden markkina. Oñaten karkotus ja de
+   * Vargasin "veretön takaisinvaltaus" kerrotaan lähteen omalla
+   * sanamuodolla ilman yksityiskohtia. Sisällissota on perushistoriaa
+   * ilman osapuolinostalgiaa. Katedraalin vuoden 2022 kiinnitys ja
+   * sovintosumma jätetään pois (ei nykypolitiikkaa).
+   *
+   * MITÄ TÄSSÄ EI OLE JA MIKSI. Mesa Verde ja Chacon kanjoni ovat
+   * karttanostoja (maastokohteet-usa.js), ja USA:n maalehden aiheet
+   * ovat historia, luonto, musiikki, tiede ja ruoka — lehti ei toista
+   * niitä. Kohdekartan kahdeksan kohdetta ovat omia juttujaan
+   * (nahtavyysjutut.js) eikä yksikään niistä ole näiden nostojen
+   * aihe: kuvernöörien palatsi, aukio, Canyon Road ja Fort Marcy ovat
+   * lehden juttuja ja siksi POIS kartalta, ja kartan kohteet ovat
+   * kirkkoja ja museoita, joita lehti ei käsittele.
+   */
+  santafe: [
+    {
+      id: 'kaupunki',
+      nimi: 'Santa Fe',
+      johdanto: 'Santa Fe on Yhdysvaltain vanhin osavaltion pääkaupunki '
+        + 'ja sen korkeimmalla sijaitseva, runsaan kahden kilometrin '
+        + 'korkeudessa Sangre de Cristo -vuorten juurella. Isoisän '
+        + 'matkavuonna 1873 se oli territorion pääkaupunki ja '
+        + 'vaunureitin pääte, jonne rata ei vielä ylettynyt.',
+      /*
+       * ENNEN JA NYT: valmis pari matkakirjan valokuvataulusta
+       * (northamerica-valokuvat.js, santafe). Sama aukio 1866 ja
+       * nykyään. Kuvakentät täydennetään kuvacommitissa.
+       */
+      nostot: [
+        {
+          otsikko: 'Valkoisen simpukan vesipaikka',
+          teksti: 'Ennen espanjalaisia paikalla oli kylä. Noin vuosien '
+            + '900 ja 1500 välillä seutu tunnettiin tewojen kielellä '
+            + 'nimellä Kháˀ Pʼoegeh, valkoisen simpukan vesipaikka — '
+            + 'yksi monista nimistä, jotka kertovat vedestä. Navajoksi '
+            + 'paikka on Yootó. Joskus vuoden 900 jälkeen joukko tewoja '
+            + 'rakensi taloryhmän nykyisen aukion kohdalle ja puolen '
+            + 'mailin verran siitä etelään ja länteen; kylän nimi oli '
+            + 'Oghá Pʼoʼoge. Tanoankieliset ja muut pueblo-kansat '
+            + 'asuivat Santa Fe -joen varrella 1000- ja 1100-luvuilla, '
+            + 'mutta paikka oli ollut hylättynä ainakin kaksisataa '
+            + 'vuotta, kun espanjalaiset tulivat. Pueblo-kansat elävät '
+            + 'yhä omissa kylissään pitkin Rio Granden laaksoa.',
+          wiki: 'Santa Fe, New Mexico',
+        },
+        {
+          otsikko: 'Kaupunki, joka perustettiin kahdesti',
+          teksti: 'Juan de Oñate johti 1598 ensimmäisen espanjalaisen '
+            + 'siirtokuntayrityksen ja perusti Santa Fe de Nuevo '
+            + 'Méxicon provinssin, mutta hänet karkotettiin ja '
+            + 'lähetettiin maanpakoon, koska hänen hallintonsa '
+            + 'katsottiin julmaksi alkuperäisväestöä kohtaan. Provinssin '
+            + 'toinen kuvernööri Pedro de Peralta perusti 1607 uuden '
+            + 'kaupungin vuorten juurelle nimellä La Villa Real de la '
+            + 'Santa Fé de San Francisco de Asís ja määräsi sen 1610 '
+            + 'pääkaupungiksi — sitä se on lähes yhtäjaksoisesti '
+            + 'pysynyt, ja siksi se on Yhdysvaltain vanhin osavaltion '
+            + 'pääkaupunki. Kaava noudatti Intian lakeja, jotka Filip '
+            + 'II oli antanut 1573: kaupunki rakennetaan keskusaukion '
+            + 'ympärille, ja kadut lähtevät siitä säteittäin.',
+          wiki: 'Santa Fe de Nuevo México',
+        },
+        {
+          otsikko: 'Vuosi 1680: kaksitoista vuotta pueblojen hallintoa',
+          teksti: 'Alkuperäiskansoilla ei ollut edustusta provinssin '
+            + 'hallinnossa, ja se johti vuonna 1680 pueblokapinaan: eri '
+            + 'pueblo-kansojen ryhmät ajoivat espanjalaiset ulos '
+            + 'New Mexicosta El Pasoon asti. Sen jälkeen pueblo-kansat '
+            + 'hallitsivat New Mexicoa kuvernöörien palatsista Santa '
+            + 'Fessä kahdentoista vuoden ajan, 1680–1692. Alue '
+            + 'vallattiin takaisin 1692, kun Diego de Vargas johti niin '
+            + 'kutsutun verettömän takaisinvaltauksen — nimitystä '
+            + 'arvosteltiin väkivaltaiseksi jo omana aikanaan. Seuraava '
+            + 'kuvernööri Francisco Cuervo y Valdez alkoi rakentaa '
+            + 'rauhaa, ja siihen kuului Albuquerquen perustaminen, jotta '
+            + 'pueblot saisivat paremman edustuksen ja kauppayhteydet.',
+          wiki: 'Pueblo Revolt',
+        },
+        {
+          otsikko: 'Vuosi 1873: vaunureitin viimeiset vuodet',
+          teksti: '1820-luvulta alkaen Santa Fe Trail toi vaunuilla '
+            + 'tavaraa Missourista preerian halki, ja kauppa houkutteli '
+            + 'sekä alkuperäiskansojen että euroamerikkalaisia '
+            + 'kauppiaita; kaupunki oli Mississippin länsipuolen '
+            + 'keskeinen kauppa- ja liikennesolmu. Yhdysvallat julisti '
+            + '1846 sodan Meksikolle, ja kenraali Stephen W. Kearny '
+            + 'marssi noin 1 700 sotilaan kanssa Santa Feen; 1848 '
+            + 'Guadalupe Hidalgon sopimus vahvisti vallanvaihdon. '
+            + 'Maaliskuussa 1862 kaupungin yllä liehui muutaman päivän '
+            + 'etelävaltioiden lippu, kunnes Glorieta Passin taistelu '
+            + 'pakotti vetäytymään. Isoisän matkavuonna vaunut kulkivat '
+            + 'yhä: rata vedettiin 1880 Lamyn kautta kaupungin ohi, ja '
+            + 'Santa Fe jäi haararadan päähän.',
+          wiki: 'Santa Fe Trail',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Santa Fe on New Mexicon pääkaupunki ja Yhdysvaltain '
+          + 'lounaisosan kulttuuripääkaupunkina pidetty kaupunki. Se on '
+          + 'maan korkeimmalla sijaitseva osavaltion pääkaupunki: '
+          + 'Geography-osion mukaan 7 199 jalkaa eli noin 2 190 metriä '
+          + 'merenpinnan yläpuolella. Kaupunkikuva on adobea ja '
+          + 'rappausta, ja se on sitä sääntömääräisesti — '
+          + 'rakennusmääräykset vaativat keskustassa pueblo- tai '
+          + 'espanjalais-territoriaalista tyyliä tasakattoineen. '
+          + 'Taidetta on paljon: yli 250 galleriaa, iso museokeskittymä '
+          + 'ja kolme vuotuista taidetapahtumaa. Joka kymmenes '
+          + 'työpaikka liittyy taiteen ja kulttuurin aloihin, ja '
+          + 'kirjailijoiden osuus työvoimasta on suurin kaikista '
+          + 'Yhdysvaltain kaupungeista. Vuonna 2005 Santa Festä tuli '
+          + 'ensimmäinen yhdysvaltalainen kaupunki Unescon luovien '
+          + 'kaupunkien verkostossa, käsityön ja kansantaiteen alalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Santa Fe',
+          taitto: 'opas',
+          teksti: 'Kaupunki, joka päätti miltä sen pitää näyttää ja '
+            + 'rakensi itsensä uudelleen sen näköiseksi — ja jossa '
+            + 'kaikki tärkeä on kävelymatkan päässä yhdestä aukiosta.',
+          nosto: 'Santa Fe on Yhdysvaltain korkeimmalla sijaitseva '
+            + 'osavaltion pääkaupunki, runsaat kaksi kilometriä '
+            + 'merenpinnan yläpuolella. Korkeus ja kuivuus tekevät '
+            + 'vuorokauden lämpötilaerosta yli 25 asteen (Fahrenheit) '
+            + 'joka kuukausi ja suuren osan vuodesta yli 30.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Santa Fe Regional Airportista lennetään '
+                + 'Dallas/Fort Worthiin ja Phoenixiin, kausiluonteisesti '
+                + 'Denveriin ja Houstoniin. Kaupunki on moottoritie '
+                + 'I-25:n varrella, ja US 84 ja US 285 kulkevat sen '
+                + 'läpi St. Francis Drivea pitkin; NM-599 kiertää '
+                + 'luoteesta. Vuosina 1926–1937 valtatie 66 kulki '
+                + 'Santa Fen kautta. Kaupungin oma bussiyhtiö on Santa '
+                + 'Fe Trails, ja lähijuna New Mexico Rail Runner '
+                + 'Express vie Albuquerquen suuntaan neljältä asemalta. '
+                + 'Santa Fe Southern Railway ajaa museojunia 15 mailin '
+                + 'päähän Lamyyn, jossa pysähtyy Amtrakin Southwest '
+                + 'Chief — rata kulkee siis yhä kylän kautta eikä '
+                + 'kaupungin.',
+            },
+            {
+              otsikko: 'Aukio ja museot',
+              teksti: 'Suuri osa matkailusta on vanhassa keskustassa ja '
+                + 'etenkin aukiolla, joka on yhden korttelin kokoinen ja '
+                + 'kuvernöörien palatsin vieressä. Palatsin '
+                + 'pylväskäytävässä alkuperäiskansojen käsityöläiset '
+                + 'myyvät omaa työtään. Museum Hill parin kilometrin '
+                + 'päässä kaakossa kokoaa useita museoita, ja siellä '
+                + 'järjestetään Santa Fe International Folk Art Market. '
+                + 'Kolmas museokeskittymä on Railyardin kaupunginosassa. '
+                + 'Kaikki keskustan kohteet ovat kävelymatkan päässä '
+                + 'toisistaan, mikä on korkealla ilmalla oma '
+                + 'huomionsa — hengästyy nopeammin kuin luulisi.',
+            },
+            {
+              otsikko: 'Päiväretket',
+              teksti: 'Taos on noin 70 mailia pohjoiseen. Bandelier '
+                + 'National Monument ja Valles Caldera ovat noin 30 '
+                + 'mailin päässä, ja Ski Santa Fe kuudentoista mailin '
+                + 'päässä koillisessa. Chimayó on lähellä, ja monet '
+                + 'paikalliset tekevät vuosittaisen pyhiinvaelluksen '
+                + 'Santuario de Chimayóon. Syyskuun toisella viikolla '
+                + 'Sangre de Cristo -vuorten haavat muuttuvat '
+                + 'keltaisiksi, ja samaan aikaan osuvat Fiestas de '
+                + 'Santa Fe.',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Santa Fe tunnetaan panoksestaan New Mexicon '
+                + 'keittiöön. Chile on osavaltion tunnusomaisin '
+                + 'viljelykasvi, ja syksyllä vihreä sato paahdetaan '
+                + 'pyörivissä rummuissa torin laidalla — tuoksun '
+                + 'tunnistaa kadulle asti. Ruokakaupungin maine on '
+                + 'kaupungille tärkeä osa samaa kulttuurituotetta kuin '
+                + 'galleriat ja museot. en-Wikipedia nostaa '
+                + 'ravintoloista esiin Alkemēn ja Bobcat Biten; '
+                + 'muuten kannattaa mennä sinne, missä chiliä '
+                + 'paahdetaan.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Santa '
+                + 'Fe -artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säänormaaleja ei haettu tässä '
+                + 'erässä. Ilmasto on kylmä puolikuiva. Vuorokauden '
+                + 'keskilämpötila liikkuu joulukuun 30,3 asteesta '
+                + 'heinäkuun 70,1 asteeseen Fahrenheitia eli noin '
+                + 'miinus yhdestä kahteenkymmeneenyhteen celsiukseen. '
+                + 'Lunta sataa tavallisesti kuudesta kahdeksaan kertaa '
+                + 'vuodessa marras–huhtikuussa, eniten joulukuussa. '
+                + 'Rankimmat sateet tulevat heinä–elokuussa '
+                + 'Pohjois-Amerikan monsuunin myötä; kuivin kuukausi on '
+                + 'helmikuu. Indian Market on elokuun kolmatta torstaita '
+                + 'seuraavana viikonloppuna ja Zozobra Labor Day '
+                + '-viikonlopun perjantaina.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Aukio ja kuvernöörien palatsi',
+                tahdet: 3,
+                selite: 'Kaupungin keskus vuodesta 1610; palatsin '
+                  + 'pylväskäytävässä myydään vain itse tehtyä työtä.',
+              },
+              {
+                mita: 'Canyon Road',
+                tahdet: 3,
+                selite: 'Kaupungin tihein galleriakeskittymä; '
+                  + 'gallerioita on koko kaupungissa yli 250.',
+              },
+              {
+                mita: 'Museum Hill',
+                tahdet: 3,
+                selite: 'Neljä museota samalla kukkulalla, mukana '
+                  + 'maailman suurin kansantaiteen kokoelma.',
+              },
+              {
+                mita: 'Indian Market',
+                tahdet: 3,
+                selite: 'Elokuussa noin tuhat alkuperäiskansojen '
+                  + 'taiteilijaa myy töitään aukion ympärillä.',
+              },
+              {
+                mita: 'Zozobran poltto',
+                tahdet: 2,
+                selite: 'Yli viisitoistametrinen marionetti palaa Fort '
+                  + 'Marcyn puistossa Labor Day -viikonloppuna.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksoissa ja
+             * teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Korkeus tuntuu',
+                teksti: 'Kaupunki on runsaan kahden kilometrin '
+                  + 'korkeudessa, ja kuiva ilma tekee vuorokauden '
+                  + 'lämpötilaerosta suuren — vettä mukaan ja '
+                  + 'ensimmäinen päivä rauhallisesti.',
+              },
+              {
+                otsikko: 'Rata pysähtyy Lamyyn',
+                teksti: 'Amtrakin Southwest Chief pysähtyy 15 mailin '
+                  + 'päässä Lamyssa, ei Santa Fessä; sama ohitus, '
+                  + 'joka teki kaupungista sivukylän 1880.',
+              },
+              {
+                otsikko: 'Adobe voi olla rappausta',
+                teksti: 'Rakennusmääräys vaatii tyylin, ei '
+                  + 'materiaalia: monet uudet talot ovat puuta ja '
+                  + 'harkkoa rapattuna, ja sitä sanotaan faux-dobeksi.',
+              },
+              {
+                otsikko: 'Elokuu on täynnä',
+                teksti: 'Indian Market tuo kaupunkiin arviolta '
+                  + '150 000 kävijää yhdeksi viikonlopuksi — majoitus '
+                  + 'kannattaa varata hyvissä ajoin.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Taiteen kaupunki',
+      johdanto: 'Kaupunki päätti 1912, miltä sen pitää näyttää — ja '
+        + 'rakensi itsensä uudelleen sen näköiseksi. Nykyään joka '
+        + 'kymmenes työpaikka on taiteessa ja kulttuurissa, ja '
+        + 'elokuussa aukio täyttyy myyntipöydistä.',
+      tehtava: {
+        kysymys: 'Mikä Zozobra on?',
+        vaihtoehdot: [
+          'Vuoristosolan nimi',
+          'Jättimäinen marionetti, joka poltetaan joka syksy',
+          'Pueblokylän vanhin talo',
+          'Chilikastikkeen nimi',
+        ],
+        oikea: 1,
+        fakta: 'Nimi tulee espanjan ahdistusta tarkoittavasta sanasta. '
+          + 'Kuka tahansa voi kirjoittaa murheensa lapulle ja jättää '
+          + 'sen "murhelaatikkoon" poltettavaksi nuken mukana.',
+      },
+      nostot: [
+        {
+          otsikko: 'Sääntö, joka teki kaupungista yhtenäisen',
+          teksti: 'Kun Santa Fe kasvoi 1800-luvulla, rakennustyylit '
+            + 'sekoittuivat niin, että osavaltioaseman aikaan 1912 '
+            + 'kaupunki näytti kirjoittajien sanoin "Anywhere '
+            + 'USA":lta. Taantuma oli alkanut jo kaksikymmentä vuotta '
+            + 'aiemmin radan siirryttyä länteen ja liittovaltion '
+            + 'suljettua Fort Marcyn, ja hallinto arveli matkailun '
+            + 'voivan kääntää sen. Ratkaisu oli keksiä yhtenäinen '
+            + 'tyyli: Santa Fe Pueblo Revival, joka pohjautui '
+            + 'kuvernöörien palatsin entistämiseen. Ainekset olivat '
+            + 'paikallisia: vigat eli seinien läpi työntyvät karkeat '
+            + 'palkit, canales eli tasakattojen vesikourut ja '
+            + 'adobetalojen maanvärinen ilme rappauksella toistettuna. '
+            + 'Vuoden 1912 jälkeen tyyli oli pakollinen.',
+          wiki: 'Pueblo Revival architecture',
+        },
+        {
+          otsikko: 'Hinta maksettiin historialla',
+          teksti: 'Vuoteen 1930 mennessä sallittuun kirjoon lisättiin '
+            + 'territoriaalityyli, osavaltioasemaa edeltävä tapa, johon '
+            + 'kuuluvat portales eli suuret katetut kuistit ja '
+            + 'valkoiseksi maalatut ikkuna- ja oviotsat. Vuoden 1957 '
+            + 'asetus teki siitä lain: uusien ja uudelleen '
+            + 'rakennettujen talojen on etenkin historiallisilla '
+            + 'alueilla noudatettava pueblo- tai '
+            + 'espanjalais-territoriaalista tyyliä tasakattoineen. '
+            + 'Kaupungista tuli "erilainen", kuten matkailumainos '
+            + 'lupasi — mutta hinta maksettiin historialla: '
+            + 'puebloittamisen kiireessä revittiin pois valurautaiset '
+            + 'liikejulkisivut ja viktoriaaniset koristeet, ja suuri osa '
+            + 'kaupungin omaa rakennushistoriaa katosi. Tyylin '
+            + 'keskeisiä arkkitehteja olivat T. Charles Gaastra ja John '
+            + 'Gaw Meem.',
+          wiki: 'Santa Fe, New Mexico',
+        },
+        {
+          otsikko: 'Elokuun aukio',
+          teksti: 'Santa Fe Indian Market pidetään elokuun kolmatta '
+            + 'torstaita seuraavana viikonloppuna, ja se tuo kaupunkiin '
+            + 'arviolta 150 000 ihmistä. Järjestäjä on Southwestern '
+            + 'Association for Indian Arts, ja myyjinä on noin tuhat '
+            + 'alkuperäiskansojen taiteilijaa Yhdysvalloista ja '
+            + 'Kanadasta. Kojut ovat aukion ympärillä ja viereisillä '
+            + 'kaduilla, ja myynti tapahtuu suoraan tekijältä '
+            + 'ostajalle; osallistuakseen taiteilijan on todistettava '
+            + 'kuuluvansa liittovaltion tunnustamaan kansaan, ja työn '
+            + 'on täytettävä tiukat laatu- ja materiaalivaatimukset. '
+            + 'Idean esitti 1922 taiteen puolestapuhuja Rose Dougan. '
+            + 'Ensimmäinen alkuperäiskansaan kuuluva johtaja oli '
+            + 'hopi-tekstiilitaiteilija Ramona Sakiestewa 1980.',
+          wiki: 'Santa Fe Indian Market',
+        },
+        {
+          otsikko: 'Zozobra, viisikymmentä jalkaa murhetta',
+          teksti: 'Zozobra eli Old Man Gloom on puusta, rautalangasta '
+            + 'ja puuvillakankaasta tehty marionetti, joka poltetaan '
+            + 'Labor Day -viikonlopun perjantaina Fort Marcyn '
+            + 'puistossa. Korkeutta on 50 jalkaa ja 6 tuumaa. Nimi '
+            + 'tulee espanjan sanasta, joka tarkoittaa ahdistusta: '
+            + 'nukke ruumiillistaa synkkyyden, ja polttamalla se '
+            + 'hävitetään edellisen vuoden murheet. Murheensa voi '
+            + 'kirjoittaa lapulle ja jättää kaupungin matkailuneuvonnan '
+            + '"murhelaatikkoon" — nukkeen on päätynyt avioeropapereita, '
+            + 'pysäköintisakkoja, maksettuja asuntolainoja ja hääpuku. '
+            + 'Taiteilija Will Shuster poltti ensimmäisen Zozobran '
+            + 'takapihallaan 1924; nykyään katsojia on yli 60 000. '
+            + 'Vuoden 2007 nukke oli Guinnessin mukaan maailman suurin '
+            + 'marionetti, 15,21 metriä.',
+          wiki: 'Zozobra',
         },
       ],
     },

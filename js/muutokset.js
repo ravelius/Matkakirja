@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1674, teksti: 'Lehdet: 22 kaupunkia, MOZ, pienet maat, 2 saapumista' },
   { v: 1673, teksti: 'Ihmisen matka: esitys ja tutkimus, kosketus, äänikytkimet' },
   { v: 1672, teksti: 'Pulu Euroopassa, aloitusvalinta, pallon korjaukset, kuvat' },
   { v: 1671, teksti: 'Pulun rytmi, kuplat, avauksen aani, 72 kuvaa, valikon sulku' },
