@@ -1871,7 +1871,20 @@ eläintäystä, ja se on VUT-lehden rajauksen sisällä, joten merkki näkyy
 myös maalehden kartalla — toisin kuin Fidžin Lau-saarten merkki. Paikka
 haravoitiin 0,05 asteen ruudukolla: 276 ehdot täyttävästä pisteestä
 valittiin se, joka on kauimpana maan olemassa olevista merkeistä.
-Kortti on toistaiseksi kuvaton; kuva haetaan Commonsista erikseen.
+
+**Kravun kuva on Commonsista, ja se on taulun ensimmäinen sellainen.**
+Muut kuvalliset eläintäyt kantavat omistajan generoituja havainnekuvia,
+mutta Vanuatun kuvaa ei tilattu kuvaputkelta: Commonsista löytyi lajista
+valokuva, joka on otettu Vanuatussa (tiedoston Location-malline
+−18,7588 / 169,3558 ja luokat "Animals of Vanuatu" sekä "Vanuatu
+photographs taken on 2019-05-12"). Tiedosto on
+`File:Birgus latro 197146121.jpg`, tekijä **Dominik Maximilián Ramík**,
+lisenssi **CC BY 4.0** — molemmat luettu Commonsin `extmetadata`sta
+(`Artist`, `LicenseShortName`, `UsageTerms`, `AttributionRequired`
+true), ei arvattu. Alkuperäinen on 2048 × 1365 px, ja osoite skaalaa
+sen 1200:aan samalla `Special:FilePath`-tavalla kuin pelin muut
+Commons-kuvat. Kuva on katsottu: siinä on tummansininen kookoskrapu
+tarttumassa keppiin kyläpihalla.
 
 **Saint Helenan eläintäyn este vaihtui, ja se on syytä tietää.** Erä M16
 kirjasi syyksi sen, ettei laudan `outlines` tunne saarta — tämä pitää
