@@ -180,6 +180,21 @@ const SALLITUT = [
   // samalla isäntänimellä. Syöte on BLOX-julkaisujärjestelmän
   // hakuosoite (search/?f=rss), koska /rss/ ja /feed/ vastaavat 404:llä.
   'https://www.dailypost.vu/',
+  // Somalian uutislähde (maalehti SOM, 7.9.2026): syöte ja
+  // artikkelisivut samalla isäntänimellä, ilman www-etuliitettä.
+  'https://shabellemedia.com/',
+  // Taiwanin uutislähde (maalehti 7.9.2026): CNA:n syöte on
+  // feedburnerissa ja artikkelisivut cna.com.tw:ssä, joten listalla on
+  // kaksi alkua. Feedburner-alku on rajattu rsscna-polkuun, ettei
+  // workerista tule yleistä feedburner-välitystä.
+  'https://feeds.feedburner.com/rsscna/',
+  'https://www.cna.com.tw/',
+  // Etelä-Afrikan uutislähde (maalehti 7.9.2026): syöte ja
+  // artikkelisivut samalla isäntänimellä.
+  'https://www.dailymaverick.co.za/',
+  // Uzbekistanin uutislähde (maalehti 7.9.2026): Gazeta.uz:n syöte ja
+  // artikkelisivut ovat samalla isäntänimellä.
+  'https://www.gazeta.uz/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

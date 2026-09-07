@@ -3438,6 +3438,71 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: -43.5200, etela: -43.5375, lansi: 172.6215, ita: 172.6510 },
   },
+  melbourne: {
+    /*
+     * HODDLEN RUUDUKKO KOKONAAN JA HIEMAN YLI (7.9.2026). Ruutu on
+     * 1,9 × 1,8 kilometriä eli Christchurchin ja Dubrovnikin
+     * kokoluokkaa. Se on tarkoituksella vain vähän suurempi kuin
+     * Robert Hoddlen 1837 merkitsemä ruutukaava (1,6 × 0,8 km):
+     * kaikki kahdeksan kohdetta ovat ruudukossa tai sen reunalla,
+     * ja pohjoisreunan yli jää juuri sen verran Carltonia, että
+     * ammattiyhdistystalo mahtuu mukaan.
+     *
+     * ETELÄREUNA -37,8215 ON VEDETTY YARRAN YLI. Joki kulkee ruudun
+     * alalaidassa poikittain, ja se on kartan ainoa iso vesipinta.
+     * Ilman jokea kuva olisi pelkkää ruudukkoa, eikä katsoja näkisi
+     * miksi kaupunki on juuri tässä mutkassa. Etelärannan
+     * Southbankiin ei mennä syvemmälle, koska siellä ei ole yhtään
+     * tämän kartan kohdetta.
+     *
+     * LÄNSIREUNA 144,954 ON RAHAPAJAN MUKAAN ja itäreuna 144,9745
+     * Princess-teatterin mukaan. Kumpikin on ruudukon omalla
+     * reunakadulla (William Street, Spring Street), joten rajaus
+     * osuu kaupungin omaan muotoon eikä satunnaiseen viivaan.
+     *
+     * KOLME KUULUISAA KOHDETTA JÄÄ TARKOITUKSELLA RUUDUN ULKOPUOLELLE.
+     * Kuninkaallinen näyttelyrakennus (-37,8047 / 144,9714),
+     * kasvitieteellinen puutarha ja Melbourne Cricket Ground ovat
+     * kaikki kaupunkilehden omien nostojen aihe, eikä kohdekartta
+     * toista lehden juttuja (New Yorkin sääntö). Näyttelyrakennus
+     * olisi mahtunut ruutuun pohjoisreunaa siirtämällä; sitä ei
+     * siirretty juuri siksi.
+     *
+     * meri: ei. Yarra on OSM:ssä tavallinen vesiväylä, ja Port
+     * Phillip on kahdeksan kilometriä etelässä ruudun ulkopuolella.
+     */
+    rajat: { pohjoinen: -37.8040, etela: -37.8215, lansi: 144.9540, ita: 144.9745 },
+  },
+  brisbane: {
+    /*
+     * JOENMUTKAN NIEMI KOKONAAN (7.9.2026). Ruutu on 1,5 × 1,4
+     * kilometriä, ja se on valittu joen eikä katujen mukaan:
+     * Brisbanen keskusta istuu jyrkässä mutkassa, jossa Brisbane
+     * River kiertää niemen lännestä etelään ja itään. Kun rajaus
+     * ottaa mutkan kokonaan, ruudukko näyttää kartalla siltä miltä
+     * se on — kolmelta sivulta veden ympäröimältä.
+     *
+     * POHJOISREUNA -27,4625 ON ST JOHNIN KATEDRAALIN MUKAAN ja
+     * eteläreuna -27,4760 kulkee juuri parlamenttitalon eteläpuolelta.
+     * Väliin jää koko liikekeskusta sekä Spring Hillin rinne, jonka
+     * vesisäiliöt ovat kartan pohjoisin länsikohde.
+     *
+     * ITÄREUNA 153,0335 ON KANGAROO POINTIN PUOLELLA. Se on ruudun
+     * ainoa varsinainen valinta: itäranta ei sisällä yhtään kartan
+     * kohdetta, mutta ilman sitä joki katkeaisi kuvan reunaan ja
+     * niemen muoto jäisi arvattavaksi. Samasta syystä länsireuna
+     * 153,019 ottaa mukaan kaistaleen South Bankia.
+     *
+     * VIISI ILMEISTÄ KOHDETTA JÄÄ POIS AIHESYISTÄ, eivät rajauksen
+     * takia: kaupungintalo, valtiovarainrakennus, muonavarasto,
+     * vanha tuulimylly ja parlamenttitalo ovat kaikki kaupunkilehden
+     * omien juttujen aihe. Ne kaikki ovat tämän ruudun sisällä.
+     *
+     * meri: ei. Brisbane River on OSM:ssä vesimonikulmio, ja meri on
+     * kahdenkymmenen kilometrin päässä jokisuulla.
+     */
+    rajat: { pohjoinen: -27.4625, etela: -27.4760, lansi: 153.0190, ita: 153.0335 },
+  },
   suva: {
     /*
      * SIIRTOMAA-AJAN HALLINTOKORTTELI NIEMEN KÄRJESSÄ (6.9.2026).
@@ -4098,6 +4163,75 @@ const KAUPUNGIT = {
      * Nairobi-joki on OSM:ssä tavallinen vesiväylä.
      */
     rajat: { pohjoinen: -1.2700, etela: -1.2975, lansi: 36.8080, ita: 36.8320 },
+  },
+  vancouver: {
+    /*
+     * NIEMEN KESKUSTA SATAMASTA CHINATOWNIIN (7.9.2026). Ruutu on
+     * 1,9 × 1,5 kilometriä eli pelin tiiviimpiä, Christchurchin ja
+     * Dubrovnikin kokoluokkaa. Syy on sama kuin Christchurchissa:
+     * kaikki kahdeksan kohdetta ovat samalla niemellä alle 1,3
+     * kilometrin nauhassa Chinatownista Georgia Streetille, ja
+     * väljempi ruutu jättäisi ne kuvan keskelle ryppääksi.
+     *
+     * LAAJEMPI RUUTU KOKEILTIIN JA HYLÄTTIIN. Stanley Park, Granville
+     * Island ja Canada Place mahtuisivat kolme kertaa suurempaan
+     * ruutuun, mutta ne kaikki ovat kaupunkilehden omien juttujen tai
+     * kansikuvien aihe — kohdekartta ei toista lehden juttuja (New
+     * Yorkin sääntö), joten laajennus ei toisi ruutuun yhtään uutta
+     * kohdetta, vain tyhjää.
+     *
+     * POHJOISREUNA 49,2900 ON VEDETTY SATAMAAN. Ilman sitä ruutu
+     * loppuisi Cordova Streetille ja kuvasta puuttuisi se, mikä
+     * Vancouverissa on olennaisinta: Burrard Inlet keskustan
+     * takana. Nyt yläreunassa on vettä noin sadan metrin kaistale.
+     *
+     * ETELÄREUNA 49,2755 EI YLLÄ FALSE CREEKILLE, ja se on valinta.
+     * Lahti alkaa noin 49,274 kohdalta, ja sen mukaan ottaminen
+     * venyttäisi ruudun 2,2 kilometriä korkeaksi pelkkää
+     * moottoritieramppia ja stadionin kattoa varten. BC Place ja
+     * Science World jäävät siis ulkopuolelle; molemmat ovat lehden
+     * oman aineiston aihe (maailmannäyttely 1986, iltaheron selite).
+     *
+     * meri: true. Burrard Inlet on OSM:ssä rantaviivaa
+     * (natural=coastline) eikä vesimonikulmio, joten ilman lippua
+     * kuvan yläreuna olisi paperin värinen. Maata on vain veden
+     * eteläpuolella, joten tavallinen täyttö riittää.
+     */
+    rajat: { pohjoinen: 49.2900, etela: 49.2755, lansi: -123.1250, ita: -123.0990 },
+    meri: true,
+  },
+  toronto: {
+    /*
+     * QUEEN'S PARKISTA UNION STATIONILLE (7.9.2026). Ruutu on
+     * 2,5 × 3,2 kilometriä ja pystysuuntainen, mikä on pelissä
+     * harvinaista mutta tässä oikein: Toronton kohteet asettuvat
+     * yliopistokorttelista rautatieasemalle eli pohjois-eteläiselle
+     * nauhalle, jonka University Avenue vetää suoraksi.
+     *
+     * POHJOISREUNA 43,6705 ON KUNINGATARPUISTON MUSEON MUKAAN.
+     * Kanadan suurin museo on Bloor Streetillä ruudun ylälaidassa,
+     * ja sen pohjoispuolella alkaa Yorkvillen kortteliverkko, jossa
+     * ei ole yhtään kartan kohdetta. Casa Loma on vielä kilometrin
+     * pohjoisempana ja kaupunkilehden kansikuvan aihe.
+     *
+     * ETELÄREUNA 43,6415 PYSÄHTYY RATAPIHAN POHJOISPUOLELLE, eikä se
+     * ole unohdus. Ontariojärvi alkaa vasta 43,639 kohdalta, mutta
+     * järvi on OSM:ssä valtava vesirelaatio, jonka rengas ei sulkeudu
+     * tämän kokoisessa ruudussa; rantaviivalippu taas on tarkoitettu
+     * merelle. Ratapiha on samalla luonteva alareuna, koska Union
+     * Station on kartan eteläisin kohde.
+     *
+     * CN-TORNI, FORT YORK JA DISTILLERY DISTRICT JÄÄVÄT POIS. Torni
+     * ja ratapihan länsipää olisivat mahtuneet, jos ruutua olisi
+     * levennetty puoli kilometriä länteen, mutta kaikki kolme ovat
+     * kaupunkilehden omien nostojen aihe eivätkä siksi voi olla
+     * kartan kohteita. Torni näkyy silti kuvassa rakennuksena.
+     *
+     * Ei meri-lippua: Toronto on järven rannalla, ja Don-joki sekä
+     * Garrison Creekin jäänteet ovat OSM:ssä tavallisia
+     * vesiväyliä.
+     */
+    rajat: { pohjoinen: 43.6705, etela: 43.6415, lansi: -79.4045, ita: -79.3735 },
   },
 };
 

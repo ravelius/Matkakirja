@@ -43770,4 +43770,1503 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * MELBOURNEN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.melbourne, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Victorian Trades Hall", "Old Melbourne Gaol",
+   * "Coop's Shot Tower", "Shot tower", "Princess Theatre
+   * (Melbourne)", "Melbourne Mint", "General Post Office,
+   * Melbourne", "St Paul's Cathedral, Melbourne" ja "Immigration
+   * Museum, Melbourne").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat Yarran nimi, kultaryntäys, raitiovaunu, kiinalainen
+   * kortteli, Hoddlen ruudukko, Queen Victoria Market, räjäytetty
+   * koski, kaupungin perustaminen, parlamenttitalon puuttuva kupoli,
+   * vanha valtiovarainrakennus, Wurundjerin maa, taidekokoelman
+   * alkuvuodet yleisessä kirjastossa, von Guérard, Buvelot, Beruk,
+   * kasvitieteellinen puutarha, Guilfoyle, puistokehä ja seitsemän
+   * vuodenaikaa. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Pääpostin
+   * jutussa EI kerrota Elizabeth Streetin tulvista sen enempää kuin
+   * yhdellä sivulauseella, koska räjäytetty koski ja joen
+   * suoristaminen ovat lehden matkaoppaan oma jakso. Rahapajan
+   * jutussa kulta esiintyy vain punnittuna metallina, ei
+   * kultaryntäyksen tarinana (lehden nosto H2). Katedraalin jutussa
+   * ruudukon vinous mainitaan vain siltä osin kuin se käänsi kirkon
+   * pois idästä — ruudukon mitat ovat matkaoppaan jakso 2.
+   *
+   * YLEINEN KIRJASTO EI OLE KARTALLA, vaikka se on ruudun sisällä ja
+   * ilmeinen kohde: lehden nosto "Kokoelma ilman omaa taloa" kertoo
+   * juuri sen talon eteläsiivestä ja lukusalista. Sama koskee
+   * kaupungintaloa, joka on 197 metriä katedraalista eli 200 metrin
+   * säännön alle.
+   */
+  melbourne: {
+    Ammattiyhdistystalo: {
+      aika: '1859',
+      teksti: 'Ammattiyhdistysten talokomitea perustettiin 1856, ja '
+          + 'pääministeri John O\'Shanassy myönsi sille tontin Lygonin '
+          + 'ja Victorian katujen kulmasta. Ensimmäinen talo oli puuta '
+          + 'ja sen katto galvanoitua peltiä. Vuosina 1874–1925 talo '
+          + 'rakennettiin uudelleen ja laajennettiin Joseph Reedin '
+          + 'piirustusten mukaan — saman arkkitehdin, joka suunnitteli '
+          + 'kaupungintalon. Rakennus on yksi maailman vanhimmista '
+          + 'ammattiyhdistystaloista.'
+          + '\n\n'
+          + 'Talon vastapäätä kadun toisella puolella on '
+          + 'kahdeksantuntisen työpäivän muistomerkki. Se pystytettiin '
+          + 'niiden victorialaisten työntekijöiden kunniaksi, jotka '
+          + 'saavuttivat 1856 maailman ensimmäisen kahdeksantuntisen '
+          + 'työpäivän. Isoisän matkan aikaan 1873 vaatimus oli '
+          + 'Euroopassa vielä kaukainen; täällä se oli ollut voimassa '
+          + 'jo seitsemäntoista vuotta.'
+          + '\n\n'
+          + 'Talosta tuli myös järjestöjen syntysija: sekä Victorian '
+          + 'työväenpuolue että Australian ammattiliittojen keskusjärjestö '
+          + 'perustettiin täällä. Katolla liehuu neljä lippua — '
+          + 'Australian lippu, Eureka-lippu, aboriginaalien lippu ja '
+          + 'punainen lippu. Vuonna 1931 talosta lähetettiin '
+          + 'radiokanava 3KZ:n ohjelmaa.',
+      kuvat: [
+        {
+          tiedosto: 'Melbourne Trades Hall entrance.jpg',
+          selite: 'Pylväikön päädyssä lukee TRADES HALL, ja katolla liehuu '
+            + 'neljä lippua — Australian, Eurekan, aboriginaalien ja '
+            + 'punainen.',
+          lahde: 'Tirin, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha vankila': {
+      aika: '1845–1924',
+      teksti: 'Vankila oli Port Phillipin ensimmäinen pysyvä vankila. '
+          + 'Vartijaksi nimitettiin 1. tammikuuta 1838 George Wintle '
+          + 'sadan punnan vuosipalkalla, ja paikkaa kutsuttiin '
+          + 'kansanomaisesti Wintlen hotelliksi. Kun kultaa löytyi 1851 '
+          + 'ja väkeä tulvi siirtokuntaan, järjestyksen ylläpito kävi '
+          + 'vaikeaksi: uusi siipi rakennettiin 1852–1854, tällä kertaa '
+          + 'basaltista eikä hiekkakivestä. Malli oli brittiläisen '
+          + 'vankila-insinöörin Joshua Jebbin ja erityisesti Lontoon '
+          + 'Pentonvillen mallivankilan. Muuri valmistui 1864, ja '
+          + 'kokonaisuus täytti yhden korttelin.'
+          + '\n\n'
+          + 'Aikakauden vankilaoppi uskoi hiljaisuuteen. Vakavista '
+          + 'rikoksista tuomitut aloittivat pohjakerroksesta '
+          + 'eristyksessä, eivätkä he saaneet puhua toisilleen; sääntöä '
+          + 'valvottiin pellavakankaisella naamiolla, joka puettiin '
+          + 'päähän aina sellin ulkopuolella. Päivä kulki kellojen '
+          + 'mukaan. Sääntöjä noudattanut vanki siirtyi toiseen '
+          + 'kerrokseen ja pääsi töihin pihalle, ja kolmannen kerroksen '
+          + 'yhteisselleissä asuivat luotetut, rangaistuksensa lopussa '
+          + 'olevat ja velalliset.'
+          + '\n\n'
+          + 'Vankilassa teloitettiin 133 ihmistä. Ensimmäiset '
+          + 'Port Phillipissä hirtetyt olivat 1842 kaksi tasmanialaista '
+          + 'aboriginaalia, Tunnerminnerwait ja Maulboyheenner; '
+          + 'ensimmäinen Victoriassa teloitettu nainen oli Elizabeth '
+          + 'Scott 11. marraskuuta 1863 ja viimeinen teloitettu Angus '
+          + 'Murray 1924, samana vuonna kun vankila suljettiin. '
+          + 'Tunnetuin teloitetuista oli maantierosvo Ned Kelly. Osa '
+          + 'rakennuksista liitettiin myöhemmin RMIT-yliopistoon ja '
+          + 'loput museoksi.',
+      kuvat: [
+        {
+          tiedosto: 'Old Melbourne Gaol aerial 1922 (cropped).jpg',
+          selite: 'Ilmakuva vuodelta 1922: vankila täyttää kokonaisen '
+            + 'korttelin, ja oikealla erottuu ulkoilupihojen tähtikuvio.',
+          lahde: 'Sir Raymond Garrett, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Coopin haulitorni': {
+      aika: '1889',
+      teksti: 'Haulitorni on kone, joka näyttää talolta. Lyijy '
+          + 'sulatetaan tornin huipulla ja pudotetaan kupariseulan '
+          + 'läpi: pisara vetäytyy pintajännityksen vuoksi palloksi ja '
+          + 'jähmettyy pudotessaan, ja pohjalla vesiallas ottaa hauli '
+          + 'kiinni. Menetelmän keksi bristolilainen William Watts, '
+          + 'joka patentoi sen 1782. Haulin suurin koko riippuu tornin '
+          + 'korkeudesta, koska isompi pallo tarvitsee pidemmän matkan '
+          + 'jähmettyäkseen.'
+          + '\n\n'
+          + 'Coopin torni valmistui 1889. Se on 50 metriä korkea, '
+          + 'yhdeksän kerrosta, ja huipulle nousee 327 porrasta. Tornia '
+          + 'piti pyörittämässä Coopin perhe, jolla oli toinenkin '
+          + 'haulitorni Clifton Hillissä. Haulia valmistui kuusi tonnia '
+          + 'viikossa aina vuoteen 1961, jolloin kysyntä hiipui.'
+          + '\n\n'
+          + 'Torni oli määrä purkaa, mutta se säästettiin 1973. Vuonna '
+          + '1991 sen ympärille rakennettiin Melbourne Centralin '
+          + 'kauppakeskus niin, että tiilitorni jäi seisomaan '
+          + '84-metrisen kartiomaisen lasikaton alle. Tornin sisällä on '
+          + 'nykyään pieni museo.',
+      kuvat: [
+        {
+          tiedosto: 'Melbourne Central abseiling shot tower.jpg',
+          selite: 'Tiilitorni seisoo kokonaisena kartiomaisen lasikaton alla; '
+            + 'köysilaskijat antavat mittakaavan.',
+          lahde: 'Stephen Bain, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Princess-teatteri': {
+      aika: '1886',
+      teksti: 'Paikan viihdehistoria alkaa kultaryntäysvuodesta 1854, '
+          + 'jolloin irlantilais-amerikkalainen yrittäjä Tom Mooney '
+          + 'rakensi tähän ladon näköisen Astleyn amfiteatterin: '
+          + 'keskellä oli ratsastusmanessi ja toisessa päässä näyttämö. '
+          + 'Nimi lainattiin Lontoon Westminster-sillan Astleylta. Talo '
+          + 'kunnostettiin 1857 Princess\'s Theatre and Opera Houseksi. '
+          + 'Nykyinen rakennus on kolmas, ja siksi tontti on Manner-'
+          + 'Australian vanhin yhä toimiva viihdepaikka.'
+          + '\n\n'
+          + 'Vuonna 1885 teatteri siirtyi kolmen miehen yhtymälle, ja '
+          + 'rapistunut talo purettiin. Uuden suunnitteli arkkitehti '
+          + 'William Pitt, ja se valmistui 1886 viidenkymmenentuhannen '
+          + 'punnan hinnalla. Avajaisissa 18. joulukuuta 1886 esitettiin '
+          + 'Gilbertin ja Sullivanin Mikado. Talossa oli aikansa '
+          + 'uusinta sähköistä näyttämövalaistusta ja Australian '
+          + 'ensimmäinen liukuva katto: lämpiminä iltoina se vedettiin '
+          + 'auki, ja katsomo muuttui ulkoilmateatteriksi.'
+          + '\n\n'
+          + 'Talon tunnetuin tarina on 3. maaliskuuta 1888. Baritoni '
+          + 'Frederick Baker, taiteilijanimeltään Federici, lauloi '
+          + 'Mefistofelesta Gounod’n Faustissa. Esitys päättyy siihen, '
+          + 'että Mefistofeles vajoaa lavaluukusta alas; laskun aikana '
+          + 'Federici sai sydänkohtauksen ja kuoli lähes heti. Hän ei '
+          + 'palannut kumartamaan, mutta kun seurueelle kerrottiin '
+          + 'tapahtuneesta, muut sanoivat hänen olleen lavalla heidän '
+          + 'kanssaan. Parvekkeen kolmannen rivin paikka pidettiin '
+          + 'vuosikausia tyhjänä hänen muistokseen.',
+      kuvat: [
+        {
+          tiedosto: 'Princess Theatre, Melbourne, Australia.jpg',
+          selite: 'William Pittin 1886 valmistunut julkisivu Spring Streetin '
+            + 'varrella; päätykolmion päällä on kullattu enkelihahmo.',
+          lahde: 'Mat Connolley, Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Rahapaja: {
+      aika: '1872',
+      teksti: 'Rahapaja avattiin Williamin ja La Troben katujen '
+          + 'kulmassa 12. kesäkuuta 1872 — vuosi ennen isoisän matkaa — '
+          + 'Britannian kuninkaallisen rahapajan haaraosastona. Se '
+          + 'toimi kuninkaallisena Melbournen rahapajana vuoteen 1968. '
+          + 'Päärakennuksessa olivat hallinto-osasto ja oikeassa '
+          + 'siivessä varamestarin, hänen perheensä ja palvelusväkensä '
+          + 'asunnot; molemmilla porteilla oli oma vartijarakennus, ja '
+          + 'takana sijaitsivat pitoisuusmääritys- ja sulattotilat.'
+          + '\n\n'
+          + 'Talo on hillittyä uusrenessanssia ja pidetään yhtenä '
+          + 'Australian hienoimmista 1800-luvun virastorakennuksista. '
+          + 'Sen suunnitteli julkisten töiden viraston arkkitehti '
+          + 'J. J. Clark. Julkisivun on sanottu nojaavan renessanssin '
+          + 'palatseihin, muun muassa Rooman Palazzo Vidoni-'
+          + 'Caffarellin paripilasterijärjestelyyn vuodelta 1515.'
+          + '\n\n'
+          + 'Rahapaja löi kultapuntia 1872–1931 ja puolipuntia '
+          + 'ajoittain 1873–1915, ja vuodesta 1916 alkaen se löi '
+          + 'liittovaltion hopeisia kolmen ja kuuden pennyn, shillingin '
+          + 'ja floriinin kolikoita. Etuportin värikkään vaakunan '
+          + 'veisti 1900-luvun puolivälissä melbournelainen puunveistäjä '
+          + 'Walter Langcake. Se on sovitettu kuningatar Victorian '
+          + 'vaakunasta siirtomaahaaralle: kilvenkantajilla ei ole '
+          + 'kruunuja, ja yksisarvisen tilalla on harjakas hevonen.',
+      kuvat: [
+        {
+          tiedosto: 'Melbourne Mint corner.jpg',
+          selite: 'Williamin ja La Troben katujen kulmaus: hillittyä '
+            + 'uusrenessanssia, ja sisäänkäynnin yllä loistaa kullattu '
+            + 'vaakuna.',
+          lahde: 'Rohanstorey, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Pääposti: {
+      aika: '1867',
+      teksti: 'Melbournen ensimmäinen postitoimipaikka perustettiin '
+          + '13. huhtikuuta 1837, ja pysyvä talo nousi nykyiselle '
+          + 'tontille 1841. Uudesta pääpostista järjestettiin '
+          + 'suunnittelukilpailu 1858, ja voittajat julkistettiin '
+          + '7. toukokuuta: ulkoasun ensimmäinen palkinto meni '
+          + 'toimistolle Crouch and Wilson ja sisätilojen Edward '
+          + 'Rumseylle. Rakennustyö kesti 1860–1867, ja se keskeytettiin '
+          + 'ennen kuin Elizabeth Streetin siiven pohjoispuolisko, '
+          + 'keskiosan mansardi ja tornin kattoa oli tehty.'
+          + '\n\n'
+          + 'Kaksikymmentä vuotta myöhemmin talo oli käynyt ahtaaksi. '
+          + 'A. E. Johnson suunnitteli kolmannen kerroksen, ullakon ja '
+          + 'korkeamman, koristeellisemman kellotornin, jonka hiekkakivi '
+          + 'tuotiin tällä kertaa Grampians-vuorilta; työn valvoi Peter '
+          + 'Kerr, ja se valmistui 1887. Talo on tarkkaa '
+          + 'uusrenessanssia, jossa kerrokset erottuvat pylväsjärjestyksestä: '
+          + 'alimpana toscanalaiset, keskellä joonialaiset ja ylinnä '
+          + 'korinttilaiset pylväät.'
+          + '\n\n'
+          + 'Vuonna 1913 lajitteluhalli päätettiin muuttaa yleisölle '
+          + 'avoimeksi postisaliksi, ja työhön palkattiin arkkitehti '
+          + 'Walter Burley Griffin — Canberran asemakaavan tekijä. '
+          + 'Suunnitelmaa muokkasi myöhemmin John Smith Murdoch, ja sali '
+          + 'valmistui 1919. Portaista tuli kaupungin tapaamispaikka ja '
+          + 'uudenvuoden juhlapaikka. Postitoiminta muutti pois 2001, '
+          + 'ja pian sen jälkeen tulipalo vaurioitti postisalia '
+          + 'pahoin 10. syyskuuta 2001.',
+      kuvat: [
+        {
+          tiedosto: 'Melbourne GPO@0.5x.jpg',
+          selite: 'Kellotorni sai nykyisen korkeutensa 1887. Kerrokset '
+            + 'erottuvat pylväsjärjestyksestä: toscanalainen, joonialainen '
+            + 'ja korinttilainen päällekkäin.',
+          lahde: 'PeterMLawrence, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Paavalin katedraali': {
+      aika: '1891',
+      teksti: 'Tontilla pidettiin Melbournen ensimmäinen julkinen '
+          + 'kristillinen jumalanpalvelus 1835. Kortteli oli silloin '
+          + 'hallituksen varausmaata kaukana silloisesta keskustasta ja '
+          + 'toimi viljatorina. Vuoteen 1848 mennessä paikka oli '
+          + 'ensimmäisen Princes-sillan vieressä, ja näkyvä tontti '
+          + 'luovutettiin anglikaaniselle kirkolle. Basalttinen '
+          + 'Pyhän Paavalin kirkko vihittiin 1852.'
+          + '\n\n'
+          + 'Kaupungin kasvaessa hiippakunta päätti rakentaa tilalle '
+          + 'katedraalin, ja työ annettiin englantilaiselle '
+          + 'uusgotiikan mestarille William Butterfieldille. Jotta '
+          + 'kirkko mahtuisi korttelille, se käännettiin ruutukaavan '
+          + 'mukaisesti pohjois–eteläsuuntaan eikä perinteiseen itään. '
+          + 'Peruskivi laskettiin 1880, mutta Butterfield riitaantui '
+          + 'melbournelaisten kanssa ja erosi 1884; työn saattoi '
+          + 'loppuun paikallinen Joseph Reed. Katedraali vihittiin '
+          + '22. tammikuuta 1891 ilman torninhuippuja.'
+          + '\n\n'
+          + 'Huiput rakennettiin vasta 1926–1932 eri suunnitelman '
+          + 'mukaan, ja niiden valmistumisesta pidettiin '
+          + 'kiitosjumalanpalvelus 30. huhtikuuta 1933. Katedraalin '
+          + 'kiviaines on Barrabool Hillsin hiekkakiveä ja Waurn '
+          + 'Pondsin kalkkikiveä, mikä antaa sille lämpimän värin; '
+          + 'huiput ovat sydneyläistä hiekkakiveä ja neljäkymmentä '
+          + 'vuotta nuorempia, joten ne ovat selvästi tummemmat kuin '
+          + 'muu talo. Vuosina 2002–2009 huiput korjattiin '
+          + 'kahdeksantoista miljoonan Australian dollarin '
+          + 'keräysvaroilla.',
+      kuvat: [
+        {
+          tiedosto: 'St. Paul\'s Cathedral Tower.jpg',
+          selite: 'Huiput ovat sydneyläistä hiekkakiveä ja neljäkymmentä '
+            + 'vuotta muuta taloa nuorempia — siksi ne ovat selvästi '
+            + 'tummemmat.',
+          lahde: 'Donaldytong, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Siirtolaisuusmuseo: {
+      aika: '1873–1876',
+      teksti: 'Talo ei ole alun perin museo vaan tullikamari. '
+          + 'Ensimmäinen tullikamari tällä paikalla joen vanhan sataman '
+          + 'vieressä oli teltta; se korvattiin 1841 kaksikerroksisella '
+          + 'basalttitalolla. Kultavuosien vaurastuminen 1850-luvulla '
+          + 'vaati komeampaa: Peter Kerrin suunnitelmassa oli portaiden '
+          + 'päällä mahtava pylväikkö, ja työ aloitettiin 1856–1858, '
+          + 'mutta sitä ei koskaan viety loppuun sellaisenaan.'
+          + '\n\n'
+          + 'Loppuosa rakennettiin 1873–1876 — juuri isoisän matkan '
+          + 'vuosina — yksinkertaisemmalla uusrenessanssijulkisivulla, '
+          + 'jonka piirsivät Kerr sekä julkisten töiden viraston '
+          + 'J. J. Clark ja A. E. Johnson. Tullivirkailijat muuttivat '
+          + 'pois 1965, minkä jälkeen talossa pitivät toimistoaan '
+          + 'liittovaltion kansanedustajat.'
+          + '\n\n'
+          + 'Talo oli tyhjillään 1990-luvun alusta, kunnes siihen '
+          + 'päätettiin perustaa siirtolaisuuden museo. Daryl Jacksonin '
+          + 'suunnittelemassa korjauksessa rakennus entisöitiin ja sen '
+          + 'taakse tuli pieniä laajennuksia. Museo avattiin 1998, ja '
+          + 'se kertoo Melbournen ja Victorian siirtolaisuuden '
+          + 'historiaa siinä talossa, jonka läpi tavarat ja tullit '
+          + 'aikanaan kulkivat.',
+      kuvat: [
+        {
+          tiedosto: 'Old Customs House Melbourne.jpg',
+          selite: 'Tullikamarin uusrenessanssijulkisivu valmistui 1873–1876; '
+            + 'nyt otsassa lukee museon nimi.',
+          lahde: 'Kensarlance, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * BRISBANEN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.brisbane, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "St John's Cathedral (Brisbane)", "Spring Hill
+   * Reservoirs", "ANZAC Square, Brisbane", "MacArthur Chambers",
+   * "Wheat Creek Culvert", "Naldham House", "Old State Library
+   * Building, Brisbane" ja "The Mansions, Brisbane").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat siirtolan muutto Redcliffestä, Meanjinin ja Brisbanen
+   * nimet, pääkaupungin talot, turrbal ja jagera tänään, vanha
+   * tuulimylly, parlamenttitalo, pääposti, vuoden 1893 tulva,
+   * kasvitieteellinen puutarha, Maiwar-joki, Kangaroo Pointin
+   * kalliot, Mount Coot-tha, Story-silta, tullikamari, Queen Street
+   * ja Expo 88. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Wheat Creekin
+   * jutussa EI kerrota siirtolan muutosta Redcliffestä, vaikka puron
+   * vesi oli muuton syy: muutto on lehden noston H1 aihe, ja juttu
+   * pysyy purossa ja viemärissä. Naldham Housen jutussa satama
+   * esiintyy vain rannikkolaivayhtiön konttorina — satama väentuojana
+   * on matkaoppaan jakso 4.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN POIS AIHESYISTÄ. Kaupungintalo,
+   * valtiovarainrakennus, muonavarasto, vanha tuulimylly ja
+   * parlamenttitalo ovat kaikki kartan ruudussa, ja jokainen on
+   * lehden oman jutun aihe (New Yorkin sääntö). Vesisäiliöiden
+   * jutussa tuulimylly mainitaan vain paikanmerkkinä.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Regent-teatteri
+   * on 162 metriä MacArthurin talosta ja Brisbanen synagoga 126
+   * metriä The Mansionsista.
+   */
+  brisbane: {
+    'St Johnin katedraali': {
+      aika: '1906–2009',
+      teksti: 'Brisbanen katedraalihanke lähti liikkeelle 1887 '
+          + 'kuningatar Victorian hallitsijajuhlan kunniaksi. '
+          + 'Piispa William Webber tilasi piirustukset englantilaiselta '
+          + 'John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. '
+          + 'Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon '
+          + 'rakentaminen yhdellä kertaa osoittautui mahdottomaksi. '
+          + 'Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan '
+          + 'aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen '
+          + 'pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 '
+          + 'länsipääty sekä kolme tornia.'
+          + '\n\n'
+          + 'Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian '
+          + 'dollaria, ja työtä johti Peter Dare, Englannin Exeterin '
+          + 'katedraalin kivenhakkaajamestari. Kupariset länsihuiput '
+          + 'nostettiin paikoilleen 1. maaliskuuta 2008, ja valmis '
+          + 'katedraali vihittiin uudelleen 29. lokakuuta 2009 — '
+          + 'sata kahdeksan vuotta peruskiven laskemisesta. Kirkko on '
+          + 'Australiassa ainutlaatuinen siinä, että se saatiin valmiiksi '
+          + 'papiston, kivenhakkaajien ja arkkitehtien yhteistyönä '
+          + 'lähes sadan vuoden aikana, kuten keskiajan katedraalit.'
+          + '\n\n'
+          + 'Ulkoseinät ovat ruskeaa, vaaleanpunaista ja sinipunervaa '
+          + 'brisbanentuffia Windsorin louhoksesta, perustusten ja '
+          + 'pilarien jalustojen graniitti ja basaltti Victoriasta ja '
+          + 'ikkunanpielien hiekkakivi Pyrmontista Uudesta '
+          + 'Etelä-Walesista. Kivestä holvattu sisätila kaikuu viisi '
+          + 'sekuntia, mikä tekee urkumusiikista poikkeuksellisen '
+          + 'soivaa; urut ovat Australian suurimmat katedraaliurut.',
+      kuvat: [
+        {
+          tiedosto: 'St John\'s Cathedral, Brisbane, Queensland, 2020.jpg',
+          selite: 'Kupariset länsihuiput nostettiin paikoilleen 2008 ja ovat '
+            + 'siksi tummat; niiden alla on 1900-luvun alun tuffikivi.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Spring Hillin vesisäiliöt': {
+      aika: '1871 ja 1882',
+      teksti: 'Nurmen alla vanhan tuulimyllyn takana on kaksi '
+          + 'punatiilistä vesisäiliötä. Ensimmäinen rakennettiin 1871 '
+          + 'ja toinen yksitoista vuotta myöhemmin muutaman metrin '
+          + 'päähän siitä. Molemmat on upotettu maahan ja tuettu '
+          + 'sisältä holvikaarilla ja pilareilla, koska tiili joutuu '
+          + 'kestämään maan painetta ulkoapäin. Spring Hill valittiin '
+          + 'siksi, että kukkula on korkeammalla kuin lähes koko '
+          + 'nykyinen keskusta: vesi tuli Enoggeran padolta pelkän '
+          + 'painovoiman avulla.'
+          + '\n\n'
+          + 'Sitä ennen kaupunki eli luonnonvesien, kaivojen, '
+          + 'sadevesisäiliöiden ja vedenkantajien varassa. Insinööri '
+          + 'Joseph Brady rakensi 1863–1866 Enoggeran padolta '
+          + 'ensimmäisen painovoimaisen vesijohtoverkon, joka oli '
+          + 'samalla Queenslandin ensimmäinen kunnallistekninen urakka. '
+          + 'Pormestari Thomas Blacket Stephens ehdotti säiliötä '
+          + 'Windmill Hillille jo 1862, mutta raha viivytti sitä '
+          + 'vuoteen 1871 — jolloin paine oli jo käynyt riittämättömäksi '
+          + 'väkiluvun kasvun takia. Toinen, suurempi säiliö rakennettiin '
+          + '1882 erityisesti South Brisbanen ja Kangaroo Pointin '
+          + 'korkeita osia varten.'
+          + '\n\n'
+          + 'Säiliöt ovat Queenslandin ensimmäiset maahan upotetut, ja '
+          + 'ainoat tiedossa olevat, jotka on muurattu tiilestä '
+          + 'holvikaarin eikä valettu betonista. Ne palvelivat '
+          + 'kaupunkia lähes vuosisadan ajan, kunnes päävesijohto '
+          + 'suljettiin 3. syyskuuta 1962: pieni tilavuus ja matala '
+          + 'sijainti eivät enää riittäneet tornitaloille. '
+          + 'Vuonna 2014 tyhjennettyjen ja kolme vuotta siivottujen '
+          + 'säiliöiden hämärässä kaikuvassa tilassa esitettiin '
+          + 'oopperaa, ja liput myytiin loppuun.',
+      kuvat: [
+        {
+          tiedosto: 'Spring Hill Reservoirs interior, Brisbane.jpg',
+          selite: 'Sisällä tiiliholvit jakavat säiliön osastoihin — juuri ne '
+            + 'pitävät maan paineen ulkopuolella.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'ANZAC-aukio': {
+      aika: '1930',
+      teksti: 'Ensimmäinen maailmansota verotti Australiaa raskaasti. '
+          + 'Noin viiden miljoonan asukkaan maasta kaatui 60 000 '
+          + 'sotilasta ja haavoittui 152 000; tappio-osuus 68,5 '
+          + 'prosenttia oli liittoutuneiden korkein. Ajatus suuresta '
+          + 'muistopuistosta keskelle kaupunkia esitettiin jo 1916. '
+          + 'Alkuperäinen suunnitelma varasi koko korttelin Annin, '
+          + 'Edwardin, Adelaiden ja Creekin katujen välissä, mutta '
+          + 'neuvottelut kutistivat alueen; 1928 valtio ja liittovaltio '
+          + 'luovuttivat maat ja lupasivat rakentaa reunoille yhtenäisen '
+          + 'suunnitelman mukaiset talot.'
+          + '\n\n'
+          + 'Muistokappelin suunnittelukilpailun voittivat 1928 '
+          + 'sydneyläiset arkkitehdit Buchanan ja Cowper. Queenslandin '
+          + 'kuvernööri sir John Goodwin vihki aukion ja kappelin '
+          + 'aselepopäivänä 11. marraskuuta 1930, ja samana päivänä '
+          + 'sytytettiin pronssimaljassa palava ikuinen liekki. '
+          + 'Ulkoseinä on omistettu niille 60 000 queenslandilaiselle, '
+          + 'jotka palvelivat ensimmäisessä maailmansodassa. Aukio '
+          + 'muistaa kaikkia queenslandilaisia, ei vain Brisbanen '
+          + 'asukkaita.'
+          + '\n\n'
+          + 'Queenslandin naisten muistomerkki paljastettiin 1932. Se '
+          + 'oli Brisbanen naisklubin hanke ja rahoitettiin '
+          + 'yleisökeräyksellä, ja sen suunnitteli ja veisti Daphne '
+          + 'Mayo. Vuosien mittaan aukiolle on tullut muistomerkkejä '
+          + 'muistakin sodista: buurisodasta, toisesta maailmansodasta, '
+          + 'Koreasta, Borneosta, Uudesta-Guineasta ja Vietnamista. '
+          + 'Toukokuussa 2022 pystytettiin pronssinen muistomerkki '
+          + 'aboriginaali- ja Torresinsalmen saarelaissotilaille; sen '
+          + 'suunnitteli wakka wakka -taiteilija John Smith Gumbula '
+          + 'yhdessä kuvanveistäjä Liam Hardyn kanssa.',
+      kuvat: [
+        {
+          tiedosto: 'ANZAC Square, Brisbane in February 2020.jpg',
+          selite: 'Aukio muistokappelin portailta katsottuna: keskellä on '
+            + 'buurisodan ratsastajapatsas ja reunoilla 1930-luvun '
+            + 'yhtenäiset talot.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'MacArthurin talo': {
+      aika: '1934',
+      teksti: 'Talo rakennettiin 1931–1934 vakuutusyhtiö AMP:n '
+          + 'Queenslandin pääkonttoriksi, ja se korvasi kaksi aiempaa '
+          + 'AMP:n taloa samalla tontilla. Ajoitus kertoo yhtiön '
+          + 'vahvuudesta: konttori nousi 1930-luvun laman pahimpina '
+          + 'vuosina. Suunnittelijoina olivat Francis Richard Hall ja '
+          + 'Harold M. Cook, rakentajana Brisbanen mestarirakentaja '
+          + 'George A. Stronach, ja hinta oli noin 255 000 puntaa. '
+          + 'Jalustan graniitti testautettiin Queenslandin yliopistolla '
+          + 'ennen rakentamista, ja teräsrunko koottiin pulteilla eikä '
+          + 'niiteillä — vuoden 1932 Brisbanessa se oli uutta.'
+          + '\n\n'
+          + 'Pääsisäänkäynnin yläpuolisen kuvaelman veisti sydneyläinen '
+          + 'Fred Gowan sisilialaisesta marmorista. Se kuvittaa yhtiön '
+          + 'tunnuslausetta ”Amicus certus in re incerta”, varma '
+          + 'ystävä epävarmassa asiassa: keskellä seisoo nainen '
+          + 'runsaudensarvi vierellään ja voitonpalmu kädessään, '
+          + 'toisella puolella istuu nainen lapsineen ja toisella mies. '
+          + 'Kun AMP muutti pois 1978, kuvaelma jäi — toisin kuin '
+          + 'yhtiön muissa taloissa, joista se yleensä irrotettiin.'
+          + '\n\n'
+          + 'Keskeisen sijaintinsa ja teräsbetonikattonsa vuoksi talo '
+          + 'otettiin toisessa maailmansodassa liittoutuneiden '
+          + 'lounaisen Tyynenmeren alueen esikunnaksi. Vuokralaiset '
+          + 'evakuoitiin sotilaskäskyllä 21. heinäkuuta 1942, ja talo '
+          + 'palautui heille vasta 14. kesäkuuta 1945. Ylipäällikkö '
+          + 'kenraali Douglas MacArthur otti käyttöönsä johtokunnan '
+          + 'salin ja hänen esikuntansa loput talosta. Nimi vaihdettiin '
+          + 'MacArthur Chambersiksi 1979.',
+      kuvat: [
+        {
+          tiedosto: 'MacArthur Chambers, Brisbane, Queensland, 2021.jpg',
+          selite: 'Helidonin hiekkakivellä verhoiltu kulmatalo Queenin ja '
+            + 'Edwardin katujen risteyksessä.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Wheat Creekin holvi': {
+      aika: '1861',
+      teksti: 'Keskustan alla virtaa puro. Wheat Creek eli Big Creek '
+          + 'sai alkunsa nykyisen Brisbane Grammar Schoolin tienoilta, '
+          + 'kulki Roma Streetin ratapihan kohdalta lammikkona Georgen '
+          + 'ja Roman katujen väliin, jatkoi vinosti Adelaiden ja '
+          + 'Albertin katujen risteyksen poikki ja laski jokeen '
+          + 'nykyisen Creek Streetin päässä. Kadun nimi on ainoa asia, '
+          + 'joka purosta näkyy kartalla — mutta uoman pohja erottuu '
+          + 'yhä Adelaide Streetin huoltokujilla.'
+          + '\n\n'
+          + 'Vuonna 1859 perustettu kaupunki oli harjanteita ja soita, '
+          + 'joita ei saanut kuivatuksi, ja korkea nousuvesi teki '
+          + 'maasta sateella kulkukelvotonta. Viemäröinti oli siis uuden '
+          + 'kunnanvaltuuston kiireellisimpiä töitä. Ratkaisu oli '
+          + 'munanmuotoinen viemäri, jonka John Phillips oli kehittänyt '
+          + '1840-luvulla: kapea pohja pitää virtauksen nopeana, jolloin '
+          + 'viemäri ei liety umpeen niin kuin leveäpohjainen laatikko-'
+          + 'viemäri. Brisbanen ensimmäinen viemäri rakennettiin 1860 '
+          + 'kivestä Albert Streetille.'
+          + '\n\n'
+          + 'Wheat Creekin holvi tilattiin 24. tammikuuta 1861 '
+          + 'kaupungingeodeetti Christopher Porterin piirustusten '
+          + 'mukaan, ja H. C. Loven tarjous 830 puntaa hyväksyttiin '
+          + '4. helmikuuta. Holvi sulki puron kadun alle. Siihen '
+          + 'liitettiin maaliskuussa 1877 valmistunut munanmuotoinen '
+          + 'tiiliviemäri, joka kulkee Adelaide Streetiä Albertilta '
+          + 'Creek Streetille ja on yhä käytössä. Holvi itse palveli '
+          + 'vuoteen 2008; pätkä siitä on säilytetty näytillä '
+          + 'King George Squaren bussiasemalla.',
+      kuvat: [
+        {
+          tiedosto: 'Wheat Creek Culvert.JPG',
+          selite: 'Pätkä vuoden 1861 holvia on nostettu näytille King George '
+            + 'Squaren bussiaseman seinälle.',
+          lahde: 'Reubot, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Naldham House': {
+      aika: '1864 ja 1889',
+      teksti: 'Australasian Steam Navigation Company osti tontin joen '
+          + 'rannasta maaliskuussa 1852, mutta ensimmäinen laituri '
+          + 'valmistui vasta 1859 ja toinen Eagle Streetin lähelle '
+          + '1861. Vuonna 1864 tontille nousi kaksikerroksinen '
+          + 'konttori, jossa istui yhtiön brisbanelainen asiamies Henry '
+          + 'O\'Reilly. Vuonna 1877 konttori korotettiin asiamiehestä '
+          + 'sivukonttoriksi, ja rakennusta jatkettiin Felix Streetin '
+          + 'kulmaan.'
+          + '\n\n'
+          + '1880-luvun puolivälissä yhtiö sulautettiin useiden muiden '
+          + 'kanssa Australasian United Steam Navigation Companyksi, '
+          + 'josta tuli Queenslandin ja Australian merenkulun mahti. '
+          + 'Elokuussa 1888 arkkitehdit McCredie Bros & Chambers '
+          + 'pyysivät tarjouksia laajennuksesta, ja työn sai J. R. '
+          + 'Locke Sydneyn Redfernistä. Yhdentoistatuhannen punnan '
+          + 'urakassa ylin kerros purettiin, tilalle tuli kaksi uutta, '
+          + 'pohjoispäähän torni ja kupoli, Mary Streetin puolelle '
+          + 'parveke ja taloon uudet sisäänkäynnit.'
+          + '\n\n'
+          + 'Talo palveli laivayhtiön konttorina lähes vuosisadan. '
+          + 'Nykyinen nimi ei ole suvun eikä paikan nimi vaan '
+          + 'lennätinosoite: kun MacDonald Hamilton & Co ryhtyi 1914 '
+          + 'yhtiön asiamieheksi, se otti käyttöön telex-osoitteen, '
+          + 'joka koostuu firman nimen keskimmäisistä kirjaimista — '
+          + 'MacDoNALD ja HAMilton, siis Naldham. Nimi jäi taloon.',
+      kuvat: [
+        {
+          tiedosto: 'Naldham House, Brisbane 2024.jpg',
+          selite: 'Pohjoispään torni ja kupoli tulivat 1888–1889 laajennuksessa, '
+            + 'ja vuosiluku on yhä julkisivussa.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha kirjastotalo': {
+      aika: '1876–1879',
+      teksti: 'Kolmikerroksinen William Streetin puoleinen osa '
+          + 'rakennettiin 1876–1879 Queenslandin museon ensimmäiseksi '
+          + 'varta vasten suunnitelluksi taloksi. Museo oli perustettu '
+          + '1855, ja se oli siihen asti asunut lainatiloissa. '
+          + 'Piirustukset teki 1876 George Curtis Walker. Klassinen, '
+          + '1500-luvun italialaisiin taloihin nojaava tyyli ja tontti '
+          + 'aivan kaupungin eteläisen sisääntulon vieressä kertovat '
+          + 'siitä, kuinka tärkeänä museota pidettiin Brisbanen '
+          + 'tieteellisessä ja sivistyselämässä.'
+          + '\n\n'
+          + 'Talo osoittautui heti liian pieneksi. Alapuolinen maa '
+          + 'tasattiin 1881 ja kellaria laajennettiin, ja jo 1884 '
+          + 'hallitus varasi rahaa uuteen museorakennukseen — mutta '
+          + 'lama pakotti museon pysymään ahtaissa tiloissa vuoteen '
+          + '1899, jolloin se muutti Gregory Terracen entiseen '
+          + 'näyttelyhalliin.'
+          + '\n\n'
+          + 'Tyhjä talo muutettiin 1 900 punnan urakalla vuonna 1896 '
+          + 'perustetun maksuttoman yleisen kirjaston tiloiksi, ja '
+          + 'kirjasto avautui huhtikuussa 1902. Nimi muuttui '
+          + 'Queenslandin osavaltionkirjastoksi 1971. Vuodesta 1931 '
+          + 'talossa asui myös John Oxley -kirjasto, Queenslandin '
+          + 'historian tutkimusaineiston pääkokoelma. Osavaltion '
+          + 'satavuotisjuhlan hankkeena taloa laajennettiin 1958–1959 '
+          + 'nelikerroksisella siivellä, jossa on näyttelyhalli ja '
+          + 'joen puolella lukusaleja. Kirjasto muutti 1988 South '
+          + 'Bankille.',
+      kuvat: [
+        {
+          tiedosto: 'Old State Library of Queensland Building, 2021.jpg',
+          selite: 'William Streetin puoleinen julkisivu vuosilta 1876–1879: '
+            + 'klassinen pylväikkö kertoo, kuinka tärkeänä museota '
+            + 'pidettiin.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'The Mansions': {
+      aika: '1889',
+      teksti: 'Kuuden rivitalon rivi George Streetin harjanteella on '
+          + 'kolmen queenslandilaisen poliitikon sijoitus: pääministeri '
+          + 'Boyd Dunlop Morehead, valtiovarainministeri William '
+          + 'Pattison ja Clermontin edustaja John Stevenson ostivat '
+          + 'tontin elokuussa 1888. He palkkasivat arkkitehti George '
+          + 'Henry Male Addisonin, ja RE Burton rakensi rivin 11 700 '
+          + 'punnalla vuonna 1889. Talo on punatiiltä, jonka vaaleat '
+          + 'yksityiskohdat ovat Uudesta-Seelannista tuotua Oamarun '
+          + 'kalkkikiveä — samaa kiveä kuin George Streetin puoleisen '
+          + 'räystäslistan päällä istuvat kaksi kivistä kissaa.'
+          + '\n\n'
+          + 'Rivitalot olivat siirtomaa-ajan Queenslandissa harvinaisia, '
+          + 'sillä vuoden 1885 laki kielsi liian pienet tontit: '
+          + 'vähimmäiskoko oli kuusitoista neliöruutua ja kadunpuoleinen '
+          + 'leveys yhdeksän metriä, mikä käytännössä lopetti '
+          + 'rivitalojen rakentamisen muuten kuin vuokrasijoituksena. '
+          + 'Kaari oli suunniteltu ilmastoon: syvät holvikäytävät '
+          + 'antavat varjon estämättä tuuletusta.'
+          + '\n\n'
+          + 'Sijoitus ajoittui huonosti. Rakennusala romahti 1891, '
+          + 'vuokrat ja maan arvo painuivat pohjaan 1893–1894, ja '
+          + 'kaikki kolme sijoittajaa kärsivät raskaat tappiot. '
+          + 'Talon merkittävin asukas tuli silti juuri laman kynnyksellä: '
+          + 'joulukuussa 1891 tänne avasi vastaanottonsa tohtori Lilian '
+          + 'Cooper, Queenslandin ensimmäinen naislääkäri ja Australian '
+          + 'ensimmäinen naiskirurgi. Hän asui talossa vielä useita '
+          + 'vuosia vuoden 1893 tulvien jälkeen.',
+      kuvat: [
+        {
+          tiedosto: 'The Mansions, Brisbane, Jan 2020.jpg',
+          selite: 'Punatiiltä ja Oamarun kalkkikiveä, ja molemmilla katusivuilla '
+            + 'kahden kerroksen syvä holvikäytävä — varjoa ilman, että '
+            + 'tuuletus katkeaa.',
+          lahde: 'Chris Olszewski, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * VANCOUVERIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.vancouver, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Harbour Centre", "Hotel Europe (Vancouver)",
+   * "Vancouver Art Gallery", "Holy Rosary Cathedral (Vancouver)",
+   * "Sun Tower", "Orpheum (Vancouver)", "Vancouver Public Library"
+   * ja "Dr. Sun Yat-Sen Classical Chinese Garden").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * aiheet ovat Hastings Millin saha ja Gastown, vuoden 1886
+   * suurpalo, rautatien tuoma nimi ja veturi 374, satama,
+   * kahdeksantuhannen vuoden asutus, sademetsä, kasvu
+   * sataantuhanteen, Tyynenmeren postilaivat, musqueam, squamish,
+   * Sen̓áḵw, vuoden 2010 kisat, höyrykello, maailmannäyttely 1986 ja
+   * SkyTrain. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Sun Towerin
+   * jutussa EI kerrota Dominion Buildingin omaa tarinaa, vaikka talo
+   * on naapurikorttelissa ja Sun Tower ohitti sen: Dominion Building
+   * on lehden noston "Tuhannesta sataantuhanteen" lähdeartikkeli.
+   * Sun Yat-senin puutarhan jutussa vuoden 1986 maailmannäyttely
+   * mainitaan vain avajaispäivän kohdalla, koska näyttely on
+   * matkaoppaan oma jakso. Keskuskirjaston jutussa Carnegien
+   * kirjastosta kerrotaan vain sen verran kuin nykyisen talon
+   * esihistoria vaatii.
+   */
+  vancouver: {
+    'Harbour Centre': {
+      aika: '1977',
+      teksti: 'Torni nousi 1977 osoitteeseen 555 West Hastings '
+          + 'Street, keskellä liikekeskustaa ja kivenheiton päässä '
+          + 'Waterfront-asemalta. Talon piirsi arkkitehtitoimisto '
+          + 'WZMH Architects, ja se on merkitty '
+          + '28-kerroksiseksi — mutta näköalataso ja '
+          + 'pyörivä ravintola jatkuvat noiden toimistokerrosten '
+          + 'yläpuolelle, ja niiden sanotaan olevan 33. ja 35. '
+          + 'kerroksessa. Talossa toimi aikanaan Simpsons-Searsin '
+          + 'tavaratalo, joka suljettiin 1987.'
+          + '\n\n'
+          + 'Talon korkeudesta ei olla yksimielisiä, ja se on tässä '
+          + 'poikkeuksellisen hyvin dokumentoitu erimielisyys. '
+          + 'Näköalatason oman sivuston mukaan taso on 168 metriä '
+          + 'katutason yläpuolella; pilvenpiirtäjiä luetteloiva CTBUH '
+          + 'ilmoittaa talon arkkitehtoniseksi korkeudeksi 147 '
+          + 'metriä, ja kolmas lähde antaa katolle 139,6 metriä '
+          + 'Hastings Streetin sisäänkäynniltä mitattuna ja 146 '
+          + 'metriä takaovelta Cordova Streetiltä. Antennin kärkeen '
+          + 'asti mitattuna luku on 177,1 metriä. Piikin korkeudella '
+          + 'mitattuna talo oli British Columbian korkein, kunnes '
+          + 'Living Shangri-La valmistui 2009.'
+          + '\n\n'
+          + 'Näköalatason avasi 13. elokuuta 1977 Neil Armstrong, ja '
+          + 'hänen jalanjälkensä painettiin sementtiin tason '
+          + 'näytteille; jälki katosi jossain myöhemmässä '
+          + 'remontissa. Lasihissit vievät katutasosta ylös '
+          + 'neljässäkymmenessä sekunnissa. Viereisessä Spencerin '
+          + 'talossa on Simon Fraserin yliopiston keskustakampus, ja '
+          + 'vuoteen 2015 asti talosta hoidettiin rannikkovartioston '
+          + 'radiopäivystystä: hätäkuuntelua ja alusliikennettä '
+          + 'Burrard Inletillä, English Bayllä, Howe Soundissa, '
+          + 'Indian Armissa ja Fraserin pohjoishaarassa.',
+      kuvat: [
+        {
+          tiedosto: 'Vancouver (BC, Canada), Harbour Centre -- 2022 -- 1843.jpg',
+          selite: 'Toimistotornin päällä oleva näköalataso ja pyörivä '
+            + 'ravintola muodostavat lautasen, jota kannattaa kapea kaula.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hotel Europe': {
+      aika: '1909',
+      teksti: 'Kuusikerroksinen talo seisoo kolmiotontilla Powell '
+          + 'Streetin ja Alexander Streetin kulmassa, ja sen muoto '
+          + 'seuraa tonttia: se on silitysrautatalo. Rakennuttaja oli '
+          + 'hotellinpitäjä Angelo Calori, suunnittelijat '
+          + 'arkkitehtitoimisto Parr and Fee, ja talo valmistui '
+          + '1908–1909.'
+          + '\n\n'
+          + 'Talo on Kanadan ensimmäinen teräsbetonirakennus ja Länsi-'
+          + 'Kanadan varhaisin paloturvalliseksi rakennettu hotelli. '
+          + 'Osaajia ei löytynyt läheltä, joten urakoitsijat '
+          + 'jouduttiin tuomaan Cincinnatista Ohiosta: työn teki '
+          + 'Ferro-Concrete Construction Company kuusi vuotta sen '
+          + 'jälkeen, kun se oli rakentanut maailman ensimmäisen '
+          + 'korkean betonitalon.'
+          + '\n\n'
+          + 'Hotellista tuli 1983 kohtuuhintaisia vuokra-asuntoja '
+          + 'liittovaltion asuntorahoituksella, ja asuntoja hoitaa '
+          + 'Affordable Housing Society. Katutason alla oli aikanaan '
+          + 'olutkellari, jonka tilat jatkuivat jalkakäytävien alle. '
+          + 'Jotta katu ei sortuisi jalankulkijoiden ja liikenteen '
+          + 'painosta, kaupunki täytti alikulut hernesoralla 215 000 '
+          + 'dollarin hinnalla — sora on valittu siksi, että sen saa '
+          + 'tarvittaessa pois, jos tilat joskus palautetaan.',
+      kuvat: [
+        {
+          tiedosto: 'Hotel Europe Vancouver.jpg',
+          selite: 'Kolmiotontin kärki on pyöristetty, ja talon kapea pää nousee '
+            + 'kuudessa kerroksessa Powell Streetin kulmassa.',
+          lahde: 'Ymblanter, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vancouverin taidegalleria': {
+      aika: '1911',
+      teksti: 'Talo ei ole alun perin museo vaan oikeustalo. Francis '
+          + 'Rattenbury voitti sen suunnittelukilpailun 1905, '
+          + 'rakennustyöt alkoivat 1906, ja provinssin oikeustalo '
+          + 'avattiin 1911. Sisällä oli kahdeksantoista '
+          + 'oikeussalia. Talossa on joonialaiset pylväät, keskellä '
+          + 'kupoli ja juhlalliset pylväiköt, ja marmori tuotiin '
+          + 'Alaskasta, Tennesseestä ja Vermontista. Thomas Hooperin '
+          + 'piirtämä sivusiipi lisättiin länsipuolelle 1912. '
+          + 'Oikeuslaitos muutti pois 1979, ja talo julistettiin '
+          + 'kansalliseksi historialliseksi kohteeksi 1980.'
+          + '\n\n'
+          + 'Vanhan sisäänkäynnin molemmin puolin makaa graniittinen '
+          + 'leijona. Kivet tuotiin Nelson Islandilta, ja leijonat '
+          + 'asetettiin paikoilleen 1910. Neljäntenä marraskuuta 1942 '
+          + 'kaksi dynamiittiräjähdystä vaurioitti läntisen leijonan '
+          + 'takaosaa; räjähdykset rikkoivat ympäröivien hotellien '
+          + 'ikkunat, ja osa kaupunkilaisista luuli kaupunkia '
+          + 'pommitettavan. Kaksi kivenveistäjää, jotka olivat '
+          + 'aikanaan tehneet alkuperäiset leijonat ja olivat yhä '
+          + 'työelämässä — John Whitworth ja Herbert Ede — palkattiin '
+          + 'veistämään ja sovittamaan uudet takaosat. Sauma näkyy '
+          + 'yhä. Tekijöitä ei koskaan saatu selville.'
+          + '\n\n'
+          + 'Museo itse on taloa nuorempi. Se avattiin yleisölle '
+          + '5. lokakuuta 1931 osoitteessa 1145 West Georgia Street, '
+          + 'arkkitehtitoimisto Sharp and Johnstonin taloon, ja '
+          + 'maksoi noin 40 000 dollaria. Vuosien 1950–1951 remontti '
+          + 'tehtiin, jotta taloon mahtuisivat ne 157 teosta, jotka '
+          + 'Emily Carr oli testamentannut museolle. Nykyiseen '
+          + 'oikeustaloon museo muutti 1983, kun Arthur Erickson oli '
+          + 'muuttanut talon näyttelykäyttöön osana Robson Squaren '
+          + 'kolmen korttelin uudistusta. Talon portaat Georgia '
+          + 'Streetin ja Robson Streetin puolella ovat kaupungin '
+          + 'tavallisin kokoontumispaikka.',
+      kuvat: [
+        {
+          tiedosto: 'Vancouver Art Gallery Lion.jpg',
+          selite: 'Toinen vanhan oikeustalon graniittileijonista; leijonat '
+            + 'veistettiin Nelson Islandilta tuodusta kivestä ja asetettiin '
+            + 'paikoilleen 1910.',
+          lahde: 'OlEnglish, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän ruusukon katedraali': {
+      aika: '1900',
+      teksti: 'Seurakunta perustettiin kesäkuussa 1885, ja sen '
+          + 'ensimmäiseksi kirkkoherraksi valittiin isä Patrick Fay, '
+          + 'joka oli toiminut rautatietyöläisten pappina. Tarina '
+          + 'kertoo, että Fay meni Coal Harbourin rantaan, katsoi '
+          + 'etelään metsään ja valitsi kirkon paikaksi sen kohdan, '
+          + 'jossa kasvoi korkein puu. Puukirkko valmistui 1887, ja '
+          + 'kaksi vuotta myöhemmin sitä laajennettiin ja siihen '
+          + 'lisättiin kellotorni. Seurakuntaan kuului tuolloin 69 '
+          + 'perhettä.'
+          + '\n\n'
+          + 'Uuden kirkon rakensi isä James McGuckin, ja hanketta '
+          + 'pidettiin niin uhkarohkeana, että sitä kutsuttiin '
+          + 'nimellä "McGuckinin hulluus". Seurakunta oli jo velkaa, '
+          + 'ja rahat saatiin lopulta siten, että McGuckinin oma '
+          + 'sääntökunta kiinnitti päämajansa Ranskassa. Peruskivi '
+          + 'laskettiin 16. heinäkuuta 1899, arkkitehteina Thomas '
+          + 'Ennor Julian ja H. J. Williams, ja kirkko valmistui '
+          + '491 päivässä. Se avattiin 8. joulukuuta 1900, ja sitä '
+          + 'kehuttiin "hienoimmaksi arkkitehtuuriksi Torontosta '
+          + 'länteen ja San Franciscosta pohjoiseen". Katedraaliksi '
+          + 'kirkko korotettiin 1916. Vihkiä sitä ei kuitenkaan '
+          + 'voitu, koska katolinen kirkko vihitään vasta velattomana '
+          + '— vihkiminen tapahtui 3. lokakuuta 1953, '
+          + 'viisikymmentäkolme vuotta avajaisten jälkeen.'
+          + '\n\n'
+          + 'Kellot ovat oma lukunsa. Seitsemän kelloa valettiin '
+          + 'Paccardin valimossa Annecyssa ja siunattiin '
+          + '21. lokakuuta 1900, mutta ne todettiin pian '
+          + 'epävireisiksi ja lähetettiin takaisin Eurooppaan — nyt '
+          + 'Bristolin lähelle, jossa valettiin kahdeksan kelloa '
+          + 'kokonaista oktaavia varten. Ne asennettiin 1906, ja '
+          + 'niitä soitetaan englantilaisittain vaihtosoittona; '
+          + 'tällaisia soittimia on Pohjois-Amerikassa vain harvoja. '
+          + 'Vuoden 1911 Dominion Daynä niillä soitettiin Kanadan '
+          + 'ensimmäinen täysi vaihtosoitto. Kirkon seinät ovat '
+          + 'Gabriola Islandin hiekkakiveä, ja epäsymmetrisistä '
+          + 'torneista korkeampi nousee 66 metriin.',
+      kuvat: [
+        {
+          tiedosto: 'Holy Rosary Cathedral, Vancouver 2023a.jpg',
+          selite: 'Kaksi epäsymmetristä tornia ja niiden välissä ruusuikkuna; '
+            + 'seinät ovat Gabriola Islandin hiekkakiveä.',
+          lahde: 'Greenknight dv, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sun Tower': {
+      aika: '1912',
+      teksti: 'Talon rakennutti lehtimies L. D. Taylor omalle '
+          + 'lehdelleen The Vancouver Worldille, ja tarkoitus oli '
+          + 'yksinkertainen: talon piti näkyä koko sille alueelle, '
+          + 'jolla lehti levisi. Kun talo valmistui 1912 nimellä '
+          + 'World Building, se oli 82 metriä ja seitsemäntoista '
+          + 'kerrosta eli kaupungin korkein — ja perimätaulun mukaan '
+          + 'myös koko Britannian imperiumin korkein. Kanadan korkein '
+          + 'se oli yhden vuoden, kunnes Toronton 85-metrinen '
+          + 'Canadian Pacific Building avattiin 1913.'
+          + '\n\n'
+          + 'Arkkitehti oli William Tuff Whiteway. Talo on '
+          + 'kahdeksankerroksinen L:n muotoinen lohko, jonka päällä '
+          + 'nousee yhdeksänkerroksinen kuusikulmainen torni; sen '
+          + 'kruunaa kupoli ja lyhty. Kupoli oli terästä, joka '
+          + 'maalattiin muistuttamaan patinoitunutta kuparia, ja '
+          + 'vasta helmikuussa 2021 paljastettiin uusi katto, joka on '
+          + 'oikeaa kuparia. Räystäslinjaa kannattaa yhdeksän '
+          + 'terrakottaista karyatidia, Charles Maregan veistämiä; '
+          + 'terrakotta tehtiin Tamworthissa Englannissa. Hahmot ovat '
+          + 'vain osittain puettuja, ja avajaisissa se aiheutti '
+          + 'pienen kohun.'
+          + '\n\n'
+          + 'Vuonna 1918 vancouverilaiset kerääntyivät katsomaan, kun '
+          + 'Harry Gardiner, "ihmiskärpänen", kiipesi talon ulkoseinää '
+          + 'ylös. Nimensä talo sai 1937, kun The Vancouver Sun osti '
+          + 'sen; lehti muutti pois jo kauan sitten, mutta nimi jäi. '
+          + 'Ikkunoiden alla on paikallista andesiittiä Haddington '
+          + 'Islandilta, ja samaa kiveä on tornin yläosan '
+          + 'koristeissa, joissa eläinten kalloja kiertävät hedelmä- '
+          + 'ja kukkaköynnökset.',
+      kuvat: [
+        {
+          tiedosto: 'Top of Sun Tower Vancouver.jpg',
+          selite: 'Kuusikulmaisen tornin päällä on kupoli ja sen huipulla lyhty; '
+            + 'kupolin alla kiertää pylväiden rivi.',
+          lahde: 'Darren Kirby, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Orpheum-teatteri': {
+      aika: '1927',
+      teksti: 'Teatterin piirsi skotlantilaissyntyinen arkkitehti '
+          + 'Marcus Priteca. Ensimmäiset esitykset nähtiin '
+          + '7. marraskuuta 1927, ja seuraavana päivänä talo avattiin '
+          + 'virallisesti varieteeteatterina. Se oli avautuessaan '
+          + 'Kanadan suurin teatteri: kolmetuhatta paikkaa ja 1,25 '
+          + 'miljoonan dollarin rakennuskustannukset. Ensimmäinen '
+          + 'teatterinjohtaja oli William A. Barnes.'
+          + '\n\n'
+          + 'Kun varieteen kulta-aika päättyi 1930-luvun alussa, '
+          + 'Orpheumista tuli pääosin elokuvateatteri Famous '
+          + 'Playersin omistuksessa; Ivan Ackery johti taloa vuodesta '
+          + '1935 eläkkeelle jäämiseensä 1969. Vuonna 1973 Famous '
+          + 'Players päätti purkaa sisätilat ja tehdä talosta '
+          + 'monisalin. Siitä syntyi kansanliike "Save the Orpheum", '
+          + 'ja jopa koomikko Jack Benny lensi paikalle auttamaan '
+          + 'varainkeruussa. Kaupunki osti teatterin 19. maaliskuuta '
+          + '1974, ja hinta oli 7,1 miljoonaa dollaria; kaupungin '
+          + 'oma osuus oli 3,1 miljoonaa, ja provinssi sekä '
+          + 'liittovaltio maksoivat kumpikin 1,5 miljoonaa.'
+          + '\n\n'
+          + 'Teatteri suljettiin 23. marraskuuta 1975, ja '
+          + 'entisöinnin teki arkkitehtitoimisto Thomson, Berwick, '
+          + 'Pratt and Partners. Ovet avattiin uudelleen '
+          + '2. huhtikuuta 1977, ja siitä lähtien talo on ollut '
+          + 'Vancouverin sinfoniaorkesterin koti. Sisätilan '
+          + 'alkuperäisen värityksen — norsunluu, sammaleenvihreä, '
+          + 'kulta ja viininpunainen — oli valinnut Tony '
+          + 'Heinsbergen, ja hänet haettiin viisikymmentä vuotta '
+          + 'myöhemmin takaisin tekemään sama työ uudestaan. Talo '
+          + 'nimettiin kansalliseksi historialliseksi kohteeksi 1979, '
+          + 'ja sen neonkyltti on 1970-luvulta, liikemies Jim '
+          + 'Pattisonin lahjoittama.',
+      kuvat: [
+        {
+          tiedosto: 'Vancouver - Orpheum Theatre 01.jpg',
+          selite: 'Granville Streetin yllä riippuva neonkyltti ja sen alla '
+            + 'markiisi, jossa lukee teatterin nykyisen asukkaan nimi.',
+          lahde: 'Joe Mabel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Keskuskirjasto: {
+      aika: '1995',
+      teksti: 'Vancouverin kirjastolla on kolme taloa, ja tämä on '
+          + 'kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew '
+          + 'Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos '
+          + 'kaupunki antaisi tontin ja viisituhatta dollaria '
+          + 'vuodessa toimintaan. Kaupungin itä- ja länsipuoli '
+          + 'riitelivät heti siitä, kumpi saisi kirjaston, ja asia '
+          + 'ratkaistiin kansanäänestyksellä. Talo avattiin '
+          + 'marraskuussa 1903, ja se toimii nykyään '
+          + 'asukastalona. Keskuskirjasto muutti 1957 Burrard '
+          + 'Streetille ja sieltä 1995 nykyiseen taloonsa.'
+          + '\n\n'
+          + 'Nykyinen talo on kaupungin siihenastisista hankkeista '
+          + 'suurin. Marraskuussa 1990 pidettiin kansanäänestys, '
+          + 'jonka jälkeen järjestettiin suunnittelukilpailu. Moshe '
+          + 'Safdien ja DA Architectsin ehdotus oli selvästi '
+          + 'rohkein — ja silti yleisön suosikki: seitsemänkymmentä '
+          + 'prosenttia piti sitä ainutlaatuisena ja kiinnostavana. '
+          + 'Rakentaminen alkoi alkuvuodesta 1993, ja kirjasto '
+          + 'avattiin 26. toukokuuta 1995. Hinta oli 106,8 miljoonaa '
+          + 'dollaria, ja kokonaisuuteen kuuluva 21-kerroksinen '
+          + 'toimistotorni oli ehto sille, että hanke ylipäätään '
+          + 'saatiin maksettua ja tontti liittovaltiolta.'
+          + '\n\n'
+          + 'Talo on yhdeksänkerroksinen suorakulmainen laatikko, '
+          + 'jossa ovat kirjahyllyt ja palvelut, ja sen ympärillä on '
+          + 'vapaasti seisova soikea pylväikkömuuri lukupaikkoineen; '
+          + 'muurille pääsee siltoja pitkin valokuilujen yli. '
+          + 'Ulkoapäin talo muistuttaa Rooman Colosseumia nykyisessä '
+          + 'asussaan. Avaamista seuraavana vuonna kirjastokäynnit '
+          + 'lisääntyivät 800 000:lla. Katolla on maisema-arkkitehti '
+          + 'Cornelia Oberlanderin suunnittelema puutarha, joka '
+          + 'avattiin yleisölle syyskuussa 2018 yhdessä yhdeksännen '
+          + 'kerroksen laajennuksen kanssa.',
+      kuvat: [
+        {
+          tiedosto: 'Vancouver Public Library - Central Library.jpg',
+          selite: 'Lasikattoinen halli kirjaston lasijulkisivun ja soikean '
+            + 'pylväikkömuurin välissä.',
+          lahde: 'Vince.varona, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sun Yat-senin puutarha': {
+      aika: '1986',
+      teksti: 'Puutarha on ensimmäinen Aasian ulkopuolelle '
+          + 'rakennettu kiinalainen puutarha. Se tehtiin 1985–1986 '
+          + 'osoitteeseen 578 Carrall Street keskelle Chinatownia ja '
+          + 'avattiin 24. huhtikuuta 1986. Ulomman puiston '
+          + 'suunnittelivat arkkitehdit Joe Wai ja Donald Vaughan, '
+          + 'sisemmän puutarhan pääsuunnittelija oli Wang Zu-Xin '
+          + 'apunaan Suzhoun maisema-arkkitehtuuriyhtiön asiantuntijoita. '
+          + 'Maa, jolle puutarha tehtiin, oli aikanaan täytetty '
+          + 'rautatieyhtiöiden tarpeisiin.'
+          + '\n\n'
+          + 'Suzhou valittiin esikuvaksi myös ilmaston takia: '
+          + 'Vancouverin talvi muistuttaa Suzhoun talvea, joten '
+          + 'monet samat kasvilajikkeet menestyvät täällä. Kasvit on '
+          + 'valittu kukinta-aikojensa mukaan niin, että vuodenaikojen '
+          + 'vaihtuminen näkyy — erityisesti kevään herääminen — ja '
+          + 'niitä käytetään säästeliäästi toisin kuin länsimaisissa '
+          + 'puutarhoissa. Rosoiset kivet asetetaan hennon lehvästön '
+          + 'rinnalle, ja iso lampi tuo hiljaisuutta, ääntä ja taivaan '
+          + 'heijastuksen. Vedessä elää kaloja ja kilpikonnia, '
+          + 'yksityiskohdissa toistuvat lepakot, lohikäärmeet ja '
+          + 'feeniksit, ja suuret kivet on sijoitettu esittämään '
+          + 'vuoria, jotka vuoroin peittävät ja paljastavat puiston '
+          + 'osia.'
+          + '\n\n'
+          + 'Nimi ei ole sattumaa. Sun Yat-sen kiersi maailmaa '
+          + 'keräämässä varoja ja huomiota Kiinan '
+          + 'kansallismieliselle liikkeelle, ja hän viipyi '
+          + 'Vancouverissa kolmesti pitkiä aikoja. British '
+          + 'Columbiassa oli tuolloin merkittävä kiinalaisten '
+          + 'kansallismielisten yhteisö, joka auttoi rahoittamaan '
+          + 'vuoden 1911 Xinhai-vallankumouksen — sen, joka kaatoi '
+          + 'Qing-dynastian ja teki Sun Yat-senistä Kiinan '
+          + 'tasavallan ensimmäisen presidentin. Puutarha ja sen '
+          + 'vieressä oleva puisto ovat kaksi eri paikkaa, jotka '
+          + 'lampi yhdistää: puistoon on vapaa pääsy, puutarhaan '
+          + 'lipulla.',
+      kuvat: [
+        {
+          tiedosto: 'Dr. Sun Yat-Sen Classical Chinese Garden 09.jpg',
+          selite: 'Lampi, kiviasetelmat ja kaartuvat räystäät: rakennusten ja '
+            + 'veden suhde on Suzhoun klassisten puutarhojen mukainen.',
+          lahde: 'Ɱ, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * TORONTON KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.toronto, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Royal Ontario Museum", "University College,
+   * Toronto", "Kensington Market", "Art Gallery of Ontario",
+   * "Toronto City Hall", "Elgin and Winter Garden Theatres",
+   * "Hockey Hall of Fame" ja "Union Station (Toronto)").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * aiheet ovat Fort York ja kaupungin nimi, vuosien 1849 ja 1904
+   * palot, Distillery District, CN-torni, kolme kansaa ennen Yorkia,
+   * Yorkin taistelu, St. Lawrence Hall, kuuden kaupungin
+   * yhdistyminen, mississauga-kansa, Toronton kauppa, Peter Jones,
+   * St. Lawrencen tori, Niagara ja Scarborough'n jyrkänteet.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA.
+   * Rautatieaseman jutussa EI kerrota kaupungin paloista, vaikka
+   * asemaa edelsi kaksi aiempaa asemaa: palot ovat lehden noston
+   * "Kaupunki, joka paloi kahdesti" aihe. Kaupungintalon jutussa
+   * vanha kaupungintalo mainitaan vain siltä osin kuin uuden talon
+   * tarina sitä vaatii.
+   *
+   * SUN TOWER JA TÄMÄN KAUPUNGIN CANADIAN PACIFIC BUILDING OVAT
+   * SAMAA TARINAA. Vancouverin kohdekartan Sun Tower oli Kanadan
+   * korkein talo yhden vuoden, kunnes Toronton 85-metrinen Canadian
+   * Pacific Building avattiin 1913. Kytkentä on kirjoitettu
+   * Vancouverin puolelle, jotta sama asia ei kerrottaisi kahdesti.
+   */
+  toronto: {
+    'Ontarion kuninkaallinen museo': {
+      aika: '1914',
+      teksti: 'Museo perustettiin 16. huhtikuuta 1912, ja sen avasi '
+          + 'yleisölle 19. maaliskuuta 1914 Connaughtin herttua, '
+          + 'silloinen Kanadan kenraalikuvernööri. Hallinto oli '
+          + 'jaettu Ontarion provinssin ja Toronton yliopiston '
+          + 'kesken, ja käytännössä museo oli yliopiston suorassa '
+          + 'ohjauksessa vuoteen 1968, jolloin siitä tuli '
+          + 'itsenäinen provinssin laitos. Paikka valittiin '
+          + 'yliopiston läheisyyden takia, vaikka se oli tuolloin '
+          + 'kaupungin rakennetun alueen laidalla kaukana '
+          + 'liikekeskustasta.'
+          + '\n\n'
+          + 'Vanhimman osan — nykyisen länsisiiven — piirsivät '
+          + 'torontolaiset arkkitehdit Frank Darling ja John A. '
+          + 'Pearson, ja tyyli on italialaisvaikutteisen ja '
+          + 'uusromaanisen sekoitus: raskaita massoja, pyöreitä ja '
+          + 'kaarevia ikkunoita paksuine kehyksineen, koristeltuja '
+          + 'räystäskannattimia ja nurkkakiviä. Itäsiipi valmistui '
+          + '1933 ja eteläpuolen tutkijakeskus 1984. Kokoelmassa on '
+          + 'yli kahdeksantoista miljoonaa esinettä ja neljäkymmentä '
+          + 'näyttelysalia, ja museolla on maailman suurin Burgess '
+          + 'Shalen fossiilikokoelma: yli 150 000 näytettä.'
+          + '\n\n'
+          + 'Vuonna 2002 alkoi laajennus, jonka keskiössä oli Daniel '
+          + 'Libeskindin suunnittelema Michael Lee-Chin Crystal. '
+          + 'Ehdotus valittiin viidenkymmenen finalistin joukosta, '
+          + 'rakennus avattiin 2. kesäkuuta 2007, ja koko hanke '
+          + 'maksoi noin 270 miljoonaa dollaria. Kide on '
+          + 'neljänneksen lasia ja kolme neljännestä alumiinia '
+          + 'teräsrungon päällä, eivätkä sen kallistuvat seinät '
+          + 'kosketa vanhoja suojeltuja seiniä lainkaan. Mielipiteet '
+          + 'jakautuivat heti: Globe and Mailin arkkitehtuurikriitikko '
+          + 'kirjoitti, että uusi museo "raivoaa maailmalle", kun '
+          + 'taas toiset pitivät sitä monumenttina — ja jotkin '
+          + 'listat ovat panneet sen maailman kymmenen rumimman '
+          + 'rakennuksen joukkoon.',
+      kuvat: [
+        {
+          tiedosto: 'Crystal.view.from.west.JPG',
+          selite: 'Michael Lee-Chin Crystalin kallistuvat seinät ovat '
+            + 'neljänneksen lasia ja kolme neljännestä alumiinia.',
+          lahde: 'Aptd, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'University College': {
+      aika: '1859',
+      teksti: 'College perustettiin 22. huhtikuuta 1853 Canada '
+          + 'Westin eli nykyisen Ontarion provinssin omaksi, '
+          + 'tunnustuksettomaksi opinahjoksi. Taustalla oli '
+          + 'poliittinen käänne: Robert Baldwinin johtamat '
+          + 'uudistusmieliset olivat 1849 ottaneet King\'s Collegen '
+          + 'pois Englannin kirkolta ja nimenneet sen Toronton '
+          + 'yliopistoksi. Frederick William Cumberland nimitettiin '
+          + '1856 yliopiston arkkitehdiksi, ja hänen suunnittelemansa '
+          + 'päärakennus valmistui 1859. Muurit ovat romaaniseen '
+          + 'tapaan hyvin paksut; vain kolmannes julkisivusta on '
+          + 'kiveä, loput hyvin vaaleaa keltaista tiiltä, joka '
+          + 'poltettiin Yonge Streetin varren tiilitehtaalla.'
+          + '\n\n'
+          + 'Neljäntenätoista helmikuuta 1890 talo paloi. Palvelijat '
+          + 'valmistelivat vuosinäyttelyn valaistusta ja pudottivat '
+          + 'noin kello seitsemältä illalla kaksi petrolilamppua '
+          + 'puiselle portaikolle; tuli tuhosi koko itäsiiven ja '
+          + 'kirjaston. Ottawassa yliopiston kansleri Edward Blake, '
+          + 'joka oli myös kansanedustaja, keskeytti puheensa ja '
+          + 'kertoi alahuoneelle, että "suuri laitos, maamme '
+          + 'oppilaitosten kruunu ja kunnia, on tällä hetkellä '
+          + 'liekeissä". Kirjoja ehdittiin pelastaa noin sata. Palon '
+          + 'muistoksi collegen opiskelijat järjestävät yhä vuosittain '
+          + 'Fireball-juhlan.'
+          + '\n\n'
+          + 'Talon kiviveistoksiin liittyy Toronton tunnetuin '
+          + 'kummitustarina: venäläinen kuvanveistäjä Ivan Reznikoff, '
+          + 'jonka sanotaan olevan haudattuna sisäpihan '
+          + 'koilliskulmaan ja jonka haamun on kerrottu ilmestyvän '
+          + 'säännöllisin väliajoin. Itäisen portaikon pylvään pää on '
+          + 'puinen aarnikotka, ja osa opiskelijoista koskettaa sitä '
+          + 'onnea tuomaan ennen tenttiä. Talo on Kanadan '
+          + 'kansallinen historiallinen kohde, ja collegessa toimii '
+          + 'maan vanhin ylioppilaskunta, perustettu 1854.',
+      kuvat: [
+        {
+          tiedosto: 'Gothic tower at University College, Toronto.jpg',
+          selite: 'Pääsisäänkäynnin torni: pyöreitä kaaria, pieniä '
+            + 'pylväitä ja kiviveistoksia harmaassa kivessä.',
+          lahde: 'Alan Levine, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kensingtonin tori': {
+      aika: '1880-luku',
+      teksti: 'Maan osti 1815 George Taylor Denison, joka oli '
+          + 'palvellut miliisissä vuoden 1812 sodassa. Hänen '
+          + 'tilansa ulottui Queen Street Westiltä Bloor Streetille, '
+          + 'ja nykyistä Bellevue Square -puistoa hän käytti '
+          + 'ratsuväkijoukkonsa harjoituskenttänä. Tila jaettiin '
+          + 'tonteiksi 1850-luvulla, ja 1880-luvulla pienille '
+          + 'tonteille rakennettiin taloja irlantilaisille ja '
+          + 'skotlantilaisille siirtolaistyöläisille. Monet niistä '
+          + 'ovat yhä pystyssä esimerkiksi Wales Avenuen varrella, ja '
+          + 'toria lähimmissä taloissa on kadun puolella kauppa.'
+          + '\n\n'
+          + '1900-luvun alussa alueelle muutti itäeurooppalaisia '
+          + 'juutalaisia ja italialaisia siirtolaisia. He tulivat '
+          + '"Wardista", ahtaasta tulijoiden korttelistosta Yonge '
+          + 'Streetin ja University Avenuen välissä, ja hakivat '
+          + 'väljyyttä, parempia asuntoja ja mahdollisuutta pitää '
+          + 'kauppaa oman talon edessä. 1920-luvulla aluetta '
+          + 'kutsuttiin juutalaiseksi toriksi: räätäleitä, '
+          + 'turkkureita ja leipureita. 1920- ja 1930-luvuilla '
+          + 'torin ympäristössä asui noin kuusikymmentätuhatta '
+          + 'juutalaista, ja synagogia oli yli kolmekymmentä. Torilla '
+          + 'on alusta asti myyty tavaraa, joka on tuotu '
+          + 'siirtolaisten kotimaista.'
+          + '\n\n'
+          + 'Toisen maailmansodan jälkeen juutalainen väestö muutti '
+          + 'pohjoisemmille alueille. 1950-luvulla tulivat '
+          + 'azorilaiset, jotka pakenivat Salazarin hallintoa, sitten '
+          + 'karibialaiset ja itäaasialaiset; Vietnamin sota toi '
+          + 'amerikkalaisia poliittisia pakolaisia, ja 1980- ja '
+          + '1990-luvuilla tulijoita saapui muun muassa Keski-'
+          + 'Amerikasta, Somaliasta, Etiopiasta, Sudanista, Iranista, '
+          + 'Vietnamista ja Chilestä. Nykyään suurin ryhmä on '
+          + 'kiinalaiset, sillä Chinatown on aivan torin itäpuolella. '
+          + '1960-luvulla ahtaat pikkutalot oli määrä purkaa ja '
+          + 'korvata kerrostaloilla, kuten naapurustossa oli jo '
+          + 'tehty, mutta suunnitelmat kaatuivat, kun David Crombie '
+          + 'valittiin pormestariksi. Alueesta tuli marraskuussa 2006 '
+          + 'Kanadan kansallinen historiallinen kohde.',
+      kuvat: [
+        {
+          tiedosto: 'Kensington Market Toronto August 2017 03.jpg',
+          selite: 'Kadunkulman hedelmäkoju ja sen takana talojen eteen '
+            + 'rakennetut puodit.',
+          lahde: 'Arild Vågen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ontarion taidegalleria': {
+      aika: '1900',
+      teksti: 'Museon perustivat 1900 yksityiset kansalaiset ja '
+          + 'Toronto Society of Artsin jäsenet nimellä Art Museum of '
+          + 'Toronto; se rekisteröitiin 1903, sai nimen Art Gallery '
+          + 'of Toronto 1919 ja nykyisen nimensä 1966, kun '
+          + 'tehtäväksi tuli toimia koko provinssin taidemuseona. '
+          + 'Tontin museo sai perinnöksi: Harriet Boulton Smith '
+          + 'kuoli 1909 ja testamenttasi museolle kotinsa, vuonna '
+          + '1817 rakennetun Grangen kartanon. Omistus siirtyi 1911, '
+          + 'ja Grange avattiin museona kesäkuussa 1913. Talo on '
+          + 'Toronton vanhimpia säilyneitä rakennuksia ja '
+          + 'kansallinen historiallinen kohde vuodesta 1970.'
+          + '\n\n'
+          + 'Museon omalaatuisin osa syntyi sopimuksesta. '
+          + 'Yhdeksäntenä joulukuuta 1968 kuvanveistäjä Henry Moore '
+          + 'lupasi lahjoittaa merkittävän osan tuotannostaan sillä '
+          + 'ehdolla, että museo rakentaisi sille oman salin. Henry '
+          + 'Moore Sculpture Centre avattiin 26. lokakuuta 1974, ja '
+          + 'Moore valitsi itse salin mitat, lattian ja seinien värin '
+          + 'ja vaati siihen kattoikkunan luonnonvaloa varten. '
+          + 'Lahjoitus oli 300 teosta eli lähes koko hänen oma '
+          + 'kokoelmansa, ja museolla on nyt maailman suurin julkinen '
+          + 'Moore-kokoelma. Hanke sai myös kritiikkiä: '
+          + 'kanadalaisten taiteilijoiden järjestö arvosteli sitä, '
+          + 'että kokonainen keskus omistettiin ulkomaiselle '
+          + 'taiteilijalle.'
+          + '\n\n'
+          + 'Vuosien 2004–2008 laajennuksen teki Frank Gehry, joka on '
+          + 'syntynyt Torontossa mutta ei ollut siihen asti '
+          + 'rakentanut Kanadaan mitään. Tehtävä ei ollut suunnitella '
+          + 'uutta taloa vaan sitoa yhteen kuuden aiemman '
+          + 'laajennuksen sekamelska. Hanke maksoi 276 miljoonaa '
+          + 'dollaria; siitä syntyivät Dundas Streetin puolelle '
+          + 'kahdensadan metrin pituinen lasi- ja puukatos Galleria '
+          + 'Italia ja etelään viisikerroksinen lohko, jonka '
+          + 'julkisivussa on lasia ja mittatilaustyönä tehtyjä '
+          + 'titaanilevyjä. Se oli Gehryn ensimmäinen suunnitelma '
+          + 'ilman voimakkaasti vääntyvää teräsrunkoa, ja Globe and '
+          + 'Mail kutsui tulosta "pidättyväiseksi mestariteokseksi".',
+      kuvat: [
+        {
+          tiedosto: 'AGO Toronto 1.jpg',
+          selite: 'Galleria Italian kaareva lasiseinä Dundas Streetin '
+            + 'yläpuolella; kantavat kaaret ovat liimapuuta.',
+          lahde: 'Mykola Swarnyk, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaupungintalo: {
+      aika: '1965',
+      teksti: 'Toisen maailmansodan jälkeen vanha kaupungintalo oli '
+          + 'täynnä, ja kaupunki tarvitsi uuden. Vuonna 1955 kolme '
+          + 'suurta torontolaista arkkitehtitoimistoa esitteli '
+          + 'varovaisen ehdotuksen, ja se sai murskaavan '
+          + 'vastaanoton: Frank Lloyd Wright kutsui sitä '
+          + '"kliseeksi, joka on jo vanhentunut", ja Walter Gropius '
+          + '"hyvin huonoksi pseudomoderniksi suunnitelmaksi, joka on '
+          + 'Toronton arvolle sopimaton". Äänestäjät hylkäsivät '
+          + 'kahdeksantoista miljoonan dollarin hankkeen. Pormestari '
+          + 'Nathan Phillips ajoi tilalle kansainvälisen '
+          + 'suunnittelukilpailun — Ontarion ensimmäisen, johon '
+          + 'ulkomaiset arkkitehdit saivat osallistua. Huhtikuun '
+          + '1958 määräaikaan mennessä kelvollisia ehdotuksia oli '
+          + 'tullut 540 neljästäkymmenestäkahdesta maasta.'
+          + '\n\n'
+          + 'Suomalainen ehdotus oli ensin hylättyjen pinossa. Viljo '
+          + 'Revellin työ oli karsittu heti alkuvaiheessa, mutta '
+          + 'tuomariston jäsen Eero Saarinen saapui puolitoista '
+          + 'päivää myöhässä ja vaati nähdäkseen hylätyt. Hän poimi '
+          + 'niistä Revellin ehdotuksen ja sai muut harkitsemaan sitä '
+          + 'uudelleen. Revell pääsi kahdeksan finalistin joukkoon ja '
+          + 'oli ainoa suomalainen yhden kanadalaisen, yhden '
+          + 'tanskalaisen ja viiden yhdysvaltalaisen suunnitelman '
+          + 'rinnalla. Kuudentenakolmatta syyskuuta 1958 tuomaristo '
+          + 'valitsi hänet äänin kolme kaksi vastaan. Alvar Aalto '
+          + 'sähkötti oppilaalleen: "Harvoin kollega iloitsee näin '
+          + 'paljon toisen voitosta." Frank Lloyd Wright kutsui '
+          + 'suunnitelmaa "haudan päätykiveksi".'
+          + '\n\n'
+          + 'Revell muutti perheineen Torontoon ja työskenteli '
+          + 'paikallisen toimiston John B. Parkin Associatesin '
+          + 'kanssa; hänen työtoverinsa Heikki Castrén, Bengt '
+          + 'Lundsten ja Seppo Valjus tulivat perässä 1959. Koska '
+          + 'sekä Kanada että Suomi vaativat hänen palkkiostaan '
+          + 'veroa, hän muutti lokakuussa 1962 Bostoniin ja kävi '
+          + 'Torontossa kolme päivää viikossa. Syksyllä 1963 hän sai '
+          + 'halvauksen ja palasi Helsinkiin, kävi katsomassa '
+          + 'työmaata vielä kerran lokakuussa 1964 ja kuoli '
+          + 'sydänkohtaukseen viikkoa myöhemmin 54-vuotiaana — vuotta '
+          + 'ennen kuin talo avattiin 1965. Tornien julkisivut ovat '
+          + 'betonielementtiä, johon on upotettu kapeita '
+          + 'Botticino-marmorin nauhoja: niiden oli määrä saada seinät '
+          + 'kimaltamaan valonheittimissä.',
+      kuvat: [
+        {
+          tiedosto: 'Toronto city hall hdr.jpg',
+          selite: 'Kaksi kaarevaa tornia kiertää matalan, lautasenmuotoisen '
+            + 'neuvostosalin ympärille; kuva on otettu illalla ylhäältä.',
+          lahde: 'FranciscoDiez, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Elgin ja Winter Garden': {
+      aika: '1913',
+      teksti: 'Kaksi teatteria on ladottu päällekkäin: Winter Garden '
+          + 'on kuusi kerrosta Elginin yläpuolella. Ne ovat maailman '
+          + 'viimeiset säilyneet edwardiaaniset päällekkäiset '
+          + 'teatterit. Talo rakennettiin 1913 Marcus Loew\'n '
+          + 'teatteriketjun lippulaivaksi, ja sen suunnitteli '
+          + 'arkkitehti Thomas W. Lamb.'
+          + '\n\n'
+          + 'Molemmat salit tehtiin varieteelle ja aikakauden '
+          + 'lyhyille mykkäelokuville, mutta kumpikin eri yleisölle. '
+          + 'Alempi sali — alun perin Loew\'s Yonge Street Theatre — '
+          + 'oli kultaa, marmoria ja kupoli, ja siellä pyöri '
+          + 'jatkuva varietee- ja elokuvaohjelma. Ylempi Winter '
+          + 'Garden on niin sanottu tunnelmateatteri: maalaispuutarha '
+          + 'tähtitaivaan alla, seinillä kasvi- ja säleikkömaalauksia, '
+          + 'pylväinä puunrunkoja ja valaisimina lyhtyjä. Siellä '
+          + 'paikat olivat numeroituja ja liput kalliimpia, ja siellä '
+          + 'saattoi kokeilla uusia numeroita ilman riskiä alemman '
+          + 'salin ohjelmalle.'
+          + '\n\n'
+          + 'Vuonna 1928 alempi sali muutettiin äänielokuvalle ja '
+          + 'ylempi suljettiin. Se pysyi kiinni noin kuusikymmentä '
+          + 'vuotta, ja sisään jäi suuri varieteelavasteiden '
+          + 'kokoelma — nykyään maailman suurin säilynyt. '
+          + '1970-luvulla Elginissä esitettiin lähinnä halpoja '
+          + 'elokuvia. Ontarion perinnesäätiö osti talon 1981, ja '
+          + 'elokuvateatterina Elgin suljettiin 15. marraskuuta '
+          + 'samana vuonna. Maaliskuusta 1985 maaliskuuhun 1987 '
+          + 'salissa esitettiin Cats-musikaalia lähes '
+          + 'entisöimättömissä tiloissa, ja menestys osoitti talon '
+          + 'elinkelpoiseksi. Teatteri suljettiin 1987 täydellistä '
+          + 'entisöintiä varten ja avattiin uudelleen 1989. Vuodesta '
+          + '1979 Elgin on ollut yksi Toronton elokuvajuhlien '
+          + 'näytöspaikoista.',
+      kuvat: [
+        {
+          tiedosto: 'Winter Garden Theatre Toronto.jpg',
+          selite: 'Ylemmän salin katosta riippuu lehvästöä ja lyhtyjä, ja '
+            + 'pylväät on maalattu puunrungoiksi.',
+          lahde: 'ottmarliebert.com, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jääkiekkomuseo': {
+      aika: '1993',
+      teksti: 'Museo perustettiin 1943, mutta ei Torontoon vaan '
+          + 'Kingstoniin. Sen takana oli James T. Sutherland, '
+          + 'Kanadan amatöörijääkiekkoliiton entinen puheenjohtaja, '
+          + 'joka piti Kingstonia jääkiekon syntysijana. Yhdeksän '
+          + 'ensimmäistä kunniajäsentä nimettiin 30. huhtikuuta '
+          + '1945, vaikka museolla ei vielä ollut yhtään '
+          + 'rakennusta. Sutherland kuoli 1955, eikä rahoja '
+          + 'Kingstonin taloon ollut vuoteen 1958 mennessä saatu '
+          + 'kokoon. NHL:n puheenjohtaja Clarence Campbell kyllästyi '
+          + 'odottamaan ja veti liigan tuen pois.'
+          + '\n\n'
+          + 'Väliaikainen näyttely avattiin Toronton Exhibition '
+          + 'Placessa elokuussa 1958, ja sen näki saman vuoden '
+          + 'messuilla 350 000 kävijää. Menestys ratkaisi asian: NHL '
+          + 'maksoi pysyvän talon, jonka Kanadan pääministeri John '
+          + 'Diefenbaker avasi 26. elokuuta 1961. Ensimmäisenä '
+          + 'vuonna kävijöitä oli yli 750 000, ja sisäänpääsy oli '
+          + 'ilmainen vuoteen 1980 asti.'
+          + '\n\n'
+          + 'Vuoteen 1986 mennessä tilat kävivät ahtaiksi, ja museo '
+          + 'muutti 1993 keskustaan Yonge Streetin ja Front Streetin '
+          + 'kulmaan, vanhaan Montrealin pankin taloon, jonka olivat '
+          + 'piirtäneet Frank Darling ja S. George Curry. Uusi museo '
+          + 'avattiin 18. kesäkuuta 1993, ja näyttelytilaa oli 4 700 '
+          + 'neliömetriä eli seitsemän kertaa entinen. Esso Great '
+          + 'Hallissa on jokaisen kunniajäsenen muotokuva, ja salin '
+          + 'keskellä on Stanley Cup; alkuperäinen pokaali ja liigan '
+          + 'palkinnot säilytetään pankin vanhassa holvissa salin '
+          + 'sivussa. Vuodesta 1998 talossa on ollut oma osastonsa '
+          + 'Pohjois-Amerikan ulkopuoliselle jääkiekolle, ja '
+          + 'vuodesta 2010 naispelaajilla on oma valintaluokkansa.',
+      kuvat: [
+        {
+          tiedosto: 'Ceiling in Great Hall of Hockey Hall of Fame.jpg',
+          selite: 'Kunniasali on vanhan pankin sali, ja sen katossa on '
+            + 'lasimaalauskupoli.',
+          lahde: 'Rick Harris, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Rautatieasema: {
+      aika: '1927',
+      teksti: 'Aseman suunnitteli montrealilainen toimisto Ross and '
+          + 'Macdonald beaux-arts-tyyliin, ja tilaajina olivat '
+          + 'yhdessä rautatieyhtiöt Grand Trunk ja Canadian Pacific; '
+          + 'mukana olivat myös CPR:n arkkitehti Hugh Jones ja '
+          + 'torontolainen John M. Lyle. Rakennus on kolme toisiinsa '
+          + 'liittyvää laatikkoa Front Street Westin varrella, '
+          + 'yhteensä 229 metriä pitkä, ja se täyttää koko korttelin '
+          + 'eteläsivun Bay Streetin ja York Streetin välissä. '
+          + 'Pylväikössä on 22 roomalaisdoorilaista pylvästä '
+          + 'Bedfordin kalkkikiveä, kukin kaksitoista metriä korkea '
+          + 'ja 75 tonnin painoinen.'
+          + '\n\n'
+          + 'Aseman avasi 6. elokuuta 1927 Walesin prinssi Edward '
+          + 'kultasaksilla. Paikalla olivat muun muassa Kanadan '
+          + 'pääministeri William Lyon Mackenzie King ja Britannian '
+          + 'pääministeri Stanley Baldwin. Prinssi oli ensimmäinen '
+          + 'ihminen, joka astui junasta tälle asemalle, ja '
+          + 'päähallissa hän kuittasi näkemänsä lauseella: "te '
+          + 'rakennatte rautatieasemanne niin kuin me rakennamme '
+          + 'katedraalimme". Hänelle annettiin aseman ensimmäinen '
+          + 'lippu, joka kelpasi "ikuisesti" ja "kaikkien asemien '
+          + 'välillä". Neljä päivää myöhemmin raiteet siirrettiin '
+          + 'vanhalta asemalta tänne, ja koko hanke valmistui vasta '
+          + '1930, kun laiturikatos oli tehty.'
+          + '\n\n'
+          + 'Päähalli kulkee koko keskiosan pituudelta: 76 metriä '
+          + 'pitkä ja korkeimmillaan 27 metriä. Holvikatto on '
+          + 'kasetoitua Guastavino-laattaa, seinät Missourin '
+          + 'Zumbro-kiveä ja lattia Tennesseen marmoria '
+          + 'kalanruotokuviossa. Räystäslistan alle on hakattu niiden '
+          + 'kanadalaisten määränpäiden nimet, joihin näiden kahden '
+          + 'rautatieyhtiön junilla pääsi aseman valmistuessa — '
+          + 'itärannikolta Vancouveriin asti, ja moni niistä on yhä '
+          + 'määränpää. Seitsemännessä kerroksessa oli vuodesta 1927 '
+          + 'vuoteen 2008 ampumarata, jolla rautatiepoliisit '
+          + 'harjoittelivat ja jonne myöhemmin pääsivät muutkin; '
+          + 'kaupunki sulki sen eleenä aseväkivaltaa vastaan. Asema '
+          + 'on ollut kansallinen historiallinen kohde vuodesta 1975, '
+          + 'ja sen kautta kulkee yli 72 miljoonaa matkustajaa '
+          + 'vuodessa.',
+      kuvat: [
+        {
+          tiedosto: 'Union Station, Toronto, Ontario, 2025-08-25 02.jpg',
+          selite: 'Päähallin holvikatto on kasetoitua Guastavino-laattaa.',
+          lahde: 'Chris Woodrich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

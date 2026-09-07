@@ -439,6 +439,26 @@ export const UUTISLAHTEET = {
     syote: 'https://aps.sn/feed/',
   },
   /*
+   * ETELÄ-AFRIKKA (ZAF, Opus 7.9.2026). Daily Maverick on
+   * kapkaupunkilainen riippumaton uutissivusto vuodesta 2009.
+   * Testattu 7.9.2026 kahdesti kuten resepti vaatii: syötteessä 53
+   * juttua, ja artikkelisivulla on <article>-lohko (12 yli 60 merkin
+   * kappaletta) sekä og:image.
+   *
+   * Testattu ja hylätty: IOL (syöte 403), EWN ja SowetanLIVE
+   * (rss-osoitteet vastaavat 301:llä ja uudelleenohjauksen päässä
+   * 404:llä, eikä worker seuraa ohjauksia), TimesLIVE (404),
+   * News24:n feeds.24.com (yhteys ei aukea tästä ympäristöstä).
+   * SABC News läpäisi molemmat testit ja on varalla, mutta se on
+   * valtion yleisradioyhtiö — sama valinta kuin Keniassa, jossa
+   * yksityinen Capital FM valittiin KBC:n ohi.
+   */
+  ZAF: {
+    nimi: 'Daily Maverick',
+    kieli: 'en',
+    syote: 'https://www.dailymaverick.co.za/dmrss/',
+  },
+  /*
    * GUATEMALA, NICARAGUA JA PANAMA (Opus 6.9.2026, maalehtierä
    * GTM+NIC+PAN). Jokainen lähde on testattu kahdesti kuten resepti
    * vaatii: ensin syöte, sitten yksi artikkelisivu.
@@ -516,6 +536,75 @@ export const UUTISLAHTEET = {
     nimi: 'Radio Tamazuj',
     kieli: 'en',
     syote: 'https://www.radiotamazuj.org/en/feed',
+  },
+  /*
+   * Shabelle Media Network on mogadishulainen mediatalo, joka
+   * julkaisee somaliksi. Testattu 7.9.2026: syötteessä kymmenen
+   * juttua, ja artikkelisivun <article>-lohkossa on neljä yli 60
+   * merkin kappaletta sekä og:image. Leipäteksti alkaa heti jutusta,
+   * ilman jakopalkkia. MyMemory kääntää somalista suomeen (so|fi
+   * kokeiltu samana päivänä).
+   *
+   * Testattu ja hylätty: Caasimada Online (www.caasimada.net/feed/,
+   * kymmenen juttua) läpäisi molemmat testit, mutta sen
+   * <article>-lohkon ensimmäinen pitkä kappale on jakopalkin ja
+   * kuvatekstin sekasotku, joka päätyisi popupin alkuun; Goobjoog
+   * (goobjoog.com/feed/) ja Puntland Post (puntlandpost.net/feed/)
+   * jäsentyvät hyvin mutta niiltä puuttuu og:image; Hiiraan Online
+   * (rss/news.aspx) vastaa 404:llä, Garowe Online 500:lla ja
+   * caasimada.net ilman www:tä 301:llä (worker ei seuraa
+   * uudelleenohjauksia); Radio Muqdisho, SONNA ja Somaliland Standard
+   * ohjaavat syöteosoitteensa muualle.
+   */
+  SOM: {
+    nimi: 'Shabelle Media',
+    kieli: 'so',
+    syote: 'https://shabellemedia.com/feed/',
+  },
+  /*
+   * Keskusuutistoimisto CNA (中央通訊社) on Taiwanin uutistoimisto, ja
+   * taulussa on sen 地方新聞 eli kotimaan aluejuttujen syöte. Lähde
+   * valittiin nimenomaan uutistoimistoksi: se kirjoittaa lyhyitä
+   * asiauutisia ilman lehtien omaa linjaa, mikä sopii Taiwanin
+   * herkkyyteen (spec-asia.md). Testattu 7.9.2026: syötteessä
+   * kaksitoista juttua, ja artikkelisivun <article>-lohkossa on kuusi
+   * yli 60 merkin kappaletta sekä og:image (neljästä koetellusta
+   * jutusta kolmessa oikea kuva, yhdessä toimituksen oma
+   * varalogo).
+   *
+   * Syötteen osoite on feedburnerissa, koska cna.com.tw:n omat
+   * /rss/*.xml-osoitteet vastaavat 404:llä; feedburner palauttaa
+   * suoraan 200:n eikä uudelleenohjausta, jota worker ei seuraisi.
+   * Workerin sallittujen listalle lisättiin siksi kaksi alkua:
+   * feeds.feedburner.com/rsscna/ (vain tämä syötepolku) ja
+   * www.cna.com.tw/ (artikkelisivut).
+   *
+   * Testattu ja hylätty: 自由時報 (news.ltn.com.tw/rss/all.xml) —
+   * syöte ja og:image kunnossa, mutta [itemprop="articleBody"]
+   * -lohkon ensimmäinen <p> sisältää sivun oman javascriptin, joka
+   * päätyisi popupin ensimmäiseksi kappaleeksi; 聯合報 (udn.com
+   * /rssfeed/news/2/6638) palauttaa syötteen, jonka kaikki juttukentät
+   * ovat tyhjiä; 公視新聞網 (news.pts.org.tw/xml/newsfeed.xml) on
+   * Atom-syöte, eikä js/uutiset.js osaa lukea <entry>-elementtejä.
+   */
+  TWN: {
+    nimi: 'CNA',
+    kieli: 'zh',
+    syote: 'https://feeds.feedburner.com/rsscna/local',
+  },
+  /*
+   * UZBEKISTAN (Opus 7.9.2026). Gazeta.uz on maan luetuimpia
+   * uutissivustoja, ja sillä on erilliset syötteet uzbekiksi ja
+   * venäjäksi; tässä on uzbekinkielinen (/oz/rss/), koska
+   * paikalliskielinen lähde on ensisijainen. Syöte antaa 20 juttua, ja
+   * artikkelisivulta löytyvät sekä [itemprop="articleBody"] että
+   * og:image (testattu 7.9.2026 workerin User-Agentilla). Syöte ja
+   * artikkelisivut ovat samalla isäntänimellä.
+   */
+  UZB: {
+    nimi: 'Gazeta.uz',
+    kieli: 'uz',
+    syote: 'https://www.gazeta.uz/oz/rss/',
   },
   /*
    * ETIOPIA (ETH) JÄI ILMAN LÄHDETTÄ (Opus 6.9.2026) — Addis Abeban ja

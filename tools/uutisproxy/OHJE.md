@@ -286,6 +286,27 @@
 > js/packs/uutislahteet.js:n VUT-kommentissa. Julkaisu Git-
 > integraatiolla mainista.
 >
+> **Päivitys 7.9.2026 (Somalia):** sallittuihin lisättiin
+> shabellemedia.com (maalehti SOM, testattu 7.9.2026: somalinkielisessä
+> syötteessä kymmenen juttua, ja artikkelisivun `<article>`-lohkossa on
+> neljä yli 60 merkin kappaletta sekä `og:image`). Osoite on ilman
+> www-etuliitettä, koska worker ei seuraa uudelleenohjauksia. Caasimada
+> Online läpäisi testit mutta hylättiin, koska sen jutun ensimmäiseksi
+> kappaleeksi jäsentyy jakopalkki; Goobjoogilta ja Puntland Postilta
+> puuttuu `og:image`. Perustelut ovat js/packs/uutislahteet.js:n
+> SOM-kommentissa. Julkaisu Git-integraatiolla mainista.
+>
+> **Päivitys 7.9.2026 (Etelä-Afrikka):** sallittuihin lisättiin
+> www.dailymaverick.co.za (maalehti ZAF, testattu 7.9.2026: syötteessä
+> 53 juttua, artikkelisivun `<article>`-lohkosta jäsentyy 12 yli 60
+> merkin kappaletta ja `og:image` löytyy). Hylätyt: IOL (syöte 403),
+> EWN ja SowetanLIVE (301 ja ohjauksen päässä 404 — worker ei seuraa
+> uudelleenohjauksia), TimesLIVE (404) ja News24 (feeds.24.com ei
+> aukea tästä ympäristöstä). SABC News läpäisi testit ja on varalla,
+> mutta se on valtion yleisradio, joten riippumaton Daily Maverick
+> valittiin sen ohi (sama linja kuin Keniassa). Julkaisu Git-
+> integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,
@@ -480,3 +501,22 @@ pitää syötettä 10 minuutin välimuistissa — perhekäytössä rajat eivät
 tule koskaan vastaan. Käännösnappi käyttää MyMemory-palvelua suoraan
 selaimesta (ilmainen, n. 5 000 merkkiä päivässä per käyttäjä) — se ei
 kulje workerin kautta.
+
+> **Päivitys 7.9.2026 (Taiwan):** sallittuihin lisättiin
+> `feeds.feedburner.com/rsscna/` ja `www.cna.com.tw` (maalehti TWN,
+> testattu 7.9.2026: uutistoimisto CNA:n aluejuttujen syötteessä
+> kaksitoista juttua, ja artikkelisivun `<article>`-lohkosta jäsentyy
+> kuusi yli 60 merkin kappaletta sekä `og:image`). Syöte on
+> feedburnerissa, koska cna.com.tw:n omat `/rss/*.xml`-osoitteet
+> vastaavat 404:llä; feedburner-alku on rajattu `rsscna`-polkuun,
+> ettei workerista tule yleistä feedburner-välitystä. Hylätyt lähteet
+> on kirjattu `js/packs/uutislahteet.js`:n TWN-kommenttiin.
+
+> **Päivitys 7.9.2026 (Uzbekistan):** sallittuihin lisättiin
+> `www.gazeta.uz` (maalehti UZB, testattu 7.9.2026: uzbekinkielinen
+> syöte `/oz/rss/` antaa 20 juttua, ja artikkelisivulta jäsentyy
+> leipäteksti `[itemprop="articleBody"]`-lohkosta — `<article>`-elementtiä
+> sivulla ei ole — ja `og:image` löytyy). Syöte ja artikkelisivut ovat
+> samalla isäntänimellä. Kun.uz vastaa RSS-osoitteeseensa 404:llä,
+> Daryo.uz ohjaa 301:llä ja UzDaily 302:lla, eikä worker seuraa
+> uudelleenohjauksia. Julkaisu tapahtuu mainista automaattisesti.

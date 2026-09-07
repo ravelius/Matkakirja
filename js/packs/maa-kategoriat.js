@@ -25293,6 +25293,1025 @@ export const MAA_KATEGORIAT = {
     },
   ],
   /*
+   * TAIWAN (TWN) — maalehti, Opus 7.9.2026.
+   *
+   * SISÄLTÖLINJAUS on sama sitova linjaus kuin Taipein
+   * kaupunkilehdessä (kulttuuri-kategoriat.js, taipei-lohko;
+   * docs/aasia-tyoaineisto/spec-asia.md): EI NYKYPOLITIIKKAA eikä
+   * saaren asemaa koskevaa kysymystä. Historia kerrotaan
+   * päivämäärinä ja hallintomuutoksina ilman kummankaan osapuolen
+   * kehystä, ja painopiste on kielessä, kaupassa, ruoassa,
+   * luonnossa, musiikissa ja tekniikassa. POIS JÄTETTY KOKONAAN:
+   * saaren nykyinen asema ja sitä koskeva kiista, puoluepolitiikka
+   * ja vaalit, sotilaalliset aiheet, sotatilan kausi ja sen
+   * kielipolitiikka, vuoden 1947 tapahtumat, vuoden 1930 Mushan
+   * kapina, vuoden 1999 maanjäristyksen uhriluvut sekä Alishanin
+   * radan onnettomuudet. Teresa Tengin jutussa ei kerrota, missä
+   * maissa hänen levyjään sai myydä, vaan mitä hän lauloi.
+   *
+   * TYÖNJAKO. Taipeilla on oma kaupunkilehti (kulttuuri-kategoriat.js:
+   * Taipei 101, kansallinen palatsimuseo, Shilinin yömarkkina,
+   * Beitoun kuumat lähteet, altaan kolme kylää, Dihua-kadun teekauppa,
+   * kaupunginmuuri ja Taihokun kaava) ja maalla yksitoista
+   * karttanostoa (maastokohteet-twn.js: Yu Shan, Taiwaninsalmi,
+   * Taroko, Santo Domingo, Jiufen, Lukang, Chaotian, Fort Zeelandia,
+   * Wushantou, Sanxiantai, Penghu), eläintäky (elaintakyt.js:
+   * formosanmustakarhu) ja kaksi skandaalikorttia (skandaalit.js:
+   * Roverin haaksirikko 1867, Lanyu). Maalehti EI toista niistä
+   * yhtäkään: aiheet on valittu niin, että lehti täydentää karttaa.
+   * Kaksi tietoista kaikua: hollantilaisten peurannahkakauppa
+   * (historia) ja formosanpeuran katoaminen ja paluu (luonto)
+   * kertovat saman asian kaupan ja lajin näkökulmasta, ja Fort
+   * Zeelandian karttakortti kertoo linnoituksesta, tämä lehti
+   * kaupasta.
+   *
+   * FAKTAT en-Wikipedian raakateksteistä (action=query&prop=extracts,
+   * haettu 7.9.2026): Taiwan, Austronesian peoples, Dutch Formosa,
+   * Koxinga, Kingdom of Tungning, George Leslie Mackay, Beef noodle
+   * soup, Bubble tea, Ló͘-bah-pn̄g, Pineapple cake, Taiwan blue
+   * magpie, Oncorhynchus masou formosanus, Formosan sika deer,
+   * Black-faced spoonbill, Teresa Teng, Taiwanese opera, Difang and
+   * Igay Duana, Bunun people, Alishan Forest Railway, Camphor, Giant
+   * Bicycles, Hsinchu Science Park ja TSMC. Faktapohja ja
+   * ristiriidat: docs/mantereet-tyoaineisto/faktapohja-taiwan.md.
+   *
+   * KUVAT: 16 nostoa kahdestakymmenestä sai kuvan Commonsin
+   * rajapinnasta (lisenssi ja tekijä extmetadatasta, leveys yli
+   * 1200 px, jokainen katsottu silmin 640 px:n esikatselussa).
+   * NELJÄ NOSTOA JÄI TIETOISESTI KUVATTOMAKSI, koska kelvollista
+   * kuvaa ei ollut: kuplatee (Chun Shui Tangin lasista otetussa
+   * kuvassa on taustalla tunnistettavia kasvoja), Teresa Teng
+   * (ainoa vapaa kuva on näyttelyn avajaiskuva, jossa on
+   * tunnistettavia henkilöitä), Difangin amis-laulu (Amis Music
+   * Festivalin kuvissa on tunnistettavia kasvoja) ja bununien
+   * pasibutbut (ainoa osuma on vuoden 1935 muotokuva). Nämä neljä
+   * on tilattu kuvaputkelta. Hylättyjä muita: Qigun
+   * lusikkanokka-alueen kuva esittää tiiroja eikä lusikkanokkia,
+   * Giantin messuosaston kuvassa on sumennettu alue ja Mackayn
+   * elämäkerran 1895 kuvalevyssä on painettu tekijänoikeusteksti.
+   *
+   * MINITEHTÄVÄ on yksi (ruoka-sivu), ja sen vastaus löytyy saman
+   * sivun nostosta R2. Tarkistettu, ettei se osu asia-questions.js:n
+   * Taipei-visaan (siellä kysytään tornia, yömarkkinoita, saarta,
+   * mikrosiruja ja asemaa — ei kuplateetä).
+   */
+  TWN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Saarelta lähti kolmetuhatta vuotta ennen ajanlaskua kieli, '
+        + 'joka päätyi Madagaskarille asti. Myöhemmin samalle rannalle '
+        + 'tultiin hakemaan peurannahkaa, sokeria ja teetä.',
+      nostot: [
+        {
+          otsikko: 'Kieli lähti saarelta veneellä',
+          aika: 'n. 3000–1500 eaa.',
+          tiedosto: 'The Traditional Boat Of Tao People (228631843).jpeg',
+          teksti: 'Austronesialaisten kielten kotiseutu on tutkijoiden '
+            + 'valtavirtakäsityksen mukaan Taiwan ja Penghun saaristo: '
+            + 'saaren alkuperäiskansojen kielet ovat suvun syvimmät haarat, '
+            + 'ja kaikki muut sen sadat kielet ovat lähtöisin täältä. Liike '
+            + 'alkoi noin 3000–1500 eaa., ja Filippiinien pohjoisimmille '
+            + 'Batanes-saarille päästiin noin 2200 eaa. Purjetta käytettiin '
+            + 'jo ennen vuotta 2000 eaa., ja sen sekä kaksirunkoisten ja '
+            + 'puomikellukkaisten veneiden avulla asutus levisi lopulta '
+            + 'Madagaskarille lännessä, Pääsiäissaarelle idässä ja '
+            + 'Uuteen-Seelantiin noin 1250 jaa. Mukana kulkivat riisi, '
+            + 'banaani, kookos, taaro, kana, sika ja koira.',
+          selite: 'Lanyun saaren tao-kansa on yksi Taiwanin austronesialaisista '
+            + 'alkuperäiskansoista, ja sen merikulttuurissa veneenrakennus ja '
+            + 'kalastus ovat rituaalisesti tärkeimmät taidot.',
+          lahde: 'Cho Hsun Lu, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Tao people',
+        },
+        {
+          otsikko: 'Peurannahat lähtivät Japaniin',
+          aika: '1624–1662',
+          tiedosto: '1640 Map of Formosa-Taiwan by Dutch 荷蘭人所繪福爾摩沙-臺灣.jpg',
+          teksti: 'Hollantilainen Itä-Intian kauppakomppania asettui '
+            + 'Formosalle vuonna 1624 käydäkseen kauppaa Kiinan ja Japanin '
+            + 'kanssa. Pian yhtiö huomasi, mikä saarella oli arvokkainta: '
+            + 'läntisillä tasangoilla laidunsi valtavia formosanpeurojen '
+            + 'laumoja, ja niiden sitkeästä nahasta japanilaiset tekivät '
+            + 'samuraiden haarniskoja. Vuonna 1638 saarelta vietiin Japaniin '
+            + '151 400 peurannahkaa. Toinen suuri vientitavara oli sokeri: '
+            + 'vuonna 1658 Taiwan tuotti 1 730 000 catty-painoa, josta '
+            + '800 000 purjehti Persiaan ja 600 000 Japaniin. Kolmas oli '
+            + 'rikki, jota kerättiin Keelungin ja Tamsuin seudulta.',
+          selite: 'Johannes Vingboonsin noin vuonna 1640 piirtämässä kartassa saari '
+            + 'on nimeltään Het Eylant Formosa ja sen edustalla ovat Pescadores '
+            + 'eli Penghun saaret.',
+          lahde: 'Johannes Vingboons, Wikimedia Commons (PD)',
+          wiki: 'Dutch Formosa',
+        },
+        {
+          otsikko: 'Kuningaskunta, joka kesti kaksikymmentä vuotta',
+          aika: '1662–1683',
+          tiedosto: 'Tainan Taiwan Koxingas-Shrine-02.jpg',
+          teksti: 'Zheng Chenggong syntyi 27. elokuuta 1624 Hiradossa '
+            + 'Japanissa fujianilaisen kauppiaan ja japanilaisen äidin '
+            + 'poikana, ja hänet tunnetaan kunnianimellä Koxinga. Vuonna '
+            + '1662 hänen joukkonsa valtasivat hollantilaisten '
+            + 'päälinnoituksen, ja saarelle syntyi hallinto, joka oli '
+            + 'ensimmäinen pääosin han-kiinalainen valtio Taiwanin '
+            + 'historiassa. Koxinga kuoli samana vuonna. Hänen poikansa '
+            + 'Zheng Jing antoi alueelle 1664 nimen Tungning, itäinen '
+            + 'tyyneys — nimenvaihdos kertoi, että saarelle aiottiin jäädä '
+            + 'eikä vain odottaa paluuta. Kuningaskunta hallitsi Taiwanin '
+            + 'lounaisosaa ja Penghuta, ja Qing-dynastia liitti sen itseensä '
+            + 'vuonna 1683.',
+          selite: 'Tainanissa on Koxingalle omistettu pyhäkkö, jonka päärakennus on '
+            + 'punainen ja sen katto vihreä.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Koxinga',
+        },
+        {
+          otsikko: 'Hammaslääkäri Tamsuissa',
+          aika: '1872',
+          tiedosto: '牛津學堂.JPG',
+          teksti: 'Kanadalainen George Leslie Mackay saapui Taiwaniin 29. '
+            + 'joulukuuta 1871 ja asettui seuraavana vuonna Tamsuihin, jossa '
+            + 'hän asui kuolemaansa 1901 asti. Työ alkoi kiertävästä '
+            + 'hammaslääkärintoimesta: Mackay veti kipeitä hampaita kylästä '
+            + 'toiseen kulkiessaan. Hän opetteli puhumaan sujuvaa '
+            + 'taiwaninhokkienia ja meni naimisiin taiwanilaisen Tiuⁿ '
+            + 'Chhang-miân kanssa. Oppilaidensa kanssa hän perusti '
+            + 'kuusikymmentä seurakuntaa. Vuonna 1882 avattiin Oxford '
+            + 'College, jonka rahat kerättiin hänen kotipitäjässään '
+            + 'Ontariossa, ja vuotta myöhemmin tyttökoulu; samana vuonna '
+            + 'alkoi toimia Tamsuin sairaala. Isoisän matkavuonna 1873 '
+            + 'Mackay oli ollut Tamsuissa vasta vuoden.',
+          selite: 'Oxford College valmistui Tamsuihin 1882, ja rakennuksen otsikkoon '
+            + 'on muurattu sen nimi ja vuosiluku. Nykyään siinä toimii Aletheian '
+            + 'yliopisto.',
+          lahde: '勤岸, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'George Leslie Mackay',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kaksi taiwanilaista ruokalajia on lähtenyt maailmalle: '
+        + 'liemi, jota haudutetaan vuorokausi, ja tee, johon pudotettiin '
+        + 'tapiokahelmiä kesken työpaikkakokouksen.',
+      nostot: [
+        {
+          otsikko: 'Liemi kiehuu vuorokauden',
+          tiedosto: 'Yong Kang Beef Noodle 1.jpg',
+          teksti: 'Punaruskeaksi haudutettu naudanlihanuudelikeitto on '
+            + 'Taiwanin tunnetuin oma ruokalaji. Sen kehittivät saarelle '
+            + 'Sichuanista tulleet siirtolaiset, ja siksi sitä kutsutaan '
+            + 'Taiwanissa usein sichuanilaiseksi nuudelikeitoksi — mikä '
+            + 'sekoittaa asian, koska Sichuanissa on omat toisenlaiset '
+            + 'versionsa. Liha haudutetaan liemessä hitaasti, joskus päiviä, '
+            + 'ja liemi saa porista luuytimen kanssa: osa kojuista keittää '
+            + 'sitä yli vuorokauden. Päälle tulee hapansäilöttyä sinappikaalia '
+            + 'ja kevätsipulia. Lanzhoun kuuluisa versio on juuri päinvastainen: '
+            + 'kirkas liemi ilman soijakastiketta.',
+          selite: 'Punaruskeaksi haudutetussa naudanlihanuudelikeitossa on lihaa, '
+            + 'vehnänuudelia ja kevätsipulia, ja lientä keitetään joskus yli '
+            + 'vuorokauden.',
+          lahde: 'Minghong, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Beef noodle soup',
+        },
+        {
+          otsikko: 'Helmet putosivat teehen kokouksessa',
+          aika: '1986–1988',
+          teksti: 'Kuplateellä on kaksi kilpailevaa syntytarinaa. Taichungin '
+            + 'Chun Shui Tang -teehuoneen perustaja Liu Han-Chieh oli nähnyt '
+            + 'Japanissa 1980-luvulla, että kahvia tarjotaan kylmänä, ja alkoi '
+            + 'tarjota teetä samoin. Teehuoneen tuotekehittäjä Lin Hsiu Hui '
+            + 'kertoo kaataneensa vuonna 1988 tapiokahelmiä teehensä kesken '
+            + 'henkilökunnan kokouksen ja kehottaneensa muitakin maistamaan; '
+            + 'juomasta tuli talon myydyin. Tainanin Hanlin-teehuone sanoo '
+            + 'keksineensä saman jo 1986, kun omistaja Tu Tsong-he näki torilla '
+            + 'valkoisia tapiokapalloja. Vuonna 2009 teehuoneet veivät asian '
+            + 'oikeuteen.',
+        },
+        {
+          otsikko: 'Ruskea kastike valkoisen riisin päällä',
+          tiedosto: 'Lurou fan(Taiwanese cuisine).jpg',
+          teksti: 'Arkiruoista tavallisin on lihasilppuriisi: possunkylkeä '
+            + 'kuutioidaan pieneksi, paistetaan siivutetun salottisipulin '
+            + 'kanssa ja haudutetaan soijakastikkeessa sokerin, riisiviinin ja '
+            + 'pippurin kera, kunnes kastike on tummanruskeaa. Annos on kulhollinen '
+            + 'höyrytettyä riisiä ja lusikallinen kastiketta päällä. Vuonna 2011 '
+            + 'Michelinin vihreän oppaan Taiwanin laitos kirjoitti ruoan olevan '
+            + 'kotoisin Shandongista — luultavasti siksi, että nimen ensimmäinen '
+            + 'merkki kirjoitetaan usein samalta kuulostavalla merkillä, joka on '
+            + 'Shandongin vanha nimi. Taipein kaupunki vaati julkisesti korjausta.',
+          selite: 'Lihasilppuriisissä soijakastikkeessa haudutettu possunkylki '
+            + 'lusikoidaan höyrytetyn riisin päälle.',
+          lahde: 'Jzest, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+        {
+          otsikko: 'Ananas kääritään voitaikinaan',
+          tiedosto: 'Pineapple Pastry.JPG',
+          teksti: 'Ananasleivos on paksu neliö murenevaa taikinaa, jonka sisällä '
+            + 'on tiivis ananashillo. Ananas tuli saarelle portugalilaisten '
+            + 'kauppiaiden mukana, ja Japanin hallintokaudella siitä tuli tärkeä '
+            + 'vientikasvi: 1930-luvun lopulla Taiwan oli maailman kolmanneksi '
+            + 'suurin ananaksen viejä. Kun vienti myöhemmin kääntyi kotimaiseksi '
+            + 'tuoremyynniksi, leipomot alkoivat käyttää ylijäämän leivoksiin. '
+            + 'Nimi kantaa toivotuksen: hokkieniksi ananas kuulostaa lähes samalta '
+            + 'kuin sanonta, joka tarkoittaa vaurauden tulemista, ja siksi leivoksia '
+            + 'annetaan kihlajaislahjaksi.',
+          selite: 'Ananasleivoksen kuori on murenevaa voitaikinaa ja sisus tiivistä '
+            + 'ananashilloa.',
+          lahde: 'Mk2010, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Pineapple cake',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten oikeus ratkaisi kuplateen keksijäkiistan 2019?',
+        vaihtoehdot: [
+          'Taichungin teehuone voitti',
+          'Tainanin teehuone voitti',
+          'Kumpikaan ei saanut yksinoikeutta',
+          'Teehuoneet saivat yhteisen patentin',
+        ],
+        oikea: 2,
+        fakta: 'Noin kymmenen vuoden käsittelyn jälkeen tuomioistuin katsoi, '
+          + 'ettei kuplatee ole patentoitavissa: se on tavallinen ruokatuote, '
+          + 'jonka kuka tahansa saa valmistaa.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Saari on kapea mutta korkea, ja se on kerännyt lajeja, joita '
+        + 'ei ole missään muualla: lohi vuoristopurossa, harakka jonka pyrstö '
+        + 'on pidempi kuin ruumis, ja peura joka ehti kadota kokonaan.',
+      nostot: [
+        {
+          otsikko: 'Harakka, joka toi tulen vuorelta',
+          tiedosto: 'Urocissa caerulea, Taiwan 2.jpg',
+          teksti: 'Taiwaninsiniharakka on saaren oma laji, jota ei tavata '
+            + 'missään muualla. Se on 63–68 senttiä pitkä, ja siitä pyrstö on '
+            + '34–42 senttiä: pää, kaula ja rinta ovat mustat, silmät keltaiset, '
+            + 'nokka ja jalat punaiset ja loput sinistä. Lintu liikkuu kolmen ja '
+            + 'kahdentoista yksilön parvissa, jotka lentävät jonossa toistensa '
+            + 'perässä. Pesällä auttavat edellisten vuosien poikaset. Tsou-, '
+            + 'thao- ja bununkansojen suuressa tulvatarinassa ihmiset pakenivat '
+            + 'vuorten huipuille, ja siniharakka uhrasi itsensä kantaakseen '
+            + 'viimeisen sytykkeen Yu Shanin huipulta takaisin heille.',
+          selite: 'Taiwaninsiniharakalla on musta pää, keltaiset silmät, punainen '
+            + 'nokka ja pyrstö, joka on pidempi kuin muu lintu.',
+          lahde: 'Charles Lam from Hong Kong, China, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Taiwan blue magpie',
+        },
+        {
+          otsikko: 'Lohi, joka jäi vuorille',
+          tiedosto: '水波光影中的櫻花鉤吻鮭.jpg',
+          teksti: 'Formosanlohi on jäänne ajalta, jolloin viileä vesi ulottui '
+            + 'alemmas: kun Dajia-joen alajuoksu lämpeni viime jääkauden '
+            + 'jälkeen, kanta jäi loukkuun vuoristolaaksoihin. Se on '
+            + 'salmonidien eteläisin luontainen esiintymä Aasiassa ja elää vain '
+            + 'yli 1 500 metrissä, missä vesi pysyy alle 17 asteessa. Japanin '
+            + 'hallinto julisti kalan kansallisaarteeksi 1938. Sen jälkeen kanta '
+            + 'romahti: vuonna 1992 yksilöitä laskettiin enää 200. Shei-Pan '
+            + 'kansallispuistossa aloitettiin 1995 istutustyö, ja maaliskuussa '
+            + '2023 laskennassa löytyi 15 374 kalaa.',
+          selite: 'Formosanlohi elää kirkkaissa vuoristopuroissa yli 1 500 metrin '
+            + 'korkeudessa, missä vesi pysyy alle 17 asteessa.',
+          lahde: 'Kyo chen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Peura katosi ja palasi',
+          tiedosto: '2010 07 19340 7195 Wenshan District, Taipei, Zoo, Cervus nippon taiouanus, Taiwan.JPG',
+          teksti: 'Formosanpeura tuli saarelle jääkausien aikana, kun matala '
+            + 'merenpinta yhdisti Taiwanin mantereeseen. Sen paras elinalue oli '
+            + 'juuri se länsirannikon alava tasanko, jolle ihmiset sittemmin '
+            + 'rakensivat. Hollantilaisten kuutena vuosikymmenenä saarelta '
+            + 'vietiin kahdesta neljään miljoonaa peurannahkaa, ja metsästys '
+            + 'jatkui sen jälkeenkin. Viimeinen tiedossa oleva luonnonvarainen '
+            + 'yksilö tapettiin 1969. Laji säilyi tarhoissa, ja 1984 aloitettiin '
+            + 'palautus: Taipein eläintarhasta vietiin 22 peuraa Kentingin '
+            + 'kansallispuistoon, aitauksissa odotettiin kymmenen vuotta ja '
+            + '1994 ne päästettiin vapaaksi. Nyt niitä on yli tuhat.',
+          selite: 'Formosanpeurojen palautus luontoon alkoi Taipein eläintarhan '
+            + 'yksilöistä, ja tarhassa lajia hoidetaan yhä.',
+          lahde: 'Lord Koxinga, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Formosan sika deer',
+        },
+        {
+          otsikko: 'Lusikkanokka talvehtii lounaassa',
+          tiedosto: '101777台南黑面琵鷺.jpg',
+          teksti: 'Mustanaamalusikkanokka on kuudesta lusikkanokkalajista se, '
+            + 'jonka levinneisyys on kaikkein kapein, ja ainoa uhanalaiseksi '
+            + 'luokiteltu. Se pesii muutamalla pienellä kalliosaarella Korean '
+            + 'niemimaan länsipuolella ja talvehtii neljässä paikassa: '
+            + 'Taiwanissa, Hongkongissa, Macaossa ja Vietnamissa. Lintu '
+            + 'ruokailee hämärissä kahlaamalla matalassa vedessä ja '
+            + 'huitomalla lapiomaista nokkaansa puolelta toiselle, kunnes se '
+            + 'osuu saaliiseen — siksi se on täysin riippuvainen vuorovesilietteistä. '
+            + '1980-luvulla laji oli lähellä hävitä. Vuoden 2012 laskennassa '
+            + 'lintuja oli 2 693 ja vuoden 2022 laskennassa 6 162.',
+          selite: 'Mustanaamalusikkanokka ruokailee matalassa vedessä huitomalla '
+            + 'lapiomaista nokkaansa puolelta toiselle.',
+          lahde: '邱文強, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Black-faced spoonbill',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Saaren äänet ovat kulkeneet kauas: kahdeksalla kielellä '
+        + 'laulanut tähti, oma oopperamuoto, ja kylvöjuhlan laulu, joka '
+        + 'päätyi olympialaisten tunnusmusiikkiin ilman lupaa.',
+      nostot: [
+        {
+          otsikko: 'Kahdeksan kieltä ja tuhat seitsemänsataa laulua',
+          aika: '1953–1995',
+          teksti: 'Teresa Teng syntyi 29. tammikuuta 1953 Baozhongissa '
+            + 'Yunlinin piirikunnassa. Hän aloitti televisiossa vuonna 1967 ja '
+            + 'jätti koulun neljätoistavuotiaana keskittyäkseen musiikkiin; '
+            + 'taipalensa alussa hän esiintyi taipeilaisessa yökerhossa '
+            + 'seitsemänäkymmenä iltana peräkkäin, joka ilta puolitoista tuntia. '
+            + 'Japanissa hänen toinen singlensä Airport myi 1974 seitsemänsataatuhatta '
+            + 'kappaletta. Kaikkiaan hän levytti yli 1 700 laulua kahdeksalla '
+            + 'kielellä: mandariinilla, hokkienilla, kantoninkiinalla, '
+            + 'shanghain murteella, japaniksi, indonesiaksi, englanniksi ja '
+            + 'italiaksi. Hän kuoli äkillisesti lomallaan Chiang Maissa 8. '
+            + 'toukokuuta 1995.',
+        },
+        {
+          otsikko: 'Ainoa ooppera, joka syntyi täällä',
+          tiedosto: 'Taiwanese Ke-Tse opera(154745).jpg',
+          teksti: 'Gezaixi on ainoa han-kiinalaisen oopperan muoto, joka on '
+            + 'saanut alkunsa Taiwanissa — Yilanissa saaren koillisosassa. Sen '
+            + 'juuri on koa-á, hokkieniksi laulettu kertova balladi, jossa '
+            + 'säkeessä on viisi tai seitsemän merkkiä ja säkeistössä neljä '
+            + 'säettä. Kun Shanghaista ja Fujianista kiersi 1923–1949 '
+            + 'pekingiläisiä oopperaseurueita, muodolle tarttuivat akrobatia ja '
+            + 'lyömäsoittimet. Vuonna 1949 rekisteröityjä seurueita oli yli '
+            + 'viisisataa. Ooppera siirtyi radioon 1954, ensimmäiseen '
+            + 'elokuvaan 1955 ja televisioon 1962. Miesten roolit laulaa '
+            + 'perinteisesti nainen.',
+          selite: 'Gezaixi esitetään usein ulkona kadulle pystytetyllä koristellulla '
+            + 'lavalla, ja soittajat istuvat näyttämön laidassa.',
+          lahde: 'Sean Chiu, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Taiwanese opera',
+        },
+        {
+          otsikko: 'Amis-laulu olympialaisissa',
+          aika: '1988–1999',
+          teksti: 'Difang ja Igay Duana olivat amis-kansaan kuuluva '
+            + 'viljelijäpariskunta Taitungista. Vuonna 1988 heidät kutsuttiin '
+            + 'Pariisiin esiintymään, ja ranskalainen kulttuuri-instituutti '
+            + 'äänitti heidän vanhusten juomalaulunsa nimettömälle '
+            + 'opetuskokoelmalle; esiintyjille maksettiin viisitoista dollaria '
+            + 'päivässä. Kuusi vuotta myöhemmin Enigma-yhtye käytti äänitteestä '
+            + 'näytettä kappaleessaan Return to Innocence uskoen sen olevan '
+            + 'vapaasti käytettävissä, ja kappaleesta tuli vuoden 1996 '
+            + 'olympialaisten tunnusmusiikkia. Riita sovittiin oikeuden '
+            + 'ulkopuolella 1999, ja osalla korvauksesta perustettiin '
+            + 'stipendirahasto amis-lapsille.',
+        },
+        {
+          otsikko: 'Kahdeksan ääntä kylvöjuhlassa',
+          teksti: 'Bunun-kansan pasibutbut lauletaan kylvöjuhlassa. Se on '
+            + 'moniäänistä laulua, jossa on tavallisesti viidestä '
+            + 'kahteentoista ääntä, ja äänet nousevat hitaasti yhdessä ylöspäin '
+            + 'ilman sanoja. Japanilainen musiikintutkija Takatomo Kurosawa '
+            + 'äänitti bununlaulajia vuonna 1943. Kansan oma soitin on latuk, '
+            + 'jousen näköinen suujousi, jonka runko tehdään bambusta: soittaja '
+            + 'asettaa suunsa jousen päähän, näppäilee kieltä ja muotoilee '
+            + 'melodian yläsävelistä hengityksellä ja suun asennolla. Soitinta '
+            + 'soitetaan yksin pimeän tultua, ja se on merkitty muistiin jo '
+            + 'vuoden 1776 kuvateoksessa.',
+        },
+      ],
+    },
+    {
+      id: 'tekniikka',
+      nimi: 'Tekniikka',
+      johdanto: 'Saaren vientitavarat ovat vaihtuneet kolmesti sadassa '
+        + 'vuodessa: kamferista polkupyöriin ja polkupyöristä piisiruihin. '
+        + 'Vuoristorata sen sijaan kulkee yhä.',
+      nostot: [
+        {
+          otsikko: 'Rata kiipeää sikin sokin',
+          aika: '1912',
+          tiedosto: 'Alishan Taiwan Alishan-Forest-Railway-03a.jpg',
+          teksti: 'Alishanin metsärata on 86 kilometrin verkosto, jonka '
+            + 'raideleveys on 762 millimetriä. Se rakennettiin sypressin ja '
+            + 'taiwanianpuun kuljettamiseen. Maastotutkimukset tehtiin 1900 ja '
+            + 'reitti suunniteltiin 1903, mutta työ keskeytyi; osakelaisen '
+            + 'rakennusyhtiön yritys päättyi 1908 rahavaikeuksiin ja vuoriston '
+            + 'vaikeuteen. Hallinto rakensi radan itse valmiiksi 18 tonnin '
+            + 'Shay-vetureilla, ja päärata oli valmis 1913. Radalla on yli '
+            + 'viisikymmentä tunnelia, 77 puusiltaa ja harvinaisia Z-kirjaimen '
+            + 'muotoisia peräytysmutkia, joissa juna kiipeää rinnettä sahaten. '
+            + 'Koko päärata avattiin taas heinäkuussa 2024.',
+          selite: 'Alishanin metsäradalla käytettiin Shay-vetureita, joiden '
+            + 'sylinterit ovat rungon kyljessä ja voima siirtyy pyöriin '
+            + 'hammasakselin kautta.',
+          lahde: 'CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Alishan Forest Railway',
+        },
+        {
+          otsikko: 'Kamferi ja suomalainen kemisti',
+          aika: '1903',
+          tiedosto: 'Camphor Tree (Cinnamomum camphora) (21810689684).jpg',
+          teksti: 'Kamferipuun suuret metsiköt olivat 1800-luvun alkuun '
+            + 'mennessä kaadettu lähes kaikkialta muualta, ja jäljellä olivat '
+            + 'Japani ja Taiwan — Taiwan selvästi suurempana. Kamferista tuli '
+            + 'teollisuuden raaka-aine, koska juuri se pehmitti nitroselluloosan '
+            + 'selluloidiksi: elokuvafilmin ja varhaisen muovin ainekseksi. Kysyntä '
+            + 'nosti hinnan, ja hallinnot pitivät kauppaa monopolissaan. Sitten '
+            + 'suomalainen kemisti Gustaf Komppa julkaisi 1903 ensimmäisen '
+            + 'täydellisen synteesin kamferihaposta ja aloitti 1907 teollisen '
+            + 'valmistuksen Tainionkoskella. Formosan kamferi maksoi tavallisesti '
+            + 'noin 50 senttiä naulalta, vuonna 1918 jo 3,75 dollaria.',
+          selite: 'Kamferipuun rungosta ja oksista höyrytettiin kamferia, joka oli '
+            + '1800-luvun lopulla Taiwanin tuottoisimpia vientitavaroita.',
+          lahde: 'harum.koh from Kobe city, Japan, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Camphor',
+        },
+        {
+          otsikko: 'Polkupyörä Taichungista',
+          aika: '1972',
+          tiedosto: 'Giant Taitung Bicycles Rental and Service 20130601.jpg',
+          teksti: 'Giant perustettiin vuonna 1972 Dajiassa Taichungin '
+            + 'kupeessa, ja sen perustaja oli King Liu. Vuonna 1977 yhtiö sopi '
+            + 'valmistavansa pyöriä amerikkalaiselle Schwinnille tämän omalla '
+            + 'nimellä. 1980-luvun puoliväliin mennessä Giant teki yli kaksi '
+            + 'kolmasosaa Schwinnin pyöristä, ja se oli 75 prosenttia Giantin '
+            + 'myynnistä — riippuvuus, joka olisi voinut kaataa yhtiön. Kun '
+            + 'Schwinn siirsi tilauksensa muualle 1987, Giant toi markkinoille '
+            + 'oman merkkinsä. Vuonna 2017 yhtiö myi 6,6 miljoonaa polkupyörää, '
+            + 'ja niitä myytiin yli viidessäkymmenessä maassa.',
+          selite: 'Taiwanissa polkupyörä on myös matkailuväline: saaren ympäri '
+            + 'kulkevan reitin varrella on vuokraamoja, joista pyörän saa '
+            + 'yhdestä kaupungista ja jättää toiseen.',
+          lahde: '玄史生, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Tehdas, joka ei suunnittele mitään',
+          aika: '1987',
+          tiedosto: 'TSMC Fab5.JPG',
+          teksti: 'Hsinchun tiedepuisto perustettiin 15. joulukuuta 1980. '
+            + 'Ajatus oli Shu Shien-Siun, joka oli kiertänyt 1976 Yhdysvalloissa, '
+            + 'Euroopassa ja Japanissa ja halusi Piilaakson kaltaisen alueen '
+            + 'kahden yliopiston viereen. Puistoon perustettiin 1987 TSMC, '
+            + 'valtion, tutkimuslaitoksen ja yksityisten sijoittajien yhteisyritys, '
+            + 'jota johti Morris Chang. Sen idea oli uusi: tehdas, joka ei '
+            + 'suunnittele omia piirejään lainkaan vaan valmistaa vain muiden '
+            + 'suunnittelemia — maailman ensimmäinen pelkkä sopimusvalimo. Vuonna '
+            + '2022 saaren mikropiirivienti oli 184 miljardia dollaria eli lähes '
+            + 'neljännes koko talouden arvosta.',
+          selite: 'TSMC:n päämaja ja vanhimmat tehtaat ovat Hsinchun tiedepuistossa, '
+            + 'joka perustettiin 1980.',
+          lahde: 'Peellden, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'TSMC',
+        },
+      ],
+    },
+  ],
+  /*
+   * UZBEKISTAN (Opus 7.9.2026, Aasian maalehtierä). Samarkandilla on
+   * oma kaupunkilehti (kulttuuri-kategoriat.js: Registan, Gur-e-Amir,
+   * Bibi-Khanym, sininen kaakeli, Marakanda, mongolit ja Timur,
+   * hiljaiset vuosisadat, vuoden 1868 piiritys, rautatie ja basaari),
+   * ja kartan merkit kertovat jo Itchan Kalasta, Shahrisabzista,
+   * Moynaqista, Nukusin museosta, Kampir Tepestä, Ayaz-Kalasta,
+   * Kokandista, Araljärvestä, Amudarjasta ja Khazret Sultanista
+   * (maastokohteet-uzb.js), buharanhirvestä (elaintakyt.js) sekä
+   * Stoddartista ja Conollysta, Vozroždenijan saaresta ja Buharan
+   * kirkonkelloista (skandaalit.js). Nahtavyysjutut.js kertoo
+   * Ulugbekin observatorion ja Zij-i Sultanin. Lehti täydentää
+   * niitä eikä toista: Timur, Ulugbek ja Samarkandin muistomerkit on
+   * jätetty tästä pois kokonaan.
+   *
+   * Aiheet: Historia, Tiede, Ruoka, Musiikki, Kuvataide. Luonto
+   * jätettiin pois, koska maastokohteet ja eläintäky kattavat sen.
+   *
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026:
+   * "Sogdia", "Sogdian language", "Samanid Mausoleum", "Babur",
+   * "Baburnama", "1966 Tashkent earthquake", "Al-Khwarizmi",
+   * "Al-Biruni", "Avicenna", "Al-Farghani", "Uzbek plov",
+   * "Uzbek cuisine", "Tandyr nan", "Shashmaqom",
+   * "Music of Uzbekistan", "Dutar", "Bukharan Jews", "Lazgi",
+   * "Suzani (textile)", "Ikat", "Rishton, Uzbekistan", "Margilan",
+   * "Tashkent Metro" ja "Uzbekistan". Faktapohja:
+   * docs/mantereet-tyoaineisto/faktapohja-uzbekistan.md.
+   *
+   * NYKYPOLITIIKKA JA NYKYSELKKAUKSET on jätetty pois (M3:n
+   * Myanmar-linja). Neuvostoajan kulttuurihistoria kerrotaan
+   * tapahtumina ilman osapuolikehystä: shashmaqomin kielto 1951 ja
+   * sen purku, metron kuvauskiellon päättyminen 2018,
+   * jälleenrakennus vuoden 1966 järistyksen jälkeen.
+   */
+  UZB: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kahden joen välinen maa on ollut kaupunkien maata '
+          + 'kolmetuhatta vuotta, ja sen kauppiaat, hallitsijat ja '
+          + 'tutkijat tunnetaan usein paremmin kaukana kuin kotona.',
+      nostot: [
+        {
+          otsikko: 'Kirjeet, jotka jäivät vartiotorniin',
+          aika: '300-luku',
+          teksti: 'Aurel Stein löysi vuonna 1907 hylätystä '
+              + 'vartiotornista Dunhuangin läheltä viisi sogdinkielistä '
+              + 'kirjettä, jotka on ajoitettu Länsi-Jinin dynastian '
+              + 'viimeisiin vuosiin. Sogdit olivat Samarkandin ja '
+              + 'Buharan seudun kauppiaita, ja heidän kielensä oli '
+              + 'silkkitien yleiskieli aina Kiinaan asti. Yhdessä '
+              + 'kirjeessä Nanai-vandak kertoo kotiväelle, että '
+              + 'Luoyangissa on noussut kapina, keisari on jättänyt '
+              + 'kaupungin ja sinne asettuneet sogdit ja intialaiset '
+              + 'ovat kuolleet nälkään. Toisen kirjoitti Miwnay, joka '
+              + 'oli jäänyt tyttärensä kanssa Kiinaan ja pyysi äitiään '
+              + 'Chatisia hakemaan heidät pois. Yksikään kirje ei '
+              + 'mennyt perille.',
+          wiki: 'Sogdia',
+        },
+        {
+          otsikko: 'Rakennus, jota valloittajat eivät nähneet',
+          aika: '900-luku',
+          tiedosto: 'Bukhara Samanid mausoleum outside.JPG',
+          teksti: 'Buharan samanidimausoleumi on Keski-Aasian vanhin '
+              + 'säilynyt hautarakennus: tiilestä ladottu kuutio, jonka '
+              + 'kulmissa on paksut tukitornit ja jonka pintakuvio '
+              + 'vaihtaa ilmettään valon mukaan. Rakennuttajaksi on '
+              + 'esitetty sekä dynastian perustajaa Ismail Samania että '
+              + 'hänen pojanpoikaansa Nasr II:ta, jonka nimi löytyi '
+              + '1930-luvun korjauksissa itäseinän kamanasta. '
+              + 'Rakennus säilyi, koska se katosi näkyvistä: tulvat '
+              + 'ja maanvyörymät peittivät sen, ja se oli hautautunut '
+              + 'mutaan ja hiekkaan jo ennen mongolien hyökkäystä '
+              + '1220. Kumpu kaivettiin auki vasta 1920-luvun '
+              + 'tutkimuksissa.',
+          selite: 'Samanidimausoleumin seinät on ladottu paljaasta poltetusta '
+            + 'tiilestä niin, että kuvio muuttuu auringon kiertäessä, ja '
+            + 'kulmissa ovat paksut tukitornit.',
+          lahde: 'Patrickringgenberg, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Samanid Mausoleum',
+        },
+        {
+          otsikko: 'Kaupunki, jota hän ei saanut pitää',
+          aika: '1483–1530',
+          tiedosto: 'News of the loss of Andijan (p. 81b). Miniature from the manuscript Baburnama of 1590.jpg',
+          teksti: 'Babur syntyi Andižanissa Ferganan laaksossa 14. '
+              + 'helmikuuta 1483. Laakson hallitsijaksi hän nousi '
+              + 'yksitoistavuotiaana 1494, kun hänen isänsä kuoli '
+              + 'kyyhkyslakan romahdettua rotkoon palatsin alla. '
+              + 'Viisitoistavuotiaana hän valtasi Samarkandin seitsemän '
+              + 'kuukauden piirityksen jälkeen, mutta piti sitä sata '
+              + 'päivää ja menetti sillä aikaa kotilaaksonsa; kaupunki '
+              + 'lipesi häneltä vielä kahdesti. Taškentissa hän '
+              + 'kirjoitti eläneensä köyhyydessä ja nöyryytyksessä '
+              + 'ilman maata ja ilman toivoa sellaisesta. Muistelmansa '
+              + 'Baburnaman hän kirjoitti tšagataiksi, ja se on '
+              + 'islamilaisen kirjallisuuden varhaisimpia '
+              + 'omaelämäkertoja.',
+          selite: 'Baburnaman vuoden 1590 käsikirjoituksessa on oma kuvansa '
+            + 'hetkelle, jona Baburille tuotiin tieto Andižanin '
+            + 'menetyksestä.',
+          lahde: 'Noin 1590 työskennellyt taiteilija, Wikimedia Commons (PD)',
+          wiki: 'Babur',
+        },
+        {
+          otsikko: 'Aamu, joka rakensi pääkaupungin uusiksi',
+          aika: '1966',
+          tiedosto: 'Navoi Theater - Tashkent.jpg',
+          teksti: 'Taškentin maanjäristys 26. huhtikuuta 1966 kello '
+              + '05.23 oli momenttimagnitudiltaan vain 5,2, mutta sen '
+              + 'keskus oli kaupungin keskustassa ja pesäke kolmen ja '
+              + 'kahdeksan kilometrin välissä. Yli 80 prosenttia '
+              + 'kaupungista tuhoutui ja 78 000–95 000 asuntoa hajosi '
+              + '— valtaosa savitiilitaloja. Merkittävistä '
+              + 'rakennuksista säilyi vaurioitta vain Navoi-teatteri, '
+              + 'jonka olivat rakentaneet japanilaiset sotavangit. '
+              + 'Koditta jäi 200 000–300 000 ihmistä, ja töihin tuli '
+              + 'väkeä muista neuvostotasavalloista; vuoteen 1970 '
+              + 'mennessä oli valmistunut 100 000 uutta asuntoa. '
+              + 'Samana vuonna perustettiin seismologian laitos.',
+          selite: 'Alisher Navoin teatteri oli vuoden 1966 järistyksessä ainoa '
+            + 'merkittävä rakennus, joka säilyi vaurioitta.',
+          lahde: 'Atilin, Wikimedia Commons (CC BY 2.5)',
+          wiki: '1966 Tashkent earthquake',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Buharan samanidimausoleumi säilyi mongolien '
+            + 'hyökkäyksestä?',
+        vaihtoehdot: [
+          'Se oli hautautunut mutaan ja hiekkaan',
+          'Se oli kaupungin muurien ulkopuolella',
+          'Valloittajat käyttivät sitä varastonaan',
+          'Se oli rakennettu kalliopohjan sisään',
+        ],
+        oikea: 0,
+        fakta: 'Tulvat peittivät rakennuksen ennen vuotta 1220, ja se '
+            + 'kaivettiin esiin vasta 1920-luvulla.',
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Neljä nimeä, jotka Eurooppa oppi latinaksi, ovat '
+          + 'kotoisin tämän maan kylistä ja kaupungeista — ja yksi '
+          + 'niistä on sanassa, jota ohjelmoija käyttää joka päivä.',
+      nostot: [
+        {
+          otsikko: 'Nimi, josta tuli algoritmi',
+          aika: 'n. 780–850',
+          tiedosto: 'Al Khorezmy.jpg',
+          teksti: 'Muhammad ibn Musa al-Khwarizmi kokosi noin vuosina '
+              + '813–833 Bagdadin viisauden talossa kirjan Al-Jabr, '
+              + 'joka esitti ensimmäisenä järjestelmällisen tavan '
+              + 'ratkaista ensimmäisen ja toisen asteen yhtälöt. Kirjan '
+              + 'nimestä tuli sana algebra ja tekijän latinalaisesta '
+              + 'nimestä Algoritmi sana algoritmi. Robert '
+              + 'Chesterläisen käännös vuodelta 1145 oli Euroopan '
+              + 'yliopistojen matematiikan oppikirja 1500-luvulle asti. '
+              + 'Syntymäseudusta ei ole varmuutta: Ibn al-Nadim '
+              + 'sanoo sen olleen Khwarazm, josta liikanimi tulee, '
+              + 'kun taas osa tutkijoista sijoittaa syntymän Bagdadin '
+              + 'liepeille.',
+          selite: 'Al-Khwarizmista ei ole aikalaiskuvaa; tämä puuhun veistetty '
+            + 'muotokuva on 1900-luvulta, ja alareunaan on kaiverrettu '
+            + 'hänen nimensä arabialaisin kirjaimin.',
+          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Al-Khwarizmi',
+        },
+        {
+          otsikko: 'Vuori, jolta mitattiin maapallo',
+          aika: 'n. 973–1050',
+          tiedosto: 'Lunar phases al-Biruni.jpg',
+          teksti: 'Al-Biruni syntyi Kathin laitakaupungilla, ja hänen '
+              + 'nimensäkin tarkoittaa ulkopuolista; kaupunki on '
+              + 'nykyään Beruniy Karakalpakstanissa. Hän keksi tavan '
+              + 'mitata maapallon säde yhdestä paikasta: mittaamalla '
+              + 'vuorelta horisontin painumaa ja laskemalla loput '
+              + 'kolmiomittauksella. Tulos oli pari prosenttia liian '
+              + 'suuri, koska hän ei ottanut huomioon ilmakehän '
+              + 'taittumista. Vuonna 1037 valmistuneessa Masudin '
+              + 'kaanonissa hän päätteli maapallon mitoista, että '
+              + 'Aasian ja Euroopan välisessä valtameressä täytyy olla '
+              + 'tuntematonta maata — ja että ainakin osa siitä on '
+              + 'asuttavaa.',
+          selite: 'Al-Biruni selitti kuun vaiheet Kitab al-Tafhim -teoksessaan '
+            + 'piirroksella, jossa auringon säteet osuvat kuuhun radan '
+            + 'eri kohdissa.',
+          lahde: 'Al-Biruni, Wikimedia Commons (PD)',
+          wiki: 'Al-Biruni',
+        },
+        {
+          otsikko: 'Kahdeksantoista kysymystä naapurille',
+          aika: 'n. 980–1037',
+          tiedosto: 'The Canon of Medicine.jpg',
+          teksti: 'Ibn Sina syntyi noin vuonna 980 Afshanan kylässä '
+              + 'Buharan liepeillä. Kymmenvuotiaana hän osasi Koraanin '
+              + 'ulkoa, ja seitsemäntoistavuotiaana hänestä tuli '
+              + 'hallitsijan lääkäri. Hänen viisiosainen Lääketieteen '
+              + 'kaanoninsa oli Euroopan yliopistoissa oppikirjana '
+              + 'vielä 1600-luvun puolivälissä; siinä hän arveli '
+              + 'näkymättömien pieneliöiden liittyvän tauteihin ja '
+              + 'suositteli sairaiden eristämistä. Hänen ja al-Birunin '
+              + 'kirjeenvaihto on säilynyt: al-Biruni aloitti '
+              + 'kahdeksallatoista kysymyksellä, joista kymmenen oli '
+              + 'Aristoteleen taivaita käsittelevän kirjan arvostelua.',
+          selite: 'Lääketieteen kaanon on viisiosainen teos; tämä persiankielinen '
+            + 'käsikirjoituskopio on Ibn Sinan museossa ja mausoleumissa '
+            + 'Hamadanissa.',
+          lahde: 'Coffeetalkh, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Avicenna',
+        },
+        {
+          otsikko: 'Maili, joka vei Kolumbuksen harhaan',
+          aika: '800-luku',
+          tiedosto: 'Alfraganus crater AS16-P-4548.jpg',
+          teksti: 'Al-Farghani oli liikanimensä perusteella kotoisin '
+              + 'Quvasta Ferganan laaksosta. Hänen tähtitieteen '
+              + 'oppikirjansa tiivisti Ptolemaioksen Almagestin ja '
+              + 'korjasi sen lukuja; latinaksi se käännettiin 1135, ja '
+              + 'Danten käsitys maailmankaikkeuden rakenteesta on '
+              + 'peräisin siitä. Kolumbus käytti hänen laskemaansa '
+              + 'maapallon ympärysmittaa, mutta luki arabialaisen '
+              + 'mailin roomalaisena: 7 091 jalan sijasta 4 856. '
+              + 'Maapallo kutistui laskuissa, ja Kolumbus luuli '
+              + 'purjehtivansa oikotietä Aasiaan. Kairossa hän '
+              + 'rakennutti Rawdan saarelle nilometrin, joka valmistui '
+              + 'vuonna 861. Kuun kraatteri Alfraganus on nimetty hänen '
+              + 'mukaansa.',
+          selite: 'Kuun kraatteri Alfraganus on nimetty al-Farghanin mukaan, ja '
+            + 'Apollo 16:n miehistö kuvasi sen vuonna 1972.',
+          lahde: 'James Stuby NASAn kuvasta, Wikimedia Commons (PD)',
+          wiki: 'Al-Farghani',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten al-Biruni mittasi maapallon säteen?',
+        vaihtoehdot: [
+          'Kahden kaivon varjoista keskipäivällä',
+          'Mittaamalla horisontin painumaa vuorelta',
+          'Kuunpimennyksen kestoa mittaamalla',
+          'Vertaamalla karavaanien matka-aikoja toisiinsa',
+        ],
+        oikea: 1,
+        fakta: 'Tulos oli pari prosenttia liian suuri, koska ilmakehän '
+            + 'taittumista ei tunnettu.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Pöydässä on joka päivä kaksi asiaa: riisipata, jonka '
+          + 'tekeminen on oma ammattinsa, ja pyöreä leipä, jolla on '
+          + 'omat sääntönsä.',
+      nostot: [
+        {
+          otsikko: 'Kattila, josta syö tuhat vierasta',
+          tiedosto: 'Samarkand Zigir-pilaf.jpg',
+          teksti: 'Plov eli osh on maan kansallisruoka: lampaanlihaa, '
+              + 'suikaloitua porkkanaa, sipulia ja pitkäjyväistä riisiä '
+              + 'kazan-padassa avotulella. Pohjaksi tehdään zirvak, '
+              + 'lihan ja kasvisten paistos, jonka päälle riisi '
+              + 'ladotaan höyrystymään sekoittamatta — siksi jyvät '
+              + 'pysyvät erillään. Juhliin padan tekee oshpaz, '
+              + 'plov-mestari, jonka taito siirtyy mestarilta '
+              + 'oppipojalle, ja yhdestä padasta voidaan tarjota jopa '
+              + 'tuhannelle vieraalle. Häiden aamuna syödään nahor '
+              + 'oshi, aamuplov, kello kuuden ja yhdeksän välillä, ja '
+              + 'vanhimmat aloittavat ensin. Unesco otti plovin '
+              + 'luetteloonsa 2016.',
+          selite: 'Samarkandilainen plov keitetään pellavaöljyssä, ja vadille se '
+            + 'kootaan kerroksittain: riisi pohjalle, porkkanasuikaleet ja '
+            + 'liha päälle.',
+          lahde: 'Shuhrataxmedov, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Uzbek plov',
+        },
+        {
+          otsikko: 'Leipä, jota ei lasketa maahan',
+          tiedosto: 'Uzbek bread, obi non, lepyoshka.jpg',
+          teksti: 'Non paistetaan tandir-uunin sisäseinään kiinni '
+              + 'lyötynä. Keskikuvio painetaan chekich-leimasimella, '
+              + 'jonka piikit jättävät reiät höyrylle ja samalla '
+              + 'leipurin oman tunnuksen; säteittäiset viillot tehdään '
+              + 'bosmalla, jonka piikkeinä on usein polkupyörän '
+              + 'pinnoja. Leipää ei leikata veitsellä vaan revitään '
+              + 'käsin, eikä sitä lasketa maahan: pudonnut leipä '
+              + 'nostetaan muurille tai puuhun lintujen syötäväksi. '
+              + 'Vastasyntyneen pään alle pannaan non pitkän elämän '
+              + 'toivotukseksi, ja maailmalle lähtevän leivät '
+              + 'kuivataan ja ripustetaan kattoon odottamaan paluuta.',
+          selite: 'Chekichin jälki jää leivän keskelle painaumaksi, reunus '
+            + 'kohoaa paksuksi, ja päälle ripotellaan seesamia ja '
+            + 'mustakuminaa.',
+          lahde: 'Benjamin Goetzinger, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tandyr nan',
+        },
+        {
+          otsikko: 'Pata, joka kypsyy yön yli',
+          teksti: 'Buharan juutalaisten keittiö on oma haaransa maan '
+              + 'ruokaperinteessä. Sen tunnetuin ruoka on oshi sabo, '
+              + 'koko yön hiljalleen kypsyvä pata, joka syödään '
+              + 'kuumana sapatin lounaaksi: lihaa, riisiä, kasviksia '
+              + 'ja hedelmiä, joista tulee makean ja hapokkaan '
+              + 'yhdistelmä. Bakhshi khaltagi on yrteistä vihreä plov, '
+              + 'joka kypsennetään pienessä pussissa kiehuvassa '
+              + 'vedessä, jotta se on valmis jo ennen sapattia. '
+              + 'Perjantai-illan pöytään kuuluvat mai birion, '
+              + 'paistettu kala valkosipulikastikkeessa, ja noni toki, '
+              + 'wokin pohjan päällä kulhon muotoon paistettu leipä.',
+          wiki: 'Uzbek cuisine',
+        },
+        {
+          otsikko: 'Teetä ilman maitoa ja sokeria',
+          tiedosto: 'Sopol choynak va piyola.png',
+          teksti: 'Teetä juodaan pitkin päivää, eikä siihen panna '
+              + 'maitoa eikä sokeria. Vihreä kok choy on tavallisin, '
+              + 'mutta Taškentissa suositaan mustaa. Tee tarjotaan '
+              + 'pienestä piyola-kulhosta, ja teehuone eli chaikhana '
+              + 'on korttelin kokoontumispaikka. Kesällä juodaan '
+              + 'kylmää suolaista ayrania, talvella shirchoyta eli '
+              + 'suolaista maitoteetä voin kanssa, ja kuivatuista '
+              + 'hedelmistä keitetään makea sharbat. Ateria päättyy '
+              + 'hedelmiin, pähkinöihin ja halvaan. Peruna tuli '
+              + 'maahan vasta neuvostoaikana, ja osa vanhemmasta '
+              + 'väestä kieltäytyy siitä yhä.',
+          selite: 'Tee tarjotaan choynak-kannusta pieniin piyola-kulhoihin, '
+            + 'joissa toistuu sama sininen kuviointi.',
+          lahde: 'AIDEPCUL, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Uzbek cuisine',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä chekich on?',
+        vaihtoehdot: [
+          'Uunikoukku',
+          'Riisimitta',
+          'Leimasin',
+          'Teekulho',
+        ],
+        oikea: 2,
+        fakta: 'Sen jättämät reiät päästävät höyryn ulos ja kertovat, '
+            + 'kenen uunista leipä on tullut.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Klassinen laulu tuli hoveista, tanssi Khorezmin '
+          + 'kylistä ja soittimen kielet silkkitietä pitkin Kiinasta.',
+      nostot: [
+        {
+          otsikko: 'Kuusi sävellajia ja yksi ilta',
+          tiedosto: 'Doira 1.png',
+          teksti: 'Shashmaqom tarkoittaa persiaksi kuutta maqamia eli '
+              + 'sävelmoodia, ja se syntyi Buharan ja Samarkandin '
+              + 'kaupungeissa 1500-luvun lopulla. Laulujen sanat ovat '
+              + 'sufirunoutta jumalallisesta rakkaudesta, ja säestys '
+              + 'on niukka: pitkäkaulaisia luuttuja, jousella '
+              + 'soitettava sato ja dayra-kehärumpu, jonka renkaat '
+              + 'helisevät kuin tamburiinissa. Sarja alkaa matalalta, '
+              + 'nousee vähitellen huipennukseen ja laskeutuu takaisin '
+              + 'lähtösäveleen, ja välissä lausutaan runoa puhuen. '
+              + 'Vuonna 1951 maqomin kehittäminen kiellettiin '
+              + 'päätöksellä, ja 1950-luvun puolivälissä kielto '
+              + 'purettiin.',
+          selite: 'Doira eli dayra on kehärumpu, jonka kehän sisäpuolelle on '
+            + 'ripustettu metallirenkaita; ne helisevät jokaisella '
+            + 'lyönnillä.',
+          lahde: 'AIDEPCUL, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Shashmaqam',
+        },
+        {
+          otsikko: 'Kaksi kieltä, jotka tulivat Kiinasta',
+          tiedosto: 'Musical Instruments and Musicians. A Man Playing a Dutar, a Long-Necked Fretted Lute WDL10767.png',
+          teksti: 'Dutarin nimi tarkoittaa persiaksi kahta kieltä. Se '
+              + 'oli 1400-luvulla paimenen soitin ja sen kielet '
+              + 'tehtiin suolesta, mutta silkkitien auettua tilalle '
+              + 'tuli Kiinasta tuotu kierretty silkki — muutamassa '
+              + 'soittimessa se on yhä. Kaula tehdään mieluiten '
+              + 'aprikoosipuusta ja runko ontoksi poltetusta '
+              + 'mulperipuun kappaleesta. Otelaudalla on kolmetoista '
+              + 'nauhaa, ja kielet viritetään kvartin päähän '
+              + 'toisistaan. Soittotapa on oma: kieliä ei näpätä eikä '
+              + 'soiteta plektralla vaan lyödään nopein käden vedoin, '
+              + 'ja niin niistä saa balalaikan tapaan pehmeän mutta '
+              + 'tiheän soinnin.',
+          selite: 'Dutar-soittaja kuvattiin Turkestanin albumiin, jonka Venäjän '
+            + 'hallinto teetti 1860- ja 1870-luvulla.',
+          lahde: 'Aleksandr L. Kun, Turkestanin albumi, Wikimedia Commons (PD)',
+          wiki: 'Dutar',
+        },
+        {
+          otsikko: 'Laulajat, jotka veivät Buharan New Yorkiin',
+          tiedosto: 'Bukharan Jews (before 1899).jpg',
+          teksti: 'Buharan juutalaiset ovat pitäneet shashmaqomia '
+              + 'elossa sukupolvesta toiseen, ja heidän '
+              + 'kokoonpanonsa pääsoitin on dayra-kehärumpu. '
+              + 'Musiikissa kuuluu keskiaasialaisen rytmin ohella '
+              + 'klezmerin vaikutus. Tutkimusmatkailija Henry Lansdell '
+              + 'kuuli laulua Samarkandissa 1885 eikä ymmärtänyt siitä '
+              + 'paljon: ensimmäinen ääni aloitti niin korkealta, '
+              + 'että laulaja joutui ponnistelemaan hetken ennen kuin '
+              + 'ääntä kuului lainkaan, ja toinen lauloi rinnalla '
+              + 'falsetissa niin lujaa kuin sai. Kun yhteisö muutti '
+              + 'Yhdysvaltoihin, musiikki muutti mukana, ja New Yorkiin '
+              + 'perustettiin Ensemble Shashmaqam.',
+          selite: 'Buharan juutalaisten yhteisö kuvattiin ennen vuotta 1899 '
+            + 'Toora-kääröineen.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Bukharan Jews',
+        },
+        {
+          otsikko: 'Tanssi, joka alkaa sormenpäistä',
+          teksti: 'Lazgi on Khorezmin kansantanssi ja -musiikki, ja '
+              + 'Unesco otti sen luetteloonsa joulukuussa 2019. '
+              + 'Musiikki kulkee 6/8-tahdissa: lyhyt alkusoitto ja '
+              + 'kolme osaa, joiden aikana vauhti kiihtyy ja loppu '
+              + 'katkeaa äkisti. Tanssi alkaa sormista, siirtyy '
+              + 'ranteisiin ja kyynärpäihin ja leviää vasta sitten '
+              + 'koko vartaloon. Perimätiedon mukaan se kertoo sielun '
+              + 'tulosta savesta tehtyyn ruumiiseen: sielu pelkäsi '
+              + 'eikä suostunut, kunnes kuuli musiikin ja meni sisään '
+              + 'huomaamattaan. Muotoja on kahdeksan, muun muassa '
+              + 'qayroq-, dutor-, surnay- ja Khiva-lazgi.',
+          wiki: 'Lazgi',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä sana shashmaqom tarkoittaa?',
+        vaihtoehdot: [
+          'Kuutta laulajaa',
+          'Kuuden illan juhlaa',
+          'Kuutta kaupunkia',
+          'Kuutta sävelmoodia',
+        ],
+        oikea: 3,
+        fakta: 'Maqam on sävelmoodi, ja sarjassa niitä on kuusi.',
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Käsityö on tässä maassa kuvataidetta: kirjottu '
+          + 'seinävaate, ennen kutomista värjätty silkki, keraaminen '
+          + 'lasite ja metroaseman holvi.',
+      nostot: [
+        {
+          otsikko: 'Kirjonta, joka kuului myötäjäisiin',
+          tiedosto: 'Sózana, wall embroidery, 1970–80.jpg',
+          teksti: 'Suzani on käsin kirjottu seinävaate, ja nimi tulee '
+              + 'persian sanasta suzan eli neula. Morsiamet kirjoivat '
+              + 'niitä myötäjäisikseen ja antoivat sulhaselle '
+              + 'hääpäivänä. Kangas on hento, ja siksi 1700-luvun '
+              + 'loppua vanhempia töitä on säilynyt hyvin vähän — '
+              + 'perinne itse on paljon vanhempi, sillä Kastilian '
+              + 'lähettiläs kuvasi 1400-luvun alussa kirjontatöitä, '
+              + 'joita pidetään suzanin edeltäjinä. Työt tunnetaan '
+              + 'kaupunkinsa mukaan: Nurata, Buhara, Shahrisabz, '
+              + 'Samarkand ja Taškent tekivät kukin omanlaisensa '
+              + 'kuvioinnin.',
+          selite: 'Suzanin kuvio rakentuu suurten ympyröiden varaan ja pohja '
+            + 'kirjotaan kokonaan täyteen; tämä työ on 1970-luvulta ja '
+            + 'kuuluu Uzbekistanin valtion taidemuseon kokoelmaan.',
+          lahde: 'Carl Ha, Wikimedia Commons (CC0)',
+          wiki: 'Suzani (textile)',
+        },
+        {
+          otsikko: 'Sumea reuna on tarkoitus',
+          tiedosto: 'Adras (Ikat) ʼDoiragulʼ. 1990s. Silk, cotton.jpg',
+          teksti: 'Ikatissa kuvio tehdään lankaan ennen kutomista: '
+              + 'loimilangat sidotaan tiukasti niiltä kohdin, joiden '
+              + 'pitää jäädä värjäytymättä, ja sidoksia muutetaan '
+              + 'värien välillä. Siksi kuvio näkyy kankaan molemmilla '
+              + 'puolilla yhtä lailla. Uzbekistanissa tekniikkaa '
+              + 'sanotaan nimellä abrbandi, ja Keski-Aasian perinne '
+              + 'nimenomaan tavoittelee sumeaa reunaa siinä missä '
+              + 'moni muu koulukunta hakee terävää. Buhara, Samarkand '
+              + 'ja Kašgar olivat 1800-luvulla kuuluja hienoista '
+              + 'silkki-ikateistaan, ja Margilanissa on kudottu '
+              + 'silkkiä jo 900-luvulta asti.',
+          selite: 'Adras on silkin ja puuvillan sekoitus, ja ikat-kuvion reunat '
+            + 'jäävät tarkoituksella sumeiksi.',
+          lahde: 'Panpanchik, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ikat',
+        },
+        {
+          otsikko: 'Savi, joka riittää koko kaupungille',
+          tiedosto: 'Sopol lagan blue front.png',
+          teksti: 'Rishtan Ferganan laaksossa on maan vanhimpia ja '
+              + 'kuuluisimpia keramiikkakaupunkeja, ja syy on maan '
+              + 'alla: melkein koko kaupungin alla on metrin tai '
+              + 'puolentoista syvyydessä puolesta metristä '
+              + 'puoleentoista paksu kerros punakeltaista savea. Savi '
+              + 'kelpaa sellaisenaan ilman puhdistusta ja ilman '
+              + 'muualta tuotua seosta. Väriaineet, kvartsihiekka ja '
+              + 'tulenkestävä savi otetaan ympäröiviltä vuorilta, ja '
+              + 'kuuluisan ishkor-lasitteen väri saadaan luonnon '
+              + 'mineraaleista ja vuoristokasvien tuhkasta.',
+          selite: 'Ferganan laakson keramiikassa toistuvat sininen '
+            + 'rishtanilainen lasite ja lautasen keskelle sijoitettu '
+            + 'kukka-aihe.',
+          lahde: 'AIDEPCUL, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Rishton, Uzbekistan',
+        },
+        {
+          otsikko: 'Maanalainen galleria, jota ei saanut kuvata',
+          tiedosto: 'Tashkent metro drushbanarod.jpg',
+          teksti: 'Taškentin metro avattiin 6. marraskuuta 1977 '
+              + 'ensimmäisenä Keski-Aasiassa, ja sen suunnittelu alkoi '
+              + '1968, kaksi vuotta maanjäristyksen jälkeen. '
+              + 'Jokaisella asemalla on oma aiheensa, jonka mukaan se '
+              + 'on koristeltu: materiaaleina ovat marmori, graniitti, '
+              + 'lasimosaiikki, keramiikka ja alabasteri, ja jokaisella '
+              + 'asemalla on omat taideteoksensa. Tunnelit kulkevat 8–25 '
+              + 'metrin syvyydessä, ja rakenteet on mitoitettu '
+              + 'kestämään voimakas järistys. Valokuvaus oli kielletty '
+              + '31. toukokuuta 2018 asti, koska asemat luokiteltiin '
+              + 'sotilaskohteiksi: ne toimivat myös väestönsuojina.',
+          selite: 'Kansojen ystävyyden asema eli nykyinen Doʻstlik on koristeltu '
+            + 'kipsiholvein ja marmoripylväin, ja sama lattiakuvio '
+            + 'jatkuu koko laiturin matkan.',
+          lahde: 'Elya, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Tashkent Metro',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Rishtanin ishkor-lasitteen väri saadaan?',
+        vaihtoehdot: [
+          'Kuparimalmista ja koboltista',
+          'Vuoristokasvien tuhkasta',
+          'Lapis lazulista',
+          'Poltetusta luusta',
+        ],
+        oikea: 1,
+        fakta: 'Mukaan tulee myös luonnon mineraaleja, ja savi '
+            + 'otetaan suoraan kaupungin alta.',
+      },
+    },
+  ],
+  /*
    * YHDYSVALLAT (USA) — P-Amerikan ensimmäinen maalehti.
    *
    * Aihejako on Fablen hyväksymä (docs/mantereet-tyoaineisto/
@@ -50672,4 +51691,857 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * SOMALIA (Opus 7.9.2026, maalehtierä). Kartan maastokohteet
+   * (maastokohteet-som.js) kattavat jo Shimbirisin, Adeninlahden,
+   * Intian valtameren, Jubban, Laas Geelin, Dhambalinin, Amudin,
+   * Zeilan, Bosason, Hobyon, Hamar Weynen ja Barawan,
+   * js/packs/skandaalit.js Berberan sopimukset ja dervissiliikkeen,
+   * js/packs/elaintakyt.js beiran ja africa-kulttuuri.js:n Ras Hafunin
+   * litteät nostot suitsukkeen, Puntin maan ja monsuunikaupan — lehti
+   * täydentää niitä eikä toista yhtäkään. Siksi suitsuke, Punt ja
+   * Ajuranin kastelujärjestelmä on jätetty tästä pois kokonaan.
+   *
+   * NYKYTILA EI OLE AIHE (M3:n Myanmar-linja, sama kuin Somalian
+   * karttanostoissa): historia päättyy tässä lehdessä 1900-luvun
+   * kulttuuriin, eikä nykypolitiikkaa, käynnissä olevia selkkauksia
+   * tai vuoden 1991 jälkeisiä tapahtumia kerrota. Siksi myös
+   * runoilija Hadraawi jäi pois — hänen elämäkertansa on suurelta
+   * osin poliittista vainoa — ja Waaberi-nosto kertoo ryhmän
+   * kiertueista eikä sen ajan hallinnosta.
+   *
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026:
+   * "Sultanate of Mogadishu", "Somali literature", "Elmi Boodhari",
+   * "Somali language", "Music of Somalia", "Abdi Sinimo",
+   * "Abdullahi Qarshe", "Waaberi", "Somali cuisine", "Somali Current",
+   * "Camel milk", "Economy of Somalia", "Somali ostrich" ja
+   * "Somali wild ass". Faktapohja:
+   * docs/mantereet-tyoaineisto/faktapohja-somalia.md.
+   */
+  SOM: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Somalian rannikon satamat olivat rikkaita jo silloin, kun '
+          + 'Eurooppa piirsi Afrikan kartalle arvaamalla — ja yhden niistä '
+          + 'nimi jäi elämään aivan toisen saaren kylkeen.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki, jonka kangas tunnettiin Kairossa',
+          aika: '1331',
+          teksti: 'Marokkolainen matkaaja Ibn Battuta saapui Mogadishuun '
+              + 'vuonna 1331 ja kutsui sitä tavattoman suureksi '
+              + 'kaupungiksi, jossa oli rikkaita kauppiaita ja joka '
+              + 'tunnettiin hienosta kankaastaan. Kudonta oli oma '
+              + 'teollisuutensa: toob benadir -kangasta tehtiin varta '
+              + 'vasten Egyptin ja Syyrian markkinoille. Battuta pani '
+              + 'merkille myös tavan, jolla vieras otettiin vastaan — '
+              + 'kaupunkilaiset majoittivat matkalaiset koteihinsa, ja '
+              + 'raha jäi omaan kaupunkiin. Sulttaani Abu Bakr ibn Shaikh '
+              + 'Umar puhui hänen mukaansa yhtä sujuvasti Mogadishun '
+              + 'somalia kuin arabiaa.',
+          wiki: 'Sultanate of Mogadishu',
+        },
+        {
+          otsikko: 'Lähettiläs, joka purjehti Kiinaan',
+          aika: '1400-luku',
+          teksti: 'Mogadishun sulttaanikunta lähetti lähettiläitä Kiinaan, '
+              + 'ja niin syntyi ensimmäinen tunnettu afrikkalaisyhteisö '
+              + 'kiinalaisessa kaupungissa. Tunnetuin heistä oli Sa\'id '
+              + 'Mogadishulainen, ensimmäinen afrikkalainen, jonka jalka '
+              + 'tiedetään astuneen Kiinan maaperälle. Vastavuoroisesti '
+              + 'Ming-keisari Yongle lähetti Mogadishuun yhden Kiinan '
+              + 'historian suurimmista laivastoista amiraali Zheng Hen '
+              + 'johdolla. Laivat veivät mukanaan kultaa, suitsuketta ja '
+              + 'kangasta — ja niiden mukana Kiinaan päätyivät ensimmäiset '
+              + 'afrikkalaiset eläimet, virtahevot ja kirahvit.',
+          wiki: 'Sultanate of Mogadishu',
+        },
+        {
+          otsikko: 'Nimi, joka eksyi väärään saareen',
+          aika: '1298',
+          teksti: 'Madagaskarin nimelle on tunnettu selitys, joka alkaa '
+              + 'Somaliasta: se olisi väännös Mogadishusta. Marco Polo '
+              + 'kirjoitti muistelmissaan Socotran eteläpuolella olevasta '
+              + 'Madagaskarista sekoittaen kaksi paikkaa toisiinsa, ja '
+              + 'nimi levisi renessanssin karttoihin eurooppalaisten '
+              + 'purjehtijoiden mukana. Jerome Megiser kertoi 1609 '
+              + 'toisenkin version: Mogadishun ja Adalin hallitsijat '
+              + 'lähtivät suurella laivastolla itään, myrsky heitti heidät '
+              + 'Madagaskarin rannikolle, ja he pystyttivät saarelle '
+              + 'kahdeksan pylvästä, joihin oli kaiverrettu Magadoxo.',
+          wiki: 'Sultanate of Mogadishu',
+        },
+        {
+          otsikko: 'Kultasatama, jonka kala paljasti',
+          aika: '1180-luku',
+          teksti: 'Mogadishun kauppiaat perustivat Sofalan Mosambikin '
+              + 'rannikolle päästäkseen käsiksi Suuren Zimbabwen '
+              + 'kultakenttiin, ja he pitivät sataman salassa Kilwan '
+              + 'kilpailijoiltaan, jotka purjehtivat harvoin Cabo '
+              + 'Delgadon eteläpuolelle. Salaisuuden paljasti kalastaja: '
+              + 'iso kala tarttui koukkuun Kilwan edustalla ja raahasi '
+              + 'veneen niemen ympäri aina Sofalan matalikoille asti. '
+              + 'Mies palasi kertomaan näkemästään sulttaani Suleiman '
+              + 'Hassanille, joka lastasi laivan kankailla, purjehti '
+              + 'paikalle ja tarjosi paremman kaupan — mogadishulaiset '
+              + 'saivat väistyä.',
+          wiki: 'Sultanate of Mogadishu',
+        },
+      ],
+    },
+    {
+      id: 'runous',
+      nimi: 'Runous',
+      johdanto: 'Runo on Somaliassa uutinen, oikeudenkäynti ja rakkauskirje '
+          + 'yhtä aikaa — ja vuosisatojen ajan se piti osata ulkoa, koska '
+          + 'kieltä ei kirjoitettu.',
+      nostot: [
+        {
+          otsikko: 'Maa, jossa päälliköllä oli oma runoilija',
+          aika: '1850-luku',
+          teksti: 'Britti Richard Francis Burton kirjoitti Somalian '
+              + 'niemimaalta 1850-luvulla, että maa kuhisee runoilijoita: '
+              + 'jokaisella miehellä on kirjallisuudessa tunnustettu '
+              + 'paikkansa, ja jokaisella päälliköllä pitää olla ylistysruno, '
+              + 'jonka hänen väkensä laulaa. Kanadalainen kirjailija '
+              + 'Margaret Laurence antoi seudulle nimen runoilijoiden '
+              + 'kansa. Parhaina runoseppinä pidettiin eidagalleja: jos '
+              + 'sata heidän miestään kokoontuisi yhteen, kertoi Hersi '
+              + 'Jama Laurencelle, yhdeksänkymmentäviisi osaisi laulaa '
+              + 'oman gabay-runonsa — loput opettelisivat vielä.',
+          wiki: 'Somali literature',
+        },
+        {
+          otsikko: 'Runo, jossa jokainen säe alkaa samalla äänteellä',
+          teksti: 'Somalialaisessa runossa alkusointu ei ole koriste vaan '
+              + 'pakko: sama äänne toistuu säkeestä säkeeseen läpi koko '
+              + 'runon, samaan tapaan kuin germaanisessa alkusointuisessa '
+              + 'runoudessa. Runolajit erottaa toisistaan säkeen tavuluku. '
+              + '1800-luvun Ali Bu\'ul tunnetaan geeraar-runoistaan, joissa '
+              + 'ylistetään hevosta — hevonen oli paimentolaiselle sekä '
+              + 'kulkuneuvo että arvoesine. Yhdessä niistä alkusointu '
+              + 'kaikuu hevosen omaa nimeä Guulside, ja runoilijalta jäi '
+              + 'kieleen sana guulwade, voitonkantaja.',
+          wiki: 'Somali literature',
+        },
+        {
+          otsikko: 'Runoilija, joka mainitsi rakastettunsa nimeltä',
+          teksti: 'Elmi Boodhari poikkesi sukupolvensa runoilijoista: kun '
+              + 'muut sepittivät sodasta ja verikostosta, hän kirjoitti '
+              + 'kaikki runonsa yhdelle naiselle, Hodan Abdullelle, joka '
+              + 'oli naitettu häntä varakkaammalle miehelle. Rakkaudesta '
+              + 'sai laulaa, mutta rakastetun nimeäminen oli tapojen '
+              + 'vastaista, ja kiitoksen sijaan Boodhari sai osakseen '
+              + 'julkista pilkkaa. Hänen runonsa jäivät silti elämään '
+              + 'nimellä Qaraami, intohimo, ja Margaret Laurence esitteli '
+              + 'niitä englanniksi kokoelmassaan A Tree for Poverty.',
+          wiki: 'Elmi Boodhari',
+        },
+        {
+          otsikko: 'Kirjaimet, jotka keksittiin kolmesti',
+          aika: '1972',
+          teksti: 'Somalia kirjoitettiin vuosisatoja arabialaisin kirjaimin '
+              + 'wadaad-kirjoituksena, mutta se oli lähinnä uskonoppineiden '
+              + 'taito. 1900-luvulla kolme miestä keksi kielelle oman '
+              + 'kirjaimiston: Osman Yusuf Kenadid osmanjan, Abdurahman '
+              + 'Sheikh Nuur boraman ja Hussein Sheikh Ahmed Kaddare '
+              + 'kaddaren. Viralliseksi tuli lopulta vuonna 1972 '
+              + 'latinalainen aakkosto, jonka kehittivät muun muassa Musa '
+              + 'Haji Ismail Galal, B. W. Andrzejewski ja Shire Jama '
+              + 'Ahmed. Se käyttää kaikkia englannin kirjaimia paitsi '
+              + 'p:tä, v:tä ja z:aa.',
+          wiki: 'Somali language',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Somalialainen laulu rakentuu viidelle sävelelle, ja sen '
+          + 'moderni muoto syntyi rikkoutuneen kuorma-auton vierellä '
+          + 'aavikkotien varressa.',
+      nostot: [
+        {
+          otsikko: 'Balwo syntyi rikkoutuneen auton vierellä',
+          aika: '1943',
+          teksti: 'Abdi Sinimo ajoi kuorma-autoa Djiboutin satamasta '
+              + 'Dire Dawan kautta Addis Abebaan. Vuonna 1943 auto hajosi '
+              + 'kesken matkan, ja korjatessaan sitä hän hyräili runon, '
+              + 'josta tuli uuden laulutyylin, balwon, ensimmäinen. Se '
+              + 'löi läpi niin, että Sinimo jätti rattiin vuonna 1944 ja '
+              + 'perusti Boramaan yhtyeen, jonka nimeksi tuli sekin '
+              + 'Balwo. Tyylistä kehittyi heello, ja niistä kahdesta '
+              + 'kasvoi koko moderni somalimusiikki — Abdi Sinimo eli '
+              + 'vuosina 1920–1967.',
+          wiki: 'Abdi Sinimo',
+        },
+        {
+          otsikko: 'Mies, joka osti luutun Adenissa',
+          aika: '1957',
+          teksti: 'Abdullahi Qarshe syntyi 1924 somaliperheeseen '
+              + 'Tansanian Moshissa ja hänet lähetettiin vuonna 1931 '
+              + 'kouluun Adeniin. Siellä hän kuuli ensi kertaa radiota ja '
+              + 'elokuvateatterin intialaista ja arabialaista musiikkia — '
+              + 'ja osti luutun päättäneenä tehdä samanlaista musiikkia '
+              + 'somaliksi. Kaban eli oud tuli hänen mukanaan somalilaulun '
+              + 'säestäjäksi, ja Qarshea kutsutaan somalimusiikin isäksi. '
+              + 'Vuonna 1957 hän kirjoitti ja sävelsi laulun Qolobaa '
+              + 'Calankeed, josta tuli Somalian kansallislaulu.',
+          wiki: 'Abdullahi Qarshe',
+        },
+        {
+          otsikko: 'Viisi säveltä ja kolme tekijää',
+          teksti: 'Somalialainen laulu on pentatoninen: oktaavissa on viisi '
+              + 'säveltä seitsemän sijaan, ja juuri se tekee siitä '
+              + 'tunnistettavan, vaikka korva erehtyisi ensin luulemaan '
+              + 'sitä naapuriseutujen musiikiksi. Laulu on tavallisesti '
+              + 'kolmen työ: sanoittaja on lahamiste, säveltäjä abwaan ja '
+              + 'laulaja odka eli ääni; tanssi on ciyaar. Pääsoitin on '
+              + 'kaban-luuttu, jonka taustalla soivat pienet rummut ja '
+              + 'ruokohuilu. Raskasta lyömäsoitinten jyskettä tai '
+              + 'metallista helinää kuulee harvoin.',
+          wiki: 'Music of Somalia',
+        },
+        {
+          otsikko: 'Aamunkoitto kiersi maailmaa',
+          aika: '1969',
+          teksti: 'Radion taiteilijayhdistyksen jäsenet perustivat ryhmän, '
+              + 'joka toimi kansallisteatterin yhteydessä ja sai vuonna '
+              + '1969 nimen Waaberi, aamunkoitto. Se kiersi Egyptissä ja '
+              + 'Sudanissa ja esiintyi Kiinassa, ja se jatkoi yksityisenä '
+              + 'ryhmänä 1990-luvulle asti. Laulajista tunnetuin on Maryam '
+              + 'Mursal, ensimmäinen nainen, joka soitti somalialaista '
+              + 'jazzia. Vuonna 1997 Waaberi esiintyi Englannin '
+              + 'WOMAD-festivaalilla, kiersi seuraavana vuonna '
+              + 'Pohjois-Amerikan ja levytti egyptiläisen Hossam Ramzyn '
+              + 'kanssa.',
+          wiki: 'Waaberi',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Aamu alkaa ohuella hapanleivällä ja lasilla teetä, ja '
+          + 'lounaslautaselta löytyy usein sekä riisiä että italialaista '
+          + 'spagettia — ja banaani.',
+      nostot: [
+        {
+          otsikko: 'Canjeero, aamun ohut leipä',
+          teksti: 'Aamiainen eli quraac on somalialaisen päivän tärkein '
+              + 'ateria, ja sen keskellä on canjeero eli laxoox: ohut, '
+              + 'hapatettu letun kaltainen leipä. Sen päälle tulee hunajaa '
+              + 'ja voisulaa, oliivi- tai seesamiöljyä, ja seuraksi lasi '
+              + 'teetä. Lapsille leipä revitään paloiksi ja sekoitetaan '
+              + 'teehen ja öljyyn puuroksi, jota sanotaan macsaroksi. '
+              + 'Etiopian injeraan verrattuna canjeero on pienempi, ohuempi '
+              + 'ja makeampi. Lisukkeeksi tulee usein maksaa, vuohenlihaa '
+              + 'tai muqmadia, voisulassa keitettyjä kuivatun lihan paloja.',
+          wiki: 'Somali cuisine',
+        },
+        {
+          otsikko: 'Federaatio on riisiä ja spagettia samalla lautasella',
+          teksti: 'Spagetti eli baasto jäi Somaliaan italialaisilta, mutta '
+              + 'se syödään paksun lihamuhennoksen kanssa eikä '
+              + 'pastakastikkeessa. Ravintolassa voi tilata annoksen, jonka '
+              + 'nimi on federaatio: soikealle vadille tulee yhtä suuri '
+              + 'kasa riisiä ja yhtä suuri kasa spagettia vierekkäin, '
+              + 'päälle haudutettua lihaa ja kasviksia, viereen salaattia '
+              + 'ja halutessa banaani. Nimen arvellaan tulevan kahden '
+              + 'ruokalajin liitosta ja annoksen koosta. Kotona sitä tehdään '
+              + 'harvoin — kukapa keittäisi samalle aterialle sekä riisin '
+              + 'että pastan.',
+          wiki: 'Somali cuisine',
+        },
+        {
+          otsikko: 'Xalwo kuuluu häihin ja juhlapäivään',
+          tiedosto: 'Halwo 003.jpg',
+          selite: 'Xalwo tarjoillaan yhtenä möhkäleenä, josta leikataan '
+            + 'paloja; maapähkinät antavat sitkeään makeiseen purtavaa.',
+          lahde: 'Middayexpress, Wikimedia Commons (CC BY-SA 3.0)',
+          teksti: 'Xalwo on benadirilainen makeinen, jota tarjotaan '
+              + 'juhlissa: id-päivinä ja hääjuhlissa. Se tehdään sokerista, '
+              + 'maissitärkkelyksestä, kardemummasta, muskottipähkinästä ja '
+              + 'voisulasta, ja joukkoon lisätään toisinaan maapähkinöitä '
+              + 'antamaan purtavaa. Arki-illan versio on rooti iyo xalwo eli '
+              + 'leipäviipaleita ja hyytelömäistä makeista. Sukua on koko '
+              + 'Lähi-idän ja Intian halva-perheelle, mutta somalialainen '
+              + 'xalwo on omansa: sitkeä, kirkas ja kardemumman tuoksuinen.',
+          wiki: 'Somali cuisine',
+        },
+        {
+          otsikko: 'Teehen maito vasta lopuksi',
+          teksti: 'Aamun juoma on shaah tai qahwa, tee tai kahvi. Shaah '
+              + 'keitetään mustasta teestä ja maustetaan '
+              + 'inkiväärillä, kardemummalla ja kanelilla — mutta '
+              + 'mustapippuria siihen ei panna, toisin kuin moneen muuhun '
+              + 'maustettuun teehen. Maito lisätään vasta keittämisen '
+              + 'jälkeen, ei sen aikana, ja silloin juoma on shaah cadeeys. '
+              + 'Illalla ennen nukkumaanmenoa juodaan lasi kardemummalla '
+              + 'maustettua maitoa. Lounaan janojuomia ovat balbeelmo eli '
+              + 'greippi, raqey eli tamarindi ja isbarmuunto eli limonadi.',
+          wiki: 'Somali cuisine',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä somalialaisessa ravintolassa tarkoittaa federaatio?',
+        vaihtoehdot: [
+          'Kolmen mausteseoksen yhdistelmää',
+          'Häävieraille tarjottavaa makeista',
+          'Riisiä ja spagettia samalla vadilla',
+          'Kolmesta teelaadusta keitettyä teetä',
+        ],
+        oikea: 2,
+        fakta: 'Nimen arvellaan tulevan kahden ruokalajin liitosta ja '
+            + 'annoksen koosta.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Rannikon edustalla merivirta kääntyy kaksi kertaa vuodessa, '
+          + 'ja sisämaassa laiduntaa kamelilaumoja: Somaliassa ja Keniassa '
+          + 'lypsetään yhdessä kaksi kolmasosaa maailman kamelinmaidosta.',
+      nostot: [
+        {
+          otsikko: 'Virta, joka kääntyy monsuunin mukana',
+          teksti: 'Somalian virta on kylmä rajavirta, joka kulkee Somalian '
+              + 'ja Omanin rannikoita pitkin ja vastaa Intian valtameressä '
+              + 'sitä, mitä Golfvirta on Atlantilla. Se on maailman ainoa '
+              + 'suuri kumpuamisalue valtameren länsireunalla. Kesä-'
+              + 'syyskuussa lounaismonsuuni työntää rannikkovettä koilliseen, '
+              + 'ja tilalle nousee syvyydestä kylmää ja ravinteikasta vettä. '
+              + 'Samaan aikaan puhaltaa Somalian suihkuvirtaus, kapea matala '
+              + 'ilmavirta, joka viistää valtameren yli. Yhdessä ne '
+              + 'synnyttävät yhden koko maailmanmeren tuotteliaimmista '
+              + 'ekosysteemeistä.',
+          wiki: 'Somali Current',
+        },
+        {
+          otsikko: 'Kameli on pankki ja maitokannu',
+          tiedosto: 'Somaliland (6790596624) (2).jpg',
+          selite: 'Kameleita lepäämässä Berberan rannalla Adeninlahden '
+            + 'äärellä — sama eläin kantaa paimentolaisperheen '
+            + 'omaisuuden ja ruokkii sen.',
+          lahde: 'YoTuT, Wikimedia Commons (CC BY 2.0)',
+          teksti: 'Somalian keskuspankin arvion mukaan noin 80 prosenttia '
+              + 'maan väestöstä on paimentolaisia tai puolipaimentolaisia, '
+              + 'jotka pitävät vuohia, lampaita, kameleita ja nautoja ja '
+              + 'täydentävät tulojaan keräämällä hartseja. Kamelinmaitoa '
+              + 'tuotettiin maailmassa vuonna 2017 noin 2,85 miljoonaa '
+              + 'tonnia, ja siitä 64 prosenttia lypsettiin Somaliassa ja '
+              + 'Keniassa. Paimen voi elää pitkiä jaksoja pelkällä '
+              + 'kamelinmaidolla: siitä syntyy helposti jogurttia, mutta '
+              + 'voita tai juustoa siitä ei juuri saa.',
+          wiki: 'Camel milk',
+        },
+        {
+          otsikko: 'Strutsi, jonka kaula on sininen',
+          aika: '2014',
+          tiedosto: 'Struthio molybdophanes 443006323.jpg',
+          selite: 'Somalianstrutsin koiras Etiopiassa: kaulan siniharmaa '
+            + 'iho ja valkoisen kaularenkaan puuttuminen erottavat lajin '
+            + 'afrikanstrutsista.',
+          lahde: 'Tommy Andriollo, Wikimedia Commons (CC BY 4.0)',
+          teksti: 'Somalianstrutsi tunnettiin pitkään afrikanstrutsin '
+              + 'alalajina, mutta vuonna 2014 se tunnustettiin omaksi '
+              + 'lajikseen — nyt maailmassa on kaksi strutsilajia. Sen '
+              + 'kaulan ja reisien iho on sinertävän harmaa, ja koiraalla '
+              + 'se hehkuu soidinaikaan kirkkaan siniseksi; kaulassa ei ole '
+              + 'valkoista rengasta niin kuin sukulaisellaan. '
+              + 'Perimäntutkimus kertoo lajien eronneen toisistaan 3,6–4,1 '
+              + 'miljoonaa vuotta sitten, ja Itä-Afrikan hautavajoama on '
+              + 'pitänyt ne erillään. Somalit ovat kesyttäneet strutseja '
+              + 'osittain jo kauan.',
+          wiki: 'Somali ostrich',
+        },
+        {
+          otsikko: 'Villiaasi, jonka jaloissa on seepran raidat',
+          tiedosto: 'Equus africanus somaliensis - Réserve africaine de Sigean 01.jpg',
+          selite: 'Somalianvilliaasin jalkojen raidat näkyvät parhaiten '
+            + 'sivusta; kuvan yksilö on Sigeanin eläinpuistossa Ranskassa, '
+            + 'jossa lajia on kasvatettu vuodesta 1987.',
+          lahde: 'H. Zell, Wikimedia Commons (CC BY-SA 3.0)',
+          teksti: 'Somalianvilliaasi on afrikanvilliaasin alalaji, ja sen '
+              + 'jalat ovat raidalliset kuin seepralla. Luonnossa niitä '
+              + 'arvioidaan olevan enää noin 600, ja laji on luokiteltu '
+              + 'äärimmäisen uhanalaiseksi. Aasit elävät niukalla maalla '
+              + 'yksin tai pieninä tammalaumoina ja kokoontuvat suuremmiksi '
+              + 'joukoiksi vain siellä, missä on satanut; ori voi pitää jopa '
+              + 'kahdenkymmenen neliökilometrin reviiriä ja merkitä sen '
+              + 'rajat lantakasoin. Roomalaisajoista asti Italian '
+              + 'kotiaasien on katsottu polveutuvan juuri tästä aasista.',
+          wiki: 'Somali wild ass',
+        },
+      ],
+    },
+  ],
+  /*
+   * ETELÄ-AFRIKKA (ZAF) — maalehti 7.9.2026 (Opus).
+   *
+   * TYÖNJAKO. Maalla on jo kaupunkilehti (Kapkaupunki) ja runsaasti
+   * karttanostoja, joten maalehti on kirjoitettu täydentämään eikä
+   * toistamaan niitä:
+   *   - Kapkaupungin kansi kattaa Pöytävuoren, fynbosin, Kirstenboschin,
+   *     Bo-Kaapin ja arabiaksi kirjoitetun afrikaansin, vuoden 1873
+   *     sataman ja bobotien → maalehti ei koske yhteenkään.
+   *   - js/packs/maastokohteet-zaf.js kattaa Sterkfonteinin, Krugerin,
+   *     Isandlwanan, Cape Agulhasin, Stellenboschin, Pilgrim's Restin,
+   *     Vredefortin, iSimangaliso, Mafadin, Oranjejoen ja Intian
+   *     valtameren; js/packs/skandaalit.js Hopetownin timantin ja
+   *     Mapungubwen; js/packs/elaintakyt.js afrikanpingviinin.
+   *     → LUONTO ja TIEDE jätettiin aiheina pois, koska karttanostot
+   *     kantavat ne jo; tilalle tulivat KIELET ja KUVATAIDE, joita ei
+   *     kerro kukaan muu.
+   *
+   * HERKÄT AIHEET. Apartheid ja siirtomaahistoria kerrotaan asiallisesti
+   * ja tapahtumina (Suuri vaellus, Rivonian oikeudenkäynti, vuoden 1994
+   * vaalit, totuuskomissio). Nykypolitiikkaa ei ole, eikä käynnissä
+   * olevia selkkauksia — sama linja kuin M3:n Myanmar-päätöksessä.
+   *
+   * Faktapohja ja lähdeviitteet osioittain:
+   * docs/mantereet-tyoaineisto/faktapohja-etela-afrikka.md.
+   */
+  ZAF: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Etelä-Afrikan historia on kolmesataa vuotta kiistaa '
+        + 'siitä, kuka maan omistaa — ja kiista ratkesi lopulta '
+        + 'jonossa, joka kiemurteli neljä päivää äänestyspaikkojen '
+        + 'ympärillä.',
+      nostot: [
+        {
+          otsikko: 'Härkävankkurit lähtivät pois brittien ulottuvilta',
+          aika: '1836 alkaen',
+          tiedosto: 'G.S. Smithard; J.S. Skelton (1909) - The Voortrekkers.jpg',
+          teksti: 'Kapin siirtokunnan hollanninkieliset maanviljelijät '
+            + 'eli buurit olivat kyllästyneet brittihallintoon, ja '
+            + 'vuodesta 1836 alkaen tuhannet heistä pakkasivat koko '
+            + 'omaisuutensa härkävankkureihin ja lähtivät pohjoiseen '
+            + 'sisämaahan. Vaeltajat kutsuivat itseään nimellä '
+            + 'voortrekker, "edelläkulkija". Matkasta syntyi kolme '
+            + 'itsenäistä buuritasavaltaa — Transvaal, Oranjen '
+            + 'vapaavaltio ja Natalia — ja samalla pitkä kiista maasta '
+            + 'niiden kanssa, jotka siellä jo asuivat: pohjoiset '
+            + 'ndebelet joutuivat väistymään, ja yhteenotot '
+            + 'zulukuningaskunnan kanssa alkoivat murentaa sitä. Suuri '
+            + 'vaellus on afrikaanerien perustarina.',
+          selite: 'G. S. Smithardin ja J. R. Skeltonin kuvitus vuodelta 1909 '
+            + 'esittää voortrekkerien vankkurijonoa matkalla sisämaahan.',
+          lahde: 'G. S. Smithard ja J. R. Skelton, Wikimedia Commons (PD)',
+          wiki: 'Suuri vaellus',
+        },
+        {
+          otsikko: 'Puutarhuri, joka oli oikeasti asianajaja',
+          aika: '1963–1964',
+          tiedosto: 'Liliesleaf hut1.jpg',
+          teksti: 'Nelson Mandela asui vuodesta 1961 Liliesleafin '
+            + 'maatilalla Rivoniassa Johannesburgin laidalla ja '
+            + 'esiintyi puutarhurina ja kokkina nimellä David '
+            + 'Motsamayi. Poliisi ratsasi tilan 11. heinäkuuta 1963, ja '
+            + 'oikeudenkäynti kesti lokakuusta 1963 kesäkuuhun 1964. '
+            + 'Syytettyjä uhkasi kuolemantuomio. Mandela puhui '
+            + 'syytettyjen aitiosta ja päätti puheensa sanoihin, jotka '
+            + 'hän kirjoitti vastoin omien asianajajiensa varoitusta: '
+            + 'yhdenvertainen yhteiskunta on ihanne, jonka puolesta hän '
+            + 'on tarvittaessa valmis kuolemaan. Kahdeksan tuomittiin '
+            + 'elinkautiseen. Käsittely nauhoitettiin 591 '
+            + 'Dictabelt-nauhalle, ja Unesco liitti asiakirjat Maailman '
+            + 'muisti -rekisteriin 2007.',
+          selite: 'Liliesleafin maatilan ruokokattoinen rakennus Rivoniassa oli '
+            + 'ANC:n aktivistien salainen kokoushuone, ja poliisi ratsasi sen '
+            + 'heinäkuussa 1963.',
+          lahde: 'Colinvlr, Wikimedia Commons (PD)',
+          wiki: 'Rivonian oikeudenkäynti',
+        },
+        {
+          otsikko: 'Neljä päivää jonoa ja tarra äänestyslipussa',
+          aika: '1994',
+          teksti: 'Ensimmäiset vaalit, joissa kaikki rotuun katsomatta '
+            + 'saivat äänestää, pidettiin 26.–29. huhtikuuta 1994. '
+            + 'Ääniä laskettiin 19 726 579, ja maaseudulla jonotettiin '
+            + 'päiviä. Inkatha-vapauspuolue oli ilmoittanut jättävänsä '
+            + 'vaalit väliin ja muutti mielensä vasta 19. huhtikuuta — '
+            + 'äänestysliput oli jo painettu, joten puolue lisättiin '
+            + 'niihin tarralla. ANC sai 62 prosenttia äänistä, ja uuden '
+            + 'kansalliskokouksen ensimmäinen teko oli valita Nelson '
+            + 'Mandela presidentiksi. Huhtikuun 27. päivä on nyt '
+            + 'vapaudenpäivä.',
+          wiki: '1994 South African general election',
+        },
+        {
+          otsikko: 'Komissio, jossa tekijä sai puhua itsensä vapaaksi',
+          aika: '1996',
+          tiedosto: 'Desmond Tutu - Kirchentag Cologne 2007 (7137).jpg',
+          teksti: 'Uusi valtio ei perustanut sotarikostuomioistuinta '
+            + 'vaan komission. Totuus- ja sovintokomissio aloitti '
+            + 'kuulemisensa 1996 arkkipiispa Desmond Tutun johdolla. '
+            + 'Uhrit kertoivat julkisesti, mitä heille oli tehty; '
+            + 'tekijä saattoi hakea armahdusta, mutta sen sai vain, jos '
+            + 'teko oli poliittinen ja jos hakija kertoi kaiken. '
+            + 'Hakemuksia tuli 7 111, ja armahdus myönnettiin 849 '
+            + 'tapauksessa. Kumpaakaan puolta ei jätetty ulkopuolelle: '
+            + 'komission eteen joutuivat sekä apartheidvaltion että '
+            + 'vapausliikkeen tekijät. Tutu kytki työn ubuntuun — '
+            + 'ajatukseen, että ihminen on ihminen toisten ihmisten '
+            + 'kautta.',
+          selite: 'Arkkipiispa Desmond Tutu toimi totuus- ja sovintokomission '
+            + 'puheenjohtajana.',
+          lahde: 'Raimond Spekking, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Totuus- ja sovintokomissio',
+        },
+      ],
+    },
+    {
+      id: 'kielet',
+      nimi: 'Kielet',
+      johdanto: 'Etelä-Afrikassa on kaksitoista virallista kieltä eikä '
+        + 'yksikään niistä ole enemmistön kieli — siksi täällä opitaan '
+        + 'lapsesta asti vaihtamaan kieltä kesken keskustelun.',
+      tehtava: {
+        kysymys: 'Mitä laulun nimi Nkosi Sikelel\' iAfrika tarkoittaa?',
+        vaihtoehdot: [
+          'Jumala siunatkoon Afrikkaa',
+          'Nouse, Afrikan aamu',
+          'Afrikka on meidän',
+          'Vapaus tulee huomenna',
+        ],
+        oikea: 0,
+        fakta: 'Sama sävelmä on yhä Tansanian ja Sambian kansallislaulu.',
+      },
+      nostot: [
+        {
+          otsikko: 'Yksikään kieli ei ole enemmistön kieli',
+          tiedosto: 'ConstitutionalCourtofSouthAfrica-entrance-20070622.jpg',
+          teksti: 'Vuoden 1996 perustuslaki teki yhdestätoista kielestä '
+            + 'virallisia, ja 3. toukokuuta 2023 kansalliskokous lisäsi '
+            + 'joukkoon eteläafrikkalaisen viittomakielen. Yksikään '
+            + 'niistä ei ole enemmistön kieli: zulua puhuu äidinkielenään '
+            + '23 prosenttia väestöstä, xhosaa 16 ja afrikaansia 14. '
+            + 'Englanti on vasta neljäntenä 9,6 prosentilla, mutta se on '
+            + 'hallinnon ja median kieli eli se, jolla eri kieliryhmät '
+            + 'puhuvat toisilleen. Kotimaiset bantukielet jakautuvat '
+            + 'kahtia: nguni-kieliä puhutaan itärannikolla ja '
+            + 'sotho–tswana-kieliä sisämaassa pohjoisessa.',
+          selite: 'Perustuslakituomioistuin toimii Constitution Hillillä '
+            + 'Braamfonteinissa Johannesburgissa, ja sen nimi on kirjoitettu '
+            + 'sisäänkäyntiin maan virallisilla kielillä.',
+          lahde: 'André-Pierre, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Etelä-Afrikan kielet',
+        },
+        {
+          otsikko: 'Kolme naksausta, jotka lainattiin naapurilta',
+          teksti: 'Xhosan kirjaimet c, x ja q eivät ole kirjaimia siinä '
+            + 'mielessä kuin suomessa: ne merkitsevät naksahduksia, '
+            + 'joita ei tuoteta keuhkoista tulevalla ilmalla lainkaan. '
+            + 'Xhosassa naksahduskonsonantteja on viisitoista, ja '
+            + 'erään laskutavan mukaan joka kymmenennessä perussanassa '
+            + 'on jokin niistä. Kieli ei ole perinyt niitä: xhosan '
+            + 'bantukielisillä esivanhemmilla ei ollut naksahduksia '
+            + 'lainkaan, vaan ne omaksuttiin khoisankielistä, joiden '
+            + 'puhujiin itään muuttaneet törmäsivät. Xhosan sanastosta '
+            + 'arviolta 15 prosenttia on khoisanperäistä.',
+          wiki: 'Xhosan kieli',
+        },
+        {
+          otsikko: 'Kaivosten oma kieli syntyi käskyistä',
+          teksti: 'Kun kullan ja timanttien kaivoksiin tuli 1800-luvun '
+            + 'lopulla työmiehiä kymmenistä kieliryhmistä ja useasta '
+            + 'maasta, syntyi apukieli: fanagalo. Sanasto on '
+            + 'enimmäkseen zulua, mukana on englantia ja hiukan '
+            + 'afrikaansia, ja nimi tulee nguni-ilmauksesta '
+            + 'fana-ga-lo, "tee näin". Nimi kertoo, mihin kieltä '
+            + 'käytettiin: työnjohtaja neuvoi sillä työmiehiä. '
+            + 'Fanagaloa ei opittu äidinkielenä, mutta 1970-luvulla '
+            + 'puhujia arvioitiin olevan satojatuhansia. Kun '
+            + 'englannista tuli yleinen apukieli, fanagalon käyttö '
+            + 'väheni.',
+          wiki: 'Fanagalo',
+        },
+        {
+          otsikko: 'Laulu, jossa kieli vaihtuu neljä kertaa',
+          aika: '1897 ja 1997',
+          tiedosto: 'Enoch Sontonga Braamfontein.jpg',
+          teksti: 'Metodistilähetyskoulun opettaja Enoch Sontonga '
+            + 'sävelsi 1897 Johannesburgin lähellä virren, jonka nimi '
+            + 'on xhosaksi Nkosi Sikelel\' iAfrika eli "Jumala '
+            + 'siunatkoon Afrikkaa". Siitä tuli koko mantereen '
+            + 'vapauslaulu, ja sen sävelmä on yhä Tansanian ja Sambian '
+            + 'kansallislaulu. Nykyinen kansallislaulu otettiin '
+            + 'käyttöön 1997, ja se on hybridi: alkupuoli on Sontongan '
+            + 'virsi, loppupuoli apartheidin ajan afrikaansinkielinen '
+            + 'Die Stem, ja viimeinen säkeistö kirjoitettiin '
+            + 'englanniksi. Kieliä on viisi, ja laulu vaihtaa myös '
+            + 'sävellajia: se alkaa G-duurista ja päättyy D-duuriin.',
+          selite: 'Enoch Sontongan hautamuistomerkki on Braamfonteinin '
+            + 'hautausmaalla Johannesburgissa.',
+          lahde: 'Steamhunter, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Nkosi Sikelel’ iAfrika',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Etelä-Afrikan musiikki on syntynyt siirtotyöläisten '
+        + 'asuntoloissa ja kaivoskaupungeissa — ja kiertänyt sieltä '
+        + 'maailman ympäri, usein ilman että tekijä sai siitä mitään.',
+      nostot: [
+        {
+          otsikko: 'Kymmenellä shillingillä myyty maailmanhitti',
+          aika: '1939',
+          teksti: 'Solomon Linda tuli 1931 Msingan maaseudulta '
+            + 'Johannesburgiin töihin ja lauloi Evening Birds '
+            + '-kuorossa. Vuonna 1939 hän oli levy-yhtiö Gallon '
+            + 'tehtaalla pakkaajana, pääsi studioon ja improvisoi '
+            + 'äänityksessä laulun Mbube, "leijona". Levyä myytiin '
+            + 'yhdeksässä vuodessa yli satatuhatta kappaletta, mutta '
+            + 'Linda oli myynyt oikeutensa Gallolle kymmenellä '
+            + 'shillingillä heti istunnon jälkeen. Pete Seeger kuuli '
+            + 'levyn ja teki siitä Wimowehin, ja The Tokens teki siitä '
+            + '1961 hitin The Lion Sleeps Tonight. Linda kuoli 1962 '
+            + 'köyhänä. Vasta 2004 nostettu kanne toi perheelle '
+            + 'sovinnon ja Lindalle tekijämerkinnän.',
+          wiki: 'Solomon Linda',
+        },
+        {
+          otsikko: 'Passi mitätöitiin äidin hautajaisten alla',
+          aika: '1960-luku',
+          tiedosto: 'Miriam Makeba 1986 (cropped).jpg',
+          teksti: 'Miriam Makeba pääsi maailmalle 1959 neljän minuutin '
+            + 'roolilla apartheidia vastustaneessa elokuvassa Come '
+            + 'Back, Africa. Kun hän vuonna 1960 yritti palata kotiin '
+            + 'äitinsä hautajaisiin, passi oli mitätöity. Vuonna 1962 '
+            + 'hän todisti YK:ssa apartheidia vastaan, ja sen jälkeen '
+            + 'häneltä vietiin kansalaisuus ja hänen levynsä '
+            + 'kiellettiin kotimaassa. Makebasta tuli valtioton, mutta '
+            + 'Algeria, Guinea, Belgia ja Ghana antoivat hänelle '
+            + 'passin — elämänsä aikana hän piti yhdeksää. Grammyn hän '
+            + 'voitti 1966 ensimmäisenä afrikkalaisena artistina. '
+            + 'Kotimaahan hän palasi vasta 10. kesäkuuta 1990.',
+          selite: 'Miriam Makeba eli maanpaossa vuodesta 1960 vuoteen 1990, ja '
+            + 'hänet tunnettiin nimellä Mama Africa.',
+          lahde: 'Bernard Gotfryd, Wikimedia Commons (PD)',
+          wiki: 'Miriam Makeba',
+        },
+        {
+          otsikko: 'Kilpalaulanta, jossa voittaa hiljaisin',
+          tiedosto: 'Ladysmith Black Mambazo 2018.jpg',
+          teksti: 'Isicathamiya on zulunkielinen mieskuorolaulu, ja '
+            + 'nimi tulee verbistä -cathama, "astua varovasti". Se '
+            + 'syntyi siirtotyöläisten asuntoloissa. Vanhempi tyyli '
+            + 'mbube laulettiin täydellä äänellä, mutta '
+            + 'isicathamiyassa tavoitteena on äänten sulautuminen ja '
+            + 'tarkkaan harjoiteltu, varpaillaan liikkuva tanssi. '
+            + 'Johannesburgissa ja Durbanissa kilpaillaan yhä '
+            + 'lauantaiöisin: jopa kolmekymmentä kuoroa laulaa illan '
+            + 'kahdeksasta aamun kahdeksaan. Joseph Shabalala perusti '
+            + 'Ladysmith Black Mambazon 1960 ja opetti sille '
+            + 'harmoniat, jotka oli kuullut toistuvassa unessa 1964. '
+            + 'Nimen mambazo tarkoittaa kirvestä.',
+          selite: 'Ladysmith Black Mambazo on laulanut isicathamiyaa vuodesta '
+            + '1960 ja voittanut viisi Grammy-palkintoa.',
+          lahde: 'Raph_PH, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Isicathamiya',
+        },
+        {
+          otsikko: 'Rumpu, joka vei lähiöiden soundin maailmalle',
+          aika: '2020-luku',
+          teksti: 'Amapiano nousi Johannesburgin lähiöistä 2020-luvun '
+            + 'alussa maailmanlaajuiseksi tanssimusiikiksi. Nimi on '
+            + 'zulua ja tarkoittaa yksinkertaisesti "pianoja". '
+            + 'Tyylissä yhdistyvät kwaito, deep house, gqom, jazz ja '
+            + 'soul, ja sen tunnistaa leveästä log drum -bassosta, '
+            + 'joka on sähköinen versio länsiafrikkalaisesta '
+            + 'onttorummusta. Yhtä perustajaa ei ole, ja '
+            + 'syntyhistoriasta kiistellään — osa jäljittää tyylin '
+            + 'Pretoriaan. Kieli vaihtelee laulusta toiseen: '
+            + 'amapianoa lauletaan yhdellätoista maan kahdestatoista '
+            + 'virallisesta kielestä.',
+          wiki: 'Amapiano',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Eteläafrikkalainen ruoka on tehty ulkona ja pitkiä '
+        + 'matkoja varten: lihaa hiilloksella, kuivattua lihaa taskussa '
+        + 'ja curryä leivän sisällä.',
+      nostot: [
+        {
+          otsikko: 'Tuli, jonka ympärillä koko maa juhlii samana päivänä',
+          tiedosto: 'Braai Fire, Cape Town, South Africa-3629.jpg',
+          teksti: 'Braai on afrikaansia ja tarkoittaa grillaamista, '
+            + 'mutta sana on siirtynyt kaikkiin kieliryhmiin. Sanassa '
+            + 'braaivleis vleis tarkoittaa lihaa ja on samaa juurta '
+            + 'kuin englannin flesh. Braai on tapahtuma eikä ateria: '
+            + 'vieraat tuovat oman lihansa, ja lisukkeena on pap eli '
+            + 'hienoksi jauhetusta maissista keitetty puuro sekä '
+            + 'tulinen chakalaka. Lähiöissä sama asia on shisa nyama, '
+            + 'zulua "polta lihaa": lihakauppias antaa grillin ja tulen '
+            + 'ilmaiseksi niille, jotka ostavat lihan häneltä. Vuonna '
+            + '2005 alkanut braai-päivä on 24. syyskuuta, samana '
+            + 'päivänä kuin perintöpäivä, ja Desmond Tutu suostui 2007 '
+            + 'sen suojelijaksi.',
+          selite: 'Braai tarkoittaa afrikaansiksi grillaamista, ja puu on sen '
+            + 'perinteinen polttoaine.',
+          lahde: 'Victorgrigas, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Braai',
+        },
+        {
+          otsikko: 'Curry tarjoillaan kaiverretun leivän sisällä',
+          aika: '1940-luku',
+          tiedosto: 'Chicken Curry Bunny Chow.JPG',
+          teksti: 'Durbanissa asuu Afrikan suurin intialaisperäinen '
+            + 'väestö, ja sieltä on 1940-luvulta peräisin bunny chow: '
+            + 'puolikas tai neljännes vaaleaa limppua, jonka sisus on '
+            + 'kaiverrettu pois ja tilalle kaadettu curryä. Kaiverrettu '
+            + 'pala pannaan kanneksi päälle, ja annos syödään käsin '
+            + 'kastaen kansi kastikkeeseen — astian saa siis syödä. '
+            + 'Nimen alkuperästä kiistellään. Erään selityksen mukaan '
+            + 'sokeriruokoviljelmien intialaiset työmiehet levittivät '
+            + 'ruokansa ensin suurille lehdille, mutta tauko oli lyhyt '
+            + 'ja leipä nopeampi astia. Neljännesannosta kutsutaan '
+            + 'monin paikoin nimellä kota.',
+          selite: 'Bunny chow syntyi Durbanissa 1940-luvulla, ja onteloksi '
+            + 'kaiverrettu leipä on sekä astia että osa ateriaa.',
+          lahde: 'Lucinda Jolly, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bunny chow',
+        },
+        {
+          otsikko: 'Kuivattu liha kulki satulan alla',
+          tiedosto: 'Sliced Biltong.jpg',
+          teksti: 'Biltong on ilmakuivattua ja mausteilla kuorrutettua '
+            + 'lihaa: nautaa, mutta myös strutsia tai kuduantilooppia. '
+            + 'Nimi tulee afrikaansin sanoista bil, "takapuoli", ja '
+            + 'tong, "suikale". Se muistuttaa amerikkalaista jerkyä, '
+            + 'mutta jerky kuumennetaan vähintään 71 asteeseen, kun '
+            + 'biltong vain kuivuu ilmassa — siitä tulee eri rakenne ja '
+            + 'maku. Hollantilaiset toivat mausteikseen pippurin, '
+            + 'korianterin ja mausteneilikan, joilla on itsessään '
+            + 'mikrobeja hillitsevä vaikutus. Paikallisen kertomuksen '
+            + 'mukaan 1600-luvun uudisasukkaat kuivattivat lihasuikaleita '
+            + 'satulan alla hevosen suolaisessa hiessä.',
+          selite: 'Biltong kuivataan ilmassa eikä kuumenneta lainkaan, ja se '
+            + 'maustetaan muun muassa korianterilla ja pippurilla.',
+          lahde: 'Delia du Plessis, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Biltong',
+        },
+        {
+          otsikko: 'Muurahaispesästä löytyi kokonaisen elinkeinon siemen',
+          aika: '1930-luku',
+          tiedosto: 'Rooibos (Aspalathus linearis)PICT2813.JPG',
+          teksti: 'Rooibos eli afrikaansiksi "punainen pensas" kasvaa '
+            + 'vain Cederbergin vuorilla noin 250 kilometriä '
+            + 'Kapkaupungista pohjoiseen. Neulasmaiset lehdet '
+            + 'hapetetaan auringossa, jolloin vihreä pensas muuttuu '
+            + 'tummanpunaiseksi; juoma on kofeiiniton. Villipensaita '
+            + 'kerättiin vuorilta aasien selässä, mutta viljely takkusi, '
+            + 'koska siemeniä ei löytynyt eikä niitä osattu saada '
+            + 'itämään. 1930-luvulla iäkäs khoinainen huomasi '
+            + 'muurahaisten raahaavan siemeniä, seurasi niitä pesälle ja '
+            + 'mursi sen auki: sisällä oli aitta. Piirilääkäri Pieter le '
+            + 'Fras Nortier kehitti löydöstä viljelymenetelmän. EU '
+            + 'myönsi rooiboksille alkuperäsuojan 2021.',
+          selite: 'Rooibos-pensas Aspalathus linearis kasvaa Länsi-Kapin '
+            + 'Cederbergissä, ja Clanwilliamin seudulla ratkaistiin '
+            + '1930-luvulla, miten sitä voi viljellä.',
+          lahde: 'Winfried Bruenken, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Rooibos',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Etelä-Afrikan kuvataide alkaa kalliomaalauksista, ja '
+        + 'kaksi niiden hahmoista seisoo nykyään maan vaakunassa — '
+        + 'tunnuslauseenaan kieli, jota kukaan ei enää puhu.',
+      nostot: [
+        {
+          otsikko: 'Neljäkymmentätuhatta maalausta yhdellä vuoristolla',
+          tiedosto: 'ELANDS - San rock-art panel at Eland Cave, Cathedral Peak, South Africa, 2017.jpg',
+          teksti: 'Lohikäärmevuorten pehmeään hiekkakiveen on kulunut '
+            + 'luolia ja kalliosuojia, ja niiden seinillä on 35 '
+            + '000–40 000 sanien tekemää maalausta. Se on maailman '
+            + 'suurin tällainen kokonaisuus. Viidestäsadasta kohteesta '
+            + 'on kirjattu noin 20 000 yksittäistä kuvaa, ja '
+            + 'yksistään Sebaayenin luolasta on laskettu 1 146. '
+            + 'Maalauksia on vaikea ajoittaa käytettyjen aineiden '
+            + 'takia, mutta sanit ovat asuneet vuoristossa vähintään '
+            + 'neljäkymmentätuhatta vuotta. Vuoriston zulunkielinen '
+            + 'nimi uKhahlamba on käännetty "ylöspäin osoittavien '
+            + 'keihäiden valliksi". Unesco otti uKhahlamba '
+            + 'Drakensbergin puiston luetteloonsa 2000.',
+          selite: 'Eland Cave Cathedral Peakin alueella on yksi Lohikäärmevuorten '
+            + 'sadoista sanien maalauskohteista.',
+          lahde: 'Josep M. Gracia, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lohikäärmevuoret',
+        },
+        {
+          otsikko: 'Vaakunan hahmot poimittiin kalliolohkareesta',
+          aika: '2000',
+          tiedosto: 'Linton Panel IZIKO, Capetown DSC00228 (16091324620).jpg',
+          teksti: 'Etelä-Afrikan vaakuna otettiin käyttöön '
+            + 'vapaudenpäivänä 27. huhtikuuta 2000, ja sen suunnitteli '
+            + 'Iaan Bekker. Kilvessä on kaksi ihmishahmoa, jotka '
+            + 'tervehtivät toisiaan kädet yhdessä. Ne eivät ole '
+            + 'vapaasti piirrettyjä: hahmot on otettu Linton-nimisestä '
+            + 'kalliomaalauslohkareesta, joka on Iziko-museossa '
+            + 'Kapkaupungissa. Tunnuslause ǃke e꞉ ǀxarra ǁke on '
+            + 'ǀxam-kieltä, sammunutta khoisankieltä, ja tarkoittaa '
+            + 'kirjaimellisesti "erilaiset ihmiset yhdistyvät". '
+            + 'Edellinen, vuodesta 1910 käytössä ollut vaakuna oli '
+            + 'latinankielinen.',
+          selite: 'Linton-lohkare on Iziko South African Museumin kokoelmissa '
+            + 'Kapkaupungissa, ja siitä on poimittu vaakunan kaksi '
+            + 'ihmishahmoa.',
+          lahde: 'Heribert Bechen, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Etelä-Afrikan vaakuna',
+        },
+        {
+          otsikko: 'Kananhöyhensivellin maalasi taideauton',
+          aika: '1991',
+          tiedosto: 'BMWArtCar-Mahlangu.jpg',
+          teksti: 'Ndebelet maalaavat talojensa seinät kirkkain '
+            + 'geometrisin kuvioin, ja työ on naisten: tytöt oppivat '
+            + 'sen äidiltään ja isoäidiltään ennen kuin saavat oman '
+            + 'talon maalattavakseen. Esther Mahlangu, syntynyt 1935, '
+            + 'aloitti kymmenvuotiaana ja siirsi kuviot seinältä muille '
+            + 'pinnoille. Vuonna 1991 BMW pyysi häntä maalaamaan '
+            + 'taideauton, kuten Andy Warhol ja David Hockney olivat '
+            + 'tehneet ennen häntä; hän oli tehtävässä ensimmäinen '
+            + 'nainen ja ensimmäinen ei-länsimainen taiteilija. Kuviot '
+            + 'syntyivät BMW 525i:n pintaan kananhöyhenistä sidotulla '
+            + 'siveltimellä, ja se oli hänen ensimmäinen työnsä muulle '
+            + 'kuin seinälle.',
+          selite: 'Esther Mahlangun vuonna 1991 maalaama BMW 525i oli sarjan '
+            + 'ensimmäinen taideauto, jonka teki nainen.',
+          lahde: 'Olli1800, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Esther Mahlangu',
+        },
+        {
+          otsikko: 'Museon ensimmäinen maalaus mustalta taiteilijalta',
+          aika: '1940',
+          teksti: 'Gerard Sekoto jätti 1938 opettajan työn ja muutti '
+            + 'Johannesburgin Sophiatowniin maalaamaan. Vuonna 1940 '
+            + 'Johannesburg Art Gallery osti häneltä työn: se oli '
+            + 'ensimmäinen mustan taiteilijan maalaus, joka pääsi '
+            + 'museon kokoelmiin. Sekoto maalasi juuri niitä '
+            + 'kaupunginosia, jotka apartheid myöhemmin purki — '
+            + 'Sophiatownia ja Kapkaupungin District Sixiä. Vuonna 1947 '
+            + 'hän lähti Pariisiin omaehtoiseen maanpakoon eikä '
+            + 'palannut. Ensimmäiset vuodet olivat kovia, ja hän '
+            + 'elätti itsensä pianistina yökerhossa nimeltä l\'Échelle '
+            + 'de Jacob. Sekoto sävelsi 29 laulua, joista moni kertoo '
+            + 'maanpaon yksinäisyydestä.',
+          wiki: 'Gerard Sekoto',
+        },
+      ],
+    },
+  ],
 };
+
