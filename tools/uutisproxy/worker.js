@@ -189,6 +189,9 @@ const SALLITUT = [
   // workerista tule yleistä feedburner-välitystä.
   'https://feeds.feedburner.com/rsscna/',
   'https://www.cna.com.tw/',
+  // Etelä-Afrikan uutislähde (maalehti 7.9.2026): syöte ja
+  // artikkelisivut samalla isäntänimellä.
+  'https://www.dailymaverick.co.za/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

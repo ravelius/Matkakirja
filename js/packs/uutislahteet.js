@@ -439,6 +439,26 @@ export const UUTISLAHTEET = {
     syote: 'https://aps.sn/feed/',
   },
   /*
+   * ETELÄ-AFRIKKA (ZAF, Opus 7.9.2026). Daily Maverick on
+   * kapkaupunkilainen riippumaton uutissivusto vuodesta 2009.
+   * Testattu 7.9.2026 kahdesti kuten resepti vaatii: syötteessä 53
+   * juttua, ja artikkelisivulla on <article>-lohko (12 yli 60 merkin
+   * kappaletta) sekä og:image.
+   *
+   * Testattu ja hylätty: IOL (syöte 403), EWN ja SowetanLIVE
+   * (rss-osoitteet vastaavat 301:llä ja uudelleenohjauksen päässä
+   * 404:llä, eikä worker seuraa ohjauksia), TimesLIVE (404),
+   * News24:n feeds.24.com (yhteys ei aukea tästä ympäristöstä).
+   * SABC News läpäisi molemmat testit ja on varalla, mutta se on
+   * valtion yleisradioyhtiö — sama valinta kuin Keniassa, jossa
+   * yksityinen Capital FM valittiin KBC:n ohi.
+   */
+  ZAF: {
+    nimi: 'Daily Maverick',
+    kieli: 'en',
+    syote: 'https://www.dailymaverick.co.za/dmrss/',
+  },
+  /*
    * GUATEMALA, NICARAGUA JA PANAMA (Opus 6.9.2026, maalehtierä
    * GTM+NIC+PAN). Jokainen lähde on testattu kahdesti kuten resepti
    * vaatii: ensin syöte, sitten yksi artikkelisivu.

@@ -51537,4 +51537,410 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * ETELÄ-AFRIKKA (ZAF) — maalehti 7.9.2026 (Opus).
+   *
+   * TYÖNJAKO. Maalla on jo kaupunkilehti (Kapkaupunki) ja runsaasti
+   * karttanostoja, joten maalehti on kirjoitettu täydentämään eikä
+   * toistamaan niitä:
+   *   - Kapkaupungin kansi kattaa Pöytävuoren, fynbosin, Kirstenboschin,
+   *     Bo-Kaapin ja arabiaksi kirjoitetun afrikaansin, vuoden 1873
+   *     sataman ja bobotien → maalehti ei koske yhteenkään.
+   *   - js/packs/maastokohteet-zaf.js kattaa Sterkfonteinin, Krugerin,
+   *     Isandlwanan, Cape Agulhasin, Stellenboschin, Pilgrim's Restin,
+   *     Vredefortin, iSimangaliso, Mafadin, Oranjejoen ja Intian
+   *     valtameren; js/packs/skandaalit.js Hopetownin timantin ja
+   *     Mapungubwen; js/packs/elaintakyt.js afrikanpingviinin.
+   *     → LUONTO ja TIEDE jätettiin aiheina pois, koska karttanostot
+   *     kantavat ne jo; tilalle tulivat KIELET ja KUVATAIDE, joita ei
+   *     kerro kukaan muu.
+   *
+   * HERKÄT AIHEET. Apartheid ja siirtomaahistoria kerrotaan asiallisesti
+   * ja tapahtumina (Suuri vaellus, Rivonian oikeudenkäynti, vuoden 1994
+   * vaalit, totuuskomissio). Nykypolitiikkaa ei ole, eikä käynnissä
+   * olevia selkkauksia — sama linja kuin M3:n Myanmar-päätöksessä.
+   *
+   * Faktapohja ja lähdeviitteet osioittain:
+   * docs/mantereet-tyoaineisto/faktapohja-etela-afrikka.md.
+   */
+  ZAF: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Etelä-Afrikan historia on kolmesataa vuotta kiistaa '
+        + 'siitä, kuka maan omistaa — ja kiista ratkesi lopulta '
+        + 'jonossa, joka kiemurteli neljä päivää äänestyspaikkojen '
+        + 'ympärillä.',
+      nostot: [
+        {
+          otsikko: 'Härkävankkurit lähtivät pois brittien ulottuvilta',
+          aika: '1836 alkaen',
+          teksti: 'Kapin siirtokunnan hollanninkieliset maanviljelijät '
+            + 'eli buurit olivat kyllästyneet brittihallintoon, ja '
+            + 'vuodesta 1836 alkaen tuhannet heistä pakkasivat koko '
+            + 'omaisuutensa härkävankkureihin ja lähtivät pohjoiseen '
+            + 'sisämaahan. Vaeltajat kutsuivat itseään nimellä '
+            + 'voortrekker, "edelläkulkija". Matkasta syntyi kolme '
+            + 'itsenäistä buuritasavaltaa — Transvaal, Oranjen '
+            + 'vapaavaltio ja Natalia — ja samalla pitkä kiista maasta '
+            + 'niiden kanssa, jotka siellä jo asuivat: pohjoiset '
+            + 'ndebelet joutuivat väistymään, ja yhteenotot '
+            + 'zulukuningaskunnan kanssa alkoivat murentaa sitä. Suuri '
+            + 'vaellus on afrikaanerien perustarina.',
+          wiki: 'Suuri vaellus',
+        },
+        {
+          otsikko: 'Puutarhuri, joka oli oikeasti asianajaja',
+          aika: '1963–1964',
+          teksti: 'Nelson Mandela asui vuodesta 1961 Liliesleafin '
+            + 'maatilalla Rivoniassa Johannesburgin laidalla ja '
+            + 'esiintyi puutarhurina ja kokkina nimellä David '
+            + 'Motsamayi. Poliisi ratsasi tilan 11. heinäkuuta 1963, ja '
+            + 'oikeudenkäynti kesti lokakuusta 1963 kesäkuuhun 1964. '
+            + 'Syytettyjä uhkasi kuolemantuomio. Mandela puhui '
+            + 'syytettyjen aitiosta ja päätti puheensa sanoihin, jotka '
+            + 'hän kirjoitti vastoin omien asianajajiensa varoitusta: '
+            + 'yhdenvertainen yhteiskunta on ihanne, jonka puolesta hän '
+            + 'on tarvittaessa valmis kuolemaan. Kahdeksan tuomittiin '
+            + 'elinkautiseen. Käsittely nauhoitettiin 591 '
+            + 'Dictabelt-nauhalle, ja Unesco liitti asiakirjat Maailman '
+            + 'muisti -rekisteriin 2007.',
+          wiki: 'Rivonian oikeudenkäynti',
+        },
+        {
+          otsikko: 'Neljä päivää jonoa ja tarra äänestyslipussa',
+          aika: '1994',
+          teksti: 'Ensimmäiset vaalit, joissa kaikki rotuun katsomatta '
+            + 'saivat äänestää, pidettiin 26.–29. huhtikuuta 1994. '
+            + 'Ääniä laskettiin 19 726 579, ja maaseudulla jonotettiin '
+            + 'päiviä. Inkatha-vapauspuolue oli ilmoittanut jättävänsä '
+            + 'vaalit väliin ja muutti mielensä vasta 19. huhtikuuta — '
+            + 'äänestysliput oli jo painettu, joten puolue lisättiin '
+            + 'niihin tarralla. ANC sai 62 prosenttia äänistä, ja uuden '
+            + 'kansalliskokouksen ensimmäinen teko oli valita Nelson '
+            + 'Mandela presidentiksi. Huhtikuun 27. päivä on nyt '
+            + 'vapaudenpäivä.',
+          wiki: '1994 South African general election',
+        },
+        {
+          otsikko: 'Komissio, jossa tekijä sai puhua itsensä vapaaksi',
+          aika: '1996',
+          teksti: 'Uusi valtio ei perustanut sotarikostuomioistuinta '
+            + 'vaan komission. Totuus- ja sovintokomissio aloitti '
+            + 'kuulemisensa 1996 arkkipiispa Desmond Tutun johdolla. '
+            + 'Uhrit kertoivat julkisesti, mitä heille oli tehty; '
+            + 'tekijä saattoi hakea armahdusta, mutta sen sai vain, jos '
+            + 'teko oli poliittinen ja jos hakija kertoi kaiken. '
+            + 'Hakemuksia tuli 7 111, ja armahdus myönnettiin 849 '
+            + 'tapauksessa. Kumpaakaan puolta ei jätetty ulkopuolelle: '
+            + 'komission eteen joutuivat sekä apartheidvaltion että '
+            + 'vapausliikkeen tekijät. Tutu kytki työn ubuntuun — '
+            + 'ajatukseen, että ihminen on ihminen toisten ihmisten '
+            + 'kautta.',
+          wiki: 'Totuus- ja sovintokomissio',
+        },
+      ],
+    },
+    {
+      id: 'kielet',
+      nimi: 'Kielet',
+      johdanto: 'Etelä-Afrikassa on kaksitoista virallista kieltä eikä '
+        + 'yksikään niistä ole enemmistön kieli — siksi täällä opitaan '
+        + 'lapsesta asti vaihtamaan kieltä kesken keskustelun.',
+      tehtava: {
+        kysymys: 'Mitä laulun nimi Nkosi Sikelel\' iAfrika tarkoittaa?',
+        vaihtoehdot: [
+          'Jumala siunatkoon Afrikkaa',
+          'Nouse, Afrikan aamu',
+          'Afrikka on meidän',
+          'Vapaus tulee huomenna',
+        ],
+        oikea: 0,
+        fakta: 'Sama sävelmä on yhä Tansanian ja Sambian kansallislaulu.',
+      },
+      nostot: [
+        {
+          otsikko: 'Yksikään kieli ei ole enemmistön kieli',
+          teksti: 'Vuoden 1996 perustuslaki teki yhdestätoista kielestä '
+            + 'virallisia, ja 3. toukokuuta 2023 kansalliskokous lisäsi '
+            + 'joukkoon eteläafrikkalaisen viittomakielen. Yksikään '
+            + 'niistä ei ole enemmistön kieli: zulua puhuu äidinkielenään '
+            + '23 prosenttia väestöstä, xhosaa 16 ja afrikaansia 14. '
+            + 'Englanti on vasta neljäntenä 9,6 prosentilla, mutta se on '
+            + 'hallinnon ja median kieli eli se, jolla eri kieliryhmät '
+            + 'puhuvat toisilleen. Kotimaiset bantukielet jakautuvat '
+            + 'kahtia: nguni-kieliä puhutaan itärannikolla ja '
+            + 'sotho–tswana-kieliä sisämaassa pohjoisessa.',
+          wiki: 'Etelä-Afrikan kielet',
+        },
+        {
+          otsikko: 'Kolme naksausta, jotka lainattiin naapurilta',
+          teksti: 'Xhosan kirjaimet c, x ja q eivät ole kirjaimia siinä '
+            + 'mielessä kuin suomessa: ne merkitsevät naksahduksia, '
+            + 'joita ei tuoteta keuhkoista tulevalla ilmalla lainkaan. '
+            + 'Xhosassa naksahduskonsonantteja on viisitoista, ja '
+            + 'erään laskutavan mukaan joka kymmenennessä perussanassa '
+            + 'on jokin niistä. Kieli ei ole perinyt niitä: xhosan '
+            + 'bantukielisillä esivanhemmilla ei ollut naksahduksia '
+            + 'lainkaan, vaan ne omaksuttiin khoisankielistä, joiden '
+            + 'puhujiin itään muuttaneet törmäsivät. Xhosan sanastosta '
+            + 'arviolta 15 prosenttia on khoisanperäistä.',
+          wiki: 'Xhosan kieli',
+        },
+        {
+          otsikko: 'Kaivosten oma kieli syntyi käskyistä',
+          teksti: 'Kun kullan ja timanttien kaivoksiin tuli 1800-luvun '
+            + 'lopulla työmiehiä kymmenistä kieliryhmistä ja useasta '
+            + 'maasta, syntyi apukieli: fanagalo. Sanasto on '
+            + 'enimmäkseen zulua, mukana on englantia ja hiukan '
+            + 'afrikaansia, ja nimi tulee nguni-ilmauksesta '
+            + 'fana-ga-lo, "tee näin". Nimi kertoo, mihin kieltä '
+            + 'käytettiin: työnjohtaja neuvoi sillä työmiehiä. '
+            + 'Fanagaloa ei opittu äidinkielenä, mutta 1970-luvulla '
+            + 'puhujia arvioitiin olevan satojatuhansia. Kun '
+            + 'englannista tuli yleinen apukieli, fanagalon käyttö '
+            + 'väheni.',
+          wiki: 'Fanagalo',
+        },
+        {
+          otsikko: 'Laulu, jossa kieli vaihtuu neljä kertaa',
+          aika: '1897 ja 1997',
+          teksti: 'Metodistilähetyskoulun opettaja Enoch Sontonga '
+            + 'sävelsi 1897 Johannesburgin lähellä virren, jonka nimi '
+            + 'on xhosaksi Nkosi Sikelel\' iAfrika eli "Jumala '
+            + 'siunatkoon Afrikkaa". Siitä tuli koko mantereen '
+            + 'vapauslaulu, ja sen sävelmä on yhä Tansanian ja Sambian '
+            + 'kansallislaulu. Nykyinen kansallislaulu otettiin '
+            + 'käyttöön 1997, ja se on hybridi: alkupuoli on Sontongan '
+            + 'virsi, loppupuoli apartheidin ajan afrikaansinkielinen '
+            + 'Die Stem, ja viimeinen säkeistö kirjoitettiin '
+            + 'englanniksi. Kieliä on viisi, ja laulu vaihtaa myös '
+            + 'sävellajia: se alkaa G-duurista ja päättyy D-duuriin.',
+          wiki: 'Nkosi Sikelel’ iAfrika',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Etelä-Afrikan musiikki on syntynyt siirtotyöläisten '
+        + 'asuntoloissa ja kaivoskaupungeissa — ja kiertänyt sieltä '
+        + 'maailman ympäri, usein ilman että tekijä sai siitä mitään.',
+      nostot: [
+        {
+          otsikko: 'Kymmenellä shillingillä myyty maailmanhitti',
+          aika: '1939',
+          teksti: 'Solomon Linda tuli 1931 Msingan maaseudulta '
+            + 'Johannesburgiin töihin ja lauloi Evening Birds '
+            + '-kuorossa. Vuonna 1939 hän oli levy-yhtiö Gallon '
+            + 'tehtaalla pakkaajana, pääsi studioon ja improvisoi '
+            + 'äänityksessä laulun Mbube, "leijona". Levyä myytiin '
+            + 'yhdeksässä vuodessa yli satatuhatta kappaletta, mutta '
+            + 'Linda oli myynyt oikeutensa Gallolle kymmenellä '
+            + 'shillingillä heti istunnon jälkeen. Pete Seeger kuuli '
+            + 'levyn ja teki siitä Wimowehin, ja The Tokens teki siitä '
+            + '1961 hitin The Lion Sleeps Tonight. Linda kuoli 1962 '
+            + 'köyhänä. Vasta 2004 nostettu kanne toi perheelle '
+            + 'sovinnon ja Lindalle tekijämerkinnän.',
+          wiki: 'Solomon Linda',
+        },
+        {
+          otsikko: 'Passi mitätöitiin äidin hautajaisten alla',
+          aika: '1960-luku',
+          teksti: 'Miriam Makeba pääsi maailmalle 1959 neljän minuutin '
+            + 'roolilla apartheidia vastustaneessa elokuvassa Come '
+            + 'Back, Africa. Kun hän vuonna 1960 yritti palata kotiin '
+            + 'äitinsä hautajaisiin, passi oli mitätöity. Vuonna 1962 '
+            + 'hän todisti YK:ssa apartheidia vastaan, ja sen jälkeen '
+            + 'häneltä vietiin kansalaisuus ja hänen levynsä '
+            + 'kiellettiin kotimaassa. Makebasta tuli valtioton, mutta '
+            + 'Algeria, Guinea, Belgia ja Ghana antoivat hänelle '
+            + 'passin — elämänsä aikana hän piti yhdeksää. Grammyn hän '
+            + 'voitti 1966 ensimmäisenä afrikkalaisena artistina. '
+            + 'Kotimaahan hän palasi vasta 10. kesäkuuta 1990.',
+          wiki: 'Miriam Makeba',
+        },
+        {
+          otsikko: 'Kilpalaulanta, jossa voittaa hiljaisin',
+          teksti: 'Isicathamiya on zulunkielinen mieskuorolaulu, ja '
+            + 'nimi tulee verbistä -cathama, "astua varovasti". Se '
+            + 'syntyi siirtotyöläisten asuntoloissa. Vanhempi tyyli '
+            + 'mbube laulettiin täydellä äänellä, mutta '
+            + 'isicathamiyassa tavoitteena on äänten sulautuminen ja '
+            + 'tarkkaan harjoiteltu, varpaillaan liikkuva tanssi. '
+            + 'Johannesburgissa ja Durbanissa kilpaillaan yhä '
+            + 'lauantaiöisin: jopa kolmekymmentä kuoroa laulaa illan '
+            + 'kahdeksasta aamun kahdeksaan. Joseph Shabalala perusti '
+            + 'Ladysmith Black Mambazon 1960 ja opetti sille '
+            + 'harmoniat, jotka oli kuullut toistuvassa unessa 1964. '
+            + 'Nimen mambazo tarkoittaa kirvestä.',
+          wiki: 'Isicathamiya',
+        },
+        {
+          otsikko: 'Rumpu, joka vei lähiöiden soundin maailmalle',
+          aika: '2020-luku',
+          teksti: 'Amapiano nousi Johannesburgin lähiöistä 2020-luvun '
+            + 'alussa maailmanlaajuiseksi tanssimusiikiksi. Nimi on '
+            + 'zulua ja tarkoittaa yksinkertaisesti "pianoja". '
+            + 'Tyylissä yhdistyvät kwaito, deep house, gqom, jazz ja '
+            + 'soul, ja sen tunnistaa leveästä log drum -bassosta, '
+            + 'joka on sähköinen versio länsiafrikkalaisesta '
+            + 'onttorummusta. Yhtä perustajaa ei ole, ja '
+            + 'syntyhistoriasta kiistellään — osa jäljittää tyylin '
+            + 'Pretoriaan. Kieli vaihtelee laulusta toiseen: '
+            + 'amapianoa lauletaan yhdellätoista maan kahdestatoista '
+            + 'virallisesta kielestä.',
+          wiki: 'Amapiano',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Eteläafrikkalainen ruoka on tehty ulkona ja pitkiä '
+        + 'matkoja varten: lihaa hiilloksella, kuivattua lihaa taskussa '
+        + 'ja curryä leivän sisällä.',
+      nostot: [
+        {
+          otsikko: 'Tuli, jonka ympärillä koko maa juhlii samana päivänä',
+          teksti: 'Braai on afrikaansia ja tarkoittaa grillaamista, '
+            + 'mutta sana on siirtynyt kaikkiin kieliryhmiin. Sanassa '
+            + 'braaivleis vleis tarkoittaa lihaa ja on samaa juurta '
+            + 'kuin englannin flesh. Braai on tapahtuma eikä ateria: '
+            + 'vieraat tuovat oman lihansa, ja lisukkeena on pap eli '
+            + 'hienoksi jauhetusta maissista keitetty puuro sekä '
+            + 'tulinen chakalaka. Lähiöissä sama asia on shisa nyama, '
+            + 'zulua "polta lihaa": lihakauppias antaa grillin ja tulen '
+            + 'ilmaiseksi niille, jotka ostavat lihan häneltä. Vuonna '
+            + '2005 alkanut braai-päivä on 24. syyskuuta, samana '
+            + 'päivänä kuin perintöpäivä, ja Desmond Tutu suostui 2007 '
+            + 'sen suojelijaksi.',
+          wiki: 'Braai',
+        },
+        {
+          otsikko: 'Curry tarjoillaan kaiverretun leivän sisällä',
+          aika: '1940-luku',
+          teksti: 'Durbanissa asuu Afrikan suurin intialaisperäinen '
+            + 'väestö, ja sieltä on 1940-luvulta peräisin bunny chow: '
+            + 'puolikas tai neljännes vaaleaa limppua, jonka sisus on '
+            + 'kaiverrettu pois ja tilalle kaadettu curryä. Kaiverrettu '
+            + 'pala pannaan kanneksi päälle, ja annos syödään käsin '
+            + 'kastaen kansi kastikkeeseen — astian saa siis syödä. '
+            + 'Nimen alkuperästä kiistellään. Erään selityksen mukaan '
+            + 'sokeriruokoviljelmien intialaiset työmiehet levittivät '
+            + 'ruokansa ensin suurille lehdille, mutta tauko oli lyhyt '
+            + 'ja leipä nopeampi astia. Neljännesannosta kutsutaan '
+            + 'monin paikoin nimellä kota.',
+          wiki: 'Bunny chow',
+        },
+        {
+          otsikko: 'Kuivattu liha kulki satulan alla',
+          teksti: 'Biltong on ilmakuivattua ja mausteilla kuorrutettua '
+            + 'lihaa: nautaa, mutta myös strutsia tai kuduantilooppia. '
+            + 'Nimi tulee afrikaansin sanoista bil, "takapuoli", ja '
+            + 'tong, "suikale". Se muistuttaa amerikkalaista jerkyä, '
+            + 'mutta jerky kuumennetaan vähintään 71 asteeseen, kun '
+            + 'biltong vain kuivuu ilmassa — siitä tulee eri rakenne ja '
+            + 'maku. Hollantilaiset toivat mausteikseen pippurin, '
+            + 'korianterin ja mausteneilikan, joilla on itsessään '
+            + 'mikrobeja hillitsevä vaikutus. Paikallisen kertomuksen '
+            + 'mukaan 1600-luvun uudisasukkaat kuivattivat lihasuikaleita '
+            + 'satulan alla hevosen suolaisessa hiessä.',
+          wiki: 'Biltong',
+        },
+        {
+          otsikko: 'Muurahaispesästä löytyi kokonaisen elinkeinon siemen',
+          aika: '1930-luku',
+          teksti: 'Rooibos eli afrikaansiksi "punainen pensas" kasvaa '
+            + 'vain Cederbergin vuorilla noin 250 kilometriä '
+            + 'Kapkaupungista pohjoiseen. Neulasmaiset lehdet '
+            + 'hapetetaan auringossa, jolloin vihreä pensas muuttuu '
+            + 'tummanpunaiseksi; juoma on kofeiiniton. Villipensaita '
+            + 'kerättiin vuorilta aasien selässä, mutta viljely takkusi, '
+            + 'koska siemeniä ei löytynyt eikä niitä osattu saada '
+            + 'itämään. 1930-luvulla iäkäs khoinainen huomasi '
+            + 'muurahaisten raahaavan siemeniä, seurasi niitä pesälle ja '
+            + 'mursi sen auki: sisällä oli aitta. Piirilääkäri Pieter le '
+            + 'Fras Nortier kehitti löydöstä viljelymenetelmän. EU '
+            + 'myönsi rooiboksille alkuperäsuojan 2021.',
+          wiki: 'Rooibos',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Etelä-Afrikan kuvataide alkaa kalliomaalauksista, ja '
+        + 'kaksi niiden hahmoista seisoo nykyään maan vaakunassa — '
+        + 'tunnuslauseenaan kieli, jota kukaan ei enää puhu.',
+      nostot: [
+        {
+          otsikko: 'Neljäkymmentätuhatta maalausta yhdellä vuoristolla',
+          teksti: 'Lohikäärmevuorten pehmeään hiekkakiveen on kulunut '
+            + 'luolia ja kalliosuojia, ja niiden seinillä on 35 '
+            + '000–40 000 sanien tekemää maalausta. Se on maailman '
+            + 'suurin tällainen kokonaisuus. Viidestäsadasta kohteesta '
+            + 'on kirjattu noin 20 000 yksittäistä kuvaa, ja '
+            + 'yksistään Sebaayenin luolasta on laskettu 1 146. '
+            + 'Maalauksia on vaikea ajoittaa käytettyjen aineiden '
+            + 'takia, mutta sanit ovat asuneet vuoristossa vähintään '
+            + 'neljäkymmentätuhatta vuotta. Vuoriston zulunkielinen '
+            + 'nimi uKhahlamba on käännetty "ylöspäin osoittavien '
+            + 'keihäiden valliksi". Unesco otti uKhahlamba '
+            + 'Drakensbergin puiston luetteloonsa 2000.',
+          wiki: 'Lohikäärmevuoret',
+        },
+        {
+          otsikko: 'Vaakunan hahmot poimittiin kalliolohkareesta',
+          aika: '2000',
+          teksti: 'Etelä-Afrikan vaakuna otettiin käyttöön '
+            + 'vapaudenpäivänä 27. huhtikuuta 2000, ja sen suunnitteli '
+            + 'Iaan Bekker. Kilvessä on kaksi ihmishahmoa, jotka '
+            + 'tervehtivät toisiaan kädet yhdessä. Ne eivät ole '
+            + 'vapaasti piirrettyjä: hahmot on otettu Linton-nimisestä '
+            + 'kalliomaalauslohkareesta, joka on Iziko-museossa '
+            + 'Kapkaupungissa. Tunnuslause ǃke e꞉ ǀxarra ǁke on '
+            + 'ǀxam-kieltä, sammunutta khoisankieltä, ja tarkoittaa '
+            + 'kirjaimellisesti "erilaiset ihmiset yhdistyvät". '
+            + 'Edellinen, vuodesta 1910 käytössä ollut vaakuna oli '
+            + 'latinankielinen.',
+          wiki: 'Etelä-Afrikan vaakuna',
+        },
+        {
+          otsikko: 'Kananhöyhensivellin maalasi taideauton',
+          aika: '1991',
+          teksti: 'Ndebelet maalaavat talojensa seinät kirkkain '
+            + 'geometrisin kuvioin, ja työ on naisten: tytöt oppivat '
+            + 'sen äidiltään ja isoäidiltään ennen kuin saavat oman '
+            + 'talon maalattavakseen. Esther Mahlangu, syntynyt 1935, '
+            + 'aloitti kymmenvuotiaana ja siirsi kuviot seinältä muille '
+            + 'pinnoille. Vuonna 1991 BMW pyysi häntä maalaamaan '
+            + 'taideauton, kuten Andy Warhol ja David Hockney olivat '
+            + 'tehneet ennen häntä; hän oli tehtävässä ensimmäinen '
+            + 'nainen ja ensimmäinen ei-länsimainen taiteilija. Kuviot '
+            + 'syntyivät BMW 525i:n pintaan kananhöyhenistä sidotulla '
+            + 'siveltimellä, ja se oli hänen ensimmäinen työnsä muulle '
+            + 'kuin seinälle.',
+          wiki: 'Esther Mahlangu',
+        },
+        {
+          otsikko: 'Museon ensimmäinen maalaus mustalta taiteilijalta',
+          aika: '1940',
+          teksti: 'Gerard Sekoto jätti 1938 opettajan työn ja muutti '
+            + 'Johannesburgin Sophiatowniin maalaamaan. Vuonna 1940 '
+            + 'Johannesburg Art Gallery osti häneltä työn: se oli '
+            + 'ensimmäinen mustan taiteilijan maalaus, joka pääsi '
+            + 'museon kokoelmiin. Sekoto maalasi juuri niitä '
+            + 'kaupunginosia, jotka apartheid myöhemmin purki — '
+            + 'Sophiatownia ja Kapkaupungin District Sixiä. Vuonna 1947 '
+            + 'hän lähti Pariisiin omaehtoiseen maanpakoon eikä '
+            + 'palannut. Ensimmäiset vuodet olivat kovia, ja hän '
+            + 'elätti itsensä pianistina yökerhossa nimeltä l\'Échelle '
+            + 'de Jacob. Sekoto sävelsi 29 laulua, joista moni kertoo '
+            + 'maanpaon yksinäisyydestä.',
+          wiki: 'Gerard Sekoto',
+        },
+      ],
+    },
+  ],
 };

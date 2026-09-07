@@ -296,6 +296,17 @@
 > puuttuu `og:image`. Perustelut ovat js/packs/uutislahteet.js:n
 > SOM-kommentissa. Julkaisu Git-integraatiolla mainista.
 >
+> **Päivitys 7.9.2026 (Etelä-Afrikka):** sallittuihin lisättiin
+> www.dailymaverick.co.za (maalehti ZAF, testattu 7.9.2026: syötteessä
+> 53 juttua, artikkelisivun `<article>`-lohkosta jäsentyy 12 yli 60
+> merkin kappaletta ja `og:image` löytyy). Hylätyt: IOL (syöte 403),
+> EWN ja SowetanLIVE (301 ja ohjauksen päässä 404 — worker ei seuraa
+> uudelleenohjauksia), TimesLIVE (404) ja News24 (feeds.24.com ei
+> aukea tästä ympäristöstä). SABC News läpäisi testit ja on varalla,
+> mutta se on valtion yleisradio, joten riippumaton Daily Maverick
+> valittiin sen ohi (sama linja kuin Keniassa). Julkaisu Git-
+> integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

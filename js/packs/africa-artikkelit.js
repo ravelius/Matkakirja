@@ -693,9 +693,27 @@ export const OMAT_ARTIKKELIT = {
       + 'kaikkialla. Tervetulotoivotus kuuluu joka ovella: akwaaba.',
   },
   'Etelä-Afrikka': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // ZAF) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Tansanialla. Virallisia kieliä on kaksitoista, ei yksitoista:
+    // eteläafrikkalainen viittomakieli lisättiin 3.5.2023
+    // (en-Wikipedia "Languages of South Africa", tarkistettu 7.9.2026).
     intro: 'Etelä-Afrikka on sateenkaarikansan maa mantereen '
-      + 'eteläkärjessä: yksitoista virallista kieltä, kaksi valtamerta '
-      + 'ja historia, joka opetti maailmalle anteeksiannon voiman.',
+      + 'eteläkärjessä kahden valtameren välissä. Virallisia kieliä on '
+      + 'kaksitoista eikä yksikään niistä ole enemmistön kieli, joten '
+      + 'kielen vaihtaminen kesken keskustelun on arkea. Hollantilaiset '
+      + 'ja britit rakensivat tänne siirtokuntansa, kullan ja '
+      + 'timanttien löydöt tekivät maasta rikkaan, ja apartheid jakoi '
+      + 'rikkauden ihonvärin mukaan vuosikymmeniksi. Vuoden 1994 '
+      + 'vaaleissa kaikki saivat vihdoin äänestää, ja Nelson Mandelan '
+      + 'linja — vapaus ilman kostoa — vietiin läpi totuus- ja '
+      + 'sovintokomissiossa, jossa uhri ja tekijä puhuivat samassa '
+      + 'salissa. Musiikki ja ruoka syntyivät siirtotyöläisten '
+      + 'asuntoloissa ja kaivoskaupungeissa: isicathamiya-kuorot, '
+      + 'braai-tulet ja Durbanin leipään kaadettu curry. Vanhinta '
+      + 'taidetta ovat sanien kalliomaalaukset, joita on '
+      + 'Lohikäärmevuorilla kymmeniätuhansia — ja kaksi niiden '
+      + 'hahmoista seisoo nykyään maan vaakunassa.',
     artikkeli: 'Etelä-Afrikka täyttää mantereen eteläkärjen kahden '
       + 'valtameren välissä. Maisemat vaihtuvat Kapin vuorista '
       + 'Kalaharin puolikuivaan tasankoon ja itärannikon vehreyteen; '
