@@ -54763,7 +54763,14 @@ export const NAHTAVYYSJUTUT = {
    *
    * LLULLAILLACON LAPSET: kuolintapaa ei kuvailla, ja
    * alkuperäiskansajärjestöjen arvostelu kerrotaan samassa jutussa
-   * (tarkistus-salta.md, kohta G).
+   * (tarkistus-salta.md, kohta G). MUUMIOKUVIA EI KÄYTETÄ, vaikka
+   * Commonsissa on "Llullaillaco mummies in Salta city,
+   * Argentina.jpg" — ihmisjäännösten esittäminen olisi juuri sitä,
+   * mitä juttu kertoo arvostellun. Kuva on museon julkisivusta.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026, lisenssi ja
+   * tekijä extmetadatasta, ja jokainen katsottiin silmin 900 px
+   * esikatseluna. Kaikilla kahdeksalla on kuva.
    */
   salta: {
     'Saltan kuvataidemuseo': {
@@ -54789,6 +54796,14 @@ export const NAHTAVYYSJUTUT = {
           + 'perustamisesta ja uudelleenavaamisesta remontin jälkeen, '
           + 'mutta lähde ei sano sitä ääneen — eikä tämä juttu '
           + 'siksi valitse kumpaakaan.',
+      kuvat: [
+        {
+          tiedosto: 'Museo de bellas artes de Salta.jpg',
+          selite: 'Kartanon julkisivussa on kivikehyksiset ikkunat, rautaiset '
+            + 'parvekkeet ja mansardikatto.',
+          lahde: 'Calu Rivero2013, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'La Merced -kirkko': {
@@ -54812,6 +54827,14 @@ export const NAHTAVYYSJUTUT = {
           + 'San Bautista. Sen sisällä säilytetään Saltan taistelun '
           + 'ristiä — helmikuussa 1813 käydyn taistelun muistoesine, '
           + 'joka on vanhempi kuin talo, jossa se on.',
+      kuvat: [
+        {
+          tiedosto: 'Parroquia San Juan Bautista de la Merced.jpg',
+          selite: 'Kaksi tummaa tornihuippua nousee peltikattojen yli, ja '
+            + 'taustalla häämöttävät vuoret.',
+          lahde: 'Sonia Barboza, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Korkean vuoriston arkeologian museo': {
@@ -54845,6 +54868,14 @@ export const NAHTAVYYSJUTUT = {
           + 'siirtoa vuorelta ja asettamista näytteille ilman '
           + 'kuulemista häpäisynä ja alkuperäiskansojen oikeuksien '
           + 'loukkauksena. Kiista ei ole ratkennut.',
+      kuvat: [
+        {
+          tiedosto: 'Fachada Museo AAM.JPG',
+          selite: 'Uusgoottilaiset suippokaaret ja parvekkeet erottavat museon '
+            + 'aukion muista taloista.',
+          lahde: 'Claudio Elias, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Saltan katedraali': {
@@ -54877,6 +54908,14 @@ export const NAHTAVYYSJUTUT = {
           + 'hautakammio, jossa lepäävät Martín Miguel de Güemesin '
           + 'jäännökset. Rakennus on ollut kansallinen historiallinen '
           + 'monumentti vuodesta 1941.',
+      kuvat: [
+        {
+          tiedosto: 'Catedral Basílica de Salta.jpg',
+          selite: 'Illan sinisessä valossa toinen kellotorneista heijastuu '
+            + 'naapuritalon lasiseinään.',
+          lahde: 'LaraValeVdp, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Saltan cabildo': {
@@ -54909,6 +54948,14 @@ export const NAHTAVYYSJUTUT = {
           + 'alakerrassa ja siirtomaa- ja kuvataidemuseo yläkerrassa. '
           + 'Kansallinen historiallinen monumentti 9. tammikuuta '
           + '1937.',
+      kuvat: [
+        {
+          tiedosto: 'Salta-Cabildo3.jpg',
+          selite: 'Sisäpihaa kiertää holvikaarigalleria, ja tiilikattojen yli '
+            + 'näkyy kellotorni.',
+          lahde: 'Fulviusbsas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'San Franciscon basilika': {
@@ -54940,6 +54987,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Francisco de Gurruchaga ja Güemesin äiti María '
           + 'Magdalena de Goyechea y la Corte. Monumentti vuodesta '
           + '1941, basilica minor 1992.',
+      kuvat: [
+        {
+          tiedosto: 'Salta - Convento de San Francisco - Nocturno.jpg',
+          selite: 'Valaistu kellotorni nousee kolmessa kerroksessa pimeää '
+            + 'taivasta vasten.',
+          lahde: 'MacAllenBrothers, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'San Bernardon luostari': {
@@ -54970,6 +55025,14 @@ export const NAHTAVYYSJUTUT = {
           + 'se asennettiin luostarin uuteen sisäänkäyntiin 1847, kun '
           + 'vanha sairaalanovi kapelin vieressä muurattiin umpeen. '
           + 'Monumentti vuodesta 1941.',
+      kuvat: [
+        {
+          tiedosto: 'Salta-Bernardas2.jpg',
+          selite: 'Käsin veistetty algarrobo-ovi on upotettu koristeltuun '
+            + 'portaaliin valkoisessa muurissa.',
+          lahde: 'Fulviusbsas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Güemesin muistomerkki': {
@@ -55002,6 +55065,14 @@ export const NAHTAVYYSJUTUT = {
           + '75 kilon lohkareista, jotka louhittiin samasta vuoresta, '
           + 'jonka juurella se seisoo, ja se vihittiin 20. helmikuuta '
           + '1931. Sen takaa alkavat kiviportaat huipulle.',
+      kuvat: [
+        {
+          tiedosto: 'Monumento a Guemes - Salta.JPG',
+          selite: 'Ratsastajapatsas piirtyy iltataivasta vasten kivikasan '
+            + 'päällä kaupungin yläpuolella.',
+          lahde: 'Gabo2013, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
   },
@@ -55034,6 +55105,13 @@ export const NAHTAVYYSJUTUT = {
    *  - kellotornin vuosi on 17.9.1911 ja Big Ben -väite kumotaan
    *    ääneen (en-Wikipedia sanoo 1912 ja "replicating Big Ben");
    *  - vuoden 1906 työtaistelun uhrilukua ei kerrota aukion jutussa.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026, lisenssi ja
+   * tekijä extmetadatasta, ja jokainen katsottiin silmin 900 px
+   * esikatseluna. KAKSI JUTTUA JÄÄ KUVATTOMAKSI: Gibbsin talosta ja
+   * kaupunginteatterista ei Commonsissa ole yhtään vähintään 1 200
+   * pikselin kuvaa (haettu kategorioista ja hakusanoilla). Kuvaton on
+   * parempi kuin tarkistamaton, ja molemmat on tilattu kuvaputkelta.
    */
   antofagasta: {
     'Salpietarilaituri': {
@@ -55067,6 +55145,14 @@ export const NAHTAVYYSJUTUT = {
           + '-yhtiölle ja on nykyään purjehdusseuran hallussa — se on '
           + 'ainoa salpietariajan laituri, joka Antofagastaan on '
           + 'jäänyt.',
+      kuvat: [
+        {
+          tiedosto: 'Muelle Salitrero de la ex Compañia Melbourne Clark (3).JPG',
+          selite: 'Kuluneella puukannella seisoo rivi ruostuneita nostureita, '
+            + 'ja meri kulkee palkkien alla.',
+          lahde: 'Juan Pablo Arenas Godoy, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Antofagastan museo': {
@@ -55096,6 +55182,14 @@ export const NAHTAVYYSJUTUT = {
           + 'arkeologiaa, asiakirjoja ja mineraaleja. Näyttely on '
           + 'kahdessatoista salissa, ja laboratoriot ja kokoelmavarasto '
           + 'ovat viereisessä vuoden 1910 meripäällikkötalossa.',
+      kuvat: [
+        {
+          tiedosto: 'Ex-Gobernación Marítima de Antofagasta vista desde el oeste (3).JPG',
+          selite: 'Meripäällikkötalon valkoiseksi maalattu puujulkisivu ja '
+            + 'punaiset ikkunat museon vieressä.',
+          lahde: 'Juan Pablo Arenas Godoy, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Bolivian kauppapankin talo': {
@@ -55124,6 +55218,14 @@ export const NAHTAVYYSJUTUT = {
           + 'rikostutkintapoliisin alueyksikkö. Entisöinti valmistui '
           + '2007: alkuperäistä pintaa kunnostettiin 1 070 '
           + 'neliömetriä ja uutta rakennettiin 1 797.',
+      kuvat: [
+        {
+          tiedosto: 'Detalle Frontis del Edificio Banco Mercantil de Bolivia (2).JPG',
+          selite: 'Kaksikerroksinen erkkeri ja sen alla veistetty naamio '
+            + 'katsottuna suoraan alhaalta.',
+          lahde: 'Juan Pablo Arenas Godoy, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Colónin aukio': {
@@ -55163,6 +55265,20 @@ export const NAHTAVYYSJUTUT = {
           + 'mitään rakennusta ylittämästä kaupungin katedraalia, '
           + 'joten ylijäänyt aines käytettiin toiseen taloon '
           + 'Washington-kadulla.',
+      kuvat: [
+        {
+          tiedosto: 'Casco Historico- Antofagasta (1).JPG',
+          selite: 'Kellotornin kivijalka vasemmalla, katedraali keskellä ja '
+            + 'palmut ja kukkapenkit välissä.',
+          lahde: 'Lorna-Lorna, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Antofagasta.jpg',
+          selite: 'Kellotornin kivijalkaan on upotettu laattareliefi, jossa '
+            + 'Chilen ja Britannian liput ristissä.',
+          lahde: 'Phil Whitehouse from London, United Kingdom, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Gibbsin talo': {
@@ -55253,6 +55369,14 @@ export const NAHTAVYYSJUTUT = {
           + 'tämä katedraali oli se, jota kaupungin lait kielsivät '
           + 'muita rakennuksia ylittämästä — ja siksi aukion '
           + 'kellotornista tuli matalampi kuin oli tarkoitus.',
+      kuvat: [
+        {
+          tiedosto: 'Catedral de Antofagasta 0003.jpg',
+          selite: 'Valkoinen uusgoottilainen julkisivu, ruusuikkuna ja terävä '
+            + 'torninhuippu kadun yllä.',
+          lahde: 'Cuidro, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Giménezin talo': {
@@ -55288,6 +55412,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Latinalaisessa Amerikassa — hänen tuotantonsa '
           + 'näyttelyluettelossa vuodelta 1984 se oli merkitty '
           + 'kadonneeksi teokseksi.',
+      kuvat: [
+        {
+          tiedosto: 'Casa Giménez 02.jpg',
+          selite: 'Parvekkeen kaiteessa on kiviristikkoa ja seinissä '
+            + 'sevillalaisia kuviolaattoja.',
+          lahde: 'Municipalidad de Antofagasta, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
   },
