@@ -1494,73 +1494,66 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'kiova',
-      mykistetyt: [],
-      otsikko: 'Kiova — merkki portin holvissa',
-      saapuminen: 'Istuin piirtämään porttia kirjaani; pieni tyttö katsoi '
-        + 'olkani yli ja pudisti päätään: kupoli oli väärän muotoinen. '
+      mykistetyt: ['saapuminen', 'kohtaaminen', 'aarre'],
+      otsikko: 'Kiova — väärä kerros',
+      saapuminen: 'Istuin piirtämään portin raunioita kirjaani; pieni tyttö '
+        + 'katsoi olkani yli ja pudisti päätään: kaari oli väärän muotoinen. '
         + 'Hän oli oikeassa, ja minä korjasin — kartanpiirtäjä tietää, '
-        + 'milloin tarkastaja on pätevä. Holvissa vartija näytti '
-        + 'merkin, jota kukaan ei osaa lukea: kolme aaltoviivaa. '
-        + 'Tunnistin ne heti — samalla merkillä isoisäni sulki '
-        + 'kirjeensä.',
+        + 'milloin tarkastaja on pätevä. Vartija näytti kivessä merkin, jota '
+        + 'kukaan ei osaa lukea: kolme aaltoviivaa. Tunnistin ne heti — '
+        + 'samalla merkillä isoisäni sulki kirjeensä.',
       /*
-       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
+       * HENKILÖ VAIHTUI (kuvaputken tarinaehdotus 7.9.2026; Fablen päätös
+       * 7.9.2026 illalla). Näyttelymestari Taras → näyttelymestari Danylo.
+       * Omistajan palaute kuvasta sanatarkasti: *"kuva lähempää, poista nainen
+       * ja vaihda henkilö"*.
        *
-       * HENKILÖ VAIHTUI JA KAANONIRIKE POISTUI (kuvaputken
-       * tarinaehdotus 5.9.2026, Fablen päätös samana iltana klo 20:05
-       * UTC: *"Hyväksytty sellaisenaan … Kiova (näyttelymestari Taras)
-       * … Kaikki korjaavat samalla vanhan kaaren kaanonirikkeen
-       * (suku/perillinen/lupaus)."*). Portinvartija Oksana odotti
-       * suoraan sanoen perillistä: *"meille on opetettu, että tekijän
-       * suku palaa lukemaan ne."* Se on kolmesta kielletystä
-       * odotuksesta kirkkain (docs/isoisan-raamattu.md), ja se
-       * poistuu kokonaan. Tilalla on museon näyttelymestari, jolle
-       * piirroksen viiva on ammatillinen uteliaisuus eikä perintö.
+       * SAAPUMINEN KORJATTU: vuonna 1873 Kultainen portti oli raunio ilman
+       * kupolia ja ilman holvia. Nykyinen suojarakennus on vuodelta 1982 ja
+       * museo avattiin 1983 (sofiia-kyivska.ua/museum/2/). Siksi "kupoli" →
+       * "kaari" ja "holvissa vartija" → "vartija näytti kivessä"; otsikko
+       * seuraa samaa korjausta.
        *
-       * OTSIKKO SÄILYY (tehtävänannon rajaus): merkki portin holvissa
-       * on yhä se, mistä kaari kertoo. SAAPUMINEN SÄILYY: se on
-       * 1873:n oma havainto (tyttö korjaa kupolin muodon, vartija
-       * näyttää kolme aaltoviivaa, Horatio tunnistaa oman isoisänsä
-       * sinetin) eikä siinä ole nykyihmisen lupausta.
+       * ISOISÄNI MERKKI -LAITE SÄILYY: kolme aaltoviivaa on Horation oman
+       * isoisän sinetti, ja laitteen budjetti on kolme kaupunkia — Kiova,
+       * Jerusalem ja Isfahan.
        *
-       * MIKÄ VIELÄ POISTUI: kiven irrottaminen, tuore taltanjälki ja
-       * väite ettei kiviseppiä ole käynyt vuosiin. Kätkö ei ole
-       * muinaisessa muurissa vaan holvin viereisessä kivilaatikossa,
-       * ja piirroksen viiva löytyy museon dokumentointikansiosta.
-       * Vuoden 1982 suojapaviljonki ja pienoismalli pidetään erillään
-       * vanhoista jäännöksistä: kumpikaan ei ole aarre-esine eikä
-       * kumpaakaan väitetä 1873:n maisemaan.
+       * FAKTASTA POISTUI väite lähes tuhannen vuoden yhtäjaksoisesta käytöstä.
+       * Tilalle tulivat suojapaviljongin vuosi 1982 ja museon vuosi 1983,
+       * jotka pitävät modernin ja muinaisen erillään.
        *
-       * KYSYMYS SÄILYY ENNALLAAN (Fablen päätös: *"Säilytä Kultaisen
-       * portin tehtävä → kaupungin juhlava pääportti"*).
+       * MIKÄ POISTUI: pienoismalli kokonaan, samoin holvin viereinen
+       * kivilaatikko. Kätkö on kaupungin oma kätkö, ja museon vanha
+       * mittapiirros vain osoittaa sinne.
+       *
+       * LUENTA: saapuminen, kohtaaminen ja aarre kirjoitettu uusiksi
+       * (mykistetyt).
        */
-      henkilo: 'Näyttelymestari Taras rakentaa Kultaisen portin museoon uutta '
-        + 'näyttelyä ja tuntee dokumentointikansiot ulkoa.',
-      kohtaaminen: 'Museon käytävällä näyttelymestari Taras kannattelee '
-        + 'portin pienoismallia lantiollaan. "Tämänkö alle? Tämä '
-        + 'valmistui viime kuussa." Sitten hän katsoo piirroksen viivaa. '
-        + '"Tuo ei ole mallista. Vastaa ensin, mihin portti alun perin '
-        + 'tehtiin."',
+      henkilo: 'Näyttelymestari Danylo järjestää Kultaisen portin museon '
+        + 'dokumentointia ja erottaa vanhat muurijäänteet myöhemmistä '
+        + 'rekonstruktioista.',
+      kohtaaminen: 'Danylon kädet pysähtyvät kansion päälle, kun kysyt '
+        + 'aarteesta. "Sinä katsoit uutta rakennusta. Kirjasi mies katsoi '
+        + 'raunioita." Hän nostaa katseensa suoraan sinuun. "Tuo viiva on '
+        + 'kiinnostava. Mutta mihin portti alun perin tehtiin?"',
       kysymys: {
-        q: 'Kiovan Kultainen portti rakennettiin lähes tuhat vuotta '
-          + 'sitten. Mikä sen tehtävä oli?',
+        q: 'Mikä oli Kiovan Kultaisen portin alkuperäinen tehtävä?',
         vaihtoehdot: [
-          'Se oli muurien juhlava pääportti kaupunkiin',
-          'Se oli tulliportti, jossa kauppiaiden kuormat punnittiin',
-          'Se oli vankila, jonka holveihin suljettiin sotavangit',
-          'Se oli kellotorni, joka kutsui kaupungin kokoon',
+          'Pelkkä maksupaikka kauppiaiden kuormien punnitsemiseen',
+          'Varasto, johon lähiseudun verovilja kuljetettiin',
+          'Kaupungin juhlava sisäänkäynti ja puolustusportti',
+          'Vesitorni, josta vesi johdettiin kaupungin taloihin',
         ],
-        oikea: 0,
-        fakta: 'Jaroslav Viisas rakennutti portin 1000-luvulla '
-          + 'Konstantinopolin mallin mukaan: se oli Kiovan muurien '
-          + 'juhlava pääsisäänkäynti lähes tuhat vuotta. Porttitorniin '
-          + 'nousi kirkko, jonka kullatut kupolit hehkuivat kauas — siitä '
-          + 'nimi.',
+        oikea: 2,
+        fakta: 'Jaroslav Viisaan 1000-luvulla rakennuttama Kultainen portti '
+          + 'oli Kiovan juhlava sisäänkäynti ja osa kaupungin linnoitusta. '
+          + 'Vanhoja muurijäänteitä suojaava nykyinen paviljonki rakennettiin '
+          + 'vuonna 1982, ja museo avattiin vuonna 1983.',
       },
-      aarre: 'Taras avasi dokumentointikansion: vanhassa arkkikopiossa oli '
-        + 'sama viiva, ja reunamerkintä osoitti holvin viereiseen '
-        + 'kivilaatikkoon. Rasia oli siellä. Kopion reunassa ei ole '
-        + 'nimeä — vain kolme aaltoviivaa.',
+      aarre: 'Danylo asettaa vanhan mittapiirroksen kirjan viereen. "Sama '
+        + 'viiva. Tämä kopio tehtiin ennen suojarakennusta." Sen '
+        + 'reunamerkintä johtaa kaupungin kätköön. Rasiassa on kolme '
+        + 'aaltoviivaa, mutta ei nimeä.',
     },
     {
       id: 'odessa',
@@ -1791,83 +1784,75 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'tallinna',
-      mykistetyt: [],
-      otsikko: 'Tallinna — makea lääke',
-      /*
-       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
-       *
-       * KOKO KAARI UUSIKSI (kuvaputken tarinaehdotus 5.9.2026, Fablen
-       * päätös klo 20:05 UTC: *"Hyväksytty sellaisenaan … Tallinna (opas
-       * Eve) … Kaikki korjaavat samalla vanhan kaaren kaanonirikkeen
-       * (suku/perillinen/lupaus)."*).
-       *
-       * TORNIMESTARI KRISTJAN POISTUU: hänen repliikkinsä nimesi
-       * vastatuulen päivän *"isoisäsi päiväksi"* — kaupungin kirjanpito
-       * siis muisti Horation. Tilalla on nykyhetken opas Eve, joka ei
-       * tiedä Horatiosta mitään ja lukee vanhaa havaintokirjaa
-       * opastusaineistona.
-       *
-       * KUVAPUTKEN RAJAUS TOTEUTETTU: oppaan ei väitetä rasvaavan viirin
-       * laakereita, eikä löytö tule sääviirin purkamisesta. Kätkö on
-       * portaikon tasanteen seinäsyvennyksessä, jonne yleinen opastus
-       * pysähtyy muutenkin.
-       *
-       * BEAT: **VANHA JÄLKI** — joku merkitsi kolon kaksitoista vuotta
-       * ennen Horation kirjaa. Kaanoni (isoisan-raamattu.md) sanoo vanhan
-       * jäljen puuttuvan Euroopasta kokonaan ja olevan tuoreen paras
-       * vastapari; tämä erä tuo sen ensimmäisen kerran laudalle.
-       *
-       * AISTIKIERTO: maku (marsipaani) — erän ainoa makuhavainto.
-       *
-       * SAAPUMISEN FAKTAT pelin omasta tarkistetusta aineistosta
-       * (js/packs/kulttuuri-kategoriat.js, tallinna/kaupunki, nosto
-       * "Poltettuja siilejä ja marsipaania lääkkeeksi"): apteekki on
-       * toiminut samassa talossa ainakin vuodesta 1422, ja sen vuoden
-       * 1695 hinnastossa marsipaania myytiin sydänsuruun ja muistin
-       * parantamiseen. Merkintä EI väitä marsipaania Tallinnassa
-       * keksityksi — se on apteekkarin oma puhe, ja Horatio kirjaa sen
-       * kuulemanaan. Kaupungin kirjoitusasu on pelin muun aineiston
-       * mukaan "marsipaani".
-       *
-       * VAIHTOEHTOJEN PITUUDET tasattu: oikea ei ole pisin.
-       *
-       * FAKTAT VISASSA: Vana Toomas on kääntynyt raatihuoneen tornissa
-       * vuodesta 1530; kevätjuhlan jousiammunta puisesta papukaijasta on
-       * tarun oma yksityiskohta ja se kerrotaan taruna.
-       */
+      mykistetyt: ['kohtaaminen', 'aarre'],
+      otsikko: 'Tallinna — juhla keskeytyy',
       saapuminen: 'Ostin päänsärkyyni jauheen apteekista, joka on seissyt '
         + 'samalla torilla yli neljäsataa vuotta. Kaupan päälle sain palan '
         + 'marsipaania: se on täällä lääke, sanoi apteekkari — sydänsuruun '
         + 'ja muistin parantamiseen. Se on paras lääke, jonka olen '
         + 'apteekista saanut. Päänsärky hellitti vasta illalla, mutta '
         + 'annan kunnian marsipaanille.',
-      henkilo: 'Opas Eve nousee raatihuoneen tornin portaat useita kertoja '
-        + 'päivässä ja laskee jokaisen ryhmän myös alas.',
-      kohtaaminen: 'Tornin kierreportaissa opas Eve tarttuu köysikaiteeseen '
-        + 'ja väistää sinut ohitseen. "Kysy tuo uudestaan, kun saat '
-        + 'hengityksen takaisin." Hän katsoo silmälasiensa yli ja alkaa '
-        + 'nauraa. "Torni on täynnä yhtä tarua. Kerro sinä, minkä '
-        + 'kilpailun Toomas voitti."',
+      /*
+       * HENKILÖ VAIHTUI (kuvaputken tarinaehdotus 7.9.2026; Fablen päätös
+       * 7.9.2026 illalla). Opas Eve → opas Leena. Omistajan palaute kuvasta
+       * sanatarkasti: *"Vaihda henkilö ja vaatetus ja tuo taustalle paljon
+       * ihmisiä näkyviin. Saisi olla joku paikallinen juhlapäivä menossa.
+       * rajaa vähän tiiviimmin"*. Kohtaaminen siirtyi tornin tyhjistä
+       * kierreportaista vanhankaupungin päivien tungokseen, eli juhlapäivä on
+       * nyt myös tekstissä eikä vain kuvassa.
+       *
+       * SAAPUMINEN SÄILYY SANATARKASTI: apteekki ja marsipaani ovat 1873:n oma
+       * merkintä eivätkä riipu nykyhetken henkilöstä. Faktat ovat yhä pelin
+       * omasta tarkistetusta aineistosta (js/packs/kulttuuri-kategoriat.js,
+       * tallinna/kaupunki): apteekki samassa talossa ainakin vuodesta 1422 ja
+       * marsipaani vuoden 1695 hinnastossa sydänsuruun ja muistin
+       * parantamiseen.
+       *
+       * BEAT VANHA SÄILYY: talon vanha piirros on kirjaa vanhempi, eli joku
+       * merkitsi saman kohdan ennen Horatiota. Kaanoni
+       * (docs/isoisan-raamattu.md) pitää vanhan jäljen tuoreen vastaparina, ja
+       * Euroopan tuore-kiintiö on täynnä.
+       *
+       * KYSYMYS TÄSMENNETTY VARSIJOUSEKSI Tallinnan kaupunginmuseon lähteen
+       * mukaan (tuuliviirin hahmo vuodelta 1530). Vaihtoehtojen pituudet
+       * tasattu: oikea ei ole pisin.
+       *
+       * MIKÄ POISTUI: tornin kierreportaat ja seinäsyvennyksen irtokivi. Kätkö
+       * on henkilökunnan avaama huoltoluukku, ei muurin purkamista — luukku,
+       * rasia ja talon vanha piirros ovat pelifiktiota, eivät museokohteita.
+       *
+       * FOKUSVIRTAAN EI KOSKETA MUUTEN: hopeakätkön aarremerkintä ja
+       * matkakirjateksti (js/packs/fokusvirta-tallinna.js) säilyvät
+       * sanatarkasti; vain kohtaamiskortin hahmo, nappi ja esittely
+       * vaihtuivat.
+       *
+       * LUENTA: kohtaaminen ja aarre kirjoitettu uusiksi (mykistetyt).
+       */
+      henkilo: 'Opas Leena luotsaa ryhmäänsä vanhankaupungin päivien '
+        + 'tungoksessa ja tuntee raatihuoneen tornin tarinat.',
+      kohtaaminen: 'Leena pysäyttää ryhmänsä, kun näytät kirjan merkin ja '
+        + 'kysyt kätköstä. Hymy jää puolitiehen. "Keskellä juhlaa, tietenkin. '
+        + 'Vanhat talot kyllä kätkevät asioita. Tule kierrokselle — mutta '
+        + 'ensin: minkä kilpailun Toomas tarun mukaan voitti?"',
       kysymys: {
-        q: 'Eve kertoo tornin tarun: köyhä poika Toomas voitti kilpailun '
-          + 'mutta jäi ilman palkintoa. Minkä kilpailun?',
+        q: 'Minkä kilpailun köyhä poika Toomas voitti Tallinnan tarun mukaan?',
         vaihtoehdot: [
           'Raatihuoneen shakkiturnauksen, jonka raatimiehet järjestivät',
-          'Kevätjuhlan jousiammunnan puisesta papukaijasta',
+          'Varsijousiammunnan puisesta papukaijasta',
           'Suuren kilpapurjehduksen Suomenlahden yli',
-          'Painin, jossa kaatui raatimieskin',
+          'Torilla pidetyn painikilpailun',
         ],
         oikea: 1,
-        fakta: 'Keväisin ammuttiin jousella puista papukaijaa tangon '
-          + 'nokasta. Tarun mukaan köyhä poika Toomas osui ensimmäisenä, '
-          + 'mutta palkinto kuului säätyläisille. Hänestä tehtiin lopulta '
-          + 'jotain suurempaa: kaupungin vartija raatihuoneen torniin, '
-          + 'jossa Vana Toomas on kääntynyt vuodesta 1530.',
+        fakta: 'Tarun mukaan Toomas osui varsijousella ensimmäisenä tangon '
+          + 'nokassa olleeseen puiseen papukaijaan, mutta palkinto kuului '
+          + 'säätyläisille; hänestä tehtiin kaupungin vartija raatihuoneen '
+          + 'torniin. Tuuliviirin alkuperäinen hahmo on vuodelta 1530. Taru '
+          + 'on legenda, ei elämäkerta.',
       },
-      aarre: 'Kätkö oli tasanteen seinäsyvennyksessä irtokiven takana. Eve '
-        + 'piti kahta vanhaa kirjausta rinnakkain valoa vasten: "Tämä kolo '
-        + 'on merkitty jo ennen kirjaasi. Kaksitoista vuotta ennen." '
-        + 'Nimeä ei ole kummassakaan.',
+      aarre: 'Leena saattaa sinut tornin tasanteelle. Vanhan huoltoluukun '
+        + 'takana on rasia. Hän vertaa kirjan merkkiä talon vanhaan '
+        + 'piirrokseen. "Sama kohta. Mutta tämä piirros on kirjaasi '
+        + 'vanhempi." Torin soitto kantautuu portaisiin.',
     },
     {
       id: 'riika',
@@ -2164,8 +2149,8 @@ export const KAARI_PAKETIT = {
     },
     {
       id: 'lappi',
-      mykistetyt: [],
-      otsikko: 'Lappi — tuli joka juoksi taivaalla',
+      mykistetyt: ['kohtaaminen', 'aarre'],
+      otsikko: 'Lappi — jäljet eivät odota',
       saapuminen: 'Taivas syttyi. Vihreä liekki juoksi taivaanrannasta toiseen '
         + 'ja kaartui pääni ylle kuin joki, joka olisi noussut '
         + 'virtaamaan taivaalle. Poromies sanoi tulen olevan ketun '
@@ -2173,13 +2158,36 @@ export const KAARI_PAKETIT = {
         + 'lumesta kipinöitä. Tulen alla hangella kulki jälkiä. Ne '
         + 'eivät olleet ketun. Ne olivat suksien — ja ne päättyivät '
         + 'keskelle aukeaa.',
-      henkilo: 'Poromies Aslak lukee hangen jäljet kuin kirjaa ja seuraa '
-        + 'tokkaansa tulien alla talvet läpeensä.',
-      kohtaaminen: 'Nuotiolla Aslak kaataa kuksaan kuumaa. "Isoisäsi hiihti '
-        + 'sukuni matkassa kolme päivää ja kysyi tulista joka ilta. '
-        + 'Viimeisenä iltana hän kysyi yhden, johon kukaan ei osannut '
-        + 'vastata. Vastaa '
-        + 'siihen, niin hiihdämme aamulla jäljet päähän asti."',
+      /*
+       * HENKILÖ VAIHTUI (kuvaputken tarinaehdotus 7.9.2026; Fablen päätös
+       * 7.9.2026 illalla). Poromies Aslak → poronhoitaja Reetta. Omistajan
+       * palaute kuvasta sanatarkasti: *"Vaihda henkilö ja tee lähempi
+       * rajaus."*
+       *
+       * SAMALLA POISTUI KAANONIRIKE: vanha repliikki sanoi *"Isoisäsi hiihti
+       * sukuni matkassa kolme päivää"*, eli siinä oli sekä Horation tunnistus
+       * että suvun perimä tehtävä. Reetta ei tunne kirjan miestä.
+       *
+       * SAAPUMINEN JA KYSYMYS SÄILYVÄT SANATARKASTI: revontulet, tulikettu ja
+       * keskelle aukeaa päättyvät sukset ovat 1873:n oma havainto, ja
+       * kysymyksen vaihtoehdot ovat jo tasapainossa. Kuvaputken ehdottama uusi
+       * kysymysversio hylättiin, koska sen oikea vaihtoehto olisi ollut
+       * selvästi pisin.
+       *
+       * EI OLETUSTA HENKILÖN ETNISYYDESTÄ: Reetta on poronhoitaja, ei muuta.
+       *
+       * 1873:N LUMIJÄLKIÄ EI SEURATA NYKYHETKESSÄ: lumi vaihtuu, ja hangen
+       * tuore jälki on tältä talvelta eikä kirjasta. Tuohikääre on kuusen
+       * juurakon suojassa, eikä sen säilymisen ikää väitetä.
+       *
+       * LUENTA: kohtaaminen ja aarre kirjoitettu uusiksi (mykistetyt).
+       */
+      henkilo: 'Poronhoitaja Reetta seuraa tokkaansa talvisessa metsässä ja '
+        + 'lukee hangen jäljet päivänvalossa.',
+      kohtaaminen: 'Reetta pysähtyy poron viereen, kun kysyt isoisän '
+        + 'jäljistä. "Niitä et enää seuraa. Lumi vaihtuu täällä useammin kuin '
+        + 'ihmiset." Suupieli liikahtaa. "Mutta tuon aukean saatamme löytää. '
+        + 'Kerro ensin: mikä revontulet oikeasti sytyttää?"',
       kysymys: {
         q: 'Mikä revontulet tieteen mukaan sytyttää?',
         vaihtoehdot: [
@@ -2194,80 +2202,72 @@ export const KAARI_PAKETIT = {
           + 'typpeen ne saavat taivaan hehkumaan vihreänä ja punaisena. '
           + 'Tarun tulikettu sai silti pitää nimen: revontulet.',
       },
-      aarre: 'Jälkien päässä kinos kätki tuohikääreen. Aslak osoitti '
-        + 'hankea: "Toiset jäljet alkavat tästä — eilen."',
+      aarre: 'Reetta löytää kirjan kuvausta vastaavan aukean. Kuusen juurakon '
+        + 'suojassa on rasia tuohikääreessä. Hän katsoo vieressä painunutta '
+        + 'lunta. "Nämä jäljet ovat tältä talvelta. Eivät kirjasta."',
     },
     {
       id: 'tromssa',
-      mykistetyt: [],
-      otsikko: 'Tromssa — yö jota ei tullut',
-      /*
-       * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
-       *
-       * KOKO KAARI UUSIKSI (kuvaputken tarinaehdotus 5.9.2026, Fablen
-       * päätös klo 20:05 UTC: *"Hyväksytty sellaisenaan … Tromssa
-       * (kahvilanpitäjä Kjell) … Kaikki korjaavat samalla vanhan kaaren
-       * kaanonirikkeen (suku/perillinen/lupaus)."*).
-       *
-       * SATAMAVAHTI INGRID POISTUU: hänen repliikkinsä oli kaaren
-       * raskain rike — isoisoisä sytytti lyhdyn sinä yönä, jona *"isoisäsi
-       * laiva lähti"*, ja *"suku sytyttää sen yhä"*. Siinä on kolme asiaa
-       * kerralla: Horation tunnistus, perillisen odotus ja vuosisatainen
-       * ylläpidetty perinne, jonka kiintiö (1/lauta, Prahan kynttilä) oli
-       * jo käytetty. Kaikki kolme poistuvat.
-       *
-       * KUVAPUTKEN RAJAUS TOTEUTETTU: viikoittainen öljylyhty ja luvaton
-       * laivan koneistoon meno ovat poissa. Kjell tuntee vanhat
-       * laivakuvat omana harrastuksenaan, ei vartiointilupauksesta, ja
-       * kätkö on laiturin kivijalassa yleisellä paikalla.
-       *
-       * BEAT: hiljainen loppu, jossa jää auki yksi asia (sama käsiala
-       * kahdessa eri musteessa). Erän lämpö- ja hengähdysannos on tässä
-       * (tarinakaari.md: vähintään yksi kumpaakin per erä).
-       *
-       * ÄÄNIPROFIILI: puhelias. Kjell puhuu ensin lokista ja vasta sitten
-       * kysyy kysymyksensä.
-       *
-       * VAIHTOEHTOJEN PITUUDET: oikea on lyhyiden joukossa, pisin on
-       * väärä.
-       *
-       * FAKTAT: Tromssan 1800-luvun lempinimi "Pohjolan Pariisi";
-       * jäämerenpyynti ja kauppa toivat kaupunkiin rahaa ja seuraelämää.
-       * Sama aineisto kuin kaupungin omassa lehtinostossa.
-       */
+      mykistetyt: ['kohtaaminen', 'aarre'],
+      otsikko: 'Tromssa — työvuoro ilman yötä',
       saapuminen: 'Aurinko ei laskenut. Se vieri taivaanrannan yli kuin '
         + 'kolikko, joka ei putoa, ja minä mittasin, kuinka alas se '
         + 'suostuu: kämmenen leveyden merestä. Satama teki työtä kello '
         + 'kahdelta yöllä. Kukaan ei toivottanut hyvää yötä, koska yötä ei '
         + 'ollut, ja minä jäin laiturille seisomaan kuin olisin unohtanut '
         + 'jotakin.',
-      henkilo: 'Kahvilanpitäjä Kjell myy kahvia sataman kärrystä yötä '
-        + 'päivää ja kerää vanhoja laivapostikortteja.',
-      kohtaaminen: 'Laiturin päässä kahvilanpitäjä Kjell läimäyttää kämmenen '
-        + 'tiskiin ja hätistää lokin. "Jos etsit aarretta, aloita tuosta '
-        + 'varkaasta." Hän kaataa sinulle kahvia kysymättä. "Tällä '
-        + 'kaupungilla oli 1800-luvulla lempinimi, jota etelässä ei '
-        + 'uskottu. Sano se."',
+      /*
+       * HENKILÖ VAIHTUI (kuvaputken tarinaehdotus 7.9.2026; Fablen päätös
+       * 7.9.2026 illalla). Kahvilanpitäjä Kjell → venemekaanikko Sigrid.
+       * Omistajan palaute sanatarkasti: *"Keksi kokonaan jokin toinen idea ja
+       * toteutus. Saat vapaat kädet."*
+       *
+       * SAAPUMINEN SÄILYY SANATARKASTI: aurinko, joka ei laske, ja satama
+       * työssä kello kahdelta yöllä ovat 1873:n oma havainto. Kuvaputken
+       * ehdottamaa lisälausetta laiturimerkistä EI otettu — saapumisen luenta
+       * on jo olemassa, eikä uusi säie kuulu mantereen yhteen mysteeriin.
+       *
+       * KYSYMYS: väärät vaihtoehdot eivät enää sisällä toista oikeaa
+       * lempinimeä. "Jäämeren portti" on matkailutoimiston oma nimitys, joten
+       * se siirtyi vaihtoehdoista faktaan.
+       *
+       * BEAT: renkaan jalkaan viilattu tähtäinristi on Horation OMA jälki ja
+       * siksi ajaton — ei tuore jälki, koska Euroopan tuore-kiintiö on täynnä
+       * (docs/isoisan-raamattu.md).
+       *
+       * MIKÄ POISTUI: kahvikärry, lokki ja laivapostikorttien keräily.
+       * Satamaverstas, Sigrid ja purettujen laitureiden hela ovat
+       * pelifiktiota; kiinnitysrengas on varastosta eikä käytössä olevasta
+       * laiturista.
+       *
+       * LUENTA: kohtaaminen ja aarre kirjoitettu uusiksi (mykistetyt).
+       */
+      henkilo: 'Venemekaanikko Sigrid korjaa sataman veneitä ja ottaa talteen '
+        + 'purettujen laitureiden vanhoja heloja.',
+      kohtaaminen: 'Sigrid laskee potkurin penkille, kun kysyt aarteesta. '
+        + '"Kello on kaksi yöllä. Tietenkin joku tulee nyt kyselemään '
+        + 'vanhasta kirjasta." Hän vilkaisee sivua. "Se laituri uusittiin. '
+        + 'Mutta ensin: miksi tätä kaupunkia sanotaan — Pariisiksiko vai '
+        + 'miksi?"',
       kysymys: {
-        q: 'Kjell sanoo, ettei etelässä uskottu Tromssan 1800-luvun '
-          + 'lempinimeä. Mikä se oli?',
+        q: 'Mikä Pariisiin viittaava lempinimi Tromssalla on?',
         vaihtoehdot: [
           'Pohjolan Pariisi',
-          'Valaanpyytäjien pääkaupunki',
-          'Kaamoksen kaupunki',
-          'Jäämeren portti',
+          'Lännen Pariisi',
+          'Vuoriston Pariisi',
+          'Etelän Pariisi',
         ],
         oikea: 0,
         fakta: 'Tromssaa alettiin 1800-luvulla kutsua Pohjolan Pariisiksi: '
-          + 'pieni arktinen satama yllätti etelän vieraat kahviloillaan, '
-          + 'muodillaan ja seuraelämällään. Jäämeren pyynti ja kauppa '
-          + 'toivat tänne rahaa ja maailman — ja keskiyön aurinko piti '
-          + 'sataman hereillä kellon ympäri.',
+          + 'jäämerenpyynti ja kauppa toivat pieneen arktiseen satamaan '
+          + 'rahaa, muotia ja seuraelämää. Matkailutoimisto käyttää myös '
+          + 'nimeä Jäämeren portti, ja keskiyön aurinko pitää sataman '
+          + 'hereillä kellon ympäri.',
       },
-      aarre: 'Kätkö oli laiturin kivijalassa, kiinnitysrenkaan alla. Kjell '
-        + 'asetti keräilemänsä postikortin rasian viereen: "Sama käsiala. '
-        + 'Eri muste." Kello oli kaksi yöllä ja täysin valoisaa, enkä '
-        + 'osannut lähteä.',
+      aarre: 'Sigrid hakee varastosta vanhan kiinnitysrenkaan. "Laituri '
+        + 'uusittiin. Tätä en hennonut heittää pois." Ontosta jalustasta '
+        + 'löytyy rasia. Renkaan jalkaan on viilattu tähtäinristi. "Tuo ei '
+        + 'ole telakan merkki."',
     },
     {
       id: 'islanti',
@@ -2948,43 +2948,64 @@ export const KAARI_PAKETIT = {
       id: 'medina',
       lauta: 'middleeast',
       luennat: false,
-      otsikko: 'Medina — karavaanien kaivo',
-      saapuminen: 'Kaupunkiin itseensä en kulkenut — se on pyhiinvaeltajien '
-        + 'kaupunki, eikä minun tieni vie porteista sisään. Leiriydyin '
-        + 'karavaanipaikalle sen ulkopuolelle, missä kaivon ympärillä '
-        + 'lepäsi satoja kameleita. Vedennostaja kertoi matkalaisista, '
-        + 'jotka olivat tulleet Damaskoksesta asti nelikymmentä päivää '
-        + 'erämaan halki. Kaivon kivessä oli nimikirjaimia monella '
-        + 'kielellä. Kaksi niistä tunsin.',
-      henkilo: 'Vedennostaja Omar juottaa karavaanien kamelit kaivolla, '
-        + 'jonka äärellä hänen sukunsa on palvellut kulkijoita '
-        + 'sukupolvien ajan.',
-      kohtaaminen: 'Omar kiertää köyden vinssille. "Kirjaimet hakkasi kiveen '
-        + 'matkalainen, joka ei mennyt kaupunkiin vaan istui kaivolla '
-        + 'kolme päivää kyselemässä karavaaneista. Hän jätti '
-        + 'kysymyksensä minun isoisälleni. Vastaa."',
+      otsikko: 'Medina — kuvio joka jäi kesken',
+      saapuminen: 'Kaupunkiin en kulkenut — se ei ole minun tieni — vaan jäin '
+        + 'palmujen varjoon, missä leirisavu ja taatelit tuoksuivat. Punojan '
+        + 'sormet kulkivat niin nopeasti, että kadotin kuvion. Hän antoi '
+        + 'minun yrittää. Sain aikaan solmun, jota kumpikaan ei osannut '
+        + 'avata. Piirsin sivulle sen kohdan, johon taitoni loppuivat. '
+        + 'Punojan ilmeestä päätellen juuri siinä olisi pitänyt aloittaa.',
+      /*
+       * HENKILÖ JA KOKO KAARI VAIHTUIVAT (kuvaputken tarinaehdotus 7.9.2026;
+       * Fablen päätös 7.9.2026 illalla). Vedennostaja Omar ja karavaanien
+       * kaivo → punoja Safa. Omistajan palaute sanatarkasti: *"Keksi joku muu
+       * juttu, ihan kokonaan. Vaihda kaikki."* Siksi myös otsikko, saapuminen
+       * ja kysymys on kirjoitettu uusiksi.
+       *
+       * LÄHI-IDÄN KAANON PITÄÄ: Horatio ei kulje pyhään kaupunkiin vaan jää
+       * sen ulkopuolelle — nyt palmujen varjoon taateliviljelmän laitaan.
+       *
+       * JAKOTAULUN OMAT RIVIT TÄYTTYVÄT: kommellus on solmu, jota kumpikaan ei
+       * osaa avata, ja aistihavainnot ovat leirisavu ja taatelit.
+       *
+       * SAFA EI MUISTA HORATIOTA eikä peri tehtävää: kirjan mies on hänelle
+       * vain "kirjasi mies", joka sotki kuvion. Beat on tuore mutta
+       * rauhallinen — pyhän kaupungin äärellä ei väijy ketään, ruuvissa on
+       * vain tuore naarmu.
+       *
+       * HENKILÖ-KENTTÄ EI SANO "lehti": vastaus (lehtisuikaleet) ei saa lukea
+       * kortin esittelyssä.
+       *
+       * LÄHDE: UNESCO, aineettoman kulttuuriperinnön luettelo,
+       * ich.unesco.org/en/RL/date-palm-knowledge-skills-traditions-and-practices-01902.
+       *
+       * LUENNAT: false ja lauta säilyvät ennallaan (Lähi-idän kohteita ei
+       * vielä generoida), joten mykistetyt-listaa ei tarvita.
+       */
+      henkilo: 'Safa punoo koreja ja korjaa vanhoja punontamalleja pienessä '
+        + 'pajassa Medinan ulkopuolella, taateliviljelmän laidalla.',
+      kohtaaminen: 'Safa pysäyttää sormensa, kun kysyt aarteesta. "Kirjasi '
+        + 'mies sotki tämän kuvion. Sinä tulit selvittämään sen?" Hänen '
+        + 'epäilevä katseensa pehmenee hiukan. "Aloitetaan alusta. Mistä '
+        + 'kasvin osasta tällainen kori punotaan?"',
       kysymys: {
-        q: 'Pyhiinvaeltajat matkasivat Damaskoksesta Medinaan kauan '
-          + 'ennen rautatietä. Miten pitkä erämaataival tehtiin?',
+        q: 'Mitä taatelipalmun osaa käytetään perinteisten korien punontaan?',
         vaihtoehdot: [
-          'Kamelikaravaaneissa, joissa kulki tuhansia ihmisiä yhdessä',
-          'Jokilaivoilla, jotka nousivat virtaa niin pitkälle kuin vettä '
-            + 'riitti',
-          'Härkävankkureilla, jotka kulkivat vanhaa kivettyä valtatietä',
-          'Jalkaisin ja yksin — jokainen kulkija omaa polkuaan tähtien '
-            + 'mukaan',
+          'Hedelmän kiviä',
+          'Lehtisuikaleita',
+          'Kukkien terälehtiä',
+          'Juuren mehua',
         ],
-        oikea: 0,
-        fakta: 'Pyhiinvaellus kulki suurina kamelikaravaaneina: tuhansia '
-          + 'ihmisiä, kameleita ja vesivarastoja eteni yhdessä noin '
-          + 'neljäkymmentä päivää Damaskoksesta Medinaan. Karavaani oli '
-          + 'kuin liikkuva kaupunki, jota kaivot ja levähdyspaikat '
-          + 'rytmittivät.',
+        oikea: 1,
+        fakta: 'Taatelipalmun lehtiä ja kuituja käytetään perinteisiin '
+          + 'käsitöihin, kuten koreihin ja mattoihin. Taatelipalmuun liittyvä '
+          + 'tieto ja käsityöperinne on UNESCOn aineettoman kulttuuriperinnön '
+          + 'luettelossa, myös Saudi-Arabian osalta.',
       },
-      aarre: 'Kätkö oli kaivon kivijalassa, nimikirjainten alla '
-        + 'irtokiven takana. Omar laski kiven paikalleen: "Kaivolla '
-        + 'käy tuhansia käsiä vuodessa, ja silti juuri tämä kivi on '
-        + 'aina ollut tiukassa — eilen se oli löysällä."',
+      aarre: 'Safa hakee vanhan puisen punontamallin. Kirjan piirros täsmää '
+        + 'sen pohjaan. Irtoavan pohjan alta löytyy ohut rasia. "Tämä ei '
+        + 'kuulunut punontaan", hän sanoo. Pohjan ruuvissa on aivan tuore '
+        + 'naarmu.',
     },
     {
       id: 'mekka',
@@ -3067,40 +3088,64 @@ export const KAARI_PAKETIT = {
       id: 'nikosia',
       lauta: 'middleeast',
       luennat: false,
-      otsikko: 'Nikosia — harkko jota ei voinut myydä',
-      saapuminen: 'Muurit kiersivät kaupungin täydellisenä tähtenä; kävelin '
-        + 'kehän ympäri ja kirjasin vallisakarat: yksitoista. '
-        + 'Sepänkujalla vasarat löivät kuparia eri tahdeissa; kuja soi '
-        + 'kuin soittokunta. Vanhin seppä nosti liinan alta harkon, '
-        + 'jossa oli härän taljan merkki — vanhempaa työtä kuin paja '
-        + 'tai muurit. Kysyin hintaa. Väärä kysymys, seppä sanoi, ja '
-        + 'peitti harkon.',
-      henkilo: 'Seppä Andreas, kaivosmiesten sukua, takoo kuparia kujalla, '
-        + 'jolla saaren punainen metalli on soinut aina.',
-      kohtaaminen: 'Andreas kääntää harkkoa pihdeissä. "Matkalainen sanoi: '
-        + 'en voi myydä tätä enkä kantaa kauemmas — pitäkää, kunnes '
-        + 'joku vastaa kysymykseen saarenne metallista. Isoisäni '
-        + 'suostui — sellaista ei jätetä kadulle. Vastaa, niin harkko '
-        + 'on sinun."',
+      otsikko: 'Nikosia — väärältä puolelta',
+      saapuminen: 'Kävelin kaupungin muurien ulkopuolella ja yritin piirtää '
+        + 'niiden muotoa. Tuuli käänsi sivun kesken viivan. Jatkoin piirrosta '
+        + 'toiselle puolelle ja olin tyytyväinen, kunnes huomasin piirtäneeni '
+        + 'itselleni kaksi eri suuntaa. Jätän ne tähän sinulle, joka tätä '
+        + 'luet: minä en enää luota tähän paperiin.',
+      /*
+       * HENKILÖ JA KOKO KAARI VAIHTUIVAT (kuvaputken tarinaehdotus 7.9.2026;
+       * Fablen päätös 7.9.2026 illalla). Seppä Andreas ja kupariharkko →
+       * seripainotaiteilija Marios. Omistajan palaute koski kuvan henkilöä
+       * Elenaa: *"Vaihda toinen henkilö. Voi olla tiukka ja arvioiva katse."*
+       *
+       * TULKINTA KIRJATTU: palaute luetaan niin, että ENSISIJAINEN HAHMO
+       * vaihtuu ja katse jää tiukaksi ja arvioivaksi. Asia on kysytty
+       * omistajalta; jos hän tarkoitti kuvan taustahenkilöä, vaihtuu vain nimi
+       * takaisin Elenaan (nimi ja pronominit, ei muu teksti).
+       *
+       * SAAPUMINEN EI ENÄÄ ANNA VASTAUSTA: vanha merkintä laski vallisakarat
+       * ääneen ("yksitoista"), eli visan vastaus luki matkakirjassa. Nyt
+       * saapuminen kertoo piirroksesta, joka jatkui kahteen suuntaan.
+       *
+       * KYSYMYS: venetsialaisen muurikehän yksitoista sydämenmuotoista
+       * bastionia (visitcyprus.com, medieval walls).
+       *
+       * KÄTKÖ ON KAUPUNGIN KÄTKÖ kävelytien kiven alla — ei harkon sisällä
+       * eikä muuria purkamalla. Harkko, seppä ja kujan pajat poistuivat
+       * kokonaan.
+       *
+       * PUHUTTELU "sinä, joka tätä luet" on kaanonin mukainen: Horatio ei
+       * tiedä lukijaansa, hän vain jättää sivun.
+       *
+       * LUENNAT: false ja lauta "middleeast" säilyvät, joten mykistetyt-listaa
+       * ei tarvita.
+       */
+      henkilo: 'Seripainotaiteilija Marios tekee koevedoksia Nikosian '
+        + 'vanhankaupungin käsityöpihalla ja huomaa kuvioista niiden '
+        + 'katselusuunnan.',
+      kohtaaminen: 'Marios jättää kädet painokehykselle ja mittaa sinua '
+        + 'katseellaan. "Aarretta. Oletko varma, että pidät edes sivua oikein '
+        + 'päin?" Hän kääntää kirjaa hiukan. "Nyt viivat jatkuvat. Montako '
+        + 'bastionia tässä kaupungin muurikehässä on?"',
       kysymys: {
-        q: 'Kyproksen saari ja eräs metalli ovat antaneet nimen '
-          + 'toisilleen. Mikä metalli?',
+        q: 'Kuinka monta bastionia muodostaa Nikosian venetsialaisten muurien '
+          + 'kehän?',
         vaihtoehdot: [
-          'Kupari',
-          'Hopea',
-          'Tina',
-          'Rauta',
+          'Kahdeksan',
+          'Yksitoista',
+          'Kolmetoista',
+          'Kuusitoista',
         ],
-        oikea: 0,
-        fakta: 'Kupari sai latinankielisen nimensä Kyproksesta: aes Cyprium, '
-          + 'Kyproksen metalli, lyheni muotoon cuprum — siitä kupari. '
-          + 'Saaren kaivokset olivat antiikin maailman tärkeimpiä, ja '
-          + 'kuparia laivattiin härän taljan muotoisina harkkoina.',
+        oikea: 1,
+        fakta: 'Venetsialaisten 1500-luvulla rakentamaa muurikehää vahvistaa '
+          + 'yksitoista sydämenmuotoista bastionia. Kehä on säilynyt '
+          + 'kaupungin ympärillä lähes kokonaisena.',
       },
-      aarre: 'Harkko oli ontto; sisällä odotti kätkö. Andreas punnitsi '
-        + 'puolikkaita: "Merkki on lyöty valuun ennen kuin kupari '
-        + 'jäähtyi, mutta valu on merkkiä vuosituhansia nuorempi — '
-        + 'joku osaa yhä vanhan valajan työn."',
+      aarre: 'Oikein päin luettuina piirroksen kaksi puolta osoittavat samaan '
+        + 'kohtaan muurin juurella. Kätkö on siellä, kävelytien kiven alla. '
+        + 'Rasian reunassa on sama kääntynyt viiva.',
     },
     {
       id: 'persepolis',

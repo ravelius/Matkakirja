@@ -455,41 +455,50 @@ export const FOKUSVIRTA_TALLINNA = {
    *
    * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
    *
-   * HAHMO VAIHDETTU: tornimestari Kristjan → opas Eve (kuvaputken
-   * tarinaehdotus 5.9.2026, Fablen päätös klo 20:05 UTC). Kristjanin
-   * kaanoninen repliikki nimesi vastatuulen päivän *"isoisäsi päiväksi"*
-   * — kaupungin kirjanpito siis muisti Horation, mikä on kaanonrike.
-   * Samalla poistui väite, että sama ihminen rasvaisi viirin laakerit;
-   * Vana Toomasin huolto ei ole oppaan työtä.
+   * HAHMO VAIHDETTU 7.9.2026: opas Eve → opas Leena. Syy on omistajan
+   * palaute kohtaamiskuvasta: *"Vaihda henkilö ja vaatetus ja tuo
+   * taustalle paljon ihmisiä näkyviin. Saisi olla joku paikallinen
+   * juhlapäivä menossa. rajaa vähän tiiviimmin"* (Fablen päätös
+   * samana iltana). Kohtaaminen siirtyi tornin tyhjistä
+   * kierreportaista vanhankaupungin päivien tungokseen; aiempi
+   * vaihdos (tornimestari Kristjan → Eve, 5.9.2026) poisti kaaresta
+   * kaanonrikkeen, jossa kaupungin kirjanpito muisti Horation.
    *
    * Hahmo, kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
    * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'tallinna'). Tämä
-   * kortti ei kertaa Even repliikkiä eikä paljasta vastausta.
+   * kortti ei kertaa Leenan repliikkiä eikä paljasta vastausta.
    *
-   * ÄÄNIPROFIILI: hämmästyvä ja huvittunut — Eve nauraa kysymykselle
-   * ennen kuin vastaa siihen.
+   * ÄÄNIPROFIILI: hämmästyvä ja huvittunut — Leena huvittuu siitä,
+   * että joku tulee keskellä juhlaa kysymään vanhasta kirjasta.
+   *
+   * MUUHUN PAKETTIIN EI KOSKETA: matkakirja, hopeakätkön
+   * aarremerkintä, oppitunti ja lehtitehtävät säilyvät sanatarkasti.
    */
   kohtaaminen: {
-    hahmo: 'Opas Eve',
-    nappi: 'Tapaa Eve',
-    teksti: 'Eve nousee tornin portaat useita kertoja päivässä ja tietää '
-      + 'askelmien määrän ulkoa, koska on laskenut ne kerran eikä ole '
-      + 'nähnyt syytä laskea uudelleen. Ryhmiä hän ei hoputa: ylös pääsee '
-      + 'omaa tahtia, kunhan pääsee myös alas. Tornin opastusaineisto ja '
-      + 'vanhat havaintokirjat ovat hänelle tuttua lukemista, ja hän '
-      + 'huvittuu joka kerta siitä, kuinka moni tulee ylös kysymään yhtä '
-      + 'ja samaa tarua. Ennen kuin hän kertoo sen loppuun, hän haluaa '
-      + 'tietää, tunteeko vieras sen jo entuudestaan.',
+    hahmo: 'Opas Leena',
+    nappi: 'Tapaa Leena',
+    teksti: 'Leena luotsaa ryhmiään vanhankaupungin läpi päivät pitkät, ja '
+      + 'juuri nyt kadut ovat täynnä väkeä: kaupungin omat päivät ovat '
+      + 'menossa ja soitto kantaa torilta joka kujalle. Torni on hänen '
+      + 'työpaikkansa siinä missä katukivetys, ja sen tarinat hän osaa ulkoa '
+      + '— myös ne, joita opastusaineistossa ei lue. Vanhaa kirjaa kantava '
+      + 'vieras keskellä juhlaa huvittaa häntä: tänään ihmiset tulevat '
+      + 'katsomaan kulkuetta, eivät kyselemään vuosisadan takaisista '
+      + 'merkinnöistä. Ryhmänsä hän saa odottamaan hetken. Ennen kuin hän vie '
+      + 'ketään eteenpäin, hän haluaa tietää, tunteeko tulija tornin oman '
+      + 'tarun jo entuudestaan.',
     vihjeOsio: 'kaupunki',
   },
 
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * KOHTAAMISPAIKKA: RAATIHUONEEN TORNI. Piste EI siirry henkilön
-   * vaihdossa 5.9.2026: kaaren teksti asettaa Even tornin
-   * kierreportaisiin, ja pelin oma Tallinna-aineisto osoittaa saman
-   * paikan (js/packs/kulttuuri-kategoriat.js, tallinna/kaupunki).
+   * KOHTAAMISPAIKKA: RAATIHUONEENTORI. Piste EI siirry henkilön
+   * vaihdossa 7.9.2026 — koordinaatit ovat samat kuin ennenkin. Vain
+   * nimi tarkentui: kaaren teksti asettaa Leenan vanhankaupungin
+   * päivien tungokseen, ja torni seisoo torilla, joten piste nimetään
+   * laattapaikan mukaan (js/packs/kulttuuri-kategoriat.js,
+   * tallinna/kaupunki).
    *
    * KOORDINAATIT LUETAAN LAUDALTA EIKÄ PROJEKTIOSTA — POIKKEUS, JOKA
    * PITÄÄ PERUSTELLA. Raatihuoneen todellinen paikka on 59,43709167 N /
@@ -510,7 +519,7 @@ export const FOKUSVIRTA_TALLINNA = {
    * on tässä nimenomaan oikeampi kuin tarkka koordinaatti.
    */
   kohtaamispiste: {
-    nimi: 'Raatihuoneen torni',
+    nimi: 'Raatihuoneentori',
     laudat: {
       maailmankartta: { x: 6654.2, y: 1034.5 },
       europe: { x: 684, y: 374 },

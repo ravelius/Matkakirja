@@ -683,59 +683,62 @@ export const FOKUSVIRTA_KIOVA = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. HENKILÖ VAIHTUI: portinvartija
-   * Oksana → näyttelymestari Taras (js/tyohuone-kehitys-data.js
-   * KAARI_PAKETIT, id 'kiova'). Syy on kaaren omassa
-   * kommenttilohkossa: Oksanan repliikki odotti suoraan sanoen
-   * perillistä (*"tekijän suku palaa lukemaan ne"*), ja se on
-   * kiellettyjen odotusten kirkkain tapaus. Kaaren paketti antaa
-   * hahmon JA kysymyksen, jonka game.actionQuiz esittää laatalla
-   * (js/game.js kaariTarina); kumpaakaan ei kosketa täällä. Alla oleva
-   * `teksti` on VAIN kortin esittely, kirjoitettu niin, ettei se
-   * kertaa Taraksen omaa repliikkiä eikä paljasta vastausta.
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
+   *
+   * HAHMO VAIHDETTU 7.9.2026: näyttelymestari Taras → näyttelymestari
+   * Danylo. Syy on omistajan palaute kohtaamiskuvasta: *"kuva
+   * lähempää, poista nainen ja vaihda henkilö"* (Fablen päätös samana
+   * iltana). Aiempi vaihdos (portinvartija Oksana → Taras, 5.9.2026)
+   * poisti kaaresta perillisen odotuksen; ammatti ja ääniprofiili
+   * säilyvät ennallaan.
+   *
+   * Kaaren paketti antaa hahmon JA kysymyksen, jonka game.actionQuiz
+   * esittää laatalla (js/game.js kaariTarina); kumpaakaan ei kosketa
+   * täällä. Alla oleva `teksti` on VAIN kortin esittely, kirjoitettu
+   * niin, ettei se kertaa Danylon omaa repliikkiä eikä paljasta
+   * vastausta.
    *
    * KUVAA EI OLE (omistajan linjaus): kohtaamiskortissa on hahmo,
    * nappi, varmistus, vihjeOsio ja teksti.
    *
    * MITÄ LUONNOS YRITTÄÄ (docs/moduulit/tarinakaari.md, luvut 3 ja 5):
-   *   - ÄÄNIPROFIILI on HÄMMÄSTYY ITSEKIN, kuten ennenkin: Taras
-   *     tietää näyttelystä kaiken eikä silti tiedä, mistä piirroksen
+   *   - ÄÄNIPROFIILI on HÄMMÄSTYY ITSEKIN, kuten ennenkin: Danylo
+   *     tietää kokoelmasta kaiken eikä silti tiedä, mistä piirroksen
    *     viiva on peräisin — ja myöntää sen ääneen.
    *   - VARALLISUUSSÄÄNTÖ: isoisä ei maksa mitään, ei tilaa mitään eikä
-   *     käske ketään, eikä kukaan odota ketään. Taras kiinnostuu
-   *     työkseen: väärä viiva näyttelyssä on hänen ongelmansa.
+   *     käske ketään, eikä kukaan odota ketään. Danylo kiinnostuu
+   *     työkseen: tunnistamaton viiva on hänen ongelmansa.
    *   - EI SPOILERIA: kortti ei mainitse portin tehtävää eikä ikää —
-   *     vain holvin, jäännökset, pienoismallin ja kansiot.
-   *   - MODERNI JA MUINAINEN PIDETÄÄN ERILLÄÄN: vuoden 1982
-   *     suojapaviljonki ja viime kuussa valmistunut pienoismalli eivät
-   *     ole muinaisia eikä niitä väitetä sellaisiksi.
+   *     vain dokumentoinnin, jäännökset ja kansiot.
+   *   - PIENOISMALLI POISTUI kaaresta 7.9.2026, joten sitä ei mainita
+   *     enää täälläkään. MODERNI JA MUINAINEN PIDETÄÄN SILTI
+   *     ERILLÄÄN: vuoden 1982 suojarakennus ei ole muinainen eikä sitä
+   *     väitetä sellaiseksi.
    */
   kohtaaminen: {
-    hahmo: 'Näyttelymestari Taras',
+    hahmo: 'Näyttelymestari Danylo',
     nappi: 'Tapaa näyttelymestari',
-    varmistus: 'Haluatko varmasti tavata Taraksen juuri nyt?',
+    varmistus: 'Haluatko varmasti tavata Danylon juuri nyt?',
     /*
      * VIHJELINKIN OSIO (omistajan pelitestipalaute v1119, kohta 13):
      * rivi kertoo, MISTÄ PÄIN LEHTEÄ ratkaisu löytyy, vastausta
      * paljastamatta, ja avaa lehden siihen osioon. Tunnus on
      * kaupunkilehden osion id (js/packs/kulttuuri-kategoriat.js, kiova):
-     * 'kaupunki' tai 'musiikki'. Taraksen kysymys koskee holvia ja
+     * 'kaupunki' tai 'musiikki'. Danylon kysymys koskee porttia ja
      * muureja, ja lähin tuki on kaupunkisivulla, jonka kansikuvan selite
      * kertoo, mitä porttitornista on aitoa ja mitä ei.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Taras rakentaa museoon uutta näyttelyä vanhojen jäännösten '
-      + 'ympärille: suojarakennus on vuodelta 1982, pienoismalli '
-      + 'valmistui viime kuussa, ja kummankin kohdalla hän osaa sanoa, '
-      + 'mikä on aitoa ja mikä selitystä. Dokumentointikansiot hän '
-      + 'tuntee ulkoa, koska väärä viiva seinätekstissä on hänen '
-      + 'ongelmansa eikä kenenkään muun. Vieraita hän on opastanut '
-      + 'satoja, ja useimmat kysyvät kullasta. Vanha piirros on eri '
-      + 'asia: siinä on viiva, jota hän ei tunnista, ja se harmittaa '
-      + 'häntä enemmän kuin hän kehtaa myöntää. Kansioita hän ei '
-      + 'kuitenkaan avaa kenellekään ennen kuin tulija osoittaa '
-      + 'tietävänsä, mitä varten koko rakennelma aikoinaan '
-      + 'pystytettiin.',
+    teksti: 'Danylo järjestää museon dokumentointia ja tuntee kokoelman '
+      + 'kerroksittain: mikä on 1000-luvun muurijäännöstä ja mikä vuoden 1982 '
+      + 'suojarakennusta, hän osoittaa kädellä epäröimättä. Vieraita hän on '
+      + 'opastanut satoja, ja useimmat kysyvät kullasta; sen hän kuittaa '
+      + 'ystävällisesti ja joka kerta samoin sanoin. Vanha piirros on eri '
+      + 'asia. Siinä on viiva, jota hän ei tunnista, eikä tunnistamattomuus '
+      + 'ole hänen ammatissaan mukava tunne — se harmittaa häntä enemmän kuin '
+      + 'hän kehtaa myöntää. Kansioitaan hän ei silti avaa kenellekään ennen '
+      + 'kuin tulija osoittaa tietävänsä, mitä varten koko rakennelma '
+      + 'aikoinaan pystytettiin.',
   },
 
   /*
