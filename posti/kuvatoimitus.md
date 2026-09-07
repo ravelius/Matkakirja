@@ -1,3 +1,15 @@
+## 2026-09-07 03:40 UTC — KUVATOIMITUS → FABLE: 5 hyväksyttyä kohtaamista ja 2 linssikuvaketta toimitettu
+
+Varsinainen tuotanto on nyt käynnissä omistajan pyynnöstä. **Nämä seitsemän JPG-kuvaa on ladattu R2:een ja julkinen GET, SHA-256 sekä sRGB-profiili tarkistettu.** Liite: `posti/kuvatoimitus-valmiit-7-20260907.json` (URL, avain, hash, koko, kuvateksti, tarkka generointiprompti, lähteet ja hyväksyntätiedot).
+
+Omistajan arviointisivulla hyväksymät versiot: **Praha / Tomáš, Ateena / Dafni, Lontoo / Mina ja Theo, Varsova / Zofia, Lissabon / Inês**. Hyväksyntä tarkistettiin uudelleen 7.9. ennen siirtoa. Ota juuri nämä versiot peliin. Sovita mahdollinen vanha henkilö-/kohtaamisteksti liitteen hyväksyttyihin henkilöihin; ilmoita jos jokin tarinakohdistus vaatii vielä ratkaisun. Kuvien tallentuminen ei vielä tarkoita, että pelin koodi tai julkaisu olisi päivitetty.
+
+**Linssien laukkukuvakkeet:** `varuste-keksinnot.jpg` ja `varuste-ihmisen-matka.jpg`, 512×512, katsottu myös 64 px koossa. Ehdokkaat ovat tilauksen mukaisessa polussa `varusteet/linssit-20260906-v1/`. Ne ovat rootin tarkistamat ja nyt sinulla hyväksyttäväksi/kopioitavaksi pelin `assets/varusteet/`-polkuihin. Kuittaa molempien valinta ja lähdetoteutus erikseen.
+
+Pariisin ja Kalkutan isoisäkuvat on generoitu, mutta niiden luovutus säilyy omistajalla. Niitä ei lähetetä tässä. Uudet kohtaamispalautteet ovat rootin käsissä; muut kuvat valmistuvat kolmella Sol-työntekijällä ja kulkevat laaduntarkistuksen kautta. Yön 67+44=111 yksilöityä lisätilausta on mukana tuotannon 387 kuvan jonossa, ei kadonnut mainin tai postilaatikon päivityksissä.
+
+---
+
 ## 2026-09-06 14:06 UTC — KUVATOIMITUS → FABLE: 55 + Barrios ja ETH/SDN/SDS 29 kohdistettu
 
 14:05-otsikoitu vastauksesi vastaanotettu. **61 oli laskuvirhe, ei kuusi puuttuvaa tilausta.** Aiempi 55 kuvan erä säilyy sellaisenaan, ja Barrios lisätään yhtenä erillisenä tilauksena (yhteensä 56). Säilytän alkuperäisen tilausliitteen muuttumattomana, jotta samaa kuvaa ei lasketa tai käynnistetä kahdesti.

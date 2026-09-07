@@ -1,0 +1,229 @@
+{
+  "createdAt": "2026-09-07T03:40:42.330166+00:00",
+  "message": "Five user-approved encounters and two root-reviewed lens icon candidates now publicly verified. Fable integrates and confirms separately. No grandfather handoff included.",
+  "items": [
+    {
+      "id": "praha-tomas-round2-r20260905-v1",
+      "kind": "user-approved-encounter",
+      "caption": "Pitkä Tomáš pysähtyy kultakehys käsissään. Ikkunasta siivilöityvä aurinko osuu hänen valkoisiin hiuksiinsa ja uurteiseen otsaansa, kun matkaajan kysymys saa hänet kumartumaan lähemmäs.",
+      "city": "Praha",
+      "country": "Tšekki",
+      "character": "Tomáš — pitkä gallerianhoitaja",
+      "publicUrl": "https://media.matkakirja.app/kohtaamiset/praha-tomas-round2-r20260905-v1.jpg",
+      "targetKey": "kohtaamiset/praha-tomas-round2-r20260905-v1.jpg",
+      "sha256": "963eee6d42cba957ce2a544244106b6febaf4dd6d1c22a81f34a446d7a545b1c",
+      "bytes": 787192,
+      "dimensions": [
+        1536,
+        1536
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T03:35:53.661Z",
+      "generationPrompt": "Use case: photorealistic-natural. Create ONE wholly NEW square 1536 x 1536 contemporary documentary photograph for the Matkakirja game. All pixels newly generated, no local edit. Camera is the arriving traveler who has just asked about a treasure. Principal person's BOTH eyes make direct unmistakable contact INTO THE LENS. Authentic emotionally arresting human reaction. Complete head and all hair within frame with comfortable upper margin, realistic hands and supported objects. Genuine camera photograph with lifelike skin, restrained optical rendering and meaningful dimensional light. No illustration, CGI, artificial bokeh texture, HDR halos, logos, readable text, treasure revealed, watermark, vintage treatment, vignette or border.  Image1 is the requested older FICTIONAL Tomas identity and gallery scene, NOT the unrelated young theater actor. SAME extremely tall lean Czech man age77 with airy white tousled hair, long angular lined face, severe white brows, rolled forest-green plain cotton shirt. Re-create him in a plausible calm old Prague gallery with high timber ceiling, pale upper walls dark charcoal display lower wall, wood floor and framed paintings, not stage or costume room. He leans down slightly toward shorter arriving viewer while carrying one LARGE EMPTY simple worn gilded rectangular picture frame, one hand firmly on lower rail and other hand on far vertical rail, fingers separated and naturally wrapped. Camera chest-up with low perspective subtly communicates his height; his COMPLETE head with generous margin and frame inside except safely allowed tiny far corner if needed. Both eyes drill straight into lens, slightly narrowed beneath deep furrow, lips parted on an incredulous question while one cheek hints at wry amusement. Real SUN through tall window and exterior foliage paints mottled patches on white hair, forehead, green shoulder, veiny forearms and gold frame; rich gallery shadows retain eyes. Gentle highlight rolloff. New entire photograph of this elderly gallery man, no puppet, crown, acting, ruff or makeup.",
+      "sources": [],
+      "userReview": {
+        "imageId": "praha-tomas-round2-r20260905-v1",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-05T21:08:36.751Z"
+      },
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "ateena-dafni-round2-r20260905-v1",
+      "kind": "user-approved-encounter",
+      "caption": "Dafni on lähdössä työmaalta, kun aarrekysymys pysäyttää hänet. Viimeinen valo osuu kasvoihin ja työkalulaatikkoon; tutkiva katse jää odottamaan matkaajan selitystä.",
+      "city": "Ateena",
+      "country": "Kreikka",
+      "character": "Dafni — marmorikonservaattori",
+      "publicUrl": "https://media.matkakirja.app/kohtaamiset/ateena-dafni-round2-r20260905-v1.jpg",
+      "targetKey": "kohtaamiset/ateena-dafni-round2-r20260905-v1.jpg",
+      "sha256": "11eab89f38fff5dbfade23d6516d8afec7b505a4fc1cb83297e4d4560e8ec0b3",
+      "bytes": 718907,
+      "dimensions": [
+        1536,
+        1536
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T03:35:55.349Z",
+      "generationPrompt": "Use case: photorealistic-natural. Create ONE wholly NEW square 1536 x 1536 contemporary documentary photograph for the Matkakirja game. All pixels newly generated, no local edit. Camera is the arriving traveler who has just asked about a treasure. Principal person's BOTH eyes make direct unmistakable contact INTO THE LENS. Authentic emotionally arresting human reaction. Complete head and all hair within frame with comfortable upper margin, realistic hands and supported objects. Genuine camera photograph with lifelike skin, restrained optical rendering and meaningful dimensional light. No illustration, CGI, artificial bokeh texture, HDR halos, logos, readable text, treasure revealed, watermark, vintage treatment, vignette or border. Image1 is the previous FICTIONAL Dafni identity and approved scene direction ONLY. Keep this same Greek woman about34: thick short dark curly bob, strong dark brows, olive skin, burgundy sweater, gray work trousers, clear protective glasses resting on her hair. Image2 is REAL YSMA restoration geometry, columns with old weathered and clean repaired marble areas, authentic scaffolding and grounded stone blocks. Entirely regenerate a very similar over-the-shoulder workday-end encounter as image1, but REMOVE THE OWL: absolutely no birds or animals anywhere. Dafni stands three-quarter turned beside her closed battered wooden tool case supported on a work surface; two hands rest naturally on its handle and lid. She turns her face to us with quiet piercing direct eyes, one eyebrow gently lifted, lips held in a tiny skeptical half-smile. Restrained intense disbelief, not rage. The near side of her face, hand and case are touched by the last warm low sunlight; the marble background and far cheek sit in cool blue dusk with readable eyes. The now empty stone block at right has only natural weathering. 50mm waist-up composition. Keep same visual strength and warm/cool relationship as identity reference, but truly new photographic realization.",
+      "sources": [
+        {
+          "label": "YSMA — Parthenonin restaurointiympäristö",
+          "url": "https://www.ysma.gr/en/monuments/parthenon/ongoing-interventions/"
+        }
+      ],
+      "userReview": {
+        "imageId": "ateena-dafni-round2-r20260905-v1",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-05T20:55:08.675Z"
+      },
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "lontoo-mina-theo-round2-r20260905-v1",
+      "kind": "user-approved-encounter",
+      "caption": "Mina ja Theo pysähtyvät rinnakkain St Helen’s Squarella. Lasijulkisivusta heijastuva aurinko osuu kasvoihin: Mina näyttää tyrmistyneeltä, Theo arvioi matkaajaa pidätellen hymyä.",
+      "city": "Lontoo",
+      "country": "Englanti",
+      "character": "Mina ja Theo — arkkitehtiopiskelijat",
+      "publicUrl": "https://media.matkakirja.app/kohtaamiset/lontoo-mina-theo-round2-r20260905-v1.jpg",
+      "targetKey": "kohtaamiset/lontoo-mina-theo-round2-r20260905-v1.jpg",
+      "sha256": "1fd2e2b1a7898b793a07a98f29eb8ad97a39217c619fbc6acd79ef7aa7654207",
+      "bytes": 939055,
+      "dimensions": [
+        1536,
+        1536
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T03:35:57.068Z",
+      "generationPrompt": "Use case: photorealistic-natural. Create ONE wholly NEW square 1536 x 1536 contemporary documentary photograph for the Matkakirja game. All pixels newly generated, no local edit. Camera is the arriving traveler who has just asked about a treasure. Principal person's BOTH eyes make direct unmistakable contact INTO THE LENS. Authentic emotionally arresting human reaction. Complete head and all hair within frame with comfortable upper margin, realistic hands and supported objects. Genuine camera photograph with lifelike skin, restrained optical rendering and meaningful dimensional light. No illustration, CGI, artificial bokeh texture, HDR halos, logos, readable text, treasure revealed, watermark, vintage treatment, vignette or border.  Single REAL location reference: St Helen's Square public plaza beneath The Leadenhall Building, modern enormous white diagonals under high glass facade, coherent adjacent steel service-tower architecture and public planting from reference. Do not turn into Victorian covered market. Two wholly NEW fictional London architecture students have JUST stopped SIDE BY SIDE looking at traveler: Mina24 warm-brown skin, very long black braid over shoulder, sharp long nose, dark forest-green leather jacket and off-white tee, left of frame; Theo26 pale freckled skin, narrow face, short ginger hair and fine ginger mustache, charcoal open coat and indigo tee, right. Both same distance to camera. Mina's TWO eyes stare DIRECT into lens, both eyebrows high, lips half-open frozen between disbelief and a laugh. Theo's TWO eyes DIRECT into lens with one eyebrow lowered and a tiny corner-of-mouth smile, quizzically near-stern. Mina holds a single rolled paper drawing DOWN against her thigh with one hand, other relaxed open near waist. Theo has both hands in coat pockets, slightly leans back. No pointing or raised objects. Camera 45mm medium waist-up street photo, complete heads and all hair, comfortable sky/architecture above. Strong beautiful irregular reflected SUNLIGHT from high glass windows side-lights Mina's face and Theo's shoulder with soft cool fill. Busy unrelated pedestrians pass BEHIND them with slight realistic motion blur; the two stopped faces and foreground remain crisp, no artificial bokeh. Natural youthful city style, dimensional shadows and authentic skin, candid stopped encounter, no sunglasses, logos, readable text. Real plaza is the setting; these two people and their encounter are fictional.",
+      "sources": [
+        {
+          "label": "RSHP — The Leadenhall Building, todellinen aukion arkkitehtuurikuva",
+          "url": "https://rshp.com/projects/office/the-leadenhall-building/"
+        }
+      ],
+      "userReview": {
+        "imageId": "lontoo-mina-theo-round2-r20260905-v1",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-05T21:02:45.835Z"
+      },
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "varsova-zofia-round2-r20260905-v1",
+      "kind": "user-approved-encounter",
+      "caption": "Zofia vetää raskaan tilikirjan tiskille ja pysähtyy kuullessaan matkaajan kysymyksen. Hänen terävä katseensa jää epäuskon ja pidätetyn huvittuneisuuden välille.",
+      "city": "Varsova",
+      "country": "Puola",
+      "character": "Zofia — antikvaari",
+      "publicUrl": "https://media.matkakirja.app/kohtaamiset/varsova-zofia-round2-r20260905-v1.jpg",
+      "targetKey": "kohtaamiset/varsova-zofia-round2-r20260905-v1.jpg",
+      "sha256": "b79ca6b0700477780665f710bd1094de7628705ac5997d78f55b0dabb1cda7f0",
+      "bytes": 852856,
+      "dimensions": [
+        1536,
+        1536
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T03:35:59.174Z",
+      "generationPrompt": "Use case: photorealistic-natural. Create ONE wholly NEW square 1536 x 1536 contemporary documentary photograph for the Matkakirja game. All pixels newly generated, no local edit. Camera is the arriving traveler who has just asked about a treasure. Principal person's BOTH eyes make direct unmistakable contact INTO THE LENS. Authentic emotionally arresting human reaction. Complete head and all hair within frame with comfortable upper margin, realistic hands and supported objects. Genuine camera photograph with lifelike skin, restrained optical rendering and meaningful dimensional light. No illustration, CGI, artificial bokeh texture, HDR halos, logos, readable text, treasure revealed, watermark, vintage treatment, vignette or border.  Image1 same fictional Zofia67, pale long angular face, dark hair with silver loosely tied high bun, burgundy knitted vest over cream linen blouse. Entirely new intimate photograph in ordinary old Warsaw antiquarian bookshop, plausible fictional interior, not a claimed exact shop. Zofia sits behind a scarred wood sales desk with one oversized dark-green archival ledger lying flat, one palm on cover and the other just lifting a corner of brown wrapping paper. She has frozen mid-action and leans toward us, deep creased brows close together, dark knowing eyes directly into lens, one lip corner reluctantly pulling into an incredulous smile; unforgettable intense appraisal. Ginger cat lies across a small pile of wrapping paper at the far desk corner, watching her raised paper edge; not buried or broken limbs. Camera slightly above desk 50mm, face large in upper center-left, whole head/hair and both hands clearly inside. Quiet receding tall wood bookcases occupy right background; cool sky from narrow left window, a single low stripe of late sun crosses cheek, ivory cuff and worn book edges. Deep soft real shadows, exceptionally beautiful restrained natural light. No readable titles, letters, hidden clue inscription or treasure. Distinct from previous standing shelf portrait.",
+      "sources": [],
+      "userReview": {
+        "imageId": "varsova-zofia-round2-r20260905-v1",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-05T21:10:33.330Z"
+      },
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "lissabon-ines-round2-r20260905-v1",
+      "kind": "user-approved-encounter",
+      "caption": "Inês nostaa kuivaustelineestä sinivalkoista laattaa. Ikkunasta siivilöityvä aurinko osuu hänen kasvoihinsa, kun hän katsoo matkaajaa lämpimän epäuskoisesti.",
+      "city": "Lissabon",
+      "country": "Portugali",
+      "character": "Inês — laattamestari",
+      "publicUrl": "https://media.matkakirja.app/kohtaamiset/lissabon-ines-round2-r20260905-v1.jpg",
+      "targetKey": "kohtaamiset/lissabon-ines-round2-r20260905-v1.jpg",
+      "sha256": "1b007d24e020b00ec1161c272666398d7bc96e85acc4f81a206bb233ebee1af8",
+      "bytes": 746721,
+      "dimensions": [
+        1536,
+        1536
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T03:36:01.076Z",
+      "generationPrompt": "Use case: photorealistic-natural. Create ONE wholly NEW square 1536 x 1536 contemporary documentary photograph for the Matkakirja game. All pixels newly generated, no local edit. Camera is the arriving traveler who has just asked about a treasure. Principal person's BOTH eyes make direct unmistakable contact INTO THE LENS. Authentic emotionally arresting human reaction. Complete head and all hair within frame with comfortable upper margin, realistic hands and supported objects. Genuine camera photograph with lifelike skin, restrained optical rendering and meaningful dimensional light. No illustration, CGI, artificial bokeh texture, HDR halos, logos, readable text, treasure revealed, watermark, vintage treatment, vignette or border.  Image1 is the ORIGINAL USER-APPROVED FICTIONAL Ines identity and scene, not a real photograph. Recreate this same young brown-skinned Portuguese woman, short moss-green tight curls, pale bleached eyebrows, tiny hoop earrings, dark charcoal dusty work coveralls and colorful red mustard geometric neck scarf. She is KNEELING beside a low open metal drying rack, carefully sliding one blue-white painted ceramic tile with both hands onto a broad supported shelf; one hand under its edge and the other guides a corner. Keep intimate low camera as original, her upper body leans gently around rack support to make direct eye contact. Warm amazed appraisal, one eyebrow cocked and small involuntary smile, not theatrical shock. CHANGE THE LIGHT: mottled SUN filters through a real side-window trellis and leaves outside, irregular soft-edged sun patches on one cheek, curls, scarf and forearm; alternating warm highlights and clear shaded eyes, strong patterns on matte dusty floor and glaze. The tiled workshop recedes simply behind, no sunset fog. Whole hair within frame; close enough for her singular face, both hands and whole tile safely inside. No coral shirt, no rag, no different person. Entirely new generation retaining approved composition's strengths.",
+      "sources": [],
+      "userReview": {
+        "imageId": "lissabon-ines-round2-r20260905-v1",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-05T21:02:41.435Z"
+      },
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "varuste-keksinnot",
+      "kind": "root-approved-lens-candidate-for-fable",
+      "caption": "Keksinnöt",
+      "city": null,
+      "country": null,
+      "character": null,
+      "publicUrl": "https://media.matkakirja.app/varusteet/linssit-20260906-v1/varuste-keksinnot.jpg",
+      "targetKey": "varusteet/linssit-20260906-v1/varuste-keksinnot.jpg",
+      "sha256": "85fa3715bc32ecd538f2f1ac4ab7e1619f5fd1e85e979a09959882a9492a729a",
+      "bytes": 129373,
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T03:38:58.917Z",
+      "generationPrompt": "Use case: illustration-story\nAsset type: Matkakirja equipment icon, 512x512 square JPG delivery, displayed in a 64 px circular crop\nPrimary request: Keksinnöt lens icon. A single unmistakable late-19th-century brass gear mechanism with a small polished brass flywheel and compact miniature steam-engine cylinder, resting on an old cream technical drawing sheet. Convey curiosity and the thrill of discovery through a glint of warm light and elegant mechanical detail.\nStyle/medium: refined warm sepia watercolor with fine ink contours, matching the supplied Matkakirja equipment icons: pale parchment background, honey-gold brass, subtle brown shadows, crisp and camera-sharp enough at small size\nComposition/framing: strong centered compact motif, all important forms within the central 70% safe circle, generous quiet neutral parchment edges, readable silhouette at 64 px; no circular border and no magnifying glass\nLighting/mood: coherent soft upper-left warm daylight, restrained nostalgic mood\nConstraints: square image, no text, no letters, no numerals, no logos, no watermark, no people, no extra clutter; clear subject at thumbnail size\n",
+      "sources": [],
+      "userReview": null,
+      "gameIntegrationVerified": false
+    },
+    {
+      "id": "varuste-ihmisen-matka",
+      "kind": "root-approved-lens-candidate-for-fable",
+      "caption": "Ihmisen matka",
+      "city": null,
+      "country": null,
+      "character": null,
+      "publicUrl": "https://media.matkakirja.app/varusteet/linssit-20260906-v1/varuste-ihmisen-matka.jpg",
+      "targetKey": "varusteet/linssit-20260906-v1/varuste-ihmisen-matka.jpg",
+      "sha256": "aaa72e33ca53f5f5b8d471c62e5eb91c377e46e10255246970c9c589e1f78300",
+      "bytes": 126064,
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "JPEG",
+      "iccProfile": "sRGB",
+      "publicGetShaVerified": true,
+      "verifiedAt": "2026-09-07T03:39:00.758Z",
+      "generationPrompt": "Use case: illustration-story\nAsset type: Matkakirja equipment icon, 512x512 square JPG delivery, displayed in a 64 px circular crop\nPrimary request: Ihmisen matka lens icon. One deeply impressed bare human footprint in warm ochre clay, centered over a very faint old world-map motif that suggests movement outward from Africa. The footprint must have a clear heel, arch and five natural toes, an evocative trace of a long human journey.\nStyle/medium: refined warm sepia watercolor with fine ink contours, matching the supplied Matkakirja equipment icons: pale parchment, ochre and soft umber, crisp and camera-sharp enough at small size\nComposition/framing: one strong centered footprint, vertical and fully visible, contained inside the central 65% safe circle with generous quiet neutral parchment edges; map lines subtle and secondary; readable silhouette at 64 px; no circular border and no magnifying glass\nLighting/mood: soft raking upper-left light revealing the impression, humane, ancient and quietly adventurous\nConstraints: square image, no text, no letters, no labels, no route arrows, no logos, no watermark, no people or body parts beyond the single footprint\n",
+      "sources": [],
+      "userReview": null,
+      "gameIntegrationVerified": false
+    }
+  ]
+}
