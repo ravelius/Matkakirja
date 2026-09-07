@@ -13003,8 +13003,9 @@ export const KAUPUNKIKARTAT = {
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
        * Wellingtonissa ja Christchurchissa. Koordinaatit
        * en-Wikipedian coordinates-rajapinnasta 7.9.2026. Pienin väli
-       * on 390 metriä (Viaduto do Chá – oikeustieteellinen
-       * tiedekunta), toiseksi pienin 405 metriä.
+       * on 393 metriä (Viaduto do Chá – oikeustieteellinen
+       * tiedekunta), toiseksi pienin 400 metriä (mustien
+       * veljeskunnan kirkko – Viaduto do Chá).
        */
       { nimi: 'Sala São Paulo', lat: -23.53416667, lon: -46.63972222 },
       { nimi: 'Pinacoteca', lat: -23.5344, lon: -46.6339 },
@@ -13062,8 +13063,9 @@ export const KAUPUNKIKARTAT = {
       /*
        * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
        * Koordinaatit en-Wikipedian coordinates-rajapinnasta
-       * 7.9.2026. Pienin väli on 295 metriä (Kauppakamarin talo –
-       * Jorge Amadon talo), toiseksi pienin 299 metriä.
+       * 7.9.2026. Pienin väli on 294 metriä (Kauppakamarin talo –
+       * Jorge Amadon talo), toiseksi pienin 301 metriä (Jorge Amadon
+       * talo – São Miguelin kirkko).
        */
       { nimi: 'Kauppakamarin talo', lat: -12.97027778, lon: -38.51083333 },
       { nimi: 'Jorge Amadon talo', lat: -12.97150722, lon: -38.50842788 },

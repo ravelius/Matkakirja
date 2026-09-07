@@ -51015,6 +51015,15 @@ export const NAHTAVYYSJUTUT = {
    * rata on lehden noston aihe. Pinacotecan jutussa naapurin
    * Estação da Luzia ei käsitellä, koska lehden rata-noston
    * kuvateksti kertoo jo aseman vaiheet.
+   *
+   * KUVAT: kaikki kahdeksan tarkistettu Commonsin rajapinnasta
+   * 7.9.2026 (lisenssi ja tekijä extmetadatasta), katsottu silmin 960
+   * px esikatseluna ja kaikki vähintään 3 000 px leveitä. Yksikään
+   * tiedosto ei ole sama kuin kaupunkilehden saopaulo-lohkossa
+   * (kulttuuri-kategoriat.js) eikä southamerica-valokuvat.js:ssä.
+   * Kaksi ehdokasta hylättiin: Rosário-kirkon terävin kuva kantoi
+   * kuvaajan vesileimaa, ja Pinacotecan laajin julkisivukuva oli
+   * täynnä tunnistettavia kasvoja museon kahvilassa.
    */
   saopaulo: {
     'Sala São Paulo': {
@@ -51053,6 +51062,14 @@ export const NAHTAVYYSJUTUT = {
           + 'käytävät on suljettu paksulla lasilla. Vanha veturi '
           + 'korvattiin työmaalla 150 tonnin nosturilla, joka oli '
           + 'ainoa keino nostaa kattopalkit paikoilleen.',
+      kuvat: [
+        {
+          tiedosto: 'Sala São Paulo 2023.jpg',
+          selite: 'Aseman suuri halli konserttisalina: puinen säätökatto '
+            + 'riippuu vaijereiden varassa vanhojen pylväiden yläpuolella.',
+          lahde: 'Boaventuravinicius, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Pinacoteca: {
@@ -51089,6 +51106,14 @@ export const NAHTAVYYSJUTUT = {
           + 'vuodesta 2023 Pina Contemporânea Luzin puistossa. '
           + 'Päärakennus suojeltiin 1982 osana Luzin '
           + 'vuosisadanvaihteen rakennusryhmää.',
+      kuvat: [
+        {
+          tiedosto: 'Pinacoteca do Estado de São Paulo (3400107451).jpg',
+          selite: 'Julkisivun paljaat tiilet kertovat, ettei taloa koskaan '
+            + 'saatu valmiiksi; nimikirjaimet lisättiin vasta museoaikana.',
+          lahde: 'Rodrigo Soldon, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Mustien veljeskunnan kirkko': {
@@ -51126,6 +51151,14 @@ export const NAHTAVYYSJUTUT = {
           + 'tervehdittiin 21 laukauksella. Kirkon vieressä seisoo '
           + 'Júlio Guerran pronssiveistos Mãe Preta vuodelta 1955, ja '
           + 'sen graniittijalustalle jätetään yhä kukkia ja kynttilöitä.',
+      kuvat: [
+        {
+          tiedosto: 'Igreja Nossa Senhora do Rosário dos Homens Pretos 01.jpg',
+          selite: 'Keltainen kirkko Largo do Paiçandulla; se rakennettiin '
+            + 'tähän 1904–1906, kun vanha kirkko purettiin aukion tieltä.',
+          lahde: 'Phsartori, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'São Benton luostari': {
@@ -51164,6 +51197,14 @@ export const NAHTAVYYSJUTUT = {
           + 'belgialainen '
           + 'Adrien van Emelen. Luostarissa asuu noin 45 munkkia, '
           + 'jotka laulavat päivittäiset rukoushetket gregoriaanisesti.',
+      kuvat: [
+        {
+          tiedosto: 'São Bento Monastery, São Paulo downtown, Brazil.jpg',
+          selite: 'Pääalttari ja kuori: Adalbert Gresnichtin Beuron-koulun '
+            + 'koristelu peittää holvit kattoon asti.',
+          lahde: 'Wilfredor, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Edifício Copan': {
@@ -51198,6 +51239,14 @@ export const NAHTAVYYSJUTUT = {
           + 'sinimustan verhon peitossa, jotta julkisivun irtoavat '
           + 'mosaiikkilaatat eivät putoaisi jalankulkijoiden päälle. '
           + 'Laattoja on 72 miljoonaa.',
+      kuvat: [
+        {
+          tiedosto: 'Edifício Copan (3407218439).jpg',
+          selite: 'Niemeyerin aaltoileva julkisivu alhaalta katsottuna: '
+            + 'vaakasuorat aurinkosuojat kiertävät koko talon.',
+          lahde: 'Rodrigo Soldon, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Viaduto do Chá': {
@@ -51236,6 +51285,14 @@ export const NAHTAVYYSJUTUT = {
           + 'tehtiin tie ja tunneli. Nykyään silta on kaupungintalona '
           + 'toimivan Matarazzo-rakennuksen vieressä, ja se on '
           + 'televisiohaastattelujen vakiotausta.',
+      kuvat: [
+        {
+          tiedosto: 'Viaduto do Chá, São Paulo, Brazil.jpg',
+          selite: 'Vuoden 1938 betonikaari Anhangabaún laakson yli; '
+            + 'vasemmalla kaupungintalona toimiva Matarazzo-rakennus.',
+          lahde: 'Wilfredor, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Solar da Marquesa de Santos': {
@@ -51268,6 +51325,14 @@ export const NAHTAVYYSJUTUT = {
           + '1700-luvun savi- ja risuseinät jätettiin näkyviin sen '
           + 'sijaan, että talo olisi palautettu yhteen ainoaan '
           + 'aikakauteen. Nykyään siinä toimii kaupunginmuseo.',
+      kuvat: [
+        {
+          tiedosto: 'Fachada do Solar da Marquesa de Santos 07.jpg',
+          selite: 'Kartanon katujulkisivu valurautaparvekkeineen sai '
+            + 'uusklassisen ilmeensä piispanpalatsin aikana.',
+          lahde: 'DéboraGLima, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Oikeustieteellinen tiedekunta': {
@@ -51299,6 +51364,14 @@ export const NAHTAVYYSJUTUT = {
           + 'yliopistoon. Se ottaa vuosittain 460 uutta opiskelijaa '
           + '10 000–15 000 hakijasta, ja sen kasvatteja on ollut '
           + 'kolmetoista Brasilian presidenttiä.',
+      kuvat: [
+        {
+          tiedosto: 'Faculdade de Direito da Universidade de São Paulo 01.jpg',
+          selite: 'Vuoden 1934 julkisivu Largo de São Franciscolla; edessä '
+            + 'seisoo runoilija Álvares de Azevedon patsas.',
+          lahde: 'Sturm, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },
@@ -51325,6 +51398,19 @@ export const NAHTAVYYSJUTUT = {
    * Unhãon jutussa Kaikkien pyhien lahdesta kerrotaan vain se, että
    * kartano seisoo sen rannassa — lahti on lehden luontonoston aihe,
    * ja sen kuvatekstissä näkyy tämä sama kartano.
+   *
+   * KUVAT: kuusi kahdeksasta tarkistettu Commonsin rajapinnasta
+   * 7.9.2026 (lisenssi ja tekijä extmetadatasta) ja katsottu silmin
+   * 960 px esikatseluna; kaikki ovat vähintään 3 000 px leveitä
+   * eivätkä ne ole samoja tiedostoja kuin kaupunkilehden
+   * salvador-lohkossa tai southamerica-valokuvat.js:ssä.
+   *
+   * KAKSI JUTTUA JÄI TAHALLAAN KUVATTA. Jorge Amadon talosta
+   * Commonsissa on vain kuvia TALOSTA ULOS — Pelourinhon aukiolle,
+   * joka on lehden oma nosto — tai katunäkymiä, joissa etualalla on
+   * tunnistettavat kasvot. Anglikaaninen kappeli purettiin 1975,
+   * eikä sen paikasta ole kuvaa; molemmat on tilattu kuvaputkelta
+   * miniatyyreinä, ja kuvaton juttu on parempi kuin väärä kuva.
    */
   salvador: {
     'Kauppakamarin talo': {
@@ -51361,6 +51447,14 @@ export const NAHTAVYYSJUTUT = {
           + 'valaistu suuri sali, kirjasto ja taidekokoelma, johon '
           + 'kuuluu Candido Portinarin maalaus. Bahian '
           + 'kulttuuriperintölaitos suojeli talon 1938.',
+      kuvat: [
+        {
+          tiedosto: 'AssociaçaoComercialBahia.jpg',
+          selite: 'Riachuelon aukion puoleinen julkisivu: neljä pylvästä, '
+            + 'marmoriportaat ja kaakeloitu porrasholvi.',
+          lahde: 'mathplourde, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Jorge Amadon talo': {
@@ -51430,6 +51524,14 @@ export const NAHTAVYYSJUTUT = {
           + 'naapuria lunastettaisiin ja purettaisiin hotellitornin '
           + 'tieltä; sovinnossa julkisivu olisi jäänyt pystyyn, ja '
           + 'hanke jäi oikeudenkäyntien takia auki.',
+      kuvat: [
+        {
+          tiedosto: 'Sobrado Azulejado Salvador 2018-0229.jpg',
+          selite: 'Sinivalkoinen kaakelijulkisivu ylhäältä nähtynä; oikealla '
+            + 'naapuritalo, josta on jäljellä vain seinät.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'São Miguelin kirkko': {
@@ -51464,6 +51566,14 @@ export const NAHTAVYYSJUTUT = {
           + 'pyhimyskuva vaihdettiin 1854 ristiinnaulitun Kristuksen '
           + 'kuvaan. IPHAN suojeli kirkon 1938. Se on suljettu '
           + 'yleisöltä.',
+      kuvat: [
+        {
+          tiedosto: 'Igreja de São Miguel Salvador 2019-1018.jpg',
+          selite: 'Kirkkosali kuoriin päin: jakarandakaide, 1854 vaihdettu '
+            + 'ristiinnaulitun kuva ja perustajan hautakivi lattiassa.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Mourarian Santo Antônio': {
@@ -51496,6 +51606,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Toinen kerros rakennettiin 1909–1926. Kirkon neljästä '
           + 'kellosta vanhin on vuodelta 1757. IPHAN suojeli kirkon '
           + '17. kesäkuuta 1938.',
+      kuvat: [
+        {
+          tiedosto: 'Igreja De Santo Antônio Da Mouraria Salvador 2019-1408.jpg',
+          selite: 'Sotilaiden kappelin julkisivu aaltopäätyineen; vasemmalla '
+            + 'kellotorni, keskellä oculus ja pyhimyksen niche.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Solar do Unhão': {
@@ -51528,6 +51646,14 @@ export const NAHTAVYYSJUTUT = {
           + 'teatteri, kirjasto, konservointitilat ja työpaja, jossa '
           + 'opetetaan maalausta, grafiikkaa, keramiikkaa, '
           + 'piirustusta, käsintehtyä paperia ja veistoa.',
+      kuvat: [
+        {
+          tiedosto: 'Museu de Arte Moderna da Bahia Solar do Unhão Escada Helicoidal 2021-8567 01.jpg',
+          selite: 'Lina Bo Bardin portaikko lähikuvassa: askelmat on liitetty '
+            + 'vanhan myllyn puuhun ilman nauloja tai betonia.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Vila Velhan teatteri': {
@@ -51560,6 +51686,14 @@ export const NAHTAVYYSJUTUT = {
           + 'hengen kabareenäyttämö ja kaksi harjoitussalia. Talossa '
           + 'ovat asuneet muun muassa afrobrasilialainen Bando de '
           + 'Teatro Olodum, tanssiryhmä Viladança ja kuoro Vilavox.',
+      kuvat: [
+        {
+          tiedosto: 'Teatro Vila Velha Salvador Bahia 2018-0131.jpg',
+          selite: 'Modernistinen betonitalo Passeio Públicon puiden keskellä, '
+            + 'kaukana aukion uusklassisista julkisivuista.',
+          lahde: 'Paul R. Burley, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Anglikaanisen kappelin paikka': {
