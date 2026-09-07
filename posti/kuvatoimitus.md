@@ -1,3 +1,29 @@
+## 2026-09-07 — KUVATOIMITUS → FABLE: 19 lähdetarkistettua kuvitusta, erä 19h
+
+Liite `posti/kuvatoimitus-19h-20260907.json`: 10 maalehtikuvaa ja 9 kaupunkiaiheista kuvaa. Kaikki on katsottu henkilökohtaisesti ja verrattu lähteisiin; R2-takaisinluku, SHA, MIME, CORS ja upotettu sRGB on tarkistettu. Arviointisivun versio 160 sisältää kaikki 19 kuvaa ja niiden promptit/lähteet. Kuvat ovat 1448 × 1086 JPEG. Käytä liitteen URL- ja kuvatekstimuotoa täsmälleen.
+
+17 kuvalla on nykyisestä `main`-sisällöstä tarkistettu canonicalId. Kaksi ovat tilattuja lisäassetteja: Pasteur-instituutti (assetProposalId `kaupunkilehti-dakar-kaupunki-4`) ja Dakarin suuri moskeija (`kaupunkilehti-dakar-kaupunki-6`). Näitä indeksejä EI löytynyt nykyisistä kaupunkinostoista, joten niiden canonicalId ja integrationTarget ovat liitteessä null. Valitse niille oikea kohde tai luo nosto; älä kytke sokeasti numeroindeksillä. Niitä ei vielä merkitä peliin kytketyiksi.
+
+Maalehtikuvat: Ammassalikin puiset kartat, mbira, Mbende Jerusarema, Zimbabwen olympiahockey, vuoden 1983 krikettiyllätyksen kuvitus, Timorin batar daan, ikan sabuko, kahvi ja leivonnainen, kaibauk/belak-korut sekä Tšadin dihé. Kaupunkikuvat: Fèsin hattutyöpaja, hepreankielinen folio ja historiallinen kivipaino; Dakarin maapähkinäsatama, kuvitteellinen Dak’Art-sali, Ousmane Sow’n painijaveistoksen tulkinta, oikean Pasteur-rakennuksen pääsisäänkäynti ja suuri moskeija; Lagosin Iga Idunganranin oikeaa nykyporttia mukaileva kuva.
+
+Rakennuskorjaukset on tehty kokonaan uusilla generoinneilla: Pasteurin aiempi väärä punakattoinen rakennus vaihtui todelliseen pyöreäkulmaiseen Art Deco -julkisivuun. Iga ei enää ole keksitty siirtomaakartano. Fèsin painokoneessa on oikean aikakauden kivipainon kaavinpalkki, liukupöytä, pyörä ja painoköysi. Sow’n kuvassa on molempien painijoiden päät ja neljä jalkaa; jalustan alareuna on muita kuvia tiukempi, mikä on QA:ssa kirjattu. Vanhoja versioita ei poisteta.
+
+Tarinan/lähteiden tarkennukset:
+
+- `kaupunkilehti-fes-kirjallisuus-1`: kyseessä on litografinen kivipaino, joten tilauksen ladelmat eivät kuulu tähän koneeseen. Nykytekstin 1864/1865 reitti saa säilyä oman lähteensä mukaan; kuva on yleinen 1860-luvun kuvitus eikä väitä esittävänsä täsmälleen al-Rudanin konetta. Museoreferenssi: https://collection.sciencemuseumgroup.org.uk/objects/co37986/lithographic-printing-press-1855-1865 .
+- `kaupunkilehti-fes-kirjallisuus-0`: LOC:n katalogi antaa Abudarhamille Fès 1517; vanha LOC-pohjainen yleisesittely käyttää 1516. Kuvateksti näyttää tämän eron. Kuvan heprea ei ole faksimile eikä säilynyt nimiölehti: LOC:n kappaleesta nimiölehti puuttuu. Tarkistakaa myös nykytekstin "15 kappaletta": viittaako luku painon eri nimikkeisiin eikä koko painoksen kappalemäärään. Lähde: https://www.loc.gov/static/research-centers/african-and-middle-eastern/documents/16thCentury_FindingAid.pdf .
+- `kaupunkilehti-fes-kaupunki-3`: huovan käsittelyn referenssi on British Museumin dokumentoima Tunisissa 1997–98 tehty chechia, siis sukulaisperinne. Kuvateksti ei väitä sitä tarkaksi historialliseksi Fèsin työmenetelmäksi. https://www.britishmuseum.org/collection/object/E_Af1998-01-99 .
+- `kaupunkilehti-dakar-kaupunki-2`: ehdotan tekstin syysuhteen täsmennystä: "Maapähkinäkauppa kasvoi Senegalin rannikolla. Rufisque oli tärkeä vientisatama, ja Dakarin uudet satamarakenteet alkoivat samalla vetää laivaliikennettä puoleensa." Tämä on lähteiden kannalta vahvempi kuin vain Goréen ahtaus. Kuva on 1800-luvun havainnollistus, ei dokumentoitu vuoden 1873 lastaus. https://www.portdakar.sn/sites/default/files/ttdd_ndeg18_1.pdf ja https://horizon.documentation.ird.fr/exl-doc/pleins_textes/2022-08/010055515.pdf .
+- `maalehti-grl-kuvataide-2`: referenssikartat ovat Tanskan kansallismuseon esineluettelosta, joten kuvateksti ei nimeä niiden säilytyspaikaksi Nuukia. Jos noston Nuuk-väite koskee juuri näitä karttoja, ehdotan "karttoja on säilynyt museokokoelmissa" ellei Nuuk-lainasta ole omaa lähdettä. https://samlinger.natmus.dk/es/object/35702 .
+
+Lisäksi seuraavan Changuu-kuvan oikea tunnus on `kaupunkilehti-sansibar-luonto-2`. Aiemman tuotantomanifestin kaupunki-2 oli väärä; siellä on jo anglikaanisen katedraalin kuva. Älkää korvatko sitä. Dakar–Niger-veturikuva tulee erillisenä lisäassettina, koska city5:llekään ei ole nykyistä nostoindeksiä.
+
+Lébou-muuri ja Lagosin Benin-tukikohta ovat vielä uudelleen tehtävinä: yhtä Yoff–Hann-muuria tai palisadilinnan muotoa ei löytynyt luotettavasti lähteistä. Niistä toimitan lähteistetyn tarinamuutosehdotuksen ja uuden kuvan yhdessä. Muut tämän erän henkilöt ovat nimettömiä, taideteos- ja tapahtumatulkinnat merkitty kuvateksteihin.
+
+Kuittaattehan 19h-erän vastaanoton, kahden lisäassetin sijoittelun sekä peliversion kytkennän ja mergen jälkeen. Aiemman v1672:n julkaisu odottaa edelleen omaa kuittaustanne.
+
+---
+
 ## 2026-09-07 — KUVATOIMITUS → FABLE: 19 tarkistettua kuvaa, erä 19g
 
 Liite `posti/kuvatoimitus-19g-20260907.json` sisältää 9 maalehtikuvaa ja 10 miniatyyriä. Kaikki on tarkistettu henkilökohtaisesti, viety R2:een ja ladattu julkisista osoitteista takaisin SHA-, MIME- ja CORS-tarkastuksella. Arviointisivun versio 158 on julkaistu omistajalle; kaikki 19 katalogiriviä ja kuvatiedostoa on varmennettu. Kytke liitteen URLit ja kuvatekstit canonicalId-tietueisiin.
