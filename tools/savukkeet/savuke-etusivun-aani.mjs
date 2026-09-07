@@ -35,6 +35,11 @@
  *     vain etusivua).
  *  9. Taustaäänten ollessa pois avauksen kutsut eivät tee eivätkä
  *     riko mitään (äänivalikon asetuksia kunnioitetaan).
+ * 10. MUSIIKKI POIS → ÄÄNIMAISEMA SOI SILTI. Omistajan toinen vika
+ *     samana iltana (*"striimilukija ei mene päälle, jos taustamusiikki
+ *     on kytketty pois. Ne ovat kaksia irrallista asiaa"*): valikon
+ *     Musiikki-kytkin vaientaa vain raidat, ja äänimaiseman nauha
+ *     etenee yhä. Kytkin takaisin päälle palauttaa raidan.
  *
  *   node tools/savukkeet/savuke-etusivun-aani.mjs
  */
@@ -345,6 +350,68 @@ vaadi('kabiinin nauha etenee', kabiini !== null && kabiini2.nauha > kabiini.nauh
   JSON.stringify({ kabiini, kabiini2 }));
 vaadi('kabiini on kuuluvalla tasolla', kabiini !== null && kabiini2.taso > 0.02,
   JSON.stringify(kabiini2));
+
+// --- MUSIIKKI POIS: ÄÄNIMAISEMA SOI SILTI ------------------------------------
+/*
+ * OMISTAJAN VIKA 7.9.2026 ILLALLA, sanatarkasti: *"striimilukija ei
+ * mene päälle, jos taustamusiikki on kytketty pois. Ne ovat kaksia
+ * irrallista asiaa, joten striimi-ääni pitäisi kuulua, vaikka
+ * taustamusiikki on kytketty pois."* (Raamattu, VIAT v1672.)
+ *
+ * Kytkin käännetään valikon omasta napista (js/main.js kaannaMusiikki),
+ * jotta mitattu polku on se, jota pelaaja painaa. Ehto: musiikki
+ * vaikenee, ÄÄNIMAISEMA JATKAA — nauha etenee ja taso pysyy yli nollan.
+ */
+const maisemaPois = await sivu.evaluate(async () => {
+  const musaKuuluu = () => window.__aanet.some((a) => /musa-/.test(String(a.el.currentSrc || a.el.src || ''))
+    && a.el.paused === false && window.__taso(a.el) > 0.0005);
+  document.querySelector('[data-kytkin="musiikki"]').click();
+  /*
+   * VAIMENEMISTA ODOTETAAN, EI KELLOTETA. Raita häivytetään
+   * rAF-silmukalla (js/ambience-stream.js haivyta), joten kuormitetulla
+   * koneella se vie enemmän seinäkelloa kuin nimellinen häivytys —
+   * kiinteä odotus teki vartiosta arvan. Ehto on se, mitä omistaja
+   * kuulee: musiikki ei enää kuulu.
+   */
+  for (let i = 0; i < 60 && musaKuuluu(); i += 1) {
+    await new Promise((r) => setTimeout(r, 250));
+  }
+  const t = window.__uusinMaisema();
+  const soivaMusa = musaKuuluu();
+  const nauha1 = t?.el?.currentTime ?? null;
+  await new Promise((r) => setTimeout(r, 600));
+  return {
+    muisti: localStorage.getItem('matkakirja-musiikki'),
+    soivaMusa,
+    maisemaSoi: t?.el?.paused === false,
+    taso: window.__taso(t?.el),
+    nauha1,
+    nauha2: t?.el?.currentTime ?? null,
+  };
+});
+vaadi('musiikin kytkin pois jää laitteen muistiin', maisemaPois.muisti === 'off',
+  JSON.stringify(maisemaPois));
+vaadi('MUSIIKKI VAIKENEE omasta kytkimestään (ei kuulu enää)',
+  maisemaPois.soivaMusa === false, JSON.stringify(maisemaPois));
+vaadi('ÄÄNIMAISEMA SOI YHÄ musiikin ollessa pois (nauha etenee, taso > 0)',
+  maisemaPois.maisemaSoi === true && maisemaPois.taso > 0
+    && maisemaPois.nauha2 > maisemaPois.nauha1,
+  JSON.stringify(maisemaPois));
+
+/* Kytkin takaisin päälle: musiikki palaa samaan paikkaan. */
+const musaPalasi = await sivu.evaluate(async () => {
+  document.querySelector('[data-kytkin="musiikki"]').click();
+  for (let i = 0; i < 60; i += 1) {
+    const soi = window.__aanet.some(
+      (a) => /musa-/.test(String(a.el.currentSrc || a.el.src || '')) && a.el.paused === false,
+    );
+    if (soi) return { soi: true, muisti: localStorage.getItem('matkakirja-musiikki') };
+    await new Promise((r) => setTimeout(r, 250));
+  }
+  return { soi: false, muisti: localStorage.getItem('matkakirja-musiikki') };
+});
+vaadi('musiikin kytkin takaisin päälle palauttaa raidan',
+  musaPalasi.soi === true && musaPalasi.muisti === 'on', JSON.stringify(musaPalasi));
 
 // --- ÄÄNIVALIKON ASETUKSIA KUNNIOITETAAN -------------------------------------
 /*

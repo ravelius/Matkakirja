@@ -63,7 +63,8 @@ import { fileURLToPath } from 'node:url';
 import { leikkaaHiljaisuusSuodatin, viimeistelySuodatin } from './generoi-tehosteet.mjs';
 import { julkinenJuuri, tulkitseLoudnorm } from './generoi-siirtymamusiikki.mjs';
 import {
-  hakusuodatin, lisenssiNimi, lueTehostelista, manifestirivi, PULULISTA, valitseParas,
+  hakusuodatin, lisenssiNimi, listanKansiot, lueTehostelista, MAISEMALISTA, manifestirivi,
+  PULULISTA, valitseParas,
 } from './tehostelista.mjs';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -144,20 +145,29 @@ const maxKesto = Number(valitsin('max-kesto', '600'));
  * osionsa kanssa, koska haara alla kutsuu ajoa heti: moduulitason
  * `const` ei ole vielä olemassa, jos se on kutsun alapuolella.
  * Funktiot saavat asua lopussa — ne nostetaan.
+ *
+ * LEVYKANSIOT JOHDETAAN LISTASTA (tools/tehostelista.mjs
+ * listanKansiot): pulun tehosteet saavat entiset polkunsa
+ * media/tehosteet-pulu ja -raaka, äänimaisemat omansa. Kaksi
+ * kovakoodattua vakioparia olisi eriytynyt ensimmäisellä muutoksella.
  */
-/** Ämpärin kansio ja levykansio listan ajolle. */
-const PULU_KOHDEKANSIO = 'media/tehosteet-pulu';
-const PULU_RAAKAKANSIO = 'media/tehosteet-pulu-raaka';
-/** Häivytykset päihin: naksahdukseton alku ja loppu. */
+/** Häivytykset päihin: naksahdukseton alku ja loppu (listan oletus). */
 const PULU_HAIVYTYS_S = 0.02;
 
 /*
  * TEHOSTELISTAN AJO. Oma haaransa, joka poistuu ennen ehdokashakua:
  * lista tuo omat hakusanansa ja omat kestorajansa, eikä yhtäkään
  * yllä olevaa oletusta (20–600 s taustaääni) käytetä sen kanssa.
+ *
+ * KAKSI LISTAA, YKSI KONEISTO: `--pulu` on Livian ääniefektit ja
+ * `--maisemat` Ihmisen matka -linssin äänimaisemat. Erot (kesto, taso,
+ * hiljaisuuden leikkaus, häivytys, poissuljetut tagit) asuvat listassa
+ * eivätkä tässä.
  */
-if (lippu('lista') || lippu('pulu')) {
-  const listapolku = lippu('pulu') ? PULULISTA : (valitsin('lista') ?? PULULISTA);
+if (lippu('lista') || lippu('pulu') || lippu('maisemat')) {
+  let listapolku = valitsin('lista') ?? PULULISTA;
+  if (lippu('pulu')) listapolku = PULULISTA;
+  if (lippu('maisemat')) listapolku = MAISEMALISTA;
   const koodi = await ajaLista({
     listapolku,
     tunnus: valitsin('tunnus'),
@@ -171,6 +181,7 @@ if (lippu('lista') || lippu('pulu')) {
 if (!haku) {
   console.error('käyttö: node tools/hae-freesound.mjs --kori <nimi> | --haku "<sanat>"');
   console.error('        node tools/hae-freesound.mjs --pulu [--tunnus <tunnus>] [--kuiva]');
+  console.error('        node tools/hae-freesound.mjs --maisemat [--tunnus <tunnus>] [--kuiva]');
   console.error(`korit: ${Object.keys(KORIT).join(', ')}`);
   process.exit(1);
 }
@@ -376,13 +387,21 @@ async function lataaEsikatselu(osuma, kohde) {
  * malli kuin generoi-tehosteet.mjs:llä: dynaaminen loudnorm muuttaisi
  * äänen sisäisiä suhteita, ja tömähdyksessä juuri isku ja sen laskeuma
  * ovat se, mikä tekee siitä tömähdyksen.
+ *
+ * HILJAISUUDEN LEIKKAUS ON LISTAN VALINTA. Iskulla se on oikein: mykkä
+ * alku olisi viive napautuksen ja äänen välissä. TAUSTAMAISEMALLA SE ON
+ * VÄÄRIN: tuulen hiljaisin kohta on osa tuulta, ja `silenceremove`
+ * söisi juuri sen kohdan, joka tekee äänestä maiseman eikä efektin.
+ * Samasta syystä maisemalla on pidempi häivytys (listan `haivytysS`):
+ * soitin ristihäivyttää silmukan sauman itse, ja pitkä häivytys jää
+ * ristihäivytyksen sisään kuulumattomiin.
  */
-function normalisoi(lahde, kohde, tyokansio, tavoiteLufs) {
+function normalisoi(lahde, kohde, tyokansio, { tavoiteLufs, haivytys, leikkaa }) {
   const wav = join(tyokansio, 'leikattu.wav');
+  const muoto = 'aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=mono';
   ajaKomento('ffmpeg', [
     '-y', '-v', 'error', '-i', lahde,
-    '-af', `aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=mono,${
-      leikkaaHiljaisuusSuodatin()}`,
+    '-af', leikkaa ? `${muoto},${leikkaaHiljaisuusSuodatin()}` : muoto,
     '-c:a', 'pcm_s16le', wav,
   ]);
   const leikattu = aanenKesto(wav);
@@ -401,7 +420,7 @@ function normalisoi(lahde, kohde, tyokansio, tavoiteLufs) {
   ajaKomento('ffmpeg', [
     '-y', '-v', 'error', '-i', wav,
     '-af', viimeistelySuodatin({
-      kesto: leikattu, korjausDb: korjaus, haivytys: PULU_HAIVYTYS_S,
+      kesto: leikattu, korjausDb: korjaus, haivytys,
     }),
     '-ac', '1', '-ar', '44100', '-c:a', 'libmp3lame', '-b:a', '128k', kohde,
   ]);
@@ -466,6 +485,8 @@ async function ajaLista({
   console.log(`Tehostelista: ${listapolku}`);
   console.log(`Avain löytyi ympäristömuuttujasta ${avainNimi} (arvoa ei tulosteta).`);
   console.log(`Ämpärin kansio: ${lista.amparinKansio}/  taso ${lista.tavoiteLufs} LUFS`);
+  console.log(`Levylle: ${listanKansiot(lista).kohdekansio}/  hiljaisuuden leikkaus: `
+    + `${lista.leikkaaHiljaisuus === false ? 'ei' : 'kyllä'}`);
   console.log(`Tehosteita ajossa: ${tehosteet.length}/${lista.tehosteet.length}`);
   if (kuiva) console.log('KUIVA AJO (--kuiva): vain haku ja valinta, ei latausta eikä vientiä.');
   else if (!vienti) console.log('EI VIENTIÄ (--ei-vientia): tiedostot jäävät levylle.');
@@ -481,9 +502,15 @@ async function ajaLista({
     }
   }
 
-  const tyokansio = mkdtempSync(join(tmpdir(), 'pulutehosteet-'));
-  const kohdekansio = resolve(JUURI, PULU_KOHDEKANSIO);
-  const raakakansio = resolve(JUURI, PULU_RAAKAKANSIO);
+  const kansiot = listanKansiot(lista);
+  const tyokansio = mkdtempSync(join(tmpdir(), 'tehostehaku-'));
+  const kohdekansio = resolve(JUURI, kansiot.kohdekansio);
+  const raakakansio = resolve(JUURI, kansiot.raakakansio);
+  const viimeistely = {
+    tavoiteLufs: lista.tavoiteLufs,
+    haivytys: Number.isFinite(lista.haivytysS) ? lista.haivytysS : PULU_HAIVYTYS_S,
+    leikkaa: lista.leikkaaHiljaisuus !== false,
+  };
   if (!kuiva) {
     vaadiGitignore(kohdekansio);
     vaadiGitignore(raakakansio);
@@ -525,7 +552,7 @@ async function ajaLista({
       const kohde = join(kohdekansio, `${tehoste.tunnus}.mp3`);
       // eslint-disable-next-line no-await-in-loop
       const tavut = await lataaEsikatselu(o, raaka);
-      const tulos = normalisoi(raaka, kohde, tyokansio, lista.tavoiteLufs);
+      const tulos = normalisoi(raaka, kohde, tyokansio, viimeistely);
       console.log(`   lataus ${(tavut / 1024).toFixed(0)} kt → leikkaus `
         + `${tulos.leikattu.toFixed(2)} s, taso ${tulos.mitattu.taso.toFixed(1)} LUFS, `
         + `korjaus ${tulos.korjaus.toFixed(2)} dB → ${tulos.valmis.toFixed(2)} s`);
@@ -605,7 +632,7 @@ async function ajaLista({
     console.log('osuman vaihtaa ajamalla saman ajon uudestaan --tunnus <tunnus>.');
   } else {
     console.log(`Valmista: ${rivit.length}/${tehosteet.length} tehostetta kansiossa `
-      + `${PULU_KOHDEKANSIO}/.`);
+      + `${kansiot.kohdekansio}/.`);
   }
   return virheita ? 1 : 0;
 }

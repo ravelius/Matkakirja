@@ -1,0 +1,207 @@
+{
+  "kuvaus": "Ihmisen matka -linssin aidot, nauhoitetut äänimaisemat jaksoittain. Omistajan tilaus 7.9.2026 ilta: \"olisi todella makeaa, jos saataisiin myös joitain ääniefektejä, siis aitoja, jossain nauhoitettuja, missä voisi olla eri paikkojen äänimaisemaa … jos saadaan joitain pieniä eroja, niin se tekisi todella ison säväytyksen.\" Haetaan valmiina äänitteinä Freesoundista (vain CC0 ja CC BY), ei generoida.",
+  "amparinKansio": "aanet/tehosteet/ihmisen-matka",
+  "manifesti": "manifesti.json",
+  "peliavainEtuliite": "maisema",
+  "tavoiteLufs": -30,
+  "haivytysS": 0.25,
+  "leikkaaHiljaisuus": false,
+  "poisTagit": ["music", "song", "speech", "voice"],
+  "tehosteet": [
+    {
+      "tunnus": "savanni",
+      "peliavain": "maisema.savanni",
+      "kuvaus": "Savanni: heinäsirkat, kaukainen tuuli ja linnut (Afrikka, Jebel Irhoud, siirtymä Itä-Afrikkaan)",
+      "hakusanat": [
+        "savanna grassland crickets wind",
+        "african savanna ambience insects",
+        "dry grassland birds distant wind"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "jokilaakso",
+      "peliavain": "maisema.jokilaakso",
+      "kuvaus": "Joki ja laakso: virtaava vesi ja linnut (Omo Kibish)",
+      "hakusanat": [
+        "river valley ambience birds",
+        "small river flowing water birds",
+        "riverbank ambience morning"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "meren-ranta",
+      "peliavain": "maisema.meren-ranta",
+      "kuvaus": "Meren ranta: aallot ja lokit (Pinnacle Point, Blombos)",
+      "hakusanat": [
+        "ocean waves shore seagulls",
+        "sea shore waves gulls ambience",
+        "calm beach waves ambience"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "vuoristotuuli",
+      "peliavain": "maisema.vuoristotuuli",
+      "kuvaus": "Vuoristo ja tuuli kalliolla (Karmelvuori, Skhul ja Qafzeh)",
+      "hakusanat": [
+        "mountain wind ambience",
+        "wind on rocky hillside",
+        "highland wind gusts ambience"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "ruohikko-jarvi",
+      "peliavain": "maisema.ruohikko-jarvi",
+      "kuvaus": "Kevyt tuuli ruohikossa ja järven liplatus (vihertynyt Arabia, Al Wusta)",
+      "hakusanat": [
+        "lake shore wind reeds",
+        "gentle wind grass lake ambience",
+        "calm lake water lapping birds"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "sademetsa",
+      "peliavain": "maisema.sademetsa",
+      "kuvaus": "Sademetsä: sirkutus, hyönteiset ja sade (Sumatra, Lida Ajer)",
+      "hakusanat": [
+        "rainforest ambience insects birds",
+        "jungle rain ambience",
+        "tropical forest crickets rain"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "rannikkomeri",
+      "peliavain": "maisema.rannikkomeri",
+      "kuvaus": "Meri ja rannikko tuulessa: ensimmäinen merimatka (Madjedbebe, Sahul)",
+      "hakusanat": [
+        "coast waves rocky shore wind",
+        "ocean surf coastline ambience",
+        "sea breeze coast waves"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "luola",
+      "peliavain": "maisema.luola",
+      "kuvaus": "Luola: tippuva vesi ja kaiku (Denisova, Chauvet)",
+      "hakusanat": [
+        "cave ambience water drips echo",
+        "cave drips reverb ambience",
+        "underground cavern drip echo"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "arktinen-tuuli",
+      "peliavain": "maisema.arktinen-tuuli",
+      "kuvaus": "Arktinen tuuli lumen yllä (Jana, napapiirin takana)",
+      "hakusanat": [
+        "arctic wind ambience",
+        "cold wind snow blizzard distant",
+        "icy wind howling ambience"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "tundratuuli",
+      "peliavain": "maisema.tundratuuli",
+      "kuvaus": "Tundran ja aavan ruohomaan tuuli (Beringia, White Sands)",
+      "hakusanat": [
+        "tundra wind grass ambience",
+        "steppe wind ambience",
+        "open plain wind ambience"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "metsasade",
+      "peliavain": "maisema.metsasade",
+      "kuvaus": "Sade metsässä, tippuvat lehdet (Monte Verde)",
+      "hakusanat": [
+        "rain in forest ambience",
+        "rain on leaves forest",
+        "forest rain dripping ambience"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "kylma-tuuli",
+      "peliavain": "maisema.kylma-tuuli",
+      "kuvaus": "Kylmä tuuli paljaassa maastossa (aikahyppy Aasiaan, Bacho Kiro)",
+      "hakusanat": [
+        "cold winter wind ambience",
+        "bleak wind ambience",
+        "wind through bare trees"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "avomeri",
+      "peliavain": "maisema.avomeri",
+      "kuvaus": "Avomeri ja purjeet: kanootit Tyynellämerellä (Lapita)",
+      "hakusanat": [
+        "open ocean waves boat",
+        "sailing boat sea ambience",
+        "boat deck wind sails"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "rantalinnut",
+      "peliavain": "maisema.rantalinnut",
+      "kuvaus": "Ranta ja linnut (Aotearoa, Uusi-Seelanti)",
+      "hakusanat": [
+        "beach birds waves ambience",
+        "shore birds ambience",
+        "coastal birds waves morning"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    },
+    {
+      "tunnus": "hiljainen-tuuli",
+      "peliavain": "maisema.hiljainen-tuuli",
+      "kuvaus": "Hiljainen tuuli: loppusanat, kartta jää pelaajalle",
+      "hakusanat": [
+        "quiet gentle wind ambience",
+        "soft breeze ambience",
+        "calm wind field ambience"
+      ],
+      "kestoMin": 30,
+      "kestoMax": 120,
+      "lisenssit": ["Creative Commons 0", "Attribution"]
+    }
+  ]
+}

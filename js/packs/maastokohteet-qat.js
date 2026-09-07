@@ -279,5 +279,127 @@ export const MAASTOKOHTEET_QAT = [
     lahde: 'en-Wikipedia "Al Thakhira", historiaosio ja siinä lainattu J. G. Lorimerin '
       + '"Gazetteer of the Persian Gulf" (tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * ERÄ M20, 7.9.2026 — KAKSI KOHDETTA LISÄÄ.
+   *
+   * Erän M6 vaje oli kohteita −3 ja perusteena maan pieni koko. Vaje
+   * on nyt mitattu uudelleen merkki kerrallaan, ja kaksi kohdetta
+   * mahtui vielä: pohjoisrannikon Fuwayrit ja sisämaan Al-Shahaniya.
+   * `node tools/tarkista-nimiolimitys.mjs QAT` sanoo yhä
+   * "NIMIÖ NIMIÖN PÄÄLLÄ: 0". Molemmat ovat lehden rajauksen
+   * (x 7505,03…7573,88, y 2297,98…2397,50) sisällä ja yli kymmenen
+   * lautayksikön päässä Dohasta — raja KAUPUNGIN_KOHDALLA_SADE on 7 ja
+   * kaupunkikaton säde 8.
+   *
+   * KOLMAS LÖYTYI MITTAAMALLA. Ilmeiset ehdokkaat kaatuivat: Umm Salal
+   * Mohammed on 5,9 lautayksikön päässä Dohasta eli kaupunkikaton alla,
+   * Simaisma 4,5 yksikköä Al Thakhirasta, Umm Bab 3,3 yksikköä
+   * Dukhanista, Ras Laffan 5,9 yksikköä Al Thakhirasta ja Al Jumail
+   * 1,3 yksikköä skandaalista "Zubarahin loppu". Kolmanneksi kelpasi
+   * niemimaan eteläkärjen Mesaieed (11,1 yksikköä Dohasta), jolla
+   * nimiölimitys pysyy nollassa. Qatarin kohdetavoite (8) on siis nyt
+   * täynnä.
+   *
+   * ELÄINTÄKY ON YHÄ MAHDOTON, ja mittaus on toistettu 7.9.2026:
+   * koko maan monikulmion sisään osuu 2 456 ruudukkopistettä (0,02°),
+   * ja kaukaisinkin niistä on vain 32,3 lautayksikön päässä Dohasta,
+   * kun tests/elaintakyt.test.mjs vaatii 35. Kaupunkisädettä ei kierretä
+   * poikkeuksella — Fidžin, Salomonsaarten ja Vanuatun poikkeus koskee
+   * vain laudan rantaviivaa (MAATESTIN_POIKKEUS), ei tätä vartiota.
+   * Ehdokas odottaa yhä: arabianoryksi, jota Al Reemin biosfäärialue
+   * suojelee.
+   * ============================================================== */
+  {
+    id: 'fuwayrit',
+    nimi: 'Fuwayrit',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mistä Al Thanin suku muutti Fuwayritiin?',
+      'Miltä kylä näytti brittien 1820-luvun mittauksessa?',
+    ],
+    korostukset: ['Affeeraat|Affeeraat'],
+    nappi: 'Kylä, josta hallitsijasuku lähti',
+    // 51.36694 E / 26.02167 N — en-Wikipedia "Fuwayrit".
+    // Lähin pelikaupunki Doha 26,4 lautayksikköä.
+    laudat: {
+      maailmankartta: { x: 7545.6, y: 2324.4 },
+      // Euroopan laudan kaavan ulkopuolella: rivi jätetään pois.
+    },
+    teksti: 'Fuwayrit on rannikkokylä Qatarin pohjoisosassa, noin yhdeksänkymmentä kilometriä '
+      + 'Dohasta pohjoiseen. Arkeologisen aineiston mukaan paikalla on saatettu asua jo '
+      + '1500-luvulla, ja se oli aikanaan yksi niemimaan pohjoisosan tärkeimmistä '
+      + 'kaupungeista. Al Thanin suku muutti perimätiedon mukaan Zubarahista Fuwayritiin '
+      + '1700-luvun lopulla ja piti sitä valtansa istuimena, kunnes siirtyi 1847 Al Biddaan '
+      + 'eli nykyiseen Dohaan; saman perimätiedon mukaan Mohammed bin Thani, jota pidetään '
+      + 'nyky-Qatarin ensimmäisenä hallitsijana, syntyi täällä. 1820-luvulla George Barnes '
+      + 'Brucks teki Persianlahden ensimmäisen brittiläisen mittauksen ja kirjasi kylän '
+      + 'nimellä Affeeraat: pieni kalastuskaupunki, jossa asui noin sataviisikymmentä '
+      + 'Abookaran ja Uttoobeen heimojen miestä Bahrainin alaisuudessa, ja josta sai '
+      + 'karjaa ja vettä. Tuntomerkiksi hän merkitsi kylän lähellä olevat pienet kukkulat.',
+    lahde: 'en-Wikipedia "Fuwayrit", johdanto-osa sekä osiot "History" (18th century) ja '
+      + '"First British survey" (tarkistettu 7.9.2026).',
+  },
+  {
+    id: 'alshahaniya',
+    nimi: 'Al-Shahaniya',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Mistä kasvista paikan nimi tulee?',
+      'Mitä rawda tarkoittaa?',
+    ],
+    korostukset: ['sheeh|sheeh-kasvista'],
+    nappi: 'Kamelikilpailujen ja painanteiden maa',
+    // 51.20472 E / 25.37222 N — en-Wikipedia "Al-Shahaniya".
+    // Lähin pelikaupunki Doha 10,9 lautayksikköä.
+    laudat: {
+      maailmankartta: { x: 7540.2, y: 2347.5 },
+      // Euroopan laudan kaavan ulkopuolella: rivi jätetään pois.
+    },
+    teksti: 'Al-Shahaniya on Keski-Qatarin kunta ja sen keskuskaupunki puolimatkassa Dohan ja '
+      + 'Dukhanin välillä. Nimi tulee sheeh-kasvista, jota arvostettiin tulehdusta '
+      + 'hillitsevänä lääkkeenä; kasvin tieteellinen nimi on Artemisia inculta, ja se on '
+      + 'Lähi-idässä ja Pohjois-Afrikassa tavallinen mutta Qatarissa harvinainen, koska maa '
+      + 'ei sovi sille. Seutu tunnetaan painuneista maanpinnoistaan ja laajoista '
+      + 'tasangoistaan: ministeriön luettelossa on yli neljäkymmentä tasankoa ja 487 rawdaa '
+      + 'eli painannetta, lisäksi 169 jeriä, 71 kukkulaa, kolmetoista sabkhaa ja '
+      + 'viisitoista nientä. Suuri osa kunnasta kuuluu Al Reemin biosfäärialueeseen, ja sen '
+      + 'valtatien varressa on pieniä, usein alle sadan asukkaan kyliä, jotka on rakennettu '
+      + 'harvojen vesipaikkojen ääreen — mikä näkyy niiden nimissä. Qatarin '
+      + 'kamelikilpailuista ja oryksien kasvatuksesta valtaosa tapahtuu juuri täällä.',
+    lahde: 'en-Wikipedia "Al-Shahaniya", johdanto-osa sekä osiot "Etymology" ja "Geography" '
+      + '(tarkistettu 7.9.2026).',
+  },
+  {
+    id: 'mesaieed',
+    nimi: 'Mesaieed',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Miksi tankkeriterminaali rakennettiin juuri tähän?',
+      'Mistä paikan nimi tulee?',
+    ],
+    korostukset: ['sead|sead-kasvista'],
+    nappi: 'Syväsatama tyhjälle rannalle',
+    // 51.55 E / 24.98 N — en-Wikipedia "Mesaieed".
+    // Lähin pelikaupunki Doha 11,1 lautayksikköä eli yli
+    // kaupunkikaton säteen (8).
+    laudat: {
+      maailmankartta: { x: 7551.7, y: 2361.4 },
+      // Euroopan laudan kaavan ulkopuolella: rivi jätetään pois.
+    },
+    teksti: 'Mesaieed, toiselta kirjoitusasultaan Umm Sa’id, on teollisuuskaupunki Qatarin '
+      + 'kaakkoisrannikolla kolmenkymmenenkuuden kilometrin päässä Dohasta etelään. Nimi '
+      + 'tulee paikallisesta sead-kasvista, jota alueella kasvoi ennen runsaasti. Paikka oli '
+      + 'asumaton, kun öljy-yhtiö perusti sinne vuonna 1949 tankkeriterminaalin: valinnan '
+      + 'ratkaisivat läheisyys Dohan ja Al Wakrahin työvoimaan sekä veden syvyys. Yli '
+      + 'kahdenkymmenen vuoden ajan se oli Qatarin ainoa syväsatama, ja sinne johdettiin '
+      + 'Dukhanin öljy laivattavaksi. Antropologi Henry Field kirjasi kenttätyössään 1950, '
+      + 'että paikallinen šeikki Mansur bin Khalil nimesi Al Hibabin alueen '
+      + 'pääheimoryhmäksi ja arvioi sen leirin noin sadaksi teltaksi. Öljy-yhtiö siirsi '
+      + 'pääkonttorinsa Dukhanista Mesaieediin 1956, ja kaupungin kasvua rajasivat '
+      + 'etelässä teollisuusalue, lännessä dyynit ja energiakäytävä ja idässä sabkha eli '
+      + 'suolatasanko — joten se kasvoi pohjoiseen.',
+    lahde: 'en-Wikipedia "Mesaieed", johdanto-osa sekä osiot "Etymology", "History" ja '
+      + '"Administration" (tarkistettu 7.9.2026).',
+  },
 ];
 

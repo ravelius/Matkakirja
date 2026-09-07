@@ -1232,4 +1232,30 @@ export const UUTISLAHTEET = {
     kieli: 'en',
     syote: 'https://www.dailypost.vu/search/?f=rss&t=article&c=news&l=50&s=start_time&sd=desc',
   },
+  /*
+   * Jornal Notícias on Mosambikin suurin päivälehti (Maputo).
+   * Testattu 7.9.2026: syötteessä kymmenen juttua, tuorein edelliseltä
+   * päivältä, ja artikkelisivun ainoasta <article>-lohkosta jäsentyy
+   * 1–2 yli 60 merkin kappaletta. Kappaleita on vähän mutta ne ovat
+   * pitkiä (590–1 660 merkkiä), eli popupiin tulee koko juttu; og:image
+   * löytyy jokaiselta testatulta sivulta.
+   *
+   * OSOITE ON ILMAN WWW-ETULIITETTÄ TARKOITUKSELLA:
+   * www.jornalnoticias.co.mz ei vastaa lainkaan.
+   *
+   * Testattu ja hylätty: Rádio Moçambique (rm.co.mz/feed/, 40 juttua,
+   * mutta artikkelisivulla ei ole <article>-elementtiä eikä
+   * [itemprop="articleBody"]-merkintää, joten popupiin jäisi vain
+   * syötteen kuvaus), O País (opais.co.mz, yhteys ei auennut), Savana
+   * (404), Jornal Domingo, Verdade, Zitamar ja STV (301-uudelleen-
+   * ohjaus, jota worker ei seuraa) sekä MMO (mmo.co.mz, syöte toimii
+   * mutta on elämäntapajulkaisu eikä uutislähde). Carta de Moçambique
+   * (cartamz.com/feed/) läpäisisi syötetestin ja on valmis varalähde,
+   * jos Notícias joskus kaatuu.
+   */
+  MOZ: {
+    nimi: 'Jornal Notícias',
+    kieli: 'pt',
+    syote: 'https://jornalnoticias.co.mz/feed/',
+  },
 };

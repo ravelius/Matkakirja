@@ -162,6 +162,92 @@ export const ESITTELYN_RUNKO = 'esittely';
  */
 export const LOPUN_RUNKO = 'loppu';
 
+/*
+ * ── KERTOMUS YHTENÄ KAARENA ────────────────────────────────────────
+ *
+ * Raamattu IHMISEN MATKA ON YKSI KAARI, EI PYSAKKEJA: Ihmisen matkan
+ * kertoja ei lue pysäkkirivejä vaan JAKSOJA, jotka soivat peräkkäin
+ * ilman pysähdystä (js/linssit/ihmisen-matka-kertomus.js). Jaksolla ei
+ * ole vuotta eikä muotokuvaa, joten runko ladotaan JAKSON TUNNUKSESTA
+ * ja kaaren omasta etuliitteestä (`aikajana.kertomusRunko`):
+ *
+ *   ihmisen-matka-kertomus-avaus.mp3
+ *   ihmisen-matka-kertomus-jebel-irhoud.mp3
+ *
+ * Etuliite on DATASSA eikä tässä: sama funktio palvelee seuraavaa
+ * kertomuslinssiä ilman muutosta. Peli (js/linssit/ihmisen-matka-esitys.js)
+ * ja työkalu (tools/generoi-linssiluennat.mjs --kertomus) lukevat saman
+ * funktion, joten nimi ei voi eriytyä.
+ */
+
+/** Kertomusjaksojen rungon oletusetuliite, jos kaari ei kerro omaansa. */
+export const KERTOMUKSEN_ETULIITE = 'kertomus';
+
+/**
+ * Kertomusjakson luennan tiedostorunko ilman päätettä.
+ *
+ * PUHDAS FUNKTIO — sama pelissä ja työkalussa. Palauttaa null, jos
+ * jaksolla ei ole tunnusta.
+ *
+ * @param {object} jakso IHMISEN_MATKA_KERTOMUS-alkio
+ * @param {string} [etuliite] kaaren `kertomusRunko`
+ * @returns {string|null}
+ */
+export function kertomuksenRunko(jakso, etuliite = KERTOMUKSEN_ETULIITE) {
+  const tunnus = typeof jakso?.id === 'string' ? jakso.id.trim() : '';
+  const alku = String(etuliite ?? '').trim() || KERTOMUKSEN_ETULIITE;
+  return tunnus ? `${alku}-${tunnus}` : null;
+}
+
+/**
+ * KERTOJAN NOPEUS ILMAN ÄÄNITETTÄ. Kun jakson mp3 puuttuu tai sen
+ * kestoa ei ehditä lukea, jakson pituus arvioidaan tekstistä: 14
+ * merkkiä sekunnissa on sama luku, jolla pulun kuplien lukuaika on
+ * mitattu (js/livia.js livianKuplanLukuaika) ja jonka
+ * tools/generoi-pulu.mjs käyttää arviossaan. Esitys ei siis pysähdy
+ * siihen, ettei ääntä ole — se kulkee luetun mittaisena.
+ */
+export const KERTOMUKSEN_MERKKIA_SEKUNNISSA = 14;
+
+/**
+ * Jakson kesto millisekunteina tekstin pituudesta.
+ *
+ * @param {object} jakso IHMISEN_MATKA_KERTOMUS-alkio
+ * @param {number} [pohja] lyhinkin jakso saa tämän verran aikaa
+ * @returns {number} kesto ms
+ */
+export function kertomuksenVarakesto(jakso, pohja = 2500) {
+  const merkit = String(jakso?.teksti ?? '').trim().length;
+  return Math.max(pohja, Math.round((merkit / KERTOMUKSEN_MERKKIA_SEKUNNISSA) * 1000));
+}
+
+/**
+ * Kertomuksen luennat yhtenä listana: sama funktio pelissä ja
+ * työkalussa (vrt. kaarenPuheet).
+ *
+ * @param {object} kaari linssin `aikajana`-lohko
+ * @returns {Array<{avain:string, runko:string, nimi:string, teksti:string, puhe:string}>}
+ */
+export function kertomuksenLuennat(kaari) {
+  const etuliite = kaari?.kertomusRunko ?? KERTOMUKSEN_ETULIITE;
+  const rivit = [];
+  for (const jakso of kaari?.kertomus ?? []) {
+    const runko = kertomuksenRunko(jakso, etuliite);
+    const teksti = String(jakso?.teksti ?? '').trim();
+    if (!runko || !teksti) continue;
+    rivit.push({
+      avain: jakso.id,
+      runko,
+      nimi: `${runko}.mp3`,
+      teksti,
+      // Luenta on kaanonin oma tagitettu muoto (eleven_v3); ilman sitä
+      // malli saa saman tekstin ilman tageja.
+      puhe: String(jakso?.luenta ?? teksti).trim(),
+    });
+  }
+  return rivit;
+}
+
 /** Välinäytöksen runko, esim. `valinaytos-1873`. Null ilman välinäytöstä. */
 export function valinaytoksenRunko(t) {
   if (!t?.valinaytos?.kertoja || !Number.isFinite(t?.vuosi)) return null;

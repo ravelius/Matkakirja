@@ -13726,6 +13726,225 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Cheikh Anta Diop -yliopisto', lat: 14.68694, lon: -17.46333 },
     ],
   },
+  /*
+   * SALTAN VANHAKAUPUNKI (Opus 7.9.2026, parvierä). Ruutu on noin
+   * 2,1 × 1,6 kilometriä: lännessä kuvataidemuseo Belgrano-kadulla,
+   * keskellä Plaza 9 de Julio laitoineen, idässä Güemesin
+   * muistomerkki Cerro San Bernardon juurella. Kaupunki on 1 200
+   * metrin korkeudessa eikä ruudussa ole vettä.
+   *
+   * KOLME KOHDETTA ON ALLE 200 METRIN PÄÄSSÄ TOISISTAAN, ja se on
+   * tietoinen valinta. MAAM–katedraali on 107 m, MAAM–cabildo 110 m
+   * ja katedraali–cabildo 164 m: kaikki kolme seisovat saman aukion
+   * laidoilla, ja aukio on kaupungin perustamispaikka vuodelta 1582.
+   * Numeroympyrä on tällä rajauksella noin 141 metriä, joten pahin
+   * peitto on 22 % (MAAM–katedraali) eli tarkista-karttapisteet.mjs:n
+   * asteikolla "tavallista, ei toimenpidettä".
+   *
+   * NELJÄS AUKION KOHDE JÄTETTIIN POIS: Centro Cultural América on
+   * vain 60 metriä MAAM:sta, ja sen numeroympyrä olisi peittänyt
+   * naapurinsa lähes kokonaan. Talo kerrotaan matkaoppaan toisessa
+   * jaksossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö). Lehti
+   * kertoo perustamisesta, Milagro-hartaudesta, vuodesta 1873,
+   * kaupunkikuvasta, Cerro San Bernardosta ja musiikista; kartta
+   * kertoo kunkin rakennuksen oman historian.
+   *
+   * Koordinaatit es-Wikipedian list=geosearch- ja
+   * prop=coordinates-rajapinnasta 7.9.2026; etäisyydet laskettu
+   * haversinilla (docs/mantereet-tyoaineisto/tarkistus-salta.md).
+   */
+  salta: {
+    polku: 'assets/kartat/salta-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -24.783, etela: -24.7975, lansi: -65.418, ita: -65.397 },
+    esittely: 'Saltan keskusta on yhä se yhdeksän kertaa viiden '
+      + 'korttelin ruudukko, joka mitattiin 1582. Kartan keskellä on '
+      + 'Plaza 9 de Julio, kaupungin perustamispaikka, ja sen '
+      + 'laidoilla kolme kartan kohdetta. Idässä maasto nousee Cerro '
+      + 'San Bernardoksi. Kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään.
+       */
+      { nimi: 'Saltan kuvataidemuseo', lat: -24.7867625, lon: -65.4161626 },
+      { nimi: 'La Merced -kirkko', lat: -24.789778, lon: -65.414444 },
+      { nimi: 'Korkean vuoriston arkeologian museo', lat: -24.78899602, lon: -65.41104066 },
+      { nimi: 'Saltan katedraali', lat: -24.788333, lon: -65.410278 },
+      { nimi: 'Saltan cabildo', lat: -24.7898, lon: -65.4104 },
+      { nimi: 'San Franciscon basilika', lat: -24.79025, lon: -65.408167 },
+      { nimi: 'San Bernardon luostari', lat: -24.790389, lon: -65.403833 },
+      { nimi: 'Güemesin muistomerkki', lat: -24.78675, lon: -65.39929 },
+    ],
+  },
+  /*
+   * ANTOFAGASTAN HISTORIALLINEN KORTTELI (Opus 7.9.2026, parvierä).
+   * Ruutu on noin 1,4 × 1,2 kilometriä: pohjoisessa salpietarilaituri
+   * ja vanha tullitalo, keskellä Colónin aukio, etelässä Giménezin
+   * talo. Rannikko kulkee ruudun läpi, ja länsireuna on merta.
+   *
+   * MERI-LIPPU PÄÄLLÄ, koska koko länsireuna on Antofagastan lahtea.
+   *
+   * SALPIETARILAITURIN PISTE ON LAITURIN ALKUPÄÄSSÄ RANNALLA, EI
+   * KÄRJESSÄ. es-Wikipedian koordinaatti (−23,64306 / −70,39833)
+   * osoittaa laiturin ulkopäähän, ja tarkista-karttapisteet.mjs
+   * ilmoitti sen sadan prosentin vetenä. Laituri on 198 metriä
+   * pitkä ja lähtee historiallisen korttelin rannasta vanhan
+   * tullitalon vierestä, joten alkupää on yhtä lailla kohde —
+   * ja numeroympyrä osuu nyt sille rannalle, josta kävelijä
+   * laiturille menee. Ero kärkeen on noin 50 metriä.
+   *
+   * KAKSI LÄHIKOHDETTA JÄTETTIIN POIS: FCAB:n asema on 26 metriä
+   * museosta ja Muelle Miraflores 130 metriä salpietarilaiturista.
+   * Molemmat kerrotaan toisen kohteen jutussa tai matkaoppaassa.
+   * HUANCHACAN RAUNIOT eivät mahdu ruutuun (4,5 km etelään), ja ne
+   * ovat lehden noston A5 aihe.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö).
+   * Erityisesti vuoden 1879 maihinnousu on lehden noston aihe, joten
+   * laiturin juttu kertoo laiturin rakenteen, omistajat ja
+   * kunnostuksen.
+   *
+   * Koordinaatit es-Wikipedian list=geosearch- ja
+   * prop=coordinates-rajapinnasta 7.9.2026; etäisyydet laskettu
+   * haversinilla (docs/mantereet-tyoaineisto/tarkistus-antofagasta.md).
+   */
+  antofagasta: {
+    polku: 'assets/kartat/antofagasta-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -23.6415, etela: -23.652, lansi: -70.406, ita: -70.3925 },
+    esittely: 'Antofagasta on kapea nauha meren ja aavikon välissä, '
+      + 'ja sen vanhin osa on tässä ruudussa. Pohjoisessa on '
+      + 'historiallinen kortteli laitureineen ja tullitaloineen, '
+      + 'keskellä Colónin aukio kellotorneineen. Länsireuna on merta. '
+      + 'Kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       */
+      { nimi: 'Salpietarilaituri', lat: -23.6435, lon: -70.3977 },
+      { nimi: 'Antofagastan museo', lat: -23.64416667, lon: -70.39777778 },
+      { nimi: 'Bolivian kauppapankin talo', lat: -23.64502, lon: -70.397358 },
+      { nimi: 'Colónin aukio', lat: -23.64611111, lon: -70.39777778 },
+      { nimi: 'Gibbsin talo', lat: -23.64611111, lon: -70.40055556 },
+      { nimi: 'Kaupunginteatteri', lat: -23.64654167, lon: -70.39658333 },
+      { nimi: 'Antofagastan katedraali', lat: -23.64716667, lon: -70.39738889 },
+      { nimi: 'Giménezin talo', lat: -23.650041, lon: -70.39665 },
+    ],
+  },
+  /*
+   * VANHA NUUK JA KESKUSTA (Opus 7.9.2026). Ruutu on 1,28 × 1,06
+   * kilometriä eli pelin tiiviimpiä: lännessä siirtomaasataman
+   * Vanha Nuuk, keskellä Nuuk Centrum ja idässä taidemuseo.
+   * Perustelut tools/piirra-kaupunkikartta.mjs:n nuuk-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA EIVÄTKÄ KARTTANOSTOJA.
+   * Lehden nostot kertovat niemen asuttajista, vuoden 1728 siirrosta,
+   * kahdesta lähetysasemasta 1873 ja kaupungin tieverkosta; teemasivu
+   * kertoo jääkairauksista, Isuan kivistä, Ameralikin ylityksestä ja
+   * Ilisimatusarfikista. Grönlannin maalehden aiheet
+   * (maa-kategoriat.js GRL) ja karttanostot (maastokohteet-grl.js)
+   * on luettu, eikä yksikään niistä ole kartalla.
+   *
+   * KAKSI EHDOKASTA HYLÄTTIIN. Atuagkat, Grönlannin ainoa
+   * kirjakauppa, oli listalla, kunnes sen oma artikkeli osoitti sen
+   * lopettaneen 15.1.2025 — kohdekartta on nykyisten kohteiden
+   * kävelykartta. Blok P purettiin 19.10.2012, ja se kerrotaan
+   * matkaoppaassa. Kirjakaupan tilalle otettiin kansalliskirjasto.
+   */
+  nuuk: {
+    polku: 'assets/kartat/nuuk-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 64.1825, etela: 64.173, lansi: -51.751, ita: -51.7245 },
+    esittely: 'Nuuk on maailman pohjoisin pääkaupunki, ja sen vanhin '
+      + 'osa on kilometrin levyinen niemenkärki. Siellä ovat Grönlannin '
+      + 'vanhin talo vuodelta 1728, vuonna 1849 vihitty katedraali ja '
+      + 'maan suurin tuoretori, ja kilometrin päässä idässä on '
+      + 'nykyinen keskusta parlamentteineen ja kulttuuritaloineen. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään. Koordinaatit
+       * en-Wikipedian geosearch-rajapinnasta 7.9.2026 ja
+       * ristiintarkistettu artikkelien coord-malleista.
+       *
+       * VÄLIT OVAT PELIN PIENIMPIÄ ja se on tässä oikein: Vanha Nuuk
+       * on niin tiivis, ettei 200 metrin väljyyteen pääse ilman että
+       * puolet kohteista putoaa pois. Kolme pienintä väliä ovat
+       * Kalaaliaraq-tori – Inatsisartut 98 m, Hans Egeden talo –
+       * Kalaaliaraq-tori 120 m ja kansallismuseo – Hans Egeden talo
+       * 130 m. Ruutu on siksi tiivistetty 1,28 kilometrin
+       * levyiseksi (0,80 m/px), jolloin nuo välit ovat 122, 150 ja
+       * 163 pikseliä eivätkä numeroympyrät mene päällekkäin;
+       * tarkista-karttapisteet.mjs vahvistaa sen. Sama ratkaisu kuin
+       * Fèsin medinassa (v1670).
+       *
+       * KOORDINAATIT ON VAHVISTETTU RIIPPUMATTOMASTI: "Kalaaliaraq
+       * Market" sanoo torin olevan noin 150 metriä katedraalista
+       * kaakkoon, ja näistä koordinaateista haversinilla laskettu
+       * väli on 148 metriä kaakkoon.
+       */
+      { nimi: 'Grönlannin kansallismuseo', lat: 64.1772, lon: -51.7462 },
+      { nimi: 'Hans Egeden talo', lat: 64.1782, lon: -51.7448 },
+      { nimi: 'Nuukin katedraali', lat: 64.17972, lon: -51.74417 },
+      { nimi: 'Kalaaliaraq-tori', lat: 64.17861, lon: -51.7425 },
+      { nimi: 'Inatsisartut', lat: 64.1783, lon: -51.7406 },
+      { nimi: 'Katuaq', lat: 64.17722, lon: -51.73889 },
+      { nimi: 'Grönlannin kansalliskirjasto', lat: 64.17556, lon: -51.73917 },
+      { nimi: 'Nuukin taidemuseo', lat: 64.17786, lon: -51.72922 },
+    ],
+  },
+  /*
+   * ANCHORAGEN KESKUSTA (Opus 7.9.2026). Ruutu on 2,47 × 1,61
+   * kilometriä: pohjoisessa rautatieasema Ship Creekin törmän
+   * yläpuolella, keskellä vuoden 1915 kaupunkitonttien ruutukaava,
+   * lännessä Elderberry Park ja etelässä Delaney Park Strip.
+   * Perustelut tools/piirra-kaupunkikartta.mjs:n anchorage-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA. Lehden nostot kertovat
+   * dena'inoista, Cookin kymmenestä päivästä 1778, Alaskan kaupasta
+   * 1867 ja vuoden 1964 järistyksestä; teemasivu kertoo hirvistä,
+   * karhuista, Ship Creekin lohesta ja Chugachin vuorista. Ship
+   * Creek on ruudussa mutta ei numeroitu, koska se on teemasivun
+   * nosto. Yhdysvaltain maalehden ja karttanostojen
+   * (maastokohteet-usa.js) aiheet on luettu — yksikään ei ole
+   * Alaskasta.
+   *
+   * KAIKKI 28 KOHDEVÄLIÄ YLITTÄVÄT 200 METRIÄ, pienin on 279 metriä
+   * (rautatieasema – A.E.C.:n mökki 23). Anchorage kaavoitettiin
+   * leveisiin kortteleihin, joten tässä ei tarvita Nuukin eikä
+   * Fèsin kaltaista poikkeusta.
+   */
+  anchorage: {
+    polku: 'assets/kartat/anchorage-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 61.2245, etela: 61.21, lansi: -149.916, ita: -149.87 },
+    esittely: 'Anchoragen keskusta on yhä se ruutukaava, joka '
+      + 'mitattiin 1915 telttakaupungin eteläpuolelle korkeammalle '
+      + 'maalle. Pohjoisreunalla virtaa Ship Creek, jonka rannalta '
+      + 'kaupunki alkoi, ja eteläreunaa myötäilee Delaney Park Strip '
+      + '— entinen paloaukea, joka oli kaupungin ensimmäinen '
+      + 'lentokenttä. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään ja
+       * lopuksi länteen. Koordinaatit en-Wikipedian artikkelien
+       * coord-malleista ja geosearch-rajapinnasta 7.9.2026; viisi
+       * kahdeksasta täsmäsi molemmissa.
+       */
+      { nimi: 'Anchoragen rautatieasema', lat: 61.22167, lon: -149.89056 },
+      { nimi: 'A.E.C.:n mökki 23', lat: 61.22, lon: -149.89444 },
+      { nimi: 'Wendlerin talo', lat: 61.21833, lon: -149.88972 },
+      { nimi: 'Alaska Center for the Performing Arts', lat: 61.21707, lon: -149.89439 },
+      { nimi: 'Anchorage Museum', lat: 61.2161, lon: -149.8845 },
+      { nimi: 'Anchoragen vanha hautausmaa', lat: 61.215, lon: -149.87611 },
+      { nimi: 'Oscar Andersonin talo', lat: 61.21861, lon: -149.90611 },
+      { nimi: 'Delaney Park Strip', lat: 61.21333, lon: -149.90167 },
+    ],
+  },
 };
 
 /*

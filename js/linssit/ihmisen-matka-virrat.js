@@ -32,10 +32,24 @@
 /** Siperian sävy — myös Amerikkojen liu'un lähtökohta (päätös 11). */
 const SIPERIA_VARI = { vanha: '#3AAFA5', rintama: '#9BE8E0' };
 
+/**
+ * VANOJEN SUMMAAVAT TEKSTIT (omistaja 7.9.2026 ilta, viisi nappia:
+ * *"tällä tavoin voisi myös näkyä oma summaava ja selittävä teksti
+ * jossain päin näyttöä"*). Kentän `yhteenveto` lukee tutkimusvaiheen
+ * pergamenttilappu (js/linssit/ihmisen-matka-tutkimus.js), kun
+ * pelaaja valitsee vanan kartan yläreunan napista. Teksti on 2–4
+ * lausetta ja kertoo, mitä juuri se väri kartalla tarkoittaa —
+ * lukuja on vain sen verran kuin tarina kestää.
+ */
 export const IHMISEN_MATKA_VIRRAT = [
   {
     tunnus: 'paavirta',
     nimi: 'Päävirta',
+    yhteenveto: 'Ensimmäinen ja pisin virta: Afrikasta Punaisenmeren kapeikon yli '
+      + 'Arabiaan ja siitä Intian rannikkoa pitkin itään. Sunda oli silloin '
+      + 'kuivaa maata, mutta viimeinen vesiväli Australiaan piti ylittää '
+      + 'veneellä — se on ihmisen ensimmäinen merimatka. Sama virta kääntyi '
+      + 'myös pohjoiseen Itä-Aasiaan ja Japaniin.',
     vari: { vanha: '#D9731E', rintama: '#FFB347' },
     // Afrikan sisäinen leviäminen hidasta, rannikkosprintti 90 ka:sta,
     // manner-Aasiassa 50 ka:sta maltillisempi (luku 2.1).
@@ -90,6 +104,11 @@ export const IHMISEN_MATKA_VIRRAT = [
   {
     tunnus: 'eurooppa',
     nimi: 'Eurooppa',
+    yhteenveto: 'Eurooppaan tultiin myöhään ja idästä, Balkanin kautta, kun '
+      + 'neandertalilaiset asuivat siellä yhä. Jää piti Pohjolan tyhjänä '
+      + 'kymmeniätuhansia vuosia, ja vasta sen väistyessä väri nousee '
+      + 'Fennoskandiaan ja Brittein saarille. Luolataide, ompeluneula ja '
+      + 'mammutinluinen maja kuuluvat tähän vanaan.',
     vari: { vanha: '#2E63C9', rintama: '#7FAAFF' },
     nopeus: 1.2,
     sisamaa: 0.5,
@@ -115,6 +134,11 @@ export const IHMISEN_MATKA_VIRRAT = [
   {
     tunnus: 'siperia',
     nimi: 'Siperia',
+    yhteenveto: 'Altailta erkanee haara, joka kulkee kylmään: Siperian arot, '
+      + 'jokivarret ja lopulta napapiirin pohjoispuoli. Täällä opittiin se, '
+      + 'mitä ilman Amerikkaan ei olisi päässyt — lämmin vaate, tuli '
+      + 'puuttomassa maassa ja suurriistan metsästys. Arktinen rannikko '
+      + 'aukeaa vasta ilmaston lauhtuessa, ja siitä matka jatkuu itään.',
     vari: SIPERIA_VARI,
     nopeus: 0.9,
     sisamaa: 0.6,
@@ -134,6 +158,11 @@ export const IHMISEN_MATKA_VIRRAT = [
   {
     tunnus: 'amerikat',
     nimi: 'Amerikat',
+    yhteenveto: 'Beringian maasilta oli kuivaa maata kymmeniätuhansia vuosia, ja '
+      + 'sen itäpäässä väki odotti jään väistymistä. Kun rannikko aukesi, '
+      + 'matka Alaskasta Chileen kesti vain vuosisatoja: se on koko '
+      + 'kertomuksen nopein liike. Väri liukuu Siperian sinivihreästä '
+      + 'vihreään, koska väestö eriytyi omakseen matkan aikana.',
     vari: {
       vanha: '#2E9E4F',
       rintama: '#8CE38F',
@@ -189,6 +218,11 @@ export const IHMISEN_MATKA_VIRRAT = [
   {
     tunnus: 'tyynimeri',
     nimi: 'Tyynimeri',
+    yhteenveto: 'Viimeinen virta ei kävellyt vaan purjehti. Taiwanilta lähtenyt '
+      + 'kansa vei saviastiansa ja kanoottinsa saarelta saarelle, ensin '
+      + 'Lapita-vyöhykkeelle ja pitkän tauon jälkeen Polynesian '
+      + 'äärimmäisiin kolkkiin. Sama merenkulku vei myös lännelle: '
+      + 'Madagaskarille purjehdittiin Borneosta Afrikan rannikolle.',
     vari: { vanha: '#D63A94', rintama: '#FF9AD0' },
     nopeus: 3,
     sisamaa: 0.5,

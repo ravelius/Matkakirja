@@ -5161,6 +5161,132 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 14.6905, etela: 14.6520, lansi: -17.4720, ita: -17.4245 },
     meri: true,
   },
+  salta: {
+    /*
+     * SALTAN VANHAKAUPUNKI (7.9.2026). Ruutu on noin 2,1 x 1,6
+     * kilometria: lannessa kuvataidemuseo Belgrano-kadulla, keskella
+     * Plaza 9 de Julio, idassa Guemesin muistomerkki Cerro San
+     * Bernardon juurella. Kaupunki on 1 200 metrin korkeudessa
+     * Yungas-vuorten reunalla eika ruudussa ole vetta, joten
+     * meri-lippua ei tarvita.
+     *
+     * IDASSA RUUTU PYSAHTYY VUOREN JUURELLE. Cerro San Bernardon
+     * huippu on runsaan kilometrin idassa; se on lehden noston aihe
+     * eika kohdekartan piste, ja sen ottaminen mukaan tekisi
+     * ruudusta puolet tyhjaa rinnetta.
+     *
+     * ETELAREUNA on Avenida San Martin eli vanha Sauce-joen linja,
+     * pohjoisreuna Avenida Belgrano eli vanha Tineon suo — sama
+     * rajaus, jolla kaupunki mitattiin 1582.
+     *
+     * jalkakaydat: true, ja se on mitattu paatos. Ilman lippua
+     * Overpass palautti 337 elementtia ja kuva oli pelkka ruudukko:
+     * Plaza 9 de Julio ja Parque San Martin nakyivat tyhjina
+     * lohkoina. Lipun kanssa elementteja on 697, ja aukion seka
+     * puiston omat kaytavat piirtyvat — juuri ne kaksi kohtaa,
+     * joista kartan tunnistaa Saltaksi. Kaupungin kolme
+     * kavelykatua (Alberdi, Florida, Caseros) ovat OSM:ssa
+     * pedestrian- ja footway-teita.
+     */
+    rajat: { pohjoinen: -24.7830, etela: -24.7975, lansi: -65.4180, ita: -65.3970 },
+    jalkakaydat: true,
+  },
+  antofagasta: {
+    /*
+     * ANTOFAGASTAN HISTORIALLINEN KORTTELI (7.9.2026). Ruutu on noin
+     * 1,4 x 1,2 kilometria: pohjoisessa salpietarilaituri ja vanha
+     * tullitalo, keskella Colonin aukio, etelassa Gimenezin talo.
+     *
+     * MERI-LIPPU PAALLA, koska koko lansireuna on Antofagastan
+     * lahtea ja rantaviiva kulkee ruudun lapi pohjoisesta etelaan.
+     * Ilman lippua meri jaisi paperin variseksi ja kartta nayttaisi
+     * silta kuin kaupunki jatkuisi lanteen.
+     *
+     * RUUTU EI YLETY HUANCHACAN RAUNIOILLE (4,5 km etelaan) eika
+     * aallonmurtajan majakalle (900 m lanteen): kumpikin venyttaisi
+     * rajauksen niin, etta puolet kuvasta olisi avomerta tai
+     * aavikkoa.
+     */
+    rajat: { pohjoinen: -23.6415, etela: -23.6520, lansi: -70.4060, ita: -70.3925 },
+    meri: true,
+  },
+  nuuk: {
+    /*
+     * VANHA NUUK JA KESKUSTA (7.9.2026). Ruutu on 1,28 × 1,06
+     * kilometriä eli pelin tiiviimpiä, Fèsin ja Sansibarin
+     * kokoluokkaa. Lännessä on Vanha Nuuk siirtomaasatamineen
+     * (kansallismuseo, Hans Egeden talo, katedraali, Kalaaliaraq),
+     * keskellä Nuuk Centrum (Inatsisartutin luoto, Katuaq,
+     * kansalliskirjasto) ja idässä Kissarneqqortuunnguaqin
+     * taidemuseo.
+     *
+     * TIIVIS RUUTU ON PAKKO, ja se on mitattu. Kahdeksan kohdetta
+     * mahtuu 0,82 × 0,46 kilometrin alalle: Vanha Nuuk on kilometrin
+     * levyinen niemenkärki, jossa museo, kirkko ja tori ovat
+     * kivenheiton päässä toisistaan. Pienin väli on 98 metriä
+     * (Kalaaliaraq-tori – Inatsisartut), ja seuraavat ovat 120, 130,
+     * 146 ja 148 metriä. Tässä mittakaavassa (0,80 m/px) 98 metriä on
+     * 122 pikseliä eivätkä numeroympyrät mene päällekkäin;
+     * tarkista-karttapisteet.mjs vahvistaa sen. Sama ratkaisu kuin
+     * Fèsin medinassa (v1670, pienin väli 98 m).
+     *
+     * RIIPPUMATON VAHVISTUS KOORDINAATEILLE: en-Wikipedian
+     * "Kalaaliaraq Market" sanoo torin olevan noin 150 metriä
+     * katedraalista kaakkoon. Omista koordinaateista haversinilla
+     * laskettu väli on 148 metriä ja suunta kaakkoon.
+     *
+     * meri: true. Nuuk on niemellä Nuup Kangerlua -vuonon suussa, ja
+     * rantaviiva kiertää ruudun länsi-, etelä- ja pohjoisreunaa.
+     * Ilman lippua kolme reunaa jäisi paperin värisiksi.
+     *
+     * LENTOASEMA, YLIOPISTO JA SERMITSIAQ JÄÄVÄT ULKOPUOLELLE.
+     * Lentoasema on 4 km koilliseen, Ilimmarfikin kampus 2,4 km
+     * koilliseen ja Sermitsiaq-vuori 20 km koilliseen. Yliopisto on
+     * lehden teemasivun nosto T4, joten kohdekartta ei menetä juttua.
+     *
+     * HANS EGEDEN PATSAS JA HERRNHUTIN LÄHETYSTALO EIVÄT OLE
+     * NUMEROITUJA KOHTEITA. Patsas on 60 metriä katedraalista eikä
+     * mahtuisi omaksi ympyräkseen; lähetystalo on kilometrin päässä
+     * etelässä Noorliitissa ja on lehden noston N3 aihe (kaksi
+     * rinnakkaista lähetysasemaa 1873). Blok P puuttuu, koska se
+     * purettiin 19.10.2012 — se kerrotaan matkaoppaassa.
+     */
+    rajat: { pohjoinen: 64.1825, etela: 64.1730, lansi: -51.7510, ita: -51.7245 },
+    meri: true,
+  },
+  anchorage: {
+    /*
+     * ANCHORAGEN KESKUSTA SHIP CREEKILTÄ PARK STRIPILLE (7.9.2026).
+     * Ruutu on 2,47 × 1,61 kilometriä. Pohjoisessa ovat rautatieasema
+     * ja Alaska Engineering Commissionin mökki, keskellä
+     * kaupunkitonttien ruutukaava (Wendlerin talo, Performing Arts,
+     * Anchorage Museum), lännessä Elderberry Parkin Oscar Andersonin
+     * talo, etelässä Delaney Park Strip ja idässä vanha hautausmaa.
+     *
+     * VÄLJEMPI RUUTU KUIN NUUKISSA, ja se on kaupungin oma ansio:
+     * Anchorage kaavoitettiin 1910-luvulla leveisiin kortteleihin,
+     * joten kaikki 28 kohdeväliä ylittävät 200 metriä. Pienin on 279
+     * metriä (rautatieasema – A.E.C.:n mökki 23).
+     *
+     * meri: true. Knik Arm on ruudun länsireunassa Elderberry Parkin
+     * ja Point Woronzofin suunnassa, ja Ship Creek laskee siihen
+     * ruudun pohjoisreunalla.
+     *
+     * MERRILL FIELD, LAKE HOOD, EARTHQUAKE PARK JA ALASKA NATIVE
+     * HERITAGE CENTER JÄÄVÄT ULKOPUOLELLE. Merrill Field on 2,5 km
+     * itään, Lake Hood 4,5 km lounaaseen, Earthquake Park 4 km
+     * länteen ja Heritage Center kymmenen mailia koilliseen. Kaksi
+     * ensimmäistä ovat matkakirjan valokuvataulun ja matkaoppaan
+     * aiheita, Earthquake Park on noston A4 aihe ja Heritage Center
+     * matkaoppaan neljäs jakso.
+     *
+     * SHIP CREEK ON RUUDUSSA MUTTA EI NUMEROITU: puro on lehden
+     * teemasivun nosto T3 (maailman ainoa kaupunkialueen
+     * kuningaslohijoki), eikä kohdekartta toista lehden juttuja.
+     */
+    rajat: { pohjoinen: 61.2245, etela: 61.2100, lansi: -149.9160, ita: -149.8700 },
+    meri: true,
+  },
 };
 
 /*

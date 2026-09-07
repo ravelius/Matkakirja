@@ -1675,6 +1675,13 @@ export const MINIATYYRIT = {
     'Julia Idesonin kirjastotalo': 'houston-julia-idesonin-kirjasto',
     'Hermann Park': 'houston-hermann-park',
     'Market Squaren puisto': 'houston-market-squaren-puisto',
+    // Erä 19g (posti/kuvatoimitus-19g-20260907.json) täytti loput viisi
+    // kohdetta, joten Houstonin kaikilla kartan kohteilla on nyt piirros.
+    'Astrosin stadion': 'houston-astrosin-stadion',
+    'Buffalo Bayoun puisto': 'houston-buffalo-bayoun-puisto',
+    'Menilin kokoelma': 'houston-menilin-kokoelma',
+    'Sam Houstonin puisto': 'houston-sam-houstonin-puisto',
+    Kongressikeskus: 'houston-kongressikeskus',
   },
   denver: {
     // Kuvaputken toimitus 7.9.2026, erä 20f
@@ -1684,8 +1691,19 @@ export const MINIATYYRIT = {
     // YKSI TUNNUS EI OLE NIMEN SLUG: Daniels & Fisherin torni on ämpärissä
     // nimellä denver-daniels-fisher-torni (ei -daniels-fisherin-torni).
     // Sama syy kuin Houstonissa — tunnus on tiedostonimi.
+    //
+    // TOINEN TUNNUS EI OLE NIMEN SLUG (erä 19g): Denverin taidemuseo on
+    // ämpärissä nimellä denver-taidemuseo (ei -denverin-taidemuseo).
+    // Sama sääntö kuin yllä — tunnus on ämpärin tiedostonimi.
     'Coors Field': 'denver-coors-field',
     'Daniels & Fisherin torni': 'denver-daniels-fisher-torni',
     Katedraalibasilika: 'denver-katedraalibasilika',
+    // Erä 19g (posti/kuvatoimitus-19g-20260907.json) täytti loput viisi
+    // kohdetta, joten Denverin kaikilla kartan kohteilla on nyt piirros.
+    'Denverin taidemuseo': 'denver-taidemuseo',
+    'Molly Brownin talo': 'denver-molly-brownin-talo',
+    'Kasvitieteellinen puutarha': 'denver-kasvitieteellinen-puutarha',
+    'Brown Palace -hotelli': 'denver-brown-palace-hotelli',
+    'Esittävän taiteen keskus': 'denver-esittavan-taiteen-keskus',
   },
 };

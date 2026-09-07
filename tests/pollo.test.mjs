@@ -1887,11 +1887,14 @@ test('linssin aikana puhekuplat menevät jonoon ja ohjekuplat pudotetaan', () =>
   assert.match(lahde, /return this\.lykkaaLinssiin\(\(\) => this\.naytaSaapumiskupla\(/);
   // Rytmi (viive) kulkee jonoon lykätyn puheenvuoron mukana: äänitetty
   // repliikki puhuu linssin jälkeen samalla tahdilla kuin ilman linssiä.
-  assert.match(lahde, /this\.naytaPuheenvuoro\(palat, \{\n\s*kuittaus, jatkuuko, viive, aani,\n\s*\}\),/);
+  // (Lisäluokka `luokka` kulkee samassa mukana 7.9.2026: Ihmisen matkan
+  // kertomuksessa pulun välihuomio on kapea välihuuto, ja luokan on
+  // seurattava kuplaa myös jonon läpi.)
+  assert.match(lahde, /this\.naytaPuheenvuoro\(palat, \{\n\s*kuittaus, jatkuuko, viive, aani, luokka,\n\s*\}\),/);
   assert.match(lahde, /this\.lykkaaLinssiin\(\(\) => this\.naytaOnnittelu\(/);
   // Portti on ENNEN chattiin kirjaamista: muuten virran järjestys olisi
   // eri kuin se, jossa repliikit lopulta sanotaan.
-  const saapumis = lahde.slice(lahde.indexOf('naytaSaapumiskupla(teksti, { kuittaus = null, linssinOma = false }'));
+  const saapumis = lahde.slice(lahde.indexOf("naytaSaapumiskupla(teksti, { kuittaus = null, linssinOma = false, luokka = '' }"));
   assert.ok(
     saapumis.indexOf('linssiEstaa') < saapumis.indexOf('kirjaaKuplaViestiin'),
     'kupla kirjataan chattiin ennen linssiporttia',
@@ -1924,8 +1927,9 @@ test('linssin oma kupla ohittaa portin — mutta vain linssin kutsumana', () => 
   assert.match(lahde, /if \(!linssinOma && linssiEstaa\(this\.doc\)\) \{\n\s*return this\.lykkaaLinssiin\(\n?\s*\(\) => this\.naytaPuheenvuoro\(/);
   // Osiin jaettu puheenvuoro puhuu loppuun: lippu kulkee jatko-osiin.
   // (7.9.2026: sarjan tilassa on myös soivan äänitteen kahva, jotta
-  // kupla osaa odottaa puheen loppuun — js/liviapuhe.js livianKuplanAika.)
-  assert.match(lahde, /this\.puheenvuoro = \{\n\s*palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive, aani, aaniKahva,\n\s*\};/);
+  // kupla osaa odottaa puheen loppuun — js/liviapuhe.js livianKuplanAika —
+  // sekä kuplan luokka, jolla kertomusesitys merkitsee välihuomionsa.)
+  assert.match(lahde, /this\.puheenvuoro = \{\n\s*palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive, aani, aaniKahva, luokka,\n\s*\};/);
   assert.match(lahde, /linssinOma: nyt\.linssinOma,/);
   // Muut vientifunktiot EIVÄT saa lippua: ohitus on vain linssin.
   for (const nimi of ['polloSaapumiskupla', 'polloPuheenvuoro', 'polloAvauskupla']) {

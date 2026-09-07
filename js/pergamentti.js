@@ -76,6 +76,33 @@ function piirtokorkeus(suhde) {
 }
 /** Polun marginaali: repeämä ja sumennus mahtuvat tähän leikkautumatta. */
 const MARGINAALI = 12;
+/*
+ * REPEÄMÄN MITAT. Taajuus annetaan akseleittain "x y": X-taajuus
+ * määrää, kuinka tiheästi YLÄ- ja ALAREUNA aaltoilee (reuna kulkee
+ * x-akselia pitkin), Y-taajuus taas SIVUJEN tiheyden. Skaala on
+ * yhteinen molemmille akseleille, joten pystysuunnan amplitudi
+ * kavennetaan erikseen kohinan G-kanavaa vaimentamalla.
+ */
+const KARKEA_TAAJUUS = '0.012 0.022';
+const KARKEA_SKAALA = 12;
+const HIENO_TAAJUUS = '0.04 0.075';
+const HIENO_SKAALA = 4.5;
+/** G-kanavan (y-siirtymän) osuus: ylä- ja alareuna liikkuu rauhallisemmin. */
+const PYSTY_OSUUS_KARKEA = 0.38;
+const PYSTY_OSUUS_HIENO = 0.44;
+/** Kulmien viisteet (yksikköä): kuluneet kulmat, eivät murtuneet. */
+const VIISTE_MIN = 4;
+const VIISTE_VALI = 6;
+/** Pohjapolun väliaaltojen koko: sivuilla entinen, vaakareunoilla kolmasosa. */
+const AALTO_SIVU = 7;
+const AALTO_VAAKA = 2.4;
+/*
+ * KAJON VÄRI on pergamentin lämpöä, ei liekkiä (omistaja 7.9.2026
+ * ilta: *"ylä- ja alareuna on, kuin paperi olisi tulessa"*). Entinen
+ * #ff9c3c oli kylläistä oranssia; tämä on himmeä okra, joka lukee
+ * lyhdyn valona mustaa vasten.
+ */
+const HEHKUN_VARI = '#d9ae74';
 /** Hehkukerroksen kasvu joka suuntaan (sama luku CSS:n inset: -15%). */
 export const HEHKU_KASVU = 0.15;
 const HEHKU_KERROIN = 1 + 2 * HEHKU_KASVU;
@@ -127,16 +154,22 @@ export function reunapolku(siemen, korkeus = piirtokorkeus(OLETUSSUHDE), dx = 0,
   const O = dx + LEVEYS - MARGINAALI;
   const Y = dy + MARGINAALI;
   const A = dy + korkeus - MARGINAALI;
-  // Kulmien viisteet: 7–19 yksikköä, jokainen kulma omansa.
-  const viiste = () => 7 + arpa() * 12;
+  // Kulmien viisteet: jokainen kulma omansa.
+  const viiste = () => VIISTE_MIN + arpa() * VIISTE_VALI;
   const [vy1, vy2, vy3, vy4] = [viiste(), viiste(), viiste(), viiste()];
   const [vx1, vx2, vx3, vx4] = [viiste(), viiste(), viiste(), viiste()];
-  /* Sivun väliaallot: kaksi pistettä epätasaisin välein, poikkeama ±3,5. */
+  /*
+   * Väliaallot: kaksi pistettä epätasaisin välein. Poikkeama on
+   * SIVUILLA entinen ±3,5 ja YLÄ- JA ALAREUNALLA ±1,2 — omistaja
+   * 7.9.2026: *"Sivut ovat ihan ok, mutta ylä- ja alareuna on, kuin
+   * paperi olisi tulessa, eli saa liikkua rauhallisemmin."*
+   */
   const aalto = (a, b, kiinnea, pysty) => {
     const pisteet = [];
+    const koko = pysty ? AALTO_SIVU : AALTO_VAAKA;
     for (const osuus of [0.3 + arpa() * 0.12, 0.62 + arpa() * 0.14]) {
       const t = a + (b - a) * osuus;
-      const poikkeama = kiinnea + (arpa() - 0.5) * 7;
+      const poikkeama = kiinnea + (arpa() - 0.5) * koko;
       pisteet.push(pysty ? [poikkeama, t] : [t, poikkeama]);
     }
     return pisteet;
@@ -159,6 +192,27 @@ export function reunapolku(siemen, korkeus = piirtokorkeus(OLETUSSUHDE), dx = 0,
 }
 
 /*
+ * G-KANAVAN VAIMENNUS. feDisplacementMap siirtää pikseliä
+ * scale × (kanava − 0,5), joten kertomalla kohinan G-kanava luvulla k
+ * (ja siirtämällä keskikohta takaisin 0,5:een) y-siirtymän amplitudi
+ * kutistuu kertoimeen k — x-siirtymä eli sivujen liike jää ennalleen.
+ * feColorMatrix on talon jo koeteltu keino: paperin kohinakerrokset
+ * (css/aikajana.css) käyttävät sitä samalla tavalla kuvan sisällä.
+ */
+function pystyVaimennus(k) {
+  const siirto = (0.5 - 0.5 * k).toFixed(3);
+  /*
+   * ALFA PAKOTETAAN YKKÖSEKSI samalla matriisilla. feTurbulence tuottaa
+   * satunnaisen alfan, ja suodatinketju kuljettaa kuvia ESIKERROTTUINA:
+   * feColorMatrix purkaa esikertoimen, kertoo ja kertoo takaisin, jolloin
+   * G-kanavan vaimennus laimeni mitattavasti (7.9.2026: ylä- ja alareunan
+   * amplitudi ei liikahtanut). Kun alfa on 1, esikerrottu ja esikertomaton
+   * arvo ovat sama luku ja vaimennus menee perille sellaisenaan.
+   */
+  return `1 0 0 0 0 0 ${k} 0 0 ${siirto} 0 0 1 0 0 0 0 0 0 1`;
+}
+
+/*
  * Yhteinen repeämäsuodatin (kaksi turbulenssia + pehmennys).
  * `userSpaceOnUse` koko piirtoalueelle: suodatinalue ei silloin riipu
  * polun laatikosta, joten sumennus mahtuu kuvaan yhtä hyvin litteällä
@@ -170,11 +224,13 @@ function repeamaSuodatin(tunnus, siemen, leveys, korkeus, lisa = '') {
   return `<filter id="${tunnus}" filterUnits="userSpaceOnUse" `
     + `x="0" y="0" width="${leveys}" height="${korkeus}" `
     + 'color-interpolation-filters="sRGB">'
-    + `<feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="${s1}" result="karkea"/>`
-    + '<feDisplacementMap in="SourceGraphic" in2="karkea" scale="12" '
+    + `<feTurbulence type="fractalNoise" baseFrequency="${KARKEA_TAAJUUS}" numOctaves="2" seed="${s1}" result="karkea0"/>`
+    + `<feColorMatrix in="karkea0" type="matrix" values="${pystyVaimennus(PYSTY_OSUUS_KARKEA)}" result="karkea"/>`
+    + `<feDisplacementMap in="SourceGraphic" in2="karkea" scale="${KARKEA_SKAALA}" `
     + 'xChannelSelector="R" yChannelSelector="G" result="mutka"/>'
-    + `<feTurbulence type="fractalNoise" baseFrequency="0.075" numOctaves="3" seed="${s2}" result="hieno"/>`
-    + '<feDisplacementMap in="mutka" in2="hieno" scale="4.5" '
+    + `<feTurbulence type="fractalNoise" baseFrequency="${HIENO_TAAJUUS}" numOctaves="3" seed="${s2}" result="hieno0"/>`
+    + `<feColorMatrix in="hieno0" type="matrix" values="${pystyVaimennus(PYSTY_OSUUS_HIENO)}" result="hieno"/>`
+    + `<feDisplacementMap in="mutka" in2="hieno" scale="${HIENO_SKAALA}" `
     + 'xChannelSelector="R" yChannelSelector="G" result="reuna"/>'
     + (lisa || '<feGaussianBlur in="reuna" stdDeviation="0.8"/>')
     + '</filter>';
@@ -202,13 +258,13 @@ export function maskiKuva(siemen = 0, suhde = OLETUSSUHDE) {
  * asuu paperin ALLA ja on 1,3-kertainen (CSS `inset: -15%`), joten
  * sumennus mahtuu kuvaan eikä leikkaudu elementin reunaan.
  */
-export function hehkuKuva(siemen = 0, suhde = OLETUSSUHDE, vari = '#ff9c3c') {
+export function hehkuKuva(siemen = 0, suhde = OLETUSSUHDE, vari = HEHKUN_VARI) {
   const k = piirtokorkeus(suhde);
   const w = Math.round(LEVEYS * HEHKU_KERROIN);
   const h = Math.round(k * HEHKU_KERROIN);
   const suodatin = repeamaSuodatin('h', siemen, w, h,
-    '<feGaussianBlur in="reuna" stdDeviation="9" result="lahi"/>'
-    + '<feGaussianBlur in="reuna" stdDeviation="18" result="kauko"/>'
+    '<feGaussianBlur in="reuna" stdDeviation="6" result="lahi"/>'
+    + '<feGaussianBlur in="reuna" stdDeviation="12" result="kauko"/>'
     + '<feMerge><feMergeNode in="kauko"/><feMergeNode in="lahi"/></feMerge>');
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" `
     + `viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">`
@@ -234,7 +290,7 @@ export function hehkuKuva(siemen = 0, suhde = OLETUSSUHDE, vari = '#ff9c3c') {
  *
  * Palauttaa elementin, jotta kutsu voi ketjuttua.
  */
-export function repaleinenPaperi(el, { siemen = 0, hehku = null, vari = '#ff9c3c', suhde = 0 } = {}) {
+export function repaleinenPaperi(el, { siemen = 0, hehku = null, vari = HEHKUN_VARI, suhde = 0 } = {}) {
   if (!el?.style?.setProperty) return el;
   let s = suhde;
   if (!(s > 0)) {

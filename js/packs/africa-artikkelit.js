@@ -2180,9 +2180,28 @@ export const OMAT_ARTIKKELIT = {
       + 'Weah.',
   },
   Mosambik: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // MOZ) nojaa tähän introon yksin, sama malli kuin Angolalla ja
+    // Namibialla.
     intro: 'Mosambik on Intian valtameren pitkä rannikkomaa: '
       + 'dhow-purjeiden, marrabentan ja korallisaarten valtio, '
-      + 'jonka nimi tuli pieneltä saarelta.',
+      + 'jonka nimi tuli pieneltä saarelta. Rantaviiva kaartuu yli '
+      + 'kahden ja puolen tuhannen kilometrin matkan, sisämaassa '
+      + 'Sambesi virtaa maan halki, ja pohjoisessa savannista nousee '
+      + 'yksittäisvuoria, joiden huipuilla kasvaa sademetsää — Mabun '
+      + 'metsä löytyi tieteelle vasta Google Earthin satelliittikuvasta. '
+      + 'Sambesin laaksoa hallitsivat vuosisatoja prazot, kruunulta '
+      + 'vuokratut jättitilat, jotka periytyivät tyttäreltä tyttärelle, '
+      + 'ja Baruen kuningaskunta piti puolensa vuoteen 1902; '
+      + '1890-luvulta alkaen suurta osaa maasta hallitsivat '
+      + 'toimiluvan saaneet osakeyhtiöt, joilla oli oma pankki, oma '
+      + 'raha ja omat postimerkit. Portugalin siirtomaavalta päättyi '
+      + '1975. Chopien timbila-ksylofoniorkesterit Inhambanessa ja '
+      + 'makondeveistäjien mustapuuhahmot pohjoisessa ovat maan '
+      + 'tunnetuinta taidetta, ja Maputon esikaupungeista lähti '
+      + 'marrabenta. Lautasella on maissipuuro xima, huhmaressa '
+      + 'jauhetuista maniokinlehdistä keitetty matapa ja Intian '
+      + 'valtameren kaupan tuoma kookos ja curry.',
     artikkeli: 'Mosambikin rantaviiva kaartuu yli kahden ja puolen '
       + 'tuhannen kilometrin matkan — valkoisia rantoja, '
       + 'mangrovea ja korallisaaria. Sisämaassa Zambezi virtaa '

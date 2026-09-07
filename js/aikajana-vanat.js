@@ -128,8 +128,16 @@ export function matkaHetkella(matka, aika, nyt) {
  * 0 vanhalla osalla. Sama kaava kuin ruudunTila kalvolla, joten vana
  * ja väri vanhenevat samaa tahtia.
  */
-export function karjenPaino(aika, nyt, rintama) {
+export function karjenPaino(aika, nyt, rintama, { pito = false } = {}) {
   if (!(aika > 0) || !(rintama > 0)) return 0;
+  /*
+   * PITOTILASSA MENNYT ON MENNYTTÄ (kertomusesitys, ks. paivita).
+   * Kun kello on kelattu taaksepäin, vanan jo piirretyssä osassa on
+   * kärkiä, joiden aika EI ole vielä tullut (aika < nyt). Ilman tätä
+   * ehtoa kaava antaisi niille painon yli yhden — koko vana leimahtaisi
+   * rintaman väriin. Pidetty osa on vanhaa väestöä, ei rintamaa.
+   */
+  if (pito && nyt > aika) return 0;
   return Math.max(0, Math.min(1, 1 - (aika - nyt) / rintama));
 }
 
@@ -466,8 +474,27 @@ export function luoVanat({
   /**
    * Kello siirtyi: katko (kasvu) ja kärkivärit. Kutsutaan enintään
    * VIRTOJEN_PAIVITYS_MS:n tahdissa; reduced motion askeltaa harvemmin.
+   *
+   * ── PITOTILA: RINTAMA EI KATOA ────────────────────────────────────
+   *
+   * Kertomusesitys (js/linssit/ihmisen-matka-esitys.js) ajaa kelloa
+   * kaanonin jaksojen mukaan, ja kaanoni palaa ajassa TAAKSEPÄIN kahdesti:
+   * Blombosista (75 ka) Karmelvuorelle (110 ka) ja Chilestä (14,5 ka)
+   * aikahypyllä takaisin Keski-Aasiaan (50 ka). Ilman pitoa vana
+   * kelautuisi kummallakin kerralla auki — koko Amerikkoihin asti
+   * piirretty selkäranka katoaisi ruudulta. Raamattu KERTOMUS SOLJUVAKSI
+   * ja omistajan ohje aikahypystä: *"rintama ei katoa, vaan Euroopan
+   * haara alkaa kasvaa tästä."*
+   *
+   * PITO ON YKSISUUNTAINEN MAKSIMI vanaa kohti: piirretty pituus ei
+   * koskaan lyhene, mutta kasvaa yhä normaalisti, kun kello ohittaa
+   * ennätyksen. Kotipesät jäävät samasta syystä palamaan.
+   *
+   * @param {number} nyt kellon lukema (vuosia sitten)
+   * @param {object} [asetukset]
+   * @param {boolean} [asetukset.pito] älä koskaan lyhennä piirrettyä vanaa
    */
-  function paivita(nyt) {
+  function paivita(nyt, { pito = false } = {}) {
     if (purettu || !oliot.length || !(nyt >= 0)) return false;
     if (nyt === viimeNyt) return false;
     if (reduced) {
@@ -482,10 +509,13 @@ export function luoVanat({
     for (const o of oliot) {
       if (o.kotipesa) {
         // Kotipesä syttyy pysäkkinsä hetkellä ja jää palamaan.
-        o.olio.visible = nyt <= o.kotipesa.aika;
+        // Pitotilassa myös kelauksen yli (ks. PITOTILA yllä).
+        o.olio.visible = (pito && o.olio.visible) || nyt <= o.kotipesa.aika;
         continue;
       }
-      const matka = matkaHetkella(o.matka, o.aika, nyt);
+      const kuljettu = matkaHetkella(o.matka, o.aika, nyt);
+      const matka = pito ? Math.max(o.pitomatka ?? 0, kuljettu) : kuljettu;
+      o.pitomatka = matka;
       o.mat.dashSize = matka;
       o.kaistaMat.dashSize = matka;
       const nakyy = matka > 0;
@@ -520,7 +550,7 @@ export function luoVanat({
        */
       const karjenVari = (k) => {
         const { v0, v1 } = savy(o.virrat?.[k] ?? o.virta);
-        const w = karjenPaino(o.aika[k], nyt, rintama);
+        const w = karjenPaino(o.aika[k], nyt, rintama, { pito });
         return [
           v0[0] + (v1[0] - v0[0]) * w,
           v0[1] + (v1[1] - v0[1]) * w,
@@ -559,6 +589,52 @@ export function luoVanat({
     return true;
   }
 
+  /**
+   * VANAN KOROSTUS (tutkimusvaihe, omistaja 7.9.2026: *"se valittu väri
+   * hehkuu kaikkia muita värejä vielä voimakkaammin kartan pinnassa"*).
+   *
+   * Valinta on VIRTA (viisi nappia = viisi virtaa), ei yksittäinen vana:
+   * selkäranka kulkee kolmen virran läpi, ja kärkikohtainen `virrat`
+   * kertoo, kuuluuko vana valittuun väriin. Vana kuuluu valintaan, jos
+   * yksikin sen kärki on valitun virran väriä.
+   *
+   * Muutos on PELKKÄÄ MATERIAALIA — peittävyys ja viivan leveys — eikä
+   * kosketa geometriaan, katkoon eikä kärkiväreihin, joten `paivita`
+   * saa yhä ajaa kellon mukana korostuksen alla. `null` palauttaa
+   * kaikki lähtöarvoihinsa.
+   *
+   * @param {string|null} virta valitun virran tunnus tai null.
+   * @param {{ vaimea?: number, hehku?: number }} asetukset
+   */
+  function korosta(virta = null, { vaimea = 0.35, hehku = 1.3 } = {}) {
+    if (purettu) return false;
+    for (const o of oliot) {
+      if (o.kotipesa) {
+        if (o.mat) o.mat.opacity = virta && virta !== 'paavirta' ? KAISTAN_PEITTO * 2 * vaimea : KAISTAN_PEITTO * 2;
+        continue;
+      }
+      const omat = o.virrat?.length ? new Set(o.virrat) : new Set([o.virta]);
+      const valittu = !virta || omat.has(virta);
+      const paksuus = o.paksuus ?? o.mat.linewidth;
+      o.paksuus = paksuus;
+      o.mat.opacity = virta ? (valittu ? 1 : VANAN_PEITTO * vaimea) : VANAN_PEITTO;
+      o.mat.linewidth = virta && valittu ? paksuus * hehku : paksuus;
+      o.kaistaMat.opacity = virta && !valittu ? KAISTAN_PEITTO * vaimea : KAISTAN_PEITTO;
+    }
+    return true;
+  }
+
+  /**
+   * Vanojen kärkilistat ulos (tutkimusvaihe: napin rajaus ja nostojen
+   * sävytys). Kopio kentistä, ei olioita: kutsuja ei pääse käsiksi
+   * three.js-materiaaleihin.
+   */
+  function pisteet() {
+    return oliot.filter((o) => !o.kotipesa).map((o) => ({
+      tunnus: o.tunnus, virta: o.virta, virrat: o.virrat ?? null, pisteet: o.pisteet,
+    }));
+  }
+
   /** Selkärangan kärki kameralle (ensimmäinen vana on selkäranka). */
   function karki(nyt, { ennakko = VANAN_ENNAKKO } = {}) {
     const selka = oliot.find((o) => !o.kotipesa);
@@ -587,6 +663,8 @@ export function luoVanat({
     valmis,
     paivita,
     karki,
+    korosta,
+    pisteet,
     pura,
     /** Mittarit savukkeelle: vanoja, kärkiä, kaistoja, kaistan leveys. */
     tila: () => ({ ...mittarit, purettu }),

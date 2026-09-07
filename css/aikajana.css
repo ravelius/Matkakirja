@@ -225,7 +225,30 @@
   z-index: 1;
   box-sizing: border-box;
   width: 100%;
-  padding: 1.9rem 2.1rem 1.8rem;
+  /*
+   * PEHMUSTE = VAPAA TILA + MASKIN SYÖMÄ VYÖHYKE (omistaja 7.9.2026
+   * ilta: *"ei saa olla leikannut noin lähelle tekstiä"*).
+   *
+   * Repeämä syö elementin reunasta osuuden, joka on aina sama murto-osa
+   * laatikon LEVEYDESTÄ — maski venytetään sivusuhteen mukaan, joten
+   * yksi maskiyksikkö on yhtä monta pikseliä kummallakin akselilla
+   * (js/pergamentti.js MITTASUHTEET). Siksi pehmusteen toinen osa on
+   * PROSENTTI: CSS laskee kaikki pehmusteprosentit laatikon leveydestä,
+   * jolloin sama sääntö pitää niin kapealla puhelinlaatikolla kuin
+   * leveällä kuvapaperilla — pehmustetta ei tarvitse säätää käsin, kun
+   * paperi kasvaa.
+   *
+   * Ensimmäinen osa on se vapaa tila, jonka omistaja pyysi: 2,4 rem
+   * ylhäällä ja alhaalla, 2 rem sivuilla. Muuttujina, jotta laatikon
+   * muunnelma (esim. leveämpi kuvapaperi) voi kasvattaa vapaata tilaa
+   * KOSKEMATTA prosenttiosaan — sen poistaminen toisi tekstin takaisin
+   * repeämän kylkeen.
+   */
+  --avaus-pehmuste-y: 2.4rem;
+  --avaus-pehmuste-x: 2rem;
+  padding:
+    calc(var(--avaus-pehmuste-y) + 4.4%)
+    calc(var(--avaus-pehmuste-x) + 5.6%);
   background-color: #d9c69c;
   /*
    * PAPERI ON KUVAPUTKEN BITTIKARTTA, TEKSTI LADOTAAN TÄSSÄ (omistaja
@@ -255,24 +278,30 @@
    * saman reunan mutta kaksi kaarta eivät ole identtisiä.
    *
    * Kellastunut reunavyö kolmena kerroksena. Säteet ovat suuremmat
-   * kuin clip-path-aikana: inset-varjo piirtyy elementin SUORAAN
-   * reunaan, josta maski syö ulomman ~3 %, joten kapea vyö olisi
-   * jäänyt maskin alle. Nyt vyö yltää repeämän sisäpuolelle asti.
+   * kuin clip-path-aikana (inset-varjo piirtyy elementin SUORAAN
+   * reunaan, josta maski syö ulomman osan), mutta PEITTÄVYYS on
+   * palautettu lähelle entistä: omistaja 7.9.2026 ilta luki tumman
+   * vyön ja oranssin kajon yhdessä kärventymänä (*"kuin paperi olisi
+   * tulessa"*). Vyö on nyt vanhan arkin kellastuma, ei nokea.
    */
   box-shadow:
-    inset 0 0 22px rgba(74, 46, 12, 0.55),
-    inset 0 0 46px rgba(86, 56, 18, 0.34),
-    inset 0 0 92px rgba(58, 36, 10, 0.28);
+    inset 0 0 20px rgba(74, 46, 12, 0.38),
+    inset 0 0 44px rgba(86, 56, 18, 0.22),
+    inset 0 0 86px rgba(58, 36, 10, 0.17);
   color: #2b2116;
   font-family: var(--font-luku);
   text-align: center;
   overflow: hidden;
 }
 /*
- * Isompi paperi kestää väljemmän sisennyksen: repaleinen reuna (ks.
- * clip-path yllä) pysyy kaukana tekstistä myös leveämmällä arkilla.
+ * Isompi paperi kestää väljemmän vapaan tilan. Vain muuttujat, ei
+ * padding-lyhennettä: prosenttiosa (maskin syömä repeämävyöhyke) on
+ * osa laatikon leveyttä ja pysyy mukana sellaisenaan.
  */
-.aikajana-avaus-laatikko.on-kuva { padding: 2.1rem 2.5rem 1.9rem; }
+.aikajana-avaus-laatikko.on-kuva {
+  --avaus-pehmuste-y: 2.6rem;
+  --avaus-pehmuste-x: 2.2rem;
+}
 .aikajana-avaus-laatikko > * { position: relative; z-index: 2; }
 /*
  * LÄISKÄT JA KELLASTUMAT (::before, paikallaan). Kulmat ovat
@@ -1719,9 +1748,35 @@
    * jäisivät kummatkin liian kapeiksi, ja kuva ylhäällä on se, mikä
    * pysäyttää katseen ennen lukemista. Paperi saa lähes koko ruudun
    * leveyden kuten ennenkin.
+   *
+   * KAPEALLA RUUDULLA VAPAA TILA ON PIENEMPI, REPEÄMÄN VARA EI.
+   * Pehmusteen prosenttiosa (maskin syömä vyöhyke) jää ennalleen —
+   * se on murto-osa laatikon leveydestä ja siis jo valmiiksi
+   * pienempi. Vain vapaata tilaa kavennetaan, koska 300 px:n
+   * paperilla työpöydän mitat veivät tekstipalstasta viidenneksen ja
+   * kasvattivat laatikon ruudun yli (mitattu 390 × 844: 885 px > 844).
+   * Repeämän ja tekstin väliin jää silti reilut 1,7 rem joka reunalla
+   * (savuke-pergamentti mittaa sen; ehdoton alaraja on 1,6 rem).
+   * Kuvallinen laatikko säätää vain muuttujia, ei padding-lyhennettä —
+   * muuten prosenttiosa katoaisi ja teksti palaisi repeämän viereen.
    */
   .aikajana-avaus-kehys.on-kuva { width: 92%; }
-  .aikajana-avaus-laatikko.on-kuva { padding: 1.5rem 1.4rem 1.4rem; }
+  .aikajana-avaus-laatikko {
+    --avaus-pehmuste-y: 1.75rem;
+    --avaus-pehmuste-x: 1.4rem;
+  }
+  /*
+   * Kuvapaperi on kapealla ruudulla YHTÄ PALSTAA ja siis korkea, ja
+   * korkealla laatikolla repeämä puree suhteessa syvimmältä (mitattu
+   * 7.9.2026: 4,4 % leveydestä, kun leveällä paperilla 3,8 %). Vapaa
+   * tila nostettiin siksi 1,5 / 1,4 → 1,7 / 1,55 rem, jotta teksti ja
+   * Käynnistä-nappi pysyvät omistajan pyytämän 1,6 rem:n päässä
+   * repeämästä myös täällä (savuke-pergamentti mittaa välin).
+   */
+  .aikajana-avaus-laatikko.on-kuva {
+    --avaus-pehmuste-y: 1.7rem;
+    --avaus-pehmuste-x: 1.55rem;
+  }
   .aikajana-avaus-sisus { grid-template-columns: 1fr; gap: 0.95rem; }
   .aikajana-avaus-kuva { order: -1; }
 }
@@ -1758,6 +1813,191 @@
   .aikajana-valo.nykyinen .aikajana-valo-pallo,
   .aikajana-valo.nykyinen .aikajana-valo-syke { animation: none; }
   .aikajana-valo.nykyinen .aikajana-valo-pallo { opacity: 1; }
+}
+
+/* ===========================================================================
+   KERTOMUSESITYS — yksi kaari, musta alku, kuvat sivuosassa
+   ---------------------------------------------------------------------------
+   Raamattu IHMISEN MATKA ON YKSI KAARI, EI PYSAKKEJA + ALKAA MUSTASTA
+   RUUDUSTA (omistaja 7.9.2026). Ohjaaja on js/linssit/ihmisen-matka-esitys.js;
+   täällä ovat vain sen pinnat:
+
+     .aikajana-esitys-peite      musta ruutu Käynnistä-napin jälkeen
+     .aikajana.esitys-pimea      kello, otsikot, nauha ja Tauko piiloon —
+                                 vain sulkunappi jää käytettäväksi
+     .aikajana.esitys-kaynnissa  esinerivi (nauha) pois koko esityksen ajaksi
+     .aikajana-kertomusteksti    kertojan teksti ruudun alalaidassa
+     .aikajana-kertomuskuva      löytökuva pienenä kohteen viereen
+     .aikajana-kertomus-pulu     pulun välihuomio kapeana välihuutona
+   =========================================================================== */
+
+/*
+ * MUSTA RUUTU. Peite on linssin juuren ENSIMMÄINEN lapsi, joten kaikki
+ * muu linssin oma on sen päällä DOM-järjestyksessä — ja piilotus
+ * hoidetaan erikseen luokalla `esitys-pimea`, jotta sulkunappi jää
+ * näkyviin ja käytettäväksi. Peite on läpinäkymätön #000 samasta
+ * syystä kuin avausjakson peite (ks. AVAUSJAKSO): mitään ei saa
+ * erottua takaa edes kirkkaalla näytöllä.
+ */
+.aikajana-esitys-peite {
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  opacity: 0;
+  pointer-events: auto;
+  transition: opacity 500ms ease;
+}
+.aikajana-esitys-peite.musta { opacity: 1; }
+/* VALOT SYTTYVÄT: musta häipyy 2,6 sekunnissa (js VALOJEN_MS). */
+.aikajana-esitys-peite.pois {
+  opacity: 0;
+  transition: opacity 2600ms ease;
+}
+
+/*
+ * PIMEÄSSÄ VAIN SULKUNAPPI. Kello, otsikot, esinerivi, lapun kahva ja
+ * Tauko/Jatka väistyvät mustan alle. Sulkunappi jää: se on juuren suora
+ * lapsi omalla pinollaan (css .aikajana-sulje, z-index 8), joten se on
+ * peitteen päällä ilman että tässä tarvitsee nostaa mitään — ohjainrivi
+ * sai aiemmin oman z-indexin juuri sitä varten, ja se poistui, kun ✕
+ * siirtyi kartan oikeaan yläkulmaan (7.9.2026).
+ */
+.aikajana.esitys-pimea .aikajana-otsikot,
+.aikajana.esitys-pimea .aikajana-kello,
+.aikajana.esitys-pimea .aikajana-nauha,
+.aikajana.esitys-pimea .aikajana-ilmio,
+.aikajana.esitys-pimea .aikajana-vinjetti,
+.aikajana.esitys-pimea .aikajana-nappi:not(.aikajana-sulje) {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 500ms ease;
+}
+/*
+ * PALKKI KUTISTUU SULKUNAPIN YMPÄRILLE. Ilman tätä pimeään jäisi
+ * leijumaan tyhjä pergamenttikehys — palkin oma tausta ja reunus —
+ * jonka sisällä ei näy mitään: kello ja otsikot ovat läpinäkyviä
+ * mutta vievät yhä tilansa. Nyt palkin runko häviää ja jäljelle jää
+ * vain ✕ omalla kehyksellään (omistaja: *"vain kertojan ääni ja
+ * kysymys"*).
+ */
+.aikajana.esitys-pimea .aikajana-ylarivi {
+  border-color: transparent;
+  background: none;
+  box-shadow: none;
+}
+.aikajana.esitys-pimea .aikajana-otsikot,
+.aikajana.esitys-pimea .aikajana-kello { display: none; }
+
+/*
+ * ESINERIVI POIS KOKO ESITYKSEN AJAKSI (omistaja 7.9.2026: kertomus on
+ * yksi kaari eikä korttien selausta). Kortit palaavat, kun ohjaaja
+ * poistaa luokan ennen tutkimusvaihetta.
+ */
+.aikajana.esitys-kaynnissa .aikajana-nauha {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 400ms ease;
+}
+
+/*
+ * KERTOJAN TEKSTI RUUDULLA (kaanonin kenttä `teksti`: "ruudulla
+ * näytettävä teksti"). Alalaidassa, esinerivin paikalla — mykistetty
+ * peli seuraa samaa kertomusta lukemalla. Ei nappaa napautuksia:
+ * kartta on koko ajan pelaajan alla.
+ */
+.aikajana-kertomusteksti {
+  position: absolute;
+  left: 50%;
+  bottom: 3.2rem;
+  transform: translateX(-50%);
+  width: min(34rem, calc(100vw - 2rem));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+.aikajana-kertomusteksti.esilla { opacity: 1; }
+.aikajana-kertomusteksti-sisus {
+  margin: 0;
+  padding: 0.6rem 0.9rem;
+  border-radius: 4px;
+  background: rgba(16, 12, 8, 0.72);
+  border: 1px solid var(--aikajana-reuna);
+  box-shadow: var(--aikajana-varjo);
+  color: #f1e6d0;
+  font-size: 1.02rem;
+  line-height: 1.45;
+  text-align: center;
+  text-wrap: balance;
+}
+
+/*
+ * LÖYTÖKUVA SIVUOSASSA (omistaja 7.9.2026: *"ne eivät ole se
+ * määrittävin tekijä. Ne vaan semmoista lisäkuvitusta … mutta ne eivät
+ * saisi pysäyttää sitä"*). Kehys ripustetaan LAMPUN elementtiin pallon
+ * pinnalla, joten se seuraa kohdetta kameran liikkuessa. Leveys tulee
+ * js:stä muuttujana (KUVAN_OSUUS), jotta luku on yhdessä paikassa.
+ *
+ * Sama pergamentti kuin virtakuvalla (.aikajana-virta-kuva) mutta
+ * isompana ja kohteen SIVUSSA eikä sen yllä: kuva ei saa peittää sitä
+ * pistettä, josta kertoja puhuu.
+ */
+.aikajana-kertomuskuva {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--kertomuskuva-leveys, 22vw);
+  max-width: 260px;
+  aspect-ratio: 3 / 2;
+  padding: 4px;
+  box-sizing: border-box;
+  background: #f4ecd8;
+  border-radius: 2px;
+  box-shadow: 0 3px 10px rgba(20, 12, 4, 0.5), 0 0 0 1px rgba(90, 60, 20, 0.35);
+  transform-origin: 0 50%;
+  transform: translate(1.4rem, -50%) scale(0.6);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.34, 1.4, 0.64, 1), opacity 0.4s ease;
+  pointer-events: none;
+}
+.aikajana-kertomuskuva img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1px;
+}
+.aikajana-kertomuskuva.esilla { transform: translate(1.4rem, -50%) scale(1); opacity: 1; }
+
+/*
+ * PULUN VÄLIHUOMIO ON VÄLIHUUTO, EI REPLIIKKI (sama sääntö ja sama asu
+ * kuin fokusvirran huudahduksella, css/fokusvirta.css): kapeampi,
+ * kevyempi ja hieman kallellaan. Ääni soi 0,7 × tasolla kertojan
+ * päälle ilman väistöä (js/liviapuhe.js LIVIAN_VALIHUOMION_VAIMENNUS).
+ */
+.pollo-kupla.aikajana-kertomus-pulu,
+.aikajana-kertomus-pulu {
+  max-width: min(13rem, 62vw);
+  padding: 0.45rem 0.7rem;
+  transform: rotate(-1.5deg);
+}
+.aikajana-kertomus-pulu .pollo-vihje-lause {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Ei liukuja: musta vaihtuu, teksti vaihtuu, kuva ilmestyy. */
+  .aikajana-esitys-peite,
+  .aikajana-esitys-peite.pois,
+  .aikajana-kertomusteksti,
+  .aikajana-kertomuskuva,
+  .aikajana.esitys-pimea .aikajana-otsikot,
+  .aikajana.esitys-pimea .aikajana-kello,
+  .aikajana.esitys-kaynnissa .aikajana-nauha { transition: none; }
+  .aikajana-kertomuskuva { transform: translate(1.4rem, -50%); }
+  .aikajana-kertomuskuva.esilla { transform: translate(1.4rem, -50%); }
+  .aikajana-kertomus-pulu { transform: none; }
 }
 
 /* ===========================================================================

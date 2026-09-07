@@ -29,7 +29,12 @@
  *   3. NOPANHEITON KOHTEET samalla ehdolla — omistaja nimesi ne
  *      erikseen. Kohteet syntyvät oikeasta heitosta, eivät kuvitteesta.
  *
- *   4. KAUPUNKIPISTE ON RUUDUN VAKIO. Pisteen levyn ruutuhalkaisija on
+ *   4. NAPPULAN JALKA ON KAUPUNGIN PISTEESSÄ (päätoimittajan linjaus
+ *      7.9.2026, Raamattu VIAT v1672): piirretyn hahmon alareunan
+ *      keskipiste on pinnan pisteessä ±1 px joka kehyksessä — ei
+ *      merkin keskipiste, kuten kirjaston oma CSS2D-keskitys teki.
+ *
+ *   5. KAUPUNKIPISTE ON RUUDUN VAKIO. Pisteen levyn ruutuhalkaisija on
  *      sama ± 1 px korkeudella 0,35 ja lähimmällä zoomilla (luku 12.3:
  *      `pointRadius` on astemitta, joten piste kasvoi lähennettäessä
  *      iPadin ruudulla noin 30 pikseliin).
@@ -171,11 +176,23 @@ if (auki) {
       bubbles: true, cancelable: true, pointerId: 1, pointerType: 'touch', clientX: x, clientY: y,
     }));
     const kehys = () => new Promise((v) => requestAnimationFrame(() => requestAnimationFrame(v)));
-    /** Suurin ero merkin ruutupaikan ja pinnan pisteen välillä juuri nyt. */
+    /**
+     * Suurin ero merkin ruutupaikan ja pinnan pisteen välillä juuri nyt.
+     *
+     * NAPPULASTA MITATAAN MYÖS JALKA (päätoimittajan linjaus 7.9.2026,
+     * Raamattu VIAT v1672): ankkuri kertoo, missä merkki on kiinni,
+     * mutta pelaaja näkee sen PIIRRETYN hahmon — ja linjaus on, että
+     * nappulan jalka seisoo kaupungin pisteessä sekä levossa että
+     * liikkeessä. Jalka on svg:n alareunan keskipiste (lepomerkin oma
+     * laatikko on 0 × 0, ks. css/styles.css).
+     */
     const mittaa = () => {
       let suurin = 0;
       let pahin = null;
       let laskettu = 0;
+      let jalka = 0;
+      let jalkoja = 0;
+      const koti = kotelo.getBoundingClientRect();
       for (const d of p.htmlElementsData()) {
         const el = d.el;
         if (!el?.isConnected || d.poistuu) continue;
@@ -186,8 +203,17 @@ if (auki) {
         laskettu += 1;
         const ero = Math.hypot(Number(m[1]) - pinta.x, Number(m[2]) - pinta.y);
         if (ero > suurin) { suurin = ero; pahin = `${d.laji ?? '?'}:${d.avain}`; }
+        if (d.laji !== 'nappula') continue;
+        const svg = el.querySelector('svg')?.getBoundingClientRect();
+        if (!svg) continue;
+        jalkoja += 1;
+        jalka = Math.max(jalka, Math.hypot(
+          (svg.left + svg.width / 2 - koti.left) - pinta.x, (svg.bottom - koti.top) - pinta.y,
+        ));
       }
-      return { suurin, pahin, laskettu };
+      return {
+        suurin, pahin, laskettu, jalka, jalkoja,
+      };
     };
     tapahtuma('pointerdown', x0, y0);
     await kehys();
@@ -196,6 +222,8 @@ if (auki) {
     let vahin = Infinity;
     let kehyksia = 0;
     let merkkeja = 0;
+    let jalka = 0;
+    let jalkoja = 0;
     for (let i = 1; i <= 20; i += 1) {
       tapahtuma('pointermove', x0 + dx * i, y0);
       // eslint-disable-next-line no-await-in-loop
@@ -205,6 +233,8 @@ if (auki) {
       merkkeja = Math.max(merkkeja, m.laskettu);
       if (m.suurin > suurin) { suurin = m.suurin; pahin = m.pahin; }
       vahin = Math.min(vahin, m.suurin);
+      jalka = Math.max(jalka, m.jalka);
+      jalkoja += m.jalkoja;
     }
     tapahtuma('pointerup', x0 + dx * 20, y0);
     await kehys();
@@ -214,6 +244,8 @@ if (auki) {
       pahin,
       kehyksia,
       merkkeja,
+      jalka: Number(jalka.toFixed(3)),
+      jalkoja,
       pov: p.pointOfView(),
     };
   }, suunta);
@@ -227,7 +259,13 @@ if (auki) {
   vaadi('2. veto ei kasvata eroa kumpaankaan suuntaan (suurin ≈ vähin, molemmat suunnat samat)',
     Math.abs(ita.suurin - ita.vahin) <= SALLITTU_PX && Math.abs(ita.suurin - lansi.suurin) <= SALLITTU_PX,
     JSON.stringify({ ita, lansi }));
+  vaadi(`4. nappulan JALKA on kaupungin pisteessä joka kehyksessä (≤ ${SALLITTU_PX} px, VIAT v1672)`,
+    ita.jalkoja > 0 && lansi.jalkoja > 0
+      && ita.jalka <= SALLITTU_PX && lansi.jalka <= SALLITTU_PX,
+    `itään ${ita.jalka} px (${ita.jalkoja} mittausta), `
+    + `länteen ${lansi.jalka} px (${lansi.jalkoja})`);
   tieto('merkkejä mitattu vedon aikana', ita.merkkeja);
+  tieto('nappulan jalan ero pinnan pisteestä itään / länteen (px)', `${ita.jalka} / ${lansi.jalka}`);
   tieto('suurin ero itään / länteen (px)', `${ita.suurin} / ${lansi.suurin}`);
   if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, 'pallo-merkit-lukossa.png') });
 
@@ -373,7 +411,7 @@ if (auki) {
   const kaukana = await halkaisija(0.35);
   const lahella = await halkaisija(null);
   const ero = kaukana && lahella ? Math.abs(kaukana.halkaisija - lahella.halkaisija) : Infinity;
-  vaadi('4. kaupunkipisteen ruutuhalkaisija on sama kaukana ja lähellä (± 1 px)',
+  vaadi('5. kaupunkipisteen ruutuhalkaisija on sama kaukana ja lähellä (± 1 px)',
     Boolean(kaukana && lahella) && ero <= 1,
     JSON.stringify({ kaukana, lahella, ero: Number(ero.toFixed(2)) }));
   tieto('kaupunkipisteen ruutuhalkaisija', kaukana && lahella

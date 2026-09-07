@@ -374,6 +374,47 @@ export function luoNostot({
       asettele: r.perhe === 'piste' ? undefined : asetteleNosto,
     }));
     merkit.aseta('nostot', datumit);
+    /*
+     * NIMILAPPU ON OSA OSUMAPINTAA (Raamattu, VIAT v1672; omistaja
+     * 7.9.2026 illalla sanatarkasti: *"Karttanostoissa teksti ei ota
+     * klikkausta ainoastaan kuvake. Saisiko myös tekstit
+     * klikattaviksi?"*).
+     *
+     * Osuma on tähän asti ollut pelkkä ruutuetäisyys merkin pisteeseen
+     * (js/pallolauta/lauta.js napautaPintaan, 44 px), ja lappu piirtyy
+     * ikonin KYLKEEN: pitkän nimen ulkopää jää säteen ulkopuolelle tai
+     * lähemmäksi naapurin keskipistettä, jolloin napautus tekstiin ei
+     * tehnyt mitään tai avasi väärän noston.
+     *
+     * Jokainen osuma antaa siksi oman LAPPUNSA LAATIKON ruudulla —
+     * täsmälleen sen, jota sovittelu (js/pallolauta/sovittelu.js) käytti
+     * väistössä, samasta kaavasta (nostonLaatikko) samoilla asennoilla.
+     * Piilotettu lappu (sovittelu vei nimen) palauttaa null, jolloin
+     * jäljellä on vain kuvakkeen säde — kuten ennen.
+     *
+     * Laatikko lasketaan VASTA NAPAUTUKSESSA annetusta ruutupisteestä
+     * (`lappu(p)`) eikä ladonnan hetkellä: kamera on voinut liikkua
+     * ladonnan jälkeen, ja lappu seuraa merkkiään.
+     */
+    naytetaan.forEach((r, i) => {
+      const d = datumit[i];
+      if (r.perhe === 'piste') return;
+      // Datum kantaa sovittelun jälkeisen asennon (kylki ja siirto);
+      // osuma lukee sen vasta napautuksessa, jotta väistö näkyy myös
+      // osumapinnassa.
+      r.datum = d;
+      r.lappu = (p) => (d.nimioNakyy && d.nimi
+        ? nostonLaatikko(p, r, {
+          kylki: d.puoli, dx: d.dx, dy: d.dy, nimio: true,
+        })
+        : null);
+    });
+    // Poltetun musteen lappu on paistettu laattaan: lauta ei näe sitä,
+    // mutta tuntee sen laatikon samasta kaavasta (ladonta on sama).
+    for (const r of nakyvat) {
+      if (!r.poltettu || r.perhe === 'piste') continue;
+      r.lappu = (p) => (r.nimioNakyy && r.nimi ? nostonLaatikko(p, r, { nimio: true }) : null);
+    }
     osumat = [...naytetaan, ...nakyvat.filter((r) => r.poltettu)];
     /*
      * KIINTEÄ MUSTE ON NIMILADONNAN VARAUS, LIIKKUVA EI (Raamattu,
@@ -467,7 +508,13 @@ export function luoNostot({
     paivita,
     sovittele,
     paivitaValot,
-    /** Napautettavat merkit ruudulla ({ avain, id, lat, lng, nimi, avaa, perhe, poltettu }). */
+    /**
+     * Napautettavat merkit ruudulla ({ avain, id, lat, lng, nimi, avaa,
+     * perhe, poltettu }). Nostoilla ja eläintäyillä on lisäksi
+     * `lappu(p)`: nimilapun ruutulaatikko annetussa ruutupisteessä tai
+     * null, jos lappua ei juuri nyt ole (ks. NIMILAPPU ON OSA
+     * OSUMAPINTAA).
+     */
     osumat: () => osumat,
     /** Kiinteän musteen laatikot nimiladonnan varauksiksi (ks. paivita). */
     laatikot: () => laatikot,
@@ -485,6 +532,9 @@ export function luoNostot({
       .map(({ r, datum }) => ({
         id: datum.id,
         nimi: datum.nimi,
+        // Perhe kertoo savukkeelle, mikä ovi lapun takaa aukeaa
+        // (nosto = kohdekortti, elain = eläintäky).
+        perhe: datum.perhe,
         puoli: datum.puoli,
         dx: datum.dx,
         dy: datum.dy,
@@ -492,6 +542,25 @@ export function luoNostot({
           kylki: datum.puoli, dx: datum.dx, dy: datum.dy, nimio: true,
         }),
       })),
+    /**
+     * NAPAUTETTAVIEN LAPPUJEN LAATIKOT juuri nyt (savukkeet ja
+     * vartijat): sama `lappu(p)`, jota osumatesti käyttää
+     * (js/pallolauta/lauta.js lappuunOsunut), joten savuke mittaa
+     * täsmälleen sitä pintaa, jota sormi napauttaa — myös POLTETUSTA
+     * musteesta, jolla ei ole elementtiä lainkaan.
+     */
+    osumaLaatikot: () => osumat.map((o) => {
+      const p = typeof o.lappu === 'function' ? ruudulla(o.lat, o.lng) : null;
+      const r = p ? o.lappu(p) : null;
+      return r ? {
+        id: o.id,
+        nimi: o.nimi,
+        perhe: o.perhe,
+        poltettu: Boolean(o.poltettu),
+        puoli: o.datum?.puoli ?? o.puoli ?? 'oikea',
+        ...r,
+      } : null;
+    }).filter(Boolean),
     valot: () => valot,
     /** Kappaleet aiheittain selitevalikolle (js/karttavalot.js). */
     laskurit: () => laskurit,

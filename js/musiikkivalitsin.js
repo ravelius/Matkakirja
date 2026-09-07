@@ -151,6 +151,71 @@ export function kuunteleMusiikkitilaa(fn) {
   return () => musiikkiKuuntelijat.delete(fn);
 }
 
+/* ── musiikin oma kytkin ─────────────────────────────────────────── */
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * MUSIIKKI JA ÄÄNIMAISEMA OVAT ERI ASIOITA (omistaja 7.9.2026 illalla,
+ * sanatarkasti: *"striimilukija ei mene päälle, jos taustamusiikki on
+ * kytketty pois. Ne ovat kaksia irrallista asiaa, joten striimi-ääni
+ * pitäisi kuulua, vaikka taustamusiikki on kytketty pois."* —
+ * Raamattu, VIAT v1672)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MITÄ ENNEN OLI. Äänivalikossa oli yksi kytkin nimeltä TAUSTAÄÄNET
+ * (js/sound.js `enabled`), ja sen takana oli KAIKKI: paikkojen
+ * äänimaisema, tehosteet, pohjaraita, kaupunkien kappaleet,
+ * siirtymämusiikki ja visamusiikki. Pelaaja, joka halusi vain
+ * musiikin pois, menetti samalla kenttä-äänitykset — juuri se, mistä
+ * omistaja kirjoitti.
+ *
+ * MIKSI KYTKIN ASUU TÄÄLLÄ. Tämä moduuli on musiikin oma alin kerros
+ * (pohjaraidan valitsin) eikä tuo mitään soittimista, joten sekä
+ * js/ambience-stream.js (pohjaraita, visamusiikki), js/
+ * siirtymamusiikki.js (matkan ja linssin raidat) että js/ui.js
+ * (aarteen paljastusaihe) voivat kysyä siltä samaa asiaa ilman kehää.
+ * Sama kaava kuin äänivalinnalla: valinta on pysyvä (localStorage),
+ * oletus on PÄÄLLÄ, ja muutos kertoo kuuntelijoille — samoille, jotka
+ * kuulevat tilanvaihdon, koska teko on molemmissa sama: katso mitä
+ * pitäisi soida, ja soita se (tai vaikene).
+ *
+ * TYÖNJAKO: musiikin kytkin vaientaa VAIN musiikin. Äänimaisema
+ * vaikenee omasta kytkimestään (äänivalikon Äänimaisema = sound.js
+ * enabled) tai koko pelin mykistyksestä (js/aani-tausta.js, kun peli
+ * ei ole päällimmäisenä).
+ */
+const MUSIIKIN_AVAIN = 'matkakirja-musiikki';
+
+/** Luetaan kerran: valinta on pysyvä, oletus päällä. */
+let musiikkiSallittu = (() => {
+  try {
+    return localStorage.getItem(MUSIIKIN_AVAIN) !== 'off';
+  } catch {
+    return true;
+  }
+})();
+
+/** Soiko pelin musiikki (pohjaraita, siirtymä, visa, aarre, linssi)? */
+export const musiikkiPaalla = () => musiikkiSallittu;
+
+/**
+ * Musiikki päälle tai pois. Kuuntelijat (js/ambience-stream.js) saavat
+ * saman herätteen kuin tilanvaihdosta: pois → soiva raita vaikenee,
+ * päälle → oikea raita palaa samaan paikkaan.
+ */
+export function asetaMusiikkiPaalla(paalla) {
+  const uusi = Boolean(paalla);
+  if (uusi === musiikkiSallittu) return uusi;
+  musiikkiSallittu = uusi;
+  try {
+    localStorage.setItem(MUSIIKIN_AVAIN, uusi ? 'on' : 'off');
+  } catch {
+    /* tallennus ei ole välttämätöntä */
+  }
+  for (const fn of musiikkiKuuntelijat) fn();
+  return uusi;
+}
+
 /* ── ketju ───────────────────────────────────────────────────────── */
 
 /**

@@ -52,6 +52,32 @@
  * KUVATON ERÄ (Perustuslaki, faktakuri). Faktat on luettu
  * en-Wikipedian raakatekstistä kohde kerrallaan 6.9.2026.
  */
+/*
+ * ── ERÄ M20, 7.9.2026: YHDEKSÄS MERKKI MAHTUI ──────────────────────
+ *
+ * Erä M8 kirjasi Singaporen ylärajaksi kahdeksan merkkiä ja totesi,
+ * että "yhdeksäs toi ensimmäisen nimiö–nimiö-limityksen". Yläraja
+ * mitattiin nyt uudelleen ehdokas kerrallaan, ja yksi yhdeksäs
+ * mahtui: Sungei Buloh (103,72889 / 1,44611 → x 9291,0 / y 3163,3).
+ * `node tools/tarkista-nimiolimitys.mjs SGP` sanoo sen kanssa yhä
+ * "NIMIÖ NIMIÖN PÄÄLLÄ: 0", eikä yhdenkään vanhan merkin nimiö
+ * muuttunut: "nimiö symbolin päällä" -lista on tavun tarkkuudella
+ * sama kuin ennen lisäystä.
+ *
+ * MUUT EHDOKKAAT KAATUIVAT MITTAAN: Changi (103,9885 / 1,3644) tuotti
+ * yhden limityksen skandaalin "Pan-Electric" kanssa, ja Sentosa,
+ * MacRitchie, Fordin vanha tehdas ja Sembawang ovat 0,8–3,3
+ * lautayksikön päässä olemassa olevista merkeistä. Merkkien tiheys on
+ * Singaporessa muutenkin tätä luokkaa — koko maa mahtuu noin kymmenen
+ * lautayksikön ruutuun — joten 2,7 yksikön väli Bukit Timahin
+ * merkkiin on maalle tavallinen, ei poikkeus.
+ *
+ * VAJE ON NYT KOHTEITA −2 JA MAASTOA −2. Eläintäky on yhä mahdoton,
+ * ja mittaus toistettiin 7.9.2026: maan monikulmion sisään osuu 1 556
+ * ruudukkopistettä (0,005°), ja kaukaisinkin niistä on vain 19,8
+ * lautayksikön päässä Singapore-laatasta, kun tests/elaintakyt.test.mjs
+ * vaatii 35. Kaupunkisädettä ei kierretä poikkeuksella.
+ */
 export const MAASTOKOHTEET_SGP = [
   /* ─────────────────────────── KOHTEET (5) ─────────────────────── */
   {
@@ -223,5 +249,41 @@ export const MAASTOKOHTEET_SGP = [
       + 'avoin.',
     lahde: 'en-Wikipedia "Bukit Timah Hill", johdanto sekä osiot "Altitude" ja '
       + '"Location and accessibility" (tarkistettu 6.9.2026).',
+  },
+  /* ================================================================
+   * ERÄ M20, 7.9.2026 — YHDEKSÄS MERKKI.
+   * ============================================================== */
+  {
+    id: 'sungei-buloh',
+    // Kosteikko ei ole vuori eikä meri: tyyppi 'muu' + symboli 'luonto'.
+    symboli: 'luonto',
+    nimi: 'Sungei Buloh',
+    tyyppi: 'muu',
+    kysymykset: [
+      'Mistä alueen linnut tulevat talveksi?',
+      'Miten kosteikosta tuli luonnonsuojelualue?',
+    ],
+    korostukset: ['ASEAN-perintöpuisto|ASEAN-perintöpuistoksi'],
+    nappi: 'Muuttolintujen välilasku',
+    // 103.72889 E / 1.44611 N — en-Wikipedia "Sungei Buloh Wetland Reserve".
+    // Lähin pelikaupunki Singapore 12,6 lautayksikköä eli yli
+    // kaupunkikaton säteen (8); lähin muu merkki Bukit Timah 2,7.
+    laudat: {
+      maailmankartta: { x: 9291, y: 3163.3 },
+    },
+    teksti: 'Sungei Buloh on luonnonsuojelualue Singaporen luoteisosassa ja maan ensimmäinen '
+      + 'suojeltu kosteikko. Paikkaa ei tunnettu luontokohteena ennen vuotta 1986, jolloin '
+      + 'Malayan Nature Societyn Singaporen osaston jäsenet vaativat sen suojelua — syynä '
+      + 'oli poikkeuksellisen suuri lintulajien määrä, muun muassa muuttolinnut, jotka '
+      + 'tulevat aina Siperiasta asti ja jatkavat Australiaan talvea pakoon. Hallitus tarttui '
+      + 'ehdotukseen, ja 0,87 neliökilometrin alue sai luontopuiston aseman 1989; puisto '
+      + 'avattiin virallisesti 6. joulukuuta 1993. Marraskuussa 2001 hallitus ilmoitti '
+      + 'nostavansa alueen luonnonsuojelualueeksi, mikä suojaa sen luvattomalta '
+      + 'tuhoamiselta ja muuttamiselta, ja koko 130 hehtaarin alue vahvistettiin '
+      + '1. tammikuuta 2002. Vuonna 2003 se listattiin ASEAN-perintöpuistoksi. Alueen '
+      + 'merkitys muuttolintujen levähdyspaikkana on tunnustettu liittämällä se '
+      + 'itäaasialais-australialaiseen kahlaajaverkostoon.',
+    lahde: 'en-Wikipedia "Sungei Buloh Wetland Reserve", johdanto-osa ja osio "History" '
+      + '(tarkistettu 7.9.2026).',
   },
 ];

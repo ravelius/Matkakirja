@@ -1578,3 +1578,92 @@ pallon veto piilottaa → kahva palauttaa → rulla piilottaa → ✕ kulmassa
 ilman päällekkäisyyttä sulkee linssin). `savuke-aikajana --linssi
 ihmisen-matka` päivitettiin samalla: nappirivillä on vain "Katso
 löydöt", ja linssi suljetaan kulman ✕:stä.
+
+### Toinen kierros: ylä- ja alareuna rauhalliseksi (omistaja 7.9.2026 ilta)
+
+Ensimmäisen version jälkeen omistaja sanoi sanatarkasti:
+
+> *"tuo näyttää ihan kamalalta, tuo paperi tuolla tavalla. Sivut ovat
+> ihan ok, mutta ylä- ja alareuna on, kuin paperi olisi tulessa, eli saa
+> liikkua rauhallisemmin ja toiseksi ei saa olla leikannut noin lähelle
+> tekstiä."*
+
+Kolme korjausta.
+
+**1. Akselit erotetaan.** Siirtymä oli molemmilla akseleilla sama, ja
+koska laatikko on leveä ja matala, sama amplitudi luki vaakareunalla
+tiheänä liekkinä ja pystyreunalla rauhallisena repeämänä. Nyt:
+
+- **Amplitudi**: kohinan G-kanava (= y-siirtymä = ylä- ja alareunan
+  liike) vaimennetaan `feColorMatrix`illa kertoimeen 0,38 (karkea) ja
+  0,44 (hieno); R-kanava eli sivujen liike jää ennalleen. Matriisi myös
+  **pakottaa alfan ykköseksi**: suodatinketju kuljettaa kuvia
+  esikerrottuina, ja ilman tätä vaimennus laimeni mitatusti olemattomiin.
+- **Taajuus**: `baseFrequency` annetaan akseleittain — `0.012 0.022`
+  (karkea) ja `0.04 0.075` (hieno). Ylä- ja alareunan aaltoilun tiheys
+  tulee kohinan X-taajuudesta, sivujen Y-taajuudesta.
+- Pohjapolun väliaallot: sivuilla entinen ±3,5 yksikköä, vaakareunoilla
+  ±1,2. Kulmien viisteet 7–19 → **4–10** yksikköä.
+
+Mitattuna (maski eristettynä, 600 × 450 px): ylä- ja alareunan syvyys
+vaihtelee **3–4 px**, sivujen **9–12 px**.
+
+**2. Kajo ei ole tuli.** Peittävyys `0,14 + 1,15 ×` →
+**`0,08 + 0,6 × --lyhty-ulko`**, säde σ 9/18 → **6/12**, väri kylläinen
+oranssi `#ff9c3c` → himmeä okra **`#d9ae74`**. Paperin sisäreunan
+kellastuma pidettiin säteiltään maskin ulottuvilla (20/44/86 px) mutta
+peittävyys palautettiin lähelle entistä (0,55/0,34/0,28 →
+**0,38/0,22/0,17**) — tumma vyö ja oranssi kajo lukivat yhdessä nokena.
+Kajon kirkkaus 3 px reunan ulkopuolella: 58 → **noin 32**/255.
+
+**3. Teksti irti reunasta.** Pehmuste on nyt **vapaa tila + maskin syömä
+vyöhyke**:
+
+```css
+--avaus-pehmuste-y: 2.4rem;
+--avaus-pehmuste-x: 2rem;
+padding: calc(var(--avaus-pehmuste-y) + 4.4%) calc(var(--avaus-pehmuste-x) + 5.6%);
+```
+
+Prosenttiosa on välttämätön. Repeämä syö elementin reunasta osuuden,
+joka on **aina sama murto-osa laatikon LEVEYDESTÄ** — maski venytetään
+sivusuhteen mukaan, joten yksi maskiyksikkö on yhtä monta pikseliä
+kummallakin akselilla. CSS laskee kaikki pehmusteprosentit laatikon
+leveydestä, joten sama sääntö pitää niin kapealla puhelinlaatikolla kuin
+leveällä kuvapaperilla (`.aikajana-avaus-kehys.on-kuva`, min(52rem, 92%))
+— pehmustetta ei tarvitse säätää käsin, kun paperi kasvaa. **Jos laatikon
+muunnelma tarvitsee oman pehmusteensa, se kasvattaa VAIN muuttujia; koko
+`padding`-lyhenteen korvaaminen toisi tekstin takaisin repeämän kylkeen.**
+Kapealla ruudulla (max-width 640px) vapaa tila on 1,9 / 1,5 rem, koska
+työpöydän mitat kasvattivat puhelinlaatikon ruudun yli.
+
+**Isompi kuvapaperi ei syö sivureunan repeämää (mitattu 7.9.2026).**
+Kun tämä yhdistettiin `.on-kuva`-paperiin (min(52rem, 92%) eli iPadilla
+718 px), savuke raportoi sivureunan vaihteluksi 4 px. **Vika oli
+mittarissa, ei paperissa**: reunanhaun ikkuna oli kiinteä ±30
+laitepikseliä, ja koska repeämän purema on osuus laatikon leveydestä,
+718 px:n paperilla se on 26–46 px — ikkuna katkaisi mittauksen. Maski
+eristettynä mitattuna sivujen vaihtelu on **16 px** (720 × 470) ja
+7 px (320 × 600), eli purema kasvaa leveyden mukana kuten pitääkin.
+Vaakasuunnan ikkuna sidottiin leveyteen samalla kaavalla kuin
+pystysuunnan (`0,075 × leveys × dpr`), ja korjattu mittaus antaa iPadilla
+21 px.
+
+Kuvapaperin muunnelma asettaa **vain pehmustemuuttujat**: työpöydällä
+2,6 / 2,2 rem ja kapealla ruudulla 1,7 / 1,55 rem. Kapean ruudun luvut
+ovat suuremmat kuin tekstipaperilla, koska kuvapaperi on siellä yhtä
+palstaa ja siis korkea, ja korkealla laatikolla repeämä puree suhteessa
+syvimmältä (4,4 % leveydestä, kun leveällä paperilla 3,8 %). Savuke
+laskee pehmusteen riittävyyden **syvemmästä** näistä kahdesta.
+
+**Vartijat.** `savuke-pergamentti` mittaa nyt myös **maskin eristettynä**
+(valkoinen laatta mustaa vasten) KAHDELLA sivusuhteella — leveä
+kuvapaperi ja korkea puhelinlaatikko: vaakareunojen aaltoilu on
+korkeintaan puolet sivujen aaltoilusta kummallakin, sivut pysyvät
+revittyinä, ja syvin puraisu on alle 6 % paperin leveydestä. Tekstin väli mitataan kertomalla tämä
+syvyys laatikon leveydellä ja vähentämällä se DOMista luetusta
+pehmusteesta — pikselihaku ei siihen kelpaa, koska repeämän kohdalla
+kontrasti on pieni (ulkona himmeä kajo, sisällä tumma reunavyö) ja
+jyrkimmän muutoksen haku löytää sisäreunan kellastuman rinteen. Kajolle
+on nyt myös YLÄRAJA (keskimäärin ≤ 45/255 reunan vieressä), joka
+vartioi juuri sitä liekkiä, jonka omistaja hylkäsi.

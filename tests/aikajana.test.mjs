@@ -720,7 +720,9 @@ test('naksahdus soi vain elävästä vaihdosta ja enintään kahdeksan kertaa se
   assert.match(MOOTTORI, /this\.tila = tila;\n\s*this\.naytaVuosi\(tila\.vuosi\);/);
   // Lamput ovat napautettavia (omistaja 3.9.2026) ja paneeli raahattava.
   assert.match(MOOTTORI, /g\.addEventListener\('click', \(e\) => \{ e\.stopPropagation\(\); this\.napautaValoa\(i\); \}\)/);
-  assert.match(MOOTTORI, /napautaValoa\(i\) \{[\s\S]{0,200}this\.siirry\(i\);/);
+  // (Väli kasvoi kertomusportilla 7.9.2026: esityksen aikana lampun
+  // napautus ei siirry pysäkkiin, koska pysäkkejä ei ole — ks. alempaa.)
+  assert.match(MOOTTORI, /napautaValoa\(i\) \{[\s\S]{0,400}this\.siirry\(i\);/);
   assert.match(MOOTTORI, /kytkeRaahaus\(\) \{[\s\S]{0,6000}rajaaPaneelinSiirto\(paneeli, this\.juuri/);
   const CSS = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
   assert.match(CSS, /\.aikajana-valo\.palaa \{ pointer-events: auto; cursor: pointer; \}/);
@@ -749,7 +751,9 @@ test('moottori käskee musiikkia käynnistyksessä, tauolla, jutussa ja purussa'
    * täysi linssitaso tulee vasta Käynnistä-napista. Loppuu purussa.
    */
   assert.ok(MOOTTORI.match(/\n  kaynnista\(\) \{[\s\S]*?\n  \}/)[0].includes('this.aloitaMusiikki(false)'), 'käynnistys ei aloita musiikkia hiljaa');
-  assert.match(MOOTTORI, /aloitaAjo\(\) \{[\s\S]{0,900}this\.aloitaMusiikki\(true\)/);
+  // Väli kasvoi kertomusportilla 7.9.2026: kertomuskaarella musiikki
+  // nousee vasta valojen syttyessä, ja portti on ennen näitä rivejä.
+  assert.match(MOOTTORI, /aloitaAjo\(\) \{[\s\S]{0,1500}this\.aloitaMusiikki\(true\)/);
   // Koko metodilohko eikä merkkilaskuri: purkuun tulee rivejä lisää
   // aina kun linssiin tulee uusi kerros (avausjakso, välinäytös).
   assert.ok(PURA.includes('this.lopetaMusiikki();'), 'purku ei lopeta musiikkia');
@@ -1641,11 +1645,27 @@ test('avauslaatikon paperi on repaleinen ja tekstuuriltaan monikerroksinen', () 
   assert.ok((laiskat.match(/radial-gradient/g) ?? []).length >= 6, 'läiskiä on liian vähän');
   assert.match(laiskat, /mix-blend-mode: multiply;/);
   assert.match(laiskat, /z-index: 0;/);
-  // Kellastunut reunavyö useampana inset-kerroksena. Säteet ovat
-  // maskin marginaalia suuremmat, jottei vyö jää maskin alle.
-  const vyot = [...avaus.matchAll(/inset 0 0 (\d+)px/g)].map((m) => Number(m[1]));
+  /*
+   * Kellastunut reunavyö useampana inset-kerroksena. Säteet ovat
+   * maskin marginaalia suuremmat, jottei vyö jää maskin alle, mutta
+   * PEITTÄVYYS pysyy vanhan arkin kellastumana: omistaja 7.9.2026 ilta
+   * luki tumman vyön ja oranssin kajon yhdessä kärventymänä.
+   */
+  const vyot = [...avaus.matchAll(/inset 0 0 (\d+)px rgba\([^)]*?([\d.]+)\)/g)]
+    .map((m) => ({ sade: Number(m[1]), peitto: Number(m[2]) }));
   assert.ok(vyot.length >= 3, 'reunavyö tarvitsee useamman kerroksen');
-  assert.ok(Math.min(...vyot) >= 20, 'kapein reunavyö jäisi repeämän maskin alle');
+  assert.ok(Math.min(...vyot.map((v) => v.sade)) >= 20, 'kapein reunavyö jäisi repeämän maskin alle');
+  assert.ok(Math.max(...vyot.map((v) => v.peitto)) <= 0.42, 'tummin reunavyö lukee kärventymänä');
+
+  /*
+   * PEHMUSTE = VAPAA TILA + MASKIN SYÖMÄ VYÖHYKE (omistaja 7.9.2026
+   * ilta: *"ei saa olla leikannut noin lähelle tekstiä"*). Prosenttiosa
+   * on pakollinen: se skaalautuu laatikon leveyden mukana, joten sama
+   * sääntö pitää myös leveämmällä paperilla.
+   */
+  assert.match(avaus, /--avaus-pehmuste-y: 2\.4rem;/);
+  assert.match(avaus, /--avaus-pehmuste-x: 2rem;/);
+  assert.match(avaus, /padding:\s*calc\(var\(--avaus-pehmuste-y\) \+ [\d.]+%\)\s*calc\(var\(--avaus-pehmuste-x\) \+ [\d.]+%\);/);
 });
 
 /*
@@ -1670,7 +1690,7 @@ test('avauslaatikon kajo saa saman repaleisen muodon kuin paperi', () => {
   assert.match(hehku, /inset: -15%;/);
   assert.match(hehku, /background-image: var\(--pergamentti-hehkukuva, none\);/);
   // Syke tulee lyhdyistä ja koskee VAIN peittävyyttä (kuva on staattinen).
-  assert.match(hehku, /opacity: calc\(0\.14 \+ 1\.15 \* var\(--lyhty-ulko, 0\.26\)\);/);
+  assert.match(hehku, /opacity: calc\(0\.08 \+ 0\.6 \* var\(--lyhty-ulko, 0\.26\)\);/);
   assert.ok(!hehku.includes('filter:'), 'sumennus on leivottu kuvaan, ei CSS-suodattimeen');
   assert.ok(!hehku.includes('animation'), 'maski ja kajo ovat staattisia');
 });

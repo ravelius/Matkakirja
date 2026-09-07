@@ -1060,4 +1060,126 @@ export const NORTHAMERICA_ARTIKKELIT = {
       + 'mayataiteen kokoelmat, alkuperäiskansojen pukujen museo ja '
       + 'ulkoilmassa oleva maastokartta koko maasta.',
   },
+  /*
+   * NUUK (Opus, Fablen parvi 7.9.2026). Avain on laudan wiki-nimi
+   * 'Nuuk' (js/packs/northamerica.js). Väitteet ovat samasta erästä
+   * kuin lehden tekstit (kulttuuri-kategoriat.js, avain nuuk) ja ne on
+   * luettu en-Wikipedian raakateksteistä 7.9.2026 ("Nuuk",
+   * "Old Nuuk", "Greenland ice sheet"); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-nuuk.md ja tarkistus-nuuk.md.
+   *
+   * TÄMÄ EI TOISTA MAAN OMAA MERKINTÄÄ: taulussa on jo avain
+   * 'Grönlanti', joka kertoo jäätiköstä, Egeden vuoden 1721 matkasta
+   * ja metsästyksestä. Kaupungin intro kertoo kaupungin — jäätikön
+   * osuus mainitaan vain siksi, että laudan visa kysyy sitä ja
+   * vastauksen on löydyttävä lehdestä.
+   *
+   * EI NYKYPOLITIIKKAA: puolueet, istuva pääministeri ja pormestari
+   * jätetään pois, vaikka lähde luettelee ne.
+   */
+  Nuuk: {
+    intro: 'Nuuk on Grönlannin pääkaupunki ja väkirikkain kaupunki. '
+      + 'Se on Nuup Kangerlua -vuonon suussa **Grönlannin '
+      + 'lounaisrannikolla**, kymmenen kilometriä Labradorinmereltä ja '
+      + 'runsaat kaksisataa kilometriä napapiiristä etelään; nimi '
+      + 'tarkoittaa grönlanniksi niemeä. Leveysasteella 64°11′ '
+      + 'pohjoista se on **maailman pohjoisin pääkaupunki**, muutaman '
+      + 'kilometrin Reykjavíkia pohjoisempana. Grönlanti on Tanskan '
+      + 'valtakunnan itsehallintoalue, ja Nuukissa istuvat sekä '
+      + 'parlamentti että hallitus.'
+      + '\n\n'
+      + 'Asukkaita oli tammikuussa 2025 runsaat kaksikymmentätuhatta. '
+      + 'Se on yli kolmasosa koko alueen väestöstä ja silti niin vähän, '
+      + 'että Nuuk on yksi maailman pienimmistä pääkaupungeista. Neljä '
+      + 'viidesosaa Grönlannista on mannerjäätikön alla, joten kaikki '
+      + 'kaupungit ja kylät ovat jäättömällä rannikkokaistaleella — '
+      + 'eikä yksikään tie yhdistä Nuukia mihinkään muuhun paikkaan.'
+      + '\n\n'
+      + 'Kaupunki syntyi 1728, kun kuninkaallinen kuvernööri siirsi '
+      + 'lähetys- ja kauppa-aseman saarelta mantereelle ja nimesi sen '
+      + 'Godthaabiksi, hyväksi toivoksi. Nimi vaihtui Nuukiksi '
+      + '1. toukokuuta 1979, samana päivänä kun Grönlannin kotihallinto '
+      + 'aloitti työnsä.',
+    teksti: 'Nuuk on vuonon suulla luotojen keskellä, ja vuono '
+      + 'jakautuu ylempänä kolmeen haaraan kolmen suuren saaren '
+      + 'ympärille. Koillisessa kohoaa Sermitsiaq, 1 210 metriä, joka '
+      + 'näkyy lähes kaikkialta kaupungista; valtakunnallinen '
+      + 'sanomalehti on nimetty sen mukaan. Lähempänä ovat Store '
+      + 'Malene ja Lille Malene, joista jälkimmäisen rinteessä on '
+      + 'hiihtohissi.'
+      + '\n\n'
+      + 'Paikalla on asuttu neljä vuosituhatta. Ensin tulivat '
+      + 'Saqqaq-kulttuurin ihmiset noin 2200 eaa., sitten '
+      + 'dorset-kulttuuri ja noin vuodesta 1000 norjalaiset, joiden '
+      + 'asutus katosi 1400-luvulla. Vuoden 1728 siirtokunnan viereen '
+      + 'nousi 1747 herrnhutilaisten lähetysasema Uusi Herrnhut, ja '
+      + 'kaksi asutusta toimivat erillään aina vuoteen 1900.'
+      + '\n\n'
+      + 'Nykyään kaupungissa on maan hallinto, ainoa yliopisto, '
+      + 'kansallismuseo ja kulttuuritalo Katuaq. Lähes puolet '
+      + 'Grönlannin kalastuslaivastosta on Nuukissa, ja sähkö tulee '
+      + 'Buksefjordin vesivoimalasta linjaa pitkin, joka ylittää '
+      + 'vuonon maailman pisimmällä jännevälillä. Katukuva on kahden '
+      + 'kielen ja kahden perinteen kaupunki: The Guardian arvioi '
+      + '2016, että Nuuk saattaa hyvinkin olla maailman '
+      + 'alkuperäiskansaisin kaupunki.',
+  },
+  /*
+   * ANCHORAGE (Opus, Fablen parvi 7.9.2026). Avain on laudan
+   * wiki-nimi 'Anchorage' (js/packs/northamerica.js); en-Wikipedian
+   * artikkelin otsikko on "Anchorage, Alaska". Väitteet ovat samasta
+   * erästä kuin lehden tekstit (kulttuuri-kategoriat.js, avain
+   * anchorage) ja ne on luettu en-Wikipedian raakateksteistä
+   * 7.9.2026; pohjana docs/mantereet-tyoaineisto/faktapohja-anchorage.md
+   * ja tarkistus-anchorage.md.
+   *
+   * SISÄLTÖLINJAUS on spec-mantereet.md:n USA-kohta: siirtomaahistoria
+   * kerrotaan tapahtumana neutraalisti, ei nykypolitiikkaa. Pääkaupungin
+   * siirtoäänestykset 1960–1978 jätetään pois.
+   */
+  Anchorage: {
+    intro: 'Anchorage on **Alaskan suurin kaupunki**: vuoden 2020 '
+      + 'laskennassa asukkaita oli 291 247 eli lähes neljäkymmentä '
+      + 'prosenttia koko osavaltion väestöstä. Osavaltion pääkaupunki '
+      + 'on silti Juneau. Kaupunki on Etelä-Keski-Alaskassa Cook '
+      + 'Inletin pohjukassa niemellä, jonka pohjoispuolella on Knik '
+      + 'Arm ja eteläpuolella Turnagain Arm; idässä kohoavat Chugachin '
+      + 'vuoret aivan katujen päässä.'
+      + '\n\n'
+      + 'Paikan ensimmäinen nimi on dena\'inankielinen Dgheyay Kaq\'. '
+      + 'Dena\'ina-athabaskit saapuivat vuorensolien kautta noin '
+      + 'vuonna 500 ja liikkuivat alueella vuodenaikojen mukaan. '
+      + 'Kaupunkia ei ollut vielä 1900-luvun alussa: se syntyi 1914, '
+      + 'kun Ship Creekin suulle perustettiin rautatien '
+      + 'rakennussatama ja rannalle nousi telttakaupunki. '
+      + 'Kaupunkioikeudet tulivat 23. marraskuuta 1920.'
+      + '\n\n'
+      + 'Sijainti selittää nykyisen Anchoragen. Kaupunki on lähes yhtä '
+      + 'kaukana New Yorkista, Tokiosta ja Murmanskista, ja kymmenen '
+      + 'lentotunnin sisällä on lähes yhdeksänkymmentä prosenttia '
+      + 'asutusta pohjoista pallonpuoliskoa. Siksi **Ted Stevensin '
+      + 'lentoasema on maailman kolmanneksi vilkkain rahtiliikenteessä** '
+      + '— Aasian ja Yhdysvaltain mantereen lyhin reitti kulkee tästä.',
+    teksti: 'Anchorage on rakennettu rannikon kerrostuneelle '
+      + 'tasangolle kahden vuoroveden haaran väliin. Kaupunki on '
+      + 'maapinta-alaltaan Yhdysvaltain neljänneksi laajin, mutta '
+      + 'suurin osa siitä on vuorta ja metsää: puistot on kytketty '
+      + 'toisiinsa viherkäytävillä, jotka seuraavat järviä ja puroja.'
+      + '\n\n'
+      + 'James Cook purjehti vuonoon toukokuussa 1778 etsimässä '
+      + 'Luoteisväylää ja antoi nimet, joita yhä käytetään. '
+      + 'Yhdysvallat osti Alaskan Venäjältä 1867, ja kultaa löytyi '
+      + 'Turnagain Armin varrelta 1888. Rautatie valmistui 1923, '
+      + 'lentotoiminta ja sotilastukikohdat kasvattivat kaupunkia '
+      + '1930–1950-luvuilla, ja vuoden 1968 Prudhoe Bayn öljylöytö '
+      + 'käänsi talouden öljyyn.'
+      + '\n\n'
+      + 'Pitkäperjantaina 27. maaliskuuta 1964 kaupunkia ravisteli '
+      + '9,2 magnitudin maanjäristys, voimakkain koskaan mitattu '
+      + 'Pohjois-Amerikassa. Keskusta vaurioitui pahoin ja yksi '
+      + 'kaupunginosa liukui rinnettä alas; sen paikalla on nyt '
+      + 'puisto. Nykyään satama vastaanottaa 95 prosenttia kaikesta '
+      + 'Alaskaan menevästä tavarasta, ja kaupungissa elää satoja '
+      + 'hirviä ja karhuja ihmisten seassa.',
+  },
 };

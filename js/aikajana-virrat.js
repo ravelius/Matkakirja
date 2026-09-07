@@ -257,6 +257,13 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     kuvapysakkiAsti: 0,
     kuvapysakki: null,
     lopunAlku: 0,
+    /*
+     * PITO: vana ei koskaan lyhene (js/aikajana-vanat.js paivita).
+     * Kertomusesitys kääntää tämän päälle, koska sen kaanoni palaa
+     * ajassa taaksepäin (Karmelvuori, aikahyppy) eikä rintama saa
+     * kelautua auki. Pysäkkiajossa lippu on pois ja kaikki on ennallaan.
+     */
+    pito: false,
   };
   /*
    * Virtojen sävyt hetkellä nyt: [virta][vanha r,g,b, rintama r,g,b].
@@ -292,7 +299,7 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
       const aloita = () => {
         if (tila.purettu) return;
         paivitaKalvojenPeitto(lukema());
-        tila.vanat?.paivita(lukema());
+        tila.vanat?.paivita(lukema(), { pito: tila.pito });
         ilmoitaValmis?.();
         ilmoitaValmis = null;
       };
@@ -867,7 +874,14 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     // Kehysväli sekunteina; katto sekunti, jottei paluu taustalta hyppää.
     const dt = Math.min(1, Math.max(0, (nyt - (tila.viimeKehys || nyt)) / 1000));
     tila.viimeKehys = nyt;
-    const vuosia = lukema();
+    /*
+     * TUTKIMUSVAIHEESSA KELLO EI ENÄÄ OHJAA VANOJA (omistaja 7.9.2026:
+     * *"kun esitys on ohi, niin sen jälkeen pelaaja voisi klikkailla
+     * kartalla niitä nostokohtia"*): lukema on 0 eli koko kartta
+     * piirrettynä, ja koska luku ei enää muutu, silmukka ei tee
+     * päivityksiä — kartta jää pelaajan käsiin sellaisenaan.
+     */
+    const vuosia = tila.tutkimus ? 0 : lukema();
     // Hidas laite: väli venyy maalauksen keston mukaan, jottei
     // maalaus syö koko kehysaikaa (mitattu kontin ohjelmisto-WebGL:llä).
     const vali = reduced
@@ -878,7 +892,7 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
       tila.viimeNyt = vuosia;
       if (vanatKaytossa) {
         // Vanan kasvu ja kärkivärit; kalvoista muuttuu vain peitto.
-        tila.vanat?.paivita(vuosia);
+        tila.vanat?.paivita(vuosia, { pito: tila.pito });
         paivitaKalvojenPeitto(vuosia);
       } else {
         const alku = performance.now();
@@ -937,8 +951,30 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
     siirry,
     pura,
     valmis,
+    /**
+     * PITOTILA PÄÄLLE TAI POIS (js/linssit/ihmisen-matka-esitys.js).
+     * Päällä piirretty vana ei enää lyhene, vaikka kello kelaisi
+     * taaksepäin — ks. tila.pito.
+     */
+    asetaPito: (paalla) => { tila.pito = Boolean(paalla); },
     /** Seuraaminen heti takaisin (savukkeet ja kuvakaappaukset). */
     jatkaSeuranta: () => { tila.keskeytettyAsti = 0; tila.pov = null; },
+    /**
+     * TUTKIMUSVAIHE (js/linssit/ihmisen-matka-tutkimus.js): esitys on
+     * ohi ja kartta jää pelaajalle. Kaikki vanat piirretään loppuun
+     * (`paivita(0)`), kalvot saavat lopun peiton, ja KAMERAN SEURANTA
+     * LOPPUU pysyvästi — tästä eteenpäin pallo on pelaajan sormien ja
+     * viiden napin käsissä, eikä virtamoduuli aja niiden päälle.
+     * Palauttaa vanamoduulin kahvan (korostus ja kärkilistat).
+     */
+    tutkimus: () => {
+      tila.tutkimus = true;
+      tila.keskeytettyAsti = Infinity;
+      tila.pov = null;
+      tila.vanat?.paivita(0);
+      paivitaKalvojenPeitto(0);
+      return tila.vanat ?? null;
+    },
     /** Mittareita savukkeille: onko kenttä laskettu, kangas ja kohde. */
     tila: () => ({
       valmis: Boolean(vanatKaytossa ? tila.kentat : tila.tarkka),
@@ -954,6 +990,7 @@ export function luoVirrat({ ajo, lauta, kaari, osa = 'aikajana' }) {
       kameranLeveys: tila.pov?.leveys ?? null,
       pisteita: tila.pisteet.size,
       vanat: vanatKaytossa,
+      pito: tila.pito,
       /** Viimeisen kankaan maalauksen kesto (ms) — puhelimen mittari. */
       maalausMs: tila.maalausMs ?? null,
       /** Missä laskenta ajettiin: 'tyosaie' tai 'paasaie'. */

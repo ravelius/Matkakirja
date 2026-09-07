@@ -157,7 +157,7 @@ import {
   ESITTELYN_RUNKO, LOPUN_RUNKO, pysaytaLinssiluenta, soitaLinssiluenta, valinaytoksenRunko,
 } from './linssipuhe.js';
 import { pysaytaLukija } from './lukija.js';
-import { esilataaKuvat } from './ui-apurit.js';
+import { esilataaKuvat, vapautaKosketus } from './ui-apurit.js';
 // Terävä tila pakotettuna ajon ajaksi (ks. pakotaLaatu). Moduuli on
 // kevyt: se tuo vain fokusmitat ja ui-apurit, ei Globe.gl:ää.
 import { pakotaPallonLaatu } from './pallo.js';
@@ -171,6 +171,15 @@ import { luoLiekkivalot } from './aikajana-valo.js';
  * (Raamattu 6.9.2026: IHMISEN MATKA ON VARIVIRTOJA, EI PISTEITA).
  */
 import { luoVirrat } from './aikajana-virrat.js';
+/*
+ * KERTOMUSESITYS (Raamattu IHMISEN MATKA ON YKSI KAARI, EI PYSAKKEJA).
+ * Kaari, jolla on `kertomus`, EI aja pysäkkikelloa lainkaan: ohjaaja
+ * (js/linssit/ihmisen-matka-esitys.js) kirjoittaa kellon, kameran ja
+ * kuvat kaanonin jaksojen mukaan. Tuonti on staattinen, koska tämä
+ * moottori ladataan vasta linssin auetessa — matkalaukun luettelo ei
+ * vedä sitä mukanaan (ks. js/linssit/ihmisen-matka.js).
+ */
+import { luoEsitys } from './linssit/ihmisen-matka-esitys.js';
 // Isoympyrä reittiviivalle: sama kaava kuin lentokaarella ja uomilla
 // (js/linssit/vesistot.js tuo saman parin) — ei omaa kopiota.
 import { isoympyranPiste, kulmaAsteina } from './pallolauta/reitit.js';
@@ -1902,6 +1911,46 @@ export function vuosiaSittenLukema(paikka, arvot, vali = ASTEIKON_VALI) {
 }
 
 /**
+ * KELLON PAIKKA LUKEMASTA — vuosiaSittenLukeman käänteisfunktio.
+ *
+ * Kertomusesitys (js/linssit/ihmisen-matka-esitys.js) ei kulje
+ * pysäkiltä pysäkille vaan kirjoittaa kellolle VUOSILUVUN: "nyt ollaan
+ * 164 000 vuoden kohdalla". Kello, mittari ja värivirrat lukevat kaikki
+ * `tila.vuosi`-PAIKKAA (js/aikajana-virrat.js lukema), joten pyydetty
+ * lukema on käännettävä paikaksi — ja käännös on tehtävä samalla
+ * paloittaisella logaritmisella asteikolla, jolla lukemakin lasketaan,
+ * tai kello näyttäisi muuta kuin esitys tarkoittaa.
+ *
+ * Lukema on laskeva, joten haku on suoraviivainen: etsi väli, jolle
+ * lukema osuu, ja ratkaise siitä osuus (logaritminen, tai suora jos
+ * jompikumpi pää ei ole positiivinen). Rajojen ulkopuolella palautetaan
+ * lähin pää — kello ei mene kaaren ulkopuolelle.
+ *
+ * @param {number} vuosia haluttu lukema (vuosia sitten)
+ * @param {Array<number>} arvot pysäkkien vuosiaSitten laskevassa järjestyksessä
+ * @param {number} [vali] yhden pysäkkivälin pituus kellon paikkana
+ * @returns {number} kellon paikka
+ */
+export function vuosiaSittenPaikka(vuosia, arvot, vali = ASTEIKON_VALI) {
+  if (!arvot?.length) return 0;
+  const loppu = (arvot.length - 1) * vali;
+  if (!Number.isFinite(vuosia)) return 0;
+  if (vuosia >= arvot[0]) return 0;
+  if (vuosia <= arvot.at(-1)) return loppu;
+  for (let i = 0; i < arvot.length - 1; i += 1) {
+    const a = arvot[i];
+    const b = arvot[i + 1];
+    if (!(vuosia <= a && vuosia >= b)) continue;
+    if (a === b) return i * vali;
+    const f = (a > 0 && b > 0)
+      ? Math.log(vuosia / a) / Math.log(b / a)
+      : (vuosia - a) / (b - a);
+    return (i + Math.max(0, Math.min(1, f))) * vali;
+  }
+  return loppu;
+}
+
+/**
  * Kellon asteikko kaaresta. Palauttaa aina olion, myös oletusasteikolla
  * — silloin lukema on vuosiluku sellaisenaan ja kaikki kentät ovat
  * entiset arvot (numerot 4, suunta ylöspäin, ei yksikköä).
@@ -1922,6 +1971,8 @@ export function luoAsteikko(kaari) {
       alku: kaari?.alku ?? 0,
       loppu: kaari?.loppu ?? 0,
       lukema: (paikka) => paikka,
+      // Oletusasteikolla lukema ON paikka: käännös on identtinen.
+      paikka: (lukema) => lukema,
       askel: () => 1,
       teksti: () => null,
     };
@@ -1958,6 +2009,8 @@ export function luoAsteikko(kaari) {
     alku: -ASTEIKON_VALI / 2,
     loppu: Math.max(0, arvot.length - 1) * ASTEIKON_VALI,
     lukema: (paikka) => vuosiaSittenLukema(paikka, arvot),
+    // Käänteinen suunta kertomusesitykselle (ks. vuosiaSittenPaikka).
+    paikka: (lukema) => vuosiaSittenPaikka(lukema, arvot),
     // Askel tulee siitä pysäkkivälistä, jolla lukema on (ks. KELLON ASKEL).
     askel: (lukema) => kellonAskel(lukema, arvot),
     // Loppupäässä kello vaihtaa vuosilukuun (ks. VIIMEISET PYSÄKIT).
@@ -2344,6 +2397,14 @@ class Aikajana {
     /** Havainnekuvan kuvakierron ajastin (kuvakierto). */
     this.kuvakiertoAjastin = null;
     this.reducedMotion = Boolean(globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
+    /*
+     * KERTOMUSESITYS (kaari, jolla `kertomus`). Ohjaaja luodaan vasta
+     * kun linssin pinnat ovat pystyssä (kaynnista), ja se ottaa
+     * Käynnistä-napin jälkeen kellon, kameran ja kuvat haltuunsa —
+     * pysäkkikello (kehys, aikajanaAskel, sytyta) ei käy lainkaan,
+     * ja `tila.i` jää arvoon −1.
+     */
+    this.esitys = null;
   }
 
   /* ---------- rakentaminen ---------- */
@@ -3377,9 +3438,17 @@ class Aikajana {
     // Terävä tila päälle koko ajon ajaksi (vapautetaan purussa).
     this.pakotaLaatu(true);
     this.avaaAanimaailma();
-    // Musiikki alkaa jo pimennyksessä mutta HILJAA: täysi linssitaso
-    // tulee vasta Käynnistä-napista, kuten kellokin.
-    this.aloitaMusiikki(false);
+    /*
+     * MUSIIKKI ALKAA JO PIMENNYKSESSÄ mutta HILJAA: täysi linssitaso
+     * tulee vasta Käynnistä-napista, kuten kellokin.
+     *
+     * KERTOMUSKAARELLA EI (Raamattu ALKAA MUSTASTA RUUDUSTA, omistaja
+     * 7.9.2026: *"missä kuuluisi vain kertojan ääni ja kysymys"*).
+     * Musta ruutu on hiljainen: musiikki nousee sisään vasta valojen
+     * syttyessä (js/linssit/ihmisen-matka-esitys.js sytytaValot).
+     */
+    if (this.kaari.kertomus?.length) this.esitys = luoEsitys({ ajo: this });
+    else this.aloitaMusiikki(false);
     this.vapautaKamera(true);
     this.avaaAvausjakso();
     return true;
@@ -3630,6 +3699,13 @@ class Aikajana {
       const pois = () => { avaus.remove(); if (this.avaus === avaus) this.avaus = null; };
       if (this.reducedMotion) pois(); else setTimeout(pois, AVAUS_POISTUMA_MS);
     }
+    /*
+     * KERTOMUSKAAREN LÄHTÖ ON PIMEÄ, EI KELLO: ohjaaja peittää ruudun
+     * mustaksi, soittaa avausluennan ja sytyttää valot vasta
+     * 'afrikka'-jaksossa. Musiikki nousee samalla hetkellä, joten sitä
+     * ei aloiteta tässä.
+     */
+    if (this.esitys) { this.esitys.aloita(); return; }
     this.jatka();
     this.aloitaMusiikki(true);
   }
@@ -3660,6 +3736,9 @@ class Aikajana {
 
   /** Yksi nappi: välinäytöksessä Jatka, muuten tauko tai jatko. */
   taukoTaiJatka() {
+    // Kertomusesityksellä on oma kello ja oma luenta: yksi nappi
+    // pysäyttää kummankin samasta kohdasta ja jatkaa siitä.
+    if (this.esitys) { this.esitys.taukoTaiJatka(); return; }
     if (this.valinaytos) { this.jatkaValinaytoksesta(); return; }
     if (this.kaynnissa) this.pysayta(); else this.jatka();
   }
@@ -4980,6 +5059,9 @@ class Aikajana {
 
   /** Lampun napautus: nykyinen pysäkki vain pysäyttää, muu siirtyy siihen. */
   napautaValoa(i) {
+    // Esityksen aikana lamppu on kertojan sivuhuomautus eikä pysäkki:
+    // napautus ei saa katkaista virtaa (Raamattu: EI PYSAKKEJA).
+    if (this.esitys) return;
     if (!this.tapahtumat[i]) return;
     if (i === this.tila.i) { this.pysayta(); return; }
     this.siirry(i);
@@ -5051,6 +5133,21 @@ class Aikajana {
       }
       return;
     }
+    /*
+     * KERTOMUSESITYS OMII NÄPPÄIMISTÖN: väli tai Enter on Tauko/Jatka,
+     * Esc sulkee linssin, eivätkä nuolet selaa pysäkkejä — esityksessä
+     * ei ole pysäkkejä selattavaksi.
+     */
+    if (this.esitys) {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        this.esitys.taukoTaiJatka();
+      } else if (e.key === 'Escape' || e.key === 'Esc') {
+        e.preventDefault();
+        this.ui.pysaytaAikajana?.();
+      }
+      return;
+    }
     if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
     const kohde = this.tila.i + (e.key === 'ArrowRight' ? 1 : -1);
     if (kohde < 0 || kohde >= this.tapahtumat.length) return;
@@ -5088,6 +5185,29 @@ class Aikajana {
 
   pura() {
     this.pysayta();
+    // Kertomusesitys ensin: sen silmukka, peite ja kuva pois ennen
+    // kuin lamput ja kerrokset katoavat sen alta.
+    this.esitys?.pura();
+    this.esitys = null;
+    /*
+     * TUTKIMUSVAIHE PURKAUTUU AJON MUKANA. Koukku on TÄSSÄ eikä
+     * moduulin pysaytaAikajana-funktiossa: "Sulje", Esc ja linssinappi
+     * menevät js/ui.js:n oman pysaytaAikajanan kautta, joka kutsuu
+     * pura():a suoraan (sama oppi kuin kuplajonon purulla alla).
+     * Tutkimusvaiheen merkit ovat oma laudan osansa, jota tämän purku
+     * ei muuten veisi (js/linssit/ihmisen-matka-tutkimus.js).
+     */
+    this.ui.tutkimusvaihe?.pura?.();
+    this.ui.tutkimusvaihe = null;
+    this.ui.aloitaTutkimusvaihe = null;
+    /*
+     * LINSSIN KERROKSET KATOAVAT (roikkuva kosketus, v1671): paneeli,
+     * lamput ja loppulappu ovat pallon päällä, ja niiltä alkanut
+     * kosketus jäisi pallon ohjaimen listaan roikkumaan — seuraava
+     * yksi sormi luettaisiin nipistykseksi. Ilmoitus kerroksen
+     * katoamisesta (js/ui-apurit.js) nollaa sormet.
+     */
+    vapautaKosketus();
     // Sulkeminen kesken avauksen: peite, laatikko ja ajastimet pois.
     this.puraAvaus();
     // Sama kesken välinäytöksen: laatikko, ajastin ja kuplat pois.
@@ -5195,6 +5315,7 @@ import { suljeFokuskohde } from './fokuskohteet.js';
 import { suljeNostonKortti } from './fokusnosto.js';
 import { suljeElaintaky } from './elaintaky.js';
 import { suljeSyvennys } from './syvennys.js';
+import { luoTutkimusvaihe } from './linssit/ihmisen-matka-tutkimus.js';
 
 /**
  * Kartan päällä kelluvat kortit pois linssin tieltä.
@@ -5229,6 +5350,29 @@ export function kaynnistaAikajana(ui, linssi) {
   pysaytaAikajana(ui);
   const ajo = new Aikajana(ui, linssi);
   if (!ajo.kaynnista()) return false;
+  /*
+   * TUTKIMUSVAIHE ODOTTAA KUTSUA (omistaja 7.9.2026 ilta, Raamattu
+   * "IHMISEN MATKA: KAARI HYVAKSYTTY, TUTKIMUSVAIHE, VIISI NAPPIA":
+   * *"kun esitys on ohi, niin sen jälkeen pelaaja voisi klikkailla
+   * kartalla niitä nostokohtia"*).
+   *
+   * Kertomusmoottori kutsuu esityksen päätteeksi
+   * `ui.aloitaTutkimusvaihe?.()`, ja siitä eteenpäin kartta on
+   * pelaajan (js/linssit/ihmisen-matka-tutkimus.js). Kytkentä on
+   * TÄSSÄ eikä linssissä kahdesta syystä: ajo-olio on tämän moduulin
+   * (kello, lauta, virrat, karuselli), ja purku kuuluu samaan
+   * paikkaan kuin ajon purku — linssin sulkeva ✕ vie kummankin.
+   *
+   * Kutsu on turvallinen millä tahansa kaarella: tutkimusvaihe
+   * palauttaa null, jos lautaa, virtoja tai vanoja ei ole
+   * (keksintökaari, tasokartta), eikä mikään muutu.
+   */
+  ui.aloitaTutkimusvaihe = () => {
+    if (ui.aikajana !== ajo || !ajo.juuri?.isConnected) return false;
+    if (ui.tutkimusvaihe) return true;
+    ui.tutkimusvaihe = luoTutkimusvaihe({ ajo, ui, linssi });
+    return Boolean(ui.tutkimusvaihe);
+  };
   ui.aikajana = ajo;
   // Vasta kun ajo on pystyssä: bodyn luokka on paikallaan, joten
   // portti pitää eivätkä juuri suljetut kortit avaudu takaisin.

@@ -1086,3 +1086,494 @@ export const IHMISEN_MATKA = [
  * (`kuva.kuvateksti`) on eri asia eikä sitä kosketa täällä.
  */
 for (const pysakki of IHMISEN_MATKA) pysakki.kuva.selite = pysakki.selite;
+
+/* ==================================================================
+ * TUTKIMUSVAIHEEN NOSTOT (omistaja 7.9.2026 ilta, Raamattu "IHMISEN
+ * MATKA: KAARI HYVAKSYTTY, TUTKIMUSVAIHE, VIISI NAPPIA, PULUN
+ * VALIHUOMIOT", sanatarkasti: *"kun kartta aukeaa tarkasteltavaksi,
+ * niin sitten niitä hehkuvia kohtia saa olla vaikka kuinka paljon,
+ * miten vain on mielekkäitä kohteita tarjolla"*).
+ *
+ * Kartalla hehkuu esityksen jälkeen KAKSI JOUKKOA: kaaren kaikki
+ * kaksikymmentä löytöpaikkaa (IHMISEN_MATKA yllä — myös ne kolme,
+ * jotka jäivät esityksestä pois: lake-mungo, tianyuan, niah) ja nämä
+ * kaksikymmentä LISÄNOSTOA, jotka eivät ole kaaren pysäkkejä eivätkä
+ * siis kuulu kelloon, kameraan tai karuselliin.
+ *
+ * MIKSI OMA TAULU EIKÄ UUSIA PYSÄKKEJÄ: pysäkki on esityksen mitta
+ * (js/linssit/ihmisen-matka.js ESITYKSEN_KUVAT, kellon askel,
+ * vanan päätepiste). Neljäkymmentä pysäkkiä muuttaisi koko kaaren
+ * tahdin; tutkimusvaiheen nosto on pelkkä kohta kartalla, jolla on
+ * teksti, lähde ja kysymykset pululle. Siksi kentät ovat vain ne,
+ * joita kortti tarvitsee — ei kuvia (kuvatilaukset menevät
+ * kuvaputkelle erikseen), ei esineitä, ei luentaa.
+ *
+ * Kentät:
+ *   tunnus        avain (kartan merkin avain: `tutkimus:<tunnus>`)
+ *   otsikko       kortin otsikko
+ *   ajoitus       pelaajalle näytettävä aika ("noin 74 000 vuotta sitten")
+ *   vuosiaSitten  luku järjestystä ja vertailua varten
+ *   lat, lon      desimaaliasteita (en-Wikipedian koordinaatit,
+ *                 haettu 7.9.2026); ilmiöillä (Toba, Sunda, Sahul,
+ *                 Wallacea, Doggerland) piste on alueen keskeltä
+ *   teksti        2–3 lausetta kortille
+ *   virta         minkä vanan sävyyn hehku värjätään
+ *                 (js/linssit/ihmisen-matka-virrat.js tunnukset)
+ *   lahde         en-Wikipedian artikkeli
+ *   kysymykset    2–3 valmista kysymystä pululle (napautus lähettää
+ *                 kysymyksen chattiin noston teksti ja lähde mukana)
+ *
+ * KIISTELLYT KOHDAT SANOTAAN KIISTELLYIKSI. Bluefish Caves (24 000)
+ * ja Toban pullonkaula ovat kumpikin eläviä riitoja, ja teksti kertoo
+ * sen — kohderyhmä on 13 vuotta täyttäneet ja aikuiset, jotka
+ * kestävät sen, ettei tiede ole valmis.
+ */
+export const IHMISEN_MATKA_LISANOSTOT = [
+  {
+    tunnus: 'toba', otsikko: 'Tulivuori, joka pimensi taivaan',
+    ajoitus: 'noin 74 000 vuotta sitten', vuosiaSitten: 74000,
+    lat: 2.6845, lon: 98.8756, virta: 'paavirta',
+    teksti: 'Sumatran Toba purkautui niin rajusti, että se on neljännesmiljoonan '
+      + 'vuoden suurin tunnettu purkaus: tuhkaa levisi Intian valtameren yli ja '
+      + 'kraatterista tuli järvi, joka on yhä sadan kilometrin pituinen. Vanha '
+      + 'ajatus siitä, että purkaus kutisti ihmiskunnan muutamaan tuhanteen '
+      + 'yksilöön, on sittemmin kyseenalaistettu — Afrikan kaivauksissa elämä '
+      + 'jatkui tuhkakerroksen yli.',
+    lahde: 'en-Wikipedia "Toba eruption"',
+    kysymykset: [
+      'Miten Toban purkaus ajoitettiin?',
+      'Kutistiko Toban purkaus ihmiskunnan? Mitä todisteita puolesta ja vastaan on?',
+      'Miltä maailma näytti tuhkatalven aikana?',
+    ],
+  },
+  {
+    tunnus: 'sunda', otsikko: 'Kuiva silta Kaakkois-Aasiaan',
+    ajoitus: 'jääkausien aikana, viimeksi noin 20 000 vuotta sitten', vuosiaSitten: 20000,
+    lat: 2.0, lon: 106.0, virta: 'paavirta',
+    teksti: 'Kun jää sitoi vettä mantereille, meri oli noin 120 metriä nykyistä '
+      + 'alempana ja Sumatra, Jaava ja Borneo olivat kiinni Aasiassa yhtenä '
+      + 'tasankona. Sundamaan poikki käveltiin kuivin jaloin, ja sen jokilaaksot '
+      + 'ja rannat ovat nyt matalan meren pohjassa — siksi varhaisimmat leirit '
+      + 'ovat vaikeimmin löydettäviä.',
+    lahde: 'en-Wikipedia "Sundaland"',
+    kysymykset: [
+      'Miten muinainen merenpinta lasketaan?',
+      'Mitä Sundamaan uponneilta rannoilta on löydetty?',
+      'Miksi juuri tätä reittiä pitkin kuljettiin itään?',
+    ],
+  },
+  {
+    tunnus: 'sahul', otsikko: 'Australia, joka oli isompi',
+    ajoitus: 'noin 65 000 – 10 000 vuotta sitten', vuosiaSitten: 50000,
+    lat: -9.5, lon: 137.0, virta: 'paavirta',
+    teksti: 'Australia, Uusi-Guinea ja Tasmania olivat yksi manner, Sahul, jonka '
+      + 'keskellä nykyinen Carpentarianlahti oli järvi. Sinne ei silti päässyt '
+      + 'kävellen: viimeinen vesiväli oli kymmeniä kilometrejä leveä, joten '
+      + 'ensimmäinen australialainen tuli veneellä. Merenpinnan noustua manner '
+      + 'katkesi kolmeksi ja rannikon vanhimmat leirit jäivät veden alle.',
+    lahde: 'en-Wikipedia "Sahul"',
+    kysymykset: [
+      'Millaisilla veneillä Sahuliin päästiin?',
+      'Miten Sahulin muinainen rantaviiva tunnetaan?',
+      'Mitä eläimiä Sahulissa oli ihmisen tullessa?',
+    ],
+  },
+  {
+    tunnus: 'wallacea', otsikko: 'Vesiraja, joka ei koskaan sulkeutunut',
+    ajoitus: 'aina', vuosiaSitten: 65000,
+    lat: -3.0, lon: 122.0, virta: 'paavirta',
+    teksti: 'Sundamaan ja Sahulin väliin jää saarivyöhyke, jota syvät salmet '
+      + 'erottavat molemmista: Wallacea. Vesi on siellä niin syvää, ettei jääkausi '
+      + 'koskaan paljastanut siltaa, ja siksi Aasian ja Australian eläimistöt ovat '
+      + 'yhä eri maailmoja. Ihminen ylitti rajan silti — ja se on vanhin todiste '
+      + 'siitä, että osattiin kulkea merellä.',
+    lahde: 'en-Wikipedia "Wallacea"',
+    kysymykset: [
+      'Miksi Wallace vetäisi rajansa juuri tähän?',
+      'Kuinka monta vesiväliä matkalla Sahuliin oli?',
+      'Mitä täällä syötiin?',
+    ],
+  },
+  {
+    tunnus: 'flores', otsikko: 'Pienet ihmiset Floresilla',
+    ajoitus: 'noin 100 000 – 50 000 vuotta sitten', vuosiaSitten: 60000,
+    lat: -8.5203, lon: 120.4436, virta: 'paavirta',
+    teksti: 'Liang Buan luolasta löytyi vuonna 2003 aikuinen nainen, joka oli '
+      + 'noin 106 senttiä pitkä ja jonka aivot olivat greipin kokoiset. Homo '
+      + 'floresiensis eli saarella kymmeniätuhansia vuosia, teki kivityökaluja ja '
+      + 'metsästi kääpiönorsuja — ja katosi suunnilleen silloin, kun nykyihminen '
+      + 'saapui seudulle.',
+    lahde: 'en-Wikipedia "Homo floresiensis"',
+    kysymykset: [
+      'Miksi saarilla eläneet lajit kutistuvat?',
+      'Kohtasivatko nykyihmiset floresilaiset?',
+      'Miten Liang Buan kerrokset ajoitettiin?',
+    ],
+  },
+  {
+    tunnus: 'sulawesi-taide', otsikko: 'Vanhin kuva, jonka tunnemme',
+    ajoitus: 'noin 51 000 – 44 000 vuotta sitten', vuosiaSitten: 47000,
+    lat: -4.9800, lon: 119.6600, virta: 'paavirta',
+    teksti: 'Sulawesin Maros-Pangkepin karstiluolien seinillä on käsien kuvia ja '
+      + 'metsäsikoja, ja yhdessä paneelissa pienet hahmot ympäröivät villisikaa — '
+      + 'vanhin tunnettu kuva, joka kertoo tapahtuman. Ajoitus tehdään maalin '
+      + 'päälle kasvaneesta kalkkikerroksesta, joten kuva on vähintään niin vanha '
+      + 'kuin sitä peittävä kivi.',
+    lahde: 'en-Wikipedia "Maros-Pangkep karst"',
+    kysymykset: [
+      'Miten luolamaalaus ajoitetaan?',
+      'Kuka maalasi ja kenelle?',
+      'Onko Euroopassa yhtä vanhaa taidetta?',
+    ],
+  },
+  {
+    tunnus: 'ust-ishim', otsikko: 'Reisiluu joen rannalta',
+    ajoitus: 'noin 45 000 vuotta sitten', vuosiaSitten: 45000,
+    lat: 57.7000, lon: 71.2000, virta: 'siperia',
+    teksti: 'Irtysh-joen törmästä löytynyt yksi reisiluu antoi vanhimman koko '
+      + 'perimän, joka nykyihmisestä on luettu. Sen neandertalilaisperäiset pätkät '
+      + 'ovat pitkiä eivätkä vielä pilkkoutuneita — siitä lasketaan, että '
+      + 'sekoittuminen tapahtui noin 50 000–60 000 vuotta sitten, muutama sata '
+      + 'sukupolvea ennen tätä miestä.',
+    lahde: 'en-Wikipedia "Ust\'-Ishim man"',
+    kysymykset: [
+      'Miten perimästä lasketaan sekoittumisen ajankohta?',
+      'Kuinka vanhaa DNA:ta luusta voi ylipäätään lukea?',
+      'Miksi juuri tänne, Siperian jokivarteen?',
+    ],
+  },
+  {
+    tunnus: 'kostenki', otsikko: 'Donin leirit tuhkan alla',
+    ajoitus: 'noin 40 000 – 30 000 vuotta sitten', vuosiaSitten: 37000,
+    lat: 51.3939, lon: 39.0431, virta: 'eurooppa',
+    teksti: 'Kostenkin ja Borštševon kylien ympäriltä on kaivettu kymmeniä '
+      + 'leiripaikkoja, joista osa on Italian suurpurkauksen tuhkakerroksen alla '
+      + '— sama tuhka ajoittaa ne kaikki kerralla. Kostenki 14:n perimä osoittaa, '
+      + 'että eurooppalaisten sukupuu haarautui jo tällöin, ja mammutinluista '
+      + 'rakennettiin majoja arolla, jossa puuta ei ollut.',
+    lahde: 'en-Wikipedia "Kostyonki–Borshchyovo archaeological complex"',
+    kysymykset: [
+      'Miten tulivuoren tuhka toimii ajoituksena?',
+      'Miten mammutinluinen maja rakennettiin?',
+      'Mitä täällä syötiin?',
+    ],
+  },
+  {
+    tunnus: 'sungir', otsikko: 'Kaksikymmentä tuhatta helmeä',
+    ajoitus: 'noin 34 000 vuotta sitten', vuosiaSitten: 34000,
+    lat: 56.1806, lon: 40.5028, virta: 'eurooppa',
+    teksti: 'Sungirissa haudattiin kaksi lasta pää päätä vasten ja aikuinen mies '
+      + 'heidän viereensä, kaikki peitettyinä mammutinluisilla helmillä. Yhden '
+      + 'puvun helmien tekemiseen on arvioitu kuluneen tuhansia työtunteja, ja '
+      + 'lasten haudassa oli suoraksi oiottuja mammutinsyöksyhampaita. Se kertoo '
+      + 'yhteisöstä, jolla oli varaa haudata lapsi kuin ruhtinas.',
+    lahde: 'en-Wikipedia "Sunghir"',
+    kysymykset: [
+      'Kuinka kauan yhden helmen tekemiseen meni?',
+      'Mitä haudat kertovat yhteisön arvojärjestyksestä?',
+      'Miten hauta ajoitettiin?',
+    ],
+  },
+  {
+    tunnus: 'dolni-vestonice', otsikko: 'Maailman vanhin savifiguuri',
+    ajoitus: 'noin 29 000 vuotta sitten', vuosiaSitten: 29000,
+    lat: 48.8878, lon: 16.6403, virta: 'eurooppa',
+    teksti: 'Määrin mammutinmetsästäjien leiristä löytyi pieni naisfiguuri, joka '
+      + 'oli poltettu savesta — kymmeniätuhansia vuosia ennen ensimmäistä '
+      + 'ruukkua. Samalta paikalta tunnetaan kudotun kankaan painaumia savessa ja '
+      + 'kolmen nuoren yhteishauta, jonka asetelmaa on selitetty monella tavalla '
+      + 'eikä yksikään selitys ole varma.',
+    lahde: 'en-Wikipedia "Dolní Věstonice (archaeology)"',
+    kysymykset: [
+      'Miksi savea poltettiin jo tällöin, mutta ei astioiksi?',
+      'Mitä kankaanpainaumat kertovat?',
+      'Ketkä olivat kolmoishaudan nuoret?',
+    ],
+  },
+  {
+    tunnus: 'malta-poika', otsikko: 'Poika, joka yhdistää kaksi maanosaa',
+    ajoitus: 'noin 24 000 vuotta sitten', vuosiaSitten: 24000,
+    lat: 52.7833, lon: 103.5333, virta: 'siperia',
+    teksti: 'Mal\'tan kylästä Baikalin länsipuolelta kaivettiin 1920-luvulla '
+      + 'nuoren pojan hauta, ja vuonna 2013 hänen perimänsä yllätti kaikki: se on '
+      + 'sukua sekä eurooppalaisille että Amerikan alkuperäisväestölle. Tästä '
+      + '"muinaisten pohjois-eurasialaisten" väestöstä tuli toinen puolikas siinä '
+      + 'seoksessa, joka lopulta ylitti Beringian.',
+    lahde: 'en-Wikipedia "Mal\'ta–Buret\' culture"',
+    kysymykset: [
+      'Miten yhdestä haudasta voi päätellä kokonaisen väestön?',
+      'Kuka oli Amerikan asuttajien toinen esivanhempi?',
+      'Mitä Mal\'tan leiristä on löydetty pojan lisäksi?',
+    ],
+  },
+  {
+    tunnus: 'lascaux', otsikko: 'Härkien sali',
+    ajoitus: 'noin 17 000 vuotta sitten', vuosiaSitten: 17000,
+    lat: 45.0503, lon: 1.1725, virta: 'eurooppa',
+    teksti: 'Neljä poikaa ja koira löysivät vuonna 1940 luolan, jonka seinillä on '
+      + 'lähes kaksituhatta kuvaa: hevosia, uroshirviä ja jättimäisiä härkiä. '
+      + 'Luola suljettiin yleisöltä 1963, koska kävijöiden hiilidioksidi ja '
+      + 'kosteus alkoivat tuhota maalauksia — nyt siellä käydään kopiossa.',
+    lahde: 'en-Wikipedia "Lascaux"',
+    kysymykset: [
+      'Miksi luolamaalauksia tehtiin niin syvälle pimeään?',
+      'Millä maaleilla ja valoilla maalaukset tehtiin?',
+      'Miten luola ajoitettiin?',
+    ],
+  },
+  {
+    tunnus: 'bluefish', otsikko: 'Kiistellyt luut Yukonissa',
+    ajoitus: 'esitetty 24 000 vuotta sitten', vuosiaSitten: 24000,
+    lat: 67.1400, lon: -140.7500, virta: 'amerikat',
+    teksti: 'Bluefish Cavesin hevosen ja poron luissa on viiltoja, joita on '
+      + 'tulkittu ihmisen kiveniskujen jäljiksi jopa 24 000 vuoden takaa. Jos '
+      + 'tulkinta pitää, ihmisiä oli Beringiassa kauan ennen jään väistymistä — '
+      + 'mutta viilto voi syntyä myös pedon hampaista ja maan liikkeistä, ja '
+      + 'kiista jatkuu.',
+    lahde: 'en-Wikipedia "Bluefish Caves"',
+    kysymykset: [
+      'Miten teurastusjälki erotetaan pedon puremasta?',
+      'Mitä "Beringian pysähdys" tarkoittaa?',
+      'Mitä muita varhaisia väitteitä Amerikoista on?',
+    ],
+  },
+  {
+    tunnus: 'paisley', otsikko: 'Todiste, jota kukaan ei odottanut',
+    ajoitus: 'noin 14 300 vuotta sitten', vuosiaSitten: 14300,
+    lat: 42.7000, lon: -120.5300, virta: 'amerikat',
+    teksti: 'Oregonin Paisleyn luolien kuivasta pölystä löytyi ihmisen ulostetta, '
+      + 'joka on radiohiiliajoitettu vanhemmaksi kuin yksikään Clovis-kärki. '
+      + 'Siitä luettu DNA ja luolan luuytimestä tehdyt neulat kertovat samaa: '
+      + 'Amerikassa oli ihmisiä ennen Clovisia.',
+    lahde: 'en-Wikipedia "Paisley Caves"',
+    kysymykset: [
+      'Mitä muinaisesta ulosteesta voi lukea?',
+      'Miten "Clovis ensin" -käsitys kumoutui?',
+      'Mitä täällä syötiin?',
+    ],
+  },
+  {
+    tunnus: 'clovis', otsikko: 'Uurrettu kärki',
+    ajoitus: 'noin 13 000 vuotta sitten', vuosiaSitten: 13000,
+    lat: 34.2833, lon: -103.3167, virta: 'amerikat',
+    teksti: 'Clovisin kaupungin liepeiltä New Mexicosta kaivettiin 1930-luvulla '
+      + 'keihäänkärkiä, joiden tyvessä on uurre varren kiinnitystä varten. Samaa '
+      + 'kärkeä alkoi löytyä kaikkialta Pohjois-Amerikasta muutaman vuosisadan '
+      + 'sisällä, ja pitkään sitä pidettiin maanosan ensimmäisen kulttuurin '
+      + 'merkkinä — nykyään se on yksi vaihe muiden joukossa.',
+    lahde: 'en-Wikipedia "Clovis culture"',
+    kysymykset: [
+      'Miksi Clovis-kärki levisi niin nopeasti?',
+      'Metsästettiinkö mammutit sukupuuttoon?',
+      'Miten kärki valmistettiin?',
+    ],
+  },
+  {
+    tunnus: 'doggerland', otsikko: 'Pohjanmeren uponnut maa',
+    ajoitus: 'noin 10 000 – 8 200 vuotta sitten', vuosiaSitten: 8500,
+    lat: 54.5000, lon: 3.0000, virta: 'eurooppa',
+    teksti: 'Britannian ja Tanskan välissä oli soita, jokia ja metsää, joissa '
+      + 'metsästettiin — troolarit nostavat sieltä yhä luuharppuunoita ja '
+      + 'mammutinluita. Meri söi Doggerlandin vähitellen, ja lopun teki noin '
+      + '8 200 vuotta sitten Norjan edustan valtava vedenalainen maanvyöry ja sen '
+      + 'hyökyaalto.',
+    lahde: 'en-Wikipedia "Doggerland"',
+    kysymykset: [
+      'Miten uponnutta maisemaa kartoitetaan?',
+      'Mitä Storegga-vyörystä tiedetään?',
+      'Kuinka nopeasti meri nousi?',
+    ],
+  },
+  {
+    tunnus: 'teouma', otsikko: 'Lapita-hautausmaa Vanuatulla',
+    ajoitus: 'noin 3 000 vuotta sitten', vuosiaSitten: 3000,
+    lat: -17.7500, lon: 168.3500, virta: 'tyynimeri',
+    teksti: 'Teouman hautausmaa löytyi 2003, kun traktori rikkoi koristellun '
+      + 'Lapita-ruukun. Haudoissa on kymmeniä ensimmäisen sukupolven siirtolaisia, '
+      + 'ja heidän perimänsä on lähes kokonaan aasialaista alkuperää — '
+      + 'papualainen aines tuli saarille vasta myöhemmin, mikä kertoo kahdesta '
+      + 'eri muuttoaallosta.',
+    lahde: 'en-Wikipedia "Teouma"',
+    kysymykset: [
+      'Miten Lapita-keramiikan koristelu tehtiin?',
+      'Kuinka kaukaa Lapita-purjehtijat tulivat?',
+      'Miksi vainajilta oli poistettu kallo?',
+    ],
+  },
+  {
+    tunnus: 'madagaskar', otsikko: 'Borneosta Afrikan rannikolle',
+    ajoitus: 'noin 1 500 – 1 000 vuotta sitten', vuosiaSitten: 1300,
+    lat: -18.9000, lon: 47.5000, virta: 'tyynimeri',
+    teksti: 'Madagaskarin malagassin kieli on sukua Borneon barito-kielille, '
+      + 'vaikka saari on Afrikan rannikolla — asuttajat purjehtivat siis Intian '
+      + 'valtameren yli, eivät kävelleet Mosambikista. Väestö on sekoitus '
+      + 'austronesialaista ja bantutaustaa, ja saaren jättiläislinnut ja '
+      + 'kääpiövirtahevot katosivat ihmisen tulon jälkeen.',
+    lahde: 'en-Wikipedia "Madagascar"',
+    kysymykset: [
+      'Miten kielet paljastavat muuttoliikkeen?',
+      'Millä aluksilla Intian valtameri ylitettiin?',
+      'Mitä Madagaskarin suurille eläimille tapahtui?',
+    ],
+  },
+  {
+    tunnus: 'saqqaq', otsikko: 'Ensimmäiset grönlantilaiset',
+    ajoitus: 'noin 4 500 vuotta sitten', vuosiaSitten: 4500,
+    lat: 69.2000, lon: -53.5000, virta: 'amerikat',
+    teksti: 'Saqqaq-kulttuurin väki tuli Grönlantiin Kanadan arktiselta '
+      + 'saaristolta ja eli siellä satoja vuosia — eikä heillä ole jälkeläisiä '
+      + 'nykyisissä inuiteissa. Jäätyneestä maasta säilyneestä hiustupsusta '
+      + 'luettiin vuonna 2010 ensimmäinen muinaisen ihmisen koko perimä; se '
+      + 'kertoi miehen silmien värin, veriryhmän ja korvavahan laadun.',
+    lahde: 'en-Wikipedia "Saqqaq culture"',
+    kysymykset: [
+      'Miten hiuksesta luetaan koko perimä?',
+      'Mitä Saqqaq-väelle tapahtui?',
+      'Miten arktisessa ilmastossa selvittiin?',
+    ],
+  },
+  {
+    tunnus: 'rapa-nui', otsikko: 'Kaukaisin saari',
+    ajoitus: 'noin 800 vuotta sitten', vuosiaSitten: 800,
+    lat: -27.1127, lon: -109.3497, virta: 'tyynimeri',
+    teksti: 'Rapa Nui on tuhansien kilometrien päässä lähimmästä asutusta '
+      + 'saaresta, ja sinne osattiin silti purjehtia. Saarelaiset pystyttivät '
+      + 'lähes tuhat moai-patsasta, ja pitkään kerrottua tarinaa itse aiheutetusta '
+      + 'romahduksesta on viime vuosina korjattu: väestö näyttää pysyneen '
+      + 'vakaana, ja suurin isku tuli eurooppalaisten mukana.',
+    lahde: 'en-Wikipedia "Easter Island"',
+    kysymykset: [
+      'Miten näin kaukaiselle saarelle osattiin purjehtia?',
+      'Miten moai-patsaat siirrettiin?',
+      'Romahtiko Rapa Nuin yhteiskunta itse?',
+    ],
+  },
+];
+
+/*
+ * VALMIIT KYSYMYKSET KAAREN KAHDELLEKYMMENELLE LÖYTÖPAIKALLE.
+ *
+ * Kysymykset asuvat omassa taulussaan ja liitetään pysäkkeihin
+ * silmukassa (`pysakki.kysymykset`) samalla tavalla kuin
+ * havainnekuvan selite yllä: yksi paikka, josta ne luetaan, ja
+ * pysäkkitaulu pysyy tarinan puolella. Napautus lähettää kysymyksen
+ * pulun chattiin, ja noston teksti ja lähde kulkevat mukana
+ * kontekstina (js/linssit/ihmisen-matka-tutkimus.js).
+ *
+ * Kolme kysymystä per pysäkki: yksi MENETELMÄSTÄ (miten tiedetään),
+ * yksi ARJESTA (mitä syötiin, miltä näytti) ja yksi MIKSI-kysymys
+ * (miksi tänne, miksi silloin) — omistajan esimerkit sanatarkasti
+ * *"Miten tämä ajoitettiin?", "Mitä täällä syötiin?", "Miksi juuri
+ * tänne?"*.
+ */
+export const IHMISEN_MATKA_KYSYMYKSET = {
+  'jebel-irhoud': [
+    'Miten Jebel Irhoudin löydöt ajoitettiin?',
+    'Miksi luita pidettiin ensin neandertalilaisina?',
+    'Miltä Marokko näytti 300 000 vuotta sitten?',
+  ],
+  'omo-kibish': [
+    'Miten tuhkakerroksesta saadaan ikä?',
+    'Miksi Omo I:n iästä on kaksi eri lukua?',
+    'Mitä täällä syötiin?',
+  ],
+  'pinnacle-point': [
+    'Miten simpukankuorikasoja tutkitaan?',
+    'Miksi meren antimet olivat käänteentekeviä?',
+    'Mihin punaista okraa käytettiin?',
+  ],
+  'skhul-qafzeh': [
+    'Jäikö tästä retkestä jälkeläisiä?',
+    'Miten hauta tunnistetaan tahalliseksi?',
+    'Keitä Levantissa asui samaan aikaan?',
+  ],
+  'al-wusta': [
+    'Miten yksi sormiluu tunnistetaan lajilleen?',
+    'Miltä Arabia näytti vihreänä aikana?',
+    'Miksi juuri tänne?',
+  ],
+  blombos: [
+    'Miten okrakaiverrus ajoitettiin?',
+    'Ovatko kotilohelmet koruja vai jotain muuta?',
+    'Mitä Blombosin luolassa tehtiin päivittäin?',
+  ],
+  'lida-ajer': [
+    'Miten kaksi hammasta riittää todisteeksi?',
+    'Miten sademetsässä elettiin?',
+    'Miksi tämä löytö on tärkeä reitin kannalta?',
+  ],
+  madjedbebe: [
+    'Miksi Madjedbeben iästä kiistellään?',
+    'Millä välineillä meri ylitettiin?',
+    'Mitä täällä syötiin?',
+  ],
+  denisova: [
+    'Miten denisovalaiset tunnistettiin pelkästä DNA:sta?',
+    'Mitä sekoittumisesta jäi meihin?',
+    'Miksi juuri tämä luola säilytti niin paljon?',
+  ],
+  'bacho-kiro': [
+    'Miten luut ajoitettiin ja tunnistettiin nykyihmisiksi?',
+    'Kohtasivatko he neandertalilaisia?',
+    'Millainen Eurooppa oli 45 000 vuotta sitten?',
+  ],
+  'lake-mungo': [
+    'Miksi Mungon ajoituksesta kiistellään?',
+    'Mitä hautaustapa kertoo uskomuksista?',
+    'Millainen Willandran järvialue oli silloin?',
+  ],
+  tianyuan: [
+    'Miten luista päätellään, että hän söi kalaa?',
+    'Mitä Tianyuanin perimä kertoo sukulaisuudesta?',
+    'Millainen Itä-Aasia oli tuolloin?',
+  ],
+  niah: [
+    'Miksi "syvän kallon" iästä kiisteltiin?',
+    'Miten sademetsässä hankittiin ruokaa?',
+    'Miksi juuri Borneolle?',
+  ],
+  chauvet: [
+    'Miten maalaukset ajoitettiin?',
+    'Miksi luolaan maalattiin petoja eikä saaliseläimiä?',
+    'Miten luolassa nähtiin mitään?',
+  ],
+  yana: [
+    'Miten napapiirin pohjoispuolella selvittiin?',
+    'Mitä Yanan perimä kertoo Amerikan asuttajista?',
+    'Mitä täällä syötiin?',
+  ],
+  'white-sands': [
+    'Miten jalanjäljet ajoitettiin, ja miksi siitä kiistellään?',
+    'Ketkä jäljet jättivät?',
+    'Miltä Tularosan allas näytti silloin?',
+  ],
+  beringia: [
+    'Kuinka kauan maasilta oli olemassa?',
+    'Mitä "Beringian pysähdys" tarkoittaa?',
+    'Millaista siellä oli asua?',
+  ],
+  'monte-verde': [
+    'Miksi Monte Verde muutti käsityksen Amerikan asuttamisesta?',
+    'Miten turve säilytti puun ja lihan?',
+    'Mitä täällä syötiin?',
+  ],
+  lapita: [
+    'Miten Lapita-astiat koristeltiin?',
+    'Miten avomerellä suunnistettiin ilman kompassia?',
+    'Miksi purjehdittiin yhä kauemmas?',
+  ],
+  aotearoa: [
+    'Miten Wairau Barin hautausmaa ajoitettiin?',
+    'Miksi Uuteen-Seelantiin tultiin vasta niin myöhään?',
+    'Mitä täällä syötiin?',
+  ],
+};
+
+/*
+ * Kysymykset pysäkkeihin. Sama kuvio kuin havainnekuvan selitteellä:
+ * taulu on yksi totuus, ja pysäkki kantaa kentän `kysymykset`, jota
+ * tutkimusvaiheen kortti lukee.
+ */
+for (const pysakki of IHMISEN_MATKA) {
+  pysakki.kysymykset = IHMISEN_MATKA_KYSYMYKSET[pysakki.tunnus] ?? [];
+}

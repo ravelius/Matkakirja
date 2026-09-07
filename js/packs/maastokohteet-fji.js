@@ -259,4 +259,112 @@ export const MAASTOKOHTEET_FJI = [
     lahde: 'en-Wikipedia "Kadavu Island", johdanto-osa sekä osiot "Geography" ja "Flora and '
       + 'fauna" (tarkistettu 6.9.2026).',
   },
+  /* ================================================================
+   * ERÄ M20, 7.9.2026 — KOLME KOHDETTA LISÄÄ.
+   *
+   * Erän M2 vaje oli kohteita −3, ja se on nyt mitattu uudelleen:
+   * lehden ikkunaan mahtui kolme merkkiä lisää ilman yhtäkään
+   * nimiö–nimiö-limitystä (`node tools/tarkista-nimiolimitys.mjs FJI`
+   * sanoo yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0"). Kaikki kolme ovat lehden
+   * rajauksen sisällä ja yli 27 lautayksikön päässä Suvasta
+   * (KAUPUNGIN_KOHDALLA_SADE 7, kaupunkikaton säde 8). Erä on kuvaton
+   * kuten M2, ja faktat on luettu en-Wikipedian raakatekstistä
+   * kohde kerrallaan 7.9.2026.
+   *
+   * Tyyppi ei ole yhdelläkään maastoa: maastokiintiö (3) oli jo
+   * täynnä, ja vaje oli nimenomaan kohteissa. Saaren nimi merkin
+   * niminä on saman erän Salomonsaarten ja aiempien erien käytäntö
+   * (SLB "Kennedysaari" on tyypiltään historia): tyyppi kertoo, mitä
+   * kortti kertoo, ei mitä maanpinta on.
+   * ============================================================== */
+  {
+    id: 'yasawa',
+    nimi: 'Yasawa',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Kuka eurooppalainen näki saaret ensimmäisenä?',
+      'Mistä Yasawan saaret olivat kuuluisia?',
+    ],
+    korostukset: ['purjematto|purjematoista'],
+    nappi: 'Kaksikymmentä saarta ja niiden matot',
+    // 177.33333 E / -16.91667 N — en-Wikipedia "Yasawa Islands".
+    // Lähin pelikaupunki Suva 37,2 lautayksikköä; lähin muu merkki
+    // Bligh Water 17,7.
+    laudat: {
+      maailmankartta: { x: 11744.4, y: 3780.7 },
+    },
+    teksti: 'Yasawan ryhmä on noin kahdenkymmenen tulivuoriperäisen saaren jono Fidžin '
+      + 'länsipuolella, yhteispinta-alaltaan noin 135 neliökilometriä. Ketju jatkuu yli '
+      + 'kahdeksankymmentä kilometriä koilliseen kohdasta, joka on neljänkymmenen kilometrin '
+      + 'päässä Lautokasta luoteeseen, ja saaret ovat hyvin vuorisia: huiput ovat 250:n ja '
+      + '600 metrin välillä. Ensimmäinen eurooppalainen, joka näki saaret, oli William Bligh '
+      + 'vuonna 1789 Bountyn kapinan jälkeen; kapteeni Barber kävi HMS Arthurilla 1794, mutta '
+      + 'kartoitettuja saaret eivät olleet ennen vuotta 1840, jolloin Charles Wilkesin '
+      + 'johtama yhdysvaltalainen retkikunta mittasi ne. Koko 1800-luvun ajan tongalaiset '
+      + 'ryöstöretkeläiset kävivät kauppaa purjematoista, joista Yasawa oli kuuluisa — ja '
+      + 'joskus veivät ne ilman kauppaa.',
+    lahde: 'en-Wikipedia "Yasawa Islands", johdanto-osa sekä osiot "Geography" ja "History" '
+      + '(tarkistettu 7.9.2026).',
+  },
+  {
+    id: 'vatulele',
+    nimi: 'Vatulele',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Miksi saaren rapuja ei saa vahingoittaa?',
+      'Mistä masi-kangas tehdään?',
+    ],
+    korostukset: ['masi|masi-kangasta'],
+    nappi: 'Pyhät katkaravut ja tuohikangas',
+    // 177.62778 E / -18.54167 N — en-Wikipedia "Vatulele".
+    // Lähin pelikaupunki Suva 37,6 lautayksikköä; lähin muu merkki
+    // Sigatokan dyynit 13,9.
+    laudat: {
+      maailmankartta: { x: 11754.3, y: 3836.6 },
+    },
+    teksti: 'Vatulele on koralli- ja tulivuoriperäinen saari kolmenkymmenenkahden kilometrin '
+      + 'päässä Viti Levusta etelään, ja siellä on neljä kylää: Lomanikaya, Ekubo, Taunovo ja '
+      + 'Bouwaqa. Saari tunnetaan katkaravuistaan, joita sanotaan nimillä ura-buta eli '
+      + 'keitetty rapu ja uradamudamu eli punainen rapu. Saarelaiset pitävät niitä pyhinä: '
+      + 'niitä ei saa tappaa eikä vahingoittaa millään tavalla, ja tarinan mukaan se, joka '
+      + 'yrittää viedä ne pois, joutuu haaksirikkoon. Ravut elävät anchialine-altaissa, jotka '
+      + 'ovat matkan päässä merestä mutta joissa vuorovesi silti tuntuu, ja altaisiin liittyy '
+      + 'luolien ja käytävien verkosto. Saari on myös täynnä masi-kangasta tekeviä käsiä: '
+      + 'tuohikangas tulee paperimulperin kuoresta, ja metsässä on kaikkialla pieniä '
+      + 'raivioita, joihin puuta on istutettu. Kalliopiirroksia on ajoitettu kolmentuhannen '
+      + 'vuoden ikäisiksi; ne on maalattu hematiitista tehdyllä värillä, ja aiheina on '
+      + 'ihmishahmoja, kilpikonnia ja abstrakteja merkkejä.',
+    lahde: 'en-Wikipedia "Vatulele", johdanto-osa ja osio "Tourism" (tarkistettu 7.9.2026).',
+  },
+  {
+    id: 'vilavilairevo',
+    nimi: 'Vilavilairevo',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Miksi hiillos ei polta jalkaa?',
+      'Kuka Beqan yhdeksästä kylästä kävelee tulessa?',
+    ],
+    korostukset: ['Sawau|Sawaun'],
+    nappi: 'Kävely hiilloksen yli',
+    // Beqa 178.13333 E / -18.4 N — en-Wikipedia "Beqa".
+    // Lähin pelikaupunki Suva 27,6 lautayksikköä; lähin muu merkki
+    // skandaali "Cakobaun lasku" 21,8.
+    laudat: {
+      maailmankartta: { x: 11771.1, y: 3831.7 },
+    },
+    teksti: 'Vilavilairevo on fidžiläinen tulenkävelyseremonia, ja sen koti on Beqa, '
+      + 'kolmenkymmenenkuuden neliökilometrin saari kymmenen kilometriä Viti Levusta '
+      + 'etelään. Saarella on yhdeksän kylää kahdessa piirikunnassa, ja niistä viisi — '
+      + 'Dakuibeqa, Dakuni, Soliyaga, Naceva ja Rukua — tunnetaan tulenkävelyn perinteestä; '
+      + 'sitä kantaa Sawaun klaani. Tulenkävelyä on harjoitettu maailmalla tuhansia vuosia, '
+      + 'vanhin tunnettu maininta on rautakauden Intiasta noin 1200 eaa., ja se on ollut '
+      + 'siirtymäriitti, voiman ja rohkeuden koe sekä uskon koettelu. Beqan seremonia oli jo '
+      + 'nähtävyys vuonna 1902, jolloin sitä tutkittiin ja siitä kirjoitettiin selvitys '
+      + 'otsikolla "arvattava selitys arvoitukseen". Nykyfysiikka on selittänyt ilmiön: '
+      + 'jalka ei kosketa kuumaa pintaa tarpeeksi kauan palaakseen, ja hiillos johtaa '
+      + 'lämpöä huonosti.',
+    lahde: 'en-Wikipedia "Beqa", johdanto-osa ja osio "Tradition", sekä en-Wikipedia '
+      + '"Firewalking" (johon Vilavilairevo ohjaa), johdanto-osa ja osio "History" '
+      + '(tarkistettu 7.9.2026).',
+  },
 ];

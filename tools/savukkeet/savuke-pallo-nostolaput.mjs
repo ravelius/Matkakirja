@@ -22,6 +22,11 @@
  *      varauksia — yksikään nimi ei leikkaa niitä.
  *   3. NIMET EIVÄT KADONNEET SOVITTELUUN. Jokaisessa näkymässä on
  *      nimiä — väistön hinta ei saa olla mykkä kartta.
+ *   6. LAPUN TEKSTI OTTAA NAPAUTUKSEN (Raamattu, VIAT v1672;
+ *      omistaja 7.9.2026: *"Karttanostoissa teksti ei ota klikkausta
+ *      ainoastaan kuvake. Saisiko myös tekstit klikattaviksi?"*).
+ *      Oikea napautus lapun ulkokolmannekseen avaa saman noston.
+ *
  *   4. LAPPU LIUKUU, EI HYPPÄÄ. Sovittelun siirto kirjoitetaan
  *      `.pallolauta-nosto-siirto`-ryhmän CSS-muunnokseen, ja ryhmällä
  *      on 200 ms:n transform-siirtymä.
@@ -281,6 +286,153 @@ if (auki) {
   vaadi('5. pakotettu väistö toimii: este lapun päähän, eikä näkyvä lappu jää sen alle',
     pakotettuja > 0 && pakoteLimityksia === 0 && pakoteKasitellyt === pakotettuja,
     `pakotettuja ${pakotettuja}, käsiteltyjä ${pakoteKasitellyt}, limityksiä ${pakoteLimityksia}`);
+  /*
+   * 6. NAPAUTUS LAPUN TEKSTIIN AVAA SAMAN NOSTON (Raamattu, VIAT v1672;
+   *    omistaja 7.9.2026 illalla sanatarkasti: *"Karttanostoissa teksti
+   *    ei ota klikkausta ainoastaan kuvake. Saisiko myös tekstit
+   *    klikattaviksi?"*).
+   *
+   *    NAPAUTUS ON OIKEA HIIREN NAPAUTUS KANKAALLE, ei kutsu laudan
+   *    metodiin: sama polku kuin sormella (Globe.gl onGlobeClick →
+   *    js/pallolauta/lauta.js napautaPintaan → lahinMerkki →
+   *    lappuunOsunut).
+   *
+   *    MITTA ON OSUMAN OHJAUTUMINEN, EI KORTIN AUKEAMINEN. Kortin
+   *    sisältö (skandaalikortti, nähtävyyskortti) syntyy pakan ja
+   *    ämpärin datasta, jota tämä savuke ei tarjoile; vika ja korjaus
+   *    ovat osumatestissä. Siksi jokaisen ruudulla olevan noston oma
+   *    `avaa` kääritään mittariin, ja vartio lukee, KENELLE napautus
+   *    meni.
+   *
+   *    KAKSI NAPAUTUSTA KUSTAKIN NÄKYMÄSTÄ:
+   *      a) omistajan nimeämä lappu (Bukarest "Strousberg", Helsinki
+   *         "Kirjasota") tekstin keskeltä;
+   *      b) lappu, jonka ULOMPI PÄÄ jäi vanhan säännön (lähin merkki
+   *         44 px) ulottumattomiin tai osui TOISEEN nostoon — juuri se
+   *         tilanne, josta omistaja kirjoitti. Mitattu 7.9.2026:
+   *         Bukarestissa yhdeksän lappua yhdestätoista, mm. "Draculan
+   *         alaviite" ja "Nadia Comăneci", eivät saaneet ulkopäästään
+   *         mitään; "Branin linna" ja "Balkanvuoret" avasivat naapurin.
+   */
+  const LAPPUNAKYMAT = [
+    { nimi: 'Bukarest', lat: 44.43, lng: 26.10, etsi: 'strousberg' },
+    { nimi: 'Helsinki', lat: 60.17, lng: 24.94, etsi: 'kirjasota' },
+  ];
+  /** Yksi näkymä: kamera, ladonta ja napautuskohteet lapuista. */
+  const lappukohteet = (nakyma, korkeus) => sivu.evaluate(async ({
+    lat, lng, alt, etsi,
+  }) => {
+    const l = window.matkakirja.ui.pallolauta;
+    l.pallo.pointOfView({ lat, lng, altitude: alt }, 0);
+    await new Promise((v) => setTimeout(v, 1600));
+    l.ladoHeti();
+    await new Promise((v) => setTimeout(v, 400));
+    const p = l.pallo;
+    const koti = l.kotelo.getBoundingClientRect();
+    /*
+     * OSUMALAATIKOT, EI VAIN ELÄVÄT LAPUT: tiheässä näkymässä nostot
+     * ovat jo POLTETTU laattaan eikä niillä ole elementtiä — mutta
+     * niiden nimiö on yhtä lailla ruudulla ja sormen alla. Kerros
+     * antaa saman laatikon, jota osumatesti käyttää.
+     */
+    const laput = l.nostot.osumaLaatikot().filter((r) => r.perhe === 'nosto' && r.nimi);
+    /** Napautuspiste lapun tekstistä: `osuus` 0,5 = keskeltä, 1 = ulkopää. */
+    const kohta = (r, osuus) => {
+      const puoli = r.puoli ?? 'oikea';
+      const w = (r.x1 - r.x0) * 0.3;
+      const h = (r.y1 - r.y0) * 0.3;
+      if (puoli === 'vasen') return { x: r.x0 + w * (1 - osuus) + 2, y: (r.y0 + r.y1) / 2 };
+      if (puoli === 'yla') return { x: (r.x0 + r.x1) / 2, y: r.y0 + h * (1 - osuus) + 2 };
+      if (puoli === 'ala') return { x: (r.x0 + r.x1) / 2, y: r.y1 - h * (1 - osuus) - 2 };
+      return { x: r.x1 - w * (1 - osuus) - 2, y: (r.y0 + r.y1) / 2 };
+    };
+    /** Kenelle VANHA sääntö (lähin merkki 44 px) antaisi tämän pisteen? */
+    const vanhaVoittaja = (piste) => {
+      let paras = null;
+      let matka = 44;
+      for (const o of l.nostot.osumat()) {
+        const s = p.getScreenCoords(o.lat, o.lng, 0);
+        if (!s) continue;
+        const d = Math.hypot(s.x - piste.x, s.y - piste.y);
+        if (d < matka) { matka = d; paras = o.id; }
+      }
+      return paras;
+    };
+    const rivi = (r, osuus, laji) => {
+      const piste = kohta(r, osuus);
+      const vanha = vanhaVoittaja(piste);
+      return {
+        laji,
+        id: r.id,
+        nimi: r.nimi,
+        poltettu: r.poltettu,
+        vanha: vanha === r.id ? 'sama' : (vanha ? 'toinen' : 'ei mitään'),
+        x: koti.left + piste.x,
+        y: koti.top + piste.y,
+      };
+    };
+    const ulos = [];
+    const nimetty = laput.find((r) => r.nimi.toLowerCase().includes(etsi));
+    if (nimetty) ulos.push(rivi(nimetty, 0.5, 'nimetty'));
+    // Ensimmäinen, jonka ULKOPÄÄ jäi vanhalta säännöltä saamatta.
+    for (const r of laput) {
+      const koe = rivi(r, 1, 'ulottumaton');
+      if (koe.vanha !== 'sama') { ulos.push(koe); break; }
+    }
+    return ulos;
+  }, {
+    lat: nakyma.lat, lng: nakyma.lng, alt: korkeus, etsi: nakyma.etsi,
+  });
+
+  let lappuKokeita = 0;
+  let lappuOsui = 0;
+  let ulottumattomia = 0;
+  for (const nakyma of LAPPUNAKYMAT) {
+    // eslint-disable-next-line no-await-in-loop
+    const kohteet = await lappukohteet(nakyma, KORKEUDET[1]);
+    for (const kohde of kohteet) {
+      /*
+       * MITTARI JOKAISEN NOSTON `avaa`:iin. Osumat pysyvät samoina,
+       * koska kamera ei liiku napautusten välissä (ladonta ajetaan vain
+       * levossa kameran liikuttua).
+       */
+      // eslint-disable-next-line no-await-in-loop
+      await sivu.evaluate(async () => {
+        const { suljeFokuskohde } = await import('/js/fokuskohteet.js');
+        suljeFokuskohde(window.matkakirja.ui);
+        // Auki jäänyt kortti nielaisisi seuraavan napautuksen
+        // (js/pallolauta/lauta.js korttivahti).
+        for (const el of document.querySelectorAll(
+          '.fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros,'
+          + ' .fokusnosto-kerros, .syvennys-kerros, .minipopup',
+        )) el.remove();
+        window.__avattu = [];
+        for (const o of window.matkakirja.ui.pallolauta.nostot.osumat()) {
+          if (o.__mittari) continue;
+          const alkuperainen = o.avaa;
+          o.__mittari = true;
+          o.avaa = (ankkuri) => { window.__avattu.push(o.id); return alkuperainen(ankkuri); };
+        }
+      });
+      lappuKokeita += 1;
+      if (kohde.laji === 'ulottumaton') ulottumattomia += 1;
+      // eslint-disable-next-line no-await-in-loop
+      await sivu.mouse.click(kohde.x, kohde.y);
+      // eslint-disable-next-line no-await-in-loop
+      await sivu.waitForTimeout(500);
+      // eslint-disable-next-line no-await-in-loop
+      const avattu = await sivu.evaluate(() => window.__avattu ?? []);
+      if (avattu.length === 1 && avattu[0] === kohde.id) lappuOsui += 1;
+      tieto(`  napautus ${nakyma.nimi} (${kohde.laji})`,
+        `"${kohde.nimi}"${kohde.poltettu ? ' (poltettu)' : ''}, vanha sääntö: ${kohde.vanha} `
+        + `→ avautui ${avattu.join(', ') || 'ei mitään'}`);
+    }
+  }
+  vaadi('6. napautus nimilapun tekstiin avaa saman noston (myös kuvakkeen ulottumattomissa)',
+    lappuKokeita >= 2 && ulottumattomia >= 1 && lappuOsui === lappuKokeita,
+    `napautuksia ${lappuKokeita} (joista vanhan säännön ulottumattomissa ${ulottumattomia}), `
+    + `oikein ${lappuOsui}`);
+
   tieto('sivun virheet', virheet.length ? virheet.join(' | ') : 'ei yhtään');
 }
 
