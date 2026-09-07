@@ -51575,6 +51575,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Härkävankkurit lähtivät pois brittien ulottuvilta',
           aika: '1836 alkaen',
+          tiedosto: 'G.S. Smithard; J.S. Skelton (1909) - The Voortrekkers.jpg',
           teksti: 'Kapin siirtokunnan hollanninkieliset maanviljelijät '
             + 'eli buurit olivat kyllästyneet brittihallintoon, ja '
             + 'vuodesta 1836 alkaen tuhannet heistä pakkasivat koko '
@@ -51587,11 +51588,15 @@ export const MAA_KATEGORIAT = {
             + 'ndebelet joutuivat väistymään, ja yhteenotot '
             + 'zulukuningaskunnan kanssa alkoivat murentaa sitä. Suuri '
             + 'vaellus on afrikaanerien perustarina.',
+          selite: 'G. S. Smithardin ja J. R. Skeltonin kuvitus vuodelta 1909 '
+            + 'esittää voortrekkerien vankkurijonoa matkalla sisämaahan.',
+          lahde: 'G. S. Smithard ja J. R. Skelton, Wikimedia Commons (PD)',
           wiki: 'Suuri vaellus',
         },
         {
           otsikko: 'Puutarhuri, joka oli oikeasti asianajaja',
           aika: '1963–1964',
+          tiedosto: 'Liliesleaf hut1.jpg',
           teksti: 'Nelson Mandela asui vuodesta 1961 Liliesleafin '
             + 'maatilalla Rivoniassa Johannesburgin laidalla ja '
             + 'esiintyi puutarhurina ja kokkina nimellä David '
@@ -51605,6 +51610,10 @@ export const MAA_KATEGORIAT = {
             + 'elinkautiseen. Käsittely nauhoitettiin 591 '
             + 'Dictabelt-nauhalle, ja Unesco liitti asiakirjat Maailman '
             + 'muisti -rekisteriin 2007.',
+          selite: 'Liliesleafin maatilan ruokokattoinen rakennus Rivoniassa oli '
+            + 'ANC:n aktivistien salainen kokoushuone, ja poliisi ratsasi sen '
+            + 'heinäkuussa 1963.',
+          lahde: 'Colinvlr, Wikimedia Commons (PD)',
           wiki: 'Rivonian oikeudenkäynti',
         },
         {
@@ -51625,6 +51634,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Komissio, jossa tekijä sai puhua itsensä vapaaksi',
           aika: '1996',
+          tiedosto: 'Desmond Tutu - Kirchentag Cologne 2007 (7137).jpg',
           teksti: 'Uusi valtio ei perustanut sotarikostuomioistuinta '
             + 'vaan komission. Totuus- ja sovintokomissio aloitti '
             + 'kuulemisensa 1996 arkkipiispa Desmond Tutun johdolla. '
@@ -51637,6 +51647,9 @@ export const MAA_KATEGORIAT = {
             + 'vapausliikkeen tekijät. Tutu kytki työn ubuntuun — '
             + 'ajatukseen, että ihminen on ihminen toisten ihmisten '
             + 'kautta.',
+          selite: 'Arkkipiispa Desmond Tutu toimi totuus- ja sovintokomission '
+            + 'puheenjohtajana.',
+          lahde: 'Raimond Spekking, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Totuus- ja sovintokomissio',
         },
       ],
@@ -51661,6 +51674,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Yksikään kieli ei ole enemmistön kieli',
+          tiedosto: 'ConstitutionalCourtofSouthAfrica-entrance-20070622.jpg',
           teksti: 'Vuoden 1996 perustuslaki teki yhdestätoista kielestä '
             + 'virallisia, ja 3. toukokuuta 2023 kansalliskokous lisäsi '
             + 'joukkoon eteläafrikkalaisen viittomakielen. Yksikään '
@@ -51671,6 +51685,10 @@ export const MAA_KATEGORIAT = {
             + 'puhuvat toisilleen. Kotimaiset bantukielet jakautuvat '
             + 'kahtia: nguni-kieliä puhutaan itärannikolla ja '
             + 'sotho–tswana-kieliä sisämaassa pohjoisessa.',
+          selite: 'Perustuslakituomioistuin toimii Constitution Hillillä '
+            + 'Braamfonteinissa Johannesburgissa, ja sen nimi on kirjoitettu '
+            + 'sisäänkäyntiin maan virallisilla kielillä.',
+          lahde: 'André-Pierre, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Etelä-Afrikan kielet',
         },
         {
@@ -51705,6 +51723,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Laulu, jossa kieli vaihtuu neljä kertaa',
           aika: '1897 ja 1997',
+          tiedosto: 'Enoch Sontonga Braamfontein.jpg',
           teksti: 'Metodistilähetyskoulun opettaja Enoch Sontonga '
             + 'sävelsi 1897 Johannesburgin lähellä virren, jonka nimi '
             + 'on xhosaksi Nkosi Sikelel\' iAfrika eli "Jumala '
@@ -51716,6 +51735,9 @@ export const MAA_KATEGORIAT = {
             + 'Die Stem, ja viimeinen säkeistö kirjoitettiin '
             + 'englanniksi. Kieliä on viisi, ja laulu vaihtaa myös '
             + 'sävellajia: se alkaa G-duurista ja päättyy D-duuriin.',
+          selite: 'Enoch Sontongan hautamuistomerkki on Braamfonteinin '
+            + 'hautausmaalla Johannesburgissa.',
+          lahde: 'Steamhunter, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Nkosi Sikelel’ iAfrika',
         },
       ],
@@ -51747,6 +51769,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Passi mitätöitiin äidin hautajaisten alla',
           aika: '1960-luku',
+          tiedosto: 'Miriam Makeba 1986 (cropped).jpg',
           teksti: 'Miriam Makeba pääsi maailmalle 1959 neljän minuutin '
             + 'roolilla apartheidia vastustaneessa elokuvassa Come '
             + 'Back, Africa. Kun hän vuonna 1960 yritti palata kotiin '
@@ -51758,10 +51781,14 @@ export const MAA_KATEGORIAT = {
             + 'passin — elämänsä aikana hän piti yhdeksää. Grammyn hän '
             + 'voitti 1966 ensimmäisenä afrikkalaisena artistina. '
             + 'Kotimaahan hän palasi vasta 10. kesäkuuta 1990.',
+          selite: 'Miriam Makeba eli maanpaossa vuodesta 1960 vuoteen 1990, ja '
+            + 'hänet tunnettiin nimellä Mama Africa.',
+          lahde: 'Bernard Gotfryd, Wikimedia Commons (PD)',
           wiki: 'Miriam Makeba',
         },
         {
           otsikko: 'Kilpalaulanta, jossa voittaa hiljaisin',
+          tiedosto: 'Ladysmith Black Mambazo 2018.jpg',
           teksti: 'Isicathamiya on zulunkielinen mieskuorolaulu, ja '
             + 'nimi tulee verbistä -cathama, "astua varovasti". Se '
             + 'syntyi siirtotyöläisten asuntoloissa. Vanhempi tyyli '
@@ -51774,6 +51801,9 @@ export const MAA_KATEGORIAT = {
             + 'Ladysmith Black Mambazon 1960 ja opetti sille '
             + 'harmoniat, jotka oli kuullut toistuvassa unessa 1964. '
             + 'Nimen mambazo tarkoittaa kirvestä.',
+          selite: 'Ladysmith Black Mambazo on laulanut isicathamiyaa vuodesta '
+            + '1960 ja voittanut viisi Grammy-palkintoa.',
+          lahde: 'Raph_PH, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Isicathamiya',
         },
         {
@@ -51803,6 +51833,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Tuli, jonka ympärillä koko maa juhlii samana päivänä',
+          tiedosto: 'Braai Fire, Cape Town, South Africa-3629.jpg',
           teksti: 'Braai on afrikaansia ja tarkoittaa grillaamista, '
             + 'mutta sana on siirtynyt kaikkiin kieliryhmiin. Sanassa '
             + 'braaivleis vleis tarkoittaa lihaa ja on samaa juurta '
@@ -51815,11 +51846,15 @@ export const MAA_KATEGORIAT = {
             + '2005 alkanut braai-päivä on 24. syyskuuta, samana '
             + 'päivänä kuin perintöpäivä, ja Desmond Tutu suostui 2007 '
             + 'sen suojelijaksi.',
+          selite: 'Braai tarkoittaa afrikaansiksi grillaamista, ja puu on sen '
+            + 'perinteinen polttoaine.',
+          lahde: 'Victorgrigas, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Braai',
         },
         {
           otsikko: 'Curry tarjoillaan kaiverretun leivän sisällä',
           aika: '1940-luku',
+          tiedosto: 'Chicken Curry Bunny Chow.JPG',
           teksti: 'Durbanissa asuu Afrikan suurin intialaisperäinen '
             + 'väestö, ja sieltä on 1940-luvulta peräisin bunny chow: '
             + 'puolikas tai neljännes vaaleaa limppua, jonka sisus on '
@@ -51831,10 +51866,14 @@ export const MAA_KATEGORIAT = {
             + 'ruokansa ensin suurille lehdille, mutta tauko oli lyhyt '
             + 'ja leipä nopeampi astia. Neljännesannosta kutsutaan '
             + 'monin paikoin nimellä kota.',
+          selite: 'Bunny chow syntyi Durbanissa 1940-luvulla, ja onteloksi '
+            + 'kaiverrettu leipä on sekä astia että osa ateriaa.',
+          lahde: 'Lucinda Jolly, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Bunny chow',
         },
         {
           otsikko: 'Kuivattu liha kulki satulan alla',
+          tiedosto: 'Sliced Biltong.jpg',
           teksti: 'Biltong on ilmakuivattua ja mausteilla kuorrutettua '
             + 'lihaa: nautaa, mutta myös strutsia tai kuduantilooppia. '
             + 'Nimi tulee afrikaansin sanoista bil, "takapuoli", ja '
@@ -51846,11 +51885,15 @@ export const MAA_KATEGORIAT = {
             + 'mikrobeja hillitsevä vaikutus. Paikallisen kertomuksen '
             + 'mukaan 1600-luvun uudisasukkaat kuivattivat lihasuikaleita '
             + 'satulan alla hevosen suolaisessa hiessä.',
+          selite: 'Biltong kuivataan ilmassa eikä kuumenneta lainkaan, ja se '
+            + 'maustetaan muun muassa korianterilla ja pippurilla.',
+          lahde: 'Delia du Plessis, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Biltong',
         },
         {
           otsikko: 'Muurahaispesästä löytyi kokonaisen elinkeinon siemen',
           aika: '1930-luku',
+          tiedosto: 'Rooibos (Aspalathus linearis)PICT2813.JPG',
           teksti: 'Rooibos eli afrikaansiksi "punainen pensas" kasvaa '
             + 'vain Cederbergin vuorilla noin 250 kilometriä '
             + 'Kapkaupungista pohjoiseen. Neulasmaiset lehdet '
@@ -51863,6 +51906,10 @@ export const MAA_KATEGORIAT = {
             + 'mursi sen auki: sisällä oli aitta. Piirilääkäri Pieter le '
             + 'Fras Nortier kehitti löydöstä viljelymenetelmän. EU '
             + 'myönsi rooiboksille alkuperäsuojan 2021.',
+          selite: 'Rooibos-pensas Aspalathus linearis kasvaa Länsi-Kapin '
+            + 'Cederbergissä, ja Clanwilliamin seudulla ratkaistiin '
+            + '1930-luvulla, miten sitä voi viljellä.',
+          lahde: 'Winfried Bruenken, Wikimedia Commons (CC BY-SA 2.5)',
           wiki: 'Rooibos',
         },
       ],
@@ -51876,6 +51923,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Neljäkymmentätuhatta maalausta yhdellä vuoristolla',
+          tiedosto: 'ELANDS - San rock-art panel at Eland Cave, Cathedral Peak, South Africa, 2017.jpg',
           teksti: 'Lohikäärmevuorten pehmeään hiekkakiveen on kulunut '
             + 'luolia ja kalliosuojia, ja niiden seinillä on 35 '
             + '000–40 000 sanien tekemää maalausta. Se on maailman '
@@ -51888,11 +51936,15 @@ export const MAA_KATEGORIAT = {
             + 'nimi uKhahlamba on käännetty "ylöspäin osoittavien '
             + 'keihäiden valliksi". Unesco otti uKhahlamba '
             + 'Drakensbergin puiston luetteloonsa 2000.',
+          selite: 'Eland Cave Cathedral Peakin alueella on yksi Lohikäärmevuorten '
+            + 'sadoista sanien maalauskohteista.',
+          lahde: 'Josep M. Gracia, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Lohikäärmevuoret',
         },
         {
           otsikko: 'Vaakunan hahmot poimittiin kalliolohkareesta',
           aika: '2000',
+          tiedosto: 'Linton Panel IZIKO, Capetown DSC00228 (16091324620).jpg',
           teksti: 'Etelä-Afrikan vaakuna otettiin käyttöön '
             + 'vapaudenpäivänä 27. huhtikuuta 2000, ja sen suunnitteli '
             + 'Iaan Bekker. Kilvessä on kaksi ihmishahmoa, jotka '
@@ -51904,11 +51956,16 @@ export const MAA_KATEGORIAT = {
             + 'kirjaimellisesti "erilaiset ihmiset yhdistyvät". '
             + 'Edellinen, vuodesta 1910 käytössä ollut vaakuna oli '
             + 'latinankielinen.',
+          selite: 'Linton-lohkare on Iziko South African Museumin kokoelmissa '
+            + 'Kapkaupungissa, ja siitä on poimittu vaakunan kaksi '
+            + 'ihmishahmoa.',
+          lahde: 'Heribert Bechen, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Etelä-Afrikan vaakuna',
         },
         {
           otsikko: 'Kananhöyhensivellin maalasi taideauton',
           aika: '1991',
+          tiedosto: 'BMWArtCar-Mahlangu.jpg',
           teksti: 'Ndebelet maalaavat talojensa seinät kirkkain '
             + 'geometrisin kuvioin, ja työ on naisten: tytöt oppivat '
             + 'sen äidiltään ja isoäidiltään ennen kuin saavat oman '
@@ -51921,6 +51978,9 @@ export const MAA_KATEGORIAT = {
             + 'syntyivät BMW 525i:n pintaan kananhöyhenistä sidotulla '
             + 'siveltimellä, ja se oli hänen ensimmäinen työnsä muulle '
             + 'kuin seinälle.',
+          selite: 'Esther Mahlangun vuonna 1991 maalaama BMW 525i oli sarjan '
+            + 'ensimmäinen taideauto, jonka teki nainen.',
+          lahde: 'Olli1800, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Esther Mahlangu',
         },
         {
@@ -51944,3 +52004,4 @@ export const MAA_KATEGORIAT = {
     },
   ],
 };
+

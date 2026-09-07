@@ -291,6 +291,60 @@ artikkelisivulla 6 pitkää kappaletta ja og:image) ja on varalla, mutta
 se on valtion yleisradioyhtiö — sama valinta kuin Keniassa, jossa
 yksityinen Capital FM valittiin KBC:n ohi.
 
+## Kuvat (14/20 nostoa) ja kuvattomat
+
+Kaikki kuvat haettu Commonsin hakurajapinnasta, lisenssi ja tekijä
+luettu `extmetadata`-kentistä, ja **jokainen katsottu silmin** 480 px:n
+esikatselusta ennen käyttöä.
+
+| Nosto | Tiedosto | Lisenssi |
+| --- | --- | --- |
+| Suuri vaellus | G.S. Smithard; J.S. Skelton (1909) - The Voortrekkers.jpg | PD |
+| Rivonia | Liliesleaf hut1.jpg | PD |
+| Totuuskomissio | Desmond Tutu - Kirchentag Cologne 2007 (7137).jpg | CC BY-SA 4.0 |
+| Kaksitoista kieltä | ConstitutionalCourtofSouthAfrica-entrance-20070622.jpg | CC BY 2.0 |
+| Kansallislaulu | Enoch Sontonga Braamfontein.jpg | CC BY-SA 3.0 |
+| Makeba | Miriam Makeba 1986 (cropped).jpg | PD |
+| Isicathamiya | Ladysmith Black Mambazo 2018.jpg | CC BY 2.0 |
+| Braai | Braai Fire, Cape Town, South Africa-3629.jpg | CC BY-SA 3.0 |
+| Bunny chow | Chicken Curry Bunny Chow.JPG | CC BY-SA 4.0 |
+| Biltong | Sliced Biltong.jpg | CC BY-SA 3.0 |
+| Rooibos | Rooibos (Aspalathus linearis)PICT2813.JPG | CC BY-SA 2.5 |
+| Kalliomaalaukset | ELANDS - San rock-art panel at Eland Cave… .jpg | CC BY-SA 4.0 |
+| Vaakuna | Linton Panel IZIKO, Capetown DSC00228 (16091324620).jpg | CC BY-SA 2.0 |
+| Mahlangu | BMWArtCar-Mahlangu.jpg | CC BY-SA 3.0 |
+
+**Katsottu ja hylätty:** *Braai Meat, Cape Town…-3627.jpg* (kuvassa
+kaupan pakkaus tuotemerkkeineen), *A Real Braai…-3619.jpg* (kaksi
+tunnistettavaa yksityishenkilöä), *Braai Fire 2.jpg* (lähes musta),
+*Braai, HOK, 2009 1.jpg* ja *Braai Parys, street vendor.jpg*
+(parkkipaikkanäkymiä autoineen ja kauppaketjun kylttiä), *Biltong and
+Droëwors, South Africa.jpg* (myymälähylly tuotemerkkeineen),
+*Aspalathus linearis 2797.jpg* (paljasta peltomaata, aihe ei erotu),
+*Gold Reef City 005.jpg* (huvipuistonäkymä, ei kaivostyötä),
+*Solomon Linda and the Tokens.png* (valokuvamontaasi),
+*Mbube.jpg* (nykytaiteilijan juliste, jonka lukija erehtyisi
+pitämään vuoden 1939 alkuperäisenä), *1994 Events montage…* (kollaasi).
+
+**Kuvattomat kuusi nostoa** ovat kuvaputken tilauslista; jokaisesta on
+haettu Commonsista eikä kelvollista löytynyt:
+
+1. *Neljä päivää jonoa ja tarra äänestyslipussa* (historia) — kuvan
+   pitää esittää vuoden 1994 äänestysjonoa tai äänestyslippua, jossa
+   Inkathan tarra.
+2. *Kolme naksausta, jotka lainattiin naapurilta* (kielet) — xhosan
+   kirjoitettua kieltä, jossa c-, x- ja q-kirjaimet erottuvat
+   (kirjan sivu, kyltti tai sanakirja).
+3. *Kaivosten oma kieli syntyi käskyistä* (kielet) — Witwatersrandin
+   kultakaivoksen nostotorni tai kaivosmiehiä työvuorossa.
+4. *Kymmenellä shillingillä myyty maailmanhitti* (musiikki) —
+   Solomon Linda tai Evening Birds, tai vuoden 1939 savikiekko.
+5. *Rumpu, joka vei lähiöiden soundin maailmalle* (musiikki) —
+   amapiano-tuottaja tai lähiöklubin tanssilattia Johannesburgissa.
+6. *Museon ensimmäinen maalaus mustalta taiteilijalta* (kuvataide) —
+   Sophiatownin katunäkymä 1940-luvulta (Sekoton omat teokset eivät
+   ole vapaita: hän kuoli 1993).
+
 ## Tunnusluvut ja muut taulut
 
 `MAATIEDOT.africa.ZAF` oli jo olemassa (`js/packs/africa-maatiedot.js`),
