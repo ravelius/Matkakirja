@@ -35777,6 +35777,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Orjaksi syntynyt laulaja, joka levytti Bombayssa',
           aika: '1880–1950',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-tza-musiikki-1-r20260907-v2.jpg',
           teksti: 'Siti binti Saad syntyi noin 1880 orjaksi Fumban kylään Sansibarissa; '
               + 'hänen vanhempansa työskentelivät neilikkaviljelmillä. Vuonna 1928 hän '
               + 'matkusti yhtyeineen Bombayn levytysstudioon ja oli ensimmäinen '
@@ -35785,8 +35786,14 @@ export const MAA_KATEGORIAT = {
               + 'edeltäjänsä, ja teki taarabista kaikkien kieltä. Hän toi lajiin myös '
               + 'natiki-nimisen tanssiosuuden, jonka esikuva oli intialainen tanssi. '
               + 'Vasta hänen jälkeensä naiset pääsivät miesten laulukerhoihin.',
-          selite: 'Hänen syntymänimensä oli Mtumwa, orja; Siti on kunnianimi, joka '
-            + 'tarkoittaa rouvaa.',
+          selite: '1920-luvun taarab-yhtye soittaa Stone Townin '
+            + 'sisäpihalla gramofonin vieressä. Gramofoni kuuluu ajan '
+            + 'kuuntelukulttuuriin; kuva ei väitä sen tallentavan tätä '
+            + 'esitystä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
+            + 'SOAS-väitöskirja Sansibarin taarabista; Fondazione '
+            + 'Giorgio Cini — arkistotietue IT-IMC-SN0002-000350; '
+            + 'International Library of African Music',
         },
         {
           otsikko: 'Peukalopiano ja Peter Gabrielin levy-yhtiö',
@@ -37004,9 +37011,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Luokkansa ainoa ja akatemian ensimmäinen',
           aika: '1936–2015',
-          // Kuvaton (Opus 6.9.2026): Assia Djebarista ei ole Commonsissa
-          // riittävän suurta vapaata valokuvaa; suurimmat ovat alle
-          // 800 pikseliä leveitä. Kuvatilaus on kirjattu raporttiin.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-dza-kirjallisuus-3-r20260907-v2.jpg',
           teksti: 'Fatima-Zohra Imalayen syntyi Cherchellissä 30. '
               + 'kesäkuuta 1936 ja kirjoitti nimellä Assia Djebar. '
               + 'Blidan koraanikoulussa hän oli toinen kahdesta '
@@ -37019,8 +37024,14 @@ export const MAA_KATEGORIAT = {
               + 'Vuonna 1996 hän sai Neustadt-palkinnon, ja 16. kesäkuuta '
               + '2005 hänet valittiin Ranskan akatemiaan ensimmäisenä '
               + 'maghrebilaisena kirjailijana.',
-          selite: 'Assia Djebar oli ensimmäinen Maghrebin maista '
-            + 'kotoisin oleva kirjailija Ranskan akatemiassa.',
+          selite: 'Tyhjä kirjailijan työpöytä, käsikirjoitus ja kirjat '
+            + 'viittaavat Assia Djebarin ranskan- ja arabiankieliseen '
+            + 'kulttuuripiiriin. Vihreä akateemikon takki on Académie '
+            + 'française -jäsenyyden symboli, ei Djebarin omaksi '
+            + 'väitetty vaate.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Académie '
+            + 'française — Assia Djebar ja Les femmes à l’Académie '
+            + '(PDF); BnF-katalogitietue ark:/12148/cb46747389f',
         },
       ],
     },
@@ -37751,9 +37762,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Opettajat, jotka lähetettiin kylästä kylään',
           aika: '1793–1864',
-          // Kuvaton (Opus 6.9.2026): Nana Asma'un käsikirjoituksista tai
-          // Sokoton naisopettajista ei ole Commonsissa vapaata kuvaa
-          // (haut "Ajami manuscript Hausa", "Nana Asma'u").
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-nga-historia-2.jpg',
           teksti: 'Nana Asmaʼu oli Sokoton kalifaatin perustajan tytär ja '
               + 'yksi 1800-luvun Länsi-Afrikan oppineimmista ihmisistä. Hän '
               + 'kirjoitti yli kuusikymmentä säilynyttä teosta neljälläkymmenellä '
@@ -37765,8 +37774,12 @@ export const MAA_KATEGORIAT = {
               + 'kodeissa. Jokainen jaji sai virkamerkiksi malfa-hatun ja '
               + 'punaisen turbaanin, ja heidän oppilaitaan kutsuttiin '
               + 'nimellä ʼyan taru, yhteen kokoontuvat.',
-          selite: 'Asmaʼun runot opetettiin ulkoa: mitta ja riimi olivat '
-              + 'muistin apuvälineitä, kun kirjoja oli vähän.',
+          selite: 'Pieni käsikirjoitus, kirjoitustarvikkeet ja päähine '
+            + 'Nigerian ajami-perinnettä mukailevassa asetelmassa. '
+            + 'Kirjoitus on kuvitusta.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
+            + 'Smithsonian Libraries — kokoelmatietue arabialaisista ja '
+            + 'ajami-käsikirjoituksista Nigeriassa',
         },
         {
           otsikko: 'Laskettiinko sinun leskiäitisi?',
@@ -37926,8 +37939,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Ensimmäinen Grammy-ehdokkuus Nigeriaan',
           aika: '1982',
-          // Kuvaton (Opus 6.9.2026): King Sunny Adésta on Commonsissa vain
-          // yksi kuva, ja se on epätarkka valokuva piirroksesta.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-nga-musiikki-2.jpg',
           teksti: 'Sunday Adeniyi Adegeye eli King Sunny Adé syntyi 1946 '
               + 'Osogbossa jorubalaiseen ruhtinassukuun ja karkasi '
               + 'koulusta Lagosiin muusikoksi. Ensimmäinen oma yhtye '
@@ -37938,9 +37950,11 @@ export const MAA_KATEGORIAT = {
               + 'ensimmäisen nigerialaiselle myönnetyn Grammy-ehdokkuuden. '
               + 'Adén yhtyeessä soi kymmenkunta soittajaa, joukossa pedal '
               + 'steel -kitara ja useita puhuvia rumpuja.',
-          selite: 'Jùjú levisi maailmalle juuri Adén yhtyeen kautta: '
-              + 'sähköistetty jorubamusiikki löysi 1980-luvulla '
-              + 'kansainvälisen yleisön.',
+          selite: 'Laaja 1980-luvun juju-yhtye kitaroineen ja '
+            + 'lyömäsoittimineen tummalla konserttilavalla — lähteisiin '
+            + 'perustuva kuvitus, muusikot ovat kuvitteellisia.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Grammy.com '
+            + '— King Sunny Adé -artistisivu',
         },
         {
           otsikko: 'Afrobeat syntyi Los Angelesin reissulla',
@@ -38055,8 +38069,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Palmuviinin juoja ja kuollut tiristäjä',
           aika: '1952',
-          // Kuvaton (Opus 6.9.2026): Amos Tutuolasta ei ole Commonsissa
-          // vapaata kuvaa, ja kirjan kannet ovat tekijänoikeuden alaisia.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-nga-kirjallisuus-0.jpg',
           teksti: 'Amos Tutuola syntyi 1920 kaakaoviljelijän perheeseen ja '
               + 'kävi koulua kuusi vuotta. Sepän ja lähetin töiden ohessa '
               + 'hän kirjoitti tarinan miehestä, joka lähtee kuolleiden '
@@ -38067,8 +38080,10 @@ export const MAA_KATEGORIAT = {
               + 'sai kovaa kritiikkiä: Tutuolan englanti ei noudattanut '
               + 'koulukielioppia. Arvostelu on sittemmin vaimennut, ja kirja '
               + 'on käännetty kymmenille kielille.',
-          selite: 'Tutuola ammensi jorubien suullisesta perinteestä ja '
-              + 'kirjailija D. O. Fagunwan jorubankielisistä romaaneista.',
+          selite: 'Amos Tutuolan The Palm-Wine Drinkard -romaanin '
+            + 'yliluonnollisen matkan innoittama kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: WorldCat — '
+            + 'The Palm-Wine Drinkard -tietue',
         },
         {
           otsikko: 'Käsikirjoitus, joka makasi nurkassa',
@@ -38112,8 +38127,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Torin painokoneet keksivät pokkarin',
           aika: '1950-luku',
-          // Kuvaton (Opus 6.9.2026): Onitshan vihkosista ei ole Commonsissa
-          // vapaita kuvia; kannet ovat yhä tekijänoikeuden alaisia.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-nga-kirjallisuus-3.jpg',
           teksti: 'Itä-Nigerian Onitshassa torikauppiaiden painokoneet '
               + 'seisoivat hiljaisina kuukausina tyhjinä. 1950-luvun alussa '
               + 'painajat alkoivat täyttää taukoja omilla vihkosillaan: '
@@ -38124,9 +38138,11 @@ export const MAA_KATEGORIAT = {
               + 'kirjoitettu pidgininglanniksi. Tutkijoille ne ovat nyt '
               + 'ainutlaatuinen ikkuna aikansa arkeen, ja lukijalle iloa '
               + 'tuottaa niiden vauhdikas, sääntöjä kaihtava kieli.',
-          selite: 'Onitshan markkinakirjallisuus oli halpaa, nopeaa ja '
-              + 'paikallista — kirjoja myytiin samalla torilla, jolla ne '
-              + 'painettiin.',
+          selite: 'Onitshan torikirjallisuutta mukaileva pöytä '
+            + 'kuvitteellisine vihkokansineen ja painokoneineen — '
+            + 'kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Library of '
+            + 'Congress — LCSH-aihesanasto (Onitsha market literature)',
         },
       ],
     },
@@ -38142,9 +38158,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Nimi lainattiin tuhannen kilometrin päästä',
           aika: '800–1200-luku',
-          // Kuvaton (Opus 6.9.2026): muinaisen Ghanan valtakunnan
-          // alueelta ei löytynyt Commonsista lähdetarkistuksen kestävää
-          // kuvaa (haku "Ghana Empire", "Koumbi Saleh").
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-gha-historia-0.jpg',
           teksti: 'Muinainen Ghanan valtakunta sijaitsi nykyisen '
               + 'Mauritanian kaakkoisosassa ja Länsi-Malissa, yli tuhannen '
               + 'kilometrin päässä nykyisestä Ghanasta. Sen soninkenkielinen '
@@ -38155,9 +38169,10 @@ export const MAA_KATEGORIAT = {
               + '830, ja 1000-luvulla cordobalainen al-Bakri kuvasi maata '
               + 'tarkemmin. Valtakunta päätyi 1200-luvulla Malin vasalliksi. '
               + 'Nimen otti käyttöön Kultarannikko itsenäistyessään 1957.',
-          selite: 'Nimenvalinta oli tietoinen kannanotto: uusi valtio '
-              + 'kytkettiin Afrikan omaan menneisyyteen eikä '
-              + 'siirtomaakauteen.',
+          selite: 'Kamelikaravaani muinaisen Ghanan valtakunnan kulta- '
+            + 'ja suolakaupan piirissä — historiallinen kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The Met — '
+            + 'Sahel: Art and Empires on the Shores of the Sahara',
         },
         {
           otsikko: 'Palatsi, jossa oli Timesin numero vuodelta 1843',
@@ -38399,9 +38414,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Nimi tuli oven ulkopuolelta',
           aika: '1920-luku',
-          // Kuvaton (Opus 6.9.2026): Commonsissa ei ole vapaata kuvaa
-          // varhaisesta highlife-orkesterista (haut "highlife band Ghana",
-          // "Ghana brass band Accra").
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-gha-musiikki-0.jpg',
           teksti: 'Highlife syntyi 1800-luvun lopulla rannikkokaupungeissa, '
               + 'kun paikalliset muusikot yhdistivät omat rytminsä '
               + 'merimiesten tuomiin soittimiin. Nimen antoi yleisö, joka ei '
@@ -38412,14 +38425,16 @@ export const MAA_KATEGORIAT = {
               + 'Orkesterien nimet olivat Jazz Kings, Cape Coast Sugar '
               + 'Babies ja Accra Orchestra. Unesco otti highlifen '
               + 'aineettoman kulttuuriperinnön luetteloon 2025.',
-          selite: 'Highlife jakautui 1940-luvulla kahtia: kaupunkien '
-              + 'tanssiorkestereihin ja maaseudun kitarayhtyeisiin.',
+          selite: 'Varhaisen ghanalaisen highlife-tanssiorkesterin '
+            + 'esiintyminen 1920-luvun hengessä — historiallinen '
+            + 'kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
+            + 'Smithsonian Libraries — kokoelmatietue 1090467',
         },
         {
           otsikko: 'Apteekkari, joka soitti Armstrongin kanssa',
           aika: '1956',
-          // Kuvaton (Opus 6.9.2026): E. T. Mensahista ei ole Commonsissa
-          // vapaata kuvaa.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-gha-musiikki-1.jpg',
           teksti: 'Emmanuel Tettey Mensah aloitti kaksitoistavuotiaana '
               + 'huilistina koulun orkesterissa ja rahoitti myöhemmin oman '
               + 'musiikkinsa perustamallaan apteekilla. Hänen yhtyeensä '
@@ -38430,9 +38445,11 @@ export const MAA_KATEGORIAT = {
               + 'kanssa; sen jälkeen Mensahia kutsuttiin highlifen '
               + 'kuninkaaksi. Kitarahighlifen puolella E. K. Nyame ja hänen '
               + 'Akan Trio -yhtyeensä julkaisivat yli neljäsataa levyä.',
-          selite: 'Tanssiorkesterien highlife levisi Ghanasta Nigeriaan, '
-              + 'jossa siitä tuli igbojen suosituin musiikkilaji '
-              + '1960-luvulla.',
+          selite: '1950-luvun ghanalainen highlife-tanssiorkesteri '
+            + 'soittimineen — historiallinen kuvitus, muusikot ovat '
+            + 'kuvitteellisia.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
+            + 'Smithsonian Libraries — kokoelmatietue 1090467',
         },
         {
           otsikko: 'Ksylofoni kurpitsoiden päällä',
@@ -38454,8 +38471,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Tanssi, joka silittää ja ajaa autoa',
           aika: '2010-luku',
-          // Kuvaton (Opus 6.9.2026): azonto-kuvat ovat joko
-          // tunnistettavia lähikuvia ihmisistä tai epätarkkoja.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-gha-musiikki-3.jpg',
           teksti: 'Azonto on Accran rannikkokaupunginosista lähtenyt tanssi '
               + 'ja musiikkilaji, ja se juontuu ga-kansan kpanlogosta. '
               + 'Vanha nimi oli apaa, joka tarkoittaa työntekoa: liikkeillä '
@@ -38466,8 +38482,10 @@ export const MAA_KATEGORIAT = {
               + 'autolla ajamista, nyrkkeilyä, rukoilemista, uimista. '
               + 'Vuonna 2013 azonto näkyi lähes kaikissa ghanalaisissa '
               + 'musiikkivideoissa ja levisi sieltä muualle Afrikkaan.',
-          selite: 'Azonton liikkeissä on koodattuja viestejä, joten sama '
-              + 'tanssi voi olla vitsi, kehu tai piikki.',
+          selite: 'Azonton arkityötä mukailevan liikekielen innoittama '
+            + 'tanssiasento — kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Dance '
+            + 'Research Journal (Cambridge) — Invented Dances',
         },
       ],
     },
@@ -38479,8 +38497,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Nimi kertoo, minä päivänä synnyit',
-          // Kuvaton (Opus 6.9.2026): nimenantoseremoniasta ei löytynyt
-          // Commonsista kuvaa ilman tunnistettavia kasvoja.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-gha-tavat-0.jpg',
           teksti: 'Akaanit antavat lapselle nimen sen viikonpäivän mukaan, '
               + 'jona hän syntyi, ja päivännimeen liittyy käsitys sielusta '
               + 'ja luonteesta. Miehen nimi alkaa Kumasin twissä usein '
@@ -38492,9 +38509,11 @@ export const MAA_KATEGORIAT = {
               + 'olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah '
               + 'syntyi lauantaina ja YK:n pääsihteeri Kofi Annan '
               + 'perjantaina.',
-          selite: 'Päivännimet kulkivat orjalaivoissa Karibialle asti: '
-              + 'kapinoiden johtajien nimissä toistuvat Cuffy, Cudjoe ja '
-              + 'Quamina.',
+          selite: 'Ghanalaisen kahdeksannen päivän nimeämisjuhlan '
+            + 'perhepiiriä mukaileva kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Ghanan '
+            + 'yliopisto (UGSpace) — tutkielma kahdeksannen päivän '
+            + 'nimeämisjuhlasta',
         },
         {
           otsikko: 'Juhla, jossa nälälle nauretaan',
@@ -38517,8 +38536,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Neljäkymmentä päivää hiljaisuutta',
           aika: '1826',
-          // Kuvaton (Opus 6.9.2026): Odwira-kuvissa on tunnistettavia
-          // kasvoja lähietäisyydeltä, joten ne on jätetty pois.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-gha-tavat-2.jpg',
           teksti: 'Akuapemin alueella vietetään syys-lokakuussa Odwira-'
               + 'juhlaa, joka on samalla jamssijuhla ja puhdistautumisen '
               + 'aika. Se aloitettiin lokakuussa 1826 Katamansun '
@@ -38530,8 +38548,10 @@ export const MAA_KATEGORIAT = {
               + 'raivataan seremoniallinen polku Akropongin keskustasta '
               + 'kuninkaalliselle hautausmaalle — akaanien käsityksen '
               + 'mukaan päällikkö ei kuole vaan menee kylään.',
-          selite: 'Uutta jamssia ei saa syödä ennen Odwiraa: ensin ruoka '
-              + 'annetaan esivanhemmille.',
+          selite: 'Odwira-juhlan aluksi raivattavaa esi-isien polkua '
+            + 'mukaileva kuvitus Akropongin perinteestä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Ghanan '
+            + 'yliopisto (UGSpace) — tutkielma Odwira-juhlasta',
         },
         {
           otsikko: 'Perintö kulkee äidin kautta',
@@ -38779,8 +38799,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Sabar sähköbassolla',
           aika: '1970-luku',
-          // Kuvaton (Opus 6.9.2026): mbalax-esiintyjistä on Commonsissa
-          // vain lähikuvia kasvoista.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-musiikki-3-r20260907-v2.jpg',
           teksti: 'Mbalax on Senegalin, Gambian ja Mauritanian '
               + 'kaupunkien tanssimusiikkia. Se syntyi 1970-luvulla, kun '
               + 'senegalilaiset yhtyeet alkoivat soittaa sabar-rytmejä '
@@ -38792,8 +38811,11 @@ export const MAA_KATEGORIAT = {
               + 'esiintymisen kaksitoistavuotiaana ja soitti 1970-luvulla '
               + 'Dakarin suosituimmassa Star Bandissa. Tanssilattialla '
               + 'yleisö palkitsee laulajan kuin griotin.',
-          selite: 'Mbalaxin nimi tulee sabar-rummutuksen säestävästä '
-              + 'rytmistä.',
+          selite: 'Kolme sabar-rumpalia soittaa pitkiä tappikiristeisiä '
+            + 'rumpuja käsin ja kepillä senegalilaisessa kyläjuhlassa — '
+            + 'lähteisiin perustuva kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Música '
+            + 'para Ver — sabar-soittimen esittely',
         },
       ],
     },
@@ -38845,8 +38867,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Näyttelijä, joka erotettiin ja teki mestariteoksen',
           aika: '1973',
-          // Kuvaton (Opus 6.9.2026): Mambétystä ei ole Commonsissa
-          // vapaata kuvaa.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-elokuva-2.jpg',
           teksti: 'Djibril Diop Mambéty syntyi 1945 Colobanessa Dakarin '
               + 'liepeillä ja työskenteli näyttelijänä Dakarin '
               + 'kansallisteatterissa, kunnes hänet erotettiin '
@@ -38858,7 +38879,10 @@ export const MAA_KATEGORIAT = {
               + 'kohti Pariisia kerrotaan katkonaisena, unenomaisena '
               + 'kuvavirtana. Se sai kriitikoiden palkinnon Cannesissa. '
               + 'Kaikkiaan Mambéty teki vain viisi pitkää elokuvaa.',
-          selite: 'Touki Bouki tarkoittaa wolofiksi hyeenan matkaa.',
+          selite: 'Touki Boukin tunnusomaisen, sarvilla koristellun '
+            + 'moottoripyörän innoittama kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The '
+            + 'Criterion Collection — Touki Bouki: Mambéty and Modernity',
         },
         {
           otsikko: 'Kultainen karhu isovanhempien maasta',
@@ -38947,8 +38971,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Muuri, joka on puita',
           aika: '2007',
-          // Kuvaton (Opus 6.9.2026): Suuren vihreän muurin istutuksista ei
-          // löytynyt Commonsista kuvaa, jonka sijainti olisi varmistettu.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sen-luonto-3.jpg',
           teksti: 'Afrikan unioni hyväksyi 2007 hankkeen nimeltä Suuri '
               + 'vihreä muuri. Alkuperäinen ajatus oli istuttaa '
               + 'viidentoista kilometrin levyinen ja 7 775 kilometrin '
@@ -38959,8 +38982,10 @@ export const MAA_KATEGORIAT = {
               + 'olemassa olevaa kasvillisuutta ja parannetaan '
               + 'perinteisiä viljelytapoja. Tavoitteena on kunnostaa '
               + 'sata miljoonaa hehtaaria maata vuoteen 2030 mennessä.',
-          selite: 'Muurin läntinen pää on Senegalissa, ja siellä hanke on '
-              + 'edennyt pisimmälle.',
+          selite: 'Nuorten puiden istutusta Senegalin Sahel-alueen '
+            + 'ennallistamistyön hengessä — kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: FAO — '
+            + 'Sahelin metsityshanketta käsittelevä raportti (PDF)',
         },
       ],
       tehtava: {
@@ -39276,8 +39301,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Kangaspuut, joista jää jäljelle kasa keppejä',
-          // Kuvaton (Opus 6.9.2026): jokaisessa >= 1200 px:n
-          // telar de cintura -kuvassa on kutojan tunnistettavat kasvot.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-gtm-tekstiilit-0.jpg',
           teksti: 'Telar de cintura eli vyökangaspuut ovat '
               + 'esikolumbiaaninen keksintö, ja niitä käytetään yhä. Loimen '
               + 'toinen pää sidotaan puuhun tai pylvääseen ja toinen kutojan '
@@ -39287,9 +39311,11 @@ export const MAA_KATEGORIAT = {
               + 'pidetty polkukangaspuita herkempänä kutojan omille '
               + 'ideoille. Espanjalaiset toivat polkukangaspuut, mutta ne '
               + 'eivät syrjäyttäneet vanhaa tapaa.',
-          selite: 'Vyökangaspuissa loimi kiristyy kutojan oman vartalon '
-              + 'painosta, ja kankaan valmistuttua laitteesta jää jäljelle '
-              + 'vain nippu keppejä.',
+          selite: 'Kutoja käyttää guatemalalaista '
+            + 'maya-selkävyökangaspuiden rakennetta mukailevaa '
+            + 'kudontavälinettä — kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
+            + 'Smithsonian NMAI — kokoelmatietue 156423 (backstrap loom)',
         },
         {
           otsikko: 'Puku, jonka jokainen osa on oma sanansa',
@@ -39353,8 +39379,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Ensimmäinen kirjattu marimba soi katedraalin juhlassa',
           aika: '1680',
-          // Kuvaton (Opus 6.9.2026): ainoassa >= 1200 px:n kuvassa
-          // kurpitsakaikupohjaisesta marimbasta on tunnistettavat kasvot.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-gtm-musiikki-0.jpg',
           teksti: 'Vanhin tunnettu maininta marimbasta Guatemalassa on 13. '
               + 'marraskuuta 1680: soitin oli mukana Santiago de los '
               + 'Caballerosin katedraalin vihkiäisjuhlissa, ja se oli '
@@ -39365,8 +39390,11 @@ export const MAA_KATEGORIAT = {
               + 'ja ladinokokoonpanoihin, ja vuoden 1821 '
               + 'itsenäisyysjulistuksessa se nimettiin maan '
               + 'kansallissoittimeksi.',
-          selite: 'Marimba de tecomatesin kaikupohjina ovat eri kokoiset '
-              + 'kuivatut kurpitsat, jotka riippuvat kielten alla.',
+          selite: 'Perinteinen guatemalalainen marimba '
+            + 'kurpitsaresonaattoreineen — museoesineeseen perustuva '
+            + 'kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
+            + 'Smithsonian Music — Object of the Day: Gourd Marimba',
         },
         {
           otsikko: 'Surina, joka tulee sian suolesta',
@@ -39495,8 +39523,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Maan nimi ei tullutkaan päälliköltä',
           aika: '2002',
-          // Kuvaton (Opus 6.9.2026): nicaraoista tai chorotegoista ei
-          // löytynyt Commonsista kelvollista >= 1200 px:n kuvaa.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-nic-historia-1.jpg',
           teksti: 'Nicaraguan nimi tulee sanasta Nicānāhuac, jolla nawatia '
               + 'puhuneet nicaraot kutsuivat Suur-Nicoyan seutua nykyisen '
               + 'Nicaraguan ja Costa Rican alueella. Pitkään opetettiin, '
@@ -39506,9 +39533,10 @@ export const MAA_KATEGORIAT = {
               + 'Nicaraot ja chorotegat olivat vaeltaneet etelään Meksikon '
               + 'Cholulan laaksosta, ja kolmas kansa, subtiabat, saapui '
               + 'Guerreron seudulta noin vuonna 1200.',
-          selite: 'Nicaraguan läntiset kansat olivat kielensä ja '
-              + 'kulttuurinsa puolesta osa Mesoamerikkaa, ja ne olivat '
-              + 'muuttaneet nykyisen Meksikon alueelta.',
+          selite: 'Suur-Nicoyan alueen moniväristä, eläinaiheista '
+            + 'kolmijalkakeramiikkaa mukaileva kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
+            + 'Smithsonian-julkaisu Suur-Nicoyan keramiikasta',
         },
         {
           otsikko: 'Pääkaupunki valittiin, koska se ei ollut kumpikaan',
@@ -39532,8 +39560,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kieli, jonka syntyminen ehdittiin nähdä',
           aika: '1977–1986',
-          // Kuvaton (Opus 6.9.2026): Nicaraguan viittomakielestä ei ole
-          // Commonsissa yhtään kuvaa.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-nic-historia-3-r20260907-v2.jpg',
           teksti: 'Nicaraguan viittomakieli on harvinaisuus: se on yksi '
               + 'harvoista kielistä, joiden syntyminen on ehditty '
               + 'dokumentoimaan. Ennen 1970-lukua kuurot elivät maassa '
@@ -39545,9 +39572,12 @@ export const MAA_KATEGORIAT = {
               + 'espanjaan, mutta lapset kehittivät keskenään oman '
               + 'kielensä. Henkilökunta ei ymmärtänyt sitä ja kutsui '
               + 'kesäkuussa 1986 paikalle kielitieteilijän.',
-          selite: 'Nicaraguan viittomakieli syntyi kahden koulun oppilaiden '
-              + 'kesken 1980-luvulla, ja se on harvoja kieliä, joiden '
-              + 'kielioppi on nähty muodostuvan tyhjästä.',
+          selite: 'Kaksi nicaragualaista nuorta keskustelee '
+            + 'viittomakielellä koulun aurinkoisella pihalla — '
+            + 'lähteisiin perustuva kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Gallaudet '
+            + 'University Press — The Emergence of the Deaf Community in '
+            + 'Nicaragua',
         },
       ],
       tehtava: {
@@ -39778,8 +39808,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Toukotanko, jota lähetyssaarnaaja paheksui 1874',
           aika: '1874',
-          // Kuvaton (Opus 6.9.2026): ainoassa Commons-kuvassa Palo de
-          // Mayosta on tunnistettavia kasvoja eikä tekijää ole merkitty.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-nic-musiikki-2.jpg',
           teksti: 'Palo de Mayo on Karibian rannikon afronicaragualainen '
               + 'juhla ja tanssi, joka on nimetty nauhoin koristellun '
               + 'toukotangon mukaan. Se juhlii sadetta ja uutta kasvua, ja '
@@ -39790,8 +39819,11 @@ export const MAA_KATEGORIAT = {
               + 'muuttuneen: juhlaa vietettiin öisin kuutamossa ja '
               + 'meluisasti. Soittimina olivat puunrungosta koverretut '
               + 'rummut, pyykkilautabasso ja aasin leukaluu.',
-          selite: 'Palo de Mayon toukotanko on korkea puinen tanko, jonka '
-              + 'latvasta riippuu pitkiä värillisiä nauhoja.',
+          selite: 'Palo de Mayo -juhla Nicaraguan Karibian rannikolla — '
+            + 'perinteeseen perustuva kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Nicaraguan '
+            + 'kulttuuri-instituutti (INC) — Origen e historia del Palo '
+            + 'de Mayo',
         },
         {
           otsikko: 'Pohjoisessa soi polkka',
@@ -40171,8 +40203,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Kaksi merta, kaksi kalaa',
-          // Kuvaton (Opus 6.9.2026): panamalaisesta cevichestä ei
-          // löytynyt yhtään >= 1200 px:n Commons-kuvaa.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-pan-ruoka-3.jpg',
           teksti: 'Kahden valtameren välissä oleva maa syö luonnollisesti '
               + 'kalaa. Panaman ceviche tehdään useimmiten corvinasta tai '
               + 'tilapiasta. Keittiön perusta on kuitenkin maalla: riisi, '
@@ -40183,9 +40214,11 @@ export const MAA_KATEGORIAT = {
               + 'kalkkuna ja täyte, ja pöydässä on hedelmiä ja '
               + 'hedelmäkakkua. Juhlajuoma on ron ponche, rommilla '
               + 'terästetty munatoti.',
-          selite: 'Corvina on Panaman Tyynenmeren puolen tavallisin '
-              + 'ruokakala, ja siitä tehdään sekä ceviche että paistetut '
-              + 'annokset.',
+          selite: 'Panamalaista cevicheä valmistetaan limetin ja yrttien '
+            + 'kanssa toritiskillä — lähteisiin perustuva kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Estación '
+            + 'Coiba AIP — cevichenäytteiden jäljitettävyystutkimus '
+            + 'Panaman Tyynenmeren rannikolta',
         },
       ],
     },
@@ -40198,9 +40231,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kolme rumpua ja laulaja ympyrän keskellä',
           aika: '1600-luku',
-          // Kuvaton (Opus 6.9.2026): tamborito-rummuista ei löytynyt
-          // yhtään >= 1200 px:n Commons-kuvaa ilman tunnistettavia
-          // kasvoja.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-pan-musiikki-0.jpg',
           teksti: 'Tamborito, "pieni rumpu", on Panaman kansallistanssi, ja '
               + 'sen sävelmien juuret ulottuvat 1600-luvulle. Se on '
               + 'espanjalaisen, alkuperäiskansojen ja afrikkalaisen '
@@ -40212,8 +40243,12 @@ export const MAA_KATEGORIAT = {
               + 'paikallisista puista ja päällystetty parkitulla '
               + 'naudannahalla: lyhyt ja leveä caja, pohjaäänen antava '
               + 'repujador ja korkeaääninen repicador.',
-          selite: 'Tamboriton kolme rumpua ovat caja, repujador ja '
-              + 'repicador, ja ne koverretaan yhdestä puunrungosta.',
+          selite: 'Tamborito-ryhmä soittaa caja-, pujador- ja '
+            + 'repicador-rumpuja kyläpihan tanssissa — lähteisiin '
+            + 'perustuva kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Día a Día '
+            + '— tamboriton rummut; Panaman kulttuuriministeriö (SIC) — '
+            + 'congo-rumpujen valmistus',
         },
         {
           otsikko: 'Viisi kieltä ja kolme kieltä',
@@ -40233,8 +40268,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Karibian rannikon oma perinne',
-          // Kuvaton (Opus 6.9.2026): congo-perinteestä ei löytynyt yhtään
-          // Panamassa kuvattua >= 1200 px:n Commons-kuvaa.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-pan-musiikki-2.jpg',
           teksti: 'Panaman pohjoisrannikon mustien yhteisöjen musiikkia '
               + 'kutsutaan nimellä congo, ja se on kotonaan Costa Arriban '
               + 'seudulla Colónin maakunnassa, muun muassa Portobelossa. '
@@ -40244,15 +40278,17 @@ export const MAA_KATEGORIAT = {
               + 'karibialaiset — jamaikalaiset, trinidadilaiset, '
               + 'barbadoslaiset, martiniquelaiset ja saintlucialaiset. '
               + 'Siksi Panamassa soi myös calypso ja reggae.',
-          selite: 'Congo-perinne elää Panaman Karibian rannikon kylissä, ja '
-              + 'sen juuret ovat Länsi-Afrikasta tuotujen ihmisten '
-              + 'yhteisöissä.',
+          selite: 'Congo-perinteen tanssijat ja rumpalit esiintyvät '
+            + 'Portobelon karibialaisessa rantaympäristössä — lähteisiin '
+            + 'perustuva kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Panaman '
+            + 'kulttuuriministeriö (SIC) — Festival de la Pollera Congo '
+            + 'y de Máscaras de Diablos Congos',
         },
         {
           otsikko: 'Haitari, joka valtasi maaseudun',
           aika: '1940-luku',
-          // Kuvaton (Opus 6.9.2026): panamalaisesta típico-yhtyeestä ei
-          // löytynyt yhtään kelvollista Commons-kuvaa.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-pan-musiikki-3.jpg',
           teksti: 'Nykyistä panamalaista kansanmusiikkia kutsutaan nimillä '
               + 'música típica ja pindín. Se on ottanut 1940-luvulta '
               + 'lähtien mukaan güiron, congan ja ennen kaikkea haitarin, '
@@ -40263,8 +40299,12 @@ export const MAA_KATEGORIAT = {
               + 'sähköiset yhtyeet, jotka sekoittivat jazzia, calypsoa, '
               + 'salsaa, merengueä ja soulia. Panaman tunnetuin '
               + 'salsamuusikko on Rubén Blades.',
-          selite: 'Música típicassa haitari on johtava soitin, ja sen '
-              + 'rinnalla soivat güiro ja conga.',
+          selite: 'Música típica -yhtye soittaa haitaria ja '
+            + 'lyömäsoittimia Panaman maaseudun yhteisöjuhlassa — '
+            + 'lähteisiin perustuva kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: SERTV — '
+            + 'Fiesta de Acordeones; Oxford Academic — Panaman música '
+            + 'típica',
         },
       ],
     },
@@ -40331,8 +40371,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Puuhahmot, jotka nukkuvat nyytissä',
-          // Kuvaton (Opus 6.9.2026): nuchukana-hahmoista ei ole
-          // Commonsissa kelvollista kuvaa.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-pan-kasityot-3.jpg',
           teksti: 'Nuchukana ovat gunien veistämiä ihmisenmuotoisia '
               + 'puuhahmoja. Niitä käytetään parantamiseen: kun joku '
               + 'sairastuu, pidetään meno, jossa lauletaan ja poltetaan '
@@ -40343,8 +40382,11 @@ export const MAA_KATEGORIAT = {
               + 'niiden pesu kuuluu vain nuorille tytöille tai iäkkäille '
               + 'isoäideille. Vanha ja kulunut hahmo heitetään pois, '
               + 'joskus laulun saattelemana.',
-          selite: 'Nuchukana veistetään puusta ihmisen muotoon, ja niitä '
-              + 'säilytetään nyytissä talon sisällä.',
+          selite: 'Guna-käsityöläinen avaa nyytin, jossa on käsin '
+            + 'veistettyjä nuchukana-puuhahmoja — lähteisiin perustuva '
+            + 'kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Maxwell '
+            + 'Museum (UNM) — Object Monday: Guna nuchu',
         },
       ],
       tehtava: {
@@ -40616,6 +40658,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Tanssi, joka tehdään pelkillä hartioilla',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-eth-musiikki-3.jpg',
           teksti: 'Eskista tarkoittaa amharaksi tanssivia hartioita. '
               + 'Jalat pysyvät lähes paikallaan, ja liike tulee '
               + 'ylävartalosta: hartiat, rintakehä, pää ja niska '
@@ -40627,6 +40670,12 @@ export const MAA_KATEGORIAT = {
               + 'annetaan shilimat: katsoja painaa setelin tanssijan '
               + 'hikiselle otsalle, johon se jää kiinni.',
           wiki: 'Eskista',
+          selite: 'Eskista-tanssijat liikuttavat hartioita, rintakehää, '
+            + 'päätä ja niskaa rummun rytmissä — lähteisiin perustuva '
+            + 'kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Dance '
+            + 'Chronicle — eskista-artikkeli; UCLA CAP — '
+            + 'Ethiocolor-ohjelmalehti',
         },
       ],
     },
@@ -40678,6 +40727,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Käärö, joka mitattiin potilaan pituiseksi',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-eth-kirjat-2.jpg',
           teksti: 'Sairas tilasi suojakäärön dabtaralta, kirkon '
               + 'oppineelta, joka ei ollut pappi. Käärö kirjoitettiin '
               + 'geeziksi nahalle, ja siihen maalattiin silmiä, '
@@ -40689,9 +40739,15 @@ export const MAA_KATEGORIAT = {
               + 'säilyneet ovat 1500-luvulta, ja niitä uskotaan tehdyn jo '
               + '900-luvulta alkaen.',
           wiki: 'Ethiopian art',
+          selite: 'Däbtära valmistaa parannuskääröä pöydän ääressä '
+            + 'etiopialaista käsikirjoitusperinnettä mukailevassa '
+            + 'kuvituksessa — lähteisiin perustuva kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The Met — '
+            + 'kokoelmatietue 307601 ja essee Ethiopian Healing Scrolls',
         },
         {
           otsikko: 'Kolmastoista kuukausi, jossa on viisi päivää',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-eth-kirjat-3.jpg',
           teksti: 'Etiopian kalenterissa on kaksitoista kolmenkymmenen '
               + 'päivän kuukautta ja niiden perässä kolmastoista, johon '
               + 'jää viisi päivää — karkausvuonna kuusi. Vuosi vaihtuu '
@@ -40703,6 +40759,11 @@ export const MAA_KATEGORIAT = {
               + 'nimetty evankelistojen mukaan: Johanneksen, Matteuksen, '
               + 'Markuksen ja Luukkaan vuodet seuraavat toisiaan.',
           wiki: 'Ethiopian calendar',
+          selite: 'Etiopian kalenterin kaksitoista 30 päivän kuukautta '
+            + 'ja lyhyt kolmastoista kuukausi havainnollistuvat '
+            + 'symbolisessa asetelmassa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Torinon '
+            + 'yliopisto — Destinazione Erasmus: Etiopia (PDF)',
         },
       ],
       tehtava: {
