@@ -50768,6 +50768,14 @@ export const NAHTAVYYSJUTUT = {
           + 'tilaisuuksia ja yksi Guns N’ Rosesin konsertti. '
           + 'Vuoden 2016 olympialaisten jalkapalloa täällä silti '
           + 'pelattiin.',
+      kuvat: [
+        {
+          tiedosto: 'Arena Amazônia Manaus.jpg',
+          selite: 'Ilmasta katsottuna valkoinen kuori näyttää '
+            + 'punotulta korilta, ja katsomo on tyhjä.',
+          lahde: 'Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Osavaltion parlamentti': {
@@ -50783,6 +50791,15 @@ export const NAHTAVYYSJUTUT = {
           + 'kohde yhdessä jalkapalloareenan kanssa — kaupunki kasvoi '
           + '1900-luvun jälkipuoliskolla vanhasta keskustasta '
           + 'pohjoiseen, ja hallinto seurasi perässä.',
+      kuvat: [
+        {
+          tiedosto: 'Assembleia Legislativa do Estado do Amazonas (ALEAM).jpg',
+          selite: 'Istuntosalin matala kolmiokatto on kiinni '
+            + 'toimistotornissa, ja salin seinään on maalattu '
+            + 'kokouksen nimi.',
+          lahde: 'Assembleia Legislativa do Amazonas, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Amazonin tutkimuslaitos': {
@@ -50806,6 +50823,14 @@ export const NAHTAVYYSJUTUT = {
           + 'maatalouden alalla maisteri- ja tohtoritasolla. Osoite on '
           + 'Avenida André Araújo Petrópolisin kaupunginosassa, viisi '
           + 'kilometriä vanhasta keskustasta itään.',
+      kuvat: [
+        {
+          tiedosto: 'Instituto Nacional de Pesquisas da Amazônia - INPA (52129481536).jpg',
+          selite: 'Tiilinen ja lasinen laboratoriotalo seisoo '
+            + 'palmujen ja sademetsäkasvillisuuden keskellä.',
+          lahde: 'Ministério da Ciência, Tecnologia e Inovação, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Colinan stadion': {
@@ -50826,6 +50851,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Yleisöennätys on 16 000 ja se on 4. elokuuta 2000: '
           + 'stadion avattiin silloin uudelleen remontin jälkeen, ja '
           + 'São Raimundo voitti Surinamen maajoukkueen 5–0.',
+      kuvat: [
+        {
+          tiedosto: 'Ismaelbenigno.jpg',
+          selite: 'Kulmalippu etualalla, nurmi ja tyhjä betonikatsomo '
+            + 'sen takana matalan pilvikannen alla.',
+          lahde: 'Marcospaulobg, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Beit Yaacovin synagoga': {
@@ -50917,6 +50950,14 @@ export const NAHTAVYYSJUTUT = {
           + 'sanomalehteä vuodesta 1886 alkaen sekä sarjakuvakokoelma '
           + 'ja tietokonesali. Talo suojeltiin kansallisesti 12. '
           + 'huhtikuuta 1988, ja se peruskorjattiin 2013.',
+      kuvat: [
+        {
+          tiedosto: 'BibliotecaPublicaAmazonas 02.JPG',
+          selite: 'Punakeltainen uusklassinen talo kadunkulmassa, '
+            + 'kaarevat ikkunat ja valkoiset kaidekoristeet.',
+          lahde: 'Joehawkins, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Katedraali: {
@@ -50940,6 +50981,14 @@ export const NAHTAVYYSJUTUT = {
           + 'katedraaliksi 1946 — se oli siis emäkirkko lähes '
           + 'seitsemänkymmentä vuotta ennen kuin sai katedraalin '
           + 'arvon.',
+      kuvat: [
+        {
+          tiedosto: 'Igreja da Matriz - Manaus - AM - panoramio.jpg',
+          selite: 'Valkoinen julkisivu ja kaksi kellotornia '
+            + 'sipulikupoleineen kohoavat aukion laidalla.',
+          lahde: 'Paulo JC Nogueira, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },
