@@ -974,7 +974,10 @@ test('kaupunkipisteen koko seuraa kameraa ilman uutta pistedataa', () => {
   // Zoomin muuttuessa skaala kirjoitetaan olioon: ei pointsData-kutsua,
   // joten 261 pistettä ei synny uudestaan eikä siirtymä nykäise.
   assert.match(lauta, /const tahdistaPisteidenKoko = \(\) => \{/);
-  assert.match(lauta, /const skaala = sade \* PISTEEN_SKAALA;/);
+  assert.match(lauta, /const skaala = asetettuLinssi \? 0 : sade \* PISTEEN_SKAALA;/);
+  // Linssin ajaksi kaupunkipisteet piiloon (omistaja 7.9.2026): body.aikajana-paalla → skaala 0.
+  assert.match(lauta, /linssiPaalla = \(\) => document\.body\.classList\.contains\('aikajana-paalla'\)/);
+  assert.match(lauta, /linssivahti\.observe\(document\.body/);
   assert.match(lauta, /ohjaimet\.addEventListener\('change', tahdistaPisteidenKoko\);/);
   assert.match(lauta, /ohjaimet\.removeEventListener\('change', tahdistaPisteidenKoko\);/);
   // Ruudun koko on osa vakiota, joten koon muutos päivittää säteen.

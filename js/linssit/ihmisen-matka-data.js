@@ -397,7 +397,49 @@ export const IHMISEN_MATKA = [
     lahde: 'en-Wikipedia "Skhul and Qafzeh hominins" ja "Skhul Cave"',
   },
   {
-    n: 5, tunnus: 'al-wusta',
+    n: 5, tunnus: 'blombos',
+    // Okrapaja 100 000 v. (Henshilwood 2011), helmet 75 000, piirros 73 000.
+    vuosiaSitten: 100000, ajoitus: 'noin 100 000–73 000 vuotta sitten',
+    otsikko: 'Okra ja helmet',
+    paikka: 'Blombosin luola', maa: 'Etelä-Afrikka', lat: -34.4144, lon: 21.2225,
+    loyto: 'Christopher Henshilwoodin kaivauksista nousi 1990-luvulta alkaen '
+      + 'kaiverrettuja okrapaloja, reiällisiä kotilonkuoria ja hiottuja luukärkiä. '
+      + 'Helmet ovat noin 75 000 vuoden ikäisiä, vanhin piirros noin 73 000.',
+    selite: 'Nuotion valossa joku pujottaa jouhen läpi pienten kotilonkuorien, '
+      + 'joihin on hangattu reikä, ja toinen piirtää okrapalaan ristikkoa. '
+      + 'Kaulakoru ei ruoki ketään — se kertoo, kuka sen kantaja on.',
+    juttu: 'Blombosin luola on pieni kolo Etelä-Afrikan etelärannikon kalliossa, ja '
+      + 'sen kerroksista on tullut yksi arkeologian tärkeimmistä paikoista. Sieltä '
+      + 'löytyi kymmeniä Nassarius-kotilon kuoria, joihin on tehty reikä ja jotka '
+      + 'ovat kuluneet toisiaan vasten kuin narussa roikkuneet helmet. Toinen '
+      + 'löytö on okrapala, johon on kaiverrettu säännöllinen ristikkokuvio. '
+      + 'Kolmas on kivensiru, jolle on piirretty okralla ristikko noin 73 000 '
+      + 'vuotta sitten: se on vanhin tunnettu ihmisen tekemä piirros.'
+      + '\n\n'
+      + 'Näiden esineiden merkitys on siinä, etteivät ne tee mitään. Helmi ei '
+      + 'leikkaa, kuvio ei metsästä. Ne ovat merkkejä — tapa kertoa jotain '
+      + 'itsestään toiselle ihmiselle — ja siksi Blombos muutti käsitystä siitä, '
+      + 'milloin ihminen alkoi ajatella symbolein. Aiemmin rajaa pidettiin noin '
+      + '40 000 vuoden takaisena ja Euroopassa. Nyt tiedetään, että Afrikassa '
+      + 'tehtiin samaa lähes kaksi kertaa aikaisemmin, vaikka kukaan ei väitä '
+      + 'näiden olevan maailman ensimmäiset korut. Luolan asukkaat kalastivat, '
+      + 'pyydystivät hylkeitä ja valmistivat teräviä luukärkiä.',
+    kuva: {
+      osoite: `${IHMISEN_MATKA_KUVAJUURI}/blombos.jpg`,
+      kuvateksti: 'Blombos, noin 75 000 vuotta sitten',
+      lahde: 'Matkakirjan havainnekuva',
+    },
+    esine: {
+      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-blombos-r20260907.jpg`,
+      selite: 'Kaiverrettu okra ja simpukkahelmet, Blombos',
+      lahde: ESINEEN_LAHDE,
+      viitteet: ['https://doi.org/10.1126/science.1067575'],
+    },
+    esineAito: null,
+    lahde: 'en-Wikipedia "Blombos Cave"',
+  },
+  {
+    n: 6, tunnus: 'al-wusta',
     vuosiaSitten: 88000, ajoitus: '95 000–86 000 vuotta sitten',
     otsikko: 'Sormiluu vihreässä Arabiassa',
     paikka: 'Al Wusta, Nefudin autiomaa', maa: 'Saudi-Arabia', lat: 28.3000, lon: 41.0000,
@@ -437,47 +479,6 @@ export const IHMISEN_MATKA = [
     },
     esineAito: null,
     lahde: 'en-Wikipedia "Arabian Peninsula" ja "Nafud desert"',
-  },
-  {
-    n: 6, tunnus: 'blombos',
-    vuosiaSitten: 75000, ajoitus: 'noin 75 000 vuotta sitten',
-    otsikko: 'Okra ja helmet',
-    paikka: 'Blombosin luola', maa: 'Etelä-Afrikka', lat: -34.4144, lon: 21.2225,
-    loyto: 'Christopher Henshilwoodin kaivauksista nousi 1990-luvulta alkaen '
-      + 'kaiverrettuja okrapaloja, reiällisiä kotilonkuoria ja hiottuja luukärkiä. '
-      + 'Helmet ovat noin 75 000 vuoden ikäisiä, vanhin piirros noin 73 000.',
-    selite: 'Nuotion valossa joku pujottaa jouhen läpi pienten kotilonkuorien, '
-      + 'joihin on hangattu reikä, ja toinen piirtää okrapalaan ristikkoa. '
-      + 'Kaulakoru ei ruoki ketään — se kertoo, kuka sen kantaja on.',
-    juttu: 'Blombosin luola on pieni kolo Etelä-Afrikan etelärannikon kalliossa, ja '
-      + 'sen kerroksista on tullut yksi arkeologian tärkeimmistä paikoista. Sieltä '
-      + 'löytyi kymmeniä Nassarius-kotilon kuoria, joihin on tehty reikä ja jotka '
-      + 'ovat kuluneet toisiaan vasten kuin narussa roikkuneet helmet. Toinen '
-      + 'löytö on okrapala, johon on kaiverrettu säännöllinen ristikkokuvio. '
-      + 'Kolmas on kivensiru, jolle on piirretty okralla ristikko noin 73 000 '
-      + 'vuotta sitten: se on vanhin tunnettu ihmisen tekemä piirros.'
-      + '\n\n'
-      + 'Näiden esineiden merkitys on siinä, etteivät ne tee mitään. Helmi ei '
-      + 'leikkaa, kuvio ei metsästä. Ne ovat merkkejä — tapa kertoa jotain '
-      + 'itsestään toiselle ihmiselle — ja siksi Blombos muutti käsitystä siitä, '
-      + 'milloin ihminen alkoi ajatella symbolein. Aiemmin rajaa pidettiin noin '
-      + '40 000 vuoden takaisena ja Euroopassa. Nyt tiedetään, että Afrikassa '
-      + 'tehtiin samaa lähes kaksi kertaa aikaisemmin, vaikka kukaan ei väitä '
-      + 'näiden olevan maailman ensimmäiset korut. Luolan asukkaat kalastivat, '
-      + 'pyydystivät hylkeitä ja valmistivat teräviä luukärkiä.',
-    kuva: {
-      osoite: `${IHMISEN_MATKA_KUVAJUURI}/blombos.jpg`,
-      kuvateksti: 'Blombos, noin 75 000 vuotta sitten',
-      lahde: 'Matkakirjan havainnekuva',
-    },
-    esine: {
-      osoite: `${IHMISEN_MATKA_ESINEJUURI}/ihmisen-matka-esine-blombos-r20260907.jpg`,
-      selite: 'Kaiverrettu okra ja simpukkahelmet, Blombos',
-      lahde: ESINEEN_LAHDE,
-      viitteet: ['https://doi.org/10.1126/science.1067575'],
-    },
-    esineAito: null,
-    lahde: 'en-Wikipedia "Blombos Cave"',
   },
   {
     n: 7, tunnus: 'lida-ajer',

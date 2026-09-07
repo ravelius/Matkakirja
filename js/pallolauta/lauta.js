@@ -1298,7 +1298,18 @@ export async function avaaPallolauta(ui) {
    * uutta pistedataa eikä siirtymää, jolloin koko pysyy paikallaan
    * pehmeästi läpi zoomin.
    */
+  /*
+   * KAUPUNKIPISTEET PIILOON LINSSIN AJAKSI (omistaja 7.9.2026 ilta,
+   * sanatarkasti: *"Linssin kartan mustat kaupunki pisteet voi
+   * piilottaa, koska niistä ei tapahdu mitään"*): kun body kantaa
+   * luokkaa aikajana-paalla, kaupunkipisteen skaala on 0 — piste on
+   * three.js-olio, ei DOM-merkki, joten css ei siihen yllä. Helmet ja
+   * aihevalot eivät kuulu tähän. Luokan vaihto tahdistaa heti
+   * (linssivahti alla), ja skaala palaa, kun linssi suljetaan.
+   */
+  const linssiPaalla = () => document.body.classList.contains('aikajana-paalla');
   let asetettuSade = 0;
+  let asetettuLinssi = false;
   const pisteenSade = () => {
     asetettuSade = kaupunkipisteenSade(
       pallo.pointOfView()?.altitude ?? PALLO_KORKEUS_MAX, kotelo.clientHeight,
@@ -1307,8 +1318,10 @@ export async function avaaPallolauta(ui) {
   };
   const tahdistaPisteidenKoko = () => {
     const edellinen = asetettuSade;
+    const edellinenLinssi = asetettuLinssi;
     const sade = pisteenSade();
     if (!sade) return;
+    asetettuLinssi = linssiPaalla();
     /*
      * KIRJOITETAAN AINA, HERÄTETÄÄN VAIN MUUTOKSESTA. Kirjaston oma
      * siirtymä (pointsTransitionDuration) kirjoittaa uuden pisteen
@@ -1317,7 +1330,7 @@ export async function avaaPallolauta(ui) {
      * kirjoitus jäisi sen alle. Ehdoton kirjoitus jokaisella
      * kamera-tapahtumalla ja ladonnalla korjaa senkin.
      */
-    const skaala = sade * PISTEEN_SKAALA;
+    const skaala = asetettuLinssi ? 0 : sade * PISTEEN_SKAALA;
     for (const d of pallo.pointsData()) {
       if (d.laji === 'helmi' || d.laji === 'valo') continue;
       const o = d.__threeObjPoint;
@@ -1325,7 +1338,7 @@ export async function avaaPallolauta(ui) {
       o.scale.x = skaala;
       o.scale.y = skaala;
     }
-    if (Math.abs(sade - edellinen) >= 1e-6) heraa();
+    if (Math.abs(sade - edellinen) >= 1e-6 || asetettuLinssi !== edellinenLinssi) heraa();
   };
 
   const litistaja = luoPisteidenLitistaja();
@@ -1461,6 +1474,11 @@ export async function avaaPallolauta(ui) {
     paivitaPisteet();
   });
   valovahti.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  // Linssin avaus/sulku (body.aikajana-paalla) piilottaa ja palauttaa kaupunkipisteet.
+  const linssivahti = new MutationObserver(() => {
+    if (linssiPaalla() !== asetettuLinssi) tahdistaPisteidenKoko();
+  });
+  linssivahti.observe(document.body, { attributes: true, attributeFilter: ['class'] });
   // Selitevalikon kappalemäärät pallolta (js/karttavalot.js karttavalotLaskurit).
   ui.karttavaloLaskuri = () => nostot.laskurit();
 
@@ -1689,6 +1707,7 @@ export async function avaaPallolauta(ui) {
       // Omat pallopisteet ovat tämän laudan tilaa (ks. pallonAsteet).
       if (omatPisteet === laudanOmatPisteet) omatPisteet = new Map();
       valovahti.disconnect();
+      linssivahti.disconnect();
       if (ui.karttavaloLaskuri) delete ui.karttavaloLaskuri;
       kokovahti.disconnect();
       lehtivahti?.disconnect();
