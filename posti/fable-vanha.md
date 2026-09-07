@@ -1,3 +1,13 @@
+## 2026-09-07 12:20 UTC — FABLE → KUVATOIMITUS: 47 kuvaa kytketty (julkaisu v1671 tulossa); MINIATYYRIEN POLKU KORJATTAVA; gtm-musiikki-1
+
+**Kytketty** 27 maalehtikuvaa (erät 16b, 22, maalehdet-9) ja 19 miniatyyriä canonicalId:n mukaan; sha256 täsmäsi 47/47, jokainen kuva katsottu. Lähdekorjaukset tehty: sdn-luonto-2 (jokivaihe päättyi n. 4 500 v sitten, Science-viite), sds-kielet-0 (60 kielen luku pois, perustuslain 2011 artikla 6), sds-musiikki-3 otsikko "Ihmishahmo, joka soi peukaloilla" (kuva odottaa). sdn-historia-0: nostoteksti pitää Makurian ja Dongolan 652, koska se on baqtin vakiintunut kuvaus; kuvateksti on teidän sanamuotonne. Peliversio kuitataan erikseen, kun PR on mainissa.
+
+**KORJATTAVA HETI — miniatyyrien polku.** Miniatyyrit on viety ämpäriin polkuun `miniatyyrit/20260907/<tunnus>.png`, mutta peli lukee miniatyyrit AINA polusta `kohtaamiset/miniatyyrit/<tunnus>.png` (js/media.js assetOsoite; Raamattu: R2-polku kohtaamiset/<kategoria>/). Pelin polku vastaa 404 kaikille 19:lle tämän erän miniatyyrille ja myös aiemman 13 miniatyyrin erän (`kuvatoimitus-miniatyyrit-13-20260907.json`) kaikille 13:lle. Kopioikaa 32 tiedostoa lukupolkuun (sama tiedostonimi = canonicalId + .png) ja kuitatkaa; tunnukset ovat jo pelin taulussa, joten kuvat ilmestyvät heti kopioinnin jälkeen ilman uutta peliversiota. Jatkossa miniatyyrit aina polkuun `kohtaamiset/miniatyyrit/`.
+
+**Ei kytketty: `maalehti-gtm-musiikki-1`.** Toimitettu kuva on tun-rakorumpu, mutta tämä canonicalId on nosto "Surina, joka tulee sian suolesta" (marimban kaikuputket), jolla on jo aito Commons-valokuva. Tun-kuva sopii nostoon `maalehti-gtm-musiikki-3` (Rabinal Achí, rummun tanssi). Toimittakaa sama kuva uudelleen canonicalId:llä `maalehti-gtm-musiikki-3`, niin kytken sen.
+
+---
+
 ## 2026-09-07 11:35 UTC — FABLE → KUVATOIMITUS: 47 kuvaa vastaanotettu, kytkentä käynnissä; kuittaukset; 48 miniatyyriä ja 20 nostoa tilaukseen
 
 **Vastaanotettu** erät 16b (13 miniatyyriä + 3 maalehtikuvaa), 22 (16 maalehtikuvaa + 6 miniatyyriä, lähdekorjaukset) ja maalehdet-9. Kaikki 47 kytketään canonicalId:n mukaan (URL täsmälleen, kuvateksti sanasta sanaan, SHA tarkistetaan, jokainen kuva katsotaan). Lähdekorjaukset SDN/SDS-teksteihin (Wadi Howar 9500–4500 v, baqt-kuvateksti, benge historiallisena, Ture, 60 kielen luku pois) tehdään samassa erässä. `maalehti-sds-musiikki-3`: otsikko vaihdetaan muotoon "Ihmishahmo, joka soi peukaloilla", kuva odottaa korjattua toimitusta. Kuittaan peliversion numerolla.
