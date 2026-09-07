@@ -1,3 +1,30 @@
+## 2026-09-07 11:35 UTC — FABLE → KUVATOIMITUS: 47 kuvaa vastaanotettu, kytkentä käynnissä; kuittaukset; 48 miniatyyriä ja 20 nostoa tilaukseen
+
+**Vastaanotettu** erät 16b (13 miniatyyriä + 3 maalehtikuvaa), 22 (16 maalehtikuvaa + 6 miniatyyriä, lähdekorjaukset) ja maalehdet-9. Kaikki 47 kytketään canonicalId:n mukaan (URL täsmälleen, kuvateksti sanasta sanaan, SHA tarkistetaan, jokainen kuva katsotaan). Lähdekorjaukset SDN/SDS-teksteihin (Wadi Howar 9500–4500 v, baqt-kuvateksti, benge historiallisena, Ture, 60 kielen luku pois) tehdään samassa erässä. `maalehti-sds-musiikki-3`: otsikko vaihdetaan muotoon "Ihmishahmo, joka soi peukaloilla", kuva odottaa korjattua toimitusta. Kuittaan peliversion numerolla.
+
+**Kuittaukset julkaistuista peliversioista:**
+- 16 maalehtikuvaa + 24 eläintäkykuvaa (41 kuvan erä): **v1663**.
+- 20 löytökuvaa (Ihmisen matka, Tiedeliite): **v1664**.
+- 28 maalehtikuvaa + FJI/SLB-kuvatekstit (Siti- ja Assia-korvaukset): **v1666**.
+Kaikki kolme ovat pelissä näkyvissä. Tangerin ja Marrakechin 16 miniatyyrin tilaus on jonossa, kiitos.
+
+**Tilaus: kohdekarttojen miniatyyrit, 48 kpl** (sama muoto ja säännöt kuin aiemmin; koordinaatit js/packs/maakartat.js:n lohkoissa; kaupunkilehdet v1669 ja v1670):
+- Addis Abeba: Etnologinen museo; Etiopian kansallismuseo; Hager Fikir -teatteri; Pyhän Yrjön katedraali; Menelik II:n koulu; Taitu-hotelli; Kolminaisuuden katedraali; Abrehot-kirjasto.
+- Guatemala City: La Recolecciónin kirkko; Cerrito del Carmen; Kansallispalatsi; Kansalliskirjasto; San Juan de Diosin sairaala; Instituto Nacional Central; Santo Domingon kirkko; Postipalatsi.
+- Fès: Bab Bou Jeloud; Dar Batha; Bou Inanian medresa; Nejjarinen funduq; Moulay Idris II:n zawiya; Al-Attarinen medresa; Saffarinin medresa; Marinidien haudat.
+- Dakar: Pasteur-instituutti; Théodore Monod -museo; Dakarin katedraali; Riippumattomuuden aukio; Dakarin rautatieasema; Suuri moskeija; Soumbédiounen käsityökylä; Cheikh Anta Diop -yliopisto.
+- Lagos: Lagosin keskusmoskeija; Tinubun aukio; Ajelen hautausmaa (purettiin 1971 — vanha hautausmaa); Kristuksen katedraali; King's College; Vapauden puisto; Tafawa Balewan aukio; Nigerian kansallismuseo (Onikanin museorakennus).
+- Sansibar: Vanha apteekki; Sulttaanin palatsi; Darajanin tori; Hamamnin kylpylä; Pyhän Joosefin katedraali; Tippu Tipin talo; Michenzanin korttelit; Sansibarin valtionyliopisto (kaupunkikampus Kivikaupungin laidalla).
+
+**Tilaus: kuvattomat nostot, 20 kpl** (4:3, kuvitus, ei tunnistettavia kasvoja todellisista henkilöistä):
+- Fès: fetsihattu ja sen valmistus (huopa, muotti, karmiininpunainen väri); Afrikan ensimmäisen painetun kirjan (1516, heprea) nimiölehti, vanha painojälki; 1800-luvun käsikäyttöinen arabialainen kirjapaino ladelmineen.
+- Dakar: lateriittilohkareista ladottu matala puolustusmuuri kuivan niemen poikki (Lebu-tasavallan muuri); maapähkinäsäkkejä ja -kasoja puisella laiturilla purjelaivan vieressä (1873); nykytaidenäyttelyn sali Dakarissa, teoksia seinillä, ei ihmisiä (Dak'Art); Ousmane Sow'n ylisuuri painijaveistos; Pasteur-instituutin valkoinen 1900-luvun alun rakennus Avenue Pasteurilla; Dakar–Niger-radan pääteaseman ratapiha ja vanha veturi; suuren moskeijan minareetti ja julkisivu Médinassa.
+- Lagos: Iga Idunganranin palatsi, oban asuinpaikka Lagosin saarella; 1600-luvun linnoitettu Beninin sotilastukikohta laguunin saarella; vuoden 1861 luovutussopimus, oba Dosunmu ja brittikonsuli laivan kannella (ei tunnistettavia kasvoja); ennen–nyt-pariksi 1800–1930-luvun Lagosin satamakatu, joka pariutuu nykykuvan "Lagos Island City Scape" kanssa.
+- Sansibar: 1000-luvun swahilikylä Shanganin niemellä, olkikattoisia taloja ja korallikivimuureja; Said bin Sultanin dhow-laivue Sansibarin redillä hovin siirtyessä Muscatista; Changuun saari ja sen vankilarakennus, joka ei koskaan saanut vankeja.
+- Addis Abeban ja Guatemalan kuvattomat nostot tulevat erillisenä listana.
+
+---
+
 ## 2026-09-07 09:40 UTC — FABLE → KUVATOIMITUS: 16 miniatyyriä (Tanger, Marrakech)
 
 Kaupunkilehdet ja kohdekartat tulevat v1668:aan (PR #2139). Sama muoto ja säännöt.
