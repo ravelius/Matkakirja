@@ -4163,6 +4163,17 @@ export const RAAMATTU = {
           + 'faktat (Denisovan luola: denisovalaiset, neandertalilaiset ja '
           + 'niiden yhteinen lapsi, ajoitus n. 50 000-200 000 v) tarkistaa '
           + 'Fable.',
+        'AGENTIT VAIN OPUS JA SONNET, PARVINA SAA AJAA (omistaja 7.9.2026 ilta '
+          + 'klo 19.05 Suomen aikaa, sanatarkasti: "Onhan sinulla ohjeena selva, '
+          + 'etta agentteina saa kayttaa vain opusta ja sonnettia. Mutta voit '
+          + 'niita ajaa parvina."): Fable ei kaynnista Fable-mallin agentteja '
+          + '(fablemax-tyyppi mukaan lukien) - vaativakin tyo jaetaan Opus- ja '
+          + 'Sonnet-agenteille, tarvittaessa rinnakkaisena parvena '
+          + '(kustannuskurin rajat: selvarajaiset erat, enintaan ~8 rinnakkain). '
+          + 'Kumoaa roolituksen 26.8.2026 poikkeuksen "Fable-mallia saa kayttaa '
+          + 'agenttina vain todella vaikeaan pulmaan". Kaksi 7.9. illalla '
+          + 'kaynnistettya Fable-agenttia (linssinakyma, vanat) pysaytettiin ja '
+          + 'tyo jatkettiin Opuksella niiden valitallennuksista.',
         'IHMISEN MATKA: ETELA-AFRIKASSA KAMERA ULOS, VANA EI SAA HUKKUA '
           + '(omistaja 7.9.2026 ilta klo 18.15 Suomen aikaa, sanatarkasti: "siina '
           + 'tarinan alkupaikkeella, kun kaydaan Etela-Afrikan kohdalla, niin '
