@@ -59943,6 +59943,14 @@ export const NAHTAVYYSJUTUT = {
           + 'aikaa, rasvatut tukkirullat ja kahdeksan tonnia '
           + 'Palmolive-saippuaa. Kansallinen historiallinen paikka '
           + 'aluksesta tuli 24. kesäkuuta 1967.',
+      kuvat: [
+        {
+          tiedosto: 'Klondike sternwheeler in Whitehorse, Yukon, in 1987 (50043404432).jpg',
+          selite: 'Valkoinen siipiratasalus seisoo kuivalla maalla '
+            + 'kivipenkereen päällä, ja takana kohoavat vaarat.',
+          lahde: 'David Wipf, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Riverdale: {

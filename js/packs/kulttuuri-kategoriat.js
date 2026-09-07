@@ -99779,6 +99779,56 @@ export const KULTTUURI_KATEGORIAT = {
         + 'veden alla: kosken, joka esti matkan pohjoiseen. Isoisän '
         + 'matkavuonna 1873 laaksossa oli kausittaisia kalaleirejä ja '
         + 'kantoreitti kanjonin ohi — ei kaupunkia.',
+      /*
+       * EI ENNEN JA NYT -PARIA. Matkakirjan valokuvataulun vanha puoli
+       * (northamerica-valokuvat.js, whitehorse: "Sternwheelers at
+       * Whitehorse, Yukon, ca. 1899 …") on Commonsissa 6202 × 4462 ja
+       * PD, mutta se HYLÄTTIIN kaupunkilehden kuvasäännöillä: vedos on
+       * paspartuun kiinnitetty (lisätty kehys) ja negatiiviin on
+       * painettu vanhan studion kuvateksti ja numero. Kumpikin on
+       * kielletty "kuvan päälle lisätty merkintä". Korvaajaa etsittiin
+       * hauilla "Category:Whitehorse, Yukon" ja "Whitehorse Yukon"
+       * 7.9.2026; yhtään sääntöjen mukaista vanhaa vedosta ei
+       * löytynyt. Lehti taittuu siis ilman paria kuten Lagos, Dubai ja
+       * Doha, ja kansikuvien pikkurivi näkyy normaalisti. Kirjattu
+       * kuvaputken tilaukseksi.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Downtown Whitehorse (6325219946).jpg',
+          selite: 'Yukonjoki kaartaa keskustan ohi, ja sen takaa '
+            + 'nousee lumihuippuinen vuori.',
+          lahde: 'Anthony DeLorenzo from Whitehorse, Yukon, Canada, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Whitehorse Wharf (6346301048).jpg',
+          selite: 'Rantakäytävä ja penkkirivi ovat lumen alla, ja '
+            + 'joki virtaa jäätymättömänä niiden vieressä.',
+          lahde: 'Anthony DeLorenzo from Whitehorse, Yukon, Canada, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Whitehorse - Yukon Territory (12448173245).jpg',
+          selite: 'White Pass and Yukon Routen puinen asemarakennus '
+            + 'seisoo rantatien varrella metsäisen rinteen edessä.',
+          lahde: 'TravelingOtter from Houston, Texas, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Whitehorselle ei ole generoitu herokuvia, ja
+       * karusellissa on toistaiseksi VAIN YKSI aito valokuva. Kaksi
+       * muuta on kirjattu kuvaputken tilaukseksi: Commonsin
+       * Whitehorse-aineisto on ohut, ja tässä erässä löytyneistä
+       * ehdokkaista kelpasivat vain ne, jotka ovat jo kansikuvissa.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Alaska Highway - Yukon Territory (12448918423).jpg',
+          selite: 'Alaska Highway katoaa suorana kuusikon väliin, ja '
+            + 'horisontissa siintää vuorijono.',
+          lahde: 'TravelingOtter from Houston, Texas, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kwanlin, virtaava vesi kanjonissa',
@@ -99796,6 +99846,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kesäkuussa 2012. Naapurina on Ta\'an Kwäch\'än '
             + 'Council, joka irtautui neuvottelemaan oman '
             + 'sopimuksensa ja sai sen 2002.',
+          tiedosto: 'The Wolf and the Crow, the two clans of the Kwanlin Dun (47975824718).jpg',
+          selite: 'Pyöreään setrilevyyn veistetyt susi ja korppi ovat '
+            + 'Kwanlin Dünin kaksi klaania.',
+          lahde: 'dvs from Vermont, USA, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Kwanlin Dün First Nation',
         },
         {
@@ -100211,6 +100265,82 @@ export const KULTTUURI_KATEGORIAT = {
         + 'hallinnosta ja timanteista. Isoisän matkavuonna 1873 lahden '
         + 'suulla oli kalapaikkoja ja viisikymmentä vuotta aiemmin '
         + 'suljetun kauppa-aseman jäänteet.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: Old Townin
+       * kalliolta keskustaan, pensaslentäjien muistomerkiltä
+       * jäätyneelle järvelle ja kesäinen iltahämärä Niven Laken yllä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Frosty Skyline - Yellowknife, Canada (5325119239).jpg',
+          selite: 'Old Townin kalliolta katsottuna Franklin Avenue '
+            + 'nousee lumisten kumpujen yli keskustan torneille.',
+          lahde: 'TravelingOtter from Houston, Texas, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'View of Great Slave Lake from Pilots Memorial - Yellowknife, Canada (5325728776).jpg',
+          selite: 'Pensaslentäjien muistomerkiltä avautuu jäätynyt '
+            + 'Isonorjajärvi, ja rannassa talvehtii alus.',
+          lahde: 'TravelingOtter from Houston, Texas, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Dusk view of Niven Lake and Back Bay, Yellowknife, NT, from Explorer Hotel.jpg',
+          selite: 'Kesäinen iltahämärä värjää taivaan oranssiksi '
+            + 'Niven Laken ja Back Bayn yllä.',
+          lahde: 'Daniel Case, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Yellowknifelle ei ole generoitu herokuvia, joten
+       * karusellissa on kaksi aitoa valokuvaa: revontulet ja jäätynyt
+       * järvi. Kolmas on kirjattu kuvaputken tilaukseksi;
+       * asuntolaivapanoraama siirtyi teemasivun nostoon, jonka aihe
+       * se on.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Camping Under the Stars and Aurora Borealis - Flickr - stevehfung.jpg',
+          selite: 'Revontulet kaartavat kuusikon yllä, ja lumessa '
+            + 'hohtaa valaistu kartiomainen teltta.',
+          lahde: 'Steve FUNG, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Frozen Great Slave Lake - Yellowknife, Canada (5325723220).jpg',
+          selite: 'Jäätynyt Isonorjajärvi ulottuu kalliorannan '
+            + 'juurelta horisonttiin asti.',
+          lahde: 'TravelingOtter from Houston, Texas, USA, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+       * (northamerica-valokuvat.js, yellowknife), jossa se on jo
+       * tarkistettu — vanha puoli on rahtialus Radium King laiturissa
+       * 1930-luvulla ja uusi sama Old Townin lahti kesällä 2008.
+       * Molempien koko ja lisenssi tarkistettiin uudelleen Commonsin
+       * rajapinnasta 7.9.2026 (3000 × 2001 PD ja 3072 × 2304
+       * CC BY-SA 3.0), ja selitteet on kirjoitettu uudestaan yhdeksi
+       * virkkeeksi reseptin mukaan. Vanhan kuvan lähderivi on
+       * valokuvataulun muodossa, koska Commonsin extmetadata antaa
+       * tekijäksi vain "Unknown author".
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Radium King moored in Yellowknife.jpg',
+          vuosi: '1930-luku',
+          selite: 'Rahtialus Radium King laiturissa 1930-luvulla, kun '
+            + 'kaikki tavara tuli Yellowknifeen vesitse.',
+          lahde: 'Edmonton Air Museum Committee / NWT Archives, Commons (PD)',
+        },
+        {
+          tiedosto: 'Old Town and N\'Dilo.JPG',
+          selite: 'Sama lahti kesällä: Old Townin talot kalliolla, '
+            + 'N\'Dilon niemi ja vesitasojen laituri.',
+          lahde: 'CambridgeBayWeather, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Sǫǫ̀mbak\'è, paikka jossa raha on',
@@ -100529,6 +100659,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'takana kohoaa Old Townin kalliokärki, jonne kaupunki '
             + 'alun perin rakennettiin ja jossa ovat sen vanhimmat '
             + 'talot.',
+          tiedosto: 'Houseboats panorama cropped (14804051005).jpg',
+          selite: 'Värikkäät asuntolaivat kelluvat rivissä '
+            + 'kallioluotojen suojassa kesäisellä lahdella.',
+          lahde: 'Alan Sim from Cambridge Bay, Canada, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Yellowknife',
         },
         {
