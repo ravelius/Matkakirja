@@ -2349,5 +2349,5 @@ test('sanarajaan pysähtynyt vastaus jatketaan kerran samaan kuplaan', () => {
   assert.match(kehote, /const JATKON_MAX_TOKENS = 350;/);
   assert.match(kehote, /if \(stop === 'max_tokens'\) \{\s*const jatko = await jatkaKeskenJaanyt\(/);
   assert.match(kehote, /async function jatkaKeskenJaanyt\(env, \{ jarjestelma, viestit \}, raaka\)/);
-  assert.match(kehote, /lopeta ajatus enintään kolmessa virkkeessä/);
+  assert.match(kehote, /kolmessa virkkeessä\.'/);
 });
