@@ -1,0 +1,848 @@
+{
+  "createdAt": "2026-09-07T04:55:15.263595+00:00",
+  "message": "20 Ihmisen matka -linssin esinekuvaa ja15 maalehden kuvaa valmiina, root tarkastanut, R2 GET/SHA/MIME/CORS tarkistettu. Lähdeperustaisia kuvituksia, eivät alkuperäisiä museovalokuvia. Kytke canonicalId/maalehti-id:n mukaan ja kuittaa peliversio erikseen. Isoisän kuvat eivät kuulu toimitukseen; käyttäjä toimittaa itse.",
+  "items": [
+    {
+      "id": "maalehti-ken-musiikki-1",
+      "fileName": "maalehti-ken-musiikki-1.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "KEN",
+      "featureCategoryId": "musiikki",
+      "canonicalTitle": "Basso, joka matkii lyyraa",
+      "caption": "1970-luvun benga-yhtye soittaa lavalla sähkökitara ja bassokitara etualalla.",
+      "sources": [
+        "https://heroes.go.ke/wp-content/uploads/2025/10/Heroes-Council-2025-Mashujaa.pdf"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-ken-musiikki-1.jpg",
+      "sha256": "e36a7e6237fd4d99bfad642586a1e8d153c53a09d278d720b89245b273d31789",
+      "bytes": 397954,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "maalehti-ken-musiikki-3",
+      "fileName": "maalehti-ken-musiikki-3.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "KEN",
+      "featureCategoryId": "musiikki",
+      "canonicalTitle": "Tervehdys, joka päätyi piirrettyyn",
+      "caption": "Mombasalainen hotellibändi soittaa turisteille Intian valtameren rantaterassilla.",
+      "sources": [
+        "https://www.musicinafrica.net/directory/them-mushrooms"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-ken-musiikki-3.jpg",
+      "sha256": "193f6b1b953090e86b51fc6557ce4a946f8e99842479c5ce192920083048480e",
+      "bytes": 425957,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "maalehti-tza-musiikki-1",
+      "fileName": "maalehti-tza-musiikki-1.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "TZA",
+      "featureCategoryId": "musiikki",
+      "canonicalTitle": "Orjaksi syntynyt laulaja, joka levytti Bombayssa",
+      "caption": "1920-luvun taarab-laulajaa esittävä Siti binti Saad esiintyy Sansibarissa gramofonin vieressä.",
+      "sources": [
+        "https://www.loc.gov/item/ihas.200197500/"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-tza-musiikki-1.jpg",
+      "sha256": "752a09a8f4b79ffe5997f32d2d2341219d7d97af32ca1fcd416271f08de8db4d",
+      "bytes": 471785,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "maalehti-uga-ruoka-1",
+      "fileName": "maalehti-uga-ruoka-1.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "UGA",
+      "featureCategoryId": "ruoka",
+      "canonicalTitle": "Hovikokin keksintö vuodelta 1887",
+      "caption": "Avattu banaaninlehtikäärö paljastaa höyrytetyn luwombo-lihapadan lautasella.",
+      "sources": [
+        "https://geneva.mofa.go.ug/basic-page/people-culture-food"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-uga-ruoka-1.jpg",
+      "sha256": "b0465e957544ec5de20085a815f81a9f04ced282b0686202ad134e38a914ed21",
+      "bytes": 503250,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "maalehti-uga-musiikki-0",
+      "fileName": "maalehti-uga-musiikki-0.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "UGA",
+      "featureCategoryId": "musiikki",
+      "canonicalTitle": "Neljä mestaria jäljellä",
+      "caption": "Busogalainen soittajaryhmä puhaltaa erimittaisiin bigwala-kurpitsatorviin ulkona.",
+      "sources": [
+        "https://ich.unesco.org/en/USL/bigwala-gourd-trumpet-music-and-dance-of-the-busoga-kingdom-in-uganda-00749"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-uga-musiikki-0.jpg",
+      "sha256": "b78987b10e561859b9ab8c3db4a44d1f8bdd6a8ccf694b827712b2c44c77a9c9",
+      "bytes": 534988,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "maalehti-mar-musiikki-0",
+      "fileName": "maalehti-mar-musiikki-0.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "MAR",
+      "featureCategoryId": "musiikki",
+      "canonicalTitle": "Sarja jokaiselle vuorokauden tunnille",
+      "caption": "Marokkolainen al-Ala-orkesteri esittää nubaa, viulut ja oud etualalla.",
+      "sources": [
+        "https://catalogue.bnf.fr/ark:/12148/cb38502258p"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-mar-musiikki-0.jpg",
+      "sha256": "c99e31abd67694b468163f873e6dd792246f48a6cc7886094f98f6340b7f03f8",
+      "bytes": 627766,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "maalehti-mar-musiikki-1",
+      "fileName": "maalehti-mar-musiikki-1.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "MAR",
+      "featureCategoryId": "musiikki",
+      "canonicalTitle": "Runoutta, jota lauloivat käsityöläiset",
+      "caption": "Fèsin käsityöläisateljeessa mies laulaa malhun-runoutta viulun, oudin ja kehärumpujen säestyksellä.",
+      "sources": [
+        "https://ich.unesco.org/en/RL/malhun-a-popular-poetic-and-musical-art-01592"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-mar-musiikki-1.jpg",
+      "sha256": "ed175b5b5e37a45e62256e6a51b8ceebc87e91aad42493b18a04db1bf3cdb2b8",
+      "bytes": 399604,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "maalehti-dza-historia-3",
+      "fileName": "maalehti-dza-historia-3.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "DZA",
+      "featureCategoryId": "historia",
+      "canonicalTitle": "Kaksi kansanäänestystä ja sama päivämäärä",
+      "caption": "Algerin väkijoukko juhlii itsenäisyyttä Algerian lipuin 5. heinäkuuta 1962.",
+      "sources": [
+        "https://imagesdefense.gouv.fr/fr/fete-de-l-independance-de-l-algerie-le-5-juillet-1962-a-alger.html"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-dza-historia-3.jpg",
+      "sha256": "bcc18e0e16c0b52cdb82636e5e5f2d59bf1a70099e6243267dc37fee163d09b8",
+      "bytes": 427757,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "maalehti-dza-ruoka-3",
+      "fileName": "maalehti-dza-ruoka-3.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "DZA",
+      "featureCategoryId": "ruoka",
+      "canonicalTitle": "Viinimaa, joka lakkasi olemasta",
+      "caption": "Rypäletertut kypsyvät Algerian kuivan ylätasangon viinitarhassa vuorijonon edessä.",
+      "sources": [
+        "https://imagesdefense.gouv.fr/fr/les-vendanges-dans-l-algerois.html"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-dza-ruoka-3.jpg",
+      "sha256": "77823714ed594f89e6bb98dfdd8a6184678925c985610a52dacfa87e99749cf4",
+      "bytes": 568764,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "maalehti-dza-kirjallisuus-3",
+      "fileName": "maalehti-dza-kirjallisuus-3.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "DZA",
+      "featureCategoryId": "kirjallisuus",
+      "canonicalTitle": "Luokkansa ainoa ja akatemian ensimmäinen",
+      "caption": "Assia Djebar istuu kirjoituspöytänsä ääressä kirjojen ympäröimänä mustavalkoisessa muotokuvassa.",
+      "sources": [
+        "https://www.academie-francaise.fr/les-immortels/assia-djebar"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-dza-kirjallisuus-3.jpg",
+      "sha256": "058a134f5673a873937331adae714c831e1d518def74ec6018be23b91911d04d",
+      "bytes": 293977,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "maalehti-dza-luonto-2",
+      "fileName": "maalehti-dza-luonto-2.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "DZA",
+      "featureCategoryId": "luonto",
+      "canonicalTitle": "Gepardi, joka ei juo",
+      "caption": "Riistakameramainen yökuva näyttää vaalean saharangepardin Ahaggarin kivikossa.",
+      "sources": [
+        "https://www.cambridge.org/core/journals/oryx/article/genetic-analysis-of-scat-reveals-leopard-panthera-pardus-and-cheetah-acinonyx-jubatus-in-southern-algeria/89A3DA4646F37D44E3593367A55911A3",
+        "https://www.cambridge.org/core/journals/oryx/article/saharan-cheetah-acinonyx-jubatus-hecki-a-ghostly-dweller-on-nigers-termit-massif/95D0129601950EA42183149286BF5805"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-dza-luonto-2.jpg",
+      "sha256": "7891fc9cda46e3c54001625a0b04f7f05d5fce6aa64c7ac7be3d7dcdcb6a38db",
+      "bytes": 345261,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "maalehti-tun-kuvataide-1",
+      "fileName": "maalehti-tun-kuvataide-1.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "TUN",
+      "featureCategoryId": "kuvataide",
+      "canonicalTitle": "Koulukunta, joka perustettiin omaa maalaustaidetta varten",
+      "caption": "Monitaustainen taiteilijaryhmä työskentelee yhteisessä ateljeessa 1950-luvun Tunisissa.",
+      "sources": [
+        "https://www.uib.fin.tn/images/banners-uib/Engagement-citoyen/Sponsoring-culturel/Collection%20dart%20UIB%20web.pdf"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-tun-kuvataide-1.jpg",
+      "sha256": "44ec33c570ab76898d3692a90ad1707be3ec8627f63f82dbd8d4476f6c460920",
+      "bytes": 374298,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "maalehti-tun-kuvataide-2",
+      "fileName": "maalehti-tun-kuvataide-2.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "TUN",
+      "featureCategoryId": "kuvataide",
+      "canonicalTitle": "Ryhmän ainoa nainen, koulun ensimmäinen johtaja",
+      "caption": "Kutojan kädet viimeistelevät pystykangaspuissa paksulankaista modernia tunisialaista kuvakudosta.",
+      "sources": [
+        "https://www.labiennale.org/en/art/2022/milk-dreams/safia-farhat"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-tun-kuvataide-2.jpg",
+      "sha256": "75f8683ee853c1a4232bdcf420dec032066559e0c6129fb3c02faabe981015ba",
+      "bytes": 627238,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "maalehti-tun-musiikki-2",
+      "fileName": "maalehti-tun-musiikki-2.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "TUN",
+      "featureCategoryId": "musiikki",
+      "canonicalTitle": "Säkkipilli, jossa on kaksi lehmänsarvea",
+      "caption": "Kulunut tunisialainen mezoued-säkkipilli lepää pöydällä, kaksoisputki ja kaksi sarvikelloa näkyvissä.",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/500969"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-tun-musiikki-2.jpg",
+      "sha256": "f5b44ec4d75ee3cb1370c2fd31b47007765e7e3f2c91df5464d603ba6d83a0a6",
+      "bytes": 413097,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "maalehti-nga-historia-1",
+      "fileName": "maalehti-nga-historia-1.jpg",
+      "categoryId": "maalehdet",
+      "rootApproved": true,
+      "countryCode": "NGA",
+      "featureCategoryId": "historia",
+      "canonicalTitle": "Tyhjä kalebassi kuninkaan eteen",
+      "caption": "Alaafin ottaa rauhallisesti vastaan Oyo Mesi -päälliköt palatsipihalla ratsumiehen odottaessa sivulla.",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/844650",
+        "https://resources.metmuseum.org/resources/metpublications/pdf/The_Art_of_Africa_A_Resource_for_Educators.pdf"
+      ],
+      "sourceLine": "Tekoälyllä luotu kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nga-historia-1.jpg",
+      "sha256": "62d9f190881f4330b8107246ce1fe480ebb7a03c2ca75086ceacbbca279567de",
+      "bytes": 443974,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-jebel-irhoud-r20260907",
+      "canonicalId": "jebel-irhoud",
+      "fileName": "ihmisen-matka-esine-jebel-irhoud-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Kallon kasvo-osa, Jebel Irhoud",
+      "sources": [
+        "https://doi.org/10.1038/nature22336"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-jebel-irhoud-r20260907.jpg",
+      "sha256": "611aa7d135ec84927279ce696cf598ecb53cabbd68450ef943500701d0975120",
+      "bytes": 532892,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-omo-kibish-r20260907",
+      "canonicalId": "omo-kibish",
+      "fileName": "ihmisen-matka-esine-omo-kibish-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Kallon fragmentit, Omo Kibish",
+      "sources": [
+        "https://doi.org/10.1038/s41586-021-04275-8",
+        "https://humanorigins.si.edu/evidence/human-fossils/fossils/omo-i"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-omo-kibish-r20260907.jpg",
+      "sha256": "d4565cd580cc64bbb2462f7a0f49f741f84fe4f8def514889615d24341b6532f",
+      "bytes": 538147,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-pinnacle-point-r20260907",
+      "canonicalId": "pinnacle-point",
+      "fileName": "ihmisen-matka-esine-pinnacle-point-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Simpukankuoret ja kivityökalut, Pinnacle Point",
+      "sources": [
+        "https://doi.org/10.1038/nature06204",
+        "https://doi.org/10.1038/nature11660"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-pinnacle-point-r20260907.jpg",
+      "sha256": "0645bffc482d098237d2d7c11a1ed43173e5925336ed49ab36f4e58544d55196",
+      "bytes": 592687,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-blombos-r20260907",
+      "canonicalId": "blombos",
+      "fileName": "ihmisen-matka-esine-blombos-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Kaiverrettu okra ja simpukkahelmet, Blombos",
+      "sources": [
+        "https://doi.org/10.1126/science.1067575"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-blombos-r20260907.jpg",
+      "sha256": "6eff7a43f806e5d26e9053e0ed5b4770c68f600cb7631d96993c86d2541d7ea6",
+      "bytes": 503563,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-skhul-qafzeh-r20260907",
+      "canonicalId": "skhul-qafzeh",
+      "fileName": "ihmisen-matka-esine-skhul-qafzeh-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Sarvi ja okra, Qafzeh",
+      "sources": [
+        "https://doi.org/10.1086/377162"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-skhul-qafzeh-r20260907.jpg",
+      "sha256": "54675e4447795a950fb820baf390822198dfe0831cf5d6e6bb5b512288abe196",
+      "bytes": 522913,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-al-wusta-r20260907",
+      "canonicalId": "al-wusta",
+      "fileName": "ihmisen-matka-esine-al-wusta-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "AW-1-välinivel, Al Wusta",
+      "sources": [
+        "https://www.nature.com/articles/s41559-018-0518-2"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-al-wusta-r20260907.jpg",
+      "sha256": "7e67a54ea6179e51349e57c1c8fd8967c2bcad9466c2bd0dadcb8ce909ab2a7a",
+      "bytes": 230843,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-lida-ajer-r20260907",
+      "canonicalId": "lida-ajer",
+      "fileName": "ihmisen-matka-esine-lida-ajer-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Hampaat, Lida Ajer",
+      "sources": [
+        "https://doi.org/10.1038/nature23452"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-lida-ajer-r20260907.jpg",
+      "sha256": "17215f2272780a32b898597027b2e5ae1406ff1870e68601714038c4c1d17f16",
+      "bytes": 304375,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-denisova-r20260907",
+      "canonicalId": "denisova",
+      "fileName": "ihmisen-matka-esine-denisova-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Denisova 3:n kaksi sormiluufragmenttia ja erillinen vihreä rannerengas, Denisovan luola",
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6726440/",
+        "https://archaeology.nsc.ru/en/publications/jr-aeae-en/08-34-2/annot-02/"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-denisova-r20260907.jpg",
+      "sha256": "a23e7724d09145b38774f847e5ba6515c51bf8043a1bd90d24c4dc07ce073d0d",
+      "bytes": 271465,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-madjedbebe-r20260907",
+      "canonicalId": "madjedbebe",
+      "fileName": "ihmisen-matka-esine-madjedbebe-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Hiottu kivikirves ja okra, Madjedbebe",
+      "sources": [
+        "https://doi.org/10.1038/s41598-022-15174-x"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-madjedbebe-r20260907.jpg",
+      "sha256": "11f226ccbb4c263e8dfa471c8a777e89d18cead8524b1e67b069b46df38bf7ef",
+      "bytes": 472590,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-lake-mungo-r20260907",
+      "canonicalId": "lake-mungo",
+      "fileName": "ihmisen-matka-esine-lake-mungo-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Tuhka, okra ja simpukat, Lake Mungo",
+      "sources": [
+        "https://www.dcceew.gov.au/parks-heritage/heritage/places/world/willandra"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-lake-mungo-r20260907.jpg",
+      "sha256": "240d05adeda7c62d4ca404371e3831a7a1cbc08a0742f020c147d23d80f2d3ab",
+      "bytes": 413660,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-niah-r20260907",
+      "canonicalId": "niah",
+      "fileName": "ihmisen-matka-esine-niah-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Deep Skullin säilyneet kallon osat, Niah",
+      "sources": [
+        "https://humanorigins.si.edu/evidence/human-fossils/fossils/niah-cave"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-niah-r20260907.jpg",
+      "sha256": "6fc01d85fdd86a42ccace56e48a3afe7fb83daa03d31ad07d74bb5aa705860ec",
+      "bytes": 199525,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-bacho-kiro-r20260907",
+      "canonicalId": "bacho-kiro",
+      "fileName": "ihmisen-matka-esine-bacho-kiro-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Karhunhammasriipukset, Bacho Kiro",
+      "sources": [
+        "https://doi.org/10.1038/s41586-020-2259-z"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-bacho-kiro-r20260907.jpg",
+      "sha256": "41929acff963a64d96993cb382d5f3275429356cc20f5e7417d925b522605307",
+      "bytes": 568817,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-chauvet-r20260907",
+      "canonicalId": "chauvet",
+      "fileName": "ihmisen-matka-esine-chauvet-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Todellinen Panel of the Horses ympäröivine eläinhahmoineen, Chauvet",
+      "sources": [
+        "https://archeologie.culture.gouv.fr/chauvet/en/panel-horses",
+        "https://archeologie.culture.gouv.fr/chauvet/en/media/view/2986"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-chauvet-r20260907.jpg",
+      "sha256": "3cfafd852be8d7f041365210d9998c382902a982622a50be25322b51f84b665c",
+      "bytes": 545117,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-yana-r20260907",
+      "canonicalId": "yana",
+      "fileName": "ihmisen-matka-esine-yana-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Luusta ja norsunluusta tehdyt työkalut, Yana",
+      "sources": [
+        "https://doi.org/10.1080/00438243.2015.1030508"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-yana-r20260907.jpg",
+      "sha256": "8763390cae8133c7715173983e8ab873fcd9a3ec84eb772b84053c3c1416d885",
+      "bytes": 511818,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-tianyuan-r20260907",
+      "canonicalId": "tianyuan",
+      "fileName": "ihmisen-matka-esine-tianyuan-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Reisiluu, Tianyuan",
+      "sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3568306/"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-tianyuan-r20260907.jpg",
+      "sha256": "d4c58b30a79eed15f24735d396b999c4710a77e5145f0521aad00915756382b7",
+      "bytes": 594094,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-beringia-r20260907",
+      "canonicalId": "beringia",
+      "fileName": "ihmisen-matka-esine-beringia-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Norsunluuaihio ja kivikärki, Beringia",
+      "sources": [
+        "https://doi.org/10.1017/aaq.2021.63"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-beringia-r20260907.jpg",
+      "sha256": "147bfb3045b3878e7a3df78be15d4338c19a1f35c57757b0cd76abc6a5df70e9",
+      "bytes": 512064,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-white-sands-r20260907",
+      "canonicalId": "white-sands",
+      "fileName": "ihmisen-matka-esine-white-sands-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Fossiloitunut jalanjälki, White Sands",
+      "sources": [
+        "https://www.nps.gov/whsa/learn/nature/fossilized-footprints.htm"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-white-sands-r20260907.jpg",
+      "sha256": "07db950330564726a716b366856d2ed5b7ed25724299690d5972628e6a2111b8",
+      "bytes": 565228,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-monte-verde-r20260907",
+      "canonicalId": "monte-verde",
+      "fileName": "ihmisen-matka-esine-monte-verde-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Puuesine ja solmittu kuitunaru, Monte Verde",
+      "sources": [
+        "https://doi.org/10.1126/science.1127835"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-monte-verde-r20260907.jpg",
+      "sha256": "af06a96d1fdd177a373385181c7f81f2183e1f39c230f2ee908f0d99c0e8e7fc",
+      "bytes": 630681,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-lapita-r20260907",
+      "canonicalId": "lapita",
+      "fileName": "ihmisen-matka-esine-lapita-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Hammastettu ruukunpala, Lapita",
+      "sources": [
+        "https://lapita.ihp.sinica.edu.tw/introduction.php"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-lapita-r20260907.jpg",
+      "sha256": "7233d301bef30c2b131ae4568868a65d09922a9b9ad1704cee31309fa804592f",
+      "bytes": 568554,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    },
+    {
+      "id": "ihmisen-matka-esine-aotearoa-r20260907",
+      "canonicalId": "aotearoa",
+      "fileName": "ihmisen-matka-esine-aotearoa-r20260907.jpg",
+      "categoryId": "ihmisen-matka-esineet",
+      "rootApproved": true,
+      "caption": "Moa-luu ja luinen kalakoukku, Aotearoa",
+      "sources": [
+        "https://www.nma.gov.au/explore/features/cook_forster/objects/fishhook_matau_oz328"
+      ],
+      "sourceLine": "Tekoälyllä luotu lähdeperustainen kuvitus, ei alkuperäinen museovalokuva.",
+      "url": "https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907/ihmisen-matka-esine-aotearoa-r20260907.jpg",
+      "sha256": "4df80388de477959082dc3af629960af43243e47eb03d2f97a674525018927f4",
+      "bytes": 653318,
+      "dimensions": [
+        900,
+        1200
+      ],
+      "format": "JPEG",
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true
+    }
+  ],
+  "gameIntegrationClaimed": false
+}

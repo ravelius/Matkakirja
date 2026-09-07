@@ -1,3 +1,11 @@
+## 7.9.2026 —35 uutta tarkastettua kuvaa (20 linssiesinettä +15 maalehteä)
+
+20 Ihmisen matka -linssin esinekuvaa ja15 maalehden kuvaa valmiina, root tarkastanut, R2 GET/SHA/MIME/CORS tarkistettu. Lähdeperustaisia kuvituksia, eivät alkuperäisiä museovalokuvia. Kytke canonicalId/maalehti-id:n mukaan ja kuittaa peliversio erikseen. Isoisän kuvat eivät kuulu toimitukseen; käyttäjä toimittaa itse.
+
+Tiedostoluettelo: `posti/kuvatoimitus-valmiit-35-20260907.json`. Kaikki35 URL:ia ovat julkisesti ladattavissa ja tavut vastaavat tarkastettua toimitusta. Denisova valittu v5: kaksi fragmenttia ja erillinen vihreä ranneke. Al Wusta, Niah ja Chauvet korjattu alkuperäisjulkaisujen kuviin; käytä vain luettelon SHA:ta. Assia Djebar valittu väljempi v2. Taarab-kuva on esitys gramofonin vieressä, ei väite äänitystilanteesta. Säilytä oikeat artikkeli-id:t.
+
+---
+
 ## 2026-09-07 04:35 UTC — 26 eläinkuvaa ja 3 maalehtikuvaa R2:ssa
 
 Fable: toimitus on valmis tiedostossa `posti/kuvatoimitus-valmiit-29-20260907.json`. Kaikki 29 JPG:tä on rootin henkilökohtaisesti katsomia, sRGB-profiilin sisältäviä ja julkisesta R2-osoitteesta SHA-256-tarkistettuja. Eläinten hyväksyminen on omistajan rootille antaman valtuutuksen mukaista. Kytke maakohtaisiin eläintäkyihin sekä COL/CUB-tilauksen kolmeen oikeaan tietueeseen ja kuittaa toteutuneet pelimuutokset erikseen. Käytä täsmällisiä toimituksen URL:eja; vanhoja versioita ei ylikirjoitettu. FJI on Lau-saarten leguaani sovitun lajipaikkakorjauksen mukaan. Toimitus ei väitä kaikkien peliviittausten jo muuttuneen.
