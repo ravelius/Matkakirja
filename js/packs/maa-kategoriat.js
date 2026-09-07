@@ -52759,5 +52759,360 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * MOSAMBIK (MOZ) — Afrikan laudan maalehti (Opus 7.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-moz.md; kaikki
+   * luvut ja nimet tarkistettu en-Wikipedian raakatekstistä 7.9.2026.
+   *
+   * TYÖNJAKO KARTTANOSTOJEN JA LITTEIDEN NOSTOJEN KANSSA. Mosambikin
+   * kartta on täynnä: maastokohteet-moz.js kattaa Monte Bingan, Intian
+   * valtameren, Sambesin, Gorongosan, Sofalan, Inhambanen, Cahora
+   * Bassan, Quelimanen, Angochen, Manyikenin ja Maputon; skandaalit.js
+   * Gazan kuningas Ngungunyanen 1895 ja Delagoan radan välimiesriidan;
+   * elaintakyt.js dugongin ja Bazaruton saariston. Pelikaupungilla
+   * `mosambik` ei ole kaupunkilehteä, mutta africa-kulttuuri.js:n
+   * litteät nostot kertovat jo Mosambikin saaren kivikaupungista,
+   * marrabentasta ja piripiristä, ja lipputiedot.js maan lipusta.
+   * MAALEHTI EI TOISTA YHTÄKÄÄN NÄISTÄ — siksi historiassa ei ole
+   * rannikon satamakaupunkeja, Gazan valtakuntaa eikä rautateitä,
+   * luonnossa ei Gorongosaa, Sambesia eikä Bazarutoa, musiikissa
+   * marrabenta esiintyy vain Fany Pfumon levytysten kuvauksena eikä
+   * omana nostonaan, eikä lippu esiinny lainkaan.
+   *
+   * HERKÄT AIHEET (M3:n Myanmar-linja). Nykypolitiikkaa ei ole.
+   * Sisällissota 1977–1992 mainitaan kolmesti ja vain siltä osin kuin
+   * se selittää, miksi Mabun metsä säilyi, miksi Namulille ei päästy
+   * 66 vuoteen ja mistä Kesterin veistoksen aseet ovat peräisin.
+   * Cabo Delgado esiintyy vain Niassan yhtiön 1890-luvun toimiluvan
+   * rajauksena, ei nykytilana; Niassan luonnonpuisto jätettiin
+   * luonto-osiosta pois, koska sen artikkelin tuorein osio kertoo
+   * käynnissä olevasta selkkauksesta.
+   */
+  MOZ: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Sisämaata hallitsivat vuosisatoja muut kuin ne, joiden nimi luki '
+          + 'kartalla: Sambesin varren tilanherrat, kuningaskunta jonka kruunajaisiin '
+          + 'tarvittiin portugalilainen vesipullo, ja lopulta kaksi osakeyhtiötä, '
+          + 'jotka saivat toimiluvallaan kokonaisia maakuntia.',
+      nostot: [
+        {
+          otsikko: 'Tila, joka periytyi tyttäreltä tyttärelle',
+          aika: '1677–1900-luku',
+          teksti: 'Prazo da coroa oli suuri maatila, jonka Portugalin kruunu vuokrasi '
+              + 'kiinteää vuosimaksua vastaan, ja niitä oli tiheimmin Sambesin '
+              + 'laaksossa. Haltijan piti asua tilallaan eikä myydä tai vuokrata sitä '
+              + 'eteenpäin — sääntöä rikottiin jatkuvasti. Vuonna 1677 asutusta '
+              + 'yritettiin houkutella omalla säännöllä: vapautunut prazo annettiin '
+              + '"ansioituneille orpotytöille tai kruunun virkamiesten tyttärille", ja '
+              + 'se siirtyi vanhimmalle tyttärelle kolmen sukupolven ajan sillä '
+              + 'ehdolla, että tämä nai portugalilaisen. Haltija sai käydä kauppaa '
+              + 'kaikella, pitää järjestystä ja koota oman armeijan. Teten maakunnassa '
+              + '1800-luvulla 32 tilanherraa hallitsi 57:ää prazoa.',
+        },
+        {
+          otsikko: 'Vesi, joka sitoo',
+          aika: '1512–1902',
+          teksti: 'Baruen kuningaskunta Ruenyan laaksossa mainitaan kirjallisessa '
+              + 'lähteessä ensi kerran 1512, ja se irtautui Mutapan valtakunnasta '
+              + '1608. Kuninkaan arvonimi oli makombe, ja 1700-luvun lopulta lähtien '
+              + 'kruunajaisten viimeinen vaihe oli outo: uusi kuningas paastosi kolme '
+              + 'päivää, minkä jälkeen portugalilainen '
+              + 'edustaja toi pullollisen pyhää vettä — mazia manga, "vesi joka sitoo" '
+              + '— ja kaatoi sen hänen päähänsä. Sitten kuningas valitsi jousen ja '
+              + 'nuolen tai kuokan; kuokka merkitsi rauhaa. Kun portugalilaiset '
+              + '1800-luvulla yrittivät käyttää veden toimittamista painostuskeinona, '
+              + 'baruelaiset alkoivat hankkia sen itse. Valtakunta liitettiin '
+              + 'Mosambikiin vasta 1902.',
+        },
+        {
+          otsikko: 'Yhtiö, jolla oli oma pankki ja oma raha',
+          aika: '1891–1942',
+          teksti: 'Mosambikin yhtiö perustettiin 11. helmikuuta 1891 saksalaisella, '
+              + 'brittiläisellä ja eteläafrikkalaisella rahalla, ja se sai '
+              + 'viideksikymmeneksi vuodeksi toimiluvan nykyisten Manican ja Sofalan '
+              + 'maakuntien alueeseen. Yhtiö sai yksinoikeuden kerätä verot ja oli '
+              + 'itse 25 vuotta verovapaa; vastineeksi valtio sai 7,5 prosenttia '
+              + 'voitosta, ja yhtiön piti asuttaa alueelle tuhat portugalilaisperhettä '
+              + 'ja järjestää koulutus ja hallinto. Päämaja oli Beirassa, jossa se '
+              + 'hoiti julkisen hallinnon ja postitoimistot ja perusti oman pankin, '
+              + 'Banco da Beiran, joka laski liikkeeseen puntamääräistä rahaa. '
+              + 'Toimilupaa ei uusittu 1942.',
+        },
+        {
+          otsikko: 'Postimerkit, joita ei ollut tarkoitettu kirjeisiin',
+          aika: '1895–1929',
+          teksti: 'Niassan yhtiö sai 1891 toimiluvan yli 160 000 neliökilometriin '
+              + 'maan pohjoisosassa ja julkaisi toimintansa aikana 141 postimerkkiä. '
+              + 'Vain pieni osa niistä oli oikeasti postikäytössä: loput painettiin '
+              + 'Lontoon vilkkaille keräilymarkkinoille. Ensimmäinen erä meni pilalle '
+              + '1895, kun kuvernööri toi Englannista 158 miljoonan reisin edestä '
+              + 'merkkejä, jotka oli painettu Englannissa — toimilupa vaati painamista '
+              + 'Portugalissa, ja hallitus julisti erän mitättömäksi. Vuoden 1901 '
+              + 'omissa merkeissä oli kaksi kuva-aihetta: seitsemässä kirahvi syömässä '
+              + 'palmun latvasta ja kuudessa dromedaaripari. Samuel Beckett antoi '
+              + 'Molloyn kertojan ihailla juuri sitä kirahvimerkkiä.',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Mosambikin vuoret ovat saaria. Savannin keskeltä nousee '
+          + 'yksittäishuippuja, joiden rinteillä kasvaa sademetsää, jota ei ole '
+          + 'missään muualla — ja kahden niistä paikka löytyi vasta satelliittikuvasta.',
+      nostot: [
+        {
+          otsikko: 'Metsä, joka löytyi satelliittikuvasta',
+          teksti: 'Mabu-vuori Pohjois-Mosambikissa on noin 1 700 metriä korkea, ja sen '
+              + 'ikimetsä peittää seitsemäntuhatta hehtaaria. Paikallisesti se '
+              + 'tunnettiin hyvin, mutta tieteelle se oli käytännössä tuntematon '
+              + 'vuoteen 2005 asti, jolloin ensimmäinen tutkijaryhmä pääsi perille; '
+              + 'kolme vuotta myöhemmin tulivat Kew\'n kasvitieteellisen puutarhan '
+              + 'tutkijat. Retkikunnat olivat mahdollisia siksi, että vuoren paikka '
+              + 'löytyi Google Earthin satelliittinäkymästä, kun Afrikasta etsittiin '
+              + 'mahdollisia tuntemattomia luonnon keskittymiä — siksi Mabua sanotaan '
+              + 'yhä Googlen metsäksi. Metsästä on kuvattu 126 lintulajia sekä oma '
+              + 'kameleontti, hevosenkenkäyökkö, pensaskyy ja kolme perhoslajia.',
+        },
+        {
+          otsikko: 'Kraatteri, jonka seinät ovat seitsemänsataa metriä',
+          teksti: 'Lico-vuori Zambezian maakunnassa on vain 1 100 metriä korkea, mutta '
+              + 'sitä ympäröivät pystysuorat kallioseinät, jotka nousevat paikoin '
+              + 'seitsemänsataa metriä ympäröivästä maasta. Ne ovat estäneet ihmisten '
+              + 'pääsyn lähes kokonaan, ja huipulla, sammuneen tulivuoren kraatterissa, '
+              + 'on kolmenkymmenen hehtaarin sademetsä. Julian Bayliss tunnisti paikan '
+              + '2012 samalla tavalla kuin Mabun seitsemänkymmentä kilometriä '
+              + 'lounaassa: Google Earthista. Toukokuussa 2018 hänen johtamansa '
+              + 'retkikunta kiipesi seinämät. Metsän arveltiin olevan koskematon, '
+              + 'mutta huipun puronsilmäkkeeltä löytyi useita ruukkuja, jotka joku oli '
+              + 'asettanut sinne ennen heitä.',
+        },
+        {
+          otsikko: 'Vuori, jonne palattiin 66 vuoden jälkeen',
+          teksti: 'Namuli on maan toiseksi korkein vuori, 2 419 metriä: tasangon '
+              + 'päältä kohoava graniittikupoli. Britannian konsuli Henry Edward '
+              + 'O\'Neill mittasi ja kuvasi sen 1886, ja lintutieteessä sen tekivät '
+              + 'kuuluisaksi Hubert Lynes ja Jack Vincent retkellään 1931–1932. '
+              + 'Sisällissodan ja huonojen teiden takia metsiin päästiin uudelleen '
+              + 'vasta 1998. Molemmat retkeläiset saivat nimikkolajinsa: vuorella '
+              + 'elävät Namulin apalis Apalis lynesi ja Vincentin pensasorava '
+              + 'Paraxerus vincenti eivät esiinny missään muualla. Alarinteet ovat '
+              + 'teeviljelmiä — lähin kaupunki Gurué on maan suurin teetila — ja '
+              + 'alkuperäismetsä on jäljellä vain ylimpänä ja purolaaksojen '
+              + 'käytävissä.',
+        },
+        {
+          otsikko: 'Järvi, jossa on enemmän kalalajeja kuin missään',
+          teksti: 'Sama järvi on Mosambikissa Lago Niassa, Malawissa Lake Malawi ja '
+              + 'Tansaniassa Lake Nyasa. Se on tilavuudeltaan maailman neljänneksi '
+              + 'suurin makean veden järvi, ja siinä elää enemmän kalalajeja kuin '
+              + 'missään muussa järvessä: pelkkiä kirjoahvenia on vähintään '
+              + 'seitsemänsataa lajia. Järvi on meromiktinen eli sen vesikerrokset '
+              + 'eivät sekoitu, joten happi loppuu noin 250 metrin syvyydessä ja kalat '
+              + 'jäävät sen yläpuolelle, vaikka syvin kohta on 706 metriä. David '
+              + 'Livingstone antoi järvelle 1859 kaksi lisänimeä: tähtien järvi, koska '
+              + 'kalastajien lyhdyt näyttivät kaukaa tähdiltä, ja myrskyjen järvi.',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Mosambikilaisella lautasella on kolme maailmaa: afrikkalainen puuro, '
+          + 'portugalilaisten tuomat kasvit ja Intian valtameren kauppa, joka toi '
+          + 'kookoksen, mausteet ja samosan.',
+      nostot: [
+        {
+          otsikko: 'Kansallisruoka jauhetaan huhmaressa',
+          teksti: 'Matapa on maan tunnetuin ruokalaji, ja se alkaa puisesta '
+              + 'huhmaresta. Nuoret maniokinlehdet — joskus kurpitsan tai pinaatin — '
+              + 'jauhetaan survimella hienoksi ennen kuin ne kypsennetään '
+              + 'maapähkinöiden, tomaatin, valkosipulin, sipulin ja kookosmaidon '
+              + 'kanssa. Moneen matapaan tulee myös cashewpähkinöitä, rapua tai '
+              + 'katkarapuja, ja lautaselle se annostellaan tavallisesti riisin '
+              + 'päälle. Sama ruoka tunnetaan myös nimellä matata. Punaiset '
+              + 'chilihiutaleet ovat tavallinen mauste, mutta itse lehtien maku on '
+              + 'mieto ja hieman maanläheinen — kookos ja maapähkinä kantavat '
+              + 'kastikkeen.',
+        },
+        {
+          otsikko: 'Perusruoka, joka ei ole kotoisin täältä',
+          teksti: 'Ennen portugalilaisia maan pääviljat olivat hirssi ja durra. '
+              + 'Molempia syödään yhä, mutta viime vuosikymmeninä maissi on '
+              + 'syrjäyttänyt ne, ja arjen perusruoka on nyt xima, paksu '
+              + 'maissijauhopuuro; sen rinnalla ovat maniokki ja riisi, ja kaikkien '
+              + 'kanssa tarjotaan kasvis-, papu-, liha- tai kalakastiketta. Outoa '
+              + 'kyllä juuri mikään näistä ei ole alkuperäistä: maissi, tomaatti, '
+              + 'bataatti, paprikat ja maniokki ovat kaikki portugalilaisten tuomia '
+              + 'tulokkaita, joista tuli ruokavalion ydin. Portugalista tuli myös '
+              + 'refogado, monen padan pohja, jossa tomaattia, sipulia, valkosipulia '
+              + 'ja piripiriä kuullotetaan öljyssä.',
+        },
+        {
+          otsikko: 'Curry, joka ei tarvitse curryjauhetta',
+          teksti: 'Curryä pidetään Mosambikin kansallisruokana, mutta sana on täällä '
+              + 'väljä: se tarkoittaa mitä tahansa katkaravun, kalan, lihan tai '
+              + 'kasvisten yhdistelmää kastikkeessa, eikä siinä välttämättä ole '
+              + 'grammaakaan curryjauhetta. Yhteys Goaan, Portugalin toiseen '
+              + 'siirtomaahan, on tuonut curryn ja kookoksen samaan kattilaan, ja '
+              + 'etelässä kastike suurustetaan usein maapähkinällä. Intian valtameren '
+              + 'kaupan mukana tulivat myös appelsiinit, sitruunat ja mausteet. '
+              + 'Chamussa on samosan mosambikilainen serkku, caril de camarão '
+              + 'katkarapucurry ja frango à Zambeziana kookosmaidossa haudutettu '
+              + 'tulinen kanapata.',
+        },
+        {
+          otsikko: 'Pähkinä, jonka kuori polttaa',
+          teksti: 'Cashew on kotoisin trooppisesta Etelä-Amerikasta. Portugalilaiset '
+              + 'kohtasivat sen 1500-luvulla, veivät sen Goaan vuosina 1560–1565 ja '
+              + 'sieltä se levisi lopulta Afrikkaan. Kasvi on omituinen: mehukas '
+              + 'cashewomena on paisunut kukkaperä, ja varsinainen hedelmä on sen '
+              + 'päässä roikkuva munuaisen muotoinen luumarja, jonka sisällä on yksi '
+              + 'siemen. Kuoressa on anakardihappoa, joka on ihoa polttava aine ja '
+              + 'sukua myrkkymuratin urusiolille — siksi cashewta ei myydä '
+              + 'kuluttajille kuorineen. Mosambikissa jauhetusta cashewsta ja '
+              + 'perunamuusista leivotaan bolo polana, ja chopit käyttävät sekä '
+              + 'cashewta että mandariineja väkijuomiin.',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi cashewpähkinöitä ei myydä kuluttajille kuorineen?',
+        vaihtoehdot: [
+          'Kuori on liian kova avattavaksi',
+          'Kuoressa on ihoa polttavaa happoa',
+          'Kuori pilaantuu muutamassa päivässä',
+          'Kuori värjää kaiken mihin koskee',
+        ],
+        oikea: 1,
+        fakta: 'Kuoren anakardihappo on ihoa polttava aine ja sukua myrkkymuratin '
+            + 'urusiolille, joten pähkinät kuoritaan ennen myyntiä.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Maan kuuluisin soitin on ksylofoni, jota soitetaan kymmenen soittimen '
+          + 'orkesterissa, ja sen kuuluisin kitara oli tehty peltipurkista. Nimikin on '
+          + 'matkustanut: Havannassa sillä nimettiin rytmi, jolla ei ole maan kanssa '
+          + 'mitään tekemistä.',
+      nostot: [
+        {
+          otsikko: 'Orkesteri, jossa on kymmenen ksylofonia',
+          teksti: 'Chopien ksylofoni on mbila, monikossa timbila, ja sitä soitetaan '
+              + 'Inhambanen maakunnan Zavalassa kokonaisena orkesterina. Soittimia on '
+              + 'noin kymmenen kolmea tai neljää kokoa: kaksi bassoa nimeltä gulu '
+              + 'soitetaan seisten raskailla kumipäisillä kapuloilla, kolmea '
+              + 'kymmenkielistä dibindaa istuen, ja itse mbilassa on jopa yhdeksäntoista '
+              + 'kieltä, joista kahdeksan voi soida yhtä aikaa. Kaikupohjina ovat '
+              + 'kalebassit ja masala-omenan kuoret. Sävellystä pidetään '
+              + 'kehittyneimpänä, mitä kirjoitustaidottomien kansojen parista on '
+              + 'löydetty, ja Unesco julisti timbilan 2005 ihmiskunnan aineettoman '
+              + 'perinnön mestariteokseksi.',
+        },
+        {
+          otsikko: 'Sävellys, jossa pilkataan naapuria',
+          teksti: 'Timbilaorkesterin sävellys on mgodo: alkusoitto ja noin kymmenen '
+              + 'osaa, jotka on ryhmitelty neljäksi jaksoksi eri tempoissa. Johtaja on '
+              + 'yhtä aikaa runoilija, säveltäjä, kapellimestari ja soittaja. Hän '
+              + 'sepittää tekstin, improvisoi melodian osittain chopin kielen '
+              + 'sävelkulkujen mukaan ja kirjoittaa sen päälle toisen, vastakkaisen '
+              + 'linjan; soittajat improvisoivat omat osuutensa hänen ohjeidensa '
+              + 'rajoissa. Lopuksi säveltäjä neuvottelee juhlan koreografin kanssa ja '
+              + 'sävellystä muutetaan tanssin mukaan. Pisin ja tärkein osa on mzeno, '
+              + 'jonka laulu käsittelee jotakin seudun puheenaihetta — tai tekee '
+              + 'pilaa jostakusta paikkakunnan merkkihenkilöstä.',
+        },
+        {
+          otsikko: 'Kitara peltipurkista',
+          teksti: 'Fany Pfumo syntyi Lourenço Marquesissa 1928 köyhään perheeseen ja '
+              + 'aloitti soittamalla peltipurkista tehtyä kitaraa kaupungin '
+              + 'esikaupungeissa. Paremman elannon perässä hän muutti Etelä-Afrikkaan, '
+              + 'ja Johannesburgissa hänet päästettiin His Master\'s Voicen studioon. '
+              + 'Levystä "Loko ni kumbuka Jorgina", "kun muistan Georginan", tuli '
+              + 'kansainvälinen menestys, ja se on yhä mosambikilaisen populaarimusiikin '
+              + 'tunnetuimpia kappaleita. Pfumon tavaramerkki oli sekoittaa oman maansa '
+              + 'tanssirytmit jazziin ja eteläafrikkalaiseen kwelaan. Maineen jälkeen '
+              + 'hän palasi kotiin ja kuoli Maputossa 1987.',
+        },
+        {
+          otsikko: 'Rytmi, joka ei ole Mosambikista',
+          teksti: 'Havannassa Pedro Izquierdo, taiteilijanimeltään Pello el Afrokán, '
+              + 'kehitti 1963 rytmin ja tanssin, jolle hän antoi nimen mozambique. Sen '
+              + 'ensiesitys nähtiin samana vuonna televisio-ohjelmassa Ritmos de '
+              + 'Juventud. Nimestä huolimatta sillä ei ole mitään tekemistä Mosambikin '
+              + 'musiikin kanssa: se on kuubalaisen katukarnevaalin musiikkia congineen, '
+              + 'bassorumpuineen, lehmänkelloineen ja pasuunoineen. Se oli vallankumouksen '
+              + 'jälkeisen Kuuban ensimmäinen uusi tyylilaji, ja siitä polveutuvat songo '
+              + 'ja timba. New Yorkissa Eddie Palmieri teki 1960-luvulla oman '
+              + 'versionsa, jonka kellokuviota rumpali Steve Gadd soittaa Paul Simonin '
+              + 'kappaleessa "Late in the Evening".',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Mosambikin veistotaide alkaa yhdestä puunkappaleesta ja päätyy '
+          + 'käytöstä poistetuista aseista kootuksi valtaistuimeksi, jota on sanottu '
+          + 'British Museumin puhuvimmaksi esineeksi.',
+      nostot: [
+        {
+          otsikko: 'Yksi puunkappale, kolme tyyliä',
+          teksti: 'Makondet asuvat Mueda-ylätasangolla maan pohjoisosassa, ja heidän '
+              + 'yhteisössään lapset ja perintö kuuluvat naisille: aviomies muuttaa '
+              + 'vaimonsa kylään. Puu ei ole heille elotonta ainetta vaan elävä aine, '
+              + 'ja veistäminen on keskustelu tekijän ja puun elämänvoiman välillä — '
+              + 'pyhää on itse tekeminen, ei valmis esine. Työ tehdään yhdestä '
+              + 'kappaleesta: muoto pyöristetään kirveellä ja taltalla, viimeistellään '
+              + 'veitsillä ja raspilla, ja oksankohdat ja kierteet otetaan mukaan '
+              + 'muotoon eikä poisteta. Puuna on mustapuu, mpingo. Tyylejä on kolme: '
+              + 'binadamu esittää arjen ihmisiä, ujamaa on elämänpuu, jossa hahmot '
+              + 'kiipeävät toistensa yli, ja shetani ovat henkiolentoja.',
+        },
+        {
+          otsikko: 'Tennisklubin pallopoika',
+          teksti: 'Malangatana Valente Ngwenya syntyi 1936 Matalanan kylässä. Isä oli '
+              + 'kaivostyössä Transvaalissa, ja äidin sairastuttua poika eli '
+              + 'sukulaisten varassa. Kaksitoistavuotiaana hän lähti Lourenço '
+              + 'Marquesiin töihin ja pääsi 1953 tennisklubin pallopojaksi. Palkka '
+              + 'riitti iltakouluun, ja kaksi klubin jäsentä antoi hänelle '
+              + 'maalaustarvikkeita ja auttoi myymään töitä. Ensimmäinen yksityisnäyttely '
+              + 'tuli 25-vuotiaana, ja kolmessa vuodessa hän oli esillä kolmella '
+              + 'mantereella. Hän maalasi öljyväreillä nimenomaan siksi, että ne '
+              + 'kuivuvat hitaasti: väri valuu levityksen jälkeen, ääriviivat pehmenevät '
+              + 'ja hahmot muuttuvat unenomaisiksi.',
+        },
+        {
+          otsikko: 'Savi, joka on vihreää grafiitista',
+          teksti: 'Reinata Sadimba syntyi 1945 Nemun kylässä Muedassa ja sai '
+              + 'perinteisen makondekasvatuksen, johon kuului savitöiden teko. Hän '
+              + 'oppi keramiikan äidiltään ja alkoi tehdä sitä elättääkseen perheen, '
+              + 'kun isä kuoli. Myöhemmin hän on sanonut, että savi antoi hänen sanoa '
+              + 'asioita, joita hän ei osannut ilmaista millään muulla tavalla. '
+              + 'Kahdeksasta lapsesta vain yksi jäi eloon, ja vuoden 1975 eron jälkeen '
+              + 'hän mullisti työnsä: hahmot muuttuivat hänen omikseen eivätkä enää '
+              + 'muistuttaneet muuta makondekeramiikkaa. Materiaalit ovat savi, '
+              + 'valkoinen kalkkikivi ja grafiitti, joka antaa esineille niiden '
+              + 'ominaisen vihreän värin.',
+        },
+        {
+          otsikko: 'Valtaistuin, jonka termiitit allekirjoittivat',
+          teksti: 'Cristóvão Estevão Canhavato, taiteilijanimeltään Kester, kokosi '
+              + '2002 valtaistuimen käytöstä poistetuista aseista, jotka hän sai '
+              + '"aseista työkaluiksi" -hankkeelta. Osat ovat monesta maasta: '
+              + 'selkänojan kiväärit suunniteltiin Saksassa ja tehtiin Portugalissa, '
+              + 'istuimen osat Puolassa ja Tšekkoslovakiassa. Kester veisti teokseen '
+              + 'hymyileviä kasvoja, vaikka hänen omia sukulaisiaan oli haavoittunut '
+              + 'vastaavista aseista. Yhtä kasvoa hän ei tehnyt itse vaan löysi sen: '
+              + 'se on jälki, johon kantohihna oli kiinnitetty. Teoksen on '
+              + 'allekirjoittanut hänen lisäkseen termiitti. British Museum osti sen '
+              + 'samana vuonna.',
+        },
+      ],
+    },
+  ],
 };
 
