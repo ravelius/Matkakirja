@@ -5016,6 +5016,151 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 14.6505, etela: 14.6330, lansi: -90.5250, ita: -90.5010 },
   },
+  lagos: {
+    /*
+     * LAGOSIN SAAREN YDIN (7.9.2026). Ruutu on noin 2,0 × 1,7
+     * kilometriä: pohjoisessa keskusmoskeija ja Tinubun aukio,
+     * keskellä Marinan pankkikortteli ja Onikan puistot, etelässä
+     * kansallismuseo. Kaikki kahdeksan kohdetta ovat Lagosin
+     * saarella.
+     *
+     * MERI-LIPPU PÄÄLLÄ, koska ruudun pohjoisreuna avautuu laguuniin
+     * ja eteläreuna sataman pääväylälle — molemmat ovat OSM:ssä
+     * rantaviivan takana.
+     *
+     * IGA IDUNGANRAN, SHITTA-BEYN MOSKEIJA JA SILLAT JÄÄVÄT POIS
+     * AIHESYISTÄ. Oban palatsi on noston L1 loppuhuipennus,
+     * Shitta-Beyn moskeija noston L4 aihe ja Carterin sekä kolmas
+     * mannersilta teemasivun aihe, eikä kohdekartta toista lehden
+     * juttuja (New Yorkin sääntö). Palatsi ja moskeija olisivat
+     * mahtuneet ruutuun (6,4654 / 3,3900 ja 6,45773 / 3,38656);
+     * sillat eivät, koska Carterin silta on 2,0 kilometriä
+     * pohjoisempana.
+     *
+     * MAKOKO ON LAGUUNIN TOISELLA PUOLELLA mantereen rannalla eikä
+     * mahtuisi samaan ruutuun. Se on teemasivun oma nosto.
+     */
+    rajat: { pohjoinen: 6.4585, etela: 6.4435, lansi: 3.3865, ita: 3.4045 },
+    meri: true,
+  },
+  sansibar: {
+    /*
+     * KIVIKAUPUNKI JA CREEK ROADIN TOINEN PUOLI (7.9.2026). Ruutu on
+     * noin 1,6 × 1,0 kilometriä eli pelin tiiviimpiä, Christchurchin
+     * ja Vancouverin kokoluokkaa. Syy on sama: koko Kivikaupunki
+     * mahtuu kilometrin neliöön, ja väljempi ruutu jättäisi kaikki
+     * kohteet vasempaan laitaan ryppääksi. Itäreuna on vedetty
+     * Ngʼamboon Michenzanin kortteleille asti, jotta kartalla näkyy
+     * myös se puoli kaupunkia, joka ei ole vanhaa kivikaupunkia.
+     *
+     * MERI-LIPPU PÄÄLLÄ: länsireuna on Sansibarin kanaali, ja
+     * rantaviiva kulkee kuvan vasemmassa laidassa pohjoisesta
+     * etelään.
+     *
+     * VANHA LINNAKE, KRISTUKSEN KATEDRAALI JA FORODHANIN PUISTO
+     * JÄÄVÄT POIS. Linnake on noston S5 aihe ja katedraali noston S3
+     * aihe; Forodhanin puisto on Tansanian maalehden ruoka-aiheen
+     * nosto, eikä kaupunkilehti toista maalehteä. Kaikki kolme
+     * näkyvät silti kuvassa rakennuksena ja puistona.
+     *
+     * IHMEIDEN TALO PUDOTETTIIN ETÄISYYDEN TAKIA, ei aiheen: se on
+     * 71 metriä vanhasta linnakkeesta ja 151 metriä sulttaanin
+     * palatsista, eli 200 metrin sääntö sulkee sen pois heti kun
+     * palatsi on kartalla. Se kerrotaan matkaoppaan neljännessä
+     * jaksossa.
+     */
+    rajat: { pohjoinen: -6.1575, etela: -6.1665, lansi: 39.1855, ita: 39.2000 },
+    meri: true,
+  },
+  fes: {
+    /*
+     * MEDINA BAB BOU JELOUDISTA MARINIDIEN KUKKULALLE (7.9.2026).
+     * Ruutu on 1,75 × 1,78 kilometriä eli pelin tiiviimpiä,
+     * Vancouverin ja Christchurchin kokoluokkaa. Lännessä ovat Bab
+     * Bou Jeloud, Dar Batha ja Bou Inanian medresa, keskellä Fes
+     * el-Balin kujaverkko funduqeineen ja medresoineen, pohjoisessa
+     * marinidien hautojen kukkula.
+     *
+     * ENSIMMÄINEN RAJAUS OLI 3,1 × 2,4 KILOMETRIÄ JA VÄÄRÄ. Silloin
+     * medina jäi kuvan oikeaan laitaan ja vasemman puolen täytti
+     * Fes Jdidin ja hautausmaiden avoin maa. Ruutu tiivistettiin
+     * kohteiden ympärille: kahdeksan kohdetta mahtuvat 1,05 × 1,03
+     * kilometrin alalle, ja reunoille jää joka suuntaan yli 300
+     * metriä.
+     *
+     * TIIVIS RUUTU ON MYÖS SE, MIKÄ TEKEE NUMEROYMPYRÖISTÄ
+     * LUETTAVAT. Medinan kohteet ovat lähellä toisiaan — zawiya ja
+     * al-Attarinen medresa ovat 98 metrin päässä toisistaan ja
+     * funduq zawiyasta 114 metrin — eli reilusti alle sen 200
+     * metrin, joka väljemmissä kaupungeissa on ollut alaraja.
+     * Tässä mittakaavassa (1,09 m/px) ne ovat silti 90 ja 105
+     * pikselin päässä eivätkä ympyrät mene päällekkäin;
+     * tarkista-karttapisteet.mjs vahvistaa sen.
+     *
+     * KUJAT VAATIVAT SEKÄ jalkakaydat: true ETTÄ palvelutiet: true,
+     * ja se on MITATTU eikä arvattu. Ensimmäinen ajo tehtiin pelkällä
+     * palvelutiet-lipulla, ja tulos oli 961 elementtiä: kuvaan piirtyi
+     * medinan MUURI ja sen ulkopuoliset valtatiet, mutta muurien
+     * sisäpuoli jäi tyhjäksi paperiksi. Syy on se, mikä tekee tästä
+     * kaupungista kuuluisan — Fes el-Bali on yksi maailman suurimmista
+     * autottomista kaupunkialueista (en-Wikipedia, "Fez, Morocco",
+     * johdanto), joten sen kujat eivät ole OSM:ssä katuja vaan
+     * footway- ja service-teitä. Sama ratkaisu kuin Teheranin
+     * katetussa basaarissa ja Petran poluilla.
+     *
+     * FES JDID JA MELLAH JÄÄVÄT RUUDUN ULKOPUOLELLE. Kuninkaanpalatsi
+     * on 1,2 kilometriä lounaaseen, ja sen mukaan ottaminen
+     * kaksinkertaistaisi ruudun ja hukuttaisi medinan kujat. Fes
+     * Jdidin perustaminen 1276 kerrotaan lehden nostossa, joten
+     * kohdekartta ei menetä juttua.
+     *
+     * CHOUARAN NAHKURIALTAAT EIVÄT OLE NUMEROITU KOHDE, vaikka ne
+     * ovat ruudussa. Ne ovat Marokon MAALEHDEN nosto ("Altaat, joissa
+     * väri on kasvia", maa-kategoriat.js MAR) ja niiden kuva on jo
+     * africa-valokuvat.js:ssä — kohdekartta ei toista lehden eikä
+     * maalehden juttuja.
+     *
+     * AL-QARAWIYYIN EI OLE NUMEROITU KOHDE samasta syystä: se on
+     * maalehden nosto ("Yliopisto, jonka perusti kauppiaan tytär").
+     * Moskeija näkyy kartalla rakennuksena Saffarinin aukion
+     * pohjoispuolella.
+     *
+     * Ei meri-lippua: Fès on sisämaassa, ja Fèsjoki on OSM:ssä
+     * tavallinen vesiväylä, joka kulkee osin katettuna.
+     */
+    rajat: { pohjoinen: 34.0730, etela: 34.0570, lansi: -4.9880, ita: -4.9690 },
+    jalkakaydat: true,
+    palvelutiet: true,
+  },
+  dakar: {
+    /*
+     * PLATEAUSTA YLIOPISTOLLE (7.9.2026). Ruutu on 5,1 × 4,3
+     * kilometriä ja kattaa niemen kärjen: etelässä Pasteur-instituutti
+     * ja katedraali, keskellä Plateaun ruutukaava ja rautatieasema,
+     * pohjoisessa Médinan suurmoskeija, Soumbédiounen ranta ja
+     * Cheikh Anta Diop -yliopiston kampus.
+     *
+     * meri: true. Dakar on kolmelta suunnalta meren ympäröimä
+     * (en-Wikipedia, "Dakar", Geography), ja Atlantti on OSM:ssä
+     * rantaviivaa — ilman lippua ruudun kolme reunaa jäisivät
+     * paperin värisiksi.
+     *
+     * GORÉE JÄÄ RUUDUN ULKOPUOLELLE, ja se on päätös. Saari on
+     * kahden kilometrin päässä satamasta itään, ja se on jo
+     * karttanosto (maastokohteet-sen.js, goreen-saari) — kohdekartta
+     * ei toista karttanostoja. Ruudun itäreuna pysähtyy siksi
+     * satamaan.
+     *
+     * MAMELLESIN MAJAKKA JA RENESSANSSIMONUMENTTI EIVÄT OLE
+     * NUMEROITUJA KOHTEITA. Ne ovat kuuden kilometrin päässä
+     * luoteeseen Ouakamissa, ja ne ovat lehden noston D4 koko aihe.
+     *
+     * MUSTIEN SIVILISAATIOIDEN MUSEO on ruudussa mutta ei numeroitu:
+     * se on lehden teemasivun nosto T4.
+     */
+    rajat: { pohjoinen: 14.6905, etela: 14.6520, lansi: -17.4720, ita: -17.4245 },
+    meri: true,
+  },
 };
 
 /*

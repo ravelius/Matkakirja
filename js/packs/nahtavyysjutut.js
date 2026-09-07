@@ -53569,4 +53569,1165 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
   },
+  /*
+   * LAGOSIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026,
+   * parvierä). Kartta on js/packs/maakartat.js:
+   * KAUPUNKIKARTAT.lagos, ja jokainen väite on luettu en-Wikipedian
+   * raakatekstistä 7.9.2026 (artikkelit "Lagos Central Mosque",
+   * "Tinubu Square", "Cathedral Church of Christ, Lagos", "Ajele
+   * Cemetery", "Freedom Park (Lagos)", "King's College, Lagos",
+   * "Tafawa Balewa Square", "Nigerian National Museum", "Lagos",
+   * "History of Lagos", "Samuel Ajayi Crowther").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat aworien perustamistaru ja oban palatsi, Benin ja
+   * nimi Eko, vuoden 1861 luovutussopimus ja siirtomaan asema 1873,
+   * saro- ja aguda-paluumuuttajat ja Shitta-Beyn moskeija sekä
+   * Eyo-kulkue; teemasivu kertoo laguunista, Makokosta, silloista,
+   * täyttömaasta ja Lekin luonnonsuojelukeskuksesta. Lähimpänä on
+   * Kristuksen katedraali, jonka juttu kertoo rakennuksesta, uruista
+   * ja Crowtherin jäännösten siirrosta eikä paluumuuttajista.
+   *
+   * NELJÄ EHDOKASTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-lagos.md, kohta G): Holy Cross -katedraali 112 metriä
+   * Vapauden puistosta, John Randle -keskus 145 metriä
+   * kansallismuseosta, Bookshop House 163 metriä Kristuksen
+   * katedraalista ja Ilojo Bar 63 metriä Tinubun aukiosta. Pienin
+   * hyväksytty väli on 293 metriä (Vapauden puisto – King's College).
+   *
+   * EFUNROYE TINUBU NIMETÄÄN LÄHTEEN SANOIN orjakauppiaaksi
+   * (tarkistus-lagos.md, kohta E). Historia kerrotaan tapahtumina,
+   * ei kaunisteltuna eikä yksityiskohtia korostaen.
+   */
+  lagos: {
+    'Lagosin keskusmoskeija': {
+      aika: '1913 ja 1988',
+      teksti: 'Lagosin muslimiyhteisö perusti keskusmoskeijan '
+          + 'johtokunnan noin vuonna 1905. Ensimmäinen keskusmoskeija '
+          + 'valmistui heinäkuussa 1913, ja se palveli kaupunkia '
+          + 'seitsemänkymmentä vuotta. Moskeija on Nnamdi Azikiwe '
+          + 'Streetillä Lagosin saarella, ja se on Lagosin ylimmän '
+          + 'imaamin päämaja.'
+          + '\n\n'
+          + 'Ajatus uudesta rakennuksesta syntyi heti vanhan moskeijan '
+          + 'viisikymmenvuotisjuhlan jälkeen 1963. Osa jäsenistä piti '
+          + 'vanhaa rakennusta aikansa eläneenä ja halusi uuden, osa '
+          + 'olisi mieluummin laajentanut vanhaa. Rahaa kerättiin 1973 '
+          + 'laajennukseen ja naapuritonttien ostoon, mutta suunnitelma '
+          + 'haudattiin, kun enemmistö kannatti kokonaan uutta taloa. '
+          + 'Vanha moskeija purettiin 1983, ja välivuodet perjantairukous '
+          + 'pidettiin läheisessä Alli-Balogunin moskeijassa.'
+          + '\n\n'
+          + 'Uusi moskeija avattiin 28. toukokuuta 1988. Siinä on '
+          + 'neljä minareettia: kaksi pientä sisäänkäynnin päällä ja '
+          + 'kaksi korkeaa rakennuksen länsi- ja itäsiivessä. '
+          + 'Rukoushuone on 750 neliömetriä, ja sen keskellä on '
+          + 'viisitoista metriä halkaisijaltaan oleva metallikupoli, '
+          + 'joka erottuu ulos kullatusta alumiinivaipastaan. '
+          + 'Sisäänkäynti johtaa pylväskäytävään ja sen vierestä '
+          + 'sisäpihalle. Talossa on lisäksi toimistosiipi, '
+          + 'käsikirjasto, islamilainen keskus ja ylimmän imaamin '
+          + 'asunto.',
+      kuvat: [
+        {
+          tiedosto: 'LAGOS CENTRAL MOSQUE.jpg',
+          selite: 'Moskeijan kaarikäytävä ja kaksi minareettia kohoavat '
+            + 'suoraan torikadun päivänvarjojen yläpuolelle.',
+          lahde: 'Sir Demo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tinubun aukio': {
+      aika: '1800-luku',
+      teksti: 'Broad Streetin varrella oleva aukio on nimetty '
+          + 'Efunroye Tinubun mukaan. Lähde kuvaa hänet jorubalaiseksi '
+          + 'orjakauppiaaksi, kauppiaaksi ja aristokraatiksi. Aukiota '
+          + 'kutsuttiin ensin nimellä Ita Tinubu; ensimmäisen '
+          + 'tasavallan johtajat nimesivät sen itsenäisyyden jälkeen '
+          + 'Independence Squareksi, ja myöhemmin se sai takaisin '
+          + 'Tinubun nimen.'
+          + '\n\n'
+          + 'Historioitsijan mukaan paikalla oli kaupungin ensimmäinen '
+          + 'tuomioistuin, joka korvattiin 1918 korkeimmalla '
+          + 'oikeudella. Aukio oli kolmen maailman kohtauspaikka: '
+          + 'saarella syntyneet lagosilaiset, Brasiliasta palanneiden '
+          + 'suvut ja siirtomaahallinnon virkamiehet kulkivat samaa '
+          + 'nurmikkoa.'
+          + '\n\n'
+          + 'Nykyään aukio on rautaisen aidan sisällä. Siellä on kaksi '
+          + 'suihkulähdettä, kukkia ja trooppisia puita sekä '
+          + 'luonnollisen kokoinen Tinubun patsas kenotafin päällä. '
+          + 'Aukio kunnostettiin viimeksi 2017. Vuosina 2021 ja 2022 '
+          + 'siellä oli kaksi valokuvanäyttelyä ulkoilmassa: '
+          + 'ensimmäinen esitti Stephen Goldblattin kuvia vuoden 1970 '
+          + 'elokuvakuvauksista, jotka löytyivät Berliinistä lähes '
+          + 'viisikymmentä vuotta myöhemmin.',
+      kuvat: [
+        {
+          tiedosto: 'Stutues of orishas in Tinubu square, Lagos.jpg',
+          selite: 'Aukion pronssiveistokset nähtynä pyöreän aukon läpi; '
+            + 'taustalla kohoavat keskustan tornit.',
+          lahde: 'Omoeko Media, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ajelen hautausmaa': {
+      aika: '1800-luku – 1971',
+      teksti: 'Ajele oli Lagosin saaren suuri hautausmaa. Nimi '
+          + 'tarkoittaa jorubaksi hallinnon virkamiestä, ja se tuli '
+          + 'sinne haudatuista brittiläisistä siirtomaavirkamiehistä. '
+          + 'Hautausmaalle oli haudattu myös kaupungin omia '
+          + 'merkkihenkilöitä: James Pinson Labulo Davies, konsuli '
+          + 'Benjamin Campbell, poliisituomari Josiah Gerard, Thomas '
+          + 'Babington Macaulay ja Samuel Ajayi Crowther, '
+          + 'anglikaanisen kirkon ensimmäinen afrikkalainen piispa.'
+          + '\n\n'
+          + 'Joulukuussa 1971 Lagosin osavaltion sotilashallinto '
+          + 'purki hautausmaan tehdäkseen tilaa osavaltion '
+          + 'virastotalolle. Päätöstä arvosteltiin heti ja arvostellaan '
+          + 'yhä. Professori J. D. Y. Peel kirjoitti, että purku vei '
+          + 'lagosilaisilta sekä arvokkaan viheralueen keskeltä '
+          + 'kaupunkia että heidän esivanhempiensa muistomerkit. Wole '
+          + 'Soyinka kutsui sitä esi-isien paikan loukkaamiseksi.'
+          + '\n\n'
+          + 'Kohde on kartalla siksi, mitä siinä ei enää ole. '
+          + 'Hautausmaata ei ole, mutta paikka on: kaupungin '
+          + 'keskustassa on kortteli, jonka alla lepää osa Lagosin '
+          + '1800-luvun väestä. Crowtherin jäännökset siirrettiin '
+          + '1976 Kristuksen katedraaliin, joka on tämän kartan '
+          + 'toinen kohde.',
+      lahde: 'Wikipedia',
+    },
+    'Kristuksen katedraali': {
+      aika: '1867–1946',
+      teksti: 'Marinan varrella oleva anglikaaninen katedraali on '
+          + 'Nigerian kirkon vanhin. Ensimmäisen kirkkorakennuksen '
+          + 'peruskivi laskettiin 29. maaliskuuta 1867, ja katedraali '
+          + 'perustettiin 1869 — neljä vuotta ennen isoisän matkaa. '
+          + 'Sitä ennen, 1864, Samuel Ajayi Crowther oli tullut '
+          + 'anglikaanisen kirkon ensimmäiseksi afrikkalaiseksi '
+          + 'piispaksi.'
+          + '\n\n'
+          + 'Nykyinen rakennus on paljon nuorempi. Työ alkoi '
+          + 'arkkitehti Bagan Benjaminin piirustusten mukaan '
+          + '1. marraskuuta 1924, peruskiven laski Walesin prinssi — '
+          + 'myöhempi kuningas Edward VIII — 21. huhtikuuta 1925, ja '
+          + 'kirkko valmistui 1946. Katedraali on ollut vuorollaan '
+          + 'Länsi-Afrikan kirkkoprovinssin arkkipiispan, koko '
+          + 'Nigerian arkkipiispan ja nykyään Lagosin piispan istuin.'
+          + '\n\n'
+          + 'Vuonna 1976 Crowtherin jäännökset siirrettiin '
+          + 'katedraaliin ja hänelle pystytettiin kenotafi. Kirkon '
+          + 'urut ovat Nigerian suurimmat: saksalaisen Oberlinger '
+          + 'Orgelbaun rakentamat ja englantilaisen Harrison & '
+          + 'Harrisonin uusimat, 64 äänikertaa neljällä sormiolla ja '
+          + 'jalkiolla. Soittimessa on kaksi julkisivua, yksi alttaria '
+          + 'ja toinen oikeaa sivulaivaa kohti, ja lisäksi oma osansa '
+          + 'pääoven yläpuolisella parvella.',
+      kuvat: [
+        {
+          tiedosto: 'Cathedral Church of Christ, Marina 20025.jpg',
+          selite: 'Katedraali ylhäältä: kellotorni, jyrkät harjakatot ja '
+            + 'valkoiset kaarilistat erottuvat keskustan korttelien '
+            + 'keskellä.',
+          lahde: 'PHOTOMORA, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    "King's College": {
+      aika: '1909',
+      teksti: 'Vuonna 1908 Lagosin virkaa tekevä koulutusjohtaja '
+          + 'Henry Rawlingson Carr esitti kuvernööri Walter Egertonille '
+          + 'yksityiskohtaisen koulutussuunnitelman. Siitä syntyi '
+          + "King's College, ja Carria kutsutaan siksi joissakin "
+          + 'lähteissä koulun arkkitehdiksi. Maan luovutti oba '
+          + 'Esugbayi, ja tarkoitus oli parantaa jorubaväestön '
+          + 'koulunkäynnin mahdollisuuksia. Carr sai Lontoon '
+          + 'kouluviranomaiset vakuuttumaan siitä, ettei uusi koulu '
+          + 'kilpailisi lähetysseurojen kanssa vaan täydentäisi niitä.'
+          + '\n\n'
+          + 'Koulu aloitti 20. syyskuuta 1909 kymmenellä oppilaalla '
+          + 'Lagosin saarella, aivan nykyisen Tafawa Balewan aukion '
+          + 'vieressä. Rakentaminen ja kalustaminen maksoivat 10 001 '
+          + 'puntaa. Tarkoitus kirjattiin selvästi: antaa siirtomaan '
+          + 'nuorille korkeampaa yleissivistystä kuin olemassa olevat '
+          + 'koulut ja valmistaa heitä Lontoon yliopiston '
+          + 'pääsykokeeseen sekä ammatteihin ja virkoihin.'
+          + '\n\n'
+          + 'Oppilaita oli 1910 keskimäärin kuusitoista ja 1914 jo '
+          + 'kuusikymmentäseitsemän. Ensimmäinen rehtori oli herra '
+          + 'Lomax, ensimmäinen afrikkalainen rehtori Rex Akpofure. '
+          + 'Nykyään koulu on yksi Nigerian 104 unity school '
+          + '-koulusta, joiden tarkoitus on tuoda yhteen eri seuduilta '
+          + 'ja taustoista tulevia oppilaita. Vanhemmat luokat ovat '
+          + 'yhä saaren pääkampuksella, nuoremmat Victoria Islandilla.',
+      kuvat: [
+        {
+          tiedosto: 'King\'s college Lagos.jpg',
+          selite: 'Koulun valkopylväinen päärakennus sateen jälkeen, ja sen '
+            + 'edessä on sininen portti.',
+          lahde: 'Comradeayobami, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vapauden puisto': {
+      aika: '1882–2010',
+      teksti: 'Puiston paikalla oli Her Majesty’s Broad Street '
+          + 'Prison. Vankila perustettiin sen jälkeen kun Britannia '
+          + 'oli tehnyt Lagosista siirtomaan 1861. Ensimmäinen '
+          + 'rakennus tehtiin 1882 savimuureista ja ruohokatosta, '
+          + 'mutta se ei kestänyt kauan: siirtomaahallinnon '
+          + 'vastustajat sytyttivät sen toistuvasti tuleen, ja 1885 '
+          + 'hallinto toi tiilet Englannista ja rakensi vankilan '
+          + 'uudelleen.'
+          + '\n\n'
+          + 'Kaksi lukua kertovat, mihin siirtomaahallinnon rahat '
+          + 'menivät. Vankilaan käytettiin 1882 noin 16 000 puntaa; '
+          + 'koulutukseen samana vuonna 700 puntaa. Vuoden 1898 '
+          + 'siirtomaaraportin mukaan vankilassa oli sinä vuonna 676 '
+          + 'miestä, 26 naista ja 11 nuorta. Vankilassa istuivat '
+          + 'aikanaan muun muassa Herbert Macaulay ja muut '
+          + 'itsenäisyyden puolesta toimineet.'
+          + '\n\n'
+          + 'Vankila purettiin 1979, ja tontti oli vuosia '
+          + 'kaatopaikkana. Arkkitehti Theo Lawson suunnitteli 1999 '
+          + 'paikalle puiston, ja se avattiin lokakuussa 2010 '
+          + 'itsenäisyyden viisikymmenvuotisjuhlaan. Puisto on '
+          + 'kansallinen muistomerkki ja samalla taide- ja '
+          + 'virkistyskeskus: monumentit kertovat vankilasta ja '
+          + 'siirtomaa-ajasta, ja lava täyttyy iltaisin. Nigerian '
+          + 'ensimmäinen skeittipuisto avattiin puiston sisään '
+          + 'maaliskuussa 2024.',
+      kuvat: [
+        {
+          tiedosto: 'Images of Freedom Park 73.jpg',
+          selite: 'Puiston lampi kiertää vanhan vankilan perustuksia, ja '
+            + 'suuret puut varjostavat koko pihan.',
+          lahde: 'ReoMartins, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tafawa Balewan aukio': {
+      aika: '1859–1972',
+      teksti: 'Aukio oli aluksi Lagos Race Course, kilparata, jolla '
+          + 'oli myös jalkapallokenttä ja krikettikenttä. Maan '
+          + 'luovutti siirtomaahallinnolle oba Dosunmu 1859 — kaksi '
+          + 'vuotta ennen luovutussopimusta — ja rakennutti sen '
+          + 'jälkeen ympäröivät korttelit. Rata oli seitsemän tai '
+          + 'kahdeksan furlongin mittainen eli noin maili, ja siellä '
+          + 'pidettiin Empire Day -paraatit.'
+          + '\n\n'
+          + 'Vuonna 1960 alue rakennettiin uudelleen itsenäisyyttä '
+          + 'varten. Ensimmäisenä lokakuuta 1960 pääministeri Abubakar '
+          + 'Tafawa Balewa piti täällä puheensa, kun unionin lippu '
+          + 'laskettiin. Nykyinen aukio rakennettiin vanhan radan '
+          + 'päälle 1972, ja se sai nimensä samalta pääministeriltä.'
+          + '\n\n'
+          + 'Portin päällä on neljä valkoista hevosta ja seitsemän '
+          + 'punaista kotkaa. Ne ovat kansallisvaakunan tunnuksia ja '
+          + 'merkitsevät voimaa ja arvokkuutta. Aukiolla on myös '
+          + 'muistokäytävä ja 26-kerroksinen Independence House '
+          + 'vuodelta 1963, joka oli pitkään Nigerian korkein '
+          + 'rakennus. Aukion krikettikenttä on Nigerian kriketin '
+          + 'perinteinen koti; betonipinta vaihdettiin kymmenen '
+          + 'kaistaleen nurmeen, ja työ valmistui tammikuussa 2022.',
+      kuvat: [
+        {
+          tiedosto: 'Tafawa Balewa Square Onikan Lagos - 2024.jpg',
+          selite: 'Aukion laaja betonikenttä katsojakatoksineen ilmasta; '
+            + 'vasemmalla näkyy krikettikenttä ja takana laguuni.',
+          lahde: 'Isaacayodele32, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nigerian kansallismuseo': {
+      aika: '1957',
+      teksti: 'Museon ensimmäiset arkkitehtiluonnokset esitettiin '
+          + 'heinäkuussa 1948 konferenssissa, jossa mietittiin '
+          + 'Nigerian museopolitiikkaa. Museon perusti 1957 '
+          + 'englantilainen arkeologi Kenneth Murray, joka oli '
+          + 'koonnut perinteisiä naamioita Cross Riverin alueelta; '
+          + 'ne olivat ensimmäisiä esineitä näyttelyssä. '
+          + 'Ensimmäisenä vuosikymmenenä British Museum lahjoitti '
+          + 'museolle kaksi laattaa ja muita esineitä.'
+          + '\n\n'
+          + 'Kokoelmassa arvioidaan olevan noin 47 000 esinettä: '
+          + 'puuta, norsunluuta, metallia ja terrakottaa. Tunnetuin on '
+          + 'Jemaan pää, Nok-kulttuurin terrakottapää, joka ajoitetaan '
+          + 'noin vuosien 900 ja 200 eaa. väliin. Esillä on naamioita, '
+          + 'tekstiilejä, rumpuja, ennustusmaljoja ja esi-isähahmoja, '
+          + 'muun muassa mumuye-hahmoja Adamawan osavaltiosta ja '
+          + 'igbojen ikenga-veistoksia, sekä ekpo-naamioita Calabarista '
+          + 'ja gelede-naamioita. Jorubaosastossa on egungun-asuja ja '
+          + 'saviastioita.'
+          + '\n\n'
+          + 'Museo on Onikanissa Lagosin saarella, ja sitä hallinnoi '
+          + 'museoiden ja muistomerkkien kansallinen toimikunta. '
+          + 'Viereisestä käsityökeskuksesta voi ostaa nigerialaista '
+          + 'käsityötä. Museo avattiin uudelleen huhtikuussa 2026 '
+          + 'laajan peruskorjauksen jälkeen; työhön kuului rakenteiden '
+          + 'vahvistaminen, sähköjen uusiminen ja kokoelman '
+          + 'digitointi.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * SANSIBARIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026,
+   * parvierä). Kartta on js/packs/maakartat.js:
+   * KAUPUNKIKARTAT.sansibar, ja jokainen väite on luettu
+   * en-Wikipedian raakatekstistä 7.9.2026 (artikkelit "Old
+   * Dispensary (Zanzibar)", "Sultan's Palace, Zanzibar", "Darajani
+   * Market", "Hamamni Persian Baths", "St. Joseph's Cathedral,
+   * Zanzibar", "Tippu Tip's House", "Tippu Tip", "Michenzani",
+   * "State University of Zanzibar", "Stone Town", "Zanzibar").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden
+   * nostot ovat Shanganin arkeologia, Omanin sulttaanien pääkaupunki,
+   * vuoden 1873 sopimus ja Kristuksen katedraali, Sayyida Salme sekä
+   * vanha linnake ja elokuvajuhla; teemasivu kertoo monsuunista,
+   * dhow-aluksista, Changuusta ja merilevästä. Lähimpänä on
+   * sulttaanin palatsi, jonka juttu kertoo rakennuksesta ja museosta
+   * eikä sulttaanikunnan synnystä.
+   *
+   * KOLME EHDOKASTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-sansibar.md, kohta H): Malindin moskeija 155 metriä
+   * vanhasta apteekista, Ijumaan moskeija 95 metriä samasta ja
+   * Ihmeiden talo 151 metriä sulttaanin palatsista. Pienin hyväksytty
+   * väli on 239 metriä (Hamamni – Pyhän Joosefin katedraali).
+   *
+   * TIPPU TIP NIMETÄÄN LÄHTEEN SANOIN orjakauppiaaksi
+   * (tarkistus-sansibar.md, kohta F). Michenzanista kerrotaan
+   * rakennukset eikä vuoden 1964 vallankumouksen kulkua (kohta E).
+   */
+  sansibar: {
+    'Vanha apteekki': {
+      aika: '1887–1894',
+      teksti: 'Rantakadun koristeellisin talo ei ollut alun perin '
+          + 'apteekki. Varakas ismailiitta-intialainen kauppias Tharia '
+          + 'Topan tilasi sen 1887 kuningatar Victorian kultaisen '
+          + 'juhlavuoden kunniaksi, ja hänen tarkoituksensa oli '
+          + 'hyväntekeväisyyssairaala köyhille. Topan kuoli 1891 talon '
+          + 'ollessa kesken. Leski jatkoi töitä mutta joutui '
+          + 'keskeyttämään 1893, kun rahat loppuivat, ja samana vuonna '
+          + 'talo myytiin perheriidan takia uudelle omistajalle, joka '
+          + 'sai sen valmiiksi 1894.'
+          + '\n\n'
+          + 'Vuonna 1900 talon osti toinen tunnettu intialainen '
+          + 'kauppias, Haji Nasser Nurmohamed. Hän päätti, että '
+          + 'pohjakerroksessa toimii apteekki ja ylemmät kerrokset '
+          + 'jaetaan asunnoiksi. Siitä tuli talon nimi, joka on '
+          + 'jäänyt käyttöön sata vuotta myöhemminkin.'
+          + '\n\n'
+          + 'Rakennus on Kivikaupungin monikulttuurisuuden '
+          + 'näyteikkuna. Veistetyt puuparvekkeet lasimaalauksineen '
+          + 'ovat intialaista perua, runko on perinteistä korallikiveä '
+          + 'ja kalkkikiveä, ja pinnassa on uusklassisia eurooppalaisia '
+          + 'stukkokoristeita. Sisällä on katettu sisäpiha ja '
+          + 'veistetyt sillat kerrosten välillä. Talo rappeutui '
+          + '1970- ja 1980-luvuilla; Aga Khanin kulttuurirahasto sai '
+          + '1990 luvan kunnostaa sen, ja työ valmistui huhtikuussa '
+          + '1994. Nykyään siellä on pieni Sansibarin historian museo.',
+      kuvat: [
+        {
+          tiedosto: 'The old dispensary in Stone Town.jpg',
+          selite: 'Vaaleanvihreiksi maalatut veistetyt parvekkeet kiertävät '
+            + 'koko julkisivun kolmessa kerroksessa.',
+          lahde: 'Luganosamwel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sulttaanin palatsi': {
+      aika: '1800-luvun loppu',
+      teksti: 'Mizingani Roadilla, Ihmeiden talon ja vanhan apteekin '
+          + 'välissä, seisoo kolmikerroksinen valkoinen talo, jonka '
+          + 'kattoreunaa kiertää hammastus. Se on rakennettu aiemman '
+          + 'palatsin Bait As-Sahelin paikalle; edellinen tuhoutui '
+          + 'vuoden 1896 sodassa. Nykyinen talo valmistui 1800-luvun '
+          + 'lopulla sulttaanin perheen asunnoksi.'
+          + '\n\n'
+          + 'Vuonna 1964 talo nimettiin Kansan palatsiksi ja otettiin '
+          + 'hallinnon käyttöön. Museoksi se muutettiin 1994. '
+          + 'Kokoelma kertoo Sansibarin hallitsijasuvusta ja '
+          + 'kaupungin historiasta: esillä on huonekaluja ja perheen '
+          + 'esineitä, jotka antavat kuvan siitä, millaista elämä '
+          + 'palatsissa oli 1800-luvulla.'
+          + '\n\n'
+          + 'Yksi kerros on omistettu sulttaani Sir Khalifa bin '
+          + 'Harubille ja toinen Sayyida Salmelle — prinsessalle, joka '
+          + 'pakeni saarelta 1866 ja kirjoitti Saksassa muistelmansa. '
+          + 'Hänen osastollaan on kirjoituksia, vaatteita ja '
+          + 'arkitavaroita. Museo on siis paikka, jossa kaupungin '
+          + 'kuuluisin karkulainen palasi kotiin vitriinin taakse.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio del Sultán, Stone Town, Zanzíbar, Tanzania, 2024-05-31, DD 24.jpg',
+          selite: 'Palatsin valkoiset muurit ja hammasreunus iltavalossa '
+            + 'rantakadun varrella.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Darajanin tori': {
+      aika: '1904',
+      teksti: 'Darajani on Kivikaupungin päätori. Sillä on kolme '
+          + 'nimeä: virallinen Darajani, vanha Estella Market — '
+          + 'kreivitär Estellan, Sansibarin pääministerin Lloyd '
+          + 'Mathewsin sisaren mukaan — ja arkinen Marikiti Kuu, '
+          + 'swahiliksi pääkauppapaikka.'
+          + '\n\n'
+          + 'Torin päärakennuksen rakensi 1904 Bomanjee Maneckjee '
+          + 'sulttaani Ali bin Hamudille. Sitä on myöhemmin laajennettu '
+          + 'ja korjattu. Tori on Darajani Roadin varrella '
+          + 'anglikaanisen katedraalin lähellä, eli aivan sillä '
+          + 'kohdalla, jossa Kivikaupungin kujat alkavat väljetä.'
+          + '\n\n'
+          + 'Darajani on ennen kaikkea ruokatori: merenherkkuja, '
+          + 'lihaa, hedelmiä, viljaa ja mausteita. Sen lisäksi '
+          + 'myydään melkein kaikkea muutakin, elektroniikasta '
+          + 'vaatteisiin. Tori on myös liikenteen solmu — se on toinen '
+          + 'saaren kahdesta daladala-pääasemasta, ja sieltä lähtevät '
+          + 'bussit pohjoiseen ja koilliseen.',
+      kuvat: [
+        {
+          tiedosto: 'Stone Town, Zanzibar (7) (28488101244).jpg',
+          selite: 'Kypsiä banaaniterttuja riippuu torikojun katosta '
+            + 'köysissä ja varsissa.',
+          lahde: 'Richard Mortel from Riyadh, Saudi Arabia, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hamamnin kylpylä': {
+      aika: '1870–1888',
+      teksti: 'Sulttaani Barghash bin Said rakennutti kaupunkiin '
+          + 'yleisen kylpylän vuosina 1870–1888. Se toimi kylpylänä '
+          + 'vuoteen 1920 asti. Persialaiseksi sitä kutsutaan siksi, '
+          + 'että rakentaminen tilattiin shiraziarkkitehdeilta. Sana '
+          + 'hamamni tarkoittaa kylpyjen paikkaa, ja siitä on tullut '
+          + 'myös koko korttelin nimi.'
+          + '\n\n'
+          + 'Sisällä oli monimutkainen tilasarja: kuumia ja kylmiä '
+          + 'altaita, käymälöitä, parranajotiloja ja ravintola. Kuuma '
+          + 'vesi tuotiin maanalaisia akvedukteja pitkin. Sisäänpääsy '
+          + 'oli maksullinen, joten säännöllisesti kylpylää käyttivät '
+          + 'vain varakkaat sansibarilaiset. Kylpylä oli avoinna sekä '
+          + 'miehille että naisille, mutta eri aikoina.'
+          + '\n\n'
+          + 'Kylpylä ei ole enää toiminnassa, mutta se on avoinna '
+          + 'kävijöille ja kuuluu Kivikaupungin tärkeimpiin kohteisiin. '
+          + 'CHAM-yhdistyksen vapaaehtoiset kunnostivat sen 2006. '
+          + 'Kaikkiin osiin ei pääse: osa tiloista, muun muassa '
+          + 'entinen ravintola, on muutettu asunnoiksi.',
+      kuvat: [
+        {
+          tiedosto: 'Hamamni Baths Zanzibar 06.jpg',
+          selite: 'Kylpylän tynnyriholvit näkyvät katolta harmaina '
+            + 'kaarina, ja niissä on rivi valoaukkoja.',
+          lahde: 'Nassima Chahboun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhän Joosefin katedraali': {
+      aika: '1893–1898',
+      teksti: 'Ranskalaiset lähetyssaarnaajat rakensivat '
+          + 'roomalaiskatolisen katedraalin vuosina 1893–1898 '
+          + 'Baghanin alueelle Kenyatta Roadin tuntumaan. '
+          + 'Suunnittelun esikuvana oli Marseillen katedraali, ja '
+          + 'kirkot muistuttavat toisiaan — Kivikaupungin katedraali '
+          + 'on vain paljon pienempi.'
+          + '\n\n'
+          + 'Sen tunnusmerkki on kaksi tornia. Ne näkyvät kauas '
+          + 'Kivikaupungin ylitse ja mereltä saavuttaessa, ja ne ovat '
+          + 'helpoimmin tunnistettava osa kaupungin siluettia. Itse '
+          + 'kirkkoa on silti vaikea löytää: Baghanin kujat kiertävät '
+          + 'niin, että tornit näkyvät koko ajan mutta ovi ei. '
+          + 'Helpoin reitti on Kenyatta Roadia Gizenga Streetille ja '
+          + 'siitä ensimmäinen katu oikealle.'
+          + '\n\n'
+          + 'Laatat ja lasimaalaukset tuotiin aikoinaan Ranskasta. '
+          + 'Sisäseinille oli maalattu Vanhan testamentin kohtauksia, '
+          + 'mutta ne tuhoutuivat vuoden 2014 huonosti tehdyssä '
+          + 'restauroinnissa. Kapealla kirkkopihalla kasvoi pitkään '
+          + 'korkea palmu, joka näkyy lähes kaikissa vanhoissa kuvissa '
+          + 'kirkosta; se kaadettiin joskus 2000-luvulla. Kirkko on '
+          + 'yhä paikallisen katolisen seurakunnan käytössä.',
+      kuvat: [
+        {
+          tiedosto: 'St Joseph Cathedral stone town 1.jpg',
+          selite: 'Kaksi tornia nousee kapean kujan yli, ja niiden '
+            + 'välissä erottuu julkisivun pyöreä ikkuna.',
+          lahde: 'Ronyyz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tippu Tipin talo': {
+      aika: '1800-luvun loppu',
+      teksti: 'Shanganin kaupunginosassa, Suicide Alleyn varrella, '
+          + 'on talo, jossa asui Tippu Tip (1837–1905). Lähde kuvaa '
+          + 'hänet mahtavaksi kauppiaaksi ja orjakauppiaaksi. Hän '
+          + 'johti sisämaahan retkikuntia, joissa saattoi olla '
+          + 'nelisentuhatta miestä, toi norsunluuta Sansibariin ja '
+          + 'nousi saaren rikkaimpien joukkoon.'
+          + '\n\n'
+          + 'Talo oli yksityisasunto vuoden 1964 vallankumoukseen asti, '
+          + 'ja sen jälkeen se muutettiin kerrostaloksi. Vaikka se on '
+          + 'matkailunähtävyys, se ei ole virallisesti avoinna '
+          + 'kävijöille, ja se on niin huonossa kunnossa, että sitä on '
+          + 'kutsuttu koko Afrikan komeimmaksi valtaustaloksi.'
+          + '\n\n'
+          + 'Kaksi asiaa kertoo yhä, kuka talon rakensi: suuri '
+          + 'veistetty puuovi ja mustavalkoiset marmoriportaat. '
+          + 'Kivikaupungin varallisuus tuli 1800-luvulla mausteista, '
+          + 'norsunluusta ja ihmiskaupasta, ja tämä talo on siitä '
+          + 'suorin muistutus, joka kaupungissa on jäljellä. Se on '
+          + 'noin viidentoista tai kahdenkymmenenviiden minuutin '
+          + 'kävelymatkan päässä vanhalta linnakkeelta.',
+      kuvat: [
+        {
+          tiedosto: 'Tippu Tipp House.jpg',
+          selite: 'Talon veistetty ovi messinkinastoineen ja sen vieressä '
+            + 'maailmanperintökohteen kivilaatta.',
+          lahde: 'Ronyyz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Michenzanin korttelit': {
+      aika: '1960–1970-luku',
+      teksti: 'Creek Road erottaa historiallisen Kivikaupungin lännessä '
+          + 'ja Ngʼambon idässä. Heti kadun toisella puolella alkaa '
+          + 'Michenzani, Ngʼambon suuri kaupunginosa, joka tunnetaan '
+          + 'elementtitaloistaan. Ne rakennettiin 1960-luvun lopulla '
+          + 'ja 1970-luvun alussa osana Ngʼambon kaupunkiuudistusta, '
+          + 'ja rakentamisessa auttoi Itä-Saksa.'
+          + '\n\n'
+          + 'Talot ovat eri kokoisia: korkein on seitsemänkerroksinen, '
+          + 'matalin nelikerroksinen. Rakennustavan takia sama talo voi '
+          + 'olla eri osista eri korkuinen — esimerkiksi kortteli '
+          + 'numero seitsemän on osaksi viisi- ja osaksi '
+          + 'seitsenkerroksinen. Vaikka nämä ovat Sansibarin korkeimmat '
+          + 'julkiset rakennukset, niihin ei asennettu hissejä: '
+          + 'jokaiseen asuntoon mennään portaita.'
+          + '\n\n'
+          + 'Korttelit olivat aikanaan ylpeyden aihe. Huoltoa ei '
+          + 'kuitenkaan ole juuri tehty 1970-luvun jälkeen, ja vedenpaine '
+          + 'ei riitä toisesta kerroksesta ylöspäin, joten moni asukas '
+          + 'on asentanut oman pumppunsa — ne eivät ole talojen '
+          + 'alkuperäisen tyylin mukaisia. Osa asunnoista kunnostettiin '
+          + 'ja maalattiin uudelleen 2010.',
+      kuvat: [
+        {
+          tiedosto: 'Wohnungsbau der DDR in Stone Town.jpg',
+          selite: 'Kaksi pitkää elementtitaloa seisoo leveän kadun '
+            + 'molemmin puolin, ja välissä kulkee daladaloja.',
+          lahde: 'Sigrun lingel, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sansibarin valtionyliopisto': {
+      aika: '1999',
+      teksti: 'Sansibarin edustajainhuone perusti valtionyliopiston '
+          + 'lailla 1999, ja toiminta alkoi 2002. Yliopisto on '
+          + 'julkinen, ja sen pääkampus on Tunguussa saaren '
+          + 'keskiosassa; Kivikaupungin laidalla on sen '
+          + 'kaupunkikampus.'
+          + '\n\n'
+          + 'Yliopistossa on swahilin ja vieraiden kielten koulu, '
+          + 'täydennyskoulutuksen koulu, kasvatustieteiden koulu sekä '
+          + 'luonnon- ja yhteiskuntatieteiden koulu. Kieli-instituutti '
+          + 'on opettanut vuosia swahilia, arabiaa, englantia, '
+          + 'espanjaa, portugalia, ranskaa ja saksaa, ja se opettaa '
+          + 'swahilia ulkomaisille opiskelijoille eri puolilta '
+          + 'maailmaa. Kasvatustieteiden puoli kouluttaa opettajia, '
+          + 'joita saarilla tarvitaan.'
+          + '\n\n'
+          + 'Sansibarin osuus swahilin kielessä on suurempi kuin '
+          + 'saarten koko antaisi olettaa. Täällä puhuttava murre on '
+          + 'kiunguja, jossa on paljon arabialaisia lainasanoja, ja '
+          + 'juuri sillä on standardiswahilin asema — ei vain '
+          + 'Tansaniassa vaan muissakin maissa, joissa swahilia '
+          + 'puhutaan. Kieltä tullaan siis opiskelemaan sinne, mistä '
+          + 'sen standardi on peräisin.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * FÈS (Opus 7.9.2026, paketti O9). Kahdeksan kohdetta
+   * maakartat.js:n KAUPUNKIKARTAT.fes-taulusta. Lähteet ovat
+   * en-Wikipedian raakatekstejä 7.9.2026, ja ne on lueteltu
+   * kohteittain docs/mantereet-tyoaineisto/faktapohja-fes.md:n
+   * osiossa 8.
+   *
+   * YKSIKÄÄN JUTTU EI TOISTA LEHDEN NOSTOJA (New Yorkin sääntö).
+   * Lehden nostot kertovat kahden kaupungin synnystä, Hassan I:n
+   * muurikäytävästä, autottomasta medinasta ja fetsihatusta;
+   * teemasivu kirjapainosta ja kirjoituksesta.
+   *
+   * EIVÄTKÄ MYÖSKÄÄN MAALEHDEN NOSTOJA: Bou Inanian jutussa EI
+   * mainita Dar al-Maganan vesikelloa, Saffarinin jutussa EI
+   * al-Qarawiyyinin perustamista eikä missään Chouaran altaita tai
+   * zellijin valmistusta — ne ovat Marokon maalehden aiheita.
+   */
+  fes: {
+    'Bab Bou Jeloud': {
+      aika: '1913',
+      teksti: 'Medinan koristeellisin portti on kaupungin '
+          + 'nuorimpia rakennuksia. Ranskalaishallinto rakensi sen '
+          + 'vuonna 1913 vanhankaupungin juhlalliseksi '
+          + 'sisäänkäynniksi, ja se suunniteltiin jäljittelemään '
+          + 'marokkolaista arkkitehtuuria. Kunnallispalvelujen '
+          + 'päällikkö, kapteeni Mellier, laati suunnitelmat '
+          + 'joulukuussa 1912, ja kaupunki osti ja purki paikalta '
+          + 'tallin ja kolme puotia. Kauppa vaati huolellisia '
+          + 'neuvotteluja, koska puotien tuotot oli sidottu '
+          + 'hyväntekeväisyysrahastoon.'
+        + '\n\n'
+        + 'Nimi on paljon vanhempi kuin portti. Erään selityksen '
+          + 'mukaan se on kansanomainen väännös ilmauksesta Abu '
+          + 'al-Junud, "sotilaiden isä", ja viittaa portin '
+          + 'länsipuolella olleeseen paraatikenttään. Vanha Bab Bou '
+          + 'Jeloud oli vaatimaton portti, joka saattoi olla peräisin '
+          + '1100-luvulta; sen käytävä kulki muurin suuntaisesti, '
+          + 'joten kaupunkiin tultiin sivuttain. Tapa oli tavallinen '
+          + 'vanhoissa marokkolaisissa porteissa, koska sivuttainen '
+          + 'käytävä oli helpompi puolustaa ja sulkea. Vanha portti '
+          + 'näkyy yhä uuden vasemmalla puolella, mutta se on suljettu.'
+        + '\n\n'
+        + 'Ruudin ja raskaan tykistön jälkeen vanhojen kaupunkien '
+          + 'muurit eivät enää olleet vakavia sotilaallisia esteitä, '
+          + 'ja portit muuttuivat pääosin koristeellisiksi. Bab Bou '
+          + 'Jeloud on silti yhä medinan pääsisäänkäynti lännessä ja '
+          + 'raja, jonka yli autoliikenne ei pääse vanhaankaupunkiin.',
+      kuvat: [
+        {
+          tiedosto: 'Fes Bab Bou Jeloud 2011.jpg',
+          selite: 'Portin ulkosivu on sininen ja sisäsivu vihreä; '
+            + 'kaaren läpi näkyy suoraan medinan pääkadulle.',
+          lahde: 'Bjørn Christian Tørrissen, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dar Batha': {
+      aika: '1800-luvun loppu',
+      teksti: 'Ennen Moulay Hassan I:n hallituskautta tällä paikalla '
+          + 'oli vain pieniä yksittäisiä rakennuksia Fes el-Balin ja '
+          + 'Fes Jdidin välissä. Kun sulttaani päätti yhdistää kaksi '
+          + 'kaupunkia muurikäytävällä, väliin jäänyt tila täyttyi '
+          + 'kuninkaallisilla puutarhoilla ja palatseilla. Dar Bathan '
+          + 'tontti ostettiin Fèsin varakkaalta Ben Jelloun -suvulta.'
+        + '\n\n'
+        + 'Palatsi rakennettiin kesäpalatsiksi ja arvovieraiden '
+          + 'asunnoksi. Hassan I aloitti sen 1800-luvun lopulla ja '
+          + 'hänen seuraajansa Abdelaziz viimeisteli sen; erään '
+          + 'lähteen mukaan rakentaminen tapahtui vuosina 1886–1907. '
+          + 'Viereisen Dar el-Beidan valmisti sulttaani Abdelhafid, '
+          + 'Marokon viimeinen itsenäinen sulttaani. Vuonna 1912 '
+          + 'molemmat palatsit otettiin Ranskan protektoraatin '
+          + 'kenraaliresidentin käyttöön.'
+        + '\n\n'
+        + 'Vuonna 1915 Dar Bathasta tehtiin museo, ja 1924 se '
+          + 'luokiteltiin kansallismonumentiksi. Kokoelmassa on '
+          + 'nykyään yli 6 500 esinettä — muun muassa kaksi '
+          + 'marinidiaikaista hautakiveä, jotka löytyivät 1900-luvulla '
+          + 'pohjoisen kukkulan hautojen luota: toinen kuului '
+          + 'prinsessa Zinebille, joka kuoli 1335. Kunnostustyöt '
+          + 'alkoivat huhtikuussa 2019, ja museo avattiin uudelleen '
+          + '26. helmikuuta 2025 islamilaisen taiteen museona.',
+      kuvat: [
+        {
+          tiedosto: 'Dar Batha, 19th century summer palace (4316733787).jpg',
+          selite: 'Palatsin kaarikäytävä kiertää sisäpihaa, ja lattia '
+            + 'on ladottu pienistä värillisistä laatoista.',
+          lahde: 'Henry Zbyszynski from Capitola California, USA, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Bou Inanian medresa': {
+      aika: '1350–1355',
+      teksti: 'Marinidisulttaani Abu Inan Faris rakennutti tämän '
+          + 'medresan vuosina 1350–1355, ja sitä pidetään laajalti '
+          + 'marinidiarkkitehtuurin ja koko marokkolaisen '
+          + 'historiallisen rakennustaiteen huippuna. Se on Marokon '
+          + 'ainoa medresa, joka toimi myös perjantaimoskeijana — ja '
+          + 'juuri siksi yksi harvoista maan medresoista, jolla on '
+          + 'näkyvä minareetti.'
+        + '\n\n'
+        + 'Päärakennus on Tala\'a Kebira -kadun eteläpuolella. Sen '
+          + 'sydämessä on sisäpiha pylväskäytävineen, ja opiskelijoiden '
+          + 'huoneet ovat toisessa kerroksessa käytävien yläpuolella. '
+          + 'Pihan laidoilla on kaksi luokkahuonetta, ja niiden takana '
+          + 'aukeaa leveä rukoushuone. Koristelu on veistettyä stukkoa, '
+          + 'mosaiikkilaatoitusta ja veistettyä puuta.'
+        + '\n\n'
+        + 'Alkuperäinen nimi oli Madrasa al-Muttawakkiliya, mutta '
+          + 'käyttöön jäi perustajan mukainen Bou Inania. Abu Inan oli '
+          + 'kapinoinut isäänsä vastaan ja julistautunut sulttaaniksi '
+          + '1348. Hänen visiirinsä murhasi hänet 10. tammikuuta 1358, '
+          + 'kun hän oli 31-vuotias, ja siitä alkoi dynastian '
+          + 'lopullinen taantuma: seuraavat marinidihallitsijat olivat '
+          + 'enimmäkseen keulakuvia, joita mahtavat visiirit '
+          + 'ohjailivat.',
+      kuvat: [
+        {
+          tiedosto: 'Front Facade of Medersa Bou Inania Fez City.jpg',
+          selite: 'Sisäpihan julkisivu on kokonaan veistettyä stukkoa, '
+            + 'ja sen yllä kohoaa medresan oma minareetti.',
+          lahde: 'Ayman.mesa25, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nejjarinen funduq': {
+      aika: '1711',
+      teksti: 'Funduq on karavaaniseraji: majatalo, varasto ja '
+          + 'kauppapaikka samassa rakennuksessa. Fèsin '
+          + 'vanhassakaupungissa niitä on yli sata, ja Nejjarinen '
+          + 'funduq on niistä tunnetuin. Sen rakennutti amin eli '
+          + 'esimies \'Adiyil vuonna 1711 sulttaani Ismail Ibn '
+          + 'Sharifin aikana. Samana vuonna perustettu Funduq Sagha '
+          + 'medinan pohjoisosassa on hyvin samannäköinen.'
+        + '\n\n'
+        + 'Nimi tarkoittaa puuseppiä ja viittaa aukion ympärillä '
+          + 'olleeseen puuseppien suukiin, jonka uskotaan olleen '
+          + 'olemassa marinidiajalta asti. Aukion laidalla on myös '
+          + 'Nejjarinen suihkulähde, jonka tilasi 1800-luvulla '
+          + 'sulttaani Abd al-Rahman. Rakennus toimi kauppapaikkana ja '
+          + 'kauppiaiden varastona läheisessä yhteydessä '
+          + 'hallitusvaltaan luultavasti 1900-luvun alkuun asti, ja '
+          + 'osan huoneista omistivat kaupungin juutalaiset kauppiaat. '
+          + '1800-luvulla funduqin ja suihkulähteen välissä toimi '
+          + 'pienessä puodissa Fèsin postikonttori.'
+        + '\n\n'
+        + 'Funduq luokiteltiin kansallismonumentiksi 1916, ja '
+          + '1940-luvulla ranskalaishallinto käytti sitä '
+          + 'poliisiasemana. Se kunnostettiin vuosina 1990–1996 ja '
+          + 'avattiin 23. toukokuuta 1998 puutaiteen ja -käsityön '
+          + 'museona.',
+      kuvat: [
+        {
+          tiedosto: 'Fondouk el-Nejjarine (Old name- Fes (5364129707)).jpg',
+          selite: 'Sisäpihan ympärillä kiertää kolme kerrosta '
+            + 'puukaiteita ja kaaria; huoneet aukeavat käytäville.',
+          lahde: 'Michal Osmenda from Brussels, Belgium, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Moulay Idris II:n zawiya': {
+      aika: '1437 ja 1700-luku',
+      teksti: 'Tämä on yksi Marokon pyhimmistä pyhäköistä. Se on '
+          + 'zawiya eli pyhäkkö ja uskonnollinen keskus, ja siinä on '
+          + 'Idris II:n hauta. Idris II hallitsi nykyisen Marokon '
+          + 'aluetta vuosina 807–828, ja häntä pidetään perinteisesti '
+          + 'Fèsin perustajana ja suojeluspyhimyksenä.'
+        + '\n\n'
+        + 'Paikalla oli alun perin 900-luvun moskeija, joka rappeutui '
+          + 'myöhempinä vuosisatoina. Pyhäkön merkitys elpyi 1300- ja '
+          + '1400-luvuilla, kun profeetan jälkeläisten uskonnollinen '
+          + 'asema kasvoi — ja perinteisten kertomusten mukaan '
+          + 'ratkaisevasti vuonna 1437: rakennusta oltiin '
+          + 'kunnostamassa, kun paikalta löytyi haudattu ruumis, '
+          + 'jonka ajan lakioppineet tunnistivat Idris II:ksi. '
+          + 'Nykyisen perusmuotonsa, myös minareetin ja '
+          + 'pyramidikattoisen hautasalin, pyhäkkö sai sulttaani '
+          + 'Moulay Ismailin kustantamassa jälleenrakennuksessa '
+          + '1700-luvun alussa.'
+        + '\n\n'
+        + 'Zawiyaa ympäröi horm, suojattu ja pyhitetty alue, johon '
+          + 'kuuluu useita muitakin rakennuksia. Kerran vuodessa '
+          + 'kaupungissa vietetään Moulay Idris II:n moussemia, joka '
+          + 'on yksi Marokon tärkeimmistä. Sen kustantavat kaupungin '
+          + 'kaikki killat, jotka kulkevat yhdessä kulkueena '
+          + 'mausoleumille ja lahjoittavat sinne muun muassa keswan, '
+          + 'Koraanin jakeilla koristellun suuren kankaan.',
+      kuvat: [
+        {
+          tiedosto: 'Zawiya moulay idris II and al-Qandusi art DSCF6286.jpg',
+          selite: 'Marmorinen suihkulähde on keskellä lattiaa, ja '
+            + 'takaseinällä on suuri kalligrafiataulu.',
+          lahde: 'Robert Prazeres, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Al-Attarinen medresa': {
+      aika: '1323–1325',
+      teksti: 'Marinidisulttaani Uthman II Abu Said rakennutti tämän '
+          + 'medresan vuosina 1323–1325. Nimi tulee viereisestä Souk '
+          + 'al-Attarinesta, mauste- ja hajuvesitorista. Medresaa '
+          + 'pidetään yhtenä marinidiarkkitehtuurin korkeimmista '
+          + 'saavutuksista, ja perusteluina mainitaan kaksi asiaa: '
+          + 'koristelun runsaus ja sopusointu sekä se, miten '
+          + 'tehokkaasti hyvin rajallinen tontti on käytetty.'
+        + '\n\n'
+        + 'Koristeellisen sisäpihan ympärille on mahdutettu pieni '
+          + 'rukoushuone, peseytymistila ja opiskelijoiden '
+          + 'makuuhuoneet. Seinät on peitetty veistetyllä stukolla, '
+          + 'kaiverretulla puulla ja mosaiikkilaatoituksella, ja '
+          + 'niiden välissä kiertää kalligrafinen kirjoitusnauha.'
+        + '\n\n'
+        + 'Medresat rakennettiin lähelle kaupungin pääoppipaikkaa, ja '
+          + 'ne olivat sen tukilaitoksia: toisin kuin moskeija, ne '
+          + 'majoittivat opiskelijoita, erityisesti Fèsin ulkopuolelta '
+          + 'tulleita. Moni heistä oli köyhä ja haki koulutusta '
+          + 'päästäkseen parempaan asemaan kotikaupungissaan, ja '
+          + 'medresa antoi hänelle majoituksen ja leivän. Ne olivat '
+          + 'myös omia opetuslaitoksiaan ja pitivät omia kurssejaan.',
+      kuvat: [
+        {
+          tiedosto: 'Al-Attarine Madrasa DSC 0449 (39977440582).jpg',
+          selite: 'Pilarin nurkassa vaihtuvat kolme koristelutapaa: '
+            + 'veistetty stukko, kalligrafianauha ja laattamosaiikki.',
+          lahde: 'Carolyn Albritton, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Saffarinin medresa': {
+      aika: '1271',
+      teksti: 'Tämä on marinidien ensimmäinen medresa. Sulttaani Abu '
+          + 'Ya\'qub Yusuf rakennutti sen vuonna 1271, ja sen jälkeen '
+          + 'dynastia rakensi niitä kuusi lisää vuoteen 1357 mennessä. '
+          + 'Medresa seisoo Saffarinin aukiolla, joka on nimetty '
+          + 'siellä työskentelevien kuparaseppien mukaan — aukiolla '
+          + 'takominen kuuluu yhä, ja isot padat seisovat rivissä '
+          + 'kadulla.'
+        + '\n\n'
+        + 'Medresa oli laitoksena uusi tulokas. Se syntyi '
+          + 'Koillis-Iranissa 1000-luvun alkuun mennessä ja levisi '
+          + 'vähitellen länteen, mutta Marokossa se juurtui vasta '
+          + 'marinidien aikana. Syy oli osin opillinen: edellisen '
+          + 'dynastian oppi oli medresalle vieras.'
+        + '\n\n'
+        + 'Marinideille medresat olivat myös politiikkaa. Niillä '
+          + 'ostettiin Fèsin vaikutusvaltaisen ja itsepäisen '
+          + 'uskonnollisen eliitin uskollisuutta ja esitettiin '
+          + 'dynastia oikeaoppisuuden suojelijana koko kansalle. '
+          + 'Samalla ne kouluttivat oppineet ja virkamiehet, joita '
+          + 'valtion hallintokoneisto tarvitsi.',
+      kuvat: [
+        {
+          tiedosto: 'Place es-Seffarine fountain.jpg',
+          selite: 'Aukion julkinen suihkulähde on koristeltu '
+            + 'laattamosaiikilla ja veistetyllä stukolla kattoon asti.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Marinidien haudat': {
+      aika: '1300-luku',
+      teksti: 'Vanhankaupungin pohjoispuolisella kukkulalla seisoo '
+          + 'kaksi raunioitunutta mausoleumia. Ne olivat marinidien '
+          + 'kuninkaallinen hautausmaa, ja nykyään ne ovat kaupungin '
+          + 'käytetyin näköalapaikka: sieltä koko medina näkyy '
+          + 'yhtenä kattomerenä.'
+        + '\n\n'
+        + 'Marinidit hautasivat hallitsijansa 1300-luvun puoliväliin '
+          + 'asti Chellahiin Rabatin laidalle. Sulttaani Abu Inan '
+          + 'haudattiin kuitenkin kuoltuaan 1358 Fes Jdidin '
+          + 'suurmoskeijaan, ja siitä eteenpäin hänen seuraajansa '
+          + 'haudattiin tälle kukkulalle. Hautauksia tehtiin vuosina '
+          + '1361–1398 ja vielä kerran dynastian lopussa 1465. '
+          + 'Kukkulalla oli jo aiemmin linnoitettu palatsi; '
+          + 'kronikoitsija Leo Africanus kertoi sen olleen vaikuttava, '
+          + 'mutta sen ulkonäköä ei ole pystytty rekonstruoimaan.'
+        + '\n\n'
+        + 'Jäljellä on kaksi korkeaa suorakaidepohjaista rakennusta, '
+          + 'joissa on suuret hevosenkenkäkaariset sisäänkäynnit. '
+          + '1800-luvun valokuvien mukaan niitä peittivät aikoinaan '
+          + 'vihreillä tiilillä katetut puiset pyramidikatot. '
+          + 'Seinillä on paloja veistettyä stukkoa ja arabiankielinen '
+          + 'kirjoitus — siinä kaikki, mitä koristelusta on jäljellä. '
+          + 'Leo Africanus mainitsi hautojen olleen raskaasti '
+          + 'koristeltuja ja niissä olleen värillisiä marmorisia '
+          + 'hautakirjoituksia.',
+      kuvat: [
+        {
+          tiedosto: 'Ruins and cemeteries behind the Merinid Tombs.jpg',
+          selite: 'Hautojen takana kukkula jatkuu hautausmaana, ja '
+            + 'sen takaa alkavat oliivirinteet.',
+          lahde: 'R Prazeres, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Stucco fragments at Merinid tombs of Fes.jpg',
+          selite: 'Seinään on jäänyt paloja veistettyä stukkoa, joka '
+            + 'peitti aikoinaan koko mausoleumin.',
+          lahde: 'R Prazeres, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * DAKAR (Opus 7.9.2026, paketti O9). Kahdeksan kohdetta
+   * maakartat.js:n KAUPUNKIKARTAT.dakar-taulusta. Lähteet ovat
+   * en-Wikipedian raakatekstejä 7.9.2026, ja ne on lueteltu
+   * kohteittain docs/mantereet-tyoaineisto/faktapohja-dakar.md:n
+   * osiossa 9.
+   *
+   * YKSIKÄÄN JUTTU EI TOISTA LEHDEN NOSTOJA EIKÄ KARTTANOSTOJA
+   * (New Yorkin sääntö). Lehden nostot kertovat lebu-kylistä,
+   * Lebu-tasavallasta, vuoden 1873 tilanteesta ja kahdesta
+   * kukkulasta; teemasivu vuoden 1966 festivaalista, Dak'Artista,
+   * Ousmane Sow'sta ja Mustien sivilisaatioiden museosta. Gorée on
+   * karttanosto (maastokohteet-sen.js) eikä siksi kartalla.
+   *
+   * KOLME JUTTUA ON KUVATTOMIA (Pasteur-instituutti, rautatieasema,
+   * suuri moskeija): Commonsista ei löytynyt niistä yhtään
+   * todennettua ja kuvasäännöt täyttävää kuvaa, tai ainoa kelpaava
+   * kuva on jo käytössä lehden oppaassa. Kuvatilaukset on kirjattu
+   * raporttiin kuvaputkelle.
+   */
+  dakar: {
+    'Pasteur-instituutti': {
+      aika: '1896 ja 1913',
+      teksti: 'Vuonna 1896 ranskalainen lääkäri ja mikrobiologi '
+          + 'Émile Marchoux, joka oli opiskellut Louis Pasteurin '
+          + 'johdolla, perusti mikrobiologisen laboratorion '
+          + 'Saint-Louis\'hin. Se oli silloin siirtomaan pääkaupunki. '
+          + 'Kun Dakarista tuli uusi pääkaupunki 1902, laitos '
+          + 'siirrettiin sinne 1913 — ja se on toiminut samassa '
+          + 'kaupungissa siitä lähtien, myös Senegalin '
+          + 'itsenäistymisen jälkeen.'
+        + '\n\n'
+        + 'Instituutti on osa maailmanlaajuista Pasteur-instituuttia, '
+          + 'jota se hallinnoi yhdessä Senegalin valtion kanssa. '
+          + 'Painopiste on mikrobiologiassa ja virologiassa, '
+          + 'erityisesti hyönteisten levittämissä viruksissa. Talon '
+          + 'merkittävin saavutus on keltakuumeessa: tauti eristettiin '
+          + 'Afrikassa ensimmäisen kerran juuri täällä, ja täällä '
+          + 'keksittiin myös sen ensimmäinen rokote.'
+        + '\n\n'
+        + 'Työ jatkuu. Koronaviruspandemian alettua instituutti alkoi '
+          + 'kehittää edullista testiä, ja heinäkuussa 2021 Senegal, '
+          + 'Euroopan komissio, Euroopan investointipankki, Ranska, '
+          + 'Saksa ja Belgia sopivat suuren rokotetuotantolaitoksen '
+          + 'rakentamisesta instituutin yhteyteen.',
+      lahde: 'Wikipedia',
+    },
+    'Théodore Monod -museo': {
+      aika: '1936 ja 1960',
+      teksti: 'Museo on yksi Länsi-Afrikan vanhimmista '
+          + 'taidemuseoista. Se on osa Institut Fondamental d\'Afrique '
+          + 'Noire -tutkimuslaitosta, joka perustettiin 1936 Ranskan '
+          + 'kansanrintaman hallituksen aikana. Kun instituutti '
+          + 'siirrettiin 1960 Cheikh Anta Diop -yliopistoon, sen '
+          + 'rakennus kansalliskokouksen lähellä muutettiin museoksi.'
+        + '\n\n'
+        + 'Ranskan Länsi-Afrikan siirtomaiden päätutkimuskeskuksena '
+          + 'laitokselle kertyi merkittäviä kokoelmia kaikkialta '
+          + 'ranskankielisestä Afrikasta, ja museo on yhä yksi '
+          + 'arvostetuimmista afrikkalaisen kulttuurin '
+          + 'tutkimuskeskuksista. Sen edistäjänä toimi maan '
+          + 'ensimmäinen presidentti.'
+        + '\n\n'
+        + 'Museon nimi vaihtui joulukuussa 2007. Uusi nimi on '
+          + 'ranskalaisen luonnontieteilijän Théodore André Monodin '
+          + 'mukaan; hän oli instituutin entinen johtaja. Museo on '
+          + 'myös yksi Dak\'Art-biennaalin vakituisista '
+          + 'näyttelypaikoista — vuonna 2014 juuri täällä pidettiin '
+          + 'näyttely, jossa biennaali avattiin ensimmäistä kertaa '
+          + 'myös muille kuin Afrikan maiden kansalaisille.',
+      kuvat: [
+        {
+          tiedosto: 'DakarMusée.jpg',
+          selite: 'Museon art deco -julkisivussa lukee yhä vanha nimi '
+            + 'IFAN ja Dakarin yliopisto.',
+          lahde: 'Ji-Elle, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dakarin katedraali': {
+      aika: '1924–1936',
+      teksti: 'Voittojen Neitsyt Marian katedraali on Dakarin '
+          + 'arkkihiippakunnan istuin. Se rakennettiin vanhan '
+          + 'lebu-hautausmaan paikalle; valtio luovutti maan kirkolle. '
+          + 'Rakennustyöt alkoivat 1924, ja kaksitoista vuotta '
+          + 'myöhemmin, 2. helmikuuta 1936, kirkon vihki Pariisin '
+          + 'arkkipiispa, kardinaali Jean Verdier.'
+        + '\n\n'
+        + 'Sisäänkäynnin yläpuolella oleva kirjoitus vaihdettiin '
+          + 'nykyiseen vuonna 1964. Alttarin taakse, katedraalin '
+          + 'suojeluspyhimyksen patsaan viereen, on haudattu '
+          + 'kardinaali Hyacinthe Thiandoum, joka kuoli 2004.'
+        + '\n\n'
+        + 'Kirkko on ollut myös kansallisten hetkien paikka: vuonna '
+          + '2001 siellä toimitettiin maan ensimmäisen presidentin '
+          + 'hautajaiset. Senegalin väestö on pääosin muslimeja, ja '
+          + 'katedraali seisoo Plateaun hallintokortteleissa aivan '
+          + 'moskeijoiden naapurissa.',
+      kuvat: [
+        {
+          tiedosto: 'Dakar cathedrale.jpg',
+          selite: 'Valkoisen julkisivun keskellä on kullanvärinen '
+            + 'kupoli, ja sen molemmin puolin kohoaa torni.',
+          lahde: 'Manu25, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Riippumattomuuden aukio': {
+      aika: '1902 ja 1960',
+      teksti: 'Aukio on Dakar-Plateaun sydän, ja Plateau on kaupungin '
+          + 'historiallinen ydin: siellä ovat ministeriöt ja suurin '
+          + 'osa julkisesta hallinnosta. Aukio kantoi siirtomaa-ajalla '
+          + 'toista nimeä. Vuonna 1902 Dakarista tuli Ranskan '
+          + 'Länsi-Afrikan pääkaupunki Saint-Louis\'n tilalle, ja '
+          + 'kaupunki kasvoi imperiumin suurkaupungiksi, jota on '
+          + 'verrattu Hanoihin ja Beirutiin.'
+        + '\n\n'
+        + 'Ranskalaiset kauppahuoneet perustivat kaupunkiin '
+          + 'sivukonttoreita, ja satama ja rautatie houkuttelivat '
+          + 'teollisuutta: myllyjä, panimoita, jalostamoita ja '
+          + 'säilyketehtaita. Kaupunki oli myös strategisesti tärkeä. '
+          + 'Satamassa oli laivastotukikohta ja hiiliasema, ja '
+          + 'kaupunki liitettiin varhaisiin lento- ja '
+          + 'lentopostireitteihin — tunnetuimmin Mermozin '
+          + 'lentokentän kautta, jota ei enää ole.'
+        + '\n\n'
+        + 'Aukio sai nykyisen nimensä itsenäisyyden myötä. Vuosina '
+          + '1959–1960 Dakar oli lyhytikäisen Malin federaation '
+          + 'pääkaupunki, ja 1960 siitä tuli itsenäisen Senegalin '
+          + 'tasavallan pääkaupunki. Aukion lähellä seisoo '
+          + 'presidentinpalatsi, joka on rakennettu 1907.',
+      kuvat: [
+        {
+          tiedosto: 'Dakar-Musique militaire sur la place Protêt (AOF).jpg',
+          selite: 'Aukio 1900-luvun alussa: soittokunta esiintyy '
+            + 'puiden alla, ja kuvan alalaitaan on painettu '
+            + 'postikorttikustantajan oma otsikko ja numero.',
+          lahde: 'François-Edmond Fortier (1862-1928), Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dakarin rautatieasema': {
+      aika: '1885 ja 1906–1923',
+      teksti: 'Rata Saint-Louis\'hin valmistui 1885, ja siitä hetkestä '
+          + 'Dakarista tuli tärkeä tukikohta. Sitä ennen '
+          + 'siirtomaahallinto oli jo rakentanut satamaan laitureita '
+          + 'ja vetänyt rannikkoa pitkin lennätinlinjan.'
+        + '\n\n'
+        + 'Toinen ja paljon suurempi rata rakennettiin vuosina '
+          + '1906–1923. Dakar–Niger yhdisti kaupungin Bamakoon ja '
+          + 'vahvisti sen aseman Ranskan Länsi-Afrikan kärkenä: '
+          + 'sisämaan tavara kulki nyt yhtä linjaa pitkin Atlantin '
+          + 'rannalle. Kaupungissa on myös Dakarin autonominen '
+          + 'satama. Radan pääteasema ei nykyään ole liikennekäytössä.'
+        + '\n\n'
+        + 'Junat palasivat kaupunkiin toista reittiä. Train Express '
+          + 'Régional yhdistää Dakarin Blaise Diagnen kansainväliselle '
+          + 'lentoasemalle: ensin Diamniadioon, sitten lentoasemalle. '
+          + 'Asemia on neljätoista, nopein matka päästä päähän kestää '
+          + '45 minuuttia, ja radan odotetaan kuljettavan 115 000 '
+          + 'matkustajaa päivässä. Ensimmäinen koeajo tehtiin '
+          + '14. tammikuuta 2019 ja ensimmäinen matkustajajuna kulki '
+          + 'joulukuussa 2021.',
+      lahde: 'Wikipedia',
+    },
+    'Suuri moskeija': {
+      aika: '1964',
+      teksti: 'Dakarin suuri moskeija seisoo Médinan kaupunginosassa '
+          + 'Allée Pape Gueye Fallin varrella. Sen suunnittelivat '
+          + 'marokkolaiset ja ranskalaiset arkkitehdit, ja se avattiin '
+          + '1964. Avajaisissa olivat mukana Marokon kuningas Hassan '
+          + 'II ja Senegalin presidentti — kaksi maata, joiden välillä '
+          + 'on kulkenut yhteyksiä vuosisatoja.'
+        + '\n\n'
+        + 'Sisä- ja ulkopuoli on rikkaasti koristeltu, ja tyyliltään '
+          + 'moskeija muistuttaa Mohammed V:n mausoleumia Rabatissa. '
+          + 'Se on yksi kaupungin tunnetuimmista maamerkeistä.'
+        + '\n\n'
+        + 'Samana vuonna 1964 moskeijan alueelle perustettiin Dakarin '
+          + 'islamilainen instituutti. Se on julkinen laitos Senegalin '
+          + 'opetusministeriön alaisena ja omistettu islamilaiselle '
+          + 'tutkimukselle ja opetukselle. Instituutin kirjasto '
+          + 'avattiin 9. lokakuuta 2004.',
+      lahde: 'Wikipedia',
+    },
+    'Soumbédiounen käsityökylä': {
+      aika: '1914 alkaen',
+      teksti: 'Soumbédioune on Dakarin merkittävin katutori ja suuri '
+          + 'matkailukohde. Se on Médinan kunnassa Atlantin rannalla, '
+          + 'ja siellä myydään puuveistoksia, maalauksia, kangasta ja '
+          + 'kalaa — usein samassa korttelissa.'
+        + '\n\n'
+        + 'Médinan kunta perustettiin 1914, ja perustamisen syy '
+          + 'kerrotaan lähteissä suoraan: siirtomaaviranomaiset '
+          + 'halusivat luoda erillisen kaupunginosan afrikkalaiselle '
+          + 'väestölle, selvästi erotettuna eurooppalaisten '
+          + 'asuinalueista, ja perusteluna esitettiin terveyssyyt. '
+          + 'Erotus tehtiin vuoden 1914 ruttoepidemian jälkeen, ja '
+          + 'Plateaun ja Médinan väliin jätettiin oma vyöhykkeensä. '
+          + 'Maan ensimmäisinä haltijoina kaupungin lebu-asukkaat '
+          + 'vastustivat pakkolunastusta menestyksekkäästi.'
+        + '\n\n'
+        + 'Médinasta kasvoi Dakarin tihein ja väkirikkain '
+          + 'kaupunginosa, jossa asuu yli 136 000 ihmistä. Se on '
+          + 'säilyttänyt alkuperäisen afrikkalaisen luonteensa '
+          + 'vastakohtana Plateaun moderneille kortteleille ja on '
+          + 'siksi myös kaupungin kulttuurikeskus; nykyään se on '
+          + 'kaupallinen keskus, joka on täynnä räätälinliikkeitä.',
+      kuvat: [
+        {
+          tiedosto: 'SN-dakar-markt-soumbed-03.jpg',
+          selite: 'Maalaukset ripustetaan myyntiin suoraan talon '
+            + 'seinälle, ja ostaja katselee niitä kadulta.',
+          lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Cheikh Anta Diop -yliopisto': {
+      aika: '1957',
+      teksti: 'Yliopisto on vanhempi kuin Senegalin itsenäisyys, ja se '
+          + 'kasvoi useista siirtomaahallinnon perustamista '
+          + 'laitoksista. Vuonna 1918 ranskalaiset perustivat '
+          + 'afrikkalaisen lääketieteellisen koulun, joka palveli '
+          + 'pääosin valkoisia ja sekarotuisia opiskelijoita mutta oli '
+          + 'avoin myös Senegalin neljän vapaan kaupungin pienelle '
+          + 'koulutetulle eliitille. Vuonna 1936 kaupunkiin '
+          + 'perustettiin afrikkalaisen kulttuurin tutkimuslaitos.'
+        + '\n\n'
+        + '1950-luvulla, kun itsenäisyys jo häämötti, koulut '
+          + 'laajennettiin ja yhdistettiin yhdeksi laitokseksi, ja '
+          + '1957 rakennettiin uusi kampus. Se oli Ranskan 18. '
+          + 'julkinen yliopisto ja liitettiin Pariisin ja Bordeaux\'n '
+          + 'yliopistoihin. Siitä tuli Dakarin yliopisto, Ranskan '
+          + 'Länsi-Afrikan suurin ja arvostetuin. Nimi muutettiin '
+          + '1987 senegalilaisen fyysikon, historioitsijan ja '
+          + 'antropologin Cheikh Anta Diopin kunniaksi.'
+        + '\n\n'
+        + 'Kasvu on ollut raju. Itsenäistyessä 1960 opiskelijoita oli '
+          + '1 018, ja heistä vain 39 prosenttia oli senegalilaisia — '
+          + 'loput tulivat muista entisistä Ranskan siirtomaista. '
+          + 'Vuonna 1976 määrä oli 8 014, ja nykyään kirjoilla on yli '
+          + '60 000 opiskelijaa. Suurin osa maan itsenäisyyden '
+          + 'jälkeisistä johtajista on sen kasvatteja.',
+      kuvat: [
+        {
+          tiedosto: 'BibliothèqueCheikhAntaDiop.JPG',
+          selite: 'Yliopiston kirjastorakennus seisoo kampuksen '
+            + 'keskellä palmujen takana.',
+          lahde: 'Myriam Louviot ( MyriamLouviot ), Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

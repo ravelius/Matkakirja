@@ -13507,6 +13507,225 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Postipalatsi', lat: 14.637, lon: -90.513 },
     ],
   },
+  /*
+   * LAGOS (7.9.2026). Rajaus on noin 2,0 × 1,7 kilometriä Lagosin
+   * saaren pohjoislaidalta Onikanin puistoihin — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n lagos-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat aworien
+   * perustamistaru ja oban palatsi, Benin ja nimi Eko, vuoden 1861
+   * luovutussopimus, saro- ja aguda-paluumuuttajat sekä Shitta-Beyn
+   * moskeija ja Eyo-kulkue; teemasivu kertoo laguunista, Makokosta,
+   * silloista, täyttömaasta ja Lekin luonnonsuojelukeskuksesta.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-lagos.md, kohta G): Holy Cross -katedraali on 112
+   * metrin päässä Vapauden puistosta, John Randle -keskus 145 metrin
+   * päässä kansallismuseosta, Bookshop House 163 metrin päässä
+   * Kristuksen katedraalista ja Ilojo Bar 63 metrin päässä Tinubun
+   * aukiosta.
+   */
+  lagos: {
+    polku: 'assets/kartat/lagos-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 6.4585, etela: 6.4435, lansi: 3.3865, ita: 3.4045 },
+    esittely: 'Kartan alue kattaa Lagosin saaren ytimen. Vasemmassa '
+      + 'alakulmassa on vettä: sataman pääväylä, joka erottaa saaren '
+      + 'mantereesta. Rantaviivaa myötäilee Marina vinona nauhana '
+      + 'luoteesta kaakkoon, ja sen yläpuolella on liikekeskustan '
+      + 'tiivis kortteliverkko. Yläreunassa kadut haarautuvat vanhan '
+      + 'kaupungin epäsäännölliseksi kuvioksi, ja oikeassa '
+      + 'alakulmassa erottuvat Onikanin puistot ja aukio. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+       * ja kaikki 28 väliä on mitattu haversinilla: pienin on 293
+       * metriä (Vapauden puisto – King's College).
+       */
+      { nimi: 'Lagosin keskusmoskeija', lat: 6.457222, lon: 3.388056 },
+      { nimi: 'Tinubun aukio', lat: 6.4538, lon: 3.3894 },
+      { nimi: 'Ajelen hautausmaa', lat: 6.4515, lon: 3.3942 },
+      { nimi: 'Kristuksen katedraali', lat: 6.4508, lon: 3.3902 },
+      { nimi: 'King\'s College', lat: 6.44961, lon: 3.39905 },
+      { nimi: 'Vapauden puisto', lat: 6.4489, lon: 3.3965 },
+      { nimi: 'Tafawa Balewan aukio', lat: 6.447222, lon: 3.401389 },
+      { nimi: 'Nigerian kansallismuseo', lat: 6.444444, lon: 3.403333 },
+    ],
+  },
+  /*
+   * SANSIBAR (7.9.2026). Rajaus on noin 1,6 × 1,0 kilometriä
+   * Kivikaupungin niemeltä Creek Roadin yli Ngʼamboon — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n sansibar-lohkossa. Vasemmassa
+   * laidassa on Sansibarin kanaali, ja kuvan halki kulkee vinosti
+   * Creek Road, joka erottaa vanhan ja uuden kaupungin.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Shanganin arkeologia, Omanin sulttaanien pääkaupunki, vuoden
+   * 1873 sopimus ja Kristuksen katedraali, Sayyida Salme sekä vanha
+   * linnake ja elokuvajuhla; teemasivu kertoo monsuunista,
+   * dhow-aluksista, Changuusta ja merilevästä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-sansibar.md, kohta H): Malindin moskeija on 155
+   * metrin päässä vanhasta apteekista, Ijumaan moskeija 95 metrin
+   * päässä samasta ja Ihmeiden talo 151 metrin päässä sulttaanin
+   * palatsista. Ihmeiden talo kerrotaan matkaoppaassa; Forodhanin
+   * puisto jää pois, koska se on Tansanian maalehden aihe.
+   */
+  sansibar: {
+    polku: 'assets/kartat/sansibar-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -6.1575, etela: -6.1665, lansi: 39.1855, ita: 39.2000 },
+    esittely: 'Vasemmassa laidassa on meri, ja siihen työntyy '
+      + 'Kivikaupungin niemi, jonka kujaverkko on niin tiheää, että '
+      + 'se näyttää kaukaa kudokselta. Niemen juuresta kaartaa '
+      + 'vinosti ylhäältä alas leveä katu — Creek Road, joka kulkee '
+      + 'täytetyn salmen paikalla ja erottaa vanhan kaupungin '
+      + 'Ngʼambosta. Oikealla puolella korttelit ovat suurempia ja '
+      + 'suoraviivaisempia, ja alaoikealla erottuu liikenneympyrä. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+       * ja kaikki 28 väliä on mitattu haversinilla: pienin on 239
+       * metriä (Hamamnin kylpylä – Pyhän Joosefin katedraali).
+       */
+      { nimi: 'Vanha apteekki', lat: -6.1584, lon: 39.1926 },
+      { nimi: 'Sulttaanin palatsi', lat: -6.1599, lon: 39.1905 },
+      { nimi: 'Darajanin tori', lat: -6.1621, lon: 39.1935 },
+      { nimi: 'Hamamnin kylpylä', lat: -6.1623, lon: 39.1910 },
+      { nimi: 'Pyhän Joosefin katedraali', lat: -6.162778, lon: 39.188889 },
+      { nimi: 'Tippu Tipin talo', lat: -6.1640, lon: 39.1870 },
+      { nimi: 'Michenzanin korttelit', lat: -6.16526, lon: 39.1988 },
+      { nimi: 'Sansibarin valtionyliopisto', lat: -6.165833, lon: 39.191667 },
+    ],
+  },
+  /*
+   * FÈSIN MEDINA (Opus 7.9.2026, paketti O9). Ruutu on 1,75 × 1,78
+   * kilometriä ja kattaa Fes el-Balin muurit: lännessä Bab Bou
+   * Jeloud ja Dar Batha, keskellä kujaverkko medresoineen ja
+   * funduqeineen, pohjoisessa marinidien hautojen kukkula.
+   * Piirtoperustelut ja rajauksen historia
+   * tools/piirra-kaupunkikartta.mjs:n fes-lohkossa (kartta vaati
+   * sekä jalkakaydat- että palvelutiet-lipun, koska medinan kujat
+   * ovat OSM:ssä footway- ja service-teitä).
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö).
+   * Lehden nostot kertovat kahden kaupungin synnystä, Hassan I:n
+   * muurikäytävästä 1873, autottomasta medinasta ja fetsihatusta;
+   * teemasivu kertoo kirjapainosta ja kirjoituksesta. Kartan
+   * kahdeksan kohdetta ovat rakennuksia, joista lehti ei kerro.
+   *
+   * KAKSI KOHDETTA ON TARKOITUKSELLA JÄTETTY POIS, vaikka ne ovat
+   * ruudussa ja ovat kaupungin tunnetuimpia: Chouaran
+   * nahkurialtaat ja al-Qarawiyyinin moskeija-yliopisto. Molemmat
+   * ovat MAROKON MAALEHDEN nostoja (maa-kategoriat.js MAR:
+   * "Altaat, joissa väri on kasvia" ja "Yliopisto, jonka perusti
+   * kauppiaan tytär"), eikä kohdekartta toista maalehden juttuja
+   * enempää kuin kaupunkilehdenkään. Sama koskee Dar al-Maganan
+   * vesikelloa Bou Inanian medresaa vastapäätä ("Kello, jota
+   * kukaan ei enää osaa korjata") — medresan juttu ei mainitse
+   * kelloa lainkaan.
+   *
+   * WIKI-KENTTIÄ EI OLE YHDELLÄKÄÄN. Suomenkielisiä artikkeleita ei
+   * ole näistä kohteista, joten ne ovat pelkkiä merkkejä — se on
+   * sallittua (vrt. Kairon torni ja Egyptin museo).
+   */
+  fes: {
+    polku: 'assets/kartat/fes-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 34.073, etela: 34.057, lansi: -4.988, ita: -4.969 },
+    esittely: 'Fèsin vanhakaupunki Fes el-Bali on arabimaailman vanhin '
+      + 'yhtäjaksoisesti asuttu muurikaupunki ja yksi maailman '
+      + 'suurimmista autottomista kaupunkialueista. Kujat ovat '
+      + 'kapeammat kuin vaunun akseliväli, joten tavara kulkee yhä '
+      + 'aasin selässä. Muurien sisällä on medresoja, karavaaniserajeja '
+      + 'ja pyhäkköjä 1200-luvulta 1700-luvulle, ja pohjoisen kukkulalla '
+      + 'seisovat marinidisulttaanien haudat. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään ja lopuksi
+       * pohjoiseen kukkulalle. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026.
+       *
+       * VÄLIT OVAT PELIN PIENIMPIÄ ja se on tässä oikein: medina on
+       * niin tiheä, ettei 200 metrin väljyyteen pääse ilman että
+       * puolet kohteista putoaa pois. Kolme pienintä väliä ovat
+       * zawiya – al-Attarinen medresa 98 m, Bab Bou Jeloud – Bou
+       * Inanian medresa 107 m ja Nejjarinen funduq – zawiya 114 m.
+       * Ruutu on siksi tiivistetty 1,75 kilometrin levyiseksi
+       * (1,09 m/px), jolloin nuo välit ovat 89, 98 ja 104 pikseliä
+       * eivätkä numeroympyrät mene päällekkäin;
+       * tarkista-karttapisteet.mjs vahvistaa sen.
+       */
+      { nimi: 'Bab Bou Jeloud', lat: 34.06167, lon: -4.98389 },
+      { nimi: 'Dar Batha', lat: 34.0605, lon: -4.9828 },
+      { nimi: 'Bou Inanian medresa', lat: 34.06194, lon: -4.98278 },
+      { nimi: 'Nejjarinen funduq', lat: 34.06476, lon: -4.97595 },
+      { nimi: 'Moulay Idris II:n zawiya', lat: 34.06485, lon: -4.97472 },
+      { nimi: 'Al-Attarinen medresa', lat: 34.06508, lon: -4.97369 },
+      { nimi: 'Saffarinin medresa', lat: 34.06415, lon: -4.97257 },
+      { nimi: 'Marinidien haudat', lat: 34.06977, lon: -4.97924 },
+    ],
+  },
+  /*
+   * DAKARIN NIEMENKÄRKI (Opus 7.9.2026, paketti O9). Ruutu on
+   * 5,1 × 4,3 kilometriä: etelässä Pasteur-instituutti ja
+   * katedraali, keskellä Plateaun ruutukaava ja rautatieasema,
+   * pohjoisessa Médinan suurmoskeija, Soumbédiounen ranta ja
+   * yliopiston kampus. Perustelut piirra-kaupunkikartta.mjs:n
+   * dakar-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA EIVÄTKÄ KARTTANOSTOJA.
+   * Lehden nostot kertovat lebu-kylistä, Lebu-tasavallasta, vuoden
+   * 1873 maapähkinäsatamasta ja kahdesta kukkulasta; teemasivu
+   * kertoo taiteesta. Gorée on jo karttanosto
+   * (maastokohteet-sen.js) eikä siksi ole kartalla.
+   *
+   * KOLME EHDOKASTA HYLÄTTIIN LÄHTEEN PUUTTEESSA: Kermelin
+   * kauppahalli, Sandagan tori ja presidentinpalatsi omana
+   * kohteenaan. Yhdelläkään ei ole en-Wikipedian artikkelia, eikä
+   * nähtävyysjuttua kirjoiteta ilman katetta. Presidentinpalatsi
+   * mainitaan Riippumattomuuden aukion jutussa, jolla on kate
+   * ("Dakar" › Notable sites: rakennettu 1907).
+   */
+  dakar: {
+    polku: 'assets/kartat/dakar-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 14.6905, etela: 14.652, lansi: -17.472, ita: -17.4245 },
+    esittely: 'Dakar on rakennettu Cap-Vertin niemelle, Manner-Afrikan '
+      + 'läntisimpään kärkeen, ja meri on kartan kolmella reunalla. '
+      + 'Eteläkärki on Plateau, siirtomaa-ajan hallintokaupunginosa, '
+      + 'jossa ovat ministeriöt, katedraali ja museot. Pohjoisempana '
+      + 'alkaa Médina, joka perustettiin 1914 ja on nykyään kaupungin '
+      + 'tihein kaupunginosa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi etelästä pohjoiseen.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * (katedraali, suurmoskeija, yliopisto) ja Nominatimista
+       * (muut) 7.9.2026. Pienin väli on 210 metriä (Théodore Monod
+       * -museo – katedraali, jotka ovat saman korttelin
+       * vastakkaisilla puolilla), toiseksi pienin 750 metriä
+       * (katedraali – Riippumattomuuden aukio).
+       */
+      { nimi: 'Pasteur-instituutti', lat: 14.65618, lon: -17.43503 },
+      { nimi: 'Théodore Monod -museo', lat: 14.66367, lon: -17.43828 },
+      { nimi: 'Dakarin katedraali', lat: 14.66545, lon: -17.43761 },
+      { nimi: 'Riippumattomuuden aukio', lat: 14.66953, lon: -17.43206 },
+      { nimi: 'Dakarin rautatieasema', lat: 14.67646, lon: -17.43368 },
+      { nimi: 'Suuri moskeija', lat: 14.67821, lon: -17.44246 },
+      { nimi: 'Soumbédiounen käsityökylä', lat: 14.67685, lon: -17.45781 },
+      { nimi: 'Cheikh Anta Diop -yliopisto', lat: 14.68694, lon: -17.46333 },
+    ],
+  },
 };
 
 /*

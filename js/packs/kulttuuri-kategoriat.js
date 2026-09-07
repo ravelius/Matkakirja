@@ -88089,4 +88089,2229 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * LAGOS (Opus 7.9.2026, parvierä) — Afrikan laudan kaupunkilehti.
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-lagos.md ja sen
+   * riippumaton tarkistus tarkistus-lagos.md (tuomio "kelpaa, kun
+   * kohtien A-E ratkaisut tehdään"; kaikki viisi on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Lagos", "History of Lagos", "Lagos Island", "Lagos Colony",
+   * "Eyo festival", "Saro people", "Shitta-Bey Mosque", "Makoko",
+   * "Third Mainland Bridge", "Danfo", "Lagos Lagoon", "Nollywood",
+   * "Lekki Conservation Centre", "Amala (food)", "Agege bread".
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   * Saapumisteksti (africa-saapumiset.js), valokuvataulu
+   * (africa-valokuvat.js) ja litteä kulttuuritaulu
+   * (africa-kulttuuri.js) olivat jo olemassa eikä niihin kosketa —
+   * sama ratkaisu kuin Nairobissa ja Kapkaupungissa tässä samassa
+   * erässä. Litteän taulun Eyo-kuva, afrobeat-linkki ja jollof
+   * jäävät siis peliin, ja kulttuurivisan vastaus (afrobeat) pysyy
+   * näkyvissä.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu) kuten Nairobissa ja
+   * Miamissa. Teemasivun id on vakioaihe 'luonto', koska AIHE_IKONIT
+   * ei tarjoa laguunille omaa kuvaketta eikä uusia sivu-id:itä tehdä;
+   * sivun nimi "Laguuni ja sillat" kertoo aiheen.
+   *
+   * NIGERIAN MAALEHTEÄ EI TOISTETA. Maalehti (maa-kategoriat.js, NGA)
+   * kertoo Aminan muureista, Oyon kalebassista, Nana Asmaʼusta ja
+   * naisten sodasta, jollofista, suyasta, egusista ja iyánista,
+   * puhuvasta rummusta, jùjústa ja afrobeatista, Ifen päistä, Olowen
+   * ovesta ja adiresta sekä Tutuolasta, Achebesta ja Soyinkasta.
+   * Yksikään näistä ei ole tämän lehden aihe: oppaan ruokajakso
+   * käyttää siksi amalaa, eweduta, ofadaa, dodoa ja asaroa, ja
+   * elokuvajakso Nollywoodia eikä musiikkia.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: nimestä Èkó kerrotaan MOLEMMAT selitykset samassa
+   *    nostossa (edon ikurame, sotaleiri; joruban ereko, maatila),
+   *    koska Wikipedia antaa kaksi eikä valitse.
+   *  - B: nimi Lagos "todennäköisimmin" Portugalin Lagosin mukaan —
+   *    lähteen varaus säilytetään. Pelin oma visa
+   *    (africa-questions.js) sanoo nimen tulevan laguuneista; lehti
+   *    ei väitä visaa vääräksi vaan kertoo sanan merkityksen ja
+   *    lähteen todennäköisimmän selityksen. Raportoitu Fablelle.
+   *  - C: Makokon asukasluku 85 840 kerrotaan VARAUKSINEEN samassa
+   *    virkkeessä (aluetta ei laskettu vuoden 2007
+   *    väestönlaskennassa). Miljoonan arviota ei käytetä.
+   *  - D: Makokon purkutoimet 2005, 2012 ja 2026 jätetään kokonaan
+   *    pois — nykypolitiikkaa. Sama koskee Lekin tullipuomia ja
+   *    artikkelin Crime-osiota.
+   *  - E: Efunroye Tinubu nimetään lähteen sanoin (kohdekartan
+   *    nähtävyysjuttu), ei pehmennettynä.
+   *
+   * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+   * (africa-valokuvat.js, lagos), jossa se on jo tarkistettu — vanha
+   * puoli on satamakatu 1929 ja uusi sama ranta nykyään. Selitteet on
+   * kirjoitettu uudestaan yhdeksi virkkeeksi reseptin mukaan.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ: säänormaalit ovat oman agentin
+   * työlistalla. Oppaan sääjakso nojaa siksi en-Wikipedian
+   * Climate-osioon ja sanoo sen ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Iga Idunganran (1).jpg" ja "(3).jpg" (kuvissa on
+   * Iga Idunganran Healthcare Centre, ei oban palatsi),
+   * "Shitta Bey Mosque, Lagos Island, Lagos.jpg" (etualalla
+   * tunnistettavia kasvoja), "Life in Makoko.jpg" (kaksi lasta
+   * tunnistettavina lähikuvassa), "2014 Tinubu Square Lagos Nigeria
+   * 14640600637.jpg" (kuvan alaosan täyttää TINUBU SQUARE -kyltti),
+   * "National Museum Lagos,.jpg" ja "National Museum-Yoruba Hut.jpg"
+   * (edellisessä nurmikko vie kaksi kolmasosaa, jälkimmäinen on
+   * palanut puhki), "Bridging Worlds - Ocean Serenity Meets Urban
+   * Pulse.jpg" (vinossa, kuvattu liikkuvasta autosta),
+   * "The old CMS bookshop.jpg" (etualalla rakennusjätekasa).
+   *
+   * KOLME NOSTOA JÄÄ KUVATTOMAKSI, ja se on tarkoituksellista:
+   * aworien perustamistarulle, Beninin sotaleirille ja vuoden 1861
+   * luovutussopimukselle ei ole Commonsissa kuvaa, joka täyttäisi
+   * säännöt (1200 px, PD/CC BY/CC BY-SA, sisältö vastaa selitettä).
+   * Kuvaton on parempi kuin tarkistamaton — nämä kolme on kirjattu
+   * kuvaputken tilaukseksi Fablelle.
+   */
+  lagos: [
+    {
+      id: 'kaupunki',
+      nimi: 'Lagos',
+      johdanto: 'Lagos kasvoi laguunin saarille: aworien '
+        + 'kalastajakylästä tuli Beninin sotaleiri, siitä orjasatama '
+        + 'ja lopulta Britannian siirtomaa. Isoisän matkavuonna 1873 '
+        + 'kaupunkia hallittiin Kultarannikolta asti.',
+      /*
+       * EI ENNEN JA NYT -PARIA. Matkakirjan valokuvataulun vanha
+       * puoli (africa-valokuvat.js, lagos: 'Lagos, 1929.jpg') on
+       * Commonsissa vain 607 × 382 pikseliä ja OGL v1.0 -lisenssillä,
+       * eli se ei täytä kaupunkilehden kuvasääntöjä (vähintään
+       * 1200 px, lisenssi PD/CC0/CC BY/CC BY-SA). Korvaajaa etsittiin
+       * hauilla "Category:History of Lagos" ja "Lagos Nigeria 1900
+       * photograph marina" 7.9.2026 — yhtään kelvollista vanhaa
+       * vedosta ei löytynyt. Lehti taittuu siis ilman paria kuten
+       * Dubai, Doha, Salalah ja Astana; kansikuvien pikkurivi näkyy
+       * normaalisti. Kirjattu Fablelle kuvaputken tilaukseksi.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Lagos Island Nigeria.jpg',
+          selite: 'Ilmasta katsottuna liikekeskusta täyttää saaren ja '
+            + 'sataman väylä kaartaa sen oikealla puolella.',
+          lahde: 'Subomi07, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'LAGOS ISLAND 1.jpg',
+          selite: 'Keskusmoskeijan minareetit nousevat torikatosten '
+            + 'yli, ja niiden takana alkaa tornien rivi.',
+          lahde: 'Sir Demo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'LAGOS ISLAND 3.jpg',
+          selite: 'Saaren pohjoisrannalta katsoen laguunin yli kulkee '
+            + 'kaksi siltaa peräkkäin.',
+          lahde: 'Sir Demo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Lagosille ei ole generoitu herokuvia, joten
+       * karusellissa on kolme aitoa valokuvaa (vertaa Nairobiin ja
+       * Denveriin): aamu, vihreä saari ja laguuni.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Lagos skyline.jpg',
+          selite: 'Aamuvarhaisella Marina on tyhjä — ainoa hetki '
+            + 'vuorokaudessa, jolloin kadulla on tilaa.',
+          lahde: 'Clara Sanchiz, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Ikoyi, Lagos, Nigeria.jpg',
+          selite: 'Ikoyin puiden takaa avautuu salmi, sen takana '
+            + 'Victoria Island ja horisontissa Atlantti.',
+          lahde: 'Reginald Bassey, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Panorama of 3mb.jpg',
+          selite: 'Kolmas mannersilta piirtyy ohueksi viivaksi '
+            + 'laguunin poikki pilvisenä päivänä.',
+          lahde: 'Solasly, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Savilautanen, joka upposi laguuniin',
+          teksti: 'Laguunin vanhimmat asukkaat olivat kalastajia, ja '
+            + 'aworit saapuivat 1400-luvulla Ogun-jokea alas sotaa '
+            + 'pakoon. Perimätiedon mukaan heidän hallitsijansa Olofin '
+            + 'sai Oduduwalta savilautasen ja ohjeen laskea se jokeen '
+            + 'ja asettua sinne, mihin se uppoaa; lautanen ajelehti '
+            + 'alavirtaan ja upposi Lagosin laguuniin. Olofin jakoi '
+            + 'saaren kymmenen poikansa kesken, ja yksi heistä, '
+            + 'Aromire, istutti viereiselle saarelle pippuria. Samalle '
+            + 'paikalle rakennettiin myöhemmin Lagosin oban palatsi, '
+            + 'ja siksi sen nimi Iga Idunganran tarkoittaa '
+            + 'kirjaimellisesti pippuripellon palatsia. Kaupan '
+            + 'painopiste siirtyi Isheristä Ebute-Mettaan, sitten '
+            + 'Iddoon ja lopulta Ekon saarelle.',
+          wiki: 'Lagos',
+        },
+        {
+          otsikko: 'Sotaleiri, jonka nimeksi jäi Eko',
+          teksti: '1500-luvun puolivälissä Beninin kuningaskunta '
+            + 'laajeni länteen hallitakseen rannikon kauppapaikkoja. '
+            + 'Noin 1600 puhkesi kiista beniniläisten ja aworien '
+            + 'välillä; oba Orhogbua hyökkäsi Iddoon, ja aworit '
+            + 'löivät hänet ensin takaisin. Lopulta Lagosin saaresta '
+            + 'tuli linnoitettu Beninin sotilastukikohta. Kun sen '
+            + 'komentaja Asheru kaatui, aworipäällikkö Ashipa palautti '
+            + 'jäännökset Beniniin ja sai vastineeksi Ekon '
+            + 'hallitsijan aseman; veronmaksu Beniniin päättyi vasta '
+            + '1830. Nimen Eko sanotaan tulevan edon sanasta ikurame, '
+            + 'sotaleiri — toinen selitys johtaa sen joruban sanasta '
+            + 'ereko, maatila. Portugalilaiset kutsuivat paikkaa ensin '
+            + 'nimellä Onim ja sitten Lagos.',
+          wiki: 'History of Lagos',
+        },
+        {
+          otsikko: 'Vuosi 1873: siirtomaa, jota hallittiin muualta',
+          teksti: 'Britannia puuttui Lagosin valtataisteluun 1851: '
+            + 'laivasto asetti Akitoyen oban paikalle ja syrjäytti '
+            + 'Kosokon, ja vuoden 1852 sopimus aloitti konsuliajan. '
+            + 'Kymmenen vuotta myöhemmin, 30. heinäkuuta 1861, virkaa '
+            + 'tekevä konsuli William McCoskry kutsui oba Dosunmun '
+            + 'HMS Prometheuksen kannelle. Dosunmu vastusti ehtoja, '
+            + 'mutta komentaja Bedingfieldin uhattua pommittaa '
+            + 'kaupunkia hän allekirjoitti luovutussopimuksen 6. '
+            + 'elokuuta 1861. Lagos julistettiin siirtomaaksi 5. '
+            + 'maaliskuuta 1862, mutta sitä hallittiin Kultarannikolta '
+            + 'asti; omaksi siirtomaakseen se erotettiin vasta 1886. '
+            + 'Isoisän matkavuonna päätökset tehtiin toisessa maassa.',
+          wiki: 'Lagos Colony',
+        },
+        {
+          otsikko: 'Paluumuuttajat rakensivat kaupungin uudelleen',
+          teksti: 'Kun Britannia oli kieltänyt orjakaupan, laivasto '
+            + 'vapautti ihmisiä ja asutti heidät Freetowniin. Heidän '
+            + 'jälkeläisiään alkoi muuttaa Lagosiin 1830-luvulta '
+            + 'alkaen, ja heitä kutsuttiin nimellä saro — lyhennys '
+            + 'sanoista Sierra Leone. Brasiliasta ja Kuubasta '
+            + 'palanneita sanottiin nimellä aguda. Saro asettuivat '
+            + 'Ebute Mettaan, Olowogbowoon ja Yabaan ja perustivat '
+            + 'kaupungin vanhimpia kirkkoja. Yksi heistä, Mohammed '
+            + 'Shitta Bey, rahoitti moskeijan, jonka rakentamista '
+            + 'valvoi brasilialainen arkkitehti João Baptista da '
+            + 'Costa; se vihittiin 4. heinäkuuta 1894, ja samassa '
+            + 'tilaisuudessa Shitta sai osmanien sulttaanilta '
+            + 'Bey-arvonimen.',
+          tiedosto: 'Shitta Bey Mosque.jpg',
+          selite: 'Shitta-Beyn moskeijan päätykolmio on koristeltu '
+            + 'brasilialaiseen tapaan laatoilla ja kaarilla.',
+          lahde: 'Beendy234, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Saro people',
+        },
+        {
+          otsikko: 'Agogoro Eyo, pitkä valkoinen hahmo',
+          teksti: 'Eyo on juhla, jota vietetään vain Lagosissa. Se '
+            + 'järjestettiin saattamaan edesmenneen kuninkaan tai '
+            + 'päällikön sielua ja toivottamaan seuraaja '
+            + 'tervetulleeksi; ensimmäinen kulkue kulki 20. helmikuuta '
+            + '1854 oba Akitoyen muistoksi. Juhlapäivänä pääväylä '
+            + 'Carterin sillan päästä Tinubun aukiolle suljetaan, ja '
+            + 'kulkue etenee Idumotasta oban palatsille. Valkoisiin '
+            + 'kaapuihin pukeutuneet hahmot edustavat vainajien henkiä, '
+            + 'ja niitä sanotaan jorubaksi nimellä agogoro Eyo, pitkä '
+            + 'Eyo. Ryhmän tunnistaa hatun väristä: Adimu on musta, '
+            + 'Laba punainen, Oniko keltainen, Ologede vihreä ja Agere '
+            + 'violetti. Viikkoa ennen juhlaa Adimu tulee kadulle '
+            + 'sauvan kanssa.',
+          tiedosto: 'The Eyo Masquerade 04.jpg',
+          selite: 'Kolme Eyo-hahmoa taivasta vasten: valkoinen kaapu '
+            + 'peittää kantajansa kokonaan, ja hattu kertoo ryhmän.',
+          lahde: 'Yemi festus, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Eyo festival',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'An old Brazilian building at Tinubu square, Lagos.jpg',
+          selite: 'Keltaiset danfo-pikkubussit odottavat vanhan '
+            + 'brasilialaistyylisen talon edessä, ja torin '
+            + 'päivänvarjot alkavat heti niiden takaa.',
+          lahde: 'Omoeko Media, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Lagos on Nigerian suurin kaupunki ja Afrikan '
+          + 'väkirikkaimpia. Se jakautuu kahteen: saareen, jolla ovat '
+          + 'liikekeskusta ja vanhin kaupunki, ja mantereeseen, jolla '
+          + 'asuu suurin osa lagosilaisista ja jolla on suurin osa '
+          + 'teollisuudesta. Kaupunki tuottaa noin kolmanneksen koko '
+          + 'maan bruttokansantuotteesta, ja Länsi- ja Keski-Afrikan '
+          + 'neljä suurinta pankkia ovat täällä. Lagos oli Nigerian '
+          + 'pääkaupunki vuoteen 1991, jolloin asema siirtyi Abujaan. '
+          + 'Väkiluvusta kiistellään: vuoden 2006 väestönlaskenta '
+          + 'antoi metropolialueelle noin yhdeksän miljoonaa, mutta '
+          + 'osavaltion oma laskenta puolestatoista kertaa enemmän. '
+          + 'Jorubankielinen nimi Èkó elää kaupungin omassa puheessa '
+          + 'portugalilaisten antaman nimen rinnalla.',
+        artikkeli: {
+          nimi: 'Matkailijan Lagos',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa matkaa ei mitata kilometreissä '
+            + 'vaan tunneissa: keltainen pikkubussi, yksitoista '
+            + 'kilometriä siltaa laguunin yli ja saari, jonka '
+            + 'markkinat eivät lopu koskaan.',
+          nosto: 'Kolmas mannersilta on noin 11,8 kilometriä pitkä ja '
+            + 'oli Afrikan pisin silta vuoteen 1996, jolloin Kairon '
+            + '6. lokakuun silta valmistui. Sen kaiteen takaa näkyy '
+            + 'koko kaupunki kerralla: laguuni, yliopiston ranta, '
+            + 'kansallisteatteri ja Makokon paalukylä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Kansainvälinen kenttä on Murtala Muhammed '
+                + 'Ikejassa, joka on myös Lagosin osavaltion '
+                + 'pääkaupunki. Saarelle pääsee kolmea siltaa: '
+                + 'Carterin silta Iddosta, Ekon silta ja kolmas '
+                + 'mannersilta. Kaupungissa liikutaan keltaisilla '
+                + 'danfo-pikkubusseilla, joissa on tavallisesti '
+                + '14—18 paikkaa; ne yleistyivät 1970-luvulla, kun '
+                + 'julkinen liikenne heikkeni, ja varhaiset autot '
+                + 'olivat matkustajakäyttöön muutettuja Volkswagen '
+                + 'Type 2 -pakettiautoja. Nimen uskotaan tulevan '
+                + 'joruban kiirettä tarkoittavasta sanasta. Kuljettajan '
+                + 'lisäksi mukana on rahastaja, ja bussit lähtevät '
+                + 'päätepaikoista, joita sanotaan parkeiksi. Lekin ja '
+                + 'Ikoyin välinen linkkisilta on Nigerian ensimmäinen '
+                + 'vinoköysisilta.',
+            },
+            {
+              otsikko: 'Saari ja manner',
+              teksti: 'Saari erottuu mantereesta pääväylästä, joka '
+                + 'laskee laguunin Atlantille ja muodostaa Lagosin '
+                + 'sataman. Lagosin saarella on liikekeskusta, '
+                + 'kaupungin suurimmat tukkutorit Idumota ja Balogun, '
+                + 'Marinan pankkikortteli ja oban palatsi. Ikoyi on '
+                + 'saaren itäpuoliskolla ja liitetty siihen '
+                + 'täyttömaalla; Victoria Island on etelässä, ja '
+                + 'Lekin niemi jatkuu siitä itään. Mantereella ovat '
+                + 'Ebute Metta, Yaba, Surulere ja Apapa sekä Ikeja. '
+                + 'Iddo on pieni asutus laguunin pääväylän toisella '
+                + 'puolella ja rautatien pääteasema; se on nykyään '
+                + 'liitetty mantereeseen niemen tavoin.',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Amala on tummaa jamssijauhopuuroa, jota '
+                + 'syödään ewedu-keiton kanssa; pala nipistetään '
+                + 'sormin ja kastetaan keittoon. Ofada-riisi on '
+                + 'paikallinen lyhytjyväinen riisi, dodo paistettuja '
+                + 'banaaneja ja asaro jamssimuhennos, jota syödään '
+                + 'monenlaisten vihannesten kanssa. Agege-leipä on '
+                + 'nimetty saman nimisen kaupunginosan mukaan ja on '
+                + 'pehmeää, tiivistä ja hieman makeaa. Ravintoloita '
+                + 'löytyy laidasta laitaan: kattoravintoloista '
+                + 'laguunin yllä tuulee mereltä, mikä on kuumassa '
+                + 'kaupungissa oma nautintonsa.',
+            },
+            {
+              otsikko: 'Nollywoodin kaupunki',
+              teksti: 'Nigerian elokuvateollisuuden keskus on '
+                + 'Surulere mantereella. Nimi Nollywood jäljitetään '
+                + 'vuoden 2002 New York Timesin artikkeliin, mutta '
+                + 'elokuvan tekeminen alkoi paljon aiemmin: '
+                + 'jorubankieliset kiertävät teatteriryhmät siirtyivät '
+                + 'valkokankaalle 1960-luvun puolivälissä, Ajani Ogun '
+                + 'valmistui 1976 ja Mosebolatan tuotti 1985 viidessä '
+                + 'päivässä 107 000 nairaa. Igbonkielinen Living in '
+                + 'Bondage käynnisti 1992 videokauden. Kaupungissa on '
+                + 'myös kansallisteatteri Iganmussa, jonka soikea '
+                + 'runko muistuttaa kaukaa laskeutunutta alusta, ja '
+                + 'Nike Art Gallery, viisikerroksinen galleria, jossa '
+                + 'on noin kahdeksantuhatta teosta. Paul McCartney '
+                + 'levytti Lagosissa albuminsa Band on the Run '
+                + 'elo—syyskuussa 1973 — sata vuotta isoisän matkan '
+                + 'jälkeen.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Lagos-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa vuosigraafia, '
+                + 'koska säänormaaleja ei haettu tässä erässä. '
+                + 'Ilmasto on trooppinen savanni-ilmasto. Sadekausi '
+                + 'kestää toukokuusta lokakuuhun ja kuiva kausi '
+                + 'marraskuusta huhtikuuhun, ja niiden väliin osuu '
+                + 'lyhyt kuiva jakso heinä—elokuussa. Sateisin '
+                + 'kuukausi on kesäkuu, jolloin sadetta tulee 316 '
+                + 'millimetriä; kuivin on tammikuu 13 millimetrillä. '
+                + 'Keskimääräiset ylimmät lämpötilat ovat 28—32 '
+                + 'astetta. Kuumin kuukausi on maaliskuu, jolloin '
+                + 'vuorokausi vaihtelee 26 ja 32 asteen välillä, ja '
+                + 'viilein elokuu, 24—28 astetta. Juhlia riittää: '
+                + 'karnevaali tammikuussa, Eko International Film '
+                + 'Festival maaliskuussa, valokuvajuhla marraskuussa '
+                + 'ja ruokajuhla joulukuussa.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kolmas mannersilta',
+                tahdet: 3,
+                selite: 'Yksitoista kilometriä laguunin yli; '
+                  + 'Afrikan pisin silta vuoteen 1996.',
+              },
+              {
+                mita: 'Lagosin saaren torit',
+                tahdet: 3,
+                selite: 'Idumota ja Balogun ovat kaupungin '
+                  + 'suurimmat tukkutorit, aivan pankkikorttelin '
+                  + 'vieressä.',
+              },
+              {
+                mita: 'Lekin luonnonsuojelukeskus',
+                tahdet: 3,
+                selite: '78 hehtaaria kosteikkoa ja savannia sekä '
+                  + 'Afrikan pisin latvuskävelysilta.',
+              },
+              {
+                mita: 'Makokon vesikylä',
+                tahdet: 2,
+                selite: 'Kolmasosa yhteisöstä on rakennettu paalujen '
+                  + 'varaan laguuniin; liikkuminen tapahtuu '
+                  + 'kanootilla.',
+              },
+              {
+                mita: 'Tarkwa Bay',
+                tahdet: 2,
+                selite: 'Suojaisa lahti sataman suulla, jonne '
+                  + 'pääsee vain veneellä.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5
+             * ja teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Matka mitataan tunneissa',
+                teksti: 'Saarelle johtaa kolme siltaa, ja ruuhka-'
+                  + 'aikaan koko kaupunki kulkee samaa reittiä — '
+                  + 'kilometrimäärä kertoo vähemmän kuin kellonaika.',
+              },
+              {
+                otsikko: 'Kaksi sadekautta ja väli',
+                teksti: 'Sadekausi kestää toukokuusta lokakuuhun, '
+                  + 'mutta heinä—elokuussa on lyhyt kuiva jakso — '
+                  + 'sateisin kuukausi on kesäkuu 316 millimetrillä.',
+              },
+              {
+                otsikko: 'Danfossa maksetaan rahastajalle',
+                teksti: 'Keltaisessa pikkubussissa on kuljettajan '
+                  + 'lisäksi rahastaja, joka kerää maksut matkan '
+                  + 'aikana; bussi lähtee päätepaikasta täyttyessään.',
+              },
+              {
+                otsikko: 'Eyo ei ole kalenterissa',
+                teksti: 'Kulkue järjestetään vain silloin, kun '
+                  + 'perinne sitä vaatii; Adimu-ryhmän ilmestyminen '
+                  + 'sauvan kanssa on ainoa varma ennakkotieto.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Laguuni ja sillat',
+      johdanto: 'Lagos on rakennettu vedelle: laguuni on yli '
+        + 'viisikymmentä kilometriä pitkä, kaupunki levittäytyy sen '
+        + 'rannoille ja saarille, ja osa asukkaista asuu paalujen '
+        + 'varassa keskellä vettä.',
+      tehtava: {
+        kysymys: 'Mistä Makoko sai nimensä?',
+        vaihtoehdot: [
+          'Laguunin kalasta',
+          'Akoko-lehdistä, joita alueella kasvoi runsaasti',
+          'Ensimmäisestä kalastajasta',
+          'Portugalilaisesta kauppiaasta',
+        ],
+        oikea: 1,
+        fakta: 'Nimi on jorubaa ja tarkoittaa kirjaimellisesti '
+          + '"poimi akoko". Akoko-lehtiä käytetään hedelmällisyyden '
+          + 'apuna ja päällikön kruunajaisissa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Laguuni, joka on nimensä toisinto',
+          teksti: 'Lagosin laguuni on yli viisikymmentä kilometriä '
+            + 'pitkä ja kolmesta kolmeentoista kilometriä leveä, ja '
+            + 'sen erottaa Atlantista pitkä hiekkasärkkä. Se on '
+            + 'Guineanlahden suurin laguuni ja pinta-alaltaan noin '
+            + '6 355 neliökilometriä, mutta niin matala, ettei '
+            + 'valtamerialus pääse sinne — vain proomut ja veneet. '
+            + 'Laguuniin laskevat Ogun- ja Osun-joet, ja se purkautuu '
+            + 'mereen Lagosin sataman kautta, joka on puolesta '
+            + 'kilometristä kilometriin leveä ja kymmenen kilometriä '
+            + 'pitkä väylä keskellä kaupunkia. Nimi on huvittava '
+            + 'toisinto itsestään: Lagos tarkoittaa portugaliksi '
+            + 'järviä, joten Lagosin laguuni on kaksi kertaa sama '
+            + 'sana.',
+          tiedosto: 'Lagos Lagoon - Brothers at Dusk.jpg',
+          selite: 'Kalastaja heittää verkkonsa kaarelle laguunilla, ja '
+            + 'toinen odottaa veneen perässä illan valossa.',
+          lahde: 'Obii Okongwu, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lagos Lagoon',
+        },
+        {
+          otsikko: 'Kuusi kylää paalujen päällä',
+          teksti: 'Makoko on mantereen rannalla kolmannen '
+            + 'mannersillan kohdalla, ja kolmasosa yhteisöstä on '
+            + 'rakennettu paalujen varaan laguuniin. Kylää on kuusi: '
+            + 'neljä kelluvaa — Adogbo, Migbewhe, Oko Agbon ja '
+            + 'Yanshiwhe — ja kaksi maalla, Apollo ja Sogunro. '
+            + 'Vesirajan asukkaat ovat pääosin egun-kansaa, joka '
+            + 'muutti Badagrysta ja Beninin tasavallasta, ja '
+            + 'pääelinkeino on kalastus. Yhteisö syntyi 1700- ja '
+            + '1800-luvulla. Asukasluvuksi arvioidaan 85 840, mutta '
+            + 'lukua on vaikea vahvistaa, koska aluetta ei laskettu '
+            + 'vuoden 2007 väestönlaskennassa. Makokoa kutsutaan '
+            + 'joskus Afrikan Venetsiaksi.',
+          tiedosto: 'View of Makoko.jpg',
+          selite: 'Paalujen varaan rakennettu kylä ja kymmenet '
+            + 'kanootit levittäytyvät laguunin yli iltavalossa.',
+          lahde: 'Oritsetsemaye Jemide, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Makoko',
+        },
+        {
+          otsikko: 'Kolme siltaa ja yksi vuosi 1901',
+          teksti: 'Ensimmäinen silta Lagosin saaren ja mantereen '
+            + 'välille rakennettiin 1901: Carterin silta, joka on '
+            + 'nimetty vuosina 1891—1898 virassa olleen kuvernöörin '
+            + 'mukaan. Sen rinnalle tulivat myöhemmin Ekon silta ja '
+            + 'kolmas mannersilta. Kolmas mannersilta on noin 11,8 '
+            + 'kilometriä pitkä ja kahdeksankaistainen; ensimmäisen '
+            + 'vaiheen vihki presidentti Shehu Shagari 1980, ja '
+            + 'kokonaisuus valmistui presidentti Ibrahim Babangidan '
+            + 'aikana 1990. Se oli Afrikan pisin silta vuoteen 1996, '
+            + 'jolloin Kairon 6. lokakuun silta valmistui. Silta alkaa '
+            + 'Oworonshokista ja päättyy Adeniji Adelen liittymään '
+            + 'saarella; matkalta näkyvät laguuni, yliopiston ranta, '
+            + 'kansallisteatteri ja Makoko.',
+          tiedosto: 'Third-mainland-bridge-lagos.jpg',
+          selite: 'Sillan alta katsottuna pilaririvi jatkuu '
+            + 'horisonttiin, ja alla kulkee yksinäinen kanootti.',
+          lahde: 'S.aderogba, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Third Mainland Bridge',
+        },
+        {
+          otsikko: 'Kaupunki, joka tekee itse maansa',
+          teksti: 'Lagos on kasvanut myös ulospäin vedestä. Ikoyi on '
+            + 'liitetty Lagosin saareen täyttömaalla, ja osa saaria '
+            + 'erottavista salmista on ruopattu ja rakennettu umpeen. '
+            + 'Victoria Islandin merenpuoleinen Bar Beach on '
+            + 'rakennettu ympäristöllisesti uudelleen, ja laguunin '
+            + 'suulle nousee Eko Atlantic, joka laajentaa Victoria '
+            + 'Islandia. Kaupunki levittäytyy yli kolmenkymmenen '
+            + 'kilometrin matkalle laguunin lounais- ja länsirannalla. '
+            + 'Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin '
+            + 'suuri määrä kaupungin ja teollisuuden jätevettä, ja '
+            + 'Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja '
+            + 'maan painuminen koskettavat Lagosia enemmän kuin '
+            + 'useimpia Afrikan suurkaupunkeja.',
+          wiki: 'Lagos',
+        },
+        {
+          otsikko: 'Latvuskävelysilta mangroven yllä',
+          teksti: 'Lekin luonnonsuojelukeskus perustettiin 1990 '
+            + 'suojelemaan Lekin niemen kosteikkoja: suota, '
+            + 'suometsää ja savanniruohostoa. Alue on 78 hehtaaria, '
+            + 'ja sen halki kulkee kahdeksikon muotoinen polkuverkko '
+            + 'sekä 1,8 kilometrin luontopolku. Puinen kävelysilta '
+            + 'rakennettiin 1992, ja keskuksessa on Afrikan pisin '
+            + 'latvuskävelysilta sekä 21 metrin korkeuteen nouseva '
+            + 'puumaja, jonka tasanteelta näkee koko alueen. '
+            + 'Lintupiilo katsoo suolle, jolla elää krokotiileja ja '
+            + 'varaaneja; puissa liikkuu mona-apinoita ja '
+            + 'ruohostossa metsäantilooppeja. Suurin osa nisäkkäistä '
+            + 'on yöeläimiä, joten päiväkävelijä näkee useammin '
+            + 'lintuja kuin karvaa.',
+          tiedosto: 'The Bridge in Lekki convention center.jpg',
+          selite: 'Köysistä ja teräsritilästä tehty latvuskävelysilta '
+            + 'jatkuu puiden latvojen tasalla eteenpäin.',
+          lahde: 'Obiazi Emefile, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Lekki Conservation Centre',
+        },
+      ],
+    },
+  ],
+  /*
+   * SANSIBAR (Opus 7.9.2026, parvierä) — Afrikan laudan kaupunkilehti.
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-sansibar.md ja sen
+   * riippumaton tarkistus tarkistus-sansibar.md (tuomio "kelpaa, kun
+   * kohtien A-F ratkaisut tehdään"; kaikki kuusi on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Zanzibar", "Zanzibar City", "Stone Town", "History of Zanzibar",
+   * "Christ Church, Zanzibar", "Emily Ruete", "Changuu", "Dhow",
+   * "Old Fort of Zanzibar", "House of Wonders", "Zanzibar
+   * International Film Festival", "Seaweed farming", "Unguja",
+   * "Kizimkazi Mosque".
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti.
+   * Saapumisteksti, valokuvataulu ja litteä kulttuuritaulu olivat jo
+   * olemassa eikä niihin kosketa — sama ratkaisu kuin Nairobissa ja
+   * Kapkaupungissa tässä erässä. Litteän taulun taarab-nosto, kuva
+   * ja Siti binti Saadin musiikkilinkki jäävät siis peliin, ja
+   * kulttuurivisan vastaus (taarab) pysyy näkyvissä.
+   *
+   * TANSANIAN MAALEHTEÄ EI TOISTETA, ERITYISESTI EI TAARABIA
+   * (Fablen nimenomainen ohje). Maalehti (maa-kategoriat.js, TZA)
+   * kertoo Helgoland—Sansibar-sopimuksesta, 38 minuutin sodasta,
+   * Nyereresta ja TAZARAsta, Ngorongorosta ja punakolobista,
+   * NEILIKASTA JA MAUSTESAARISTA, pilausta ja biriranista, chipsi
+   * mayaista, FORODHANIN ILTATORISTA, Tingatingasta, makondeveistosta,
+   * KIVIKAUPUNGIN OVISTA JA BARAZASTA, kangasta sekä TAARABISTA ja
+   * Siti binti Saadista. Yksikään näistä ei ole tämän lehden aihe:
+   * siksi lehti kertoo arkeologiasta, sulttaanikunnasta, vuodesta
+   * 1873, Sayyida Salmesta, vanhasta linnakkeesta ja elokuvajuhlasta
+   * sekä teemasivulla monsuunista, dhow-aluksista, Changuun
+   * kilpikonnista ja merilevästä.
+   *
+   * MERILEVÄNOSTO ON TARKOITUKSELLINEN. Kaupungin visa
+   * (africa-questions.js, sansibar) kysyy merilevän kasvatuksesta, ja
+   * moduuliohje vaatii, että visan opettava aihe näkyy kategorioissa.
+   * Minitehtävä ei silti kysy siitä eikä mistään muusta visan
+   * viidestä aiheesta.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto'; sivun nimi "Monsuuni ja meri" kertoo aiheen.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: pääkaupungin siirrosta EI anneta yhtä vuotta. Lähteet
+   *    antavat 1832 tai 1840 ("the date varies among sources"), ja
+   *    Stone Town -artikkeli sanoo 1824. Nosto sanoo "1800-luvun
+   *    alkupuoliskolla" ja kertoo kaksi vuosilukua.
+   *  - B: vanhasta linnakkeesta kerrotaan MOLEMMAT kerrokset —
+   *    portugalilaiset aloittivat, omanilaiset saivat valmiiksi
+   *    1600-luvun lopulla ja rakensivat uudelleen 1700-luvulla.
+   *  - C: Pyhän Joosefin katedraali 1893—1898 kohteen oman
+   *    artikkelin mukaan (Stone Town sanoo 1897).
+   *  - D: Ihmeiden talo on 71 metriä vanhasta linnakkeesta ja 151
+   *    metriä sulttaanin palatsista, joten se ei mahdu kohdekartalle;
+   *    se kerrotaan matkaoppaan neljännessä jaksossa.
+   *  - E: Michenzanista kerrotaan rakennukset, ei vuoden 1964
+   *    vallankumouksen kulkua.
+   *  - F: orjakauppa kerrotaan suoraan ja lähteen sanoin, tapahtumina
+   *    ja lukuina, ilman yksityiskohtien korostusta. Katedraalin
+   *    alttarista käytetään lähteen varausta ("sanotaan olevan").
+   *
+   * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+   * (africa-valokuvat.js, sansibar), jossa se on jo tarkistettu.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ: säänormaalit ovat oman agentin
+   * työlistalla. Oppaan sääjakso nojaa siksi en-Wikipedian
+   * Climate-osioon ja sanoo sen ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Darajani Market.jpg" (etualalla iso tunnistettava
+   * kasvokuva), "WomenWorking SeaweedZanzibar 4.jpg" (sama syy;
+   * tilalle valittiin saman kuvaajan väljempi kuva 2),
+   * "House of slave trader Tipu Tip ... (1).jpg" (pelkkä
+   * muistolaatta), "Scooters in Public Square.jpg" (seinillä
+   * vaalijulisteita — ei nykypolitiikkaa lehteen),
+   * "Zanzibar 2012 06 04 4529 ... .jpg" (graffiti ja roskat
+   * hallitsevat), "2024-06-16 134142087 Stonetown Zanzibar.jpg"
+   * (muovipulloastia).
+   *
+   * KOLME NOSTOA JÄÄ KUVATTOMAKSI: Shanganin arkeologialle, Omanin
+   * sulttaanien pääkaupungille ja Changuun vankilasaarelle ei
+   * löytynyt sääntöjen mukaista kuvaa. Kilpikonnista, dhow'sta ja
+   * merilevästä on kuva, joten teemasivun kolme muuta nostoa
+   * kantavat sivun. Kuvattomat on kirjattu kuvaputken tilaukseksi.
+   */
+  sansibar: [
+    {
+      id: 'kaupunki',
+      nimi: 'Sansibar',
+      johdanto: 'Kivikaupunki kasvoi kalastajakylästä valtameren '
+        + 'kauppapaikaksi ja Omanin sulttaanien pääkaupungiksi. '
+        + 'Isoisän matkavuonna 1873 täällä suljettiin orjatori — ja '
+        + 'samana jouluna laskettiin sen paikalle kirkon peruskivi.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa: niemi ilmasta, kattojen panoraama
+       * rantakadun yltä ja lauttaranta.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Zanzibar StoneTown.png',
+          selite: 'Kivikaupungin niemi työntyy mereen, ja sen takana '
+            + 'jatkuu Ngʼambon tiheä korttelimatto.',
+          lahde: 'Wegmann, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Panorama from Rooftop Lounge of Hotel Kiponda - Stone Town - Zanzibar - Tanzania (8830564454).jpg',
+          selite: 'Katolta katsottuna vanhankaupungin peltikatot '
+            + 'jatkuvat kaarien takana laidasta laitaan.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Zanzibar City. Big Tree beach and Ferry terminal.jpg',
+          selite: 'Taksiveneet odottavat rannassa, ja niiden takana '
+            + 'on Dar es Salaamin lautta.',
+          lahde: 'Наумов Андрей, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Sansibarille ei ole generoitu herokuvia, joten
+       * karusellissa on kolme aitoa valokuvaa: aukio, laskuveden ranta
+       * ja torikatu.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Panorama from Plaza - Stone Town - Zanzibar - Tanzania (8841027867).jpg',
+          selite: 'Aukion ympärillä seisovat parvekkeelliset talot, '
+            + 'ja niiden edessä kasvaa rivi puita.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'The Crack.jpg',
+          selite: 'Laskuvesi paljastaa rannan, ja väki liikkuu '
+            + 'kuiville jääneiden veneiden keskellä myrskypilvien alla.',
+          lahde: 'Yann Macherez, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Darajani.jpg',
+          selite: 'Torikadun päivänvarjot jatkuvat kortteliin asti, ja '
+            + 'taustalla kohoavat vanhankaupungin parvekkeet.',
+          lahde: 'Ronyyz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Panorama van de haven van Zanzibar Panorama of Zanzibar (titel op object) Zanzibar (titel op object), RP-F-F00999-DD.jpg',
+          vuosi: 'noin 1900',
+          selite: 'Sansibarin satama noin vuonna 1900: purjealukset '
+            + 'seisovat redillä ja kivikaupunki nousee suoraan '
+            + 'rantaviivasta.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Harbour at the picturesque Stone Town.jpg',
+          selite: 'Sama satama nykyään: purjeet ovat harvinaistuneet, '
+            + 'mutta rantaviiva on tunnistettavasti entinen.',
+          lahde: 'Dr. Ondřej Havelka (cestovatel), Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Shangani, kylä joka muuttui kiveksi',
+          teksti: 'Kreikkalais-roomalainen purjehdusopas mainitsee '
+            + 'ensimmäisellä vuosisadalla saaren nimeltä Menuthias, '
+            + 'joka on todennäköisesti Unguja. Fukuchanissa saaren '
+            + 'luoteisrannikolla on jälkiä vakiintuneesta viljely- ja '
+            + 'kalastusyhteisöstä viimeistään 500-luvulta: '
+            + 'savitiivistettä puutaloista, simpukkahelmiä ja raudan '
+            + 'kuonaa. Kauppa kasvoi 700-luvulta, ja 900-luvun lopulla '
+            + 'Sansibar oli jo keskeinen swahilikaupunki. Shangani, '
+            + 'kalastajakylä josta Kivikaupunki kasvoi, perustettiin '
+            + '1000-luvulla ja oli pieni ja vähäpätöinen — saaren '
+            + 'mahdit olivat Unguja Ukuu, Kizimkazi ja Tumbatu. Talot '
+            + 'tehtiin ensin puusta, sitten mudasta ja korallista ja '
+            + 'vasta 1200-luvulla kivestä.',
+          wiki: 'Stone Town',
+        },
+        {
+          otsikko: 'Sulttaani, joka muutti Muscatista',
+          teksti: 'Portugalilaiset rakensivat 1500-luvun alussa '
+            + 'kirkon Shanganiin. Kun sansibarilaiset ja pembalaiset '
+            + 'karkottivat heidät 1600-luvulla, paikalliset ylimykset '
+            + 'kutsuivat Omanin sulttaanin käyttämään valtaa vastineeksi '
+            + 'puolustuksesta. Poliittinen valta pysyi silti pitkälti '
+            + 'Mwinyi Mkuulla, tuolloin kuningatar Fatimalla. '
+            + '1800-luvun alkupuoliskolla Muscatin ja '
+            + 'Omanin sulttaani Said bin Sultan siirsi pääkaupunkinsa '
+            + 'Sansibariin — lähteet antavat vuodeksi 1832 tai 1840. '
+            + 'Hänen kuoltuaan 1856 testamentti jakoi valtakunnan '
+            + 'kahtia, ja 1861 Sansibar ja Oman erosivat: Majid bin '
+            + 'Saidista tuli Sansibarin ensimmäinen sulttaani.',
+          wiki: 'Sultanate of Zanzibar',
+        },
+        {
+          otsikko: 'Vuosi 1873 ja joulukuun peruskivi',
+          teksti: 'Malindin satama Sansibarin kaupungissa oli '
+            + 'Swahilirannikon pääsatama Lähi-idän orjakaupalle, ja '
+            + '1800-luvun puolivälissä sen kautta kulki jopa '
+            + 'viisikymmentätuhatta ihmistä vuodessa. Ratkaisu tuli '
+            + 'vasta 1873: konsuli Sir John Kirk uhkasi '
+            + 'sulttaani Barghashia koko saaren saarrolla, ja Barghash '
+            + 'allekirjoitti vastentahtoisesti sopimuksen, joka '
+            + 'lakkautti orjakaupan, sulki kaikki orjatorit ja suojeli '
+            + 'vapautettuja sulttaanin alueilla. Saman vuoden jouluna '
+            + 'laskettiin suurimman orjatorin paikalle anglikaanisen '
+            + 'kirkon peruskivi. Kirkko avattiin jouluna 1879, ja '
+            + 'alttarin sanotaan olevan täsmälleen siinä, missä torin '
+            + 'ruoskimispaalu oli.',
+          tiedosto: 'Altar of Anglican Cathedral - Built on Site of Whipping Post in Old Slave Market - Stone Town - Zanzibar - Tanzania (8841409997).jpg',
+          selite: 'Kirkon alttari seisoo kaariholvin alla siinä '
+            + 'kohdassa, jossa torin ruoskimispaalu sanotaan olleen.',
+          lahde: 'Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Christ Church, Zanzibar',
+        },
+        {
+          otsikko: 'Prinsessa, joka opetti itsensä kirjoittamaan',
+          teksti: 'Sayyida Salme syntyi 30. elokuuta 1844 sulttaani '
+            + 'Said bin Sultanin kolmestakymmenestäkuudesta lapsesta '
+            + 'nuorimpana. Lapsuutensa hän vietti Bet il Mtonin '
+            + 'palatsissa meren rannalla kahdeksan kilometriä '
+            + 'kaupungista pohjoiseen. Veli Majid opetti hänet '
+            + 'ratsastamaan ja ampumaan, ja kirjoittamaan hän opetti '
+            + 'itse itsensä — taito oli naisille tuolloin epätavallinen. '
+            + 'Juuri siksi hänestä tuli viisitoistavuotiaana veljensä '
+            + 'Barghashin puolueen sihteeri. Vuonna 1866 hän pakeni '
+            + 'brittiläisellä fregatilla Adeniin ja avioitui '
+            + 'saksalaisen kauppiaan kanssa. Hänen muistelmansa '
+            + 'ilmestyivät 1886 ja ovat ensimmäinen tunnettu '
+            + 'arabinaisen omaelämäkerta.',
+          tiedosto: 'Portrait of Emily Ruete in Omani dress Or. 27.135 D 1 - recto.tiff',
+          vuosi: '1800-luku',
+          selite: 'Sayyida Salme omanilaisessa asussa: koruja '
+            + 'otsalta nilkkoihin, ja jalkineet on riisuttu lattialle.',
+          lahde: 'Plate, H.F., Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Emily Ruete',
+        },
+        {
+          otsikko: 'Linnake, jossa näytetään elokuvia',
+          teksti: 'Vanha linnake on Kivikaupungin vanhin rakennus: '
+            + 'portugalilaiset aloittivat sen 1600-luvulla, omanilaiset '
+            + 'saivat sen valmiiksi vuosisadan lopulla ja rakensivat '
+            + 'uudelleen 1700-luvulla. Se on korkeamuurinen neliö, ja '
+            + 'sisäpihalla on yhä jäänteitä portugalilaisesta kirkosta. '
+            + '1800-luvulla linnake oli varuskunta ja vankila, ja '
+            + 'vuosina 1905—1928 se toimi Sansibarin rautatien '
+            + 'pääteasemana. Amfiteatteri lisättiin 1990-luvulla, ja '
+            + 'nykyään pihalla on kulttuurikeskus, jonka ulkoilmalava '
+            + 'täyttyy lähes joka ilta. Linnake on Sansibarin '
+            + 'elokuvajuhlan päänäyttämö: juhla perustettiin 1997, ja '
+            + 'sen palkinnot ovat Kultainen ja Hopeinen dhow.',
+          tiedosto: 'Old Fort in Zanzibar.jpg',
+          selite: 'Linnakkeen pyöreä bastioni ja hammasreunus '
+            + 'kohoavat kadun päässä korallikivestä.',
+          lahde: 'Eric Kilby, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Old Fort of Zanzibar',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Stone Town, Zanzibar (10) (29109157085).jpg',
+          selite: 'Kirjottuja kofia-lakkeja pinossa torilla: jokaisessa '
+            + 'on oma kuvionsa ja väriyhdistelmänsä.',
+          lahde: 'Richard Mortel from Riyadh, Saudi Arabia, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Sansibar on saariryhmä Intian valtameressä '
+          + 'Manner-Tansanian rannikolla, ja sen pääsaari on Unguja. '
+          + 'Sansibarin kaupunki on saaren länsirannikolla pienellä '
+          + 'niemellä: vanha osa on Kivikaupunki, uudempi on Ngʼambo, '
+          + 'swahiliksi toinen puoli, ja niiden välissä kulkee '
+          + 'entisen salmen paikalle vedetty katu. Kivikaupunki oli '
+          + 'sulttaanikunnan pääkaupunki ja on Unescon '
+          + 'maailmanperintökohde vuodesta 2000. Sen arkkitehtuuri on '
+          + 'pääosin 1800-luvulta ja yhdistää arabialaisia, '
+          + 'persialaisia, intialaisia ja eurooppalaisia aineksia. '
+          + 'Kadut ovat niin kapeita, ettei niillä kulje auto, joten '
+          + 'kaupungissa liikutaan jalan, pyörällä ja mopolla. '
+          + 'Sansibar on osa Tansaniaa mutta puoliksi itsehallinnollinen, '
+          + 'ja Kivikaupunki on sen hallinnon paikka.',
+        artikkeli: {
+          nimi: 'Matkailijan Sansibar',
+          taitto: 'opas',
+          teksti: 'Kaupunki, joka luetaan jalkapohjilla: kujat ovat '
+            + 'liian kapeita autolle, meri tuo kaksi tuulta vuodessa '
+            + 'ja saaren toisella laidalla on 1100-luvun moskeija.',
+          nosto: 'Kivikaupungin 1 709 rakennuksesta noin '
+            + 'kahdeksankymmentä prosenttia on rappeutumassa. Syy on '
+            + 'aineessa: korallikivi on hauras ja vaatii jatkuvaa '
+            + 'huoltoa. Vuoden 1994 suojelulaki määrittelee keinot, ja '
+            + 'Aga Khanin kulttuurirahasto on kunnostanut etenkin '
+            + 'rantakadun taloja.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Saarelle tullaan lautalla Dar es Salaamista '
+                + 'tai lentäen: Abeid Amani Karume International '
+                + 'Airport on aivan Kivikaupungin eteläpuolella. '
+                + 'Pääsatama on Malindissa, joka rakennettiin 1925 ja '
+                + 'jonka kautta kulkee yhdeksänkymmentä prosenttia '
+                + 'saarten kaupasta. Saarella liikutaan yksityisillä '
+                + 'daladala-pikkubusseilla; nimi tulee 1970- ja '
+                + '1980-luvuilta, jolloin matka kaupunkiin maksoi '
+                + 'viisi shillinkiä eli yhden dalan, ja meno ja paluu '
+                + 'tekivät daladalan. Pääasemat ovat Darajanin ja '
+                + 'Mwanakwerekwen toreilla, ja bussi lähtee '
+                + 'täyttyessään eikä aikataulun mukaan. Kivikaupungin '
+                + 'sisällä kaikki on kävelymatkan päässä.',
+            },
+            {
+              otsikko: 'Kivikaupunki ja Ngʼambo',
+              teksti: 'Kivikaupungin sydän on kujasokkelo, jossa '
+                + 'talot kohoavat molemmin puolin niin lähellä '
+                + 'toisiaan, että taivasta näkyy vain kaistale. '
+                + 'Rantakadulla kadut ovat leveämpiä ja rakennukset '
+                + 'suurempia ja säännöllisemmin aseteltuja: siellä '
+                + 'ovat entiset sulttaanien palatsit, linnoitus, '
+                + 'kirkot ja moskeijat. Creek Road erottaa vanhan '
+                + 'kaupungin Ngʼambosta, ja se kulkee sen salmen '
+                + 'paikalla, joka erotti niitä ennen täyttöä. '
+                + 'Kivikaupunki elää nykyään suurelta osin '
+                + 'matkailusta, ja sen suojelu on omaa työtään: '
+                + 'korallikivi rapautuu, jos taloa ei huolleta.',
+            },
+            {
+              otsikko: 'Saarelta saarelle',
+              teksti: 'Unguja on pääosin matalaa maata, ja sen '
+                + 'hiekkarantoja reunustavat korallirifit, jotka ovat '
+                + 'lajistoltaan rikkaita. Saariryhmän toinen suuri '
+                + 'saari on Pemba pohjoisessa. Kaupungin edustalla, '
+                + 'noin viiden kilometrin päässä luoteeseen, on '
+                + 'Changuu, jota kutsutaan vankilasaareksi. Saaren '
+                + 'eteläkärjessä Dimbanissa on Kizimkazin moskeija, '
+                + 'jonka kufilainen kaiverrus ajoittaa vuoteen 1107 — '
+                + 'se on Itä-Afrikan rannikon vanhimpia islamilaisia '
+                + 'rakennuksia, vaikka nykyinen rakennus on suurelta '
+                + 'osin 1700-luvulta. Hautausmaalla on pylväshautoja, '
+                + 'ja katto lepää mangrovepuun varsien varassa.',
+            },
+            {
+              otsikko: 'Ihmeiden talo rantakadulla',
+              teksti: 'Kivikaupungin suurin ja korkein rakennus on '
+                + 'Ihmeiden talo, joka valmistui 1883 sulttaani '
+                + 'Barghashille: 39 metriä korkea ja 50 metriä '
+                + 'kumpaankin suuntaan. Nimi tuli siitä, että se oli '
+                + 'ensimmäinen sähköistetty rakennus Sansibarissa ja '
+                + 'ensimmäinen hissillinen koko Itä-Afrikassa. '
+                + 'Leveitä ulkoparvekkeita kannattavat valurautapylväät '
+                + 'olivat uutta saaren rakennustaidossa, ja aineina '
+                + 'olivat korallikivi, betonilaatat, mangroveparrut ja '
+                + 'teräspalkit. Pääovi tehtiin niin leveäksi, että '
+                + 'sulttaani saattoi ratsastaa siitä sisään norsun '
+                + 'selässä. Sisäänkäynnin edessä on kaksi '
+                + '1500-luvun portugalilaista pronssitykkiä, jotka '
+                + 'persialaiset ottivat saaliiksi 1622. Kellotorni '
+                + 'lisättiin julkisivuun 1897. Talo on ollut suljettuna '
+                + 'vaurioiden takia, ja joulukuussa 2020 osa '
+                + 'julkisivua romahti korjaustöiden aikana.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian '
+                + 'Zanzibar-artikkelin Climate-osiosta; lehdellä ei '
+                + 'ole omaa vuosigraafia, koska säänormaaleja ei '
+                + 'haettu tässä erässä. Ilmasto on trooppinen '
+                + 'monsuuni-ilmasto, ja saaret ovat lähellä '
+                + 'päiväntasaajaa eli lämpimiä ympäri vuoden. Sateet '
+                + 'jakautuvat kahteen kauteen: pääsadekausi on '
+                + 'maalis—toukokuussa lounaismonsuunin aikaan ja '
+                + 'toinen huippu marras—joulukuussa; vähiten sataa '
+                + 'heinäkuussa. Kuumimmat kuukaudet ovat helmi— ja '
+                + 'maaliskuu, viileimmät heinä— ja elokuu. '
+                + 'Koillismonsuunin aikaan pohjois- ja itärannikolla '
+                + 'puhaltaa voimakas merituuli, joka viilentää '
+                + 'tuntuvasti. Elokuvajuhla ZIFF pidetään heinäkuussa.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Kivikaupungin kujat',
+                tahdet: 3,
+                selite: 'Unescon maailmanperintökohde, jonka kadut '
+                  + 'ovat liian kapeita autoille.',
+              },
+              {
+                mita: 'Ihmeiden talo',
+                tahdet: 3,
+                selite: 'Sansibarin ensimmäinen sähköistetty '
+                  + 'rakennus ja Itä-Afrikan ensimmäinen hissitalo; '
+                  + 'suljettu vaurioiden takia.',
+              },
+              {
+                mita: 'Changuun kilpikonnat',
+                tahdet: 3,
+                selite: 'Aldabranjättiläiskilpikonnia saarella, '
+                  + 'jonka vankila ei koskaan saanut vankeja.',
+              },
+              {
+                mita: 'Kizimkazin moskeija',
+                tahdet: 2,
+                selite: 'Kufilainen kaiverrus vuodelta 1107 saaren '
+                  + 'eteläkärjessä.',
+              },
+              {
+                mita: 'Elokuvajuhla heinäkuussa',
+                tahdet: 2,
+                selite: 'Festival of the Dhow Countries täyttää '
+                  + 'vanhan linnakkeen amfiteatterin kymmeneksi '
+                  + 'päiväksi.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5
+             * ja teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Autolla ei pääse perille',
+                teksti: 'Kivikaupungin kujat ovat liian kapeita '
+                  + 'autoille — matkatavarat kulkevat viimeisen '
+                  + 'matkan jalan, pyörällä tai mopon kyydissä.',
+              },
+              {
+                otsikko: 'Kaksi sadekautta',
+                teksti: 'Pääsadekausi on maalis—toukokuussa ja '
+                  + 'toinen huippu marras—joulukuussa; kuivin '
+                  + 'kuukausi on heinäkuu.',
+              },
+              {
+                otsikko: 'Talot ovat hauraita',
+                teksti: 'Noin kahdeksankymmentä prosenttia '
+                  + 'Kivikaupungin 1 709 rakennuksesta on '
+                  + 'rappeutumassa, ja osa kohteista voi olla '
+                  + 'suljettuna korjausten takia.',
+              },
+              {
+                otsikko: 'Daladala lähtee täyttyessään',
+                teksti: 'Aikataulua ei ole eikä lippuja voi varata '
+                  + 'etukäteen; bussi lähtee, kun siihen ei mahdu '
+                  + 'enempää väkeä.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Monsuuni ja meri',
+      johdanto: 'Sansibarin vuosi kulkee kahden tuulen mukaan: '
+        + 'kaskazi puhaltaa koillisesta ja kusi lounaasta. Ne toivat '
+        + 'purjeet Arabiasta ja Intiasta ja vievät yhä kalastajan '
+        + 'ulos ja takaisin.',
+      tehtava: {
+        kysymys: 'Miksi Changuuta kutsutaan vankilasaareksi, vaikka '
+          + 'siellä ei koskaan ollut vankeja?',
+        vaihtoehdot: [
+          'Vankilaa ei koskaan rakennettu',
+          'Vankila valmistui 1894, mutta saaresta tehtiin sen sijaan '
+            + 'karanteenisaari',
+          'Vangit karkasivat heti ensimmäisenä yönä',
+          'Nimi tarkoittaa swahiliksi vankilaa',
+        ],
+        oikea: 1,
+        fakta: 'Vanha vankila muutettiin karanteenisairaalaksi, ja '
+          + 'vuonna 1923 saari nimettiin virallisesti Quarantine '
+          + 'Islandiksi.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaskazi ja kusi',
+          teksti: 'Sansibarin ilmasto on trooppinen monsuuni-ilmasto, '
+            + 'ja vuoden rytmin antavat kaksi tuulta. Koillismonsuuni, '
+            + 'swahiliksi kaskazi, tuo voimakkaita merituulia, jotka '
+            + 'viilentävät etenkin pohjois- ja itärannikkoa. '
+            + 'Lounaismonsuuni, kusi, tuo pääsadekauden maalis—'
+            + 'toukokuussa; toinen sadehuippu on marras—joulukuussa ja '
+            + 'vähiten sataa heinäkuussa. Juuri näiden tuulten takia '
+            + 'kaupunki on siinä missä se on: Arabian niemimaan, '
+            + 'Persianlahden ja Länsi-Intian kauppiaat purjehtivat '
+            + 'monsuunin avulla Intian valtameren yli ja laskivat '
+            + 'suojaisaan satamaan, joka on nykyisen Sansibarin '
+            + 'kaupungin paikalla. Tuuli päätti, milloin sai lähteä ja '
+            + 'milloin oli pakko jäädä.',
+          wiki: 'Zanzibar',
+        },
+        {
+          otsikko: 'Dhow, jonka nimen antoivat muut',
+          teksti: 'Dhow on yleisnimitys perinteisille purjealuksille, '
+            + 'joissa on yksi tai useampi masto ja settee-purjeet, '
+            + 'joskus latinalaispurjeet. Rungot ovat pitkiä ja '
+            + 'kapeita, ja alukset kuljettavat raskasta rahtia '
+            + 'Itä-Arabian, Iranin, Itä-Afrikan, Jemenin ja '
+            + 'Etelä-Aasian rannikoilla; suuremmassa on noin '
+            + 'kolmenkymmenen ja pienemmässä noin kahdentoista miehen '
+            + 'miehistö. Nimi on eurooppalaisten keksimä kokoava '
+            + 'sana — arabit ja intialaiset nimeävät jokaisen tyypin '
+            + 'erikseen, ja swahilirannikolla puhutaan jahazista. '
+            + 'Sanan itsensä uskotaan tulevan swahilin sanasta daw, '
+            + 'alus. Vuoden 1873 kirjassaan kapteeni G. L. Sulivan '
+            + 'erotteli neljä eri rannikkodhow-tyyppiä.',
+          tiedosto: 'Zanzibar 2012 06 05 4427 (7592143670).jpg',
+          selite: 'Dhow kulkee täysissä purjeissa: kolmiopurje on '
+            + 'kiinnitetty pitkään vinoon raakapuuhun.',
+          lahde: 'Harvey Barrison from Massapequa, NY, USA, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Dhow',
+        },
+        {
+          otsikko: 'Vankilasaari, jossa ei ollut vankeja',
+          teksti: 'Changuu on saari kaupungin edustalla noin viiden '
+            + 'kilometrin päässä luoteeseen, ja se on nimetty '
+            + 'ympäröivässä meressä yleisen kalan mukaan. Saari oli '
+            + 'asumaton 1860-luvulle asti, jolloin sulttaani Majid bin '
+            + 'Said antoi sen kahdelle arabille; he käyttivät sitä '
+            + 'kapinallisten orjien säilytyspaikkana. Britannian ensimmäinen '
+            + 'ministeri Lloyd Mathews osti saaren 1893 ja rakennutti '
+            + 'sinne vankilan, joka valmistui 1894 — mutta yhtään '
+            + 'vankia ei koskaan tuotu. Sen sijaan saaresta tuli '
+            + 'karanteenipaikka koko Britannian Itä-Afrikalle, ja '
+            + 'vanhasta vankilasta tehtiin sairaala; 1923 saari '
+            + 'nimettiin virallisesti Quarantine Islandiksi.',
+          wiki: 'Changuu',
+        },
+        {
+          otsikko: 'Neljä kilpikonnaa vuonna 1919',
+          teksti: 'Seychellien brittikuvernööri lähetti 1919 '
+            + 'Changuulle lahjaksi neljä aldabranjättiläiskilpikonnaa '
+            + 'Aldabran saarelta. Ne lisääntyivät nopeasti, ja 1955 '
+            + 'niitä oli noin kaksisataa. Sitten alkoi katoaminen: '
+            + 'eläimiä varastettiin myytäväksi lemmikeiksi ja ruoaksi, '
+            + 'ja kanta putosi noin sataan vuonna 1988, viiteenkymmeneen '
+            + '1990 ja seitsemään vuonna 1996. Saarelle tuotiin '
+            + 'kahdeksankymmentä poikasta, joista neljäkymmentä katosi. '
+            + 'Vasta suuri aitaus käänsi suunnan: vuoteen 2000 mennessä '
+            + 'saarella oli seitsemäntoista aikuista, viisikymmentä '
+            + 'nuorta ja yhdeksänkymmentä poikasta. Laji on '
+            + 'kansainvälisen luonnonsuojeluliiton punaisella listalla '
+            + 'vaarantuneena.',
+          tiedosto: 'Tortuga gigante de Aldabra (Aldabrachelys gigantea), isla Changuu, Tanzania, 2024-05-31, DD 10.jpg',
+          selite: 'Aldabranjättiläiskilpikonna kävelee saaren '
+            + 'punaisella mullalla kaula kokonaan ojennettuna.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Changuu',
+        },
+        {
+          otsikko: 'Sato, joka korjataan vedestä',
+          teksti: 'Mausteiden ja matkailun rinnalla Sansibarin '
+            + 'tärkeimpiä vientituloja on merilevä. Viljelty laji on '
+            + 'punalevä Eucheuma, ja viljelmiä on esimerkiksi '
+            + 'Jambianin rannalla saaren itälaidalla. Työtä tekevät '
+            + 'enimmäkseen naiset: taimet sidotaan matalaan veteen '
+            + 'pingotettuihin köysiin, ja sato korjataan ja kuivataan '
+            + 'rannalla. Merilevänviljelyn taloudellisia mahdollisuuksia '
+            + 'tutki Adelaida K. Semesi vuodesta 1982 kuolemaansa 2001 '
+            + 'asti. Työ on käynyt vaikeammaksi: neljässäkymmenessä '
+            + 'vuodessa lämpötilat ja tuulen nopeudet ovat nousseet '
+            + 'merkittävästi, ja se yhdessä sademallien muutosten '
+            + 'kanssa saa sadon mätänemään tai tuhoutumaan korjuun '
+            + 'aikana.',
+          tiedosto: 'WomenWorking SeaweedZanzibar 2.jpg',
+          selite: 'Kaksi naista sitoo levän taimia köysiin '
+            + 'polvisyvyisessä vedessä; kepit merkitsevät rivit.',
+          lahde: 'Rachel Clara Reed, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Zanzibar',
+        },
+      ],
+    },
+  ],
+  /*
+   * FÈS (Opus 7.9.2026, paketti O9) — Afrikan laudan kaupunkilehti.
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-fes.md ja sen
+   * riippumaton tarkistus tarkistus-fes.md (tuomio "kelpaa, kun
+   * kohtien A–H ratkaisut tehdään"; kaikki ratkaisut on tehty, ks.
+   * alla). Väitteet on luettu en-Wikipedian raakateksteistä
+   * 7.9.2026: "Fez, Morocco", "Fes el Bali", "Fes Jdid",
+   * "Fez (hat)", "Dar Batha", "Bab Bou Jeloud", "Marinid Tombs",
+   * "Bou Inania Madrasa", "Al-Attarine Madrasa", "Saffarin Madrasa",
+   * "Funduq al-Najjarin", "Zawiya of Moulay Idris II",
+   * "Mellah of Fez", "Fez Festival of World Sacred Music".
+   *
+   * RAJAUS MAALEHTEEN NÄHDEN: Marokon maalehti (maa-kategoriat.js
+   * MAR) on jo tehty, ja se on ottanut neljä Fèsin parasta aihetta.
+   * TÄSSÄ LEHDESSÄ EI SIIS KÄSITELLÄ: al-Qarawiyyinia ja Fatima
+   * al-Fihriä ("Yliopisto, jonka perusti kauppiaan tytär"),
+   * Chouaran nahkurialtaita ("Altaat, joissa väri on kasvia"),
+   * Dar al-Maganan vesikelloa ("Kello, jota kukaan ei enää osaa
+   * korjata") eikä zellijin valmistusta ("Palapeli, joka ladotaan
+   * nurin päin"). Sama koskee Idris I:n pakoa, al-Alaa, malhunia,
+   * pastillaa, ras el hanoutia ja hariraa. Toinen agentti teki
+   * samaan aikaan Tangerin ja Marrakechin lehdet; niiden aiheisiin
+   * ei kosketa.
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * SAAPUMISTEKSTIÄ EI KIRJOITETTU, vaikka erän ohje sen listaa —
+   * africa-saapumiset.js on otsikkonsa mukaan "Matkakirjan
+   * saapumistekstit", ja `fes` on tests/vanha-maailma.test.mjs:n
+   * KAARETTOMAT-listalla, jonka perustelu on juuri omistajan
+   * tarinakaaritauko. Asia on raportoitu Fablelle.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'kirjallisuus' (AIHE_IKONIT, js/ui-apurit.js).
+   *
+   * TARKISTUKSEN RATKAISUT:
+   *  - A: lähteet nimeävät joen rannat kolmella eri tavalla
+   *    (kaakkois-, oikea- ja itäranta). Teksti ei nimeä
+   *    ilmansuuntia lainkaan vaan puhuu "toisesta rannasta".
+   *  - B: andalusialaisten tulo ajoitetaan päälähteen mukaan
+   *    vuosiin 817–818, ei kaupungin perustamisvuoteen.
+   *  - C: Bab Guissa ja Bab Ftouh saavat karkean muodon
+   *    "pohjoisessa" ja "etelässä", koska sama artikkeli antaa
+   *    niille kaksi eri ilmansuuntaa.
+   *  - D: fetsihatun ristiriita KIRJOITETAAN AUKI lukijalle —
+   *    kaupungin artikkeli pitää Fèsiä ainoana valmistuspaikkana,
+   *    hatun oma artikkeli sanoo alkuperän kiistanalaiseksi ja
+   *    nimeää Tunisin. Kumpaakaan ei esitetä ainoana totuutena.
+   *  - E: Dar Bathan kokoelma on kohteen oman artikkelin luku
+   *    (yli 6 500), ei yleisartikkelin 6 000.
+   *  - F: juutalaisyhteisön nykykokoa EI anneta lukuna, koska sama
+   *    artikkeli antaa kaksi eri lukua (alle 200 ja 150).
+   *  - H: nosto K2 kertoo Hassan I:n muurikäytävästä ILMAN nimiä
+   *    (Jnan Sbil, Dar Batha), jotta kohdekartan Dar Batha -juttu ei
+   *    toista sitä.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi, tekijä
+   * ja koko extmetadatasta) ja jokainen katsottiin silmin 900 px
+   * esikatseluna. HYLÄTYT: "Fes medina street DSCF3721.jpg"
+   * (etualalla tunnistettavat kasvot), "Saffarine Square
+   * DSCF4157 (crop for madrasa entrance).jpg" (sama vika),
+   * "Iben Danan synagogue in Mellah (Fes).jpg" (kuva pelkästä
+   * opastekyltistä, ei rakennuksesta), "Fèz médina Morroco 2.jpg"
+   * (katunäkymä ja tunnistettavia kasvoja; ETUSIVUKUVAN KAAVA
+   * kieltää katunäkymän), "שער הספר אבודרהם.jpg" (Commonsin tekijä
+   * on Eliezer Toledanon paino, joka toimi Lissabonissa — kuva ei
+   * siis todennettavasti ole Fèsin 1516 painoksesta).
+   *
+   * KAKSI NOSTOA ON KUVATTOMIA JA SE ON MERKITTY: fetsihatusta ja
+   * Fèsin kirjapainoista ei löytynyt Commonsista yhtään todennettua
+   * kuvaa. Kuvatilaukset on kirjattu raporttiin kuvaputkelle.
+   *
+   * AIHETOISTO, joka on tarkoituksellinen ja kirjattu: Bab Bou
+   * Jeloud esiintyy kolmessa eri tiedostossa (ennen–nyt-parin
+   * molemmat puolet ja kohdekartan juttu) — sama kohde, eri kuvat,
+   * eri kulma. Sama koskee al-Qandusin kalligrafiaa: teemasivun
+   * nostossa on hänen oma taulunsa, zawiyan jutussa hänen työtään
+   * seinällä.
+   *
+   * SÄÄRIVIÄ EI OLE: sen tekee erillinen agentti tässä erässä.
+   * Oppaan sääjakso nojaa en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen (Samarkand-malli v965).
+   */
+  fes: [
+    {
+      id: 'kaupunki',
+      nimi: 'Fès',
+      johdanto: 'Fès alkoi kahtena kaupunkina joen kahdella rannalla, '
+        + 'ja ne riitelivät kaksisataa vuotta ennen kuin ne '
+        + 'yhdistettiin. Isoisän matkavuonna 1873 valtaan nousi '
+        + 'sulttaani, joka yhdisti kaupungin vielä kerran.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa: medina pohjoisen kukkulalta,
+       * kattomeri minareetteineen ja muurit Bou Jeloudin puolella.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Fes el Bali from nord(js).jpg',
+          selite: 'Pohjoisen kukkulalta koko vanhakaupunki mahtuu '
+            + 'yhteen kuvaan muureineen ja kukkularinteineen.',
+          lahde: 'Jerzystrzelecki, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          tiedosto: '29612-Fez (27595871294).jpg',
+          selite: 'Medinan kattomeressä erottuvat vihreät tiilikatot '
+            + 'ja minareetit, muuten talot ovat samaa savenväriä.',
+          lahde: 'xiquinhosilva from Cacau, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Bou Jeloud and Kasbah An-Nouar.jpg',
+          selite: 'Medinan muuri torneineen kaartaa Bou Jeloudin '
+            + 'aukion ohi, ja sen takana alkaa kujaverkko.',
+          lahde: 'Casual Builder, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat. Fèsille ei ole generoitu herokuvia, joten
+       * karusellissa on kolme aitoa valokuvaa (vertaa Kapkaupunkiin
+       * ja Denveriin): kattopanoraama vuorten edessä, kattojen
+       * pikkurivi lähempää ja muuri hautausmaan yllä.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Fes (47897869971).jpg',
+          selite: 'Iltapäivän valossa medinan katot jatkuvat '
+            + 'yhtenäisenä pintana Atlasvuorten juurelle asti.',
+          lahde: 'Paolo Gamba from Paris, France, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Fes Morocco Medina rooftops Sept 2014 - 1 (15922382065).jpg',
+          selite: 'Katoilta näkyy, miten tiiviisti talot on ladottu '
+            + 'toisiinsa kiinni; välissä kohoaa yksi minareetti.',
+          lahde: 'Andrew Nash from Vienna, Austria, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Fes el Bali(js).jpg',
+          selite: 'Kattojen keskellä kupertuu hammamin valkoinen '
+            + 'kupoli, ja pyykkinarut on pingotettu talolta toiselle.',
+          lahde: 'Jerzystrzelecki, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: sama portti, sama kuvakulma, yhdeksänkymmentä
+       * vuotta. Molemmissa kuvissa katsotaan Bab Bou Jeloudin
+       * kaaren läpi kohti samoja kahta minareettia. Vanha on Walter
+       * Mittelholzerin Tšad-lennolta 1930–31 (ETH-kirjaston
+       * kokoelma, PD), uusi on nykyvalokuva.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'ETH-BIB-Fés- Farbenprächtiges Stadttor-Tschadseeflug 1930-31-LBS MH02-08-1104.tif',
+          vuosi: '1930–1931',
+          selite: 'Bab Bou Jeloudin kaaren läpi näkyivät jo 1930-luvun '
+            + 'alussa samat kaksi minareettia kuin nykyään.',
+          lahde: 'Walter Mittelholzer, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Bab Boujeloud, Fes, Marokko.JPG',
+          selite: 'Sama kaari nykyään: sininen laatoitus on kunnostettu, '
+            + 'ja minareetit seisovat paikoillaan.',
+          lahde: 'Feldstein, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Kaksi kaupunkia, jotka riitelivät joen yli',
+          teksti: 'Idris I perusti kaupunkinsa Fèsjoen rannalle vuonna '
+            + '789, ja hänen poikansa Idris II toisen vastarannalle '
+            + '809. Kaupungit kasvoivat erikseen. Ensimmäinen väestö '
+            + 'oli berberejä ja satoja Kairouanista tulleita '
+            + 'arabisotilaita; vuosina 817–818 Córdobasta karkotetut '
+            + 'andalusialaisperheet muuttivat toiselle puolelle, ja '
+            + 'kaupunginosat saivat nimensä tulijoidensa mukaan. '
+            + 'Vuosina 1059–1061 rantoja hallitsi kaksi riitelevää '
+            + 'veljestä, Al-Gisa ja Al-Fetouh, jotka linnoittivat '
+            + 'kumpikin omansa. Heidän nimensä ovat yhä kahdessa '
+            + 'kaupunginportissa: Bab Guissa pohjoisessa, Bab Ftouh '
+            + 'etelässä.',
+          tiedosto: 'Bab Ftouh.jpg',
+          selite: 'Bab Ftouh eli etelän portti kantaa yhä sen emiirin '
+            + 'nimeä, joka linnoitti oman rantansa veljeään vastaan.',
+          lahde: 'Robert Prazeres, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Fès',
+        },
+        {
+          otsikko: '1873: sulttaani, joka yhdisti kaupungin uudestaan',
+          teksti: 'Isoisän matkavuonna valtaan nousi Moulay Hassan I, '
+            + 'ja hän hallitsi vuoteen 1894. Hänen kaudellaan tehtiin '
+            + 'viimeinen suuri muutos Fèsin kaupunkikuvaan ennen '
+            + '1900-lukua. Vanha Fes el-Bali ja marinidien vuonna 1276 '
+            + 'perustama hallintokaupunki Fes Jdid olivat seisoneet '
+            + 'erillään lähes kuusisataa vuotta; Hassan I yhdisti ne '
+            + 'rakentamalla väliin muurikäytävän, ja sen sisään nousi '
+            + 'puutarhoja ja kesäpalatseja hovin käyttöön. Samalla hän '
+            + 'laajensi kuninkaanpalatsia ja lisäsi sen pohjoispuolelle '
+            + 'uuden aukion, jonka portti seisoo yhä.',
+          tiedosto: 'Bab Dkaken.jpg',
+          selite: 'Bab Dekkakin on Hassan I:n laajennuksen pohjoisportti '
+            + 'Fes Jdidiin, ja sen takana kohoavat palatsin muurit.',
+          lahde: 'Александр Галаган, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Fès',
+        },
+        {
+          otsikko: 'Kaupunki, jossa ei kulje pyörää',
+          teksti: 'Fes el-Bali on arabimaailman vanhin yhtäjaksoisesti '
+            + 'asuttu muurikaupunki ja yksi maailman suurimmista '
+            + 'autottomista kaupunkialueista. Kujat ovat kapeammat kuin '
+            + 'vaunun akseliväli, joten tavara kulkee yhä aasin '
+            + 'selässä, ja Bab Bou Jeloudin portti on raja, jonka yli '
+            + 'autoliikenne ei pääse. Vesi tuli kaupunkiin '
+            + 'järjestelmästä, jonka rakennutti vuosina 1037–1049 '
+            + 'hallinnut Dunas ibn Hamama — ja se on pääosin säilynyt '
+            + 'tähän päivään. Unesco merkitsi vanhankaupungin '
+            + 'luetteloonsa 1981 Marokon ensimmäisenä kohteena.',
+          tiedosto: 'Panoramic view of Rainbow Street towards Bou Inania Minaret, Fes.jpg',
+          selite: 'Kuja on niin kapea, että myytävät taulut mahtuvat '
+            + 'molemmille seinille ja kulkijalle jää keskelle metri.',
+          lahde: 'AdilElouarti, Wikimedia Commons (CC0)',
+          wiki: 'Fès',
+        },
+        {
+          /*
+           * KUVATON (Opus 7.9.2026). Commonsissa ei ole yhtään
+           * todennettua kuvaa fetsihatun valmistuksesta Fèsissä;
+           * hakusanat "fez hat", "tarboosh", "Fezzes hat Morocco"
+           * palauttivat vain kaunokirjallisuuden kansia ja
+           * Andalusian katukuvaa. Kuvatilaus on kirjattu raporttiin.
+           *
+           * TARKISTUKSEN KOHTA D: ristiriita kirjoitetaan auki.
+           */
+          otsikko: 'Hattu, jonka alkuperästä kiistellään',
+          teksti: 'Punainen, lieriömäinen ja tupsullinen fetsi kantaa '
+            + 'tämän kaupungin nimeä, mutta siitä, kuka sen ensimmäisenä '
+            + 'teki, lähteet ovat eri mieltä. Fèsin oma artikkeli sanoo, '
+            + 'että kaupunki oli 1800-luvun loppuun asti maailman ainoa '
+            + 'paikka, jossa fetsejä valmistettiin. Hatun oma artikkeli '
+            + 'sanoo alkuperän olevan kiistanalainen ja nimeää '
+            + 'alkuperäiseksi tuotantokeskukseksi Tunisin, josta taitavia '
+            + 'tekijöitä houkuteltiin Konstantinopoliin. Yhtä mieltä '
+            + 'ollaan nimestä: väri saatiin täältä karmiininpunaisista '
+            + 'marjoista. Osmanisulttaani Mahmud II määräsi hatun '
+            + 'armeijalleen 1827.',
+          wiki: 'Fez (hat)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'صومعة المدرسة البوعنانية بفاس.jpg',
+          selite: 'Bou Inanian medresan minareetti on yksi harvoista '
+            + 'medresan minareeteista koko Marokossa.',
+          lahde: 'Oumaima Loudini, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Fès on Marokon henkinen ja kulttuurinen sydän, ja '
+          + 'sitä kutsutaan lännen Mekaksi ja Afrikan Ateenaksi. '
+          + 'Kaupunki jakautuu kolmeen osaan: vanhaan Fes el-Baliin, '
+          + 'vuonna 1276 perustettuun Fes Jdidiin ja ranskalaisajan '
+          + 'uuteen kaupunkiin. Kaksi ensimmäistä muodostavat medinan, '
+          + 'joka on ollut maailmanperintökohde vuodesta 1981. '
+          + 'Asukkaita oli vuoden 2024 laskennassa 1 256 172, ja '
+          + 'kaupunki on Fès-Meknèsin hallintoalueen pääkaupunki. '
+          + 'Vanhakaupunki on kokonaan kävelyaluetta.',
+        artikkeli: {
+          nimi: 'Matkailijan Fès',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa kartta ei auta ja se on tarkoituskin: '
+            + 'medinassa kuljetaan kujia myöten, kysytään tietä ja '
+            + 'päädytään pihaan, jota ei osannut odottaa.',
+          nosto: 'Fes el-Bali on arabimaailman vanhin yhtäjaksoisesti '
+            + 'asuttu muurikaupunki. Unesco kuvaa sitä yhdeksi '
+            + 'arabimuslimimaailman laajimmista ja parhaiten '
+            + 'säilyneistä historiallisista kaupungeista, ja se oli '
+            + 'Marokon ensimmäinen maailmanperintökohde vuonna 1981.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Fès–Saïs on alueen kansainvälinen lentoasema noin '
+                + 'viidentoista kilometrin päässä keskustasta etelään; '
+                + 'vuoden 2017 uusi terminaali nosti sen kapasiteetin '
+                + 'kahteen ja puoleen miljoonaan matkustajaan vuodessa. '
+                + 'Rautatieasema on uuden kaupungin laidalla, ja radat '
+                + 'vievät itään Oujdaan sekä länteen Tangeriin ja '
+                + 'Casablancaan. Kaukoliikenteen linja-autoasema on '
+                + 'heti Bab Mahroukin pohjoispuolella vanhan medinan '
+                + 'reunalla, ja CTM:llä on oma terminaalinsa uudessa '
+                + 'kaupungissa. Yhteistaksit lähtevät kolmesta '
+                + 'paikasta: Bab Mahroukista länteen, Bab Ftouhista '
+                + 'itään ja uudesta kaupungista etelään.',
+            },
+            {
+              otsikko: 'Medinassa',
+              teksti: 'Bab Bou Jeloud on raja, jonka yli autot eivät '
+                + 'pääse. Sen takaa alkaa Tala\'a Kebira, pääsuukikatu, '
+                + 'joka kulkee medinan halki kaupungin sydämeen. Kauppa '
+                + 'on historiallisesti keskittynyt pääkatujen varsille '
+                + 'ja keskustorin Kissariat al-Kifahin ympärille, josta '
+                + 'muut suukit haarautuvat. Vanhassakaupungissa on yli '
+                + 'sata funduqia eli vanhaa kauppiaiden majataloa; osa '
+                + 'niistä on yhä käsityöläisten verstaita, osa museoita '
+                + 'ja osa hotelleja. Käsityö elää yhä medinassa, joskin '
+                + 'se nojaa nykyään pitkälti matkailuun.',
+              kuva: {
+                tiedosto: 'Traditional carpets hanging on a wire in an alley of Fes..jpg',
+                selite: 'Matot ripustetaan kujan yli pingotetulle '
+                  + 'langalle, koska seinillä ei ole tilaa.',
+                lahde: 'AdilElouarti, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Hammamiin',
+              teksti: 'Fès on säilyttänyt monta vanhaa hammamia, ja '
+                + 'paikalliset käyttävät niitä yhä. Esimerkiksi '
+                + 'Hammam as-Saffarin, Hammam al-Mokhfiya ja Hammam '
+                + 'Ben Abbad ovat 1300-luvulta. Ne rakennettiin '
+                + 'kaivon tai lähteen viereen, ja kaupungin viettävä '
+                + 'maasto hoiti viemäröinnin. Pohjakaava on peritty '
+                + 'roomalaisesta kylpylästä: pukuhuone, kylmä huone, '
+                + 'lämmin huone ja kuuma huone. Ulkoa hammamin '
+                + 'tunnistaa kupoleista ja holveista, jotka kohoavat '
+                + 'kattojen yli — sitä kannattaa katsella kattoterassilta, '
+                + 'koska kadulta niitä ei näe.',
+              kuva: {
+                tiedosto: 'Hamamm Seffarine rooftop in Fes.jpg',
+                selite: 'Hammamin katolla kupolit ja holvit nousevat '
+                  + 'riviin, ja niiden aukot päästävät höyryn ulos.',
+                lahde: 'Gonzalo Riestra from España, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kaupungin omat juhlat',
+              teksti: 'Maailman pyhän musiikin festivaali alkoi 1994, ja '
+                + 'sen perusti Faouzi Skali. Se pidetään touko–kesäkuussa '
+                + 'noin kymmenen päivän ajan, ja konsertteja on eri '
+                + 'puolilla kaupunkia, myös Bab Makinan aukiolla Fes '
+                + 'Jdidissa. Esiintyjiin ovat kuuluneet muun muassa '
+                + 'Patti Smith, Youssou N\'Dour, Salif Keita, Ravi '
+                + 'Shankar, Miriam Makeba, Björk ja Joan Baez. '
+                + 'Kaupungin oma vanha juhla on Moulay Idris II:n '
+                + 'moussem, jonka kustantavat kaikki killat yhdessä: ne '
+                + 'kulkevat kulkueena mausoleumille ja lahjoittavat '
+                + 'sinne muun muassa keswan, Koraanin jakeilla '
+                + 'koristellun suuren kankaan.',
+              kuva: {
+                tiedosto: 'مهرجان الموسيقى الروحية ، فاس.jpg',
+                selite: 'Pyhän musiikin festivaalin lava on pystytetty '
+                  + 'vanhan kaupunginportin eteen.',
+                lahde: 'Nassima Chahboun, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Fez, Morocco '
+                + '-artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säärivi tehdään erikseen. '
+                + 'Ilmasto on kuumakesäinen välimerenilmasto vahvalla '
+                + 'mannerilmaston vaikutuksella. Talven ylin on '
+                + 'tyypillisesti noin 15 astetta ja alin noin 4,5 '
+                + 'astetta joulu–tammikuussa, eikä halla ole '
+                + 'harvinaista. Kesän ylin on heinä- ja elokuussa noin '
+                + '34,5 astetta ja alin noin 18. Sadetta tulee hyvinä '
+                + 'vuosina jopa 800 millimetriä. Mitatut ääriarvot ovat '
+                + '46,7 ja miinus 8,2 astetta, ja lunta sataa '
+                + 'keskimäärin kerran kolmessa tai viidessä vuodessa.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Fes el-Bali',
+                tahdet: 3,
+                selite: 'Arabimaailman vanhin yhtäjaksoisesti asuttu '
+                  + 'muurikaupunki, kokonaan kävelyaluetta.',
+              },
+              {
+                mita: 'Bou Inanian medresa',
+                tahdet: 3,
+                selite: 'Marokon ainoa medresa, joka toimi myös '
+                  + 'perjantaimoskeijana — ja siksi minareetillinen.',
+              },
+              {
+                mita: 'Bab Bou Jeloud',
+                tahdet: 2,
+                selite: 'Vuonna 1913 rakennettu koristeportti, medinan '
+                  + 'pääsisäänkäynti ja autoliikenteen raja.',
+              },
+              {
+                mita: 'Marinidien haudat',
+                tahdet: 2,
+                selite: 'Raunioituneet mausoleumit pohjoisella '
+                  + 'kukkulalla; sieltä näkee koko vanhankaupungin.',
+              },
+              {
+                mita: 'Dar Bathan museo',
+                tahdet: 2,
+                selite: 'Hassan I:n aloittama kesäpalatsi, jossa on '
+                  + 'nykyään yli 6 500 esinettä.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksossa 5.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Eksyminen kuuluu asiaan',
+                teksti: 'Medinassa ei ole yhtään pitkää suoraa katua, ja '
+                  + 'kujat kapenevat umpikujiksi — se on osa kaupunkia '
+                  + 'eikä merkki siitä, että olisi mennyt väärin.',
+              },
+              {
+                otsikko: 'Talvella voi tulla halla',
+                teksti: 'Joulu–tammikuun yöt ovat keskimäärin 4,5 '
+                  + 'astetta, halla ei ole harvinaista, ja lunta sataa '
+                  + 'keskimäärin kerran kolmessa tai viidessä vuodessa.',
+              },
+              {
+                otsikko: 'Kesällä on kuuma',
+                teksti: 'Heinä- ja elokuun päivät ovat keskimäärin 34,5 '
+                  + 'astetta, ja kaupungin ennätys on 46,7 — kujien '
+                  + 'varjo on silloin koko päivän reitin peruste.',
+              },
+              {
+                otsikko: 'Vihreää on vähän',
+                teksti: 'Kaupungissa on noin kaksi neliömetriä '
+                  + 'viheralueita asukasta kohti, kun kansainvälinen '
+                  + 'suositus on vähintään kymmenen.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjat ja kirjoitus',
+      johdanto: 'Afrikan mantereen ensimmäinen painettu kirja tehtiin '
+        + 'Fèsissä, ja täällä kehitettiin käsiala, jollaista ei ollut '
+        + 'ennen. Kirja on tässä kaupungissa vanhempi ammatti kuin '
+        + 'moni luulee.',
+      tehtava: {
+        kysymys: 'Mihin kaupunkiin ar-Rudanin Kairosta ostama '
+          + 'kirjapaino vietiin ensin?',
+        vaihtoehdot: [
+          'Meknèsiin',
+          'Fèsiin',
+          'Tangeriin',
+          'Rabatiin',
+        ],
+        oikea: 0,
+        fakta: 'Viranomaiset takavarikoivat koneen satamassa ja '
+          + 'lähettivät sen Meknèsiin, jossa sulttaani Muhammad IV '
+          + 'silloin oleskeli. Maan ensimmäinen arabiankielinen kirja '
+          + 'painettiin siellä kesäkuussa 1865, ja vasta sen jälkeen '
+          + 'paino siirtyi Fèsiin.',
+      },
+      nostot: [
+        {
+          /*
+           * KUVATON (Opus 7.9.2026). Commonsissa on nimiölehti
+           * teoksesta Sefer Abudarham, mutta sen tekijätiedoksi on
+           * merkitty Eliezer Toledanon paino, joka toimi
+           * Lissabonissa — kuva ei siis todennettavasti ole Fèsin
+           * vuoden 1516 painoksesta, eikä sitä käytetä. Kuvatilaus
+           * on kirjattu raporttiin.
+           */
+          otsikko: 'Afrikan ensimmäinen painettu kirja',
+          teksti: 'Ensimmäinen Afrikan mantereella painettu kirja tehtiin '
+            + 'Fèsissä. Vuonna 1516 Samuel ben Isaac Nedivot ja hänen '
+            + 'poikansa painoivat hepreaksi kappaleen teoksesta Sefer '
+            + 'Abudarham. Isä ja poika olivat Lissabonista paenneita '
+            + 'juutalaisia, ja heidän painonsa jäi lyhytikäiseksi: '
+            + 'siitä lähti viisitoista kappaletta, ja yksi niistä on '
+            + 'nykyään Yhdysvaltain kongressin kirjastossa. Fès oli '
+            + 'Córdoban ohella yksi 900- ja 1000-luvun juutalaisen '
+            + 'sivistyksen keskuksista, ja kaupungin juutalaisyhteisö '
+            + 'oli Marokon vanhin ja suurin.',
+          wiki: 'Fès',
+        },
+        {
+          /*
+           * KUVATON (Opus 7.9.2026). Fèsin 1800-luvun kirjapainosta
+           * tai sen tuotteista ei löytynyt Commonsista kuvaa.
+           * Kuvatilaus on kirjattu raporttiin.
+           */
+          otsikko: 'Kirjapaino, joka takavarikoitiin satamassa',
+          teksti: 'Arabiankielinen kirjapaino tuli Marokkoon oppineen ja '
+            + 'tuomarin ar-Rudanin mukana. Hän osti sen Kairosta 1864 '
+            + 'palatessaan pyhiinvaellukselta ja palkkasi mukaan '
+            + 'egyptiläisen koneenkäyttäjän. Viranomaiset takavarikoivat '
+            + 'koneen satamassa ja lähettivät sen Meknèsiin, jossa '
+            + 'sulttaani Muhammad IV oleskeli, ja maan ensimmäinen '
+            + 'arabiankielinen kirja painettiin siellä kesäkuussa 1865. '
+            + 'Samana vuonna paino siirrettiin Fèsiin, jossa se toimi '
+            + '1940-luvulle asti. Vuoteen 1908 mennessä kaupungissa oli '
+            + 'vähintään neljä kirjapainoa.',
+          wiki: 'Fès',
+        },
+        {
+          otsikko: 'Maimonides ja Fèsin oppineet',
+          teksti: 'Fèsin juutalaisyhteisö oli olemassa jo kaupungin '
+            + 'ensimmäisinä vuosisatoina, ja siitä nousi oppineita, '
+            + 'joiden nimet tunnetaan yhä: runoilija Dunash Ben '
+            + 'Labrat, kielioppineen Judah ben David Hayyuj ja '
+            + 'talmudisti Isaac al-Fasi. Vuosina 1159–1165 kaupungissa '
+            + 'asui Maimonides, aikansa merkittävimpiä juutalaisia '
+            + 'ajattelijoita, joka oli paennut al-Andalusista. '
+            + 'Yhteisö siirrettiin 1400-luvulla Fes Jdidiin '
+            + 'syntyneeseen Mellahiin; tarkkaa ajankohtaa ja '
+            + 'olosuhteita ei ole vahvistettu. Nykyään yhteisö on hyvin '
+            + 'pieni, eivätkä korttelin synagogat ole enää käytössä.',
+          tiedosto: '"Historisches Erbe der jüdischen Gemeinde in Fes". 01.jpg',
+          selite: 'Medinan muuri kiipeää rinnettä, ja sen ulkopuolella '
+            + 'levittäytyy hautausmaa — muurien sisällä eli Marokon '
+            + 'vanhin juutalaisyhteisö.',
+          lahde: 'Holger Uwe Schmitt, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Fès',
+        },
+        {
+          otsikko: 'Käsiala, jota ei ollut ennen',
+          teksti: 'Maghrebilainen arabialainen kirjoitus on olennainen '
+            + 'osa Fèsin kuvataiteen historiaa. Osa sen säännöistä on '
+            + 'tarkkaan kodifioitu, mutta uudistuksia on tehty — '
+            + 'tunnetuimmin 1800-luvun kalligrafi Muhammad al-Qandusi, '
+            + 'joka kuoli 1861. Hän oli sufimestari ja kehitti Fèsissä '
+            + 'oman käsialansa, jolla hän jäljensi muun muassa Dala\'il '
+            + 'al-Khayrat -rukouskirjaa; se oli kirjoitettu ensimmäisen '
+            + 'kerran Fèsissä 1400-luvulla. Kaupungin suurin kirjasto '
+            + 'oli pitkään moskeijassa, ja 1800-luvun lopulla varakkaat '
+            + 'perheet alkoivat perustaa omia kirjastojaan.',
+          tiedosto: 'لوحة بسملة للقندوسي.jpg',
+          selite: 'Al-Qandusin basmala on kirjoitettu niin paksuin '
+            + 'vedoin, että kirjaimet muuttuvat kuvioksi.',
+          lahde: 'Wikimedia Commons (PD)',
+          wiki: 'Fès',
+        },
+      ],
+    },
+  ],
+  /*
+   * DAKAR (Opus 7.9.2026, paketti O9) — Afrikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-dakar.md ja sen riippumaton tarkistus
+   * tarkistus-dakar.md (tuomio "kelpaa, kun kohtien A–G ratkaisut
+   * tehdään"; kaikki ratkaisut on tehty, ks. alla). Väitteet on
+   * luettu en-Wikipedian raakateksteistä 7.9.2026: "Dakar",
+   * "Lebu people", "Four Communes", "Médina, Dakar",
+   * "Les Mamelles Lighthouse", "African Renaissance Monument",
+   * "World Festival of Black Arts", "Dakar Biennale",
+   * "Ousmane Sow", "Museum of Black Civilisations".
+   *
+   * RAJAUS MAALEHTEEN JA KARTTANOSTOIHIN NÄHDEN: Senegalin
+   * maalehti (maa-kategoriat.js SEN) on jo tehty, samoin
+   * karttanostot (maastokohteet-sen.js). TÄSSÄ LEHDESSÄ EI SIIS
+   * KÄSITELLÄ: Youssou N'Douria ja mbalaxia, sabaria, koraa,
+   * griot-perinnettä, thiéboudiennea, yassaa, mafétä, café
+   * Toubaa, Senghoria, Blaise Diagnea, senegalilaista elokuvaa,
+   * baobabia, Retba-järveä, Djoudjia eikä Suurta vihreää muuria.
+   * Gorée on karttanosto, joten saarta ei nosteta omaksi
+   * jutukseen — se mainitaan vain siltä osin kuin kaupungin oma
+   * syntytarina ja kaupungin kulttuurivisa sitä vaativat
+   * (africa-kulttuuri.js dakar.kysymys kysyy Goréestä, joten
+   * vastauksen on löydyttävä lehdestä; se on nostossa D3).
+   *
+   * EI TARINAKAARTA (omistajan päätös 17.8.2026): tehty vain lehti.
+   * africa-saapumiset.js:n ja africa-kulttuuri.js:n
+   * dakar-merkintöihin EI koskettu (sama ratkaisu kuin Nairobissa
+   * v1662-erässä). Litteät nostot jäävät kategorioiden alle
+   * piiloon, ja niiden mukana Youssou N'Dourin musiikkilinkki —
+   * sitä ei voi siirtää tähän lehteen, koska N'Dour on Senegalin
+   * maalehden aihe. Asia on raportoitu Fablelle.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'nykytaide' (AIHE_IKONIT, js/ui-apurit.js).
+   *
+   * TARKISTUKSEN RATKAISUT:
+   *  - A: Lebu-tasavallan vuosiluvut ovat lähteissä eri
+   *    ("Dakar" 1795, "Lebu people" 1776–1812). Nosto D2 kertoo
+   *    tapahtumaketjun ja SANOO ERON ÄÄNEEN; yksittäistä vuotta ei
+   *    esitetä varmana.
+   *  - B: 1873-kehys nojaa siihen, että Gorée ja sen mukana Dakar
+   *    tunnustettiin Ranskan kunnaksi 1872 ja Dakar irrotettiin
+   *    omaksi kunnakseen vasta 1887. Neljän kunnan
+   *    parlamenttipaikka oli olemassa juuri 1873 (palautettu 1871,
+   *    lakkautettu 1875) — instituutio mainitaan, mutta Blaise
+   *    Diagnea EI, koska hän on maalehden aihe.
+   *  - D: suurmoskeijan minareetin korkeutta (16 m) ei käytetä;
+   *    luku ei ole uskottava eikä sitä tarvita.
+   *  - E: renessanssimonumentista kerrotaan mitat, tekijät ja
+   *    vihkiäiset sekä yksi neutraali lause hinnan arvostelusta.
+   *    Mielenosoituksia, puoluenimiä ja tekijänoikeuskiistaa ei
+   *    käsitellä (ei nykypolitiikkaa).
+   *  - G: Goréestä kirjoitetaan vain kaksi asiaa (Ndakaarun synty
+   *    sitä vastapäätä ja orjakaupan loppu 1848 + muistopaikka),
+   *    ei saaren omaa tarinaa.
+   *
+   * POISJÄTTÖ, JOKA ON TIETOINEN: vuoden 1940 Dakarin taistelua ja
+   * Thiaroyen vuoden 1944 tapahtumia ei käsitellä. Ne ovat
+   * sotahistoriaa, eikä jälkimmäistä voi käsitellä arvokkaasti
+   * lyhyessä nostossa.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi,
+   * tekijä ja koko extmetadatasta) ja jokainen katsottiin silmin
+   * 900 px esikatseluna. HYLÄTYT: "DakarPlaceIndépendance.jpg"
+   * (kuvan hallitseva elementti on pankin logo, ja etualalla on
+   * tunnistettavia kasvoja), "DakarBiennale.jpg" (kaksi
+   * tunnistettavaa henkilöä lähikuvassa), "UCAD-Dakar.jpg"
+   * (mainosbanneri pääosassa), "Dakar 2.jpg" (satelliittikuva,
+   * jonka päälle on painettu tekstiä), "Dakar-Aerial2.jpg" ja
+   * "Dakar coast.jpg" (utuinen tai roskainen), "La corniche ouest
+   * à Dakar.jpg" (etualalla muoviroskaa), "Mamelles-Dakar-2009.jpg"
+   * (etualan täyttävät mainoskyltit), "Vue sur Yoff.jpg"
+   * (kuvan halkaiseva vaijeri), "Džamija u senegalskom glavnom
+   * gradu Dakru.jpg" (ei voitu varmistaa suurmoskeijaksi).
+   *
+   * NELJÄ NOSTOA ON KUVATTOMIA JA SE ON MERKITTY: Lebu-tasavallasta,
+   * vuoden 1873 maapähkinäsatamasta, Dak'Artista ja Ousmane Sow'sta
+   * ei löytynyt Commonsista yhtään todennettua ja kuvasäännöt
+   * täyttävää kuvaa. Kuvatilaukset on kirjattu raporttiin
+   * kuvaputkelle.
+   *
+   * SÄÄRIVIÄ EI OLE: sen tekee erillinen agentti tässä erässä.
+   */
+  dakar: [
+    {
+      id: 'kaupunki',
+      nimi: 'Dakar',
+      johdanto: 'Dakar seisoo Manner-Afrikan läntisimmässä kärjessä, '
+        + 'ja meri on kolmella puolella. Kaupunki alkoi lebujen '
+        + 'kalastajakylistä, ja isoisän matkavuonna 1873 se oli vielä '
+        + 'pieni satamapaikka toisen kunnan laidalla.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin. Ne ovat silti kolme laajaa yleiskuvaa
+       * kaupungin eri puolilta: Plateaun panoraama, siluetti
+       * mereltä ja pirogeja rannalla.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Dakar - Panorama urbain.jpg',
+          selite: 'Plateaun katot jatkuvat merelle asti, ja niiden '
+            + 'keskellä kohoaa katedraalin torni.',
+          lahde: 'Initsogan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Dakar skyline da gorè 2.jpg',
+          selite: 'Mereltä katsottuna niemen kärki näyttää matalalta '
+            + 'nauhalta, jonka päässä ovat sataman nosturit.',
+          lahde: 'Vincenzo Fotoguru Iaconianni, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+        {
+          tiedosto: 'Fishing boats in Dakar.jpg',
+          selite: 'Rantaan on vedetty kymmeniä maalattuja pirogeja, '
+            + 'ja niiden takana kaupunki nousee kalliolle.',
+          lahde: 'Pshegubj, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset
+       * laajat yleiskuvat. Dakarille ei ole generoitu herokuvia,
+       * joten karusellissa on kolme aitoa valokuvaa: keskusta
+       * ylhäältä, lahti kalliorannalta ja pirogit ylhäältä.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Senegal 141.jpg',
+          selite: 'Iltahämärässä Plateaun korttelit ulottuvat '
+            + 'yhtenäisenä mattona rannalta rannalle.',
+          lahde: '(WT-en) Kahuna613 at English Wikivoyage, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Dakar - Anse.JPG',
+          selite: 'Kaupunki päättyy jyrkkään kalliorantaan, jonka '
+            + 'juurella vesi on tyyntä ja sinistä.',
+          lahde: 'HaguardDuNord, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Soumbedioune-Boats.jpg',
+          selite: 'Ylhäältä katsottuna rannalle nostetut pirogit '
+            + 'muodostavat värillisen viuhkan.',
+          lahde: 'Jeff Attaway from Abuja, Nigeria, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: pari on kopioitu js/packs/africa-valokuvat.js:n
+       * dakar-lohkosta, jossa tiedostonimi, vuosi ja lähde on jo
+       * tarkistettu Commonsista. Selitteet on kirjoitettu tänne
+       * omiksi yhden virkkeen versioikseen, kuten
+       * docs/moduulit/kaupunkilehti.md ohjeistaa. Lähderivit on
+       * täydennetty talon muotoon (Tekijä, Wikimedia Commons
+       * (LISENSSI)); molemmat tarkistettiin uudelleen rajapinnasta
+       * 7.9.2026.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Dakar mosque circa 1900.jpg',
+          vuosi: 'noin 1900',
+          selite: 'Noin vuonna 1900 kaupunki oli vielä matala ja '
+            + 'moskeijan minareetit näkyivät kauas.',
+          lahde: 'E. Fortier, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Gorée 2024 - Vue de Dakar - 17.jpg',
+          selite: 'Sama kaupunki mereltä nykyään: nuoresta '
+            + 'satamapaikasta on kasvanut miljoonien asukkaiden '
+            + 'pääkaupunki.',
+          lahde: 'Fawaz.tairou, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      nostot: [
+        {
+          otsikko: 'Niemen oma kansa',
+          teksti: 'Cap-Vertin niemen asuttivat viimeistään 1400-luvulla '
+            + 'lebut, wolofien kalastajaryhmä, jonka oma kieli '
+            + 'lebu-wolof on läheistä sukua wolofille mutta ei ole sen '
+            + 'kanssa ymmärrettävissä. Alkuperäiset kylät Ouakam, '
+            + 'Ngor, Yoff ja Hann ovat yhä omia kaupunginosiaan, ja '
+            + 'Yoffin perustamisen perinteinen vuosi on 1430. '
+            + 'Portugalilaiset saapuivat lahdelle 1444, ja 1456 Diogo '
+            + 'Gomes avasi rauhanomaisen yhteyden. Itse Dakar alkoi '
+            + '1600-luvulla kylästä nimeltä Ndakaaru, joka perustettiin '
+            + 'Goréen saarta vastapäätä toimittamaan kauppa-asemalle '
+            + 'ruokaa ja juomavettä.',
+          tiedosto: 'Yoff-Island.jpg',
+          selite: 'Yoffin ranta ja sen edustan saari; kylä on yksi '
+            + 'niemen neljästä alkuperäisestä lebu-kylästä.',
+          lahde: 'Ji-Elle, Wikimedia Commons (PD)',
+          wiki: 'Dakar',
+        },
+        {
+          /*
+           * KUVATON (Opus 7.9.2026). Lateriittimuurista tai
+           * Lebu-tasavallasta ei ole Commonsissa kuvaa. Kuvatilaus
+           * on kirjattu raporttiin.
+           *
+           * TARKISTUKSEN KOHTA A: vuosilukujen ero sanotaan ääneen.
+           */
+          otsikko: 'Muuri niemen poikki',
+          teksti: 'Kun Cayorin marabuutit nousivat kapinaan '
+            + 'hallitsijaansa vastaan, lebut liittyivät mukaan. Kapina '
+            + 'kukistettiin, ja lebut vetäytyivät niemelleen. He '
+            + 'rakensivat lateriittilohkareista sarjan puolustusmuureja, '
+            + 'joista pisin ulottui koko niemen poikki Yoffista Hanniin, '
+            + 'ja torjuivat hyökkäyksen. Voiton jälkeen syntyi '
+            + 'itsenäinen valtio, jota ranskalaiset kutsuivat '
+            + 'Lebu-tasavallaksi. Lähteet ajoittavat tapahtumat eri '
+            + 'tavoin: kaupungin oma artikkeli vuoteen 1795, '
+            + 'lebu-kansan artikkeli vuosiin 1776–1812. Senegalin '
+            + 'valtio tunnustaa Ndakaarun serignen yhä lebujen '
+            + 'perinteiseksi auktoriteetiksi.',
+          wiki: 'Lebu people',
+        },
+        {
+          /*
+           * KUVATON (Opus 7.9.2026). Commonsin ainoa maapähkinäkuva
+           * Dakarin satamasta on arkistokortin skannaus, jossa
+           * varsinainen valokuva on postimerkin kokoinen ja jonka
+           * päällä on arkistoleimoja — kuvasäännöt hylkäävät sen.
+           * Kuvatilaus on kirjattu raporttiin.
+           */
+          otsikko: '1873: maapähkinöitä ja toisen kunnan laita',
+          teksti: 'Ranska lakkautti orjakaupan alueillaan lopullisesti '
+            + '1848; Goréen saari, jonka kautta kauppa oli kulkenut, on '
+            + 'nykyään Unescon maailmanperintökohde ja orjakaupan '
+            + 'muistopaikka. Tilalle nousi maapähkinä. Kun kauppa '
+            + 'kasvoi, kuudentuhannen asukkaan saari kävi satamana '
+            + 'ahtaaksi, ja kauppiaat siirtyivät mantereelle. '
+            + 'Ranskalaiset perustivat Ndakaaruun sotilaspostin 1857, '
+            + 'ja 1872 Gorée ja sen mukana Dakar tunnustettiin Ranskan '
+            + 'kunnaksi — yhdeksi Afrikan vanhimmista '
+            + 'länsimaistyyppisistä kunnista. Isoisän matkavuonna Dakar '
+            + 'oli siis vuoden vanhan Goréen kunnan osa; omaksi '
+            + 'kunnakseen se irrotettiin vasta 1887.',
+          wiki: 'Dakar',
+        },
+        {
+          otsikko: 'Kaksi kukkulaa',
+          teksti: 'Ouakamin kaksoiskukkulat ovat kaupungin ainoa korkea '
+            + 'maasto, ja niiltä näkee koko niemen. Ensimmäisen laella '
+            + 'on Mamellesin majakka, joka valmistui 1864 ja jota on '
+            + 'kuvattu yhdeksi maailman suurista majakoista. Sen '
+            + 'Fresnel-linssi kelluu elohopeakylvyssä, valo välähtää '
+            + 'viiden sekunnin välein 120 metrin korkeudelta ja kantaa '
+            + '31 meripeninkulmaa — se on yksi Afrikan voimakkaimmista. '
+            + 'Majakkaa ei ole automatisoitu, joten siellä on yhä '
+            + 'vartija, ja se on avoinna yleisölle. Toisen kukkulan '
+            + 'päällä seisoo Afrikan korkein patsas, viisikymmenmetrinen '
+            + 'pronssiveistos, joka vihittiin 4. huhtikuuta 2010.',
+          tiedosto: 'PhareMamelles4.JPG',
+          selite: 'Majakan valkoinen torni ja sen lyhtyhuone kohoavat '
+            + 'kukkulan laella puiden yli.',
+          lahde: 'Ji-Elle, Wikimedia Commons (PD)',
+          wiki: 'Les Mamelles Lighthouse',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'La mosquée de la divinité.jpg',
+          selite: 'Jumaluuden moskeija seisoo Ouakamin rannalla '
+            + 'kahden kupolillisen minareetin varassa.',
+          lahde: 'Passou12, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Dakar on Senegalin pääkaupunki ja Manner-Afrikan '
+          + 'läntisin kaupunki. Departementissa asuu 1 278 469 ihmistä '
+          + 'ja koko metropolialueella noin neljä miljoonaa. Kaupunki '
+          + 'on Länsi-Afrikan rahoituskeskus: siellä toimii '
+          + 'kymmenkunta kansallista ja alueellista pankkia, muun '
+          + 'muassa Länsi-Afrikan valtioiden keskuspankki, joka '
+          + 'hallinnoi yhteistä CFA-frangia. Merituuli viilentää '
+          + 'kaupunkia ympäri vuoden, ja sadekausi on lyhyt. Vuonna '
+          + '2026 Dakar isännöi nuorten kesäolympialaisia, jotka ovat '
+          + 'ensimmäinen Afrikassa järjestettävä olympiatapahtuma.',
+        artikkeli: {
+          nimi: 'Matkailijan Dakar',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa meri on kolmella puolella ja '
+            + 'tuuli neljännellä: aamulla kalasatama, iltapäivällä '
+            + 'museo ja illalla lautta saarelle.',
+          nosto: 'Dakaria reunustaa neljä pientä saarta: Yoff, N\'Gor, '
+            + 'Madeleinen saaret ja Gorée. N\'Gorin rannat vetävät '
+            + 'surffaajia, ja Gorée on Unescon maailmanperintökohde, '
+            + 'jossa satojen paikallisten taiteilijoiden teokset ovat '
+            + 'esillä ulkoilmanäyttelynä.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Blaise Diagnen kansainväliselle lentoasemalle '
+                + 'pääsee kaupungista TER-junalla: rata kulkee ensin '
+                + 'Diamniadioon ja sieltä lentoasemalle, asemia on '
+                + 'neljätoista ja nopein matka päästä päähän kestää '
+                + '45 minuuttia. Ensimmäinen koeajo tehtiin '
+                + '14. tammikuuta 2019 ja ensimmäinen matkustajajuna '
+                + 'kulki joulukuussa 2021. Kaupungissa on lisäksi '
+                + 'täysin sähköinen runkobussiverkko: 144 '
+                + 'nivelbussia, oma kaista ja 32 syöttölinjaa. Sen '
+                + 'jälkeen 69 prosenttia kaupungin väestöstä pääsee '
+                + 'keskustaan alle tunnissa, kun ennen osuus oli '
+                + 'kaksitoista prosenttia.',
+              kuva: {
+                tiedosto: 'Dakar-Gare.JPG',
+                selite: 'Vanha rautatieasema seisoo aukion laidalla; '
+                  + 'sen edessä on muistomerkki ja takana ratapiha.',
+                lahde: 'Ji-Elle, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Saaret',
+              teksti: 'Neljästä saaresta lähin on Gorée, kahden '
+                + 'kilometrin päässä satamasta. Se on Unescon '
+                + 'maailmanperintökohde, joka säilyttää siirtomaa-ajan '
+                + 'arkkitehtuurin; saarella on orjakaupan muistomerkki '
+                + 'ja orjatalo museona, ja sen kadut täyttyvät '
+                + 'paikallisten taiteilijoiden ulkoilmanäyttelystä. '
+                + 'N\'Gorin saari on N\'Gorin kunnan pohjoisrannalla, '
+                + 'ja sen rannat ovat surffaajien suosiossa; samassa '
+                + 'kunnassa on myös N\'Gorin uimaranta. Madeleinen '
+                + 'saaret ja Yoffin saari täydentävät nelikon.',
+              kuva: {
+                tiedosto: 'Le bien-être au bord de l\'océan.jpg',
+                selite: 'Rannalta näkyy horisontissa Madeleinen '
+                  + 'saarten matala kallioselkä.',
+                lahde: 'Babacar Dioum, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Ruokailu on Senegalissa perheasia. Kun on '
+                + 'ruoka-aika, joku sanoo "kay lekk", tule syömään, '
+                + 'ja kaikki kokoontuvat saman vadin ympärille ja '
+                + 'syövät käsin. Kuuluisimmat ruoat ovat kala-riisipata '
+                + 'thiéboudienne ja sipulinen yassa. Tapakulttuuri on '
+                + 'yksinkertaista mutta olennaista: tervehtimättä '
+                + 'jättäminen on epäkohteliasta, ja se huomataan. '
+                + 'Väestö on pääosin muslimeja, joten päivittäisiä '
+                + 'uskonnollisia toimituksia on paljon, ja perjantaina '
+                + 'mennään lähimoskeijaan.',
+            },
+            {
+              otsikko: 'Kaupunginosat',
+              teksti: 'Plateau on niemen kärjessä ja kaupungin '
+                + 'historiallinen ydin: siellä ovat ministeriöt, '
+                + 'katedraali ja museot, ja asukkaita on runsaat '
+                + '34 000. Médina on aivan toisenlainen — Dakarin '
+                + 'tihein ja väkirikkain kaupunginosa, jossa asuu yli '
+                + '136 000 ihmistä ja joka on säilyttänyt '
+                + 'alkuperäisen afrikkalaisen luonteensa. Se on siksi '
+                + 'myös kaupungin kulttuurikeskus ja täynnä '
+                + 'räätälinliikkeitä. Médinassa ovat suuri moskeija ja '
+                + 'Soumbédiounen katutori, joka on kaupungin '
+                + 'merkittävin. Kaupungin pohjoislaidalla Yoffissa on '
+                + 'layenilaisveljeskunnan mausoleumi.',
+              kuva: {
+                tiedosto: 'SN-dakar-markt-soumbed-01.jpg',
+                selite: 'Soumbédiounen käsityökylässä seinät on '
+                  + 'maalattu ja pihalla seisoo vasta valmistunut '
+                  + 'piroge.',
+                lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Dakar-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa vuosigraafia, '
+                + 'koska säärivi tehdään erikseen. Ilmasto on meren '
+                + 'viilentämä trooppinen puolikuiva ilmasto: sadekausi '
+                + 'kestää heinäkuusta lokakuuhun ja kuiva kausi kattaa '
+                + 'loput kahdeksan kuukautta. Sadetta tulee noin 411 '
+                + 'millimetriä vuodessa. Joulukuusta toukokuuhun päivät '
+                + 'ovat 25–28 astetta ja yöt 18–20. Toukokuusta '
+                + 'marraskuuhun on kuumempaa, päivällä 29–31 astetta ja '
+                + 'yöllä hieman yli 23–25. Silti kaupunki on selvästi '
+                + 'viileämpi kuin sisämaan Sahelin kaupungit, joissa '
+                + 'lämpötila pysyy suuren osan vuodesta yli 36 '
+                + 'asteessa.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Goréen saari',
+                tahdet: 3,
+                selite: 'Kahden kilometrin lauttamatka; Unescon '
+                  + 'maailmanperintökohde ja orjakaupan muistopaikka.',
+              },
+              {
+                mita: 'Mamellesin majakka',
+                tahdet: 3,
+                selite: 'Vuonna 1864 valmistunut majakka, jonne '
+                  + 'majakanvartijat vievät opastetulle kierrokselle.',
+              },
+              {
+                mita: 'Mustien sivilisaatioiden museo',
+                tahdet: 2,
+                selite: 'Vuonna 2018 avattu kansallismuseo, Timen '
+                  + 'listalla vuoden 2019 sadan parhaan paikan joukossa.',
+              },
+              {
+                mita: 'Théodore Monod -museo',
+                tahdet: 2,
+                selite: 'Länsi-Afrikan vanhimpia taidemuseoita, osa '
+                  + 'Cheikh Anta Diop -yliopistoa.',
+              },
+              {
+                mita: 'Soumbédioune',
+                tahdet: 2,
+                selite: 'Médinan katutori ja käsityökylä Atlantin '
+                  + 'rannalla, kaupungin merkittävin.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari).
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Sadekausi on heinä–lokakuussa',
+                teksti: 'Kuiva kausi kattaa muut kahdeksan kuukautta, '
+                  + 'ja sadetta tulee koko vuonna vain noin 411 '
+                  + 'millimetriä.',
+              },
+              {
+                otsikko: 'Merituuli tekee eron',
+                teksti: 'Kaupunki on selvästi viileämpi kuin sisämaan '
+                  + 'Sahelin kaupungit, joissa lämpötila pysyy suuren '
+                  + 'osan vuodesta yli 36 asteessa.',
+              },
+              {
+                otsikko: 'Liikenne on raskasta',
+                teksti: 'Liikenteen koordinointivirasto arvioi 2021, '
+                  + 'että huono ilmanlaatu, ruuhkat, vaaralliset tiet '
+                  + 'ja melu maksavat maalle lähes kuusi prosenttia '
+                  + 'vuotuisesta bruttokansantuotteesta.',
+              },
+              {
+                otsikko: 'Tervehtiminen ei ole muodollisuus',
+                teksti: 'Tervehtimättä jättämistä pidetään töykeytenä '
+                  + 'ja usein myös tietämättömyytenä — se kannattaa '
+                  + 'muistaa jokaisessa kaupassa ja jokaisella ovella.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'nykytaide',
+      nimi: 'Taiteen kaupunki',
+      johdanto: 'Dakarissa pidettiin 1966 ensimmäinen mustan taiteen '
+        + 'maailmanfestivaali, ja siitä alkoi kaupungin toinen elämä. '
+        + 'Nykyään Dak\'Art on koko mantereen pitkäikäisin suuri '
+        + 'taidetapahtuma.',
+      tehtava: {
+        kysymys: 'Mitkä kaksi uutta esiintymispaikkaa Dakariin '
+          + 'rakennettiin vuoden 1966 festivaalia varten?',
+        vaihtoehdot: [
+          'Daniel Sorano -teatteri ja Musée Dynamique',
+          'Suuri moskeija ja katedraali',
+          'Renessanssimonumentti ja majakka',
+          'Yliopisto ja rautatieasema',
+        ],
+        oikea: 0,
+        fakta: 'Festivaalia varten kaupunkiin rakennettiin myös uusia '
+          + 'teitä ja lentoaseman terminaali, ja vanhoja rakennuksia '
+          + 'otettiin esityskäyttöön: oikeuspalatsi, katedraali ja '
+          + 'kaupungintalo.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kuukausi, joka muutti kaupungin',
+          teksti: 'Ensimmäinen mustan taiteen maailmanfestivaali '
+            + 'pidettiin Dakarissa 1.–24. huhtikuuta 1966. '
+            + 'Osallistujia oli noin 2 500 kolmestakymmenestä '
+            + 'itsenäisestä Afrikan maasta ja lisäksi diasporasta — '
+            + 'Yhdysvalloista, Brasiliasta, Karibialta, Ranskasta ja '
+            + 'Britanniasta. Se oli ensimmäinen valtion järjestämä '
+            + 'festivaali, joka esitteli afrikkalaisten ja diasporan '
+            + 'taiteilijoiden työtä maailmanlaajuiselle yleisölle. '
+            + 'Kaupunkiin rakennettiin sitä varten uusia teitä, '
+            + 'lentoaseman terminaali ja kaksi uutta näyttämöä. '
+            + 'Kävijöitä kertyi 50 000.',
+          tiedosto: 'Théâtre Daniel Sorano.jpg',
+          selite: 'Daniel Sorano -teatteri rakennettiin vuoden 1966 '
+            + 'festivaalia varten, ja se on yhä käytössä.',
+          lahde: 'PaulAxelKOUASSI, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'World Festival of Black Arts',
+        },
+        {
+          /*
+           * KUVATON (Opus 7.9.2026). Dak'Artista on Commonsissa
+           * lähinnä lähikuvia tunnistettavista ihmisistä sekä
+           * vuoden 2000 näyttelyn rakennustyömaakuvia, joissa
+           * työntekijät ovat etualalla. Kuvatilaus on kirjattu
+           * raporttiin.
+           */
+          otsikko: 'Biennaali, joka jäi',
+          teksti: 'Dak\'Art suunniteltiin 1989 tapahtumaksi, joka '
+            + 'vuorottelisi kirjallisuuden ja kuvataiteen välillä: '
+            + 'ensimmäinen vuoden 1990 tapahtuma keskittyi '
+            + 'kirjallisuuteen ja vuoden 1992 kuvataiteeseen. Rakenne '
+            + 'muuttui 1993, ja vuoden 1996 Dak\'Art oli ensimmäinen '
+            + 'nimenomaan afrikkalaiselle nykytaiteelle omistettu '
+            + 'näyttely. Vuodesta 2000 se on järjestetty joka toinen '
+            + 'vuosi, ja se on Afrikan mantereen pitkäikäisin suuren '
+            + 'mittakaavan taidetapahtuma. Kansainväliseen näyttelyyn '
+            + 'pääsi pitkään vain Afrikan maan kansalainen; 2014 se '
+            + 'avattiin ensimmäistä kertaa myös muille.',
+          wiki: 'Dakar Biennale',
+        },
+        {
+          /*
+           * KUVATON (Opus 7.9.2026). Commonsissa ei ole yhtään
+           * Ousmane Sow'n veistosta eikä hänen muotokuvaansa
+           * vapaalla lisenssillä. Kuvatilaus on kirjattu raporttiin.
+           */
+          otsikko: 'Fysioterapeutti, josta tuli kuvanveistäjä',
+          teksti: 'Ousmane Sow syntyi Dakarissa 1935. Isänsä kuoltua '
+            + 'hän lähti Ranskaan ja valmistui fysioterapeutiksi, '
+            + 'palasi kotimaahan sen itsenäistyttyä 1960 ja avasi '
+            + 'vastaanoton. Vasta 1984, lähes viisikymmenvuotiaana, '
+            + 'hän alkoi tehdä ylisuuria veistoksia eteläisen Sudanin '
+            + 'nuba-kansan painijoista ja kehitti niitä varten omat '
+            + 'tekniikkansa ja materiaalinsa. Sarjat maasaista, '
+            + 'zuluista ja fulaneista seurasivat. Töitä nähtiin '
+            + 'Kasselin documentassa 1992 ja Pariisin Pont des Arts '
+            + '-sillalla 1999. Vuonna 2012 hänestä tuli Académie des '
+            + 'Beaux-Artsin ensimmäinen musta jäsen. Hän kuoli '
+            + 'Dakarissa 2016.',
+          wiki: 'Ousmane Sow',
+        },
+        {
+          otsikko: 'Museo, joka pyytää takaisin',
+          teksti: 'Mustien sivilisaatioiden museo avattiin Dakarissa '
+            + '6. joulukuuta 2018. Sen tavoitteeksi kirjattiin Afrikan '
+            + 'panoksen esittäminen maailman kulttuuriseen ja '
+            + 'tieteelliseen perintöön, ja johtaja, arkeologi Hamady '
+            + 'Bocoum, muistuttaa että raudanvalmistus keksittiin '
+            + 'Afrikassa 2 500 vuotta ennen ajanlaskun alkua. Museo on '
+            + 'pyytänyt afrikkalaisten teosten palauttamista: jopa 95 '
+            + 'prosenttia mantereen kulttuuriperinnöstä on Afrikan '
+            + 'ulkopuolella, ja pelkästään Pariisin Quai Branly pitää '
+            + 'hallussaan 70 000 esinettä Saharan eteläpuolisesta '
+            + 'Afrikasta. Time valitsi museon vuoden 2019 sadan '
+            + 'parhaan paikan joukkoon.',
+          tiedosto: 'Oba Oguola - MCN 4181.jpg',
+          selite: 'Pronssinen kuninkaanpää museon näyttelyssä; juuri '
+            + 'tällaiset teokset ovat palautuskeskustelun ytimessä.',
+          lahde: 'GuillaumeG, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Museum of Black Civilisations',
+        },
+      ],
+    },
+  ],
 };
