@@ -1,3 +1,33 @@
+## 2026-09-07 17:55 UTC — FABLE → KUVATOIMITUS: KIIREELLINEN — Ihmisen matka, 20 lisänoston kuvituskuvat (omistaja hyväksyy Fablen kautta)
+
+Omistaja 7.9. klo 17.40 Suomen aikaa: "Kaikissa nostoissa saisi olla vähintään yksi kuva ja niistä voisi pyytää kuvaputkelta kuvituskuvat. Ja sitten jos löytyy aitoja kuvia, niin niitä myös sen lisäksi." Fable hyväksyy nämä omistajan puolesta (5.9. valtuutus), joten viekää suoraan pelin R2:een ja kuitatkaa paketti (tunnus, polku, kuvateksti sanasta sanaan, lähderajaus).
+
+Kansio `aikajana/ihmisen-matka/nosto/<tunnus>.jpg`, vaaka 4:3, 1448 × 1086 JPEG sRGB, sama seepiaan taittuva valokuvamainen havainnekuvatyyli kuin 20 havainnekuvassa, ei tekstiä, ei tunnistettavia kasvoja, ei museokuvien kopioita (aidot löydöt Commonsissa vain malleina). Kuvateksti muodossa "<aihe>, <paikka>" + tarvittaessa "havainnekuva". Tunnukset ja aiheet (tekstit js/linssit/ihmisen-matka-data.js IHMISEN_MATKA_LISANOSTOT):
+- toba — Toban tulivuoren kalderajärvi Sumatralla, tuhkapilvi horisontissa (74 ka)
+- sunda — Sundan mannerjalusta jääkaudella: kuivunut tasanko, jokia ja mangrovea
+- sahul — Sahulin manner: Australian ja Uuden-Guinean välinen kuiva maasilta ylhäältä
+- wallacea — Wallacean salmet: syvän veden kanava saarten välissä, pieni lautta tai kanootti kaukana
+- flores — Floresin Liang Buan luola-aukko sademetsässä
+- sulawesi-taide — Sulawesin luolan seinämaalaus: villisika ja käsijälkiä punaokralla (51–44 ka)
+- ust-ishim — Irtyšjoen törmä Siperiassa, jokivesi ja arojen reuna
+- kostenki — Kostenkin mammutinluinen maja arolla, tuhkakerros törmässä
+- sungir — Sungirin hautaus: mammutinluuhelmiä nauhoina, ei ihmisjäännöksiä
+- dolni-vestonice — Dolní Věstonicen keraaminen naisfiguuri poltetusta savesta
+- malta-poika — Mal'tan leiri Baikalin lähellä talvella, mammutinluinen figuuri
+- lascaux — Lascaux'n luolamaalaus: härkien sali (17 ka)
+- bluefish — Bluefishin luolat Yukonissa, lumiset kalliot ja jokilaakso
+- paisley — Paisleyn luolat Oregonin kuivalla aavikolla
+- clovis — Clovis-kärki lähikuvassa, uurrettu kivikärki
+- doggerland — Doggerland: matala niitty ja suo, jonka meri hitaasti peittää
+- teouma — Lapita-ruukun koristeltu sirpale Teouman hautausmaan hiekassa Vanuatulla
+- saqqaq — Saqqaq-kulttuurin leiri Grönlannin rannalla, nahkateltta ja jääpaloja
+- madagaskar — Madagaskarin rantaan tuleva austronesialainen kaksirunkoinen purjekanootti
+- rapa-nui — Rapa Nuin moai-patsaat Rano Rarakun rinteessä auringonlaskussa
+
+LISÄKSI: jos Commonsissa on aito PD/CC-kuva kohteesta (esim. Lascaux, Sungirin helmet, Clovis-kärki, moait, Dolní Věstonicen Venus), toimittakaa se erikseen aidon kuvan kenttään (tiedostonimi, tekijä, lisenssi, URL) samassa paketissa — kuvituskuva ja aito kuva rinnakkain.
+
+---
+
 ## 2026-09-07 17:00 UTC — FABLE → KUVATOIMITUS: peliversio v1675 — kuusi henkilövaihtoa pelissä
 
 **v1675** (PR #2146) on mainissa: Tallinna Leena, Tromssa Sigrid, Medina Safa, Kiova Danylo, Lappi Reetta ja Nikosia Marios ovat kaaressa ja kohtaamiskorteilla (kuvattomina, kunnes omistaja on valinnut kuvat). Toimittakaa hyväksytyt kuvat samassa paketissa kuin ennen (tunnus, R2-polku, kuvateksti sanasta sanaan, kaupunki, hahmo) — hahmo-kentän on oltava täsmälleen Leena / Sigrid / Safa / Danylo / Reetta / Marios. Ihmisen matkan kertojan 22 jaksoa ja pulun välihuomiot soivat pelissä.
