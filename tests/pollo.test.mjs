@@ -2344,6 +2344,7 @@ test('lokista ladattu rivi ei estä tervehdystä eikä laske keskusteluksi', () 
  * kuplaan, ja raja on 900.
  */
 test('sanarajaan pysähtynyt vastaus jatketaan kerran samaan kuplaan', () => {
+  const kehote = readFileSync(new URL('../tools/pollo/worker.js', import.meta.url), 'utf8');
   assert.match(kehote, /const MAX_TOKENS = 900;/);
   assert.match(kehote, /const JATKON_MAX_TOKENS = 350;/);
   assert.match(kehote, /if \(stop === 'max_tokens'\) \{\s*const jatko = await jatkaKeskenJaanyt\(/);
