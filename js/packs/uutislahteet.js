@@ -1089,4 +1089,26 @@ export const UUTISLAHTEET = {
     kieli: 'tet',
     syote: 'https://tatoli.tl/feed/',
   },
+  /*
+   * Alwihda Info on N'Djamenassa toimiva yksityinen uutissivusto ja
+   * Tšadin luetuimpia. Testattu 6.9.2026: syötteessä viisitoista juttua,
+   * ja kahdesta artikkelisivusta jäsentyi ensimmäisestä
+   * <article>-lohkosta seitsemän ja neljätoista yli 60 merkin kappaletta
+   * sekä og:image.
+   *
+   * SYÖTTEEN OSOITTEESSA ON LOPPUKAUTTAVIIVA: /rss ja /feed vastaavat
+   * 301:llä osoitteeseen /rss/, eikä worker seuraa uudelleenohjauksia.
+   *
+   * Testattu ja hylätty: Tchadinfos (tchadinfos.com/feed/) läpäisi
+   * molemmat testit — kymmenen juttua ja kuusi kappaletta plus og:image
+   * — mutta Alwihda Info valittiin sen ohi laajemman syötteen takia;
+   * jos Alwihda joskus kaatuu, Tchadinfos on valmis varalähde (huomaa,
+   * että www-osoite ohjaa 301:llä ilman www:tä olevaan osoitteeseen).
+   * Ialtchad (ialtchad.com/feed/) ja Tchadactuel palauttivat 404:n.
+   */
+  TCD: {
+    nimi: 'Alwihda Info',
+    kieli: 'fr',
+    syote: 'https://www.alwihdainfo.com/rss/',
+  },
 };

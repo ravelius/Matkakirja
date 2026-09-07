@@ -259,6 +259,17 @@
 > hylätyt on lueteltu js/packs/uutislahteet.js:n TLS-kommentissa.
 > Julkaisu Git-integraatiolla mainista.
 >
+> **Päivitys 6.9.2026 (Tšad):** sallittuihin lisättiin
+> www.alwihdainfo.com (maalehti TCD, testattu 6.9.2026: syötteessä
+> viisitoista juttua, ja kahden artikkelisivun ensimmäisestä
+> `<article>`-lohkosta jäsentyi seitsemän ja neljätoista yli 60 merkin
+> kappaletta sekä `og:image`). Syötteen osoite on kirjoitettava
+> täsmälleen muodossa `https://www.alwihdainfo.com/rss/`: sekä `/rss`
+> että `/feed` vastaavat 301:llä, eikä worker seuraa uudelleenohjauksia.
+> Tchadinfos läpäisi myös molemmat testit ja on kirjattu varalähteeksi
+> js/packs/uutislahteet.js:n TCD-kommenttiin. Julkaisu Git-
+> integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

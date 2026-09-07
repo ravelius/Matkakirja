@@ -49903,4 +49903,381 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * TŠAD (TCD) — maalehti (Opus 6.9.2026).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-tsad.md; kaikki
+   * faktat en-Wikipedian raakatekstistä, tarkistettu 6.9.2026.
+   *
+   * RAJAUS: karttanostot kattavat jo Tšadin luonnon ja kaksi
+   * skandaalia (maastokohteet-tcd.js: Emi Koussi, Tšadjärvi, Chari,
+   * Guelta d'Archei, Aloban kaari, Ouniangan järvet, Zakouma, Fitri,
+   * Manda, Abéché, Iro; skandaalit.js: Rabih az-Zubayr ja Toumaïn
+   * reisiluu; elaintakyt.js: sapelisarvioryksi). Siksi maalehdessä ei
+   * ole luonto-aihetta lainkaan eikä historiassa Rabihia, Abéchén
+   * sulttaanikauden loppua tai Djurabin fossiileja.
+   */
+  TCD: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Tšadin historia on kolmen valtakunnan historiaa — Kanem '
+          + 'järven itäpuolella, Baguirmi etelässä ja Ouaddai idässä — ja kaikki '
+          + 'kolme elivät samasta asiasta: Saharan halki kulkevista karavaanireiteistä.',
+      nostot: [
+        {
+          otsikko: 'Valtakunta, jonka pääkaupunkia ei ole löydetty',
+          aika: '700–1100',
+          teksti: 'Kanemin valtakunta syntyi noin vuonna 700 Tšadjärven itäpuolelle, ja '
+              + 'sen perustajina pidetään Ennedin ylängön zaghawa-paimentolaisia. '
+              + 'Hallitsijan arvonimi oli mai ja pääkaupunki Njimi — kaupunki, jota on '
+              + 'etsitty 1800-luvun puolivälistä asti eikä koskaan varmuudella löydetty. '
+              + 'Arabialähteiden mukaan se saattoi olla alkuaan telttojen kaupunki, siis '
+              + 'pääkaupunki joka kulki mukana. Varhaisin kirjallinen maininta Kanemista '
+              + 'on arabimaantieteilijä al-Yaqubilta vuodelta 872, ja Koro Toron kaivaukset '
+              + 'kertovat raudanvalmistuksen kasvusta vuosien 500 ja 1000 välillä. '
+              + '1100-luvulla valtakunnan kirjurit kehittivät oman kirjoitustyylin, '
+              + 'barnāwīn.',
+          selite: 'Kanemin nimi juontuu mahdollisesti sanasta anem, joka merkitsee '
+            + 'teda- ja kanurikielissä yhä etelää — nimen antoi siis joku, joka '
+            + 'katsoi Saharan pohjoisreunalta.',
+        },
+        {
+          otsikko: 'Ratsuväki, jota Keski-Afrikassa ei ollut nähty',
+          aika: '1221–1259',
+          teksti: 'Mai Dunama II Dibalemi kokosi noin neljäkymmentätuhatta ratsumiestä '
+              + 'aikana, jolloin ratsuväkeä ei Keski-Afrikassa vielä käytetty — Malin '
+              + 'valtakunta seurasi perässä vasta 1330-luvulla. Kuninkaanluettelo girgam '
+              + 'kutsuu häntä soturiksi, joka on tulta kuumempi; sota toubouja vastaan '
+              + 'kesti perimätiedon mukaan seitsemän vuotta, seitsemän kuukautta ja '
+              + 'seitsemän päivää, ja Tšadjärvellä oli oma laivasto. Vuonna 1257 hän '
+              + 'lähetti kirahvin lahjaksi hafsidihallitsijalle Ifriqiyaan. Muistetuin teko '
+              + 'on silti se, että hän avasi munen — esineen, jonka luonnetta kukaan ei '
+              + 'enää tiedä ja jonka avaamista pidettiin vuosisatoja onnettomuutena.',
+          selite: 'Munea on myöhemmissä lähteissä kuvattu liitonarkun kaltaiseksi '
+            + 'peitetyksi säiliöksi. Kun se avattiin, sen sisältö "vapautui ja lensi '
+            + 'pois" — enempää ei tiedetä.',
+        },
+        {
+          otsikko: 'Sulttaanit, jotka veivät pääkaupungin mennessään',
+          aika: '1380–1630',
+          teksti: 'Bilalat asuivat valtakunnan sisällä, ja 1300-luvun lopulla he valtasivat '
+              + 'Njimin ja ajoivat Sayfawa-suvun pois Kanemista. Hallitsijat siirsivät '
+              + 'valtakuntansa keskuksen Bornuun järven länsipuolelle ja olivat sata '
+              + 'vuotta ilman pysyvää pääkaupunkia. Bilalojen johtajat julistautuivat '
+              + 'sulttaaneiksi, ja mamelukkien kansliakäsikirjoissa heille annettiin sama '
+              + 'diplomaattinen asema kuin Sayfawoille. Noin 1630 Ouaddai ajoi bilalat '
+              + 'pois Kanemista, ja he asettuivat Fitri-järven rannoille ja perustivat '
+              + 'sulttaanikunnan Yaon kaupunkiin. Yaon sulttaani on yhä bilalojen '
+              + 'perinteinen johtaja.',
+          selite: 'Bilaloja oli 1950-luvun puolivälissä noin 35 000; vuonna 2018 heitä '
+            + 'laskettiin jo noin 205 000, suurin osa yhä Fitri-järven ympärillä.',
+        },
+        {
+          otsikko: 'Sulttaanikunta, joka perustettiin avioliitoilla',
+          aika: '1635–',
+          tiedosto: 'Ouara.jpg',
+          teksti: 'Vuonna 1635 maba-suvun Abd al-Karim kukisti Itä-Tšadia hallinneen '
+              + 'tunjur-dynastian ja perusti Kolak-suvun sulttaanikunnan. Valtansa hän '
+              + 'vakiinnutti naimalla kukistamansa kuninkaan Daudin tyttären Meiram Aisan '
+              + 'ja solmimalla vastaavia liittoja masalit- ja dajo-sukujen kanssa. '
+              + 'Pääkaupungiksi nousi Wara, jonne rakennettiin palatsi ja moskeija, ja '
+              + 'islamista tuli valtionuskonto, vaikka rahvas seurasi omia uskontojaan. '
+              + 'Kaupunki hylättiin 1800-luvulla, kun sen kaivot kuivuivat. Rauniot '
+              + 'otettiin Unescon maailmanperinnön aielistalle 21. heinäkuuta 2005.',
+          selite: 'Waran eli Ouaran rauniot kahden kukkulan välissä: palatsin ja '
+            + 'moskeijan muureja seisoo yhä pystyssä kuivan heinikon keskellä.',
+          lahde: 'Souleymane Torbo, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Tšadin vanhin kuvataide on kallioseinillä Ennedissä: karjaa, '
+          + 'ratsastajia ja koristeltuja naisia. Nuorin syntyy kameran takana, '
+          + 'yhden elokuvateatterin maassa.',
+      nostot: [
+        {
+          otsikko: 'Kalliot, joilla on enemmän nautoja kuin ihmisiä',
+          aika: '5000 eaa.–',
+          tiedosto: 'Felsbildzeichnung im Ennedi, Terkei.jpg',
+          teksti: 'Ennedin hiekkakiviylängön kalliosuojissa on tuhansia kuvia, joista '
+              + 'vanhimmat ajoittuvat noin vuoteen 5000 eaa. Yli 86 prosenttia on '
+              + 'maalattu ja vain 14 prosenttia kaiverrettu, ja kuvia on seinien lisäksi '
+              + 'katoissa ja lattioilla. Kotieläimiä on lähes seitsemänkymmentä prosenttia '
+              + 'kaikista eläimistä: Murdin kohteessa naudat vievät yli puolet kaikista '
+              + 'kuvista, vuohet ja lampaat kymmenesosan ja koirat kahdeskymmenesosan. '
+              + 'Naudoille on maalattu omat kirjavat turkkinsa ja osalle lyyran muotoiset '
+              + 'sarvet — karja on kuvattu yksilöinä, ei laumana.',
+          selite: 'Terkein kalliosuojassa Ennedissä maalaukset kulkevat pitkänä '
+            + 'nauhana ulokkeen alla. Naudat on maalattu paikallaan seisoviksi, '
+            + 'hevoset laukkaaviksi.',
+          lahde: 'Sven.oehm, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Tyttöjen paikka',
+          aika: '8000–2000 vuotta sitten',
+          teksti: 'Fadan koillispuolella, Ennedin ainoan kaupungin lähellä, on kohde jonka '
+              + 'nimi merkitsee paikallisella kielellä tyttöjen paikkaa: Niola Doa. '
+              + 'Ennedin kalliotaiteessa naisia on kuvattu miehiä harvemmin — Murdissa '
+              + 'miehiä on viidennes kuvista ja naisia kymmenesosa — mutta Niola Doassa '
+              + 'naiset ovat runsaimmin koristeltuja hahmoja koko ylängöllä: vartaloilla '
+              + 'kiertää aaltoviivoja ja geometrisia kuvioita, joita on verrattu Algerian '
+              + 'pyöreäpäisiin hahmoihin. Kuvat ajoittuvat kahdeksantuhannen ja '
+              + 'kahdentuhannen vuoden taakse. Unescon suojelussa kohde ei ole.',
+          selite: 'Nabara 2:n kohteessa soikeissa kaiverruksissa on kameleita, nautoja '
+            + 'ja kirahveja, kilpien takana kyyristyviä sotureita ja pitkiin pukuihin '
+            + 'puettuja naisia — naisilla ei ole aseita, miehillä on.',
+        },
+        {
+          otsikko: 'Savikylä, jossa asuivat jättiläiset',
+          tiedosto: 'Gaoui Tchad.jpg',
+          teksti: 'Kymmenen kilometriä N\'Djamenasta koilliseen on Gaoui, jota sanotaan '
+              + 'saolaisten pääkaupungiksi. Sao-kulttuuri eli Charin varrella 2000-luvulta '
+              + 'eaa. aina 1500-luvulle asti, ja sen jäljiltä on löytynyt '
+              + 'pronssiveistoksia, terrakottahahmoja, hautauurnia, koruja ja koristeltua '
+              + 'keramiikkaa. Kaupunkeja ympäröivät vahvat muurit, hallitsijaa pidettiin '
+              + 'jumalallisena eikä hän näyttäytynyt kansalle kuin seremonioissa verhon '
+              + 'takaa; kuningataräidillä ja hallitsijan vanhimmalla sisarella oli '
+              + 'huomattava valta. Paikallisessa perimätiedossa saolaiset olivat '
+              + 'jättiläisiä. Gaoui tunnetaan yhä savitaloistaan ja saviastioistaan.',
+          selite: 'Gaouin savitalojen seinät on muotoiltu käsin ja koristeltu '
+            + 'syvennyksin, ja pihalla seisoo isoja saviruukkuja. Kuvan rakennus on '
+            + 'entinen sulttaanin talo, jossa toimii Sao-Kotoko-museo.',
+          lahde: '120, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Maa, jossa on yksi elokuvateatteri',
+          aika: '1999–2026',
+          tiedosto: 'Mahamat Saleh Haroun at Belinale 2026.jpg',
+          teksti: 'Elokuvanteko alkoi Tšadissa Edouard Saillyn lyhytelokuvista 1960-luvulla, '
+              + 'mutta koko maassa on yhä vain yksi elokuvateatteri. Abéchéssä syntynyt '
+              + 'Mahamat-Saleh Haroun muutti Ranskaan 1982 ja teki 1999 Bye Bye African, '
+              + 'maan ensimmäisen pitkän elokuvan. Daratt palkittiin Venetsiassa 2006 ja '
+              + 'Un homme qui crie Cannesissa 2010 — Haroun oli ensimmäinen tšadilainen '
+              + 'ohjaaja pääkilpasarjassa. Vuosina 2017–2018 hän toimi maan kulttuuri- ja '
+              + 'matkailuministerinä. Vuoden 2026 elokuvansa Soumsoum hän kuvasi Ennedin '
+              + 'vuorilla, samojen kallioiden juurella.',
+          selite: 'Mahamat-Saleh Haroun Berliinin elokuvajuhlilla helmikuussa 2026, '
+            + 'jossa Soumsoum sai kansainvälisen kriitikkojärjestön palkinnon.',
+          lahde: 'Elena Ternovaja, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Niola Doa merkitsee paikallisella kielellä?',
+        vaihtoehdot: [
+          'Tyttöjen paikka',
+          'Kuivan kaivon kallio',
+          'Kolmen kirahvin luola',
+          'Sulttaanin portti',
+        ],
+        oikea: 0,
+        fakta: 'Kohteen naishahmot ovat Ennedin runsaimmin koristeltuja: aaltoviivoja '
+            + 'ja geometrisia kuvioita vartalosta toiseen.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Tšadilainen ateria rakentuu hirssistä, kastikkeesta ja kalasta, ja '
+          + 'päivän tärkein ruoka syödään illalla yhteiseltä vadilta maton ääressä.',
+      nostot: [
+        {
+          otsikko: 'Pallo, joka kastetaan kastikkeeseen',
+          tiedosto: 'Chad 2019 Yao near lac Fitri millet DSC4727.jpg',
+          teksti: 'Hirssi on Tšadin perusruoka. Jauhoista keitetään paksua puuroa, josta '
+              + 'muotoillaan palloja ja kastetaan ne kastikkeisiin: ruoka on alysh '
+              + 'pohjoisessa, biya etelässä ja boule ranskaksi. Päivän pääateria syödään '
+              + 'illalla yhteiseltä isolta vadilta maton päällä istuen, miehet ja naiset '
+              + 'yleensä eri tiloissa. Tšadinarabien aiyash on sama asia toisin nimin, ja '
+              + 'esh on keitettyä hirssijauhoa moulah-kastikkeen kanssa. Tunnetuin kastike '
+              + 'on daraba: okraa, tomaattia, bataattia, lehtivihanneksia ja '
+              + 'maapähkinävoita samassa padassa.',
+          selite: 'Hirssi myydään torilla pyöreältä palmikoidulta matolta, josta se '
+            + 'mitataan kulhoon — kuva on Yaon torilta Fitri-järven läheltä.',
+          lahde: 'Gerhard Holub, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaksi tapaa säilöä kala',
+          tiedosto: 'Poisson fumé du Tchad.jpg',
+          teksti: 'Kala on Tšadin tavallisin proteiinin lähde, ja se myydään kahdessa '
+              + 'muodossa: salanga on aurinkokuivattua ja kevyesti savustettua alestes- ja '
+              + 'hydrocynus-kalaa, banda savustettua isoa kalaa. Kotokot kalastavat '
+              + 'pitkillä ruuhillaan ja '
+              + 'kuivaavat tai savustavat saaliinsa torille vietäväksi. Budumat eli yedinat '
+              + 'asuvat Tšadjärven saarilla ja rakentavat papyrusruo\'osta sekä veneensä '
+              + 'että kevyet majansa, jotka voi siirtää ylemmäs jos vesi nousee. Heidän '
+              + 'nautansa on jalostettu suurisarvisiksi: ontot sarvet auttavat eläintä '
+              + 'kellumaan, kun karja siirretään saarelta toiselle.',
+          selite: 'Savustettua kalaa myytävänä altaassa torilla. Budumien ruokapöydän '
+            + 'perusta on kala, lehmänmaito ja lumpeenjuurista jauhettu jauho.',
+          lahde: 'Kannenwa Rachel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Levä, jota syötiin ennen kuin kukaan tiesi mitä se on',
+          aika: '1940–1965',
+          teksti: 'Kanembut ovat korjanneet Tšadjärven ympäristön pikkujärvistä ja '
+              + 'lammikoista vihreää massaa, kuivanneet sen kakuiksi ja keittäneet niistä '
+              + 'lientä. Kakun nimi on dihé, ja sitä myydään toreilla yhä. Belgialainen '
+              + 'leväntutkija Pierre Dangeard kirjoitti siitä ensimmäisenä vuonna 1940 ja '
+              + 'totesi sen olevan kuivattua sinilevän kevätmuodon sosetta. Botanisti Jean '
+              + 'Leonard varmisti vuosina 1964–1965, että dihé on spirulinaa — ja juuri '
+              + 'siitä alkoivat ensimmäiset järjestelmälliset tutkimukset levän '
+              + 'kasvattamisesta ravinnoksi 1970-luvulla.',
+          selite: 'Dihé on kuivattua massaa samasta levästä, jota myydään nykyään '
+            + 'maailmalla nimellä spirulina. Tšadissa se on ollut kaupan tavallisena '
+            + 'torikauppatavarana koko sen ajan.',
+        },
+        {
+          otsikko: 'Punainen juoma ja punainen hirssi',
+          teksti: 'Tee on Tšadin yleisin juoma — punaista, mustaa ja vihreää. Sen rinnalla '
+              + 'juodaan karkanjia, kuivatuista hibiskuksenkukista keitettyä syvänpunaista '
+              + 'juomaa, johon lisätään inkivääriä, neilikkaa, kanelia ja sokeria maun '
+              + 'mukaan. Hedelmäjuomaan jus de fruit tulee mangoa, maitoa, sokeria ja '
+              + 'kardemummaa. Etelässä pannaan olutta hirssistä: bili-bili punaisesta '
+              + 'hirssistä ja coshate valkoisesta, ja pullotettu Gala-olut on maan omaa '
+              + 'tuotantoa. Pohjoisessa alkoholijuomia ei juoda lainkaan, joten sama maa '
+              + 'juo kahdella eri tavalla.',
+          selite: 'Karkanji tunnetaan myös nimellä carcaje. Mausteet — inkivääri, '
+            + 'neilikka ja kaneli — lisätään maun mukaan, joten kahta samanlaista '
+            + 'kupillista ei ole.',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Tšadin soittimissa kuuluu koko maan kirjo: neljän metrin torvi '
+          + 'palatsin pihalla, kalebassien päälle viritetyt kielet ja jousiharppu, '
+          + 'joka puhuu soittajansa puolesta.',
+      nostot: [
+        {
+          otsikko: 'Neljä metriä metallia, jota soitetaan vain palatsissa',
+          teksti: 'Kakaki on kolmesta neljään metriä pitkä metallitorvi, ja sen ääni '
+              + 'kuuluu vallalle. Samaa nimeä käytetään Tšadissa, Nigerissä, Nigeriassa, '
+              + 'Beninissä, Ghanassa ja Burkina Fasossa; Etiopiassa ja Eritreassa soitin '
+              + 'tunnetaan nimellä malakat. Alkuaan se oli songhailaisen ratsuväen soitin. '
+              + 'Hausojen keskuudessa kakakia soitetaan vain kuninkaan tai sulttaanin '
+              + 'palatsissa osana saraa, viikoittain toistuvaa vallan osoitusta, ja vain '
+              + 'miehet soittavat sitä. Pitkiä kuninkaallisia torvia — kakakia ja wazaa — '
+              + 'kuullaan kruunajaisissa kaikkialla Tšadissa ja Sudanissa.',
+          selite: 'Kakaki on vanha soitin: se oli yleinen songhailaisen ratsuväen '
+            + 'keskuudessa, ja sen ääni on siitä asti merkinnyt hallitsijan '
+            + 'läsnäoloa.',
+        },
+        {
+          otsikko: 'Soitin, joka puhuu miehen puolesta',
+          teksti: 'Tedat asuvat Tibestin vuorten seudulla Pohjois-Tšadissa, ja heidän '
+              + 'musiikkinsa jakautuu kahtia: naiset laulavat, miehet soittavat '
+              + 'kielisoittimia. Jako ei ole makuasia vaan käytöstapa. Miehen ei ole '
+              + 'sopivaa laulaa aikuisen naisen edessä, joten soitin ottaa laulajan '
+              + 'tehtävän: keleli ja muut kielisoittimet "puhuvat" esittäjän puolesta, ja '
+              + 'kuulijat tietävät mitä ne sanovat. Tibestin alueella soitetaan myös '
+              + 'luuttuja ja jousisoittimia, ja fulanit yksilehdykkäisiä huiluja.',
+          selite: 'Tedojen kansanmusiikki rakentuu kahdesta puolikkaasta: miesten '
+            + 'kielisoittimista ja naisten laulusta. Kummallakaan ei ole toisen '
+            + 'tehtävää.',
+        },
+        {
+          otsikko: 'Kinde, hu hu ja survimet',
+          teksti: 'Kinde on jousiharppu, jota griot-perinteessä soitetaan viisikielisenä. '
+              + 'Hu hu:n kaikupohjina ovat kalebassit, ja kakaki on pitkä peltitorvi. '
+              + 'Loput soittimista kertovat, kenen kylässä ollaan: fulanit soittavat '
+              + 'yksilehdykkäisiä huiluja, sarat suosivat vihellyspillejä, balafoneja, '
+              + 'harppuja ja kodjo-rumpuja, ja kanembut yhdistävät rummut huilumaisiin '
+              + 'soittimiin. Baguirmilaiset tunnetaan rumpu- ja sitramusiikistaan sekä '
+              + 'tanssista, jossa käydään näytöstaistelu suurin survimin. Yhtä '
+              + 'tšadilaista soitinta ei siis ole, vaan niitä on toistakymmentä.',
+          selite: 'Griot-perinteen kinde on viisikielinen jousiharppu; kakaki ja '
+            + 'hu hu ovat käytössä laajemmin ympäri maata.',
+        },
+        {
+          otsikko: 'Yhtye, jonka presidentti lähetti kouluun Zaireen',
+          aika: '1962–1965',
+          teksti: 'Tšadin ensimmäinen moderni yhtye oli Chari Jazz, perustettu 1964. Sitä '
+              + 'edelsi 1962 pääkaupungissa perustettu Tchad succès, jonka soittajat olivat '
+              + 'enimmäkseen kamerunilaisia ja kongolaisia. Naimou Mbaitoloum kokosi '
+              + 'ystävistään Sarhissa yhtyeen Star Jazz, jota presidentti François '
+              + 'Tombalbaye ryhtyi tukemaan ja jonka nimen hän muutti Chari Jazziksi. Hän '
+              + 'lähetti yhtyeen Zaireen oppimaan Franco Luambo Makiadilta ja Tabu Ley '
+              + 'Rochereaulta. Kotiin palattuaan se ehti tuskin asettua, kun soittajat '
+              + 'lähtivät omille teilleen: Logone Band syntyi Moundoussa ja African Mélody '
+              + 'kitaristin mukana.',
+          selite: 'Tšadin oma tyylilaji sai nojaa maan eteläosan rytmeihin. Sitä soitti '
+            + 'muun muassa yhtye nimeltä Tibesti — pohjoisen vuoriston mukaan.',
+        },
+      ],
+    },
+    {
+      id: 'kirjallisuus',
+      nimi: 'Kirjallisuus',
+      johdanto: 'Tšadissa on kirjoitettu 1960-luvulta lähtien noin kuusikymmentä '
+          + 'romaania ja näytelmää, ja suurin osa niistä on kirjoitettu poissa kotoa.',
+      nostot: [
+        {
+          otsikko: 'Kaksikymmentä kirjailijaa, kuusikymmentä kirjaa',
+          aika: '1962–2003',
+          teksti: 'Tšadin kirjallisuus alkaa Joseph Brahim Seidistä. Hän syntyi '
+              + 'N\'Djamenassa 1927, julkaisi 1962 kokoelman Au Tchad sous les étoiles ja '
+              + '1967 omaelämäkerrallisen kertomuksen Un enfant du Tchad — ja toimi '
+              + 'samaan aikaan maan oikeusministerinä vuodet 1966–1975. Vuodesta 1962 '
+              + 'lähtien kaksikymmentä tšadilaiskirjailijaa on julkaissut noin '
+              + 'kuusikymmentä kaunokirjallista teosta. Ne koottiin yksiin kansiin vasta '
+              + '2003, kun maan ainoa kirjallisuuskriitikko Ahmat Taboye julkaisi '
+              + 'neljänkymmenen vuoden antologian Anthologie de la littérature tchadienne.',
+          selite: 'Taboye johti N\'Djamenan yliopiston kirjallisuuden laitosta ja '
+            + 'nimitettiin 2007 kulttuuriministeriön johtajaksi.',
+        },
+        {
+          otsikko: 'Näytelmä, joka ilmestyi vasta tekijän kuoltua',
+          aika: '1952–1983',
+          teksti: 'Mahamat "Baba" Moustapha kirjoitti näytelmänsä ranskaksi ja ehti elää '
+              + 'kolmekymmentä vuotta: 1952–1982. Hänen käsialaansa ovat Le Maître des '
+              + 'Djinns, Le Souffle de l\'Harmattan ja Makarie aux Épines. Parhaana '
+              + 'pidetään Commandant Chakaa, sotilasdiktatuurien tuomiota, joka ilmestyi '
+              + 'vasta vuosi hänen kuolemansa jälkeen 1983. Nimi ei kuitenkaan kadonnut: '
+              + 'tšadilainen teatteriryhmä Théâtre Vivant Baba Moustapha on nimetty hänen '
+              + 'mukaansa. Näytelmät ovat yhä ohjelmistossa, vaikka niiden kirjoittaja '
+              + 'ehti työskennellä vain vajaan vuosikymmenen.',
+          selite: 'Tšadin kirjallisuutta julkaistaan enemmän Ranskassa kuin Tšadissa '
+            + 'itsessään, ja moni kirjailija on kirjoittanut teoksensa maan '
+            + 'ulkopuolella.',
+        },
+        {
+          otsikko: 'Teatterintekijä, joka päätyi Anne Frankin asuntoon',
+          aika: '1979–',
+          tiedosto: 'Koulsy Lamko.jpg',
+          teksti: 'Koulsy Lamko syntyi 1959 Dadouarissa ja lähti 1979 Burkina Fasoon, '
+              + 'missä hän tutustui Thomas Sankaraan ja teki kymmenen vuotta '
+              + 'yhteisöteatteria; hän oli perustamassa kansainvälistä kehitysteatterin '
+              + 'festivaalia ja julkaisi 1997 Sankaran muistolle levyn, jolla on runoja ja '
+              + 'musiikkia. Sitten hän muutti Ruandaan, väitteli Butaren yliopistossa ja '
+              + 'perusti sinne taiteiden ja teatterin keskuksen. Kokemuksesta syntyi '
+              + 'romaani La phalène des collines vuoden 1994 kansanmurhasta. Vuonna 2009 '
+              + 'hän asui vieraana Anne Frankin perheen entisessä asunnossa Amsterdamissa.',
+          selite: 'Koulsy Lamko Geneven kirjamessuilla 2012. Hän asuu nykyään '
+            + 'Mexicossa.',
+          lahde: 'Yrial, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Runoilija Koyomista Amiensin luentosaliin',
+          aika: '1959–',
+          tiedosto: 'Nimrod Benda Djangrang salon du livre 2012.jpg',
+          teksti: 'Nimrod Bena Djangrang, kirjailijanimeltään Nimrod, syntyi Koyomissa '
+              + '1959 ja kävi koulunsa Tšadissa. Vuonna 1984 hän muutti Abidjaniin ja 1991 '
+              + 'Ranskaan, jossa hän opettaa filosofiaa Amiensin yliopistossa. Hän '
+              + 'toimitti kirjallisuuslehteä Aleph, beth ja perusti toisen, Agotemin. '
+              + 'Runokokoelmia on Pierre, poussièresta (1989) alkaen, romaaneja Les Jambes '
+              + 'd\'Alicesta (2001), ja kokoelma Sur les berges du Chari kantaa nimessään '
+              + 'kotijokea. Palkintoja on tullut Prix Ahmadou-Kouroumasta 2008 Prix '
+              + 'Guillaume-Apollinaireen 2020.',
+          selite: 'Nimrod kirjamessuilla 2012 romaaninsa Le Bal des princes kanssa. '
+            + 'Hän on kirjoittanut myös lastenkirjat Rosa Parksista ja Aimé '
+            + 'Césairesta.',
+          lahde: 'Garitan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+    },
+  ],
 };

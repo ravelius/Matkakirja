@@ -170,6 +170,11 @@ const SALLITUT = [
   // samalla isäntänimellä. Osoite on ilman www:tä, koska www.tatoli.tl
   // vastaa 301:llä eikä worker seuraa uudelleenohjauksia.
   'https://tatoli.tl/',
+  // Tšadin uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä. Syötteen osoitteessa on loppukauttaviiva
+  // (/rss/), koska /rss ohjaa 301:llä eikä worker seuraa
+  // uudelleenohjauksia.
+  'https://www.alwihdainfo.com/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

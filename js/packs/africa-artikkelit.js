@@ -1589,9 +1589,25 @@ export const OMAT_ARTIKKELIT = {
       + 'vieraanvaraisuuden laki on sama.',
   },
   Tšad: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // TCD) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Tšad ulottuu Saharan hiekasta savannien vihreyteen, ja '
       + 'sen sydän on matala Tšad-järvi — neljän maan jakama '
-      + 'elämänlähde.',
+      + 'elämänlähde. Maa on Afrikan viidenneksi suurin, noin 1,3 '
+      + 'miljoonaa neliökilometriä, mutta merta siinä ei ole '
+      + 'metriäkään. Väkeä on kaksikymmentä miljoonaa, ja heistä '
+      + '1,6 miljoonaa asuu pääkaupungissa N\'Djamenassa '
+      + 'Charin ja Logonen yhtymäkohdassa. Etnisiä ryhmiä on yli '
+      + 'kaksisataa ja kieliä yli sata; virallisia kieliä on kaksi, '
+      + 'ranska ja arabia. Järven itäpuolella syntyi noin vuonna 700 '
+      + 'Kanemin valtakunta, joka eli Saharan halki kulkevasta '
+      + 'kaupasta ja josta tuli yksi Afrikan pitkäikäisimmistä '
+      + 'valtioista; sen rinnalle nousivat myöhemmin Baguirmin ja '
+      + 'Ouaddain sulttaanikunnat. Ruoka on kaikkialla samaa ja '
+      + 'kaikkialla erilaista: hirssistä muotoiltu pallo, joka '
+      + 'kastetaan kastikkeeseen, ja kalaa joko aurinkokuivattuna tai '
+      + 'savustettuna.',
     artikkeli: 'Tšad on suuri sisämaavaltio, jonka pohjoisosa on '
       + 'Saharan karuinta aavikkoa Tibestin tulivuorineen ja '
       + 'eteläosa viljavaa savannia. Nimensä maa sai järvestä, '
