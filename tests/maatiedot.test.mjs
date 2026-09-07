@@ -47,23 +47,13 @@ import { MAA_KATEGORIAT } from '../js/packs/maa-kategoriat.js';
  * Lista saa vain lyhentyä.
  */
 const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
-  'VUT',
-  'VEN',
-  'URY',
-  'SLB',
-  'PRY',
-  'PNG',
-  'PAN',
-  'NIC',
-  'GTM',
-  'FJI',
-  'TLS',
   // Grönlanti ja Saint Helena eivät ole Maailmanpankin suvereenien
   // valtioiden aineistossa, Hongkong on rajattu sekä Maailmanpankin
   // maalistalta että V-Demin 172 valtion joukosta (maalehdet 6.9.2026):
   // sijaluvut eivät ole vertailukelpoisia, joten rivit odottavat
-  // päätöstä vertailujoukosta.
-  'GRL', 'SHN', 'HKG',
+  // päätöstä vertailujoukosta. Itä-Timor ja Vanuatu odottavat
+  // tervehdystä: tetumille ja bislamalle ei ole en-Wiktionary-katetta.
+  'GRL', 'SHN', 'HKG', 'TLS', 'VUT',
 ]);
 
 const SIJA = /^\d+\.\/\d+$/;
