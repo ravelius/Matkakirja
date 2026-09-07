@@ -627,10 +627,10 @@ export const MINIATYYRIT = {
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
     'Fabergé-museo': 'pietari-faberge-museo',
     // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-16b- ja
-    // -22-20260907.json). Kuva on ämpärissä toistaiseksi vain
-    // päivätyssä polussa miniatyyrit/20260907/<tunnus>.png, joten
-    // merkki on täplä siihen asti, kunnes tiedosto on myös pelin
-    // lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png.
+    // -22-20260907.json). Kuvaputki vei tiedostot pelin lukupolkuun
+    // kohtaamiset/miniatyyrit/<tunnus>.png 7.9.2026
+    // (posti/miniatyyrit-polkukorjaus-62-20260907.json); osoitteet
+    // tarkistettu 200.
     'Mendelejev 1869': 'pietari-mendelejev-1869',
   },
   kiova: {
@@ -1540,10 +1540,10 @@ export const MINIATYYRIT = {
   },
   halifax: {
     // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-16b- ja
-    // -22-20260907.json). Kuva on ämpärissä toistaiseksi vain
-    // päivätyssä polussa miniatyyrit/20260907/<tunnus>.png, joten
-    // merkki on täplä siihen asti, kunnes tiedosto on myös pelin
-    // lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png.
+    // -22-20260907.json). Kuvaputki vei tiedostot pelin lukupolkuun
+    // kohtaamiset/miniatyyrit/<tunnus>.png 7.9.2026
+    // (posti/miniatyyrit-polkukorjaus-62-20260907.json); osoitteet
+    // tarkistettu 200.
     'Vanha kellotorni': 'halifax-vanha-kellotorni',
     'Pyhän Paavalin kirkko': 'halifax-pyhan-paavalin-kirkko',
     'Atlantin merimuseo': 'halifax-atlantin-merimuseo',
@@ -1554,10 +1554,10 @@ export const MINIATYYRIT = {
   },
   miami: {
     // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-16b- ja
-    // -22-20260907.json). Kuva on ämpärissä toistaiseksi vain
-    // päivätyssä polussa miniatyyrit/20260907/<tunnus>.png, joten
-    // merkki on täplä siihen asti, kunnes tiedosto on myös pelin
-    // lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png.
+    // -22-20260907.json). Kuvaputki vei tiedostot pelin lukupolkuun
+    // kohtaamiset/miniatyyrit/<tunnus>.png 7.9.2026
+    // (posti/miniatyyrit-polkukorjaus-62-20260907.json); osoitteet
+    // tarkistettu 200.
     'Wynwoodin muraalikorttelit': 'miami-wynwoodin-muraalikorttelit',
     'Esittävän taiteen keskus': 'miami-esittavan-taiteen-keskus',
     'Pérezin taidemuseo': 'miami-perezin-taidemuseo',
@@ -1568,20 +1568,51 @@ export const MINIATYYRIT = {
   },
   kapkaupunki: {
     // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-16b- ja
-    // -22-20260907.json). Kuva on ämpärissä toistaiseksi vain
-    // päivätyssä polussa miniatyyrit/20260907/<tunnus>.png, joten
-    // merkki on täplä siihen asti, kunnes tiedosto on myös pelin
-    // lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png.
+    // -22-20260907.json). Kuvaputki vei tiedostot pelin lukupolkuun
+    // kohtaamiset/miniatyyrit/<tunnus>.png 7.9.2026
+    // (posti/miniatyyrit-polkukorjaus-62-20260907.json); osoitteet
+    // tarkistettu 200.
     Hyväntoivonlinnoitus: 'kapkaupunki-hyvantoivonlinnoitus',
+    // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-24c-20260907.json).
+    // Tiedosto on pelin lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png;
+    // osoite tarkistettu 200.
+    'V&A Waterfront': 'kapkaupunki-va-waterfront',
+    'Greenmarket Square': 'kapkaupunki-greenmarket-square',
+    'Iziko Slave Lodge': 'kapkaupunki-iziko-slave-lodge',
+    'Iziko Etelä-Afrikan museo': 'kapkaupunki-iziko-etela-afrikan-museo',
   },
   nairobi: {
     // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-16b- ja
-    // -22-20260907.json). Kuva on ämpärissä toistaiseksi vain
-    // päivätyssä polussa miniatyyrit/20260907/<tunnus>.png, joten
-    // merkki on täplä siihen asti, kunnes tiedosto on myös pelin
-    // lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png.
+    // -22-20260907.json). Kuvaputki vei tiedostot pelin lukupolkuun
+    // kohtaamiset/miniatyyrit/<tunnus>.png 7.9.2026
+    // (posti/miniatyyrit-polkukorjaus-62-20260907.json); osoitteet
+    // tarkistettu 200.
     'Nairobin arboretum': 'nairobi-arboretum',
     'Kenian kansallisarkisto': 'nairobi-kenian-kansallisarkisto',
     'Nairobin rautatiemuseo': 'nairobi-rautatiemuseo',
+  },
+  wellington: {
+    // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-24c-20260907.json).
+    // Tiedosto on pelin lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png;
+    // osoite tarkistettu 200.
+    Rautatieasema: 'wellington-rautatieasema',
+    'Bolton Streetin hautausmaa': 'wellington-bolton-streetin-hautausmaa',
+    'Wellingtonin museo': 'wellington-wellingtonin-museo',
+    'Circa-teatteri': 'wellington-circa-teatteri',
+    'Oriental Bay': 'wellington-oriental-bay',
+    'Embassy-teatteri': 'wellington-embassy-teatteri',
+    'Nairn Streetin mökki': 'wellington-nairn-streetin-mokki',
+    'Basin Reserve': 'wellington-basin-reserve',
+  },
+  christchurch: {
+    // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-24c-20260907.json).
+    // Tiedosto on pelin lukupolussa kohtaamiset/miniatyyrit/<tunnus>.png;
+    // osoite tarkistettu 200.
+    'Victorian kellotorni': 'christchurch-victorian-kellotorni',
+    Kaupungintalo: 'christchurch-kaupungintalo',
+    'Provinssineuvoston talo': 'christchurch-provinssineuvoston-talo',
+    'New Regent Street': 'christchurch-new-regent-street',
+    Taidegalleria: 'christchurch-taidegalleria',
+    'Canterburyn museo': 'christchurch-canterburyn-museo',
   },
 };

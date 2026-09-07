@@ -38555,8 +38555,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Perintö kulkee äidin kautta',
-          // Kuvaton (Opus 6.9.2026): sukujärjestelmää ei voi valokuvata,
-          // eikä perheenjuhlista ole kasvotonta kuvaa.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-gha-tavat-3-r20260907-v2.jpg',
           teksti: 'Akaanit ovat matrilineaalinen kansa: sukuun kuulutaan '
               + 'äidin kautta, ja sitä kautta periytyvät sekä omaisuus '
               + 'että oikeus päällikkyyteen. Suvut eli abusuat ovat '
@@ -38567,8 +38566,10 @@ export const MAA_KATEGORIAT = {
               + 'seuraaja ei ole hänen poikansa vaan hänen sisarensa poika. '
               + 'Suvun sisällä vuorottelevat haarat, joita kutsutaan '
               + 'keittiöiksi, ja kukin esittää vuorollaan oman ehdokkaansa.',
-          selite: 'Perhettä johtaa abusuapanyin, suvun vanhin; sama nimitys '
-              + 'on koko klaanin päälliköllä.',
+          selite: 'Akanien äitilinjaisen sukulaisuuden innoittama kuvitus '
+              + 'kolmen sukupolven naisista perhe-esineen äärellä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Harvard '
+              + 'University — Twi-oppimateriaali, Akan Family System',
         },
       ],
     },
@@ -39443,8 +39444,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Näytelmä, jota on esitetty samana päivänä vuosisatoja',
           aika: '25. tammikuuta',
-          // Kuvaton (Opus 6.9.2026): Rabinal Achín esityksestä tai
-          // naamioista ei löytynyt yhtään >= 1200 px:n Commons-kuvaa.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-gtm-musiikki-3-r20260907-v8-root.jpg',
           teksti: 'Rabinal Achí on kʼicheʼnkielinen tanssinäytelmä, jonka '
               + 'oma nimi on Xajoj Tun, "rummun tanssi". Se esitetään joka '
               + 'vuosi 25. tammikuuta Rabinalissa Baja Verapazissa Pyhän '
@@ -39454,8 +39454,10 @@ export const MAA_KATEGORIAT = {
               + 'todellisesta kiistasta. Veljeskunnan jäsen Bartolo Sis '
               + 'kirjoitti vuorosanat muistiin 1850, ja Unesco nimesi '
               + 'näytelmän ihmiskunnan mestariteokseksi 2005.',
-          selite: 'Rabinal Achí on harvoja ennen siirtomaa-aikaa syntyneitä '
-              + 'näytelmiä, joita esitetään yhä alkuperäisellä kielellään.',
+          selite: 'Guatemalalainen tun-rumpu, sen H-muotoinen kieliaukko ja '
+              + 'kaksi kumipäistä kapulaa — lähteisiin perustuva kuvitus.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: ACEM / MINEDUC '
+              + '— Música y danza maya, luku 3.11 El Tun',
         },
       ],
     },
@@ -42766,6 +42768,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kronikka, jolla ajoitettiin Intian keisari',
           aika: '400-luku – 1837',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-lka-historia-1-r20260907-v2.jpg',
           teksti: 'Munkki Mahānāma kokosi 400- tai 500-luvulla Anuradhapuran '
               + 'Mahavihara-luostarissa Mahāvaṃsan, pali-kielisen runomuotoisen '
               + 'kronikan saaren kuninkaista. Luostarissa oli pidetty vuosikirjaa jo '
@@ -42776,6 +42779,12 @@ export const MAA_KATEGORIAT = {
               + 'arvon — Mahāvaṃsan avulla ajoitettiin Intian keisari Ashokan vihkimys, '
               + 'ja Sanchin kaivaukset tukivat kertomusta. Unesco otti kronikan Maailman '
               + 'muisti -rekisteriin 2023.',
+          selite: 'Sri Lankan 1800-luvun alun maalattujen '
+              + 'palmulehtikäsikirjoituksen kansien innoittama esinekuvitus. '
+              + 'Kuva ei ole Mahavamsan tietyn käsikirjoituksen toisinto.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The '
+              + 'Metropolitan Museum of Art — kokoelmakohde 75411, maalatut '
+              + 'käsikirjoituksen kannet',
         },
         {
           otsikko: 'Yhdeksäntoista vuotta Kandyn vieraana',
@@ -45839,6 +45848,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Bussilaulu, jonka levy-yhtiö tilasi',
           aika: '1950–1960-luvut',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-musiikki-0-r20260907-v1.jpg',
           teksti: 'Sierra Leonen palmuviinimusiikkia sanotaan maringaksi, ja sen teki '
               + 'tunnetuksi kriolainen Ebenezer Calendar yhtyeineen. Ammatiltaan hän '
               + 'oli puuseppä ja arkuntekijä, isä barbadoslainen tai jamaikalainen, '
@@ -45848,10 +45858,15 @@ export const MAA_KATEGORIAT = {
               + 'kaksikerroksisen bussilinjan avajaisiin, ja Double-Decker Bus jäi '
               + 'soimaan vuosikymmeniksi. Myöhemmin Calendarin sanoitukset kääntyivät '
               + 'yhteiskunnallisiksi ja hengellisiksi.',
+          selite: 'Sierra Leonen palm wine -musiikin innoittama kuvitus '
+              + 'yhteisestä soittohetkestä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Real World '
+              + 'Records — S. E. Rogie, Dead Men Don’t Smoke Marijuana',
         },
         {
           otsikko: 'Räätäli, joka soitti iltaisin ilmaiseksi',
           aika: '1926–1994',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-musiikki-1-r20260907-v1.jpg',
           teksti: 'Sooliman Ernest Rogers eli S. E. Rogie syntyi 1926 Fonikohissa ja '
               + 'maksoi seitsenvuotiaana koulunsa myymällä halkoja. Freetownissa hän '
               + 'meni räätälin oppipojaksi, kuunteli asiakkaikseen sattuneita '
@@ -45862,6 +45877,10 @@ export const MAA_KATEGORIAT = {
               + 'ja temneksi. My Lovely Elizabeth teki hänestä tunnetun, ja vuonna '
               + '2019 yhdysvaltalainen Vampire Weekend rakensi kappaleensa hänen '
               + 'kitarasilmukastaan.',
+          selite: 'S. E. Rogien räätälinuran ja musiikin yhteyden innoittama '
+              + 'kuvitus anonyymistä räätälistä työhuoneessa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Mississippi '
+              + 'Records — Rogee Rogersin haastattelu isästään S. E. Rogiesta',
         },
         {
           otsikko: 'Bambupillit ja auton osat',
@@ -45877,6 +45896,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Laulu, joka löytyi kahdelta mantereelta',
           aika: '1940-luku ja 1990-luku',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-musiikki-3-r20260907-v2.jpg',
           teksti: 'Georgian rannikolla asunut gullah-perhe oli säilyttänyt suvussaan '
               + 'laulun, jonka sanoja kukaan ei enää ymmärtänyt. Kielitieteilijä '
               + 'Lorenzo Turner tunnisti sen 1940-luvulla mendenkieliseksi — se on '
@@ -45886,6 +45906,11 @@ export const MAA_KATEGORIAT = {
               + 'kylän, jossa samaa laulua yhä laulettiin, ja saivat selville, että se '
               + 'on hautajaisvirsi. Kahden perheen kohtaaminen on tallennettu '
               + 'dokumenttielokuvaan The Language You Cry In.',
+          selite: 'Menden lauluperinteen tallentamisen innoittama kuvitus '
+              + 'anonyymistä lauluryhmästä ja äänityslaitteista.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Smithsonian '
+              + '(Anacostia Community Museum) — kokoelmakohde Wa Ka -peitto, '
+              + 'acm_2014.0009.0001',
         },
       ],
     },
@@ -45994,6 +46019,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Shakespeare krioksi, koska kieli ei ole murre',
           aika: '1964–2013',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-sle-kirjallisuus-2-r20260907-v2.jpg',
           teksti: 'Kriota puhuu yli yhdeksänkymmentä prosenttia maan väestöstä, mutta '
               + 'sillä ei ole virallista asemaa. Sanasto tulee englannista, kieliopin '
               + 'arvellaan seuraavan jamaikalaista maroonikreolia ja afrikkalaiset '
@@ -46004,6 +46030,11 @@ export const MAA_KATEGORIAT = {
               + 'kääntämällä: Shakespearen Julius Caesar ilmestyi krioksi 1964 ja '
               + 'sovitus As You Like Itistä 1966. Uusi testamentti käännettiin 1986 '
               + 'ja Vanha testamentti 2013.',
+          selite: 'Thomas Deckerin Krio-käännöstyön innoittama kuvitus '
+              + 'anonyymistä kääntäjästä työpöytänsä ääressä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: AfricaBib — '
+              + 'Tcho Mbaimba Caulkerin artikkeli Thomas Deckerin '
+              + 'Krio-käännöksestä Juliohs Siza (1964)',
         },
         {
           otsikko: 'Lääkäri, joka otti nimekseen Africanus',
