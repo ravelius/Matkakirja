@@ -25293,6 +25293,387 @@ export const MAA_KATEGORIAT = {
     },
   ],
   /*
+   * TAIWAN (TWN) — maalehti, Opus 7.9.2026.
+   *
+   * SISÄLTÖLINJAUS on sama sitova linjaus kuin Taipein
+   * kaupunkilehdessä (kulttuuri-kategoriat.js, taipei-lohko;
+   * docs/aasia-tyoaineisto/spec-asia.md): EI NYKYPOLITIIKKAA eikä
+   * saaren asemaa koskevaa kysymystä. Historia kerrotaan
+   * päivämäärinä ja hallintomuutoksina ilman kummankaan osapuolen
+   * kehystä, ja painopiste on kielessä, kaupassa, ruoassa,
+   * luonnossa, musiikissa ja tekniikassa. POIS JÄTETTY KOKONAAN:
+   * saaren nykyinen asema ja sitä koskeva kiista, puoluepolitiikka
+   * ja vaalit, sotilaalliset aiheet, sotatilan kausi ja sen
+   * kielipolitiikka, vuoden 1947 tapahtumat, vuoden 1930 Mushan
+   * kapina, vuoden 1999 maanjäristyksen uhriluvut sekä Alishanin
+   * radan onnettomuudet. Teresa Tengin jutussa ei kerrota, missä
+   * maissa hänen levyjään sai myydä, vaan mitä hän lauloi.
+   *
+   * TYÖNJAKO. Taipeilla on oma kaupunkilehti (kulttuuri-kategoriat.js:
+   * Taipei 101, kansallinen palatsimuseo, Shilinin yömarkkina,
+   * Beitoun kuumat lähteet, altaan kolme kylää, Dihua-kadun teekauppa,
+   * kaupunginmuuri ja Taihokun kaava) ja maalla yksitoista
+   * karttanostoa (maastokohteet-twn.js: Yu Shan, Taiwaninsalmi,
+   * Taroko, Santo Domingo, Jiufen, Lukang, Chaotian, Fort Zeelandia,
+   * Wushantou, Sanxiantai, Penghu), eläintäky (elaintakyt.js:
+   * formosanmustakarhu) ja kaksi skandaalikorttia (skandaalit.js:
+   * Roverin haaksirikko 1867, Lanyu). Maalehti EI toista niistä
+   * yhtäkään: aiheet on valittu niin, että lehti täydentää karttaa.
+   * Kaksi tietoista kaikua: hollantilaisten peurannahkakauppa
+   * (historia) ja formosanpeuran katoaminen ja paluu (luonto)
+   * kertovat saman asian kaupan ja lajin näkökulmasta, ja Fort
+   * Zeelandian karttakortti kertoo linnoituksesta, tämä lehti
+   * kaupasta.
+   *
+   * FAKTAT en-Wikipedian raakateksteistä (action=query&prop=extracts,
+   * haettu 7.9.2026): Taiwan, Austronesian peoples, Dutch Formosa,
+   * Koxinga, Kingdom of Tungning, George Leslie Mackay, Beef noodle
+   * soup, Bubble tea, Ló͘-bah-pn̄g, Pineapple cake, Taiwan blue
+   * magpie, Oncorhynchus masou formosanus, Formosan sika deer,
+   * Black-faced spoonbill, Teresa Teng, Taiwanese opera, Difang and
+   * Igay Duana, Bunun people, Alishan Forest Railway, Camphor, Giant
+   * Bicycles, Hsinchu Science Park ja TSMC. Faktapohja ja
+   * ristiriidat: docs/mantereet-tyoaineisto/faktapohja-taiwan.md.
+   *
+   * MINITEHTÄVÄ on yksi (ruoka-sivu), ja sen vastaus löytyy saman
+   * sivun nostosta R2. Tarkistettu, ettei se osu asia-questions.js:n
+   * Taipei-visaan (siellä kysytään tornia, yömarkkinoita, saarta,
+   * mikrosiruja ja asemaa — ei kuplateetä).
+   */
+  TWN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Saarelta lähti kolmetuhatta vuotta ennen ajanlaskua kieli, '
+        + 'joka päätyi Madagaskarille asti. Myöhemmin samalle rannalle '
+        + 'tultiin hakemaan peurannahkaa, sokeria ja teetä.',
+      nostot: [
+        {
+          otsikko: 'Kieli lähti saarelta veneellä',
+          aika: 'n. 3000–1500 eaa.',
+          teksti: 'Austronesialaisten kielten kotiseutu on tutkijoiden '
+            + 'valtavirtakäsityksen mukaan Taiwan ja Penghun saaristo: '
+            + 'saaren alkuperäiskansojen kielet ovat suvun syvimmät haarat, '
+            + 'ja kaikki muut sen sadat kielet ovat lähtöisin täältä. Liike '
+            + 'alkoi noin 3000–1500 eaa., ja Filippiinien pohjoisimmille '
+            + 'Batanes-saarille päästiin noin 2200 eaa. Purjetta käytettiin '
+            + 'jo ennen vuotta 2000 eaa., ja sen sekä kaksirunkoisten ja '
+            + 'puomikellukkaisten veneiden avulla asutus levisi lopulta '
+            + 'Madagaskarille lännessä, Pääsiäissaarelle idässä ja '
+            + 'Uuteen-Seelantiin noin 1250 jaa. Mukana kulkivat riisi, '
+            + 'banaani, kookos, taaro, kana, sika ja koira.',
+        },
+        {
+          otsikko: 'Peurannahat lähtivät Japaniin',
+          aika: '1624–1662',
+          teksti: 'Hollantilainen Itä-Intian kauppakomppania asettui '
+            + 'Formosalle vuonna 1624 käydäkseen kauppaa Kiinan ja Japanin '
+            + 'kanssa. Pian yhtiö huomasi, mikä saarella oli arvokkainta: '
+            + 'läntisillä tasangoilla laidunsi valtavia formosanpeurojen '
+            + 'laumoja, ja niiden sitkeästä nahasta japanilaiset tekivät '
+            + 'samuraiden haarniskoja. Vuonna 1638 saarelta vietiin Japaniin '
+            + '151 400 peurannahkaa. Toinen suuri vientitavara oli sokeri: '
+            + 'vuonna 1658 Taiwan tuotti 1 730 000 catty-painoa, josta '
+            + '800 000 purjehti Persiaan ja 600 000 Japaniin. Kolmas oli '
+            + 'rikki, jota kerättiin Keelungin ja Tamsuin seudulta.',
+        },
+        {
+          otsikko: 'Kuningaskunta, joka kesti kaksikymmentä vuotta',
+          aika: '1662–1683',
+          teksti: 'Zheng Chenggong syntyi 27. elokuuta 1624 Hiradossa '
+            + 'Japanissa fujianilaisen kauppiaan ja japanilaisen äidin '
+            + 'poikana, ja hänet tunnetaan kunnianimellä Koxinga. Vuonna '
+            + '1662 hänen joukkonsa valtasivat hollantilaisten '
+            + 'päälinnoituksen, ja saarelle syntyi hallinto, joka oli '
+            + 'ensimmäinen pääosin han-kiinalainen valtio Taiwanin '
+            + 'historiassa. Koxinga kuoli samana vuonna. Hänen poikansa '
+            + 'Zheng Jing antoi alueelle 1664 nimen Tungning, itäinen '
+            + 'tyyneys — nimenvaihdos kertoi, että saarelle aiottiin jäädä '
+            + 'eikä vain odottaa paluuta. Kuningaskunta hallitsi Taiwanin '
+            + 'lounaisosaa ja Penghuta, ja Qing-dynastia liitti sen itseensä '
+            + 'vuonna 1683.',
+        },
+        {
+          otsikko: 'Hammaslääkäri Tamsuissa',
+          aika: '1872',
+          teksti: 'Kanadalainen George Leslie Mackay saapui Taiwaniin 29. '
+            + 'joulukuuta 1871 ja asettui seuraavana vuonna Tamsuihin, jossa '
+            + 'hän asui kuolemaansa 1901 asti. Työ alkoi kiertävästä '
+            + 'hammaslääkärintoimesta: Mackay veti kipeitä hampaita kylästä '
+            + 'toiseen kulkiessaan. Hän opetteli puhumaan sujuvaa '
+            + 'taiwaninhokkienia ja meni naimisiin taiwanilaisen Tiuⁿ '
+            + 'Chhang-miân kanssa. Oppilaidensa kanssa hän perusti '
+            + 'kuusikymmentä seurakuntaa. Vuonna 1882 avattiin Oxford '
+            + 'College, jonka rahat kerättiin hänen kotipitäjässään '
+            + 'Ontariossa, ja vuotta myöhemmin tyttökoulu; samana vuonna '
+            + 'alkoi toimia Tamsuin sairaala. Isoisän matkavuonna 1873 '
+            + 'Mackay oli ollut Tamsuissa vasta vuoden.',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Kaksi taiwanilaista ruokalajia on lähtenyt maailmalle: '
+        + 'liemi, jota haudutetaan vuorokausi, ja tee, johon pudotettiin '
+        + 'tapiokahelmiä kesken työpaikkakokouksen.',
+      nostot: [
+        {
+          otsikko: 'Liemi kiehuu vuorokauden',
+          teksti: 'Punaruskeaksi haudutettu naudanlihanuudelikeitto on '
+            + 'Taiwanin tunnetuin oma ruokalaji. Sen kehittivät saarelle '
+            + 'Sichuanista tulleet siirtolaiset, ja siksi sitä kutsutaan '
+            + 'Taiwanissa usein sichuanilaiseksi nuudelikeitoksi — mikä '
+            + 'sekoittaa asian, koska Sichuanissa on omat toisenlaiset '
+            + 'versionsa. Liha haudutetaan liemessä hitaasti, joskus päiviä, '
+            + 'ja liemi saa porista luuytimen kanssa: osa kojuista keittää '
+            + 'sitä yli vuorokauden. Päälle tulee hapansäilöttyä sinappikaalia '
+            + 'ja kevätsipulia. Lanzhoun kuuluisa versio on juuri päinvastainen: '
+            + 'kirkas liemi ilman soijakastiketta.',
+        },
+        {
+          otsikko: 'Helmet putosivat teehen kokouksessa',
+          aika: '1986–1988',
+          teksti: 'Kuplateellä on kaksi kilpailevaa syntytarinaa. Taichungin '
+            + 'Chun Shui Tang -teehuoneen perustaja Liu Han-Chieh oli nähnyt '
+            + 'Japanissa 1980-luvulla, että kahvia tarjotaan kylmänä, ja alkoi '
+            + 'tarjota teetä samoin. Teehuoneen tuotekehittäjä Lin Hsiu Hui '
+            + 'kertoo kaataneensa vuonna 1988 tapiokahelmiä teehensä kesken '
+            + 'henkilökunnan kokouksen ja kehottaneensa muitakin maistamaan; '
+            + 'juomasta tuli talon myydyin. Tainanin Hanlin-teehuone sanoo '
+            + 'keksineensä saman jo 1986, kun omistaja Tu Tsong-he näki torilla '
+            + 'valkoisia tapiokapalloja. Vuonna 2009 teehuoneet veivät asian '
+            + 'oikeuteen.',
+        },
+        {
+          otsikko: 'Ruskea kastike valkoisen riisin päällä',
+          teksti: 'Arkiruoista tavallisin on lihasilppuriisi: possunkylkeä '
+            + 'kuutioidaan pieneksi, paistetaan siivutetun salottisipulin '
+            + 'kanssa ja haudutetaan soijakastikkeessa sokerin, riisiviinin ja '
+            + 'pippurin kera, kunnes kastike on tummanruskeaa. Annos on kulhollinen '
+            + 'höyrytettyä riisiä ja lusikallinen kastiketta päällä. Vuonna 2011 '
+            + 'Michelinin vihreän oppaan Taiwanin laitos kirjoitti ruoan olevan '
+            + 'kotoisin Shandongista — luultavasti siksi, että nimen ensimmäinen '
+            + 'merkki kirjoitetaan usein samalta kuulostavalla merkillä, joka on '
+            + 'Shandongin vanha nimi. Taipein kaupunki vaati julkisesti korjausta.',
+        },
+        {
+          otsikko: 'Ananas kääritään voitaikinaan',
+          teksti: 'Ananasleivos on paksu neliö murenevaa taikinaa, jonka sisällä '
+            + 'on tiivis ananashillo. Ananas tuli saarelle portugalilaisten '
+            + 'kauppiaiden mukana, ja Japanin hallintokaudella siitä tuli tärkeä '
+            + 'vientikasvi: 1930-luvun lopulla Taiwan oli maailman kolmanneksi '
+            + 'suurin ananaksen viejä. Kun vienti myöhemmin kääntyi kotimaiseksi '
+            + 'tuoremyynniksi, leipomot alkoivat käyttää ylijäämän leivoksiin. '
+            + 'Nimi kantaa toivotuksen: hokkieniksi ananas kuulostaa lähes samalta '
+            + 'kuin sanonta, joka tarkoittaa vaurauden tulemista, ja siksi leivoksia '
+            + 'annetaan kihlajaislahjaksi.',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten oikeus ratkaisi kuplateen keksijäkiistan 2019?',
+        vaihtoehdot: [
+          'Taichungin teehuone voitti',
+          'Tainanin teehuone voitti',
+          'Kumpikaan ei saanut yksinoikeutta',
+          'Teehuoneet saivat yhteisen patentin',
+        ],
+        oikea: 2,
+        fakta: 'Noin kymmenen vuoden käsittelyn jälkeen tuomioistuin katsoi, '
+          + 'ettei kuplatee ole patentoitavissa: se on tavallinen ruokatuote, '
+          + 'jonka kuka tahansa saa valmistaa.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Saari on kapea mutta korkea, ja se on kerännyt lajeja, joita '
+        + 'ei ole missään muualla: lohi vuoristopurossa, harakka jonka pyrstö '
+        + 'on pidempi kuin ruumis, ja peura joka ehti kadota kokonaan.',
+      nostot: [
+        {
+          otsikko: 'Harakka, joka toi tulen vuorelta',
+          teksti: 'Taiwaninsiniharakka on saaren oma laji, jota ei tavata '
+            + 'missään muualla. Se on 63–68 senttiä pitkä, ja siitä pyrstö on '
+            + '34–42 senttiä: pää, kaula ja rinta ovat mustat, silmät keltaiset, '
+            + 'nokka ja jalat punaiset ja loput sinistä. Lintu liikkuu kolmen ja '
+            + 'kahdentoista yksilön parvissa, jotka lentävät jonossa toistensa '
+            + 'perässä. Pesällä auttavat edellisten vuosien poikaset. Tsou-, '
+            + 'thao- ja bununkansojen suuressa tulvatarinassa ihmiset pakenivat '
+            + 'vuorten huipuille, ja siniharakka uhrasi itsensä kantaakseen '
+            + 'viimeisen sytykkeen Yu Shanin huipulta takaisin heille.',
+        },
+        {
+          otsikko: 'Lohi, joka jäi vuorille',
+          teksti: 'Formosanlohi on jäänne ajalta, jolloin viileä vesi ulottui '
+            + 'alemmas: kun Dajia-joen alajuoksu lämpeni viime jääkauden '
+            + 'jälkeen, kanta jäi loukkuun vuoristolaaksoihin. Se on '
+            + 'salmonidien eteläisin luontainen esiintymä Aasiassa ja elää vain '
+            + 'yli 1 500 metrissä, missä vesi pysyy alle 17 asteessa. Japanin '
+            + 'hallinto julisti kalan kansallisaarteeksi 1938. Sen jälkeen kanta '
+            + 'romahti: vuonna 1992 yksilöitä laskettiin enää 200. Shei-Pan '
+            + 'kansallispuistossa aloitettiin 1995 istutustyö, ja maaliskuussa '
+            + '2023 laskennassa löytyi 15 374 kalaa.',
+        },
+        {
+          otsikko: 'Peura katosi ja palasi',
+          teksti: 'Formosanpeura tuli saarelle jääkausien aikana, kun matala '
+            + 'merenpinta yhdisti Taiwanin mantereeseen. Sen paras elinalue oli '
+            + 'juuri se länsirannikon alava tasanko, jolle ihmiset sittemmin '
+            + 'rakensivat. Hollantilaisten kuutena vuosikymmenenä saarelta '
+            + 'vietiin kahdesta neljään miljoonaa peurannahkaa, ja metsästys '
+            + 'jatkui sen jälkeenkin. Viimeinen tiedossa oleva luonnonvarainen '
+            + 'yksilö tapettiin 1969. Laji säilyi tarhoissa, ja 1984 aloitettiin '
+            + 'palautus: Taipein eläintarhasta vietiin 22 peuraa Kentingin '
+            + 'kansallispuistoon, aitauksissa odotettiin kymmenen vuotta ja '
+            + '1994 ne päästettiin vapaaksi. Nyt niitä on yli tuhat.',
+        },
+        {
+          otsikko: 'Lusikkanokka talvehtii lounaassa',
+          teksti: 'Mustanaamalusikkanokka on kuudesta lusikkanokkalajista se, '
+            + 'jonka levinneisyys on kaikkein kapein, ja ainoa uhanalaiseksi '
+            + 'luokiteltu. Se pesii muutamalla pienellä kalliosaarella Korean '
+            + 'niemimaan länsipuolella ja talvehtii neljässä paikassa: '
+            + 'Taiwanissa, Hongkongissa, Macaossa ja Vietnamissa. Lintu '
+            + 'ruokailee hämärissä kahlaamalla matalassa vedessä ja '
+            + 'huitomalla lapiomaista nokkaansa puolelta toiselle, kunnes se '
+            + 'osuu saaliiseen — siksi se on täysin riippuvainen vuorovesilietteistä. '
+            + '1980-luvulla laji oli lähellä hävitä. Vuoden 2012 laskennassa '
+            + 'lintuja oli 2 693 ja vuoden 2022 laskennassa 6 162.',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Saaren äänet ovat kulkeneet kauas: kahdeksalla kielellä '
+        + 'laulanut tähti, oma oopperamuoto, ja kylvöjuhlan laulu, joka '
+        + 'päätyi olympialaisten tunnusmusiikkiin ilman lupaa.',
+      nostot: [
+        {
+          otsikko: 'Kahdeksan kieltä ja tuhat seitsemänsataa laulua',
+          aika: '1953–1995',
+          teksti: 'Teresa Teng syntyi 29. tammikuuta 1953 Baozhongissa '
+            + 'Yunlinin piirikunnassa. Hän aloitti televisiossa vuonna 1967 ja '
+            + 'jätti koulun neljätoistavuotiaana keskittyäkseen musiikkiin; '
+            + 'taipalensa alussa hän esiintyi taipeilaisessa yökerhossa '
+            + 'seitsemänäkymmenä iltana peräkkäin, joka ilta puolitoista tuntia. '
+            + 'Japanissa hänen toinen singlensä Airport myi 1974 seitsemänsataatuhatta '
+            + 'kappaletta. Kaikkiaan hän levytti yli 1 700 laulua kahdeksalla '
+            + 'kielellä: mandariinilla, hokkienilla, kantoninkiinalla, '
+            + 'shanghain murteella, japaniksi, indonesiaksi, englanniksi ja '
+            + 'italiaksi. Hän kuoli äkillisesti lomallaan Chiang Maissa 8. '
+            + 'toukokuuta 1995.',
+        },
+        {
+          otsikko: 'Ainoa ooppera, joka syntyi täällä',
+          teksti: 'Gezaixi on ainoa han-kiinalaisen oopperan muoto, joka on '
+            + 'saanut alkunsa Taiwanissa — Yilanissa saaren koillisosassa. Sen '
+            + 'juuri on koa-á, hokkieniksi laulettu kertova balladi, jossa '
+            + 'säkeessä on viisi tai seitsemän merkkiä ja säkeistössä neljä '
+            + 'säettä. Kun Shanghaista ja Fujianista kiersi 1923–1949 '
+            + 'pekingiläisiä oopperaseurueita, muodolle tarttuivat akrobatia ja '
+            + 'lyömäsoittimet. Vuonna 1949 rekisteröityjä seurueita oli yli '
+            + 'viisisataa. Ooppera siirtyi radioon 1954, ensimmäiseen '
+            + 'elokuvaan 1955 ja televisioon 1962. Miesten roolit laulaa '
+            + 'perinteisesti nainen.',
+        },
+        {
+          otsikko: 'Amis-laulu olympialaisissa',
+          aika: '1988–1999',
+          teksti: 'Difang ja Igay Duana olivat amis-kansaan kuuluva '
+            + 'viljelijäpariskunta Taitungista. Vuonna 1988 heidät kutsuttiin '
+            + 'Pariisiin esiintymään, ja ranskalainen kulttuuri-instituutti '
+            + 'äänitti heidän vanhusten juomalaulunsa nimettömälle '
+            + 'opetuskokoelmalle; esiintyjille maksettiin viisitoista dollaria '
+            + 'päivässä. Kuusi vuotta myöhemmin Enigma-yhtye käytti äänitteestä '
+            + 'näytettä kappaleessaan Return to Innocence uskoen sen olevan '
+            + 'vapaasti käytettävissä, ja kappaleesta tuli vuoden 1996 '
+            + 'olympialaisten tunnusmusiikkia. Riita sovittiin oikeuden '
+            + 'ulkopuolella 1999, ja osalla korvauksesta perustettiin '
+            + 'stipendirahasto amis-lapsille.',
+        },
+        {
+          otsikko: 'Kahdeksan ääntä kylvöjuhlassa',
+          teksti: 'Bunun-kansan pasibutbut lauletaan kylvöjuhlassa. Se on '
+            + 'moniäänistä laulua, jossa on tavallisesti viidestä '
+            + 'kahteentoista ääntä, ja äänet nousevat hitaasti yhdessä ylöspäin '
+            + 'ilman sanoja. Japanilainen musiikintutkija Takatomo Kurosawa '
+            + 'äänitti bununlaulajia vuonna 1943. Kansan oma soitin on latuk, '
+            + 'jousen näköinen suujousi, jonka runko tehdään bambusta: soittaja '
+            + 'asettaa suunsa jousen päähän, näppäilee kieltä ja muotoilee '
+            + 'melodian yläsävelistä hengityksellä ja suun asennolla. Soitinta '
+            + 'soitetaan yksin pimeän tultua, ja se on merkitty muistiin jo '
+            + 'vuoden 1776 kuvateoksessa.',
+        },
+      ],
+    },
+    {
+      id: 'tekniikka',
+      nimi: 'Tekniikka',
+      johdanto: 'Saaren vientitavarat ovat vaihtuneet kolmesti sadassa '
+        + 'vuodessa: kamferista polkupyöriin ja polkupyöristä piisiruihin. '
+        + 'Vuoristorata sen sijaan kulkee yhä.',
+      nostot: [
+        {
+          otsikko: 'Rata kiipeää sikin sokin',
+          aika: '1912',
+          teksti: 'Alishanin metsärata on 86 kilometrin verkosto, jonka '
+            + 'raideleveys on 762 millimetriä. Se rakennettiin sypressin ja '
+            + 'taiwanianpuun kuljettamiseen. Maastotutkimukset tehtiin 1900 ja '
+            + 'reitti suunniteltiin 1903, mutta työ keskeytyi; osakelaisen '
+            + 'rakennusyhtiön yritys päättyi 1908 rahavaikeuksiin ja vuoriston '
+            + 'vaikeuteen. Hallinto rakensi radan itse valmiiksi 18 tonnin '
+            + 'Shay-vetureilla, ja päärata oli valmis 1913. Radalla on yli '
+            + 'viisikymmentä tunnelia, 77 puusiltaa ja harvinaisia Z-kirjaimen '
+            + 'muotoisia peräytysmutkia, joissa juna kiipeää rinnettä sahaten. '
+            + 'Koko päärata avattiin taas heinäkuussa 2024.',
+        },
+        {
+          otsikko: 'Kamferi ja suomalainen kemisti',
+          aika: '1903',
+          teksti: 'Kamferipuun suuret metsiköt olivat 1800-luvun alkuun '
+            + 'mennessä kaadettu lähes kaikkialta muualta, ja jäljellä olivat '
+            + 'Japani ja Taiwan — Taiwan selvästi suurempana. Kamferista tuli '
+            + 'teollisuuden raaka-aine, koska juuri se pehmitti nitroselluloosan '
+            + 'selluloidiksi: elokuvafilmin ja varhaisen muovin ainekseksi. Kysyntä '
+            + 'nosti hinnan, ja hallinnot pitivät kauppaa monopolissaan. Sitten '
+            + 'suomalainen kemisti Gustaf Komppa julkaisi 1903 ensimmäisen '
+            + 'täydellisen synteesin kamferihaposta ja aloitti 1907 teollisen '
+            + 'valmistuksen Tainionkoskella. Formosan kamferi maksoi tavallisesti '
+            + 'noin 50 senttiä naulalta, vuonna 1918 jo 3,75 dollaria.',
+        },
+        {
+          otsikko: 'Polkupyörä Taichungista',
+          aika: '1972',
+          teksti: 'Giant perustettiin vuonna 1972 Dajiassa Taichungin '
+            + 'kupeessa, ja sen perustaja oli King Liu. Vuonna 1977 yhtiö sopi '
+            + 'valmistavansa pyöriä amerikkalaiselle Schwinnille tämän omalla '
+            + 'nimellä. 1980-luvun puoliväliin mennessä Giant teki yli kaksi '
+            + 'kolmasosaa Schwinnin pyöristä, ja se oli 75 prosenttia Giantin '
+            + 'myynnistä — riippuvuus, joka olisi voinut kaataa yhtiön. Kun '
+            + 'Schwinn siirsi tilauksensa muualle 1987, Giant toi markkinoille '
+            + 'oman merkkinsä. Vuonna 2017 yhtiö myi 6,6 miljoonaa polkupyörää, '
+            + 'ja niitä myytiin yli viidessäkymmenessä maassa.',
+        },
+        {
+          otsikko: 'Tehdas, joka ei suunnittele mitään',
+          aika: '1987',
+          teksti: 'Hsinchun tiedepuisto perustettiin 15. joulukuuta 1980. '
+            + 'Ajatus oli Shu Shien-Siun, joka oli kiertänyt 1976 Yhdysvalloissa, '
+            + 'Euroopassa ja Japanissa ja halusi Piilaakson kaltaisen alueen '
+            + 'kahden yliopiston viereen. Puistoon perustettiin 1987 TSMC, '
+            + 'valtion, tutkimuslaitoksen ja yksityisten sijoittajien yhteisyritys, '
+            + 'jota johti Morris Chang. Sen idea oli uusi: tehdas, joka ei '
+            + 'suunnittele omia piirejään lainkaan vaan valmistaa vain muiden '
+            + 'suunnittelemia — maailman ensimmäinen pelkkä sopimusvalimo. Vuonna '
+            + '2022 saaren mikropiirivienti oli 184 miljardia dollaria eli lähes '
+            + 'neljännes koko talouden arvosta.',
+        },
+      ],
+    },
+  ],
+  /*
    * YHDYSVALLAT (USA) — P-Amerikan ensimmäinen maalehti.
    *
    * Aihejako on Fablen hyväksymä (docs/mantereet-tyoaineisto/

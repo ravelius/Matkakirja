@@ -490,3 +490,13 @@ pitää syötettä 10 minuutin välimuistissa — perhekäytössä rajat eivät
 tule koskaan vastaan. Käännösnappi käyttää MyMemory-palvelua suoraan
 selaimesta (ilmainen, n. 5 000 merkkiä päivässä per käyttäjä) — se ei
 kulje workerin kautta.
+
+> **Päivitys 7.9.2026 (Taiwan):** sallittuihin lisättiin
+> `feeds.feedburner.com/rsscna/` ja `www.cna.com.tw` (maalehti TWN,
+> testattu 7.9.2026: uutistoimisto CNA:n aluejuttujen syötteessä
+> kaksitoista juttua, ja artikkelisivun `<article>`-lohkosta jäsentyy
+> kuusi yli 60 merkin kappaletta sekä `og:image`). Syöte on
+> feedburnerissa, koska cna.com.tw:n omat `/rss/*.xml`-osoitteet
+> vastaavat 404:llä; feedburner-alku on rajattu `rsscna`-polkuun,
+> ettei workerista tule yleistä feedburner-välitystä. Hylätyt lähteet
+> on kirjattu `js/packs/uutislahteet.js`:n TWN-kommenttiin.

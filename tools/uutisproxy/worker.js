@@ -183,6 +183,12 @@ const SALLITUT = [
   // Somalian uutislähde (maalehti SOM, 7.9.2026): syöte ja
   // artikkelisivut samalla isäntänimellä, ilman www-etuliitettä.
   'https://shabellemedia.com/',
+  // Taiwanin uutislähde (maalehti 7.9.2026): CNA:n syöte on
+  // feedburnerissa ja artikkelisivut cna.com.tw:ssä, joten listalla on
+  // kaksi alkua. Feedburner-alku on rajattu rsscna-polkuun, ettei
+  // workerista tule yleistä feedburner-välitystä.
+  'https://feeds.feedburner.com/rsscna/',
+  'https://www.cna.com.tw/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

@@ -542,6 +542,37 @@ export const UUTISLAHTEET = {
     syote: 'https://shabellemedia.com/feed/',
   },
   /*
+   * Keskusuutistoimisto CNA (中央通訊社) on Taiwanin uutistoimisto, ja
+   * taulussa on sen 地方新聞 eli kotimaan aluejuttujen syöte. Lähde
+   * valittiin nimenomaan uutistoimistoksi: se kirjoittaa lyhyitä
+   * asiauutisia ilman lehtien omaa linjaa, mikä sopii Taiwanin
+   * herkkyyteen (spec-asia.md). Testattu 7.9.2026: syötteessä
+   * kaksitoista juttua, ja artikkelisivun <article>-lohkossa on kuusi
+   * yli 60 merkin kappaletta sekä og:image (neljästä koetellusta
+   * jutusta kolmessa oikea kuva, yhdessä toimituksen oma
+   * varalogo).
+   *
+   * Syötteen osoite on feedburnerissa, koska cna.com.tw:n omat
+   * /rss/*.xml-osoitteet vastaavat 404:llä; feedburner palauttaa
+   * suoraan 200:n eikä uudelleenohjausta, jota worker ei seuraisi.
+   * Workerin sallittujen listalle lisättiin siksi kaksi alkua:
+   * feeds.feedburner.com/rsscna/ (vain tämä syötepolku) ja
+   * www.cna.com.tw/ (artikkelisivut).
+   *
+   * Testattu ja hylätty: 自由時報 (news.ltn.com.tw/rss/all.xml) —
+   * syöte ja og:image kunnossa, mutta [itemprop="articleBody"]
+   * -lohkon ensimmäinen <p> sisältää sivun oman javascriptin, joka
+   * päätyisi popupin ensimmäiseksi kappaleeksi; 聯合報 (udn.com
+   * /rssfeed/news/2/6638) palauttaa syötteen, jonka kaikki juttukentät
+   * ovat tyhjiä; 公視新聞網 (news.pts.org.tw/xml/newsfeed.xml) on
+   * Atom-syöte, eikä js/uutiset.js osaa lukea <entry>-elementtejä.
+   */
+  TWN: {
+    nimi: 'CNA',
+    kieli: 'zh',
+    syote: 'https://feeds.feedburner.com/rsscna/local',
+  },
+  /*
    * ETIOPIA (ETH) JÄI ILMAN LÄHDETTÄ (Opus 6.9.2026) — Addis Abeban ja
    * Lalibelan lehdissä ei siis näy uutisosiota, eikä mikään mene
    * rikki. Sama tilanne kuin Kuuballa ja Fidžillä.
