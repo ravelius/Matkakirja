@@ -3636,6 +3636,72 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 4.6195, etela: 4.5895, lansi: -74.0815, ita: -74.0620 },
   },
+  perth: {
+    /*
+     * WELLINGTON STREETIN JA SWAN-JOEN VÄLINEN NAUHA (7.9.2026).
+     * Ruutu on 1,8 × 1,7 kilometriä eli pelin tiiviimpiä,
+     * Christchurchin 2,4 km:n luokkaa ja selvästi pienempi kuin
+     * Wellingtonin 3,3. Syy on kaupungin muodossa: Perthin vanha
+     * ydin on kapea nauha, joka alkaa ratapihalta ja päättyy Perth
+     * Waterin rantaan, ja kaikki kahdeksan kohdetta ovat sen sisällä
+     * Länsi-Australian museolta (-31,9496) Swan Bellsille
+     * (-31,9589).
+     *
+     * LAAJEMPI RUUTU KOKEILTIIN JA HYLÄTTIIN. Faktapohjan osion 4
+     * kymmenen kohdetta levittyvät 2,9 kilometrin säteelle, mutta
+     * niistä uloimmat — Kings Park lännessä, WACA ja Heirisson
+     * Island idässä — ovat lehden omien nostojen aihe tai jäävät
+     * niiden kanssa samaan kuvaan. Ilman niitä ruudun ei ole syytä
+     * olla leveämpi kuin nauha itse, ja tiukka rajaus pitää
+     * ruutukaavan katujen välit erottuvina.
+     *
+     * ETELÄREUNA -31,9620 ON VEDETTY PERTH WATERIN PÄÄLLE, ja se on
+     * ruudun ainoa varsinainen valinta. Rannan alle jää noin 200
+     * metriä vettä, mikä antaa kuvalle pohjan ja näyttää, kuinka
+     * lähelle jokea St Georges Terracen talot rakennettiin. Swan
+     * Bells on tuossa reunassa, joten mittakaavajanan kohta
+     * kannattaa katsoa lehdestä.
+     *
+     * meri: ei. Perth Water on OSM:ssä vesimonikulmio (natural=water)
+     * eikä rantaviiva, joten se piirtyy ilman lippua.
+     */
+    rajat: { pohjoinen: -31.9470, etela: -31.9620, lansi: 115.8510, ita: 115.8700 },
+  },
+  adelaide: {
+    /*
+     * RUUTUKAAVAN POHJOISOSA JA TORRENSIN YLI (7.9.2026). Ruutu on
+     * 2,0 × 2,2 kilometriä ja pystysuuntainen — pelin harvoja
+     * sellaisia, ja se on tarkoituksellista. Adelaiden kohteet ovat
+     * pohjois–eteläsuuntaisessa nauhassa King William Streetin
+     * varrella: North Adelaiden St Peterin katedraalilta
+     * (-34,9128) kaupungintalolle (-34,9261).
+     *
+     * LEVEÄMPI RUUTU KOKEILTIIN JA HYLÄTTIIN. Lightin ruutukaava on
+     * neljän puistokadun (North, East, South, West Terrace) sisällä
+     * noin 2,5 × 2,5 kilometrin neliö, mutta sen eteläpuolisko jää
+     * kokonaan ilman kohdetta: Adelaide Gaol, Adelaide Oval ja
+     * kasvitieteellinen puutarha ovat lehden omien nostojen aihe,
+     * ja jäljelle jäävät kahdeksan ovat kaikki North Terracen
+     * pohjoispuolella tai sen tuntumassa.
+     *
+     * POHJOISREUNA -34,9110 ON ST PETERIN KATEDRAALIN MUKAAN, ja se
+     * tuo kuvaan Torrensin sekä puistorenkaan molemmat rannat. Ilman
+     * North Adelaidea ruutu olisi 1,3 kilometriä korkea ja kaikki
+     * kahdeksan kohdetta puristuisivat kolmen korttelin nauhaan.
+     *
+     * ENSIMMÄINEN RUUTU OLI 150 METRIÄ POHJOISEMPANA (-34,9095 …
+     * -34,9295) JA SE HYLÄTTIIN KUVAN PERUSTEELLA: ylin kaistale jäi
+     * pelkäksi puistoksi, ja ruutukaava katkesi alareunassa kesken.
+     * Siirto etelään toi Victoria Squaren mukaan ilman, että
+     * katedraali jäi reunan ulkopuolelle — se on nyt 198 metriä
+     * yläreunasta.
+     *
+     * meri: ei. Adelaide on kymmenen kilometriä Saint Vincentin
+     * lahdesta, ja Torrens on OSM:ssä tavallinen vesiväylä
+     * padottuine järvineen Elder Parkin kohdalla.
+     */
+    rajat: { pohjoinen: -34.9110, etela: -34.9310, lansi: 138.5930, ita: 138.6145 },
+  },
   suva: {
     /*
      * SIIRTOMAA-AJAN HALLINTOKORTTELI NIEMEN KÄRJESSÄ (6.9.2026).

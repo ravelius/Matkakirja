@@ -12354,6 +12354,137 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Casa de Nariño', lat: 4.59555556, lon: -74.0775 },
     ],
   },
+  /*
+   * PERTH (7.9.2026). Rajaus on 1,8 × 1,7 kilometriä eli pelin
+   * tiiviimpiä — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * perth-lohkossa: kaupungin vanha ydin on kapea nauha Wellington
+   * Streetin ja Swan-joen välissä, ja kaikki kahdeksan kohdetta
+   * mahtuvat siihen.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Goonininupin lähde, nimet Perth ja Boorloo, vankeja pyytänyt
+   * siirtokunta ja kullan tuoma rahapaja; historiasivu kertoo
+   * kaupungintalosta, kuvernöörintalosta, kuljetusten päättymisestä
+   * ja vankitaustan häpeästä, luontosivu Kings Parkista,
+   * Derbarl Yerriganista, kuudesta vuodenajasta ja joen ruoppauksesta,
+   * ja whadjukit-sivu Yaganista, pään palusta ja Yagan Squaresta.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS.
+   * Kaupungintalo, kuvernöörintalo, rahapaja, Kings Park ja
+   * Heirisson Island ovat kaikki faktapohja-perth.md:n osion 4
+   * kymmenen kohteen listalla ja mahtuisivat ruutuun tai sen viereen,
+   * mutta ne ovat lehden omien nostojen aihe. Samasta syystä kartalla
+   * ei ole Yagan Squarea eikä Elizabeth Quayta: edellinen on
+   * whadjukit-sivun Y4-noston aihe, jälkimmäinen lehden kansikuva ja
+   * matkaoppaan lauttalaiturin osoite.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. Länsi-Australian
+   * taidegalleria on 174 metriä museosta ja Council House 114 metriä
+   * St George'n katedraalista eli 200 metrin säännön alle, ja
+   * Perthin kasarmin holvi (Barracks Arch) on lehden H4-noston
+   * kuva-aihe. Kaikki kolme mainitaan matkaoppaassa.
+   *
+   * SWAN BELLS ON KARTAN AINOA RANTAPISTE. Kellotorni seisoo Barrack
+   * Squaren täyttömaalla aivan Perth Waterin reunassa, ja
+   * tools/tarkista-karttapisteet.mjs voi raportoida sen ympäriltä
+   * vesiosuutta — itse piste on maalla laiturin juurella samalla
+   * perusteella kuin Marseillen satama-allas.
+   */
+  perth: {
+    polku: 'assets/kartat/perth-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -31.9470, etela: -31.9620, lansi: 115.8510, ita: 115.8700 },
+    esittely: 'Kartta näyttää Perthin vanhan ytimen sellaisena kuin se '
+      + 'mahtuu kahden viivan väliin: yläreunassa kulkee Wellington '
+      + 'Street ratapihoineen ja alareunassa Swan-joki, jonka '
+      + 'pohjoisrantaa myöten kaupunki levisi. Keskellä kulkevat '
+      + 'itä–länsi-suuntaiset Hay Street ja St Georges Terrace, joiden '
+      + 'varrella ovat kaupungin vanhimmat julkiset talot. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Christchurchissa. Koordinaatit
+       * en-Wikipedian coordinates-rajapinnasta 7.9.2026. Pienin väli
+       * on 219 metriä (St George'n katedraali – vanha oikeustalo),
+       * toiseksi pienin 224 metriä (His Majesty's -teatteri –
+       * Wesleyn kirkko).
+       */
+      { nimi: 'Länsi-Australian museo', lat: -31.949629, lon: 115.862402 },
+      { nimi: "His Majesty's -teatteri", lat: -31.95308, lon: 115.85444 },
+      { nimi: 'Wesleyn kirkko', lat: -31.9533, lon: 115.8568 },
+      { nimi: 'London Court', lat: -31.954815, lon: 115.858945 },
+      { nimi: "St Mary's -katedraali", lat: -31.9556, lon: 115.8665 },
+      { nimi: "St George'n katedraali", lat: -31.955753, lon: 115.861292 },
+      { nimi: 'Vanha oikeustalo', lat: -31.9576, lon: 115.8605 },
+      { nimi: 'Swan Bells', lat: -31.958903, lon: 115.858243 },
+    ],
+  },
+  /*
+   * ADELAIDE (7.9.2026). Rajaus on 2,0 × 2,2 kilometriä ja se on
+   * tarkoituksella pystysuuntainen: kohteet ovat nauhassa, joka
+   * alkaa North Adelaiden katedraalilta ja päättyy kaupungintalolle
+   * King William Streetin varrella. Perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n adelaide-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * vankiton siirtokunta, päänsä pitänyt piirtäjä, autoilta suljettu
+   * Rundle Mall ja kaurnat; historiasivu kertoo Adelaide Ovalista,
+   * julistuspuusta, vankilasta ja lamasta, luontosivu
+   * puistorenkaasta, Torrensista, kasvitieteellisestä puutarhasta ja
+   * Victoria Squaresta, ja saksalaisperintösivu Hahndorfista sekä
+   * Barossasta. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Adelaide
+   * Oval, Adelaide Gaol ja kasvitieteellinen puutarha ovat kaikki
+   * faktapohja-adelaide.md:n osion 4 listalla ja mahtuisivat ruutuun
+   * tai sen viereen, mutta ne ovat lehden omien nostojen aihe.
+   * Samasta syystä kartalla ei ole Rundle Mallia, Victoria Squarea
+   * eikä Keskustoria: kaksi ensimmäistä ovat nostoja ja kolmas
+   * matkaoppaan arjen ilmiö.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: parlamenttitalo
+   * on 194 metriä kuvernöörintalosta ja 196 metriä rautatieasemasta,
+   * ja Etelä-Australian taidegalleria on 83 metriä museosta.
+   * Molemmat mainitaan matkaoppaassa.
+   *
+   * PÄÄPOSTITALON KOORDINAATTI ON SAMA KUIN KAUPUNGINTALON. Kumpikin
+   * artikkeli antaa en-Wikipedian coordinates-rajapinnassa pisteen
+   * -34,9261 / 138,60018 (haettu 7.9.2026), vaikka talot ovat eri
+   * kortteleissa. Karttaan otettiin vain kaupungintalo — kahta
+   * kohdetta ei voi merkitä samaan pisteeseen.
+   */
+  adelaide: {
+    polku: 'assets/kartat/adelaide-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -34.9110, etela: -34.9310, lansi: 138.5930, ita: 138.6145 },
+    esittely: 'Kartta näyttää Adelaiden ruutukaavan pohjoisosan ja sen '
+      + 'yli North Adelaiden puolelle: keskellä kaartaa Torrens-joki, '
+      + 'sen molemmin puolin levittäytyy puistorengas, ja alaosassa '
+      + 'alkavat suorat kadut. Pystysuora keskilinja on King William '
+      + 'Street, ja poikittain kulkee North Terrace, jonka varrella '
+      + 'ovat museo, kuvernöörintalo ja rautatieasema. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026;
+       * Tandanyan piste on artikkelin raakatekstin coord-mallineesta,
+       * koska rajapinta ei palauta sille koordinaattia. Pienin väli
+       * on 223 metriä (festivaalikeskus – rautatieasema), toiseksi
+       * pienin 244 metriä (festivaalikeskus – kuvernöörintalo).
+       */
+      { nimi: 'St Peterin katedraali', lat: -34.91277778, lon: 138.59805556 },
+      { nimi: 'Eläintarha', lat: -34.91416667, lon: 138.60583333 },
+      { nimi: 'Festivaalikeskus', lat: -34.91944444, lon: 138.59777778 },
+      { nimi: 'Kuvernöörintalo', lat: -34.920126, lon: 138.600321 },
+      { nimi: 'Etelä-Australian museo', lat: -34.920783, lon: 138.603017 },
+      { nimi: 'Rautatieasema', lat: -34.9211, lon: 138.5964 },
+      { nimi: 'Tandanya', lat: -34.9241, lon: 138.6105 },
+      { nimi: 'Kaupungintalo', lat: -34.9261, lon: 138.60018333 },
+    ],
+  },
 };
 
 /*

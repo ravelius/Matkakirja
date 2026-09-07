@@ -47587,4 +47587,718 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * PERTHIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.perth, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Western Australian Museum", "His Majesty's Theatre,
+   * Perth", "Wesley Church, Perth", "London Court", "St Mary's
+   * Cathedral, Perth", "St George's Cathedral, Perth", "Old Court
+   * House, Perth" ja "Swan Bells").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Goonininupin lähde, nimet Perth ja Boorloo, vankeja pyytänyt
+   * siirtokunta, kullan tuoma rahapaja, kaupungintalo,
+   * kuvernöörintalo, kuljetusten päättyminen, vankitaustan häpeä,
+   * Kings Park, Derbarl Yerrigan, kuusi vuodenaikaa, joen ruoppaus,
+   * whadjukien neljä ryhmää, Yagan, pään paluu ja Yagan Square.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Vanhan
+   * oikeustalon jutussa EI kerrota vankityövoimasta, vaikka
+   * siirtokunnan julkiset talot rakennettiin sillä: talo on vuodelta
+   * 1836 eli neljätoista vuotta ennen ensimmäistä vankilaivaa, ja
+   * vankien työ on lehden kolmen noston aihe. Wesleyn kirkon jutussa
+   * arkkitehti Richard Roach Jewell mainitaan, mutta hänen
+   * kaupungintalostaan EI kerrota mitään uutta — se on lehden
+   * H1-noston aihe.
+   */
+  perth: {
+    'Länsi-Australian museo': {
+      aika: '1891',
+      teksti: 'Museo alkoi kivikokoelmasta vanhan vankilan seinien '
+          + 'sisällä. Geologinen museo avattiin 9. syyskuuta 1891 '
+          + 'Perthin vanhan vankilan tiloissa, ja siellä oli '
+          + 'osavaltion ensimmäinen kokoelma kivinäytteitä. Vuonna '
+          + '1892 mukaan tulivat kansatieteelliset ja biologiset '
+          + 'näytteet, ja 1897 laitoksesta tuli virallisesti '
+          + 'Länsi-Australian museo ja taidegalleria. Vanha vankila on '
+          + 'yhä osa korttelia ja yksi Länsi-Australian vanhimmista '
+          + 'pystyssä olevista rakennuksista.'
+          + '\n\n'
+          + 'Kokoelmat kasvoivat kerääjien työllä: John Tunney kiersi '
+          + 'osavaltiota vuodesta 1895 vuoteen 1909 ja toi eläimiä ja '
+          + 'myöhemmin alkuperäisasukkaiden työkaluja ja esineitä. '
+          + 'Vuonna 1959 kasvikokoelma siirtyi vastaperustettuun '
+          + 'kasvistoarkistoon ja museo ja taidegalleria erosivat omiksi '
+          + 'laitoksikseen. Museo keskittyi luonnontieteisiin, '
+          + 'antropologiaan, arkeologiaan ja osavaltion historiaan, ja '
+          + '1960- ja 1970-luvuilla se alkoi tehdä työtä myös '
+          + 'hylkyjen ja alkuperäiskansojen kohteiden parissa.'
+          + '\n\n'
+          + 'Perthin talo suljettiin 18. kesäkuuta 2016 neljäksi '
+          + 'vuodeksi, ja tilalle rakennettiin uusi museo OMA:n ja '
+          + 'Hassellin piirustusten mukaan. Se avattiin lauantaina '
+          + '21. marraskuuta 2020 nimellä WA Museum Boola Bardip. '
+          + 'Boola Bardip on noongaria ja tarkoittaa "monia '
+          + 'tarinoita". Museolla on kuusi toimipistettä: Perthin '
+          + 'lisäksi merenkulku- ja hylkymuseot Fremantlessa sekä omat '
+          + 'museot Albanyssa, Geraldtonissa ja '
+          + 'Kalgoorlie-Boulderissa.',
+      kuvat: [
+        {
+          tiedosto: 'Boola Bardip, Western Australian Museum, Perth, 2023, 01.jpg',
+          selite: 'Vuonna 2020 avattu uusi museorakennus Perth Cultural '
+            + 'Centressä; kyltissä on museon noongarinkielinen nimi Boola '
+            + 'Bardip.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    "His Majesty's -teatteri": {
+      aika: '1904',
+      teksti: 'Teatteri rakennettiin kultavuosien rahalla. Perthin '
+          + 'väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen '
+          + 'nopeasti, ja paikallispoliitikko Thomas Molloy tilasi '
+          + 'arkkitehti William G. Wolfilta teatterin ja hotellin '
+          + 'yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi '
+          + 'annettiin juuri kruunatun Edvard VII:n kunniaksi. '
+          + 'Urakan voitti Friederich Liebe, joka oli aiemmin '
+          + 'rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt '
+          + 'työtä Budapestin oopperatalossa.'
+          + '\n\n'
+          + 'Tontin alla virtasi maanalainen puro, ja perustusten '
+          + 'kestävyydestä esitettiin julkisesti epäilyjä kesken '
+          + 'rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi '
+          + 'ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi '
+          + 'maksamasta ylimääräisiä 17 000 puntaa ilman kirjallista '
+          + 'lupaansa. Liebe haastoi hänet oikeuteen aina korkeimpaan '
+          + 'oikeuteen ja Britannian salaiseen neuvostoon asti ja '
+          + 'voitti — mutta oikeudenkäyntikulut söivät voiton. '
+          + 'Teatterin avasi jouluaattona 1904 kello kahdeksan illalla '
+          + 'Sylvia Forrest, ja avajaisilta jäi vajaaksi: päivä oli '
+          + 'väärä.'
+          + '\n\n'
+          + 'Valmistuessaan talo oli Australian suurin teatteri, 2 584 '
+          + 'paikkaa kolmessa tasossa, ja luultavasti Perthin '
+          + 'ensimmäinen teräsbetonirakennus. Yleisöä viilennettiin '
+          + 'neljällä pienellä vesiputouksella näyttämöaukon kummallakin '
+          + 'puolella ja katon kupolilla, joka aukesi keskeltä kahtia. '
+          + 'Kadunpuoleiset parvekkeet purettiin 1947–48, koska '
+          + 'niiden pilarit haittasivat liikennettä; ne rakennettiin '
+          + 'takaisin vuosina 2021–2022. Talo on tiettävästi Australian '
+          + 'ainoa yhä toimiva edvardiaaninen teatteri, ja vuodesta '
+          + '2006 se on ollut ystävyysteatteri Aberdeenin '
+          + 'samannimisen talon kanssa.',
+      kuvat: [
+        {
+          tiedosto: "His Majesty's Theatre, corner Hay and King Streets.jpg",
+          selite: 'Edvardiaanisen barokin julkisivu Hay Streetin ja King '
+            + 'Streetin kulmassa.',
+          lahde: 'Michal Lewi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Wesleyn kirkko': {
+      aika: '1870',
+      teksti: 'Ensimmäiset metodistit tulivat Swan-joen siirtokuntaan '
+          + '3. helmikuuta 1830 laivalla Tranby ja asettuivat '
+          + 'kuuden kilometrin päähän jokea ylöspäin. Neljäkymmentä '
+          + 'vuotta myöhemmin seurakunta rakensi kolmannen '
+          + 'rukoushuoneensa, tällä kertaa kunnolla: tontti ostettiin '
+          + 'James Inkpenilta 400 punnalla, ja Perthin ensimmäinen '
+          + 'pormestari George Shenton ehdotti nimeä Wesley Church ja '
+          + 'lupasi rakennusrahastoon tuhat puntaa.'
+          + '\n\n'
+          + 'Piirustukset teki Richard Roach Jewell, joka oli itse '
+          + 'seurakunnan jäsen ja siirtokunnan rakennustöiden '
+          + 'virkamies. '
+          + 'Peruskiven laski 25. lokakuuta 1867 kuvernööri John '
+          + 'Stephen Hampton, ja kirkko avattiin sunnuntaina 10. '
+          + 'huhtikuuta 1870. Se maksoi noin 3 000 puntaa — suuri '
+          + 'summa seurakunnalle, jossa oli 138 jäsentä ja jonka '
+          + 'neljännesvuositulot olivat runsaat 66 puntaa. Tiilet '
+          + 'poltettiin paikallisesta savesta, lattia on jarrahia, ja '
+          + 'kirkonkello tuli Tranby-purjelaivasta, joka oli tuonut '
+          + 'ensimmäiset jäsenet maahan.'
+          + '\n\n'
+          + 'Kesäkuussa 1875 kirkkoon asennettiin siirtokunnan '
+          + 'ensimmäiset urut. Meckeringin maanjäristys 1968 vaurioitti '
+          + 'tornin huippua, ja se päätettiin purkaa — mutta kun '
+          + 'muutama metri oli otettu pois, loppu näytti kestävältä, ja '
+          + 'huipulle pantiin kuparinen kartio. Kello siirrettiin '
+          + 'tornista maan tasalle Hay Streetin puolelle, koska '
+          + 'rakennetta ei enää pidetty tarpeeksi vahvana kannattamaan '
+          + 'sitä.',
+      kuvat: [
+        {
+          tiedosto: '00 1598 Wesley Church, Perth WA - William Street.jpg',
+          selite: 'Torninhuipun ylin osa purettiin vuoden 1968 järistyksen '
+            + 'jälkeen, ja tilalle pantiin kuparinen kartio.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'London Court': {
+      aika: '1937',
+      teksti: 'Nelikerroksinen kauppakuja Hay Streetin ja St Georges '
+          + 'Terracen välissä näyttää Tudorin ajalta, mutta se on '
+          + 'vuodelta 1937. Rakennuttaja oli kultarahoittaja Claude de '
+          + 'Bernales, joka osti tontin helmikuussa 1935 '
+          + '75 000 punnalla entiseltä pormestarilta Thomas Molloylta '
+          + '— samalta mieheltä, joka oli rakennuttanut His Majesty’s '
+          + '-teatterin. Paikalla oli siihen asti ollut kujaverkosto '
+          + 'nimeltä Gun Alley.'
+          + '\n\n'
+          + 'Piirustukset teki melbournelainen arkkitehti Bernard '
+          + 'Evans, työ alkoi elokuussa 1936 ja kesti alle vuoden. '
+          + 'Hinta oli 80 000 puntaa. Hay Streetin päädyssä on suuri '
+          + 'kello, joka lyö neljännestunnein, ja jokaisella lyönnillä '
+          + 'linnanportista tulee neljä koneellista ritaria '
+          + 'turnajaisiin. St Georges Terracen päädyssä toinen kello '
+          + 'näyttää Yrjänän ja lohikäärmeen taistelun. Kellot teki '
+          + 'lontoolainen Synchronome Company, ja ne maksoivat viisi '
+          + 'tuhatta puntaa. Kujan päissä katsovat alas Dick '
+          + 'Whittington kissoineen ja Sir Walter Raleigh.'
+          + '\n\n'
+          + 'Pohjoispään esikuva on Lontoon Liberty-tavaratalon kello '
+          + 'reilut kymmenen vuotta aiemmalta ajalta: samanlainen '
+          + 'koneisto ja sama varoitus ajan tuhlaamisesta. Kuja '
+          + 'avattiin 29. heinäkuuta 1937, ja avajaisia juhlittiin '
+          + 'kolmipäiväisillä markkinoilla, jotka keräsivät kaksi '
+          + 'tuhatta puntaa uudelle sairaalalle. Alun perin ylemmissä '
+          + 'kerroksissa oli 24 asuntoa, ja kujalla 53 kauppaa ja 55 '
+          + 'toimistoa.',
+      kuvat: [
+        {
+          tiedosto: '.00 2609 London Court shopping arcade in Perth (Australia).jpg',
+          selite: 'St Georges Terracen pääty: kellon yläpuolella Yrjänä '
+            + 'taistelee lohikäärmettä vastaan.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    "St Mary's -katedraali": {
+      aika: '1865',
+      teksti: 'Victoria Square oli alun perin nimeltään Church Square '
+          + 'ja varattu anglikaaniselle katedraalille. Siirtokunnan '
+          + 'anglikaanit pitivät paikkaa liian kaukana keskustasta ja '
+          + 'rakensivat kirkkonsa St Georges Terracen varrelle, joten '
+          + 'piispa Serra pyysi tonttia katolilaisille. Kuvernööri '
+          + 'luovutti sen 13. elokuuta 1859.'
+          + '\n\n'
+          + 'Serra matkusti Roomaan ja sai Molempien Sisilioiden '
+          + 'kuninkaalta Frans II:lta tuhat scudoa sekä Pyhän Paavalin '
+          + 'luostarilta marmoria alttariin; alttari saapui '
+          + 'siirtokuntaan 1862. Peruskiven laski 8. helmikuuta 1863 '
+          + 'piispa Rosendo Salvado. Benediktiinimuurarit kävelivät '
+          + 'joka aamu Subiacon luostaristaan työmaalle. Rahat '
+          + 'loppuivat tammikuussa 1864 ja työ keskeytyi, mutta '
+          + 'katedraali valmistui neljäntuhannen punnan hinnalla ja '
+          + 'vihittiin 29. tammikuuta 1865. Piirustukset teki '
+          + 'benediktiinioblaatti Joseph Ascione, tyyli on '
+          + 'normannigotiikkaa ja tiilet tehtiin Adelaide Terracen '
+          + 'savesta.'
+          + '\n\n'
+          + 'Vuonna 1924 piispa Clune keräsi rahaa isompaan kirkkoon, '
+          + 'ja arkkitehti Michael Cavanaghin uuden katedraalin '
+          + 'peruskivi laskettiin 25. huhtikuuta 1926. Sitten tuli '
+          + 'lama. Vanha kirkko jäi uuden runkohuoneeksi, ja uuden '
+          + 'poikkilaivan seinästä jätettiin törröttämään paljaita '
+          + 'metallitankoja tulevia sukupolvia varten. Ne odottivat '
+          + 'seitsemänkymmentä vuotta: katedraali suljettiin 2006 ja '
+          + 'avattiin valmiina joulukuussa 2009.',
+      kuvat: [
+        {
+          tiedosto: "Perth (AU), St Mary's Cathedral -- 2019 -- 0265.jpg",
+          selite: 'Vuoden 2009 laajennuksen torni ja vanhemman kirkon huippu '
+            + 'vierekkäin Victoria Squarella.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    "St George'n katedraali": {
+      aika: '1879–1888',
+      teksti: 'Anglikaaninen katedraali seisoo St Georges Terracella '
+          + 'sen kirkon vieressä, jonka se korvasi. Aivan lähellä oli '
+          + 'ollut myös Perthin ensimmäinen kirkko, jonka Frederick '
+          + 'Irwin rakensi joulukuussa 1829, muutama kuukausi '
+          + 'kaupungin perustamisen jälkeen. Nykyisen katedraalin '
+          + 'piirsi sydneyläinen Edmund Blacket, ja se rakennettiin '
+          + 'vuosina 1879–1888.'
+          + '\n\n'
+          + 'Aineet ovat paikallisia: tiili tehtiin lähellä, '
+          + 'kalkkikivi tuotiin Rottnestin saarelta ja puu on '
+          + 'länsiaustralialaista jarrahia. Runkohuoneen puuholvia '
+          + 'kannattavat vasarapalkit, ja länsipäätyä hallitsee '
+          + 'ruusuikkuna. Katto oli alun perin liuskekiveä, mutta se '
+          + 'vuoti, ja 1950-luvulla tilalle pantiin tiili. Tiilet '
+          + 'olivat liian raskaita ja notkistivat kattoa, joten 2000-'
+          + 'luvun alun korjauksessa palattiin liuskekiveen.'
+          + '\n\n'
+          + 'Kuningatar Victorian kuoltua 1901 kaupungissa kerättiin '
+          + 'rahaa muistokellotorniin, jonka piirsi Talbot Hobbs. '
+          + 'Kahdeksan kelloa valoi lontoolainen John Warner & Sons, '
+          + 'ja ne asennettiin kuningattaren kuoleman toisena '
+          + 'vuosipäivänä. Meckeringin maanjäristys vaurioitti tornia '
+          + '1968, ja soitto lopetettiin kokonaan 1973, kun tiiliä '
+          + 'irtosi soiton aikana. Kellot valettiin uudelleen 1975. '
+          + 'Vuonna 2018 tässä kirkossa vihittiin Kay Goldsworthy, '
+          + 'maailman ensimmäinen naispuolinen anglikaaninen '
+          + 'arkkipiispa.',
+      kuvat: [
+        {
+          tiedosto: "St George's Cathdral, the west front.jpg",
+          selite: 'Länsipäädyn ruusuikkuna. Tiili on paikallista, kalkkikivi '
+            + 'Rottnestin saarelta.',
+          lahde: 'Michal Lewi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha oikeustalo': {
+      aika: '1836',
+      teksti: 'Perthin vanhin säilynyt julkinen rakennus on pieni '
+          + 'vaalea talo Stirling Gardensin kulmassa. Kuvernööri James '
+          + 'Stirling käski rakentaa oikeustalon 1836, ja piirustukset '
+          + 'teki helmikuussa siirtokunnan rakennusinsinööri Henry '
+          + 'Willey Reveley. Talo valmistui joulukuussa 1836 aivan '
+          + 'Swan-joen silloisen rantaviivan tuntumaan. Se on kiveä ja '
+          + 'rappausta, ja tyyli on kreikkalaista klassismia — '
+          + 'harvinaisuus 1800-luvun Perthissä.'
+          + '\n\n'
+          + 'Talo oli pitkään kaupungin ainoa kunnollinen kokoustila, '
+          + 'ja se joutui moneen virkaan. Ensimmäinen käräjäistunto '
+          + 'pidettiin 2. helmikuuta 1837, ja rakennus vihittiin '
+          + 'pitkäperjantaina 24. maaliskuuta 1837 '
+          + 'jumalanpalveluksella. Kirkkona se toimi vuoteen 1842, '
+          + 'kunnes St George’n kirkko valmistui. Syyskuun 20. '
+          + 'päivänä 1847 taloon perustettiin Perthin ensimmäinen '
+          + 'poikakoulu, ja vuosina 1856–1863 sitä käytettiin '
+          + 'ajoittain siirtolaisten hätämajoituksena. Korkein oikeus '
+          + 'istui täällä 1863–1879 ja työtuomioistuin '
+          + '1905–1965.'
+          + '\n\n'
+          + 'Vuoden 1965 korjauksessa löytyi vahingossa aarre. '
+          + 'Seinällä oli puinen vaakuna, joka oli maalattu ja rapattu '
+          + 'niin kirkuvaksi, että se oltiin heittää pois — kunnes '
+          + 'huomattiin, että se oli alkuperäinen, ylituomari Henry '
+          + 'Wrenfordsleyn 1880 tilaama. Sen oli veistänyt jarrahista '
+          + 'Lewis Hasluck. Vaakuna kunnostettiin, ja se on nyt '
+          + 'esillä talon lakimuseossa.',
+      kuvat: [
+        {
+          tiedosto: 'Old Court House, Front Full, Perth, Western Australia.jpg',
+          selite: 'Doorilaisten pylväiden kannattama kuisti lisättiin myöhemmin; talo itse on vuodelta 1836.',
+          lahde: 'Travis Saron, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Swan Bells': {
+      aika: '2000',
+      teksti: 'Barrack Squaren kupari- ja lasitornissa riippuu '
+          + 'kahdeksantoista kelloa, ja kaksitoista niistä on '
+          + 'Lontoosta. Ne olivat St Martin-in-the-Fieldsin kirkon '
+          + 'kellot Trafalgar Squarella, ja niiden historia ulottuu '
+          + '1300-luvulle. Elisabet I käski valaa ne uudelleen '
+          + '1500-luvulla, ja Gloucesterin Rudhallin suku valoi ne '
+          + 'jälleen vuosina 1725–1770. Kun kellot piti 1870 '
+          + 'valaa taas, ne viritettiinkin ja kunnostettiin. Ne ovat '
+          + 'harvinaisia kuninkaallisia kelloja ja tiettävästi ainoa '
+          + 'sarja, joka on koskaan lähtenyt Englannista.'
+          + '\n\n'
+          + 'Kellot lahjoitettiin Länsi-Australialle Australian '
+          + '200-vuotisjuhlan 1988 yhteydessä paikallisen '
+          + 'kellonsoittajan ja liikemiehen Laith Reynoldsin '
+          + 'aloitteesta. Kuusi muuta kelloa valettiin Whitechapelin '
+          + 'valimossa länsiaustralialaisesta metallista. Yhdessä ne '
+          + 'ovat maailman toiseksi suurin vaihtosoiton kellosarja; '
+          + 'suurempi on vain Dublinin Kristuksen kirkon '
+          + 'yhdeksäntoista kellon sarja. Sama sarja soi Lontoossa, '
+          + 'kun James Cook lähti sille matkalle, jolla hän saapui '
+          + 'Australiaan.'
+          + '\n\n'
+          + 'Torni valmistui vuosituhannen vaihteeksi. Sen piirsi '
+          + 'paikallinen toimisto Hames Sharley, ja kuusikerroksisen '
+          + 'kellohuoneen teräsbetonirungon suunnitteli Arup — kellot '
+          + 'painavat yhdessä sen verran, että soitto kuormittaa '
+          + 'rakennetta tuntuvasti. Äänenvaimennusluukuilla soitto '
+          + 'ohjataan joko kaupunkiin tai joelle päin. Torni sai '
+          + 'aikanaan rajua arvostelua tuhlauksena, mutta '
+          + 'viisitoista vuotta myöhemmin sitä pidettiin onnistuneena: '
+          + 'se teki Perthistä kellonsoittajien matkakohteen. Vuonna '
+          + '2018 sarjaan lisättiin ensimmäisen maailmansodan '
+          + 'aselevon satavuotispäivän kunniaksi suuri Anzac-kello, '
+          + 'jota heilutetaan sähkömoottorilla.',
+      kuvat: [
+        {
+          tiedosto: '00 1602 Perth Western Australia - Bell Tower.jpg',
+          selite: 'Lasinen kellotorni ja sitä vasten nojaavat kuparipurjeet '
+            + 'Barrack Squarella.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * ADELAIDEN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.adelaide, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "St Peter's Cathedral, Adelaide", "Adelaide Zoo",
+   * "Adelaide Festival Centre", "Government House, Adelaide", "South
+   * Australian Museum", "Adelaide railway station", "Tandanya
+   * National Aboriginal Cultural Institute" ja "Adelaide Town Hall").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat vankiton siirtokunta, päänsä pitänyt piirtäjä, Rundle Mall,
+   * kaurnat, Adelaide Oval, julistuspuu, vankila, lama, puistorengas,
+   * Torrens, kasvitieteellinen puutarha, Victoria Square, Hahndorf
+   * kahdesti, Barossa ja perämangkit. Yksikään kartan kohteista ei
+   * ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. St Peterin
+   * katedraalin jutussa Victoria Square esiintyy vain siltä osin kuin
+   * tontti menetettiin oikeudessa — aukion oma tarina on lehden
+   * L4-noston aihe. Kuvernöörintalon jutussa William Light mainitaan
+   * vain George Strickland Kingstonin esimiehenä, ei kaupungin
+   * piirtäjänä (lehden K2). Eläintarhan jutussa ei kerrota
+   * kasvitieteellisestä puutarhasta naapurissa, koska se on lehden
+   * L3-noston aihe.
+   */
+  adelaide: {
+    'St Peterin katedraali': {
+      aika: '1869–1904',
+      teksti: 'Adelaiden hiippakunta perustettiin kesäkuussa 1847, ja '
+          + 'ensimmäinen piispa Augustus Short piti ensimmäiset '
+          + 'vihkimyksensä 29. kesäkuuta 1848 — Pietarin päivänä. '
+          + 'Katedraalia ei ollut, mutta tontti näytti olevan: '
+          + 'kuvernööri Robe myönsi maaliskuussa 1848 palan Victoria '
+          + 'Squarea, ja lahjoitus kirjattiin 23. huhtikuuta 1851. '
+          + 'Sitten alettiin julkisesti kysyä, oliko kuvernöörillä '
+          + 'ollut oikeutta luovuttaa yleistä puistoaluetta. Short vei '
+          + 'asian itse korkeimpaan oikeuteen, ja kesäkuussa 1855 '
+          + 'tuomio tuli: lahjoitus oli pätemätön eikä rakentamista '
+          + 'voitu aloittaa.'
+          + '\n\n'
+          + 'Piispa osti runsaan eekkerin maata Pennington Terracelta '
+          + 'North Adelaidesta 8. elokuuta 1862. Piirustukset tilattiin '
+          + 'Englannista William Butterfieldiltä, mutta postin kulkuun '
+          + 'meni kuukausia ja erimielisyyksiä tuli, joten piirustukset '
+          + 'ostettiin ja annettiin adelaidelaiselle Edward John '
+          + 'Woodsille viimeisteltäviksi. Woods muutti aineita ja '
+          + 'yksityiskohtia ja antoi rakennukselle ranskalaisen '
+          + 'gotiikan sävyn. Peruskiven laski Pietarin päivänä 1869 yli '
+          + 'tuhannen ihmisen edessä piispa Short itse.'
+          + '\n\n'
+          + 'Loppu tehtiin lahjoitus kerrallaan. Ensimmäinen '
+          + 'jumalanpalvelus pidettiin keskeneräisessä kirkossa '
+          + 'Pietarin päivänä 1876, ensimmäinen osa vihittiin 1. '
+          + 'tammikuuta 1878, ja työ pysähtyi 1894, kun rahat '
+          + 'loppuivat. Thomas Elderin testamentti 1897 ja Robert Barr '
+          + 'Smithin kymmenentuhannen punnan lahjoitus 1900 nostivat '
+          + 'tornit, tornihuiput ja kuorin apsidin. Torninhuiput '
+          + 'vihittiin 7. joulukuuta 1902 ja koko kirkko 7. huhtikuuta '
+          + '1904. Länsitornissa on kahdeksan John Taylor & Co:n 1946 '
+          + 'valamaa kelloa: eteläisen pallonpuoliskon painavin '
+          + 'kahdeksan kellon sarja ja maailman toiseksi painavin '
+          + 'Sherborne Abbeyn jälkeen.',
+      kuvat: [
+        {
+          tiedosto: '22042010 St Peters Cathedral.jpg',
+          selite: 'Kaksi tornihuippua ja ruusuikkuna nousevat North Adelaiden '
+            + 'puistorenkaan yllä.',
+          lahde: 'Ozeye, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Eläintarha': {
+      aika: '1883',
+      teksti: 'Adelaiden eläintarha avattiin 23. toukokuuta 1883 ja on '
+          + 'Australian toiseksi vanhin Melbournen jälkeen. Sen '
+          + 'perusti Etelä-Australian kotouttamis- ja eläintieteellinen '
+          + 'seura valtiolta saadulle maalle. Seurasta tuli '
+          + 'kuninkaallinen 1937, kun Yrjö VI myönsi sille '
+          + 'kuninkaallisen peruskirjan. Ensimmäinen johtaja oli R. E. '
+          + 'Minchin 1882–1893; häntä seurasi poika A. C. Minchin '
+          + '1893–1934 ja tätä pojanpoika R. R. L. Minchin '
+          + '1935–1940 — kolme sukupolvea samassa virassa.'
+          + '\n\n'
+          + 'Viisi rakennusta on suojeltu, niiden joukossa Frome '
+          + 'Roadin pääportti ja vuoden 1900 norsutalo. Norsutalossa ei '
+          + 'enää pidetä eläimiä, vaan siellä on opasteita; viimeinen '
+          + 'norsu Samorn siirrettiin 1991 Monarton laajaan puistoon, '
+          + 'jossa se kuoli kolme vuotta myöhemmin. Alueella kasvaa '
+          + 'yhä vuonna 1877 istutettu Moreton Bayn viikunapuu.'
+          + '\n\n'
+          + 'Eläintarhan historiaan mahtuu myös ruma luku. 1900-luvun '
+          + 'puolivälissä lähes kaikki Australian elävien '
+          + 'alkuperäislintujen vienti kulki joko Adelaiden tai '
+          + 'Sydneyn Tarongan kautta, ja vuonna 1963 valtio tutki '
+          + 'eläintarhan puutteellista kirjanpitoa. Uusi johtaja '
+          + 'William Gasking, joka yritti puuttua eläinten oloihin, '
+          + 'erotettiin nopeasti eläintarhaneuvoston puheenjohtajan '
+          + 'Fred Bassen vaikutuksesta. Kun Basse jäi eläkkeelle, '
+          + 'lintukauppa putosi kymmenesosaan kahden vuoden takaisesta. '
+          + 'Nykyään eläintarhassa on yli 3 000 eläintä ja 250 lajia, '
+          + 'ja siellä on eteläisen pallonpuoliskon suurin '
+          + 'jättiläispandakeskus, joka avattiin joulukuussa 2009.',
+      lahde: 'Wikipedia',
+    },
+    'Festivaalikeskus': {
+      aika: '1973',
+      teksti: 'Adelaiden festivaalikeskus oli Australian ensimmäinen '
+          + 'monikäyttöinen taidekeskus osavaltion pääkaupungissa. '
+          + 'Ajatus syntyi 1960-luvulla, kun Adelaiden taidefestivaali '
+          + 'kasvoi ulos kaupungin saleista, ja laki '
+          + 'festivaaliteatterin rakentamisesta säädettiin 1964. '
+          + 'Ensimmäinen ehdotettu paikka oli Carclew’n huvila North '
+          + 'Adelaidessa.'
+          + '\n\n'
+          + 'Pääministeri John Gorton tarjosi osavaltion pääministerille '
+          + 'Steele Hallille joko verohelpotuksia keräykselle tai '
+          + 'suoraa rahaa; Hall otti rahat. Lontoon-matkallaan hän kävi '
+          + 'Themsin rannalla Royal Festival Hallissa ja päätti, että '
+          + 'Torrensin ranta on oikea paikka. Kun Don Dunstanista tuli '
+          + 'pääministeri, ajatus laajeni yhdestä salista koko '
+          + 'keskukseksi. Adelaiden ylipormestari Robert Porter '
+          + 'käynnisti yleisökeräyksen, joka ylitti tavoitteensa '
+          + 'viikossa; ylijäämällä ostettiin taidetta uuteen taloon.'
+          + '\n\n'
+          + 'Talon piirsi toimisto Hassell, McConnell and Partners, ja '
+          + 'festivaaliteatteri avattiin kesäkuussa 1973. Rakennus '
+          + 'tunnetaan kahdesta valkoisesta geometrisesta kupolistaan, '
+          + 'ja se on käännetty 45 asteen kulmaan kaupungin '
+          + 'ruutukaavaan nähden. Se nousi Elder Parkin ja '
+          + 'parlamenttitalon väliin, ja tieltä purettiin useita '
+          + 'vanhoja rakennuksia. Festivaaliteatterin lisäksi talossa '
+          + 'ovat Dunstan Playhouse ja Space Theatre. Vuonna 2023 '
+          + 'rakennus sai osavaltion arkkitehtiliitolta palkinnon '
+          + 'kestävästä arkkitehtuurista.',
+      kuvat: [
+        {
+          tiedosto: 'Adelaide Festival Centre in July 2026 (028A7419).jpg',
+          selite: 'Kaksi valkoista kupolikattoa Torrensin rannalla, vinossa '
+            + 'kulmassa kaupungin ruutukaavaan nähden.',
+          lahde: 'Yu Chu Chin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kuvernöörintalo': {
+      aika: '1840',
+      teksti: 'Ensimmäinen kuvernöörin asunto oli olkikattoinen maja, '
+          + 'jonka HMS Buffalon merimiehet pystyttivät. Kuvernööri '
+          + 'John Hindmarsh kirjoitti toukokuussa 1837, että hänen '
+          + 'savimajastaan oli valmiina vain toinen pää ja koko perhe '
+          + 'nukkui yhden huoneen lattialla; kaksi pienempää tilaa '
+          + 'riitti hänelle, rouva Hindmarshille ja palvelustytölle.'
+          + '\n\n'
+          + 'Kun George Gawler tuli tilalle 1838, hän hylkäsi '
+          + 'puutaloaikeet ja määräsi kivitalon: hinta neljätuhatta '
+          + 'puntaa jos mahdollista, viittätuhatta ei saanut ylittää. '
+          + 'Englantilaisen Edward O’Brienin piirustuksia muokkasi '
+          + 'George Strickland Kingston, joka oli tullut '
+          + 'Etelä-Australiaan maanmittari William Lightin apulaisena. '
+          + 'Tarjoukset tulivat silti seitsemäntuhannen punnan '
+          + 'tienoille, ja piirustuksia karsittiin vielä ennen kuin '
+          + 'urakka annettiin. Gawler kutsuttiin 1841 takaisin '
+          + 'Englantiin osittain juuri "tuhlailevien" '
+          + 'rakennushankkeidensa vuoksi, ja hänen seuraajansa '
+          + 'käyttivät taloon niin vähän rahaa kuin suinkin.'
+          + '\n\n'
+          + 'Itäsiipi valmistui ja otettiin käyttöön toukokuussa 1840. '
+          + 'Se tekee talosta luultavasti osavaltion toiseksi vanhimman '
+          + 'yhtäjaksoisesti asutun rakennuksen — vanhempi on vain '
+          + 'Walkleyn mökki North Adelaidessa. Kuvernööreillä oli '
+          + 'ennen myös kesäasunto Adelaiden kukkuloilla: ensin vuoden '
+          + '1860 talo nykyisessä Belairin kansallispuistossa, sitten '
+          + 'vuodesta 1880 Marble Hill, joka tuhoutui mustan '
+          + 'sunnuntain maastopaloissa 1955. Sen jälkeen kesäasuntoa '
+          + 'ei ole ollut. Tontin itäreunaa siirrettiin kymmenen '
+          + 'metriä sisemmäs 2015–2016, jotta Anzacin '
+          + 'satavuotismuistopolku mahtui North Terracelta '
+          + 'paraatikentälle.',
+      kuvat: [
+        {
+          tiedosto: 'BOOTH(1873) 2.435 GOVERNMENT HOUSE, ADELAIDE.jpg',
+          selite: 'North Terrace kuvernöörintalon portin kohdalla vuonna 1873 '
+            + 'julkaistussa kaiverruksessa.',
+          lahde: 'British Library, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Etelä-Australian museo': {
+      aika: '1856',
+      teksti: 'Museo perustettiin 1856 osana laajempaa hanketta. '
+          + 'Siirtokunnassa oli yritetty perustaa käsityöläisten '
+          + 'sivistysseuroja, mutta ne eivät löytäneet taloa, johon '
+          + 'olisi mahtunut sekä kirjasto että luentosali. Kesäkuussa '
+          + '1856 lakiasäätävä neuvosto sääti lain, joka perusti '
+          + 'Etelä-Australian instituutin — kirjaston ja museon samaan '
+          + 'laitokseen. Instituutti aloitti 1861 vuokratiloissa King '
+          + 'William Streetillä ja muutti sitten omaan taloonsa North '
+          + 'Terracen ja Kintore Avenuen kulmaan.'
+          + '\n\n'
+          + 'Frederick George Waterhouse tarjoutui kesäkuussa 1859 '
+          + 'hoitamaan museon kokoelmia palkatta, ja kun talo '
+          + 'valmistui, hänet nimitettiin ensimmäiseksi '
+          + 'intendentiksi; virassa hän oli helmikuuhun 1882. '
+          + 'Seuraaja Wilhelm Haacke esitti tammikuussa 1883, että '
+          + 'laitos nimettäisiin Etelä-Australian museoksi ja '
+          + 'intendentistä tehtäisiin johtaja. Nimenmuutos ei mennyt '
+          + 'silloin läpi, mutta johtajan virka meni: Haacke oli '
+          + 'ensimmäinen — ja erosi lokakuussa 1884 riitauduttuaan '
+          + 'johtokunnan kanssa. Nimi vahvistettiin vasta vuoden 1939 '
+          + 'museolaissa, joka irrotti museon taidegalleriasta ja '
+          + 'kirjastosta.'
+          + '\n\n'
+          + 'Kokoelmat ovat poikkeuksellisen suuret. Museolla on '
+          + 'maailman laajin Australian alkuperäiskansojen '
+          + 'kulttuuriesineiden kokoelma, yli kolme miljoonaa '
+          + 'eläinnäytettä — Australian kattavin merinisäkäskokoelma '
+          + 'mukaan lukien — noin 50 000 fossiilia sekä suuri '
+          + 'mineraalikokoelma. Napa-alueiden kokoelmassa on esineitä '
+          + 'eteläaustralialaisten tutkijoiden varhaisilta '
+          + 'Etelämanner-retkiltä. Alkuperäiskansojen kulttuurien '
+          + 'näyttely pohjakerroksessa sai oman rahoituksensa 1997.',
+      kuvat: [
+        {
+          tiedosto: 'Adelaide SA 5000, Australia - panoramio (20).jpg',
+          selite: 'Museon lasisiipi ja sen vieressä North Terracen 1800-luvun '
+            + 'raidalliset hiekkakivitalot.',
+          lahde: 'Matthew Summerton, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rautatieasema': {
+      aika: '1928',
+      teksti: 'Ensimmäinen asema avattiin samalle North Terracen '
+          + 'paikalle 1856. Sen radalla Port Adelaideen kulki '
+          + 'Brittiläisen imperiumin ensimmäinen valtion omistama ja '
+          + 'liikennöimä höyryrautatie: ensimmäinen matkustajajuna '
+          + 'lähti 19. huhtikuuta 1856 viemään kuvernööriä ja '
+          + 'kutsuvieraita juhlalounaalle satamaan, ja yleisölle rata '
+          + 'avattiin 21. huhtikuuta. Vuoroja oli kuusi suuntaansa '
+          + 'päivässä ja kaksi sunnuntaisin. Vuonna 1887 täältä lähti '
+          + 'ensimmäinen suora juna Melbourneen — Australian '
+          + 'ensimmäinen pääkaupunkien välinen matka ilman raideleveyden '
+          + 'vaihtoa.'
+          + '\n\n'
+          + 'Ratapiha kävi ahtaaksi jo 1865, ja vuoden 1856 talot '
+          + 'purettiin ja korvattiin 1900. Kolmaskin asema tuli pian '
+          + 'perästä. Uuden talon suunnittelusta järjestettiin '
+          + 'kilpailu, jossa oli yhdeksäntoista ehdotusta; voiton vei '
+          + 'paikallinen toimisto Garlick & Jackson. Peruskivi '
+          + 'laskettiin 24. elokuuta 1926 ja talo valmistui 1928. Se on '
+          + 'massiivinen hiekkakivinen uusklassinen rakennus, jonka '
+          + 'kolmessa ylimmässä kerroksessa toimi rautatiehallinto — '
+          + 'siihen asti se oli ollut hajallaan pitkin kaupunkia. '
+          + 'Laitureita oli kolmetoista, ja jokaisella oli oma '
+          + 'katoksensa, jotta savu ei jäisi yhteisen katon alle.'
+          + '\n\n'
+          + 'Talon ylpeys oli valtava kupolimainen Marmorisali, joka '
+          + 'toimi juhlavana odotushuoneena ja on nykyään osa '
+          + 'kasinoa. Rakentaminen ylitti budjetin rajusti, ja siitä '
+          + 'tuli osavaltiossa kiivaan riidan aihe: laman alkaessa '
+          + 'Etelä-Australia oli lähellä vararikkoa. Kaukojunat '
+          + 'siirtyivät Keswickin terminaaliin 1984, ja nykyinen '
+          + 'lähiliikenteen asema on maan alla: yhdeksän laituria, '
+          + 'kaikki leveää raideleveyttä, ja kaikki radat tulevat '
+          + 'lännestä eikä läpi mene yksikään.',
+      kuvat: [
+        {
+          tiedosto: 'Adelaide Railway Station 1878.png',
+          selite: 'Vuoden 1856 asema kuvattuna 1878, kun siihen oli juuri '
+            + 'lisätty toinen kerros.',
+          lahde: 'Samuel White Sweet, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Tandanya: {
+      aika: '1989',
+      teksti: 'Tandanya on Australian vanhin alkuperäiskansojen '
+          + 'omistama ja johtama kulttuurikeskus. Se avattiin 1989 '
+          + 'Grenfell Streetin itäpäähän, ja se esittelee Australian '
+          + 'alkuperäiskansojen kuvataidetta, musiikkia ja '
+          + 'kerrontaperinnettä. Nimi tulee sanasta Tarndanya, joka on '
+          + 'kaurnojen nimi Adelaiden keskustan ja puistorenkaan '
+          + 'alueelle ja tarkoittaa punaisen kengurun paikkaa.'
+          + '\n\n'
+          + 'Ensimmäinen näyttely esitteli Utopian yhteisön naisten '
+          + 'silkille tekemiä töitä Pohjoisterritoriosta nimellä '
+          + '"Utopia — A Picture Story". Sen jälkeen talossa on nähty '
+          + 'näyttelyitä ja tapahtumia laidasta laitaan, muun muassa '
+          + 'Adelaiden fringe-festivaalin esityksiä ja helmikuussa '
+          + '2023 alkuperäiskansojen parlamenttiäänen kyllä-kampanjan '
+          + 'valtakunnallinen avaus.'
+          + '\n\n'
+          + 'Talo itse on entinen Grenfell Streetin voimalaitos, '
+          + 'myöhemmin ammattiopiston tiloja ja aikoinaan '
+          + 'Etelä-Australian sähkövalo- ja voimayhtiön pääkonttori. '
+          + 'Alkuperäinen rakennus on vuodelta 1901, mutta se '
+          + 'muutettiin ja rakennettiin uudelleen 1912–13, jolloin se '
+          + 'sai palladiolaisen julkisivunsa. Rakennus suojeltiin '
+          + 'marraskuussa 1984, ja sen omistaa Aboriginal Lands Trust. '
+          + 'Talo suljettiin korjausten ajaksi huhtikuussa 2023, ja '
+          + 'artikkelin mukaan sen oli määrä avautua uudelleen '
+          + 'helmikuussa 2026.',
+      lahde: 'Wikipedia',
+    },
+    'Kaupungintalo': {
+      aika: '1866',
+      teksti: 'Adelaiden ensimmäinen kaupunginvaltuusto perustettiin '
+          + '1840 ja kaatui 1843, minkä jälkeen siirtokunnan hallinto '
+          + 'hoiti kaupungin asiat. Kun valtuusto perustettiin '
+          + 'uudelleen 1852 ja James Hurtle Fisheristä tuli '
+          + 'pormestari, alettiin puhua omasta talosta. Vuoden 1858 '
+          + 'arkkitehtikilpailun voitti Edmund Wright, mutta hän '
+          + 'kieltäytyi työstä: hän oli itse silloin pormestari. Uusi '
+          + 'kilpailu järjestettiin 20. tammikuuta 1863, kun Wrightin '
+          + 'kausi oli päättynyt, ja voiton vei hänen ja Edward '
+          + 'Woodsin yhteinen ehdotus.'
+          + '\n\n'
+          + 'Työ alkoi maaliskuussa 1863, ja kuvernööri Dominic Daly '
+          + 'laski peruskiven 4. toukokuuta. Albertin tornin peruskivi '
+          + 'laskettiin 13. tammikuuta 1864, ja sen alle pantiin '
+          + 'sinetöity pullo, jossa oli asiakirja tornin nimeämisestä '
+          + 'kolme vuotta aiemmin kuolleen prinssi Albertin muistoksi. '
+          + 'Samana vuonna pormestari Thomas English erosi, koska hän '
+          + 'oli itse työmaan urakoitsija. Valokuvaaja Townsend '
+          + 'Duryea kiipesi 1865 keskeneräisen tornin telineille ja '
+          + 'otti sieltä panoraaman koko Adelaidesta.'
+          + '\n\n'
+          + 'Talo valmistui 1866 ja oli silloin eteläisen '
+          + 'pallonpuoliskon suurimpia kaupungintaloja. Daly avasi sen '
+          + '20. kesäkuuta 1866, ja juhliin kuului illallinen noin '
+          + 'kahdeksallesadalle vieraalle sekä Albertin tornin '
+          + 'kahdeksan kellon ensimmäinen soitto. Kelloa tornissa ei '
+          + 'ollut vuosikymmeniin, vaikka se oli suunniteltu '
+          + 'kellotorniksi: vasta 1935 Lavington Bonython lahjoitti '
+          + 'kaupungille melbournelaisen Thomas Gaunt & Co:n '
+          + 'valmistaman kellon, joka löi tunnit yli koko keskustan. '
+          + 'Kesäkuussa 1964 talon parvekkeelle nousivat Beatlesit, ja '
+          + 'väkijoukon kooksi on arvioitu 30 000:sta aina 300 000 '
+          + 'ihmiseen.',
+      kuvat: [
+        {
+          tiedosto: 'Adelaide Town Hall 2.JPG',
+          selite: 'Albertin torni sai kellonsa vasta 1935; sen alla on King '
+            + 'William Streetin puoleinen parveke.',
+          lahde: 'YellowMonkey, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
