@@ -94565,15 +94565,51 @@ export const KULTTUURI_KATEGORIAT = {
    *  - F: nykyväkivalta, nykypolitiikka ja varallisuusvertailut
    *    jätetään kokonaan pois (spec-mantereet.md, Meksiko-kohta).
    *
-   * ENNEN JA NYT: pari EI tule matkakirjan valokuvataulusta
-   * (northamerica-valokuvat.js, monterrey), koska taulun vanha kuva
-   * on tehdaspostikortti 1912 ja uusi ilmakuva Macroplazalta — eri
-   * paikat. Pari haettiin erikseen Commonsista: sama näkymä
-   * Obispadon kukkulalta Cerro de la Sillaa kohti 1904 ja nykyään.
+   * ENNEN JA NYT PUUTTUU, JA SE ON TIETOINEN RATKAISU. Matkakirjan
+   * valokuvataulun (northamerica-valokuvat.js, monterrey) pari ei
+   * kelpaa, koska sen vanha kuva on tehdaspostikortti 1912 ja uusi
+   * ilmakuva Macroplazalta — eri paikat. Erillinen haku Commonsista
+   * löysi oikean parin (sama näkymä Obispadon kukkulalta 1904 ja
+   * nykyään), mutta molemmat ovat alle 1200 pikseliä:
+   * "Monterrey entre el Obispado y el Cerro de la Silla 1904.jpg" on
+   * 1032 x 541 ja "Cerro de la Silla y Obispado.jpg" 880 x 580.
+   * Muuta 1800- tai 1900-luvun alun valokuvaa Monterreystä ei
+   * Commonsissa ole kuvasäännöt täyttävässä koossa (luokka "History
+   * of Monterrey" sisältää yhdeksän tiedostoa, joista ainoa iso on
+   * vuoden 1791 kaupunkikartta). Sama ratkaisu kuin Dubaissa,
+   * Dohassa, Salalahissa ja Astanassa: pari jää pois ja kirjataan
+   * jatkotyöksi. Ilman kenttää etusivu taittuu ennallaan ja
+   * kansikuvat näkyvät pikkurivillä.
    *
    * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026). Oppaan
    * sääjakso nojaa siksi en-Wikipedian Climate-osioon ja sanoo sen
    * ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Chimeneas BOF Fundidora - panoramio.jpg" (kuvan
+   * vasemmassa alakulmassa on kameran polttama päiväysleima
+   * 10.28.2007), "Cabrito - Monterrey.JPG" (oikeassa reunassa
+   * tunnistettavat kasvot, ja kokonainen ruho on ruokakuvaksi
+   * raaka), "Calle Monterrey.jpg" (etualalla tunnistettavat kasvot),
+   * "Vista de Monterrey - panoramio.jpg" (voimakas turkoosi
+   * värivääristymä ja skannauksen mustat reunapalkit),
+   * "Monterrey, Mexico (Unsplash).jpg" (rinnekaupunginosa ei ole
+   * maamerkkinäkymä), "MonterreyCity.jpg" (harmaa ja etualalla
+   * pensaikko), "Macroplaza Monterrey 2022 - 1.jpg" ja "- 2.jpg"
+   * (patsas ja muistolaatta, ei aukiota), "Museo Historia Mexicana
+   * Monterrey01.JPG" (joulukuusi ja mainosteltta),
+   * "Iglesia de La Purísima (17311266338).jpg" (kuva ei esitä
+   * Monterreyn Purísimaa vaan aivan toisen kirkon sisätilan).
+   *
+   * KAKSI NOSTOA JA KAKSI NÄHTÄVYYSJUTTUA JÄÄ KUVATTOMAKSI, ja se
+   * on tarkoituksellista: nimen alkuperälle ja alueen
+   * paimentolaisryhmille ei ole Commonsissa sääntöjen mukaista
+   * kuvaa, eikä Colegio Civilistä (ainoa osuma 1028 x 767) tai
+   * Meksikon historian museosta löytynyt kelvollista. Kuvaton on
+   * parempi kuin tarkistamaton — nämä on kirjattu kuvaputken
+   * tilaukseksi Fablelle.
    */
   monterrey: [
     {
@@ -94584,18 +94620,56 @@ export const KULTTUURI_KATEGORIAT = {
         + 'Satulan muotoinen huippu on ollut siitä asti kaupungin '
         + 'tunnus — ja tehtaista tuli sen toinen.',
       /*
-       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
-       * korvaa rivin. Ne ovat kolme laajaa yleiskuvaa: kaupunki
-       * satulavuoren juurella, keskustan siluetti ja laakso
-       * vuorten välissä.
+       * KANSIKUVAT näkyvät myös pikkurivillä, koska Monterreylla ei
+       * ole ennen–nyt-paria (ks. lohkokommentti yllä). Kolme laajaa
+       * yleiskuvaa: kaupunki satulavuoren juurella, keskustan
+       * siluetti ja koko laakso vuorten välissä.
        */
-      kansikuvat: [],
+      kansikuvat: [
+        {
+          tiedosto: 'View of Monterrey (2015).jpg',
+          selite: 'Cerro de la Silla kohoaa kaupungin yllä '
+            + 'ukkospilvien alla.',
+          lahde: 'Rick González, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Skyline de Monterrey.jpg',
+          selite: 'Keskustan tornit nousevat vuorten juurella '
+            + 'kirkkaassa iltapäivävalossa.',
+          lahde: 'Daniel Escobedo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Mexico Monterrey 2.JPG',
+          selite: 'Ilmakuvassa koko laakso mahtuu Sierra Madren ja '
+            + 'satulavuoren väliin.',
+          lahde: 'Arne Müseler, Wikimedia Commons (CC BY-SA 3.0 de)',
+        },
+      ],
       /*
        * AVAUSKARUSELLI: laajoja yleiskuvia kansikuvakaavan mukaan.
        * Monterreylle ei ole generoitu herokuvia, joten kaikki
        * kolme ovat aitoja valokuvia.
        */
-      avauskuvat: [],
+      avauskuvat: [
+        {
+          tiedosto: 'Monterrey Diciembre 2020.jpg',
+          selite: 'Auringonlasku Obispadon kukkulalta: kaupunki '
+            + 'täyttää laakson satulavuorelle asti.',
+          lahde: 'Carlos t, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Monterrey visto desde el Cerro de la Silla.jpg',
+          selite: 'Näkymä satulavuoren huipulta koko metropolialueen '
+            + 'yli.',
+          lahde: 'MetalixOne, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Zona mitras.jpg',
+          selite: 'Illan valot syttyvät Cerro de las Mitrasin '
+            + 'harjanteen alla.',
+          lahde: 'Víctor M. Velázquez Moreno, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kolmas yritys jäi pystyyn',
@@ -94611,6 +94685,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'retkikunnalla 20. syyskuuta 1596. Hän valitsi paikan '
             + 'Santa Lucían lähteen viereltä — siitä kohdasta lähtee '
             + 'nykyään keskustan kanava.',
+          tiedosto: 'Paseo Santa Lucía.jpg',
+          selite: 'Santa Lucían kanava kulkee valaistujen puiden '
+            + 'välissä siltä kohdalta, jossa kaupungin ensimmäinen '
+            + 'lähde oli.',
+          lahde: 'Crancket, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Monterrey',
         },
         {
@@ -94641,6 +94720,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Virgen, 1 750. Vuori julistettiin luonnonmonumentiksi '
             + '1991, ja huipulle nousee 5,3 kilometrin polku, jonka '
             + 'kävelyyn menee noin kolme tuntia.',
+          tiedosto: 'Cerro de la Silla.jpg',
+          selite: 'Satulan muoto syntyy kahdesta huipusta ja niiden '
+            + 'välisestä notkosta.',
+          lahde: 'Nathaniel C. Sheetz, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Cerro de la Silla',
         },
         {
@@ -94656,6 +94739,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kanava, ja ala nousi 144 hehtaariin, josta 80 on '
             + 'vihreää. Paikallaan seisovat yhä 27 suurta '
             + 'teollisuusrakennelmaa ja 127 teräksentekokonetta.',
+          tiedosto: 'Hornos, Parque Fundidora - panoramio (1).jpg',
+          selite: 'Masuuni kohoaa nurmikentän takana, ja etualalla '
+            + 'seisoo niitattu terässäiliö.',
+          lahde: 'JavierDo, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Fundidora Park',
         },
       ],
@@ -94665,7 +94752,12 @@ export const KULTTUURI_KATEGORIAT = {
          * Cerro de la Silla on kaupungin oma erikoisuus ja toimii
          * pienenä, koska satulan muoto erottuu siluettina.
          */
-        kuva: null,
+        kuva: {
+          tiedosto: 'Faro del Comercio - panoramio.jpg',
+          selite: 'Kaupan majakka on ohut punainen levy, joka '
+            + 'kohoaa katedraalin tornia korkeammalle.',
+          lahde: 'JavierDo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
         kappale: 'Monterrey on Nuevo Leónin pääkaupunki '
           + 'Koillis-Meksikossa, 540 metrin korkeudessa Sierra Madre '
           + 'Orientalin juurella. Kaupungin halki kulkee idästä '
@@ -94707,6 +94799,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'pitkä pohjoisesta etelään, ja sen päistä pääsee '
                 + 'kävellen sekä Barrio Antiguoon että Santa Lucían '
                 + 'kanavalle.',
+              kuva: {
+                tiedosto: 'Vista de Monterrey desde el LABNL 01.jpg',
+                selite: 'Keskustan katot ja Macroplazan itälaita '
+                  + 'satulavuoren edessä.',
+                lahde: 'Christian Cariño, Wikimedia Commons (CC BY 4.0)',
+              },
             },
             {
               otsikko: 'Macroplaza päästä päähän',
@@ -94741,6 +94839,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'lopun taloja; osa kaduista, kuten Calle Morelos, '
                 + 'on muutettu kävelykaduiksi vuodesta 2013 alkaneessa '
                 + 'kunnostuksessa.',
+              kuva: {
+                tiedosto: 'Catedral Metropolitina desde los aires.jpg',
+                selite: 'Katedraali ja sen takana MARCOn punainen '
+                  + 'seinä vanhan keskustan kortteleissa.',
+                lahde: 'Al.vergara007, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
               otsikko: 'Mitä täällä syödään',
@@ -94774,6 +94878,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'tammikuussakin voi olla kolmekymmentä astetta. '
                 + 'Lumi on hyvin harvinaista — viimeksi sitä satoi '
                 + 'helmikuussa 2021.',
+              kuva: {
+                tiedosto: 'MonterreyPanoramic.jpg',
+                selite: 'Matalat pilvet peittävät vuorten harjat '
+                  + 'kaupungin molemmin puolin.',
+                lahde: 'HappyNcrew, Wikimedia Commons (CC BY-SA 3.0)',
+              },
             },
           ],
           matkailu: {
@@ -94879,6 +94989,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'reitillä laskeudutaan köysillä, kahlataan maanalaisia '
             + 'jokia ja ohitetaan putouksia. Cola de Caballo, '
             + 'hevosenhäntä, putoaa noin 35 kilometriä etelämpänä.',
+          tiedosto: 'Cola de Caballo - panoramio (2).jpg',
+          selite: 'Mänty- ja tammimetsä peittää kansallispuiston '
+            + 'rinteet, ja sumu makaa kanjonin pohjalla.',
+          lahde: 'ElGhuzz, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Cumbres de Monterrey National Park',
         },
         {
@@ -94895,6 +95009,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Aguillas, kotkien töyhtö. Metsä on mäntyä ja tammea, ja '
             + 'siellä elää mustakarhuja, kojootteja, nasuja ja '
             + 'valkohäntäpeuroja.',
+          tiedosto: 'Chipinque - panoramio (1).jpg',
+          selite: 'Chipinquen harjanne nousee suoraan kaupungin '
+            + 'talojen takaa.',
+          lahde: 'JavierDo, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Cerro de Chipinque',
         },
         {
@@ -94911,6 +95029,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nimet — valon sali, jonka katon kivi päästää ulkovaloa '
             + 'läpi, ja kahdeksas ihme, jossa tippukivi ja pisarakivi '
             + 'ovat kasvaneet yhteen pylvääksi.',
+          tiedosto: 'Grutas de García 3029.jpg',
+          selite: 'Tippukiviverhot täyttävät salin katosta lattiaan, '
+            + 'ja opastusvalot värjäävät ne vihreäksi ja violetiksi.',
+          lahde: 'Phyrexian, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Grutas de García',
         },
         {
@@ -94926,6 +95048,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'millimetriä sadetta, paikoin lähes metrin — kolmin- tai '
             + 'nelinkertaisesti Gilbertiin verrattuna. Vettä tuli '
             + 'saman verran kuin tavallisesti koko vuonna.',
+          tiedosto: 'Cauce del Río Santa Catarina en Monterrey, Nuevo León.png',
+          selite: 'Kävelijät ylittävät kuivan kivikkouoman, ja '
+            + 'taustalla näkyvät keskustan tornit ja satulavuori.',
+          lahde: 'Chorizoconhuevo, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Monterrey',
         },
       ],
@@ -94992,6 +95118,32 @@ export const KULTTUURI_KATEGORIAT = {
    * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026). Oppaan
    * sääjakso nojaa siksi en-Wikipedian Climate-osioon ja sanoo sen
    * ääneen.
+   *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Catedral de Merida Yucatan 2003.jpg",
+   * "Merida, Yucatan, Mexico - Plaza Grande, 6 Marzo 2021 - 01.jpg",
+   * "- 02.jpg" ja "- 03.jpg" sekä "Merida centro Feb 2016 - Peon
+   * Contreras.jpg" (kaikissa etualalla tunnistettavat kasvot),
+   * "Sopa de lima yucateca en Mercado Santa Anita de Mérida 01.jpg"
+   * (pöytäliina ja lautasliinateline ovat virvoitusjuomamainoksia),
+   * "Plaza Principal de Mérida Plaza Grande ... Marzo 2021.jpg"
+   * (etualan opastekyltti täyttää kolmanneksen kuvasta),
+   * "Kroz Méridu.jpg" ja "Avenue of Montejo ... Feb 2012.jpg"
+   * (tavallinen katunäkymä, kauppaketjun kyltti ja tunnistettava
+   * ohikulkija), "Catedral de Mérida (San Ildefonso) ... - 1.jpg"
+   * (sisätila, ei julkisivu).
+   *
+   * "Glorieta de la Paz, Merida.jpg" (yövalaistu alikulku, ei
+   * historiallinen yleisnäkymä).
+   *
+   * KAKSI NOSTOA, YKSI TEEMANOSTO JA KAKSI OPPAAN JAKSOA JÄÄ
+   * KUVATTOMAKSI. Valkoisen kaupungin nimikiistalle ja kastisodalle
+   * ei ole Commonsissa kuvaa, joka olisi sekä sääntöjen mukainen
+   * että kunnioittava, ja sopa de liman ainoat kuvat ovat
+   * mainospöydällä. Kuvaton on parempi kuin tarkistamaton — nämä on
+   * kirjattu kuvaputken tilaukseksi Fablelle.
    */
   merida: [
     {
@@ -95006,13 +95158,77 @@ export const KULTTUURI_KATEGORIAT = {
        * korvaa rivin. Ne ovat kolme laajaa yleiskuvaa: Plaza Grande,
        * katedraali aukion laidalla ja Paseo de Montejon bulevardi.
        */
-      kansikuvat: [],
+      kansikuvat: [
+        {
+          tiedosto: 'Monumento a la Patria, Mérida Yucatan Mexico 2018.jpg',
+          selite: 'Isänmaan monumentin kiveen veistetty kaari sulkee '
+            + 'Paseo de Montejon pohjoispään.',
+          lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Plaza Grande, Mérida, Yucatán - Verde.jpg',
+          selite: 'Vihreä hallintopalatsi Plaza Granden laidalla '
+            + 'iltahämärässä, ikkunoissa näkyvät seinämaalaukset.',
+          lahde: 'David Cabrera, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Fußgängerweg auf dem Paseo Montejo, Merida.jpg',
+          selite: 'Paseo de Montejon kävelykaista kulkee puiden '
+            + 'varjossa koko bulevardin mitan.',
+          lahde: 'Chivista, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       /*
        * AVAUSKARUSELLI: laajoja yleiskuvia kansikuvakaavan mukaan.
        * Méridalle ei ole generoitu herokuvia, joten kaikki kolme
-       * ovat aitoja valokuvia.
+       * ovat aitoja valokuvia. Valinta oli tässä kaupungissa
+       * tavallista tiukempi: Plaza Granden laajoissa yleiskuvissa on
+       * lähes poikkeuksetta etualalla tunnistettavia kasvoja, joten
+       * karuselli katsoo kaupunkia kattojen yli ja bulevardilta.
        */
-      avauskuvat: [],
+      avauskuvat: [
+        {
+          tiedosto: 'Iglesia de san cristobal desde el mercado de san benito - panoramio.jpg',
+          selite: 'Kattojen yli katsottuna kaupunki on matala ja '
+            + 'valkoinen, ja horisontissa erottuvat San Cristóbalin '
+            + 'tornit.',
+          lahde: 'Misael Lavadores, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Ende des Paseo Montejo, Merida.jpg',
+          selite: 'Paseo de Montejo jatkuu palmurivien välissä '
+            + 'kaupungin pohjoislaidalle asti.',
+          lahde: 'Chivista, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Casona Peón de Regil, Paseo de Montejo, Mérida. - panoramio.jpg',
+          selite: 'Henekenkauden kartano seisoo bulevardin varrella '
+            + 'tornikkaineen ja pylväikköineen.',
+          lahde: 'holachetumal, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+       * (northamerica-valokuvat.js, merida), jossa se on jo
+       * tarkistettu — sama tori kahdesti. Tekijä ja lisenssi haettu
+       * uudelleen Commonsin extmetadatasta 7.9.2026.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Merida Yucatan Stereo 1901 cropped.jpg',
+          vuosi: '1901',
+          selite: 'Lucas de Gálvezin tori kioskeineen ja '
+            + 'tuulimyllyineen vanhan San Beniton linnoituksen '
+            + 'muureilta nähtynä.',
+          lahde: 'Underwood & Underwood, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Mercado Municipal Lucas de Gálvez - Mérida, Yucatán.jpg',
+          selite: 'Sama tori on yhä kaupungin keskeisin kauppapaikka, '
+            + 'mutta kojut ovat siirtyneet katosten alle.',
+          lahde: 'Bex Walton, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Viiden kukkulan kaupunki',
@@ -95029,6 +95245,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'mayatemppelistä nimeltä Yajam Cumu, ja työn tekivät '
             + 'mayat itse — kahden heistä nimet tunnetaan, Francisco '
             + 'Pool ja Diego Can.',
+          tiedosto: 'Fachada de la Catedral de San Ildefonso en Merida, Yucatan.jpg',
+          selite: 'Katedraalin julkisivun karkeat kalkkikivilohkot '
+            + 'ovat suurelta osin vanhan mayakaupungin kiviä.',
+          lahde: 'Jannatormont, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Mérida (Meksiko)',
         },
         {
@@ -95079,6 +95299,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Paseo de Montejo, yli kuusi kilometriä pitkä ja '
             + 'ranskalaisen bulevardin mallinen katu, jonka varteen '
             + 'nousivat kartanot.',
+          tiedosto: 'Hacienda Sotuta de Peón - Campos de henequén.jpg',
+          selite: 'Henekenagaavet kasvavat suorissa riveissä Sotuta '
+            + 'de Peónin haciendan pelloilla.',
+          lahde: 'Gildardo Sánchez, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Paseo de Montejo',
         },
       ],
@@ -95088,7 +95312,12 @@ export const KULTTUURI_KATEGORIAT = {
          * Katedraalin kaksi tornia ovat kaupungin oma erikoisuus ja
          * toimivat pienenä, koska muoto on yksinkertainen.
          */
-        kuva: null,
+        kuva: {
+          tiedosto: 'Facade of Casa de Montejo - 16th Century Mansion - Merida - Mexico - 01.jpg',
+          selite: 'Casa de los Montejon portaalissa kivihahmot '
+            + 'seisovat parvekkeen molemmin puolin.',
+          lahde: 'Adam Jones, Ph.D., Wikimedia Commons (CC BY-SA 3.0)',
+        },
         kappale: 'Mérida on Yucatánin osavaltion pääkaupunki ja koko '
           + 'niemimaan kulttuurin ja talouden keskus. Se on hieman '
           + 'sisämaassa, noin 35 kilometriä Meksikonlahden rannalta, '
@@ -95165,6 +95394,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kadun eteläpäässä ja Peón Contrerasin teatteri ovat '
                 + 'kävelymatkan päässä, ja teatterissa soittaa '
                 + 'Yucatánin sinfoniaorkesteri.',
+              kuva: {
+                tiedosto: 'Monumento a la Patria, Mérida Yucatán - panoramio.jpg',
+                selite: 'Isänmaan monumentin kaareva kiviseinä '
+                  + 'kiertää bulevardin pohjoispään liikenneympyrää.',
+                lahde: 'panza.rayada, Wikimedia Commons (CC BY-SA 3.0)',
+              },
             },
             {
               otsikko: 'Retket kaupungin ulkopuolelle',
@@ -95184,6 +95419,13 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'biosfäärialue lännessä on amerikanflamingojen '
                 + 'talvikoti ja yli kahdensadan lintulajin '
                 + 'levähdyspaikka.',
+              kuva: {
+                tiedosto: 'Dzibilchaltun, Temple of the Seven Dolls (14363090911).jpg',
+                selite: 'Seitsemän nuken temppeli seisoo matalalla '
+                  + 'porrasjalustalla, ja sen seinissä on neljä '
+                  + 'oviaukkoa.',
+                lahde: 'Arian Zwegers from Brussels, Belgium, Wikimedia Commons (CC BY 2.0)',
+              },
             },
             {
               otsikko: 'Milloin kannattaa tulla',
@@ -95201,6 +95443,13 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kestää kesäkuusta lokakuuhun, ja silloin alueeseen '
                 + 'vaikuttavat myös itäiset aallot ja trooppiset '
                 + 'myrskyt.',
+              kuva: {
+                tiedosto: 'Parque de Santa Lucia, Mérida, Yucatán Junio 2024.jpg',
+                selite: 'Kesäkuun ilta Santa Lucían puistossa: '
+                  + 'palmut, valaistut terassit ja sateen jälkeen '
+                  + 'kostea kiveys.',
+                lahde: 'edenpictures, Wikimedia Commons (CC BY 2.0)',
+              },
             },
           ],
           matkailu: {
@@ -95308,6 +95557,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'mureuttavat myös sitkeän lihan. Ruoka tarjotaan '
             + 'keltaisten maissitortillojen, punaisten etikkasipulien, '
             + 'papujen ja habanerojen kanssa.',
+          tiedosto: 'Cochinita pibil yucateca.jpg',
+          selite: 'Annatton värjäämä liha on kirkkaan oranssia, ja '
+            + 'kylkeen kuuluvat mustapapusose ja punaiset '
+            + 'etikkasipulit.',
+          lahde: 'Wotancito, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Cochinita pibil',
         },
         {
@@ -95324,6 +95578,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'täytettäviä tortilloja tuskin tehtiin: mayojen oma pim '
             + 'oli paksu ja kypsennettiin tuhkassa. Kananmunia ei '
             + 'ollut, mutta kalkkunoita ja myskisorsia oli kesytetty.',
+          tiedosto: 'Papadzules yucatecos.jpg',
+          selite: 'Vaaleanvihreä kurpitsansiemenkastike peittää '
+            + 'tortillat, ja päällä on tomaattikastiketta ja '
+            + 'murennettua munaa.',
+          lahde: 'Wotancito, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Papadzules',
         },
         {
@@ -95355,6 +95614,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Omintakeisin on queso relleno: koverrettu '
             + 'edamjuustopallo täytetään jauhetulla sianlihalla ja '
             + 'tarjotaan tomaattikastikkeessa.',
+          tiedosto: 'Panuchos y salbutes.jpg',
+          selite: 'Panuchojen ja salbutesien päällä on kanaa, '
+            + 'avokadoa, tomaattia ja punaisia etikkasipuleita.',
+          lahde: 'Wotancito, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Mérida (Meksiko)',
         },
       ],

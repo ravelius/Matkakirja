@@ -56540,7 +56540,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Teresa de Mierin kirjapaino. Salissa nimeltä "Nuestros '
           + 'caudillos" riippuu Santiago Vidaurrin muotokuva. Kukkulan '
           + 'laella on lisäksi näköalapaikka ja monumenttilippu.',
-      kuvat: [],
+      kuvat: [
+        {
+          tiedosto: 'Museo del Obispado - panoramio.jpg',
+          selite: 'Keltainen kahdeksankulmainen kupoli nousee museon '
+            + 'valkoisen pylväskäytävän takaa.',
+          lahde: 'JavierDo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'La Purísiman kirkko': {
@@ -56572,7 +56579,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Mora. Kellotornissa seisoo kuusi ja puoli metriä korkea '
           + 'poltetusta savesta tehty Purísima, tekijänä Adolfo '
           + 'Laubner Mayer.',
-      kuvat: [],
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de la Purísima.jpg',
+          selite: 'Kirkon betonikuoret kaartuvat maasta katoksi, ja '
+            + 'vieressä nousee kivinen kellotorni.',
+          lahde: 'Documentacion LABNL, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Colegio Civil': {
@@ -56634,7 +56648,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Fundidoran valamia kaiteita. Julkisivun huipulla seisoo '
           + 'Voiton patsas, ja peristyylien päällä on metalliveistoksia '
           + 'leijonasta, jota lapsi pitelee ruusuköynnöksin.',
-      kuvat: [],
+      kuvat: [
+        {
+          tiedosto: 'Vista del Palacio de Gobierno del estado de Nuevo León.jpg',
+          selite: 'Palatsin pylväikkö sulkee Macroplazan pohjoispään, '
+            + 'ja sen edessä liehuu monumenttilippu.',
+          lahde: 'B.jars, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Meksikon historian museo': {
@@ -56680,7 +56701,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kertoo, millaisia kaupungin rakennukset olivat ennen '
           + 'teollisuuden vuosia: pieni kivinen talo korttelin '
           + 'kulmassa, ei aukiota ympärillään.',
-      kuvat: [],
+      kuvat: [
+        {
+          tiedosto: 'Capilla de los Dulces Nombres.png',
+          selite: 'Kappelin kermanvalkoisessa julkisivussa on kaksi '
+            + 'kellokaarta ja tummanpunaiset pilasterit.',
+          lahde: 'Prozaco, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Monterreyn katedraali': {
@@ -56702,7 +56730,14 @@ export const NAHTAVYYSJUTUT = {
           + 'paikallaan. Kellotorni on nykyisessä muodossaan uudempi '
           + 'kuin muu kirkko: espanjalaisen kuvalehden vuoden 1880 '
           + 'piirroksessa katedraali näkyy vielä ilman sitä.',
-      kuvat: [],
+      kuvat: [
+        {
+          tiedosto: 'Catedral Metropolitana mty.jpg',
+          selite: 'Sivuportaalin barokkikoristelu erottuu vaaleaa '
+            + 'seinää vasten.',
+          lahde: 'Andrés Agustín I, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjan- ja englanninkielinen Wikipedia',
     },
     'Barrio Antiguo': {
@@ -56727,7 +56762,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Marraskuussa järjestetyn Festival Cultural Barrio '
           + 'Antiguon on korvannut syyskuinen Festival Internacional '
           + 'de Santa Lucía.',
-      kuvat: [],
+      kuvat: [
+        {
+          tiedosto: 'Monterrey Barrio Antiguo.JPG',
+          selite: 'Mukulakivikadun varrella on matalia värillisiä '
+            + 'taloja ja vanhoja puuovia.',
+          lahde: 'Ivanmartinez, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä englanninkielinen Wikipedia',
     },
   },
@@ -56771,7 +56813,14 @@ export const NAHTAVYYSJUTUT = {
           + 'perustettiin leipomo, jonka pan francés on Yucatánissa '
           + 'yhä käsite; sitä pitivät katalonialaiset Llanon '
           + 'veljekset 1940-luvulle asti.',
-      kuvat: [],
+      kuvat: [
+        {
+          tiedosto: 'Iglesia del Barrio de Santa Ana, Mérida, Yucatán (01).JPG',
+          selite: 'Keltainen kirkko kahden valkoisen tornihuipun '
+            + 'välissä, julkisivussa muistolaatta.',
+          lahde: 'Inri, Wikimedia Commons (CC0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Peón Contrerasin teatteri': {
@@ -56806,7 +56855,14 @@ export const NAHTAVYYSJUTUT = {
           + 'pakkolunastettiin. Restaurointi valmistui syksyllä 1984, '
           + 'ja vuodesta 2004 talo on ollut Yucatánin '
           + 'sinfoniaorkesterin koti.',
-      kuvat: [],
+      kuvat: [
+        {
+          tiedosto: 'Teatro Peón Contreras-1.JPG',
+          selite: 'Teatterin keltainen eklektinen julkisivu '
+            + 'pylväikköineen kadun kulmassa.',
+          lahde: 'D. Eugenia Romero Carrillo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'La Mejoradan puisto': {
@@ -56835,7 +56891,14 @@ export const NAHTAVYYSJUTUT = {
           + 'juuri lakkautettu kuninkaallisella asetuksella. Nykyään '
           + 'talossa toimii Yucatánin yliopiston arkkitehtuurin '
           + 'tiedekunta.',
-      kuvat: [],
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de Nuestra Señora del Carmen, Mérida, Yucatán.jpg',
+          selite: 'Mejoradan kirkon kivijulkisivu ja sen vieressä '
+            + 'entisen luostarin pitkä muuri.',
+          lahde: 'Andyson21, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Casa de los Montejo': {
@@ -56865,7 +56928,14 @@ export const NAHTAVYYSJUTUT = {
           + 'nimeltä Casa Montejo. Museossa on 1800-luvun lopun ja '
           + '1900-luvun alun huonekaluja sekä vaihtuvien näyttelyiden '
           + 'sali.',
-      kuvat: [],
+      kuvat: [
+        {
+          tiedosto: 'Casa de los Montejo, Mérida, Yucatán (01).jpg',
+          selite: 'Talon koko julkisivu Plaza Granden laidalla, '
+            + 'keskellä veistetty plateresco-portaali.',
+          lahde: 'Inri, Wikimedia Commons (CC0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Méridan kaupunginmuseo': {
@@ -56888,7 +56958,14 @@ export const NAHTAVYYSJUTUT = {
           + '1900-luku. Ensimmäisessä kerroksessa on kuusi salia '
           + 'vaihtuville näyttelyille, ja niissä on tilaa myös '
           + 'paikallisille kuvataiteilijoille.',
-      kuvat: [],
+      kuvat: [
+        {
+          tiedosto: 'Museo de la Ciudad de Mérida, Yucatán.jpg',
+          selite: 'Vanhan postipalatsin kermanvalkoisessa '
+            + 'julkisivussa on puna-valkoinen vinoruutukoriste.',
+          lahde: 'Estefinito, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'San Juanin puisto ja kaari': {
@@ -56914,7 +56991,14 @@ export const NAHTAVYYSJUTUT = {
           + 'säilynyt, vaikka useimmat muut samanikäiset kaaret ovat '
           + 'kadonneet — osa niistä oli alun perinkin pelkkää '
           + 'koristetta.',
-      kuvat: [],
+      kuvat: [
+        {
+          tiedosto: 'Arco de San Juan, Mérida, Yucatán (02).JPG',
+          selite: 'Valkoinen kaari kaartuu kadun yli, ja sen takana '
+            + 'jatkuvat värilliset matalat talot.',
+          lahde: 'Inri, Wikimedia Commons (CC0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'San Cristóbalin kirkko': {
@@ -56946,7 +57030,15 @@ export const NAHTAVYYSJUTUT = {
           + 'se vihittiin 5. toukokuuta 1910. Kaupunginosan '
           + 'seurakuntakirkko on Guadalupen Neitsyen juhlien keskus, '
           + 'ja juhlat kokoavat käytännössä koko alueen väen.',
-      kuvat: [],
+      kuvat: [
+        {
+          tiedosto: 'Iglesia De San Cristobal.jpg',
+          selite: 'Kirkon kivijulkisivussa on simpukankuoren '
+            + 'muotoinen kaari, ja juhlaviirit kulkevat ristiin '
+            + 'sen yli.',
+          lahde: 'Kazekage AMT, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Santa Isabelin ermita': {
@@ -56969,7 +57061,14 @@ export const NAHTAVYYSJUTUT = {
           + 'ympärillä oleva puisto on nykyään yksi keskustan '
           + 'rauhallisimmista, ja se on samalla eteläisin niistä '
           + 'paikoista, jotka merkitsivät vanhan kaupungin rajaa.',
-      kuvat: [],
+      kuvat: [
+        {
+          tiedosto: 'Ermita de Santa Isabel, Mérida, Yucatán (01).jpg',
+          selite: 'Kappelin keltainen muuri ja veistetty oviaukko '
+            + 'nousevat puiston penkkien takaa.',
+          lahde: 'Inri, Wikimedia Commons (CC0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
   },
