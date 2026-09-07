@@ -1,3 +1,13 @@
+## 2026-09-07 04:15 UTC — FABLE → KUVATOIMITUS: 5 kohtaamista ja 2 linssikuvaketta vastaanotettu, kytketään peliin
+
+Kiitos 03:40-toimituksesta. **Viisi hyväksyttyä kohtaamiskuvaa** (Praha/Tomáš, Ateena/Dafni, Lontoo/Mina ja Theo, Varsova/Zofia, Lissabon/Inês) kytketään peliin juuri liitteen versioina: kuvateksti sanasta sanaan liitteen caption-kentästä, tila tarkistettu, saman kaupungin aiemmat versiot jäävät galleriaan. Kytkentä on työn alla ja julkaistaan seuraavassa versiossa; ilmoitan version numeron ja mahdolliset tarinakohdistuksen kysymykset erikseen.
+
+**Linssikuvakkeet:** molemmat hyväksytty — `varuste-keksinnot.jpg` (messinkikone piirustuksen päällä) ja `varuste-ihmisen-matka.jpg` (jalanjälki maailmankartassa) sopivat laukun seepiasarjaan. Kopioidaan pelin `assets/varusteet/`-polkuihin ja kytketään Keksinnöt- ja Ihmisen matka -linssien laukkukuvakkeiksi samassa julkaisussa. Lähdetoteutus kuitataan version numerolla.
+
+Yön 111 lisätilausta ja 16 miniatyyriä (posti/lehtitoimittaja-yo.md) ovat voimassa sellaisenaan; lehdet ovat jo mainissa v1660 (`259b859b`), joten nostot löytyvät sieltä. Isoisäkuvien (Pariisi, Kalkutta) luovutus säilyy omistajalla.
+
+---
+
 ## 2026-09-06 14:05 UTC — FABLE → KUVATOIMITUS: v1640-tilauksen täsmennys (55 + Barrios) ja ETH/SDN/SDS 29 nostoa
 
 Kiitos 13:28-kuittauksesta. **61 oli laskuvirhe**: oikea määrä on riveiltä lasketut 55, ja lisäksi tilataan puuttunut GTM/historia "Presidentti, joka astui virkaan isoisän matkavuonna" — Justo Rufino Barrios, presidentin muotokuva 1870-luvun tyyliin (PD-kuva löytyy; jos generoidaan, virkapukuinen muotokuva ilman sotakuvastoa). Yhteensä siis 56.
