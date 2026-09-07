@@ -310,6 +310,58 @@ raita, ja kaikki muu ääni on tarkoituksella hiljennetty
 siitä, väistyykö linssiraita sen alta — se on omistajan päätös, ei
 koneiston.
 
+## Avauksen ääni (omistaja 7.9.2026)
+
+Omistajan tilaus, sanatarkasti: *"Pelin aloitussivulla, heti kun pelaaja
+on painanut "aloita seikkailu" nappia, niin musiikki saisi hiljentyä
+hieman ja mukaan saisi tulla se terminaalin äänimaisema voimakkaasti
+mukaan ja siitä lähtisi omalla ajallaan kertojan luenta myös käyntiin."*
+
+Portin painallus on pelin ensimmäinen ele, ja siitä alkaa **kolmen
+äänen sarja**. Koneisto on `js/ambience-stream.js`:n osiossa
+*AVAUKSEN ÄÄNI*, ja kytkennät ovat `js/ui.js`:ssä (painallus,
+eteneminen) ja `js/luenta.js`:ssä (luennan loppu).
+
+| Hetki (napin painalluksesta) | Mitä kuuluu |
+| --- | --- |
+| 0 ms | musiikki alkaa liukua 0,6-kertaiseksi ja etusivun äänimaisema 1,45-kertaiseksi (`AVAUKSEN_MUSIIKKI`, `AVAUKSEN_MAISEMA`) |
+| 1300 ms | sekoitus on paikallaan (`AVAUKSEN_LIUKU_MS`) |
+| ~1800 ms | portissa odottanut äänimaisema on täydessä nousussaan (`HAIVYTYS_MS`) |
+| 2850 ms | kirjoituskone alkaa paikkarivistä (`js/ui.js` `AVAUS_KERTOMUS_MS`) |
+| ~4000 ms | kertojan luenta alkaa, kun paikkarivi on naputettu |
+
+**Miksi juuri nämä luvut.** Musiikki laskee −4,4 dB (0,019 → 0,0114):
+askel kuuluu, mutta raita jää soimaan — tilauksessa musiikki hiljenee
+"hieman", ei pois. Maisema nousee +3,2 dB (efektiivinen 0,119 → 0,173),
+jolloin raitojen ero kasvaa lähes 8 dB ja terminaali astuu eteen.
+Nosto on **tilapäinen**: se purkautuu, kun kertojan luenta päättyy tai
+pelaaja etenee kartalle, eikä etusivun oma kalibrointi
+(`ETUSIVUN_VOIMA`, kuulokoe 12.8.2026) siis muutu mihinkään.
+Lopullinen sekoitus on kuulokokeen nuppi kuten muutkin äänitasot.
+
+**Ei hyppyjä.** Kumpikin muutos on AudioParam-ramppi tai sama
+rAF-häivytys kuin muutkin tasonmuutokset (`haivyta`), ja kertoimet
+kerrotaan tasoon sisään (`taso`, `pohjaMusiikinTaso`) — niin väistö
+(kertoja, ääninäyte, lukunäkymä) ja kehittäjän säätimet toimivat
+avauksen aikana täsmälleen kuten ennen. Vähennetty liike ei muuta
+ääniä: aikataulu ja liu'ut ovat samat.
+
+**Äänivalikko voittaa.** Taustaäänten ollessa pois ei ole maisemaa eikä
+musiikkia, eivätkä avauksen kutsut tee mitään; kertojan ollessa pois
+luentaa ei tule, ja nosto purkautuu vasta pelaajan edetessä. Kumpikin
+on normaali tila, ei virhe.
+
+**Vartijat.** `tests/ambienssi.test.mjs` (tasot tynkäselaimessa, myös
+väistön kanssa) ja `tools/savukkeet/savuke-etusivun-aani.mjs` (oikea
+Chromium: musiikki laskee, maisema nousee, liuku ei ole hyppy, luenta
+alkaa vasta ≥ 2850 ms päästä, ja luennan jälkeen tasot palaavat).
+
+Sivutuote samasta savukkeesta: avaustekstin luenta ei koskaan lähetä
+`ended`-tapahtumaa, koska `pehmeaLoppu` pysäyttää sen juuri ennen
+tiedoston reunaa — ja siksi puhujan rooli jäi ennen vapauttamatta ja
+etusivun tausta jumiin neljäsosaan luennan jälkeen. `js/luenta.js`
+vapauttaa roolin nyt myös `pause`-tapahtumasta.
+
 ## Vienti
 
 1. Ensisijainen: raita ämpärin `aanet/`-kansioon (ei mediaa repoon,

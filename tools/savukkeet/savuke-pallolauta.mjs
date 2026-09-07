@@ -872,7 +872,13 @@ if (AMPARI_TOIMII) {
       const kotelo = ui.pallolauta.kotelo;
       const kr = kotelo.getBoundingClientRect();
       const er = el?.getBoundingClientRect();
-      const odotettu = kohta ? pallo.getScreenCoords(kohta.lat, kohta.lon, 0.004) : null;
+      /*
+       * Merkin korkeus on 0 (js/pallolauta/merkit.js MERKIN_KORKEUS,
+       * 7.9.2026): CSS2D-merkki projisoituu pinnan pisteeseen, ei sen
+       * yläpuolelle. Vanha odotus 0,004 jäi tähän ainoana kovakoodattuna
+       * kopiona vakiosta.
+       */
+      const odotettu = kohta ? pallo.getScreenCoords(kohta.lat, kohta.lon, 0) : null;
       return {
         napautettu,
         kesto: Math.round(performance.now() - alku),

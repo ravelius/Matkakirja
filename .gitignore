@@ -66,3 +66,8 @@ worker/sahke/wrangler.toml
 # Gigatavuja — varasto on R2-ampari, ei repo. Ks.
 # docs/moduulit/laattapyramidi.md luku 10d.
 pyramidi-poltto/
+
+# Laudan pisteiden tarkistuksen Wikidata-välimuisti (yksi tiedosto per
+# kaupungin wiki-nimi). Välimuisti, ei aineisto — tarkistin hakee
+# puuttuvat itse. Ks. tools/tarkista-laudan-pisteet.mjs.
+tools/.valimuisti/

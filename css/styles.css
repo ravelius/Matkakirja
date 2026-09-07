@@ -20088,6 +20088,18 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
    * on vieritettävissä.
    */
   max-height: min(60vh, 14rem);
+  /*
+   * KATON MUUTOS LIUKUU (omistajan linjaus 7.9.2026: *"ruudulla näkyvät
+   * kuplat voisi vaihtaa niin, että siinä näkyisi kerrallaan vain
+   * viimeisin kupla … näkymä laajenee ylöspäin 10 riiviin … Nämä kaikki
+   * pehmeästi animoiden."*).
+   *
+   * Supistettuna js/pollo.js paivitaPinonKorkeus asettaa katoksi
+   * viimeisimmän kuplan mitan pikseleinä; laajennettuna inline-arvo
+   * poistuu ja tämä sääntö on taas voimassa. Kumpikin pää on
+   * pikselimitta, joten siirtymä osaa liu'uttaa niiden välillä.
+   */
+  transition: max-height 300ms var(--liike-pehmea);
   overflow-y: auto;
   overscroll-behavior: contain;
   /* Kärki ja varjo mahtuvat: leikkaava overflow söisi ne muuten. */
@@ -20104,7 +20116,7 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
  * silti kolme tavallista kuplaa.
  */
 @media (max-width: 599px) {
-  .pollo-kuplapino { max-height: min(52vh, 14rem); }
+  .pollo-kuplapino { max-height: min(45vh, 14rem); }
 }
 
 /*
@@ -20112,10 +20124,24 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
  * vieritettäviksi. Luokan asettaa js/pollo.js paivitaYlivuoto, koska
  * CSS ei osaa kysyä onko sisältöä enemmän kuin tilaa.
  */
-.pollo-kuplapino-yli .pollo-kuplapino {
+.pollo-kuplapino-yli .pollo-kuplapino.pollo-kuplapino-laaja {
   mask-image: linear-gradient(to bottom, transparent 0, #000 2.6rem);
   -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 2.6rem);
 }
+
+/*
+ * SUPISTETTUNA EI HÄIVYTETÄ (7.9.2026): ruudulla on silloin vain
+ * viimeisin kupla, ja yläreunan häivytys söisi sen ensimmäisen rivin.
+ * Kelattavaa on silti — laajennus paljastaa sen (js/pollo.js
+ * laajennaPino).
+ */
+
+/*
+ * ENSIMMÄINEN ASETUS JA LIIKEHERKKYYS ILMAN LIUKUA: js/pollo.js lisää
+ * luokan yhden kehyksen ajaksi, kun korkeus vaihtuu ilman että
+ * pelaajan pitäisi nähdä sen vaihtuvan (ensimmäinen kupla, tyhjennys).
+ */
+.pollo-kuplapino.pollo-kuplapino-hyppy { transition: none; }
 
 /*
  * Sulkunappi kehyksen oikeassa yläkulmassa: sama paperinen pikkuruksi
@@ -20223,10 +20249,24 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
   to { transform: translateY(0); }
 }
 
+/*
+ * LOKISTA NOSTETTU VANHA KUPLA EI SAAVU (7.9.2026): laajennus tuo
+ * aiemmat puheenvuorot pinon yläpuolelle (js/pollo.js
+ * taytaPinoHistorialla), eivätkä ne ole uutta puhetta — saapumisliike
+ * saisi ne näyttämään siltä. Sävy on hitusen haalempi, jotta ero
+ * juuri sanottuun näkyy.
+ */
+.pollo-kuplapino .pollo-vihje-vanha {
+  animation: none;
+  opacity: 0.82;
+}
+
 /* Liikeherkkyys: kupla vain ilmestyy, ei liiku. */
 @media (prefers-reduced-motion: reduce) {
   .pollo-vihje { animation: none; }
   .pollo-kuplapino-kehys { transition: none; }
+  /* Korkeuden liuku on liikettä siinä missä muukin. */
+  .pollo-kuplapino { transition: none; }
 
   .pollo-kuplapino .pollo-vihje {
     animation: pollo-kupla-havahtuu 120ms linear;
@@ -20355,6 +20395,12 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
   --pollo-muste-himmea: #6b5a45;
   --pollo-korostus: #7a5514;
   --pollo-viiva: rgba(122, 85, 20, 0.32);
+  /*
+   * Puhekuplan pergamentti chatissa: sama sävy kuin kartan päällä
+   * (.pollo-vihje --kuplan-paperi), jotta sama repliikki näyttää
+   * samalta molemmissa paikoissa (omistaja 7.9.2026).
+   */
+  --pollo-kupla-paperi: #f4e7ca;
 
   position: fixed;
   right: calc(0.7rem + env(safe-area-inset-right, 0px));
@@ -20723,6 +20769,61 @@ button.pollo-ehdotus:disabled { opacity: 0.5; cursor: default; }
   font-size: 0.95rem;
   color: var(--pollo-muste);
 }
+
+/*
+ * ── PULUN OMAT PUHEKUPLAT CHATISSA (omistajan tilaus 7.9.2026) ───────
+ *
+ * *"ne pulun omat esikirjoitetut kommentit voisi näkyä jotenkin eri
+ * värillä tai muuten tyylin sopivasti erotettuna, että tajuaa ne
+ * puhekupliksi. … ne puhekuplathan voisi olla ihan puhekuplan näköisiä
+ * siinä chatissa tosin visuaalisesti mahdollisimman kevyesti
+ * toteutettuna."*
+ *
+ * KEVYT TARKOITTAA KEVYTTÄ: pergamentin sävy, ohut viiva, pyöristys ja
+ * pieni kärki vasempaan alanurkkaan — ei varjoa, ei taustakuviota, ei
+ * omaa typografiaa. Kuplaviesti on Livian oma puheenvuoro
+ * (js/pollo.js kirjaaKuplaViestiin); pyydetyt vastaukset pysyvät
+ * tavallisina riveinä, jotta ero näkyy heti silmäillen.
+ *
+ * Kärki on VASEMMALLA ALHAALLA, koska chatissa puhuja on rivin
+ * vasemmalla puolella — kartan päällä kärki osoittaa oikealle alas
+ * kohti pöllönappia. Sama sävy, eri suunta.
+ */
+.pollo-viesti.pollo-kuplaviesti {
+  position: relative;
+  /* Kärjelle tilaa alle, ettei seuraava rivi tule sen päälle. */
+  margin: 0 0 0.75rem;
+  padding: 0.4rem 0.6rem 0.45rem;
+  border: 1px solid var(--pollo-viiva);
+  border-radius: 0.6rem;
+  background: var(--pollo-kupla-paperi);
+}
+
+.pollo-viesti.pollo-kuplaviesti::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0.9rem;
+  width: 9px;
+  height: 9px;
+  background: var(--pollo-kupla-paperi);
+  border-right: 1px solid var(--pollo-viiva);
+  border-bottom: 1px solid var(--pollo-viiva);
+  transform: rotate(45deg);
+}
+
+/*
+ * LAITTEEN LOKISTA LADATTU RIVI (js/pollo.js lataaLokiVirtaan):
+ * aiempien istuntojen puhe on luettavissa, mutta se ei kilpaile
+ * tämän hetken keskustelun kanssa.
+ */
+.pollo-viesti.pollo-historiaviesti { opacity: 0.78; }
+
+/*
+ * TERVEHDYKSEN YDIN LIHAVOITUNA (omistaja 7.9.2026): se yksi lause,
+ * joka kertoo mihin pulua käytetään.
+ */
+.pollo-tervehdys-ydin { font-weight: 700; }
 
 /*
  * ── VASTAUSTEKSTI EI OLE KURSIIVIA (omistaja 13.8.2026) ──────────────

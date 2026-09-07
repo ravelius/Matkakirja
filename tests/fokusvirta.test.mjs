@@ -1067,3 +1067,65 @@ test('jokaisella symbolikategorialla on oma viivamerkki kartalla', async () => {
   assert.equal(nostosymMiniTunnus('luonto', 'meri'), 'meri');
   assert.equal(nostosymMiniTunnus('luonto', 'joki'), 'meri');
 });
+
+/* ---------- pulun lehtivinkki: kerran koskaan, ei ruksia ---------- */
+
+/*
+ * OMISTAJA 7.9.2026 (Raamattu, PULUN UUSI RYTMI ATEENASSA): lehden
+ * avautuessa pulu sanoo *"Etsi lehdestä aarrekysymys."* — vain
+ * ensimmäisellä kerralla koskaan, ja "Älä näytä jatkossa" -ruksi on
+ * poistettu kokonaan.
+ *
+ * Kertaluontoisuus on kahden lipun varassa (laite + istunto), joten
+ * sitä ei voi testata pelkästä lähdekoodista: muistin jäljitelmä
+ * paljastaa myös sen, ettei istunnon lippu unohdu, jos laitteen muisti
+ * tyhjenee kesken pelin (yksityinen selaus).
+ */
+test('lehtivinkki sanotaan kerran koskaan — laite- ja istuntolippu', async () => {
+  const muisti = new Map();
+  const vanha = globalThis.localStorage;
+  globalThis.localStorage = {
+    getItem: (avain) => (muisti.has(avain) ? muisti.get(avain) : null),
+    setItem: (avain, arvo) => muisti.set(avain, String(arvo)),
+    removeItem: (avain) => muisti.delete(avain),
+  };
+  try {
+    const {
+      LIVIA_LEHTIVINKKI_TALLE, LIVIAN_LEHTIVINKIN_SANA, LIVIAN_LEHTIVINKKI,
+      livianLehtivinkkiOdottaa, merkitseLehtivinkkiNahdyksi,
+    } = await import('../js/livia.js');
+    assert.equal(LIVIAN_LEHTIVINKKI, 'Etsi lehdestä aarrekysymys.');
+    assert.ok(LIVIAN_LEHTIVINKKI.includes(LIVIAN_LEHTIVINKIN_SANA),
+      'ympyröitävä avainsana ei ole vinkin sisällä');
+    // Tuore laite: vinkki on sanomatta.
+    assert.equal(livianLehtivinkkiOdottaa(), true);
+    merkitseLehtivinkkiNahdyksi();
+    assert.equal(muisti.get(LIVIA_LEHTIVINKKI_TALLE), '1');
+    // Toinen lehti, kolmas kaupunki, sama istunto: ei enää vinkkiä.
+    assert.equal(livianLehtivinkkiOdottaa(), false);
+    // Laitteen muisti tyhjeni kesken pelin: istunnon lippu kantaa.
+    muisti.clear();
+    assert.equal(livianLehtivinkkiOdottaa(), false);
+  } finally {
+    if (vanha === undefined) delete globalThis.localStorage;
+    else globalThis.localStorage = vanha;
+  }
+});
+
+test('lehtivinkin kupla on ruksiton ja puhuu pulun äänellä', async () => {
+  const { readFileSync } = await import('node:fs');
+  const virta = readFileSync(new URL('../js/fokusvirta.js', import.meta.url), 'utf8');
+  const apurit = readFileSync(new URL('../js/ui-apurit.js', import.meta.url), 'utf8');
+  // Ruksi on poissa: ei valintaruutua, ei asetusta, ei laiteavainta.
+  // (Sana esiintyy yhä kommentissa, joka kertoo mikä poistettiin.)
+  assert.doesNotMatch(virta, /'Älä näytä jatkossa'|vinkkiruksi|piilotaLehtivinkki|lehtivinkkiPiilotettu\(/);
+  assert.doesNotMatch(apurit, /lehtivinkkiPiilotettu|piilotaLehtivinkki/);
+  // Kertalippu Livian omasta moduulista, ei enää kaupunkikohtaista muistia.
+  assert.match(virta, /if \(!livianLehtivinkkiOdottaa\(\)\) return false;/);
+  assert.doesNotMatch(virta, /fokusvinkkiNaytetty/);
+  // Lippu kuluu vasta kun kupla oikeasti näkyi.
+  assert.match(virta, /if \(!naytaPolloKupla\(ui, LIVIAN_LEHTIVINKKI\)\) return;\s*\n\s*merkitseLehtivinkkiNahdyksi\(\);/);
+  // Avainsana ympyröidään ja repliikki luetaan pulun äänellä.
+  assert.match(virta, /LIVIAN_LEHTIVINKIN_SANA, \{ tyyppi: 'circle'/);
+  assert.match(virta, /soitaLivianAani\(ui, 'lehtivinkki', 0, \{ teksti: LIVIAN_LEHTIVINKKI \}\);/);
+});

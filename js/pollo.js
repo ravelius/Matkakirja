@@ -825,6 +825,50 @@ const PINON_KARJEN_SIIRTO = 24;
 const KELLUVAN_NAPIN_VARAPAIKKA = { reuna: 18, koko: 46, pohja: 85 };
 
 /*
+ * ── VAIN VIIMEISIN KUPLA, HISTORIA KELATTAVISSA ──────────────────────
+ * (omistajan linjaus 7.9.2026, Raamattu "PULUN KUPLAT: VAIN VIIMEISIN,
+ * HISTORIA CHATISSA", sanatarkasti: *"ruudulla näkyvät kuplat voisi
+ * vaihtaa niin, että siinä näkyisi kerrallaan vain viimeisin kupla.
+ * Mutta jos käyttäjä menee scrollaamaan viestejä niin näkymä laajenee
+ * ylöspäin 10 riiviin. Mutta sitten kun käyttäjä liikuttaa karttaa niin
+ * näkymä palaa taas siihen yhteen kuplaan. Nämä kaikki pehmeästi
+ * animoiden."*).
+ *
+ * Pino EI muutu: kuplat ovat yhä omia elementtejään ja pino on
+ * vieritettävä. Muutos on pinon KORKEUDESSA — supistettuna sen katto on
+ * viimeisimmän kuplan mitta (js/pollo.js paivitaPinonKorkeus), ja
+ * laajennettuna css:n oma katto (noin kymmenen tekstiriviä). Molemmat
+ * ovat pikselimittoja, joten selain osaa liu'uttaa niiden välillä.
+ */
+const PINON_LAAJENNUS_MS = 300;
+
+/**
+ * Kuinka monta lokin vanhaa puheenvuoroa laajennettu pino hakee
+ * näkyviin kuplien yläpuolelle. Kymmenen riviä kantaa noin neljä
+ * kuplaa, ja loppumaton historia on chatissa (ks. lataaLokiVirtaan).
+ */
+const PINON_HISTORIA = 6;
+
+/**
+ * LIVIAN LOKI LAITTEEN MUISTISSA (omistaja 7.9.2026: *"Olisi kiva että
+ * puhekupla ja chattihistoria tallentuisi ja olisi kelattavissa
+ * taaksepäin mahdollisimman pitkälle."*).
+ *
+ * Loki on OMA avaimensa eikä osa pelitallennusta: se saa kadota
+ * (yksityinen selaus, muisti täynnä) ilman että peli menettää mitään,
+ * ja uusi peli ei pyyhi sitä — puhutut sanat ovat puhutut. Merkintä on
+ * `{ r, t, aika }`, jossa `r` on 'kupla' (puhekupla kartan päällä),
+ * 'kayttaja' (pelaajan kysymys) tai 'pollo' (Livian vastaus chatissa).
+ *
+ * NOLLAUS KONSOLISTA:
+ *   localStorage.removeItem('matkakirja-livia-loki')
+ */
+export const LIVIAN_LOKI_AVAIN = 'matkakirja-livia-loki';
+
+/** Lokin katto merkintöinä: vanhin karsitaan, uusin jää. */
+export const LIVIAN_LOKIN_KATTO = 400;
+
+/*
  * OSIIN JAETUN PUHEENVUORON RYTMI (ks. naytaPuheenvuoro).
  *
  * Viive lasketaan EDELLISEN osan sanamäärästä: lyhyt huudahdus saa
@@ -1128,6 +1172,63 @@ function polloKehittajaTila() {
   return polloAsetus(POLLO_KEHITTAJA_TILA_AVAIN) === '1';
 }
 
+/* ------------------------------------------------------------------ *
+ * Livian loki (puhekuplat ja keskustelu laitteen muistissa)
+ * ------------------------------------------------------------------ */
+
+/**
+ * Uusi merkintä lokiin, katto huomioiden.
+ *
+ * Oma funktionsa, koska tämä on lokin ainoa sääntö (vanhin putoaa) ja
+ * se on testattavissa ilman selainta.
+ *
+ * @param {Array<{r: string, t: string}>} loki nykyinen loki.
+ * @param {{r: string, t: string, aika?: number}} merkinta uusi rivi.
+ * @param {number} [katto] enimmäispituus.
+ * @returns {Array} uusi loki (alkuperäistä ei muuteta).
+ */
+export function lisaaLokiin(loki, merkinta, katto = LIVIAN_LOKIN_KATTO) {
+  const lista = [...(Array.isArray(loki) ? loki : []), merkinta];
+  return lista.length > katto ? lista.slice(lista.length - katto) : lista;
+}
+
+/**
+ * Loki laitteen muistista. Vika missä tahansa kohdassa — yksityinen
+ * selaus, rikki mennyt JSON, vanha muoto — palauttaa tyhjän lokin:
+ * historia on mukavuus, ei ehto pelin toiminnalle.
+ */
+export function lueLivianLoki(avain = LIVIAN_LOKI_AVAIN) {
+  try {
+    const raaka = globalThis.localStorage?.getItem(avain);
+    if (!raaka) return [];
+    const lista = JSON.parse(raaka);
+    if (!Array.isArray(lista)) return [];
+    return lista.filter((m) => m && typeof m.t === 'string' && m.t);
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Yksi puheenvuoro lokiin. Tyhjä ei kirjaudu.
+ *
+ * @param {'kupla'|'kayttaja'|'pollo'} rooli kuka puhui ja missä.
+ * @param {string} teksti sanat sellaisina kuin ne sanottiin.
+ * @returns {boolean} kirjautuiko.
+ */
+export function kirjaaLivianLokiin(rooli, teksti) {
+  const sanat = String(teksti ?? '').trim();
+  if (!sanat) return false;
+  try {
+    const loki = lisaaLokiin(lueLivianLoki(), { r: rooli, t: sanat, aika: Date.now() });
+    globalThis.localStorage?.setItem(LIVIAN_LOKI_AVAIN, JSON.stringify(loki));
+    return true;
+  } catch {
+    // Muisti täynnä tai yksityinen selaus: puhe näkyy silti ruudulla.
+    return false;
+  }
+}
+
 /*
  * TERVEHDYS ON AMBIVALENTTI ESITTELY (Fablen kaanon, omistajan
  * hyväksyntä 27.8.2026, TUURAAJA-KEHYS).
@@ -1140,13 +1241,27 @@ function polloKehittajaTila() {
  *
  * NIMI SÄILYY PUHEESSA. Otsikoiden yliviivausvitsi (pollo-yliviivattu)
  * elää vain nimilapuissa — Livian omassa puheessa hän on Livia.
+ *
+ * LYHENNETTY KOLMEEN VIRKKEESEEN (omistaja 7.9.2026, sanatarkasti:
+ * *"sen pulun chattiruudun avauksen tekstin voisi lyhentää, koska nyt
+ * siihen tulee niitä muitakin tekstejä jo yläpuolelle näkyviin. Ja
+ * siinä voisi boldata sen, että kysy mitä vain, niin autan sinua
+ * eteenpäin tai jotain vastaavaa."*).
+ *
+ * Chatin yläpuolella on nyt kuplien ja aiempien keskustelujen loki
+ * (lataaLokiVirtaan), joten kuuden virkkeen esittely työnsi kysymys-
+ * kentän kauas pelaajan silmistä. Tuuraaja-kehys säilyy, mutta se
+ * sanotaan kerralla — ja ydin, se mitä pelaajan pitää tietää, on
+ * OMANA OSANAAN (TERVEHDYS_YDIN) ja lihavoidaan ruudulla
+ * (naytaTervehdys). Kaanoninen sanamuoto on päätoimittajan.
  */
-const TERVEHDYS = 'Olen pöllö. Sijaisena. Eli pulu — kirjekyyhky, jos '
-  + 'ollaan tarkkoja, ja ollaan, koska suku on vanhaa roomalaista. Nimi on '
-  + 'Livia. Viisas Pöllö palaa aivan kohta; hän sanoi niin jo '
-  + 'Konstantinopolissa. Sillä välin: kysy minulta mitä tahansa siitä, mitä '
-  + 'kartalla tai lehdessä juuri nyt näkyy, tai muusta maailmasta. Pelin '
-  + 'tehtäviä en ratkaise puolestasi.';
+const TERVEHDYS_ALKU = 'Olen Livia, pulu — tuuraan Viisasta Pöllöä, '
+  + 'kunnes se palaa. ';
+const TERVEHDYS_YDIN = 'Kysy mitä vain, niin autan sinua eteenpäin.';
+const TERVEHDYS_LOPPU = ' Pelin tehtäviä en ratkaise puolestasi.';
+
+/** Koko tervehdys yhtenä tekstinä (loki, testit, ruudunlukija). */
+const TERVEHDYS = TERVEHDYS_ALKU + TERVEHDYS_YDIN + TERVEHDYS_LOPPU;
 
 /*
  * ── LIVIAN MIETINTÄMUODOT (omistajan hyväksyntä 29.8.2026) ───────────
@@ -1442,6 +1557,20 @@ class Pollo {
     this.auki = false;
     this.kesken = false;
     this.historia = [];
+    /*
+     * KUPLAPINON LAAJUUS (omistaja 7.9.2026): kartan päällä näkyy vain
+     * viimeisin kupla, kunnes pelaaja kelaa historiaa. Kartan liike
+     * supistaa näkymän takaisin (ks. paivitaPinonKorkeus).
+     */
+    this.pinoLaaja = false;
+    this.pinonHistoriaLisatty = false;
+    /*
+     * AIEMMAT PUHEENVUOROT luetaan KERRAN, tässä: istunnon omat kuplat
+     * ja vastaukset kirjautuvat samaan lokiin sitä mukaa kun ne
+     * sanotaan, joten myöhempi luku näkisi ne kahdesti chatissa.
+     */
+    this.aiempiLoki = lueLivianLoki();
+    this.lokiLadattu = false;
     this.ankkuri = null;
     this.indeksi = null;
     this.tunnistin = null;
@@ -2443,12 +2572,178 @@ class Pollo {
       tapahtuma.stopPropagation();
       tapahtuma.preventDefault();
     });
+    /*
+     * KELAUS LAAJENTAA (omistaja 7.9.2026: *"jos käyttäjä menee
+     * scrollaamaan viestejä niin näkymä laajenee ylöspäin"*). Ele
+     * tunnistetaan kahdesta lähteestä, koska laitteita on kahta lajia:
+     * hiiren rulla ja sormen veto. Kynnys on sama kuin napautuksen
+     * sateella (KUPLAN_NAPAUTUSSADE_PX), joten sama ele ei voi olla
+     * yhtä aikaa napautus ja kelaus — kuplan oma sopimus
+     * (sidoKuplanNapautus) hylkää napautuksen samasta rajasta.
+     *
+     * SUUNTAA EI KYSYTÄ. Ylöspäin kelaaminen on sormella veto alas ja
+     * rullalla deltaY < 0; kumpi tahansa ele pinon päällä tarkoittaa,
+     * että pelaaja etsii sanoja jotka jo väistyivät, joten molemmat
+     * laajentavat.
+     */
+    let ele = null;
+    kehys.addEventListener('pointerdown', (tapahtuma) => {
+      ele = { y: tapahtuma.clientY };
+    });
+    kehys.addEventListener('pointermove', (tapahtuma) => {
+      if (!ele) return;
+      if (Math.abs(tapahtuma.clientY - ele.y) <= KUPLAN_NAPAUTUSSADE_PX) return;
+      ele = null;
+      this.laajennaPino();
+    });
+    kehys.addEventListener('pointerup', () => { ele = null; });
+    kehys.addEventListener('pointercancel', () => { ele = null; });
+    kehys.addEventListener('wheel', () => this.laajennaPino(), { passive: true });
+    /*
+     * NÄPPÄIMISTÖ: nuoli ylös laajentaa, Escape supistaa. Pino on
+     * vieritettävä alue, joten se saa kohdistuksen (tabindex) ja oman
+     * nimen ruudunlukijalle; kuplat pysyvät role="status"-riveinä.
+     */
+    pino.tabIndex = 0;
+    pino.setAttribute('role', 'log');
+    pino.setAttribute('aria-label', 'Pulun puhekuplat');
+    pino.addEventListener('keydown', (tapahtuma) => {
+      if (tapahtuma.key === 'ArrowUp') {
+        tapahtuma.preventDefault();
+        this.laajennaPino();
+      } else if (tapahtuma.key === 'Escape' && this.pinoLaaja) {
+        tapahtuma.preventDefault();
+        tapahtuma.stopPropagation();
+        this.supistaPino();
+      }
+    });
     kehys.appendChild(sulje);
     kehys.appendChild(pino);
     this.doc.body.appendChild(kehys);
     this.pinoKehys = kehys;
     this.pino = pino;
+    this.paivitaPinonKorkeus({ heti: true });
     return pino;
+  }
+
+  /* --- pinon laajuus: viimeisin kupla vai koko historia ------------ */
+
+  /**
+   * PINO LAAJENEE YLÖSPÄIN (omistaja 7.9.2026).
+   *
+   * Laajennus tuo kuplien yläpuolelle myös lokin aiemmat puheenvuorot
+   * (taytaPinoHistorialla), jotta kelattavaa on silloinkin kun tämän
+   * saapumisen kuplia on vain yksi.
+   */
+  laajennaPino() {
+    if (this.pinoLaaja || !this.pino) return;
+    this.pinoLaaja = true;
+    this.taytaPinoHistorialla();
+    this.paivitaPinonKorkeus();
+  }
+
+  /**
+   * PINO SUPISTUU TAKAISIN YHTEEN KUPLAAN: kartan liike, Escape tai
+   * napautus muualle (ks. seuraaSulkemista).
+   */
+  supistaPino() {
+    if (!this.pinoLaaja) return;
+    this.pinoLaaja = false;
+    this.paivitaPinonKorkeus();
+  }
+
+  /**
+   * Pinon katto: supistettuna viimeisimmän kuplan mitta, laajennettuna
+   * css:n oma katto (noin kymmenen tekstiriviä, puhelimella enintään
+   * 45 % ruudusta).
+   *
+   * Molemmat ovat pikselimittoja — myös css:n `min(45vh, 14rem)` on
+   * laskettuna pikseleitä — joten selain liu'uttaa niiden välillä
+   * itsestään (css .pollo-kuplapino transition). Liikeherkkyys ja
+   * ensimmäinen asetus tulevat ilman siirtymää (`heti`).
+   *
+   * @param {object} [asetukset]
+   * @param {boolean} [asetukset.heti] ilman liukua.
+   */
+  paivitaPinonKorkeus({ heti = false } = {}) {
+    const pino = this.pino;
+    if (!pino) return;
+    const ilman = heti || this.vahaLiiketta();
+    pino.classList.toggle('pollo-kuplapino-laaja', this.pinoLaaja);
+    this.pinoKehys?.classList.toggle('pollo-kuplapino-laaja', this.pinoLaaja);
+    this.pinoKehys?.setAttribute('aria-expanded', this.pinoLaaja ? 'true' : 'false');
+    if (ilman) pino.classList.add('pollo-kuplapino-hyppy');
+    if (this.pinoLaaja) pino.style.maxHeight = '';
+    else {
+      const viimeinen = this.pinonKuplat().at(-1) ?? null;
+      if (!viimeinen) pino.style.maxHeight = '';
+      else {
+        const ikkuna = this.doc.defaultView ?? (typeof window === 'undefined' ? null : window);
+        const tyyli = ikkuna?.getComputedStyle?.(pino) ?? null;
+        const pehmuste = (parseFloat(tyyli?.paddingTop ?? '') || 0)
+          + (parseFloat(tyyli?.paddingBottom ?? '') || 0);
+        const korkeus = viimeinen.getBoundingClientRect?.().height ?? 0;
+        if (korkeus > 0) pino.style.maxHeight = `${Math.ceil(korkeus + pehmuste)}px`;
+      }
+    }
+    // Supistettuna näkyy VIIMEISIN: pohjaan vieritys on koko sääntö.
+    pino.scrollTop = pino.scrollHeight;
+    this.paivitaYlivuoto();
+    /*
+     * Ylivuoto mitataan uudelleen, kun korkeuden liuku on ohi: kesken
+     * siirtymän mitattu clientHeight on välivaihe, ja yläreunan
+     * häivytys jäisi väärään asentoon (sama oppi kuin FLIP-siirrolla,
+     * ks. mittaaYlivuotoMyohemmin).
+     */
+    clearTimeout(this.pinonKorkeusAjastin);
+    this.pinonKorkeusAjastin = setTimeout(() => {
+      this.pinonKorkeusAjastin = null;
+      this.paivitaYlivuoto();
+    }, PINON_LAAJENNUS_MS + 60);
+    if (ilman) {
+      // Luokka pois vasta seuraavassa kehyksessä, jotta siirtymä on
+      // varmasti ohitettu myös silloin kun korkeus vaihtui juuri nyt.
+      const doc = this.doc ?? globalThis.document;
+      const jatka = () => pino.classList.remove('pollo-kuplapino-hyppy');
+      if (typeof doc?.defaultView?.requestAnimationFrame === 'function') {
+        doc.defaultView.requestAnimationFrame(jatka);
+      } else setTimeout(jatka, 0);
+    }
+  }
+
+  /**
+   * LAAJENNETTU PINO NÄYTTÄÄ SAMAN LOKIN KUIN CHAT (omistaja 7.9.2026:
+   * *"näkymä laajenee ylöspäin 10 riiviin"*).
+   *
+   * Tämän saapumisen kuplat ovat lokin viimeiset merkinnät, joten
+   * niiden verran jätetään pois ja loput otetaan ylhäältä. Historiakuplat
+   * ovat lajia 'historia': kartan kosketus ei poista niitä (se koskee
+   * ohjekupliin) eikä niillä ole kuittausta — napautus avaa chatin,
+   * jossa sama teksti on kokonaisuudessaan.
+   */
+  taytaPinoHistorialla(enintaan = PINON_HISTORIA) {
+    const pino = this.pino;
+    if (!pino || this.pinonHistoriaLisatty) return 0;
+    this.pinonHistoriaLisatty = true;
+    const puheita = this.pinonKuplat()
+      .filter((k) => k.dataset?.laji === 'puhe').length;
+    const kuplat = lueLivianLoki().filter((m) => m.r === 'kupla');
+    const vanhat = kuplat.slice(0, Math.max(0, kuplat.length - puheita)).slice(-enintaan);
+    if (!vanhat.length) return 0;
+    const ennen = pino.scrollHeight;
+    const eka = pino.firstChild;
+    for (const merkinta of vanhat) {
+      const kupla = this.luoKupla('historia');
+      kupla.classList.add('pollo-vihje-maadoitus', 'pollo-vihje-vanha');
+      for (const kappale of jaaKappaleiksi(merkinta.t)) {
+        kupla.appendChild(polloElementti('p', 'pollo-vihje-lause', kappale));
+      }
+      pino.insertBefore(kupla, eka);
+    }
+    // Näkymä pysyy paikallaan: yläpuolelle tullut sisältö lisätään
+    // vierityskohtaan, muuten pino hyppäisi vanhimman kuplan kohdalle.
+    pino.scrollTop += pino.scrollHeight - ennen;
+    return vanhat.length;
   }
 
   /** Pinon kuplat lukujärjestyksessä (vanhin ensin). */
@@ -2499,10 +2794,25 @@ class Pollo {
     const pino = this.varmistaPino();
     const vanhat = this.pinonKuplat();
     const vaha = this.vahaLiiketta();
-    const ennen = vaha ? null : vanhat.map((k) => k.getBoundingClientRect().top);
+    /*
+     * SUPISTETUSSA PINOSSA EI OLE FLIPPIÄ (omistaja 7.9.2026: ruudulla
+     * näkyy vain viimeisin kupla). Vanhat ovat silloin pinon leikkauksen
+     * takana, joten niiden nousu olisi liikettä jota kukaan ei näe — ja
+     * se kilpailisi korkeuden liu'un kanssa. Laajennetussa pinossa
+     * vanhat liukuvat ylös kuten ennenkin.
+     */
+    const ennen = vaha || !this.pinoLaaja
+      ? null : vanhat.map((k) => k.getBoundingClientRect().top);
     this.pinoKehys.hidden = false;
     pino.appendChild(kupla);
     this.asetaPinonPaikka();
+    /*
+     * UUSI KUPLA ON NYT VIIMEISIN: supistetun pinon katto on sen mitta,
+     * ja katon muutos liukuu (css .pollo-kuplapino transition). Pinon
+     * ensimmäinen kupla saa korkeutensa ilman liukua — muuten kehys
+     * kutistuisi tyhjästä katostaan samalla kun kupla nousee esiin.
+     */
+    this.paivitaPinonKorkeus({ heti: vanhat.length === 0 });
     /*
      * YKSI LIIKE MYÖS TÄYDESSÄ PINOSSA (omistaja 5.9.2026: *"uudet
      * puhekuplat edelleen tulevat vähän räpsähtäen, kun niiden pitäisi
@@ -2622,7 +2932,19 @@ class Pollo {
   /** Kehys piiloon, kun viimeinenkin kupla on poistunut. */
   paivitaPinonNakyvyys() {
     if (!this.pinoKehys) return;
-    this.pinoKehys.hidden = this.pinonKuplat().length === 0;
+    const tyhja = this.pinonKuplat().length === 0;
+    this.pinoKehys.hidden = tyhja;
+    /*
+     * TYHJÄ PINO ALOITTAA SUPISTETTUNA (omistaja 7.9.2026). Laajuus on
+     * pelaajan sen hetkinen valinta, ei pysyvä asetus: kun kaikki
+     * kuplat ovat poistuneet, seuraava puheenvuoro tulee taas yhtenä
+     * kuplana — ja historia haetaan uudelleen, kun sitä taas kelataan.
+     */
+    if (tyhja) {
+      this.pinoLaaja = false;
+      this.pinonHistoriaLisatty = false;
+      this.pino?.style?.removeProperty?.('max-height');
+    }
     this.paivitaYlivuoto();
   }
 
@@ -3150,10 +3472,50 @@ class Pollo {
    * ovat käyttöliittymää, eivät puhetta.
    */
   kirjaaKuplaViestiin(teksti) {
-    if (!teksti || !this.virta) return null;
+    if (!teksti) return null;
+    /*
+     * LOKI ENSIN, VIRTA VASTA SITTEN (omistaja 7.9.2026: *"puhekupla ja
+     * chattihistoria tallentuisi ja olisi kelattavissa taaksepäin
+     * mahdollisimman pitkälle"*). Laitteen muistiin kirjataan jokainen
+     * puheenvuoro, myös silloin kun paneelia ei ole vielä rakennettu —
+     * muuten pelin alun kuplat katoaisivat historiasta.
+     */
+    kirjaaLivianLokiin('kupla', teksti);
+    if (!this.virta) return null;
     const viesti = this.lisaaViesti('pollo', teksti);
     viesti.classList.add('pollo-kuplaviesti');
     return viesti;
+  }
+
+  /**
+   * AIEMMAT PUHEENVUOROT CHATIN ALKUUN (omistaja 7.9.2026).
+   *
+   * Loki ladataan KERRAN, ensimmäisellä avauksella, ja vanhimmasta
+   * uusimpaan. Istunnon omat viestit ovat jo virrassa, joten ladattu
+   * osa menee niiden YLÄPUOLELLE — järjestys pysyy sinä, jossa sanat
+   * sanottiin. Ladatut rivit kantavat oman luokkansa
+   * (.pollo-historiaviesti): ne eivät ole alkanut keskustelu, joten
+   * tervehdys tulee silti (ks. avaa).
+   *
+   * @returns {number} montako riviä ladattiin.
+   */
+  lataaLokiVirtaan() {
+    if (this.lokiLadattu || !this.virta) return 0;
+    this.lokiLadattu = true;
+    const loki = Array.isArray(this.aiempiLoki) ? this.aiempiLoki : [];
+    if (!loki.length) return 0;
+    const eka = this.virta.firstChild;
+    for (const merkinta of loki) {
+      const rooli = merkinta.r === 'kayttaja' ? 'kayttaja' : 'pollo';
+      const viesti = polloElementti(
+        'p', `pollo-viesti pollo-${rooli} pollo-historiaviesti`, merkinta.t,
+      );
+      // Puhekupla näkyy chatissa kuplana myös historiassa.
+      if (merkinta.r === 'kupla') viesti.classList.add('pollo-kuplaviesti');
+      this.virta.insertBefore(viesti, eka);
+    }
+    this.virta.scrollTop = this.virta.scrollHeight;
+    return loki.length;
   }
 
   /**
@@ -3221,6 +3583,18 @@ class Pollo {
   seuraaSulkemista() {
     if (typeof this.doc.addEventListener !== 'function') return;
     this.doc.addEventListener('pointerdown', (e) => {
+      /*
+       * KARTAN LIIKE SUPISTAA KUPLANÄKYMÄN (omistaja 7.9.2026: *"kun
+       * käyttäjä liikuttaa karttaa niin näkymä palaa taas siihen yhteen
+       * kuplaan"*). Vedon alku on pointerdown kartalla — pallolaudalla
+       * (js/pallo.js) ja tasokartalla sama tapahtuma — ja se kulkee
+       * tänne asti, joten kuplat eivät tarvitse omaa kytköstä laudan
+       * sisälle. Pinon oma alue on rajattu pois: sen päällä
+       * pointerdown on kelausta tai napautus kuplaan.
+       */
+      if (this.pinoLaaja && !e.target?.closest?.('.pollo-kuplapino-kehys')) {
+        this.supistaPino();
+      }
       if (!this.auki) return;
       /*
        * KARTAN KOHDETIETORUUTU ON CHATIN TYÖPARI, EI SEN ULKOPUOLTA
@@ -3251,6 +3625,18 @@ class Pollo {
         e.preventDefault();
         e.stopPropagation();
         this.suljeKuvapopup();
+        return;
+      }
+      /*
+       * ESCAPE SUPISTAA LAAJENNETUN KUPLANÄKYMÄN (saavutettavuus,
+       * omistajan linjaus 7.9.2026). Chatin ollessa auki pinossa ei ole
+       * kuplia, joten järjestys ei voi mennä ristiin: laajennettu pino
+       * on aina chatin sijasta, ei sen päällä.
+       */
+      if (!this.auki && this.pinoLaaja) {
+        e.preventDefault();
+        e.stopPropagation();
+        this.supistaPino();
         return;
       }
       if (!this.auki) return;
@@ -3306,6 +3692,12 @@ class Pollo {
      * korkeus ei koskaan kasva vähitellen vastauksen aikana
      * (omistajan linjaus 13.8.2026 pysyy voimassa).
      */
+    /*
+     * AIEMMAT PUHEENVUOROT PAIKALLEEN ENNEN MITTAUKSIA (omistaja
+     * 7.9.2026): alkutila ja tyhjä varaus lasketaan siitä sisällöstä,
+     * joka virrassa oikeasti on.
+     */
+    this.lataaLokiVirtaan();
     this.paivitaAlkutila();
     this.paneeli.hidden = false;
     this.nappi.setAttribute('aria-expanded', 'true');
@@ -3330,10 +3722,14 @@ class Pollo {
      * lapsimäärästä vaan viesteistä. Kuplaviestit eivät laske: ne ovat
      * Livian omia puheenvuoroja (kirjaaKuplaViestiin), eivät alkanut
      * keskustelu — ilman tätä rajausta tervehdys jäisi kokonaan pois
-     * heti ensimmäisen kuplan jälkeen.
+     * heti ensimmäisen kuplan jälkeen. Sama koskee laitteen lokista
+     * ladattuja rivejä (.pollo-historiaviesti, 7.9.2026): ne ovat
+     * eilistä keskustelua, eivät tätä.
      */
-    if (!this.virta.querySelector('.pollo-viesti:not(.pollo-kuplaviesti)')) {
-      this.lisaaViesti('pollo', TERVEHDYS);
+    if (!this.virta.querySelector(
+      '.pollo-viesti:not(.pollo-kuplaviesti):not(.pollo-historiaviesti)',
+    )) {
+      this.naytaTervehdys();
     }
     // Kehittäjätila voi vaihtua kesken pelin, joten kenttä katsotaan
     // joka avauksella eikä kerran käynnistyksessä.
@@ -4128,6 +4524,26 @@ class Pollo {
   }
 
   /* --- keskustelu ------------------------------------------------- */
+
+  /**
+   * TERVEHDYS LIHAVOIDULLA YTIMELLÄ (omistaja 7.9.2026: *"siinä voisi
+   * boldata sen, että kysy mitä vain, niin autan sinua eteenpäin"*).
+   *
+   * Rivi ladotaan kolmesta palasta eikä merkkauksesta: pöllön viestit
+   * asetetaan tekstisisältönä (lisaaViesti), eikä yhden lihavoinnin
+   * takia avata koko virtaa HTML:lle. Ruudunlukijalle ja lokille
+   * teksti on sama TERVEHDYS kuin ennenkin.
+   *
+   * @returns {HTMLElement} tervehdysrivi.
+   */
+  naytaTervehdys() {
+    const viesti = this.lisaaViesti('pollo', '');
+    viesti.classList.add('pollo-tervehdys');
+    viesti.appendChild(this.doc.createTextNode(TERVEHDYS_ALKU));
+    viesti.appendChild(polloElementti('b', 'pollo-tervehdys-ydin', TERVEHDYS_YDIN));
+    viesti.appendChild(this.doc.createTextNode(TERVEHDYS_LOPPU));
+    return viesti;
+  }
 
   lisaaViesti(rooli, teksti) {
     const viesti = polloElementti('p', `pollo-viesti pollo-${rooli}`, teksti);
@@ -5040,6 +5456,13 @@ class Pollo {
         this.historia.push({ rooli: 'kayttaja', teksti: kysymys });
         this.historia.push({ rooli: 'pollo', teksti: puhdas });
         this.historia = this.historia.slice(-HISTORIAN_KATTO);
+        /*
+         * SAMA PORTTI LAITTEEN LOKILLE (omistaja 7.9.2026). Kelattavaan
+         * historiaan kuuluu se, mitä oikeasti sanottiin: epäonnistunut
+         * kierros ja katkennut virta jäävät pois kummastakin.
+         */
+        kirjaaLivianLokiin('kayttaja', kysymys);
+        kirjaaLivianLokiin('pollo', puhdas);
       }
     } catch (virhe) {
       // Virhe katkaisee naputuksen ja kesken jääneen luennan heti eikä

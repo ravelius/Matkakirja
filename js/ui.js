@@ -30,7 +30,7 @@ import {
   MERKKI_SOITA, REVEAL_SUB, VIIVA_IKONIT, aarreIkoni, aarrekuvanOsoitteet,
   alkuKehykset, arvoHuudahdus, ekaLause, esilataaKuvat, html, jaaKappaleiksi,
   jaljenKehykset, kierraKehykset, kuvitukseton, lahdemerkinta, liuskaIkoniSvg,
-  maahanMuoto, onVanhaKuva, paikassaMuoto, pehmeaPolku, piirraLeipateksti,
+  maahanMuoto, onVanhaKuva, paikassaMuoto, paikkaaMuoto, pehmeaPolku, piirraLeipateksti,
   pisteMonikulmiossa, polloNimilappu, polunPituus,
   cachedImage, cachedSummary, fokusmoodiPaalla,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, unohdaKehittajaKytkimet,
@@ -143,7 +143,8 @@ import { kuvavinkkiOsio } from './kuvavinkki.js';
  * peruminen ja mannerivihjeen tilannelaukaisin kuuluvat pelin kulkuun.
  */
 import {
-  naytaLivianAvaus, naytaLivianPaljastus, nollaaLivianVihjeet, paivitaMannerivihje,
+  livianPaljastusOdottaa, naytaLivianAvaus, naytaLivianPaljastus, nollaaLivianVihjeet,
+  paivitaMannerivihje,
   peruLivianAvaus,
 } from './livia.js';
 // Viiden symbolin reaktionappi sisällön kylkeen (js/reaktiot.js).
@@ -208,6 +209,9 @@ import {
   playPlaceAmbience, stopPlaceStream, stopQuizMusic,
   vaimennaTausta, palautaTausta,
   hiljennaAmbienssi, palautaAmbienssi,
+  // Avauksen oma sekoitus: portin painalluksesta musiikki alas ja
+  // terminaali ylös (js/ambience-stream.js "AVAUKSEN ÄÄNI").
+  aloitaAvauksenAani, lopetaAvauksenAani,
 } from './ambience-stream.js';
 /*
  * Pohjaraidan valitsin (omistaja 5.9.2026 yö: "generoi musiikkeja
@@ -1520,10 +1524,27 @@ const INTRO_TYPE_MS = 190;
  *                                (paikkarivi naputetaan ensin, luenta
  *                                alkaa rungon kanssa).
  *
+ * ÄÄNI KULKEE SAMASSA AIKATAULUSSA (omistajan tilaus 7.9.2026:
+ * *"musiikki saisi hiljentyä hieman ja mukaan saisi tulla se terminaalin
+ * äänimaisema voimakkaasti mukaan ja siitä lähtisi omalla ajallaan
+ * kertojan luenta myös käyntiin"*). Painalluksen hetkellä (0 ms)
+ * musiikki alkaa liukua alas ja terminaalin äänimaisema ylös; sekoitus
+ * on valmis 1,3 sekunnissa ja maisema täydessä nousussaan 1,8
+ * sekunnissa (js/ambience-stream.js "AVAUKSEN ÄÄNI", AVAUKSEN_LIUKU_MS
+ * ja HAIVYTYS_MS).
+ *
+ * KERTOMUKSEN AIKA EI SIIS LYHENE EIKÄ SITÄ TARVITSE PIDENTÄÄ: 2850 ms
+ * on jo yli sekunnin äänimaiseman nousun jälkeen, ja itse LUENTA alkaa
+ * vielä myöhemmin — paikkarivi naputetaan ensin, ja kertoja aloittaa
+ * vasta sen valmistuttua (aloitaKertomus → aloitaRunko). Luku pysyy
+ * siksi ennallaan; jos avauksen liukua joskus pidennetään, tämän on
+ * pysyttävä sen jäljessä.
+ *
  * Vähennetyllä liikkeellä (prefers-reduced-motion) järjestys ja ajat
  * ovat samat, mutta salamaa ei oteta: pelkät häivytykset (Raamattu,
  * arkkikirjasto: *"prefers-reduced-motion kunnioitetaan (pelkkä
- * häivytys)"*).
+ * häivytys)"*). Äänet eivät ole liikettä eivätkä siis muutu: musiikin
+ * lasku ja maiseman nousu ajetaan samoin kummallakin asetuksella.
  */
 const AVAUS_YLAVIIVA_MS = 600;
 const AVAUS_OTSIKKO_MS = 1050;
@@ -12154,7 +12175,35 @@ export class UI {
       stopDiaryVoice(this);
       return;
     }
+    /*
+     * PULUN KAKSI KUPLAA ENNEN ISOISÄN LUENTAA (omistaja 7.9.2026,
+     * Raamattu PULUN UUSI RYTMI ATEENASSA). Ensimmäisellä saapumisella
+     * koskaan luenta EI ala tässä piirrossa vaan jää odottamaan: lippu
+     * nostetaan juuri ennen saapumisen renderiä (aloituslento) ja
+     * lasketaan aloitaLykattyLuenta-metodissa, jonka pulun kuplasarja
+     * kutsuu (js/livia.js odotaLuenta). Tehtävä on jo talletettu, joten
+     * kaiutinnappi ja kertojakytkin toimivat kuten ennen.
+     */
+    if (this.luennanLykkays) {
+      stopDiaryVoice(this);
+      return;
+    }
     this.merkinnanLuenta();
+  }
+
+  /**
+   * LYKÄTTY LUENTA LIIKKEELLE. Pulun kuplasarja kutsuu tämän, kun
+   * kaksi ensimmäistä kuplaa on sanottu (js/livia.js vapautaLuenta) —
+   * ja myös silloin, kun sarja ei ala lainkaan, jottei luenta jää
+   * odottamaan kuplaa, jota ei tule.
+   *
+   * @returns {boolean} lähtikö luenta käyntiin
+   */
+  aloitaLykattyLuenta() {
+    this.luennanLykkays = false;
+    if (this.dead || !this.merkinnanLuenta || !luentaKytkinPaalla()) return false;
+    this.merkinnanLuenta();
+    return true;
   }
 
   /**
@@ -15740,6 +15789,10 @@ export class UI {
    */
   aloitaKartalta() {
     if (this.aloitusvalintaAuki() || this.game.phase !== 'pickstart') return;
+    // Avauksen sekoitus purkautuu viimeistään tässä: pelaaja etenee,
+    // eikä terminaalin nosto saa jäädä päälle kartalle (sama purku kuin
+    // luennan päättyessä, js/luenta.js playIntroVoice).
+    lopetaAvauksenAani();
     // Naksahdus: sama puinen naksu kuin nappulan kolauksessa
     // (efekti-naksu.mp3). Kevyt eikä juhlava — matka ei ole vielä
     // alkanut, kartta vain avautuu.
@@ -15874,6 +15927,18 @@ export class UI {
     const nappi = html('button', 'start-btn primary', 'Aloita seikkailu');
     nappi.addEventListener('click', () => {
       this.aloitettu = true;
+      /*
+       * AVAUKSEN ÄÄNI ENSIMMÄISENÄ (omistajan tilaus 7.9.2026:
+       * *"musiikki saisi hiljentyä hieman ja mukaan saisi tulla se
+       * terminaalin äänimaisema voimakkaasti mukaan"*). Kutsu on ENNEN
+       * render()iä, koska juuri tämä painallus on se ele, jolla etusivun
+       * maisema pääsee vihdoin soimaan: kun lippu on jo päällä, alkava
+       * soitin nousee suoraan avauksen tasoon eikä ensin tavalliseen ja
+       * sitten uudelleen (js/ambience-stream.js aloitaAvauksenAani).
+       * Nosto purkautuu, kun kertojan luenta päättyy (js/luenta.js
+       * playIntroVoice) tai pelaaja etenee (aloitaKartalta).
+       */
+      aloitaAvauksenAani();
       this.suljeAloitusportti();
       /*
        * Lauta kutistuu keskeltä ylälohkoon tekstin tieltä heti portin
@@ -19700,6 +19765,12 @@ export class UI {
    * kiinni luennan loppumisessa (js/luenta.js luennanLoppuun) ja
    * vanha viive on varapolku sille tapaukselle, ettei luentaa ole —
    * mykistys, kertojatila 'ei' tai puuttuva äänite.
+   *
+   * ENSIMMÄINEN SAAPUMINEN KOSKAAN ON POIKKEUS (omistaja 7.9.2026):
+   * silloin luenta itse on lykätty pulun kahden kuplan taakse
+   * (asetaMerkinnanLuenta, luennanLykkays), joten luentaa ei ole vielä
+   * soimassa — tämä metodi menee varapolkua pitkin heti kuplasarjaan,
+   * ja kolmas kupla odottaa luennan lopun omassa sarjassaan.
    */
   saapumisenKuplat(kohde) {
     const maa = this.kaupunginMaanNimi(kohde?.id);
@@ -19724,16 +19795,25 @@ export class UI {
          * kutsu palaa saman tien epätotena (js/livia.js).
          */
         /*
-         * OHJEET OVAT PALJASTUKSEN SISÄLLÄ (omistaja 5.9.2026 ilta):
-         * Livia lukee tervetuloa-toivotuksen ja tehtäväohjeen pöllön
-         * sähkeestä (js/livia.js livianPaljastus), joten ohjekuplia ei
-         * näytetä sen perään. Jos paljastus ei ala (jo nähty tai
-         * paneeli auki), ohjekuplat tulevat kuten ennen.
+         * OHJEET OVAT PALJASTUKSEN SISÄLLÄ (omistaja 5.9.2026 ilta,
+         * sanat uusiksi 7.9.2026): pulu toivottaa tervetulleeksi ja
+         * neuvoo kaupungin napauttamisen omissa kuplissaan
+         * (js/livia.js livianPaljastus), joten ohjekuplia ei näytetä
+         * sen perään. Jos paljastus ei ala (jo nähty tai paneeli
+         * auki), ohjekuplat tulevat kuten ennen.
+         *
+         * KAUPUNGIN NIMI KAHDESSA MUODOSSA: "Tervetuloa Ateenaan"
+         * (maahanMuoto) ja "klikata Ateenaa" (paikkaaMuoto). Maata ei
+         * enää tarvita kuplissa — se elää yhä ohjekuplan
+         * tervetulotoivotuksessa alla.
          */
         if (naytaLivianPaljastus(this, {
-          maahan: maa ? maahanMuoto(maa) : '',
-          paikassa: paikka ?? '',
+          paikkaan: kohde?.name ? maahanMuoto(kohde.name) : '',
+          paikkaa: kohde?.name ? paikkaaMuoto(kohde.name) : '',
         })) return;
+        // Paljastus ei alkanut (jo nähty tai paneeli auki): mahdollinen
+        // lykätty luenta päästetään heti liikkeelle.
+        this.aloitaLykattyLuenta();
         this.saapumisenOhjekuplat(tervetuloa);
       }, viive);
     };
@@ -20652,6 +20732,15 @@ export class UI {
      * oikeassa zoomitilassa — EI zoomausanimaatiota"*.
      */
     this.aloituslentoKesken = false;
+    /*
+     * PULUN KUPLAT ENNEN ISOISÄN LUENTAA (omistaja 7.9.2026). Jos tämä
+     * on se ensimmäinen saapuminen, jossa pulu paljastaa tuuraavansa,
+     * saapumismerkinnän luenta ei ala tässä piirrossa vaan odottaa
+     * kahta ensimmäistä kuplaa (asetaMerkinnanLuenta,
+     * aloitaLykattyLuenta). Lippu nostetaan ENNEN renderiä, koska
+     * luenta lähtee juuri siitä piirrosta.
+     */
+    this.luennanLykkays = livianPaljastusOdottaa(this);
     this.render();
     // Arkki pois: kartta on jo valmiissa rajauksessaan sen takana.
     await this.piilotaAloitusverho();

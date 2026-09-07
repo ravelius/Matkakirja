@@ -74,7 +74,7 @@ import { packById } from '../pack.js';
 import { pixelOf, posKey } from '../rules.js';
 import {
   PALLON_TURVATILAN_UNOHDUS_MS, kehittajaMaailmaPaalla, kehittajaTilaPaalla,
-  nollaaPallonKaatumiset, palloKaatui,
+  nollaaPallonKaatumiset, palloKaatui, valikkoSulkeutuiNapautuksesta,
 } from '../ui-apurit.js';
 import { PALLOKAMERAN_AJO_MS, PALLO_KORKEUS_MAX, luoPallokamera } from './kamera.js';
 import { MERKIN_KORKEUS, luoMerkit } from './merkit.js';
@@ -1104,6 +1104,13 @@ export async function avaaPallolauta(ui) {
 
   /** Napautus pallon pintaan: kohde ennen muita (kohde on kehotus toimia). */
   const napautaPintaan = (lat, lng) => {
+    /*
+     * VALIKON SULKU EI AVAA MITÄÄN (omistaja 7.9.2026): kysytään ENNEN
+     * osumatestiä. Vartija (js/ui-apurit.js asennaValikonSulkuvartija)
+     * sulki valikon jo tämän napautuksen pointerdownissa ja nielaisi
+     * clickin; lippu on toinen lukko sen varalta, että nielu ei ehdi.
+     */
+    if (valikkoSulkeutuiNapautuksesta()) { korttiOliAuki = false; return; }
     if (korttiOliAuki) { korttiOliAuki = false; return; }
     const kohde = lahinKohde(lat, lng);
     if (kohde) { napautaKohde(kohde); return; }
@@ -1142,6 +1149,8 @@ export async function avaaPallolauta(ui) {
     .pointsTransitionDuration(siirtyma)
     .onPointClick((d) => {
       if (eleet.sormet.nipistys) return;
+      // Valikon sulku ei avaa kaupunkia (sama sääntö kuin pinnalla).
+      if (valikkoSulkeutuiNapautuksesta()) { korttiOliAuki = false; return; }
       // Askelhelmi ja valo ovat koristeita: napautus niistä menee pinnalle.
       if (d.laji === 'helmi' || d.laji === 'valo') napautaPintaan(d.lat, d.lon);
       else if (korttiOliAuki) korttiOliAuki = false;

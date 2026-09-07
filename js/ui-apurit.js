@@ -450,6 +450,27 @@ export function maahanMuoto(nimi) {
   return `${sana}${viim}n`;
 }
 
+/**
+ * "Klikkaa X:ää" -muoto kaupungin nimestä: yksikön partitiivi.
+ *
+ * Tarvitaan pulun ohjekuplaan (js/livia.js livianPaljastus: *"Kantsuu
+ * klikata Ateenaa kartalta"*, omistaja 7.9.2026). Sääntö on sama
+ * kolmijako kuin koulukieliopissa: yksi vokaali saa pelkän a/ä:n
+ * (Ateena → Ateenaa), pitkä vokaali tai diftongi vaatii t:n
+ * (Lontoo → Lontoota) ja konsonanttiloppuinen nimi sidevokaalin
+ * (Wien → Wieniä) — sama sidevokaali kuin inessiivissä yllä.
+ */
+export function paikkaaMuoto(nimi) {
+  const sana = String(nimi ?? '').trim();
+  if (!sana) return '';
+  const paate = takavokaalinen(sana) ? 'a' : 'ä';
+  const viim = sana.slice(-1).toLowerCase();
+  const toka = sana.slice(-2, -1).toLowerCase();
+  if (!VOKAALIT.includes(viim)) return `${sana}i${paate}`;
+  if (viim === toka || DIFTONGIT.has(`${toka}${viim}`)) return `${sana}t${paate}`;
+  return `${sana}${paate}`;
+}
+
 /** "Tehtävä X:ssä" -muoto kaupungin nimestä: inessiivi tai poikkeus. */
 export function paikassaMuoto(nimi) {
   const sana = String(nimi ?? '').trim();
@@ -680,6 +701,131 @@ export function nielaiseSulkevaNapautus(tapahtuma, {
   doc.addEventListener('click', nielu, true);
   ajastin = setTimeout(lopeta, kesto);
   return lopeta;
+}
+
+/*
+ * VALIKON SULKU ON OMA NAPAUTUKSENSA (omistajan iPad-havainto
+ * 7.9.2026, sanatarkasti: *"jos hampurilainen tai joku muu valikko on
+ * auki ja käyttäjä klikkaa mitä tahansa kohtaa kartalla, niin silloin
+ * vain se Valikko pitäisi sulkeutua, mutta mikään kohde ei saisi
+ * avautua kartalla samalla klikkauksella."*).
+ *
+ * Vika on sama kuin pöllön kuplassa 27.8.2026 ja lääke sama: valikot
+ * sulkeutuvat POINTERDOWNISTA (js/main.js ulkopuolisen napautuksen
+ * kuuntelijat), mutta laudan osumatesti ajetaan vasta CLICKISSÄ
+ * (globe.gl onGlobeClick/onPointClick, tasokartalla pane-click) — yksi
+ * napautus siis sekä sulki valikon että avasi kohteen sen alta. iOS
+ * syntetisoi clickin touchendistä juuri näin.
+ *
+ * KARTOITETUT VALIKOT ovat ne, jotka kelluvat kartan päällä ja
+ * sulkeutuvat ulkopuolisesta napautuksesta: hampurilainen (#paavalikko —
+ * sen sisällä ovat myös äänirivit, lautakytkimet ja työhuoneen napit) ja
+ * kehittäjän ratasvalikko (#kehittaja-valikko). Muut valikot eivät
+ * tarvitse vartijaa: nähtävyyskortin valikko (#nahtavyys-valikko) ja
+ * matkalaukun varustevalitsin (#linssi-valikko) asuvat modaalin dialogin
+ * sisällä, jolloin kartta ei ota napautuksia lainkaan, ja pöllön sekä
+ * pulun kuplat nielaisevat oman sulkevan napautuksensa itse (js/pollo.js
+ * sidoKuplanNapautus). Musiikkivalitsin on Tilannelehden sivu, ei
+ * kelluva valikko.
+ */
+export const VALIKKOKERROKSET = [
+  { valikko: '#paavalikko', nappi: '#menu-btn' },
+  { valikko: '#kehittaja-valikko', nappi: '#kehittaja-valikko-btn' },
+];
+
+/** Kartan alue: napautus TÄÄLLÄ sulkee valikon eikä tee muuta. */
+export const KARTAN_ALUE = '.map-pane';
+
+/*
+ * Napit ja kentät kartan päällä (maalehtinappi, maapilleri, noppa,
+ * kelluvien korttien omat painikkeet) ovat komentoja eivätkä "kohta
+ * kartalla" — sama rajaus kuin pöllön kuplan omaHallinta. Niiden
+ * napautus menee perille myös valikon ollessa auki; valikko sulkeutuu
+ * silti normaalisti oman kuuntelijansa kautta.
+ */
+const OMA_HALLINTA = 'a, button, input, select, textarea, label, [role="button"]';
+
+/** Kartan päällä kelluvat valikot, jotka ovat juuri nyt auki. */
+export function avoimetValikot(doc = typeof document === 'undefined' ? null : document) {
+  const auki = [];
+  if (typeof doc?.querySelector !== 'function') return auki;
+  for (const { valikko, nappi } of VALIKKOKERROKSET) {
+    const el = doc.querySelector(valikko);
+    if (!el || el.hidden) continue;
+    auki.push({ el, nappi: doc.querySelector(nappi) });
+  }
+  return auki;
+}
+
+/** Onko jokin kartan päällä kelluva valikko auki? */
+export function onkoValikkoAuki(doc) {
+  return avoimetValikot(doc).length > 0;
+}
+
+/**
+ * Sulkee kaikki avoimet valikot. Palauttaa true, jos jokin oli auki.
+ *
+ * Sulku on sama kuin valikoiden omissa kuuntelijoissa (hidden +
+ * aria-expanded), joten se on turvallista tehdä myös silloin, kun
+ * valikon oma kuuntelija sulkee saman valikon hetkeä myöhemmin.
+ */
+export function suljeAvoimetValikot(doc) {
+  const auki = avoimetValikot(doc);
+  for (const { el, nappi } of auki) {
+    el.hidden = true;
+    nappi?.setAttribute?.('aria-expanded', 'false');
+  }
+  return auki.length > 0;
+}
+
+/*
+ * Yhden napautuksen lippu laudan osumatestille. Se asetetaan jokaisella
+ * kartalle osuvalla pointerdownilla, joten VETO (panorointi) ei jätä
+ * lippua roikkumaan seuraavaan napautukseen: seuraava pointerdown
+ * nollaa sen, koska valikkoa ei silloin enää ole auki.
+ */
+let valikkoSulkiNapautuksen = false;
+
+/**
+ * Sulkiko juuri alkanut napautus valikon? Laudan napautuksenkäsittelijä
+ * kysyy tämän ENNEN osumatestiä ja luovuttaa, jos vastaus on kyllä.
+ * Lippu kuluu lukemisesta.
+ */
+export function valikkoSulkeutuiNapautuksesta() {
+  const oli = valikkoSulkiNapautuksen;
+  valikkoSulkiNapautuksen = false;
+  return oli;
+}
+
+/**
+ * Asentaa vartijan: kartalle osuva napautus valikon ollessa auki sulkee
+ * valikon eikä välity kartalle.
+ *
+ * Kuuntelija on DOKUMENTIN KAAPPAUSVAIHEESSA, joten se ehtii ennen
+ * valikoiden omia kuplavaiheen sulkukuuntelijoita ja ennen laudan
+ * kuuntelijoita. Nielu (nielaiseSulkevaNapautus) syö saman napautuksen
+ * clickin — se hoitaa myös tasokartan pane-click-polun, joka on tämän
+ * kuuntelijan alapuolella puussa.
+ *
+ * @returns {() => void} vartijan purku.
+ */
+export function asennaValikonSulkuvartija({
+  doc = typeof document === 'undefined' ? null : document,
+} = {}) {
+  if (typeof doc?.addEventListener !== 'function') return () => {};
+  const vahti = (tapahtuma) => {
+    // Jokainen napautus alkaa puhtaalta lipulta: veto (panorointi) ei
+    // saa jättää sulkulippua roikkumaan seuraavaan napautukseen.
+    valikkoSulkiNapautuksen = false;
+    const kohde = tapahtuma.target;
+    if (typeof kohde?.closest !== 'function') return;
+    if (!kohde.closest(KARTAN_ALUE)) return;
+    if (kohde.closest(OMA_HALLINTA)) return;
+    valikkoSulkiNapautuksen = suljeAvoimetValikot(doc);
+    if (valikkoSulkiNapautuksen) nielaiseSulkevaNapautus(tapahtuma, { doc });
+  };
+  doc.addEventListener('pointerdown', vahti, true);
+  return () => doc.removeEventListener('pointerdown', vahti, true);
 }
 
 /*
@@ -1835,37 +1981,15 @@ export function palloKevennetty() {
 }
 
 /*
- * PÖLLÖN LEHTIVINKKI (kevyt kulku -kokeilu, omistaja 24.8.2026, ilta).
- *
- * Raamatun KEVYT KULKU -KOKEILU: kun kaupunkilehti aukeaa, pöllö
- * vinkkaa lyhyesti minitehtävästä, ja *"vinkissä ruksi 'älä näytä
- * jatkossa'"*. Ruksi on lukijan asetus eikä pelitilanteen osa — sama
- * kaava kuin kehittäjätilalla ja fokusmoodilla yllä: oma avain,
- * try/catch ja ei riviäkään pelitallennuksessa.
- *
- * OLETUS ON NÄYTETÄÄN: puuttuva avain tarkoittaa, ettei ruksia ole
- * koskaan painettu. Piilotus kirjoittaa arvon '1', ja mikä tahansa muu
- * arvo palauttaa oletuksen — vanha tai kelvoton arvo ei jätä vinkkiä
- * puolitilaan.
+ * LEHTIVINKIN RUKSI ON POISTETTU (omistaja 7.9.2026, Raamattu PULUN
+ * UUSI RYTMI ATEENASSA): lehden avautuessa pulu sanoo vinkkinsä VAIN
+ * ENSIMMÄISELLÄ kerralla koskaan, joten "Älä näytä jatkossa" -ruksia
+ * ei enää ole eikä sen laiteavainta (matkakirja-lehtivinkki-pois)
+ * kirjoiteta tai lueta missään. Kertaluontoisuuden lippu asuu nyt
+ * Livian omien kertalippujen seurassa (js/livia.js
+ * LIVIA_LEHTIVINKKI_TALLE). Vanha avain jää selainten muistiin
+ * kuolleena — sitä ei tarvitse siivota, koska mikään ei kysy sitä.
  */
-const LEHTIVINKKI_AVAIN = 'matkakirja-lehtivinkki-pois';
-
-export function lehtivinkkiPiilotettu() {
-  try {
-    return localStorage.getItem(LEHTIVINKKI_AVAIN) === '1';
-  } catch {
-    return false; // yksityinen selaus: vinkki näytetään
-  }
-}
-
-export function piilotaLehtivinkki(piiloon) {
-  try {
-    if (piiloon) localStorage.setItem(LEHTIVINKKI_AVAIN, '1');
-    else localStorage.removeItem(LEHTIVINKKI_AVAIN);
-  } catch {
-    /* yksityinen selaus: valinta jää vain tälle istunnolle */
-  }
-}
 
 // Tiivistelmät ja kuvat haetaan kerran per artikkeli: sama kuva näkyy
 // sekä saapumiskortissa että Lue lisää -dialogissa ilman uutta hakua.

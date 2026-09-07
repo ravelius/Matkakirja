@@ -16,8 +16,10 @@
  *      se on kirjaa eikä korttiannostelua, ja se jäi kokeiluun.
  *   3. Tutki (kaupungin laatta) avaa KAUPUNKILEHDEN SUORAAN, vaikka
  *      laatta on kääntämättä: lehtilukko on auki.
- *   4. Pöllö vinkkaa lehden avautuessa lyhyesti, ja vinkissä on ruksi
- *      "Älä näytä jatkossa" — ruksi jää laitteen muistiin.
+ *   4. Pulu vinkkaa lehden avautuessa yhdellä lauseella ("Etsi
+ *      lehdestä aarrekysymys."), EIKÄ vinkissä ole ruksia. Vinkki
+ *      sanotaan vain kerran koskaan: laitelippu jää muistiin ja
+ *      toinen lehden avaus on vinkitön (omistaja 7.9.2026).
  *   5. Sivulla 2 on nimilaatta AARTEEN AVAUS ja sivulla 3 JULISTE.
  *   6. AARTEEN AVAUS -tehtävän OIKEA vastaus sytyttää kartalle vihreän
  *      pisteen; ennen sitä pistettä ei ole.
@@ -443,32 +445,36 @@ const alanappi = await sivu.evaluate(() => {
 vaadi('lehden tehtävänappi näkyy ennen aarteen avausta',
   !alanappi.piilossa && /tapaa/i.test(alanappi.teksti), JSON.stringify(alanappi));
 
-// Pöllön vinkki lehden päällä + ruksi. Kupla tulee tarkoituksella
+// Pulun vinkki lehden päällä, ilman ruksia. Kupla tulee tarkoituksella
 // vasta ~1,4 s hengähdyksen jälkeen (omistaja 26.8.2026).
 await sivu.waitForTimeout(2200);
 const vinkki = await sivu.evaluate(() => {
   const kupla = document.querySelector('.fokusvirta-vinkki');
   return {
     teksti: kupla?.querySelector('.fokusvirta-vinkkiteksti')?.textContent ?? '',
-    ruksi: Boolean(kupla?.querySelector('.fokusvirta-vinkkiruksi input')),
+    ruksi: Boolean(kupla?.querySelector('input[type="checkbox"]')),
+    muistissa: localStorage.getItem('matkakirja-livia-lehtivinkki'),
   };
 });
-vaadi('pöllö vinkkaa lyhyesti lehden avautuessa',
-  vinkki.teksti.length > 0 && vinkki.teksti.length <= 90 && /minitehtäv/i.test(vinkki.teksti),
-  `${vinkki.teksti.length} mrk: ${vinkki.teksti}`);
-vaadi('vinkissä on "Älä näytä jatkossa" -ruksi', vinkki.ruksi);
+vaadi('pulu vinkkaa lyhyesti lehden avautuessa',
+  vinkki.teksti === 'Etsi lehdestä aarrekysymys.', `"${vinkki.teksti}"`);
+vaadi('vinkissä EI ole ruksia', !vinkki.ruksi);
+vaadi('kertalippu jäi laitteen muistiin', vinkki.muistissa === '1', String(vinkki.muistissa));
 
 await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-lehtivinkki.png') });
 
-const ruksittu = await sivu.evaluate(() => {
-  document.querySelector('.fokusvirta-vinkkiruksi input')?.click();
-  return {
-    muistissa: localStorage.getItem('matkakirja-lehtivinkki-pois'),
-    kuplia: document.querySelectorAll('.fokusvirta-vinkki').length,
-  };
+// Toinen avaus samassa istunnossa: vinkkiä ei enää tule.
+const uudelleen = await sivu.evaluate(async () => {
+  const { ui, game } = window.matkakirja;
+  document.querySelector('.fokusvirta-vinkki')?.remove();
+  ui.fokusvirtaKortti = null;
+  ui.closeArrival();
+  await new Promise((r) => setTimeout(r, 500));
+  ui.avaaTutkinta(game.cityOf());
+  await new Promise((r) => setTimeout(r, 2400));
+  return document.querySelectorAll('.fokusvirta-vinkki').length;
 });
-vaadi('ruksi kirjoittaa laitteen muistiin ja sulkee vinkin',
-  ruksittu.muistissa === '1' && ruksittu.kuplia === 0, JSON.stringify(ruksittu));
+vaadi('toinen lehden avaus on vinkitön', uudelleen === 0, `kuplia ${uudelleen}`);
 
 /* ---------- nimetyt minitehtävät sivuilla 2 ja 3 ---------- */
 

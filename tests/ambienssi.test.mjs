@@ -451,3 +451,90 @@ test('silmukan vahti viritetään vain kerran soitinta kohti', async () => {
   ajaRuudut();
   assert.equal(a.kuuntelijat.get('timeupdate').size, 1);
 });
+
+/*
+ * ── AVAUKSEN ÄÄNI (omistajan tilaus 7.9.2026) ────────────────────────
+ *
+ * *"heti kun pelaaja on painanut "aloita seikkailu" nappia, niin
+ * musiikki saisi hiljentyä hieman ja mukaan saisi tulla se terminaalin
+ * äänimaisema voimakkaasti mukaan"*.
+ *
+ * Mitataan se, mitä omistaja kuulee: kaksi raitaa liikkuu ERI
+ * SUUNTIIN samasta painalluksesta, kumpikaan ei vaikene, ja purku
+ * palauttaa täsmälleen entiset tasot.
+ */
+const musiikki = (s) => s.soittimet.filter((a) => /musa-/.test(a.alkuSrc)).pop() ?? null;
+
+test('avauksen ääni: musiikki laskee, terminaali nousee, kumpikaan ei vaikene', async () => {
+  const s = await pystyta({ ctxTila: 'running' });
+  await soitaEtusivu(s);
+  const maisema = s.maisemat().pop();
+  const musa = musiikki(s);
+  assert.ok(musa, 'etusivulla pitää soida pohjaraita');
+  const ennen = { maisema: maisema.kuuluu, musa: musa.kuuluu };
+  assert.ok(ennen.maisema > 0 && ennen.musa > 0, JSON.stringify(ennen));
+
+  assert.equal(s.virta.aloitaAvauksenAani(), true, 'ensimmäinen painallus aloittaa avauksen');
+  assert.equal(s.virta.avauksenAaniPaalla(), true);
+  ajaRuudut();
+  const avaus = { maisema: maisema.kuuluu, musa: musa.kuuluu };
+  assert.ok(avaus.musa < ennen.musa, `musiikin pitää laskea: ${JSON.stringify(avaus)}`);
+  assert.ok(avaus.musa > 0, 'musiikki hiljenee mutta ei vaikene');
+  assert.ok(avaus.maisema > ennen.maisema, `terminaalin pitää nousta: ${JSON.stringify(avaus)}`);
+
+  // Toinen painallus ei tee mitään: sekoitus on jo päällä.
+  assert.equal(s.virta.aloitaAvauksenAani(), false);
+
+  assert.equal(s.virta.lopetaAvauksenAani(), true, 'luennan loputtua palataan');
+  ajaRuudut();
+  assert.equal(s.virta.avauksenAaniPaalla(), false);
+  assert.ok(Math.abs(maisema.kuuluu - ennen.maisema) < 1e-6,
+    `maiseman pitää palata entiselleen: ${maisema.kuuluu} ≠ ${ennen.maisema}`);
+  assert.ok(Math.abs(musa.kuuluu - ennen.musa) < 1e-6,
+    `musiikin pitää palata entiselleen: ${musa.kuuluu} ≠ ${ennen.musa}`);
+});
+
+test('avauksen ääni: portissa odottava maisema nousee suoraan avauksen tasoon', async () => {
+  /*
+   * Portin takana selain ei vielä salli toistoa, joten etusivun ääni
+   * odottaa elettä — ja se ele ON napin painallus. Silloin soitin
+   * syntyy vasta noston jälkeen, eikä se saa nousta ensin tavalliseen
+   * tasoon ja hypätä sitten uudelleen.
+   */
+  const s = await pystyta({ ctxTila: 'running', soitto: 'estetty' });
+  await soitaEtusivu(s);
+  assert.equal(s.maisemat().pop().kuuluu, 0, 'estetty toisto ei vielä kuulu');
+
+  s.virta.aloitaAvauksenAani();
+  s.asetaSoitto('ok');
+  laukaiseEle('pointerdown');
+  await mikrotehtavat();
+  ajaRuudut();
+  const nostettu = s.maisemat().pop().kuuluu;
+  assert.ok(nostettu > 0, 'eleen jälkeen terminaalin pitää kuulua');
+
+  s.virta.lopetaAvauksenAani();
+  ajaRuudut();
+  const tavallinen = s.maisemat().pop().kuuluu;
+  assert.ok(nostettu > tavallinen,
+    `noston pitää olla tavallista tasoa kovempi: ${nostettu} ≤ ${tavallinen}`);
+});
+
+test('avauksen ääni ei ohita väistöä: kertojan alla molemmat yhä väistyvät', async () => {
+  const s = await pystyta({ ctxTila: 'running' });
+  await soitaEtusivu(s);
+  const maisema = s.maisemat().pop();
+  const musa = musiikki(s);
+  s.virta.aloitaAvauksenAani();
+  ajaRuudut();
+  const avaus = { maisema: maisema.kuuluu, musa: musa.kuuluu };
+  s.virta.puheAlkoi();
+  ajaRuudut();
+  assert.ok(maisema.kuuluu < avaus.maisema, 'kertoja väistää nostettuakin maisemaa');
+  assert.ok(musa.kuuluu < avaus.musa, 'kertoja väistää myös hiljennettyä musiikkia');
+  s.virta.puheLoppui();
+  ajaRuudut();
+  assert.ok(Math.abs(maisema.kuuluu - avaus.maisema) < 1e-6, 'väistö purkautuu avauksen tasoon');
+  assert.ok(Math.abs(musa.kuuluu - avaus.musa) < 1e-6, 'musiikki palaa avauksen tasoon');
+  s.virta.nollaaPuhujat();
+});

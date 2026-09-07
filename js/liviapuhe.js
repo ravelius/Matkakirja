@@ -25,8 +25,10 @@
  * Lähteitä on kaksi lajia. Kolme ensimmäistä ovat js/livia.js:n
  * repliikkiryhmiä:
  *   avaus          LIVIAN_AVAUS, viisi kuplaa aloitusvalinnassa
- *   paljastus      livianPaljastus(), kaksi kuplaa ensisaapumisessa
+ *   paljastus      livianPaljastus(), kolme kuplaa ensisaapumisessa
+ *                  (kaksi ennen isoisän luentaa, yksi sen jälkeen)
  *   mannerivihje   MANNERIVIHJE, yksi kupla
+ *   lehtivinkki    LIVIAN_LEHTIVINKKI, yksi kupla lehden avautuessa
  *
  * ── KAUPUNKIKOHTAISET LÄHTEET (Ateena ja Sofia ensin) ──────────────
  *
@@ -114,7 +116,7 @@ export const LIVIAN_KAUPUNKILAHTEET = {
 
 /** Repliikkilähteet siinä nimeämisjärjestyksessä, jota työkalu käyttää. */
 export const LIVIAN_AANILAHTEET = [
-  'avaus', 'paljastus', 'mannerivihje',
+  'avaus', 'paljastus', 'mannerivihje', 'lehtivinkki',
   ...Object.keys(LIVIAN_KAUPUNKILAHTEET),
 ];
 
@@ -175,7 +177,81 @@ export function livianKaupunkiAanitetty(kaupunkiId, kentta) {
  * Jos aloitusreittejä tulee lisää, tähän lisätään variantit ja
  * työkalu generoi niille omat tiedostonsa (nimeen tulee maan tunnus).
  */
-export const LIVIAN_AANITETTY_PALJASTUS = { maahan: 'Kreikkaan', paikassa: 'Ateenassa' };
+export const LIVIAN_AANITETTY_PALJASTUS = { paikkaan: 'Ateenaan', paikkaa: 'Ateenaa' };
+
+/* ------------------------------------------------------------------ *
+ * Vanhentunut äänite on hiljainen
+ * ------------------------------------------------------------------ */
+
+/**
+ * REPLIIKIN TIIVISTE (FNV-1a, 32 bittiä heksana).
+ *
+ * Puhdas funktio, sama pelissä ja työkalussa — kuten tiedostonimikin.
+ * Tiiviste ei ole turvatoimi vaan tunniste: se erottaa kaksi eri
+ * tekstiä toisistaan lyhyellä merkkijonolla, joka mahtuu tauluun ja
+ * manifestiin.
+ */
+export function livianTiiviste(teksti) {
+  let h = 0x811c9dc5;
+  for (const merkki of String(teksti ?? '').trim()) {
+    h ^= merkki.codePointAt(0);
+    h = Math.imul(h, 0x01000193) >>> 0;
+  }
+  return h.toString(16).padStart(8, '0');
+}
+
+/**
+ * MITÄ ÄMPÄRISSÄ OIKEASTI ON: repliikin avain → sen TEKSTIN tiiviste,
+ * jolla tiedosto on generoitu.
+ *
+ * MIKSI TÄMÄ TAULU ON OLEMASSA. Tiedostonimi johdetaan lähteestä ja
+ * indeksistä (livianAaniNimi), joten repliikin tekstin muuttuminen ei
+ * muuta nimeä: ämpärissä oleva vanha äänite soisi uuden kuplan alla ja
+ * sanoisi eri asian kuin ruudulla lukee. Se on pahempi vika kuin
+ * hiljaisuus, koska mikään ei kaadu eikä kukaan huomaa. Kun kuplan
+ * teksti ei vastaa tätä taulua, äänite jätetään soittamatta — kupla
+ * toimii ilman ääntä täsmälleen kuten ennen.
+ *
+ * PÄIVITYS: aja tools/generoi-pulu.mjs (kuiva ajo kertoo, mitkä
+ * repliikit ovat UUSIA tai MUUTTUNEITA, ja generointiajo tulostaa
+ * valmiin taulun tähän liitettäväksi).
+ *
+ * TAULU KATTAA js/livia.js:n LÄHTEET. Kaupunkirepliikit (ateena,
+ * sofia) tulevat pakkauksista ja kulkevat soitaLivianKaupunkiAani-
+ * funktion kautta ilman tekstiä, joten niitä tämä portti ei vartioi;
+ * niiden tekstit eivät ole muuttuneet äänityksen jälkeen.
+ *
+ * TILANNE 7.9.2026: paljastus kirjoitettiin uusiksi (PULUN UUSI RYTMI
+ * ATEENASSA) ja lehtivinkki on kokonaan uusi repliikki. Niiden rivit
+ * ovat siis vanhoja tai puuttuvat — pulu on niissä hiljaa siihen asti,
+ * kunnes ääni on generoitu ja taulu päivitetty.
+ */
+export const LIVIAN_AANITETYT = {
+  'avaus-1': '62c6bcbd',
+  'avaus-2': '30c6eb27',
+  'avaus-3': '1446cf47',
+  'avaus-4': 'b8bf54c6',
+  'avaus-5': 'c7f488b4',
+  // Uusi rytmi generoitu 7.9.2026 (generoi-pulu, ääni Dr. Von, pakota):
+  // paljastus 1–3 ja lehtivinkki. Tiivisteet manifestista.
+  'paljastus-1': '4dd412c2',
+  'paljastus-2': '55959b90',
+  'paljastus-3': '531008d4',
+  'lehtivinkki-1': '676644e9',
+  'mannerivihje-1': '9b1a96f3',
+};
+
+/**
+ * Onko ämpärin äänite tämän tekstin äänite?
+ *
+ * Ilman tekstiä (kutsupaikka ei sitä kerro) vastaus on kyllä: portti
+ * ei saa vaientaa niitä lähteitä, jotka eivät sitä käytä.
+ */
+export function livianAaniAjanTasalla(lahde, indeksi, teksti = null) {
+  if (teksti == null) return true;
+  const avain = `${lahde}-${indeksi + 1}`;
+  return LIVIAN_AANITETYT[avain] === livianTiiviste(teksti);
+}
 
 /** Häivytys, kun seuraava kupla katkaisee edellisen repliikin. */
 export const LIVIAN_HAIVYTYS_MS = 160;
@@ -317,13 +393,17 @@ export function pysaytaLivianAani(ui, { haivyta = true } = {}) {
  *   kaupungin tunnus (LIVIAN_KAUPUNKILAHTEET)
  * @param {number} indeksi repliikin järjestysnumero lähteessä (0-alkuinen)
  * @param {object} [asetukset]
- * @param {string} [asetukset.maahan] paljastuksen maa-muoto (ks.
- *   LIVIAN_AANITETTY_PALJASTUS): muu kuin äänitetty variantti jää
- *   hiljaiseksi.
- * @param {string} [asetukset.paikassa] paljastuksen paikka-muoto
+ * @param {string} [asetukset.paikkaan] paljastuksen kaupunki
+ *   illatiivissa (ks. LIVIAN_AANITETTY_PALJASTUS): muu kuin äänitetty
+ *   variantti jää hiljaiseksi.
+ * @param {string} [asetukset.paikkaa] paljastuksen kaupunki
+ *   partitiivissa
+ * @param {string|null} [asetukset.teksti] kuplan teksti: jos annettu,
+ *   äänite soi vain kun se vastaa ämpärissä olevaa (LIVIAN_AANITETYT).
  * @returns {HTMLAudioElement|null} soittimen kahva tai null
  */
-export function soitaLivianAani(ui, lahde, indeksi, { maahan = '', paikassa = '' } = {}) {
+export function soitaLivianAani(ui, lahde, indeksi,
+  { paikkaan = '', paikkaa = '', teksti = null } = {}) {
   pysaytaLivianAani(ui);
   if (!ui || ui.dead || typeof Audio === 'undefined') return null;
   // Sama kytkin kuin kertojalla: mykistetty peli on mykistetty myös
@@ -333,11 +413,14 @@ export function soitaLivianAani(ui, lahde, indeksi, { maahan = '', paikassa = ''
   // matkakirja- ja linssiluennalla).
   if (ui.radioModuuli && !ui.radioModuuli.luentaSallittu()) return null;
   if (lahde === 'paljastus'
-    && (maahan !== LIVIAN_AANITETTY_PALJASTUS.maahan
-      || paikassa !== LIVIAN_AANITETTY_PALJASTUS.paikassa)) {
-    // Muu maa kuin äänitetty: kupla puhuu, äänite vaikenee.
+    && (paikkaan !== LIVIAN_AANITETTY_PALJASTUS.paikkaan
+      || paikkaa !== LIVIAN_AANITETTY_PALJASTUS.paikkaa)) {
+    // Muu kaupunki kuin äänitetty: kupla puhuu, äänite vaikenee.
     return null;
   }
+  // Vanhentunut äänite on hiljainen: ämpärissä oleva tiedosto lukee
+  // vielä edellisen tekstin (ks. LIVIAN_AANITETYT).
+  if (!livianAaniAjanTasalla(lahde, indeksi, teksti)) return null;
   const url = livianAaniOsoite(lahde, indeksi);
   if (!url) return null;
 

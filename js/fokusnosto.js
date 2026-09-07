@@ -58,8 +58,8 @@
  * ── LUETUT LAITTEEN MUISTIIN ───────────────────────────────────────
  *
  * Luettu nosto merkitään laitteen muistiin (localStorage) — sama
- * try/catch-kaava kuin lehtivinkin ruksilla (js/ui-apurit.js
- * lehtivinkkiPiilotettu). Merkki EI muutu siitä: kohde pysyy kartalla
+ * try/catch-kaava kuin Livian kertalipuilla (js/livia.js
+ * LIVIA_LEHTIVINKKI_TALLE). Merkki EI muutu siitä: kohde pysyy kartalla
  * ja kortin saa auki uudelleen, kuten muillakin kohteilla. Muisti jää
  * dataksi mahdollista myöhempää käyttöä varten (esim. Livian
  * satunnainen vinkki lukemattomasta sisällöstä — Raamattu, YHTENÄINEN

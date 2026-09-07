@@ -191,8 +191,13 @@ const SILMUKKA_RISTI_MS = 2600;
 
 let nykyinen = null; // { audio, cityId, url, tavoite, vaimennus }
 
-/** Soiva taso: kohdevoimakkuus kerrottuna mahdollisella väistöllä. */
-const taso = (oma) => (oma ? oma.tavoite * (oma.vaimennus ?? 1) * kehittajanKerroin('tausta') : 0);
+/**
+ * Soiva taso: kohdevoimakkuus kerrottuna mahdollisella väistöllä — ja
+ * avauksen aikana etusivun omalla nostolla (ks. AVAUKSEN ÄÄNI).
+ */
+const taso = (oma) => (oma
+  ? oma.tavoite * (oma.vaimennus ?? 1) * kehittajanKerroin('tausta') * avauksenMaisemaKerroin(oma)
+  : 0);
 
 // Kehittäjän säädin (js/kehittajan-voimat.js) muuttaa soivan maiseman
 // tason heti: lyhyt liuku, ettei säätö naksu.
@@ -1120,7 +1125,7 @@ function pohjanPolku(cityId, maa) {
  * on aina 1,0.
  */
 const pohjaMusiikinTaso = (kerroin = voimassaVaisto()) => POHJA_VOIMA * kerroin
-  * kehittajanKerroin('musiikki');
+  * kehittajanKerroin('musiikki') * avauksenMusiikkiKerroin();
 
 // Kehittäjän säädin (js/kehittajan-voimat.js): soiva raita seuraa heti.
 kuunteleKehittajanKerrointa('musiikki', () => {
@@ -1376,6 +1381,97 @@ export function palautaAmbienssi(syy) {
 export function nollaaHiljennykset() {
   for (const syy of hiljennykset) asetaMusiikkitila(syy, false);
   hiljennykset.clear();
+}
+
+/*
+ * ── AVAUKSEN ÄÄNI (omistajan tilaus 7.9.2026) ────────────────────────
+ *
+ * *"Pelin aloitussivulla, heti kun pelaaja on painanut "aloita
+ * seikkailu" nappia, niin musiikki saisi hiljentyä hieman ja mukaan
+ * saisi tulla se terminaalin äänimaisema voimakkaasti mukaan ja siitä
+ * lähtisi omalla ajallaan kertojan luenta myös käyntiin."*
+ *
+ * Portin painallus on pelin ensimmäinen ele, ja siitä alkaa kolmen
+ * äänen sarja: musiikki laskee askeleen, terminaali (etusivun
+ * lähtöaulan häly) nousee selvästi kuuluviin, ja vasta niiden päälle
+ * tulee kertoja omalla viiveellään (js/ui.js AVAUS_KERTOMUS_MS).
+ *
+ * TÄMÄ EI OLE VÄISTÖ VAAN AVAUKSEN OMA SEKOITUS. Väistö (puhe,
+ * ääninäyte, lukunäkymä) painaa KAIKKEA samalla kertoimella; tässä
+ * kaksi raitaa liikkuu ERI SUUNTIIN, ja juuri se ero tekee vaikutelman
+ * "peli alkaa". Siksi omat kertoimensa eikä pyydettyVaisto — ja siksi
+ * ne kerrotaan tasoon sisään (taso, pohjaMusiikinTaso), jolloin väistö
+ * ja kehittäjän säädin toimivat avauksen aikana täsmälleen kuten ennen.
+ *
+ * MIKSI 0,6 JA 1,45. Musiikki laskee −4,4 dB (0,019 → 0,0114): askel
+ * kuuluu selvästi, mutta raita jää soimaan — tilauksessa musiikki
+ * hiljenee "hieman", ei pois. Maisema nousee +3,2 dB (efektiivinen
+ * 0,119 → 0,173), jolloin raitojen ero kasvaa lähes 8 dB ja terminaali
+ * astuu eteen ilman että sen oma kalibrointi (ETUSIVUN_VOIMA,
+ * kuulokoe 12.8.2026) unohtuu: nosto on tilapäinen ja purkautuu
+ * luennan päätyttyä.
+ *
+ * LIUKU EIKÄ HYPPY. 1,3 s on pitkä tarpeeksi, ettei kumpikaan naksahda,
+ * ja lyhyt tarpeeksi, että sekoitus on valmis reilusti ennen
+ * kirjoituskonetta ja luentaa (2,85 s napin painalluksesta). Paluu saa
+ * maiseman oman hitaan mitan (HAIVYTYS_MS): silloin ei enää tapahdu
+ * mitään, sekoitus vain palaa pelin tavalliseen käytäntöön.
+ *
+ * MIKÄÄN EI OLE PAKKO SOIDA. Taustaäänten ollessa pois maisemaa ja
+ * musiikkia ei ole olemassa eikä kumpikaan kutsu tee mitään; kertojan
+ * ollessa pois luentaa ei tule ja nosto purkautuu vasta kun pelaaja
+ * etenee (js/ui.js aloitaKartalta). Kumpikin on normaali tila, ei virhe.
+ */
+const AVAUKSEN_MUSIIKKI = 0.6;
+const AVAUKSEN_MAISEMA = 1.45;
+const AVAUKSEN_LIUKU_MS = 1300;
+let avausKaynnissa = false;
+
+/** Musiikin kerroin avauksen ajan (ks. pohjaMusiikinTaso). */
+const avauksenMusiikkiKerroin = () => (avausKaynnissa ? AVAUKSEN_MUSIIKKI : 1);
+
+/**
+ * Maiseman kerroin avauksen ajan (ks. taso). Vain etusivu: nosto koskee
+ * terminaalia eikä mitään muuta paikkaa, joten avauksen aikana alkava
+ * lento tai kaupunki soi omalla kalibroidulla tasollaan silloinkin, kun
+ * lippu ehtii jäädä hetkeksi päälle.
+ */
+const avauksenMaisemaKerroin = (oma) => (avausKaynnissa && oma?.cityId === 'etusivu'
+  ? AVAUKSEN_MAISEMA : 1);
+
+/** Ajaa avauksen sekoituksen soiviin raitoihin yhdellä yhteisellä liu'ulla. */
+function ajaAvauksenAani(kesto) {
+  if (pohja) haivyta(pohja, pohjaMusiikinTaso(), undefined, kesto);
+  if (nykyinen?.audio) haivyta(nykyinen.audio, taso(nykyinen), undefined, kesto);
+}
+
+/**
+ * Portin painallus: musiikki alas, terminaali ylös — samalla liu'ulla.
+ *
+ * Turvallinen kutsua vaikkei mikään vielä soi: lippu jää päälle, ja
+ * hetken päästä käynnistyvä soitin nousee suoraan oikeaan tasoon, koska
+ * se lukee tason vasta onnistuttuaan (luoSoitin, kaynnistaPohjaMusiikki).
+ * Juuri niin portissa käy: etusivun ääni odottaa selaimen elettä, ja
+ * tämä sama painallus on se ele.
+ */
+export function aloitaAvauksenAani(kesto = AVAUKSEN_LIUKU_MS) {
+  if (avausKaynnissa) return false;
+  avausKaynnissa = true;
+  ajaAvauksenAani(kesto);
+  return true;
+}
+
+/** Luenta päättyi tai pelaaja eteni: takaisin pelin tavalliseen tasoon. */
+export function lopetaAvauksenAani(kesto = HAIVYTYS_MS) {
+  if (!avausKaynnissa) return false;
+  avausKaynnissa = false;
+  ajaAvauksenAani(kesto);
+  return true;
+}
+
+/** Onko avauksen sekoitus päällä (savuke ja testit). */
+export function avauksenAaniPaalla() {
+  return avausKaynnissa;
 }
 
 /*
