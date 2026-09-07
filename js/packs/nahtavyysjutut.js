@@ -55458,6 +55458,12 @@ export const NAHTAVYYSJUTUT = {
           + 'kuusikuukautinen lapsi — eikä niitä riisuttu eikä '
           + 'avattu tutkimuksissa. Museo suojelee myös viereisiä '
           + 'rakennuksia, muun muassa tynnyrintekijän verstasta.',
+      /*
+       * KUVATON (Opus 7.9.2026). Museon ulkopuolelta ei ole
+       * Commonsissa kuvaa, joka olisi vähintään 1200 px leveä, ja
+       * ainoa sisäkuva (umiak näyttelyssä) on 1024 px. Kuvatilaus
+       * on kirjattu raporttiin.
+       */
       lahde: 'Wikipedia',
     },
     'Hans Egeden talo': {
@@ -55482,6 +55488,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Kukkulalla kirkon yllä seisoo Hans Egeden patsas, joka '
           + 'on vuonna 1921 tehty kopio Kööpenhaminan Marmorikirkon '
           + 'edessä olevasta patsaasta.',
+      kuvat: [
+        {
+          tiedosto: 'Hans Egedes Hus in Nuuk (Kenny McFly).jpg',
+          selite: 'Keltainen talo vihrein listoin on Grönlannin '
+            + 'vanhin rakennus, ja sen edessä seisoo lipputanko.',
+          lahde: 'Kenny McFly, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Nuukin katedraali': {
@@ -55508,6 +55522,14 @@ export const NAHTAVYYSJUTUT = {
           + '1995 grönlantilaissyntyinen Sofie Petersen, Tanskan '
           + 'kirkon toinen naispiispa. Kirkon edessä on urkurin ja '
           + 'psalmirunoilijan Jonathan Petersenin rintakuva.',
+      kuvat: [
+        {
+          tiedosto: 'Cathedrale Nuuk 2023 (cropped).jpg',
+          selite: 'Punainen puukirkko kellotorneineen erottuu '
+            + 'Vanhan Nuukin matalasta talorivistä ylhäältä katsoen.',
+          lahde: 'Snoopy 31, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Kalaaliaraq-tori': {
@@ -55530,6 +55552,12 @@ export const NAHTAVYYSJUTUT = {
           + 'harvinainen, mutta jos sellainen sattuu saaliiksi, sen '
           + 'viimeinen matka päättyy tänne. Silloin torille tullaan '
           + 'katsomaan eikä ostamaan.',
+      /*
+       * KUVATON (Opus 7.9.2026). Commonsin ainoassa torikuvassa on
+       * myyjä kasvot kameraan päin, ja toisessa on hylkeen ruho
+       * lähikuvassa. Kumpikaan ei kelpaa: kasvot ovat kuvasääntöjen
+       * hylkyperuste. Kuvatilaus on kirjattu raporttiin.
+       */
       lahde: 'Wikipedia',
     },
     Inatsisartut: {
@@ -55553,6 +55581,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kokopäiväinen, ja puhemiehistö vastaa myös parlamentin '
           + 'arkistosta ja siitä, että työn tulokset kerrotaan '
           + 'yleisölle ymmärrettävästi.',
+      kuvat: [
+        {
+          tiedosto: 'Inatsisartut (1) (Kenny McFly).jpg',
+          selite: 'Parlamenttitalo on matala kaksikerroksinen '
+            + 'rakennus, jonka oven yllä lukee Inatsisartut.',
+          lahde: 'Kenny McFly, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Katuaq: {
@@ -55577,6 +55613,15 @@ export const NAHTAVYYSJUTUT = {
           + 'Talossa on lisäksi kokoustiloja, toimistoja ja kahvila '
           + 'sekä Pohjoismaisen instituutin toimipiste. Naapurissa on '
           + 'Nuuk Center, maan ensimmäinen kauppakeskus.',
+      kuvat: [
+        {
+          tiedosto: 'Nuuk and Katuaq - Visit Greenland.jpg',
+          selite: 'Katuaqin kullanvärinen puuseinä kaartuu talvisen '
+            + 'kadun laidassa kohti keskustaa.',
+          lahde: 'Visit Greenland from Nuuk, Greenland, '
+            + 'Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Grönlannin kansalliskirjasto': {
@@ -55597,6 +55642,14 @@ export const NAHTAVYYSJUTUT = {
           + 'runsaat sata vuotta, poikkeuksellisen tärkeä laitos: se '
           + 'on käytännössä ainoa paikka, jossa maan oma painettu '
           + 'muisti on koossa.',
+      kuvat: [
+        {
+          tiedosto: 'Nunatta-Atuagaateqarfia-national-library-of-greenland.jpg',
+          selite: 'Kirjaston vihreä julkisivu kantaa nimeä '
+            + 'Nunatta Atuagaateqarfia.',
+          lahde: 'Algkalv (talk), Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Nuukin taidemuseo': {
@@ -55622,6 +55675,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Christine Deichmann, Harald Moltke, Emanuel A. Petersen '
           + '— että grönlantilaiset Hans Lynge, Buuti Pedersen, '
           + 'Anne-Birthe Hove ja Pia Arke.',
+      kuvat: [
+        {
+          tiedosto: 'Museum of Arts in Nuuk (Kenny McFly).jpg',
+          selite: 'Museo toimii vihreässä puutalossa, jonka '
+            + 'pikkutorni muistuttaa yhä entisestä kirkosta.',
+          lahde: 'Kenny McFly, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },
@@ -55654,6 +55715,15 @@ export const NAHTAVYYSJUTUT = {
           + 'suuntaan ja etelään rannikolle. Joskus ennen lokakuuta '
           + '2020 kolmannelle raiteelle rakennettiin korkea laituri, '
           + 'ja se on Alaskan ensimmäinen.',
+      kuvat: [
+        {
+          tiedosto: 'Anchorage Station.jpg',
+          selite: 'Valkoinen Moderne-rakennus jatkuu yli sadan '
+            + 'metrin mittaisena raiteiden vieressä.',
+          lahde: 'Len Turner from Lufkin, TX, USA, '
+            + 'Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'A.E.C.:n mökki 23': {
@@ -55674,6 +55744,12 @@ export const NAHTAVYYSJUTUT = {
           + 'kaivos- eikä kalastusleiri vaan työmaa, jonka talot '
           + 'suunnitteli ja rakensi sama komissio, joka veti '
           + 'kiskotkin.',
+      /*
+       * KUVATON (Opus 7.9.2026). Commonsin ainoa A.E.C.-mökin kuva
+       * esittää sisarmökkiä numero 25, ei tätä rakennusta —
+       * en-Wikipedian artikkeli käyttää sitä infolaatikossaan, mutta
+       * kuvateksti valehtelisi. Kuvatilaus on kirjattu raporttiin.
+       */
       lahde: 'Wikipedia',
     },
     'Wendlerin talo': {
@@ -55695,6 +55771,12 @@ export const NAHTAVYYSJUTUT = {
           + 'harvoja rakennuksia, jotka ovat seisoneet kaupungin '
           + 'ensimmäisestä kesästä asti — vaikkakaan ei koko aikaa '
           + 'samassa korttelissa.',
+      /*
+       * KUVATON (Opus 7.9.2026). Commonsin ainoa Wendlerin talon
+       * kuva on tumma diakuva, jonka etualan täyttävät liikkeiden
+       * kyltit ja vuokrailmoitukset — heikko kuva hylätään.
+       * Kuvatilaus on kirjattu raporttiin.
+       */
       lahde: 'Wikipedia',
     },
     'Alaska Center for the Performing Arts': {
@@ -55722,6 +55804,14 @@ export const NAHTAVYYSJUTUT = {
           + 'ettei siinä ollut saattoaluetta ja että sisäänkäynnit '
           + 'olivat yksisuuntaisten katujen väärällä puolella — ja '
           + 'äänestäjät kumosivat valtuuston päätöksen talon nimestä.',
+      kuvat: [
+        {
+          tiedosto: 'Alaska Center for the Performing Arts. Anchorage, Alaska.jpg',
+          selite: 'Talon lasiset päädyt ja kaarikäytävät reunustavat '
+            + 'Town Square Parkia, joka on talvella lumen alla.',
+          lahde: 'Paxson Woelber, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Anchorage Museum': {
@@ -55748,6 +55838,14 @@ export const NAHTAVYYSJUTUT = {
           + 'erikoisvalmisteista fritattua eristyslasia, jonka '
           + 'lasiyksiköt ovat 24 millimetriä paksuja, jotta ne '
           + 'kestävät paikan ääriolot.',
+      kuvat: [
+        {
+          tiedosto: 'Anchorage Museum.jpg',
+          selite: 'Julkisivun fritattu lasi heijastaa taivaan ja '
+            + 'kadun kuin vesipinta.',
+          lahde: 'James Brooks, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Anchoragen vanha hautausmaa': {
@@ -55772,6 +55870,14 @@ export const NAHTAVYYSJUTUT = {
           + 'taidemaalari Sydney Laurence; ja Ada Blackjack, '
           + 'tutkimusmatkailija. Kuvernööri Walter Hickel haudattiin '
           + 'seisaalleen kasvot kohti Washingtonia.',
+      kuvat: [
+        {
+          tiedosto: 'Anchorage Memorial Park Cemetery.jpg',
+          selite: 'Vanhimmat hautakivet ovat nurmen ja isojen '
+            + 'lehtipuiden keskellä keskustan reunassa.',
+          lahde: 'Dmadeo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Oscar Andersonin talo': {
@@ -55791,6 +55897,14 @@ export const NAHTAVYYSJUTUT = {
           + 'juuri siinä on sen pointti: näin asuttiin kaupungissa, '
           + 'joka oli edellisenä vuonna ollut telttarivi puron '
           + 'rannalla.',
+      kuvat: [
+        {
+          tiedosto: 'Oscar Anderson House.jpg',
+          selite: 'Keltainen puutalo on entisöity vuoden 1915 asuun, '
+            + 'ja kesällä sen edessä kukkii istutus.',
+          lahde: '61north, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Delaney Park Strip': {
@@ -55818,6 +55932,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Alaskan valtiollistumista. Yhdeksännen kadun ja E '
           + 'Streetin kulmassa on seissyt vuodesta 1959 Alaskan '
           + 'rautatien höyryveturi 556.',
+      kuvat: [
+        {
+          tiedosto: 'Downtown Anchorage, Alaska from Delaney Park.jpg',
+          selite: 'Puiston nurmelta näkee suoraan keskustan '
+            + 'torneihin — entinen paloaukea on yhä yhtä leveä.',
+          lahde: 'Laura Alier, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },
