@@ -1008,6 +1008,10 @@ function tarkista(kohde) {
     // Alle sekunnin huudahduksesta ebur128 ei anna integroitua tasoa;
     // taso on jo korjattu huipun mukaan (viimeistele), joten se ei ole virhe.
     if (pituus >= 1.0) virheet.push('tasoa ei saatu mitattua (ebur128)');
+  } else if (pituus < 1.0 && Math.abs(taso - TAVOITE_LUFS) > LUFS_TOLERANSSI) {
+    // Alle sekunnin huudahduksen integroitu taso on epävarma (R128:n
+    // 400 ms lohkot): poikkeama kirjataan, ei hylätä (7.9.2026).
+    console.log(`   HUOM: lyhyt huudahdus, taso ${taso.toFixed(1)} LUFS hyväksytään`);
   } else if (Math.abs(taso - TAVOITE_LUFS) > LUFS_TOLERANSSI) {
     virheet.push(`taso ${taso.toFixed(1)} LUFS, tavoite ${TAVOITE_LUFS} (±${LUFS_TOLERANSSI})`);
   }
