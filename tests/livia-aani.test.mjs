@@ -303,14 +303,13 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
   /*
    * KAUPUNGIT OVAT NYT VARTIOITUJA (7.9.2026). Ateenan maadoitus on
    * generoitu eikä ole muuttunut; Euroopan 18 kaupungin kuplat
-   * generoitiin 7.9.2026 illalla (83/85), joten ne ovat ajan tasalla;
-   * sofia-2 ja wien-2 ("Kääk.") odottavat uusinta-ajoa ja ovat hiljaa.
+   * generoitiin 7.9.2026 illalla, joten ne ovat ajan tasalla.
    */
   assert.equal(tila('ateena-1'), 'ajan tasalla');
   assert.equal(tila('sofia-1'), 'ajan tasalla');
   assert.equal(tila('istanbul-1'), 'ajan tasalla');
   assert.equal(tila('vilna-3'), 'ajan tasalla');
-  assert.equal(tila('sofia-2'), 'uusi');
+  assert.equal(tila('sofia-2'), 'ajan tasalla');
   for (const rivi of rivit) assert.equal(rivi.tila, aanitteenTila(rivi));
   // Peli vaikenee juuri niissä, jotka odottavat ajoa.
   for (const rivi of rivit) {

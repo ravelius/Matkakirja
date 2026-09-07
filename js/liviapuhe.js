@@ -362,8 +362,8 @@ export const LIVIAN_AANITETYT = {
   'paljastus-3': '531008d4',
   'lehtivinkki-1': '676644e9',
   'mannerivihje-1': '9b1a96f3',
-  // Euroopan 18 kaupunkia generoitu 7.9.2026 (erät 1 ja 2); sofia-2 ja
-  // wien-2 ("Kääk.") odottavat uusinta-ajoa.
+  // Euroopan 18 kaupunkia generoitu 7.9.2026 (erät 1 ja 2), "Kääk."-huudahdukset
+  // (sofia-2, wien-2) uusinta-ajossa.
   // Kaupunkirepliikit: Ateenan maadoitus on generoitu 6.9.2026 eikä sen
   // teksti ole muuttunut. Uuden kulun kaupungit (Sofia, Istanbul,
   // Bukarest, Sarajevo, Budapest, Wien, Praha, Krakova, Varsova, Riika,
@@ -453,6 +453,8 @@ export const LIVIAN_AANITETYT = {
   'vilna-3': 'b5b7ea25',
   'vilna-4': '1bfc8e0c',
   'vilna-5': 'ba380765',
+  'sofia-2': '3eae9de7',
+  'wien-2': '3eae9de7',
 };
 
 /* ------------------------------------------------------------------ *
