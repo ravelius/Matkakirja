@@ -95440,6 +95440,77 @@ export const KULTTUURI_KATEGORIAT = {
         + 'Punaiseenjokeen — risteykseen, joka oli kauppapaikka '
         + 'tuhansia vuosia ennen kaupunkia. Kaupunkioikeudet se sai '
         + 'isoisän matkavuonna 1873.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * kolme laajaa yleiskuvaa kaupungin eri puolilta: jokien kärki
+       * illalla, siluetti tasangon takaa ja pörssikortteli tornien
+       * juurella.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'The Forks at dusk, Winnipeg, Manitoba, Canada.jpg',
+          selite: 'Jokien yhtymäkohdan laiturit illalla, ja vesi käy '
+            + 'korkealla sateiden jäljiltä.',
+          lahde: 'Ethan Sahagun, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Downtown Winnipeg skyline seen from Westview Park.jpg',
+          selite: 'Keskustan siluetti näkyy kilometrien päähän, koska '
+            + 'kaupungin ympärillä ei ole mitään korkeampaa.',
+          lahde: 'ElatedCoder, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Downtown Winnipeg and the Exchange District, Manitoba, Canada - 20110530.jpg',
+          selite: 'Pörssikorttelin matalat tiilivarastot jäävät '
+            + 'keskustan tornien eteen.',
+          lahde: 'Wpg guy, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: omistajan 21.8.2026 linjauksen mukaiset laajat
+       * yleiskuvat — ilmakuva jokien kärjestä, parlamenttitalo
+       * puutarhoineen ja Saint-Bonifacen katedraalin julkisivu
+       * puistokäytävän päässä.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Evening glow at Downtown Winnipeg.jpg',
+          selite: 'Ilmasta katsottuna Punainen joki kaartaa vasemmalla, '
+            + 'ihmisoikeusmuseo kohoaa keskellä ja keskusta jää '
+            + 'taakse.',
+          lahde: 'ParsonsPhotographyNL, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Manitoba Legislative Building, Winnipeg, Canada (35918422850).jpg',
+          selite: 'Parlamenttitalo istuu puutarhojensa keskellä, ja '
+            + 'kupolin päällä erottuu kullattu patsas.',
+          lahde: 'Tony Webster from Minneapolis, Minnesota, United States, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Saint Boniface Cathedral, Winnipeg, Canada (35918578070).jpg',
+          selite: 'Saint-Bonifacen katedraalin julkisivu puistokäytävän '
+            + 'päässä; ruusuikkunan aukosta näkyy taivas.',
+          lahde: 'Tony Webster from Minneapolis, Minnesota, United States, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Canadian Dog Train and Remains of Old Fort Garry, Winnipeg 1899 (HS85-10-11350).jpg',
+          vuosi: '1899',
+          selite: 'Koiravaljakko ja kuormareki Fort Garryn porttitornin '
+            + 'edessä talvella 1899; alalaidan tekstiliuska on '
+            + 'valokuvaamon oma nimiö.',
+          lahde: 'Steele and Co., Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Winnipeg Esplanade Riel Bridge & CMHR.jpg',
+          selite: 'Sama kaupunki nykyään: vinoköysisilta joen yli, '
+            + 'ihmisoikeusmuseo vasemmalla ja keskustan tornit '
+            + 'takana.',
+          lahde: 'Travel Manitoba, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Risteys, joka oli valmis ennen kaupunkia',
@@ -95453,6 +95524,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'auttoivat turkiskauppiaita löytämään vesireitit. Sieur de '
             + 'La Vérendrye rakensi paikalle 1738 ensimmäisen '
             + 'kauppa-aseman, Fort Rougen.',
+          tiedosto: 'Upper Fort Garry Gate April 2010.jpg',
+          selite: 'Upper Fort Garryn kiviportti on kaikki, mitä '
+            + 'linnakkeesta on jäljellä, ja sen takana kohoavat '
+            + 'nykyiset kerrostalot.',
+          lahde: 'Colincan, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'The Forks, Winnipeg',
         },
         {
@@ -95467,6 +95543,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vasta 1821, kun yhtiöt yhdistyivät. Fort Gibraltar '
             + 'nimettiin Fort Garryksi 1822; tulva tuhosi sen 1826, ja '
             + 'se rakennettiin uudelleen vasta 1835.',
+          tiedosto: 'Scene of the Seven Oaks Fight (1887) (3749553619).jpg',
+          selite: 'Vuoden 1887 kirjan kartassa näkyvät Fort Gibraltar, '
+            + 'Fort Douglas ja Seven Oaks; katkoviiva on kustantajan '
+            + 'oma merkintä métisien kulkureitistä.',
+          lahde: 'Manitoba Historical Maps from Canada, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Red River Colony',
         },
         {
@@ -95482,6 +95563,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'métis-lainsäätäjä ja tulkki James McKay. Nimi tuli '
             + 'järveltä kuudenkymmenenviiden kilometrin päästä: creen '
             + 'ja odžibwen sana tarkoittaa sameaa eli mutaista vettä.',
+          tiedosto: 'Main Street Winnipeg -1874- (3068449327).jpg',
+          selite: 'Vuoden 1874 kaiverruksessa Main Street on vielä '
+            + 'mutainen kylätie; ylälaidan numerot ovat kustantajan '
+            + 'omia ja alalaidan teksti selittää ne.',
+          lahde: 'Manitoba Historical Maps from Canada, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Manitoba Act, 1870',
         },
         {
@@ -95497,10 +95583,21 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Sinne se jäi. Vuodesta 1924 karhua kävi katsomassa '
             + 'A. A. Milnen poika Christopher Robin, joka vaihtoi oman '
             + 'nallensa nimen Edward Bearista Winnie the Poohiksi.',
+          tiedosto: 'ZSL London - Harry Colebourn and Winnie the Bear (01).jpg',
+          selite: 'Lontoon eläintarhan pronssipatsaassa Colebourn '
+            + 'kumartuu karhunpennun puoleen, ja vieressä on '
+            + 'muistolaatta.',
+          lahde: 'Katie Chan, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Winnipeg (bear)',
         },
       ],
       matkailijalle: {
+        kuva: {
+          tiedosto: 'Manitoba Legislative Building 2 (8032854242).jpg',
+          selite: 'Parlamenttitalon kupolin päällä juoksee Kultapoika '
+            + 'soihtu kädessä, ja portaiden juurella seisoo patsas.',
+          lahde: 'Tony Hisgett from Birmingham, UK, Wikimedia Commons (CC BY 2.0)',
+        },
         kappale: 'Winnipeg on Manitoban pääkaupunki ja maakunnan '
           + 'suurin kaupunki, ja se on rakennettu Punaisenjoen laakson '
           + 'pohjalle, tulvatasangolle, jonka pinnanmuodot ovat '
@@ -95713,6 +95810,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'korotettiin hiekkasäkeillä, ja Winnipeg selvisi vähin '
             + 'vahingoin, kun taas padoton Grand Forks rajan takana ei. '
             + 'Tulvia oli myös 2009 ja 2011.',
+          tiedosto: 'Greater Winnipeg Flooded Area 1950 (1952) (2304469813).jpg',
+          selite: 'Vuoden 1952 kartassa vuoden 1950 tulva-alue on '
+            + 'merkitty siniseksi ilmakuvan päälle; oikean ylälaidan '
+            + 'nimiö ja merkkien selitys ovat julkaisijan omia.',
+          lahde: 'Manitoba Historical Maps from Canada, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Red River Floodway',
         },
         {
@@ -95727,6 +95829,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kilometrin päässä pohjoisessa on Winnipegjärvi, maailman '
             + 'yhdestoista suurin makean veden järvi, ja kaupungin läpi '
             + 'virtaa neljä jokea: Red, Assiniboine, La Salle ja Seine.',
+          tiedosto: 'Prairie view TGPP.JPG',
+          selite: 'Korkearuohopreeriaa Manitoban suojelualueella: '
+            + 'heinä yltää vyötärölle ja horisontti on suora viiva.',
+          lahde: 'Krazytea, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Canadian Prairies',
         },
         {
@@ -95812,6 +95918,72 @@ export const KULTTUURI_KATEGORIAT = {
         + 'Newfoundlandin ja Labradorin pääkaupunki. Sen nimi on '
         + 'kartoilla vanhempi kuin sen asutus, ja sen elämä on aina '
         + 'tullut merestä.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin. Ne ovat silti kolme laajaa yleiskuvaa: satama
+       * Signal Hillin rinteeltä, kalastuslaivasto laiturissa ja
+       * satama-allas ylhäältä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'St. John’s, Newfoundland and Labrador, 2023.jpg',
+          selite: 'Signal Hillin rinteeltä näkyy koko satama ja sen '
+            + 'takana kaupunki, joka jatkuu kukkuloille asti.',
+          lahde: 'CyberDetroit, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'City of St. John’s, Newfoundland.jpg',
+          selite: 'Kalastusaluksia laiturissa, ja rinteen päällä '
+            + 'erottuvat basilikan kaksi tornia.',
+          lahde: 'Sallyledrew, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: '1998-08-01 St. John’s, Blick vom Signal Hill zum Hafen1.jpg',
+          selite: 'Rannikkovartioston jäänmurtaja kääntyy altaassa, ja '
+            + 'takana nousee kaupunki rinnettä ylös.',
+          lahde: 'Eduard47, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: laajat yleiskuvat kaupungin eri puolilta —
+       * satamansuu ilmasta auringonlaskussa, värillinen rinne
+       * sataman yllä ja basilika kaupungin harjalla.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Aerial view of Signal Hill, St. John’s, Newfoundland at sunset by photographer Erik Mclean of Introspective Design.jpg',
+          selite: 'Satamansuu ilmasta: kaksi kalliota jättää väliinsä '
+            + 'kapean portin, ja kukkulan laella erottuu torni.',
+          lahde: 'Erikallen920, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Jelly Bean Row (7701369614).jpg',
+          selite: 'Rinne on täynnä kirkkaanvärisiä puutaloja, ja '
+            + 'alhaalla sataman laiturissa on työaluksia.',
+          lahde: 'Kenny Louie from Vancouver, Canada, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Basilica of St. John the Baptist, St. John’s, Newfoundland.jpg',
+          selite: 'Basilikan kaksi tornia hallitsevat harjannetta, ja '
+            + 'niiden alapuolella kaupunki laskeutuu satamaan.',
+          lahde: 'Shhewitt, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Artist sketching the St. John\'s Harbour and skyline (c. 1910).jpg',
+          vuosi: 'noin 1890',
+          selite: 'Piirtäjä istuu kalliolla, ja altaassa on kymmeniä '
+            + 'purjealuksia mastot pystyssä.',
+          lahde: 'S.H. Parsons & Sons, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'St John Harbour Newfoundland (40650988114).jpg',
+          selite: 'Sama satama nykyään: keskellä avautuu kapea portti '
+            + 'merelle ja vasemmalla nousee Signal Hill.',
+          lahde: 'Michel Rathwell from Cornwall, Canada, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Nimi ennen kaupunkia',
@@ -95828,6 +96000,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'siirtomaaksi — mutta pysyvää väkeä ei ollut: hallitus '
             + 'kielsi kalastajilta pysyvän asutuksen, ja kaupunki '
             + 'syntyi vasta vuoden 1630 jälkeen.',
+          tiedosto: 'Terra Nova e Labrador 04.png',
+          selite: '1500-luvun portugalilaisessa merikartassa Atlantin '
+            + 'yli purjehtii aluksia ja vasemmassa ylälaidassa on '
+            + 'Newfoundlandin rannikko.',
+          lahde: 'Mille, Wikimedia Commons (CC0)',
           wiki: 'St. John’s, Newfoundland and Labrador',
         },
         {
@@ -95845,6 +96022,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'taistelu Pohjois-Amerikassa käytiin täällä 1762, kun '
             + 'eversti William Amherst valtasi Signal Hillin '
             + 'aamunkoitteessa 15. syyskuuta.',
+          tiedosto: 'Bunkers And Lighthouse St John Harbour Newfoundland (41321663242).jpg',
+          selite: 'Satamansuun eteläkalliolla on majakka ja sen alla '
+            + 'betonisia tykkipesäkkeitä.',
+          lahde: 'Michel Rathwell from Cornwall, Canada, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Battle of Signal Hill',
         },
         {
@@ -95861,6 +96042,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Terra Novan ja White Rosen öljykentät ovat aivan '
             + 'rannikon edustalla, ja St. John’sin alue vastaa noin '
             + 'puolta koko maakunnan taloudesta.',
+          tiedosto: 'Fishing Dory.jpg',
+          selite: 'Kulunut puinen soutuvene on nostettu nurmelle meren '
+            + 'rannalle, ja sen sisällä on merrat.',
+          lahde: 'Parsonsphotography.bp, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Grand Banks of Newfoundland',
         },
         {
@@ -95877,10 +96062,20 @@ export const KULTTUURI_KATEGORIAT = {
             + 'nuorempia: kivihiilinoki teki vaaleat maalit '
             + 'mahdottomiksi, ja kirkkaat sävyt tulivat vasta '
             + '1970-luvulla, kun hiilestä luovuttiin.',
+          tiedosto: 'Typical steeply graded street in St. John’s, Nfl (26984982184).jpg',
+          selite: 'Jyrkkä asuinkatu, jonka puutalot on maalattu '
+            + 'punaiseksi, keltaiseksi ja siniseksi.',
+          lahde: 'shankar s. from Dubai, united arab emirates, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Great Fire of 1892',
         },
       ],
       matkailijalle: {
+        kuva: {
+          tiedosto: 'Bergy bit (7264830920).jpg',
+          selite: 'Pieni jäävuori on ajautunut kallioiden väliin aivan '
+            + 'rannan tuntumaan.',
+          lahde: 'Jeremy Keith from Brighton & Hove, United Kingdom, Wikimedia Commons (CC BY 2.0)',
+        },
         kappale: 'St. John’s on Newfoundlandin ja Labradorin '
           + 'pääkaupunki ja Avalonin niemimaan itäkärjessä. Kaupunki '
           + 'kattaa 446 neliökilometriä — enemmän kuin Montreal — '
@@ -95966,6 +96161,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'joka toinen vuosi Sound Symposium, jonka '
                 + 'Harbour Symphonyn soittavat sataman laivojen torvet '
                 + 'keskipäivällä.',
+              kuva: {
+                tiedosto: 'Regatta Start, St. John’s, Newfoundland.jpg',
+                selite: 'Kuuden hengen kilpaveneet lähtevät liikkeelle '
+                  + 'Quidi Vidin järvellä, ja rannalla seisoo väkeä.',
+                lahde: 'Ken Eckert, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
               otsikko: 'Milloin kannattaa tulla',
@@ -96078,6 +96279,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'työskenteli kaapeliyhtiölle; asema suljettiin 1965, kun '
             + 'puhelinkaapelit ja satelliitit tekivät lennättimen '
             + 'tarpeettomaksi.',
+          tiedosto: 'Heart\'s Content Cable Station.JPG',
+          selite: 'Vuoden 1876 punatiilinen kaapeliasema seisoo yhä '
+            + 'tien varressa Heart’s Contentissa.',
+          lahde: 'Robthepiper, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Heart’s Content Cable Station',
         },
         {
@@ -96094,6 +96299,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ensimmäisistä langattomista ihmisäänen lähetyksistä '
             + 'valtameren yli: aseman miehet puhuivat Englannista '
             + 'lähteneen höyrylaivan kanssa.',
+          tiedosto: 'Marconi, Signal Hill, Newfoundland and Labrador.jpg',
+          selite: 'Vihertynyt pronssilaatta kertoo kalliolla, että '
+            + 'ensimmäinen langaton viesti Atlantin yli otettiin '
+            + 'vastaan tällä paikalla.',
+          lahde: 'IMR2000, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Guglielmo Marconi',
         },
         {
@@ -96108,6 +96318,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kaupunkia. Kun amerikkalainen Steve Fossett toisti '
             + 'lennon heinäkuussa 2005 Vickers Vimyn jäljennöksellä, '
             + 'hänen oli lähdettävä lentoasemalta.',
+          tiedosto: 'Alcock and Brown Flight Commemorative St John\'s Newfoundland.jpg',
+          selite: 'Lennon muistokivi seisoo nykyään puiden keskellä '
+            + 'asuinkadun varrella.',
+          lahde: 'Rpitt, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Transatlantic flight of Alcock and Brown',
         },
         {

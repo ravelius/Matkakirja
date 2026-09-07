@@ -46657,6 +46657,14 @@ export const NAHTAVYYSJUTUT = {
           lahde: 'Hemorag, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      kuvat: [
+        {
+          tiedosto: 'St-john-the-baptist-cathedral-newfoundland.jpg',
+          selite: 'Harmaakivinen uusgoottilainen kirkko syksyisten puiden '
+            + 'takana; torninhuippu puuttuu yhä.',
+          lahde: 'Anne Beaumont, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Valparaíson yliopisto': {
@@ -57022,6 +57030,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Devonissa 1600-luvun työkaluin ja materiaalein yhtiön '
           + '300-vuotisjuhlaan, ja se asetettiin Winnipegiin pysyvästi '
           + 'näytteille 1973.',
+      kuvat: [
+        {
+          tiedosto: 'Nonsuch - Manitoba Museum (6782314750).jpg',
+          selite: 'Nonsuchin jäljennöksen keula museosalissa, ja taustalla '
+            + 'lavastettu 1600-luvun satamakortteli.',
+          lahde: 'Thomas Quine, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Pörssikortteli': {
@@ -57050,6 +57066,14 @@ export const NAHTAVYYSJUTUT = {
           + 'uutta ei rakennettu, vanha jäi paikalleen. Alue '
           + 'julistettiin kansalliseksi historialliseksi kohteeksi '
           + '27. syyskuuta 1997.',
+      kuvat: [
+        {
+          tiedosto: 'Bannatyne Ave.jpg',
+          selite: 'Bannatyne Avenue talvella: punatiilisiä ja vaaleita '
+            + 'varastotaloja rivissä, ja perällä keskustan torni.',
+          lahde: 'Krazytea, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Burton Cummings -teatteri': {
@@ -57086,6 +57110,15 @@ export const NAHTAVYYSJUTUT = {
           + 'palautettiin näyttämökäyttöön 1991 ja sai nykyisen '
           + 'nimensä winnipegiläisen laulaja-lauluntekijän mukaan '
           + '2002.',
+      kuvat: [
+        {
+          tiedosto: 'Winnipeg - Walker Theatre 2.JPG',
+          selite: 'Teatterin julkisivu ja pystykyltti; sivuseinät jäivät '
+            + 'koristelematta, koska niiden viereen oli tarkoitus '
+            + 'rakentaa muita taloja.',
+          lahde: 'Amqui, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Manitoba Hydro Place': {
@@ -57105,6 +57138,14 @@ export const NAHTAVYYSJUTUT = {
           + 'tienoilla ja heinäkuussa voidaan mitata kolmeakymmentä '
           + 'lämpöastetta, talon on selvittävä molemmista ääripäistä '
           + 'saman vuoden aikana.',
+      kuvat: [
+        {
+          tiedosto: 'Manitoba hydro place May 2022.jpg',
+          selite: 'Lasitorni sinisenä hetkenä, ja sen kyljessä nousee '
+            + 'kapea ilmanvaihtopiippu katon yli.',
+          lahde: 'ElatedCoder, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Kanadan ihmisoikeusmuseo': {
@@ -57132,6 +57173,14 @@ export const NAHTAVYYSJUTUT = {
           + 'mittatilaukseen leikatusta lasista asennettiin syyskuussa '
           + '2012. Avajaisseremonia pidettiin 19. syyskuuta 2014, ja '
           + 'ovet avautuivat yleisölle saman kuun 27. päivänä.',
+      kuvat: [
+        {
+          tiedosto: 'Canadian Museum for Human Rights at night, Winnipeg, Manitoba, Canada.jpg',
+          selite: 'Lasipilvi ja sen läpi kohoava torni valaistuna '
+            + 'illalla.',
+          lahde: 'Ethan Sahagun, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Saint-Bonifacen katedraali': {
@@ -57191,6 +57240,14 @@ export const NAHTAVYYSJUTUT = {
           + 'sahayhtiölle, joka nimesi sen uudelleen Betsyksi ja '
           + 'pani sen pyörittämään sahaa. Winnipegin kaupunki löysi '
           + 'sen 1909 ja sai omistajat lahjoittamaan sen takaisin.',
+      kuvat: [
+        {
+          tiedosto: 'Union Station (Winnipeg).jpg',
+          selite: 'Aseman symmetrinen julkisivu ja vihreä kupoli, ja sen '
+            + 'takana näkyy ihmisoikeusmuseon lasikuori.',
+          lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Manitoban parlamenttitalo': {
@@ -57286,6 +57343,14 @@ export const NAHTAVYYSJUTUT = {
           + 'vasemmalle puolelle eikä perinteiselle oikealle — siellä '
           + 'olivat lämmittimet. Tapa jatkuu Newfoundlandin ja '
           + 'Labradorin parlamentissa yhä.',
+      kuvat: [
+        {
+          tiedosto: 'Colonial Building, St. John\'s, Canada.jpg',
+          selite: 'Kuusi joonialaista pylvästä kannattaa päätykolmiota, '
+            + 'jonka reliefinä ovat kuninkaalliset vaakunat.',
+          lahde: 'Shhewitt, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Fort William': {
@@ -57353,6 +57418,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Michael Cantwell valmisteli ruutia keskipäivän '
           + 'laukausta varten — syyksi arveltiin hänen piippuaan — ja '
           + 'eteläkulma korjattiin jälkeenpäin.',
+      kuvat: [
+        {
+          tiedosto: 'Cabot Tower on Signal Hill.jpg',
+          selite: 'Torni seisoo paljaalla kalliokukkulalla, ja sen luo '
+            + 'kiemurtelee tie alhaalta kaupungista.',
+          lahde: 'WiseWoman, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'The Battery': {
@@ -57383,6 +57456,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Silti tammikuussa 2020, ennätyslumisateen ja '
           + 'hurrikaanivoimaisten tuulten jälkeen, yksi talo '
           + 'vaurioitui pahoin lumivyöryssä.',
+      kuvat: [
+        {
+          tiedosto: 'An aerial view of The Battery, Located in St. John\'s, Newfoundland and Labrador.jpg',
+          selite: 'Ilmasta katsottuna värilliset talot ovat kiinni '
+            + 'jyrkässä kalliossa aivan veden rajassa.',
+          lahde: 'Erikallen920, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Kansallinen sotamuistomerkki': {
@@ -57422,6 +57503,14 @@ export const NAHTAVYYSJUTUT = {
           + 'haudan — syystä, joka on itsessään historiaa: '
           + 'Newfoundland ei ollut vielä Kanadaa, kun sen miehet '
           + 'lähtivät.',
+      kuvat: [
+        {
+          tiedosto: 'Newfoundland National War Memorial.jpg',
+          selite: 'Viisi pronssihahmoa graniittijalustalla, seppeleitä '
+            + 'alla ja värilliset talot takana.',
+          lahde: 'Nilfanion, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Pyhän Johannes Kastajan basilika': {
@@ -57513,6 +57602,14 @@ export const NAHTAVYYSJUTUT = {
           + 'ravintoloita, pubeja ja putiikkeja matalissa '
           + 'perintörakennuksissa. Vuonna 2020 kaupunki teki siitä '
           + 'kesäkaudeksi osittain kävelykadun.',
+      kuvat: [
+        {
+          tiedosto: 'Water street st. john\'s2.jpg',
+          selite: 'Matalia perintörakennuksia rinteessä laskevan kadun '
+            + 'varrella, ja perällä keskustan tornitalo.',
+          lahde: 'Jcmurphy at English Wikipedia, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },
