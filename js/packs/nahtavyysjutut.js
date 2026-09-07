@@ -49882,6 +49882,14 @@ export const NAHTAVYYSJUTUT = {
           + 'sairaala, jossa Rosa hoiti sairaita; sen sisäänkäynnin '
           + 'jäänteet kaivettiin esiin ja vihittiin uudelleen 25. '
           + 'elokuuta 2026.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia Santa Rosa, Lima, Perú, 2015-07-28, DD 08.JPG',
+          selite: 'Punainen julkisivu kahden kellotornin välissä; pyhäkkö on '
+            + 'rakennettu Isabel Flores de Olivan kotitalon jäännösten päälle.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Casa de Osambela': {
@@ -49915,6 +49923,14 @@ export const NAHTAVYYSJUTUT = {
           + '1963, kunnostettu 1982–1985 takaisin alkuperäiseen '
           + 'indigonsiniseen väriinsä. Nykyään talossa toimii Perun '
           + 'kieliakatemia.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio de Osambela, Casa Oquendo - Lima.jpg',
+          selite: 'Umpinaiset puiset parvekkeet työntyvät indigonsinisestä '
+            + 'seinästä kadun päälle koko julkisivun leveydeltä.',
+          lahde: 'Art DiNo from Lima, Perú, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'San Franciscon luostari': {
@@ -49950,6 +49966,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kaikkiaan 70 000 ihmistä, ja käytävät löydettiin '
           + 'uudelleen vasta 1951. Paavi Johannes XXIII korotti kirkon '
           + 'basilikaksi 11. tammikuuta 1963.',
+      kuvat: [
+        {
+          tiedosto: 'Monastery of San Francisco, Lima, Peru.jpg',
+          selite: 'Keltainen barokkijulkisivu kahden kellotornin välissä; kirkon '
+            + 'alla ovat katakombit, jotka olivat kaupungin hautausmaa.',
+          lahde: 'Avodrocc, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Las Nazarenasin pyhäkkö': {
@@ -49979,6 +50003,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kuukauden väri — lokakuuta sanotaan Perussa violetiksi '
           + 'kuukaudeksi — ja sen ajan herkkuja ovat violetti '
           + 'maissivanukas mazamorra morada ja Doña Pepan turrón.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia y monasterio de las Nazarenas de Lima 05.jpg',
+          selite: 'Kupolin lyhty päästää valon alas pyhäkköön, jonka seinällä '
+            + 'Ihmeiden Herran maalaus on säilynyt kolmen järistyksen läpi.',
+          lahde: 'Rodolfo pimentel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Inkvisition museo': {
@@ -50003,6 +50035,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kertoo kahden aivan eri laitoksen historian samassa '
           + 'talossa: tuomioistuimen ja Perun kongressin. Museo on '
           + 'ollut toukokuusta 2016 suljettuna kunnostustöiden vuoksi.',
+      kuvat: [
+        {
+          tiedosto: 'Puerta del museo de la inquisicion catolica en lima.jpg',
+          selite: 'Veistetty pääovi kultauksineen; saman oven takana istui ensin '
+            + 'tuomioistuin ja itsenäisyyden jälkeen Perun senaatti.',
+          lahde: 'Quilicho, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Torre Taglen palatsi': {
@@ -50036,6 +50076,14 @@ export const NAHTAVYYSJUTUT = {
           + 'markiisin perillisiltä 320 000 solilla. Vuodesta 1918 '
           + 'vuoteen 2023 se oli ulkoministeriön päämaja, ja nykyään '
           + 'siellä toimii valtion seremonia- ja protokollaosasto.',
+      kuvat: [
+        {
+          tiedosto: 'Jr Ucayali, centro de Lima 02.jpg',
+          selite: 'Portaalin päällä oleva vaakuna kantaa tekstiä "Tagle se llamó '
+            + 'el que la sierpe mató y con la infanta casó".',
+          lahde: 'Ibrehaut, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Plaza San Martín': {
@@ -50064,6 +50112,14 @@ export const NAHTAVYYSJUTUT = {
           + 'lyhty, 1800-luvun kaupunkikaluste, siirrettiin aukiolle '
           + '1915. Aukio liitettiin 1991 Liman historiallisen keskustan '
           + 'maailmanperintökohteeseen omana monumenttinaan.',
+      kuvat: [
+        {
+          tiedosto: '2017 Lima - Monumento ecuestre - Plaza San Martín.jpg',
+          selite: 'Mariano Benlliuren ratsastajapatsas esittää San Martínia Andien '
+            + 'ylityksellä; ympärillä olevat talot nousivat vasta aukion jälkeen.',
+          lahde: 'Felipe Restrpo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Casona de San Marcos': {
@@ -50098,6 +50154,14 @@ export const NAHTAVYYSJUTUT = {
           + 'perustettu arkeologian ja antropologian museo, jonka '
           + 'ensimmäinen johtaja oli Julio C. Tello. Mestarien pihan '
           + 'veistos oli aikanaan kahdenkymmenen solin setelin aiheena.',
+      kuvat: [
+        {
+          tiedosto: 'Casona de San Marcos.jpg',
+          selite: 'Okrankeltainen siipi yliopistopuiston laidalla; talo oli '
+            + 'yliopiston päärakennus vuosina 1875–1966.',
+          lahde: 'Ovruni, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },
@@ -50162,6 +50226,14 @@ export const NAHTAVYYSJUTUT = {
           + 'haudattu useita maan presidenttejä. Kellotorneihin pääsee '
           + 'pientä maksua vastaan kiipeämään, ja ylhäältä näkee koko '
           + 'kaupungin laakson.',
+      kuvat: [
+        {
+          tiedosto: 'Basilika in Quito.jpg',
+          selite: 'Uusgoottilainen kivikirkko kellotorneineen; piirustusten '
+            + 'esikuvana oli Bourgesin katedraali Ranskassa.',
+          lahde: 'Hannelore Hopfe, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'La Mercedin basilika': {
@@ -50188,6 +50260,14 @@ export const NAHTAVYYSJUTUT = {
           + 'nidettä ja yli 40 000 kirjastotietuetta. Holveihin on '
           + 'haudattu muun muassa 1600-luvun maalari Isabel de '
           + 'Santiago.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de La Merced, Quito, Ecuador, 2015-07-22, DD 184.JPG',
+          selite: 'Kullattu keskilaiva ja perällä Bernardo de Legardan vuosina '
+            + '1748–1751 veistämä pääalttari.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'San Agustínin luostari': {
@@ -50214,6 +50294,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Pääalttarilla riippuu Miguel de Santiagon 1600-luvulla '
           + 'maalaama valtava teos "Pyhän Augustinuksen riemuvoitto"; '
           + 'saman maalarin töitä on muuallakin talossa.',
+      kuvat: [
+        {
+          tiedosto: '(Iglesia de San Agustin), Quito S. XVI pic a02.JPG',
+          selite: 'Diego de Escarzan veistämä pääportaali; koristeissa on '
+            + 'rinnakkain espanjalaisia ja alkuperäiskansojen aiheita.',
+          lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'El Sagrarion kirkko': {
@@ -50248,6 +50336,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Francisco Albánille. Alttarikaapit ovat Legardan tekemiä '
           + 'ja Cristóbal Gualoton kullattuja; Gualotolla oli apunaan '
           + 'viiden miehen ryhmä.',
+      kuvat: [
+        {
+          tiedosto: 'Quito Iglesia de El Sagrario interior 2.jpg',
+          selite: 'Sivulaivan pieni kupoli alhaalta katsottuna; keskilaivan '
+            + 'päättää sen sijaan tynnyriholvi.',
+          lahde: 'Ymblanter, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Casa del Alabado': {
@@ -50271,6 +50367,14 @@ export const NAHTAVYYSJUTUT = {
           + 'näyttelyiden sali, kaksi työpajatilaa, museokauppa ja '
           + 'kaksi sisäpihaa. Rakennus kuuluu Quiton vanhankaupungin '
           + 'maailmanperintöalueeseen.',
+      kuvat: [
+        {
+          tiedosto: 'Quito Museo Casa del Alabado Statue of Jama-Coaque culture 1.jpg',
+          selite: 'Jama-Coaque-kulttuurin istuva hahmo omalla jalustallaan — '
+            + 'museo asettaa esineet esille taideteoksina.',
+          lahde: 'Ymblanter, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     Kaupunkimuseo: {
@@ -50297,6 +50401,14 @@ export const NAHTAVYYSJUTUT = {
           + 'arkeologiaa; kokoelmassa on sekä valloituksen ajan '
           + 'katolisia esineitä että esikolumbiaanisiksi arvioituja '
           + 'löytöjä.',
+      kuvat: [
+        {
+          tiedosto: 'Museo de la Ciudad, Quito (interior) pic c.JPG',
+          selite: 'Kaarikäytävien reunustama sisäpiha; talo oli San Juan de '
+            + 'Diosin sairaala ennen kuin siitä tuli museo.',
+          lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'El Panecillo': {
@@ -50325,6 +50437,14 @@ export const NAHTAVYYSJUTUT = {
           + 'koska se esittää liikkeessä olevaa hahmoa aikansa '
           + 'liikkumattomien madonnien sijaan. Patsaan pronssikilven '
           + 'mukaan kuvattu nainen on Ilmestyskirjan luvun 12 vaimo.',
+      kuvat: [
+        {
+          tiedosto: 'Virgen del Panecillo.jpg',
+          selite: 'Alumiininen Neitsyt seisoo kukkulan laella, ja rinne on '
+            + 'rakennettu täyteen taloja lakea myöten.',
+          lahde: 'Josuadaniel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Vuoden 1909 näyttelypalatsi': {
