@@ -423,7 +423,14 @@ for (const nakyma of ['tabletti', 'puhelin']) {
     }));
 
   /* --- 3. MUISTI, ESITYS: sulku ja uusi avaus ------------------------ */
-  const jaksoEnnen = jatkui?.jakso ?? null;
+  /*
+   * JAKSO LUETAAN JUURI ENNEN SULKUA, ei aiemmasta mittauksesta.
+   * Väliin tuli 7.9.2026 aikaselaimen veto (2b), joka vaihtaa jakson —
+   * vanha `jatkui.jakso` teki muistiväitteestä mittausvirheen.
+   */
+  const jaksoEnnen = await s.evaluate(
+    () => window.matkakirja.ui.aikajana?.esitys?.tila?.().jakso ?? null,
+  );
   await s.evaluate(async () => {
     document.querySelector('.aikajana-sulje')?.click();
     await new Promise((r) => setTimeout(r, 1200));
