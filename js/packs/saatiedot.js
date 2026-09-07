@@ -2610,4 +2610,1173 @@ export const SAATIEDOT = {
       + 'heinäkuussa sitä on vain 11 millimetriä. Vuoden kertymä on '
       + '750 millimetriä.',
   },
+  /*
+   * Erä B 7.9.2026 ilta: 33 lehtikaupunkia ilman sääriviä —
+   * en-Wikipedian ilmastotaulukoista, koska Open-Meteon päiväraja ei
+   * salli koko erää; ks. dunedin-lohkon perustelu.
+   *
+   * Rivejä tuli 32. Lalibela jäi pois: sen artikkelin Weather box
+   * (National Meteorology Agency) ei kerro normaalikautta lainkaan,
+   * eikä lahde.kausi-kenttää saa täyttää arvaamalla.
+   */
+  // Lähde: en-Wikipedia "Manaus", Climate-osio, Weather box "Manaus
+  // (1991–2020 normals, extremes 1872–present)", luettu 7.9.2026 —
+  // ei Open-Meteo
+  manaus: {
+    lat: -3.12,
+    lon: -60.02,
+    keskilampo: [26.6, 26.6, 26.6, 26.7, 27, 27.3, 27.5, 28.2, 28.6, 28.5, 28, 27.2],
+    ylin: [31, 31, 31, 31, 32, 32, 33, 34, 34, 34, 33, 32],
+    alin: [24, 24, 24, 24, 24, 24, 24, 24, 25, 25, 24, 24],
+    sade: [306, 297, 321, 331, 233, 117, 67, 56, 79, 114, 188, 254],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Manausin lämpötila pysyy ympäri vuoden lähes '
+      + 'samana: tammikuun 26,6 asteesta noustaan syyskuun 28,6 '
+      + 'asteeseen. Sade sen sijaan jakautuu jyrkästi kahtia — '
+      + 'huhtikuussa sitä kertyy 331 millimetriä, elokuussa vain 56 '
+      + '— ja koko vuoden kertymä on 2 363 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Caracas", Climate-osio, Weather box
+  // "Caracas, Venezuela (La Carlota) (1991–2020 normals, extremes
+  // 1964–2020)", luettu 7.9.2026 — ei Open-Meteo
+  caracas: {
+    lat: 10.50,
+    lon: -66.90,
+    keskilampo: [21.7, 22.1, 23.1, 24.1, 24.5, 24.1, 23.5, 23.7, 24.3, 24.1, 23.5, 22.3],
+    ylin: [27, 28, 29, 29, 29, 29, 28, 28, 29, 29, 28, 27],
+    alin: [17, 18, 19, 20, 21, 21, 21, 21, 21, 21, 20, 19],
+    sade: [56, 43, 21, 48, 70, 113, 121, 133, 118, 144, 130, 107],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Caracasin vuosi on tasalämpöinen: tammikuun 21,7 '
+      + 'asteen ja toukokuun 24,5 asteen väliin mahtuu vajaat kolme '
+      + 'astetta. Sadetta kertyy vähiten maaliskuussa, 21 '
+      + 'millimetriä, ja eniten lokakuussa, 144 millimetriä, ja '
+      + 'vuoden kertymä on 1 104 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Salvador, Bahia", Climate-osio, Weather box
+  // "Salvador (Bahia) 1991–2020 normals, extremes 1911–present",
+  // luettu 7.9.2026 — ei Open-Meteo
+  salvador: {
+    lat: -12.98,
+    lon: -38.49,
+    keskilampo: [26.9, 27.1, 27.1, 26.4, 25.3, 24.3, 23.7, 23.6, 24.3, 25.4, 26.1, 26.6],
+    ylin: [31, 31, 31, 30, 28, 27, 27, 27, 28, 29, 30, 31],
+    alin: [24, 24, 24, 24, 23, 22, 21, 21, 22, 23, 23, 24],
+    sade: [77, 99, 147, 285, 302, 238, 194, 130, 99, 91, 108, 63],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Salvadorissa lämpimintä on helmi-maaliskuussa, '
+      + '27,1 astetta, ja viileintä elokuussa, 23,6 astetta. '
+      + 'Sadekausi osuu huhti-kesäkuuhun, jolloin kuukausisumma '
+      + 'nousee toukokuun 302 millimetriin, kun joulukuussa sadetta '
+      + 'on 63 millimetriä. Vuoteen kertyy 1 833 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Dili", Climate-osio, Weather box "Dili
+  // (Presidente Nicolau Lobato International Airport) 1991–2020
+  // normals, extremes 1950–present", luettu 7.9.2026 — ei Open-Meteo
+  dili: {
+    lat: -8.55,
+    lon: 125.58,
+    keskilampo: [27.7, 27.5, 27.4, 27.7, 27.6, 26.8, 26.2, 26.1, 26.7, 27.6, 28.3, 28.1],
+    ylin: [31, 31, 31, 32, 32, 31, 31, 31, 32, 32, 33, 32],
+    alin: [24, 24, 24, 24, 23, 22, 22, 21, 22, 23, 24, 24],
+    sade: [175, 143, 114, 64, 30, 18, 11, 7, 5, 16, 53, 142],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Dilin lämpötila liikkuu vain parin asteen verran, '
+      + 'elokuun 26,1 asteesta marraskuun 28,3 asteeseen. Sademäärä '
+      + 'sen sijaan jakautuu hyvin epätasaisesti: tammikuussa sataa '
+      + '175 millimetriä ja syyskuussa vain viisi. Vuosisumma jää '
+      + '778 millimetriin.',
+  },
+  // Lähde: en-Wikipedia "Alice Springs", Climate-osio, Weather box
+  // "Alice Springs Airport (1991–2020 normals, extremes
+  // 1941–present)", luettu 7.9.2026 — ei Open-Meteo
+  alicesprings: {
+    lat: -23.70,
+    lon: 133.87,
+    keskilampo: [29.7, 28.5, 25.7, 21.1, 15.8, 12.4, 12.3, 14.7, 20, 23.4, 26.4, 28.2],
+    ylin: [37, 36, 34, 29, 24, 20, 21, 24, 29, 32, 34, 36],
+    alin: [22, 21, 18, 13, 8, 5, 4, 6, 11, 15, 18, 21],
+    sade: [49, 41, 20, 20, 18, 10, 13, 4, 8, 19, 33, 41],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Alice Springsissä vuodenaikojen ero on suuri: '
+      + 'tammikuun keskilämpö on 29,7 astetta ja heinäkuun 12,3. '
+      + 'Sadetta kertyy koko vuonna vain 276 millimetriä, eniten '
+      + 'tammikuussa 49 ja vähiten elokuussa 4 millimetriä. '
+      + 'Talviyöt ovat viileitä — heinäkuun tyypillinen alin on 4 '
+      + 'astetta — vaikka päivällä noustaan 21 asteeseen.',
+  },
+  // Lähde: en-Wikipedia "Tangier", Climate-osio, Weather box
+  // "Tangier (Tangier Airport) 1961–1990, extremes 1917–1963",
+  // luettu 7.9.2026 — ei Open-Meteo. HUOM: normaalikausi on
+  // 1961–1990, EI 1991–2020 kuten muu paketti.
+  tanger: {
+    lat: 35.78,
+    lon: -5.80,
+    keskilampo: [12.5, 13.1, 14, 15.2, 17.7, 20.6, 23.5, 23.9, 22.8, 19.7, 15.9, 13.3],
+    ylin: [16, 17, 18, 19, 22, 25, 28, 29, 27, 24, 20, 17],
+    alin: [9, 9, 10, 11, 13, 16, 19, 19, 18, 16, 12, 10],
+    sade: [104, 99, 72, 62, 37, 14, 2, 3, 15, 65, 135, 129],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1961–1990' },
+    luonnehdinta: 'Tangerissa kesä on kuiva ja talvi sateinen: '
+      + 'heinäkuussa sadetta kertyy kaksi millimetriä, marraskuussa '
+      + '135. Lämpötila vaihtelee maltillisesti tammikuun 12,5 '
+      + 'asteesta elokuun 23,9 asteeseen, ja vuoden sademäärä on '
+      + '737 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Marrakesh", Climate-osio, Weather box
+  // "Marrakesh, Morocco (Marrakesh Menara Airport) 1991–2020,
+  // extremes 1900–present", luettu 7.9.2026 — ei Open-Meteo
+  marrakech: {
+    lat: 31.64,
+    lon: -8.00,
+    keskilampo: [12.5, 14.2, 17, 19, 22.3, 25.8, 29.2, 29.3, 25.6, 22.1, 16.9, 13.7],
+    ylin: [19, 21, 24, 26, 29, 34, 38, 37, 33, 29, 23, 20],
+    alin: [6, 8, 10, 12, 15, 18, 21, 21, 19, 16, 11, 7],
+    sade: [25, 26, 35, 26, 11, 3, 2, 5, 15, 19, 30, 24],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Marrakechin kesä on kuuma ja kuiva: heinäkuun '
+      + 'tyypillinen ylin on 38 astetta ja sadetta kertyy kaksi '
+      + 'millimetriä. Koko vuoden sademäärä on vain 221 '
+      + 'millimetriä, ja sekin painottuu talveen ja kevääseen, '
+      + 'eniten maaliskuussa 35 millimetriä. Tammikuun keskilämpö '
+      + 'on 12,5 astetta.',
+  },
+  // Lähde: en-Wikipedia "Addis Ababa", Climate-osio, Weather box
+  // "Addis Ababa (1991–2020, extremes 1898–present)" (artikkelin
+  // toinen taulukko; ensimmäisessä ei ole lämpötila- eikä
+  // sadekenttiä), luettu 7.9.2026 — ei Open-Meteo
+  addisabeba: {
+    lat: 9.04,
+    lon: 38.75,
+    keskilampo: [16.3, 17.6, 18.6, 18.8, 18.8, 17.5, 16.5, 16.4, 16.6, 16.5, 15.9, 15.5],
+    ylin: [24, 25, 26, 25, 25, 24, 21, 21, 22, 23, 23, 23],
+    alin: [9, 10, 12, 12, 12, 12, 12, 12, 11, 10, 8, 8],
+    sade: [13, 34, 66, 91, 76, 119, 238, 242, 132, 32, 5, 8],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Addis Abeban keskilämpö pysyy vuoden ympäri 15,5 '
+      + 'ja 18,8 asteen välissä, vaikka kaupunki on lähellä '
+      + 'päiväntasaajaa. Sade jakautuu sitäkin jyrkemmin: '
+      + 'heinä-elokuussa kertyy 238 ja 242 millimetriä, '
+      + 'marraskuussa vain viisi. Vuosisumma on 1 056 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Guatemala City", Climate-osio, Weather box
+  // "Guatemala City (La Aurora Airport) 1991–2020 normals, extremes
+  // 1951–present", luettu 7.9.2026 — ei Open-Meteo
+  guatemala: {
+    lat: 14.62,
+    lon: -90.53,
+    keskilampo: [18.2, 19.3, 20.8, 21.6, 21.4, 20.6, 20.3, 20.4, 20, 19.6, 18.8, 18.1],
+    ylin: [25, 27, 28, 28, 27, 25, 25, 26, 25, 24, 24, 24],
+    alin: [13, 14, 15, 16, 17, 17, 17, 17, 17, 16, 15, 14],
+    sade: [2, 4, 4, 30, 154, 279, 208, 225, 242, 171, 30, 5],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Guatemala Cityn keskilämpö pysyy 18,1 ja 21,6 '
+      + 'asteen välissä läpi vuoden. Sadekausi on jyrkkä: '
+      + 'touko-lokakuussa sataa runsaasti, eniten kesäkuussa 279 '
+      + 'millimetriä, kun tammikuussa kertyy vain kaksi '
+      + 'millimetriä. Vuoteen tulee 1 354 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Lagos", Climate-osio, Weather box "Lagos
+  // Island, 1991–2020 normals and records", luettu 7.9.2026 — ei
+  // Open-Meteo
+  lagos: {
+    lat: 6.44,
+    lon: 3.42,
+    keskilampo: [28.2, 28.9, 29.2, 28.7, 28, 26.7, 26.1, 26, 26.6, 27.3, 28.3, 27.8],
+    ylin: [32, 32, 32, 32, 31, 29, 28, 28, 29, 30, 31, 32],
+    alin: [25, 26, 26, 26, 25, 24, 24, 24, 24, 25, 25, 24],
+    sade: [11, 41, 68, 146, 236, 434, 209, 91, 218, 189, 52, 10],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Lagosissa lämpötila liikkuu vain kolmisen '
+      + 'astetta, elokuun 26 asteesta maaliskuun 29,2 asteeseen. '
+      + 'Sade ratkaisee vuodenkierron: kesäkuussa kertyy 434 '
+      + 'millimetriä ja joulukuussa vain kymmenen, ja koko vuoden '
+      + 'summa on 1 705 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Zanzibar City", Climate-osio, Weather box
+  // "Zanzibar City (1991–2020)", luettu 7.9.2026 — ei Open-Meteo
+  sansibar: {
+    lat: -6.17,
+    lon: 39.20,
+    keskilampo: [28.5, 28.5, 28.4, 27.4, 26.6, 25.9, 25.3, 25.2, 25.7, 26.5, 27.1, 28],
+    ylin: [33, 33, 33, 31, 30, 29, 29, 29, 30, 31, 31, 32],
+    alin: [25, 24, 25, 25, 24, 23, 22, 21, 21, 22, 23, 24],
+    sade: [74, 51, 177, 409, 298, 52, 31, 38, 37, 116, 201, 168],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Sansibarin lämpötila pysyy vuoden ympäri 25,2 ja '
+      + '28,5 asteen välissä. Sadetta kertyy ylivoimaisesti eniten '
+      + 'huhtikuussa, 409 millimetriä, ja vähiten heinäkuussa, 31 '
+      + 'millimetriä. Vuosisumma on 1 652 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Fez, Morocco", Climate-osio, Weather box
+  // "Fez (Fès–Saïs Airport), altitude 579 m, 1991–2020", luettu
+  // 7.9.2026 — ei Open-Meteo
+  fes: {
+    lat: 34.04,
+    lon: -5.00,
+    keskilampo: [9.9, 10.9, 13.3, 15.2, 19, 23.1, 26.5, 26.8, 22.9, 19.4, 14.1, 11.2],
+    ylin: [16, 17, 20, 22, 26, 31, 35, 35, 30, 26, 20, 17],
+    alin: [4, 4, 7, 8, 12, 15, 18, 18, 16, 13, 8, 5],
+    sade: [60, 54, 59, 55, 38, 11, 1, 5, 22, 54, 66, 62],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Fesin kesä on kuuma ja kuiva: heinä- ja elokuun '
+      + 'tyypillinen ylin on 35 astetta ja heinäkuussa sadetta tulee '
+      + 'yksi millimetri. Talvi on viileä ja sateinen — tammikuun '
+      + 'keskilämpö on 9,9 astetta ja marraskuun sademäärä 66 '
+      + 'millimetriä. Vuoteen kertyy 487 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Dakar", Climate-osio, Weather box "Dakar
+  // (1991–2020)" (kaupungin oma taulukko; artikkelin toinen
+  // taulukko on lentoasemalta jaksolta 1961–1990); taulukossa ei
+  // ole mean-kenttää, joten keskilämpö on high- ja low-kentän
+  // keskiarvo — luettu 7.9.2026 — ei Open-Meteo
+  dakar: {
+    lat: 14.68,
+    lon: -17.43,
+    keskilampo: [22.3, 21.6, 21.8, 22.1, 23.5, 26.2, 27.7, 28, 28.1, 28.4, 26.8, 24.5],
+    ylin: [26, 25, 25, 25, 26, 29, 30, 31, 31, 31, 30, 28],
+    alin: [19, 18, 18, 19, 21, 24, 25, 25, 25, 26, 24, 21],
+    sade: [1, 0, 0, 0, 0, 7, 53, 166, 138, 26, 0, 0],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Dakarissa sataa käytännössä vain heinä-lokakuussa: '
+      + 'elokuussa kertyy 166 millimetriä, kun marraskuusta '
+      + 'toukokuuhun kuukausisumma on nollan tuntumassa. Lämpötila '
+      + 'nousee helmikuun 21,6 asteesta lokakuun 28,4 asteeseen, ja '
+      + 'koko vuoden sademäärä on 391 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Salta", Climate-osio, Weather box "Salta,
+  // Argentina (Martín Miguel de Güemes International Airport)
+  // 1991–2020, extremes 1873–present" (artikkelin toinen taulukko
+  // on Cerrillosin INTA-asemalta jaksolta 1969–2009), luettu
+  // 7.9.2026 — ei Open-Meteo
+  salta: {
+    lat: -24.78,
+    lon: -65.42,
+    keskilampo: [21.5, 20.6, 19.4, 16.8, 13.3, 10.9, 10.1, 12.8, 15.8, 19.3, 20.6, 21.7],
+    ylin: [28, 27, 25, 23, 20, 20, 20, 23, 25, 27, 28, 28],
+    alin: [17, 16, 15, 12, 8, 5, 3, 5, 8, 12, 14, 16],
+    sade: [197, 147, 107, 42, 10, 3, 3, 2, 6, 24, 59, 138],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Saltassa sade keskittyy jyrkästi kesäkuukausiin: '
+      + 'tammikuussa kertyy 197 millimetriä, elokuussa kaksi. '
+      + 'Lämpimintä on joulukuussa, 21,7 astetta, ja viileintä '
+      + 'heinäkuussa, 10,1 astetta. Vuoteen tulee 738 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Antofagasta", Climate-osio, Weather box
+  // "Antofagasta (1991–2020, extremes 1950–present)", luettu
+  // 7.9.2026 — ei Open-Meteo
+  antofagasta: {
+    lat: -23.65,
+    lon: -70.40,
+    keskilampo: [20.2, 20.2, 19.1, 17.3, 15.7, 14.5, 13.8, 14, 14.6, 15.6, 17.1, 18.7],
+    ylin: [24, 24, 23, 21, 19, 17, 17, 17, 17, 19, 20, 22],
+    alin: [17, 17, 16, 15, 13, 12, 12, 12, 13, 14, 15, 16],
+    sade: [0, 0, 1, 0, 0, 2, 0, 1, 0, 0, 0, 0],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Antofagasta on äärimmäisen kuiva: koko vuoden '
+      + 'sademäärä on neljä millimetriä, ja yhdeksänä kuukautena '
+      + 'kahdestatoista sadetta ei kirjaudu lainkaan. Lämpötila '
+      + 'pysyy tasaisena, heinäkuun 13,8 asteesta tammi-helmikuun '
+      + '20,2 asteeseen.',
+  },
+  // Lähde: en-Wikipedia "Nuuk", Climate-osio, Weather box "Nuuk
+  // (1991–2020 normals, extremes 1866–present)", luettu 7.9.2026 —
+  // ei Open-Meteo
+  nuuk: {
+    lat: 64.17,
+    lon: -51.73,
+    keskilampo: [-7.5, -8.6, -7.7, -3, 1.2, 5, 7.4, 7, 4, 0.2, -3.3, -5.5],
+    ylin: [-5, -6, -5, -1, 4, 8, 11, 10, 7, 2, -1, -3],
+    alin: [-10, -11, -10, -5, -1, 2, 4, 5, 2, -2, -5, -8],
+    sade: [67, 51, 59, 53, 57, 62, 69, 91, 105, 81, 79, 75],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Nuukissa talvi on pakkasella: helmikuun '
+      + 'keskilämpö on -8,6 astetta, ja vain touko-lokakuussa '
+      + 'ollaan plussan puolella. Lämpimintä on heinäkuussa, 7,4 '
+      + 'astetta. Sadetta kertyy joka kuukausi, syyskuun 105 '
+      + 'millimetristä helmikuun 51 millimetriin, ja vuosisumma on '
+      + '849 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Anchorage, Alaska", Climate-osio,
+  // Template:Anchorage weatherbox: "Ted Stevens Anchorage
+  // International Airport, Alaska (1991–2020 normals, extremes
+  // 1953–present)" (artikkelin oma toinen taulukko Campbell
+  // Airstripiltä on ilman sadekenttiä), luettu 7.9.2026 — ei
+  // Open-Meteo
+  anchorage: {
+    lat: 61.22,
+    lon: -149.89,
+    keskilampo: [-8.4, -5.9, -3.4, 3.1, 8.9, 13.3, 15.3, 14.2, 9.6, 2.4, -4.7, -7],
+    ylin: [-5, -3, 1, 7, 13, 17, 19, 18, 13, 6, -2, -4],
+    alin: [-12, -9, -7, -1, 4, 9, 12, 11, 6, -1, -8, -10],
+    sade: [19, 22, 18, 11, 17, 26, 46, 74, 79, 46, 30, 29],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Anchoragessa talvi on pitkä: marras-maaliskuun '
+      + 'keskilämpö pysyy nollan alapuolella ja tammikuussa ollaan '
+      + '-8,4 asteessa. Heinäkuussa noustaan 15,3 asteeseen. '
+      + 'Sadetta kertyy eniten elo-syyskuussa, 74 ja 79 '
+      + 'millimetriä, ja koko vuonna 417 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Punta Arenas", Climate-osio, Weather box
+  // "Punta Arenas (1991–2020, extremes 1888–present)", luettu
+  // 7.9.2026 — ei Open-Meteo
+  puntaarenas: {
+    lat: -53.16,
+    lon: -70.91,
+    keskilampo: [10.7, 10.3, 8.9, 6.6, 4.2, 1.9, 1.7, 2.7, 4.6, 6.4, 8.3, 9.7],
+    ylin: [16, 16, 15, 12, 9, 6, 5, 7, 10, 13, 14, 15],
+    alin: [6, 5, 4, 2, 0, -1, -1, -1, 0, 1, 4, 5],
+    sade: [38, 32, 43, 45, 37, 31, 31, 30, 25, 25, 23, 32],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Punta Arenasissa kesäkin on viileä: lämpimimmän '
+      + 'kuukauden, tammikuun, keskilämpö on 10,7 astetta ja '
+      + 'heinäkuun 1,7. Sade jakautuu tasan ympäri vuoden, '
+      + 'marraskuun 23 millimetristä huhtikuun 45 millimetriin, ja '
+      + 'vuosisumma jää 392 millimetriin.',
+  },
+  // Lähde: en-Wikipedia "Santa Cruz de la Sierra", Climate-osio,
+  // Weather box "Santa Cruz de la Sierra (El Trompillo Airport)
+  // 1991–2020 normals", luettu 7.9.2026 — ei Open-Meteo
+  santacruz: {
+    lat: -17.80,
+    lon: -63.18,
+    keskilampo: [26.8, 26.3, 26.2, 24.7, 22.4, 20.8, 21.1, 23.3, 25.6, 26.8, 27.1, 26.9],
+    ylin: [31, 31, 31, 29, 27, 26, 26, 29, 31, 32, 32, 31],
+    alin: [23, 22, 21, 21, 18, 17, 16, 18, 20, 22, 22, 22],
+    sade: [136, 121, 107, 115, 86, 84, 53, 55, 52, 97, 104, 141],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Santa Cruz de la Sierrassa lämpötila laskee '
+      + 'kesäkuussa 20,8 asteeseen ja nousee marraskuussa 27,1 '
+      + 'asteeseen. Sadetta tulee joka kuukausi vähintään 52 '
+      + 'millimetriä, eniten joulukuussa 141, ja vuoteen kertyy '
+      + '1 151 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Monterrey", Climate-osio, Weather box
+  // "Monterrey (1991–2020 normals, extremes 1929–present)", luettu
+  // 7.9.2026 — ei Open-Meteo
+  monterrey: {
+    lat: 25.68,
+    lon: -100.32,
+    keskilampo: [15.2, 17.8, 20.9, 24.2, 26.5, 28.6, 28.8, 28.9, 26.1, 23.1, 18.9, 15.6],
+    ylin: [22, 24, 28, 31, 34, 36, 36, 36, 33, 29, 25, 22],
+    alin: [10, 12, 15, 18, 21, 23, 23, 24, 22, 19, 14, 11],
+    sade: [22, 27, 29, 34, 53, 63, 60, 73, 200, 64, 30, 23],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Monterreyn kesä on kuuma: elokuun keskilämpö on '
+      + '28,9 astetta ja kesä-elokuun tyypillinen ylin 36. Sade '
+      + 'painottuu selvästi syyskuuhun, jolloin kertyy 200 '
+      + 'millimetriä — enemmän kuin tammi-huhtikuussa yhteensä. '
+      + 'Vuoden sademäärä on 678 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Mérida, Yucatán", Climate-osio, Weather box
+  // "Mérida (Centro/Observatorio) 1991–2020 normals, extremes
+  // 1951–present", luettu 7.9.2026 — ei Open-Meteo
+  merida: {
+    lat: 20.97,
+    lon: -89.62,
+    keskilampo: [23.8, 24.8, 26.8, 28.7, 29.5, 29, 28.8, 28.9, 28.4, 27.1, 25.4, 24.1],
+    ylin: [31, 32, 35, 36, 37, 35, 35, 35, 34, 33, 32, 31],
+    alin: [17, 18, 19, 21, 22, 23, 23, 23, 23, 21, 19, 18],
+    sade: [34, 27, 26, 25, 67, 152, 143, 152, 184, 99, 42, 45],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Méridassa kuumin kuukausi on toukokuu: keskilämpö '
+      + '29,5 astetta ja tyypillinen ylin 37. Sadekausi alkaa '
+      + 'toukokuussa ja jatkuu lokakuulle, huippuna syyskuun 184 '
+      + 'millimetriä, kun huhtikuussa sataa 25 millimetriä. '
+      + 'Vuosisumma on 996 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Winnipeg", Climate-osio,
+  // Template:Winnipeg weatherbox: "Winnipeg (Winnipeg James
+  // Armstrong Richardson International Airport), 1991–2020 normals,
+  // extremes 1872–present", luettu 7.9.2026 — ei Open-Meteo
+  winnipeg: {
+    lat: 49.90,
+    lon: -97.14,
+    keskilampo: [-16.3, -14.1, -6.1, 3.8, 11.1, 17.1, 19.5, 18.7, 13.3, 5.1, -4.4, -12.7],
+    ylin: [-11, -9, -1, 10, 18, 23, 26, 25, 20, 10, 0, -8],
+    alin: [-21, -19, -11, -2, 4, 11, 13, 12, 7, 0, -9, -17],
+    sade: [18, 13, 26, 33, 70, 74, 77, 74, 53, 38, 25, 19],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Winnipegissä talvi on ankara: tammikuun '
+      + 'keskilämpö on -16,3 astetta ja tyypillinen alin -21. '
+      + 'Heinäkuussa noustaan 19,5 asteeseen, ja silloin sataa myös '
+      + 'eniten, 77 millimetriä, kun helmikuussa kertyy 13. '
+      + 'Vuosisumma on 520 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "St. John's, Newfoundland and Labrador",
+  // Climate-osio, Template:St. John's, Newfoundland and Labrador
+  // weatherbox: "St. John's (St. John's International Airport),
+  // 1991–2020 normals, extremes 1874–present", luettu 7.9.2026 —
+  // ei Open-Meteo
+  stjohns: {
+    lat: 47.58,
+    lon: -52.70,
+    keskilampo: [-4.2, -4.7, -2.2, 1.8, 6.3, 10.8, 16, 16.5, 12.8, 7.8, 3.4, -1],
+    ylin: [-1, -1, 1, 6, 11, 16, 21, 21, 17, 11, 7, 2],
+    alin: [-8, -8, -6, -2, 2, 6, 11, 12, 9, 4, 0, -4],
+    sade: [153, 123, 140, 122, 98, 88, 100, 100, 126, 158, 157, 174],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'St. John’sissa sataa runsaasti ympäri vuoden: '
+      + 'vähäsateisimmassakin kuukaudessa, kesäkuussa, kertyy 88 '
+      + 'millimetriä ja joulukuussa 174. Lämpötila liikkuu '
+      + 'helmikuun -4,7 asteesta elokuun 16,5 asteeseen, ja vuoden '
+      + 'sademäärä nousee 1 539 millimetriin.',
+  },
+  // Lähde: en-Wikipedia "Kumasi", Climate-osio, Weather box "Kumasi
+  // (1991–2020 normals, extremes 1984–2020)", luettu 7.9.2026 — ei
+  // Open-Meteo
+  kumasi: {
+    lat: 6.68,
+    lon: -1.62,
+    keskilampo: [27.4, 28.8, 28.5, 28, 27.5, 26.3, 25.3, 24.9, 25.8, 26.6, 27.4, 27.3],
+    ylin: [33, 35, 34, 33, 32, 30, 29, 28, 30, 31, 32, 32],
+    alin: [22, 23, 23, 23, 23, 22, 22, 22, 22, 22, 23, 22],
+    sade: [25, 49, 110, 164, 174, 227, 126, 69, 175, 176, 50, 28],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Kumasissa sadetta kertyy vuodessa 1 373 '
+      + 'millimetriä, ja se jakautuu kahteen huippuun: kesäkuun 227 '
+      + 'millimetriin ja syys-lokakuun 175–176 millimetriin. '
+      + 'Kuivinta on tammikuussa, 25 millimetriä. Lämpötila pysyy '
+      + 'tasaisena, elokuun 24,9 asteesta helmikuun 28,8 asteeseen.',
+  },
+  // Lähde: en-Wikipedia "Kano (city)", Climate-osio, Weather box
+  // "Kano (1991–2020)", luettu 7.9.2026 — ei Open-Meteo
+  kano: {
+    lat: 12.00,
+    lon: 8.52,
+    keskilampo: [21.3, 24.7, 28.8, 32, 31.8, 29.2, 26.9, 25.9, 27.1, 27.7, 25, 21.9],
+    ylin: [29, 33, 37, 40, 38, 35, 32, 30, 32, 35, 34, 30],
+    alin: [13, 16, 21, 25, 25, 24, 22, 22, 22, 21, 16, 14],
+    sade: [0, 0, 0, 14, 70, 160, 307, 400, 175, 22, 0, 0],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Kanossa marraskuusta maaliskuuhun on täysin '
+      + 'kuivaa — sademäärä on näinä kuukausina nolla millimetriä — '
+      + 'kun elokuussa kertyy 400 millimetriä. Kuuminta on '
+      + 'huhtikuussa, keskilämpö 32 astetta ja tyypillinen ylin 40. '
+      + 'Vuoden sademäärä on 1 148 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Timbuktu", Climate-osio, Weather box
+  // "Timbuktu (1950–2000, extremes 1897–present)", luettu 7.9.2026
+  // — ei Open-Meteo. HUOM: normaalikausi on 1950–2000, EI
+  // 1991–2020 kuten muu paketti.
+  timbuktu: {
+    lat: 16.77,
+    lon: -3.00,
+    keskilampo: [21.5, 24.2, 27.6, 31.3, 34.1, 34.5, 32.2, 30.7, 31.6, 30.9, 26.5, 22],
+    ylin: [30, 33, 37, 40, 42, 42, 39, 37, 38, 39, 35, 30],
+    alin: [13, 15, 19, 23, 26, 27, 26, 25, 25, 23, 18, 14],
+    sade: [1, 0, 0, 1, 4, 16, 54, 74, 29, 4, 0, 0],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1950–2000' },
+    luonnehdinta: 'Timbuktussa on kuumaa ja kuivaa: kesäkuun '
+      + 'keskilämpö on 34,5 astetta ja touko-kesäkuun tyypillinen '
+      + 'ylin 42. Sadetta tulee lähinnä heinä-syyskuussa, huippuna '
+      + 'elokuun 74 millimetriä, ja koko vuoden kertymä on vain 183 '
+      + 'millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Townsville", Climate-osio, Weather box
+  // "Townsville Airport (1991–2020 normals, extremes 1940–present)",
+  // luettu 7.9.2026 — ei Open-Meteo
+  townsville: {
+    lat: -19.26,
+    lon: 146.82,
+    keskilampo: [28.3, 28.2, 27.4, 25.7, 23.1, 20.8, 19.9, 20.7, 23.2, 25.5, 27.1, 28.2],
+    ylin: [32, 32, 31, 30, 28, 26, 26, 27, 28, 30, 31, 32],
+    alin: [25, 25, 24, 21, 18, 15, 14, 15, 18, 21, 23, 25],
+    sade: [253, 338, 157, 54, 26, 17, 14, 20, 10, 24, 61, 122],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Townsvillessä sade keskittyy alkuvuoteen: '
+      + 'helmikuussa kertyy 338 millimetriä, syyskuussa vain '
+      + 'kymmenen. Lämpimintä on tammikuussa, 28,3 astetta, ja '
+      + 'viileintä heinäkuussa, 19,9 astetta. Vuoden sademäärä on '
+      + '1 096 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Iquitos", Climate-osio, Weather box
+  // "Iquitos, Peru (1991–2020, extremes 1947–present)", luettu
+  // 7.9.2026 — ei Open-Meteo
+  iquitos: {
+    lat: -3.75,
+    lon: -73.25,
+    keskilampo: [27.1, 26.9, 27, 26.9, 26.8, 26.5, 26.4, 26.9, 27.3, 27.6, 27.4, 27.2],
+    ylin: [32, 32, 32, 32, 31, 31, 31, 32, 33, 33, 32, 32],
+    alin: [22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22],
+    sade: [283, 264, 299, 275, 254, 201, 170, 172, 203, 246, 266, 282],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Iquitosissa keskilämpö liikkuu vain reilun asteen '
+      + 'verran, heinäkuun 26,4 asteesta lokakuun 27,6 asteeseen. '
+      + 'Sadetta tulee joka kuukausi vähintään 170 millimetriä ja '
+      + 'eniten maaliskuussa 299, joten kuivaa kautta ei ole. '
+      + 'Vuoteen kertyy 2 915 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Whitehorse", Climate-osio,
+  // Template:Whitehorse weatherbox: "Whitehorse (Erik Nielsen
+  // Whitehorse International Airport), 1991–2020 normals, extremes
+  // 1900–present" (artikkelin toinen taulukko on Riverdalen
+  // kaupunginosasta), luettu 7.9.2026 — ei Open-Meteo
+  whitehorse: {
+    lat: 60.72,
+    lon: -135.06,
+    keskilampo: [-15, -11.9, -6.7, 1.6, 7.9, 12.8, 14.5, 12.9, 7.5, 0.8, -8.6, -12.8],
+    ylin: [-11, -7, -1, 7, 14, 19, 21, 19, 12, 4, -5, -9],
+    alin: [-19, -17, -12, -4, 2, 6, 9, 7, 3, -3, -12, -16],
+    sade: [22, 15, 12, 8, 15, 35, 39, 39, 31, 23, 24, 16],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Whitehorsessa talvi on kylmä ja kuiva: tammikuun '
+      + 'keskilämpö on -15 astetta ja huhtikuussa sadetta kertyy '
+      + 'vain kahdeksan millimetriä. Heinäkuussa noustaan 14,5 '
+      + 'asteeseen ja sademäärä on suurimmillaan, 39 millimetriä. '
+      + 'Vuoteen kertyy 279 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Yellowknife", Climate-osio,
+  // Template:Yellowknife weatherbox: "Yellowknife (Yellowknife
+  // Airport), 1991–2020 normals, extremes 1942–present", luettu
+  // 7.9.2026 — ei Open-Meteo
+  yellowknife: {
+    lat: 62.45,
+    lon: -114.37,
+    keskilampo: [-25.5, -22.7, -16.6, -5.5, 5.3, 13.8, 17.1, 14.5, 7.6, -1, -12.6, -21.8],
+    ylin: [-22, -18, -11, 0, 10, 19, 22, 18, 11, 2, -9, -18],
+    alin: [-29, -27, -22, -11, 0, 9, 13, 11, 4, -4, -16, -26],
+    sade: [15, 11, 14, 12, 16, 29, 40, 44, 43, 29, 26, 15],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Yellowknifessä tammikuun keskilämpö on -25,5 '
+      + 'astetta ja tyypillinen alin -29, kun heinäkuussa noustaan '
+      + '17,1 asteeseen — vuoden sisäinen ero on yli neljäkymmentä '
+      + 'astetta. Sadetta kertyy niukasti, vuodessa 294 '
+      + 'millimetriä, ja eniten kesä-syyskuussa.',
+  },
+  // Lähde: en-Wikipedia "Iqaluit", Climate-osio, Template:Iqaluit
+  // weatherbox: "Iqaluit (Iqaluit Airport), 1991–2020 normals,
+  // extremes 1946–present", luettu 7.9.2026 — ei Open-Meteo
+  iqaluit: {
+    lat: 63.75,
+    lon: -68.52,
+    keskilampo: [-26, -27, -22.4, -13.5, -3.2, 3.9, 8.1, 7.5, 2.9, -3.2, -11.1, -18.9],
+    ylin: [-22, -23, -18, -9, 0, 7, 12, 11, 6, 0, -7, -15],
+    alin: [-30, -31, -27, -18, -6, 1, 4, 4, 0, -6, -15, -23],
+    sade: [16, 14, 21, 23, 21, 49, 40, 62, 51, 30, 19, 16],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Iqaluitissa helmikuun keskilämpö on -27 astetta '
+      + 'ja heinäkuun 8,1 — vain neljänä kuukautena vuodesta '
+      + 'keskilämpö on plussan puolella. Sadetta kertyy eniten '
+      + 'elokuussa, 62 millimetriä, ja koko vuonna 362 '
+      + 'millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Santa Fe, New Mexico", Climate-osio,
+  // Weather box "Santa Fe, New Mexico (1991–2020 normals, extremes
+  // 1874–present)"; alkuperä Fahrenheit/tuuma, muunnettu — luettu
+  // 7.9.2026 — ei Open-Meteo
+  santafe: {
+    lat: 35.67,
+    lon: -105.96,
+    keskilampo: [-0.9, 1.5, 5.3, 9.1, 14.1, 19.5, 21.4, 20.3, 16.7, 10.4, 3.7, -1.1],
+    ylin: [6, 9, 14, 18, 23, 29, 30, 29, 25, 19, 12, 6],
+    alin: [-8, -6, -3, 0, 5, 10, 13, 12, 8, 2, -4, -8],
+    sade: [14, 12, 19, 15, 23, 22, 57, 52, 35, 34, 20, 21],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Santa Fessä talvi on pakkasen puolella: joulukuun '
+      + 'keskilämpö on -1,1 astetta ja tammikuun tyypillinen alin '
+      + '-8. Heinäkuussa noustaan 21,4 asteeseen, ja silloin sataa '
+      + 'myös eniten, 57 millimetriä. Vuoden sademäärä jää 324 '
+      + 'millimetriin.',
+  },
+  /*
+   * Erä A 7.9.2026 ilta: 33 lehtikaupunkia ilman sääriviä —
+   * en-Wikipedian ilmastotaulukoista, koska Open-Meteon päiväraja ei
+   * salli koko erää; ks. dunedin-lohkon perustelu.
+   */
+  // Lähde: en-Wikipedia "Kolkata", Climate-osio, Weather box
+  // "Kolkata (Alipore) 1991–2020 normals" (Template:Kolkata
+  // weatherbox); valittu kaupungin oma Alipore-asema lentoaseman
+  // sijaan — luettu 7.9.2026 — ei Open-Meteo
+  kolkata: {
+    lat: 22.57,
+    lon: 88.37,
+    keskilampo: [19.9, 23.8, 28.2, 30.6, 31.2, 30.6, 29.5, 29.4, 29.4, 28.3, 25.1, 21.1],
+    ylin: [26, 29, 34, 35, 36, 34, 33, 32, 33, 32, 30, 27],
+    alin: [14, 18, 23, 26, 27, 27, 27, 27, 26, 24, 20, 16],
+    sade: [15, 25, 37, 55, 119, 277, 372, 372, 325, 180, 33, 6],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Kolkatan vuosi jakautuu jyrkästi kahtia: touko-'
+      + 'lokakuussa sataa runsaasti, heinä- ja elokuussa 372 '
+      + 'millimetriä kumpanakin, kun joulukuussa kertyy vain 6 '
+      + 'millimetriä. Lämpimintä on toukokuussa, keskilämpö 31,2 '
+      + 'astetta, ja viileintä tammikuussa, 19,9 astetta. Koko '
+      + 'vuoden sademäärä nousee 1 816 millimetriin.',
+  },
+  // Lähde: en-Wikipedia "Kabul", Climate-osio, Weather box
+  // "Kabul (1991-2020)", luettu 7.9.2026 — ei Open-Meteo
+  kabul: {
+    lat: 34.53,
+    lon: 69.18,
+    keskilampo: [-0.5, 1.6, 7.3, 13, 17.7, 22.8, 24.9, 24.4, 19.9, 13.4, 7.1, 2.4],
+    ylin: [5, 6, 13, 19, 25, 31, 32, 32, 28, 22, 14, 8],
+    alin: [-5, -3, 2, 7, 11, 15, 18, 17, 12, 5, 0, -3],
+    sade: [42, 64, 79, 68, 28, 1, 6, 3, 2, 6, 18, 29],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Kabulin vuodessa on selvä talvi: tammikuun '
+      + 'keskilämpö jää -0,5 asteeseen ja alin -5 asteeseen, kun '
+      + 'heinäkuussa noustaan 24,9 asteeseen. Sade osuu talveen ja '
+      + 'kevääseen, maaliskuussa 79 millimetriä, ja kesä on lähes '
+      + 'kuiva — kesäkuussa vain 1 millimetri. Koko vuoden '
+      + 'sademäärä on 346 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Chennai", Climate-osio (taulukko nostetaan
+  // sivulta "Geography of Chennai"), Weather box "Chennai
+  // (Nungambakkam; rainfall from Chennai Airport), 1991–2020
+  // normals", luettu 7.9.2026 — ei Open-Meteo
+  chennai: {
+    lat: 13.08,
+    lon: 80.27,
+    keskilampo: [25.4, 26.7, 28.7, 31, 33, 32.3, 31, 30.3, 29.8, 28.5, 26.7, 25.6],
+    ylin: [29, 31, 33, 35, 37, 37, 35, 35, 34, 32, 30, 29],
+    alin: [21, 22, 24, 27, 28, 28, 26, 26, 26, 25, 23, 22],
+    sade: [20, 5, 3, 18, 50, 75, 113, 141, 144, 278, 377, 184],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Chennaissa on lämmintä ympäri vuoden: '
+      + 'viileimmässäkin kuukaudessa tammikuussa keskilämpö on 25,4 '
+      + 'astetta ja toukokuussa 33 astetta. Sade keskittyy syksyyn — '
+      + 'marraskuussa kertyy 377 ja lokakuussa 278 millimetriä, kun '
+      + 'maaliskuussa sataa vain 3. Vuosisumma on 1 408 '
+      + 'millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Mumbai", Climate-osio, Weather box
+  // "Mumbai (Chhatrapati Shivaji Maharaj International Airport,
+  // Santacruz) 1991–2020"; artikkelin ainoa taulukko — luettu
+  // 7.9.2026 — ei Open-Meteo
+  mumbai: {
+    lat: 18.98,
+    lon: 72.83,
+    keskilampo: [24.6, 25.3, 27.6, 28.8, 30.2, 29.3, 27.9, 27.8, 27.9, 29, 28, 25.8],
+    ylin: [31, 32, 33, 33, 34, 33, 30, 30, 31, 34, 34, 33],
+    alin: [17, 18, 21, 24, 27, 27, 26, 25, 25, 24, 21, 18],
+    sade: [0, 0, 0, 0, 7, 526, 920, 561, 384, 91, 11, 2],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Mumbain kuiva kausi on täydellinen: tammi-'
+      + 'huhtikuussa sademäärä on nolla millimetriä. Kesällä '
+      + 'tilanne kääntyy päinvastaiseksi — heinäkuussa sataa 920 '
+      + 'millimetriä ja elokuussa 561 — ja vuosisumma nousee 2 502 '
+      + 'millimetriin. Lämpötila pysyy tasaisena, tammikuun 24,6 '
+      + 'asteesta toukokuun 30,2 asteeseen.',
+  },
+  // Lähde: en-Wikipedia "Colombo", Climate-osio, Weather box
+  // "Colombo, Sri Lanka (1991–2020 normals, extremes 1961–2020)",
+  // luettu 7.9.2026 — ei Open-Meteo
+  colombo: {
+    lat: 6.93,
+    lon: 79.84,
+    keskilampo: [27.2, 27.6, 28.4, 28.7, 28.9, 28.4, 28.1, 28.1, 27.9, 27.5, 27.3, 27.2],
+    ylin: [31, 32, 32, 32, 32, 31, 30, 30, 30, 30, 31, 31],
+    alin: [23, 24, 25, 25, 26, 26, 26, 26, 25, 25, 24, 24],
+    sade: [80, 77, 103, 249, 314, 197, 123, 116, 264, 359, 346, 171],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Colombossa keskilämpö liikkuu koko vuoden '
+      + 'kapealla välillä 27,2–28,9 astetta. Sadetta tulee joka '
+      + 'kuukausi, mutta eniten touko- ja loka-marraskuussa: '
+      + 'lokakuussa 359 ja marraskuussa 346 millimetriä, kun '
+      + 'helmikuussa jäädään 77 millimetriin. Vuoden kertymä on '
+      + '2 399 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Karachi", Climate-osio, Weather box
+  // "Karachi (1991–2020 normals)", luettu 7.9.2026 — ei Open-Meteo
+  karachi: {
+    lat: 24.86,
+    lon: 67.01,
+    keskilampo: [18.9, 21.7, 25.9, 29.4, 31.4, 32.2, 30.8, 29.6, 29.7, 29.4, 25.2, 20.9],
+    ylin: [26, 29, 33, 35, 36, 36, 34, 33, 33, 36, 33, 28],
+    alin: [12, 15, 19, 24, 27, 29, 28, 27, 26, 23, 18, 13],
+    sade: [11, 6, 3, 11, 9, 25, 86, 105, 44, 13, 1, 6],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Karachi on kuiva kaupunki: koko vuoden sademäärä '
+      + 'on vain 320 millimetriä, ja siitä yli puolet sataa heinä-'
+      + 'elokuussa, 86 ja 105 millimetriä. Marraskuussa kertyy yksi '
+      + 'millimetri. Lämpötila vaihtelee tammikuun 18,9 asteesta '
+      + 'kesäkuun 32,2 asteeseen.',
+  },
+  // Lähde: en-Wikipedia "Auckland", Climate-osio, Weather box
+  // "Auckland Airport (17 km S of Auckland, 1991–2020 normals)";
+  // artikkelin neljästä taulukosta yksikään ei ole keskustassa,
+  // joten valittiin virallinen lentoaseman asema — luettu 7.9.2026
+  // — ei Open-Meteo
+  auckland: {
+    lat: -36.85,
+    lon: 174.77,
+    keskilampo: [20, 20.5, 18.9, 16.6, 14.2, 12.1, 11.2, 11.7, 13.1, 14.6, 16.2, 18.5],
+    ylin: [24, 24, 23, 20, 18, 16, 15, 15, 17, 18, 20, 22],
+    alin: [16, 17, 15, 13, 11, 9, 8, 8, 10, 11, 13, 15],
+    sade: [58, 63, 75, 87, 120, 119, 137, 117, 100, 92, 69, 82],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Aucklandin vuodenkierto on leuto: helmikuun 20,5 '
+      + 'asteesta laskeudutaan heinäkuun 11,2 asteeseen, eikä alin '
+      + 'lämpötila käy minään kuukautena pakkasella. Sadetta tulee '
+      + 'ympäri vuoden, kesällä vähemmän (tammikuussa 58 '
+      + 'millimetriä) ja talvella enemmän (heinäkuussa 137). '
+      + 'Vuosisumma on 1 119 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Buenos Aires", Climate-osio, Weather box
+  // "Buenos Aires Central Observatory, located in Agronomía
+  // (1991–2020, extremes 1906–present)", luettu 7.9.2026 — ei
+  // Open-Meteo
+  buenosaires: {
+    lat: -34.61,
+    lon: -58.37,
+    keskilampo: [24.9, 23.8, 22, 18.2, 14.8, 12, 11, 13, 14.9, 17.9, 20.9, 23.6],
+    ylin: [30, 29, 27, 23, 19, 16, 16, 18, 20, 23, 26, 29],
+    alin: [20, 19, 18, 14, 11, 8, 8, 9, 11, 13, 16, 19],
+    sade: [134, 129, 120, 130, 94, 62, 74, 70, 81, 123, 118, 123],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Buenos Airesin kesä osuu tammikuulle, jolloin '
+      + 'keskilämpö on 24,9 astetta; talven pohja on heinäkuussa 11 '
+      + 'asteessa. Sadetta tulee joka kuukausi, kesällä enemmän — '
+      + 'tammikuussa 134 millimetriä ja kesäkuussa 62. Vuoden '
+      + 'kertymä on 1 258 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Rio de Janeiro", Climate-osio, Weather box
+  // "Rio de Janeiro (Saúde), elevation 11 m, (1981–2010 normals)";
+  // valittu keskustan asema kaupungin viiden taulukon joukosta.
+  // HUOM: normaalikausi on 1981–2010 — luettu 7.9.2026 — ei
+  // Open-Meteo
+  rio: {
+    lat: -22.91,
+    lon: -43.21,
+    keskilampo: [27.8, 28.3, 27.6, 26.5, 24.3, 23, 22.6, 23.1, 23.2, 24.7, 25.9, 26.8],
+    ylin: [32, 32, 31, 30, 28, 27, 26, 27, 27, 28, 29, 30],
+    alin: [24, 24, 24, 23, 21, 19, 19, 19, 20, 21, 22, 23],
+    sade: [137, 130, 136, 95, 70, 43, 42, 45, 54, 87, 98, 134],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1981–2010' },
+    luonnehdinta: 'Rio de Janeirossa on lämmintä läpi vuoden: '
+      + 'heinäkuunkin keskilämpö on 22,6 astetta ja helmikuussa '
+      + 'noustaan 28,3 asteeseen. Sateisinta on eteläisen '
+      + 'pallonpuoliskon kesällä, tammikuussa 137 millimetriä, kun '
+      + 'heinäkuussa kertyy 42. Vuosisumma on 1 071 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Sydney", Climate-osio, Template:Sydney
+  // weatherbox: "Sydney (Observatory Hill) 1991–2020 averages",
+  // luettu 7.9.2026 — ei Open-Meteo
+  sydney: {
+    lat: -33.87,
+    lon: 151.21,
+    keskilampo: [23.5, 23.4, 22.1, 19.5, 16.6, 14.2, 13.4, 14.5, 17, 18.9, 20.4, 22.1],
+    ylin: [27, 27, 26, 24, 21, 18, 18, 19, 22, 23, 24, 26],
+    alin: [20, 20, 18, 15, 12, 10, 9, 10, 12, 15, 17, 18],
+    sade: [91, 132, 118, 114, 101, 142, 80, 75, 63, 68, 91, 73],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Sydneyn talvi on lauha: heinäkuun keskilämpö on '
+      + '13,4 astetta, kun tammikuussa mitataan 23,5. Sadetta '
+      + 'riittää joka kuukausi vähintään 63 millimetriä, ja '
+      + 'sateisin kuukausi on kesäkuu 142 millimetrillään. Vuoden '
+      + 'kertymä on 1 148 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Wellington", Climate-osio, Weather box
+  // "Wellington (Kelburn) (1991–2020 normals)"; valittu kaupungin
+  // asema lentoaseman sijaan — luettu 7.9.2026 — ei Open-Meteo
+  wellington: {
+    lat: -41.29,
+    lon: 174.78,
+    keskilampo: [17, 17.3, 15.9, 13.8, 12, 9.9, 9.2, 9.7, 10.9, 12.1, 13.5, 15.6],
+    ylin: [20, 21, 19, 17, 15, 12, 12, 12, 14, 15, 17, 19],
+    alin: [14, 14, 13, 11, 9, 7, 7, 7, 8, 9, 10, 12],
+    sade: [79, 56, 100, 127, 145, 124, 147, 139, 108, 119, 85, 91],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Wellingtonissa vuodenaikojen ero on pieni: '
+      + 'helmikuun 17,3 asteesta heinäkuun 9,2 asteeseen. Sade '
+      + 'painottuu talveen, heinäkuussa 147 millimetriä ja '
+      + 'helmikuussa 56, mutta yhtään kuivaa kuukautta ei ole. '
+      + 'Vuosisumma on 1 320 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Montreal", Climate-osio, Template:Montréal
+  // –Trudeau weatherbox: "Montreal (Montréal–Trudeau International
+  // Airport), 1991−2020 normals"; artikkelin ainoa taulukko on
+  // lentoasemalta — luettu 7.9.2026 — ei Open-Meteo
+  montreal: {
+    lat: 45.55,
+    lon: -73.64,
+    keskilampo: [-9.2, -8, -2, 6.2, 13.9, 19, 21.7, 20.6, 16, 8.9, 2.3, -5],
+    ylin: [-5, -3, 2, 11, 19, 24, 27, 26, 21, 13, 6, -1],
+    alin: [-13, -12, -6, 1, 8, 14, 17, 16, 11, 5, -2, -9],
+    sade: [86, 66, 77, 90, 86, 84, 91, 94, 89, 103, 84, 92],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Montrealissa talvi on kunnon pakkastalvi: '
+      + 'tammikuun keskilämpö on -9,2 astetta ja alin -13. '
+      + 'Heinäkuussa noustaan 21,7 asteeseen. Sadetta kertyy joka '
+      + 'kuukausi 66–103 millimetriä ilman kuivaa kautta, ja '
+      + 'vuosisumma on 1 042 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Melbourne", Climate-osio, Weather box
+  // "Melbourne (Olympic Park) (1991–2020 averages)"; valittu
+  // keskustan asema lentoaseman sijaan — luettu 7.9.2026 — ei
+  // Open-Meteo
+  melbourne: {
+    lat: -37.81,
+    lon: 144.96,
+    keskilampo: [21.1, 21.1, 19.4, 16.3, 13.6, 11.3, 10.7, 11.6, 13.3, 15.1, 17.3, 19.1],
+    ylin: [27, 27, 25, 21, 18, 15, 14, 15, 18, 20, 22, 24],
+    alin: [16, 16, 14, 12, 10, 8, 7, 8, 9, 10, 12, 14],
+    sade: [43, 41, 41, 52, 51, 49, 48, 51, 54, 55, 54, 58],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Melbournen vuosi on maltillinen: tammi-helmikuun '
+      + '21,1 asteesta heinäkuun 10,7 asteeseen. Sade jakautuu '
+      + 'poikkeuksellisen tasan, 41 millimetristä 58 millimetriin '
+      + 'kuukaudessa, joten selvää sadekautta ei ole. Vuosisumma '
+      + 'jää 597 millimetriin.',
+  },
+  // Lähde: en-Wikipedia "Vancouver", Climate-osio,
+  // Template:Vancouver weatherbox: "Richmond (Vancouver
+  // International Airport), 1991–2020 normals"; artikkelin ainoa
+  // taulukko on lentoasemalta — luettu 7.9.2026 — ei Open-Meteo
+  vancouver: {
+    lat: 49.26,
+    lon: -123.14,
+    keskilampo: [4.1, 4.7, 6.7, 9.4, 13, 15.8, 18.2, 18.2, 15.2, 10.3, 6.4, 3.9],
+    ylin: [7, 8, 10, 13, 17, 20, 22, 22, 19, 14, 9, 7],
+    alin: [1, 2, 3, 6, 9, 12, 14, 14, 11, 7, 4, 1],
+    sade: [174, 91, 106, 86, 59, 51, 34, 36, 52, 124, 175, 172],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Vancouverin sadekausi on talvella: marraskuussa '
+      + 'kertyy 175 ja tammikuussa 174 millimetriä, kun heinäkuussa '
+      + 'sataa vain 34. Lämpötila pysyy leutona, joulukuun 3,9 '
+      + 'asteesta heinä-elokuun 18,2 asteeseen. Vuoden sademäärä on '
+      + '1 160 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Brisbane", Climate-osio, Weather box
+  // "Brisbane (1999–2024 normals)", luettu 7.9.2026 — ei
+  // Open-Meteo. HUOM: normaalikausi on 1999–2024, EI 1991–2020
+  // kuten muu paketti.
+  brisbane: {
+    lat: -27.47,
+    lon: 153.03,
+    keskilampo: [26.1, 25.9, 24.8, 22.3, 19.2, 17, 16.3, 17.3, 19.8, 21.8, 23.6, 25.1],
+    ylin: [30, 30, 29, 27, 25, 22, 22, 24, 26, 27, 28, 30],
+    alin: [22, 22, 20, 17, 14, 12, 11, 11, 14, 17, 19, 21],
+    sade: [141, 182, 129, 61, 70, 57, 30, 35, 30, 86, 100, 140],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1999–2024' },
+    luonnehdinta: 'Brisbanessa on lämmintä ympäri vuoden: '
+      + 'heinäkuunkin keskilämpö on 16,3 astetta ja tammikuussa '
+      + '26,1. Sade painottuu kesään — helmikuussa 182 millimetriä '
+      + '— kun heinä- ja syyskuussa kertyy 30. Vuosisumma on '
+      + '1 061 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Chicago", Climate-osio, Template:Chicago
+  // weatherbox: "Chicago (Midway International Airport), 1991–2020
+  // normals"; valittu keskustaa lähempi Midway O'Haren sijaan;
+  // alkuperä Fahrenheit/tuuma, muunnettu — luettu 7.9.2026 — ei
+  // Open-Meteo
+  chicago: {
+    lat: 41.88,
+    lon: -87.63,
+    keskilampo: [-3.2, -1.2, 4.4, 10.5, 16.6, 22.2, 24.8, 23.9, 19.9, 12.9, 5.8, -0.3],
+    ylin: [0, 3, 9, 16, 22, 27, 30, 28, 25, 18, 10, 3],
+    alin: [-7, -5, 0, 5, 11, 17, 20, 19, 15, 8, 2, -4],
+    sade: [58, 54, 68, 105, 121, 115, 102, 104, 85, 98, 69, 59],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Chicagon tammikuu on pakkasella: keskilämpö on '
+      + '-3,2 astetta ja alin -7, kun heinäkuussa noustaan 24,8 '
+      + 'asteeseen. Sadetta tulee eniten touko-kesäkuussa, '
+      + 'toukokuussa 121 millimetriä, ja vähiten helmikuussa, 54. '
+      + 'Vuosisumma on 1 038 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Perth", Climate-osio, Weather box "Perth
+  // Metro" (Bureau of Meteorology), luettu 7.9.2026 — ei
+  // Open-Meteo. HUOM: taulukossa ei ole ilmoitettua
+  // normaalikautta; asema avattu 1993 (en-Wikipedia "Climate of
+  // Perth") ja lähdeviite luettu 2023, joten kausi on 1993–2023.
+  perth: {
+    lat: -31.96,
+    lon: 115.86,
+    keskilampo: [24.8, 25, 23.3, 19.9, 16.5, 14.1, 13.3, 13.9, 15.2, 17.6, 20.6, 23.1],
+    ylin: [31, 32, 30, 26, 22, 20, 19, 19, 21, 24, 27, 30],
+    alin: [18, 18, 17, 14, 11, 9, 8, 9, 10, 12, 14, 17],
+    sade: [17, 13, 20, 36, 86, 127, 147, 123, 79, 40, 24, 9],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1993–2023' },
+    luonnehdinta: 'Perthissä kesä on kuiva ja talvi sateinen: '
+      + 'joulukuussa sataa 9 millimetriä, heinäkuussa 147. '
+      + 'Lämpötila kulkee päinvastaiseen suuntaan, helmikuun 25 '
+      + 'asteesta heinäkuun 13,3 asteeseen. Koko vuoden sademäärä '
+      + 'on 721 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "São Paulo", Climate-osio, Weather box
+  // "São Paulo (Mirante de Santana), elevation 785 m, (1991–2020
+  // normals)"; valittu kaupungin oma asema — luettu 7.9.2026 — ei
+  // Open-Meteo
+  saopaulo: {
+    lat: -23.55,
+    lon: -46.63,
+    keskilampo: [23.1, 22.5, 22.5, 21.2, 18.4, 17, 16.3, 18.1, 19.1, 20.5, 21.2, 22.3],
+    ylin: [29, 29, 28, 27, 23, 23, 23, 25, 25, 27, 27, 28],
+    alin: [19, 20, 19, 18, 15, 14, 13, 13, 15, 17, 17, 19],
+    sade: [240, 258, 229, 87, 66, 60, 48, 20, 83, 127, 144, 231],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'São Paulon vuosi jakautuu sateiseen kesään ja '
+      + 'kuivaan talveen: helmikuussa kertyy 258 millimetriä, '
+      + 'elokuussa 20. Lämpötilaero on pieni, heinäkuun 16,3 '
+      + 'asteesta tammikuun 23,1 asteeseen. Vuosisumma on 1 593 '
+      + 'millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Toronto", Climate-osio, Template:Toronto
+  // weatherbox: "Toronto (The Annex), 1991–2020 normals"; valittu
+  // keskustan asema — luettu 7.9.2026 — ei Open-Meteo
+  toronto: {
+    lat: 43.65,
+    lon: -79.38,
+    keskilampo: [-3.5, -2.7, 1.7, 7.8, 14.5, 19.8, 22.5, 21.9, 17.9, 11.2, 5.2, -0.1],
+    ylin: [0, 1, 5, 12, 19, 24, 27, 26, 22, 15, 8, 3],
+    alin: [-7, -6, -2, 4, 10, 15, 18, 18, 14, 8, 2, -3],
+    sade: [65, 54, 53, 78, 76, 82, 77, 72, 69, 69, 71, 58],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Torontossa tammikuun keskilämpö on -3,5 astetta '
+      + 'ja heinäkuun 22,5, joten vuodenaikojen ero on 26 astetta. '
+      + 'Sade jakautuu tasaisesti, maaliskuun 53 millimetristä '
+      + 'kesäkuun 82 millimetriin. Vuosisumma on 824 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Lima", Climate-osio, Weather box "Lima
+  // (Campo de Marte), elevation 123 m, (1991–2020)"; valittu
+  // kaupungin asema lentoaseman sijaan — luettu 7.9.2026 — ei
+  // Open-Meteo
+  lima: {
+    lat: -12.06,
+    lon: -77.04,
+    keskilampo: [23, 24.1, 23.7, 21.7, 19.2, 17.5, 16.7, 16.1, 16.4, 17.4, 18.9, 20.8],
+    ylin: [26, 27, 27, 25, 21, 19, 18, 18, 18, 19, 21, 23],
+    alin: [20, 21, 21, 19, 17, 16, 15, 15, 15, 15, 17, 18],
+    sade: [1, 1, 0, 0, 0, 1, 2, 2, 1, 1, 1, 0],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Limassa ei käytännössä sada: koko vuoden kertymä '
+      + 'on 10 millimetriä, ja maalis-toukokuussa sekä joulukuussa '
+      + 'sademäärä on nolla. Lämpötila liikkuu elokuun 16,1 '
+      + 'asteesta helmikuun 24,1 asteeseen, joten vuodenaikojen ero '
+      + 'jää kahdeksaan asteeseen.',
+  },
+  // Lähde: en-Wikipedia "Quito", Climate-osio, Weather box "Quito
+  // (Mariscal Sucre International Airport) (1991–2020 normals)";
+  // artikkelin ainoa taulukko — luettu 7.9.2026 — ei Open-Meteo
+  quito: {
+    lat: -0.22,
+    lon: -78.51,
+    keskilampo: [13.9, 13.9, 14.1, 14.1, 14.2, 14.2, 14.3, 14.5, 14.5, 14.2, 13.8, 13.9],
+    ylin: [20, 20, 20, 20, 21, 21, 21, 22, 21, 21, 20, 20],
+    alin: [9, 9, 9, 9, 9, 9, 8, 8, 8, 9, 9, 9],
+    sade: [81, 109, 142, 168, 121, 41, 22, 32, 69, 112, 109, 94],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Quitossa lämpötila ei tunne vuodenaikoja: '
+      + 'keskilämpö pysyy joka kuukausi 13,8 ja 14,5 asteen '
+      + 'välissä. Vuoden rytmin tekee sade — huhtikuussa 168 '
+      + 'millimetriä, heinäkuussa vain 22. Vuosisumma on 1 100 '
+      + 'millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Los Angeles", Climate-osio,
+  // Template:Los Angeles weatherbox: "Los Angeles (Dodger Stadium,
+  // Downtown), 1991–2020 normals"; valittu keskustan asema LAX:n
+  // sijaan; alkuperä Fahrenheit/tuuma, muunnettu — luettu 7.9.2026
+  // — ei Open-Meteo
+  losangeles: {
+    lat: 34.05,
+    lon: -118.25,
+    keskilampo: [14.7, 15, 16.2, 17.6, 18.8, 20.7, 22.9, 23.7, 23.1, 20.7, 17.2, 14.3],
+    ylin: [20, 20, 21, 22, 23, 25, 28, 29, 28, 26, 23, 20],
+    alin: [9, 10, 11, 13, 15, 16, 18, 19, 18, 16, 12, 9],
+    sade: [84, 92, 57, 18, 8, 2, 1, 0, 3, 15, 20, 63],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Los Angelesin kesä on käytännössä sateeton: '
+      + 'elokuussa sademäärä on nolla ja heinäkuussa yksi '
+      + 'millimetri. Sade tulee talvella, helmikuussa 92 '
+      + 'millimetriä, ja vuosisumma jää 363 millimetriin. '
+      + 'Lämpötila on leuto ympäri vuoden, joulukuun 14,3 asteesta '
+      + 'elokuun 23,7 asteeseen.',
+  },
+  // Lähde: en-Wikipedia "Montevideo", Climate-osio, Weather box
+  // "Montevideo (Prado), 1991–2020 normals"; valittu kaupungin
+  // asema lentoaseman sijaan — luettu 7.9.2026 — ei Open-Meteo
+  montevideo: {
+    lat: -34.91,
+    lon: -56.19,
+    keskilampo: [23.3, 22.8, 21.2, 18.1, 14.8, 11.9, 11, 12.6, 13.9, 16.5, 19.2, 21.8],
+    ylin: [28, 27, 25, 22, 19, 16, 15, 17, 18, 21, 24, 26],
+    alin: [19, 19, 17, 14, 11, 8, 7, 9, 10, 12, 15, 17],
+    sade: [95, 94, 106, 111, 83, 89, 93, 90, 92, 102, 96, 91],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Montevideossa sade jakautuu tasan koko vuodelle: '
+      + 'kuukausisummat pysyvät 83 ja 111 millimetrin välissä, eikä '
+      + 'kuivaa kautta ole lainkaan. Lämpötila vaihtelee heinäkuun '
+      + '11 asteesta tammikuun 23,3 asteeseen. Vuoden kertymä on '
+      + '1 142 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Havana", Climate-osio, Weather box
+  // "Havana (Havana Province, Casa Blanca Station) 1991–2020
+  // normals", luettu 7.9.2026 — ei Open-Meteo
+  havanna: {
+    lat: 23.13,
+    lon: -82.37,
+    keskilampo: [22.2, 22.4, 23.7, 24.8, 26.1, 27, 27.6, 27.9, 27.4, 26.1, 24.5, 23],
+    ylin: [27, 27, 29, 30, 31, 32, 32, 32, 32, 31, 29, 27],
+    alin: [19, 19, 20, 22, 23, 24, 24, 25, 24, 23, 22, 20],
+    sade: [56, 59, 54, 58, 120, 168, 125, 145, 176, 140, 83, 58],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Havannassa talvikin on lämmin: tammikuun '
+      + 'keskilämpö on 22,2 astetta ja elokuun 27,9. Sadekausi osuu '
+      + 'touko-lokakuulle, huippuna syyskuun 176 millimetriä, kun '
+      + 'maaliskuussa kertyy 54. Vuosisumma on 1 242 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Mexico City", Climate-osio, Weather box
+  // "Ciudad de México (Tacubaya), normals 1991–2020", luettu
+  // 7.9.2026 — ei Open-Meteo
+  mexico: {
+    lat: 19.41,
+    lon: -99.13,
+    keskilampo: [15.4, 16.9, 18.6, 20.3, 20.4, 19.8, 18.8, 18.9, 18.4, 17.6, 16.4, 15.4],
+    ylin: [22, 24, 26, 28, 27, 26, 25, 25, 24, 24, 23, 22],
+    alin: [9, 10, 11, 13, 14, 14, 13, 13, 13, 12, 10, 9],
+    sade: [12, 6, 12, 24, 59, 133, 174, 176, 158, 71, 17, 5],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Mexicossa lämpötila pysyy vuodesta toiseen '
+      + 'samoissa lukemissa, tammikuun 15,4 asteesta toukokuun 20,4 '
+      + 'asteeseen. Sade sen sijaan jakautuu jyrkästi: kesä-'
+      + 'syyskuussa kertyy yli 130 millimetriä kuukaudessa, '
+      + 'elokuussa 176, kun joulukuussa sataa 5 millimetriä. '
+      + 'Vuosisumma on 847 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "New Orleans", Climate-osio, Weather box
+  // "Audubon Park, New Orleans (1991–2020 normals)"; valittu
+  // kaupungin sisällä oleva asema lentoaseman sijaan; alkuperä
+  // Fahrenheit/tuuma, muunnettu — luettu 7.9.2026 — ei Open-Meteo
+  neworleans: {
+    lat: 29.95,
+    lon: -90.07,
+    keskilampo: [13, 15.2, 18.4, 21.9, 25.9, 28.7, 29.6, 29.7, 27.7, 23.1, 17.6, 14.3],
+    ylin: [18, 20, 24, 27, 31, 34, 34, 34, 32, 28, 23, 19],
+    alin: [8, 10, 13, 17, 21, 24, 25, 25, 23, 18, 13, 9],
+    sade: [126, 105, 117, 127, 137, 187, 223, 173, 145, 91, 96, 115],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'New Orleansin kesä on kuuma ja sateinen: elokuun '
+      + 'keskilämpö on 29,7 astetta ja heinäkuussa sataa 223 '
+      + 'millimetriä. Talvi on leuto, tammikuun keskilämpö 13 '
+      + 'astetta, eikä sekään ole kuiva — vähäsateisimmassakin '
+      + 'kuukaudessa lokakuussa kertyy 91 millimetriä. Vuosisumma '
+      + 'on 1 642 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Bogotá", Climate-osio, Weather box
+  // "Bogotá (El Dorado International Airport), elevation 2547 m,
+  // (1991–2020)"; valittu 1991–2020, koska artikkelin toinen
+  // taulukko on kaudelta 1971–2000 — luettu 7.9.2026 — ei
+  // Open-Meteo
+  bogota: {
+    lat: 4.71,
+    lon: -74.07,
+    keskilampo: [13.6, 14, 14.1, 14.3, 14.3, 14.2, 13.8, 13.8, 13.8, 13.7, 13.8, 13.7],
+    ylin: [20, 20, 20, 20, 19, 19, 19, 19, 19, 19, 19, 20],
+    alin: [6, 8, 9, 10, 10, 9, 9, 8, 8, 8, 9, 8],
+    sade: [33, 51, 83, 117, 109, 57, 49, 44, 57, 108, 107, 61],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Bogotássa keskilämpö pysyy koko vuoden 13,6 ja '
+      + '14,3 asteen välissä, joten vuodenajat erottaa vain '
+      + 'sateesta. Sateessa on kaksi huippua: huhtikuussa 117 ja '
+      + 'lokakuussa 108 millimetriä, kun tammikuussa kertyy 33. '
+      + 'Vuosisumma on 876 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Adelaide", Climate-osio, Weather box
+  // "Adelaide (Kent Town) (1991–2020 averages)"; valittu keskustan
+  // asema lentoaseman sijaan — luettu 7.9.2026 — ei Open-Meteo
+  adelaide: {
+    lat: -34.93,
+    lon: 138.60,
+    keskilampo: [23.8, 23.6, 21, 17.9, 14.6, 12.3, 11.7, 12.4, 14.6, 17.1, 19.8, 21.7],
+    ylin: [30, 30, 27, 23, 19, 16, 16, 17, 19, 23, 25, 28],
+    alin: [18, 18, 15, 13, 10, 8, 8, 8, 10, 12, 14, 16],
+    sade: [21, 20, 25, 38, 59, 78, 71, 67, 60, 40, 31, 28],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Adelaidessa sataa vähän: koko vuoden kertymä on '
+      + '538 millimetriä, ja siitä suurin osa talvikuukausina — '
+      + 'kesäkuussa 78 millimetriä, helmikuussa vain 20. Lämpötila '
+      + 'kulkee tammikuun 23,8 asteesta heinäkuun 11,7 asteeseen.',
+  },
+  // Lähde: en-Wikipedia "Hobart", Climate-osio, Weather box
+  // "Hobart Airport (Cambridge) 1991–2020 averages"; artikkelin
+  // ainoa taulukko on lentoasemalta — luettu 7.9.2026 — ei
+  // Open-Meteo
+  hobart: {
+    lat: -42.88,
+    lon: 147.32,
+    keskilampo: [17.9, 17.5, 16.1, 13.5, 11.3, 9.1, 8.7, 9.5, 11.1, 12.8, 14.6, 16.3],
+    ylin: [23, 23, 21, 18, 16, 13, 13, 14, 16, 18, 20, 21],
+    alin: [13, 12, 11, 9, 7, 5, 4, 5, 6, 8, 10, 11],
+    sade: [41, 35, 34, 36, 30, 39, 34, 46, 40, 40, 42, 47],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Hobartin vuosi on viileä ja tasainen: tammikuun '
+      + '17,9 asteesta heinäkuun 8,7 asteeseen. Sade jakautuu '
+      + 'poikkeuksellisen tasan, 30 millimetristä 47 millimetriin '
+      + 'kuukaudessa, ja vuosisumma jää 464 millimetriin.',
+  },
+  // Lähde: en-Wikipedia "Darwin, Northern Territory", Climate-osio,
+  // Weather box "Darwin Airport, Northern Territory, Australia,
+  // 1991–2020 averages"; taulukossa ei ole mean-riviä, joten
+  // keskilämpö on laskettu (ylin+alin)/2 — luettu 7.9.2026 — ei
+  // Open-Meteo
+  darwin: {
+    lat: -12.44,
+    lon: 130.84,
+    keskilampo: [28.6, 28.4, 28.6, 28.6, 27.3, 25.6, 25.2, 25.9, 28, 29.3, 29.6, 29.3],
+    ylin: [32, 32, 32, 33, 32, 31, 31, 32, 33, 34, 34, 33],
+    alin: [25, 25, 25, 24, 22, 20, 19, 20, 23, 25, 25, 26],
+    sade: [471, 412, 314, 105, 21, 2, 1, 1, 14, 69, 144, 279],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Darwinissa on kuuma joka kuukausi, 25,2 asteesta '
+      + '29,6 asteeseen, mutta vuosi jakautuu kahteen jyrkästi '
+      + 'erilaiseen kauteen. Marras-huhtikuussa sataa rankasti — '
+      + 'tammikuussa 471 millimetriä — ja kesä-elokuussa tuskin '
+      + 'lainkaan, heinä- ja elokuussa yksi millimetri. Vuosisumma '
+      + 'on 1 833 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Port Moresby", Climate-osio, Weather box
+  // "Port Moresby, Papua New Guinea", luettu 7.9.2026 — ei
+  // Open-Meteo. HUOM: taulukon lähteet ovat WMO ja Deutscher
+  // Wetterdienst, jonka normaalit ovat kaudelta 1961–1990; siitä
+  // lahde-kentän kausi.
+  portmoresby: {
+    lat: -9.48,
+    lon: 147.15,
+    keskilampo: [27.4, 27.3, 27.1, 27, 26.9, 26.1, 25.7, 26.1, 26.5, 27.5, 27.6, 27.8],
+    ylin: [32, 32, 31, 31, 31, 30, 30, 30, 31, 32, 33, 32],
+    alin: [24, 24, 23, 24, 24, 23, 22, 23, 23, 24, 24, 24],
+    sade: [192, 141, 190, 105, 56, 22, 14, 12, 14, 15, 40, 98],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1961–1990' },
+    luonnehdinta: 'Port Moresbyssä lämpötila pysyy 25,7 ja 27,8 '
+      + 'asteen välissä koko vuoden. Eron tekee sade: joulu-'
+      + 'huhtikuussa sitä kertyy runsaasti, tammikuussa 192 '
+      + 'millimetriä, kun touko-lokakuussa jäädään alle 60 '
+      + 'millimetrin ja elokuussa 12 millimetriin. Vuosisumma on '
+      + '899 millimetriä.',
+  },
+  // Lähde: en-Wikipedia "Valparaíso", Climate-osio, Weather box
+  // "Valparaíso, Chile (Punta Angeles Lighthouse) 1991–2020
+  // normals"; valittu kaupungin asema lentokentän sijaan — luettu
+  // 7.9.2026 — ei Open-Meteo
+  valparaiso: {
+    lat: -33.05,
+    lon: -71.62,
+    keskilampo: [17.9, 17.9, 16.8, 15.2, 13.9, 12.6, 12.1, 12.5, 13.2, 14.1, 15.4, 16.6],
+    ylin: [22, 22, 22, 20, 19, 17, 16, 17, 17, 19, 20, 22],
+    alin: [14, 14, 13, 11, 10, 9, 8, 8, 10, 10, 11, 12],
+    sade: [0, 1, 3, 15, 66, 106, 67, 61, 25, 13, 4, 3],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Valparaísossa kesä on kuiva: tammikuussa '
+      + 'sademäärä on nolla ja helmikuussa yksi millimetri. Sade '
+      + 'tulee talvella, kesäkuussa 106 millimetriä, ja koko vuoden '
+      + 'kertymä on 364 millimetriä. Lämpötila pysyy leutona, '
+      + 'heinäkuun 12,1 asteesta tammi-helmikuun 17,9 asteeseen.',
+  },
+  // Lähde: en-Wikipedia "Christchurch", Climate-osio, Weather box
+  // "Christchurch gardens (1991–2020 normals)"; valittu kaupungin
+  // asema lentoaseman sijaan — luettu 7.9.2026 — ei Open-Meteo
+  christchurch: {
+    lat: -43.53,
+    lon: 172.64,
+    keskilampo: [17.5, 17.3, 15.5, 12.7, 10.1, 7.3, 6.8, 8.1, 10.3, 12.2, 14, 16.2],
+    ylin: [23, 22, 21, 18, 15, 12, 12, 13, 15, 17, 19, 21],
+    alin: [12, 12, 11, 8, 5, 3, 2, 3, 5, 7, 9, 11],
+    sade: [45, 39, 48, 62, 63, 73, 64, 61, 43, 50, 45, 52],
+    lahde: { nimi: 'en-Wikipedia, ilmastotaulukko', kausi: '1991–2020' },
+    luonnehdinta: 'Christchurchissa talvi on viileä mutta ei '
+      + 'ankara: heinäkuun keskilämpö on 6,8 astetta ja alin 2 '
+      + 'astetta. Tammikuussa noustaan 17,5 asteeseen. Sade '
+      + 'jakautuu tasaisesti, helmikuun 39 millimetristä kesäkuun '
+      + '73 millimetriin, ja vuosisumma on 645 millimetriä.',
+  },
 };

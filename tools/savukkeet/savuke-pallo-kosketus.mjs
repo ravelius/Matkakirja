@@ -27,7 +27,12 @@
  *      kun pulun kupla suljetaan napautuksesta: veto jatkuu
  *      katkeamatta (tämä vartioi `vapautaKosketus`in `paitsi`-säännön
  *      — pohjassa olevaa sormea ei saa unohtaa) ja seuraava uusi veto
- *      panoroi.
+ *      panoroi. Saman kohdan alussa vartioidaan myös, että kuplapinon
+ *      viimeisin kupla ON pallolaudalla osumapintana (3d,
+ *      elementFromPoint) ja että AITO kosketus sen koordinaattiin
+ *      sulkee sen (3e): pallon kuori ei saa nousta pinon päälle
+ *      laudalla, tai pulun kuplat lakkaisivat vastaamasta sormeen ja
+ *      pallo pyörähtäisi vastauksen sijaan.
  *   4. LINSSIN LOPPULAPPU. Ihmisen matka ajetaan loppuun, loppusanojen
  *      Sulje-nappia kosketetaan (linssin kerrokset katoavat kesken
  *      kosketuksen), sitten veto: panoroi.
@@ -362,26 +367,50 @@ const kupla = await sivu.evaluate(async () => {
   const pollo = await import('/js/pollo.js');
   const nakyi = pollo.polloSaapumiskupla('Kääk! Katsopa tätä palloa hetki.');
   await new Promise((r) => setTimeout(r, 500));
-  const el = document.querySelector('.pollo-kuplapino .pollo-vihje');
+  /*
+   * VIIMEISIN KUPLA ON SE, JOHON PELAAJA YLTÄÄ. Supistetussa pinossa
+   * vanhemmat kuplat on sekä leikattu pinon katon yläpuolelle (pino
+   * on vieritetty pohjaan) että kytketty pois kosketuksista (css
+   * `.pollo-kuplapino:not(.pollo-kuplapino-laaja) .pollo-vihje:not(:last-child)`
+   * → pointer-events: none). Niiden keskipisteestä elementFromPoint
+   * antaa siis kartan, ja niin kuuluukin. Osumavartio mittaa vain
+   * viimeisintä — sitä ainoaa, jonka on määrä olla napautettavissa.
+   */
+  const kuplat = [...document.querySelectorAll('.pollo-kuplapino .pollo-vihje')];
+  const el = kuplat.at(-1) ?? null;
   if (!el) return { nakyi, paikka: null };
   const r = el.getBoundingClientRect();
   const x = Math.round(r.left + r.width / 2);
   const y = Math.round(r.top + r.height / 2);
   const paalla = document.elementFromPoint(x, y);
-  return { nakyi, paikka: { x, y }, osuma: paalla === el || el.contains(paalla) };
+  return {
+    nakyi,
+    paikka: { x, y },
+    kuplia: kuplat.length,
+    osuma: paalla === el || el.contains(paalla),
+    paalla: `${paalla?.tagName ?? 'null'}.${typeof paalla?.className === 'string' ? paalla.className : ''}`,
+  };
 });
 vaadi('3a pulun kupla saatiin ruudulle', Boolean(kupla.paikka), JSON.stringify(kupla));
 if (kupla.paikka) {
   /*
-   * PINO ON PALLOLAUDALLA KUOREN ALLA (mitattu 7.9.2026: kuplan
-   * keskeltä elementFromPoint antaa kankaan, ei kuplaa —
-   * .pollo-kuplapino-kehys on z-index 40 ja pallon kuori sen päällä).
-   * Se on oma havaintonsa eikä tämän vartion asia: napautus ajetaan
-   * kuplan OMAAN elementtiin, jolloin kuplan napautussopimus
-   * (js/pollo.js sidoKuplanNapautus) ajaa täsmälleen sen polun, joka
-   * pelaajallakin — sulku, nielu ja kosketuksen vapautus.
+   * KUPLAPINO ON PALLOLAUDALLA KOSKETETTAVISSA (vartio 3d, 7.9.2026).
+   *
+   * Pallolauta on pelin lauta, ei ikkuna: pulu on sen päällä pelin osa
+   * ja sen viimeisimmän kuplan on otettava sormi vastaan — napautus
+   * avaa chatin (js/pollo.js sidoKuplanNapautus) ja pystyveto laajentaa
+   * pinon (varmistaPino, `kelaus laajentaa`). Jos pallon kuori nousee
+   * kuplapinon (z-index 40) päälle, sormi menee kankaalle ja pallo
+   * pyörii sen sijaan, että pulu vastaisi. Tämä oli aiemmin pelkkä
+   * INFO-huomio; nyt se on VIRHE, jotta vika ei voi palata hiljaa.
+   *
+   * Mittaus on elementFromPoint kuplan keskeltä, ja AITO KOSKETUS samaan
+   * koordinaattiin ajetaan omana vartionaan (3e) heti tämän kohdan
+   * jälkeen — vain aito kosketus kulkee osumapinnan läpi.
    */
-  if (!kupla.osuma) tieto('3 huomio', 'kuplapino jää pallon kuoren alle (z-index 40 < kuori) — napautus ajetaan elementtiin');
+  vaadi('3d kuplapinon viimeisin kupla on pallolaudalla kosketettavissa', kupla.osuma === true,
+    `kuplan keskeltä (${kupla.paikka.x}, ${kupla.paikka.y}) osuu ${kupla.paalla} `
+    + `— kuplapino jää pallon kuoren alle (kuplia ${kupla.kuplia})`);
   const alkuTila = await kamera();
   // Sormi pohjaan pallolle ja liikkeelle.
   await kosketa('touchStart', [{ x: keskus.x, y: keskus.y, id: 21 }]);
@@ -389,9 +418,20 @@ if (kupla.paikka) {
     await kosketa('touchMove', [{ x: keskus.x + i * 12, y: keskus.y, id: 21 }]);
     await sivu.waitForTimeout(20);
   }
-  // Kupla kiinni KESKEN kosketuksen.
+  /*
+   * KESKEN KOSKETUKSEN SULKU AJETAAN KUPLAN OMAAN ELEMENTTIIN, ja tällä
+   * kertaa syystä (mitattu 7.9.2026): kun pallolla on jo sormi pohjassa,
+   * CDP:n toinen kosketuspiste peruuntuu (pointercancel) ennen kuin
+   * kuplan napautussopimus ehtii nousuun, eikä kuplaa saa suljettua
+   * aidolla toisella sormella lainkaan. Osumapinta mitataan siksi
+   * erikseen (3d) ja aito napautus ajetaan omana vartionaan (3e); tämän
+   * vartion asia on VAIN se, mitä `vapautaKosketus`in `paitsi`-sääntö
+   * tekee pohjassa olevalle sormelle, ja siihen dispatch riittää — se
+   * ajaa saman polun (sulku, nielu, kosketuksen vapautus) kuin
+   * pelaajan napautuskin.
+   */
   const suljettu = await sivu.evaluate((paikka) => {
-    const el = document.querySelector('.pollo-kuplapino .pollo-vihje');
+    const el = [...document.querySelectorAll('.pollo-kuplapino .pollo-vihje')].at(-1) ?? null;
     if (!el) return false;
     const tee = (laji) => el.dispatchEvent(new PointerEvent(laji, {
       bubbles: true, cancelable: true, pointerId: 88, pointerType: 'touch',
@@ -423,6 +463,35 @@ if (kupla.paikka) {
   const v3 = await mittaaVeto('3 veto kuplan sulun jälkeen');
   vaadi('3c kuplan sulun jälkeen uusi yhden sormen veto panoroi', v3.panoroi,
     `Δlng ${v3.dLng.toFixed(3)} Δkorkeus ${v3.dAlt.toFixed(5)}`);
+
+  /*
+   * 3e. AITO NAPAUTUS KUPLAAN. Uusi kupla pinoon ja sormi sen
+   * koordinaattiin CDP:n kosketuksena — ei dispatchia elementtiin.
+   * Tämä on pelaajan ele pallolaudalla, ja se kulkee perille vain, jos
+   * kupla todella on osumapinta (3d:n toinen puoli). Ajetaan vasta
+   * vartion 3 jälkeen: napautus avaa chatin, ja avoin chatti muuttaisi
+   * pinon tilan sen alta.
+   */
+  const kupla2 = await sivu.evaluate(async () => {
+    const pollo = await import('/js/pollo.js');
+    pollo.polloSaapumiskupla('Kääk! Ja vielä yksi sana matkaan.');
+    await new Promise((r) => setTimeout(r, 500));
+    const el = [...document.querySelectorAll('.pollo-kuplapino .pollo-vihje')].at(-1) ?? null;
+    if (!el) return null;
+    const r = el.getBoundingClientRect();
+    return { x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2) };
+  });
+  vaadi('3e1 toinen kupla saatiin ruudulle', Boolean(kupla2), 'pino jäi tyhjäksi');
+  if (kupla2) {
+    await napauta(kupla2.x, kupla2.y, 88);
+    const jaljella = await sivu.evaluate(() => document.querySelectorAll('.pollo-kuplapino .pollo-vihje').length);
+    vaadi('3e aito napautus kuplan koordinaattiin sulkee kuplan', jaljella === 0,
+      `kuplia jäljellä ${jaljella} — kosketus ei kulkenut kuplaan asti`);
+    // Napautus avaa chatin: se pois alta ennen linssiä.
+    await sivu.evaluate(async () => (await import('/js/pollo.js')).polloSulje());
+    await sivu.waitForTimeout(300);
+    await suljeLehti();
+  }
 }
 
 /* ---------- 4. linssin loppulappu ---------- */

@@ -24595,6 +24595,18 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
  * DOM-järjestyksessä kartan siirtokuoren jälkeen ja ennen kuplia ja
  * nappeja, jotka kelluvat kartan päällä (event-toast, maalehti-nappi
  * z-index 3), joten ne jäävät pallon päälle täsmälleen kuten kartan.
+ *
+ * `z-index: auto` EI OLE SIISTEYTTÄ VAAN SÄÄNTÖ, ja se kumoaa
+ * nimenomaan yllä olevan `.pallo-kuori`in tason 45. Valikkopallo on
+ * IKKUNA ja saa siksi peittää pulun kuplapinon (40) — lauta on PELIN
+ * OSA, jonka päällä pulu puhuu: kuplapinon viimeisin kupla on
+ * napautettava (chat auki, js/pollo.js sidoKuplanNapautus) ja pino
+ * pystyvedosta laajennettava (varmistaPino, "kelaus laajentaa"). Jos
+ * laudan kuori nousisi pinon päälle, sormi menisi kankaalle ja pallo
+ * pyörähtäisi pulun vastauksen sijaan. Sama koskee pöllönappia (40) ja
+ * pulun paneelia (41) — ne kelluvat laudan päällä tästä samasta
+ * syystä. Vartio: tools/savukkeet/savuke-pallo-kosketus.mjs kohta 3d
+ * mittaa elementFromPointilla, että kuplan keskeltä osutaan kuplaan.
  */
 .pallo-kuori.pallolauta {
   position: absolute;
