@@ -89,6 +89,24 @@ pisteessä), kuvaerät 19g/19h, sessio 2:n lehdet.
 5. Odottaa omistajaa: V3 (vektoriviivan leveys), Lontoon kohtaaminen
    (Mina & Theo vs Leila), VUT tervehdyksen lähde, Ihmisen matkan
    tasapelit (lopun keskipiste, 6 vai 7 kuvaa).
+6. Sessio 2:n päätöskysymykset (docs/raportit/lehdet-2026-09-07-ilta.md,
+   "Päätöstä vaativat asiat"). Päätoimittajan kanta, jonka omistaja voi
+   perua: VUT:n MAATESTIN_POIKKEUS ja kookoskravun Commons-kuva
+   hyväksytään (sama peruste kuin FJI/SLB; Commons-kuva on tarkoitus, ei
+   poikkeus); SHN:n tikkuri odottaa (ei pudoteta merkkiä ilman
+   omistajaa); Antofagastan ennen–nyt-pari jätetään pois Lagosin tapaan;
+   MOZ: Malangatanan ja Sadimban töistä ei kuvia (tekijänoikeus), vain
+   tekstimaininnat; Llullaillacon lasten sävy: asiallinen, ei
+   dramatisoiva — tarkistus-salta.md kohta G omistajalle. Aloitusvalinnan
+   uudet kohteet Istanbul ja San Francisco: tarkista isoisän merkinnät
+   kaanonia (docs/tarina.md, docs/isoisan-raamattu.md) vasten;
+   minCityDistance laskettiin 45→20, että 14 kohdetta mahtuu.
+7. Kuvatilaukset kuvaputkelle: Ihmisen matkan 20 lisänostoa (Toba, Sunda,
+   Sahul, Wallacea, Flores, Sulawesin luolataide, Ust'-Ishim, Kostenki,
+   Sungir, Dolní Věstonice, Mal'tan poika, Lascaux, Bluefish, Paisley,
+   Clovis, Doggerland, Teouma, Saqqaq, Madagaskar, Rapa Nui) — vain jos
+   omistaja haluaa kuvat tutkimusvaiheen kortteihin; Nuukin ja Anchoragen
+   etusivukuvat; Dakarin juttukuvat.
 
 ## 4. Pysyvät säännöt (lyhyesti)
 
@@ -104,3 +122,10 @@ aja yksin uudestaan); julkaisukaava docs/roolitus.md (uusi-versio.mjs →
 testit → tarkista-* → build-standalone → PR → tools/parvi/tarkista-ci.sh →
 squash merge expectedHeadSha:lla → haara nollataan mainiin). Pitkät ajot
 Macilla kaikilla ytimillä; PR-testit ja iOS pysyvät Actionsissa.
+
+**Odotussilmukat** (opittu 7.9.2026 illalla): agentit ja päätoimittaja
+odottavat taustatöitä VAIN until-silmukalla, joka lukee tulostiedostoa
+tai worktreen git-kärkeä, ei koskaan `pgrep -f`-hakua — se osuu omaan
+komentoriviinsä eikä pääty koskaan. Kymmenet roikkuvat silmukat söivät
+koneen ja näkyivät omistajalle "odotustehtävinä". Kun taustatyö on
+valmis, tapa sen odottajat heti (TaskStop), älä jätä niitä pyörimään.
