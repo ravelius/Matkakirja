@@ -1586,3 +1586,234 @@ ohjainrivin osa; nyt ✕ on juuren suora lapsi omalla pinollaan
   10–20 min: jokainen kuvakaappaus odottaa kehystä, ja kehys on siellä
   noin sekunnin mittainen.
 - `node tools/tarkista-niputus.mjs`, `node tools/tarkista-savukkeet.mjs`.
+
+## 13. Yksi palkki, yksi kortti, muisti (7.9.2026)
+
+*(Raamattu "IHMISEN MATKA: YKSI PALKKI, EI KARUSELLIA, KAIKKIIN
+NOSTOIHIN KUVA, LINSSI MUISTAA PAIKKANSA" ja "IHMISEN MATKA:
+ETELA-AFRIKASSA KAMERA ULOS, VANA EI SAA HUKKUA" — omistajan
+linjaukset 7.9.2026 illalla. Tämä luku korvaa luvun 11 kohdat
+"nappirivi ylärivin alapuolella" ja "esinerivi palaa näkyviin" sekä
+luvun 11.3 oman kortin: napit ovat palkissa, karusellia ei ole, ja
+kortti on kolmas moduuli. Muu luvuista 11–12 on ennallaan.)*
+
+> *"Myös yläreunan kaksi palkkia … saisi mahduttaa yhteen palkkiin,
+> jotta kartalla jää mahdollisimman paljon tilaa … voitaisiin linssin
+> ajaksi korvata koko tuo matkakirjan yläpalkki … Ja hampurilaisvalikon
+> voisi vain korvata X-kirjaimella … Ja linssi voisi aina muistaa sen
+> paikan, mistä se on suljettu."*
+
+### 13.1 Seitsemän muutosta ja niiden paikat
+
+| Linjaus | Missä |
+| --- | --- |
+| Yksi palkki yläpalkin tilalle | `js/aikajana.js rakennaPalkki`, `css/aikajana.css` osio YKSI PALKKI |
+| Alareunan karuselli pois | `css/aikajana.css` (`.aikajana.kertomus .aikajana-nauha { display: none }`) |
+| Kaikki kartan kohdat napautettavia | `js/aikajana.js napautaValoa`, `js/linssit/ihmisen-matka-esitys.js naytaKuva`, `css/aikajana.css .aikajana-kertomuskuva.esilla` |
+| Yksi nostomalli (kortti) | `js/linssit/ihmisen-matka-kortti.js`, `css/ihmisen-tutkimus.css` |
+| Linssi muistaa tilansa | `js/linssit/ihmisen-matka-muisti.js`, `js/aikajana.js` (tallennaMuisti, jatkaMuistista, aloitaAlusta), `js/linssit/ihmisen-matka-esitys.js jatkaMuistista` |
+| Tiedeliitteen sisällys yhtenä listana | `js/tiedeliite.js` (`sisallys`-asetus), `css/aikajana.css .tiedeliite-sisallys.lista` |
+| Kärki ei saa poistua kuvasta | `js/linssit/ihmisen-matka-esitys.js jaksonRajaus` |
+
+Kaikki palkkiin ja karuselliin liittyvä on rajattu **kertomuskaareen**
+(`kaari.kertomus`). Keksintölinssin pysäkkiajo — kello, lapun kahva,
+ilmiöpaneeli, esinerivi, Tiedeliitteen kaksipalstainen sisällys — on
+kirjaimelleen entinen, koska sen mitat ja savukkeet on tehty omaan
+otsikkoriviinsä eikä linjaus koskenut sitä.
+
+### 13.2 Palkki: mitattu korkeus, ei arvattu
+
+Otsikkorivi (`.aikajana-ylarivi`) saa luokan `aikajana-palkki`, ja
+siihen kootaan vasemmalta oikealle: linssin nimi, kello, viisi virtaa
+väripilkkuina ja nimineen, Tauko/Jatka, Aloita alusta (↺) ja ✕.
+Matkakirjan oma yläpalkki piilotetaan body-luokalla
+`aikajana-palkki-auki`, ja palkki saa **sen mitatun korkeuden**
+muuttujassa `--aikajana-palkki-korkeus` (mitattu ennen piilotusta;
+834 × 1100: 57 px) — ruudulla vaihtuu siis vain palkin sisältö.
+
+**EI `display: none`.** Sovellus on ruudukko (`css/styles.css .app`:
+`grid-template-rows: auto minmax(0, 1fr)`), ja ruudukosta kadonnut
+yläpalkki pudottaisi kartta-alueen riville 1 ja auto-korkeuteen:
+kartta kutistui neliöksi. Yläpalkki jää siksi ruudukkoon nollan
+korkuisena ja näkymättömänä (`visibility: hidden; height: 0`), ja
+kartta on ikkunan korkuinen (mitattu 834 × 1100: 1 079 / 1 100 px).
+
+Viisi nappia ovat **yksi tehdas kahdelle käytölle**
+(`luoVirtanapit`): moottori rakentaa ne palkkiin jo linssin auetessa
+LEGENDANA (himmeät, `disabled`), ja tutkimusvaihe kytkee samoihin
+nappeihin toiminnon (`kytke`). Kaksi nappiriviä samasta asiasta olisi
+ollut kaksi totuutta. Kapealla palkilla (≤ 1000 px) nimet lyhenevät
+("Pää", "Eur.", …); puhelimella (≤ 600 px) legenda ei mahdu palkkiin
+lainkaan (mitattu 390 px: kello 185 px + Jatka + ↺ + ✕ jättivät
+legendalle 50 px eli kaksi pilkkua viidestä), joten napit näytetään
+vasta tutkimusvaiheessa omalla rivillään palkin alla.
+
+### 13.3 Miksi napautus ei mennyt perille
+
+Omistaja 7.9.2026: *"jos klikkaa valopalloa kartalla, niin tällä
+hetkellä ei tapahdu mitään, kun myöskään ei niistä valokuvista tapahdu
+mitään."* Juurisyitä oli kaksi, eikä kumpikaan ollut osumatestissä:
+
+1. **Lamppu palasi tyhjänä.** `napautaValoa` alkoi rivillä
+   `if (this.esitys) return;` — kertomusesityksessä lamppu ei ole
+   pysäkki, joten napautus ei saanut siirtää kelloa. Osuma siis tuli
+   perille (`lahinLinssimerkki` → `napautus`), mutta sen käsittelijä
+   ei tehnyt mitään. Nyt lamppu avaa noston kortin.
+2. **Kuva ei ottanut napautusta.** Kertomuskuva on lampun CSS2D-
+   elementin lapsi, ja koko merkkikerros on `pointer-events: none`
+   (js/pallolauta/merkit.js): napautus valui pallon pintaan, jossa
+   44 px:n osumatesti harvoin osui juuri siihen lamppuun — kuva on
+   1,4 rem sivussa ja 22 % ruudun levyinen. Esillä oleva kehys ottaa
+   nyt napautuksen itse (`pointer-events: auto`) ja avaa saman kortin.
+
+Vartio on **aidolla koordinaattinapautuksella** eikä elementin
+`click()`-kutsulla (`tools/savukkeet/savuke-ihmisen-tutkimus.mjs`
+`ruutupaikka` + `page.mouse.click`): elementin dispatch ei olisi
+todistanut mitään, koska merkkikerros ei ota napautuksia lainkaan.
+Savuke valitsee pallon ETUPUOLELLA olevan merkin (kirjasto merkitsee
+takana olevat luokalla `pallolauta-takana`) reilusti ruudun sisältä —
+takana oleva merkki projisoituu ruudulle, muttei ota osumia. Tämä oli
+myös ensimmäisen mittauksen harha: takana ollut hehku näytti
+"napautukselta, joka ei toimi".
+
+### 13.4 Yksi nostomalli: kortti
+
+`js/linssit/ihmisen-matka-kortti.js` on **kolmas, kummastakin
+riippumaton osa**: aikajanamoottori luo sen kertomuskaarelle linssin
+auetessa (`ui.nostokortti`), esitys avaa sen lampusta ja kuvasta,
+tutkimusvaihe hehkusta. Raja esityksen ja tutkimusvaiheen välillä
+(yksi kutsu, luku 11.1) säilyy: esitys ei tiedä tutkimusvaiheesta
+mitään, ja kortti on molempien yhteinen.
+
+Kortilla on sama järjestys kummallakin nostolajilla: ajoitus vanan
+väripilkkuineen, otsikko, paikka, **kuva-alue**, 2–3 lausetta, lähde,
+"Lue lisää" (vain niillä, joilla on Tiedeliitteen juttu) ja valmiit
+kysymykset pululle.
+
+**Kuva-alue on aina vähintään yksi kehys.** Löytöpaikalla ovat
+havainnekuva ja esine; lisänoston kuvituskuva haetaan ämpäristä
+polusta `aikajana/ihmisen-matka/nosto/<tunnus>.jpg`, ja kunnes
+kuvaputken erä on perillä, 404 vaihtaa kehyksen **varapaikaksi**:
+vanan sävyinen katkoviivakehys, sävypilkku ja lyhyt ajoitus
+("74 000 v."). EI nimikirjainlaattaa (omistajan aiempi havainto
+keksintökaaren "EI"/"SY"-laatoista). Aito Commons-kuva (`kuvaAito`)
+näytetään kuvituskuvan rinnalla, kun sellainen on.
+
+Kortti aukeaa **myös esityksen aikana**: esitys menee tauolle ja
+jatkuu kortin sulusta — ja vain jos juuri kortti sen pysäytti
+(pelaajan oma Tauko pysyy). Kortti on kartta-alueen suora lapsi
+(z-index 9), joten se elää aikajanan (7) ja tutkimuskerroksen (8)
+päällä ja alkaa palkin alta.
+
+### 13.5 Muisti: mitä ja missä
+
+`js/linssit/ihmisen-matka-muisti.js` tallettaa localStorageen avaimella
+`matkakirja-linssimuisti-<tunnus>`: vaiheen (`esitys` kesken olevine
+jaksoineen ja kuluneineen, tai `tutkimus`), **pidon pohjan**, kameran
+(lat, lng, altitude), avoimen kortin ja valitun virran. Sama perhe kuin
+valitulla linssillä ja paneelin asettelulla: tämä on laitteen
+katselutila eikä pelin tapahtuma, joten se ei kuulu pelitallennukseen
+— ja "Uusi peli" tyhjentää sen muiden `matkakirja`-avainten mukana
+(js/main.js `tyhjennaMuistit`).
+
+**Pidon pohja on se, mitä ilman jatko ei toimisi.** Kello käy
+kaanonissa kahdesti taaksepäin (luku 12.5), ja piirretty pituus on
+yksisuuntainen maksimi. Ilman muistiin talletettua `pitoMin`-lukemaa
+Euroopan haarassa jatkava esitys olisi piirtänyt Amerikat tyhjiksi.
+Jatko kytkee pidon päälle ja piirtää vanat pohjaan asti ennen kuin
+kello lähtee taas käyntiin.
+
+Kirjoitushetket: jakson vaihtuessa, kortin ja virran vaihtuessa sekä
+**purussa ennen kortin sulkua** — sulun oma tallennus kirjoittaisi
+muuten "ei avointa korttia" juuri tallennetun tilan päälle
+(`muistiLukittu`). Muisti tarkistetaan puhtaalla funktiolla
+(`kelvollinenMuisti`): väärä versio, yli kuukauden vanha merkintä,
+tuntematon jakso, nosto tai virta pudotetaan hiljaa, ja linssi alkaa
+alusta kuten ensimmäisellä kerralla. **Aloita alusta (↺)** tyhjentää
+muistin ja käynnistää linssin uudestaan avausjaksosta.
+
+Jatko on **ilman mustaa ja ilman avausta**: peitettä ei panna
+lainkaan (läpinäkyvänäkin se ottaisi napautukset kartan edestä),
+kamera asetetaan muistin paikkaan kestolla 0, ja äänite kelataan
+samaan kohtaan kuin kello heti kun sen kesto tiedetään.
+
+### 13.6 Kamera: kärki ei saa poistua kuvasta
+
+Omistaja 7.9.2026 klo 18.15: *"siinä tarinan alkupaikkeella, kun
+käydään Etelä-Afrikan kohdalla, niin kartta voisi zoomautua ulospäin,
+jotta ei hukattaisi sitä viivaa, jossa oltiin menossa niin pahasti."*
+
+MITATTU (kontti 7.9.2026): `ranta`-jaksossa (164 000 → 75 000) kamera
+oli Pinnacle Pointissa (−34°, 22° I) 1 200 lautayksikön lähikuvassa,
+mutta selkärangan kärki kulki Etiopiasta Arabiaan — 50–65° päässä
+kohteesta, siis kokonaan kuvan ulkopuolella. Sama toistui
+`arabia`- ja `denisova`-jaksoissa.
+
+Sääntö (`jaksonRajaus`, puhdas funktio): kohteellisen jakson kamera
+rajataan laatikkoon, jossa ovat KOHDE ja jakson aikana **liikkuvien**
+vanojen kärkipolut (viisi näytettä jakson kellovälillä). Neljä
+tarkennusta, jotka kaikki ovat mittausten tulosta:
+
+1. **Vain uutta piirtävä osuus lasketaan.** Pito pitää jo piirretyn
+   paikallaan, eikä sen "kärki" ole rintama: aikahypyn jälkeen
+   selkärangan kärki on Chilessä, eikä Chauvet'n jakson kameran kuulu
+   vetäytyä puolen pallon näkymään sen takia.
+2. **Taaksepäin kulkeva jakso** (`blombos`: 75 000 → 110 000) ei
+   piirrä uutta, joten mukaan otetaan nykyinen rintama — se ei saa
+   kadota kuvasta sillä välin kun kertoja puhuu.
+3. **Kaksi etäisyyskattoa.** Selkäranka otetaan mukaan 80° asti
+   (Pinnacle Point → Arabia mahtuu), sivuhaara vain 45° asti: Euroopan
+   haaran kärki Lissabonissa ei saa vetää Denisovan jakson kameraa,
+   kun Eurooppa kerrotaan vasta aikahypyn jälkeen.
+4. **Rajaus ei koskaan mene lähikuvaa tiukemmaksi**
+   (`ESITYKSEN_LAHIKUVA`), ja ilman vanoja (tasokartta, laskenta
+   kesken) se on pelkkä kohde eli entinen lähikuva.
+
+Savuke mittaa kärjen **ruudun sisällä**: selkärangan kärki lasketaan
+pidon pohjasta, projisoidaan pallon omalla projektiolla ja
+tarkistetaan etupuolen testillä (`pisteEdessa`) — ja väite koskee
+jokaista jaksoa erikseen niiden näytteiden osalta, joissa vana kasvaa
+(`rintamalla`).
+
+### 13.7 Tiedeliitteen sisällys yhtenä listana
+
+Kaksipalstainen sisällys meni Ihmisen matkassa riveillään päällekkäin,
+koska ajoitukset ovat pitkiä ("vähintään noin 230 000 vuotta sitten").
+Kaari voi nyt pyytää `avaaTiedeliite`-kutsussa asetuksen
+`sisallys: { lista, ajoitus(t), pilkku(t) }`: yksi palsta
+aikajärjestyksessä, rivillä vanan väripilkku, lyhyt ajoitus
+("300 000 v.", `lyhytAjoitus`) ja otsikko. Ilman asetusta (keksinnöt)
+levy on kirjaimelleen entinen. Tiedeliite avataan kortin "Lue lisää"
+-napista moottorin kautta (`ajo.avaaNostonJuttu`), koska musiikin
+vaimennus ja lehden sulkeutumisen jälkeinen palautus ovat moottorin
+omia; sulku palaa karttaan, ja kortti jää auki sen alle.
+
+**`column-count: 1` ei riittänyt** (mitattu savukkeella 7.9.2026,
+molemmat näkymät): korkeudeltaan rajattu palstalaatikko luo
+YLIVUOTOPALSTOJA myös yhden palstan asetuksella. Kaksikymmentä riviä
+katkesi yhdennentoista kohdalta, ja loput yhdeksän piirtyivät laatikon
+oikealle puolelle ruudun ulkopuolelle (rivi 12 alkoi x = 729, kun
+laatikko päättyi 728:aan) — juuri se "päällekkäisyys", jonka omistaja
+näki. Korjaus on `columns: auto`, joka purkaa palstoituksen kokonaan:
+lista on tavallinen pystyvirta, jonka `max-height` rullaa. Savuke
+mittaa nyt sekä rivien päällekkäisyyden, palstojen määrän (kaikkien
+rivien on alettava samasta x:stä) että laatikon ulkopuolelle jääneet
+rivit.
+
+### 13.8 Portit
+
+- `node --test tests/*.test.mjs` — `tests/ihmisen-matka-tutkimus.test.mjs`
+  (palkki korvaa yläpalkin, karusellia ei ole, muistin puhdas
+  tarkistus, hehku ja lamppu avaavat saman kortin, varapaikka ei ole
+  nimikirjainlaatta) ja `tests/ihmisen-matka-esitys.test.mjs`
+  (kärkisääntö neljänä mitattuna tapauksena, kuva ja lamppu avaavat
+  kortin, jatko muistista).
+- `node tools/savukkeet/savuke-ihmisen-tutkimus.mjs` — palkki, aito
+  koordinaattinapautus lamppuun ja hehkuun, kortti kummallakin
+  nostolajilla, kysymys chattiin, muisti kummassakin vaiheessa,
+  Tiedeliitteen sisällys, viisi nappia, Aloita alusta ja purku;
+  834 × 1100 ja 390 × 844.
+- `node tools/savukkeet/savuke-ihmisen-esitys.mjs` — koko esitys
+  läpi, mukana väite KÄRKI KUVASSA.
+- `node tools/tarkista-niputus.mjs`, `node tools/tarkista-savukkeet.mjs`,
+  `node tools/tarkista-kaksoisavaimet.mjs`.
