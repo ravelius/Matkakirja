@@ -2511,6 +2511,82 @@ Lokit ovat `<ulos>/lokit/<shardi>.log` (oletus
 seuraavalla ajolla. `pyramidi-poltto/` on `.gitignore`ssa — sinne
 kertyy gigatavuja eikä yhtään sitä committoida.
 
+### Väliaikaraportit, uusinta ja eheystarkistus (7.9.2026)
+
+Omistajan kysymys uusintapolton jälkeen, sanatarkasti: *"Voiko Macin
+ajokoodia jotenkin vielä parantaa, jotta se antaisi väliaikaraportteja,
+missä mennään? Varsinkin pidempien ajojen aikana. […] Tullaan varmasti
+ajamaan noita juttuja vielä paljon."* Seitsemän ja puolen tunnin ajossa
+työnkulun loki oli hiljaa alusta loppuun: shardit kirjoittavat omiin
+lokeihinsa, eikä kukaan koonnut niistä kuvaa. Kolme lisäystä:
+
+**1. Edistymisraportti viiden minuutin välein.** Jokainen shardi
+kirjoittaa tilansa tiedostoon `lokit/<shardi>.tila` (avain=arvo:
+`tila`, `tehty`, `kaikki`, `alkoi`, `paivitetty`, `yritys`, `loki`).
+Luvut luetaan shardin omasta lokista — pyramidi tulostaa `laattoja
+123/824` joka laatan jälkeen, pallo `500/1234 laattaa` viidensadan
+välein — ja tehtyjen määrä varmistetaan levyltä, jotta pallon karkea
+loki ei jätä tahtia pimeään. Taustavahti kokoaa tilatiedostoista
+yhteenvedon (`tools/poltto-edistyminen.mjs`), tulostaa sen yhtenä
+`::notice::`-rivinä ja vie sen ämpäriin. Fable lukee sen ilman avaimia:
+
+```bash
+curl -s https://media.matkakirja.app/julisteet/poltto/<ajo-id>/edistyminen.json
+curl -s https://media.matkakirja.app/julisteet/poltto/<ajo-id>/valmis.json
+```
+
+Ajo-id on `GITHUB_RUN_ID` (työnkulku) tai aikaleima (paikallinen ajo),
+ja skripti tulostaa sen ja koko osoitteen heti alussa. Otsake on
+`no-store`: raportti muuttuu viiden minuutin välein, eikä siitä saa
+tarjoilla välimuistiversiota. `valmis.json` kirjoitetaan
+EXIT-ansassa, joten se syntyy myös kaatuneesta ja keskeytetystä ajosta.
+
+| kenttä | mitä |
+| --- | --- |
+| `ajo`, `vaihe`, `valmis`, `koodi` | ajon tunnus, vaihe (`pyramidi`/`luettelo`/`pallo`), lopputila |
+| `alkoi`, `hetki`, `kesto_min` | ensimmäisen shardin alku, raportin hetki, kulunut aika |
+| `shardit` | `kaikki`, `valmis`, `ajossa`, `kaatunut`, `jonossa` |
+| `laattoja` | `tehty`, `odotettu`, `osuus` (aloittamattoman shardin koko arvioidaan tunnettujen keskiarvolla) |
+| `laattaa_min` | **viimeisen välin** tahti, ei koko ajon keskiarvo |
+| `jaljella_min`, `arvio_valmis` | arvio jäljellä olevasta ajasta ja kellonajasta |
+| `ajossa_nyt` | mitkä shardit piirtävät juuri nyt ja kuinka pitkällä |
+| `kaatuneet` | shardi, yritysten määrä, loki ja sen viimeiset rivit |
+| `kesken` | vain valmis-raportissa: mitkä shardit jäivät ajamatta |
+
+Väli on `--raporttivali S` (oletus 300; `0` = ei raporttia).
+
+**2. Kaatunut shardi ajetaan kerran uudestaan** samalla komennolla omaan
+lokiinsa `lokit/<shardi>.uusinta.log`, ja vasta toinen kaatuminen
+merkitsee shardin kaatuneeksi. Muut shardit ajetaan silti loppuun
+(`xargs` jatkaa), ja loppuraportti kertoo, mitkä jäivät kesken. Ohimenevä
+vika — ämpärin `HTTP 429`, katkennut yhteys, Chromiumin kaatuminen —
+maksoi ennen tätä koko shardin ja käsin annetun uusinta-ajon. Shardin
+kansio tyhjennetään jokaisen yrityksen alussa: laattakohtaista ohitusta
+ei ole (shardi piirtää aina koko työlistansa), joten vanhoista laatoista
+ei ole hyötyä, mutta jos sama kansio on ajettu eri jaolla (`--pallo-osia`,
+`--sarakkeet`), levylle jääneet vieraat laatat laskettaisiin mukaan.
+
+**3. Eheystarkistus ennen luettelon vientiä.** Laattojen määrä lasketaan
+tasoittain ja verrataan **luettelon lupaukseen**: pohjataso on
+`sarakkeita × riveja` (tai laataston bittikartta), nosto-, viiva- ja
+rantataso ovat kerroksensa `laatastot[z]`-bittikartan ykkösbittejä ja
+pallon Mercator-taso on täysi ruudukko 4^Z. Jos laattoja puuttuu,
+**luetteloa ei viedä** — laatat ovat harmittomia ilman luetteloa, mutta
+luettelo ilman laattoja lupaisi pelille tiedostoja, joita ämpärissä ei
+ole — ja ajo poistuu virheellä puuttuvat tasot lueteltuaan. Jokainen
+shardi kirjaa laskentansa (`lokit/<shardi>.laskut`) ennen vientiä ja
+siivousta, joten tarkistus toimii myös `--siivoa`-ajossa. Ohitus on
+`--ohita-eheys`, eikä sitä pidä käyttää ennen kuin puute on ymmärretty.
+
+Todennettu kontissa 7.9.2026 (pallon sarja z0–z4, neljä shardia): yksi
+shardi kaadettiin keinotekoisesti kerran → uusinta vei sen läpi; toinen
+kaadettiin joka kerta → merkittiin kaatuneeksi, muut kolme ajettiin
+loppuun ja raportti nimesi kesken jääneen. Yhden laatan hukannut shardi
+jäi kiinni eheystarkistuksessa (`pallo z1 — poltettu 3, luettelo lupaa
+4`), eikä luetteloa viety. Ämpärin oikeaa `pyramidi.json`ia vasten
+lasketut odotukset ovat pohja z8 **69 628**, viivat z8 **7 391**, nostot
+z8 **2 075** ja ranta z8 **7 104**.
+
 Vain poltto ilman vientiä on `--ei-vie` ja pelkkä shardilista `--lista`.
 Jos jokin kolmesta versiosta vaihtuu, pallon sarja poltetaan perään:
 

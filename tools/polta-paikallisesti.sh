@@ -90,6 +90,57 @@
 # Pelkän pallon voi polttaa uudestaan ilman pyramidia:
 # `--vain-pallo` (työnkulussa `--sarjat pallo`).
 #
+# === EDISTYMISRAPORTTI =============================================
+#
+# Omistaja 7.9.2026 aamu, sanatarkasti: *"Voiko Macin ajokoodia jotenkin
+# vielä parantaa, jotta se antaisi väliaikaraportteja, missä mennään?
+# Varsinkin pidempien ajojen aikana."* Seitsemän ja puolen tunnin ajossa
+# työnkulun loki oli hiljaa alusta loppuun: shardit kirjoittavat omiin
+# lokeihinsa eikä kukaan koonnut niistä kuvaa.
+#
+#   1. Jokainen shardi kirjoittaa tilansa tiedostoon
+#      lokit/<shardi>.tila (avain=arvo: tila, tehty, kaikki, alkoi,
+#      paivitetty, yritys, loki). Luvut luetaan shardin omasta lokista,
+#      jonka piirto- ja pallonoutosilmukat tulostavat joka tapauksessa.
+#   2. Taustavahti kokoaa niistä joka RAPORTTIVALI (oletus 300 s)
+#      yhteenvedon (tools/poltto-edistyminen.mjs), kirjoittaa sen
+#      tiedostoon lokit/edistyminen.json, VIE sen ämpäriin ja tulostaa
+#      saman rivin lokiin (::notice:: työnkulussa).
+#   3. Ajon lopussa sama raportti valmis-lippuineen menee samaan polkuun
+#      nimellä valmis.json (myös silloin kun ajo kaatuu — kirjoitus on
+#      EXIT-ansassa).
+#
+# Fable lukee raportin ilman avaimia:
+#
+#   curl -s https://media.matkakirja.app/julisteet/poltto/<ajo-id>/edistyminen.json
+#   curl -s https://media.matkakirja.app/julisteet/poltto/<ajo-id>/valmis.json
+#
+# Ajo-id on GITHUB_RUN_ID (työnkulku) tai aikaleima (paikallinen ajo), ja
+# skripti tulostaa sen ja koko osoitteen heti alussa. Ämpärissä raportti
+# on `no-store`-otsakkeella: se muuttuu joka viisi minuuttia, eikä sitä
+# saa tarjoilla välimuistista.
+#
+# Muoto (kentät): ajo, vaihe, valmis, koodi, alkoi, hetki, kesto_min,
+# shardit{kaikki,valmis,ajossa,kaatunut,jonossa}, laattoja{tehty,
+# odotettu,osuus}, laattaa_min (viimeisen välin tahti), jaljella_min,
+# arvio_valmis, ajossa_nyt[], kaatuneet[{shardi,yritys,loki,rivit}] ja
+# valmis-raportissa kesken[] (shardit, jotka jäivät ajamatta).
+#
+# === UUSINTA JA EHEYSTARKISTUS =====================================
+#
+# KAATUNUT SHARDI AJETAAN KERRAN UUDESTAAN samalla komennolla omaan
+# lokiinsa (lokit/<shardi>.uusinta.log), ja vasta toinen kaatuminen
+# merkitsee shardin kaatuneeksi. Muut shardit ajetaan silti loppuun
+# (xargs jatkaa), ja loppuraportti kertoo, mitkä jäivät kesken.
+#
+# ENNEN LUETTELON VIENTIÄ laattojen määrä lasketaan tasoittain ja
+# verrataan luettelon lupaukseen (pyramidi.json / pallon laatat.json).
+# Jos laattoja puuttuu, LUETTELOA EI VIEDÄ (laatat on jo viety, ja ne
+# ovat harmittomia ilman luetteloa, joka lupaisi pelille laattoja joita
+# ämpärissä ei ole) ja ajo poistuu virheellä. Jokainen shardi kirjaa
+# laskentansa (lokit/<shardi>.laskut) ennen vientiä ja siivousta, joten
+# tarkistus toimii myös --siivoa-ajossa.
+#
 # === AVAIMET =======================================================
 #
 # R2:n avaimet luetaan VAIN ympäristöstä (AWS_ACCESS_KEY_ID,
@@ -158,6 +209,12 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
   --ei-luetteloa             älä koota äläkä vie pyramidi.jsonia
   --pakota-luettelo          vie luettelo, vaikka se eroaisi ämpärin
                              luettelosta muutenkin kuin z8:n osalta
+  --ohita-eheys              vie luettelo, vaikka laattoja puuttuisi
+                             (vain kun puute on ymmärretty)
+  --ajo-id X                 edistymisraportin tunnus ämpärissä
+                             (oletus GITHUB_RUN_ID tai aikaleima)
+  --raporttivali S           edistymisraportin väli sekunteina
+                             (oletus 300; 0 = ei raporttia)
   --lista                    tulosta shardit ja lopeta
 
 Avaimet ympäristöstä (EI argumentteina):
@@ -192,7 +249,14 @@ PALLON_RANTA=0; VAIN_PALLO=0; PALLO_OSIA=""; PALLO_TASOT="0-8"; NOUTOVALI=""
 # Yhteysaikakatkaisu jokaiselle aws-kutsulle: jumittunut yhteys kaatuu
 # nopeasti ja CLI yrittää uudestaan sen sijaan, että shardi jäisi roikkumaan.
 AWS_YHTEYSAIKA="${AWS_YHTEYSAIKA:-30}"
-LUETTELO=1; PAKOTA_LUETTELO=0; LISTA=0; LAPSI=0
+LUETTELO=1; PAKOTA_LUETTELO=0; LISTA=0; LAPSI=0; OHITA_EHEYS=0
+# Edistymisraportti: ajon tunnus ämpärin polussa ja raportointiväli.
+# Shardin oman tilatiedoston päivitysväli on tiheämpi (TILAVALI), koska
+# se on pelkkä lokin loppupään luku eikä maksa mitään.
+AJO_ID="${POLTTO_AJO_ID:-${GITHUB_RUN_ID:-}}"
+RAPORTTIVALI="${POLTTO_RAPORTTIVALI:-300}"
+TILAVALI="${POLTTO_TILAVALI:-15}"
+VAHTI_PID=""; RAPORTOI=0; EDISTYMISVAROITUS=0
 
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -222,6 +286,9 @@ while [ $# -gt 0 ]; do
     --noutovali) NOUTOVALI="$2"; shift 2 ;;
     --ei-luetteloa) LUETTELO=0; shift ;;
     --pakota-luettelo) PAKOTA_LUETTELO=1; shift ;;
+    --ohita-eheys) OHITA_EHEYS=1; shift ;;
+    --ajo-id) AJO_ID="$2"; shift 2 ;;
+    --raporttivali) RAPORTTIVALI="$2"; shift 2 ;;
     --lista) LISTA=1; shift ;;
     --lapsi) LAPSI=1; shift ;;
     -h|--help) ohje; exit 0 ;;
@@ -231,6 +298,17 @@ done
 
 [ "$KOE" -eq 1 ] && VIE=0
 case "$KORKEUS" in 1|3) ;; *) echo "VIRHE: --korkeus on 1 tai 3" >&2; exit 2 ;; esac
+case "$RAPORTTIVALI" in
+  ''|*[!0-9]*) echo "VIRHE: --raporttivali on sekunteina (0 = ei raporttia)" >&2; exit 2 ;;
+esac
+# TYÖKANSIO ABSOLUUTTISEKSI. Shardin komennot ajetaan repon juuresta
+# (`cd "$JUURI"`), ja lokien polut kulkevat tilatiedostoissa prosessista
+# toiseen — suhteellinen polku tarkoittaisi eri kansiota eri kohdissa.
+mkdir -p "$ULOS"
+ULOS="$(cd "$ULOS" && pwd)"
+case "$AJO_ID" in
+  *[!A-Za-z0-9._-]*) echo "VIRHE: --ajo-id saa sisältää vain A-Z a-z 0-9 . _ -" >&2; exit 2 ;;
+esac
 
 # `--sarjat pallo` on työnkulun tie samaan kuin --vain-pallo: pyramidi on
 # jo ämpärissä ja vain pallon Mercator-sarja poltetaan uudestaan.
@@ -542,7 +620,239 @@ shardit () {
   esac
 }
 
+# ------------------------------------------------- shardin tilatiedosto
+#
+# Yksi rivi per kenttä, avain=arvo. Kirjoitus on ATOMINEN (tmp + mv),
+# koska taustavahti lukee tiedostoa samalla kun shardi kirjoittaa sitä:
+# puolikas tiedosto olisi puolikas raportti.
+tila_kirjoita () {
+  local nimi="$1" tila="$2" tehty="$3" kaikki="$4" alkoi="$5" yritys="$6" loki="$7"
+  local polku="$ULOS/lokit/$nimi.tila"
+  printf 'shardi=%s\ntila=%s\ntehty=%s\nkaikki=%s\nalkoi=%s\npaivitetty=%s\nyritys=%s\nloki=%s\n' \
+    "$nimi" "$tila" "$tehty" "$kaikki" "$alkoi" "$(date +%s)" "$yritys" "$loki" \
+    > "$polku.tmp" && mv "$polku.tmp" "$polku"
+}
+
+# EDISTYS SHARDIN OMASTA LOKISTA JA LEVYLTÄ.
+#
+# Työlistan koon tietää vain piirtoprosessi, ja se tulostaa sen itse:
+# pyramidi kirjoittaa "laattoja 123/824" rivinalkuun palaavalla \r:llä
+# joka laatan jälkeen, pallo rivin "500/1234 laattaa (…)" viidensadan
+# välein ja otsikossaan "… 341 laattaa → <kansio>". Tehtyjen määrä
+# otetaan kummasta tahansa suuremmasta, koska pallon loki on karkea:
+# levyllä olevat tiedostot kertovat tahdin niiden viidensadan välissä.
+lue_edistys () {
+  local loki="$1" kansio="${2:-}" pate="${3:-}"
+  local parit="0 0" tehty kaikki n
+  if [ -s "$loki" ]; then
+    parit="$(tail -c 8000 "$loki" 2>/dev/null | tr '\r' '\n' | awk '
+      /laattoja [0-9]+\/[0-9]+/ {
+        for (i = 1; i <= NF; i++) if ($i ~ /^[0-9]+\/[0-9]+$/) { split($i, a, "/"); t = a[1]; k = a[2] }
+      }
+      /^[0-9]+\/[0-9]+ laattaa/ { split($1, a, "/"); t = a[1]; k = a[2] }
+      # Pallon otsikkorivi: "… 341 laattaa → julisteet/pallo/…"
+      /laattaa →/ { for (i = 2; i <= NF; i++) if ($i == "laattaa" && $(i + 1) == "→") kk = $(i - 1) + 0 }
+      END { if (k + 0 == 0) k = kk; printf "%d %d\n", t + 0, k + 0 }')"
+  fi
+  tehty="${parit%% *}"; kaikki="${parit##* }"
+  if [ -n "$kansio" ] && [ -d "$kansio" ]; then
+    n="$(find "$kansio" -name "$pate" 2>/dev/null | wc -l | tr -d ' ')"
+    [ "$n" -gt "$tehty" ] && tehty="$n"
+  fi
+  echo "$tehty $kaikki"
+}
+
+# Kaatuneen shardin luettavin loki: uusinnan loki, jos uusinta ehti
+# ajaa, muuten ensimmäisen yrityksen loki.
+kesken_loki () {
+  if [ -s "$ULOS/lokit/$1.uusinta.log" ]; then echo "$ULOS/lokit/$1.uusinta.log"
+  else echo "$ULOS/lokit/$1.log"; fi
+}
+
+# Taustasilmukka shardin sisällä: päivittää tilatiedoston, kunnes
+# piirtoprosessi on ohi ja isäntä tappaa sen.
+tila_vahti () {
+  local nimi="$1" loki="$2" alkoi="$3" yritys="$4" kansio="$5" pate="$6"
+  # Taustatyö perii EXIT-ansan; ilman tätä `kill` ajaisi ansan
+  # (valmis.json) kesken polton, kerran jokaista shardia kohti.
+  trap - EXIT
+  while :; do
+    sleep "$TILAVALI"
+    # shellcheck disable=SC2046
+    tila_kirjoita "$nimi" ajossa $(lue_edistys "$loki" "$kansio" "$pate") \
+      "$alkoi" "$yritys" "$loki"
+  done
+}
+
+# LAATTOJEN LASKENTA TALTEEN ENNEN VIENTIÄ JA SIIVOUSTA. Eheystarkistus
+# ajetaan vasta ajon lopussa, jolloin `--siivoa` on jo poistanut laatat
+# levyltä — laskenta on siis tehtävä silloin kun laatat ovat olemassa.
+# Rivi on "<kerros> <taso> <laattoja>".
+kirjaa_laskut () {
+  local nimi="$1" kansio="$2" pate="$3"
+  local polku="$ULOS/lokit/$nimi.laskut"
+  local d kerros z n
+  : > "$polku.tmp"
+  for d in "$kansio"/z* "$kansio"/nostot/z* "$kansio"/viivat/z* "$kansio"/ranta/z*; do
+    [ -d "$d" ] || continue
+    z="$(basename "$d")"; z="${z#z}"
+    kerros="$(basename "$(dirname "$d")")"
+    case "$kerros" in nostot|viivat|ranta) ;; *) kerros=pohja ;; esac
+    n="$(find "$d" -name "$pate" | wc -l | tr -d ' ')"
+    printf '%s %s %s\n' "$kerros" "$z" "$n" >> "$polku.tmp"
+  done
+  mv "$polku.tmp" "$polku"
+}
+
+# Pallon sarjassa taso on kansion nimi ilman z-etuliitettä
+# (<ulos>/<Z>/<X>/<Y>.jpg), joten laskenta on omansa.
+kirjaa_pallon_laskut () {
+  local nimi="$1" kansio="$2"
+  local polku="$ULOS/lokit/$nimi.laskut"
+  local d z n
+  : > "$polku.tmp"
+  for d in "$kansio"/[0-9]*; do
+    [ -d "$d" ] || continue
+    z="$(basename "$d")"
+    n="$(find "$d" -name '*.jpg' | wc -l | tr -d ' ')"
+    printf 'pallo %s %s\n' "$z" "$n" >> "$polku.tmp"
+  done
+  mv "$polku.tmp" "$polku"
+}
+
+# ------------------------------------------------- edistymisen kokoaja
+#
+# Yksi rivi lokiin ja yksi JSON ämpäriin. Raportointi ei koskaan kaada
+# ajoa: kaikki virheet niellään (`|| true`), koska raportti on ajon
+# apuväline eikä sen tulos.
+vie_edistyminen () {
+  local polku="$1" nimi="$2"
+  if [ "$VIE" -ne 1 ]; then
+    if [ "$EDISTYMISVAROITUS" -eq 0 ]; then
+      echo "· edistymisraporttia ei viedä ämpäriin (--ei-vie/--koe): $polku"
+      EDISTYMISVAROITUS=1
+    fi
+    return 0
+  fi
+  if ! command -v aws >/dev/null 2>&1 || [ -z "${AMPARI:-}" ] || [ -z "${PAATE:-}" ]; then
+    if [ "$EDISTYMISVAROITUS" -eq 0 ]; then
+      echo "· edistymisraporttia ei viedä ämpäriin (aws tai avaimet puuttuvat): $polku"
+      EDISTYMISVAROITUS=1
+    fi
+    return 0
+  fi
+  # NO-STORE: raportti muuttuu joka viisi minuuttia, eikä sitä saa
+  # tarjoilla välimuistista — Fable lukisi tunnin vanhan tilanteen.
+  aws s3 cp "$polku" "s3://$AMPARI/julisteet/poltto/$AJO_ID/$nimi" \
+    --endpoint-url "$PAATE" --content-type application/json \
+    --cache-control 'no-store' \
+    --cli-connect-timeout "$AWS_YHTEYSAIKA" --no-progress >/dev/null 2>&1 || true
+}
+
+vaihe_nyt () { cat "$ULOS/lokit/vaihe.txt" 2>/dev/null || echo poltto; }
+
+raportoi () {
+  local vaihe="${1:-$(vaihe_nyt)}" valmis="${2:-ei}" koodi="${3:-0}"
+  local polku="$ULOS/lokit/edistyminen.json" rivi=""
+  local lisa=""
+  [ "$valmis" = "kylla" ] && lisa="--valmis"
+  # shellcheck disable=SC2086
+  rivi="$(node "$JUURI/tools/poltto-edistyminen.mjs" kokoa \
+    --lokit "$ULOS/lokit" --ajo "$AJO_ID" --vaihe "$vaihe" \
+    --koodi "$koodi" $lisa --ulos "$polku" 2>/dev/null)" || return 0
+  [ -n "$rivi" ] || return 0
+  if [ -n "${GITHUB_ACTIONS:-}" ]; then echo "::notice::$rivi"; else echo "· $rivi"; fi
+  vie_edistyminen "$polku" edistyminen.json
+  if [ "$valmis" = "kylla" ]; then
+    cp "$polku" "$ULOS/lokit/valmis.json" 2>/dev/null || return 0
+    vie_edistyminen "$ULOS/lokit/valmis.json" valmis.json
+  fi
+  return 0
+}
+
+# TAUSTAVAHTI. Oma prosessi, jotta poltto ei odota raportin kokoamista
+# eikä ämpärin vastausta. Se kirjoittaa samaan tulosteeseen kuin ajo:
+# rivi lokissa on koko tämän erän tarkoitus.
+kaynnista_vahti () {
+  [ "$RAPORTTIVALI" -gt 0 ] || return 0
+  ( trap - EXIT; while :; do sleep "$RAPORTTIVALI"; raportoi || true; done ) &
+  VAHTI_PID=$!
+}
+
+pysayta_vahti () {
+  [ -n "$VAHTI_PID" ] || return 0
+  kill "$VAHTI_PID" 2>/dev/null || true
+  wait "$VAHTI_PID" 2>/dev/null || true
+  VAHTI_PID=""
+}
+
+# EXIT-ANSA: valmis.json syntyy myös silloin kun ajo kaatuu tai
+# keskeytetään — juuri silloin sitä eniten luetaan.
+lopetus () {
+  local koodi=$?
+  trap - EXIT
+  pysayta_vahti
+  [ "$RAPORTOI" -eq 1 ] && raportoi "$(vaihe_nyt)" kylla "$koodi" || true
+  exit "$koodi"
+}
+
 # --------------------------------------------------------- yhden ajo
+shardin_yritys () {
+  local nimi="$1" kansio="$2" args="$3" loki="$4" yritys="$5" alkoi="$6"
+  # TYHJÄ KANSIO JOKAISEEN YRITYKSEEN. Shardi piirtää aina koko
+  # työlistansa (laattakohtaista ohitusta ei ole), joten vanhoista
+  # laatoista ei ole hyötyä — mutta vahinkoa on: jos sama kansio on
+  # ajettu ERI jaolla (--pallo-osia, --sarakkeet), levylle jää laattoja
+  # jotka eivät kuulu tähän shardiin, ja eheystarkistus laskisi ne
+  # kahteen kertaan.
+  rm -rf "$kansio"
+  mkdir -p "$kansio" "$ULOS/lokit"
+  tila_kirjoita "$nimi" ajossa 0 0 "$alkoi" "$yritys" "$loki"
+  # `--korkeuspalat` vain kun se on olemassa: nosto- ja viivatason
+  # shardit eivät lue ruudukkoa lainkaan.
+  local palat=""
+  case "$args" in
+    *"--kaariminuutit 1"*) [ -d "$ULOS/korkeuspalat" ] && palat="--korkeuspalat $ULOS/korkeuspalat" ;;
+  esac
+  tila_vahti "$nimi" "$loki" "$alkoi" "$yritys" "$kansio" '*.webp' &
+  local vahti=$!
+  local koodi=0
+  # shellcheck disable=SC2086
+  node "$JUURI/tools/generoi-laattapyramidi.mjs" "$kansio" \
+    --data "$ULOS/ne-data" $args $palat \
+    --laatu "$LAATU" --patina "$PATINA" --versio "$VERSIO" >"$loki" 2>&1 || koodi=$?
+  kill "$vahti" 2>/dev/null || true
+  wait "$vahti" 2>/dev/null || true
+  if [ "$koodi" -ne 0 ]; then
+    echo "VIRHE shardissa $nimi (yritys $yritys) — loki $loki" >&2
+    tail -5 "$loki" >&2 || true
+    return 1
+  fi
+  local kesto laattoja
+  kesto=$(( $(date +%s) - alkoi ))
+  laattoja="$(find "$kansio" -name "*.webp" | wc -l | tr -d ' ')"
+  echo "$nimi valmis: $laattoja laattaa, ${kesto} s"
+  # LASKENTA TALTEEN ENNEN VIENTIÄ JA SIIVOUSTA (eheystarkistus).
+  kirjaa_laskut "$nimi" "$kansio" '*.webp'
+  # Epäonnistunut vienti EI merkitse shardia valmiiksi: seuraava ajo
+  # ottaa sen uudestaan eikä ämpäriin jää puolikasta tasoa.
+  if [ "$VIE" -eq 1 ]; then
+    if ! vie_shardi "$nimi" "$kansio"; then
+      echo "VIRHE: shardin $nimi vienti epäonnistui (yritys $yritys)" >&2
+      return 1
+    fi
+    if [ "$SIIVOA" -eq 1 ]; then rm -rf "$kansio"; fi
+  fi
+  printf '%s %s\n' "$laattoja" "$kesto" > "$ULOS/lokit/$nimi.valmis"
+  tila_kirjoita "$nimi" valmis "$laattoja" "$laattoja" "$alkoi" "$yritys" "$loki"
+  return 0
+}
+
+# UUSINTA KERRAN, SAMA KOMENTO, OMA LOKI (omistaja 7.9.2026). Ohimenevä
+# vika — ämpärin 429, Chromiumin kaatuminen, katkennut yhteys — maksoi
+# ennen tätä koko shardin ja käsin annetun uusinta-ajon. Uusinta on
+# sama komento samoilla argumenteilla, ja se saa oman lokinsa, jotta
+# ensimmäisen kaatumisen syy on yhä luettavissa työnkulun artefaktista.
 aja_shardi () {
   local nimi="$1"
   local rivi args
@@ -551,37 +861,16 @@ aja_shardi () {
   args="$rivi"
   local kansio="$ULOS/$nimi"
   local loki="$ULOS/lokit/$nimi.log"
-  mkdir -p "$kansio" "$ULOS/lokit"
+  local uusintaloki="$ULOS/lokit/$nimi.uusinta.log"
+  local pate='*.webp'
   local alkoi
   alkoi="$(date +%s)"
-  # `--korkeuspalat` vain kun se on olemassa: nosto- ja viivatason
-  # shardit eivät lue ruudukkoa lainkaan.
-  local palat=""
-  case "$args" in
-    *"--kaariminuutit 1"*) [ -d "$ULOS/korkeuspalat" ] && palat="--korkeuspalat $ULOS/korkeuspalat" ;;
-  esac
-  # shellcheck disable=SC2086
-  if node "$JUURI/tools/generoi-laattapyramidi.mjs" "$kansio" \
-      --data "$ULOS/ne-data" $args $palat \
-      --laatu "$LAATU" --patina "$PATINA" --versio "$VERSIO" >"$loki" 2>&1; then
-    local kesto laattoja
-    kesto=$(( $(date +%s) - alkoi ))
-    laattoja="$(find "$kansio" -name "*.webp" | wc -l | tr -d ' ')"
-    echo "$nimi valmis: $laattoja laattaa, ${kesto} s"
-    # Epäonnistunut vienti EI merkitse shardia valmiiksi: seuraava ajo
-    # ottaa sen uudestaan eikä ämpäriin jää puolikasta tasoa.
-    if [ "$VIE" -eq 1 ]; then
-      if ! vie_shardi "$nimi" "$kansio"; then
-        echo "VIRHE: shardin $nimi vienti epäonnistui" >&2
-        return 1
-      fi
-      if [ "$SIIVOA" -eq 1 ]; then rm -rf "$kansio"; fi
-    fi
-    printf '%s %s\n' "$laattoja" "$kesto" > "$ULOS/lokit/$nimi.valmis"
-    return 0
-  fi
-  echo "VIRHE shardissa $nimi — loki $loki" >&2
-  tail -5 "$loki" >&2 || true
+  if shardin_yritys "$nimi" "$kansio" "$args" "$loki" 1 "$alkoi"; then return 0; fi
+  echo "::warning::shardi $nimi kaatui — uusinta kerran (loki $uusintaloki)"
+  if shardin_yritys "$nimi" "$kansio" "$args" "$uusintaloki" 2 "$alkoi"; then return 0; fi
+  # shellcheck disable=SC2046
+  tila_kirjoita "$nimi" kaatui $(lue_edistys "$uusintaloki" "$kansio" "$pate") "$alkoi" 2 "$uusintaloki"
+  echo "VIRHE: shardi $nimi kaatui kahdesti — muut shardit ajetaan silti loppuun" >&2
   return 1
 }
 
@@ -756,6 +1045,31 @@ vertaa_luettelo () {
   ' "$ULOS/ampari-luettelo.json" "$ULOS/luettelo/pyramidi.json" "$uudet"
 }
 
+# EHEYSTARKISTUS ENNEN LUETTELON VIENTIÄ.
+#
+# Luettelo on pelin ainoa tieto pyramidista: se lupaa laatat, joita peli
+# sitten pyytää. Jos yksikin shardi tuotti vähemmän laattoja kuin
+# luettelon bittikartta lupaa, luettelo valehtelisi — ja laatat itse
+# ovat harmittomia (peli ei pyydä niitä ilman luetteloa), joten
+# oikea järjestys on: laatat saa viedä, luetteloa ei.
+tarkista_eheys () {
+  local lista="$1" avain="$2" tiedosto="$3"
+  [ -s "$lista" ] || return 0
+  echo "· eheystarkistus ($(wc -l < "$lista" | tr -d ' ') shardia)"
+  if node "$JUURI/tools/poltto-edistyminen.mjs" eheys \
+      --lokit "$ULOS/lokit" --shardit "$lista" "$avain" "$tiedosto"; then
+    return 0
+  fi
+  if [ "$OHITA_EHEYS" -eq 1 ]; then
+    echo "::warning::eheystarkistus ei täsmää, mutta --ohita-eheys annettiin" >&2
+    return 0
+  fi
+  echo "VIRHE: laattoja puuttuu — LUETTELOA EI VIETY ämpäriin." >&2
+  echo "Aja puuttuvat shardit uudestaan (--vain <shardi> tai --uudestaan)" >&2
+  echo "ja aja sama komento sitten uudestaan; ohitus on --ohita-eheys." >&2
+  return 1
+}
+
 vie_luettelo () {
   aws s3 cp "$ULOS/luettelo/pyramidi.json" \
     "s3://$AMPARI/julisteet/pyramidi/pyramidi.json" \
@@ -807,6 +1121,45 @@ vie_pallo_shardi () {
 # merkitsee itsensä valmiiksi. Ämpärin kansio ja rantavalinta luetaan
 # luetteloajon jäljistä ($ULOS/pallolaatat), jotta shardin voi ajaa
 # uudestaan yksinään (`--vain pallo-007`).
+pallon_yritys () {
+  local nimi="$1" kansio="$2" i="$3" rantalippu="$4" ampariKansio="$5"
+  local loki="$6" yritys="$7" alkoi="$8" vali="$9"
+  # Tyhjä kansio jokaiseen yritykseen, ks. shardin_yritys.
+  rm -rf "$kansio"
+  mkdir -p "$kansio" "$ULOS/lokit"
+  tila_kirjoita "$nimi" ajossa 0 0 "$alkoi" "$yritys" "$loki"
+  tila_vahti "$nimi" "$loki" "$alkoi" "$yritys" "$kansio" '*.jpg' &
+  local vahti=$!
+  local koodi=0
+  # shellcheck disable=SC2086
+  (cd "$JUURI" && node tools/tee-pallolaatat.mjs \
+      --min "$PALLO_MIN" --max "$PALLO_MAX" --nostot $rantalippu \
+      --tunniste "$PALLOTUNNISTE" --osa "$i/$PALLO_OSIA" \
+      --noutovali "$vali" --ulos "$kansio") >"$loki" 2>&1 || koodi=$?
+  kill "$vahti" 2>/dev/null || true
+  wait "$vahti" 2>/dev/null || true
+  if [ "$koodi" -ne 0 ]; then
+    echo "VIRHE shardissa $nimi (yritys $yritys) — loki $loki" >&2
+    tail -5 "$loki" >&2 || true
+    return 1
+  fi
+  local kesto laattoja
+  kesto=$(( $(date +%s) - alkoi ))
+  laattoja="$(find "$kansio" -name '*.jpg' | wc -l | tr -d ' ')"
+  echo "$nimi valmis: $laattoja laattaa, ${kesto} s"
+  kirjaa_pallon_laskut "$nimi" "$kansio"
+  if [ "$VIE" -eq 1 ]; then
+    if ! vie_pallo_shardi "$kansio" "$ampariKansio"; then
+      echo "VIRHE: shardin $nimi vienti epäonnistui (yritys $yritys)" >&2
+      return 1
+    fi
+    if [ "$SIIVOA" -eq 1 ]; then rm -rf "$kansio"; fi
+  fi
+  printf '%s %s\n' "$laattoja" "$kesto" > "$ULOS/lokit/$nimi.valmis"
+  tila_kirjoita "$nimi" valmis "$laattoja" "$laattoja" "$alkoi" "$yritys" "$loki"
+  return 0
+}
+
 aja_pallo_shardi () {
   local nimi="$1"
   local i="${nimi#pallo-}"
@@ -828,33 +1181,21 @@ aja_pallo_shardi () {
   fi
   local kansio="$ULOS/$nimi"
   local loki="$ULOS/lokit/$nimi.log"
-  mkdir -p "$kansio" "$ULOS/lokit"
+  local uusintaloki="$ULOS/lokit/$nimi.uusinta.log"
+  local pate='*.jpg'
   # Yksin ajettu shardi (`--vain pallo-007`) on yksi prosessi: sille
   # kelpaa yhden ajon todistetusti turvallinen tahti.
   local vali="${NOUTOVALI:-40}"
   local alkoi
   alkoi="$(date +%s)"
-  # shellcheck disable=SC2086
-  if (cd "$JUURI" && node tools/tee-pallolaatat.mjs \
-        --min "$PALLO_MIN" --max "$PALLO_MAX" --nostot $rantalippu \
-        --tunniste "$PALLOTUNNISTE" --osa "$i/$PALLO_OSIA" \
-        --noutovali "$vali" --ulos "$kansio") >"$loki" 2>&1; then
-    local kesto laattoja
-    kesto=$(( $(date +%s) - alkoi ))
-    laattoja="$(find "$kansio" -name '*.jpg' | wc -l | tr -d ' ')"
-    echo "$nimi valmis: $laattoja laattaa, ${kesto} s"
-    if [ "$VIE" -eq 1 ]; then
-      if ! vie_pallo_shardi "$kansio" "$ampariKansio"; then
-        echo "VIRHE: shardin $nimi vienti epäonnistui" >&2
-        return 1
-      fi
-      if [ "$SIIVOA" -eq 1 ]; then rm -rf "$kansio"; fi
-    fi
-    printf '%s %s\n' "$laattoja" "$kesto" > "$ULOS/lokit/$nimi.valmis"
-    return 0
-  fi
-  echo "VIRHE shardissa $nimi — loki $loki" >&2
-  tail -5 "$loki" >&2 || true
+  if pallon_yritys "$nimi" "$kansio" "$i" "$rantalippu" "$ampariKansio" \
+      "$loki" 1 "$alkoi" "$vali"; then return 0; fi
+  echo "::warning::shardi $nimi kaatui — uusinta kerran (loki $uusintaloki)"
+  if pallon_yritys "$nimi" "$kansio" "$i" "$rantalippu" "$ampariKansio" \
+      "$uusintaloki" 2 "$alkoi" "$vali"; then return 0; fi
+  # shellcheck disable=SC2046
+  tila_kirjoita "$nimi" kaatui $(lue_edistys "$uusintaloki" "$kansio" "$pate") "$alkoi" 2 "$uusintaloki"
+  echo "VIRHE: shardi $nimi kaatui kahdesti — muut shardit ajetaan silti loppuun" >&2
   return 1
 }
 
@@ -906,6 +1247,11 @@ polta_pallo () {
   [ -n "$NOUTOVALI" ] || NOUTOVALI=$((15 * rinnakkain))
   local lista="$ULOS/lokit/pallo-ajossa.txt"
   : > "$lista"
+  # Koko sarjan shardilista (myös valmiit) edistymisraportille ja
+  # eheystarkistukselle: molemmat kysyvät "mitä tähän ajoon kuuluu",
+  # eivät "mitä juuri nyt ajetaan".
+  pallon_shardit > "$ULOS/lokit/pallo-shardit.txt"
+  echo pallo > "$ULOS/lokit/vaihe.txt"
   local nimi
   for nimi in $(pallon_shardit); do
     if [ "$UUDESTAAN" -eq 0 ] && [ -f "$ULOS/lokit/$nimi.valmis" ]; then
@@ -934,14 +1280,16 @@ polta_pallo () {
   if [ "$virhe" -ne 0 ]; then
     echo "VIRHE: yksi tai useampi pallon shardi kaatui. Kesken jääneet:" >&2
     while read -r nimi2; do
-      [ -f "$ULOS/lokit/$nimi2.valmis" ] || echo "  $nimi2 (loki $ULOS/lokit/$nimi2.log)" >&2
+      [ -f "$ULOS/lokit/$nimi2.valmis" ] || echo "  $nimi2 (loki $(kesken_loki "$nimi2"))" >&2
     done < "$lista"
     echo "Aja uudestaan: tools/polta-paikallisesti.sh --vain-pallo" >&2
     echo "  --pallotunniste $PALLOTUNNISTE --pallo-osia $PALLO_OSIA" >&2
     return 1
   fi
 
-  # 3. LUETTELO VIIMEISENÄ.
+  # 3. EHEYSTARKISTUS JA LUETTELO VIIMEISENÄ.
+  tarkista_eheys "$ULOS/lokit/pallo-shardit.txt" --pallo "$luettelokansio/laatat.json" \
+    || return 1
   if [ "$VIE" -eq 1 ]; then
     aws s3 cp "$luettelokansio/laatat.json" "s3://$AMPARI/${kansio}laatat.json" \
       --endpoint-url "$PAATE" --content-type application/json \
@@ -1032,7 +1380,31 @@ else
   esitarkistus
 fi
 
+# EDISTYMISRAPORTOINTI PÄÄLLE. Tunnus on työnkulun ajo-id tai
+# paikallisen ajon aikaleima, ja osoite tulostetaan heti: Fable lukee
+# raportin curlilla eikä odota ajon loppumista.
+[ -n "$AJO_ID" ] || AJO_ID="$(date +%Y%m%d-%H%M%S)"
+RAPORTOI=1
+trap lopetus EXIT
+# Keskeytys (työnkulun peruutus) ajaa EXIT-ansan vain, jos signaali on
+# napattu: muuten valmis.json jäisi kirjoittamatta juuri siitä ajosta,
+# jonka kohtalo eniten kiinnostaa.
+trap 'exit 130' INT
+trap 'exit 143' TERM
+# EDELLISEN AJON SHARDILISTAT POIS. Työkansio elää ajojen yli, ja
+# vanha lista tekisi raporttiin kymmeniä ikuisesti "jonossa" olevia
+# shardeja, jotka eivät kuulu tähän ajoon lainkaan.
+rm -f "$ULOS/lokit/shardit.txt" "$ULOS/lokit/pallo-shardit.txt"
+echo poltto > "$ULOS/lokit/vaihe.txt"
+
 echo "Paikallinen poltto — sarjat $SARJAT, ytimiä $YTIMET"
+echo "  ajo-id  $AJO_ID"
+echo "  raportti https://media.matkakirja.app/julisteet/poltto/$AJO_ID/edistyminen.json"
+echo "           (valmis.json samassa polussa; väli ${RAPORTTIVALI} s)"
+# Vahti päälle KAIKILLE ajoille (koeajo ja yksittäinen shardi mukaan
+# lukien): koeajokin on kymmenen minuuttia, ja juuri sen kaltainen ajo
+# jäi ennen tätä pimeäksi.
+kaynnista_vahti
 echo "  pohja   $VERSIO   viivat $VIIVAVERSIO   nostot $NOSTOVERSIO"
 [ "$ILMAN_RANTAVIIVAA" -eq 1 ] \
   && echo "  ranta   $RANTAVERSIO (pohja ILMAN rantaviivaa; pallolla vektori)"
@@ -1046,6 +1418,11 @@ export NODE_USE_ENV_PROXY="${NODE_USE_ENV_PROXY:-1}"
 
 # ------------------------------------------------------------ yksi shardi
 if [ -n "$VAIN" ]; then
+  # Yhden shardin ajossa raportti koskee vain sitä yhtä shardia.
+  case "$VAIN" in
+    pallo-*) echo "$VAIN" > "$ULOS/lokit/pallo-shardit.txt" ;;
+    *) echo "$VAIN" > "$ULOS/lokit/shardit.txt" ;;
+  esac
   case "$VAIN" in
     pallo-*) aja_pallo_shardi "$VAIN" ;;
     *) aja_shardi "$VAIN" ;;
@@ -1109,6 +1486,11 @@ fi
 # --------------------------------------------------------- koko ajo
 lista="$ULOS/lokit/ajossa.txt"
 : > "$lista"
+# Koko sarjan shardilista (myös ohitettavat valmiit): edistymisraportti
+# laskee siitä jonossa olevat ja eheystarkistus sen, mitkä shardit
+# tämän ajon laattojen pitää yhdessä kattaa.
+shardit | awk -F'|' '{ print $1 }' > "$ULOS/lokit/shardit.txt"
+echo pyramidi > "$ULOS/lokit/vaihe.txt"
 while IFS='|' read -r nimi _; do
   [ -n "$nimi" ] || continue
   if [ "$UUDESTAAN" -eq 0 ] && [ -f "$ULOS/lokit/$nimi.valmis" ]; then
@@ -1142,17 +1524,21 @@ echo "Poltto valmis: ${kesto} s ($(awk -v k="$kesto" 'BEGIN { printf "%.1f", k /
 if [ "$virhe" -ne 0 ]; then
   echo "VIRHE: yksi tai useampi shardi kaatui. Kesken jääneet:" >&2
   while read -r nimi; do
-    [ -f "$ULOS/lokit/$nimi.valmis" ] || echo "  $nimi (loki $ULOS/lokit/$nimi.log)" >&2
+    [ -f "$ULOS/lokit/$nimi.valmis" ] || echo "  $nimi (loki $(kesken_loki "$nimi"))" >&2
   done < "$lista"
   echo "Aja uudestaan: tools/polta-paikallisesti.sh --vain <shardi>" >&2
   exit 1
 fi
 
 if [ "$LUETTELO" -eq 1 ]; then
+  echo luettelo > "$ULOS/lokit/vaihe.txt"
   kokoa_luettelo
   if [ "$SARJAT" = "z8" ] && [ "$PAKOTA_LUETTELO" -eq 0 ]; then
     vertaa_luettelo
   fi
+  # EHEYS ENNEN VIENTIÄ: luettelo lupaa laatat, joten se viedään vasta
+  # kun laatat on laskettu ja luvut täsmäävät.
+  tarkista_eheys "$ULOS/lokit/shardit.txt" --luettelo "$ULOS/luettelo/pyramidi.json"
   [ "$VIE" -eq 1 ] && vie_luettelo
 fi
 
