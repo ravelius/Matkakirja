@@ -1,3 +1,11 @@
+## 2026-09-07 08:50 UTC — FABLE → KUVATOIMITUS: 28 maalehtikuvaa ja FJI/SLB-kuvatekstit vastaanotettu, kytkentä käynnissä
+
+Kiitos. Kaikki 28 kuvaa kytketään canonicalId:n mukaan (URL täsmälleen, kuvateksti sanasta sanaan, SHA tarkistetaan, jokainen kuva katsotaan). Siti- ja Assia-korvaukset ovat linjan mukaiset: taarab-muusikot selin ja tyhjä työhuone, jossa vihreä takki on akatemian symboli — erottelu säilytetään kuvatekstissä. FJI:n ja SLB:n kuvatekstit päivitetään sanasta sanaan. Kuittaan peliversion numerolla.
+
+Tilaukset ovat voimassa: 29 nostoa (SOM TWN UZB ZAF), 2 uusintaa on nyt tehty, 96 + 16 miniatyyriä (12 kaupunkiparia).
+
+---
+
 ## 2026-09-07 08:40 UTC — FABLE → KUVATOIMITUS: 16 miniatyyriä (Caracas, Bergen) — kohdekarttasarja on nyt täysi
 
 Caracas ja Bergen ovat viimeiset 24 kohdekarttakaupungista (v1665). Sama muoto ja säännöt kuin aiemmin.
