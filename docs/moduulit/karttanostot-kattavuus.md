@@ -183,7 +183,7 @@ Edellä oleva 2.9.2026 taulukko on jätetty koskematta tarkoituksella:
 rinnakkaiset erät päivittävät sitä, ja Euroopan luvut näkyvät tässä
 osiossa tuoreina.
 
-**Tilanne yhdellä silmäyksellä (erien M1–M18 jälkeen, 6.9.2026 iltapäivä).** 112 maasta **103 on tavoitteessa** ja 9 vajaita. Tarkoitukselliset vajeet: Fidži, Salomonsaaret, Vanuatu ja Saint Helena (laudan maa-alue tai outlines ei kata saarta, eläintäky ei mahdu vartioon), Hongkong, Singapore, Qatar, Kuwait ja Kypros (lehden ikkuna tai kaupunkisäde). Maailman nostoerät ovat tehdyt; jäljellä on vain tekniset poikkeukset.
+**Tilanne yhdellä silmäyksellä (erien M1–M18 jälkeen, 6.9.2026 iltapäivä).** 112 maasta **103 on tavoitteessa** ja 9 vajaita. Tarkoitukselliset vajeet: Vanuatu ja Saint Helena (laudan maa-alue tai outlines ei kata saarta, eläintäky ei mahdu vartioon), Hongkong, Singapore, Qatar, Kuwait ja Kypros (lehden ikkuna tai kaupunkisäde). Fidžin ja Salomonsaarten eläintäky tuli 7.9.2026 erässä M19 (ks. dokumentin loppu); luvut päivittyvät, kun taulukot ajetaan uudelleen. Maailman nostoerät ovat tehdyt; jäljellä on vain tekniset poikkeukset.
 
 ### Eurooppa (29 maata)
 
@@ -1742,3 +1742,68 @@ työvoimakaupan (blackbirding) luvut niin kuin artikkeli ne esittää:
 nykypäivän kautta, eikä yhdenkään kortin aihe ole käynnissä oleva
 selkkaus (M3:n Myanmar-linja). Guayana Esequiban rajakiista jätettiin
 kokonaan pois samasta syystä.
+
+## Erä M19 (tehty 7.9.2026): Fidžin ja Salomonsaarten eläintäky
+
+Kaksi maata, joilla eläintäky oli merkitty *tarkoitukselliseksi vajeeksi*
+(erät M2 ja M18), saivat sen nyt. Kuvat olivat kuvaputken 7.9. toimituksen
+(`posti/kuvatoimitus-valmiit-29-20260907.json`) kaksi viimeistä kytkemättä
+jäänyttä kuvaa, ja este oli laudassa eikä lähteissä tai kuvissa.
+
+| maa | eläintäky | laji | paikka | lähin kaupunkimerkki |
+|---|---|---|---|---|
+| Fidži (FJI) | nauhaleguaani | *Brachylophus fasciatus* | Lakeba, Lau-saaret | Suva 102,9 |
+| Salomonsaaret (SLB) | ducorpsinkakadu | *Cacatua ducorpsii* | Malaitan pohjoiskärki | Honiara 42,0 |
+
+**Este mitattiin 0,02 asteen ruudukolla, ei arvattu.** `tests/elaintakyt.test.mjs`
+vaatii pisteeltä kolme asiaa yhtä aikaa: maalla (`js/mapart.js` isOnLand,
+joka lukee `map.outlines`), oman maan monikulmion sisällä ja vähintään 35
+lautayksikön päässä jokaisesta kaupunkimerkistä.
+
+- *Salomonsaaria ei piirretä maana lainkaan.* Maan yhdentoista
+  countryShapes-renkaan sisään osuu 739 ruudukkopistettä, ja isOnLand on
+  niissä kaikissa epätosi; lähin rantaviivan piste Guadalcanalista on
+  ~282 lautayksikön päässä Uudessa-Guineassa.
+- *Fidžistä on piirretty vain Viti Levu.* Vanua Levu ja Kadavu ovat
+  countryShapes-renkaissa mutta eivät rantaviivassa, ja Viti Levun
+  kaukaisin piste on 33,6 yksikköä Suvasta eli alle vartion 35:n.
+  Lau-saaret (x ≈ 11 874) ovat kokonaan monikulmion ulkopuolella, joka
+  päättyy x 11 833,3:een eli 180° E:hen.
+
+**Ratkaisu on pallo, ei latistettu lauta (Fablen päätös 7.9.2026).** Laudan
+`map.outlines` on tyylitelty piirros, josta pienet saaret puuttuvat, mutta
+pallon vektorirantaviiva (`js/pallovektorit.js`, v1649 alkaen) piirtää saman
+geometrian Natural Earthin 1:10m-aineistosta ja tuntee sekä Lau-saaret että
+Salomonsaaret. Merkki pannaan siksi eläimen todelliseen maantieteelliseen
+paikkaan, ja laudan vanha piirros saa dokumentoidun poikkeuksen samalla
+mallilla kuin Islannin siirtynyt muoto: `MAATESTIN_POIKKEUS` (FJI, SLB)
+maatestissä ja `RAJATESTIN_POIKKEUS` (ISL, FJI) rajatestissä. Kun
+`map.outlines` joskus päivitetään, poikkeus poistetaan.
+
+**Poikkeus ei koske kaupunkisädettä.** Kumpikin piste on yli 35 lautayksikön
+päässä jokaisesta kaupunkimerkistä ilman helpotusta, ja Salomonsaarten piste
+on lisäksi oman maansa monikulmion sisällä — siltä osin vartiota ei kierretty
+lainkaan. Guadalcanal karsiutui mittauksella: koko saaren kaukaisin piste on
+34,1 yksikköä Honiarasta, siis alle rajan, koska Honiara on itse saarella.
+
+**Sääntö N3 siirsi Salomonsaarten pistettä kerran.** Malaitan artikkelin oma
+koordinaatti (160,95 / −9,02) on 3,5 lautayksikön päässä skandaalista
+"Kwaio 1927", ja `tools/tarkista-nimiolimitys.mjs` kaatoi ladonnan nimiö
+nimiön päälle. Piste siirtyi saaren pohjoiskärkeen, jolloin väli on 26,5
+yksikköä ja työkalu sanoo taas "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Fidžin merkki näkyy maailmankartalla mutta ei maalehden kartalla.**
+`FOKUS_POHJAT.FJI`-rajaus päättyy x 11 853,33:een ja Lakeba on x 11 874,0,
+eli koko Lau-saaristo on lehden ikkunan ulkopuolella — sama havainto on jo
+`js/packs/maastokohteet-fji.js`:n otsikkokommentissa. Eläintäky on
+maailmankartan merkki, joten se toimii, mutta Fidžin lehden kartalta se
+puuttuu. Vaihtoehtoa ei ollut: nauhaleguaania ei ole Lau-saarten
+ulkopuolella. Rajauksen levennys uusisi myös lehden pohjakuvan
+(`FJI.webp`), joten se on oma työnsä. Salomonsaarten merkki on lehden
+rajauksen sisällä.
+
+**Vanuatu jää yhä ilman.** Sen este on sama laudan maamuoto (erä M18), mutta
+lajia (kookoskrapu, *Birgus latro*) ei ole vielä tilattu kuvaputkelta. Saint
+Helenan vaje on niin ikään ennallaan. Taulukoiden lukuja ei ole päivitetty
+tässä erässä — ne ajetaan `node tools/laske-karttanostot.mjs --md`
+-työkalulla.

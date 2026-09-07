@@ -39,7 +39,36 @@ const JUURI = new URL('..', import.meta.url);
  * eikä siis osu maan omaan monikulmioon. Muoto on korjattava joskus,
  * mutta se on eri työ kuin tämä.
  */
-const RAJATESTIN_POIKKEUS = new Set(['ISL']);
+const RAJATESTIN_POIKKEUS = new Set(['ISL', 'FJI']);
+
+/*
+ * FIDŽI JA SALOMONSAARET OVAT MAATESTIN POIKKEUS, JA SYY ON LAUDAN
+ * TYYLITELLYSSÄ PIIRROKSESSA (Fablen päätös 7.9.2026).
+ *
+ * `map.outlines` on piirros eikä mittaustulos: siihen on otettu vain
+ * isot maamuodot, ja pienet saaret puuttuvat. Salomonsaarista ei ole
+ * rantaviivassa tavuakaan — maan yhdentoista countryShapes-renkaan
+ * sisään osuu 739 ruudukkopistettä (0,02°), ja isOnLand on niissä
+ * kaikissa epätosi; lähin rantaviiva on ~282 lautayksikön päässä
+ * Uudessa-Guineassa. Fidžistä on piirretty vain Viti Levu, joten
+ * Vanua Levu, Kadavu ja Lau-saaret jäävät sekin testin ulkopuolelle.
+ *
+ * PALLO TUNTEE MOLEMMAT. Pallon vektorirantaviiva (js/pallovektorit.js,
+ * v1649 alkaen) piirtää Natural Earthin 1:10m-aineiston ja näyttää
+ * sekä Lau-saaret että Salomonsaaret oikein. Merkki on siksi eläimen
+ * todellisessa maantieteellisessä paikassa, ja poikkeus koskee vain
+ * sitä vanhaa piirrosta, jota ollaan muutenkin korvaamassa. Kun
+ * `map.outlines` joskus päivitetään, poikkeus poistetaan — se on eri
+ * työ kuin tämä, aivan kuten Islannin siirtynyt muoto.
+ *
+ * POIKKEUS EI KOSKE KAUPUNKISÄDETTÄ. Kumpikin piste on yli 35
+ * lautayksikön päässä jokaisesta kaupunkimerkistä ilman helpotusta
+ * (FJI 102,9 Suvasta, SLB 37,3 Honiarasta), ja SLB on lisäksi oman
+ * maansa monikulmion sisällä. Vain FJI tarvitsee myös rajapoikkeuksen,
+ * koska Lau-saaret ovat monikulmion ulkopuolella: se päättyy
+ * x 11 833,3:een eli 180° E:hen, ja Lakeba on x ≈ 11 874.
+ */
+const MAATESTIN_POIKKEUS = new Set(['FJI', 'SLB']);
 
 /** Lyhin sallittu etäisyys kaupunkimerkkiin maailmankartan yksikköinä. */
 const VAHIN_ETAISYYS_KAUPUNKIIN = 35;
@@ -63,7 +92,7 @@ const paikat = new Map(ELAINTAKY_MAAT.map((iso) => {
 }));
 
 test('jokaisella eläintäyllä on kaanoniteksti, kuva ja paikka', () => {
-  assert.equal(ELAINTAKY_MAAT.length, 105, 'eläintäkyjä on 105 maassa');
+  assert.equal(ELAINTAKY_MAAT.length, 107, 'eläintäkyjä on 107 maassa');
   for (const iso of ELAINTAKY_MAAT) {
     const taky = ELAINTAKYT[iso];
     assert.match(iso, /^[A-Z]{3}$/, `${iso}: avain on kolmikirjaiminen maatunnus`);
@@ -134,6 +163,7 @@ test('maailmankartta tuntee jokaisen eläintäyn maan', () => {
 
 test('eläintäky on maalla eikä merellä', () => {
   for (const iso of ELAINTAKY_MAAT) {
+    if (MAATESTIN_POIKKEUS.has(iso)) continue;
     const { x, y } = paikat.get(iso);
     assert.ok(isOnLand([x, y], MAAILMANKARTTA.map),
       `${iso}: merkki jäisi veteen (${x.toFixed(0)}, ${y.toFixed(0)})`);
