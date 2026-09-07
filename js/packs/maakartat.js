@@ -12723,6 +12723,114 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Mutamaja', lat: -12.46776, lon: 130.844704 },
     ],
   },
+  /*
+   * LIMA (7.9.2026). Rajaus on 1,9 × 1,8 kilometriä eli pelin
+   * tiiviimpiä — Christchurchia pienempi. Perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n lima-lohkossa: Pizarron 1535
+   * mittaama ruutukaava mahtui muurien sisään, ja kaikki kahdeksan
+   * kohdetta ovat yhä sen sisällä.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kaupungin perustaminen ja Plaza Mayor, kaupunginmuurin
+   * purkaminen, sateeton ilmasto ja Huaca Pucllana; historiasivu
+   * kertoo Ichman laaksosta, vuoden 1746 järistyksestä, guanosta ja
+   * Andien radasta, ruokasivu gastronomiasta, cevichestä, Barrio
+   * Chinon chifasta ja Misturasta. Matkaopas käsittelee lentokentän,
+   * alueen rakenteen, Mirafloresin kallionreunan ja Callaon 1866.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME FAKTAPOHJAN EHDOTUSTA JÄTETTIIN POIS. Plaza Mayor,
+   * hallituksen palatsi ja Desamparadosin rautatieasema ovat kaikki
+   * ruudun sisällä (faktapohja-lima.md, osio 4 antaa niille
+   * koordinaatit). Kaksi ensimmäistä ovat lehden noston K1 aihe;
+   * kolmas jätettiin pois, koska Andien rata on noston H4 aihe eikä
+   * lukija erottaisi asemaa radasta.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Santo Domingon
+   * luostari on 77 metriä Casa de Osambelasta ja Teatro Segura 152
+   * metriä San Agustínin kirkosta. Molemmat mainitaan matkaoppaassa.
+   */
+  lima: {
+    polku: 'assets/kartat/lima-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -12.0400, etela: -12.0570, lansi: -77.0400, ita: -77.0235 },
+    esittely: 'Kartta näyttää Liman vanhankaupungin ruutukaavan '
+      + 'kokonaisuudessaan: yläreunassa mutkittelee Rímac-joki, '
+      + 'keskellä kadut leikkaavat toisensa suorassa kulmassa niin '
+      + 'kuin ne mitattiin 1535, ja alaoikealla kaartaa leveä '
+      + 'valtaväylä, joka kulkee vanhan kaupunginmuurin linjaa. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Halifaxissa ja Wellingtonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 309 metriä
+       * (San Franciscon luostari – Inkvisition museo), toiseksi
+       * pienin 327 metriä (Santa Rosan pyhäkkö – Casa de Osambela).
+       */
+      { nimi: 'Santa Rosan pyhäkkö', lat: -12.0426, lon: -77.0353 },
+      { nimi: 'Casa de Osambela', lat: -12.0439, lon: -77.0326 },
+      { nimi: 'San Franciscon luostari', lat: -12.04549722, lon: -77.02739444 },
+      { nimi: 'Las Nazarenasin pyhäkkö', lat: -12.04556389, lon: -77.03736694 },
+      { nimi: 'Inkvisition museo', lat: -12.04808, lon: -77.02634 },
+      { nimi: 'Torre Taglen palatsi', lat: -12.04884, lon: -77.02931 },
+      { nimi: 'Plaza San Martín', lat: -12.0515, lon: -77.0345 },
+      { nimi: 'Casona de San Marcos', lat: -12.0545, lon: -77.0322 },
+    ],
+  },
+  /*
+   * QUITO (7.9.2026). Rajaus on 2,4 kilometriä korkea ja 2,1 leveä,
+   * ja pystysuuntainen venytys on tahallinen: Quiton vanhakaupunki on
+   * pitkä pohjois–eteläsuuntainen nauha kahden rinteen välissä.
+   * Perustelu on tools/piirra-kaupunkikartta.mjs:n quito-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat inkojen
+   * ja espanjalaisten Quito, korkeus ja päiväntasaaja, vanhankaupungin
+   * maailmanperintöasema ja Pichinchan tulivuori; historiasivu kertoo
+   * San Franciscosta, La Compañíasta, Pichinchan taistelusta ja
+   * observatoriosta, tiedesivu astemittausretkestä, heilurikokeesta,
+   * Cotopaxista ja observatorion perinnöstä. Yksikään kartan
+   * kohteista ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. San
+   * Franciscon luostari, La Compañían kirkko, Quiton observatorio ja
+   * Mitad del Mundo ovat kaikki faktapohja-quito.md:n osion 4
+   * ehdotuksia, ja kolme ensimmäistä mahtuisi tähän ruutuun — mutta
+   * ne ovat lehden omien nostojen aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Sucren
+   * talomuseo on 111 metriä El Sagrariosta, Alberto Mena Caamañon
+   * museo 99 metriä samasta kirkosta ja Teatro Bolívar 164 metriä San
+   * Agustínista.
+   */
+  quito: {
+    polku: 'assets/kartat/quito-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -0.2120, etela: -0.2340, lansi: -78.5230, ita: -78.5045 },
+    esittely: 'Kartan yläosassa on Quiton vanhankaupungin tiheä '
+      + 'ruutukaava, joka kallistuu vinoon laakson suunnan mukana. '
+      + 'Alavasemmalla kohoaa Panecillon kukkula omine '
+      + 'korkeuskäyrineen, oikeassa reunassa laskee Machángara-joen '
+      + 'uoma, ja niiden välissä kaupunki loppuu rinteeseen. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 220 metriä (Casa del Alabado – Kaupunkimuseo),
+       * toiseksi pienin 262 metriä (San Agustínin luostari – El
+       * Sagrarion kirkko).
+       */
+      { nimi: 'Voto Nacionalin basilika', lat: -0.2150, lon: -78.5074 },
+      { nimi: 'La Mercedin basilika', lat: -0.2182, lon: -78.5137 },
+      { nimi: 'San Agustínin luostari', lat: -0.22033325, lon: -78.51047644 },
+      { nimi: 'El Sagrarion kirkko', lat: -0.2207, lon: -78.5128 },
+      { nimi: 'Casa del Alabado', lat: -0.221258, lon: -78.515822 },
+      { nimi: 'Kaupunkimuseo', lat: -0.22305556, lon: -78.515 },
+      { nimi: 'El Panecillo', lat: -0.22861111, lon: -78.51861111 },
+      { nimi: 'Vuoden 1909 näyttelypalatsi', lat: -0.2310, lon: -78.5123 },
+    ],
+  },
 };
 
 /*

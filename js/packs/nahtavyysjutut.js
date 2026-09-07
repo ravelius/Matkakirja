@@ -49816,4 +49816,543 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * LIMAN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.lima, ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit
+   * "Sanctuary of Saint Rose of Lima", "Rose of Lima", "Casa de
+   * Osambela", "Basilica and Convent of San Francisco, Lima",
+   * "Sanctuary and Monastery of Las Nazarenas", "Lord of Miracles",
+   * "Museum of Congress and the Inquisition", "Palacio de Torre
+   * Tagle", "Plaza San Martín, Lima", "Casona of the National
+   * University of San Marcos" ja "National University of San
+   * Marcos").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Pizarron perustama Plaza Mayor, kaupunginmuurin purkaminen,
+   * sateeton aavikkoilmasto, Huaca Pucllana, Ichman laakso, vuoden
+   * 1746 maanjäristys, guanotalous, Andien rautatie, gastronomian
+   * pääkaupunki, ceviche, Barrio Chinon chifa-keittiö ja Mistura;
+   * matkaopas kertoo lentokentästä, alueen rakenteesta, Mirafloresin
+   * kallionreunasta ja Callaon taistelusta 1866. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Las
+   * Nazarenasin jutussa vuoden 1746 maanjäristys mainitaan vain siltä
+   * osin kuin se teki seinämaalauksesta kaupungin suojelijan —
+   * järistyksen oma tarina on lehden historiasivun nosto H2. Casa de
+   * Osambelan jutussa ei kerrota, mistä tontin omistanut Santo Domingo
+   * sai varansa, koska guano ja siirtomaatalous ovat lehden noston H3
+   * aihe.
+   *
+   * SAN FRANCISCO ESIINTYY LEHDESSÄ VAIN KUVATEKSTISSÄ. Kaupunkilehden
+   * aamu-avauskuvan selite nimeää luostarin, mutta yksikään lehden
+   * juttu ei kerro sen tarinaa, joten kohdekartta ei toista mitään.
+   * Kuvateksti on selite, ei juttu — sama sääntö kuin valokuvatauluissa
+   * (sama kohde saa esiintyä molemmissa, sama tiedosto ei).
+   */
+  lima: {
+    'Santa Rosan pyhäkkö': {
+      aika: '1728',
+      teksti: 'Isabel Flores de Oliva syntyi Limassa 20. huhtikuuta '
+          + '1586 yhdentoista lapsen perheeseen. Isä Gaspar Flores oli '
+          + 'espanjalainen jalkaväen musketööri, äiti María de Oliva '
+          + 'Limassa syntynyt kreoli. Tytär liittyi Pyhän Dominicuksen '
+          + 'kolmanteen sääntökuntaan ja tuli tunnetuksi kahdesta '
+          + 'asiasta: ankarasta itsekurista ja siitä, että hän hoiti '
+          + 'kaupungin köyhiä omin varoin ja omassa kodissaan. Hän '
+          + 'kuoli 24. elokuuta 1617 kolmenkymmenenyhden vuoden '
+          + 'ikäisenä pitkän sairauden jälkeen, ja hautajaisiin '
+          + 'tuomiokirkkoon tulivat kaikki kaupungin viranomaiset.'
+          + '\n\n'
+          + 'Paavi Clemens IX autuaaksijulisti hänet 1667, ja Clemens '
+          + 'X julisti hänet pyhäksi 12. huhtikuuta 1671. Rosa de Lima '
+          + 'oli ensimmäinen Amerikassa syntynyt ihminen, joka '
+          + 'pyhitettiin. Hänestä tuli Perun, Liman ja koko '
+          + 'Latinalaisen Amerikan suojeluspyhimys, ja hänen kuvansa '
+          + 'oli pitkään Perun suurimman setelin aiheena.'
+          + '\n\n'
+          + 'Pyhäkkö on rakennettu 1728 perheen talon jäännösten '
+          + 'päälle, ja kävijöiden suosikki on talon oma kaivo. '
+          + 'Nykyisen asunsa rakennus sai 24. elokuuta 1992 tehdyssä '
+          + 'kunnostuksessa; kansallisen kulttuuriperinnön asema on '
+          + 'vuodelta 1972. Seinällä on pyhimystä esittävä maalaus, '
+          + 'jota amiraali Miguel Grau piti mukanaan Huáscar-aluksella. '
+          + 'Pyhäkön tontilla toimi aikoinaan myös Espíritu Santon '
+          + 'sairaala, jossa Rosa hoiti sairaita; sen sisäänkäynnin '
+          + 'jäänteet kaivettiin esiin ja vihittiin uudelleen 25. '
+          + 'elokuuta 2026.',
+      lahde: 'Wikipedia',
+    },
+    'Casa de Osambela': {
+      aika: '1803–1805',
+      teksti: 'Tontti kuului Santo Domingon luostarille, ja sillä oli '
+          + 'seissyt dominikaanien noviisitalo, kunnes vuoden 1746 '
+          + 'maanjäristys kaatoi sen. Luostari myi raunioituneen osan '
+          + 'espanjalaiselle laivanrakentajalle, pankkiirille ja '
+          + 'kauppiaalle Martín de Osambelalle saadakseen omat '
+          + 'keskeneräiset työnsä maksetuiksi. Talo valmistui vuosina '
+          + '1803–1805, ja se on yhä keskustan laajimpia asuintaloja.'
+          + '\n\n'
+          + 'Kaksi asiaa erottaa sen kaikista muista ajan '
+          + 'limalaistaloista. Huoneet on ladottu kadun suuntaisesti '
+          + 'eikä syvyyssuunnassa, joten julkisivuun mahtui viisi '
+          + 'Ludvig XVI:n tyylistä parveketta ja niiden lisäksi kolme '
+          + 'kaidetta. Ja talossa on neljä kerrosta kahden sijaan: '
+          + 'ylimpänä on kahdeksankulmainen näköalatorni, jollainen '
+          + 'oli tuolloin maanjäristysten takia kielletty. Tornin '
+          + 'päällä on pieni kupoli, jonka siluetti on mudéjar-tyylinen. '
+          + 'Arkkitehti Héctor Velarden mukaan juuri sieltä talon '
+          + 'ensimmäinen omistaja katseli kaukoputkella Callaoon '
+          + 'saapuvia laivoja.'
+          + '\n\n'
+          + 'Kun José de San Martín saapui Limaan, Osambela antoi '
+          + 'talonsa hänen käyttöönsä, ja vapauttaja piti siellä '
+          + 'suuret tanssiaiset kaupungin seurapiireille sekä asui '
+          + 'talossa itsenäisyyden julistamisen jälkeen. Vuonna 1854 '
+          + 'talo siirtyi José de la Asunción Oquendolle, ja siitä '
+          + 'juontuu toinen nimi Casa de Oquendo. Kansallismonumentti '
+          + '1963, kunnostettu 1982–1985 takaisin alkuperäiseen '
+          + 'indigonsiniseen väriinsä. Nykyään talossa toimii Perun '
+          + 'kieliakatemia.',
+      lahde: 'Wikipedia',
+    },
+    'San Franciscon luostari': {
+      aika: '1672',
+      teksti: 'Franciskaanit saivat tonttinsa jo silloin, kun Liman '
+          + 'ruutukaava jaettiin 1535, mutta ensimmäinen kappeli '
+          + 'jäätyi autioksi, kun laaksosta loppuivat munkit. Vasta '
+          + '1546 saapunut Francisco de Santa Ana sai maan takaisin ja '
+          + 'rakensi vaatimattoman kirkon. Seuraavan vuosisadan aikana '
+          + 'luostarista kasvoi taideaarre — ja 4. helmikuuta 1655 '
+          + 'maanjäristys kaatoi sen kokonaan ja vei mennessään koko '
+          + 'vuosisadan työn.'
+          + '\n\n'
+          + 'Uuden luostarin piirsi portugalilainen arkkitehti '
+          + 'Constantino de Vasconcellos, ja rakennusmestarina toimi '
+          + 'limalainen Manuel Escobar. Peruskiven laski varakuningas, '
+          + 'Alba de Listen kreivi, 8. toukokuuta 1657, ja valmis talo '
+          + 'vihittiin suurin menoin 3. lokakuuta 1672; sisätöitä '
+          + 'jatkettiin vuoteen 1729. Pääristikäytävän sevillalaiset '
+          + 'kaakelit ovat vuodelta 1642. Kun käytävän 39 maalausta '
+          + 'vuodelta 1671 otettiin 1974 alas restauroitaviksi, niiden '
+          + 'alta löytyi sattumalta 1600-luvun alkupuolen '
+          + 'seinämaalauksia, joista kukaan ei ollut tiennyt mitään.'
+          + '\n\n'
+          + 'Kirjastossa on noin 25 000 nidettä, joista osa on '
+          + '1500-luvulta, sekä yli kuusituhatta pergamenttia. '
+          + 'Ruokasalissa riippuu Francisco de Zurbaránin viidentoista '
+          + 'maalauksen sarja. Kapitulisalissa sääntökuntien papisto '
+          + 'allekirjoitti Perun itsenäisyysjulistuksen — maallinen '
+          + 'papisto allekirjoitti omansa tuomiokirkossa. Kirkon alla '
+          + 'ovat katakombit, jotka olivat kaupungin hautausmaa '
+          + 'vuoteen 1810 asti; arvion mukaan sinne haudattiin '
+          + 'kaikkiaan 70 000 ihmistä, ja käytävät löydettiin '
+          + 'uudelleen vasta 1951. Paavi Johannes XXIII korotti kirkon '
+          + 'basilikaksi 11. tammikuuta 1963.',
+      lahde: 'Wikipedia',
+    },
+    'Las Nazarenasin pyhäkkö': {
+      aika: '1771',
+      teksti: 'Pyhäkössä on seinämaalaus ristiinnaulitusta Kristuksesta, '
+          + 'ja se on Liman tunnetuin kuva. Nimi Señor de los Milagros, '
+          + 'Ihmeiden Herra, syntyi 1600- ja 1700-luvuilla: vuosien '
+          + '1655, 1687 ja 1746 maanjäristykset kaatoivat suurimman '
+          + 'osan kaupungista, mutta maalauksen seinä jäi joka kerta '
+          + 'pystyyn. Kunnioitus alkoi afroperulaisena, ja kolmannen '
+          + 'järistyksen jälkeen 1700-luvulla myös kreolikeskiluokka '
+          + 'omaksui sen.'
+          + '\n\n'
+          + 'Kaupunginvaltuusto julisti Ihmeiden Herran Liman '
+          + 'suojelijaksi jo 1715. Kirkko rakennettiin Nazarenasin '
+          + 'luostarin yhteyteen, ja se valmistui suuren '
+          + 'maanjäristyksen jälkeen 1771. Vuonna 2005 Perun valtio '
+          + 'julisti juhlan kansalliseksi kulttuuriperinnöksi ja '
+          + 'Vatikaani antoi kuvalle Perun kansan suojelijan aseman.'
+          + '\n\n'
+          + 'Lokakuun 18., 19. ja 28. päivänä sekä pyhäinpäivänä täältä '
+          + 'lähtee kulkue, joka kiertää koko vanhankaupungin ja kestää '
+          + 'noin kaksikymmentä tuntia. Kannettava kuva on jäljennös, '
+          + 'ja sitä kantavat veljeskunnan kaksikymmentä vuororyhmää; '
+          + 'edellä kävelevät suitsuttajanaiset selkä menosuuntaan, '
+          + 'violetissa asussa ja mantilja päässä. Violetti on koko '
+          + 'kuukauden väri — lokakuuta sanotaan Perussa violetiksi '
+          + 'kuukaudeksi — ja sen ajan herkkuja ovat violetti '
+          + 'maissivanukas mazamorra morada ja Doña Pepan turrón.',
+      lahde: 'Wikipedia',
+    },
+    'Inkvisition museo': {
+      aika: '1968',
+      teksti: 'Talo Jirón Junínin varrella Plaza Bolívarin kulmassa oli '
+          + 'varakuningaskunnan aikana pyhän inkvisition tuomioistuimen '
+          + 'päämaja. Ennen lakkauttamistaan — vuosi ennen kuin José '
+          + 'de San Martín julisti Perun itsenäiseksi — tuomioistuin '
+          + 'oli käsitellyt kaikkiaan 1 474 ihmisen asian, ja heistä '
+          + '32 teloitettiin.'
+          + '\n\n'
+          + 'Itsenäisyyden jälkeen samaan taloon asettui Perun '
+          + 'ensimmäinen perustuslakia säätävä kongressi, ja sen '
+          + 'jälkeen senaatti istui siellä aina vuoteen 1939, jolloin '
+          + 'se muutti uuteen lakiasäätävään palatsiin. Vuoden 1909 '
+          + 'vallankaappausyrityksessä sotaväki hajotti väkijoukon '
+          + 'ampumalla, rakennus vaurioitui ja osa salaliittolaisista '
+          + 'pakeni sen sisään.'
+          + '\n\n'
+          + 'Vuodesta 1943 talossa toimi edustajainhuoneen yleinen '
+          + 'kirjasto, kunnes museo avattiin 26. heinäkuuta 1968. Se '
+          + 'kertoo kahden aivan eri laitoksen historian samassa '
+          + 'talossa: tuomioistuimen ja Perun kongressin. Museo on '
+          + 'ollut toukokuusta 2016 suljettuna kunnostustöiden vuoksi.',
+      lahde: 'Wikipedia',
+    },
+    'Torre Taglen palatsi': {
+      aika: '1735',
+      teksti: 'Palatsi valmistui 1735 José Bernardo de Tagle Brachon '
+          + 'kodiksi. Kuningas Filip V oli antanut hänelle 26. '
+          + 'marraskuuta 1730 Torre Taglen markiisin arvon, ja rakennus '
+          + 'tehtiin sen mukaisesti: kiviaineet tuotiin Espanjasta, '
+          + 'Panamasta ja Keski-Amerikasta, ja kerrosala on 1 699 '
+          + 'neliömetriä.'
+          + '\n\n'
+          + 'Julkisivu on andalusialaista barokkia ja tarkoituksella '
+          + 'epäsymmetrinen. Toisessa kerroksessa on kaksi umpinaista '
+          + 'setri- ja mahonkipuusta veistettyä parveketta, ja niiden '
+          + 'jaotus on eri: oikeanpuoleisessa on kolme osaa ja '
+          + 'vasemmanpuoleisessa seitsemän. Portaalin päällä on suvun '
+          + 'vaakuna ja teksti "Tagle se llamó el que la sierpe mató y '
+          + 'con la infanta casó" — Tagleksi kutsuttiin sitä, joka '
+          + 'tappoi käärmeen ja nai prinsessan. Eteisholvin seinät '
+          + 'ovat sevillalaista kaakelia ja katto veistettyä puuta; '
+          + 'sivuilla on matalat astinkivet, joilta talon naiset '
+          + 'nousivat ratsun tai vaunun rappuselle. Ovensuussa oli '
+          + 'ketju, joka merkitsi turvapaikkaoikeutta — sama etuoikeus '
+          + 'oli aikanaan muutamalla Liman kirkolla.'
+          + '\n\n'
+          + 'Sisällä on neljätoista huonetta, ruokasali, keittiö ja '
+          + 'pieni kappeli, ja kaakelit ovat samalta vuodelta 1735 kuin '
+          + 'talo. Toisessa pihassa oli talli ja vaunuvaja, ja siellä '
+          + 'seisoo yhä markiisin sini-punainen 1700-luvun vaunu. '
+          + 'Perun valtio osti talon 27. kesäkuuta 1918 neljännen '
+          + 'markiisin perillisiltä 320 000 solilla. Vuodesta 1918 '
+          + 'vuoteen 2023 se oli ulkoministeriön päämaja, ja nykyään '
+          + 'siellä toimii valtion seremonia- ja protokollaosasto.',
+      lahde: 'Wikipedia',
+    },
+    'Plaza San Martín': {
+      aika: '1921',
+      teksti: 'Aukion paikalla oli ensin San Juan de Diosin sairaala, '
+          + 'joka purettiin 1850. Tilalle tuli rautatieasema, ja sekin '
+          + 'purettiin vuosina 1911–1918. Vasta sitten alue vapautui '
+          + 'aukioksi.'
+          + '\n\n'
+          + 'Plaza San Martín vihittiin 27. heinäkuuta 1921, kun Perun '
+          + 'itsenäisyydestä tuli sata vuotta. Sen suunnitteli '
+          + 'espanjalainen arkkitehti Manuel Piqueras Cotolí: penkit ja '
+          + 'kaiteet marmorista, päällyste graniitista, neljä '
+          + 'suihkulähdettä, pronssiset katulyhdyt ja kukkaistutukset. '
+          + 'Keskellä seisova José de San Martínin muistomerkki '
+          + 'ratkaistiin kilpailulla, jonka voitti espanjalainen '
+          + 'kuvanveistäjä Mariano Benlliure; patsas esittää '
+          + 'vapauttajaa Andien-ylityksellään.'
+          + '\n\n'
+          + 'Aukiota reunustavat talot nousivat vähitellen ja siksi '
+          + 'yhtenäisinä. Colón-teatteri ja Giacoletti-talo olivat '
+          + 'paikallaan jo 1914 eli ennen aukiota, Hotel Bolívar '
+          + 'valmistui 1924, Zelan ja Pumacahuan pylväskäytävät 1926 ja '
+          + 'Club Nacional 1929; viimeinen vaihe 1935–1945 täytti '
+          + 'loput sivut uuskolonialistisilla taloilla. Kolmen sulottaren '
+          + 'lyhty, 1800-luvun kaupunkikaluste, siirrettiin aukiolle '
+          + '1915. Aukio liitettiin 1991 Liman historiallisen keskustan '
+          + 'maailmanperintökohteeseen omana monumenttinaan.',
+      lahde: 'Wikipedia',
+    },
+    'Casona de San Marcos': {
+      aika: '1605',
+      teksti: 'San Marcosin yliopisto sai alkunsa yleisopinnoista, '
+          + 'joita pidettiin dominikaanien Rosarion luostarissa 1. '
+          + 'heinäkuuta 1548. Liman kaupunginvaltuusto lähetti '
+          + 'munkki Tomás de San Martínin ja kapteeni Juan Jerónimo de '
+          + 'Aliagan Espanjaan hakemaan perustamiskirjaa, ja kuningas '
+          + 'Kaarle I ja kuningatar Juana myönsivät sen: yliopisto '
+          + 'perustettiin virallisesti 12. toukokuuta 1551. Se on '
+          + 'Amerikan ensimmäinen virallisesti perustettu ja yhä '
+          + 'yhtäjaksoisesti toimiva yliopisto. Paavi Pius V antoi '
+          + 'sille 1571 paavillisen aseman, ja samalla vaakunan '
+          + 'Ruusukon Neitsyt vaihtui evankelista Markukseksi ja tämän '
+          + 'leijonaksi.'
+          + '\n\n'
+          + 'Tämä talo on vanhempi kuin yliopiston oleskelu siinä. Sen '
+          + 'historia alkaa 1605, kun varakas espanjalainen Antonio '
+          + 'Correa Ureña lahjoitti varat jesuiittojen San Antonio '
+          + 'Abadin noviisitaloon. Silloin rakennus oli viisi tai kuusi '
+          + 'kertaa nykyistä suurempi. Yliopisto muutti taloon 1875 ja '
+          + 'pysyi siinä vuoteen 1966, jolloin vuoden 1966 '
+          + 'maanjäristyksen vauriot siirsivät sen uuteen '
+          + 'yliopistokaupunkiin.'
+          + '\n\n'
+          + 'Nykyään talo on yliopiston kulttuurikeskus. Loreton '
+          + 'kappelin holvissa on kolmetoista 1700-luvun puolivälin '
+          + 'maalausta, ja Salón Generalin puiset katsomoparvet ovat '
+          + '1700-luvun lopulta. Talossa on yliopiston teatteri sekä '
+          + 'kaksi museota: taidemuseo ja 21. lokakuuta 1919 '
+          + 'perustettu arkeologian ja antropologian museo, jonka '
+          + 'ensimmäinen johtaja oli Julio C. Tello. Mestarien pihan '
+          + 'veistos oli aikanaan kahdenkymmenen solin setelin aiheena.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * QUITON KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.quito, ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit
+   * "Basílica del Voto Nacional", "Basilica of La Merced, Quito",
+   * "Church and convent of San Agustín, Quito", "Iglesia de El
+   * Sagrario, Quito", "Casa del Alabado Museum of Pre-Columbian Art",
+   * "City Museum (Quito, Ecuador)", "El Panecillo" ja "National
+   * Ecuadorian Exposition").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat inkojen ja espanjalaisten Quito, korkeus ja päiväntasaaja,
+   * vanhankaupungin maailmanperintöasema, Pichinchan tulivuori, San
+   * Franciscon luostari, La Compañían julkisivu, Pichinchan taistelu
+   * 1822, García Morenon observatorio, ranskalainen astemittausretki,
+   * heilurikoe, Cotopaxi ja observatorion perintö; matkaopas kertoo
+   * korkeuteen tottumisesta, alueen rakenteesta, käsityötorista ja
+   * Mitad del Mundosta. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * SAN AGUSTÍNIN JUTTU EI KERRO VUODEN 1809 KAPINAA. Luostarin
+   * kapitulisali on paikka, jossa hallintoneuvoston asiakirja
+   * allekirjoitettiin, ja se mainitaan yhtenä salin tietona — mutta
+   * kapinan kohtalo ja Pichinchan taistelu ovat lehden noston H3 aihe,
+   * eikä juttu kerro niistä sanaakaan.
+   *
+   * PANECILLON JUTTU MAINITSEE LEGARDAN VEISTOKSEN, joka on San
+   * Franciscon pääalttarilla. Se on tässä vain patsaan esikuvana:
+   * lehden nosto H1 kertoo San Franciscon luostarista rakennuksena
+   * eikä sen alttarista, joten aihe ei toistu.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Sucren
+   * talomuseo on 111 metriä El Sagrariosta, Alberto Mena Caamañon
+   * museo 99 metriä samasta kirkosta ja Teatro Bolívar 164 metriä San
+   * Agustínista. Kaikki kolme mainitaan matkaoppaassa.
+   */
+  quito: {
+    'Voto Nacionalin basilika': {
+      aika: '1892–',
+      teksti: 'Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää '
+          + 'rakentaa monumentti, joka muistuttaa ikuisesti maan '
+          + 'vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti '
+          + 'Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja '
+          + 'kongressi varasi työhön 12 000 pesoa eli tuhat pesoa '
+          + 'kuukaudessa. Kun rahat loppuivat, keinoja keksittiin '
+          + 'lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa '
+          + 'niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä '
+          + 'varten suolaveron.'
+          + '\n\n'
+          + 'Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti '
+          + 'esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli '
+          + '40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. '
+          + 'Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa '
+          + 'korkeimmillaan 83 metriin. Paavi Johannes Paavali II '
+          + 'siunasi sen 30. tammikuuta 1985, ja vihkiminen tapahtui '
+          + '12. heinäkuuta 1988 — mutta virallisesti basilika on yhä '
+          + 'keskeneräinen.'
+          + '\n\n'
+          + 'Kryptassa on Ecuadorin kansallispantheon, jonne on '
+          + 'haudattu useita maan presidenttejä. Kellotorneihin pääsee '
+          + 'pientä maksua vastaan kiipeämään, ja ylhäältä näkee koko '
+          + 'kaupungin laakson.',
+      lahde: 'Wikipedia',
+    },
+    'La Mercedin basilika': {
+      aika: '1701–1737',
+      teksti: 'La Merced on armonsääntökunnan ensimmäinen kirkko ja '
+          + 'pääpaikka Ecuadorissa, ja juuri siitä se sai '
+          + 'basilika-arvonsa. Rakentaminen alkoi 1701, torni valmistui '
+          + '1736 ja kirkko vihittiin 1737. Arkkitehti oli José Jaime '
+          + 'Ortiz, sama alicantelainen mestari, joka piirsi myös '
+          + 'vanhankaupungin El Sagrarion. Valkoisessa rakennuksessa on '
+          + 'viisi kupolia ja neliömäinen torni, ja sen koristeissa on '
+          + 'sekä inkalaisia että arabialaisia kirjoitusmerkkejä.'
+          + '\n\n'
+          + 'Pääalttarin veisti ja rakensi Bernardo de Legarda vuosina '
+          + '1748–1751. Kuoriosan takana oleva sakaristo on '
+          + '1800-luvun alusta, ja sekä siellä että kirkkosalissa on '
+          + 'useita Víctor Miderosin teoksia.'
+          + '\n\n'
+          + 'Luostarin pohjoissiivessä on kaupungin merkittävimpiä '
+          + 'historiallisia kirjastoja. Se ulottuu kahteen kerrokseen, '
+          + 'joita yhdistää veistetty puinen kierreportaikko, ja '
+          + 'kirjahyllyt peittävät molempien kerrosten seinät. Vuosina '
+          + '1994–1997 tehdyssä luetteloinnissa laskettiin 22 000 '
+          + 'nidettä ja yli 40 000 kirjastotietuetta. Holveihin on '
+          + 'haudattu muun muassa 1600-luvun maalari Isabel de '
+          + 'Santiago.',
+      lahde: 'Wikipedia',
+    },
+    'San Agustínin luostari': {
+      aika: '1606–1617',
+      teksti: 'Augustinolaiset saivat tonttinsa 1573 ja aloittivat '
+          + 'luostarista; kirkko rakennettiin vasta vuosina 1606–1617. '
+          + 'Sen teki Juan del Corral piirustuksilla, jotka arkkitehti '
+          + 'Francisco Becerra oli laatinut jo 1581 — sama mies '
+          + 'suunnitteli myös Quiton Santo Domingon kirkon. Pääportaali '
+          + 'on Diego de Escarzan uusklassista työtä, ja sen '
+          + 'koristeissa on rinnakkain espanjalaisia ja '
+          + 'alkuperäiskansojen aiheita.'
+          + '\n\n'
+          + 'Kellotorni on 37 metriä korkea, ja siinä soivat yhä samat '
+          + 'kellot, jotka sinne asetettiin 1600-luvulla. Luostarilla '
+          + 'on oma sisäänkäyntinsä julkisivun itäpäässä, ja '
+          + 'ristikäytävä valmistui 1600-luvun puolivälissä. Sen '
+          + 'sisäpihoilla on puutarhat, ja kulmassa vastapäätä kirkon '
+          + 'ovea seisoo pieni atrium kiviristeineen.'
+          + '\n\n'
+          + 'Ristikäytävien keskellä on suuri kokoussali, kapitulisali, '
+          + 'joka suunniteltiin vasta 1700-luvulla. Siellä '
+          + 'allekirjoitettiin vuoden 1809 hallintoneuvoston asiakirja. '
+          + 'Pääalttarilla riippuu Miguel de Santiagon 1600-luvulla '
+          + 'maalaama valtava teos "Pyhän Augustinuksen riemuvoitto"; '
+          + 'saman maalarin töitä on muuallakin talossa.',
+      lahde: 'Wikipedia',
+    },
+    'El Sagrarion kirkko': {
+      aika: '1617–1715',
+      teksti: 'Sagrario tarkoittaa tabernaakkelia, ja tällaiset kirkot '
+          + 'rakennettiin katedraalin kylkeen sen sakramenttikappeliksi '
+          + '— ja samalla ympäröivän kaupunginosan omaksi '
+          + 'seurakuntakirkoksi. Malli on peräisin Sevillan '
+          + 'katedraalista, ja sieltä espanjalaiset veivät sen '
+          + 'kaikkialle Uuteen maailmaan. Quiton El Sagrario näyttää '
+          + 'kokonsa ja taiteellisen painoarvonsa takia enemmän '
+          + 'itsenäiseltä kirkolta kuin katedraalin sivukappelilta.'
+          + '\n\n'
+          + 'Perustustyöt aloitettiin 1617 Pyhän Sakramentin '
+          + 'veljeskunnan varoilla, ja ne olivat vaativat: kirkko '
+          + 'seisoo holvirakenteella, joka sulkee vanhan Zanguñan '
+          + 'rotkon. Perustukset ulottuvat eteläsivulla neljäntoista '
+          + 'metrin ja pohjoissivulla kolmen metrin syvyyteen — rotko '
+          + 'viettää sen verran. Töitä johti napolilaissyntyinen '
+          + 'jesuiitta Marcos Guerra. Arkkitehti José Jaime Ortiz '
+          + 'saapui Alicantesta Quitoon 4. marraskuuta 1694 ja '
+          + 'allekirjoitti rakennussopimuksen; hän piirsi kirkon ajan '
+          + 'muodin mukaan italialaiseen renessanssityyliin. '
+          + 'Keskilaivan päättää tynnyriholvi, ja sivulaivat on '
+          + 'katettu pienillä kupoleilla.'
+          + '\n\n'
+          + 'Sisäänkäynnin puinen väliportaali on Bernardo de Legardan '
+          + 'työtä ja quitolaisen barokin komeimpia näytteitä: pylväät '
+          + 'ovat vaihtuneet kasviaiheiksi, jotka päättyvät '
+          + 'oikukkaisiin kapiteeleihin. Legarda sai 1742 tehtäväkseen '
+          + 'myös keskiholvin kupolin, ja hän antoi maalaustyön '
+          + 'Francisco Albánille. Alttarikaapit ovat Legardan tekemiä '
+          + 'ja Cristóbal Gualoton kullattuja; Gualotolla oli apunaan '
+          + 'viiden miehen ryhmä.',
+      lahde: 'Wikipedia',
+    },
+    'Casa del Alabado': {
+      aika: '1600-luku',
+      teksti: 'Talo on 1600-luvulla rakennettu siirtomaa-ajan '
+          + 'asuinrakennus vanhankaupungin sisällä, ja siinä on '
+          + 'toiminut vuoden 2010 huhtikuusta lähtien Ecuadorin '
+          + 'esikolumbiaanisen taiteen museo. Kokoelmassa on yli 5 000 '
+          + 'arkeologista esinettä, joista viisisataa on esillä.'
+          + '\n\n'
+          + 'Museon oma valinta on esitystapa. Esineitä ei ole '
+          + 'järjestetty aikajärjestykseen vaan aiheittain kahdeksaan '
+          + 'saliin, ja kukin sali käsittelee yhtä puolta muinaisten '
+          + 'ecuadorilaisten kulttuurien maailmankuvasta: '
+          + 'maailmankaikkeutta, suhdetta esi-isiin, uskonnollisia '
+          + 'käsityksiä ja rituaaleja sekä suhdetta ympäristöön. '
+          + 'Tarkoitus on näyttää esineet taideteoksina eikä '
+          + 'kaivauslöytöinä.'
+          + '\n\n'
+          + 'Talossa on kahdeksan näyttelysalin lisäksi vaihtuvien '
+          + 'näyttelyiden sali, kaksi työpajatilaa, museokauppa ja '
+          + 'kaksi sisäpihaa. Rakennus kuuluu Quiton vanhankaupungin '
+          + 'maailmanperintöalueeseen.',
+      lahde: 'Wikipedia',
+    },
+    Kaupunkimuseo: {
+      aika: '1998',
+      teksti: 'Museo asuu rakennuksissa, joissa toimi aikoinaan San '
+          + 'Juan de Diosin sairaala. Talot kunnostettiin 1995 '
+          + 'käyttäen samoja materiaaleja kuin alun perin, ja '
+          + 'vaurioituneet kohdat korjattiin niillä. Vanhat kivistä '
+          + 'veistetyt doorilaiset pylväät, kiviportaalit ja '
+          + 'sisäpihojen kivipinnat ovat rakennuksen parasta antia.'
+          + '\n\n'
+          + 'Museo perustettiin 1998, ja se kertoo kaksi tarinaa '
+          + 'rinnakkain: Quiton historian ja sairaalan neljänsadan '
+          + 'vuoden historian. Yksi pysyvistä näyttelyistä kulkee '
+          + 'kaupungin tapojen, ihmisten ja perinteiden läpi '
+          + '1500-luvulta 1800-luvulle, toinen kertoo sairaalasta ja '
+          + 'esittelee erään sen lääkärin kokoelman, ja kolmannen nimi '
+          + 'on "uusi yhteiskuntajärjestys murtautuu esiin: Quito '
+          + '1800-luvulla".'
+          + '\n\n'
+          + 'Heinäkuussa 2020 museo sai 69 esinettä takaisin '
+          + 'Ecuadoriin. Ne oli vienyt maasta 1960-luvulla '
+          + 'lontoolainen diplomaatti, joka keräsi taidetta ja '
+          + 'arkeologiaa; kokoelmassa on sekä valloituksen ajan '
+          + 'katolisia esineitä että esikolumbiaanisiksi arvioituja '
+          + 'löytöjä.',
+      lahde: 'Wikipedia',
+    },
+    'El Panecillo': {
+      aika: '1975',
+      teksti: 'Kukkula on tulivuoriperäinen ja kohoaa kaupungin '
+          + 'kattojen yli kaksisataa metriä; sen laki on 3 016 metriä '
+          + 'merenpinnasta. Espanjalaiset antoivat sille nimen '
+          + 'Panecillo, "pieni leipä", muodon mukaan. Vanha nimi oli '
+          + 'Yavirac, ja jesuiittahistorioitsija Juan de Velascon '
+          + 'mukaan sen laella oli temppeli, jossa palvottiin '
+          + 'aurinkoa, kunnes valloittajat hävittivät sen. Kukkulalle '
+          + 'nouseva katu on nimetty Melchor Aymerichin mukaan.'
+          + '\n\n'
+          + 'Laella seisoo 45 metriä korkea Neitsyt Marian patsas. '
+          + 'Oblaattien sääntökunta tilasi sen espanjalaiselta '
+          + 'taiteilijalta Agustín de la Herrán Matorrasilta, ja se on '
+          + 'koottu seitsemästätuhannesta alumiiniosasta; pystytyksen '
+          + 'suunnitteli quitolainen Aníbal López. Patsas paljastettiin '
+          + '28. maaliskuuta 1975.'
+          + '\n\n'
+          + 'Neitsyt seisoo maapallon päällä ja polkee käärmettä, mikä '
+          + 'on tavanomaista kuvastoa — mutta hänellä on siivet, ja '
+          + 'quitolaisten mukaan hän on maailman ainoa siivekäs '
+          + 'Madonna. Esikuva on Bernardo de Legardan vuonna 1734 '
+          + 'veistämä "Quiton Neitsyt", jota sanotaan tanssijattareksi, '
+          + 'koska se esittää liikkeessä olevaa hahmoa aikansa '
+          + 'liikkumattomien madonnien sijaan. Patsaan pronssikilven '
+          + 'mukaan kuvattu nainen on Ilmestyskirjan luvun 12 vaimo.',
+      lahde: 'Wikipedia',
+    },
+    'Vuoden 1909 näyttelypalatsi': {
+      aika: '1909',
+      teksti: 'Quito järjesti 1909 oman maailmannäyttelynsä. Syy oli '
+          + 'sata vuotta täyttänyt itsenäisyystaistelu, ja '
+          + 'näyttelypalatsi avattiin juhlallisesti 10. elokuuta 1909 '
+          + '— päivälleen sata vuotta "ensimmäisen vapaudenhuudon" '
+          + 'jälkeen. Itse näyttely aukesi 8. syyskuuta. Suojelijana '
+          + 'toimi presidentti Eloy Alfaro, ja palkinnot jaettiin 28. '
+          + 'syyskuuta.'
+          + '\n\n'
+          + 'Ecuadorin oma paviljonki oli teräsbetonia, kaksikerroksinen '
+          + 'ja sen kupoli kolmenkymmenen metrin levyinen; kupolin '
+          + 'päällä siivet levällään seisoi andienkondori. Japanin '
+          + 'paviljonki tehtiin guayaquililaisesta puusta ja maalattiin '
+          + 'puna-valkoiseksi, ja Yhdysvaltain paviljonki rakennettiin '
+          + 'Valkoisen talon mukaiseksi. Näytteilleasettajia tuli '
+          + 'Chilestä, Kolumbiasta, Ranskasta, Japanista, Espanjasta, '
+          + 'Italiasta, Perusta ja Yhdysvalloista.'
+          + '\n\n'
+          + 'Näyttelyn jälkeen rakennukset jaettiin edelleen: Chilen '
+          + 'paviljonki musiikkikonservatoriolle, Kolumbian kaupungille, '
+          + 'Yhdysvaltain sotilaskomitealle ja Italian naiskomitealle. '
+          + 'Japanin paviljongin Alfaro antoi juuri perustetulle Quiton '
+          + 'maantieteelliselle seuralle, ja alueen jugendtyylinen '
+          + 'kahvila muuttui 1937 puolustusministeriön taloksi.',
+      lahde: 'Wikipedia',
+    },
+  },
 };

@@ -4636,6 +4636,80 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: 43.6705, etela: 43.6415, lansi: -79.4045, ita: -79.3735 },
   },
+  lima: {
+    /*
+     * SIIRTOMAA-AJAN RUUTUKAAVA RÍMACIN ETELÄPUOLELLA (7.9.2026).
+     * Ruutu on 1,9 x 1,8 kilometriä eli pelin tiiviimpiä —
+     * Christchurchin (2,4 x 1,9) ja Dubrovnikin kokoluokkaa. Syy on
+     * kaupungin omassa historiassa: Pizarron 1535 mittaama ruutukaava
+     * mahtui muurien sisään, ja kaikki kahdeksan kohdetta ovat yhä
+     * sen sisällä alle puolentoista kilometrin laatikossa
+     * (docs/mantereet-tyoaineisto/faktapohja-lima.md, osio 4 mittasi
+     * kuuden ensimmäisen kohteensa välit alle kilometriksi).
+     *
+     * LAAJEMPI RUUTU KOKEILTIIN JA HYLÄTTIIN. Faktapohjan osio 4
+     * ehdottaa mukaan myös Huaca Pucllanaa (7,3 km), Barrancoa
+     * (10,7 km) ja Callaon Real Felipeä (13,0 km). Kolmen kilometrin
+     * ruutu ei riitä yhteenkään niistä, ja kolmentoista kilometrin
+     * ruudussa koko vanhakaupunki olisi yksi kortteli kuvan
+     * yläkulmassa. Kaikki kolme ovat sitä paitsi lehden omaa aihetta:
+     * Huaca Pucllana on kaupunkisivun noston K4 otsikko, Barranco
+     * matkaoppaan jakson "kallionreunan iltapäivä" ja Callao jakson
+     * "Callao 1866".
+     *
+     * MIRAFLORES JA COSTA VERDE JÄÄVÄT SIIS KOKONAAN POIS, ja se on
+     * tietoinen valinta: lehti kertoo rannikosta neljässä eri
+     * kohdassa, kohdekartta kertoo vanhastakaupungista.
+     *
+     * ITÄREUNA 77,0235 ON INKVISITION MUSEON MUKAAN ja länsireuna
+     * 77,0400 Las Nazarenasin. Leveämpi ruutu toisi mukaan vain
+     * 1900-luvun liikekortteleita lännessä ja Barrio Chinon idässä —
+     * ja Barrio Chino on lehden ruokasivun noston aihe.
+     *
+     * Ei meri-lippua: vanhakaupunki on kolmentoista kilometrin
+     * päässä rannasta, ja Rímac on OSM:ssä tavallinen vesiväylä.
+     * Joki kulkee ruudun yläreunassa idästä länteen.
+     */
+    rajat: { pohjoinen: -12.0400, etela: -12.0570, lansi: -77.0400, ita: -77.0235 },
+  },
+  quito: {
+    /*
+     * VANHAKAUPUNKI JA PANECILLON KUKKULA (7.9.2026). Ruutu on
+     * 2,4 kilometriä korkea ja 2,1 leveä, eli se on pystysuunnassa
+     * venytetty tarkoituksella: Quito on rakennettu kapeaan laaksoon
+     * kahden vuorenrinteen väliin, ja sen vanhakaupunki on pitkä
+     * pohjois–eteläsuuntainen nauha. Vaakasuuntaan ei ole mitään
+     * otettavaa — molemmilla puolilla nousee rinne.
+     *
+     * POHJOISREUNA 0,2120 ON BASÍLICA DEL VOTO NACIONALIN MUKAAN ja
+     * eteläreuna 0,2340 vuoden 1909 näyttelypalatsin. Ruutu ulottuu
+     * siis juuri sen verran etelään, että Panecillon kukkula ja
+     * Recoletan näyttelyalue mahtuvat mukaan; niiden välissä on
+     * vanhankaupungin eteläpää.
+     *
+     * PANECILLO EI SAA JÄÄDÄ VASEMPAAN ALAKULMAAN. Ensimmäinen
+     * rajaus (länsi 78,5215) jätti kukkulan kohtaan x 17 %, y 76 %,
+     * ja siellä on lehden mittakaavajana (ui.js). Länsireuna vedettiin
+     * siksi 78,5230:een, jolloin piste siirtyy kohtaan x 24 %.
+     *
+     * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN POIS LEHDEN TAKIA. San
+     * Franciscon luostari ja aukio, La Compañían kirkko, Quiton
+     * observatorio ja Mitad del Mundo mahtuisivat joko ruutuun tai
+     * lähelle sitä (faktapohja-quito.md, osio 4 antaa niille
+     * koordinaatit), mutta ne ovat lehden omien nostojen aihe. Sama
+     * koskee Pichinchan taistelun muistopaikkaa Cima de la Libertadia
+     * lännessä.
+     *
+     * ITCHIMBÍAN KUKKULA JÄTETTIIN POIS MUUSTA SYYSTÄ: se on
+     * 78,50002:ssa eli 1,4 kilometriä ruudun keskilinjasta itään, ja
+     * mukaan ottaminen olisi vetänyt itäreunan Machángara-joen yli
+     * alueelle, jossa ei ole yhtään muuta kohdetta.
+     *
+     * Ei meri-lippua: Quito on Andeilla 2 850 metrissä, eikä ruudussa
+     * ole vesialueita lainkaan.
+     */
+    rajat: { pohjoinen: -0.2120, etela: -0.2340, lansi: -78.5230, ita: -78.5045 },
+  },
 };
 
 /*
