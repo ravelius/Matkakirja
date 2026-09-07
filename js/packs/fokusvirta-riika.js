@@ -177,12 +177,35 @@ export const FOKUSVIRTA_RIIKA = {
      * sanaa, välimerkkiä tai järjestystä ei ole muutettu — peräkkäin
      * luettuna teksti on sanasta sanaan Fablen kaanonteksti.
      */
-    maadoitus: 'Sitä mustaa juomaa myydään Riiassa edelleen, '
-      + 'savipulloissa, ja paikalliset vannovat sen nimeen edelleen — ja '
-      + 'turistit katuvat edelleen..',
-    teksti: 'Vanha kaupunki on säilynyt niin ehjänä, että keskiaika '
-      + 'tulee vastaan ihan kulman takaa. Isoisäsi haistoi täällä pellavan; '
-      + 'nykyään täällä tuoksuu kahvi. Katsotaan hänen merkintänsä.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Riika, heinäkuussa 1873. Apteekkari tarjosi isoisälle jotain mustaa.',
+    huudahdus: {
+      kohta: 'ja erehdykseltä',
+      teksti: 'Kääk.',
+    },
+    kommentti: [
+      'Sitä mustaa juomaa myydään Riiassa yhä savipulloissa.',
+      'Paikalliset vannovat sen nimeen edelleen. Turistit katuvat edelleen.',
+      'Keskiaika tulee täällä vastaan kulman takaa.',
+    ],
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-
      * kategoriat.js, riika/avauskuvat, heroerä 31): vanhankaupungin

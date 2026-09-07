@@ -167,12 +167,15 @@ import {
 import { avaaTietajagalleria } from './tietajagalleria.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
+// Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
+import { livianKorostetutKaupungit } from './liviapuhe.js';
 // Fokusmoodin annosteluvirta (js/fokusvirta.js). Kytkentä on kaksi
 // kutsua: saapumisen laukaisin renderissä ja lehtilukko openArrivalissa.
 import {
   fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
   fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
   fokusvirtaLehtivinkki, fokusvirtaSisalto,
+  fokusvirtaAlustus, fokusvirtaAlustusOdottaa, fokusvirtaUusiKulku,
   fokusvirtaSaapumiskupla, nollaaFokuskuvat,
 } from './fokusvirta.js';
 
@@ -6991,6 +6994,8 @@ export class UI {
      * se on nyt poissa, myös kehittäjätilassa. Laatan luokka on siis
      * pelkkä `city`/`city-start` joka tilassa.
      */
+    // Tarkistuskehän lista kerran, ei kaupunkia kohti (ks. alempaa).
+    const tarkistettavat = livianKorostetutKaupungit();
     for (const c of board.cities) {
       const wobble = `rotate(${vary(`city:rot:${c.id}`, 12).toFixed(1)} ${c.x} ${c.y})`;
       /*
@@ -7062,6 +7067,28 @@ export class UI {
           'text-anchor': 'middle',
           ...tunnus, ...fokus,
         }, cities).textContent = '✈';
+      }
+      /*
+       * TARKISTUSKEHÄ (omistajan tilaus 7.9.2026, väliaikainen): kaupunki,
+       * jonka uusi pulukulku on kirjoitettu JA äänitetty, saa kultaisen
+       * kehän — omistaja löytää tarkistettavat kohteet yhdellä
+       * silmäyksellä. Kehä on PELKKÄ VIIVA laatan päällä (pointer-events
+       * none, css .city-tarkistus): se ei muuta pisteen kokoa eikä
+       * yhtäkään osumapintaa, joten kaupunkilehti- ja nosto-osumatestit
+       * pysyvät ennallaan. Päätoimittaja kääntää LIVIAN_KOROSTUS_KAYTOSSA
+       * falseksi, kun kaupungit on käyty läpi.
+       */
+      if (tarkistettavat.has(c.id)) {
+        const tr = base + 5.2;
+        el('ellipse', {
+          cx: c.x,
+          cy: c.y,
+          rx: tr + vary(`tarkistus:rx:${c.id}`, 0.7),
+          ry: tr + vary(`tarkistus:ry:${c.id}`, 0.7),
+          transform: wobble,
+          class: 'city-tarkistus',
+          ...tunnus, ...fokus,
+        }, cities);
       }
       /*
        * PAIKANNIMI KUULUU LAATTAAN, EI ELÄVÄÄN KERROKSEEN
@@ -12429,7 +12456,14 @@ export class UI {
          * fokusvirrat antavat kuvansa yhä itse, eikä niiden kortti
          * muutu.
          */
-        if (merkinta.kuva) {
+        /*
+         * UUDESSA KULUSSA EI KUVAA (omistaja 7.9.2026, Raamattu
+         * KAUPUNGIN KULKU: EI KUVIA, PULU - LUENTA - PULU): kaupungin,
+         * jonka pulutekstit on kirjoitettu uusiksi, matkakirjakortti on
+         * pelkkää tekstiä — kuvat kuuluvat kaupunkilehteen. Vanhan
+         * pakkauksen `matkakirja.kuva` jää dataan koskematta.
+         */
+        if (merkinta.kuva && !fokusvirtaUusiKulku(this, virtaKaupunki)) {
           this.naytaFactValokuva(virtaKaupunki.id, virtaKaupunki.name, merkinta.kuva);
         } else {
           this.naytaFactValokuva(null);
@@ -12457,12 +12491,30 @@ export class UI {
         } else {
           this.factKuuntele.hidden = true;
         }
+        /*
+         * PULUN ALUSTUS ENNEN ISOISÄN LUENTAA (omistaja 7.9.2026).
+         * Uuden kulun kaupungissa luenta EI ala tässä piirrossa vaan jää
+         * odottamaan alustuskuplaa; lippu on nostettava ENNEN
+         * asetaMerkinnanLuenta-kutsua, koska luenta lähtee juuri siitä.
+         * Kuplasarja päästää sen liikkeelle (js/fokusvirta.js
+         * fokusvirtaSaapumiskupla → aloitaLykattyLuenta) — myös silloin,
+         * kun kupla ei jostain syystä tule.
+         */
+        if (fokusvirtaAlustusOdottaa(this, virtaKaupunki)) this.luennanLykkays = true;
         // Kertoja lukee koko merkinnän tai ei mitään ('lyhyt' poistettu
         // 3.9.2026, ks. js/aani-ehdokkaat.js kertojaTila).
         this.asetaMerkinnanLuenta(virtaAanite ? () => {
           if (kertojaTila() === 'ei') stopDiaryVoice(this);
           else playDiaryVoice(this, virtaAanite, { viive: 1000 });
         } : null);
+        /*
+         * ALUSTUS HETI, EI KIRJOITUSKONEEN LOPUSTA. Lykätty luenta
+         * odottaa alustuskuplaa, ja kirjoituskone kirjoittaa merkinnän
+         * kymmenessä sekunnissa — jos alustus odottaisi sitä, isoisä
+         * alkaisi puhua vasta luetun tekstin päälle. Kommentti tulee yhä
+         * kirjoituskoneen lopusta (fokusvirtaMerkintaLuettu).
+         */
+        fokusvirtaAlustus(this, virtaKaupunki);
         return;
       }
       if (virtaKaupunki && fokusvirtaLukitseeLehden(this, virtaKaupunki)) {

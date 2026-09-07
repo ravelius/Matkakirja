@@ -107,10 +107,28 @@ import {
 } from '../js/livia.js';
 import {
   LIVIAN_AANIJUURI, LIVIAN_AANITETTY_PALJASTUS, LIVIAN_AANITETYT,
-  LIVIAN_KAUPUNKILAHTEET, livianAanitykset, livianTiiviste,
+  LIVIAN_KAUPUNKILAHTEET, livianAanitykset, livianKaupunkiKentat,
+  livianKentanKuplat, livianKenttaPinoutuu, livianTiiviste,
 } from '../js/liviapuhe.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
+import { FOKUSVIRTA_HELSINKI } from '../js/packs/fokusvirta-helsinki.js';
+import { FOKUSVIRTA_KIOVA } from '../js/packs/fokusvirta-kiova.js';
+import { FOKUSVIRTA_MOSKOVA } from '../js/packs/fokusvirta-moskova.js';
+import { FOKUSVIRTA_ODESSA } from '../js/packs/fokusvirta-odessa.js';
+import { FOKUSVIRTA_PIETARI } from '../js/packs/fokusvirta-pietari.js';
+import { FOKUSVIRTA_TALLINNA } from '../js/packs/fokusvirta-tallinna.js';
+import { FOKUSVIRTA_TAMPERE } from '../js/packs/fokusvirta-tampere.js';
+import { FOKUSVIRTA_BUDAPEST } from '../js/packs/fokusvirta-budapest.js';
+import { FOKUSVIRTA_BUKAREST } from '../js/packs/fokusvirta-bukarest.js';
+import { FOKUSVIRTA_ISTANBUL } from '../js/packs/fokusvirta-istanbul.js';
+import { FOKUSVIRTA_KRAKOVA } from '../js/packs/fokusvirta-krakova.js';
+import { FOKUSVIRTA_PRAHA } from '../js/packs/fokusvirta-praha.js';
+import { FOKUSVIRTA_RIIKA } from '../js/packs/fokusvirta-riika.js';
+import { FOKUSVIRTA_SARAJEVO } from '../js/packs/fokusvirta-sarajevo.js';
 import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
+import { FOKUSVIRTA_VARSOVA } from '../js/packs/fokusvirta-varsova.js';
+import { FOKUSVIRTA_VILNA } from '../js/packs/fokusvirta-vilna.js';
+import { FOKUSVIRTA_WIEN } from '../js/packs/fokusvirta-wien.js';
 import { leikkaaHiljaisuusSuodatin } from './generoi-tehosteet.mjs';
 import { julkinenJuuri, tulkitseEbur128, tulkitseLoudnorm } from './generoi-siirtymamusiikki.mjs';
 
@@ -217,26 +235,42 @@ export function kuplanLukuaika(teksti, vakiot = kuplanVakiot()) {
 }
 
 /**
- * KAUPUNKIREPLIIKKI EI OLE YKSI KUPLA VAAN PUHEENVUORO.
+ * NÄKYVÄ AIKA: KUPLAN LUKUAIKA — TAI PINON LUKUAIKOJEN SUMMA.
  *
- * Ateenan ja Sofian repliikit näytetään osiin jaettuna pinona
- * (js/ui-apurit.js jaaPuheenvuoroksi + js/pollo.js naytaPuheenvuoro):
- * kuplat EIVÄT korvaa toisiaan, ja jokainen osa odottaa oman
- * lukuaikansa ennen seuraavaa. Näkyvä aika on siis osien lukuaikojen
- * summa — käytännössä merkkimäärä × lukuaika per merkki, ilman yhden
- * kuplan kattoa, joka koskee vain js/livia.js:n omia yksittäisiä
- * kuplia.
+ * Kirjoitettu kupla on oma äänitteensä (omistaja 7.9.2026), joten
+ * useimmiten rivi = kupla = yksi lukuaika. Poikkeus on kenttä, joka on
+ * yhä YKSI PITKÄ MERKKIJONO (esim. Ateenan maadoitus): peli pilkkoo sen
+ * ruudulla pinoksi (js/ui-apurit.js jaaPuheenvuoroksi + js/pollo.js
+ * naytaPuheenvuoro), eivätkä osat korvaa toisiaan — näkyvä aika on
+ * silloin osien lukuaikojen summa eli merkkimäärä × lukuaika per merkki
+ * ilman yhden kuplan kattoa.
  *
- * Ilman tätä eroa kuiva ajo vaatisi kaupunkirepliikkien lyhentämistä
- * puoleen, vaikka ne mahtuvat ruudulle kokonaisina.
+ * Kumpi on kyseessä, tiedetään LIVIAN_KAUPUNKILAHTEET-taulusta, ja
+ * repliikit() merkitsee sen riville lipuksi `pinoutuu`.
  *
- * @param {{lahde:string, teksti:string, merkit:number}} rivi
+ * @param {{teksti:string, merkit:number, pinoutuu?:boolean}} rivi
  * @param {object} vakiot kuplanVakiot()
  * @returns {number} sekunteina
  */
 export function nakyvaAika(rivi, vakiot = kuplanVakiot()) {
-  if (!LIVIAN_KAUPUNKILAHTEET[rivi.lahde]) return kuplanLukuaika(rivi.teksti, vakiot);
+  if (!rivi.pinoutuu) return kuplanLukuaika(rivi.teksti, vakiot);
   return Number(((rivi.merkit * vakiot.perMerkki) / 1000).toFixed(3));
+}
+
+/**
+ * Ne kaupunkirepliikit, jotka peli yhä pilkkoo pinoksi: kenttä on yksi
+ * merkkijono, ei kuplien taulukko (ks. nakyvaAika).
+ *
+ * @returns {Set<string>} repliikkiavaimet
+ */
+export function pinoutuvatRepliikit() {
+  const avaimet = new Set();
+  for (const kaupunkiId of Object.keys(LIVIAN_KAUPUNKILAHTEET)) {
+    for (const { kentta, kuplat, alku } of livianKaupunkiKentat(kaupunkiId)) {
+      if (livianKenttaPinoutuu(kentta, kuplat)) avaimet.add(`${kaupunkiId}-${alku + 1}`);
+    }
+  }
+  return avaimet;
 }
 
 // ── tagit ──────────────────────────────────────────────────────────
@@ -249,11 +283,13 @@ export function nakyvaAika(rivi, vakiot = kuplanVakiot()) {
  * Ankkurin on esiinnyttävä repliikissä TÄSMÄLLEEN KERRAN — muuten ajo
  * kaatuu (ks. TAGIT EIVÄT SAA MUUTTAA KAANONIA).
  *
- * TAULU KATTAA VAIN js/livia.js:n LÄHTEET (avaus, paljastus,
- * mannerivihje). Kaupunkilähteet (ateena, sofia) syntyivät v2-mallin
- * aikaan, jolloin tageja ei lähetetä lainkaan, joten niille ei ole
- * rivejä eikä niitä vaadita — tagiton repliikki menee läpi
- * kaanonisena tekstinä.
+ * TAULU KATTAA js/livia.js:n LÄHTEET JA EUROOPAN HYVÄKSYTYT
+ * KAUPUNKIREPLIIKIT. Ateenan maadoitus syntyi v2-mallin aikaan eikä
+ * sillä ole riviä — tagiton repliikki menee läpi kaanonisena tekstinä.
+ * Sofian, Istanbulin, Riian ja Vilnan kuplat kirjoitettiin 7.9.2026, ja
+ * ne saivat samalla eleven_v3-tagit: ELÄVÄ JA NOPEA, EI KAIKUA ALUSSA
+ * (Raamattu, PULU PUHUU + KAIKU POIS ALUSTA). Malli on toistaiseksi v2
+ * (TAGIT_KAYTOSSA false), joten tageja ei lähetetä — ne odottavat v3:a.
  */
 export const TAGIT = {
   'avaus-1': { alku: '[excited]', kohdat: [['Sinähän', '[amused]']] },
@@ -294,6 +330,99 @@ export const TAGIT = {
     kohdat: [['kerää rahaa', '[helpfully]']],
   },
   'lehtivinkki-1': { alku: '[helpfully]', kohdat: [['aarrekysymys', '[excited]']] },
+  /*
+   * EUROOPAN KAUPUNKIREPLIIKIT (omistajan hyväksymät tekstit 7.9.2026,
+   * erät 1 ja 2). Yksi rivi per KUPLA, koska jokainen kupla on oma
+   * äänitiedostonsa. Alkutagi antaa kulun hetkelle sävyn — alustus on
+   * utelias, huudahdus on välihuuto, kommentti reipas — ja kaikutagia ei
+   * ole yhdessäkään, koska kaiku otettiin pois pulun alusta
+   * (js/liviapuhe.js LIVIAN_KAIKU).
+   */
+  'sofia-1': { alku: '[curious]', kohdat: [['Helteistä, tomu', '[warmly]']] },
+  'sofia-2': { alku: '[squawks]' },
+  'sofia-3': { alku: '[brightly]', kohdat: [['Hurja juttu,', '[quickly]']] },
+  'sofia-4': { alku: '[brightly]', kohdat: [['Ei se', '[quickly]']] },
+  'sofia-5': { alku: '[helpfully]' },
+  'sofia-6': { alku: '[helpfully]' },
+  'sofia-7': { alku: '[helpfully]' },
+  'sofia-8': { alku: '[helpfully]', kohdat: [['Vuosiluku on', '[brightly]']] },
+  'sofia-9': { alku: '[amused]', kohdat: [['Puolikas pulla,', '[quickly]']] },
+  'sofia-10': { alku: '[excited]', kohdat: [['Yli kolmetuhatta', '[awed]']] },
+  'sofia-11': { alku: '[excited]', kohdat: [['Palaan kyllä.', '[awed]']] },
+  'sofia-12': { alku: '[casually]', kohdat: [['Se palaa', '[amused]']] },
+  'sofia-13': { alku: '[breathless]', kohdat: [['Pöllö oli', '[amused]']] },
+  'sofia-14': { alku: '[breathless]', kohdat: [['Katso alas.', '[amused]']] },
+  'istanbul-1': { alku: '[curious]', kohdat: [['Sumua salmella,', '[warmly]']] },
+  'istanbul-2': { alku: '[squawks]' },
+  'istanbul-3': { alku: '[brightly]' },
+  'istanbul-4': { alku: '[brightly]' },
+  'istanbul-5': { alku: '[brightly]', kohdat: [['Se pylväs.', '[quickly]']] },
+  'bukarest-1': { alku: '[curious]', kohdat: [['Ensimmäinen halla,', '[warmly]']] },
+  'bukarest-2': { alku: '[squawks]' },
+  'bukarest-3': { alku: '[brightly]' },
+  'bukarest-4': { alku: '[brightly]', kohdat: [['Ja torni', '[quickly]']] },
+  'sarajevo-1': { alku: '[curious]', kohdat: [['Kirkas ilta,', '[warmly]']] },
+  'sarajevo-2': { alku: '[squawks]' },
+  'sarajevo-3': { alku: '[brightly]', kohdat: [['Mut postinkantajalle', '[quickly]']] },
+  'sarajevo-4': { alku: '[brightly]', kohdat: [['Herätä sai', '[quickly]']] },
+  'budapest-1': { alku: '[curious]', kohdat: [['Harmaata, joelta', '[warmly]']] },
+  'budapest-2': { alku: '[squawks]' },
+  'budapest-3': { alku: '[brightly]', kohdat: [['marraskuuta 1873.', '[quickly]']] },
+  'budapest-4': { alku: '[brightly]', kohdat: [['Nyt osoite', '[quickly]']] },
+  'wien-1': { alku: '[curious]', kohdat: [['Sadekuuroja, ilmanpuntari', '[warmly]']] },
+  'wien-2': { alku: '[squawks]' },
+  'wien-3': { alku: '[brightly]' },
+  'wien-4': { alku: '[brightly]', kohdat: [['Raha kaatui', '[quickly]']] },
+  'praha-1': { alku: '[curious]', kohdat: [['Kirkasta, yöllä', '[warmly]']] },
+  'praha-2': { alku: '[squawks]' },
+  'praha-3': { alku: '[brightly]', kohdat: [['Sellaisen minä', '[quickly]']] },
+  'praha-4': { alku: '[brightly]' },
+  'krakova-1': { alku: '[curious]', kohdat: [['Kuuntele tarkkaan,', '[warmly]']] },
+  'krakova-2': { alku: '[squawks]' },
+  'krakova-3': { alku: '[brightly]' },
+  'krakova-4': { alku: '[brightly]', kohdat: [['Tarinoita on', '[quickly]']] },
+  'varsova-1': { alku: '[curious]', kohdat: [['Kaduilla puhutaan', '[warmly]']] },
+  'varsova-2': { alku: '[squawks]', kohdat: [['Hyvä sisar.', '[quickly]']] },
+  'varsova-3': { alku: '[brightly]', kohdat: [['Sydän on', '[quickly]']] },
+  'varsova-4': { alku: '[brightly]' },
+  'pietari-1': { alku: '[curious]', kohdat: [['Aurinko ei', '[warmly]']] },
+  'pietari-2': { alku: '[squawks]' },
+  'pietari-3': { alku: '[brightly]' },
+  'pietari-4': { alku: '[brightly]', kohdat: [['Kadut ovat', '[quickly]']] },
+  'moskova-1': { alku: '[curious]', kohdat: [['Kuuntele kelloja,', '[warmly]']] },
+  'moskova-2': { alku: '[squawks]' },
+  'moskova-3': { alku: '[brightly]' },
+  'moskova-4': { alku: '[brightly]', kohdat: [['Kellot soivat', '[quickly]']] },
+  'kiova-1': { alku: '[curious]', kohdat: [['Kaupunki on', '[warmly]']] },
+  'kiova-2': { alku: '[squawks]' },
+  'kiova-3': { alku: '[brightly]' },
+  'kiova-4': { alku: '[brightly]', kohdat: [['Hunajaa myydään', '[quickly]']] },
+  'odessa-1': { alku: '[curious]', kohdat: [['Satamassa puhutaan', '[warmly]']] },
+  'odessa-2': { alku: '[squawks]' },
+  'odessa-3': { alku: '[brightly]' },
+  'odessa-4': { alku: '[brightly]', kohdat: [['Portaat kuuluisiksi', '[quickly]']] },
+  'helsinki-1': { alku: '[curious]', kohdat: [['Isoisä tuli', '[warmly]']] },
+  'helsinki-2': { alku: '[squawks]' },
+  'helsinki-3': { alku: '[brightly]', kohdat: [['Siinä hän', '[quickly]']] },
+  'helsinki-4': { alku: '[brightly]', kohdat: [['Sama torni', '[quickly]']] },
+  'tampere-1': { alku: '[curious]', kohdat: [['Kahden järven', '[warmly]']] },
+  'tampere-2': { alku: '[squawks]' },
+  'tampere-3': { alku: '[brightly]' },
+  'tampere-4': { alku: '[brightly]' },
+  'tallinna-1': { alku: '[curious]', kohdat: [['Satamasta on', '[warmly]']] },
+  'tallinna-2': { alku: '[squawks]' },
+  'tallinna-3': { alku: '[brightly]', kohdat: [['Ennen sitä', '[quickly]']] },
+  'tallinna-4': { alku: '[brightly]', kohdat: [['Meiltä vietiin', '[quickly]']] },
+  'riika-1': { alku: '[curious]', kohdat: [['Apteekkari tarjosi', '[warmly]']] },
+  'riika-2': { alku: '[squawks]' },
+  'riika-3': { alku: '[brightly]' },
+  'riika-4': { alku: '[brightly]', kohdat: [['Turistit katuvat', '[quickly]']] },
+  'riika-5': { alku: '[brightly]' },
+  'vilna-1': { alku: '[curious]', kohdat: [['Isoisä laski', '[warmly]']] },
+  'vilna-2': { alku: '[squawks]' },
+  'vilna-3': { alku: '[brightly]' },
+  'vilna-4': { alku: '[brightly]' },
+  'vilna-5': { alku: '[brightly]', kohdat: [['Se on', '[quickly]']] },
 };
 
 /** Tagi pois tekstistä: `[excited] Hei` → `Hei`. */
@@ -341,27 +470,57 @@ export function puhemuoto(teksti, tagit = {}) {
 const KAUPUNKIEN_PAKKAUKSET = {
   ateena: FOKUSVIRTA_ATEENA,
   sofia: FOKUSVIRTA_SOFIA,
+  istanbul: FOKUSVIRTA_ISTANBUL,
+  bukarest: FOKUSVIRTA_BUKAREST,
+  sarajevo: FOKUSVIRTA_SARAJEVO,
+  budapest: FOKUSVIRTA_BUDAPEST,
+  wien: FOKUSVIRTA_WIEN,
+  praha: FOKUSVIRTA_PRAHA,
+  krakova: FOKUSVIRTA_KRAKOVA,
+  varsova: FOKUSVIRTA_VARSOVA,
+  pietari: FOKUSVIRTA_PIETARI,
+  moskova: FOKUSVIRTA_MOSKOVA,
+  kiova: FOKUSVIRTA_KIOVA,
+  odessa: FOKUSVIRTA_ODESSA,
+  helsinki: FOKUSVIRTA_HELSINKI,
+  tampere: FOKUSVIRTA_TAMPERE,
+  tallinna: FOKUSVIRTA_TALLINNA,
+  riika: FOKUSVIRTA_RIIKA,
+  vilna: FOKUSVIRTA_VILNA,
 };
 
 /**
- * Yhden kaupungin repliikkitekstit LIVIAN_KAUPUNKILAHTEET-järjestyksessä.
+ * Yhden kaupungin repliikkitekstit LIVIAN_KAUPUNKILAHTEET-järjestyksessä
+ * — YKSI KUPLA = YKSI RIVI (omistaja 7.9.2026).
  *
- * `maadoitus` on pöllökuplan ensimmäinen kappale (pollo.maadoitus) ja
- * loput sähketehtävän vaiheita (sahketehtava.<kenttä>, js/fokusvirta.js).
- * Puuttuva kenttä jää tyhjäksi merkkijonoksi, ja livianAanitykset
- * pudottaa sen pois — tyhjää repliikkiä ei äänitetä.
+ * `alustus`, `huudahdus`, `kommentti` (ja varapolun `maadoitus`) ovat
+ * pöllökuplan kenttiä (pollo.<kenttä>) ja loput sähketehtävän vaiheita
+ * (sahketehtava.<kenttä>, js/fokusvirta.js); livianKentanKuplat tuntee
+ * kummankin lohkon ja normalisoi yhden merkkijonon — ja huudahduksen
+ * { kohta, teksti } -olion — yhden kuplan listaksi.
+ *
+ * KUPLIEN MÄÄRÄN ON TÄSMÄTTÄVÄ TAULUUN. Numerointi tulee
+ * LIVIAN_KAUPUNKILAHTEET-taulusta ja tekstit pakkauksesta; jos ne
+ * eriytyvät, ajo maksaisi vääristä tiedostoista ja peli hakisi vääriä
+ * numeroita. Siksi ero kaataa tässä eikä vasta ämpärissä.
  *
  * @param {string} kaupunkiId kaupungin tunnus
- * @returns {string[]} tekstit järjestyksessä
+ * @returns {string[]} kuplat järjestyksessä
  */
 export function kaupunginRepliikit(kaupunkiId) {
   const pakkaus = KAUPUNKIEN_PAKKAUKSET[kaupunkiId];
   if (!pakkaus) return [];
-  return (LIVIAN_KAUPUNKILAHTEET[kaupunkiId] ?? []).map((kentta) => (
-    kentta === 'maadoitus'
-      ? pakkaus.pollo?.maadoitus
-      : pakkaus.sahketehtava?.[kentta]
-  ) ?? '');
+  const rivit = [];
+  for (const { kentta, kuplat } of livianKaupunkiKentat(kaupunkiId)) {
+    const tekstit = livianKentanKuplat(pakkaus, kentta);
+    if (tekstit.length !== kuplat) {
+      throw new Error(`${kaupunkiId}.${kentta}: pakkauksessa on ${tekstit.length} kuplaa, `
+        + `mutta js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET lupaa ${kuplat} — `
+        + 'korjaa taulu tai teksti ennen ajoa.');
+    }
+    rivit.push(...tekstit);
+  }
+  return rivit;
 }
 
 /**
@@ -372,11 +531,11 @@ export function kaupunginRepliikit(kaupunkiId) {
  * kupla). Sama vertailu tässä kertoo ajolle, mikä on uutta ja mikä
  * muuttunutta — ilman ämpärin listausta.
  *
- * @returns {'uusi'|'muuttunut'|'ajan tasalla'|'ei vartioitu'}
+ * @returns {'uusi'|'muuttunut'|'ajan tasalla'}
  */
 export function aanitteenTila(rivi) {
-  // Kaupunkilähteitä taulu ei vartioi (ks. js/liviapuhe.js).
-  if (LIVIAN_KAUPUNKILAHTEET[rivi.lahde]) return 'ei vartioitu';
+  // Kaupunkilähteet ovat 7.9.2026 alkaen samassa vartioinnissa kuin
+  // js/livia.js:n omat lähteet (ks. js/liviapuhe.js LIVIAN_AANITETYT).
   const vanha = LIVIAN_AANITETYT[rivi.avain];
   if (!vanha) return 'uusi';
   return vanha === livianTiiviste(rivi.teksti) ? 'ajan tasalla' : 'muuttunut';
@@ -388,10 +547,10 @@ export function aanitteenTila(rivi) {
  * (sama funktio kuin pelissä). Paljastus ladotaan äänitetylle
  * variantille (Ateena/Kreikka).
  *
- * TAGIT VAIN KOLMELLA ENSIMMÄISELLÄ LÄHTEELLÄ. Malli on v2
- * (TAGIT_KAYTOSSA false), joten kaikki repliikit lähtevät puhtaana
- * kaanonisena tekstinä eikä kaupunkilähteille kirjoiteta tagitaulua
- * lainkaan. Jos v3 otetaan joskus takaisin, tagiton lähde menee läpi
+ * TAGIT ODOTTAVAT v3:A. Malli on v2 (TAGIT_KAYTOSSA false), joten
+ * kaikki repliikit lähtevät puhtaana kaanonisena tekstinä. Tagitaulu
+ * kattaa js/livia.js:n lähteet ja 7.9.2026 hyväksytyt Euroopan
+ * kaupunkirepliikit; tagiton rivi (Ateenan maadoitus) menee läpi
  * tagittomana (puhemuoto ilman kohtia palauttaa tekstin sellaisenaan).
  */
 export function repliikit() {
@@ -399,6 +558,7 @@ export function repliikit() {
     .map((kaupunkiId) => [kaupunkiId, kaupunginRepliikit(kaupunkiId)]));
   // Vakiot luetaan js/livia.js:stä kerran, ei rivi kerrallaan.
   const vakiot = kuplanVakiot();
+  const pinoutuvat = pinoutuvatRepliikit();
   return livianAanitykset({
     avaus: LIVIAN_AVAUS,
     paljastus: livianPaljastus(LIVIAN_AANITETTY_PALJASTUS),
@@ -407,9 +567,10 @@ export function repliikit() {
     ...kaupungit,
   }).map((rivi) => ({
     ...rivi,
+    pinoutuu: pinoutuvat.has(rivi.avain),
     puhe: TAGIT_KAYTOSSA ? puhemuoto(rivi.teksti, TAGIT[rivi.avain]) : rivi.teksti,
     arvioSekunteina: Number((rivi.merkit / MERKKIA_SEKUNNISSA).toFixed(1)),
-    kuplaSekunteina: nakyvaAika(rivi, vakiot),
+    kuplaSekunteina: nakyvaAika({ ...rivi, pinoutuu: pinoutuvat.has(rivi.avain) }, vakiot),
     tiiviste: livianTiiviste(rivi.teksti),
     tila: aanitteenTila(rivi),
   }));
@@ -907,7 +1068,8 @@ async function main() {
     console.log(`\nKuiva ajo valmis: ${tyot.length} repliikkiä, `
       + `${new Set(tyot.map((t) => t.nimi)).size} eri tiedostonimeä. `
       + 'Merkintä PITKÄ tarkoittaa, että kupla vaihtuu ennen kuin ääni loppuu — '
-      + 'kaupunkirepliikeillä (pinoutuva puheenvuoro) mitta on osien lukuaikojen summa.');
+      + 'kenttä, joka on yhä yksi pitkä merkkijono (pinoutuva puheenvuoro), '
+      + 'mitataan osien lukuaikojen summana.');
     if (ajettavat.length) {
       console.log('\nAJOA ODOTTAVAT (peli on näissä hiljaa siihen asti):');
       for (const tyo of ajettavat) {

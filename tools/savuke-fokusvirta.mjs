@@ -274,8 +274,9 @@ const sofianKupla = await sivu.evaluate(async () => {
    * puheenvuoro etenee kuplan LUKUAJALLA (js/livia.js
    * livianKuplanLukuaika, enintään 9,5 s per osa) eikä vanhalla
    * 1,8–4,2 sekunnin perusrytmillä — muuten viimeinen kupla olisi
-   * ruudulla kauan ennen kuin pulu ehtii puhua sen. Sofian maadoitus
-   * on kolme osaa, joten koko sarja kestää nyt reilut 12 sekuntia.
+   * ruudulla kauan ennen kuin pulu ehtii puhua sen. Uudessa kulussa
+   * (7.9.2026) sarjaan tuli vielä alustuskupla ENNEN luentaa, joten
+   * odotus kattaa alustuksen, luennan ja kaksi kommenttikuplaa.
    *
    * PELKÄT PUHEKUPLAT (omistajan tarkennus 3.9.2026): kuplissa ei saa
    * olla nimilappuriviä eikä pöllökuvaketta, joten mittari laskee
@@ -294,39 +295,39 @@ const sofianKupla = await sivu.evaluate(async () => {
         .join(' '),
     };
   };
-  for (let i = 0; i < 50; i += 1) {
+  for (let i = 0; i < 60; i += 1) {
     const tulos = lueKuplat();
-    if (/Mut kyllä sen kestää lukea/.test(tulos.teksti)) return tulos;
+    if (/Ei se juttua pienennä/.test(tulos.teksti)) return tulos;
     await new Promise((r) => setTimeout(r, 500));
   }
   return lueKuplat();
 });
 /*
  * VÄITE MITTAA PARIPERIAATTEEN (Raamattu v1262): Sofian merkintä on
- * laudan synkin, joten kuplassa pitää näkyä KAKSI asiaa peräkkäin —
+ * laudan synkin, joten kuplissa pitää näkyä KAKSI asiaa peräkkäin —
  * säikähdysavaus ja sen jälkeen aikasiirtymän välitys eli konkreettinen
  * historiakonteksti. Toinen ehto tarkistaa siksi, että kuplassa on
  * vuosiluku 1873 ja etäisyys nykyhetkeen ("sataviisikymmentä vuotta").
  * Jos joku kirjoittaa kontekstin pois ja jättää pelkän säikähdyksen,
  * savuke kaatuu tähän.
  *
- * MUOTO ON PUHEKIELINEN, PAINO REUNOILLA (Raamattu v1270 "LIVIAN
- * PUHEKIELI", sääntö 1): tämä kupla on omistajan hyväksymä
- * malliesimerkki koko säännöstä, joten väite mittaa MOLEMMAT reunat
- * ja keskikohdan kerralla. Alku on Livian omaa ääntä ("Kääk", "hurja
- * juttu"), KESKELLÄ luku on auki kirjoitettuna ("sataviisikymmentä
- * vuotta") ja LOPUSSA lyhentymä palaa ("Mut kyllä sen kestää lukea").
- * Kirjakielelle palauttaminen kaataa lopun ehdon, ja lyhentymien
- * valuttaminen takaisin keskelle (sataviiskyt) kaataa keskiehdon.
+ * UUSI KULKU (omistaja 7.9.2026, Raamattu KAUPUNGIN KULKU): pinossa on
+ * nyt ENSIN alustus ("Sofia. Helteistä…") ennen isoisän luentaa ja
+ * VASTA SEN JÄLKEEN kommentti kahtena kuplana. Väite mittaa siis
+ * molemmat hetket samasta pinosta: kuplia on vähintään kolme, alustus
+ * aloittaa ja kommentti päättää. Tekstit ovat omistajan sanatarkasti
+ * hyväksymiä, eivätkä puhekielisäännöt koske niitä — aiemmin vartioitua
+ * loppulyhentymää ei enää ole.
  */
-vaadi('Sofiassa isoisän maadoitus tulee Livian saapumiskuplaan',
-  /^Kääk\./.test(sofianKupla.teksti)
-    // Puheenvuoro tulee osissa (kuplapino 3.9.2026): yksi kupla ei riitä.
-    && sofianKupla.kuplia >= 2
-    && /hurja juttu/.test(sofianKupla.teksti)
+vaadi('Sofiassa pulun alustus ja kommentti tulevat kuplasarjaan',
+  /^Sofia\./.test(sofianKupla.teksti)
+    // Alustus + kaksi kommenttikuplaa: yksi tai kaksi ei riitä.
+    && sofianKupla.kuplia >= 3
+    && /Helteistä, tomu ei laskeudu/.test(sofianKupla.teksti)
+    && /Kääk\. Hurja juttu/.test(sofianKupla.teksti)
     && /1873/.test(sofianKupla.teksti)
     && /sataviisikymmentä vuotta/.test(sofianKupla.teksti)
-    && /Mut kyllä sen kestää lukea/.test(sofianKupla.teksti)
+    && /Ei se juttua pienennä/.test(sofianKupla.teksti)
     // Pelkät puhekuplat (3.9.2026): ei nimilappua eikä kuvaketta.
     && sofianKupla.nimilappuja === 0 && sofianKupla.kuvakkeita === 0,
   JSON.stringify(sofianKupla).slice(0, 200));

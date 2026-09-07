@@ -56,42 +56,113 @@ kaanonista tekstiä. Kaanonin sanajärjestys ei siis voi muuttua
 [squawks] [breathless] [sighs] [flatly] [mutters] [casually]
 [helpfully]`.
 
-## Kaupunkikohtaiset lähteet (Ateena ja Sofia ensin)
+## Kaupungin kulku: pulu — luenta — pulu (omistaja 7.9.2026)
 
-Raamattu, PULUN ÄÄNI VAIN ATEENA JA SOFIA ENSIN: puhe soi aluksi
-kahdessa kaupungissa, jotta ääni ehditään kuunnella ja hyväksyä ennen
-kuin koko repliikistö ajetaan. Lähteen nimi on **kaupungin tunnus** ja
-indeksi tulee kenttälistan järjestyksestä (`js/liviapuhe.js
-LIVIAN_KAUPUNKILAHTEET`):
+Raamattu, KAUPUNGIN KULKU: EI KUVIA, PULU - LUENTA - PULU. Saapuminen on
+kolme hetkeä, ja kaikki kolme lukee pakkauksen `pollo`-lohkosta:
 
-| Lähde | Kentät järjestyksessä | Tiedostot |
+| Kenttä | Milloin | Mitta |
 | --- | --- | --- |
-| `ateena` | `pollo.maadoitus` | `livia-ateena-1.mp3` |
-| `sofia` | `pollo.maadoitus`, sähketehtävän `johdanto`, `vinkki`, `linkkiSaate`, `oikein`, `odotus`, `paluu` | `livia-sofia-1.mp3` … `livia-sofia-7.mp3` |
+| `alustus` | **ennen** isoisän luentaa, yksi kupla | luenta odottaa sen lukuajan |
+| `huudahdus` | luennan **aikana**, `{ kohta, teksti }` | kupla häipyy 2 s:ssa |
+| `kommentti` | luennan **jälkeen**, 1–2 kuplaa | kuplan lukuaika kumpikin |
 
-Tekstit luetaan pakkauksista (`js/packs/fokusvirta-ateena.js`,
-`js/packs/fokusvirta-sofia.js`) — niitä ei kopioida työkaluun eikä
-peliin. Järjestystä ei saa muuttaa jälkikäteen: numero on
-tiedostonimessä. Uusi kenttä lisätään listan LOPPUUN.
+Huudahduksen ajoitus tulee luennan äänitteen kestosta kerrottuna
+kohdan merkkipaikalla (`kohta` esiintyy `matkakirja.teksti`-kentässä
+tasan kerran); ilman äänitettä varapolku on kirjoituskoneen eteneminen.
+Välihuuto soi kertojan **päälle** hiljempaa (0,7×) eikä kertoja väisty
+(`soitaLivianKaupunkiAani`-asetukset `vaimennus` ja `vaista`).
+
+Kuvia ei näytetä: uuden kulun kaupungin matkakirjakortti on pelkkää
+tekstiä, vaikka pakkauksessa olisi vanha `matkakirja.kuva`
+(`js/ui.js renderFact` → `fokusvirtaUusiKulku`).
+
+Vanha `pollo.maadoitus` on **varapolku** kaupungille, jota ei ole vielä
+kirjoitettu uusiksi: se piirtyy kommenttina eli luennan jälkeen kuten
+ennenkin.
+
+## Kaupunkikohtaiset lähteet
+
+Raamattu, VAIN EUROOPPA TYÖN ALLA: puhe soi Euroopan kaupungeissa,
+joiden tekstit omistaja on hyväksynyt. Lähteen nimi on **kaupungin
+tunnus**, ja indeksi tulee kenttälistan ja sen KUPLIEN järjestyksestä
+(`js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET`). Rivi on joko kentän nimi
+(yksi kupla) tai `[nimi, kuplien määrä]`.
+
+Uuden kulun kaupungeissa kentät ovat aina `alustus`, `huudahdus`,
+`kommentti` tässä järjestyksessä; Sofiassa niiden perässä ovat vielä
+sähketehtävän vaiheet `johdanto`, `vinkki`, `linkkiSaate`, `oikein`,
+`odotus`, `paluu`.
+
+| Lähde | Kuplia | Merkkejä | Tiedostot |
+| --- | --- | --- | --- |
+| `ateena` | 1 | 243 | `livia-ateena-1.mp3` (vanha maadoitus, yhä yksi merkkijono) |
+| `sofia` | 14 | 5–85 | `livia-sofia-1.mp3` … `livia-sofia-14.mp3` |
+| `istanbul` | 5 | 9–83 | `livia-istanbul-1.mp3` … `-5.mp3` |
+| `bukarest` | 4 | 10–80 | `livia-bukarest-1.mp3` … `-4.mp3` |
+| `sarajevo` | 4 | 12–84 | `livia-sarajevo-1.mp3` … `-4.mp3` |
+| `budapest` | 4 | 12–91 | `livia-budapest-1.mp3` … `-4.mp3` |
+| `wien` | 4 | 5–81 | `livia-wien-1.mp3` … `-4.mp3` |
+| `praha` | 4 | 12–80 | `livia-praha-1.mp3` … `-4.mp3` |
+| `krakova` | 4 | 18–86 | `livia-krakova-1.mp3` … `-4.mp3` |
+| `varsova` | 4 | 18–90 | `livia-varsova-1.mp3` … `-4.mp3` |
+| `pietari` | 4 | 8–85 | `livia-pietari-1.mp3` … `-4.mp3` |
+| `moskova` | 4 | 13–91 | `livia-moskova-1.mp3` … `-4.mp3` |
+| `kiova` | 4 | 7–85 | `livia-kiova-1.mp3` … `-4.mp3` |
+| `odessa` | 4 | 12–90 | `livia-odessa-1.mp3` … `-4.mp3` |
+| `helsinki` | 4 | 13–91 | `livia-helsinki-1.mp3` … `-4.mp3` |
+| `tampere` | 4 | 11–80 | `livia-tampere-1.mp3` … `-4.mp3` |
+| `tallinna` | 4 | 12–93 | `livia-tallinna-1.mp3` … `-4.mp3` |
+| `riika` | 5 | 5–68 | `livia-riika-1.mp3` … `-5.mp3` |
+| `vilna` | 5 | 9–76 | `livia-vilna-1.mp3` … `-5.mp3` |
+
+Tekstit luetaan pakkauksista (`js/packs/fokusvirta-<id>.js`) — niitä ei
+kopioida työkaluun eikä peliin. Järjestystä ei saa muuttaa jälkikäteen:
+numero on tiedostonimessä. Uusi kenttä lisätään listan LOPPUUN, ja
+kuplien määrän on vastattava pakkausta (ero kaataa
+`tools/generoi-pulu.mjs`:n `kaupunginRepliikit`-funktion).
 
 Peli soittaa nämä kutsulla `soitaLivianKaupunkiAani(ui, city.id,
-'<kenttä>')`, joka on hiljainen jokaiselle kaupungille, jota ei ole
-taulussa. Kutsupaikat ovat `js/fokusvirta.js`:ssä siellä, missä teksti
-oikeasti tulee ruudulle (kevyt kulku, `FOKUSVIRTA_KORTIT = false`):
-maadoitus `fokusvirtaSaapumiskupla`, johdanto ja odotus
-`sahkeSaateKuplaan`, vinkki ja linkkiSaate pullanapeista, oikein
-kuittauskortista ja paluu `aloitaSahkelento`:n kuplasta.
+'<kenttä>', { kupla, teksti })`, joka on hiljainen jokaiselle
+kaupungille, jota ei ole taulussa. Kutsupaikat ovat `js/fokusvirta.js`:
+ssä siellä, missä teksti oikeasti tulee ruudulle (kevyt kulku,
+`FOKUSVIRTA_KORTIT = false`): alustus, huudahdus ja kommentti
+`fokusvirtaSaapumiskupla`, johdanto ja odotus `sahkeSaateKuplaan`,
+vinkki ja linkkiSaate pullanapeista, oikein kuittauskortista ja paluu
+`aloitaSahkelento`:n kuplasta.
 
-**Kupla odottaa puheen loppuun.** Osiin jaettu puheenvuoro
-(`js/pollo.js naytaPuheenvuoro`) etenee oletuksena 1,8–4,2 sekunnin
-rytmillä. Äänitetty repliikki saa asetuksen `viive` ja etenee kuplan
-lukuajalla (`js/livia.js livianKuplanLukuaika`) — sama sääntö kuin
-avauksessa. Samasta syystä sähkelento (`aloitaSahkelento`) odottaa
-kuittauksen (`oikein`) lukuajan ennen paluukuplaa, jottei paluun ääni
-katkaise kuittausta kesken.
+**Yksi kupla = yksi tiedosto.** Kirjoitettu kupla soi omana
+äänitteenään, ja `js/pollo.js naytaPuheenvuoro` saa asetuksen `aani`,
+jota kutsutaan jokaisen osan ilmestyttyä. Vanha muoto (yksi pitkä
+merkkijono, esim. Ateenan maadoitus) pilkkoutuu ruudulla osiin
+(`jaaPuheenvuoroksi`) ja on yhä yksi äänite.
 
-Tagitaulua ei näille lähteille ole eikä vaadita: v2-malli ei lähetä
-tageja lainkaan.
+**Kupla odottaa puheen loppuun.** Äänitetty repliikki saa asetuksen
+`viive` ja etenee kuplan lukuajalla (`js/livia.js
+livianKuplanLukuaika`). Samasta syystä sähkelento (`aloitaSahkelento`)
+odottaa kuittauksen (`oikein`) kuplien yhteenlasketun lukuajan ennen
+paluukuplaa, ja aarteen paljastus odottaa paluusarjan viimeistä kuplaa.
+
+**Vanhentunut äänite on hiljainen myös kaupungeissa** (7.9.2026):
+kaupunkirepliikit ovat samassa tiivistevartioinnissa kuin `paljastus` ja
+`lehtivinkki`, joten ämpärin vanha tiedosto ei voi soida uuden kuplan
+alla. Kutsupaikka antaa aina kuplan tekstin.
+
+## Tarkistuskorostus kartalla (väliaikainen)
+
+Omistajan tilaus 7.9.2026: *"voisit merkitä kartalle nuo kaupungit
+korostusvärillä, missä on nämä uudet generoinnit käytössä."*
+
+`js/liviapuhe.js livianKorostetutKaupungit()` palauttaa ne kaupungit,
+joilla on uuden kulun repliikit **ja** joiden jokaiselle kuplalle on rivi
+`LIVIAN_AANITETYT`-taulussa. Lista on johdettu eikä ylläpidetty käsin.
+Pallolla kaupunkipiste on kirkkaan kultainen
+(`js/pallolauta/lauta.js kaupunkipisteenVari`), tasolaudalla laatan
+ympärillä on kultainen kehä (`css .city-tarkistus`). Kehä ei ota
+napautuksia vastaan eikä muuta yhtäkään osumapintaa.
+
+Kytkin on `LIVIAN_KOROSTUS_KAYTOSSA` — päätoimittaja kääntää sen
+falseksi, kun omistaja on käynyt kaupungit läpi.
 
 ## Ateenan rytmi ja lehtivinkki (omistaja 7.9.2026)
 
@@ -193,6 +264,8 @@ Nykytila ja ehdotukset (päätoimittaja päättää; kaanonia ei muuteta tääll
 | paljastus-2 | 77 | 5,5 | 6,0 | uusittu 7.9.2026, mahtuu kuplaan |
 | paljastus-3 | 61 | 4,4 | 4,8 | uusi 7.9.2026, mahtuu kuplaan |
 | lehtivinkki-1 | 27 | 1,9 | 3,2 | uusi 7.9.2026, mahtuu kuplaan |
+| ateena-1 | 243 | 17,4 | 18,9 | pinoutuu ruudulla, mahtuu osien summaan |
+| kaupunkien uusi kulku (95 kuplaa) | 5–93 | 0,4–6,6 | 3,2–7,3 | omistajan hyväksymät tekstit 7.9.2026, jokainen mahtuu kuplaansa |
 | mannerivihje-1 | 143 | 10,2 | 8,2 | "Kuule — jos tämä maa alkaa tuntua pitkältä, kerää rahaa lentoon. Isosta kaupungista pääsee toiselle mantereelle." (112, viimeinen kupla → saa puhua loppuun) |
 
 Nyrkkisääntö: **enintään noin 85 merkkiä** repliikkiä kohti (≈6 s).
@@ -204,9 +277,9 @@ Kuiva ajo laskee jokaiselle repliikille ylityksen merkkeinä.
   saapumisrepliikkiä (Venetsia, Firenze, Dubrovnik, Budapest, Wien,
   Kreeta, Sisilia, Odessa, Marseille, Pariisi), 190–260 merkkiä eli
   2–3 kertaa liian pitkiä puheeksi sellaisenaan.
-- `js/fokusvirta.js` fokuskaupunkien maadoituskommentit (paketeissa
-  `js/packs/fokusvirta-<id>.js`, kenttä `pollo.maadoitus`) — Ateena ja
-  Sofia on jo äänitetty, muut neljä eivät.
+- `js/packs/fokusvirta-<id>.js` kenttä `pollo.maadoitus` niissä
+  kaupungeissa, joita ei ole vielä kirjoitettu uuteen kulkuun — ne
+  piirtyvät kommenttina, mutta niitä ei ole äänitetty.
 - `js/pollo.js LIVIAN_MIETINNAT` — 52 odotusriviä (yleiset, vastaus,
   pitkat). Lyhyitä (30–60 merkkiä) ja arvottuja: sopisivat äänitettäviksi
   hyvin, mutta niitä on paljon.

@@ -258,9 +258,10 @@ const KAUPUNGIT = [
     kohde: 'Varna',
     vuosi: 1974,
     vaaraKohde: 'Musala',
-    // Vinkki on Fablen 3.9.2026 kirjoittama uusi teksti: sama kenttä
-    // palvelee nyt kahden ohilyönnin vihjettä JA pullalla ostettua.
-    vinkkiSana: /maailman vanhimmasta kullasta/i,
+    // Vinkki on omistajan 7.9.2026 hyväksymä kahden kuplan teksti: sama
+    // kenttä palvelee kahden ohilyönnin vihjettä JA pullalla ostettua.
+    // Sana on TOISESTA kuplasta, joten väite mittaa myös sarjan etenemisen.
+    vinkkiSana: /rannikkokaupungin kortti/i,
     saateSana: /kuopassa/i,
     // Puolikas pulla avaa Varnan kohdekortin kartalta.
     linkkiPinta: { valitsin: '.fokuskohde-popup', teksti: /Varna/i },

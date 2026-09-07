@@ -3379,10 +3379,17 @@ class Pollo {
    *   lukuaikaa (js/livia.js livianKuplanLukuaika) — muuten viimeinen
    *   osa olisi ruudulla jo silloin, kun puhe on vasta ensimmäisessä.
    *   Ilman funktiota rytmi on sanamäärään sidottu perusrytmi.
+   * @param {((indeksi: number, teksti: string) => void)|null}
+   *   [asetukset.aani] ÄÄNI KUPLAA KOHTI (js/fokusvirta.js): kutsutaan
+   *   jokaisen osan ilmestyttyä. Osat ovat nyt myös omia äänitteitään
+   *   (omistaja 7.9.2026: jokainen kupla on oma tiedostonsa), joten
+   *   soitto ei voi tapahtua kerran sarjan alussa. Kupla ensin, ääni
+   *   sen jälkeen — sama järjestys kuin avauksessa (js/livia.js).
    * @returns {boolean} näkyikö ensimmäinen kupla.
    */
   naytaPuheenvuoro(osat, {
     kuittaus = null, jatkuuko = () => true, linssinOma = false, viive = null,
+    aani = null,
   } = {}) {
     const palat = (Array.isArray(osat) ? osat : [osat])
       .map((osa) => String(osa ?? '').trim()).filter(Boolean);
@@ -3391,7 +3398,9 @@ class Pollo {
     // sen rytmi kuuluu sille itselleen (ks. lykkaaLinssiin).
     if (!linssinOma && linssiEstaa(this.doc)) {
       return this.lykkaaLinssiin(
-        () => this.naytaPuheenvuoro(palat, { kuittaus, jatkuuko, viive }),
+        () => this.naytaPuheenvuoro(palat, {
+          kuittaus, jatkuuko, viive, aani,
+        }),
       );
     }
     // Uusi puheenvuoro syrjäyttää edellisen: kaksi puhujaa yhtä aikaa
@@ -3402,9 +3411,10 @@ class Pollo {
       kuittaus: yksi ? kuittaus : null,
       linssinOma,
     });
+    if (nakyi) aani?.(0, palat[0]);
     if (!nakyi || yksi) return nakyi;
     this.puheenvuoro = {
-      palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive,
+      palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive, aani,
     };
     this.ajastaPuheenvuoro();
     return true;
@@ -3435,12 +3445,14 @@ class Pollo {
       const i = nyt.seuraava;
       nyt.seuraava += 1;
       const viimeinen = nyt.seuraava >= nyt.palat.length;
-      this.naytaSaapumiskupla(nyt.palat[i], {
+      const osaNakyi = this.naytaSaapumiskupla(nyt.palat[i], {
         kuittaus: viimeinen ? nyt.kuittaus : null,
         // Jatko-osat kulkevat samasta portista kuin ensimmäinen: linssin
         // oma puheenvuoro puhutaan loppuun, vaikka linssi on yhä päällä.
         linssinOma: nyt.linssinOma,
       });
+      // Ääni kuplaa kohti: jokainen osa on oma äänitiedostonsa.
+      if (osaNakyi) nyt.aani?.(i, nyt.palat[i]);
       if (viimeinen) {
         this.puheenvuoro = null;
         return;

@@ -140,16 +140,34 @@ export const FOKUSVIRTA_TALLINNA = {
      * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kuule", "mut"),
      * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
      */
-    maadoitus: 'Kuule, tämä on nyt sellainen kohta, jossa minun täytyy '
-      + 'sanoa jotain suvun puolesta. Se rata avattiin vuonna 1870, kolme '
-      + 'vuotta ennen isoisäsi käyntiä, ja siitä hetkestä alkaen lasti oli '
-      + 'aamulla laiturilla ja illalla Pietarissa. Ennen sitä nopein tapa '
-      + 'saada viesti perille oli minun sukuni. Nyt sama matka tehdään '
-      + 'ilman että kukaan lähtee mihinkään: Viro oli vuonna 2005 '
-      + 'maailman ensimmäinen maa, jossa sai äänestää vaaleissa '
-      + 'internetissä, ja vuonna 2023 yli puolet äänistä annettiin '
-      + 'verkossa. Meiltä vietiin ensin työ ja sitten koko ammatti. Mut '
-      + 'kyllä minä sen kestän.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Reval, syksyllä 1873. Satamasta on nyt juna Pietariin, ja se muutti kaiken.',
+    huudahdus: {
+      kohta: 'ennen iltaa',
+      teksti: 'Ilman minua.',
+    },
+    kommentti: [
+      'Rata avattiin 1870. Ennen sitä nopein viesti oli minun sukuni.',
+      'Viro äänesti verkossa ensimmäisenä maailmassa 2005. Meiltä vietiin ensin työ, sitten ammatti.',
+    ],
     /*
      * Huomio viittaa herokuvan kohteeseen (kaupunginmuuri). Faktat ovat
      * lehden oman avauskuvan selitteestä (js/packs/kulttuuri-kategoriat.js,
@@ -160,13 +178,6 @@ export const FOKUSVIRTA_TALLINNA = {
      * TÄMÄ POHJUSTAA AARREMERKINNÄN: merkintä puhuu muurista, joka
      * muistaa vanhemmat kauppiaat, ja aarre on seinän sisässä.
      */
-    teksti: 'Katso ensin tonne muurin suuntaan. Sitä oli parhaimmillaan '
-      + 'kaksi ja puoli kilometriä ja siinä oli neljäkymmentäkuusi tornia; '
-      + 'nykyään muuria on jäljellä noin yhdeksäntoista sadan metrin verran '
-      + 'ja torneja kaksikymmentä. Se on Pohjois-Euroopan parhaiten '
-      + 'säilyneitä keskiaikaisia kaupunginmuureja — eikä se ole jäänyt '
-      + 'pystyyn vahingossa. Muuri on paksu siksi, että sen sisällä oli '
-      + 'jotain, mikä kannatti pitää tallessa.',
     kuva: {
       ampari: 'herokoe/hero-tallinna-kaupunginmuuri.jpg',
       selite: 'Tallinnan kaupunginmuuria oli parhaimmillaan 2,4 kilometriä '

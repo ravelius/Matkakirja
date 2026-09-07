@@ -48,8 +48,11 @@ import {
 // kelluvia kuplia (ks. tämän tiedoston loppu). Puheenvuoron jako osiin
 // asuu samassa tiedostossa (kuplapino, 3.9.2026).
 import { jaaPuheenvuoroksi, linssiEstaa, nielaiseSulkevaNapautus } from '../js/ui-apurit.js';
-// Sofian maadoitus on kaanonia ja omistajan hyväksymä malliesimerkki:
-// jaon testi lukee sen paketista eikä kopioi tekstiä tänne.
+// Puheenvuoron jaon testi lukee tekstinsä paketista eikä kopioi sitä
+// tänne. Uuden kulun kaupungeissa repliikit on 7.9.2026 alkaen
+// KIRJOITETTU kupliksi, joten jaon esimerkkinä on Lontoon maadoitus —
+// se on yhä yksi pitkä merkkijono, jonka peli pilkkoo ruudulla.
+import { FOKUSVIRTA_LONTOO } from '../js/packs/fokusvirta-lontoo.js';
 import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
 
 import {
@@ -1594,15 +1597,35 @@ test('kuplapinon katto on kahdeksan tekstiriviä', () => {
  *
  * Tärkein väite on SANOJEN SÄILYMINEN: jako on esitystapa, ei
  * sisältömuutos, joten osat yhdistettynä on täsmälleen alkuperäinen
- * kaanonteksti. Toinen on se, ettei lyhyt huudahdus jää yksin kuplaan.
+ * kaanonteksti.
+ *
+ * JAKO KOSKEE ENÄÄ YHTENÄ MERKKIJONONA KIRJOITETTUJA KENTTIÄ (omistaja
+ * 7.9.2026): hyväksytyt Euroopan repliikit kirjoitetaan valmiiksi
+ * kupliksi, eikä niitä pilkota. Sofian `teksti` on yhä yksi merkkijono
+ * ja kelpaa siksi jaon mitaksi.
  */
 test('puheenvuoro jakautuu osiin sanoja hukkaamatta', () => {
-  const teksti = FOKUSVIRTA_SOFIA.pollo.maadoitus;
+  const teksti = FOKUSVIRTA_LONTOO.pollo.maadoitus;
   const osat = jaaPuheenvuoroksi(teksti);
-  assert.ok(osat.length >= 2 && osat.length <= 3, `osia ${osat.length}`);
-  assert.equal(osat[0], 'Kääk. No johan oli hurja juttu — luin sen kahdesti.');
+  assert.ok(osat.length >= 2, `osia ${osat.length}`);
   assert.equal(osat.join(' '), teksti, 'sanat muuttuivat jaossa');
-  assert.match(osat.at(-1), /Mut kyllä sen kestää lukea/);
+  assert.equal(osat[0], teksti.slice(0, osat[0].length));
+});
+
+/*
+ * KUPLIKSI KIRJOITETTU REPLIIKKI EI KULJE JAON KAUTTA (omistaja
+ * 7.9.2026): jokainen alkio on oma kupla ja oma äänitiedosto, joten
+ * osien määrä on tasan taulukon pituus.
+ */
+test('kupliksi kirjoitettu kommentti on valmiiksi osissa', () => {
+  const kuplat = FOKUSVIRTA_SOFIA.pollo.kommentti;
+  assert.ok(Array.isArray(kuplat) && kuplat.length === 2, 'Sofian kommentti on kaksi kuplaa');
+  assert.match(kuplat[0], /^Kääk\. Hurja juttu/);
+  for (const kupla of kuplat) {
+    assert.ok(kupla.length <= 95, `kupla on liian pitkä ääneen luettavaksi: ${kupla.length}`);
+  }
+  // Alustus on YKSI kupla, vaikka siinä on kaksi virkettä (7.9.2026).
+  assert.equal(typeof FOKUSVIRTA_SOFIA.pollo.alustus, 'string');
 });
 
 test('kirjoittajan kappalerajat voittavat puheenvuoron jaossa', () => {
@@ -1864,7 +1887,7 @@ test('linssin aikana puhekuplat menevät jonoon ja ohjekuplat pudotetaan', () =>
   assert.match(lahde, /return this\.lykkaaLinssiin\(\(\) => this\.naytaSaapumiskupla\(/);
   // Rytmi (viive) kulkee jonoon lykätyn puheenvuoron mukana: äänitetty
   // repliikki puhuu linssin jälkeen samalla tahdilla kuin ilman linssiä.
-  assert.match(lahde, /this\.naytaPuheenvuoro\(palat, \{ kuittaus, jatkuuko, viive \}\),/);
+  assert.match(lahde, /this\.naytaPuheenvuoro\(palat, \{\n\s*kuittaus, jatkuuko, viive, aani,\n\s*\}\),/);
   assert.match(lahde, /this\.lykkaaLinssiin\(\(\) => this\.naytaOnnittelu\(/);
   // Portti on ENNEN chattiin kirjaamista: muuten virran järjestys olisi
   // eri kuin se, jossa repliikit lopulta sanotaan.
@@ -1900,7 +1923,7 @@ test('linssin oma kupla ohittaa portin — mutta vain linssin kutsumana', () => 
   assert.match(lahde, /if \(!linssinOma && linssiEstaa\(this\.doc\)\) \{\n\s*return this\.lykkaaLinssiin\(\(\) => this\.naytaSaapumiskupla\(/);
   assert.match(lahde, /if \(!linssinOma && linssiEstaa\(this\.doc\)\) \{\n\s*return this\.lykkaaLinssiin\(\n?\s*\(\) => this\.naytaPuheenvuoro\(/);
   // Osiin jaettu puheenvuoro puhuu loppuun: lippu kulkee jatko-osiin.
-  assert.match(lahde, /this\.puheenvuoro = \{\n\s*palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive,\n\s*\};/);
+  assert.match(lahde, /this\.puheenvuoro = \{\n\s*palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive, aani,\n\s*\};/);
   assert.match(lahde, /linssinOma: nyt\.linssinOma,/);
   // Muut vientifunktiot EIVÄT saa lippua: ohitus on vain linssin.
   for (const nimi of ['polloSaapumiskupla', 'polloPuheenvuoro', 'polloAvauskupla']) {

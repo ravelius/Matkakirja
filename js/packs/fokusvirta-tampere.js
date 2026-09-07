@@ -279,13 +279,34 @@ export const FOKUSVIRTA_TAMPERE = {
      * REUNOILLA): lyhentymät vain reunoilla ("Kato", "mut"), keskellä
      * sanat auki; pronominit kokonaisina; ei huutomerkkejä.
      */
-    maadoitus: 'Kato, siinä isoisäsi oli oikeassa: vesi ei loppunut. '
-      + 'Samassa koskessa pyörii yhä neljä vesivoimalaa, ja vanhin '
-      + 'niistä aloitti vuonna 1916 — koski tekee edelleen sähköä '
-      + 'keskellä kaupunkia. Yhdeksän vuotta hänen käyntinsä jälkeen '
-      + 'sama vesi sytytti Finlaysonin kutomosaliin hehkulamput, '
-      + 'ensimmäiset koko Pohjolassa. Piiput hän ehti nähdä, mut sitä '
-      + 'valoa ei.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Tampere, elokuussa 1873. Kahden järven välissä kohisee koski, ja se tekee työt.',
+    huudahdus: {
+      kohta: 'vertasi kaupunkiaan ylpeänä Manchesteriin',
+      teksti: 'Manchester!',
+    },
+    kommentti: [
+      'Vesi ei loppunut: samassa koskessa pyörii yhä neljä voimalaa keskellä kaupunkia.',
+      'Yhdeksän vuotta myöhemmin sama vesi sytytti Pohjolan ensimmäiset hehkulamput.',
+    ],
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      *
@@ -301,12 +322,6 @@ export const FOKUSVIRTA_TAMPERE = {
      * koski- tai tehdashero generoidaan myöhemmin, vaihto on tässä
      * yhden rivin työ.
      */
-    teksti: 'Se isäntäväen vertaus jäi elämään lempinimenä, jonka kuulet '
-      + 'kohta itsekin — tehtaat vaan ovat nykyään museoita, teattereita '
-      + 'ja panimoita.. piiput seisovat mut eivät savua. Koski kohisee keskellä '
-      + 'kaupunkia ihan niin kuin isoisäsi aikaan, ja sen rannalla '
-      + 'kävellään edelleen. Suomi oli hänen käydessään '
-      + 'suuriruhtinaskunta, keisarin oma. Katsotaan merkinnät.',
     kuva: {
       ampari: 'herokoe/hero-tampere-aamu.jpg',
       /* Selite on lehden oman avauskuvan selite lyhennettynä yhdeksi

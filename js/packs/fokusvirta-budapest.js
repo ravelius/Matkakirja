@@ -148,14 +148,34 @@ export const FOKUSVIRTA_BUDAPEST = {
      * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kääk", "Mut"),
      * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
      */
-    maadoitus: 'Kääk. Kolme kaupunkia yhdeksi yhdessä päivässä — tiedätkö '
-      + 'sinä, mitä se tarkoittaa minun ammatissani. Kirjeeseen oli '
-      + 'ennen valittava Buda tai Pest tai Óbuda, ja nyt osoite on yksi. '
-      + 'Se tapahtui seitsemästoista marraskuuta 1873, ja uusi kaupunki '
-      + 'jaettiin kymmeneen kaupunginosaan samalla istumalla. Siitä on '
-      + 'nyt yli sataviisikymmentä vuotta, eikä kukaan enää muista '
-      + 'kysyä kumpi ranta. Mut kürtőskalács kiertää yhä vartaan '
-      + 'ympäri, ja siitä minä muistan tämän kaupungin.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Budapest. Harmaata, joelta nousee kylmä tuuli. Kaupunki on tänään yhden päivän vanha.',
+    huudahdus: {
+      kohta: 'Kartantekijöille riittää töitä',
+      teksti: 'Ja postille!',
+    },
+    kommentti: [
+      'Kolme kaupunkia yhdeksi yhdessä päivässä, 17. marraskuuta 1873.',
+      'Kirjeeseen valittiin ennen Buda tai Pest. Nyt osoite on yksi, eikä kukaan kysy kumpi ranta.',
+    ],
     /*
      * Huomio viittaa herokuvan kohteeseen (parlamenttitalo). Faktat
      * ovat lehden oman avauskuvan selitteestä (js/packs/
@@ -165,12 +185,6 @@ export const FOKUSVIRTA_BUDAPEST = {
      * nimenomaan isoisän jälkeen rakennettu, ja juuri siksi se sopii
      * merkintään kaupungista, jota ei eilen ollut.
      */
-    teksti: 'Tuota taloa isoisäsi ei nähnyt: parlamentti valmistui vasta '
-      + '1904, kolmekymmentä vuotta hänen käyntinsä jälkeen. Imre '
-      + 'Steindl piirsi siitä 268 metriä pitkän, ja kupoli nousee tasan '
-      + '96 metriin — luku muistuttaa vuodesta 896, jolloin unkarilaiset '
-      + 'tulivat vuorten yli. Uusi kaupunki halusi heti talon, joka '
-      + 'näkyy joelle. Katso ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-budapest-parliament.jpg',
       selite: 'Unkarin parlamenttitalo valmistui 1904 Imre Steindlin '

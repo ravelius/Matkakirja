@@ -33,6 +33,7 @@ import {
   SAHKE_RIVIVALI_MS, sahkeKirjoitusAikataulu,
 } from '../js/fokusvirta.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
+import { livianKuplat } from '../js/liviapuhe.js';
 import { Game, PULLA_HINTA } from '../js/game.js';
 import { EUROPE } from '../js/packs/europe.js';
 
@@ -105,11 +106,14 @@ test('lomakepohjan osoite on yhdessä vakiossa ja osoittaa ämpäriin', () => {
 test('sähkepilottien pullatekstit ja vastauslinkit ovat käyttökelpoisia', () => {
   for (const [cityId, virta] of PILOTIT) {
     const tehtava = virta.sahketehtava;
+    // Kenttä voi olla kuplien taulukko (omistaja 7.9.2026, js/liviapuhe.js
+    // livianKuplat): mitta on kuplien summa.
+    const pituus = (kentta) => livianKuplat(kentta).join(' ').length;
     // 50 £ ostaa Livian sanat — sama kenttä kuin kahden ohilyönnin vinkki.
-    assert.ok(tehtava.vinkki?.length > 40, `${cityId}: pullavinkki puuttuu`);
+    assert.ok(pituus(tehtava.vinkki) > 40, `${cityId}: pullavinkki puuttuu`);
     // 25 £ ostaa pelkän osoitteen, ja saate on lyhyt: puolikas palvelus.
-    assert.ok(tehtava.linkkiSaate?.length > 20, `${cityId}: linkin saate puuttuu`);
-    assert.ok(tehtava.linkkiSaate.length < 200, `${cityId}: linkin saate on liian pitkä`);
+    assert.ok(pituus(tehtava.linkkiSaate) > 20, `${cityId}: linkin saate puuttuu`);
+    assert.ok(pituus(tehtava.linkkiSaate) < 200, `${cityId}: linkin saate on liian pitkä`);
 
     const linkki = tehtava.vastauslinkki;
     assert.ok(linkki, `${cityId}: vastauslinkki puuttuu`);

@@ -255,17 +255,34 @@ export const FOKUSVIRTA_BUKAREST = {
      * Loppu myöntää isoisälle sen, mikä pitää paikkansa: torni oli yli
      * vuosisadan Bukarestin korkein rakennus (sama täky).
      */
-    maadoitus: 'Kiipeäminen kuulostaa täs ihan valloitukselta. Mut '
-      + 'maanjäristys oli pudottanut tornin huipun ja kellon jo '
-      + 'seitsemänkymmentä vuotta ennen kuin isoisäsi tuli, eli hän kiipesi '
-      + 'typistettyyn tynkään pimeää ja tunkkaista portaikkoa pitkin — '
-      + 'meikäläisten muistiinpanojen mukaan siellä ei viihtynyt yksikään '
-      + 'siivekäs. Sit hän katsoi ulos. Ja sen minä myönnän: tyngästäkin '
-      + 'näkyy kauas, jos torni on yhä koko kaupungin korkein.',
-    teksti: 'Isoisäsi toive ei toteutunut: torni purettiin 1888, ja sen '
-      + 'nimeä kantaa yhä viereinen sairaala. Tornista jäi kourallinen '
-      + 'valokuvia — tässä on yksi niistä. Just tän takia minä kannan '
-      + 'arkistoa siivissäni.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Bukarest. Ensimmäinen halla, savu nousee suoraan. Isoisä kiipesi täällä torniin.',
+    huudahdus: {
+      kohta: 'kaksi maalattua ruotsalaista',
+      teksti: 'Maalattua?',
+    },
+    kommentti: [
+      'Maanjäristys oli pudottanut tornin huipun jo seitsemänkymmentä vuotta aiemmin.',
+      'Hän kiipesi siis tynkään. Ja torni purettiin 1888. Loput on lehdessä.',
+    ],
     /*
      * Commons 25.8.2026: 2397×3339, public domain, kuvaus "Photo of
      * Turnul Colței, Bucharest, before the demolition", Category:Turnul

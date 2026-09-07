@@ -290,19 +290,35 @@ export const FOKUSVIRTA_ISTANBUL = {
      * asiaan. Pois jäi isoäidin kolme ohilaukausta — sivupolku kestää
      * kaksi esimerkkiä yhtä hyvin kuin kolme.
      */
-    maadoitus: 'Vartija sanoo ton jokaiselle, joka pysähtyy pylvään '
-      + 'kohdalle ennen puoltapäivää. Ja mitä ottamiseen tulee — meidän '
-      + 'sukua on otettu ja pidetty kaksituhatta vuotta, eikä siitä ole '
-      + 'sepitetty yhtään aforismia. Isoäitini kantoi mikrofilmiä saarretun '
-      + 'Pariisin yli. Setäni vei pörssikursseja Aachenista Brysseliin, ja '
-      + 'hänet korvattiin kuparilangalla. Meidän puolesta ei kukaan '
-      + 'kohautellut olkiaan kauniisti. — Niin. Se pylväs. Se seisoo yhä '
-      + 'siin, mihin se aikanaan siirrettiin. Se oli tän pointti.',
-    teksti: 'Pylväästä puuttuu kolme päätä, ja yks niistä makaa '
-      + 'parinsadan metrin päässä museossa. Pylvään jalusta kaivettiin '
-      + 'esiin 1855. Paikalla minä en ollut, mut sukuni kantoi siihen '
-      + 'aikaan uutisia Aachenista Brysseliin — uutisen kulusta minä siis '
-      + 'tiedän jotain.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Konstantinopoli. Sumua salmella, sarvet soivat. Isoisä löysi Hippodromilta pylvään.',
+    huudahdus: {
+      kohta: 'kaupunki ottaa mitä haluaa',
+      teksti: 'No johan.',
+    },
+    kommentti: [
+      'Vartija sanoo ton jokaiselle, joka pysähtyy pylvään kohdalle.',
+      'Meidän sukua on otettu ja pidetty kaksituhatta vuotta, eikä siitä ole aforismia.',
+      'Niin. Se pylväs. Seisoo yhä siinä, mihin se siirrettiin. Se oli tän pointti.',
+    ],
     /*
      * Commons (takyt-istanbul.md, täky 1, varmennettu 25.8.2026):
      * 640×480, CC BY-SA 4.0, Gryffindor. Juuri se säilynyt käärmeenpää,

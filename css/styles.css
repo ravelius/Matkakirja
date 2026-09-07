@@ -7600,6 +7600,21 @@ body.flight-active .fact-card {
  * merkitsevät vaihtoehdon; siirtovaiheen punaiset renkaat ovat kehotus
  * toimia ja saavat siksi jäädä eläviksi.
  */
+/*
+ * TARKISTUSKEHÄ (omistajan tilaus 7.9.2026, VÄLIAIKAINEN): kaupunki,
+ * jonka uusi pulukulku on kirjoitettu ja äänitetty, saa kultaisen kehän
+ * laattansa ympärille. Kehä on pelkkä viiva eikä ota napautuksia
+ * vastaan, joten yksikään osumapinta ei muutu. Poistuu käytöstä, kun
+ * js/liviapuhe.js LIVIAN_KOROSTUS_KAYTOSSA käännetään falseksi.
+ */
+.city-tarkistus {
+  fill: none;
+  stroke: #f7c948;
+  stroke-width: 2;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
 .target-ring.pick {
   fill: none;
   stroke: #b08a3c;

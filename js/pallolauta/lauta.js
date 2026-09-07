@@ -69,6 +69,8 @@ import {
   pallonOmatPisteet, rakennaPallo, webglTuettu,
 } from '../pallo.js';
 import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
+// Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
+import { livianKorostetutKaupungit } from '../liviapuhe.js';
 import { asemoiFokuskohde } from '../fokuskohteet.js';
 import { laudaltaAsteiksi } from '../fokusmitat.js';
 import { packById } from '../pack.js';
@@ -317,8 +319,21 @@ export const ESILATAUKSEN_VIIVE_MS = 3000;
  */
 export const OSOITTIMEN_JALKIVIIVE_MS = 400;
 
-/** Pisteen väri: käyty kultaa, aloituskaupunki vaaleaa, muut mustetta. */
+/**
+ * TARKISTUSKOROSTUS (omistajan tilaus 7.9.2026, väliaikainen).
+ *
+ * Kaupunki, jonka uusi pulukulku on kirjoitettu JA äänitetty, näkyy
+ * pallolla kirkkaan kultaisena pisteenä, jotta omistaja löytää
+ * tarkistettavat kohteet yhdellä silmäyksellä. Korostus on VAIN väri:
+ * pisteen koko, osumapinta ja nimien sovittelu pysyvät ennallaan, joten
+ * kaupunkilehti- ja nosto-osumatestit eivät muutu. Päätoimittaja
+ * kääntää LIVIAN_KOROSTUS_KAYTOSSA falseksi tarkistuksen jälkeen.
+ */
+const TARKISTUSVARI = '#f7c948';
+
+/** Pisteen väri: tarkistettava kirkasta kultaa, käyty kultaa, alku vaaleaa. */
 export function kaupunkipisteenVari(kaupunki) {
+  if (livianKorostetutKaupungit().has(kaupunki.id)) return TARKISTUSVARI;
   if (kaupunki.kayty) return '#d9a13b';
   if (kaupunki.alku) return '#b28a4a';
   return '#3a2716';

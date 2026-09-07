@@ -147,15 +147,34 @@ export const FOKUSVIRTA_HELSINKI = {
      * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kato", "mut"),
      * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
      */
-    maadoitus: 'Kato, siinä isoisäsi oli oikeassa, ja enemmän kuin hän '
-      + 'tiesi. Terva oli pitkään Suomen tärkein vientitavara, ja koko '
-      + 'Pohjanmaan vauraus rakennettiin sen päälle. Vielä kaksisataa '
-      + 'vuotta ennen hänen käyntiään pohjalaisten oli pakko viedä '
-      + 'tervansa Tukholmaan, koska tervakauppa oli siellä muutaman '
-      + 'porvarin yksinoikeus — se purettiin vasta vuonna 1765. Ja se '
-      + 'valkoinen kirkko oli hänen käydessään nimeltään Nikolainkirkko; '
-      + 'nykyään se on tuomiokirkko, ja sama torni näkyy mereltä yhä '
-      + 'ensimmäisenä. Mut se tervan tuoksu on kyllä poissa.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kolme kenttää, kolme hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   alustus    yksi kupla ENNEN isoisän luentaa — se kertoo missä
+     *              ollaan ja mistä isoisä kirjoitti. Luenta odottaa sen
+     *              lukuajan (js/ui.js aloitaLykattyLuenta).
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    alustus: 'Helsingfors, kesällä 1873. Isoisä tuli mereltä, ja kaupunki näytti isommalta kuin on.',
+    huudahdus: {
+      kohta: 'kuin keisarin allekirjoitus',
+      teksti: 'Kääk, kaunis.',
+    },
+    kommentti: [
+      'Terva oli pitkään Suomen tärkein vientitavara. Siinä hän oli oikeassa.',
+      'Kirkko oli silloin Nikolainkirkko, nyt tuomiokirkko. Sama torni näkyy mereltä ensimmäisenä.',
+    ],
     /*
      * Huomio viittaa herokuvan kohteeseen (tuomiokirkko Senaatintorilla)
      * — juuri se valkoinen kirkko, jonka isoisä näki mereltä. Faktat ovat
@@ -163,14 +182,6 @@ export const FOKUSVIRTA_HELSINKI = {
      * helsinki/avauskuvat): Carl Ludvig Engelin piirtämä kirkko valmistui
      * 1852 ja siitä tuli merelle näkyvä tunnus jo purjelaivojen aikana.
      */
-    teksti: 'Katso ensin tonne ylös kukkulalle. Se valkoinen kirkko on Carl '
-      + 'Ludvig Engelin piirtämä, se valmistui 1852 — kaksikymmentäyksi '
-      + 'vuotta ennen isoisäsi käyntiä — ja siitä tuli merelle näkyvä '
-      + 'Helsingin tunnus jo purjelaivojen aikana. Se on siis rakennettu '
-      + 'nimenomaan katsottavaksi kaukaa, ja juuri siksi kaupunki näyttää '
-      + 'mereltä suuremmalta kuin maalta. Koko torin sommitelma on saman '
-      + 'miehen käsialaa: kirkko, yliopisto ja senaatintalo yhtenä '
-      + 'kuvana.',
     kuva: {
       ampari: 'herokoe/hero-helsinki-senaatintori.jpg',
       selite: 'Carl Ludvig Engelin piirtämä Tuomiokirkko valmistui 1852, ja '
