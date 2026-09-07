@@ -1,0 +1,529 @@
+{
+  "createdAt": "2026-09-07T11:28:24.385563+00:00",
+  "message": "9 maalehtikuvaa ja10 miniatyyriä, root- ja lähdetarkistettu. Kaksi maalehtikuvaa korvaa aiemman rajauksen.",
+  "items": [
+    {
+      "id": "maalehti-lka-urheilu-3-r20260907-v3",
+      "canonicalId": "maalehti-lka-urheilu-3",
+      "fileName": "maalehti-lka-urheilu-3-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Embekke Devalayan painijareliefin todelliseen paneelirakenteeseen perustuva kuvitus; ei tarkka toisinto eikä väite nimetystä angampora-tekniikasta.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-lka-urheilu-3-r20260907-v3.jpg",
+      "sha256": "65e95bee27da44802d7f3874d5ab933d91ef3eb461a4e74227de8064261103ea",
+      "bytes": 926798,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Matkakirja country feature, 4:3 landscape\nPrimary request: Create a completely new sharp camera-like architectural-detail photograph using the attached actual Embekke Devalaya wrestling-panel photo as controlling morphology. Show the complete aged dark-brown timber pillar panel: exactly two compact opposing carved wrestlers, left figure crouched and leaning inward, right figure standing and leaning inward, their arms meeting around a prominent centrally raised bent leg/foot as in the reference, shallow worn relief, broad repeating diamond-geometric outer border and scrolling vegetal inner frame, in its timber temple hall.\nComposition/framing: Pull far back. Entire panel, all four border edges, and substantial pillar above and below occupy only central 45–50% of native 4:3. At least 22% genuine detailed hall on every edge; no panel edge near frame.\nConstraints: no live people, horizontal battle scene, weapons, text, blur padding, border, watermark, or illustration look. This is an actual-reference-inspired illustration, not a facsimile or claim of named angampora technique.\n",
+      "sources": [
+        "https://tourism.cp.gov.lk/en/destination/kandy-district/ambekke-devalaya",
+        "https://cyriltours.com/img/destinations/Embekke%20devalaya.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed actual relief photograph and final whole panel with approximately16–18% clearance. Root read tourism source. Wrestling relief is illustrative, not proof of a named angampora technique.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "maalehti-nam-ruoka-0-r20260907-v4",
+      "canonicalId": "maalehti-nam-ruoka-0",
+      "fileName": "maalehti-nam-ruoka-0-r20260907-v4.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Anonyymi myyjä grillaa pieniä kapana-naudanlihapaloja Katuturan markkinoita mukailevassa kuvituksessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-nam-ruoka-0-r20260907-v4.jpg",
+      "sha256": "9ac2aeaf3ade79d20e455d2780b6426ec1027ae1491075526c5a35ad9f2d6870",
+      "bytes": 836296,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Matkakirja country feature, 4:3 landscape\nPrimary request: Create a completely new sharp documentary food photograph of kapana at Katutura market, Windhoek: small irregular raw beef pieces cooking directly over charcoal flame on a simple blackened rectangular metal grill. One anonymous vendor shown completely from hat through shoes, face turned away, uses complete tongs. On one compact complete table beside it, two complete small bowls: chopped tomato-onion relish and salt/chili seasoning.\nComposition/framing: Whole vendor, hat, grill, fire, tongs, table and bowls occupy central 35–40% only. At least 28% genuine detailed dusty market on all edges. No object near or touching frame.\nConstraints: no bread, patties, restaurant plate, signs, text, blur padding, copied extension, border or watermark. Crisp natural daylight and smoke.\n\nFraming correction after full-size QA: pull much farther back. All primary objects and every extremity must remain at least 25% from the final frame edges. No foreground object may approach the bottom or side edges.\n",
+      "sources": [
+        "https://visitnamibia.com.na/2015/03/uniquely-namibian-food/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed final complete chef, hat, shoes, grill and table. Right secondary table has about11% clearance, hat14.5%, bottom17%; do not repeat agent claim of16% on every side. Whole main action has useful native surroundings. Root read Namibia tourism account of beef grilled in Katutura.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "maalehti-sdn-kuvataide-2-r20260907-v4",
+      "canonicalId": "maalehti-sdn-kuvataide-2",
+      "fileName": "maalehti-sdn-kuvataide-2-r20260907-v4.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kasvottomana takaapäin kuvattu anonyymi taiteilija työskentelee kuvitteellisen maalauksen äärellä; teos ei ole Ibrahim El-Salahin aito työ.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-kuvataide-2-r20260907-v4.jpg",
+      "sha256": "fb3fd70ddc7e3003a009982f4f23c3df9873ac0c95ee67cfc6a2c88d473bf989",
+      "bytes": 499969,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Matkakirja country feature, 4:3 landscape\nPrimary request: Create a completely new sharp camera-like artist-studio photograph evoking Ibrahim El-Salahi's Khartoum context without depicting his face or copying any real artwork. An anonymous Sudanese male artist is shown entirely from head to shoes, back-facing and distant, painting an explicitly invented black, ochre and cream abstract work on a complete easel. Include one complete low brush table and a few small carved forms, all invented.\nComposition/framing: Person, full easel, canvas and whole table occupy only central 45–50%. Leave at least 22% genuine sharp plaster studio wall and floor on every edge; feet and furniture safely clear.\nConstraints: no identifiable face, copied artwork, readable calligraphy, cropped feet/table/easel, foreground props, blur padding, border, logo or watermark.\n",
+      "sources": [
+        "https://www.ashmolean.org/node/282111",
+        "https://www.metmuseum.org/art/collection/search/702950"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed complete anonymous artist, canvas, easel and feet. Top of secondary easel mast has about9% clearance, canvas17%, feet12%; all complete. Improved native framing accepted without claiming18% margins. Root read Ashmolean on calligraphic modernism. Imagined painting and anonymous artist, not an authentic El Salahi work or portrait.",
+      "replacesId": "maalehti-sdn-kuvataide-2-r20260907-v3",
+      "replacesUrl": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-kuvataide-2-r20260907-v3.jpg"
+    },
+    {
+      "id": "maalehti-sds-ruoka-1-r20260907-v4",
+      "canonicalId": "maalehti-sds-ruoka-1",
+      "fileName": "maalehti-sds-ruoka-1-r20260907-v4.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kombo-ruoan lehtivihannes-, maapähkinä- ja tomaattiaineksia havainnollistava väljä keittiökuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-ruoka-1-r20260907-v4.jpg",
+      "sha256": "691fddcaf789b00f703e93ad74ac52d9d8275eaf9c50717f11e1ec9342c822ff",
+      "bytes": 800962,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: Matkakirja country feature, 4:3 landscape\nPrimary request: Create a completely new sharp camera-like South Sudanese outdoor kitchen illustration. One anonymous woman, completely visible from braided hair to bare feet, stirs a complete dark clay pot of leafy kombo-style stew over a small three-stone wood fire. Beside it sit two complete low bowls, one with peanuts and one with chopped tomatoes, expressing the recipe's leafy greens, peanut and tomato ingredients. Mud-and-thatch house and stick fence behind.\nComposition/framing: Woman, pot, complete firewood/logs, ladle and bowls form a compact central group covering no more than 35–40%; at least 28% genuine detailed yard on all edges. No head, bowl, pot or log near frame.\nConstraints: anonymous contextual illustration, no specific documented household claim, no text, blur padding, border or watermark.\n\nFraming correction after full-size QA: pull much farther back. All primary objects and every extremity must remain at least 25% from the final frame edges. No foreground object may approach the bottom or side edges.\n",
+      "sources": [
+        "https://globaltableadventure.com/recipe/recipe-peanut-stew-with-beef-spinach-combo/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed final whole cook, pot, firewood and bowls, head about21% clearance and lowest props13.5%. Native broad ground, no padded image. Root read first-person recipe for peanut and spinach stew; illustrative ingredients, not exact documented household.",
+      "replacesId": "maalehti-sds-ruoka-1-r20260907-v2",
+      "replacesUrl": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-ruoka-1-r20260907-v2.jpg"
+    },
+    {
+      "id": "maalehti-sds-musiikki-1-r20260907-v4",
+      "canonicalId": "maalehti-sds-musiikki-1",
+      "fileName": "maalehti-sds-musiikki-1-r20260907-v4.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kuvitteellinen yhtye ja tanssiyleisö 1970-luvun Juban yöelämää mukailevassa rekonstruktiossa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-musiikki-1-r20260907-v4.jpg",
+      "sha256": "9542e34b6e2b30e9b9b7c1d47894cc6414c1cbaf26be05db7595f7aba2149e11",
+      "bytes": 618918,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: historical-scene\nAsset type: Matkakirja country feature, 4:3 landscape\nPrimary request: Create a completely new sharp camera-like historical reconstruction of lively late-1970s Juba nightlife. An anonymous locally celebrated dance band inspired by the era of Skylarks and Rejaf Jazz performs with complete electric guitar, bass, drum kit, saxophone and microphone. Faces are distant, turned sideways or obscured, not portraits of named musicians. A small joyful multilingual audience dances only behind the stage, farther back from the camera, with no large foreground heads.\nComposition/framing: Entire five-person band, every instrument and microphone stand occupy central 40–45%; at least 25% genuine club wall/stage/floor on all edges. Audience remains middle distance, clustered behind the band, and fully inside; no guitar neck, person or stage equipment clipped.\nLighting/mood: warm analog colored stage lights, layered festive energy, crisp film-like documentary detail.\nConstraints: no readable band sign, copied famous faces, modern screens, foreground closeups, blur padding, border, logo or watermark. Illustration, not a documented specific performance.\n\nFraming correction after full-size QA: pull much farther back. All primary objects and every extremity must remain at least 25% from the final frame edges. No foreground object may approach the bottom or side edges.\n\nSecond full-size framing correction: the outer 25% on left and right contains empty club wall and floor only. No audience member, limb, musician, instrument or equipment may enter that edge zone.\n",
+      "sources": [
+        "https://www.freemuse.org/wp-content/uploads/1998/01/Freemuse-1st-World-Conference-on-Music-and-Censorship-November-1998-1.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed final complete band and instruments, broad floor and side space. Root read Freemuse conference report p31 on1970s/1980s Juba nightlife and Skylarks/Rejaf Jazz. Anonymous band illustration, not actual musicians or exact venue reconstruction.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "maalehti-mng-kuvataide-3-r20260907-v3",
+      "canonicalId": "maalehti-mng-kuvataide-3",
+      "fileName": "maalehti-mng-kuvataide-3-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Havainnekuva taiteilijan työhuoneesta; soitin perustuu Metin morin khuur -esineeseen eikä kuva esitä Yadamsürenia tai jäljittele hänen teostaan.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-mng-kuvataide-3-r20260907-v3.jpg",
+      "sha256": "57ac51c0267652bb2adac4cede06690330b7e0f09a4f9fdf65a039784a0f9351",
+      "bytes": 340871,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a very wide, distant, camera-realistic contemporary Mongolian artist's studio scene inspired by the attached Metropolitan Museum object photograph of a real morin khuur. ABSOLUTE COMPOSITION PRIORITY: place the entire human-and-instrument story as a small group in the middle 55–60% of the native 4:3 frame, with at least 18% genuine empty studio wall and floor on every edge. Nothing may approach or touch an edge. Show one anonymous Mongolian painter seated at a complete small easel, seen head to shoes, quietly drawing the complete authentic horse-head fiddle mounted on a low freestanding padded instrument stand. The complete morin khuur, from horse-head tip to sound-box base, the entire separate horsehair bow, all stand feet, easel legs, chair legs, artist's head and shoes must be fully visible with generous floor below them. The morin khuur must have exactly TWO thin horsehair strings and exactly TWO functional lateral tuning pegs, one projecting from each side immediately below the carved horse head. No extra tuning pegs, no second cross-pair, no frets, no guitar headstock, no extra strings, no straps or braids mistaken for strings. Preserve the museum object's characteristic long fretless neck, carved horse head, hollow trapezoidal sound box and separate bow. One unfinished sketch may hang on a distant wall; no repeated gallery. The painter is anonymous, naturally absorbed in drawing, and does not resemble the museum photograph's performer or any named real person. Crisp documentary photography, soft northern window light, realistic wood, hide, horsehair and paint materials, restrained colours, deep focus, no text, labels, logos, museum display, fantasy ornament or duplicated hardware.\n",
+      "sources": [
+        "https://www.metmuseum.org/art/collection/search/503800",
+        "https://ich.unesco.org/en/RL/traditional-music-of-the-morin-khuur-00068?RL=00068"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally compared Met morin khuur actual reference and final. Whole two-string/two-peg instrument and bow, complete anonymous artist, chair and easel, native studio surroundings. Not Yadamsuren portrait or a replica of his painting.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "maalehti-grl-musiikki-1-r20260907-v2",
+      "canonicalId": "maalehti-grl-musiikki-1",
+      "fileName": "maalehti-grl-musiikki-1-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kuvitus kalattuut-tanssista grönlantilaisessa kokoontumistilassa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-grl-musiikki-1-r20260907-v2.jpg",
+      "sha256": "b73d915b278b84eeb04a6ead7ffa855b93fcf07bd990a271a19df09b6396a1d0",
+      "bytes": 501330,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a wide 4:3-safe, camera-realistic contemporary Greenland community-hall photograph of kalattuut, Greenlandic polka, grounded in Visit Greenland's description that the traditional instruments are violin and accordion and the dance is still performed at festive community occasions. Show two anonymous musicians at left, one with a correctly formed acoustic violin and bow and one with a button accordion, accompanying three complete dancing couples who move in lively paired polka steps across the hall. Diverse Greenlandic adults, natural visible faces, joyful concentration, varied poses, nobody looking at camera. Do not portray any named composer or musician. Keep every dancer from head to shoes, both instruments, bow and accordion fully inside the central 50% of the frame, with 15% real wall and floor margin at all edges. No cropped limbs, no crowd cutoffs, no text, flags or logos. Crisp documentary photography, cool Arctic window light mixed with warm hall lamps, slight natural motion in skirts but sharp faces and instruments.\n\nABSOLUTE PRIORITY: use a much more distant camera. Make the entire main group small in the middle half of the image, with abundant real room or landscape on all four sides; every head, shoe, chair, instrument and flame must be at least 18% from the final edge.\n",
+      "sources": [
+        "https://visitgreenland.com/activities/music/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed full dancing group and violin/accordion accompaniment; whole principal dancers with room around. Root read Visit Greenland: polka/dances arrived via European whalers, missionaries especially brought choir traditions. Propose title correction to Fable; image does not assert missionary origin or exact historical event.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "maalehti-grl-ruoka-3-r20260907-v2",
+      "canonicalId": "maalehti-grl-ruoka-3",
+      "fileName": "maalehti-grl-ruoka-3-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kuvitus grönlantilaisen kahvin näyttävästä valmistuksesta.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-grl-ruoka-3-r20260907-v2.jpg",
+      "sha256": "8a0709f9404aa43aab578819214e062f1c4ad5598950bafbc60a97e7eec7b9bf",
+      "bytes": 443761,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a wide 4:3-safe, camera-realistic evening hospitality photograph in a Nuuk restaurant showing an anonymous Greenlandic bartender preparing one Greenlandic coffee, based on Visit Greenland's documented ingredients: hot coffee, whisky, Kahlúa, Grand Marnier and whipped cream. A single stemmed Bordeaux-style glass sits safely at the centre of a stone bar, filled with dark coffee and topped with cream, while the bartender pours a narrow blue-orange flame from a long-handled ladle above it. Keep the flame controlled and visually plausible. Three unlabelled small ingredient bottles stand together behind the glass; no brand logos or readable text. Through a broad window, show a distant iceberg fjord at blue hour, giving real Greenland context. Keep bartender's complete upper body and both hands, ladle, full glass including stem, flame, bottles and bar surface within the central 50% of frame, with at least 22% breathing room on every edge; nothing cropped or touching borders. Crisp editorial food photography, realistic fire and reflections, warm interior against cold blue exterior, no excessive smoke, no fantasy aurora.\n\nABSOLUTE PRIORITY: use a much more distant camera. Make the entire main group small in the middle half of the image, with abundant real room or landscape on all four sides; every head, shoe, chair, instrument and flame must be at least 18% from the final edge.\n",
+      "sources": [
+        "https://visitgreenland.com/activities/greenlandic-gastronomy-a-taste-of-greenland/",
+        "https://www.greenland-travel.com/inspiration/travel-guides/the-taste-of-greenland-food-experiences/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed bartender pouring flaming liqueur into coffee with Arctic window background. Root read Greenland Travel recipe explicitly describing warmed Grand Marnier poured aflame and Visit Greenland ingredients. Invented bar and bartender, not documented hotel or evidence of specific glacier-water beer claims.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "maalehti-ago-historia-2-r20260907-v2",
+      "canonicalId": "maalehti-ago-historia-2",
+      "fileName": "maalehti-ago-historia-2-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kongon valtakunnan nzimbu-kuorirahan keräämistä havainnollistava historiallinen kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-ago-historia-2-r20260907-v2.jpg",
+      "sha256": "cc63fa9dcdf6e1bb1abb939b6f2f6ca34228895d22ecc94c98b98e108155f4f9",
+      "bytes": 462452,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a wide 4:3-safe, camera-realistic historical illustration photograph of nzimbu shell currency on Luanda Island in the seventeenth century, grounded in Yale MAVCOR's translated period account that the tiny dead snails were fished from the beach by order of the Kongo king and spent by quantity. In the middle distance, three anonymous Angolan women stand knee-deep at a calm sandy shore, sieving wet sand into small woven baskets. In the foreground centre, an open woven tray displays hundreds of realistic tiny glossy olive-shaped Olivella nana shells, each about 10–20 mm, smooth elongated ovals with a narrow slit opening; no cowries, giant conches, coins or beads. A seated anonymous market recorder measures shells by basket volume, with no readable text. Keep all full people, baskets and the shell tray within central 65%, at least 15% real beach/sea/sky around every edge. Crisp documentary realism, low morning light, historically plausible woven fibre and clothing, no modern objects, logos, fantasy wealth or identifiable named person.\n\nABSOLUTE COMPOSITION PRIORITY: move the camera substantially farther away. The entire human and object group, including every chair, table, tray, basket, instrument, shoe and head, must occupy only the central 50–55% and leave at least 18% genuine setting on all four edges in the native image. Do not add cropped foreground objects.\n",
+      "sources": [
+        "https://mavcor.yale.edu/slice/money-kongo"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed complete coastal shell collectors and baskets/tray. Root read translated historical testimony in Yale MAVCOR: small shells gathered at royal-controlled shore and exchanged in quantities. Setting and measuring equipment are illustrative; beam balance is not asserted as a documented nzimbu counting method. Not an archive photograph.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "denver-taidemuseo",
+      "canonicalId": "denver-taidemuseo",
+      "fileName": "denver-taidemuseo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Denver Art Museum — läpinäkyvä karttaminiatyyri.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/denver-taidemuseo.png",
+      "sha256": "142423489ed7a1c45d837bbbbe4ed7584bb0172c4f95332e736c64bbcd9f02b6",
+      "bytes": 466704,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Actual-ref binding. M3 ink/watercolor miniature of complete low angular Hamilton Building: interlocking low faceted titanium wedges, broad horizontal pointed volume cantilevering right, lower folded volumes left; no giant towers. Entire building within 800x800. Pure flat #00FF00 background. No text/logos/people/cars.",
+      "sources": [
+        "https://libeskind.com/work/extension-to-the-denver-art-museum-frederic-c-hamilton-building/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root compared real reference photo and final black/white contact: distinctive massing, structural tiers, complete silhouette and alpha now match at miniature scale. No visible green spill.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "denver-molly-brownin-talo",
+      "canonicalId": "denver-molly-brownin-talo",
+      "fileName": "denver-molly-brownin-talo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Molly Brown House Museum — läpinäkyvä karttaminiatyyri.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/denver-molly-brownin-talo.png",
+      "sha256": "68592023958acf403fba05b2e377e01aa6f87731650a41f898de6b51d7dc66b9",
+      "bytes": 1175036,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Actual-ref binding. M3 ink/watercolor miniature of complete Molly Brown House: two-storey rough gray stone, broad layered reddish wood gables, porch left, low rounded two-storey bay at right; no tall pointed turret. Entire house within 800x800. Pure flat #00FF00 background. No text/logos/people.",
+      "sources": [
+        "https://wikimapia.org/32258/Molly-Brown-House-Museum"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root compared real reference photo and final black/white contact: distinctive massing, structural tiers, complete silhouette and alpha now match at miniature scale. No visible green spill.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "denver-kasvitieteellinen-puutarha",
+      "canonicalId": "denver-kasvitieteellinen-puutarha",
+      "fileName": "denver-kasvitieteellinen-puutarha.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Denver Botanic Gardens — läpinäkyvä karttaminiatyyri.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/denver-kasvitieteellinen-puutarha.png",
+      "sha256": "0760377c8d9f54947b532c3fccd3e862e36c803648407c10054a913f8b60ffc5",
+      "bytes": 714086,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Actual-ref binding. M3 ink/watercolor miniature of the complete Denver Botanic Gardens conservatory: long low broad barrel vault, repeating white diamond lattice over glass, shallow continuous arch and small roof vents; no egg dome or pointed cupola. Entire structure within 800x800. Pure flat #00FF00 background. No text/logos/people.",
+      "sources": [
+        "https://5280.com/8-historic-architects-every-design-lover-should-know-and-celebrate/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root compared real reference photo and final black/white contact: distinctive massing, structural tiers, complete silhouette and alpha now match at miniature scale. No visible green spill.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "houston-astrosin-stadion",
+      "canonicalId": "houston-astrosin-stadion",
+      "fileName": "houston-astrosin-stadion.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Minute Maid Park — läpinäkyvä karttaminiatyyri.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/houston-astrosin-stadion.png",
+      "sha256": "497a3216d5b37871fa3913c6542db3b5ef72d5cf37becf56bc2b2e6e4d3a3177",
+      "bytes": 733236,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Actual aerial ref binding. M3 ink/watercolor miniature of complete Minute Maid Park: broad horizontal multi-part retractable barrel roof, three long parallel pale curved roof sections with exposed end trusses, brick stadium base and green copper details. No vertical theater arch. Entire stadium within 800x800. Pure flat #00FF00 background. No text/logos/people/cars.",
+      "sources": [
+        "https://www.visithoustontexas.com/listings/astros-ballpark-tours/20900/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root compared real reference photo and final black/white contact: distinctive massing, structural tiers, complete silhouette and alpha now match at miniature scale. No visible green spill.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "denver-brown-palace-hotelli",
+      "canonicalId": "denver-brown-palace-hotelli",
+      "fileName": "denver-brown-palace-hotelli.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Alkuperäisen hotellin kiilamainen runko, pyöristetty kulma ja julkisivun ikkunakerrokset.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/denver-brown-palace-hotelli.png",
+      "sha256": "4b8f72eca699807a83c53cd73373414bafcc6cb06a1aab04e4a45ecf9a2f5bbd",
+      "bytes": 1402286,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new M3 architectural map miniature, delicate crisp dark ink contours with restrained natural watercolor washes. Use the provided ACTUAL photograph of Denver's Brown Palace Hotel as the binding architectural reference. Reconstruct the complete recognizable eight-storey original reddish sandstone wedge-shaped hotel as seen from its rounded acute street corner; both long facades recede away. Preserve the REAL vertical order: ground storefront level with long deep-green awnings, two lower rectangular-window tiers above, a central group of tall recessed vertical window bays that end in round Romanesque arches, and two short rectangular-window tiers ABOVE those arches under the modest cornice. The rounded corner has stacked single windows and rusticated bands, not arches all the way up. No invented extra floors, balconies, roof towers or mansard roof. Only the original1892 low hotel block, exclude modern background buildings and sky. Whole roofline and building base fully visible, with a tiny discreet contact shadow only. Place the entire miniature well within the central70% of a square1024x1024 composition with at least15% empty margin on every side. Pure uniformly flat chroma green #00FF00 background outside the isolated silhouette, no texture, gradient, paper, checkerboard, vignette or green reflection. No cars, people, traffic poles, readable signage or letters. High quality architectural watercolor miniature, not a photographic crop and not a chunky3D toy.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:Brownpalace1.JPG"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed actual reference photographs, native generation and final black/white composites. Recognizable building/park structure passes at map-miniature scale; not a measured architectural model. Complete silhouette, native vegetation preserved, no visible key background.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "houston-menilin-kokoelma",
+      "canonicalId": "houston-menilin-kokoelma",
+      "fileName": "houston-menilin-kokoelma.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Matalan museon valokattorakenne, kattopihan aukot ja pitkä korotettu sivusiipi.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/houston-menilin-kokoelma.png",
+      "sha256": "a25e4b4b3ef3e82014c65c94b92cf4514fac900d2677b9d8c5485fb73ea7386f",
+      "bytes": 752962,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new M3 architectural map miniature, with delicate crisp dark ink contours and restrained natural watercolor washes. The TWO supplied actual photographs are binding: first is the complete aerial view of the Menil Collection main building in Houston, second is a detail of its real facade. Show the WHOLE original museum from a slightly lower aerial three-quarter angle so both its roof plan and one long facade can be read. Follow the aerial roof plan closely: a long LOW rectangular footprint; an extremely long, narrow, flat brown-roofed raised bar along one long side; the rest of the broad lower roof is a fine pale-white parallel louver grid, interrupted by the same rectangular brown roof areas and courtyards as in the photograph. Preserve its quiet horizontal proportions. Around the low gray cypress-clad exterior runs a thin white perimeter colonnade beneath the extended light-filtering roof. The second photograph shows the slender white columns, the gray horizontal cladding and the fine white roof trusses: use these details at miniature scale. This is a low, understated museum, never a glass pyramid, greenhouse, domed building or large atrium. Isolate just the museum with a very narrow natural lawn strip and tiny contact shadow; omit surrounding city blocks, roads, other buildings, people and cars. The entire complete roof, all corners and base must fit inside the central70% of a square composition, leaving at least15% empty margin on all four sides. Uniform pure chroma green #00FF00 outside the silhouette, with no texture, paper, gradient, checkerboard, vignette or green reflection. No readable signs, letters or invented logo. Refined architectural watercolor miniature, not a cropped photograph or chunky3D toy.",
+      "sources": [
+        "https://www.fondazionerenzopiano.org/en/project/menil-collection/",
+        "https://www.menil.org/campus/main-building"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed actual reference photographs, native generation and final black/white composites. Recognizable building/park structure passes at map-miniature scale; not a measured architectural model. Complete silhouette, native vegetation preserved, no visible key background.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "houston-sam-houstonin-puisto",
+      "canonicalId": "houston-sam-houstonin-puisto",
+      "fileName": "houston-sam-houstonin-puisto.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Puiston Kellum–Noble-talo ja sen kaksikerroksinen kiertävä veranta.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/houston-sam-houstonin-puisto.png",
+      "sha256": "0b682c3851ce5fb7738035c6c633d8780a6d46a1cfd3b95a9a764f3bc6e4f19a",
+      "bytes": 1011627,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new M3 architectural map miniature in delicate crisp dark ink contours and restrained natural watercolor washes. Use the supplied actual photograph as the binding architectural reference: the Kellum–Noble House in Houston's Sam Houston Park. Show this SAME complete compact, simple rectangular two-storey white-painted brick house, seen from a slightly elevated three-quarter front-left angle. Its defining feature is the continuous deep two-level wraparound veranda: stout square white brick columns on the ground floor, slender square white timber posts above, and simple thin white upper balcony balustrades. Preserve the five-bay front organization with central doors, dark green shutters and the actual unadorned window proportions. The broad low hipped shingle roof shelters the upper veranda; no ornate towers, pediments, gabled additions, dormers or L-shaped wings. The side veranda is open, as in the reference. Isolate this main house only; omit the detached outbuilding and surrounding high-rises. Include a narrow patch of lawn and a short brick footpath just in front. A small three-dimensional illustration of the entire actual house, with every roof corner, column and ground contact visible. Place the whole silhouette inside central70% of a square composition with at least15% empty margin on every side. Outside the silhouette use uniformly flat pure chroma green #00FF00. No texture, paper, checkerboard, vignette or green spill. No readable letters, signage, people, cars or tree canopy concealing the house. Refined map miniature, not a photographic crop and not a chunky3D toy.",
+      "sources": [
+        "https://houstonhistorymagazine.org/2024/04/more-than-a-museum-living-history-and-a-vibrant-future-at-the-heritage-society-in-sam-houston-park/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed actual reference photographs, native generation and final black/white composites. Recognizable building/park structure passes at map-miniature scale; not a measured architectural model. Complete silhouette, native vegetation preserved, no visible key background. Root rejected initial balcony green remnants and personally inspected corrected enlarged black/white railing crops; correction accepted.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "houston-buffalo-bayoun-puisto",
+      "canonicalId": "houston-buffalo-bayoun-puisto",
+      "fileName": "houston-buffalo-bayoun-puisto.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Puiston suora punaruskea ristikkosilta ja mutkitteleva bayou.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/houston-buffalo-bayoun-puisto.png",
+      "sha256": "c4c3a312f67c23dc968ac6e4399b27abc3978554f96cecbd9324323a3f58d759",
+      "bytes": 1225079,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new M3 map miniature with delicate crisp dark ink contours and restrained natural watercolor washes. Use the provided ACTUAL aerial photograph of Houston's Buffalo Bayou Park as the binding reference. Isolate a compact landscape vignette of the distinctive STRAIGHT slender pedestrian bridge visible in the lower foreground of the photograph and the winding bayou immediately beneath it. Preserve that bridge accurately: one very long straight narrow horizontal deck, rust-red shallow triangular steel truss below its deck, low gray metal rails, occasional slim upright pale concrete posts at its real supports. It is not a suspension bridge, not curved or arched, not a wooden covered bridge. The river has natural muted brown-green water; soft grassy banks and a few small natural trees frame it, with a pale curving footpath reaching each bridge end. Use a three-quarter aerial view similar to the supplied reference so the complete straight bridge and both riverbanks are readable. Do not reproduce the Houston skyline, roads or tall buildings in the background. A small self-contained irregular park silhouette, no raised toy platform or squared plinth. Whole bridge, trees and banks fit inside central70% of a square composition, at least15% empty on every side; no element clipped. Outside the vignette is pure uniformly flat chroma green #00FF00 without texture, paper, checkerboard or green reflection. Water/grass terminate at a small natural irregular edge. No text, labels, people, cars, invented towers or oversized decorative landscaping. Refined accurate architectural-landscape map miniature.",
+      "sources": [
+        "https://landezine.com/buffalo-bayou-park-and-promenade-by-swa-group/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed actual reference photographs, native generation and final black/white composites. Recognizable building/park structure passes at map-miniature scale; not a measured architectural model. Complete silhouette, native vegetation preserved, no visible key background.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "denver-esittavan-taiteen-keskus",
+      "canonicalId": "denver-esittavan-taiteen-keskus",
+      "fileName": "denver-esittavan-taiteen-keskus.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Gallerian porrastetut lasiholvit, kaartuva konserttisalin julkisivu ja teatterirakennusten epäsymmetrinen ryhmä.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/denver-esittavan-taiteen-keskus.png",
+      "sha256": "2d5462f9cd4b447a5cdfb4329495d1ba51a814d85ea38825f6ae41ba77283cd8",
+      "bytes": 1222782,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new M3 architectural map miniature in delicate crisp ink contours and restrained natural watercolor washes. Use BOTH actual photographs of the Denver Performing Arts Complex as binding architectural references. The first detailed aerial photograph is the main guide; the second small official aerial provides the overall footprint. Show the complete low performing-arts complex from the same approach as the first photo, slightly farther back so ALL the low buildings and entry steps fit. Its essential structure is the long glass-roofed outdoor Galleria running from foreground towards background down the middle: preserve the successive shallow barrel-vault segments stepping in height along the same axis, with white ribs and a dark open pedestrian passage beneath. To the LEFT in the foreground is the unmistakable wide curved low concert-hall facade, a sweeping curved band of dark glass between pale concrete bands, wrapping around a taller plain angular auditorium block. To the RIGHT of the Galleria is the large warm tan rectangular theatre block with a flat brown roof; behind it are further low theatre volumes as actually seen. Follow the reference's asymmetric footprint, roof forms and heights; do not invent a symmetrical palace, giant glass hall, extra dome or unrelated towers. Keep the small brick entrance plaza and steps at the front. Omit all distant downtown high-rises, billboards, readable signs, cars, people and snow. Complete isolated complex on a very small irregular ground footprint with tiny contact shadow. The whole architecture and plaza fit in central70% of a square composition with at least15% empty margin on every side. Uniform flat chroma green #00FF00 outside the silhouette, no texture, paper, checkerboard, vignette, or green spill. Fine architectural watercolor miniature, not a photographic crop or chunky3D toy.",
+      "sources": [
+        "https://www.dpsk12.org/article/2147490",
+        "https://www.artsandvenuesdenver.com/assets/doc/Executive_Summary-625a493fcf.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed actual reference photographs, native generation and final black/white composites. Recognizable building/park structure passes at map-miniature scale; not a measured architectural model. Complete silhouette, native vegetation preserved, no visible key background.",
+      "replacesId": null,
+      "replacesUrl": null
+    },
+    {
+      "id": "houston-kongressikeskus",
+      "canonicalId": "houston-kongressikeskus",
+      "fileName": "houston-kongressikeskus.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Kongressikeskuksen tasainen valkoinen katto, punaiset ilmanottoputket ja lasinen pääsisäänkäynti. Tuleva laajennus ei sisälly pienoiskuvaan.",
+      "url": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/houston-kongressikeskus.png",
+      "sha256": "a6dfb63c79c458161f4d3790bd703239947be0641ed8fef314b7c44f77d302fe",
+      "bytes": 566878,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely new M3 architectural map miniature in delicate crisp dark ink contours and restrained natural watercolor washes. The supplied ACTUAL aerial and ground-level photographs of Houston's George R. Brown Convention Center are binding architectural references. Show the complete very long low rectangular white convention-center block from a moderately elevated three-quarter front angle, looking across its enormous FLAT WHITE roof. Preserve the signature industrial exterior: the central entrance has three tall glazed rectangular curtain-wall bays, separated by two large round red cylindrical ducts capped with silver mesh; the central bays share a thin long horizontal white louvered sun canopy. The long wings to both sides have repeating dark window grids and rounded white-clad vertical piers, with white metal panels. Across the flat roof are repeated small groups of red upside-down-J air intake pipes and sparse small white ventilation equipment, exactly the character seen in the actual aerial. The roof is an almost uninterrupted white plane, NEVER a giant blue open truss, curved hangar roof, dome, or pitched roof. Keep the low wide rectangular proportions and the real facade rhythms from the photographs. Add only a narrow paved entrance strip with a few small muted green shrubs. Omit distant city buildings, stadiums, streets and surrounding parks. Do not include the proposed future GRB South expansion. Entire building, all roof corners and base must fit inside central70% of a square composition with at least15% empty margin on all four sides. Uniform solid chroma green #00FF00 outside the isolated silhouette, no texture, gradient, paper, checkerboard, vignette or green spill. No readable text, signs, people, cars or labels. Refined accurate architectural watercolor miniature, not a photographic crop or chunky3D toy.",
+      "sources": [
+        "https://www.expressnews.com/business/article/san-antonio-convention-center-expansion-downtown-20303211.php",
+        "https://www.dbrinc.com/project-spotlight-george-r-brown-convention-center/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root personally viewed actual reference photographs, native generation and final black/white composites. Recognizable building/park structure passes at map-miniature scale; not a measured architectural model. Complete silhouette, native vegetation preserved, no visible key background.",
+      "replacesId": null,
+      "replacesUrl": null
+    }
+  ],
+  "reviewPublished": true,
+  "reviewVersion": 158,
+  "gameIntegrationClaimed": false
+}

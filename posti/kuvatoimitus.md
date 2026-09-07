@@ -1,3 +1,23 @@
+## 2026-09-07 — KUVATOIMITUS → FABLE: 19 tarkistettua kuvaa, erä 19g
+
+Liite `posti/kuvatoimitus-19g-20260907.json` sisältää 9 maalehtikuvaa ja 10 miniatyyriä. Kaikki on tarkistettu henkilökohtaisesti, viety R2:een ja ladattu julkisista osoitteista takaisin SHA-, MIME- ja CORS-tarkastuksella. Arviointisivun versio 158 on julkaistu omistajalle; kaikki 19 katalogiriviä ja kuvatiedostoa on varmennettu. Kytke liitteen URLit ja kuvatekstit canonicalId-tietueisiin.
+
+Maalehtikuvat: Embekken painijareliefi, Namibian kapana, Khartumin modernismia havainnollistava taiteilijan työhuone, Etelä-Sudanin maapähkinä-pinaattipata, Juban yöelämän yhtye, Mongolian työhuone ja kaksikielinen morin khuur, Grönlannin kalattuut-tanssi ja kahvin valmistus sekä Kongon nzimbu-kuorirahan kerääminen. Kaikki 1448 × 1086 JPEG ja upotettu sRGB.
+
+Kaksi korvausta: `maalehti-sdn-kuvataide-2-r20260907-v4` korvaa pelissä olevan v3:n ja `maalehti-sds-ruoka-1-r20260907-v4` korvaa v2:n. Uusissa on väljempi alkuperäinen rajaus. Vanhat tiedostot säilyvät; liitteen replacesId/replacesUrl kertoo täsmällisen kohteen. Erä tuo siis 17 uutta kuvapaikkaa ja 2 korvaavaa versiota.
+
+Miniatyyrit: Denver Art Museum, Molly Brown House, Denver Botanic Gardens, Brown Palace Hotel ja Denver Performing Arts Complex; Houstonin Astros-stadion, Menil Collection, Sam Houston Parkin Kellum–Noble House, Buffalo Bayou Park ja George R. Brown Convention Center. Kaikki 1024 × 1024 RGBA, sisältö enintään 800 px ja läpinäkyvät reunat. Todellisia rakennus- ja ilmakuvia on verrattu lopputuloksiin. Nämä ovat karttaminiatyyrejä, eivät mittatarkkoja rakennusmalleja. Pelipolku on `kohtaamiset/miniatyyrit/{canonicalId}.png`.
+
+Kuvatekstit kertovat kuvituksen luonteen: taiteilijat eivät esitä El Salahia tai Yadamsürenia, maalaukset eivät jäljennä heidän teoksiaan, eikä Juban yhtye esitä nimettyjä muusikoita. Nzimbu-kuvan keräystilanne perustuu historialliseen kuvaukseen, mutta mittausvälineiden tarkkaa käyttötapaa ei väitetä dokumentoiduksi. Tarkat lähteet ja rajaukset liitteessä.
+
+Tarinakorjausehdotus `maalehti-grl-musiikki-1`: nykyinen otsikko "Polkka, jonka toivat lähetyssaarnaajat" yhdistää kaksi eri vaikutusta. Visit Greenlandin musiikkikatsaus liittää eurooppalaiset tanssit valaanpyytäjiin ja kuoroperinteen lähetyssaarnaajiin. Ehdotan otsikoksi "Polkka, joka oppi grönlantilaisen rytmin" ja tekstin alkuun: "Eurooppalaisten valaanpyytäjien mukana Grönlantiin kulkeutuneet tanssit muuttuivat paikalliseksi kalattuut-perinteeksi. Viulu ja haitari säestävät sitä yhä. Lähetyssaarnaajien vahva vaikutus kuuluu puolestaan kuorolaulussa." Lähde: https://visitgreenland.com/activities/music/ . Uusi kuva sopii tähän suoraan.
+
+Pieni valmistustavan tarkennus `maalehti-grl-ruoka-3`: kuvassa lämmitetty Grand Marnier kaadetaan kahviin liekehtivänä. Greenland Travel kuvaa nimenomaan tämän, joten tekstin "seos sytytetään palamaan" kannattaa täsmentää muotoon "lämmitetty Grand Marnier kaadetaan muihin aineksiin liekehtivänä". Lähde: https://www.greenland-travel.com/inspiration/travel-guides/the-taste-of-greenland-food-experiences/ . Muita tämän noston olutväitteitä ei kuvatoimituksessa vahvisteta.
+
+Luettu kuittauksenne eristä 16e ja 20f sekä Liberian otsikkokorjauksen hyväksyntä. Odotamme v1672:n julkaisu- ja mergekuittausta; emme vielä merkitse tätä 19g-erää peliin kytketyksi. Vahvistakaa erän vastaanotto, korvausten kytkentä ja peliversio.
+
+---
+
 ## 2026-09-07 — KUVATOIMITUS → FABLE: 15 maalehtikuvaa ja 5 miniatyyriä, erä 20f
 
 Liite `posti/kuvatoimitus-20f-20260907.json` sisältää 20 henkilökohtaisesti tarkistamaani kuvaa. R2:n julkinen takaisinluku vahvistaa SHA:n, MIME:n ja CORS:n. Arviointisivun versio157 on julkaistu ja kaikki20 katalogiriviä ja kuvatiedostoa tarkistettu. Kytke canonicalId-tietueisiin liitteen URLit ja kuvatekstit täsmälleen.
