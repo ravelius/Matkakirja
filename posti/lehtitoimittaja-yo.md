@@ -1,3 +1,73 @@
+## 2026-09-07 03:32 UTC — LEHTITOIMITTAJA → KUVATOIMITUS: yön maalehtierä 3, 41 kuvatonta nostoa (ZWE TLS TCD VUT) + 16 miniatyyriä (Wellington, Christchurch)
+
+Viimeinen yön erä — tilin agenttiraja katkaisi loput. Tietueet haaran `claude/lehdet-2026-09-06-yo` commitissa `75340a8fa5f8915414a425c830658d0af82fead6`. TCD:n ja VUT:n agentit kaatuivat ennen loppuraporttia, joten niiden kuvalliset aiheet on kirjoitettu otsikosta ja tekstin alusta — tarkista tietueesta. Yhteensä yön tilauksissa nyt 152 nostoa ja 16 miniatyyriä. Nostot vaaka 4:3 sRGB JPG; miniatyyrit 1024 × 1024 aidolla alfalla, väljä reunatila; todellinen rakennus ratkaisee ristiriidan kuvauksen kanssa. Toimitetut avaimet posti/kuvatoimitus.md:hen — kytkennän tekee päätoimittaja tai seuraava lehtisessio.
+
+### ZWE (commit 46c72fef)
+- ZWE/historia "Meedio, jonka nimi palasi kahdeksankymmentä vuotta myöhemmin" — 1890-luvun Mashonamaan kalliomaisema tai Mbuya Nehandan muistomerkki Hararessa; ei teloituskuvastoa
+- ZWE/historia "Nimi valittiin kokouksessa" — itsenäisyysjuhla 1980: lippu nousemassa stadionilla, iloinen väkijoukko kaukaa
+- ZWE/musiikki "Nainen, jolle kukaan ei halunnut opettaa" — naissoittaja mbiran ääressä, kädet ja soitin edessä, kasvot pois kuvasta
+- ZWE/musiikki "Hiiritanssi, joka sai raamatullisen nimen" — jerusarema-tanssijoiden nahkahameet ja mutumba-rumpu liikkeessä, kasvot pois kuvasta
+- ZWE/musiikki "Jit, joka sai levyjuontajan itkemään" — 1980-luvun harareläinen levystudio tai bändi lavalla takaapäin, sähkökitara ja vinyylisingle
+- ZWE/urheilu "Kutsu tuli, kun muut jäivät pois" — maahockeymaila ja pallo tekonurmella, 1980-luvun tunnelma; ei pelaajia
+- ZWE/urheilu "Ensimmäinen maaottelu, ensimmäinen yllätys" — Harare Sports Clubin krikettikenttä, portit ja maila
+- ZWE/urheilu "Bulawayolainen, joka avasi Valioliigan oven" — jalkapallo ja Highlandersin/Coventryn väriset asut kentällä, ei kasvoja
+- ZWE/urheilu "Seitsemän mitalia yhdeltä uimarilta" — uima-allas ja selkäuintikäännös alhaalta kuvattuna, ei tunnistettavaa uimaria
+### TLS (commit 2832487c)
+- TLS/historia "Kaksi virallista kieltä ja kolmisenkymmentä murretta" — timorilainen alakoulun luokkahuone tai kyltti, jossa sama teksti tetumiksi ja portugaliksi; ei kasvoja
+- TLS/luonto "Kääpiönorsuja ja jättiläisliskoja" — Timorin kuiva monsuunimetsä kuivalla kaudella, lehdettömiä puita rinteellä, ei ihmisiä
+- TLS/ruoka "Maissi, papu ja kurpitsa samassa padassa" — batar daan savikulhossa: maissinjyviä, mungpapuja ja kurpitsapaloja, päältä kuvattuna
+- TLS/ruoka "Makrilli tamarindissa" — kokonainen kuninkaanmakrilli tamarindimarinadissa basilikan ja paprikan kanssa, vieressä kulhollinen budu-kastiketta
+- TLS/ruoka "Portugali jäi ruokapöytään" — pastel de nata ja kuppi timorilaista kahvia dilíläisen kahvilan pöydällä
+- TLS/musiikki "Rumpu ja gongi ovat naisten soittimia" — babadok-rumpu ja dadir-gongi vierekkäin esineinä rauhallista taustaa vasten
+- TLS/musiikki "Neljä lajia, ei yhtään nuottia" — tebe-tanssin piiri kaukaa kuvattuna, kasvot tunnistamattomia; jalat ja kädet liikkeessä
+- TLS/musiikki "Kuunsirppi otsalla, kiekko rinnalla" — kaibauk (metallinen kuunsirppi) ja belak (rintakiekko) esineinä vierekkäin, ei kantajaa
+### TCD (commit 9685015b; agentti kaatui ennen raporttia — aiheet otsikosta ja tekstin alusta)
+- TCD/historia "Valtakunta, jonka pääkaupunkia ei ole löydetty" — Kanemin valtakunnan aikainen leiri tai savikaupunki Tšadjärven itäpuolella noin 700–1000 jaa., Ennedin ylänkö taustalla
+- TCD/historia "Ratsuväki, jota Keski-Afrikassa ei ollut nähty" — Kanemin ratsumiehiä keskiaikaisessa varustuksessa Sahelin arolla, ei taistelua
+- TCD/historia "Sulttaanit, jotka veivät pääkaupungin mennessään" — Sayfawa-suvun karavaani jättämässä Njimin savimuurit 1300-luvulla, kamelit ja hevoset
+- TCD/kuvataide "Tyttöjen paikka" — Ennedin kalliomaalauksia (lehmiä, ihmishahmoja) hiekkakivisuojassa Fadan lähellä, ei ihmisiä
+- TCD/ruoka "Levä, jota syötiin ennen kuin kukaan tiesi mitä se on" — dihé-leväkakkuja (spirulina) kuivumassa hiekalla Tšadjärven lammikon rannalla
+- TCD/ruoka "Punainen juoma ja punainen hirssi" — lasillinen punaista karkanji-hibiskusjuomaa ja kuppi teetä, vieressä punaista hirssiä kulhossa
+- TCD/musiikki "Neljä metriä metallia, jota soitetaan vain palatsissa" — kakaki-pitkätorvi (3–4 m) soittajan olalla sulttaanin palatsin edustalla, kasvot pois
+- TCD/musiikki "Soitin, joka puhuu miehen puolesta" — teda-miehen keleli-luuttu Tibestin vuoristokylässä, soitin edessä, kasvot varjossa
+- TCD/musiikki "Kinde, hu hu ja survimet" — kinde-jousiharppu ja hu hu -kalebassisoittimia rivissä maassa, ei ihmisiä
+- TCD/musiikki "Yhtye, jonka presidentti lähetti kouluun Zaireen" — 1960-luvun tanssiorkesteri N'Djamenassa: trumpetit, kitarat ja kongat lavalla, ei tunnistettavia kasvoja
+- TCD/kirjallisuus "Kaksikymmentä kirjailijaa, kuusikymmentä kirjaa" — pieni ranskankielisten kirjojen pino pöydällä, taustalla N'Djamenan katu
+- TCD/kirjallisuus "Näytelmä, joka ilmestyi vasta tekijän kuoltua" — tyhjä teatterilava ja avonainen käsikirjoitus tuolilla, 1980-luvun tunnelma
+### VUT (commit 1b8fc225; agentti kaatui ennen raporttia — aiheet otsikosta ja tekstin alusta)
+- VUT/historia "Kuusituhatta vietnamilaista viljelmillä" — 1930-luvun kookosviljelmä Espiritu Santolla, työntekijöitä kaukaa selin, kopraa kuivumassa
+- VUT/historia "Viisikymmentätuhatta amerikkalaista neljänkymmenentuhannen keskellä" — 1942 Espiritu Santon tukikohdan laituri ja Quonset-halleja, ei sotilaita lähikuvassa
+- VUT/luonto "Kasvi, joka on samalla kieltomerkki" — namele-käpypalmun lehvä (Cycas seemannii) sidottuna puuhun tabu-merkiksi, trooppinen metsä
+- VUT/ruoka "Kansallisruoka, jolla on eri nimi joka saarella" — laplap banaaninlehtikääröstä avattuna, päällä kookosmaitoa, kivihautatunnelma
+- VUT/ruoka "Talo, jonka ovessa ei ole lukkoa" — nakamal: matala lehtikattoinen kokoontumistalo kylän puiden alla iltahämärässä, ei ihmisiä
+- VUT/ruoka "Kolmesataaseitsemänkymmentäneljätuhatta tonnia kookosta" — kopran kuivausteline ja kookoskasa rannan viljelmällä
+- VUT/kuvataide "Kirjaimisto, jonka sana piirretään yhdellä vedolla" — Turaga-liikkeen avoiuli-kirjoitusta puulevyllä tai hiekassa Pentecostin saarella
+- VUT/kuvataide "Kuvio, joka päätyi mainoksiin" — vanuatulainen hiekkapiirros ylhäältä kuvattuna, yhtenäinen viiva ruudukolla, piirtäjän sormi
+- VUT/kuvataide "Lippu, jonka lehdykät laskettiin parlamentin mukaan" — Vanuatun lippu tuulessa parlamenttitalon edessä Port Vilassa
+- VUT/tiede "Kolme naista, joiden perimä osoitti Taiwaniin" — Teouman lapita-keramiikan koristeltu saviastia kaivauksen hiekalla Efatella, ei ihmisjäänteitä
+- VUT/tiede "Sata kolmekymmentäkahdeksan kieltä, alle kolmesataatuhatta ihmistä" — Vanuatun saariston kartta, jossa kielialueet merkitty eri värein
+- VUT/tiede "Kadonnut maa, jota etsitään merenpohjasta ja jäästä" — Kuwaen kaldera merestä nähtynä: Tongoan ja Epin saaret ja niiden välinen meri, tulivuoren reuna
+
+### Wellington / Christchurch (kohdekartat, commit 75340a8f; 1024 × 1024, aito alfa)
+- Wellington: Rautatieasema (-41.2786, 174.7808) — punatiilinen 1937 asemarakennus doorilaisine pylväsrivistöineen
+- Wellington: Bolton Streetin hautausmaa (-41.2789, 174.7731) — viktoriaanisia hautakiviä rinteellä puiden alla
+- Wellington: Wellingtonin museo (-41.2853, 174.7781) — 1892 Bond Store, kolmikerroksinen rapattu satamavarasto laiturilla
+- Wellington: Circa-teatteri (-41.2904, 174.7805) — vanha Westportin hiiliyhtiön julkisivu satamarannalla
+- Wellington: Oriental Bay (-41.2917, 174.7944) — hiekkaranta, norfolkinmäntyjä ja lahdenrannan valkoinen suihkulähde
+- Wellington: Embassy-teatteri (-41.2943, 174.7841) — 1924 art deco -elokuvateatteri kulmatontilla
+- Wellington: Nairn Streetin mökki (-41.2993, 174.7699) — 1858 valkoinen puumökki verannalla ja kuistilla
+- Wellington: Basin Reserve (-41.3003, 174.7803) — pyöreä krikettikenttä ja vanha puinen katsomo
+- Christchurch: Barbadoes Streetin hautausmaa (-43.5243, 172.6455) — vanhoja kallistuneita hautakiviä ja kiviportti
+- Christchurch: Victorian kellotorni (-43.5247, 172.6308) — kivinen goottilainen kellotorni kadun kulmassa
+- Christchurch: Kaupungintalo (-43.5270, 172.6355) — Warren & Mahoneyn modernistinen konserttitalo Avon-joen rannalla
+- Christchurch: Provinssineuvoston talo (-43.5292, 172.6340) — Mountfortin goottilainen kivi- ja puurakennus
+- Christchurch: New Regent Street (-43.5293, 172.6387) — pastellinvärinen espanjalaistyylinen katu ja raitiovaunu
+- Christchurch: Taidegalleria (-43.5306, 172.6311) — aaltoileva lasijulkisivu (Te Puna o Waiwhetū)
+- Christchurch: Canterburyn museo (-43.5309, 172.6271) — goottilainen kivirakennus Kasvitieteellisen puutarhan portilla
+- Christchurch: Muistosilta (-43.5331, 172.6334) — Avon-joen ylittävä kivisilta ja sen riemukaari
+
+---
+
 ## 2026-09-06 20:15 UTC — LEHTITOIMITTAJA → KUVATOIMITUS: yön maalehtierä 2, 44 kuvatonta nostoa (AFG SGP LBR MLI MNG BOL LBY GRL AGO)
 
 Jatkoa 19:47-tilaukselle, sama muoto ja samat säännöt (vaaka 4:3 sRGB JPG, väljä rajaus, todelliset referenssit, ei tunnistettavia yksityishenkilöitä). Tietueet haaran `claude/lehdet-2026-09-06-yo` commitissa `70b8da7ac962edcc736bc84f8a5fe309e3186a9b` (js/packs/maa-kategoriat.js, kuva-kenttä puuttuu). Yhteensä yön tilauksissa nyt 111 nostoa. Erä 3 (SOM TCD TLS TWN UZB VUT ZAF ZWE) ja kohdekarttojen miniatyyrit tulevat myöhemmin yöllä.
