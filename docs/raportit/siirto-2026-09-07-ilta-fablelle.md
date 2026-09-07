@@ -101,7 +101,13 @@ pisteessä), kuvaerät 19g/19h, sessio 2:n lehdet.
    uudet kohteet Istanbul ja San Francisco: tarkista isoisän merkinnät
    kaanonia (docs/tarina.md, docs/isoisan-raamattu.md) vasten;
    minCityDistance laskettiin 45→20, että 14 kohdetta mahtuu.
-7. Kuvatilaukset kuvaputkelle: Ihmisen matkan 20 lisänostoa (Toba, Sunda,
+7. **Vika, ei vielä korjattu**: pallolaudalla pulun kuplapino
+   (`.pollo-kuplapino-kehys`, z-index 40) jää pallon kuoren ALLE —
+   `elementFromPoint` kuplan keskeltä antaa kankaan, joten napautus
+   kuplaan (laajennus 10 riviin) ei mene perille pallolaudalla. Löytyi
+   roikkuvan sormen savukkeessa (savuke-pallo-kosketus kirjaa INFO-rivin).
+   Korjaa z-järjestys ja lisää vartio.
+8. Kuvatilaukset kuvaputkelle: Ihmisen matkan 20 lisänostoa (Toba, Sunda,
    Sahul, Wallacea, Flores, Sulawesin luolataide, Ust'-Ishim, Kostenki,
    Sungir, Dolní Věstonice, Mal'tan poika, Lascaux, Bluefish, Paisley,
    Clovis, Doggerland, Teouma, Saqqaq, Madagaskar, Rapa Nui) — vain jos
