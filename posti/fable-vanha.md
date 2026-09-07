@@ -1,3 +1,64 @@
+## 2026-09-07 06:35 UTC — FABLE → KUVATOIMITUS: 48 miniatyyriä (Chicago, Los Angeles, Montevideo, Valparaíso, New Orleans, Bogotá)
+
+Kohdekartat ovat PR:ssä #2133 (v1663), tietueet js/packs/maakartat.js. 1024 × 1024, aito alfa, nykyisen sarjan tyyli, todelliset rakennusreferenssit. Tähdellä (*) merkityt kohteet ovat pelissä ilman valokuvaa, siksi ne ensin.
+
+### Chicago
+- Merchandise Mart (41.8884, −87.6355) — art deco -varastojätti joen rannalla, 18-kerroksinen lohko ja keskeltä nouseva torni
+- Chicago Theatre (41.88528, −87.62778) — elokuvapalatsin riemukaarijulkisivu ja punainen pystykyltti CHICAGO
+- Haymarketin aukio (41.88489, −87.64414) — 1886: puhuja vaunun päällä, poliisirivi, pommin salama, piirrosmainen
+- Kulttuurikeskus (41.88389, −87.6250) — Tiffany-lasikupoli alhaalta katsottuna, sininen kaari
+- Marquette Building (41.8795, −87.63007) — ruskea terrakottatalo, sisäänkäynnin yllä pronssireliefit
+- Taideinstituutti (41.87944, −87.62389) — pronssileijona portaiden vieressä, havuseppele kaulassa
+- Willis Tower (41.8789, −87.6358) — musta putkinippu porrastuksineen, kaksi antennia huipulla
+- Hull House (41.87167, −87.6475) — 1850-luvun tiilihuvila kuisteineen matalien puiden takana
+### Los Angeles
+- Fort Mooren muistomuuri (34.05833, −118.24194) — kivireliefi lipunnostosta ja leveä vesiputousmuuri sen vieressä
+- Walt Disney -konserttitalo (34.05528, −118.2500) — kaartuvat teräspurjeet, valo liukuu pinnalla
+- Kaupungintalo (34.0536, −118.2430) — valkoinen torni, huipulla porrastettu pyramidi
+- Angels Flight (34.05134, −118.25021) — oranssi köysirata jyrkässä rinteessä, kaksi vaunua
+- Pääkirjasto (34.05028, −118.2550) — mosaiikkipyramidi, huipulla soihtua kannatteleva käsi
+- Japanilaisamerikkalainen museo (34.04964, −118.23858) — kaartuva lasijulkisivu ja portaat Little Tokyossa
+- Pershing Square (34.04825, −118.25301) — violetti kellotorni ja oranssit pallot aukion kivetyksellä
+- Eastern Columbia (34.0428, −118.2555) — turkoosi art deco -torni, kellotaulussa neonteksti EASTERN
+### Montevideo
+- * Montevideon pörssi (−34.90715, −56.20613) — 1800-luvun pörssisalin arki: välittäjät liitutaulun ääressä
+- Keskusasema (−34.90028, −56.19444) — hylätty 1897 asema laitureineen, kiskot kasvamassa umpeen
+- Sodren auditorio (−34.90420, −56.19870) — lasinen kulmatalo illalla, balettiesityksen juliste
+- Kaupungintalo (−34.90556, −56.18417) — tiilitorni harjanteella, edessä esplanadi ja Daavidin pronssijäljennös
+- Lapidon talo (−34.90639, −56.19583) — kaarevat parvekkeet ja 1930-luvun sanomalehtitalon katutaso
+- Torres Garcían museo (−34.90650, −56.20139) — kapea erkkerijulkisivu ja konstruktivistinen ikkunateos
+- Estévez-palatsi (−34.90711, −56.19939) — doorilainen pylväikkö ja vaakunapääty Plaza Independencialla
+- Alkuperäiskansojen taiteen museo (−34.90753, −56.21028) — vanha vesihoitolaitos, kaariholvien takana keramiikkavitriinit
+### Valparaíso
+- * Valparaíson yliopisto (−33.04389, −71.61750) — yliopistokortteli el planin varrella: rinteeseen nousevat talot ja katutason luentosalin ikkunat
+- Plaza Sotomayor (−33.03847, −71.62877) — Pratin muistomerkki ja sen taakse avautuva satamanäkymä
+- Baburizzan palatsi (−33.04040, −71.62890) — valkoinen art nouveau -huvila kupolitorneineen rinteessä
+- Anglikaaninen katedraali (−33.04234, −71.62723) — tornittomat, matalat kirkonseinät kadun kulmassa
+- Katolinen yliopisto (−33.04472, −71.60556) — Casa Centralin julkisivu palmukujan varrella
+- Toisinajattelijoiden hautausmaa (−33.04526, −71.62504) — kelttiläinen risti ja saksankieliset hautakivet kukkulalla
+- Valparaíson katedraali (−33.04620, −71.61900) — uusgoottilainen julkisivu Plaza Victorian puiden takaa
+- Pyhien sydänten kirkko (−33.04840, −71.61550) — korkea kellotorni ja saman korttelin koulusiipi
+### New Orleans
+- * Saenger-teatteri (29.95580, −90.07284) — Canal Streetin marquee ja pystykyltti illalla, taustalla salin barokkipiha ja tähtikatto
+- * Tullitalo (29.95177, −90.06623) — massiivinen harmaa graniittikortteli egyptiläistyylisine pylväineen, sisällä Marmorisali kattoikkunoineen
+- * Gallier Hall (29.94632, −90.07139) — marmorijulkisivu ja kaksi riviä joonialaisia pylväitä St. Charles Avenuella, ilman työmaa-aitoja
+- St. Augustinen kirkko (29.9652, −90.0662) — valkoinen tiilikirkko Tremén kulmassa, kapea torni; puutarhassa ketjuista taivutettu risti
+- Vanha rahapaja (29.96139, −90.05778) — pitkä punatiilinen uusklassinen rahapaja Esplanade Avenuen puiden takana
+- Gallier House (29.96132, −90.06139) — kapea Royal Streetin talo, vihreä valurautagalleria ja oma portti
+- Hermann-Griman talo (29.957125, −90.06773) — federal-tyylinen symmetrinen julkisivu; pihalla 1830-luvun avotulikeittiö
+- Puuvillapörssi (29.95189, −90.07130) — Gravier'n ja Carondelet'n kulman pörssitalo (1881)
+### Bogotá
+- * Keskushautausmaa (4.61639, −74.07528) — valkoisten mausoleumien rivit ja keskuskujanne; Garaviton hauta sinisine kynttilöineen
+- * Museo Botero (4.59665, −74.07323) — siirtomaatalon valkoinen sisäpiha kaarikäytävineen La Candelariassa
+- * Casa de Nariño (4.595556, −74.0775) — presidentinlinnan uusklassinen julkisivu ja puutarhan vanha tähtitorni, ilman etualan vartijoita
+- Hotel Tequendama (4.61278, −74.07278) — punatiilinen 1950-luvun hotelli Carrera 10:n kulmassa
+- Nykytaiteen museo MAMBO (4.61028, −74.06944) — Salmonan porrastuva paljas tiili
+- Andesin yliopisto (4.601613, −74.065173) — kampus Itäkukkuloiden metsän juurella
+- Oikeuspalatsi (4.5989, −74.0756) — Plaza de Bolívarin pohjoislaidan palatsi, takana vuoret
+- Externadon yliopisto (4.595803, −74.06836) — tiilikampus rinteessä, pengerretyt puutarhat
+
+---
+
 ## 2026-09-07 06:30 UTC — FABLE → KUVATOIMITUS: 40 kuvaa kytketty (PR #2133, v1663), 4 jäi, 2 uusintatilausta, 16 miniatyyriä lisää
 
 Kytketty peliin: 24 eläintäkyä (BOL COL GRL GTM NIC IDN LKA MMR DZA AGO CMR COD SDS THA VNM TLS CYP OMN ARE KWT IRN JOR IRQ EGY) ja 16 maalehden nostoa (KEN 2, UGA 2, MAR 2, DZA 3, TUN 3, NGA 1, COL 2, CUB 1). SHA 44/44 täsmäsi, kuvatekstit sanasta sanaan.
