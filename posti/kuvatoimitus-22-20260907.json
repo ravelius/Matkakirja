@@ -1,0 +1,558 @@
+{
+  "createdAt": "2026-09-07T07:58:56.131570+00:00",
+  "message": "16 maalehtikuvaa ja6 miniatyyriä, root- ja lähdetarkistettu.",
+  "items": [
+    {
+      "id": "maalehti-eth-luonto-0-r20260907-v1",
+      "canonicalId": "maalehti-eth-luonto-0",
+      "fileName": "maalehti-eth-luonto-0-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Etiopialaisen kirkkometsän innoittama kuvitus: ortodoksikirkkoa ympäröivä metsäsaareke ylängön viljelymaisemassa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-eth-luonto-0-r20260907-v1.jpg",
+      "sha256": "54671c868fc344d520edfc93b03bee6797df77dfb80c5afd269846780e4b7e97",
+      "bytes": 684169,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a 1536x1024 landscape Matkakirja editorial image, no text, logo, frame or watermark. Keep every essential figure and object fully within the central 70 percent with broad calm margins for a 20 percent edge fade. High aerial documentary photograph of a small circular Ethiopian Orthodox church entirely embraced by a dense old Afromontane church forest, an emerald island surrounded on every side by expansive ochre ploughed northern Ethiopian highland fields. A few people on the path for scale; ecologically believable native canopy, crisp natural light, no city.",
+      "sources": [
+        "https://research.wur.nl/en/publications/conservation-of-the-ethiopian-church-forests-threats-opportunitie/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read university-hosted research abstract confirming sacred forest fragments around churches in northern and central highlands. No assertion of an exact site or 1500-year age."
+    },
+    {
+      "id": "maalehti-sdn-historia-0-r20260907-v1",
+      "canonicalId": "maalehti-sdn-historia-0",
+      "fileName": "maalehti-sdn-historia-0-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Baqt-sopimuksen alkuvaiheita mukaileva historiallinen kuvitus nubialaisten ja Egyptin lähettiläiden kohtaamisesta 600-luvun puolivälissä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-historia-0-r20260907-v1.jpg",
+      "sha256": "9db5abec914f2bcbb741eb7a432ce4f716d99a838ec43b811937c3b57da04558",
+      "bytes": 419846,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a 1536x1024 landscape Matkakirja editorial image, no text, logo, frame or watermark. Keep every essential figure and object fully within the central 70 percent with broad calm margins for a 20 percent edge fade. Historically grounded naturalistic painted reconstruction outside the earth-brick walls of Old Dongola in 652: Makurian Christian envoys and Arab commanders meet after the failed siege to establish the Baqt, weapons lowered, merchants and pack animals in the distance suggesting protected exchange. Accurate seventh-century Nubian and early Islamic clothing, shields and mud-brick fortifications; restrained, no triumphalist spectacle.",
+      "sources": [
+        "https://tile.loc.gov/storage-services/master/gdc/gdcebookspublic/20/21/38/88/69/2021388869/2021388869.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root downloaded and read Arabic Documents from Medieval Nubia PDF pp20–24, including primary treaty tradition and its textual uncertainties. No claim this meeting, wall, or dress is documented; avoid exact year and the disputed Makuria/Nobadia assignment."
+    },
+    {
+      "id": "maalehti-sdn-musiikki-0-r20260907-v1",
+      "canonicalId": "maalehti-sdn-musiikki-0",
+      "fileName": "maalehti-sdn-musiikki-0-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Solisti, kuoro ja kehärumpu 1920-luvun Omdurmanin haqiba-laulua mukailevassa kuvituksessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-musiikki-0-r20260907-v1.jpg",
+      "sha256": "070c0057f368f7e46379e5f9865aad82ab5089c4f5383157b8be87e2659b1ad5",
+      "bytes": 352565,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a 1536x1024 landscape Matkakirja editorial image, no text, logo, frame or watermark. Keep every essential figure and object fully within the central 70 percent with broad calm margins for a 20 percent edge fade. Historically inspired photographic reconstruction of a 1920s Omdurman haqiba performance in a modest courtyard: one male lead singer and a close chorus, accompanied only by a clearly visible tar frame drum. Intimate urban gathering, period Sudanese jalabiyas and turbans, expressive voices, no modern instruments.",
+      "sources": [
+        "https://riftvalley.net/wp-content/uploads/2018/06/RVI-The-Sudan-Handbook.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read Sudan Handbook PDF pp249–250 (printed248–249): Omdurman1920s, solo vocalist, chorus and tambourine. Anonymous scene is illustrative."
+    },
+    {
+      "id": "maalehti-sdn-musiikki-2-r20260907-v1",
+      "canonicalId": "maalehti-sdn-musiikki-2",
+      "fileName": "maalehti-sdn-musiikki-2-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Hakamattien yhteisösovittelun innoittama kuvitus läntisestä Sudanista: naisen sanat kokoavat kuulijat yhteen.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-musiikki-2-r20260907-v1.jpg",
+      "sha256": "8836a841dd8cdfbfdbe2ec29b7ba4da8dba200b814f55df9b0c56a435e02fd93",
+      "bytes": 462928,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a 1536x1024 landscape Matkakirja editorial image, no text, logo, frame or watermark. Keep every essential figure and object fully within the central 70 percent with broad calm margins for a 20 percent edge fade. Respectful contemporary documentary photograph in western Sudan: an influential hakama woman recites a forceful poem to a seated intercommunity peace gathering, women and men listening closely, one simple hand drum nearby. Her authority comes through voice and gesture; natural village shade, sober hopeful mood, no weapons brandished.",
+      "sources": [
+        "https://mptf.undp.org/sites/default/files/documents/2025-03/sudan_wphf-annual_report_2024_march_18_2025_final_1.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read UN Women2024 report PDF pp2 and10: Hakamats participate in Darfur peacebuilding and mediation. Scene not a photograph of a named participant or documented event."
+    },
+    {
+      "id": "maalehti-sdn-kuvataide-2-r20260907-v3",
+      "canonicalId": "maalehti-sdn-kuvataide-2",
+      "fileName": "maalehti-sdn-kuvataide-2-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Ibrahim El-Salahin ja Khartumin koulukunnan innoittama kuvitus: selin nähty maalari kuvitteellisessa työhuoneessa 1950-luvun lopulla.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-kuvataide-2-r20260907-v3.jpg",
+      "sha256": "322f8180ec8dd10e8416f27ae34ca1c0064cc7a0caa85a7f89763125b2665f20",
+      "bytes": 303446,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new photorealistic 1536x1024 editorial image inspired by a late-1950s Khartoum modern-art studio. A Sudanese modernist painter is shown only from behind at medium-long distance, face fully invisible and identity not invented, working on a restrained abstract canvas combining calligraphic rhythm with African modernist form. No legible writing, no portrait likeness, no logos. Warm daylight, period-plausible simple studio, broad calm margins, all figure and canvas within central 60%, 4:3 crop safe.",
+      "sources": [
+        "https://www.ashmolean.org/node/282111"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read Ashmolean exhibition text and personally viewed selectedv3. Generated canvas is invented, not an authentic El-Salahi artwork. Named figure has no identifiable face."
+    },
+    {
+      "id": "maalehti-sdn-luonto-2-r20260907-v1",
+      "canonicalId": "maalehti-sdn-luonto-2",
+      "fileName": "maalehti-sdn-luonto-2-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Wadi Howarin kosteamman holoseenikauden jokimaisemaa mukaileva luonnonhistoriallinen kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sdn-luonto-2-r20260907-v1.jpg",
+      "sha256": "4e2b413efd272e0259e99ff65f1506e0d5c34e59bf47cf71a6d975750d317d0b",
+      "bytes": 463659,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1536x1024 landscape Matkakirja editorial image, composed to survive a centered 4:3 crop. Keep every essential subject fully within the central 55 percent with broad calm margins. No text, logo, watermark or border. Wide aerial landscape photograph of today’s dry Wadi Howar, a long pale riverbed threading across the eastern Sahara. Within the same image, a restrained natural-history reconstruction along a central segment suggests the early Holocene Yellow Nile with shallow seasonal water and a small distant cattle herd, clearly softer and illustrative rather than claiming a present river.",
+      "sources": [
+        "https://pubmed.ncbi.nlm.nih.gov/17772057/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read original Science research abstract DOI10.1126/science.237.4812.298: active river and savanna habitat9500–4500years ago. NOT present-day dry channel; does not substantiate game claim drying only2000years ago."
+    },
+    {
+      "id": "maalehti-sds-historia-2-r20260907-v3",
+      "canonicalId": "maalehti-sds-historia-2",
+      "fileName": "maalehti-sds-historia-2-r20260907-v3.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Azande-perinteeseen kuuluvan moniteräisen heittoveitsen muotoon perustuva kuvitus sepän työpajasta.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-historia-2-r20260907-v3.jpg",
+      "sha256": "b36777b89b5c838f167beb405b254c68638898f29cf0de452fbe45ade4fda15b",
+      "bytes": 148588,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new photorealistic museum-documentary image using the attached University of Michigan Museum of Art photograph as strict shape reference. Exact complete Azande throwing knife: long central aged iron shaft, long gently curving left upper blade, tall narrow upward hook, two small inner hooks, one lower right blade, fiber-wrapped grip, no brass. Place it upright beside a low anvil, but make the knife smaller: entire object contained within central 50% with at least 25% margin above every tip and on all sides. 4:3 crop safe, no text.",
+      "sources": [
+        "https://umma.umich.edu/objects/throwing-knife-1983-1-149/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read UMMA object entry and viewed actual object photograph against newv3: correct hooked iron silhouette, full handle and wide frame. Avoid uncertain blade-count taxonomy."
+    },
+    {
+      "id": "maalehti-sds-historia-3-r20260907-v1",
+      "canonicalId": "maalehti-sds-historia-3",
+      "fileName": "maalehti-sds-historia-3-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Tammikuun 2011 Etelä-Sudanin kansanäänestyksen innoittama kuvitus äänestyshetkestä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-historia-3-r20260907-v1.jpg",
+      "sha256": "25dc14a89ab0b81effb644d313a44d56a0d943ee67bc32cb7b88bddb5bc1469e",
+      "bytes": 555351,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1536x1024 landscape Matkakirja editorial image, composed to survive a centered 4:3 crop. Keep every essential subject fully within the central 55 percent with broad calm margins. No text, logo, watermark or border. Documentary historical reconstruction of South Sudan’s January 2011 independence referendum: an orderly rural polling station, adults placing ballots in a transparent sealed box and showing inked fingers afterward, restrained shared emotion. No readable signs or invented numbers; complete people and ballot box visible.",
+      "sources": [
+        "https://peacekeeping.un.org/sites/default/files/past/unmis/referendum.shtml"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read UNMIS indexed primary referendum record confirming January2011. Direct page403; indexed content retrieved. Pictured voter and polling station are illustrative."
+    },
+    {
+      "id": "maalehti-sds-tarinat-0-r20260907-v1",
+      "canonicalId": "maalehti-sds-tarinat-0",
+      "fileName": "maalehti-sds-tarinat-0-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Ture-veijarin tarinaperinteen innoittama kuvitus: hunajaruukun kumoutuminen huvittaa kuulijoita.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-tarinat-0-r20260907-v1.jpg",
+      "sha256": "e24fd80fe96a35bdd461b4d48fefbba0dc1cce712bc7f9aaf0a4394d7ac67ad7",
+      "bytes": 559847,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1536x1024 landscape Matkakirja editorial image, composed to survive a centered 4:3 crop. Keep every essential subject fully within the central 55 percent with broad calm margins. No text, logo, watermark or border. Warm original storybook watercolor rooted in Azande village life: Ture the impulsive trickster has overturned a honey pot while trying to fool two alert animal companions; children and elders laugh at the clear consequence, teaching through humor rather than admiration. Original folklore scene, no specific copyrighted character design.",
+      "sources": [
+        "https://www.persee.fr/doc/hom_0439-4216_1969_num_9_1_367032"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read1969 review of Evans-Pritchard The Zande Trickster: Ture central character and stories include honey collection. This particular overturned-jar incident is invented, not asserted as an exact traditional tale."
+    },
+    {
+      "id": "maalehti-sds-tarinat-1-r20260907-v1",
+      "canonicalId": "maalehti-sds-tarinat-1",
+      "fileName": "maalehti-sds-tarinat-1-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Benge-oraakkelin kysymistä mukaileva historiallinen kuvitus Azande-yhteisöstä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-tarinat-1-r20260907-v1.jpg",
+      "sha256": "53e4eb51a37ca89178abb03a1d7deeb48930c7bc5d8a5666b71f8aea398ca0d1",
+      "bytes": 689036,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1536x1024 landscape Matkakirja editorial image, composed to survive a centered 4:3 crop. Keep every essential subject fully within the central 55 percent with broad calm margins. No text, logo, watermark or border. Respectful historical ethnographic reconstruction of an Azande benge poison-oracle consultation, shown from a discreet distance: adult male officiant poses a question with a chicken beside him and a tiny covered vessel of plant preparation, witnesses seated back. No poisoning action, distress, death or sensational magic effects. Natural village shade.",
+      "sources": [
+        "https://www.haujournal.org/index.php/hau/article/view/1895"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read research abstract DOI10.1086/732910: chicken poison oracle described historically, now replaced in studied area. Caption explicitly historical; no present-day claim."
+    },
+    {
+      "id": "maalehti-sds-ruoka-0-r20260907-v1",
+      "canonicalId": "maalehti-sds-ruoka-0",
+      "fileName": "maalehti-sds-ruoka-0-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Ohutta durrasta valmistettua kisraa paistetaan paksun viljapuuron rinnalla sudanilaista ruokaperinnettä mukailevassa kuvituksessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-ruoka-0-r20260907-v1.jpg",
+      "sha256": "61aa708ac905d9cb478041ade88f511e4719403ffd2d83d73df2f188a9038199",
+      "bytes": 442007,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1536x1024 landscape Matkakirja editorial image, composed to survive a centered 4:3 crop. Keep every essential subject fully within the central 55 percent with broad calm margins. No text, logo, watermark or border. Natural food-documentary photograph in a South Sudanese home: a woman spreads fermented sorghum batter into one thin kisra flatbread on a hot griddle while a finished bowl of thick aseeda porridge and raw sorghum grain sit beside her. Complete hands, utensils, griddle and dishes visible; appetizing everyday realism.",
+      "sources": [
+        "https://www.fao.org/4/x2184e/x2184e07.htm"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read FAO source confirming thin fermented sorghum bread in Sudan. Does not independently establish exact porridge recipe; caption describes visible porridge without overclaim."
+    },
+    {
+      "id": "maalehti-sds-ruoka-1-r20260907-v2",
+      "canonicalId": "maalehti-sds-ruoka-1",
+      "fileName": "maalehti-sds-ruoka-1-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Kombo-pata, lehtivihannes, maapähkinätahna ja tomaatti eteläsudanilaisen reseptin innoittamassa kuvituksessa.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-ruoka-1-r20260907-v2.jpg",
+      "sha256": "3dc6345ca06319155dcffeb511c016c292bf5489bcff65f687b239f8e74bc1e8",
+      "bytes": 471504,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new photorealistic 1536x1024 food documentary image of South Sudanese kombo stew being prepared: a modest clay pot with cooked leafy greens, peanut paste and tomato, plus separate small bowls of groundnuts and tomatoes clearly visible. One cook leans over the pot, full head and hands visible. Wide natural courtyard composition, every person, pot and bowl within central 60%, at least 20% breathing room on all sides, nothing clipped, no text, 4:3 crop safe.",
+      "sources": [
+        "https://globaltableadventure.com/recipe/recipe-peanut-stew-with-beef-spinach-combo/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read original cooking demonstration adapted from South Sudanese Cookbook: spinach, peanut butter and tomato. Selectedv2 complete head and bowls with fade room; no health or popularity claim."
+    },
+    {
+      "id": "maalehti-sds-kielet-0-r20260907-v2",
+      "canonicalId": "maalehti-sds-kielet-0",
+      "fileName": "maalehti-sds-kielet-0-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Etelä-Sudanin monikielisyyden innoittama kuvitus keskustelusta yhteisöradion mikrofonien äärellä.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-kielet-0-r20260907-v2.jpg",
+      "sha256": "1c491127d45d47231db3ea4cf39b414e326cfc1103583b847eada44d63a89aac",
+      "bytes": 327103,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1536x1024 landscape editorial documentary photograph, composed for a centered 4:3 crop with broad calm margins. In a South Sudanese community radio studio, six speakers from different local communities converse naturally around simple microphones while one host listens; the scene suggests the country’s many indigenous national languages and English as official working language through people communicating, without visual statistics. Keep every person and microphone within the central 70 percent. Absolutely no paper, book, poster, board, screen, label, flag, written symbol, readable word, logo or watermark. Contemporary camera realism, restrained natural light, uncluttered plain walls.",
+      "sources": [
+        "https://natlex.ilo.org/dyn/natlex2/natlex2/files/download/90704/SSD90704%202011C.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read constitutional Article6 in originalPDF p13: indigenous languages national; English official working language. Exact sixty-language number NOT established. Radio conversation is illustrative."
+    },
+    {
+      "id": "maalehti-sds-kielet-2-r20260907-v2",
+      "canonicalId": "maalehti-sds-kielet-2",
+      "fileName": "maalehti-sds-kielet-2-r20260907-v2.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Dinkan vokaalien pituuserojen tutkimista mukaileva kuvitus äänitystilanteesta.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-kielet-2-r20260907-v2.jpg",
+      "sha256": "8a890ffa8cf69ee4ea8b48e38438005dddfb7bb8b5d497ba3fa832465da97007",
+      "bytes": 504334,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new photorealistic 1536x1024 linguistic fieldwork scene in South Sudan: one Dinka speaker seated comfortably at center while an anonymous researcher records three carefully repeated vowel-length examples with a tabletop microphone and small neutral recorder. Exactly one speaker and one researcher, both fully visible, recorder fully visible. No readable waveform or text. Wide environmental view with every head, hand, chair and device inside central 55%, at least 20% breathing room on all edges, natural quiet light, 4:3 crop safe.",
+      "sources": [
+        "https://www.research.ed.ac.uk/en/publications/why-are-three-level-vowel-length-systems-rare-insights-from-dinka/"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read researchers abstract for acoustic study DOI10.1016/j.wocn.2007.09.002 confirming three-level length. Newv2 subjects and equipment fit wider frame. No claim of real research participants."
+    },
+    {
+      "id": "maalehti-sds-kielet-3-r20260907-v1",
+      "canonicalId": "maalehti-sds-kielet-3",
+      "fileName": "maalehti-sds-kielet-3-r20260907-v1.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Zandenkielisen suullisen tarinankerronnan innoittama kuvitus vanhimmasta ja eri-ikäisistä kuulijoista.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-sds-kielet-3-r20260907-v1.jpg",
+      "sha256": "af27edf5aa4023394e725b911db6e6c22ff35d6112ee4513b7245d06a331e721",
+      "bytes": 439890,
+      "dimensions": [
+        1365,
+        1024
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create a completely new 1536x1024 landscape documentary photograph of an Azande oral-storytelling circle in southwestern South Sudan: an elder speaks in Pa-Zande while listeners of several ages respond with expressive attention, a younger recorder preserves the voice with a small unbranded audio recorder. The scene conveys one living language and oral tradition without diagrams or claims about exact speaker counts. Broad 4:3-safe margins, no readable text, no watermark.",
+      "sources": [
+        "https://glottolog.org/resource/languoid/id/zand1248"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read Glottolog Zande/Pazande language entry and Evans-Pritchard collection review. Community storytelling scene is illustrative, not a documented event."
+    },
+    {
+      "id": "maalehti-gtm-musiikki-1-r20260907-v8-root",
+      "canonicalId": "maalehti-gtm-musiikki-1",
+      "fileName": "maalehti-gtm-musiikki-1-r20260907-v8-root.jpg",
+      "categoryId": "maalehdet",
+      "caption": "Guatemalalainen tun-rumpu, sen H-muotoinen kieliaukko ja kaksi kumipäistä kapulaa — lähteisiin perustuva kuvitus.",
+      "url": "https://media.matkakirja.app/maalehdet/20260907/maalehti-gtm-musiikki-1-r20260907-v8-root.jpg",
+      "sha256": "550e42b6a5a3360c7c16c3706256a1650b2fa091d9e01bdbebf06fae5ce835ce",
+      "bytes": 597872,
+      "dimensions": [
+        1448,
+        1086
+      ],
+      "format": "JPEG",
+      "hasAlpha": false,
+      "iccEmbedded": true,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Create an entirely NEW horizontal 4:3 documentary product photograph of one Guatemalan Maya TUN wooden slit drum, isolated on a simple woven grass ring on an earthy museum tabletop. The supplied book page is a structural reference ONLY for section 3.11 El Tun, the hollow cylindrical log at middle right. Ignore the scraper and tortoise in other sections. Photograph the complete cylinder from almost directly overhead so its TOP slot geometry is unambiguous. The hollow log lies LEFT TO RIGHT across the middle of the photograph. On its curved upper face are two long narrow parallel BLACK OPEN SLITS running left to right. A third short BLACK OPEN SLIT connects their midpoints vertically, making a sideways H cut all the way through the wood. The short connector is EMPTY DARK AIR into the hollow interior, not a wooden crossbar. This H-shaped open cut frees two wooden tongues, one attached at the left end and one at the right. Both circular end faces remain intact and uncut. Warm worn brown wood, no carvings. Two rubber-tipped wooden beaters rest separately below the complete log. Entire log, grass ring and both beaters occupy ONLY middle 55 percent of the canvas, with at least 20 percent empty tabletop to each edge. Crisp physically credible natural photography, understated side daylight, no person, no text, no label, no border, no vignette, no other instruments. This is a new source-grounded illustration, not an authentic museum photo.",
+      "sources": [
+        "https://acem.org.gt/wp-content/uploads/2026/01/MUSICA-Y-DANZA-MAYA.pdf"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed native and ICC JPG and ACEM printed page68 (PDF69), section3.11. The two lengthwise open slits plus middle connector form a true sideways H with two tongues. Full hollow log, woven rest and two rubber-headed beaters inside wide frame. Not a museum specimen documentary photo."
+    },
+    {
+      "id": "halifax-pyhan-paavalin-kirkko",
+      "canonicalId": "halifax-pyhan-paavalin-kirkko",
+      "fileName": "halifax-pyhan-paavalin-kirkko.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Halifaxin Pyhän Paavalin kirkko leveine julkisivuineen ja vihreine kupolitorneineen.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/halifax-pyhan-paavalin-kirkko.png",
+      "sha256": "20d051b979f2d6372e746bcdc4aedacd81c100f0857777e55c23e49263e45810",
+      "bytes": 664814,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: illustration-story. Asset type: Matkakirja M3 location miniature. Use the supplied real St. Paul’s Church Halifax photograph as the strict architecture reference. Render the complete building as a restrained black ink line and warm transparent watercolor miniature: broad two-storey white clapboard front, lower side wings, triangular pediment, central dark clock tower, and exactly two stepped octagonal dark-green copper cupola stages above it. Do not create a white pointed spire. Three-quarter elevated view, no people, no signs or text. True transparent RGBA background with no backdrop, ground plate, halo, shadow rectangle, glow or border. Entire object within about 800x800 pixels on a 1024x1024 canvas; at least 64 fully transparent pixels on every outer edge.\n",
+      "sources": [
+        "https://upload.wikimedia.org/wikipedia/commons/8/8b/St_Pauls%2C_Halifax.JPG"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual photograph and new miniature. Broad white facade, low side wings and two-stage green tower match; clean alpha."
+    },
+    {
+      "id": "miami-olympia-teatteri",
+      "canonicalId": "miami-olympia-teatteri",
+      "fileName": "miami-olympia-teatteri.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Miamin Olympia-teatterin sisäänkäynti ja vihreä katos — julkisivun miniatyyrikatkelma.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/miami-olympia-teatteri.png",
+      "sha256": "da698b38b5d2f6966ceb1a652058479eab7ec9eee9b92fb7f45f987b0182c3b8",
+      "bytes": 1284360,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Use case: illustration-story. Asset type: Matkakirja M3 location miniature. Use the supplied real Olympia Theater entrance photograph as the strict architecture reference. Render the complete entrance ensemble: broad rectangular green marquee with yellow-gold lower trim and squared stepped profile, brick facade slice behind it, and a small rectangular turquoise ticket booth centered below with modest colorful ornamental crown. No palace-like booth and no gold dome. Restrained black ink and warm watercolor. Isolate subject against one perfectly flat uniform pure chroma-green background #00FF00, no checkerboard, gradient, texture, glow, halo, reflected green light, ground plate, scenery or shadow rectangle. No readable words, poster text or people. Entire ensemble at most 76% width and height with safe margins.\n",
+      "sources": [
+        "https://www.olympiaarts.miami/uploads/2/0/8/2/20824504/5659116_orig.png"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual venue photo and full black composite. Green rectangular marquee, OLYMPIA name, turquoise low ticket booth match. Deliberate facade fragment, not whole building; no onion dome."
+    },
+    {
+      "id": "miami-wynwoodin-muraalikorttelit",
+      "canonicalId": "miami-wynwoodin-muraalikorttelit",
+      "fileName": "miami-wynwoodin-muraalikorttelit.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Wynwoodin muraalien ja varastokortteleiden innoittama temaattinen miniatyyri.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/miami-wynwoodin-muraalikorttelit.png",
+      "sha256": "e3a3fc520714518572937fae798ce57b7537d82c693d4ad29aadb0e1729c0940",
+      "bytes": 916024,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Entirely NEW transparent isolated Matkakirja M3 miniature of the actual Wynwood Walls Miami site based on the viewed official aerial photograph: compact open-air cluster of six low flat-roof warehouse walls lining pedestrian passages, covered with original colorful abstract mural patterns that do not copy any real artwork. No words, logos, signs or people. Sepia linework with vivid restrained watercolor mural accents, true RGBA alpha=0, no background/checkerboard, entire silhouette central60%, at least 20% clear margin every edge.",
+      "sources": [
+        "https://thewynwoodwalls.com/wp-content/uploads/2022/05/DJI_0491-copy-1.png"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed venue aerial mural photograph and miniature. Thematic district composition; generated murals and block layout are invented, not reproductions of specific artworks or exact site plan."
+    },
+    {
+      "id": "miami-perezin-taidemuseo",
+      "canonicalId": "miami-perezin-taidemuseo",
+      "fileName": "miami-perezin-taidemuseo.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Pérez Art Museum Miamin leveä kattorakenne ja riippuvat puutarhat miniatyyrinä.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/miami-perezin-taidemuseo.png",
+      "sha256": "7b40fde61b4d625871bc8449155cb82ee72a196a36e13957300400e41d34b13f",
+      "bytes": 784606,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Entirely NEW transparent isolated Matkakirja M3 miniature of the actual Pérez Art Museum Miami based on the viewed exterior photograph: low modern exposed-concrete museum raised above a shaded terrace, broad flat wood-and-concrete pergola canopy, floor-to-ceiling glass, slender columns and several long cylindrical hanging gardens descending from the roof. No bay skyline, signs, words, logos or people. Sepia linework and restrained light watercolor with muted green, true RGBA alpha=0, no background/checkerboard, entire silhouette central60%, at least 20% clear margin every edge.",
+      "sources": [
+        "https://concrete-surfaces.com/images/Projekte/Perez-Art-Museum-Miami-PAMM/pamm-museum-miami.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed building photograph and miniature. Elevated museum volume, extensive roof trellis and hanging plants recognizable; simplified miniature proportions."
+    },
+    {
+      "id": "miami-vapaudentorni",
+      "canonicalId": "miami-vapaudentorni",
+      "fileName": "miami-vapaudentorni.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Miamin Freedom Tower ja sen vihreä torninhuippu miniatyyrinä.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/miami-vapaudentorni.png",
+      "sha256": "d1758be84f34c81f8253d1d85d29b6418355e5ad899ce1458738851368cafebc",
+      "bytes": 602691,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Entirely NEW transparent isolated Matkakirja M3 miniature of the actual Freedom Tower Miami based on the viewed southeast exterior photograph: slender pale yellow seventeen-storey Mediterranean Revival tower, lower rectangular base, stepped upper shaft, ornate Giralda-inspired belfry and greenish decorative cupola. No adjacent skyscrapers, flags, banners, words, logos, traffic or people. Sepia linework and restrained light watercolor, true RGBA alpha=0, no background/checkerboard, entire silhouette central60%, at least 20% clear margin every edge.",
+      "sources": [
+        "https://upload.wikimedia.org/wikipedia/commons/e/eb/Freedom_Tower%2C_Miami%2C_Southeast_view_20160709_1.jpg"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root viewed actual building photo and miniature. Yellow shaft and ornate stepped green crown preserved; simplified architectural miniature."
+    },
+    {
+      "id": "pietari-mendelejev-1869",
+      "canonicalId": "pietari-mendelejev-1869",
+      "fileName": "pietari-mendelejev-1869.png",
+      "categoryId": "miniatyyrit",
+      "caption": "Mendelejevin vuoden 1869 alkuainekorttien järjestelyn innoittama historiallinen miniatyyrikuvitus.",
+      "url": "https://media.matkakirja.app/miniatyyrit/20260907/pietari-mendelejev-1869.png",
+      "sha256": "734abf1fb254c3bb865cb113483cb8381e8ef06f91c76607a3471f89a45341be",
+      "bytes": 684874,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "PNG",
+      "hasAlpha": true,
+      "iccEmbedded": false,
+      "rootQaPassed": true,
+      "publicGetVerified": true,
+      "generationPrompt": "Entirely NEW transparent isolated historical Matkakirja M3 miniature of Dmitri Mendeleev at age 35 in 1869, viewed strictly from behind and slightly above so no identifiable face is visible. Age-appropriate medium-brown hair, no elderly white hair or long beard. He sits at a wooden desk arranging many SMALL COMPLETELY BLANK turned-over paper cards into rows; absolutely no readable element symbols, letters, numbers, equations or handwriting anywhere. Include a closed notebook, ink bottle and period lamp, all without text. 1869 dark Russian academic coat. Sepia engraved linework and restrained light watercolor, true RGBA alpha=0, no background/checkerboard, entire silhouette central60%, at least 20% clear margin every edge.",
+      "sources": [
+        "https://periodic-table.rsc.org/about"
+      ],
+      "sourceLine": "Lähteisiin perustuva tekoälykuvitus.",
+      "sourceQa": "Root read RSC historical account: properties on cards rearranged into periodic system in1869. Anonymous back-facing35-year-old chemist and blank turned cards; no fabricated readable chemistry. Invented desk scene, not exact historical room."
+    }
+  ],
+  "reviewPublished": false,
+  "gameIntegrationClaimed": false
+}

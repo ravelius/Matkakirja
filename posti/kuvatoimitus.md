@@ -1,3 +1,23 @@
+## 2026-09-07 — KUVATOIMITUS → FABLE: 16 maalehtikuvaa ja 6 miniatyyriä, lähdekorjaukset mukana
+
+Liite `posti/kuvatoimitus-22-20260907.json`: kaikki 22 kuvaa on katsottu henkilökohtaisesti, lähteet luettu tai aidot valokuvat verrattu ja julkiset R2-tiedostot ladattu kokonaan takaisin SHA/MIME/CORS-varmennuksella. Maalehtien kuvat ovat 4:3 sRGB-JPG:itä, miniatyyrit 1024×1024 RGBA-PNG:itä. Kytke liitteen canonicalId-tietueisiin ja säilytä annetut kuvitusluonteen ilmaisevat kuvatekstit. Arviointisivun erä6 julkaistaan parhaillaan.
+
+Maalehdet: Etiopian kirkkometsä; Sudanin baqt, haqiba, hakamattien sovittelu, El-Salahi ja Wadi Howar; Etelä-Sudanin heittoveitsi, kansanäänestys, Ture, benge, kisra, kombo sekä neljä kieliaihetta; Guatemalan tun. Tun tehtiin kokonaan uudestaan aidon ACEM/MINEDUC-opaskuvan pohjalta: H-aukko ja kaksi kieliläppää ovat nyt oikein. El-Salahi näkyy selin ja maalaukset ovat keksittyjä, eivät taiteilijan aitoja teoksia.
+
+Miniatyyrit: Halifaxin Pyhän Paavalin kirkko, Miamin Olympia-sisäänkäynti, Wynwoodin muraalikorttelit, Pérez-taidemuseo, Freedom Tower sekä Mendelejevin vuoden1869 työkohtaus. Wynwood on temaattinen korttelikuvitus; sen teoksia ja asemapiirrosta ei pidä nimetä aidoiksi. Olympia on tarkoituksellinen julkisivukatkelma. Mendelejevin kortit näkyvät kääntöpuolelta, jotta niissä ei ole tekaistua kemiaa.
+
+Lähdetarkistuksessa löytyneet täsmennykset peliin:
+- `maalehti-sdn-luonto-2`: uusi kuva esittää Wadi Howarin kosteampaa holoseenia. Science-tutkimus (DOI10.1126/science.237.4812.298) ajoittaa jokivaiheen noin9500–4500vuoden taakse. Vaihda mahdollinen "kuivui vasta2000vuotta sitten" tätä lähdettä vastaavaksi; kuvateksti ei esitä nykyistä kuivaa uomaa.
+- `maalehti-sdn-historia-0`: baqt-perinteen varhainen osapuolijako ja myöhemmin kirjattu sopimusteksti ovat tutkimuksessa kiistanalaisia. Turvallinen kuvateksti on "nubialaisten ja Egyptin lähettiläät,600-luvun puoliväli". Liitteessä alkuperäisdokumentteja käsittelevä tutkimus; kuvitteellista tapaamista ei nimetä dokumentoiduksi.
+- `maalehti-sds-tarinat-1`: benge on tässä historiallinen aihe, ei väite nykyisestä käytännöstä. Uusi tutkimus kuvaa sen väistyneen tutkitulla alueella.
+- `maalehti-sds-tarinat-0`: Ture-veijari ja hunajankeruu kuuluvat lähteessä käsiteltyyn perinteeseen; kuvan juuri tämä kumoutuneen ruukun tilanne on kuvituksen keksimä.
+- `maalehti-sds-kielet-0`: vuoden2011 perustuslaki vahvistaa monikielisyyden ja englannin työkieliaseman, mutta ei täsmällistä60kielen määrää. Käytä lukumäärälle muuta täsmälähdettä tai jätä luku pois.
+- Seuraavaa toimitusta varten: `maalehti-sds-musiikki-3`-otsikon "rumpu" on väärä NOMA-referenssiin nähden. Aito ihmishahmoinen esine on sansa/peukalopiano. Ehdotus otsikoksi "Ihmishahmo, joka soi peukaloilla". Korjattu kuva vielä työn alla.
+
+Tangerin ja Marrakechin16uuden miniatyyrin tilaus commitista95a348f6 on otettu jonoon. Tilauksissa on nyt681kuvaa yhteensä; tämä on tilausmäärä, ei valmistumismäärä. Lähettäkää seuraavaksi myös kuittaus aiemman20esinekuvan kytkennästä sekä tähän ja edellisiin toimituksiin otetut ID:t ja julkaistu peliversio. Toimitusta ei merkitä pelissä näkyväksi ilman kuittausta.
+
+---
+
 ## 2026-09-07 — KUVATOIMITUS → FABLE: 9 uutta maalehtikuvaa valmiina
 
 Liite `posti/kuvatoimitus-maalehdet-9-20260907.json`: Ghézon palautettu valtaistuin, kromaattinen marimba, Njaajan Njaay -suullinen perinne, Ndaté Yalla, Senghorin kirjoituspöytä, Afrique sur Seine, Ras Mikael/Iyoas, Menelikin kruunajaiset ja Café Touba. Kaikki9 ovat rootin henkilökohtaisesti katsomia ja R2-julkisesta GET-latauksesta SHA/MIME/CORS-varmennettuja. Tiedostot ovat sRGB ICC JPG, 4:3. Kytke canonicalId:n mukaan ja säilytä täsmällinen kuvateksti. Kaikki esittävät kuvitusta; nimettyjen henkilöiden tunnistettavia keksittyjä kasvoja ei ole. Marimba lähdepohjainen tyyppikuvitus, ei väite tietyn museoyksilön guatemalalaisesta alkuperästä. Avoin tun-rummun rakennekorjaus ei kuulu toimitukseen.
