@@ -3,10 +3,12 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import {
   PALLOVEKTORIT_JUURI, PALLOVEKTORIT_OLETUS, PALLOVEKTORIT_VERSIO, RAJA_KATKO_YKS,
-  VEKTORIT_HAIVE_MS, VEKTORIT_JARRU_MS, VEKTORIT_KORKEUS, VEKTORIT_LEVEYS_LAITEPX,
-  VEKTORIT_RAJAT_PX_ASTE, VEKTORIT_RAJA_LEVEYS_LAITEPX, VEKTORIT_RENDER_ORDER,
+  VEKTORIT_HAIVE_MS, VEKTORIT_HARVENNUS_PORTAAT, VEKTORIT_HARVENNUS_PX, VEKTORIT_JARRU_MS,
+  VEKTORIT_KORKEUS, VEKTORIT_LEVEYS_CSS, VEKTORIT_LEVEYS_TIHEYS, VEKTORIT_PEHMENNYS_LAITEPX,
+  VEKTORIT_RAJAT_PX_ASTE, VEKTORIT_RAJA_LEVEYS_CSS, VEKTORIT_RENDER_ORDER,
   VEKTORIT_SOLUKATTO, VEKTORIT_SYVYYSSIIRTO, VEKTORIT_TERAVYYS_PX,
-  pallovektoritPaalla, pinnanPiste, puraDelta, vektorijanat, vektorisolut, vektoritaso,
+  harvennaViiva, harvennusPorras, pallovektoritPaalla, pehmennaLineMaterial, pinnanPiste,
+  puraDelta, vektorijanat, vektorisolut, vektoritaso, viivanLeveysCss,
 } from '../js/pallovektorit.js';
 import { LEPOKERROS_HAIVE_SISAAN_MS, LEPOKERROS_SYVYYSSIIRTO, pallonPiste } from '../js/pallo.js';
 import { REITIN_KORKEUS } from '../js/pallolauta/reitit.js';
@@ -40,6 +42,83 @@ test('tason valinta: matalin taso, jonka toleranssi on ruudulla alle puoli pikse
   assert.equal(vektoritaso(LODIT, 3, VEKTORIT_TERAVYYS_PX, 9), 4, 'pakotus ei mene listan yli');
   assert.equal(vektoritaso(LODIT, 3, VEKTORIT_TERAVYYS_PX, -2), 0);
   assert.equal(vektoritaso([], 100), 0);
+});
+
+/*
+ * ======== VANHAN KARTAN VIIVA (omistaja 7.9.2026) =================
+ *
+ * *"Miksi muuten kartan rajat ovat noin mustia ja röpelöisiä? ... Sitä
+ * saisi vähän pehmentää paremmin vanhan kartan tyyliin istuvaksi."*
+ * Kolme mitattua syytä ja niiden vartijat: leveys liukuu kameran
+ * mukana, geometria harvennetaan vielä selaimessa, ja varjostimen
+ * paikka hylkää päätypyörylät ja häivyttää reunan.
+ */
+test('leveys liukuu: yleiskuvassa ohuempi kuin lähikuvassa', () => {
+  const kaukaa = viivanLeveysCss(5);
+  const lahelta = viivanLeveysCss(1000);
+  assert.equal(kaukaa, VEKTORIT_LEVEYS_CSS[0], 'alle liukuman: ohuin pää');
+  assert.equal(lahelta, VEKTORIT_LEVEYS_CSS[1], 'yli liukuman: paksuin pää');
+  assert.ok(kaukaa < lahelta);
+  // Välissä liukuma on monotoninen eikä mene päätearvojen yli.
+  const keskella = viivanLeveysCss((VEKTORIT_LEVEYS_TIHEYS[0] + VEKTORIT_LEVEYS_TIHEYS[1]) / 2);
+  assert.ok(keskella > kaukaa && keskella < lahelta, String(keskella));
+  // Rajat ovat hennommat samalla tiheydellä.
+  assert.ok(viivanLeveysCss(1000, VEKTORIT_RAJA_LEVEYS_CSS) < lahelta);
+  // Mittaamaton tiheys (ennen ensimmäistä kehystä) ei kaada eikä paksunna.
+  assert.equal(viivanLeveysCss(0), VEKTORIT_LEVEYS_CSS[0]);
+});
+
+test('harvennusporras: karkea kaukaa, nolla lähikuvassa', () => {
+  const kaukaa = harvennusPorras(23.8);
+  const lahelta = harvennusPorras(640);
+  assert.ok(kaukaa > lahelta, `${kaukaa} ≤ ${lahelta}`);
+  assert.ok(VEKTORIT_HARVENNUS_PORTAAT.includes(kaukaa));
+  // Porras pysyy ruudulla luvatussa tarkkuudessa.
+  assert.ok(kaukaa * 23.8 <= VEKTORIT_HARVENNUS_PX + 1e-9, String(kaukaa * 23.8));
+  assert.ok(lahelta * 640 <= VEKTORIT_HARVENNUS_PX + 1e-9);
+  // Portaita on kourallinen: geometriaa ei rakenneta uudelleen joka kehyksellä.
+  assert.ok(VEKTORIT_HARVENNUS_PORTAAT.length <= 6);
+  assert.equal(VEKTORIT_HARVENNUS_PORTAAT[VEKTORIT_HARVENNUS_PORTAAT.length - 1], 0, 'täysi yksityiskohta');
+  assert.equal(harvennusPorras(0), 0, 'ennen mittausta ei harvenneta');
+});
+
+test('harvennus: suora litistyy, mutka jää', () => {
+  const suora = [[0, 0], [1, 0.0001], [2, -0.0001], [3, 0]];
+  assert.deepEqual(harvennaViiva(suora, 0.01), [[0, 0], [3, 0]]);
+  // Toleranssin ylittävä mutka säilyy.
+  const mutka = [[0, 0], [1, 0.5], [2, 0]];
+  assert.equal(harvennaViiva(mutka, 0.01).length, 3);
+  // Nolla ja liian lyhyt viiva palautuvat sellaisenaan.
+  assert.deepEqual(harvennaViiva(suora, 0), suora);
+  assert.deepEqual(harvennaViiva([[0, 0], [1, 1]], 0.5), [[0, 0], [1, 1]]);
+  // Päätepisteet eivät koskaan katoa: solujen saumat pysyvät kiinni.
+  const ranta = Array.from({ length: 50 }, (_, i) => [i * 0.01, Math.sin(i) * 0.002]);
+  const harva = harvennaViiva(ranta, 0.005);
+  assert.deepEqual(harva[0], ranta[0]);
+  assert.deepEqual(harva[harva.length - 1], ranta[ranta.length - 1]);
+  assert.ok(harva.length < ranta.length);
+});
+
+test('varjostimen paikka: ei päätypyörylöitä, reuna häivytetään', () => {
+  const frag = ['uniform float linewidth;', 'void main() {',
+    '  float alpha = opacity;', '  gl_FragColor = vec4( diffuseColor.rgb, alpha );', '}'].join('\n');
+  const m = { fragmentShader: frag, uniforms: {}, userData: {} };
+  assert.equal(pehmennaLineMaterial(m), true);
+  assert.ok(m.uniforms.pehmennys, 'uniformi lisätty');
+  assert.match(m.fragmentShader, /uniform float pehmennys;/);
+  // Päätypyörylä pois: janat laatoittavat viivan limittämättä, joten
+  // läpinäkyvä muste ei kasaudu mustaksi kärkien kohdalla.
+  assert.match(m.fragmentShader, /abs\( vUv\.y \) > 1\.0 \) discard/);
+  assert.match(m.fragmentShader, /smoothstep\( 1\.0 - pehmennys, 1\.0, abs\( vUv\.x \) \)/);
+  assert.equal(m.needsUpdate, true);
+  // Toinen kutsu ei paikkaa kahdesti.
+  const ennen = m.fragmentShader;
+  assert.equal(pehmennaLineMaterial(m), true);
+  assert.equal(m.fragmentShader, ennen);
+  // Tuntematon varjostin: paikka ei mene läpi eikä varjostinta rikota.
+  const vieras = { fragmentShader: 'void main() {}', uniforms: {}, userData: {} };
+  assert.equal(pehmennaLineMaterial(vieras), false);
+  assert.equal(vieras.fragmentShader, 'void main() {}');
 });
 
 test('solujako: näkyvä laatikko soluiksi, sauman yli molemmin puolin', () => {
@@ -222,9 +301,18 @@ test('vakiot: piirtojärjestys laattojen päälle, merkkien alle, ilman parallak
   // Häive on sama pehmeä sisääntulo kuin lepokerroksella (KAIKKI LIIKE ANIMOIDAAN).
   assert.equal(VEKTORIT_HAIVE_MS, LEPOKERROS_HAIVE_SISAAN_MS);
   assert.equal(VEKTORIT_HAIVE_MS, 260);
-  // Leveydet laitepikseleinä, rajat rantaviivaa hennompina (V3 säätää).
-  assert.equal(VEKTORIT_LEVEYS_LAITEPX, 1.5);
-  assert.ok(VEKTORIT_RAJA_LEVEYS_LAITEPX < VEKTORIT_LEVEYS_LAITEPX);
+  /*
+   * VANHAN KARTAN VIIVA (omistaja 7.9.2026: *"noin mustia ja
+   * röpelöisiä ... saisi vähän pehmentää"*): leveys on CSS-pikseleinä
+   * [kaukana, lähellä], yleiskuvassa ohuempi kuin lähikuvassa, ja
+   * rajat kummassakin päässä rantaviivaa hennommat.
+   */
+  assert.deepEqual(VEKTORIT_LEVEYS_CSS, [0.8, 1.2]);
+  assert.ok(VEKTORIT_LEVEYS_CSS[0] < VEKTORIT_LEVEYS_CSS[1], 'kaukaa ohuempi');
+  assert.ok(VEKTORIT_RAJA_LEVEYS_CSS[0] < VEKTORIT_LEVEYS_CSS[0]);
+  assert.ok(VEKTORIT_RAJA_LEVEYS_CSS[1] < VEKTORIT_LEVEYS_CSS[1]);
+  assert.ok(VEKTORIT_PEHMENNYS_LAITEPX > 0, 'reuna häivytetään, ei jätetä MSAA:n varaan');
+  assert.ok(VEKTORIT_LEVEYS_TIHEYS[0] < VEKTORIT_LEVEYS_TIHEYS[1]);
   assert.equal(VEKTORIT_TERAVYYS_PX, 0.5);
   assert.equal(VEKTORIT_JARRU_MS, 60);
   assert.equal(VEKTORIT_SOLUKATTO, 160);

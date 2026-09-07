@@ -794,3 +794,85 @@ mitattu puhelimella.
 - Ajoapurit scratchpadissa: `aja.sh`, `sarja.sh`, `tiivista.mjs`
   (JSON → taulukkorivit), `montaasi.mjs` (PNG-montaasi ilman PIL:iä).
 
+
+## 10. V3 TOTEUTETTU: vanhan kartan viiva, ei tussia (Opus 7.9.2026)
+
+Omistaja työpöydällä 7.9.2026, sanatarkasti:
+
+> "Miksi muuten kartan rajat ovat noin mustia ja röpelöisiä? Ovatko nuo
+> nyt sitä uutta vektorilla piirrettyä? Sitä saisi vähän pehmentää
+> paremmin vanhan kartan tyyliin istuvaksi."
+
+Tyylivertailu on omistajan kuvakaappaus tasokartan Ateenasta: rantaviiva
+on OHUT, RUSKEA ja PEHMEÄREUNAINEN. Kuvasta mitattuna viivan ydin on
+noin rgb(55, 47, 24), paperi rgb(209, 202, 181) ja viiva noin yksi
+css-pikseli.
+
+### 10.1 Mitatut syyt (834 × 1100 dpr 2, Eurooppa + Afrikka ja Ateena)
+
+1. **Päätypyörylät kasasivat musteen.** `LineSegments2` piirtää jokaisen
+   janan pyöreillä päillä, jotka ulottuvat puoli viivanleveyttä kärkien
+   yli. Yleiskuvassa tarve on 23,8 laitepikseliä astetta kohti ja taso
+   lod 2 (0,008°), joten jana on ruudulla 0,19 px ja pyörylän säde
+   0,75 px: jokainen viivan pikseli sai päälleen noin kahdeksan
+   läpinäkyvää kiekkoa. 1 − (1 − 0,9)⁸ ≈ 1 — viiva saturoitui mustaksi
+   riippumatta siitä, mikä `RANTA_PEITTO` oli, ja kärkitiheyden vaihtelu
+   teki tummuudesta epätasaisen. Se on omistajan "röpelöinen".
+2. **Kova reuna.** Renderöijässä on MSAA (mitattu `gl.SAMPLES = 4`),
+   eli tumman ohuen viivan reunalla on viisi porrasta. Silmä lukee sen
+   sahalaidaksi.
+3. **Liikaa kärkiä kaukaa.** Ämpärin tasoportaat ovat karkeat
+   (0,1 / 0,03 / 0,008 / 0,004 / 0), joten yleiskuva lataa 0,008°:n
+   aineiston, jonka kärkiväli on murto-osa pikselistä.
+4. **Muste oli poltetun viivan muste** `#3a2819` peitto 0,9 — tummempi
+   kuin tasokartan rantaviiva.
+
+### 10.2 Korjaus (vain js/pallovektorit.js ja sen testit)
+
+| Mikä | Ennen | Nyt | Miksi |
+| --- | --- | --- | --- |
+| Päätypyörylät | pyöreät päät | varjostin hylkää (`abs(vUv.y) > 1 → discard`) | janat laatoittavat viivan limittämättä: muste ei kasaudu |
+| Reuna | pelkkä 4× MSAA | nelikulmio + `VEKTORIT_PEHMENNYS_LAITEPX = 0.65` px vyö kummallekin reunalle, `smoothstep` peittoon | pehmeä reuna myös ilman MSAA:ta |
+| Leveys | `1.5` laitepikseliä vakiona | `VEKTORIT_LEVEYS_CSS = [0.8, 1.2]` css-px, liukuma `VEKTORIT_LEVEYS_TIHEYS = [25, 250]` px/° | ruutuvakio kuten ennen, mutta yleiskuvassa ohuempi ja laitteesta riippumaton |
+| Rajat | `1.2` laitepikseliä | `VEKTORIT_RAJA_LEVEYS_CSS = [0.65, 0.95]` | hennompi kuin rantaviiva kummassakin päässä |
+| Muste | `#3a2819` / 0,9 | `RANTA_MUSTE = '#5a4330'` / `RANTA_PEITTO = 0.58` | mitattu omistajan tasokarttakuvasta: ruskea, ei musta |
+| Rajan muste | `#604a2e` / 0,52 | `RAJA_MUSTE = '#6b5539'` / `RAJA_PEITTO = 0.34` | sama ruskea vaaleampana |
+| Kärjet | ämpärin taso sellaisenaan | + Douglas–Peucker SELAIMESSA, `harvennusPorras(tarve)`, portaat `[0.05, 0.012, 0.003, 0.0008, 0]`, tavoite `VEKTORIT_HARVENNUS_PX = 0.6` laitepikseliä | yleiskuvasta pois turhat kärjet; lähikuvassa porras on pienin ja yksityiskohta säilyy |
+
+Portaita on viisi eikä liukuma, jottei geometriaa rakenneta uudelleen
+joka kehyksellä; portaan vaihtuessa uudelleenrakennus jaetaan usealle
+päivitykselle (`VEKTORIT_HARVENNUS_KATTO = 8` solua kerrallaan, jarru
+60 ms) ja solun viivat pidetään muistissa, joten uutta latausta ei tule.
+Varjostinpaikka (`pehmennaLineMaterial`) tehdään VAIN kerroksen omiin
+kahteen materiaaliin ennen ensimmäistä käännöstä; jos varjostin ei ole
+odotetun näköinen, paikka ei mene läpi, pehmennysvyö jää nollaan ja
+viiva on entisellään. Syvyysasetuksiin (`VEKTORIT_SYVYYSSIIRTO −12`,
+`VEKTORIT_RENDER_ORDER −0.5`, `VEKTORIT_KORKEUS 0`) ei koskettu.
+
+### 10.3 Mitatut luvut (savuke-pallo-rantaviivat, 834 × 1100 dpr 2)
+
+Mittatapa: sama kamera kahdesti, kerran vektorikerros näkyvissä ja
+kerran piilotettuna; erotus kertoo tasan ne pikselit, jotka viiva on
+maalannut, eikä laattojen poltettu rantaviiva sotke mittaa. Erotus
+otetaan vasta kun kuva on rauhoittunut (kaksi peräkkäistä kaappausta
+eroavat alle 0,2 %), muuten laattojen sisäänhäivytys tulisi mukaan.
+"Ennen"-sarake on kalibrointiajo samalla savukkeella vanhoilla vakioilla
+(leveys 1,5 laitepx, `#3a2819` 0,9, ei pehmennystä, ei selaimen
+harvennusta).
+
+| Mitta | Yleiskuva ennen → nyt | Lähikuva ennen → nyt |
+| --- | --- | --- |
+| tummin 1 % (luminanssi; iso = vaaleampi) | 44 → **75** | 46 → **96** |
+| keskimääräinen peitto pohjaan | 0,536 → **0,358** | 0,472 → **0,342** |
+| huippupeitto | 0,817 → **0,684** | 0,801 → **0,601** |
+| osittaisia reunapikseleitä / ydinpikseli | 1,1 → **17,8** | 1,7 → **35,4** |
+| sävy R − B (ruskea, ei harmaa) | 34 → **40** | 35 → **40** |
+| viivan ydin css-px | 0,75 → **0,80** | 0,75 → **1,20** |
+| selaimen harvennusporras ° | 0 → **0,012** | 0 → **0,0008** |
+| janoja näkyvää solua kohti | 339 → **242** | 2 662 → **2 507** |
+
+Vartio: **21/21 OK**. Rajat on asetettu ennen- ja nyt-lukujen väliin,
+joten savuke kaatuu, jos viiva palaa mustaksi tai kovareunaiseksi.
+
+- `tools/savukkeet/savuke-pallo-rantaviivat.mjs` — vartija (luku 10.3).
+- Ennen/jälkeen-kuvat: scratchpad, eivät repossa.

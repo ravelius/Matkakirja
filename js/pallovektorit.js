@@ -87,10 +87,67 @@ const R2 = 'https://media.matkakirja.app/';
 export const PALLOVEKTORIT_VERSIO = '2026-09-06a';
 export const PALLOVEKTORIT_JUURI = `${R2}julisteet/pallo/vektorit/${PALLOVEKTORIT_VERSIO}/`;
 
-/** Rantaviivan tavoiteleveys LAITEPIKSELEINÄ (V3 päättää lopullisen). */
-export const VEKTORIT_LEVEYS_LAITEPX = 1.5;
-/** Maiden rajan leveys laitepikseleinä (rantaviivaa hennompi). */
-export const VEKTORIT_RAJA_LEVEYS_LAITEPX = 1.2;
+/*
+ * ======== VANHAN KARTAN VIIVA, EI TUSSIA (omistaja 7.9.2026) ========
+ *
+ * Omistaja työpöydällä sanatarkasti: *"Miksi muuten kartan rajat ovat
+ * noin mustia ja röpelöisiä? Ovatko nuo nyt sitä uutta vektorilla
+ * piirrettyä? Sitä saisi vähän pehmentää paremmin vanhan kartan tyyliin
+ * istuvaksi."* Tyylivertailu on tasokartan rantaviiva: ohut, ruskea,
+ * pehmeäreunainen — ei musta nauha.
+ *
+ * MITATUT SYYT (mittaus 7.9.2026, tools/savukkeet/savuke-pallo-rantaviivat.mjs):
+ *
+ *  1. PÄÄTYPYÖRYLÄT KASASIVAT MUSTEEN. LineSegments2 piirtää jokaisen
+ *     janan pyöreillä päillä, jotka ulottuvat puoli viivanleveyttä
+ *     kärkien YLI. Yleiskuvassa (23,8 laitepikseliä astetta kohti,
+ *     lod 2 = 0,008°) jana on ruudulla 0,19 px pitkä ja pyörylä 0,75 px
+ *     säteinen: JOKAINEN viivan pikseli sai päälleen ~8 läpinäkyvää
+ *     kiekkoa, ja 1 − 0,1⁸ ≈ 1 — peitto 0,9 saturoitui mustaksi
+ *     riippumatta siitä, mikä RANTA_PEITTO oli. Kärkitiheyden vaihtelu
+ *     teki tummuudesta epätasaisen: se on se "röpelöinen".
+ *     KORJAUS: varjostin hylkää päätypyörylät (`abs(vUv.y) > 1` →
+ *     discard), jolloin janat laatoittavat viivan LIMITTÄMÄTTÄ ja
+ *     musteen peitto on tasan se, mikä materiaaliin on kirjoitettu.
+ *  2. KOVA REUNA. Kolmion reuna sai vain 4× MSAA:n (mitattu
+ *     gl.SAMPLES = 4), eli tummalla ohuella viivalla viisi porrasta —
+ *     silmä lukee sen sahalaidaksi. KORJAUS: nelikulmio piirretään
+ *     VEKTORIT_PEHMENNYS_LAITEPX verran leveämpänä kummallekin
+ *     reunalle ja varjostin häivyttää peiton siinä vyössä nollaan
+ *     (smoothstep). Ydin pysyy tavoiteleveydessään.
+ *  3. LIIKAA KÄRKIÄ KAUKAA. Ämpärin tasoportaat ovat karkeat
+ *     (0,1 / 0,03 / 0,008 / 0,004 / 0), joten yleiskuva lataa 0,008°:n
+ *     aineiston, jonka kärkiväli on murto-osa pikselistä. KORJAUS:
+ *     Douglas–Peucker AJETAAN VIELÄ SELAIMESSA kameran korkeuden
+ *     mukaan (harvennusPorras: viisi porrasta, jotta geometriaa ei
+ *     rakenneta uudelleen joka kehyksellä) — lähikuvassa porras on 0
+ *     eli täysi yksityiskohta.
+ *  4. MUSTE OLI POLTETUN VIIVAN MUSTE. #3a2819 peitto 0,9 on tummempi
+ *     kuin tasokartan rantaviiva; uusi arvo on mitattu omistajan
+ *     kuvakaappauksesta (ks. RANTA_MUSTE).
+ */
+
+/**
+ * Rantaviivan tavoiteleveys CSS-pikseleinä [kaukana, lähellä]. Leveys
+ * on RUUTUVAKIO (varjostin laskee sen ruutupikseleinä), mutta
+ * yleiskuvassa ohuempi: kaukaa katsottuna manner on pelkkää ääriviivaa
+ * ja paksu viiva peittäisi maiseman. Vanhan tasokartan rantaviiva on
+ * omistajan kuvassa noin 1 css-pikselin levyinen.
+ */
+export const VEKTORIT_LEVEYS_CSS = [0.8, 1.2];
+/** Maiden rajan leveys css-pikseleinä [kaukana, lähellä] (rantaviivaa hennompi). */
+export const VEKTORIT_RAJA_LEVEYS_CSS = [0.65, 0.95];
+/**
+ * Leveyden liukuma ruudun tiheydessä (laitepikseliä astetta kohti):
+ * tämän alle kaikki on "kaukana", yli "lähellä", välissä lineaarinen.
+ */
+export const VEKTORIT_LEVEYS_TIHEYS = [25, 250];
+/**
+ * Reunan pehmennys LAITEPIKSELEINÄ kummallakin puolella: nelikulmio
+ * levitetään tämän verran ja varjostin häivyttää peiton vyössä
+ * nollaan. 0 = entinen kova reuna (vain MSAA).
+ */
+export const VEKTORIT_PEHMENNYS_LAITEPX = 0.65;
 /**
  * TÄSMÄLLEEN PINNAN SÄTEELLÄ. Nosto 0,001 (0,1 yksikköä) siirsi viivan
  * lähikuvassa 2–4 laitepikseliä poltetun viivan viereen (parallaksi,
@@ -114,12 +171,36 @@ export const VEKTORIT_SOLUKATTO = 160;
 export const VEKTORIT_RAJAT_PX_ASTE = 30;
 /** Näkyvän alueen reunus asteina (solu ladataan ennen kuin se tulee ruutuun). */
 export const VEKTORIT_VARA_AST = 1;
-/** Rantaviivan muste = poltetun viivan muste rgb(58, 40, 25). */
-export const RANTA_MUSTE = '#3a2819';
-export const RANTA_PEITTO = 0.9;
-/** Maiden rajan muste = viivatason RAJATYYLI rgb(96, 74, 46). */
-export const RAJA_MUSTE = '#604a2e';
-export const RAJA_PEITTO = 0.52;
+/**
+ * SELAIMEN OMA HARVENNUS: suurin sallittu poikkeama RUUDULLA
+ * laitepikseleinä, kun ämpärin taso vielä tihennetään kameran mukaan.
+ * Yhdessä VEKTORIT_TERAVYYS_PX:n (tiedostotason valinta) kanssa
+ * pahin yhteenlaskettu virhe on 1,1 laitepikseliä eli reilusti alle
+ * puoli css-pikseliä.
+ */
+export const VEKTORIT_HARVENNUS_PX = 0.6;
+/**
+ * Harvennuksen PORTAAT asteina (karkeasta tarkkaan; 0 = ei harvennusta).
+ * Portaita on viisi eikä liukuma, jotta geometriaa ei rakenneta
+ * uudelleen joka kehyksellä: porras vaihtuu vasta, kun kamera on
+ * liikkunut nelinkertaisen matkan tiheydessä.
+ */
+export const VEKTORIT_HARVENNUS_PORTAAT = [0.05, 0.012, 0.003, 0.0008, 0];
+/** Montako solua saa rakentaa uudelleen yhdellä päivityksellä (portaan vaihtuessa). */
+export const VEKTORIT_HARVENNUS_KATTO = 8;
+/**
+ * Rantaviivan muste. Mitattu omistajan tasokarttakuvasta 7.9.2026:
+ * viivan ydin on rgb(55, 47, 24) tienoilla ja paperi rgb(209, 202, 181),
+ * eli viiva on RUSKEA eikä musta ja peittää vain osan pohjasta. Peitto
+ * 0,58 antaa pergamentin päällä noin rgb(148, 135, 118) — sama
+ * vaikutelma kuin tasokartan ohuella ruskealla rannikolla, kun
+ * päätypyörylät eivät enää kasaa mustetta (ks. tiedoston alku).
+ */
+export const RANTA_MUSTE = '#5a4330';
+export const RANTA_PEITTO = 0.58;
+/** Maiden raja: sama ruskea vaaleampana ja selvästi hennompana. */
+export const RAJA_MUSTE = '#6b5539';
+export const RAJA_PEITTO = 0.34;
 /**
  * Rajan pistekuvio maailmayksikköinä (piste, väli): poltettu raja on
  * 1,5 R piste ja 3 R väli, ja z7:llä R ≈ 1 px ≈ 0,00727 yksikköä.
@@ -173,6 +254,122 @@ export function vektoritaso(lodit, tarve, teravyys = VEKTORIT_TERAVYYS_PX, pakot
   }
   for (let k = 0; k < lista.length; k += 1) if (lista[k] * tarve <= teravyys) return k;
   return lista.length - 1;
+}
+
+/**
+ * Viivan tavoiteleveys CSS-pikseleinä ruudun tiheyden mukaan: kaukana
+ * ohut, lähellä hieman paksumpi, välissä lineaarinen liukuma.
+ *
+ * @param {number} tarve laitepikseliä astetta kohti ruudun keskellä
+ * @param {number[]} paate [kaukana, lähellä] css-pikseleinä
+ */
+export function viivanLeveysCss(tarve, paate = VEKTORIT_LEVEYS_CSS) {
+  const [a, b] = VEKTORIT_LEVEYS_TIHEYS;
+  const t = Math.max(0, Math.min(1, ((tarve || 0) - a) / (b - a)));
+  return paate[0] + (paate[1] - paate[0]) * t;
+}
+
+/**
+ * Selaimen oman harvennuksen porras ASTEINA: karkein porras, joka
+ * pysyy `px` laitepikselin sisällä ruudulla. Portaita on kourallinen
+ * (VEKTORIT_HARVENNUS_PORTAAT), jotta geometria ei rakennu uudelleen
+ * pienestä kameran nytkähdyksestä. Palauttaa 0, kun mikään porras ei
+ * mahdu — silloin aineisto piirretään sellaisenaan (täysi yksityiskohta).
+ *
+ * @param {number} tarve laitepikseliä astetta kohti
+ * @param {number} px suurin sallittu poikkeama laitepikseleinä
+ */
+export function harvennusPorras(tarve, px = VEKTORIT_HARVENNUS_PX) {
+  if (!(tarve > 0)) return 0;
+  const kate = px / tarve;
+  for (const porras of VEKTORIT_HARVENNUS_PORTAAT) if (porras <= kate) return porras;
+  return 0;
+}
+
+/**
+ * Douglas–Peucker asteissa, leveyspiirin kutistuma huomioiden
+ * (pituusaste kerrotaan cos(lat):lla, muuten napojen lähellä
+ * harvennettaisiin liian vähän). Sama pinoversio kuin
+ * tools/tee-pallovektorit.mjs:n `dp` — tämä ajetaan SELAIMESSA jo
+ * harvennetun aineiston päälle kameran korkeuden mukaan.
+ *
+ * @param {Array<[number, number]>} viiva [lon, lat] -pisteet
+ * @param {number} tol toleranssi asteina (0 = ei harvennusta)
+ */
+export function harvennaViiva(viiva, tol) {
+  if (!(tol > 0) || !viiva || viiva.length < 3) return viiva;
+  const n = viiva.length;
+  const kx = Math.max(0.05, Math.cos((viiva[n >> 1][1] * Math.PI) / 180));
+  const pida = new Uint8Array(n);
+  pida[0] = 1; pida[n - 1] = 1;
+  const pino = [[0, n - 1]];
+  const t2 = tol * tol;
+  while (pino.length) {
+    const [a, b] = pino.pop();
+    if (b - a < 2) continue;
+    const ax = viiva[a][0] * kx; const ay = viiva[a][1];
+    const dx = viiva[b][0] * kx - ax; const dy = viiva[b][1] - ay;
+    const l2 = dx * dx + dy * dy;
+    let paras = -1; let parasD = -1;
+    for (let i = a + 1; i < b; i += 1) {
+      const px = viiva[i][0] * kx; const py = viiva[i][1];
+      let d;
+      if (l2 === 0) d = (px - ax) ** 2 + (py - ay) ** 2;
+      else {
+        const t = Math.max(0, Math.min(1, ((px - ax) * dx + (py - ay) * dy) / l2));
+        d = (px - (ax + t * dx)) ** 2 + (py - (ay + t * dy)) ** 2;
+      }
+      if (d > parasD) { parasD = d; paras = i; }
+    }
+    if (parasD > t2) { pida[paras] = 1; pino.push([a, paras], [paras, b]); }
+  }
+  const ulos = [];
+  for (let i = 0; i < n; i += 1) if (pida[i]) ulos.push(viiva[i]);
+  return ulos;
+}
+
+/** Koko solun viivat harvennettuna; tol 0 palauttaa saman taulukon. */
+export function harvennaViivat(viivat, tol) {
+  if (!(tol > 0) || !viivat?.length) return viivat ?? [];
+  return viivat.map((v) => harvennaViiva(v, tol));
+}
+
+/**
+ * PEHMEÄ REUNA JA EI PÄÄTYPYÖRYLÖITÄ (omistaja 7.9.2026, ks. tiedoston
+ * alku). LineMaterial on ShaderMaterial, joten sen varjostinta voi
+ * paikata suoraan ennen ensimmäistä käännöstä — uutta kirjastoa ei
+ * tarvita eikä muiden Line2-olioiden (reitit, Ihmisen matkan vanat)
+ * materiaaleihin kosketa.
+ *
+ *  - `discard` päätypyörylälle: janat laatoittavat viivan limittämättä,
+ *    joten läpinäkyvä muste ei kasaudu mustaksi kärkien kohdalla.
+ *  - `pehmennys` (osuus puolileveydestä) häivyttää peiton reunavyössä
+ *    nollaan, jolloin viiva on antialiasoitu myös ilman MSAA:ta.
+ *
+ * Palauttaa true, jos paikka meni läpi; false, jos varjostin ei ole
+ * odotetun näköinen (silloin kutsuja jättää leveyden ennalleen).
+ */
+export function pehmennaLineMaterial(materiaali) {
+  if (!materiaali || materiaali.userData?.pallovektoritPehmennys) return Boolean(materiaali);
+  const frag = materiaali.fragmentShader;
+  const kohta = 'gl_FragColor = vec4( diffuseColor.rgb, alpha );';
+  if (typeof frag !== 'string' || !frag.includes(kohta) || !frag.includes('uniform float linewidth;')) {
+    return false;
+  }
+  materiaali.uniforms.pehmennys = { value: 0 };
+  materiaali.fragmentShader = frag
+    .replace('uniform float linewidth;', 'uniform float linewidth;\n\t\tuniform float pehmennys;')
+    .replace(kohta, [
+      '#ifndef WORLD_UNITS',
+      '  if ( abs( vUv.y ) > 1.0 ) discard;',
+      '  if ( pehmennys > 0.0 ) alpha *= 1.0 - smoothstep( 1.0 - pehmennys, 1.0, abs( vUv.x ) );',
+      '  if ( alpha < 0.003 ) discard;',
+      '#endif',
+      kohta,
+    ].join('\n\t\t\t'));
+  materiaali.needsUpdate = true;
+  materiaali.userData.pallovektoritPehmennys = true;
+  return true;
 }
 
 /** Solun avain (sama kaava kuin tools/tee-pallovektorit.mjs:ssä). */
@@ -316,6 +513,16 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     tila: 'kaynnistyy', syy: '', lod: null, tol: null, tarvePxAste: 0, soluja: 0, ladattu: 0,
     janoja: 0, tavua: 0, pyyntoja: 0, paivitaMs: 0, rakennusMs: 0, linewidthCss: 0,
     pikselisuhde: 0, alue: null,
+    /** Viivan YDIN css-pikseleinä (linewidthCss on ydin + pehmennysvyöt). */
+    leveysCss: 0,
+    /** Reunan häivytys osuutena puolileveydestä (0 = kova reuna). */
+    pehmennys: 0,
+    /** Selaimen oman harvennuksen porras asteina (0 = täysi yksityiskohta). */
+    harvennus: 0,
+    /** Janoja näkyvää solua kohti — kaukaa vähemmän kuin läheltä. */
+    janojaSolua: 0,
+    /** Onko varjostimen pehmennyspaikka mennyt läpi. */
+    pehmennysPaikka: false,
   };
   const pyydetyt = new Set();
   /** id (`<laji>/l<k>/<solu>`) → { laji, k, avain, lupaus, viivat, olio, janoja, tavua, kaytto } */
@@ -352,8 +559,32 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     W: kehysmitat?.W || kotelo.clientWidth,
     H: kehysmitat?.H || kotelo.clientHeight,
   });
-  const cssLeveys = (laji) => (laji === 'rajat' ? VEKTORIT_RAJA_LEVEYS_LAITEPX : VEKTORIT_LEVEYS_LAITEPX)
-    / pikselisuhde();
+  /*
+   * Ruudun tiheys (laitepikseliä astetta kohti) viime päivityksestä:
+   * viivan leveys ja selaimen oma harvennus liukuvat sen mukana.
+   * Nolla ennen ensimmäistä mittausta = ohuin pää.
+   */
+  let tiheys = 0;
+  /** Selaimen oman harvennuksen porras asteina (0 = täysi yksityiskohta). */
+  let harvennus = 0;
+  /** Meniko varjostimen pehmennyspaikka läpi (pehmennaLineMaterial). */
+  let pehmennysPaikka = false;
+  /** Viivan YDIN css-pikseleinä (ilman pehmennysvyötä). */
+  const ydinLeveys = (laji) => viivanLeveysCss(
+    tiheys, laji === 'rajat' ? VEKTORIT_RAJA_LEVEYS_CSS : VEKTORIT_LEVEYS_CSS,
+  );
+  /** Pehmennysvyö css-pikseleinä kummallakin reunalla. */
+  const pehmennysCss = () => (pehmennysPaikka ? VEKTORIT_PEHMENNYS_LAITEPX / pikselisuhde() : 0);
+  /**
+   * Nelikulmion leveys css-pikseleinä = ydin + kaksi pehmennysvyötä
+   * (varjostin häivyttää vyön nollaan, joten NÄKYVÄ leveys on ydin).
+   */
+  const cssLeveys = (laji) => ydinLeveys(laji) + 2 * pehmennysCss();
+  /** Häivytysvyön osuus puolileveydestä varjostimelle. */
+  const pehmennysOsuus = (laji) => {
+    const leveys = cssLeveys(laji);
+    return leveys > 0 ? Math.min(0.95, (2 * pehmennysCss()) / leveys) : 0;
+  };
 
   const luovuta = (syy) => { mittarit.syy = syy; mittarit.tila = 'ei'; return false; };
 
@@ -425,13 +656,23 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       polygonOffsetUnits: VEKTORIT_SYVYYSSIIRTO,
     };
     const ranta = new luokat.LineMaterial({
-      ...yhteiset, color: RANTA_MUSTE, opacity: RANTA_PEITTO, linewidth: cssLeveys('rannikko'),
+      ...yhteiset, color: RANTA_MUSTE, opacity: RANTA_PEITTO,
     });
     const raja = new luokat.LineMaterial({
-      ...yhteiset, color: RAJA_MUSTE, opacity: RAJA_PEITTO, linewidth: cssLeveys('rajat'), dashed: true,
+      ...yhteiset, color: RAJA_MUSTE, opacity: RAJA_PEITTO, dashed: true,
     });
     [raja.dashSize, raja.gapSize] = RAJA_KATKO_YKS;
     raja.dashScale = 1;
+    /*
+     * PEHMEÄ REUNA, EI PÄÄTYPYÖRYLÖITÄ (omistaja 7.9.2026). Paikka
+     * tehdään ENNEN ensimmäistä käännöstä ja ennen leveyden asetusta:
+     * jos varjostin ei ole odotetun näköinen, pehmennysvyö jää nollaan
+     * ja viiva on entisellään.
+     */
+    pehmennysPaikka = pehmennaLineMaterial(ranta) && pehmennaLineMaterial(raja);
+    mittarit.pehmennysPaikka = pehmennysPaikka;
+    ranta.linewidth = cssLeveys('rannikko');
+    raja.linewidth = cssLeveys('rajat');
     return { rannikko: ranta, rajat: raja };
   }
 
@@ -439,13 +680,22 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
   function tahdista() {
     if (!materiaalit) return;
     const { W, H } = ruutu();
-    mittarit.linewidthCss = cssLeveys('rannikko');
+    mittarit.linewidthCss = +cssLeveys('rannikko').toFixed(3);
+    mittarit.leveysCss = +ydinLeveys('rannikko').toFixed(3);
+    mittarit.pehmennys = +pehmennysOsuus('rannikko').toFixed(3);
     mittarit.pikselisuhde = pikselisuhde();
     for (const [laji, m] of Object.entries(materiaalit)) {
       m.linewidth = cssLeveys(laji);
       m.resolution.set(W, H);
+      if (m.uniforms?.pehmennys) m.uniforms.pehmennys.value = pehmennysOsuus(laji);
     }
-    for (const m of kloonit) m.resolution.set(W, H);
+    for (const m of kloonit) {
+      m.resolution.set(W, H);
+      m.linewidth = cssLeveys(m.userData?.pallovektoritLaji ?? 'rannikko');
+      if (m.uniforms?.pehmennys) {
+        m.uniforms.pehmennys.value = pehmennysOsuus(m.userData?.pallovektoritLaji ?? 'rannikko');
+      }
+    }
   }
 
   /* ---------------- solut ------------------------------------------ */
@@ -456,8 +706,18 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
    * joukossa). Olio ei ota kosketusta vastaan — pelin merkit ja
    * onGlobeClick toimivat kuten ennen.
    */
-  function rakenna(s) {
-    const { paikat, janoja } = vektorijanat(s.viivat, sade());
+  function rakenna(s, nakyva = false) {
+    /*
+     * SELAIMEN OMA HARVENNUS ennen janoiksi purkua: ämpärin tasoportaat
+     * ovat karkeat, joten yleiskuvassa lataamme aineistoa, jonka
+     * kärkiväli on murto-osa pikselistä. Porras on 0 lähikuvassa =
+     * täysi yksityiskohta. Aineiston oma toleranssi (luettelo.lodit[k])
+     * kertoo, milloin harvennus ei enää muuttaisi mitään.
+     */
+    const porras = harvennus > (luettelo?.lodit?.[s.k] ?? 0) ? harvennus : 0;
+    s.harvennus = harvennus;
+    const viivat = harvennaViivat(s.viivat, porras);
+    const { paikat, janoja } = vektorijanat(viivat, sade());
     s.janoja = janoja;
     if (!janoja) return;
     const geometria = new luokat.LineSegmentsGeometry();
@@ -466,10 +726,24 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     if (s.laji === 'rajat') olio.computeLineDistances?.();
     olio.renderOrder = VEKTORIT_RENDER_ORDER;
     olio.raycast = () => {};
-    olio.visible = false;
+    olio.visible = nakyva;
     olio.userData.pallovektorit = { laji: s.laji, k: s.k, avain: s.avain };
     kolmi.juuri.add(olio);
     s.olio = olio;
+  }
+
+  /**
+   * Solun oliot pois, viivat muistiin: harvennusportaan vaihtuessa
+   * geometria rakennetaan uudelleen samasta aineistosta (vapauta()
+   * heittäisi viivatkin pois ja pakottaisi uuden latauksen).
+   */
+  function vapautaOlio(s) {
+    if (!s.olio) return;
+    s.olio.parent?.remove(s.olio);
+    s.olio.geometry?.dispose?.();
+    const m = s.olio.material;
+    if (m && !Object.values(materiaalit ?? {}).includes(m)) { kloonit.delete(m); m.dispose?.(); }
+    s.olio = null;
   }
 
   /**
@@ -484,7 +758,9 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     const kesto = reduced() ? 0 : VEKTORIT_HAIVE_MS;
     if (!(kesto > 0) || !s.olio) { if (s.olio) s.olio.material = jaettu; return; }
     const oma = jaettu.clone();
+    oma.userData.pallovektoritLaji = s.laji;
     oma.linewidth = cssLeveys(s.laji);
+    if (oma.uniforms?.pehmennys) oma.uniforms.pehmennys.value = pehmennysOsuus(s.laji);
     oma.resolution.copy?.(jaettu.resolution);
     oma.opacity = 0;
     kloonit.add(oma);
@@ -540,14 +816,27 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
 
   /** Solun oliot ja muisti pois (LRU ja purku). */
   function vapauta(s) {
-    if (s.olio) {
-      s.olio.parent?.remove(s.olio);
-      s.olio.geometry?.dispose?.();
-      const m = s.olio.material;
-      if (m && !Object.values(materiaalit ?? {}).includes(m)) { kloonit.delete(m); m.dispose?.(); }
-      s.olio = null;
-    }
+    vapautaOlio(s);
     s.viivat = null;
+  }
+
+  /**
+   * Harvennusportaan vaihto: näkyvät solut rakennetaan uudelleen samasta
+   * aineistosta, korkeintaan VEKTORIT_HARVENNUS_KATTO kappaletta
+   * kerrallaan, jottei zoomaus nykäise. Loput tulevat seuraavilla
+   * päivityksillä (jarru 60 ms).
+   */
+  function tasoitaUudelleen() {
+    let jaljella = VEKTORIT_HARVENNUS_KATTO;
+    for (const id of nakyvat) {
+      if (jaljella <= 0) break;
+      const s = solut.get(id);
+      if (!s || s.tyhja || !s.viivat || !s.olio || s.harvennus === harvennus) continue;
+      const nakyi = s.olio.visible;
+      vapautaOlio(s);
+      rakenna(s, nakyi);
+      jaljella -= 1;
+    }
   }
 
   /** LRU: katon yli menevät, näkymättömät solut pois vanhimmasta alkaen. */
@@ -574,6 +863,7 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       if (nakyy) janoja += s.janoja;
     }
     mittarit.janoja = janoja;
+    mittarit.janojaSolua = mittarit.soluja ? Math.round(janoja / mittarit.soluja) : 0;
   }
 
   /* ---------------- päivitys ---------------------------------------- */
@@ -627,8 +917,17 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     if (purettu || !luettelo || !luokat) return false;
     const t0 = nyt();
     kello += 1;
-    tahdista();
     const { alue, tarve } = nakyvaAlue();
+    /*
+     * TIHEYS ENSIN, VASTA SITTEN MATERIAALIT: viivan leveys ja
+     * harvennusporras liukuvat kameran korkeuden mukana, joten ne on
+     * luettava SAMASTA kehyksestä kuin näkyvä alue (sama oppi kuin
+     * v1649:n kahdessa kartassa).
+     */
+    tiheys = tarve;
+    harvennus = harvennusPorras(tarve);
+    mittarit.harvennus = harvennus;
+    tahdista();
     const k = vektoritaso(luettelo.lodit, tarve, VEKTORIT_TERAVYYS_PX);
     mittarit.lod = k;
     mittarit.tol = luettelo.lodit[k];
@@ -654,12 +953,13 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     }
     nakyvat = uudet;
     mittarit.soluja = uudet.size;
+    tasoitaUudelleen();
     nayta();
     karsi();
     mittarit.paivitaMs = +(nyt() - t0).toFixed(2);
     if (odotettavat.length) {
       await Promise.all(odotettavat);
-      if (!purettu) { nayta(); karsi(); }
+      if (!purettu) { tasoitaUudelleen(); nayta(); karsi(); }
     }
     return true;
   }
