@@ -369,4 +369,54 @@ joten tunnuslukulaatikkoon ei tarvinnut koskea eikä
 
 ## Kuvat
 
-Kirjataan tähän osioon kuvaerän yhteydessä (commit 2).
+Kaikki kuvat haettu Commonsin hakurajapinnalla 7.9.2026, lisenssi ja
+tekijä `extmetadata`-kentistä, leveys ≥ 1200 px, jokainen katsottu
+silmin 640 px:n esikatselusta. Kaksitoista nostoa kahdestakymmenestä sai
+kuvan.
+
+| Nosto | Tiedosto | Koko | Lisenssi ja tekijä |
+| --- | --- | --- | --- |
+| Historia / prazo | 1770 Bonne Map of East Africa… AfricaEast-bonne-1770.jpg | 4000×2960 | PD, Rigobert Bonne |
+| Luonto / Mabu | Mount Mabu, Mozambique (ASTER).jpg | 1777×1921 | PD, NASA/METI/AIST/Japan Space Systems ja U.S./Japan ASTER Science Team |
+| Luonto / Lico | Mount Lico, Mozambique, March 15, 2020 SkySat.jpg | 3840×2160 | CC BY 4.0, Planet Labs |
+| Luonto / Namuli | Gurué Moçambique.jpg | 3264×2448 | CC BY-SA 4.0, Armindo Pascoal Timóteo Culeco |
+| Luonto / Niassajärvi | Sun over the Lake Niassa Reserve (5888437856).jpg | 1807×1200 | PD, USAID Africa Bureau |
+| Ruoka / matapa | Matapa.jpg | 2560×1536 | CC BY-SA 4.0, PrestigiousSwazi |
+| Ruoka / xima | Yawo food staples - ugali and usipa.jpg | 1439×956 | CC BY-SA 4.0, TimCowley |
+| Ruoka / curry | Caril de camarão com quiabos.jpg | 1536×2048 | CC BY 3.0, Adriao |
+| Ruoka / cashew | Ripe Cashew apple with Nuts Anacardium occidentale Goa IMG 7907 (1).JPG | 3888×2592 | CC BY-SA 3.0, Dr. Raju Kasambe |
+| Musiikki / timbila | Le Timbila, xylophone du Mozambique (Biennale de Venise 2015) (20192901852).jpg | 1887×1200 | CC BY 2.0, Jean-Pierre Dalbéra |
+| Kuvataide / makonde | Helmet mask, Mozambique, Makonde people, early 20th century… De Young Museum - DSC01108.JPG | 3627×4528 | CC0, Daderot |
+| Kuvataide / valtaistuin | Throne of Weapons, British Museum 1.jpg | 2592×3888 | CC BY-SA 4.0, Mike Peel |
+
+**Kuvattomat nostot (8) ja mitä kuvan pitäisi esittää** — kuvaputkelle:
+
+- *Vesi, joka sitoo* (historia) — Baruen kuningaskunnan seutua: Ruenyan
+  laakso tai Nyangan ylätasangon reuna Mosambikin puolella.
+- *Yhtiö, jolla oli oma pankki ja oma raha* (historia) — Mosambikin
+  yhtiön Beira: 1900-luvun alun katunäkymä tai Banco da Beiran seteli.
+- *Postimerkit, joita ei ollut tarkoitettu kirjeisiin* (historia) —
+  Niassan yhtiön vuoden 1901 kirahvimerkki tarpeeksi suurena
+  (Commonsin kappale on 327 px leveä).
+- *Sävellys, jossa pilkataan naapuria* (musiikki) — timbilaorkesteri
+  soitossa ilman tunnistettavia kasvoja: rivi soittimia ja kapuloita.
+- *Kitara peltipurkista* (musiikki) — peltipurkista tehty kitara tai
+  1950-luvun savikiekko His Master's Voicen etiketillä.
+- *Rytmi, joka ei ole Mosambikista* (musiikki) — kuubalainen
+  comparsa-soittimisto: congat, bombo, lehmänkello ja pasuuna.
+- *Tennisklubin pallopoika* (kuvataide) — Malangatanan maalaus tai
+  seinämaalaus; teokset ovat tekijänoikeuden alaisia, joten kuva pitää
+  hankkia muualta kuin Commonsista.
+- *Savi, joka on vihreää grafiitista* (kuvataide) — Reinata Sadimban
+  keramiikkaa; sama tekijänoikeusvaraus kuin edellä.
+
+**Hylätyt kuvat.** "Nyassa 1901 stamp" (327×415), "Nyassa 1898 stamp"
+(400×444) ja "Stamp Nyassa 300 Reis invert" (330×265) — kaikki reilusti
+alle 1200 px. Companhia de Moçambiquen koko arkistosarja Beirasta
+(Torre do Tombo) on 700 px korkeaa. "Festival de Timbila - Quissico"
+(1800×1350, CC BY-SA 4.0) hylättiin tunnistettavien kasvojen ja
+paitalogojen takia, "Peixe Vermelha com Xima" siksi, että lautasella on
+muovikelmuun käärittyä kalaa eikä ximaa, "Typical lunch in Mozambique"
+siksi, että annos on banaanipata eikä xima, "Caril de amendoim" siksi,
+että lähikuva on niin tiukka ettei ruokalajia erota, ja "Chiuanga
+(beach)" siksi, että diaskannaus on täynnä pölyhiukkasia.
