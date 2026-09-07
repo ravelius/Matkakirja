@@ -28,6 +28,7 @@
  */
 
 import { pointAlong } from '../rules.js';
+import { pallonKorjattuPoly } from '../pallo.js';
 
 /*
  * ── PATHSTROKE ON RUUTUPIKSELEITÄ, EI ASTEITA ─────────────────────
@@ -251,40 +252,21 @@ export function luoReitit({ pallo, ui, siirtyma, asteet, siirtymat = null }) {
    * koordinaatti koskee KAIKKIA kaupungin merkkejä — myös reittiviivan
    * päätä.
    *
-   * KORJAUS LEVITETÄÄN KOKO POLYLLE, EI VAIN PÄÄHÄN. Jos vain viimeinen
-   * piste siirrettäisiin, nappula kulkisi vanhaa viivaa ja nytkähtäisi
-   * viimeisellä kehyksellä siirron verran (Raamattu: KAIKKI LIIKE
-   * ANIMOIDAAN PEHMEÄSTI). Siksi jokainen polyn piste siirtyy päiden
-   * siirtymien painotettuna summana, painona osuus KAARENPITUUDESTA —
-   * sama parametrisointi kuin `pointAlong`illa, joten askelhelmet ja
-   * nappula kulkevat täsmälleen samaa korjattua viivaa. Päissä paino on
-   * 1 ja 0, joten viiva päättyy tarkalleen siirrettyyn pisteeseen.
+   * KAAVA ON js/pallo.js:ssä (pallonKorjattuPoly), koska SAMA viiva
+   * piirtyy myös laattapyramidin viivatasoon (tools/fokuskartta/
+   * sisalto.mjs). Kaksi kaavaa kahdessa paikassa tarkoitti, että elävä
+   * reitti päättyi kaupungin pallopisteeseen ja poltettu verkko laudan
+   * vanhaan pisteeseen — Helsingissä 34,7 km sisämaahan. Tässä on enää
+   * muisti: korjaus lasketaan kerran per reitti.
    */
   const korjattuPoly = (reitti) => {
     const muistissa = polyMuisti.get(reitti.id);
     if (muistissa) return muistissa;
-    const poly = reitti.poly ?? [];
-    const a = siirtymat?.get(reitti.a) ?? null;
-    const b = siirtymat?.get(reitti.b) ?? null;
-    if ((!a && !b) || poly.length < 2) {
-      polyMuisti.set(reitti.id, poly);
-      return poly;
-    }
-    const pituudet = [];
-    let yhteensa = 0;
-    for (let i = 1; i < poly.length; i += 1) {
-      const d = Math.hypot(poly[i][0] - poly[i - 1][0], poly[i][1] - poly[i - 1][1]);
-      pituudet.push(d);
-      yhteensa += d;
-    }
-    let kertyma = 0;
-    const korjattu = poly.map(([x, y], i) => {
-      if (i) kertyma += pituudet[i - 1];
-      const t = yhteensa > 0 ? kertyma / yhteensa : Math.min(1, i);
-      const dx = (a ? a.dx * (1 - t) : 0) + (b ? b.dx * t : 0);
-      const dy = (a ? a.dy * (1 - t) : 0) + (b ? b.dy * t : 0);
-      return [x + dx, y + dy];
-    });
+    const korjattu = pallonKorjattuPoly(
+      reitti.poly ?? [],
+      siirtymat?.get(reitti.a) ?? null,
+      siirtymat?.get(reitti.b) ?? null,
+    );
     polyMuisti.set(reitti.id, korjattu);
     return korjattu;
   };

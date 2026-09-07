@@ -103,6 +103,38 @@ export async function keraaSisalto(
   const lauta = buildBoard(pack.cities ?? [], pack.edges ?? [], pack.map ?? null);
 
   /*
+   * ══════════════════════════════════════════════════════════════════
+   * REITIN PÄÄ SIIRTYY KAUPUNGIN MUKANA — MYÖS LAATASSA
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * Omistajan vikailmoitus 7.9.2026 illalla (iPad, pallolauta
+   * Helsingissä): *"Reitti Helsinkiin pitää korjata."* Nappula seisoi
+   * Suomenlahden rannalla kaupungin omassa pallopisteessä, mutta
+   * REITTIVIIVOJEN RISTEYS oli 34,7 km sisämaassa.
+   *
+   * MITATTU JUURISYY (7.9.2026 ilta): pallon ELÄVÄ reittikerros
+   * (js/pallolauta/reitit.js) korjasi polyn päät jo oikein — mittaus
+   * antoi kaikille 408 reitille 0,00 km. Laattapyramidin VIIVATASOON
+   * poltettu verkko sen sijaan luki raakaa `edge.poly`a, jonka päät ovat
+   * laudan käsin sommitellussa pisteessä: 219 reittiä 408:sta päättyi
+   * yli kilometrin päähän kaupungin pallopisteestä (Helsinki 34,7 km,
+   * Havanna 276 km, Iqaluit 339 km). Kartalla näkyi siis kaksi eri
+   * verkkoa — poltettu vanhassa pisteessä, elävä uudessa.
+   *
+   * Kaava on js/pallo.js:ssä (pallonKorjattuPoly), ja peli ja
+   * laattageneraattori kutsuvat SAMAA funktiota: koko poly liukuu päiden
+   * siirtymien painotetulla summalla, joten via-pisteet säilyvät,
+   * askelmat pysyvät viivalla eikä nappula nytkähdä perillä.
+   *
+   * VAIN MAAILMANKARTALLA on pallopisteitä (`pallo`-kenttä); muilla
+   * laudoilla `siirtymat` on tyhjä ja poly palautuu sellaisenaan.
+   */
+  const { pallonOmatPisteet, pallonReitinPoly } = await import(`${juuri}/js/pallo.js`);
+  const { siirtymat } = pallonOmatPisteet(pack);
+  /** Reitin murtoviiva pallopistekorjattuna — sama viiva kuin pelissä. */
+  const polyPallolle = (e) => pallonReitinPoly(e, siirtymat);
+
+  /*
    * === LAATTA PIIRTÄÄ SEN KÄYRÄN, JOTA PELI KÄVELEE (omistaja 31.8.2026)
    *
    * Edellinen erä poimi tästä SOLMUPOLUN — kaupungit ja `via`-pisteet —
@@ -171,22 +203,26 @@ export async function keraaSisalto(
     return h >>> 0;
   };
 
-  const reitit = lauta.edges.map((e) => ({
-    laji: e.type === 'sea' ? 'meri' : 'maa',
-    poly: e.poly,
-    /*
-     * ASKELMAT PELIN OMALLA KAAVALLA JA PELIN OMASTA POLUSTA. Sama
-     * `pointAlong(poly, idx/steps)`, sama `poly` — laattaan poltettu
-     * ruutu ja nappulan pysähdyspaikka ovat siis sama piste, eivät
-     * likimain sama.
-     */
-    askelmat: Array.from({ length: Math.max(0, e.steps - 1) }, (_, i) => {
-      const p2 = pointAlong(e.poly, (i + 1) / e.steps);
-      return [p2.x, p2.y];
-    }),
-    solmut: solmuIndeksit(e),
-    siemen: siemenesta(e.id),
-  }));
+  const reitit = lauta.edges.map((e) => {
+    const poly = polyPallolle(e);
+    return {
+      laji: e.type === 'sea' ? 'meri' : 'maa',
+      poly,
+      /*
+       * ASKELMAT PELIN OMALLA KAAVALLA JA PELIN OMASTA POLUSTA. Sama
+       * `pointAlong(poly, idx/steps)`, sama `poly` — laattaan poltettu
+       * ruutu ja nappulan pysähdyspaikka ovat siis sama piste, eivät
+       * likimain sama. Poly on pallopistekorjattu (ks. yllä), joten
+       * poltettu askelma osuu elävän askelhelmen kanssa yhteen.
+       */
+      askelmat: Array.from({ length: Math.max(0, e.steps - 1) }, (_, i) => {
+        const p2 = pointAlong(poly, (i + 1) / e.steps);
+        return [p2.x, p2.y];
+      }),
+      solmut: solmuIndeksit(e),
+      siemen: siemenesta(e.id),
+    };
+  });
   if (poikkeamat) {
     console.log(`  VAROITUS: ${poikkeamat} reitin solmuja ei tunnistettu — `
       + 'niiden viiva piirtyy ilman käsin piirretyn heittoa '
@@ -214,9 +250,16 @@ export async function keraaSisalto(
   }
 
   const paikka = new Map((pack.cities ?? []).map((c) => [c.id, c]));
+  /** Kaupungin piirtopaikka: pallopiste, jos sillä on oma (ks. yllä). */
+  const kohta = (id) => {
+    const c = paikka.get(id);
+    if (!c) return null;
+    const d = siirtymat.get(id);
+    return d ? { x: c.x + d.dx, y: c.y + d.dy } : { x: c.x, y: c.y };
+  };
   const jana = (e) => {
-    const a = paikka.get(e.a);
-    const b = paikka.get(e.b);
+    const a = kohta(e.a);
+    const b = kohta(e.b);
     return a && b ? { ax: a.x, ay: a.y, bx: b.x, by: b.y } : null;
   };
   /*
