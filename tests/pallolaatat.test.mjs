@@ -13,7 +13,7 @@ import {
   LAATTAKERROS_VARA_AST, LAATTAKERROS_VARA_OSUUS, POHJAN_TASO_MAX, POHJAN_VAPAUTUS_SYYT,
   laatanKartta, laattakerroksenLRU, laattakerroksenNakyvissa, laattakerroksenOsuma,
   laattakerroksenPeitto, laattakerroksenSilmat, laattakerroksenTaso, lepokerroksenAlue,
-  lepokerroksenLaatat, lepokerroksenUV,
+  lepokerroksenLaatat, lepokerroksenUV, pinnanPiste,
 } from '../js/pallo.js';
 import { laattakerrosPaalla, laattakerrosOsoitteesta } from '../js/ui-apurit.js';
 import { PALLO_LAUTA } from '../js/pallo.js';
@@ -545,4 +545,72 @@ test('vika v1649: kehysmitat ovat yksi olio ja samat molemmille kuuntelijoille',
   const ilman = pallonKehysmitat({ ...pallo, renderer: () => null }, kotelo, kamera, globalThis);
   assert.equal(ilman.W, 999);
   assert.equal(ilman.kuvasuhde, 0.5, 'kuvasuhde kameralta');
+});
+
+/*
+ * ======== VIKA v1664: KARTTA RÄPSII JA LENNÄHTÄÄ ====================
+ *
+ * Omistaja 7.9.2026 aamu, sanatarkasti: *"Kartta räpsii panoroitaessa
+ * ja varsinkin zoomatessa äkkiä sekoaa ja lennähtää ihan eri paikkaan.
+ * Suht samanlainen käytös selaimella ja iOS-apin kautta."* ja *"Kartta
+ * saattaa lennähtää myös aivan eri maahan, jos klikkaan jotain
+ * karttanostoa. Äsken klikkasin Japanin kohdalla jotain kohdetta ja se
+ * lensikin Etelä-Amerikkaan."*
+ *
+ * Kolme juurisyytä, kaikki mitattuja (raportti 7.9.2026):
+ *   1. pinnanPiste otti säteen SUUNNAN kameran matriisista mutta
+ *      ORIGON kameran paikasta; ne ovat sormivedon aikana eri
+ *      hetkestä, koska pointOfView siirtää paikan heti ja OrbitControls
+ *      kääntää suunnan vasta piirrossa → lukema sahasi 19 %.
+ *   2. Horisontin lähellä yksi ruutupikseli on 0,97°, joten yksi lukema
+ *      reunalta vei kartan toiselle mantereelle — ja liu'un nopeuteen.
+ *   3. Napautuksen osumatesti hyväksyi pallon TAKAPUOLEN merkit.
+ */
+
+test('vika v1664: pinnan lukema ei riipu kameran matriisin tuoreudesta', () => {
+  const laatat = lue('../js/pallolaatat.js');
+  // Säde rakennetaan paikasta ja linssistä, ei unprojectista.
+  assert.ok(!/unproject\(kamera\)/.test(laatat),
+    'unproject lukee vanhentunutta matrixWorldia (vika v1664)');
+  assert.match(laatat, /return laattakerroksenOsuma\(pov, \(2 \* x\) \/ W - 1, 1 - \(2 \* y\) \/ H,/);
+
+  // Kamera, jolla EI ole lainkaan matriisia: lukeman on silti oltava oikea.
+  const R = 100;
+  const kamera = { position: { x: 0, y: 0, z: 135 }, fov: 50 };
+  const W = 400;
+  const H = 800;
+  const keski = pinnanPiste(kamera, W / 2, H / 2, W, H, R);
+  assert.ok(keski, 'keskipiste ei osunut palloon');
+  assert.ok(Math.abs(keski.lat) < 1e-9 && Math.abs(keski.lng) < 1e-9, 'keski on kameran alla');
+
+  /*
+   * Sama sormiaskel siirtää karttaa saman verran (räpsintä = sahaus).
+   * Kamera siirretään joka askeleella kuten pelissä (pointOfView), mutta
+   * mitään matriisia ei päivitetä: juuri se tilanne, jossa vanha lukija
+   * sahasi 0,194° → 0,126° → 0,150°.
+   */
+  const siirra = (dLng) => {
+    const p = kamera.position;
+    const s = Math.sin((dLng * Math.PI) / 180);
+    const c = Math.cos((dLng * Math.PI) / 180);
+    kamera.position = { x: p.x * c + p.z * s, y: p.y, z: p.z * c - p.x * s };
+  };
+  const tartunta = pinnanPiste(kamera, W / 2, H / 2, W, H, R);
+  const askeleet = [];
+  for (let i = 0; i < 8; i += 1) {
+    const nyt = pinnanPiste(kamera, W / 2 + (i + 1) * 8, H / 2, W, H, R);
+    assert.ok(nyt, `askel ${i} ohitti pallon`);
+    askeleet.push(nyt.lng - tartunta.lng);
+    siirra(-(nyt.lng - tartunta.lng));
+  }
+  const suhde = Math.max(...askeleet) / Math.min(...askeleet);
+  assert.ok(suhde < 1.05, `sormiaskelten sahaus ${suhde.toFixed(3)} (vanha lukija 1,54)`);
+
+  // Vanhat vahdit pysyvät: taivas ja mitaton kotelo antavat null.
+  const kaukaa = { position: { x: 0, y: 0, z: 300 }, fov: 50 };
+  assert.equal(pinnanPiste(kaukaa, W, 0, W, H, R), null, 'ruudun kulma on taivasta');
+  assert.equal(pinnanPiste(null, 0, 0, W, H, R), null);
+  assert.equal(pinnanPiste(kaukaa, 0, 0, 0, H, R), null);
+  // Kamera pinnan sisällä ei ole näkymä lainkaan.
+  assert.equal(pinnanPiste({ position: { x: 0, y: 0, z: 50 } }, W / 2, H / 2, W, H, R), null);
 });

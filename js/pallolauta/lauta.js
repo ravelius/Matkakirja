@@ -151,6 +151,39 @@ export const PISTELEVYN_SIVUT = 24;
 export const MERKKIEN_SIIRTYMA_MS = 250;
 /** Napautuksen osuma ruudulla: lähin kaupunki tai kohde tämän säteen sisällä (px). */
 export const NAPAUTUKSEN_SADE_PX = 44;
+/*
+ * PALLON TAKAPUOLI EI OTA NAPAUTUKSIA (vika v1664; omistaja 7.9.2026
+ * aamu, sanatarkasti: *"Kartta saattaa lennähtää myös aivan eri maahan,
+ * jos klikkaan jotain karttanostoa. Äsken klikkasin Japanin kohdalla
+ * jotain kohdetta ja se lensikin Etelä-Amerikkaan."*)
+ *
+ * `getScreenCoords` projisoi MYÖS pallon takapuolen pisteet ruudulle, ja
+ * perspektiivissä sormen säde leikkaa pallon kahdesti: napautettu piste
+ * edessä ja sen vastapiste takana projisoituvat samaan ruutupikseliin.
+ * Napautuksen osumatesti mittasi pelkkää ruutuetäisyyttä, joten
+ * VASTAPISTEEN seutu voitti kilpailun. Mitattu 7.9.2026 (puhelin
+ * 390 × 844, kamera Japanin yllä 36° N 140° I korkeudella 0,6, napautus
+ * ruudun keskellä): Tokio 9,3 px — mutta heti perässä Porto Alegre
+ * 64,1 px, Montevideo 73,7 px ja Rio de Janeiro 75,7 px, kaikki pallon
+ * TAKANA. Japanin rannikolla 50 px sivussa Tokiosta napautus osui siis
+ * Etelä-Amerikkaan, ja `doMove` vei nappulan sinne.
+ *
+ * Korjaus: osumatesti hyväksyy vain kameran puolella olevat merkit
+ * (pisteEdessa). Sama sääntö oli jo linssin merkeillä (lahinLinssimerkki
+ * suodatti `edessa`llä); nyt se on osumatestissä itsessään, joten se
+ * koskee kaupunkeja, nostoja ja nopanheiton kohteita yhtä lailla.
+ */
+/**
+ * Onko pinnan piste kameran puolella palloa? Puhdas kaava (pallon
+ * pinnan normaali on piste itse, koska pallo on origokeskinen):
+ * näkyvyys = (kamera − piste) · piste > 0.
+ */
+export function pisteEdessa(kameranPaikka, piste) {
+  if (!kameranPaikka || !piste) return false;
+  return (kameranPaikka.x - piste.x) * piste.x
+    + (kameranPaikka.y - piste.y) * piste.y
+    + (kameranPaikka.z - piste.z) * piste.z > 0;
+}
 /**
  * LÄHTÖVALINNAN NÄKYMÄ (aalto 3A, ks. aloitusnakyma alempana):
  * marginaali laatikon ympärille ja ruudun alalaitaan jätettävä kaista,
@@ -548,11 +581,7 @@ export async function avaaPallolauta(ui) {
    * Onko pinnan piste kameran puolella palloa? CSS2D ja getScreenCoords
    * projisoivat myös takapuolen pisteet ruudulle; tämä erottaa ne.
    */
-  const edessa = (lat, lng) => {
-    const p = pallo.getCoords(lat, lng, 0);
-    const k = pallo.camera().position;
-    return (k.x - p.x) * p.x + (k.y - p.y) * p.y + (k.z - p.z) * p.z > 0;
-  };
+  const edessa = (lat, lng) => pisteEdessa(pallo.camera().position, pallo.getCoords(lat, lng, 0));
   /**
    * Pinnan piste kotelon pikseleinä, tai null jos se on pallon takana
    * tai `vara` pikseliä ruudun ulkopuolella.
@@ -1009,13 +1038,19 @@ export async function avaaPallolauta(ui) {
     return true;
   };
 
-  /** Lähin merkki ruudulla napautuskohdasta (R-osuma, ≥ 44 px). */
+  /**
+   * Lähin merkki ruudulla napautuskohdasta (R-osuma, ≥ 44 px). VAIN
+   * KAMERAN PUOLELTA: pallon takapuolen merkki projisoituu samaan
+   * pikseliin kuin napautettu piste (ks. PALLON TAKAPUOLI EI OTA
+   * NAPAUTUKSIA), ja ilman tätä se voitti kilpailun.
+   */
   const lahin = (lat, lng, ehdokkaat, latOf, lngOf) => {
     const kohta = pallo.getScreenCoords(lat, lng, 0);
     if (!kohta) return null;
     let paras = null;
     let parasMatka = NAPAUTUKSEN_SADE_PX;
     for (const e of ehdokkaat) {
+      if (!edessa(latOf(e), lngOf(e))) continue;
       const p = pallo.getScreenCoords(latOf(e), lngOf(e), 0);
       if (!p) continue;
       const d = Math.hypot(p.x - kohta.x, p.y - kohta.y);

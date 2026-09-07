@@ -1728,6 +1728,92 @@ export function rullanAskel(deltaX, deltaY, korkeus, {
   return { dLat: -deltaY * k, dLng: deltaX * k * kavennus };
 }
 
+/*
+ * ======== KARTTA EI HYPPÄÄ ILMAN PELAAJAN ELETTÄ =====================
+ *
+ * VIKA v1664 (omistaja 7.9.2026 aamu, sanatarkasti): *"Kartta räpsii
+ * panoroitaessa ja varsinkin zoomatessa äkkiä sekoaa ja lennähtää ihan
+ * eri paikkaan."*
+ *
+ * Räpsinnän juurisyy oli pinnanlukija (js/pallolaatat.js pinnanPiste,
+ * korjattu samassa erässä): se luki säteen origon tuoreesta kameran
+ * paikasta ja suunnan vanhentuneesta matriisista. NÄMÄ KATOT OVAT ERI
+ * ASIA — ne ovat vartio, joka pitää omistajan säännön voimassa myös
+ * silloin, kun jokin muu lukema menee joskus pieleen:
+ *
+ *     KARTTA EI SAA HYPÄTÄ ILMAN PELAAJAN ELETTÄ.
+ *
+ * Sormiveto kääntää palloa niin, että painalluksessa otettu pinnan piste
+ * (tartunta) pysyy sormen alla, ja siirto on kahden pinnanlukeman
+ * erotus. Erotus on rajaton: yksikin virheellinen lukema (napaklampin
+ * ±89,5° jälkeen erotus ei enää suppene, ele katkeaa kesken, NaN) vie
+ * kartan toiselle mantereelle — ja koska sama erotus syötetään liu'un
+ * nopeuteen (vauhti), lennähdys jatkuu vielä sormen irrottua.
+ *
+ * Kaksi kattoa, molemmat puhtaita funktioita ja testattuja:
+ *   1. vedonSiirto: yksi pointermove ei saa kääntää palloa enempää kuin
+ *      VEDON_KATTO_RUUTUA näkyvästä kaistasta. Sen yli menevä lukema ei
+ *      ole sormen liikettä — se hylätään kokonaan (kartta jää
+ *      paikalleen; seuraava lukema on taas kelvollinen).
+ *   2. rajaaVauhti: liuku ei saa viedä näkyvää ruutua nopeammin kuin
+ *      VAUHDIN_KATTO_MS:ssä. Ilman tätä yksikin läpi päässyt piikki
+ *      jatkuisi kitkan mukana sekunnin ajan.
+ *
+ * Katot EIVÄT muuta tavallista vetoa: mitattu 8 px:n sormiaskel
+ * korkeudella 0,35 siirtää karttaa 0,194°, ja katto on 18,7° (yksi
+ * ruudullinen) — satakertainen vara.
+ */
+/**
+ * Yksi pointermove enintään tämä osa näkyvästä kaistasta. 1,0 = koko
+ * ruudullinen: nopein mahdollinen aito heitto (koko ruudun poikki
+ * yhdellä pointermovella, kun selain pudottaa väliltä tapahtumia) on
+ * pystyruudulla noin 0,5 kaistaa, joten katto ei koskaan katkaise
+ * pelaajan omaa elettä — se katkaisee vain sen, mikä ei voi olla ele.
+ */
+export const VEDON_KATTO_RUUTUA = 1;
+/** Liuku enintään yksi näkyvä kaista tässä ajassa (ms). */
+export const VAUHDIN_KATTO_MS = 250;
+
+/** Näkyvä kaista asteina korkeudella `korkeus` (fov on pystykulma). */
+export function nakyvaKaista(korkeus, fov = PALLON_FOV) {
+  return Math.max(1e-4, Number(korkeus) || 0) * 2 * Math.tan((fov / 2) * (Math.PI / 180)) * (180 / Math.PI);
+}
+
+/**
+ * Vedon siirto asteina (kartta pysyy sormen alla), tai null jos lukema
+ * ei kelpaa: pituusaste kierretään lyhintä kautta, ja ruudullista
+ * isompi askel (ks. VEDON_KATTO_RUUTUA) ei voi olla sormen liikettä.
+ *
+ * @param {object} pov      kameran nykyinen { lat, altitude }
+ * @param {object} tartunta painalluksessa otettu pinnan piste
+ * @param {object} nyt      sormen alla juuri nyt oleva pinnan piste
+ */
+export function vedonSiirto(pov, tartunta, nyt, {
+  fov = PALLON_FOV, katto = VEDON_KATTO_RUUTUA,
+} = {}) {
+  const luvut = [pov?.lat, pov?.altitude, tartunta?.lat, tartunta?.lng, nyt?.lat, nyt?.lng];
+  if (!luvut.every((n) => Number.isFinite(n))) return null;
+  let dLng = nyt.lng - tartunta.lng;
+  if (dLng > 180) dLng -= 360; else if (dLng < -180) dLng += 360;
+  const dLat = nyt.lat - tartunta.lat;
+  // Pituuspiirit kapenevat navoilla: sama ruutumatka on siellä enemmän
+  // asteita, joten katto mitataan kohtisuorasta matkasta.
+  const matka = Math.hypot(dLat, dLng * Math.cos((pov.lat * Math.PI) / 180));
+  if (!(matka <= katto * nakyvaKaista(pov.altitude, fov))) return null;
+  return { dLat, dLng };
+}
+
+/** Liu'un nopeus (astetta/ms) katkaistuna, ks. VAUHDIN_KATTO_MS. */
+export function rajaaVauhti(lat, lng, pov, {
+  fov = PALLON_FOV, kattoMs = VAUHDIN_KATTO_MS,
+} = {}) {
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return { lat: 0, lng: 0 };
+  const katto = nakyvaKaista(pov?.altitude, fov) / Math.max(1, kattoMs);
+  const v = Math.hypot(lat, lng);
+  if (!(v > katto)) return { lat, lng };
+  return { lat: (lat * katto) / v, lng: (lng * katto) / v };
+}
+
 /**
  * Pallon eleet: sormiseuranta (nipistys ei ole napautus), sormessa
  * pysyvä kierto, irrotuksen jälkeinen liuku ja työpöytäselaimen rulla
@@ -1845,9 +1931,11 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     const nyt = sormenKohta(e);
     if (!nyt) return;
     const pov = pallo.pointOfView();
-    let dLng = nyt.lng - tartunta.lng;
-    if (dLng > 180) dLng -= 360; else if (dLng < -180) dLng += 360;
-    const dLat = nyt.lat - tartunta.lat;
+    // KARTTA EI HYPPÄÄ ILMAN PELAAJAN ELETTÄ (vika v1664): yksi
+    // pointermove ei saa kääntää palloa yli puolta näkyvästä kaistasta.
+    const siirto = vedonSiirto(pov, tartunta, nyt, { fov: kamera.fov });
+    if (!siirto) return;
+    const { dLat, dLng } = siirto;
     pallo.pointOfView({
       lat: Math.max(-89.5, Math.min(89.5, pov.lat - dLat)),
       lng: pov.lng - dLng,
@@ -1857,8 +1945,13 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     const aika = performance.now();
     const dt = Math.max(1, aika - (vauhti.aika || aika));
     if (vauhti.aika) {
-      vauhti.lat = vauhti.lat * 0.6 + (-dLat / dt) * 0.4;
-      vauhti.lng = vauhti.lng * 0.6 + (-dLng / dt) * 0.4;
+      const rajattu = rajaaVauhti(
+        vauhti.lat * 0.6 + (-dLat / dt) * 0.4,
+        vauhti.lng * 0.6 + (-dLng / dt) * 0.4,
+        pov, { fov: kamera.fov },
+      );
+      vauhti.lat = rajattu.lat;
+      vauhti.lng = rajattu.lng;
     }
     vauhti.aika = aika;
   });
