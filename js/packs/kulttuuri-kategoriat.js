@@ -91527,8 +91527,92 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Nuuk on maailman pohjoisin pääkaupunki ja yksi sen '
         + 'pienimmistä. Isoisän matkavuonna 1873 tässä oli kaksi '
         + 'kylää vierekkäin, ja ne eivät olleet tekemisissä keskenään.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * omistajan 21.8.2026 linjauksen mukaisia laajoja yleiskuvia:
+       * koko niemi ilmasta, värilliset talot rannassa ja kaupunki
+       * lumisen Sermitsiaqin alla.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Nuuk, Greenland skyline aerial view.jpg',
+          selite: 'Ilmasta näkee kerralla koko kaupungin: se on '
+            + 'yhdellä niemellä, ja meri on kolmella puolella.',
+          lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Very colorful houses along coast Nuuk Greenland.jpg',
+          selite: 'Rantakalliolle on ladottu talorivi, jossa jokainen '
+            + 'talo on eri värinen.',
+          lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Nuuk city below Sermitsiaq.JPG',
+          selite: 'Talvella lumen peittämä Sermitsiaq nousee vuonon '
+            + 'takaa koko kaupungin taustaksi.',
+          lahde: 'Oliver Schauf, Wikimedia Commons (PD)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: kolme laajaa yleiskuvaa eri suunnista.
+       * Nuukille ei ole generoitu herokuvia, joten karusellissa on
+       * kolme aitoa valokuvaa (vertaa Fèsiin ja Kapkaupunkiin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'SermitsiaqFromNuuk.jpg',
+          selite: 'Sermitsiaqin huipulle jää kesälläkin pilviholvi, ja '
+            + 'sen alla kaupunki jatkuu kalliolta kalliolle.',
+          lahde: 'Elgaard, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Peak and colorful houses Nuuk Greenland.jpg',
+          selite: 'Vuono kaartaa kaupungin ohi, ja vastarannalla '
+            + 'kohoavat vuoret, joille ei vie tietä.',
+          lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Nuuk (3) (Kenny McFly).jpg',
+          selite: 'Talot päättyvät kaupungin laidalla suoraan '
+            + 'tundraan, jossa kasvaa vain sammalta ja varpua.',
+          lahde: 'Kenny McFly, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: sama vuono, sata kolmekymmentä vuotta. Vanha
+       * puoli on Fridtjof Nansenin retkikunnan kuva Godthåbista
+       * talvelta 1888–89, uusi on nykyvalokuva Nuup Kangerluasta.
+       * Tiedostonimet, vuodet ja lähderivit on kopioitu
+       * js/packs/northamerica-valokuvat.js:n valokuvataulusta, jossa
+       * ne on jo tarkistettu; selitteet on kirjoitettu tänne omiksi
+       * yhden virkkeen versioikseen.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'No-nb bldsa 3b158.jpg',
+          vuosi: '1888–1889',
+          selite: 'Nansenin retkikunnan talvena kajakit lipuivat '
+            + 'rannassa ja vastarannalla näkyi kirkontorni.',
+          lahde: 'Fridtjof Nansen / Norjan kansalliskirjasto, '
+            + 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Nuup Kangerlua and Nuuk (2) (Kenny McFly).jpg',
+          selite: 'Sama vuono nykyään: rannan takana on kerrostaloja '
+            + 'ja niemen kärjessä yhä vanhan kolonian värikäs rykelmä.',
+          lahde: 'Kenny McFly, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
+          /*
+           * KUVATON (Opus 7.9.2026). Saqqaq- ja dorset-kulttuurin
+           * asuinpaikoista Qoornoqissa ja Kangeqissa ei ole
+           * Commonsissa kuvaa, joka täyttäisi kokovaatimuksen ja
+           * jonka voisi todentaa oikeaksi paikaksi. Kuvatilaus on
+           * kirjattu raporttiin.
+           */
           otsikko: 'Niemi, jolla on ollut neljä asukasta',
           teksti: 'Nuuk tarkoittaa grönlanniksi niemeä, ja niemi on '
             + 'ollut asuttu neljä vuosituhatta — mutta ei yhtäjaksoisesti '
@@ -91557,6 +91641,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Egede palasi Tanskaan 1736 ja jätti työn pojalleen '
             + 'Poulille. Nimi vaihtui Nuukiksi vasta 1. toukokuuta '
             + '1979, samana päivänä kun kotihallinto aloitti.',
+          tiedosto: 'Church area in Nuuk (Kenny McFly).jpg',
+          selite: 'Vanhan siirtokunnan ydin on yhä pystyssä: punainen '
+            + 'kirkko ja sen viereiset kolonia-ajan puutalot.',
+          lahde: 'Kenny McFly, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Nuuk',
         },
         {
@@ -91573,9 +91661,22 @@ export const KULTTUURI_KATEGORIAT = {
             + 'päärakennuksen kappelilla. Kaksi lähetystä toimivat eri '
             + 'tavoin ja pysyivät erillisinä asutuksina, kunnes '
             + 'herrnhutilaiset lähtivät maasta 1900.',
+          tiedosto: 'Nuuk (Godthåb), 1878 (8472508779).jpg',
+          selite: 'Akvarelli viiden vuoden päästä isoisän matkasta: '
+            + 'kirkko, muutama talo ja lippu kalliolla — kirjoitus '
+            + '"Godthaab 1878" on tekijän omaa käsialaa.',
+          lahde: 'Nationalmuseet - The National Museum of Denmark '
+            + 'from Denmark, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Old Nuuk',
         },
         {
+          /*
+           * KUVATON (Opus 7.9.2026). Commonsista ei löytynyt kuvaa
+           * Nuukin liikennevaloista, liikenneympyröistä eikä
+           * tunnelista, ja bussikuvat ovat joko alle 1200 px tai
+           * niissä on tunnistettavia kasvoja. Kuvatilaus on
+           * kirjattu raporttiin.
+           */
           otsikko: 'Kolme liikennevaloa eikä yhtään tietä ulos',
           teksti: 'Nuukissa oli vuonna 2017 kahdeksankymmentä '
             + 'kilometriä katua, eikä yksikään tie yhdistä kaupunkia '
@@ -91629,6 +91730,13 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'puun ja koneet ja vie mukanaan pakastetun katkaravun '
                 + 'ja kalan. Arctic Umiaq Line -rannikkolautta käy '
                 + 'Nuukissa kahdesti viikossa suurimman osan vuodesta.',
+              kuva: {
+                tiedosto: 'Nuuk Airport New Terminal.jpg',
+                selite: 'Vuonna 2024 avattu terminaali on ensimmäinen '
+                  + 'Grönlannin lentoasema, jolle laskeutuu suoria '
+                  + 'kaukolentoja.',
+                lahde: 'Ultratweed, Wikimedia Commons (CC0)',
+              },
             },
             {
               otsikko: 'Vuono ja vuoret',
@@ -91644,6 +91752,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'kolmesataa metriä ja jonka ala-asema on aivan '
                 + 'lentoaseman terminaalin vieressä. Kaupungissa on myös '
                 + 'maailman ainoa arktinen golfkenttä.',
+              kuva: {
+                tiedosto: 'Quassussuup Tunua og Sermitsiaq (Kenny McFly).jpg',
+                selite: 'Vuono jatkuu kaupungin takana kilometrikaupalla '
+                  + 'ja kaartuu vuorten väliin.',
+                lahde: 'Kenny McFly, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
               otsikko: 'Kaupunki kolmessa osassa',
@@ -91658,6 +91772,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'muistavat: Blok P, maan suurin asuintalo, jossa oli '
                 + 'noin 320 asuntoa ja jossa asui noin prosentti koko '
                 + 'saaren väestöstä. Se purettiin 19. lokakuuta 2012.',
+              kuva: {
+                tiedosto: 'Cultural Center Nuuk Greenland.jpg',
+                selite: 'Keskustan tunnistaa Katuaqin aaltoilevasta '
+                  + 'puuseinästä, joka nousee suoraan aukion laidalta.',
+                lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+              },
             },
             {
               otsikko: 'Torilla ja hallissa',
@@ -91687,6 +91807,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Joulukuun 21. päivänä aurinko nousee 11.22 ja laskee '
                 + '15.28; kesäkuun 21. päivänä se laskee 1.03 ja nousee '
                 + '3.53, joten yö on pelkkää hämärää.',
+              kuva: {
+                tiedosto: 'Nuuk, Greenland skyline at night under the northern lights (Quintin Soloviev).png',
+                selite: 'Talviyönä revontulet kaartuvat lumisen '
+                  + 'kaupungin yli, ja vasemmalla erottuu katedraali.',
+                lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
           ],
           matkailu: {
@@ -91791,9 +91917,20 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jopa kaukaisten tulivuorenpurkausten tuhkan. Näytteet '
             + 'porataan jäätiköltä, mutta tutkimus, hallinto ja '
             + 'logistiikka ovat täällä rannikolla.',
+          tiedosto: 'The EastGRIP ice core freshly cut.jpg',
+          selite: 'Vastasahatun jääsydämen pinta on kirkas kiekko, '
+            + 'jonka kuplista luetaan menneen ilmakehän koostumus.',
+          lahde: 'Helle Astrid Kjær, Wikimedia Commons (CC BY 4.0)',
           wiki: 'Ice core',
         },
         {
+          /*
+           * KUVATON (Opus 7.9.2026). Isuan vyöhykkeestä on
+           * Commonsissa vain kaksi kuvaa: kartta-kaavio ja
+           * käsinäytepala studiotaustalla, jonka päälle on painettu
+           * mittakaavateksti. Kumpikaan ei täytä kuvasääntöjä.
+           * Kuvatilaus on kirjattu raporttiin.
+           */
           otsikko: 'Kivi, jossa saattaa olla vanhin elämä',
           teksti: 'Nuukin pääkaupunkiseudun lähellä on Isuan '
             + 'viherkivivyöhyke, 3,7–3,8 miljardia vuotta vanhaa '
@@ -91812,6 +91949,12 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Isua Greenstone Belt',
         },
         {
+          /*
+           * KUVATON (Opus 7.9.2026). Ameralikin jännevälistä ei ole
+           * Commonsissa yhtään kuvaa — hakusanat "Ameralik",
+           * "Ameralik span" ja "Buksefjord" eivät palauta
+           * kuvatiedostoja. Kuvatilaus on kirjattu raporttiin.
+           */
           otsikko: 'Sähkölinja, joka hyppää vuonon yli',
           teksti: 'Nuukin sähkö tulee vuodesta 1993 Buksefjordin '
             + 'vesivoimalasta, ja matkalla on maailman pisin '
@@ -91842,6 +91985,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kurssit opetetaan tanskaksi, osa grönlanniksi. '
             + 'Yliopisto on pieni, koska moni grönlantilainen '
             + 'opiskelija lähtee Tanskaan.',
+          tiedosto: 'Ilisimatusarfik - University of Greenland.jpg',
+          selite: 'Ilimmarfikin pitkä puuverhottu rakennus seisoo '
+            + 'tundralla kaupungin pohjoislaidalla.',
+          lahde: 'Vikebe, Wikimedia Commons (CC0)',
           wiki: 'University of Greenland',
         },
       ],
@@ -91900,6 +92047,87 @@ export const KULTTUURI_KATEGORIAT = {
         + 'peräisin ankkuripaikasta, jonka James Cook merkitsi '
         + 'kartalle 1778. Isoisän matkavuonna 1873 tässä ei ollut '
         + 'kaupunkia lainkaan.',
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * omistajan 21.8.2026 linjauksen mukaisia laajoja yleiskuvia:
+       * keskusta ilmasta, sama keskusta talvella vuorten edessä ja
+       * kaupunki illan valossa vuonon takaa.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Anchorage, Alaska skyline.jpg',
+          selite: 'Keskustan tornit ovat pieni saareke, ja niiden '
+            + 'takana Chugachin vuoret sulkevat koko taivaanrannan.',
+          lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Anchorage and Mile High Peak.jpg',
+          selite: 'Talvella jäinen Cook Inlet ja lumiset vuoret '
+            + 'puristavat kaupungin kapeaksi nauhaksi väliinsä.',
+          lahde: 'Luke Jones, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Anchorage on an April evening.jpg',
+          selite: 'Huhtikuun iltavalossa keskusta hehkuu vuonon '
+            + 'takaa katsottuna.',
+          lahde: 'Frank K. from Anchorage, Alaska, USA, '
+            + 'Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: kolme laajaa yleiskuvaa. Anchoragelle ei ole
+       * generoitu herokuvia, joten karusellissa on kolme aitoa
+       * valokuvaa (vertaa Fèsiin ja Kapkaupunkiin).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Anchorage, AK.jpg',
+          selite: 'Talviyönä kaupungin valot heijastuvat vuoroveden '
+            + 'paljastamalta mutatasangolta.',
+          lahde: 'Paxson Woelber, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Anchorage Alaska aerial view.jpg',
+          selite: 'Satama on kaupungin ja Knik Armin välissä: '
+            + 'laiturit, säiliöt ja nostokurjet yhdessä rivissä.',
+          lahde: 'U.S. Army Corps of Engineers, photographer not '
+            + 'specified or unknown, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Turnagain Arm south of Anchorage.jpg',
+          selite: 'Turnagain Armin vuorovesi paljastaa laakean '
+            + 'mutatasangon, jonka takana vuoret nousevat suoraan '
+            + 'vedestä.',
+          lahde: 'Frank K. from Anchorage, Alaska, USA, '
+            + 'Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      /*
+       * ENNEN JA NYT: sama Ship Creek, runsaat sata vuotta.
+       * Vanha puoli on Alberta Pyattin kuva telttakaupungista
+       * 1. heinäkuuta 1915, uusi on nykyvalokuva samasta purosta.
+       * Tiedostonimet, vuodet ja lähderivit on kopioitu
+       * js/packs/northamerica-valokuvat.js:n valokuvataulusta, jossa
+       * ne on jo tarkistettu; selitteet on kirjoitettu tänne omiksi
+       * yhden virkkeen versioikseen.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'Anchorage Alaska 1 July 1915.jpg',
+          vuosi: '1915',
+          selite: 'Ensimmäisenä kesänä koko kaupunki oli telttarivi '
+            + 'Ship Creekin rannalla Chugachin vuorten alla.',
+          lahde: 'Alberta Pyatt / Anchorage Museum, '
+            + 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Ship Creek Fishing - Anchorage.jpg',
+          selite: 'Sama puro nykyään: onkijat seisovat vedessä '
+            + 'muutaman korttelin päässä keskustasta.',
+          lahde: 'Haydn Blackey, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kansa, joka ei rakentanut kylää',
@@ -91915,9 +92143,21 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kulkureittien varrella. Paikan oma nimi on Dgheyay Kaq\', '
             + 'ja puron, jonka rannalta kaupunki alkoi, nimi on '
             + 'Dgheyaytnu.',
+          tiedosto: 'Replica house - Alaska Native Heritage Center Museum.jpg',
+          selite: 'Alaska Native Heritage Centerin pihalle on '
+            + 'rakennettu jäljennöksiä alkuperäiskansojen asumuksista '
+            + 'lankuista ja järeistä pystytolpista.',
+          lahde: 'Harvey Barrison, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Anchorage',
         },
         {
+          /*
+           * KUVATON (Opus 7.9.2026). Cookin vuoden 1778 matkasta
+           * Cook Inletissä ei ole Commonsissa kuvaa, ja Turnagain
+           * Armin panoraama on jo avauskarusellissa — sama
+           * tiedostonimi esiintyy kaupungissa vain kerran.
+           * Kuvatilaus on kirjattu raporttiin.
+           */
           otsikko: 'Kymmenen päivää väärässä vuonossa',
           teksti: 'James Cook etsi Luoteisväylää, ja 15. toukokuuta '
             + '1778 hän kääntyi viikkojen kovan sään jälkeen vuonoon, '
@@ -91934,6 +92174,12 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Anchorage',
         },
         {
+           /*
+            * KUVATON (Opus 7.9.2026). Vuoden 1867 kauppakirjasta ja
+            * Turnagain Armin vuoden 1888 kultalöydöstä on Commonsissa
+            * vain asiakirjaskannauksia, joissa on arkistoleimoja.
+            * Kuvatilaus on kirjattu raporttiin.
+            */
           otsikko: '1873: kaksi senttiä eekkeriltä',
           teksti: 'Kuusi vuotta ennen isoisän matkaa ulkoministeri '
             + 'William H. Seward oli neuvotellut Alaskan ostosta '
@@ -91964,6 +92210,11 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jäätikkösiltille, joka juoksettui pitkässä tärinässä. '
             + 'Turnagainin kaupunginosa menetti 75 taloa maanvyöryyn, '
             + 'ja tuhoutunut alue on nykyään Earthquake Park.',
+          tiedosto: 'Great Alaska Earthquake Fourth Ave Anchorage.jpg',
+          selite: 'Neljäs katu vajosi järistyksessä kokonaisen '
+            + 'kerroksen verran, ja autot jäivät kadunpätkän mukana '
+            + 'alemmalle tasolle.',
+          lahde: 'U.S. Army Corps of Engineers, Wikimedia Commons (PD)',
           wiki: '1964 Alaska earthquake',
         },
       ],
@@ -92021,6 +92272,13 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'Knowles Coastal Trail, ja kaupungin puistot on '
                 + 'kytketty toisiinsa viherkäytävillä, jotka seuraavat '
                 + 'järviä ja puroja.',
+              kuva: {
+                tiedosto: 'Peakthree.jpg',
+                selite: 'Chugachin harjanteella on lunta vielä '
+                  + 'kesäkuussa, ja lumilauta jätetään pystyyn '
+                  + 'nietokseen.',
+                lahde: 'Nathan Searles, Wikimedia Commons (CC BY 2.0)',
+              },
             },
             {
               otsikko: 'Yksitoista kulttuuria järven ympärillä',
@@ -92037,6 +92295,12 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'on ainoa koko osavaltion kattava järjestö, joka '
                 + 'edustaa kaikkia Alaskan alkuperäiskulttuureita, ja '
                 + 'sitä johtavat alkuperäiskansojen omat edustajat.',
+              kuva: {
+                tiedosto: 'Alaska Native Heritage Center across Lake Tiulana.jpg',
+                selite: 'Keskuksen päärakennus on Tiulana-järven '
+                  + 'takana, ja rannalla seisoo valaanluu.',
+                lahde: 'Skvader, Wikimedia Commons (CC BY-SA 4.0)',
+              },
             },
             {
               otsikko: 'Talven suurin juhla',
@@ -92069,6 +92333,13 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'myrsky toi 73 senttiä ja sulki koulut kahdeksi '
                 + 'päiväksi. Valoa on kesäkuussa 19 tuntia ja 21 '
                 + 'minuuttia, joulukuussa 5 tuntia ja 28 minuuttia.',
+              kuva: {
+                tiedosto: 'Anchorage at night.jpg',
+                selite: 'Talvi-iltana valot syttyvät jo kesken '
+                  + 'iltapäivän, ja kaupunki näkyy kauas vuonon yli.',
+                lahde: 'Frank K. from Anchorage, Alaska, USA, '
+                  + 'Wikimedia Commons (CC BY 2.0)',
+              },
             },
           ],
           matkailu: {
@@ -92174,9 +92445,21 @@ export const KULTTUURI_KATEGORIAT = {
             + 'lopettamaan muutaman erityisen aggressiivisen yksilön '
             + 'joka vuosi. Paikalliset pitävät hirvestä etäisyyttä '
             + 'samalla tavalla kuin liikenteestä.',
+          tiedosto: 'Moose and calf in Anchorage, Alaska.jpg',
+          selite: 'Hirvinaaras ja vasa syövät kukkapenkkiä kirkon '
+            + 'seinustalla parkkipaikan laidassa.',
+          lahde: 'Luke Jones, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Anchorage',
         },
         {
+          /*
+           * KUVATON (Opus 7.9.2026). Commonsin Anchoragen
+           * karhukuvista yksikään ei täytä kokovaatimusta ja
+           * samalla esitä karhua kaupunkiympäristössä: tassunjälki
+           * ajotiellä on 480 px, ja muut ovat erämaakuvia, joita ei
+           * voi todentaa Anchoragen alueelle. Kuvatilaus on
+           * kirjattu raporttiin.
+           */
           otsikko: 'Karhuja, joita ei osata laskea',
           teksti: 'Karhuja on kaupungissa paljon, mutta tarkkaa '
             + 'lukua ei ole. Kaupungin oma artikkeli sanoo alueella '
@@ -92193,6 +92476,13 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Bears in Anchorage',
         },
         {
+          /*
+           * KUVATON (Opus 7.9.2026). Ship Creekin paras kalastuskuva
+           * on jo matkakirjan valokuvataulussa ja tämän lehden
+           * ennen–nyt-parin uutena puolena, eikä sama tiedostonimi
+           * esiinny kaupungissa kahdesti. Kuvatilaus on kirjattu
+           * raporttiin.
+           */
           otsikko: 'Puro, jossa nousee kuningaslohi',
           teksti: 'Ship Creek virtaa Chugachin vuorilta Cook '
             + 'Inletiin, ja sen suulla ollut satama antoi kaupungille '
@@ -92222,6 +92512,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'seisovat toisinaan aivan tien vierellä. Kaupungin '
             + 'itäpuolella alkaa Chugach State Park, jonka korkein '
             + 'kohta Bashful Peak on 8 005 jalkaa.',
+          tiedosto: 'Bashful Peak.jpg',
+          selite: 'Bashful Peak on puiston korkein kohta, ja sen '
+            + 'rinteillä on jäätiköitä keskellä kesää.',
+          lahde: 'Paxson Woelber, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Chugach State Park',
         },
       ],
