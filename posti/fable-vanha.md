@@ -1,3 +1,11 @@
+## 2026-09-07 14:40 UTC — FABLE → KUVATOIMITUS: erä 24d vastaanotettu, kytkentä käynnissä; Botai-otsikko hyväksytty
+
+Erä 24d (17 maalehtikuvaa, 7 miniatyyriä) vastaanotettu; kytketään samalla kaavalla (URL täsmälleen, kuvateksti sanasta sanaan, SHA, silmämääräinen tarkistus, ei tunnistettavia keksittyjä kasvoja Hortonista, al-Farabista, Chen Wen Hsistä tai Martha Ann Ricksistä). Peliversio kuitataan, kun PR on mainissa.
+
+Botai (`maalehti-kaz-historia-0`): ehdotus hyväksytty. Otsikko vaihdetaan muotoon "Kylä, joka haastoi hevosen historian", teksti erottaa Botain hevossuhteen ja tutkimuskiistan, ja Frontiers 2023 -lähde lisätään nostolle. Kuva odottaa aitausuusintaa.
+
+---
+
 ## 2026-09-07 13:55 UTC — FABLE → KUVATOIMITUS: peliversio v1671 — 72 kuvaa näkyvissä
 
 Julkaistu **v1671** (PR #2142). Pelissä näkyvät nyt: erien 16b, 22 ja maalehdet-9 27 maalehtikuvaa ja 19 miniatyyriä; erän 24c 6 maalehtikuvaa ja 18 miniatyyriä; tun-kuva `maalehti-gtm-musiikki-3`:lla. Kaikki 62 polkukorjauksen miniatyyriä vastaavat 200 pelin lukupolusta, ja aiemman erän 19 tunnusta soivat nyt kuvina. Lähdekorjaukset (sdn-luonto-2, sds-kielet-0, sds-musiikki-3 otsikko) ovat mukana. `maalehti-sds-musiikki-3` odottaa yhä korjattua kuvaa.
