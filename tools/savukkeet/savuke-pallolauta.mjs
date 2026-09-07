@@ -482,21 +482,121 @@ if (AMPARI_TOIMII) {
       ui.pallolauta.ladoHeti();
       await new Promise((r) => setTimeout(r, 400));
       const kaikki = pallo.pointsData().filter((p) => !p.laji).length;
-      // Napautus kaukaiseen kaupunkiin osuu pisteeseen (R-osuma näkyvistä).
-      const tokio = ui.pallolauta.kaupunki('tokio') ?? ui.pallolauta.kaupunki('lontoo');
+      /*
+       * Napautus kaukaiseen mutta NÄKYVÄÄN kaupunkiin osuu pisteeseen
+       * (R-osuma näkyvistä). Kamera on Ateenan yllä koko pallon
+       * näkymässä, joten Rooma on kameran puolella.
+       *
+       * VIKA v1664: aiemmin tässä napautettiin Tokiota, joka on
+       * Ateenasta katsottuna PALLON TAKANA (93° > horisontin 73°).
+       * Sellaista napautusta ei voi oikeasti tulla — onGlobeClick antaa
+       * vain näkyvän pinnan pisteen — ja juuri takapuolen hyväksyminen
+       * oli vian juurisyy: vastapiste projisoituu samaan ruutupikseliin
+       * kuin napautettu piste, joten napautus Japanin kohdalla vei
+       * pelaajan Etelä-Amerikkaan. Nyt sama napautus on VARTIO: sen ei
+       * saa liikuttaa mitään.
+       */
+      const nakyva = ui.pallolauta.kaupunki('rooma') ?? ui.pallolauta.kaupunki('lontoo');
       let siirto = null;
       ui.doKehittajaSiirto = (city) => { siirto = city.id; };
-      pallo.onGlobeClick()({ lat: tokio.lat, lng: tokio.lon });
+      pallo.onGlobeClick()({ lat: nakyva.lat, lng: nakyva.lon });
       asetaKehittajaMaailma(false);
       ui.kehittajaMaailma = false;
       ui.render();
       ui.pallolauta.ladoHeti();
       await new Promise((r) => setTimeout(r, 400));
-      return { kaikki, siirto, jalkeen: pallo.pointsData().filter((p) => !p.laji).length, kaupunki: tokio.id };
+      return {
+        kaikki, siirto, kaupunki: nakyva.id,
+        jalkeen: pallo.pointsData().filter((p) => !p.laji).length,
+      };
     });
     vaadi('15. kehittäjän maailmanäkymä pallolla: kaikki 261 kaupunkia pisteinä ja napautettavia (kehittäjäsiirto), pois kytkettynä vain nimetyt',
       maailma.kaikki === 261 && maailma.siirto === maailma.kaupunki && maailma.jalkeen < 261,
       JSON.stringify(maailma));
+    /*
+     * 15b. VIKA v1664 -VARTIO: napautus ei koskaan valitse pallon
+     * takapuolen merkkiä (omistaja 7.9.2026: *"klikkasin Japanin
+     * kohdalla jotain kohdetta ja se lensikin Etelä-Amerikkaan"*).
+     *
+     * Perspektiivissä sormen säde leikkaa pallon kahdesti, ja
+     * vastapiste projisoituu samaan ruutupikseliin kuin napautettu
+     * piste — mitattu kamera Japanin yllä: Tokio 9,3 px, mutta Porto
+     * Alegre 64,1 px, Montevideo 73,7 px ja Rio 75,7 px, kaikki takana.
+     * Vartio napauttaa ruudukon yli koko kotelon ja vaatii, että
+     * jokainen valittu kaupunki on kameran puolella. `ennenKorjausta`
+     * on sama laskenta ilman suodatusta: se kertoo, montako napautusta
+     * osui takapuolelle ennen v1664:n korjausta.
+     */
+    const takapuoli = await sivu.evaluate(async () => {
+      const { ui } = window.matkakirja;
+      const pallo = ui.pallonInstanssi;
+      const kotelo = ui.pallolauta.kotelo;
+      const { asetaKehittajaMaailma } = await import('./js/ui-apurit.js');
+      const { pinnanPiste } = await import('./js/pallolaatat.js');
+      // Kamera Japanin ylle: vastapiste on Etelä-Amerikan yllä.
+      pallo.pointOfView({ lat: 36, lng: 140, altitude: 0.6 }, 0);
+      await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+      asetaKehittajaMaailma(true);
+      ui.kehittajaMaailma = true;
+      ui.render();
+      ui.pallolauta.ladoHeti();
+      await new Promise((r) => setTimeout(r, 400));
+      const W = kotelo.clientWidth;
+      const H = kotelo.clientHeight;
+      const R = pallo.getGlobeRadius();
+      const k = pallo.camera().position;
+      const edessa = (lat, lng) => {
+        const q = pallo.getCoords(lat, lng, 0);
+        return (k.x - q.x) * q.x + (k.y - q.y) * q.y + (k.z - q.z) * q.z > 0;
+      };
+      const kaupungit = [];
+      for (const c of ui.game.board.cities ?? []) {
+        const a = ui.pallolauta.asteet({ x: c.x, y: c.y });
+        if (a) kaupungit.push({ id: c.id, lat: a.lat, lng: a.lon });
+      }
+      let napautuksia = 0;
+      const takanaValittu = [];
+      let ennenKorjausta = 0;
+      for (let iy = 1; iy < 8; iy += 1) {
+        for (let ix = 1; ix < 6; ix += 1) {
+          const x = (W * ix) / 6;
+          const y = (H * iy) / 8;
+          const piste = pinnanPiste(pallo.camera(), x, y, W, H, R);
+          if (!piste) continue;
+          napautuksia += 1;
+          // Sama osumatesti ilman suodatusta = tila ennen korjausta.
+          const kohta = pallo.getScreenCoords(piste.lat, piste.lng, 0);
+          let paras = null;
+          let parasMatka = 44;
+          for (const c of kaupungit) {
+            const pp = pallo.getScreenCoords(c.lat, c.lng, 0);
+            if (!pp || !Number.isFinite(pp.x)) continue;
+            const d = Math.hypot(pp.x - kohta.x, pp.y - kohta.y);
+            if (d < parasMatka) { parasMatka = d; paras = c; }
+          }
+          if (paras && !edessa(paras.lat, paras.lng)) ennenKorjausta += 1;
+          // Pelin oma napautus: valittu kaupunki on aina edessä.
+          let valittu = null;
+          ui.doKehittajaSiirto = (city) => { valittu = city.id; };
+          pallo.onGlobeClick()({ lat: piste.lat, lng: piste.lng });
+          if (valittu) {
+            const c = kaupungit.find((v) => v.id === valittu);
+            if (c && !edessa(c.lat, c.lng)) takanaValittu.push(valittu);
+          }
+        }
+      }
+      delete ui.doKehittajaSiirto;
+      asetaKehittajaMaailma(false);
+      ui.kehittajaMaailma = false;
+      ui.render();
+      ui.pallolauta.ladoHeti();
+      return { napautuksia, takanaValittu, ennenKorjausta };
+    });
+    vaadi('15b. napautus ei valitse pallon takapuolen merkkiä (vika v1664)',
+      takapuoli.napautuksia >= 20 && takapuoli.takanaValittu.length === 0,
+      JSON.stringify(takapuoli));
+    tieto('takapuolen napautukset: ruudukon napautuksia / takapuolelle ennen korjausta',
+      `${takapuoli.napautuksia} / ${takapuoli.ennenKorjausta}`);
     // Kehittäjäsiirto palautetaan aitoon toteutukseen uudelleenlatauksella
     // seuraavissa vartioissa ei tarvita sitä; kamera takaisin Ateenaan.
     await sivu.evaluate(async () => {

@@ -3192,3 +3192,133 @@ ohitukseen**: ne tulostavat yhden `OHITUS`-rivin ja päättyvät koodilla 0.
 Perustelu, lista ja paluuohje: `tools/savukkeet/vanha-kartta-ohitus.mjs`
 ja `tools/savukkeet/README.md`. Poikkeukset (uudet vartiot, `--lauta`-vipu
 pallolle) on lueteltu README:ssä.
+
+### 10.5 v1664:n vika — kartta räpsii ja lennähtää (Opus 7.9.2026)
+
+Omistajan vikailmoitus 7.9.2026 aamu, sanatarkasti:
+
+> "Kartta räpsii panoroitaessa ja varsinkin zoomatessa äkkiä sekoaa ja
+> lennähtää ihan eri paikkaan. Suht samanlainen käytös selaimella ja
+> iOS-apin kautta."
+
+> "Kartta saattaa lennähtää myös aivan eri maahan, jos klikkaan jotain
+> karttanostoa. Äsken klikkasin Japanin kohdalla jotain kohdetta ja se
+> lensikin Etelä-Amerikkaan."
+
+Kaksi erillistä juurisyytä, molemmat mitattuja. Mittausteline:
+Playwright + `/opt/pw-browsers/chromium`, puhelinkoko 390 × 844,
+tallenne Fogg Ateenassa, ämpäri Noden fetchillä, palvelutyöntekijä
+estetty. Kontin ohjelmistorasteroija ei kelpaa kehysaikoihin, mutta
+kaikki alla olevat luvut ovat geometriaa ja JS-tilaa, eivät kehysaikoja.
+
+#### 1. Räpsintä: pinnan lukema oli kahdesta eri hetkestä
+
+`pinnanPiste` (js/pallolaatat.js, tuli v1653:ssa kirjaston
+`toGlobeCoords`in tilalle) rakensi säteen **suunnan** kameran
+`matrixWorld`ista (`unproject`) mutta **origon** kameran `position`ista.
+Ne eivät ole sormivedon aikana samasta hetkestä: `pointOfView` siirtää
+kameran paikan heti, kun taas suunnan (lookAt pallon keskipisteeseen)
+päivittää OrbitControls vasta seuraavassa piirrossa. Jokainen
+pointermove, joka osuu kahden piirron väliin, luki siis tuoreen paikan
+ja vanhan suunnan — iPhonella joka toinen (120 Hz syöte, 60 Hz piirto).
+
+Mitattu ennen korjausta: kun kamera oli juuri siirretty 10° itään,
+ruudun keskipiste luki **13,558°** eikä 10°. Kahdeksan yhtä suurta 8
+px:n sormiaskelta siirsivät karttaa 0,1941° / 0,1261° / 0,1499° /
+0,1415° / 0,1444° / 0,1433° / 0,1437° / 0,1435° — **sahaus 1,54×**
+(suurin / pienin). Se on omistajan "räpsintä": kartta ei kulje sormen
+tahdissa vaan nykii joka toisella syötteellä. Kirjaston vanha
+`toGlobeCoords` ei sahannut, koska three.js:n `Raycaster.setFromCamera`
+ottaa myös origon matriisista — lukema oli yhden kehyksen vanha mutta
+itsensä kanssa yhtenäinen. `camera.updateMatrixWorld()` EI korjaa tätä
+(kokeiltu, sama 13,558°): vanhentunut osa on kameran kvaternio, jonka
+OrbitControls asettaa vasta `update()`issa.
+
+Korjaus: säde rakennetaan pelkästä kameran paikasta ja linssistä samalla
+kaavalla kuin laattakerroksen näytteet (`laattakerroksenOsuma`). Se on
+aina itsensä kanssa yhtenäinen, koska Globe.gl pakottaa OrbitControlsin
+tähtäyspisteen pallon keskipisteeseen (`i.target.setScalar(0)` sen omassa
+`change`-kuuntelijassa) eikä kameralla ole kallistusta. Mitattu
+korjauksen jälkeen: sama 10°:n siirto luetaan **10,000°**, ja samat
+kahdeksan askelta ovat 0,1941…0,1947° — **sahaus 1,003×**.
+
+Sama korjaus koskee vektorikerrosta, joka lukee pinnan samasta
+funktiosta; se luki tähän asti piirtokoukusta, jossa matriisit ovat
+tuoreet, joten sen kuva ei muutu.
+
+#### 2. Lennähdys: pallon takapuoli otti napautuksia
+
+`getScreenCoords` projisoi myös pallon takapuolen pisteet ruudulle, ja
+perspektiivissä sormen säde leikkaa pallon kahdesti: napautettu piste
+edessä ja sen vastapiste takana projisoituvat samaan ruutupikseliin.
+Napautuksen osumatesti (`lahin`, js/pallolauta/lauta.js) mittasi pelkkää
+ruutuetäisyyttä 44 px:n säteellä, joten vastapisteen seutu voitti
+kilpailun. `lahinLinssimerkki` suodatti jo `edessa`llä, mutta
+`lahinKohde` (nopanheiton kohteet → `doMove`) ja `lahinMerkki`
+(kaupungit ja nostot) eivät.
+
+Mitattu: kamera Japanin yllä (36° N, 140° I, korkeus 0,6), napautus
+ruudun keskellä. Lähimmät kaupungit ruutupikseleinä:
+
+| Kaupunki | Etäisyys napautuksesta | Pallon puoli |
+| --- | --- | --- |
+| Tokio | 9,3 px | edessä |
+| **Porto Alegre** | **64,1 px** | **takana** |
+| **Montevideo** | **73,7 px** | **takana** |
+| **Rio de Janeiro** | **75,7 px** | **takana** |
+| **Buenos Aires** | **83,9 px** | **takana** |
+| Kioto | 125,8 px | edessä |
+
+Japanin rannikolla noin 50 px sivussa Tokiosta napautus osui siis
+Etelä-Amerikkaan, ja `doMove` vei nappulan sinne — täsmälleen omistajan
+kuvaama oire. Korjaus: osumatesti hyväksyy vain kameran puolella olevat
+merkit (`pisteEdessa`, puhdas kaava `(kamera − piste) · piste > 0`), ja
+suodatus on `lahin`issa itsessään, joten se koskee kaupunkeja, nostoja
+ja kohteita yhtä lailla.
+
+#### 3. Vartio: kartta ei hyppää ilman pelaajan elettä
+
+Sormivedon siirto on kahden pinnanlukeman **rajaton** erotus. Vaikka
+lukija on nyt yhtenäinen, yksikin virheellinen lukema (napaklampin
+±89,5° jälkeen erotus ei enää suppene, katkennut ele, NaN) veisi kartan
+toiselle mantereelle — ja jäisi vielä liu'un nopeudeksi, jolloin
+lennähdys jatkuisi sormen irrottua. Kaksi puhdasta, testattua kattoa
+(js/pallo.js):
+
+- `vedonSiirto` — yksi pointermove ei käännä palloa yli yhden näkyvän
+  ruudullisen (`VEDON_KATTO_RUUTUA` 1). Sen yli menevä lukema hylätään
+  kokonaan; kartta jää paikalleen ja seuraava lukema on taas kelvollinen.
+- `rajaaVauhti` — liuku ei vie näkyvää ruutua nopeammin kuin
+  `VAUHDIN_KATTO_MS`:ssä (250 ms), suunta säilyttäen.
+
+Katot eivät kosketa tavallista vetoa: mitattu 8 px:n sormiaskel
+korkeudella 0,35 siirtää karttaa 0,194°, ja katto on 18,7° — sadasosa.
+Myöskään nopein aito heitto (koko ruudun poikki yhdellä pointermovella,
+kun selain pudottaa väliltä tapahtumia) ei osu kattoon: pystyruudulla se
+on noin 0,5 kaistaa.
+
+#### 4. Mitä tutkittiin ja mikä osoittautui syyttömäksi
+
+- **Zoom (nipistys ja ctrl+rulla).** Mitattu kehyksittäin lat, lng,
+  korkeus, `controls.target`in etäisyys origosta ja kameran poikkeama
+  keskiakselilta, nipistys sekä ruudun keskellä että kulmassa (85 % /
+  15 %) korkeuksilla 0,35 ja 0,09: `target` pysyi tasan nollassa,
+  poikkeama tasan nollassa, ei yhtään kameran hyppyä, laattataso vaihtui
+  monotonisesti 6 → 7. Globe.gl:n `zoomToCursor` on siis vaaraton: sen
+  siirtämä tähtäyspiste palautetaan origoon joka `change`issä. Ensimmäinen
+  17-kertainen korkeushyppy oli mittaustelineen oma virhe (kaksi
+  kosketuspistettä meni ristiin, jolloin niiden etäisyys kävi nollassa).
+- **Laattakerroksen ennakkoalue ja pito (v1657).** Panoroinnissa ja
+  heilurissa scenen laattamäärä ei sahannut kertaakaan (suunnanvaihdot 0,
+  purkuja 0, `jumissa` 0), ja zoomin tasosarja on sama v1652:lla kuin
+  v1664:llä. Ennakkoalue ei siis räpsi.
+- **PALLOLAUDAN_LAHIN_LEVEYS 60 (v1657).** `minDistance` 106,94,
+  `maxDistance` 350, `korkeusMin` 0,0694 — ei NaN:ia, ei ristiriitaa
+  OrbitControlsin kanssa. Syvempi zoom kuitenkin PAHENTAA kohtaa 2:
+  mitä lähempänä kamera on, sitä tiukemmalle vastapisteen seutu
+  puristuu ruudun keskelle.
+- **Horisontin herkkyys.** Ennen korjausta mitattu 0,97°/px oli itse
+  kohdan 1 virhe, ei geometriaa: puhelimen pystyruudulla pallo täyttää
+  ruudun koko pallolaudan korkeusalueella (0,1…2,5), joten horisonttia ei
+  edes näy. Korjauksen jälkeen ruudun reunimmainen pikseli on 1,0–1,6×
+  keskipikseliä herkempi.

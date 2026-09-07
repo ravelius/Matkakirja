@@ -23,9 +23,10 @@ import {
 // Työpöytäselaimen rulla: kaksi sormea panoroi, cmd zoomaa (omistaja 5.9.2026).
 import {
   PANOROINNIN_HERKKYYS, PANOROINNIN_KOHTISUORA_RAJA, PANOROINNIN_LEVEYSRAJA, RULLAN_LIUKU_MS,
-  RULLAN_RIVI_PX, RULLAN_SIVU_PX, RULLAN_SUORA_RAJA, rullanAskel,
+  RULLAN_RIVI_PX, RULLAN_SIVU_PX, RULLAN_SUORA_RAJA, VAUHDIN_KATTO_MS, VEDON_KATTO_RUUTUA,
+  nakyvaKaista, rajaaVauhti, rullanAskel, vedonSiirto,
 } from '../js/pallo.js';
-import { OSOITTIMEN_JALKIVIIVE_MS } from '../js/pallolauta/lauta.js';
+import { OSOITTIMEN_JALKIVIIVE_MS, pisteEdessa } from '../js/pallolauta/lauta.js';
 import {
   PALLON_TURVATILAN_RAJA, PALLON_TURVATILAN_UNOHDUS_MS, nollaaPallonKaatumiset, palloKaatui,
   palloTurvatilassa, pallonKaatumiset,
@@ -827,4 +828,107 @@ test('pallon poltto: osat rinnakkain, vienti rinnakkain, ei yhtä prosessia', ()
   const wf = lue('../.github/workflows/polta-macilla.yml');
   assert.match(wf, /Jokainen poltto jaetaan shardeihin kaikille ytimille/);
   assert.match(wf, /pallo \(vain pallon Mercator-sarja/, 'sarjat-syötteestä puuttuu pallo');
+});
+
+/*
+ * ======== VIKA v1664: KARTTA EI HYPPÄÄ ILMAN PELAAJAN ELETTÄ =========
+ *
+ * Omistaja 7.9.2026 aamu, sanatarkasti: *"Kartta räpsii panoroitaessa
+ * ja varsinkin zoomatessa äkkiä sekoaa ja lennähtää ihan eri
+ * paikkaan."* ja *"Kartta saattaa lennähtää myös aivan eri maahan, jos
+ * klikkaan jotain karttanostoa. Äsken klikkasin Japanin kohdalla jotain
+ * kohdetta ja se lensikin Etelä-Amerikkaan."*
+ *
+ * Räpsinnän juurisyy oli pinnanlukija (pinnanPiste, oma testinsä
+ * tests/pallolaatat.test.mjs:ssä). Nämä testit vartioivat KATTOJA,
+ * jotka pitävät omistajan säännön voimassa senkin jälkeen: sormivedon
+ * siirto on kahden pinnanlukeman rajaton erotus, ja yksikin
+ * virheellinen lukema (napaklampin ±89,5° jälkeen erotus ei suppene,
+ * NaN, katkennut ele) veisi kartan toiselle mantereelle — ja jäisi
+ * vielä liu'un nopeudeksi. Mitattu tavallinen 8 px:n sormiaskel on
+ * 0,194° eli katosta (18,7° = yksi ruudullinen) sadasosa.
+ */
+
+test('vika v1664: yksi pointermove ei käännä palloa yli ruudullista', () => {
+  const pov = { lat: 38, lng: 24, altitude: 0.35 };
+  const kaista = nakyvaKaista(pov.altitude);
+  // Kaista korkeudella 0,35 fov 50: 0,35 · 2 · tan 25° · 180/π.
+  assert.ok(Math.abs(kaista - 18.7) < 0.2, `kaista ${kaista}`);
+
+  // Tavallinen sormiaskel menee läpi muuttumattomana (8 px ≈ 0,19°).
+  const tavallinen = vedonSiirto(pov, { lat: 38, lng: 24 }, { lat: 38.05, lng: 24.19 });
+  assert.ok(tavallinen, 'tavallinen veto hylättiin');
+  assert.ok(Math.abs(tavallinen.dLat - 0.05) < 1e-9);
+  assert.ok(Math.abs(tavallinen.dLng - 0.19) < 1e-9);
+
+  // Yli VEDON_KATTO_RUUTUA kaistasta ei voi olla sormen liike → ei siirtoa.
+  assert.equal(VEDON_KATTO_RUUTUA, 1);
+  const raja = VEDON_KATTO_RUUTUA * kaista;
+  assert.equal(vedonSiirto(pov, { lat: 38, lng: 24 }, { lat: 38, lng: 24 + raja * 2 }), null,
+    'reunalta luettu jättiaskel pääsi läpi');
+  assert.ok(vedonSiirto(pov, { lat: 38, lng: 24 }, { lat: 38, lng: 24 + raja * 0.9 }),
+    'katon alle jäävä askel ei saa hylätä');
+
+  // Pituusaste kiertyy lyhintä kautta antimeridiaanin yli.
+  const sauma = vedonSiirto({ lat: 0, lng: 179.9, altitude: 2.5 },
+    { lat: 0, lng: 179.9 }, { lat: 0, lng: -179.9 });
+  assert.ok(sauma && Math.abs(sauma.dLng - 0.2) < 1e-9, `sauma ${sauma?.dLng}`);
+
+  // Navoilla pituusasteet kapenevat: sama ruutumatka on enemmän asteita.
+  const napa = { lat: 85, lng: 0, altitude: 0.35 };
+  assert.ok(vedonSiirto(napa, { lat: 85, lng: 0 }, { lat: 85, lng: 60 }),
+    'kohtisuora matka 85°:ssa on 60° · cos 85° ≈ 5,2° eli katon alla');
+
+  // Kelvottomat luvut eivät koskaan tuota siirtoa.
+  assert.equal(vedonSiirto(pov, null, { lat: 1, lng: 1 }), null);
+  assert.equal(vedonSiirto(pov, { lat: 38, lng: 24 }, { lat: NaN, lng: 1 }), null);
+  assert.equal(vedonSiirto(null, { lat: 0, lng: 0 }, { lat: 0, lng: 0 }), null);
+});
+
+test('vika v1664: liuku ei vie näkyvää ruutua neljäsosasekuntia nopeammin', () => {
+  const pov = { lat: 0, lng: 0, altitude: 0.35 };
+  const katto = nakyvaKaista(pov.altitude) / VAUHDIN_KATTO_MS;
+  assert.equal(VAUHDIN_KATTO_MS, 250);
+  // Tavallinen liuku (Google Earth -veto) jää katon alle koskematta.
+  const tavallinen = rajaaVauhti(0.002, 0.004, pov);
+  assert.equal(tavallinen.lat, 0.002);
+  assert.equal(tavallinen.lng, 0.004);
+  // Piikki katkaistaan suunta säilyttäen.
+  const piikki = rajaaVauhti(0, 5, pov);
+  assert.ok(Math.abs(piikki.lng - katto) < 1e-12, `${piikki.lng} ≠ ${katto}`);
+  assert.equal(piikki.lat, 0);
+  const vino = rajaaVauhti(3, 4, pov);
+  assert.ok(Math.abs(Math.hypot(vino.lat, vino.lng) - katto) < 1e-12, 'katko ei säilyttänyt pituutta');
+  assert.ok(Math.abs(vino.lat / vino.lng - 3 / 4) < 1e-12, 'katko käänsi suuntaa');
+  // Ei-luvut nollataan, ettei NaN pääse kameraan.
+  assert.deepEqual(rajaaVauhti(NaN, 1, pov), { lat: 0, lng: 0 });
+});
+
+test('vika v1664: pallon takapuolen merkki ei ota napautusta', () => {
+  const lauta = readFileSync(new URL('../js/pallolauta/lauta.js', import.meta.url), 'utf8');
+  // Osumatesti suodattaa itse, ei vain linssimerkeissä.
+  assert.match(lauta, /const lahin = \(lat, lng, ehdokkaat, latOf, lngOf\) => \{[\s\S]{0,240}?if \(!edessa\(latOf\(e\), lngOf\(e\)\)\) continue;/);
+
+  /*
+   * Kamera Japanin yllä (36° N, 140° I, korkeus 0,6, säde 100). Tokio on
+   * edessä, Rio de Janeiro pallon takana — mutta perspektiivissä sen
+   * projektio oli mitattuna 75,7 px napautuskohdasta eli 44 px:n
+   * osumasäteen ulottuvilla. Puhdas kaava erottaa ne.
+   */
+  const RAD = Math.PI / 180;
+  const piste = (lat, lng, sade = 100) => ({
+    x: sade * Math.cos(lat * RAD) * Math.sin(lng * RAD),
+    y: sade * Math.sin(lat * RAD),
+    z: sade * Math.cos(lat * RAD) * Math.cos(lng * RAD),
+  });
+  const kamera = piste(36, 140, 160);
+  assert.equal(pisteEdessa(kamera, piste(35.7, 139.7)), true, 'Tokio on kameran puolella');
+  assert.equal(pisteEdessa(kamera, piste(-22.7, -43.4)), false, 'Rio on pallon takana');
+  assert.equal(pisteEdessa(kamera, piste(-36, -40)), false, 'vastapiste on aina takana');
+  // Horisontti itse on raja: sen sisäpuoli näkyy, ulkopuoli ei.
+  const horisontti = Math.acos(100 / 160) / RAD;
+  assert.equal(pisteEdessa(kamera, piste(36 - horisontti + 0.5, 140)), true);
+  assert.equal(pisteEdessa(kamera, piste(36 - horisontti - 0.5, 140)), false);
+  assert.equal(pisteEdessa(null, piste(0, 0)), false);
+  assert.equal(pisteEdessa(kamera, null), false);
 });

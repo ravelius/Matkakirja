@@ -133,7 +133,37 @@ export function pallonPiste(lat, lng, sade = 100) {
  * 49 näytteeltä. Palauttaa { lat, lng } tai null, jos säde menee pallon
  * ohi (ruudun kulma taivaalla).
  *
- * @param {object} kamera kirjaston kamera (unproject ja position)
+ * ── SÄDE LASKETAAN KAMERAN PAIKASTA, EI SEN MATRIISISTA ────────────
+ * (vika v1664: *"Kartta räpsii panoroitaessa"*, mitattu 7.9.2026)
+ *
+ * Ensimmäinen toteutus (v1653) otti säteen suunnan `unproject`illa,
+ * joka lukee kameran `matrixWorld`in — mutta origon `kamera.position`
+ * ista. Ne EIVÄT ole samasta hetkestä: `pointOfView` siirtää kameran
+ * paikan HETI, kun taas suunnan (lookAt origoon) päivittää OrbitControls
+ * vasta seuraavassa piirrossa. Sormivedon aikana kameran paikka on siis
+ * tuore ja suunta vanha, ja lukema on väärä kaikilla niillä
+ * pointermoveilla, jotka osuvat kahden piirron väliin — iPhonella niitä
+ * on joka toinen (120 Hz syöte, 60 Hz piirto).
+ *
+ * Mitattu (puhelin 390 × 844, Chromium, 7.9.2026): kun kamera oli juuri
+ * siirretty 10° itään, ruudun keski luki **13,558°** eikä 10°. Kahdeksan
+ * yhtä suurta 8 px:n sormiaskelta siirsivät karttaa
+ * 0,1941° / 0,1261° / 0,1499° / 0,1415° / 0,1444° / 0,1433° / 0,1437° /
+ * 0,1435° — sahaus **1,54×** (suurin / pienin). Juuri se on räpsintä:
+ * kartta ei kulje sormen tahdissa vaan nykii joka toisella syötteellä.
+ * Kirjaston vanha `toGlobeCoords` ei sahannut, koska three.js:n
+ * `Raycaster.setFromCamera` ottaa MYÖS origon matriisista: lukema oli
+ * yhden kehyksen vanha mutta itsensä kanssa yhtenäinen.
+ *
+ * Korjaus: säde rakennetaan pelkästä kameran paikasta (`position`) ja
+ * linssistä samalla kaavalla kuin laattakerroksen näytteet
+ * (laattakerroksenOsuma). Se on aina itsensä kanssa yhtenäinen, koska
+ * OrbitControlsin tähtäyspiste on kirjaston pakottamana pallon
+ * keskipiste eikä kameralla ole kallistusta. Mitattu korjauksen
+ * jälkeen: sama 10°:n siirto luetaan 10,000°, ja samat kahdeksan
+ * askelta ovat 0,1941…0,1947° — sahaus 1,003× (oli 1,54×).
+ *
+ * @param {object} kamera kirjaston kamera (position ja fov)
  * @param {number} x ruudun x css-pikseleinä kotelon vasemmasta reunasta
  * @param {number} y ruudun y css-pikseleinä kotelon yläreunasta
  * @param {number} W kotelon leveys css-pikseleinä
@@ -143,20 +173,16 @@ export function pallonPiste(lat, lng, sade = 100) {
 export function pinnanPiste(kamera, x, y, W, H, R) {
   const o = kamera?.position;
   if (!o || !(W > 0) || !(H > 0) || !(R > 0)) return null;
-  const V3 = o.constructor;
-  const piste = new V3((2 * x) / W - 1, 1 - (2 * y) / H, 0.5).unproject(kamera);
-  const d = piste.sub(o).normalize();
-  const b = o.dot(d);
-  const c = o.dot(o) - R * R;
-  const disc = b * b - c;
-  if (disc < 0) return null;
-  const t = -b - Math.sqrt(disc);
-  if (t < 0) return null;
-  const q = o.clone().add(d.multiplyScalar(t));
-  return {
-    lat: Math.asin(Math.max(-1, Math.min(1, q.y / R))) / RAD,
-    lng: Math.atan2(q.x, q.z) / RAD,
+  const pituus = Math.hypot(o.x, o.y, o.z);
+  if (!(pituus > R)) return null;
+  const pov = {
+    lat: Math.asin(Math.max(-1, Math.min(1, o.y / pituus))) / RAD,
+    lng: Math.atan2(o.x, o.z) / RAD,
+    altitude: pituus / R - 1,
   };
+  const fov = Number.isFinite(kamera.fov) && kamera.fov > 0 ? kamera.fov : 50;
+  return laattakerroksenOsuma(pov, (2 * x) / W - 1, 1 - (2 * y) / H,
+    { fov, kuvasuhde: W / H, sade: R });
 }
 
 /**
