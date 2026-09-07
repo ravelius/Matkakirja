@@ -11992,6 +11992,129 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Rautatieasema', lat: 43.64444444, lon: -79.38027778 },
     ],
   },
+  /*
+   * CHICAGO (7.9.2026). Rajaus on 2,98 × 2,72 kilometriä eli Loopin
+   * ympärys kolmelta suunnalta — perustelu ja itäreunan valinta ovat
+   * tools/piirra-kaupunkikartta.mjs:n chicago-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * villisipulin nimi ja du Sable, vuoden 1871 suurpalo ja vesitorni,
+   * Home Insurance Building ja teräsrunko, Union Stock Yards,
+   * Home Insurance Buildingin purku, Chicago-ikkuna ja Rookery,
+   * joen kääntö, vuoden 1893 maailmannäyttely, Fort Dearborn,
+   * Chicago Portage, vuoden 1833 sopimus ja American Indian Center;
+   * matkaopas kertoo lisäksi kohoradasta, Loopista, Millennium
+   * Parkista ja arkkitehtuuriristeilystä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Vesitorni,
+   * Rookery, Home Insurance Buildingin tontti ja Millennium Park
+   * mahtuisivat kaikki ruutuun (faktapohja-chicago.md, osio 4 antaa
+   * niille koordinaatit), mutta ne ovat lehden omien nostojen aihe.
+   * Samasta syystä kartalla ei ole Wrigley Buildingia, Marina Cityä,
+   * Buckinghamin suihkulähdettä eikä Chicago Board of Traden taloa:
+   * ne ovat lehden kuvien aiheita.
+   *
+   * MONADNOCK BUILDING PUDOTETTIIN 200 METRIN SÄÄNNÖN RAJALTA: se on
+   * 229 metriä Marquette Buildingista eli juuri ja juuri säännön
+   * oikealla puolella, mutta niin lähellä, että kaksi numeroympyrää
+   * asettuisi vierekkäin samaan kortteliin.
+   *
+   * MUUT LOOPIN TALOT JÄIVÄT POIS AIHEIDEN VUOKSI EIKÄ ETÄISYYDEN.
+   * Chicago Union Station, Auditorium Building ja Reliance Building
+   * mahtuvat kaikki ruutuun, mutta kartalla on tilaa kahdeksalle
+   * kohteelle, ja kolme pilvenpiirtäjää lisää olisi kaventanut
+   * aiheiden kirjoa — nyt mukana on kauppa, työväenliike, elokuva,
+   * kirjasto, taide, arkkitehtuuri, korkeus ja sosiaalityö.
+   */
+  chicago: {
+    polku: 'assets/kartat/chicago-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 41.8915, etela: 41.8670, lansi: -87.6530, ita: -87.6170 },
+    esittely: 'Kartta näyttää Loopin ja sen laidat: yläreunassa '
+      + 'Chicago-joen haarat kohtaavat, keskellä on kohoradan '
+      + 'silmukan rajaama ruutukaava, oikeassa reunassa alkaa Grant '
+      + 'Parkin nurmi järveä kohti ja vasemmassa alakulmassa ovat '
+      + 'Near West Siden korttelit joen länsipuolella. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Halifaxissa ja Wellingtonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 277 metriä
+       * (Chicago Theatre – kulttuurikeskus), toiseksi pienin 480
+       * metriä (Marquette Building – Willis Tower).
+       */
+      { nimi: 'Merchandise Mart', lat: 41.8884, lon: -87.6355 },
+      { nimi: 'Chicago Theatre', lat: 41.88527778, lon: -87.62777778 },
+      { nimi: 'Haymarketin aukio', lat: 41.88488889, lon: -87.64413889 },
+      { nimi: 'Kulttuurikeskus', lat: 41.88388889, lon: -87.625 },
+      { nimi: 'Marquette Building', lat: 41.8795, lon: -87.63006944 },
+      { nimi: 'Taideinstituutti', lat: 41.87944444, lon: -87.62388889 },
+      { nimi: 'Willis Tower', lat: 41.8789, lon: -87.6358 },
+      { nimi: 'Hull House', lat: 41.87166667, lon: -87.6475 },
+    ],
+  },
+  /*
+   * LOS ANGELES (7.9.2026). Rajaus on 2,26 × 2,50 kilometriä eli
+   * keskustan kortteliruudukko Bunker Hillistä Broadwaylle —
+   * perustelu on tools/piirra-kaupunkikartta.mjs:n losangeles-
+   * lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat vuoden
+   * 1781 pueblo ja Zanja Madre, Pico House, rautatie ja öljy,
+   * akvedukti, vuoden 1815 tulva ja vanha plaza, San Pedron satama,
+   * Hollywood, maanjäristykset, tongvat ja Yaanga, pyhät lähteet,
+   * tongvien hallinto ja Mission San Gabriel; matkaopas kertoo
+   * lisäksi Union Stationista, Olvera Streetistä, Ávila-adobesta,
+   * Bradbury Buildingista, Griffithin observatoriosta ja Venicestä,
+   * ja kuvatekstit Watts Towersista, Getty Centeristä ja Coliseumin
+   * olympialaisista. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * PLAZAN KORTTELI JÄTETTIIN KOKONAAN POIS. El Pueblo, Ávila-adobe,
+   * Pico House, plazan kirkko ja Olvera Street ovat kaikki noin
+   * kilometrin päässä koillisessa ja mahtuisivat väljempään ruutuun,
+   * mutta ne ovat lehden neljän noston ja matkaoppaan aihe — koko
+   * kortteli on siis lehden aluetta eikä kartan.
+   *
+   * BILTMORE-HOTELLI PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: se on 78
+   * metriä Pershing Squaresta, koska se on aukion naapuritalo kadun
+   * yli. Grand Central Market jäi pois toisesta syystä: sen
+   * en-Wikipedia-artikkelilla ei ole koordinaatteja lainkaan (haku
+   * 7.9.2026), eikä kartalle panna pistettä, jonka paikka on arvattu.
+   *
+   * ANGELS FLIGHT ON KÖYSIRATA, JA SEN PISTE ON ALAASEMALLA. Rata on
+   * 91 metriä pitkä, eli sen kaksi asemaa eivät mahtuisi kartalle
+   * kahtena merkkinä; en-Wikipedian koordinaatti osoittaa Hill
+   * Streetin puoleiseen alapäähän, ja piste on siinä.
+   */
+  losangeles: {
+    polku: 'assets/kartat/losangeles-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 34.0610, etela: 34.0385, lansi: -118.2595, ita: -118.2350 },
+    esittely: 'Kartta kattaa Los Angelesin keskustan ruutukaavan: '
+      + 'yläreunassa on hallintokortteleiden Civic Center, vasemmalla '
+      + 'kohoaa Bunker Hillin rinne, keskellä kulkevat Grand Avenue '
+      + 'ja Hill Street ja alaoikealla jatkuu Broadwayn vanha '
+      + 'liikekatu. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 291 metriä (pääkirjasto – Pershing Square),
+       * toiseksi pienin 430 metriä (Angels Flight – Pershing Square).
+       */
+      { nimi: 'Fort Mooren muistomuuri', lat: 34.05833333, lon: -118.24194444 },
+      { nimi: 'Walt Disney -konserttitalo', lat: 34.05527778, lon: -118.25 },
+      { nimi: 'Kaupungintalo', lat: 34.0536, lon: -118.243 },
+      { nimi: 'Angels Flight', lat: 34.05133889, lon: -118.25021111 },
+      { nimi: 'Pääkirjasto', lat: 34.05027778, lon: -118.255 },
+      { nimi: 'Japanilaisamerikkalainen museo', lat: 34.04963889, lon: -118.23858333 },
+      { nimi: 'Pershing Square', lat: 34.04825, lon: -118.25301 },
+      { nimi: 'Eastern Columbia', lat: 34.0428, lon: -118.2555 },
+    ],
+  },
 };
 
 /*

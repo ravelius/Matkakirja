@@ -45269,4 +45269,865 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * CHICAGON KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026). Kartta
+   * on js/packs/maakartat.js: KAUPUNKIKARTAT.chicago, ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Merchandise Mart", "Chicago Theatre", "Haymarket
+   * affair", "Chicago Cultural Center", "Marquette Building
+   * (Chicago)", "Art Institute of Chicago", "Willis Tower" ja
+   * "Hull House").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat villisipulin nimi, suurpalo ja vesitorni, Home Insurance
+   * Building, Union Stock Yards, Chicago-ikkuna ja Rookery, joen
+   * kääntö, vuoden 1893 maailmannäyttely, Fort Dearborn, Chicago
+   * Portage, vuoden 1833 sopimus ja American Indian Center.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Marquette
+   * Buildingin jutussa EI kerrota Chicago-ikkunasta, vaikka talon
+   * julkisivu on sen oppikirjaesimerkki: ikkuna on lehden noston A2
+   * aihe, ja juttu kertoo sen sijaan seinien mosaiikeista.
+   * Taideinstituutin jutussa vuoden 1893 maailmannäyttely mainitaan
+   * vain siltä osin kuin talo rakennettiin sitä varten — näyttelyn
+   * oma tarina on lehden historiasivulla. Willis Towerin jutussa ei
+   * kerrata teräsrungon keksimistä, joka on lehden noston A1 aihe.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 7.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 700 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * chicago-lohkossa (kulttuuri-kategoriat.js).
+   *
+   * HAYMARKETIN TEKIJÄNIMI ON LUETTU PIIRROKSESTA ITSESTÄÄN, ei
+   * extmetadatasta. Käytetty tiedosto on Kongressin kirjaston skannaus
+   * (1536 px), ja sen Artist-kenttä on kirjaston oma kokoelmateksti
+   * "Miscellaneous Items in High Demand, PPOC". Sama Thure de
+   * Thulstrupin puupiirros on Commonsissa myös nimellä
+   * HaymarketRiot-Harpers.jpg, jossa tekijä on kirjattu oikein — mutta
+   * se on vain 964 px leveä eli alle pelin 1200 px:n rajan. Piirros
+   * on lisäksi signeerattu itse kuvaan ("Drawn by T. de Thulstrup"),
+   * joten lisenssin vaatima nimeäminen on katteessa.
+   *
+   * HAYMARKETIN MUISTOMERKKI HYLÄTTIIN KUVANA. Mary Broggerin vuoden
+   * 2004 puhujavaunuveistoksesta on Commonsissa yksi kelvollinen
+   * valokuva (Haymarket Memorial - Chicago.jpg), mutta sen oikeaa
+   * kolmannesta hallitsee viskimainos talon seinässä. Piirros kertoo
+   * saman tapahtuman ilman mainosta.
+   */
+  chicago: {
+    'Merchandise Mart': {
+      aika: '1930',
+      teksti: 'Kun Marshall Field & Co. ilmoitti 1927 rakentavansa '
+          + 'Chicago-joen pohjoisrannalle, tontti oli vanhaa '
+          + 'ratapihaa: siinä oli seissyt Chicago and North Western '
+          + '-radan Wells Streetin asema, joka hylättiin 1911. Sitä '
+          + 'ennen samalla kohdalla oli ollut alkuperäiskansojen '
+          + 'kauppapaikka. Ratapihan purkaminen sopi kaupungin '
+          + 'kaavakomissiolle, joka halusi siistiä jokivarren, ja '
+          + 'radan ilmatilaoikeuksien kanssa tontti oli tarpeeksi iso '
+          + 'maailman suurimmalle rakennukselle.'
+          + '\n\n'
+          + 'Työmaa aloitettiin 16. elokuuta 1928, ja se muistutti '
+          + 'enemmän patotyömaata kuin talonrakennusta. Sementti '
+          + 'saapui laivalla ja nostettiin paineilmalla siiloihin '
+          + 'kahdenkymmenen metrin korkeuteen, sora ja hiekka tulivat '
+          + 'junavaunuissa kuljettimille, ja jättisekoittimet syöttivät '
+          + 'betonia nostotorneihin, joita jatkettiin talon noustessa. '
+          + 'Työmaalla oli jatkuvasti 2 500 miestä ja kaikkiaan 5 700. '
+          + 'Rakennukseen meni 29 miljoonaa tiiltä, 64 kilometriä '
+          + 'putkea, 610 kilometriä johtoa, 4 000 ikkunaa ja 60 000 '
+          + 'tonnia terästä; käytäviä tuli kymmenen kilometriä ja '
+          + 'hissejä yli kolmekymmentä. Hinnaksi arvioitiin 26 '
+          + 'miljoonaa dollaria.'
+          + '\n\n'
+          + 'Talo avattiin 5. toukokuuta 1930, ja sen 372 000 '
+          + 'neliömetriä tekivät siitä maailman suurimman rakennuksen. '
+          + 'Se oli niin iso, että sillä oli oma postinumeronsa vuoteen '
+          + '2008 asti. Tornin kruunua kiersi 56 terrakottaista '
+          + 'intiaanipäällikköä, jotka viittasivat tontin '
+          + 'kauppapaikkamenneisyyteen; ne olivat kadulta lähes '
+          + 'näkymättömiä ja poistettiin 1961, ja osa löytyi 2014 '
+          + 'erään esikaupunkitalon takapihalta. Kennedyn suku osti '
+          + 'talon 1940-luvun puolivälissä noin puoleen sen '
+          + 'rakennuskustannuksista, ja vuokratuotoista tuli suvun '
+          + 'vaurauden päälähde ja vaalikampanjoiden rahoitus. Suku '
+          + 'myi talon 1998 Vornado Realty Trustille.',
+      kuvat: [
+        {
+          tiedosto: 'Merchandise Mart 080405.jpg',
+          selite: 'Kahdeksantoista kerroksen varastolohko ja sen keskeltä '
+            + 'nouseva torni Chicago-joen toiselta rannalta katsottuna.',
+          lahde: 'User:JeremyA, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chicago Theatre': {
+      aika: '1921',
+      teksti: 'Veljekset Abe ja Barney Balaban sekä Sam ja Morris '
+          + 'Katz rakensivat State Streetille 1921 lippulaivan '
+          + 'elokuvateatteriketjulleen. Ketju kasvoi 28 teatteriin '
+          + 'Chicagossa ja yli sataan muualla Keskilännessä, ja '
+          + 'arkkitehdit Cornelius ja George Rapp piirsivät niistä '
+          + 'monet. Chicago Theatre maksoi neljä miljoonaa dollaria ja '
+          + 'oli valmistuessaan suurin, kallein ja komein siihen '
+          + 'mennessä rakennettu elokuvapalatsi. Se on yhä vanhin '
+          + 'säilynyt niistä.'
+          + '\n\n'
+          + 'Avajaisissa 26. lokakuuta 1921 salissa oli 3 880 '
+          + 'paikkaa, ja taloa mainostettiin maailman ihmeteatterina. '
+          + 'Ohjelmaan kuului elokuvan lisäksi viisikymmenmiehinen '
+          + 'orkesteri, lavashow ja Jesse Crawford Wurlitzer-uruilla, '
+          + 'joissa oli neljä sormiota ja 26 äänikertaa. Runoilija '
+          + 'Carl Sandburg raportoi Chicago Tribunelle, että '
+          + 'väkijoukon hallintaan tarvittiin ratsupoliiseja. '
+          + 'Teatterin keino houkutella katsojia — ylellinen sali, '
+          + 'huippupalvelu ja aikansa uutuus eli ilmastointi — '
+          + 'kopioitiin ympäri maata. Jazzista tuli talon vetonaula jo '
+          + '1922, kun ketju järjesti oman synkopaatioviikkonsa.'
+          + '\n\n'
+          + 'Julkisivu on kuusikerroksinen, kahdeksantoista metriä '
+          + 'leveä riemukaari, jota on lehdissä verrattu Pariisin '
+          + 'Triumphkaareen. Sen keskellä olevan kaari-ikkunan sisällä '
+          + 'on Tiffanyn lasimaalaus, jossa ketjun vaakunan kaksi '
+          + 'hevosta pitää suussaan 35 millimetrin filminauhaa. '
+          + 'Aulassa on Versailles’n hovikappelista vaikutteita saanut '
+          + 'viisikerroksinen halli ja Pariisin oopperan mukaan tehty '
+          + 'porraskäytävä. Talo suljettiin 1985 — viimeiset elokuvat '
+          + 'olivat American Ninja ja Teen Wolf — mutta se '
+          + 'kunnostettiin ja avattiin uudestaan 1986. Alkuperäinen '
+          + 'katosmainos lahjoitettiin 2004 Smithsonianille.',
+      kuvat: [
+        {
+          tiedosto: 'Chicago Theatre blend.jpg',
+          selite: 'State Streetin riemukaari, sen keskellä pyöreä '
+            + 'Tiffany-ikkuna ja alla katosmainos, joka on kaupungin '
+            + 'epävirallinen tunnus.',
+          lahde: 'Daniel Schwen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Haymarketin aukio': {
+      aika: '1886',
+      teksti: 'Yhdysvaltalainen työntekijä teki 1880-luvulla '
+          + 'keskimäärin runsaat kuusikymmentä tuntia viikossa '
+          + 'kuutena päivänä. Chicagossa kymmenettuhannet saksalaiset '
+          + 'ja böömiläiset siirtolaiset ansaitsivat noin puolitoista '
+          + 'dollaria päivässä. Ammattiliittojen kattojärjestö päätti '
+          + 'lokakuussa 1884, että 1. toukokuuta 1886 alkaen '
+          + 'kahdeksan tuntia on laillinen työpäivä, ja kun päivä '
+          + 'koitti, lakkoon meni koko maassa arviolta 300 000–500 000 '
+          + 'työntekijää. Chicagossa lakkolaisia oli 30 000–40 000.'
+          + '\n\n'
+          + 'Maanantaina 3. toukokuuta poliisi ampui McCormickin '
+          + 'maatalouskonetehtaan portilla väkijoukkoa ja tappoi kaksi '
+          + 'lakkolaista. Seuraavana iltana Haymarketin aukiolla '
+          + 'pidettiin protestikokous, joka alkoi rauhallisena. Kun '
+          + 'poliisi ryhtyi hajottamaan kokousta, tuntematon heitti '
+          + 'dynamiittipommin. Räjähdys ja sitä seurannut poliisin '
+          + 'vastatuli tappoivat seitsemän poliisia ja ainakin neljä '
+          + 'siviiliä, ja kymmenet haavoittuivat.'
+          + '\n\n'
+          + 'Kahdeksan anarkistia asetettiin syytteeseen. '
+          + 'Oikeudenkäynnissä esitettiin, että yksi syytetyistä oli '
+          + 'ehkä rakentanut pommin, mutta kukaan syytetyistä ei ollut '
+          + 'heittänyt sitä, ja vain kaksi kahdeksasta oli ollut '
+          + 'paikalla. Seitsemän tuomittiin kuolemaan; kuvernööri '
+          + 'muunsi kaksi tuomiota elinkautiseksi, yksi teki '
+          + 'itsemurhan sellissään, ja neljä hirtettiin 11. marraskuuta '
+          + '1887. Vuonna 1893 kuvernööri John Peter Altgeld armahti '
+          + 'jäljellä olevat ja arvosteli koko oikeudenkäyntiä. '
+          + 'Tapahtumaa pidetään yleisesti kansainvälisen '
+          + 'vapunpäivän alkuna. Aukiolle on merkitty 1992 pronssilaatta '
+          + 'puhujavaunun paikalle, ja 14. syyskuuta 2004 paljastettiin '
+          + 'Mary Broggerin veistos: neljä ja puoli metriä korkea '
+          + 'puhujavaunu, jonka paljastivat yhdessä pormestari ja '
+          + 'poliisien ammattiliiton puheenjohtaja.',
+      kuvat: [
+        {
+          tiedosto: 'The Anarchist Riot in Chicago - A Dynamite Bomb exploding among the police (McCormick Strike, Haymarket Square) LCCN99614182.jpg',
+          selite: 'Harper’s Weeklyn aukeama toukokuulta 1886: puhuja vaunun '
+            + 'päällä vasemmalla, poliisirivi keskellä ja pommi räjähtämässä.',
+          lahde: 'Thure de Thulstrup, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kulttuurikeskus: {
+      aika: '1897',
+      teksti: 'Talon tilasi kaupunki kahteen tarkoitukseen kerralla: '
+          + 'siitä tuli sekä Chicagon pääkirjasto että sisällissodan '
+          + 'pohjoisen veteraanijärjestön Grand Army of the Republicin '
+          + 'kokoushuone ja muistosali. Järjestö lahjoitti tontin, '
+          + 'bostonilainen toimisto Shepley, Rutan and Coolidge '
+          + 'piirsi rakennuksen 1892, ja se valmistui 1897 lähes '
+          + 'kahdella miljoonalla dollarilla. Seinät ovat metrin '
+          + 'paksuista muurausta ja verhoiltu Bedfordin sinisellä '
+          + 'kalkkikivellä graniittijalustan päälle.'
+          + '\n\n'
+          + 'Sisällä on kaksi lasikupolia, kummankin siiven päällä '
+          + 'yksi. Pohjoissiiven veteraanisalin pyöreässä osassa on '
+          + 'yhdeksän metrin korkuiset vaaleanpunaiset marmoriseinät '
+          + 'ja Healy and Millet -verstaan tekemä lasikupoli. '
+          + 'Eteläsiiven Preston Bradley Hallin päällä on '
+          + 'kaksitoistametrinen Tiffany-lasikupoli, jonka suunnitteli '
+          + 'J. A. Holzer ja jota kulttuurikeskus kutsuu maailman '
+          + 'suurimmaksi Tiffany-kupoliksi: siinä on yli 60 000 '
+          + 'lasinpalaa. Portaikko viidenteen kerrokseen on tehty '
+          + 'Venetsian Huokausten sillan mallin mukaan, ja yksi '
+          + 'saleista on jäljennös dogen palatsin kokoussalista.'
+          + '\n\n'
+          + 'Kirjasto muutti pois, ja 1978 kulttuuriasioista vastaava '
+          + 'Lois Weisberg sai talon muutetuksi taide- ja '
+          + 'kulttuurikeskukseksi. Se oli maan ensimmäinen maksuton '
+          + 'kunnallinen kulttuurikeskus, ja siellä järjestetään yli '
+          + 'tuhat tapahtumaa ja näyttelyä vuodessa. Talo on myös '
+          + 'kaupungin virallinen vastaanottotila, jossa pormestari '
+          + 'ottaa vastaan presidentit ja hallitsijat. Vuosina '
+          + '2021–2022 rakennus kunnostettiin perusteellisesti: '
+          + 'Tiffany-kupoli, joka oli peittynyt likaan ja maaliin, '
+          + 'puhdistettiin ja korjattiin kokonaan. Kaupungin oma '
+          + 'pääkirjasto on nykyään Harold Washington Library '
+          + 'Center, joka avattiin 1991.',
+      kuvat: [
+        {
+          tiedosto: 'Preston Bradley Hall and Tiffany Glass Dome - Chicago Cultural Center.jpg',
+          selite: 'Preston Bradley Hallin Tiffany-kupolissa on yli 60 000 '
+            + 'lasinpalaa; kaaren alla kiertää Addisonin lause kirjoista.',
+          lahde: 'Grant Henninger, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Marquette Building': {
+      aika: '1895',
+      teksti: 'Talo on nimetty jesuiittapappi Jacques Marquetten '
+          + 'mukaan, joka tutki Chicagon seutua 1674 ja vietti '
+          + 'talven 1674–1675 alueella. Rakennuksen piirsivät William '
+          + 'Holabird ja Martin Roche, ja se valmistui 1895 '
+          + 'kuusitoistakerroksisena. Julkisivu oli alun perin '
+          + 'punertavaa terrakottaa, joka mustui vuosikymmenien '
+          + 'Loop-noesta ennen kunnostusta. 1930-luvulla talo oli yli '
+          + 'kolmenkymmenen rautatieyhtiön keskustakonttori.'
+          + '\n\n'
+          + 'Sisäänkäynnin ja aulan koristelu on kokonaan omistettu '
+          + 'Marquetten retkelle. Pääoven yllä on kuvanveistäjä '
+          + 'Hermon Atkins MacNeilin neljä pronssista reliefiä, jotka '
+          + 'kertovat matkan vaiheita Suurten järvien seudulla ja '
+          + 'päättyvät hautajaisiin. Pyöröoven paneeleihin on '
+          + 'veistetty pantterinpäitä. Aulan valopihaa kiertävässä '
+          + 'kuusikulmaisessa kaiteessa on Tiffanyn verstaan '
+          + 'mosaiikkifriisi, jonka tekivät Louis Comfort Tiffany ja '
+          + 'hänen taiteellinen johtajansa Jacob Adolph Holzer: '
+          + 'kuva-aiheina ovat Marquetten elämä, hänen retkensä '
+          + 'Illinoisiin ja alkuperäiskansojen ihmiset, joita hän '
+          + 'tapasi. Mosaiikeissa on kiiltävää Tiffany-lasia, '
+          + 'helmiäistä ja puolijalokiviä.'
+          + '\n\n'
+          + 'Noin 1950 räystäslista purettiin, kun taloon lisättiin '
+          + 'kerros. Talo on ollut toimistokäytössä yhtäjaksoisesti '
+          + 'rakentamisestaan asti. Vuonna 1977 sen osti John D. '
+          + 'MacArthurin vakuutusyhtiö, ja hänen kuolemansa jälkeen '
+          + '1978 siitä tuli MacArthur-säätiön pääkonttori. Säätiö '
+          + 'aloitti 2001 monivuotisen kunnostuksen, joka valmistui '
+          + '2006: räystäslista rakennettiin takaisin, ikkunat '
+          + 'palautettiin alkuperäisen mallisiksi ja muuraus '
+          + 'puhdistettiin. Aulan poikki kulkee yhä katujen '
+          + 'välinen läpikulkureitti, jota ei suljettu silloinkaan, '
+          + 'kun moni muu keskustan talo sulki ovensa yleisöltä.',
+      kuvat: [
+        {
+          tiedosto: 'Marquette Building (6039062516).jpg',
+          selite: 'Ruskea terrakottajulkisivu ja 2000-luvun kunnostuksessa '
+            + 'takaisin rakennettu räystäslista.',
+          lahde: 'Teemu008 from Palatine, Illinois, Wikimedia Commons (CC '
+            + 'BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Taideinstituutti: {
+      aika: '1879',
+      teksti: 'Alkusysäys tuli 1866, kun 35 taiteilijaa perusti '
+          + 'Dearborn Streetin ateljeehen Chicago Academy of Designin '
+          + 'eurooppalaisten taideakatemioiden malliin. Koulu piti '
+          + 'olla ilmainen ja sillä oma galleria; opetus alkoi 1868, '
+          + 'ja 1870 akatemia sai oman viisikerroksisen kivitalon. '
+          + 'Vuoden 1871 suurpalo tuhosi sen ja jätti akatemian '
+          + 'velkoihin. Vuoteen 1878 mennessä velkaa oli 10 000 '
+          + 'dollaria, ja 1879 osa jäsenistä perusti uuden '
+          + 'yhdistyksen, joka osti konkurssiin menneen edeltäjänsä '
+          + 'omaisuuden huutokaupasta. Nykyinen nimi otettiin '
+          + 'käyttöön 1882.'
+          + '\n\n'
+          + 'Nykyinen talo Michigan Avenuen varrella rakennettiin '
+          + 'vuoden 1893 maailmannäyttelyä varten, ja museo muutti '
+          + 'siihen näyttelyn jälkeen. Sisäänkäyntiä vartioi kaksi '
+          + 'Edward Kemeysin pronssileijonaa, jotka paljastettiin '
+          + '10. toukokuuta 1894 ja painavat kumpikin yli kaksi '
+          + 'tonnia. Veistäjä antoi niille epäviralliset nimet: '
+          + 'eteläinen seisoo uhmakkaassa asennossa, pohjoinen on '
+          + 'saalista vaanimassa. Kun jokin kaupungin joukkue pelaa '
+          + 'sarjansa loppuottelun, leijonat puetaan sen paitaan, ja '
+          + 'jouluksi niiden kaulaan pannaan havuseppeleet.'
+          + '\n\n'
+          + 'Museon kokoelmissa on lähes 300 000 teosta, muun muassa '
+          + 'Georges Seurat’n Sunnuntai-iltapäivä La Grande Jatten '
+          + 'saarella, Pablo Picasson Vanha kitaransoittaja, Edward '
+          + 'Hopperin Nighthawks ja Grant Woodin Amerikkalainen '
+          + 'gotiikka. Talo on rakennettu avoimen ratapihan päälle: '
+          + 'kaksi näyttelykerrosta yhdistää itäisen ja läntisen '
+          + 'siiven, ja niiden alla kulkevat yhä lähijunat. Itäisen '
+          + 'sisäänkäynnin kohdalla seisoo Louis Sullivanin 1894 '
+          + 'suunnitteleman pörssitalon kiviportaali; talo purettiin '
+          + '1972, mutta portaali ja osa kaupankäyntisalista '
+          + 'siirrettiin museoon ja koottiin uudelleen. Renzo Pianon '
+          + 'piirtämä Modern Wing avattiin 2009 ja teki museosta '
+          + 'pinta-alaltaan maan toiseksi suurimman taidemuseon.',
+      kuvat: [
+        {
+          tiedosto: 'South Lion, The Art Institute of Chicago 2014 (15898400197).jpg',
+          selite: 'Eteläinen leijona joulukuusenhavuissa: seppele pannaan '
+            + 'molempien kaulaan joka joulu.',
+          lahde: 'swimfinfan, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Willis Tower': {
+      aika: '1973',
+      teksti: 'Sears, Roebuck & Co. oli 1969 maailman suurin '
+          + 'vähittäiskauppias ja työllisti noin 350 000 ihmistä. '
+          + 'Kun yhtiö päätti koota tuhannet chicagolaiset '
+          + 'toimistotyöntekijänsä yhteen taloon, esikaupunki '
+          + 'hylättiin heti — se olisi vaatinut noin 7 000 ihmisen '
+          + 'muuttamista. Tilalle valittiin kahden korttelin tontti '
+          + 'Loopin länsilaidalta. Chicagon väljä kaavoitus olisi '
+          + 'sallinut jopa 300-kerroksisen talon, mutta '
+          + 'ilmailuhallinto rajoitti korkeutta ja harva vuokralainen '
+          + 'halusi toimistoa pilvien tasalta. Suunnitelma '
+          + 'julkistettiin 27. heinäkuuta 1970.'
+          + '\n\n'
+          + 'Arkkitehti Bruce Graham ja insinööri Fazlur Rahman Khan '
+          + 'ratkaisivat korkeuden yhdeksällä neliömäisellä putkella, '
+          + 'jotka on niputettu kolme kertaa kolme -ruudukoksi. Kukin '
+          + 'putki on 23 metriä sivultaan ja pilariton, ja niitä '
+          + 'päättyy eri korkeuksilla: kaksi loppuu 50. kerrokseen, '
+          + 'kaksi 66:nteen, kolme 90:nteen, ja viimeiset kaksi '
+          + 'jatkavat 108. kerrokseen. Tämä oli ensimmäinen talo, '
+          + 'jossa niputettua putkirakennetta käytettiin, ja se levisi '
+          + 'sittemmin lähes kaikkiin maailman korkeimpiin taloihin, '
+          + 'myös Burj Khalifaan. Harjannostajaisia vietettiin '
+          + '3. toukokuuta 1973, ja talo maksoi noin 150 miljoonaa '
+          + 'dollaria.'
+          + '\n\n'
+          + 'Valmistuessaan 442-metrinen torni oli maailman korkein '
+          + 'rakennus ja pysyi sinä lähes 25 vuotta. Näköalataso '
+          + 'Skydeck avattiin 22. kesäkuuta 1974 103. kerrokseen 412 '
+          + 'metrin korkeuteen; hissi vie ylös noin minuutissa, ja '
+          + 'selkeällä säällä sieltä näkee Michiganjärven yli '
+          + 'Indianaan, Michiganiin ja Wisconsiniin. Kävijöitä on '
+          + 'yli 1,7 miljoonaa vuodessa. Vuonna 2009 tasoon '
+          + 'lisättiin lasiset ulokeparvekkeet, joita kutsutaan '
+          + 'nimellä The Ledge: ne työntyvät runsaan metrin '
+          + 'julkisivun ulkopuolelle, ja lattian läpi näkee kadulle. '
+          + 'Sears muutti pois 1994, ja nimi vaihtui Willis Toweriksi '
+          + '2009 vuokrasopimuksen mukana — paikalliset sanovat '
+          + 'taloa yhä Sears Toweriksi.',
+      kuvat: [
+        {
+          tiedosto: 'Willis Tower, Chicago September 2016-26.jpg',
+          selite: 'Yhdeksän putken nippu näkyy porrastuksina: osa putkista '
+            + 'päättyy matalammalle, ja kaksi jatkaa huipulle asti.',
+          lahde: 'Alvesgaspar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hull House': {
+      aika: '1889',
+      teksti: 'Kiinteistömies Charles Jerald Hull rakennutti 1856 '
+          + 'italialaistyylisen huvilan osoitteeseen 800 South '
+          + 'Halsted Street. Kortteli oli silloin hienostoaluetta, '
+          + 'mutta vuoteen 1889 mennessä se oli köyhtynyt, kun '
+          + 'siirtolaisia oli muuttanut Near West Sidelle enemmän '
+          + 'kuin alue kesti. Juuri silloin Jane Addams etsi paikkaa '
+          + 'kokeilulleen. Hull oli antanut talon serkulleen Helen '
+          + 'Culverille, ja Culver luovutti sen Addamsille '
+          + 'kahdenkymmenenviiden vuoden vuokravapaalla sopimuksella.'
+          + '\n\n'
+          + 'Addams ja Ellen Gates Starr perustivat Hull Housen '
+          + '18. syyskuuta 1889 esikuvanaan Lontoon East Endin '
+          + 'Toynbee Hall. Ajatus oli, että sivistyneet naiset '
+          + 'muuttavat asumaan köyhään kaupunginosaan ja pitävät '
+          + 'siellä samat kerhonsa ja tilaisuutensa kuin omassa '
+          + 'piirissään. Vapaaehtoisia kutsuttiin asukkaiksi, ja he '
+          + 'pitivät kursseja kirjallisuudesta, historiasta, '
+          + 'taiteesta ja käsitöistä. Luennoimassa kävivät muun '
+          + 'muassa John Dewey, George Herbert Mead, Max Weber ja '
+          + 'W. E. B. Du Bois. Konsertit ja luennot olivat kaikille '
+          + 'ilmaisia. Addams kiteytti 1892 liikkeen kolmeksi '
+          + 'tehtäväksi asumisen, tutkimuksen ja uudistuksen: ensin '
+          + 'eletään naapureiden kanssa, sitten tutkitaan köyhyyden '
+          + 'syyt, sitten kerrotaan tulokset julkisuuteen ja '
+          + 'painostetaan lainsäätäjää.'
+          + '\n\n'
+          + 'Menetelmä tuotti tulosta. Hull House avasi 1893 '
+          + 'kaupungin ensimmäisen julkisen leikkikentän — vapun '
+          + 'päivänä Polk Streetillä, ja perheet tulivat paikalle '
+          + 'juhlavaatteissa — sekä ensimmäisen yleisen saunan ja '
+          + 'voimistelusalin. Vapaaehtoinen Jenny Dow aloitti '
+          + 'lastentarhan niille lapsille, jotka jätettiin taloon '
+          + 'äitien mennessä ompelimoihin: kolmessa viikossa '
+          + 'ilmoittautuneita oli 24 ja jonossa 70. Talon työstä '
+          + 'seurasi maan ensimmäinen nuorisotuomioistuin, ja osavaltion '
+          + 'tasolla se vaikutti lapsityölakeihin, työsuojeluun, '
+          + 'oppivelvollisuuteen ja eläkelakeihin. Vuoteen 1911 '
+          + 'mennessä Hull House oli kasvanut kolmeksitoista '
+          + 'rakennukseksi, ja vuoteen 1920 mennessä maassa oli noin '
+          + 'viisisataa vastaavaa taloa. 1960-luvun puolivälissä '
+          + 'suurin osa purettiin Illinoisin yliopiston tieltä; '
+          + 'alkuperäinen huvila ja vuoden 1905 ruokasali jäivät, ja '
+          + 'ne ovat nyt museo.',
+      kuvat: [
+        {
+          tiedosto: 'Jane Addams-Hull House, University of Illinois Chicago, Halsted Street, Near West Side, Chicago, IL.jpg',
+          selite: 'Charles Hullin vuoden 1856 huvila kuisteineen on ainoa '
+            + 'kolmestatoista talosta, joka jäi yliopiston tieltä pystyyn.',
+          lahde: 'w_lemay, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * LOS ANGELESIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.losangeles, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Fort Moore Pioneer Memorial", "Fort Moore
+   * (California)", "Walt Disney Concert Hall", "Los Angeles City
+   * Hall", "Angels Flight", "Los Angeles Central Library",
+   * "Japanese American National Museum", "Pershing Square (Los
+   * Angeles)" ja "Eastern Columbia Building").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat vuoden 1781 pueblo ja Zanja Madre, Pico House, rautatie ja
+   * öljy, akvedukti, vuoden 1815 tulva, San Pedron satama,
+   * Hollywood, maanjäristykset, tongvat ja Yaanga, pyhät lähteet,
+   * tongvien hallinto ja Mission San Gabriel. Yksikään kartan
+   * kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Kaupungintalon
+   * jutussa EI kerrota vuoden 1994 Northridgen järistyksestä, vaikka
+   * talon maanjäristysvahvistus on jutun aihe: järistykset ovat
+   * lehden noston aihe, ja juttu puhuu vain siitä, mitä talolle
+   * tehtiin. Pershing Squaren jutussa Zanja Madre mainitaan yhdellä
+   * lauseella naapurikanavana eikä sen enempää — oja on lehden
+   * ensimmäisen noston aihe.
+   *
+   * PERSHING SQUAREN NIMI ON MUUTTUMASSA, ja kartan merkki käyttää
+   * yhä vanhaa. en-Wikipedian artikkelin OTSIKKO on "Pershing Square
+   * (Los Angeles)", mutta sen ingressi kertoo, että kaupunginvaltuusto
+   * hyväksyi syyskuussa 2026 aukion nimeämisen Biddy Mason Parkiksi.
+   * Päätös on siis päiviä vanha. Merkki nimettiin sillä nimellä, jolla
+   * paikan yhä löytää, ja uusi nimi kerrotaan jutun lopussa.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 7.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 700 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * losangeles-lohkossa (kulttuuri-kategoriat.js).
+   */
+  losangeles: {
+    'Fort Mooren muistomuuri': {
+      aika: '1847',
+      teksti: 'Yhdysvaltain joukot miehittivät Los Angelesin '
+          + 'elokuussa 1846, mutta kapteeni Archibald Gillespien '
+          + 'ankara sotatila sytytti kapinan. Californiot piirittivät '
+          + 'kaupungin, ja Gillespien viisikymmentä merisotilasta '
+          + 'perääntyi mäelle, jossa he pinosivat hiekkasäkeistä '
+          + 'suojan ja asettivat tykkinsä. Vastapuolen voimat '
+          + 'kasvoivat yli kuuteensataan mieheen, ja Gillespie '
+          + 'suostui poistumaan kaupungista 30. syyskuuta 1846. '
+          + 'Amerikkalaiset palasivat 10. tammikuuta 1847, ja '
+          + 'Cahuengan sopimus päätti sodan Ylä-Kaliforniassa kolme '
+          + 'päivää myöhemmin.'
+          + '\n\n'
+          + 'Samalle mäelle alettiin heti rakentaa linnaketta. '
+          + 'Ensimmäinen, tähdenmuotoinen suunnitelma jäi kesken, ja '
+          + '23. huhtikuuta 1847 aloitettiin suurempi. Sen piirsi '
+          + 'luutnantti John W. Davidson, ja sen rakensi pääosin '
+          + 'mormonipataljoona: 120 metriä pitkä rintavarustus, '
+          + 'bastionit ja ampuma-aukot kuudelle tykille. Puutavara '
+          + 'raahattiin San Gabrielin vuorilta, ja kahdesta '
+          + 'jatketusta hirrestä tehtiin 46 metriä korkea lipputanko. '
+          + 'Linnake vihittiin 4. heinäkuuta 1847 kaupungin '
+          + 'ensimmäisenä itsenäisyyspäivänä, ja se nimettiin '
+          + 'kapteeni Benjamin D. Mooren mukaan, joka oli kaatunut '
+          + 'San Pasqualin taistelussa edellisenä jouluna. Varuskunta '
+          + 'vedettiin pois 1848, ja linnake hylättiin 1849.'
+          + '\n\n'
+          + 'Mäki eli sen jälkeen omaa elämäänsä: sinne tuli '
+          + 'kaupungin ensimmäinen ei-katolinen hautausmaa, sitten '
+          + 'oluttarha, jonka asiakkaista kerrottiin, että he '
+          + 'kiipesivät mäelle selvinä ja vierivät alas juovuksissa, '
+          + 'ja lopulta kouluja. Suurin osa mäestä kaivettiin pois '
+          + '1949 Hollywood-moottoritien tieltä. Muistomuuri '
+          + 'valmistui vaiheittain ja vihittiin 3. heinäkuuta 1958. '
+          + 'Se on maan suurin sotilaallinen reliefimuistomerkki: '
+          + 'Henry Kreisin suunnittelema terrakottapaneeli on 24 '
+          + 'metriä leveä ja 14 korkea ja esittää lipunnostoa. '
+          + 'Paneelien oikealla puolella on 24 metriä leveä '
+          + 'vesiputous, joka oli poissa käytöstä vuoden 1977 '
+          + 'kuivuudesta lähtien ja avattiin uudelleen joulukuussa '
+          + '2018.',
+      kuvat: [
+        {
+          tiedosto: 'Los Angeles, California (September 9, 2022) - 241.jpg',
+          selite: 'Kreisin terrakottapaneeli vasemmalla ja 24 metriä leveä '
+            + 'vesiputous, joka avattiin uudelleen 2018.',
+          lahde: 'Another Believer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Walt Disney -konserttitalo': {
+      aika: '2003',
+      teksti: 'Lillian Disney lahjoitti 1987 viisikymmentä miljoonaa '
+          + 'dollaria konserttitaloa varten lahjaksi kaupungille ja '
+          + 'muistoksi miehensä taideharrastuksesta. Frank Gehry '
+          + 'valittiin arkkitehdiksi, vaikka hän piti sitä '
+          + 'epätodennäköisimpänä asiana, mitä hänelle voisi tapahtua '
+          + '— hän oli tunnettu halpojen materiaalien '
+          + 'epätavallisesta käytöstä, ja Disneyn suvun edustaja oli '
+          + 'aiemmin sanonut, ettei Walt Disneyn nimeä missään '
+          + 'tapauksessa panna hänen suunnittelemaansa taloon. '
+          + 'Piirustukset valmistuivat 1991.'
+          + '\n\n'
+          + 'Työ takkuili. Pysäköintiluola rakennettiin 1992–1996 ja '
+          + 'maksoi 110 miljoonaa, mutta itse talon työt seisoivat '
+          + '1994–1996 rahoituksen puutteessa; säästösyistä '
+          + 'alkuperäinen kivijulkisivu vaihdettiin ruostumattomaan '
+          + 'teräkseen. Muotojen matemaattinen mutkikkuus vaati '
+          + 'apuvälineekseen CATIA-ohjelman, jota käytetään '
+          + 'ranskalaisten hävittäjien suunnittelussa: esimerkiksi '
+          + 'pohjoissivun pilarit kallistuvat eteenpäin '
+          + 'seitsemäntoista astetta. Talo avattiin 23. lokakuuta '
+          + '2003, ja se maksoi noin 274 miljoonaa dollaria.'
+          + '\n\n'
+          + 'Salissa on 2 265 paikkaa, ja se on sovitus kahdesta '
+          + 'perinteestä: Berliinin filharmonian viinitarhamallista '
+          + 'ja Wienin Musikvereinin kenkälaatikosta. Akustiikan '
+          + 'suunnitteli Minoru Nagata ja työn viimeisteli hänen '
+          + 'oppilaansa Yasuhisa Toyota. Kesällä 2003 orkesteri sai '
+          + 'harjoitella salissa ennen avajaisia, ja Los Angeles '
+          + 'Timesin kriitikko kuvasi hetkeä, jolloin sali heräsi '
+          + 'toisessa harjoituksessa: kapellimestari Esa-Pekka '
+          + 'Salonen huomasi, että orkesterin vuosikymmeniä omistamissa '
+          + 'Ravel-nuoteissa oli painovirheitä, joita kukaan ei ollut '
+          + 'vanhassa salissa kuullut. Ulkopinta aiheutti sekin '
+          + 'yllätyksen: kiillotetut paneelit heijastivat '
+          + 'auringonvaloa naapuritaloihin ja kuumensivat jalkakäytävää '
+          + 'jopa kuuteenkymmeneen asteeseen, kunnes ongelmapaneelit '
+          + 'hiottiin himmeiksi 2005.',
+      kuvat: [
+        {
+          tiedosto: 'Walt Disney Concert Hall exterior 01.jpg',
+          selite: 'Julkisivun piti olla kiveä, mutta säästösyistä siitä tuli '
+            + 'ruostumatonta terästä.',
+          lahde: 'Leviclancy, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaupungintalo: {
+      aika: '1928',
+      teksti: 'Kaupunginvaltuusto sääti 1905, ettei mikään uusi talo '
+          + 'saa olla kolmeatoista kerrosta tai 46:ta metriä korkeampi '
+          + '— kaupunkikuvan piti pysyä yhtenäisenä. Kun oma '
+          + 'kaupungintalo valmistui 1928, se sai julkisena '
+          + 'rakennuksena poikkeuksen: 32 kerrosta ja 138 metriä eli '
+          + 'kolme kertaa niin korkea kuin mikään muu. Sääntö '
+          + 'kumottiin kansanäänestyksellä vasta 1957, ja '
+          + 'kaupungintalo pysyi kaupungin korkeimpana rakennuksena '
+          + 'vuoteen 1966. Sen piirsivät John Parkinson, John C. '
+          + 'Austin ja Albert C. Martin, ja se vihittiin 26. '
+          + 'huhtikuuta 1928.'
+          + '\n\n'
+          + 'Talossa on kaksi kertomisen arvoista yksityiskohtaa. '
+          + 'Tornin betoniin sekoitettiin hiekkaa Kalifornian '
+          + 'jokaisesta 58 piirikunnasta ja vettä sen 21 '
+          + 'historiallisesta lähetysasemasta. Tornin muoto on '
+          + 'jäljitelmä Halikarnassoksen mausoleumista eli yhdestä '
+          + 'antiikin seitsemästä ihmeestä, ja pyramidin huipulla '
+          + 'palaa lentomajakka, joka on nimetty Charles Lindberghin '
+          + 'mukaan. Talon kuva on ollut Los Angelesin poliisin '
+          + 'virkamerkissä vuodesta 1940.'
+          + '\n\n'
+          + 'Vuonna 1998 rakennus suljettiin 135 miljoonan dollarin '
+          + 'peruskorjaukseen, joka kesti vuoteen 2001. Sen tärkein '
+          + 'osa ei näy ulos lainkaan: talo nostettiin '
+          + 'perustuseristimien päälle niin, että se saa keinua '
+          + 'järistyksessä. Vahvistus mitoitettiin magnitudin 8,2 '
+          + 'järistykselle, jonka jälkeen talon pitää olla vain '
+          + 'lievästi vaurioitunut ja yhä toimintakykyinen. Se on '
+          + 'edelleen maailman korkein perustuseristetty rakennus. '
+          + 'Ylimmässä kerroksessa on maksuton näköalataso, joka on '
+          + 'auki arkisin virka-aikaan.',
+      kuvat: [
+        {
+          tiedosto: 'LA City Hall - 2007-05-11.JPG',
+          selite: 'Torni hallintokorttelin päästä katsottuna: huipulla on '
+            + 'Halikarnassoksen mausoleumin mukaan tehty pyramidi.',
+          lahde: 'Kjetil Ree, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Angels Flight': {
+      aika: '1901',
+      teksti: 'Los Angeles Incline Railway avattiin 1901 eversti '
+          + 'J. W. Eddyn rahoittamana. Rata on 91 metriä pitkä ja '
+          + 'nousee 29 metriä, ja sillä on kaksi vaunua, Olivet ja '
+          + 'Sinai, jotka kulkevat samalla vaijerilla vastakkaisiin '
+          + 'suuntiin. Alkuperäisessä järjestelyssä yläasemalla ollut '
+          + 'kone veti ylöspäin menevää vaunua ja alaspäin menevä '
+          + 'laskeutui pelkän painovoiman varassa. Nimi Angels Flight '
+          + 'tuli Hill Streetin puoleisesta portista ja vakiintui '
+          + 'viralliseksi 1912. Rataa on kutsuttu maailman lyhyimmäksi '
+          + 'rautatieyhtiöksi, ja ensimmäisten viidenkymmenen vuotensa '
+          + 'aikana se kuljetti yli sata miljoonaa matkustajaa.'
+          + '\n\n'
+          + 'Rata suljettiin 18. toukokuuta 1969, kun koko Bunker '
+          + 'Hillin kaupunginosa purettiin. Purkaminen alkoi '
+          + 'seuraavana päivänä, ja se hävitti lähes 22 000 '
+          + 'työläisperheen vuokrakodit — rappeutuneita mutta '
+          + 'arkkitehtonisesti merkittäviä taloja, joiden tilalle '
+          + 'nousi toimistotorneja. Vaunut Sinai ja Olivet vietiin '
+          + 'varastoon Olive Streetille, ja niitä säilytettiin siellä '
+          + '27 vuotta maksutta odottamassa radan palautusta, jonka '
+          + 'kaupungin kehitysvirasto oli luvannut kahdessa vuodessa. '
+          + 'Rata avattiin uudelleen 1996 puoli korttelia '
+          + 'alkuperäistä paikkaa etelämpänä.'
+          + '\n\n'
+          + 'Uusi rata oli rakennettu väärin. 1. helmikuuta 2001 '
+          + 'Sinai lähti yläaseman lähellä vierimään takaisin alas ja '
+          + 'törmäsi Olivetiin: 83-vuotias mies kuoli, hänen vaimonsa '
+          + 'ja seitsemän muuta loukkaantuivat. Onnettomuustutkinta '
+          + 'osoitti, että uudessa järjestelmässä kummallakin vaunulla '
+          + 'oli oma vetokoneistonsa eikä vaunuja siis tasapainottanut '
+          + 'toisiaan, eikä siinä ollut varavaijeria eikä kiskojarruja '
+          + '— tutkijat eivät löytäneet maailmasta toista köysirataa, '
+          + 'joka olisi toiminut ilman kumpaakaan. Hätäjarru oli '
+          + 'lisäksi ollut epäkunnossa parisen vuotta väärin asennetun '
+          + 'venttiilin takia. Rata korjattiin, ja nykyisessä '
+          + 'järjestelmässä on yksi yhteinen vetovaijeri, varavaijeri, '
+          + 'kiskojarrut ja oma evakuointimoottori. Liikenne alkoi '
+          + 'jälleen elokuussa 2017.',
+      kuvat: [
+        {
+          tiedosto: 'Angels Flight funicular, Downtown Los Angeles, California 02.jpg',
+          selite: 'Hill Streetin portti, kaksi kiskoparia ja vaunut '
+            + 'yläasemalla Bunker Hillin rinteessä.',
+          lahde: 'Levi Clancy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pääkirjasto': {
+      aika: '1926',
+      teksti: 'Bertram Goodhuen suunnittelema kirjastotalo '
+          + 'rakennettiin 1924–1926, ja se avattiin yleisölle '
+          + '6. heinäkuuta 1926. Goodhue haki vaikutteita muinaisesta '
+          + 'Egyptistä ja Välimeren rakennusperinteestä: keskustornin '
+          + 'huipulla on laatoitettu mosaiikkipyramidi, jonka sivuilla '
+          + 'on aurinkoja ja jonka huipulla soihtua kannatteleva käsi '
+          + 'esittää oppimisen valoa. Muualla talossa on sfinksejä, '
+          + 'käärmeitä ja tähtitaivasmosaiikkeja sekä Lee Lawrien '
+          + 'veistoksia. Sisällä on Dean Cornwellin neliosainen '
+          + 'seinämaalaus Kalifornian historiasta, valmis noin 1933.'
+          + '\n\n'
+          + 'Talo toimi huonosti. Lukusalien avohyllyillä oli vain '
+          + 'kymmenisen prosenttia kokoelmasta, ja kaiken muun sai '
+          + 'pyytämällä lipukkeella: virkailija haki kirjan '
+          + 'sisävarastosta, joka oli ahdettu kahteen betonirunkoon '
+          + 'niin tiiviisti, että hyllyväli oli vajaat kaksi metriä. '
+          + 'Kun lukusalien katot olivat kolmesta neljään ja puoleen '
+          + 'metriin, sisävarastoon mahtui viisi tai kuusi tasoa '
+          + 'saman korkeuden sisään. Korjausta esitettiin 1960-luvulta '
+          + 'alkaen, mutta kaupunki ei suostunut maksamaan.'
+          + '\n\n'
+          + 'Ratkaisun toi tuhopoltto. Talossa syttyi 1986 kaksi '
+          + 'tulipaloa, 29. huhtikuuta ja 3. syyskuuta, molemmat '
+          + 'sytytettyjä. Ensimmäinen paloi seitsemän tuntia, koska '
+          + 'vanha rakenne ei päästänyt savua ulos eikä palokuntaa '
+          + 'sisään, ja pikkupesäkkeitä leimahteli vielä päiviä. '
+          + 'Neljäsataatuhatta nidettä eli viidennes kokoelmasta '
+          + 'tuhoutui ja 700 000 kärsi vesi- ja savuvahinkoja. Toinen '
+          + 'palo tuhosi musiikkiosaston lukusalin. Palo oli '
+          + 'lopullinen sysäys peruskorjaukselle, joka tehtiin '
+          + '1988–1993. Kirjasto myi ilmatilaoikeutensa rakentajille '
+          + 'rahoittaakseen työn — niiden turvin nousi kadun toiselle '
+          + 'puolelle pilvenpiirtäjä — ja sai kahdeksankerroksisen '
+          + 'Tom Bradley -lisäsiiven, joka on lähes yhtä suuri kuin '
+          + 'alkuperäinen talo. Hyllymetrejä on nyt 143 kilometriä.',
+      kuvat: [
+        {
+          tiedosto: 'Los Angeles Central Library, 630 W. 5th St. Downtown Los Angeles 1.jpg',
+          selite: 'Keskustornin mosaiikkipyramidi aurinkoineen; huipulla on '
+            + 'soihtua kannatteleva käsi. Takana kohoaa se torni, joka '
+            + 'rakennettiin kirjaston myymille ilmatilaoikeuksille.',
+          lahde: 'MikeJiroch, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Japanilaisamerikkalainen museo': {
+      aika: '1992',
+      teksti: 'Museo perustettiin 1992 Little Tokyoon, ja sen '
+          + 'ensimmäinen puheenjohtaja oli Bruce Teruo Kaji. Hanke '
+          + 'syntyi aikana, jolloin japanilaisamerikkalainen yhteisö '
+          + 'oli järjestäytynyt vaatimaan tunnustusta sille vääryydelle, '
+          + 'jonka liittovaltio oli tehnyt sille toisen maailmansodan '
+          + 'aikana. Museon tarkoitus oli kuitenkin laajempi kuin '
+          + 'yksi vääryys: tallentaa yhteisön oma historia ja '
+          + 'kulttuuri Yhdysvalloissa.'
+          + '\n\n'
+          + 'Ensimmäinen osoite oli itsessään todistuskappale. Museo '
+          + 'avattiin vuoden 1925 Hompa Hongwanji -buddhalaistemppelin '
+          + 'rakennuksessa — samassa talossa, jossa viranomaiset '
+          + 'kirjasivat 1942 japanilaisamerikkalaisia '
+          + 'sotavankeuteensa. Vuonna 1999 museo muutti nykyiseen '
+          + 'paviljonkiinsa, jonka rakennustyötä johti arkkitehti '
+          + 'Gyo Obata, ja vanha temppeli jäi toimistoiksi ja '
+          + 'varastoksi.'
+          + '\n\n'
+          + 'Kokoelmat kattavat yli 130 vuotta ensimmäisen '
+          + 'siirtolaispolven issein ajoista nykypäivään. Liikkuvan '
+          + 'kuvan arkistossa on yli kolmekymmentä kilometriä '
+          + 'kotielokuvaa 1920-luvulta 1950-luvulle, ja museo '
+          + 'säilyttää sitä yhdessä elokuva-akatemian arkiston '
+          + 'kanssa. Vuonna 1993 museo sai satoja esineitä ja '
+          + 'kirjeitä, jotka lapset olivat lähettäneet leireiltä '
+          + 'sandiegolaiselle kirjastonhoitajalle Clara Breedille; '
+          + 'niistä tehtiin näyttely, ja ne ovat nyt osa pysyvää '
+          + 'kokoelmaa. Museo on Smithsonianin kumppanilaitos, ja '
+          + 'joulukuussa 2010 se sai museoille ja kirjastoille '
+          + 'myönnettävän kansallisen ansiomitalin.',
+      kuvat: [
+        {
+          tiedosto: 'Japanese American National Museum (Los Angeles) August 2024.JPG',
+          selite: 'Vuoden 1999 paviljonki, jonka rakennustyötä johti '
+            + 'arkkitehti Gyo Obata; vanha temppelirakennus on saman korttelin '
+            + 'takana.',
+          lahde: 'Alexis Doine, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pershing Square': {
+      aika: '1866',
+      teksti: 'Kortteli oli 1850-luvulla leiripaikka, jossa yöpyivät '
+          + 'ne, jotka tulivat pueblon ulkopuolelta. Sen halki kulki '
+          + 'Arroyo de Los Reyes -niminen uoma, ja vieressä kulkivat '
+          + 'kaupungin vanhan maaojan sivukanavat. Vuonna 1866 '
+          + 'pormestari Cristóbal Aguilar vihki paikan julkiseksi '
+          + 'aukioksi nimellä La Plaza Abaja eli alempi tori — se on '
+          + 'siis seitsemän vuotta isoisän matkaa vanhempi. Läheisen '
+          + 'oluttarhan pitäjä, saksalainen siirtolainen George '
+          + 'Lehman, istutti aukiolle sypressejä, hedelmäpuita ja '
+          + 'kukkivia pensaita ja hoiti niitä kuolemaansa 1882 asti.'
+          + '\n\n'
+          + 'Nimi vaihtui tämän tästä. Kun kadun toiselle puolelle '
+          + 'tuli 1867 Pyhän Vincentin oppilaitos, aukiota alettiin '
+          + 'kutsua Pyhän Vincentin puistoksi; 1870 se nimettiin '
+          + 'virallisesti Los Angeles Parkiksi, 1886 kuudennen kadun '
+          + 'puistoksi ja 1890-luvun alussa Keskuspuistoksi. Silloin '
+          + 'sinne tuli soittolava ja kasvillisuudesta kasvoi '
+          + 'trooppisen tuuhea varjoisa keidas. Marraskuussa 1918, '
+          + 'viikko ensimmäisen maailmansodan aselevon jälkeen, '
+          + 'aukiosta tuli Pershing Square kenraali John J. '
+          + 'Pershingin mukaan. Vuoden 1900 muistomerkki Kalifornian '
+          + 'kahdellekymmenelle Espanjan-sodassa kaatuneelle on '
+          + 'kaupungin vanhin julkinen taideteos.'
+          + '\n\n'
+          + 'Aukio kaivettiin 1952 kokonaan auki kolmikerroksista '
+          + 'maanalaista pysäköintilaitosta varten, ja sen päälle '
+          + 'levitettiin nurmi; ramppien takia aukio jäi irralleen '
+          + 'ympäröivistä jalkakäytävistä. Osa kaivetuista palmuista '
+          + 'lähetettiin Disneylandiin viidakkoristeilyn '
+          + 'kulisseiksi. Vuonna 1992 aukio suljettiin uudelleen 14,5 '
+          + 'miljoonan dollarin muutostyöhön, jonka tekivät '
+          + 'meksikolainen Ricardo Legorreta ja yhdysvaltalainen '
+          + 'Laurie Olin; 1994 avattiin nykyinen aukio kymmenen '
+          + 'kerroksen korkuisine violetteine kellotorneineen ja '
+          + 'siirroslinjaa esittävine kävelypolkuineen. Uusi remontti '
+          + 'alkoi 2023 ja on tarkoitus saada valmiiksi vuoden 2028 '
+          + 'olympialaisiin. Valtuutettu Kevin de León esitti 2024 '
+          + 'aukion nimeämistä Biddy Mason Parkiksi orjuudesta '
+          + 'vapautuneen sairaanhoitajan, kiinteistöyrittäjän ja '
+          + 'hyväntekijän mukaan; esitys jäi valiokuntaan, mutta '
+          + 'kaupunginvaltuusto hyväksyi sen yksimielisesti '
+          + 'syyskuussa 2026.',
+      kuvat: [
+        {
+          tiedosto: 'Art in Pershing Square Park, a public park in downtown Los Angeles, California LCCN2013632114.tif',
+          selite: 'Legorretan ja Olinin vuoden 1994 aukio: violetti '
+            + 'kellotorni, oranssit pallot ja kivetys, jonka alla on 1952 '
+            + 'kaivettu pysäköintilaitos.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Eastern Columbia': {
+      aika: '1930',
+      teksti: 'Adolph Sieroty oli aloittanut 1892 kelloliikkeellä '
+          + 'Spring Streetillä ja kasvattanut siitä kaksi '
+          + 'tavarataloa: Eastern myi huonekaluja ja kodintavaraa, '
+          + 'Columbia vaatteita. Vuonna 1930 ne saivat yhteisen '
+          + 'talon Broadwaylle. Claud Beelmanin piirtämä '
+          + 'kolmetoistakerroksinen rakennus avattiin 12. syyskuuta '
+          + '1930 yhdeksän kuukauden rakentamisen jälkeen ja maksoi '
+          + '1,25 miljoonaa dollaria.'
+          + '\n\n'
+          + 'Kaupungin 46 metrin korkeusrajoitus oli yhä voimassa, '
+          + 'mutta koristeellinen kellotorni sai poikkeusluvan, ja '
+          + 'sen ansiosta talo yltää 80 metriin. Runko on '
+          + 'teräsbetonia ja verhous kiiltävää turkoosia '
+          + 'terrakottaa syvänsinisin ja kullanvärisin listoin. '
+          + 'Julkisivun aiheina ovat auringonsäteet, siksakit, '
+          + 'kulmakuviot ja tyylitellyt eläin- ja kasviaiheet, ja '
+          + 'nelisivuisen kellotornin joka tahossa lukee EASTERN '
+          + 'kirkkaanvalkoisella neonilla. Jalkakäytävät talon '
+          + 'ympärillä ovat monivärisiä terratsomosaiikkeja samoin '
+          + 'siksak-kuvioin. Talo näkyy Santa Monican '
+          + 'moottoritielle asti, ja sitä pidetään yleisesti '
+          + 'kaupungin parhaana säilyneenä art deco -rakennuksena.'
+          + '\n\n'
+          + 'Avautuessaan talossa oli 25 600 neliömetriä lattiaa. '
+          + 'Neljä alinta kerrosta olivat kaupoilla yhteiset, '
+          + 'seitsemännestä ylöspäin kaikki oli Easternia: '
+          + 'kuistikalusteita, olohuoneita, ruokailuryhmiä, lasitavaraa. '
+          + 'Kahdennessatoista kerroksessa oli konttorit ja '
+          + 'seitsemänsadan hengen juhlasali, kolmannessatoista '
+          + 'suihkut, kerhohuone ja lounaskahvila samalle '
+          + 'seitsemällesadalle työntekijälle. Kaupat suljettiin '
+          + '1957. Kellotorni oli ollut vuosikymmeniä pimeänä, kun se '
+          + 'sytytettiin uudelleen 23. kesäkuuta 2005 talon '
+          + '75-vuotisjuhlassa, ja kahden vuoden ja 80 miljoonan '
+          + 'dollarin muutostyön jälkeen talossa oli 2006 valmiina '
+          + '147 asuntoa.',
+      kuvat: [
+        {
+          tiedosto: 'Eastern Columbia Tower - Los Angeles.jpg',
+          selite: 'Turkoosi terrakotta ja nelisivuinen kellotorni, jonka joka '
+            + 'tahossa lukee EASTERN valkoisella neonilla.',
+          lahde: 'Galkab, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };

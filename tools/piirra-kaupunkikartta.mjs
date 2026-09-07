@@ -3503,6 +3503,76 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: -27.4625, etela: -27.4760, lansi: 153.0190, ita: 153.0335 },
   },
+  chicago: {
+    /*
+     * LOOP JA SEN LAIDAT KOLMELTA SUUNNALTA (7.9.2026). Ruutu on
+     * 2,98 × 2,72 kilometriä eli Wellingtonin kokoluokkaa, ja se
+     * riittää: Chicagon matkailijan keskusta on kohoradan silmukan
+     * ja joen väliin puristunut ruutukaava, ja kaikki kahdeksan
+     * kohdetta mahtuvat siihen Merchandise Martista (41,8884)
+     * Hull Houseen (41,8717).
+     *
+     * ITÄREUNA 87,617 PYSÄHTYY GRANT PARKIIN EIKÄ JATKU JÄRVELLE.
+     * Tämä on ruudun ainoa varsinainen valinta, ja se tehtiin
+     * kohteiden mukaan. Michiganjärven ranta on vielä 800 metriä
+     * idempänä, ja sinne asti ulottuva ruutu olisi 3,9 kilometriä
+     * leveä mutta 2,7 korkea; oikea kolmannes olisi pelkkää vettä ja
+     * puistoa, koska kartan kahdeksasta kohteesta itäisin on
+     * taideinstituutti (87,6239). Rannan omat kohteet — Millennium
+     * Park, Buckinghamin suihkulähde, Navy Pier — ovat kaikki
+     * kaupunkilehden nostojen tai kuvien aihe, joten järven
+     * ottaminen kuvaan olisi maksanut tarkkuutta ilman yhtään
+     * lisäkohdetta.
+     *
+     * LÄNSIREUNA 87,653 ON HULL HOUSEN MUKAAN. Near West Side
+     * jatkuu siitä vielä pitkälle länteen, mutta seuraava
+     * kohdekelpoinen paikka olisi Union Stock Yardin portti
+     * seitsemän kilometrin päässä etelälounaassa — se on lehden
+     * noston K4 aihe eikä kartan kohde.
+     *
+     * ETELÄREUNA 41,867 JÄTTÄÄ HULL HOUSEN VIIDENNEKSEN VERRAN
+     * KUVAN ALAREUNAN YLÄPUOLELLE, jotta sen numeroympyrä ei osu
+     * lehden piirtämään mittakaavajanaan vasemmassa alakulmassa.
+     * Sama tarkistettiin tools/tarkista-karttapisteet.mjs:llä.
+     *
+     * meri: ei. Michiganjärvi jää rajauksen ulkopuolelle, ja
+     * Chicago-joki on OSM:ssä tavallinen vesiväylä, joka piirtyy
+     * ilman rantaviivalippua.
+     */
+    rajat: { pohjoinen: 41.8915, etela: 41.8670, lansi: -87.6530, ita: -87.6170 },
+  },
+  losangeles: {
+    /*
+     * KESKUSTAN RUUTUKAAVA BUNKER HILLISTÄ BROADWAYLLE (7.9.2026).
+     * Ruutu on 2,26 × 2,50 kilometriä eli pelin tiiviimpiä,
+     * Christchurchin ja Ankaran kokoluokkaa. Syy on sama kuin
+     * Christchurchissa: Los Angelesin keskusta on pieni ja tiivis
+     * saareke matalassa kaupungissa, ja kaikki kahdeksan kohdetta
+     * ovat parin kilometrin nauhassa Fort Mooren muistomuurilta
+     * (34,0583) Eastern Columbian kellotornille (34,0428).
+     *
+     * LAAJEMPI RUUTU KOKEILTIIN JA HYLÄTTIIN. Plazan kortteli
+     * (El Pueblo, Ávila-adobe, Pico House, Olvera Street, Union
+     * Station) on vain noin kilometrin koillisessa ja mahtuisi
+     * helposti, mutta jokainen niistä on kaupunkilehden noston tai
+     * matkaoppaan aihe — kohdekartta ei toista lehden juttuja
+     * (New Yorkin sääntö), joten koko kortteli jätettiin ruudun
+     * ulkopuolelle sen sijaan, että se olisi otettu kuvaan tyhjänä.
+     *
+     * LÄNSIREUNA 118,2595 ON PÄÄKIRJASTON JA EASTERN COLUMBIAN
+     * MUKAAN. Sen takana alkaa Harbor Freeway, joka piirtyy
+     * kartalle leveänä valkoisena nauhana ja veisi tilaa
+     * korttelien viivastolta ilman yhtään kohdetta.
+     *
+     * ETELÄREUNA 34,0385 JÄTTÄÄ EASTERN COLUMBIAN VIIDENNEKSEN
+     * VERRAN KUVAN ALAREUNAN YLÄPUOLELLE mittakaavajanan takia,
+     * samasta syystä kuin Chicagossa.
+     *
+     * meri: ei. Meri on 25 kilometriä lounaassa, ja Los Angeles
+     * -joki kulkee rajauksen itäpuolella.
+     */
+    rajat: { pohjoinen: 34.0610, etela: 34.0385, lansi: -118.2595, ita: -118.2350 },
+  },
   suva: {
     /*
      * SIIRTOMAA-AJAN HALLINTOKORTTELI NIEMEN KÄRJESSÄ (6.9.2026).
