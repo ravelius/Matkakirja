@@ -92580,6 +92580,27 @@ export const KULTTUURI_KATEGORIAT = {
    *    tunnustukseen; vuodet 1973–1990 on rajattu ulos samalla
    *    periaatteella kuin Chilen maalehdessä.
    *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Punta arenas.jpg" (extmetadatan Artist tyhjä),
+   * "Cerro La Cruz PUQ.jpg" (etualalla tunnistettavia kasvoja ja
+   * seinässä graffitia), "15mrz08 P Arenas 08.jpg" (kuvattu
+   * lentokoneen ikkunasta, alakulmassa siipi), "Punta Arenas 46.jpg"
+   * (katunäkymä liikekylttien kanssa, ei yleiskuva),
+   * "Panoramica punta arenas3.jpg" ja "Punta Arenas View.jpg"
+   * (alle 1200 px), "Yelcho.jpg" (1000 px) ja "Piloto Pardo.jpeg"
+   * (597 px).
+   *
+   * KUUSI NOSTOA JA YKSI KOHDEKARTAN JUTTU JÄÄ KUVATTOMAKSI, ja se
+   * on valinta: nimen etymologialle, vuoden 1873 siirtolalle,
+   * lammastaloudelle ja selkʼnameille, salmelle, salmen
+   * kartoitukselle, Yelchon pelastusretkelle ja merisotamuseolle ei
+   * löytynyt Commonsista kuvaa, joka täyttäisi säännöt ja vastaisi
+   * selitettä.
+   * Kuvaton on parempi kuin tarkistamaton — kohteet on tilattu
+   * kuvaputkelta raportissa.
+   *
    * MINITEHTÄVÄ EI TOISTA VISAA. Kaupungin visa
    * (southamerica-questions.js, puntaarenas) kysyy salmesta, Panaman
    * kanavasta 1914, eteläisimmästä kaupungista, Magalhãesista 1520 ja
@@ -92594,6 +92615,91 @@ export const KULTTUURI_KATEGORIAT = {
         + 'siitä, että Magalhãesinsalmi kuuluu Chilelle. Isoisän '
         + 'matkavuonna 1873 se oli yhä pieni — vauraus tuli vasta '
         + 'lampaista, ja se maksoi hintansa.',
+      /*
+       * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+       * (southamerica-valokuvat.js, puntaarenas), jossa se on jo
+       * tarkistettu — vanha puoli on Nevin Otto Winterin kirjan
+       * kuvalaatta vuodelta 1912 ja uusi puoli näkymä Cerro de la
+       * Cruzilta 2019. Selitteet on kirjoitettu uudestaan yhdeksi
+       * virkkeeksi reseptin mukaan. Vanhassa vedoksessa on kirjan
+       * oma painettu kuvateksti ja kehys; se on julkaisijan omaa
+       * merkintää ja kerrotaan kuvatekstissä.
+       *
+       * SAMA NÄKÖALAPAIKKA ESIINTYY LEHDESSÄ KAHDESTI ja se on
+       * tietoinen valinta: parin uusi puoli on koko kaupungin näkymä
+       * Cerro de la Cruzilta, ja kohdekartan Cerro de la Cruz -jutun
+       * kuva on itse näköalatasanne mosaiikkeineen. Eri tiedostot,
+       * eri rajaus, eri asia — sama linja kuin Vasa-laivalla ja
+       * Magadanin surun maskilla (docs/moduulit/kaupunkilehti.md,
+       * tunnetut kuvatoistot).
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'General view of Punta Arenas.jpg',
+          vuosi: '1912',
+          selite: 'Matkakirjan painettu kuvalaatta vuodelta 1912: '
+            + 'peltikattojen takana on salmi ja sillä toistakymmentä '
+            + 'laivaa odottamassa.',
+          lahde: 'Winter, Nevin O. (Nevin Otto), 1869-1936, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Punta Arenas, Cerro de la Cruz 0798.jpg',
+          selite: 'Sama kaupunki Cerro de la Cruzilta nykyään: '
+            + 'ruutukaava on ennallaan, mutta salmella on enää '
+            + 'yksittäisiä aluksia ja yksi risteilijä.',
+          lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * KANSIKUVAT ovat omistajan 21.8.2026 linjauksen mukaisia
+       * laajoja yleiskuvia kaupungin eri puolilta: keskusta salmen
+       * rannalla, kattojen yli satamaan ja väriset peltikatot.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Centro de Punta Arenas.JPG',
+          selite: 'Keskustan katot laskeutuvat suorina riveinä '
+            + 'salmelle, jonka selällä on risteilijä.',
+          lahde: 'Oskaar4, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Punta Arenas, 26.jpg',
+          selite: 'Aamuhämärässä laituri työntyy salmelle ja sen '
+            + 'takana häämöttää Tulimaan rannikko.',
+          lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Punta Arenas-View2.jpg',
+          selite: 'Väriset peltikatot peittävät koko rinteen rannasta '
+            + 'kukkuloille asti.',
+          lahde: 'Heretiq, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: Punta Arenasille ei ole generoitu herokuvia,
+       * joten karusellissa on kolme aitoa valokuvaa (vertaa Lagosiin
+       * ja Denveriin): ilta, kuutamo ja rantabulevardi.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Sunset over Punta Arenas with the mysterious Strait of Magellan to Tierra del Fuego (33710490731).jpg',
+          selite: 'Iltavalo osuu keskustan katuun, joka laskee '
+            + 'suoraan salmelle asti.',
+          lahde: 'Vicuna R from Germany, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Punta Arenas1.jpg',
+          selite: 'Kuu nousee kattojen yli, ja vasemmalla erottuu '
+            + 'katedraalin torni.',
+          lahde: 'Felvalen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Vista dela costanera ala ciudad de Punta Arenas (2).jpg',
+          selite: 'Rantabulevardilta katsoen laiturin päässä on '
+            + 'oranssi tutkimusalus ja sen takana kaupunki.',
+          lahde: 'Tamtam90, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Sandy Point, joka käännettiin kahdesti',
@@ -92628,6 +92734,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Punta Santa Analle 21. syyskuuta 1843. Koko miehistö '
             + 'nousi maihin, ja rantaan jätettiin kyltti sanoilla '
             + 'Viva Chile.',
+          tiedosto: 'Réplica Goleta Ancud Terminada - Museo Nao Victoria Punta Arenas Chile.jpg',
+          selite: 'Ancudin täysimittainen jäljennös iltavalossa, ja '
+            + 'sen takana Nao Victorian runko.',
+          lahde: 'Juanmatassi, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Chilean schooner Ancud',
         },
         {
@@ -92666,6 +92776,19 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA (omistaja 16.8.2026): yksi aihe, joka
+         * täyttää ruudun, paikan oma erikoisuus, selkeä valo ja
+         * rauhallinen tausta. Kuvasuhde on 0,75 eli kaavan
+         * vaatimalla maltillisella pystyalueella (0,60–0,85).
+         * Aihe on kaupungin oma: Etelämantereen pelastusretki.
+         */
+        kuva: {
+          tiedosto: 'PilotoPardo.jpg',
+          selite: 'Luutnantti Pardon muistomerkki osoittaa salmelle, '
+            + 'ja sen vieressä nousee laivan keulaa kuvaava teräslevy.',
+          lahde: 'AndrewDeAngelo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
         kappale: 'Punta Arenas on Magallanesin ja Chilen Antarktiksen '
           + 'alueen pääkaupunki ja maailman eteläisin yli sadantuhannen '
           + 'asukkaan kaupunki — Argentiinan Ushuaia on etelämpänä '
@@ -92743,6 +92866,13 @@ export const KULTTUURI_KATEGORIAT = {
                 + 'varren pesissä poikaset menestyvät hieman muita '
                 + 'paremmin. Osa linnuista on siirtynyt Argentiinan '
                 + 'puolen Cabo Vírgenesin yhdyskuntaan.',
+              kuva: {
+                tiedosto: 'Faro Magdalena y pingüinos de Magallanes.jpg',
+                asettelu: 'kapea',
+                selite: 'Magalhãespingviinejä on rinteellä satoja, ja '
+                  + 'ylhäällä seisoo saaren puna-valkoinen majakka.',
+                lahde: 'PaulaGiraudi, Wikimedia Commons (CC BY-SA 3.0)',
+              },
             },
             {
               otsikko: 'Brauneja ja muistoja',
@@ -92923,6 +93053,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'ultraviolettisäteilylle. Väitettä on tutkittu '
             + 'vertaisarvioidusti ihosyövän ja UV-B-säteilyn osalta '
             + 'vuosina 1987–2000.',
+          tiedosto: 'Punta Arenas con nieve.jpeg',
+          selite: 'Talvella lumi peittää katot, ja kadun päässä salmi '
+            + 'jatkuu harmaana horisonttiin.',
+          lahde: 'Juan25, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Punta Arenas',
         },
         {
@@ -93006,6 +93140,32 @@ export const KULTTUURI_KATEGORIAT = {
    *  - J: Ibáñezin loppu kerrotaan yhdellä lauseella ilman
    *    yksityiskohtia, ja nykypolitiikka on kokonaan poissa.
    *
+   * KUVAT haettiin Commonsin rajapinnasta 7.9.2026 (lisenssi ja
+   * tekijä extmetadatasta), ja jokainen valittu kuva katsottiin
+   * silmin 900 px esikatseluna.
+   * HYLKÄYKSET: "Lockheed Constellation Santa Cruz.jpg" (rungossa
+   * lentoyhtiön logo), "Bailarines de taquirari.jpg" ja
+   * "Vestimenta Camba.jpg" (tunnistettavia kasvoja lähikuvassa;
+   * jälkimmäisessä myös mainosbanneri), "Facultad de Ciencias del
+   * Hábitat, Diseño y Arte.png" (valokuvaajan vesileima
+   * yhteystietoineen), "La Catedral de Santa Cruz de la Sierra.jpg"
+   * (tunnistettavia kasvoja ja poliittisia banderolleja),
+   * "Plaza 24 de Septiembre, Santa Cruz de la Sierra.jpg" ja
+   * "Santacruzdelasierra.JPG" (tunnistettavia kasvoja etualalla),
+   * "Condominio Vista Verde…" (asuntokohteen myyntikuva),
+   * "Vista aérea de Santa Cruz.jpg" (utuinen kaukokuva),
+   * "VistaSC.jpg" (440 px), "Guembe.jpg" (1024 px).
+   *
+   * KUUSI NOSTOA JA VIISI KOHDEKARTAN JUTTUA JÄÄ KUVATTOMAKSI, ja
+   * se on valinta: taquirarille, chovenalle ja karnevaalille ei ole
+   * Commonsissa kuvaa ilman tunnistettavia kasvoja, eikä chanéille,
+   * kaupungin kolmelle muutolle, Warnesin vuosille, Avión Piratalle,
+   * El Arenalin puistolle, pääaukiolle, Noel Kempff Mercadon
+   * museolle eikä Tahuichi Aguileran stadionille löytynyt
+   * kelvollista kuvaa lainkaan. Pääaukion kuvat ovat kansi- ja
+   * avauskarusellissa, eikä sama tiedosto saa esiintyä kahdesti. Kuvaton on parempi kuin tarkistamaton — kohteet on
+   * tilattu kuvaputkelta raportissa.
+   *
    * MINITEHTÄVÄ EI TOISTA VISAA. Kaupungin visa
    * (southamerica-questions.js, santacruz) kysyy maasta, Andien
    * puolesta, soijasta, virallisten kielten määrästä ja hallinnon
@@ -93019,6 +93179,63 @@ export const KULTTUURI_KATEGORIAT = {
         + 'vuosisadaksi pieneksi etupostiksi ja kasvoi sitten '
         + 'maansa suurimmaksi. Isoisän matkavuonna se oli vielä '
         + 'jälkimmäisessä vaiheessa.',
+      /*
+       * EI ENNEN JA NYT -PARIA. Matkakirjan valokuvataulussa
+       * (southamerica-valokuvat.js, santacruz) ei ole vanhaa puolta
+       * lainkaan, ja Commonsista etsittiin 7.9.2026 vanhaa vedosta
+       * hauilla "Santa Cruz de la Sierra 1900 antigua fotografia
+       * historica" ja kategoriasta "Category:Santa Cruz de la Sierra"
+       * — yhtään kuvasäännöt täyttävää (1200 px, PD/CC) vanhaa
+       * valokuvaa ei löytynyt. Lehti taittuu siis ilman paria kuten
+       * Lagos, Dubai, Doha, Salalah ja Astana. Kirjattu Fablelle
+       * kuvaputken tilaukseksi.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Vista Aérea del Parque de Protección ecológica del Río Piraí.jpg',
+          selite: 'Ilmasta katsottuna kaupunki päättyy suoraan '
+            + 'viivaan, jonka takana alkaa Piraí-joen metsävyöhyke.',
+          lahde: 'EEJCC, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Santa Cruz, Bolivia aerial.jpg',
+          selite: 'Punaiset tiilikatot ja puut vuorottelevat '
+            + 'tasangolla niin kauas kuin näkyy.',
+          lahde: 'Sam Beebe, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: '- panoramio (5178).jpg',
+          selite: 'Pääaukion panoraama: puistokäytävät, penkit ja '
+            + 'keskellä katedraalin tiilinen julkisivu.',
+          lahde: 'nivardo61, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: Santa Cruzille ei ole generoitu herokuvia,
+       * joten karusellissa on kolme aitoa valokuvaa. Kolmas on
+       * Lomas de Arenan suojelualue, joka kuuluu kaupungin omaan
+       * kuntaan ja on sen tunnetuin lähikohde.
+       */
+      avauskuvat: [
+        {
+          tiedosto: '004 - Santa Cruz main square and cathedral.jpg',
+          selite: 'Aukion kivetyksellä on enemmän kyyhkyjä kuin '
+            + 'kulkijoita, ja perällä nousee katedraalin julkisivu.',
+          lahde: 'Aurimaz, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Tarde de la Basílica.jpg',
+          selite: 'Katedraalin kaksi tornia kohoavat aukion palmujen '
+            + 'takaa iltapäivän valossa.',
+          lahde: 'Ruateatro, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Lomas de Arena - Santa Cruz, Bolivia.jpg',
+          selite: 'Kaupungin eteläpuolella tuuli on kasannut '
+            + 'valkoiset hiekkadyynit laguunien ympärille.',
+          lahde: 'Gabriel Millos, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Chanét, Grigotá ja se mitä ei tiedetä',
@@ -93089,10 +93306,27 @@ export const KULTTUURI_KATEGORIAT = {
             + 'hallinto lakkautti maaorjuuden. Keskushallinto kukisti '
             + 'liikkeen keväällä 1877, ja Ibáñez kuoli toukokuun '
             + 'ensimmäisenä päivänä.',
+          tiedosto: 'Andrés Ibáñez.jpg',
+          selite: 'Ibáñezin patsas nostaa nyrkkiä jalustalla, jonka '
+            + 'laatassa lukevat hänen elinvuotensa 1844–1877.',
+          lahde: 'Fernando J. Balderrama, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Santa Cruz de la Sierra',
         },
       ],
       matkailijalle: {
+        /*
+         * ETUSIVUKUVAN KAAVA (omistaja 16.8.2026): yksi aihe, joka
+         * täyttää ruudun, paikan oma erikoisuus, selkeä valo ja
+         * rauhallinen tausta. Kuvasuhde on 0,75 eli kaavan
+         * maltillisella pystyalueella (0,60–0,85).
+         */
+        kuva: {
+          tiedosto: 'Catedral Basílica Menor de San Lorenzo, Santa Cruz de la Sierra small.jpg',
+          selite: 'Katedraalin punatiiliset tornit ja kupolit '
+            + 'ylhäältä nähtynä, ja niiden takana alkaa matalien '
+            + 'kattojen meri.',
+          lahde: 'Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)',
+        },
         kappale: 'Santa Cruz de la Sierra on Bolivian suurin kaupunki '
           + 'ja maan itäisten alankojen keskus. Kunnassa asui vuonna '
           + '2024 runsaat 1,6 miljoonaa ihmistä ja koko '
@@ -93309,6 +93543,10 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vuoden 1697 kielioppiinsa muodossa camba, monikko '
             + 'macamba. Toisen mukaan se tulee Galician Cambadosista. '
             + 'Kumpaakaan ei ole todistettu.',
+          tiedosto: 'Sombreo de saó 2.jpg',
+          selite: 'Saó-hattu on punottu leveälierinen olkihattu, joka '
+            + 'kuuluu camba-asuun ja suojaa maaseudulla auringolta.',
+          lahde: 'Carlillasa, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Camba',
         },
         {

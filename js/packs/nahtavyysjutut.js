@@ -56004,6 +56004,14 @@ export const NAHTAVYYSJUTUT = {
           + 'lahjoitti sen naapurialueen pääkaupungille Coyhaiquelle, '
           + 'jossa se seisoo nykyään Avenida Baquedanon '
           + 'keskikaistalla joen rinnalla kaupungin pohjoislaidassa.',
+      kuvat: [
+        {
+          tiedosto: 'Monumento al Ovejero Punta Arenas.jpg',
+          selite: 'Pronssinen lammaslauma kulkee kadun keskikaistaa '
+            + 'pitkin, ja lampuri johtaa sitä hevosineen ja koirineen.',
+          lahde: 'Micah MacAllen from Travel Bums, Latin America, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Sara Braunin hautausmaa': {
@@ -56035,6 +56043,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Magdalena Vrsalovic lahjoitti kertyneet rahat kaupungin '
           + 'Punaiselle Ristille, ja haudalle pystytettiin Edmundo '
           + 'Casanovan veistämä muistomerkki.',
+      kuvat: [
+        {
+          tiedosto: 'Cementerio de Punta Arenas.jpg',
+          selite: 'Leikatut sypressit reunustavat käytävää, ja niiden '
+            + 'välissä seisovat sukujen kappelit enkelipatsaineen.',
+          lahde: 'Daniel Diaz Nauto, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Salesiaanien museo': {
@@ -56060,6 +56076,14 @@ export const NAHTAVYYSJUTUT = {
           + 'lähetyssaarnaajat tallensivat kuitenkin esineitä, '
           + 'valokuvia ja kielitietoa, joita ei muualla ole '
           + 'säilynyt — juuri se aineisto on nyt tässä talossa.',
+      kuvat: [
+        {
+          tiedosto: 'Museo territorial salesiano - Punta Arenas.jpg',
+          selite: 'Museon salissa on lasivitriinejä seinän täydeltä, '
+            + 'katosta riippuu kanootti ja keskellä seisoo rintakuva.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Cerro de la Cruz': {
@@ -56087,6 +56111,14 @@ export const NAHTAVYYSJUTUT = {
           + 'länsipuolella. Yhdellä niistä, Dawsonin saarella, oli '
           + 'vuoden 2002 laskennassa noin 301 asukasta; Clarencen '
           + 'saarella viisi.',
+      kuvat: [
+        {
+          tiedosto: 'Mirador del Cerro de la Cruz, Punta Arenas, Chile 2014-04-18 21-10.jpg',
+          selite: 'Näköalapaikan mukulakivitasanteelta katsottuna katot '
+            + 'laskeutuvat riveinä rannalle ja salmelle.',
+          lahde: 'User:Maxvillarroeldouglas, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Sagrado Corazónin katedraali': {
@@ -56110,6 +56142,15 @@ export const NAHTAVYYSJUTUT = {
           + 'Arenasin hiippakunnan piispanistuin. Aukio kirkon '
           + 'edessä on kaupungin pääaukio, ja sen keskellä seisoo '
           + 'vuoden 1920 Magalhães-muistomerkki.',
+      kuvat: [
+        {
+          tiedosto: 'Plaza Muñoz Gamero y monumento a Magallanes - Punta Arenas.jpg',
+          selite: 'Vanhassa painetussa kuvassa aukio on lumen peitossa, '
+            + 'keskellä Magalhãesin muistomerkki ja oikealla '
+            + 'katedraalin kellotorni.',
+          lahde: 'Unknown authorUnknown author, Wikimedia Commons (PD)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Braun-Menéndezin palatsi': {
@@ -56137,6 +56178,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kansanmurhaan, johon rakennuttajasuvun jäsenet '
           + 'osallistuivat. Sama tarina kerrotaan tässä lehdessä '
           + 'kansisivun neljännessä jutussa.',
+      kuvat: [
+        {
+          tiedosto: 'Punta Arenas - Palacio Braun Menendez.jpg',
+          selite: 'Palatsin liuskekivikatto ja pyöreä kulmatorni näkyvät '
+            + 'katua reunustavan takorauta-aidan takaa.',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'Merisotamuseo': {
@@ -56184,6 +56233,14 @@ export const NAHTAVYYSJUTUT = {
           + 'Tulimaan pääsaarelle ja harvemmin Puerto Williamsiin. '
           + 'Tuuli käy tällä rannalla lähes yhtenään, ja se on '
           + 'voimakkaimmillaan kesällä eikä talvella.',
+      kuvat: [
+        {
+          tiedosto: 'Vista Sur.jpg',
+          selite: 'Iltavalossa aallonmurtajaksi upotetun purjelaivan mastot '
+            + 'törröttävät vedestä, ja takana kaartaa Tulimaan rannikko.',
+          lahde: 'Gonzalo Baeza H, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
   },
@@ -56271,6 +56328,14 @@ export const NAHTAVYYSJUTUT = {
           + 'kaupungissa kaksitoista tiedekuntaa ja departementin '
           + 'maakunnissa kuusi lisää, ja sen yhteydessä toimii myös '
           + 'kaupungin luonnonhistoriallinen museo.',
+      kuvat: [
+        {
+          tiedosto: 'Uagrm - Facultad de ciencias de la salud humana - panoramio.jpg',
+          selite: 'Terveystieteiden tiedekunnan matala rakennus, jonka '
+            + 'seinään on maalattu oppiaineiden nimet.',
+          lahde: 'vozachudo2004, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
     'El Arenalin puisto': {
@@ -56316,6 +56381,14 @@ export const NAHTAVYYSJUTUT = {
           + 'liikettä ja kuoli 1877. Hänen mukaansa on nimetty myös '
           + 'se maakunta, jossa Santa Cruz sijaitsee. Hänen tarinansa '
           + 'kerrotaan tämän lehden kansisivun neljännessä jutussa.',
+      kuvat: [
+        {
+          tiedosto: 'Cementerio de Santa Cruz de la Sierra.jpg',
+          selite: 'Hautausmaan katua reunustavat valkoiset kolumbaarioseinät, '
+            + 'ja keskellä kasvaa yksi leveälatvainen puu.',
+          lahde: 'Noé, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Plaza 24 de Septiembre': {
@@ -56365,6 +56438,14 @@ export const NAHTAVYYSJUTUT = {
           + 'veistosreliefiä. Kirkossa on lisäksi kirkkotaiteen '
           + 'museo. Sen tornista otetut kuvat ovat se näkymä, josta '
           + 'aukio yleensä valokuvataan.',
+      kuvat: [
+        {
+          tiedosto: 'Catedral Basílica Menor de San Lorenzo, Santa Cruz de la Sierra recorte.jpg',
+          selite: 'Katedraali ylhäältä: kaksi kellotornia punatiilisine '
+            + 'kupoleineen ja niiden takana koko keskustan kattomeri.',
+          lahde: 'Parallelepiped09, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       lahde: 'Wikipedia',
     },
     'Noel Kempff Mercadon museo': {
