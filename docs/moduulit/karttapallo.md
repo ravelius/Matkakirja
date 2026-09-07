@@ -4018,3 +4018,242 @@ kahden: kahden sekunnin maksimi jää roikkumaan ruutuun senkin jälkeen,
 kun nykäys on ohi, eikä lukija näe, mikä ele sen aiheutti. Sama rivi
 menee konsoliin (Safarin etäkonsoli, iOS-kuori). Mittari on yhä
 kokonaan kehittäjän kytkimen takana eikä maksa mitään, kun se on pois.
+
+## 16. Aloitusvalinta: pallo paikallaan, kohteet takaisin (7.9.2026)
+
+Omistaja työpöytäselaimesta 7.9.2026 iltapäivällä, sanatarkasti:
+
+> Kartta voisi sittenkin pysyä ihan paikallaan tässä, kun pelaaja
+> valitsee, minne hän haluaa lentää. Kartan zoomaustason voisikin
+> muuttaa tällaiseksi, mikä nyt näkyy kuvassa. Ja valittavien
+> kohdekaupunkien huomioympyrää voisi hieman tehostaa. ja nostetaan
+> kokeeksi kaikki kohdekaupungit takaisin mitä aiemmin oli käytössä.
+
+Neljä muutosta samaan näkymään (Raamattu, "ALOITUSVALINTA: PALLO
+PAIKALLAAN, KAIKKI KOHTEET TAKAISIN KOKEEKSI").
+
+### 16.1 Pallo ei pyöri itsestään
+
+5.9.2026 lisätty hidas pyörintä (0,16 °/s itään, oma rAF-silmukka
+kolmella pysäyttimellä) on **poistettu kokonaan** — silmukka,
+vakiot ja pysäyttimet. Valinta on lukutilanne: neljästätoista
+kaupungista pitää löytää yksi, ja liikkuva kuva pakottaa katseen
+seuraamaan sen sijaan että antaisi lukea. Liike myös veisi kohteita
+pois kuvasta odottavalta pelaajalta.
+
+Pelaajan oma panorointi ja nipistys ovat ennallaan (kirjaston
+OrbitControls, `js/pallo.js asennaPallonEleet`) — vain automaattinen
+liike on poissa, ja juuri sitä neljätoista kohdetta vaativat:
+takapuolen kaupungit haetaan kääntämällä. Terävän tilan pakotus
+(`pakotaPallonLaatu`) jäi: valintakuva katsotaan täydessä terävyydessä
+liikkui se tai ei. `lauta.aloitusvalinnanPyorinta()` jäi rajapintaan ja
+vastaa aina `false` — se on savukkeen vartio siltä varalta, että
+automaattinen liike joskus palaa vahingossa.
+
+### 16.2 Rajaus on KIINTEÄ näkymä, ei laatikkosovitus
+
+Aalto 3A sovitti kameran Lontoon ja valittavien yhteiseen laatikkoon
+(`ALOITUSVALINNAN_MARGINAALI`, kuplavarat pikseleinä). Se toimi, kun
+valittavia oli yksi: laatikko oli Lontoo–Ateena eli Eurooppa. Kun
+kohteita on neljätoista, sama laatikko olisi koko maapallo — ja rajaus
+karkaisi juuri siitä kuvasta, jonka omistaja pyysi. Laatikkosovitus,
+marginaali ja kuplavarat poistettiin.
+
+Uusi näkymä on kaksi lukua (`js/pallolauta/lauta.js`):
+
+| Vakio | Arvo | Mitä se on |
+| --- | --- | --- |
+| `ALOITUSVALINNAN_LAT` / `_LON` | 30° N, 17° E | omistajan kuvan keskiö: Välimeren ja Saharan raja |
+| `ALOITUSVALINNAN_PALLON_OSUUS` | 0,55 | pallon SÄDE osuutena ruudun korkeudesta |
+| `ALOITUSVALINNAN_ANKKURIT` | `['lontoo', 'ateena']` | pisteet, joiden on mahduttava kuvaan |
+| `ALOITUSVALINNAN_ANKKURIVARA` | 0,78 | osuus ruudun puolikkaasta, jonka sisään ankkurin on osuttava |
+
+`aloitusvalinnanKorkeus({ leveysPx, korkeusPx, ankkurit })` laskee
+Globe.gl:n `altitude`n kahdesta ehdosta, joista **kauimmainen voittaa**:
+
+1. **Pallon koko.** Silhuetin kulmasäde on `atan(2 · osuus ·
+   tan(fov/2))` ruudun puolikkaina, ja pallon geometriasta etäisyys =
+   `1 / sin(kulmasäde)`. Fov on PYSTYSUUNNAN kulma, joten sama korkeus
+   antaa saman pallon koron kaikilla kuvasuhteilla — puhelimella pallo
+   silloin vuotaa sivureunojen yli, mikä on juuri se, mitä omistaja
+   puhelimelta pyysi (*"pallon leveys täyttää ruudun"*).
+2. **Ankkurit.** Piste `(e, n, u)` (itä–pohjoinen–ylös tähtäyspisteen
+   kehyksessä) osuu ruudulla kohtaan `(e, n) / ((d − u) · tan(fov/2))`
+   ruudun puolikkaina, joten ehdoista `|x| ≤ vara · (W/H)` ja
+   `|y| ≤ vara` seuraa suoraan `d ≥ u + |e| / (varaX · tan)` ja
+   `d ≥ u + |n| / (vara · tan)`. Analyyttinen, ei hakua.
+
+**Mitatut luvut** (Node, tests/aloitus-pallolla.test.mjs; sijainti
+ruudun puolikkaina keskipisteestä, y ylös):
+
+| Ruutu | altitude | pallon säde | Lontoo | Ateena |
+| --- | --- | --- | --- | --- |
+| 2000 × 1125 | 1,191 | 619 px (0,55 H) | −0,31 / +0,63 | +0,16 / +0,25 |
+| 1400 × 900 | 1,191 | 495 px | −0,31 / +0,63 | +0,16 / +0,25 |
+| 390 × 844 (puhelin) | 1,191 | 464 px | −0,31 / +0,63 | +0,16 / +0,25 |
+| 834 × 1194 (iPad) | 1,191 | 657 px | −0,31 / +0,63 | +0,16 / +0,25 |
+| 300 × 900 (kapea) | 1,418 | 438 px | −0,26 / +0,52 | +0,14 / +0,21 |
+
+Ankkuriehto ei siis sido tavallisilla ruuduilla: pallon koko ratkaisee,
+ja ankkurit ovat turvaverkko kuvasuhteille alle ~0,34. Kuvassa ovat
+Eurooppa, Afrikka ja Lähi-itä, Atlantti vasemmassa reunassa, Lontoo
+ylhäällä vasemmalla keskeltä ja Ateena keskellä oikealla — mitattu
+Chromiumilla 1400 × 900 (savuke-aloitusvalinta-13 `--kuvat`).
+
+Kuplavaraa ei enää tarvita: Lontoo ja Ateena ovat molemmat ruudun
+yläpuoliskossa, kaukana Livian kuplapinosta oikeassa alanurkassa.
+Kamera-ajo on yhä laudan oma (`kamera.ajaKamera`, pehmeä), ja
+`avaaPallolauta` kutsuu sitä `kotiin`-ajon sijasta.
+
+### 16.3 Huomiorengas valittaville
+
+Lähtövalinnan kohde on eri asia kuin nopanheiton kohde: nopanheitossa
+pelaaja etsii vaihtoehtoja lähikuvasta, lähtövalinnassa neljäätoista
+kaupunkia koko maapallolta. Valittava saa siksi kohdemerkin lisäksi
+oman renkaansa (`js/pallolauta/merkit.js KOHDEMERKIN_HUOMIO_PX` = 54 px
+eli säde 27, kun kohdemerkin halo on 24 px:n merkin päällä 17):
+
+- **Ruutuvakio koko.** Merkki on CSS2D-elementti, joten rengas on yhtä
+  iso kaukaa ja läheltä.
+- **Hidas syke.** Jakso 2,6 s (omistajan haarukka 2–3 s), ja syke on
+  kahdessa ominaisuudessa yhtä aikaa — säde (`transform: scale` 1 →
+  1,16) ja peittävyys (0,92 → 0,42) — jotta liike lukee hengityksenä
+  eikä välähdyksenä. Rengas ei koskaan katoa: kohteen on löydyttävä
+  myös sykkeen alalaidassa.
+- **Kultainen.** `stroke: var(--kulta, #eab84e)`, viiva ruudun mitassa
+  (`non-scaling-stroke`), pelkkä muunnos ja peitto — ei suodinta (sama
+  iOS-sääntö kuin kartan muillakin merkeillä).
+- **Liikeherkkyys:** ei sykettä, vaan pysyvä kultakehä (`scale(1,08)`,
+  peitto 0,85) — sama tinkiminen kuin `.target-halossa`.
+
+Lippu kulkee datumissa: `aloitusKohteet` merkitsee `huomio: true`,
+merkkikerros kantaa sen (`huomio: k.huomio === true`) ja
+`kohdeElementti` piirtää renkaan. Nimi nousee ylimmän kehän yläpuolelle
+(`nimenSade`), joten se ei jää renkaan päälle.
+
+### 16.4 Neljätoista kohdetta ja Livian kupla
+
+`ETUSIVUN_KOHTEET` ja `ETUSIVUN_NAKYVAT` siirtyivät `js/ui.js`:stä
+**`js/ui-apurit.js`**:ään, koska myös Livian avausesittely tarvitsee
+kohteiden määrän eikä `js/livia.js` voi tuoda `js/ui.js`:ää
+(kehätuonti). Joukot ovat puhdasta dataa, eivät pelitilaa.
+
+Kohteet palasivat ensin kolmentoista sarjana (iltapäivä), ja samana
+iltana omistaja teki niihin kaksi muutosta: **Los Angeles vaihtui San
+Franciscoksi ja Istanbul lisättiin**. Lopullinen luettelo on
+neljätoista: ateena, newyork, kairo, rio, mumbai, peking, sydney,
+moskova, tokio, singapore, kapkaupunki, sanfrancisco, tanger,
+istanbul. Se **kumoaa v1119:n piilotuksen** aloituskartalla, ja näkyvät
+kaupungit palasivat valittavien mukana (valittava kaupunki, jota ei
+näy, olisi pahempi kuin kaupunki, jota ei voi valita).
+
+**Kaksi uutta kaupunkia aloitusnäytön laudalle.** Kohde tarvitsee
+kaupungin KAHDELLA laudalla: pelin omalla aloitusnäytön laudalla
+(`js/packs/maailma.js`, josta `doPickStart` lukee portin) ja pallon
+laudalla (`js/packs/maailmankartta.js`, josta merkin paikka tulee).
+Maailmankartalla molemmat olivat jo; aloitusnäytön laudalta puuttuivat.
+Ne lisättiin samalla kaavalla kuin muut lentokenttäkaupungit
+(`airport: true`, portti maailmankartalle, `la/lx/ly` nimilapulle), ja
+x/y laskettiin todellisesta lat/lonista laudan omalla
+stereografisella pallonpuoliskoprojektiolla (`tools/hemispheres.mjs`):
+
+| Kaupunki | lat / lon | kaava antaa | laudalla |
+| --- | --- | --- | --- |
+| Istanbul | 41,013° N, 28,955° E | 776,7 / 287,1 | 776,7 / **288,1** |
+| San Francisco | 37,775° N, −122,419° W | 264,1 / 306,7 | **265,1 / 305,7** |
+
+Yhden yksikön siirto on rantaviivan takia: laudan tyylitelty rannikko
+jättää tarkan pisteen veteen (`isOnLand`, tests/rules.test.mjs
+*"kaupungit ovat mantereella"*). Muut tämän laudan kaupungit on
+aikanaan muunnettu vanhasta lieriölaudasta, joten ne poikkeavat samasta
+kaavasta 2–13 yksikköä — ero on 1150 × 800:n laudalla olematon, eikä
+lautaa edes piirretä lähtövalinnassa (pallo on lauta).
+
+Kolme muuta asiaa laudalla piti sovittaa:
+
+- **Reitit.** Laudan yhtenäisyys lasketaan `edges`-listasta eikä
+  lentoyhteyksistä, joten kumpikin sai maareitin naapuriinsa
+  (San Francisco–Los Angeles, Ateena–Istanbul) sekä lentoyhteydet
+  (`airRoutes`: Ateena–Istanbul, Istanbul–Moskova, San Francisco–Tokio,
+  San Francisco–New York).
+- **Laatat.** `tokens.counts` 14 → 16 (`isoAarre` 4 → 5, `pieniAarre`
+  8 → 9): `js/game.js enterWorld` heittää, jos laattoja ja kaupunkeja
+  ei ole yhtä monta.
+- **`minCityDistance` 45 → 20.** Laudan mittakaavassa Ateena–Kairo on
+  45 yksikköä eli noin 1 100 km. Istanbul on Ateenasta 500 km ja
+  San Francisco Los Angelesista 550 km, joten oikeilla paikoillaan ne
+  ovat 21 ja 27 yksikön päässä naapuristaan — raja ei voi olla 45 ilman
+  että kaupunki siirretään väärään paikkaan. Nimien ja laattojen
+  ruuhkaa vartioi oma testinsä, joka on tämän laudan todellinen
+  visuaalinen ehto; sen vuoksi kolme nimilappua siirtyi (New York
+  ylös, Kairo alas, Ateena 16 yksikköä länteen).
+
+**Los Angeles jää laudalle** mutta ei ole enää valittava eikä näy
+lähtövalinnassa (`ETUSIVUN_NAKYVAT` seuraa kohteita).
+
+**Kysymykset ja tiedot.** Laudan eheyssääntö vaatii jokaiselle
+kaupungille viisi visakysymystä ja kaksi tiesitkö-tietoa, joista
+toinen isoisän äänellä (tests/rules.test.mjs). Ne kirjoitettiin
+molemmille (js/packs/maailma-questions.js). Tämän laudan kysymyksiä ei
+kysytä pelissä — lähtövalinnasta lennetään heti maailmankartalle —
+mutta **isoisän merkinnät ovat Opuksen käsialaa ja päätoimittajan
+tarkistettava kaanonia vasten** (docs/roolitus.md).
+
+Sisältö on molemmilla valmiina: Istanbulilla `js/packs/fokusvirta-
+istanbul.js` sekä europe- ja middleeast-pakat, San Franciscolla
+northamerica-pakka.
+
+Kaksi paikkaa oletti yhtä kohdetta:
+
+- **Esilämmitys** (`ui.esilammitaAvaus`) latasi kohdemaan laudan ja
+  taiteen valmiiksi avaustekstin aikana, ja se oli ehdollistettu
+  `ETUSIVUN_KOHTEET.size !== 1` -portilla. Nyt esilämmitetään **yksi ja
+  vain yksi kohde: Ateena** (`ESILAMMITETTAVA_KOHDE`). Neljälletoista
+  kohteelle se olisi neljätoista lautaa ja neljätoista taidepohjaa
+  avaustekstin alla — juuri se töksähdys, jonka esilämmitys on
+  tarkoitettu poistamaan. Ateena on tarinan ensimmäinen reitti ja siten
+  todennäköisin valinta; muut lentävät ilman etumatkaa kuten ennen
+  optimointia. Rng-järjestys säilyy: talletus on kohdekohtainen
+  (`esilammitys.kohde === city.id`), ja muille kaupungeille repliikki
+  arvotaan `doPickStart`issa.
+- **`drawTargets`** (tasokartan valintarenkaat) oli jo monikohteinen
+  silmukka; vain kommentti puhui yhdestä kohteesta.
+
+**Livian avauskupla 4** — *"Ai niin, ja anteeksi valikoima: pöllö on
+tarkistanut vasta yhden reitin. Ateenasta se alkaa."* — on
+beta-rajoitus tarinan sisällä, ja se alkoi valehdella neljäntoista
+renkaan äärellä. Teksti **jää kaanoniin** (`LIVIAN_AVAUS`, oma
+äänitteensä), mutta näyttö on ehdollinen: `livianAvausSarja(kohteita =
+ETUSIVUN_KOHTEET.size)` suodattaa kuplan pois, kun kohteita on enemmän
+kuin yksi. **Ääni seuraa näyttöä:** äänitteen tiedostonimi tulee
+repliikin KAANONISESTA järjestysnumerosta, joten sarja kuljettaa
+indeksin mukanaan (`soitaLivianAani(ui, 'avaus', rivi.indeksi)`) — ilman
+sitä ohitetun kuplan äänite soisi seuraavan kuplan kohdalla.
+
+### 16.5 Omistajan ehto: jokaiseen pääsee, ja saapuminen toimii
+
+v1119 piilotti kohteet siksi, että osa niistä lupasi matkan, jota ei
+ollut. Ehto on nyt koneellinen:
+**`tools/savukkeet/savuke-aloitusvalinta-13.mjs`** ajaa jokaisen
+kohteen omassa selainkontekstissaan tyhjästä muistista —
+aloitusportti, "Valitse aloituskaupunki", merkin napautus — ja mittaa
+viisi asiaa: merkki ja huomiorengas, lento loppuun asti, matkaaja
+perillä oikeassa kaupungissa, kaupungin napautus avaa lehden, eikä
+sivulla ole yhtään `pageerroria`. Tulos on taulukko kaupungeittain.
+
+```
+NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-aloitusvalinta-13.mjs
+NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-aloitusvalinta-13.mjs --kohde tokio
+```
+
+Merkin saa olla pallon takapuolella: kohteet eivät mahdu yhteen
+näkymään, ja takapuolen kaupungit haetaan palloa kääntämällä. Savuke
+raportoi, montako merkkiä on kuvassa etupuolella. Tiedoston nimessä on
+13, koska kohteita oli niin monta ensimmäisellä kierroksella; joukko
+luetaan aina `ETUSIVUN_KOHTEET`-vakiosta.
+
+Vartijat: tests/aloitus-pallolla.test.mjs (rajauksen luvut Nodessa,
+pyörinnän poisto, huomiorenkaan mitta ja syke, kohteiden luettelo,
+Livian sarja), tests/livia-aani.test.mjs (äänite kaanonin numerolla),
+savuke-etusivupallo E9b/E9b2/E9e/E9f (kaikki merkit, rengas
+jokaisella, pallo paikallaan) ja savuke-aloitusvalinta-13.

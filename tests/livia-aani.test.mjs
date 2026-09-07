@@ -437,14 +437,25 @@ test('js/livia.js soittaa jokaisen kuplan äänen', () => {
   const livia = lue('../js/livia.js');
   assert.match(livia,
     /import \{\n\s*livianKuplanAjastin, pysaytaLivianAani, soitaLivianAani,\n\} from '\.\/liviapuhe\.js';/);
-  assert.match(livia, /const aani = soitaLivianAani\(ui, 'avaus', i, \{ teksti \}\);/);
+  /*
+   * ÄÄNITE KAANONIN NUMEROLLA, EI SARJAN PAIKALLA (7.9.2026). Kun
+   * lähtökohteita on useita, "vasta yhden reitin" -kupla jätetään
+   * näyttämättä (js/livia.js livianAvausSarja) — ilman kaanonin
+   * indeksiä sen äänite soisi seuraavan kuplan kohdalla. Teksti kulkee
+   * mukana, jotta vanhentunut äänite jää hiljaiseksi, ja soitin otetaan
+   * talteen, jotta kupla odottaa puheen loppuun.
+   */
+  assert.match(livia, /const aani = soitaLivianAani\(ui, 'avaus', rivi\.indeksi, \{ teksti \}\);/);
+  assert.match(livia, /export function livianAvausSarja\(kohteita = ETUSIVUN_KOHTEET\.size\)/);
+  assert.match(livia,
+    /\.filter\(\(\{ indeksi \}\) => kohteita <= 1 \|\| indeksi !== LIVIAN_YHDEN_REITIN_KUPLA\)/);
   assert.match(livia,
     /const aani = soitaLivianAani\(ui, 'paljastus', i, \{ \.\.\.variantti, teksti \}\);/);
   assert.match(livia, /soitaLivianAani\(ui, 'mannerivihje', 0, \{ teksti: MANNERIVIHJE \}\);/);
   // Kupla ensin, ääni sen jälkeen: äänen soitto on kuplan
   // onnistumisen jälkeisellä polulla.
   assert.ok(livia.indexOf('const nakyi = polloAvauskupla')
-    < livia.indexOf("soitaLivianAani(ui, 'avaus', i"));
+    < livia.indexOf("soitaLivianAani(ui, 'avaus', rivi.indeksi"));
   // KUPLA ODOTTAA PUHEEN LOPPUUN: avaussarjan ajastin lukee soittimen
   // keston eikä pelkkää tekstin pituutta.
   assert.match(livia, /avausAjastin = livianKuplanAjastin\(\n\s*lukuaika\(teksti\), aani,/);

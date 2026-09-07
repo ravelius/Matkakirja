@@ -24699,6 +24699,52 @@ body.radio-tila .linssikartta-kehys, body.aikajana-paalla .linssikartta-kehys { 
 }
 .pallolauta-kohde svg { display: block; overflow: visible; }
 /*
+ * HUOMIORENGAS LÄHTÖVALINNAN VALITTAVILLE (omistaja 7.9.2026
+ * iltapäivä: *"Ja valittavien kohdekaupunkien huomioympyrää voisi
+ * hieman tehostaa."*).
+ *
+ * Rengas on VALINNAN merkki eikä siirron: sen saavat vain
+ * lähtövalinnan kaupungit (js/pallolauta/lauta.js aloitusKohteet
+ * `huomio: true`, mitta js/pallolauta/merkit.js KOHDEMERKIN_HUOMIO_PX
+ * = 54 px). Neljästätoista kaupungista yhden pitää löytyä koko
+ * maapallolta yhdellä silmäyksellä, joten merkki on selvästi
+ * kohdemerkin haloa laajempi.
+ *
+ * HIDAS SYKE, EI VILKKU. Jakso on 2,6 s (omistajan haarukka 2–3 s), ja
+ * syke on kahdessa ominaisuudessa yhtä aikaa — säde (transform: scale)
+ * ja peittävyys — jotta liike lukee hengityksenä eikä välähdyksenä.
+ * Rengas ei koskaan katoa kokonaan (0,42 pohjalla): kohde on löydettävä
+ * myös sykkeen alalaidassa. Pelkkä muunnos ja peitto, ei suodinta —
+ * sama iOS-sääntö kuin kartan muillakin merkeillä.
+ *
+ * VIIVA ON RUUDUN MITASSA (non-scaling-stroke) ja väri --kulta, sama
+ * kultainen kuin pelin muissa kutsuissa toimia.
+ */
+.pallolauta-huomio {
+  fill: rgba(234, 184, 78, 0.08);
+  stroke: var(--kulta, #eab84e);
+  stroke-width: 2.6;
+  vector-effect: non-scaling-stroke;
+  transform-box: fill-box;
+  transform-origin: center;
+  pointer-events: none;
+  opacity: 0.92;
+  animation: pallolauta-huomio 2.6s ease-in-out infinite;
+}
+@keyframes pallolauta-huomio {
+  0%, 100% { transform: scale(1); opacity: 0.92; }
+  50% { transform: scale(1.16); opacity: 0.42; }
+}
+/* Liikeherkkyys: ei sykettä, vaan pysyvä kultakehä (sama tinkiminen
+   kuin .target-halossa — korostus säilyy, liike jää pois). */
+@media (prefers-reduced-motion: reduce) {
+  .pallolauta-huomio {
+    animation: none;
+    transform: scale(1.08);
+    opacity: 0.85;
+  }
+}
+/*
  * Liikkuva nappula ja lentokone (js/pallolauta/siirto.js) ovat pelin
  * omaa DOMia kotelon päällä: paikka kirjoitetaan joka kehys pallon
  * pinnan pisteestä. Kotelon yleissääntö (.pallo-kotelo > div, inset 0)

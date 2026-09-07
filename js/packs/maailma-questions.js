@@ -518,6 +518,112 @@ export const MAAILMA_QUESTIONS = {
     },
   ],
 
+  /*
+   * SAN FRANCISCO JA ISTANBUL tulivat aloitusnäytön laudalle 7.9.2026
+   * (omistajan päätös: Los Angeles vaihtui San Franciscoksi ja
+   * Istanbul lisättiin lähtövalinnan kohteisiin, js/ui-apurit.js
+   * ETUSIVUN_KOHTEET). Tämän laudan kysymyksiä ei kysytä pelissä —
+   * lähtövalinnasta lennetään heti maailmankartalle — mutta laudan
+   * eheyssääntö vaatii jokaiselle kaupungille viisi kysymystä
+   * (tests/rules.test.mjs), joten ne on kirjoitettu samalla kaavalla
+   * kuin muillekin: helppo, keskitaso ja vaikea, selitys ja vihje.
+   */
+  sanfrancisco: [
+    {
+      q: 'Minkä salmen yli San Franciscon kuuluisin silta kulkee?',
+      options: ['Kultaisen portin', 'Bosporin', 'Doverin', 'Gibraltarin'],
+      correct: 0,
+      level: 1,
+      fact: 'Golden Gate Bridge valmistui 1937 ja oli silloin maailman pisin riippusilta — 1 280 metriä pylväiden välissä.',
+      hint: 'Salmi on nimetty portiksi, ja silta on sen väriltä oranssinpunainen.',
+    },
+    {
+      q: 'Mikä ajoneuvo kiipeää San Franciscon jyrkille kukkuloille vaijerin varassa?',
+      options: ['kaapelivaunu', 'ilmalaiva', 'hevosraitiovaunu', 'köysihissi'],
+      correct: 0,
+      level: 2,
+      fact: 'Ensimmäinen linja avattiin Clay Streetillä 1873, ja kadun alla kulkeva teräsvaijeri liikkuu yhä samaa vauhtia — noin 15 km/h.',
+      hint: 'Kadun alla kulkee jatkuvasti liikkuva teräsvaijeri.',
+    },
+    {
+      q: 'Mikä tuhosi suurimman osan San Franciscosta vuonna 1906?',
+      options: [
+        'maanjäristys ja sitä seurannut tulipalo',
+        'hyökyaalto',
+        'pyörremyrsky',
+        'tulivuorenpurkaus',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Järistys katkaisi vesijohdot, joten palo sai jatkua kolme vuorokautta. Kaupunki rakennettiin uudelleen kymmenessä vuodessa.',
+      hint: 'Kaksi onnettomuutta peräkkäin: ensin maa liikkui, sitten vesijohdot olivat poikki.',
+    },
+    {
+      q: 'Mikä ilmiö peittää San Franciscon lahden usein kesäaamuina?',
+      options: ['sumu', 'hiekkamyrsky', 'lumipyry', 'tulvavesi'],
+      correct: 0,
+      level: 1,
+      fact: 'Kylmä Kalifornianvirta ja kuuma sisämaa tekevät lahdesta yhden maailman sumuisimmista satamista — paksuimmillaan kesäkuussa.',
+      hint: 'Se syntyy, kun kylmä meri kohtaa lämpimän maan.',
+    },
+    {
+      q: 'Mikä kasvatti San Franciscon kylästä kaupungiksi vuoden 1849 tienoilla?',
+      options: ['kultaryntäys', 'öljylöytö', 'timanttikaivos', 'viljakauppa'],
+      correct: 0,
+      level: 3,
+      fact: 'Kalifornian löydön jälkeen kaupungin väkiluku kasvoi noin tuhannesta 25 000:een kahdessa vuodessa.',
+      hint: 'Vuosiluku 49 jäi kaupungin tunnukseksi.',
+    },
+  ],
+
+  istanbul: [
+    {
+      q: 'Minkä kahden maanosan rajalla Istanbul sijaitsee?',
+      options: [
+        'Euroopan ja Aasian',
+        'Afrikan ja Aasian',
+        'Euroopan ja Afrikan',
+        'Aasian ja Australian',
+      ],
+      correct: 0,
+      level: 1,
+      fact: 'Se on maailman ainoa suurkaupunki, jonka keskusta jakautuu kahdelle mantereelle.',
+      hint: 'Salmi jakaa kaupungin kahtia, ja lautta vie puolelta toiselle.',
+    },
+    {
+      q: 'Mikä salmi kulkee Istanbulin läpi?',
+      options: ['Bosporinsalmi', 'Malakansalmi', 'Beringinsalmi', 'Messinansalmi'],
+      correct: 0,
+      level: 2,
+      fact: 'Salmi on kapeimmillaan noin 700 metriä, ja sen kautta kulkee Mustanmeren koko laivaliikenne Välimerelle.',
+      hint: 'Sen kautta pääsee Mustaltamereltä Marmaranmerelle.',
+    },
+    {
+      q: 'Millä nimellä Istanbul tunnettiin Itä-Rooman ja Bysantin aikaan?',
+      options: ['Konstantinopoli', 'Aleksandria', 'Antiokia', 'Trapezus'],
+      correct: 0,
+      level: 3,
+      fact: 'Kaupunki oli valtakunnan pääkaupunki vuodesta 330, ja nykyinen nimi vakiintui viralliseksi vasta 1930.',
+      hint: 'Nimi tuli keisarilta, joka perusti kaupungin uudelleen vuonna 330.',
+    },
+    {
+      q: 'Mikä Istanbulin rakennus on ollut sekä kirkkona että moskeijana?',
+      options: ['Hagia Sofia', 'Notre Dame', 'Pietarinkirkko', 'Westminster Abbey'],
+      correct: 0,
+      level: 1,
+      fact: 'Hagia Sofia valmistui 537 kirkkona, muutettiin moskeijaksi 1453, museoksi 1935 ja takaisin moskeijaksi 2020.',
+      hint: 'Sen kupoli oli lähes tuhat vuotta maailman suurin.',
+    },
+    {
+      q: 'Mikä kaupunki oli Osmanien valtakunnan pääkaupunki vuonna 1873?',
+      options: ['Istanbul', 'Wien', 'Kairo', 'Bagdad'],
+      correct: 0,
+      level: 3,
+      fact: 'Sulttaanin hovi asui tuolloin Dolmabahçen palatsissa salmen rannalla; valtakunta ulottui Balkanilta Arabiaan.',
+      hint: 'Hovi asui palatsissa salmen rannalla, samassa kaupungissa jossa nyt seisot.',
+    },
+  ],
+
   ateena: [
     {
       q: 'Mikä kuuluisa temppelikukkula kohoaa Ateenan keskellä?',
@@ -716,6 +822,29 @@ export const MAAILMA_FACTS = {
     'Kaupungin nimi oli alun perin espanjaa ja paljon pidempi: El Pueblo de la Reina de los Ángeles.',
     {
       text: 'Kalifornian eteläosassa on tomuinen pikkukaupunki appelsiinilehtojen keskellä, asukkaita tuskin kymmentä tuhatta. Rautatien sanotaan tulevan tänne asti. En usko sen muuttavan paikkaa miksikään.',
+      voice: 'isoisa',
+    },
+  ],
+  /*
+   * SAN FRANCISCO JA ISTANBUL (7.9.2026, ks. MAAILMA_QUESTIONS yllä).
+   * Isoisän merkinnät ovat 1873:n matkan sävyyn kirjoitettuja mutta
+   * OPUKSEN käsialaa — päätoimittaja tarkistaa ne kaanonia vasten
+   * (docs/roolitus.md: tarinateksti kuuluu Fablelle). Tämän laudan
+   * tietoruutuja ei näytetä pelissä, joten muutos ei näy pelaajalle.
+   */
+  sanfrancisco: [
+    'San Franciscon kaapelivaunut ovat maailman viimeinen liikenteessä oleva vaijerivetoinen katujärjestelmä — ensimmäinen linja avattiin 1873.',
+    'Kaupunki rakennettiin uudelleen kymmenessä vuodessa vuoden 1906 maanjäristyksen ja tulipalon jälkeen.',
+    {
+      text: 'Kukkulat ovat niin jyrkät, että vaunut vedetään ylös kadun alla kulkevalla vaijerilla — kone jyskyttää maan sisällä eikä hevosia tarvita. Sumu tulee lahdelta iltapäivällä ja peittää sataman tunnissa.',
+      voice: 'isoisa',
+    },
+  ],
+  istanbul: [
+    'Istanbul on ainoa suurkaupunki, joka sijaitsee kahdella mantereella: Bosporinsalmi erottaa Euroopan puolen Aasian puolesta.',
+    'Kaupungin katettu basaari on yksi maailman vanhimmista ostoskaduista — käytäviä on yli kuusikymmentä.',
+    {
+      text: 'Salmen yli mennään höyrylautalla, ja kannelta katsottuna rannoilla on enemmän kupoleja ja minareetteja kuin ehdin laskea. Toinen ranta on jo Aasiaa, vaikka matka kestää neljännestunnin.',
       voice: 'isoisa',
     },
   ],

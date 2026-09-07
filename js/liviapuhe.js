@@ -25,6 +25,9 @@
  * Lähteitä on kaksi lajia. Kolme ensimmäistä ovat js/livia.js:n
  * repliikkiryhmiä:
  *   avaus          LIVIAN_AVAUS, viisi kuplaa aloitusvalinnassa
+ *                  (äänitteitä on viisi; näytettäviä voi olla vähemmän,
+ *                  ks. js/livia.js livianAvausSarja — numero on aina
+ *                  kaanonin oma)
  *   paljastus      livianPaljastus(), kolme kuplaa ensisaapumisessa
  *                  (kaksi ennen isoisän luentaa, yksi sen jälkeen)
  *   mannerivihje   MANNERIVIHJE, yksi kupla

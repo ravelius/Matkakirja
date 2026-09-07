@@ -24,6 +24,72 @@ export const TOAST_MS = { die: 950, default: 1200 };
 export const JALJEN_PYYHKAISY = 0.06;
 
 /*
+ * ══════════════════════════════════════════════════════════════════
+ * ETUSIVUN VALITTAVAT KOHTEET JA NÄKYVÄT KAUPUNGIT
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * KAIKKI KOLMETOISTA KOHDETTA TAKAISIN KOKEEKSI (omistaja 7.9.2026
+ * iltapäivä, työpöytä, sanatarkasti: *"ja nostetaan kokeeksi kaikki
+ * kohdekaupungit takaisin mitä aiemmin oli käytössä"*). Tämä KUMOAA
+ * v1119:n piilotuksen aloituskartalla: silloin kaikki muut paitsi
+ * Ateena piilotettiin, koska ne lupasivat matkan, jota ei ollut
+ * olemassa. Nyt lupaus on koe — omistajan ehto on, että jokaiseen
+ * kohteeseen pääsee lentämään ja saapuminen toimii
+ * (tools/savukkeet/savuke-aloitusvalinta-13.mjs vartioi jokaisen).
+ *
+ * KAKSI MUUTOSTA LUETTELOON (omistajan päätös 7.9.2026 illalla):
+ * LOS ANGELES VAIHTUU SAN FRANCISCOKSI ja ISTANBUL LISÄTÄÄN, joten
+ * kohteita on neljätoista. Los Angeles jää maailmanlaudalle
+ * (js/packs/maailma.js) mutta ei ole enää valittava eikä näy
+ * lähtövalinnassa; San Francisco ja Istanbul lisättiin samalle
+ * laudalle kohteiksi, ja niiden sisältö on valmiina (San Francisco
+ * northamerica-pakassa, Istanbul js/fokusvirta-istanbul.js:ssä sekä
+ * europe- ja middleeast-pakoissa).
+ *
+ * SET ASUU TÄÄLLÄ EIKÄ js/ui.js:SSÄ (7.9.2026), koska myös Livian
+ * avausesittely (js/livia.js) tarvitsee kohteiden MÄÄRÄN: "pöllö on
+ * tarkistanut vasta yhden reitin" -kupla jätetään pois, kun reittejä
+ * on useampi. js/livia.js ei voi tuoda js/ui.js:ää (kehätuonti), mutta
+ * se tuo jo tämän moduulin — joukko on puhdasta dataa eikä pelitilaa,
+ * joten se kuuluu apureihin.
+ *
+ * ALKUPERÄINEN SÄÄNTÖ (omistajan tilaus 25.8.2026) oli, että
+ * aloituskartalla on vain ne kaupungit, joilla on valmis fokusmoodin
+ * sisältö: matkan ensimmäinen kohde on kokonaisen maan avaus, eikä
+ * puolivalmiiseen kohteeseen saa päästä lentämään. Omistajan koe
+ * 7.9.2026 laajentaa joukon takaisin, ja ehto muuttui muodosta
+ * "sisältö on valmis" muotoon "lento ja saapuminen toimivat" — sen
+ * mittaa savuke kaupungeittain. Lisäys on yhä TÄHÄN joukkoon, ei
+ * laudan dataan.
+ *
+ * Sofia on jo pelissä mutta EI ole aloituskohde: sinne kävellään
+ * Ateenasta, kuten tarina menee.
+ */
+export const ETUSIVUN_KOHTEET = new Set([
+  'ateena', 'newyork', 'kairo', 'rio', 'mumbai', 'peking', 'sydney',
+  'moskova', 'tokio', 'singapore', 'kapkaupunki', 'sanfrancisco', 'tanger',
+  'istanbul',
+]);
+/*
+ * MITKÄ KAUPUNGIT NÄKYVÄT ALOITUSKARTALLA LAINKAAN.
+ *
+ * Joukko oli v1119:stä 7.9.2026 asti pelkkä Lontoo + Ateena (omistajan
+ * pelitestipalaute v1119: *"piilota toistaiseksi KAIKKI muut kaupungit
+ * paitsi Ateena"*), koska valittavia oli tasan yksi. Kun valittavat
+ * palasivat, näkyvät palasivat niiden mukana: valittava kaupunki, jota
+ * ei näy, olisi pahempi kuin kaupunki, jota ei voi valita.
+ *
+ * NÄKYVYYS, EI DATA. Lauta pysyy täytenä maailmankarttana
+ * (js/packs/maailma.js) — myös katselutilaa (?lauta=) varten, jossa
+ * tämä piilotus ei ole voimassa.
+ *
+ * Lontoo on mukana lähtöpisteenä: siitä matka alkaa, ja se on
+ * valintanäkymän ainoa kartalta ladottu nimi (valittavat saavat
+ * nimensä omasta kohdemerkistään, js/pallolauta/lauta.js aloitusNimet).
+ */
+export const ETUSIVUN_NAKYVAT = new Set(['lontoo', ...ETUSIVUN_KOHTEET]);
+
+/*
  * SILMUKAN AVAINHETKET.
  *
  * Yksi kierros on `kesto` sekuntia, ja siitä matkaan käytetään
