@@ -107,14 +107,58 @@ Recognition). Portit: fail 0, karttapisteet ok. Poiminnassa lisäyskonfliktit
 
 ### Checkpointit (tekstit ilman kuvia; kuvacommitit poimitaan, jos agentit ehtivät)
 - Monterrey + Mérida: tekstit c8fe151 (agentin worktree; kuvahaku kesken)
-- Winnipeg + St. John's: tekstit 49eb6ad (kuvahaku kesken)
-- Kumasi + Kano: tekstit e9c9d3a (kuvahaku kesken)
 Kaikki kolme poimittu haaraan lisäyskonfliktit liittäen; portit fail 0,
 karttapisteet ok kaikille kuudelle kaupungille. Näiden lehdet ovat siis
 pelissä TEKSTEINÄ ja kohdekarttoina; kuvat, kuvalähteet ja
 pistokoeväitteet täydennetään agenttien loppuraporteista, jos ne ehtivät
 (muuten päätoimittaja teettää kuvahaun erikseen: kansikuvat 3, avauskuvat 3,
 ennen–nyt-pari, nostojen kuvat, nähtävyysjuttujen kuvat).
+
+### Kaupunkilehdet Dili + Alice Springs — f6cd382 (tekstit), e3ac996 (kuvatilaus) — KUVATON
+Tiedostot: faktapohja-/tarkistus-dili.md ja -alicesprings.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, oceania-artikkelit.js, piirra-kaupunkikartta.mjs,
+assets/kartat/dili-keskusta.png, alicesprings-keskusta.png. Dili: kansi (1769,
+1873 jälleenrakennus ruutukaavaan, toinen maailmansota, Tetun Prasa), teemasivu
+luonto "Vuorten ja meren välissä". Alice Springs: kansi (Mparntwe, 1873
+lennätinasema ja nimenvaihto 1933, kameliajajat, Flynn), teemasivu kuvataide
+"Aavikon maalarit". YHTÄÄN KUVAA EI HAETTU: Commons vastasi koko ajan 429
+(8 agenttia samasta osoitteesta) — täsmällinen kuvatilaus on commitin e3ac996
+lohkokommenteissa (kansikuvat, avauskuvat, ennen–nyt, matkailijalle.kuva,
+nostokuvat, 16 miniatyyriä). Namatjiran ja Papunya Tulan teoksista ei kuvia
+(tekijänoikeus). Pistokokeet: (1) Casa Europan rakentaminen alkoi 1871, viisi
+vuotta tulipalon jälkeen (en-Wikipedia "Casa Europa", History); (2) Stuart Town
+Gaol valmistui 1907 ("Stuart Town Gaol", johdanto; "Alice Springs" sanoo 1909);
+(3) Tetun Prasa ← praça, ~50 000 äidinkielistä 2004 ("Tetun language",
+Names/History). Portit: fail 0, karttapisteet ok. Dilin kartta harva (Overpass
+177 elementtiä) — tiheämpi versio vaatisi palvelutiet+jalkakaydat-liput uudelleen.
+
+### Kaupunkilehdet Kumasi + Kano — e9c9d3a (tekstit), 885e098 + 7780dd1 (kuvat)
+Tiedostot: faktapohja-/tarkistus-kumasi.md ja -kano.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, africa-artikkelit.js, piirra-kaupunkikartta.mjs,
+assets/kartat/kumasi-keskusta.png, kano-keskusta.png. Kumasi: kansi (kum-puu,
+kultajakkara, Anokye 1695/Feyiase 1701, 1873 Wolseley ja 237 siltaa, Kumawood),
+teemasivu luonto "Metsä ja järvi" (Bosumtwe). Kano: kansi (Kanon kronikka, Ali
+Yaji, Rumfa, 1873 Sokoton emiirikunta ja Barth 1851, durbar), teemasivu kauppa
+"Kauppa ja käsityö". Kuvia Commonsista 9 (Kumasi) + 13 (Kano), ennen–nyt vain
+Kanolle. Pistokokeet: (1) Wolseley nimitettiin 13.8.1873, retkikunta rakensi 237
+siltaa ("Anglo-Ashanti wars", Third war); (2) Barth 1851: n. 10 mailin muuri,
+30 000 asukasta ("Kano (city)", Kano under the Sokoto Caliphate); (3) Bosumtwe
+pyhä, kalastus vain puulankuilta ("Lake Bosumtwi", johdanto). Portit: fail 0.
+
+### Kaupunkilehdet Winnipeg + St. John's — 49eb6ad (tekstit), 16da31c + 2beca05 (kuvat)
+Tiedostot: faktapohja-/tarkistus-winnipeg.md ja -stjohns.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, northamerica-artikkelit.js, piirra-kaupunkikartta.mjs,
+assets/kartat/winnipeg-keskusta.png, stjohns-keskusta.png. Winnipeg: kansi (The
+Forks, Seitsemän tammen taistelu 1816, marraskuu 1873 ja James McKay, Winnie-
+karhu), teemasivu luonto "Talvi, tulva ja preeria". St. John's: kansi (nimi
+1519, kapea portti, turska ja öljy, viisi paloa), teemasivu tiede "Viesti
+valtameren yli" (kaapeli 1866, Marconi 1901, Alcock ja Brown). 48 kuvaa
+Commonsista. 2beca05 sisältää myös Valparaíso-asennusvirheen korjauksen (agentin
+kuvatyössä syntynyt, korjattu samassa). Pistokokeet: (1) Winnipeg kaupungiksi
+8.11.1873, nimen antoi James McKay ("Winnipeg", Early history); (2) basilika
+valmistuessaan 9.9.1855 Pohjois-Amerikan suurin kirkko ("Basilica of St. John
+the Baptist"); (3) Newfoundlandin aikavyöhyke Amerikoiden ainoa puolen tunnin
+poikkeama ("Newfoundland Time Zone"). Portit: fail 0, karttapisteet ok.
 
 ## Kuvaputken tilaukset (kuvattomat nostot ja miniatyyrit)
 
@@ -212,6 +256,64 @@ tiilinen kaksitorninen katedraali ylhäältä; Noel Kempff Mercadon museo —
 luonnonhistoriallinen näyttelysali; Tahuichi Aguileran stadion —
 jalkapallostadion kehäkatujen välissä.
 
+**Dili ja Alice Springs:** KOKO kuvitus tilaamatta/hakematta — lista commitin
+e3ac996 lohkokommenteissa (kulttuuri-kategoriat.js avaimet dili, alicesprings;
+nahtavyysjutut.js). Miniatyyrit Dili (8): Motaelin kirkko — valkoinen kirkko
+kellotorneineen ja pylväskuisteineen; Dilin satama — laituri riuttojen
+reunustamassa lahdessa; Hallituspalatsi — kolme kaksikerroksista siipeä ja
+pylväskäytävä meren puolelta; BNU-pankkitalo — modernistinen betoniritiläjulkisivu
+pilarien päällä; Kansallisstadion — kaksi katsomoa ja nurmivallit;
+Tuomiokirkko — 1980-luvun katedraali julkisivun puolelta; Kansallisarkisto —
+arkiston rakennus kadulta; Kaupungin torihalli — puoliympyräportaali "Mercado
+Municipal de Dili". Alice Springs (8): ANZAC Hill — laen muistomerkki ja näkymä
+kaupunkiin; Totem-teatteri — matala peltinen Sidney Williams -halli;
+Rautatieasema — 1980-luvun asemarakennus laitureineen; Stuart Town Gaol — matala
+kivinen vankila peltikattoineen; Pioneer-teatteri — katottoman elokuvateatterin
+julkisivu; Kaupunginkirjasto — rakennus ja ulkoseinän muraali; Australian
+naisten museo — entisen vankilan portti ja muuri; Olive Pinkin puutarha — kuivan
+alueen kasveja, taustalla MacDonnell-vuoret.
+**Kumasi, kuvattomat nostot:** kaikki kansinostot (kum-puu, kultajakkara, liitto
+1701, 1873 Wolseley, kaksi kuvausta, Kumawood) ja teemasivun puutarhakaupunki,
+Owabi, metsätalous; matkaoppaan pystykuva — kente-kutoja kapean kangaspuun
+ääressä; ennen–nyt-pari; kohdekartan jutut Prempeh II:n museo, eläintarha
+(lepakot puissa), Kejetian tori, Ramseyerin kirkko, Rattrayn puisto.
+**Kumasi, miniatyyrit (8):** Prempeh II:n museo — kulttuurikeskuksen matala
+rakennusryhmä pihoineen; Kumasin eläintarha — puissa lepäävä lepakkoparvi;
+Kejetian tori — peltikattojen meri ylhäältä; Komfo Anokyen sairaala — maahan
+lyöty miekka kivijalustallaan; Kumasin linnake — punainen linnakerakennus
+torneineen; Ramseyerin muistokirkko — kivikirkko tornikellotapuleineen; Baba
+Yaran stadion — soikea stadion keltaisine katsomoineen; Rattrayn puisto —
+tekojärvi ja tanssiva suihkulähde.
+**Kano, kuvattomat nostot:** kronikka, Ali Yaji, Rumfa, 1873, marokkonahka,
+maapähkinäpyramidit, hausa kauppakielenä; kohdekartan jutut Sabon Garin tori,
+Kofar Matan indigokuopat (ilman ihmisiä), suurmoskeija (juttukuva), Gidan
+Makaman museo.
+**Kano, miniatyyrit (8):** Sabon Garin tori — muurien ulkopuolinen
+kauppakortteli; Dala-kukkula — kallio kaupungin yllä ja porrastie; Kofar Matan
+värjäämöt — pyöreitä indigokuoppia maassa; Sani Abachan stadion — stadionin
+kaari ja hiekkakenttä; Kanon suurmoskeija — vihreä kupoli ja kaksi minareettia;
+Gidan Rumfa — Kofar Kudun portti palatsimuurissa; Kofar Nassarawan portti —
+savimuurin portti tien yli; Gidan Makaman museo — hausalaispihatalo
+sisäpihoineen.
+**Winnipeg, kuvattomat nostot:** "Winterpeg ja sen aurinko" — kaupunkikuva
+pakkaspäivänä; "Kesä, joka tulee kerralla" — preerian ukkospilvi kaupungin yllä.
+**Winnipeg, miniatyyrit (8):** Manitoban museo — Nonsuchin jäljennös
+museosalissa; Pörssikortteli — tiilivarastoja ja terrakottajulkisivuja
+talvikadulla; Burton Cummings -teatteri — julkisivu ja pystykyltti; Manitoba
+Hydro Place — lasitorni ja ilmanvaihtopiippu; Kanadan ihmisoikeusmuseo —
+lasipilvi ja Tower of Hope illalla; Saint-Bonifacen katedraali — tyhjä
+ruusuikkuna palaneessa julkisivussa; Union Station — beaux-arts-asema
+kupoleineen; Manitoban parlamenttitalo — kupoli ja Kultapoika.
+**St. John's, kuvattomat nostot:** Fort William — muistolaatta tukimuurissa
+Cavendish Squaren kulmassa (myös miniatyyri).
+**St. John's, miniatyyrit (8):** Colonial Building — kuusi joonialaista
+pylvästä ja vaakunapääty; Fort William — laatta tukimuurissa; Cabot Tower —
+torni paljaalla kukkulalla, tie kiemurtelee ylös; The Battery — värilliset
+talot kalliossa veden rajassa; Kansallinen sotamuistomerkki — viisi
+pronssihahmoa ja seppeleet; Pyhän Johannes Kastajan basilika — harmaa
+kivijulkisivu ja kaksi tornia; Anglikaaninen katedraali — uusgoottilainen
+kirkko ilman torninhuippua; Water Street — matalat perintörakennukset rinteessä.
+
 ## Päätöstä vaativat asiat
 
 - **MAATESTIN_POIKKEUS laajeni VUT:iin** (tests/elaintakyt.test.mjs; sama kuin
@@ -248,6 +350,17 @@ jalkapallostadion kehäkatujen välissä.
   Cruzin kuusi kohdetta vain es-Wikipediassa (Guatemalan lähderivi). Cerro de la
   Cruzilla ei omaa artikkelia (faktat "Punta Arenas"-artikkelista). Aukio ja
   katedraali 114 m päässä toisistaan (Fesin ennakkotapaus).
+- Kumasi/Kano: Kanon Gidan Rumfan ja suurmoskeijan artikkelikoordinaatit
+  identtiset → Wikidatan arvot; Kurmin tori pudotettu kartalta (tarkistus-kano.md
+  F). Kumasin linnake kantaa GHA-skandaalin karttanoston (pakko, testi).
+  Nykykonfliktit jätetty pois Kanosta. Viereinen: africa-valokuvat.js kano
+  vanha puoli vain 760 px.
+- Winnipeg/St. John's: Saint-Bonifacen julkisivu sekä avauskarusellissa että
+  kohdekartan jutussa (tietoinen); St. John'sin teemasivu tiede eikä sää
+  (Halifaxilla jo sumu); Beothuk-kansan häviäminen jätetty pois — ehdotus
+  maalehden/karttanoston aiheeksi.
+- Dili/Alice Springs: kuvitus kokonaan tekemättä (Commons 429) — joko
+  kuvaputki tai uusi Commons-haku rauhallisempana hetkenä.
 
 ## Keskeneräiset
 
