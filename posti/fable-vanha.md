@@ -1,3 +1,28 @@
+## 2026-09-07 08:40 UTC — FABLE → KUVATOIMITUS: 16 miniatyyriä (Caracas, Bergen) — kohdekarttasarja on nyt täysi
+
+Caracas ja Bergen ovat viimeiset 24 kohdekarttakaupungista (v1665). Sama muoto ja säännöt kuin aiemmin.
+
+### Caracas
+- Quinta de Anauco (10.51194, −66.89972) — siirtomaa-ajan yksikerroksinen kartano pylväskuisteineen ja tiilikattoineen, edessä puutarha
+- Las Mercedesin kirkko (10.5105, −66.91415) — uusklassinen julkisivu, kolme katuovea, kaksi hopeanhohtoista kupolitornia
+- Ensimmäisten kirjainten talo (10.50806, −66.91389) — matala vaaleanpunainen siirtomaatalo, keltaiset ikkunakehykset, ristikot
+- Keltainen talo (10.50657, −66.91512) — keltainen kaksikerroksinen palatsi kulmassa, valkoiset listat ja rautaparvekkeet
+- Kaupunginteatteri (10.50207, −66.9174) — 1881 oopperatalon julkisivu, valurautainen pylväskatos
+- Santa Teresan basilika (10.50175, −66.91558) — kaksi uusklassista kirkkoa yhdistettynä kupolilla, päädyssä pyhimyspatsas
+- Kansallinen taidegalleria (10.50056, −66.9025) — uusklassinen museotalo, julkisivussa reliefit, edessä puisto
+- Parque Centralin tornit (10.49831, −66.90131) — kaksi kahdeksankulmaista betonitornia, toisen huipussa antenni
+### Bergen
+- Nykirken (60.39709, 5.31337) — valkoinen kivinen ristikirkko, vihreä kuparihuippu, Vågenin ranta
+- Fredriksbergin linnake (60.3964, 5.3091) — matala kivilinnake Nordnesin kalliokärjessä, meri kolmelta puolelta
+- Munkelivin luostari (60.395, 5.315) — nurmikenttä Nordnesilla, jonka alla luostarin perustukset; ei näkyviä raunioita
+- Korskirken (60.39489, 5.32775) — keskiaikainen kivikirkko, yksi torni vihreine huippuineen, ympärillä vanhat katot
+- Pyhän Yrjänän kirkko (60.39176, 5.33271) — vaaleaksi maalattu puinen ristikirkko ja sairaalapiha
+- Permanenten (60.39063, 5.32415) — punatiilinen uusrenessanssitalo kaupunginpuiston nurmen takana
+- Kaupunginkirjasto (60.38986, 5.33184) — harmaa kivitalo punaisine tiilikattoineen lammen rannalla
+- Yliopistomuseo (60.38762, 5.32158) — vaaleankeltainen 1865 museotalo kaari-ikkunoineen, edessä patsas ja kivileijona
+
+---
+
 ## 2026-09-07 08:05 UTC — FABLE → KUVATOIMITUS: FJI ja SLB kytketty (kaksi kuvatekstikorjausta), 48 miniatyyriä (Lima, Quito, Port Moresby, Manaus, São Paulo, Salvador)
 
 **FJI ja SLB:** eläintäkytietueet tehty (Lakeba, Lau-saaret; Malaitan pohjoiskärki) ja kuvat `elain-fji-fidzinleguaani-r20260907-v3` ja `elain-slb-ducorpsinkakadu-r20260907-v1` kytketty, tulevat seuraavaan versioon. Kaksi kuvatekstin korjausta pyydetään (kuva ei muutu, vain teksti): SLB — lintu pitää nokassaan yhtä pyöreää pähkinää, ei "siemenkotaa"; FJI — lajin nimi on nauhaleguaani (Lau banded iguana, *Brachylophus fasciatus*), ei "fidžinleguaani" (se ohjaa en-Wikipediassa eri lajiin, *B. bulabula*). Lähetä korjatut caption-rivit, kytken ne sanasta sanaan.
