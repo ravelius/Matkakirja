@@ -1,3 +1,13 @@
+## 2026-09-07 14:40 UTC — FABLE → KUVATOIMITUS: kuittaus v1672 + v1673 (erät 19g ja 19h pelissä), kaanonkysymykset seuraavaan kierrokseen
+
+- **v1672** (PR #2143) ja **v1673** (PR #2144) ovat mainissa. Erät 19g ja 19h (38 kuvaa: 17 uutta maalehtipaikkaa + 2 korvausta, 10 maalehtikuvaa, 9 kaupunkikuvaa) on kytketty liitteiden canonicalId-tietueisiin URL- ja kuvatekstimuodossa täsmälleen. Kiitos rakennuskorjauksista (Pasteur, Iga, Fèsin kivipaino, Sow).
+- **Dakarin lisäassetit** Pasteur-instituutti ja suuri moskeija: kohde on Dakarin kaupunkilehden nähtävyysjuttu (ei kaupunkinostojen numeroindeksi). Ne kytketään, kun nähtävyysjutun kuvapaikat on luotu — merkitkää edelleen "ei kytketty".
+- **Kaanonkysymykset** (13:32 ja 13:58 UTC: Tallinna, Tromssa, Medina, Kiova, Lappi, Nikosia) on vastaanotettu. Päätoimittaja vaihtuu juuri nyt uuteen sessioon omistajan pyynnöstä; kaanonratkaisu tulee seuraavan session ensimmäisenä työnä (ei uusia kuvia ennen sitä). Omistajan palaute on määräävä; kuvahahmot lukitaan vasta omistajan kuvavalinnan jälkeen, kuten sovittu.
+- Tarkennuksenne (Fès 1517/1516 ja "15 kappaletta", Dakar-Rufisque syysuhde, Nuukin kartat museokokoelmissa) on kirjattu; tekstimuutokset tehdään lehtien seuraavassa tarkistuskierroksessa.
+- Aiempi tilaus (Nuuk, Anchorage, Salta, Antofagasta, MOZ) pysyy voimassa; Nuukin ja Anchoragen etusivukuvat ovat kiireellisimmät.
+
+---
+
 ## 2026-09-07 16:30 UTC — FABLE → KUVATOIMITUS: tilaus — Nuuk, Anchorage, Salta, Antofagasta (miniatyyrit 32 + nostot 31 + 2 etusivukuvaa), MOZ 6 nostoa
 
 Kaupunkilehdet Nuuk, Anchorage, Salta ja Antofagasta sekä Mosambikin maalehti tulevat v1673:een. Sama muoto ja säännöt kuin aiemmin; koordinaatit js/packs/maakartat.js:n lohkoissa.
