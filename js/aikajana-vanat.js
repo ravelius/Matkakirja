@@ -95,6 +95,17 @@ export const KOTIPESAN_SYVYYSSIIRTO = -16;
  */
 export const KAISTAN_SYVYYSBIAS = 12 / 16777216;
 /**
+ * VAHVEMPI FRAGMENTTI VOITTAA (syvyysyksikköä peiton täydellä arvolla).
+ * Kaksi ERI vanaa voi mennä päällekkäin liitoksissa. Kun syvyys on
+ * kummallakin sama, LESS päästää sen, joka piirtyy ensin — ja jos se on
+ * toisen vanan häipyvä reuna, vahva kaista jää sen alle ja liitokseen
+ * jää VAALEA HIUSVIIVA (nähtiin Hormuzin salmessa 7.9.2026). Peitto
+ * vedetään siksi syvyydestä: vahva fragmentti on hitusen edempänä ja
+ * pääsee läpi myös myöhemmin piirtyneenä. Sama peitto = sama syvyys,
+ * joten puolittajan tasapelit ratkeavat kuten ennenkin.
+ */
+export const KAISTAN_ALFABIAS = 8 / 16777216;
+/**
  * Kaistan peitto: viivan (0,95) ja halon (0,14) välistä (omistaja:
  * *"niiden kahden välistä olevalla peitolla"*).
  */
@@ -146,6 +157,15 @@ export const KOTIPESAN_KARKIA = 24;
 export const KOTIPESAN_LEVEYS_PX = 2;
 /** Kotipesän renkaan peitto. */
 export const KOTIPESAN_PEITTO = 0.28;
+/*
+ * TUTKIMUSVAIHEEN KOROSTUS (peittokertoimet). Valittu virta pitää
+ * omistajan hyväksymän peittonsa (kerroin 1 → KAISTAN_PEITTO), muut
+ * vaimenevat entisen halon tasolle. Kerroin yli yhden nostaisi kaistan
+ * yli haarukan 0,45–0,6, jonka omistaja antoi (*"niiden kahden välistä
+ * olevalla peitolla"*), joten korostus tehdään VAIMENTAMALLA muut.
+ */
+export const KOROSTUKSEN_HEHKU = 1;
+export const KOROSTUKSEN_VAIMEA = 0.35;
 /** Maapallon säde km (rantamaskin ja leveyksien yksikkömuunnos). */
 export const MAAPALLON_SADE_KM = 6371;
 /** Varjostimen uniformitaulukoiden koot: vanoja ja virtoja enintään. */
@@ -485,6 +505,7 @@ uniform mat4 uMVPKaanteinen;
 uniform vec2 uRuutu;
 uniform float uSade;
 uniform float uSyvyysBias;
+uniform float uAlfaBias;
 uniform float uMinPuoli;
 uniform float uMinPuoliMeri;
 uniform float uMeriKerroin;
@@ -617,10 +638,15 @@ void main() {
   vec3 vari = mix(vanha, kirkas, paino);
   gl_FragColor = vec4(vari, alpha);
 
-  /* Syvyys pinnan pisteestä, ei nelikulmiosta: päällekkäiset fragmentit ovat tasan samassa syvyydessä. */
+  /*
+   * Syvyys pinnan pisteestä, ei nelikulmiosta: saman pikselin fragmentit
+   * ovat tasan samassa syvyydessä, ja peitto vetää vahvempaa hitusen
+   * edemmäs (KAISTAN_ALFABIAS) — eri vanojen liitoksessa vahva kaista
+   * voittaa naapurin häipyvän reunan, eikä väliin jää vaaleaa hiusviivaa.
+   */
   vec4 leike = uMVP * vec4(q, 1.0);
   float z = leike.z / leike.w;
-  gl_FragDepthEXT = clamp(z * 0.5 + 0.5 - uSyvyysBias, 0.0, 1.0);
+  gl_FragDepthEXT = clamp(z * 0.5 + 0.5 - uSyvyysBias - alpha * uAlfaBias, 0.0, 1.0);
 }
 `;
 
@@ -819,6 +845,7 @@ export function luoVanat({
       uRuutu: { value: [1, 1] },
       uSade: { value: R },
       uSyvyysBias: { value: KAISTAN_SYVYYSBIAS },
+      uAlfaBias: { value: KAISTAN_ALFABIAS },
       uMinPuoli: { value: 0 },
       uMinPuoliMeri: { value: 0 },
       uMeriKerroin: { value: meriKerroin },
@@ -1062,7 +1089,7 @@ export function luoVanat({
    * @param {string|null} virta valitun virran tunnus tai null.
    * @param {{ vaimea?: number, hehku?: number }} asetukset
    */
-  function korosta(virta = null, { vaimea = 0.35, hehku = 1.3 } = {}) {
+  function korosta(virta = null, { vaimea = KOROSTUKSEN_VAIMEA, hehku = KOROSTUKSEN_HEHKU } = {}) {
     if (purettu) return false;
     const u = materiaali?.uniforms;
     let vanaIdx = 0;

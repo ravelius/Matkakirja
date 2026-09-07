@@ -26,7 +26,8 @@ import {
   leveyskerroin, kaistanLeveysKm, vahimmaisleveysKm, karkiMerella, merisyys, etaisyysMaahan, rantamaskinRuutu,
   KAISTAN_MERI_RAJAT_KM,
   KAISTAN_PEITTO, KAISTAN_LEVEYS_KM, KAISTAN_MIN_PX, KAISTAN_MERI_MIN_PX, KAISTAN_MERI_KERROIN,
-  KAISTAN_KERROIN_RAJAT, KAISTAN_RENDER_ORDER, KOTIPESAN_RENDER_ORDER, KAISTAN_SYVYYSBIAS,
+  KAISTAN_KERROIN_RAJAT, KAISTAN_RENDER_ORDER, KOTIPESAN_RENDER_ORDER, KAISTAN_SYVYYSBIAS, KAISTAN_ALFABIAS,
+  KOROSTUKSEN_HEHKU, KOROSTUKSEN_VAIMEA,
   VANAN_ENNAKKO, VANAN_ENNAKKO_MAX_AST, VANAN_KORKEUS,
 } from '../js/aikajana-vanat.js';
 import {
@@ -326,7 +327,10 @@ test('vanamoduuli: kaista omalla varjostimella, pinnan syvyys, kalvojen jälkeen
   assert.match(VANAT_JS, /mvpKaanteinen\.copy\(mvp\)\.invert\(\);/);
   // Rannikkokärki vedessä maalaa rannasta: etäisyys rantaan anteeksi.
   assert.match(VANAT_JS, /max\(0\.0, d - ranta\)/);
-  assert.match(VANAT_JS, /gl_FragDepthEXT = clamp\(z \* 0\.5 \+ 0\.5 - uSyvyysBias, 0\.0, 1\.0\);/);
+  assert.match(VANAT_JS, /gl_FragDepthEXT = clamp\(z \* 0\.5 \+ 0\.5 - uSyvyysBias - alpha \* uAlfaBias, 0\.0, 1\.0\);/,
+    'peitto vetää vahvemman fragmentin edemmäs: eri vanojen liitokseen ei jää vaaleaa hiusviivaa');
+  assert.ok(KAISTAN_ALFABIAS > 0 && KAISTAN_ALFABIAS < KAISTAN_SYVYYSBIAS,
+    'alfabias mahtuu kaistan oman syvyyssiirron sisään');
   assert.match(VANAT_JS, /if \(alpha < 0\.004\) discard;/, 'näkymätön fragmentti ei kirjoita syvyyttä');
   // Kärkiväri samalla kaavalla kuin karjenPaino (rintama, pito).
   assert.match(VANAT_JS, /clamp\(1\.0 - \(aika - uNyt\) \/ uRintama, 0\.0, 1\.0\)/);
@@ -343,6 +347,10 @@ test('vanamoduuli: kaista omalla varjostimella, pinnan syvyys, kalvojen jälkeen
   // Kasvu ja korostus uniformeina.
   assert.match(VANAT_JS, /u\.uKuljettu\.value\[vanaIdx\] = matka;/);
   assert.match(VANAT_JS, /u\.uVanaPeitto\.value\[vanaIdx\] = kerroin;/);
+  // Korostus vaimentaa muut; valittu pitää omistajan haarukan peiton.
+  assert.equal(KOROSTUKSEN_HEHKU, 1, 'valittu virta ei nouse yli peiton haarukan');
+  assert.equal(KOROSTUKSEN_VAIMEA, 0.35, 'muut vaimenevat entisen halon tasolle');
+  assert.ok(KAISTAN_PEITTO * KOROSTUKSEN_HEHKU <= 0.6);
   // Rantamaski tekstuurina (R8, bilineaarinen, pituusaste kiertää).
   assert.match(VANAT_JS, /import \{ RANTAMASKI \} from '\.\/linssit\/ihmisen-matka-rantamaski\.js';/);
   assert.match(VANAT_JS, /t\.wrapS = REPEAT_WRAP;/);
