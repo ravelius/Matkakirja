@@ -520,3 +520,13 @@ kulje workerin kautta.
 > samalla isäntänimellä. Kun.uz vastaa RSS-osoitteeseensa 404:llä,
 > Daryo.uz ohjaa 301:llä ja UzDaily 302:lla, eikä worker seuraa
 > uudelleenohjauksia. Julkaisu tapahtuu mainista automaattisesti.
+
+> **Päivitys 7.9.2026 (Mosambik):** sallittuihin lisättiin
+> `jornalnoticias.co.mz` (maalehti MOZ, testattu 7.9.2026: maan
+> suurimman päivälehden syötteessä kymmenen juttua, ja artikkelisivun
+> ainoasta `<article>`-lohkosta jäsentyy 1–2 yli 60 merkin kappaletta
+> sekä `og:image`). Kappaleita on vähän mutta ne ovat pitkiä
+> (590–1 660 merkkiä), joten popupiin tulee koko juttu. Osoite on
+> ilman www-etuliitettä, koska `www.jornalnoticias.co.mz` ei vastaa
+> lainkaan. Hylätyt lähteet on kirjattu `js/packs/uutislahteet.js`:n
+> MOZ-kommenttiin. Julkaisu tapahtuu mainista automaattisesti.

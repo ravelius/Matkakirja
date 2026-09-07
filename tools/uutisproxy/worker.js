@@ -195,6 +195,10 @@ const SALLITUT = [
   // Uzbekistanin uutislähde (maalehti 7.9.2026): Gazeta.uz:n syöte ja
   // artikkelisivut ovat samalla isäntänimellä.
   'https://www.gazeta.uz/',
+  // Mosambikin uutislähde (maalehti MOZ, 7.9.2026): Jornal Notíciasin
+  // syöte ja artikkelisivut ovat samalla isäntänimellä ilman www:tä —
+  // www.jornalnoticias.co.mz ei vastaa lainkaan.
+  'https://jornalnoticias.co.mz/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei
