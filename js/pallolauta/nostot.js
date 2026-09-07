@@ -389,8 +389,10 @@ export function luoNostot({
      * Jokainen osuma antaa siksi oman LAPPUNSA LAATIKON ruudulla —
      * täsmälleen sen, jota sovittelu (js/pallolauta/sovittelu.js) käytti
      * väistössä, samasta kaavasta (nostonLaatikko) samoilla asennoilla.
-     * Piilotettu lappu (sovittelu vei nimen) palauttaa null, jolloin
-     * jäljellä on vain kuvakkeen säde — kuten ennen.
+     * Piilotetulla lapulla (sovittelu vei nimen) laatikko on pelkkä
+     * IKONIN ruutu — jokaisella nostolla on oma laatikkonsa, jotta
+     * kuvakkeen päällä oleva sormi ei häviä naapurin lapun
+     * kosketusvaralle (js/pallolauta/lauta.js LAPUN_KOSKETUSVARA_PX).
      *
      * Laatikko lasketaan VASTA NAPAUTUKSESSA annetusta ruutupisteestä
      * (`lappu(p)`) eikä ladonnan hetkellä: kamera on voinut liikkua
@@ -403,17 +405,19 @@ export function luoNostot({
       // osuma lukee sen vasta napautuksessa, jotta väistö näkyy myös
       // osumapinnassa.
       r.datum = d;
-      r.lappu = (p) => (d.nimioNakyy && d.nimi
-        ? nostonLaatikko(p, r, {
-          kylki: d.puoli, dx: d.dx, dy: d.dy, nimio: true,
-        })
-        : null);
+      // Piiloon sovitellulla lapulla laatikko on pelkkä IKONIN ruutu —
+      // ei null. Osumatestillä on kosketusvara (js/pallolauta/lauta.js
+      // LAPUN_KOSKETUSVARA_PX), ja ilman omaa laatikkoa nimetön nosto
+      // häviäisi kuvakkeensa päällä naapurin lapun varalle.
+      r.lappu = (p) => nostonLaatikko(p, r, {
+        kylki: d.puoli, dx: d.dx, dy: d.dy, nimio: Boolean(d.nimioNakyy && d.nimi),
+      });
     });
     // Poltetun musteen lappu on paistettu laattaan: lauta ei näe sitä,
     // mutta tuntee sen laatikon samasta kaavasta (ladonta on sama).
     for (const r of nakyvat) {
       if (!r.poltettu || r.perhe === 'piste') continue;
-      r.lappu = (p) => (r.nimioNakyy && r.nimi ? nostonLaatikko(p, r, { nimio: true }) : null);
+      r.lappu = (p) => nostonLaatikko(p, r, { nimio: Boolean(r.nimioNakyy && r.nimi) });
     }
     osumat = [...naytetaan, ...nakyvat.filter((r) => r.poltettu)];
     /*
@@ -511,9 +515,9 @@ export function luoNostot({
     /**
      * Napautettavat merkit ruudulla ({ avain, id, lat, lng, nimi, avaa,
      * perhe, poltettu }). Nostoilla ja eläintäyillä on lisäksi
-     * `lappu(p)`: nimilapun ruutulaatikko annetussa ruutupisteessä tai
-     * null, jos lappua ei juuri nyt ole (ks. NIMILAPPU ON OSA
-     * OSUMAPINTAA).
+     * `lappu(p)`: nimilapun ruutulaatikko annetussa ruutupisteessä —
+     * ikonin ja näkyvän nimiön yhdiste, tai pelkkä ikonin ruutu, jos
+     * lappua ei juuri nyt ole (ks. NIMILAPPU ON OSA OSUMAPINTAA).
      */
     osumat: () => osumat,
     /** Kiinteän musteen laatikot nimiladonnan varauksiksi (ks. paivita). */
