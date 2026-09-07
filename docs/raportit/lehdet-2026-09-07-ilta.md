@@ -540,12 +540,9 @@ rannalla; Hirsikoulu — pieni yhden huoneen hirsikoulu.
 
 - **Iqaluit + Santa Fe**: Iqaluitin tekstit ja kohdekartta haarassa (ec5ce08);
   Santa Fen faktapohja, tarkistus, lehti (kansi + teemasivu "Taiteen kaupunki"),
-  KAUPUNKIKARTAT.santafe ja 8 juttua haarassa (3eab3d5). PUUTTUU:
-  assets/kartat/santafe-keskusta.png (rajaus on jo piirra-kaupunkikartta.mjs:ssä,
-  Overpass aikakatkaisi — pelkkä `node tools/piirra-kaupunkikartta.mjs santafe`
-  + tarkista-karttapisteet santafe riittää), molempien kuvat, kuvalähteet ja
-  pistokokeet. HUOM: santafe-kartta puuttuu → tarkista ennen julkaisua, ettei
-  lehti viittaa puuttuvaan png:hen (testit olivat vihreät).
+  KAUPUNKIKARTAT.santafe ja 8 juttua haarassa (3eab3d5), kartta-png ja
+  karttapisteet vihreinä (d77904f). PUUTTUU: molempien kuvat (Santa Fe kokonaan,
+  Iqaluitin matkaoppaan pystykuva), kuvalähteet ja pistokokeet.
 - **Puerto Montt + João Pessoa, São Luís + Ouro Preto, Kimberley + Managua**:
   agentit käynnistettiin ja pysäytettiin heti — EI mitään tehtyä; aloitetaan
   alusta samalla ohjeella (scratchpad/ohje-kaupunkipari.md:n sisältö on
