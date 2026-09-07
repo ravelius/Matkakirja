@@ -520,6 +520,75 @@ export function pallonOmatPisteet(pack) {
   return tulos;
 }
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * REITIN PÄÄ SIIRTYY KAUPUNGIN MUKANA — YKSI KAAVA KAHDELLE PIIRTÄJÄLLE
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Reittiviiva piirtyy pelissä KAHDESTI ja kahdessa eri paikassa:
+ *
+ *   1. ELÄVÄNÄ pallon viivakerroksessa (js/pallolauta/reitit.js) —
+ *      nykyisen kaupungin naapurireitit askelhelmineen;
+ *   2. POLTETTUNA laattapyramidin viivatasoon (tools/fokuskartta/
+ *      sisalto.mjs → tools/generoi-laattapyramidi.mjs --viivataso) —
+ *      koko 408 reitin verkko, joka näkyy kartalla aina.
+ *
+ * Kun kaupunki sai oman pallopisteensä (7.9.2026), korjaus tehtiin vain
+ * kohtaan 1. Mitattu 7.9.2026 illalla: laattoihin poltettu verkko
+ * päättyy yhä laudan omaan pisteeseen, ja 219 reittiä 408:sta osuu yli
+ * kilometrin päähän kaupungin pallopisteestä — Helsingissä 34,7 km, eli
+ * juuri se, minkä omistaja näki: *"viivojen risteys on sisämaassa,
+ * nappula rannalla."* Kaava on siksi TÄSSÄ, yhtenä totuutena, ja
+ * molemmat piirtäjät kutsuvat sitä.
+ *
+ * KORJAUS LEVITETÄÄN KOKO POLYLLE, EI VAIN PÄÄHÄN. Jos vain viimeinen
+ * piste siirrettäisiin, nappula kulkisi vanhaa viivaa ja nytkähtäisi
+ * viimeisellä kehyksellä siirron verran (Raamattu: KAIKKI LIIKE
+ * ANIMOIDAAN PEHMEÄSTI). Jokainen polyn piste siirtyy päiden siirtymien
+ * painotettuna summana, painona osuus KAARENPITUUDESTA — sama
+ * parametrisointi kuin `pointAlong`illa, joten askelhelmet, nappulan
+ * kuljettaja (js/pallolauta/siirto.js) ja laattaan poltetut askelmat
+ * kulkevat täsmälleen samaa korjattua viivaa. Päissä paino on 1 ja 0,
+ * joten viiva päättyy tarkalleen siirrettyyn pisteeseen. Via-pisteet
+ * (merireitin rantasovitus) säilyvät: ne liukuvat mukana, eivät katoa.
+ *
+ * @param {Array<[number, number]>} poly reitin murtoviiva laudan yksikköinä
+ * @param {?{dx:number, dy:number}} a alkupään kaupungin siirtymä
+ * @param {?{dx:number, dy:number}} b loppupään kaupungin siirtymä
+ * @returns {Array<[number, number]>} korjattu poly (sama, jos siirtymiä ei ole)
+ */
+export function pallonKorjattuPoly(poly, a = null, b = null) {
+  const p = poly ?? [];
+  if ((!a && !b) || p.length < 2) return p;
+  const pituudet = [];
+  let yhteensa = 0;
+  for (let i = 1; i < p.length; i += 1) {
+    const d = Math.hypot(p[i][0] - p[i - 1][0], p[i][1] - p[i - 1][1]);
+    pituudet.push(d);
+    yhteensa += d;
+  }
+  let kertyma = 0;
+  return p.map(([x, y], i) => {
+    if (i) kertyma += pituudet[i - 1];
+    const t = yhteensa > 0 ? kertyma / yhteensa : Math.min(1, i);
+    const dx = (a ? a.dx * (1 - t) : 0) + (b ? b.dx * t : 0);
+    const dy = (a ? a.dy * (1 - t) : 0) + (b ? b.dy * t : 0);
+    return [x + dx, y + dy];
+  });
+}
+
+/**
+ * Reitin poly siinä muodossa, jossa PALLO sen piirtää. `siirtymat` on
+ * pallonOmatPisteet(pack).siirtymat; ilman sitä poly palautuu sellaisenaan.
+ */
+export function pallonReitinPoly(reitti, siirtymat = null) {
+  return pallonKorjattuPoly(
+    reitti?.poly ?? [],
+    siirtymat?.get(reitti?.a) ?? null,
+    siirtymat?.get(reitti?.b) ?? null,
+  );
+}
+
 /** Kaupungit pallolle: lauta → asteet, käyntitieto ja aloituskaupungit mukana. */
 export function pallonKaupungit(pack, kaydyt = new Set()) {
   const { pisteet } = pallonOmatPisteet(pack);

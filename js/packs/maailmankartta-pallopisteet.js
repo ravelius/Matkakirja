@@ -40,6 +40,19 @@
  * "Orjarannikko", wiki-sivu kaupunki "Ouidah" — 292 km). Kummankin
  * ratkaisu on tarinan asia, ei koneen.
  *
+ * TOINEN KIERROS 7.9.2026 ILLALLA (omistaja: *"samalla tarkastaa onko
+ * kaikki kaupungit oikealla paikalla"*). Sama ajo raja 15 km jätti
+ * ensimmäisellä kierroksella neljä ASUTUSTA korjaamatta — ne ovat nyt
+ * mukana: Hongkong 60,4 km, San Juan 42 km, Santa Fe 120,6 km ja
+ * Singapore 59,8 km. Loput 40 yli rajan olevaa ovat ALUEITA (edellisen
+ * kappaleen luettelo sekä Sumatra, Sisilia, Kreeta, Kappadokia,
+ * Madagaskar, Sansibar, Darfur, Sahara, Sahalin, Kongo (wiki-sivu on
+ * joki), Kamerun (wiki-sivu on Kamerunvuori), Angola, Sierra Leone,
+ * Islanti, Alpit, Appalakit, Kilimandžaro, Labrador, Rub al-Khali,
+ * Milford Sound, Galápagos, Falkland, Bali ja Bananal): niiden
+ * Wikidata-piste on alueen keskipiste, ei se kohta jota lauta
+ * tarkoittaa. Mosambik ja Orjarannikko jäävät yhä tarinan ratkaistaviksi.
+ *
  * Vartio: tools/tarkista-laudan-pisteet.mjs lukee tämän kentän ja
  * vaatii, että yli 15 km:n poikkeamia jää vain alueille.
  */
@@ -71,6 +84,7 @@ export const PALLON_KAUPUNKIPISTEET = {
   havanna: { lat: 23.133, lon: -82.367 },       // Havanna, 276,4 km
   helsinki: { lat: 60.171, lon: 24.938 },       // Helsinki, 34,7 km
   hobart: { lat: -42.883, lon: 147.317 },       // Hobart, 32,9 km
+  hongkong: { lat: 22.278, lon: 114.159 },      // Hongkong, 60,4 km
   houston: { lat: 29.763, lon: -95.383 },       // Houston, 36,2 km
   iqaluit: { lat: 63.749, lon: -68.52 },        // Iqaluit, 338,9 km
   jakarta: { lat: -6.21, lon: 106.845 },        // Jakarta, 27,2 km
@@ -119,10 +133,13 @@ export const PALLON_KAUPUNKIPISTEET = {
   rio: { lat: -22.911, lon: -43.206 },          // Rio de Janeiro, 30,6 km
   salvador: { lat: -12.983, lon: -38.493 },     // Salvador, 38,9 km
   sanfrancisco: { lat: 37.779, lon: -122.419 }, // San Francisco, 23,5 km
+  sanjuan: { lat: 18.465, lon: -66.117 },       // San Juan, 42 km
+  santafe: { lat: 35.667, lon: -105.967 },      // Santa Fe, 120,6 km
   saoluis: { lat: -2.53, lon: -44.303 },        // São Luís, 66 km
   saopaulo: { lat: -23.55, lon: -46.634 },      // São Paulo, 183,6 km
   sarajevo: { lat: 43.867, lon: 18.417 },       // Sarajevo, 127,5 km
   shanghai: { lat: 31.224, lon: 121.476 },      // Shanghai, 93,1 km
+  singapore: { lat: 1.3, lon: 103.8 },          // Singapore, 59,8 km
   sitka: { lat: 57.052, lon: -135.339 },        // Sitka, 89,4 km
   stjohns: { lat: 47.577, lon: -52.701 },       // St. John’s, 156,3 km
   suva: { lat: -18.133, lon: 178.433 },         // Suva, 64,1 km

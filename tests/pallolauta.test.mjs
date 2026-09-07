@@ -1003,6 +1003,18 @@ test('kaupungin oma pallopiste kulkee kaikkiin merkkeihin yhdestä paikasta', ()
   // Lentokaari lukee asteet kaupunkioliosta, joten se osuu samaan pisteeseen.
   const reitit = lue('../js/pallolauta/reitit.js');
   assert.match(reitit, /const alku = asteet\(a\);\n\s*const loppu = asteet\(b\);/);
-  // Poly korjataan kaarenpituuden mukaan: pää tarkalleen, väli pehmeästi.
-  assert.match(reitit, /const t = yhteensa > 0 \? kertyma \/ yhteensa : Math\.min\(1, i\);/);
+  /*
+   * Poly korjataan kaarenpituuden mukaan: pää tarkalleen, väli
+   * pehmeästi. Kaava muutti js/pallo.js:ään 7.9.2026 illalla, koska
+   * SAMA viiva poltetaan myös laattapyramidin viivatasoon
+   * (tools/fokuskartta/sisalto.mjs) — kaksi kaavaa kahdessa paikassa
+   * tarkoitti, että elävä reitti päättyi kaupungin pallopisteeseen ja
+   * poltettu verkko laudan vanhaan pisteeseen.
+   */
+  assert.match(reitit, /import \{ pallonKorjattuPoly \} from '\.\.\/pallo\.js';/);
+  assert.match(reitit, /const korjattu = pallonKorjattuPoly\(/);
+  const pallo = lue('../js/pallo.js');
+  assert.match(pallo, /const t = yhteensa > 0 \? kertyma \/ yhteensa : Math\.min\(1, i\);/);
+  const sisalto = lue('../tools/fokuskartta/sisalto.mjs');
+  assert.match(sisalto, /const polyPallolle = \(e\) => pallonReitinPoly\(e, siirtymat\);/);
 });

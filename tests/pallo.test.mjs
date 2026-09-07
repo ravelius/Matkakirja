@@ -992,7 +992,11 @@ test('pallopisteitä on vain asutuksille, ja jokainen on laudan lähellä', () =
   for (const alue of ['borneo', 'kamtsatka', 'ahaggar', 'namib', 'nullarbor', 'sahara',
     'viktoria', 'tanganjika', 'tshadjarvi', 'galapagos', 'falkland', 'bali', 'sthelena',
     'hawaii', 'sierraleone', 'siinai', 'uluru', 'mountrushmore', 'sepik', 'milfordsound',
-    'kappalmas', 'bahrelghazal', 'viktorianputoukset', 'bananal', 'mosambik', 'orjarannikko']) {
+    'kappalmas', 'bahrelghazal', 'viktorianputoukset', 'bananal', 'mosambik', 'orjarannikko',
+    // Toinen kierros 7.9.2026 illalla: samasta syystä nämäkin jäävät.
+    'sumatra', 'sisilia', 'kreeta', 'kapadokia', 'madagaskar', 'sansibar', 'darfur',
+    'sahalin', 'kongo', 'kamerun', 'angola', 'islanti', 'alpit', 'appalakit',
+    'kilimandzaro', 'labrador', 'rubalkhali']) {
     assert.ok(!PALLON_KAUPUNKIPISTEET[alue], `alue ${alue} ei saa omaa pallopistettä`);
   }
   for (const [id, p] of Object.entries(PALLON_KAUPUNKIPISTEET)) {

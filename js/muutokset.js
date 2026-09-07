@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1682, teksti: 'Pallolauta: reittien päät kaupunkipisteisiin, 4 pistettä' },
   { v: 1681, teksti: 'Pallolauta: noston nimilapun teksti ottaa napautuksen' },
   { v: 1680, teksti: 'Ihmisen matka: vanat rannikkokaistoina, värinä pois' },
   { v: 1679, teksti: 'Ihmisen matka: tarinan järjestys, kaupunkipisteet piiloon' },
