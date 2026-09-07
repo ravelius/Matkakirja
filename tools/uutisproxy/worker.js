@@ -192,6 +192,9 @@ const SALLITUT = [
   // Etelä-Afrikan uutislähde (maalehti 7.9.2026): syöte ja
   // artikkelisivut samalla isäntänimellä.
   'https://www.dailymaverick.co.za/',
+  // Uzbekistanin uutislähde (maalehti 7.9.2026): Gazeta.uz:n syöte ja
+  // artikkelisivut ovat samalla isäntänimellä.
+  'https://www.gazeta.uz/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

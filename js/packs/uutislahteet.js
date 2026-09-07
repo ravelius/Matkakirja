@@ -593,6 +593,20 @@ export const UUTISLAHTEET = {
     syote: 'https://feeds.feedburner.com/rsscna/local',
   },
   /*
+   * UZBEKISTAN (Opus 7.9.2026). Gazeta.uz on maan luetuimpia
+   * uutissivustoja, ja sillä on erilliset syötteet uzbekiksi ja
+   * venäjäksi; tässä on uzbekinkielinen (/oz/rss/), koska
+   * paikalliskielinen lähde on ensisijainen. Syöte antaa 20 juttua, ja
+   * artikkelisivulta löytyvät sekä [itemprop="articleBody"] että
+   * og:image (testattu 7.9.2026 workerin User-Agentilla). Syöte ja
+   * artikkelisivut ovat samalla isäntänimellä.
+   */
+  UZB: {
+    nimi: 'Gazeta.uz',
+    kieli: 'uz',
+    syote: 'https://www.gazeta.uz/oz/rss/',
+  },
+  /*
    * ETIOPIA (ETH) JÄI ILMAN LÄHDETTÄ (Opus 6.9.2026) — Addis Abeban ja
    * Lalibelan lehdissä ei siis näy uutisosiota, eikä mikään mene
    * rikki. Sama tilanne kuin Kuuballa ja Fidžillä.

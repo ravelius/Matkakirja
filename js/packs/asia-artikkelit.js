@@ -3397,6 +3397,53 @@ export const ASIA_ARTIKKELIT = {
       + 'Pakistanin talouden keskus ja sen väestöltään monikielisin '
       + 'paikka.',
   },
+  /*
+   * UZBEKISTAN (Opus 7.9.2026). Maa-avain, ei kaupunki: Samarkandin
+   * lehden maaosasto nojaa tähän introon yksin (js/lehti.js lukee
+   * ARTIKKELIT[maan nimi].intro). Sama malli kuin Egyptillä
+   * africa-artikkelit.js:ssä ja Brasilialla
+   * southamerica-artikkelit.js:ssä. `teksti` on mukana, koska
+   * tests/vanha-maailma.test.mjs mittaa jokaisen Aasian merkinnän
+   * kolmen kappaleen mitalla. Faktat en-Wikipedian artikkelista
+   * "Uzbekistan" (johdanto ja osio "Geography", luettu 7.9.2026).
+   */
+  Uzbekistan: {
+    intro: 'Uzbekistan on Amudarjan ja Syrdarjan välinen maa '
+      + 'Keski-Aasian sydämessä, ja se on maailman kahdesta '
+      + 'kaksinkertaisesti sisämaahan jääneestä valtiosta toinen: '
+      + 'jokainen sen naapuri on itsekin mereton, ja ainoa toinen '
+      + 'samanlainen maa on Liechtenstein. Alle kymmenesosa pinta-alasta '
+      + 'on kasteltua viljelysmaata jokilaaksoissa ja keitailla, muu on '
+      + 'Kyzylkumin autiomaata ja vuoria, eikä yksikään joki laske '
+      + 'mereen. Silkkitie kulki täältä, ja Samarkand, Buhara ja Khiva '
+      + 'rikastuivat siitä. Islamilaisen tieteen kulta-aikana seudulta '
+      + 'lähtivät al-Khwarizmi, al-Biruni ja Ibn Sina, joiden nimet '
+      + 'Eurooppa oppi latinaksi. Timurin valtakunnan jälkeen alue '
+      + 'jakautui khaanikuntiin, 1800-luvulla se liitettiin Venäjään, ja '
+      + 'itsenäinen tasavalta siitä tuli 1991. Asukkaita on yli 39 '
+      + 'miljoonaa, enemmän kuin missään muussa Keski-Aasian maassa, ja '
+      + 'uzbekkia kirjoitetaan sekä kyrillisin että latinalaisin '
+      + 'kirjaimin. Ruokapöydässä on plov ja tandirissa paistettu '
+      + 'leipä, ja neuvostoajan puuvillakastelu jätti jälkeensä '
+      + 'kuivuneen Araljärven.',
+    teksti: 'Uzbekistan on Keski-Aasian ainoa maa, joka rajoittuu '
+      + 'kaikkiin neljään muuhun, ja lisäksi sillä on lyhyt raja '
+      + 'Afganistaniin. Pinta-alaa on 448 978 neliökilometriä, ja maa '
+      + 'ulottuu 1 425 kilometriä lännestä itään ja 930 kilometriä '
+      + 'pohjoisesta etelään. Ilmasto on mantereinen ja kuiva: sadetta '
+      + 'tulee vuodessa 100–200 millimetriä.'
+      + '\n\n'
+      + 'Kaupungit ovat silkkitien kaupunkeja. Sogdien kauppiaat veivät '
+      + 'tavaraa Kiinaan asti, samanidien Buharasta tuli 900-luvulla '
+      + 'oppineiden keskus, ja Timurin valtakunnan pääkaupungiksi nousi '
+      + 'Samarkand. Ferganan laaksossa syntyi Babur, joka menetti '
+      + 'kotiseutunsa ja perusti myöhemmin Intiaan Mogulivaltakunnan.'
+      + '\n\n'
+      + 'Nykyään maassa asuu yli 39 miljoonaa ihmistä. Puuvilla on yhä '
+      + 'tärkeä vientikasvi, ja sen kastelu kuivatti Araljärven, jota '
+      + 'pidetään yhtenä maailman pahimmista ympäristötuhoista. '
+      + 'Taškentin metro on Keski-Aasian ensimmäinen.',
+  },
   Kabul: {
     intro: 'Kabul on Afganistanin pääkaupunki ja maan suurin kaupunki. '
       + 'Se on kapeassa laaksossa **Hindukušin vuorten välissä** '

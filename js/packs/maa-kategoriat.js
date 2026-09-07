@@ -25772,6 +25772,546 @@ export const MAA_KATEGORIAT = {
     },
   ],
   /*
+   * UZBEKISTAN (Opus 7.9.2026, Aasian maalehtierä). Samarkandilla on
+   * oma kaupunkilehti (kulttuuri-kategoriat.js: Registan, Gur-e-Amir,
+   * Bibi-Khanym, sininen kaakeli, Marakanda, mongolit ja Timur,
+   * hiljaiset vuosisadat, vuoden 1868 piiritys, rautatie ja basaari),
+   * ja kartan merkit kertovat jo Itchan Kalasta, Shahrisabzista,
+   * Moynaqista, Nukusin museosta, Kampir Tepestä, Ayaz-Kalasta,
+   * Kokandista, Araljärvestä, Amudarjasta ja Khazret Sultanista
+   * (maastokohteet-uzb.js), buharanhirvestä (elaintakyt.js) sekä
+   * Stoddartista ja Conollysta, Vozroždenijan saaresta ja Buharan
+   * kirkonkelloista (skandaalit.js). Nahtavyysjutut.js kertoo
+   * Ulugbekin observatorion ja Zij-i Sultanin. Lehti täydentää
+   * niitä eikä toista: Timur, Ulugbek ja Samarkandin muistomerkit on
+   * jätetty tästä pois kokonaan.
+   *
+   * Aiheet: Historia, Tiede, Ruoka, Musiikki, Kuvataide. Luonto
+   * jätettiin pois, koska maastokohteet ja eläintäky kattavat sen.
+   *
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026:
+   * "Sogdia", "Sogdian language", "Samanid Mausoleum", "Babur",
+   * "Baburnama", "1966 Tashkent earthquake", "Al-Khwarizmi",
+   * "Al-Biruni", "Avicenna", "Al-Farghani", "Uzbek plov",
+   * "Uzbek cuisine", "Tandyr nan", "Shashmaqom",
+   * "Music of Uzbekistan", "Dutar", "Bukharan Jews", "Lazgi",
+   * "Suzani (textile)", "Ikat", "Rishton, Uzbekistan", "Margilan",
+   * "Tashkent Metro" ja "Uzbekistan". Faktapohja:
+   * docs/mantereet-tyoaineisto/faktapohja-uzbekistan.md.
+   *
+   * NYKYPOLITIIKKA JA NYKYSELKKAUKSET on jätetty pois (M3:n
+   * Myanmar-linja). Neuvostoajan kulttuurihistoria kerrotaan
+   * tapahtumina ilman osapuolikehystä: shashmaqomin kielto 1951 ja
+   * sen purku, metron kuvauskiellon päättyminen 2018,
+   * jälleenrakennus vuoden 1966 järistyksen jälkeen.
+   */
+  UZB: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Kahden joen välinen maa on ollut kaupunkien maata '
+          + 'kolmetuhatta vuotta, ja sen kauppiaat, hallitsijat ja '
+          + 'tutkijat tunnetaan usein paremmin kaukana kuin kotona.',
+      nostot: [
+        {
+          otsikko: 'Kirjeet, jotka jäivät vartiotorniin',
+          aika: '300-luku',
+          teksti: 'Aurel Stein löysi vuonna 1907 hylätystä '
+              + 'vartiotornista Dunhuangin läheltä viisi sogdinkielistä '
+              + 'kirjettä, jotka on ajoitettu Länsi-Jinin dynastian '
+              + 'viimeisiin vuosiin. Sogdit olivat Samarkandin ja '
+              + 'Buharan seudun kauppiaita, ja heidän kielensä oli '
+              + 'silkkitien yleiskieli aina Kiinaan asti. Yhdessä '
+              + 'kirjeessä Nanai-vandak kertoo kotiväelle, että '
+              + 'Luoyangissa on noussut kapina, keisari on jättänyt '
+              + 'kaupungin ja sinne asettuneet sogdit ja intialaiset '
+              + 'ovat kuolleet nälkään. Toisen kirjoitti Miwnay, joka '
+              + 'oli jäänyt tyttärensä kanssa Kiinaan ja pyysi äitiään '
+              + 'Chatisia hakemaan heidät pois. Yksikään kirje ei '
+              + 'mennyt perille.',
+          wiki: 'Sogdia',
+        },
+        {
+          otsikko: 'Rakennus, jota valloittajat eivät nähneet',
+          aika: '900-luku',
+          tiedosto: 'Bukhara Samanid mausoleum outside.JPG',
+          teksti: 'Buharan samanidimausoleumi on Keski-Aasian vanhin '
+              + 'säilynyt hautarakennus: tiilestä ladottu kuutio, jonka '
+              + 'kulmissa on paksut tukitornit ja jonka pintakuvio '
+              + 'vaihtaa ilmettään valon mukaan. Rakennuttajaksi on '
+              + 'esitetty sekä dynastian perustajaa Ismail Samania että '
+              + 'hänen pojanpoikaansa Nasr II:ta, jonka nimi löytyi '
+              + '1930-luvun korjauksissa itäseinän kamanasta. '
+              + 'Rakennus säilyi, koska se katosi näkyvistä: tulvat '
+              + 'ja maanvyörymät peittivät sen, ja se oli hautautunut '
+              + 'mutaan ja hiekkaan jo ennen mongolien hyökkäystä '
+              + '1220. Kumpu kaivettiin auki vasta 1920-luvun '
+              + 'tutkimuksissa.',
+          selite: 'Samanidimausoleumin seinät on ladottu paljaasta poltetusta '
+            + 'tiilestä niin, että kuvio muuttuu auringon kiertäessä, ja '
+            + 'kulmissa ovat paksut tukitornit.',
+          lahde: 'Patrickringgenberg, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Samanid Mausoleum',
+        },
+        {
+          otsikko: 'Kaupunki, jota hän ei saanut pitää',
+          aika: '1483–1530',
+          tiedosto: 'News of the loss of Andijan (p. 81b). Miniature from the manuscript Baburnama of 1590.jpg',
+          teksti: 'Babur syntyi Andižanissa Ferganan laaksossa 14. '
+              + 'helmikuuta 1483. Laakson hallitsijaksi hän nousi '
+              + 'yksitoistavuotiaana 1494, kun hänen isänsä kuoli '
+              + 'kyyhkyslakan romahdettua rotkoon palatsin alla. '
+              + 'Viisitoistavuotiaana hän valtasi Samarkandin seitsemän '
+              + 'kuukauden piirityksen jälkeen, mutta piti sitä sata '
+              + 'päivää ja menetti sillä aikaa kotilaaksonsa; kaupunki '
+              + 'lipesi häneltä vielä kahdesti. Taškentissa hän '
+              + 'kirjoitti eläneensä köyhyydessä ja nöyryytyksessä '
+              + 'ilman maata ja ilman toivoa sellaisesta. Muistelmansa '
+              + 'Baburnaman hän kirjoitti tšagataiksi, ja se on '
+              + 'islamilaisen kirjallisuuden varhaisimpia '
+              + 'omaelämäkertoja.',
+          selite: 'Baburnaman vuoden 1590 käsikirjoituksessa on oma kuvansa '
+            + 'hetkelle, jona Baburille tuotiin tieto Andižanin '
+            + 'menetyksestä.',
+          lahde: 'Noin 1590 työskennellyt taiteilija, Wikimedia Commons (PD)',
+          wiki: 'Babur',
+        },
+        {
+          otsikko: 'Aamu, joka rakensi pääkaupungin uusiksi',
+          aika: '1966',
+          tiedosto: 'Navoi Theater - Tashkent.jpg',
+          teksti: 'Taškentin maanjäristys 26. huhtikuuta 1966 kello '
+              + '05.23 oli momenttimagnitudiltaan vain 5,2, mutta sen '
+              + 'keskus oli kaupungin keskustassa ja pesäke kolmen ja '
+              + 'kahdeksan kilometrin välissä. Yli 80 prosenttia '
+              + 'kaupungista tuhoutui ja 78 000–95 000 asuntoa hajosi '
+              + '— valtaosa savitiilitaloja. Merkittävistä '
+              + 'rakennuksista säilyi vaurioitta vain Navoi-teatteri, '
+              + 'jonka olivat rakentaneet japanilaiset sotavangit. '
+              + 'Koditta jäi 200 000–300 000 ihmistä, ja töihin tuli '
+              + 'väkeä muista neuvostotasavalloista; vuoteen 1970 '
+              + 'mennessä oli valmistunut 100 000 uutta asuntoa. '
+              + 'Samana vuonna perustettiin seismologian laitos.',
+          selite: 'Alisher Navoin teatteri oli vuoden 1966 järistyksessä ainoa '
+            + 'merkittävä rakennus, joka säilyi vaurioitta.',
+          lahde: 'Atilin, Wikimedia Commons (CC BY 2.5)',
+          wiki: '1966 Tashkent earthquake',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Buharan samanidimausoleumi säilyi mongolien '
+            + 'hyökkäyksestä?',
+        vaihtoehdot: [
+          'Se oli hautautunut mutaan ja hiekkaan',
+          'Se oli kaupungin muurien ulkopuolella',
+          'Valloittajat käyttivät sitä varastonaan',
+          'Se oli rakennettu kalliopohjan sisään',
+        ],
+        oikea: 0,
+        fakta: 'Tulvat peittivät rakennuksen ennen vuotta 1220, ja se '
+            + 'kaivettiin esiin vasta 1920-luvulla.',
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Neljä nimeä, jotka Eurooppa oppi latinaksi, ovat '
+          + 'kotoisin tämän maan kylistä ja kaupungeista — ja yksi '
+          + 'niistä on sanassa, jota ohjelmoija käyttää joka päivä.',
+      nostot: [
+        {
+          otsikko: 'Nimi, josta tuli algoritmi',
+          aika: 'n. 780–850',
+          tiedosto: 'Al Khorezmy.jpg',
+          teksti: 'Muhammad ibn Musa al-Khwarizmi kokosi noin vuosina '
+              + '813–833 Bagdadin viisauden talossa kirjan Al-Jabr, '
+              + 'joka esitti ensimmäisenä järjestelmällisen tavan '
+              + 'ratkaista ensimmäisen ja toisen asteen yhtälöt. Kirjan '
+              + 'nimestä tuli sana algebra ja tekijän latinalaisesta '
+              + 'nimestä Algoritmi sana algoritmi. Robert '
+              + 'Chesterläisen käännös vuodelta 1145 oli Euroopan '
+              + 'yliopistojen matematiikan oppikirja 1500-luvulle asti. '
+              + 'Syntymäseudusta ei ole varmuutta: Ibn al-Nadim '
+              + 'sanoo sen olleen Khwarazm, josta liikanimi tulee, '
+              + 'kun taas osa tutkijoista sijoittaa syntymän Bagdadin '
+              + 'liepeille.',
+          selite: 'Al-Khwarizmista ei ole aikalaiskuvaa; tämä puuhun veistetty '
+            + 'muotokuva on 1900-luvulta, ja alareunaan on kaiverrettu '
+            + 'hänen nimensä arabialaisin kirjaimin.',
+          lahde: 'Davide Mauro, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Al-Khwarizmi',
+        },
+        {
+          otsikko: 'Vuori, jolta mitattiin maapallo',
+          aika: 'n. 973–1050',
+          tiedosto: 'Lunar phases al-Biruni.jpg',
+          teksti: 'Al-Biruni syntyi Kathin laitakaupungilla, ja hänen '
+              + 'nimensäkin tarkoittaa ulkopuolista; kaupunki on '
+              + 'nykyään Beruniy Karakalpakstanissa. Hän keksi tavan '
+              + 'mitata maapallon säde yhdestä paikasta: mittaamalla '
+              + 'vuorelta horisontin painumaa ja laskemalla loput '
+              + 'kolmiomittauksella. Tulos oli pari prosenttia liian '
+              + 'suuri, koska hän ei ottanut huomioon ilmakehän '
+              + 'taittumista. Vuonna 1037 valmistuneessa Masudin '
+              + 'kaanonissa hän päätteli maapallon mitoista, että '
+              + 'Aasian ja Euroopan välisessä valtameressä täytyy olla '
+              + 'tuntematonta maata — ja että ainakin osa siitä on '
+              + 'asuttavaa.',
+          selite: 'Al-Biruni selitti kuun vaiheet Kitab al-Tafhim -teoksessaan '
+            + 'piirroksella, jossa auringon säteet osuvat kuuhun radan '
+            + 'eri kohdissa.',
+          lahde: 'Al-Biruni, Wikimedia Commons (PD)',
+          wiki: 'Al-Biruni',
+        },
+        {
+          otsikko: 'Kahdeksantoista kysymystä naapurille',
+          aika: 'n. 980–1037',
+          tiedosto: 'The Canon of Medicine.jpg',
+          teksti: 'Ibn Sina syntyi noin vuonna 980 Afshanan kylässä '
+              + 'Buharan liepeillä. Kymmenvuotiaana hän osasi Koraanin '
+              + 'ulkoa, ja seitsemäntoistavuotiaana hänestä tuli '
+              + 'hallitsijan lääkäri. Hänen viisiosainen Lääketieteen '
+              + 'kaanoninsa oli Euroopan yliopistoissa oppikirjana '
+              + 'vielä 1600-luvun puolivälissä; siinä hän arveli '
+              + 'näkymättömien pieneliöiden liittyvän tauteihin ja '
+              + 'suositteli sairaiden eristämistä. Hänen ja al-Birunin '
+              + 'kirjeenvaihto on säilynyt: al-Biruni aloitti '
+              + 'kahdeksallatoista kysymyksellä, joista kymmenen oli '
+              + 'Aristoteleen taivaita käsittelevän kirjan arvostelua.',
+          selite: 'Lääketieteen kaanon on viisiosainen teos; tämä persiankielinen '
+            + 'käsikirjoituskopio on Ibn Sinan museossa ja mausoleumissa '
+            + 'Hamadanissa.',
+          lahde: 'Coffeetalkh, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Avicenna',
+        },
+        {
+          otsikko: 'Maili, joka vei Kolumbuksen harhaan',
+          aika: '800-luku',
+          tiedosto: 'Alfraganus crater AS16-P-4548.jpg',
+          teksti: 'Al-Farghani oli liikanimensä perusteella kotoisin '
+              + 'Quvasta Ferganan laaksosta. Hänen tähtitieteen '
+              + 'oppikirjansa tiivisti Ptolemaioksen Almagestin ja '
+              + 'korjasi sen lukuja; latinaksi se käännettiin 1135, ja '
+              + 'Danten käsitys maailmankaikkeuden rakenteesta on '
+              + 'peräisin siitä. Kolumbus käytti hänen laskemaansa '
+              + 'maapallon ympärysmittaa, mutta luki arabialaisen '
+              + 'mailin roomalaisena: 7 091 jalan sijasta 4 856. '
+              + 'Maapallo kutistui laskuissa, ja Kolumbus luuli '
+              + 'purjehtivansa oikotietä Aasiaan. Kairossa hän '
+              + 'rakennutti Rawdan saarelle nilometrin, joka valmistui '
+              + 'vuonna 861. Kuun kraatteri Alfraganus on nimetty hänen '
+              + 'mukaansa.',
+          selite: 'Kuun kraatteri Alfraganus on nimetty al-Farghanin mukaan, ja '
+            + 'Apollo 16:n miehistö kuvasi sen vuonna 1972.',
+          lahde: 'James Stuby NASAn kuvasta, Wikimedia Commons (PD)',
+          wiki: 'Al-Farghani',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miten al-Biruni mittasi maapallon säteen?',
+        vaihtoehdot: [
+          'Kahden kaivon varjoista keskipäivällä',
+          'Mittaamalla horisontin painumaa vuorelta',
+          'Kuunpimennyksen kestoa mittaamalla',
+          'Vertaamalla karavaanien matka-aikoja toisiinsa',
+        ],
+        oikea: 1,
+        fakta: 'Tulos oli pari prosenttia liian suuri, koska ilmakehän '
+            + 'taittumista ei tunnettu.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Pöydässä on joka päivä kaksi asiaa: riisipata, jonka '
+          + 'tekeminen on oma ammattinsa, ja pyöreä leipä, jolla on '
+          + 'omat sääntönsä.',
+      nostot: [
+        {
+          otsikko: 'Kattila, josta syö tuhat vierasta',
+          tiedosto: 'Samarkand Zigir-pilaf.jpg',
+          teksti: 'Plov eli osh on maan kansallisruoka: lampaanlihaa, '
+              + 'suikaloitua porkkanaa, sipulia ja pitkäjyväistä riisiä '
+              + 'kazan-padassa avotulella. Pohjaksi tehdään zirvak, '
+              + 'lihan ja kasvisten paistos, jonka päälle riisi '
+              + 'ladotaan höyrystymään sekoittamatta — siksi jyvät '
+              + 'pysyvät erillään. Juhliin padan tekee oshpaz, '
+              + 'plov-mestari, jonka taito siirtyy mestarilta '
+              + 'oppipojalle, ja yhdestä padasta voidaan tarjota jopa '
+              + 'tuhannelle vieraalle. Häiden aamuna syödään nahor '
+              + 'oshi, aamuplov, kello kuuden ja yhdeksän välillä, ja '
+              + 'vanhimmat aloittavat ensin. Unesco otti plovin '
+              + 'luetteloonsa 2016.',
+          selite: 'Samarkandilainen plov keitetään pellavaöljyssä, ja vadille se '
+            + 'kootaan kerroksittain: riisi pohjalle, porkkanasuikaleet ja '
+            + 'liha päälle.',
+          lahde: 'Shuhrataxmedov, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Uzbek plov',
+        },
+        {
+          otsikko: 'Leipä, jota ei lasketa maahan',
+          tiedosto: 'Uzbek bread, obi non, lepyoshka.jpg',
+          teksti: 'Non paistetaan tandir-uunin sisäseinään kiinni '
+              + 'lyötynä. Keskikuvio painetaan chekich-leimasimella, '
+              + 'jonka piikit jättävät reiät höyrylle ja samalla '
+              + 'leipurin oman tunnuksen; säteittäiset viillot tehdään '
+              + 'bosmalla, jonka piikkeinä on usein polkupyörän '
+              + 'pinnoja. Leipää ei leikata veitsellä vaan revitään '
+              + 'käsin, eikä sitä lasketa maahan: pudonnut leipä '
+              + 'nostetaan muurille tai puuhun lintujen syötäväksi. '
+              + 'Vastasyntyneen pään alle pannaan non pitkän elämän '
+              + 'toivotukseksi, ja maailmalle lähtevän leivät '
+              + 'kuivataan ja ripustetaan kattoon odottamaan paluuta.',
+          selite: 'Chekichin jälki jää leivän keskelle painaumaksi, reunus '
+            + 'kohoaa paksuksi, ja päälle ripotellaan seesamia ja '
+            + 'mustakuminaa.',
+          lahde: 'Benjamin Goetzinger, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tandyr nan',
+        },
+        {
+          otsikko: 'Pata, joka kypsyy yön yli',
+          teksti: 'Buharan juutalaisten keittiö on oma haaransa maan '
+              + 'ruokaperinteessä. Sen tunnetuin ruoka on oshi sabo, '
+              + 'koko yön hiljalleen kypsyvä pata, joka syödään '
+              + 'kuumana sapatin lounaaksi: lihaa, riisiä, kasviksia '
+              + 'ja hedelmiä, joista tulee makean ja hapokkaan '
+              + 'yhdistelmä. Bakhshi khaltagi on yrteistä vihreä plov, '
+              + 'joka kypsennetään pienessä pussissa kiehuvassa '
+              + 'vedessä, jotta se on valmis jo ennen sapattia. '
+              + 'Perjantai-illan pöytään kuuluvat mai birion, '
+              + 'paistettu kala valkosipulikastikkeessa, ja noni toki, '
+              + 'wokin pohjan päällä kulhon muotoon paistettu leipä.',
+          wiki: 'Uzbek cuisine',
+        },
+        {
+          otsikko: 'Teetä ilman maitoa ja sokeria',
+          tiedosto: 'Sopol choynak va piyola.png',
+          teksti: 'Teetä juodaan pitkin päivää, eikä siihen panna '
+              + 'maitoa eikä sokeria. Vihreä kok choy on tavallisin, '
+              + 'mutta Taškentissa suositaan mustaa. Tee tarjotaan '
+              + 'pienestä piyola-kulhosta, ja teehuone eli chaikhana '
+              + 'on korttelin kokoontumispaikka. Kesällä juodaan '
+              + 'kylmää suolaista ayrania, talvella shirchoyta eli '
+              + 'suolaista maitoteetä voin kanssa, ja kuivatuista '
+              + 'hedelmistä keitetään makea sharbat. Ateria päättyy '
+              + 'hedelmiin, pähkinöihin ja halvaan. Peruna tuli '
+              + 'maahan vasta neuvostoaikana, ja osa vanhemmasta '
+              + 'väestä kieltäytyy siitä yhä.',
+          selite: 'Tee tarjotaan choynak-kannusta pieniin piyola-kulhoihin, '
+            + 'joissa toistuu sama sininen kuviointi.',
+          lahde: 'AIDEPCUL, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Uzbek cuisine',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä chekich on?',
+        vaihtoehdot: [
+          'Uunikoukku',
+          'Riisimitta',
+          'Leimasin',
+          'Teekulho',
+        ],
+        oikea: 2,
+        fakta: 'Sen jättämät reiät päästävät höyryn ulos ja kertovat, '
+            + 'kenen uunista leipä on tullut.',
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Klassinen laulu tuli hoveista, tanssi Khorezmin '
+          + 'kylistä ja soittimen kielet silkkitietä pitkin Kiinasta.',
+      nostot: [
+        {
+          otsikko: 'Kuusi sävellajia ja yksi ilta',
+          tiedosto: 'Doira 1.png',
+          teksti: 'Shashmaqom tarkoittaa persiaksi kuutta maqamia eli '
+              + 'sävelmoodia, ja se syntyi Buharan ja Samarkandin '
+              + 'kaupungeissa 1500-luvun lopulla. Laulujen sanat ovat '
+              + 'sufirunoutta jumalallisesta rakkaudesta, ja säestys '
+              + 'on niukka: pitkäkaulaisia luuttuja, jousella '
+              + 'soitettava sato ja dayra-kehärumpu, jonka renkaat '
+              + 'helisevät kuin tamburiinissa. Sarja alkaa matalalta, '
+              + 'nousee vähitellen huipennukseen ja laskeutuu takaisin '
+              + 'lähtösäveleen, ja välissä lausutaan runoa puhuen. '
+              + 'Vuonna 1951 maqomin kehittäminen kiellettiin '
+              + 'päätöksellä, ja 1950-luvun puolivälissä kielto '
+              + 'purettiin.',
+          selite: 'Doira eli dayra on kehärumpu, jonka kehän sisäpuolelle on '
+            + 'ripustettu metallirenkaita; ne helisevät jokaisella '
+            + 'lyönnillä.',
+          lahde: 'AIDEPCUL, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Shashmaqam',
+        },
+        {
+          otsikko: 'Kaksi kieltä, jotka tulivat Kiinasta',
+          tiedosto: 'Musical Instruments and Musicians. A Man Playing a Dutar, a Long-Necked Fretted Lute WDL10767.png',
+          teksti: 'Dutarin nimi tarkoittaa persiaksi kahta kieltä. Se '
+              + 'oli 1400-luvulla paimenen soitin ja sen kielet '
+              + 'tehtiin suolesta, mutta silkkitien auettua tilalle '
+              + 'tuli Kiinasta tuotu kierretty silkki — muutamassa '
+              + 'soittimessa se on yhä. Kaula tehdään mieluiten '
+              + 'aprikoosipuusta ja runko ontoksi poltetusta '
+              + 'mulperipuun kappaleesta. Otelaudalla on kolmetoista '
+              + 'nauhaa, ja kielet viritetään kvartin päähän '
+              + 'toisistaan. Soittotapa on oma: kieliä ei näpätä eikä '
+              + 'soiteta plektralla vaan lyödään nopein käden vedoin, '
+              + 'ja niin niistä saa balalaikan tapaan pehmeän mutta '
+              + 'tiheän soinnin.',
+          selite: 'Dutar-soittaja kuvattiin Turkestanin albumiin, jonka Venäjän '
+            + 'hallinto teetti 1860- ja 1870-luvulla.',
+          lahde: 'Aleksandr L. Kun, Turkestanin albumi, Wikimedia Commons (PD)',
+          wiki: 'Dutar',
+        },
+        {
+          otsikko: 'Laulajat, jotka veivät Buharan New Yorkiin',
+          tiedosto: 'Bukharan Jews (before 1899).jpg',
+          teksti: 'Buharan juutalaiset ovat pitäneet shashmaqomia '
+              + 'elossa sukupolvesta toiseen, ja heidän '
+              + 'kokoonpanonsa pääsoitin on dayra-kehärumpu. '
+              + 'Musiikissa kuuluu keskiaasialaisen rytmin ohella '
+              + 'klezmerin vaikutus. Tutkimusmatkailija Henry Lansdell '
+              + 'kuuli laulua Samarkandissa 1885 eikä ymmärtänyt siitä '
+              + 'paljon: ensimmäinen ääni aloitti niin korkealta, '
+              + 'että laulaja joutui ponnistelemaan hetken ennen kuin '
+              + 'ääntä kuului lainkaan, ja toinen lauloi rinnalla '
+              + 'falsetissa niin lujaa kuin sai. Kun yhteisö muutti '
+              + 'Yhdysvaltoihin, musiikki muutti mukana, ja New Yorkiin '
+              + 'perustettiin Ensemble Shashmaqam.',
+          selite: 'Buharan juutalaisten yhteisö kuvattiin ennen vuotta 1899 '
+            + 'Toora-kääröineen.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Bukharan Jews',
+        },
+        {
+          otsikko: 'Tanssi, joka alkaa sormenpäistä',
+          teksti: 'Lazgi on Khorezmin kansantanssi ja -musiikki, ja '
+              + 'Unesco otti sen luetteloonsa joulukuussa 2019. '
+              + 'Musiikki kulkee 6/8-tahdissa: lyhyt alkusoitto ja '
+              + 'kolme osaa, joiden aikana vauhti kiihtyy ja loppu '
+              + 'katkeaa äkisti. Tanssi alkaa sormista, siirtyy '
+              + 'ranteisiin ja kyynärpäihin ja leviää vasta sitten '
+              + 'koko vartaloon. Perimätiedon mukaan se kertoo sielun '
+              + 'tulosta savesta tehtyyn ruumiiseen: sielu pelkäsi '
+              + 'eikä suostunut, kunnes kuuli musiikin ja meni sisään '
+              + 'huomaamattaan. Muotoja on kahdeksan, muun muassa '
+              + 'qayroq-, dutor-, surnay- ja Khiva-lazgi.',
+          wiki: 'Lazgi',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä sana shashmaqom tarkoittaa?',
+        vaihtoehdot: [
+          'Kuutta laulajaa',
+          'Kuuden illan juhlaa',
+          'Kuutta kaupunkia',
+          'Kuutta sävelmoodia',
+        ],
+        oikea: 3,
+        fakta: 'Maqam on sävelmoodi, ja sarjassa niitä on kuusi.',
+      },
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Käsityö on tässä maassa kuvataidetta: kirjottu '
+          + 'seinävaate, ennen kutomista värjätty silkki, keraaminen '
+          + 'lasite ja metroaseman holvi.',
+      nostot: [
+        {
+          otsikko: 'Kirjonta, joka kuului myötäjäisiin',
+          tiedosto: 'Sózana, wall embroidery, 1970–80.jpg',
+          teksti: 'Suzani on käsin kirjottu seinävaate, ja nimi tulee '
+              + 'persian sanasta suzan eli neula. Morsiamet kirjoivat '
+              + 'niitä myötäjäisikseen ja antoivat sulhaselle '
+              + 'hääpäivänä. Kangas on hento, ja siksi 1700-luvun '
+              + 'loppua vanhempia töitä on säilynyt hyvin vähän — '
+              + 'perinne itse on paljon vanhempi, sillä Kastilian '
+              + 'lähettiläs kuvasi 1400-luvun alussa kirjontatöitä, '
+              + 'joita pidetään suzanin edeltäjinä. Työt tunnetaan '
+              + 'kaupunkinsa mukaan: Nurata, Buhara, Shahrisabz, '
+              + 'Samarkand ja Taškent tekivät kukin omanlaisensa '
+              + 'kuvioinnin.',
+          selite: 'Suzanin kuvio rakentuu suurten ympyröiden varaan ja pohja '
+            + 'kirjotaan kokonaan täyteen; tämä työ on 1970-luvulta ja '
+            + 'kuuluu Uzbekistanin valtion taidemuseon kokoelmaan.',
+          lahde: 'Carl Ha, Wikimedia Commons (CC0)',
+          wiki: 'Suzani (textile)',
+        },
+        {
+          otsikko: 'Sumea reuna on tarkoitus',
+          tiedosto: 'Adras (Ikat) ʼDoiragulʼ. 1990s. Silk, cotton.jpg',
+          teksti: 'Ikatissa kuvio tehdään lankaan ennen kutomista: '
+              + 'loimilangat sidotaan tiukasti niiltä kohdin, joiden '
+              + 'pitää jäädä värjäytymättä, ja sidoksia muutetaan '
+              + 'värien välillä. Siksi kuvio näkyy kankaan molemmilla '
+              + 'puolilla yhtä lailla. Uzbekistanissa tekniikkaa '
+              + 'sanotaan nimellä abrbandi, ja Keski-Aasian perinne '
+              + 'nimenomaan tavoittelee sumeaa reunaa siinä missä '
+              + 'moni muu koulukunta hakee terävää. Buhara, Samarkand '
+              + 'ja Kašgar olivat 1800-luvulla kuuluja hienoista '
+              + 'silkki-ikateistaan, ja Margilanissa on kudottu '
+              + 'silkkiä jo 900-luvulta asti.',
+          selite: 'Adras on silkin ja puuvillan sekoitus, ja ikat-kuvion reunat '
+            + 'jäävät tarkoituksella sumeiksi.',
+          lahde: 'Panpanchik, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ikat',
+        },
+        {
+          otsikko: 'Savi, joka riittää koko kaupungille',
+          tiedosto: 'Sopol lagan blue front.png',
+          teksti: 'Rishtan Ferganan laaksossa on maan vanhimpia ja '
+              + 'kuuluisimpia keramiikkakaupunkeja, ja syy on maan '
+              + 'alla: melkein koko kaupungin alla on metrin tai '
+              + 'puolentoista syvyydessä puolesta metristä '
+              + 'puoleentoista paksu kerros punakeltaista savea. Savi '
+              + 'kelpaa sellaisenaan ilman puhdistusta ja ilman '
+              + 'muualta tuotua seosta. Väriaineet, kvartsihiekka ja '
+              + 'tulenkestävä savi otetaan ympäröiviltä vuorilta, ja '
+              + 'kuuluisan ishkor-lasitteen väri saadaan luonnon '
+              + 'mineraaleista ja vuoristokasvien tuhkasta.',
+          selite: 'Ferganan laakson keramiikassa toistuvat sininen '
+            + 'rishtanilainen lasite ja lautasen keskelle sijoitettu '
+            + 'kukka-aihe.',
+          lahde: 'AIDEPCUL, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Rishton, Uzbekistan',
+        },
+        {
+          otsikko: 'Maanalainen galleria, jota ei saanut kuvata',
+          tiedosto: 'Tashkent metro drushbanarod.jpg',
+          teksti: 'Taškentin metro avattiin 6. marraskuuta 1977 '
+              + 'ensimmäisenä Keski-Aasiassa, ja sen suunnittelu alkoi '
+              + '1968, kaksi vuotta maanjäristyksen jälkeen. '
+              + 'Jokaisella asemalla on oma aiheensa, jonka mukaan se '
+              + 'on koristeltu: materiaaleina ovat marmori, graniitti, '
+              + 'lasimosaiikki, keramiikka ja alabasteri, ja jokaisella '
+              + 'asemalla on omat taideteoksensa. Tunnelit kulkevat 8–25 '
+              + 'metrin syvyydessä, ja rakenteet on mitoitettu '
+              + 'kestämään voimakas järistys. Valokuvaus oli kielletty '
+              + '31. toukokuuta 2018 asti, koska asemat luokiteltiin '
+              + 'sotilaskohteiksi: ne toimivat myös väestönsuojina.',
+          selite: 'Kansojen ystävyyden asema eli nykyinen Doʻstlik on koristeltu '
+            + 'kipsiholvein ja marmoripylväin, ja sama lattiakuvio '
+            + 'jatkuu koko laiturin matkan.',
+          lahde: 'Elya, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Tashkent Metro',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä Rishtanin ishkor-lasitteen väri saadaan?',
+        vaihtoehdot: [
+          'Kuparimalmista ja koboltista',
+          'Vuoristokasvien tuhkasta',
+          'Lapis lazulista',
+          'Poltetusta luusta',
+        ],
+        oikea: 1,
+        fakta: 'Mukaan tulee myös luonnon mineraaleja, ja savi '
+            + 'otetaan suoraan kaupungin alta.',
+      },
+    },
+  ],
+  /*
    * YHDYSVALLAT (USA) — P-Amerikan ensimmäinen maalehti.
    *
    * Aihejako on Fablen hyväksymä (docs/mantereet-tyoaineisto/
