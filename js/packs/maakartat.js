@@ -11992,6 +11992,499 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Rautatieasema', lat: 43.64444444, lon: -79.38027778 },
     ],
   },
+  /*
+   * CHICAGO (7.9.2026). Rajaus on 2,98 × 2,72 kilometriä eli Loopin
+   * ympärys kolmelta suunnalta — perustelu ja itäreunan valinta ovat
+   * tools/piirra-kaupunkikartta.mjs:n chicago-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * villisipulin nimi ja du Sable, vuoden 1871 suurpalo ja vesitorni,
+   * Home Insurance Building ja teräsrunko, Union Stock Yards,
+   * Home Insurance Buildingin purku, Chicago-ikkuna ja Rookery,
+   * joen kääntö, vuoden 1893 maailmannäyttely, Fort Dearborn,
+   * Chicago Portage, vuoden 1833 sopimus ja American Indian Center;
+   * matkaopas kertoo lisäksi kohoradasta, Loopista, Millennium
+   * Parkista ja arkkitehtuuriristeilystä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Vesitorni,
+   * Rookery, Home Insurance Buildingin tontti ja Millennium Park
+   * mahtuisivat kaikki ruutuun (faktapohja-chicago.md, osio 4 antaa
+   * niille koordinaatit), mutta ne ovat lehden omien nostojen aihe.
+   * Samasta syystä kartalla ei ole Wrigley Buildingia, Marina Cityä,
+   * Buckinghamin suihkulähdettä eikä Chicago Board of Traden taloa:
+   * ne ovat lehden kuvien aiheita.
+   *
+   * MONADNOCK BUILDING PUDOTETTIIN 200 METRIN SÄÄNNÖN RAJALTA: se on
+   * 229 metriä Marquette Buildingista eli juuri ja juuri säännön
+   * oikealla puolella, mutta niin lähellä, että kaksi numeroympyrää
+   * asettuisi vierekkäin samaan kortteliin.
+   *
+   * MUUT LOOPIN TALOT JÄIVÄT POIS AIHEIDEN VUOKSI EIKÄ ETÄISYYDEN.
+   * Chicago Union Station, Auditorium Building ja Reliance Building
+   * mahtuvat kaikki ruutuun, mutta kartalla on tilaa kahdeksalle
+   * kohteelle, ja kolme pilvenpiirtäjää lisää olisi kaventanut
+   * aiheiden kirjoa — nyt mukana on kauppa, työväenliike, elokuva,
+   * kirjasto, taide, arkkitehtuuri, korkeus ja sosiaalityö.
+   */
+  chicago: {
+    polku: 'assets/kartat/chicago-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 41.8915, etela: 41.8670, lansi: -87.6530, ita: -87.6170 },
+    esittely: 'Kartta näyttää Loopin ja sen laidat: yläreunassa '
+      + 'Chicago-joen haarat kohtaavat, keskellä on kohoradan '
+      + 'silmukan rajaama ruutukaava, oikeassa reunassa alkaa Grant '
+      + 'Parkin nurmi järveä kohti ja vasemmassa alakulmassa ovat '
+      + 'Near West Siden korttelit joen länsipuolella. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Halifaxissa ja Wellingtonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 277 metriä
+       * (Chicago Theatre – kulttuurikeskus), toiseksi pienin 480
+       * metriä (Marquette Building – Willis Tower).
+       */
+      { nimi: 'Merchandise Mart', lat: 41.8884, lon: -87.6355 },
+      { nimi: 'Chicago Theatre', lat: 41.88527778, lon: -87.62777778 },
+      { nimi: 'Haymarketin aukio', lat: 41.88488889, lon: -87.64413889 },
+      { nimi: 'Kulttuurikeskus', lat: 41.88388889, lon: -87.625 },
+      { nimi: 'Marquette Building', lat: 41.8795, lon: -87.63006944 },
+      { nimi: 'Taideinstituutti', lat: 41.87944444, lon: -87.62388889 },
+      { nimi: 'Willis Tower', lat: 41.8789, lon: -87.6358 },
+      { nimi: 'Hull House', lat: 41.87166667, lon: -87.6475 },
+    ],
+  },
+  /*
+   * LOS ANGELES (7.9.2026). Rajaus on 2,26 × 2,50 kilometriä eli
+   * keskustan kortteliruudukko Bunker Hillistä Broadwaylle —
+   * perustelu on tools/piirra-kaupunkikartta.mjs:n losangeles-
+   * lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat vuoden
+   * 1781 pueblo ja Zanja Madre, Pico House, rautatie ja öljy,
+   * akvedukti, vuoden 1815 tulva ja vanha plaza, San Pedron satama,
+   * Hollywood, maanjäristykset, tongvat ja Yaanga, pyhät lähteet,
+   * tongvien hallinto ja Mission San Gabriel; matkaopas kertoo
+   * lisäksi Union Stationista, Olvera Streetistä, Ávila-adobesta,
+   * Bradbury Buildingista, Griffithin observatoriosta ja Venicestä,
+   * ja kuvatekstit Watts Towersista, Getty Centeristä ja Coliseumin
+   * olympialaisista. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * PLAZAN KORTTELI JÄTETTIIN KOKONAAN POIS. El Pueblo, Ávila-adobe,
+   * Pico House, plazan kirkko ja Olvera Street ovat kaikki noin
+   * kilometrin päässä koillisessa ja mahtuisivat väljempään ruutuun,
+   * mutta ne ovat lehden neljän noston ja matkaoppaan aihe — koko
+   * kortteli on siis lehden aluetta eikä kartan.
+   *
+   * BILTMORE-HOTELLI PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: se on 78
+   * metriä Pershing Squaresta, koska se on aukion naapuritalo kadun
+   * yli. Grand Central Market jäi pois toisesta syystä: sen
+   * en-Wikipedia-artikkelilla ei ole koordinaatteja lainkaan (haku
+   * 7.9.2026), eikä kartalle panna pistettä, jonka paikka on arvattu.
+   *
+   * ANGELS FLIGHT ON KÖYSIRATA, JA SEN PISTE ON ALAASEMALLA. Rata on
+   * 91 metriä pitkä, eli sen kaksi asemaa eivät mahtuisi kartalle
+   * kahtena merkkinä; en-Wikipedian koordinaatti osoittaa Hill
+   * Streetin puoleiseen alapäähän, ja piste on siinä.
+   */
+  losangeles: {
+    polku: 'assets/kartat/losangeles-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 34.0610, etela: 34.0385, lansi: -118.2595, ita: -118.2350 },
+    esittely: 'Kartta kattaa Los Angelesin keskustan ruutukaavan: '
+      + 'yläreunassa on hallintokortteleiden Civic Center, vasemmalla '
+      + 'kohoaa Bunker Hillin rinne, keskellä kulkevat Grand Avenue '
+      + 'ja Hill Street ja alaoikealla jatkuu Broadwayn vanha '
+      + 'liikekatu. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 291 metriä (pääkirjasto – Pershing Square),
+       * toiseksi pienin 430 metriä (Angels Flight – Pershing Square).
+       */
+      { nimi: 'Fort Mooren muistomuuri', lat: 34.05833333, lon: -118.24194444 },
+      { nimi: 'Walt Disney -konserttitalo', lat: 34.05527778, lon: -118.25 },
+      { nimi: 'Kaupungintalo', lat: 34.0536, lon: -118.243 },
+      { nimi: 'Angels Flight', lat: 34.05133889, lon: -118.25021111 },
+      { nimi: 'Pääkirjasto', lat: 34.05027778, lon: -118.255 },
+      { nimi: 'Japanilaisamerikkalainen museo', lat: 34.04963889, lon: -118.23858333 },
+      { nimi: 'Pershing Square', lat: 34.04825, lon: -118.25301 },
+      { nimi: 'Eastern Columbia', lat: 34.0428, lon: -118.2555 },
+    ],
+  },
+  /*
+   * MONTEVIDEO (7.9.2026). Rajaus on 3,7 × 1,9 kilometriä Ciudad
+   * Viejan niemenkärjestä kaupungintalolle — perustelu ja kuvasuhteen
+   * mittaus ovat tools/piirra-kaupunkikartta.mjs:n montevideo-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat niemen
+   * perustaminen, luonnonsatama, isoisän matkavuoden tekniikka ja
+   * rambla; historiasivu kertoo Cabildosta, katedraalista, Ciudad
+   * Viejan muureista, brittimiehityksestä ja Teatro Solísista;
+   * musiikkisivu candombesta, Barrio Surista, Palacio Salvosta ja
+   * karnevaalista, ja matkaopas Estadio Centenariosta. Yksikään
+   * kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KUUSI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Cabildo,
+   * katedraali, Teatro Solís, Palacio Salvo, Mercado del Puerto ja
+   * Puerta de la Ciudadela ovat kaikki ruudussa (faktapohja-
+   * montevideo.md, osio 4 antaa niille koordinaatit), mutta ne ovat
+   * lehden omien juttujen aihe. Samasta syystä kartalla ei ole
+   * satamaa eikä Estadio Centenarioa — jälkimmäinen on sitä paitsi
+   * 4,7 kilometriä idässä.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Palacio Taranco
+   * on 188 metriä MAPI-museosta, Hospital Maciel 176 metriä ja Correo
+   * Uruguayo 162 metriä pörssistä. Ne mainitaan matkaoppaassa.
+   */
+  montevideo: {
+    polku: 'assets/kartat/montevideo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -34.8955, etela: -34.9130, lansi: -56.2200, ita: -56.1800 },
+    esittely: 'Kartan vasemmassa reunassa on Ciudad Viejan niemi, jolla '
+      + 'vesi kaartaa kolmelta sivulta: pohjoisessa sataman laiturit, '
+      + 'etelässä Río de la Plata. Niemeltä lähtee itään yksi '
+      + 'yhtenäinen ruutukaava, ja sen keskellä kulkee suorana 18 de '
+      + 'Julio -katu kaupungintalolle asti. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Halifaxissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 238 metriä
+       * (Torres Garcían museo – Estévez-palatsi), toiseksi pienin 329
+       * metriä (Estévez-palatsi – Sodren auditorio).
+       */
+      { nimi: 'Keskusasema', lat: -34.90027778, lon: -56.19444444 },
+      { nimi: 'Sodren auditorio', lat: -34.9042, lon: -56.1987 },
+      { nimi: 'Kaupungintalo', lat: -34.90555556, lon: -56.18416667 },
+      { nimi: 'Lapidon talo', lat: -34.90638889, lon: -56.19583333 },
+      { nimi: 'Torres Garcían museo', lat: -34.9065, lon: -56.20138889 },
+      { nimi: 'Estévez-palatsi', lat: -34.90711111, lon: -56.19938889 },
+      { nimi: 'Montevideon pörssi', lat: -34.90714722, lon: -56.20612778 },
+      { nimi: 'Alkuperäiskansojen taiteen museo', lat: -34.907525, lon: -56.21027778 },
+    ],
+  },
+  /*
+   * VALPARAÍSO (7.9.2026). Rajaus on 2,8 × 1,7 kilometriä: satama ja
+   * el plan yläreunassa, kukkuloiden mutkittelevat kadut alareunassa
+   * — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * valparaiso-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Kap
+   * Hornin pysähdyspaikka, ascensorit, muraalit ja Unesco-status sekä
+   * Panaman kanava; historiasivu kertoo Alimapusta ja Iglesia de la
+   * Matrizista, brittiyhteisöstä ja British Archista, tekniikan
+   * ensimmäisistä ja vuoden 1906 järistyksestä; kirjallisuussivu
+   * El Mercuriosta, La Sebastianasta, Paseo Gervasonista ja Santiago
+   * Severínin kirjastosta, ja matkaopas kongressitalosta ja
+   * sähköbusseista. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KARTALLA EI OLE YHTÄÄN ASCENSORIA, vaikka ruudussa on neljä
+   * (Concepción, Reina Victoria, El Peral, Cordillera). Hissit ovat
+   * lehden oman noston K2 aihe, ja sama koskee Polancon hissiä ruudun
+   * ulkopuolella.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: pörssitalo on
+   * 116 metriä Baburizzan palatsista, oikeustalo 151 metriä Plaza
+   * Sotomayorista ja Cementerio N:o 1 vain 77 metriä
+   * toisinajattelijoiden hautausmaasta.
+   *
+   * NELJÄ KOHDETTA KAHDEKSASTA ON USKONNON HISTORIAA, ja se on
+   * tietoinen valinta eikä sattuma: satamakaupungissa, jossa laki
+   * salli vuoteen 1865 vain katolisen uskon, anglikaanien ikkunaton
+   * kirkko, toisinajattelijoiden hautausmaa, ranskalaisen
+   * sääntökunnan koulukirkko ja vasta 1950 valmistunut katolinen
+   * katedraali kertovat yhdessä yhden tarinan.
+   */
+  valparaiso: {
+    polku: 'assets/kartat/valparaiso-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -33.0355, etela: -33.0505, lansi: -71.6320, ita: -71.6020 },
+    esittely: 'Kartan yläreunaa täyttää lahti, jonka ympäri kaupunki '
+      + 'kaartuu. Rannan ja kukkuloiden väliin jää kapea tasanko, el '
+      + 'plan, jossa kadut kulkevat suorina riveinä; heti sen '
+      + 'eteläpuolella katuverkko alkaa mutkitella rinteitä ylös. '
+      + 'Vasemmassa yläkulmassa on satama ja oikeassa reunassa '
+      + 'El Almendralin kaupunginosa. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 215 metriä (Plaza Sotomayor – Baburizzan
+       * palatsi), toiseksi pienin 266 metriä (Baburizzan palatsi –
+       * anglikaaninen katedraali).
+       */
+      { nimi: 'Plaza Sotomayor', lat: -33.03846667, lon: -71.62876667 },
+      { nimi: 'Baburizzan palatsi', lat: -33.0404, lon: -71.6289 },
+      { nimi: 'Anglikaaninen katedraali', lat: -33.04234, lon: -71.62723 },
+      { nimi: 'Valparaíson yliopisto', lat: -33.04388889, lon: -71.6175 },
+      { nimi: 'Katolinen yliopisto', lat: -33.04472222, lon: -71.60555556 },
+      { nimi: 'Toisinajattelijoiden hautausmaa', lat: -33.04526111, lon: -71.62503889 },
+      { nimi: 'Valparaíson katedraali', lat: -33.0462, lon: -71.619 },
+      { nimi: 'Pyhien sydänten kirkko', lat: -33.0484, lon: -71.6155 },
+    ],
+  },
+  /*
+   * NEW ORLEANS (7.9.2026). Rajaus on 2,2 × 3,2 kilometriä Tremésta
+   * Lafayette Squarelle — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * neworleans-lohkossa: Ranskan Kortteli yksin olisi liian kapea
+   * ruutu, ja liikekeskustan reuna tuo mukaan sen puolen kaupunkia,
+   * jota lehti ei näytä.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat joen
+   * puolikuun mutka, Louisianan kauppa, merenpinnan alapuolinen
+   * kaupunki, Katrina, espanjalainen tiili ja Pontalba-talot,
+   * höyrylaiva, vapaiden värillisten yhteisö, kuvernööri Pinchback,
+   * Congo Square, jazzin synty, Black Masking Indianit ja karnevaalin
+   * värit; matkaopas kertoo raitiovaunusta, beignet-munkeista Ranskan
+   * Korttelin torin laidalla, Tremésta ja Garden Districtistä sekä
+   * Superdomesta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS: Jackson
+   * Square, St. Louis -katedraali, Cabildo, Congo Square ja
+   * Preservation Hall mahtuisivat kaikki ruutuun
+   * (faktapohja-neworleans.md, osio 4 antaa niille koordinaatit),
+   * mutta ne ovat lehden omien nostojen aihe. Samasta syystä kartalla
+   * ei ole Ranskan Korttelin toria: Café du Monde sen laidalla on
+   * matkaoppaan ruokajakson aihe. Superdome, Garden District ja
+   * Lower Ninth Ward ovat sekä lehden aihe että ruudun ulkopuolella.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. Beauregard-Keyesin talo
+   * on 61 metriä Gallier Housesta eli 200 metrin säännön alle.
+   * Lafayette Square jätettiin pois aihesyistä eikä etäisyyden takia
+   * (244 metriä): se on Gallier Hallin oma aukio ja siten saman
+   * kohteen tausta. Vanha ursuliiniluostari jäi pois kolmannesta
+   * syystä: sen en-Wikipedian artikkelilla ei ole coordinates-arvoa
+   * (haku 7.9.2026), eikä koordinaattia arvata.
+   */
+  neworleans: {
+    polku: 'assets/kartat/neworleans-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 29.9685, etela: 29.9400, lansi: -90.0775, ita: -90.0545 },
+    esittely: 'Ruutu on pysty, ja Mississippi kaartaa sen oikeassa '
+      + 'reunassa penkereen takana. Yläosassa ovat Ranskan Korttelin '
+      + 'ja Tremén tiheät korttelit, keskeltä kulkee vinosti alas '
+      + 'oikealle leveä Canal Street, ja alaosassa liikekeskustan '
+      + 'korttelit kasvavat suuremmiksi. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Halifaxissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 348 metriä
+       * (vanha rahapaja – Gallier House), toiseksi pienin 460 metriä
+       * (Saenger-teatteri – puuvillapörssi).
+       */
+      { nimi: 'St. Augustinen kirkko', lat: 29.9652, lon: -90.0662 },
+      { nimi: 'Vanha rahapaja', lat: 29.96138889, lon: -90.05777778 },
+      { nimi: 'Gallier House', lat: 29.96132222, lon: -90.06139167 },
+      { nimi: 'Hermann-Griman talo', lat: 29.957125, lon: -90.06773056 },
+      { nimi: 'Saenger-teatteri', lat: 29.95579722, lon: -90.07284444 },
+      { nimi: 'Puuvillapörssi', lat: 29.95188611, lon: -90.07130278 },
+      { nimi: 'Tullitalo', lat: 29.95177222, lon: -90.06623056 },
+      { nimi: 'Gallier Hall', lat: 29.94632222, lon: -90.07139167 },
+    ],
+  },
+  /*
+   * BOGOTÁ (7.9.2026). Rajaus on 2,2 × 3,3 kilometriä
+   * Keskushautausmaalta Casa de Nariñolle — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n bogota-lohkossa: kaupungin
+   * vanha ydin on kapea nauha Itäkukkuloiden juurella, ja ruutu
+   * seuraa sitä pohjois–eteläsuunnassa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat kaupungin
+   * kolme nimeä, korkeus, ciclovía, eristys, Chorro de Quevedo, Plaza
+   * de Bolívar patsaineen ja katedraaleineen, Kansallismuseo, La
+   * Lechuga, muiscat, kultalautta, Guatavita ja nykyiset
+   * muisca-neuvostot; matkaopas kertoo TransMileniosta, ajiacosta ja
+   * Zipaquirán suolakatedraalista. Yksikään kartan kohteista ei ole
+   * niiden aihe.
+   *
+   * KOLME KOHDETTA JÄTETTIIN POIS LEHDEN TAKIA. Museo del Oro,
+   * Kansallismuseo ja Monserrate mahtuisivat ruutuun tai sen
+   * laitaan (faktapohja-bogota.md, osio 4), mutta ne ovat lehden
+   * omien nostojen ja kansikuvien aihe. Sama koskee Torre Colpatriaa:
+   * se on lehden avauskuvan aihe, ja siksi se ei ole kartan kohde,
+   * vaikka torni seisoo keskellä ruudun yläosaa.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN ETÄISYYDEN TAKIA: Luis Ángel Arangon
+   * kirjasto on 81 metriä Museo Boterosta, San Bartolomén koulu 214
+   * metriä oikeuspalatsista ja planetaario 225 metriä nykytaiteen
+   * museosta. Kaksi jälkimmäistä ylittävät 200 metrin rajan niukasti,
+   * mutta niin niukasti että numeroympyrät menisivät päällekkäin
+   * tämän kokoisessa ruudussa.
+   *
+   * SANTAMARÍAN AREENA (344 metriä nykytaiteen museosta) jäi pois
+   * lähdesyystä: sen en-Wikipedian artikkeli on tynkä, jossa on
+   * katsomon koko ja kaksi päätöstä härkätaisteluista, eikä siitä
+   * kirjoita juttua sortumatta arvailuun.
+   */
+  bogota: {
+    polku: 'assets/kartat/bogota-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 4.6195, etela: 4.5895, lansi: -74.0815, ita: -74.0620 },
+    esittely: 'Kartta seuraa vanhan Bogotán nauhaa Itäkukkuloiden '
+      + 'juurella: oikeassa reunassa rinteen vihreä alkaa ja '
+      + 'katuverkko loppuu kuin viivaimella vedettynä, keskellä '
+      + 'kulkevat pitkät pohjois–eteläsuuntaiset valtakadut ja '
+      + 'yläreunassa ne yhtyvät moottoritieksi. Alaosan tiheä '
+      + 'korttelikudos on La Candelarian siirtomaakaavaa. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 363 metriä (oikeuspalatsi – Museo Botero),
+       * toiseksi pienin 462 metriä (Hotel Tequendama – nykytaiteen
+       * museo).
+       */
+      { nimi: 'Keskushautausmaa', lat: 4.61638889, lon: -74.07527778 },
+      { nimi: 'Hotel Tequendama', lat: 4.61277778, lon: -74.07277778 },
+      { nimi: 'Nykytaiteen museo', lat: 4.61027778, lon: -74.06944444 },
+      { nimi: 'Andesin yliopisto', lat: 4.601613, lon: -74.065173 },
+      { nimi: 'Oikeuspalatsi', lat: 4.5989, lon: -74.0756 },
+      { nimi: 'Museo Botero', lat: 4.59665, lon: -74.07323 },
+      { nimi: 'Externadon yliopisto', lat: 4.595803, lon: -74.06836 },
+      { nimi: 'Casa de Nariño', lat: 4.59555556, lon: -74.0775 },
+    ],
+  },
+  /*
+   * PERTH (7.9.2026). Rajaus on 1,8 × 1,7 kilometriä eli pelin
+   * tiiviimpiä — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * perth-lohkossa: kaupungin vanha ydin on kapea nauha Wellington
+   * Streetin ja Swan-joen välissä, ja kaikki kahdeksan kohdetta
+   * mahtuvat siihen.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Goonininupin lähde, nimet Perth ja Boorloo, vankeja pyytänyt
+   * siirtokunta ja kullan tuoma rahapaja; historiasivu kertoo
+   * kaupungintalosta, kuvernöörintalosta, kuljetusten päättymisestä
+   * ja vankitaustan häpeästä, luontosivu Kings Parkista,
+   * Derbarl Yerriganista, kuudesta vuodenajasta ja joen ruoppauksesta,
+   * ja whadjukit-sivu Yaganista, pään palusta ja Yagan Squaresta.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS.
+   * Kaupungintalo, kuvernöörintalo, rahapaja, Kings Park ja
+   * Heirisson Island ovat kaikki faktapohja-perth.md:n osion 4
+   * kymmenen kohteen listalla ja mahtuisivat ruutuun tai sen viereen,
+   * mutta ne ovat lehden omien nostojen aihe. Samasta syystä kartalla
+   * ei ole Yagan Squarea eikä Elizabeth Quayta: edellinen on
+   * whadjukit-sivun Y4-noston aihe, jälkimmäinen lehden kansikuva ja
+   * matkaoppaan lauttalaiturin osoite.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. Länsi-Australian
+   * taidegalleria on 174 metriä museosta ja Council House 114 metriä
+   * St George'n katedraalista eli 200 metrin säännön alle, ja
+   * Perthin kasarmin holvi (Barracks Arch) on lehden H4-noston
+   * kuva-aihe. Kaikki kolme mainitaan matkaoppaassa.
+   *
+   * SWAN BELLS ON KARTAN AINOA RANTAPISTE. Kellotorni seisoo Barrack
+   * Squaren täyttömaalla aivan Perth Waterin reunassa, ja
+   * tools/tarkista-karttapisteet.mjs voi raportoida sen ympäriltä
+   * vesiosuutta — itse piste on maalla laiturin juurella samalla
+   * perusteella kuin Marseillen satama-allas.
+   */
+  perth: {
+    polku: 'assets/kartat/perth-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -31.9470, etela: -31.9620, lansi: 115.8510, ita: 115.8700 },
+    esittely: 'Kartta näyttää Perthin vanhan ytimen sellaisena kuin se '
+      + 'mahtuu kahden viivan väliin: yläreunassa kulkee Wellington '
+      + 'Street ratapihoineen ja alareunassa Swan-joki, jonka '
+      + 'pohjoisrantaa myöten kaupunki levisi. Keskellä kulkevat '
+      + 'itä–länsi-suuntaiset Hay Street ja St Georges Terrace, joiden '
+      + 'varrella ovat kaupungin vanhimmat julkiset talot. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Christchurchissa. Koordinaatit
+       * en-Wikipedian coordinates-rajapinnasta 7.9.2026. Pienin väli
+       * on 219 metriä (St George'n katedraali – vanha oikeustalo),
+       * toiseksi pienin 224 metriä (His Majesty's -teatteri –
+       * Wesleyn kirkko).
+       */
+      { nimi: 'Länsi-Australian museo', lat: -31.949629, lon: 115.862402 },
+      { nimi: "His Majesty's -teatteri", lat: -31.95308, lon: 115.85444 },
+      { nimi: 'Wesleyn kirkko', lat: -31.9533, lon: 115.8568 },
+      { nimi: 'London Court', lat: -31.954815, lon: 115.858945 },
+      { nimi: "St Mary's -katedraali", lat: -31.9556, lon: 115.8665 },
+      { nimi: "St George'n katedraali", lat: -31.955753, lon: 115.861292 },
+      { nimi: 'Vanha oikeustalo', lat: -31.9576, lon: 115.8605 },
+      { nimi: 'Swan Bells', lat: -31.958903, lon: 115.858243 },
+    ],
+  },
+  /*
+   * ADELAIDE (7.9.2026). Rajaus on 2,0 × 2,2 kilometriä ja se on
+   * tarkoituksella pystysuuntainen: kohteet ovat nauhassa, joka
+   * alkaa North Adelaiden katedraalilta ja päättyy kaupungintalolle
+   * King William Streetin varrella. Perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n adelaide-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * vankiton siirtokunta, päänsä pitänyt piirtäjä, autoilta suljettu
+   * Rundle Mall ja kaurnat; historiasivu kertoo Adelaide Ovalista,
+   * julistuspuusta, vankilasta ja lamasta, luontosivu
+   * puistorenkaasta, Torrensista, kasvitieteellisestä puutarhasta ja
+   * Victoria Squaresta, ja saksalaisperintösivu Hahndorfista sekä
+   * Barossasta. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Adelaide
+   * Oval, Adelaide Gaol ja kasvitieteellinen puutarha ovat kaikki
+   * faktapohja-adelaide.md:n osion 4 listalla ja mahtuisivat ruutuun
+   * tai sen viereen, mutta ne ovat lehden omien nostojen aihe.
+   * Samasta syystä kartalla ei ole Rundle Mallia, Victoria Squarea
+   * eikä Keskustoria: kaksi ensimmäistä ovat nostoja ja kolmas
+   * matkaoppaan arjen ilmiö.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: parlamenttitalo
+   * on 194 metriä kuvernöörintalosta ja 196 metriä rautatieasemasta,
+   * ja Etelä-Australian taidegalleria on 83 metriä museosta.
+   * Molemmat mainitaan matkaoppaassa.
+   *
+   * PÄÄPOSTITALON KOORDINAATTI ON SAMA KUIN KAUPUNGINTALON. Kumpikin
+   * artikkeli antaa en-Wikipedian coordinates-rajapinnassa pisteen
+   * -34,9261 / 138,60018 (haettu 7.9.2026), vaikka talot ovat eri
+   * kortteleissa. Karttaan otettiin vain kaupungintalo — kahta
+   * kohdetta ei voi merkitä samaan pisteeseen.
+   */
+  adelaide: {
+    polku: 'assets/kartat/adelaide-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -34.9110, etela: -34.9310, lansi: 138.5930, ita: 138.6145 },
+    esittely: 'Kartta näyttää Adelaiden ruutukaavan pohjoisosan ja sen '
+      + 'yli North Adelaiden puolelle: keskellä kaartaa Torrens-joki, '
+      + 'sen molemmin puolin levittäytyy puistorengas, ja alaosassa '
+      + 'alkavat suorat kadut. Pystysuora keskilinja on King William '
+      + 'Street, ja poikittain kulkee North Terrace, jonka varrella '
+      + 'ovat museo, kuvernöörintalo ja rautatieasema. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026;
+       * Tandanyan piste on artikkelin raakatekstin coord-mallineesta,
+       * koska rajapinta ei palauta sille koordinaattia. Pienin väli
+       * on 223 metriä (festivaalikeskus – rautatieasema), toiseksi
+       * pienin 244 metriä (festivaalikeskus – kuvernöörintalo).
+       */
+      { nimi: 'St Peterin katedraali', lat: -34.91277778, lon: 138.59805556 },
+      { nimi: 'Eläintarha', lat: -34.91416667, lon: 138.60583333 },
+      { nimi: 'Festivaalikeskus', lat: -34.91944444, lon: 138.59777778 },
+      { nimi: 'Kuvernöörintalo', lat: -34.920126, lon: 138.600321 },
+      { nimi: 'Etelä-Australian museo', lat: -34.920783, lon: 138.603017 },
+      { nimi: 'Rautatieasema', lat: -34.9211, lon: 138.5964 },
+      { nimi: 'Tandanya', lat: -34.9241, lon: 138.6105 },
+      { nimi: 'Kaupungintalo', lat: -34.9261, lon: 138.60018333 },
+    ],
+  },
 };
 
 /*

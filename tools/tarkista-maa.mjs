@@ -43,8 +43,21 @@ for (const a of aiheet) {
     if (!a[k]) moiti(`${a.id}: kenttä ${k} puuttuu`);
   }
   for (const no of a.nostot || []) {
-    for (const k of ['otsikko', 'tiedosto', 'teksti', 'selite', 'lahde']) {
+    for (const k of ['otsikko', 'teksti', 'selite', 'lahde']) {
       if (!no[k]) moiti(`${a.id} / ${no.otsikko || '?'}: kenttä ${k} puuttuu`);
+    }
+    /*
+     * KUVA TULEE KOLMESTA KENTÄSTÄ, EI YHDESTÄ. `tiedosto` on Commonsin
+     * nimi, `ampari` ämpärin painotuote ja `osoite` valmis osoite (pelin
+     * oma havainnekuva R2:ssa). Kaikki kolme osaa js/ui.js
+     * varustaNostonKuva ja js/maalehti.js piirtää kuvan kaikista —
+     * mutta tämä tarkistin vaati pelkkää `tiedosto`-kenttää, joten
+     * jokainen havainnekuvanosto (historian hetket, kuvaputken
+     * 7.9.2026 erä) näytti kahdelta virheeltä, vaikka data on oikein.
+     */
+    if (!no.tiedosto && !no.osoite && !no.ampari) {
+      moiti(`${a.id} / ${no.otsikko || '?'}: kuva puuttuu `
+        + '(tiedosto, osoite tai ampari)');
     }
     // aika = tasokorotuksen aikamerkintä (käytössä sadoissa nostoissa).
     // wiki = "Lue lisää aiheesta" -nappi noston lopussa (ui.js tukee sitä
@@ -53,7 +66,8 @@ for (const a of aiheet) {
     // ne puuttuivat listalta, joten Egyptin musiikkisivu näytti kahdelta
     // virheeltä, vaikka kentät ovat oikein (12.8.2026).
     const tuntematon = Object.keys(no).filter(
-      (k) => !['otsikko', 'aika', 'tiedosto', 'teksti', 'selite', 'lahde',
+      (k) => !['otsikko', 'aika', 'tiedosto', 'osoite', 'ampari', 'leveys',
+        'teksti', 'selite', 'lahde',
         'kuvat', 'aani', 'aaniLahde', 'linkki', 'galleria', 'wiki',
         'musiikki', 'musiikkiNimi', 'musiikkiNayte', 'musiikkiNayteNimi',
         'esikuuntelu'].includes(k));
@@ -64,7 +78,17 @@ for (const a of aiheet) {
     // CC0 kirjoitetaan paketeissa ilman välilyöntiä ("… (CC0)"), joten
     // pelkkä /\(CC / hylkäsi kelvollisen lisenssin — ks. CYP 11.8.2026.
     // "(PD)" on docs/tutki-aiheet.md:n mukainen public domain -merkintä.
-    if (no.lahde && !/\((CC |CC0|PD\)|public domain)/i.test(no.lahde)) {
+    /*
+     * PELIN OMALLA KUVALLA EI OLE LISENSSIÄ VAADITTAVAKSI. Lisenssiehto
+     * koskee Commonsin CC-kuvia; Matkakirjan oma havainnekuva ja
+     * kuvaputken tekoälykuvitus ovat pelin omia, ja niiden lähderivi
+     * kertoo tuotantotavan ja faktaviitteet. Vaatimus "(CC …)" hylkäsi
+     * ne kaikki — myös GBR:n historian hetket, jotka ovat olleet
+     * pelissä 3.9.2026 lähtien.
+     */
+    const omaKuva = /^(Matkakirjan havainnekuva|Tekoälyllä tuotettu havainnekuva)/;
+    if (no.lahde && !omaKuva.test(no.lahde)
+      && !/\((CC |CC0|PD\)|public domain)/i.test(no.lahde)) {
       moiti(`${a.id} / ${no.otsikko}: lahde ilman lisenssiä: ${no.lahde}`);
     }
   }

@@ -31694,10 +31694,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Tanssi, jossa kynttilä on kädessä',
-          // Kuvaton (Opus 6.9.2026): kaikki >= 1200 px:n cumbia-kuvat ovat
-          // tanssijoiden lähikuvia, joissa kasvot tunnistuvat (myös
-          // lasten) — sama hylkäysperuste kuin MEX:n mariachi-nostossa.
-          // Soitinkuva haetaan myöhemmin.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/col-cumbia-soittimet.jpg',
           teksti: 'Cumbia on rytmi ja kansantanssi, jossa yhdistyvät '
               + 'alkuperäiskansojen, eurooppalaiset ja afrikkalaiset ainekset. '
               + 'Sen sanotaan syntyneen afrokolumbialaisen yhteisön '
@@ -31707,8 +31704,11 @@ export const MAA_KATEGORIAT = {
               + '"chu-chucu-chu"-rytmin tekee guacharaca-raaputin. '
               + 'Kolumbialainen cumbia on kaikkien muunnelmien alkulähde, ja '
               + 'siihen kuuluu tapa tanssia kynttilät käsissä.',
-          selite: 'Cumbian kokoonpanossa on kolme rumpua ja kolme huilua, ja '
-            + 'guacharaca-raaputin pitää tanssin tunnusomaisen rytmin.',
+          selite: 'Cumbian kolme rumpua ja gaita-huilut Karibian rannikon '
+            + 'puutalon kuistilla.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Colombian '
+            + 'kulttuuriministeriö — Plan Especial de Salvaguardia: Cumbia; '
+            + 'Carnegie Hall — Musical Explorers',
           wiki: 'Cumbia',
         },
         {
@@ -31751,10 +31751,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Ksylofoni, joka tuli Afrikan mukana',
           aika: '2010',
-          // Kuvaton (Opus 6.9.2026): ainoa >= 1200 px:n marimba de chonta
-          // -kuva (GON 2993.jpg) on käytetty jo vallenato-nostossa, ja
-          // muut osumat ovat esiintyjien lähikuvia tunnistettavin
-          // kasvoin. Soitinkuva haetaan myöhemmin.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/col-marimba-de-chonta.jpg',
           teksti: 'Tyynenmeren rannikon currulao on Kolumbian '
               + 'afrikkalaisvaikutteisimpia tyylejä. Peruskokoonpanossa on '
               + 'neljä soittajaa: cununo-rumpu, jota lyödään kämmenellä ja '
@@ -31764,9 +31761,11 @@ export const MAA_KATEGORIAT = {
               + 'rannikolle afrikkalaisen diasporan mukana ja muistuttaa '
               + 'soittotavaltaan balafonia; yhteisöille se on sitkeyden '
               + 'vertauskuva. Unesco otti lajin luetteloonsa 2010.',
-          selite: 'Marimba de chonta tehdään chontaduro-palmun kovasta '
-            + 'puusta, ja sitä soitetaan samaan tapaan kuin afrikkalaista '
-            + 'balafonia.',
+          selite: 'Chonta-palmusta ja guadua-bambusta rakennettu marimba '
+            + 'Kolumbian Tyynenmeren rannikon kuistilla.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Unesco ICH — '
+            + 'Marimba music, traditional chants and dances from the Colombia '
+            + 'South Pacific region; Banco de la República -kokoelmat',
           wiki: 'Marimba',
         },
       ],
@@ -32017,9 +32016,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kahviviljelmät, jotka pakenivat Haitista',
           aika: '1804–2000',
-          // Kuvaton (Opus 6.9.2026): Commonsista ei löytynyt yhtään
-          // >= 1200 px:n kuvaa Sierra Maestran cafetal-raunioista tai
-          // La Isabelican museosta. Kuva haetaan myöhemmin.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/cub-sierra-maestra-cafetalit.jpg',
           teksti: 'Ranskalaiset olivat perustaneet kahviviljelmiä '
               + 'Hispaniolalle 1700-luvulla, mutta Haitin itsenäistyminen '
               + '1804 ajoi heidät Kuubaan. Sierra Maestran juurelle nousi '
@@ -32030,9 +32027,10 @@ export const MAA_KATEGORIAT = {
               + 'secadero, kahvipapujen kuivauskenttä. Viljelmät hävisivät '
               + '1900-luvun alussa, kun ne eivät pärjänneet Brasilialle, '
               + 'Kolumbialle ja Costa Ricalle.',
-          selite: 'Sierra Maestran cafetalien terassoidut kuivauskentät ja '
-            + 'baskityyliset asuintalot ovat olleet Unescon '
-            + 'maailmanperintökohteena vuodesta 2000.',
+          selite: 'La Isabelican kiviholvien edessä levittäytyvät vanhan '
+            + 'cafetalin terassoidut kahvinkuivauskentät.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Unesco World '
+            + 'Heritage — kohde 1008',
         },
         {
           otsikko: 'Lepakot, jotka päätyivät pullon kylkeen',
@@ -35291,6 +35289,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Basso, joka matkii lyyraa',
           aika: '1940–1980-luvut',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-ken-musiikki-1.jpg',
           teksti: 'Nairobin radiosta tuli 1940-luvulla tasainen virta soukousta, '
               + 'eteläafrikkalaista kwelaa, kongolaista sormikitaraa ja kuubalaista '
               + 'tanssimusiikkia. Kitaristit alkoivat matkia nyatitin synkopoituja '
@@ -35300,8 +35299,10 @@ export const MAA_KATEGORIAT = {
               + '1970- ja 1980-luvun. Misiani joutui useasti vankilaan sanoituksista, '
               + 'joita pidettiin poliittisena arvosteluna. Hänen kuoltuaan 2006 '
               + 'yhtyeen johdon otti hänen vaimonsa.',
-          selite: 'Misiani syntyi Tansanian puolella Shiratin kylässä, muutti '
-            + 'nuorena Keniaan ja lauloi sekä dholuoksi että swahiliksi.',
+          selite: '1970-luvun benga-yhtye soittaa lavalla sähkökitara ja '
+            + 'bassokitara etualalla.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Kenya Heroes '
+            + 'Council — Mashujaa 2025',
         },
         {
           otsikko: 'Rakkauslaulu, jonka tekijästä yhä kiistellään',
@@ -35323,6 +35324,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Tervehdys, joka päätyi piirrettyyn',
           aika: '1982',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-ken-musiikki-3.jpg',
           teksti: 'Mombasalainen Them Mushrooms levytti 1982 laulun Jambo Bwana, jonka '
               + 'sanat ovat käytännössä swahilin alkeiskurssi: jambo, habari gani, '
               + 'nzuri sana, hakuna matata. Levyä myytiin viidessä vuodessa yli 200 000 '
@@ -35331,8 +35333,10 @@ export const MAA_KATEGORIAT = {
               + 'kaksi swahilinkielistä riviä. Kertosäkeen huoleton hakuna matata '
               + 'siirtyi sieltä Disneyn Leijonakuninkaaseen — ja kiertää nyt maailmaa '
               + 'ilman että moni tietää sen tulleen Mombasasta.',
-          selite: 'Safari Sound Bandin versio Jambo Jambo on yhä yksi Itä-Afrikan '
-            + 'hotelleissa soitetuimmista kappaleista.',
+          selite: 'Mombasalainen hotellibändi soittaa turisteille Intian '
+            + 'valtameren rantaterassilla.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Music In '
+            + 'Africa — Them Mushrooms',
         },
       ],
     },
@@ -36032,6 +36036,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Hovikokin keksintö vuodelta 1887',
           aika: '1887–',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-uga-ruoka-1.jpg',
           teksti: 'Bugandan hovin pääkokki Kawuuta tarjosi kabaka Mwangalle vuonna 1887 '
               + 'padan, jossa liha ja kastike oli kypsennetty kokonaan savustettuun '
               + 'banaaninlehteen käärittynä — lehdet otetaan ndiizi-lajikkeen nuorista '
@@ -36041,8 +36046,10 @@ export const MAA_KATEGORIAT = {
               + 'maapähkinästä ja sienistä. Nykyään sitä syövät kaikki, mutta juhlissa — '
               + 'kwanjula-kihlajaisissa ja häissä — se on yhä se ruoka, joka kertoo että '
               + 'vieras on tärkeä.',
-          selite: 'Kokin nimi tunnetaan yhä: Kawuuta oli hovin pääkokin virkanimi '
-            + 'eikä pelkkä henkilönnimi.',
+          selite: 'Avattu banaaninlehtikäärö paljastaa höyrytetyn '
+            + 'luwombo-lihapadan lautasella.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Ugandan '
+            + 'Geneven-edustusto — People, culture, food',
         },
         {
           otsikko: 'Kello, jota syödään',
@@ -36096,6 +36103,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Neljä mestaria jäljellä',
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-uga-musiikki-0.jpg',
           teksti: 'Bigwala on Busogan kuningaskunnan juhlamusiikkia, jota soitetaan '
               + 'kurpitsatorvilla. Yksi torvi aloittaa, ja neljä tai useampi vastaa '
               + 'vuorotellen niin, että sävelmä syntyy vasta soittajien välistä; sitten '
@@ -36104,8 +36112,11 @@ export const MAA_KATEGORIAT = {
               + 'kruunajaisissa ja hautajaisissa, nykyään harvemmin: taidon osaavia '
               + 'vanhoja mestareita on jäljellä neljä, ja siksi laji on Unescon '
               + 'kiireellistä suojelua vaativien luettelossa.',
-          selite: 'Hoketointi tarkoittaa sitä, että kukin soittaja soittaa vain '
-            + 'yhden sävelen vuorollaan — melodia on olemassa vain yhdessä.',
+          selite: 'Busogalainen soittajaryhmä puhaltaa erimittaisiin '
+            + 'bigwala-kurpitsatorviin ulkona.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Unesco ICH — '
+            + 'Bigwala gourd trumpet music and dance of the Busoga kingdom in '
+            + 'Uganda',
         },
         {
           otsikko: 'Harppu, jonka päällä voi istua',
@@ -36547,10 +36558,7 @@ export const MAA_KATEGORIAT = {
       nostot: [
         {
           otsikko: 'Sarja jokaiselle vuorokauden tunnille',
-          // Kuvaton (Opus 6.9.2026): Commonsin haut andalusialaisesta
-          // orkesterista palauttivat vain vanhoja kirjaskannauksia, eikä
-          // vapaata kuvaa marokkolaisesta al-Ala-yhtyeestä löytynyt.
-          // Kuvatilaus on kirjattu raporttiin.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-mar-musiikki-0.jpg',
           teksti: 'Andalusialainen taidemusiikki tuli Marokkoon '
               + 'al-Andalusista, ja täällä sitä kutsutaan nimellä al-Ala. '
               + 'Sen perusmuoto on nuba, sarja, joka rakentuu yhden '
@@ -36561,15 +36569,15 @@ export const MAA_KATEGORIAT = {
               + 'verhonvartija tuli kertomaan, että vuoro on hänen. '
               + 'Sanat ovat muwashshah- ja zajal-runoutta, ja lajin '
               + 'kaupungit ovat Tetouan, Fès, Meknès, Rabat ja Oujda.',
-          selite: 'Nuba on tunnin mittainen sarja, joka pysyy koko ajan '
-            + 'samassa sävelmoodissa ja kiihtyy loppua kohti.',
+          selite: 'Marokkolainen al-Ala-orkesteri esittää nubaa, viulut ja '
+            + 'oud etualalla.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: '
+            + 'BnF-katalogitietue ark:/12148/cb38502258p',
         },
         {
           otsikko: 'Runoutta, jota lauloivat käsityöläiset',
           aika: '1400-luvulta',
-          // Kuvaton (Opus 6.9.2026): Commonsissa on malhunista vain
-          // videotiedostoja, ei valokuvia. Kuvatilaus on kirjattu
-          // raporttiin.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-mar-musiikki-1.jpg',
           teksti: 'Malhun tarkoittaa melodista runoa. Se syntyi '
               + 'Tafilaltin keitailla 1400-luvulla puhtaana runoutena ja '
               + 'levisi sieltä kaupunkeihin, joissa siitä tuli '
@@ -36581,8 +36589,10 @@ export const MAA_KATEGORIAT = {
               + 'päättyy. Vanhoista tekijöistä tunnetuin on Abderrahman '
               + 'El Majdoub, joka kuoli 1568. Unesco otti malhunin '
               + 'aineettoman kulttuuriperinnön luetteloon joulukuussa 2023.',
-          selite: 'Malhun on laulettua runoutta, jonka kotipaikka ovat '
-            + 'Fèsin, Meknèsin ja Salén käsityöläiskorttelit.',
+          selite: 'Fèsin käsityöläisateljeessa mies laulaa malhun-runoutta '
+            + 'viulun, oudin ja kehärumpujen säestyksellä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Unesco ICH — '
+            + 'Malhun, a popular poetic and musical art',
         },
         {
           otsikko: 'Banjo, joka muutti maan musiikin',
@@ -36811,9 +36821,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kaksi kansanäänestystä ja sama päivämäärä',
           aika: '1962',
-          // Kuvaton (Opus 6.9.2026): Commonsista ei löytynyt vapaata,
-          // riittävän suurta kuvaa vuoden 1962 kansanäänestyksistä tai
-          // itsenäisyyspäivästä. Kuvatilaus on kirjattu raporttiin.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-dza-historia-3.jpg',
           teksti: 'Neuvottelut päättyivät maaliskuussa 1962 Évianin '
               + 'sopimuksiin. Ranskan äänestäjät hyväksyivät ne '
               + '8. huhtikuuta 1962: puolesta äänesti 91 prosenttia. '
@@ -36825,8 +36833,11 @@ export const MAA_KATEGORIAT = {
               + 'ollut virallisesti osa Ranskaa vuodesta 1848. '
               + 'Päivämäärän valinta oli tietoinen: kalenteri palautti '
               + 'sen, minkä kalenteri oli vienyt.',
-          selite: 'Algerian itsenäisyyspäivä on 5. heinäkuuta, sama '
-            + 'päivämäärä kuin Algerin valtauksella vuonna 1830.',
+          selite: 'Algerin väkijoukko juhlii itsenäisyyttä Algerian lipuin '
+            + '5. heinäkuuta 1962.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: ImagesDéfense '
+            + '(ECPAD) — Fête de l’indépendance de l’Algérie, le 5 juillet '
+            + '1962 à Alger',
         },
       ],
     },
@@ -36900,10 +36911,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Viinimaa, joka lakkasi olemasta',
           aika: '1930–1970-luku',
-          // Kuvaton (Opus 6.9.2026): Commonsin algerialaiset
-          // viininkorjuukuvat ovat alle 1 100 pikseliä leveitä ja ainoa
-          // muu osuma on pienikokoinen viinialuekartta. Kuvatilaus on
-          // kirjattu raporttiin.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-dza-ruoka-3.jpg',
           teksti: 'Viininviljely alkoi Algeriassa foinikialaisten ja '
               + 'roomalaisten aikana ja hiipui islamin tultua. Ranskan '
               + 'vallan alettua 1830 tarhat istutettiin uudelleen, ja kun '
@@ -36917,8 +36925,10 @@ export const MAA_KATEGORIAT = {
               + 'Etelä-Ranskan viineihin. Itsenäistymisen jälkeen '
               + 'markkina katosi, ja tarhat vaihdettiin viljaan ja '
               + 'syötäviin rypäleisiin.',
-          selite: 'Algerian viinitarhat olivat ylätasangoilla rannikon '
-            + 'takana, ja niiden sato meni lähes kokonaan vientiin.',
+          selite: 'Rypäletertut kypsyvät Algerian kuivan ylätasangon '
+            + 'viinitarhassa vuorijonon edessä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: ImagesDéfense '
+            + '(ECPAD) — Les vendanges dans l’Algérois',
         },
       ],
     },
@@ -37162,9 +37172,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Gepardi, joka ei juo',
           aika: '2008–2020',
-          // Kuvaton (Opus 6.9.2026): ainoa Commonsin kuva Algerian
-          // saharangepardista on riistakameran otos, jonka leveys on
-          // 895 pikseliä. Kuvatilaus on kirjattu raporttiin.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-dza-luonto-2.jpg',
           teksti: 'Saharangepardi on luokiteltu äärimmäisen '
               + 'uhanalaiseksi: vuonna 2008 aikuisia arvioitiin olevan '
               + 'alle kaksisataaviisikymmentä. Vuosien 2007–2012 '
@@ -37178,8 +37186,11 @@ export const MAA_KATEGORIAT = {
               + 'pidempiä matkoja ja elää harvemmassa kuin savannilla. '
               + 'Vettä se ei tarvitse juotavaksi, vaan saa nesteen '
               + 'saaliinsa verestä.',
-          selite: 'Saharangepardi on aavikon oloihin sopeutunut gepardin '
-            + 'alalaji, joka liikkuu enimmäkseen pimeän aikaan.',
+          selite: 'Riistakameramainen yökuva näyttää vaalean '
+            + 'saharangepardin Ahaggarin kivikossa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: Oryx '
+            + '(Cambridge University Press) — saharangepardia ja '
+            + 'Etelä-Algerian suurpetoja käsittelevät artikkelit',
         },
         {
           otsikko: 'Lammas, joka hyppää kaksi metriä',
@@ -37454,10 +37465,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Koulukunta, joka perustettiin omaa maalaustaidetta varten',
           aika: '1940-luvun loppu',
-          // Kuvaton (Opus 6.9.2026): Yahia Turkin teokset ovat yhä
-          // tekijänoikeuden alaisia, eikä Commonsissa ole vapaata kuvaa
-          // hänestä tai École de Tunisin ryhmästä. Kuvatilaus on
-          // kirjattu raporttiin.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-tun-kuvataide-1.jpg',
           teksti: 'Pierre Boucherle kokosi 1940-luvun lopulla joukon '
               + 'taiteilijoita École de Tunisiksi. Ajatus oli, että '
               + 'ryhmään otetaan ihmisiä uskonnosta, taustasta ja '
@@ -37471,15 +37479,15 @@ export const MAA_KATEGORIAT = {
               + 'Matissen ja Derainin ateljeissa. Itsenäistymisen jälkeen '
               + '1956 hänestä tuli koulukunnan puheenjohtaja, ja hän '
               + 'hoiti tehtävää kuolemaansa 1969 asti.',
-          selite: 'École de Tunis oli ensimmäinen ryhmä, joka asetti '
-            + 'tavoitteekseen nimenomaan tunisialaisen maalaustaiteen.',
+          selite: 'Monitaustainen taiteilijaryhmä työskentelee yhteisessä '
+            + 'ateljeessa 1950-luvun Tunisissa.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: UIB — '
+            + 'Collection d’art (PDF)',
         },
         {
           otsikko: 'Ryhmän ainoa nainen, koulun ensimmäinen johtaja',
           aika: '1949–1966',
-          // Kuvaton (Opus 6.9.2026): Safia Farhatista tai hänen
-          // kuvakudoksistaan ei ole Commonsissa yhtään kuvaa.
-          // Kuvatilaus on kirjattu raporttiin.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-tun-kuvataide-2.jpg',
           teksti: 'Safia Farhat syntyi Radèsissa 1924 ja kuoli samassa '
               + 'kaupungissa 2004. Hän liittyi École de Tunisin ryhmään '
               + 'vuonna 1949 sen ainoana naisena, ja hänet muistetaan '
@@ -37494,8 +37502,10 @@ export const MAA_KATEGORIAT = {
               + 'kokonaiselle naistaiteilijoiden sukupolvelle; vuodesta '
               + '1966 hän johti taideinstituuttia ja sen uutta '
               + 'arkkitehtuurikoulua.',
-          selite: 'Safia Farhat toi Tunisiaan modernin kuvakudoksen ja '
-            + 'johti maan taidekoulua ensimmäisenä naisena.',
+          selite: 'Kutojan kädet viimeistelevät pystykangaspuissa '
+            + 'paksulankaista modernia tunisialaista kuvakudosta.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: La Biennale '
+            + 'di Venezia 2022 — Safia Farhat',
         },
         {
           otsikko: 'Kylä, joka maalattiin kahdella värillä',
@@ -37567,9 +37577,7 @@ export const MAA_KATEGORIAT = {
         },
         {
           otsikko: 'Säkkipilli, jossa on kaksi lehmänsarvea',
-          // Kuvaton (Opus 6.9.2026): Commonsin mezoued-kuvissa on
-          // lähikuvassa tunnistettavia kasvoja tai ne ovat liian pimeitä.
-          // Kuvatilaus on kirjattu raporttiin.
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-tun-musiikki-2.jpg',
           teksti: 'Mezoued tarkoittaa säkkiä tai eväspussia, ja niin se '
               + 'on tehty: pussi on uuhen nahkaa, siitä lähtee '
               + 'kaksoisputki, jossa on yksöislehdykkä, ja putki päättyy '
@@ -37580,8 +37588,10 @@ export const MAA_KATEGORIAT = {
               + 'transsiin. Vaikka laji ei kuulunut hienoihin saleihin, '
               + 'siitä on tullut yksi Tunisian suosituimmista, ja se on '
               + 'kaupunkien laitamien oma ääni.',
-          selite: 'Mezouedin pussi tehdään uuhen nahasta ja soittimen '
-            + 'kaksoisputki päättyy kahteen lehmänsarveen.',
+          selite: 'Kulunut tunisialainen mezoued-säkkipilli lepää pöydällä, '
+            + 'kaksoisputki ja kaksi sarvikelloa näkyvissä.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The Met — '
+            + 'kokoelmatietue 500969',
         },
         {
           otsikko: 'Luuttu, joka löysi tiensä jazzlavoille',
@@ -37721,9 +37731,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Tyhjä kalebassi kuninkaan eteen',
           aika: '1600–1800-luku',
-          // Kuvaton (Opus 6.9.2026): Commonsista ei löydy Oyon
-          // valtakunnan ajalta kuvaa, joka kestäisi lähdetarkistuksen —
-          // hakusanat "Oyo Empire", "Alaafin", "Yoruba horseman".
+          osoite: 'https://media.matkakirja.app/maalehdet/20260907/maalehti-nga-historia-1.jpg',
           teksti: 'Oyon valtakunta oli 1600- ja 1700-luvulla Länsi-Afrikan '
               + 'mahtavimpia valtioita, ja sen voima oli ratsuväessä: '
               + 'hevoset ostettiin pohjoisesta, ja retkikunnat ulottuivat '
@@ -37734,9 +37742,11 @@ export const MAA_KATEGORIAT = {
               + 'tyhjän kalebassin tai papukaijanmunia. Se tarkoitti, ettei '
               + 'kansa, maailma eivätkä jumalat enää halunneet häntä — ja '
               + 'perinne odotti kuninkaan silloin väistyvän omin käsin.',
-          selite: 'Oyon hallitsijaa valvoi kaksi neuvostoa: päälliköiden Oyo '
-            + 'Mesi ja maankultin Ogboni, joka puhui tavallisen väen '
-            + 'puolesta.',
+          selite: 'Alaafin ottaa rauhallisesti vastaan Oyo Mesi -päälliköt '
+            + 'palatsipihalla ratsumiehen odottaessa sivulla.',
+          lahde: 'Tekoälyllä tuotettu havainnekuva. Viitteet: The Met — '
+            + 'kokoelmatietue 844650 ja The Art of Africa: A Resource for '
+            + 'Educators',
         },
         {
           otsikko: 'Opettajat, jotka lähetettiin kylästä kylään',

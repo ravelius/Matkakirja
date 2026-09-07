@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1663, teksti: '8 kohdekarttaa, 24 elainkuvaa, 16 maalehden kuvaa' },
   { v: 1662, teksti: 'Maalehdet SOM TWN UZB ZAF, 4 kohdekarttaa' },
   { v: 1661, teksti: 'Lehdet: saarivien lahteet, GRL kl, Aasian tekstit' },
   { v: 1660, teksti: '24 maalehtea, tunnusluvut, saarivit, 2 kohdekarttaa' },

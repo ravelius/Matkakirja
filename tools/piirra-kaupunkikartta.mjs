@@ -3503,6 +3503,205 @@ const KAUPUNGIT = {
      */
     rajat: { pohjoinen: -27.4625, etela: -27.4760, lansi: 153.0190, ita: 153.0335 },
   },
+  chicago: {
+    /*
+     * LOOP JA SEN LAIDAT KOLMELTA SUUNNALTA (7.9.2026). Ruutu on
+     * 2,98 × 2,72 kilometriä eli Wellingtonin kokoluokkaa, ja se
+     * riittää: Chicagon matkailijan keskusta on kohoradan silmukan
+     * ja joen väliin puristunut ruutukaava, ja kaikki kahdeksan
+     * kohdetta mahtuvat siihen Merchandise Martista (41,8884)
+     * Hull Houseen (41,8717).
+     *
+     * ITÄREUNA 87,617 PYSÄHTYY GRANT PARKIIN EIKÄ JATKU JÄRVELLE.
+     * Tämä on ruudun ainoa varsinainen valinta, ja se tehtiin
+     * kohteiden mukaan. Michiganjärven ranta on vielä 800 metriä
+     * idempänä, ja sinne asti ulottuva ruutu olisi 3,9 kilometriä
+     * leveä mutta 2,7 korkea; oikea kolmannes olisi pelkkää vettä ja
+     * puistoa, koska kartan kahdeksasta kohteesta itäisin on
+     * taideinstituutti (87,6239). Rannan omat kohteet — Millennium
+     * Park, Buckinghamin suihkulähde, Navy Pier — ovat kaikki
+     * kaupunkilehden nostojen tai kuvien aihe, joten järven
+     * ottaminen kuvaan olisi maksanut tarkkuutta ilman yhtään
+     * lisäkohdetta.
+     *
+     * LÄNSIREUNA 87,653 ON HULL HOUSEN MUKAAN. Near West Side
+     * jatkuu siitä vielä pitkälle länteen, mutta seuraava
+     * kohdekelpoinen paikka olisi Union Stock Yardin portti
+     * seitsemän kilometrin päässä etelälounaassa — se on lehden
+     * noston K4 aihe eikä kartan kohde.
+     *
+     * ETELÄREUNA 41,867 JÄTTÄÄ HULL HOUSEN VIIDENNEKSEN VERRAN
+     * KUVAN ALAREUNAN YLÄPUOLELLE, jotta sen numeroympyrä ei osu
+     * lehden piirtämään mittakaavajanaan vasemmassa alakulmassa.
+     * Sama tarkistettiin tools/tarkista-karttapisteet.mjs:llä.
+     *
+     * meri: ei. Michiganjärvi jää rajauksen ulkopuolelle, ja
+     * Chicago-joki on OSM:ssä tavallinen vesiväylä, joka piirtyy
+     * ilman rantaviivalippua.
+     */
+    rajat: { pohjoinen: 41.8915, etela: 41.8670, lansi: -87.6530, ita: -87.6170 },
+  },
+  losangeles: {
+    /*
+     * KESKUSTAN RUUTUKAAVA BUNKER HILLISTÄ BROADWAYLLE (7.9.2026).
+     * Ruutu on 2,26 × 2,50 kilometriä eli pelin tiiviimpiä,
+     * Christchurchin ja Ankaran kokoluokkaa. Syy on sama kuin
+     * Christchurchissa: Los Angelesin keskusta on pieni ja tiivis
+     * saareke matalassa kaupungissa, ja kaikki kahdeksan kohdetta
+     * ovat parin kilometrin nauhassa Fort Mooren muistomuurilta
+     * (34,0583) Eastern Columbian kellotornille (34,0428).
+     *
+     * LAAJEMPI RUUTU KOKEILTIIN JA HYLÄTTIIN. Plazan kortteli
+     * (El Pueblo, Ávila-adobe, Pico House, Olvera Street, Union
+     * Station) on vain noin kilometrin koillisessa ja mahtuisi
+     * helposti, mutta jokainen niistä on kaupunkilehden noston tai
+     * matkaoppaan aihe — kohdekartta ei toista lehden juttuja
+     * (New Yorkin sääntö), joten koko kortteli jätettiin ruudun
+     * ulkopuolelle sen sijaan, että se olisi otettu kuvaan tyhjänä.
+     *
+     * LÄNSIREUNA 118,2595 ON PÄÄKIRJASTON JA EASTERN COLUMBIAN
+     * MUKAAN. Sen takana alkaa Harbor Freeway, joka piirtyy
+     * kartalle leveänä valkoisena nauhana ja veisi tilaa
+     * korttelien viivastolta ilman yhtään kohdetta.
+     *
+     * ETELÄREUNA 34,0385 JÄTTÄÄ EASTERN COLUMBIAN VIIDENNEKSEN
+     * VERRAN KUVAN ALAREUNAN YLÄPUOLELLE mittakaavajanan takia,
+     * samasta syystä kuin Chicagossa.
+     *
+     * meri: ei. Meri on 25 kilometriä lounaassa, ja Los Angeles
+     * -joki kulkee rajauksen itäpuolella.
+     */
+    rajat: { pohjoinen: 34.0610, etela: 34.0385, lansi: -118.2595, ita: -118.2350 },
+  },
+  neworleans: {
+    /*
+     * TREMÉSTA LAFAYETTE SQUARELLE (7.9.2026). Ruutu on 2,2 × 3,2
+     * kilometriä eli pelin tiiviimpiä, Christchurchin ja Dubrovnikin
+     * kokoluokkaa. Se riittää: New Orleansin vanha kaupunki on
+     * Ranskan Kortteli, kolmentoista korttelin mittainen suorakaide
+     * joen mutkan sisäkaarteessa, ja kartan kahdeksan kohdetta
+     * mahtuvat siihen ja sen kahteen naapuriin — Treméhen
+     * pohjoisessa ja liikekeskustaan lounaassa.
+     *
+     * RUUTU ON PYSTY, KOSKA KOHTEET OVAT PYSTYSSÄ. Ranskan Kortteli,
+     * Canal Street ja liikekeskusta ovat peräkkäin lounaaseen
+     * laskeutuvassa nauhassa: pohjoisin kohde on St. Augustinen
+     * kirkko (29,9652) ja eteläisin Gallier Hall (29,9463), eli
+     * leveyseroa on 2,1 kilometriä mutta pituuseroa vain 1,3.
+     * Neliöruutu toisi mukaan järven suunnan tyhjää esikaupunkia.
+     *
+     * ETELÄREUNA 29,9400 ON MITOITETTU MITTAKAAVAJANAN MUKAAN.
+     * Gallier Hall on kartan lounaisnurkassa, ja lehti piirtää
+     * janan juuri sinne (ui.js). Kööpenhaminan Tivolin opetus on
+     * tässä sovellettu etukäteen: reunaa laskettiin, kunnes
+     * tools/tarkista-karttapisteet.mjs lakkasi raportoimasta
+     * numeroympyrän ja janan päällekkäisyyttä.
+     *
+     * GARDEN DISTRICT, SUPERDOME JA LOWER NINTH WARD JÄÄVÄT POIS.
+     * Ne ovat 1,9–5,0 kilometrin päässä (faktapohja-neworleans.md,
+     * osio 4) ja kaikki kolme kaupunkilehden omien juttujen aihe,
+     * joten niitä ei oteta ruutuun eikä kainalokartaksi.
+     *
+     * meri: ei. Mississippi on OSM:ssä tavallinen vesimonikulmio
+     * (natural=water), ja se piirtyy ilman lippua.
+     */
+    rajat: { pohjoinen: 29.9685, etela: 29.9400, lansi: -90.0775, ita: -90.0545 },
+  },
+  bogota: {
+    /*
+     * VANHAN BOGOTÁN NAUHA ITÄKUKKULOIDEN JUURELLA (7.9.2026). Ruutu
+     * on 2,2 × 3,3 kilometriä. Miljoonakaupungista näkyy siis vain
+     * vanha ydin, kapea kaistale vuorten juurella: kartan kahdeksan
+     * kohdetta mahtuvat Keskushautausmaalta (4,6164) Casa de
+     * Nariñolle (4,5956) eli 2,3 kilometrin nauhaan.
+     *
+     * ITÄREUNA 74,0620 ON KUKKULOIDEN RAJA. Sen takana katuverkko
+     * loppuu kuin veitsellä leikaten ja alkaa Cerros Orientalesin
+     * suojelualue; leveämpi ruutu olisi oikealta puoliksi tyhjä.
+     * Andesin yliopisto (74,0652) on ruudun itäisin kohde, ja se on
+     * juuri rinteen juurella.
+     *
+     * LÄNSIREUNA 74,0815 ON CASA DE NARIÑON MUKAAN. Sen takana alkaa
+     * 1900-luvun liikekeskusta, jonka kohteet ovat kaupunkilehden
+     * omia (Museo del Oro, Torre Colpatria) tai kilometrien päässä
+     * (Parque Simón Bolívar 6,9 km luoteeseen).
+     *
+     * MONSERRATE JÄÄ POIS KAHDESTA SYYSTÄ. Se on lehden kansikuvan
+     * ja matkaoppaan aihe, ja se on runsaat 600 metriä ruudun
+     * itäpuolella vuoren laella — kohta, jossa kartalla ei ole
+     * katuverkkoa lainkaan.
+     *
+     * meri: ei. Bogotá on ylätasangolla vuorten keskellä, eikä
+     * ruudussa ole avovettä.
+     */
+    rajat: { pohjoinen: 4.6195, etela: 4.5895, lansi: -74.0815, ita: -74.0620 },
+  },
+  perth: {
+    /*
+     * WELLINGTON STREETIN JA SWAN-JOEN VÄLINEN NAUHA (7.9.2026).
+     * Ruutu on 1,8 × 1,7 kilometriä eli pelin tiiviimpiä,
+     * Christchurchin 2,4 km:n luokkaa ja selvästi pienempi kuin
+     * Wellingtonin 3,3. Syy on kaupungin muodossa: Perthin vanha
+     * ydin on kapea nauha, joka alkaa ratapihalta ja päättyy Perth
+     * Waterin rantaan, ja kaikki kahdeksan kohdetta ovat sen sisällä
+     * Länsi-Australian museolta (-31,9496) Swan Bellsille
+     * (-31,9589).
+     *
+     * LAAJEMPI RUUTU KOKEILTIIN JA HYLÄTTIIN. Faktapohjan osion 4
+     * kymmenen kohdetta levittyvät 2,9 kilometrin säteelle, mutta
+     * niistä uloimmat — Kings Park lännessä, WACA ja Heirisson
+     * Island idässä — ovat lehden omien nostojen aihe tai jäävät
+     * niiden kanssa samaan kuvaan. Ilman niitä ruudun ei ole syytä
+     * olla leveämpi kuin nauha itse, ja tiukka rajaus pitää
+     * ruutukaavan katujen välit erottuvina.
+     *
+     * ETELÄREUNA -31,9620 ON VEDETTY PERTH WATERIN PÄÄLLE, ja se on
+     * ruudun ainoa varsinainen valinta. Rannan alle jää noin 200
+     * metriä vettä, mikä antaa kuvalle pohjan ja näyttää, kuinka
+     * lähelle jokea St Georges Terracen talot rakennettiin. Swan
+     * Bells on tuossa reunassa, joten mittakaavajanan kohta
+     * kannattaa katsoa lehdestä.
+     *
+     * meri: ei. Perth Water on OSM:ssä vesimonikulmio (natural=water)
+     * eikä rantaviiva, joten se piirtyy ilman lippua.
+     */
+    rajat: { pohjoinen: -31.9470, etela: -31.9620, lansi: 115.8510, ita: 115.8700 },
+  },
+  adelaide: {
+    /*
+     * RUUTUKAAVAN POHJOISOSA JA TORRENSIN YLI (7.9.2026). Ruutu on
+     * 2,0 × 2,2 kilometriä ja pystysuuntainen — pelin harvoja
+     * sellaisia, ja se on tarkoituksellista. Adelaiden kohteet ovat
+     * pohjois–eteläsuuntaisessa nauhassa King William Streetin
+     * varrella: North Adelaiden St Peterin katedraalilta
+     * (-34,9128) kaupungintalolle (-34,9261).
+     *
+     * LEVEÄMPI RUUTU KOKEILTIIN JA HYLÄTTIIN. Lightin ruutukaava on
+     * neljän puistokadun (North, East, South, West Terrace) sisällä
+     * noin 2,5 × 2,5 kilometrin neliö, mutta sen eteläpuolisko jää
+     * kokonaan ilman kohdetta: Adelaide Gaol, Adelaide Oval ja
+     * kasvitieteellinen puutarha ovat lehden omien nostojen aihe,
+     * ja jäljelle jäävät kahdeksan ovat kaikki North Terracen
+     * pohjoispuolella tai sen tuntumassa.
+     *
+     * POHJOISREUNA -34,9110 ON ST PETERIN KATEDRAALIN MUKAAN, ja se
+     * tuo kuvaan Torrensin sekä puistorenkaan molemmat rannat. Ilman
+     * North Adelaidea ruutu olisi 1,3 kilometriä korkea ja kaikki
+     * kahdeksan kohdetta puristuisivat kolmen korttelin nauhaan.
+     *
+     * ENSIMMÄINEN RUUTU OLI 150 METRIÄ POHJOISEMPANA (-34,9095 …
+     * -34,9295) JA SE HYLÄTTIIN KUVAN PERUSTEELLA: ylin kaistale jäi
+     * pelkäksi puistoksi, ja ruutukaava katkesi alareunassa kesken.
+     * Siirto etelään toi Victoria Squaren mukaan ilman, että
+     * katedraali jäi reunan ulkopuolelle — se on nyt 198 metriä
+     * yläreunasta.
+     *
+     * meri: ei. Adelaide on kymmenen kilometriä Saint Vincentin
+     * lahdesta, ja Torrens on OSM:ssä tavallinen vesiväylä
+     * padottuine järvineen Elder Parkin kohdalla.
+     */
+    rajat: { pohjoinen: -34.9110, etela: -34.9310, lansi: 138.5930, ita: 138.6145 },
+  },
   suva: {
     /*
      * SIIRTOMAA-AJAN HALLINTOKORTTELI NIEMEN KÄRJESSÄ (6.9.2026).
@@ -3727,6 +3926,87 @@ const KAUPUNGIT = {
      * paperin värinen.
      */
     rajat: { pohjoinen: -30.0195, etela: -30.0465, lansi: -51.2405, ita: -51.2095 },
+    meri: true,
+  },
+  montevideo: {
+    /*
+     * NIEMI JA 18 DE JULIO (7.9.2026). Ruutu on 3,1 × 1,7 kilometriä
+     * ja se on tarkoituksella leveä: Montevideon vanhakaupunki on
+     * kapean niemen kärjessä ja koko muu keskusta jatkuu siitä yhtenä
+     * nauhana itään 18 de Julio -kadun suuntaisesti. Ruudun länsipää
+     * on Ciudad Viejan kärki, itäpää kaupungintalo.
+     *
+     * KUVASUHDE 1,9 ON PELIN LEVEIN, JA SE MITATTIIN ENNEN VALINTAA.
+     * Kartaston aiempi ääripää oli Sarajevo (1,99) ja Praha (1,96),
+     * joten ruutu pysyy sarjan sisällä. Neliömäisempi rajaus olisi
+     * vaatinut joko kaupungintalon pudottamista (jolloin kartalta
+     * katoaisi koko Centro) tai eteläreunan venyttämistä Río de la
+     * Platan ylle, eli puolet kuvasta olisi ollut vettä.
+     *
+     * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA (New Yorkin sääntö).
+     * Lehden aiheet ovat Cabildo ja Plaza Matriz, katedraali, Ciudad
+     * Vieja, satama, rambla, Palacio Salvo, Teatro Solís, Barrio Sur
+     * ja Estadio Centenario. Yksikään kartan kahdeksasta kohteesta ei
+     * ole niiden aihe, ja siksi ruudun tunnetuimmat talot puuttuvat
+     * kartalta tarkoituksella.
+     *
+     * CIUDAD VIEJAAN MAHTUU VAIN KOLME KOHDETTA. Kortteli on niin
+     * tiivis, että 200 metrin sääntö karsii: Palacio Taranco on 188
+     * metriä MAPI-museosta, Hospital Maciel 176 metriä ja Correo
+     * Uruguayo 162 metriä pörssistä. Niistä kartalle otettiin MAPI,
+     * pörssi ja Torres Garcían museo, jotka ovat 380–433 metrin
+     * välein.
+     *
+     * PALACIO LEGISLATIVO JA ANTEL-TORNI JÄIVÄT POIS. Ne ovat 1,6 ja
+     * 1,7 kilometriä pohjoiseen Aguadan takana; niiden mukaan
+     * ottaminen olisi kasvattanut ruudun korkeutta kilometrillä ja
+     * jättänyt keskelle pelkkää satamarataa ilman kohteita.
+     *
+     * meri: true. Montevideon lahti pohjoisessa ja Río de la Plata
+     * etelässä ovat OSM:ssä rantaviivaa (natural=coastline) eivätkä
+     * vesimonikulmioita, joten ilman lippua kuvan molemmat reunat
+     * olisivat paperin värisiä.
+     */
+    rajat: { pohjoinen: -34.8955, etela: -34.9130, lansi: -56.2200, ita: -56.1800 },
+    meri: true,
+  },
+  valparaiso: {
+    /*
+     * EL PLAN JA SEN YLLE NOUSEVAT RINTEET (7.9.2026). Ruutu on
+     * 2,8 × 1,7 kilometriä. Valparaíso on rakennettu kapealle
+     * tasangolle ja sitä ympäröiville kukkuloille, ja juuri se näkyy
+     * tässä rajauksessa: vasemmassa yläkulmassa on satama ja Plaza
+     * Sotomayor, keskellä nousevat Cerro Alegren ja Cerro
+     * Concepciónin rinteet, ja oikealla jatkuu El Almendralin
+     * ruutukaava kohti katolista yliopistoa.
+     *
+     * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA (New Yorkin sääntö).
+     * Lehden aiheet ovat ascensorit, muraalit ja Museo a Cielo
+     * Abierto, satama ja Panaman kanava, Iglesia de la Matriz,
+     * British Arch ja brittiyhteisö, vuoden 1906 maanjäristys,
+     * El Mercurio, La Sebastiana, Paseo Gervasoni ja Santiago
+     * Severínin kirjasto. Yksikään kartan kohteista ei ole niiden
+     * aihe. Siksi kartalla ei ole yhtään ascensoria, vaikka niitä on
+     * ruudussa neljä.
+     *
+     * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: pörssitalo on
+     * 116 metriä Baburizzan palatsista, oikeustalo 151 metriä Plaza
+     * Sotomayorista ja Cementerio N:o 1 vain 77 metriä
+     * toisinajattelijoiden hautausmaasta. Tiukin hyväksytty väli on
+     * Plaza Sotomayorin ja Baburizzan 215 metriä, ja se tarkistettiin
+     * tools/tarkista-karttapisteet.mjs:llä numeroympyröiden
+     * päällekkäisyyden varalta.
+     *
+     * CERRO BARÓN JA POLANCON HISSI JÄIVÄT ULKOPUOLELLE. Ne ovat
+     * 1,9 ja 2,1 kilometriä idässä; ruutu olisi venynyt 4,5
+     * kilometriä leveäksi, ja Polanco on sitä paitsi ascensor eli
+     * lehden oman noston aihe.
+     *
+     * meri: true. Tyynenmeren ranta kulkee ruudun yläreunassa
+     * rantaviivana, ja ilman lippua sataman kohta jäisi paperin
+     * väriseksi.
+     */
+    rajat: { pohjoinen: -33.0355, etela: -33.0505, lansi: -71.6320, ita: -71.6020 },
     meri: true,
   },
   asuncion: {

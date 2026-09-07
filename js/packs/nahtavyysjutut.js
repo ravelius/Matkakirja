@@ -45269,4 +45269,3036 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * CHICAGON KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026). Kartta
+   * on js/packs/maakartat.js: KAUPUNKIKARTAT.chicago, ja jokainen
+   * väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Merchandise Mart", "Chicago Theatre", "Haymarket
+   * affair", "Chicago Cultural Center", "Marquette Building
+   * (Chicago)", "Art Institute of Chicago", "Willis Tower" ja
+   * "Hull House").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat villisipulin nimi, suurpalo ja vesitorni, Home Insurance
+   * Building, Union Stock Yards, Chicago-ikkuna ja Rookery, joen
+   * kääntö, vuoden 1893 maailmannäyttely, Fort Dearborn, Chicago
+   * Portage, vuoden 1833 sopimus ja American Indian Center.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Marquette
+   * Buildingin jutussa EI kerrota Chicago-ikkunasta, vaikka talon
+   * julkisivu on sen oppikirjaesimerkki: ikkuna on lehden noston A2
+   * aihe, ja juttu kertoo sen sijaan seinien mosaiikeista.
+   * Taideinstituutin jutussa vuoden 1893 maailmannäyttely mainitaan
+   * vain siltä osin kuin talo rakennettiin sitä varten — näyttelyn
+   * oma tarina on lehden historiasivulla. Willis Towerin jutussa ei
+   * kerrata teräsrungon keksimistä, joka on lehden noston A1 aihe.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 7.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 700 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * chicago-lohkossa (kulttuuri-kategoriat.js).
+   *
+   * HAYMARKETIN TEKIJÄNIMI ON LUETTU PIIRROKSESTA ITSESTÄÄN, ei
+   * extmetadatasta. Käytetty tiedosto on Kongressin kirjaston skannaus
+   * (1536 px), ja sen Artist-kenttä on kirjaston oma kokoelmateksti
+   * "Miscellaneous Items in High Demand, PPOC". Sama Thure de
+   * Thulstrupin puupiirros on Commonsissa myös nimellä
+   * HaymarketRiot-Harpers.jpg, jossa tekijä on kirjattu oikein — mutta
+   * se on vain 964 px leveä eli alle pelin 1200 px:n rajan. Piirros
+   * on lisäksi signeerattu itse kuvaan ("Drawn by T. de Thulstrup"),
+   * joten lisenssin vaatima nimeäminen on katteessa.
+   *
+   * HAYMARKETIN MUISTOMERKKI HYLÄTTIIN KUVANA. Mary Broggerin vuoden
+   * 2004 puhujavaunuveistoksesta on Commonsissa yksi kelvollinen
+   * valokuva (Haymarket Memorial - Chicago.jpg), mutta sen oikeaa
+   * kolmannesta hallitsee viskimainos talon seinässä. Piirros kertoo
+   * saman tapahtuman ilman mainosta.
+   */
+  chicago: {
+    'Merchandise Mart': {
+      aika: '1930',
+      teksti: 'Kun Marshall Field & Co. ilmoitti 1927 rakentavansa '
+          + 'Chicago-joen pohjoisrannalle, tontti oli vanhaa '
+          + 'ratapihaa: siinä oli seissyt Chicago and North Western '
+          + '-radan Wells Streetin asema, joka hylättiin 1911. Sitä '
+          + 'ennen samalla kohdalla oli ollut alkuperäiskansojen '
+          + 'kauppapaikka. Ratapihan purkaminen sopi kaupungin '
+          + 'kaavakomissiolle, joka halusi siistiä jokivarren, ja '
+          + 'radan ilmatilaoikeuksien kanssa tontti oli tarpeeksi iso '
+          + 'maailman suurimmalle rakennukselle.'
+          + '\n\n'
+          + 'Työmaa aloitettiin 16. elokuuta 1928, ja se muistutti '
+          + 'enemmän patotyömaata kuin talonrakennusta. Sementti '
+          + 'saapui laivalla ja nostettiin paineilmalla siiloihin '
+          + 'kahdenkymmenen metrin korkeuteen, sora ja hiekka tulivat '
+          + 'junavaunuissa kuljettimille, ja jättisekoittimet syöttivät '
+          + 'betonia nostotorneihin, joita jatkettiin talon noustessa. '
+          + 'Työmaalla oli jatkuvasti 2 500 miestä ja kaikkiaan 5 700. '
+          + 'Rakennukseen meni 29 miljoonaa tiiltä, 64 kilometriä '
+          + 'putkea, 610 kilometriä johtoa, 4 000 ikkunaa ja 60 000 '
+          + 'tonnia terästä; käytäviä tuli kymmenen kilometriä ja '
+          + 'hissejä yli kolmekymmentä. Hinnaksi arvioitiin 26 '
+          + 'miljoonaa dollaria.'
+          + '\n\n'
+          + 'Talo avattiin 5. toukokuuta 1930, ja sen 372 000 '
+          + 'neliömetriä tekivät siitä maailman suurimman rakennuksen. '
+          + 'Se oli niin iso, että sillä oli oma postinumeronsa vuoteen '
+          + '2008 asti. Tornin kruunua kiersi 56 terrakottaista '
+          + 'intiaanipäällikköä, jotka viittasivat tontin '
+          + 'kauppapaikkamenneisyyteen; ne olivat kadulta lähes '
+          + 'näkymättömiä ja poistettiin 1961, ja osa löytyi 2014 '
+          + 'erään esikaupunkitalon takapihalta. Kennedyn suku osti '
+          + 'talon 1940-luvun puolivälissä noin puoleen sen '
+          + 'rakennuskustannuksista, ja vuokratuotoista tuli suvun '
+          + 'vaurauden päälähde ja vaalikampanjoiden rahoitus. Suku '
+          + 'myi talon 1998 Vornado Realty Trustille.',
+      kuvat: [
+        {
+          tiedosto: 'Merchandise Mart 080405.jpg',
+          selite: 'Kahdeksantoista kerroksen varastolohko ja sen keskeltä '
+            + 'nouseva torni Chicago-joen toiselta rannalta katsottuna.',
+          lahde: 'User:JeremyA, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chicago Theatre': {
+      aika: '1921',
+      teksti: 'Veljekset Abe ja Barney Balaban sekä Sam ja Morris '
+          + 'Katz rakensivat State Streetille 1921 lippulaivan '
+          + 'elokuvateatteriketjulleen. Ketju kasvoi 28 teatteriin '
+          + 'Chicagossa ja yli sataan muualla Keskilännessä, ja '
+          + 'arkkitehdit Cornelius ja George Rapp piirsivät niistä '
+          + 'monet. Chicago Theatre maksoi neljä miljoonaa dollaria ja '
+          + 'oli valmistuessaan suurin, kallein ja komein siihen '
+          + 'mennessä rakennettu elokuvapalatsi. Se on yhä vanhin '
+          + 'säilynyt niistä.'
+          + '\n\n'
+          + 'Avajaisissa 26. lokakuuta 1921 salissa oli 3 880 '
+          + 'paikkaa, ja taloa mainostettiin maailman ihmeteatterina. '
+          + 'Ohjelmaan kuului elokuvan lisäksi viisikymmenmiehinen '
+          + 'orkesteri, lavashow ja Jesse Crawford Wurlitzer-uruilla, '
+          + 'joissa oli neljä sormiota ja 26 äänikertaa. Runoilija '
+          + 'Carl Sandburg raportoi Chicago Tribunelle, että '
+          + 'väkijoukon hallintaan tarvittiin ratsupoliiseja. '
+          + 'Teatterin keino houkutella katsojia — ylellinen sali, '
+          + 'huippupalvelu ja aikansa uutuus eli ilmastointi — '
+          + 'kopioitiin ympäri maata. Jazzista tuli talon vetonaula jo '
+          + '1922, kun ketju järjesti oman synkopaatioviikkonsa.'
+          + '\n\n'
+          + 'Julkisivu on kuusikerroksinen, kahdeksantoista metriä '
+          + 'leveä riemukaari, jota on lehdissä verrattu Pariisin '
+          + 'Triumphkaareen. Sen keskellä olevan kaari-ikkunan sisällä '
+          + 'on Tiffanyn lasimaalaus, jossa ketjun vaakunan kaksi '
+          + 'hevosta pitää suussaan 35 millimetrin filminauhaa. '
+          + 'Aulassa on Versailles’n hovikappelista vaikutteita saanut '
+          + 'viisikerroksinen halli ja Pariisin oopperan mukaan tehty '
+          + 'porraskäytävä. Talo suljettiin 1985 — viimeiset elokuvat '
+          + 'olivat American Ninja ja Teen Wolf — mutta se '
+          + 'kunnostettiin ja avattiin uudestaan 1986. Alkuperäinen '
+          + 'katosmainos lahjoitettiin 2004 Smithsonianille.',
+      kuvat: [
+        {
+          tiedosto: 'Chicago Theatre blend.jpg',
+          selite: 'State Streetin riemukaari, sen keskellä pyöreä '
+            + 'Tiffany-ikkuna ja alla katosmainos, joka on kaupungin '
+            + 'epävirallinen tunnus.',
+          lahde: 'Daniel Schwen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Haymarketin aukio': {
+      aika: '1886',
+      teksti: 'Yhdysvaltalainen työntekijä teki 1880-luvulla '
+          + 'keskimäärin runsaat kuusikymmentä tuntia viikossa '
+          + 'kuutena päivänä. Chicagossa kymmenettuhannet saksalaiset '
+          + 'ja böömiläiset siirtolaiset ansaitsivat noin puolitoista '
+          + 'dollaria päivässä. Ammattiliittojen kattojärjestö päätti '
+          + 'lokakuussa 1884, että 1. toukokuuta 1886 alkaen '
+          + 'kahdeksan tuntia on laillinen työpäivä, ja kun päivä '
+          + 'koitti, lakkoon meni koko maassa arviolta 300 000–500 000 '
+          + 'työntekijää. Chicagossa lakkolaisia oli 30 000–40 000.'
+          + '\n\n'
+          + 'Maanantaina 3. toukokuuta poliisi ampui McCormickin '
+          + 'maatalouskonetehtaan portilla väkijoukkoa ja tappoi kaksi '
+          + 'lakkolaista. Seuraavana iltana Haymarketin aukiolla '
+          + 'pidettiin protestikokous, joka alkoi rauhallisena. Kun '
+          + 'poliisi ryhtyi hajottamaan kokousta, tuntematon heitti '
+          + 'dynamiittipommin. Räjähdys ja sitä seurannut poliisin '
+          + 'vastatuli tappoivat seitsemän poliisia ja ainakin neljä '
+          + 'siviiliä, ja kymmenet haavoittuivat.'
+          + '\n\n'
+          + 'Kahdeksan anarkistia asetettiin syytteeseen. '
+          + 'Oikeudenkäynnissä esitettiin, että yksi syytetyistä oli '
+          + 'ehkä rakentanut pommin, mutta kukaan syytetyistä ei ollut '
+          + 'heittänyt sitä, ja vain kaksi kahdeksasta oli ollut '
+          + 'paikalla. Seitsemän tuomittiin kuolemaan; kuvernööri '
+          + 'muunsi kaksi tuomiota elinkautiseksi, yksi teki '
+          + 'itsemurhan sellissään, ja neljä hirtettiin 11. marraskuuta '
+          + '1887. Vuonna 1893 kuvernööri John Peter Altgeld armahti '
+          + 'jäljellä olevat ja arvosteli koko oikeudenkäyntiä. '
+          + 'Tapahtumaa pidetään yleisesti kansainvälisen '
+          + 'vapunpäivän alkuna. Aukiolle on merkitty 1992 pronssilaatta '
+          + 'puhujavaunun paikalle, ja 14. syyskuuta 2004 paljastettiin '
+          + 'Mary Broggerin veistos: neljä ja puoli metriä korkea '
+          + 'puhujavaunu, jonka paljastivat yhdessä pormestari ja '
+          + 'poliisien ammattiliiton puheenjohtaja.',
+      kuvat: [
+        {
+          tiedosto: 'The Anarchist Riot in Chicago - A Dynamite Bomb exploding among the police (McCormick Strike, Haymarket Square) LCCN99614182.jpg',
+          selite: 'Harper’s Weeklyn aukeama toukokuulta 1886: puhuja vaunun '
+            + 'päällä vasemmalla, poliisirivi keskellä ja pommi räjähtämässä.',
+          lahde: 'Thure de Thulstrup, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kulttuurikeskus: {
+      aika: '1897',
+      teksti: 'Talon tilasi kaupunki kahteen tarkoitukseen kerralla: '
+          + 'siitä tuli sekä Chicagon pääkirjasto että sisällissodan '
+          + 'pohjoisen veteraanijärjestön Grand Army of the Republicin '
+          + 'kokoushuone ja muistosali. Järjestö lahjoitti tontin, '
+          + 'bostonilainen toimisto Shepley, Rutan and Coolidge '
+          + 'piirsi rakennuksen 1892, ja se valmistui 1897 lähes '
+          + 'kahdella miljoonalla dollarilla. Seinät ovat metrin '
+          + 'paksuista muurausta ja verhoiltu Bedfordin sinisellä '
+          + 'kalkkikivellä graniittijalustan päälle.'
+          + '\n\n'
+          + 'Sisällä on kaksi lasikupolia, kummankin siiven päällä '
+          + 'yksi. Pohjoissiiven veteraanisalin pyöreässä osassa on '
+          + 'yhdeksän metrin korkuiset vaaleanpunaiset marmoriseinät '
+          + 'ja Healy and Millet -verstaan tekemä lasikupoli. '
+          + 'Eteläsiiven Preston Bradley Hallin päällä on '
+          + 'kaksitoistametrinen Tiffany-lasikupoli, jonka suunnitteli '
+          + 'J. A. Holzer ja jota kulttuurikeskus kutsuu maailman '
+          + 'suurimmaksi Tiffany-kupoliksi: siinä on yli 60 000 '
+          + 'lasinpalaa. Portaikko viidenteen kerrokseen on tehty '
+          + 'Venetsian Huokausten sillan mallin mukaan, ja yksi '
+          + 'saleista on jäljennös dogen palatsin kokoussalista.'
+          + '\n\n'
+          + 'Kirjasto muutti pois, ja 1978 kulttuuriasioista vastaava '
+          + 'Lois Weisberg sai talon muutetuksi taide- ja '
+          + 'kulttuurikeskukseksi. Se oli maan ensimmäinen maksuton '
+          + 'kunnallinen kulttuurikeskus, ja siellä järjestetään yli '
+          + 'tuhat tapahtumaa ja näyttelyä vuodessa. Talo on myös '
+          + 'kaupungin virallinen vastaanottotila, jossa pormestari '
+          + 'ottaa vastaan presidentit ja hallitsijat. Vuosina '
+          + '2021–2022 rakennus kunnostettiin perusteellisesti: '
+          + 'Tiffany-kupoli, joka oli peittynyt likaan ja maaliin, '
+          + 'puhdistettiin ja korjattiin kokonaan. Kaupungin oma '
+          + 'pääkirjasto on nykyään Harold Washington Library '
+          + 'Center, joka avattiin 1991.',
+      kuvat: [
+        {
+          tiedosto: 'Preston Bradley Hall and Tiffany Glass Dome - Chicago Cultural Center.jpg',
+          selite: 'Preston Bradley Hallin Tiffany-kupolissa on yli 60 000 '
+            + 'lasinpalaa; kaaren alla kiertää Addisonin lause kirjoista.',
+          lahde: 'Grant Henninger, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Marquette Building': {
+      aika: '1895',
+      teksti: 'Talo on nimetty jesuiittapappi Jacques Marquetten '
+          + 'mukaan, joka tutki Chicagon seutua 1674 ja vietti '
+          + 'talven 1674–1675 alueella. Rakennuksen piirsivät William '
+          + 'Holabird ja Martin Roche, ja se valmistui 1895 '
+          + 'kuusitoistakerroksisena. Julkisivu oli alun perin '
+          + 'punertavaa terrakottaa, joka mustui vuosikymmenien '
+          + 'Loop-noesta ennen kunnostusta. 1930-luvulla talo oli yli '
+          + 'kolmenkymmenen rautatieyhtiön keskustakonttori.'
+          + '\n\n'
+          + 'Sisäänkäynnin ja aulan koristelu on kokonaan omistettu '
+          + 'Marquetten retkelle. Pääoven yllä on kuvanveistäjä '
+          + 'Hermon Atkins MacNeilin neljä pronssista reliefiä, jotka '
+          + 'kertovat matkan vaiheita Suurten järvien seudulla ja '
+          + 'päättyvät hautajaisiin. Pyöröoven paneeleihin on '
+          + 'veistetty pantterinpäitä. Aulan valopihaa kiertävässä '
+          + 'kuusikulmaisessa kaiteessa on Tiffanyn verstaan '
+          + 'mosaiikkifriisi, jonka tekivät Louis Comfort Tiffany ja '
+          + 'hänen taiteellinen johtajansa Jacob Adolph Holzer: '
+          + 'kuva-aiheina ovat Marquetten elämä, hänen retkensä '
+          + 'Illinoisiin ja alkuperäiskansojen ihmiset, joita hän '
+          + 'tapasi. Mosaiikeissa on kiiltävää Tiffany-lasia, '
+          + 'helmiäistä ja puolijalokiviä.'
+          + '\n\n'
+          + 'Noin 1950 räystäslista purettiin, kun taloon lisättiin '
+          + 'kerros. Talo on ollut toimistokäytössä yhtäjaksoisesti '
+          + 'rakentamisestaan asti. Vuonna 1977 sen osti John D. '
+          + 'MacArthurin vakuutusyhtiö, ja hänen kuolemansa jälkeen '
+          + '1978 siitä tuli MacArthur-säätiön pääkonttori. Säätiö '
+          + 'aloitti 2001 monivuotisen kunnostuksen, joka valmistui '
+          + '2006: räystäslista rakennettiin takaisin, ikkunat '
+          + 'palautettiin alkuperäisen mallisiksi ja muuraus '
+          + 'puhdistettiin. Aulan poikki kulkee yhä katujen '
+          + 'välinen läpikulkureitti, jota ei suljettu silloinkaan, '
+          + 'kun moni muu keskustan talo sulki ovensa yleisöltä.',
+      kuvat: [
+        {
+          tiedosto: 'Marquette Building (6039062516).jpg',
+          selite: 'Ruskea terrakottajulkisivu ja 2000-luvun kunnostuksessa '
+            + 'takaisin rakennettu räystäslista.',
+          lahde: 'Teemu008 from Palatine, Illinois, Wikimedia Commons (CC '
+            + 'BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Taideinstituutti: {
+      aika: '1879',
+      teksti: 'Alkusysäys tuli 1866, kun 35 taiteilijaa perusti '
+          + 'Dearborn Streetin ateljeehen Chicago Academy of Designin '
+          + 'eurooppalaisten taideakatemioiden malliin. Koulu piti '
+          + 'olla ilmainen ja sillä oma galleria; opetus alkoi 1868, '
+          + 'ja 1870 akatemia sai oman viisikerroksisen kivitalon. '
+          + 'Vuoden 1871 suurpalo tuhosi sen ja jätti akatemian '
+          + 'velkoihin. Vuoteen 1878 mennessä velkaa oli 10 000 '
+          + 'dollaria, ja 1879 osa jäsenistä perusti uuden '
+          + 'yhdistyksen, joka osti konkurssiin menneen edeltäjänsä '
+          + 'omaisuuden huutokaupasta. Nykyinen nimi otettiin '
+          + 'käyttöön 1882.'
+          + '\n\n'
+          + 'Nykyinen talo Michigan Avenuen varrella rakennettiin '
+          + 'vuoden 1893 maailmannäyttelyä varten, ja museo muutti '
+          + 'siihen näyttelyn jälkeen. Sisäänkäyntiä vartioi kaksi '
+          + 'Edward Kemeysin pronssileijonaa, jotka paljastettiin '
+          + '10. toukokuuta 1894 ja painavat kumpikin yli kaksi '
+          + 'tonnia. Veistäjä antoi niille epäviralliset nimet: '
+          + 'eteläinen seisoo uhmakkaassa asennossa, pohjoinen on '
+          + 'saalista vaanimassa. Kun jokin kaupungin joukkue pelaa '
+          + 'sarjansa loppuottelun, leijonat puetaan sen paitaan, ja '
+          + 'jouluksi niiden kaulaan pannaan havuseppeleet.'
+          + '\n\n'
+          + 'Museon kokoelmissa on lähes 300 000 teosta, muun muassa '
+          + 'Georges Seurat’n Sunnuntai-iltapäivä La Grande Jatten '
+          + 'saarella, Pablo Picasson Vanha kitaransoittaja, Edward '
+          + 'Hopperin Nighthawks ja Grant Woodin Amerikkalainen '
+          + 'gotiikka. Talo on rakennettu avoimen ratapihan päälle: '
+          + 'kaksi näyttelykerrosta yhdistää itäisen ja läntisen '
+          + 'siiven, ja niiden alla kulkevat yhä lähijunat. Itäisen '
+          + 'sisäänkäynnin kohdalla seisoo Louis Sullivanin 1894 '
+          + 'suunnitteleman pörssitalon kiviportaali; talo purettiin '
+          + '1972, mutta portaali ja osa kaupankäyntisalista '
+          + 'siirrettiin museoon ja koottiin uudelleen. Renzo Pianon '
+          + 'piirtämä Modern Wing avattiin 2009 ja teki museosta '
+          + 'pinta-alaltaan maan toiseksi suurimman taidemuseon.',
+      kuvat: [
+        {
+          tiedosto: 'South Lion, The Art Institute of Chicago 2014 (15898400197).jpg',
+          selite: 'Eteläinen leijona joulukuusenhavuissa: seppele pannaan '
+            + 'molempien kaulaan joka joulu.',
+          lahde: 'swimfinfan, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Willis Tower': {
+      aika: '1973',
+      teksti: 'Sears, Roebuck & Co. oli 1969 maailman suurin '
+          + 'vähittäiskauppias ja työllisti noin 350 000 ihmistä. '
+          + 'Kun yhtiö päätti koota tuhannet chicagolaiset '
+          + 'toimistotyöntekijänsä yhteen taloon, esikaupunki '
+          + 'hylättiin heti — se olisi vaatinut noin 7 000 ihmisen '
+          + 'muuttamista. Tilalle valittiin kahden korttelin tontti '
+          + 'Loopin länsilaidalta. Chicagon väljä kaavoitus olisi '
+          + 'sallinut jopa 300-kerroksisen talon, mutta '
+          + 'ilmailuhallinto rajoitti korkeutta ja harva vuokralainen '
+          + 'halusi toimistoa pilvien tasalta. Suunnitelma '
+          + 'julkistettiin 27. heinäkuuta 1970.'
+          + '\n\n'
+          + 'Arkkitehti Bruce Graham ja insinööri Fazlur Rahman Khan '
+          + 'ratkaisivat korkeuden yhdeksällä neliömäisellä putkella, '
+          + 'jotka on niputettu kolme kertaa kolme -ruudukoksi. Kukin '
+          + 'putki on 23 metriä sivultaan ja pilariton, ja niitä '
+          + 'päättyy eri korkeuksilla: kaksi loppuu 50. kerrokseen, '
+          + 'kaksi 66:nteen, kolme 90:nteen, ja viimeiset kaksi '
+          + 'jatkavat 108. kerrokseen. Tämä oli ensimmäinen talo, '
+          + 'jossa niputettua putkirakennetta käytettiin, ja se levisi '
+          + 'sittemmin lähes kaikkiin maailman korkeimpiin taloihin, '
+          + 'myös Burj Khalifaan. Harjannostajaisia vietettiin '
+          + '3. toukokuuta 1973, ja talo maksoi noin 150 miljoonaa '
+          + 'dollaria.'
+          + '\n\n'
+          + 'Valmistuessaan 442-metrinen torni oli maailman korkein '
+          + 'rakennus ja pysyi sinä lähes 25 vuotta. Näköalataso '
+          + 'Skydeck avattiin 22. kesäkuuta 1974 103. kerrokseen 412 '
+          + 'metrin korkeuteen; hissi vie ylös noin minuutissa, ja '
+          + 'selkeällä säällä sieltä näkee Michiganjärven yli '
+          + 'Indianaan, Michiganiin ja Wisconsiniin. Kävijöitä on '
+          + 'yli 1,7 miljoonaa vuodessa. Vuonna 2009 tasoon '
+          + 'lisättiin lasiset ulokeparvekkeet, joita kutsutaan '
+          + 'nimellä The Ledge: ne työntyvät runsaan metrin '
+          + 'julkisivun ulkopuolelle, ja lattian läpi näkee kadulle. '
+          + 'Sears muutti pois 1994, ja nimi vaihtui Willis Toweriksi '
+          + '2009 vuokrasopimuksen mukana — paikalliset sanovat '
+          + 'taloa yhä Sears Toweriksi.',
+      kuvat: [
+        {
+          tiedosto: 'Willis Tower, Chicago September 2016-26.jpg',
+          selite: 'Yhdeksän putken nippu näkyy porrastuksina: osa putkista '
+            + 'päättyy matalammalle, ja kaksi jatkaa huipulle asti.',
+          lahde: 'Alvesgaspar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hull House': {
+      aika: '1889',
+      teksti: 'Kiinteistömies Charles Jerald Hull rakennutti 1856 '
+          + 'italialaistyylisen huvilan osoitteeseen 800 South '
+          + 'Halsted Street. Kortteli oli silloin hienostoaluetta, '
+          + 'mutta vuoteen 1889 mennessä se oli köyhtynyt, kun '
+          + 'siirtolaisia oli muuttanut Near West Sidelle enemmän '
+          + 'kuin alue kesti. Juuri silloin Jane Addams etsi paikkaa '
+          + 'kokeilulleen. Hull oli antanut talon serkulleen Helen '
+          + 'Culverille, ja Culver luovutti sen Addamsille '
+          + 'kahdenkymmenenviiden vuoden vuokravapaalla sopimuksella.'
+          + '\n\n'
+          + 'Addams ja Ellen Gates Starr perustivat Hull Housen '
+          + '18. syyskuuta 1889 esikuvanaan Lontoon East Endin '
+          + 'Toynbee Hall. Ajatus oli, että sivistyneet naiset '
+          + 'muuttavat asumaan köyhään kaupunginosaan ja pitävät '
+          + 'siellä samat kerhonsa ja tilaisuutensa kuin omassa '
+          + 'piirissään. Vapaaehtoisia kutsuttiin asukkaiksi, ja he '
+          + 'pitivät kursseja kirjallisuudesta, historiasta, '
+          + 'taiteesta ja käsitöistä. Luennoimassa kävivät muun '
+          + 'muassa John Dewey, George Herbert Mead, Max Weber ja '
+          + 'W. E. B. Du Bois. Konsertit ja luennot olivat kaikille '
+          + 'ilmaisia. Addams kiteytti 1892 liikkeen kolmeksi '
+          + 'tehtäväksi asumisen, tutkimuksen ja uudistuksen: ensin '
+          + 'eletään naapureiden kanssa, sitten tutkitaan köyhyyden '
+          + 'syyt, sitten kerrotaan tulokset julkisuuteen ja '
+          + 'painostetaan lainsäätäjää.'
+          + '\n\n'
+          + 'Menetelmä tuotti tulosta. Hull House avasi 1893 '
+          + 'kaupungin ensimmäisen julkisen leikkikentän — vapun '
+          + 'päivänä Polk Streetillä, ja perheet tulivat paikalle '
+          + 'juhlavaatteissa — sekä ensimmäisen yleisen saunan ja '
+          + 'voimistelusalin. Vapaaehtoinen Jenny Dow aloitti '
+          + 'lastentarhan niille lapsille, jotka jätettiin taloon '
+          + 'äitien mennessä ompelimoihin: kolmessa viikossa '
+          + 'ilmoittautuneita oli 24 ja jonossa 70. Talon työstä '
+          + 'seurasi maan ensimmäinen nuorisotuomioistuin, ja osavaltion '
+          + 'tasolla se vaikutti lapsityölakeihin, työsuojeluun, '
+          + 'oppivelvollisuuteen ja eläkelakeihin. Vuoteen 1911 '
+          + 'mennessä Hull House oli kasvanut kolmeksitoista '
+          + 'rakennukseksi, ja vuoteen 1920 mennessä maassa oli noin '
+          + 'viisisataa vastaavaa taloa. 1960-luvun puolivälissä '
+          + 'suurin osa purettiin Illinoisin yliopiston tieltä; '
+          + 'alkuperäinen huvila ja vuoden 1905 ruokasali jäivät, ja '
+          + 'ne ovat nyt museo.',
+      kuvat: [
+        {
+          tiedosto: 'Jane Addams-Hull House, University of Illinois Chicago, Halsted Street, Near West Side, Chicago, IL.jpg',
+          selite: 'Charles Hullin vuoden 1856 huvila kuisteineen on ainoa '
+            + 'kolmestatoista talosta, joka jäi yliopiston tieltä pystyyn.',
+          lahde: 'w_lemay, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * LOS ANGELESIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.losangeles, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Fort Moore Pioneer Memorial", "Fort Moore
+   * (California)", "Walt Disney Concert Hall", "Los Angeles City
+   * Hall", "Angels Flight", "Los Angeles Central Library",
+   * "Japanese American National Museum", "Pershing Square (Los
+   * Angeles)" ja "Eastern Columbia Building").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat vuoden 1781 pueblo ja Zanja Madre, Pico House, rautatie ja
+   * öljy, akvedukti, vuoden 1815 tulva, San Pedron satama,
+   * Hollywood, maanjäristykset, tongvat ja Yaanga, pyhät lähteet,
+   * tongvien hallinto ja Mission San Gabriel. Yksikään kartan
+   * kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Kaupungintalon
+   * jutussa EI kerrota vuoden 1994 Northridgen järistyksestä, vaikka
+   * talon maanjäristysvahvistus on jutun aihe: järistykset ovat
+   * lehden noston aihe, ja juttu puhuu vain siitä, mitä talolle
+   * tehtiin. Pershing Squaren jutussa Zanja Madre mainitaan yhdellä
+   * lauseella naapurikanavana eikä sen enempää — oja on lehden
+   * ensimmäisen noston aihe.
+   *
+   * PERSHING SQUAREN NIMI ON MUUTTUMASSA, ja kartan merkki käyttää
+   * yhä vanhaa. en-Wikipedian artikkelin OTSIKKO on "Pershing Square
+   * (Los Angeles)", mutta sen ingressi kertoo, että kaupunginvaltuusto
+   * hyväksyi syyskuussa 2026 aukion nimeämisen Biddy Mason Parkiksi.
+   * Päätös on siis päiviä vanha. Merkki nimettiin sillä nimellä, jolla
+   * paikan yhä löytää, ja uusi nimi kerrotaan jutun lopussa.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 7.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 700 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * losangeles-lohkossa (kulttuuri-kategoriat.js).
+   */
+  losangeles: {
+    'Fort Mooren muistomuuri': {
+      aika: '1847',
+      teksti: 'Yhdysvaltain joukot miehittivät Los Angelesin '
+          + 'elokuussa 1846, mutta kapteeni Archibald Gillespien '
+          + 'ankara sotatila sytytti kapinan. Californiot piirittivät '
+          + 'kaupungin, ja Gillespien viisikymmentä merisotilasta '
+          + 'perääntyi mäelle, jossa he pinosivat hiekkasäkeistä '
+          + 'suojan ja asettivat tykkinsä. Vastapuolen voimat '
+          + 'kasvoivat yli kuuteensataan mieheen, ja Gillespie '
+          + 'suostui poistumaan kaupungista 30. syyskuuta 1846. '
+          + 'Amerikkalaiset palasivat 10. tammikuuta 1847, ja '
+          + 'Cahuengan sopimus päätti sodan Ylä-Kaliforniassa kolme '
+          + 'päivää myöhemmin.'
+          + '\n\n'
+          + 'Samalle mäelle alettiin heti rakentaa linnaketta. '
+          + 'Ensimmäinen, tähdenmuotoinen suunnitelma jäi kesken, ja '
+          + '23. huhtikuuta 1847 aloitettiin suurempi. Sen piirsi '
+          + 'luutnantti John W. Davidson, ja sen rakensi pääosin '
+          + 'mormonipataljoona: 120 metriä pitkä rintavarustus, '
+          + 'bastionit ja ampuma-aukot kuudelle tykille. Puutavara '
+          + 'raahattiin San Gabrielin vuorilta, ja kahdesta '
+          + 'jatketusta hirrestä tehtiin 46 metriä korkea lipputanko. '
+          + 'Linnake vihittiin 4. heinäkuuta 1847 kaupungin '
+          + 'ensimmäisenä itsenäisyyspäivänä, ja se nimettiin '
+          + 'kapteeni Benjamin D. Mooren mukaan, joka oli kaatunut '
+          + 'San Pasqualin taistelussa edellisenä jouluna. Varuskunta '
+          + 'vedettiin pois 1848, ja linnake hylättiin 1849.'
+          + '\n\n'
+          + 'Mäki eli sen jälkeen omaa elämäänsä: sinne tuli '
+          + 'kaupungin ensimmäinen ei-katolinen hautausmaa, sitten '
+          + 'oluttarha, jonka asiakkaista kerrottiin, että he '
+          + 'kiipesivät mäelle selvinä ja vierivät alas juovuksissa, '
+          + 'ja lopulta kouluja. Suurin osa mäestä kaivettiin pois '
+          + '1949 Hollywood-moottoritien tieltä. Muistomuuri '
+          + 'valmistui vaiheittain ja vihittiin 3. heinäkuuta 1958. '
+          + 'Se on maan suurin sotilaallinen reliefimuistomerkki: '
+          + 'Henry Kreisin suunnittelema terrakottapaneeli on 24 '
+          + 'metriä leveä ja 14 korkea ja esittää lipunnostoa. '
+          + 'Paneelien oikealla puolella on 24 metriä leveä '
+          + 'vesiputous, joka oli poissa käytöstä vuoden 1977 '
+          + 'kuivuudesta lähtien ja avattiin uudelleen joulukuussa '
+          + '2018.',
+      kuvat: [
+        {
+          tiedosto: 'Los Angeles, California (September 9, 2022) - 241.jpg',
+          selite: 'Kreisin terrakottapaneeli vasemmalla ja 24 metriä leveä '
+            + 'vesiputous, joka avattiin uudelleen 2018.',
+          lahde: 'Another Believer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Walt Disney -konserttitalo': {
+      aika: '2003',
+      teksti: 'Lillian Disney lahjoitti 1987 viisikymmentä miljoonaa '
+          + 'dollaria konserttitaloa varten lahjaksi kaupungille ja '
+          + 'muistoksi miehensä taideharrastuksesta. Frank Gehry '
+          + 'valittiin arkkitehdiksi, vaikka hän piti sitä '
+          + 'epätodennäköisimpänä asiana, mitä hänelle voisi tapahtua '
+          + '— hän oli tunnettu halpojen materiaalien '
+          + 'epätavallisesta käytöstä, ja Disneyn suvun edustaja oli '
+          + 'aiemmin sanonut, ettei Walt Disneyn nimeä missään '
+          + 'tapauksessa panna hänen suunnittelemaansa taloon. '
+          + 'Piirustukset valmistuivat 1991.'
+          + '\n\n'
+          + 'Työ takkuili. Pysäköintiluola rakennettiin 1992–1996 ja '
+          + 'maksoi 110 miljoonaa, mutta itse talon työt seisoivat '
+          + '1994–1996 rahoituksen puutteessa; säästösyistä '
+          + 'alkuperäinen kivijulkisivu vaihdettiin ruostumattomaan '
+          + 'teräkseen. Muotojen matemaattinen mutkikkuus vaati '
+          + 'apuvälineekseen CATIA-ohjelman, jota käytetään '
+          + 'ranskalaisten hävittäjien suunnittelussa: esimerkiksi '
+          + 'pohjoissivun pilarit kallistuvat eteenpäin '
+          + 'seitsemäntoista astetta. Talo avattiin 23. lokakuuta '
+          + '2003, ja se maksoi noin 274 miljoonaa dollaria.'
+          + '\n\n'
+          + 'Salissa on 2 265 paikkaa, ja se on sovitus kahdesta '
+          + 'perinteestä: Berliinin filharmonian viinitarhamallista '
+          + 'ja Wienin Musikvereinin kenkälaatikosta. Akustiikan '
+          + 'suunnitteli Minoru Nagata ja työn viimeisteli hänen '
+          + 'oppilaansa Yasuhisa Toyota. Kesällä 2003 orkesteri sai '
+          + 'harjoitella salissa ennen avajaisia, ja Los Angeles '
+          + 'Timesin kriitikko kuvasi hetkeä, jolloin sali heräsi '
+          + 'toisessa harjoituksessa: kapellimestari Esa-Pekka '
+          + 'Salonen huomasi, että orkesterin vuosikymmeniä omistamissa '
+          + 'Ravel-nuoteissa oli painovirheitä, joita kukaan ei ollut '
+          + 'vanhassa salissa kuullut. Ulkopinta aiheutti sekin '
+          + 'yllätyksen: kiillotetut paneelit heijastivat '
+          + 'auringonvaloa naapuritaloihin ja kuumensivat jalkakäytävää '
+          + 'jopa kuuteenkymmeneen asteeseen, kunnes ongelmapaneelit '
+          + 'hiottiin himmeiksi 2005.',
+      kuvat: [
+        {
+          tiedosto: 'Walt Disney Concert Hall exterior 01.jpg',
+          selite: 'Julkisivun piti olla kiveä, mutta säästösyistä siitä tuli '
+            + 'ruostumatonta terästä.',
+          lahde: 'Leviclancy, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaupungintalo: {
+      aika: '1928',
+      teksti: 'Kaupunginvaltuusto sääti 1905, ettei mikään uusi talo '
+          + 'saa olla kolmeatoista kerrosta tai 46:ta metriä korkeampi '
+          + '— kaupunkikuvan piti pysyä yhtenäisenä. Kun oma '
+          + 'kaupungintalo valmistui 1928, se sai julkisena '
+          + 'rakennuksena poikkeuksen: 32 kerrosta ja 138 metriä eli '
+          + 'kolme kertaa niin korkea kuin mikään muu. Sääntö '
+          + 'kumottiin kansanäänestyksellä vasta 1957, ja '
+          + 'kaupungintalo pysyi kaupungin korkeimpana rakennuksena '
+          + 'vuoteen 1966. Sen piirsivät John Parkinson, John C. '
+          + 'Austin ja Albert C. Martin, ja se vihittiin 26. '
+          + 'huhtikuuta 1928.'
+          + '\n\n'
+          + 'Talossa on kaksi kertomisen arvoista yksityiskohtaa. '
+          + 'Tornin betoniin sekoitettiin hiekkaa Kalifornian '
+          + 'jokaisesta 58 piirikunnasta ja vettä sen 21 '
+          + 'historiallisesta lähetysasemasta. Tornin muoto on '
+          + 'jäljitelmä Halikarnassoksen mausoleumista eli yhdestä '
+          + 'antiikin seitsemästä ihmeestä, ja pyramidin huipulla '
+          + 'palaa lentomajakka, joka on nimetty Charles Lindberghin '
+          + 'mukaan. Talon kuva on ollut Los Angelesin poliisin '
+          + 'virkamerkissä vuodesta 1940.'
+          + '\n\n'
+          + 'Vuonna 1998 rakennus suljettiin 135 miljoonan dollarin '
+          + 'peruskorjaukseen, joka kesti vuoteen 2001. Sen tärkein '
+          + 'osa ei näy ulos lainkaan: talo nostettiin '
+          + 'perustuseristimien päälle niin, että se saa keinua '
+          + 'järistyksessä. Vahvistus mitoitettiin magnitudin 8,2 '
+          + 'järistykselle, jonka jälkeen talon pitää olla vain '
+          + 'lievästi vaurioitunut ja yhä toimintakykyinen. Se on '
+          + 'edelleen maailman korkein perustuseristetty rakennus. '
+          + 'Ylimmässä kerroksessa on maksuton näköalataso, joka on '
+          + 'auki arkisin virka-aikaan.',
+      kuvat: [
+        {
+          tiedosto: 'LA City Hall - 2007-05-11.JPG',
+          selite: 'Torni hallintokorttelin päästä katsottuna: huipulla on '
+            + 'Halikarnassoksen mausoleumin mukaan tehty pyramidi.',
+          lahde: 'Kjetil Ree, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Angels Flight': {
+      aika: '1901',
+      teksti: 'Los Angeles Incline Railway avattiin 1901 eversti '
+          + 'J. W. Eddyn rahoittamana. Rata on 91 metriä pitkä ja '
+          + 'nousee 29 metriä, ja sillä on kaksi vaunua, Olivet ja '
+          + 'Sinai, jotka kulkevat samalla vaijerilla vastakkaisiin '
+          + 'suuntiin. Alkuperäisessä järjestelyssä yläasemalla ollut '
+          + 'kone veti ylöspäin menevää vaunua ja alaspäin menevä '
+          + 'laskeutui pelkän painovoiman varassa. Nimi Angels Flight '
+          + 'tuli Hill Streetin puoleisesta portista ja vakiintui '
+          + 'viralliseksi 1912. Rataa on kutsuttu maailman lyhyimmäksi '
+          + 'rautatieyhtiöksi, ja ensimmäisten viidenkymmenen vuotensa '
+          + 'aikana se kuljetti yli sata miljoonaa matkustajaa.'
+          + '\n\n'
+          + 'Rata suljettiin 18. toukokuuta 1969, kun koko Bunker '
+          + 'Hillin kaupunginosa purettiin. Purkaminen alkoi '
+          + 'seuraavana päivänä, ja se hävitti lähes 22 000 '
+          + 'työläisperheen vuokrakodit — rappeutuneita mutta '
+          + 'arkkitehtonisesti merkittäviä taloja, joiden tilalle '
+          + 'nousi toimistotorneja. Vaunut Sinai ja Olivet vietiin '
+          + 'varastoon Olive Streetille, ja niitä säilytettiin siellä '
+          + '27 vuotta maksutta odottamassa radan palautusta, jonka '
+          + 'kaupungin kehitysvirasto oli luvannut kahdessa vuodessa. '
+          + 'Rata avattiin uudelleen 1996 puoli korttelia '
+          + 'alkuperäistä paikkaa etelämpänä.'
+          + '\n\n'
+          + 'Uusi rata oli rakennettu väärin. 1. helmikuuta 2001 '
+          + 'Sinai lähti yläaseman lähellä vierimään takaisin alas ja '
+          + 'törmäsi Olivetiin: 83-vuotias mies kuoli, hänen vaimonsa '
+          + 'ja seitsemän muuta loukkaantuivat. Onnettomuustutkinta '
+          + 'osoitti, että uudessa järjestelmässä kummallakin vaunulla '
+          + 'oli oma vetokoneistonsa eikä vaunuja siis tasapainottanut '
+          + 'toisiaan, eikä siinä ollut varavaijeria eikä kiskojarruja '
+          + '— tutkijat eivät löytäneet maailmasta toista köysirataa, '
+          + 'joka olisi toiminut ilman kumpaakaan. Hätäjarru oli '
+          + 'lisäksi ollut epäkunnossa parisen vuotta väärin asennetun '
+          + 'venttiilin takia. Rata korjattiin, ja nykyisessä '
+          + 'järjestelmässä on yksi yhteinen vetovaijeri, varavaijeri, '
+          + 'kiskojarrut ja oma evakuointimoottori. Liikenne alkoi '
+          + 'jälleen elokuussa 2017.',
+      kuvat: [
+        {
+          tiedosto: 'Angels Flight funicular, Downtown Los Angeles, California 02.jpg',
+          selite: 'Hill Streetin portti, kaksi kiskoparia ja vaunut '
+            + 'yläasemalla Bunker Hillin rinteessä.',
+          lahde: 'Levi Clancy, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pääkirjasto': {
+      aika: '1926',
+      teksti: 'Bertram Goodhuen suunnittelema kirjastotalo '
+          + 'rakennettiin 1924–1926, ja se avattiin yleisölle '
+          + '6. heinäkuuta 1926. Goodhue haki vaikutteita muinaisesta '
+          + 'Egyptistä ja Välimeren rakennusperinteestä: keskustornin '
+          + 'huipulla on laatoitettu mosaiikkipyramidi, jonka sivuilla '
+          + 'on aurinkoja ja jonka huipulla soihtua kannatteleva käsi '
+          + 'esittää oppimisen valoa. Muualla talossa on sfinksejä, '
+          + 'käärmeitä ja tähtitaivasmosaiikkeja sekä Lee Lawrien '
+          + 'veistoksia. Sisällä on Dean Cornwellin neliosainen '
+          + 'seinämaalaus Kalifornian historiasta, valmis noin 1933.'
+          + '\n\n'
+          + 'Talo toimi huonosti. Lukusalien avohyllyillä oli vain '
+          + 'kymmenisen prosenttia kokoelmasta, ja kaiken muun sai '
+          + 'pyytämällä lipukkeella: virkailija haki kirjan '
+          + 'sisävarastosta, joka oli ahdettu kahteen betonirunkoon '
+          + 'niin tiiviisti, että hyllyväli oli vajaat kaksi metriä. '
+          + 'Kun lukusalien katot olivat kolmesta neljään ja puoleen '
+          + 'metriin, sisävarastoon mahtui viisi tai kuusi tasoa '
+          + 'saman korkeuden sisään. Korjausta esitettiin 1960-luvulta '
+          + 'alkaen, mutta kaupunki ei suostunut maksamaan.'
+          + '\n\n'
+          + 'Ratkaisun toi tuhopoltto. Talossa syttyi 1986 kaksi '
+          + 'tulipaloa, 29. huhtikuuta ja 3. syyskuuta, molemmat '
+          + 'sytytettyjä. Ensimmäinen paloi seitsemän tuntia, koska '
+          + 'vanha rakenne ei päästänyt savua ulos eikä palokuntaa '
+          + 'sisään, ja pikkupesäkkeitä leimahteli vielä päiviä. '
+          + 'Neljäsataatuhatta nidettä eli viidennes kokoelmasta '
+          + 'tuhoutui ja 700 000 kärsi vesi- ja savuvahinkoja. Toinen '
+          + 'palo tuhosi musiikkiosaston lukusalin. Palo oli '
+          + 'lopullinen sysäys peruskorjaukselle, joka tehtiin '
+          + '1988–1993. Kirjasto myi ilmatilaoikeutensa rakentajille '
+          + 'rahoittaakseen työn — niiden turvin nousi kadun toiselle '
+          + 'puolelle pilvenpiirtäjä — ja sai kahdeksankerroksisen '
+          + 'Tom Bradley -lisäsiiven, joka on lähes yhtä suuri kuin '
+          + 'alkuperäinen talo. Hyllymetrejä on nyt 143 kilometriä.',
+      kuvat: [
+        {
+          tiedosto: 'Los Angeles Central Library, 630 W. 5th St. Downtown Los Angeles 1.jpg',
+          selite: 'Keskustornin mosaiikkipyramidi aurinkoineen; huipulla on '
+            + 'soihtua kannatteleva käsi. Takana kohoaa se torni, joka '
+            + 'rakennettiin kirjaston myymille ilmatilaoikeuksille.',
+          lahde: 'MikeJiroch, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Japanilaisamerikkalainen museo': {
+      aika: '1992',
+      teksti: 'Museo perustettiin 1992 Little Tokyoon, ja sen '
+          + 'ensimmäinen puheenjohtaja oli Bruce Teruo Kaji. Hanke '
+          + 'syntyi aikana, jolloin japanilaisamerikkalainen yhteisö '
+          + 'oli järjestäytynyt vaatimaan tunnustusta sille vääryydelle, '
+          + 'jonka liittovaltio oli tehnyt sille toisen maailmansodan '
+          + 'aikana. Museon tarkoitus oli kuitenkin laajempi kuin '
+          + 'yksi vääryys: tallentaa yhteisön oma historia ja '
+          + 'kulttuuri Yhdysvalloissa.'
+          + '\n\n'
+          + 'Ensimmäinen osoite oli itsessään todistuskappale. Museo '
+          + 'avattiin vuoden 1925 Hompa Hongwanji -buddhalaistemppelin '
+          + 'rakennuksessa — samassa talossa, jossa viranomaiset '
+          + 'kirjasivat 1942 japanilaisamerikkalaisia '
+          + 'sotavankeuteensa. Vuonna 1999 museo muutti nykyiseen '
+          + 'paviljonkiinsa, jonka rakennustyötä johti arkkitehti '
+          + 'Gyo Obata, ja vanha temppeli jäi toimistoiksi ja '
+          + 'varastoksi.'
+          + '\n\n'
+          + 'Kokoelmat kattavat yli 130 vuotta ensimmäisen '
+          + 'siirtolaispolven issein ajoista nykypäivään. Liikkuvan '
+          + 'kuvan arkistossa on yli kolmekymmentä kilometriä '
+          + 'kotielokuvaa 1920-luvulta 1950-luvulle, ja museo '
+          + 'säilyttää sitä yhdessä elokuva-akatemian arkiston '
+          + 'kanssa. Vuonna 1993 museo sai satoja esineitä ja '
+          + 'kirjeitä, jotka lapset olivat lähettäneet leireiltä '
+          + 'sandiegolaiselle kirjastonhoitajalle Clara Breedille; '
+          + 'niistä tehtiin näyttely, ja ne ovat nyt osa pysyvää '
+          + 'kokoelmaa. Museo on Smithsonianin kumppanilaitos, ja '
+          + 'joulukuussa 2010 se sai museoille ja kirjastoille '
+          + 'myönnettävän kansallisen ansiomitalin.',
+      kuvat: [
+        {
+          tiedosto: 'Japanese American National Museum (Los Angeles) August 2024.JPG',
+          selite: 'Vuoden 1999 paviljonki, jonka rakennustyötä johti '
+            + 'arkkitehti Gyo Obata; vanha temppelirakennus on saman korttelin '
+            + 'takana.',
+          lahde: 'Alexis Doine, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pershing Square': {
+      aika: '1866',
+      teksti: 'Kortteli oli 1850-luvulla leiripaikka, jossa yöpyivät '
+          + 'ne, jotka tulivat pueblon ulkopuolelta. Sen halki kulki '
+          + 'Arroyo de Los Reyes -niminen uoma, ja vieressä kulkivat '
+          + 'kaupungin vanhan maaojan sivukanavat. Vuonna 1866 '
+          + 'pormestari Cristóbal Aguilar vihki paikan julkiseksi '
+          + 'aukioksi nimellä La Plaza Abaja eli alempi tori — se on '
+          + 'siis seitsemän vuotta isoisän matkaa vanhempi. Läheisen '
+          + 'oluttarhan pitäjä, saksalainen siirtolainen George '
+          + 'Lehman, istutti aukiolle sypressejä, hedelmäpuita ja '
+          + 'kukkivia pensaita ja hoiti niitä kuolemaansa 1882 asti.'
+          + '\n\n'
+          + 'Nimi vaihtui tämän tästä. Kun kadun toiselle puolelle '
+          + 'tuli 1867 Pyhän Vincentin oppilaitos, aukiota alettiin '
+          + 'kutsua Pyhän Vincentin puistoksi; 1870 se nimettiin '
+          + 'virallisesti Los Angeles Parkiksi, 1886 kuudennen kadun '
+          + 'puistoksi ja 1890-luvun alussa Keskuspuistoksi. Silloin '
+          + 'sinne tuli soittolava ja kasvillisuudesta kasvoi '
+          + 'trooppisen tuuhea varjoisa keidas. Marraskuussa 1918, '
+          + 'viikko ensimmäisen maailmansodan aselevon jälkeen, '
+          + 'aukiosta tuli Pershing Square kenraali John J. '
+          + 'Pershingin mukaan. Vuoden 1900 muistomerkki Kalifornian '
+          + 'kahdellekymmenelle Espanjan-sodassa kaatuneelle on '
+          + 'kaupungin vanhin julkinen taideteos.'
+          + '\n\n'
+          + 'Aukio kaivettiin 1952 kokonaan auki kolmikerroksista '
+          + 'maanalaista pysäköintilaitosta varten, ja sen päälle '
+          + 'levitettiin nurmi; ramppien takia aukio jäi irralleen '
+          + 'ympäröivistä jalkakäytävistä. Osa kaivetuista palmuista '
+          + 'lähetettiin Disneylandiin viidakkoristeilyn '
+          + 'kulisseiksi. Vuonna 1992 aukio suljettiin uudelleen 14,5 '
+          + 'miljoonan dollarin muutostyöhön, jonka tekivät '
+          + 'meksikolainen Ricardo Legorreta ja yhdysvaltalainen '
+          + 'Laurie Olin; 1994 avattiin nykyinen aukio kymmenen '
+          + 'kerroksen korkuisine violetteine kellotorneineen ja '
+          + 'siirroslinjaa esittävine kävelypolkuineen. Uusi remontti '
+          + 'alkoi 2023 ja on tarkoitus saada valmiiksi vuoden 2028 '
+          + 'olympialaisiin. Valtuutettu Kevin de León esitti 2024 '
+          + 'aukion nimeämistä Biddy Mason Parkiksi orjuudesta '
+          + 'vapautuneen sairaanhoitajan, kiinteistöyrittäjän ja '
+          + 'hyväntekijän mukaan; esitys jäi valiokuntaan, mutta '
+          + 'kaupunginvaltuusto hyväksyi sen yksimielisesti '
+          + 'syyskuussa 2026.',
+      kuvat: [
+        {
+          tiedosto: 'Art in Pershing Square Park, a public park in downtown Los Angeles, California LCCN2013632114.tif',
+          selite: 'Legorretan ja Olinin vuoden 1994 aukio: violetti '
+            + 'kellotorni, oranssit pallot ja kivetys, jonka alla on 1952 '
+            + 'kaivettu pysäköintilaitos.',
+          lahde: 'Carol M. Highsmith, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Eastern Columbia': {
+      aika: '1930',
+      teksti: 'Adolph Sieroty oli aloittanut 1892 kelloliikkeellä '
+          + 'Spring Streetillä ja kasvattanut siitä kaksi '
+          + 'tavarataloa: Eastern myi huonekaluja ja kodintavaraa, '
+          + 'Columbia vaatteita. Vuonna 1930 ne saivat yhteisen '
+          + 'talon Broadwaylle. Claud Beelmanin piirtämä '
+          + 'kolmetoistakerroksinen rakennus avattiin 12. syyskuuta '
+          + '1930 yhdeksän kuukauden rakentamisen jälkeen ja maksoi '
+          + '1,25 miljoonaa dollaria.'
+          + '\n\n'
+          + 'Kaupungin 46 metrin korkeusrajoitus oli yhä voimassa, '
+          + 'mutta koristeellinen kellotorni sai poikkeusluvan, ja '
+          + 'sen ansiosta talo yltää 80 metriin. Runko on '
+          + 'teräsbetonia ja verhous kiiltävää turkoosia '
+          + 'terrakottaa syvänsinisin ja kullanvärisin listoin. '
+          + 'Julkisivun aiheina ovat auringonsäteet, siksakit, '
+          + 'kulmakuviot ja tyylitellyt eläin- ja kasviaiheet, ja '
+          + 'nelisivuisen kellotornin joka tahossa lukee EASTERN '
+          + 'kirkkaanvalkoisella neonilla. Jalkakäytävät talon '
+          + 'ympärillä ovat monivärisiä terratsomosaiikkeja samoin '
+          + 'siksak-kuvioin. Talo näkyy Santa Monican '
+          + 'moottoritielle asti, ja sitä pidetään yleisesti '
+          + 'kaupungin parhaana säilyneenä art deco -rakennuksena.'
+          + '\n\n'
+          + 'Avautuessaan talossa oli 25 600 neliömetriä lattiaa. '
+          + 'Neljä alinta kerrosta olivat kaupoilla yhteiset, '
+          + 'seitsemännestä ylöspäin kaikki oli Easternia: '
+          + 'kuistikalusteita, olohuoneita, ruokailuryhmiä, lasitavaraa. '
+          + 'Kahdennessatoista kerroksessa oli konttorit ja '
+          + 'seitsemänsadan hengen juhlasali, kolmannessatoista '
+          + 'suihkut, kerhohuone ja lounaskahvila samalle '
+          + 'seitsemällesadalle työntekijälle. Kaupat suljettiin '
+          + '1957. Kellotorni oli ollut vuosikymmeniä pimeänä, kun se '
+          + 'sytytettiin uudelleen 23. kesäkuuta 2005 talon '
+          + '75-vuotisjuhlassa, ja kahden vuoden ja 80 miljoonan '
+          + 'dollarin muutostyön jälkeen talossa oli 2006 valmiina '
+          + '147 asuntoa.',
+      kuvat: [
+        {
+          tiedosto: 'Eastern Columbia Tower - Los Angeles.jpg',
+          selite: 'Turkoosi terrakotta ja nelisivuinen kellotorni, jonka joka '
+            + 'tahossa lukee EASTERN valkoisella neonilla.',
+          lahde: 'Galkab, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * MONTEVIDEON KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.montevideo, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "General Artigas railway station", "Sodre National
+   * Auditorium", "City Hall of Montevideo", "Edificio Lapido", "Museo
+   * Torres García", "Joaquín Torres-García", "Estévez Palace", "Bolsa
+   * de Valores de Montevideo" ja "Museum of Pre-Columbian and
+   * Indigenous Art").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden aiheet
+   * ovat niemen perustaminen, luonnonsatama, isoisän matkavuoden
+   * tekniikka, rambla, Cabildo ja Plaza Matriz, katedraali, Ciudad
+   * Viejan muurit, brittimiehitys, Guerra Granden saarto, Teatro
+   * Solís, candombe ja Barrio Sur, Palacio Salvo, karnevaali ja
+   * Estadio Centenario. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Keskusaseman
+   * jutussa EI kerrota ensimmäisestä rautatiestä Las Piedrasiin,
+   * koska se on lehden noston K3 aihe, ja kaupungintalon jutussa
+   * Palacio Salvo mainitaan vain korkeusvertailun takia — Salvon oma
+   * tarina on lehden musiikkisivulla.
+   *
+   * KAKSI LUKUA ON MERKITTY LÄHTEEN MUKAAN EPÄTARKAKSI. Pörssin
+   * vuosivaihdolta puuttuu artikkelista valuutta, ja se sanotaan
+   * jutussa ääneen; samoin Torres Garcían museon kävijämäärä on
+   * artikkelin oma luku ilman vuosilukua.
+   *
+   * YKSI ARTIKKELIN VÄITE JÄTETTIIN KIRJOITTAMATTA, KOSKA KUVA
+   * SANOO MUUTA. Kaupungintalon artikkeli sanoo, että valmiista
+   * talosta jäi pois tiiliverhous; Commonsin valokuvissa torni on
+   * selvästi tiiltä. Väitettä ei siis toisteta kummallakaan tavalla.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 7.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 640 px
+   * esikatseluna. Pörssille ei otettu kuvaa: Commonsin ainoa oikea
+   * kuva on 960 px leveä eli alle rajan, ja hakutulosten "Bvmt
+   * headquarters" on Tunisin pörssi. Aseman ensimmäinen ehdokas
+   * hylättiin, koska julkisivun töhryissä oli hakaristi.
+   */
+  montevideo: {
+    Keskusasema: {
+      aika: '1897',
+      teksti: 'Vanha Montevideon asema paloi 1891, ja Central '
+          + 'Uruguay Railway aloitti uuden rakentamisen sen jälkeen. '
+          + 'Peruskivi laskettiin 27. elokuuta 1893, ja asema avattiin '
+          + 'matkustajille 15. heinäkuuta 1897. Sen suunnitteli '
+          + 'italialainen insinööri ja arkkitehti Luigi Andreoni, ja '
+          + 'se nousi Aguadan kaupunginosaan hieman vanhankaupungin '
+          + 'ulkopuolelle.'
+          + '\n\n'
+          + 'Asema kasvoi vielä valmistumisensa jälkeen. Vuonna 1912 '
+          + 'sen raiteet yhdistettiin satamaterminaaliin, kun sataman '
+          + 'työt olivat valmistuneet, ja bulevardin puolella merta '
+          + 'täytettiin maaksi niin, että raiteet ulottuivat lähes '
+          + 'Guatemala-kadulle asti. Rio Negro -kadun lipunmyynti '
+          + 'siirrettiin suureen keskushalliin. Valtio antoi asemalle '
+          + '1955 nimen José Artigasin keskusasema ja 1974 kenraali '
+          + 'Artigasin keskusasema; halli uudistettiin 1977, ja '
+          + 'rakennus julistettiin kansalliseksi historialliseksi '
+          + 'monumentiksi 1975.'
+          + '\n\n'
+          + 'Matkustajaliikenne loppui 1988. Sen jälkeen hallissa '
+          + 'pidettiin näyttelyitä ja konsertteja — esiintyjinä olivat '
+          + 'muiden muassa Duran Duran ja Iron Maiden — ja toimistot '
+          + 'sekä tavararatapiha jatkoivat toimintaansa. Uusi pieni '
+          + 'asema rakennettiin 500 metriä pohjoisemmaksi 1999 '
+          + 'alkaen, ja kun se viivästysten jälkeen avattiin 2003, '
+          + 'vanha asema jäi tyhjilleen. Sitä ei ole unohdettu: '
+          + 'matkustajaryhmä on ajanut aseman elvyttämistä vuodesta '
+          + '1998 ja luovutti 2009 viranomaisille lähes 7 000 '
+          + 'nimeä, 12. helmikuuta 2007 asema kytkettiin takaisin '
+          + 'rataverkkoon poistamalla betonitulppa ja asentamalla 20 '
+          + 'metriä kiskoa, ja 19. syyskuuta 2019 — seitsemäntoista '
+          + 'vuotta viimeisen junan jälkeen — asemalle ajettiin '
+          + 'jälleen juna rautatieläisten päivän kunniaksi.',
+      kuvat: [
+        {
+          tiedosto: 'J34 590 Montevideo, Estación central General Artigas.jpg',
+          selite: 'Tyhjilleen jäänyt asema kadun kulmasta: kaksikerroksinen '
+            + 'juhlava julkisivu, holvikäytävä ja pitkä laituriseinä '
+            + 'jatkuvat vasemmalle.',
+          lahde: 'Falk2, Wikimedia Commons (CC BY-SA 3.0 de)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Sodren auditorio': {
+      aika: '1971',
+      teksti: 'Talo on ollut kaupungin näyttämö kahdesti. Sen '
+          + 'paikalla seisoi Urquizan teatteri, joka syttyi tuleen '
+          + '18. syyskuuta 1971. Palaneeseen runkoon rakennettiin '
+          + 'sittemmin Sodren kansallinen auditorio, joka on nimetty '
+          + 'juristin, ministerin ja Sodren eli valtion yleisradio- ja '
+          + 'esitystoiminnan palvelun johtajan Adela Retan '
+          + '(1921–2001) mukaan. Kulttuuriperinnön kansallinen '
+          + 'toimikunta julisti talon Uruguayn historialliseksi '
+          + 'monumentiksi 29. elokuuta 2019.'
+          + '\n\n'
+          + 'Auditorio on keskustan vanhassa kulmassa Andesin ja '
+          + 'Mercedesin katujen risteyksessä, ja sen ala on noin '
+          + '25 000 neliömetriä. Saleja on kaksi. Eduardo Fabini '
+          + '-salissa on noin 2 000 paikkaa, ja se on tarkoitettu '
+          + 'oopperalle, sinfoniakonserteille ja baletille: '
+          + 'orkesterisyvennykseen mahtuu yli sata soittajaa kolmessa '
+          + 'moduulissa, jotka nousevat ja laskevat automatiikalla. '
+          + 'Näyttämö on maan suurin, vapaata korkeutta 27 metriä ja '
+          + 'säädettävä aukko enimmillään 15,5 metriä leveä ja 12 '
+          + 'metriä syvä. Hugo Balzo -salissa on noin 280 paikkaa; se '
+          + 'suunniteltiin kamarimusiikille ja palvelee nyt '
+          + 'monitoimitilana pienen mittakaavan esityksille.'
+          + '\n\n'
+          + 'Talossa on lisäksi amfiteatteri, näyttelytiloja, '
+          + 'harjoitussaleja ja työpajoja sekä ääni- ja '
+          + 'kuvatallennustilat, jotka palvelevat kaikkia saleja. '
+          + 'Uruguayn kansallisbaletti on täällä kotonaan.',
+      kuvat: [
+        {
+          tiedosto: 'Auditorio Nacional del Sodre doctora Adela Reta.jpg',
+          selite: 'Auditorion lasinen kulma Andesin ja Mercedesin katujen '
+            + 'risteyksessä; sisäänkäynnin yllä on näytön mainos illan '
+            + 'esityksestä.',
+          lahde: 'Estudiante1969, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Kaupungintalo: {
+      aika: '1941',
+      teksti: '1930-luvulla julistettiin kilpailu talosta, johon '
+          + 'saataisiin Montevideon silloiset toimeenpano- ja '
+          + 'lainsäädäntöelimet, johtokunta ja edustajakokous — '
+          + 'perustuslakiuudistukset muuttivat noita elimiä '
+          + 'myöhemmin. Tontiksi annettiin vanhan englantilaisen '
+          + 'hautausmaan maa, jonka valtio oli hankkinut vuosia '
+          + 'aiemmin aikoen rakentaa siihen talon hallitukselle ja '
+          + 'oikeuslaitokselle. Suunnittelijaksi valittiin '
+          + 'uruguaylainen arkkitehti Mauricio Cravotto.'
+          + '\n\n'
+          + 'Rakentaminen alkoi 1935, ja talo vihittiin 16. heinäkuuta '
+          + '1941. Valmis rakennus ei vastaa Cravotton vuoden 1929 '
+          + 'mallia: päätorni oli piirretty 114-metriseksi, jolloin '
+          + 'siitä olisi tullut kaupungin korkein rakennus, mutta '
+          + 'rahan puutteessa se nousi vain 78 metriin ja jäi toiseksi '
+          + 'Palacio Salvon jälkeen. '
+          + 'Sivusiivet, maanalainen halli ja autotalli rakennettiin '
+          + 'vasta myöhemmin. Talo näyttää silti mahtavammalta kuin '
+          + 'mittansa, sillä 18 de Julio -katu kulkee tässä kohtaa '
+          + 'pitkän harjanteen laella.'
+          + '\n\n'
+          + 'Pääsisäänkäynnin edessä seisoo pronssinen jäljennös '
+          + 'Michelangelon Daavidista ja aulan oikealla puolella '
+          + 'Samothraken Niken kopio; atriumissa on taide- ja '
+          + 'käsityönäyttelyitä. Länsisiivessä toimii taidehistorian '
+          + 'museo, ja talossa on kaupungin valokuvakeskus, jonka '
+          + 'arkistosta yleisö voi tilata kopioita. Takasivun '
+          + 'ulkohissi vie 22. kerroksen näköalatasanteelle. Talon '
+          + 'edusaukio on vilkas kohtaamispaikka: siellä katsotaan '
+          + 'Uruguayn maajoukkueen ottelut vastapäisen rakennuksen '
+          + 'suurelta näytöltä.',
+      kuvat: [
+        {
+          tiedosto: 'Intendencia Palacio Municipal.JPG',
+          selite: 'Kaupungintalon torni iltavalossa; alarivissä näkyy matalan '
+            + 'siiven pylväikkö 18 de Julion puolella.',
+          lahde: 'Ypsilon from Finland, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lapidon talo': {
+      aika: '1933',
+      teksti: 'Arkkitehti Juan Aubriot suunnitteli Lapidon talon, '
+          + 'joka valmistui 1933 18 de Julio -kadun varteen keskelle '
+          + 'kaupunkia. Neljätoistakerroksista taloa '
+          + 'pidetään edustavana esimerkkinä Uruguayn 1900-luvun alun '
+          + 'arkkitehtuurin uudistumisesta, jota kansainväliset '
+          + 'virtaukset ohjasivat, ja se merkittiin kansalliseksi '
+          + 'kulttuuriperintökohteeksi 1989.'
+          + '\n\n'
+          + 'Talossa toimi 1960-luvulle asti La Tribuna Popular '
+          + '-sanomalehden päätoimitus. Siviili- ja sotilashallinnon '
+          + 'diktatuurin aikana 1973–1985 samoissa tiloissa '
+          + 'valmistettiin opposition maanalaisia julkaisuja. Nykyään '
+          + 'talo on asuin- ja toimistokäytössä, ja katutasossa on '
+          + 'liiketiloja.',
+      kuvat: [
+        {
+          tiedosto: '2016 Montevideo Palacio de la Tribuna Popular Edificio Lapido.jpg',
+          selite: 'Neljätoista kerrosta kaarevia parvekkeita nousee kadun '
+            + 'kulmasta; ylimpänä on pyöreä torniosa.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Torres Garcían museo': {
+      aika: '1949',
+      teksti: 'Museon perusti Manolita Piña Torres, taidemaalari '
+          + 'Joaquín Torres Garcían leski, miehensä kuoltua 1949. Hän '
+          + 'perusti myös García Torres -säätiön, joka pitää '
+          + 'järjestyksessä maalaukset, piirustukset, alkuperäiset '
+          + 'kirjoitukset, arkistot, esineet ja taiteilijan '
+          + 'suunnittelemat huonekalut sekä häntä koskevat valokuvat, '
+          + 'lehdet ja julkaisut. Museo on Ciudad Viejassa, ja sen '
+          + 'seinillä on epätavallisia muotokuvia historian '
+          + 'henkilöistä sekä kubistisia maalauksia.'
+          + '\n\n'
+          + 'Taiteilija itse syntyi Montevideossa 28. heinäkuuta 1874 '
+          + 'ja vietti lapsuutensa isänsä sekatavarakaupassa vanhalla '
+          + 'Vaunutorilla, jonne tuotiin Eurooppaan vietävät raaka-'
+          + 'aineet. Perhe muutti 1891 Espanjaan, ja Torres García '
+          + 'asui aikuisikänsä pääosin siellä, Yhdysvalloissa, '
+          + 'Italiassa ja Ranskassa. Pariisissa hän perusti Cercle et '
+          + 'Carré -ryhmän, Euroopan ensimmäisen abstraktin taiteen '
+          + 'ryhmän, johon kuuluivat muiden muassa Piet Mondrian ja '
+          + 'Vasili Kandinsky. Montevideoon hän palasi huhtikuussa '
+          + '1934, neljänkymmenenkolmen vuoden jälkeen, piti '
+          + 'kaupungissa yli viisisataa luentoa kuudessa vuodessa ja '
+          + 'perusti Taller Torres-Garcían, työpajan, joka oli '
+          + 'periaatteiltaan Bauhausin sukua.'
+          + '\n\n'
+          + 'Museossa on seitsemän kerrosta: kolme alinta ovat '
+          + 'näyttelytilaa ja ylemmät opetusta ja taidepajoja varten. '
+          + 'Pohjakerroksessa toimii kirjasto ja kellarissa teatteri. '
+          + 'Artikkelin mukaan kävijöitä on yli 85 000 vuodessa, '
+          + 'mutta vuosilukua sille ei kerrota; osa heistä tulee '
+          + 'opastuksille ja työpajoihin, joita museo järjestää '
+          + 'taideopiskelijoille ja koululaisille.',
+      kuvat: [
+        {
+          tiedosto: '2016 Montevideo museo Torres García.jpg',
+          selite: 'Museon kapea julkisivu Ciudad Viejan kadulla: kolme '
+            + 'erkkeririviä ja pystykyltit, joissa lukee museon nimi.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Estévez-palatsi': {
+      aika: '1874',
+      teksti: 'Argentiinalainen yrittäjä ja sijoittaja Francisco '
+          + 'Estévez tilasi talon 1873 ranskalaissyntyiseltä '
+          + 'insinöörikapteenilta Édouard Manuel de Castelilta. '
+          + 'Palatsi valmistui toukokuussa 1874 asuintaloksi '
+          + 'korttelille, joka oli aiemmin ollut muurikaupungin '
+          + 'ulkoraja. Sääntö vaati, että Plaza Independencian '
+          + 'ympärillä julkisivun on oltava doorilainen, ja niin siitä '
+          + 'tuli. Estévez ja hänen vaimonsa Matilde Nin Reyes '
+          + 'asuivat toisessa kerroksessa, ja katutason siipi '
+          + 'vuokrattiin Italian konsulaatille ja liikkeille.'
+          + '\n\n'
+          + 'Estévezin konkurssin jälkeen talo siirtyi Banco de '
+          + 'Londres y Río de la Platalle, ja valtio osti sen pankilta '
+          + '1878 hintaan 130 000 Uruguayn pesoa. Presidentti Lorenzo Latorre teki palatsista '
+          + 'hallituksen istuinpaikan, ja muutostyöt johti insinööri '
+          + 'Alberto Capurro: hän säilytti pylväsportikon, lisäsi '
+          + 'julkisivuun kansallisvaakunalla varustetun '
+          + 'päätykolmion, muotoili pääparvekkeen uudelleen, levensi '
+          + 'sisäänkäynnin ja portaat, suurensi vastaanottosalit ja '
+          + 'poisti alkuperäiset kattolyhdyt. Uudistettu talo '
+          + 'vihittiin 25. toukokuuta 1880 presidentti Francisco '
+          + 'Antonino Vidalin toimesta.'
+          + '\n\n'
+          + 'Palatsi oli maan hallituksen istuin 1880–1985. '
+          + '1950-luvulla se muutettiin kollegiaalisen '
+          + 'hallitusneuvoston tarpeisiin, ja 1985 demokratian '
+          + 'palattua presidentti Julio María Sanguinetti siirsi '
+          + 'hallituksen Vapauden taloon, entiseen puolustusministeriön '
+          + 'päämajaan. Sisätilat uudistettiin 1987–1989 arkkitehti '
+          + 'Enrique Benechin ja taiteilija Manuel Espínola Gómezin '
+          + 'johdolla. Talo on ollut kansallinen historiallinen '
+          + 'monumentti vuodesta 1975, ja siihen avattiin 1999 museo, '
+          + 'joka esittelee presidentti-instituution esineistöä. '
+          + 'Nykyään palatsi on toimeenpanovallan seremoniallinen '
+          + 'päämaja: valtiolliset tilaisuudet pidetään täällä, kun '
+          + 'presidentin työhuone on viereisessä tornissa.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio Estévez 3.jpg',
+          selite: 'Doorilainen pylväsrivi ja päätykolmio vaakunoineen Plaza '
+            + 'Independencian laidalla; edessä on tyhjä kivetty aukio.',
+          lahde: 'Santi2903, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Montevideon pörssi': {
+      aika: '1867',
+      teksti: 'Pörssi syntyi 1867, kun kaupunkiin perustettiin '
+          + 'Montevideon pörssiyhdistys. Tarkoitus oli yksinkertainen: '
+          + 'kaupankäynnille tarvittiin kiinteä paikka ja kiinteä '
+          + 'kellonaika, jossa päivän liiketoimet hoidettiin. Samaan '
+          + 'aikaan syntyi kaksi muuta elintä — Chambre Syndicale, '
+          + 'joka edusti kaupan etuja, ja välittäjien sisäinen '
+          + 'komissio, joka sääteli molempien toimintaa.'
+          + '\n\n'
+          + 'Komissiosta tuli 1921 voittoa tavoittelematon yhdistys, '
+          + 'joka toimi sekä kaupankäyntipaikkana että välittäjien '
+          + 'kiltana, ja 1952 se otti nimekseen pörssin. '
+          + 'Arvopaperimarkkina erotettiin pörssistä 1997, ja 2004 '
+          + 'laitos sai nykyisen nimensä. Kaupankäynti eli '
+          + 'vuosisadan mukana: 1900-luvun ensimmäisellä '
+          + 'vuosikymmenellä se kasvoi voimakkaasti, vuosien 1929 ja '
+          + '1933 välillä lama painoi sen alas, 1934–1947 kasvua toi '
+          + 'yksityinen pääoma, ja 1950–1970 toiminta kutistui, kun '
+          + 'raha siirtyi lyhyisiin pankkilainoihin ja valtion '
+          + 'papereihin.'
+          + '\n\n'
+          + 'Uruguayn 1800-luvun lopun ja 1900-luvun alun yrityksistä '
+          + 'moni aloitti hakemalla pääomansa markkinoilta: lähes '
+          + 'viisikymmentä kotimaista yhtiötä listasi osakkeensa '
+          + 'pörssiin. Nykyään pörssiä valvoo Uruguayn keskuspankki, '
+          + 'ja välittäjän on oltava pörssin jäsen ja täytettävä lain '
+          + 'vaatimukset; erikoisjäseniä voivat olla pankit, '
+          + 'rahastoyhtiöt, eläkelaitokset ja vakuutusyhtiöt. Pörssiä '
+          + 'johtaa seitsenhenkinen komitea, ja sen rinnalla toimivat '
+          + 'tarkastuskomissio ja eettinen tuomioistuin. Artikkeli '
+          + 'sanoo vuosivaihdoksi lähes kolme miljardia mutta ei '
+          + 'kerro, missä valuutassa.',
+      lahde: 'Wikipedia',
+    },
+    'Alkuperäiskansojen taiteen museo': {
+      aika: '1888',
+      teksti: 'Talo ei ollut alun perin museo. Emilio Reus suunnitteli '
+          + 'sen 1800-luvun lopulla kahden saksalaisen arkkitehdin '
+          + 'kanssa vesihoitolaitokseksi, ja rakennus valmistui 1888. '
+          + 'Myöhemmin siinä toimi puolustusministeriön päämaja, ja '
+          + 'jossain vaiheessa talo jäi tyhjilleen. Kansalliseksi '
+          + 'historialliseksi monumentiksi se julistettiin 1986, '
+          + 'kunnostettiin 2004 ja sai silloin nykyisen tehtävänsä.'
+          + '\n\n'
+          + 'Museo on etnografinen ja keskittyy Latinalaisen Amerikan '
+          + 'eri osien alkuperäiskansoihin. Kokoelmassa on yli 700 '
+          + 'etnografista tai arkeologista esinettä: tekstiilejä, '
+          + 'perinteisiä soittimia, keramiikkaa ja taidetta. '
+          + 'Pääpaino on Uruguayn alkuperäiskansoissa, mutta esillä '
+          + 'ovat myös Mesoamerikka eli Meksiko ja Guatemala, '
+          + 'välialue eli Kolumbia ja Ecuador cuasmal-, capulí- ja '
+          + 'tuncahuán-kulttuureineen, Andien alue eli Peru ja '
+          + 'läntinen Bolivia sekä Etelä-Andit eli Chile ja pieni osa '
+          + 'Argentiinaa. Omat osastonsa ovat Amazonin ja Plata-'
+          + 'altaan kansoilla. Vuonna 2013 kokoelma liitettiin Google '
+          + 'Arts & Culture -palveluun.',
+      kuvat: [
+        {
+          tiedosto: 'Museo de Arte Precolombino e Indígena.jpg',
+          selite: 'Vesihoitolaitokseksi rakennettu talo kadun kulmasta; '
+            + 'julkisivun kaariholvien yllä riippuu museon punainen '
+            + 'banneri.',
+          lahde: 'Museo MAPI, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * VALPARAÍSON KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.valparaiso, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Sotomayor Square", "Palacio Baburizza", "St. Paul's
+   * Cathedral, Valparaíso", "University of Valparaíso", "Pontifical
+   * Catholic University of Valparaíso", "Dissidents Cemetery",
+   * "St. James Cathedral, Valparaíso" ja "Sacred Hearts Church
+   * (Valparaíso)").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden aiheet
+   * ovat Kap Hornin pysähdyspaikka, ascensorit, muraalit ja Unesco,
+   * Panaman kanava, Alimapu ja Iglesia de la Matriz, brittiyhteisö ja
+   * British Arch, tekniikan ensimmäiset, vuoden 1906 järistys,
+   * El Mercurio, Neruda, Paseo Gervasoni, Santiago Severínin
+   * kirjasto, kongressitalo ja sähköbussit. Yksikään kartan
+   * kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Plaza
+   * Sotomayorin jutussa EI kerrota laivaston päämajasta, vaikka se on
+   * aukion suurin rakennus: se on lehden matkaoppaan kuva-aihe ja
+   * kongressijakson taustaa. Anglikaanisen katedraalin jutussa ei
+   * kerrota brittikauppahuoneista (lehden nosto H2), vaan
+   * uskonnonvapauden rajoituksesta. Katolisen yliopiston jutussa
+   * kongressitalo mainitaan vain paikan osoitteena.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 7.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin 640 px
+   * esikatseluna. Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * valparaiso-lohkossa (kulttuuri-kategoriat.js). Valparaíson
+   * yliopisto jäi ilman kuvaa: Commonsin kuvat sen taloista ovat
+   * tavallisia toimistojulkisivuja, jotka eivät kerro jutun asiaa —
+   * kuvaton juttu on parempi kuin huono kuva.
+   */
+  valparaiso: {
+    'Plaza Sotomayor': {
+      aika: '1886',
+      teksti: 'Aukio on rakennettu mereltä vallatulle maalle, ja sen '
+          + 'nimi on vaihtunut monta kertaa: ensin Plaza de la Aduana '
+          + 'eli tulliaukio, sitten Plaza del Palacio ja Plaza '
+          + 'Intendencia, ja lopulta Rafael Sotomayorin mukaan Plaza '
+          + 'Sotomayor. Alun perin paikalla oli esplanadi, jonka läpi '
+          + 'San Agustínin rotkon likavesi valui hitaasti mereen. '
+          + 'Kesäkuun 10. päivänä 1825 myrsky katkaisi fregatti '
+          + 'Valdivian ankkuriköydet ja ajoi aluksen tähän rantaan; '
+          + 'viranomaiset täyttivät hylyn hiekalla ja käyttivät sitä '
+          + 'kaupungin ensimmäisen matkustajalaiturin perustana. '
+          + 'Varsinaista laituria alettiin rakentaa 1831, ja sen '
+          + 'jäänteet ovat nähtävissä aukion alle tehdyssä museossa.'
+          + '\n\n'
+          + 'Aukion ympärille kertyi 1800-luvun mittaan koko kaupungin '
+          + 'julkinen elämä. Vuonna 1855 tänne perustettiin Chilen '
+          + 'ensimmäinen pankki, Banco de Depósitos y Descuentos de '
+          + 'Valparaíso. Kolme vuotta myöhemmin arkkitehti Juan Berg '
+          + 'rakensi puusta ja Guayaquilin ruo’osta kauppapörssin '
+          + 'talon, joka avattiin 6. toukokuuta 1858 presidentti '
+          + 'Manuel Monttin läsnä ollessa. Kun Espanjan laivasto '
+          + 'pommitti Valparaísoa 1866 Chinchasaarten sodassa, '
+          + 'pörssitaloa yritettiin polttaa, mutta se säilyi ja '
+          + 'korjattiin. Vuonna 1868 valmistuivat ensimmäinen '
+          + 'postitalo ja palokunnan talo, ja aukiosta tuli lopullisesti '
+          + 'kaupungin siviilikeskus. Ensimmäinen veistos pystytettiin '
+          + '12. huhtikuuta 1873: se muistaa skotlantilaista '
+          + 'merenkulkijaa lordi Thomas Cochranea.'
+          + '\n\n'
+          + 'Vuonna 1885 pörssitalo purettiin, jotta tilalle mahtui '
+          + 'muistomerkki Iquiquen ja Punta Gruesan taisteluissa '
+          + 'kaatuneille chileläisille merimiehille sekä krypta, jossa '
+          + 'lepäävät Arturo Prat ja hänen miehensä. Muistomerkki '
+          + 'vihittiin 21. toukokuuta 1886, ja se on yhä aukion '
+          + 'keskipiste. Aukio ja sitä reunustavat rakennukset '
+          + 'julistettiin Zona Típicaksi 23. tammikuuta 1979. Vuonna '
+          + '2000 aukio uudistettiin arkkitehti Harken Jensenin '
+          + 'johdolla: alle rakennettiin pysäköintihalli ja '
+          + 'kaivauslöytöjen museo, ja 2004 aukio jatkettiin Pratin '
+          + 'laiturille kävelyreitiksi. Laiturilla on jäljennös '
+          + 'Santiaguillosta, ensimmäisestä espanjalaisaluksesta, joka '
+          + 'rantautui tähän lahteen.',
+      kuvat: [
+        {
+          tiedosto: 'Monumento a los héroes de Iquique, Valparaíso, Chile1.jpg',
+          selite: 'Arturo Pratin muistomerkki aukion keskellä; taustalla '
+            + 'kohoavat kaksi samanlaista tornitaloa, jotka muodostavat '
+            + 'portin satamaan.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Baburizzan palatsi': {
+      aika: '1916',
+      teksti: 'Palatsin rakennuttivat 1916 Zanellit, yksi kaupungin '
+          + 'merkittävimmistä suvuista, ja piirustukset tekivät '
+          + 'italialaiset arkkitehdit. Vuonna 1925 talon osti '
+          + 'kroatialaissyntyinen Pascual Baburizza, '
+          + 'salpietarikaivoksiin sijoittanut liikemies, joka kokosi '
+          + 'Chilessä suuren omaisuuden ja käytti siitä huomattavan '
+          + 'osan hyväntekeväisyyteen.'
+          + '\n\n'
+          + 'Vuonna 1971 kaupunki osti palatsin museoksi ja '
+          + 'kuvataidekouluksi, ja 1976 se julistettiin historialliseksi '
+          + 'monumentiksi. Kokoelma on karttunut suureksi osaksi '
+          + 'Baburizzan omista testamenttilahjoituksista; sen '
+          + 'tärkeimpiä nimiä ovat Mauricio Rugendas, Alfredo '
+          + 'Valenzuela Puelma, Alfredo Helsby ja Carlos Hermosilla '
+          + 'Álvarez. Museo suljettiin korjaustöiden ajaksi 1997 ja '
+          + 'avattiin uudelleen vasta 2011.'
+          + '\n\n'
+          + 'Rakennus on art nouveau -henkinen huvila, jonka '
+          + 'tunnistaa puutyöstä, takoraudasta ja keskellä kohoavasta '
+          + 'tornista. Tyyli on eklektinen: parvekkeet, erkkerit, '
+          + 'terassit ja ullakkokerrokset jakavat massan osiin, ja '
+          + 'koristeina on torneja ja pylväitä. Sisällä huomion vie '
+          + 'kuparilla päällystetty veistetty puuovi, ja ruokasalissa '
+          + 'on marmorinen renessanssityylinen takka, jota koristavat '
+          + 'kohomedaljongit ja punokset; sen yläpuolella on '
+          + '1700-luvun pellavakudos.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio Baburizza -fRF 15.1.jpg',
+          selite: 'Valkoinen art nouveau -huvila rinteessä: kupolitorni, '
+            + 'erkkerit ja koristeltu räystäslinja.',
+          lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Anglikaaninen katedraali': {
+      aika: '1858',
+      teksti: 'Seurakunta alkoi 1837 kotikirkkona, jossa jumalanpalveluksia '
+          + 'pitivät ohi kulkevat anglikaanipapit. Chilen laki rajoitti '
+          + 'vuoteen 1865 asti kaikkia muita uskontoja kuin katolista, '
+          + 'mutta 1857 anglikaanit saivat luvan rakentaa kirkon Cerro '
+          + 'Concepciónille. Varainkeruuta johti Britannian konsuli '
+          + 'William Rouse.'
+          + '\n\n'
+          + 'Lupa tuli ehdoilla, jotka näkyvät talossa yhä. Kirkkoon ei '
+          + 'saanut tulla tornia eikä huippua, joka olisi paljastanut '
+          + 'sen kirkoksi, eivätkä ovet saaneet olla suurempia kuin '
+          + 'lähikatolisten kirkkojen ovet — siksi seurakunta kulki '
+          + 'sisään sivuovesta. Suunnittelija oli englantilainen '
+          + 'arkkitehti ja insinööri William Henry Lloyd, joka oli '
+          + 'Chilessä rakentamassa Santiagon ja Valparaíson välistä '
+          + 'rataa. Vuoden 1906 maanjäristyksen jälkeen kirkon korjasi '
+          + 'Carlos Federico Claussen.'
+          + '\n\n'
+          + 'Ulkoa rakennus on yhä vaatimaton, mutta sisällä avautuu '
+          + 'yksi pitkä kirkkosali, jota valaisevat suippokaari-'
+          + 'ikkunat ja jonka kattoa kannattavat näkyvät puiset '
+          + 'kattotuolit; nykyinen asu on vuodelta 1883. Puolikorkea '
+          + 'puinen ristikkoaita erottaa salin kuorista. Vuonna 1903 '
+          + 'kirkkoon hankittiin paineilmalla ja vedellä toimiva urku '
+          + 'kuningatar Victorian muistoksi, ja lasimaalaukset '
+          + 'tuotiin Britanniasta. Kaksi laattaa muistaa '
+          + 'ensimmäisessä maailmansodassa kaatuneita brittitaustaisia '
+          + 'valparaísolaisia. Kirkko on ollut kansallinen monumentti '
+          + '19. heinäkuuta 1979 alkaen ja kuuluu Unescon '
+          + 'maailmanperintöalueeseen; 19. maaliskuuta 2016 siitä tuli '
+          + 'Chilen ensimmäinen anglikaaninen katedraali. Vuodesta '
+          + '1995 siellä on soitettu joka sunnuntai-iltapäivä '
+          + 'urkukonsertti — "Música en las alturas" on maan ainoa '
+          + 'säännöllinen urkukonserttisarja, ja se aloitettiin '
+          + 'kertomaan kirkon korjaustarpeesta.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia Anglicana de San Pablo.JPG',
+          selite: 'Valkoinen kirkko ilman tornia ja huippua, vihreä '
+            + 'harjakatto ja matala aita kadun kulmassa.',
+          lahde: 'Hemorag, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Valparaíson yliopisto': {
+      aika: '1981',
+      teksti: 'Valparaíso oli 1800-luvulla San Franciscon eteläpuolen '
+          + 'suurin Tyynenmeren satama ja siksi liike-elämän keskus, '
+          + 'ja korkein opetus alkoi täällä kaupan tarpeista. '
+          + 'Muodollinen oikeustieteen opetus alkoi 1878, ja vuoteen '
+          + '1911 mennessä siitä oli kasvanut Chilen ensimmäinen '
+          + 'alueellinen oikeustieteellinen korkeakoulu osana Chilen '
+          + 'yliopistoa.'
+          + '\n\n'
+          + 'Kaupunkiin syntyi 1920- ja 1930-luvuilla kaksi yksityistä '
+          + 'yliopistoa, joista tulivat Federico Santa Marían '
+          + 'teknillinen yliopisto ja katolinen yliopisto, samalla kun '
+          + 'valtion korkeakouluopetus koottiin Chilen yliopiston '
+          + 'alaisuuteen. Vuonna 1972 kaupungin julkinen '
+          + 'yliopisto-opetus järjestettiin Chilen yliopiston '
+          + 'toimipisteeksi, ja 12. helmikuuta 1981 se sai nykyisen '
+          + 'nimensä ja itsenäisen asemansa. Alueellisten '
+          + 'valtionyliopistojen perustaminen oli osa sotilashallinnon '
+          + 'talousuudistuksia, jotka jatkuivat vuoteen 1990. '
+          + 'Opetusinstituutti ei siirtynyt mukana: siitä kasvoi '
+          + 'Playa Anchan yliopisto.'
+          + '\n\n'
+          + 'Valparaísoa sanotaan Chilen opiskelijakaupungiksi, ja '
+          + 'perinteisiä yliopistoja on neljä. Valparaíson yliopisto '
+          + 'eroaa muista siinä, ettei sillä ole yhtä kampusta: sen '
+          + 'tiedekunnat ja korkeakoulut muodostavat '
+          + 'yliopistokorttelin, joka kulkee koko keskustan tasangon '
+          + 'pituudelta — eteläpäässä on Playa Anchan pääkampus ja '
+          + 'pohjoispäässä katolisen yliopiston päärakennus. Yliopisto '
+          + 'on yksi kuudestatoista Chilen valtionyliopistojen '
+          + 'konsortion jäsenestä ja yksi 25 rehtorineuvoston '
+          + '"perinteisestä" yliopistosta.',
+      lahde: 'Wikipedia',
+    },
+    'Katolinen yliopisto': {
+      aika: '1928',
+      teksti: 'Yliopisto perustettiin maaliskuussa 1928 Isabel Caces '
+          + 'de Brownin runsaan lahjoituksen turvin. Sitäkin vanhempi '
+          + 'on oikeustieteellinen tiedekunta: pyhien sydänten isät '
+          + 'perustivat sen 1894 itsenäiseksi korkeakouluksi, ja se '
+          + 'liitettiin myöhemmin yliopistoon, koska molemmat olivat '
+          + 'katolisen kirkon yksiköitä. Ensimmäiset tutkinnot olivat '
+          + 'sähkötekniikka, rakentaminen, kemia, kaivostoiminta, '
+          + 'liikkeenjohto, konetekniikka, koristetaiteet ja '
+          + 'kauppamerenkulku.'
+          + '\n\n'
+          + 'Casa Central on keskustassa muutaman korttelin päässä '
+          + 'kongressitalosta, metrosta ja merestä, ja juuri se on '
+          + 'kaupunkiyliopiston ongelma: alkuperäisellä paikalla ei '
+          + 'ole tilaa kasvaa. Osa yksiköistä on siksi hajallaan '
+          + 'Valparaísossa, Viña del Marissa, Quilpuéssa ja '
+          + 'Quillotassa. Opiskelijoita on noin 18 000. Paavillisen '
+          + 'arvonimen myönsi Johannes Paavali II, ja se julkistettiin '
+          + 'lukuvuoden 2003 avajaisissa; suurkansleri on Valparaíson '
+          + 'piispa, mutta yliopistoa johtaa opettajakunnan valitsema '
+          + 'rehtori.'
+          + '\n\n'
+          + 'Yliopiston tunnetuin sivutuote on arkkitehtuurin '
+          + 'korkeakoulu, "Valparaíson koulu". Se rakensi muutama '
+          + 'kilometri kaupungista pohjoiseen kokeellisen Avoimen '
+          + 'kaupungin, jossa opettajat opettavat ja asuvat taloissa, '
+          + 'jotka he ja opiskelijat ovat itse suunnitelleet ja '
+          + 'rakentaneet. Laitoksia on muitakin, ja ne ovat '
+          + 'yliopistoksi epätavallisia: televisioasema, joka on '
+          + 'lähettänyt vuodesta 1957 ja oli maan ensimmäinen, '
+          + 'radioasema, kustantamo, kirjolohifarmi Los Andesin '
+          + 'lähellä ja kuuden neliökilometrin koetila Quillotassa, '
+          + 'jossa kasvatetaan avokadoja ja sitrushedelmiä.',
+      kuvat: [
+        {
+          tiedosto: 'Casa Central PUCV, Valparaíso 20230903 03.jpg',
+          selite: 'Casa Centralin pitkä koristeltu julkisivu palmujen '
+            + 'reunustaman Avenida Brasilin varrella.',
+          lahde: 'Carlos Figueroa Rojas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Toisinajattelijoiden hautausmaa': {
+      aika: '1825',
+      teksti: 'Hautausmaa on Panteón-kukkulalla Cementerio N:o 1:n '
+          + 'vastapäätä, vanhan kaupunginvankilan vieressä — vankilassa '
+          + 'toimii nykyään kulttuurikeskus. Se perustettiin 1825 '
+          + 'brittiläisten ja muiden eurooppalaisten asukkaiden '
+          + 'haudoiksi: heidän protestanttinen uskonsa poikkesi '
+          + 'valtionuskonnosta, joka oli roomalaiskatolinen.'
+          + '\n\n'
+          + '1800-luvun alussa Valparaísoon muuttaneita ei-katolisia ei '
+          + 'saanut haudata katolisiin hautausmaihin. Heidät haudattiin '
+          + 'Playa Anchan kukkulalle tai heitettiin mereen. Vuonna '
+          + '1823 Britannian konsuli George Seymour osti pormestari '
+          + 'Robert Simpsonin avulla maata vankilan vierestä juuri '
+          + 'tätä varten: hautausmaaksi niille, joita kutsuttiin '
+          + 'toisinajattelijoiksi. Alue jakautuu kahdeksaan osaan, ja '
+          + 'hautoja on lähes 800. Useimmat vainajat ovat '
+          + 'brittiläistä, saksalaista tai yhdysvaltalaista '
+          + 'syntyperää.'
+          + '\n\n'
+          + 'Vastapäisessä Cementerio N:o 1:ssä on muistomerkki '
+          + 'yhdysvaltalaisille merimiehille, jotka kuolivat vuoden '
+          + '1814 Valparaíson taistelussa, kun brittialukset Cherub ja '
+          + 'Phoebe valtasivat USS Essexin. Toinen muistomerkki on '
+          + 'pastori David Trumbullille, kaupungin presbyteerikirkon '
+          + 'perustajalle. Vuoteen 1883 asti tänne haudattiin myös '
+          + 'muualla, esimerkiksi Santiagossa ja La Serenassa, '
+          + 'kuolleita ei-katolisia; sinä vuonna uskontoon perustuva '
+          + 'syrjintä kunnallisilla hautausmailla lakkautettiin. '
+          + 'Vuosien 1906 ja 2010 maanjäristykset vaurioittivat '
+          + 'hautausmaata, ja vuoden 2011 kunnostuksessa siihen tehtiin '
+          + 'uusi muistopaikka, Siirtolaisen aukio.',
+      kuvat: [
+        {
+          tiedosto: 'Cementerio de Disidentes - Valparaíso - 2011.jpg',
+          selite: 'Hautakiviä rinteessä: kelttiläinen risti, uurnapylväs ja '
+            + 'saksankielisiä kirjoituksia, taustalla kukkulan talot.',
+          lahde: 'Carlos yo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Valparaíson katedraali': {
+      aika: '1950',
+      teksti: 'Valparaíson hiippakunnan katedraali seisoo '
+          + 'El Almendralin kaupunginosassa Plaza de la Victorian '
+          + 'itälaidalla. Uusgoottilainen kirkko rakennettiin '
+          + 'vuosina 1910–1950 tontille, jonka Juana Ross Edwards '
+          + 'lahjoitti, ja se korjattiin vuosien 1971 ja 1985 '
+          + 'maanjäristysten jälkeen.'
+          + '\n\n'
+          + 'Katedraali toimii myös Pyhän Hengen seurakunnan '
+          + 'seurakuntakirkkona. Seurakunnan aiempi kirkko oli samalla '
+          + 'aukiolla mutta toisella tontilla, ja siellä vihittiin '
+          + 'aikoinaan avioliittoon kapteeni Arturo Prat ja Carmela '
+          + 'Carvajal — sama Prat, jonka krypta on Plaza Sotomayorin '
+          + 'muistomerkin alla.',
+      kuvat: [
+        {
+          tiedosto: 'Catedral en plaza victoria.jpg',
+          selite: 'Uusgoottilainen julkisivu ruusuikkunoineen ja kolmine '
+            + 'kaariovineen; oikealla kohoaa kellotorni.',
+          lahde: 'Dhcarlos2010, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyhien sydänten kirkko': {
+      aika: '1874',
+      teksti: 'Laiva Sylphide saapui Bordeaux’sta Valparaísoon '
+          + '13. toukokuuta 1834, ja sen matkustajina oli neljä '
+          + 'Jeesuksen ja Marian pyhien sydänten sääntökunnan pappia, '
+          + 'joiden määränpää oli Gambiersaaret Ranskan Polynesiassa. '
+          + 'Heistä Chrysostome Liausu jäi kaupunkiin ja perusti '
+          + 'sääntökunnan ensimmäisen yhteisön eteläamerikkalaiseen '
+          + 'satamaan. Vuonna 1837 kaupungin cabildo antoi hänelle '
+          + 'luvan perustaa koulun — itsenäisen Chilen ensimmäisen '
+          + 'yksityiskoulun. Koulu muutti 1840 Independencia-kadulle '
+          + 'nykyiselle paikalleen, jota laajennettiin ostamalla '
+          + 'viereisiä tontteja, ja sinne rakennettiin kappeli.'
+          + '\n\n'
+          + 'Vuoden 1860 lopulla isä Oliver määräsi rakennettavaksi '
+          + 'uuden kirkon, jonka suunnittelivat arkkitehdit Lucien '
+          + 'Hénault ja Arturo Mecking. Peruskivi laskettiin '
+          + '3. toukokuuta 1868, ja loppuvaiheen 1870–1872 hoiti '
+          + 'arkkitehti Juan Eduardo Fehrman. Kirkko vihittiin '
+          + '6. helmikuuta 1874, vaikka torni oli yhä kesken.'
+          + '\n\n'
+          + 'Kirkko ja sen viereinen koulu ovat samaa tyyliä ja '
+          + 'vievät kokonaisen korttelinsivun Independencia-kadulla '
+          + 'Freiren ja Rodríguezin katujen välissä. Julkisivu on '
+          + 'romaanis-uusgoottilainen ja sisätila goottilainen. '
+          + 'Sisällä on Cristo Tradicional -veistos, jonka teki '
+          + 'ecuadorilainen taiteilija vieraillessaan sääntökuntaan '
+          + 'kuuluneen poikansa luona. Vuoden 2010 maanjäristys '
+          + 'vaurioitti kirkkoa pahoin: halkeilleet seinät korjattiin, '
+          + 'sisäpinnat maalattiin ja julkisivut kunnostettiin noin '
+          + 'vuoden työllä, jonka kustannuksista puolet rahoitti '
+          + 'kulttuurin ja taiteen kansallisneuvoston '
+          + 'restaurointiohjelma. Kirkko on ollut Chilen kansallinen '
+          + 'monumentti vuodesta 2003.',
+      kuvat: [
+        {
+          tiedosto: 'Iglesia de los Sagrados Corazones, Valparaíso 20230901 02.jpg',
+          selite: 'Kirkon korkea torni kellotauluineen ja suippokärkineen; '
+            + 'vasemmalla jatkuu saman korttelin koulurakennus.',
+          lahde: 'Carlos Figueroa Rojas, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * NEW ORLEANSIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.neworleans, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "St. Augustine Church (New Orleans)", "New Orleans
+   * Mint", "Gallier House", "James Gallier Jr.", "Hermann–Grima
+   * House", "Saenger Theatre (New Orleans)", "New Orleans Cotton
+   * Exchange", "United States Custom House (New Orleans)" ja
+   * "Gallier Hall").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat joen mutka, Louisianan kauppa, merenpinnan alapuolinen
+   * kaupunki, Katrina, espanjalainen tiili ja Pontalba-talot,
+   * höyrylaiva, vapaiden värillisten yhteisö, kuvernööri Pinchback,
+   * Congo Square, jazzin synty, Black Masking Indianit ja karnevaalin
+   * värit. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. St. Augustinen
+   * jutussa EI kerrota Congo Squaren rumpupiiristä, vaikka aukio on
+   * kolmen korttelin päässä: se on lehden noston M1 aihe. Gallier
+   * Hallin jutussa karnevaali mainitaan vain kulkuereittinä — Rexin
+   * värit ja Zulun kookospähkinät ovat lehden noston M4 aihe. Vanhan
+   * rahapajan jutussa ei kerrota Ranskan Korttelin paloista, vaikka
+   * rahapaja seisoo vanhan linnoituksen paikalla: palot ovat lehden
+   * historiasivun ensimmäinen nosto.
+   *
+   * VIISI JUTTUA KAHDEKSASTA SAI KUVAN, ja kolme jäi tarkoituksella
+   * ilman. Kaikki viisi on tarkistettu Commonsin rajapinnasta
+   * 7.9.2026 (lisenssi ja tekijä extmetadatasta) ja katsottu silmin
+   * 760 pikselin esikatseluna; yksikään tiedosto ei ole sama kuin
+   * kaupunkilehden neworleans-lohkossa (kulttuuri-kategoriat.js) tai
+   * northamerica-valokuvat.js:ssä. Kuvatta jäivät Saenger-teatteri
+   * (parhaat vapaat kuvat ovat kaukaa harmaassa säässä ja täynnä
+   * ratajohtoja), tullitalo (Marmorisalin vapaat kuvat ovat Arnold
+   * Genthen negatiiviskannauksia numerolaattoineen) ja Gallier Hall
+   * (paras kuva on rakennustyömaan aitojen takaa). Nämä kolme on
+   * tilattu kuvaputkelta.
+   *
+   * KAKSI KOHDETTA KANTAA SAMAA SUKUNIMEÄ, ja se on tarkoituksellista
+   * eikä virhe: Gallier Hallin piirsi isä James Gallier Sr. ja
+   * Gallier Housen poika James Gallier Jr. omaksi kodikseen. Jutut
+   * kertovat sen molemmissa, koska kartalla kohteet ovat 1,9
+   * kilometrin päässä toisistaan eikä lukija näe niitä yhtä aikaa.
+   */
+  neworleans: {
+    'St. Augustinen kirkko': {
+      aika: '1842',
+      teksti: 'Kirkon perustivat vapaat värilliset. He järjestäytyivät '
+          + '1830-luvulla ja saivat piispa Antoine Blancilta luvan '
+          + 'rakentaa oman kirkon; ursuliinisisaret lahjoittivat tontin '
+          + 'ehdolla, että kirkko nimetään heidän suojeluspyhänsä '
+          + 'Augustinuksen mukaan. Tontti oli osa Claude Tremén vanhaa '
+          + 'plantaasia, ja kirkon piirsi ranskalainen arkkitehti '
+          + 'J. N. B. de Pouilly. Kirkko vihittiin 9. lokakuuta 1842, '
+          + 'ja sitä pidetään Yhdysvaltain vanhimpana mustana '
+          + 'katolisena seurakuntana.'
+        + '\n\n'
+        + 'Vihkiäisiä edelsi tapaus, jota kutsutaan penkkisodaksi. '
+          + 'Penkeistä maksettiin siihen aikaan vuokraa, ja kun vapaat '
+          + 'värilliset alkoivat ostaa penkkejä perheilleen, seudun '
+          + 'valkoiset ryhtyivät ostamaan niitä enemmän. Vapaat '
+          + 'värilliset voittivat kilpailun ostamalla kolme penkkiä '
+          + 'jokaista valkoisten ostamaa kohti — ja ostivat lisäksi '
+          + 'molempien sivulaivojen kaikki penkit, jotka he antoivat '
+          + 'orjuutettujen käyttöön. Tuloksena oli maan kirjavin '
+          + 'seurakunta: keskellä rivi vapaita värillisiä, toinen rivi '
+          + 'valkoisia ja sivulaivoissa orjuutetut.'
+        + '\n\n'
+        + 'Puutarhassa on Tuntemattoman orjan hauta, risti, joka on '
+          + 'tehty raskaista ketjuista. Muistomerkin suunnitelleet '
+          + 'seurakuntalaiset valitsivat sille juuri tämän paikan, '
+          + 'koska siinä seisoi Tremén plantaasin päärakennus. '
+          + 'Kirkossa on yhä alkuperäiset 1800-luvun penkit, '
+          + 'vaaleanpunaisesta italialaisesta marmorista tehty alttari ja '
+          + 'kymmenen ranskalaista lasimaalausta sekä kolme kelloa, '
+          + 'jotka valettiin 1883 seuraavan vuoden '
+          + 'puuvillanäyttelyä varten ja jotka seurakunta osti 1894. '
+          + 'Seurakuntalaisia ovat olleet muun muassa Homer Plessy ja '
+          + 'klarinetisti Sidney Bechet. Katrinan jälkeen hiippakunta '
+          + 'päätti sulkea kirkon, mutta seurakuntalaiset '
+          + 'linnoittautuivat pappilaan kahdeksi viikoksi, ja maaliskuussa '
+          + '2009 sulkemispäätös peruttiin.',
+      kuvat: [
+        {
+          tiedosto: 'TremeTombUnknownSlave.jpg',
+          selite: 'Tuntemattoman orjan hauta on raskaista ketjuista '
+            + 'taivutettu risti kirkon puutarhassa, lasimaalausikkunoiden '
+            + 'alla.',
+          lahde: 'Infrogmation of New Orleans, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha rahapaja': {
+      aika: '1838–1909',
+      teksti: 'Rahapaja toimi kahdessa jaksossa, 1838–1861 ja '
+          + '1879–1909, ja löi niiden aikana yli 427 miljoonaa kulta- '
+          + 'ja hopearahaa, nimellisarvoltaan yli 307 miljoonaa '
+          + 'dollaria. Kongressi perusti 1835 kolme haararahapajaa; '
+          + 'Charlotte ja Dahlonega olivat kultakenttien vieressä, '
+          + 'mutta New Orleans valittiin sataman takia: 1800-luvun '
+          + 'alkupuolella kaupungin kautta kulki enemmän ulkomaankauppaa '
+          + 'kuin minkään muun yhdysvaltalaiskaupungin, ja Meksikon '
+          + 'kultaa saapui satamaan joka vuosi suuria määriä. Talon '
+          + 'piirsi William Strickland, '
+          + 'saman miehen käsialaa ovat maan neljän ensimmäisen '
+          + 'rahapajan rakennukset. Ensimmäiset rahat, kolmekymmentä '
+          + 'kymmensenttistä, lyötiin 7. toukokuuta 1838.'
+        + '\n\n'
+        + 'Sisällissota katkaisi työn. Louisiana erosi unionista '
+          + '26. tammikuuta 1861, ja konfederaatio jatkoi lyöntiä '
+          + 'talossa muutaman viikon: sen osuus vuoden 1861 New '
+          + 'Orleansin puolen dollarin kolikoista oli 962 633 '
+          + 'kappaletta, ja omalla kääntöpuolen leimasimellaan se löi '
+          + 'oman puolen dollarinsa, joista tunnetaan nykyään neljä '
+          + 'kappaletta. Yksi niistä oli aikanaan Jefferson Davisin '
+          + 'omistuksessa. Huhtikuussa 1862 amiraali Farragutin '
+          + 'merijalkaväki nosti unionin lipun rahapajan katolle, ja '
+          + 'höyrylaivapelurina tunnettu William Mumford repi sen alas '
+          + 'ja jakoi palat muistoiksi. Kenraali Benjamin Butler '
+          + 'hirtätti hänet talon seinästä ulkonevaan lipputankoon '
+          + '7. kesäkuuta 1862. Yksitoista vuotta myöhemmin, 1873, '
+          + 'kaupungissa käynyt Edward King mainitsi tapauksen '
+          + 'kuvatessaan rakennusta.'
+        + '\n\n'
+        + 'Viimeinen raha lyötiin 1909, ja rahapaja lakkautettiin '
+          + 'muodollisesti 1911. Sen jälkeen talo oli jalometallien '
+          + 'pitoisuutta mittaava tarkastuslaitos, 1932–1943 '
+          + 'liittovaltion vankila ja sitten rannikkovartioston '
+          + 'varasto; kylmän sodan aikana '
+          + 'sitä pidettiin kaupungin parhaana säteilysuojana. '
+          + 'Louisianan osavaltio sai rakennuksen 1965, ja vuodesta '
+          + '1981 se on ollut osavaltion museo. Katrina vaurioitti '
+          + 'taloa, ja korjaustöiden jälkeen museo avattiin uudelleen '
+          + 'lokakuussa 2007. Nykyään siellä on New Orleansin '
+          + 'jazzmuseo soittimineen ja kolmannessa kerroksessa '
+          + 'Louisianan historiakeskus. Talo on vanhin säilynyt '
+          + 'rakennus, joka on toiminut Yhdysvaltain rahapajana.',
+      kuvat: [
+        {
+          tiedosto: 'United States Mint, New Orleans, La. LCCN93515339.jpg',
+          selite: 'Vuoden 1897 valokuvassa rahapaja seisoo puiden ja '
+            + 'rauta-aidan takana; kuvan alalaitaan on painettu sen oma '
+            + 'nimiö ja valokuvaajan tekijänoikeusmerkintä.',
+          lahde: 'Library of Congress, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gallier House': {
+      aika: '1857–1860',
+      teksti: 'Talo on arkkitehdin oma koti. James Gallier Jr. '
+          + '(1827–1868) aloitti sen rakentamisen Royal Streetille '
+          + '1857 ja muutti sisään vaimonsa ja lastensa kanssa 1860. '
+          + 'Isä oli luovuttanut toimistonsa pojalleen 1849, ja '
+          + 'nuoremman Gallierin toimisto piirsi kaupunkiin muun '
+          + 'muassa Ranskalaisen oopperatalon 1859 — se paloi 1919. '
+          + 'Gallier Jr. kuoli neljänkymmenen vuoden iässä kotonaan, '
+          + 'eikä kuolintodistukseen merkitty syytä.'
+        + '\n\n'
+        + 'Rakennus yhdistää tyylejä: julkisivun stukki on '
+          + 'italialaisvaikutteinen ja suojaa pehmeää paikallista '
+          + 'tiiltä tuulelta ja vedeltä, mutta pääsisäänkäynti on '
+          + 'klassinen. Suurin osa Ranskan Korttelin valuraudasta '
+          + 'tilattiin kuvastosta, mutta tämän talon portin Gallier '
+          + 'suunnitteli itse juuri tähän paikkaan. Pihalla on '
+          + 'puutarha, vaunutie ja orjien asuintilat, ja sisätilat on '
+          + 'palautettu 1850-luvun asuun. Talo nimettiin kansalliseksi '
+          + 'maamerkiksi 1974.'
+        + '\n\n'
+        + 'Taloa hoitaa Woman\'s Exchange, joka osti sen Tulanen '
+          + 'yliopistolta 1996 ja ylläpitää myös Hermann-Griman taloa '
+          + 'kolmen korttelin päässä. Kuvausryhmät ovat löytäneet '
+          + 'paikan monta kertaa: talo esiintyy vuoden 2022 '
+          + 'Interview with the Vampire -sarjan ensimmäisellä '
+          + 'tuotantokaudella vampyyrien kotina, ja sen julkisivu '
+          + 'esitti American Horror Story: Covenin avausjaksossa '
+          + 'kaupungin pahamaineisinta kartanoa.',
+      kuvat: [
+        {
+          tiedosto: 'GallierHouseBelowA.jpg',
+          selite: 'Talon vihreä valurautagalleria työntyy Royal Streetin '
+            + 'ylle naapureiden tiiliseinien välissä.',
+          lahde: 'Infrogmation of New Orleans, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hermann-Griman talo': {
+      aika: '1831',
+      teksti: 'Talo on Ranskan Korttelin varhaisimpia esimerkkejä '
+          + 'amerikkalaisesta arkkitehtuurista. Samuel Hermann osti '
+          + 'tontin St. Louis Streetiltä 1831 ja palkkasi rakentajaksi '
+          + 'William Brandin, joka piirsi federal- eli '
+          + 'yrjöläistyylisen talon — tyyli oli 1800-luvun alun New '
+          + 'Orleansissa harvinainen. Julkisivu on symmetrinen ja '
+          + 'keskellä kulkee leveä halli, mutta Brand lisäsi '
+          + 'ilmastoon sopivat parvekkeet ja gallerian: sisällä ei ole '
+          + 'käytäviä lainkaan, vaan huoneesta toiseen kuljetaan '
+          + 'parvekkeiden kautta. Pihalla on Korttelin ainoa säilynyt '
+          + 'hevostalli ja 1830-luvun avotulikeittiö.'
+        + '\n\n'
+        + 'Talossa on asunut kaksi sukua. Samuel Hermann syntyi 1777 '
+          + 'Rödelheimissa Saksassa, muutti Louisianaan 1804 ja teki '
+          + 'työtä plantaasinomistajien ja kauppiaiden välittäjänä; '
+          + 'kun Englannin puuvillamarkkina romahti 1837 ja laukaisi '
+          + 'maailmanlaajuisen rahakriisin, hänen omaisuutensa suli ja '
+          + 'talo myytiin. Ostaja oli maltalaissyntyisen isän poika '
+          + 'Felix Grima, juristi, joka muutti taloon 1844 vaimonsa, '
+          + 'naimattoman sisarensa ja leskiäitinsä kanssa. Suku asui '
+          + 'talossa vuoteen 1921, ja museon kokoelmissa on yli '
+          + 'kaksituhatta perheelle kuulunutta kirjaa.'
+        + '\n\n'
+        + 'Christian Woman\'s Exchange osti kiinteistön 1920-luvulla '
+          + 'ja piti siinä täysihoitolaa yksinäisille naisille '
+          + 'vuoteen 1975, jolloin talo kunnostettiin ja avattiin '
+          + 'museona. Restaurointi tehtiin arkeologisten tutkimusten, '
+          + 'rakennussopimuksen ja perukirjojen perusteella, ja noin '
+          + 'puolet esineistöstä on jäljitettävissä talon omiin '
+          + 'sukuihin. Talo nimettiin kansalliseksi maamerkiksi 1974.',
+      kuvat: [
+        {
+          tiedosto: 'Hermann Grima house kitchen.jpg',
+          selite: '1830-luvun avotulikeittiö on Ranskan Korttelin ainoa '
+            + 'säilynyt: lautateline, kahvimylly ja muurattu uuni ovat '
+            + 'paikoillaan.',
+          lahde: 'MrBill3, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Saenger-teatteri': {
+      aika: '1927',
+      teksti: 'Teatteri avattiin 4. helmikuuta 1927. Salissa oli '
+          + 'neljätuhatta paikkaa, rakentaminen kesti kolme vuotta ja '
+          + 'maksoi 2,5 miljoonaa dollaria, ja avajaiset keräsivät '
+          + 'tuhannet ihmiset kulkueeseen Canal Streetille. Kallein '
+          + 'lippu maksoi 65 senttiä, ja samalla lipulla näki '
+          + 'mykkäelokuvan ja näytelmän sekä kuuli talon oman '
+          + 'orkesterin. Saenger oli veljesten Julian ja Abe Saengerin '
+          + 'teatteriketjun lippulaiva, ja se on niitä harvoja ketjun '
+          + 'elokuvapalatseja, jotka ovat yhä pystyssä.'
+        + '\n\n'
+        + 'Arkkitehti Emile Weil suunnitteli sisätilan '
+          + 'atmosfääriteatteriksi, joka jäljittelee italialaista '
+          + 'barokkipihaa. Kattoon asennettiin 150 lamppua '
+          + 'tähtikuvioiden muotoon, ja erikoistehostekoneet '
+          + 'heijastivat sisälle liikkuvia pilviä sekä auringon nousun '
+          + 'ja laskun. Julian Saenger myi teatterin 1929 kymmenellä '
+          + 'miljoonalla dollarilla Paramount Publixille, joka '
+          + 'muutti sen 1933 pelkkien äänielokuvien taloksi. Vuonna '
+          + '1964 saliin muurattiin väliseinä parven eteen ja yhdestä '
+          + 'teatterista tehtiin kaksi.'
+        + '\n\n'
+        + 'Ensimmäinen palautus tehtiin 1980, jolloin paikkoja oli '
+          + 'enää 2 736 ja avajaisissa esiintyi Johnny Carson. '
+          + 'Katrinan tulvavesi nousi näyttämön tasosta noin jalan '
+          + 'verran ylöspäin ja täytti kellarin ja permannon; talon '
+          + 'Robert Morton -urut vaurioituivat, mutta henkilökunta oli '
+          + 'ehtinyt irrottaa mainoskilven akryylilevyt myrskyn '
+          + 'lentäviksi kappaleiksi. Kunnostus maksoi lopulta 53 miljoonaa '
+          + 'dollaria: tähtikatto uusittiin led-valoilla, näyttämöä '
+          + 'laajennettiin 40 prosentilla ja alkuperäinen värisävy '
+          + 'haettiin esiin maalikerrosten alta. Teatteri avattiin '
+          + '27. syyskuuta 2013.',
+      lahde: 'Wikipedia',
+    },
+    'Puuvillapörssi': {
+      aika: '1871–1964',
+      teksti: 'Pörssin perustivat puuvillanvälittäjät 1871, kun '
+          + 'kolmasosa koko Yhdysvaltain puuvillasadosta kulki New '
+          + 'Orleansin kautta. New Yorkin puuvillapörssi oli avattu '
+          + 'vuotta aiemmin, ja New Orleansin kauppiaat pelkäsivät '
+          + 'hinnanmuodostuksen siirtyvän pohjoiseen ostajien eduksi. '
+          + 'Oma pörssi avasi ovensa 20. helmikuuta 1871 Gravier- ja '
+          + 'Carondelet-katujen kulmassa. Sen tehtävä oli tuoda '
+          + 'järjestystä arvaamattomaan hinnoitteluun: se keräsi '
+          + 'tiedot markkinatilanteesta yhteen paikkaan, sopi '
+          + 'puuvillan laatuluokista ja hoiti maksut ostajan ja '
+          + 'myyjän välillä.'
+        + '\n\n'
+        + 'Pörssin todellinen keksintö oli tiedonkeruu. Sihteerinä '
+          + 'pitkään toiminut eversti Henry G. Hester kokosi '
+          + 'raportteja markkinoista ja lähetti ne lennättimellä, '
+          + 'mikä oli tuolloin uutta, ja toi taloon myös '
+          + 'futuurikaupan. Menetelmät tehosivat niin, että New '
+          + 'Orleans nousi takaisin maailman tärkeimmäksi puuvillan '
+          + 'käteismarkkinaksi ja futuurikaupassa vain Liverpoolin ja '
+          + 'New Yorkin taakse.'
+        + '\n\n'
+        + 'Talo vaihtui matkan varrella, mutta katukulma ei. '
+          + 'Vuokrahuoneiden ja pienen oman talon jälkeen pörssi '
+          + 'rakensi 1881 komean toisen keisarikunnan tyylisen '
+          + 'rakennuksen, joka tunnettiin ylellisistä sisätiloistaan; '
+          + 'kun se todettiin 1916 vaaralliseksi, tilalle nousi '
+          + 'vaatimattomampi renessanssipalatsia muistuttava talo '
+          + 'arkkitehtitoimisto Favrot & Livaudais\'lta. Pörssi '
+          + 'lopetti 1964. Vuonna 1873 kaupungissa äitinsä sukua '
+          + 'tapaamassa käynyt Edgar Degas maalasi täällä '
+          + 'puuvillakonttorin, jota usein luullaan pörssiksi — '
+          + 'todellisuudessa maalauksen sali oli erään välittäjän '
+          + 'konttori viereisessä Factors\' Row -korttelissa.',
+      kuvat: [
+        {
+          tiedosto: 'Cotton Exchange New Orleans 1881 Bldg.jpg',
+          selite: 'Vuonna 1881 valmistunut pörssitalo Gravier- ja '
+            + 'Carondelet-katujen kulmassa oli toisen keisarikunnan '
+            + 'tyyliä veistoksineen ja kaarineen.',
+          lahde: 'Detroit Publishing Company, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Tullitalo: {
+      aika: '1848–1881',
+      teksti: 'Tullitalon rakentaminen kesti 33 vuotta. Työ alkoi '
+          + '1848 Alexander Thompson Woodin piirustusten mukaan, mutta '
+          + 'Wood vaihdettiin jo 1850, ja häntä seurasi kahdeksan '
+          + 'arkkitehtia, joista jokainen muutti suunnitelmaa. Talo '
+          + 'täyttää kokonaisen puolisuunnikkaan muotoisen korttelin, '
+          + 'ja sen tiilirunko on verhoiltu harmaalla graniitilla '
+          + 'Quincystä Massachusettsista. Julkisivujen paksut pylväät '
+          + 'ovat egyptiläistyyliset, ja alakerran seinissä on '
+          + 'kaksikymmentäneljä tyhjää syvennystä: niihin oli '
+          + 'tarkoitus asettaa kuuluisien amerikkalaisten patsaat, '
+          + 'mutta suunnitelmaa yksinkertaistettiin eikä patsaita '
+          + 'koskaan tehty.'
+        + '\n\n'
+        + 'Talon keskellä on Marmorisali, yksi maan varhaisimmista ja '
+          + 'hienoimmista kreikkalaisen uusklassismin sisätiloista. '
+          + 'Sen korinttilaisten pylväiden kapiteeleissa toistuvat '
+          + 'kaksi päätä: Merkurius, kaupan ja rajojen jumala, sekä '
+          + 'Luna, jonka otsalla oleva puolikuu viittaa kaupungin '
+          + 'paikkaan joen puolikuun muotoisessa mutkassa. Salin '
+          + 'yläpuolella on kupumainen kattoikkuna, ja North Peters '
+          + 'Streetin puoleisen oven yllä ovat kaupungin perustajan '
+          + 'Bienvillen ja kenraali Andrew Jacksonin hahmot sekä '
+          + 'Louisianan pelikaani.'
+        + '\n\n'
+        + 'Talo otettiin käyttöön vaiheittain. Tullilaitos muutti '
+          + 'ensimmäiseen kerrokseen 1856 ja posti marraskuussa 1860. '
+          + 'Sota keskeytti rakentamisen: talossa olivat ensin '
+          + 'konfederaation joukot ja vuodesta 1862 unionin armeija, '
+          + 'joka piti siellä vangittuja konfederaatiosotilaita — '
+          + 'kerrotaan, että enimmillään kaksituhatta miestä yhtä '
+          + 'aikaa. Työ jatkui 1871 ja valmistui 1881. Posti ja '
+          + 'tuomioistuimet muuttivat 1916 uuteen taloon Lafayette '
+          + 'Squarelle, ja vuosina 2008–2023 talossa toimi '
+          + 'hyönteismuseo. Tulli on paikallaan yhä.',
+      lahde: 'Wikipedia',
+    },
+    'Gallier Hall': {
+      aika: '1845–1853',
+      teksti: 'Kaupungintaloksi rakennettu Gallier Hall on '
+          + 'ennen sisällissotaa valmistuneista rakennuksista '
+          + 'kaupungin merkittävimpiä. Sen suunnitteli James Gallier '
+          + 'Sr., saman suvun arkkitehti, jonka poika rakensi itselleen '
+          + 'Gallier Housen Ranskan Kortteliin. Työ alkoi '
+          + '1845, ja talo vihittiin 10. toukokuuta 1853. Kolme '
+          + 'kerrosta korkea marmorirakennus on puhdasta kreikkalaista '
+          + 'uusklassismia: julkisivun edessä on kaksi riviä uurrettuja '
+          + 'joonialaisia pylväitä.'
+        + '\n\n'
+        + 'Talo toimi kaupungintalona runsaat sata vuotta, ja sen '
+          + 'saleissa käytiin läpi sisällissodan, jälleenrakennuskauden '
+          + 'ja kuvernööri Huey Longin ajan käänteet. Kaupungin '
+          + 'hallinto muutti 1950-luvulla uuteen keskukseen Duncan '
+          + 'Plazalle, mutta vanha talo säilytti asemansa juhlien '
+          + 'paikkana: pormestarit vannovat virkavalansa täällä, ja '
+          + 'erityisen arvostettujen kaupunkilaisten arkku asetetaan '
+          + 'näytteille sen saliin.'
+        + '\n\n'
+        + 'Karnevaalin aikaan talon edusta on kaupungin katsotuin '
+          + 'paikka. St. Charles Avenuen reittiä kulkevat kulkueet '
+          + 'pysähtyvät sen kohdalla, katsomot julkisivun edessä on '
+          + 'varattu karnevaaliseurojen hoveille ja marssiorkesterit '
+          + 'esittävät siinä oman ohjelmansa. Muun vuoden talo on '
+          + 'kokous- ja juhlatila, ja siinä toimii Ty Tracy -teatteri, '
+          + 'joka on nimetty kaupungin liikuntaviraston pitkäaikaisen '
+          + 'taiteellisen johtajan mukaan.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * BOGOTÁN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026). Kartta on
+   * js/packs/maakartat.js: KAUPUNKIKARTAT.bogota, ja jokainen väite on
+   * luettu en-Wikipedian raakatekstistä 7.9.2026 (artikkelit "Central
+   * Cemetery of Bogotá", "Julio Garavito Armero", "Hotel Tequendama",
+   * "Bogotá Museum of Modern Art", "Rogelio Salmona", "University of
+   * the Andes (Colombia)", "Palace of Justice of Colombia", "Palace of
+   * Justice siege", "Museo Botero", "Universidad Externado de
+   * Colombia" ja "Casa de Nariño").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat kaupungin kolme nimeä, korkeus, ciclovía, eristys, Chorro de
+   * Quevedo, Plaza de Bolívar, Kansallismuseo, La Lechuga, muiscat,
+   * kultalautta, Guatavita ja nykyiset muisca-neuvostot. Yksikään
+   * kartan kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Museo Boteron
+   * jutussa EI kerrota naapurissa olevasta Museo del Orosta eikä
+   * kultalautasta, vaikka museot ovat saman Banco de la Repúblican
+   * korttelia: ne ovat lehden nostojen M2 ja M3 aihe. Hotel
+   * Tequendaman jutussa muiscat mainitaan vain hotellin nimen
+   * alkuperänä — kansan oma tarina on lehden muisca-sivulla.
+   *
+   * VIISI JUTTUA KAHDEKSASTA SAI KUVAN, ja kolme jäi tarkoituksella
+   * ilman. Kaikki viisi on tarkistettu Commonsin rajapinnasta
+   * 7.9.2026 ja katsottu silmin; yksikään tiedosto ei ole sama kuin
+   * kaupunkilehden bogota-lohkossa tai southamerica-valokuvat.js:ssä.
+   * Kuvatta jäivät Keskushautausmaa ja Casa de Nariño (parhaissa
+   * vapaissa kuvissa on etualalla tunnistettavia kasvoja) sekä Museo
+   * Botero (samasta syystä: ihmisiä oviaukossa). Nämä kolme on
+   * tilattu kuvaputkelta.
+   *
+   * KAKSI JUTTUA VIITTAA SAMAAN TAITEILIJAAN ERI SUUNNASTA:
+   * Keskushautausmaan mausoleumeja veisti Pietro Tenerani, joka teki
+   * myös lehden nostossa H1 mainitun Bolívar-patsaan, ja Rogelio
+   * Salmonan Torres del Parque seisoo nykytaiteen museon vieressä.
+   * Kumpikaan ei toista lehden juttua, mutta lukija tunnistaa nimen.
+   */
+  bogota: {
+    Keskushautausmaa: {
+      aika: '1836',
+      teksti: 'Hautausmaa avattiin 1836, ja siitä tuli maan '
+          + 'kansallinen muistopaikka: sen presidenttien ja '
+          + 'presidentinrouvien paviljonkiin on haudattu parikymmentä '
+          + 'valtionpäämiestä, ensimmäisenä Kolumbian ensimmäinen '
+          + 'perustuslaillinen presidentti Francisco de Paula '
+          + 'Santander. Mausoleumeja veistivät muun muassa italialaiset '
+          + 'Pietro Tenerani ja Sighinolfi. Alue julistettiin '
+          + 'kansallismonumentiksi 1984.'
+        + '\n\n'
+        + 'Muut haudat kertovat maan historian toisella tavalla. '
+          + 'Täällä lepäävät kaupungin perustaja Gonzalo Jiménez de '
+          + 'Quesada, runoilijat José Asunción Silva ja Rafael Pombo, '
+          + 'kansallislaulun säveltänyt Oreste Sindici, '
+          + 'Bavaria-panimon perustaja Leo Siegfried Kopp sekä neljä '
+          + 'presidenttiehdokasta: Luis Carlos Galán, Jaime '
+          + 'Pardo Leal, Carlos Pizarro ja Álvaro Gómez Hurtado.'
+        + '\n\n'
+        + 'Yksi haudoista on pyhiinvaelluskohde. Astronomi Julio '
+          + 'Garavito Armero (1865–1920) oli lapsinero, joka valmistui '
+          + 'matemaatikoksi ja rakennusinsinööriksi ja johti vuodesta '
+          + '1892 maan kansallista tähtitornia; hän laski Bogotán '
+          + 'leveyspiirin, tutki vuosien 1901–1910 pyrstötähtiä ja '
+          + 'vuoden 1916 auringonpimennyksen. Kuun kääntöpuolella on '
+          + 'hänen mukaansa nimetty kraatteri, ja hänen kasvonsa olivat '
+          + '20 000 peson setelissä, jonka toisella puolella oli Kuu ja '
+          + 'toisella Maa Kuusta katsottuna. Setelin ja sen sinisen '
+          + 'värin takia syntyi kansanusko, että sinisten kynttilöiden '
+          + 'ja sinisten kukkien vieminen Garaviton haudalle tuo '
+          + 'vaurautta.',
+      lahde: 'Wikipedia',
+    },
+    'Hotel Tequendama': {
+      aika: '1953',
+      teksti: 'Hotelli rakennettiin 1950–51 osaksi kymmenennen '
+          + 'valtakadun levennystä, ja se vihittiin 17. toukokuuta 1953 '
+          + 'juhlaillallisella, jolla oli läsnä tasavallan presidentti '
+          + 'Roberto Urdaneta Arbeláez. Suunnittelijoina olivat '
+          + 'yhdysvaltalaiset Holabird & Root ja John Burgee sekä '
+          + 'kolumbialainen Cuéllar Serrano Gómez. Talo oli '
+          + '1950-luvulla kaupungin korkein uudisrakennus ja Centro '
+          + 'Internacional Tequendaman ensimmäinen rakennus — se '
+          + 'aloitti kokonaisen kaupunginosan.'
+        + '\n\n'
+        + 'Tontilla on ollut ennen hotellia neljä muuta laitosta: '
+          + 'San Diegon luostari, sotakorkeakoulu, kadettikoulu ja '
+          + 'puolustusministeriö. Vuosina 1967–1970 hotelliin '
+          + 'rakennettiin samassa tyylissä laajennus, joka '
+          + 'kaksinkertaisti sen koon, siirsi pääsisäänkäynnin '
+          + 'kymmenennelle '
+          + 'valtakadulle ja teki pohjasta T-kirjaimen. Yli '
+          + 'viisikymmentä vuotta taloa hoiti InterContinental-ketju, '
+          + 'ja 2007 nimeksi tuli Crowne Plaza Tequendama. Rakennus on '
+          + 'kaupungin kansallismonumentti, ja 2025 se peruskorjattiin '
+          + 'ja jaettiin kahdeksi hotelliksi.'
+        + '\n\n'
+        + 'Nimi on vanhempi kuin talo ja vanhempi kuin kaupunki. '
+          + 'Tequendama tulee muiscojen chibcha-kielestä ja tarkoittaa '
+          + 'suunnilleen "se, joka syöksee alaspäin" — sama sana on '
+          + 'annettu Bogotá-joen suurelle putoukselle ylätasangon '
+          + 'reunalla. Hotellin aulassa on muiscojen jumalia esittävä '
+          + 'seinämaalaus.',
+      kuvat: [
+        {
+          tiedosto: 'Bogotá carrera 10 Hotel Tequendama.JPG',
+          selite: 'Punatiilinen hotelli kaartuu kymmenennen valtakadun '
+            + 'kulmaan; takana näkyvät Centro Internacionalin '
+            + 'myöhemmät tornit.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nykytaiteen museo': {
+      aika: '1963',
+      teksti: 'Museo avattiin yleisölle 1963, ja sen perusti '
+          + 'taidekriitikko Marta Traba. Se on maan tärkeimpiä '
+          + 'kulttuurilaitoksia, ja vuodesta 1969 vuoteen 2016 sitä '
+          + 'johti Gloria Zea. Nykyinen nimi lyhennetään MAMBO, ja '
+          + 'talo on keskellä kaupunkia Itäkukkuloiden juurella.'
+        + '\n\n'
+        + 'Rakennuksen suunnitteli Rogelio Salmona 1985. Neljä '
+          + 'kerrosta yhdistää keskusportaikko, joka tekee talosta '
+          + 'kivien ja portaiden labyrintin; tilaa on 5 000 '
+          + 'neliömetriä, ja sisällä ovat veistospiha, kirjasto, '
+          + 'auditorio, elokuvasali ja ravintola. Ulkoasu on Salmonan '
+          + 'omaa: paljasta tiiltä, ramppeja ja käytäviä, '
+          + 'epätavallisia sisään- ja uloskäyntejä sekä suurten '
+          + 'ikkunoiden ja kattoikkunoiden tuoma luonnonvalo '
+          + 'keinovalon rinnalla.'
+        + '\n\n'
+        + 'Salmona (1929–2007) syntyi Pariisissa ja muutti lapsena '
+          + 'Bogotáan. Le Corbusier kutsui hänet 1947 työhön '
+          + 'ateljeeseensa, ja kun Bogotazon levottomuudet katkaisivat '
+          + 'opinnot 1948, hän lähti Pariisiin ja työskenteli noin '
+          + 'vuosikymmenen piirtäjänä Marseillen asuintalon, Notre '
+          + 'Dame du Hautin ja Chandigarhin hankkeissa. Espanjassa '
+          + 'häneen teki vaikutuksen Granadan islamilainen tiilityö, '
+          + 'ja arkkitehdiksi hän valmistui Andesin yliopistosta 1962. '
+          + 'Ensimmäinen suuri työ oli museon naapurissa oleva Torres '
+          + 'del Parque (1964–70), jota moni pitää hänen '
+          + 'pääteoksenaan ja jossa hän asui loppuelämänsä; 2003 hän '
+          + 'sai Alvar Aalto -mitalin.',
+      kuvat: [
+        {
+          tiedosto: 'Bogotá exterior Museo de Arte Moderno MAMBO.JPG',
+          selite: 'Salmonan paljas tiili porrastuu ylöspäin, ja ikkunat '
+            + 'on upotettu syviin syvennyksiin; takana nousee '
+            + 'Itäkukkuloiden metsä.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Andesin yliopisto': {
+      aika: '1948',
+      teksti: 'Yliopiston perusti 1948 joukko kolumbialaisia '
+          + 'älymystön edustajia Mario Laserna Pinzónin johdolla, ja '
+          + 'se oli maan ensimmäinen yliopisto, joka perustettiin '
+          + 'tunnustuksettomana: riippumattomaksi sekä puolueista '
+          + 'että kirkosta. Perustamisen taustalla oli maan '
+          + 'teollistuminen ja koulutetun työvoiman puute — '
+          + 'opetusministeri Germán Arciniegas kertoi kongressille '
+          + '1946, että maasta puuttuu insinöörejä, arkkitehteja, '
+          + 'lääkäreitä, agronomeja ja jopa juristeja riittävästi. Kun '
+          + 'Jorge Eliécer Gaitán murhattiin 9. huhtikuuta 1948, '
+          + 'perustajat pitivät sitä parhaana perusteluna yliopiston '
+          + 'perustamiselle.'
+        + '\n\n'
+        + 'Opetus alkoi 29. maaliskuuta 1949 kahdeksankymmenellä '
+          + 'opiskelijalla. Malli otettiin yhdysvaltalaisesta '
+          + 'yliopistosta: talossa oli oma Colegio de Estudios '
+          + 'Superiores, joka opetti humanistisia aineita, espanjaa, '
+          + 'englantia ja Kolumbian maantiedettä ja historiaa kaikille '
+          + 'aloille. Jo toisena vuonna 110 opiskelupaikkaa haki noin '
+          + '400 nuorta. Valtio myönsi yliopiston aseman 1964.'
+        + '\n\n'
+        + 'Vuonna 1950 alkoi vaihto-ohjelma, jossa opiskelija '
+          + 'luki viisi lukukautta kotona ja siirtyi sitten '
+          + 'yhdysvaltalaiseen yliopistoon suorittamaan tutkintonsa '
+          + 'loppuun; mukana olivat Illinois, Pittsburgh, MIT, '
+          + 'Vanderbilt ja Texas, ja lukukausimaksut maksoivat '
+          + 'kolumbialaiset yritykset kuten Avianca ja Paz del Ríon '
+          + 'terästehdas, Rockefeller-säätiö sekä yksityiset '
+          + 'lahjoittajat. Yliopiston luentosarjoissa kävivät muun '
+          + 'muassa John von Neumann, Arnold J. Toynbee, Hideki Yukawa '
+          + 'ja Thornton Wilder. Naisten osasto perustettiin 1953, '
+          + 'mutta sen ohjelmat eivät vielä antaneet ammattitutkintoa.',
+      kuvat: [
+        {
+          tiedosto: 'Uniandes Campus.jpg',
+          selite: 'Kampus alkaa keskustan korttelien reunasta ja päättyy '
+            + 'Itäkukkuloiden metsään; vanhat siirtomaatalot ja uudet '
+            + 'laboratoriorakennukset ovat samassa korttelissa.',
+          lahde: 'JS Rolón, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Oikeuspalatsi: {
+      aika: '1985',
+      teksti: 'Oikeuspalatseja on ollut kolme. Ensimmäinen oli Pablo '
+          + 'de la Cruzin piirtämä uusklassinen talo, joka toimi '
+          + '1920-luvulta alkaen Calle 11:n ja Carrera 6:n kulmassa; se '
+          + 'tuhoutui tulipalossa 9. huhtikuuta 1948 mellakoissa, jotka '
+          + 'tunnetaan nimellä Bogotazo. Toisen '
+          + 'suunnitteli Roberto Londoño 1960-luvulla, ja se nousi '
+          + 'Plaza de Bolívarin pohjoislaidalle vastapäätä kongressin '
+          + 'taloa, korttelin päähän presidentinlinnasta.'
+        + '\n\n'
+        + 'Tuo toinen talo tuhoutui 6. marraskuuta 1985. M-19-liikkeen '
+          + 'sissiosasto valtasi rakennuksen ja otti panttivangeiksi '
+          + 'noin 350 ihmistä, joukossa korkeimman oikeuden tuomareita, '
+          + 'virkamiehiä ja vierailijoita; ryhmä aikoi järjestää '
+          + 'oikeudenkäynnin presidentti Belisario Betancuria vastaan. '
+          + 'Armeija aloitti hyökkäyksen muutamaa tuntia myöhemmin. '
+          + 'Piiritys kesti 28 tuntia ja vaati 101 ihmisen hengen, '
+          + 'muun muassa yhdentoista korkeimman oikeuden '
+          + 'kahdestakymmenestäviidestä tuomarista. Osa talosta elävänä '
+          + 'poistuneista katosi turvallisuusjoukkojen käsiin, ja '
+          + 'katoamisista on tuomittu useita upseereita; viimeiset '
+          + 'tunnistetut jäännökset löytyivät vasta 2015 ja 2017.'
+        + '\n\n'
+        + 'Kolmas palatsi rakennettiin samalle paikalle saman '
+          + 'arkkitehdin piirustusten mukaan, ja vuodesta 2004 siinä '
+          + 'ovat toimineet korkein oikeus, perustuslakituomioistuin, '
+          + 'valtionneuvosto ja ylin tuomarineuvosto. Sisäänkäynnillä '
+          + 'on ainoa vanhasta talosta säilynyt osa: laatta, johon on '
+          + 'kaiverrettu kenraali Santanderin lause "kolumbialaiset, '
+          + 'aseet ovat antaneet teille itsenäisyyden, lait antavat '
+          + 'teille vapauden". Talo on nimetty Alfonso Reyes '
+          + 'Echandían mukaan — hän oli korkeimman oikeuden '
+          + 'presidentti ja kuoli piirityksessä.',
+      kuvat: [
+        {
+          tiedosto: 'Palacio de Justicia de Colombia, Bogotá.jpg',
+          selite: 'Kolmas oikeuspalatsi rakennettiin samalle paikalle '
+            + 'Plaza de Bolívarin pohjoislaidalle; takana kohoaa '
+            + 'Itäkukkuloiden harjanne.',
+          lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Museo Botero': {
+      aika: '2000',
+      teksti: 'Museo syntyi yhdestä lahjoituksesta. Fernando Botero '
+          + 'oli kerännyt taidetta 1960-luvun lopulta alkaen, ensin '
+          + 'esikolumbiaanista ja siirtomaa-ajan taidetta, myöhemmin '
+          + 'nykytaidetta, ja kokoelma oli hajallaan hänen kodeissaan '
+          + 'New Yorkissa, Pariisissa, Monte Carlossa ja '
+          + 'Pietrasantassa. Hän harkitsi ensin lahjoittavansa sen '
+          + 'Medellínin Antioquian museolle, mutta päätöksenteko '
+          + 'siellä oli hidasta, ja niin hän otti vastaan Bogotán '
+          + 'pormestarin Enrique Peñalosan ehdotuksen. Vuonna 2000 '
+          + 'Botero lahjoitti 208 teosta keskuspankille: 123 omaansa '
+          + 'ja 85 muiden taiteilijoiden työtä.'
+        + '\n\n'
+        + 'Kokoelmaa varten pankki osti La Candelariasta '
+          + 'siirtomaa-ajan talon, jonka Botero itse sovitti museoksi. '
+          + 'Ovet avautuivat 1. marraskuuta 2000, eikä pääsymaksua '
+          + 'ole. Muiden taiteilijoiden osuudessa on töitä muun muassa '
+          + 'Picassolta, Monet\'lta, Matisselta, Chagallilta, '
+          + 'Dalílta, Mirólta, Braquelta ja Sonia Delaunaylta. '
+          + 'Boteron omista teoksista tunnetuin on hänen versionsa '
+          + 'Mona Lisasta, ja mukana on myös osa hänen ensimmäisestä '
+          + 'väkivaltaa käsittelevästä sarjastaan. Kävijöitä on yli '
+          + 'puoli miljoonaa vuodessa ja koululaisia kaksituhatta '
+          + 'kuukaudessa.'
+        + '\n\n'
+        + 'Kulttuuriministeriö julisti 2012 koko lahjoitetun '
+          + 'kokoelman kansallisesti merkittäväksi '
+          + 'kulttuuriomaisuudeksi. Kun Botero kuoli, hänen arkkunsa oli '
+          + 'hautajaisten ajan näytteillä juuri tämän museon '
+          + 'sisäpihalla.',
+      lahde: 'Wikipedia',
+    },
+    'Externadon yliopisto': {
+      aika: '1886',
+      teksti: 'Yliopiston perusti 15. helmikuuta 1886 juristi ja '
+          + 'kasvattaja Nicolás Pinzón Warlosten vastaukseksi '
+          + 'koulutuksen rajoituksiin, joita La Regeneración eli '
+          + 'konservatiivien hallintokausi asetti. Pinzón sai avukseen '
+          + 'radikaaliliberaalin liikkeen professoreita ja muita '
+          + 'aikansa ajattelijoita.'
+        + '\n\n'
+        + 'Täyden yliopiston aseman laitos sai 1958. Nykyään siellä '
+          + 'opiskelee yli 13 000 opiskelijaa, ja opetusaloja ovat '
+          + 'muun muassa oikeustiede, taloustiede, journalismi, '
+          + 'antropologia, sosiaalityö, filosofia ja historia sekä '
+          + 'kulttuuriperinnön ala museologiasta arkeologiaan ja '
+          + 'konservointiin. Opetuskieli on pääosin espanja. Unesco '
+          + 'perusti yliopistoon 2005 oppituolin, jonka alana ovat '
+          + 'ihmisoikeudet, väkivalta, julkinen politiikka ja '
+          + 'hallinto.'
+        + '\n\n'
+        + 'Kolumbian korkeakoulujen akkreditointineuvosto myönsi '
+          + 'yliopistolle korkean laadun tunnustuksen kahdeksaksi '
+          + 'vuodeksi, ja saman tunnustuksen ovat saaneet erikseen '
+          + 'muun muassa oikeustieteen, taloustieteen, journalismin ja '
+          + 'kirjanpidon ohjelmat. Talosta on valmistunut suuri osa '
+          + 'maan juristikuntaa: alumneihin kuuluvat presidentti '
+          + 'Gustavo Petro, Bogotán pormestarina toiminut Claudia '
+          + 'López, oikeusministeri Rodrigo Lara ja toimittaja Daniel '
+          + 'Coronell.',
+      kuvat: [
+        {
+          tiedosto: 'Universidad Externado de Colombia, La Candelaria.jpg',
+          selite: 'Yliopiston tiilirakennukset nousevat rinteeseen La '
+            + 'Candelarian eteläreunassa, ja pengerretyt puutarhat '
+            + 'laskevat kadulle asti.',
+          lahde: 'Felipe Restrepo Acosta, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Casa de Nariño': {
+      aika: '1908',
+      teksti: 'Presidentinlinna seisoo talon paikalla, jossa syntyi '
+          + 'itsenäisyystaistelun johtohahmo Antonio Nariño '
+          + '9. huhtikuuta 1765. Hänen isänsä Vicente Nariño oli '
+          + 'ostanut talon 1754 hinnalla 5 200 patacónia, ja perhe '
+          + 'asui siinä noin kolmekymmentä vuotta. Presidentti Rafael '
+          + 'Núñez osti talon valtiolle 1885 tehdäkseen siitä '
+          + 'presidentinlinnan, koska se oli kaunis, historiallinen ja '
+          + 'lähellä kongressin taloa. Presidentit asuivat siinä '
+          + 'vuoteen 1892, minkä jälkeen talossa toimivat sotaministeriö, '
+          + 'kansallisarkisto ja Kansallisen yliopiston matematiikan '
+          + 'tiedekunta.'
+        + '\n\n'
+        + 'Nykyinen palatsi on vuodelta 1908. Kenraali Rafael Reyes '
+          + 'palkkasi 1906 ranskalaisen arkkitehdin Gastón Lelargen, '
+          + 'joka oli aikanaan ollut Charles Garnier\'n oppilas, sekä '
+          + 'kolumbialaisen Julián Lombanan. He purkivat osan vanhasta '
+          + 'talosta, laajensivat tonttia, jakoivat sisätilat '
+          + 'kahteen kerrokseen ja verhosivat julkisivun veistettyyn '
+          + 'kiveen; koristetyöt teki sveitsiläinen kuvanveistäjä '
+          + 'Luigi Ramelli. Rakennus luovutettiin hallitukselle '
+          + '20. heinäkuuta 1908. Presidentti Eduardo Santosin aikana '
+          + 'taloon rakennettiin kolmas kerros ja kattoterassi '
+          + 'helikopterikenttineen.'
+        + '\n\n'
+        + 'Puutarhassa on kaupungin tähtitorni, joka on paljon '
+          + 'palatsia vanhempi: sen rakensi 1802–03 kapusiinimunkki ja '
+          + 'arkkitehti Domingo de Petrés. Presidentin virasto ehti '
+          + 'siirtyä talosta pois 1954, mutta 1970-luvun '
+          + 'peruskorjauksen jälkeen se palasi, ja nykyään talo on '
+          + 'sekä presidentin virka-asunto että toimipaikka. '
+          + 'Nimestä käytetään kahta muotoa: vanhempi on Palacio de '
+          + 'Nariño, mutta Washingtonin esikuvan mukaan yhä useammin '
+          + 'sanotaan Casa de Nariño.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * PERTHIN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.perth, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "Western Australian Museum", "His Majesty's Theatre,
+   * Perth", "Wesley Church, Perth", "London Court", "St Mary's
+   * Cathedral, Perth", "St George's Cathedral, Perth", "Old Court
+   * House, Perth" ja "Swan Bells").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat Goonininupin lähde, nimet Perth ja Boorloo, vankeja pyytänyt
+   * siirtokunta, kullan tuoma rahapaja, kaupungintalo,
+   * kuvernöörintalo, kuljetusten päättyminen, vankitaustan häpeä,
+   * Kings Park, Derbarl Yerrigan, kuusi vuodenaikaa, joen ruoppaus,
+   * whadjukien neljä ryhmää, Yagan, pään paluu ja Yagan Square.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KAKSI AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. Vanhan
+   * oikeustalon jutussa EI kerrota vankityövoimasta, vaikka
+   * siirtokunnan julkiset talot rakennettiin sillä: talo on vuodelta
+   * 1836 eli neljätoista vuotta ennen ensimmäistä vankilaivaa, ja
+   * vankien työ on lehden kolmen noston aihe. Wesleyn kirkon jutussa
+   * arkkitehti Richard Roach Jewell mainitaan, mutta hänen
+   * kaupungintalostaan EI kerrota mitään uutta — se on lehden
+   * H1-noston aihe.
+   */
+  perth: {
+    'Länsi-Australian museo': {
+      aika: '1891',
+      teksti: 'Museo alkoi kivikokoelmasta vanhan vankilan seinien '
+          + 'sisällä. Geologinen museo avattiin 9. syyskuuta 1891 '
+          + 'Perthin vanhan vankilan tiloissa, ja siellä oli '
+          + 'osavaltion ensimmäinen kokoelma kivinäytteitä. Vuonna '
+          + '1892 mukaan tulivat kansatieteelliset ja biologiset '
+          + 'näytteet, ja 1897 laitoksesta tuli virallisesti '
+          + 'Länsi-Australian museo ja taidegalleria. Vanha vankila on '
+          + 'yhä osa korttelia ja yksi Länsi-Australian vanhimmista '
+          + 'pystyssä olevista rakennuksista.'
+          + '\n\n'
+          + 'Kokoelmat kasvoivat kerääjien työllä: John Tunney kiersi '
+          + 'osavaltiota vuodesta 1895 vuoteen 1909 ja toi eläimiä ja '
+          + 'myöhemmin alkuperäisasukkaiden työkaluja ja esineitä. '
+          + 'Vuonna 1959 kasvikokoelma siirtyi vastaperustettuun '
+          + 'kasvistoarkistoon ja museo ja taidegalleria erosivat omiksi '
+          + 'laitoksikseen. Museo keskittyi luonnontieteisiin, '
+          + 'antropologiaan, arkeologiaan ja osavaltion historiaan, ja '
+          + '1960- ja 1970-luvuilla se alkoi tehdä työtä myös '
+          + 'hylkyjen ja alkuperäiskansojen kohteiden parissa.'
+          + '\n\n'
+          + 'Perthin talo suljettiin 18. kesäkuuta 2016 neljäksi '
+          + 'vuodeksi, ja tilalle rakennettiin uusi museo OMA:n ja '
+          + 'Hassellin piirustusten mukaan. Se avattiin lauantaina '
+          + '21. marraskuuta 2020 nimellä WA Museum Boola Bardip. '
+          + 'Boola Bardip on noongaria ja tarkoittaa "monia '
+          + 'tarinoita". Museolla on kuusi toimipistettä: Perthin '
+          + 'lisäksi merenkulku- ja hylkymuseot Fremantlessa sekä omat '
+          + 'museot Albanyssa, Geraldtonissa ja '
+          + 'Kalgoorlie-Boulderissa.',
+      kuvat: [
+        {
+          tiedosto: 'Boola Bardip, Western Australian Museum, Perth, 2023, 01.jpg',
+          selite: 'Vuonna 2020 avattu uusi museorakennus Perth Cultural '
+            + 'Centressä; kyltissä on museon noongarinkielinen nimi Boola '
+            + 'Bardip.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    "His Majesty's -teatteri": {
+      aika: '1904',
+      teksti: 'Teatteri rakennettiin kultavuosien rahalla. Perthin '
+          + 'väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen '
+          + 'nopeasti, ja paikallispoliitikko Thomas Molloy tilasi '
+          + 'arkkitehti William G. Wolfilta teatterin ja hotellin '
+          + 'yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi '
+          + 'annettiin juuri kruunatun Edvard VII:n kunniaksi. '
+          + 'Urakan voitti Friederich Liebe, joka oli aiemmin '
+          + 'rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt '
+          + 'työtä Budapestin oopperatalossa.'
+          + '\n\n'
+          + 'Tontin alla virtasi maanalainen puro, ja perustusten '
+          + 'kestävyydestä esitettiin julkisesti epäilyjä kesken '
+          + 'rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi '
+          + 'ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi '
+          + 'maksamasta ylimääräisiä 17 000 puntaa ilman kirjallista '
+          + 'lupaansa. Liebe haastoi hänet oikeuteen aina korkeimpaan '
+          + 'oikeuteen ja Britannian salaiseen neuvostoon asti ja '
+          + 'voitti — mutta oikeudenkäyntikulut söivät voiton. '
+          + 'Teatterin avasi jouluaattona 1904 kello kahdeksan illalla '
+          + 'Sylvia Forrest, ja avajaisilta jäi vajaaksi: päivä oli '
+          + 'väärä.'
+          + '\n\n'
+          + 'Valmistuessaan talo oli Australian suurin teatteri, 2 584 '
+          + 'paikkaa kolmessa tasossa, ja luultavasti Perthin '
+          + 'ensimmäinen teräsbetonirakennus. Yleisöä viilennettiin '
+          + 'neljällä pienellä vesiputouksella näyttämöaukon kummallakin '
+          + 'puolella ja katon kupolilla, joka aukesi keskeltä kahtia. '
+          + 'Kadunpuoleiset parvekkeet purettiin 1947–48, koska '
+          + 'niiden pilarit haittasivat liikennettä; ne rakennettiin '
+          + 'takaisin vuosina 2021–2022. Talo on tiettävästi Australian '
+          + 'ainoa yhä toimiva edvardiaaninen teatteri, ja vuodesta '
+          + '2006 se on ollut ystävyysteatteri Aberdeenin '
+          + 'samannimisen talon kanssa.',
+      kuvat: [
+        {
+          tiedosto: "His Majesty's Theatre, corner Hay and King Streets.jpg",
+          selite: 'Edvardiaanisen barokin julkisivu Hay Streetin ja King '
+            + 'Streetin kulmassa.',
+          lahde: 'Michal Lewi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Wesleyn kirkko': {
+      aika: '1870',
+      teksti: 'Ensimmäiset metodistit tulivat Swan-joen siirtokuntaan '
+          + '3. helmikuuta 1830 laivalla Tranby ja asettuivat '
+          + 'kuuden kilometrin päähän jokea ylöspäin. Neljäkymmentä '
+          + 'vuotta myöhemmin seurakunta rakensi kolmannen '
+          + 'rukoushuoneensa, tällä kertaa kunnolla: tontti ostettiin '
+          + 'James Inkpenilta 400 punnalla, ja Perthin ensimmäinen '
+          + 'pormestari George Shenton ehdotti nimeä Wesley Church ja '
+          + 'lupasi rakennusrahastoon tuhat puntaa.'
+          + '\n\n'
+          + 'Piirustukset teki Richard Roach Jewell, joka oli itse '
+          + 'seurakunnan jäsen ja siirtokunnan rakennustöiden '
+          + 'virkamies. '
+          + 'Peruskiven laski 25. lokakuuta 1867 kuvernööri John '
+          + 'Stephen Hampton, ja kirkko avattiin sunnuntaina 10. '
+          + 'huhtikuuta 1870. Se maksoi noin 3 000 puntaa — suuri '
+          + 'summa seurakunnalle, jossa oli 138 jäsentä ja jonka '
+          + 'neljännesvuositulot olivat runsaat 66 puntaa. Tiilet '
+          + 'poltettiin paikallisesta savesta, lattia on jarrahia, ja '
+          + 'kirkonkello tuli Tranby-purjelaivasta, joka oli tuonut '
+          + 'ensimmäiset jäsenet maahan.'
+          + '\n\n'
+          + 'Kesäkuussa 1875 kirkkoon asennettiin siirtokunnan '
+          + 'ensimmäiset urut. Meckeringin maanjäristys 1968 vaurioitti '
+          + 'tornin huippua, ja se päätettiin purkaa — mutta kun '
+          + 'muutama metri oli otettu pois, loppu näytti kestävältä, ja '
+          + 'huipulle pantiin kuparinen kartio. Kello siirrettiin '
+          + 'tornista maan tasalle Hay Streetin puolelle, koska '
+          + 'rakennetta ei enää pidetty tarpeeksi vahvana kannattamaan '
+          + 'sitä.',
+      kuvat: [
+        {
+          tiedosto: '00 1598 Wesley Church, Perth WA - William Street.jpg',
+          selite: 'Torninhuipun ylin osa purettiin vuoden 1968 järistyksen '
+            + 'jälkeen, ja tilalle pantiin kuparinen kartio.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'London Court': {
+      aika: '1937',
+      teksti: 'Nelikerroksinen kauppakuja Hay Streetin ja St Georges '
+          + 'Terracen välissä näyttää Tudorin ajalta, mutta se on '
+          + 'vuodelta 1937. Rakennuttaja oli kultarahoittaja Claude de '
+          + 'Bernales, joka osti tontin helmikuussa 1935 '
+          + '75 000 punnalla entiseltä pormestarilta Thomas Molloylta '
+          + '— samalta mieheltä, joka oli rakennuttanut His Majesty’s '
+          + '-teatterin. Paikalla oli siihen asti ollut kujaverkosto '
+          + 'nimeltä Gun Alley.'
+          + '\n\n'
+          + 'Piirustukset teki melbournelainen arkkitehti Bernard '
+          + 'Evans, työ alkoi elokuussa 1936 ja kesti alle vuoden. '
+          + 'Hinta oli 80 000 puntaa. Hay Streetin päädyssä on suuri '
+          + 'kello, joka lyö neljännestunnein, ja jokaisella lyönnillä '
+          + 'linnanportista tulee neljä koneellista ritaria '
+          + 'turnajaisiin. St Georges Terracen päädyssä toinen kello '
+          + 'näyttää Yrjänän ja lohikäärmeen taistelun. Kellot teki '
+          + 'lontoolainen Synchronome Company, ja ne maksoivat viisi '
+          + 'tuhatta puntaa. Kujan päissä katsovat alas Dick '
+          + 'Whittington kissoineen ja Sir Walter Raleigh.'
+          + '\n\n'
+          + 'Pohjoispään esikuva on Lontoon Liberty-tavaratalon kello '
+          + 'reilut kymmenen vuotta aiemmalta ajalta: samanlainen '
+          + 'koneisto ja sama varoitus ajan tuhlaamisesta. Kuja '
+          + 'avattiin 29. heinäkuuta 1937, ja avajaisia juhlittiin '
+          + 'kolmipäiväisillä markkinoilla, jotka keräsivät kaksi '
+          + 'tuhatta puntaa uudelle sairaalalle. Alun perin ylemmissä '
+          + 'kerroksissa oli 24 asuntoa, ja kujalla 53 kauppaa ja 55 '
+          + 'toimistoa.',
+      kuvat: [
+        {
+          tiedosto: '.00 2609 London Court shopping arcade in Perth (Australia).jpg',
+          selite: 'St Georges Terracen pääty: kellon yläpuolella Yrjänä '
+            + 'taistelee lohikäärmettä vastaan.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    "St Mary's -katedraali": {
+      aika: '1865',
+      teksti: 'Victoria Square oli alun perin nimeltään Church Square '
+          + 'ja varattu anglikaaniselle katedraalille. Siirtokunnan '
+          + 'anglikaanit pitivät paikkaa liian kaukana keskustasta ja '
+          + 'rakensivat kirkkonsa St Georges Terracen varrelle, joten '
+          + 'piispa Serra pyysi tonttia katolilaisille. Kuvernööri '
+          + 'luovutti sen 13. elokuuta 1859.'
+          + '\n\n'
+          + 'Serra matkusti Roomaan ja sai Molempien Sisilioiden '
+          + 'kuninkaalta Frans II:lta tuhat scudoa sekä Pyhän Paavalin '
+          + 'luostarilta marmoria alttariin; alttari saapui '
+          + 'siirtokuntaan 1862. Peruskiven laski 8. helmikuuta 1863 '
+          + 'piispa Rosendo Salvado. Benediktiinimuurarit kävelivät '
+          + 'joka aamu Subiacon luostaristaan työmaalle. Rahat '
+          + 'loppuivat tammikuussa 1864 ja työ keskeytyi, mutta '
+          + 'katedraali valmistui neljäntuhannen punnan hinnalla ja '
+          + 'vihittiin 29. tammikuuta 1865. Piirustukset teki '
+          + 'benediktiinioblaatti Joseph Ascione, tyyli on '
+          + 'normannigotiikkaa ja tiilet tehtiin Adelaide Terracen '
+          + 'savesta.'
+          + '\n\n'
+          + 'Vuonna 1924 piispa Clune keräsi rahaa isompaan kirkkoon, '
+          + 'ja arkkitehti Michael Cavanaghin uuden katedraalin '
+          + 'peruskivi laskettiin 25. huhtikuuta 1926. Sitten tuli '
+          + 'lama. Vanha kirkko jäi uuden runkohuoneeksi, ja uuden '
+          + 'poikkilaivan seinästä jätettiin törröttämään paljaita '
+          + 'metallitankoja tulevia sukupolvia varten. Ne odottivat '
+          + 'seitsemänkymmentä vuotta: katedraali suljettiin 2006 ja '
+          + 'avattiin valmiina joulukuussa 2009.',
+      kuvat: [
+        {
+          tiedosto: "Perth (AU), St Mary's Cathedral -- 2019 -- 0265.jpg",
+          selite: 'Vuoden 2009 laajennuksen torni ja vanhemman kirkon huippu '
+            + 'vierekkäin Victoria Squarella.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    "St George'n katedraali": {
+      aika: '1879–1888',
+      teksti: 'Anglikaaninen katedraali seisoo St Georges Terracella '
+          + 'sen kirkon vieressä, jonka se korvasi. Aivan lähellä oli '
+          + 'ollut myös Perthin ensimmäinen kirkko, jonka Frederick '
+          + 'Irwin rakensi joulukuussa 1829, muutama kuukausi '
+          + 'kaupungin perustamisen jälkeen. Nykyisen katedraalin '
+          + 'piirsi sydneyläinen Edmund Blacket, ja se rakennettiin '
+          + 'vuosina 1879–1888.'
+          + '\n\n'
+          + 'Aineet ovat paikallisia: tiili tehtiin lähellä, '
+          + 'kalkkikivi tuotiin Rottnestin saarelta ja puu on '
+          + 'länsiaustralialaista jarrahia. Runkohuoneen puuholvia '
+          + 'kannattavat vasarapalkit, ja länsipäätyä hallitsee '
+          + 'ruusuikkuna. Katto oli alun perin liuskekiveä, mutta se '
+          + 'vuoti, ja 1950-luvulla tilalle pantiin tiili. Tiilet '
+          + 'olivat liian raskaita ja notkistivat kattoa, joten 2000-'
+          + 'luvun alun korjauksessa palattiin liuskekiveen.'
+          + '\n\n'
+          + 'Kuningatar Victorian kuoltua 1901 kaupungissa kerättiin '
+          + 'rahaa muistokellotorniin, jonka piirsi Talbot Hobbs. '
+          + 'Kahdeksan kelloa valoi lontoolainen John Warner & Sons, '
+          + 'ja ne asennettiin kuningattaren kuoleman toisena '
+          + 'vuosipäivänä. Meckeringin maanjäristys vaurioitti tornia '
+          + '1968, ja soitto lopetettiin kokonaan 1973, kun tiiliä '
+          + 'irtosi soiton aikana. Kellot valettiin uudelleen 1975. '
+          + 'Vuonna 2018 tässä kirkossa vihittiin Kay Goldsworthy, '
+          + 'maailman ensimmäinen naispuolinen anglikaaninen '
+          + 'arkkipiispa.',
+      kuvat: [
+        {
+          tiedosto: "St George's Cathdral, the west front.jpg",
+          selite: 'Länsipäädyn ruusuikkuna. Tiili on paikallista, kalkkikivi '
+            + 'Rottnestin saarelta.',
+          lahde: 'Michal Lewi, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Vanha oikeustalo': {
+      aika: '1836',
+      teksti: 'Perthin vanhin säilynyt julkinen rakennus on pieni '
+          + 'vaalea talo Stirling Gardensin kulmassa. Kuvernööri James '
+          + 'Stirling käski rakentaa oikeustalon 1836, ja piirustukset '
+          + 'teki helmikuussa siirtokunnan rakennusinsinööri Henry '
+          + 'Willey Reveley. Talo valmistui joulukuussa 1836 aivan '
+          + 'Swan-joen silloisen rantaviivan tuntumaan. Se on kiveä ja '
+          + 'rappausta, ja tyyli on kreikkalaista klassismia — '
+          + 'harvinaisuus 1800-luvun Perthissä.'
+          + '\n\n'
+          + 'Talo oli pitkään kaupungin ainoa kunnollinen kokoustila, '
+          + 'ja se joutui moneen virkaan. Ensimmäinen käräjäistunto '
+          + 'pidettiin 2. helmikuuta 1837, ja rakennus vihittiin '
+          + 'pitkäperjantaina 24. maaliskuuta 1837 '
+          + 'jumalanpalveluksella. Kirkkona se toimi vuoteen 1842, '
+          + 'kunnes St George’n kirkko valmistui. Syyskuun 20. '
+          + 'päivänä 1847 taloon perustettiin Perthin ensimmäinen '
+          + 'poikakoulu, ja vuosina 1856–1863 sitä käytettiin '
+          + 'ajoittain siirtolaisten hätämajoituksena. Korkein oikeus '
+          + 'istui täällä 1863–1879 ja työtuomioistuin '
+          + '1905–1965.'
+          + '\n\n'
+          + 'Vuoden 1965 korjauksessa löytyi vahingossa aarre. '
+          + 'Seinällä oli puinen vaakuna, joka oli maalattu ja rapattu '
+          + 'niin kirkuvaksi, että se oltiin heittää pois — kunnes '
+          + 'huomattiin, että se oli alkuperäinen, ylituomari Henry '
+          + 'Wrenfordsleyn 1880 tilaama. Sen oli veistänyt jarrahista '
+          + 'Lewis Hasluck. Vaakuna kunnostettiin, ja se on nyt '
+          + 'esillä talon lakimuseossa.',
+      kuvat: [
+        {
+          tiedosto: 'Old Court House, Front Full, Perth, Western Australia.jpg',
+          selite: 'Doorilaisten pylväiden kannattama kuisti lisättiin myöhemmin; talo itse on vuodelta 1836.',
+          lahde: 'Travis Saron, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Swan Bells': {
+      aika: '2000',
+      teksti: 'Barrack Squaren kupari- ja lasitornissa riippuu '
+          + 'kahdeksantoista kelloa, ja kaksitoista niistä on '
+          + 'Lontoosta. Ne olivat St Martin-in-the-Fieldsin kirkon '
+          + 'kellot Trafalgar Squarella, ja niiden historia ulottuu '
+          + '1300-luvulle. Elisabet I käski valaa ne uudelleen '
+          + '1500-luvulla, ja Gloucesterin Rudhallin suku valoi ne '
+          + 'jälleen vuosina 1725–1770. Kun kellot piti 1870 '
+          + 'valaa taas, ne viritettiinkin ja kunnostettiin. Ne ovat '
+          + 'harvinaisia kuninkaallisia kelloja ja tiettävästi ainoa '
+          + 'sarja, joka on koskaan lähtenyt Englannista.'
+          + '\n\n'
+          + 'Kellot lahjoitettiin Länsi-Australialle Australian '
+          + '200-vuotisjuhlan 1988 yhteydessä paikallisen '
+          + 'kellonsoittajan ja liikemiehen Laith Reynoldsin '
+          + 'aloitteesta. Kuusi muuta kelloa valettiin Whitechapelin '
+          + 'valimossa länsiaustralialaisesta metallista. Yhdessä ne '
+          + 'ovat maailman toiseksi suurin vaihtosoiton kellosarja; '
+          + 'suurempi on vain Dublinin Kristuksen kirkon '
+          + 'yhdeksäntoista kellon sarja. Sama sarja soi Lontoossa, '
+          + 'kun James Cook lähti sille matkalle, jolla hän saapui '
+          + 'Australiaan.'
+          + '\n\n'
+          + 'Torni valmistui vuosituhannen vaihteeksi. Sen piirsi '
+          + 'paikallinen toimisto Hames Sharley, ja kuusikerroksisen '
+          + 'kellohuoneen teräsbetonirungon suunnitteli Arup — kellot '
+          + 'painavat yhdessä sen verran, että soitto kuormittaa '
+          + 'rakennetta tuntuvasti. Äänenvaimennusluukuilla soitto '
+          + 'ohjataan joko kaupunkiin tai joelle päin. Torni sai '
+          + 'aikanaan rajua arvostelua tuhlauksena, mutta '
+          + 'viisitoista vuotta myöhemmin sitä pidettiin onnistuneena: '
+          + 'se teki Perthistä kellonsoittajien matkakohteen. Vuonna '
+          + '2018 sarjaan lisättiin ensimmäisen maailmansodan '
+          + 'aselevon satavuotispäivän kunniaksi suuri Anzac-kello, '
+          + 'jota heilutetaan sähkömoottorilla.',
+      kuvat: [
+        {
+          tiedosto: '00 1602 Perth Western Australia - Bell Tower.jpg',
+          selite: 'Lasinen kellotorni ja sitä vasten nojaavat kuparipurjeet '
+            + 'Barrack Squarella.',
+          lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * ADELAIDEN KOHDEKARTAN KAHDEKSAN KOHDETTA (Opus 7.9.2026).
+   * Kartta on js/packs/maakartat.js: KAUPUNKIKARTAT.adelaide, ja
+   * jokainen väite on luettu en-Wikipedian raakatekstistä 7.9.2026
+   * (artikkelit "St Peter's Cathedral, Adelaide", "Adelaide Zoo",
+   * "Adelaide Festival Centre", "Government House, Adelaide", "South
+   * Australian Museum", "Adelaide railway station", "Tandanya
+   * National Aboriginal Cultural Institute" ja "Adelaide Town Hall").
+   *
+   * JOKAINEN JUTTU KERTOO ERI ASIAN KUIN KAUPUNKILEHTI. Lehden nostot
+   * ovat vankiton siirtokunta, päänsä pitänyt piirtäjä, Rundle Mall,
+   * kaurnat, Adelaide Oval, julistuspuu, vankila, lama, puistorengas,
+   * Torrens, kasvitieteellinen puutarha, Victoria Square, Hahndorf
+   * kahdesti, Barossa ja perämangkit. Yksikään kartan kohteista ei
+   * ole niiden aihe.
+   *
+   * KOLME AIHETTA ON TAHALLAAN JÄTETTY KIRJOITTAMATTA. St Peterin
+   * katedraalin jutussa Victoria Square esiintyy vain siltä osin kuin
+   * tontti menetettiin oikeudessa — aukion oma tarina on lehden
+   * L4-noston aihe. Kuvernöörintalon jutussa William Light mainitaan
+   * vain George Strickland Kingstonin esimiehenä, ei kaupungin
+   * piirtäjänä (lehden K2). Eläintarhan jutussa ei kerrota
+   * kasvitieteellisestä puutarhasta naapurissa, koska se on lehden
+   * L3-noston aihe.
+   */
+  adelaide: {
+    'St Peterin katedraali': {
+      aika: '1869–1904',
+      teksti: 'Adelaiden hiippakunta perustettiin kesäkuussa 1847, ja '
+          + 'ensimmäinen piispa Augustus Short piti ensimmäiset '
+          + 'vihkimyksensä 29. kesäkuuta 1848 — Pietarin päivänä. '
+          + 'Katedraalia ei ollut, mutta tontti näytti olevan: '
+          + 'kuvernööri Robe myönsi maaliskuussa 1848 palan Victoria '
+          + 'Squarea, ja lahjoitus kirjattiin 23. huhtikuuta 1851. '
+          + 'Sitten alettiin julkisesti kysyä, oliko kuvernöörillä '
+          + 'ollut oikeutta luovuttaa yleistä puistoaluetta. Short vei '
+          + 'asian itse korkeimpaan oikeuteen, ja kesäkuussa 1855 '
+          + 'tuomio tuli: lahjoitus oli pätemätön eikä rakentamista '
+          + 'voitu aloittaa.'
+          + '\n\n'
+          + 'Piispa osti runsaan eekkerin maata Pennington Terracelta '
+          + 'North Adelaidesta 8. elokuuta 1862. Piirustukset tilattiin '
+          + 'Englannista William Butterfieldiltä, mutta postin kulkuun '
+          + 'meni kuukausia ja erimielisyyksiä tuli, joten piirustukset '
+          + 'ostettiin ja annettiin adelaidelaiselle Edward John '
+          + 'Woodsille viimeisteltäviksi. Woods muutti aineita ja '
+          + 'yksityiskohtia ja antoi rakennukselle ranskalaisen '
+          + 'gotiikan sävyn. Peruskiven laski Pietarin päivänä 1869 yli '
+          + 'tuhannen ihmisen edessä piispa Short itse.'
+          + '\n\n'
+          + 'Loppu tehtiin lahjoitus kerrallaan. Ensimmäinen '
+          + 'jumalanpalvelus pidettiin keskeneräisessä kirkossa '
+          + 'Pietarin päivänä 1876, ensimmäinen osa vihittiin 1. '
+          + 'tammikuuta 1878, ja työ pysähtyi 1894, kun rahat '
+          + 'loppuivat. Thomas Elderin testamentti 1897 ja Robert Barr '
+          + 'Smithin kymmenentuhannen punnan lahjoitus 1900 nostivat '
+          + 'tornit, tornihuiput ja kuorin apsidin. Torninhuiput '
+          + 'vihittiin 7. joulukuuta 1902 ja koko kirkko 7. huhtikuuta '
+          + '1904. Länsitornissa on kahdeksan John Taylor & Co:n 1946 '
+          + 'valamaa kelloa: eteläisen pallonpuoliskon painavin '
+          + 'kahdeksan kellon sarja ja maailman toiseksi painavin '
+          + 'Sherborne Abbeyn jälkeen.',
+      kuvat: [
+        {
+          tiedosto: '22042010 St Peters Cathedral.jpg',
+          selite: 'Kaksi tornihuippua ja ruusuikkuna nousevat North Adelaiden '
+            + 'puistorenkaan yllä.',
+          lahde: 'Ozeye, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Eläintarha': {
+      aika: '1883',
+      teksti: 'Adelaiden eläintarha avattiin 23. toukokuuta 1883 ja on '
+          + 'Australian toiseksi vanhin Melbournen jälkeen. Sen '
+          + 'perusti Etelä-Australian kotouttamis- ja eläintieteellinen '
+          + 'seura valtiolta saadulle maalle. Seurasta tuli '
+          + 'kuninkaallinen 1937, kun Yrjö VI myönsi sille '
+          + 'kuninkaallisen peruskirjan. Ensimmäinen johtaja oli R. E. '
+          + 'Minchin 1882–1893; häntä seurasi poika A. C. Minchin '
+          + '1893–1934 ja tätä pojanpoika R. R. L. Minchin '
+          + '1935–1940 — kolme sukupolvea samassa virassa.'
+          + '\n\n'
+          + 'Viisi rakennusta on suojeltu, niiden joukossa Frome '
+          + 'Roadin pääportti ja vuoden 1900 norsutalo. Norsutalossa ei '
+          + 'enää pidetä eläimiä, vaan siellä on opasteita; viimeinen '
+          + 'norsu Samorn siirrettiin 1991 Monarton laajaan puistoon, '
+          + 'jossa se kuoli kolme vuotta myöhemmin. Alueella kasvaa '
+          + 'yhä vuonna 1877 istutettu Moreton Bayn viikunapuu.'
+          + '\n\n'
+          + 'Eläintarhan historiaan mahtuu myös ruma luku. 1900-luvun '
+          + 'puolivälissä lähes kaikki Australian elävien '
+          + 'alkuperäislintujen vienti kulki joko Adelaiden tai '
+          + 'Sydneyn Tarongan kautta, ja vuonna 1963 valtio tutki '
+          + 'eläintarhan puutteellista kirjanpitoa. Uusi johtaja '
+          + 'William Gasking, joka yritti puuttua eläinten oloihin, '
+          + 'erotettiin nopeasti eläintarhaneuvoston puheenjohtajan '
+          + 'Fred Bassen vaikutuksesta. Kun Basse jäi eläkkeelle, '
+          + 'lintukauppa putosi kymmenesosaan kahden vuoden takaisesta. '
+          + 'Nykyään eläintarhassa on yli 3 000 eläintä ja 250 lajia, '
+          + 'ja siellä on eteläisen pallonpuoliskon suurin '
+          + 'jättiläispandakeskus, joka avattiin joulukuussa 2009.',
+      lahde: 'Wikipedia',
+    },
+    'Festivaalikeskus': {
+      aika: '1973',
+      teksti: 'Adelaiden festivaalikeskus oli Australian ensimmäinen '
+          + 'monikäyttöinen taidekeskus osavaltion pääkaupungissa. '
+          + 'Ajatus syntyi 1960-luvulla, kun Adelaiden taidefestivaali '
+          + 'kasvoi ulos kaupungin saleista, ja laki '
+          + 'festivaaliteatterin rakentamisesta säädettiin 1964. '
+          + 'Ensimmäinen ehdotettu paikka oli Carclew’n huvila North '
+          + 'Adelaidessa.'
+          + '\n\n'
+          + 'Pääministeri John Gorton tarjosi osavaltion pääministerille '
+          + 'Steele Hallille joko verohelpotuksia keräykselle tai '
+          + 'suoraa rahaa; Hall otti rahat. Lontoon-matkallaan hän kävi '
+          + 'Themsin rannalla Royal Festival Hallissa ja päätti, että '
+          + 'Torrensin ranta on oikea paikka. Kun Don Dunstanista tuli '
+          + 'pääministeri, ajatus laajeni yhdestä salista koko '
+          + 'keskukseksi. Adelaiden ylipormestari Robert Porter '
+          + 'käynnisti yleisökeräyksen, joka ylitti tavoitteensa '
+          + 'viikossa; ylijäämällä ostettiin taidetta uuteen taloon.'
+          + '\n\n'
+          + 'Talon piirsi toimisto Hassell, McConnell and Partners, ja '
+          + 'festivaaliteatteri avattiin kesäkuussa 1973. Rakennus '
+          + 'tunnetaan kahdesta valkoisesta geometrisesta kupolistaan, '
+          + 'ja se on käännetty 45 asteen kulmaan kaupungin '
+          + 'ruutukaavaan nähden. Se nousi Elder Parkin ja '
+          + 'parlamenttitalon väliin, ja tieltä purettiin useita '
+          + 'vanhoja rakennuksia. Festivaaliteatterin lisäksi talossa '
+          + 'ovat Dunstan Playhouse ja Space Theatre. Vuonna 2023 '
+          + 'rakennus sai osavaltion arkkitehtiliitolta palkinnon '
+          + 'kestävästä arkkitehtuurista.',
+      kuvat: [
+        {
+          tiedosto: 'Adelaide Festival Centre in July 2026 (028A7419).jpg',
+          selite: 'Kaksi valkoista kupolikattoa Torrensin rannalla, vinossa '
+            + 'kulmassa kaupungin ruutukaavaan nähden.',
+          lahde: 'Yu Chu Chin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kuvernöörintalo': {
+      aika: '1840',
+      teksti: 'Ensimmäinen kuvernöörin asunto oli olkikattoinen maja, '
+          + 'jonka HMS Buffalon merimiehet pystyttivät. Kuvernööri '
+          + 'John Hindmarsh kirjoitti toukokuussa 1837, että hänen '
+          + 'savimajastaan oli valmiina vain toinen pää ja koko perhe '
+          + 'nukkui yhden huoneen lattialla; kaksi pienempää tilaa '
+          + 'riitti hänelle, rouva Hindmarshille ja palvelustytölle.'
+          + '\n\n'
+          + 'Kun George Gawler tuli tilalle 1838, hän hylkäsi '
+          + 'puutaloaikeet ja määräsi kivitalon: hinta neljätuhatta '
+          + 'puntaa jos mahdollista, viittätuhatta ei saanut ylittää. '
+          + 'Englantilaisen Edward O’Brienin piirustuksia muokkasi '
+          + 'George Strickland Kingston, joka oli tullut '
+          + 'Etelä-Australiaan maanmittari William Lightin apulaisena. '
+          + 'Tarjoukset tulivat silti seitsemäntuhannen punnan '
+          + 'tienoille, ja piirustuksia karsittiin vielä ennen kuin '
+          + 'urakka annettiin. Gawler kutsuttiin 1841 takaisin '
+          + 'Englantiin osittain juuri "tuhlailevien" '
+          + 'rakennushankkeidensa vuoksi, ja hänen seuraajansa '
+          + 'käyttivät taloon niin vähän rahaa kuin suinkin.'
+          + '\n\n'
+          + 'Itäsiipi valmistui ja otettiin käyttöön toukokuussa 1840. '
+          + 'Se tekee talosta luultavasti osavaltion toiseksi vanhimman '
+          + 'yhtäjaksoisesti asutun rakennuksen — vanhempi on vain '
+          + 'Walkleyn mökki North Adelaidessa. Kuvernööreillä oli '
+          + 'ennen myös kesäasunto Adelaiden kukkuloilla: ensin vuoden '
+          + '1860 talo nykyisessä Belairin kansallispuistossa, sitten '
+          + 'vuodesta 1880 Marble Hill, joka tuhoutui mustan '
+          + 'sunnuntain maastopaloissa 1955. Sen jälkeen kesäasuntoa '
+          + 'ei ole ollut. Tontin itäreunaa siirrettiin kymmenen '
+          + 'metriä sisemmäs 2015–2016, jotta Anzacin '
+          + 'satavuotismuistopolku mahtui North Terracelta '
+          + 'paraatikentälle.',
+      kuvat: [
+        {
+          tiedosto: 'BOOTH(1873) 2.435 GOVERNMENT HOUSE, ADELAIDE.jpg',
+          selite: 'North Terrace kuvernöörintalon portin kohdalla vuonna 1873 '
+            + 'julkaistussa kaiverruksessa.',
+          lahde: 'British Library, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Etelä-Australian museo': {
+      aika: '1856',
+      teksti: 'Museo perustettiin 1856 osana laajempaa hanketta. '
+          + 'Siirtokunnassa oli yritetty perustaa käsityöläisten '
+          + 'sivistysseuroja, mutta ne eivät löytäneet taloa, johon '
+          + 'olisi mahtunut sekä kirjasto että luentosali. Kesäkuussa '
+          + '1856 lakiasäätävä neuvosto sääti lain, joka perusti '
+          + 'Etelä-Australian instituutin — kirjaston ja museon samaan '
+          + 'laitokseen. Instituutti aloitti 1861 vuokratiloissa King '
+          + 'William Streetillä ja muutti sitten omaan taloonsa North '
+          + 'Terracen ja Kintore Avenuen kulmaan.'
+          + '\n\n'
+          + 'Frederick George Waterhouse tarjoutui kesäkuussa 1859 '
+          + 'hoitamaan museon kokoelmia palkatta, ja kun talo '
+          + 'valmistui, hänet nimitettiin ensimmäiseksi '
+          + 'intendentiksi; virassa hän oli helmikuuhun 1882. '
+          + 'Seuraaja Wilhelm Haacke esitti tammikuussa 1883, että '
+          + 'laitos nimettäisiin Etelä-Australian museoksi ja '
+          + 'intendentistä tehtäisiin johtaja. Nimenmuutos ei mennyt '
+          + 'silloin läpi, mutta johtajan virka meni: Haacke oli '
+          + 'ensimmäinen — ja erosi lokakuussa 1884 riitauduttuaan '
+          + 'johtokunnan kanssa. Nimi vahvistettiin vasta vuoden 1939 '
+          + 'museolaissa, joka irrotti museon taidegalleriasta ja '
+          + 'kirjastosta.'
+          + '\n\n'
+          + 'Kokoelmat ovat poikkeuksellisen suuret. Museolla on '
+          + 'maailman laajin Australian alkuperäiskansojen '
+          + 'kulttuuriesineiden kokoelma, yli kolme miljoonaa '
+          + 'eläinnäytettä — Australian kattavin merinisäkäskokoelma '
+          + 'mukaan lukien — noin 50 000 fossiilia sekä suuri '
+          + 'mineraalikokoelma. Napa-alueiden kokoelmassa on esineitä '
+          + 'eteläaustralialaisten tutkijoiden varhaisilta '
+          + 'Etelämanner-retkiltä. Alkuperäiskansojen kulttuurien '
+          + 'näyttely pohjakerroksessa sai oman rahoituksensa 1997.',
+      kuvat: [
+        {
+          tiedosto: 'Adelaide SA 5000, Australia - panoramio (20).jpg',
+          selite: 'Museon lasisiipi ja sen vieressä North Terracen 1800-luvun '
+            + 'raidalliset hiekkakivitalot.',
+          lahde: 'Matthew Summerton, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Rautatieasema': {
+      aika: '1928',
+      teksti: 'Ensimmäinen asema avattiin samalle North Terracen '
+          + 'paikalle 1856. Sen radalla Port Adelaideen kulki '
+          + 'Brittiläisen imperiumin ensimmäinen valtion omistama ja '
+          + 'liikennöimä höyryrautatie: ensimmäinen matkustajajuna '
+          + 'lähti 19. huhtikuuta 1856 viemään kuvernööriä ja '
+          + 'kutsuvieraita juhlalounaalle satamaan, ja yleisölle rata '
+          + 'avattiin 21. huhtikuuta. Vuoroja oli kuusi suuntaansa '
+          + 'päivässä ja kaksi sunnuntaisin. Vuonna 1887 täältä lähti '
+          + 'ensimmäinen suora juna Melbourneen — Australian '
+          + 'ensimmäinen pääkaupunkien välinen matka ilman raideleveyden '
+          + 'vaihtoa.'
+          + '\n\n'
+          + 'Ratapiha kävi ahtaaksi jo 1865, ja vuoden 1856 talot '
+          + 'purettiin ja korvattiin 1900. Kolmaskin asema tuli pian '
+          + 'perästä. Uuden talon suunnittelusta järjestettiin '
+          + 'kilpailu, jossa oli yhdeksäntoista ehdotusta; voiton vei '
+          + 'paikallinen toimisto Garlick & Jackson. Peruskivi '
+          + 'laskettiin 24. elokuuta 1926 ja talo valmistui 1928. Se on '
+          + 'massiivinen hiekkakivinen uusklassinen rakennus, jonka '
+          + 'kolmessa ylimmässä kerroksessa toimi rautatiehallinto — '
+          + 'siihen asti se oli ollut hajallaan pitkin kaupunkia. '
+          + 'Laitureita oli kolmetoista, ja jokaisella oli oma '
+          + 'katoksensa, jotta savu ei jäisi yhteisen katon alle.'
+          + '\n\n'
+          + 'Talon ylpeys oli valtava kupolimainen Marmorisali, joka '
+          + 'toimi juhlavana odotushuoneena ja on nykyään osa '
+          + 'kasinoa. Rakentaminen ylitti budjetin rajusti, ja siitä '
+          + 'tuli osavaltiossa kiivaan riidan aihe: laman alkaessa '
+          + 'Etelä-Australia oli lähellä vararikkoa. Kaukojunat '
+          + 'siirtyivät Keswickin terminaaliin 1984, ja nykyinen '
+          + 'lähiliikenteen asema on maan alla: yhdeksän laituria, '
+          + 'kaikki leveää raideleveyttä, ja kaikki radat tulevat '
+          + 'lännestä eikä läpi mene yksikään.',
+      kuvat: [
+        {
+          tiedosto: 'Adelaide Railway Station 1878.png',
+          selite: 'Vuoden 1856 asema kuvattuna 1878, kun siihen oli juuri '
+            + 'lisätty toinen kerros.',
+          lahde: 'Samuel White Sweet, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Tandanya: {
+      aika: '1989',
+      teksti: 'Tandanya on Australian vanhin alkuperäiskansojen '
+          + 'omistama ja johtama kulttuurikeskus. Se avattiin 1989 '
+          + 'Grenfell Streetin itäpäähän, ja se esittelee Australian '
+          + 'alkuperäiskansojen kuvataidetta, musiikkia ja '
+          + 'kerrontaperinnettä. Nimi tulee sanasta Tarndanya, joka on '
+          + 'kaurnojen nimi Adelaiden keskustan ja puistorenkaan '
+          + 'alueelle ja tarkoittaa punaisen kengurun paikkaa.'
+          + '\n\n'
+          + 'Ensimmäinen näyttely esitteli Utopian yhteisön naisten '
+          + 'silkille tekemiä töitä Pohjoisterritoriosta nimellä '
+          + '"Utopia — A Picture Story". Sen jälkeen talossa on nähty '
+          + 'näyttelyitä ja tapahtumia laidasta laitaan, muun muassa '
+          + 'Adelaiden fringe-festivaalin esityksiä ja helmikuussa '
+          + '2023 alkuperäiskansojen parlamenttiäänen kyllä-kampanjan '
+          + 'valtakunnallinen avaus.'
+          + '\n\n'
+          + 'Talo itse on entinen Grenfell Streetin voimalaitos, '
+          + 'myöhemmin ammattiopiston tiloja ja aikoinaan '
+          + 'Etelä-Australian sähkövalo- ja voimayhtiön pääkonttori. '
+          + 'Alkuperäinen rakennus on vuodelta 1901, mutta se '
+          + 'muutettiin ja rakennettiin uudelleen 1912–13, jolloin se '
+          + 'sai palladiolaisen julkisivunsa. Rakennus suojeltiin '
+          + 'marraskuussa 1984, ja sen omistaa Aboriginal Lands Trust. '
+          + 'Talo suljettiin korjausten ajaksi huhtikuussa 2023, ja '
+          + 'artikkelin mukaan sen oli määrä avautua uudelleen '
+          + 'helmikuussa 2026.',
+      lahde: 'Wikipedia',
+    },
+    'Kaupungintalo': {
+      aika: '1866',
+      teksti: 'Adelaiden ensimmäinen kaupunginvaltuusto perustettiin '
+          + '1840 ja kaatui 1843, minkä jälkeen siirtokunnan hallinto '
+          + 'hoiti kaupungin asiat. Kun valtuusto perustettiin '
+          + 'uudelleen 1852 ja James Hurtle Fisheristä tuli '
+          + 'pormestari, alettiin puhua omasta talosta. Vuoden 1858 '
+          + 'arkkitehtikilpailun voitti Edmund Wright, mutta hän '
+          + 'kieltäytyi työstä: hän oli itse silloin pormestari. Uusi '
+          + 'kilpailu järjestettiin 20. tammikuuta 1863, kun Wrightin '
+          + 'kausi oli päättynyt, ja voiton vei hänen ja Edward '
+          + 'Woodsin yhteinen ehdotus.'
+          + '\n\n'
+          + 'Työ alkoi maaliskuussa 1863, ja kuvernööri Dominic Daly '
+          + 'laski peruskiven 4. toukokuuta. Albertin tornin peruskivi '
+          + 'laskettiin 13. tammikuuta 1864, ja sen alle pantiin '
+          + 'sinetöity pullo, jossa oli asiakirja tornin nimeämisestä '
+          + 'kolme vuotta aiemmin kuolleen prinssi Albertin muistoksi. '
+          + 'Samana vuonna pormestari Thomas English erosi, koska hän '
+          + 'oli itse työmaan urakoitsija. Valokuvaaja Townsend '
+          + 'Duryea kiipesi 1865 keskeneräisen tornin telineille ja '
+          + 'otti sieltä panoraaman koko Adelaidesta.'
+          + '\n\n'
+          + 'Talo valmistui 1866 ja oli silloin eteläisen '
+          + 'pallonpuoliskon suurimpia kaupungintaloja. Daly avasi sen '
+          + '20. kesäkuuta 1866, ja juhliin kuului illallinen noin '
+          + 'kahdeksallesadalle vieraalle sekä Albertin tornin '
+          + 'kahdeksan kellon ensimmäinen soitto. Kelloa tornissa ei '
+          + 'ollut vuosikymmeniin, vaikka se oli suunniteltu '
+          + 'kellotorniksi: vasta 1935 Lavington Bonython lahjoitti '
+          + 'kaupungille melbournelaisen Thomas Gaunt & Co:n '
+          + 'valmistaman kellon, joka löi tunnit yli koko keskustan. '
+          + 'Kesäkuussa 1964 talon parvekkeelle nousivat Beatlesit, ja '
+          + 'väkijoukon kooksi on arvioitu 30 000:sta aina 300 000 '
+          + 'ihmiseen.',
+      kuvat: [
+        {
+          tiedosto: 'Adelaide Town Hall 2.JPG',
+          selite: 'Albertin torni sai kellonsa vasta 1935; sen alla on King '
+            + 'William Streetin puoleinen parveke.',
+          lahde: 'YellowMonkey, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
