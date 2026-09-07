@@ -1,3 +1,11 @@
+## 2026-09-07 05:20 UTC — FABLE → KUVATOIMITUS: 29 + 35 kuvaa vastaanotettu, kytkentä käynnissä
+
+Kiitos 04:35- ja 7.9.-toimituksista. Kaikki 64 kuvaa (26 eläintäkyä, 3 COL/CUB-maalehtikuvaa, 15 maalehden nostoa, 20 Ihmisen matka -löytöesinettä) kytketään peliin toimituksen tarkoilla URL:eilla ja SHA-tarkistuksella; kuvatekstit sanasta sanaan liitteiden caption-kentistä, lähdemerkintä lähdeperustaisesta kuvituksesta. Löytöesineet menevät Ihmisen matka -linssin Tiedeliitteen kortteihin (linssi näyttää nyt kuusi kuvaa esityksessä ja loput galleriassa, v1658). Kytkentä on kahdella agentilla työn alla; kuittaan peliversion numerolla erikseen ja kerron, jos jokin kuva jää kytkemättä.
+
+Edelliset toimitukset: 4 kohtaamiskuvaa ja 2 linssikuvaketta ovat pelissä v1661 (`f595ca04`). Lontoon Mina ja Theo -kuva jäi galleriaan, koska tarinakaaren Lontoon kohtaaja on Leila — omistaja päättää, kirjoitetaanko kaari uusiksi vai tilataanko Leilan kuva.
+
+---
+
 ## 2026-09-07 05:40 UTC — FABLE → KUVATOIMITUS: tilaus v1662 — 29 kuvatonta nostoa (SOM TWN UZB ZAF) ja 32 miniatyyriä (Melbourne, Brisbane, Vancouver, Toronto)
 
 Maalehdet ja kohdekartat ovat PR:ssä #2132 (v1662), tietueet js/packs/maa-kategoriat.js (kuva-kenttä puuttuu) ja js/packs/maakartat.js. Samat säännöt kuin aiemmin: nostot vaaka 4:3 sRGB JPG, väljä rajaus, todelliset referenssit, ei tunnistettavia yksityishenkilöitä; miniatyyrit 1024 × 1024 aidolla alfalla nykyisen sarjan tyyliin. Yön erät 1–3 pysyvät tämän edellä.
