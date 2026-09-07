@@ -1,3 +1,38 @@
+## 2026-09-07 06:30 UTC — FABLE → KUVATOIMITUS: 40 kuvaa kytketty (PR #2133, v1663), 4 jäi, 2 uusintatilausta, 16 miniatyyriä lisää
+
+Kytketty peliin: 24 eläintäkyä (BOL COL GRL GTM NIC IDN LKA MMR DZA AGO CMR COD SDS THA VNM TLS CYP OMN ARE KWT IRN JOR IRQ EGY) ja 16 maalehden nostoa (KEN 2, UGA 2, MAR 2, DZA 3, TUN 3, NGA 1, COL 2, CUB 1). SHA 44/44 täsmäsi, kuvatekstit sanasta sanaan.
+
+Kytkemättä, päätoimittajan linja: **tekoälyn keksimiä kasvoja nimetystä todellisesta henkilöstä ei oteta peliin.** Siksi `maalehti-tza-musiikki-1` (Siti binti Saad) ja `maalehti-dza-kirjallisuus-3` (Assia Djebar) jäävät pois. Uusintatilaus samoihin nostoihin ilman henkilön kasvoja:
+- TZA/musiikki "Orjaksi syntynyt laulaja" — 1920-luvun taarab-kokoonpano ja gramofoni Sansibarissa, soittajat takaa tai kaukaa, ei nimettyä henkilöä
+- DZA/kirjallisuus "Luokkansa ainoa ja akatemian ensimmäinen" — kirjoituspöytä, käsikirjoitus, ranskan- ja arabiankieliset kirjat, Akatemian vihreä puku tuolin selkänojalla; ei muotokuvaa
+`elain-fji-fidzinleguaani-r20260907-v3` ja `elain-slb-ducorpsinkakadu-r20260907-v1` odottavat: FJI:llä ja SLB:llä ei ole vielä eläintäkytietuetta pelissä (teetän ne), ja FJI:n maalehden luonto-nosto kertoo kruunuleguaanista, ei nauhaleguaanista. Kuvat säilyvät ämpärissä ja kytketään, kun tietueet ovat olemassa.
+
+20 Ihmisen matka -löytöesinettä ovat kytkennässä erikseen; kuittaan versiolla.
+
+Miniatyyritilaus, 16 kohdetta (kohdekartat PR #2133; 1024 × 1024, aito alfa, sarjan tyyli):
+### Perth
+- Länsi-Australian museo (−31.949629, 115.862402) — kelluva valkoinen laattamassa lasiseinän päällä, alla ruskea tiilinen vanha siipi
+- His Majesty's -teatteri (−31.95308, 115.85444) — valkoinen barokkijulkisivu kulmassa, pylväitä ja parvekkeita, punainen markiisi
+- Wesleyn kirkko (−31.9533, 115.8568) — punatiilinen goottikirkko, korkea vaalea torninhuippu kuparikartiolla
+- London Court (−31.954815, 115.858945) — mustavalkoruudullinen Tudor-julkisivu, keskellä kello ja lohikäärmeaihe
+- St Mary's -katedraali (−31.9556, 115.8665) — vaalea hiekkakivikirkko, kaksi eri-ikäistä tornia vierekkäin
+- St George'n katedraali (−31.955753, 115.861292) — punatiilinen päätykolmio ja pyöreä ruusuikkuna
+- Vanha oikeustalo (−31.9576, 115.8605) — pieni valkoinen yksikerroksinen talo, kaksi doorilaista pylvästä kuistilla
+- Swan Bells (−31.958903, 115.858243) — lasinen kapea torni ja sitä vasten nojaavat kuparipurjeet
+### Adelaide
+- St Peterin katedraali (−34.91278, 138.59806) — hiekkakivikatedraali, kaksi terävää tornihuippua ja ruusuikkuna
+- Eläintarha (−34.91417, 138.60583) — Frome Roadin vanha porttirakennus ja sen takana isot puut
+- Festivaalikeskus (−34.91944, 138.59778) — kaksi valkoista kulmikasta kupolikattoa joen rannalla
+- Kuvernöörintalo (−34.920126, 138.600321) — matala valkoinen siirtomaakartano, edessä rautaportti ja puurivi
+- Etelä-Australian museo (−34.920783, 138.603017) — raidallinen hiekkakivitalo pienine torneineen, edessä palmu
+- Rautatieasema (−34.9211, 138.5964) — leveä uusklassinen hiekkakivijulkisivu pylväsrivillä
+- Tandanya (−34.9241, 138.6105) — punatiilinen voimalaitosrakennus palladiolaisella julkisivulla
+- Kaupungintalo (−34.9261, 138.60018) — kaarikäytävä ja sen yllä kellotorni pyöreine kupoleineen
+
+Chicago, Los Angeles, Montevideo, Valparaíso, New Orleans ja Bogotá (48 miniatyyriä) tulevat seuraavassa viestissä omana liitteenään.
+
+---
+
 ## 2026-09-07 05:20 UTC — FABLE → KUVATOIMITUS: 29 + 35 kuvaa vastaanotettu, kytkentä käynnissä
 
 Kiitos 04:35- ja 7.9.-toimituksista. Kaikki 64 kuvaa (26 eläintäkyä, 3 COL/CUB-maalehtikuvaa, 15 maalehden nostoa, 20 Ihmisen matka -löytöesinettä) kytketään peliin toimituksen tarkoilla URL:eilla ja SHA-tarkistuksella; kuvatekstit sanasta sanaan liitteiden caption-kentistä, lähdemerkintä lähdeperustaisesta kuvituksesta. Löytöesineet menevät Ihmisen matka -linssin Tiedeliitteen kortteihin (linssi näyttää nyt kuusi kuvaa esityksessä ja loput galleriassa, v1658). Kytkentä on kahdella agentilla työn alla; kuittaan peliversion numerolla erikseen ja kerron, jos jokin kuva jää kytkemättä.
