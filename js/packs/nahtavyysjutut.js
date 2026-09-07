@@ -55423,4 +55423,402 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
   },
+  /*
+   * NUUKIN KOHDEKARTAN KAHDEKSAN JUTTUA (Opus 7.9.2026).
+   * Lähteet en-Wikipediasta 7.9.2026, ks.
+   * docs/mantereet-tyoaineisto/faktapohja-nuuk.md ja tarkistus-nuuk.md.
+   * Kohteet eivät toista lehden juttuja (kulttuuri-kategoriat.js nuuk)
+   * eivätkä Grönlannin maalehteä.
+   */
+  nuuk: {
+    'Grönlannin kansallismuseo': {
+      aika: '1965',
+      teksti: 'Nunatta Katersugaasivia Allagaateqarfialu oli yksi '
+          + 'Grönlannin ensimmäisistä museoista. Sen ensimmäinen '
+          + 'näyttely avattiin 1965 herrnhutilaisessa lähetystalossa, '
+          + 'ja 1970-luvulla se muutti vanhaan siirtomaasatamaan '
+          + 'vuonna 1936 rakennettuun varastoon. Muutto ei johtunut '
+          + 'tilan puutteesta yksin: kokoelma kasvoi, kun Tanskan '
+          + 'kansallismuseo alkoi palauttaa grönlantilaisia esineitä '
+          + 'takaisin saarelle.'
+        + '\n\n'
+        + 'Museon tunnetuin näyttely ovat Qilakitsoqin muumiot. '
+          + 'Kaksi metsästäjää, Hans ja Jokum Grønvold, löysivät '
+          + '9. lokakuuta 1972 riekkojahdissa Uummannaqin lähellä '
+          + 'kiviröykkiön, jonka alla oli useita ruumiita. He '
+          + 'peittivät haudan uudelleen ja ilmoittivat '
+          + 'viranomaisille. Kahdeksan vainajaa oli säilynyt '
+          + 'luonnostaan: hauta oli kalliokielekkeen alla kylmässä, '
+          + 'kuivassa ja hyvin tuulettuvassa paikassa. '
+          + 'Radiohiiliajoitus antaa kuolinajaksi noin vuoden 1475.'
+        + '\n\n'
+        + 'Muumiot vietiin ensin Kööpenhaminaan tutkittaviksi ja '
+          + 'palautettiin Grönlantiin 1982. Neljä parhaiten '
+          + 'säilynyttä on esillä täällä — kolme naista ja '
+          + 'kuusikuukautinen lapsi — eikä niitä riisuttu eikä '
+          + 'avattu tutkimuksissa. Museo suojelee myös viereisiä '
+          + 'rakennuksia, muun muassa tynnyrintekijän verstasta.',
+      lahde: 'Wikipedia',
+    },
+    'Hans Egeden talo': {
+      aika: '1728',
+      teksti: 'Grönlannin vanhin talo seisoo vanhan siirtomaasataman '
+          + 'laidalla. Se rakennettiin siirtokunnan alkuvuosina ja oli '
+          + 'lähetyssaarnaaja Hans Egeden asunto; myöhemmin siinä on '
+          + 'asunut Grönlannin pääministeri, ja nykyään sitä '
+          + 'käytetään hallituksen virallisiin vastaanottoihin.'
+        + '\n\n'
+        + 'Rakennusvuodesta lähteet ovat eri mieltä, ja se kannattaa '
+          + 'sanoa ääneen. Talon oma artikkeli ajoittaa sen vuoteen '
+          + '1728, kaupungin artikkeli vuoteen 1721. Jälkimmäinen '
+          + 'olisi ristiriidassa itsensä kanssa: 1721 Egede oli vasta '
+          + 'Kangeqin saarella Toivon siirtokunnassa, ja mantereelle '
+          + 'siirryttiin vasta 1728. Talo on siis todennäköisesti '
+          + 'yhtä vanha kuin kaupunki itse.'
+        + '\n\n'
+        + 'Ympärillä on Vanhan Nuukin matalia puutaloja, ja '
+          + 'kilometrin päässä etelässä on Noorliit, jossa '
+          + 'herrnhutilaisilla oli oma erillinen asutuksensa. '
+          + 'Kukkulalla kirkon yllä seisoo Hans Egeden patsas, joka '
+          + 'on vuonna 1921 tehty kopio Kööpenhaminan Marmorikirkon '
+          + 'edessä olevasta patsaasta.',
+      lahde: 'Wikipedia',
+    },
+    'Nuukin katedraali': {
+      aika: '1848–1849',
+      teksti: 'Vapahtajan kirkko eli Annaassisitta Oqaluffia on '
+          + 'puinen luterilainen katedraali Vanhassa Nuukissa. Se '
+          + 'rakennettiin vuosina 1848–1849 ja vihittiin '
+          + '6. huhtikuuta 1849; Karen Ørstedin rahasto maksoi sen '
+          + 'kokonaan. Kirkko korvasi useiden vanhempien Nuukin '
+          + 'kirkkojen tehtävät — vanhin niistä oli vuodelta 1758.'
+        + '\n\n'
+        + 'Runko tehtiin alun perin puuvarustuksena vuolukivelle ja '
+          + 'talkille, ja vasta myöhemmin ulkoseinät paneloitiin '
+          + 'punaisiksi ja sisäseinät valkoisiksi. Punainen kirkko '
+          + 'kellotorneineen on kaupunkikuvan tunnetuin rakennus, ja '
+          + 'kansallispäivänä sen ympärille kokoontuu väkeä. '
+          + 'Kellotorni on myöhempi lisäys, mutta lähteet antavat '
+          + 'sille kaksi eri vuotta: kirkon oma artikkeli sanoo '
+          + '1928, kaupungin artikkeli 1884.'
+        + '\n\n'
+        + 'Sähkö tuli kirkkoon 1949 ja urut 1970. Kirkosta tuli '
+          + 'katedraali 1994, kun Grönlanti sai oman piispanistuimen '
+          + 'ensimmäistä kertaa 616 vuoteen. Toisena piispana aloitti '
+          + '1995 grönlantilaissyntyinen Sofie Petersen, Tanskan '
+          + 'kirkon toinen naispiispa. Kirkon edessä on urkurin ja '
+          + 'psalmirunoilijan Jonathan Petersenin rintakuva.',
+      lahde: 'Wikipedia',
+    },
+    'Kalaaliaraq-tori': {
+      teksti: 'Kalaaliaraq tarkoittaa grönlanniksi pientä '
+          + 'grönlantilaista, ja tanskaksi tori tunnetaan nimellä '
+          + 'Brædtet. Se on noin 150 metriä katedraalista kaakkoon ja '
+          + 'Grönlannin suurin tuoretori. Myynnissä on tuoretta kalaa '
+          + 'sekä hylkeen, poron ja valaan lihaa, ja myyjä on '
+          + 'tavallisesti sama ihminen, joka on saaliin pyytänyt.'
+        + '\n\n'
+        + 'Tori on yhtä paljon kohtaamispaikka kuin kauppa: lähde '
+          + 'vertaa sitä siihen, mitä kylän kaivo on muualla '
+          + 'maailmassa. Kunta on rakentanut keskustaan uuden hallin '
+          + 'kylmiöineen ja pakastimineen, mutta tapa on vanha. '
+          + 'Torilla ei myydä eläviä eläimiä, ja liha on tuoretta ja '
+          + 'vastateurastettua — kuivatun ja suolatun lihan myynti '
+          + 'sallittiin vasta 2018.'
+        + '\n\n'
+        + 'Jääkarhu on Nuup Kangerluassa ja koko lounaisrannikolla '
+          + 'harvinainen, mutta jos sellainen sattuu saaliiksi, sen '
+          + 'viimeinen matka päättyy tänne. Silloin torille tullaan '
+          + 'katsomaan eikä ostamaan.',
+      lahde: 'Wikipedia',
+    },
+    Inatsisartut: {
+      aika: '1979',
+      teksti: 'Inatsisartut tarkoittaa niitä, jotka tekevät lain. Se '
+          + 'on Grönlannin yksikamarinen parlamentti, ja se aloitti '
+          + '1. toukokuuta 1979 maaneuvoston seuraajana — samana '
+          + 'päivänä, jona Godthåb sai takaisin nimen Nuuk. '
+          + 'Rakennus on omalla luodollaan keskustan reunassa.'
+        + '\n\n'
+        + 'Parlamentissa on 31 jäsentä, jotka valitaan neljäksi '
+          + 'vuodeksi suhteellisella vaalitavalla. Se valitsee '
+          + 'pääministerin, joka puolestaan nimittää hallituksen '
+          + 'Naalakkersuisutin jäsenet parlamentin hyväksynnällä. '
+          + 'Parlamentti voi erottaa hallituksen tai yksittäisen '
+          + 'ministerin epäluottamusäänestyksellä, ja pääministeri '
+          + 'voi hajottaa parlamentin ennenaikaisilla vaaleilla.'
+        + '\n\n'
+        + 'Puhemiehistöön kuuluu puhemies ja neljä varapuhemiestä, '
+          + 'jotka kaikki valitaan jäsenistä. Puhemiehen tehtävä on '
+          + 'kokopäiväinen, ja puhemiehistö vastaa myös parlamentin '
+          + 'arkistosta ja siitä, että työn tulokset kerrotaan '
+          + 'yleisölle ymmärrettävästi.',
+      lahde: 'Wikipedia',
+    },
+    Katuaq: {
+      aika: '1997',
+      teksti: 'Katuaq on Grönlannin kulttuuritalo: konsertteja, '
+          + 'näyttelyitä, konferensseja ja elokuvia. Se vihittiin '
+          + '15. helmikuuta 1997, ja sen rakensivat yhdessä '
+          + 'Grönlannin kotihallitus, Nuukin kunnanvaltuusto ja '
+          + 'Pohjoismaiden ministerineuvosto. Suunnittelija oli '
+          + 'tanskalainen arkkitehtitoimisto Schmidt Hammer Lassen.'
+        + '\n\n'
+        + 'Talo on L-kirjaimen muotoinen, ja sen keskiaukiolle '
+          + 'antava julkisivu on aaltoileva, taaksepäin nojaava '
+          + 'seinä — sen liike on revontulten innoittama. Seinä on '
+          + 'nostettu irti maasta ja verhottu kullanväriseen '
+          + 'lehtikuuseen sekä sisältä että ulkoa. Sen ja varsinaisen '
+          + 'rakennuksen väliin jää suuri lämpiö, jossa seisoo kolme '
+          + 'valkoista elementtiä: kolmio, neliö ja ympyrä.'
+        + '\n\n'
+        + 'Saleja on kaksi. Suurempi on Hans Lynge -sali, johon '
+          + 'mahtuu 508 katsojaa, ja pienempään kahdeksankymmentä. '
+          + 'Talossa on lisäksi kokoustiloja, toimistoja ja kahvila '
+          + 'sekä Pohjoismaisen instituutin toimipiste. Naapurissa on '
+          + 'Nuuk Center, maan ensimmäinen kauppakeskus.',
+      lahde: 'Wikipedia',
+    },
+    'Grönlannin kansalliskirjasto': {
+      teksti: 'Nunatta Atuagaateqarfia on Grönlannin yleinen '
+          + 'kirjasto ja kansalliskirjasto samassa laitoksessa. Se on '
+          + 'maan suurin käsikirjasto, ja sen tehtävä on säilyttää '
+          + 'kansallista kulttuuriperintöä ja historiaa.'
+        + '\n\n'
+        + 'Kokoelma on jaettu kahteen paikkaan. Keskustan yleinen '
+          + 'kirjasto palvelee kaupunkilaisia, ja Ilimmarfikin '
+          + 'kampuksella Nuussuaqin kaupunginosassa on Groenlandica '
+          + '— Grönlantia käsittelevän historiallisen aineiston '
+          + 'kokoelma. Vuonna 2018 Ilimmarfikin tietokannassa oli '
+          + '101 824 nimekettä.'
+        + '\n\n'
+        + 'Kirjasto on maassa, jossa kirjoitettu kieli on nuori ja '
+          + 'jossa kirjallisuutta on julkaistu grönlanniksi vasta '
+          + 'runsaat sata vuotta, poikkeuksellisen tärkeä laitos: se '
+          + 'on käytännössä ainoa paikka, jossa maan oma painettu '
+          + 'muisti on koossa.',
+      lahde: 'Wikipedia',
+    },
+    'Nuukin taidemuseo': {
+      aika: '2005–2007',
+      teksti: 'Nuuk Kunstmuseum perustettiin 22. toukokuuta 2005 '
+          + 'entiseen adventtikirkon rakennukseen '
+          + 'Kissarneqqortuunnguaqissa. Liikemies Svend Junge ja '
+          + 'Helene Junge lahjoittivat kokoelmansa ja talon '
+          + 'kaupunkilaisille, ja museo vihittiin 21. kesäkuuta 2007, '
+          + 'Grönlannin kansallispäivänä.'
+        + '\n\n'
+        + 'Esillä on noin 250 maalausta, akvarellia, valokuvaa, '
+          + 'piirustusta ja grafiikan lehteä sekä noin viisikymmentä '
+          + 'veistosta luusta, syöksyhampaasta, puusta ja '
+          + 'vuolukivestä. Runsaan kuudensadan neliömetrin tiloihin '
+          + 'mahtuu myös vaihtuvia näyttelyitä. Kokoelman ydin on '
+          + 'yli 150 Emanuel A. Petersenin maalausta.'
+        + '\n\n'
+        + 'Museo on kuratoitu yhden kysymyksen ympärille: miten '
+          + 'Grönlanti on näyttäytynyt ulkopuolisille ja miten '
+          + 'grönlantilaiset itse näkevät maansa. Siksi samassa '
+          + 'talossa ovat sekä täällä asuneet eurooppalaiset — '
+          + 'Christine Deichmann, Harald Moltke, Emanuel A. Petersen '
+          + '— että grönlantilaiset Hans Lynge, Buuti Pedersen, '
+          + 'Anne-Birthe Hove ja Pia Arke.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * ANCHORAGEN KOHDEKARTAN KAHDEKSAN JUTTUA (Opus 7.9.2026).
+   * Lähteet en-Wikipediasta 7.9.2026, ks.
+   * docs/mantereet-tyoaineisto/faktapohja-anchorage.md ja
+   * tarkistus-anchorage.md. Kohteet eivät toista lehden juttuja
+   * (kulttuuri-kategoriat.js anchorage).
+   */
+  anchorage: {
+    'Anchoragen rautatieasema': {
+      aika: '1942, laajennus 1948',
+      teksti: 'Asema on Alaskan rautatien koko järjestelmän keskus: '
+          + 'se seisoo kahden pääradan risteyksessä mäen juurella '
+          + 'keskustan alapuolella, osoitteessa 411 West 1st Avenue. '
+          + 'Kolmikerroksinen Moderne-tyylinen betonirakennus '
+          + 'valmistui 1942 ja laajennettiin 1948; arkkitehti oli '
+          + 'Joseph L. Skoog. Rakennus on 338 jalkaa pitkä ja 45 '
+          + 'jalkaa leveä.'
+        + '\n\n'
+        + 'Asema merkittiin kansallisrekisteriin 27. elokuuta 1999. '
+          + 'Perustelu oli liikennehistoriallinen: betonista ja '
+          + 'teräksestä rakennettu ja hyvin varustettu asema edusti '
+          + 'rautatien siirtymistä pois puurakennuksista ja '
+          + 'kalustosta, joka ei riittänyt toisen maailmansodan '
+          + 'vaatimuksiin.'
+        + '\n\n'
+        + 'Täältä lähtevät matkustajajunat pohjoiseen Denalin '
+          + 'suuntaan ja etelään rannikolle. Joskus ennen lokakuuta '
+          + '2020 kolmannelle raiteelle rakennettiin korkea laituri, '
+          + 'ja se on Alaskan ensimmäinen.',
+      lahde: 'Wikipedia',
+    },
+    'A.E.C.:n mökki 23': {
+      aika: '1916',
+      teksti: 'Alaska Engineering Commission oli liittovaltion hanke, '
+          + 'joka rakensi Alaskan rautatien. Se rakensi myös '
+          + 'työntekijöilleen asunnot, ja tämä puolitoistakerroksinen '
+          + 'puurunkoinen mökki osoitteessa 618 Christensen Drive on '
+          + 'yksi niistä: harjakatto ja koko etusivun mittainen '
+          + 'kuisti, valmistunut 1916.'
+        + '\n\n'
+        + 'Mökkejä oli useita, ja osa niistä seisoo yhä. Tämä on '
+          + 'säilyneistä vähiten muutettu ja parhaiten säilynyt, ja '
+          + 'siksi juuri se merkittiin kansallisrekisteriin 1990. '
+          + 'Rakennus tunnetaan myös nimellä DeLong Cottage.'
+        + '\n\n'
+        + 'Mökki kertoo, millainen kaupunki Anchorage aluksi oli: ei '
+          + 'kaivos- eikä kalastusleiri vaan työmaa, jonka talot '
+          + 'suunnitteli ja rakensi sama komissio, joka veti '
+          + 'kiskotkin.',
+      lahde: 'Wikipedia',
+    },
+    'Wendlerin talo': {
+      aika: '1915',
+      teksti: 'Tony ja Florence Wendler rakensivat talonsa 1915, ja '
+          + 'se on Anchoragen vanhin liikerakennus. Alun perin se '
+          + 'seisoi Neljännen kadun ja I Streetin kulmassa; '
+          + 'nykyiselle paikalleen osoitteeseen 400 D Street se '
+          + 'siirrettiin 1984.'
+        + '\n\n'
+        + 'Wendlerit pitivät talossa kauppaa vuoteen 1920, minkä '
+          + 'jälkeen Florence Wendler muutti sen täysihoitolaksi. '
+          + 'Vuonna 1948 hän ja hänen tyttärensä avasivat sinne '
+          + 'Club 25:n, naisten yksityisen klubin. Klubi avattiin '
+          + 'myöhemmin kaikille, ja se oli vuosikymmeniä kaupungin '
+          + 'seurapiirielämän maamerkki.'
+        + '\n\n'
+        + 'Talo merkittiin kansallisrekisteriin 1988. Se on yksi '
+          + 'harvoja rakennuksia, jotka ovat seisoneet kaupungin '
+          + 'ensimmäisestä kesästä asti — vaikkakaan ei koko aikaa '
+          + 'samassa korttelissa.',
+      lahde: 'Wikipedia',
+    },
+    'Alaska Center for the Performing Arts': {
+      aika: '1988',
+      teksti: 'Talo avattiin 1988, ja siellä käy yli 200 000 '
+          + 'katsojaa vuodessa. Saleja on kolme: Evangeline Atwood '
+          + 'Concert Hall kahdelletuhannelle katsojalle, Discovery '
+          + 'Theatre seitsemällesadalle ja Sydney Laurence Theatre '
+          + 'kolmellesadalleneljällekymmenelle. Vakituisia ryhmiä '
+          + 'ovat muun muassa Anchorage Symphony Orchestra ja '
+          + 'Anchorage Opera, Alaskan ainoa ammattilaisoopperaseurue.'
+        + '\n\n'
+        + 'Kortteli on ollut alusta asti julkisessa käytössä: '
+          + 'alkuperäisessä kaupunkikaavassa se varattiin kouluille. '
+          + 'Kun koulut siirtyivät 1950-luvulta alkaen kaupungin '
+          + 'reunoille, vanhasta koulusta tuli kaupungintalon '
+          + 'sivurakennus ja liikuntasali. Samalla korttelilla oli '
+          + 'myös Sydney Laurence Auditorium, joka tunnettiin '
+          + 'parhaiten Prudhoe Bayn öljyvuokrahuutokaupan paikkana '
+          + 'vuonna 1969.'
+        + '\n\n'
+        + 'Rakennus oli kiistelty alusta loppuun. Alkuperäinen 35 '
+          + 'miljoonan dollarin kustannusarvio kaksinkertaistui '
+          + 'ennen valmistumista, suunnittelua arvosteltiin siitä, '
+          + 'ettei siinä ollut saattoaluetta ja että sisäänkäynnit '
+          + 'olivat yksisuuntaisten katujen väärällä puolella — ja '
+          + 'äänestäjät kumosivat valtuuston päätöksen talon nimestä.',
+      lahde: 'Wikipedia',
+    },
+    'Anchorage Museum': {
+      aika: '1968',
+      teksti: 'Museo avattiin 1968 kymmenentuhannen neliöjalan '
+          + 'rakennuksessa. Ensimmäisessä näyttelyssä oli '
+          + 'kuusikymmentä lainattua alaskalaista maalausta, '
+          + 'kokoelmassa 2 500 esinettä ja henkilökuntaa kaksi. '
+          + 'Museota on laajennettu kolmesti, viimeksi 2010, ja nyt '
+          + 'se on 170 000 neliöjalkaa, kokoelmassa on 25 000 '
+          + 'esinettä ja puoli miljoonaa historiallista valokuvaa.'
+        + '\n\n'
+        + 'Talo on taiteen, historian, etnografian, ekologian ja '
+          + 'tieteen museo yhdessä. Alaska Gallery esittelee yli '
+          + 'tuhat esinettä pienoismalleineen, ja taidepuolella on '
+          + 'kokonainen galleria Sydney Laurencen maalauksia. Vuonna '
+          + '1992 taloon tuli Smithsonianin Arctic Studies Centerin '
+          + 'Alaskan-toimisto, ja uuden siiven myötä 600 '
+          + 'alaskalaisen alkuperäiskansan esinettä palasi '
+          + 'osavaltioon pitkäaikaislainaan.'
+        + '\n\n'
+        + 'Laajennuksen suunnitteli lontoolainen David Chipperfield '
+          + 'Architects. Julkisivussa on lähes 5 900 neliömetriä '
+          + 'erikoisvalmisteista fritattua eristyslasia, jonka '
+          + 'lasiyksiköt ovat 24 millimetriä paksuja, jotta ne '
+          + 'kestävät paikan ääriolot.',
+      lahde: 'Wikipedia',
+    },
+    'Anchoragen vanha hautausmaa': {
+      aika: '1915',
+      teksti: 'Anchorage Memorial Park on 22 eekkerin hautausmaa, '
+          + 'joka kattaa yhdeksän korttelia ja erottaa keskustan '
+          + 'Fairview\'n kaupunginosasta. Presidentti Woodrow Wilson '
+          + 'perusti sen 1915 osana uuden kaupungin kaavaa, yhtenä '
+          + 'niistä maa-alueista, jotka varattiin julkisiin '
+          + 'tarkoituksiin. Se merkittiin kansallisrekisteriin 1993 '
+          + 'kaupungin vanhimpana hautausmaana.'
+        + '\n\n'
+        + 'Hautoja on yli 12 500. Noin vuosina 1954–1986 osan '
+          + 'alueesta täytti Willow Park -niminen '
+          + 'sosiaaliasuntokompleksi; rakennukset purettiin '
+          + 'hautausmaan laajentamiseksi, ja jäljelle jäi vain '
+          + 'huoltorakennus, jota hautausmaa käyttää samaan '
+          + 'tarkoitukseen.'
+        + '\n\n'
+        + 'Täällä lepää iso osa kaupungin ensimmäistä sukupolvea: '
+          + 'Leopold David, Anchoragen ensimmäinen pormestari; '
+          + 'taidemaalari Sydney Laurence; ja Ada Blackjack, '
+          + 'tutkimusmatkailija. Kuvernööri Walter Hickel haudattiin '
+          + 'seisaalleen kasvot kohti Washingtonia.',
+      lahde: 'Wikipedia',
+    },
+    'Oscar Andersonin talo': {
+      aika: '1915',
+      teksti: 'Elderberry Parkissa seisova talo on Anchoragen '
+          + 'ensimmäinen puurunkoinen talo. Sen rakensi 1915 Oscar '
+          + 'Anderson, yksi kaupungin ensimmäisistä asukkaista; hän '
+          + 'väitti itse olleensa kahdeksastoista ihminen, joka '
+          + 'astui nykyisen Anchoragen maalle.'
+        + '\n\n'
+        + 'Anderson asui talossa kuolemaansa asti vuoteen 1974. '
+          + 'Rakennus merkittiin kansallisrekisteriin 1978, ja '
+          + 'vuosina 1978–1982 se entisöitiin kokonaan takaisin '
+          + 'vuoden 1915 asuun.'
+        + '\n\n'
+        + 'Nykyään talo on museo. Se on pieni ja vaatimaton, ja '
+          + 'juuri siinä on sen pointti: näin asuttiin kaupungissa, '
+          + 'joka oli edellisenä vuonna ollut telttarivi puron '
+          + 'rannalla.',
+      lahde: 'Wikipedia',
+    },
+    'Delaney Park Strip': {
+      aika: '1917',
+      teksti: 'Yhdentoista korttelin mittainen puisto on kaupungin '
+          + 'vanhin. Se perustettiin osana alkuperäistä '
+          + 'kaupunkikaavaa 1917 ja nimettiin James Delaneyn, yhden '
+          + 'Anchoragen ensimmäisistä pormestareista, mukaan. '
+          + 'Alkuperäinen tehtävä oli yksinkertainen: se oli '
+          + 'paloaukea puutalokaupungin eteläreunalla.'
+        + '\n\n'
+        + 'Vuonna 1923 aukeasta tuli golfkenttä — ja samalla '
+          + 'lentokenttä. Asukkaat tasoittivat ilmaisella työllä '
+          + '300 jalkaa leveän ja 2 000 jalkaa pitkän kentän '
+          + 'lentäjä Noel Wienille, joka nousi ilmaan ensimmäisen '
+          + 'kerran 4. kesäkuuta 1924. Kuukauden loppuun mennessä '
+          + 'hän oli lennättänyt 170 matkustajaa kahden kerrallaan '
+          + 'vartin lennoille, ja 6. heinäkuuta hän aloitti täältä '
+          + 'ensimmäisen lennon Fairbanksiin. Kenttä jäi tarpeettomaksi '
+          + '1932, kun Merrill Field avattiin.'
+        + '\n\n'
+        + 'Vuodesta 1954 alueelle on rakennettu urheilupaikkoja: '
+          + 'jalkapallo- ja pesäpallokenttiä, tenniskenttiä ja '
+          + 'jääkiekkokaukalo. Vuonna 1958 puistossa juhlittiin '
+          + 'Alaskan valtiollistumista. Yhdeksännen kadun ja E '
+          + 'Streetin kulmassa on seissyt vuodesta 1959 Alaskan '
+          + 'rautatien höyryveturi 556.',
+      lahde: 'Wikipedia',
+    },
+  },
 };
