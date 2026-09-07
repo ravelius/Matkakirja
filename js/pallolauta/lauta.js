@@ -1162,10 +1162,55 @@ export async function avaaPallolauta(ui) {
     return paras;
   };
   const lahinKohde = (lat, lng) => lahin(lat, lng, merkit.kohteet(), (k) => k.lat, (k) => k.lng);
+  /** Onko napautus enintään `sade` px:n päässä merkin ruutupisteestä? */
+  const lahella = (lat, lng, merkki, sade) => {
+    const kohta = pallo.getScreenCoords(lat, lng, 0);
+    const p = pallo.getScreenCoords(merkki.lat, merkki.lng, 0);
+    if (!kohta || !p) return false;
+    return Math.hypot(p.x - kohta.x, p.y - kohta.y) <= sade;
+  };
+
+  /*
+   * NAPAUTUS NOSTON NIMILAPPUUN (Raamattu, VIAT v1672; omistaja
+   * 7.9.2026 illalla: *"Karttanostoissa teksti ei ota klikkausta
+   * ainoastaan kuvake. Saisiko myös tekstit klikattaviksi?"*).
+   *
+   * Merkin osuma on ruutuetäisyys sen omaan pisteeseen, mutta nimilappu
+   * piirtyy kuvakkeen KYLKEEN ja voi ulottua kauas siitä: pitkän nimen
+   * ulkopää jää 44 px:n säteen ulkopuolelle (tai lähemmäs naapurin
+   * keskipistettä), jolloin tekstin napautus ei tehnyt mitään. Nyt
+   * osumatesti tarkistaa myös lapun LAATIKON — sen saman, jonka
+   * sovittelu laski (js/pallolauta/nostot.js `lappu(p)`), samassa
+   * ruutukoordinaatistossa. Piiloon sovitellulla lapulla laatikkoa ei
+   * ole, jolloin jäljellä on vain kuvake, kuten ennen.
+   *
+   * Kahden lapun mennessä päällekkäin voittaa se, jonka laatikon
+   * keskipiste on lähinnä — sama sääntö kuin merkeillä (js/fokusniput.js
+   * sääntö 9), jotta kaksi reittiä samaan nostoon ei voi eri mieltä.
+   */
+  const lappuunOsunut = (lat, lng) => {
+    const kohta = pallo.getScreenCoords(lat, lng, 0);
+    if (!kohta) return null;
+    let paras = null;
+    let parasMatka = Infinity;
+    for (const o of nostot.osumat()) {
+      if (typeof o.lappu !== 'function' || !edessa(o.lat, o.lng)) continue;
+      const p = pallo.getScreenCoords(o.lat, o.lng, 0);
+      if (!p) continue;
+      const r = o.lappu(p);
+      if (!r || kohta.x < r.x0 || kohta.x > r.x1 || kohta.y < r.y0 || kohta.y > r.y1) continue;
+      const d = Math.hypot((r.x0 + r.x1) / 2 - kohta.x, (r.y0 + r.y1) / 2 - kohta.y);
+      if (d < parasMatka) { parasMatka = d; paras = { laji: 'nosto', lat: o.lat, lng: o.lng, o }; }
+    }
+    return paras;
+  };
+
   /**
    * Kaupungit ja nostot SAMASSA kilpailussa (js/fokusniput.js sääntö 9:
    * lähin keskipiste voittaa) — vain näkyvät: nimetty kaupunki, oma
    * kaupunki, ruudulla oleva nosto, eläintäky tai kohtaamispiste.
+   * NOSTON NIMILAPPU ON MUKANA (VIAT v1672): jos merkin oma piste ei
+   * vie osumaa, katsotaan vielä, osuiko sormi piirretyn lapun päälle.
    */
   const lahinMerkki = (lat, lng) => {
     const ehdokkaat = [];
@@ -1173,7 +1218,27 @@ export async function avaaPallolauta(ui) {
       if (pisteNakyy(k)) ehdokkaat.push({ laji: 'kaupunki', lat: k.lat, lng: k.lon, k });
     }
     for (const o of nostot.osumat()) ehdokkaat.push({ laji: 'nosto', lat: o.lat, lng: o.lng, o });
-    return lahin(lat, lng, ehdokkaat, (e) => e.lat, (e) => e.lng);
+    const voittaja = lahin(lat, lng, ehdokkaat, (e) => e.lat, (e) => e.lng);
+    /*
+     * KAUPUNKIPISTEEN OMA MUSTE VOITTAA LAPUN. Piste on 7 px leveä
+     * levy (KAUPUNKIPISTEEN_HALKAISIJA_PX), ja jos sormi on sen päällä,
+     * pelaaja tähtäsi kaupunkiin — sama myönnytys kuin aarrepisteen
+     * sivusiirrolla (js/fokuspiste.js). Kaikkialla muualla piirretty
+     * teksti voittaa pelkän 44 px:n läheisyyden.
+     */
+    if (voittaja?.laji === 'kaupunki' && lahella(lat, lng, voittaja, KAUPUNKIPISTEEN_HALKAISIJA_PX / 2)) {
+      return voittaja;
+    }
+    /*
+     * KOHTAAMISPISTE PITÄÄ PAIKKANSA. Vihreä tuike on kevyen kulun oma
+     * merkki, joka on jo kerran siirretty sivuun nappulan alta
+     * (js/fokuspiste.js fokuspisteenSiirto, omistaja 6.9.2026:
+     * *"aarteen piste syttyy liian lähelle ateenaa, ei pysty
+     * painamaan"*) — se ei väisty vielä toistamiseen naapurin nimiön
+     * alta. Lappu voittaa siis vain toisen noston tai tyhjän.
+     */
+    if (voittaja?.o?.perhe === 'piste') return voittaja;
+    return lappuunOsunut(lat, lng) ?? voittaja;
   };
 
   /**

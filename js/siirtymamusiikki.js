@@ -136,6 +136,9 @@
 import { AANI_JUURI, aaniUrl } from './media.js';
 import { kehittajanKerroin, kuunteleKehittajanKerrointa } from './kehittajan-voimat.js';
 import { sfx } from './sound.js';
+// Musiikin oma kytkin (Raamattu, VIAT v1672): matkan ja linssin raidat
+// ovat musiikkia, joten ne vaikenevat siitä — äänimaisema ei.
+import { musiikkiPaalla } from './musiikkivalitsin.js';
 import { lisaaVaistaja } from './ambience-stream.js';
 
 /*
@@ -342,7 +345,7 @@ function vapautaRaita(audio) {
  */
 export function aloitaSiirtymamusiikki(laji) {
   const raita = RAIDAT[laji];
-  if (!raita || !sfx.enabled || puuttuvatRaidat.has(laji)) return;
+  if (!raita || !sfx.enabled || !musiikkiPaalla() || puuttuvatRaidat.has(laji)) return;
   if (soiva?.laji === laji) return;
   // Toinen laji soimassa (esim. lento kesken maamatkan): pois pehmeästi.
   if (soiva) lopetaSiirtymamusiikki();
@@ -601,7 +604,7 @@ export function lopetaVaramusiikki() {
  * riippumattomia eikä puuttuva tiedosto voi estää kumpaakaan.
  */
 export function aloitaVaramusiikki(laji) {
-  if (!varamusiikkiPaalla() || !sfx.enabled) return;
+  if (!varamusiikkiPaalla() || !sfx.enabled || !musiikkiPaalla()) return;
   const kuvio = VARAKUVIOT[laji];
   if (!kuvio || raitaLoytyi[laji] === true) return;
   lopetaVaramusiikki();

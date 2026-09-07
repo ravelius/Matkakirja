@@ -108,6 +108,15 @@ const SVG = 'http://www.w3.org/2000/svg';
  * Nappula (js/ui.js pawnShape) pieneen svg:hen. Jaettu paikallaan olevan
  * H-nappulan ja liikkuvan D-nappulan (js/pallolauta/siirto.js) kesken,
  * jotta hahmo on sama molemmissa.
+ *
+ * JALKA ON PISTEESSÄ MOLEMMISSA (päätoimittajan linjaus 7.9.2026,
+ * Raamattu VIAT v1672). Liikkuva nappula asemoi itsensä joka kehys
+ * (siirto.js: `p.x - leveys / 2, p.y - korkeus`); lepomerkin hoitaa
+ * css/styles.css `.pallolauta-nappula:not(.pallolauta-liikkuva)` —
+ * 0 × 0 laatikko + svg:n oma `translate(-50%, -100%)`, koska kirjaston
+ * CSS2D-kerros kirjoittaa keskityksensä inline-tyyliin eikä
+ * tyylitiedoston sääntö muuten päde. Ilman tätä siirron viimeisellä
+ * kehyksellä nappula hyppäsi 18 px alas.
  */
 export function nappulaElementti(ui, luokka = 'pallolauta-nappula', aktiivinen = true) {
   const el = document.createElement('div');

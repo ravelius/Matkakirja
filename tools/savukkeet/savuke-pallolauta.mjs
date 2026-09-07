@@ -75,7 +75,11 @@
  *      päällä, kohteet ovat H-merkkejä (htmlElementsData ja DOM =
  *      moveOptions), nappula paikallaan, reitit näkyvissä.
  *  10. Siirto pallolla: kohteen napautus liikuttaa nappulan
- *      (.pawn-moving nähdään) ja nappula päätyy kohteeseen — datum
+ *      (.pawn-moving nähdään), nappulan JALKA on kaupungin pisteessä
+ *      sekä levossa (lepomerkki kohteessa) että liikkeessä (liikkuvan
+ *      nappulan jalka lähtökaupungin pisteessä ensimmäisellä
+ *      kehyksellään), joten kuvien vaihdossa ei ole hyppyä
+ *      (VIAT v1672) — ja nappula päätyy kohteeseen — datum
  *      kohteen asteissa, merkin ANKKURI pallon pinnan pisteessä ±1 px
  *      (sama mitta kuin savuke-pallo-merkit-lukossa; ks. MERKIN ANKKURI);
  *      svg#board pysyy tyhjänä koko siirron ajan,
@@ -907,6 +911,13 @@ if (AMPARI_TOIMII) {
       if (!kohde) return { virhe: 'ei kohteita' };
       const kohdeKaupunki = kohde.city?.id ?? null;
       const kohdePos = kohde.pos;
+      // Lähdön ja kohteen asteet TALTEEN ENNEN SIIRTOA: liikkuvan
+      // nappulan jalkaa verrataan pinnan pisteeseen SAMASSA kehyksessä
+      // (ks. alla), eikä niitä voi laskea vasta jälkikäteen.
+      const { pixelOf } = await import('./js/rules.js');
+      const kohta = kohdePos ? ui.pallolauta.asteet(pixelOf(game.board, kohdePos)) : null;
+      const lahtoKohta = ui.pallolauta.asteet(pixelOf(game.board, game.player.pos));
+      const kotelo = ui.pallolauta.kotelo;
       // Kohteen napautus pallolla: sama polku kuin sormella (lähin kohde).
       const napautettu = ui.pallolauta.napautaKohde(kohde.key);
       const alku = performance.now();
@@ -914,6 +925,57 @@ if (AMPARI_TOIMII) {
       let liikkuvaNahtiin = false;
       let liikkuvaLuokka = null;
       let lepoNappuloitaLiikkeessa = 0;
+      /*
+       * LIIKKUVAN NAPPULAN VIIMEINEN KEHYS (päätoimittajan linjaus
+       * 7.9.2026, Raamattu VIAT v1672: jalka on pisteessä sekä levossa
+       * että liikkeessä). Jalka näytteistetään JOKA KEHYS, jotta
+       * viimeinen näyte on todella se kehys, jonka jälkeen elementti
+       * puretaan — 40 ms:n kysely ei riittäisi alle pikselin rajaan.
+       *
+       * MITTA ON JALAN ETÄISYYS PINNAN PISTEESTÄ SAMASSA KEHYKSESSÄ,
+       * ei ruutupaikka sinänsä: kamera liikkuu siirron aikana, joten
+       * kaksi ruutupaikkaa eri hetkiltä eivät ole vertailukelpoisia
+       * (mitattu 7.9.2026: pelkkä ruutupaikkojen erotus antoi 134 px,
+       * vaikka jalka oli kummassakin päässä kohdallaan).
+       *
+       * VAIHTOKOHTA ON LÄHTÖ, EI SAAPUMINEN. Sama kaksi kuvaa vaihtuu
+       * kummassakin päässä — levossa CSS2D-merkki, liikkeessä kotelon
+       * oma elementti — ja LÄHDÖSSÄ liikkuva nappula on vielä paikallaan
+       * lähtökaupungin pisteessä, joten vaihto on siinä mitattavissa
+       * kehysnopeudesta riippumatta. Saapumispäässä VIIMEINEN piirretty
+       * kehys riippuu kuormituksesta (kuormitetulla koneella kartta
+       * piirtyy pari kertaa sekunnissa, jolloin viimeinen näyte voi olla
+       * askeleen takana), joten se on raportin tieto eikä ehto —
+       * lepokuvan jalka kohteessa mitataan erikseen alla.
+       *
+       * NÄYTTEISTYS EI SAA PÄÄTTYÄ VÄLIIN: siirto on monta hyppyä, ja
+       * liikkuva nappula katoaa DOMista hyppyjen välissä, joten sampleri
+       * elää siihen asti, kun ULOMPI silmukka toteaa siirron päättyneen.
+       */
+      let viimeinenLiikkuva = null;
+      let ensimmainenLiikkuva = null;
+      let kehyksia = 0;
+      let naytteetLoppu = false;
+      const ero = (r, kr2, piste) => ({
+        dx: (r.left + r.width / 2 - kr2.left) - piste.x,
+        dy: (r.bottom - kr2.top) - piste.y,
+      });
+      const naytteista = () => {
+        kehyksia += 1;
+        const el = document.querySelector('.pallolauta-liikkuva svg');
+        if (el) {
+          const r = el.getBoundingClientRect();
+          const kr2 = kotelo.getBoundingClientRect();
+          const maali = kohta ? pallo.getScreenCoords(kohta.lat, kohta.lon, 0) : null;
+          if (maali) viimeinenLiikkuva = ero(r, kr2, maali);
+          if (!ensimmainenLiikkuva && lahtoKohta) {
+            const lahto = pallo.getScreenCoords(lahtoKohta.lat, lahtoKohta.lon, 0);
+            if (lahto) ensimmainenLiikkuva = ero(r, kr2, lahto);
+          }
+        }
+        if (!naytteetLoppu && kehyksia < 20000) requestAnimationFrame(naytteista);
+      };
+      requestAnimationFrame(naytteista);
       for (;;) {
         svgEnintaan = Math.max(svgEnintaan, document.querySelectorAll('#board *').length);
         const liikkuva = document.querySelector('.pawn-moving');
@@ -929,6 +991,7 @@ if (AMPARI_TOIMII) {
         if (performance.now() - alku > 45000) break;
         await new Promise((r) => setTimeout(r, 40));
       }
+      naytteetLoppu = true;
       await new Promise((r) => setTimeout(r, 600));
       // Nappula asettuu levossa CSS2D-kerroksessa, jonka kirjasto
       // kirjoittaa renderissä — mittaus vasta piirretystä kehyksestä
@@ -945,13 +1008,12 @@ if (AMPARI_TOIMII) {
       await odotaKehykset(3);
       const htmlt = pallo.htmlElementsData();
       const nappula = htmlt.find((d) => d.laji === 'nappula');
-      const kohta = kohdePos ? ui.pallolauta.asteet(
-        (await import('./js/rules.js')).pixelOf(game.board, kohdePos),
-      ) : null;
       const el = document.querySelector('.pallolauta-nappula:not(.pallolauta-liikkuva)');
-      const kotelo = ui.pallolauta.kotelo;
       const kr = kotelo.getBoundingClientRect();
-      const er = el?.getBoundingClientRect();
+      // JALKA MITATAAN SVG:STÄ, ei elementistä: lepomerkin oma laatikko
+      // on 0 × 0 (css/styles.css .pallolauta-nappula:not(.pallolauta-
+      // liikkuva)), ja piirretty nappula on sen sisällä oleva svg.
+      const er = el?.querySelector('svg')?.getBoundingClientRect();
       /*
        * Merkin korkeus on 0 (js/pallolauta/merkit.js MERKIN_KORKEUS,
        * 7.9.2026): CSS2D-merkki projisoituu pinnan pisteeseen, ei sen
@@ -988,9 +1050,29 @@ if (AMPARI_TOIMII) {
         odotettu: kohta,
         dx: ankkuri && odotettu ? Number(ankkuri[1]) - odotettu.x : null,
         dy: ankkuri && odotettu ? Number(ankkuri[2]) - odotettu.y : null,
-        // Raporttiin: paljonko elementin alareuna (nappulan jalka) jää
-        // ankkurin alle — kirjaston keskitys, ei mittausvirhe.
+        /*
+         * NAPPULAN JALKA suhteessa kaupungin pisteeseen: svg:n
+         * alareunan keskipiste miinus pinnan piste. Päätoimittajan
+         * linjaus (VIAT v1672): jalka on pisteessä myös levossa, joten
+         * tämän on oltava nolla ±1 px. Ennen korjausta luku oli +18
+         * (kirjaston CSS2D-keskitys, puoli nappulaa).
+         */
         jalka: er && odotettu ? (er.bottom - kr.top) - odotettu.y : null,
+        jalkaX: er && odotettu ? (er.left + er.width / 2 - kr.left) - odotettu.x : null,
+        /*
+         * VAIHTO LÄHDÖSSÄ: liikkuvan nappulan jalka ENSIMMÄISELLÄ
+         * kehyksellään lähtökaupungin pisteestä. Nolla tarkoittaa, että
+         * lepokuva ja liikkuva kuva ovat samassa kohdassa — siis ettei
+         * kuvien vaihdossa ole nykäystä kummassakaan päässä.
+         */
+        vaihto: ensimmainenLiikkuva
+          ? Math.hypot(ensimmainenLiikkuva.dx, ensimmainenLiikkuva.dy)
+          : null,
+        // Raportin tieto: viimeinen piirretty liikkeen kehys kohteesta
+        // (kehysnopeudesta riippuva, ks. yllä).
+        hyppy: viimeinenLiikkuva
+          ? Math.hypot(viimeinenLiikkuva.dx, viimeinenLiikkuva.dy)
+          : null,
         leveys: kotelo.clientWidth,
         kohteitaJaljella: htmlt.filter((d) => d.laji === 'kohde').length,
         vaihe: game.phase,
@@ -1008,8 +1090,16 @@ if (AMPARI_TOIMII) {
         && Math.abs(siirto.nappulaDatum.lng - siirto.odotettu.lon) < 1e-6
         && siirto.dx !== null && Math.abs(siirto.dx) <= raja10 && Math.abs(siirto.dy) <= raja10,
       `dx ${siirto.dx?.toFixed?.(1)} dy ${siirto.dy?.toFixed?.(1)} raja ${raja10.toFixed(1)} datum ${JSON.stringify(siirto.nappulaDatum)} odotettu ${JSON.stringify(siirto.odotettu)}`);
-    tieto('nappulan ankkurin virhe (px) ja elementin alareuna ankkurista',
-      `${Math.hypot(siirto.dx ?? 0, siirto.dy ?? 0).toFixed(2)} / ${siirto.jalka?.toFixed?.(1)}`);
+    vaadi('    nappulan JALKA on kaupungin pisteessä ±1 px levossa ja liikkeessä (ei hyppyä kuvien vaihdossa)',
+      siirto.jalka !== null && Math.abs(siirto.jalka) <= raja10
+        && siirto.jalkaX !== null && Math.abs(siirto.jalkaX) <= raja10
+        && siirto.vaihto !== null && siirto.vaihto <= raja10,
+      `lepojalka ${siirto.jalka?.toFixed?.(2)} / ${siirto.jalkaX?.toFixed?.(2)} px, `
+      + `liikkuvan jalka lähdössä ${siirto.vaihto?.toFixed?.(2)} px`);
+    tieto('nappulan ankkurin virhe / lepojalka / liikkuvan jalka lähdössä / viimeinen kehys kohteesta (px)',
+      `${Math.hypot(siirto.dx ?? 0, siirto.dy ?? 0).toFixed(2)} / `
+      + `${siirto.jalka?.toFixed?.(2)} / ${siirto.vaihto?.toFixed?.(2)} / `
+      + `${siirto.hyppy?.toFixed?.(2)}`);
     const pyramidiSiirrosta = await vakaaPyyntoluku() - pyramidiEnnenSiirtoa;
     vaadi('    svg#board pysyy tyhjänä koko siirron ajan, tasokartan pyramidipyyntöjä 0, kohteet poissa perillä',
       siirto.svgEnintaan === 0 && pyramidiSiirrosta <= 0 && siirto.kohteitaJaljella === 0,

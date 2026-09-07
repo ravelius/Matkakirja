@@ -21,8 +21,11 @@ import { asetaIlmePaketti, esilataaIlme, ilmePakettiPaalla } from './ilme.js';
 import { sfx } from './sound.js';
 import { packById } from './pack.js';
 import {
-  startQuizMusic, stopPlaceStream, stopPohjaMusiikki, stopQuizMusic,
+  kaynnistaPohjaMusiikki, startQuizMusic, stopPlaceStream, stopPohjaMusiikki, stopQuizMusic,
 } from './ambience-stream.js';
+// Musiikin oma kytkin (Raamattu, VIAT v1672): musiikki ja äänimaisema
+// ovat kaksi eri asiaa, ks. AANIKYTKIMET alla.
+import { asetaMusiikkiPaalla, musiikkiPaalla } from './musiikkivalitsin.js';
 // Siirtymämusiikin kehittäjärivit (raitojen olemassaolo + varamusiikki).
 import {
   MUSIIKKILAJIT, asetaVaramusiikki, lopetaSiirtymamusiikki, lopetaVaramusiikki,
@@ -487,7 +490,31 @@ function startGame() {
 // --- äänet ------------------------------------------------------------------
 
 /*
- * ÄÄNET: KAKSI KYTKINTÄ (omistajan pelitestipalaute v1119:
+ * ÄÄNET: KOLME KYTKINTÄ — KERTOJA, MUSIIKKI, ÄÄNIMAISEMA
+ *
+ * KOLMAS TULI 7.9.2026 ILLALLA (omistaja, sanatarkasti: *"striimilukija
+ * ei mene päälle, jos taustamusiikki on kytketty pois. Ne ovat kaksia
+ * irrallista asiaa, joten striimi-ääni pitäisi kuulua, vaikka
+ * taustamusiikki on kytketty pois."* — Raamattu, VIAT v1672).
+ *
+ * Yhden TAUSTAÄÄNET-kytkimen takana oli sekä musiikki että paikkojen
+ * kenttä-äänitykset, joten musiikin sammuttaminen vei myös
+ * äänimaiseman. Nyt ne ovat erikseen:
+ *
+ *   MUSIIKKI      pelin omat raidat (js/musiikkivalitsin.js
+ *                 asetaMusiikkiPaalla): pohjavire ja kaupunkien
+ *                 kappaleet, siirtymä- ja linssiraidat, visamusiikki,
+ *                 aarteen paljastusaihe. EI koske äänimaisemaa.
+ *   ÄÄNIMAISEMA   entinen TAUSTAÄÄNET (js/sound.js enabled):
+ *                 paikkojen äänitykset ja tehosteet. Tämä on myös
+ *                 koko pelin mykistys — sen alla ei soi mikään.
+ *
+ * Kytkinten järjestys valikossa on sama kuin tässä: kertoja, musiikki,
+ * äänimaisema.
+ *
+ * ── ALKUPERÄINEN KAHDEN KYTKIMEN LINJAUS ──────────────────────────
+ *
+ * (omistajan pelitestipalaute v1119:
  * *"Erittele ÄÄNET-osioon kaksi selkeää omaa päälle/pois-kytkintä:
  * KERTOJA (luennat) ja TAUSTAÄÄNET (ambienssi + efektit) — kumpikin
  * pysyvä valinta"*).
@@ -523,9 +550,16 @@ const AANIKYTKIMET = [
     paalla: () => kertojaTila() !== 'ei',
   },
   {
+    avain: 'musiikki',
+    nimi: 'Musiikki',
+    seloste: 'Pelin omat raidat: pohjavire, kaupunkien kappaleet, matkat ja visa',
+    ikoni: '<path d="M9 18V6l10-2v12"/><ellipse cx="6.5" cy="18" rx="2.5" ry="2"/><ellipse cx="16.5" cy="16" rx="2.5" ry="2"/>',
+    paalla: () => musiikkiPaalla(),
+  },
+  {
     avain: 'tausta',
-    nimi: 'Taustaäänet',
-    seloste: 'Äänimaisemat ja tehosteet',
+    nimi: 'Äänimaisema',
+    seloste: 'Paikkojen äänitykset ja tehosteet — myös koko pelin mykistys',
     ikoni: '<path d="M4.5 9.4h2.8l4.2-3.4v12l-4.2-3.4H4.5z"/><path d="M15.4 8.6a4.4 4.4 0 0 1 0 6.8"/><path d="M18.2 6.2a7.6 7.6 0 0 1 0 11.6"/>',
     paalla: () => sfx.enabled,
   },
@@ -586,11 +620,40 @@ const kaannaTausta = (paalle) => {
   if (ui?.game?.quiz) startQuizMusic(ui.game.pack.id);
 };
 
+/*
+ * MUSIIKKI päälle/pois (js/musiikkivalitsin.js). Kytkin vaientaa VAIN
+ * musiikin: pohjavireen ja kaupunkien kappaleet, siirtymän ja linssin
+ * raidat, visamusiikin ja aarteen paljastusaiheen. Paikkojen
+ * äänimaisema (striimi) jatkaa — juuri se on omistajan 7.9.2026 illan
+ * vika (Raamattu, VIAT v1672).
+ *
+ * Soittimet lukevat kytkintä itse, joten päälle kääntäminen ei tarvitse
+ * muuta kuin herätteen: valitsin kertoo kuuntelijoilleen, ja
+ * js/ambience-stream.js käynnistää sen raidan, joka tähän paikkaan
+ * kuuluu. Pois kääntäminen vaientaa soivat raidat samalla kertaa —
+ * niitä on kolme eri soitinta, eikä yksikään kuule toisiaan.
+ */
+const kaannaMusiikki = (paalle) => {
+  asetaMusiikkiPaalla(paalle);
+  if (!paalle) {
+    stopPohjaMusiikki();
+    stopQuizMusic();
+    lopetaSiirtymamusiikki();
+    lopetaVaramusiikki();
+    ui?.pysaytaAarreMusiikki?.();
+    return;
+  }
+  if (!sfx.enabled) return;
+  kaynnistaPohjaMusiikki();
+  if (ui?.game?.quiz) startQuizMusic(ui.game.pack.id);
+};
+
 const kaannaAani = (avain) => {
   const tiedot = AANIKYTKIMET.find((k) => k.avain === avain);
   if (!tiedot) return;
   const paalle = !tiedot.paalla();
   if (avain === 'kertoja') kaannaKertoja(paalle);
+  else if (avain === 'musiikki') kaannaMusiikki(paalle);
   else kaannaTausta(paalle);
   naytaKertoja();
 };

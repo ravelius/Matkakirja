@@ -390,6 +390,47 @@ tiedoston reunaa — ja siksi puhujan rooli jäi ennen vapauttamatta ja
 etusivun tausta jumiin neljäsosaan luennan jälkeen. `js/luenta.js`
 vapauttaa roolin nyt myös `pause`-tapahtumasta.
 
+### Musiikki ja äänimaisema ovat eri kytkimet (omistajan vika 7.9.2026 illalla)
+
+Omistaja, sanatarkasti: *"striimilukija ei mene päälle, jos
+taustamusiikki on kytketty pois. Ne ovat kaksia irrallista asiaa, joten
+striimi-ääni pitäisi kuulua, vaikka taustamusiikki on kytketty pois."*
+(Raamattu, VIAT v1672.)
+
+**Juurisyy.** Äänivalikossa oli yksi kytkin, TAUSTAÄÄNET
+(`js/sound.js` `enabled`), ja sen takana oli kaikki: paikkojen
+äänimaisema, tehosteet, pohjaraita, kaupunkien kappaleet, siirtymä- ja
+linssiraidat, visamusiikki. Musiikin sammuttaminen vei siis myös
+kenttä-äänitykset.
+
+**Korjaus.** Musiikilla on oma pysyvä kytkin
+(`js/musiikkivalitsin.js` `musiikkiPaalla` / `asetaMusiikkiPaalla`,
+avain `matkakirja-musiikki`, oletus päällä), ja äänivalikossa on nyt
+kolme riviä: **Kertoja**, **Musiikki** ja **Äänimaisema** (entinen
+Taustaäänet). Työnjako:
+
+| kytkin | vaientaa |
+| --- | --- |
+| Musiikki | pohjaraita ja kaupunkien kappaleet, siirtymä- ja linssiraidat, visamusiikki, aarteen paljastusaihe |
+| Äänimaisema | paikkojen äänitykset ja tehosteet — myös koko pelin mykistys (sen alla ei soi mikään) |
+
+Kytkin asuu valitsimessa, koska se on musiikin alin kerros eikä tuo
+mitään soittimista: `js/ambience-stream.js` (pohjaraita, visa),
+`js/siirtymamusiikki.js` (matka ja linssi) ja `js/ui.js` (aarteen aihe)
+kysyvät siltä samaa asiaa ilman kehää. Kytkimen vaihto herättää samat
+kuuntelijat kuin näkymän vaihto, joten raita palaa samaan paikkaan.
+Avauksen sekoitus (nosto terminaaliin, musiikki alas) toimii
+sellaisenaan: musiikin ollessa pois nostettavaa raitaa ei ole, ja
+terminaali nousee kuten ennen — sama koskee avauslennon kabiinia.
+
+**Vartijat.** `tests/ambienssi.test.mjs` (musiikki pois → maiseman
+soitin syntyy ja kuuluu, pohjaraitaa ei synny; kytkin päälle → raita
+palaa; koko pelin mykistys vaientaa yhä molemmat),
+`tools/savukkeet/savuke-etusivun-aani.mjs` vartio 10 (oikea Chromium:
+valikon Musiikki-kytkin pois → äänimaiseman nauha etenee ja taso pysyy
+yli nollan, kytkin päälle → raita palaa) ja
+`tools/savuke-etusivun-aani.mjs` (valikossa on kolme kytkintä).
+
 ## Vienti
 
 1. Ensisijainen: raita ämpärin `aanet/`-kansioon (ei mediaa repoon,

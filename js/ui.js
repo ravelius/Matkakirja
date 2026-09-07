@@ -224,7 +224,7 @@ import {
  * js/ambience-stream.js:ssä. Lehti kulkee ambienssin hiljennyssyystä,
  * joten täältä kerrotaan vain matkalaukku.
  */
-import { asetaMusiikkitila } from './musiikkivalitsin.js';
+import { asetaMusiikkitila, musiikkiPaalla } from './musiikkivalitsin.js';
 /*
  * Siirtymän oma musiikki (omistajan tilaus 2.9.2026). Oma moduulinsa,
  * koska se ei ole paikan ääni vaan matkan: ks. js/siirtymamusiikki.js.
@@ -18210,7 +18210,9 @@ export class UI {
    * silloin virhetapahtuma purkaa väistön eikä mitään muuta tapahdu.
    */
   soitaAarreMusiikki(lahde) {
-    if (!sfx.enabled) return;
+    // Paljastusaihe on musiikkia: oma kytkin vaientaa sen erikseen
+    // (Raamattu, VIAT v1672) — äänimaisema ja tehosteet jatkavat.
+    if (!sfx.enabled || !musiikkiPaalla()) return;
     // Edellinen aihe pois, jos pelaaja ehti seuraavaan paljastukseen:
     // kaksi fanfaaria päällekkäin ei ole juhla vaan sotku.
     this.pysaytaAarreMusiikki();

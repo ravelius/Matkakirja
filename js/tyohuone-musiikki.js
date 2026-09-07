@@ -588,7 +588,7 @@ function piirraRivi(raita, aanetPaalla) {
   if (!aanetPaalla) {
     soita.disabled = true;
     seis.disabled = true;
-    soita.title = 'Taustaäänet ovat pois päältä.';
+    soita.title = 'Äänet ovat pois päältä (valikon Äänimaisema-kytkin).';
   }
 
   /** "olemassa" tai "olemassa · 12,4 s"; kesto voi täydentyä soitossa. */
@@ -632,9 +632,9 @@ function piirraOsasto(kohde, osasto, aanetPaalla) {
 /** Huomautus mykistyksestä; null jos äänet ovat päällä. */
 function mykistysHuomio() {
   return html('p', 'mus-huomio',
-    'Taustaäänet ovat pois päältä (valikon Taustaäänet-kytkin), joten '
-    + 'soittonapit eivät ole käytössä. Rivit näkyvät silti: tila ja kesto '
-    + 'kysytään metatiedoista, mikä ei soita mitään.');
+    'Äänet ovat pois päältä (valikon Äänimaisema-kytkin, joka on myös koko '
+    + 'pelin mykistys), joten soittonapit eivät ole käytössä. Rivit näkyvät '
+    + 'silti: tila ja kesto kysytään metatiedoista, mikä ei soita mitään.');
 }
 
 /** Lehden johdanto ja lähderivi ensimmäisen sivun kärkeen. */
@@ -665,7 +665,8 @@ function piirraSfxNapit(kohde, aanetPaalla) {
     + 'äänimaisemaa: tehoste on lyhyt.'));
   if (!aanetPaalla) {
     kohde.appendChild(html('p', 'mus-huomio',
-      'Taustaäänet ovat pois päältä, joten napit eivät soita mitään.'));
+      'Äänet ovat pois päältä (valikon Äänimaisema-kytkin), joten napit '
+      + 'eivät soita mitään.'));
   }
   const kotelo = html('div', 'mus-sfx');
   for (const nimi of SFX_NIMET) {

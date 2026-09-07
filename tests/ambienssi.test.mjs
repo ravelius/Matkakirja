@@ -571,3 +571,61 @@ test('avauksen aikana lukunäkymän hiljennys väistää terminaalia yhä', asyn
   assert.ok(Math.abs(maisema.kuuluu - avaus) < 1e-6, 'hiljennys purkautuu avauksen tasoon');
   s.virta.nollaaHiljennykset();
 });
+
+/*
+ * ── MUSIIKKI JA ÄÄNIMAISEMA OVAT ERI KYTKIMET ────────────────────────
+ *
+ * OMISTAJAN VIKA 7.9.2026 illalla, sanatarkasti: *"striimilukija ei mene
+ * päälle, jos taustamusiikki on kytketty pois. Ne ovat kaksia irrallista
+ * asiaa, joten striimi-ääni pitäisi kuulua, vaikka taustamusiikki on
+ * kytketty pois."* (Raamattu, VIAT v1672.)
+ *
+ * Juurisyy oli, että kaikki taustaääni kysyi samaa lippua (sound.js
+ * enabled). Nyt musiikilla on oma kytkin (js/musiikkivalitsin.js), ja
+ * nämä testit mittaavat molemmat suunnat: musiikki pois ei saa vaientaa
+ * maisemaa, ja koko pelin mykistys vaientaa yhä molemmat.
+ */
+test('musiikki pois: äänimaisema soi silti (kaksi eri kytkintä)', async () => {
+  const juuri = new URL('../js/', import.meta.url).href;
+  const valitsin = await import(`${juuri}musiikkivalitsin.js`);
+  const s = await pystyta({ ctxTila: 'running' });
+  try {
+    valitsin.asetaMusiikkiPaalla(false);
+    await soitaEtusivu(s);
+    const maisema = s.maisemat().pop();
+    assert.ok(maisema, 'maiseman soittimen pitää syntyä musiikin ollessa pois');
+    assert.ok(maisema.kuuluu > 0, `äänimaiseman pitää kuulua, nyt ${maisema.kuuluu}`);
+    assert.equal(s.soittimet.filter((a) => /musa-/.test(a.alkuSrc)).length, 0,
+      'musiikin ollessa pois pohjaraitaa ei saa syntyä');
+  } finally {
+    valitsin.asetaMusiikkiPaalla(true);
+  }
+});
+
+test('musiikin kytkin päälle palauttaa raidan samaan paikkaan', async () => {
+  const juuri = new URL('../js/', import.meta.url).href;
+  const valitsin = await import(`${juuri}musiikkivalitsin.js`);
+  const s = await pystyta({ ctxTila: 'running' });
+  try {
+    valitsin.asetaMusiikkiPaalla(false);
+    await soitaEtusivu(s);
+    assert.equal(s.virta.soivaPohjaMusiikki(), null, 'pois päältä ei soi mitään');
+    // Kytkin päälle: valitsin herättää soittimen, joka muistaa paikan.
+    valitsin.asetaMusiikkiPaalla(true);
+    await mikrotehtavat();
+    ajaRuudut();
+    assert.ok(s.virta.soivaPohjaMusiikki(), 'kytkimen palatessa raidan pitää palata');
+    assert.ok(s.soittimet.some((a) => /musa-/.test(a.alkuSrc)), 'raidalle syntyy soitin');
+  } finally {
+    valitsin.asetaMusiikkiPaalla(true);
+  }
+});
+
+test('koko pelin mykistys vaientaa yhä sekä musiikin että maiseman', async () => {
+  const s = await pystyta({ ctxTila: 'running' });
+  s.sfx.enabled = false;
+  await soitaEtusivu(s);
+  assert.equal(s.maisemat().length, 0, 'mykistettynä maisemaa ei synny');
+  assert.equal(s.virta.soivaPohjaMusiikki(), null, 'mykistettynä musiikkia ei synny');
+  s.sfx.enabled = true;
+});

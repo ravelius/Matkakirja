@@ -4436,3 +4436,118 @@ luetaan dokumentin kaappausvaiheesta.
 alle — kuplan keskeltä `elementFromPoint` antaa kankaan, ei kuplaa.
 Napautus kuplaan ei siis mene perille pallolaudalla. Savuke ajaa
 napautuksen kuplan omaan elementtiin ja kirjaa havainnon INFO-rivinä.
+
+## 18. Noston teksti klikattavaksi ja nappulan jalka pisteeseen (7.9.2026)
+
+Kaksi omistajan vikaa ja yksi päätoimittajan linjaus samasta illasta
+(Raamattu, **VIAT v1672**). Kolmas kohta (äänimaisema irti musiikista)
+on `docs/moduulit/aanet.md`.
+
+### 18.1 Napautus osui kuvakkeeseen, ei tekstiin
+
+Omistaja, sanatarkasti: *"Karttanostoissa teksti ei ota klikkausta
+ainoastaan kuvake. Saisiko myös tekstit klikattaviksi?"*
+
+**Juurisyy.** Pallon osumatesti on R-malli (luku 4.2, riski 3): sormen
+pinnalle osunut piste ja siitä LÄHIN MERKKI 44 px:n sisällä
+(`napautaPintaan` → `lahinMerkki`). Merkin paikka on sen oma
+karttapiste — kuvakkeen keskus — mutta nimilappu piirtyy kuvakkeen
+KYLKEEN ja voi ulottua kauas siitä. Pitkän nimen ulkopää jää säteen
+ulkopuolelle, ja tiheässä nipussa se on jo lähempänä NAAPURIN
+keskipistettä. Nimilappu ei siis ollut osumapintaa lainkaan.
+
+Mitattu Chromiumilla 7.9.2026 (390 × 844, dpr 2, korkeus 0,12, kaikki
+ruudulla olevat nostolaput, napautus lapun ulkoreunaan 2 px reunan
+sisään):
+
+| näkymä | lappuja | ulkopää osui omaan | osui TOISEEN | ei mitään |
+| --- | --- | --- | --- | --- |
+| Bukarest | 17 | 8 | 3 | 6 |
+| Ateena | 17 | 10 | 0 | 7 |
+| Helsinki | 8 | 5 | 1 | 2 |
+| Istanbul | 12 | 4 | 1 | 7 |
+
+Esimerkkejä: *"Draculan alaviite"* (73 px leveä lappu) ja *"Nadia
+Comăneci"* eivät saaneet ulkopäästään mitään; *"Branin linna"* ja
+*"Balkanvuoret"* avasivat naapurin kortin. Juuri se lukee kädessä
+"teksti ei ota klikkausta".
+
+**Korjaus.** Nostokerros antaa jokaiselle osumalle sen NIMILAPUN
+LAATIKON ruudulla (`js/pallolauta/nostot.js` `lappu(p)`), ja
+osumatesti tarkistaa myös sen (`js/pallolauta/lauta.js`
+`lappuunOsunut`). Laatikko on TÄSMÄLLEEN sama, jonka sovittelu laski
+(`nostonLaatikko`, luku 14) — sama kaava, samat asennot, sama
+ruutukoordinaatisto — joten piirretty muste ja osumapinta eivät voi
+erkaantua. Kolme rajausta:
+
+* **Piiloon soviteltu lappu ei ole osumapintaa.** Kun sovittelu vei
+  nimen kaupungin nimen tieltä, `lappu` palauttaa nollan ja jäljellä
+  on vain kuvakkeen säde — kuten ennen.
+* **Poltettu muste on mukana.** Laattaan paistetulla nostolla ei ole
+  elementtiä, mutta sen nimiö on yhtä lailla ruudulla; lauta tuntee
+  sen laatikon samasta kaavasta. Tiheässä maassa (Bukarest) KAIKKI
+  nostot ovat poltettuja, joten ilman tätä korjaus ei olisi koskenut
+  yhtäkään omistajan näkemää lappua.
+* **Kaupunkipisteen oma muste voittaa lapun.** Jos sormi on 7 px:n
+  levyn (`KAUPUNKIPISTEEN_HALKAISIJA_PX`) päällä, pelaaja tähtäsi
+  kaupunkiin. Kaikkialla muualla piirretty teksti voittaa pelkän
+  44 px:n läheisyyden. Kahden lapun mennessä päällekkäin voittaa
+  lähin laatikon keskipiste — sama sääntö kuin merkeillä
+  (fokusniput 9).
+
+**Vartija.** `tools/savukkeet/savuke-pallo-nostolaput.mjs` vartio 6:
+oikea hiiren napautus kankaalle (ei kutsu laudan metodiin) Bukarestin
+*"Strousberg"*- ja Helsingin *"Kirjasota"*-lapun tekstiin sekä
+sellaiseen lappuun, jonka ulkopää jäi vanhalta säännöltä saamatta —
+mittarina kunkin noston oma `avaa`, koska kortin sisältö tulee pakan ja
+ämpärin datasta eikä vika ollut siinä.
+
+### 18.2 Nappulan jalka hyppäsi 18 px siirron lopussa
+
+Päätoimittajan linjaus: pallolla nappulan **jalka** on kaupungin
+pisteessä sekä levossa että liikkeessä.
+
+**Juurisyy.** Liikkeessä nappula on pelin omaa DOMia kotelon päällä ja
+asemoi itsensä joka kehys jalka pisteessä (`js/pallolauta/siirto.js`:
+`p.x - leveys / 2, p.y - korkeus`). Levossa se on CSS2D-merkki, ja
+kirjaston kerros kirjoittaa elementin transformiin ensin OMAN
+keskityksensä (`translate(-50%, -50%)`, `CSS2DObject.center`) ja vasta
+sitten ankkurin. Inline-tyyli voittaa tyylitiedoston, joten
+`.pallolauta-nappula`-säännön `translate(-50%, -100%)` ei ollut
+voimassa: levossa pisteessä oli nappulan KESKIPISTE. Siirron
+viimeisellä kehyksellä hahmo siis loksahti puoli nappulaa (18 px)
+alaspäin.
+
+**Korjaus (css/styles.css).** Lepomerkin oma laatikko on `0 × 0`,
+jolloin kirjaston keskitys — prosentteja ELEMENTIN omasta laatikosta —
+ei siirrä sitä lainkaan ja elementin origo on täsmälleen pinnan piste.
+Nappulan svg asemoidaan sen suhteen irti tekstivirrasta ja nostetaan
+omalla mitallaan ylös (`position: absolute; transform:
+translate(-50%, -100%)`), jolloin alareunan keskipiste on pisteessä.
+Ei kirjaston sisuksia, ei kovakoodattuja pikseleitä, ei ajoitusta —
+ja liikkuva nappula (`.pallolauta-liikkuva`) jää säännön ulkopuolelle.
+
+**Vartijat.** `savuke-pallolauta` vartio 10 mittaa jalan kummastakin
+kuvasta: lepomerkin svg:n alareunan keskipiste on KOHDEKAUPUNGIN
+pisteessä ±1 px, ja liikkuvan nappulan jalka ensimmäisellä
+kehyksellään LÄHTÖKAUPUNGIN pisteessä ±1 px. Kuvien vaihto on sama
+kummassakin päässä (CSS2D-merkki ↔ kotelon oma elementti), joten
+lähtöpää todistaa myös saapumispään — ja se on mitattavissa
+kehysnopeudesta riippumatta, koska liikkuva nappula on siinä vielä
+paikallaan.
+
+Kaksi tarkkuutta, jotka mittaus vaati. Jalka verrataan pinnan
+pisteeseen SAMASSA kehyksessä eikä kahden eri hetken ruutupaikkojen
+erotuksena: kamera liikkuu siirron aikana, ja pelkkä ruutupaikkojen
+erotus näytti 134 px:ää, vaikka jalka oli kummassakin päässä
+kohdallaan. Ja näyte otetaan joka kehyksessä, ei 40 ms:n kyselyllä.
+Saapumispään viimeinen piirretty kehys on raportin tieto, ei ehto:
+kuormitetulla koneella kartta piirtyy pari kertaa sekunnissa, jolloin
+viimeinen näyte voi olla askeleen takana (mitattu 7.9.2026 rauhallisella
+koneella 0,28 px, kuormitettuna 134 px — sama koodi).
+`savuke-pallo-merkit-lukossa` vartio 4 mittaa jalan koko 200 px:n
+sormivedon ajan.
+
+Sivuvaikutus, joka on parannus: nimiladonta lukee pelin merkkien
+laatikot elementeistä (`merkit.laatikot('peli')`), ja nappulan laatikko
+on nyt siellä, missä hahmo oikeasti on.

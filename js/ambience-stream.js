@@ -31,7 +31,7 @@ import { jatkaPuhePiiri, taukoaPuhePiiri } from './puhe.js';
 // kohtiin peliä").
 import {
   POHJARAITA, asetaMusiikkipaikka, asetaMusiikkitila, kuunteleMusiikkitilaa,
-  musiikinMaa, musiikinPaikka, valitseMusiikki,
+  musiikinMaa, musiikinPaikka, musiikkiPaalla, valitseMusiikki,
 } from './musiikkivalitsin.js';
 
 // Arvottu ääni pysyy samana koko käynnin ajan: syncAmbience kutsuu
@@ -497,6 +497,13 @@ export function playPlaceAmbience(cityId, fallbackType, lauta, cityCountry = nul
    */
   if (sfx.enabled) kaynnistaPohjaMusiikki(cityId, cityCountry?.[cityId] ?? null);
   else stopPohjaMusiikki();
+  /*
+   * MUSIIKIN KYTKIN EI KOSKE MAISEMAAN (Raamattu, VIAT v1672): rivi
+   * yllä hoitaa musiikin, ja se osaa itse vaieta musiikin ollessa pois
+   * (kaynnistaPohjaMusiikki). Kaikki tästä alaspäin on ÄÄNIMAISEMAA ja
+   * kysyy vain sfx.enabledia — sitä samaa kytkintä, joka on
+   * äänivalikossa nimellä Äänimaisema.
+   */
   // Kaupungin oma äänitys ensin, maisematyypin maanosakohtainen
   // arvontakori varalle. Tyhjä kori tarkoittaa syntetisoitua ambienssia.
   const url = arvoAani(cityId, fallbackType, lauta, cityCountry);
@@ -951,7 +958,8 @@ export function startQuizMusic(lauta) {
   // Kaupungin ääni väistyy reilusti kysymyksen ajaksi — kaksi ääntä
   // päällekkäin täydellä voimalla oli puuroa.
   saadaVaistoa(0.15);
-  if (!sfx.enabled || musiikki) return;
+  // Visan huililuuppi on musiikkia: oma kytkin vaientaa sen (v1672).
+  if (!sfx.enabled || !musiikkiPaalla() || musiikki) return;
   // Maanosan oma valinta tai oletus voittaa; ilman kumpaakaan soi
   // yleinen. Oletukset kulkevat koodin mukana, joten ne toimivat myös
   // kotivalikkoon asennetussa pelissä, jonne selainvalinnat eivät yllä.
@@ -1164,7 +1172,13 @@ kuunteleMusiikkitilaa(() => {
  */
 export function kaynnistaPohjaMusiikki(cityId = musiikinPaikka(), maa = musiikinMaa()) {
   asetaMusiikkipaikka(cityId, maa);
-  if (!sfx.enabled) return;
+  /*
+   * KAKSI KYTKINTÄ, ERI ASIAT (Raamattu, VIAT v1672). Musiikin oma
+   * kytkin (js/musiikkivalitsin.js) vaientaa vain musiikin;
+   * äänimaisema jatkaa. Paikka on jo talletettu yllä, joten kytkimen
+   * palatessa oikea raita palaa samaan kaupunkiin.
+   */
+  if (!sfx.enabled || !musiikkiPaalla()) { stopPohjaMusiikki(); return; }
   const polku = pohjanPolku(cityId, maa);
   if (!polku || (pohja && pohjaPolku === polku)) return;
   /*

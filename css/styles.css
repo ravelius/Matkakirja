@@ -24680,6 +24680,38 @@ body.radio-tila .linssikartta-kehys, body.aikajana-paalla .linssikartta-kehys { 
   transition: opacity 250ms ease;
 }
 .pallolauta-nappula svg { display: block; overflow: visible; }
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * NAPPULAN JALKA ON KAUPUNGIN PISTEESSÄ MYÖS LEVOSSA (päätoimittajan
+ * linjaus 7.9.2026, Raamattu VIAT v1672)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * LEVOSSA nappula on CSS2D-merkki, ja kirjaston kerros kirjoittaa
+ * elementin transformiin ensin OMAN keskityksensä
+ * (`translate(-50%, -50%)`, CSS2DObject.center) ja vasta sitten
+ * ankkurin kotelon pikseleinä. Inline-tyyli voittaa tyylitiedoston,
+ * joten yllä oleva `translate(-50%, -100%)` EI ollut voimassa: levossa
+ * pisteessä oli nappulan KESKIPISTE. Liikkeessä (js/pallolauta/
+ * siirto.js piirraNappula) jalka on aina ollut pisteessä, joten siirron
+ * viimeisellä kehyksellä nappula hyppäsi 18 px (puoli nappulaa) alas.
+ *
+ * KORJAUS ILMAN KIRJASTON SISUKSIA: lepomerkin oma laatikko on 0 × 0,
+ * jolloin kirjaston keskitys (prosentteja ELEMENTIN omasta laatikosta)
+ * ei siirrä sitä lainkaan ja elementin origo on täsmälleen pinnan
+ * piste. Nappulan svg asemoidaan sen suhteen irti tekstivirrasta ja
+ * nostetaan omalla mitallaan ylös (`translate(-50%, -100%)`), jolloin
+ * ALAREUNAN KESKIPISTE — jalka — on pisteessä. Samat prosentit kuin
+ * liikkuvan nappulan `p.x - leveys / 2, p.y - korkeus`, mutta ilman
+ * kovakoodattuja pikseleitä.
+ *
+ * Liikkuva nappula (.pallolauta-liikkuva) on pelin omaa DOMia kotelon
+ * päällä ja asemoi itsensä joka kehys — se jää tämän ulkopuolelle.
+ */
+.pallolauta-nappula:not(.pallolauta-liikkuva) { width: 0; height: 0; }
+.pallolauta-nappula:not(.pallolauta-liikkuva) > svg {
+  position: absolute;
+  transform: translate(-50%, -100%);
+}
 @media (prefers-reduced-motion: reduce) {
   .pallolauta-nappula { transition: none; }
 }
