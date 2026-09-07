@@ -950,7 +950,97 @@ kuvakaappaukset ennen hiontaa"). Muutoslokirivi ehdotus: 'Ihmisen
 matka: savuke ja kuvat vanoille'.
 ```
 
-## 7. Mitä jää auki toteutukseen
+## 7. Toteutettu (mitatut luvut)
+
+Erät V0–V4 ovat mainissa (v1658, kuusi committia), V5 tämän jälkeen.
+Luvut ovat kunkin erän omista mittauksista. SELAINMITTAUKSET ON AJETTU
+KONTIN OHJELMISTO-WebGL:LLÄ, joka piirtää pallon 0,5–1,5 kehystä
+sekunnissa — ne ovat suhteellisia, eivät laitelukuja. Ennusteet ovat
+luvuissa 2–4.
+
+| Erä | Mitta | Ennen | Jälkeen |
+| --- | --- | --- | --- |
+| V0 maski | Tihama (13,0°N, 43,7°E) | 179 513 v. sitten | 77 500 (ylitys ikkunassa 78–55 ka) |
+| V0 | Jemen (15°N, 44°E) | 173 060 | 77 262 |
+| V0 | Djibouti / Oman / Levantti / Alaska / White Sands / Madjedbebe / Monte Verde / Madagaskar | — | 184 274 / 75 511 / 71 804 / 16 700 / 15 175 / 62 384 / 14 131 / 1 220 (ennallaan) |
+| V0 | maskin maaruutuja | 62 065 | 62 064 |
+| V1 laskenta | johdaVanat Nodessa | — | 31–76 ms |
+| V1 | vanoja / kärkiä | — | 17 / 974 |
+| V1 | selkäranka | — | 276 kärkeä, 30 830 km Omosta Monte Verdeen |
+| V1 | vana-aineiston JSON | — | 22 kt |
+| V1 | selkärangan avainpisteet (v. sitten) | — | Oman 75 515, Altai 52 242, Tšuktšit 31 494, Seward 17 681, Monte Verde 14 134 |
+| V2 vanamoduuli | piirtokutsut / kolmiot (vanat pois → esiin) | — | +12–13 / +8 100 |
+| V2 | kehysväli p50 puhelin / työpöytä | 1 650 / 1 133 ms | 1 500 / 1 150 ms (ero mittausvirheen sisällä) |
+| V2 | laskenta selaimessa | — | 320–510 ms + johdaVanat 21–50 ms |
+| V3 kytkentä | kalvon maalauksia koko ajossa | joka kehys | 2 |
+| V3 | kalvoja (kerran maalattua) | — | 2: vanha väestö ja varhaisten retkien läikkä |
+| V3 | vanoja / kuvakehyksiä esityksessä | — | 17 / 20 (ennen V4:ää) |
+| V4 moottori | kortteja nauhassa | 20 | 6 |
+| V4 | kellon pysähdyksiä | 20 | 6 (kaikki 20 pysäkkiä syttyvät yhä) |
+| V4 | esityksen kesto (savukkeen nopeutettu tahti) | 119,5 s | 84,4 s |
+| V4 | gallerian sisällys | — | 20 riviä, 6 merkittyä (◈) |
+| V5 savuke | `savuke-aikajana --linssi ihmisen-matka` | — | 18/18 läpi (9 väitettä × puhelin ja työpöytä) |
+| V5 | vanoja / kuvakehyksiä / pisteitä lopussa | — | 17 / 6 / 14 (sama DOMista laskettuna) |
+| V5 | kalvoja / maalauksia koko ajossa | — | 2 / 2 |
+| V5 | kellon pysähdyksiä / syttyneitä pysäkkejä | — | 6 / 20 |
+| V5 | kameran leveys: peräkkäisten KEHYSTEN suhde | — | 1,20 puhelin, 1,16 työpöytä (raja 1,35) |
+| V5 | kameran leveys: sekunnin ruudukossa | — | 1,42 puhelin, 1,33 työpöytä |
+| V5 | vanojen laskenta selaimessa (linssin auetessa) | — | 2,3–2,5 s työsäikeessä |
+| V5 | esityksen kesto ilman kuvataukoja | — | 30,1 s puhelin, 27,9 s työpöytä (kehysväli 0,55 / 0,48 s) |
+| V5 | kuvakaappauksia | — | 9 näkymää kohti (18 kpl) |
+
+**Poikkeama suunnitelmasta: kameran 1,35.** Luku 3.2 lupaa, ettei
+näkyvä leveys muutu sekunnissa kerrointa 1,35 enempää. Toteutuneella
+kameralla katto on suurempi kuin luku: korkeus liukuu logaritmisesti
+aikavakiolla 3,5 s, joten kohteen heilahtaessa lähikuvasta kattoon
+(30° → 110°, juuri se on sääntö "kamera nousee ja kärki pysyy
+kuvassa") leveys kertautuu sekunnissa 3,67^(1−e^(−1/3,5)) ≈ 1,38.
+Mitattu puhelimella 1,42–1,44. LIIKE ON SILTI JATKUVAA: peräkkäisten
+kehysten suhde on vain 1,21, eli kamera ei hyppää vaan kiipeää
+liu'ullaan. Savukkeen tiukka vartio on siksi kehysten välinen suhde
+(1,35) ja sekuntivauhdille jää liu'un oma katto. Erän V3 vihreä 1 Hz
+-mittaus selittyy sillä, että kontissa setInterval(1000) ehti kulkea
+vain 18 kertaa koko ajossa — näytteet olivat kahdeksan sekunnin
+päässä toisistaan ja tasoittivat vauhdin. Jos omistaja haluaa
+kirjaimellisen 1,35:n, se on kameran aikavakion (3,5 s → n. 5 s) tai
+leveyskaton (110° → n. 90°) muutos, ei mittarin.
+
+**Kuvahetkien tarkkuus.** Savuke pysäyttää kellon sivun sisällä yhden
+kehyksen tarkkuudella, mutta nopeutetulla tahdilla kello ehtii
+kehyksessä koko pysäkkivälin yli (askel katossa 200 ms, väli n. 60
+ms). Hetki 15 ka osuu siksi käytännössä Monte Verden saapumiseen
+(14 500 v. sitten); savukkeen INFO-rivi kertoo aina, mihin lukemaan
+kuva otettiin.
+
+**Kuvista havaittua (V5, omistajan arvioitavaksi).** Kaikki 18
+kaappausta on katsottu; nämä eivät estä julkaisua, mutta ne näkyvät
+kuvissa:
+
+1. **Kaistan jänteet erottuvat.** Lähikuvassa (Denisova 50 ka,
+   Beringia 20 ka) kaista piirtyy ketjuna vinoja suorakaiteita, joiden
+   liitokset näkyvät reunoina — Line2 ei häivytä reunaansa (luku 8,
+   ensimmäinen kohta). Kauempaa (loppunäkymä) ilmiö katoaa.
+2. **Varhaisten retkien läikän reuna on suorakulmainen.** Työpöydän
+   88 ka -kuvassa Arabian oranssin läikän ylä- ja vasen reuna ovat
+   suoria viivoja: kalvo maalataan laatikkopehmennyksellä, ja
+   lähikuvassa laatikon reuna näkyy.
+3. **Pystyraita päivämäärärajalla.** Beringian kuvissa (20 ka) kulkee
+   vaalea pystyraita n. 180°:n kohdalla — kalvokankaan sauma.
+4. **Hiljainen pysäkki näyttää lopussa lampulta.** Piste on 6 px eikä
+   liekki, mutta pysäkki saa yhä palavan lampun (js/aikajana.js
+   sytyta: `asetaValonTila(valo, true, !hiljainen)`), joten koko
+   pallon näkymässä kaikki 20 löytöpaikkaa hehkuvat samanlaisina.
+   Suunnitelman luku 4 puhui pisteestä "liekin sijaan".
+5. **Tiedeliitteen sisällysrivi leikkautuu puhelimella.** Pitkä
+   ajoitusteksti ja otsikko ovat samalla rivillä, ja esim.
+   "Tuhkakerrosten alta" jää levyn oikean reunan alle (390 px).
+   Työpöydällä lista on kaksipalstainen eikä leikkaudu.
+6. **Monte Verden kehystys on työpöydällä tyhjä.** Kun kello pysähtyy
+   14,5 ka:iin, ilmiöpaneeli peittää Chilen rannikon ja näkyvästä
+   alueesta neljä viidesosaa on Tyyntämerta. Puhelimella sama hetki
+   on parempi (vana näkyy vasemmassa yläkulmassa).
+
+## 8. Mitä jää auki toteutukseen
 
 - Kaistan pehmeä reuna: Line2 ei häivytä reunaansa; kaksi päällekkäistä
   leveyttä on porrastettu häive. Jos se ei kelpaa kuvissa, vaihtoehto
@@ -961,7 +1051,7 @@ matka: savuke ja kuvat vanoille'.
   siirtopuskurit) omana siivouseränä, kun omistaja on hyväksynyt vanat.
 - Tasokartta (?lauta=kartta) pysyy valolinssinä (päätös 9).
 
-## 8. Avoimet kysymykset omistajalle (vain aidot tasapelit)
+## 9. Avoimet kysymykset omistajalle (vain aidot tasapelit)
 
 1. **Lopun näkymän keskipiste.** Pallo näyttää yhden puoliskon, ja
    kuvat kertovat, että Tyynimeri keskellä (lat 5°, lng −165°;
@@ -983,7 +1073,7 @@ matka: savuke ja kuvat vanoille'.
    tuntuu tyhjältä, Yana 32 ka on selkärangalla ja seitsemäs kuva
    maksaa 4,6 s.
 
-## 9. Kokeiluskriptit ja kuvat (scratchpad, ei repossa)
+## 10. Kokeiluskriptit ja kuvat (scratchpad, ei repossa)
 
 Kansio `scratchpad/vanat/` (Fablen session scratchpad
 /tmp/claude-0/-home-user-Matkakirja/4395e8bd-2040-5167-a99c-deb3b07ea212/scratchpad/vanat):
