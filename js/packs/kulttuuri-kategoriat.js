@@ -90314,4 +90314,921 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * SALTA (Opus 7.9.2026, Fablen parvi) — E-Amerikan laudan
+   * kaupunkilehti, kaupunki-id `salta`. Aineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-salta.md ja sen erillinen
+   * tarkistus tarkistus-salta.md (tuomio "kelpaa, kun kohtien A–F
+   * ratkaisut tehdään"; kaikki kuusi on tehty, ks. alla).
+   *
+   * LÄHTEET. Väitteet on luettu raakateksteistä 7.9.2026.
+   * en-Wikipedia: "Salta", "Salta Cathedral", "Museum of High
+   * Altitude Archaeology", "Children of Llullaillaco", "Martín Miguel
+   * de Güemes", "Zamba (artform)", "Bombo legüero", "Peña (music)",
+   * "Eduardo Falú", "Los Chalchaleros", "Chacarera".
+   * es-Wikipedia: "Salta", "Plaza 9 de Julio (Salta)", "Cerro San
+   * Bernardo", "Señor y Virgen del Milagro", "Catedral de Salta",
+   * "Cabildo de Salta". Espanjankielinen Wikipedia on nimetty
+   * lähteeksi siellä missä sitä käytetään (Guatemala Cityn
+   * ennakkotapaus samasta parvierästä): Saltan keskustan
+   * rakennuksista on englanniksi vain kaksi artikkelia.
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   * Saapumisteksti (southamerica-saapumiset.js) ja valokuvataulu
+   * (southamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * kosketa; ennen–nyt-pari on kopioitu valokuvataulusta, jossa se on
+   * jo tarkistettu.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'musiikki'; sivun nimi kertoo aiheen.
+   *
+   * ARGENTIINAN MAALEHTEÄ EI TOISTETA, EIKÄ KOLMEA KARTTANOSTOA.
+   * Maalehti (maa-kategoriat.js, ARG) kertoo Sarmientosta, vuoden
+   * 1869 väestönlaskennasta, Paraguayn sodasta ja siirtolaislaivoista,
+   * gauchosta ja Martín Fierrosta, matesta, tangon juurista
+   * (candombe, payada, milonga), Iguazústa, pampasta, dinosauruksista
+   * ja Aconcaguasta, asadosta, torrontésista — ja nimenomaan
+   * SALTAN EMPANADOISTA omalla nostollaan. Karttanostoja ovat
+   * QUEBRADA DE HUMAHUACA ja LA POLVORILLAN VIADUKTI eli
+   * Salta–Antofagasta-rata (maastokohteet-arg.js). Nämä kolme ovat
+   * kaupungin visan vastauksia, joten ne MAINITAAN matkaoppaassa
+   * yhdellä lauseella — mutta yksikään ei ole noston aihe.
+   *
+   * ZAMBA JA CUECA. Chilen maalehden musiikkisivulla on nosto
+   * cuecasta ja perulaisesta zamacuecasta. Teemasivun zamba-nosto
+   * kertoo argentiinalaisen haaran: syntypaikan (Saltan maakunta
+   * 1824), tahtilajin, nenäliinat ja bombo legüeron. Zamacueca
+   * mainitaan yhdellä lauseella alkuperänä, ei aiheena.
+   *
+   * KOHDEKARTTA EI TOISTA NÄITÄ JUTTUJA (New Yorkin sääntö).
+   * Kansisivu kertoo perustamisesta, Milagro-hartaudesta, vuodesta
+   * 1873, kaupunkikuvasta ja Cerro San Bernardosta; teemasivu
+   * musiikista. Kohdekartan kahdeksan juttua kertovat kunkin
+   * rakennuksen oman historian: katedraalin rakennusvaiheet,
+   * cabildon myynnin ja entisöinnin, MAAM:n kokoelman, San
+   * Franciscon tornin, San Bernardon oven, La Mercedin vuodet,
+   * kuvataidemuseon kartanon ja Güemesin muistomerkin kivet.
+   * LLULLAILLACON LAPSET OVAT KOKONAAN KOHDEKARTAN JUTUSSA eivätkä
+   * esiinny nostoissa lainkaan (tarkistus-salta.md, kohta G).
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: cabildon loppuvuodesta ei anneta yhtä lukua (lähde sanoo
+   *    sekä 1888 että "1880 + yhdeksän vuotta").
+   *  - B: asetuksen 95687 päivämäärä eroaa kohteittain, joten
+   *    monumenttivuodeksi sanotaan vain 1941.
+   *  - C: katedraalin monumenttivuosi on leipätekstin 1941, ei
+   *    kuvatekstien 1947.
+   *  - D: kuvataidemuseon avausvuotta ei anneta (luokitusrivit
+   *    sanovat sekä 1930 että 2008, leipäteksti ei kumpaakaan).
+   *  - E ja F: kaksi faktapohjan omaa virhettä korjattiin ennen
+   *    kirjoittamista (La Merced 1907–1914, ei 1700-lukua;
+   *    kuvataidemuseo Usandivarasin kartanossa, ei Casa Arias
+   *    Rengelissä).
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026 ilta).
+   * Oppaan sääjakso nojaa siksi en-Wikipedian Climate-osioon ja
+   * sanoo sen ääneen.
+   */
+  salta: [
+    {
+      id: 'kaupunki',
+      nimi: 'Salta',
+      johdanto: 'Salta perustettiin 1582 etapiksi Liman ja Buenos '
+        + 'Airesin väliselle tielle, ja tienvarsikaupunki se pysyi. '
+        + 'Isoisän matkavuonna 1873 rautatietä ei vielä ollut, ja '
+        + 'tavara kulki muulien selässä.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki, joka perustettiin tien varteen',
+          aika: '1582',
+          teksti: 'Perun varakuningas Francisco Álvarez de Toledo '
+            + 'kirjoitti maaliskuussa 1576 kuninkaalle lähettäneensä '
+            + 'väkeä perustamaan asutusta Calchaquín laaksoon ja '
+            + 'Saltaan, jotta Tucumánin provinssi voisi yhdistyä ja '
+            + 'käydä kauppaa Charcasin kanssa. Hernando de Lerma '
+            + 'perusti kaupungin 16. huhtikuuta 1582 nimellä San '
+            + 'Felipe y Santiago de Lerma en el valle de Salta. Se oli '
+            + 'etappi Liman ja kaksi vuotta aiemmin uudelleen '
+            + 'perustetun Buenos Airesin välillä. Kaava oli yhdeksän '
+            + 'kertaa viisi korttelia: pohjoisessa rajana Tineon suo, '
+            + 'etelässä Sauce-joki. Nimi tulee alueella asuneen '
+            + 'Salta-kansan nimestä, eikä sen merkityksestä ole '
+            + 'päästy yksimielisyyteen.',
+        },
+        {
+          otsikko: 'Kaksi laatikkoa meressä',
+          aika: '1592 ja 1692',
+          teksti: 'Kertomuksen mukaan Callaon sataman edustalla '
+            + 'nähtiin 19. kesäkuuta 1592 kaksi suurta laatikkoa '
+            + 'kellumassa. Toisessa oli Neitsyt Córdoban luostarille, '
+            + 'toisessa ristiinnaulittu Saltan pääkirkolle; koskaan ei '
+            + 'saatu selville, mikä alus ne toi Espanjasta. Kuvat '
+            + 'kannettiin muulien selässä vanhaa inkatietä noin 2 800 '
+            + 'kilometriä. Sata vuotta myöhemmin, 13. syyskuuta 1692, '
+            + 'maanjäristys tuhosi naapurikaupungin Estecon ja '
+            + 'vaurioitti Saltaa; perimätiedon mukaan Neitsyt-kuva '
+            + 'löytyi lattialta vahingoittumattomana, Kristus vietiin '
+            + 'kulkueeseen ja 16. päivänä maa lakkasi tärisemästä. '
+            + 'Milagro-juhla vietetään yhä 13.—15. syyskuuta, ja '
+            + 'kulkue kokoaa vuosittain yli 850 000 ihmistä.',
+        },
+        {
+          otsikko: 'Vuosi 1873: kaupunki kahden ajan välissä',
+          aika: '1873',
+          teksti: 'Itsenäisyyssota jätti Saltan taloudellisesti '
+            + 'raunioihin, ja taantuma kesti suuren osan 1800-lukua. '
+            + 'Isoisän matkavuonna kaupunki oli siis sitä, mitä se oli '
+            + 'ollut kolmesataa vuotta: muulikaupunki tien varressa. '
+            + 'Rautatie ja sen mukana espanjalaiset, italialaiset, '
+            + 'brittiläiset sekä syyrialaiset ja libanonilaiset '
+            + 'siirtolaiset saapuivat vasta 1890-luvulla, ja '
+            + 'Salta—Antofagasta-radan työt alkoivat vasta 1921. Yksi '
+            + 'asia kuitenkin alkoi juuri 1873: katedraalin '
+            + 'rakennustyöt, jotka olivat olleet pitkään pysähdyksissä, '
+            + 'käynnistettiin uudelleen. Myös kaupungin virallinen '
+            + 'lämpötilasarja alkaa samasta vuodesta.',
+        },
+        {
+          otsikko: 'Määräys, joka teki kaupungista kauniin',
+          teksti: 'Varakuninkaanmaan aikaan Salta oli pakollinen '
+            + 'etappi Buenos Airesin sataman ja Ylä-Perun välillä, ja '
+            + 'sen läpi kulki valtavasti väkeä. Kuvernöörin määräys '
+            + 'velvoitti pitämään rakennukset ja julkisivut sellaisina '
+            + 'kuin ne olivat; määräys siirtyi myöhemmin kunnan '
+            + 'rakennusjärjestykseen, joka palkitsi noudattajat ja '
+            + 'rankaisi talonsa ulkonäköä muuttaneet. Siitä syntyi '
+            + 'lempinimi La Linda, kaunis. Kaupunkikuva ei silti ole '
+            + 'puhtaasti siirtomaa-aikaista: 1800-luvun puolivälistä '
+            + 'alkaen rakennettiin uuskolonialistiseksi kutsuttua '
+            + 'tyyliä. Perinnetoimikunnan puheenjohtaja Guillermo '
+            + 'Matach sanoo sen suoraan: Saltassa on paljon '
+            + 'siirtomaa-arkkitehtuurin piirteitä, mutta se ei ole '
+            + 'puhtaasti siirtomaakaupunki, niin kuin moni luulee.',
+        },
+        {
+          otsikko: 'Vuori, joka oli kerran meren pohjassa',
+          teksti: 'Kilometrin päässä pääaukiolta itään kohoaa Cerro '
+            + 'San Bernardo. Huippu on 1 471,92 metriä merenpinnasta '
+            + 'ja mittapaalun mukaan 284,92 metriä kaupungin '
+            + 'yläpuolella; rinteet ovat Yungas-vuoristosademetsää. '
+            + 'Vuori syntyi Andien mukana mesotsooisella '
+            + 'maailmankaudella ja oli sitä ennen meren alla, joten '
+            + 'sen kivistä löytyy merifossiileja — muun muassa '
+            + 'trilobiitteja, joista yksi on nimetty vuoren mukaan '
+            + 'Sanbernardaspis pygacantha. Huipulle pääsee kolmea '
+            + 'reittiä: maantietä, köysiradalla tai kiviportaita, '
+            + 'joissa on 1 021 askelmaa ja varrella neljätoista '
+            + 'ristintien kappelia. Vuori on ollut kunnallinen '
+            + 'luonnonsuojelualue 4. kesäkuuta 1991 alkaen.',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Salta on Argentiinan seitsemänneksi suurin kaupunki '
+          + 'ja maan luoteisosan keskus: asukkaita on 627 704 vuoden '
+          + '2022 laskennan mukaan, ja Valle de Lerman '
+          + 'metropolialueella asuu yli puolet koko maakunnan '
+          + 'väestöstä. Kaupunki on 1 200 metrin korkeudessa, joten '
+          + 'ilmasto on subtrooppinen mutta leuto: kesät ovat lämpimiä '
+          + 'ja ukkoisia, talvet kuivia ja aurinkoisia. Keskusta on '
+          + 'yhä se sama yhdeksän kertaa viiden korttelin ruudukko, '
+          + 'joka mitattiin 1582, ja pääaukion ympäri kiertävä '
+          + 'holvikäytävä on säilynyt lähes kokonaan. Kolme '
+          + 'kävelykatua — Alberdi, Florida ja Caseros — lähtevät '
+          + 'aukiolta, ja illalla väki siirtyy Balcarce-kadulle.',
+        artikkeli: {
+          nimi: 'Matkailijan Salta',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa vuori on kadun päässä, aukio on '
+            + 'yhä siinä mihin se 1582 mitattiin ja ilta alkaa vasta '
+            + 'silloin, kun ensimmäinen kitara viritetään.',
+          nosto: 'Pääaukion ympäri kiertää recova, katettu '
+            + 'holvikäytävä, joka on säilynyt lähes kokonaan — se on '
+            + 'harvinaista Argentiinassa. Aukiolla kasvaa yli 250 '
+            + 'puuta ja yli 7 000 kääpiökukan tainta, ja sen laidoilla '
+            + 'seisovat katedraali, cabildo ja kaksi museota.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentoasema on nimetty Martín Miguel de '
+                + 'Güemesin mukaan, ja se on maakunnan tärkein '
+                + 'sisääntulo; toinen on linja-autoterminaali. '
+                + 'Keskustassa liikutaan kävellen: aukiolta on '
+                + 'sadan metrin matka San Franciscon basilikalle ja '
+                + 'kilometri Cerro San Bernardon juurelle. Vuorelle '
+                + 'nousee köysirata, ja sen viereltä lähtevät '
+                + 'kiviportaat. Rautatieasemalta lähtee Tren a las '
+                + 'Nubes, pilvien juna, joka kulkee 217 kilometriä '
+                + 'Salta—Antofagasta-rataa ja ylittää La Polvorillan '
+                + 'viaduktin 4 220 metrissä. Maakunnan matkatoimistot '
+                + 'myyvät päiväretkiä myös naapurimaakunta Jujuyn '
+                + 'puolelle Quebrada de Humahuacaan, kapeaan '
+                + 'värikallioiseen maailmanperintölaaksoon.',
+            },
+            {
+              otsikko: 'Aukio ja sen laidat',
+              teksti: 'Plaza 9 de Julio on kaupungin perustamispaikka. '
+                + 'Vuoden 1573 kuninkaallisten ohjeiden mukaan '
+                + 'pääaukion piti olla suorakaide, jonka pituus on '
+                + 'puolitoista kertaa leveys, ja sellaisen Hernando de '
+                + 'Lerma mittasi. Pitkään se oli kuiva ja tyhjä: '
+                + 'cabildon virkamiesten talli ja vaunusuoja, paikka '
+                + 'jossa luettiin kuninkaan asetukset. Aukio sai '
+                + 'petrolilyhdyt 1871, ja 1800-luvun lopulla '
+                + 'kaupunginhallinto istutti sinne hedelmäpuita, '
+                + 'jasmiineja, ruusuja ja liljoja. Vuonna 1910 '
+                + 'pystytettiin suihkulähde ja ranskalaisia '
+                + 'pronssiveistoksia, ja 1918 keskelle suunniteltiin '
+                + 'nykyinen muistomerkki. Aukion laidalla on myös '
+                + 'Centro Cultural América, ranskalaisen akatemismin '
+                + 'talo vuodelta 1913.',
+            },
+            {
+              otsikko: 'Mitä täällä syödään',
+              teksti: 'Saltan empanada on pieni, mehukas ja tulinen '
+                + 'täytetty piirakka, joka paistetaan uunissa; sama '
+                + 'versio on suosittu rajan takana Boliviassa. '
+                + 'Torrontés on maakunnan valkoviinirypäle, ja '
+                + 'Cafayaten laaksossa kolmen tunnin ajomatkan päässä '
+                + 'järjestetään sille oma juhla. Ruokailu alkaa '
+                + 'myöhään: Balcarce-kadun ravintolat täyttyvät vasta '
+                + 'yhdeksän jälkeen, ja peñoissa syödään ennen kuin '
+                + 'lauletaan. Kaupungin länsilaidalla on käsityötori, '
+                + 'joka avattiin 1800-luvun kartanossa 15. heinäkuuta '
+                + '1968 ensimmäisenä koko Argentiinassa; siellä myydään '
+                + 'ponchoja, mattoja ja seinävaatteita sekä puu- ja '
+                + 'keramiikkatöitä, ja vuodesta 1993 tekijät ovat itse '
+                + 'paikalla työnsä ääressä.',
+            },
+            {
+              otsikko: 'Museoiden kaupunki',
+              teksti: 'Aukion laidalla on kaksi museota vastakkain: '
+                + 'MAAM eli korkean vuoriston arkeologian museo ja '
+                + 'nykytaiteen museo MAC, joka avattiin 26. kesäkuuta '
+                + '2004 ja jonka Argentiinan taidekriitikkojen '
+                + 'yhdistys valitsi vuoden 2007 museoksi. Cabildon '
+                + 'alakerrassa on pohjoisen historiallinen museo ja '
+                + 'yläkerrassa siirtomaa- ja kuvataidemuseo. '
+                + 'Belgrano-kadulla on maakunnan kuvataidemuseo, jonka '
+                + 'yhdessätoista salissa on esikolumbiaanista '
+                + 'taidetta, 1700- ja 1800-luvun kirkkotaidetta, '
+                + '1800-luvun eurooppalaista maalausta ja 1960-luvun '
+                + 'saltalaismestareita. Güemesin muistomerkin takana '
+                + 'on antropologian museo.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Salta-artikkelin '
+                + 'Climate-osiosta; lehdellä ei ole omaa vuosigraafia, '
+                + 'koska säänormaaleja ei haettu tässä erässä. '
+                + 'Ilmasto on subtrooppinen ylänköilmasto ja neljä '
+                + 'vuodenaikaa erottuvat. Kesällä päivät ovat 26—28 '
+                + 'astetta ja yöt 15—16, ja ukkosia tulee lähes '
+                + 'päivittäin. Syksy on kuiva: päivät noin 22 astetta, '
+                + 'yöt 10. Talvella kuivuus on äärimmäistä, yöt ovat '
+                + 'keskimäärin kolme astetta ja hallaa tulee usein, '
+                + 'mutta päivä lämpenee yhdeksääntoista. Kevät on '
+                + 'aurinkoinen, 25—28 astetta. Sadetta tulee yli 700 '
+                + 'millimetriä vuodessa, mutta yli 80 prosenttia siitä '
+                + 'joulukuun ja maaliskuun välillä. Aurinkoa on '
+                + '1 863 tuntia vuodessa. Milagro-juhla on '
+                + '13.—15. syyskuuta.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Plaza 9 de Julio',
+                tahdet: 3,
+                selite: 'Kaupungin perustamispaikka 1582, ja sen '
+                  + 'holvikäytävä on säilynyt lähes kokonaan.',
+              },
+              {
+                mita: 'Cerro San Bernardo',
+                tahdet: 3,
+                selite: '284,92 metriä kaupungin yläpuolella; '
+                  + 'köysirata tai 1 021 porrasta.',
+              },
+              {
+                mita: 'Cabildo',
+                tahdet: 3,
+                selite: 'Argentiinan täydellisimmin säilynyt cabildo, '
+                  + 'nykyään kaksi museota.',
+              },
+              {
+                mita: 'Balcarce-katu',
+                tahdet: 2,
+                selite: 'Kolme korttelia peñoja ja ravintoloita; '
+                  + 'viikonloppuaamuisin käsityötori.',
+              },
+              {
+                mita: 'Tren a las Nubes',
+                tahdet: 2,
+                selite: 'Koko päivän junaretki 4 220 metriin; '
+                  + 'lähtee kaupungin asemalta.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksoissa ja
+             * nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Korkeus tuntuu vasta vuorilla',
+                teksti: 'Kaupunki itse on 1 200 metrissä eikä '
+                  + 'aiheuta vaivaa, mutta Tren a las Nubes nousee '
+                  + 'yli neljään kilometriin saman päivän aikana — '
+                  + 'siihen kannattaa varautua.',
+              },
+              {
+                otsikko: 'Sade tulee kerralla',
+                teksti: 'Yli 80 prosenttia vuoden sateista tulee '
+                  + 'joulukuun ja maaliskuun välillä, ja silloin '
+                  + 'ukkostaa lähes joka päivä; muina kuukausina '
+                  + 'taivas on lähes aina sininen.',
+              },
+              {
+                otsikko: 'Syyskuun kaupunki on täynnä',
+                teksti: 'Milagro-kulkue 13.—15. syyskuuta kokoaa '
+                  + 'yli 850 000 ihmistä, mikä on enemmän kuin '
+                  + 'kaupungin oma väkiluku.',
+              },
+              {
+                otsikko: 'Ilta alkaa myöhään',
+                teksti: 'Peñoissa lauletaan yhdessä, ja ohjelma '
+                  + 'käynnistyy vasta illallisen jälkeen; ennen '
+                  + 'yhdeksää kadut ovat hiljaiset.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Peña ja pohjoisen laulu',
+      johdanto: 'Buenos Aires soittaa tangoa, Salta ei. Täällä '
+        + 'soittimet ovat kitara ja bombo legüero, ja laulu on '
+        + 'pohjoisen omaa folklorea.',
+      tehtava: {
+        kysymys: 'Mistä bombo legüeron nimi kertoo?',
+        vaihtoehdot: [
+          'Rummun valmistajasta',
+          'Siitä, että sen kuulee peninkulman päähän',
+          'Puulajista, josta runko koverretaan',
+          'Tanssin askelmäärästä',
+        ],
+        oikea: 1,
+        fakta: 'Legua on peninkulma. Rummun runko koverretaan ontosta '
+          + 'puunrungosta ja päät tehdään eläinten nahoista, joihin '
+          + 'karva jätetään — siksi sointi on tumma.',
+      },
+      nostot: [
+        {
+          otsikko: 'Paikka, jossa lauletaan yhdessä',
+          teksti: 'Peña tarkoittaa muusikoiden tai taiteilijoiden '
+            + 'kokoontumispaikkaa; sana on käytössä Espanjassa ja '
+            + 'useissa Etelä-Amerikan maissa, ja Chilessä se tarkoitti '
+            + 'edullista kansanmusiikkipaikkaa, jossa oli '
+            + 'yksinkertaista syötävää ja juotavaa. Saltassa peñat '
+            + 'ovat Balcarce-kadun kolmessa rautatieasemaa lähimmässä '
+            + 'korttelissa: ravintoloita, pubeja ja kahviloita kadun '
+            + 'molemmin puolin ja konsertteja joka ilta. Samat '
+            + 'korttelit muuttuvat lauantai-, sunnuntai- ja '
+            + 'pyhäaamuina käsityönäyttelyksi. Peñassa yleisö ei ole '
+            + 'pelkkä yleisö: lauluihin lauletaan mukana, ja moni '
+            + 'kappale on kirjoitettu juuri tätä kaupunkia varten.',
+        },
+        {
+          otsikko: 'Tanssi, joka syntyi tässä maakunnassa',
+          aika: '1824',
+          teksti: 'Zamba syntyi Argentiinan Saltan maakunnassa vuonna '
+            + '1824 perulaisesta zamacuecasta ja levisi maahan '
+            + 'Ylä-Perun ja Chilen kautta vuosina 1825—1830. Se ei ole '
+            + 'sukua brasilialaiselle samballe, vaikka nimet '
+            + 'muistuttavat toisiaan: tahtilajissa on kuusi iskua, ja '
+            + 'tanssi on hidas ja juhlallinen. Pari kiertää toisiaan '
+            + 'koskematta ja heiluttaa valkoisia nenäliinoja. Askeleita '
+            + 'on kolmenlaisia: kävelyaskel, vuoroaskel ja '
+            + 'varvasaskel. Nimi tulee siirtomaa-ajan sanasta zambo, '
+            + 'koska laulujen sanat oli suunnattu paikallisille '
+            + 'kuulijoille. Zambia on sepitetty kaikesta: historian '
+            + 'tapahtumista, seudun kauneudesta ja politiikasta.',
+        },
+        {
+          otsikko: 'Rumpu, jonka kuulee peninkulman päähän',
+          teksti: 'Bombo legüeron runko koverretaan ontosta '
+            + 'puunrungosta, ja päät tehdään lehmän, lampaan tai '
+            + 'guanakon nahasta. Karva jätetään nahkaan, ja siksi '
+            + 'sointi on syvä ja tumma. Nimi legüero kertoo, että '
+            + 'rummun kuulee kuulemma peninkulman päähän. Rakenne '
+            + 'polveutuu vanhoista eurooppalaisista rumpukoneista: '
+            + 'nahkoja kiristetään vanteilla ja nahkasilmukoilla. '
+            + 'Soittaja ripustaa rummun kylkeensä, kietoo toisen '
+            + 'kätensä sen yli ja lyö vuoroin ylhäältä ja edestä — '
+            + 'toisessa kädessä pehmeäpäinen nuija, toisessa kapula, '
+            + 'joka osuu vuoroin nahkaan ja puukehään. Bombo on '
+            + 'yhtaikaa basso ja lyömäsoitin.',
+        },
+        {
+          otsikko: 'Runoilijat, jotka kirjoittivat kaupungin',
+          teksti: 'Saltan kansanmusiikki on kirjoitettua musiikkia. '
+            + '1900-luvun puolivälissä kaupungissa oli vilkas '
+            + 'kirjallinen liike, jonka tunnetuimpia nimiä ovat '
+            + 'runoilijat Juan Carlos Dávalos, Manuel J. Castilla, '
+            + 'Jaime Dávalos ja Walter Adet. Heidän sanoituksiaan '
+            + 'sävelsivät Gustavo "Cuchi" Leguizamón ja kitaristi '
+            + 'Eduardo Falú, joka syntyi 1923 maakunnan El Galpónissa '
+            + 'syyrialaisten siirtolaisten poikana. Lauluja veivät '
+            + 'maailmalle Los Chalchaleros, joka perustettiin Saltassa '
+            + '1948 ja lopetti 2003 — nimi tulee paikallisesta '
+            + 'laululinnusta chalchalero. Muita saltalaisia ovat Los '
+            + 'Fronterizos, Los Cantores del Alba, Dúo Salteño, Los '
+            + 'Nocheros ja bandoneonisti Dino Saluzzi.',
+        },
+        {
+          otsikko: 'Kuka soittaa mitäkin',
+          teksti: 'Pohjoisen folkloressa on kaksi tanssia yli '
+            + 'muiden. Zamba on hidas ja pariin sidottu; chacarera on '
+            + 'nopea ja iloinen, ja sen ydinalue on naapurimaakunta '
+            + 'Santiago del Estero, mutta sitä tanssitaan koko '
+            + 'pohjoisessa. Molempia soitetaan kitaralla ja bombo '
+            + 'legüerolla, chacareraa usein myös viululla. Bombo '
+            + 'legüero on koko argentiinalaisen folkloren perussoitin, '
+            + 'ja sitä ovat tehneet tunnetuksi muun muassa Los '
+            + 'Chalchaleros, Los Fronterizos, Soledad Pastorutti ja '
+            + 'Mercedes Sosa. Saltan ulkoilmateatteri on nimetty '
+            + 'Eduardo Falún mukaan, ja siellä pohjoisen laulu '
+            + 'kuullaan siinä koossa, johon peñan pöydät eivät riitä.',
+        },
+      ],
+    },
+  ],
+  /*
+   * ANTOFAGASTA (Opus 7.9.2026, Fablen parvi) — E-Amerikan laudan
+   * kaupunkilehti, kaupunki-id `antofagasta`. Aineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-antofagasta.md ja sen
+   * erillinen tarkistus tarkistus-antofagasta.md (tuomio "kelpaa, kun
+   * kohtien A–F ratkaisut tehdään"; kaikki kuusi on tehty, ks. alla).
+   *
+   * LÄHTEET. Väitteet on luettu raakateksteistä 7.9.2026.
+   * en-Wikipedia: "Antofagasta", "Camanchaca", "La Portada",
+   * "Ruinas de Huanchaca", "Ferrocarril de Antofagasta a Bolivia",
+   * "St. Joseph's Cathedral, Antofagasta".
+   * es-Wikipedia: "Antofagasta", "Plaza Colón (Antofagasta)",
+   * "Ruinas de Huanchaca", "Muelle Salitrero Compañía Melbourne
+   * Clark", "Casa Gibbs", "Parque Croacia". Espanjankielinen
+   * Wikipedia on nimetty lähteeksi siellä missä sitä käytetään
+   * (Guatemala Cityn ennakkotapaus samasta parvierästä):
+   * Antofagastan historiallisesta korttelista on englanniksi vain
+   * kaksi artikkelia, espanjaksi neljäkymmentäneljä.
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti.
+   * Saapumisteksti ja valokuvataulu olivat jo olemassa eikä niihin
+   * kosketa; ennen–nyt-pari on kopioitu valokuvataulusta
+   * (southamerica-valokuvat.js, antofagasta), jossa se on jo
+   * tarkistettu.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto'; sivun nimi kertoo aiheen.
+   *
+   * CHILEN MAALEHTEÄ EI TOISTETA, EIKÄ NELJÄÄ KARTTANOSTOA.
+   * Maalehti (maa-kategoriat.js, CHL) kertoo mapuchen rajasta,
+   * itsenäisyydestä, saksalaissiirtolaisista, Pääsiäissaaresta,
+   * Juan Fernándezista, Chiloésta, jaganeista, Valdivian
+   * maanjäristyksestä, jääkentästä, alercesta, carménèrestä,
+   * curantosta, merkénistä, cuecasta, Violeta Parrasta ja
+   * guitarrón chilenosta — ja omalla nostollaan ATACAMAN
+   * KUIVUUDESTA. Karttanostoja (maastokohteet-chl.js) ovat ATACAMA,
+   * CHUQUICAMATA, HUMBERSTONE ja PARANALIN OBSERVATORIO. Nämä neljä
+   * ovat kaupungin visan vastauksia, joten kupari, salpietari ja
+   * kuivuus mainitaan matkaoppaassa ja teemasivulla — mutta yksikään
+   * ei ole noston aihe. Teemasivun kuivuusnosto kertoo KAUPUNGIN
+   * OMAN luvun (alle 0,1 mm vuodessa) ja camanchacan, joita
+   * karttanosto ei käsittele.
+   *
+   * KOHDEKARTTA EI TOISTA NÄITÄ JUTTUJA (New Yorkin sääntö).
+   * Erityisesti: VUODEN 1879 MAIHINNOUSU ON NOSTON A4 AIHE, joten
+   * kohdekartan salpietarilaiturijuttu kertoo laiturin rakenteen,
+   * omistajat ja kunnostuksen eikä sotaa. Huanchacan hopeasulatto on
+   * noston A5 aihe, ja sen rauniot ovat neljä ja puoli kilometriä
+   * etelässä, joten ne eivät ole kartalla lainkaan.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: Puerto Mayorin vuodesta ei anneta lukua (en sanoo 1872,
+   *    es 1871), vaan "1870-luvun alussa".
+   *  - B: Melbourne Clark -yhtiön perustamisvuosi on Casa Gibbs
+   *    -artikkelin 1869, ja se esiintyy vain kohdekartan jutussa.
+   *  - C: kellotornin vuosi on es-artikkelin 17.9.1911, ja
+   *    Big Ben -väite kumotaan lukijalle ääneen.
+   *  - D: Casa Abaroa jätetään kokonaan pois (1920 vai 1927).
+   *  - E: nimen alkuperästä kerrotaan kaikki neljä selitystä
+   *    mahdollisuuksina, ei yhtä oikeana.
+   *  - F: sota kerrotaan tapahtumina ja sopimuksina, molemmat
+   *    lukutavat rinnakkain; nykyistä merikiistaa, vuoden 1906
+   *    työtaistelun uhrilukua eikä diktatuurin ajan muistopaikkoja
+   *    ei käsitellä.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026 ilta).
+   * Oppaan sääjakso nojaa en-Wikipedian Climate-osioon ja sanoo sen
+   * ääneen.
+   */
+  antofagasta: [
+    {
+      id: 'kaupunki',
+      nimi: 'Antofagasta',
+      johdanto: 'Antofagastalla ei ole perustamiskirjaa: se syntyi '
+        + 'siitä, että aavikosta löytyi salpietaria. Isoisän '
+        + 'matkavuonna 1873 kaupunki oli Bolivian satama — ja juuri '
+        + 'silloin tehtiin sopimus, joka kuusi vuotta myöhemmin '
+        + 'muutti sen Chilen kaupungiksi.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki ilman perustamiskirjaa',
+          aika: '1866—1869',
+          teksti: 'Antofagasta ei synny espanjalaisten tapaan, aktien '
+            + 'ja siunausten kanssa pääaukion ympärille. Copiapósta '
+            + 'tullut malminetsijä Juan López asettui 1866 Peña '
+            + 'Blancan rantaan — nykyiseen La Chimbaan — ja alkoi '
+            + 'kaivaa; vesi oli haettava Morro Morenon lähteiltä '
+            + 'kahdenkymmenenviiden kilometrin päästä. Samana vuonna, '
+            + '18. syyskuuta, José Santos Ossa ja Francisco Puelma '
+            + 'saivat Bolivian hallitukselta luvan salpietarimaihin ja '
+            + 'löysivät rikkaat esiintymät Salar del Carmenista. '
+            + 'Elokuun 1868 maanjäristyksen jälkeen asutus oli '
+            + 'tunnustettava lailliseksi, ja 22. lokakuuta 1868 se '
+            + 'perustettiin virallisesti nimellä La Chimba. '
+            + 'Ensimmäisessä asemakaavassa 1869 oli seitsemäntoista '
+            + 'korttelia ja yksi aukio.',
+        },
+        {
+          otsikko: 'Nimi, josta ei ole päästy sopuun',
+          teksti: 'Antofagastan nimestä on tarjolla neljä selitystä, '
+            + 'eikä yhdestäkään ole yksimielisyyttä. Se voi olla '
+            + 'eteläistä cacán-kieltä — anto tai hattun, suuri; faya, '
+            + 'suolatasanko; gasta, kylä — eli suuren suolatasangon '
+            + 'kylä. Se voi olla ketšuaa: anta, kupari, ja pakay, '
+            + 'kätkeä, eli kuparin kätkö. Kolmas selitys johtaa sanaan '
+            + 'Antofagasti, auringon portti, jolla chango-kansa kutsui '
+            + 'nykyistä La Portadan kalliokaarta. Neljäs kertoo, että '
+            + 'Bolivian presidentti Mariano Melgarejo nimesi kaupungin '
+            + 'noin 1870 uudelleen oman Antofagasta de la Sierra '
+            + '-tilansa mukaan Argentiinan Catamarcassa; englanniksi '
+            + 'tämä on ainoa mainittu selitys, ja siinäkin lukee '
+            + '"oletettavasti". Chilessä kaupunkia sanotaan pohjoisen '
+            + 'helmeksi ja lyhyesti Antofaksi.',
+        },
+        {
+          otsikko: 'Vuosi 1873: sopimus, jota ei vahvistettu',
+          aika: '1873',
+          teksti: 'Bolivia oli 1870-luvun alussa nimennyt '
+            + 'Antofagastan Puerto Mayoriksi, koko maailman kaupalle '
+            + 'avoimeksi satamaksi, ja tammikuussa 1872 kaupunki sai '
+            + 'oman kunnanhallituksen: kaksi saksalaista, yksi '
+            + 'englantilainen ja kuusi chileläistä. Isoisän '
+            + 'matkavuonna 27. marraskuuta 1873 chileläinen '
+            + 'salpietari- ja rautatieyhtiö allekirjoitti Bolivian '
+            + 'hallituksen kanssa sopimuksen, joka vapautti louhinnan '
+            + 'veroista viideksitoista vuodeksi — mutta Bolivian '
+            + 'kongressi ei vahvistanut sitä, koska se neuvotteli '
+            + 'samaan aikaan Chilen kanssa. Samana vuonna Bolivia '
+            + 'teki Perun kanssa salaisen puolustusliiton, ja samana '
+            + 'vuonna perustettiin Huanchaca-yhtiö. Kolme päätöstä '
+            + 'yhtenä vuonna, ja jokainen niistä johti seuraavaan.',
+        },
+        {
+          otsikko: 'Kaupunki vaihtoi maata',
+          aika: '1879—1904',
+          teksti: 'Vuoden 1874 rajasopimus lupasi, ettei '
+            + 'chileläisille yrityksille aseteta uusia veroja '
+            + 'kahteenkymmeneenviiteen vuoteen. Bolivian lukutavan '
+            + 'mukaan vuoden 1873 sopimus ei ollut voimassa, joten '
+            + 'kongressi saattoi asettaa kymmenen sentin veron vietyä '
+            + 'salpietarikvintaalia kohti; Chilen lukutavan mukaan '
+            + 'juuri se rikkoi sopimusta. Vero peruttiin, otettiin '
+            + 'uudelleen käyttöön ja yhtiön omaisuus määrättiin '
+            + 'huutokaupattavaksi. 14. helmikuuta 1879 chileläiset '
+            + 'joukot ottivat Antofagastan haltuunsa estääkseen '
+            + 'huutokaupan, ja siitä alkoi Tyynenmeren sota. Vuoden '
+            + '1884 välirauha antoi alueen Chilen hallintoon, ja '
+            + '20. lokakuuta 1904 solmittu rauhan ja ystävyyden '
+            + 'sopimus teki rajasta lopullisen: Chile rakensi '
+            + 'vastineeksi Arican ja La Pazin välisen rautatien, '
+            + 'maksoi 300 000 puntaa ja myönsi Bolivialle ikuisen '
+            + 'vapaan kauttakulun satamiensa läpi. Antofagastan '
+            + 'päivää vietetään yhä 14. helmikuuta.',
+        },
+        {
+          otsikko: 'Hopeasulatto, joka jäi kesken',
+          aika: '1888—1902',
+          teksti: 'Kaupungin eteläpuolella seisoo punertavasta '
+            + 'andesiitista muurattu raunio, joka näyttää '
+            + 'linnoitukselta mutta oli jalostamo. Huanchaca-yhtiö '
+            + 'omisti Bolivian Pulacayon ja Oruron hopeakaivokset, ja '
+            + '1888 se sopi salpietariyhtiön kanssa malmin '
+            + 'kuljetuksesta rannikolle. Piirustukset valmistuivat '
+            + 'huhtikuussa 1889, koneet myöhästyivät, ja kustannukset '
+            + 'nousivat miljoonan arviosta kuuteen ja puoleen '
+            + 'miljoonaan. Laitos aloitti 26. helmikuuta 1893: '
+            + 'kaksisataa tonnia malmia päivässä, 3,85 tonnia hopeaa '
+            + 'kuukaudessa, yli tuhat kaksisataa työntekijää ja oma '
+            + 'voimalaitos. Rakennusvuonnaan se oli Etelä-Amerikan '
+            + 'uudenaikaisin jalostamo. Yhdeksän vuotta myöhemmin, '
+            + '1902, hopean hinta petti ja Pulacayon kaivos tulvi — ja '
+            + 'kaikki loppui.',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Antofagasta on Chilen viidenneksi suurin kaupunki, '
+          + 'asukkaita 401 096 vuoden 2024 laskennan mukaan, ja se on '
+          + 'noin 1 100 kilometriä Santiagosta pohjoiseen. Kaupunki on '
+          + 'kapea nauha Tyynenmeren ja rannikkovuoriston välissä, '
+          + 'keskikorkeus neljäkymmentä metriä, mutta sen kunta on '
+          + 'pinta-alaltaan Chilen kolmanneksi suurin — 30 718 '
+          + 'neliökilometriä Atacaman aavikkoa. Elanto tulee '
+          + 'kaivoksista: '
+          + 'alueella tuotetaan 54 prosenttia Chilen kuparista, ja '
+          + '2010-luvulta alkaen satamasta on viety myös litiumia. '
+          + 'Kaupungissa on kaksi vanhaa yliopistoa ja yksi Chilen '
+          + 'kolmesta ympäristötuomioistuimesta.',
+        artikkeli: {
+          nimi: 'Matkailijan Antofagasta',
+          taitto: 'opas',
+          teksti: 'Kaupunki, jossa ei sada, jossa aamut ovat sumussa '
+            + 'ja jossa jokainen vanha talo on jonkun siirtokunnan '
+            + 'muisto: brittien kellotorni, kroaattien kioski, '
+            + 'espanjalaisen tavaratalo.',
+          nosto: 'Colónin aukion kellotornin piti olla paljon '
+            + 'korkeampi — materiaalia oli tilattu enemmän. Ajan lait '
+            + 'kuitenkin kielsivät ylittämästä kaupungin katedraalia, '
+            + 'joten ylijäänyt aines käytettiin toiseen taloon '
+            + 'Washington-kadulla.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lentoasema Andrés Sabella Gálvez on Cerro '
+                + 'Morenossa kaupungin pohjoispuolella; sieltä lentää '
+                + 'kolme kotimaista yhtiötä ja yksi ulkomainen '
+                + 'reitillä Limaan. Kaupunki on niin kapea ja pitkä, '
+                + 'että liikenne mahtuu muutamalle väylälle: ainoa '
+                + 'pohjoisesta etelään läpi kulkeva on rantatie, jolla '
+                + 'on peräkkäin kahdeksan eri nimeä. Julkinen liikenne '
+                + 'on TransAntofagasta, kolmetoista linjaa alle '
+                + 'kolmenkymmenen hengen pikkubusseja; järjestelmä '
+                + 'aloitti 28. marraskuuta 2005 ja korvasi vanhan '
+                + 'bussipalvelun. Kevyempi liikenne on mustia '
+                + 'sedan-takseja, jotka ajavat kiinteitä reittejä. '
+                + 'Kesällä linjat jatkuvat Juan Lópezin uimarannalle '
+                + 'kaupungin ulkopuolelle.',
+            },
+            {
+              otsikko: 'Historiallinen kortteli',
+              teksti: 'Rannan tuntumassa Simón Bolívarin ja Balmacedan '
+                + 'väliin jäävä kaistale on suojeltu kokonaisuutena. '
+                + 'Siellä ovat vanha tullitalo, meripäällikkötalo, '
+                + 'merivartiotalo, rautatieaseman rakennus ja '
+                + 'salpietarilaituri. Vanha tullitalo rakennettiin '
+                + 'Valparaísossa 1867, kuljetettiin meritse '
+                + 'Mejillonesiin 1869 ja siirrettiin 1888 '
+                + 'Antofagastaan sen tullitalon paikalle, joka oli '
+                + 'palanut 1885; tullina se toimi vuoteen 1966 asti ja '
+                + 'nykyään siinä on aluemuseo. Kortteli väistyy '
+                + 'hitaasti uudisrakennusten tieltä, ja se on yksi syy '
+                + 'käydä juuri täällä eikä kauempana etelässä, missä '
+                + 'kaupunki on uudempi.',
+            },
+            {
+              otsikko: 'Aavikko ja meri',
+              teksti: 'Rannikko on kallioinen ja jyrkkä, eikä '
+                + 'luonnonrantoja käytännössä ole — suurin osa '
+                + 'uimarannoista on tehtyjä. Luonnonrannat alkavat '
+                + 'vasta pohjoisempaa La Portadan, Las Losetasin ja '
+                + 'La Rinconadan kohdalta. Auringonsäteily on niin '
+                + 'voimakasta, että kaupungissa on yleistynyt tapa '
+                + 'uida vasta pimeällä: helmikuussa 2010 El '
+                + 'Trocaderon rannalla ui yli viisituhatta ihmistä '
+                + 'keskiyön aikaan. Kymmenen kilometriä koilliseen on '
+                + 'La Chimban luonnonsuojelualue, 2 583 hehtaaria, ja '
+                + 'seitsemänkymmentäviisi kilometriä etelään aavikolle '
+                + 'kohoaa Mario Irarrázabalin veistos Mano del '
+                + 'Desierto, aavikon käsi.',
+            },
+            {
+              otsikko: 'Siirtokuntien kaupunki',
+              teksti: 'Salpietari toi Antofagastaan väkeä joka '
+                + 'puolelta, ja jälki näkyy yhä. Colónin aukion kolme '
+                + 'muistomerkkiä ovat kaikki ulkomaisten siirtokuntien '
+                + 'lahjoja Chilen satavuotisjuhlaan: brittien '
+                + 'kellotorni, kroaattien soittolavakioski ja '
+                + 'espanjalaisten veistosryhmä. Kroatialaista jälkeä '
+                + 'on kaupungissa muutenkin: rantatiellä kulkee '
+                + 'Avenida República de Croacia, sen varrella on noin '
+                + 'viidensadan metrin mittainen Parque Croacia, ja '
+                + 'kaupungissa toimii kroatialainen kuoro Jadran, joka '
+                + 'laulaa vuosittain joulukonsertin Huanchacan '
+                + 'raunioilla. Ystävyyskaupunkeja ovat muun muassa '
+                + 'Split Kroatiassa, Volos Kreikassa, Tongling '
+                + 'Kiinassa ja Ambato Ecuadorissa.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian '
+                + 'Antofagasta-artikkelin Climate-osiosta; lehdellä ei '
+                + 'ole omaa vuosigraafia, koska säänormaaleja ei '
+                + 'haettu tässä erässä. Ilmasto on kylmä '
+                + 'aavikkoilmasto, ja meri tasaa sen niin, ettei '
+                + 'vuodenaikojen välillä ole suurta eroa. '
+                + 'Vuosikeskiarvo on 16,8 astetta. Lämpimimmässä '
+                + 'kuukaudessa tammikuussa yöt ovat 17,5 ja päivät '
+                + '23,2 astetta; kylmimmässä heinäkuussa 11,8 ja 16,5. '
+                + 'Korkein mitattu on 30,0 astetta tammikuulta 1998 ja '
+                + 'matalin 3,0 astetta syyskuulta 1978 — koko mitattu '
+                + 'vaihteluväli on siis 27 astetta. Aamut ovat usein '
+                + 'sumussa ja iltapäivät kirkkaita. Sadetta ei '
+                + 'käytännössä tule, ja juuri Atacaman kuiva, kirkas '
+                + 'ja korkealla oleva ilma on tehnyt sisämaasta '
+                + 'yhden maailman parhaista paikoista tähtitieteelle '
+                + '— suuret observatoriot ovat parin tunnin ajomatkan '
+                + 'päässä kaupungista.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'La Portada',
+                tahdet: 3,
+                selite: 'Kalliokaari 18 kilometriä pohjoiseen; '
+                  + '43 metriä korkea ja 70 metriä pitkä.',
+              },
+              {
+                mita: 'Historiallinen kortteli ja aluemuseo',
+                tahdet: 3,
+                selite: 'Vanha tullitalo, meripäällikkötalo ja '
+                  + 'salpietarilaituri yhdessä korttelissa.',
+              },
+              {
+                mita: 'Huanchacan rauniot',
+                tahdet: 3,
+                selite: 'Hopeasulaton andesiittimuurit 1892; '
+                  + 'nykyään kulttuuripuisto ja aavikkomuseo.',
+              },
+              {
+                mita: 'Colónin aukio',
+                tahdet: 2,
+                selite: 'Kellotorni, soittolavakioski ja '
+                  + 'espanjalaisten veistos saman aukion laidoilla.',
+              },
+              {
+                mita: 'Kääntöpiirin muistomerkki',
+                tahdet: 2,
+                selite: 'Kauriin kääntöpiiri merkittynä maastoon; '
+                  + 'toimii aurinkokalenterina.',
+              },
+            ],
+            /*
+             * HYVÄ TIETÄÄ: rehellisiä varauksia ilman pelottelua
+             * (Kunnioitus-pilari). Luvut ovat samat kuin jaksoissa ja
+             * teemasivun nostoissa.
+             */
+            hyvaTietaa: [
+              {
+                otsikko: 'Sumu on aamun sää',
+                teksti: 'Camanchaca peittää rannikon usein '
+                  + 'aamupäivällä ja hälvenee iltaa kohti; sumu ei '
+                  + 'tuota sadetta, mutta se on kylmä ja kostea.',
+              },
+              {
+                otsikko: 'Vesi on tuotua',
+                teksti: 'Kaupunki saa alle kymmenesosamillimetrin '
+                  + 'sadetta vuodessa, ja kasvillisuutta on vähän — '
+                  + 'aurinko paistaa aavikon lailla vaikka meri on '
+                  + 'vieressä.',
+              },
+              {
+                otsikko: 'Harvinainen sade on vaarallinen',
+                teksti: 'Rankkasade valuu kuivista rotkoista '
+                  + 'mutavirtana kaupunkiin: vuosina 1916—1999 '
+                  + 'tulvia tai vyöryjä sattui seitsemän kertaa.',
+              },
+              {
+                otsikko: 'Kaupunki on pitkä, ei leveä',
+                teksti: 'Nauhamainen muoto tarkoittaa, että kaikki '
+                  + 'liikenne kulkee samaa rantatietä; välimatkat '
+                  + 'mitataan minuuteissa eikä kortteleissa.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Sumu ja aavikko',
+      johdanto: 'Antofagastassa ei sada, mutta aamuisin kaupunki on '
+        + 'pilven sisällä. Meri on kylmä, aavikko alkaa heti talojen '
+        + 'takaa, ja kaikki elämä järjestyy näiden kahden väliin.',
+      tehtava: {
+        kysymys: 'Miksi camanchaca ei tuota sadetta?',
+        vaihtoehdot: [
+          'Se on liian kylmää',
+          'Sen pisarat ovat liian pieniä muodostamaan sadepisaroita',
+          'Se haihtuu ennen kuin ehtii maahan',
+          'Se koostuu pölystä eikä vedestä',
+        ],
+        oikea: 1,
+        fakta: 'Camanchacan pisarat ovat 1—40 mikrometriä. Siksi '
+          + 'vesi on kerättävä verkoilla: pisarat tarttuvat '
+          + 'muovilankaan ja valuvat kouruun.',
+      },
+      nostot: [
+        {
+          otsikko: 'Maailman kuivin kaupunki',
+          teksti: 'Rannikon keskimääräinen vuosisade on 3,4 '
+            + 'millimetriä, mutta Antofagastan kaupunki itse saa '
+            + 'alle kymmenesosamillimetrin vuodessa — se on ennätys, '
+            + 'ja siksi sitä sanotaan maailman kuivimmaksi '
+            + 'kaupungiksi. Ilmasto on kylmä aavikkoilmasto: '
+            + 'auringonpaistetta on paljon ja meren vaikutus on '
+            + 'vahva. Kuivuutta säätelee kylmä Humboldtin virta, ja '
+            + 'etelän ja lounaan tuulet tulevat Tyynenmeren '
+            + 'korkeapaineesta. Vuosikeskiarvo on 16,8 astetta, ja '
+            + 'koko mittaushistorian ääriarvot ovat 30,0 ja 3,0 '
+            + 'astetta. Harvinaisuus ei kuitenkaan tarkoita '
+            + 'harmittomuutta: kun sadetta lopulta tulee, se valuu '
+            + 'kuivista rotkoista mutavirtana kaupunkiin, ja niin kävi '
+            + 'seitsemän kertaa vuosien 1916 ja 1999 välillä.',
+        },
+        {
+          otsikko: 'Pilvi, joka kävelee maalle',
+          teksti: 'Camanchaca on merellinen stratocumulus-pilvivyö, '
+            + 'joka syntyy Chilen rannikolla ja siirtyy sisämaahan. '
+            + 'Vuorten puolella se on tiheä sumu, joka ei tuota '
+            + 'sadetta: pisarat ovat vain yhdestä neljäänkymmeneen '
+            + 'mikrometriä, liian pieniä putoamaan. Perussa samaa '
+            + 'ilmiötä sanotaan garúaksi ja Angolassa cacimboksi. '
+            + 'Vuonna 1985 tutkijat keksivät kerätä veden '
+            + 'polyolefiiniverkoilla: Camanchacas-hanke asensi '
+            + 'harjanteelle viisikymmentä suurta verkkoa, jotka '
+            + 'ottivat talteen noin kaksi prosenttia sumun vedestä ja '
+            + 'toivat juoksevan veden kyliin, joissa sitä ei muuten '
+            + 'ollut. Vuonna 2005 kokeiltiin kolmen neliömetrin '
+            + 'paneeleita, joista tuli viisi litraa neliömetriltä '
+            + 'päivässä.',
+        },
+        {
+          otsikko: 'Portti, jonka meri kaivoi',
+          teksti: 'Kahdeksantoista kilometriä pohjoiseen rannikolla '
+            + 'seisoo La Portada, portti: luonnon kaari, joka on 43 '
+            + 'metriä korkea, 23 metriä leveä ja 70 metriä pitkä. '
+            + 'Jalusta on mustaa andesiittia, ja sen ympärille on '
+            + 'kerrostunut merisedimenttikiveä, kellastuvaa '
+            + 'hiekkakiveä ja kuorifossiileja, joiden ikä on '
+            + '35—2 miljoonaa vuotta; kaiken on muovannut meren '
+            + 'kulutus. Ympärillä on samalla tavoin syntyneitä '
+            + 'jyrkänteitä, korkeimmillaan 52 metriä. Kaari on ollut '
+            + 'luonnonmuistomerkki 5. lokakuuta 1990 alkaen, ja '
+            + 'suojelualue on 31,27 hehtaaria. Vuosina 2003—2008 '
+            + 'kohde oli suljettuna jyrkänteen sortuman takia, ja '
+            + 'vuodesta 2010 pääsy rannalle on kielletty kasviston ja '
+            + 'eläimistön suojelemiseksi.',
+        },
+        {
+          otsikko: 'Kylmä virta ja sen linnut',
+          teksti: 'Aavikkorannikko elättää yllättävän paljon: '
+            + 'Humboldtin virta nostaa pinnalle kylmää ja '
+            + 'ravinteikasta vettä, ja siksi kalaa riittää. La '
+            + 'Portadan kalliot ovat guanolintujen tarkkailupaikka. '
+            + 'Siellä nähdään perunsuula, inkatiira ja '
+            + 'guanokormorantti sekä kolme lokkilajia — '
+            + 'etelänharmaalokki, harmaalokkeihin kuuluva Larus '
+            + 'modestus ja Belcherinlokki — sekä pelikaaneja. Toisinaan '
+            + 'näkyy myös eteläkarvahylje tai delfiini. Kaupungin '
+            + 'edustalla kohoaa Morro Morenon kansallispuisto, yksi '
+            + 'Chilen kuudesta sumukeitaasta: 1 100 metrin korkuinen '
+            + 'niemi, joka on usein pilvessä ja jossa elää '
+            + 'kotoperäisiä lajeja juuri siksi.',
+        },
+        {
+          otsikko: 'Kosteikot keskellä kuivuutta',
+          teksti: 'Kaupungissa on vähän kasvillisuutta, mutta sen '
+            + 'alueella on sarja kaupunkikosteikkoja, ja ne ovat '
+            + 'aavikkokaupungin harvoja vihreitä kohtia. Niissä elää '
+            + 'tai käy kotoperäisiä matelijoita ja niveljalkaisia, '
+            + 'sirrejä ja nisäkkäistä kulpeokettu. Uhat ovat '
+            + 'kaupungin omia: roskat, kulkukoirat, veden otto, '
+            + 'vajojen rakentaminen ja vesiuomien kääntäminen. Kunta '
+            + 'valmisteli tammikuussa 2024 niiden julistamista '
+            + 'virallisiksi kaupunkikosteikoiksi. Kaupungin '
+            + 'pohjoispuolelta, taajaman ulkopuolelta lentokentän '
+            + 'kohdalta, kulkee Kauriin kääntöpiiri; siihen '
+            + 'pystytettiin 21. joulukuuta 2000 arkkitehti Eleonora '
+            + 'Romanin suunnittelema muistomerkki, joka merkitsee '
+            + 'piirin paikan ja toimii aurinkokalenterina.',
+        },
+      ],
+    },
+  ],
 };

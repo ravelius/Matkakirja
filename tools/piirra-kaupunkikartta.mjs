@@ -5161,6 +5161,55 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: 14.6905, etela: 14.6520, lansi: -17.4720, ita: -17.4245 },
     meri: true,
   },
+  salta: {
+    /*
+     * SALTAN VANHAKAUPUNKI (7.9.2026). Ruutu on noin 2,1 x 1,6
+     * kilometria: lannessa kuvataidemuseo Belgrano-kadulla, keskella
+     * Plaza 9 de Julio, idassa Guemesin muistomerkki Cerro San
+     * Bernardon juurella. Kaupunki on 1 200 metrin korkeudessa
+     * Yungas-vuorten reunalla eika ruudussa ole vetta, joten
+     * meri-lippua ei tarvita.
+     *
+     * IDASSA RUUTU PYSAHTYY VUOREN JUURELLE. Cerro San Bernardon
+     * huippu on runsaan kilometrin idassa; se on lehden noston aihe
+     * eika kohdekartan piste, ja sen ottaminen mukaan tekisi
+     * ruudusta puolet tyhjaa rinnetta.
+     *
+     * ETELAREUNA on Avenida San Martin eli vanha Sauce-joen linja,
+     * pohjoisreuna Avenida Belgrano eli vanha Tineon suo — sama
+     * rajaus, jolla kaupunki mitattiin 1582.
+     *
+     * jalkakaydat: true, ja se on mitattu paatos. Ilman lippua
+     * Overpass palautti 337 elementtia ja kuva oli pelkka ruudukko:
+     * Plaza 9 de Julio ja Parque San Martin nakyivat tyhjina
+     * lohkoina. Lipun kanssa elementteja on 697, ja aukion seka
+     * puiston omat kaytavat piirtyvat — juuri ne kaksi kohtaa,
+     * joista kartan tunnistaa Saltaksi. Kaupungin kolme
+     * kavelykatua (Alberdi, Florida, Caseros) ovat OSM:ssa
+     * pedestrian- ja footway-teita.
+     */
+    rajat: { pohjoinen: -24.7830, etela: -24.7975, lansi: -65.4180, ita: -65.3970 },
+    jalkakaydat: true,
+  },
+  antofagasta: {
+    /*
+     * ANTOFAGASTAN HISTORIALLINEN KORTTELI (7.9.2026). Ruutu on noin
+     * 1,4 x 1,2 kilometria: pohjoisessa salpietarilaituri ja vanha
+     * tullitalo, keskella Colonin aukio, etelassa Gimenezin talo.
+     *
+     * MERI-LIPPU PAALLA, koska koko lansireuna on Antofagastan
+     * lahtea ja rantaviiva kulkee ruudun lapi pohjoisesta etelaan.
+     * Ilman lippua meri jaisi paperin variseksi ja kartta nayttaisi
+     * silta kuin kaupunki jatkuisi lanteen.
+     *
+     * RUUTU EI YLETY HUANCHACAN RAUNIOILLE (4,5 km etelaan) eika
+     * aallonmurtajan majakalle (900 m lanteen): kumpikin venyttaisi
+     * rajauksen niin, etta puolet kuvasta olisi avomerta tai
+     * aavikkoa.
+     */
+    rajat: { pohjoinen: -23.6415, etela: -23.6520, lansi: -70.4060, ita: -70.3925 },
+    meri: true,
+  },
 };
 
 /*

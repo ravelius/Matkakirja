@@ -13726,6 +13726,114 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Cheikh Anta Diop -yliopisto', lat: 14.68694, lon: -17.46333 },
     ],
   },
+  /*
+   * SALTAN VANHAKAUPUNKI (Opus 7.9.2026, parvierä). Ruutu on noin
+   * 2,1 × 1,6 kilometriä: lännessä kuvataidemuseo Belgrano-kadulla,
+   * keskellä Plaza 9 de Julio laitoineen, idässä Güemesin
+   * muistomerkki Cerro San Bernardon juurella. Kaupunki on 1 200
+   * metrin korkeudessa eikä ruudussa ole vettä.
+   *
+   * KOLME KOHDETTA ON ALLE 200 METRIN PÄÄSSÄ TOISISTAAN, ja se on
+   * tietoinen valinta. MAAM–katedraali on 107 m, MAAM–cabildo 110 m
+   * ja katedraali–cabildo 164 m: kaikki kolme seisovat saman aukion
+   * laidoilla, ja aukio on kaupungin perustamispaikka vuodelta 1582.
+   * Numeroympyrä on tällä rajauksella noin 141 metriä, joten pahin
+   * peitto on 22 % (MAAM–katedraali) eli tarkista-karttapisteet.mjs:n
+   * asteikolla "tavallista, ei toimenpidettä".
+   *
+   * NELJÄS AUKION KOHDE JÄTETTIIN POIS: Centro Cultural América on
+   * vain 60 metriä MAAM:sta, ja sen numeroympyrä olisi peittänyt
+   * naapurinsa lähes kokonaan. Talo kerrotaan matkaoppaan toisessa
+   * jaksossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö). Lehti
+   * kertoo perustamisesta, Milagro-hartaudesta, vuodesta 1873,
+   * kaupunkikuvasta, Cerro San Bernardosta ja musiikista; kartta
+   * kertoo kunkin rakennuksen oman historian.
+   *
+   * Koordinaatit es-Wikipedian list=geosearch- ja
+   * prop=coordinates-rajapinnasta 7.9.2026; etäisyydet laskettu
+   * haversinilla (docs/mantereet-tyoaineisto/tarkistus-salta.md).
+   */
+  salta: {
+    polku: 'assets/kartat/salta-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -24.783, etela: -24.7975, lansi: -65.418, ita: -65.397 },
+    esittely: 'Saltan keskusta on yhä se yhdeksän kertaa viiden '
+      + 'korttelin ruudukko, joka mitattiin 1582. Kartan keskellä on '
+      + 'Plaza 9 de Julio, kaupungin perustamispaikka, ja sen '
+      + 'laidoilla kolme kartan kohdetta. Idässä maasto nousee Cerro '
+      + 'San Bernardoksi. Kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään.
+       */
+      { nimi: 'Saltan kuvataidemuseo', lat: -24.7867625, lon: -65.4161626 },
+      { nimi: 'La Merced -kirkko', lat: -24.789778, lon: -65.414444 },
+      { nimi: 'Korkean vuoriston arkeologian museo', lat: -24.78899602, lon: -65.41104066 },
+      { nimi: 'Saltan katedraali', lat: -24.788333, lon: -65.410278 },
+      { nimi: 'Saltan cabildo', lat: -24.7898, lon: -65.4104 },
+      { nimi: 'San Franciscon basilika', lat: -24.79025, lon: -65.408167 },
+      { nimi: 'San Bernardon luostari', lat: -24.790389, lon: -65.403833 },
+      { nimi: 'Güemesin muistomerkki', lat: -24.78675, lon: -65.39929 },
+    ],
+  },
+  /*
+   * ANTOFAGASTAN HISTORIALLINEN KORTTELI (Opus 7.9.2026, parvierä).
+   * Ruutu on noin 1,4 × 1,2 kilometriä: pohjoisessa salpietarilaituri
+   * ja vanha tullitalo, keskellä Colónin aukio, etelässä Giménezin
+   * talo. Rannikko kulkee ruudun läpi, ja länsireuna on merta.
+   *
+   * MERI-LIPPU PÄÄLLÄ, koska koko länsireuna on Antofagastan lahtea.
+   *
+   * SALPIETARILAITURIN PISTE ON LAITURIN ALKUPÄÄSSÄ RANNALLA, EI
+   * KÄRJESSÄ. es-Wikipedian koordinaatti (−23,64306 / −70,39833)
+   * osoittaa laiturin ulkopäähän, ja tarkista-karttapisteet.mjs
+   * ilmoitti sen sadan prosentin vetenä. Laituri on 198 metriä
+   * pitkä ja lähtee historiallisen korttelin rannasta vanhan
+   * tullitalon vierestä, joten alkupää on yhtä lailla kohde —
+   * ja numeroympyrä osuu nyt sille rannalle, josta kävelijä
+   * laiturille menee. Ero kärkeen on noin 50 metriä.
+   *
+   * KAKSI LÄHIKOHDETTA JÄTETTIIN POIS: FCAB:n asema on 26 metriä
+   * museosta ja Muelle Miraflores 130 metriä salpietarilaiturista.
+   * Molemmat kerrotaan toisen kohteen jutussa tai matkaoppaassa.
+   * HUANCHACAN RAUNIOT eivät mahdu ruutuun (4,5 km etelään), ja ne
+   * ovat lehden noston A5 aihe.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö).
+   * Erityisesti vuoden 1879 maihinnousu on lehden noston aihe, joten
+   * laiturin juttu kertoo laiturin rakenteen, omistajat ja
+   * kunnostuksen.
+   *
+   * Koordinaatit es-Wikipedian list=geosearch- ja
+   * prop=coordinates-rajapinnasta 7.9.2026; etäisyydet laskettu
+   * haversinilla (docs/mantereet-tyoaineisto/tarkistus-antofagasta.md).
+   */
+  antofagasta: {
+    polku: 'assets/kartat/antofagasta-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -23.6415, etela: -23.652, lansi: -70.406, ita: -70.3925 },
+    esittely: 'Antofagasta on kapea nauha meren ja aavikon välissä, '
+      + 'ja sen vanhin osa on tässä ruudussa. Pohjoisessa on '
+      + 'historiallinen kortteli laitureineen ja tullitaloineen, '
+      + 'keskellä Colónin aukio kellotorneineen. Länsireuna on merta. '
+      + 'Kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       */
+      { nimi: 'Salpietarilaituri', lat: -23.6435, lon: -70.3977 },
+      { nimi: 'Antofagastan museo', lat: -23.64416667, lon: -70.39777778 },
+      { nimi: 'Bolivian kauppapankin talo', lat: -23.64502, lon: -70.397358 },
+      { nimi: 'Colónin aukio', lat: -23.64611111, lon: -70.39777778 },
+      { nimi: 'Gibbsin talo', lat: -23.64611111, lon: -70.40055556 },
+      { nimi: 'Kaupunginteatteri', lat: -23.64654167, lon: -70.39658333 },
+      { nimi: 'Antofagastan katedraali', lat: -23.64716667, lon: -70.39738889 },
+      { nimi: 'Giménezin talo', lat: -23.650041, lon: -70.39665 },
+    ],
+  },
 };
 
 /*
