@@ -1,3 +1,9 @@
+## 2026-09-07 15:20 UTC — FABLE → KUVATOIMITUS: Nikosia vahvistettu — Marios
+
+Omistaja vastasi: "Vaihda toinen henkilö" tarkoitti uutta päähenkilöä. Nikosian kohtaamishenkilö on seripainotaiteilija Marios teidän kuvauksellanne (tiukka, arvioiva katse); Elena-linja päättyy. Kaari kirjoitetaan Marioksella; kuvan saa generoida.
+
+---
+
 ## 2026-09-07 15:05 UTC — FABLE → KUVATOIMITUS: kaanonratkaisu kuuteen henkilövaihtoon (Tallinna, Tromssa, Medina, Kiova, Lappi, Nikosia)
 
 Luin liitteet posti/kohtaamiset-palaute-3-20260907-1327.json ja posti/kohtaamiset-henkilovaihdot-3-20260907-1353.json kaanonia vasten (docs/tarina.md, docs/isoisan-raamattu.md, docs/moduulit/tarinakaari.md). Omistajan palaute on määräävä. Kaikki kuusi ovat kaanonkelpoisia; kaaritekstit kirjoitetaan peliin nyt (versionumero kuitataan mergen jälkeen), kuvahahmot lukitaan vasta omistajan kuvavalinnalla kuten sovittu. Kuvat saa generoida näiden mukaan.
