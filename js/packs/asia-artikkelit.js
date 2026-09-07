@@ -2332,6 +2332,12 @@ export const ASIA_ARTIKKELIT = {
    * mainita lainkaan.
    */
   Hongkong: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // HKG, 6.9.2026) nojaa tähän introon yksin, sama malli kuin
+    // Egyptillä ja Kenialla. Intro on kirjoitettu 21.8.2026 eikä sitä
+    // ole tässä erässä muutettu — se kattaa jo maantieteen, vuoden 1841
+    // väkiluvun, kolme sopimusta, vuoden 1997 hallinnollisen käänteen ja
+    // liikenteen, eli juuri sen, mitä maalehden aiheet EIVÄT toista.
     intro: 'Hongkong on satamakaupunki Etelä-Kiinan meren rannalla, '
       + 'Helmijoen suiston itälaidalla. Kaupunki on rakennettu '
       + 'kapealle kaistaleelle vuorten ja veden väliin, ja '
@@ -2822,28 +2828,42 @@ export const ASIA_ARTIKKELIT = {
    * ennallaan.
    */
   Singapore: {
+    /*
+     * Muita pidempi tarkoituksella: maalehden maaosasto
+     * (MAA_KATEGORIAT SGP) nojaa tähän introon yksin, sama malli kuin
+     * Egyptillä ja Kenialla. Intro kirjoitettiin uusiksi 6.9.2026
+     * maalehden mukana niin, että VALTIOLLINEN KAARI on kokonaan
+     * täällä: aihesivujen historia alkaa 1300-luvulta eikä kerro
+     * Malesian liittoa lainkaan. Mitta on tiukka — tests/vanha-
+     * maailma.test.mjs vaatii introlta 100–1200 merkkiä, joten uusi
+     * aines mahtui vain tiivistämällä vanhoja kappaleita.
+     * Lähteet: en-Wikipedia "Singapore", "Kingdom of Singapura",
+     * "Japanese occupation of Singapore" ja "State of Singapore
+     * (Malaysia)", luettu 6.9.2026.
+     */
     intro: 'Singapore on saarivaltio Malakan salmen suulla, noin '
       + 'asteen verran päiväntasaajasta pohjoiseen. Pääsaaren lisäksi '
       + 'siihen kuuluu yli kuusikymmentä pientä saarta, ja koko maa '
       + 'mahtuu yhden suurkaupungin alalle: se on **kaupunkivaltio**, '
-      + 'jolla ei ole erillistä pääkaupunkia. Lännessä on Malakan '
-      + 'salmi, etelässä Singaporen salmi ja pohjoisessa kapea '
-      + 'Johorin salmi, jonka yli pääsee pengertietä Malesiaan.'
+      + 'jolla ei ole erillistä pääkaupunkia. Pohjoisessa kapean '
+      + 'Johorin salmen yli pääsee pengertietä Malesiaan.'
       + '\n\n'
-      + 'Nykyinen kaupunki alkaa vuodesta 1819, kun brittiläinen '
-      + 'virkamies Stamford Raffles perusti joen suulle kauppa-aseman '
-      + 'ja teki siitä **vapaasataman**. Ennen häntä saarella asui '
-      + 'noin tuhat ihmistä; vuoteen 1860 mennessä väkeä oli yli '
-      + 'kahdeksankymmentätuhatta. Kiinalaiset, malaijit, intialaiset '
-      + 'ja eurooppalaiset kauppahuoneet asettuivat saman joen '
-      + 'varrelle, ja Suezin kanavan avaaminen vuonna 1869 lyhensi '
-      + 'matkan Eurooppaan niin, että höyrylaivoja alkoi kulkea '
-      + 'salmen kautta entistä tiheämmin.'
+      + 'Joen suulla oli muurattu satamakaupunki jo **1300-luvulla**, '
+      + 'ja sitä kutsuttiin ensin Temasekiksi ja sitten Singapuraksi. '
+      + 'Nykyinen kaupunki alkaa vuodesta **1819**, kun Stamford '
+      + 'Raffles perusti joen suulle kauppa-aseman ja teki siitä '
+      + '**vapaasataman**. Ennen häntä saarella asui noin tuhat '
+      + 'ihmistä; vuoteen 1860 mennessä väkeä oli yli '
+      + 'kahdeksankymmentätuhatta, ja Suezin kanavan avaaminen 1869 '
+      + 'toi salmeen entistä tiheämmän höyrylaivaliikenteen.'
       + '\n\n'
-      + 'Virallisia kieliä on neljä — englanti, malaiji, '
+      + 'Japani miehitti saaren vuosina **1942–1945**. Vuonna 1963 '
+      + 'Singaporesta tuli Malesian liittovaltion pienin mutta '
+      + 'väkirikkain osavaltio, ja kaksi vuotta myöhemmin, '
+      + '**9. elokuuta 1965**, se erosi liitosta itsenäiseksi '
+      + 'valtioksi. Virallisia kieliä on neljä — englanti, malaiji, '
       + 'mandariinikiina ja tamili — ja ilmasto on trooppinen '
-      + 'sademetsäilmasto ilman selviä vuodenaikoja. Singapore oli '
-      + 'osa Malesiaa vuosina 1963–1965 ja siitä lähtien itsenäinen.',
+      + 'sademetsäilmasto ilman selviä vuodenaikoja.',
     teksti: 'Singapore on Malakan niemimaan eteläkärjessä, aivan '
       + 'päiväntasaajan tuntumassa. Pinta-alaa on noin 730 '
       + 'neliökilometriä, ja se kasvaa yhä: merta täytetään maalla. '
@@ -3357,5 +3377,259 @@ export const ASIA_ARTIKKELIT = {
       + 'sitten, ja joen rannalla lepää Timur Shahin kupolimausoleumi. '
       + 'Lounaassa leveän puistokadun päässä kohoavat 1920-luvun '
       + 'Darulamanin palatsit.',
+  },
+  /*
+   * MYANMAR — maa-avain (countryShapes.MMR.wiki = 'Myanmar'), ei
+   * kaupunki. Vain intro-kenttä: maalehden maaosasto nojaa tähän
+   * introon yksin, sama malli kuin Kenialla ja Egyptillä. Faktat
+   * en-Wikipedian artikkelista "Myanmar" (johdanto sekä osiot
+   * "History" ja "Geography"), tarkistettu 6.9.2026.
+   */
+  Myanmar: {
+    intro: 'Myanmar on Kaakkois-Aasian mantereen suurin maa, ja sen '
+      + 'halki virtaa pohjoisesta etelään Iravadi, lähes 2 170 '
+      + 'kilometriä pitkä joki, jonka laaksossa asuu suurin osa maan '
+      + 'väestöstä. Pohjoisessa kohoaa Hkakabo Razi 5 881 metriin, '
+      + 'etelässä on 1 930 kilometriä rantaviivaa Bengalinlahden ja '
+      + 'Andamaninmeren äärellä. Ensimmäiset kaupunkivaltiot perusti '
+      + 'pyu-kansa, ja 1050-luvulla Paganin kuningaskunta yhdisti '
+      + 'Iravadin laakson ensimmäistä kertaa — sen mukana burman kieli '
+      + 'ja theravada-buddhalaisuus levisivät vähitellen koko maahan. '
+      + '1500-luvulla Taungoon hallitsijat kokosivat hetkeksi '
+      + 'Kaakkois-Aasian historian suurimman valtakunnan, ja 1800-luvulla '
+      + 'Konbaung-dynastia menetti maansa kolmessa sodassa briteille: '
+      + 'Mandalayn kukistuttua koko Burma liitettiin siirtomaaksi 1. '
+      + 'tammikuuta 1886, ja itsenäisyys tuli 4. tammikuuta 1948. Maa on '
+      + 'yksi maailman järistysherkimmistä, sillä Sagaingin siirros '
+      + 'kulkee etelästä pohjoiseen sen keskeltä. Teetä ei täällä juoda '
+      + 'vain kupista vaan syödään hapatettuna lehtenä, ja '
+      + 'kansallissoitin on harppu, jollaista ei muualla Aasiassa enää '
+      + 'soiteta.',
+  },
+  'Sri Lanka': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // LKA) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla. Colombon kaupunkilehti kertoo satamakaupungista, tämä
+    // koko saaresta.
+    intro: 'Sri Lanka on Intian valtameren saari, jota on kutsuttu '
+      + 'monella nimellä: kreikkalaisille se oli Taprobane, arabi- ja '
+      + 'persialaiskauppiaille Sarandib — siitä tuli englannin sana '
+      + 'serendipity, onnekas löytö — ja portugalilaisten Ceilão '
+      + 'muuttui englannissa Ceyloniksi, kunnes maasta tuli 1972 '
+      + 'tasavalta nimeltä Sri Lanka. Saaren historia on kirjoitettu '
+      + 'muistiin poikkeuksellisen pitkään: munkit ovat pitäneet '
+      + 'kronikkaa kuninkaista yli kahden vuosituhannen ajan, ja '
+      + 'buddhalainen pali-kaanoni kirjoitettiin täällä ensimmäisen '
+      + 'kerran palmunlehdille. Kuivan vyöhykkeen kuninkaat '
+      + 'rakennuttivat tekojärviä, joiden ruohottuneille pohjille '
+      + 'norsut yhä kokoontuvat kuivan kauden lopulla. Keskiylängön '
+      + 'viileydessä kasvavat tee ja aito kaneli, jota maailma sai '
+      + 'pitkään vain tältä saarelta. Virallisia kieliä on kaksi, '
+      + 'sinhala ja tamili, ja kansallislaulu on virallinen molemmilla '
+      + '— samalla sävelellä. Pinta-alaansa nähden saarella on Aasian '
+      + 'rikkain lajisto: yli neljännes kukkakasveista kasvaa '
+      + 'luonnonvaraisena vain täällä.',
+  },
+  Nepal: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // NPL) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla. Lisätty maalehden mukana 6.9.2026; luvut en-Wikipedian
+    // artikkelista "Nepal", osiot "Geography" ja "Biodiversity".
+    //
+    // TEKSTI-KENTTÄ ON PAKOLLINEN tässä tiedostossa: tests/
+    // vanha-maailma.test.mjs vaatii jokaiselta ASIA_ARTIKKELIT-
+    // riviltä kolmen kappaleen ja 600–1100 merkin tekstin. Se on
+    // "Lue lisää" -paneelin artikkeli (js/ui.js lukee artikkeli ??
+    // teksti), eikä maalehti käytä sitä mihinkään.
+    intro: 'Nepal on sisämaavaltio Himalajan ja Intian tasangon '
+      + 'välissä, ja maailman kymmenestä korkeimmasta vuoresta '
+      + 'kahdeksan on sen alueella tai sen rajalla. Maa nousee '
+      + 'parissasadassa kilometrissä Terain tasangon 60 metristä '
+      + 'Everestin lähes 8 849 metriin, joten siihen mahtuu viisi '
+      + 'ilmastovyöhykettä ja lajisto, joka alkaa lämpimän tasangon '
+      + 'sarvikuonoista ja päättyy jäätiköiden reunalle. Keskellä on '
+      + 'Kathmandun laakso, newarien vanha kaupunkiliitto, jonka '
+      + 'kauppiaat hallitsivat Himalajan yli kulkenutta silkkitien '
+      + 'haaraa. Gorkhan kuningaskunta yhdisti maan 1700-luvulla, '
+      + 'eikä Nepal ollut koskaan siirtomaa — se jäi puskurivaltioksi '
+      + 'Kiinan ja Brittiläisen Intian väliin. Virallinen kieli on '
+      + 'nepali, mutta kieliä ja kansoja on kymmeniä: newarit '
+      + 'laaksossa, šerpat vuorilla, tharut Terailla sekä gurungit ja '
+      + 'magarit kukkuloilla. Ruoka, musiikki ja kirjallisuus '
+      + 'seuraavat samaa korkeuskäyrää — alhaalla riisi ja dal bhat, '
+      + 'ylhäällä tattari ja dhindo.',
+    teksti: 'Nepal on sisämaavaltio Himalajan ja Intian tasangon '
+      + 'välissä. Maa on noin 800 kilometriä pitkä ja 200 kilometriä '
+      + 'leveä, ja se jakautuu kolmeen vyöhykkeeseen: pohjoisessa on '
+      + 'Himal eli lumivuoret, keskellä Pahad eli kukkulat ja '
+      + 'etelässä Terai eli tasanko.'
+      + '\n\n'
+      + 'Vuoret syntyivät, kun Intian mannerlaatta työntyi Euraasian '
+      + 'alle. Liike jatkuu yhä noin viisi senttimetriä vuodessa, ja '
+      + 'siksi Nepal on maanjäristysaluetta. Maailman kymmenestä '
+      + 'korkeimmasta vuoresta kahdeksan on Nepalissa tai sen '
+      + 'rajalla, ja korkeusero Terain kuudestakymmenestä metristä '
+      + 'Everestin huipulle on lähes 8 800 metriä. Sama ero näkyy '
+      + 'kasvillisuudessa: alhaalla on trooppista salimetsää, '
+      + 'ylhäällä alppiruusupensaikkoa ja niittyä.'
+      + '\n\n'
+      + 'Gorkhan kuningaskunta yhdisti alueen 1700-luvulla, eikä '
+      + 'Nepal ollut koskaan siirtomaa — se jäi puskurivaltioksi '
+      + 'Kiinan ja Brittiläisen Intian väliin. Kansallispuistot ja '
+      + 'muut suojelualueet kattavat lähes viidenneksen maan '
+      + 'pinta-alasta.',
+  },
+  // KAZAKSTAN (6.9.2026) on tiedoston ensimmäinen MAAN merkintä: avain
+  // on maailmankartan countryShapes.KAZ.wiki eli "Kazakstan", ja
+  // js/lehti.js lukee maalehden etusivulle tästä pelkän intro-kentän.
+  // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+  // KAZ) nojaa tähän introon yksin, sama malli kuin Kenialla
+  // (africa-artikkelit.js). Teksti-kenttä on mukana, koska
+  // tests/vanha-maailma.test.mjs vaatii talon mitan — kolme kappaletta
+  // ja 600–1100 merkkiä — jokaiselta tämän tiedoston merkinnältä.
+  // Kazakstan-linjaus on sama kuin Astanan lehdessä (ks.
+  // kulttuuri-kategoriat.js:n astana-lohkon kommentti): ei
+  // nykypolitiikkaa eikä presidenttikulttia, joten valtiomuoto ja
+  // johtajat jäävät pois ja 1900-luku kerrotaan hallinnollisina
+  // käänteinä. Väitteet on tarkistettu 6.9.2026 en-Wikipedian
+  // artikkelin "Kazakhstan" johdannosta ja maalehden faktapohjasta
+  // docs/mantereet-tyoaineisto/faktapohja-kazakstan.md.
+  Kazakstan: {
+    intro: 'Kazakstan on maailman yhdeksänneksi suurin valtio ja suurin '
+      + 'niistä, joilla ei ole yhteyttä valtamerelle. Asukkaita on '
+      + '**20,6 miljoonaa** eli alle kahdeksan neliökilometriä kohti, '
+      + 'mikä on maailman alhaisimpia väentiheyksiä. Lähes puolet maasta '
+      + 'on kumpuilevaa ylänköä ja tasankoa ja kolmannes alankoa; vuoret '
+      + 'kohoavat vasta etelä- ja itärajalla, ja lännessä on '
+      + 'Kaspianmeren rannikko.'
+      + '\n\n'
+      + 'Aro kesytti hevosen: Pohjois-Kazakstanin **Botai**-kylässä '
+      + 'hevosia pidettiin aitauksissa ja ohjattiin kuolaimilla jo noin '
+      + '3500 eaa. Antiikin aikaan alueella liikkuivat iranilaiset '
+      + 'paimentolaiskansat sakat, massageetit ja skyytit, 500-luvulta '
+      + 'alkaen turkkilaiskansat, ja 1200-luvulla se joutui '
+      + 'mongolivaltakunnalle.'
+      + '\n\n'
+      + 'Kultaisen ordan hajottua syntyi 1400-luvulla '
+      + '**kazakinkaanikunta**, joka 1700-luvulla jakautui kolmeen '
+      + 'žuziin; ne siirtyivät vähitellen Venäjän keisarikunnan '
+      + 'alaisuuteen, ja 1936 alueesta tuli Neuvostoliiton '
+      + 'liittotasavalta. Itsenäisyys tuli 1991 viimeisenä '
+      + 'neuvostotasavalloista, ja pääkaupunki siirtyi Almatysta '
+      + 'Astanaan 1997.',
+    teksti: 'Kazakstan on maailman yhdeksänneksi suurin valtio ja suurin '
+      + 'niistä, joilla ei ole yhteyttä valtamerelle. Melkein puolet '
+      + 'maasta on kumpuilevaa ylänköä ja tasankoa ja kolmannes '
+      + 'alankoa; vuoret nousevat vasta etelä- ja itärajalla, ja '
+      + 'lännessä on Kaspianmeren rannikko.'
+      + '\n\n'
+      + 'Aluetta ovat asuttaneet paimentolaiskansat esihistoriasta '
+      + 'asti: ensin iranilaiset sakat, massageetit ja skyytit, '
+      + '500-luvulta alkaen turkkilaiskansat. Mongolivalta 1200-luvulla '
+      + 'ja Kultaisen ordan hajoaminen johtivat kazakinkaanikunnan '
+      + 'syntyyn 1400-luvulla.'
+      + '\n\n'
+      + 'Asukkaita on 20,6 miljoonaa, ja väentiheys on maailman '
+      + 'alhaisimpia. Maa tuottaa noin 60 prosenttia Keski-Aasian '
+      + 'bruttokansantuotteesta, pääosin öljystä ja kaasusta, ja se on '
+      + 'maailman suurimpia raudan ja hopean tuottajia.',
+  },
+  /*
+   * MAA-AVAIN KAUPUNKIEN JOUKOSSA (Opus 6.9.2026). Tämä tiedosto on
+   * muuten kaupunkikohtainen, mutta maalehden maaosasto lukee introa
+   * taulusta ARTIKKELIT maan wiki-nimellä (js/lehti.js, ui.js) — ja
+   * MAA_KATEGORIAT.AFG:n maaosasto nojaa tähän introon yksin, sama
+   * malli kuin Egyptillä ja Kenialla. Myös teksti-kenttä on kirjoitettu,
+   * koska "Lue lisää" lukee sen ja koska tests/vanha-maailma.test.mjs
+   * vaatii Aasian taulun jokaiselta riviltä kolme kappaletta.
+   * Faktat en-Wikipedian artikkelista "Afghanistan" (osiot Geography,
+   * History, Ethnicity and languages, Agriculture, Culture) sekä
+   * maalehden omasta faktapohjasta, tarkistettu 6.9.2026.
+   */
+  Afganistan: {
+    intro: 'Afganistan on sisämaavaltio Keski- ja Etelä-Aasian '
+      + 'saumakohdassa, ja sen halki kulkee Hindukušin vuoristo: '
+      + 'korkein huippu Noshaq kohoaa 7 492 metriin, kun taas lounaan '
+      + 'Sistanin allas on yksi maailman kuivimmista seuduista. Maata '
+      + 'on sanottu Aasian sydämeksi, koska sen solien läpi ovat '
+      + 'kulkeneet idän ja lännen väliset reitit. Badakhshanin '
+      + 'vuorista on louhittu lapis lazulia yli kuudentuhannen vuoden '
+      + 'ajan, ja sitä sinistä kiveä on sekä Urin kuningashaudoissa '
+      + 'että Tutankhamonin naamiossa. Aluetta ovat vuorollaan '
+      + 'hallinneet akhaimenidit, Aleksanterin seuraajat, kušanit, '
+      + 'ghaznavidit ja timuridit, ja jokainen on jättänyt jälkeensä '
+      + 'kaupungin, luostarin tai kirjaston. Nykyinen valtio johdetaan '
+      + 'vuodesta 1747, jolloin Ahmad Shah Durrani kruunattiin '
+      + 'Kandaharissa. Virallisia kieliä on kaksi, dari ja pashtu, ja '
+      + 'suuri osa väestöstä puhuu molempia. Ruoka rakentuu riisin, '
+      + 'leivän ja teen ympärille, ja runous kuuluu arkeen niin '
+      + 'itsestään selvästi, että Heratissa torstai-ilta on '
+      + 'runoilta.',
+    teksti: 'Afganistan on vuorten maa Keski- ja Etelä-Aasian '
+      + 'välissä. Hindukuš halkoo sen koillisesta lounaaseen, '
+      + 'pohjoisessa aukeaa Turkestanin tasanko ja lounaassa '
+      + 'Sistanin umpinainen allas. Merenrantaa ei ole, ja joet '
+      + 'päättyvät järviin, autiomaahan tai naapurimaiden puolelle.'
+      + '\n\n'
+      + 'Solat ovat tehneet maasta reitin. Kušanien valtakunta '
+      + 'hallitsi täältä käsin kauppaa Rooman ja Kiinan välillä, '
+      + 'buddhalaisuus kulki Bamiyanin laakson kautta itään, ja '
+      + 'islamin tulon jälkeen Ghaznista ja Heratista kasvoi '
+      + 'oppineiden kaupunkeja. Timuridien Herat oli 1400-luvulla '
+      + 'persialaisen kulttuurin keskus, jossa työskentelivät sekä '
+      + 'runoilija Jami että maalari Behzad.'
+      + '\n\n'
+      + 'Maassa puhutaan darin ja pashtun lisäksi uzbekkia, '
+      + 'turkmeenia, balochia ja monta pienempää kieltä. Torit '
+      + 'myyvät granaattiomenaa, melonia ja kuivattuja hedelmiä, ja '
+      + 'Heratin ympäriltä tulee maailman kalleinta maustetta, '
+      + 'sahramia. Ateria katetaan lattialle levitetylle liinalle ja '
+      + 'päättyy teehen.',
+  },
+  Mongolia: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // MNG) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
+    intro: 'Mongolia on maailman harvimmin asuttu itsenäinen valtio: '
+      + '1,56 miljoonan neliökilometrin alueella asuu noin 3,5 '
+      + 'miljoonaa ihmistä, ja heistä lähes puolet pääkaupunki Ulan '
+      + 'Batorissa. Maa on kokonaan sisämaassa Venäjän ja Kiinan '
+      + 'välissä ja Kazakstanin jälkeen maailman toiseksi suurin '
+      + 'sisämaavaltio. Maisema vaihtuu pohjoisen ja lännen vuorista '
+      + 'aroksi ja etelässä Gobin karuksi laitumeksi. Aluetta '
+      + 'hallitsivat vuoron perään hunnit, turkkilaiskaanikunnat ja '
+      + 'uiguurit, kunnes Tšingis-kaani perusti 1206 mongolivaltakunnan '
+      + '— historian suurimman yhtenäisen maavaltakunnan — ja hänen '
+      + 'pojanpoikansa Kublai valloitti Kiinan. 1500-luvulla maahan '
+      + 'levisi tiibetinbuddhalaisuus, ja 1900-luvun alussa lähes '
+      + 'kolmasosa aikuisista miehistä oli munkkeja. Qing-dynastian '
+      + 'romahdettua 1911 Mongolia julistautui itsenäiseksi, ja 1990 '
+      + 'se siirtyi rauhanomaisesti monipuoluejärjestelmään. Noin '
+      + 'kolmasosa väestöstä elää yhä paimentolaisina tai '
+      + 'puolipaimentolaisina, ja hevonen on arkea eikä nostalgiaa.',
+    // teksti on pakollinen: tests/vanha-maailma.test.mjs vaatii
+    // jokaiselta ASIA_ARTIKKELIT-riviltä kolme kappaletta ja
+    // 600–1 100 merkkiä. Sama aineisto kuin introssa, tiiviimpänä.
+    teksti: 'Mongolia on sisämaavaltio Venäjän ja Kiinan välissä. '
+      + 'Pinta-alaa on 1,56 miljoonaa neliökilometriä ja asukkaita '
+      + '3,5 miljoonaa, joten se on maailman harvimmin asuttu '
+      + 'itsenäinen valtio. Pohjoisessa ja lännessä on vuoria, '
+      + 'keskellä aroa ja etelässä Gobi.'
+      + '\n\n'
+      + 'Aluetta hallitsivat vuoron perään hunnit, xianbeit, rouranit, '
+      + 'turkkilaiskaanikunnat ja uiguurit. Tšingis-kaani perusti '
+      + 'mongolivaltakunnan 1206, ja siitä tuli historian suurin '
+      + 'yhtenäinen maavaltakunta; hänen pojanpoikansa Kublai valloitti '
+      + 'Kiinan ja perusti Yuan-dynastian. Tiibetinbuddhalaisuus levisi '
+      + 'maahan 1500-luvulla, ja 1600-luvulla Qing-dynastia liitti '
+      + 'alueen itseensä.'
+      + '\n\n'
+      + 'Qingin romahdettua Mongolia julisti itsenäisyytensä 1911 ja '
+      + 'saavutti sen tosiasiallisesti 1921. Kansantasavalta '
+      + 'perustettiin 1924, ja vuoden 1990 rauhanomainen vallankumous '
+      + 'johti monipuoluejärjestelmään ja vuoden 1992 perustuslakiin. '
+      + 'Noin kolmasosa väestöstä elää yhä paimentolaisina tai '
+      + 'puolipaimentolaisina, ja lähes puolet asuu pääkaupungissa '
+      + 'Ulan Batorissa.',
   },
 };

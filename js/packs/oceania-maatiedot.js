@@ -23,6 +23,17 @@
 // of Australia" ja "Languages of New Zealand", ja sanamuodot
 // en-Wiktionarysta.
 //
+// Fidži, Papua-Uusi-Guinea ja Salomonsaaret lisättiin 6.9.2026
+// illalla samalla menetelmällä ja samasta aineistosta.
+// Demokratiaselitykset ovat artikkeleista "Politics of Fiji",
+// "Politics of Papua New Guinea" ja "Politics of Solomon Islands" ja
+// tervehdykset artikkeleista "Languages of Fiji", "Languages of Papua
+// New Guinea" ja "Solomon Islands". Kaikilla kolmella on vain kaksi
+// tervehdystä: hiri motulle ja Salomonsaarten paikalliskielille ei
+// löytynyt en-Wiktionaryn katetta, ja arvattu sana olisi huonompi kuin
+// puuttuva rivi. Salomonsaarten pijinin osuudeksi on kirjattu
+// varovainen 50 %, koska lähde sanoo vain "enemmistö".
+//
 // Jokainen tervehdyksen lippu on tarkistettu Commonsista: puuttuva
 // tiedostonimi jättäisi kortin puolityhjäksi ilman virhettä.
 //
@@ -60,6 +71,38 @@ export const OCEANIA_MAATIEDOT = {
       { teksti: 'Yaama', kieli: 'gamilaraay (aboriginaalikieli)', lippu: 'Flag of Australia.svg', osuus: '0,3 %' },
     ],
   },
+  FJI: {
+    vakiluku: '929 000',
+    vakilukuSija: '157./195',
+    pintaAla: '18 300 km²',
+    pintaAlaSija: '151./195',
+    demokratia: {
+      arvo: '0,40',
+      sija: '76./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~FJI',
+      selitys: 'Fidži on parlamentaarinen tasavalta, jossa hallitusta johtaa '
+        + 'parlamentin valitsema pääministeri. Parlamentti valitsee myös '
+        + 'presidentin kolmivuotiskaudeksi; tehtävä on pääosin '
+        + 'seremoniallinen, mutta presidentillä on kansallista kriisiä varten '
+        + 'varavaltuuksia, joiden käyttö on käytännössä osoittautunut '
+        + 'hankalaksi. Itsenäisyyden jälkeen maassa on ollut useita '
+        + 'vallankaappauksia. Vuoden 2006 kaappauksen jälkeen valta siirtyi '
+        + 'armeijalle, ja kun valitustuomioistuin oli todennut '
+        + 'kaappaushallituksen laittomaksi, valtionpäämies kumosi '
+        + 'perustuslain ja erotti kaikki tuomioistuimet. Uusi perustuslaki '
+        + 'julkistettiin 2013 ja yleiset vaalit pidettiin 2014. Ennen '
+        + 'siirtomaa-aikaa politiikkaa hallitsivat päälliköt, ja heidän '
+        + 'asemansa näkyy yhä.',
+    },
+    keskitulo: {
+      arvo: '5 820 $/v',
+      sija: '102./190',
+    },
+    tervehdykset: [
+      { teksti: 'Bula', kieli: 'fidži (iTaukei)', lippu: 'Flag of Fiji.svg', osuus: '54 %' },
+      { teksti: 'नमस्ते', kieli: 'hindi ja fidžinhindi', lippu: 'Flag of India.svg', osuus: '37 %' },
+    ],
+  },
   NZL: {
     vakiluku: '5,3 milj.',
     vakilukuSija: '121./195',
@@ -91,6 +134,67 @@ export const OCEANIA_MAATIEDOT = {
       { teksti: 'Good morning', kieli: 'englanti', lippu: 'Flag of New Zealand.svg', osuus: '95 %' },
       { teksti: 'Kia ora', kieli: 'maori', lippu: 'Tino Rangatiratanga Maori sovereignty movement flag.svg', osuus: '4 %' },
       { teksti: 'Talofa', kieli: 'samoa', lippu: 'Flag of Samoa.svg', osuus: '2 %' },
+    ],
+  },
+  PNG: {
+    vakiluku: '11 milj.',
+    vakilukuSija: '91./195',
+    pintaAla: '463 000 km²',
+    pintaAlaSija: '56./195',
+    demokratia: {
+      arvo: '0,38',
+      sija: '78./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~PNG',
+      selitys: 'Papua-Uusi-Guinea on parlamentaarinen monipuoluedemokratia ja '
+        + 'Kansainyhteisön kuningaskunta: valtionpäämiehenä on kuningas, jota '
+        + 'edustaa kenraalikuvernööri. Papua-Uusi-Guinea ja Salomonsaaret '
+        + 'ovat ainoat kuningaskunnat, joissa parlamentti valitsee '
+        + 'kenraalikuvernöörin. Yksikamarinen kansalliskokous valitsee '
+        + 'pääministerin ja istuu enintään viisi vuotta kerrallaan. '
+        + 'Perustuslaki turvaa sanan-, lehdistön-, uskonnon-, liikkumis- ja '
+        + 'yhdistymisvapauden, ja tuomioistuimet ovat riippumattomia. '
+        + 'Puolueet ovat heikkoja ja hallituskoalitiot hyvin epävakaita. '
+        + 'Vuoden 2001 vaaliuudistus toi käyttöön rajoitetun '
+        + 'etusijaäänestyksen, sillä aiemmin voittaja saattoi päästä läpi '
+        + 'alle 15 prosentin ääniosuudella.',
+    },
+    keskitulo: {
+      arvo: '2 860 $/v',
+      sija: '134./190',
+    },
+    tervehdykset: [
+      { teksti: 'Gude', kieli: 'tok pisin (yleiskieli)', lippu: 'Flag of Papua New Guinea.svg', osuus: '68 %' },
+      { teksti: 'Good morning', kieli: 'englanti (hallinnon kieli)', lippu: 'Flag of the United Kingdom.svg', osuus: '40 %' },
+    ],
+  },
+  SLB: {
+    vakiluku: '819 000',
+    vakilukuSija: '160./195',
+    pintaAla: '28 900 km²',
+    pintaAlaSija: '139./195',
+    demokratia: {
+      arvo: '0,54',
+      sija: '54./172',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~SLB',
+      selitys: 'Salomonsaaret on parlamentaarinen demokratia ja Kansainyhteisön '
+        + 'kuningaskunta, jossa kuningasta edustaa kenraalikuvernööri. '
+        + 'Kenraalikuvernöörin valitsee parlamentti, ja hän toimii '
+        + 'pääministerin ja hallituksen neuvojen mukaan. Perustuslaki turvaa '
+        + 'sanan-, lehdistön-, uskonnon-, liikkumis- ja yhdistymisvapauden, '
+        + 'ja tuomioistuimet ovat riippumattomia toimeenpano- ja '
+        + 'lainsäädäntövallasta. Parlamentin 50 jäsentä valitaan neljäksi '
+        + 'vuodeksi yhden edustajan vaalipiireistä, ja äänioikeus on kaikilla '
+        + 'yli 18-vuotiailla. Puolueet ovat heikkoja ja koalitiot epävakaita: '
+        + 'epäluottamusäänestykset ovat tavallisia, hallituksen johto vaihtuu '
+        + 'usein eikä yksi puolue juuri koskaan yllä valtaan yksin.',
+    },
+    keskitulo: {
+      arvo: '1 910 $/v',
+      sija: '148./190',
+    },
+    tervehdykset: [
+      { teksti: 'Aftanun', kieli: 'pijin (yleiskieli)', lippu: 'Flag of the Solomon Islands.svg', osuus: '50 %' },
+      { teksti: 'Good morning', kieli: 'englanti (virallinen kieli)', lippu: 'Flag of the United Kingdom.svg', osuus: '2 %' },
     ],
   },
 };

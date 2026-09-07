@@ -84,6 +84,101 @@ const SALLITUT = [
   // ilman lähdettä, ks. js/packs/uutislahteet.js.
   'https://www.dabangasudan.org/',
   'https://www.radiotamazuj.org/',
+  // Hongkongin uutislähde (maalehti HKG, 6.9.2026): syöte ja
+  // artikkelisivut samalla isäntänimellä, ja syöteosoitteen
+  // loppukauttaviiva on pakollinen — ilman sitä palvelin vastaa
+  // uudelleenohjauksella, jota worker ei seuraa.
+  'https://hongkongfp.com/',
+  // Myanmarin uutislähde (maalehti MMR, 6.9.2026): burmankielinen
+  // syöte ja artikkelisivut samalla isäntänimellä. Syöteosoitteen
+  // loppukauttaviiva on pakollinen — ilman sitä vastaus on 301.
+  'https://myanmar-now.org/',
+  // Sri Lankan uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä. Osoite on sinhala.adaderana.lk ja polku
+  // rss.xml, koska adaderana.lk ja rss.php vastaavat 301:llä eikä
+  // worker seuraa uudelleenohjauksia.
+  'https://sinhala.adaderana.lk/',
+  // Namibian uutislähde (maalehti NAM, 6.9.2026): syöte ja
+  // artikkelisivut samalla isäntänimellä, ilman www-etuliitettä.
+  'https://neweralive.na/',
+  // Kamerunin uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä, ilman www-etuliitettä.
+  'https://datacameroon.com/',
+  // Saint Helenan uutislähde (maalehti 6.9.2026): saaren hallinnon oma
+  // syöte, koska molemmat viikkolehdet jäivät pois (ks.
+  // js/packs/uutislahteet.js). Syöte ja artikkelisivut ovat samalla
+  // isäntänimellä, ja www-alkuinen muoto on pakollinen.
+  'https://www.sainthelena.gov.sh/',
+  // Kongon demokraattisen tasavallan uutislähde (maalehti COD,
+  // 6.9.2026): syöte ja artikkelisivut samalla isäntänimellä.
+  'https://www.radiookapi.net/',
+  // Nepalin uutislähde (maalehti 6.9.2026): Onlinekhabarin syöte ja
+  // artikkelisivut ovat samalla isäntänimellä (www).
+  'https://www.onlinekhabar.com/',
+  // Madagaskarin uutislähde (maalehti 6.9.2026): L'Express de Madagascar
+  // julkaisee Bloggerissa, joten syöte on osoitteessa
+  // /feeds/posts/default?alt=rss — syöte ja artikkelisivut ovat samalla
+  // isäntänimellä.
+  'https://www.lexpress.mg/',
+  // Sierra Leonen uutislähde (maalehti 6.9.2026): syöte ja
+  // artikkelisivut samalla isäntänimellä, ilman www-etuliitettä.
+  'https://sierraloaded.sl/',
+  // Kazakstanin uutislähde (maalehti 6.9.2026): NUR.KZ:n
+  // kazakinkielinen laitos, syöte ja artikkelisivut samalla
+  // isäntänimellä. Osoitteessa on kaz-alkuinen alitunnus, koska
+  // venäjänkielinen www.nur.kz on eri isäntänimi.
+  'https://kaz.nur.kz/',
+  // Afganistanin uutislähde (maalehti 6.9.2026): TOLOnewsin
+  // darinkielinen syöte ja artikkelisivut ovat samalla isäntänimellä,
+  // ilman www-etuliitettä.
+  'https://tolonews.com/',
+  // Singaporen uutislähde (maalehti 6.9.2026): CNA:n syöte on
+  // /api/v1/rss-outbound-feed ja artikkelisivut samalla isäntänimellä.
+  'https://www.channelnewsasia.com/',
+  // Liberian uutislähde (maalehti 6.9.2026): Daily Observerin syöte on
+  // hakuosoite (/search/?f=rss...) ja artikkelisivut ovat samalla
+  // isäntänimellä, joten yksi etuliite riittää.
+  'https://www.liberianobserver.com/',
+  // Malin uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut ovat
+  // samalla isäntänimellä, ilman www:tä. Syöteosoite on /rss, koska
+  // /feed vastaa 301:llä eikä worker seuraa uudelleenohjauksia.
+  'https://malijet.com/',
+  // Mongolian uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä. www on pakollinen — caak.mn ilman sitä
+  // vastaa 301:llä eikä worker seuraa uudelleenohjauksia.
+  'https://www.caak.mn/',
+  // Bolivian uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä, ilman www-etuliitettä.
+  'https://eldeber.com.bo/',
+  // Libyan uutislähde (maalehti 6.9.2026): syöte ja artikkelilinkit
+  // ovat samalla isäntänimellä ilman www-etuliitettä.
+  'https://almarsad.co/',
+  // Grönlannin uutislähde (maalehti 6.9.2026): KNR:n syöte ja
+  // artikkelisivut ovat samalla isäntänimellä ilman www-etuliitettä,
+  // ja sama etuliite kattaa sekä tanskan- että grönlanninkielisen
+  // osaston (/da/… ja /kl/…).
+  'https://knr.gl/',
+  // Angolan uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä, ilman www-etuliitettä.
+  'https://correiokianda.info/',
+  // Zimbabwen uutislähde (maalehti ZWE, 6.9.2026): syöte ja
+  // artikkelisivut samalla isäntänimellä. Osoite on ilman www:tä,
+  // koska www.thenewshawks.com ohjaa 301:llä eikä worker seuraa
+  // uudelleenohjauksia.
+  'https://thenewshawks.com/',
+  // Itä-Timorin uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä. Osoite on ilman www:tä, koska www.tatoli.tl
+  // vastaa 301:llä eikä worker seuraa uudelleenohjauksia.
+  'https://tatoli.tl/',
+  // Tšadin uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä. Syötteen osoitteessa on loppukauttaviiva
+  // (/rss/), koska /rss ohjaa 301:llä eikä worker seuraa
+  // uudelleenohjauksia.
+  'https://www.alwihdainfo.com/',
+  // Vanuatun uutislähde (maalehti 6.9.2026): syöte ja artikkelisivut
+  // samalla isäntänimellä. Syöte on BLOX-julkaisujärjestelmän
+  // hakuosoite (search/?f=rss), koska /rss/ ja /feed/ vastaavat 404:llä.
+  'https://www.dailypost.vu/',
 ];
 
 // Kymmenen minuutin välimuisti Cloudflaren reunalla: uutissivusto ei

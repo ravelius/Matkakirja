@@ -3376,6 +3376,68 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -45.8411, etela: -45.8861, lansi: 170.4785, ita: 170.5432 },
     meri: true,
   },
+  wellington: {
+    /*
+     * KANNAS THORNDONISTA BASIN RESERVELLE (6.9.2026). Ruutu on
+     * 3,3 × 3,4 kilometriä eli Suvan ja Halifaxin kokoluokkaa, ja se
+     * riittää: Wellingtonin keskusta on puristunut kapealle
+     * kannakselle sataman ja mäkien väliin, ja kaikki kahdeksan
+     * kohdetta mahtuvat siihen rautatieasemalta (-41,2786)
+     * Basin Reservelle (-41,3003).
+     *
+     * ITÄREUNA 174,801 ON VEDETTY ORIENTAL BAYN YLI, ja se on ruudun
+     * ainoa varsinainen valinta. Ilman Oriental Bayta rajaus olisi
+     * 1,8 kilometriä leveä ja 2,4 korkea eli kapea pystynauha, jossa
+     * kaikki kahdeksan kohdetta olisivat samalla pystyviivalla.
+     * Lahden mukaan ottaminen tuo kuvaan sataman kaaren ja tekee
+     * ruudusta lähes neliön ilman, että vesi hallitsee sitä.
+     *
+     * LÄNSIREUNA 174,762 ON NAIRN STREETIN MÖKIN MUKAAN. Kelburnin
+     * rinne jatkuu siitä vielä ylöspäin, mutta kasvitieteellinen
+     * puutarha (174,766) ja Zealandia (174,750) ovat kaupunkilehden
+     * omien juttujen aihe eivätkä kartan kohteita, joten rinnettä ei
+     * ollut syytä ottaa leveämmältä.
+     *
+     * MOUNT VICTORIAN NÄKÖALAPAIKKA JA ZEALANDIA JÄÄVÄT POIS. Mount
+     * Victorialla ei ole en-Wikipediassa omaa koordinaatillista
+     * artikkelia (haku 6.9.2026 palautti täsmennyssivun), ja
+     * Zealandia on 2,4 kilometriä lännessä sekä lehden noston L1
+     * aihe.
+     *
+     * meri: true. Wellingtonin satama on OSM:ssä rantaviivaa
+     * (natural=coastline) eikä vesimonikulmio, joten ilman lippua
+     * kuvan oikea kolmannes olisi paperin värinen.
+     */
+    rajat: { pohjoinen: -41.2740, etela: -41.3050, lansi: 174.7620, ita: 174.8010 },
+    meri: true,
+  },
+  christchurch: {
+    /*
+     * RUUTUKAAVAN POHJOISOSA (6.9.2026). Ruutu on 2,4 × 1,9
+     * kilometriä eli pelin tiiviimpiä — Dubrovnikin ja Ankaran
+     * kokoluokkaa, selvästi pienempi kuin Suvan 3,1 km. Syy on
+     * kaupungin omassa muodossa: Christchurchin keskusta piirrettiin
+     * 1850 valmiiksi neljän puistokadun sisään, ja kaikki kahdeksan
+     * kohdetta ovat sen pohjoisosassa alle puolentoista kilometrin
+     * nauhassa.
+     *
+     * LAAJEMPI RUUTU KOKEILTIIN JA HYLÄTTIIN. Neljä puistokatua
+     * (Bealey, Fitzgerald, Moorhouse, Deans) rajaavat noin
+     * 2,5 × 2,5 kilometrin neliön, mutta sen eteläpuolisko on
+     * toimisto- ja varastokortteleita ilman yhtään kohdetta: kaikki
+     * kahdeksan puristuisivat kuvan yläreunaan.
+     *
+     * HAGLEY PARK JA RICCARTON BUSH JÄÄVÄT POIS. Puiston nurmi
+     * näkyy vasemmassa reunassa, mutta kasvitieteellinen puutarha
+     * sen sisällä ja Riccarton Bush kolme kilometriä lännessä ovat
+     * kaupunkilehden omien nostojen L1 ja L3 aihe, eikä kohdekartta
+     * toista lehden juttuja (New Yorkin sääntö).
+     *
+     * meri: ei. Christchurch on kymmenen kilometriä sisämaassa, ja
+     * Avon on OSM:ssä tavallinen vesiväylä.
+     */
+    rajat: { pohjoinen: -43.5200, etela: -43.5375, lansi: 172.6215, ita: 172.6510 },
+  },
   suva: {
     /*
      * SIIRTOMAA-AJAN HALLINTOKORTTELI NIEMEN KÄRJESSÄ (6.9.2026).

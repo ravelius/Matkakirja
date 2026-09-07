@@ -1,5 +1,287 @@
 # Uutisvälityksen käyttöönotto (omistajalle, n. 5 min)
 
+> **Päivitys 6.9.2026 (Hongkong):** sallittuihin lisättiin
+> `https://hongkongfp.com/` (maalehti HKG, testattu 6.9.2026: syötteessä
+> kolmekymmentä juttua, ja artikkelisivun `<article>`-lohkosta jäsentyy
+> 19–33 yli 60 merkin kappaletta sekä `og:image`). Syöteosoitteen
+> loppukauttaviiva on pakollinen, koska ilman sitä palvelin vastaa
+> uudelleenohjauksella eikä worker seuraa niitä. Kiinankielistä lähdettä
+> etsittiin yhdestätoista paikasta ilman tulosta — RTHK ja Bastille Post
+> läpäisivät syötetestin mutta eivät artikkelisivutestiä, Ming Pao ja
+> HKET vastaavat 403:lla, eikä HK01:llä, am730:llä, Sing Taolla, Wen Wei
+> Polla, Ta Kung Paolla, on.cc:llä tai HKCNewsillä ole toimivaa
+> RSS-osoitetta; perustelut ovat js/packs/uutislahteet.js:n
+> HKG-kommentissa. Julkaisu Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Myanmar):** sallittuihin lisättiin
+> myanmar-now.org (maalehti MMR, testattu 6.9.2026: burmankielisessä
+> syötteessä kymmenen juttua, artikkelisivun ainoasta
+> `<article>`-lohkosta jäsentyy 18–24 yli 60 merkin kappaletta ja
+> `og:image` löytyy). Syöteosoitteen `…/mm/feed/` loppukauttaviiva on
+> pakollinen: ilman sitä palvelin vastaa 301:llä eikä worker seuraa
+> uudelleenohjauksia. Eleven Median RSS vastaa 200:lla mutta on tyhjä,
+> ja The Irrawaddy sekä Mizzima ovat Cloudflaren botti-eston takana;
+> perustelut hylkäyksille ovat js/packs/uutislahteet.js:n
+> MMR-kommentissa. Julkaisu Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Sri Lanka):** sallittuihin lisättiin
+> `https://sinhala.adaderana.lk/` (maalehti LKA, Ada Derana Sinhala,
+> testattu 6.9.2026: syötteessä 25 juttua, ja kahden artikkelisivun
+> ainoasta `<article>`-lohkosta jäsentyi 5 ja 9 yli 60 merkin kappaletta
+> sekä `og:image`). Osoite on kirjoitettava täsmälleen oikein, koska
+> worker ei seuraa uudelleenohjauksia: syöte on `sinhala.adaderana.lk/
+> rss.xml`, kun taas vanha `rss.php` sekä `adaderana.lk` ja
+> `www.adaderana.lk` vastaavat 301:llä. Sinhalankielinen lähde valittiin
+> saman talon englanninkielisen ohi, koska maalehtiohje asettaa
+> paikalliskielisen lähteen ensisijaiseksi. Daily Mirror on Cloudflaren
+> botti-eston takana ja Hiru Newsin RSS-osoite vastaa 404:llä; perustelut
+> ovat js/packs/uutislahteet.js:n LKA-kommentissa. Julkaisu
+> Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Namibia):** sallittuihin lisättiin
+> neweralive.na (maalehti NAM, testattu 6.9.2026: syötteessä kymmenen
+> juttua, ja artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy
+> 7–18 yli 60 merkin kappaletta sekä `og:image`). Osoitteessa EI ole
+> www-etuliitettä, eikä worker seuraa uudelleenohjauksia. Maan luetuin
+> lehti The Namibian hylättiin: sen artikkelisivun ensimmäinen
+> `<article>` on sivupalkin juttukortti ilman leipätekstiä — sama vika
+> kuin Nigerian Premium Timesissä. Muut hylätyt on lueteltu
+> js/packs/uutislahteet.js:n NAM-kommentissa. Julkaisu Git-
+> integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Kamerun):** sallittuihin lisättiin
+> datacameroon.com (maalehti CMR, testattu 6.9.2026: syötteessä
+> kymmenen juttua, ja artikkelisivun ainoasta `<article>`-lohkosta
+> jäsentyy seitsemästä kahdeksaan yli 60 merkin kappaletta sekä
+> `og:image` — testattu kaksi eri artikkelia). Osoitteessa ei ole
+> www-etuliitettä. Kamerunin luetuimmat uutissivustot kaatuivat
+> artikkelisivun testiin, ei syötteen: perustelut hylkäyksille ovat
+> js/packs/uutislahteet.js:n CMR-kommentissa. Julkaisu Git-
+> integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Saint Helena):** sallittuihin lisättiin
+> www.sainthelena.gov.sh (maalehti SHN, testattu 6.9.2026: syötteessä
+> kymmenen juttua, artikkelisivun ainoasta `<article>`-lohkosta jäsentyy
+> viisi yli 60 merkin kappaletta ja `og:image` löytyy). Lähde on saaren
+> hallinnon oma uutissyöte eikä lehtitalo: The Sentinelin syöte
+> (www.sams.sh/feed/) on jäänyt päivittämättä lokakuusta 2024 ja The St
+> Helena Independent (www.independent.sh) vastaa tietokantavirheellä.
+> Perustelut ovat js/packs/uutislahteet.js:n SHN-kommentissa. Julkaisu
+> Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Kongon demokraattinen tasavalta):** sallittuihin
+> lisättiin www.radiookapi.net (maalehti COD, testattu 6.9.2026:
+> syötteessä viisikymmentä juttua, artikkelisivun `<article>`-lohkosta
+> jäsentyy kahdeksan yli 60 merkin kappaletta ja `og:image` löytyy).
+> Actualite.cd hylättiin, koska sen artikkelisivun `<article>`-lohkossa
+> on vain otsikko ja leipäteksti jää sen ulkopuolelle; 7sur7.cd ja
+> Mediacongo eivät tarjoa toimivaa RSS-osoitetta ja Politico.cd:n syöte
+> vastaa 301:llä. Perustelut ovat js/packs/uutislahteet.js:n
+> COD-kommentissa. Julkaisu tapahtuu automaattisesti mainista, kuten
+> alempien merkintöjen kohdalla.
+>
+> **Päivitys 6.9.2026 (Nepal):** sallittuihin lisättiin
+> www.onlinekhabar.com (maalehti NPL, testattu 6.9.2026: syötteessä 55
+> juttua nepaliksi, ja artikkelisivun ainoasta `<article>`-lohkosta
+> jäsentyy 30–58 yli 60 merkin kappaletta sekä `og:image`).
+> Onlinekhabarin yksi ainoa `<article>` on syy valintaan: Nagarik News
+> ja Khabarhub läpäisevät testit, mutta niillä on viisi ja kaksi
+> lohkoa, joista ensimmäinen ei ole itse juttu. Kantipurin
+> `ekantipur.com/rss` palauttaa RSS:n sijaan HTML-sivun, ja Setopatin
+> sekä Ratopatin artikkelisivuilta puuttuu sekä `<article>` että
+> `[itemprop="articleBody"]`; perustelut ovat
+> js/packs/uutislahteet.js:n NPL-kommentissa. Julkaisu Git-
+> integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Madagaskar):** sallittuihin lisättiin
+> www.lexpress.mg (maalehti MDG, testattu 6.9.2026: syötteessä 25
+> juttua, artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy
+> yhdeksän yli 60 merkin kappaletta ja `og:image` löytyy). L'Express de
+> Madagascar julkaisee Bloggerissa, joten syöteosoite on
+> `/feeds/posts/default?alt=rss` — juurihakemiston `/feed/` palauttaa
+> 404:n. Malagassinkielistä lähdettä ei löytynyt: Newsmadan
+> artikkelisivulta puuttuvat og-merkinnät kokonaan, ja Gazetiko, Ao
+> Raha, Inona no vaovao, Gasikara ja TV Plus eivät vastanneet
+> lainkaan; perustelut ovat js/packs/uutislahteet.js:n MDG-kommentissa.
+> Julkaisu Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Sierra Leone):** sallittuihin lisättiin
+> sierraloaded.sl (maalehti SLE, testattu 6.9.2026: syötteessä kymmenen
+> juttua, artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy
+> viisitoista yli 60 merkin kappaletta ja `og:image` löytyy). Osoite on
+> ilman www-etuliitettä, koska sekä syöte että artikkelilinkit ovat
+> isäntänimellä `sierraloaded.sl`. Awoko, Politico SL, Concord Times,
+> Standard Times Press ja Sierra Leone Times hylättiin (varmennevirhe,
+> 404, 302 ja 403); perustelut ovat js/packs/uutislahteet.js:n
+> SLE-kommentissa. Julkaisu tapahtuu integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Kazakstan):** sallittuihin lisättiin
+> kaz.nur.kz (maalehti KAZ, testattu 6.9.2026: syötteessä
+> viisikymmentä juttua, ja artikkelisivun `<article>`-lohkosta jäsentyy
+> kymmenen yli 60 merkin kappaletta sekä `og:image`). Alitunnus on
+> kirjoitettava täsmälleen oikein: kazakinkielinen laitos on
+> `kaz.nur.kz`, venäjänkielinen `www.nur.kz`, eivätkä ne ole workerille
+> sama isäntänimi. Egemen Qazaqstanin ja Kazinformin syötteet aukeavat,
+> mutta niiden artikkelisivuilta puuttuu `<article>`; perustelut
+> hylkäyksille ovat js/packs/uutislahteet.js:n KAZ-kommentissa.
+> Julkaisu Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Afganistan):** sallittuihin lisättiin
+> `https://tolonews.com/` (maalehti AFG, testattu 6.9.2026:
+> darinkielisessä syötteessä `https://tolonews.com/fa/rss.xml` on
+> kolmekymmentä juttua, ja artikkelisivun `<article>`-lohkosta jäsentyy
+> 15–23 yli 60 merkin kappaletta sekä `og:image`). Osoitteessa EI ole
+> www-etuliitettä, ja sekä syöte että artikkelilinkit ovat samalla
+> isäntänimellä. Pajhwok (410), Khaama Press (captcha), Ariana News
+> (Sucuri 403) ja 8am.media (tyhjä syöte) hylättiin; perustelut ovat
+> js/packs/uutislahteet.js:n AFG-kommentissa. Julkaisu
+> Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Singapore):** sallittuihin lisättiin
+> www.channelnewsasia.com (maalehti SGP, testattu 6.9.2026: CNA:n
+> Singapore-osaston syötteestä jäsentyy kaksitoista juttua, ja kolmesta
+> eri artikkelisivusta poimittiin `<article>`-lohkosta 10, 19 ja 47 yli
+> 60 merkin kappaletta sekä `og:image` joka kerta). Syötteen osoitteessa
+> on kyselymerkkijono (`?_format=xml&category=10416`), mutta sallittujen
+> lista vertaa vain osoitteen alkua, joten pelkkä isäntänimi riittää.
+> The Straits Times hylättiin, koska sen artikkelisivuista vain osalla
+> on `<article>`-elementti; Berita Harianilla (malaiji) sitä ei ole
+> lainkaan ja Zaobaon (kiina) kokeillut RSS-osoitteet vastaavat
+> 404:llä. Tamil Murasu läpäisi molemmat testit ja on kirjattu
+> varalähteeksi js/packs/uutislahteet.js:n SGP-kommenttiin. Julkaisu
+> Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Liberia):** sallittuihin lisättiin
+> www.liberianobserver.com (maalehti LBR, testattu 6.9.2026: syötteessä
+> viisikymmentä juttua, ja artikkelisivun
+> `[itemprop="articleBody"]`-lohkosta jäsentyy leipäteksti ja
+> `og:image` löytyy). Daily Observerin syöte on hakuosoite
+> `https://www.liberianobserver.com/search/?f=rss&t=article&l=50`,
+> koska lehden julkaisujärjestelmä tarjoaa RSS:n vain sen kautta ja
+> `/feed` vastaa 301:llä — worker ei seuraa uudelleenohjauksia.
+> FrontPage Africa läpäisi samat testit ja jäi varalähteeksi; Liberian
+> Investigator ja The New Dawn hylättiin, perustelut ovat
+> js/packs/uutislahteet.js:n LBR-kommentissa. Julkaisu
+> Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Mali):** sallittuihin lisättiin malijet.com
+> (maalehti MLI, testattu 6.9.2026: syötteessä viisikymmentä juttua,
+> artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy leipäteksti
+> ja `og:image` löytyy). Syöteosoite on `https://malijet.com/rss`, ei
+> `/feed`, joka vastaa 301:llä — worker ei seuraa uudelleenohjauksia.
+> Maan luetuin sivusto maliweb.net on Cloudflaren botti-eston takana
+> (403); Studio Tamani ja Journal du Mali läpäisivät testit ja jäivät
+> varalähteiksi, perustelut js/packs/uutislahteet.js:n MLI-kommentissa.
+> Julkaisu Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Mongolia):** sallittuihin lisättiin
+> www.caak.mn (maalehti MNG, testattu 6.9.2026: syötteessä
+> viisikymmentä juttua, ja kolmelta artikkelisivulta jäsentyi
+> `[itemprop="articleBody"]`-lohkosta viidestä kuuteen yli 60 merkin
+> kappaletta sekä `og:image`). Osoitteessa on oltava `www`, koska
+> caak.mn vastaa 301:llä eikä worker seuraa uudelleenohjauksia.
+> Caak.mn on mongolinkielinen yleisportaali, jossa on sekä uutisia
+> että arjen juttuja; varsinaiset uutissivustot kaatuivat testeihin
+> (Eguur.mn läpäisi molemmat mutta sen syöte on 14 megatavua, iKon.mn
+> ja Sonin.mn eivät tarjoa `<article>`-elementtiä, News.mn katkaisee
+> yhteyden). Perustelut ovat js/packs/uutislahteet.js:n
+> MNG-kommentissa. Julkaisu Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Bolivia):** sallittuihin lisättiin
+> `https://eldeber.com.bo/` (maalehti BOL, testattu 6.9.2026: syötteessä
+> 25 juttua, ja artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy
+> 9–13 yli 60 merkin kappaletta sekä `og:image`). Osoite on ilman
+> www-etuliitettä, ja syötteen polku on `/feed/` — `/rss/` vastaa 200:lla
+> mutta palauttaa HTML-etusivun. Muut kokeillut bolivialaislehdet
+> hylättiin 404:n, uudelleenohjauksen tai botti-eston takia; perustelut
+> ovat js/packs/uutislahteet.js:n BOL-kommentissa. Julkaisu
+> Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Libya):** sallittuihin lisättiin almarsad.co
+> (maalehti LBY, testattu 6.9.2026: syötteessä kymmenen juttua,
+> artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy kahdeksan
+> yli 60 merkin kappaletta ja `og:image` löytyy). Al Marsad on
+> arabiankielinen, ja oikealta vasemmalle kirjoitettava teksti toimii
+> ilman lisätöitä. Osoitteessa ei ole www-etuliitettä sen paremmin
+> syötteessä kuin artikkelilinkeissäkään, joten listalla on vain yksi
+> isäntänimi. Alwasat on Cloudflaren botti-eston takana, ja Libya
+> Observer, 218 TV ja Ean Libya vastaavat uudelleenohjauksella, jota
+> worker ei seuraa; perustelut ovat js/packs/uutislahteet.js:n
+> LBY-kommentissa. Julkaisu tapahtuu automaattisesti mainista, kuten
+> alempien merkintöjen kohdalla.
+>
+> **Päivitys 6.9.2026 (Grönlanti):** sallittuihin lisättiin `knr.gl`
+> (maalehti GRL, testattu 6.9.2026: syötteessä 25 juttua, ja
+> artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy kuusi yli
+> 60 merkin kappaletta sekä `og:image`). Osoitteessa **ei ole
+> www-etuliitettä**, ja sama etuliite kattaa sekä tanskan- että
+> grönlanninkielisen osaston. Taulussa on tanskankielinen syöte
+> `https://knr.gl/da/rss`, vaikka grönlanninkielinen `/kl/rss` toimisi
+> yhtä hyvin: MyMemory ei tunne kalaallisutia, joten Käännä-nappi jäisi
+> pysyvästi tyhjäksi. Grönlannin toinen valtakunnallinen lehti
+> Sermitsiaq.AG hylättiin, koska sivustolla ei ole RSS-syötettä
+> lainkaan; perustelut ovat js/packs/uutislahteet.js:n GRL-kommentissa.
+> Julkaisu Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Angola):** sallittuihin lisättiin
+> correiokianda.info (maalehti AGO, testattu 6.9.2026: syötteessä
+> yksitoista juttua ja tuorein samalta päivältä, artikkelisivun
+> `<article>`-lohkosta jäsentyy kahdeksantoista yli 60 merkin kappaletta
+> ja `og:image` löytyy). Osoitteessa EI ole www-etuliitettä. Angolan
+> suurimmat lehdet eivät kelvanneet: Jornal de Angola ja ANGOP eivät
+> tarjoa RSS:ää lainkaan, Angola24Horas, Club-K ja Platina Line ovat
+> botti-eston takana ja Mercadon artikkelisivuilta puuttuu
+> `<article>`; perustelut ovat js/packs/uutislahteet.js:n
+> AGO-kommentissa. Julkaisu Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Zimbabwe):** sallittuihin lisättiin
+> thenewshawks.com (maalehti ZWE, testattu 6.9.2026: syötteessä
+> kymmenen juttua, artikkelisivun ainoasta `<article>`-lohkosta jäsentyy
+> leipäteksti ja `og:image` löytyy). Osoite on kirjoitettava ilman
+> www-etuliitettä, koska www.thenewshawks.com vastaa 301:llä eikä worker
+> seuraa uudelleenohjauksia. Zimpapersin ja valtion yhtiöiden lehdet
+> (Herald, Chronicle, shonankielinen Kwayedza, Sunday Mail, H-Metro,
+> ZBC News) ovat botti-eston takana; perustelut muille hylkäyksille ovat
+> js/packs/uutislahteet.js:n ZWE-kommentissa. Julkaisu Git-
+> integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Itä-Timor):** sallittuihin lisättiin tatoli.tl
+> (maalehti TLS, testattu 6.9.2026: syötteessä kymmenen juttua,
+> artikkelisivun ensimmäisestä `<article>`-lohkosta jäsentyy kuusi yli
+> 60 merkin kappaletta ja `og:image` löytyy). Osoite on ilman www:tä,
+> koska `www.tatoli.tl` vastaa 301:llä eikä worker seuraa
+> uudelleenohjauksia. Tatoli on valtiollinen uutistoimisto, ja se
+> valittiin vasta sen jälkeen kun yksityiset vaihtoehdot kaatuivat
+> artikkelisivutestiin: Timor Postin syöte aukeaa mutta sivulta puuttuu
+> sekä `<article>` että `[itemprop="articleBody"]`, ja The Dili Weekly
+> läpäisi kappaletestin mutta jäi ilman `og:image`ä. Syöte on
+> tetuminkielinen, ja MyMemory kääntää sen (`langpair=tet|fi`). Muut
+> hylätyt on lueteltu js/packs/uutislahteet.js:n TLS-kommentissa.
+> Julkaisu Git-integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Tšad):** sallittuihin lisättiin
+> www.alwihdainfo.com (maalehti TCD, testattu 6.9.2026: syötteessä
+> viisitoista juttua, ja kahden artikkelisivun ensimmäisestä
+> `<article>`-lohkosta jäsentyi seitsemän ja neljätoista yli 60 merkin
+> kappaletta sekä `og:image`). Syötteen osoite on kirjoitettava
+> täsmälleen muodossa `https://www.alwihdainfo.com/rss/`: sekä `/rss`
+> että `/feed` vastaavat 301:llä, eikä worker seuraa uudelleenohjauksia.
+> Tchadinfos läpäisi myös molemmat testit ja on kirjattu varalähteeksi
+> js/packs/uutislahteet.js:n TCD-kommenttiin. Julkaisu Git-
+> integraatiolla mainista.
+>
+> **Päivitys 6.9.2026 (Vanuatu):** sallittuihin lisättiin
+> www.dailypost.vu (maalehti VUT, testattu 6.9.2026: syötteessä
+> viisikymmentä juttua, artikkelisivun `[itemprop="articleBody"]`-
+> lohkosta jäsentyy kuusitoista yli 60 merkin kappaletta ja
+> `og:image` löytyy). Syöteosoite on BLOX-julkaisujärjestelmän
+> hakuosoite `search/?f=rss&t=article&c=news&…`, koska `/rss/` ja
+> `/feed/` vastaavat 404:llä. Bislamankielistä syötettä ei ole:
+> osastohaku `c=bislama` antaa nolla juttua. Hylätyt lähteet (VBTC,
+> Vanuatu Independent, Loop Vanuatu) on lueteltu
+> js/packs/uutislahteet.js:n VUT-kommentissa. Julkaisu Git-
+> integraatiolla mainista.
+>
 > **Päivitys 6.9.2026 (Kenia, Tansania, Uganda):** sallittuihin
 > lisättiin capitalfm.africa, globalpublishers.co.tz ja nilepost.co.ug
 > (maalehdet KEN/TZA/UGA, testattu 6.9.2026: syöte aukeaa,

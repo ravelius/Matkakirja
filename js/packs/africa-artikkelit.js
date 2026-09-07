@@ -47,10 +47,25 @@ export const OMAT_ARTIKKELIT = {
       + 'Casablanca — ja pohjoisessa Tanger, kahden meren portti.',
   },
   Libya: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // LBY) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Libya on Pohjois-Afrikan valtio, jossa kapean rannikkokaistan '
       + 'takana aukeaa Saharan suuri hiekkameri. Lähes koko maa on '
       + 'aavikkoa — siksi melkein kaikki libyalaiset asuvat meren '
-      + 'äärellä.',
+      + 'äärellä. Nimi on kolmetuhatta vuotta vanha ja luettiin '
+      + 'ensimmäisen kerran faaraon seinästä, mutta valtio, joka sitä '
+      + 'kantaa, on nuori: itsenäisyys tuli YK:n päätöksellä '
+      + 'jouluaattona 1951, ja kahdeksan vuotta myöhemmin aavikon alta '
+      + 'löytyi öljy. Rannikolla on kaksi poikkeusta hiekkaan — Vihreä '
+      + 'vuori, jolle sataa enemmän kuin muualle maahan, ja lähes '
+      + 'kaksituhatta kilometriä rantaa, jonne kilpikonnat tulevat '
+      + 'munimaan. Etelässä on Fezzan, jonka keitailla karavaanit '
+      + 'lepäsivät ja jonka aavikossa kohoaa tulivuori, jonka pohjalla '
+      + 'on järviä ja hyttysiä. Keittiö on lampaan, ohran ja mausteiden '
+      + 'keittiö, ja juhlissa soivat säkkipilli ja kehärummut. Juomavesi '
+      + 'tulee nykyään putkea pitkin aavikosta: hiekan alla on '
+      + 'fossiilista pohjavettä, joka satoi ennen viimeistä jääkautta.',
     artikkeli: 'Libya on suuri maa Välimeren rannalla Egyptin ja '
       + 'Tunisian välissä. Pinta-alaltaan se on yli viisi kertaa Suomen '
       + 'kokoinen, mutta valtaosa siitä on Saharan aavikkoa: hiekkaa, '
@@ -562,9 +577,25 @@ export const OMAT_ARTIKKELIT = {
       + 'mbalaxin tahti.',
   },
   Mali: {
+    // Pidennetty maalehden (MAA_KATEGORIAT.MLI) yhteydessä 6.9.2026:
+    // maalehden maaosasto nojaa tähän introon yksin, sama malli kuin
+    // Kenialla ja Nigerialla.
     intro: 'Mali on aavikon ja Nigerjoen maa, jonka keskiaikaiset '
       + 'valtakunnat olivat aikansa rikkaimpia. Kulta, suola ja '
-      + 'kirjat kulkivat sen kaupunkien kautta.',
+      + 'kirjat kulkivat sen kaupunkien kautta. Nigerin suuri mutka '
+      + 'kaartaa Saharan reunaan ja kääntyy takaisin etelään; sen '
+      + 'varrella nousivat peräkkäin Ghanan, Malin ja Songhain '
+      + 'suurvallat, jotka elivät etelän kullan ja pohjoisen suolan '
+      + 'vaihdosta. Mansa Musan pyhiinvaellus Mekkaan 1324 teki Malin '
+      + 'tunnetuksi Kairoa myöten, ja Timbuktu merkittiin '
+      + 'eurooppalaisiin karttoihin oppineiden kaupunkina. Kirinan '
+      + 'taistelun jälkeen noin 1235 klaanit sopivat Kurukan Fugan '
+      + 'tasangolla säännöistä, joita jelit eli griotit ovat siitä '
+      + 'asti kantaneet ulkomuistissa. Songhain valta päättyi 1591 '
+      + 'Tondibin taisteluun, kun Marokon armeija toi aavikon yli '
+      + 'tuliaseet; Ranskan siirtomaakauden jälkeen Mali itsenäistyi '
+      + '1960. Nykyään maan tunnetuin vientituote on musiikki: kora, '
+      + 'balafon ja aavikkoblues soivat kaikkialla maailmassa.',
     artikkeli: 'Mali on suuri sisämaavaltio Länsi-Afrikassa. Pohjoinen '
       + 'puoli on Saharaa, etelä savannia — ja niiden välistä virtaa '
       + 'Nigerjoki, jonka suuri mutka on aina ollut maan elämänlanka. '
@@ -766,9 +797,28 @@ export const OMAT_ARTIKKELIT = {
       + 'sukupolvi toisensa perään.',
   },
   'Kongon demokraattinen tasavalta': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // COD) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Kongon demokraattinen tasavalta on Saharan eteläpuolisen '
       + 'Afrikan suurin maa: sademetsien, suuren joen ja valtavien '
-      + 'luonnonrikkauksien jättiläinen.',
+      + 'luonnonrikkauksien jättiläinen. Pinta-alaltaan se on Afrikan '
+      + 'toiseksi ja koko maailman yhdenneksitoista suurin, ja sen noin '
+      + '124 miljoonaa asukasta tekevät siitä maailman väkirikkaimman '
+      + 'ranskankielisen maan — virallinen kieli on ranska, mutta '
+      + 'kotikieliä on yli kaksisataa, ja niistä laajimmalle levinnyt on '
+      + 'lingala, joka syntyi joen kauppakielenä. Maan sydän on Kongojoki '
+      + 'sademetsineen; idässä kohoavat tulivuoret ja suuret järvet '
+      + 'hautavajoaman reunalla, kaakossa levittäytyy kuparivyöhyke. '
+      + 'Joen suulla kukoisti 1300-luvulta alkaen Kongon kuningaskunta, '
+      + 'jonka kuningas Afonso I kirjoitti kirjeitä Lissaboniin, ja '
+      + 'sisämaassa Luban ja Lundan valtakunnat; Luban historia '
+      + 'säilytettiin helmillä peitetyillä muistilaudoilla. Maa on '
+      + 'nimetty joen mukaan, ja joen vanha nimi Zaire tulee kikongon '
+      + 'ilmauksesta nzadi o nzere, joki joka nielee jokia. '
+      + 'Itsenäisyys tuli 1960, ja sen juhlalauluksi jäi Indépendance '
+      + 'Cha Cha — kongolainen rumba, joka pääsi 2021 Unescon '
+      + 'aineettoman kulttuuriperinnön luetteloon.',
     artikkeli: 'Kongon demokraattinen tasavalta on pinta-alaltaan '
       + 'Saharan eteläpuolisen Afrikan suurin valtio — yli '
       + 'kaksikymmentä kertaa Suomen kokoinen. Maan sydän on '
@@ -916,9 +966,27 @@ export const OMAT_ARTIKKELIT = {
       + 'aavikon suolaa — samoja tavaroita kuin keisarien aikaan.',
   },
   'Sierra Leone': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // SLE) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla. Faktat: docs/mantereet-tyoaineisto/faktapohja-sierraleone.md.
     intro: 'Sierra Leone on Länsi-Afrikan vehreä rannikkomaa, jonka '
-      + 'pääkaupunki Freetown perustettiin vapautettujen orjien '
-      + 'kodiksi. Nimi tarkoittaa leijonavuorta.',
+      + 'nimen antoivat portugalilaiset purjehtijat 1400-luvulla: '
+      + 'leijonavuoret nousevat merestä heti rannan takaa. Pääkaupunki '
+      + 'Freetown perustettiin 1792 vapautettujen orjien kaupungiksi, ja '
+      + 'seuraavien vuosikymmenten aikana sinne tuotiin tuhansia ihmisiä, '
+      + 'jotka laivasto oli vapauttanut laittomilta orjalaivoilta — '
+      + 'heistä, Nova Scotian uudisasukkaista ja Jamaikan marooneista '
+      + 'syntyi krio-väestö ja krio-kieli, jota nykyään puhuu lähes koko '
+      + 'maa. Suurimmat kansat ovat temnet ja mendet, ja rannikon takana '
+      + 'alkaa Ylä-Guinean sademetsävyöhyke, jonka viimeisiä paloja '
+      + 'suojellaan Golassa ja Tiwain saarella. Sisämaa liitettiin '
+      + 'siirtomaahan protektoraattina 1896, itsenäisyys tuli 27. '
+      + 'huhtikuuta 1961 Milton Margain johdolla ja tasavalta 1971. '
+      + 'Riisi on ateria, jonka päälle tulee kassavanlehti- tai '
+      + 'maapähkinäkastike, ja maan tunnetuin luonnonvara ovat timantit. '
+      + 'Freetownia sanottiin siirtomaa-aikana Afrikan Ateenaksi: sen '
+      + 'Fourah Bay College on Saharan eteläpuolisen Afrikan ensimmäinen '
+      + 'länsimainen yliopisto.',
     artikkeli: 'Sierra Leone sijaitsee Atlantin rannalla Länsi-'
       + 'Afrikassa. Portugalilainen purjehtija nimesi niemen '
       + 'leijonavuoreksi 1400-luvulla — kerrotaan, että ukkonen jylisi '
@@ -1044,10 +1112,24 @@ export const OMAT_ARTIKKELIT = {
       + 'vuoren gaselleina.',
   },
   Angola: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // AGO) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Angola on eteläisen Afrikan suuri rannikkovaltio, jonka '
-      + 'historia kulkee Kongon kuningaskunnasta orjakaupan satamien '
-      + 'kautta öljyrikkauteen — ja jonka musiikki tanssittaa koko '
-      + 'maailmaa.',
+      + 'nimi on kuninkaan arvonimi: ngola oli Ndongon hallitsija, ja '
+      + 'portugalilaiset alkoivat kutsua koko seutua sen mukaan. '
+      + 'Rannikko on kuivaa ja etelässä aavikkoa, sisämaa vehreää '
+      + 'ylänköä ja pohjoinen sademetsää, ja niiden välissä maa putoaa '
+      + 'kilometrin alaspäin yhtenä jyrkänteenä. Ndongon ja Matamban '
+      + 'kuningatar Njinga neuvotteli ja soti Portugalia vastaan '
+      + 'neljäkymmentä vuotta 1600-luvulla, ja kuningaskunta kaatui '
+      + 'vasta 1671. Maa oli Portugalin siirtomaa yli neljäsataa vuotta '
+      + 'ja itsenäistyi 1975; sen jälkeen se on rakentanut itseään '
+      + 'öljyn ja timanttien voimin. Idän chokwet veistivät naamiot ja '
+      + 'päällikönistuimet ja piirsivät hiekkaan yhden viivan kuviot, '
+      + 'joita tutkitaan nykyään matematiikkana. Luandasta ovat '
+      + 'lähteneet maailmalle semba, kizomba ja kuduro — ja jo paljon '
+      + 'aiemmin soittojousi, josta tuli Brasilian berimbau.',
     artikkeli: 'Angola levittäytyy Atlantin rannikolta ylängöille: '
       + 'rannikko on kuivaa, sisämaa vehreää savannia ja pohjoisessa '
       + 'sademetsää. Pääkaupunki Luanda on kasvanut lahden ympärille '
@@ -1090,9 +1172,27 @@ export const OMAT_ARTIKKELIT = {
       + 'loppuu ja valaat alkavat.',
   },
   'Saint Helena': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // SHN) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'St. Helena on yksinäinen kalliosaari keskellä eteläistä '
       + 'Atlanttia — purjelaivojen huoltopysäkki, Napoleonin vankila '
-      + 'ja maailman vanhimman kilpikonnan koti.',
+      + 'ja maailman vanhimman kilpikonnan koti. Saari on 16 kilometriä '
+      + 'pitkä ja 8 leveä, se kohoaa merestä lähes 1 900 kilometrin '
+      + 'päässä Angolan rannikosta, ja vuoden 2021 laskennassa siellä '
+      + 'asui 4 439 ihmistä. Portugalilaiset löysivät asumattoman '
+      + 'saaren 1502, ja Itä-Intian kauppakomppania asutti sen 1659 — '
+      + 'siitä lasketaan saaren olevan Britannian toiseksi vanhin '
+      + 'siirtomaa. Neljänsadan vuoden ajan koko elämä pyöri sen '
+      + 'ympärillä, että purjelaivat tarvitsivat matkallaan Aasiaan '
+      + 'vettä ja ruokaa; kun Suezin kanava avattiin 1869, laivat '
+      + 'katosivat pohjoiseen ja saari köyhtyi. Eristys teki '
+      + 'luonnosta ainutlaatuisen: yli viisisataa kotoperäistä lajia '
+      + 'on kolmasosa kaikista Britannian merentakaisten alueiden '
+      + 'kotoperäisistä lajeista, ja saaren kansallislintu tikkuri '
+      + 'elää vain täällä. Lentoasema avattiin 2016 ja ensimmäinen '
+      + 'reittilento laskeutui lokakuussa 2017; sitä ennen ainoa '
+      + 'yhteys oli viiden vuorokauden laivamatka Kapkaupungista.',
     artikkeli: 'St. Helena nousee merestä lähes kahden tuhannen '
       + 'kilometrin päässä Afrikan rannikosta. Portugalilaiset '
       + 'löysivät asumattoman saaren 1502, ja siitä kasvoi '
@@ -1180,9 +1280,27 @@ export const OMAT_ARTIKKELIT = {
       + 'siirtyi etelään — ja juuri siksi vanha saari säilyi.',
   },
   Madagaskar: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // MDG) nojaa tähän introon yksin, sama malli kuin Egyptillä ja Kenialla.
     intro: 'Madagaskar on maailman neljänneksi suurin saari ja oma '
-      + 'maailmansa: sen eläimistä ja kasveista suurin osa ei elä '
-      + 'missään muualla maapallolla.',
+      + 'maailmansa: sen eliölajeista yli yhdeksän kymmenestä ei elä '
+      + 'missään muualla maapallolla. Saari irtosi Afrikasta noin 180 '
+      + 'miljoonaa ja Intian niemimaasta noin 90 miljoonaa vuotta '
+      + 'sitten, ja luonto kehittyi eristyksissä omaan suuntaansa. '
+      + 'Ihmiset tulivat kahdelta suunnalta: ensimmäiset purjehtivat '
+      + 'vastapainokanooteilla Kaakkois-Aasiasta, ja malagassin lähin '
+      + 'sukukieli puhutaan yhä Borneolla noin 7 300 kilometrin '
+      + 'päässä; myöhemmin mantereelta tuli bantukansoja ja niiden '
+      + 'mukana sebu-karja. Ylängöllä syntyi Imerinan kuningaskunta, '
+      + 'joka 1800-luvulla vaihtoi kielensä kirjaimiston latinalaiseen, '
+      + 'perusti kouluja ja kävi diplomatiaa Lontoon ja Pariisin '
+      + 'kanssa, kunnes Ranska teki saaresta siirtomaan; itsenäisyys '
+      + 'tuli 1960. Ruokapöydässä on aina riisi — verbi "syödä ateria" '
+      + 'kuuluu suoraan "syödä riisiä" — ja seurana romazava-liemi, '
+      + 'jonka anamalao-lehdet puuduttavat kielen lievästi. Soittimet '
+      + 'tehdään siitä mitä kasvaa: bambusta valiha, ruo\'osta sodina, '
+      + 'ja pohjoisrannikon salegy juoksee lähes kolmeasataa iskua '
+      + 'minuutissa.',
     artikkeli: 'Madagaskar irtosi mantereista kymmeniä miljoonia '
       + 'vuosia sitten, ja sen luonto kehittyi omaan suuntaansa: '
       + 'lemurit, kameleontit ja baobabit ovat saaren omia. '
@@ -1471,9 +1589,25 @@ export const OMAT_ARTIKKELIT = {
       + 'vieraanvaraisuuden laki on sama.',
   },
   Tšad: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // TCD) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Tšad ulottuu Saharan hiekasta savannien vihreyteen, ja '
       + 'sen sydän on matala Tšad-järvi — neljän maan jakama '
-      + 'elämänlähde.',
+      + 'elämänlähde. Maa on Afrikan viidenneksi suurin, noin 1,3 '
+      + 'miljoonaa neliökilometriä, mutta merta siinä ei ole '
+      + 'metriäkään. Väkeä on kaksikymmentä miljoonaa, ja heistä '
+      + '1,6 miljoonaa asuu pääkaupungissa N\'Djamenassa '
+      + 'Charin ja Logonen yhtymäkohdassa. Etnisiä ryhmiä on yli '
+      + 'kaksisataa ja kieliä yli sata; virallisia kieliä on kaksi, '
+      + 'ranska ja arabia. Järven itäpuolella syntyi noin vuonna 700 '
+      + 'Kanemin valtakunta, joka eli Saharan halki kulkevasta '
+      + 'kaupasta ja josta tuli yksi Afrikan pitkäikäisimmistä '
+      + 'valtioista; sen rinnalle nousivat myöhemmin Baguirmin ja '
+      + 'Ouaddain sulttaanikunnat. Ruoka on kaikkialla samaa ja '
+      + 'kaikkialla erilaista: hirssistä muotoiltu pallo, joka '
+      + 'kastetaan kastikkeeseen, ja kalaa joko aurinkokuivattuna tai '
+      + 'savustettuna.',
     artikkeli: 'Tšad on suuri sisämaavaltio, jonka pohjoisosa on '
       + 'Saharan karuinta aavikkoa Tibestin tulivuorineen ja '
       + 'eteläosa viljavaa savannia. Nimensä maa sai järvestä, '
@@ -1527,9 +1661,25 @@ export const OMAT_ARTIKKELIT = {
       + 'digitulevaisuutta.',
   },
   Zimbabwe: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // ZWE) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Zimbabwe on kivisten kuningaskuntien maa: Suur-Zimbabwen '
       + 'rauniot antoivat maalle nimen, ja Viktorian putoukset '
-      + 'jylisevät sen luoteisrajalla.',
+      + 'jylisevät sen luoteisrajalla. Sisämaavaltio makaa Sambesin ja '
+      + 'Limpopon välisellä ylängöllä, jonka halki kulkee Suuri juonne, '
+      + 'noin 550 kilometrin mittainen kallioselänne kultaa, '
+      + 'kromia ja platinaa. Kun Suuri Zimbabwe hiljeni, valta siirtyi '
+      + 'pohjoiseen Mutapan kuningaskunnalle, jonka hallitsijan '
+      + 'arvonimestä eurooppalaiset karttapiirtäjät tekivät koko maan '
+      + 'nimen: Monomotapa. Lounaaseen syntyi 1840-luvulla Mzilikazin '
+      + 'ndebelevaltio, ja 1890-luvulla alue joutui brittiläisen '
+      + 'siirtomaayhtiön käsiin; itsenäisyys tuli 1980, ja nimeksi '
+      + 'valittiin jo 1960 valittu Zimbabwe, shonan kivitalot. '
+      + 'Kulttuurin tunnusmerkit ovat mbira, esivanhempien henkiä '
+      + 'kutsuva kielisoitin, ja serpentiinistä veistetty '
+      + 'shona-kivenveisto, joka nousi 1950-luvulta lähtien '
+      + 'maailman museoihin.',
     artikkeli: 'Zimbabwe on sisämaavaltio Zambezin ja Limpopon '
       + 'välissä. Nimi tarkoittaa shonaksi kivitaloja: Suur-'
       + 'Zimbabwen rauniokaupunki, jonka muurit ladottiin ilman '
@@ -1644,9 +1794,27 @@ export const OMAT_ARTIKKELIT = {
       + 'kansa on nyt maailmalla.',
   },
   Kamerun: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // CMR) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Kamerunia kutsutaan Afrikaksi pienoiskoossa: yhdessä '
       + 'maassa on sademetsää, savannia, vuoria ja rannikkoa — ja '
-      + 'yli kaksisataa kieltä.',
+      + 'yli kaksisataa kieltä. Nimi on portugalilaisten antama: he '
+      + 'kastoivat Wouri-joen 1400-luvulla nimellä Rio dos Camarões, '
+      + 'katkarapujen joki. Pohjoisessa Tšad-järven suunnalla eli jo '
+      + 'kaksituhatta vuotta sitten Sao-sivilisaatio, jonka '
+      + 'muurikaupungeista kotokot polveutuvat, ja Mandaran vuorille '
+      + 'nousi 1500-luvun kynnyksellä oma kuningaskuntansa. Läntisillä '
+      + 'ruohikkomailla bamilekejen ja tikarien fonit hallitsevat yhä '
+      + 'chefferieitään, joissa helmitetty naamio, veistetty pilari ja '
+      + 'katonharjan piikkien määrä kertovat kunkin arvon. Ensimmäisen '
+      + 'maailmansodan jälkeen Saksan siirtomaa jaettiin Ranskan ja '
+      + 'Britannian kesken, ja vuoden 1961 kansanäänestys liitti '
+      + 'englanninkielisen etelän ranskankieliseen Kameruniin — siksi '
+      + 'maalla on kaksi eurooppalaista virallista kieltä. Ruoka '
+      + 'survotaan ja keitetään kärsivällisesti, musiikki syntyi '
+      + 'Doualan satamassa ja Yaoundén ylängöllä, ja jalkapallon '
+      + 'maailma oppi maan nimen kesällä 1990.',
     artikkeli: 'Kamerun ulottuu Guineanlahden rannalta Tšad-järvelle: '
       + 'etelässä sademetsää, keskellä ylänköä, pohjoisessa kuivaa '
       + 'savannia. Nimi tulee portugalin katkaravuista — '
@@ -1666,9 +1834,23 @@ export const OMAT_ARTIKKELIT = {
       + 'Kamerunvuori savuaa merellä taustalla.',
   },
   Liberia: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // LBR) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Liberia on Afrikan vanhin tasavalta: vapautettujen '
       + 'orjien 1847 perustama valtio, jonka nimi tarkoittaa '
-      + 'vapauden maata.',
+      + 'vapauden maata. Eurooppalaiset tunsivat rannikon '
+      + 'pippurirannikkona, koska sieltä ostettiin paratiisinjyviä, '
+      + 'ja sisämaassa alkaa Ylä-Guinean sademetsävyöhyke. Maassa '
+      + 'puhutaan yli kahtakymmentä kieltä, ja vai-kansa kehitti '
+      + 'omalleen 1830-luvulla tavukirjaimiston, jota käytetään yhä. '
+      + 'Kru-merimiehet purjehtivat vuosisatoja koko Länsi-Afrikan '
+      + 'rannikkoa ja toivat mukanaan kitaran, josta kasvoi '
+      + 'palmuviinimusiikki ja sen jälkeen highlife. Riisi on ateria '
+      + 'ja kaikki muu sen päälle kaadettavaa, ja kahvilaji Coffea '
+      + 'liberica sai nimensä täältä. Lipussa on yksitoista raitaa ja '
+      + 'yksi valkoinen tähti, ja sen alla purjehtii maailman '
+      + 'toiseksi suurin kauppalaivasto.',
     artikkeli: 'Liberia sijaitsee Länsi-Afrikan rannikolla '
       + 'sademetsävyöhykkeellä. Yhdysvalloista palanneet vapautetut '
       + 'orjat perustivat sen tasavallaksi 1847 — Afrikan '
@@ -1712,9 +1894,25 @@ export const OMAT_ARTIKKELIT = {
       + 'monsuunin ja musiikin tahtia.',
   },
   Namibia: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // NAM) nojaa tähän introon yksin, sama malli kuin Egyptillä.
     intro: 'Namibia on avaruuden ja hiljaisuuden maa: maailman '
-      + 'vanhin aavikko, tähtitaivas ja vain kolme miljoonaa '
-      + 'asukasta Suomen puolentoista kokoisella alueella.',
+      + 'vanhin aavikko, tähtitaivas ja kolme miljoonaa asukasta '
+      + 'alueella, joka on runsaat kaksi kertaa Suomen kokoinen. '
+      + 'Väljemmin asuttu maa on vain Mongolia. Nimi tulee Namibin '
+      + 'aavikosta, ja khoikielinen sana tarkoittaa avaraa paikkaa: '
+      + 'aavikko seuraa koko rannikkoa, ja sisämaan ylängöt jatkuvat '
+      + 'idässä Kalahariin. Sadetta tulee vähemmän kuin missään muualla '
+      + 'Saharan eteläpuolisessa Afrikassa, joten rannikon elämä juo '
+      + 'kylmän Benguelanvirran nostattamaa sumua ja sisämaa '
+      + 'pohjavettä. Sanit, damarat, namat, hererot ja ovambot '
+      + 'asuttivat maata kauan ennen siirtomaakautta; Saksan ja '
+      + 'Etelä-Afrikan hallinnon jälkeen maa itsenäistyi 21. '
+      + 'maaliskuuta 1990 yhtenä Afrikan viimeisistä. Elanto tulee '
+      + 'karjasta, kaivoksista ja matkailusta — uraanissa Namibia on '
+      + 'ollut maailman neljänneksi suurin tuottaja — ja '
+      + 'luonnonsuojelu kirjattiin perustuslakiin, mikä on maailmassa '
+      + 'harvinaista.',
     artikkeli: 'Namibia on yksi maailman harvimmin asutuista maista: '
       + 'Namibin aavikko seuraa koko rannikkoa, ja sisämaan ylängöt '
       + 'jatkuvat Kalahariin. Nimi tulee aavikosta — namaksi '
