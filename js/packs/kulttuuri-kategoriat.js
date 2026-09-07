@@ -81238,6 +81238,30 @@ export const KULTTUURI_KATEGORIAT = {
    *  - Väestöluku 324 269 on KUNNAN luku, ei kaupungin, ja se
    *    sanotaan niin.
    *
+   * KUVAT PUUTTUVAT, JA SE ON LÄHDETILANNE EIKÄ VALINTA. Commonsin
+   * rajapinta vastasi 7.9.2026 koko iltapäivän kaikkiin pyyntöihin
+   * "You are making too many requests to the API" — sekä
+   * action=api.php että rest.php, sekä hakuun että kategorialistaan.
+   * Parvessa oli kahdeksan agenttia samalla osoitteella, ja raja on
+   * osoitekohtainen. Talon sääntö on selvä: kuvaton on parempi kuin
+   * tarkistamaton, eikä yhtäkään tiedostoa oteta ilman että lisenssi
+   * ja tekijä on luettu extmetadatasta ja kuva katsottu silmin.
+   * Lehti näkyy siis toistaiseksi ilman kansikuvia, avauskuvia,
+   * ennen–nyt-paria ja nostokuvia — sama tilanne kuin kuvattomilla
+   * karttanostoerillä. KUVAPUTKELLE TILATTAVAT (Dili):
+   *  - kansikuvat (3): yleiskuva keskustasta vuorten edessä; näkymä
+   *    lahdelle sataman kohdalta; rantatasanko ylhäältä niin että
+   *    näkyy, miten kapea kaistale kaupungilla on.
+   *  - avauskuvat (3): sataman rantabulevardi aamulla; vanhan
+   *    korttelin portugalilaisajan julkisivu; Tasitolun kosteikko.
+   *  - ennen–nyt: 1800- tai 1900-luvun alun katunäkymä ja sama katu
+   *    nykyään. HUOM: oceania-valokuvat.js:n dili-lohkon viisi
+   *    tiedostoa on kierrettävä (KITLV A828 …, Tais Market …,
+   *    Fish market Bebonuk …, Arquivo & Museu …, Cristo Rei of
+   *    Dili.jpg).
+   *  - matkailijalle.kuva: mikrolet tai sininen taksi kadulla.
+   *  - K1–K4 ja L1–L4: ks. kunkin noston aihe.
+   *
    * SÄÄRIVEJÄ EI OLE (tehtävänannon poikkeama 2, Fable 7.9.2026):
    * Open-Meteon hakua ei tehty lainkaan, eikä lukuja keksitä
    * (Samarkand-malli v965). Oppaan sääjakso nojaa en-Wikipedian
@@ -81650,6 +81674,30 @@ export const KULTTUURI_KATEGORIAT = {
    *  - Villikamelien miljoonaluku on aikaleimattu vuoteen 2008.
    *  - Hermannsburgin etäisyys on "runsaat sata kilometriä", koska
    *    kaksi artikkelia antavat 125 ja 126 kilometriä.
+   *
+   * KUVAT PUUTTUVAT SAMASTA SYYSTÄ KUIN DILISSÄ: Commonsin rajapinta
+   * vastasi 7.9.2026 kaikkiin pyyntöihin 429:llä (parvessa kahdeksan
+   * agenttia samalla osoitteella), eikä tiedostoa oteta ilman että
+   * lisenssi ja tekijä on luettu extmetadatasta ja kuva katsottu
+   * silmin. KUVAPUTKELLE TILATTAVAT (Alice Springs):
+   *  - kansikuvat (3): kaupunki ANZAC Hilliltä MacDonnell-vuoret ja
+   *    Heavitree Gap taustalla; punainen hiekka ja aavikkomaisema
+   *    kaupungin laidalla; Todd-joen kuiva uoma kumipuineen.
+   *  - avauskuvat (3): Todd Mallin kävelykatu aamuvalossa; Läntisten
+   *    MacDonnellien rotko; keskustan ruutukaava ylhäältä.
+   *  - ennen–nyt: kaupunki 1930-luvulla ja sama näkymä nykyään. HUOM:
+   *    oceania-valokuvat.js:n alicesprings-lohkon viisi tiedostoa ja
+   *    AUS-maalehden "Alice Springs Telegraph Station, 2015 (08).JPG"
+   *    on kierrettävä.
+   *  - matkailijalle.kuva: Ghan-juna tai aseman laituri.
+   *  - K1–K4: arrernte-maisema (EI tunnistettavia kasvoja);
+   *    lennätinaseman kivitalot; kameleja Keski-Australiassa;
+   *    Adelaide House tai poljettava radio museoesineenä.
+   *  - T1–T4: Hermannsburgin lähetysaseman rakennukset; Läntisten
+   *    MacDonnellien maisema aavegumipuineen; Papunyan seutu;
+   *    Araluenin taidekeskuksen rakennus. EI TEOSKUVIA —
+   *    Namatjiran ja Papunya Tulan maalaukset ovat tekijänoikeuden
+   *    alaisia.
    *
    * SÄÄRIVEJÄ EI OLE (tehtävänannon poikkeama 2). Oppaan sääjakso
    * nojaa en-Wikipedian sääruutuun ja sanoo sen ääneen: luvut ovat

@@ -58000,6 +58000,25 @@ export const NAHTAVYYSJUTUT = {
    * kaikki muu kuin arkiston oma toiminta. Vuosiluvut esiintyvät
    * siellä, missä rakennuksen vaiheet edellyttävät.
    *
+   * KUVAT PUUTTUVAT, JA SE ON LÄHDETILANNE. Commonsin rajapinta
+   * vastasi 7.9.2026 jokaiseen pyyntöön 429:llä (parvessa kahdeksan
+   * agenttia samalla osoitteella), eikä tiedostoa oteta ilman että
+   * lisenssi ja tekijä on luettu extmetadatasta ja kuva katsottu
+   * silmin. Ilman kuvaa merkki näkyy kartalla täplänä, joka on yhä
+   * napautettava (tests/nahtavyydet.test.mjs pitää siitä huolta).
+   * KUVAPUTKELLE TILATTAVAT MINIATYYRIT:
+   *  Motaelin kirkko — valkoinen kirkko kellotorneineen ja
+   *    pylväskuisteineen; Dilin satama — laituri ja rantaviiva
+   *    riuttojen reunustamassa lahdessa; Hallituspalatsi — kolme
+   *    kaksikerroksista siipeä ja niitä yhdistävä pylväskäytävä
+   *    meren puolelta; BNU-pankkitalo — modernistinen betoniritilä-
+   *    julkisivu pilarien päällä; Kansallisstadion — kaksi katsomoa
+   *    ja nurmivallit kentän ympärillä; Tuomiokirkko — suuri
+   *    1980-luvun katedraali julkisivun puolelta; Kansallisarkisto —
+   *    arkiston rakennus kadulta; Kaupungin torihalli —
+   *    puoliympyräportaali, jonka yllä lukee Mercado Municipal de
+   *    Dili.
+   *
    * LÄHDERISTIRIITA, JOKA ON KIRJOITETTU AUKI: kansallisstadionin
    * kapasiteetti on "National Stadium (Timor-Leste)" -artikkelin
    * mukaan 5 000 ja "Dili"-artikkelin mukaan noin 9 000. Juttu antaa
@@ -58255,6 +58274,19 @@ export const NAHTAVYYSJUTUT = {
    * ja naisten museon jutussa kerrotaan, että talo oli vankila
    * 1938–1996 — mutta vankilan vangitsemisluvut ja nuorisovangit on
    * jätetty kokonaan pois. Kartan piste on museo, ei vankila.
+   *
+   * KUVAT PUUTTUVAT SAMASTA SYYSTÄ KUIN DILISSÄ (Commonsin 429).
+   * KUVAPUTKELLE TILATTAVAT MINIATYYRIT:
+   *  ANZAC Hill — kukkulan laen muistomerkki ja näkymä kaupunkiin;
+   *    Totem-teatteri — matala peltinen Sidney Williams -halli;
+   *    Rautatieasema — 1980-luvun asemarakennus laitureineen;
+   *    Stuart Town Gaol — matala kivinen vankilarakennus
+   *    peltikattoineen; Pioneer-teatteri — vanhan katottoman
+   *    elokuvateatterin julkisivu Parsons Streetillä;
+   *    Kaupunginkirjasto — kirjaston rakennus ja sen ulkoseinän
+   *    muraali; Australian naisten museo — entisen vankilan
+   *    portti ja muuri; Olive Pinkin puutarha — kuivan alueen
+   *    kasveja ja polku, taustalla MacDonnell-vuoret.
    */
   alicesprings: {
     'ANZAC Hill': {
