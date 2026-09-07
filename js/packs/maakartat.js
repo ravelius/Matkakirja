@@ -14799,6 +14799,106 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Plaza 28 de Julio', lat: -3.7545969, lon: -73.2493161 },
     ],
   },
+  /*
+   * WHITEHORSE (7.9.2026). Rajaus on noin 4,0 × 2,7 kilometriä
+   * Yukonjoen laaksossa — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n whitehorse-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Kwanlin
+   * Dünin nimi ja kausileirit, vuosi 1873 ja kullan löytyminen,
+   * kosket ja Miles Canyon, White Pass -rata ja nimi Closeleigh sekä
+   * Robert Servicen näkemä pankkilomake; teemasivu kertoo
+   * kuninkuuslohesta, Kanadan kuivimmasta kaupungista, Yukon
+   * Questistä ja laakson vuorista. Yksikään kartan kahdeksasta
+   * kohteesta ei ole niiden aihe.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-whitehorse.md, kohta F): Downtown Whitehorse on 105
+   * metrin ja Whitehorse Waterfront Trolleyn pysäkki 75 metrin
+   * päässä MacBride-museosta. Molemmat kerrotaan matkaoppaassa.
+   */
+  whitehorse: {
+    polku: 'assets/kartat/whitehorse-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 60.725, etela: 60.7005, lansi: -135.088, ita: -135.015 },
+    esittely: 'Kartan halki kulkee Yukonjoki pohjoisesta etelään, ja '
+      + 'sen alaosassa se levenee saarten sekaan. Vasemmalla ylhäällä '
+      + 'on keskustan ruutukaava joen länsirannalla, ja siitä '
+      + 'länteen nousee jyrkkä penger, jonka päällä ovat lentoaseman '
+      + 'kiitoradat pitkinä suorina. Oikeassa alakulmassa on '
+      + 'Riverdale joen itärannalla, ja vasemmassa laidassa kaartaa '
+      + 'Alaska Highway. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+       * ja kaikki 28 väliä on mitattu haversinilla: pienin on 366
+       * metriä (Yukonin liikennemuseo – Beringia-keskus).
+       */
+      { nimi: 'MacBride-museo', lat: 60.72111, lon: -135.05167 },
+      { nimi: 'Kristuksen katedraali', lat: 60.71807, lon: -135.05512 },
+      { nimi: 'Yukonin parlamenttitalo', lat: 60.7169, lon: -135.0488 },
+      { nimi: 'SS Klondike', lat: 60.71333, lon: -135.0475 },
+      { nimi: 'Yukonin liikennemuseo', lat: 60.7119, lon: -135.0792 },
+      { nimi: 'Whitehorsen lentoasema', lat: 60.70944, lon: -135.06722 },
+      { nimi: 'Beringia-keskus', lat: 60.70861, lon: -135.07889 },
+      { nimi: 'Riverdale', lat: 60.70694, lon: -135.02358 },
+    ],
+  },
+  /*
+   * YELLOWKNIFE (7.9.2026). Rajaus on noin 2,7 × 3,0 kilometriä Old
+   * Townin kalliokärjestä Frame Laken rannalle — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n yellowknife-lohkossa.
+   * Oikeassa laidassa on Yellowknife Bay, ja kuvan halki kulkee
+   * Franklin Avenue eli 50th Avenue, joka yhdistää vanhan ja uuden
+   * kaupungin.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Yellowknives Dene ja nimi Sǫǫ̀mbak'è, vuosi 1873 ja Old Fort
+   * Providence, kullan löytyminen ja Con Mine, pääkaupungiksi tulo
+   * 1967 sekä timantit ja Giant Minen arseeni; teemasivu kertoo
+   * Isonorjajärvestä, jäätiestä, asuntolaivoista, ilmastosta ja
+   * lumilinnasta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe.
+   *
+   * KOLME KOHDETTA JÄTETTIIN POIS (tarkistus-yellowknife.md, kohta
+   * G): Hudson's Bay Warehouse ja Canadian Pacific Airlines
+   * floatbase ovat 70 metrin päässä Wildcat Cafésta, ja The Gold
+   * Range on baari, joka jätetään pois sävysyistä. Ndilǫ ja
+   * asuntolaivat näkyvät kartalla mutta eivät ole numeroituja
+   * kohteita, koska ne ovat lehden omia juttuja.
+   */
+  yellowknife: {
+    polku: 'assets/kartat/yellowknife-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 62.474, etela: 62.447, lansi: -114.392, ita: -114.339 },
+    esittely: 'Oikeassa yläkulmassa on Yellowknife Bay, ja siihen '
+      + 'työntyy Old Townin kallioinen niemi kapeine mutkittelevine '
+      + 'katuineen. Niemeltä lähtee suora väylä vinosti alas '
+      + 'vasemmalle — Franklin Avenue — ja sen päässä alkaa New '
+      + 'Townin ruutukaava kuvan alalaidassa. Muualla on vettä joka '
+      + 'suunnassa: Frame Lake ja tusina pienempää lampea katkovat '
+      + 'kalliomaastoa, ja niiden rannalla ovat hallinnon '
+      + 'rakennukset. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+       * ja kaikki 28 väliä on mitattu haversinilla: pienin on 242
+       * metriä (Wildcat Cafe – Weaver & Devoren kauppa).
+       */
+      { nimi: 'Bank of Toronton hirsimökki', lat: 62.47, lon: -114.344 },
+      { nimi: 'Back Bayn hautausmaa', lat: 62.4691, lon: -114.3626 },
+      { nimi: 'Wildcat Cafe', lat: 62.46652, lon: -114.34889 },
+      { nimi: 'Weaver & Devoren kauppa', lat: 62.46444, lon: -114.35028 },
+      { nimi: 'Ragged Ass Road', lat: 62.46063, lon: -114.35256 },
+      { nimi: 'Luoteisterritorioiden parlamenttitalo', lat: 62.45944, lon: -114.38194 },
+      { nimi: 'Prince of Walesin pohjoinen perintökeskus', lat: 62.45611, lon: -114.38 },
+      { nimi: 'Hirsikoulu', lat: 62.45194, lon: -114.37667 },
+    ],
+  },
 };
 
 /*

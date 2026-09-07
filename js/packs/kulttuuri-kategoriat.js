@@ -99389,4 +99389,864 @@ export const KULTTUURI_KATEGORIAT = {
       ],
     },
   ],
+  /*
+   * WHITEHORSE (Opus 7.9.2026, parvierä) — Pohjois-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-whitehorse.md ja sen riippumaton tarkistus
+   * tarkistus-whitehorse.md (tuomio "kelpaa, kun kohtien A–F
+   * ratkaisut tehdään"; kaikki kuusi on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Whitehorse", "Canyon City, Yukon", "White Horse Rapids",
+   * "Miles Canyon Basalts", "Schwatka Lake", "White Pass and Yukon
+   * Route", "Kwanlin Dün First Nation", "Ta'an Kwach'an Council",
+   * "The Cremation of Sam McGee", "Chinook salmon", "Yukon Quest",
+   * "Alaska Highway", "Whitehorse Waterfront Trolley".
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti —
+   * ei matkakirjatekstiä, ei kohtaamista, ei kysymyksiä.
+   * Saapumisteksti (northamerica-saapumiset.js) ja valokuvataulu
+   * (northamerica-valokuvat.js) olivat jo olemassa eikä niihin
+   * kosketa.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto', koska AIHE_IKONIT ei tarjoa laaksolle omaa
+   * kuvaketta eikä uusia sivu-id:itä tehdä; sivun nimi "Laakso, sää
+   * ja tie" kertoo aiheen.
+   *
+   * KANADAN MAALEHTEÄ EI TOISTETA. Maalehti (maa-kategoriat.js, CAN)
+   * kertoo viikingeistä ja Hudson's Bay Companysta, konfederaatiosta
+   * ja punatakeista, métiseistä ja totem-paalusta, inuksukista ja
+   * sisäoppilaitoksista, Banffista, Fundynlahdesta, majavapadosta ja
+   * Wood Buffalosta, vaahterasiirapista, poutinesta, Nanaimo-palasta
+   * ja ketsuppisipsiriidasta sekä jääkiekosta, koripallosta ja
+   * curlingista. Yksikään näistä ei ole tämän lehden aihe.
+   *
+   * KLONDIKEN KULTARYNTÄYS ON KARTTANOSTO (maastokohteet-can.js,
+   * dawson-city: "500 asukasta 1896, 17 000 kaksi vuotta myöhemmin",
+   * Chilkootin sola ja vuoden ruokavarat), eikä lehti toista sitä.
+   * Tämä lehti kertoo siitä vain sen verran kuin kaupungin synty
+   * vaatii ja pysyy siinä kohdassa reittiä, jossa kaupunki on:
+   * koskissa, kanjonissa ja radassa.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: nimestä Closeleigh kerrotaan Whitehorse-artikkelin mukaan
+   *    (yritys ja komissaari Ogilvien kieltäytyminen), koska Miles
+   *    Canyon Basalts -artikkelin muotoilu "Closeleighin kaupunki"
+   *    on epätarkempi.
+   *  - B: uponneiden veneiden määrä kerrotaan Canyon City
+   *    -artikkelin tarkemmalla luvulla (lähes 300 venettä, viisi
+   *    hukkunutta).
+   *  - C: vuoden 1905 palon yhteydessä mainittu yhdysvaltalainen
+   *    liikemiessuku jätetään pois — nykypolitiikkaan kytkeytyvä
+   *    henkilöviite ei kuulu peliin.
+   *  - D: SS Klondike II:n palvelusaika kerrotaan leipätekstin
+   *    mukaan (rahti 1950-luvun alkuun, risteilyt 1955 asti).
+   *    Kohde on kohdekartalla, ei lehden nostona.
+   *  - E: minitehtävä ei koske Yukonjoen pituutta eikä mitään muuta
+   *    kaupungin viidestä kysymyksestä (northamerica-questions.js).
+   *  - F: kohdekartalta pudotettiin Downtown Whitehorse (105 m) ja
+   *    Waterfront Trolleyn pysäkki (75 m MacBride-museosta);
+   *    molemmat kerrotaan matkaoppaassa.
+   *
+   * ENNEN JA NYT sekä KANSI- JA AVAUSKUVAT lisätään tämän erän
+   * toisessa vaiheessa (kuvahaku Commonsista). Tämä lohko on
+   * tekstien checkpoint, ja lehti taittuu ilman kuvia.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026):
+   * säänormaalit ovat oman agentin työlistalla. Oppaan sääjakso
+   * nojaa siksi en-Wikipedian Climate-osioon ja sanoo sen ääneen.
+   */
+  whitehorse: [
+    {
+      id: 'kaupunki',
+      nimi: 'Whitehorse',
+      johdanto: 'Whitehorse kasvoi sen ympärille, mikä on nykyään '
+        + 'veden alla: kosken, joka esti matkan pohjoiseen. Isoisän '
+        + 'matkavuonna 1873 laaksossa oli kausittaisia kalaleirejä ja '
+        + 'kantoreitti kanjonin ohi — ei kaupunkia.',
+      nostot: [
+        {
+          otsikko: 'Kwanlin, virtaava vesi kanjonissa',
+          teksti: 'Kwanlin Dün First Nation on Yukonin suurin, ja sen '
+            + 'nimi tulee joen omasta osuudesta. Kwanlin tarkoittaa '
+            + 'Southern Tutchonen kielellä virtaavaa vettä kanjonin '
+            + 'läpi, ja dün on väki: kyse on juuri siitä pätkästä, '
+            + 'joka kulkee Miles Canyonista koskille. Perinteinen '
+            + 'alue ulottuu Marsh Lakelta Lake Labergelle, ja joen '
+            + 'nimi on Tágà Shäw, iso joki. Arkeologia keskustan '
+            + 'eteläpuolelta osoittaa, että aluetta on käytetty '
+            + 'tuhansia vuosia. Maaoikeus- ja itsehallintosopimus '
+            + 'allekirjoitettiin 19. helmikuuta 2005, ja '
+            + 'kulttuurikeskus avattiin joen rannalla keskustassa '
+            + 'kesäkuussa 2012. Naapurina on Ta\'an Kwäch\'än '
+            + 'Council, joka irtautui neuvottelemaan oman '
+            + 'sopimuksensa ja sai sen 2002.',
+          wiki: 'Kwanlin Dün First Nation',
+        },
+        {
+          otsikko: 'Vuosi 1873: kartalla vain joki',
+          teksti: 'Isoisän matkavuonna laaksossa ei ollut kaupunkia '
+            + 'eikä kauppa-asemaa. Alueen läpi kulki kausittain useita '
+            + 'kansoja, joiden alueet menivät päällekkäin, ja '
+            + 'ulkopuoliset tunsivat paikan huonosti: vasta 1883 '
+            + 'Frederick Schwatka pani merkille kantoreitin, joka '
+            + 'kiersi Miles Canyonin, ja 1887 George Mercer Dawson '
+            + 'kirjasi kanjonin yläpuolisen suuren lohimäärän. Kaikki '
+            + 'muuttui elokuussa 1896, kun Skookum Jim, Tagish '
+            + 'Charlie ja George Washington Carmack löysivät kultaa '
+            + 'Klondikelta. Heinäkuussa 1897 höyrylaivoilla tulleita '
+            + 'leiriytyi jo paikkaan, jota sanottiin nimellä White '
+            + 'Horse — kaksi sanaa, kuten vielä pitkään sen jälkeen.',
+          wiki: 'Whitehorse',
+        },
+        {
+          otsikko: 'Kosket, joiden harja antoi nimen',
+          teksti: 'Kaupungin nimi on koskien nimi: White Horse '
+            + 'Rapidsin sanottiin muistuttavan valkoisen hevosen '
+            + 'harjaa. Kosket syntyivät siitä, että Yukonjoki leikkaa '
+            + 'basalttilaavavirtojen läpi, ja Miles Canyonin basaltit '
+            + 'ovat noin 8,4 miljoonaa vuotta vanhoja. Kanjoni ja '
+            + 'kosket olivat reitin vaarallisin kohta ja samalla '
+            + 'siipiratasalusten ylin piste joella. Kesäkuuhun 1898 '
+            + 'mennessä koskissa oli tuhoutunut lähes 300 venettä ja '
+            + 'viisi ihmistä oli hukkunut; ratsupoliisin tarkastaja '
+            + 'Samuel Steele ihmetteli ääneen, miksei onnettomuuksia '
+            + 'ollut sattunut enemmän, ja määräsi veneisiin '
+            + 'ammattiluotsit. Kosket katosivat 1958 padon taakse.',
+          wiki: 'White Horse Rapids',
+        },
+        {
+          otsikko: 'Kaupunki, joka melkein sai nimen Closeleigh',
+          teksti: 'Koskien ohi rakennettiin ensin kaksi rataa: '
+            + 'itärannalle kahdeksan kilometriä Canyon Citystä '
+            + 'koskien juurelle, ja toinen länsirannalle. Tavara '
+            + 'kulki hevosvetoisilla vaunuilla kolmella sentillä '
+            + 'naulaa kohti. Sitten tuli rautatie. Kapearaiteisen '
+            + 'White Pass and Yukon Routen rakentaminen Skagwaysta '
+            + 'alkoi toukokuussa 1898, ja koko reitti valmistui '
+            + 'kesä—heinäkuussa 1900. Rautatieväki halusi nimetä '
+            + 'paikan rahoittajiensa mukaan Closeleighiksi, mutta '
+            + 'territorion komissaari William Ogilvie kieltäytyi. '
+            + 'Vuonna 1901 Whitehorse Star raportoi jo päivittäisistä '
+            + 'rahtimääristä.',
+          wiki: 'White Pass and Yukon Route',
+        },
+        {
+          otsikko: 'Nimi, jonka pankkivirkailija näki lomakkeella',
+          teksti: 'Robert Service istui Canadian Bank of Commercen '
+            + 'konttorissa Whitehorsessa, kun hän vuonna 1904 näki '
+            + 'lomakkeessa nimen Sam McGee. Nimi kelpasi runoon, '
+            + 'koska se rimmasi Tennesseen kanssa, ja 1907 ilmestyi '
+            + 'Songs of a Sourdough ja siinä runo kullanetsijästä, '
+            + 'joka paleltuu kuoliaaksi Lake Labergen luona. Oikea '
+            + 'Sam McGee oli tienrakentaja, joka harrasti myös '
+            + 'malminetsintää: hän lähti San Franciscosta Klondikeen '
+            + '1898 ja valtasi 16. heinäkuuta 1899 kuparilöydön '
+            + 'kaupungin länsipuolelta. Servicen oma koettelemus tuli '
+            + '23. toukokuuta 1905, kun tuli karkasi hotellin '
+            + 'parturiliikkeestä ja paloauton vesi loppui. Vahingot '
+            + 'olivat 300 000 dollaria, kuolonuhreja ei tullut, ja '
+            + 'Service oli sammuttajien joukossa.',
+          wiki: 'The Cremation of Sam McGee',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Whitehorse on Yukonin pääkaupunki ja Pohjois-Kanadan '
+          + 'suurin kaupunki. Asukkaita on 28 201 kaupungin rajojen '
+          + 'sisällä ja 31 913 taajamassa — noin seitsemänkymmentä ja '
+          + 'seitsemänkymmentäyhdeksän prosenttia koko territorion '
+          + 'väestöstä. Kaupunki on Alaska Highwayn kilometrillä 1426 '
+          + 'ja levittäytyy Yukonjoen molemmille rannoille. Kaupungiksi '
+          + 'se tuli 1950 ja pääkaupungiksi 1. huhtikuuta 1953, kun '
+          + 'istuin siirrettiin Dawson Citystä Klondike Highwayn '
+          + 'valmistuttua. Nimi kirjoitettiin pitkään kahtena sanana: '
+          + 'virallisesti White Horsesta tuli Whitehorse vasta 21. '
+          + 'maaliskuuta 1957. Lempinimi on erämaakaupunki, ja se on '
+          + 'ansaittu — pinta-alaa on 414 neliökilometriä.',
+        artikkeli: {
+          nimi: 'Matkailijan Whitehorse',
+          taitto: 'opas',
+          teksti: 'Kaupunki, johon pääsi vuoteen 1942 asti vain '
+            + 'junalla, veneellä tai lentäen — ja jonka läpi virtaa '
+            + 'joki, jonka kosket ovat nykyään sähköä.',
+          nosto: 'Beringia-keskus kertoo 3 200 kilometrin levyisestä '
+            + 'maa-alueesta, joka ulottui Siperian Kolyma-joelta '
+            + 'Kanadan Mackenzie-joelle ja jäi jääkaudella '
+            + 'jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi '
+            + 'liian vähän. Sitä pitkin kulkivat mammutit ja '
+            + 'myskihärät itään, hevoset ja kamelit länteen.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Erik Nielsen Whitehorse International Airport '
+                + 'on keskustan yläpuolisella penkereellä, ja sen '
+                + 'kotikenttänään pitää Air North — territoriolla on '
+                + 'siis oma lentoyhtiönsä. Kentällä oli vuonna 2017 '
+                + 'noin 366 000 matkustajaa. Maanteitse tullaan '
+                + 'Alaska Highwayta, jonka varrella kaupunki on '
+                + 'kilometrillä 1426; Klondike Highway vie '
+                + 'pohjoiseen Dawson Cityyn. Keskustassa kulkee '
+                + 'kesäisin museoraitiovaunu: Whitehorse Waterfront '
+                + 'Trolley avattiin 15. heinäkuuta 2000 ja ajaa '
+                + 'veturitallilta Rotary Peace Parkiin runsaan '
+                + 'kilometrin matkan. Vaunu on sähköinen, mutta virta '
+                + 'ei tule ilmajohdoista vaan dieselgeneraattorista. '
+                + 'Liikenne oli tauolla vuodesta 2018 ja alkoi '
+                + 'uudelleen 2024.',
+            },
+            {
+              otsikko: 'Kaupunki joen molemmin puolin',
+              teksti: 'Keskusta on joen länsirannalla 640 metrin '
+                + 'korkeudella, ja sillan yli itärannalle pääsee '
+                + 'Riverdaleen, joka on kaupungin vanhimpia '
+                + 'kaupunginosia. Muu kaupunki on pääosin 690 metrin '
+                + 'yläpuolella pengertä nousevan Two Mile Hillin '
+                + 'takana. Siellä ovat Takhinin kaupunginosat, joiden '
+                + 'taloista moni on entinen armeijan parakki tai '
+                + 'upseeriasunto, sekä Yukonin yliopisto ja Yukon '
+                + 'Arts Centre. Pohjoisempana ovat Porter Creek, '
+                + 'Crestview ja uusin kaupunginosa Whistle Bend, jonka '
+                + 'rakentaminen alkoi 2010. Kaupunginosia erottavat '
+                + 'toisistaan isot maastonmuodot, ei kadut — se on '
+                + 'Whitehorsen oma piirre.',
+            },
+            {
+              otsikko: 'Neljä museota ja yksi laiva',
+              teksti: 'MacBride-museo keskustan rantatörmällä on '
+                + 'Yukonin vanhin museo: perustettu 1950, avattu '
+                + '1952. Lentoaseman kupeessa ovat Yukonin '
+                + 'liikennemuseo, jonka pihalla seisoo tolpan päässä '
+                + 'Douglas DC-3 — yksi maailman suurimmista '
+                + 'tuuliviireistä — ja Beringia-keskus, joka avattiin '
+                + '1997. Joen rannalla lepää SS Klondike, jonka '
+                + 'siirtämiseen nykypaikalleen tarvittiin 1966 kolme '
+                + 'puskutraktoria, kahdeksan tonnia saippuaa ja kolme '
+                + 'viikkoa. Kaikki neljä ovat kohdekartalla, ja '
+                + 'kaikkiin neljään pääsee keskustasta kävellen tai '
+                + 'lyhyellä ajolla.',
+            },
+            {
+              otsikko: 'Kanjoni ja aavekaupunki',
+              teksti: 'Miles Canyon on seitsemän kilometriä '
+                + 'keskustasta etelään: siellä Yukonjoki puristuu '
+                + 'kapeaan basalttikanjoniin, joka oli aikoinaan '
+                + 'reitin pahin kohta. Kanjonin yläpäässä on Canyon '
+                + 'City, kultaryntäyksen aavekaupunki ja Yukonin '
+                + 'hallituksen perintökohde, jonne järjestetään '
+                + 'kesäisin opastettuja kierroksia. Sen kohdalla '
+                + 'kullanetsijät pysähtyivät miettimään, uskaltavatko '
+                + 'jatkaa vesitse; moni purki veneensä ja kantoi '
+                + 'tavaransa maitse. Kaupunki kuivui kokoon jo 1900, '
+                + 'kun rautatie ulottui Whitehorseen eikä kiertotietä '
+                + 'enää tarvittu. Kanjonin alapuolella on Schwatka-'
+                + 'järvi, jonka pohjalla ovat kaupungin nimikot '
+                + 'kosket.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Whitehorse-'
+                + 'artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säänormaaleja ei haettu tässä '
+                + 'erässä. Ilmasto on subarktinen, ja kaupunki on '
+                + 'Rannikkovuorten sadevarjossa. Heinäkuun keskiylin '
+                + 'on 20,6 astetta ja tammikuun keskialin −19,2. '
+                + 'Kesäpäivässä on runsaat yhdeksäntoista tuntia '
+                + 'valoa, talvipäivä on lyhyt. Sadetta tulee vähän: '
+                + 'lunta 141,8 senttiä ja vettä 160,9 milliä '
+                + 'vuodessa. Helmikuussa kaupunkiin saapuu Yukon '
+                + 'Quest, ja kesä on jokiretkien ja polkujen aikaa. '
+                + 'Kylmiin jaksoihin kannattaa varautua: mittari on '
+                + 'käynyt −56,2 asteessa.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Miles Canyon',
+                tahdet: 3,
+                selite: 'Yukonjoki puristuu 8,4 miljoonan vuoden '
+                  + 'ikäiseen basalttikanjoniin seitsemän kilometriä '
+                  + 'keskustasta etelään.',
+              },
+              {
+                mita: 'SS Klondike',
+                tahdet: 3,
+                selite: 'Siipiratasalus kuivalla maalla joen '
+                  + 'rannassa; kansallinen historiallinen paikka '
+                  + 'vuodesta 1967.',
+              },
+              {
+                mita: 'Beringia-keskus',
+                tahdet: 3,
+                selite: 'Jääkauden mammutit, kamelit ja '
+                  + 'lyhytkuonokarhu siltä maalta, joka ei '
+                  + 'jäätiköitynyt.',
+              },
+              {
+                mita: 'MacBride-museo',
+                tahdet: 2,
+                selite: 'Yukonin vanhin museo, ja sen yhteydessä '
+                  + 'kaupungin alkuperäinen lennätinkonttori.',
+              },
+              {
+                mita: 'Canyon City',
+                tahdet: 2,
+                selite: 'Kultaryntäyksen aavekaupunki kanjonin '
+                  + 'yläpäässä; kesäisin opastettuja kierroksia.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Kuiva ei tarkoita lämmintä',
+                teksti: 'Whitehorse on Kanadan kuivin kaupunki, mutta '
+                  + 'kylmillä jaksoilla painutaan alle neljänkymmenen '
+                  + 'pakkasasteen — ennätys on −56,2 tammikuulta 1906.',
+              },
+              {
+                otsikko: 'Kesällä ei tule yötä',
+                teksti: 'Kesäpäivässä on runsaat yhdeksäntoista '
+                  + 'tuntia valoa; talvella suhde kääntyy toisin päin '
+                  + 'ja päivät ovat lyhyitä.',
+              },
+              {
+                otsikko: 'Auto ei kelpaa joka polulle',
+                teksti: 'Vuoden 1975 määräys numero 426 rajoittaa '
+                  + 'moottoriajoneuvot merkityille teille useilla '
+                  + 'suojelluilla alueilla, ja useimmat niistä ovat '
+                  + 'aivan keskustan tuntumassa.',
+              },
+              {
+                otsikko: 'Iso kaupunki, pieni keskusta',
+                teksti: 'Pinta-alaa on 414 neliökilometriä ja '
+                  + 'metropolialueella 8 465, mutta kävelymatkan '
+                  + 'päässä olevaa keskustaa on vain muutama kortteli.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Laakso, sää ja tie',
+      johdanto: 'Whitehorse elää joen ja vuodenaikojen tahdissa: '
+        + 'kesäpäivässä on yhdeksäntoista tuntia valoa, talvella '
+        + 'pakkanen painuu neljänkymmenen alle, ja lohi nousee jokea '
+        + 'pidemmälle kuin missään muualla maailmassa.',
+      tehtava: {
+        kysymys: 'Miksi Whitehorse on Kanadan kuivin kaupunki?',
+        vaihtoehdot: [
+          'Se on niin pohjoisessa, ettei ilmassa ole kosteutta',
+          'Rannikkovuoret pysäyttävät kosteuden ennen laaksoa',
+          'Yukonjoki imee sateet maahan',
+          'Kaupunki on aavikon reunalla',
+        ],
+        oikea: 1,
+        fakta: 'Kaupunki on Rannikkovuorten sadevarjossa. Lunta tulee '
+          + 'vuodessa 141,8 senttiä ja vettä 160,9 milliä — '
+          + 'Meteorological Service of Canadan mukaan koko maan '
+          + 'vähiten.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kolmetuhatta kilometriä yhtä nousua varten',
+          teksti: 'Whitehorsen pato rakennettiin 1957—1958, ja joen '
+            + 'pinta nousi Schwatka-järveksi. Padon ohi rakennettiin '
+            + 'kalaporras, ja syy on siinä, mikä nousee: Yukonjoen '
+            + 'kuninkuuslohella on kaikista lohista pisin makean veden '
+            + 'vaellusreitti, yli kolmetuhatta kilometriä '
+            + 'Beringinmeren suulta Whitehorsen yläpuolisille '
+            + 'kutupaikoille. Järvi on nimetty Frederick Schwatkan '
+            + 'mukaan, joka ensimmäisenä tutki Yukonjoen koko '
+            + 'pituudelta. Se on pieni — pinta-alaa noin viisitoista '
+            + 'hehtaaria ja syvyyttä kuudesta kahdeksaan metriin — '
+            + 'mutta sen alla ovat kaupungin nimikot kosket.',
+          wiki: 'Schwatka Lake',
+        },
+        {
+          otsikko: 'Kanadan kuivin kaupunki',
+          teksti: 'Whitehorse on Rannikkovuorten sadevarjossa, ja '
+            + 'siksi sadetta tulee vähän ympäri vuoden: lunta 141,8 '
+            + 'senttiä ja vettä 160,9 milliä vuodessa. Meteorological '
+            + 'Service of Canadan mukaan se tekee siitä Kanadan '
+            + 'kuivimman kaupungin. Laakso pitää ilmaston myös '
+            + 'leudompana kuin muissa vastaavissa pohjoisissa '
+            + 'yhdyskunnissa, esimerkiksi Yellowknifessä: vuoden '
+            + 'keskilämpötila on 0,2 astetta, mikä on koko Yukonin '
+            + 'lämpimin lukema. Se ei tarkoita lämmintä. Kylmillä '
+            + 'jaksoilla painutaan alle neljänkymmenen pakkasasteen, '
+            + 'ja kaikkien aikojen lukema on −56,2 astetta '
+            + 'tammikuulta 1906.',
+          wiki: 'Whitehorse',
+        },
+        {
+          otsikko: 'Tuhat mailia ja yksi reki',
+          teksti: 'Yukon Quest ajetaan helmikuussa vuodesta 1984 '
+            + 'Fairbanksin ja Whitehorsen välillä, ja suunta vaihtuu '
+            + 'joka vuosi. Reitti seuraa 1890-luvun posti- ja '
+            + 'kuljetusreittejä, kulkee jäätyneillä joilla ja neljän '
+            + 'vuoriston yli, ja matkaa kertyy yli 1 016 mailia. '
+            + 'Valjakossa on kuudesta neljääntoista koiraa ja matka '
+            + 'kestää kymmenestä kahteenkymmeneen vuorokauteen; ajaja '
+            + 'pakkaa mukaansa jopa 250 naulaa tavaraa ja käyttää '
+            + 'koko matkan yhtä ainoaa rekeä. Ensimmäiseen '
+            + 'kilpailuun 25. helmikuuta 1984 lähti 26 valjakkoa, ja '
+            + 'sen voitti Sonny Lindner. Nopein aika on Hans Gattin '
+            + '2010: yhdeksän vuorokautta ja 26 minuuttia.',
+          wiki: 'Yukon Quest',
+        },
+        {
+          otsikko: 'Kolme vuorta ja määräys numero 426',
+          teksti: 'Kaupunkia kehystää kolme vuorta: Grey Mountain '
+            + 'idässä, Mount Sumanik luoteessa ja Golden Horn '
+            + 'Mountain etelässä. Lempinimi erämaakaupunki on '
+            + 'ansaittu kahdesti. Ensinnäkin pinta-alaa on 413,94 '
+            + 'neliökilometriä ja metropolialueella 8 465, vaikka '
+            + 'asukkaita on 28 201 — Whitehorse on Kanadan '
+            + 'kuudenneksikymmenenneljäs kaupunki pinta-alaltaan. '
+            + 'Toiseksi kaupunki on itse päättänyt pitää metsänsä: '
+            + 'vuoden 1975 määräys numero 426 rajoittaa '
+            + 'moottoriajoneuvot merkityille teille suojelluilla '
+            + 'alueilla, jotta ympäristön laatu säilyy.',
+          wiki: 'Whitehorse',
+        },
+        {
+          otsikko: 'Tie, joka rakennettiin kahdeksassa kuukaudessa',
+          teksti: 'Vuoteen 1942 asti Whitehorseen tultiin vain '
+            + 'rautateitse, jokea pitkin tai lentäen. Ensimmäiset '
+            + 'koneet laskeutuivat 1920 ja ensimmäinen lentoposti '
+            + 'lähti marraskuussa 1927. Sitten Yhdysvaltain armeija '
+            + 'päätti, että sisämaan tie olisi turvallisempi tapa '
+            + 'siirtää joukkoja ja tavaraa Alaskaan, ja rakensi '
+            + 'Alaska Highwayn: koko 1 600 mailin urakka tehtiin '
+            + 'maaliskuun ja marraskuun 1942 välillä. Samaan aikaan '
+            + 'vedettiin Canol-putki ja kaupunkiin rakennettiin '
+            + 'jalostamo. Kanadan puoleinen osuus tiestä palasi '
+            + 'Kanadan hallintaan vasta sodan jälkeen. Vuoteen 1951 '
+            + 'mennessä kaupungin väkiluku oli kaksinkertaistunut '
+            + 'vuoden 1941 luvusta.',
+          wiki: 'Alaska Highway',
+        },
+      ],
+    },
+  ],
+  /*
+   * YELLOWKNIFE (Opus 7.9.2026, parvierä) — Pohjois-Amerikan laudan
+   * kaupunkilehti. Aineisto: docs/mantereet-tyoaineisto/
+   * faktapohja-yellowknife.md ja sen riippumaton tarkistus
+   * tarkistus-yellowknife.md (tuomio "kelpaa, kun kohtien A–G
+   * ratkaisut tehdään"; kaikki seitsemän on tehty, ks. alla).
+   * Väitteet on luettu en-Wikipedian raakatekstistä 7.9.2026:
+   * "Yellowknife", "Yellowknives", "Old Fort Providence",
+   * "Con Mine", "Giant Mine", "Great Slave Lake", "Dettah",
+   * "Tibbitt to Contwoyto Winter Road", "Snowking Winter Festival",
+   * "Northwest Territories Legislative Building".
+   *
+   * EI TARINAKAARTA (omistajan päätös 6.9.2026): tehty vain lehti.
+   * Saapumisteksti ja valokuvataulu olivat jo olemassa eikä niihin
+   * kosketa.
+   *
+   * SIVUJA ON KAKSI (kaupunki + teemasivu). Teemasivun id on
+   * vakioaihe 'luonto'; sivun nimi "Järvi, jää ja kesäyö" kertoo
+   * aiheen.
+   *
+   * KANADAN MAALEHTEÄ EI TOISTETA (sama luettelo kuin Whitehorsen
+   * lohkossa), eikä myöskään karttanostoja: Naha Dehé
+   * (maastokohteet-can.js) on 500 kilometriä länteen eikä sitä
+   * mainita, ja arktinen eläinaihe on jo Churchillin jääkarhu
+   * (elaintakyt.js, CAN).
+   *
+   * WHITEHORSE TEHTIIN SAMASSA ERÄSSÄ, ja aiheet on jaettu:
+   * kultaryntäys, siipiratasalukset ja koiravaljakot ovat
+   * Whitehorsen puolella, kaivosteollisuus, timantit ja jäätiet
+   * tämän lehden puolella. Kumpikin kertoo oman alkuperäiskansansa
+   * omalla nimellään.
+   *
+   * TARKISTUKSEN RATKAISUT ON TEHTY:
+   *  - A: Yellowknivesin ja tłı̨chǫn 1830-luvun konflikti kerrotaan
+   *    tapahtumana ilman yksityiskohtia, ja lähteen epävarmuus
+   *    ("mielipiteet vaihtelevat") sanotaan ääneen; kansa kuvataan
+   *    nykypäivän toimijana.
+   *  - B: Giant Minen arseeni kerrotaan lukuina ja
+   *    puhdistushankkeena, ilman syyllisten osoittelua — kaunistelu
+   *    olisi pilarin 4 vastaista.
+   *  - C: Isonorjajärven uudelleennimeämiskeskustelu mainitaan
+   *    yhdellä neutraalilla virkkeellä kulttuuriasiana.
+   *  - D: konsensushallinto kerrotaan rakennetietona (istuntosalin
+   *    pyöreys), ei puoluepolitiikkana. Se on kohdekartan jutussa.
+   *  - E: vuoden 2023 maastopalot kerrotaan matkaoppaassa
+   *    neutraalina tapahtumana (evakuointi ja paluu).
+   *  - F: Ragged Ass Road pidetään englanninkielisellä nimellään ja
+   *    merkitys selitetään asiallisesti kohdekartan jutussa.
+   *  - G: kohdekartalta pudotettiin Hudson's Bay Warehouse ja
+   *    Canadian Pacific Airlines floatbase (70 m Wildcat Cafésta)
+   *    sekä The Gold Range (baari).
+   *
+   * ENNEN JA NYT sekä KANSI- JA AVAUSKUVAT lisätään tämän erän
+   * toisessa vaiheessa. Tämä lohko on tekstien checkpoint.
+   *
+   * SÄÄRIVIÄ EI TEHDÄ TÄSSÄ ERÄSSÄ (Fablen ohje 7.9.2026).
+   */
+  yellowknife: [
+    {
+      id: 'kaupunki',
+      nimi: 'Yellowknife',
+      johdanto: 'Yellowknife nousi kalliolle kullan takia ja elää nyt '
+        + 'hallinnosta ja timanteista. Isoisän matkavuonna 1873 lahden '
+        + 'suulla oli kalapaikkoja ja viisikymmentä vuotta aiemmin '
+        + 'suljetun kauppa-aseman jäänteet.',
+      nostot: [
+        {
+          otsikko: 'Sǫǫ̀mbak\'è, paikka jossa raha on',
+          teksti: 'Kaupunki ja sen vedet on nimetty dene-kansan '
+            + 'mukaan, jota kutsuttiin kuparikansaksi: he tekivät '
+            + 'työkalunsa Jäämeren rannikon kuparista ja kävivät '
+            + 'niillä kauppaa. Oma nimi on T\'atsaot\'ine. '
+            + 'Kauppareitit ulottuivat Hudsoninlahdelle asti, ja '
+            + 'Samuel Hearne kohtasi heidät 1770-luvulla; he opastivat '
+            + 'hänet tundran halki Jäämerelle etsimään sitä kuparia, '
+            + 'josta työkalut tehtiin. Tłı̨chǫn kielellä kaupunki on '
+            + 'Sǫǫ̀mbak\'è, paikka jossa raha on. Yellowknives Dene '
+            + 'First Nation perustettiin 1991, ja sen väkeä asuu '
+            + 'kaupungissa sekä Dettahin ja Ndilǫn yhteisöissä; '
+            + 'maaoikeuksista neuvotellaan Akaitcho-prosessissa.',
+          wiki: 'Yellowknives',
+        },
+        {
+          otsikko: 'Vuosi 1873: rauniot lahden suulla',
+          teksti: 'Isoisän matkavuonna lahden rannalla ei ollut '
+            + 'kauppa-asemaa — se oli ollut suljettuna viisikymmentä '
+            + 'vuotta. Old Fort Providence perustettiin 1789, kun '
+            + 'Alexander Mackenzie aloitti kaupan Yellowknivesin ja '
+            + 'tłı̨chǫn kanssa ja määräsi apulaisensa Laurent '
+            + 'Leroux\'n pystyttämään aseman. Paikka ei ollut suuri '
+            + 'turkiskeskus vaan huoltopiste: sieltä muonitettiin '
+            + 'muita asemia ja retkikuntia, muun muassa John '
+            + 'Franklinin Coppermine-retkeä 1820. Asema oli kalaisalla '
+            + 'paikalla, jota denet olivat käyttäneet sukupolvien '
+            + 'ajan. Hudson\'s Bay Company otti sen 1821 ja sulki '
+            + '1823; rauniot kaivettiin esiin vasta 1969—1971.',
+          wiki: 'Old Fort Providence',
+        },
+        {
+          otsikko: 'Kaksi kansaa saman järven rannalla',
+          teksti: 'Yellowknives oli 1800-luvun alkupuolella alueen '
+            + 'suurin ja vaikutusvaltaisin heimo. Naapurina pohjoisella '
+            + 'rannalla eli tłı̨chǫ, ja kansat olivat vanhoja '
+            + 'vastustajia. 1830-luvulta raportoitiin konfliktista, '
+            + 'jonka jälkeen Yellowknives joko hajaantui järven '
+            + 'eteläpuolelle tai sekoittui tłı̨chǫihin — lähde sanoo '
+            + 'suoraan, että mielipiteet vaihtelevat. Vuonna 1899 '
+            + 'päällikkö Snuff allekirjoitti Treaty 8:n. Sekoittumisen '
+            + 'jäljiltä syntyi myös wíílíídeh, murre jota puhutaan '
+            + 'Dettahissa ja Ndilǫssa. Ndilǫ rakennettiin 1950-luvun '
+            + 'puolivälissä Latham Islandin kärkeen.',
+          wiki: 'Yellowknives',
+        },
+        {
+          otsikko: 'Kulta, jota kukaan ei ehtinyt huomata',
+          teksti: 'Klondikeen matkalla ollut kullanetsijä E. A. '
+            + 'Blakeney löysi kultaa Yellowknife Baylta jo 1898, mutta '
+            + 'löytöä pidettiin merkityksettömänä: kaikkien katse oli '
+            + 'Klondikessa, ja Isonorjajärvi oli liian kaukana '
+            + 'kiinnostaakseen. Ratkaisu tuli lentokoneiden myötä '
+            + '1930-luvulla, kun etsijät levittäytyivät laajemmalle. '
+            + 'Kultaa löytyi lahden itäpuolelta 1934 ja suotuisammasta '
+            + 'geologiasta länsipuolelta syksyllä 1935, ja pieni '
+            + 'valtausryntäys alkoi. Vaikuttavin esiintymä oli Con '
+            + 'Mine — nimi on lyhenne sanasta Consolidated — ja sen '
+            + 'kehittäminen synnytti ensimmäisen asutuksen 1936—1937. '
+            + 'Kaivos aloitti tuotannon 5. syyskuuta 1938.',
+          wiki: 'Con Mine',
+        },
+        {
+          otsikko: 'Kulta loppui, timantit alkoivat',
+          teksti: 'Asukkaita oli tuhat vuonna 1940, ja 1942 seudulla '
+            + 'oli viisi kultakaivosta tuotannossa. Kunta '
+            + 'Yellowknifesta tuli 1953 ja Luoteisterritorioiden '
+            + 'pääkaupunki syyskuussa 1967 — se käynnisti kolmannen '
+            + 'buumin ja kokonaan uusia kaupunginosia virkamiehille. '
+            + 'Neljäs alkoi 1991, kun timantteja löytyi kolmesataa '
+            + 'kilometriä pohjoiseen. Ekati avattiin 1998 ja Diavik '
+            + '2003; vuonna 2004 ne tuottivat 12 618 000 karaattia, '
+            + 'arvoltaan yli 2,1 miljardia Kanadan dollaria. Samana '
+            + 'vuonna sulkeutui viimeinen kultakaivos. Kulta jätti '
+            + 'myös laskun: Giant Mine jätti 237 000 tonnia '
+            + 'arseenitrioksidia, ja puhdistus maksaa miljardin.',
+          wiki: 'Giant Mine',
+        },
+      ],
+      matkailijalle: {
+        kappale: 'Yellowknife on Luoteisterritorioiden pääkaupunki ja '
+          + 'territorion ainoa kaupunki: asukkaita on 20 340. Se on '
+          + 'koko territorion keskus kaivostoiminnalle, liikenteelle, '
+          + 'koulutukselle, terveydenhuollolle, matkailulle ja '
+          + 'hallinnolle. Territorion yhdestätoista virallisesta '
+          + 'kielestä viittä puhutaan täällä merkittävissä määrin: '
+          + 'dene sųłiné, tłı̨chǫ, etelä- ja pohjoisslavey, englanti ja '
+          + 'ranska. Matkailu on territorion suurin uusiutuva '
+          + 'elinkeino ja Yellowknife sen pääportti; moni tulee '
+          + 'katsomaan revontulia. Kaupunki on Kanadan kilven '
+          + 'kalliolla, jonka jääkausi hioi paljaaksi, ja lämpimien '
+          + 'kesiensä ansiosta se on selvästi metsänrajan '
+          + 'eteläpuolella — toisin kuin samoilla leveysasteilla '
+          + 'idempänä.',
+        artikkeli: {
+          nimi: 'Matkailijan Yellowknife',
+          taitto: 'opas',
+          teksti: 'Kaupunki kalliolla: kaksi vanhaa osaa, yksi '
+            + 'vinosti kulkeva pääkatu ja järvi, joka on puolet '
+            + 'vuodesta tie.',
+          nosto: 'Luoteisterritorioissa hallitaan konsensuksella, ja '
+            + 'se näkyy talossa. Istuntosali on pyöreä, sen ympärillä '
+            + 'ovat tulkkauskopit territorion yhdelletoista '
+            + 'viralliselle kielelle, ja puhemiehen valtikassa on '
+            + 'mursunnorsunluuta ja puuta vuoden 1845 Franklinin '
+            + 'retkikunnan aluksista.',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Yellowknifen lentoasema on Pohjois-Kanadan '
+                + 'vilkkain: vuonna 2007 siellä oli 70 699 '
+                + 'lentotapahtumaa, ja vuosittain kulkee yli 400 000 '
+                + 'matkustajaa ja 30 000 tonnia rahtia. Kiitoratoja '
+                + 'on kaksi. Maanteitse tullaan valtatietä 3, ja '
+                + 'ensimmäinen pysyvä maantieyhteys muuhun Kanadaan '
+                + 'saatiin vasta 30. marraskuuta 2012, kun Deh Cho '
+                + '-silta Mackenzie-joen yli avattiin. Kaupungissa '
+                + 'kulkee YKTransit, koko territorion ainoa '
+                + 'joukkoliikenne. Kadut on päällystetty, mutta '
+                + 'ikirouta pakottaa uusimaan pinnat kymmenen tai '
+                + 'kahdenkymmenen vuoden välein, ja nopeusrajoitus on '
+                + 'useimmilla kaduilla 45 kilometriä tunnissa.',
+            },
+            {
+              otsikko: 'Old Town ja New Town',
+              teksti: 'Vanhin osa on Old Town, kalliokärki '
+                + 'Yellowknife Bayn rannalla; sinne rakennettiin '
+                + 'ensin, ja siellä ovat kaupungin vanhimmat talot. '
+                + 'Latham Islandin kärjessä on Ndilǫ. Liikkeet ovat '
+                + 'nykyään New Townissa eli keskustassa, jossa osa '
+                + 'asukkaista asuu tornitaloissa; asuinalueita ovat '
+                + 'myös Frame Lake, Niven Lake ja Range Lake. Centre '
+                + 'Square Mall on territorion suurin kauppakeskus ja '
+                + 'Pohjois-Kanadan korkein rakennus, ja siellä ovat '
+                + 'kirjasto ja matkailuneuvonta. Kaupungintalon '
+                + 'edessä seisoo kesäisin kasveista tehty myskihärkä.',
+            },
+            {
+              otsikko: 'Valo ja pimeä',
+              teksti: 'Päivänvaloa on joulukuussa viisi tuntia ja '
+                + 'kesäkuussa kaksikymmentä. Toukokuun lopusta '
+                + 'heinäkuun puoliväliin hämärä kestää koko yön, eikä '
+                + 'kunnon pimeää tule lainkaan — silloin pelataan '
+                + 'Midnight Sun Golf Tournament, joka kerää jopa '
+                + 'neljäsataa pelaajaa. Talvella suunta kääntyy, ja '
+                + 'kaupunkiin tullaan katsomaan revontulia; matkailu '
+                + 'on territorion suurin uusiutuva elinkeino. Kesällä '
+                + 'ohjelmassa on Folk on the Rocks -musiikkijuhla, '
+                + 'jota on järjestetty vuodesta 1980, ja elokuun '
+                + 'pitkänä viikonloppuna Old Town Ramble & Ride.',
+            },
+            {
+              otsikko: 'Elokuu 2023',
+              teksti: 'Kaupunki evakuoitiin kesällä 2023. '
+                + 'Territoriohallinto aloitti evakuoinnin 16. '
+                + 'elokuuta, kun maastopalot lähestyivät ja '
+                + 'valtatie 3 uhkasi jäädä kulkukelvottomaksi — se on '
+                + 'ainoa maantie ulos. Territoriossa oli tuolloin 236 '
+                + 'aktiivista paloa. Yhdeksästoista päivä oli 87 '
+                + 'prosenttia kaupungista tyhjentynyt: kahdenkymmenen '
+                + 'tuhannen asukkaan kaupungissa oli jäljellä 2 600 '
+                + 'ihmistä, joista tuhat välttämättömiä työntekijöitä. '
+                + 'Evakuointimääräys purettiin 6. syyskuuta, ja '
+                + 'asukkaat alkoivat palata samana päivänä. Jäljet '
+                + 'näkyvät yhä maisemassa kaupungin ulkopuolella.',
+            },
+            {
+              otsikko: 'Milloin kannattaa tulla',
+              teksti: 'Nämä luvut ovat en-Wikipedian Yellowknife-'
+                + 'artikkelin Climate-osiosta; lehdellä ei ole omaa '
+                + 'vuosigraafia, koska säänormaaleja ei haettu tässä '
+                + 'erässä. Ilmasto on subarktinen ja kuiva: sadetta '
+                + 'tulee alle 300 milliä vuodessa, koska kaupunki on '
+                + 'lännen vuoristojen sadevarjossa. Tammikuun '
+                + 'keskilämpötila on noin −26 astetta ja heinäkuun 17. '
+                + 'Kuivin kuukausi on huhtikuu ja sateisin elokuu, ja '
+                + 'hallaton kasvukausi kestää runsaat sata '
+                + 'vuorokautta. Lumilinna on jäällä maaliskuun, '
+                + 'jäätie auki tammikuun lopusta kevääseen ja '
+                + 'revontulikausi pimeän puolella vuotta.',
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Old Town',
+                tahdet: 3,
+                selite: 'Kaupungin vanhin osa kalliokärjellä: '
+                  + 'omanlaisensa arkkitehtuuri ja pensaslentäjien '
+                  + 'muistomerkki.',
+              },
+              {
+                mita: 'Luoteisterritorioiden parlamenttitalo',
+                tahdet: 3,
+                selite: 'Pyöreä istuntosali, yksitoista kieltä ja '
+                  + 'valtikka Franklinin laivojen puusta.',
+              },
+              {
+                mita: 'Prince of Walesin perintökeskus',
+                tahdet: 3,
+                selite: 'Territorion museo ja arkisto Frame Laken '
+                  + 'rannalla; myöntää myös arkeologiset luvat.',
+              },
+              {
+                mita: 'Lumilinna Yellowknife Bayn jäällä',
+                tahdet: 2,
+                selite: 'Maaliskuussa jäälle rakennetaan linna, jossa '
+                  + 'on katsomo, kahvila ja liukumäki.',
+              },
+              {
+                mita: 'Jäätie Dettahiin',
+                tahdet: 2,
+                selite: 'Talvella lahden yli ajetaan kuusi ja puoli '
+                  + 'kilometriä; kesällä sama matka on 27.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Jäätie on kausituote',
+                teksti: 'Tibbitt to Contwoyto -jäätie on auki '
+                  + 'tavallisesti tammikuun lopusta maaliskuun loppuun '
+                  + 'tai huhtikuun alkuun, ja silloin Yellowknife on '
+                  + 'koko kuljetusketjun lähtöpiste.',
+              },
+              {
+                otsikko: 'Talvi on Kanadan kylmin',
+                teksti: 'Environment Canada arvioi 2014, että '
+                  + 'kaupungilla on Kanadan kaupungeista kylmin talvi '
+                  + 'ja pisin lumipeitteinen kausi; ennätys on −51,2 '
+                  + 'astetta tammikuulta 1947.',
+              },
+              {
+                otsikko: 'Kesäyö ei pimene',
+                teksti: 'Toukokuun lopusta heinäkuun puoliväliin '
+                  + 'hämärä kestää koko yön, ja kesäkuussa '
+                  + 'päivänvaloa on kaksikymmentä tuntia.',
+              },
+              {
+                otsikko: 'Arseeni on osa maaperää',
+                teksti: 'Kallioperässä on arsenopyriittiä, ja '
+                  + '1900-luvun kullankaivuu vapautti arseenia '
+                  + 'ympäristöön; pitoisuuksia seurataan useissa '
+                  + 'ohjelmissa ja Giant Minen puhdistus on kesken.',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Järvi, jää ja kesäyö',
+      johdanto: 'Yellowknife istuu Kanadan kilven kalliolla '
+        + 'Pohjois-Amerikan syvimmän järven rannalla. Talvella '
+        + 'järvestä tulee tie ja rakennuspaikka, kesällä aurinko ei '
+        + 'tahdo laskea lainkaan.',
+      tehtava: {
+        kysymys: 'Mihin Yellowknifen lumilinna rakennetaan joka talvi?',
+        vaihtoehdot: [
+          'Yellowknife Bayn jäälle',
+          'Kaupungintalon pihalle',
+          'Vanhan kaivoksen kuilun päälle',
+          'Frame Laken rantapuistoon',
+        ],
+        oikea: 0,
+        fakta: 'Linna on noussut jäälle joka maaliskuu vuodesta 1996. '
+          + 'Ikkunat ja koristeet tehdään jäästä, ja linnassa on '
+          + 'katsomo, kahvila, sisäpiha ja liukumäki.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kuusisataa metriä alaspäin',
+          teksti: 'Isonorjajärvi on Pohjois-Amerikan syvin järvi: 614 '
+            + 'metriä, ja syvin kohta on itäisessä Christie Bayssa. '
+            + 'Pituutta on 469 kilometriä, leveyttä 20—203 ja '
+            + 'pinta-alaa 27 200 neliökilometriä, mikä tekee siitä '
+            + 'maailman kymmenenneksi suurimman pinta-alaltaan. '
+            + 'Keskimäärin järvi on ainakin osittain jäässä '
+            + 'kahdeksan kuukautta vuodessa. Nimiä on monta: '
+            + 'tłı̨chǫksi Tıdeè, chipewyaniksi Tu Nedhé ja dehcho '
+            + 'denen kielellä Tucho. Englanninkielinen nimi tuli '
+            + 'kiertoteitse cree-kielen kautta, ja 2010-luvun lopulta '
+            + 'alkaen on esitetty, että järvi nimettäisiin uudelleen '
+            + 'jollakin sen omista nimistä.',
+          wiki: 'Great Slave Lake',
+        },
+        {
+          otsikko: 'Kun vesi kantaa rekan',
+          teksti: 'Talvella järvi muuttuu tieksi. Dettahin kylään '
+            + 'ajetaan jäätä pitkin kuusi ja puoli kilometriä, kun '
+            + 'kesällä sama matka on 27 kilometriä Ingraham Trailia. '
+            + 'Isompi tie on Tibbitt to Contwoyto: sitä pitkin '
+            + 'puoliperävaunut vievät kaivoksille polttoaineen ja '
+            + 'tarvikkeet, ja se on auki tavallisesti tammikuun '
+            + 'lopusta maaliskuun loppuun tai huhtikuun alkuun. '
+            + 'Silloin Yellowknife on koko kuljetusketjun lähtöpiste, '
+            + 'ja kaupunkiin saapuu pohjoiseen ajavia kuljettajia '
+            + 'kaukaakin. Dettahin nimi on lyhentynyt muoto sanasta '
+            + 'T\'é?ehdaá, palanut niemi; kylässä asuu vajaat '
+            + 'kaksisataa ihmistä.',
+          wiki: 'Tibbitt to Contwoyto Winter Road',
+        },
+        {
+          otsikko: 'Talot, jotka kelluvat lahdella',
+          teksti: 'Yellowknife Bayssä on Jolliffe Island, joka siirtyi '
+            + 'kaupungin julkiseksi maaksi, kun öljy-yhtiö luopui '
+            + 'paikasta. Saarta ympäröi asuntolaivayhteisö, jossa on '
+            + 'asuttu sähköverkon ulkopuolella vuodesta 1978. Suhde '
+            + 'kaupunkiin on mutkikas: laivat ovat matkailijoiden '
+            + 'suosikkinäky, mutta asukkaat ovat kaupungin veropiirin '
+            + 'ulkopuolella ja käyttävät silti kaupungin palveluja, ja '
+            + 'siitä on seurannut oikeudenkäyntejä ja kitkaa. Saaren '
+            + 'takana kohoaa Old Townin kalliokärki, jonne kaupunki '
+            + 'alun perin rakennettiin ja jossa ovat sen vanhimmat '
+            + 'talot.',
+          wiki: 'Yellowknife',
+        },
+        {
+          otsikko: 'Kanadan aurinkoisin kesä',
+          teksti: 'Environment and Climate Change Canadan mukaan '
+            + 'Yellowknifessä on Kanadan aurinkoisin kesä: '
+            + 'kesä—elokuussa paistetta kertyy keskimäärin 1 034 '
+            + 'tuntia. Koko vuoden lukema on 2 256,5 tuntia eli 43,5 '
+            + 'prosenttia mahdollisesta — joulukuussa 15,4 ja '
+            + 'kesäkuussa 63,0 prosenttia. Sama virasto arvioi 2014, '
+            + 'että kaupungilla on Kanadan kylmin talvi ja pisin '
+            + 'lumipeitteinen kausi. Tammikuun keskilämpötila on noin '
+            + '−26 astetta ja heinäkuun 17; alin mitattu on −51,2 '
+            + 'astetta 31. tammikuuta 1947 ja ylin 32,6 astetta 2. '
+            + 'elokuuta 2021.',
+          wiki: 'Yellowknife',
+        },
+        {
+          otsikko: 'Lumikuninkaan linna',
+          teksti: 'Joka maaliskuu vuodesta 1996 Yellowknife Bayn '
+            + 'jäälle nousee lumilinna. Ikkunat ja koristeet tehdään '
+            + 'jäästä, ja suunnittelusta ja rakentamisesta vastaa '
+            + 'Snowking, Anthony Foliot. Alussa linna oli tunneleita '
+            + 'hangissa Woodyardin naapurustossa; nyt siinä on '
+            + 'katsomo, kahvila, sisäpiha, liukumäki, rintavarustuksia '
+            + 'ja torneja, ja kuukauden mittaisessa juhlassa on '
+            + 'konsertteja, taidenäyttelyitä ja lastenteatteria. '
+            + 'Veistäjät täydentävät linnaa lumi- ja jääveistoksin. '
+            + 'Samalle jäälle tuli 2012 toinenkin talvijuhla, Long '
+            + 'John Jamboree.',
+          wiki: 'Snowking Winter Festival',
+        },
+      ],
+    },
+  ],
 };

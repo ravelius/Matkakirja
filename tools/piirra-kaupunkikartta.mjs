@@ -5781,6 +5781,71 @@ const KAUPUNGIT = {
     meri: true,
     jalkakaydat: true,
   },
+  whitehorse: {
+    /*
+     * YUKONJOEN LAAKSO KESKUSTASTA LENTOASEMAN PENKEREELLE (7.9.2026).
+     * Ruutu on noin 3,97 × 2,72 kilometriä. Yläreunassa on ruutukaavan
+     * keskusta joen länsirannalla, oikeassa alakulmassa Riverdale
+     * itärannalla ja vasemmassa laidassa se jyrkkä penger, jonka päällä
+     * ovat lentoasema, liikennemuseo ja Beringia-keskus.
+     *
+     * RUUTU ON TIIVIS, KOSKA KESKUSTA ON PIENI: kahdeksan kohdetta
+     * mahtuu 2,0 × 1,7 kilometrin alalle, ja reunoille jää joka
+     * suuntaan yli 300 metriä. Väljempi rajaus toisi mukaan vain
+     * Porter Creekin ja Whistle Bendin lähiöitä, joissa ei ole yhtään
+     * kohdetta — ja kaupungin pinta-ala on 414 neliökilometriä, joten
+     * "koko kaupunki" ei mahdu mihinkään ruutuun (en-Wikipedia
+     * "Whitehorse", Geography).
+     *
+     * EI MERI-LIPPUA. Whitehorse on sisämaassa, ja Yukonjoki on
+     * OSM:ssä tavallinen vesiväylä, joka kulkee kuvan halki
+     * pohjoisesta etelään.
+     *
+     * MILES CANYON JA CANYON CITY JÄÄVÄT ULKOPUOLELLE, ja se on
+     * päätös eikä unohdus: kanjoni on 6,4 ja Canyon City 7,2
+     * kilometriä etelään. Ne ovat lehden noston W3 koko aihe (kosket,
+     * jotka antoivat kaupungille nimen), eikä kohdekartta toista
+     * lehden juttuja (New Yorkin sääntö). Mukaan ottaminen olisi
+     * kolminkertaistanut ruudun ja hukuttanut keskustan.
+     *
+     * KAKSI KOHDETTA PUDOTETTIIN ETÄISYYSSÄÄNNÖLLÄ, ei aiheen:
+     * Downtown Whitehorse on 105 metriä ja Whitehorse Waterfront
+     * Trolleyn pysäkki 75 metriä MacBride-museosta. Molemmat
+     * kerrotaan matkaoppaassa.
+     */
+    rajat: { pohjoinen: 60.7250, etela: 60.7005, lansi: -135.0880, ita: -135.0150 },
+  },
+  yellowknife: {
+    /*
+     * OLD TOWNISTA FRAME LAKELLE (7.9.2026). Ruutu on noin 2,7 × 3,0
+     * kilometriä eli pelin tiiviimpiä, Fèsin ja Sansibarin
+     * kokoluokkaa. Syy on sama: Yellowknifen kaksi vanhinta osaa ovat
+     * pienet ja lähellä toisiaan. Oikeassa yläkulmassa on Old Townin
+     * kalliokärki Yellowknife Bayn rannalla, vasemmassa alalaidassa
+     * hallinnon New Town Frame Laken rannalla, ja niiden välissä
+     * Franklin Avenue eli 50th Avenue.
+     *
+     * MERI-LIPPU PÄÄLLÄ, koska Yellowknife Bay on OSM:ssä
+     * rantaviivan takana: ilman lippua kuvan koko oikea puoli jäisi
+     * paperin väriseksi, vaikka se on Isonorjajärveä.
+     *
+     * CON MINE JA GIANT MINE JÄÄVÄT ULKOPUOLELLE. Con on 2,4
+     * kilometriä etelään ja Giant 4 kilometriä pohjoiseen, ja
+     * molemmat ovat lehden omia juttuja (nostot Y3 ja Y5).
+     *
+     * NDILǪ EI OLE NUMEROITU KOHDE, vaikka niemi näkyy ruudun
+     * pohjoisreunassa: Yellowknives Denen yhteisö on lehden noston Y1
+     * aihe. Sama koskee asuntolaivoja Jolliffen saaren ympärillä
+     * (teemasivun nosto).
+     *
+     * KOLME KOHDETTA PUDOTETTIIN ETÄISYYSSÄÄNNÖLLÄ: Hudson's Bay
+     * Warehouse ja Canadian Pacific Airlines floatbase ovat 70 metrin
+     * päässä Wildcat Cafésta, ja The Gold Range jäi pois sävysyistä
+     * (se on baari).
+     */
+    rajat: { pohjoinen: 62.4740, etela: 62.4470, lansi: -114.3920, ita: -114.3390 },
+    meri: true,
+  },
 };
 
 /*

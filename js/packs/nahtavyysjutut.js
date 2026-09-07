@@ -59793,4 +59793,411 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Matkakirjan oma teksti · lähteenä espanjankielinen Wikipedia',
     },
   },
+  /*
+   * WHITEHORSE (Opus 7.9.2026, parvierä). Kahdeksan kohdetta
+   * Yukonjoen laaksossa: keskustan rantatörmä, joen itäranta ja
+   * lentoaseman penger. Väitteet luettu en-Wikipedian raakateksteistä
+   * 7.9.2026 ("MacBride Museum of Yukon History", "Diocese of Yukon",
+   * "Christ Church Cathedral (Whitehorse)", "Yukon Legislative
+   * Building", "SS Klondike", "Riverdale, Whitehorse", "Erik Nielsen
+   * Whitehorse International Airport", "Yukon Transportation Museum",
+   * "Yukon Beringia Interpretive Centre").
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö). Lehti
+   * kertoo Kwanlin Dünistä, vuodesta 1873, koskista ja kanjonista,
+   * rautatiestä ja nimestä Closeleigh sekä Robert Servicen
+   * pankkilomakkeesta; teemasivu lohesta, ilmastosta, Yukon Questistä
+   * ja laakson vuorista. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe.
+   */
+  whitehorse: {
+    'MacBride-museo': {
+      aika: '1950–1952',
+      teksti: 'Yukon Historical Society perusti museon vuonna 1950, ja '
+          + 'ovet avautuivat 1952. Se on Yukonin vanhin museo, ja se '
+          + 'toimii yhä voittoa tavoittelemattomana yhdistyksenä.'
+        + '\n\n'
+        + 'Museo ei ole yksi talo vaan kolme paikkaa: itse MacBride-'
+          + 'museo keskustan rantatörmällä, MacBriden veturitalli ja '
+          + 'MacBride Copperbelt Mining Museum kuparivyöhykkeellä '
+          + 'kaupungin luoteispuolella. Päärakennukseen on liitetty '
+          + 'Whitehorsen alkuperäinen lennätinkonttori — talo, jonka '
+          + 'kautta kulki se tieto, joka ennen radiota ja lentokoneita '
+          + 'oli ainoa nopea yhteys etelään.'
+        + '\n\n'
+        + 'Vuonna 2016 Kanadan kulttuuriministeriö ja Yukonin hallitus '
+          + 'myönsivät rahoituksen laajennukselle, jonka kaupunki '
+          + 'hyväksyi omalta osaltaan. Museo on siitä lähtien '
+          + 'kasvanut keskustan kulmatontilla ylöspäin — mikä on '
+          + 'Whitehorsessa harvinaista, koska koko kaupunki on '
+          + 'rakennettu matalaksi.',
+      lahde: 'Wikipedia',
+    },
+    'Kristuksen katedraali': {
+      aika: '1891 alkaen',
+      teksti: 'Whitehorsen anglikaaninen katedraali on Yukonin '
+          + 'hiippakunnan istuin. Hiippakunta syntyi 1891, kun '
+          + 'Mackenzie-joen hiippakunta jaettiin kahtia; se sai ensin '
+          + 'nimen Selkirk ja vaihtoi nimekseen Yukon vasta 1907.'
+        + '\n\n'
+        + 'Alue on suuri ja seurakuntia vähän: kolmetoista seurakuntaa '
+          + 'kattaa koko Yukonin ja osan Pohjois-Brittiläistä '
+          + 'Kolumbiaa, ja jäseniä laskettiin vuonna 2022 vajaat '
+          + 'tuhat. Hiippakunta siirrettiin nykyiseen kirkkoprovinssiin '
+          + '1947.'
+        + '\n\n'
+        + 'Katedraalissa on nähty myös yksi Kanadan kirkkohistorian '
+          + 'ensimmäisistä: Lesley Wheeler-Dame valittiin 2019 ensin '
+          + 'apulaispiispaksi ja hänestä tuli hiippakunnan '
+          + 'ensimmäinen naispuolinen piispa. Hänet vihittiin ja '
+          + 'asetettiin virkaan elokuussa 2019.',
+      lahde: 'Wikipedia',
+    },
+    'Yukonin parlamenttitalo': {
+      aika: '1976',
+      teksti: 'Yukonin lakiasäätävä kokous istuu kolmikerroksisessa '
+          + 'valkoisessa teräsverhoillussa talossa aivan Yukonjoen ja '
+          + 'Rotary Parkin vieressä. Sama rakennus on koko territorion '
+          + 'hallinnon päämaja: siinä ovat useimmat Yukonin hallituksen '
+          + 'osastot, ja kokous sekä toimeenpaneva neuvosto istuvat '
+          + 'samassa salissa.'
+        + '\n\n'
+        + 'Ennen Whitehorsea kokous istui Dawson Cityssä vuosina '
+          + '1907–1953. Whitehorsessa se muutti kolmesti: ensin vanhaan '
+          + 'postitaloon, sitten liittovaltion taloon ja lopulta Lynnin '
+          + 'taloon Steele Streetillä. Nykyiseen taloon muutettiin '
+          + '1976, ja Kanadan kenraalikuvernööri Jules Léger avasi sen '
+          + '25. toukokuuta.'
+        + '\n\n'
+        + 'Lokakuussa 2022 rakennus nimettiin Jim Smithin mukaan. Hän '
+          + 'oli territorion pisimpään palvellut komissaari, ja '
+          + 'nimeämistilaisuudessa olivat läsnä sekä varapääministeri '
+          + 'että Yukonin komissaari ja Smithin perhe.',
+      lahde: 'Wikipedia',
+    },
+    'SS Klondike': {
+      aika: '1929–1955',
+      teksti: 'Nimellä SS Klondike kulki kaksi siipiratasalusta. '
+          + 'Ensimmäisen rakensi 1929 British Yukon Navigation Company, '
+          + 'White Pass and Yukon Route -rautatien tytäryhtiö. Alus oli '
+          + 'poikkeuksellinen: siihen mahtui puolitoista kertaa enemmän '
+          + 'kuin tavalliseen siipiratasalukseen, mutta se oli yhä niin '
+          + 'matalakulkuinen ja niin mittainen, että se pystyi '
+          + 'kulkemaan Yukonjokea. Rahtia meni 270 tonnia ilman '
+          + 'proomuakin.'
+        + '\n\n'
+        + 'Kesäkuussa 1936 Klondike I ajoi karille Thirty Mile '
+          + '-osuuden pohjoispuolella. Yhtiö nosti hylystä kattilan, '
+          + 'koneet ja varusteet ja rakensi niistä seuraavana vuonna '
+          + 'lähes tarkan kaksoiskappaleen, Klondike II:n. Se ajoi '
+          + 'rahtia 1950-luvun alkuun asti, kunnes Dawsonin ja '
+          + 'Whitehorsen välinen maantie teki jokiliikenteestä '
+          + 'tarpeetonta. Alus muutettiin risteilylaivaksi — '
+          + 'Edinburghin herttua kävi katsomassa sitä 1954 — mutta '
+          + 'matkustajia ei riittänyt, ja yritys lopetettiin 1955.'
+        + '\n\n'
+        + 'Alus lahjoitettiin Parks Canadalle ja kunnostettiin '
+          + 'vähitellen. Vuonna 1966 kaupunki suostui siirtämään sen '
+          + 'nykyiselle paikalleen. Siirtoon tarvittiin kolme '
+          + 'puskutraktoria, kahdentoista miehen ryhmä, kolme viikkoa '
+          + 'aikaa, rasvatut tukkirullat ja kahdeksan tonnia '
+          + 'Palmolive-saippuaa. Kansallinen historiallinen paikka '
+          + 'aluksesta tuli 24. kesäkuuta 1967.',
+      lahde: 'Wikipedia',
+    },
+    Riverdale: {
+      aika: '1900-luku',
+      teksti: 'Riverdale on Yukonjoen itärannalla, keskustaa '
+          + 'vastapäätä. Yhteys yli joen kulkee Lewes Boulevardia, '
+          + 'joka on samalla kaupunginosan pääväylä.'
+        + '\n\n'
+        + 'Paikka on Whitehorsessa omanlaisensa: sitä ympäröivät suuret '
+          + 'vuoret kolmelta sivulta ja Yukonjoki neljänneltä. '
+          + 'Riverdalesta lähtee tie, joka kiipeää Grey Mountainille, '
+          + 'ja kaupunginosassa on vuoren länsipää näköalapaikkoineen.'
+        + '\n\n'
+        + 'Riverdalessa on Lewes Boulevardin varrella useita matalia '
+          + 'kerrostaloja. Se kuulostaa arkiselta, mutta on '
+          + 'Pohjois-Kanadassa verrattain harvinaista — pohjoisessa '
+          + 'rakennetaan yleensä matalaa ja hajalleen. Kaupunginosa on '
+          + 'yksi Whitehorsen vanhimmista, ja sen mukaan on nimetty '
+          + 'kaksi Yukonin vaalipiiriä.',
+      lahde: 'Wikipedia',
+    },
+    'Whitehorsen lentoasema': {
+      aika: '1920 alkaen',
+      teksti: 'Keväällä 1920 kaupungin yläpuolisella rinteellä olevaa '
+          + 'puutavaratonttia raivattiin kiitoradaksi, koska '
+          + 'Yhdysvaltain armeijan Black Wolf Squadron oli tulossa '
+          + 'neljällä de Havilland DH-4 -koneella. Sama kaistale '
+          + 'palveli 1920-luvun lopulla kaivosyhtiötä ja Yukon Airways '
+          + 'and Exploration Companya.'
+        + '\n\n'
+        + 'Kenttää laajennettiin 1940–1941, ja 1942 se siirtyi Kanadan '
+          + 'ilmavoimille osana Luoteista porrasreittiä, jota pitkin '
+          + 'koneita siirrettiin pohjoisen kautta. Sotilastukikohta '
+          + 'suljettiin 1968, ja kenttä palasi siviilikäyttöön.'
+        + '\n\n'
+        + 'Kenttä nimettiin 15. joulukuuta 2008 Erik Nielsenin mukaan, '
+          + 'joka edusti Yukonia pitkään Kanadan parlamentissa. Se on '
+          + 'osa Kanadan kansallista lentoasemajärjestelmää ja Yukonin '
+          + 'hallituksen omistuksessa; matkustajia oli vuonna 2017 noin '
+          + '366 000. Kenttä on myös Air Northin kotikenttä — '
+          + 'territoriolla on siis oma lentoyhtiö.',
+      lahde: 'Wikipedia',
+    },
+    'Yukonin liikennemuseo': {
+      aika: '1990',
+      teksti: 'Museo perustettiin 1990 lentoaseman viereen, Ta\'an '
+          + 'Kwäch\'än Councilin ja Kwanlin Dün First Nationin '
+          + 'perinteisille alueille. Sen aihe on se, mikä pohjoisessa '
+          + 'ratkaisee kaiken muun: miten paikasta toiseen pääsee.'
+        + '\n\n'
+        + 'Näyttelyissä kulkevat rinnakkain Yukonin First Nationsin '
+          + 'vesikulkuneuvot, lumikengät ja sukset, koiravaljakot ja '
+          + 'Yukon Quest, pensaslentäjät sekä kultaryntäyksen ja Alaska '
+          + 'Highwayn koneet. Esineistössä on R. G. LeTourneaun '
+          + 'LCC-1 Sno-Train, White Pass and Yukon Routen kalustoa '
+          + 'malmivaunusta matkustajavaunun jäljennökseen ja '
+          + '1920-luvun rantamaisemaa esittävä pienoisrautatie.'
+        + '\n\n'
+        + 'Museon tunnetuin esine ei ole sisällä vaan pihalla: '
+          + 'Douglas DC-3 tolpan päässä. Kone kääntyy tuulen mukana ja '
+          + 'sitä kutsutaan yhdeksi maailman suurimmista '
+          + 'tuuliviireistä. Whitehorsessa se on käytännöllinen: '
+          + 'lentoasema on aivan vieressä.',
+      lahde: 'Wikipedia',
+    },
+    'Beringia-keskus': {
+      aika: '1997',
+      teksti: 'Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 '
+          + 'ja kertoo Beringiasta — 3 200 kilometrin levyisestä '
+          + 'maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan '
+          + 'Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, '
+          + 'koska ilmasto oli kuiva ja lunta satoi vähän.'
+        + '\n\n'
+        + 'Juuri siksi Beringia kiinnostaa arkeologeja ja '
+          + 'paleontologeja: se oli eläinten ja ihmisten kulkureitti '
+          + 'Aasian ja Amerikan välillä. Liikennettä oli molempiin '
+          + 'suuntiin. Idän suuntaan tulivat mastodontit, mammutit, '
+          + 'hirvieläimet, biisonit, lampaat ja myskihärät; länteen '
+          + 'menivät hevoseläimet ja kamelit. Sanan Beringia keksi '
+          + 'ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937.'
+        + '\n\n'
+        + 'Keskus on myös tutkimuslaitos. Sen aineistossa on Old Crow\'n '
+          + 'seudun löytöjä, joissa on harvinaisia jääkauden nisäkkäitä: '
+          + 'jättiläismajava, leveäotsahirvi, länsikameli, '
+          + 'amerikanmastodontti, sapelikissa ja lyhytkuonokarhu. '
+          + 'Radiohiiliajoitukset ovat monen kohdalla yhä kesken.',
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * YELLOWKNIFE (Opus 7.9.2026, parvierä). Kahdeksan kohdetta kahdessa
+   * ryppäässä: Old Townin kalliokärki Yellowknife Bayn rannalla ja
+   * hallinnon New Town Frame Laken rannalla. Väitteet luettu
+   * en-Wikipedian raakateksteistä 7.9.2026 ("Bank of Toronto
+   * (Yellowknife)", "The Wildcat Cafe", "Back Bay Cemetery",
+   * "Weaver & Devore Trading", "Ragged Ass Road (Yellowknife)",
+   * "Northwest Territories Legislative Building", "Prince of Wales
+   * Northern Heritage Centre", "Log School House").
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö). Lehti
+   * kertoo Yellowknives Denestä, vuodesta 1873 ja Old Fort
+   * Providencesta, kullan löytymisestä ja Con Minestä, pääkaupungiksi
+   * tulosta sekä timanteista ja Giant Minen arseenista; teemasivu
+   * Isonorjajärvestä, jäätiestä, asuntolaivoista, ilmastosta ja
+   * lumilinnasta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe.
+   */
+  yellowknife: {
+    'Bank of Toronton hirsimökki': {
+      aika: '1939–1951',
+      teksti: 'Hirsityön mestari John Stakson rakensi mökin 1939 '
+          + 'Yellowknifen liikekortteliin — asunnoksi, ei pankiksi.'
+        + '\n\n'
+        + 'Lokakuussa 1944 Bank of Toronto osti mökin ja avasi siihen '
+          + 'konttorin. Pankki tuli rahan perässä: Giant Minen '
+          + 'kultalöydöt olivat käynnistäneet uuden valtausryntäyksen, '
+          + 'ja kaupungissa liikkui yhtäkkiä enemmän rahaa kuin '
+          + 'ensimmäinen pankki, vuonna 1938 avattu Bank of Commerce, '
+          + 'ehti käsitellä. Kun ryntäys laantui, liikevaihto ei enää '
+          + 'kantanut konttoria, ja pankki sulki sen elokuussa 1951.'
+        + '\n\n'
+        + 'Kullanetsijä Sam Otto osti mökin 1964, kunnosti sen ja '
+          + 'siirsi Latham Islandille vuokra-asunnoksi. Kaupungin '
+          + 'perintökohteeksi se nimettiin 1998. Talo on siis '
+          + 'kolmessa elämässään ollut koti, pankki ja taas koti — ja '
+          + 'kaikki kolme hirsistä, jotka yksi mies veisti käsin.',
+      lahde: 'Wikipedia',
+    },
+    'Wildcat Cafe': {
+      aika: '1937',
+      teksti: 'Wildcat Cafe avattiin 1937, kun kaupunki oli vuoden '
+          + 'vanha. Se on Yellowknifen vanhin ravintola, ja sen '
+          + 'hirsimökki edustaa juuri sitä kaivosleirityyliä, jolla '
+          + 'koko Old Town rakennettiin. Perustajat olivat Willie Wylie '
+          + 'ja Smokey Stout; myöhempiä omistajia olivat Carl ja '
+          + 'Dorothy Jensen sekä vuosina 1942–1951 Mah Gow, '
+          + 'Yellowknifen ensimmäinen kirjattu kiinalainen asukas. '
+          + 'Kahvila sulki ovensa 1951, kun Gow sairastui.'
+        + '\n\n'
+        + 'Talo oli lähellä joutua puretuksi 1950-luvun lopulla, mutta '
+          + 'joukko yellowknifeläisiä sai sen suojeltua. Vielä 1970 '
+          + 'mökki oli huonossa kunnossa, ja uusi sukupolvi joutui '
+          + 'lobbaamaan sen puolesta uudestaan. Ravintola avattiin '
+          + 'jälleen 1979, ja kaupunki otti talon omistukseensa 1992.'
+        + '\n\n'
+        + 'Vuonna 2011 kävi ilmi, ettei kunnostus enää riittäisi: '
+          + 'talo oli painunut syvälle maahan ja kallistui useaan '
+          + 'suuntaan yhtä aikaa. Kaupunki palkkasi territorion '
+          + 'kokeneimman hirsirakentajan, ja koko mökki purettiin '
+          + 'osiin. Jokainen hirsi luetteloitiin ja numeroitiin ennen '
+          + 'irrotusta; purku alkoi 11. toukokuuta 2011. Ravintola '
+          + 'avattiin uudelleen 22. kesäkuuta 2013 ja on auki kesäisin.',
+      lahde: 'Wikipedia',
+    },
+    'Back Bayn hautausmaa': {
+      aika: '1938–1946',
+      teksti: 'Yellowknifen ensimmäinen hautausmaa on Back Bayn '
+          + 'rannalla, Yellowknife Bayn pohjoisessa lahdekkeessa. '
+          + 'Ensimmäinen kirjattu hautaus tehtiin 27. syyskuuta 1938 — '
+          + 'kaksi vuotta sen jälkeen, kun ensimmäiset asukkaat olivat '
+          + 'pystyttäneet telttansa lahden rannalle.'
+        + '\n\n'
+        + 'Vuosien 1938 ja 1946 välillä tänne haudattiin yli '
+          + 'neljäkymmentä ihmistä. Sitten hautausmaa suljettiin ja '
+          + 'siirrettiin muualle. Määrä kertoo enemmän kuin miltä '
+          + 'kuulostaa: kaupungissa oli vuonna 1940 tuhat asukasta, ja '
+          + 'kaikki työ tehtiin kaivoksissa, jäällä ja metsässä.'
+        + '\n\n'
+        + 'Paikka on kaupungin perintökohde, mutta se ei ole hyvässä '
+          + 'kunnossa. Viereisen puron törmä kuluu jatkuvasti ja on '
+          + 'vahingoittanut hautoja; vuoteen 2014 mennessä kunto oli '
+          + 'huonontunut niin, että hoitoa vaadittiin julkisesti. '
+          + 'Hautausmaa on siitä harvinainen kohde, että sen tarina '
+          + 'jatkuu yhä — ja lopputulos on avoin.',
+      lahde: 'Wikipedia',
+    },
+    'Weaver & Devoren kauppa': {
+      aika: '1936',
+      teksti: 'Turkiskauppiaat ja vesikulkijat Harry Weaver ja Ellis '
+          + '"Bud" Devore tulivat Peace Riveristä Albertasta ja tekivät '
+          + 'ensimmäisen kauppamatkansa Yellowknife Baylle kesällä '
+          + '1936, kun kaivostoiminta oli juuri vilkastunut. Seuraavana '
+          + 'vuonna he pystyttivät pysyvän hirsisen kauppa-aseman.'
+        + '\n\n'
+        + 'Kauppa kasvoi kaupungin mukana. Devore myi osuutensa 1955 ja '
+          + 'Weaver kuoli 1957, mutta liike jatkoi samalla nimellä ja '
+          + 'pysyi Weaverin suvun käsissä vuoteen 2025 asti. '
+          + '1960-luvulla se laajeni nykyisiin tiloihinsa kadun toiselle '
+          + 'puolelle. Turkiskaupasta luovuttiin 1980-luvulla; nyt '
+          + 'hyllyillä on sekatavaraa, tuoretuotteita, erävarusteita ja '
+          + 'ulkoiluvaatteita, ja kauppa kokoaa myös tilauksia '
+          + 'erämaahan lähteville.'
+        + '\n\n'
+        + 'Alkuperäinen vuoden 1937 kauppa-asema seisoo yhä. Siinä '
+          + 'toimii nykyään paikallinen ravintola, ja rakennus on '
+          + 'kaupungin historiallinen kohde.',
+      lahde: 'Wikipedia',
+    },
+    'Ragged Ass Road': {
+      aika: '1970',
+      teksti: 'Old Townissa on noin sadanviidenkymmenen metrin mittainen '
+          + 'päällystämätön asuinkatu, jota on kutsuttu yhdeksi Kanadan '
+          + 'kuuluisimmista. Nimi tarkoittaa suunnilleen '
+          + '"riekaleiskatu" ja on peräisin sanonnasta, jolla '
+          + 'kuvataan täysin rahatonta ihmistä. Sitä ennen katu '
+          + 'tunnettiin nimellä Privy Road eli huussitie, koska sen '
+          + 'varrella oli paljon ulkohuusseja.'
+        + '\n\n'
+        + 'Nimi syntyi vitsinä vuoden 1970 lopulla. Kadun yhdeksästä '
+          + 'tontista kuusi omisti Lou Rocher, joka elätti itsensä '
+          + 'polttopuulla, kalastuksella ja ennen kaikkea '
+          + 'malminetsinnällä. Huonon etsintäkauden jälkeen hän totesi '
+          + 'ystävineen olevansa täysin rahaton — ja he pystyttivät '
+          + 'kyltin samana yönä. Poikansa mukaan Rocher katsoi voivansa '
+          + 'nimetä kadun, koska omisti siitä suurimman osan.'
+        + '\n\n'
+        + 'Kaupunki ei tunnustanut nimeä vuosikymmeniin. Rocher teki '
+          + 'omat kylttinsä ja joutui uusimaan ne, koska matkailijat '
+          + 'veivät ne mukanaan; lopulta kyltit hitsattiin tolppiinsa. '
+          + 'Viralliset kyltit tulivat vasta 2010-luvun puolivälissä, '
+          + 'Rocherin kuoleman jälkeen. Tom Cochrane nimesi vuoden '
+          + '1995 albuminsa kadun mukaan.',
+      lahde: 'Wikipedia',
+    },
+    'Luoteisterritorioiden parlamenttitalo': {
+      aika: '1993–1994',
+      teksti: 'Talo rakennettiin 1993 ja otettiin käyttöön 1994, ja '
+          + 'kuningatar Elisabet II vihki sen. Suunnittelusta vastasivat '
+          + 'yellowknifeläinen ja vancouverilainen arkkitehtitoimisto '
+          + 'yhdessä. Rakennus on kaksikerroksinen, ja sen sisällä on '
+          + 'kaksi pyöreää salia: suuri sali ja ryhmähuone.'
+        + '\n\n'
+        + 'Pyöreys ei ole koriste. Luoteisterritorioissa hallitaan '
+          + 'konsensuksella, joten istuntosalissa ei ole hallitusta ja '
+          + 'oppositiota vastakkain vaan yksi ympyrä. Salia kiertävät '
+          + 'tulkkauskopit, joista käännetään kaikkia territorion '
+          + 'yhtätoista virallista kieltä, ja kattoikkunat kiertävät '
+          + 'kattoa, koska kesällä valo tulee joka suunnasta. '
+          + 'Puhemiehen takana on käsintaottu sinkkiseinä, joka '
+          + 'mukailee lähistön kallioita.'
+        + '\n\n'
+        + 'Puhemiehen edessä on teline valtikkaa varten. Valtikassa on '
+          + 'mursunnorsunluuta ja puuta vuoden 1845 Franklinin '
+          + 'retkikunnan aluksista — samojen laivojen, joiden kohtaloa '
+          + 'etsittiin näiltä vesiltä vuosikymmeniä. Pihat suunnitteli '
+          + 'maisema-arkkitehti Cornelia Oberlander, ja ne katsovat '
+          + 'Frame Lakelle.',
+      lahde: 'Wikipedia',
+    },
+    'Prince of Walesin pohjoinen perintökeskus': {
+      aika: '1979',
+      teksti: 'Territorion museo ja arkisto sai alkunsa 1950-luvulla, '
+          + 'kun joukko historiasta kiinnostuneita yellowknifeläisiä '
+          + 'alkoi haaveilla museosta. Museum of the North avattiin '
+          + 'heinäkuussa 1963 kolmen rakennusvuoden jälkeen, ja sitä '
+          + 'pyörittivät vapaaehtoiset vuoteen 1970, jolloin esineistö '
+          + 'siirtyi territorion hallinnolle.'
+        + '\n\n'
+        + 'Isompaa laitosta alettiin suunnitella, koska pohjoista '
+          + 'esineistöä katosi ja museopalveluja tarvittiin koko '
+          + 'territoriossa. Ohjelma hyväksyttiin 1972, rakentaminen '
+          + 'alkoi 1975, ja Walesin prinssi Charles vihki talonsa '
+          + 'kaimalle 3. huhtikuuta 1979.'
+        + '\n\n'
+        + 'Keskus on enemmän kuin museo. Se kokoaa ja hoitaa esineitä '
+          + 'ja arkistoaineistoa, jotka kertovat inuiittien, '
+          + 'inuvialuittien, denejen, métisien ja muiden asukkaiden '
+          + 'kulttuureista; talossa toimii territorion arkisto; ja se '
+          + 'myöntää luvat kaikkiin Luoteisterritorioiden arkeologisiin '
+          + 'tutkimuksiin. Rakennus on Frame Laken rannalla '
+          + 'keskustan pohjoispuolella.',
+      lahde: 'Wikipedia',
+    },
+    Hirsikoulu: {
+      aika: '1938',
+      teksti: 'Kaupungin ensimmäinen koulurakennus on pieni '
+          + '1930-luvun puolivälin hirsimökki. Sen rakensi paikallinen '
+          + 'kultakaivosyhtiö aivan muuhun tarkoitukseen, mutta 1938 '
+          + 'väkiluku oli kasvanut niin, että koulu oli pakko saada — '
+          + 'ja mökki otettiin siihen käyttöön.'
+        + '\n\n'
+        + 'Koulua varten perustettiin Yellowknife Education District '
+          + 'No. 1, ja sen koululautakunta oli koko territorion '
+          + 'ensimmäinen demokraattisesti valittu hallintoelin. '
+          + 'Oppilaita oli kaksikymmentä, ja siltikin tila oli niin '
+          + 'ahdas, että opetus jouduttiin pitämään kahdessa vuorossa. '
+          + 'Tunteja keskeyttivät ohi kulkevat kaivosmiehet, jotka '
+          + 'jäivät katsomaan sisään tai luulivat taloa baariksi.'
+        + '\n\n'
+        + 'Kahden vuoden kuluttua koulupiiri muutti isompiin tiloihin, '
+          + 'ja mökki jatkoi elämäänsä pesulana ja asuntona. Vuonna '
+          + '1987 se siirrettiin Old Townista nykyiselle paikalleen '
+          + 'Mildred Hallin koulun tontille ja kunnostettiin; '
+          + 'kaupungin perintökohde siitä tuli 1998.',
+      lahde: 'Wikipedia',
+    },
+  },
 };
