@@ -89,6 +89,22 @@ ok (Nuukin viisi väliä 98–172 m, tiivis rajaus kuten Fesissä; ympyrät eiv�
 mene päällekkäin). Poiminnassa lisäyskonfliktit 4 tiedostossa liitetty
 liita-lisays.py:llä.
 
+### Kaupunkilehdet Punta Arenas + Santa Cruz — 517605e (tekstit), 64e0bcc (kuvat)
+Tiedostot: faktapohja-/tarkistus-puntaarenas.md ja -santacruz.md, kulttuuri-kategoriat.js,
+maakartat.js, nahtavyysjutut.js, southamerica-artikkelit.js, piirra-kaupunkikartta.mjs,
+assets/kartat/puntaarenas-keskusta.png, santacruz-keskusta.png. Punta Arenas: kansi
+(Sandy Point, Ancud ja Fuerte Bulnes 1843, 1873 rangaistussiirtola ja salmen
+puolueettomuus, lammastalous ja selkʼnamit), teemasivu luonto "Salmi ja
+Etelämanner" (Yelcho, Pardo). Santa Cruz: kansi (chanét ja Grigotá, kolme muuttoa,
+1810/Warnes, 1873 Andrés Ibáñez), teemasivu musiikki "Karnevaali ja camban
+tanssit". 31 kuvaa Commonsista; Santa Cruzilla ei ennen–nyt-paria. Pistokokeet:
+(1) Chile lähetti 1873 merenkulkumaille kirjeen salmen vapaudesta ja
+puolueettomuudesta (en-Wikipedia "Strait of Magellan", Legal status); (2) Andrés
+Ibáñez kansanedustaja 1872–1874 (es-Wikipedia "Andrés Ibáñez (político)",
+Incursión en Política); (3) Chile tunnusti selkʼnamit 5.9.2023 ("Selkʼnam people",
+Recognition). Portit: fail 0, karttapisteet ok. Poiminnassa lisäyskonfliktit
+5 tiedostossa liitetty liita-lisays.py:llä.
+
 ## Kuvaputken tilaukset (kuvattomat nostot ja miniatyyrit)
 
 **MOZ, kuvattomat nostot (8):**
@@ -155,6 +171,36 @@ lasijulkisivu; Anchoragen vanha hautausmaa — hautakiviä lehtipuiden alla;
 Oscar Andersonin talo — pieni keltainen puutalo; Delaney Park Strip — leveä
 nurmikaistale tornien edessä.
 
+**Punta Arenas, kuvattomat nostot:** Sandy Point — punaiseksi maalatut peltikatot
+lähempää; Vuosi 1873 — 1800-luvun siirtola salmen rannalla; Miljoona hehtaaria
+lampaita — keritsemäsuoja tai lammaslauma Tulimaan arolla; 38 päivää salmessa —
+salmen kapeikko ylhäältä; Beaglen jäljillä — 1800-luvun merikartta salmesta;
+Hinaaja, joka haki 22 miestä — höyryhinaaja Yelcho jäissä; kohdekartan
+Merisotamuseo — laivastokokoelman talo Pedro Montt -kadulla.
+**Punta Arenas, miniatyyrit (8):** Lampuripatsas — pronssinen lampuri hevosineen
+ja lammaslauma; Sara Braunin hautausmaa — leikatut sypressikäytävät ja
+sukukappelit; Salesiaanien museo — museosali, kattoon ripustettu kanootti; Cerro
+de la Cruz — mukulakivinen näköalatasanne, alla ruutukaava; Sagrado Corazónin
+katedraali — tiilikirkko kellotorneineen; Braun-Menéndezin palatsi —
+liuskekivikattoinen kulmatorni takorauta-aidan takana; Merisotamuseo — ks.
+yllä; Salmen rantabulevardi — rantakatu, aallonmurtajaksi upotetun purjelaivan
+mastot.
+**Santa Cruz, kuvattomat nostot:** Chanét ja Grigotá — chané-keramiikkaa; Kolme
+muuttoa — Santa Cruz la Viejan rauniot; Warnes, Florida ja seitsemän vuotta —
+Warnesin muotokuva; Taquirari — taquiraritanssi ilman tunnistettavia kasvoja;
+Chovena — chovena-jonot hattuineen; Yksitoista päivää — cruceño-karnevaalin
+comparsa; ennen–nyt-parin vanha puoli — valokuva kaupungista ennen 1960;
+kuvattomat kohdekartan jutut: Avión Pirata, El Arenalin puisto, Plaza 24 de
+Septiembre, Noel Kempff Mercadon museo, Tahuichi Aguileran stadion.
+**Santa Cruz, miniatyyrit (8):** Avión Pirata — puistoon jäänyt nelimoottorinen
+Lockheed Constellation; Gabriel René Moreno -yliopisto — kampusrakennus Avenida
+Buschin varrella; El Arenalin puisto — laguuni ja saari keskellä kaupunkia;
+Yleinen hautausmaa — valkoiset kolumbaariokadut ja mausoleumit; Plaza 24 de
+Septiembre — palmuaukio ja Warnesin patsas; San Lorenzon katedraali —
+tiilinen kaksitorninen katedraali ylhäältä; Noel Kempff Mercadon museo —
+luonnonhistoriallinen näyttelysali; Tahuichi Aguileran stadion —
+jalkapallostadion kehäkatujen välissä.
+
 ## Päätöstä vaativat asiat
 
 - **MAATESTIN_POIKKEUS laajeni VUT:iin** (tests/elaintakyt.test.mjs; sama kuin
@@ -185,6 +231,12 @@ nurmikaistale tornien edessä.
 - Nuuk/Anchorage: molempien oppaiden etusivukuva puuttuu (Commonsissa ei
   ≥ 1200 px pystykuvaa) → kuvaputki. Viereinen havainto: tools/tarkista-tekijat.mjs
   ei odota 429:ää parvikuormassa.
+- Punta Arenas/Santa Cruz: Punta Arenasin SAAPUMISTEKSTI (matkakirjateksti,
+  ei tämän erän) väittää keskustan katujen köysistä tuulen takia — en-Wikipedia
+  merkitsi väitteen lähteettömäksi 2015; Fable päättää muutoksesta. Santa
+  Cruzin kuusi kohdetta vain es-Wikipediassa (Guatemalan lähderivi). Cerro de la
+  Cruzilla ei omaa artikkelia (faktat "Punta Arenas"-artikkelista). Aukio ja
+  katedraali 114 m päässä toisistaan (Fesin ennakkotapaus).
 
 ## Keskeneräiset
 
