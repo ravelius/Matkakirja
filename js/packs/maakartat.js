@@ -12959,6 +12959,122 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Katedraali', lat: -3.1352, lon: -60.0255 },
     ],
   },
+  /*
+   * SÃO PAULO (7.9.2026). Rajaus on 2,4 × 2,7 kilometriä Luzin
+   * puistosta Largo de São Franciscoon — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n saopaulo-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * jesuiittojen lähetyskoulu, Santosin rata, väkiluvun kasvu ja
+   * nykyinen suurkaupunki; historiasivu kertoo katedraalista,
+   * siirtokunnan köyhyydestä, Avenida Paulistasta sekä modernismin
+   * viikosta ja Martinellin pilvenpiirtäjästä; siirtolaissivu
+   * majatalosta, italialaisista, Liberdadesta ja Rua 25 de Marçosta;
+   * matkaopas Mercadãosta ja Ibirapuerasta. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Pátio do
+   * Colégio, Praça da Sén katedraali, Theatro Municipal, Martinellin
+   * talo ja Mercado Municipal mahtuisivat kaikki ruutuun (kaksi
+   * ensimmäistä ovat sen itäreunassa), mutta ne ovat lehden omien
+   * juttujen aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. Edifício Itália on 144
+   * metriä Copanista eli 200 metrin säännön alle; Largo de São
+   * Franciscon kirkko ja luostari on 47 metriä oikeustieteellisestä
+   * tiedekunnasta, ja tiedekunta valittiin niistä kahdesta; Estação
+   * da Luz jäi pois, koska lehden rata-noston kuvateksti kertoo jo
+   * aseman vaiheet. Pinacoteca on aseman naapurissa ja kertoo eri
+   * tarinan.
+   */
+  saopaulo: {
+    polku: 'assets/kartat/saopaulo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -23.5300, etela: -23.5545, lansi: -46.6490, ita: -46.6255 },
+    esittely: 'Kartta kattaa São Paulon vanhan ytimen kukkulan '
+      + 'harjalla: yläreunassa on Luzin puisto asemineen ja '
+      + 'museoineen, keskellä Anhangabaún laakso, jonka yli Viaduto '
+      + 'do Chá kaartaa, ja alareunassa Largo de São Francisco. '
+      + 'Kaupungin ensimmäiset korttelit ovat kartan oikeassa '
+      + 'alanurkassa kahden joenuoman välissä. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Christchurchissa. Koordinaatit
+       * en-Wikipedian coordinates-rajapinnasta 7.9.2026. Pienin väli
+       * on 390 metriä (Viaduto do Chá – oikeustieteellinen
+       * tiedekunta), toiseksi pienin 405 metriä.
+       */
+      { nimi: 'Sala São Paulo', lat: -23.53416667, lon: -46.63972222 },
+      { nimi: 'Pinacoteca', lat: -23.5344, lon: -46.6339 },
+      { nimi: 'Mustien veljeskunnan kirkko', lat: -23.54305556, lon: -46.63805556 },
+      { nimi: 'São Benton luostari', lat: -23.54361111, lon: -46.63388889 },
+      { nimi: 'Edifício Copan', lat: -23.54661667, lon: -46.644375 },
+      { nimi: 'Viaduto do Chá', lat: -23.546647, lon: -46.6378 },
+      { nimi: 'Solar da Marquesa de Santos', lat: -23.54856, lon: -46.63214 },
+      { nimi: 'Oikeustieteellinen tiedekunta', lat: -23.5501, lon: -46.637 },
+    ],
+  },
+  /*
+   * SALVADOR (7.9.2026). Rajaus on 2,4 × 2,9 kilometriä
+   * Kauppakamarin talolta Campo Grandelle — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n salvador-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kaupungin nimi, kaksikerroksinen kaupunki, Kaikkien pyhien lahti
+   * ja Barran majakka; historiasivu kertoo Pelourinhosta,
+   * orjasatamasta, malêjen kapinasta ja Lacerdan hissistä; Musta
+   * Rooma -sivu candomblésta, capoeirasta, Bonfimin pesujuhlasta ja
+   * karnevaalista; ruokasivu acarajésta ja vanhoista toreista.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS: Lacerdan
+   * hissi, katedraali, Mercado Modelo ja Largo do Pelourinho ovat
+   * kaikki ruudussa, mutta ne ovat lehden omien juttujen aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. São Franciscon kirkko
+   * ja luostari — kaupungin kuuluisin — EI OLE KARTALLA, koska
+   * en-Wikipedian artikkelilla ei ole koordinaattia (haku 7.9.2026),
+   * eikä koordinaatteja arvata; sama koski Rosário dos Pretosia ja
+   * Conceição da Praiaa. Praça Rio Branco 35 on 15 metriä Sobrado
+   * Azulejadosta ja São Pedro dos Clérigos 188 metriä Jorge Amadon
+   * talosta eli 200 metrin säännön alle.
+   *
+   * ANGLIKAANINEN KAPPELI PURETTIIN 1975, ja piste merkitsee sen
+   * paikan Campo Granden laidalla. Kohde on kartalla samalla
+   * perusteella kuin Wellingtonin Bolton Streetin hautausmaa, josta
+   * moottoritie vei valtaosan: paikka on yhä olemassa ja kertoo
+   * asian, jota mikään säilynyt talo ei kerro.
+   */
+  salvador: {
+    polku: 'assets/kartat/salvador-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -12.9668, etela: -12.9932, lansi: -38.5252, ita: -38.5028 },
+    esittely: 'Kartta näyttää Salvadorin kärjen, jossa kaupunki on '
+      + 'kahdessa kerroksessa: vasemmassa reunassa on Kaikkien pyhien '
+      + 'lahti ja sen rannassa Alakaupungin satamakortteli, ja siitä '
+      + 'oikealle nousee jyrkänteen päällä Yläkaupungin vanha '
+      + 'ruutukaava kirkkoineen. Alaosassa kadut suoristuvat '
+      + 'Campo Granden puistoaukiolle. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * 7.9.2026. Pienin väli on 295 metriä (Kauppakamarin talo –
+       * Jorge Amadon talo), toiseksi pienin 299 metriä.
+       */
+      { nimi: 'Kauppakamarin talo', lat: -12.97027778, lon: -38.51083333 },
+      { nimi: 'Jorge Amadon talo', lat: -12.97150722, lon: -38.50842788 },
+      { nimi: 'Sobrado Azulejado', lat: -12.973086, lon: -38.513235 },
+      { nimi: 'São Miguelin kirkko', lat: -12.97414, lon: -38.50779 },
+      { nimi: 'Mourarian Santo Antônio', lat: -12.980625, lon: -38.51068611 },
+      { nimi: 'Solar do Unhão', lat: -12.9826, lon: -38.5206 },
+      { nimi: 'Vila Velhan teatteri', lat: -12.98556, lon: -38.52176 },
+      { nimi: 'Anglikaanisen kappelin paikka', lat: -12.9897305, lon: -38.5220999 },
+    ],
+  },
 };
 
 /*

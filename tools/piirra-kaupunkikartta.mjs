@@ -3825,6 +3825,68 @@ const KAUPUNGIT = {
     rajat: { pohjoinen: -12.4565, etela: -12.4705, lansi: 130.8337, ita: 130.8480 },
     meri: true,
   },
+  saopaulo: {
+    /*
+     * VANHA YDIN LUZISTA LARGO DE SÃO FRANCISCOON (7.9.2026). Ruutu
+     * on 2,4 × 2,7 kilometriä eli Christchurchin ja Dubrovnikin
+     * kokoluokkaa. Syy tiiviyteen on sama kuin Christchurchissa:
+     * São Paulon 1800-luvun kaupunki mahtui kahden joenuoman,
+     * Anhangabaún ja Tamanduateín, väliin, ja kaikki kahdeksan
+     * kohdetta ovat siinä kolmion muotoisessa ytimessä.
+     *
+     * LAAJEMPI RUUTU KOKEILTIIN JA HYLÄTTIIN. Avenida Paulista on
+     * kaksi kilometriä kaakossa ja Ibirapuera viisi etelässä, joten
+     * ne kattava rajaus olisi yli seitsemän kilometriä leveä — ja
+     * molemmat ovat kaupunkilehden omien juttujen aihe, joten
+     * kartalla ei ole niissä yhtään kohdetta. Levennys olisi siis
+     * ostettu pelkällä katupuurolla.
+     *
+     * POHJOISREUNA -23,5300 ON LUZIN PUISTON MUKAAN. Pinacoteca ja
+     * Sala São Paulo ovat kartan pohjoisin pari, ja ne jäisivät
+     * tiukemmassa ruudussa kuvan reunaan; puiston mukaan vedetty
+     * reuna jättää niiden ympärille nurmea.
+     *
+     * ITÄREUNA -46,6255 ON VEDETTY KAHDEN VANHAN KORTTELIN YLI.
+     * Idässä ovat Pátio do Colégio ja Praça da Sé eli kaupungin
+     * syntypaikka, eikä kummallakaan ole kartalla pistettä (molemmat
+     * ovat lehden juttuja). Reuna on silti vedetty niiden yli, jotta
+     * lukija näkee, missä kaupunki alkoi — se on kuvan sisältöä,
+     * ei kohdeluetteloa.
+     *
+     * meri: ei. São Paulo on 760 metrin korkeudessa ylängöllä
+     * seitsemänkymmenen kilometrin päässä merestä, ja molemmat
+     * keskustan joet ovat OSM:ssä tavallisia vesiväyliä
+     * (Anhangabaú kulkee lisäksi kannen alla).
+     */
+    rajat: { pohjoinen: -23.5300, etela: -23.5545, lansi: -46.6490, ita: -46.6255 },
+  },
+  salvador: {
+    /*
+     * NIEMEN KÄRKI KAUPPAKAMARILTA CAMPO GRANDELLE (7.9.2026). Ruutu
+     * on 2,4 × 2,9 kilometriä. Salvador on rakennettu kahteen
+     * kerrokseen 85 metrin jyrkänteen molemmin puolin, ja ruutu on
+     * valittu niin, että molemmat kerrokset näkyvät: vasemmalla
+     * lahden ranta ja Alakaupungin satamakortteli, oikealla
+     * Yläkaupungin ruutukaava.
+     *
+     * ETELÄREUNA -12,9932 ON ANGLIKAANISEN KAPPELIN PAIKAN MUKAAN.
+     * Ilman sitä ruutu loppuisi Vila Velhan teatteriin ja olisi 2,4
+     * kilometriä korkea; nyt mukaan tulee Campo Granden puistoaukio,
+     * joka on kuvan selvin maamerkki eteläosassa.
+     *
+     * POHJOISREUNA -12,9668 ON KAUPPAKAMARIN TALON MUKAAN eikä
+     * kauempana: pohjoisessa ovat Bonfimin kirkko (5 km) ja
+     * Itapagipen niemi, ja Bonfim on kaupunkilehden pesujuhlanoston
+     * aihe, joten kartalla ei ole siellä kohteita.
+     *
+     * meri: true. Kaikkien pyhien lahti on OSM:ssä rantaviivaa
+     * (natural=coastline) eikä vesimonikulmio, joten ilman lippua
+     * kuvan vasen kolmannes olisi paperin värinen — sama syy kuin
+     * Wellingtonissa.
+     */
+    rajat: { pohjoinen: -12.9668, etela: -12.9932, lansi: -38.5252, ita: -38.5028 },
+    meri: true,
+  },
   suva: {
     /*
      * SIIRTOMAA-AJAN HALLINTOKORTTELI NIEMEN KÄRJESSÄ (6.9.2026).
