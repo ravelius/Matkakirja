@@ -184,18 +184,20 @@ test('tiiviste erottaa tekstit ja vaientaa vanhentuneen äänitteen', () => {
   // Ajan tasalla oleva repliikki soi, muuttunut ei.
   assert.equal(livianAaniAjanTasalla('avaus', 0, LIVIAN_AVAUS[0]), true);
   assert.equal(livianAaniAjanTasalla('avaus', 0, `${LIVIAN_AVAUS[0]} Kaak.`), false);
-  // Tuntematon avain (uusi repliikki, jota ei ole vielä generoitu).
-  assert.equal(livianAaniAjanTasalla('lehtivinkki', 0, LIVIAN_LEHTIVINKKI), false);
+  // Lehtivinkki generoitiin 7.9.2026: ajan tasalla. Tuntematon avain vaikenee.
+  assert.equal(livianAaniAjanTasalla('lehtivinkki', 0, LIVIAN_LEHTIVINKKI), true);
+  assert.equal(livianAaniAjanTasalla('lehtivinkki', 7, LIVIAN_LEHTIVINKKI), false);
 });
 
 test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
   const rivit = repliikit();
   const tila = (avain) => rivit.find((rivi) => rivi.avain === avain).tila;
-  // 7.9.2026: paljastus kirjoitettiin uusiksi ja lehtivinkki on uusi.
+  // 7.9.2026: paljastus kirjoitettiin uusiksi ja lehtivinkki on uusi;
+  // molemmat generoitiin samana päivänä, joten kaikki on ajan tasalla.
   assert.equal(tila('avaus-1'), 'ajan tasalla');
-  assert.equal(tila('paljastus-1'), 'muuttunut');
-  assert.equal(tila('paljastus-3'), 'uusi');
-  assert.equal(tila('lehtivinkki-1'), 'uusi');
+  assert.equal(tila('paljastus-1'), 'ajan tasalla');
+  assert.equal(tila('paljastus-3'), 'ajan tasalla');
+  assert.equal(tila('lehtivinkki-1'), 'ajan tasalla');
   assert.equal(tila('sofia-1'), 'ei vartioitu');
   for (const rivi of rivit) assert.equal(rivi.tila, aanitteenTila(rivi));
   // Peli vaikenee juuri niissä, jotka odottavat ajoa.

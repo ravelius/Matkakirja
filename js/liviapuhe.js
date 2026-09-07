@@ -232,10 +232,12 @@ export const LIVIAN_AANITETYT = {
   'avaus-3': '1446cf47',
   'avaus-4': 'b8bf54c6',
   'avaus-5': 'c7f488b4',
-  // Generoitu 6.9.2026 vanhalla tekstillä ("Kaak. Sähke pöllöltä…");
-  // 7.9.2026 uusi rytmi odottaa omaa ajoaan.
-  'paljastus-1': '2c755895',
-  'paljastus-2': 'd57d378e',
+  // Uusi rytmi generoitu 7.9.2026 (generoi-pulu, ääni Dr. Von, pakota):
+  // paljastus 1–3 ja lehtivinkki. Tiivisteet manifestista.
+  'paljastus-1': '4dd412c2',
+  'paljastus-2': '55959b90',
+  'paljastus-3': '531008d4',
+  'lehtivinkki-1': '676644e9',
   'mannerivihje-1': '9b1a96f3',
 };
 
