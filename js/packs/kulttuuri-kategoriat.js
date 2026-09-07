@@ -98607,6 +98607,92 @@ export const KULTTUURI_KATEGORIAT = {
         + 'Burdekin-joen tulva ei yltänyt. Isoisän matkavuonna 1873 '
         + 'kaupunki oli yhdeksänvuotias eikä siellä ollut rautatietä: '
         + 'kulta tuli laitureille maanteitse.',
+      /*
+       * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+       * (oceania-valokuvat.js, townsville), jossa se on jo
+       * tarkistettu. Sama paikka, sama katse: Townsvillen satama.
+       * Vanhan puolen lähderivi nimeää albumin säilyttäjän, koska
+       * extmetadata ei anna kuvaajan nimeä lainkaan.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'StateLibQld 1 235004 Scene at Jetty Wharf, Townsville, Queensland, 1901.jpg',
+          vuosi: '1901',
+          selite: 'Elokuussa 1901 Jetty Wharfin laiturissa oli neljä '
+            + 'alusta kylki kyljessä, ja lastina oli sokeria, villaa '
+            + 'ja malmia.',
+          lahde: 'John Oxley Library, State Library of Queensland, '
+            + 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Views of the Port of Townsville from the Magnetic Island ferry, Townsville, Australia 01.jpg',
+          vuosi: '2026',
+          selite: 'Sama satama tänään: pitkän paalulaiturin päällä '
+            + 'kulkee kuljetinhihna, ja taustalla nousee Castle Hill.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+        },
+      ],
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * omistajan 21.8.2026 linjauksen mukaiset laajat yleiskuvat
+       * kaupungin eri puolilta: kallio mereltä, kaupunki kalliolta ja
+       * rantabulevardin laituri.
+       */
+      kansikuvat: [
+        {
+          tiedosto: 'Castle Hill, Viewed From Townsville Breakwater..jpg',
+          selite: 'Castle Hillin paljas graniittilaki nousee '
+            + 'kaupungin talojen takaa, ja edessä on Cleveland Bayn '
+            + 'matala vesi.',
+          lahde: 'TheDinosaurMan08, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'View From Castle Hill Townsville - panoramio (11).jpg',
+          selite: 'Kalliolta katsottuna North Wardin matalat talot '
+            + 'levittäytyvät rantaan, ja lahden takana on Magnetic '
+            + 'Island.',
+          lahde: 'Lobster1, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'View from Castle Hill Lookout, Townsville, 2023, 02.jpg',
+          selite: 'Näköalatasanteelta katsottuna aurinko laskee '
+            + 'rannikon suuntaan ja kaupungin valot syttyvät alla.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLI: kolme aitoa valokuvaa eri suunnista — saari
+       * lahden takana, rantabulevardin laituri ja pääkatu.
+       * Townsvillelle ei ole generoitu herokuvia.
+       *
+       * STRANDIN LAITURI ESIINTYY KAHDESTI, ja se on tietoinen
+       * valinta: karusellin kuva on päivällä ja matkaoppaan kuva
+       * yöllä, jolloin laituri ja Ocean Siren -veistos on valaistu.
+       * Eri tiedostot, sama kohde — kirjattu raporttiin
+       * (kaupunkilehti.md: aihetoisto sallitaan perusteltuna).
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Magnetic Island seen from Castle Hill Lookout, Townsville, 2023.jpg',
+          selite: 'Magnetic Island on kahdeksan kilometrin päässä ja '
+            + 'näkyy iltavalossa yhtenä pitkänä vuorijonona.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Strand Pier, Townsville, 2023, 01.jpg',
+          selite: 'The Strandin laituri työntyy Cleveland Baylle '
+            + 'kahden kilometrin rantabulevardin puolivälissä.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Flinders Street, Townsville, Queensland.jpg',
+          selite: 'Flinders Street on kaupungin vanhin katu, ja sen '
+            + 'varrella seisoo yhä rivi 1800-luvun lopun '
+            + 'pankkitaloja.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Satama, jonka tulva vaati',
@@ -98693,6 +98779,18 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       matkailijalle: {
+        /*
+         * Osion valokuva otsikon alla oikealla, teksti kiertää.
+         * Tuore maltillinen pysty (3024 x 4032 eli 0,75) omistajan
+         * 20.8.2026 linjauksen mukaan.
+         */
+        kuva: {
+          tiedosto: 'Strand Pier, Townsville, 2023, 03.jpg',
+          selite: 'Illalla The Strandin laituri ja Ocean Siren '
+            + '-veistos palavat sinisinä, ja takana näkyy Magnetic '
+            + 'Islandin siluetti.',
+          lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
         kappale: 'Townsville on Pohjois-Queenslandin ja koko '
           + 'Pohjois-Australian suurin taajama: asukkaita on '
           + 'kaupungin oman ilmoituksen mukaan 204 541, ja vuoden 2021 '
@@ -99050,6 +99148,81 @@ export const KULTTUURI_KATEGORIAT = {
         + 'maantietä. Isoisän matkavuonna 1873 se oli yhdeksänvuotias '
         + 'laivastosatama ja noin tuhannen asukkaan kylä sademetsän '
         + 'reunassa.',
+      /*
+       * ENNEN JA NYT: pari on kopioitu matkakirjan valokuvataulusta
+       * (southamerica-valokuvat.js, iquitos), jossa se on jo
+       * tarkistettu. Molemmat katsovat kaupunkia joelta: vanhassa
+       * The Booth Pier kumibuumin lopulla, uudessa sama rantaviiva
+       * paalutaloineen. Pari ei ole sama laituri vaan sama kaupunki
+       * samalta suunnalta, ja se sanotaan kuvateksteissä.
+       */
+      ennenNyt: [
+        {
+          tiedosto: 'PERU. SCENES IN IQUITOS LCCN2016864106.jpg',
+          vuosi: '1912',
+          selite: 'Vuonna 1912 Booth-yhtiön laiturissa oli '
+            + 'höyrylaivoja kylki kyljessä ja laiturin päässä '
+            + 'nosturi.',
+          lahde: 'Harris & Ewing Collection, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Vista ciudad desde rio.JPG',
+          vuosi: '2026',
+          selite: 'Sama kaupunki Itaya-joelta tänään: veneitä, '
+            + 'paalujen varaan rakennettuja taloja ja niiden takana '
+            + 'kellotorni.',
+          lahde: 'Gabymuaa, Wikimedia Commons (PD)',
+        },
+      ],
+      /*
+       * KANSIKUVAT jäävät pikkuriviltä piiloon, koska ennenNyt-pari
+       * korvaa rivin (js/lehti.js piirraLehtiKuvat). Ne ovat silti
+       * omistajan 21.8.2026 linjauksen mukaiset laajat yleiskuvat
+       * kaupungin eri puolilta: kaupunki ilmasta, keskusta katoilta ja
+       * rantakatu tulvatasangon yllä.
+       */
+      kansikuvat: [
+        {
+          tiedosto: "Iquitos et l'Amazonie 983.jpg",
+          selite: 'Ilmasta katsottuna Belénin paalutalot reunustavat '
+            + 'Itayaa, ja kaupungin takana kaartaa Amazon.',
+          lahde: 'Viault, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: "Centre d'Iquitos.jpg",
+          selite: 'Keskustan tiilikatot jatkuvat aukiolle asti, ja '
+            + 'vasemmalla kohoaa katedraalin kellotorni.',
+          lahde: 'Anthony Baratier, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Iquitos Malecon01.jpg',
+          selite: 'Malecón Tarapacán kaidelta katsoo suoraan Belénin '
+            + 'kattojen yli tulvatasangolle.',
+          lahde: 'Håkan Svensson (Xauxa), Wikimedia Commons (CC BY 2.5)',
+        },
+      ],
+      /*
+       * AVAUSKARUSELLISSA ON VAIN KAKSI KUVAA, ja se on valinta.
+       * Iquitosille ei ole generoitu herokuvia, ja kaikissa
+       * Commonsin Plaza de Armas -kuvissa on aukion penkeillä
+       * istuvia ihmisiä lähietäisyydellä — kuvaton on parempi kuin
+       * tarkistamaton. Kolmas kuva on tilattu kuvaputkelta.
+       */
+      avauskuvat: [
+        {
+          tiedosto: 'Iquitos, Peru (11470937056).jpg',
+          selite: 'Belénin peltikatot laskeutuvat rantaan, ja niiden '
+            + 'takana avautuu joki veneineen.',
+          lahde: 'M M from Switzerland, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Atardecer.JPG',
+          selite: 'Illalla tulvatasanko on peilityyni, ja '
+            + 'palmunlehtikattoiset talot seisovat paalujen varassa '
+            + 'vedessä.',
+          lahde: 'Gabymuaa, Wikimedia Commons (PD)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kaupunki, jonne ei johda tietä',
@@ -99134,6 +99307,20 @@ export const KULTTUURI_KATEGORIAT = {
         },
       ],
       matkailijalle: {
+        /*
+         * Osion valokuva otsikon alla oikealla, teksti kiertää.
+         * Tuore maltillinen pysty (3024 x 4032 eli 0,75) omistajan
+         * 20.8.2026 linjauksen mukaan. Kohde on kaupungin oma
+         * erikoisuus: kumikauden kaakelijulkisivu, joka on kuvattu
+         * myös Perun yhden solin kolikkoon.
+         */
+        kuva: {
+          tiedosto: 'Ex Hotel Palace en Iquitos, 2018.jpg',
+          selite: 'Ex Hotel Palacen kulmatorni, takorautaparvekkeet '
+            + 'ja Málagasta tuodut kaakelit ovat Iquitosin '
+            + 'arkkitehtuurin huippu.',
+          lahde: 'Carlos Correa Loyola, Wikimedia Commons (CC BY-SA 2.0)',
+        },
         kappale: 'Iquitos on 106 metrin korkeudessa Amazonin altaan '
           + 'suurella tasangolla, ja kaupunkialue on 368,9 '
           + 'neliökilometriä. Itaya ja Nanay rajaavat laajenemista '
